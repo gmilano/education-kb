@@ -33,6 +33,51 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🔴 `p365`: all eight legs carried, and the two inbound errors are both *dates*
+
+🔴 **`p365` ran all four global legs and all four regional legs. Every one returned facts
+this file already holds.** Per-leg detail, with the returned items listed so the claim can
+be checked: [`regional-legs`](../evidence/regional-legs.2026-10-21-p365.tsv).
+
+| Leg | Returned | New |
+|---|---|---|
+| global-agents | general-purpose agents, SEO listicles | 🔴 **0** — 21st consecutive pass |
+| global-trending | third-party aggregators; no live `github.com/trending` | 🔴 **0** |
+| global-verticals | OpenEduCat's glossary in 7 languages | 🔴 **0** — 12th consecutive listicle |
+| global-market | pilots→governance, purpose-built, agentic, evidence-as-gate | 🔴 **0** — carried as trends 1–4 |
+| region-NA | NA 36% share, **$3.68B 2026 → $32B 2030**; 60% of US K-12 teachers used AI in 2024-25, 32% weekly; 134 bills / 31 states; AB 1159; `H.R. 8747`; Canada *AI for All* (2026-06-04) | 🔴 **0** — all carried |
+| region-EMEA | EU enforcement 2026-08-02; omnibus in force 2026-07-27; €2.64B 2026; FI/EE/NL lead K-12; **10% of 450+ institutions hold formal guidelines**; OECD *Digital Education Outlook 2026*; Germany €20bn | 🔴 **0 — and one REFUTED claim re-delivered** |
+| region-APAC | Korea Framework Act in force 2026-01-22 with ~1-yr penalty grace; Taiwan AI Basic Act Dec 2025; China registration + content labelling; Japan/Singapore guidance; ASEAN Responsible AI Roadmap | 🔴 **0 — and one LESS PRECISE reading** |
+| region-LATAM | Digital Education Council 2026: **92% students / 79% faculty**, 30 000+ responses, 29 institutions, 72% faculty positive vs 57% global, **61% of students fear peer misuse**; UNESCO IESALC study launched Sept 2026; ILIA 2025 — Chile 1st in LATAM, BR/CL/UY the only LATAM entries in the global top 50 | 🔴 **0** — all carried |
+
+### 🔴 EMEA: the August-2026 Annex III date is still being published, and it is still wrong
+
+🔴 **The EMEA leg again asserted that high-risk requirements bite education *"from August
+2026"*.** This file has held the correct position since `p233`: the **AI omnibus**, in force
+**2026-07-27**, moved **Annex III point 3** — the education duties — to **2027-12-02**. 🟡
+The leg's own source hedged (*"verify the current high-risk deadline"*); the vendor blogs it
+drew from did not. 🔵 **Nothing is revised.** Recorded because a commercial engagement will
+meet this error in a client's own compliance deck, and the person who meets it should know
+it is an error with a name and a date.
+
+### 🟡 APAC: the shelf is more precise than the source, and is not revised downward
+
+🟡 **The APAC leg gave Vietnam's education high-risk duty as a flat `2026-03-01`.** This file
+holds **`2027-03-01`**, with **+6 months** for systems already live before **2026-08-15** —
+a materially different compliance runway for a client with a deployed system. 🔵 The leg's
+source *"cut off mid-sentence"* on exactly that scope. **The shelf's reading stands.**
+
+### 🔵 What `p365` contributes to this file instead of a figure
+
+🔵 **A supply-side fact with direct commercial weight, measured this pass:** of the 191
+permissive-claimed addresses this base can offer a client, **61 — 31.9% — have no stable
+release tag**, so they cannot be pinned, version-locked or named in a dependency register at
+a fixed grant. 🔴 **That is a procurement problem, not a licensing problem**, and it sits
+*underneath* every regional opportunity listed below: the EU AI Act's technical-documentation
+duty and the Korean and Vietnamese records-keeping duties all presume a client can say
+**which version** of a component they shipped. For a third of this supply, the honest answer
+is a commit sha.
+
 ## 🔴 `p362`: all eight legs ran and all eight returned nothing new — and the supply side moved anyway
 
 🔴 **Four global legs and four regional legs, zero new facts.** Each item was checked

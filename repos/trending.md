@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 365 · 2026-10-21 — 🟢 **no index call bought a new repository this pass; a RANKED-BY-STARS channel returned 20 rows and this base already held all 20 — and the pass's real product is a transport table and a pin-availability number**
+
+🔴 **Channel note — one transport this base relied on is gone, and its replacement
+returns strictly more.** `p364` recorded `git ls-remote --symref` **OPEN**. Under `p365` the
+**git CLI** answers `fatal: could not read Username for 'https://github.com': terminal
+prompts disabled` on any third-party address: the execution environment injects credentials
+only for repositories **attached to the session**. 🔵 **That is a credential-scope effect of
+the harness, not GitHub withdrawing an endpoint** — and `p365` enumerated the transports
+before recording a closure, which is exactly what **T27** was written for.
+
+| Transport | Verdict | What it returns |
+|---|---|---|
+| `git ls-remote --symref` (git CLI) | 🔴 **CLOSED** | credential prompt on any unattached repository |
+| 🟢 `curl https://github.com/OWNER/REPO/info/refs?service=git-upload-pack` | 🟢 **OPEN** | **the complete ref advertisement** — `symref=HEAD:refs/heads/*`, the `HEAD` sha, and **every** `refs/tags/*`. For `moodle/moodle`: 126 613 B, `main`, **591 tags** |
+| `curl https://raw.githubusercontent.com/...` | 🟢 **OPEN** | grant payloads, **and it accepts a TAG as the pin** — which is the only reason the version axis is measurable at all |
+| `curl https://api.github.com/*` | 🔴 403 | unchanged from `p363`, `p364` |
+| `curl https://github.com/OWNER/REPO` (HTML) | 🔴 403 | 🔵 **newly recorded:** the HTML host refuses `curl` while the smart-HTTP path on the **same host** answers 200 |
+| `curl .../tags.atom`, `.../releases.atom` | 🔴 403 | the documented API-free tag feed is **not** a transport here |
+| 🟢 **WebFetch** on `github.com` HTML | 🟢 **OPEN** | a *different* transport to the host `curl` is refused by. Read `caccl`'s release page: *"Initial Version"*, `gabeabrams`, `d9c8cd2`, labelled **Latest** |
+| 🟢 **WebFetch** on `github.com/topics/*` | 🟢 **OPEN** | **the only star-count source found this pass** — 20 of 741 rows with stars, language and description |
+
+🟢 **Net effect: the liveness and tag channel is not narrower than `p364`'s, it is wider.**
+`git ls-remote` never returned star counts; the pair *(smart-HTTP + WebFetch topic)* returns
+refs, tags **and** stars without one `api.github.com` call.
+
+**Evidence:** [`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv) ·
+[`discovery-saturation`](../evidence/discovery-saturation.2026-10-21-p365.tsv) ·
+[`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv) ·
+[`single-tag-risk`](../evidence/single-tag-risk.2026-10-21-p365.tsv) ·
+[`probe-reliability`](../evidence/probe-reliability.2026-10-21-p365.tsv)
+
+### 🔴 The pin-availability number, which is a property of the SHELF rather than of any row
+
+🔴 **Of the 191 permissive-claimed addresses this base carries, 61 — 31.9% — have no
+stable release tag at all.** They have never cut a non-prerelease tag. For those rows:
+
+- 🔴 there is **no version to pin**, so a client consuming them consumes a **moving branch**;
+- 🔴 every grant cell on them is true **of the commit at which it was read** and asserts
+  nothing about tomorrow's;
+- 🔴 and the remedy `p364` implied — *"pin the release and read the grant there"* —
+  **cannot be carried out**.
+
+🔵 **Named examples from the foundational shelf**, so the number is not abstract:
+[`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa),
+[`GSU-CETLOE/lti1p3Library-php`](https://github.com/GSU-CETLOE/lti1p3Library-php),
+[`Liberate-Labs/ltikit-sdk`](https://github.com/Liberate-Labs/ltikit-sdk),
+[`SanDiegoCodeSchool/lti-node-library`](https://github.com/SanDiegoCodeSchool/lti-node-library),
+[`academico-sis/academico`](https://github.com/academico-sis/academico),
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills),
+[`OpenProct/openproct`](https://github.com/OpenProct/openproct),
+[`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp).
+🟡 **Note what that list is made of:** the **LTI interoperability tier** is heavily
+represented in it. The layer this base recommends building *integrations* on is the layer
+least able to offer a pinnable release.
+
+### 🟢 And the counter-number, which is reassuring and belongs next to it
+
+🟢 **Of the 130 addresses that CAN be pinned, 128 carry the same licence family at the
+branch and at the latest stable tag.** 94 of the 130 have **six or more** tags; not one
+repository with a release history produced a mismatch. 🔵 **Release discipline and grant
+discipline travel together** — which is why the single-tag class (11 rows, 2 mismatches,
+**18.2%**) is where the reading effort belongs.
+
 ## Pass 364 · 2026-10-21 — 🔴 **69 repositories entered this base's reach without a single index call, because they were named in READMEs this base had already fetched — and 12 of them carry no grant at all**
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

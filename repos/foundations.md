@@ -6,6 +6,34 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
+**Pass 365 · 2026-10-21.** 🟢 **`p365` added no repository to this shelf and measured a
+property *of* it:** whether the rows here can be **pinned** at all. 🔴 **Of the 191
+permissive-claimed addresses across this file, `agents/top.md` and
+`verticals/solutions.md`, 61 — 31.9% — have never cut a stable release tag.** A row with no
+tag cannot be consumed at a version; it is consumed at a **moving branch**, and its grant
+cell is true of the commit at which it was read and of nothing else. 🟡 **The LTI
+interoperability tier is over-represented in that 61** — the layer this shelf recommends
+building integrations on is the layer least able to offer a pinnable release.
+
+🟢 **Of the 130 rows that CAN be pinned, 128 carry the same licence family at both pins**,
+and every mismatch sits in the 11-row class that has tagged exactly once. Two rows on this
+shelf are now annotated for it: **`harvard-edtech/caccl`** (MIT at `main/LICENSE.md`, **no
+grant at `1.0.59`, its only tag**) and **`muhammedalakbarli/imparo`** (MIT at `main`,
+**"All Rights Reserved" at `pilot-v1.0`**).
+
+🟢 **`p365` evidence:** [`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv) ·
+[`single-tag-risk`](../evidence/single-tag-risk.2026-10-21-p365.tsv) ·
+[`caccl-tag-probe`](../evidence/caccl-tag-probe.2026-10-21-p365.tsv) ·
+[`probe-reliability`](../evidence/probe-reliability.2026-10-21-p365.tsv) ·
+[`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv)
+
+🔴 **Methodological warning for every grant cell on this shelf.** `p365`'s first sweep
+produced **four false "no grant" verdicts in 191 rows** — one from treating any non-200 as
+absence, three from a probe ladder missing the **lowercase `license.txt`** rung. All four
+named repositories whose grants this base had already read correctly. 🟢 Re-run with retry
+and a 13-rung case-varied ladder, **zero probe failures**. 🔵 Any cell on these shelves
+produced by a probe that retried nothing is exposed to the same defect.
+
 **Pass 364 · 2026-10-21.** The systems an education engagement starts *from*, rather
 than the agents it adds on top. 🆕 **`p364` adds the tier below them** — the components a
 platform's own README tells you to install, graded by payload, in
@@ -165,7 +193,7 @@ to start.
 | lti-tool | [lti-tool/lti-tool](https://github.com/lti-tool/lti-tool) | **MIT** | `main/LICENSE` | **8** | Not placed |
 | ltikit-sdk | [Liberate-Labs/ltikit-sdk](https://github.com/Liberate-Labs/ltikit-sdk) | **MIT** | `main/LICENSE` | **0** | Not placed |
 | django-lti-toolbox | [openfun/django-lti-toolbox](https://github.com/openfun/django-lti-toolbox) | **MIT** | `master/LICENSE` | **14** | EMEA |
-| CACCL (Canvas app framework) | [harvard-edtech/caccl](https://github.com/harvard-edtech/caccl) | **MIT** | `main/LICENSE.md` | **35** | North America |
+| CACCL (Canvas app framework) | [harvard-edtech/caccl](https://github.com/harvard-edtech/caccl) | **MIT** at `main` — 🔴 **and NO grant at `1.0.59`, its only tag** (`p365`) | `main/LICENSE.md` | **35** | North America |
 | ltiauthenticator | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause | `main/LICENSE` | **73** | North America |
 | Caliper analytics spec | [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS specification licence — NOT OSI** | `master/LICENSE.md` | **22** | North America |
 | 🆕 lti-core (LTI 1.3, TypeScript) | [iamlucasb/lti-core](https://github.com/iamlucasb/lti-core) | **MIT** (holder *Lucas Bossard*, 2026) | `main/LICENSE` | **1** | Not placed |
@@ -819,7 +847,7 @@ work however public the code is. Most are research artefacts from the OpenEduHub
 | [lucasspinola/assistentes-educacionais-com-ia](https://github.com/lucasspinola/assistentes-educacionais-com-ia) | **MIT** | `main/LICENSE` |
 | [molecule-dev/molecule](https://github.com/molecule-dev/molecule) | **Apache-2.0** | `main/LICENSE` |
 | [mthatipamula/educational-assessment-ai-agent-platform](https://github.com/mthatipamula/educational-assessment-ai-agent-platform) | 🔴 **no grant at root** | `main/` — none found |
-| [muhammedalakbarli/imparo](https://github.com/muhammedalakbarli/imparo) | **MIT** | `main/LICENSE` |
+| [muhammedalakbarli/imparo](https://github.com/muhammedalakbarli/imparo) | **MIT** at `main` — 🔴 **and `pilot-v1.0` is "All Rights Reserved", proprietary** (`p365`) | `main/LICENSE` |
 | [nichochar/ari](https://github.com/nichochar/ari) | **MIT** | `main/LICENSE` |
 | [risnake/canvas-mcp-server](https://github.com/risnake/canvas-mcp-server) | 🔴 **no grant at root** | `main/` — none found |
 | [smashburger-dev/argmin](https://github.com/smashburger-dev/argmin) | **MIT** | `main/LICENSE` |

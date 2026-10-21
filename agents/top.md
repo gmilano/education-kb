@@ -6,6 +6,84 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
+**Pass 365 · 2026-10-21.** 🟢 **`p365` added no row to this shelf and repaired one, and its
+subject is the question `p364` left open.** `p364` found **one** repository whose licence
+family changes with the pin — `iframe-resizer`, **GPL-3.0-or-commercial** at `master` and
+**MIT** at `v3.5.13` — and could not say whether that was a curiosity or a pattern. 🔵
+**`p365` measured it across every permissive-claimed row this base holds:** 191 addresses
+drawn from this shelf, `repos/foundations.md` and `verticals/solutions.md`, each read at
+**two pins** — the default branch, and the latest non-prerelease tag. The answer is two
+numbers that point in opposite directions.
+
+| What `p365` swept | Count | Share |
+|---|---:|---|
+| permissive-claimed addresses in the population | **191** | the denominator |
+| of those, carrying at least one stable tag — **measurable** on this axis | **130** | 68.1% |
+| 🟢 branch pin and release pin give the **same** family | **128** | **98.5% of the measurable** |
+| 🔴 families **DIFFER** between the two pins | **2** | **1.5% of the measurable** |
+| 🔴 **no stable release tag exists at all — the row cannot be pinned** | **61** | **31.9% of the population** |
+
+🔴 **`p364`'s hazard is rare, and the remedy it implies is unavailable for a third of this
+base.** "Pin to a release and read the grant there" is not an instruction that can be
+followed against 61 of these 191 addresses, because there is no release to pin to. For
+those rows a client ships a **moving branch**, and every grant cell on them is true only of
+the commit at which it was read.
+
+### 🔴 The 1.5% is concentrated, and the predictor is free to compute
+
+| Class | Rows | Families differ | Rate |
+|---|---:|---:|---:|
+| exactly **one** tag ever cut | **11** | **2** | 🔴 **18.2%** |
+| **two or more** tags | **119** | **0** | 🟢 **0%** |
+
+🟢 **Both failures on this base's version axis sit in the single-tag class, and neither of
+the 119 repositories with a release history produced one.** A repository that has tagged
+once has unproven release discipline; a repository that has tagged repeatedly has carried
+its grant forward every time. 🔵 **The triage rule is one request:** count
+`refs/tags/*` in the ref advertisement, and read the grant at the tag only where the count
+is 1. That is 11 reads instead of 130.
+
+### 🔴 The two failures — and the dangerous direction is the one `p364` did not see
+
+| Address | At the default branch | At the latest tag | Why it matters |
+|---|---|---|---|
+| [`muhammedalakbarli/imparo`](https://github.com/muhammedalakbarli/imparo) | 🟢 **MIT**, `main/LICENSE` | 🔴 **`pilot-v1.0`: "Copyright (c) 2026 Bilik Yolu. All Rights Reserved."** — *"proprietary and confidential"*, no rights granted at all | 🔴 **The pin that a careful team would choose is the one that revokes the grant.** `p364`'s instance ran the other way: there, pinning the release *saved* you. Here it damns you |
+| [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) | 🟢 **MIT**, `main/LICENSE.md` | 🔴 **`1.0.59`: no grant file at any of six probed paths**, while `package.json` returns 200 at the same pin | 🟡 **The tree is there and the grant is not.** `1.0.59` is the repository's **only** tag and GitHub labels it *"Latest"* (release *"Initial Version"*, `d9c8cd2`) |
+
+🔵 **So the version axis is bidirectional, and `p364`'s single instance showed only the
+benign direction.** A pin can reveal a grant the branch hides, and it can withdraw a grant
+the branch gives.
+
+### 🟢 What the sweep says about this base's own grant column: it holds
+
+🟢 **The 191-row re-read was an independent audit of the branch-pin cells, and it produced
+ZERO corrections.** Five rows resolved to something other than a permissive family, and
+**all five reproduce a hazard this base had already written down**:
+
+| Address | `p365` reads at the branch | Already recorded here as |
+|---|---|---|
+| [`JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant`](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) | 🔴 no grant at 13 paths | a **Chinese README prose sentence**, no `LICENSE` file |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 no grant at 13 paths | live on `master` and **empty** |
+| [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent) | 🔴 no grant at the root | **MIT at `canvas-lms-mcp/LICENSE`** — the package, not the repository |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai), [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** | 🟢 **ECL-2.0** — and `p365`'s first classifier had no ECL rung, independently reproducing **T32** |
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology), [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟡 grant stated in **prose** inside the licence file | 🟡 split / dual grant, prose-declared |
+
+🔴 **One flag-table row was stale, and `p365` repairs it.** The *"Licence flags"* table below
+carried [`kitschpatrol/yanki`](https://github.com/kitschpatrol/yanki) as *"MIT declared only
+in `package.json` — no `LICENSE` file exists in the tree."* **That claim is refuted by this
+base's own later pass and by first-hand bytes:** the grant is at **lowercase
+`main/license.txt`**, **1 071 B**, `sha256`₁₆ `1d5701eb035072f1`, MIT, holder *Eric Mika
+2024-2026*. The row is corrected in place.
+
+🟢 **`p365` evidence:** [`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv) ·
+[`single-tag-risk`](../evidence/single-tag-risk.2026-10-21-p365.tsv) ·
+[`caccl-tag-probe`](../evidence/caccl-tag-probe.2026-10-21-p365.tsv) ·
+[`probe-reliability`](../evidence/probe-reliability.2026-10-21-p365.tsv) ·
+[`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv) ·
+[`yanki-row-repair`](../evidence/yanki-row-repair.2026-10-21-p365.tsv) ·
+[`discovery-saturation`](../evidence/discovery-saturation.2026-10-21-p365.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p365.tsv)
+
 **Pass 364 · 2026-10-21.** 🔴 **`p364` added 69 repositories to this base and moved no row
 on this shelf, deliberately:** every one of them is a platform *component* — spawners,
 authenticators, deploy scripts, XBlocks, API clients, a process isolator — and none is an
@@ -988,7 +1066,7 @@ that turned out to be usable.
 | [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | "the data layer for educational AI" | 🟡 **MIT code, per-dataset data** | Some datasets are **Gated** and under no open licence. A build that assumes the repo licence covers the data is wrong |
 | [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | a learning-analytics standard on GitHub | 🔴 **IMS Global specification document licence** | A *spec* licence, not a software grant. Implement the standard; do not vendor the document |
 | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | MIT, per the file in the tree | 🟡 **MIT at `canvas-lms-mcp/LICENSE`** | The grant licenses the **package**, not the repository. The root is unlicensed |
-| [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | MIT, per GitHub | 🟡 **MIT declared only in `package.json`** | No `LICENSE` file exists in the tree. The grant is a manifest field |
+| [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | MIT, per GitHub | 🟢 **MIT — `main/license.txt`, LOWERCASE**, 1 071 B, `sha256`₁₆ `1d5701eb035072f1`, holder *Eric Mika 2024-2026* | 🟢 **`p365` REPAIR.** This row previously read *"MIT declared only in `package.json`"* / *"No `LICENSE` file exists in the tree"* — **refuted** by this base's own case-varied ladder and re-measured first-hand by `p365`. 🔵 The grant was always there; an **all-uppercase probe ladder** could not see it |
 | 🆕 [reneverland/CBIT-AiExam-plus](https://github.com/reneverland/CBIT-AiExam-plus) | an MIT shields.io badge at the top of the README, 277 ★ | 🔴 **no grant anywhere** — the badge links to `LICENSE`, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `docs/LICENSE` **all 404** | **All rights reserved.** A badge is a picture, not a grant. The most capable AI exam platform found this pass and it cannot be used |
 | 🆕 [JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) | nothing on the landing page, 147 ★ | 🔴 **one Chinese prose sentence in `README.md`**: 本项目采用 MIT License 开源协议 | A README claim is a **pointer**, not a grant. Ask the author for a `LICENSE` file; until then, unusable |
 | 🆕 [lebmatter/exampro](https://github.com/lebmatter/exampro) | MIT, per GitHub | 🟡 **stock MIT at `main/license.txt` with the holder fields never filled**: `Copyright (c) [year] [fullname]` | Family certain, **licensor absent**. Two hazards in one row: the lower-case path (the `frappe/lms` shape) and nobody to attribute |

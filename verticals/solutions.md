@@ -6,6 +6,38 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
+**Pass 365 · 2026-10-21.** 🟢 **`p365` adds no platform and qualifies every grant on this
+shelf with the axis `p364` opened.** `p364` showed that a platform's permissive headline
+can hide a **copyleft component** (the `iframe-resizer` instance: GPL-3.0-or-commercial at
+`master`, MIT at `v3.5.13`). 🔵 **`p365` measured the *version* half of that across the whole
+permissive population — 191 addresses, each read at the default branch and at the latest
+stable tag — and the two findings pull in opposite directions:**
+
+- 🟢 **The hazard is rare.** 128 of the 130 pinnable addresses carry the **same** licence
+  family at both pins. For a platform with a real release history — and 94 of the 130 have
+  **six or more** tags — reading the grant at the branch is sound.
+- 🔴 **The hazard is concentrated where release discipline is unproven.** Both mismatches sit
+  in the 11-row class that has tagged **exactly once**: 🔴 **18.2%** there against 🟢 **0%**
+  among the 119 rows with two or more tags.
+- 🔴 **And for 61 of the 191 — 31.9% — there is no stable tag to read at all.** The
+  "pin it and check" instruction cannot be executed. Those rows are consumed at a moving
+  branch by construction.
+
+🔵 **What this means for a platform selection on this shelf, stated plainly:** the grant
+column here is trustworthy for the mature platforms it mostly describes. The pin question
+is a **triage** step, not a re-audit — count `refs/tags/*` in one request, and read the
+grant at the tag only where the count is one.
+
+🟢 **`p365` evidence:** [`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv) ·
+[`single-tag-risk`](../evidence/single-tag-risk.2026-10-21-p365.tsv) ·
+[`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv)
+
+🔵 **ERP/SIS absence restated rather than quietly dropped**, as `p363` required: the
+`open source platform education ERP CRM MIT Apache` leg returned **OpenEduCat's own
+glossary pages in seven languages** and nothing else — one vendor's SEO surface occupying
+10 of 10 result slots, the **twelfth** consecutive listicle. OpenEduCat remains **LGPLv3**
+on an **LGPLv3** Odoo base; no permissive education ERP has been found in twelve attempts.
+
 **Pass 364 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
 sense that Odoo is extensible for ERP or OpenMRS for healthcare.
 

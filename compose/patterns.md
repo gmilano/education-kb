@@ -1058,3 +1058,78 @@ be re-run rather than filed.
 at least one companion. So roughly **three in five** platforms will produce a short report,
 and the audit's value is concentrated in the other two — which is why step 1 is cheap and
 automated and step 3 is where the hours go.
+
+## 🆕 Pattern 25 — A pin-aware grant audit, because Pattern 24 audits the wrong noun
+
+**For:** the same client as Pattern 24 — one whose licence register is a list of front
+pages — after `p365` showed that a grant read at a branch and a grant read at the version
+they actually ship are **not the same claim** in 1.5% of cases, and that for 31.9% of
+permissive supply the shipped version **has no name at all**.
+
+🔴 **Why Pattern 24 is not sufficient on its own.** Pattern 24 closes the *component* axis:
+it finds the companion repositories a platform's README makes you install and grades each
+one's grant. It reads every one of them **at a branch**. 🔵 `p365` measured the second axis
+and found two live defects in this base's own supply — one that **revokes** a grant at the
+pin and one that **erases** it.
+
+### Step 1 — Resolve what the client actually ships (not what the register says)
+
+- Take the dependency manifests from the build that shipped: `package-lock.json`,
+  `poetry.lock`, `composer.lock`, `go.sum`, vendored submodule shas.
+- For each dependency resolve the **pin that shipped** — a tag, a sha, or 🔴 *"a branch"*,
+  which is the finding, not a gap.
+- 🟢 **One request per address, unauthenticated:**
+  `curl "https://github.com/OWNER/REPO/info/refs?service=git-upload-pack"`.
+  It returns `symref=HEAD:refs/heads/*`, the `HEAD` sha and **every** `refs/tags/*`.
+  🔵 Use this rather than `git ls-remote`: `p365` recorded the git CLI refusing
+  unattached repositories under credential scoping while this path answered 200.
+
+### Step 2 — Triage on the tag count, which is free and which is the whole saving
+
+- 🟢 **`n_tags` ≥ 2 → read the grant at the shipped pin only.** On `p365`'s 119-row
+  measurement of this class, **zero** mismatched the branch.
+- 🔴 **`n_tags` == 1 → read the grant at BOTH pins.** This class ran at **18.2%**. Both of
+  this base's known failures live here: [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl)
+  (MIT at `main/LICENSE.md`, **nothing** at `1.0.59`, its only tag, titled *"Initial
+  Version"*) and [`muhammedalakbarli/imparo`](https://github.com/muhammedalakbarli/imparo)
+  (MIT at `main`, **"All Rights Reserved"** at `pilot-v1.0`).
+- 🔴 **`n_tags` == 0 → the deliverable is a sentence, not a licence.** *"This component has
+  no release; you ship commit `abc1234` of branch `main`, and the grant stated here is true
+  of that commit only."* On this base that is **61 of 191 addresses** — and the LTI
+  interoperability tier is over-represented, so an integration-heavy client will land here
+  disproportionately.
+
+### Step 3 — Read the payload, with a ladder and a classifier that cannot fail silently
+
+- 🟢 `curl https://raw.githubusercontent.com/OWNER/REPO/PIN/PATH` — it accepts a **tag** as
+  `PIN`, which is what makes any of this measurable.
+- 🔴 **Walk a case-varied ladder.** `p365` lost three grants to a ladder missing lowercase
+  `license.txt`: `yanki` (1 071 B), `exampro` (1 069 B), `ThisRaport` (1 114 B). Include at
+  minimum `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `license.txt`, `license.md`,
+  `LICENCE`, `COPYING`, `COPYING.txt`, `LICENSE-MIT`, `COPYRIGHT`.
+- 🔴 **Retry, and treat only a 404 as absence.** One non-200 under concurrency produced a
+  false *"no grant"* on a row whose first rung was present. **Absence is a verdict; earn it.**
+- 🔴 **Give the classifier a proprietary rung and an `ECL-2.0` rung.** Without the first it
+  renders *"All Rights Reserved"* as `UNKNOWN` — the most consequential verdict available,
+  reported as a parsing nuisance. Without the second it mis-reads **Sakai** and **OpenLRW**,
+  whose Educational Community License is OSI-approved and permissive.
+
+### Step 4 — What the client receives
+
+1. A register keyed on **(address, shipped pin, grant at that pin, path the grant was read
+   from, bytes, sha256)** — not on project names.
+2. 🔴 A **short list of revocations**: components whose shipped pin grants less than the
+   branch the register assumed. Expect ~1.5% of pinnable components, ~18% if they pin
+   single-tag repositories.
+3. 🔴 An **unpinnable list** with the commit shas substituted, which is the artefact that
+   makes an EU AI Act technical-documentation duty, or a Korean or Vietnamese record-keeping
+   duty, answerable at all.
+4. 🟢 A re-runnable harness: two `curl` shapes, no API key, no authentication, no rate-limit
+   exposure — `p365` swept 191 addresses at two pins each with zero probe failures.
+
+🔵 **Scoping note, honestly stated:** on `p365`'s population the triage in step 2 sends
+only **11 of 130** pinnable addresses to a double read, so the audit is cheap. Its cost is
+concentrated in step 1 — resolving what shipped — and in step 3 for clients whose
+components are young. 🔴 **The 31.9% unpinnable share is the part that cannot be made
+cheaper**, because the work there is writing down an uncomfortable fact rather than reading
+a file.

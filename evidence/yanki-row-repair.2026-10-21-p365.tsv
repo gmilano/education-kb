@@ -1,0 +1,4 @@
+address	channel	path	bytes	sha256_16	family	note
+kitschpatrol/yanki	raw	main/license.txt (LOWERCASE)	1071	1d5701eb035072f1	MIT	re-measured first-hand 2026-10-21. agents/top.md still carried 'No LICENSE file exists in the tree. The grant is a manifest field' - refuted by this base's OWN later pass (agents/trending.md records the lowercase rung) and by these bytes. Row repaired by p365
+kitschpatrol/yanki	raw	main/LICENSE	404	n/a	n/a	uppercase absent - which is how the stale claim arose
+kitschpatrol/yanki	raw	main/LICENSE.md, LICENSE.txt, license, license.md, COPYRIGHT	404	n/a	n/a	five further case/extension rungs, all absent

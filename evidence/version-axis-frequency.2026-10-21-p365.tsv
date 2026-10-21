@@ -1,0 +1,192 @@
+address	default_branch	head_sha12	n_tags	latest_stable_tag	branch_grant_path	branch_family	tag_grant_path	tag_family	verdict	measured
+academico-sis/academico	main	614ec84bc83f	0		LICENSE	MIT			no-tag	2026-10-21
+adlnet/ADL_LRS	master	efa045e2fc6e	8	v2.0.0	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+ai-shifu/ai-shifu	main	f4ffc6db06b8	45	v3.0.1	LICENSE.txt	Apache-2.0	LICENSE.txt	Apache-2.0	same	2026-10-21
+alejooroncoy/campus-cli	main	7f07a8de387b	22	campus-cli-v2.2.3	LICENSE	ISC	LICENSE	ISC	same	2026-10-21
+ankimcp/anki-mcp-server	main	e0e347f7f399	57	v0.27.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+annoto/ims-lti	master	c9cf836e7e8f	12	v3.0.2	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+AnonymousOnyx22/brightspace-d2l-mcp	main	1ffcc4ad7a65	5	v1.4.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+AnonymousOnyx22/canvas-lms-student-mcp	main	11d729910312	0		LICENSE	MIT			no-tag	2026-10-21
+anthropics/k12-teacher-skills	main	31fd6dbb0c07	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+Apereo-Learning-Analytics-Initiative/Larissa	master	96a26e4a9f6e	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+ArnaudGuiovanna/tutor-mcp	main	05c56616ee24	7	v0.6.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+arx-deidentifier/arx	master	4e0a5f5340fe	27	v3.9.2	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+assafkip/claudemy	main	438a6288fa74	4	v0.3.2	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+beltromatti/get-it	main	ae0fa999f352	10	v1.4.0	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+BlinkZer0/Phys-MCP	main	98dce123a3d0	4	v2.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+bncc-dev/bncc-dados	main	9c268978efa2	5	dados-2026.08	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+Brightspace/test-reporting-node	main	40ff3e6f1a11	150	v6.7.0	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+BrightspaceUI/core	main	188fbc62e4c3	2136	v3.333.6	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+BrightspaceUI/intl	main	dc59f6de8d37	126	v3.48.1	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+BrightspaceUI/labs	main	da4d82a44e49	153	v2.64.0	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+bruchris/canvas-lms-mcp	main	b3c7cecb736f	91	canvas-lms-mcp-v2.8.2	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+CAHLR/OATutor	main	e24c8456e5f7	4	v1.7	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ChenChenyaqi/learn-anything	main	83b33cb6f897	32	v1.6.3	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+chrischall/gogcli-mcp	main	c6192a4c7ae4	99	v4.9.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+chrisryugj/schoolinfo-mcp	main	9f636c106a29	1	v0.2.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+christophblessing/quiz-recap	main	0927b556d2e4	16	v3.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+clownjee/knowledge-import-pipeline	main	f1d483e1ede3	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+Cvmcosta/ltijs	master	41f150c0693b	9	v7.0.1	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+damphuquy/agent-as-a-tutor	main	ce6dd022be15	9	v1.5.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+DavidLMS/learnmcp-xapi	main	fbf609142c3c	2	v2.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+DecoyLex/ltix	main	0a67ea3be867	2	v0.2.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+devissaputra/curriculum_knowledge_graph	main	a567bad0d1ac	0		LICENSE	MIT			no-tag	2026-10-21
+dg13788/iep-system	main	e0741f174ae0	1	v1.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+diego-costanzo/tournesol-scolaire	main	85c3de716b14	0		LICENSE	MIT			no-tag	2026-10-21
+dmitry-viskov/pylti1.3	master	d8fa43e1ace2	29	2.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+dodona-edu/dolos	main	92298eaea8a2	37	v2.10.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+dymchenkko/claude-study-agent	main	bb2e59493de1	1	v0.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+edugatorlabs/ltijs	master	0a60aa17a915	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+Egonex-AI/Understand-Anything	main	b8c807c63274	8	v2.9.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+elimu-ai/webapp	main	ef266355c4fc	966	webapp-2.7.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+eribean/girth	master	daf22773aa9c	18	v0.8.0	LICENSE.txt	MIT	LICENSE.txt	MIT	same	2026-10-21
+eribean/girth_mcmc	main	911376eabf69	9	v0.6.0	LICENSE.txt	MIT	LICENSE.txt	MIT	same	2026-10-21
+erictrainnlpinxihu/Grader-agent	main	13e3d77335cf	0		LICENSE	MIT			no-tag	2026-10-21
+falkenslab/moodle-mcp	main	d2b362e9a9dd	5	v0.4.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+foradian/fedena	master	333477b06f1d	0			NONE			no-tag	2026-10-21
+freeCodeCamp/curriculum-helpers	main	1c5edf4d1ee2	52	v9.0.1	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+freeCodeCamp/freeCodeCamp	main	8922778efee0	0		LICENSE.md	BSD-3-Clause			no-tag	2026-10-21
+G36maid/moodle-mcp	main	18bd1777eb0b	7	v0.2.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+gabrielmahia/elimu-mcp	main	5fc90378be40	7	v0.1.8	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+greenmaskio/greenmask	main	9a675da8ce57	45	v1.0.0b1	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+GSU-CETLOE/lti1p3Library-php	main	3de1b3aad7b5	0		LICENSE	MIT			no-tag	2026-10-21
+guillaume-behr/open-quiz	master	6124683e6ecb	3	v0.3.5	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+h5p/h5p-cli	master	9b646f8e4bc8	10	v1.1.8	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+harvard-edtech/caccl	main	0541ad3a1fa2	1	1.0.59	LICENSE.md	MIT		NONE	DIFFER	2026-10-21
+helalaou/LectureLab	main	ff58774b22c2	0		LICENSE	MIT			no-tag	2026-10-21
+HimitZH/HOJ	master	57d8b5280d96	36	v4.6	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+hitsz-ids/synthetic-data-generator	main	f3684582b2f4	15	0.2.4	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+HKUDS/DeepTutor	main	a31d82624c27	87	v1.6.15	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+hluaguo/learn-faster-kit	main	c0168f30f87e	0		LICENSE	MIT			no-tag	2026-10-21
+hughsibbele/Canvas-Agent	main	66acaed97a44	13	v2.0.2	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+HumphreySun98/Smart-Study-Agent	main	1f0ab5c160f1	1	v1.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+iamlucasb/lti-core	main	da7a712cdb90	1	v0.4.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ibenian/algebench	main	00712b58c8e0	21	v0.21.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+isakskogstad/Skolverket-MCP	master	5631a7fc7bc6	5	v2.1.3	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+iwangjian/Coding-Tutor	main	d1fa15b50e09	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+jcputney/elearning-module-parser	main	cbdfa72fd07f	35	v1.2.2	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+jcputney/scorm-again	master	060164c2e792	62	3.4.7	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+jeffyding/OpenLRW	master	031706065218	0		LICENSE	ECL-2.0			no-tag	2026-10-21
+JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	main	ea520622fa28	0			NONE			no-tag	2026-10-21
+joakimwallmark/irtorch	main	5129250fadac	0		LICENSE.txt	MIT			no-tag	2026-10-21
+jupyterhub/batchspawner	main	451dcf171cff	10	v1.3.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/dockerspawner	main	a73d0de667e4	17	14.0.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/jupyterhub	main	db4539fe7678	107	6.1.1	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/jupyterhub-tutorial	master	2537fdbc5707	0		LICENSE	BSD-3-Clause			no-tag	2026-10-21
+jupyterhub/kerberosauthenticator	main	3c5f60d08420	4	1.0.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/kubespawner	main	47ce269d515b	40	7.1.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/ldapauthenticator	main	9d2759a3ca3a	13	2.0.2	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/ltiauthenticator	main	c0c3bf3a7a12	13	1.6.3	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/oauthenticator	main	02344def2a5e	50	17.4.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/sudospawner	main	304be890e24a	9	1.0.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/systemdspawner	main	9a0a7f4efe54	15	v1.0.2	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/wrapspawner	master	cb74046aa021	2	v1.0.1	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+jupyterhub/yarnspawner	master	a1fdb2ca641d	4	0.4.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+kabartay/openunivcourses	main	7068cd58def9	1	v1.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+kaorii-ako/Shiori-v1	master	ccf7f3b7a1bf	2	v2.2.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+karanb192/algo-sensei	main	25ea970f82c5	0		LICENSE	MIT			no-tag	2026-10-21
+KeWang0622/kaogong-skill	main	2af2115291bd	0		LICENSE	MIT			no-tag	2026-10-21
+kinoarizu/ThisRaport	master	32fb929e740e	0		license.txt	MIT			no-tag	2026-10-21
+kitschpatrol/yanki	main	31c4bf58e9c0	95	v3.2.1	license.txt	MIT	license.txt	MIT	same	2026-10-21
+LabSirius/TutorIA	main	032b5aa520ea	1	informe-minciencias-2026-09	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+learning-commons-org/agent-skills	main	8b0599c24469	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+learning-commons-org/evaluators	main	0d0233c57343	35	evals-prompts-v1.9.0	LICENSE.md	UNKNOWN:The Evaluator code is licensed under [MIT](https://opensource.	LICENSE.md	UNKNOWN:The Evaluator code is licensed under [MIT](https://opensource.	same	2026-10-21
+learning-commons-org/knowledge-graph	main	8fcd4d5e1a08	27	v1.15.0	LICENSE.md	CC0-1.0	LICENSE.md	CC0-1.0	same	2026-10-21
+learningequality/kolibri	develop	6813f27080f3	542	npm/kolibri-format/1.0.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+lebmatter/exampro	main	797b7b157f14	0		license.txt	MIT			no-tag	2026-10-21
+Li-Evan/Bloom	main	68788b5e7d34	0		LICENSE	MIT			no-tag	2026-10-21
+Liberate-Labs/ltikit-sdk	main	5a8f55dad6f4	0		LICENSE	MIT			no-tag	2026-10-21
+likr/canvas-lms-agent	master	458c1a4ed988	0			NONE			no-tag	2026-10-21
+longsightgroup/lti-tool	main	1c07254385d0	30	core-v1.1.4-longsight.6	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ls1intum/Ares2	main	b5c2595128de	12	v2.2.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+lti-tool/lti-tool	main	1fa01484043a	104	@lti-tool/dynamodb@2.0.3	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+lucasspinola/assistentes-educacionais-com-ia	main	0a7ab3372361	0		LICENSE	MIT			no-tag	2026-10-21
+Mcp-Brasil/mcp-brasil	main	2efb258370b1	23	v0.14.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+meta-pytorch/opacus	main	df040e4a1594	28	v1.6.0	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+mhw32/variational-item-response-theory-public	master	12862157e995	0		LICENSE	MIT			no-tag	2026-10-21
+Miaotofu01/Study-Mate	main	8b70f770e647	14	v2.0.3	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+microsoft/mcp-for-beginners	main	6999bced7980	0		LICENSE	MIT			no-tag	2026-10-21
+microsoft/moodle-ai-assistant	main	9fac4353a582	1	v0.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+microsoft/StudentSim	main	73005fd8cac8	0		LICENSE	MIT			no-tag	2026-10-21
+mizcausevic-dev/curriculum-knowledge-graph	main	b28f4c2cc529	0		LICENSE	MIT			no-tag	2026-10-21
+Moha-abshir/SMS	main	f5fddc605d9a	0		LICENSE	MIT			no-tag	2026-10-21
+molecule-dev/molecule	main	f3fb0776cdc6	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+moodlehq/moodleapp	main	cb888e53902f	66	v5.2.1	COPYING.txt	Apache-2.0	COPYING.txt	Apache-2.0	same	2026-10-21
+muhammedalakbarli/imparo	main	2e7da8d4984e	1	pilot-v1.0	LICENSE	MIT	LICENSE	PROPRIETARY-all-rights-reserved	DIFFER	2026-10-21
+nagisanzenin/engram	main	0590eb8f0086	55	v1.15.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+Neutralmilkzzz/moodle-cli-hku	main	fe77b9ce0788	0		LICENSE	MIT			no-tag	2026-10-21
+nichochar/ari	main	97a2b376baf7	0		LICENSE	MIT			no-tag	2026-10-21
+nuwa-skills/montessori-skill	master	738b142fedd0	0		LICENSE	MIT			no-tag	2026-10-21
+nvaes/CEB	main	225f004563f1	0		LICENSE	MIT			no-tag	2026-10-21
+oaknational/oak-curriculum-ontology	main	52489e604870	4	v0.1.3	LICENSE.md	UNKNOWN:# License This repository uses **dual licensing** to appropria	LICENSE.md	UNKNOWN:# License This repository uses **dual licensing** to appropria	same	2026-10-21
+oaknational/oak-open-curriculum-ecosystem	main	4e9d49a2f218	499	v1.186.1	LICENCE	MIT	LICENCE	MIT	same	2026-10-21
+okpy/ok-client	master	ec5e780e5585	135	v1.18.1	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+online-judge-tools/oj	master	d90b0a2bd87a	62	v12.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+open-spaced-repetition/free-spaced-repetition-scheduler	main	93ed713fd9c1	0		LICENSE	MIT			no-tag	2026-10-21
+open-spaced-repetition/fsrs4anki	main	ff7c85cee735	199	v6.1.3	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+open-spaced-repetition/py-fsrs	main	9446cb06605c	38	v6.3.2	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+openeduhub/duplicate-detection	main	7c437d38f1cf	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/edu-sharing-python-client	main	656836c5b110	9	v0.3.6	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+openeduhub/ki-prompt-benchmark	main	da062c4b1b51	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/lernpfadeditor	main	1ccbb1d8bb58	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/llm-judge	main	8cb0a04c941c	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/metadata-browser-plugin-fuerapi	main	b019323eff82	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/skohub-vocabs-oeh-patched	main	d8a6708cee7a	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/tutor-chatbot	main	7e1f38dae743	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openeduhub/wlo-quellenliste	main	8144589f661d	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+openfun/ashley	master	7c23e03cd635	20	v1.3.2	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+openfun/django-lti-toolbox	master	22c6f2f468ab	7	v2.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+openfun/marsha	master	2e4f4701cac7	146	v5.12.5	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+openfun/potsie	main	040f85bceb51	17	v1.2.2	LICENSE.md	MIT	LICENSE.md	MIT	same	2026-10-21
+OpenMined/PyDP	dev	688236100cb1	42	v1.1.5	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+OpenOLAT/OpenOLAT	master	ba3ed79abf9b	551	OpenOLAT_21.1.1	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+openpatch/hyperbook	main	0d8715b69551	1545	hyperbook-assets-v0.114.6	LICENSE.md	MIT	LICENSE.md	MIT	same	2026-10-21
+OpenProct/openproct	main	c1659ed2eb95	0		LICENSE	MIT			no-tag	2026-10-21
+OpenStudy-dev/OpenStudy	main	64ad29643c35	12	v0.7.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+openwallet-foundation-labs/learner-credential-wallet	main	1c46a82ba384	72	b895615	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ossu/computer-science	master	33d44a44e352	5	v8.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+panaversity/learn-agentic-ai	main	dd7426f65b24	0		LICENSE	MIT			no-tag	2026-10-21
+pelotech/xapi-lrs	main	4d18e0cad743	34	0.9.6	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+ProjectAJ14/eklavya	main	db364bcc11c1	172	v1.84.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+pykt-team/pykt-toolkit	main	ccbaf37b07e3	5	v1.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+QingdaoU/Judger	newnew	d19a6dc192eb	5	v1.5	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+QingdaoU/OnlineJudge	master	df873278ab1b	14	v1.6.1+api.1.6.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+QingdaoU/OnlineJudgeFE	master	44fa4744c21a	37	oj_2.7.5	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+r1ckyIn/canvas-ed-mcp	main	e119ebe528a3	0		LICENSE	MIT			no-tag	2026-10-21
+read2017/learn-anything-with-AI	main	0b06235ed738	2	v1.0.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+Riskbreaker2077/open-test	main	cf6835d7b798	15	v1.8.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+rizzo-ai-academy/rizzo-pii	main	30d6f9c675e2	2	v2.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+RohanMuppa/brightspace-mcp-server	main	8a4d19edc919	6	v3.9.7	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+sakaiproject/sakai	master	b0f211d4906f	73	25.2	LICENSE	ECL-2.0	LICENSE	ECL-2.0	same	2026-10-21
+SanDiegoCodeSchool/lti-node-library	master	8bfe9af23738	0		LICENSE	MIT			no-tag	2026-10-21
+sandraschi/classroom-mcp	master	ec429ff6644f	0		LICENSE	MIT			no-tag	2026-10-21
+satvik314/educhain	main	38adb1e9459d	0		LICENSE	MIT			no-tag	2026-10-21
+scormflow/scorm-engine-client	main	b68c148fa698	2	v0.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+securitybunker/databunker	master	1d96827d1cd6	0		LICENSE	MIT			no-tag	2026-10-21
+SenmuuuuW/universal-diagnostic-tutor-skill	main	075c1895d255	2	v2.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+shaheeranser/exam-proctor	main	6f29a9bb8adc	0		LICENSE	Apache-2.0			no-tag	2026-10-21
+shigella520/MindTrain	main	7115c484c77e	2	v1.0.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+sid-thephysicskid/leap-mcp	main	24921db79e4f	0		LICENSE	MIT			no-tag	2026-10-21
+SJRiz/pytogether	main	789558668db3	2	v1.1.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+smashburger-dev/argmin	main	9f7b57ee8833	0		LICENSE	MIT			no-tag	2026-10-21
+SonAIengine/ku-portal-mcp	main	b15886080faa	20	v0.20.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+synthetichealth/synthea	master	3e457b7c6294	20	v4.0.0	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+SYuan03/Skill-Anything	main	3cdc1c1f11dc	6	v0.4.1	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+syzoj/syzoj	master	573796fa7670	0		LICENSE	MIT			no-tag	2026-10-21
+terracotta-education/terracotta	development	00fc046c181e	70	v29.09.10	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+thoughtbot/top_secret	main	340792450b7f	7	v1.0.1	LICENSE.txt	MIT	LICENSE.txt	MIT	same	2026-10-21
+tsugiproject/tsugi	master	ccad49814142	70	26.10.7	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+tura-learn/Dhee	main	d8b0e0d018b6	26	v7.6.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ucbds-infra/otter-grader	master	190c1a4c3e97	110	v7.0.0	LICENSE	BSD-3-Clause	LICENSE	BSD-3-Clause	same	2026-10-21
+vardanagarwal/Proctoring-AI	master	4f284a3f110d	0		LICENSE	MIT			no-tag	2026-10-21
+viendinhcom/supermemo	master	8093cde2b80d	24	2.0.23	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+virgiliojr94/book-to-skill	master	a24e62f4d8ca	5	v1.4.0	LICENSE.md	MIT	LICENSE.md	MIT	same	2026-10-21
+vishalsachdev/canvas-mcp	main	2c1f86dbdc48	23	v1.14.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+webtech-network/autograder	main	a938047ae2c0	20	1.1.2	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+XiaoCow666/CodeSense	main	d5f87123a0e0	14	v2.2.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+yale-nlp/LLM-Metacognition	main	74b1fe8ba10f	0		LICENSE	MIT			no-tag	2026-10-21
+yetanalytics/lrsql	main	cb794e4bb604	115	v0.9.9	LICENSE	Apache-2.0	LICENSE	Apache-2.0	same	2026-10-21
+Yuanpeng-Li/gradescope-mcp	main	cd0a4e6ba46c	0		LICENSE	MIT			no-tag	2026-10-21
+ZeKaiNie/universal-examprep-skill	main	3a979e3bead9	8	v5.3.0-flash	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ZhijieXiong/pyedmine	main	20af7967486e	1	v1.0.0	LICENSE	MIT	LICENSE	MIT	same	2026-10-21
+ZsgsDesign/NOJ	master	a570f15fd306	22	0.17.4	LICENSE	MIT	LICENSE	MIT	same	2026-10-21

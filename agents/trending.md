@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 365 — 🟢 **`p364`'s pin hazard now has a denominator: 191 permissive-claimed addresses read at two pins each. It is RARE (1.5%), it is CONCENTRATED in single-tag repositories (18.2% vs 0%), and for 31.9% of this base the fix `p364` implied cannot be applied at all because no release exists to pin to**
+
+🔴 **Channel note — one transport this base relied on is gone, and its replacement
+returns strictly more.** `p364` recorded `git ls-remote --symref` **OPEN**. Under `p365` the
+**git CLI** answers `fatal: could not read Username for 'https://github.com': terminal
+prompts disabled` on any third-party address: the execution environment injects credentials
+only for repositories **attached to the session**. 🔵 **That is a credential-scope effect of
+the harness, not GitHub withdrawing an endpoint** — and `p365` enumerated the transports
+before recording a closure, which is exactly what **T27** was written for.
+
+| Transport | Verdict | What it returns |
+|---|---|---|
+| `git ls-remote --symref` (git CLI) | 🔴 **CLOSED** | credential prompt on any unattached repository |
+| 🟢 `curl https://github.com/OWNER/REPO/info/refs?service=git-upload-pack` | 🟢 **OPEN** | **the complete ref advertisement** — `symref=HEAD:refs/heads/*`, the `HEAD` sha, and **every** `refs/tags/*`. For `moodle/moodle`: 126 613 B, `main`, **591 tags** |
+| `curl https://raw.githubusercontent.com/...` | 🟢 **OPEN** | grant payloads, **and it accepts a TAG as the pin** — which is the only reason the version axis is measurable at all |
+| `curl https://api.github.com/*` | 🔴 403 | unchanged from `p363`, `p364` |
+| `curl https://github.com/OWNER/REPO` (HTML) | 🔴 403 | 🔵 **newly recorded:** the HTML host refuses `curl` while the smart-HTTP path on the **same host** answers 200 |
+| `curl .../tags.atom`, `.../releases.atom` | 🔴 403 | the documented API-free tag feed is **not** a transport here |
+| 🟢 **WebFetch** on `github.com` HTML | 🟢 **OPEN** | a *different* transport to the host `curl` is refused by. Read `caccl`'s release page: *"Initial Version"*, `gabeabrams`, `d9c8cd2`, labelled **Latest** |
+| 🟢 **WebFetch** on `github.com/topics/*` | 🟢 **OPEN** | **the only star-count source found this pass** — 20 of 741 rows with stars, language and description |
+
+🟢 **Net effect: the liveness and tag channel is not narrower than `p364`'s, it is wider.**
+`git ls-remote` never returned star counts; the pair *(smart-HTTP + WebFetch topic)* returns
+refs, tags **and** stars without one `api.github.com` call.
+
+**Evidence:** [`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv) ·
+[`single-tag-risk`](../evidence/single-tag-risk.2026-10-21-p365.tsv) ·
+[`caccl-tag-probe`](../evidence/caccl-tag-probe.2026-10-21-p365.tsv) ·
+[`probe-reliability`](../evidence/probe-reliability.2026-10-21-p365.tsv) ·
+[`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv) ·
+[`yanki-row-repair`](../evidence/yanki-row-repair.2026-10-21-p365.tsv) ·
+[`discovery-saturation`](../evidence/discovery-saturation.2026-10-21-p365.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p365.tsv)
+
+### 🔴 No new agent rows — and this pass can say *how hard it looked*, with a number
+
+🔴 **The prescribed agent leg returned nothing in domain for the twenty-first consecutive
+pass.** The literal `top open source AI agents education 2026 github MIT` returned
+general-purpose agents and SEO listicles; its best source said of itself: *"the education
+angle is thin."*
+
+🟢 **But `p365` found a better discovery instrument than the prescribed one, and then
+watched it fail in the most informative way possible.** `github.com/topics/ai-tutor`,
+read through **WebFetch**, returns ranked rows **with star counts** — the thing
+`api.github.com`'s 403 has denied this base since `p363`. It reports **741 repositories**
+and renders the top **20**.
+
+🔴 **All 20 are already on this base.** Not 19. Twenty.
+
+| Stars | Address | Already in |
+|---:|---|---:|
+| 42k | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 52 files |
+| 1.1k | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 25 files |
+| 575 | [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 26 files |
+| 525 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 38 files |
+| 312 | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 29 files |
+| 293 | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 18 files |
+| 290 | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 31 files |
+| 249 | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 23 files |
+| 196 | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 29 files |
+| 195 | [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 21 files |
+| 171 | [`nichochar/ari`](https://github.com/nichochar/ari) | 7 files |
+| 148 | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 44 files |
+| 116 | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 23 files |
+| 113 | [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | 5 files |
+| 109 | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | 19 files |
+| 96 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 43 files |
+| 92 | [`mahseema/aibooks`](https://github.com/mahseema/aibooks) | 6 files |
+| 90 | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 42 files |
+| 72 | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | 12 files |
+| 71 | [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | 8 files |
+
+🟢 **This is the strongest saturation evidence this base has ever produced, because for the
+first time the channel is RANKED BY STARS rather than by relevance.** `p362` concluded the
+index was saturated against function-word queries; a ranked-by-popularity channel could
+still have held a popular repository nobody here had searched the right words for. It does
+not. 🔵 **`p365` re-verified one of the 20 from the payload anyway** — `zijinz456/OpenTutor`,
+live on `main`, **MIT**, holder *Zijin Zhang 2026*, `main/LICENSE` — because a row carried
+from an earlier pass and a row re-read today are not the same evidential object.
+
+🔵 **Declared gap, so that silence is not mistaken for coverage:** the topic page renders 20
+of **741**. `p365` did not expand *"Load more"*, so **721 rows are unmeasured**. The
+saturation claim above is sound for the **top 20 by stars** and is **not** a claim about the
+long tail. 🟢 Successors: paginating that topic page is now the cheapest discovery leg on
+this base, and it is the only one that yields stars.
+
+### 🔴 A harness defect that every grant cell on this base is exposed to
+
+🔴 **`p365`'s own first sweep manufactured four false *"no grant"* verdicts in 191 rows —
+and all four named repositories whose grants this base had already read correctly.** The
+cause was not the network being unreliable; it was **two specific harness decisions**:
+
+| Cause | Rows | What happened |
+|---|---:|---|
+| 🔴 **any non-200 treated as absence** | **1** | [`SanDiegoCodeSchool/lti-node-library`](https://github.com/SanDiegoCodeSchool/lti-node-library) — uppercase `LICENSE` is **rung 1** and *was* probed; it returned non-200 once under 10-way concurrency and the harness recorded *"no grant"*. Re-probed sequentially: **200, 1 078 B, MIT** |
+| 🔴 **case-incomplete probe ladder** | **3** | [`ThisRaport`](https://github.com/kinoarizu/ThisRaport) (1 114 B), [`exampro`](https://github.com/lebmatter/exampro) (1 069 B), [`yanki`](https://github.com/kitschpatrol/yanki) (1 071 B) — all three carry **lowercase `license.txt`**, a rung the first ladder lacked |
+| 🟡 **classifier rung missing** | **3** | `sakai` and `OpenLRW` returned `UNKNOWN` on a payload that plainly names the **Educational Community License** — independently reproducing **T32**. And `imparo`'s tag payload returned `UNKNOWN` because the classifier **had no rung for an all-rights-reserved grant at all** |
+
+🔴 **The third row is the one to keep.** A classifier with no proprietary rung cannot *name*
+the worst grant it will ever meet; `p365`'s headline finding survived only because the
+payload was also read **by eye**. 🟢 Both defects were fixed and the sweep re-run in full
+(retry ×4, 404-the-only-absence-verdict, 13-rung case-varied ladder): **zero probe failures
+across 191 addresses**, and the corrected numbers are the ones published. 🔵 **This
+validates `gate-ladder-case` by reproducing the exact failure it describes** — and it is a
+standing warning about any grant cell produced by a probe that retried nothing.
+
+### 🟢 The branch-pin grant column was independently audited, and it holds
+
+🟢 **191 addresses re-read from payload. Zero corrections to the branch-pin families.**
+125 `MIT`, 41 `Apache-2.0`, 16 `BSD-3-Clause`, 2 `ECL-2.0`, 1 `ISC`, 1 `CC0-1.0`, 3 with no
+grant and 2 declaring theirs in prose — and **every one of the five non-permissive outcomes
+reproduces a hazard already written down here**. 🔵 A pass that confirms is a result: this
+column has now survived a re-read it did not author.
+
+🔴 **One flag-table row did NOT hold, and it is fixed in `agents/top.md`:**
+`kitschpatrol/yanki` was carried as *"no `LICENSE` file exists in the tree; the grant is a
+manifest field."* Its grant is **lowercase `main/license.txt`, 1 071 B, `sha256`₁₆
+`1d5701eb035072f1`, MIT, Eric Mika 2024-2026** — and this base's **own** later pass had
+already found it. 🟡 **The defect was not discovery, it was propagation:** a correction
+landed in `agents/trending.md` and the flag table was never updated. Successors: when a
+`p`-pass refutes a cell, grep the other shelves for the same address.
+
+### 🔴 Eight research legs, eight already-carried results — and two inbound errors worth naming
+
+🔴 **All four global legs and all four regional legs returned zero new facts.** Detail
+per leg in [`regional-legs`](../evidence/regional-legs.2026-10-21-p365.tsv). Two are worth lifting out:
+
+- 🔴 **EMEA re-delivered a date this base has refuted.** The leg again asserted Annex III
+  education duties *"from August 2026"*. The **AI omnibus** (in force **2026-07-27**)
+  moved Annex III point 3 to **2027-12-02**, settled here since `p233`. The
+  leg's own source hedged — *"verify the current high-risk deadline"* — and the vendor
+  blogs it drew on did not. 🔵 Nth independent re-delivery of a refuted date; **nothing is
+  revised**.
+- 🟡 **APAC returned a *less precise* reading than the shelf holds.** The leg gave Vietnam's
+  education high-risk duty as a flat **2026-03-01**; this base holds **2027-03-01**, with
+  **+6 months** for systems live before **2026-08-15**. The leg's own source *"cut off
+  mid-sentence"* on exactly that scope. 🟢 The shelf's reading stands and is **not**
+  revised downward to meet a thinner source.
+
 ## 2026-10-21 · Pass 364 — 🔴 **the grant of a shelved platform does not govern the components it makes you install: 60 READMEs read, 91 companion edges, 72 of them absent from 2 550 addresses — and the pass's best finding is that a grant read at a BRANCH can be wrong about the version a client ships**
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

@@ -1,0 +1,8 @@
+address	path	pin_a	pin_a_http	pin_b	pin_b_http	note
+harvard-edtech/caccl	LICENSE	main	404	1.0.59	404	absent at both pins
+harvard-edtech/caccl	LICENSE.md	main	200	1.0.59	404	the grant this base shelves
+harvard-edtech/caccl	LICENSE.txt	main	404	1.0.59	404	absent at both pins
+harvard-edtech/caccl	LICENCE	main	404	1.0.59	404	absent at both pins
+harvard-edtech/caccl	COPYING	main	404	1.0.59	404	absent at both pins
+harvard-edtech/caccl	license.txt	main	404	1.0.59	404	absent at both pins
+harvard-edtech/caccl	package.json	main	200	1.0.59	200	tree EXISTS at the tag (package.json 200) and carries no grant file

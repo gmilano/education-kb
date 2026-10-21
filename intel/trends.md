@@ -1032,3 +1032,146 @@ survives contact with the deployment** and not merely with the core.
 1 528 B payload**. That is one organisation-wide grant reproduced eleven times, not eleven
 decisions — and it is `gate-payload-digest`'s axis (`ACTION ZZ-ad`) answering in the
 affirmative on a tier nobody had pointed it at.
+
+## 39. 🟢 🆕 The version axis has a frequency now, it is rare, and it runs in BOTH directions
+
+🔵 **T36 established that a licence family is a function of the pin, from one instance.
+`p365` gives that instance a denominator.** Every permissive-claimed address this base
+holds — **191**, across `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md` — was read at **two pins**: the default branch, and the latest
+non-prerelease tag.
+
+| | Count | Share |
+|---|---:|---|
+| population | **191** | — |
+| measurable (≥1 stable tag) | **130** | 68.1% |
+| 🟢 same family at both pins | **128** | **98.5% of measurable** |
+| 🔴 families differ | **2** | **1.5% of measurable** |
+
+🟢 **So the hazard is real and rare.** For a platform with a release history, reading the
+grant at the branch is sound practice, and this base's grant column — built almost entirely
+at branch pins — is **not** systematically wrong.
+
+🔴 **But `p364`'s single instance showed only the benign direction.** There,
+`iframe-resizer` was **GPL-3.0-or-commercial** at `master` and **MIT** at `v3.5.13`:
+pinning the release *rescued* the grant. `p365` found the opposite shape, which is the
+dangerous one:
+
+| Address | Branch | Latest tag | Direction |
+|---|---|---|---|
+| [`muhammedalakbarli/imparo`](https://github.com/muhammedalakbarli/imparo) | 🟢 MIT | 🔴 **"All Rights Reserved", proprietary and confidential** (`pilot-v1.0`) | 🔴 **pinning REVOKES the grant** |
+| [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) | 🟢 MIT (`LICENSE.md`) | 🔴 **no grant file at all** (`1.0.59`, tree present) | 🔴 **pinning ERASES the grant** |
+
+🔵 **The practical consequence inverts the obvious advice.** "Pin your dependencies and
+read the licence at the pin" is good engineering that can, in 1.5% of cases, pin a client
+to a *worse* grant than the branch they were already on. The grant must be read **at the
+pin that ships**, whichever pin that is — not at whichever pin is more convenient.
+
+🟢 **Evidence:** [`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv) ·
+[`caccl-tag-probe`](../evidence/caccl-tag-probe.2026-10-21-p365.tsv)
+
+## 40. 🟢 🆕 Release discipline predicts grant discipline, and the predictor costs one request
+
+🟢 **Both of this base's version-axis failures sit in the class of repositories that have
+tagged exactly once.**
+
+| Class | Rows | Mismatches | Rate |
+|---|---:|---:|---:|
+| exactly 1 tag | **11** | **2** | 🔴 **18.2%** |
+| ≥2 tags | **119** | **0** | 🟢 **0%** |
+| of which ≥6 tags | 94 | 0 | 🟢 0% |
+
+🔵 **The mechanism is mundane and therefore reliable.** A repository that has cut many
+releases has carried its licence file through every one of them; the habit is established
+and observable. A repository with a single tag has an **unproven** release process, and that
+single tag is frequently an early snapshot taken under different intentions — `caccl`'s only
+tag is literally titled *"Initial Version"*, and `imparo`'s is `pilot-v1.0`.
+
+🟢 **This converts T36 from a universal re-audit into a triage step.** Count `refs/tags/*`
+in the ref advertisement — one request, no authentication — and read the grant at the tag
+**only** where the count is 1. On this base that is **11 reads instead of 130**, and it
+would have caught both failures.
+
+🔴 **The companion number is worse than either rate, and it is not a rate.** **61 of the
+191 permissive-claimed addresses — 31.9% — have no stable tag at all.** They cannot be
+pinned; they are consumed at a moving branch, and their grant cells are true of a commit
+rather than of a version. 🟡 **The LTI interoperability tier is over-represented there** —
+the layer this base recommends building integrations on is the layer least able to offer a
+pinnable release. 🔴 **This is a procurement problem before it is a licensing one:** the EU
+AI Act's technical-documentation duty, and the Korean and Vietnamese record-keeping duties,
+all presume the client can state *which version* they shipped. For a third of this supply
+the honest answer is a commit sha.
+
+🟢 **Evidence:** [`single-tag-risk`](../evidence/single-tag-risk.2026-10-21-p365.tsv) ·
+[`version-axis-frequency`](../evidence/version-axis-frequency.2026-10-21-p365.tsv)
+
+## 41. 🔴 🆕 A probe that retries nothing manufactures absence — and a classifier with no proprietary rung cannot name the worst grant it will meet
+
+🔴 **`p365`'s own first sweep produced four false "no grant" verdicts in 191 rows — 2.1% —
+and every one named a repository whose grant this base had already read correctly.** The
+pass publishes its own defect because every grant cell on these shelves was produced by an
+instrument of the same shape.
+
+| Cause | Rows | Mechanism |
+|---|---:|---|
+| 🔴 **any non-200 read as absence** | **1** | `SanDiegoCodeSchool/lti-node-library`: uppercase `LICENSE` is **rung 1** and *was* probed; one non-200 under 10-way concurrency became *"no grant"*. Sequential re-probe: **200, 1 078 B, MIT** |
+| 🔴 **case-incomplete ladder** | **3** | `ThisRaport`, `exampro`, `yanki` — all three carry **lowercase `license.txt`**, a rung the ladder lacked |
+| 🟡 **classifier rung missing** | **3** | `sakai` and `OpenLRW` → `UNKNOWN` on payloads naming the **Educational Community License**, independently reproducing **T32**; and `imparo`'s tag payload → `UNKNOWN` because the classifier had **no rung for an all-rights-reserved grant at all** |
+
+🔴 **The third row is the keeper.** A classifier built only from open-source licence families
+is structurally unable to *name* a proprietary grant; it degrades to `UNKNOWN`, which reads
+like a parsing nuisance rather than the most consequential verdict available. `p365`'s
+headline finding survived only because the payload was also read **by eye**. 🔵 **An
+absence verdict and an unclassified verdict are the two cheapest ways for a grant audit to
+be confidently wrong**, and they fail in opposite directions: absence over-reports risk,
+`UNKNOWN` under-reports it.
+
+🟢 **Both defects were fixed and the sweep re-run in full** — retry ×4, **404 the only
+absence verdict**, 13-rung case-varied ladder, proprietary rung added: **zero probe
+failures across 191 addresses**. 🟢 **The re-run also constitutes an independent audit of
+this base's branch-pin grant column, and that column produced ZERO corrections.** 125
+`MIT`, 41 `Apache-2.0`, 16 `BSD-3-Clause`, 2 `ECL-2.0`, 1 `ISC`, 1 `CC0-1.0`, 3 ungranted
+and 2 prose-declared — and all five non-permissive outcomes reproduce hazards already
+written down here.
+
+🔴 **One stale cell was found, and the defect was propagation rather than discovery.**
+`kitschpatrol/yanki` was carried on the licence-flags table as *"no `LICENSE` file exists in
+the tree; the grant is a manifest field."* Its grant is **lowercase `main/license.txt`,
+1 071 B, `sha256`₁₆ `1d5701eb035072f1`, MIT** — and **this base's own later pass had already
+found it**. The correction landed in `agents/trending.md` and the flag table was never
+updated. 🔵 **Successor rule: when a pass refutes a cell, grep every other shelf for the
+same address before closing the pass.**
+
+🟢 **Evidence:** [`probe-reliability`](../evidence/probe-reliability.2026-10-21-p365.tsv) ·
+[`yanki-row-repair`](../evidence/yanki-row-repair.2026-10-21-p365.tsv)
+
+## 42. 🟢 🆕 One host, two transports, two answers — enumerate before recording a channel closed
+
+🔴 **Under `p365` the git CLI stopped answering:** `git ls-remote --symref` returns
+`fatal: could not read Username for 'https://github.com'` on any third-party address,
+because the execution environment injects credentials only for repositories **attached to
+the session**. `p364` recorded this transport **OPEN** on the same day. 🔵 **It is a
+credential-scope effect of the harness, not GitHub withdrawing an endpoint** — and T27 was
+written precisely to stop a pass recording a closure before enumerating the transports.
+
+🟢 **Enumerated, the channel turned out to be WIDER than `p364`'s, not narrower:**
+
+| Transport | Verdict | Returns |
+|---|---|---|
+| `git ls-remote --symref` | 🔴 CLOSED | credential prompt |
+| 🟢 `curl github.com/OWNER/REPO/info/refs?service=git-upload-pack` | 🟢 **OPEN** | the **complete ref advertisement** — symref default branch, `HEAD` sha, **every tag**. `moodle/moodle`: 126 613 B, `main`, **591 tags** |
+| `curl raw.githubusercontent.com/...` | 🟢 OPEN | payloads, **and accepts a tag as the pin** |
+| `curl api.github.com/*` | 🔴 403 | unchanged since `p363` |
+| `curl github.com/OWNER/REPO` (HTML) | 🔴 403 | 🔴 **the same host that serves the 200 above** |
+| `curl .../tags.atom`, `.../releases.atom` | 🔴 403 | the documented API-free tag feed is not a transport here |
+| 🟢 **WebFetch** on `github.com` HTML | 🟢 OPEN | a different transport to the host `curl` is refused by |
+| 🟢 **WebFetch** on `github.com/topics/*` | 🟢 OPEN | **the only star-count source found this pass** |
+
+🔴 **The finding to generalise is the fifth row.** `github.com` returns **403 to `curl` on
+its HTML path and 200 to `curl` on its smart-HTTP path**. A channel is therefore not a
+*host* and not a *client* — it is a **(host, path, client)** triple, and a pass that tests
+one of them and writes down "blocked" has mislabelled the other two. 🟢 Together,
+*(smart-HTTP + WebFetch topic)* returns refs, tags **and** star counts with no
+`api.github.com` call at all — capabilities `git ls-remote` never had.
+
+🟢 **Evidence:** [`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv)

@@ -1,0 +1,12 @@
+address	only_tag	branch_family	tag_family	verdict	note
+chrisryugj/schoolinfo-mcp	v0.2.0	MIT	MIT	same	branch and tag agree
+dg13788/iep-system	v1.1.0	MIT	MIT	same	branch and tag agree
+dymchenkko/claude-study-agent	v0.1.0	MIT	MIT	same	branch and tag agree
+harvard-edtech/caccl	1.0.59	MIT	NONE	DIFFER	BOTH of this base's version-axis failures sit in this class
+HumphreySun98/Smart-Study-Agent	v1.0.0	MIT	MIT	same	branch and tag agree
+iamlucasb/lti-core	v0.4.0	MIT	MIT	same	branch and tag agree
+kabartay/openunivcourses	v1.0.0	MIT	MIT	same	branch and tag agree
+LabSirius/TutorIA	informe-minciencias-2026-09	MIT	MIT	same	branch and tag agree
+microsoft/moodle-ai-assistant	v0.1.0	MIT	MIT	same	branch and tag agree
+muhammedalakbarli/imparo	pilot-v1.0	MIT	PROPRIETARY-all-rights-reserved	DIFFER	BOTH of this base's version-axis failures sit in this class
+ZhijieXiong/pyedmine	v1.0.0	MIT	MIT	same	branch and tag agree
