@@ -6,17 +6,93 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 362 · 2026-10-21.** Every row below was checked first-hand: liveness and default
+**Pass 363 · 2026-10-21.** Every row below was checked first-hand: liveness and default
 branch via `git ls-remote --symref`, and the licence **read from the payload** at
 `raw.githubusercontent.com` — never from a badge, a README claim or GitHub's own
 classifier. Where the classifier and the payload disagree, the payload wins and the
 disagreement is recorded.
+
+🟢 **`p363` evidence:** [`new-rows-grant`](../evidence/new-rows-grant.2026-10-21-p363.tsv) ·
+[`no-grant-path-sweep`](../evidence/no-grant-path-sweep.2026-10-21-p363.tsv) ·
+[`regional-regulatory-clock`](../evidence/regional-regulatory-clock.2026-10-21-p363.tsv)
 
 **Evidence:** [`mit-body-sweep`](../evidence/mit-body-sweep.2026-10-21-p362.tsv) ·
 [`grant-corrections`](../evidence/grant-corrections.2026-10-21-p362.tsv) ·
 [`author-key-rederivation`](../evidence/author-key-rederivation.2026-10-21-p362.tsv) ·
 [`new-rows-bench`](../evidence/new-rows-bench.2026-10-21-p362.tsv) ·
 [`regional-legs`](../evidence/regional-legs.2026-10-21-p362.tsv)
+
+## 🟢 🆕 `p363`: the publisher tier this base never indexed — academic education-NLP labs and national dev-education communities
+
+🔵 **`p363` did not sweep a column; it asked who is missing from the index.** This base
+carries **2 550 distinct addresses**. Two publishers that sit squarely in education are
+absent from all of them: **`eth-nlped`** — ETH Zürich's *NLP for Education* group, five
+repositories, the source of the `MathDial` dialogue-tutoring dataset — and
+**`digitalinnovationone`**, Brazil's largest developer-education community, whose study
+agent carries **2 190 ★**. 🟢 **Twelve new addresses, all twelve live** (`git ls-remote
+--symref`, `HEAD` recorded in the evidence file), **all twelve on `main`.**
+
+🔴 **The grant result is the finding: 3 of 12 are usable in paid work.**
+
+| Grant channel | Count | What it means for a Globant engagement |
+|---|---:|---|
+| 🟢 `LICENSE` file, permissive | **3** | `StudentSim` (MIT), `Coding-Tutor` (Apache-2.0), `LLM-Metacognition` (MIT) — build on these |
+| 🔴 `LICENSE` file, **non-commercial** | **1** | `lftk` — GitHub shows `NOASSERTION`; the payload is **CC-BY-NC-4.0** |
+| 🟡 grant declared **in README prose only**, no `LICENSE` file | **2** | `mathdial` (CC-BY-SA-4.0), `socratic-generation` (CC-BY-4.0) — **content licences on datasets, not code grants** |
+| 🔴 **no grant at any of 11 probed paths** | **6** | all rights reserved |
+
+🔵 **The sweep is recorded probe-by-probe, not asserted.**
+[`no-grant-path-sweep`](../evidence/no-grant-path-sweep.2026-10-21-p363.tsv) holds
+**88 rows — 8 addresses × 11 licence paths** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+lower-case variants, `COPYING`, `COPYING.txt`, `LICENCE`, `LICENCE.md`, `NOTICE`) —
+**88 of 88 returned `404`.**
+
+🔴 **A measurement note a successor must not skip.** `p363`'s first probe loop tested
+`[ "$c" = "200" ]` and reported *"all 11 paths 404"* for all eight addresses. A second
+run captured the **actual** status codes and they came back **`307`, not `404`** — a
+malformed URL from a broken `xargs` quoting, not a verdict. The probe was rewritten and
+re-run before anything was published here. 🔵 **A probe that only tests for success
+cannot tell a 404 from a redirect**, and the first loop would have shipped the right
+conclusion for the wrong reason.
+
+### 🟢 Build-on tier — the three permissive rows
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| StudentSim | [microsoft/StudentSim](https://github.com/microsoft/StudentSim) | MIT (`LICENSE`, 1 074 B, `sha256:7df20dcdf919`) | `main/LICENSE` | **77** | North America | 🆕 Research framework that trains and evaluates models which **simulate how a student responds to material** — a stand-in learner to test a tutoring method against *before* recruiting humans. Microsoft; created 2026-05-28, pushed **2026-10-21** |
+| Coding-Tutor | [iwangjian/Coding-Tutor](https://github.com/iwangjian/Coding-Tutor) | Apache-2.0 (`LICENSE`, 11 357 B, `sha256:c71d239df917`) | `main/LICENSE` | **91** | APAC | 🆕 **ACL 2025 Findings.** Trains **turn-by-turn verifiers** for dialogue tutoring agents — scores a tutor's *next* move rather than the final answer |
+| LLM-Metacognition | [yale-nlp/LLM-Metacognition](https://github.com/yale-nlp/LLM-Metacognition) | MIT (`LICENSE`, 1 065 B, `sha256:5ea7fdc0c957`) | `main/LICENSE` | **80** | North America | 🆕 Metacognition in LLMs — foundations and methods for a model reporting **what it does not know**, the capability a tutor needs before it can diagnose a learner. Yale NLP, created 2026-05-16 |
+
+### 🟡 Dataset tier — real grants, declared in the README and nowhere else
+
+🔵 **Both rows are datasets, and both grants are Creative Commons** — correct for data,
+wrong for anything linked into a deliverable. Neither repository has a `LICENSE` file,
+so GitHub's classifier reports nothing and an automated reader concludes *"no grant"*.
+🟢 **Read the README and the grant is there, in a prose sentence.**
+
+| Asset | Repo | Licence (read from README payload) | Declared at | ★ 2026-10-21 | Region | What it is |
+| --- | --- | --- | --- | ---: | --- | --- |
+| MathDial | [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | **CC-BY-SA-4.0** — *"This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License"* | `main/README.md` L96–97 + shield L8; **no `LICENSE` file** | **95** | EMEA — Switzerland | 🆕 **EMNLP Findings 2023.** Teacher–student dialogues grounded in math reasoning problems, annotated with **pedagogical properties** — the move a teacher made, not just the words. 🟡 **Share-alike: a derived dataset must be released under the same terms** |
+| socratic-generation | [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | **CC-BY-4.0** — declared via `rel="license"` markup | `main/README.md` L67; **no `LICENSE` file** | **25** | EMEA — Switzerland | 🆕 **EMNLP 2022.** Automatic generation of **scaffolding questions** for learning math, trained with REINFORCE. 🟢 Attribution only — the weaker obligation of the two |
+
+### 🔴 No grant at any probed path — named so a successor does not re-find them as candidates
+
+| Repo | ★ 2026-10-21 | Region | What it is, and why it is worth knowing about anyway |
+|---|---:|---|---|
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM — Brazil | 🆕 A **study-mentor agent** from DIO, Brazil's largest dev-education community: it helps a learner plan study and get unstuck on DIO challenges **without handing over the solution**. Portuguese-language; runs in any harness that reads its `AGENTS.md`. 🔴 **No grant — all rights reserved.** 🔵 The single highest-starred LATAM education agent this base has measured, and it cannot be used in paid work |
+| [digitalinnovationone/potencializando-estudos-carreira-com-ia](https://github.com/digitalinnovationone/potencializando-estudos-carreira-com-ia) | **5 993** | LATAM — Brazil | 🆕 DIO's course *"Potencializando Seus Estudos e Carreira com IA: De Chatbots a Agentes"*. 🔴 **No grant.** Curriculum intelligence about what Brazilian developers are actually being taught about agents — read it, do not vendor it |
+| [THU-MAIC/Awesome-AI-Era-Edu](https://github.com/THU-MAIC/Awesome-AI-Era-Edu) | **92** | APAC — China | 🆕 Tsinghua MAIC's index of AI-era education work. 🔴 **No grant.** A reading list, and the only APAC-published education index `p363` found |
+| [eth-nlped/mathworld](https://github.com/eth-nlped/mathworld) | **9** | EMEA — Switzerland | 🆕 World-model formalism for math story problems, **ACL Findings 2023**. 🔴 **No grant, nothing in the README either** |
+| [eth-nlped/dialog-tutoring](https://github.com/eth-nlped/dialog-tutoring) | **7** | EMEA — Switzerland | 🆕 *"Opportunities and Challenges in Neural Dialog Tutoring"*, **EACL 2023**. 🔴 **No grant.** 🔵 Its README carries `copyright = {Creative Commons Attribution 4.0 International}` **inside a BibTeX block** — a citation field, not a licence declaration, and this base does not count it as one |
+| [eth-nlped/textbook-enrichment](https://github.com/eth-nlped/textbook-enrichment) | **3** | EMEA — Switzerland | 🆕 Textbook enrichment pipeline. 🔴 **No grant** |
+
+🔵 **Why the whole publisher is worth a row even when 3 of its 5 repositories are
+unusable.** `eth-nlped` is a named university lab with four peer-reviewed venues
+(EMNLP ×2, EACL, ACL Findings) behind five repositories, and it publishes **the
+pedagogical-annotation layer** — *which teaching move was made* — that this base's
+tutoring shelf has no other source for. 🟢 **Ask the group for a `LICENSE` file**; that
+is a one-email action with a named academic counterparty, and it is cheaper than
+rebuilding `MathDial`.
 
 ## 🔴 `p362`: three rows published as permissive are not, and the instrument that says so was already in this repository
 
@@ -923,6 +999,9 @@ that turned out to be usable.
 | 🆕 **`p359`** [HernanDiaz/moodle-local_aigrader](https://github.com/HernanDiaz/moodle-local_aigrader) | *"AI Grader Pro"* — AI-assisted Moodle assignment grading, human always in the loop, 74 commits, `+0200` | 🟢 **GPL-3.0-or-later** (`main/LICENSE`) — the grant text, not a badge; the file also enumerates bundled third-party licences under `thirdparty/vendor/` | 🟢 **Correctly licensed and correctly excluded from the permissive tiers.** A Moodle plugin under GPL-3.0-or-later is the *expected* answer — Moodle itself is GPL-3.0 — so this row is here as a **recommendation shape**, not a warning: reach it as a plugin inside the client's GPL estate, never vendored into a studio deliverable |
 | 🆕 **`p359`** [OpenProct/openproct](https://github.com/OpenProct/openproct) | stock **MIT** under an **organisation** account; a self-hosted privacy-first proctoring alternative | 🟢 **MIT is real** (`main/LICENSE`) — 🔴 **and the repository is 4 commits, 2 authors (`%ae`), all on 2025-10-26 — nothing in the year since** | 🟡 **Not a licence flag — a maintenance flag, filed here because it will be mistaken for one of these rows' opposite.** The grant is clean; there is no software behind it yet. 🔵 This base has no other category for *"permissive and empty"*, and the omission is how a successor ends up recommending it |
 | 🆕 **`p359`** [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | the one OneRoster + Caliper + xAPI warehouse found; a GitHub **topic page** reports it *"updated September 2025"* | 🟢 **ECL-2.0** (`master/LICENSE`) — permissive, Apache-2.0 with a narrowed patent grant — 🔴 **and the commit channel reads 2016-10-17 → 2018-01-16** | 🟡 **Grant fine, currency not.** 🔴 **The finding is the channel:** a topic page's "updated" date is not a commit date, and `p359` is the first pass on this base to catch that surface lying. Use the schema; do not deploy the code |
+| 🆕 **`p363`** [brucewlee/lftk](https://github.com/brucewlee/lftk) | a linguistic-feature toolkit on PyPI, **151 ★**, BEA @ ACL 2023, used for readability scoring and **essay grading**; GitHub shows `NOASSERTION` | 🔴 **CC-BY-NC-4.0** (`main/license.txt`, 13 319 B, `sha256:c2ca2f08eac6`) — *"Creative Commons Attribution-NonCommercial 4.0 International Public License"* | **NonCommercial.** 🔴 The lower-case `license.txt` path is why the classifier misses it — the same shape this base recorded at `lebmatter/exampro`. An automated-essay-scoring build that pulls `lftk` for readability features **cannot be sold** |
+| 🆕 **`p363`** [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | the best pedagogically-annotated tutoring dataset `p363` found, **95 ★**, EMNLP Findings 2023; GitHub shows **no licence** | 🟡 **CC-BY-SA-4.0, declared in `main/README.md` prose (L96–97) — no `LICENSE` file at any of 11 probed paths** | 🟢 **Usable as data, share-alike.** 🔵 The inverse of the usual defect on this shelf: here the classifier under-reports a **real** grant. A reader who trusts "no licence" throws away a usable dataset; a reader who treats it as a code grant ships share-alike obligations into a deliverable |
+| 🆕 **`p363`** [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | a **2 190 ★** Brazilian study-mentor agent, the highest-starred LATAM education agent on this base | 🔴 **no grant** — 11 probed paths, all `404`, `main`, `HEAD=3751c04fa` | **All rights reserved.** 🔵 Reinforces `p358`'s reading that the LATAM gap is a **licensing** gap rather than a supply gap — the software exists and is popular; the grant is what is missing |
 
 ## 🔴 🆕 A new anomaly class: the grant is valid, the *licensor* is somebody else
 

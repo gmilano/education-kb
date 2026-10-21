@@ -905,3 +905,64 @@ admin UI; `CodeSense` is a 4 ★ platform with 554 commits behind it. 🟡 **If 
 accept a non-OSI notice, `Pattern 9` with SATA honoured is less work and more mature
 software.** This pattern exists for the client who cannot, and for the engagement where
 *"permissive only"* is in the contract rather than in the slide.
+
+## 🆕 Pattern 22 — Evidence that a tutor works, produced before it meets a student
+
+**Problem.** Every tutoring pattern on this base ships a tutor. 🔴 **None of them ships
+the evidence that the tutor teaches**, and §2 of [`trends`](../intel/trends.md) records
+that evidence is becoming a procurement gate — buyers increasingly want proof of effect
+on learning, not a demo. 🔴 **The two ways teams currently answer this both fail a
+review:** a benchmark score measures the *model*, not the tutoring, and a classroom pilot
+costs a term and needs ethics approval before anyone knows whether the policy is even
+sane. 🟢 `p363` found the permissive substrate for a third answer.
+
+**The idea.** Evaluate the tutor against a **simulated learner** first, score it on
+**pedagogical moves** rather than final answers, and keep the human pilot as
+confirmation of a result you already have.
+
+### 22a — The harness
+
+1. **Simulated learners** from 🆕 [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) — **MIT**, read at `main/LICENSE` (1 074 B, `sha256:7df20dcdf919`). It trains and evaluates models that simulate how a student responds to material; its stated purpose is to give a tutoring researcher *"a realistic stand-in for a student"* before involving humans per experiment. 🔵 Created 2026-05-28 and pushed on the day of this pass — **young**: pin the commit (`HEAD=73005fd8c` at `p363`), do not float on `main`.
+2. **Move-level scoring** from 🆕 [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) — **Apache-2.0**, `main/LICENSE` (11 357 B). **ACL 2025 Findings**: turn-by-turn verifiers that judge the tutor's *next move*. 🟢 **This is the component that makes the pattern defensible** — it scores "did the tutor scaffold or did it answer", which is the thing a teacher is actually buying.
+3. **Ground the rubric in human teaching** with 🆕 [`eth-nlped/mathdial`](https://github.com/eth-nlped/mathdial) — **CC-BY-SA-4.0**, declared at `main/README.md` L96–97, 🔴 **no `LICENSE` file**. Teacher–student math dialogues annotated with the pedagogical move the teacher made. 🟡 **Share-alike: a derived corpus must ship under the same terms** — so use it to *calibrate* the verifier and keep the derivative out of the client's proprietary data estate, or accept CC-BY-SA on that artefact deliberately.
+4. **Gate the tutor from asserting into a gap** with 🆕 [`yale-nlp/LLM-Metacognition`](https://github.com/yale-nlp/LLM-Metacognition) — **MIT**, `main/LICENSE`. Calibrated "I don't know" is the prerequisite for diagnosis: a tutor that cannot represent its own uncertainty cannot tell a misconception from a gap.
+5. **Mastery estimates a reviewer already trusts:** [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT) for Bayesian Knowledge Tracing, or [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (MIT) if the client wants deep knowledge tracing benchmarked against standard datasets.
+6. **Quality-gate the generated turns:** [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (MIT).
+7. **Deliver into the LMS** over LTI 1.3 once the evidence exists: [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) or [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT).
+
+### 22b — The licence boundary, which is the whole reason to write this down
+
+🟢 **Steps 1, 2, 4, 5, 6 and 7 are MIT or Apache-2.0** — they compose into a studio
+deliverable with no copyleft and no share-alike reaching the client's code.
+
+🔴 **Step 3 is the only encumbered component, and it encumbers *data*, not code.** Keep
+`MathDial` and anything derived from it on the **evaluation** side of the boundary — the
+rubric, the calibration set, the test fixtures. 🔵 Nothing from step 3 needs to enter the
+runtime, so nothing from step 3 needs to enter the deliverable.
+
+🔴 **Do not reach for [`brucewlee/lftk`](https://github.com/brucewlee/lftk) to add
+readability features here.** GitHub reports `NOASSERTION`; the payload at
+`main/license.txt` is **CC-BY-NC-4.0** (13 319 B, `sha256:c2ca2f08eac6`) and a build that
+links it **cannot be sold**. 🟢 It is the obvious library for this job, which is exactly
+why it is named in a pattern that tells you not to use it.
+
+### 22c — What this is worth per region
+
+🟢 **EMEA — this is the compliance artefact, not a nice-to-have.** From **2026-08-02** the
+EU AI Act is enforced and **education assessment is high-risk**: a documented evaluation
+of the system against a defined population, with human oversight and a decision log, is
+work the regulation *requires*. Pattern 22 produces most of it as a by-product.
+
+🟢 **North America — this is the K-8 workaround.** Where student-facing AI is barred
+(New York City's one-year moratorium through eighth grade), **the simulated learner is
+the only cohort available**, and OK/MD's human-oversight statutes make the move-level
+log a selling point.
+
+🟢 **LATAM — this is the 87%/26% offer with teeth.** UNESCO IESALC found 87% of
+institutions using AI and 26% holding a formal strategy; an institution with no strategy
+cannot evidence anything. Pattern 22 is the smallest concrete deliverable that turns
+"we use AI" into "we measured it".
+
+🔵 **APAC — add labelling before shipping generated turns into China**, per §33: AI-content
+labelling is a product feature there, and Vietnam's Law on AI (2026-03-01) reaches foreign
+vendors directly.

@@ -870,3 +870,72 @@ query shapes manufacture the same illusion**: they return a plausible, well-rank
 completely off-vertical answer, and a pass that trusts the ranking concludes the vertical
 is empty. 🟢 The fix is cheap and it is not more vocabulary — it is `topic:` anchors and
 the **function legs** `p356` introduced.
+
+## 33. 🔴 🆕 The 2026 regulatory clock has already struck in three regions, and the dates are not the same date
+
+🟢 **"Regulatory divergence" (§5) is no longer a forecast — `p363` put dates on it.** Four
+regions, four binding instruments, four different moments, all inside 2026:
+
+| Region | Instrument | In force | What it binds in education |
+|---|---|---|---|
+| EMEA | **EU AI Act** | enforcement by the AI Office and national authorities **from 2026-08-02** | education **access and assessment** — admissions, student evaluation, exam scoring — classified **high-risk** |
+| APAC | **South Korea AI Basic Act** | **2026-01-22** | general AI duties; no education carve-out confirmed |
+| APAC | **Vietnam Law on AI** | **2026-03-01** | applies to **foreign technology companies** as well as domestic |
+| APAC | **China**, AI clause in the Cybersecurity Law | **2026-01-01** | model filing + **AI-content labelling**; still no unified AI law |
+| North America | **no national law**; 134 AI-in-education bills across **31 states** | rolling 2026 | the binding rules are **state** rules — CA **AB 1159** restricts training on student data; OK and MD **bar AI from high-stakes student decisions** |
+| LATAM | **no binding education AI law**; Uruguay signed the Council of Europe convention (2025), Colombia **CONPES 4144**, Mexico's bill still in the Senate | — | governance is **policy and treaty**, not enforceable product duty |
+
+🔴 **The design consequence is concrete, not abstract.** An assessment or admissions
+feature is a **high-risk AI system in the EU from August 2026** and merely a
+procurement-policy question in most of LATAM. 🟢 **Build the human-in-the-loop and the
+decision log once, to the EU bar, and ship that build everywhere** — it is the only
+version that is legal in every region, and in the US it also satisfies Oklahoma and
+Maryland without a second code path. 🔵 **Do not ship the LATAM-minimum build and plan to
+harden it for EMEA later**: the EU obligation attaches to the *use*, so the retrofit lands
+mid-engagement.
+
+🔵 **One cross-regional number worth a slide:** roughly **45% of institutions in Latin
+America and the Caribbean** have or are developing AI guidance, against **~70% in Europe
+and North America**. Source list in
+[`regional-regulatory-clock`](../evidence/regional-regulatory-clock.2026-10-21-p363.tsv).
+
+## 34. 🟡 🆕 The classifier's errors run both ways, and this base had only ever recorded one direction
+
+🔵 **Thirty-two trends and a dozen licence flags into this base, every grant defect was
+the same shape: a repository that looked *more* permissive than it was.** `MIT` that was
+non-commercial, `MIT` that was SATA, badges pointing at 404s. 🟢 **`p363` found the
+inverse.** [`eth-nlped/mathdial`](https://github.com/eth-nlped/mathdial) reports **no
+licence** on GitHub and has no `LICENSE` file at any of 11 probed paths — and it is
+genuinely **CC-BY-SA-4.0**, stated in a prose sentence at `README.md` L96–97 under a
+shield at L8.
+
+🔴 **Both naive readings lose.** Trust "no licence" and a usable, peer-reviewed dataset is
+discarded for nothing. Assume the README grant is a code grant and **share-alike
+obligations ship inside a client deliverable**. 🟢 **The rule that survives both: the
+grant's *channel* is as much a datum as the grant's *name*** — which is why
+[`new-rows-grant`](../evidence/new-rows-grant.2026-10-21-p363.tsv) carries a
+`grant_channel` column (`LICENSE-file`, `README-prose-only`,
+`README-rel-license-only`, `bibtex-copyright-field-only`, `none`) and not just a licence
+string.
+
+## 35. 🔴 🆕 The pedagogy layer is published by academics, and academics do not ship LICENSE files
+
+🔵 **`p363` indexed a named university lab — ETH Zürich's NLP-for-Education group — and
+the pattern is uncomfortably clean.** Five repositories, four peer-reviewed venues
+(EMNLP ×2, EACL, ACL Findings). 🔴 **Zero `LICENSE` files.** Two declare a Creative
+Commons grant in README markup; three declare nothing at all.
+
+🔴 **This is the third independent confirmation on this base**, after `p359`'s
+psychometrics leg (three of three addresses with no usable permissive grant) and
+`naiayti/TeachingKG`. 🔵 **The structural reading: the layer that encodes *how teaching
+works* — pedagogical move annotation, scaffolding, cognitive diagnosis, psychometrics —
+is overwhelmingly produced inside academia, and academia's publishing norm is a citation
+request, not a software licence.** The applications tier is permissive; the layer that
+would make an application *pedagogically* defensible is not.
+
+🟢 **The action is not a rebuild and not an avoidance.** These are **named institutional
+counterparties with public contact addresses** — unlike an anonymous `NOASSERTION`
+repository, a licence request here has someone to send it to and a citable reason to
+grant it. 🔵 **Record the ask, not just the gap**: a studio that wants the pedagogy layer
+should be opening those conversations now, because the alternative is re-collecting
+teacher–student dialogue data at research cost.

@@ -350,6 +350,31 @@ AI instruction academy with Microsoft, OpenAI and Anthropic. 🟡 Market share: 
 America is cited at **~36 % of the global AI-in-education market, ≈ $3.68 bn in 2026** —
 a commercial-aggregator figure, not a primary source.
 
+#### 🆕 `p363` — the clock, and why the wedge in K-8 is the teacher and not the student
+
+🔴 **There is no US national AI-in-education law, and that is the point: the binding
+rules are state rules, and there are now 134 of them in flight across 31 states.**
+Enacted and concrete: **California AB 1159** restricts training models on student data;
+**Oklahoma and Maryland** require human oversight and **bar AI from high-stakes student
+decisions**. Federally, the **K-12 AI Literacy and Readiness Act (H.R. 8747)** advanced
+out of the House Education and Workforce Committee on **2026-07-21** — largely along
+party lines, so treat it as a funding *possibility*, not a plan.
+
+🔴 **District-level bans are the live commercial constraint.** New York City holds a
+**one-year moratorium on student-facing AI through eighth grade**. 🟢 **So in K-8 the
+sellable surface is the teacher**: lesson preparation, differentiation, assessment
+drafting, administrative load — none of which is a student-facing system. 🔵 Teacher-side
+demand is already there: roughly **60% of US K-12 teachers used AI tools in 2024-25**,
+about **32% at least weekly**.
+
+🟢 **Supply placed here this pass:** [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim)
+(MIT) and [`yale-nlp/LLM-Metacognition`](https://github.com/yale-nlp/LLM-Metacognition)
+(MIT) — both permissive, both the measurement layer rather than the product.
+
+🔵 **Canada is strategy-only.** The 2026 *"AI for All"* strategy commits to a national AI
+literacy push with **no legislation date set** — an opening for literacy programme work
+without a compliance burden attached.
+
 ### EMEA
 
 **Added `p362`.** 🟢 **Two supply-side entries, both placed by a vendor's own commit
@@ -611,6 +636,34 @@ the largest unserved gap in this file and the cheapest to close: it needs legs r
 Swahili, Arabic, French and Portuguese, which no pass has done. Registered on
 `intel/trends.md` as the regional arm of **`ACTION ZZ-bf`**.
 
+#### 🆕 `p363` — the one region where education AI is already legally high-risk
+
+🔴 **From 2026-08-02 the EU AI Act is being enforced by the AI Office and national
+authorities, and education is named.** AI used in **education access and assessment** —
+admissions, student evaluation, exam scoring — is classified **high-risk**. 🔵 A
+proposed **"AI omnibus"** amendment would make high-risk obligations conditional on the
+availability of harmonised technical standards, so the *detail* is still moving; the
+**classification is not**.
+
+🟢 **This is the region where compliance work is the engagement, not an overhead line.**
+Conformity documentation, logging, human-oversight design and post-market monitoring for
+an assessment feature are billable deliverables with a statutory deadline behind them —
+and, per §33 of [`trends`](trends.md), the build that satisfies the EU bar is the one
+worth shipping to every other region.
+
+🔵 **Public funding frame:** the **Digital Education Action Plan 2021-2027** and the **AI
+Continent Action Plan** both name education; **Denmark** has dedicated **EUR 200M** to
+R&D including education. Finland, Estonia and the Netherlands lead on K-12 integration.
+One market estimate puts Europe at **$2.64B in 2026** growing to **$8.0B by 2030
+(31.9% CAGR)** — 🔵 treat as a research-firm figure, per the spread recorded at `p359`.
+
+🔴 **Supply note, and it is a gap:** the strongest pedagogy assets `p363` found are
+EMEA-published and **carry no `LICENSE` file** —
+[`eth-nlped`](https://github.com/eth-nlped/mathdial), five repositories out of ETH
+Zürich, four peer-reviewed venues, two CC grants declared only in README prose and three
+with no grant at all. 🟢 **A licence request to a named lab is the cheapest unblock
+available in this region.**
+
 ### APAC
 
 **Added `p362`.** 🔴 **A region-specific licence hazard, measured rather than inferred,
@@ -785,6 +838,36 @@ unverified rather than repeated.
 🟢 **APAC remains the densest supply region on this base — 21 rows on `agents/top.md`** —
 and the Vietnam window is the first time a *regulatory* date, rather than supply, is the
 reason to lead with the region.
+
+#### 🆕 `p363` — three binding statutes inside nine months, and one of them reaches foreign vendors
+
+🔴 **APAC is the fastest-moving regulatory region and the least uniform.** In force
+during 2026: **South Korea's AI Basic Act (2026-01-22)**, **Vietnam's Law on AI
+(2026-03-01)** — which **applies to foreign technology companies as well as domestic
+ones**, so it binds a Globant delivery directly — and **China's AI clause in the
+Cybersecurity Law (2026-01-01)**, alongside **model filing** and **AI-content
+labelling** duties, with still no unified Chinese AI law. 🔵 **Japan and Taiwan** use
+framework/promotion instruments with few direct duties; **Singapore and Australia** rely
+on soft law plus existing statutes, and both are exporting governance toolkits and
+assurance frameworks.
+
+🟢 **The concrete product requirement here is labelling.** Generated courseware shipped
+into China needs **AI-content labelling** as a first-class feature, not a setting — and
+it is the one regional duty that changes the artefact rather than the paperwork.
+
+🔵 **Demand signal, and a caution about its depth.** China reports **700m+ generative-AI
+users and >50% penetration by mid-2026**; one regional executive summary nonetheless
+reads adoption as *"extraordinary in breadth, shallow in depth"*. The **Ipsos Education
+Monitor 2026** finds **lower** support for banning AI in schools across the Asian markets
+surveyed — 🔴 **with Australia and New Zealand as the clear exception**, where support for
+a ban runs higher. A single "APAC" go-to-market treats those as one market and they are
+not.
+
+🟢 **Supply placed here this pass:**
+[`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) (Apache-2.0, ACL
+2025 Findings) — permissive, and the only move-level tutoring verifier on this base.
+🔴 [`THU-MAIC/Awesome-AI-Era-Edu`](https://github.com/THU-MAIC/Awesome-AI-Era-Edu)
+carries **no grant**.
 
 ### LATAM
 
@@ -974,6 +1057,38 @@ better model.
    publicly and plainly intend their work to be used. For `banco-preguntas-saberpro`'s
    Saber Pro item bank in particular, **requesting a `LICENSE` costs an email and is
    cheaper than re-authoring an item bank.** 🔴 Nothing may be used until one exists.
+
+#### 🆕 `p363` — the 87%/26% spread *is* the offer
+
+🟢 **The strongest single number this base holds for the region, and it is a UNESCO
+primary source.** UNESCO IESALC surveyed **200 institutions across 19 countries**:
+**87% use AI in at least one area of their activity**, **74% in teaching and learning** —
+and **only 26% have a formal AI strategy.** 🔵 Adoption is driven by **individual
+academics, researchers and students** rather than institution-wide plans, and private
+institutions have more governance capacity than public ones.
+
+🔴 **That gap is not a technology gap.** The institutions are already using AI. What is
+missing is strategy, policy, data boundaries and oversight — which is a **governance
+engagement**, deliverable without shipping a model at all, and it is the clearest
+LATAM-specific offer on this shelf. 🔵 Regionally, roughly **45% of LAC institutions**
+have or are developing AI guidance against **~70% in Europe and North America**.
+
+🔵 **Governance scaffolding now exists to anchor such work to.** UNESCO launched the
+**Observatory on Artificial Intelligence in Education for Latin America and the
+Caribbean** on **2026-04-14 in Santiago, Chile**, and runs a pilot in Mexico with
+**CONALEP and DGETI**. Instruments: **Uruguay** was the first in the region to sign the
+Council of Europe Framework Convention on AI (2025); **Colombia** adopted **CONPES 4144**
+(2025-02); **Mexico's** federal bill remains in the Senate. 🔴 **None of these is an
+enforceable education-product duty yet** — unlike EMEA, there is no compliance deadline to
+sell against here.
+
+🔴 **Supply, and the licensing gap `p358` measured, confirmed again.**
+[`digitalinnovationone/dio-agent`](https://github.com/digitalinnovationone/dio-agent) —
+Brazil's most-starred education agent at **2 190 ★**, a study mentor that deliberately
+withholds solutions — and DIO's **5 993 ★** agents course both carry **no grant at any of
+11 probed paths**. 🟢 **The regional pattern holds: the software exists and is popular;
+the grant is what is missing.** Licensing advisory is a real line item in LATAM
+engagements, not a footnote.
 
 ### Global
 

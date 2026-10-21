@@ -595,6 +595,29 @@ permissive and usable, but it must be named correctly.
 
 ---
 
+## 🆕 Research corpora and simulated learners — the substrate a tutoring claim is tested against, `p363`
+
+🔵 **This tier is not software to deploy; it is what you measure a deployment with.** A
+tutoring engagement that cannot say *"this tutor was evaluated against N learners on
+move-level pedagogy"* has no evidence to put in front of a client, and `p363` found the
+permissive substrate for exactly that claim.
+
+| Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | Role in a build |
+|---|---|---|---:|---|---|
+| [microsoft/StudentSim](https://github.com/microsoft/StudentSim) | MIT (`LICENSE`, 1 074 B, `sha256:7df20dcdf919`) | `main/LICENSE` | **77** | North America | **Simulated learner.** Iterate tutoring policy without a human cohort per experiment; recruit humans once, to confirm |
+| [iwangjian/Coding-Tutor](https://github.com/iwangjian/Coding-Tutor) | Apache-2.0 (`LICENSE`, 11 357 B, `sha256:c71d239df917`) | `main/LICENSE` | **91** | APAC | **Turn-level verifier.** Scores the tutor's *next move*; ACL 2025 Findings |
+| [yale-nlp/LLM-Metacognition](https://github.com/yale-nlp/LLM-Metacognition) | MIT (`LICENSE`, 1 065 B, `sha256:5ea7fdc0c957`) | `main/LICENSE` | **80** | North America | **Calibration / "I don't know".** Gates a tutor from asserting into a gap |
+| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | 🟡 **CC-BY-SA-4.0 — README prose only, no `LICENSE` file** | `main/README.md` L96–97 | **95** | EMEA — Switzerland | **Pedagogically annotated dialogue corpus.** The only source on this base for *which teaching move was made*. 🟡 Share-alike binds derived datasets |
+| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | 🟡 **CC-BY-4.0 — `rel="license"` markup only** | `main/README.md` L67 | **25** | EMEA — Switzerland | **Scaffolding-question generation** (REINFORCE), EMNLP 2022 |
+
+🔴 **Three sibling repositories from the same lab carry no grant at all** —
+[`mathworld`](https://github.com/eth-nlped/mathworld) (ACL Findings 2023),
+[`dialog-tutoring`](https://github.com/eth-nlped/dialog-tutoring) (EACL 2023),
+[`textbook-enrichment`](https://github.com/eth-nlped/textbook-enrichment) — probed at 11
+licence paths each, all `404`
+([`no-grant-path-sweep`](../evidence/no-grant-path-sweep.2026-10-21-p363.tsv)).
+🟢 **One email to a named lab is the cheap fix; rebuilding `MathDial` is not.**
+
 ## Carried inventory — re-verified this pass, not promoted to the tiers above
 
 🟢 **72 addresses, every one re-probed first-hand 2026-10-21 and every one ALIVE.** These

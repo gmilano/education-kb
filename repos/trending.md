@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 363 · 2026-10-21 — 🟢 **the index had a publisher-shaped hole: a named university education-NLP lab and a national developer-education community, neither of them in 2 550 addresses.** Twelve live addresses added, six of them with no grant, one real grant that GitHub reports as absent, and a probe this pass had to throw away and rebuild
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · the GitHub index **OPEN** through the session's MCP search tool · 🔴
+`api.github.com/*` and `github.com` HTML **403 by `curl`** — unchanged. 🔵 **New
+limitation recorded:** the MCP `get_file_contents` tool is **repository-scoped to the
+session** and refuses third-party addresses, so it is not a payload channel.
+
+**Evidence:** [`new-rows-grant`](../evidence/new-rows-grant.2026-10-21-p363.tsv) ·
+[`no-grant-path-sweep`](../evidence/no-grant-path-sweep.2026-10-21-p363.tsv)
+
+### 🟢 Research corpora and benchmarks — the layer the tutoring shelf reasons over
+
+🔵 **These are not applications and should not be shelved as agents.** They are the
+**measurement and training substrate** for a tutoring build: a simulated learner, a
+move-level verifier, and two dialogue corpora annotated by pedagogy rather than by
+answer correctness.
+
+| Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it gives a build |
+|---|---|---|---:|---|---|
+| [microsoft/StudentSim](https://github.com/microsoft/StudentSim) | MIT (`LICENSE`, 1 074 B) | `main/LICENSE` | **77** | North America | A **student simulator** to iterate a tutor against without a human cohort per experiment. `HEAD=73005fd8c`, pushed 2026-10-21 |
+| [iwangjian/Coding-Tutor](https://github.com/iwangjian/Coding-Tutor) | Apache-2.0 (`LICENSE`, 11 357 B) | `main/LICENSE` | **91** | APAC | A **turn-level verifier** and its evaluation harness — ACL 2025 Findings. `HEAD=d1fa15b50` |
+| [yale-nlp/LLM-Metacognition](https://github.com/yale-nlp/LLM-Metacognition) | MIT (`LICENSE`, 1 065 B) | `main/LICENSE` | **80** | North America | Methods for **calibrated "I don't know"** — the prerequisite for a tutor that diagnoses instead of asserting. `HEAD=74b1fe8ba` |
+| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | 🟡 **CC-BY-SA-4.0, README prose only** | `main/README.md` L96–97 | **95** | EMEA 🇨🇭 | Teacher–student math dialogues with **pedagogical-move annotation**. 🟡 Share-alike on derivatives. `HEAD=b06c020a0` |
+| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | 🟡 **CC-BY-4.0, `rel="license"` only** | `main/README.md` L67 | **25** | EMEA 🇨🇭 | Scaffolding-question generation, EMNLP 2022. `HEAD=5304aa300` |
+
+### 🔴 Six addresses with no grant at 11 probed paths each
+
+| Repo | ★ | Region | Note |
+|---|---:|---|---|
+| [digitalinnovationone/potencializando-estudos-carreira-com-ia](https://github.com/digitalinnovationone/potencializando-estudos-carreira-com-ia) | **5 993** | LATAM 🇧🇷 | DIO's agents course — the highest-starred address `p363` touched. Curriculum intelligence, not a dependency |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM 🇧🇷 | Study-mentor agent, Portuguese, harness-agnostic via `AGENTS.md` |
+| [THU-MAIC/Awesome-AI-Era-Edu](https://github.com/THU-MAIC/Awesome-AI-Era-Edu) | **92** | APAC 🇨🇳 | Tsinghua MAIC education index |
+| [eth-nlped/mathworld](https://github.com/eth-nlped/mathworld) | **9** | EMEA 🇨🇭 | ACL Findings 2023 world-model formalism |
+| [eth-nlped/dialog-tutoring](https://github.com/eth-nlped/dialog-tutoring) | **7** | EMEA 🇨🇭 | EACL 2023; BibTeX `copyright` field is not a grant |
+| [eth-nlped/textbook-enrichment](https://github.com/eth-nlped/textbook-enrichment) | **3** | EMEA 🇨🇭 | Textbook enrichment pipeline |
+
+🟢 **`eth-nlped` is worth one email, not a rebuild.** Five repositories, four
+peer-reviewed venues, one named institution — and the only source on this base for
+**move-level pedagogical annotation**. Three of the five simply lack a `LICENSE` file.
+
+### 🔵 What `p363` searched that returned nothing worth shelving
+
+🟢 **Declared so the gaps are not re-walked as if unexplored.** `topic:education
+topic:ai stars:>150 pushed:>2026-08-01` returned **56 rows of which ~50 were
+general-purpose coding agents** carrying an `education` topic — topic-field spam, not
+an education tier. `mcp education student` returned **generic awesome-lists only**: 🔴
+**there is still no MCP server tier for the student-record systems** (SIS/LMS) beyond
+what this base already shelves. A Spanish/Portuguese query (`educacion OR educativo
+IA`) was **defeated by tokenisation** — `IA` matched `IAM`, `iA-Fonts`, `IAPHelper` —
+and the two real LATAM rows it surfaced came through anyway. 🔵 **`autograder` and
+`knowledge tracing` are saturated on this base**: every row above 40 ★ was already
+shelved (`pyBKT`, `EduStudio`, `pyedmine`, `Submitty`, `judge0`, `gatorgrader`,
+`XES3G5M`, `ktm`), which is a **positive** result for the index's coverage of those
+two functions.
+
+
 ## Pass 362 · 2026-10-21 — 🔴 **a repository's LICENSE file is a statement about one repository, and in this sector the dangerous work lives in another one.** The MIT judge with a SATA execution tier and an ungranted deployment repo, three new addresses from inside one stack, four new rows, and a 144-address grant sweep
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

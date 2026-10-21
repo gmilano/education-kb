@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 363 — 🟢 **this base has 2 550 addresses and does not contain ETH Zürich's NLP-for-Education group or Brazil's largest dev-education community.** Twelve new live addresses, and **3 of 12 are usable in paid work**: two MIT, one Apache-2.0, one CC-BY-NC behind GitHub's `NOASSERTION`, two real CC grants declared only in README prose, and six with no grant at all
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · the GitHub index **OPEN** through the session's MCP search tool · 🔴
+`api.github.com/*` **403** and `github.com` HTML **403 by `curl`** — unchanged from
+`p362`. 🔵 **One channel correction:** the session's `get_file_contents` MCP tool is
+**scoped to the session's own repositories** and returns *"Access denied"* for any third
+party address, so it cannot be used to read a candidate's `LICENSE`. The GitHub **search**
+tool is not so scoped. Payload reads must go through `raw.githubusercontent.com`.
+
+**Evidence:** [`new-rows-grant`](../evidence/new-rows-grant.2026-10-21-p363.tsv) ·
+[`no-grant-path-sweep`](../evidence/no-grant-path-sweep.2026-10-21-p363.tsv) ·
+[`regional-regulatory-clock`](../evidence/regional-regulatory-clock.2026-10-21-p363.tsv)
+
+### 🟢 The signal: a whole publisher tier, not a single repository
+
+🔵 **`p363` changed the question.** The last eight passes swept **columns** — liveness,
+stars, then the grant column at `p362`. This pass asked instead **who is not in the
+index at all**, and ran the answer against all 2 550 addresses this base holds.
+
+| New this pass | ★ | Region | Grant | Why it matters |
+|---|---:|---|---|---|
+| [microsoft/StudentSim](https://github.com/microsoft/StudentSim) | **77** | North America | 🟢 MIT | **Simulated students.** Test a tutoring method against a model learner before recruiting humans. Created 2026-05-28, **pushed the day of this pass** |
+| [iwangjian/Coding-Tutor](https://github.com/iwangjian/Coding-Tutor) | **91** | APAC | 🟢 Apache-2.0 | **ACL 2025 Findings** — turn-by-turn verifiers that score a tutor's *next move*, not the final answer |
+| [yale-nlp/LLM-Metacognition](https://github.com/yale-nlp/LLM-Metacognition) | **80** | North America | 🟢 MIT | Metacognition — a model reporting what it does **not** know, which is what a tutor needs before it can diagnose |
+| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | **95** | EMEA 🇨🇭 | 🟡 CC-BY-SA-4.0, README only | **EMNLP Findings 2023.** Teacher–student math dialogues annotated with **which pedagogical move was made** |
+| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | **25** | EMEA 🇨🇭 | 🟡 CC-BY-4.0, README only | **EMNLP 2022.** Scaffolding-question generation via REINFORCE |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM 🇧🇷 | 🔴 none | Brazil's most-starred education agent — a study mentor that **refuses to hand over the solution**. Unusable in paid work |
+| [brucewlee/lftk](https://github.com/brucewlee/lftk) | **151** | Not placed | 🔴 CC-BY-NC-4.0 | Readability + **essay-scoring** features. GitHub says `NOASSERTION`; the payload says NonCommercial |
+
+🔵 Five further addresses — `mathworld`, `dialog-tutoring`, `textbook-enrichment`,
+`potencializando-estudos-carreira-com-ia`, `Awesome-AI-Era-Edu` — are in
+[`agents/top.md`](top.md) with no grant at 11 probed paths each.
+
+### 🔴 A probe that only tests for success cannot tell a 404 from a redirect
+
+🔴 **`p363`'s first licence sweep reported *"all 11 paths 404"* for eight addresses and
+it was not entitled to.** The loop tested `[ "$c" = "200" ]` and treated every
+non-200 as absence. A second run that captured the **actual** codes returned **`307` on
+all 88 probes** — a malformed URL from broken `xargs` quoting. 🟢 **The probe was
+rewritten and re-run: 88 of 88 genuine `404`s, recorded path-by-path.** The conclusion
+survived; the first method did not deserve it. 🔵 **Successors: capture the status code
+you actually got, and put it in the evidence file** — a sweep whose output has only one
+possible failure value is not a measurement.
+
+### 🟡 The inverse defect: a classifier that under-reports a real grant
+
+🔵 **Every licence flag before this pass was a grant that looked *better* than it was.**
+`mathdial` is the first of the opposite kind: GitHub reports **no licence**, and the
+repository is in fact **CC-BY-SA-4.0**, stated in a prose sentence at `README.md`
+L96–97 and a shield at L8, with no `LICENSE` file anywhere. 🔴 **Both ways of trusting
+the classifier are wrong here** — believe "no licence" and a usable dataset is
+discarded; assume the README grant covers code and share-alike obligations ship into a
+deliverable.
+
+
 ## 2026-10-21 · Pass 362 — 🔴 **the grant column was the least-swept column on this base, and one run of an instrument built at `p187` broke it in three places.** A published `MIT` that is non-commercial with a revenue share, a published `MIT` that is SATA, a published `MIT` that carves commercial rights out for the licensor alone — plus a `GPL`→`AGPL` mis-grading corrected in the *permissive* direction, four published author figures that do not re-derive, four new rows, and a repaired classifier
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

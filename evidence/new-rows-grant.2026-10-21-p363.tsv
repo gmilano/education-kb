@@ -1,0 +1,13 @@
+slug	licence	grant_channel	bytes	grant_path	sha256_12	stars	forks	created	last_push	head	region	usable_in_paid_work
+microsoft/StudentSim	MIT	LICENSE-file	1074	main/LICENSE	7df20dcdf919	77	8	2026-05-28	2026-10-21	73005fd8c	North America	YES
+iwangjian/Coding-Tutor	Apache-2.0	LICENSE-file	11357	main/LICENSE	c71d239df917	91	13	2025-01-23	2026-08-14	d1fa15b50	APAC	YES
+yale-nlp/LLM-Metacognition	MIT	LICENSE-file	1065	main/LICENSE	5ea7fdc0c957	80	6	2026-05-16	2026-10-19	74b1fe8ba	North America	YES
+brucewlee/lftk	CC-BY-NC-4.0	LICENSE-file	13319	main/license.txt	c2ca2f08eac6	151	NM	NM	2024-12-03	73a018671	Not placed	NO-noncommercial
+eth-nlped/mathdial	CC-BY-SA-4.0	README-prose-only	0	none-of-11	-	95	7	2023-05-23	2025-09-17	b06c020a0	EMEA -- Switzerland	DATA-ONLY-share-alike
+eth-nlped/socratic-generation	CC-BY-4.0	README-rel-license-only	0	none-of-11	-	25	2	2022-10-11	2023-06-30	5304aa300	EMEA -- Switzerland	DATA-ONLY-attribution
+eth-nlped/mathworld	NO-GRANT	none	0	none-of-11	-	9	0	2023-05-22	2023-08-30	345ba75ba	EMEA -- Switzerland	NO-no-grant
+eth-nlped/dialog-tutoring	NO-GRANT	bibtex-copyright-field-only	0	none-of-11	-	7	0	2023-01-22	2023-01-25	80dece1da	EMEA -- Switzerland	NO-no-grant
+eth-nlped/textbook-enrichment	NO-GRANT	none	0	none-of-11	-	3	1	2022-12-19	2024-04-29	c95909b03	EMEA -- Switzerland	NO-no-grant
+digitalinnovationone/dio-agent	NO-GRANT	none	0	none-of-11	-	2190	NM	NM	2026-07-14	3751c04fa	LATAM -- Brazil	NO-no-grant
+digitalinnovationone/potencializando-estudos-carreira-com-ia	NO-GRANT	none	0	none-of-11	-	5993	NM	NM	2026-05-05	ec020b070	LATAM -- Brazil	NO-no-grant
+THU-MAIC/Awesome-AI-Era-Edu	NO-GRANT	none	0	none-of-11	-	92	NM	NM	2025-06-09	e8090a4eb	APAC -- China	NO-no-grant

@@ -1,0 +1,23 @@
+region	jurisdiction	instrument	status_or_date	what_it_binds_in_education	source
+EMEA	EU	AI Act	AI Office + national authorities enforcing from 2026-08-02	education access + assessment (admissions, student evaluation, exam scoring) classified HIGH-RISK	ec.europa.eu digital-strategy european-approach-artificial-intelligence
+EMEA	EU	"AI omnibus" amendment proposal	proposed, not adopted	would make high-risk obligations conditional on availability of harmonised technical standards	crowell.com AI and HR in the EU 2026 legal overview
+EMEA	EU	Digital Education Action Plan 2021-2027	in force	strategic frame for AI in teaching/learning across member states	marketdataforecast europe-ai-in-education
+EMEA	Denmark	national AI strategy	active	EUR 200M R&D incl. education	marketdataforecast europe-ai-in-education
+North America	US-federal	H.R. 8747 K-12 AI Literacy and Readiness Act	advanced out of House Education and Workforce Cttee 2026-07-21, not law	would let schools spend federal funds on AI literacy	multistate.us 2026 state policy trends
+North America	US-states	AI-in-education bills	134 bills across 31 states in 2026	data privacy, classroom use limits, curriculum	multistate.us 2026 state policy trends
+North America	US-California	AB 1159	enacted	restricts training AI models on student data	multistate.us 2026 state policy trends
+North America	US-Oklahoma + US-Maryland	AI oversight statutes	enacted	require human oversight; bar AI from high-stakes student decisions	multistate.us 2026 state policy trends
+North America	US-New York City	district moratorium	one-year, in force	bars student-facing AI through 8th grade	multistate.us 2026 state policy trends
+North America	Canada	"AI for All" strategy 2026	strategy only, no legislation date	national AI literacy push	regulations.ai RAI-REG-NA-SUMMARY-2026
+APAC	South Korea	AI Basic Act	in force 2026-01-22	general AI duties; no education-specific carve-out confirmed	lw.com AI regulation in APAC
+APAC	Vietnam	Law on AI	effective 2026-03-01	applies to domestic and foreign technology companies alike	lw.com AI regulation in APAC
+APAC	China	AI clause in Cybersecurity Law	from 2026-01-01	model filing + AI-content labelling; no unified AI law	lw.com AI regulation in APAC
+APAC	Japan + Taiwan	framework/promotion instruments	in force	few direct duties	lw.com AI regulation in APAC
+APAC	Singapore + Australia	soft law + existing statutes	in force	governance toolkits, assurance frameworks	lw.com AI regulation in APAC
+APAC	AU + NZ	public opinion	Ipsos Education Monitor 2026	AU/NZ are the regional exception: HIGHER support for banning AI in schools	ipsos.com education-monitor-2026
+LATAM	19 countries	UNESCO IESALC higher-ed study	200 institutions surveyed	87% use AI in at least one area; only 26% have a formal AI strategy; 74% use it in teaching and learning	iesalc.unesco.org
+LATAM	LAC region	UNESCO Observatory on AI in Education for LAC	launched 2026-04-14, Santiago, Chile	regional monitoring body	unesco.org
+LATAM	Uruguay	Council of Europe Framework Convention on AI	signed 2025, first in LATAM	treaty-level AI commitments	intellectual-property-helpdesk.ec.europa.eu
+LATAM	Colombia	CONPES 4144 national AI policy	adopted 2025-02	national AI policy, not education-specific	intellectual-property-helpdesk.ec.europa.eu
+LATAM	Mexico	federal AI bill	in Senate since 2024, not passed	risk-based approach + proposed oversight authority	intellectual-property-helpdesk.ec.europa.eu
+Global	LAC vs EU/NA	institutional AI guidance coverage	2026	~45% of LAC institutions have or are developing AI guidance vs ~70% in Europe and North America	azumo.com ai-in-education-statistics

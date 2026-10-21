@@ -63,6 +63,27 @@ top can stay in a closed client deliverable, or whether the copyleft of the host
 platform reaches it.
 ---
 
+## 🔵 `p363`: no new platform, and the ERP/SIS absence restated rather than quietly dropped
+
+🟢 **`p363` ran a platform leg and it returned nothing shelvable — recorded here because
+an unstated null reads exactly like coverage.** The query
+`open source platform education ERP CRM SIS MIT Apache` surfaced
+**OpenEduCat (LGPL-3.0)**, **openSIS (GPL)**, **RosarioSIS**, **Frappe Education** and
+**ERPNext Education** — 🔵 **every one of them already on this shelf, and not one of them
+permissive.** The strongest-worded vendor pages in this sector advertise "open source"
+for **LGPL and GPL** products.
+
+🔴 **So `p357`'s absence stands, with `p361`'s qualifier intact: there is still no
+verified *permissive* education ERP.** The distinction that keeps it defensible is
+**ERP vs SIS** — [`academico-sis/academico`](https://github.com/academico-sis/academico)
+is school-management/SIS, which is why it does not refute the sentence.
+
+🟡 **The consequence for an engagement is unchanged and worth repeating in a deck:** the
+administrative tier of education is **copyleft by default**. Reach it the way `p359`
+recommended for Moodle plugins — **as a plugin inside the client's existing GPL estate**,
+never vendored into a studio deliverable. The AI layer Globant builds stays on the
+permissive side of the boundary and talks to the ERP over its API.
+
 ## Core platforms
 
 | Platform | Repo | Licence | Licence reach for AI built on top | Where it fits |

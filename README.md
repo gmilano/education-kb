@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 363 — 2026-10-21 — **THIS BASE HOLDS 2 550 ADDRESSES AND DOES NOT CONTAIN ETH ZÜRICH'S NLP-FOR-EDUCATION GROUP OR BRAZIL'S LARGEST DEVELOPER-EDUCATION COMMUNITY. `p363` STOPPED SWEEPING COLUMNS AND ASKED WHO IS MISSING FROM THE INDEX: TWELVE NEW LIVE ADDRESSES, AND **3 OF 12 ARE USABLE IN PAID WORK** — TWO MIT, ONE APACHE-2.0, ONE `CC-BY-NC-4.0` HIDING BEHIND GITHUB'S `NOASSERTION`, TWO REAL CC GRANTS DECLARED ONLY IN README PROSE, AND SIX WITH NO GRANT AT 11 PROBED PATHS EACH. THE CLASSIFIER'S ERRORS RUN BOTH WAYS FOR THE FIRST TIME ON THIS BASE. ONE PROBE WAS THROWN AWAY AND REBUILT MID-PASS**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by
+commit.
+
+**Evidence:** [`new-rows-grant`](evidence/new-rows-grant.2026-10-21-p363.tsv) ·
+[`no-grant-path-sweep`](evidence/no-grant-path-sweep.2026-10-21-p363.tsv) ·
+[`regional-regulatory-clock`](evidence/regional-regulatory-clock.2026-10-21-p363.tsv)
+
+### 🟢 The pass in one table
+
+| Grant channel | Count | Addresses |
+|---|---:|---|
+| 🟢 `LICENSE` file, permissive | **3** | `microsoft/StudentSim` (MIT), `iwangjian/Coding-Tutor` (Apache-2.0), `yale-nlp/LLM-Metacognition` (MIT) |
+| 🔴 `LICENSE` file, **non-commercial** | **1** | `brucewlee/lftk` — **CC-BY-NC-4.0** at `main/license.txt`, 13 319 B |
+| 🟡 grant in **README prose only**, no `LICENSE` file | **2** | `eth-nlped/mathdial` (CC-BY-SA-4.0), `eth-nlped/socratic-generation` (CC-BY-4.0) |
+| 🔴 **no grant at 11 probed paths** | **6** | 3 × `eth-nlped`, 2 × `digitalinnovationone`, `THU-MAIC/Awesome-AI-Era-Edu` |
+
+### 🟡 The new defect class: a classifier that under-reports a REAL grant
+
+🔵 **Every licence defect this base has recorded was a grant that looked *better* than it
+was.** `p363` found the first of the opposite kind.
+[`eth-nlped/mathdial`](https://github.com/eth-nlped/mathdial) (**95 ★**, EMNLP Findings
+2023) shows **no licence** on GitHub and has no `LICENSE` file at any of 11 probed
+paths — and it is genuinely **CC-BY-SA-4.0**, stated in prose at `README.md` L96–97
+beneath a shield at L8. 🔴 **Both naive readings lose money:** trust "no licence" and a
+usable peer-reviewed dataset is discarded; assume the README grant is a code grant and
+**share-alike ships inside a client deliverable**. 🟢 Hence the new `grant_channel`
+column in the evidence file — the channel is as much a datum as the licence name.
+
+### 🔴 A probe this pass had to throw away
+
+🔴 **`p363`'s first licence sweep reported *"all 11 paths 404"* across eight addresses and
+was not entitled to.** The loop tested `[ "$c" = "200" ]` and read every non-200 as
+absence. A second run capturing the **actual** codes returned **`307` on all 88 probes** —
+a malformed URL from broken `xargs` quoting, not a verdict. 🟢 **Rewritten and re-run:
+88 of 88 genuine `404`s, recorded path-by-path.** The conclusion survived; the method did
+not deserve it. 🔵 **A sweep whose output has only one possible failure value is not a
+measurement.**
+
+### 🔴 The structural reading: the pedagogy layer is academic, and academics do not ship LICENSE files
+
+🔵 **`eth-nlped` is five repositories, four peer-reviewed venues (EMNLP ×2, EACL, ACL
+Findings), one named institution — and zero `LICENSE` files.** It is also the only source
+on this base for **move-level pedagogical annotation**: *which teaching move a teacher
+made*, not whether the answer was right. 🔴 **Third independent confirmation**, after
+`p359`'s psychometrics leg (3 of 3 with no usable permissive grant) and
+`naiayti/TeachingKG`. 🟢 **These are named counterparties with public addresses — a
+licence request has somewhere to go**, and it is cheaper than re-collecting tutoring
+dialogue at research cost.
+
+### 🟢 Regional intelligence: the 2026 clock now has dates on it
+
+🔴 **EMEA** — EU AI Act enforced **from 2026-08-02**; education **access and assessment**
+is **high-risk**. 🔴 **APAC** — South Korea's AI Basic Act (**2026-01-22**), Vietnam's Law
+on AI (**2026-03-01**, reaching **foreign** vendors), China's Cybersecurity Law AI clause
+(**2026-01-01**) plus **AI-content labelling**. 🔵 **North America** — no national law;
+**134 bills across 31 states**, CA **AB 1159**, OK/MD barring AI from high-stakes student
+decisions, NYC's **moratorium on student-facing AI through 8th grade** (so the K-8 wedge is
+the **teacher**). 🟢 **LATAM** — UNESCO IESALC: **87%** of 200 institutions use AI,
+**only 26%** have a strategy; the spread **is** the offer. New [`Pattern 22`](compose/patterns.md)
+composes the permissive finds into the evidence artefact all four regions now ask for.
+
+
+### 🔵 The address-shape census, re-derived as the LAST act before this commit
+
+🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 583**
+harvested shapes → **33** are not addresses → **2 550 addresses** (1.28 % inflation).**
+🔵 `gate-census-currency` went RED on arrival at `p363` for exactly the reason it exists:
+`p362`'s published triple (**2 571 → 33 → 2 538**) was correct against `p362`'s tree and
+is falsified by this pass's twelve new addresses. 🟢 **Per the gate's own instruction the
+`p362` sentence below is left standing — history is dated by measurement and is not
+retro-edited — and the current triple is restated here instead.**
+
+🔵 **A note on the denominator `p363` quotes in its own prose.** An ad-hoc
+`grep` over eight shelf files during this pass's dedup returned **2 564** distinct
+`owner/repo` strings. That is **not** this base's census: it skips `intel/open-gaps.md`
+and applies none of `p351`'s address-shape folding or its 33 rejections. 🟢 **The figure
+of record is the instrument's: 2 550 addresses.** The prose above was corrected to it
+before this commit rather than left to read as a second, competing census.
+
 ## Pass 362 — 2026-10-21 — **THE GRANT COLUMN WAS THE LEAST-SWEPT COLUMN ON THIS BASE. ONE RUN OF AN INSTRUMENT BUILT AT `p187` FOUND THREE PUBLISHED `MIT` CELLS THAT ARE NOT PERMISSIVE, INCLUDING A 2 035 ★ ROW THIS BASE HAD ALREADY GRADED CORRECTLY AT `p123` AND LATER OVERWROTE. THE MIT JUDGE CANNOT EXECUTE CODE UNDER AN MIT GRANT: ITS SANDBOX AND WRAPPER ARE SATA AND ITS DEPLOY REPO IS UNGRANTED. ONE CORRECTION RUNS THE PERMISSIVE WAY — `Sharif-Judge` IS GPL, NOT AGPL. FOUR AUTHOR FIGURES DO NOT RE-DERIVE AND `p349`'s DIRECTION IS REFUTED. FOUR NEW ROWS, THREE NEW ADDRESSES FROM ONE README, AND A REPAIRED CLASSIFIER. `make hooks` — 28/32 IN, 32/32 OUT**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
