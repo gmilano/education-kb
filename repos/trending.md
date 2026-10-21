@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 370 · 2026-10-21 — 🟢 **a FOURTH transport: `github.com` and `api.github.com/repos/…` were both 403 all pass, and `git` answered 200 for 63 of 63 — and unlike `raw`, it does not have to guess the licence filename**
+
+🔵 **The channel note first, because three consecutive passes have now reported three
+different transport states and a successor needs the matrix rather than the anecdote.**
+
+| Channel | `p368` | `p369` | 🟢 `p370`, measured | What it can do |
+|---|---|---|---|---|
+| `github.com` (HTML) | 🔴 403 | 🔴 403 | 🔴 **403** | nothing |
+| `api.github.com/repos/…` | 🟢 used as a substitute | 🟢 used for ★ | 🔴 **403** | nothing this pass |
+| `api.github.com/rate_limit` | — | — | 🟡 **200** | 🔴 **a host check is not an endpoint check** — the host answers while every `/repos/` path is refused |
+| `raw.githubusercontent.com` | 🔴 unreachable | 🟢 200 for 66/66 | 🟢 **200** | fetch a path you can **already name**; it cannot list a directory |
+| **`git` over https** | — | — | 🟢 **200 — 63 of 63 slugs, 0 failures** | 🟢 `ls-remote` for the full ref set, and a blobless partial clone for **the root tree enumerated** then the exact blobs |
+
+🔴 **The consequence, and it is not a small one.** Every HTTP licence probe this base has
+ever run is a **filename guess**: a ladder of spellings fired at a host that can only say
+*yes* or *no* to each one. 🟢 **The git tree is an enumeration**, so there is nothing to
+guess — and the two rows that prove it were both standing open at `p369`'s HEAD:
+
+| The row | `p369`'s verdict | 🟢 `p370`, from the tree |
+|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🔴 *"404 on every branch and filename probed"*; grant unresolved; next transport nominated as the PyPI sdist | 🟢 **`LICENSE.TXT`** — uppercase extension — **11 358 B** Apache-2.0 at `5693f681ff7c`, plus `NOTICE.txt` 545 B |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT (shelved correctly) | 🟡 the same grant, and `raw…/HEAD/LICENSE` is a **404** while `…/LICENSE.md` is a **200** — the spelling, not the grant, is what a ladder measures |
+
+🔴 **And the cost of not making an instrument standing, measured on this base.**
+`compose/code/p1057-licence-path-case` was built at `p189`, *about `openedx/XBlock` and
+`LICENSE.TXT` specifically*, 16 controls, published with the correction. It was never
+wired into `make hooks`. 🔵 **So `p369` re-measured a known result, got it wrong, and
+nominated a transport it did not need.** Wiring it is carried on `ACTION ZZ-cd`.
+
+### 🟢 The run, as a trending record: 63 addresses out of the promotion backlog
+
+| | |
+|---|---:|
+| addresses probed | **63** |
+| answered (`0` `NO-REMOTE`, `0` `CLONE-FAILED`) | 🟢 **63** |
+| licence blobs read at a pinned sha | **67** |
+| in domain (`gate-domain-check`, README payload) | **50** |
+| 🟢 permissive grants | 🟢 **17** |
+| 🔴 copyleft or content-restricted | 🔴 **11** |
+| 🔴 **no licence file in the root tree** | 🔴 **22 (44 % of the in-domain set)** |
+| 🔴 out of domain — four real traps plus two generic MCP rows and an awesome-list | **13** |
+
+🟢 **New to `repos/foundations.md` this pass** — the permissive standards layer, licence
+from payload, ★ from the repository page on 2026-10-21:
+
+| Component | Licence | ★ | Layer |
+| --- | --- | ---: | --- |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 373 | LTI 1.3 tool provider, Node.js |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0 — `p369`'s unresolved grant, resolved** | 471 | Open edX component framework |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 | 54 | LTI 1.3, PHP, IMS-certified |
+| [`ddemszky/classroom-transcript-analysis`](https://github.com/ddemszky/classroom-transcript-analysis) | 🟢 MIT | 46 | Classroom-discourse measurement (Demszky & Hill 2023) |
+| [`vossenv/oneroster-python`](https://github.com/vossenv/oneroster-python) | 🟢 MIT | 11 | OneRoster client for Clever / Classlink. 🟡 *"in beta… use at your own risk"* |
+| [`oxctl/spring-security-lti13-demo`](https://github.com/oxctl/spring-security-lti13-demo) | 🟢 Apache-2.0 | — | LTI 1.3 with Spring Security, Oxford. 🟡 a **demo** by its own first line |
+| [`kaiofelps/lti-consumer-poc`](https://github.com/kaiofelps/lti-consumer-poc) | 🟢 MIT | — | LTI **consumer** side. 🟡 a PoC by its own name |
+| [`ayrtonmoura1/conectabncc`](https://github.com/ayrtonmoura1/conectabncc) | 🟢 MIT | — | Brazil's **BNCC** curriculum as a graph. 🔵 **no README at all** — the file names are the evidence |
+| [`apereo-learning-analytics-initiative/sakaixapi-provider`](https://github.com/apereo-learning-analytics-initiative/sakaixapi-provider) | 🟡 ECL-2.0, **558 B** | — | Sakai xAPI provider, Apereo. 🔴 558 B is a per-file **header template**, not a grant text |
+
+🟡 **A note on the star counts, and it is a correction to this pass's own method.** The
+`api.github.com/repos/…` endpoint was **403** all pass, so these are read from the
+repository page one address at a time. 🔴 **That means the ★ column here was NOT produced
+by the same channel as `p369`'s**, and nine of the rows above are the only ones this pass
+could afford to read. Every `—` in the ★ column is *"not read this pass"*, never *"zero"*.
+
+🔴 **Four trending-listed addresses that are not in this industry**, each permissive and
+each caught by the domain gate rather than by a reader:
+[`pawelkn/xapi-rs`](https://github.com/pawelkn/xapi-rs) and
+[`peterszombati/xapi-node`](https://github.com/peterszombati/xapi-node) are **xStation5,
+a forex broker's trading API** — in education `xAPI` is the Experience API;
+[`cern-qti/quask`](https://github.com/cern-qti/quask) is **CERN's Quantum Technology
+Initiative**, not IMS QTI;
+[`totoketchup/adaptive-multispeaker-separation`](https://github.com/totoketchup/adaptive-multispeaker-separation)
+is audio, not adaptive learning.
+
+🟡 **And one fork offered as a row.** The backlog carries
+[`kristofb/ltijs`](https://github.com/kristofb/ltijs) (Apache-2.0, 33 refs, `a395f673b6`);
+the canonical repository is [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (114
+refs, `41f150c0693b`, **373 ★**). 🔴 Different `HEAD` **and** different ref set — a
+diverged fork, which `ls-remote` settles for the cost of one call.
+
+---
+
 ## Pass 369 · 2026-10-21 — 🟢 **`raw.githubusercontent.com` answered 200 for 66 of 66 while `github.com` stayed 403: the payload standard was met for every row, and the infrastructure half of the backlog was shelved**
 
 🔵 **This pass did not search outward.** The prescribed trending leg returned the usual

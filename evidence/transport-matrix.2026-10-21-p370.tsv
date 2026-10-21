@@ -1,0 +1,8 @@
+host	path	http	note
+github.com	/openfun/ralph	403	-
+api.github.com	/repos/openfun/ralph	403	-
+api.github.com	/rate_limit	200	-
+raw.githubusercontent.com	/openedx/XBlock/HEAD/LICENSE.TXT	200	-
+raw.githubusercontent.com	/openfun/ralph/HEAD/LICENSE	404	-
+raw.githubusercontent.com	/openfun/ralph/HEAD/LICENSE.md	200	-
+git+https	ls-remote+partial-clone	200	63 of 63 slugs answered; 0 NO-REMOTE, 0 CLONE-FAILED

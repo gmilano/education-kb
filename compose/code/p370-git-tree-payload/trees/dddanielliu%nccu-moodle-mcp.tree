@@ -1,0 +1,9 @@
+.dockerignore
+.gitignore
+Dockerfile
+README.md
+docker-compose.yml
+pyproject.toml
+scripts
+src
+uv.lock

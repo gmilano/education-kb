@@ -1,0 +1,10 @@
+.gitignore
+LICENSE.txt
+Makefile
+README.md
+docs
+oneroster
+requirements.txt
+setup.cfg
+setup.py
+tests

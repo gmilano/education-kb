@@ -1,0 +1,15 @@
+.env.example
+.gitignore
+.python-version
+README.md
+architecture.md
+concurrent_load_testing_plan.md
+db.sql
+dev_notes.md
+extract
+ingest
+pyproject.toml
+resources
+src
+test
+uv.lock

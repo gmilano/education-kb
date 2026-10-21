@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 370 · 2026-10-21 — `ACTION ZZ-bw` discharged, `ACTION ZZ-cb` discharged with an instrument, and the red gate `p369` left behind was red because of a REGISTER ROW, not a shelf
+
+**Evidence:** [`refset-rederivation`](../evidence/refset-rederivation.2026-10-21-p370.tsv) · [`alias-register-p370`](../evidence/alias-register.2026-10-21-p370.tsv) · [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p370.tsv) · [`tree-grant-domain`](../evidence/tree-grant-domain.2026-10-21-p370.tsv) · [`domain-check-firstdraft`](../evidence/domain-check-firstdraft.2026-10-21-p370.tsv) · [`transport-matrix`](../evidence/transport-matrix.2026-10-21-p370.tsv)
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+🟢 **Gate state: RUN, at `p369`'s HEAD and again at this pass's.** `make hooks` was
+**33/34** at `p369`'s HEAD — `gate-alias-canonical` **RED** — and is **36/36** at this
+pass's, with two new standing gates.
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Actions discharged** | `ZZ-bw` (**closed**, with the instrument `p367` said it needed), `ZZ-cb` / `Gap 475` (**closed**, with an instrument and a measured precision) |
+| **Instruments added** | `compose/code/p370-refset-register/` (32 offline controls, standing as `gate-refset-register`) · `compose/code/p370-domain-check/` (43 controls, standing as `gate-domain-check`) · `compose/code/p370-git-tree-payload/` (the online probe) |
+| **Register corrected** | **5 of 22** `STALE` rows (**22.7 %**) are **forks, not redirects**, and are demoted to `DISTINCT` |
+| **Shelf correction** | 🔴 `p367` published the `INGInious` pair **in the wrong direction** and rewrote two correct live rows into the stale spelling. Restored. |
+| **Backlog graded** | **63** addresses, **63/63** answered through the git transport; 50 in domain, **28** with a grant, **17** permissive |
+| **The commercial figure** | 🔴 **15 of 21 (71.4 %) in-domain LMS/SIS MCP servers ship no licence file at all** |
+| **Transport** | 🔴 `github.com` **403**, `api.github.com/repos/…` **403**; 🟢 `raw` 200 but path-guessing; 🟢 **git 200 on 63 of 63** |
+| **Defects found in `p370`'s own instruments** | **5** — four in `domain-check`'s first draft (`D1`–`D4`), one in the probe's case folding — each published with the string that caused it |
+| **New gaps** | **477** (the 2 248 still-ungraded backlog), **478** (the register's `UNKNOWN` rows have no canonical side), **479** (two in-domain repositories the fixed domain check still misses), **480** (the domain fix is in-sample) |
+
+### 🔴 The finding, in one sentence
+
+🔵 `p349`'s alias gate exists to catch one hazard, and its own docstring names the
+mechanism: *"GitHub keeps every former address of a transferred or renamed repository
+answering FOREVER, by redirect."* 🟢 **A redirect serves ONE repository**, so the old
+address must answer with the **same ref set**. 🔴 **Five register rows do not, and the
+gate has been enforcing them onto correct shelves:**
+
+| group | the address the register called `STALE` | its refs | the canonical side's refs | shared `HEAD` | `p370` |
+|---|---|---:|---:|---|---|
+| `moodler-mcp` | `dymayo/moodler-mcp` | **2** | **62** | `4e6139eb9c6b` | 🔴 **fork** → `DISTINCT` |
+| `mcp-brasil` | `dasgltd/mcp-brasil` | **50** | **99** | `2efb258370b1` | 🔴 **fork** → `DISTINCT` |
+| `purdue-mcp` | `rohanmuppa/purdue-mcp` | **2** | **4** | `6922f1f301dd` | 🔴 **fork** → `DISTINCT` |
+| `lxhive` | `leogaggl/lxhive` | **3** | **187** | `cffee6d90ca9` | 🔴 **fork** → `DISTINCT` |
+| `openpronounce` | `chinobv/openpronounce` | **3** | **9** | `74bc17ea406e` | 🔴 **fork** → `DISTINCT` |
+
+🟢 **The `purdue-mcp` pair is the proof that needs no interpretation.**
+`sharziki/purdue-mcp` carries `refs/pull/1/head` at `85f66af9019d`, and that sha **is**
+`rohanmuppa/purdue-mcp`'s `refs/heads/fix/current-term-default`. One repository opened a
+pull request against the other. 🔴 Two repositories in a contributor relationship cannot
+be one address and its redirect, and the register said they were.
+
+🔵 **Why `refs/pull/*` is kept in the fingerprint rather than filtered as noise:** pull
+refs accrue to the repository that *receives* pull requests, so a fork starts with none.
+It is the strongest fork discriminator GitHub exposes over the git protocol.
+
+🟢 **17 of 22 `STALE` rows survive**, among them `stanfordnlp/edu-convokit` ≡
+`EduNLP/edu-convokit`, whose ref sets are byte-identical. The instrument is not a
+licence to disbelieve the register; it is the test the register's own header asked for.
+
+### 🔴 The shelf correction: `p367` fixed a gate by editing the shelf the wrong way
+
+| | |
+|---|---|
+| `p367` published | *"`agents/top.md` carried `INGInious/INGInious` as a live row address — the pre-rename half of a pair `p366` had itself just identified. 🟢 Fixed (the row cites `UCL-INGI/INGInious`)"* |
+| 🔴 `p370` measured | Fetching `github.com/UCL-INGI/INGInious` **lands on `INGInious/INGInious`** — breadcrumb `INGInious / INGInious`, **243 ★**, no rename notice. The same fetch of `github.com/INGInious/INGInious` stays put. |
+| 🔴 So | **`UCL-INGI/INGInious` is the STALE address.** `p367` rewrote **two correct live rows** into it, in `agents/top.md` and `repos/foundations.md`. |
+| 🔴 And why nobody noticed | `ALIAS_REGISTER` pointed at **`p349`'s** register, which carries **no `INGInious` row at all**. `p350` built a register with the row in it — 21 `CANONICAL`, 22 `STALE` against `p349`'s 6 and 7 — and **nothing was ever pointed at it.** The gate went green on a question it was not being asked. |
+| 🟢 `p370` | Both rows restored to `INGInious/INGInious`; the pair table now carries the direction and marks the stale side; `ALIAS_REGISTER` now points at `p370`'s register, which is `p350`'s superset with the five demotions applied. |
+
+🔵 **The lesson is not about INGInious, and it is not `p367`'s carelessness.** A gate is
+only as current as the data file it is handed. `p350` improved the register and left the
+`?=` default alone, so for twenty passes the strictest identity gate on this base read a
+register two passes behind the best one available — and the one pass that acted on a red
+finding from it had no row to check itself against.
+
+### 🟢 `ACTION ZZ-cb` / `Gap 475` closed — the slug is not the domain, and now something checks
+
+`p367` declared this gap, priced it as the cheapest on the base, and measured a **40 %**
+trap rate on five permissive rows. 🟢 **`p370` built the check and ran it on 63 addresses
+drawn from `Gap 473`'s net-new class, every verdict read from the README payload with the
+root tree as the fallback channel.**
+
+| | first draft | after the four fixes |
+|---|---:|---:|
+| `EDUCATION` | 36 | 🟢 **50** |
+| `SLUG-TRAP` | 15 | 6 |
+| `NOT-EDUCATION` | 7 | 6 |
+| `WEAK` | 3 | 1 |
+| `NO-README` / `NO-EVIDENCE` | 2 | 0 |
+| **precision** (hand-adjudicated) | 36/36 = **100 %** | 50/50 = **100 %** |
+| **recall** | 36/54 = **66.7 %** | 🟢 **50/54 = 92.6 %** |
+
+🔴 **The four traps that are real, and the two sharpest are new:**
+[`pawelkn/xapi-rs`](https://github.com/pawelkn/xapi-rs) (MIT) and
+[`peterszombati/xapi-node`](https://github.com/peterszombati/xapi-node) (BSD-3-Clause)
+are clients for **xStation5, a forex broker's trading API** — in education `xAPI` is the
+Experience API, and the name match has nothing behind it.
+[`cern-qti/quask`](https://github.com/cern-qti/quask) (Apache-2.0) is CERN's **Quantum
+Technology Initiative**, not IMS QTI.
+[`totoketchup/adaptive-multispeaker-separation`](https://github.com/totoketchup/adaptive-multispeaker-separation)
+(MIT) is speech separation, not adaptive learning.
+
+🔴 **And the four defects in `p370`'s own first draft, each named by the string that caused it:**
+
+| | the defect | the specimen |
+|---|---|---|
+| `D1` | one **STRONG** anchor was not treated as sufficient — two anchors of any kind were demanded | [`bycs-lp/moodle-ci-workflows`](https://github.com/bycs-lp/moodle-ci-workflows), *"reusable workflows for the Moodle plugins of bycs-lp"*, called a trap on the word `moodle` |
+| `D2` | a word boundary hides a strong token inside a **compound name** | [`surlabs/aichatformoodle`](https://github.com/surlabs/aichatformoodle), whose entire README is the line `# AIChatForMoodle` |
+| `D3` | no morphology — and English consonant doubling is still not derived, it is carried | [`quizlar/mcp-server`](https://github.com/quizlar/mcp-server): `quiz` missed `quizzes`, `grade` missed `graded` |
+| `D4` | the lexicon was English-plus-Iberian, so a **national instrument** reads as out-of-domain | [`3121n/nor-data-udir-mcp`](https://github.com/3121n/nor-data-udir-mcp), which wraps the Norwegian Directorate for Education's national school and kindergarten registers, in Norwegian (`skoler`, `barnehager`) |
+
+🔵 **`D4` is `Gap 476`/`ACTION ZZ-cc` arriving from the other direction.** The same
+monolingual assumption that makes the prescribed EMEA and APAC region legs return
+analyst prose also made the domain filter blind to the national instruments those legs
+exist to find. One lexicon fixes both halves.
+
+🟡 **Honesty about the recall figure, stated because it is otherwise misleading:** all
+four defects were derived from **this pass's 63-slug sample**, so **92.6 % is in-sample**.
+It is published as such and registered as `Gap 480`.
+
+### 🟡 What running the suite cost this pass, published because `p366` and `p367` both made the opposite choice
+
+🟢 **`make hooks` was run three times: once at `p369`'s HEAD (33/34, `gate-alias-canonical`
+RED), once after this pass's content was written (32/36), and once after the repairs
+(36/36).** The middle run is the interesting one, and every finding in it was a defect in
+**this pass's own work**, not in the shelves:
+
+| Gate | What it caught in `p370`'s work | Fix |
+|---|---|---|
+| `gate-offline` → `p253-captured-body-census` | this pass's new `probe_tree.sh` was an **unpinned** shell site — *"a live site missing from the pins is caught"* | pin regenerated with the instrument's own `write_pins`, never hand-written: `BODY-ONLY 1 0 0 0` |
+| `gate-offline` → `p253-gate-propagation` | 🔴 **both new gate recipes could print `PASS` while a step failed** — the exact shape `p253` built that control to stop | `\|\| exit 1` added to both |
+| `recount` | 🔴 **this pass's own prose deleted two of the five registered claim anchors** and left a third stale (`11` published against `52` measured) | all three sentences restated in the anchored form, derived by `make recount` |
+| `gate-ladder-case` | the ratchet rose **17 → 18**: `domain_check.py` used the bare token `readme` as a **channel label** and a test used it in a label string, and the path census cannot tell a label from a path | labels renamed to `readme-payload` / `tree-enumeration`; ratchet back to **17** |
+| `gate-census-currency` | 🔴 the address triple went stale the moment this pass wrote to the shelves — **2 640 → 2 679** | re-derived **as the last act** and restated in the live section: **2 679 → 33 → 2 646** (1.23 %) |
+
+🔵 **Three of the five are the same lesson from different directions: a pass's own prose
+is shelf content, and the gates that read the shelves read it too.** Deleting a sentence
+that a gate anchors on is a defect even when the replacement sentence is more accurate —
+which is why the anchored forms are restored verbatim and the new numbers put inside them.
+
+🔵 **A naming note, so nobody re-walks it.** `compose/code/` already contained a
+`p370-gap-gate/` — dated **2026-10-05** and committed at **pass 115** — because the
+instrument directories were once numbered on a counter of their own that ran past 370
+(`p969-root-only-licence-reach`, `p1057-licence-path-case`). 🟢 Current practice is the
+PASS number (`p367-bare-slug-channel`), which is what this pass's three directories use.
+🟡 The collision is cosmetic and nothing imports across it, but a reader grepping
+`p370-` will find a 2026-10-05 artefact among this pass's.
+
+🟡 **And one scope note on `gate-ladder-case`, recorded rather than fixed.** The path
+census reads a bare `readme` or `licence` token in code as a *path spelling*, so an
+instrument that merely *labels a channel* scores as a single-spelling ladder. `p367` hit
+this too and resolved it the same way. 🔵 Renaming costs nothing and keeps the ratchet
+meaningful, so no change was made to `p283`'s grader — but a successor building an
+instrument in this area should expect the collision and name its labels accordingly.
+
+### 🟢 The rows pass 370 changed
+
+| Action / Gap | What it said | 🟢 Pass 370 says |
+|---|---|---|
+| **`ZZ-bw`** | 🟡 `p367`: *"the sha test is the only instrument on this base that can tell them apart"*, **ADVANCED, NOT CLOSED** — 26 collisions split into 23 `SAME-REF-SET` + 3 `SAME-HEAD-ONLY`, with the re-derivation left as an obligation | 🟢 **CLOSED.** The fingerprint is a module with 32 offline controls standing as a gate, the register is re-derived over all 43 addresses, and **5 of 22 `STALE` rows are demoted**. The re-derivation is not a one-off: it runs from committed `ls-remote` captures on a day with no egress. |
+| **`ZZ-cb` / `Gap 475`** | 🔴 *"An education-sounding slug is not an education repository, and nothing on this base checks the domain before shelving"* — 40 % trap rate, named as the one gap a single pass could close outright | 🟢 **CLOSED WITH AN INSTRUMENT AND A PRECISION.** 43 controls, standing as `gate-domain-check`, run over 63 addresses: 50 in domain, 4 real traps, **100 % precision and 92.6 % in-sample recall**, and the four defects in its own first draft published with their specimens. |
+| **`Gap 473` / `ZZ-bz`** | 🔴 *"496 live repositories are now in the corpus and 476 of them are ungraded"* | 🟡 **ADVANCED, NOT CLOSED.** `p370` graded **63** of the backlog — the LMS/SIS-integration class, chosen because it is the one a client engagement always meets — from payload, at a pinned sha. Still open; re-declared with its remainder as `Gap 477`. |
+| **`p369`'s XBlock non-result** | 🔴 *"`openedx/XBlock` (471 ★) returned 404 on every branch and filename probed… Shelved with the grant marked unresolved; next transport to try is the PyPI sdist"* | 🟢 **RESOLVED, and the PyPI sdist was not needed.** The file is **`LICENSE.TXT`** — uppercase extension — **11 358 B** of verbatim Apache-2.0 at `5693f681ff7c`, plus `NOTICE.txt` (545 B). 🔴 **This base already knew:** `compose/code/p1057-licence-path-case` was built at `p189` to record exactly this file and this miss, and `p369` re-measured it from scratch because that instrument never became a gate. |
+| **`p369`'s index artefact** | 🟡 *"`packbackbooks/lti-1-3-php-library` (cited 10× in this base's history) was not returned by the repository index at all this pass — flagged for a `fork:true` re-query"* | 🟢 **RESOLVED, and the re-query was not needed either.** The git transport answers: **224 refs**, `66d8e4e4b9bd`, **Apache-2.0, 11 343 B** at `LICENSE.md`, **54 ★**, *"a library used for building IMS-certified LTI 1.3 tool providers in PHP"*. 🔵 An address absent from a search index is a fact about the index. |
+| **`Gap 476` / `ZZ-cc`** | 🟡 *"The prescribed per-region query returns enterprise IT literature for EMEA and APAC, because 'EMEA' and 'APAC' are analyst tokens that education-policy sources do not use"* | 🟡 **CONFIRMED A SECOND TIME, AND THE REMEDY WORKS.** The prescribed form was run again and returned CompTIA, Workday, Boomi and TechRepublic for EMEA and APAC — enterprise IT, no education players. Reshaped to **national instruments**, the same budget returned the EU Annex III position, Singapore's MOE programme and India's CBSE mandate. Still open as a defect in the prescribed method. |
+| **`Gap 241`** | 🔴 the EU Annex III deferral *"cannot be cited primarily from this environment"*; five EU hosts measured unreachable at `p367` | 🔴 **STILL OPEN, and `p370` did not spend a sixth host on it.** The December 2027 date and the 16 June 2026 Parliament vote on the Digital Omnibus are again available **only** from secondary commentary, which also disagrees on whether education sits at Annex III point 3, 4 or 5. 🟢 The one thing every source agrees on and that is NOT deferred: the emotion-inference ban in education has been in force since **2 February 2025**. |
+
+### 🟢 Live gaps declared by pass 370 — remedy *and* cost, per `P469` / `P492`
+
+| Gap | Declared | Declaring pass · file · finding | Status read from the declaring line |
+|---|---|---|---|
+| 🆕 **477** | **2026-10-21**, pass 370 | `agents/top.md`; `evidence/tree-grant-domain.2026-10-21-p370.tsv` · `ACTION ZZ-cd` | 🟡 **OPEN, and it is `Gap 473` with a dent in it.** *"63 of the 2 311-address promotion backlog are now graded from payload; **2 248** are not."* 🟢 **There is no search step and no channel problem left**: the probe is committed, the transport answered 63 of 63, and one run costs one partial clone per address. 🔵 Cost: ~1 000 addresses per pass at this pass's rate, so **two or three passes**, not a programme. |
+| 🆕 **478** | **2026-10-21**, pass 370 | `evidence/alias-register.2026-10-21-p370.tsv` · `ACTION ZZ-ce` | 🟡 **OPEN as a hole in the register's shape, not in the world.** *"2 register rows are `UNKNOWN` and their group has no `CANONICAL` side, so `classify` cannot run on them at all and `register_verdict` returns `KEEP` by default."* 🔴 A `KEEP` that means *"this instrument could not look"* reads identically to a `KEEP` that means *"measured and sound"*. 🟢 Cost: one pass, and the remedy is a third state, not a probe. |
+| 🆕 **479** | **2026-10-21**, pass 370 | `compose/code/p370-domain-check/` · `ACTION ZZ-cf` | 🟡 **OPEN, and both misses are named.** *"The fixed domain check still returns `NOT-EDUCATION` for two genuinely in-domain repositories: [`cassproject/cass-npm`](https://github.com/cassproject/cass-npm) (Apache-2.0 — CaSS, the Competency and Skills System) and [`pie-framework/pie-elements-ng`](https://github.com/pie-framework/pie-elements-ng) (PIE, Platform Independent Elements, an assessment-item spec)."* 🔵 Both have READMEs that are documentation indexes rather than descriptions — the recall ceiling of a README-only channel. 🟢 Remedy: read the manifest `description` field as a third channel. Cost: one pass; the clones already carry the manifests. |
+| 🆕 **480** | **2026-10-21**, pass 370 | `compose/code/p370-domain-check/` · `ACTION ZZ-cg` | 🔴 **OPEN, and declared against this pass's own headline number.** *"92.6 % recall is IN-SAMPLE: all four fixes were derived from the 63 slugs they are measured on."* 🟢 The out-of-sample run is free — `Gap 477` is 2 248 unseen addresses and the first thousand of them is the held-out set. 🔴 Until it runs, **do not quote 92.6 % as this instrument's precision in the field.** |
+
+🔴 **None of the four is a wish, and `Gap 477` is the one that pays.** 🟢 `Gap 479` and
+`Gap 480` are both closed by the same run that advances `477`, which is why they are
+declared together and not bundled into it.
+
+---
+
 ## Pass 367 · 2026-10-21 — `ACTION ZZ-bv` discharged with an instrument, `ZZ-bx` discharged NEGATIVE, `ZZ-by` discharged by running the suite — and the suite found a red gate `p366` had published a claim against
 
 **Evidence:** [`slug-channel-census`](../evidence/slug-channel-census.2026-10-21-p367.tsv) · [`slug-channel-adjudication`](../evidence/slug-channel-adjudication.2026-10-21-p367.tsv) · [`net-new-addresses`](../evidence/net-new-addresses.2026-10-21-p367.tsv) · [`net-new-grants`](../evidence/net-new-grants.2026-10-21-p367.tsv) · [`slug-channel-false-rejection`](../evidence/slug-channel-false-rejection.2026-10-21-p367.tsv) · [`slug-channel-rejections`](../evidence/slug-channel-rejections.2026-10-21-p367.tsv) · [`slug-url-identity`](../evidence/slug-url-identity.2026-10-21-p367.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p367.tsv)

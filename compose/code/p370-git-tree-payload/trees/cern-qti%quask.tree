@@ -1,0 +1,13 @@
+.gitignore
+.readthedocs.yaml
+.vscode
+LICENSE.txt
+README.md
+__init__.py
+build
+dist
+docs
+setup.cfg
+setup.py
+src
+tests

@@ -1,0 +1,937 @@
+MCP Student Management System
+
+A Student Management System built using Model Context Protocol (MCP), FastMCP, Python, SQLite, and Google Gemini.
+
+This project allows an AI assistant to interact with a student database through MCP tools. The user can communicate with the system using natural language, and Google Gemini can select the appropriate MCP tool to perform operations such as creating, updating, deleting, searching, analyzing, and managing student records.
+
+Project Overview
+
+The main purpose of this project is to understand how Model Context Protocol (MCP) can connect an AI model with external tools and data.
+
+In this project:
+
+Google Gemini acts as the AI layer.
+
+MCP Client communicates with the MCP Server.
+
+FastMCP Server provides tools for student management.
+
+Database Layer handles SQLite operations.
+
+SQLite stores student information.
+
+The user does not need to directly write SQL queries. Instead, the user can ask questions in natural language.
+
+Example:
+
+Show me the marks of Rahul.
+
+Gemini understands the request and selects the appropriate MCP tool.
+
+Project Architecture
+
+                    ┌─────────────────┐
+                    │      User       │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │  Google Gemini  │
+                    │    AI Model     │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │    MCP Client   │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   MCP Server    │
+                    │    FastMCP      │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   database.py   │
+                    │  Database Layer │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   students.db   │
+                    │     SQLite      │
+                    └─────────────────┘
+
+Complete Request Flow
+
+User
+  ↓
+Natural Language Request
+  ↓
+Google Gemini
+  ↓
+Select Appropriate MCP Tool
+  ↓
+MCP Client
+  ↓
+MCP Server
+  ↓
+Database Layer
+  ↓
+SQLite Database
+  ↓
+Result
+  ↓
+MCP Client
+  ↓
+Google Gemini
+  ↓
+Final Response
+
+How the System Works
+
+The user sends a request in natural language.
+
+Google Gemini understands the user's request.
+
+Gemini determines which MCP tool is required.
+
+The MCP Client sends the tool request to the MCP Server.
+
+The MCP Server executes the appropriate operation.
+
+The database layer communicates with SQLite.
+
+The result is returned through the MCP Server and MCP Client.
+
+Gemini generates the final natural-language response.
+
+Example
+
+User:
+
+What are Rahul's marks?
+
+System flow:
+
+User
+  ↓
+Gemini understands the request
+  ↓
+Gemini selects an appropriate MCP tool
+  ↓
+MCP Client calls MCP Server
+  ↓
+MCP Server accesses database.py
+  ↓
+SQLite database is queried
+  ↓
+Rahul's marks are returned
+  ↓
+Gemini generates final answer
+  ↓
+User receives the answer
+
+Technologies Used
+
+Technology
+
+Purpose
+
+Python
+
+Main programming language
+
+FastMCP
+
+Framework used to create the MCP server
+
+Model Context Protocol
+
+Communication layer between AI and tools
+
+Google Gemini
+
+AI model used for natural-language understanding and tool selection
+
+SQLite
+
+Database used to store student information
+
+uv
+
+Python project and dependency management
+
+Git
+
+Version control
+
+GitHub
+
+Source code hosting
+
+Project Structure
+
+mcpserver/
+│
+├── server.py
+├── database.py
+├── client.py
+├── gemini_mcp.py
+├── students.db
+├── main.py
+├── README.md
+├── pyproject.toml
+├── .gitignore
+└── .python-version
+
+File Description
+
+File
+
+Description
+
+server.py
+
+Contains the FastMCP server and MCP tools
+
+database.py
+
+Handles database operations
+
+client.py
+
+MCP client used to test and interact with the server
+
+gemini_mcp.py
+
+Connects Google Gemini with the MCP server
+
+students.db
+
+SQLite database containing student records
+
+main.py
+
+Initial Python project file
+
+README.md
+
+Project documentation
+
+pyproject.toml
+
+Project configuration and dependencies
+
+.gitignore
+
+Specifies files that should not be tracked by Git
+
+.python-version
+
+Specifies the Python version used by the project
+
+Database
+
+The project uses SQLite to store student information.
+
+Student records contain information such as:
+
+Student ID
+Student Name
+Course
+Marks
+Attendance
+
+Example:
+
+Student ID: 102
+Name: Rahul
+Course: Computer
+Marks: 78
+Attendance: 85%
+
+The database.py file provides functions for creating, reading, updating, deleting, searching, and analyzing student records.
+
+Database Architecture
+
+MCP Tool
+   ↓
+server.py
+   ↓
+database.py
+   ↓
+SQLite Connection
+   ↓
+students.db
+
+The database logic is kept separately from the MCP server logic.
+
+This separation makes the project easier to maintain, debug, and extend.
+
+CRUD Operations
+
+The project supports complete CRUD operations.
+
+CRUD means:
+
+C → Create
+R → Read
+U → Update
+D → Delete
+
+Create
+
+Create a new student:
+
+Create student 107 named Amit in Mechanical with marks 85 and attendance 90.
+
+Read
+
+Retrieve student information:
+
+Show me student 102.
+
+Update
+
+Update student information:
+
+Update Rahul's marks to 90.
+
+Delete
+
+Delete a student:
+
+Delete student 107.
+
+MCP Tools
+
+The MCP server provides multiple tools for student management.
+
+Basic Operations
+
+add
+get_student
+get_marks
+get_attendance
+create_student
+bulk_create_students
+update_student
+delete_student
+get_all_students
+student_exists
+
+Student Information
+
+get_student_name
+get_student_course
+get_student_id_by_name
+search_students_by_name
+get_students_by_course
+
+Marks and Academic Performance
+
+get_students_by_marks
+get_top_students
+get_average_marks
+get_highest_marks
+get_lowest_marks
+get_students_above_marks
+get_students_below_marks
+get_marks_statistics
+analyze_student_performance
+
+Attendance
+
+get_average_attendance
+get_highest_attendance
+get_lowest_attendance
+get_students_below_attendance
+get_students_above_attendance
+get_attendance_statistics
+
+Statistics
+
+count_students
+count_students_by_course
+get_course_statistics
+
+Update Operations
+
+update_student_name
+update_student_course
+update_student_marks
+update_student_attendance
+
+Reports and Comparison
+
+generate_student_report
+compare_students
+rank_students
+
+Natural Language Queries
+
+The user does not need to manually write SQL queries or know the exact MCP tool name.
+
+Examples:
+
+Show me the details of student 102.
+
+What are Rahul's marks?
+
+Show all students from the Computer course.
+
+Who has the highest marks?
+
+What is the average attendance?
+
+Show students whose marks are above 80.
+
+Show students whose attendance is below 75.
+
+Compare student 102 and student 103.
+
+Generate a report for student 102.
+
+Add 50 students to the database.
+
+Gemini understands the request and selects the appropriate MCP tool.
+
+Example: Getting Student Marks
+
+User request:
+
+What are Rahul's marks?
+
+The flow is:
+
+User
+  ↓
+Google Gemini
+  ↓
+MCP Tool Selection
+  ↓
+MCP Client
+  ↓
+MCP Server
+  ↓
+database.py
+  ↓
+students.db
+  ↓
+Rahul's record
+  ↓
+Gemini
+  ↓
+Final response
+
+Example: Highest Marks
+
+User request:
+
+Who has the highest marks?
+
+Gemini identifies that a marks-related operation is required.
+
+The appropriate MCP tool accesses the database and returns the required information.
+
+Gemini then converts the result into a natural-language response.
+
+Student Performance Analysis
+
+The project includes the:
+
+analyze_student_performance
+
+tool.
+
+It can analyze:
+
+Marks
+Attendance
+Academic Performance
+Attendance Status
+Overall Performance
+
+Example request:
+
+Analyze student 102.
+
+Example result:
+
+Marks: 78
+Attendance: 85%
+Academic Performance: Good academic performance
+Attendance Status: Good attendance
+Overall: Student is performing well overall
+
+Bulk Student Creation
+
+The project supports creating multiple students at once.
+
+Example:
+
+Add 50 students to the database.
+
+Gemini can select:
+
+bulk_create_students
+
+The MCP server then generates and stores multiple student records.
+
+The bulk operation is useful when a large number of student records need to be inserted.
+
+The implementation also handles student IDs so newly generated records can use available IDs.
+
+Dynamic MCP Tool Discovery
+
+The Gemini application dynamically discovers tools provided by the MCP server.
+
+The basic flow is:
+
+MCP Client
+    ↓
+list_tools()
+    ↓
+MCP Server returns available tools
+    ↓
+Gemini receives tool definitions
+    ↓
+Gemini selects the required tool
+
+This allows the application to work with the tools exposed by the MCP server without manually defining every tool inside the Gemini application.
+
+MCP Server
+
+The MCP server is created using FastMCP.
+
+Example:
+
+from fastmcp import FastMCP
+
+mcp = FastMCP("Student Assistant")
+
+A Python function can be exposed as an MCP tool using the @mcp.tool decorator.
+
+Example:
+
+@mcp.tool
+def get_student(student_id: int):
+    ...
+
+The decorator tells FastMCP that the function should be exposed as an MCP tool.
+
+MCP Client
+
+The MCP Client connects to the FastMCP server.
+
+Example:
+
+from pathlib import Path
+from fastmcp import Client
+
+client = Client(Path("server.py"))
+
+The client can connect and discover tools:
+
+async with client:
+    tools = await client.list_tools()
+
+The client can also call a selected tool:
+
+result = await client.call_tool(
+    "get_student",
+    {"student_id": 102}
+)
+
+Gemini Integration
+
+Google Gemini is used as the AI layer of the project.
+
+The Gemini application:
+
+Receives the user's natural-language request.
+
+Discovers the available MCP tools.
+
+Provides tool definitions to Gemini.
+
+Gemini determines which tool is required.
+
+The MCP Client calls the selected MCP tool.
+
+The MCP Server performs the operation.
+
+The result is returned to Gemini.
+
+Gemini generates the final answer.
+
+The Gemini API key is read from an environment variable:
+
+GEMINI_API_KEY
+
+Example:
+
+import os
+from google import genai
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+gemini_client = genai.Client(
+    api_key=api_key
+)
+
+The API key should never be hard-coded or committed to GitHub.
+
+Role of Each Layer
+
+Google Gemini
+
+Responsible for:
+
+Understanding the user's request
+            ↓
+Determining the required operation
+            ↓
+Selecting an MCP tool
+            ↓
+Generating the final response
+
+MCP Client
+
+Responsible for:
+
+Connecting to MCP Server
+            ↓
+Discovering available tools
+            ↓
+Calling tools
+            ↓
+Receiving results
+
+MCP Server
+
+Responsible for:
+
+Providing MCP tools
+            ↓
+Receiving tool requests
+            ↓
+Executing operations
+            ↓
+Returning results
+
+Database Layer
+
+Responsible for:
+
+Opening database connection
+            ↓
+Executing database operations
+            ↓
+Returning database results
+
+SQLite
+
+Responsible for:
+
+Persistently storing student records
+
+Example FastMCP Tool
+
+A simple MCP tool looks like:
+
+@mcp.tool
+def add(a: int, b: int) -> int:
+    return a + b
+
+The @mcp.tool decorator exposes the function to MCP clients.
+
+For example, the MCP client can discover:
+
+add
+
+and call it with:
+
+a = 10
+b = 20
+
+The result is:
+
+30
+
+Running the Project
+
+1. Clone the Repository
+
+git clone https://github.com/pawalshriram06-ops/mcp-student-management-system.git
+
+2. Enter the Project Directory
+
+cd mcp-student-management-system
+
+3. Install Dependencies
+
+This project uses uv for Python project and dependency management.
+
+uv sync
+
+Gemini API Key Setup
+
+The Gemini API key must be stored as an environment variable.
+
+Windows CMD
+
+set GEMINI_API_KEY=YOUR_API_KEY
+
+Windows PowerShell
+
+$env:GEMINI_API_KEY="YOUR_API_KEY"
+
+Do not commit the API key to GitHub.
+
+Running the MCP Client
+
+To test the MCP server and discover its tools:
+
+uv run client.py
+
+The client connects to the server and displays the available MCP tools.
+
+Running the Gemini Application
+
+Run:
+
+uv run gemini_mcp.py
+
+You can then enter natural-language requests.
+
+Examples:
+
+Show me the details of Rahul.
+
+Who has the highest marks?
+
+What is the average attendance?
+
+Add 10 students to the database.
+
+Running the MCP Server
+
+The MCP server can be started using:
+
+uv run server.py
+
+Example Tool Discovery Output
+
+The MCP client can display tools similar to:
+
+Connected to MCP server
+
+Available tools:
+
+add
+get_student
+get_marks
+get_attendance
+create_student
+bulk_create_students
+update_student
+delete_student
+get_all_students
+analyze_student_performance
+get_student_name
+get_student_course
+get_student_id_by_name
+search_students_by_name
+get_students_by_course
+...
+
+Example Student Data
+
+Example records:
+
+Student ID    Name       Course        Marks    Attendance
+----------------------------------------------------------
+101           Shriram    Electronics   85       90%
+102           Rahul      Computer      78       85%
+103           Amit       Mechanical    91       95%
+106           Priya      IT            88       ...
+
+Example Complete Workflow
+
+Suppose the user asks:
+
+Analyze student 102.
+
+The complete flow is:
+
+1. User sends request
+        ↓
+2. Gemini understands the request
+        ↓
+3. Gemini identifies the required MCP tool
+        ↓
+4. MCP Client calls the MCP Server
+        ↓
+5. MCP Server executes the tool
+        ↓
+6. Tool accesses database.py
+        ↓
+7. database.py reads students.db
+        ↓
+8. Student information is returned
+        ↓
+9. MCP Client sends the result to Gemini
+        ↓
+10. Gemini generates the final response
+        ↓
+11. User receives the answer
+
+Why MCP?
+
+Traditional AI applications often need custom integrations for every external tool or data source.
+
+MCP provides a standardized way for an AI application to communicate with external tools and data.
+
+In this project:
+
+Gemini = AI / Reasoning Layer
+
+MCP Client = Communication Layer
+
+MCP Server = Tool Layer
+
+database.py = Database Access Layer
+
+SQLite = Data Storage Layer
+
+This separation makes the system modular and easier to extend.
+
+Advantages of This Architecture
+
+Natural-language interaction
+
+AI-powered tool selection
+
+Standardized MCP communication
+
+Modular design
+
+Separate database layer
+
+SQLite database integration
+
+CRUD operations
+
+Bulk data insertion
+
+Student search
+
+Marks analysis
+
+Attendance analysis
+
+Student comparison
+
+Student ranking
+
+Student reports
+
+Dynamic tool discovery
+
+Learning Objectives
+
+This project was developed to understand:
+
+Model Context Protocol
+
+MCP Client
+
+MCP Server
+
+FastMCP
+
+MCP tools
+
+Python decorators
+
+Async programming
+
+Python type hints
+
+SQLite
+
+SQL CRUD operations
+
+Database integration
+
+Google Gemini API
+
+AI tool calling
+
+Dynamic tool discovery
+
+Environment variables
+
+uv
+
+Git
+
+GitHub
+
+Future Improvements
+
+Possible future improvements include:
+
+Web-based user interface
+
+Authentication and authorization
+
+Role-based access control
+
+Student login
+
+Teacher login
+
+Advanced analytics
+
+PDF report generation
+
+Excel export
+
+Graphical dashboard
+
+Cloud database
+
+Cloud deployment
+
+Additional AI model integrations
+
+Additional MCP resources
+
+MCP prompts
+
+Improved error handling
+
+Pagination for large datasets
+
+GitHub Repository
+
+Project repository:
+
+https://github.com/pawalshriram06-ops/mcp-student-management-system
+
+Author
+
+Shriram
+
+GitHub:
+
+https://github.com/pawalshriram06-ops
+
+License
+
+This project is created for learning, development, and demonstration purposes.
+

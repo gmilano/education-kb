@@ -1,0 +1,8 @@
+.gitignore
+.mcp.json
+LICENSE
+README.md
+assets
+bundle
+llms-install.md
+server.json

@@ -1,0 +1,20 @@
+ref: refs/heads/master	HEAD
+b8ddb0a63a5e53d3d44d40bda6d72d8ac7ed183b	HEAD
+49c5becf03f70e4fd7e669af0bfc10c8dc68e2c7	refs/heads/dev/nomad
+cb0a57623cdea63d77f22fecaebc4f5acd9c74fb	refs/heads/dev/parents
+81acb92906d7e138eb8c2226a8a423a5e5ce72af	refs/heads/develop
+b8ddb0a63a5e53d3d44d40bda6d72d8ac7ed183b	refs/heads/master
+d70a2c49dc741428bf66b97324e4e4509e634995	refs/pull/1/head
+732f3fba7b8ba5f168889950d912977d05368205	refs/pull/2/head
+83ced319caddce5db706d894e7943aeca7ea0fcf	refs/pull/3/head
+a044c868db20bc19473e112edb37019a2c90f350	refs/pull/4/head
+f290f6a9527e92777500bfd044d389fe23003d49	refs/pull/5/head
+b2706ae2903f7708523171b1cdcf1996856b98ee	refs/pull/6/head
+ff4a3bdf9e9050fa986aa9c81c6cfa1b627660d7	refs/pull/7/head
+81acb92906d7e138eb8c2226a8a423a5e5ce72af	refs/pull/8/head
+5d4cd7d77e17d33a14d7b80d0e5e26b460c502fc	refs/pull/9/head
+88809d2e591f41c41b2e1888aef99f8497dfea89	refs/tags/v0.1.0
+b3aea6b169fd2fe0a8887cd263611a71712941ef	refs/tags/v0.2.0
+31534b15fc1ac92caeacfe7c47f766befb29c195	refs/tags/v0.3.0
+38f329a54c24148b81c87b72df128a14c942812b	refs/tags/v0.3.1
+cb0a57623cdea63d77f22fecaebc4f5acd9c74fb	refs/tags/v0.4.0-beta.1

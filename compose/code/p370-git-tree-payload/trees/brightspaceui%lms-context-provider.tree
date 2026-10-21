@@ -1,0 +1,15 @@
+.editorconfig
+.github
+.gitignore
+.lmsrelease
+.npmrc
+.nvmrc
+CODEOWNERS
+LICENSE
+README.md
+d2l-test-reporting.config.json
+eslint.config.js
+package-lock.json
+package.json
+src
+test

@@ -1,0 +1,344 @@
+# moodle-ci-workflows
+
+Central, reusable GitHub Actions workflows for the Moodle plugins of
+[bycs-lp](https://github.com/bycs-lp).
+
+Instead of maintaining the same lengthy workflow files in every plugin repository,
+each plugin just calls these reusable workflows and only overrides the settings it
+actually needs.
+
+| Workflow | Purpose |
+| --- | --- |
+| [`moodle-plugin-ci.yml`](.github/workflows/moodle-plugin-ci.yml) | Runs the moodle-plugin-ci checks (lint, phpcs, PHPUnit, Behat, ...) |
+| [`moodle-release.yml`](.github/workflows/moodle-release.yml) | Publishes a released version to the Moodle Marketplace |
+
+## Referencing: always `@main`
+
+The plugins deliberately reference the workflows via `@main`:
+
+```yaml
+uses: bycs-lp/moodle-ci-workflows/.github/workflows/moodle-plugin-ci.yml@main
+```
+
+That is the whole point of this repository: a change made here (new Moodle branches,
+a new PHP version, updated database images, an additional check) takes effect
+immediately in **all** plugin repositories. No tag bump, no bulk pull request across
+15 repositories.
+
+Consequence: **changes on `main` go live immediately.** Develop non-trivial changes on
+a branch and test them from a plugin against that branch
+(`...moodle-plugin-ci.yml@my-branch`) before merging into `main`.
+
+Inputs may be renamed or removed whenever it makes the configuration cleaner. There is
+no backwards compatibility to maintain, the calling workflows in the plugins are simply
+updated in the same go.
+
+---
+
+# CI workflow
+
+## Minimal example
+
+`.github/workflows/ci.yml` in the plugin repository:
+
+```yaml
+name: Moodle Plugin CI
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    uses: bycs-lp/moodle-ci-workflows/.github/workflows/moodle-plugin-ci.yml@main
+```
+
+This runs the complete default configuration: all checks, and the Moodle branches
+derived from `$plugin->supported` in the plugin's `version.php`.
+
+## Example with customisations
+
+```yaml
+name: Moodle Plugin CI
+
+on:
+  push:
+    branches: [main, MOODLE_500_STABLE]
+  pull_request:
+
+jobs:
+  ci:
+    uses: bycs-lp/moodle-ci-workflows/.github/workflows/moodle-plugin-ci.yml@main
+    with:
+      # Only test these PHP versions.
+      php-versions: '["8.3", "8.4"]'
+      databases: '["pgsql"]'
+      # Opt out of single checks (everything runs by default).
+      run-grunt: false
+      # The mustache lint must not fail the build.
+      mustache-continue-on-error: true
+```
+
+## Inputs
+
+### Matrix
+
+| Input | Type | Default | Description |
+| --- | --- | --- | --- |
+| `php-versions` | string (JSON array) | `["8.3", "8.4"]` | PHP versions to test (manually selected, then filtered per Moodle branch compatibility) |
+| `moodle-branches` | string (JSON array) | `''` | Explicit list of Moodle branches. Empty means: derive them automatically, see below. |
+| `exclude-moodle-branches` | string (JSON array) | `[]` | Branch names to drop from the resolved list |
+| `databases` | string (JSON array) | `["pgsql", "mariadb"]` | Databases (`pgsql`, `mariadb`, `mysqli`) |
+| `matrix-exclude` | string (JSON array) | `[]` | Combinations to exclude |
+| `matrix-include` | string (JSON array) | `[]` | Additional combinations |
+
+> **Note:** GitHub Actions does not allow list inputs for matrix axes, so these are
+> passed as JSON strings and read with `fromJSON()` inside the workflow.
+
+### Moodle branches are resolved automatically
+
+Nothing is hardcoded. The **Resolve test matrix** job works out the branches at runtime:
+
+1. `$plugin->supported` is read from the plugin's `version.php`. It is a
+   `[min, max]` pair of Moodle branch numbers, for example `[405, 502]`.
+2. The list of stable branches that actually exist is queried from
+   `github.com/moodle/moodle`, and everything within the supported range is selected.
+3. The development branch `main` is always added.
+4. Everything listed in `exclude-moodle-branches` is dropped.
+
+So `$plugin->supported = [500, 502]` results in:
+
+```text
+["main", "MOODLE_500_STABLE", "MOODLE_501_STABLE", "MOODLE_502_STABLE"]
+```
+
+The practical effect: when a plugin starts supporting a new Moodle major release, the
+only change needed is bumping `supported` in `version.php`. Neither the plugin's
+`ci.yml` nor this repository has to be touched. The resolved list is written to the
+job summary of every run.
+
+Single branches can be dropped without hardcoding the whole list, including `main`:
+
+```yaml
+with:
+  exclude-moodle-branches: '["main", "MOODLE_405_STABLE"]'
+```
+
+If a plugin really needs a fixed list, `moodle-branches` overrides the whole
+resolution:
+
+```yaml
+with:
+  moodle-branches: '["main", "MOODLE_502_STABLE"]'
+```
+
+The workflow fails with an explicit error if `version.php` has no `supported`
+attribute and no `moodle-branches` input is given, or if all branches end up excluded.
+
+### PHP versions are chosen manually and filtered per branch
+
+`php-versions` stays a deliberate, manual choice. A plugin should test a small, focused
+set of PHP versions, not every version that would theoretically work.
+
+What the workflow adds is only the negative case: a configured PHP version that the
+target Moodle branch cannot run is dropped for that branch. The limits come from Moodle
+core's `public/admin/environment.xml`, which describes every release in one file
+(before Moodle 5.0 the file lived in `admin/environment.xml`, both paths are tried):
+
+```xml
+<MOODLE version="5.2">                            <!-- release          -->
+  <PHP version="8.3.0">                           <!-- minimum PHP      -->
+    <RESTRICT function="restrict_php_version_84"> <!-- PHP >= 8.4 fails -->
+```
+
+So `php-versions: '["8.1", "8.2", "8.3", "8.4"]'` becomes:
+
+| Moodle branch | Supported PHP | Tested PHP |
+| --- | --- | --- |
+| `main` | unknown | 8.1, 8.2, 8.3, 8.4 |
+| `MOODLE_502_STABLE` | >= 8.3.0 | 8.3, 8.4 |
+| `MOODLE_405_STABLE` | >= 8.1.0, < 8.4 | 8.1, 8.2, 8.3 |
+
+The same table is written to the job summary of every run. If no configured PHP version
+is left for a branch, that branch is skipped with a warning. `matrix-include` entries
+that pin an impossible `php` / `moodle-branch` pair are dropped as well.
+
+`main` has no release entry in `environment.xml`, so it is never filtered.
+
+### The matrix resolution is a plain shell script
+
+The logic lives in [`scripts/resolve-matrix.sh`](scripts/resolve-matrix.sh) instead of
+being buried in the workflow YAML, so it can be read, changed and run on its own. It
+needs nothing but `bash`, `curl`, `awk` and `jq`, all of which are present on the GitHub
+runners.
+
+```bash
+MOODLE_BRANCHES='["main","MOODLE_405_STABLE","MOODLE_502_STABLE"]' \
+PHP_VERSIONS='["8.1","8.2","8.3","8.4"]' \
+DATABASES='["pgsql"]' \
+./scripts/resolve-matrix.sh
+```
+
+`ENVIRONMENT_XML` can point at a local `environment.xml` instead of the copy in Moodle
+core, which makes it possible to try the script out without network access.
+
+The workflow checks this repository out into `ci-workflows/` before it runs the script.
+The ref used for that is `github.job_workflow_sha`, the commit of the reusable workflow
+file itself, so the script always matches the workflow that is running, no matter which
+plugin repository triggered it and no matter whether it was referenced via `@main` or
+via a feature branch.
+
+> Do not use `github.workflow_ref` here. Inside a reusable workflow the whole `github`
+> context describes the *caller*, so that value points at the plugin repository, not at
+> this one.
+
+> **Keep this repository public.** The checkout of the scripts uses the automatic
+> `GITHUB_TOKEN` of the calling plugin repository, which may read public repositories
+> only. Making this repository private would break every plugin CI run and would
+> require passing an additional token.
+
+### Environment
+
+| Input | Type | Default | Description |
+| --- | --- | --- | --- |
+| `runs-on` | string | `ubuntu-latest` | Runner image |
+| `postgres-image` | string | `postgres:latest` | Docker image for PostgreSQL |
+| `mariadb-image` | string | `mariadb:latest` | Docker image for MariaDB |
+| `moodle-plugin-ci-version` | string | `^4` | Composer constraint for `moodlehq/moodle-plugin-ci` |
+| `node-version` | string | `''` | Optional explicit Node.js version |
+| `extra-plugins` | string | `''` | Newline separated list of dependent plugins, see below |
+| `install-extra-args` | string | `''` | Additional arguments for `moodle-plugin-ci install` |
+
+### Check toggles (opt-out)
+
+By default **all** moodle-plugin-ci checks run. A plugin only has to switch off the
+checks it does not need.
+
+| Input | Default |
+| --- | --- |
+| `run-phplint` | `true` |
+| `run-phpcs` | `true` |
+| `run-validate` | `true` |
+| `run-savepoints` | `true` |
+| `run-mustache` | `true` |
+| `run-grunt` | `true` |
+| `run-phpunit` | `true` |
+| `run-subplugin-phpunit` | `true` |
+| `run-behat` | `true` |
+
+Example of an opt-out:
+
+```yaml
+with:
+  run-grunt: false
+  run-behat: false
+```
+
+> There is no separate PHPDoc check. `moodle-plugin-ci phpdoc` has been dropped on
+> purpose, because those checks are covered by `phpcs`.
+
+> `run-subplugin-phpunit` runs PHPUnit for every subplugin listed in
+> `db/subplugins.json` and is skipped automatically if the plugin has none.
+
+### Fine tuning
+
+| Input | Type | Default |
+| --- | --- | --- |
+| `phpcs-max-warnings` | number | `0` |
+| `grunt-max-lint-warnings` | number | `0` |
+| `mustache-continue-on-error` | boolean | `false` |
+| `phpunit-continue-on-error` | boolean | `false` |
+| `behat-profile` | string | `chrome` |
+
+## Dependent plugins
+
+Plugins such as `tiny_ai` need further plugins (for example `local_ai_manager`) to be
+installable. They are listed in `extra-plugins`, one per line, and are cloned into
+`EXTRA_PLUGINS_DIR` automatically.
+
+Every line is either a GitHub shorthand (`owner/repo`) or a full git URL. Both forms
+accept an optional `@<ref>` suffix to pin a branch or tag:
+
+```yaml
+with:
+  extra-plugins: |
+    bycs-lp/moodle-local_ai_manager
+    bycs-lp/moodle-local_ai_manager@MOODLE_500_STABLE
+    https://github.com/bycs-lp/moodle-local_ai_manager.git
+    https://gitlab.example.org/group/moodle-local_something.git@main
+    git://example.org/moodle-local_something.git
+    git@github.com:bycs-lp/moodle-local_ai_manager.git@main
+```
+
+Anything containing `://` or starting with `git@` is used as the clone URL verbatim,
+everything else is expanded to `https://github.com/<owner>/<repo>.git`. The `@<ref>`
+suffix is only recognised if the part after the last `@` contains neither `/` nor `:`,
+so SSH URLs like `git@github.com:owner/repo.git` are not misinterpreted.
+
+Note that SSH URLs require a matching deploy key or SSH agent on the runner, and that
+GitHub no longer supports the unauthenticated `git://` protocol. For public
+repositories `https://` is the safe choice.
+
+---
+
+# Release workflow
+
+`moodle-release.yml` publishes a released plugin version to the
+[Moodle Marketplace](https://marketplace.moodle.com/). It is a thin wrapper around the
+official workflow of Moodle HQ,
+[moodlehq/moodle-plugin-release](https://github.com/moodlehq/moodle-plugin-release).
+
+The wrapper exists so that the upstream reference and any future deviations are
+maintained in one place. If Moodle HQ changes something that does not fit us, or the
+upstream workflow breaks, we can pin a known good commit SHA or replace the job by our
+own implementation here, without touching a single plugin repository.
+
+## Usage
+
+`.github/workflows/moodle-release.yml` in the plugin repository:
+
+```yaml
+name: Moodle Plugin Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    uses: bycs-lp/moodle-ci-workflows/.github/workflows/moodle-release.yml@main
+    with:
+      tag: ${{ github.event.release.tag_name }}
+    secrets: inherit
+```
+
+## Setup
+
+The API token is provided centrally as an organisation secret of `bycs-lp`, so nothing
+has to be configured in the individual plugin repositories. Passing `secrets: inherit`
+in the caller workflow is enough.
+
+Publish a GitHub release and the workflow builds the zip package and submits it to the
+marketplace.
+
+## Inputs
+
+| Input | Type | Default | Description |
+| --- | --- | --- | --- |
+| `tag` | string | `''` | Tag to release, e.g. `v1.4.0`. If empty, the upstream workflow derives it from `GITHUB_REF`. Passing it explicitly is recommended. |
+
+| Secret | Required | Description |
+| --- | --- | --- |
+| `MOODLE_MARKETPLACE_TOKEN` | yes | Marketplace API token, provided as an organisation secret and passed on with `secrets: inherit`. |
+
+## Notes
+
+- The plugin component does **not** have to be configured. The upstream workflow reads
+  `$plugin->component` from `version.php`.
+- The description of the GitHub release is submitted as the release notes, so it is
+  worth writing a proper one.
+
+## Examples
+
+Ready to use example configurations live in [`examples/`](examples/).
+
+
+

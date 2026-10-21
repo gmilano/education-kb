@@ -1,0 +1,112 @@
+# AI Tutor MCP Toolkit
+
+A client-server project built on the **Model-Context-Protocol (MCP)**.
+
+- **`server.py`** — a Gradio app exposing four OpenAI-powered, *streaming* tutoring
+  tools over MCP: `explain_concept`, `summarize_text`, `generate_flashcards`,
+  and `quiz_me`.
+- **`client.py`** — connects to that server over SSE, fetches its tool schema at
+  runtime (no hardcoded tool definitions), and runs an OpenAI Agent that picks
+  the right tool for each user request in an interactive chat loop.
+
+## Why this project is interesting
+
+Most "agent" demos hardcode which functions an LLM can call. Here the client
+discovers the server's tools **dynamically** by fetching its MCP schema at
+startup — the same pattern a real multi-service agent platform would use, so
+the server could add or change tools without the client's code changing.
+
+## Project structure
+
+```
+.
+├── server.py           # MCP server — the 4 tutoring tools + Gradio UI
+├── client.py            # MCP client — schema discovery + OpenAI Agent + chat loop
+├── requirements.txt
+├── .env.example          # copy to .env and add your key
+└── .gitignore
+```
+
+## Setup
+
+```bash
+py -3.11 -m venv venv
+venv\Scripts\activate
+py -3.11 -m pip install -r requirements.txt
+```
+
+Copy `.env.example` to `.env` and add your key:
+
+```
+OPENAI_API_KEY=sk-...
+```
+
+> **Never commit `.env`** — it's already in `.gitignore`.
+
+## Run
+
+You need **two terminals**, since the server and client are separate processes.
+
+**Terminal 1 — start the server:**
+```bash
+py -3.11 -m python server.py
+```
+Wait until you see:
+```
+Starting AI Tutor MCP Toolkit on port 7860...
+* Running on local URL:  http://0.0.0.0:7860
+🔨 Launching MCP server:
+* Streamable HTTP URL: http://localhost:7860/gradio_api/mcp/
+```
+
+**Terminal 2 — start the client:**
+```bash
+py -3.11 -m python client.py
+```
+It will fetch the server's schema, print it, then drop you into a chat loop:
+```
+User: explain agentic AI tools like I'm 10
+Assistant: ...
+```
+Type `exit` or `quit` to stop. At the end it prints every tool the agent
+called during the session and the arguments it used — useful for verifying
+the agent picked the right tool.
+
+## Available tools
+
+| Tool | Arguments | What it does |
+|---|---|---|
+| `explain_concept` | `question: str`, `level: int (1-5)` | Streams an explanation at the requested depth (1 = ELI5, 5 = expert) |
+| `summarize_text` | `text: str`, `compression_ratio: float (0.1-0.8)` | Streams a summary at roughly that fraction of the original length |
+| `generate_flashcards` | `topic: str`, `num_cards: int (1-20)` | Streams Q/A flashcards, one JSON object per line |
+| `quiz_me` | `topic: str`, `level: int (1-5)`, `num_questions: int (1-15)` | Streams a multiple-choice quiz, then an answer key |
+
+You can also try the tools directly through the Gradio UI at
+`http://localhost:7860` without going through the agent at all.
+
+## Troubleshooting
+
+- **`Could not reach the MCP server` / connection errors in the client** — make
+  sure `server.py` is running first, in its own terminal, and that nothing
+  else is using port 7860.
+- **`ModuleNotFoundError`** — you likely installed dependencies into a
+  different Python than the one running the script. Use
+  `py -3.11 -m pip install -r requirements.txt` and
+  `py -3.11 -m python server.py` / `client.py` consistently.
+- **`ImportError` from inside the `openai` package** — usually a corrupted or
+  version-mismatched install. Fix with:
+  ```bash
+  py -3.11 -m pip install --force-reinstall --no-cache-dir openai
+  ```
+- **Errors only inside a tool call (e.g. `explain_concept`) but the server
+  starts fine** — check that `OPENAI_API_KEY` is actually loaded (`.env` in
+  the same folder as `server.py`) and that your OpenAI account has quota.
+
+## Notes
+
+- Tools stream tokens (`yield partial`) rather than returning one blocking
+  response — this is what gives the low-latency, "typing" feel in the UI.
+- The agent's system prompt instructs it to return *only* JSON with `tool`
+  and `arguments` when calling a tool, and to answer directly in plain
+  language when no tool fits — worth reading `client.py`'s
+  `AGENT_INSTRUCTIONS` if you want to see the full prompt design.

@@ -1,0 +1,25 @@
+hocphi.info — MCP server (https://github.com/hocphi-info/hocphi-info-mcp)
+Copyright 2026 Nguyễn Văn Biên
+
+This product includes software developed for hocphi.info (https://hocphi.info).
+Licensed under the Apache License, Version 2.0 (see the LICENSE file).
+
+Attribution / Ghi nguồn
+-----------------------
+If you reuse or modify this code, the Apache License 2.0 requires you to keep
+the LICENSE file and this NOTICE file in what you distribute, and to state which
+files you changed. Please credit: hocphi.info — https://hocphi.info
+
+Nếu bạn dùng lại hoặc sửa đổi mã nguồn này, giấy phép Apache 2.0 yêu cầu giữ
+nguyên file LICENSE và file NOTICE này trong bản bạn phân phối, và ghi rõ các file
+đã sửa. Vui lòng ghi nguồn: hocphi.info — https://hocphi.info
+
+Files that ship with their own license (for example fonts under the SIL Open
+Font License) remain under that license.
+
+Tuition data
+------------
+The tuition data this server returns comes from the hocphi.info API and is NOT
+covered by this license. It is licensed under Creative Commons
+Attribution-NonCommercial 4.0 (CC BY-NC 4.0):
+https://creativecommons.org/licenses/by-nc/4.0/

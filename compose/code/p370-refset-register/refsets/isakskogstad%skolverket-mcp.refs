@@ -1,0 +1,21 @@
+ref: refs/heads/master	HEAD
+5631a7fc7bc6cd0b0e2084981d6ac3886a5cb40e	HEAD
+84b0ab6203effc48e3015f1f64ca7138f729bf80	refs/heads/claude/debug-skolverket-mcp-01XiNNguUSS59rNpGBWAxuxB
+62443fdefd8a60083ff77a84f1fbaa6b48e81ddd	refs/heads/claude/develop-mcp-server-tools-01VbaAxd9NcLkPoZg52NKxpZ
+ebe6c92fc0dad0bcde9e6694f543d372272f1fa1	refs/heads/claude/fix-mcp-server-01AswwQbGTjUAFkVc6Ut9omp
+5631a7fc7bc6cd0b0e2084981d6ac3886a5cb40e	refs/heads/master
+977b79881e24fc7ed4e630de51247ab8623af56b	refs/heads/skolverket-api-update
+8a14299fccd98e8bfd7d021810afa1d33cdfa816	refs/pull/1/head
+5f3d6c5fe0471c92ee567beecb7e6a11f9af6544	refs/pull/2/head
+8a16a57df25597f176bfab62debb34cdd98f5101	refs/pull/3/head
+0fa48437a1890893e7a8f76deb278067be869e5c	refs/pull/4/head
+9803ab2b9533c601d1c2517d81ba1cd200c0001b	refs/pull/5/head
+bc8cb6ceecfd6d2dd43061929600ff86438b3ccf	refs/pull/7/head
+8233b5897cf5f601e41673b400314b398e736911	refs/pull/7/merge
+4948632c29de55f92386edf4fd753e1dfa6952a2	refs/tags/v2.0.0
+5a47a978432c570509ae010f25c07920722e7b67	refs/tags/v2.0.0^{}
+1316b9da70d210d9075d0b87317fa010a85d97ad	refs/tags/v2.1.0
+e3c6535e1124ca5fa28ce77abb53ab38fd4232b8	refs/tags/v2.1.0^{}
+d0e355221961a0aae97bbce41620d2ed1703cf96	refs/tags/v2.1.1
+bef5d0980e6988dd540912e1b69de244d2a81149	refs/tags/v2.1.2
+dd50bc71965113c7b6ba745152ad2f01eca5a2dd	refs/tags/v2.1.3

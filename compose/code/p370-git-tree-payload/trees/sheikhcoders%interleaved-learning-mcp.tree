@@ -1,0 +1,8 @@
+.gitignore
+README.md
+app
+next.config.ts
+package.json
+public
+tsconfig.json
+vercel.json

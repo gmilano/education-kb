@@ -1,0 +1,51 @@
+group	address	state_p349	refs	fingerprint	head	verdict	register_verdict	reason
+agent-zero	agent0ai/agent-zero	CANONICAL	1238	487520744ee4	ff2a5b9c9c4e	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+agent-zero	frdel/agent-zero	STALE	1238	487520744ee4	ff2a5b9c9c4e	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+autograder	zmievsa/autograder	CANONICAL	74	51892d0f4ebd	5936028ec501	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+autograder	ovsyanka83/autograder	STALE	74	51892d0f4ebd	5936028ec501	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+caliper-spec	1EdTech/caliper-spec	CANONICAL	399	95817ac74c4d	1849e118b47a	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+caliper-spec	imsglobal/caliper-spec	STALE	399	95817ac74c4d	1849e118b47a	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+correcaoredacao	IC-Redacoes-UTFPR/CorrecaoRedacao	CANONICAL	1	f921bd05e68b	792ddffb2eab	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+correcaoredacao	yurimatsumotosantos/correcaoredacao	STALE	1	f921bd05e68b	792ddffb2eab	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+ease	edx/ease	UNKNOWN	172	71c0e28f4d5a	056da0adc6f3	NO-CANONICAL	KEEP	row is not STALE; this instrument judges STALE only
+ease	openedx/ease	UNKNOWN	172	71c0e28f4d5a	056da0adc6f3	NO-CANONICAL	KEEP	row is not STALE; this instrument judges STALE only
+edu-convokit	EduNLP/edu-convokit	CANONICAL	5	5983a70d22f8	d845ffdafda3	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+edu-convokit	rosewang2008/edu-convokit	STALE	5	5983a70d22f8	d845ffdafda3	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+edu-convokit	stanfordnlp/edu-convokit	STALE	5	5983a70d22f8	d845ffdafda3	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+go-oneroster	bgwdotdev/go-oneroster	CANONICAL	18	13980c315fa4	b8ddb0a63a5e	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+go-oneroster	fffnite/go-oneroster	STALE	18	13980c315fa4	b8ddb0a63a5e	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+inginious	INGInious/INGInious	CANONICAL	676	67b5f2ed9783	b423828c0284	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+inginious	ucl-ingi/inginious	STALE	676	67b5f2ed9783	b423828c0284	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+learner-credential-wallet	openwallet-foundation-labs/learner-credential-wallet	CANONICAL	584	2650055c0e55	1c46a82ba384	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+learner-credential-wallet	digitalcredentials/learner-credential-wallet	STALE	584	2650055c0e55	1c46a82ba384	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+librelingo	kantord/LibreLingo	CANONICAL	9985	b0d98856031a	3c4bcfb3ef99	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+librelingo	librelingo/librelingo	STALE	9985	b0d98856031a	3c4bcfb3ef99	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+lxhive	g3i/lxHive	CANONICAL	187	16f4d68a6af6	cffee6d90ca9	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+lxhive	leogaggl/lxhive	STALE	3	3b4df71c3284	cffee6d90ca9	SAME-HEAD-ONLY	DEMOTE	same HEAD, different ref sets — a fork, not a redirect
+mcp-brasil	Mcp-Brasil/mcp-brasil	CANONICAL	99	8bf8cb4777a2	2efb258370b1	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+mcp-brasil	dasgltd/mcp-brasil	STALE	50	dda25d1aa1a6	2efb258370b1	SAME-HEAD-ONLY	DEMOTE	same HEAD, different ref sets — a fork, not a redirect
+moodle-local_ai_manager	bycs-lp/moodle-local_ai_manager	CANONICAL	279	6933eaaa21a8	af9aff540169	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+moodle-local_ai_manager	mebis-lp/moodle-local_ai_manager	STALE	279	6933eaaa21a8	af9aff540169	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+moodler-mcp	GhaithAlHallak8/moodler-mcp	CANONICAL	62	5a154a208a5f	4e6139eb9c6b	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+moodler-mcp	dymayo/moodler-mcp	STALE	2	919ed82a7b28	4e6139eb9c6b	SAME-HEAD-ONLY	DEMOTE	same HEAD, different ref sets — a fork, not a redirect
+oneroster.net	jdolny/OneRoster.NET	CANONICAL	4	c9ba288eccaf	4f96365d3108	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+oneroster.net	theopenem/oneroster.net	STALE	4	c9ba288eccaf	4f96365d3108	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+openbadges-specification	1EdTech/openbadges-specification	CANONICAL	368	50351c762ed7	04c4bc2ee16d	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+openbadges-specification	imsglobal/openbadges-specification	STALE	368	50351c762ed7	04c4bc2ee16d	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+openpronounce	Halleck45/OpenPronounce	CANONICAL	9	1b3784974452	74bc17ea406e	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+openpronounce	chinobv/openpronounce	STALE	3	8f4d04bfb8d5	74bc17ea406e	SAME-HEAD-ONLY	DEMOTE	same HEAD, different ref sets — a fork, not a redirect
+presidio	data-privacy-stack/presidio	CANONICAL	1846	0b74b751f597	4f0e236e31a5	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+presidio	microsoft/presidio	STALE	1846	0b74b751f597	4f0e236e31a5	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+purdue-mcp	sharziki/purdue-mcp	CANONICAL	4	5520f25dc273	6922f1f301dd	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+purdue-mcp	rohanmuppa/purdue-mcp	STALE	2	13c4ddafb500	6922f1f301dd	SAME-HEAD-ONLY	DEMOTE	same HEAD, different ref sets — a fork, not a redirect
+rubric	paper-instruments/rubric	CANONICAL	83	95ceda1921c6	eb0755a1c468	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+rubric	the-llm-data-company/rubric	STALE	83	95ceda1921c6	eb0755a1c468	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+skolverket-mcp	isakskogstad/Skolverket-MCP	CANONICAL	19	6f75f601d89c	5631a7fc7bc6	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+skolverket-mcp	ksaklfszf921/skolverket-mcp	STALE	19	6f75f601d89c	5631a7fc7bc6	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+understand-anything	Egonex-AI/Understand-Anything	CANONICAL	661	a5c1d335015e	b8c807c63274	CANONICAL-SELF	KEEP	row is not STALE; this instrument judges STALE only
+understand-anything	lum1104/understand-anything	STALE	661	a5c1d335015e	b8c807c63274	SAME-REF-SET	KEEP	ref sets identical — a redirect serves one repository
+#	summary
+#	CANONICAL	CANONICAL-SELF	KEEP	21
+#	STALE	SAME-HEAD-ONLY	DEMOTE	5
+#	STALE	SAME-REF-SET	KEEP	17
+#	UNKNOWN	NO-CANONICAL	KEEP	2

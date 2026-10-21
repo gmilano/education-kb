@@ -1,0 +1,7 @@
+.gitignore
+.python-version
+README.md
+pyproject.toml
+requirements.txt
+src
+uv.lock

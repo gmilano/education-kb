@@ -1,0 +1,14 @@
+.git-blame-ignore-revs
+.github
+.gitignore
+AGENTS.md
+CITATION.cff
+CLAUDE.md
+LICENSE
+README.md
+cliff.toml
+deno.json
+deno.lock
+docs
+packages
+scripts

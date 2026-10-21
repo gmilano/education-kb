@@ -1,0 +1,11 @@
+.gitignore
+.gitmodules
+Makefile
+README.md
+endpoint.php
+ext
+include
+readme.txt
+submodule
+tpl
+wp-xapi-lrs.php

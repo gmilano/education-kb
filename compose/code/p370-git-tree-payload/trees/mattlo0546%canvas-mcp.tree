@@ -1,0 +1,7 @@
+.gitignore
+LICENSE
+README.md
+canvas_mcp
+llms.txt
+pyproject.toml
+tests

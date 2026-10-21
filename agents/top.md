@@ -38,6 +38,124 @@ looking it (non-commercial + revenue share), and
 whose share-alike binds a derivative *database*. Neither is a blocker if you know before
 you build; both are if you find out at delivery.
 
+## 🔴 🆕 `p370`: the incumbent-LMS bridge class, graded end-to-end — **21 in-domain MCP servers reach ten platforms, and 15 of them ship no licence file at all**
+
+🔵 **Why this class and not another slice of the backlog.** `Gap 473`/`477` holds 2 311
+cited-but-unshelved addresses and no pass can grade them all. The LMS/SIS-integration
+class was taken first because it is the one an engagement *always* meets: a client runs
+Canvas, Moodle, Brightspace, Blackboard, PowerSchool or Banner already, and the first
+question in week one is whether an agent can read it without a connector being written.
+
+🟢 **Evidence for §`p370`:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p370.tsv) — all 64 addresses with status, `HEAD`, ref count, the enumerated licence paths and the README path · [`tree-grant-domain`](../evidence/tree-grant-domain.2026-10-21-p370.tsv) — one row per licence file with family, byte count, the pinned sha and the domain verdict · [`transport-matrix`](../evidence/transport-matrix.2026-10-21-p370.tsv) — the four transports, measured
+
+### 🔴 The number, and it is the one to quote to a client
+
+| the question | the answer, `2026-10-21` |
+|---|---:|
+| addresses probed through the git transport | **63** |
+| 🟢 answered — `0` `NO-REMOTE`, `0` `CLONE-FAILED` | 🟢 **63 (100 %)** |
+| in domain, by `gate-domain-check` on the README payload | **50** |
+| of those 50: a grant in the root tree | **28** |
+| 🟢 of those 28: permissive (MIT, Apache-2.0, BSD-3, ECL-2.0) | 🟢 **17** |
+| 🔴 of those 28: copyleft or content-restricted | 🔴 **11** |
+| 🔴 of the 50: **no licence file anywhere in the root tree** | 🔴 **22 (44 %)** |
+| 🔴 **of the 21 in-domain MCP servers specifically: no licence file** | 🔴 **15 (71.4 %)** |
+
+🔴 **71.4 % is the finding, not 44 %.** The platform and standards layers of this base are
+mostly granted; it is the *bridge* layer — the newest, most useful and most-requested
+piece — that is almost entirely ungranted. 🔵 A studio cannot fork an unlicensed
+repository into a client deliverable at any price, so for fifteen of these the correct
+engagement answer is *"read the shape, write your own"*, which is exactly the advice this
+shelf already gives for the Canvas pair.
+
+### 🟢 The six granted bridges — every grant read from payload, at a pinned sha
+
+| Target system | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region | Note |
+| --- | --- | --- | --- | ---: | --- | --- |
+| **Blackboard Learn (Ultra)** | [bibo242/blackboard-mcp](https://github.com/bibo242/blackboard-mcp) | 🟢 **MIT**, 1 084 B | `HEAD/LICENSE` @ `1fd96db037` | **0** | Not placed | 🟢 **A platform this tier did not reach before.** Courses, content, files, grades, deadlines *"using your own browser session"* — no API token, so no institutional provisioning |
+| **Canvas LMS** | [mattlo0546/canvas-mcp](https://github.com/mattlo0546/canvas-mcp) | 🟢 **MIT**, 1 067 B | `HEAD/LICENSE` @ `b6c26ba52c` | **1** | **EMEA** (UK) | Signs in through **university SSO** instead of an API token and **defaults to Oxford's Canvas site** — the first row on this tier placed by its own default configuration |
+| **Khan Academy** | [aicoder2009/khanacademymcp](https://github.com/aicoder2009/khanacademymcp) | 🟢 **MIT**, 1 086 B | `HEAD/LICENSE` @ `2bc1c6a2ce` | **0** | Not placed | Search, browse and read Khan Academy content; **no API key required**. Content reach, not a student-data reach |
+| **Vietnamese university tuition** | [hocphi-info/hocphi-info-mcp](https://github.com/hocphi-info/hocphi-info-mcp) | 🟢 **Apache-2.0**, 11 358 B | `HEAD/LICENSE` @ `5234065e25` | — | **APAC** (Vietnam) | 🟢 **Read-only, sourced** tuition comparison over `hocphi.info`. A national-data instrument, which is the class `Gap 476` says the region legs keep missing |
+| **Flashcards / quizzing** | [quizlar/mcp-server](https://github.com/quizlar/mcp-server) | 🟢 **MIT**, 1 064 B | `HEAD/LICENSE` @ `fe5609b527` | — | Not placed | FSRS-scheduled decks from YouTube, PDF, web or text; auto-graded quizzes. Not an LMS reach — a study-layer reach |
+| **Moodle** | [hefi002/tfg-mcp-moodle-server](https://github.com/hefi002/tfg-mcp-moodle-server) | 🔴 **GPL-3.0**, 35 187 B | `HEAD/LICENSE` @ `035dbd8a21` | — | Not placed | 🔴 Copyleft — a fifth Moodle row, and the only one on this tier a closed client deliverable cannot absorb |
+
+### 🔴 The fifteen with no grant — named so no successor shelves one by mistake
+
+🔵 Each was cloned, its root tree enumerated, and **no** `LICEN[CS]E*`, `COPYING*`,
+`NOTICE*` or `UNLICEN[CS]E*` entry exists at the root. The sha is recorded so a later
+pass can prove a grant was *added* rather than missed.
+
+| Repo | Target system | Region | `HEAD` @ 2026-10-21 | root entries |
+| --- | --- | --- | --- | ---: |
+| [dddanielliu/nccu-moodle-mcp](https://github.com/dddanielliu/nccu-moodle-mcp) | Moodle — `moodle.nccu.edu.tw` via NCCU SSO | **APAC** (Taiwan) | `66e09e1a13` | 9 |
+| [nicolasviruel/moodle-utn-mcp](https://github.com/nicolasviruel/moodle-utn-mcp) | Moodle — `tup.sied.utn.edu.ar`, UTN | **LATAM** (Argentina) | `b498ab241c` | 9 |
+| [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | D2L Brightspace | Not placed | `219205f1b3` | 12 |
+| [n35da/brightspace-mcp](https://github.com/n35da/brightspace-mcp) | D2L Brightspace, read-only | Not placed | `132c222c27` | 10 |
+| [coimf/schoology-mcp](https://github.com/coimf/schoology-mcp) | Schoology | Not placed | `f08cb3dc60` | 7 |
+| [zuvy/ps-mcp-server](https://github.com/zuvy/ps-mcp-server) | PowerSchool — **plugin-developer workspace**, not student data | Not placed | `a1c0f18113` | 8 |
+| [chatt-state/banner-mcp-server](https://github.com/chatt-state/banner-mcp-server) | Ellucian Banner | **North America** (Chattanooga State) | `138d9004bb`¹ | 10 |
+| [districtapi/districtapi-mcp](https://github.com/districtapi/districtapi-mcp) | US school-district and school data | **North America** | `5800d67ea5` | 5 |
+| [3121n/nor-data-udir-mcp](https://github.com/3121n/nor-data-udir-mcp) | UDIR's national school (NSR) and kindergarten (NBR) registers | **EMEA** (Norway) | `624a09b677` | 11 |
+| [jinanshm/ncert-mcp](https://github.com/jinanshm/ncert-mcp) | NCERT textbooks — a TypeScript/Bun port of `hatchedland/ncert-mcp` | **APAC** (India) | `5f6d74782c` | 11 |
+| [edyvision/student-services-mcp](https://github.com/edyvision/student-services-mcp) | Student services — 🔴 the README's own front-matter tags it **`fictitious`** | Not placed | `ea2608f542` | 18 |
+| [git-pratap-shrey/uniai_mcp](https://github.com/git-pratap-shrey/uniai_mcp) | University assistant | Not placed | `7312a757ef` | 15 |
+| [pawalshriram06-ops/mcp-student-management-system](https://github.com/pawalshriram06-ops/mcp-student-management-system) | Student management | Not placed | `7e10795129` | 16 |
+| [poorvika12-hub/student_mcp](https://github.com/poorvika12-hub/student_mcp) | Student assistant | Not placed | `4869d37126` | 11 |
+| [sheikhcoders/interleaved-learning-mcp](https://github.com/sheikhcoders/interleaved-learning-mcp) | Interleaved-practice scheduling | Not placed | `289220641d` | 8 |
+
+¹ 🟡 `chatt-state/banner-mcp-server` ships **no README either** — its tree is
+`src`, `package.json`, `tsconfig.json`, `CHANGELOG.md` and config. 🔴 **It is the one
+address in this run with no grant AND no domain evidence of any kind**, and it is
+recorded as a non-result rather than inferred from its name. The owner is a US community
+college, which places the *owner*, not the repository.
+
+### 🔴 `gate-domain-check` earned its place on the first run: four traps, two of them new and sharp
+
+| The address | Permissive? | What the slug promised | 🔴 What the payload says |
+|---|---|---|---|
+| [pawelkn/xapi-rs](https://github.com/pawelkn/xapi-rs) | 🟢 MIT | `xAPI` — the Experience API, this base's learning-record standard | 🔴 **xStation5 API Rust Library** — a **forex broker's** trading client, published to crates.io as `xapi` |
+| [peterszombati/xapi-node](https://github.com/peterszombati/xapi-node) | 🟢 BSD-3-Clause | the same | 🔴 the same broker, in Node |
+| [cern-qti/quask](https://github.com/cern-qti/quask) | 🟢 Apache-2.0 | `QTI` — IMS Question & Test Interoperability | 🔴 **CERN's Quantum Technology Initiative**; `quask` is quantum-kernel analysis |
+| [totoketchup/adaptive-multispeaker-separation](https://github.com/totoketchup/adaptive-multispeaker-separation) | 🟢 MIT | `adaptive` — adaptive learning | 🔴 adaptive **multispeaker audio separation** |
+
+🔵 **All four are live, permissive and would have passed every other gate on this base.**
+`gate-pin-grant` reads a real grant from them, `gate-address-shape` passes them,
+`gate-payload-digest` pins them. The only thing wrong with them is the industry, and
+until this pass nothing here asked.
+
+🟡 **And the honest other half.** On this same run the fixed check still returns
+`NOT-EDUCATION` for two repositories that genuinely belong —
+[`cassproject/cass-npm`](https://github.com/cassproject/cass-npm) (Apache-2.0, the
+**Competency and Skills System**) and
+[`pie-framework/pie-elements-ng`](https://github.com/pie-framework/pie-elements-ng)
+(**PIE**, an assessment-item element spec) — because both READMEs are documentation
+indexes rather than descriptions. Declared as `Gap 479` with the remedy (read the
+manifest `description` field) and its cost (one pass).
+
+### 🟢 `p369`'s two open residues, both closed by the transport rather than by a re-query
+
+| `p369` wrote | 🟢 `p370` measured |
+|---|---|
+| 🔴 *"`openedx/XBlock` (471 ★) returned **404 on every branch and filename probed**… Shelved with the grant marked unresolved; next transport to try is the PyPI sdist"* | 🟢 **`LICENSE.TXT`** — uppercase extension — **11 358 B** of verbatim Apache-2.0 at `5693f681ff7c`, with `NOTICE.txt` (545 B, *"Copyright 2014, edX"*) beside it. 🔴 **And this base already held the answer:** `compose/code/p1057-licence-path-case` was built at `p189` *on this exact file* and was never wired as a gate, so `p369` paid to rediscover it and lost. |
+| 🟡 *"`packbackbooks/lti-1-3-php-library` (cited 10× in this base's history) was **not returned by the repository index** at all this pass — flagged for a `fork:true` re-query"* | 🟢 **224 refs at `66d8e4e4b9bd`, Apache-2.0, 11 343 B at `LICENSE.md`, 54 ★**, *"a library used for building IMS-certified LTI 1.3 tool providers in PHP"*. 🔵 Absence from a search index is a fact about the index, and the git protocol does not consult one. |
+
+### 🔴 One backlog address is a FORK and the shelf would have cited it — the `ltijs` pair
+
+🔴 The backlog carries [`kristofb/ltijs`](https://github.com/kristofb/ltijs) (Apache-2.0,
+11 361 B, **33 refs**, `a395f673b6`). 🟢 **The canonical repository is
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs)** — **114 refs**, `41f150c0693b`,
+Apache-2.0 at the same **11 361 B**, **373 ★**, *"turn your application into a fully
+integratable LTI 1.3 tool provider"*. 🔴 Different `HEAD`, different ref set: the fork has
+**diverged**, so this is not even `p370`'s `SAME-HEAD-ONLY` class. 🟢 The shelf cites
+upstream; the fork is recorded here so it is not re-found as a candidate.
+
+🔵 **This is `p370`'s register finding pointing the other way.** The alias register was
+demoting real forks *to* stale addresses; the backlog was offering a fork *as* the row.
+Both are the same missing question — *is this address the repository, or a copy of it?* —
+and `ls-remote` answers it for the cost of one call.
+
+---
+
 ## 🟢 🆕 `p369`: `p368`'s promotion leak, measured end-to-end instead of sampled — **2 311 addresses are in this base's trending files and on no shelf**, and the 66 most-cited were licence-read from payload this pass
 
 🔵 **`p368` found three unshelved repositories by reading its own trending files by hand and
@@ -397,7 +515,7 @@ different owners entirely**, which no case-folding can catch:
 
 | One repository, two addresses | Shared `HEAD` | Why the slugs differ |
 |---|---|---|
-| `INGInious/INGInious` ≡ [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | `b423828c02` | organisation rename |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) ≡ `UCL-INGI/INGInious` (**STALE**) | `b423828c02` | organisation rename — 🔴 `p367` published this pair in the WRONG DIRECTION; `p370` measured the redirect |
 | `meta-pytorch/opacus` ≡ [`pytorch/opacus`](https://github.com/pytorch/opacus) | `df040e4a15` | organisation migration |
 | `openwallet-foundation-labs/learner-credential-wallet` ≡ [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | `1c46a82ba3` | donated to a foundation |
 | `hluaguo/learn-faster-kit` ≡ `cheukyin175/learn-faster-kit` | `c0168f30f8` | — |
@@ -995,12 +1113,20 @@ can reach a client's existing LMS without building a connector.
 
 ### Agents over the systems
 
-**11 rows in the table below** carry an MCP server in the slug itself, and
-across them **5 platforms** are reachable without writing a connector.
+🟢 **Re-counted at `p370` by `make recount`, because the figures this line carried had
+gone stale twice.** **22 rows in the table below** carry an MCP server in the agent cell
+(the table holds **27** data rows in all), and across them **6 platforms** are reachable
+without writing a connector — **Canvas, Moodle, Blackboard Learn, D2L Brightspace,
+Open edX and Google Classroom** — plus **Gradescope**, **Anki**, and **5 national or
+institutional data sources** (Korea ×2, Kenya, Brazil, Vietnam).
 🔵 The count is scoped deliberately: it is the rows of *this table*, not every MCP
 address this shelf mentions — a bare count cannot be checked, because several
 defensible scopes give different answers. The whole-file figure is on
 `intel/trends.md` §7 and the full cross-shelf census is in the `recount` gate.
+🔴 **And read this tier against `intel/trends.md` §7's `p370` addendum before quoting it
+as supply.** Every row here cleared a grant check to be shelved. Measured against the
+*discovered* population rather than the shelved one, **71.4 %** of in-domain LMS/SIS MCP
+servers have no licence file at all.
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | Target system |
 | --- | --- | --- | --- | ---: | --- | --- |
@@ -1012,7 +1138,7 @@ defensible scopes give different answers. The whole-file figure is on
 | canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **302** | Not placed | Canvas LMS |
 | moodle-mcp | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **1** | Not placed | Moodle |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **53** | Not placed | Tutor (Open edX distribution) |
-| openedx-mcp | [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) | **AGPL-3.0** (`LICENSE`, branch `master`) | `master/LICENSE` | **2** | Not placed | Open edX. 🔴 Copyleft — the only non-permissive row on this tier |
+| openedx-mcp | [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) | **AGPL-3.0** (`LICENSE`, branch `master`) | `master/LICENSE` | **2** | Not placed | Open edX. 🔴 Copyleft — 🟡 one of **two** non-permissive rows on this tier since `p370` added the GPL-3.0 Moodle row below |
 | anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (`LICENSE`) | `main/LICENSE` | **525** | Not placed | Anki spaced repetition |
 | classroom-mcp | [sandraschi/classroom-mcp](https://github.com/sandraschi/classroom-mcp) | MIT (`LICENSE`, branch `master`) | `master/LICENSE` | **1** | Not placed | Google Classroom |
 | canvas-lms-agent | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | MIT **at depth** — `canvas-lms-mcp/LICENSE` | `master/canvas-lms-mcp/LICENSE` | **0** | Not placed | Canvas. 🔴 Repository **root carries no grant**; the MIT text licenses the `canvas-lms-mcp` package, not the repository |
@@ -1025,6 +1151,12 @@ defensible scopes give different answers. The whole-file figure is on
 | 🆕 Canvas-Agent | [hughsibbele/Canvas-Agent](https://github.com/hughsibbele/Canvas-Agent) | MIT (`LICENSE`, holder *Hugh Koeze*, 2026) | `main/LICENSE` | **1** | Not placed | Canvas. A sixth independent Canvas address — the platform is now **over-supplied** on this tier, which is itself the finding |
 | 🆕 moodle-cli-hku | [Neutralmilkzzz/moodle-cli-hku](https://github.com/Neutralmilkzzz/moodle-cli-hku) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | **0** | **APAC** | Moodle. **A fourth Moodle row, and the most maintained one on this tier: 356 commits (`--no-merges` 301), 5 authors (`%ae`), 2026-03 → 2026-10-08.** 🔴 **Corrected `p362`: the published `344 commits, 4 authors` re-derives as neither** — 4 is the `%an` figure and one of the 5 addresses is `noreply@anthropic.com` (10 commits). Gives an agent deadlines, grades, course files and forum search. 🟡 **Read-only for remote use** by the author's own statement — the capability ceiling is the safety argument, as with `canvas-lms-student-mcp` |
 | 🆕 moodle-ai-assistant | [microsoft/moodle-ai-assistant](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | **5** | Not placed | Moodle. An **accelerator** for deploying an AI agent on Moodle, published in the **`microsoft`** organisation; its `local_aichat` component is `0.1.0`, **self-described alpha**. 🔵 Already carried on these shelves; re-verified first-hand at `p359` |
+| 🆕 blackboard-mcp | [bibo242/blackboard-mcp](https://github.com/bibo242/blackboard-mcp) | 🟢 **MIT**, 1 084 B (`LICENSE`) | `HEAD/LICENSE` @ `1fd96db037` | **0** | Not placed | **Blackboard Learn (Ultra)** — 🟢 a platform this tier did not reach before `p370`. Browser-session auth, so no institutional API provisioning
+| 🆕 canvas-mcp (Oxford) | [mattlo0546/canvas-mcp](https://github.com/mattlo0546/canvas-mcp) | 🟢 **MIT**, 1 067 B (`LICENSE`) | `HEAD/LICENSE` @ `b6c26ba52c` | **1** | **EMEA** (UK) | Canvas via **university SSO** rather than an API token; defaults to Oxford's Canvas site
+| 🆕 khanacademymcp | [aicoder2009/khanacademymcp](https://github.com/aicoder2009/khanacademymcp) | 🟢 **MIT**, 1 086 B (`LICENSE`) | `HEAD/LICENSE` @ `2bc1c6a2ce` | **0** | Not placed | Khan Academy content search and read; no API key
+| 🆕 hocphi-info-mcp | [hocphi-info/hocphi-info-mcp](https://github.com/hocphi-info/hocphi-info-mcp) | 🟢 **Apache-2.0**, 11 358 B (`LICENSE`) | `HEAD/LICENSE` @ `5234065e25` | — | **APAC** (Vietnam) | Read-only, sourced Vietnamese university tuition data
+| 🆕 quizlar/mcp-server | [quizlar/mcp-server](https://github.com/quizlar/mcp-server) | 🟢 **MIT**, 1 064 B (`LICENSE`) | `HEAD/LICENSE` @ `fe5609b527` | — | Not placed | FSRS flashcards and auto-graded quizzes from YouTube, PDF, web or text
+| 🆕 tfg-mcp-moodle-server | [hefi002/tfg-mcp-moodle-server](https://github.com/hefi002/tfg-mcp-moodle-server) | 🔴 **GPL-3.0**, 35 187 B (`LICENSE`) | `HEAD/LICENSE` @ `035dbd8a21` | — | Not placed | Moodle. 🔴 Copyleft — the only Moodle row on this tier a closed deliverable cannot absorb
 
 ### 🟢 The Moodle connector gap closed this pass, and the row that looks like it closed it is the one to avoid
 
@@ -1073,7 +1205,7 @@ would ever have surfaced it: only reading the payload does.
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
 | Dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT (`LICENSE`) | `main/LICENSE` | **353** | EMEA | Source-code plagiarism detection for programming assignments. Ghent University, Belgium |
-| INGInious | [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | **AGPL-3.0 — "most of the files"** (`LICENSE`) | `main/LICENSE` | **243** | EMEA | Secure automated exercise assessment. UCLouvain, Belgium. 🟡 The grant text itself scopes to *most* files — treat as mixed |
+| INGInious | [INGInious/INGInious](https://github.com/INGInious/INGInious) | **AGPL-3.0 — "most of the files"** (`LICENSE`) | `main/LICENSE` | **243** | EMEA | Secure automated exercise assessment. UCLouvain, Belgium. 🟡 The grant text itself scopes to *most* files — treat as mixed |
 | pyedmine | [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | MIT (`LICENSE`) | `main/LICENSE` | **82** | APAC | Educational data mining framework (knowledge tracing, exercise recommendation) |
 | Ares2 | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | MIT (`LICENSE`) | `main/LICENSE` | **5** | EMEA | Automated grading / secure test execution. TU Munich chair of applied software engineering |
 | pykt-toolkit | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT (`LICENSE`) | `main/LICENSE` | **451** | APAC | Knowledge-tracing benchmark and model library |

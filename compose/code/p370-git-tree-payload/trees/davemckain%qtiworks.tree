@@ -1,0 +1,13 @@
+.gitignore
+CREDITS.txt
+LICENSE.txt
+README.md
+pom.xml
+qtiworks-code-examples
+qtiworks-engine-manager
+qtiworks-engine
+qtiworks-jqtiplus
+qtiworks-mathassess-glue
+qtiworks-mathassess
+qtiworks-samples
+src

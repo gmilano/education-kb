@@ -1,0 +1,201 @@
+# moodle-dev-tools
+
+Ferramentas de automação para desenvolvimento de plugins Moodle:
+
+1. **php -l + PHPCS** — sintaxe e padrão Moodle, rodam localmente (~60ms), sem custo
+2. **ESLint + Stylelint + gherkinlint + lint Mustache** — gates determinísticos no pre-commit que espelham o CI (JS, CSS, `.feature` e templates)
+3. **Revisão IA paralela** — múltiplos modelos em paralelo cobrem o que as ferramentas não detectam
+4. **Geração de mensagem de commit** — IA gera o texto do commit a partir do diff; você revisa no editor
+5. **Cobertura de testes** — `moodle-coverage`, mede a cobertura de testes de um plugin sob demanda
+6. **Validação de schema** — `moodle-check-schema`, detecta drift entre o banco de dev e os `install.xml`
+7. **Upgrade + validação** — `moodle-upgrade`, aplica upgrades nos containers configurados e valida o schema no fim
+8. **Análise estática** — `moodle-phpstan`, PHPStan com a extensão Moodle (pega bugs de tipo/API)
+9. **Auditoria de segurança e qualidade** — `moodle-security-audit`, lê o plugin inteiro (determinístico + IA) e emite relatório com grade em quatro tipos de achado (segurança, qualidade de código, conformidade, boa prática)
+10. **Monitor de novos plugins** — aviso diário via Telegram quando plugins são publicados no diretório oficial
+11. **Monitor de updates de core** — `core-updates-watch.py`, aviso diário via Telegram quando um dos três containers locais tem atualização de core Moodle disponível
+12. **Badge de downloads + resumo mensal** — `moodle-marketplace-downloads` gera o `docs/badges/downloads.json` a partir da página de stats do Marketplace; o companion privado atualiza todas as badges e manda um resumo mensal (instalações + downloads) no Telegram
+
+> `moodle-mirror` (espelhamento de plugins entre containers) não está mais aqui — é específico
+> demais da topologia de um ecossistema multi-versão pra generalizar, e vive no companion privado
+> `moodle-dev-tools-private`.
+
+---
+
+## Hook 1 — pre-commit: php -l + PHPCS + ESLint + Stylelint + gherkinlint + Mustache + revisão IA
+
+O hook roda **gates determinísticos** (ferramentas locais, sem custo, sem IA) e, por fim, a
+revisão IA. Cada gate só roda se houver arquivo do seu tipo no staging — um commit que mexe
+só em PHP não dispara ESLint, Stylelint, gherkinlint nem o lint Mustache.
+
+### Gates determinísticos (php -l, PHPCS, capability-strings, db-strings, lang-placeholders, backup-support, get_string, capability-exists, template/module-names, duplicate-tables, redundant-indexes, static-checks, ESLint, modern-js, Stylelint, gherkinlint, Mustache)
+
+| Gate | Dispara com | O que faz | Bloqueia? |
+|---|---|---|---|
+| **php -l** | `.php` staged | Sintaxe. PHPCS/moodlecheck checam estilo/PHPDoc, não *parse* — um erro de sintaxe passaria batido até o CI (`moodle-plugin-ci phplint`) | Sim |
+| **PHPCS** | `.php` staged | Padrão Moodle completo (~60ms por arquivo) | Sim |
+| **capability-strings** | `db/access.php` ou `lang/en/*.php` staged | Toda capability em `db/access.php` tem string de lang correspondente (`mod/x:cap` → `$string['x:cap']`) | Sim |
+| **db-strings** | `db/caches.php`, `db/messages.php` ou `lang/en/*.php` staged | Todo cache de `db/caches.php` tem `$string['cachedef_<nome>']` e todo provedor de `db/messages.php` tem `$string['messageprovider:<nome>']` | Sim |
+| **lang-placeholders** | `lang/*/*.php` staged | Toda string traduzida usa os mesmos placeholders (`{$a}`, `{$a->nome}`) que a string em inglês de mesma chave | Sim |
+| **backup-support** | `lib.php` ou `backup/` staged, em atividade (`mod_*`) | `FEATURE_BACKUP_MOODLE2` declarado em `<mod>_supports()` ⇔ `backup/moodle2/backup_<mod>_activity_task.class.php` e `restore_…` existem | Sim |
+| **get_string** | `.php` staged | Toda chamada `get_string('chave', 'componente')` e todo `new moodle_exception('chave', 'componente')` com argumentos literais aponta pra uma string que existe de verdade | Sim |
+| **capability-exists** | `.php` staged | Toda chamada `has_capability()`/`require_capability()` com argumento literal referencia uma capability que existe de verdade | Sim |
+| **ESLint** | `.js` staged | ESLint do Moodle com `--max-warnings 0` (espelha o `--max-lint-warnings 0` do CI) | Sim |
+| **Stylelint** | `.css` staged | Stylelint com o `.stylelintrc` do Moodle (espelha o `grunt stylelint:css` do CI) | Sim |
+| **Mustache** | `.mustache` staged | `@template` obrigatório; chaves `{{`/`}}` desbalanceadas | `@template` sim; chaves só avisam |
+| **template/module-names** | `.mustache` ou `.js` staged | O valor de `@template`/`@module` bate com o caminho real do arquivo (`<component>/<subpath>`) | Sim |
+| **duplicate-tables** | `db/install.xml` staged | Nenhum `<TABLE NAME>` repetido dentro do mesmo `install.xml` | Sim |
+| **redundant-indexes** | `db/install.xml` staged | Nenhum `<INDEX>` repete, na mesma ordem, os campos de uma `<KEY>` da mesma tabela (o Moodle já cria índice para toda chave) | Sim |
+| **gherkinlint** | `.feature` staged | `gherkin-lint` com o `.gherkin-lintrc` do Moodle (espelha o `grunt gherkinlint` do CI) | Sim |
+| **modern-js** | `amd/src/*.js` staged | Roda no ESLint do Moodle as regras `no-var`, `prefer-const`, `prefer-arrow-callback`, `prefer-template`, `eqeqeq` e `promise/prefer-await-to-then` e bloqueia só as violações em linhas que o commit **adiciona ou altera** (código antigo vizinho não bloqueia) | Sim (`SKIP_MODERN_JS=1` para uma edição consciente de código antigo) |
+| **static-checks** | `.php`/`.xml` staged, plugin com `version.php` | `moodle-static-checks` restrito ao commit: coluna do `install.xml` fora do backup, tabela que nada apaga, campo de formulário sem `maxlength` para a coluna, `substr()` cortando em tamanho de coluna, preferência fora do Privacy Provider, token com `uniqid()`/`rand()`. Violações de arquivo só aparecem se o arquivo está staged; as de schema só se o commit toca `db/`, `backup/`, `lib.php`, privacidade ou um arquivo de limpeza/observer | Depende de `MDT_STATIC_CHECKS_MODE`: sem a variável só avisa (padrão do repo); `block` bloqueia o commit que introduz a violação (ativo no `~/.moodle-dev-tools.env` desta máquina desde 21/10/2026, com os 27 plugins próprios limpos). Exceção legítima: `.plans/security-audit/accepted.json` com o motivo; `SKIP_STATIC_CHECKS=1` ignora tudo |
+| **Aviso AMD** | `amd/src/*.js` staged | Lembra de rodar `npx grunt amd` se o `amd/build/*.min.js` correspondente não estiver staged | Não (só avisa) |
+
+Notas:
+
+- **ESLint** e **Stylelint** usam o binário e a config do Moodle (`.eslintrc`/`.stylelintrc`),
+  localizados subindo a árvore a partir do repositório. Se o plugin não estiver montado sob uma
+  árvore Moodle (sem o binário acessível), o lint correspondente é **pulado sem bloquear** — o
+  hook é global e não pode quebrar commits de repositórios fora do ecossistema Moodle.
+- **modern-js** existe porque o `.eslintrc` do Moodle não liga essas regras: sem o gate, `var`,
+  `function(){}` e concatenação voltam a entrar em `amd/src` depois de uma limpeza. Lintar o arquivo
+  inteiro bloquearia qualquer edição de um módulo antigo, então o `check_modern_js.py` lê a versão
+  *staged* do arquivo (`git show :arquivo`, para os números de linha baterem com o diff) e descarta o
+  que não está nas linhas adicionadas (`git diff --cached -U0`). Um `// eslint-disable-next-line`
+  **não** serve de exceção: o ESLint do Moodle acusa a diretiva como "não usada" (as regras estão
+  desligadas lá), o que bloquearia o commit — por isso a saída é a variável `SKIP_MODERN_JS=1`.
+- **Stylelint** filtra do output os avisos "rule is deprecated" que o `.stylelintrc` do Moodle
+  sempre imprime (regras antigas mantidas por compatibilidade, não erros do arquivo em si) —
+  mantém a saída de falha focada nos problemas reais.
+- **gherkinlint** foi adicionado em 10/09/2026 porque `.feature` era o único tipo de arquivo sem
+  checagem local nenhuma — não entrava nem no filtro de arquivos staged do hook. Um erro trivial
+  (linha em branco duplicada no fim do arquivo) só aparecia no CI, e só na leg que roda todos os
+  checks. Segue a mesma regra do ESLint/Stylelint: sem o binário/config na árvore, é pulado sem
+  bloquear. Note que o `.feature` fica **fora** da revisão IA — tem linter determinístico próprio,
+  e o prompt da revisão é calibrado para código de plugin.
+- **Mustache** faz um check leve, não o validador completo do `moodle-plugin-ci` (que valida
+  HTML e contexto de exemplo). O `@template` ausente é o erro que mais quebra o CI; é o que o
+  gate garante. A validação de HTML/contexto continua a cargo do CI.
+- **capability-strings** (`check_capability_strings.py`) só roda se o repositório tiver
+  `version.php` na raiz (identifica um plugin Moodle de verdade — não dispara em repos como
+  este próprio `moodle-dev-tools`). Regra que já existia escrita no CLAUDE.md (item 19 do
+  checklist de entrega), nunca automatizada antes — PHPCS/moodlecheck/PHPStan não sabem que
+  `db/access.php` e `lang/en/*.php` deveriam concordar entre si. Zero falso-positivo testado
+  contra os 110 plugins reais montados em `web-1` no dia em que foi criado (01/09/2026) — 6
+  achados genuínos, todos no core (`mod_lti`, e mais 5 depois de um ajuste de regex — ver nota
+  do `capability-exists` abaixo).
+- **get_string** (`check_get_string.py`) resolve o próprio componente do plugin, `core`/`moodle`,
+  e os tipos já conhecidos por este ecossistema (`mod`/`local`/`block`/`filter`/`report`/`format`/
+  `availability`) via `MDT_MOODLE_PUBLIC`. Um componente desconhecido é **pulado, nunca
+  chutado** — falso negativo é aceitável aqui, falso positivo bloqueando commit não é. Só conta
+  como "literal" um argumento entre aspas simples, ou aspas duplas sem `$`/`{}` (string
+  interpolada não é estática — `"rpg_{$tone}_nome"` vira outra coisa em runtime); qualquer coisa
+  depois disso que não seja `,` ou `)` (ex.: concatenação, `'x_' . $var`) invalida o literal
+  inteiro. Zero falso-positivo depois desse ajuste, testado contra ~10 plugins reais — achou 2
+  bugs genuínos e inéditos no `block_playerhud` (publicado): `get_string('no_items_selected', ...)`
+  e `get_string('validate_number', 'core')`, nenhuma das duas strings existe (01/09/2026, já
+  corrigido).
+- **capability-exists** (`check_capability_exists.py`) é o inverso do `capability-strings`:
+  aquele valida as capabilities que o **próprio** plugin declara; este valida uma capability
+  **referenciada** (de `has_capability()`/`require_capability()`), possivelmente de outro
+  componente. Mesma resolução conservadora do `get_string` (próprio componente, `moodle` via
+  `lib/db/access.php`, tipos conhecidos). Achado de bootstrap: a regex de chave de capability
+  só cobria `=> [` — `lib/db/access.php` do próprio core ainda usa a sintaxe legada
+  `=> array(` em toda parte, dando falso-positivo generalizado até a regex aceitar as duas
+  formas (corrigido também no `capability-strings`, que usa a mesma regex). Depois do ajuste,
+  zero falso-positivo nos 110 plugins + achou 5 capabilities `portfolioexport` do core
+  (`mod_resource`/`folder`/`imscp`/`url`/`page`) sem string, além do `mod_lti` já achado antes.
+- **template/module-names** (`check_template_module_names.py`) verifica só o *valor* da tag —
+  a presença do `@template` já é gate à parte (acima). Nenhum check existente cobria `@module`
+  de jeito nenhum (nem presença, nem valor). Convenção confirmada contra exemplos reais antes de
+  escrever (nem template nem module derrubam o prefixo "mod_", diferente do arquivo de lang):
+  `mod_playervideo/attempt_summary`, `core_contentbank/bankcontent/navigation`,
+  `core_group/comboboxsearch/group`. Zero falso-positivo testado contra 11 plugins do
+  ecossistema + uma amostra do core — achou 1 problema cosmético genuíno em `mod_assign`
+  (`@module` com um backtick perdido no valor, sem efeito funcional).
+- **duplicate-tables** (`check_duplicate_tables.py`) é o mais simples dos cinco — autocontido,
+  um `install.xml` comparado só contra ele mesmo, sem resolver componente nenhum. Usa parser de
+  XML de verdade (`xml.etree.ElementTree`), não regex, já que `install.xml` é XML de verdade.
+  Zero achado nos 110 plugins reais (esperado — é um erro raro), mas o teste com um caso
+  quebrado de propósito confirma que pega quando existe.
+- **db-strings** (`check_db_strings.py`) cobre as strings que o core monta em runtime a partir das
+  chaves dos arrays de `db/caches.php` (`'cachedef_' . $area`, `cache/classes/definition.php`) e de
+  `db/messages.php` (`'messageprovider:' . $name`, `message/renderer.php`). Como nunca há um
+  `get_string()` literal com essas chaves, o gate de `get_string` não as enxerga, e a falta só
+  aparece como `[[cachedef_x]]` na página de caches ou `[[messageprovider:x]]` nas preferências de
+  notificação. Lê só o **primeiro nível** do array (as definições aninham arrays próprios, como
+  `'defaults' => [...]` e `'invalidationevents' => [...]`, cujas chaves são opções, não nomes) e
+  pula chave que não seja literal. Origem: o `moodle-plugin-validate` do Eduardo Kraus, rodado
+  contra o ecossistema em 15/10/2026, achou 3 faltando (`local_playergames`, `local_pluginsview`,
+  `mod_quickpoll`). Testado nos 486 plugins montados em `web-1` (45 com esses arquivos): só esses 3
+  e 2 genuínos no `tiny_widgethub` (terceiro), zero falso-positivo.
+- **lang-placeholders** (`check_lang_placeholders.py`) compara cada `lang/<idioma>/` com o `lang/en/`
+  de mesmo nome, nas chaves presentes nos dois. Tradução que perde o `{$a}` perde o valor
+  ("Respondida por estudantes"); a que usa um `{$a->nome}` que o inglês não passa (ou com nome
+  errado) mostra o placeholder literal. Valor que não é literal simples (concatenação, heredoc) é
+  pulado; chave que falta de um lado não é assunto deste gate. Origem: `moodle-plugin-validate` do
+  Eduardo Kraus (15/10/2026). Zero violação nos plugins próprios (479 strings com placeholder);
+  nos 54 plugins montados em `web-1` com tradução própria, 2 achados genuínos, ambos na tradução
+  khmer do `mod_interactivevideo` (terceiro). O leitor pega 49.827 das 49.840 linhas `$string[` de
+  `en`/`pt_br` do site; as 13 restantes são concatenações, puladas de propósito.
+- **backup-support** (`check_backup_support.py`) lê o que `<mod>_supports()` responde para
+  `FEATURE_BACKUP_MOODLE2` nas formas usadas no ecossistema (`switch` com `case` encadeado até um
+  `return` comum, array, `match`, `$features[...] = ...`); qualquer valor que não seja
+  `true`/`false`/`null` é pulado. Declarado sem `backup/moodle2/backup_<mod>_activity_task.class.php`
+  e `restore_…`: o backup do curso falha, e apagar a atividade com a lixeira ativa também. Arquivos
+  presentes sem a declaração: a atividade fica fora de todo backup e duplicação, sem erro. O nome
+  exige o sufixo `.class.php` porque é o único que o core carrega (`backup_plan_builder.class.php`).
+  Origem: mesma ferramenta, que achou o caso no `mod_quickpoll`; nos 43 módulos montados, um achado
+  genuíno no `mod_videoprogress` (terceiro: arquivos sem `.class` no nome, nunca carregados).
+- **get_string** também cobre `new moodle_exception('chave', 'componente')` (com ou sem `\` e o
+  namespace `core\exception`) desde 15/10/2026. O construtor procura a chave em `lang/en/error.php`
+  do core quando o componente é omitido, `moodle` ou `core` (não em `moodle.php`, como o
+  `get_string()`); chave inexistente mostra ao usuário o código cru `componente/chave`. Primeira
+  varredura: `errorgeneral` no `block_playerhud` e `invalidparameter` (que é de `debug.php`) no
+  `local_resourcestats`, além de um `get_string('noinstances', 'moodle')` no `mod_codereview`
+  anterior ao próprio gate.
+- **redundant-indexes** (`check_redundant_indexes.py`): o Moodle já cria um índice para toda chave
+  (a primária tem o seu; para `unique`, `foreign` e `foreign-unique` o gerador de DDL acrescenta o
+  índice, `lib/ddl/sql_generator.php`, `getCreateTableSQL()`). Um `<INDEX>` com os mesmos campos
+  vira um segundo índice igual no banco: confirmado no `web-1`, onde `mdl_playerwords` tinha dois
+  índices em `course`. O arquivo é válido e instala sem erro, por isso nenhuma outra ferramenta
+  local pegava. Compara os campos **na ordem** (índice em `(a, b)` não é redundante com chave em
+  `(b, a)`); índice `UNIQUE` sobre chave `foreign` recebe a sugestão de trocar a chave para
+  `foreign-unique`. Mesma origem do `db-strings`: 10 casos em 6 plugins do ecossistema. Testado nos
+  121 `install.xml` de `web-1` e no `lib/db/install.xml` do core: só esses 10. Dispara só com
+  `install.xml` staged, de propósito: é quando o plugin já vai precisar de passo de upgrade
+  (`drop_index`) para remover o índice extra num site instalado.
+- **completion-form** (`check_completion_form.py`): em todo `mod_form.php` staged que define
+  `add_completion_rules()`, **bloqueia** se esse método (ou `completion_rule_enabled()`) não usa
+  `$this->get_suffix()`: a página "Conclusão padrão da atividade" renderiza o mesmo formulário com o
+  sufixo `_<modname>` e remove a regra cujo nome não o tem (`completion/classes/edit_base_form.php`),
+  só com um aviso de desenvolvedor. Com o sufixo vazio do formulário normal nada parece errado, por
+  isso nenhum teste ou outra ferramenta pegava. **Avisa** (não bloqueia) quando não há
+  `data_postprocessing()`: o navegador não envia checkbox desmarcada nem campo desativado, e o
+  professor não consegue desligar a regra depois de configurada. O aviso some se o formulário só usa
+  `advcheckbox` ou se o `lib.php` irmão já zera o valor (`if (empty($data->completion...))`), porque
+  esses dois casos são correções legítimas que uma checagem estática só consegue adivinhar. Origem:
+  21/10/2026, 7 de 8 atividades do ecossistema com o sufixo faltando e 3 com a regra impossível de
+  desligar. Comentários e literais são ignorados antes da busca. Testes:
+  `tests/test_completion_form.py`.
+- **reset_userdata** (`static_schema.py`, parte do `moodle-static-checks`): em `mod_*` com tabela
+  por estudante (coluna `userid`), exige `<modname>_reset_userdata()` em `lib.php`. O core só chama
+  os módulos que definem o gancho; sem ele "Redefinir curso" apaga conclusão e notas mas deixa as
+  tentativas, e o estudante rematriculado reaparece como já tendo concluído, com o limite gasto. O
+  par `_reset_course_form_definition`/`_defaults` só é necessário quando a limpeza é uma caixa do
+  professor, então não é exigido (o `mod_playergroup` segue as opções do próprio core). Exceção
+  deliberada: `accepted.json` com o motivo. Origem: relatório do `mod_playerpuzzle` de 20/10/2026;
+  7 de 12 atividades do ecossistema sem o gancho. Como os outros checks de `static-checks`, bloqueia
+  ou só avisa conforme `MDT_STATIC_CHECKS_MODE` (veja a tabela dos gates).
+- Achado real: `mod_playervideo` teve dois commits seguidos quebrarem o CI (`stylelint:css`, a
+  leg `--all` do `moodle-plugin-ci grunt`) por regras CSS de uma linha só, sem que o hook local
+  acusasse nada — motivou a criação deste gate (01/09/2026).
+- Os gates determinísticos **não podem ser pulados** — só a revisão IA aceita `SKIP_AI=1`.
+
+### O que a IA revisa
+
+A revisão cobre **PHP, JS (AMD), Mustache, CSS e XML** — todos os tipos de arquivo de um plugin Moodle. Arquivos minificados (`amd/build/`) são ignorados.
+
+Arquivos dentro de um `docs/` na raiz do repositório também ficam de fora **só da revisão IA**:
+esse diretório hospeda o site de documentação de cada plugin no GitHub Pages (Jekyll, CSS, JS,
+imagens — conteúdo estático, não código Moodle), e as regras da IA partem do pressuposto de que
+o diff é código de plugin (escopo de CSS por `.path-*`, PHPDoc, AMD, etc.), o que gera falso

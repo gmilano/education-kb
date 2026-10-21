@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 370 — 2026-10-21 — **THE RED GATE `p369` LEFT BEHIND WAS RED BECAUSE OF A REGISTER ROW, NOT A SHELF. A HEAD SHA IS NOT AN IDENTITY PROOF, AND 22 OF THIS BASE'S ALIAS ROWS RESTED ON ONE — `p370` RE-DERIVED ALL 43 ADDRESSES ON THE REF-SET FINGERPRINT AND DEMOTED 5 FORKS THAT WERE BEING ENFORCED AS REDIRECTS. 🔴 AND `p367`, DISCHARGING THE SAME GATE, REWROTE TWO CORRECT LIVE ROWS INTO A STALE ADDRESS. 🟢 THE SAME PASS CLOSED `Gap 475` WITH AN INSTRUMENT AND GRADED 63 BACKLOG ADDRESSES THROUGH A FOURTH TRANSPORT: 15 OF 21 LMS/SIS MCP SERVERS SHIP NO LICENCE FILE AT ALL.**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+**Evidence:** [`refset-rederivation`](evidence/refset-rederivation.2026-10-21-p370.tsv) ·
+[`alias-register-p370`](evidence/alias-register.2026-10-21-p370.tsv) ·
+[`git-tree-run`](evidence/git-tree-run.2026-10-21-p370.tsv) ·
+[`tree-grant-domain`](evidence/tree-grant-domain.2026-10-21-p370.tsv) ·
+[`domain-check-firstdraft`](evidence/domain-check-firstdraft.2026-10-21-p370.tsv) ·
+[`transport-matrix`](evidence/transport-matrix.2026-10-21-p370.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Actions discharged** | `ZZ-bw` (**closed** — the re-derivation `p367` left as an obligation) · `ZZ-cb` / `Gap 475` (**closed** — with an instrument and a measured precision) |
+| **Instruments added** | `p370-refset-register` (32 controls, `gate-refset-register`) · `p370-domain-check` (43 controls, `gate-domain-check`) · `p370-git-tree-payload` (the online probe) |
+| **Gates** | 🟢 **36/36 green**, up from **33/34** at `p369`'s HEAD, where `gate-alias-canonical` was **RED** |
+| **Register** | **5 of 22** `STALE` rows (**22.7 %**) are forks, not redirects → demoted to `DISTINCT`; **17** confirmed on the fingerprint |
+| **Probes, all first-hand** | 44 `ls-remote` fingerprints + 64 blobless partial clones + 67 payload blob reads + 10 metadata reads; **0** successful `api.github.com/repos` calls, because the proxy answered **403** to all of them |
+| **Backlog graded** | **63** addresses, **63/63** answered; 50 in domain, **28** granted, **17** permissive |
+| **The figure a studio needs** | 🔴 **15 of 21 (71.4 %) in-domain LMS/SIS MCP servers have no licence file in the tree** |
+| **Defects in `p370`'s own instruments** | **5** (four in `domain-check`'s first draft, one in the probe's case folding), each published with the string that caused it |
+| **Defects the SUITE found in `p370`'s own work** | **5** — an unpinned shell site, two gate recipes that could print `PASS` while a step failed, two deleted `recount` anchors, a ratchet collision and a stale census triple. All five listed in `intel/open-gaps.md` |
+| **New gaps** | **477** (2 248 backlog addresses still ungraded), **478** (`UNKNOWN` register rows), **479** (two in-domain repositories still missed), **480** (this pass's recall figure is in-sample) |
+
+### 🔴 The finding, in one sentence
+
+🟢 `p349`'s own docstring names the mechanism its gate catches: *"GitHub keeps every
+former address of a transferred or renamed repository answering FOREVER, by redirect."*
+🔴 **A redirect serves one repository, so the old address must answer with the same ref
+set — and five register rows answer with their own.** `dymayo/moodler-mcp` carries **2**
+refs against the canonical side's **62** at the same `HEAD`; `sharziki/purdue-mcp`'s
+`refs/pull/1/head` **is** `rohanmuppa/purdue-mcp`'s branch tip, so one of that pair opened
+a pull request against the other. 🔵 **Two repositories in a contributor relationship
+cannot be one address and its redirect.**
+
+### 🔴 The second finding, which is about this base rather than GitHub
+
+🔴 **`p367` discharged this gate by editing the shelf in the wrong direction.** It wrote
+that `agents/top.md` *"carried `INGInious/INGInious` as a live row address"* and fixed the
+row to cite `UCL-INGI/INGInious`. 🟢 **Measured this pass: fetching
+`github.com/UCL-INGI/INGInious` lands on `INGInious/INGInious`** (243 ★, breadcrumb
+`INGInious / INGInious`, no rename notice). `UCL-INGI` is the stale half. 🔴 **And the
+gate went green anyway, because `ALIAS_REGISTER` pointed at `p349`'s register, which has
+no `INGInious` row at all** — while `p350` had built a register three times larger and
+nothing was ever pointed at it. Both rows are restored and the default now points at
+`p370`'s register.
+
+### 🟢 What a reader should take from it
+
+🟢 **A fourth transport, and it is the one that does not guess.** `github.com` and
+`api.github.com/repos/…` both answered **403** at the proxy this pass; `raw` answered
+**200** but only for a path you can already name, and `openfun/ralph/HEAD/LICENSE` is a
+`404` for the ordinary reason that the file is `LICENSE.md`. 🔵 **Every HTTP licence probe
+on this base is a filename guess.** A blobless partial clone **enumerates the tree**, so
+`openedx/XBlock`'s grant — `LICENSE.TXT`, **11 358 B** of Apache-2.0, the file `p369`
+reported as *"404 on every path probed"* — is simply listed. 🔴 **And this base already
+knew:** `compose/code/p1057-licence-path-case` was built at `p189` to record that exact
+file, and was never made a gate, so `p369` paid to rediscover it.
+
+🔴 **The incumbent-LMS bridge class exists, is broad, and is 71 % unusable.** Twenty-one
+in-domain MCP servers reaching **Moodle, Canvas, Blackboard Learn, D2L Brightspace,
+Schoology, PowerSchool, Ellucian Banner, Khan Academy, India's NCERT and Norway's UDIR**
+are in this base's own trending history. **Fifteen ship no licence file.** 🟢 The six that
+do are now shelved, and the standards layer underneath them is permissive and strong:
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0, 373 ★),
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library)
+(Apache-2.0, 54 ★) and [`openedx/XBlock`](https://github.com/openedx/XBlock) (Apache-2.0).
+
+### 🟢 The address census, re-derived AFTER this pass wrote to the shelves
+
+🔵 **`p352`'s rule, obeyed, and `p367`'s restatement of it:** a census whose input is the
+shelves and whose publication sits in the pass that then writes to them is stale the moment
+it is written, so it is derived **last**. 🟢 **Re-derived over the nine `SHELF_FILES` of the
+tree this pass commits: **2 679** harvested shapes → **33** are not addresses →
+**2 646 addresses** (1.23 % inflation).**
+
+🔵 **Both denominators still stand together.** This triple is channel **U** — the addresses
+`p348`'s regex can see. `p367` measured a second channel and found **496** live
+repositories written as bare backticked slugs, so the true corpus is larger than 2 646 and
+`ACTION ZZ-ca`/`Gap 474` still owns the restatement. 🔴 **Quote the triple as "shapes
+harvested by the URL channel", never as "the repositories this base holds."**
+
+🔴 **A trap pair worth remembering.** In education `xAPI` is the Experience API. On GitHub
+it is also **xStation5, a forex broker's trading API** — and both `pawelkn/xapi-rs` and
+`peterszombati/xapi-node` are that, permissively licensed, live, and completely wrong for
+these shelves. `cern-qti/quask` is CERN's Quantum Technology Initiative, not IMS QTI.
+🟢 **`gate-domain-check` now stops all four**, at 100 % precision on this pass's 63
+addresses and 92.6 % recall — **which is an in-sample figure and is declared as one.**
+
+---
+
 ## Pass 367 — 2026-10-21 — **THIS BASE HAS BEEN MEASURING ITS OWN COVERAGE AGAINST A CORPUS BUILT BY ONE REGEX. `p367` BUILT THE SECOND CHANNEL `ACTION ZZ-bv` PRESCRIBED AND FOUND 496 LIVE REPOSITORIES — 16.3% OF THE TRUE CORPUS — THAT NO CENSUS, IDENTITY OR ABSENCE INSTRUMENT HERE HAS EVER BEEN ABLE TO SEE. 🔴 TWO OF THEM ARE THE REPOSITORIES `Gap 239` AND `Gap 246` TURN ON. 🔴 AND THE SUITE `p366` COULD NOT RUN WAS SITTING RED ON A CLAIM `p366` PUBLISHED.**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every

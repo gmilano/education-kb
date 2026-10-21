@@ -1,0 +1,13 @@
+.env.example
+.gitignore
+LICENSE
+README.md
+docs
+mkdocs.yml
+pytest.ini
+requirements-dev.txt
+requirements.txt
+run_tests.py
+setup.py
+src
+tests

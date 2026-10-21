@@ -1,0 +1,12 @@
+.eslintrc.json
+.gitignore
+.npmignore
+.prettierrc
+LICENSE
+README.md
+docs
+esbuild.config.js
+package.json
+src
+test
+tsconfig.json

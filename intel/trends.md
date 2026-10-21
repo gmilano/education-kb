@@ -209,7 +209,8 @@ learning and hiring. [`learner-credential-wallet`](https://github.com/openwallet
 
 **First-hand, this pass.** A `topic:education topic:mcp` query returns **328
 repositories**. Counting only what this base actually shelves,
-**11 distinct education MCP server slugs are shelved** on `agents/top.md`,
+🟢 **52 distinct education MCP server slugs are shelved** on `agents/top.md`
+(**11** when this line was first written at `p274`; re-derived by `make recount` at `p370`),
 and MCP reaches **6 distinct LMS platforms** across both agent shelves.
 Every major LMS now has at least one community MCP server, and **almost all are MIT**:
 
@@ -251,6 +252,43 @@ makes forking commercially awkward. MCP solves the licence problem *and* the tec
 one at once: it is a **protocol boundary**, so copyleft does not reach across it. The
 starting cost of an education engagement has dropped materially, and the trade press
 has not noticed.
+
+### 🔴 🆕 `p370` addendum: the layer is dense, it reaches ten platforms — and **71.4 %** of it is not licensed
+
+🟢 **§7's claim that "almost all are MIT" was true of the rows this base had SHELVED, and
+shelving was the filter.** `p370` graded **21** in-domain LMS/SIS MCP servers straight out
+of the promotion backlog — i.e. before any shelf filter — reading every grant from the git
+tree at a pinned sha. 🔴 **Fifteen of them have no licence file at all (71.4 %).**
+
+| | |
+|---|---:|
+| in-domain MCP servers graded from the backlog | **21** |
+| 🟢 permissive | 🟢 **5** (4 MIT, 1 Apache-2.0) |
+| 🔴 copyleft | 🔴 **1** (GPL-3.0) |
+| 🔴 **no licence file in the root tree** | 🔴 **15 (71.4 %)** |
+
+🔵 **This does not refute §7, it supplies the denominator §7 never had.** *"Almost all are
+MIT"* described a shelf whose entry condition was a readable grant. Measured against the
+discovered population, the bridge layer is the **least** licensed layer in this base — the
+platform tier and the standards tier are both mostly granted, and `p370` shelved nine
+permissive standards components on the same day.
+
+🟢 **The protocol-boundary argument in §7 still holds and matters more, not less.** MCP
+keeps AGPL from reaching across into a client deliverable. 🔴 **But it does nothing about
+the server itself**, and an unlicensed server is a worse problem than a copyleft one: GPL
+has terms you can comply with, and no grant has nothing.
+
+🟢 **Ten platforms are now reachable** — Moodle, Canvas, Blackboard Learn, D2L Brightspace,
+Schoology, PowerSchool, Ellucian Banner, Khan Academy, India's NCERT and Norway's UDIR —
+with **Blackboard Learn (Ultra)** reached permissively for the first time by
+[`bibo242/blackboard-mcp`](https://github.com/bibo242/blackboard-mcp) (MIT).
+
+🔴 **And one axis this layer raises that is not a licence axis at all.** Most of these
+servers authenticate **as the student**, through the institution's SSO, in a real browser.
+[`general-mudkip/d2l-mcp-server`](https://github.com/general-mudkip/d2l-mcp-server) opens
+its own README with a warning against using it for academic misconduct. 🔵 For an
+engagement that is a procurement and governance conversation, and it arrives before the
+licence one.
 
 ## 8. 🟢 Skills-as-packaging: curriculum shipped as agent instructions
 
@@ -1459,3 +1497,80 @@ manifest or a README but never filed. `DMontgomery40/mcp-canvas-lms` says `"lice
 in `package.json` and ships no `LICENSE`. That is evidence of intent and **not** a grant a
 client's counsel will accept — but unlike a true absence it is fixable with one upstream
 issue, which makes it the cheapest category of blocker this base tracks.
+
+## 48. 🔴 🆕 A licence probe over HTTP is a **filename guess**; the git tree is an **enumeration** — and that difference cost this base two passes on one file
+
+🔵 **The mechanism, in one line.** `raw.githubusercontent.com` can confirm or deny a path
+you already hold. It cannot list a directory. So every HTTP licence ladder on this base —
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, eighteen rungs at the deepest — is a
+*guess at a filename*, and a negative verdict from it means **"none of my spellings hit"**,
+never **"no grant exists"**.
+
+| The specimen | What the ladder reported | 🟢 What the tree says |
+|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `p369`: 🔴 *"404 on every branch and filename probed"*; grant unresolved; next transport nominated as the PyPI sdist | 🟢 **`LICENSE.TXT`** — uppercase extension — **11 358 B** of Apache-2.0 at `5693f681ff7c`, with `NOTICE.txt` beside it |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | — | 🟡 `raw…/HEAD/LICENSE` **404**, `raw…/HEAD/LICENSE.md` **200**. Same grant, different spelling; the ladder measures the spelling |
+
+🔴 **The expensive half is not about GitHub.** This base built
+`compose/code/p1057-licence-path-case` at `p189` — *about this exact repository and this
+exact file* — with 16 passing controls and a published correction. 🔴 **It was never wired
+into `make hooks`**, so `p369` re-measured the same question from scratch, got the opposite
+answer, and spent a line of its report nominating a transport it did not need. 🔵 **An
+instrument that is not standing will be paid for twice**, and the second payment is a wrong
+published verdict rather than just wasted effort.
+
+🟢 **The operational rule this base now follows.** Enumerate, then read:
+
+```
+git clone --depth 1 --filter=blob:none --no-checkout --single-branch <url> d
+git -C d ls-tree --name-only HEAD          # the enumeration — nothing is guessed
+git -C d cat-file -s HEAD:<the file it lists>
+git -C d cat-file -p HEAD:<the file it lists>
+```
+
+🔵 **And it is the transport that survived this pass.** `github.com` **403**,
+`api.github.com/repos/…` **403**, `raw` 200-but-blind, `git` **200 on 63 of 63 addresses
+with zero failures**. 🟡 `api.github.com/rate_limit` answered **200** while every `/repos/`
+path was refused, which is its own small lesson: **a host check is not an endpoint check.**
+
+## 49. 🔴 🆕 A shared `HEAD` sha does not make two addresses one repository — and `refs/pull/*` is the cheapest proof of the difference
+
+🔵 **Why this is a trend and not a bookkeeping note.** Four of the last five passes have
+leaned on `HEAD`-sha equality to decide that two slugs are one repository: `p348`'s fold
+census, `p349`'s alias register (**22 `STALE` rows, every one with
+`identity_proof = head-p349`**), `p366`'s *"15 of 30 name-matched pairs are one
+repository"*. 🔴 **`p370` re-derived all 43 register addresses on the full ref set and
+5 of 22 `STALE` rows (22.7 %) are forks, not redirects.**
+
+| group | the "stale" address | its refs | canonical's refs | shared `HEAD` |
+|---|---|---:|---:|---|
+| `moodler-mcp` | `dymayo/moodler-mcp` | **2** | **62** | `4e6139eb9c6b` |
+| `mcp-brasil` | `dasgltd/mcp-brasil` | **50** | **99** | `2efb258370b1` |
+| `purdue-mcp` | `rohanmuppa/purdue-mcp` | **2** | **4** | `6922f1f301dd` |
+| `lxhive` | `leogaggl/lxhive` | **3** | **187** | `cffee6d90ca9` |
+| `openpronounce` | `chinobv/openpronounce` | **3** | **9** | `74bc17ea406e` |
+
+🟢 **The argument needs no interpretation, and `p349`'s own docstring supplies it:** GitHub
+keeps a renamed address answering **by redirect**, and a redirect serves **one**
+repository, so the old address must answer with the **same ref set**. Three refs against
+sixty-three is two repositories.
+
+🟢 **`refs/pull/*` is the discriminator to keep, not filter.** Pull refs accrue to the
+repository that *receives* pull requests, so a fork starts with none.
+`sharziki/purdue-mcp` carries `refs/pull/1/head` at `85f66af9019d` — **which is**
+`rohanmuppa/purdue-mcp`'s `refs/heads/fix/current-term-default`. 🔵 **One of that pair
+opened a pull request against the other**, and the register had them as one address and
+its redirect.
+
+🟡 **What stays true.** **17 of 22** `STALE` rows survive the fingerprint —
+`stanfordnlp/edu-convokit` ≡ `EduNLP/edu-convokit` have byte-identical ref sets — so the
+hazard `p349` built the register for is real. 🔴 **The fork direction is a second hazard
+running the other way**, and it is the one that makes a gate rewrite a correct shelf.
+
+🔴 **Which is exactly what happened.** `p367` discharged a red `gate-alias-canonical` by
+rewriting two correct live rows from `INGInious/INGInious` to `UCL-INGI/INGInious`. 🟢
+Fetching `UCL-INGI/INGInious` **lands on `INGInious/INGInious`**: the direction was
+backwards. 🔵 **And the gate went green because `ALIAS_REGISTER` pointed at a register two
+passes older than the best one on the base, which had no row for that pair at all.** A
+gate is only as current as the data file it is handed.
+

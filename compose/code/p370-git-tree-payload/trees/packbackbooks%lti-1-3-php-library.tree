@@ -1,0 +1,16 @@
+.githooks
+.github
+.gitignore
+CHANGELOG.md
+CLAUDE.md
+LICENSE.md
+PULL_REQUEST_TEMPLATE.md
+README.md
+SECURITY.md
+UPGRADES.md
+composer.json
+phpstan.neon
+phpunit.xml.dist
+pint.json
+src
+tests

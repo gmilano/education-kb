@@ -1,0 +1,181 @@
+--- شروع فایل README.md ---
+
+# سرورهای MCP عالی [![عالی](https://awesome.re/badge.svg)](https://awesome.re)
+
+[![ไทย](https://img.shields.io/badge/Thai-Click-blue)](README-th.md)
+[![English](https://img.shields.io/badge/English-Click-yellow)](README.md)
+[![繁體中文](https://img.shields.io/badge/繁體中文-點擊查看-orange)](README-zh_TW.md)
+[![简体中文](https://img.shields.io/badge/简体中文-点击查看-orange)](README-zh.md)
+[![日本語](https://img.shields.io/badge/日本語-クリック-青)](README-ja.md)
+[![한국어](https://img.shields.io/badge/한국어-클릭-yellow)](README-ko.md)
+[![Português Brasileiro](https://img.shields.io/badge/Português_Brasileiro-Clique-green)](README-pt_BR.md)
+[![Discord](https://img.shields.io/discord/1312302100125843476?logo=discord&label=discord)](https://glama.ai/mcp/discord)
+[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit)](https://www.reddit.com/r/mcp/)
+
+یک لیست منتخب از سرورهای عالی Model Context Protocol (MCP).
+
+* [MCP چیست؟](#what-is-mcp)
+* [کلاینت‌ها](#clients)
+* [آموزش‌ها](#tutorials)
+* [جامعه](#community)
+* [راهنما](#legend)
+* [پیاده‌سازی‌های سرور](#server-implementations)
+* [چارچوب‌ها](#frameworks)
+* [نکات و ترفندها](#tips-and-tricks)
+
+## MCP چیست؟
+
+[MCP](https://modelcontextprotocol.io/) یک پروتکل باز است که به مدل‌های هوش مصنوعی امکان تعامل امن با منابع محلی و راه دور را از طریق پیاده‌سازی‌های سرور استاندارد شده می‌دهد. این لیست بر روی سرورهای MCP آماده برای تولید و آزمایشی تمرکز دارد که قابلیت‌های هوش مصنوعی را از طریق دسترسی به فایل، اتصالات پایگاه داده، یکپارچه‌سازی API و سایر خدمات متنی گسترش می‌دهند.
+
+## کلاینت‌ها
+
+[awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients/) و [glama.ai/mcp/clients](https://glama.ai/mcp/clients) را بررسی کنید.
+
+> [!TIP]
+> [Glama Chat](https://glama.ai/chat) یک کلاینت هوش مصنوعی چندوجهی با پشتیبانی از MCP و [دروازه هوش مصنوعی](https://glama.ai/gateway) است.
+
+## آموزش‌ها
+
+* [شروع سریع پروتکل زمینه مدل (MCP)](https://glama.ai/blog/2024-11-25-model-context-protocol-quickstart)
+* [تنظیم برنامه دسکتاپ Claude برای استفاده از پایگاه داده SQLite](https://youtu.be/wxCCzo9dGj0)
+
+## جامعه
+
+* [r/mcp Reddit](https://www.reddit.com/r/mcp)
+* [سرور دیسکورد](https://glama.ai/mcp/discord)
+
+## راهنما
+
+* 🎖️ – پیاده‌سازی رسمی
+* زبان برنامه‌نویسی
+  * 🐍 – کدبیس Python
+  * 📇 – کدبیس TypeScript (یا JavaScript)
+  * 🏎️ – کدبیس Go
+  * 🦀 – کدبیس Rust
+  * #️⃣ - کدبیس C#
+  * ☕ - کدبیس Java
+  * 🌊 – کدبیس C/C++
+  * 💎 - کدبیس Ruby
+
+* دامنه
+  * ☁️ - سرویس ابری
+  * 🏠 - سرویس محلی
+  * 📟 - سیستم‌های تعبیه‌شده
+* سیستم عامل
+  * 🍎 – برای macOS
+  * 🪟 – برای Windows
+  * 🐧 - برای Linux
+
+> [!NOTE]
+> در مورد محلی 🏠 در مقابل ابری ☁️ گیج شده‌اید؟
+> * از محلی استفاده کنید زمانی که سرور MCP با یک نرم‌افزار نصب شده محلی صحبت می‌کند، به عنوان مثال کنترل مرورگر Chrome را به دست می‌گیرد.
+> * از ابری استفاده کنید زمانی که سرور MCP با APIهای راه دور صحبت می‌کند، به عنوان مثال API هواشناسی.
+
+## پیاده‌سازی‌های سرور
+
+> [!NOTE]
+> ما اکنون یک [دایرکتوری مبتنی بر وب](https://glama.ai/mcp/servers) داریم که با مخزن همگام‌سازی شده است.
+
+* 🔗 - [تجمیع‌کننده‌ها](#aggregators)
+* 🚀 - [هوافضا و اخترپویایی](#aerospace-and-astrodynamics)
+* 🎨 - [هنر و فرهنگ](#art-and-culture)
+* 📐 - [معماری و طراحی](#architecture-and-design)
+* 📂 - [اتوماسیون مرورگر](#browser-automation)
+* 🧬 - [زیست‌شناسی، پزشکی و بیوانفورماتیک](#bio)
+* ☁️ - [پلتفرم‌های ابری](#cloud-platforms)
+* 👨‍💻 - [اجرای کد](#code-execution)
+* 🤖 - [عامل‌های کدنویسی](#coding-agents)
+* 🖥️ - [خط فرمان](#command-line)
+* 💬 - [ارتباطات](#communication)
+* 👤 - [پلتفرم‌های داده مشتری](#customer-data-platforms)
+* 🗄️ - [پایگاه‌های داده](#databases)
+* 📊 - [پلتفرم‌های داده](#data-platforms)
+* 🚚 - [تحویل](#delivery)
+* 🛠️ - [ابزارهای توسعه‌دهنده](#developer-tools)
+* 🧮 - [ابزارهای علم داده](#data-science-tools)
+* 📟 - [سیستم تعبیه‌شده](#embedded-system)
+* 🌳 - [زیست بوم و طبیعت](#environment-and-nature)
+* 📂 - [سیستم‌های فایل](#file-systems)
+* 💰 - [مالی و فین‌تک](#finance--fintech)
+* 🎮 - [بازی](#gaming)
+* 🧠 - [دانش و حافظه](#knowledge--memory)
+* 🗺️ - [خدمات مکانی](#location-services)
+* 🎯 - [بازاریابی](#marketing)
+* 📊 - [نظارت](#monitoring)
+* 🎥 - [پردازش چندرسانه‌ای](#multimedia-process)
+* 🔎 - [جستجو و استخراج داده](#search)
+* 🔒 - [امنیت](#security)
+* 🌐 - [رسانه‌های اجتماعی](#social-media)
+* 🏃 - [ورزش](#sports)
+* 🎧 - [پشتیبانی و مدیریت خدمات](#support-and-service-management)
+* 🌎 - [خدمات ترجمه](#translation-services)
+* 🎧 - [تبدیل متن به گفتار](#text-to-speech)
+* 🚆 - [سفر و حمل و نقل](#travel-and-transportation)
+* 🔄 - [کنترل نسخه](#version-control)
+* 🏢 - [محیط کار و بهره‌وری](#workplace-and-productivity)
+* 🛠️ - [سایر ابزارها و یکپارچه‌سازی‌ها](#other-tools-and-integrations)
+
+
+### 🔗 <a name="aggregators"></a>تجمیع‌کننده‌ها
+
+سرورهایی برای دسترسی به بسیاری از برنامه‌ها و ابزارها از طریق یک سرور MCP واحد.
+
+- [1mcp/agent](https://github.com/1mcp-app/agent) 📇 ☁️ 🏠 🍎 🪟 🐧 - یک پیاده‌سازی سرور Model Context Protocol یکپارچه که چندین سرور MCP را در یک سرور تجمیع می‌کند.
+- [duaraghav8/MCPJungle](https://github.com/duaraghav8/MCPJungle) 🏎️ 🏠 - رجیستری سرور MCP خودمیزبان برای عامل‌های هوش مصنوعی سازمانی
+- [glenngillen/mcpmcp-server](https://github.com/glenngillen/mcpmcp-server) ☁️ 📇 🍎 🪟 🐧 - لیستی از سرورهای MCP تا بتوانید از کلاینت خود بپرسید از کدام سرورها برای بهبود گردش کار روزانه خود می‌توانید استفاده کنید.
+- [hamflx/imagen3-mcp](https://github.com/hamflx/imagen3-mcp) 📇 🏠 🪟 🍎 🐧 - یک ابزار قدرتمند تولید تصویر با استفاده از API Imagen 3.0 گوگل از طریق MCP. تولید تصاویر با کیفیت بالا از طریق دستورات متنی با کنترل‌های پیشرفته عکاسی، هنری و فوتورئالیستی.
+- [julien040/anyquery](https://github.com/julien040/anyquery) 🏎️ 🏠 ☁️ - بیش از ۴۰ برنامه را با یک باینری با استفاده از SQL کوئری کنید. همچنین می‌تواند به پایگاه داده سازگار با PostgreSQL، MySQL یا SQLite شما متصل شود. طراحی شده به صورت محلی-اول و خصوصی.
+- [metatool-ai/metatool-app](https://github.com/metatool-ai/metatool-app) 📇 ☁️ 🏠 🍎 🪟 🐧 - MetaMCP یک سرور میان‌افزار MCP یکپارچه است که اتصالات MCP شما را با رابط کاربری گرافیکی مدیریت می‌کند.
+- [sitbon/magg](https://github.com/sitbon/magg) 🍎 🪟 🐧 ☁️ 🏠 🐍 - Magg: یک سرور متا-MCP که به عنوان یک هاب جهانی عمل می‌کند و به LLMها اجازه می‌دهد تا به طور خودکار چندین سرور MCP را کشف، نصب و هماهنگ کنند - اساساً به دستیاران هوش مصنوعی این قدرت را می‌دهد که قابلیت‌های خود را در صورت تقاضا گسترش دهند.
+- [SureScaleAI/openai-gpt-image-mcp](https://github.com/SureScaleAI/openai-gpt-image-mcp) 📇 ☁️ - سرور MCP تولید/ویرایش تصویر OpenAI GPT.
+- [sxhxliang/mcp-access-point](https://github.com/sxhxliang/mcp-access-point) 📇 ☁️ 🏠 🍎 🪟 🐧 - یک سرویس وب را با یک کلیک و بدون هیچ گونه تغییر در کد، به یک سرور MCP تبدیل کنید.
+- [TheLunarCompany/lunar#mcpx](https://github.com/TheLunarCompany/lunar/tree/main/mcpx) 📇 🏠  ☁️ 🍎 🪟 🐧 - MCPX یک دروازه منبع باز و آماده برای تولید است تا سرورهای MCP را در مقیاس بزرگ مدیریت کند—کشف ابزار، کنترل‌های دسترسی، اولویت‌بندی تماس و ردیابی استفاده را برای ساده‌سازی گردش کار عامل‌ها متمرکز کنید.
+- [VeriTeknik/pluggedin-mcp-proxy](https://github.com/VeriTeknik/pluggedin-mcp-proxy)  📇 🏠 - یک سرور پروکسی جامع که چندین سرور MCP را در یک رابط واحد با ویژگی‌های دید گسترده ترکیب می‌کند. این سرور کشف و مدیریت ابزارها، پرامپت‌ها، منابع و قالب‌ها را در سرورهای مختلف، به علاوه یک محیط آزمایشی برای اشکال‌زدایی هنگام ساخت سرورهای MCP فراهم می‌کند.
+- [WayStation-ai/mcp](https://github.com/waystation-ai/mcp) ☁️ 🍎 🪟 - Claude Desktop و دیگر میزبان‌های MCP را به طور یکپارچه و امن به برنامه‌های مورد علاقه خود (Notion، Slack، Monday، Airtable، و غیره) متصل کنید. کمتر از ۹۰ ثانیه طول می‌کشد.
+- [wegotdocs/open-mcp](https://github.com/wegotdocs/open-mcp) 📇 🏠 🍎 🪟 🐧 - یک API وب را در ۱۰ ثانیه به یک سرور MCP تبدیل کنید و آن را به رجیستری منبع باز اضافه کنید: https://open-mcp.org
+- [Data-Everything/mcp-server-templates](https://github.com/Data-Everything/mcp-server-templates) 📇 🏠 🍎 🪟 🐧 - یک سرور. همه ابزارها. یک پلتفرم MCP یکپارچه که بسیاری از برنامه‌ها، ابزارها و خدمات را پشت یک رابط قدرتمند متصل می‌کند—ایده‌آل برای توسعه‌دهندگان محلی یا عامل‌های تولید.
+- [YangLiangwei/PersonalizationMCP](https://github.com/YangLiangwei/PersonalizationMCP) 🐍 ☁️ 🏠 🍎 🪟 🐧 - سرور MCP جامع تجمیع داده‌های شخصی با یکپارچه‌سازی پلتفرم‌های Steam، YouTube، Bilibili، Spotify، Reddit و دیگر پلتفرم‌ها. دارای احراز هویت OAuth2، مدیریت خودکار توکن، و بیش از ۹۰ ابزار برای دسترسی به داده‌های بازی، موسیقی، ویدیو و پلتفرم‌های اجتماعی است.
+
+### 🚀 <a name="aerospace-and-astrodynamics"></a>هوافضا و اخترپویایی
+
+
+### 🎨 <a name="art-and-culture"></a>هنر و فرهنگ
+
+دسترسی و کاوش در مجموعه‌های هنری، میراث فرهنگی و پایگاه‌های داده موزه‌ها. به مدل‌های هوش مصنوعی امکان جستجو و تحلیل محتوای هنری و فرهنگی را می‌دهد.
+
+- [drakonkat/wizzy-mcp-tmdb](https://github.com/drakonkat/wizzy-mcp-tmdb) 📇 ☁️ - یک سرور MCP برای API پایگاه داده فیلم که به دستیاران هوش مصنوعی امکان جستجو و بازیابی اطلاعات فیلم، سریال تلویزیونی و افراد را می‌دهد.
+- [8enSmith/mcp-open-library](https://github.com/8enSmith/mcp-open-library) 📇 ☁️ - یک سرور MCP برای API کتابخانه باز که به دستیاران هوش مصنوعی امکان جستجوی اطلاعات کتاب را می‌دهد.
+- [abhiemj/manim-mcp-server](https://github.com/abhiemj/manim-mcp-server) 🐍 🏠 🪟 🐧 - یک سرور MCP محلی که با استفاده از Manim انیمیشن تولید می‌کند.
+- [ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp) 🐍 - سرور MCP برای کار با Blender
+- [aliafsahnoudeh/shahnameh-mcp-server](https://github.com/aliafsahnoudeh/shahnameh-mcp-server) 🐍 🏠 🍎 🪟 🐧 - یک ام سی پی سرور برای دسترسی به بخش ها و اشعار و توضیحات شاهنامه فردوسی حماسه بزرگ فارسی
+- [burningion/video-editing-mcp](https://github.com/burningion/video-editing-mcp) 🐍 - اضافه کردن، تحلیل، جستجو و تولید ویرایش‌های ویدیویی از مجموعه Video Jungle شما
+- [cantian-ai/bazi-mcp](https://github.com/cantian-ai/bazi-mcp) 📇 🏠 ☁️ 🍎 🪟 - نمودار و تحلیل جامع و دقیق Bazi (طالع‌بینی چینی) را ارائه می‌دهد
+- [cswkim/discogs-mcp-server](https://github.com/cswkim/discogs-mcp-server) 📇 ☁️ - سرور MCP برای تعامل با API Discogs
+- [diivi/aseprite-mcp](https://github.com/diivi/aseprite-mcp) 🐍 🏠 - سرور MCP با استفاده از API Aseprite برای ایجاد هنر پیکسلی
+- [djalal/quran-mcp-server](https://github.com/djalal/quran-mcp-server) 📇 ☁️ سرور MCP برای تعامل با مجموعه متون Quran.com از طریق API رسمی REST v4.
+- [raveenb/fal-mcp-server](https://github.com/raveenb/fal-mcp-server) 🐍 ☁️ - تولید تصاویر، ویدیوها و موسیقی هوش مصنوعی با استفاده از مدل‌های Fal.ai (FLUX، Stable Diffusion، MusicGen) مستقیماً در Claude Desktop
+- [mikechao/metmuseum-mcp](https://github.com/mikechao/metmuseum-mcp) 📇 ☁️ - یکپارچه‌سازی با API مجموعه موزه هنر متروپولیتن برای جستجو و نمایش آثار هنری در مجموعه.
+- [OctoEverywhere/mcp](https://github.com/OctoEverywhere/mcp) #️⃣ ☁️ - یک سرور MCP چاپگر سه بعدی که امکان دریافت وضعیت زنده چاپگر، عکس‌های وب‌کم و کنترل چاپگر را فراهم می‌کند.
+- [omni-mcp/isaac-sim-mcp](https://github.com/omni-mcp/isaac-sim-mcp) 📇 ☁️ - یک سرور MCP و یک افزونه که کنترل زبان طبیعی NVIDIA Isaac Sim، Lab، OpenUSD و غیره را امکان‌پذیر می‌سازد.
+- [PatrickPalmer/MayaMCP](https://github.com/PatrickPalmer/MayaMCP) 🐍 🏠 - سرور MCP برای Autodesk Maya
+- [r-huijts/oorlogsbronnen-mcp](https://github.com/r-huijts/oorlogsbronnen-mcp) 📇 ☁️ - یکپارچه‌سازی با API Oorlogsbronnen (منابع جنگ) برای دسترسی به سوابق تاریخی جنگ جهانی دوم، عکس‌ها و اسناد از هلند (۱۹۴۰-۱۹۴۵)
+- [r-huijts/rijksmuseum-mcp](https://github.com/r-huijts/rijksmuseum-mcp) 📇 ☁️ - یکپارچه‌سازی با API Rijksmuseum برای جستجوی آثار هنری، جزئیات و مجموعه‌ها
+- [samuelgursky/davinci-resolve-mcp](https://github.com/samuelgursky/davinci-resolve-mcp) 🐍 - یکپارچه‌سازی سرور MCP برای DaVinci Resolve که ابزارهای قدرتمندی برای ویرایش ویدیو، درجه‌بندی رنگ، مدیریت رسانه و کنترل پروژه فراهم می‌کند
+- [tasopen/mcp-alphabanana](https://github.com/tasopen/mcp-alphabanana) [glama](https://glama.ai/mcp/servers/@tasopen/mcp-alphabanana) 📇 🏠 🍎 🪟 🐧 - سرور MCP محلی برای تولید دارایی‌های تصویری با Google Gemini (Nano Banana 2 / Pro). از خروجی شفاف PNG/WebP، تغییر اندازه/برش دقیق، حداکثر ۱۴ تصویر مرجع و grounding با Google Search پشتیبانی می‌کند.
+- [yuna0x0/anilist-mcp](https://github.com/yuna0x0/anilist-mcp) 📇 ☁️ - یک سرور MCP که API AniList را برای اطلاعات انیمه و مانگا یکپارچه می‌کند
+
+
+### 📐 <a name="architecture-and-design"></a>معماری و طراحی
+
+طراحی و تجسم معماری نرم‌افزار، نمودارهای سیستم و مستندات فنی. به مدل‌های هوش مصنوعی امکان تولید نمودارهای حرفه‌ای و مستندات معماری را می‌دهد.
+
+- [Narasimhaponnada/mermaid-mcp](https://github.com/Narasimhaponnada/mermaid-mcp) 📇 ☁️ 🍎 🪟 🐧 - تولید نمودار Mermaid با قدرت هوش مصنوعی با بیش از ۲۲ نوع نمودار شامل فلوچارت‌ها، نمودارهای توالی، نمودارهای کلاس، نمودارهای ER، نمودارهای معماری، ماشین‌های حالت و موارد دیگر. دارای بیش از ۵۰ قالب از پیش ساخته شده، موتورهای چیدمان پیشرفته، خروجی‌های SVG/PNG/PDF، و یکپارچه‌سازی یکپارچه با GitHub Copilot، Claude، و هر کلاینت سازگار با MCP. نصب از طریق NPM: `npm install -g @narasimhaponnada/mermaid-mcp-server`
+
+### <a name="bio"></a>زیست‌شناسی، پزشکی و بیوانفورماتیک
+
+- [genomoncology/biomcp](https://github.com/genomoncology/biomcp) 🐍 ☁️ - سرور MCP تحقیقات زیست‌پزشکی که دسترسی به PubMed، ClinicalTrials.gov و MyVariant.info را فراهم می‌کند.
+- [longevity-genie/biothings-mcp](https://github.com/longevity-genie/biothings-mcp) 🐍 🏠 ☁️ - سرور MCP برای تعامل با API BioThings، شامل ژن‌ها، واریانت‌های ژنتیکی، داروها و اطلاعات طبقه‌بندی.
+- [longevity-genie/gget-mcp](https://github.com/longevity-genie/gget-mcp) 🐍 🏠 ☁️ - سرور MCP که یک جعبه ابزار قدرتمند بیوانفورماتیک برای کوئری‌ها و تحلیل‌های ژنومیک فراهم می‌کند و کتابخانه محبوب `gget` را پوشش می‌دهد.
+- [longevity-genie/opengenes-mcp](https://github.com/longevity-genie/opengenes-mcp) 🎖️ 🐍 🏠 ☁️ - سرور MCP برای یک پایگاه داده قابل کوئری برای تحقیقات پیری و طول عمر از پروژه OpenGenes.
+- [longevity-genie/synergy-age-mcp](https://github.com/longevity-genie/synergy-age-mcp) 🎖️ 🐍 🏠 ☁️ - سرور MCP برای پایگاه داده SynergyAge از تعاملات ژنتیکی سینرژیک و آنتاگونیستی در طول عمر.
+- [the-momentum/fhir-mcp-server](https://github.com/the-momentum/fhir-mcp-server) 🐍 🏠 ☁️ - سرور MCP که عامل‌های هوش مصنوعی را به سرورهای FHIR متصل می‌کند. یک مورد استفاده نمونه

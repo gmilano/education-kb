@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 370 — 🔴 **the prescribed trending legs returned AI curricula again, so the budget went to the bridge class — and 15 of 21 LMS/SIS MCP servers turn out to ship no licence file at all**
+
+🔵 **The discovery legs first, honestly, because they are the part that did not work.**
+The prescribed global queries (*top open source AI agents education 2026 github MIT*,
+*github trending education AI 2026*) returned, for the second pass running,
+**learning material about AI** rather than education infrastructure:
+`rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`,
+`microsoft/ai-agents-for-beginners`, `h9-tect/AI-Roadmaps`, `mlabonne/llm-course`.
+🔴 **None of them belongs on an industry shelf** — they are curricula *for* AI engineers,
+not agents *for* education — and `p369` recorded the identical result one pass earlier.
+🟢 Two passes agreeing is a finding about the query, and it is registered beside
+`Gap 476`: the word *education* in a GitHub trending query selects tutorials.
+
+🟢 **One address the open-web leg did return and this base already holds:**
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, **302 ★**,
+v1.0.8 Feb 2026, *"80+ tools"*) — shelved since `p361`. 🔵 **Discovery against this
+corpus remains saturated**, which is `p368`'s conclusion holding for a third pass.
+
+### 🔴 Where the budget went instead: the incumbent-LMS bridge class, graded end to end
+
+| the question | the answer, `2026-10-21` |
+|---|---:|
+| in-domain MCP servers graded from payload | **21** |
+| 🔴 with **no licence file anywhere in the root tree** | 🔴 **15 (71.4 %)** |
+| 🟢 permissively granted | 🟢 **5** (4 MIT, 1 Apache-2.0) |
+| 🔴 copyleft | 🔴 **1** (GPL-3.0) |
+| platforms reached across the class | **10** — Moodle, Canvas, Blackboard Learn, D2L Brightspace, Schoology, PowerSchool, Ellucian Banner, Khan Academy, India's NCERT, Norway's UDIR |
+
+🟢 **The new reaches that are usable.**
+[`bibo242/blackboard-mcp`](https://github.com/bibo242/blackboard-mcp) (MIT, 1 084 B) is
+**the first Blackboard Learn (Ultra) reach on these shelves** and it authenticates with
+the user's own browser session, so an engagement needs no institutional API provisioning.
+[`mattlo0546/canvas-mcp`](https://github.com/mattlo0546/canvas-mcp) (MIT) signs in through
+**university SSO** and ships pointed at **Oxford's** Canvas — the first row here placed by
+its own default configuration rather than by its holder's address.
+[`hocphi-info/hocphi-info-mcp`](https://github.com/hocphi-info/hocphi-info-mcp)
+(Apache-2.0, 11 358 B) is read-only **Vietnamese university tuition data with sources**.
+
+🔴 **The integrity axis this class keeps raising, now with a row that says so itself.**
+[`general-mudkip/d2l-mcp-server`](https://github.com/general-mudkip/d2l-mcp-server) opens
+its README with *"⚠️ WARNING! ⚠️ This server should **not** be used in any way to engage"*
+in academic misconduct. 🔵 That is the same hazard this base measured in Spanish at
+`p53`–`p56` on the Moodle write-path rows (`MOODLER_ALLOW_STUDENT_WRITES`, fail-closed
+defaults), arriving as a maintainer's own disclaimer. 🟡 Most of this class authenticates
+**as the student**, through SSO, in a browser — which is a procurement conversation, not a
+licence one.
+
+### 🔴 Four permissive repositories that are not in this industry at all
+
+🟢 `gate-domain-check` (43 controls, standing from this pass) read every README payload
+and stopped four rows that every other gate on this base would have passed:
+
+| Address | Grant | The slug promised | 🔴 The payload says |
+|---|---|---|---|
+| [pawelkn/xapi-rs](https://github.com/pawelkn/xapi-rs) | MIT | the **Experience API** | 🔴 **xStation5** — a forex broker's trading client, on crates.io as `xapi` |
+| [peterszombati/xapi-node](https://github.com/peterszombati/xapi-node) | BSD-3-Clause | the same | 🔴 the same broker, in Node |
+| [cern-qti/quask](https://github.com/cern-qti/quask) | Apache-2.0 | IMS **QTI** | 🔴 **CERN's Quantum Technology Initiative** |
+| [totoketchup/adaptive-multispeaker-separation](https://github.com/totoketchup/adaptive-multispeaker-separation) | MIT | **adaptive learning** | 🔴 adaptive multispeaker audio separation |
+
+🔵 **`d2l-ai/d2l-en` is the fifth, and it is a different shape.** It is *Dive into Deep
+Learning*, a real and widely used textbook — educational **content**, under
+**CC-BY-SA-4.0** with **MIT only for `LICENSE-SAMPLECODE`** (931 B, a split-scope grant of
+`p1056`'s class). 🔴 But the slug matched on `d2l` meaning **D2L Brightspace**, and it is
+not an LMS row. It is recorded here so the name collision is not re-walked.
+
+---
+
 ## 2026-10-21 · Pass 369 — 🟢 **the payload channel `p368` recorded as closed is OPEN, 66 backlog repositories were licence-read through it, and 43 reached a shelf the same day**
 
 🔴 **Channel correction first, because every figure below depends on it.** `p368` recorded

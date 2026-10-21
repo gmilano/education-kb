@@ -70,6 +70,7 @@ p322-content-item-license/sweep_parallel.sh	BODY-ONLY	1	0	0	0
 p324-corpus-upstream-cession/resolve_upstream.sh	BODY-ONLY	1	0	0	0
 p326-titleholder-book-license/controls.sh	CAPTURED-SUBJECT	2	1	0	0
 p326-titleholder-book-license/sweep_titleholder.sh	BODY-ONLY	2	0	0	0
+p370-git-tree-payload/probe_tree.sh	BODY-ONLY	1	0	0	0
 p473-probe-commercial-gate/discover_probe.sh	BODY-ONLY	8	0	2	0
 p550-duplicate-definition-sweep/oracle_inversion.sh	BODY-ONLY	1	0	0	0
 p550-duplicate-definition-sweep/sweep_dupdefs.sh	PIPED	0	1	0	0

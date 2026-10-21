@@ -1,0 +1,292 @@
+Compass (block_compass)
+=======================
+
+[![Moodle Plugin CI: main (Moodle 5.2)](https://github.com/uaiblaine/moodle-block_compass/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/uaiblaine/moodle-block_compass/actions/workflows/ci.yml?query=branch%3Amain)
+[![Moodle Plugin CI: MOODLE_503_STABLE (Moodle 5.3)](https://github.com/uaiblaine/moodle-block_compass/actions/workflows/ci.yml/badge.svg?branch=MOODLE_503_STABLE)](https://github.com/uaiblaine/moodle-block_compass/actions/workflows/ci.yml?query=branch%3AMOODLE_503_STABLE)
+
+My courses by relevance, in three tiers, with a calendar strip above them. Built for very
+large sites.
+
+![The Compass block on a Dashboard: strips of course cards and the ghost card counting the remaining courses](docs/screenshots/dashboard.png)
+
+The standard Course overview block sorts courses by time: start and end dates. On sites where
+most courses have no end date and no completion rule, that turns into one long "in progress"
+list, expensive to build and hard to scan. Compass sorts the same enrolments by **relevance**:
+what I was doing, what just arrived, what I marked as mine, and what is due.
+
+- **Calendar strip** (optional). Closed, one line of counts by period; open, a scrolling row of
+  days, from ten days ago to the end of next month (it opens on the last five, three on a
+  phone), each coloured by what it holds and weighted by relevance. Pointing at a day opens its items with the actions the Timeline block offers.
+- **Tier 1, attention.** Full cards (image, progress, button) in four strips: *Continue where
+  you left off*, *New enrolments*, *Starts soon* and *My favourites*. A strip that overflows
+  says so in its heading ("+4 new").
+- **Tier 2, frontier.** One ghost card that only counts: "+87 other courses". Counting is
+  cheap; rendering is not.
+- **Tier 3, exploration.** *All courses*, grouped by category, with a side index and one filter
+  line: a scope, a search that suggests as you type, a favourites star, filters, a sort and a
+  list or cards view. Rows fetch their progress and image only once they are on screen. Courses
+  gone quiet gather in a *Dormant* group, and archived ones in an *Archived* group shared with
+  the Course overview block.
+
+Compass owns no database tables: favourites are core's course star, archiving is the Course
+overview block's "Removed from view", caches go through MUC and per-user state through user
+preferences. The server ships a shell and the browser renders it (React). Every web service has
+a query budget enforced by an automated test.
+
+
+The calendar strip
+------------------
+
+![The open calendar strip: a scrolling row of days coloured by load with five past days, today marked, floating arrows over the row's ends, a map under it and one mark per kind of item below each day](docs/screenshots/calendar-strip.png)
+
+The strip is off by default (`calendar_enabled`). When on, it sits above the first tier on the
+Dashboard, on the Compass page, or on both (`calendar_where`), and loads after the first tier so
+the cards always paint first.
+
+- **Open or closed.** The strip's heading opens and closes it, and each user's choice is
+  remembered; `calendar_start` decides how it first shows to someone who never chose (closed by
+  default). Closed, the strip is one line of plain counts by period: *Late, still open*, *Today*,
+  *Tomorrow*, *This week* (the five days after tomorrow) and *Later*. A period opens the strip on
+  its days, and Today and Tomorrow also open that day's card. A closed strip asks only for these
+  counts, never for the whole strip; closing an open strip asks nothing. A count made before the
+  strip was opened that day has no *Late* period yet and says so.
+
+  ![The closed strip: one line of counts for Late, Today, Tomorrow, This week and Later](docs/screenshots/calendar-line.png)
+- **Scrolling.** The row holds the whole window and scrolls with a trackpad, touch or the
+  keyboard (arrows, Page Up and Down, Home and End), asking the server nothing. It opens with five
+  past days before today (three on a narrow block); two arrows over its ends move two weeks at a
+  time, *Today* returns, and the month follows the days in view. A map under the row shows the
+  whole window, today and the most relevant day ahead: press it to jump, drag it to move. Under
+  each day, one mark per kind of item present, at most four, then "+N" more kinds.
+- **Relevance.** Graded work, starred courses and work due today or tomorrow weigh more than a
+  plain event; work that is late weighs little and closed work is not shown. Each user can
+  switch the weighting off and see days by count alone; `calendar_relevance` sets the starting
+  value.
+- **A day card.** Hovering a day wholly in view, focusing it or clicking it opens a card listing
+  the day's items, with the buttons core's Timeline offers, such as "Add submission". A click
+  pins the card as a dialog; Escape closes it. On a narrow block it opens as a bottom sheet. Each
+  item's button carries a short verb for what core's Timeline would do: Submit, Answer, Attempt,
+  Grade, View or Open.
+
+  ![A day card open over the course cards: the day's items with their action buttons (Attempt, Submit, View)](docs/screenshots/calendar-day-card.png)
+
+- **Studying and Teaching.** A user who learns in some courses and teaches in others gets a
+  switch between the two views; which courses are learning ones follows the site's graded roles
+  (`gradebookroles`). The teaching view counts the submissions waiting to be graded, in the same
+  group core's grading page shows that teacher first, beside the class's deadlines. An
+  *Everything* / *To do* / *Events* filter narrows either view. Both choices are remembered per
+  user. Closed, the teaching line counts grading work only with `block_feedback_tracker` (below),
+  as a *To grade* cell before the periods; without it, it counts the class's deadlines and
+  events, and grading shows once it is open. The switch is two icons (Studying, Teaching) where
+  the header is narrow.
+
+  ![The Teaching view of the strip, open: days carrying grading work, and a day card with the submissions waiting to be graded and the Grade button](docs/screenshots/calendar-teaching.png)
+
+  ![The teaching line, closed: the To grade cell, a divider, then Overdue, Today, Tomorrow, Week and Later](docs/screenshots/calendar-line-teaching.png)
+
+- **Three styles** (`calendar_style`): dots, a ring per day (fewer days at once), or pulse bars.
+
+  ![The same row drawn in the ring and pulse styles, side by side](docs/screenshots/calendar-styles.png)
+
+  The pulse style draws each day's load as a bar, red where late work is still open:
+
+  ![The pulse style: a bar per day sized by its load, red bars on days with late work still open, hatched weekends under the day names](docs/screenshots/calendar-pulse.png)
+
+  ![The pulse style with a day card pinned: two graded quizzes due tomorrow, a submission to do and events](docs/screenshots/calendar-pulse-card.png)
+
+- **Weekends and days off.** Empty weekend days are hatched. With
+  [`block_feedback_tracker`](https://github.com/uaiblaine/moodle-block_feedback_tracker)
+  installed, its academic calendar decides instead: its weekends, holidays and recesses, each
+  named in the day's card.
+- **Honest numbers.** A count of future work that may still shrink (an item already submitted,
+  an activity that will close) is announced as "up to N" until the day is opened. Only
+  activities the user can see are counted, and hidden and completed courses are left out.
+- **Linked to the cards.** Pointing at a first-tier card lights the days that hold its course;
+  opening a day outlines the cards of its courses. While a card is pointed at, the days that do
+  not hold its course dim their fills; their numbers stay legible.
+
+  ![Pointing at a course card: its days are ringed, the other days dim](docs/screenshots/calendar-dim.png)
+- **Readable everywhere.** Month, weekday and time names come from the language pack, and every
+  mark keeps its contrast in dark mode.
+
+  ![The open strip with a day card pinned, in dark mode](docs/screenshots/calendar-dark.png)
+
+
+All courses and the Compass page
+--------------------------------
+
+![All courses on the Compass page: the filter line on one row (the scope with its counts, the search field, the star, Filters, Organise and the list/cards switch), the category index and the first group open as cards](docs/screenshots/explore.png)
+
+*All courses* opens from the ghost card or from a strip's "+N" link. Above it sits one filter
+line, the one the plugin shares with the other Dimensions surfaces, in this order:
+
+- **The scope**: All, New, Awaiting approval (with `enable_pending`) and Scheduled, each with its
+  count. One is checked; the arrow keys move between them. A scope that would keep no course is
+  left out unless it is the one checked; All always stays.
+- **The search**, with an eraser for its text. `/` jumps to it while the line is on screen.
+- **The star** (with `enable_favourites`): only the favourites, combined with the scope, so
+  New and the star together are the new favourites.
+- **Filters** (with `filter_fields`): a panel of the course custom fields the administrator
+  chose, at most three, one value per field, the fields combined. Its badge counts the values in
+  force; at its foot, *Clear filters* releases everything and *Show N* closes it on the list.
+- **Organise**: the sort, *By category*, *A–Z* or *Recent*.
+- **The list/cards switch.**
+
+The panel and the menu open as popovers under the line. The values in force show as chips on a
+row under the line, each with a cross to remove it, and *Clear all* from two chips up; the scope
+and the star stay on the line and need no chip.
+
+![The Filters popover open under the line: the Modality field with Online, In-person and Hybrid and their counts, Clear filters and Show 14](docs/screenshots/explore-filters.png)
+
+![The Organise menu open under the line: Sort courses, with By category, A–Z and Recent](docs/screenshots/explore-organise.png)
+
+The search suggests as you type, in one list under the line: first the **filters** (a scope,
+the star, a field's value) whose name or field matches the text, each with the number of courses
+it would leave, then up to five **courses** whose names match, accents and case ignored. Choosing
+a filter applies it and empties the field for the next one; choosing a course opens it. With
+fewer than two characters typed, the list offers up to five filters, the largest first, under
+*Start with a filter*. The arrow keys walk the list, Enter chooses and Escape closes it.
+
+![The search grown over the Dashboard's line with "on" typed: under Filters, Online (9) and In-person (2) of the Modality field; under Courses, Nutrition and Metabolism, Introduction to Philosophy and Data Analysis with Python, the matched letters marked](docs/screenshots/explore-search.png)
+
+**The line folds to the width of the block, not of the screen**, in four steps measured on the
+line itself: everything on one row (the Compass page on a desktop); then Filters keeps its icon
+and badge and drops its word; then the search becomes an icon that, when pressed, grows over the
+line, slides the other controls aside and offers a close button (the Dashboard's main column);
+at the narrowest, two lines: the search, the star, Filters and Organise on the first, the scope on
+the second, scrolling sideways, and the list/cards switch moves into Organise (a tablet, a phone,
+the block drawer). A search left in force while its field is folded away shows as a chip.
+
+![All courses on the Dashboard, the line folded to icons: only All with its count of one, the search icon, the star, Filters with a badge of 1, Organise and the switch; under it the chips health and Hybrid with Clear all, and the one course left](docs/screenshots/explore-filtered.png)
+
+![All courses on the Dashboard at a tablet's width: the search field, the star, Filters and Organise on the first line, the scope on the second](docs/screenshots/explore-narrow.png)
+
+At that last step the Filters panel opens as a bottom sheet:
+
+![All courses on a phone with Filters pressed: the panel as a bottom sheet with the Modality values, Clear filters and Show 14](docs/screenshots/explore-phone.png)
+
+**Pointing at a filter previews it.** A mouse or a pen on a scope, the star, a panel value or a
+suggestion, or the keyboard's focus on one, rings the courses on screen that it would keep,
+combined with the filters already in force, and dims the others. The dim changes colours, never
+transparency, and its text is checked for contrast in light and dark mode. A finger has no hover
+and previews nothing, and a control that would only widen the list previews nothing either.
+
+![The mouse on the New scope: Financial Accounting, the new course of the open group, ringed; Leadership and Team Dynamics and Project Management Fundamentals dimmed](docs/screenshots/explore-preview.png)
+
+An enrolment that starts later is a row with an *Access from {date}* pill; an application through
+*Enrolment on application* (`enrol_apply`) is a row with an *Application under review* or *On the
+waiting list* pill. Every row and card carries the star and an archive control; *Dormant* has an
+**Archive all** control. The line is remembered per user (scope, star, filters, sort and whether
+the panel is open, which starts closed), the search text excepted. In the full list, no filter,
+suggestion or preview asks the server anything.
+
+A learner with more courses than `inventory_max` (default 250) gets the same list in **paged
+mode**: groups start closed with their counts, open 100 courses at a time, and the search runs
+on the server. The scope, the star and the suggestions then carry no counts, since nothing is
+counted before a group's rows arrive. The server is asked for one scope at a time (Favourites
+while the star is pressed) and the browser narrows the rows it holds by the rest; the course
+suggestions are the server's search hits. Nothing is configured per learner.
+
+![The Compass page: the block's content alone under the theme's navigation bar](docs/screenshots/page.png)
+
+With `enable_page` on, `/blocks/compass/index.php` shows the block's content alone, on the
+theme's page without block regions. While it is on, "Compass" is offered under *Site
+administration > Appearance > Navigation > Start page for users* and in each user's home page
+preference. Off, the page redirects to the Dashboard. Guests are sent to the front page.
+
+![Compass on a phone: the strip with three past days and a peek of the next, and a day card as a bottom sheet](docs/screenshots/mobile.png)
+
+The cards count their columns from the block's own width (three, two or one), so the block works
+in the block drawer and on a phone as well as on a wide Dashboard.
+
+
+Requirements
+------------
+
+| Branch | Moodle | PHP | Maturity | Version | Release |
+|---|---|---|---|---|---|
+| `main` (= `MOODLE_502_STABLE`) | 5.2 | 8.3 or later | Alpha | 2026042000 | v5.2-r1 |
+| `MOODLE_503_STABLE` | 5.3 | 8.3 or later | Alpha | 2026100500 | v5.3-r1 |
+
+Each branch supports exactly one Moodle version (`$plugin->supported`). Moodle 4.5 and 5.1 are
+not supported: the client is React, which core builds and serves from 5.2 on.
+
+- **Required: [`local_unlistedcourses`](https://github.com/uaiblaine/moodle-local_unlistedcourses)**
+  from the branch matching your Moodle version (`main` for 5.2, version 2026042003 or later;
+  `MOODLE_503_STABLE` for 5.3). It decides what each enrolment means (enrolled, starting later,
+  awaiting approval, on the waiting list), and Compass asks it rather than keeping a rule of its
+  own. Install it first.
+- PHP's `intl` extension, which Moodle itself requires.
+- Recommended: a shared in-memory cache store, Redis by preference (see *Cache stores*).
+- Optional: *Enrolment on application* (`enrol_apply`) for the applications awaiting approval;
+  `block_feedback_tracker` for the academic calendar of the strip; a theme or plugin that answers
+  the block's `course_badges` hook for the institutional crests on cards (*Course crests*, under
+  *Configuration*).
+
+
+Installation
+------------
+
+**From a release.** Download the zip attached to the
+[GitHub release](https://github.com/uaiblaine/moodle-block_compass/releases) for your Moodle
+version (`v5.2-rN` for 5.2, `v5.3-rN` for 5.3) and install it through *Site administration >
+Plugins > Install plugins*, or unpack it so that the plugin sits in `blocks/compass` (the zip
+holds a `compass/` folder).
+
+**From Git.** Clone the branch for your Moodle version into `blocks/compass` under Moodle's
+public directory (`public/` in a 5.2 or 5.3 checkout):
+
+```sh
+# Moodle 5.2
+git clone -b main https://github.com/uaiblaine/moodle-local_unlistedcourses.git public/local/unlistedcourses
+git clone -b main https://github.com/uaiblaine/moodle-block_compass.git public/blocks/compass
+
+# Moodle 5.3
+git clone -b MOODLE_503_STABLE https://github.com/uaiblaine/moodle-local_unlistedcourses.git public/local/unlistedcourses
+git clone -b MOODLE_503_STABLE https://github.com/uaiblaine/moodle-block_compass.git public/blocks/compass
+```
+
+Then run the upgrade (`php admin/cli/upgrade.php`, or visit *Site administration >
+Notifications*). See [Installing plugins](https://docs.moodle.org/en/Installing_plugins).
+
+The block works without configuration. Learners add it through *Edit mode > Add a block* on
+their Dashboard, or an administrator adds it to the default Dashboard under *Site
+administration > Appearance > Default Dashboard page*.
+
+
+Configuration
+-------------
+
+![The Compass settings page, with the calendar strip section](docs/screenshots/settings.png)
+
+*Site administration > Plugins > Blocks > Compass*:
+
+| Setting | Default | What it does |
+|---|---|---|
+| `attention_max` | 3 | Cards per strip in the first tier. |
+| `new_days` | 30 | Days an unopened enrolment stays *New*. |
+| `enable_favourites` | on | The *My favourites* strip and the star. Off hides them; core's favourites are untouched. |
+| `group_depth` | 1 | Category depth that forms the groups of *All courses*. |
+| `inventory_max` | 250 | Above this many courses, *All courses* switches to paged mode. |
+| `enable_search` | on | The search of the filter line in *All courses*, with its suggestions. |
+| `show_index` | on | The side index of categories, on wide blocks. |
+| `dormant_months` | 12 | Months without a visit before a course moves to *Dormant*. |
+| `default_view` | list | The view of *All courses* for a user who never chose (list or cards). |
+| `hide_block_title` | off | Render the block without its title; the headings move one level up. |
+| `show_category` | on | The category line above the course name on cards. |
+| `show_theme_badges` | on | Institutional crests on cards; offered only while a theme or plugin answers the `course_badges` hook. |
+| `enable_page` | off | The Compass page and its offer as a start page. |
+| `hide_page_title` | off | Hide the Compass page's heading from sight, keeping it for screen readers. |
+| `filter_fields` | none | Course custom fields offered in the *Filters* panel of *All courses*: *Dropdown menu* and *Checkbox* fields visible to everyone, at most 3. None, and the line has no Filters. |
+| `enable_pending` | off | List the learner's applications through `enrol_apply`. Does nothing without that plugin. |
+
+**Calendar strip**
+
+| Setting | Default | What it does |
+|---|---|---|
+| `calendar_enabled` | off | Show the strip. Off, it costs no request and no query. |
+| `calendar_where` | Dashboard and the Compass page | Where the strip shows: both, the Dashboard only, or the Compass page only. |
+| `calendar_sources` | deadlines, course, group and site events | What the strip counts: deadlines and grading work, course events, group events, site events, personal events, category events. |
+| `calendar_style` | dots | How each day is drawn: dots, ring or pulse bars. |
+| `calendar_relevance` | on | The starting value of each user's relevance switch. |
+| `calen

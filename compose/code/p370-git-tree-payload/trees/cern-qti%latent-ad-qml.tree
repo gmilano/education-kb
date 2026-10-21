@@ -1,0 +1,8 @@
+.gitignore
+.readthedocs.yaml
+README.md
+docs
+pyproject.toml
+qad
+scripts
+setup.py

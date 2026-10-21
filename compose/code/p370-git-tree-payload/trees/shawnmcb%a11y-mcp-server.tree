@@ -1,0 +1,9 @@
+.gitignore
+LICENSE
+README.md
+dist
+package-lock.json
+package.json
+run.sh
+src
+tsconfig.json

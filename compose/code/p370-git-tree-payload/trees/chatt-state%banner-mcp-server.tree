@@ -1,0 +1,10 @@
+.env.example
+.gitignore
+.prettierrc
+CHANGELOG.md
+eslint.config.js
+package-lock.json
+package.json
+src
+tsconfig.json
+vitest.config.ts

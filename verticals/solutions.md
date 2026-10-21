@@ -350,6 +350,49 @@ recommended for Moodle plugins — **as a plugin inside the client's existing GP
 never vendored into a studio deliverable. The AI layer Globant builds stays on the
 permissive side of the boundary and talks to the ERP over its API.
 
+## 🟢 🆕 `p370`: two platform-tier rows out of the backlog — one permissive full platform, and the **vendor's own** Brightspace component
+
+🟢 **Evidence for §`p370`:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p370.tsv) · [`tree-grant-domain`](../evidence/tree-grant-domain.2026-10-21-p370.tsv)
+
+| Platform / component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Licence reach for AI built on top |
+| --- | --- | --- | --- | ---: | --- |
+| **Tutors** — open learning platform and course toolchain | [tutors-sdk/tutors-mono-repo](https://github.com/tutors-sdk/tutors-mono-repo) | 🟢 **MIT**, 1 083 B | `HEAD/LICENSE` @ `260bdc4ef1` | **4** | 🟢 **None.** A permissive full platform: fork it into a closed client deliverable with no copyleft reach at all. **736 remote refs** and OpenSSF Scorecard + Baseline badges in its own README — an unusually disciplined project for its star count |
+| **D2L Brightspace** — LMS context provider for UI components | [brightspaceui/lms-context-provider](https://github.com/brightspaceui/lms-context-provider) | 🟢 **Apache-2.0**, 10 421 B | `HEAD/LICENSE` @ `52bc4bd5e2` | **0** | 🟢 **None.** *"Provides LMS context and environment settings to UI components, applications and libraries"* — and the owner is **BrightspaceUI**, D2L's own engineering org, so this is the **vendor's** permissive component, not a community reimplementation |
+
+### 🔵 Why the `brightspaceui` row changes an engagement answer rather than just adding a name
+
+🔴 **The commercial LMSs are the ones this shelf has least to offer for.** Moodle is
+GPL-3.0, Open edX is AGPL-3.0, and for Canvas, Brightspace, Blackboard and Banner this
+base's advice has been *"reach it over a protocol boundary, do not fork it"* — which is
+correct and also thin, because the protocol-boundary rows in the bridge tier turn out to
+be **71.4 % ungranted** (`agents/top.md` §`p370`).
+
+🟢 **`brightspaceui/lms-context-provider` is a third shape.** It is **published by the
+vendor, under Apache-2.0**, for building UI that runs *inside* Brightspace. 🔵 So a
+Brightspace engagement has a permissive, first-party extension point — the thing an
+Open edX engagement gets from `openedx/XBlock` (🟢 Apache-2.0, grant resolved this pass at
+`LICENSE.TXT`) and a Moodle engagement does not get at all.
+
+🟡 **Read the star counts honestly: 4 and 0.** Neither row is popular, and this base has
+recorded (`T46`) that its strongest public-sector rows are nearly unstarred while a
+41 208 ★ repository sat unshelved for passes. 🟢 **The 736 refs on `tutors-mono-repo` and
+the vendor ownership of `lms-context-provider` are the load-bearing signals here**, not
+the ★ column — which this pass could only read one address at a time, because
+`api.github.com/repos/…` answered **403** throughout.
+
+🔴 **And the ERP/SIS absence is restated, not quietly dropped.** `p370` graded the
+SIS-adjacent backlog (`chatt-state/banner-mcp-server`, `teamschools/powerschool`,
+`api-evangelist/powerschool`, `districtapi/districtapi-mcp`, `zuvy/ps-mcp-server`,
+`edyvision/student-services-mcp`) and **not one** is a platform this shelf can offer:
+🔴 four have **no licence file**, `teamschools/powerschool` is **GPL-3.0**, and
+`edyvision/student-services-mcp` tags itself **`fictitious`** in its own README
+front-matter. 🟢 The permissive SIS-interchange supply this pass did find is at the
+**standards** layer, not the platform layer — `vossenv/oneroster-python` (MIT) and
+`Ed-Fi-Alliance-OSS/edfi-oneroster` (Apache-2.0, shelved at `p369`) — which is the same
+conclusion `p363` reached and is now supported by payload reads rather than by absence.
+
+---
+
 ## 🟢 🆕 `p369`: sixteen platforms this base had trending-listed and never shelved — every licence read from payload
 
 🔵 **Source is not the open web; it is this base's own history.** `agents/top.md` §`p369`
@@ -421,6 +464,8 @@ claim that the project is American.
 | **ClassroomIO** | [classroomio/classroomio](https://github.com/classroomio/classroomio) | AGPL-3.0 | 🔴 AGPL | Customer/partner training academies for SaaS companies — the corporate-learning vertical |
 | **ELMS Learning Network** | [elmsln/elmsln](https://github.com/elmsln/elmsln) | GPL-3.0 (`LICENSE.md`) | 🟡 Plugin = derivative | Distributed course-delivery ecosystem (Penn State origin) |
 | **Moodle App** | [moodlehq/moodleapp](https://github.com/moodlehq/moodleapp) | 🟢 **Apache-2.0** (`COPYING.txt`) | 🟢 **None** | The official mobile client — **permissive while core is GPL-3.0**. White-labelled branded learner apps are a clean, licence-safe deliverable |
+| 🆕 **Tutors** | [tutors-sdk/tutors-mono-repo](https://github.com/tutors-sdk/tutors-mono-repo) | 🟢 **MIT** (`LICENSE`, 1 083 B @ `260bdc4ef1`) | 🟢 **None** — a permissive full platform; fork it into a closed deliverable freely | Open learning platform and course toolchain. **736 remote refs**; OpenSSF Scorecard + Baseline badges. 🟡 **4 ★** |
+| 🆕 **Brightspace context provider** | [brightspaceui/lms-context-provider](https://github.com/brightspaceui/lms-context-provider) | 🟢 **Apache-2.0** (`LICENSE`, 10 421 B @ `52bc4bd5e2`) | 🟢 **None** — and the publisher is **D2L's own** engineering org | The permissive, first-party extension point for UI running inside D2L Brightspace. 🟡 **0 ★** |
 
 ## 🆕 National school portals — the ENT tier, `p360`
 

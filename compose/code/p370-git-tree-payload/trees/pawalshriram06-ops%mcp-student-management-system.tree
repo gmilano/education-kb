@@ -1,0 +1,16 @@
+.gitignore
+.python-version
+README.md
+client.py
+database
+exceptions
+gemini_mcp.py
+legacy_database.py
+main.py
+pyproject.toml
+repositories
+server.py
+services
+students.db
+test_gemini.py
+uv.lock

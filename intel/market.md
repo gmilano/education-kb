@@ -204,6 +204,32 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🟡 `p370`: all four regional legs ran — the twelfth consecutive near-nil on the PRESCRIBED form, and the reshaped form returned four national instruments
+
+🔵 **Both forms were run deliberately, so the comparison is a measurement rather than an
+excuse.** `Gap 476`/`ACTION ZZ-cc` says the prescribed per-region query is defective for
+EMEA and APAC because *EMEA* and *APAC* are analyst tokens. 🟢 **`p370` ran the prescribed
+form first, recorded what it returned, then reshaped it. The results are not close.**
+
+| Leg | Prescribed form (`AI education {region} 2026 adoption regulation players`) | 🟢 Reshaped to name the instrument |
+|---|---|---|
+| **North America** | 🟡 market-sizing plus one usable governance observation (*no sector regulator; state-level and fragmented, Colorado and Texas named*) | not needed — the prescribed form works here, because US education policy is published in English against named states |
+| **EMEA** | 🔴 **CompTIA, Workday, Boomi, a CX conference.** Zero education players, zero ministries | 🟢 the **EU AI Act Annex III** position, the **2 December 2027** deferral, **Article 27** FRIA, and the **2 February 2025** emotion-inference ban |
+| **APAC** | 🔴 **Boomi, TechRepublic, OneTrust, vendor press.** Zero ministries, zero adoption figures | 🟢 **India's** CBSE mandate from Class 3 (2026–27), **Singapore's** MOE programme (March 2026), **Australia's** framework and its generative-only scope |
+| **LATAM** | 🟢 works as prescribed — the DEC LATAM survey (Feb 2026), UNESCO IESALC, IDB, CEPAL | not needed |
+
+🔴 **The pattern is now measured twice and it is not about the regions.** The prescribed
+form works for the two regions whose education policy is published in English under a name
+that is also a market territory, and fails for the two where it is not. 🟡 `Gap 476` stays
+open as a defect in the prescribed method; the remedy is in the table above and costs
+nothing extra.
+
+🟢 **Evidence for §`p370`:** the per-region findings are written under
+`## Opportunities by region` below, one `####` block per region, with each claim's
+confidence marked and every secondary source named as secondary.
+
+---
+
 ## 🔴 `p366`: all eight legs ran, the tenth consecutive near-nil — and the refuted Annex III date arrived from a NEW direction
 
 🔴 **`p366` ran all four global legs and all four regional legs. Seven returned nothing this
@@ -521,6 +547,31 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+#### 🆕 `p370`: the leg ran and returned **one** new usable fact, plus a supply placement the shelf could make and had not
+
+🔴 **The demand-side leg was near-nil for the twelfth consecutive pass.** The prescribed
+query returned market-sizing reports (North America ~**36 %** of global share; ~**$951 M
+in 2024 → ~$2.3 B by 2029** on one house's numbers) and one governance observation worth
+carrying: **education AI has no sector regulator** — adoption is decided school by school
+and district by district, against the EU's Annex III classification, and the US layer is
+state-level and fragmented (**Colorado** and **Texas** named). 🟡 Two readiness figures
+arrived from a 2026 statistics compilation — *only ~10 % of institutions have formal AI
+guidelines* and *~71 % of US teachers lack AI training* — 🔴 **both secondary, neither
+traced to its survey, and this file already carries the same claim from two other
+compilations.** Carried as consistent, not as new.
+
+🟢 **What IS new is on the supply side, and it came from the payload channel rather than
+the web leg.** Three North America addresses graded this pass:
+
+| Address | Grant | Why it is a regional asset |
+|---|---|---|
+| [`vossenv/oneroster-python`](https://github.com/vossenv/oneroster-python) | 🟢 **MIT**, 1 073 B | A OneRoster client for **Clever** and **Classlink** — the two rostering vendors a US K-12 district actually runs. 🟡 *"in beta, and changes often"*, by its own README |
+| [`districtapi/districtapi-mcp`](https://github.com/districtapi/districtapi-mcp) | 🔴 **no licence file** | US school-district and school data as MCP tools. 🔴 Unusable as a dependency; usable as a shape |
+| [`apereo-learning-analytics-initiative/sakaixapi-provider`](https://github.com/apereo-learning-analytics-initiative/sakaixapi-provider) | 🟡 **ECL-2.0**, 558 B | Sakai xAPI event provider. 🔴 The 558 B is a per-file **header template**, not a grant text |
+
+🔵 **The engagement read:** the region's rostering and analytics plumbing is permissive
+and real; its **bridge** layer is not. That is the opposite of the EMEA position below.
+
 **`p364` leg result: PARTIAL — one new instrument, no new addresses.** 🟢 **New on these
 shelves:** the **AFT**, **UFT** and **Microsoft** announced a *national AI safety and
 privacy standard for schools* — a union-backed standard is a different kind of lever from
@@ -752,6 +803,42 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+#### 🆕 `p370`: the prescribed EMEA query failed again — and the reshaped one returned the Annex III position in one leg
+
+🔴 **`Gap 476` confirmed a second time, with the sources named so the claim is checkable.**
+Run as prescribed (*AI education EMEA 2026 adoption regulation players*), the leg returned
+**CompTIA**, **Workday**, **Boomi** and a customer-experience conference — enterprise IT
+commentary, **zero** education players, **zero** ministries, **zero** regulators. 🔵 The
+cause is in the token: *EMEA* is an analyst's sales territory, and education ministries do
+not publish into it.
+
+🟢 **Reshaped to name the instrument instead of the territory**, the same budget returned
+the regulatory position this file needs:
+
+| Instrument | Position, 2026-10-21 | 🔴 Confidence |
+|---|---|---|
+| **EU AI Act, Annex III** — education as high-risk | Covers admission and placement decisions, evaluation of learning outcomes, assessment of the level of education a person can reach, and proctoring for prohibited behaviour during tests | 🟡 **The sub-point is contested across sources** — one places admissions at point **5**, a peer-reviewed study places learning-outcome assessment at point **3b**, others say point 3 or 4 |
+| **Annex III start date** | **2 December 2027**, deferred from 2 August 2026 | 🔴 **Secondary only.** Reported as approved by a European Parliament vote on **16 June 2026** (the Digital Omnibus on AI) with the Council's formal adoption still outstanding on at least one account |
+| **Article 27 FRIA** | A Fundamental Rights Impact Assessment is still required of a **public** deployer before a high-risk system goes into use | 🟡 secondary |
+| **Emotion inference in education** | 🟢 **Banned, and in force since 2 February 2025** — unaffected by any deferral | 🟢 The one element every source agrees on |
+
+🔴 **`Gap 241` is not closed by this and `p370` did not pretend otherwise.** The primary
+EU hosts were measured unreachable from this environment at `p367` across five domains;
+this pass spent nothing on a sixth attempt and carries the date as secondary. 🔵 **The
+practical consequence for an engagement is unchanged: design to Annex III now, because
+Article 27 and the February 2025 prohibition are already live and the deferral touches
+neither.**
+
+🟢 **Two EMEA supply placements made from payload this pass:**
+[`mattlo0546/canvas-mcp`](https://github.com/mattlo0546/canvas-mcp) (🟢 MIT) is a Canvas
+MCP server that authenticates through **university SSO** and ships **defaulted to Oxford's
+Canvas site** — a UK placement read from the repository's own configuration;
+[`3121n/nor-data-udir-mcp`](https://github.com/3121n/nor-data-udir-mcp) wraps **UDIR's**
+national school (NSR) and kindergarten (NBR) registers for Norway, 🔴 with **no licence
+file**, so it is a reference and not a dependency.
+🔵 `oxctl/spring-security-lti13-demo` (🟢 Apache-2.0) adds an Oxford-authored LTI 1.3
+reference to the standards layer, and is a **demo** by its own first line.
 
 🟢 **`p368` adds one prohibition this file had never stated, and it is in force today.**
 🔴 **Emotion-recognition systems in educational institutions are *prohibited* under the
@@ -1082,6 +1169,38 @@ modification now has two bases that permit one.
 
 ### APAC
 
+#### 🆕 `p370`: the prescribed APAC query failed with the EMEA one — and three national instruments came back when it was reshaped
+
+🔴 **Run as prescribed, the APAC leg returned enterprise IT**: a Boomi tech-priorities
+report (**49 %** of APAC businesses naming insufficient real-time data infrastructure as
+an AI barrier), TechRepublic's regional signals, a OneTrust governance webinar, and
+vendor news (LearnUpon's Sydney HQ, Alteryx's academy relaunch, a TCS–Pearson skills
+alliance that is global rather than APAC). 🔴 **No ministry, no adoption figure, no
+education regulator** — `Gap 476` again, in the same shape as EMEA.
+
+🟢 **Reshaped to name countries, the same budget returned dated, concrete programmes:**
+
+| Country | Instrument | Date | What it means for an engagement |
+|---|---|---|---|
+| **India** | **AI & Computational Thinking made a mandatory curriculum component from Class 3**, aligned to NEP 2020; CBSE expert committee chaired by **Prof. Karthik Raman (IIT Madras)**; teacher training through **NISHTHA** | 🟢 **Classes 3–8 begin in the 2026–27 academic session** | 🟢 **The largest single curriculum mandate in this file.** It creates demand for curriculum-aligned content, teacher PD at national scale, and assessment — and it has a named framework owner |
+| **Singapore** | **MOE** to build AI literacy across curriculum, co-curriculum and self-directed resources with developmental milestones; Cyber Wellness lessons updated to cover validating generative-AI output and spotting deepfakes; **AI@NIE** five-year research plan; AI training for teachers at all levels | 🟢 **announced March 2026**; teacher training **by 2026** | 🟢 A literacy-and-verification brief rather than a tooling brief |
+| **Australia** | **Australian Framework for Generative AI in Schools** — six principles, 25 guiding statements, two pages, agreed by education ministers, in effect from Term 1 2024 and reviewed at least annually; referenced again by the **National AI Plan** of December 2025 | 🟡 **no published 2026 review outcome found** | 🟡 Aspirational by its own description, and **generative AI only** — it explicitly does not cover predictive AI, which is exactly where knowledge tracing and dropout prediction sit |
+
+🔴 **The Australian gap is the useful one.** A framework that covers generative AI and
+says so leaves **predictive** education AI — the adaptive and early-warning layer this
+base sources best — without a national instrument to design against.
+
+🟢 **APAC supply placements made from payload this pass:**
+[`hocphi-info/hocphi-info-mcp`](https://github.com/hocphi-info/hocphi-info-mcp)
+(🟢 **Apache-2.0**, 11 358 B) — read-only Vietnamese university tuition data **with
+sources**; [`dddanielliu/nccu-moodle-mcp`](https://github.com/dddanielliu/nccu-moodle-mcp)
+(🔴 no licence) — Moodle at `moodle.nccu.edu.tw` through NCCU's SSO, Taiwan;
+[`jinanshm/ncert-mcp`](https://github.com/jinanshm/ncert-mcp) (🔴 no licence) — India's
+**NCERT** textbooks, and by its own README a TypeScript/Bun **port** of
+`hatchedland/ncert-mcp`; [`arjav0703/cbse-ai`](https://github.com/arjav0703/cbse-ai)
+(🔴 **AGPL-3.0**) — a CBSE Class 9–10 study companion, which is the India mandate above
+already showing up as supply.
+
 **`p364` leg result: NIL on the sector, and the gap is now in its eleventh pass.** 🔴 **The
 leg returned general AI regulation and attitudinal data, not education-sector
 intelligence.** The **Ipsos Education Monitor** ban-support spread is already carried
@@ -1310,6 +1429,36 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+#### 🆕 `p370`: a second adoption instrument for the region, and one permissive curriculum asset
+
+🟢 **New on these shelves — the Digital Education Council's *AI in Higher Education LATAM*
+survey (February 2026):** **92 % of students** and **79 % of faculty** actively engaging
+with AI, from **over 30 000 responses across 29 institutions**, run with **Tecnológico de
+Monterrey** and its Institute for the Future of Education. 🟡 **Self-reported, and 29
+institutions is not a region** — it is carried as a second instrument beside `Gap 242`'s
+UNESCO IESALC/UNU-IAS mapping (**200 institutions, 19 countries**: teaching and learning
+**73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement **20.0 %**),
+not as a replacement for it.
+
+🔴 **The policy picture is unchanged and the ordering problem with it.** No unified regional
+framework: **Chile** has had a national AI policy since 2021 with a law under discussion;
+**Brazil** and **Colombia** have national strategies with no education-specific rules;
+**Mexico's** SEP, ANUIES and Observatorio IA have issued **non-binding** recommendations.
+🟡 One Tec-linked source puts **~30 %** of Latin American universities as having published
+an AI-use policy. 🔵 **The engagement consequence is the same one this file has carried for
+four passes: adoption is ahead of governance, so the billable work is policy-and-assessment
+design, not tooling.**
+
+🟢 **And one permissive supply row, which is the rarer thing:**
+[`ayrtonmoura1/conectabncc`](https://github.com/ayrtonmoura1/conectabncc) — 🟢 **MIT**,
+1 070 B — ships Brazil's **BNCC** as a graph (`competencias_bncc.json`,
+`bncc_progressao_pre_requisitos.json`, `relacoes_bncc_final.json`). 🔵 It carries **no
+README at all**; its file names are the only domain evidence it has, and they were
+sufficient. 🟢 It is directly usable under `compose/patterns.md` Pattern 2.
+🟡 Also placed: [`nicolasviruel/moodle-utn-mcp`](https://github.com/nicolasviruel/moodle-utn-mcp)
+— a Moodle MCP server for **UTN** (`tup.sied.utn.edu.ar`), Argentina, in Spanish, 🔴 with
+**no licence file**.
 
 **Added `p362`: nothing, and the nothing is specific.** 🔴 **No new LATAM supply and no new
 LATAM fact.** The regional leg returned only material this file already carries (IESALC,

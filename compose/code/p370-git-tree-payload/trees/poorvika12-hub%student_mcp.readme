@@ -1,0 +1,223 @@
+# 🎓 AI-Powered Student Assistant (Model Context Protocol + Groq + Web App)
+
+An interactive, AI-driven educational platform built using **Model Context Protocol (MCP)**, **Groq LLM (`llama-3.3-70b-versatile`)**, **Python 3.11+**, and a modern **Glassmorphic Web Dashboard**.
+
+---
+
+## 🌟 Project Features
+
+- **Model Context Protocol (MCP)**: Standardized protocol connecting AI reasoning with local file tools & calculations.
+- **Groq LLM Power**: Blazing fast inference for autonomous tool selection and response synthesis.
+- **6 Built-in Educational MCP Tools**:
+  1. 🧮 **Calculator**: Evaluates math expressions, percentage weights, and GPA formulas.
+  2. 📊 **Attendance Tracker**: Analyzes student attendance records from `attendance.csv`, detects shortages (<75%), and predicts required classes.
+  3. 📈 **Marks Analyzer**: Computes averages, top scores, letter grades, and performance rankings from `marks.csv`.
+  4. 📄 **PDF Reader**: Extracts text and searches content from lecture PDF files (`notes.pdf`).
+  5. 🔍 **Lecture Notes Search**: Keyword and concept search across course revision notes.
+  6. 📜 **College Regulations Checker**: Queries official college handbook (`rules.txt`) for attendance rules, grading scales, and library policies.
+- **Interactive Web Interface (Frontend)**:
+  - Dark glassmorphism design with responsive tabs.
+  - **Live MCP Protocol Visual Trace**: Step-by-step pipeline view showing `User Prompt -> Groq LLM -> MCP Server -> Tool Run -> Answer`.
+  - **Interactive Analytics Modules**: Marks Report Card, Attendance Shortage Predictor, Searchable Rules Explorer, PDF Viewer, and MCP Tool Sandbox.
+  - **Offline Simulation Mode**: Browser fallback engine that works out-of-the-box even before adding an API key!
+
+---
+
+## 🏗️ Architecture Overview
+
+```
+User Query
+    │
+    ▼
+Frontend Web Dashboard (HTML/CSS/JS)
+    │
+    ▼
+FastAPI Server (backend/api.py)
+    │
+    ▼
+Groq LLM (llama-3.3-70b-versatile)
+    │
+    ├─► Intercepts Query & Selects Tool
+    │
+    ▼
+MCP Client (backend/client.py)
+    │
+    ▼
+MCP Server (backend/server.py via FastMCP)
+    │
+    ├─► calculator.py       (Math & GPA)
+    ├─► attendance.py       (attendance.csv)
+    ├─► marks.py            (marks.csv)
+    ├─► pdf_reader.py       (notes.pdf)
+    ├─► notes.py            (notes.txt)
+    └─► rules.py            (rules.txt)
+    │
+    ▼
+Groq Formats Natural Language Answer -> User
+```
+
+---
+
+## 📁 Project Directory Structure
+
+```
+student_mcp/
+├── backend/
+│   ├── server.py             # FastMCP / MCP Server tool registry
+│   ├── client.py             # Groq LLM tool router & MCP integrator
+│   ├── api.py                # FastAPI web bridge for Frontend
+│   ├── calculator.py         # Calculation logic
+│   ├── attendance.py         # Attendance CSV parser
+│   ├── marks.py              # Marks CSV calculator
+│   ├── pdf_reader.py         # PDF text extractor (PyPDF)
+│   ├── notes.py              # Lecture notes search
+│   ├── rules.py              # College handbook search
+│   ├── prompts.py            # System prompts & tool definitions
+│   ├── requirements.txt      # Dependencies list
+│   ├── .env                  # Environment config (GROQ_API_KEY)
+│   └── data/
+│       ├── attendance.csv    # Attendance dataset
+│       ├── marks.csv         # Marks dataset
+│       ├── notes.pdf         # Sample academic PDF notes
+│       ├── notes.txt         # Text notes reference
+│       └── rules.txt         # Official college regulations handbook
+│
+├── frontend/
+│   ├── index.html            # Interactive Student Assistant Web Dashboard
+│   ├── styles.css            # Dark mode, glassmorphism & micro-animations
+│   └── app.js                # App logic, chat UI, MCP protocol visual trace & tool sandbox
+│
+├── server.py                 # Root server entrypoint
+├── client.py                 # Root terminal CLI client
+├── create_pdf.py             # Utility to generate notes.pdf
+├── requirements.txt          # Root dependencies
+├── .env                      # Root environment variables
+└── README.md                 # Complete documentation
+```
+
+---
+
+## ⚡ Quick Start Guide
+
+### 1. Install Dependencies
+
+Ensure Python 3.11+ is installed, then run:
+
+```bash
+pip install mcp groq pandas pypdf python-dotenv fastapi uvicorn
+```
+
+Or install from requirements file:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 2. Configure Groq API Key
+
+1. Sign up for a free account at [https://console.groq.com](https://console.groq.com).
+2. Create an API key (e.g. `gsk_xxxxxxxxxxxxxxxx`).
+3. Open `.env` and paste your key:
+
+```env
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxx
+```
+
+---
+
+### 3. Run the Applications
+
+#### Option A: Launch Interactive Web Dashboard (Recommended)
+
+1. Start the backend FastAPI server:
+```bash
+python backend/api.py
+```
+*(Runs on `http://localhost:8000`)*
+
+2. Open `frontend/index.html` in your web browser!
+
+---
+
+#### Option B: Run via Python CLI Client
+
+Start the terminal client directly:
+```bash
+python client.py
+```
+
+Example queries to try:
+- `"Calculate Rahul's average marks."`
+- `"Check Priya's attendance in Computer Networks."`
+- `"What is the minimum attendance required and condonation rule?"`
+- `"Search notes for Binary Search Tree."`
+- `"Calculate (88 * 0.25 + 92 * 0.30 + 95 * 0.45)."`
+
+---
+
+#### Option C: Run MCP FastMCP Server
+
+```bash
+python server.py
+```
+
+---
+
+## 🚀 Deployment (Easy Options)
+
+Below are minimal options to deploy and run the whole app (backend + frontend) with a single command.
+
+1) Local single-process (recommended for development)
+
+ - The backend now serves the frontend static files. Start only the backend:
+
+```bash
+# from project root
+uvicorn backend.api:app --reload --host 0.0.0.0 --port 8000
+
+# open http://localhost:8000 in your browser
+```
+
+2) Docker (recommended for repeatable deploys)
+
+Build and run the included Docker image:
+
+```bash
+docker build -t student-mcp .
+docker run -p 8000:8000 student-mcp
+```
+
+3) Cloud: push the Docker image to any container host (Render, Fly, Heroku Container Registry, Azure ACI) and deploy with their web UI.
+
+Notes:
+- Set `GROQ_API_KEY` in environment (.env or container env) to enable Groq-powered question answering.
+- Use `requirements.txt` to reproduce Python dependencies.
+
+
+---
+
+## 🛠️ MCP Tools Reference
+
+| Tool Name | File | Description | Example Query |
+|---|---|---|---|
+| `calculate_expression` | `calculator.py` | Evaluates math formulas, percentages, GPA | `Calculate (92*0.4 + 88*0.6)` |
+| `check_attendance` | `attendance.py` | Reads `attendance.csv`, checks shortage (<75%) | `Check Rahul's attendance` |
+| `get_marks_summary` | `marks.py` | Reads `marks.csv`, computes student averages & grades | `Calculate Rahul's average marks` |
+| `read_pdf_notes` | `pdf_reader.py` | Extracts text from `notes.pdf` via PyPDF | `Search PDF for Dijkstra` |
+| `search_lecture_notes` | `notes.py` | Topic search across course notes | `Search notes for OSI model` |
+| `search_college_rules` | `rules.py` | Queries `rules.txt` for policies | `What is the attendance condonation policy?` |
+
+---
+
+## 🎯 Verification & Testing
+
+Run unit checks on individual modules:
+```bash
+python backend/calculator.py
+python backend/attendance.py
+python backend/marks.py
+python backend/rules.py
+```
+
+Enjoy building with **Model Context Protocol (MCP)** and **Groq**! 🚀

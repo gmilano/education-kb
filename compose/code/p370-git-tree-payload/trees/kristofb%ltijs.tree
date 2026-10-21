@@ -1,0 +1,16 @@
+.babelrc
+.eslintrc.json
+.github
+.gitignore
+.npmignore
+.travis.yml
+LICENSE
+README.md
+copy-html-files.js
+dist
+docs
+index.js
+package-lock.json
+package.json
+src
+test

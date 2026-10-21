@@ -1,0 +1,183 @@
+# Gemini API Provider for Moodle
+
+## Overview
+
+The Gemini API Provider plugin integrates Google's Gemini AI models into Moodle's AI framework, enabling powerful AI capabilities across your learning management system. This plugin supports text generation, image generation, and text summarization using Google's state-of-the-art AI models.
+
+## New version 2.2.0 Highlights
+
+- **Gemini 3 support**: Text generation and summarisation support stable Gemini 3 models, including `gemini-3.5-flash-lite`, through the Interactions API.
+- **Native Gemini image generation**: Image generation uses Gemini native image models instead of the deprecated Imagen 4 API.
+
+
+## Features
+
+### Supported AI Actions
+
+- **Text Generation**: Generate creative and informative text responses using Gemini models
+- **Image Generation**: Create images from text prompts using Google's Gemini native image models
+- **Text Summarization**: Automatically summarize long text content for better comprehension
+
+### Key Features
+
+- **Multiple Model Support**: Choose from stable Gemini text models and Gemini 3 native image models
+- **Rate Limiting**: Configurable global and per-user rate limiting to manage API usage
+- **Privacy-First**: No personal data is stored locally; user identification is anonymized
+- **Flexible Configuration**: Customizable system instructions and API endpoints
+- **Moodle Integration**: Seamlessly integrates with Moodle's core AI framework
+
+## Installation
+
+### Prerequisites
+
+- Moodle 4.5+
+- PHP 8.0 or higher
+- Valid Google AI Studio API key
+
+### Installation Steps
+
+1. **Download the Plugin**
+   - Download the plugin from the [Moodle plugins directory](https://moodle.org/plugins/view/aiprovider_gemini)
+   - Or clone from the GitHub repository
+
+2. **Install the Plugin**
+   - Extract the plugin to your Moodle installation's `/ai/provider/` directory
+   - The final path should be: `/ai/provider/gemini/`
+
+3. **Install via Moodle Admin**
+   - Log in to your Moodle site as an administrator
+   - Navigate to **Site administration > Notifications**
+   - Follow the installation prompts
+
+4. **Configure the Plugin**
+   - Go to **Site administration > Plugins > AI providers > Gemini API provider**
+   - Enter your Google AI Studio API key
+   - Configure rate limiting settings as needed
+
+## Configuration
+
+### API Key Setup
+
+1. **Get a Google AI Studio API Key**
+   - Visit [Google AI Studio](https://aistudio.google.com/apikey)
+   - Create a new API key
+   - Copy the key to your clipboard
+
+2. **Configure in Moodle**
+   - Navigate to **Site administration > Plugins > AI providers > Gemini API provider**
+   - Paste your API key in the "Gemini API key" field
+   - Save changes
+
+### Rate Limiting Configuration
+
+The plugin supports two types of rate limiting:
+
+#### Global Rate Limiting
+- **Enable**: Check "Set site-wide rate limit"
+- **Limit**: Set maximum requests per hour for the entire site
+- **Default**: 100 requests/hour
+
+#### User Rate Limiting
+- **Enable**: Check "Set user rate limit"
+- **Limit**: Set maximum requests per hour per user
+- **Default**: 10 requests/hour
+
+### Model Configuration
+
+#### Text Generation Models
+- **Default**: `gemini-3.5-flash-lite`
+- **Available**: Stable Gemini models supporting text generation
+- **System Instructions**: Customizable prompts for consistent AI behavior
+
+#### Image Generation Models
+- **Default**: `gemini-3.1-flash-image`
+- **Available**: Gemini 3.1 Flash Image, Gemini 3.1 Flash Lite Image and Gemini 3 Pro Image
+- **Features**: Native image generation through the Gemini Interactions API
+- **Quality**: Standard uses 1K output; HD uses 2K output. The Lite model supports Standard/1K only.
+
+#### Text Summarization Models
+- **Default**: `gemini-3.5-flash-lite`
+- **Features**: Intelligent text summarization with configurable instructions
+
+### Existing installations
+
+Existing model and endpoint settings are not changed automatically. After upgrading,
+administrators should select the desired Gemini 3 model and save the corresponding
+Interactions endpoint. Legacy GenerateContent configurations remain available.
+
+Gemini 3 requests do not send the deprecated sampling parameters
+`temperature`, `top_p`, `top_k` or `candidate_count`.
+Use system instructions to express deterministic output requirements.
+
+## Usage
+
+### For Administrators
+
+1. **Enable AI Features**
+   - Navigate to **Site administration > Plugins > AI providers**
+   - Enable the Gemini API provider
+   - Configure global settings
+
+2. **Monitor Usage**
+   - Check rate limiting status in the admin interface
+   - Monitor API usage through Google AI Studio dashboard
+
+### For Teachers
+
+1. **Access AI Features**
+   - AI features are available in supported activities and resources
+   - Look for AI-powered options in content creation tools
+
+## Troubleshooting
+
+### Common Issues
+
+#### API Key Errors
+- **Problem**: "You need to insert API key before"
+- **Solution**: Verify your API key is correctly entered in the plugin settings
+
+#### Rate Limiting Issues
+- **Problem**: "Rate limit exceeded" errors
+- **Solution**: Check your rate limiting settings and increase limits if necessary
+
+#### Model Loading Issues
+- **Problem**: Models not appearing in dropdown
+- **Solution**: Verify your API key has access to the required models
+
+### Debug Information
+
+Enable debugging in Moodle to get detailed error information:
+1. Go to **Site administration > Development > Debugging**
+2. Enable debugging and set appropriate levels
+3. Check the debug output for detailed error messages
+
+## Support
+
+### Getting Help
+
+- **Documentation**: This README and inline help in Moodle
+- **Issue Tracker**: [GitHub Issues](https://github.com/your-repo/aiprovider_gemini/issues)
+
+### Contributing
+
+We welcome contributions! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This plugin is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+
+## Credits
+
+- **Developer**: Andrea Bertelli (andrea.bertelli@unife.it)
+- **Institution**: University of Ferrara, Italy
+- **Copyright**: 2025 University of Ferrara, Italy
+
+## See Also
+
+- [Gemini model documentation](https://ai.google.dev/gemini-api/docs/models)
+- [Gemini image generation documentation](https://ai.google.dev/gemini-api/docs/image-generation)
+- [Moodle Plugin Development Guide](https://docs.moodle.org/dev/Plugin_types) 

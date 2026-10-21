@@ -1,0 +1,12 @@
+.env.example
+.github
+.gitignore
+README.md
+dist
+package-lock.json
+package.json
+src
+tests
+tsconfig.json
+vitest.config.ts
+vitest.integration.config.ts

@@ -1,0 +1,10 @@
+.gitignore
+README.md
+auth.mjs
+bin
+config.example.json
+lib
+package-lock.json
+package.json
+server.mjs
+test

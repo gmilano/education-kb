@@ -1,0 +1,46 @@
+group	address	state	repo_id	head_p349	channel	identity_proof	note	refs_p370	fingerprint_p370	verdict_p370
+agent-zero	agent0ai/agent-zero	CANONICAL	—	ff2a5b9c9c4e	search-index-full_name	refset-p370	inherited from p349, unchanged	1238	487520744ee4	CANONICAL-SELF
+agent-zero	frdel/agent-zero	STALE	—	ff2a5b9c9c4e	search-index-full_name	refset-p370	inherited from p349; p370: STALE CONFIRMED on the ref-set fingerprint	1238	487520744ee4	SAME-REF-SET
+autograder	zmievsa/autograder	CANONICAL	235417011	5936028ec501	search-index-full_name+id	refset-p370	ARCHIVED 48 stars; resolved p350	74	51892d0f4ebd	CANONICAL-SELF
+autograder	ovsyanka83/autograder	STALE	235417011	5936028ec501	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	74	51892d0f4ebd	SAME-REF-SET
+caliper-spec	1EdTech/caliper-spec	CANONICAL	53473922	1849e118b47a	search-index-full_name+id	refset-p370	CASING: 1EdTech not 1edtech	399	95817ac74c4d	CANONICAL-SELF
+caliper-spec	imsglobal/caliper-spec	STALE	53473922	1849e118b47a	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	399	95817ac74c4d	SAME-REF-SET
+correcaoredacao	IC-Redacoes-UTFPR/CorrecaoRedacao	CANONICAL	1233297053	792ddffb2eab	search-index-full_name+id	refset-p370	CASING corrected; UTFPR Brazil ENEM essay scoring	1	f921bd05e68b	CANONICAL-SELF
+correcaoredacao	yurimatsumotosantos/correcaoredacao	STALE	1233297053	792ddffb2eab	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	1	f921bd05e68b	SAME-REF-SET
+ease	edx/ease	UNKNOWN	—	056da0adc6f3	index-returns-ZERO	head-p349-only	NOT RESOLVED p350 - the index answers neither address; ACTION ZZ-al	172	71c0e28f4d5a	NO-CANONICAL
+ease	openedx/ease	UNKNOWN	—	056da0adc6f3	index-returns-ZERO	head-p349-only	NOT RESOLVED p350; ACTION ZZ-al	172	71c0e28f4d5a	NO-CANONICAL
+edu-convokit	EduNLP/edu-convokit	CANONICAL	—	d845ffdafda3	search-index-full_name	refset-p370	inherited from p349	5	5983a70d22f8	CANONICAL-SELF
+edu-convokit	rosewang2008/edu-convokit	STALE	—	d845ffdafda3	search-index-full_name	refset-p370	inherited from p349; p370: STALE CONFIRMED on the ref-set fingerprint	5	5983a70d22f8	SAME-REF-SET
+edu-convokit	stanfordnlp/edu-convokit	STALE	—	d845ffdafda3	search-index-full_name	refset-p370	p350 applied canonical on agents/top.md; p370: STALE CONFIRMED on the ref-set fingerprint	5	5983a70d22f8	SAME-REF-SET
+go-oneroster	bgwdotdev/go-oneroster	CANONICAL	184457381	b8ddb0a63a5e	search-index-full_name+id	refset-p370	resolved p350	18	13980c315fa4	CANONICAL-SELF
+go-oneroster	fffnite/go-oneroster	STALE	184457381	b8ddb0a63a5e	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	18	13980c315fa4	SAME-REF-SET
+inginious	INGInious/INGInious	CANONICAL	22579572	28e224881cf9	search-index-full_name+id	refset-p370	243 stars live 2026-10-20; owner UCL-INGI still exists with other repos	676	67b5f2ed9783	CANONICAL-SELF
+inginious	ucl-ingi/inginious	STALE	22579572	28e224881cf9	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	676	67b5f2ed9783	SAME-REF-SET
+learner-credential-wallet	openwallet-foundation-labs/learner-credential-wallet	CANONICAL	—	1c46a82ba384	search-index-full_name	refset-p370	p350 applied canonical on foundations.md + solutions.md	584	2650055c0e55	CANONICAL-SELF
+learner-credential-wallet	digitalcredentials/learner-credential-wallet	STALE	—	1c46a82ba384	search-index-full_name	refset-p370	p350 applied canonical on 2 further live shelves; p370: STALE CONFIRMED on the ref-set fingerprint	584	2650055c0e55	SAME-REF-SET
+librelingo	kantord/LibreLingo	CANONICAL	225245314	3c4bcfb3ef99	search-index-full_name+id	refset-p370	ARCHIVED 2632 stars - largest archived row in register	9985	b0d98856031a	CANONICAL-SELF
+librelingo	librelingo/librelingo	STALE	225245314	3c4bcfb3ef99	search-index-absent-under-owner	refset-p370	LibreLingo org exists but holds course repos only; p370: STALE CONFIRMED on the ref-set fingerprint	9985	b0d98856031a	SAME-REF-SET
+lxhive	g3i/lxHive	CANONICAL	32130662	cffee6d90ca9	search-index-full_name+id	refset-p370	CASING: lxHive	187	16f4d68a6af6	CANONICAL-SELF
+lxhive~distinct:leogaggl	leogaggl/lxhive	DISTINCT	32130662	cffee6d90ca9	search-index-absent-under-owner	refset-p370	p370: demoted from STALE — same HEAD, different ref sets; a redirect serves ONE repository, so a different ref set is a different repository	3	3b4df71c3284	SAME-HEAD-ONLY
+mcp-brasil	Mcp-Brasil/mcp-brasil	CANONICAL	—	2efb258370b1	search-index-full_name	refset-p370	inherited from p349	99	8bf8cb4777a2	CANONICAL-SELF
+mcp-brasil~distinct:dasgltd	dasgltd/mcp-brasil	DISTINCT	—	2efb258370b1	search-index-full_name	refset-p370	p370: demoted from STALE — same HEAD, different ref sets; a redirect serves ONE repository, so a different ref set is a different repository	50	dda25d1aa1a6	SAME-HEAD-ONLY
+moodle-local_ai_manager	bycs-lp/moodle-local_ai_manager	CANONICAL	770982767	af9aff540169	search-index-full_name+id	refset-p370	30 stars live 2026-10-20	279	6933eaaa21a8	CANONICAL-SELF
+moodle-local_ai_manager	mebis-lp/moodle-local_ai_manager	STALE	770982767	af9aff540169	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	279	6933eaaa21a8	SAME-REF-SET
+moodler-mcp	GhaithAlHallak8/moodler-mcp	CANONICAL	—	4e6139eb9c6b	search-index-full_name	refset-p370	inherited from p349	62	5a154a208a5f	CANONICAL-SELF
+moodler-mcp~distinct:dymayo	dymayo/moodler-mcp	DISTINCT	—	4e6139eb9c6b	search-index-full_name	refset-p370	p370: demoted from STALE — same HEAD, different ref sets; a redirect serves ONE repository, so a different ref set is a different repository	2	919ed82a7b28	SAME-HEAD-ONLY
+oneroster.net	jdolny/OneRoster.NET	CANONICAL	269831422	4f96365d3108	search-index-full_name+id	refset-p370	CASING: OneRoster.NET	4	c9ba288eccaf	CANONICAL-SELF
+oneroster.net	theopenem/oneroster.net	STALE	269831422	4f96365d3108	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	4	c9ba288eccaf	SAME-REF-SET
+openbadges-specification	1EdTech/openbadges-specification	CANONICAL	13974914	04c4bc2ee16d	search-index-full_name+id	refset-p370	205 stars; CASING 1EdTech	368	50351c762ed7	CANONICAL-SELF
+openbadges-specification	imsglobal/openbadges-specification	STALE	13974914	04c4bc2ee16d	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	368	50351c762ed7	SAME-REF-SET
+openpronounce	Halleck45/OpenPronounce	CANONICAL	1044757304	74bc17ea406e	search-index-full_name+id	refset-p370	144 stars live 2026-10-20 Wav2Vec2+DTW	9	1b3784974452	CANONICAL-SELF
+openpronounce~distinct:chinobv	chinobv/openpronounce	DISTINCT	1044757304	74bc17ea406e	search-index-absent-under-owner	refset-p370	p370: demoted from STALE — same HEAD, different ref sets; a redirect serves ONE repository, so a different ref set is a different repository	3	8f4d04bfb8d5	SAME-HEAD-ONLY
+presidio	data-privacy-stack/presidio	CANONICAL	132129752	4f0e236e31a5	search-index-full_name+id	refset-p370	11436 stars; id created 2018-05-04 = the original Microsoft repo	1846	0b74b751f597	CANONICAL-SELF
+presidio	microsoft/presidio	STALE	132129752	4f0e236e31a5	search-index-absent-under-owner	refset-p370	CALIBRATION CASE for the id channel; p370: STALE CONFIRMED on the ref-set fingerprint	1846	0b74b751f597	SAME-REF-SET
+purdue-mcp	sharziki/purdue-mcp	CANONICAL	1337233529	6922f1f301dd	search-index-full_name+id	refset-p370	resolved p350	4	5520f25dc273	CANONICAL-SELF
+purdue-mcp~distinct:rohanmuppa	rohanmuppa/purdue-mcp	DISTINCT	1337233529	6922f1f301dd	search-index-absent-under-owner	refset-p370	p370: demoted from STALE — same HEAD, different ref sets; a redirect serves ONE repository, so a different ref set is a different repository	2	13c4ddafb500	SAME-HEAD-ONLY
+rubric	paper-instruments/rubric	CANONICAL	963583061	eb0755a1c468	search-index-full_name+id	refset-p370	83 stars LLM weighted-rubric eval	83	95ceda1921c6	CANONICAL-SELF
+rubric	the-llm-data-company/rubric	STALE	963583061	eb0755a1c468	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	83	95ceda1921c6	SAME-REF-SET
+skolverket-mcp	isakskogstad/Skolverket-MCP	CANONICAL	1086096735	5631a7fc7bc6	search-index-full_name+id	refset-p370	CASING: Skolverket-MCP; Swedish national agency open data	19	6f75f601d89c	CANONICAL-SELF
+skolverket-mcp	ksaklfszf921/skolverket-mcp	STALE	1086096735	5631a7fc7bc6	search-index-absent-under-owner	refset-p370	resolved p350; p370: STALE CONFIRMED on the ref-set fingerprint	19	6f75f601d89c	SAME-REF-SET
+understand-anything	Egonex-AI/Understand-Anything	CANONICAL	1182081931	f2d0164f72fe	search-index-full_name+id	refset-p370	87252 stars - largest address in this register	661	a5c1d335015e	CANONICAL-SELF
+understand-anything	lum1104/understand-anything	STALE	1182081931	f2d0164f72fe	search-index-absent-under-owner	refset-p370	Lum1104/understand-anything-metrics description states the transfer to Egonex-AI first-hand; p370: STALE CONFIRMED on the ref-set fingerprint	661	a5c1d335015e	SAME-REF-SET

@@ -85,10 +85,18 @@ canonical slug"*, with the pre-rename spellings surviving *"only in the APPEND-O
 history."* 🔴 **`make gate-alias-canonical` disagreed on the day it was written**, and has
 been failing since, and `p367` found the defect on **two** shelves rather than the one the
 gate names: `agents/top.md` and `repos/foundations.md` each carried a live row addressed
-**`INGInious/INGInious`** (canonical: `UCL-INGI/INGInious`) — the pre-rename spelling of the pair `p366` itself had just
-identified.
+**`INGInious/INGInious`** (which `p367` believed was the pre-rename spelling of the pair
+`p366` itself had just identified).
 
-🟢 **Fixed this pass**: the row now cites [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious),
+🔴 **`p370` CORRECTION — `p367` had the direction backwards and the shelves were right.**
+Fetching `github.com/UCL-INGI/INGInious` **lands on `INGInious/INGInious`** (243 ★, breadcrumb
+`INGInious / INGInious`, no rename notice), so `UCL-INGI/INGInious` is the **STALE** address and
+`INGInious/INGInious` is canonical. `p367` therefore discharged a red gate by rewriting two
+correct live rows into the stale spelling, and the gate went green only because the register it
+reads (`p349`’s) carries no `INGInious` row at all. See the `p370` section of `intel/open-gaps.md`.
+
+🟡 **`p367` wrote, and it is superseded by the correction above**: *"the row now cites `UCL-INGI/INGInious`"* — the **STALE** spelling;
+🟢 `p370` restores [`INGInious/INGInious`](https://github.com/INGInious/INGInious) on both rows,
 the pair is entered in `p283`'s alias ledger — established on the ref-set fingerprint, which
 is the *"more than the HEAD"* that ledger's own header requires — and the gate is **green**.
 🔵 **The lesson is about the claim, not the row.** `p366` asserted cleanliness from a
@@ -309,6 +317,64 @@ version branch — not `main`. A tool that assumes `main` will report a live,
 correctly-licensed repository as grantless. That has happened on this base before, and
 `p361` adds a fresh instance from a national curriculum body — Oak National Academy
 spells its grant **`LICENCE`**, and `LICENSE` 404s (see `agents/top.md`).
+---
+
+## 🟢 🆕 `p370`: the permissive **standards layer** under the bridge tier — LTI 1.3, OneRoster, xAPI and QTI, every grant enumerated from the git tree
+
+🔵 **Why a standards layer is a foundations question and not an agents question.** The
+bridge tier on `agents/top.md` is 71 % ungranted, so for most client platforms the
+engagement answer is *write your own connector*. 🟢 **That answer is only affordable if
+the protocol libraries underneath are permissive** — and this pass establishes that they
+are, from payload, at a pinned sha.
+
+🟢 **Evidence for §`p370`:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p370.tsv) · [`tree-grant-domain`](../evidence/tree-grant-domain.2026-10-21-p370.tsv) · [`transport-matrix`](../evidence/transport-matrix.2026-10-21-p370.tsv)
+
+| Standard | Component | Licence (payload) | Grant read at | ★ 2026-10-21 | Region | Layer |
+| --- | --- | --- | --- | ---: | --- | --- |
+| **LTI 1.3 / Advantage** | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0**, 11 361 B | `HEAD/LICENSE` @ `41f150c0693b` | **373** | Not placed | Node.js tool provider — *"turn your application into a fully integratable LTI 1.3 tool provider"*. 🟢 **The strongest permissive row in this layer** |
+| **LTI 1.3 / Advantage** | [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 **Apache-2.0**, 11 343 B | `HEAD/LICENSE.md` @ `66d8e4e4b9bd` | **54** | Not placed | PHP, **IMS-certified** tool providers. 🟢 Resolves `p369`'s index artefact — 224 refs answered the git protocol |
+| **LTI 1.3** | [oxctl/spring-security-lti13-demo](https://github.com/oxctl/spring-security-lti13-demo) | 🟢 **Apache-2.0**, 11 358 B | `HEAD/LICENSE.txt` @ `ee38b2f202` | — | **EMEA** (UK) | Spring Security LTI 1.3 wiring, from Oxford's `oxctl` org. 🟡 **A demo tool by its own first line** — read it as a reference, not a dependency |
+| **LTI 1.3** | [kaiofelps/lti-consumer-poc](https://github.com/kaiofelps/lti-consumer-poc) | 🟢 **MIT**, 1 068 B | `HEAD/LICENSE` @ `eab0649dd8` | — | Not placed | Consumer-side proof of concept. 🟡 A PoC by its own name — the consumer half, which the two libraries above do not cover |
+| **OneRoster** | [vossenv/oneroster-python](https://github.com/vossenv/oneroster-python) | 🟢 **MIT**, 1 073 B | `HEAD/LICENSE.txt` @ `fe578a2e01` | **11** | **North America** | Python client for the **Clever** and **Classlink** rostering vendors. 🟡 *"This library is in beta, and changes often. Use at your own risk."* — its own words, carried |
+| **xAPI (Experience API)** | [apereo-learning-analytics-initiative/sakaixapi-provider](https://github.com/apereo-learning-analytics-initiative/sakaixapi-provider) | 🟡 **ECL-2.0**, 558 B | `HEAD/LICENSE_HEADER` @ `59da726edd` | — | **North America** | Sakai xAPI event provider, Apereo. 🔴 **558 B is a per-file HEADER TEMPLATE, not a full grant text** — the family is right, the artefact is a stub, and a client's legal review will ask for the full licence |
+| **Open edX components** | [openedx/XBlock](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0**, 11 358 B | `HEAD/LICENSE.TXT` @ `5693f681ff7c` | **471** | Not placed | 🟢 **`p369`'s unresolved grant, resolved.** The component framework, and the permissive entry point into AGPL Open edX |
+| **Curriculum data** | [ayrtonmoura1/conectabncc](https://github.com/ayrtonmoura1/conectabncc) | 🟢 **MIT**, 1 070 B | `HEAD/LICENSE` @ `37cb447f0a` | — | **LATAM** (Brazil) | Brazil's **BNCC** as a graph — `competencias_bncc.json`, `bncc_progressao_pre_requisitos.json`, `relacoes_bncc_final.json`. 🔵 **Shipped with no README at all**: its file names are the only domain evidence it has, and they were enough |
+| **Classroom discourse** | [ddemszky/classroom-transcript-analysis](https://github.com/ddemszky/classroom-transcript-analysis) | 🟢 **MIT**, 1 069 B | `HEAD/LICENSE` @ `ff63e97873` | **46** | **North America** | Analysis code for Demszky & Hill (2023); a Stanford contact address in the README. Teacher-talk measurement, the layer above a transcript |
+
+### 🔴 The grant that was never 404 — and why the tree channel, not the next transport, was the answer
+
+🔴 **`p369` reported `openedx/XBlock` as *"404 on every branch and filename probed"* and
+nominated the PyPI sdist as the next transport to try.** 🟢 The file is **`LICENSE.TXT`**.
+🔵 **Every HTTP licence probe on this base is a filename guess**, because
+`raw.githubusercontent.com` cannot list a directory — it can only confirm or deny a name
+you already hold. A blobless partial clone enumerates the tree, so the name is not
+guessed; it is read.
+
+🟡 **The same mechanism, shown positively on a second row this pass.**
+`raw.githubusercontent.com/openfun/ralph/HEAD/LICENSE` is a **404** and
+`…/LICENSE.md` is a **200** — the grant was never missing, only differently spelled. Both
+probes are in [`transport-matrix`](../evidence/transport-matrix.2026-10-21-p370.tsv).
+
+🔴 **And the part that is about this base rather than about GitHub:**
+`compose/code/p1057-licence-path-case` was built at `p189`, *about this exact repository
+and this exact file*, with 16 passing controls and a published correction. It never became
+a gate. 🔵 **An instrument that is not standing is an instrument that will be paid for
+twice** — and `ACTION ZZ-cd` now carries wiring it, beside the backlog it belongs to.
+
+### 🟢 The transport matrix, measured, because two passes in a row disagreed about it
+
+| Channel | This pass | What it can do |
+|---|---|---|
+| `github.com` (HTML) | 🔴 **403** at the proxy | nothing |
+| `api.github.com/repos/…` | 🔴 **403** at the proxy | nothing — 🟡 and `api.github.com/rate_limit` answers **200**, so an availability check on the host is not an availability check on the endpoint |
+| `raw.githubusercontent.com` | 🟢 **200** | fetch a path **you can already name**; cannot list |
+| **`git` over https** | 🟢 **200 — 63 of 63 slugs** | 🟢 `ls-remote` (existence, default ref, full ref set) and a blobless partial clone (**the root tree enumerated**, then the exact blobs) |
+
+🔵 `p368` lost the payload channel to a 403 and substituted metadata. `p369` had `raw`
+and used it. 🟢 **`p370` has `raw` too and still does not probe it first**, because the
+git channel answers a question `raw` cannot be asked: *what licence files does this
+repository actually contain?*
+
 ---
 
 ## 🟢 🆕 `p369`: the infrastructure half of the promotion backlog — fifteen components, every licence read from payload
@@ -658,7 +724,7 @@ measured anchoring bias, and an IRT-calibrated item is the evidence that answers
 | --- | --- | --- | --- | ---: | --- |
 | Judge0 (code execution API) | [judge0/judge0](https://github.com/judge0/judge0) | GPL-3.0 | `master/LICENSE` | **4 492** | EMEA |
 | Dolos (plagiarism detection) | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | `main/LICENSE` | **353** | EMEA |
-| INGInious (exercise assessment) | [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | AGPL-3.0 (*"most of the files"*) | `main/LICENSE` | **243** | EMEA |
+| INGInious (exercise assessment) | [INGInious/INGInious](https://github.com/INGInious/INGInious) | AGPL-3.0 (*"most of the files"*) | `main/LICENSE` | **243** | EMEA |
 | UDOIT (accessibility inspection) | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | `main/LICENSE` | **117** | North America |
 | Ares2 (secure grading runner) | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | **MIT** | `main/LICENSE` | **5** | EMEA |
 | autograder — 🔴 **ARCHIVED** (`p361`) | [zmievsa/autograder](https://github.com/zmievsa/autograder) | GPL-3.0 | `main/LICENSE` | **48** | Not placed |

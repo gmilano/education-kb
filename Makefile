@@ -26,6 +26,8 @@ IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
+REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
+DOMAIN_LOG ?= /tmp/education-kb-gate-domain-check.log
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
@@ -50,7 +52,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: time: the channel that answers it (the search index's `full_name`) may be closed on a
 #: later day, exactly as the HTML `301` channel was closed — `403` — to the session that
 #: built this.  So the register is evidence, and the gate reads it.
-ALIAS_REGISTER ?= evidence/alias-register.2026-10-20-p349.tsv
+ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
 .PHONY: gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census
 
@@ -79,7 +81,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
-             gate-companion-closure gate-bare-slug-channel
+             gate-companion-closure gate-bare-slug-channel \
+             gate-refset-register gate-domain-check
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -845,3 +848,26 @@ author-key-census: ## p349 — the inherited unkeyed author cells, with a denomi
 # `152e3272fbd108fe`) and their READMEs are NOT — one pack, two distributions.
 gate-payload-digest: ## ACTION ZZ-ad — do two repositories ship the same payload?
 	@cd compose/code/p349-payload-digest && { $(PY) -I test_payload_digest.py > $(DIGEST_LOG) 2>&1 || { echo "🔴 p349-payload-digest FAILED — the suite's own report follows:" ; sed "s/^/   /" $(DIGEST_LOG) ; false ; } ; } && echo "── p349-payload-digest (7 controls: SHARED across slugs, the same-slug duplicate that is NOT an identity, the 404 that is not evidence, both committed classes, and P541)" && echo "   PASS" || exit 1
+
+# 🔴 p370 (`ACTION ZZ-bw` discharged): A HEAD SHA IS NOT AN IDENTITY PROOF, AND 22
+# REGISTER ROWS RESTED ON ONE.  `gate-alias-canonical` was RED at `p369`'s HEAD on
+# `Dymayo/moodler-mcp`, and the register row — not the shelf — was the defect: that
+# address answers with 2 refs against the canonical side's 62, so it is a FORK whose
+# default branch sits on its parent's HEAD, not a redirect.  `p349`'s own docstring
+# names the mechanism it catches (GitHub keeps a renamed address answering BY
+# REDIRECT), and a redirect serves ONE repository, so the ref sets must agree.
+# 5 of 22 STALE rows (22.7 %) do not.  No network: the `ls-remote` captures are
+# committed under the instrument and the derivation runs off those bytes.
+gate-refset-register: ## p370 — only SAME-REF-SET may stand as STALE in the alias register
+	@cd compose/code/p370-refset-register && { $(PY) -I test_refset_register.py > $(REFSET_LOG) 2>&1 || { echo "🔴 p370-refset-register FAILED — its own report follows:" ; sed "s/^/   /" $(REFSET_LOG) ; false ; } ; } && echo "── p370-refset-register (32 controls: the moodler-mcp pair that turned the gate red, the purdue-mcp pair whose PULL REF proves the direction, the edu-convokit positive control, and the dead-side refusal)" && echo "   PASS" || exit 1
+	@cd compose/code/p370-refset-register && $(PY) -I rederive.py ../../../$(ALIAS_REGISTER) ./refsets | grep -E "^#|DEMOTE" || true
+
+# 🔴 p370 (`ACTION ZZ-cb`, `Gap 475`): THE SLUG IS NOT THE DOMAIN.  `p367` priced this
+# as the cheapest gap on the base and measured a 40 % trap rate.  `p370` built the
+# check and ran it on 63 addresses: `pawelkn/xapi-rs` and `peterszombati/xapi-node`
+# are xStation5 FOREX clients (in education `xAPI` is the Experience API) and
+# `cern-qti/quask` is CERN's Quantum Technology Initiative, not IMS QTI.  The verdict
+# is read from the README PAYLOAD with the root tree as the fallback channel, never
+# from the slug.  No network: README and tree captures are committed.
+gate-domain-check: ## p370 — no row may be shelved on a slug that its payload does not support
+	@cd compose/code/p370-domain-check && { $(PY) -I test_domain_check.py > $(DOMAIN_LOG) 2>&1 || { echo "🔴 p370-domain-check FAILED — its own report follows:" ; sed "s/^/   /" $(DOMAIN_LOG) ; false ; } ; } && echo "── p370-domain-check (43 controls: the four REAL traps, each of the four defects D1-D4 in this instrument own first draft with the string that caused it, the tree channel on a repository with no README, and the NO-EVIDENCE refusal)" && echo "   PASS" || exit 1

@@ -1,0 +1,68 @@
+slug	status	head	refs	licence_path	bytes	family	rung	domain	strong_terms	tree_n
+3121n/nor-data-udir-mcp	OK	624a09b677b6	2	-	0	NO-GRANT-IN-TREE	-	SLUG-TRAP	-	11
+aicoder2009/khanacademymcp	OK	2bc1c6a2ce79	3	LICENSE	1086	MIT	title line @0	SLUG-TRAP	-	17
+apereo-learning-analytics-initiative/sakaixapi-provider	OK	59da726edd9b	20	LICENSE_HEADER	558	ECL-2.0	title line @47	EDUCATION	experience api;gradebook;learning record store;sakai;scorm;syllabus	6
+api-evangelist/powerschool	OK	98fe1981d4a1	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	1edtech;ed-fi;k-12;powerschool;rubric;student information system	22
+arjav0703/cbse-ai	OK	a812f90a5fcb	28	LICENSE	34523	AGPL-3.0	title line @20	EDUCATION	cbse	24
+asterics/asterics-grid	OK	7111498a4469	1472	LICENSE	34523	AGPL-3.0	title line @20	WEAK	-	21
+ayrtonmoura1/conectabncc	OK	37cb447f0a5d	2	LICENSE	1070	MIT	title line @0	NO-README	-	12
+bibo242/blackboard-mcp	OK	1fd96db0378d	16	LICENSE	1084	MIT	title line @0	EDUCATION	blackboard learn;gradebook	12
+brightspaceui/lms-context-provider	OK	52bc4bd5e25d	717	LICENSE	10421	Apache-2.0	title line @0	EDUCATION	brightspace;lms	15
+bycs-lp/moodle-ci-workflows	OK	dbc54d014d32	2	-	0	NO-GRANT-IN-TREE	-	SLUG-TRAP	moodle	5
+cassproject/cass-npm	OK	e6c0b623df58	675	LICENSE	11355	Apache-2.0	title line @33	NOT-EDUCATION	-	22
+casys-ai/mcp-server	OK	b32bb2ec9f51	119	LICENSE	1085	MIT	title line @0	NOT-EDUCATION	-	14
+cern-qti/latent-ad-qml	OK	6e1b325049db	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	qti	8
+cern-qti/quask	OK	3ac5bef5aff6	25	LICENSE.txt	11358	Apache-2.0	title line @34	SLUG-TRAP	-	13
+chatt-state/banner-mcp-server	OK	d056f8d3a04d	2	-	0	NO-GRANT-IN-TREE	-	NO-README	-	10
+coimf/schoology-mcp	OK	f08cb3dc600d	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	schoology	7
+d2l-ai/d2l-en	OK	23d7a5aeccee	2512	LICENSE	14849	CC-BY-SA-4.0	title line @0	SLUG-TRAP	-	49
+d2l-ai/d2l-en	OK	23d7a5aeccee	2512	LICENSE-SAMPLECODE	931	MIT	title line @73	SLUG-TRAP	-	49
+d2l-ai/d2l-en	OK	23d7a5aeccee	2512	LICENSE-SUMMARY	332	CC-BY-SA-4.0	title line @119	SLUG-TRAP	-	49
+davemckain/qtiworks	OK	f1465aad49d5	129	LICENSE.txt	2058	BSD-3-Clause	title line @571	SLUG-TRAP	-	13
+dddanielliu/nccu-moodle-mcp	OK	66e09e1a13c0	3	-	0	NO-GRANT-IN-TREE	-	EDUCATION	moodle;teacher	9
+ddemszky/classroom-transcript-analysis	OK	ff63e9787350	2	LICENSE	1069	MIT	title line @0	EDUCATION	classroom;teacher	8
+districtapi/districtapi-mcp	OK	5800d67ea561	2	-	0	NO-GRANT-IN-TREE	-	NOT-EDUCATION	-	5
+edyvision/student-services-mcp	OK	ea2608f5424b	11	-	0	NO-GRANT-IN-TREE	-	SLUG-TRAP	-	18
+general-mudkip/d2l-mcp-server	OK	219205f1b36c	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	brightspace;lms;syllabus	12
+git-pratap-shrey/uniai_mcp	OK	7312a757ef7b	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	syllabus	15
+h5p/moodle-mod_hvp	OK	8057ece2e250	320	LICENSE	35149	GPL-3.0	title line @20	EDUCATION	lms;moodle	45
+hefi002/tfg-mcp-moodle-server	OK	035dbd8a2136	9	LICENSE	35187	GPL-3.0	title line @20	EDUCATION	learning management;moodle;teacher	13
+hocphi-info/hocphi-info-mcp	OK	5234065e2526	23	LICENSE	11358	Apache-2.0	title line @33	WEAK	-	19
+hocphi-info/hocphi-info-mcp	OK	5234065e2526	23	NOTICE	1196	UNCLASSIFIED	-	WEAK	-	19
+jeanlucio/moodle-dev-tools	OK	bbc239ac9c66	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	moodle	60
+jinanshm/ncert-mcp	OK	5f6d74782c82	5	-	0	NO-GRANT-IN-TREE	-	EDUCATION	cbse;curriculum;k-12;ncert	11
+kaiofelps/lti-consumer-poc	OK	eab0649dd893	12	LICENSE	1068	MIT	title line @0	EDUCATION	lti consumer;moodle;registrar	27
+kristofb/ltijs	OK	a395f673b6c6	33	LICENSE	11361	Apache-2.0	title line @33	EDUCATION	ims global;moodle	16
+marcusgreen/moodle-qtype_gapfill	OK	d13b18450aa6	173	-	0	NO-GRANT-IN-TREE	-	EDUCATION	moodle	24
+mattlo0546/canvas-mcp	OK	b6c26ba52c14	6	LICENSE	1067	MIT	title line @0	EDUCATION	blackboard learn;canvas lms;classroom;lms;moodle	7
+microsoft/playwright-mcp	OK	ab6d67cbf8b6	950	LICENSE	11351	Apache-2.0	title line @33	NOT-EDUCATION	-	25
+morganrcu/awesome-eu-ai-act	OK	d46c0492aece	56	-	0	NO-GRANT-IN-TREE	-	WEAK	-	2
+n35da/brightspace-mcp	OK	132c222c2793	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	brightspace;coursework;syllabus	10
+nicolasviruel/moodle-utn-mcp	OK	b498ab241c78	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	moodle	9
+noor-ul-eman28/ai-tutor-mcp-toolkit	OK	1202be3d5e41	2	-	0	NO-GRANT-IN-TREE	-	SLUG-TRAP	-	5
+openedx/XBlock	OK	5693f681ff7c	1171	LICENSE.TXT	11358	Apache-2.0	title line @34	EDUCATION	open edx;openedx;scorm	23
+openedx/XBlock	OK	5693f681ff7c	1171	NOTICE.txt	545	UNCLASSIFIED	-	EDUCATION	open edx;openedx;scorm	23
+oxctl/spring-security-lti13-demo	OK	ee38b2f2021c	12	LICENSE.txt	11358	Apache-2.0	title line @34	EDUCATION	lms;lti 1.3	8
+packbackbooks/lti-1-3-php-library	OK	66d8e4e4b9bd	224	LICENSE.md	11343	Apache-2.0	title line @33	EDUCATION	lms;lti 1.3	16
+pawalshriram06-ops/mcp-student-management-system	OK	7e10795129fc	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	teacher	16
+pawelkn/xapi-rs	OK	ff9235d94a35	17	LICENSE	1071	MIT	title line @0	SLUG-TRAP	-	9
+peterszombati/xapi-node	OK	85c750803da8	277	LICENSE	1704	BSD-3-Clause	title line @79	SLUG-TRAP	-	12
+pie-framework/pie-elements-ng	OK	ee562c9523b1	885	-	0	NO-GRANT-IN-TREE	-	NOT-EDUCATION	-	36
+poorvika12-hub/student_mcp	OK	4869d37126e0	2	-	0	NO-GRANT-IN-TREE	-	SLUG-TRAP	-	11
+punkpeye/awesome-mcp-servers	OK	f00a852f6e44	20537	LICENSE	1125	MIT	title line @4	NOT-EDUCATION	-	12
+quizlar/mcp-server	OK	fe5609b527a0	2	LICENSE	1064	MIT	title line @0	SLUG-TRAP	-	8
+scollovati/awesome-lti	OK	f2279c4191d8	2	LICENSE	20131	CC-BY-SA-4.0	title line @2987	EDUCATION	1edtech;lti 1.3;lti advantage	3
+shawnmcb/a11y-mcp-server	OK	2bbdad4fb425	2	LICENSE	1071	MIT	title line @0	NOT-EDUCATION	-	9
+sheikhcoders/interleaved-learning-mcp	OK	289220641d84	2	-	0	NO-GRANT-IN-TREE	-	SLUG-TRAP	-	8
+sumnerlab/talkmoves	OK	869b9406de26	4	LICENSE	20849	CC-BY-NC-SA-4.0	title line @3007	EDUCATION	classroom;k-12;teacher	8
+surlabs/aichatformoodle	OK	f51cbb2a10e1	3	LICENSE	35149	GPL-3.0	title line @20	SLUG-TRAP	-	14
+teamschools/powerschool	OK	138d9004bb62	54	LICENSE	35149	GPL-3.0	title line @20	EDUCATION	powerschool	9
+totoketchup/adaptive-multispeaker-separation	OK	8e7e869b8050	2	LICENSE	1072	MIT	title line @0	SLUG-TRAP	-	18
+tunapanda/wp-xapi-lrs	OK	3e7b7493b5c0	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	learning management;learning record store;lms	11
+tutors-sdk/tutors-mono-repo	OK	260bdc4ef10d	736	LICENSE	1083	MIT	title line @0	EDUCATION	classroom;course catalogue;learning management	51
+uaiblaine/moodle-block_compass	OK	12f35f3f287e	57	COPYING.txt	35147	GPL-3.0	title line @20	EDUCATION	moodle;teacher	27
+uaiblaine/moodle-block_feedback_tracker	OK	097704b95a40	110	COPYING.txt	35147	GPL-3.0	title line @20	EDUCATION	gradebook;moodle;teacher	26
+universita-di-ferrara/moodle-aiprovider_gemini	OK	2e27b08b8911	10	LICENSE	35149	GPL-3.0	title line @20	EDUCATION	learning management;moodle	9
+vossenv/oneroster-python	OK	fe578a2e015a	10	LICENSE.txt	1073	MIT	title line @51	EDUCATION	gradebook;k12;learning management;lms;oneroster;powerschool;student information system	10
+xiaochr/llm-aes	OK	b0716f4ba9d9	2	-	0	NO-GRANT-IN-TREE	-	EDUCATION	automated essay scoring;essay scoring;learning analytics	12
+zuvy/ps-mcp-server	OK	a1c0f1811341	4	-	0	NO-GRANT-IN-TREE	-	EDUCATION	powerschool;teacher	8

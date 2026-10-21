@@ -1,0 +1,9 @@
+.github
+.gitignore
+.trunk
+LICENSE
+README.md
+pdm.lock
+powerschool
+pyproject.toml
+requirements.txt

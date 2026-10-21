@@ -1,0 +1,9 @@
+.env.example
+.gitignore
+.mcp.json
+README.md
+materias
+package-lock.json
+package.json
+src
+tsconfig.json

@@ -25,6 +25,7 @@ Each one names the specific repos and how to wire them.
 | 12 | Process-evidence assessment | Detection-based integrity has failed |
 | 13 | Statutory inclusion deliverable, Colombian school system | LATAM public sector, legal mandate |
 | 14 | Reaching a client's LMS when "LTI support" is not one capability | Integration scoping before you quote |
+| 🆕 30 | Reaching the incumbent LMS when 71 % of the community bridges cannot be used | Client runs Canvas/Moodle/Blackboard/Brightspace/PowerSchool/Banner and the deliverable must stay yours |
 
 
 # Education — composition patterns
@@ -1402,3 +1403,95 @@ per repository. 🔵 **Prerequisite:** egress to `raw.githubusercontent.com`. Me
 environment at **200 for 66 of 66** on a proxy where `github.com` answered **403 to every
 probe** — so the pattern runs inside restricted client networks where a web-research
 engagement cannot.
+
+## 🆕 Pattern 30 — Reaching the client's incumbent LMS when 71 % of the community bridges cannot be used
+
+**Use when** the client runs **Canvas, Moodle, Blackboard Learn, D2L Brightspace,
+Schoology, PowerSchool or Ellucian Banner** — i.e. almost always — and week one asks
+whether an agent can read it without a connector being written. 🔴 **This pattern exists
+because the obvious answer fails a licence review**: of the 21 in-domain LMS/SIS MCP
+servers `p370` graded straight out of the backlog, **15 (71.4 %) ship no licence file at
+all**, and an unlicensed repository cannot be forked into a client deliverable at any
+price.
+
+### Step 1 — gate the candidate before you scope it (one command per address)
+
+🟢 Run this base's own instrument instead of reading README badges. It needs **git over
+https only** — measured at **200 for 63 of 63** addresses on a proxy where `github.com`
+and `api.github.com/repos/…` both answered **403**:
+
+```bash
+# enumerate the tree, then read the bytes it lists — nothing is guessed
+git clone --depth 1 --filter=blob:none --no-checkout --single-branch \
+    https://github.com/<owner>/<repo> /tmp/cand
+git -C /tmp/cand ls-tree --name-only HEAD | grep -iE '^(licen[cs]e|copying|notice)'
+git -C /tmp/cand cat-file -p HEAD:<the file it listed>   # the grant, pinned at HEAD
+git -C /tmp/cand rev-parse HEAD                          # record the pin
+```
+
+🔴 **And check the industry, not the name.** `compose/code/p370-domain-check` reads the
+README payload, never the slug: on `p370`'s run it stopped `pawelkn/xapi-rs` and
+`peterszombati/xapi-node` (**xStation5, a forex broker's trading API** — in education
+`xAPI` is the Experience API) and `cern-qti/quask` (**CERN's Quantum Technology
+Initiative**, not IMS QTI). All three are permissive, live, and would have passed every
+other check.
+
+```bash
+make gate-domain-check      # 43 offline controls
+make gate-refset-register   # 32 — is this address the repository, or a fork of it?
+```
+
+🟡 `gate-refset-register` is not optional here. The backlog offered
+[`kristofb/ltijs`](https://github.com/kristofb/ltijs) (33 refs) where the repository is
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (114 refs, **373 ★**) — same grant,
+same byte count, **diverged history**.
+
+### Step 2 — pick the reach by what the client actually runs
+
+| Client platform | 🟢 Use | Grant, read from payload |
+|---|---|---|
+| **Blackboard Learn (Ultra)** | [bibo242/blackboard-mcp](https://github.com/bibo242/blackboard-mcp) | 🟢 MIT, 1 084 B @ `1fd96db037` |
+| **Canvas LMS** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (**302 ★**, 80+ tools) or [mattlo0546/canvas-mcp](https://github.com/mattlo0546/canvas-mcp) where SSO rather than an API token is the only way in | 🟢 MIT both |
+| **D2L Brightspace** | 🔴 **no granted community bridge.** Use the vendor's own [brightspaceui/lms-context-provider](https://github.com/brightspaceui/lms-context-provider) for in-platform UI, and write the read-side yourself against the shape of [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | 🟢 Apache-2.0, 10 421 B @ `52bc4bd5e2` (vendor component only) |
+| **Moodle** | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) or [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) (Rust) — 🔴 **not** `hefi002/tfg-mcp-moodle-server`, which is GPL-3.0 | 🟢 MIT |
+| **Open edX** | [openedx/XBlock](https://github.com/openedx/XBlock) for in-platform components; [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) for the Tutor distribution | 🟢 Apache-2.0, 11 358 B @ `LICENSE.TXT`, and MIT |
+| **Schoology · PowerSchool · Banner** | 🔴 **nothing granted exists.** Build against the standards layer below |
+
+### Step 3 — when nothing granted exists, build on the standards layer, not the platform
+
+🟢 **All four protocol libraries are permissive, and `p370` read every grant from payload:**
+
+| Standard | Repo | Grant |
+|---|---|---|
+| LTI 1.3 / Advantage (Node) | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0, 11 361 B @ `41f150c0693b`, **373 ★** |
+| LTI 1.3 (PHP, IMS-certified) | [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0, 11 343 B @ `66d8e4e4b9bd` |
+| LTI 1.3 (Java / Spring Security) | [oxctl/spring-security-lti13-demo](https://github.com/oxctl/spring-security-lti13-demo) | 🟢 Apache-2.0 — 🟡 a **demo**, read as reference |
+| OneRoster (Clever / Classlink) | [vossenv/oneroster-python](https://github.com/vossenv/oneroster-python) | 🟢 MIT — 🟡 *"in beta… use at your own risk"* |
+| xAPI / LRS | [openfun/ralph](https://github.com/openfun/ralph) | 🟢 MIT (`LICENSE.md`) |
+
+🔵 **LTI is the reach that is contractually safest**, because it is a standard the client's
+platform already certifies against, and the copyleft of Moodle or Open edX does not cross a
+protocol boundary — which is `intel/trends.md` §7's argument, now with §7's `p370` addendum
+attached to it.
+
+### Step 4 — the conversation that is not about licences, and arrives first
+
+🔴 **Most of this class authenticates as the student**, through the institution's SSO, in a
+real browser. [`general-mudkip/d2l-mcp-server`](https://github.com/general-mudkip/d2l-mcp-server)
+opens its own README with a warning against using it for academic misconduct, and
+[`bibo242/blackboard-mcp`](https://github.com/bibo242/blackboard-mcp) and
+[`mattlo0546/canvas-mcp`](https://github.com/mattlo0546/canvas-mcp) both work by riding the
+user's session rather than an institutional token.
+
+🟢 **Scope it explicitly in week one**, using the shape this base measured on the Moodle
+write-path rows: separate read from write, default every write to **off**
+(`MOODLER_ALLOW_STUDENT_WRITES` / `MOODLER_ALLOW_TEACHER_GRADING` are the published
+precedent), **fail closed** on a missing variable, and require `confirm=true` on anything
+destructive. 🔵 A bridge that cannot submit, grade or delete is a procurement
+conversation a registrar will have; one that can is one they will stop.
+
+🟢 **Why this pattern closes.** Steps 1–3 cost one partial clone per candidate and two
+offline gate runs, and they replace the artefact a client's counsel will otherwise reject:
+a scoping document whose integration assumption rests on an unlicensed repository.
+🔴 **Prerequisite:** git over https. It needs **no** GitHub API and **no** HTML — both of
+which were 403 in this environment on the day this pattern was written.
