@@ -6,9 +6,10 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 357 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 16–18 are `p357`'s**, and §16 is the first trend
-on this file that **retires a capability this base already shelves**.
+**Pass 358 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 19–21 are `p358`'s**, and §19 is the first trend on
+this file whose evidence is a **licence-hygiene rate** rather than a count of
+repositories. Trends 16–18 are `p357`'s.
 Trends **7–15** are **first-hand observations from this base's own repository
 measurements** — they are not in the trade press, which is precisely why they are
 worth holding.
@@ -372,3 +373,112 @@ copyleft *platform* at arm's length. 🔵 **The second one is the genuinely new 
 this base's governing rule — reach copyleft over LTI, web services or MCP — assumes the
 copyleft thing is the *platform*. When the copyleft thing **is the MCP server**, the
 boundary is on the wrong side of it, and the rule inverts.
+
+---
+
+## 19. 🔴 🆕 In one region, "no open source for this" means "no LICENSE file", and the two are opposite problems
+
+🟢 **`p358` measured it.** Sixteen LATAM-origin education addresses were run through the
+payload channel: **13 live, and 3 carry a grant — 23 %.** The same pass's other legs
+(LTI, MCP, assessment, Africa) returned **19 live and 14 grants — 74 %**.
+
+🔵 **The reason this is a trend and not a statistic** is that three consecutive passes of
+this base reported the same observation as a *supply* problem. `p356` called it a supply
+gap, then refined it to a **tooling** gap: *"what does not exist is a Spanish-language
+item bank, autograder or judge."* 🔴 All three exist. A Saber Pro item bank
+(`DVLASZ/banco-preguntas-saberpro`), an autograder doing RAG over open answers
+(`Jairh1294/Auto-Grader`), four ENEM platforms, a BNCC municipal assessment platform.
+**They are all rights reserved.**
+
+🔴 **The two diagnoses imply opposite actions, which is why the distinction is expensive:**
+
+| Diagnosis | What a studio does | Cost |
+|---|---|---|
+| Supply gap (wrong) | 🔴 build the item bank | weeks of authoring |
+| Licence gap (right) | 🟢 **ask the author for a `LICENSE`** | an email |
+
+🟢 **And it explains a search-channel artefact that has misled this base twice.** A
+listicle or a trade roundup lists what it can *link*, and an unlicensed repository links
+exactly as well as a licensed one — so prose legs show supply where the payload shows
+none, and the absence only appears when something reads the `LICENSE` file. 🔵 **The
+general form: discovery channels measure existence; only the payload channel measures
+usability**, and for a paid engagement usability is the only one that counts.
+
+🟡 **The bound on this, stated because the 23 %/74 % figure is quotable.** The comparator
+is this pass's **English-language** legs — a different, uncontrolled population. The
+split measures two samples and is **not** evidence that LATAM authors license less
+carefully; it could as easily reflect project age or venue. **`ACTION ZZ-bf`** registers
+the control: run the same function-word legs in a third language and compare.
+
+## 20. 🟢 🆕 Four jurisdictions, four statutes, one product: the oversight record is converging
+
+🟢 **`p358`'s four regional legs returned the same build requirement under four unrelated
+legal justifications** — an **age gate**, a **human-in-the-loop record** and an **audit
+trail**:
+
+- 🔴 **EU AI Act**, enforced by the AI Office and national authorities **from 2 August
+  2026**: admissions, student evaluation and exam scoring are **high-risk**, bringing
+  conformity assessment, technical documentation, logging and human oversight.
+- 🔴 **Vietnam Law 134/2025/QH15**, in force **1 March 2026** — the region's first
+  dedicated AI statute. **Education is one of six high-risk sectors**, naming automated
+  assessment and behavioural monitoring; compliance by **1 March 2027**, with six extra
+  months for systems running before 15 August 2026.
+- 🔴 **South Korea's AI Basic Act**, effective **January 2026**: risk management and
+  disclosure for high-impact systems.
+- 🟢 **US states and districts**: Oklahoma and Maryland require human oversight and bar
+  AI from high-stakes student decisions; **Charleston County** bars AI as the *sole
+  basis* for discipline or placement; **Katy ISD** bans generative AI for **K-6** and
+  phases in supervised access from grade 7.
+
+🔵 **The architectural reading.** These are not content-moderation requirements and not
+model-selection requirements. They are **provenance requirements**: show who decided,
+show a human saw it, show the record. 🟢 **Two rows this base verified on `p358` already
+embody the two auditable answers**, and both are MIT:
+[`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp)
+is read-only **by construction** — a *capability ceiling* — and
+[`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) makes every
+write tool preview-first, refusing to mutate without `confirm_write=True` — a
+*confirmation protocol*.
+
+🟢 **So "AI may not decide" has two implementations and an engagement should know which
+it is selling:** remove the capability, or gate it behind a recorded human confirmation.
+🔵 The first is cheaper to audit and the second is the only one that still does the work.
+
+🔴 **One counter-current, recorded so the convergence is not overstated.** The **Ipsos
+Education Monitor 2026** finds **lower** support for banning AI in schools across the
+Asian markets surveyed and **higher** support in **Australia and New Zealand** — i.e. the
+jurisdictions with the strictest statutes have the most permissive publics, and
+Australia, which relies on technology-neutral law with its mandatory guardrails
+**paused**, has the most restrictive public opinion. 🔵 **Statutory pressure and social
+licence are not the same axis**, and in APAC they point opposite ways: the objection to
+handle in Hanoi or Seoul is documentary, and in Sydney it is consent.
+
+## 21. 🔵 🆕 A connector's copyright holder is a maintenance forecast, and this base now has two instances
+
+🟢 **`p358` discharged `ACTION ZZ-bc` and the result generalises.** Reading the copyright
+holder out of the `LICENSE` payload across rows sharing a slug stem found **two copies
+whose grant names a different repository's owner** — and in **both** cases the copy was
+measurably behind its upstream:
+
+| Upstream | Tools | Copy | Tools | Behind by |
+|---|---:|---|---:|---:|
+| `vishalsachdev/canvas-mcp` | 126 | `NelsonSpencer/canvas-mcp` | 99 | **27** |
+| `bruchris/canvas-lms-mcp` | 183 | `algorithm0r/canvas-lms-mcp` | 165 | **18** |
+
+🔵 **Why this is a trend rather than two anecdotes.** The MCP connector tier is the
+fastest-growing supply in education AI — six independent Canvas addresses on this base
+now — and it grows partly by **copying**, because an MCP server is small enough to fork in
+an afternoon. 🔴 Nothing in the licence separates a copy from its upstream (all MIT, all
+live, all verifying), and on this tier **not even the description does**:
+`algorithm0r/canvas-lms-mcp` and `bruchris/canvas-lms-mcp` publish the *same sentence*.
+🟢 **The holder field is the only cell that separates them**, and in two of two cases it
+predicted staleness.
+
+🟡 **Two measured limits.** The test only reaches rows sharing a **slug stem** — a renamed
+copy is invisible (**`ACTION ZZ-be`** keys it on the holder string instead) — and it is
+**blind to Apache-2.0 rows**, whose boilerplate carries no holder field at all, as
+`edugatorlabs/ltijs` demonstrated against `Cvmcosta/ltijs`.
+
+🟢 **The engagement rule is simple and cheap:** before vendoring any connector, read its
+`LICENSE` holder. If it names someone other than the repository owner, you are looking at
+a fork — install by registry identifier, which resolves upstream, and keep the capability.

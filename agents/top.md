@@ -6,36 +6,38 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 357 · 2026-10-21.** Every row below was checked first-hand on two
+**Pass 358 · 2026-10-21.** Every row below was checked first-hand on two
 channels: liveness and default branch via `git ls-remote --symref`, and the licence
 **read from the payload** at `raw.githubusercontent.com` — never from a badge, a
-README claim or GitHub's own classifier. Where the classifier disagreed with the
-payload, the payload wins and the disagreement is recorded.
+README claim or GitHub's own classifier. Where the classifier or a search snippet
+disagreed with the payload, the payload wins and the disagreement is recorded.
 
 **Channel state this pass:** 🟢 `git ls-remote` OPEN · 🟢 `raw.githubusercontent.com`
 OPEN · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** ·
-🔴 **authenticated search index CLOSED** — `p357` runs under a credential scoped to a
-single unrelated repository, so the GitHub index was not available to it at all.
+🔴 `codeload` archive endpoint **403** · 🔴 **authenticated search index CLOSED for the
+third consecutive pass** — `p358` runs under a credential scoped to one unrelated
+repository (`gmilano/globant-kb`), so the GitHub index was never available to it.
 
-🔵 **What that changes, stated before any row is read.** `p357`'s discovery channel was
-**web search**, not the GitHub index, and its verification channel was the same
-`ls-remote` + payload pair every pass uses. 🟢 That is a *weaker* discovery instrument
-and an *identical* verification one. The consequence is specific: **this pass can prove
-a row is live and correctly licensed, and cannot measure a single star.**
+🔵 **What that changes, stated before any row is read.** `p358`'s discovery channel was
+**web search**, and its verification channel was the same `ls-remote` + payload pair
+every pass uses. 🟢 That is a *weaker* discovery instrument and an *identical*
+verification one: this pass can prove a row is live and correctly licensed, and
+**cannot measure a single star.** Every `p358` row reads `not re-derived`.
 
-**★ discipline.** A star figure appears only where it was re-derived from the
-authenticated index **this pass**. Rows reading `not re-derived` are live and
-licence-verified, but their star count was not measured today — the row is
-publishable, the number is not. 🔵 **Every `p357` row therefore reads `not
-re-derived`, and the figures carried from `p356` keep their own date** — `p356` ran
-on this same calendar day, so no carried number is staler than this file's header.
+🟢 **`p358` found a way to make the weak channel do real work.** `p355` established that
+on an index, a **topic intersection** is a channel and a prose phrase is not. The
+analogue without an index is to aim web search **at `github.com` itself** with
+**function words** instead of prose — `banco de preguntas`, `correção automática`,
+`LTI 1.3 deep linking`, `rubric grading MCP`. 🟢 Prose legs returned listicles again, as
+they have since `p343`; the domain-restricted function legs returned **35 addresses, 32
+of them live**, and the tier below that this base had never shelved.
 
-🟢 **A different instrument reaching the same verdict is worth more than a repeat.**
-Four rows `p356` measured on the GitHub index were re-probed this pass from web search
-and payload alone — `DeepTutor`, `kolibri`, `OpenOLAT`, `QingdaoU/OnlineJudge` — and
-all four returned the same branch and the same grant family. 🟢 **The payload channel
-is instrument-independent.** `os-taxonomy` was re-read the same way and is ODbL-1.0 as
-published, share-alike nuance included.
+🔴 **And the payload channel beat the search index on a figure this base publishes.**
+A snippet in this pass's leg gives `vishalsachdev/canvas-mcp` as *"up to 102 tools"*;
+`p357` published **126** from the index. Read first-hand from the README payload today,
+it is **"up to 126"** — 🟢 `p357`'s number is correct and **the search index is the
+stale channel**, not this base. Recorded because the opposite conclusion was the
+cheaper one to reach.
 
 ---
 
@@ -93,6 +95,9 @@ defensible scopes give different answers. The whole-file figure is on
 | 🆕 canvas-lms-mcp | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT (`LICENSE`, holder *Christian Bru*, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas. TypeScript. **The widest Canvas surface verified on this base — its README states 183 tools**; reads courses, assignments, submissions, rubrics and quizzes, and **grades and comments** |
 | 🆕 moodle-mcp (Rust) | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (`LICENSE`, holder *G36maid*, 2026) | `main/LICENSE` | not re-derived | Not placed | Moodle. **Rust**, published to `crates.io`, CI + Codecov in-tree. Goes beyond reading: uploads and submits work. README claims validation against Moodle 3.7–5.x |
 | 🆕 canvas-lms-student-mcp | [AnonymousOnyx22/canvas-lms-student-mcp](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | MIT (`LICENSE`, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas, **read-only by construction** — 12 tools, cannot submit, edit or delete. 🟢 The only row on this tier whose *capability ceiling* is the safety argument |
+| 🆕 gradescope-mcp | [Yuanpeng-Li/gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) | MIT (`LICENSE`, holder *Yuanpeng Li*, 2026) | `main/LICENSE` | not re-derived | Not placed | **Gradescope** — 34 tools: course management, batch grading, rubric CRUD. 🟢 **Every write tool is preview-first** and refuses to mutate without `confirm_write=True`. The first grading-capable row on this base whose safety argument is a *protocol*, not a ceiling |
+| 🆕 elimu-mcp | [gabrielmahia/elimu-mcp](https://github.com/gabrielmahia/elimu-mcp) | MIT (`LICENSE`, holder *Gabriel Mahia*, 2026) | `main/LICENSE` | not re-derived | **EMEA** (Kenya) | Kenya's education system — school registry, KCSE/KCPE results, HELB loans, TVET programmes. 5 tools, on PyPI. 🔴 Read the two caveats below before quoting it to a client |
+| 🆕 Canvas-Agent | [hughsibbele/Canvas-Agent](https://github.com/hughsibbele/Canvas-Agent) | MIT (`LICENSE`, holder *Hugh Koeze*, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas. A sixth independent Canvas address — the platform is now **over-supplied** on this tier, which is itself the finding |
 
 ### 🟢 The Moodle connector gap closed this pass, and the row that looks like it closed it is the one to avoid
 
@@ -112,6 +117,30 @@ the rule governing every pattern on `compose/patterns.md`; a copyleft *connector
 **on the engagement's own side of that boundary**. 🟢 Of the three Moodle rows, the two
 permissive ones are `falkenslab/moodle-mcp` (Node) and `G36maid/moodle-mcp` (Rust).
 
+### 🔴 `elimu-mcp` is the first African row on this base, and its own README disqualifies it from the use it looks built for
+
+🟢 It is MIT, live, published to PyPI, and it is the **only national-education-system
+connector on this base for any African country** — Kenya's school registry, the KCSE and
+KCPE examination results, HELB student loans and TVET programmes, behind five MCP tools.
+🔵 On the closed region vocabulary that is **EMEA**, and it matters more than one row
+usually would: see the regional note below.
+
+🔴 **Two sentences in its own `README` decide how it can be used, and both are quoted
+verbatim rather than paraphrased:**
+
+> *"Feedback via GitHub Issues only — pull requests are not accepted."*
+
+> *"Demo data is labeled DEMO and is not suitable for operational decisions."*
+
+🔵 **Read those as two different kinds of cost.** The first is a **maintenance** cost:
+MIT grants the right to fork, and the upstream will not take a patch back, so an
+engagement that needs a fix owns a fork from the day it makes one. The second is the
+serious one — **this is a connector shape, not a data source.** Quoting it to a Kenyan
+client as a live registry integration would be wrong; what it supplies is the tool
+surface and the schema, and the real credentials and endpoints are the engagement's to
+obtain. 🟢 Stated here because nothing in the licence, the liveness or the star count
+would ever have surfaced it: only reading the payload does.
+
 ## Assessment, integrity and learning analytics
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
@@ -124,6 +153,42 @@ permissive ones are `falkenslab/moodle-mcp` (Node) and `G36maid/moodle-mcp` (Rus
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | K-12 teacher skill pack |
 | agent-skills | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | Education agent skills from Learning Commons |
 | evaluators | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **MIT for code**, stated in `LICENSE.md` prose | `main/LICENSE.md` | not re-derived | North America | Evaluators for educational AI output. 🟡 Split grant — the file is a licensing *statement*, not a stock licence |
+
+## 🆕 LATAM-origin agents — this base's first shelvable tier from the region
+
+🟢 **New tier, `p358`, and it ends a three-pass absence.** `p356` called the LATAM hole a
+supply gap, then refined it to a **tooling** gap; `p357` ran no LATAM leg at all and said
+so. 🟢 **Both diagnoses were wrong, and the correction is in the next section: the tooling
+exists in volume. Almost none of it is licensed.** These are the rows that are.
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| 🆕 TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | MIT (`LICENSE`, holder *Grupo Sirius*, 2026) | `main/LICENSE` | not re-derived | **LATAM** (Colombia) | 🟢 **The best-placed LATAM row on this base.** Autonomous tutor agent for **rural** higher education in Risaralda, built at Universidad Tecnológica de Pereira — **integrated inside Open edX**, Claude API as the language engine, TTS replies, animated avatar, teacher statistics panel, context persisted across sessions. Ships against real courses: Programación I (Python) and Introducción a la Matemática |
+| 🆕 OpenPiar | [Dramoscuello/openpiar](https://github.com/Dramoscuello/openpiar) | **AGPL-3.0** (`LICENSE`) | `main/LICENSE` | not re-derived | **LATAM** (Colombia) | Manages the **PIAR** — *Plan Individual de Ajustes Razonables* — for students with disabilities or specific learning disorders, and emits the documents Colombian law requires. An AI pedagogical assistant proposes DUA adjustments from the student profile, the institution's PEI, the subject and the teacher-declared barriers. 🔴 Network copyleft |
+| 🆕 OpenTest | [Riskbreaker2077/open-test](https://github.com/Riskbreaker2077/open-test) | MIT (`LICENSE`, holder *Camilo Moreno*, 2026) | `main/LICENSE` | not re-derived | Not placed (Spanish-language) | Classroom assessment on a **local server with no internet**: the teacher runs it on a laptop, tablets join over the school intranet, and **every student gets a different paper** — questions drawn at random from a shared bank, answer options shuffled. Node ≥22, `better-sqlite3`, vanilla JS, Windows installer, v1.8.1 |
+
+🟢 **`OpenPiar` is the most regulation-grounded row on this entire base.** Its `readme`
+cites the instruments it implements — **Decreto 1421 de 2017** (which makes the PIAR
+mandatory for educational provision to people with disabilities), **Ley 2216 de 2022**
+(inclusive education for specific learning disorders — dyslexia, ADHD, dyscalculia) and
+**Decreto 1860 de 1994**. 🔵 That is the shape a public-sector engagement can actually be
+sold against: not "AI for inclusion" but *the document this decree obliges you to
+produce*. 🔴 Its AGPL-3.0 means the engagement deploys it for the client rather than
+folding it into a product.
+
+🔴 **A filename defect on the same row, in the class this base already tracks.** Its
+README is at **`readme.md`**, lower-case, and `README.md` **404s**. That is the
+`COPYING.txt` / `license.txt` lesson from `repos/foundations.md` one file over: a
+successor whose reader assumes `README.md` will publish this project as undocumented
+when it is the best-documented LATAM row here.
+
+🟡 **`OpenTest` is deliberately left unplaced.** Its documentation, its UI and its
+`LICENSE` holder are Spanish; no institution domain, national curriculum or
+timezone evidence places it, and Spanish-language is **not** evidence of LATAM over
+Spain. 🔴 A first attempt to place it by grepping country and curriculum markers
+returned `9 × "men"` and `2 × "sep"` — both **substring hits inside ordinary Spanish
+words**, not references to Colombia's MEN or Mexico's SEP. The instrument was wrong
+before the answer was; the row stays `Not placed`.
 
 ## 🆕 Memory and scheduling agents — the layer that decides *when*, not *what*
 
@@ -368,6 +433,12 @@ that turned out to be usable.
 | 🆕 [mrgutierrezmario/lecture-note-app](https://github.com/mrgutierrezmario/lecture-note-app) | a self-hosted Whisper + AI-notes lecture platform, FastAPI/React/Postgres/Docker | 🔴 **PolyForm Noncommercial 1.0.0** (`main/LICENSE`) | **Not OSI open source.** Study, research, charities and hobby use only; *"commercial use requires a separate license from the copyright holder."* The most capable row in the lecture-capture leg and the one a paid engagement cannot touch |
 | 🆕 [foradian/fedena](https://github.com/foradian/fedena) | a vendor comparison in this pass's leg states Fedena is **Apache-2.0**, Ruby on Rails | 🔴 **no grant, and no tree** — live on `master`, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `license.txt`, `LICENCE`, `LICENSE-MIT`, `README.md` and `Gemfile` **all 404** | **The Apache-2.0 claim is unverifiable at this address.** The repository resolves but serves nothing at any standard path. 🔵 Published as a refutation so no successor promotes the comparison's claim into a row |
 | 🆕 [naiayti/TeachingKG](https://github.com/naiayti/TeachingKG) | cited from a *Semantic Web* journal paper on educational knowledge graphs | 🔴 **no licence file** — live on `main` with a README and no grant at any of eight probed paths | **All rights reserved.** Schema covers courses, skills, prerequisites and learning goals, and none of it can be used. 🔵 Peer-reviewed provenance is not a grant |
+| 🆕 [GSU-CETLOE/lti1p3Library-php](https://github.com/GSU-CETLOE/lti1p3Library-php) | stock MIT at `main/LICENSE`, published by a **university** (Georgia State CETLOE) | 🟡 **MIT whose holder line is the unfilled template**: `Copyright (c) 2026 [Your Name / Organization]` | **Family certain, licensor absent.** Covers the LTI 1.3 tool side — Deep Linking 2.0, AGS, NRPS, framework-agnostic — so it is *technically* the cleanest small LTI library found this pass. 🔴 There is nobody to attribute, and attribution is MIT's only condition. Second instance of this class after `lebmatter/exampro` |
+| 🆕 [oat-sa/lib-lti1p3-deep-linking](https://github.com/oat-sa/lib-lti1p3-deep-linking) | an **IMS-certified** LTI 1.3 Deep Linking library from the OAT/TAO assessment vendor | 🔴 **GPL-2.0** (`master/LICENSE`, *"Version 2, June 1991"*) | **Strong copyleft on a library** — worse for an engagement than the LGPL it is easy to mistake for. Certification is a conformance claim, not a grant. Reach TAO over a protocol boundary or use a permissive LTI library instead |
+| 🆕 [blackboard/BBDN-LTI-Tool-Provider-Node](https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node) | a reference LTI tool provider in the **Blackboard** GitHub organisation | 🔴 **no grant** — live on `master`, nothing at any probed path | **All rights reserved.** 🔵 The hazard here is *provenance*: a repository under a named LMS vendor's org reads as the safest thing in the leg, and a vendor sample with no `LICENSE` is exactly as unusable as a student project with none |
+| 🆕 [mthatipamula/educational-assessment-ai-agent-platform](https://github.com/mthatipamula/educational-assessment-ai-agent-platform) | the most complete K-12 assessment architecture in this pass's legs — standards-aligned item authoring with RAG and self-review, rubric scoring with human review, tutoring agent with persistent memory, sandboxed code grading, evals and observability | 🔴 **no grant** — live on `main`, nothing at any probed path | **All rights reserved.** 🔵 Named because its *architecture* is worth reading as a reference even where its code cannot be used — it is the shape `compose/patterns.md` already recommends, published by someone else and unusable |
+| 🆕 [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | a Google Classroom MCP server covering assignment creation, rosters and grading | 🔴 **no grant** — live on `master`, nothing at any probed path | **All rights reserved.** 🔴 Keeps the Google Classroom tier at exactly one usable row (`sandraschi/classroom-mcp`, MIT) despite two addresses existing |
+| 🆕 [Samkarya/online-exam-questions](https://github.com/Samkarya/online-exam-questions) | an open JSON item bank with a schema, LaTeX and Markdown support | 🟡 **stock MIT text whose copyright line appends a contradiction**: `Copyright (c) 2025-2026 Samkarya. All rights reserved.` | 🟡 **Read the grant, not the slogan.** MIT's operative text grants the permissions regardless of the reserved-rights phrase, and the contradiction is almost certainly boilerplate drift — but it is the author's own sentence against the author's own licence, and a client's counsel will ask. Cheap to get clarified before use |
 
 ## 🔴 🆕 A new anomaly class: the grant is valid, the *licensor* is somebody else
 
@@ -415,6 +486,53 @@ holder names a different repository's owner. 🟡 Only `canvas-mcp` was checked 
 pass — the class is established, its extent is not measured, and this base does not
 guess at it.
 
+## 🟢 `ACTION ZZ-bc` discharged — and it never needed the index it was registered against
+
+`p357` found that [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp)
+is a copy of `vishalsachdev/canvas-mcp` whose own `LICENSE` names the upstream owner,
+and registered **`ZZ-bc`**: *on the next pass with an index, compare `LICENSE` copyright
+holders across every row sharing a slug stem.*
+
+🟢 **`p358` has no index and discharged it anyway, because the copyright holder is a field
+on the payload channel.** The `LICENSE` file carries it, `raw.githubusercontent.com`
+serves it, and it never required search. 🔵 **That is the transferable lesson:** `ZZ-bc`
+sat one pass waiting on an instrument it did not need. A successor registering an action
+should name **the field it has to read**, not the channel that happened to be shut.
+
+Seven rows sharing a slug stem, holder read from the payload:
+
+| Row | Holder in its own `LICENSE` | Verdict |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | Vishal Sachdev, 2025 | 🟢 self-consistent — **upstream** |
+| [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) | **Vishal Sachdev**, 2025 | 🔴 names another repository's owner — **copy** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | Christian Bru, 2026 | 🟢 self-consistent — **upstream** |
+| [`algorithm0r/canvas-lms-mcp`](https://github.com/algorithm0r/canvas-lms-mcp) | **Christian Bru**, 2026 | 🔴 names another repository's owner — **copy, newly found** |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | AnonymousOnyx22, 2026 | 🟢 self-consistent |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | Falkenslab, 2026 | 🟢 self-consistent |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | G36maid, 2026 | 🟢 self-consistent |
+
+🟢 **The holder field predicted a stale fork in two cases out of two.** Both copies were
+then measured against their upstreams from the README payload, and both are behind:
+
+| Upstream | Tools | Copy | Tools | Copy is behind by |
+|---|---:|---|---:|---:|
+| `vishalsachdev/canvas-mcp` | **126** | `NelsonSpencer/canvas-mcp` | 99 | **27 tools** |
+| `bruchris/canvas-lms-mcp` | **183** | `algorithm0r/canvas-lms-mcp` | 165 | **18 tools** |
+
+🔵 **So the divergent-holder test is worth keeping as a standing check, and this is the
+argument for it.** Nothing in the *licence* separates these rows — all four are MIT, live
+and verifying. Nothing in the *description* separates them either:
+`algorithm0r/canvas-lms-mcp` and `bruchris/canvas-lms-mcp` publish the **same sentence**
+about reading courses, assignments, submissions, rubrics and quizzes. The holder field is
+the only cell that separates upstream from copy, and in both cases the copy costs an
+engagement that vendors it real capability — 27 tools, then 18.
+
+🟡 **The class is now established on two instances and its extent is still unmeasured.**
+Seven rows were compared, not the whole shelf, and the comparison only reaches rows that
+*share a slug stem* — a copy that renames itself is invisible to it. Registered as
+**`ACTION ZZ-be`**: implement the holder comparison as a gate over every published row,
+keyed on the holder string rather than the slug, so a renamed copy is caught too.
+
 ## 🔴 One carried row is off-domain and should not be on an education shelf
 
 [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything)
@@ -424,6 +542,97 @@ first-hand this pass, it is **a plugin for AI coding tools that maps a codebase 
 document set into an interactive graph** — a developer comprehension tool. It is not
 an education agent, and its star count has been inflating this shelf's apparent
 education supply. Recorded here as a correction rather than deleted silently.
+
+## 🟢 What changed on `p358` — the LATAM gap is a **licensing** gap, and it is now measured
+
+🔵 **`p358` had no GitHub index either** (third consecutive pass). Discovery ran on web
+search aimed at `github.com` with **function words**; verification ran on the usual
+`ls-remote` + payload pair. 🟢 **Thirty-five addresses probed first-hand, not one star
+measured.**
+
+| What | Count |
+|---|---:|
+| addresses probed first-hand | **35** |
+| 🟢 live on `git ls-remote --symref` | **32** |
+| 🔴 dead — published as refutations, not rows | **3** |
+| grants read from the payload | **17** |
+| 🔴 live with **no grant at any probed path** | **15** |
+| 🟢 new rows published | **10** |
+| 🔴 new licence-flag rows | **6** |
+| 🟢 carried rows re-probed for `ZZ-bc` | **7** |
+
+### 🔴 The finding: three passes have mis-named the LATAM gap, and the payload channel says what it actually is
+
+`p356` called it a supply gap, then refined it to a **tooling** gap — *"Spanish-language
+assessment content exists in volume; what does not exist is a Spanish-language item bank,
+autograder or judge."* `p357` ran no LATAM leg and said so plainly.
+
+🟢 **`p358` ran sixteen LATAM addresses through the payload channel and the tooling is
+there.** An item bank for Colombia's Saber Pro, a BNCC-aligned municipal assessment
+platform, four ENEM platforms, an n8n autograder with RAG over open answers, a Mexican
+*Nueva Escuela Mexicana* school platform, a PAES preparation platform for Chile, a
+Socratic tutor agent, a programming-education platform with an AI tutor. 🔴 **Of the
+thirteen that are live, three carry a licence.**
+
+| Leg | Live addresses | Grant read from payload | Grant rate |
+|---|---:|---:|---:|
+| 🔴 **LATAM (Spanish / Portuguese)** | **13** | **3** | 🔴 **23 %** |
+| 🟢 Everything else this pass (LTI, MCP, assessment, Africa) | **19** | **14** | 🟢 **74 %** |
+
+🔴 **So the gap is not supply and not tooling. It is licence hygiene**, and the ten
+unlicensed live addresses are these: `DVLASZ/banco-preguntas-saberpro` (Saber Pro item
+bank), `Jairh1294/Auto-Grader` (🔴 **a search snippet in this pass's leg states it is
+MIT; the payload says there is no grant at any path** — the claim is refuted, not
+carried), `joao-paulo-yudi/StudyENEM`, `quero-edu/100-questoes-enem`,
+`Doutii/enem_online`, `MarcioMoJr/HelpEnem-`, `juanseisaacs/walter.Ia` (Colombian MEN
+curriculum, ages 5–10), `helmerpersonal-escuela/nemia-escolar` (Mexico, Nueva Escuela
+Mexicana), `leoparoli/EduCode`, `BrayanG877/ia-educativa-reto`. 🔵 Every one is
+**all rights reserved** until its author adds a file.
+
+🟢 **Why this is a better finding than "nothing found", and what an engagement does with
+it.** Three consequences, none of which follow from a supply gap:
+
+1. 🟢 **The absence is cheap to fix and the fix is not Globant's to make.** A supply gap
+   needs a build; a missing `LICENSE` needs one file from an author who already published
+   their work publicly and plainly intends it to be used. For a LATAM engagement that
+   wants `banco-preguntas-saberpro`'s item bank, **asking is a real option** and costs an
+   email.
+2. 🔴 **Until then the shape of the risk inverts.** A copyleft row is usable with care; an
+   unlicensed row is usable not at all, and it is the *more* dangerous kind because
+   nothing on the landing page says so. 🔵 This base has recorded that hazard eight times
+   on other shelves (`CBIT-AiExam-plus`, `fedena`, `TeachingKG`…); what is new is that in
+   one region it is **the majority case**.
+3. 🟢 **The three licensed rows carry the region.** `TutorIA` (MIT, inside Open edX),
+   `OpenPiar` (AGPL-3.0, Colombian inclusion law) and `OpenTest` (MIT, offline LAN
+   assessment) are the LATAM tier above, and the market note on `intel/market.md` places
+   them against the region's own adoption numbers.
+
+🟡 **What this pass did not establish.** Sixteen addresses is not a census, the legs ran
+in Spanish and Portuguese only, and **no comparable count exists for any other region's
+native-language supply** — the 74 % comparator is this pass's *English-language* legs,
+which is a different population and not a controlled one. 🔵 The 23 %/74 % split is a
+real measurement of two samples and **not** evidence that LATAM authors license less
+carefully than authors elsewhere; it could as easily reflect project age or venue.
+Registered as **`ACTION ZZ-bf`**: run the same function-word legs in a third language
+(German, French, Hindi or Mandarin) and compare the grant rate before anyone treats
+licence hygiene as a regional property.
+
+### 🟢 EMEA gains its first African rows, and the closed vocabulary is why that needed saying
+
+🔴 **Every EMEA row on this base before this pass was European** — Belgium ×2, Germany,
+Italy, Spain, UK, Portugal, Switzerland. 🔵 `region` is a closed five-value field, so
+**Kenya is EMEA**: the *A* in the acronym has been carrying nothing. `elimu-mcp` (Kenya's
+national education system over MCP) and `Moha-abshir/SMS` (a Kenyan CBC school management
+system, MIT — see `verticals/solutions.md`, where it bears directly on this base's
+"no permissive education ERP" finding) are the region's first two.
+
+🔴 **The Gulf and MENA leg returned no open-source supply and that is recorded as a
+measured absence.** The leg returned a real and well-documented market — **Alef
+Education** reaching 33 000 students across 28 UAE private schools (February 2026) and
+25 000 educators trained in seven weeks with Microsoft through the Ministry of Education,
+ADEK, KHDA and SPEA — and **not one open repository**. 🟢 That is a commercial-incumbent
+finding, not a supply finding, and it belongs on `intel/market.md`; on this shelf it is
+an absence with a named cause.
 
 ## 🟢 What changed on `p357` — a weaker discovery channel, and two tiers `p356` could not reach
 
@@ -528,13 +737,30 @@ by guessing from a name.
 over an inherited sentence — which is `gate-census-currency`'s discipline applied to a
 distribution rather than to an address count:
 
-| Region | Placed rows on this shelf | Change on `p357` |
+| Region | Placed rows on this shelf | Change on `p358` |
 |---|---:|---|
 | **APAC** | **21** | — |
-| EMEA | **7** | 🟢 +1 — `oak-curriculum-ontology` |
+| EMEA | **8** | 🟢 **+1 — `elimu-mcp` (Kenya): the region's first AFRICAN row** |
 | North America | 6 | — |
-| **LATAM** | **2** | 🔴 — |
-| 🔵 Not placed | **35** | +8 |
+| **LATAM** | **4** | 🟢 **+2 — `TutorIA`, `OpenPiar` (both Colombia): the first LATAM rows added since `p350`** |
+| 🔵 Not placed | **38** | +3 — `OpenTest`, `gradescope-mcp`, `Canvas-Agent` |
+
+🟢 **`ACTION ZZ-bd` discharged, and it caught this pass's own first draft.** `p357`
+registered it after noticing that a census counting every table with a `Region` column
+**counts the distribution table too** — its first column holds the five region names, so
+each bucket gains exactly one. 🟢 `p358` implemented the guard as written: the census
+skips any table whose `Region` header sits in **column 0**. It reports
+`rows excluded by the ZZ-bd self-table guard: 5` — the trap `p357` predicted, sprung and
+caught.
+
+🔴 **And the derivation corrected a figure this pass had already written down.** The
+first draft of the table above claimed **EMEA 9, +2**, counting `elimu-mcp` *and*
+`Moha-abshir/SMS`. The census says **8**: `Moha-abshir/SMS` is a platform row and lives on
+`verticals/solutions.md`, not on this shelf, and *"placed rows on this shelf"* does not
+reach it. 🔵 That is `ACTION ZZ-aw`'s class caught in the act — a distribution asserted
+from memory of what the pass did, rather than derived from the file it describes — and
+the only reason it did not ship is that `ZZ-bd`'s instrument was built before the table
+was trusted.
 
 🔴 **A defect in this base's own instrument, found while deriving the table above and
 published because it would have survived another pass.** A census script that counts
@@ -555,8 +781,11 @@ distribution shift does not move five buckets by one each. Registered as
   from 11 one pass ago. China, Hong Kong, India, Korea, Bangladesh and Iran all have
   first-party education software, and the eight rows added this pass are *infrastructure*
   (item banks, judges, graders), not demos.
-- **EMEA** holds **7**, concentrated in university assessment tooling (Belgium ×2,
+- **EMEA** holds **8**, concentrated in university assessment tooling (Belgium ×2,
   Germany, Italy, Spain, UK), and gains Iran and Portugal on `repos/foundations.md`.
+  🟢 **`p358` changes the region's composition, not just its count:** every prior EMEA
+  row is European, and `elimu-mcp` (Kenya) is the first African one. EMEA's *A* had been
+  carrying nothing on this shelf for 357 passes.
   🟢 **`p357`'s addition changes the region's character, not just its count:** every
   prior EMEA row is *assessment* software, and
   [`oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) is
@@ -567,9 +796,16 @@ distribution shift does not move five buckets by one each. Registered as
   rows while the tables underneath it carried **5**. `p356` adds `edx-proctoring`, so
   the published figure is now 6 *and true*; it was off by one before. Nothing binds a
   **distribution** stated in prose, which is `ACTION ZZ-aw`'s shape on a third quantity.
-- 🔴 **LATAM still places 2** rows — `mcp-brasil` and `bncc-dados`, both Brazil, both
-  MIT — **and `p357` did not run a LATAM supply leg, so it adds no evidence either
-  way.** 🔵 Stated plainly because an unchanged number across two passes looks like a
+- 🟢 **LATAM now places 4** rows — `mcp-brasil` and `bncc-dados` (Brazil, both MIT),
+  joined on `p358` by `TutorIA` (MIT) and `OpenPiar` (AGPL-3.0), **both Colombia**. The
+  region doubles, and for the first time it holds a *tutoring agent* and a
+  *statutory-compliance* tool rather than only public-data connectors.
+  🔴 **The paragraphs below are `p356`'s and `p357`'s reading of this gap, and `p358`
+  refutes the diagnosis in both of them** — the gap is licence hygiene, not supply and
+  not tooling. See *"What changed on `p358`"* above for the 23 %/74 % measurement. They
+  are kept rather than deleted because the sequence of wrong names for this gap is
+  itself the record.
+- 🔵 *`p356`/`p357` on the same gap, superseded:* 🔵 Stated plainly because an unchanged number across two passes looks like a
   re-confirmation and is not one: `p356`'s function-word leg is the last measurement of
   this gap, and it stands unrepeated, not re-verified.
   🔴 **This pass ran the LATAM leg a new way and it still returned nothing shelvable,

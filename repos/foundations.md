@@ -6,12 +6,18 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-**Pass 357 · 2026-10-21.** The systems an education engagement starts *from*, rather
+**Pass 358 · 2026-10-21.** The systems an education engagement starts *from*, rather
 than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
 and default branch via `git ls-remote --symref`, licence **read from the payload**.
-🔴 `p357` had **no authenticated GitHub index** (its credential is scoped to one
-unrelated repository), so it measured no stars and discovered by web search; liveness
-and grant verification are unchanged. See `agents/top.md` for the channel state.
+🔴 `p358` had **no authenticated GitHub index** either — third consecutive pass, same
+cause (a credential scoped to one unrelated repository) — so it measured no stars and
+discovered by web search aimed at `github.com` with **function words**. Liveness and
+grant verification are unchanged. See `agents/top.md` for the channel state.
+
+🟢 **`p358` went deep on one tier: LTI 1.3.** It is the tier this shelf calls "the
+cheapest place to start", and it had seven rows against a standard with four distinct
+services. Eight more addresses were probed; **four are promoted, three are flagged, and
+one is dead weight that looks alive.**
 
 **Read the default-branch column.** Education infrastructure is old software. Of the
 grants on this shelf, a large share live on `master`, `develop`, `release` or a
@@ -62,6 +68,54 @@ to start.
 | CACCL (Canvas app framework) | [harvard-edtech/caccl](https://github.com/harvard-edtech/caccl) | **MIT** | `main/LICENSE.md` | not re-derived | North America |
 | ltiauthenticator | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause | `main/LICENSE` | **73** | North America |
 | Caliper analytics spec | [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS specification licence — NOT OSI** | `master/LICENSE.md` | not re-derived | North America |
+| 🆕 lti-core (LTI 1.3, TypeScript) | [iamlucasb/lti-core](https://github.com/iamlucasb/lti-core) | **MIT** (holder *Lucas Bossard*, 2026) | `main/LICENSE` | not re-derived | Not placed |
+| 🆕 Ltix (LTI 1.3, **Elixir**) | [DecoyLex/ltix](https://github.com/DecoyLex/ltix) | **MIT** (holder *Alex Wilson*, 2025) | `main/LICENSE` | not re-derived | Not placed |
+| 🆕 lti-node-library | [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | **MIT** (holder *San Diego Code School*, **2019**) | `master/LICENSE` | not re-derived | North America |
+| 🆕 ltijs — **fork** | [edugatorlabs/ltijs](https://github.com/edugatorlabs/ltijs) | Apache-2.0 | `master/LICENSE` | not re-derived | Not placed |
+
+### 🟢 Choosing an LTI library is a four-way decision, and this pass can finally make it
+
+🔵 **The standard is not one thing.** "LTI 1.3 support" can mean the OIDC launch alone,
+or it can include **Deep Linking** (the tool puts content back into the LMS course),
+**AGS** (the tool writes grades) and **NRPS** (the tool reads the roster). A library that
+does launches only cannot submit a grade, and that is the capability an education
+engagement almost always needs.
+
+| Library | Runtime | Grant | Beyond launch | When to reach for it |
+|---|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Node | Apache-2.0 | Deep Linking, grades, roles | 🟢 **The default.** The most complete permissive tool provider on this shelf. 🟡 Its README describes v7 as a full rewrite — pin a version |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | Python | MIT | Deep Linking, AGS, NRPS | 🟢 The default when the agent is Python, which on this base it usually is |
+| 🆕 [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) | TypeScript, framework-agnostic | MIT | Deep Linking **2.0**, JWKS | 🟢 When the deliverable is typed end-to-end. 🟡 **RS256 keys only**, and its own docs say the library *"never decides who may configure content"* — the tool must enforce that authorisation itself |
+| 🆕 [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) | **Elixir** | MIT | Deep Linking + other Advantage services | 🔵 Narrow but genuinely new ground: the first BEAM-runtime LTI row on this base. Relevant where a client already runs Phoenix |
+| 🆕 [`SanDiegoCodeSchool/lti-node-library`](https://github.com/SanDiegoCodeSchool/lti-node-library) | Node | MIT (2019) | 🔴 **none** — its README states NRPS and Deep Linking are **not supported** | 🔴 **Launch-only, and seven years old.** Published as a row so a successor finding it in the same leg does not mistake it for an alternative to `ltijs` |
+
+🔴 **Two LTI addresses in this pass's leg are on the flag table instead, and neither for
+a reason the landing page shows.**
+[`GSU-CETLOE/lti1p3Library-php`](https://github.com/GSU-CETLOE/lti1p3Library-php) is the
+cleanest *small* library found — tool-side Deep Linking 2.0, AGS and NRPS, no framework
+dependency, published by a university — and its MIT holder line is the **unfilled
+template**, `Copyright (c) 2026 [Your Name / Organization]`. There is nobody to
+attribute, and attribution is MIT's only condition.
+[`oat-sa/lib-lti1p3-deep-linking`](https://github.com/oat-sa/lib-lti1p3-deep-linking) is
+**IMS-certified** and **GPL-2.0**.
+
+🔴 **An instrument defect in this pass, published because the error ran in the safe
+direction only by luck.** `p358`'s probe first classified the OAT library as **LGPL**.
+The payload's first line is `GNU GENERAL PUBLIC LICENSE / Version 2, June 1991` — it is
+GPL-2.0 — and the misread happened because **GPL-2.0's own preamble names the Lesser
+GPL** (*"use the GNU Lesser General Public License instead"*), which a grep ordered to
+test for "LESSER" before "GENERAL" matches first. 🔵 The consequence is the wrong
+direction for an engagement: on a **library**, LGPL permits dynamic linking and GPL-2.0
+does not, so a false LGPL **understates** copyleft reach on exactly the component type
+where the distinction decides the architecture. Fixed by reading the version line rather
+than the preamble, and recorded as **`ACTION ZZ-bg`**: any payload classifier on this
+base must key on the licence's **title and version line**, never on a keyword that can
+appear in another licence's prose.
+
+🟡 **`edugatorlabs/ltijs` is a fork of `Cvmcosta/ltijs`, same Apache-2.0 grant.** Apache
+boilerplate carries no holder field, so the `ZZ-bc` holder test cannot separate fork from
+upstream here — 🔵 a measured limit of that test, not a result: **the divergent-holder
+check works on MIT and BSD rows and is blind to Apache ones.** Use `Cvmcosta/ltijs`.
 
 ## Assessment, integrity and accessibility
 
@@ -418,14 +472,30 @@ older than the conventions the tooling assumes.** Published as `T13`.
 🟢 **Derived as the last act before the commit, and it corrects the sentence it
 replaces.**
 
-| Region | Placed rows (`p357`) | `p356` published | `p355` published |
+| Region | Placed rows (`p358`) | `p357` published | `p356` published |
 |---|---:|---:|---:|
-| **North America** | 19 | 19 | 🔴 11 |
-| **EMEA** | 16 | 16 | 🔴 12 |
-| **APAC** | **12** | 11 | 🔴 2 |
-| Global | 7 | 7 | 🔴 6 |
-| 🔵 Not placed | 11 | 11 | — |
+| **North America** | **20** | 19 | 19 |
+| **EMEA** | 16 | 16 | 16 |
+| **APAC** | 12 | 12 | 🔴 11 |
+| Global | 7 | 7 | 7 |
+| 🔵 Not placed | **14** | 🔴 11 | 🔴 11 |
 | **LATAM** | 🔴 **0** | 0 | 0 |
+
+🟢 **Derived on `p358` with the `ZZ-bd` guard actually implemented**, not merely
+registered: the census skips any table whose `Region` header sits in column 0, and
+reports `rows excluded by the ZZ-bd self-table guard: 6` — the exact six-row inflation
+the paragraph below predicted for this file. 🟢 `p358`'s four additions move
+`North America 19 → 20` (`SanDiegoCodeSchool/lti-node-library`) and
+`Not placed 11 → 14` (`lti-core`, `ltix`, `edugatorlabs/ltijs`).
+
+🔴 **LATAM is still a hard zero on this shelf, and `p358` is the first pass that can say
+why rather than that it is.** This pass ran sixteen LATAM-origin addresses and found the
+tooling exists; **three of thirteen live ones carry a licence**, and all three are agents
+or applications rather than *foundations* — a tutor inside Open edX, a statutory PIAR
+manager, an offline test runner. 🔵 So the zero here is not the same finding as the zero
+on `agents/top.md` was: there is **no LATAM-origin LMS, SIS, interop library or judge** on
+this shelf because none was found licensed, and the full measurement is on
+`agents/top.md` under *"What changed on `p358`"*.
 
 🟢 **`p356`'s figures reproduced exactly on `p357`'s independently-written census
 script**, and the only movement is `APAC 11 → 12` from this pass's one addition

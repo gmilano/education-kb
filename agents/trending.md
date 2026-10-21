@@ -3,6 +3,174 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+## 2026-10-21 · Pass 358 — **the LATAM gap is a LICENSING gap, measured at 23 % against 74 %.** `ACTION ZZ-bc` discharged without the index it was registered against, and a second stale copy found by its copyright holder
+
+🔴 **Channel note, unchanged and still a downgrade.** `git ls-remote` **OPEN** ·
+`raw.githubusercontent.com` **OPEN** · 🔴 **authenticated search index CLOSED for the
+third consecutive pass** — the credential is scoped to one unrelated repository
+(`gmilano/globant-kb`) · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*`
+**403** · 🔴 `codeload` **403**. 🟢 **Consequence stated before any row: this pass can
+prove a row is live and correctly licensed and cannot measure a single star.** Every
+`p358` row reads `not re-derived`.
+
+🟢 **`p358` found a discovery channel that works without the index.** `p355` established
+that on an index a **topic intersection** is a channel and a prose phrase is not. The
+analogue without one is to point web search **at `github.com`** and give it **function
+words** — `banco de preguntas`, `correção automática`, `LTI 1.3 deep linking`,
+`rubric grading MCP`, `school management offline`. Prose legs returned listicles again,
+as they have since `p343`. 🟢 The domain-restricted function legs returned **35
+addresses, 32 live, 17 grants read from the payload, 10 new rows, 6 new licence flags.**
+
+### 🔴 The headline: three passes named the LATAM gap wrong, and the payload channel says what it is
+
+`p356` called it a supply gap, then a **tooling** gap — *"what does not exist is a
+Spanish-language item bank, autograder or judge."* `p357` ran no LATAM leg and said so.
+
+🟢 **It exists.** Sixteen LATAM addresses probed: a Saber Pro item bank (Colombia), a
+BNCC municipal assessment platform, four ENEM platforms, an n8n autograder doing RAG over
+open answers, a *Nueva Escuela Mexicana* school platform, a PAES platform for Chile, a
+Socratic tutor agent, a programming-education platform with an AI tutor. **Thirteen are
+live. Three carry a licence.**
+
+| Leg | Live | Grant read from payload | Grant rate |
+|---|---:|---:|---:|
+| 🔴 **LATAM (Spanish / Portuguese)** | **13** | **3** | 🔴 **23 %** |
+| 🟢 Everything else this pass | **19** | **14** | 🟢 **74 %** |
+
+🔴 **The gap is licence hygiene.** Ten live LATAM addresses are **all rights reserved**
+until an author adds one file — `banco-preguntas-saberpro`, `Auto-Grader` (🔴 a snippet
+in this pass's leg calls it MIT; **the payload says no grant at any path**),
+`StudyENEM`, `100-questoes-enem`, `enem_online`, `HelpEnem-`, `walter.Ia`,
+`nemia-escolar`, `EduCode`, `ia-educativa-reto`. 🟢 **That is a better finding than
+"nothing found" because the fix is one file and it is not Globant's to make**: for a
+LATAM engagement wanting that Saber Pro item bank, asking costs an email. Three rows did
+carry a grant and they are the new LATAM tier: **`LabSirius/TutorIA`** (MIT, Colombia,
+inside Open edX, Claude-driven, rural higher ed at UTP), **`Dramoscuello/openpiar`**
+(AGPL-3.0, Colombia, implements Decreto 1421/2017 and Ley 2216/2022) and
+**`Riskbreaker2077/open-test`** (MIT, offline LAN assessment, every student a different
+paper).
+
+🟡 **What this does not establish**, stated because the number is quotable and the
+inference is tempting: the 74 % comparator is this pass's **English-language** legs, a
+different and uncontrolled population. The split measures two samples; it is **not**
+evidence that LATAM authors license less carefully. Registered as **`ACTION ZZ-bf`** —
+run the same function-word legs in a third language before anyone treats licence hygiene
+as a regional property.
+
+### 🟢 `ACTION ZZ-bc` discharged, and it never needed the index it waited a pass for
+
+`p357` registered it as *"on the next pass with an index, compare `LICENSE` copyright
+holders across every row sharing a slug stem."* 🟢 **The copyright holder is a field on
+the payload channel** — `LICENSE` carries it, `raw.githubusercontent.com` serves it, no
+search required. Seven rows compared; **two copies name another repository's owner**, and
+both are measurably behind upstream:
+
+| Upstream | Tools | Copy (holder names upstream's owner) | Tools | Behind by |
+|---|---:|---|---:|---:|
+| `vishalsachdev/canvas-mcp` | **126** | `NelsonSpencer/canvas-mcp` | 99 | **27** |
+| `bruchris/canvas-lms-mcp` | **183** | 🆕 `algorithm0r/canvas-lms-mcp` | 165 | **18** |
+
+🔵 **The transferable lesson is about how an action is written, not about forks.** `ZZ-bc`
+sat one pass waiting on an instrument it did not need. A successor registering an action
+should name **the field it must read**, not the channel that happened to be shut.
+🟡 Extent still unmeasured — the test only reaches rows sharing a slug stem, and
+`edugatorlabs/ltijs` proved it is **blind to Apache-2.0 rows**, whose boilerplate carries
+no holder. Registered as **`ACTION ZZ-be`**: key the comparison on the holder string so a
+renamed copy is caught too.
+
+🟢 **And the payload beat the search index on a number this base publishes.** A snippet
+gave `vishalsachdev/canvas-mcp` as *"up to 102 tools"*; `p357` published **126** from the
+index; the README payload today says **"up to 126"**. 🟢 `p357` was right and **the
+search index is the stale channel** — recorded because the opposite conclusion was the
+cheaper one to reach.
+
+### 🟢 New rows this pass
+
+- **LATAM tier (new):** `LabSirius/TutorIA` · `Dramoscuello/openpiar` ·
+  `Riskbreaker2077/open-test`
+- **MCP tier:** 🆕 `Yuanpeng-Li/gradescope-mcp` — Gradescope, 34 tools, and 🟢 **every
+  write tool is preview-first, refusing to mutate without `confirm_write=True`**: the
+  first grading-capable row here whose safety argument is a *protocol* rather than a
+  capability ceiling · 🆕 `gabrielmahia/elimu-mcp` (Kenya's school registry, KCSE/KCPE,
+  HELB, TVET — 🔴 but its own README says *"demo data… not suitable for operational
+  decisions"* and *"pull requests are not accepted"*) · 🆕 `hughsibbele/Canvas-Agent`
+  (a sixth independent Canvas address — the platform is **over-supplied** on this tier,
+  which is itself the finding)
+- **EMEA gains its first AFRICAN rows after 357 passes.** Every prior EMEA row is
+  European; `region` is a closed five-value field, so **Kenya is EMEA** and the *A* in the
+  acronym had been carrying nothing.
+- 🔴 **The Gulf/MENA leg returned a market and no repositories**: Alef Education at
+  33 000 students across 28 UAE private schools (Feb 2026) and 25 000 educators trained in
+  seven weeks with Microsoft via the Ministry of Education, ADEK, KHDA and SPEA —
+  **zero open-source supply.** A commercial-incumbent finding, not a supply one.
+
+### 🔴 Two defects in this pass's own instruments, published because both would have survived
+
+1. **A licence misclassified in the unsafe direction.** The probe first called
+   `oat-sa/lib-lti1p3-deep-linking` **LGPL**. The payload reads `GNU GENERAL PUBLIC
+   LICENSE / Version 2, June 1991`. The misread came from grepping for "LESSER" before
+   the title line — and **GPL-2.0's own preamble names the Lesser GPL**. 🔴 On a
+   *library* the error runs the wrong way: LGPL permits dynamic linking, GPL-2.0 does
+   not, so a false LGPL **understates** copyleft reach exactly where it decides the
+   architecture. **`ACTION ZZ-bg`**: key any payload classifier on the title and version
+   line, never on a keyword that can appear in another licence's prose.
+2. **A distribution asserted instead of derived.** This pass's first draft of the
+   `agents/top.md` region table claimed **EMEA 9, +2**. The census says **8** —
+   `Moha-abshir/SMS` is a platform row on `verticals/solutions.md`, not on that shelf.
+   🟢 Caught only because `ACTION ZZ-bd` was implemented before the table was trusted:
+   the guard skips any table whose `Region` header sits in column 0 and reported
+   `excluded: 5` on `top.md` and `excluded: 6` on `foundations.md` — the self-counting
+   trap `p357` predicted, sprung and caught on both shelves.
+
+### 🟢 `ACTION ZZ-az` confirmed first-hand, and it is worse than registered
+
+`p356` registered it on the suspicion that `delivery-audit` — the target answering *"which
+rows did `evidence/` measure that no shelf ever offered?"* — is in no gate target. 🟢 Read
+from the `Makefile` this pass: it is declared in `.PHONY`, it has a recipe at line 501,
+its unit suite runs inside `gate-offline` — and **it is absent from `HOOK_GATES`**, so the
+audit itself never runs on a schedule. 🔴 **And its recipe ends `|| true`**, so even when
+invoked by hand it cannot fail. Two independent reasons it can never report anything;
+`ZZ-az` named one.
+
+### 🟡 Gate state — `make hooks` NOT RUN for the fourth consecutive pass, and what ran instead
+
+🟡 **Same cause as `p355`–`p357`:** the suite executes Python **from this clone**, and the
+harness running `p358` treats cloned content as untrusted and declines. 🟢 The contracts
+were checked instead by **independently written scripts kept outside the clone**, run with
+`python3 -I`, reading the shelves as data. Results, all green as the last act before the
+commit:
+
+| Check | Result |
+|---|---|
+| frontmatter well-formed, `industry: education`, `updated: 2026-10-21`, `region` within the five closed values — all 8 files | 🟢 **PASS** |
+| `intel/market.md` — exactly one `## Opportunities by region`, five `###` subsections, nothing outside the vocabulary | 🟢 **PASS** (`North America · EMEA · APAC · LATAM · Global`) |
+| no header or placeholder row shipped as data, all 8 files | 🟢 **PASS** |
+| 🟢 **`gate-grant-path` on this pass's cells** — every published `(repo, grant path)` resolves | 🟢 **15 / 15 → 200** |
+| 🟢 **`gate-enumeration` on this pass's absences** — every `no grant` claim enumerated over a 9-rung ladder | 🟢 **15 / 15 CONFIRMED, 135 probes, every rung 404** |
+| 🟢 every `github.com` address this pass added, re-probed by `ls-remote` | 🟢 **33 / 33 LIVE, 0 dead** |
+| `ZZ-bd` self-table guard | 🟢 **ACTIVE** — excluded 5 rows on `top.md`, 6 on `foundations.md` |
+
+🔵 **The enumeration control is the one worth reading.** `gate-enumeration` exists because
+*"a negative licence verdict is only a finding if the tree was enumerated"*, and this pass
+makes fifteen negative verdicts — ten of them the LATAM finding's whole evidence. All
+fifteen were re-probed over nine rungs each on the correct default branch: **135 probes,
+not one 200.** 🟢 So the 23 % grant rate rests on an enumerated absence, not on a single
+missing `LICENSE` lookup.
+
+🔴 **A false-positive rate worth recording, because it is this pass's third instrument
+defect.** The header-row check was written twice and both versions were wrong. The first
+flagged any table row whose cells are all label words — it fired on a **correctly declared
+header** (`| row | licence | note |`, separator present and valid). The second added a
+placeholder-cell rule and fired **8 times out of 8 on false positives**: column headers
+literally named *"Example"*, and rows in which this corpus **discusses** the placeholder
+anomaly class it tracks. 🟢 The rule that holds restricts the check to **entity tables** —
+those whose header declares a `Repo`/`Agent`/`Platform` column — because only those compile
+into typed rows. 🔵 **The lesson generalises to any gate on this base: a corpus that writes
+about its own defects will trip a lexical detector for those defects**, and the fix is to
+scope the detector to the structure that compiles, not to the words.
+
+---
+
 
 ## 2026-10-21 · Pass 357 — **`ACTION ZZ-bb` discharged: both of `p356`'s "empty" legs were full.** Nine new rows, two new tiers, and a new anomaly class — **the grant is valid and the licensor is somebody else**
 

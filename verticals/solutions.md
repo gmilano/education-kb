@@ -6,11 +6,18 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-**Pass 357 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+**Pass 358 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
 sense that Odoo is extensible for ERP or OpenMRS for healthcare. All verified first-hand
 **2026-10-21** (liveness + default branch via `git ls-remote --symref`, licence read
-from payload). 🔴 `p357` ran without an authenticated GitHub index, so it measured no
-stars; verification is unchanged.
+from payload). 🔴 `p358` ran without an authenticated GitHub index (third consecutive
+pass), so it measured no stars; verification is unchanged.
+
+🟢 **`p358` puts a crack in this shelf's most expensive finding.** `p357` established
+that **there is no permissive education ERP** and priced a closed admin deliverable as a
+build. That remains the guidance. 🟡 But it is no longer true that *every* row on the
+administration tier is copyleft — see `Moha-abshir/SMS` below, and read the
+qualification with it, because the exception is small and the rule still holds at the
+scale an engagement needs.
 
 The column that decides engagement shape is **Licence reach**: whether AI added on
 top can stay in a closed client deliverable, or whether the copyleft of the host
@@ -44,8 +51,43 @@ platform reaches it.
 | 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 (🔴 `docs/License.txt`) | 🟡 Module = derivative. **GPL-2.0, not 3.0** — do not assume GPL-3.0 compatibility | K-12 SIS with parent and teacher portals, gradebook, report cards and transcripts. The second mature K-12 SIS on this shelf alongside RosarioSIS, and a genuine alternative when a client needs portals rather than Spanish localisation |
 | 🆕 **FenixEdu Academic** | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | 🟡 LGPL — dynamic linking stays separate | **Higher-education** SIS from Instituto Superior Técnico, Lisbon: curricular plans, enrolment, degrees, theses. The HE counterpart to the two K-12 systems above, and the only European university SIS on this shelf |
 | 🆕 **ERPNext** | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** (🔴 `develop/license.txt`) | 🔴 **GPL-3.0 — strongest copyleft on this tier.** A custom app is a derivative; reach it over its **REST API**, not as a Frappe app | Full institution-wide ERP — finance, HR, procurement, assets — with an education module. Pairs with [`frappe/lms`](https://github.com/frappe/lms) for a single-vendor teaching-plus-administration stack. India-origin |
+| 🆕 **School Management System (SMS)** | [Moha-abshir/SMS](https://github.com/Moha-abshir/SMS) | 🟢 **MIT** (`main/LICENSE`, holder *Mohamed Abshir*, 2026) | 🟢 **None.** Fork into a closed deliverable | 🟢 **The first permissive administration row on this shelf.** Multi-role school management built for **Kenya's Competency-Based Curriculum (CBC)**: TypeScript 5.3, React 18, Node 20, Drizzle ORM, PostgreSQL 16, Tailwind. 🟡 Single-author and young — read the qualification below before it displaces `openeducat_erp` in a proposal |
 
-### 🔴 There is no permissive education ERP, and that is this pass's most expensive finding
+### 🟡 `p358`: there is now **one** permissive administration row, and it does not change the recommendation
+
+🟢 **`Moha-abshir/SMS` is real, live, and genuinely MIT** — holder *Mohamed Abshir*,
+2026, read from `main/LICENSE`. It is a multi-role school management system built
+against **Kenya's CBC**, on a current stack (TypeScript/React/Node/Drizzle/PostgreSQL).
+🟢 On the closed region vocabulary it is **EMEA**, and with `elimu-mcp` it gives that
+region its first African rows anywhere on this base.
+
+🔴 **A correction to this pass's own source before the row is used.** The search leg that
+surfaced it described a *"Flask + SQLite web app, Tkinter desktop app, Android app,
+M-Pesa payments, bilingual SMS, report card PDFs"* with 240 tests. 🟢 **Read first-hand,
+the README describes none of that** — no Flask, no Tkinter, no M-Pesa. The snippet had
+conflated this repository with a different Kenyan school-ERP project in the same leg.
+🔵 The lesson is the one this base keeps relearning: **a snippet describes a repository
+it has not opened**, and the payload is the only channel that settles it. Nothing was
+published from the snippet; the row above states only what the README states.
+
+🟡 **And it does not displace `openeducat_erp`.** The honest comparison:
+
+| | `openeducat_erp` | `Moha-abshir/SMS` |
+|---|---|---|
+| Licence | LGPL-3.0 | 🟢 **MIT** |
+| Scope | admissions, fees, timetabling, library, hostel, **plus the whole Odoo module ecosystem** | school management for one national curriculum |
+| Maturity | a vendor-backed product on Odoo | 🔴 **single author, 2026, no deployment evidence found** |
+| Fork into a closed deliverable | 🟡 LGPL reaches a fork | 🟢 **yes** |
+
+🟢 **So the guidance splits rather than flips.** For an institution-wide ERP,
+`openeducat_erp` remains the recommendation and `p357`'s "price it as a build" still
+holds — one young single-author system is not an ERP. 🟢 For a **narrow, K-12,
+school-administration deliverable that must stay closed**, `Moha-abshir/SMS` is now the
+first base on this shelf that permits it, and a Kenyan or East African engagement gets
+the curriculum alignment for free. 🔵 Registered as **`ACTION ZZ-bh`**: re-probe this row
+next pass for commit activity and contributor count before any proposal rests on it.
+
+### 🔴 `p357`: there is no permissive education ERP — the finding this pass qualifies
 
 🟢 **Every row on this tier is copyleft** — LGPL-3.0, GPL-2.0, GPL-3.0 — and the one
 permissive row (Learner Credential Wallet) is a credential wallet, not an
@@ -128,6 +170,10 @@ Pattern 9.
 | 🆕 CBIT-AiExam-plus | [reneverland/CBIT-AiExam-plus](https://github.com/reneverland/CBIT-AiExam-plus) | 🔴 **No grant at all.** The README carries an MIT badge; the `LICENSE` it links to **404s**, as do four other rungs. The most complete AI examination platform found this pass and it is all-rights-reserved until its author adds a file |
 | 🆕 MathCyclus (Lingxi) | [JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) | 🔴 **Grant exists only as a prose sentence in the README.** A claim, not a licence file — cheap for the author to fix and not safe to assume |
 | 🆕 Anti-proctoring tooling | [`Batlez/CloakBox`](https://github.com/Batlez/CloakBox) · `SunnyCOdet/ofradr` | 🔴 **Not education software.** Both are high-starred results in the `proctoring` leg and both exist to **defeat** exam monitoring. Named here so a successor running that leg does not mistake them for supply |
+| 🆕 ElewaSTEM | [ondinookello96/elewastem](https://github.com/ondinookello96/elewastem) | 🔴 **No grant at any probed path.** Offline-first multilingual AI STEM tutor targeting **16+ African languages** — the most interesting *shape* in the Africa leg and legally untouchable. Hackathon-origin, so its capability claims are also unverified |
+| 🆕 AI-CONNECT-AFRICA | [EccentricIvan/AI-CONNECT-AFRICA](https://github.com/EccentricIvan/AI-CONNECT-AFRICA) | 🔴 **No grant at any probed path.** Fully on-device learning platform (bundled Gemma 3 1B) for schools with no connectivity; updates ship by **USB drive or school LAN**. 🔵 Named because its *architecture* answers a real constraint this shelf cares about — see `Kolibri` (MIT) for the same constraint with a licence |
+| 🆕 nemia-escolar | [helmerpersonal-escuela/nemia-escolar](https://github.com/helmerpersonal-escuela/nemia-escolar) | 🔴 **No grant at any probed path.** Mexican school platform aligned to the **Nueva Escuela Mexicana** — planning, assessment, family communication. One of ten unlicensed LATAM addresses this pass measured; see `agents/top.md` |
+| 🆕 educational-assessment-ai-agent-platform | [mthatipamula/educational-assessment-ai-agent-platform](https://github.com/mthatipamula/educational-assessment-ai-agent-platform) | 🔴 **No grant at any probed path.** The most complete K-12 assessment architecture found this pass — RAG item authoring with self-review, rubric scoring with human review, sandboxed code grading, evals and observability. 🔵 Read it as a reference design; none of it can be used |
 
 ## 🟢 The permissive shortlist
 
@@ -143,13 +189,23 @@ Moodle App (Apache-2.0)
 **Credentials:** Learner Credential Wallet
 **Curriculum data:** 🆕 **oak-curriculum-ontology** (OGL-3.0 data + MIT code — 🟢 the
 only curriculum asset on this base with commercial use and **no** share-alike)
-**LMS connectors:** 🆕 **bruchris/canvas-lms-mcp** · 🆕 **G36maid/moodle-mcp** ·
-🆕 **AnonymousOnyx22/canvas-lms-student-mcp** · falkenslab/moodle-mcp (all MIT)
+**LMS connectors:** **bruchris/canvas-lms-mcp** · **G36maid/moodle-mcp** ·
+**AnonymousOnyx22/canvas-lms-student-mcp** · falkenslab/moodle-mcp ·
+🆕 **Yuanpeng-Li/gradescope-mcp** · 🆕 **hughsibbele/Canvas-Agent** ·
+🆕 **gabrielmahia/elimu-mcp** (Kenya — 🟡 read its DEMO-data caveat) (all MIT)
+**LTI 1.3 libraries:** 🆕 **iamlucasb/lti-core** (TypeScript) · 🆕 **DecoyLex/ltix**
+(Elixir) · ltijs · pylti1.3 · CACCL — 🔴 **never** `oat-sa/lib-lti1p3-deep-linking`
+(GPL-2.0) or `GSU-CETLOE/lti1p3Library-php` (MIT with no licensor named)
+**School administration:** 🆕 **Moha-abshir/SMS** (MIT — 🟡 single-author, Kenya CBC)
+**LATAM:** 🆕 **LabSirius/TutorIA** (MIT, Colombia, inside Open edX) ·
+🆕 **Riskbreaker2077/open-test** (MIT, offline LAN assessment)
 **Lecture capture:** 🆕 **LectureLab** (MIT) · 🟡 the MIT *engines* inside Cap and
 CaptureFlow — never their AGPL applications
 
-🔴 **Nothing on this shortlist is an ERP or an SIS.** That absence is measured, not
-unexamined — see the ERP note above.
+🟡 **One row on this shortlist is now a school-administration system** —
+`Moha-abshir/SMS`, added `p358`. 🔴 **Nothing on it is an institution-wide ERP**, and that
+absence is measured, not unexamined — see the ERP note above for why the distinction
+decides how a proposal is priced.
 
 Everything else on this shelf is GPL/AGPL/LGPL and should be reached **over a
 protocol boundary** — LTI 1.3, web services, or MCP — rather than forked. That

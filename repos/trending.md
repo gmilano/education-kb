@@ -3,6 +3,90 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+## Pass 358 · 2026-10-21 — **LTI 1.3 went from a seven-row convenience to a four-way engineering decision**, and the two most capable addresses in the leg are both unusable
+
+🔴 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·
+🔴 **authenticated search index CLOSED**, third consecutive pass (credential scoped to one
+unrelated repository) · 🔴 `github.com` **403** · 🔴 `api.github.com/repos/*` **403** ·
+🔴 `codeload` **403**. Discovery ran on web search **aimed at `github.com` with function
+words**; verification on the usual `ls-remote` + payload pair. 🟢 **No stars measured.**
+
+### 🟢 The tier this pass went deep on, and why that tier
+
+`repos/foundations.md` has called interoperability *"the cheapest place to start"* for
+several passes, and carried **seven** LTI rows against a standard with **four distinct
+services**. 🔵 "LTI 1.3 support" can mean the OIDC launch alone, or it can include
+**Deep Linking** (the tool writes content back into the course), **AGS** (the tool writes
+grades) and **NRPS** (the tool reads the roster). A launch-only library cannot submit a
+grade, which is the capability an education engagement nearly always needs — and nothing
+on this shelf recorded which library did what.
+
+🟢 **Eight addresses probed. Four promoted, three flagged, one dead weight that looks
+alive.**
+
+| Address | Grant (payload) | Verdict |
+|---|---|---|
+| [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) | 🟢 **MIT**, holder *Lucas Bossard* 2026 | 🟢 **Promoted.** Framework-agnostic TypeScript, Deep Linking 2.0, JWKS. 🟡 RS256 only, and its docs state the library *"never decides who may configure content"* — the tool enforces that itself |
+| [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) | 🟢 **MIT**, holder *Alex Wilson* 2025 | 🟢 **Promoted.** First **Elixir/BEAM** LTI row on this base |
+| [`SanDiegoCodeSchool/lti-node-library`](https://github.com/SanDiegoCodeSchool/lti-node-library) | 🟢 MIT, **2019** | 🟡 **Promoted as a warning.** README states NRPS and Deep Linking are **not supported** — launch-only and seven years old. Shelved so a successor does not mistake it for an `ltijs` alternative |
+| [`edugatorlabs/ltijs`](https://github.com/edugatorlabs/ltijs) | Apache-2.0 | 🟡 **A fork of `Cvmcosta/ltijs`.** Use upstream |
+| [`GSU-CETLOE/lti1p3Library-php`](https://github.com/GSU-CETLOE/lti1p3Library-php) | 🔴 MIT whose holder line is the **unfilled template**: `Copyright (c) 2026 [Your Name / Organization]` | 🔴 **Flagged.** Technically the cleanest *small* library in the leg — tool-side Deep Linking 2.0, AGS, NRPS, no framework — and **there is nobody to attribute**, which is MIT's only condition. Published by a university, which is why it reads safe |
+| [`oat-sa/lib-lti1p3-deep-linking`](https://github.com/oat-sa/lib-lti1p3-deep-linking) | 🔴 **GPL-2.0** (`Version 2, June 1991`) | 🔴 **Flagged.** **IMS-certified** — and certification is a conformance claim, not a grant. Strong copyleft on a *library* |
+| [`blackboard/BBDN-LTI-Tool-Provider-Node`](https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node) | 🔴 **no grant at any probed path** | 🔴 **Flagged.** 🔵 The hazard is **provenance**: a repo inside a named LMS vendor's own org reads as the safest thing in the leg, and a vendor sample with no `LICENSE` is exactly as unusable as a student project with none |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | 🟢 **Carried, re-verified.** Still the default |
+
+### 🔴 An instrument defect this pass published rather than quietly fixed
+
+The probe first classified the OAT library as **LGPL**. Its payload's first line is
+`GNU GENERAL PUBLIC LICENSE / Version 2, June 1991`. 🔴 The misread happened because
+**GPL-2.0's own preamble names the Lesser GPL** — *"use the GNU Lesser General Public
+License instead"* — and a classifier testing for "LESSER" before the title line matches
+that sentence. 🔴 **The error runs in the unsafe direction on exactly this tier**: on a
+library, LGPL permits dynamic linking and GPL-2.0 does not, so a false LGPL
+**understates** copyleft reach where it decides the architecture. **`ACTION ZZ-bg`**: key
+any payload classifier on the title and version line, never on a keyword that can appear
+in another licence's prose.
+
+### 🟢 One permissive administration row, which dents this base's most expensive finding
+
+🆕 [`Moha-abshir/SMS`](https://github.com/Moha-abshir/SMS) — **MIT**, holder *Mohamed
+Abshir* 2026 — is a multi-role school management system for **Kenya's Competency-Based
+Curriculum** on a current stack (TypeScript 5.3, React 18, Node 20, Drizzle, PostgreSQL
+16). 🟢 It is the **first permissive row on the administration tier** of
+`verticals/solutions.md`, where `p357` had established that *every* row is copyleft.
+🟡 It does **not** displace `openeducat_erp`: single author, 2026, no deployment evidence
+found, and one school-management system is not an institution-wide ERP. The guidance
+splits rather than flips — full comparison on that shelf. **`ACTION ZZ-bh`**: re-probe its
+commit activity and contributor count next pass before any proposal rests on it.
+
+🔴 **And a snippet in this pass's leg described it wrongly.** It was reported as a
+*"Flask + SQLite web app, Tkinter desktop app, Android app, M-Pesa payments"* with 240
+tests; the README describes none of that — the snippet had conflated it with a different
+Kenyan school-ERP project in the same leg. 🟢 Nothing was published from the snippet.
+
+### 🔴 Dead and unlicensed addresses, published as refutations rather than rows
+
+- 🔴 **Dead** (`ls-remote` returns nothing): `Tony300177/online-exam-platform` (described
+  in detail as a BNCC question bank with correction and reports on Next.js/Drizzle/
+  Supabase), `diego-dba/simulado-enem-iee` (OMR via OpenCV + Gemini for answer-sheet
+  correction), `AngelitUX/EstudiaUni` (Chile PAES with a Gemini tutor). 🔵 **All three
+  were described down to their stacks by sources in this pass's legs. A 404 is not a
+  finding, and a detailed description of a 404 is not one either.**
+- 🔴 **Live, no grant at any probed path:** `blackboard/BBDN-LTI-Tool-Provider-Node` ·
+  `adriasantacreu/google-classroom-mcp` (keeps Google Classroom at exactly one usable row
+  despite two addresses existing) · `mthatipamula/educational-assessment-ai-agent-platform`
+  (the most complete K-12 assessment architecture in the legs — reference design only) ·
+  `ondinookello96/elewastem` (offline-first tutor for 16+ African languages) ·
+  `EccentricIvan/AI-CONNECT-AFRICA` (on-device Gemma 3, updates by USB or school LAN) ·
+  plus the ten LATAM addresses on `agents/trending.md`.
+- 🟡 **Grant with a contradiction:**
+  [`Samkarya/online-exam-questions`](https://github.com/Samkarya/online-exam-questions) —
+  stock MIT text whose copyright line appends *"All rights reserved."* MIT's operative
+  text still grants the permissions, and it is the author's own sentence against the
+  author's own licence. Cheap to get clarified before use.
+
+---
+
 
 ## Pass 357 · 2026-10-21 — the two tiers `p356` could not measure, measured: **lecture capture and curriculum ontology both returned supply**, and the best-licensed curriculum asset on this base turned up under an owner no source named correctly
 

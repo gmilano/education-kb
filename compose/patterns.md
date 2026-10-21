@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 357 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+**Pass 358 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
 Every repo referenced is verified live with its grant read from payload on
 **2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
@@ -384,6 +384,126 @@ the detector — defensible across language backgrounds, with the evidence to pr
 the client's own students. 🔵 **And it is a budget conversation the client is already
 having:** the money is currently committed to a detection line item that their own
 academic board is moving away from.
+
+## 🆕 Pattern 13 — A statutory inclusion deliverable for a Colombian school system
+
+🔵 **The shape that makes this different from every other pattern on this file:** it is
+not a capability a client might want, it is **a document Colombian law obliges a school
+to produce.** `Decreto 1421 de 2017` makes the **PIAR** — *Plan Individual de Ajustes
+Razonables* — mandatory for educational provision to students with disabilities, and
+`Ley 2216 de 2022` extends inclusive-education duties to specific learning disorders
+(dyslexia, ADHD, dyscalculia). The budget line is **CONPES 4144**, Colombia's national AI
+policy, funded to 2030.
+
+**Components**
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| PIAR system of record | [`Dramoscuello/openpiar`](https://github.com/Dramoscuello/openpiar) | 🔴 **AGPL-3.0** | Already models the PIAR workflow and emits the documents the decree requires. Its AI assistant proposes DUA adjustments from the student profile, the institution's PEI, the subject and teacher-declared barriers |
+| Tutoring layer | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** | Autonomous tutor agent already running **inside Open edX** against real courses at Universidad Tecnológica de Pereira. TTS replies, animated avatar, teacher statistics panel, context persisted across sessions |
+| Host platform | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) + [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 | `TutorIA` is built for it, so the integration is proven rather than designed |
+| Offline assessment | [`Riskbreaker2077/open-test`](https://github.com/Riskbreaker2077/open-test) | 🟢 **MIT** | Local server, school intranet, **every student a different paper**. No connectivity required |
+| Oversight record | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) pattern | 🟢 MIT | Copy its **preview-first write protocol**: no grade or adjustment is written without an explicit confirmation step |
+
+**Wiring**
+
+1. Deploy `openpiar` **for the client, as the client's system** — 🔴 AGPL-3.0 means this
+   is a deployment, not a product Globant folds into an offering. Price it accordingly.
+2. Run `TutorIA` as the learner-facing agent inside the client's Open edX. 🟢 Its MIT
+   grant means **the tutor customisations can stay closed** even though the platform under
+   it is AGPL — the boundary is Open edX's plugin/XBlock edge, exactly as this file's
+   governing rule requires.
+3. Feed the PIAR's declared barriers into `TutorIA`'s prompt context, so the reasonable
+   adjustments the decree records are the adjustments the tutor actually applies.
+   🔵 **This is the whole value of the pattern**: elsewhere the PIAR is a filed PDF.
+4. Use `open-test` for assessment in schools without reliable connectivity, with its
+   per-student randomisation standing in for invigilation.
+5. Gate every write — adjustment, grade, PIAR revision — behind a **recorded teacher
+   confirmation**. 🟢 No Colombian statute compels this yet; the EU AI Act and Vietnam's
+   Law 134/2025/QH15 both do, so building it now makes the same deliverable exportable
+   (see `intel/trends.md` §20).
+
+**What the engagement delivers.** A funded, statutory compliance system — not a pilot —
+with the tutoring layer as the part that stays proprietary. 🔴 **Licence boundary to
+hold:** `openpiar` is network copyleft; any Globant modification to *it* is the client's
+under AGPL. Keep Globant IP in the `TutorIA` layer and in the oversight record.
+
+## 🆕 Pattern 14 — Reaching a client's LMS when "LTI support" is not one capability
+
+🔵 **The failure this prevents.** An engagement scopes "we'll write grades back to the
+client's LMS over LTI", picks an LTI library from a roundup, and discovers at integration
+time that the library does **launches only** — no AGS, so no grade can be submitted.
+`p358` found exactly that row:
+[`SanDiegoCodeSchool/lti-node-library`](https://github.com/SanDiegoCodeSchool/lti-node-library)
+is MIT, live, and its own README states NRPS and Deep Linking are not supported.
+
+**Decide in this order, and the first question is not technical**
+
+| Need | Component | Licence | Note |
+|---|---|---|---|
+| Node, full Advantage | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 🟢 **The default.** Launches, Deep Linking, grades, roles. 🟡 Pin a version — its README describes v7 as a full rewrite |
+| Python agent | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT | Deep Linking, AGS, NRPS. The default when the agent is Python, which on this base it usually is |
+| Typed end-to-end | [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) | 🟢 MIT | Deep Linking 2.0, JWKS. 🟡 **RS256 only**, and its docs are explicit that the library *"never decides who may configure content"* — the tool must enforce that authorisation itself |
+| Client runs Phoenix/Elixir | [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) | 🟢 MIT | The only BEAM-runtime option on this base |
+| Canvas specifically | [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) | 🟢 MIT | Canvas app framework; pairs with `ltijs` |
+| 🔴 **Never** | [`oat-sa/lib-lti1p3-deep-linking`](https://github.com/oat-sa/lib-lti1p3-deep-linking) | 🔴 **GPL-2.0** | IMS-certified — a conformance claim, not a grant. Strong copyleft **on a library** |
+| 🔴 **Never** | [`GSU-CETLOE/lti1p3Library-php`](https://github.com/GSU-CETLOE/lti1p3Library-php) | 🔴 MIT, **no licensor named** | Holder line is the unfilled template `[Your Name / Organization]`. Nobody to attribute, and attribution is MIT's only condition |
+| 🔴 **Never** | [`blackboard/BBDN-LTI-Tool-Provider-Node`](https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node) | 🔴 **no grant** | A vendor-org reference sample with no `LICENSE` is as unusable as a student project with none |
+
+**Wiring**
+
+1. **Write down which of the four services you need before choosing** — launch, Deep
+   Linking, AGS, NRPS. 🔵 If the deliverable writes grades, AGS is non-negotiable and it
+   is the service most small libraries omit.
+2. Stand the tool up against the client's LMS as an **LTI 1.3 tool**, never a fork — this
+   is what keeps Canvas's and Open edX's AGPL on their own side of the boundary.
+3. Where MCP is also available, prefer it for *agent* access and keep LTI for
+   *platform* integration. 🔵 They are not alternatives: LTI is how the LMS launches your
+   tool; MCP is how your agent reads the LMS. A complete engagement usually needs both.
+4. 🔴 **Before vendoring any connector, read its `LICENSE` copyright holder.** If it names
+   someone other than the repository owner it is a fork, and on `p358`'s evidence a fork
+   is **18 to 27 tools behind** its upstream. Install by registry identifier instead — it
+   resolves upstream regardless of which page you found (`intel/trends.md` §21).
+
+**What the engagement delivers.** A grade-writing, roster-aware LMS integration whose
+licence position is defensible, chosen on capability rather than on a roundup's ranking.
+
+## 🆕 Pattern 15 — A Kenyan K-12 administration deliverable that can stay closed
+
+🔵 **Why this pattern exists now and could not before.** `verticals/solutions.md` has
+carried one of this base's most expensive findings — **there is no permissive education
+ERP**, so a closed administration deliverable must be priced as a build. 🟢 `p358` found
+the first permissive row on that tier, and it is narrow enough that the finding still
+holds for institution-wide ERP while no longer holding for K-12 school administration.
+
+**Components**
+
+| Role | Repo | Licence | Note |
+|---|---|---|---|
+| Administration base | [`Moha-abshir/SMS`](https://github.com/Moha-abshir/SMS) | 🟢 **MIT** | Multi-role school management built against **Kenya's CBC**. TypeScript 5.3, React 18, Node 20, Drizzle ORM, PostgreSQL 16. 🟡 Single author, 2026, no deployment evidence — see `ACTION ZZ-bh` |
+| National-data connector | [`gabrielmahia/elimu-mcp`](https://github.com/gabrielmahia/elimu-mcp) | 🟢 MIT | Kenya school registry, KCSE/KCPE, HELB loans, TVET. 🔴 **Its README states the shipped data is DEMO and "not suitable for operational decisions"** — this supplies the tool surface and schema; real endpoints and credentials are the engagement's to obtain |
+| Offline learning | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | Offline-first by design. The licensed answer to the connectivity constraint |
+| Offline assessment | [`Riskbreaker2077/open-test`](https://github.com/Riskbreaker2077/open-test) | 🟢 MIT | Local server over school intranet, per-student randomised papers |
+
+**Wiring**
+
+1. Fork `Moha-abshir/SMS` as the administration base. 🟢 MIT means the fork and every
+   customisation **can stay in a closed client deliverable** — the one place on this base's
+   administration tier where that is true.
+2. Add `elimu-mcp` as the agent's read surface over Kenyan national education data, 🔴 with
+   its demo data replaced by real endpoints before anything operational depends on it.
+   🟡 Note its README also states **pull requests are not accepted**: an engagement that
+   patches it owns a fork from that day.
+3. Serve learning content through `kolibri`, which assumes no connectivity rather than
+   degrading without it.
+4. Assess with `open-test` on the school's own intranet.
+
+**What the engagement delivers.** A closed, CBC-aligned school administration system with
+an AI layer over national data, deliverable in a market where connectivity cannot be
+assumed. 🔴 **The honest caveat to carry into the proposal:** the administration base is a
+**young single-author project**, not a vendor-backed platform. For an *institution-wide*
+ERP the recommendation is still `openeducat_erp` (LGPL-3.0) or a priced build — one school
+management system is not an ERP, and `verticals/solutions.md` sets out the comparison.
 
 ## Boundary cheat-sheet
 
