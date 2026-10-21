@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 · 2026-10-21 — the prescribed trending leg returns listicles for the **TWENTIETH** consecutive pass, and this window stopped asking it the same way: a leg aimed at a **FUNCTION** rather than at "AI education" returned **`judge0`, 4 491 ★ — absent from this base's entire corpus, `archive/` included**
+
+**Evidence:** [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p354.tsv)
+
+🟢 **Channel note:** `ls-remote`, blobless `clone`, `raw.githubusercontent.com` and the authenticated search index all **OPEN**. 🔴 `github.com` **400**; `api.github.com/repos/*` **403** — but `api.github.com`'s **root** answers **`200`**, which is a **FALSE-OPEN** and is recorded on `agents/trending.md` as a channel class.
+
+### 🔴 The leg, and its denominator — twentieth consecutive pass
+
+🔴 `github trending education AI 2026` returned third-party roundups and trend aggregators with differing snapshot dates: `rohitg00/ai-engineering-from-scratch` (~69 k ★, ~14.7 k gained in a month per one cached monthly ranking), `microsoft/generative-ai-for-beginners` (~108 k ★ in one 2026 ranking), 100-Days-Of-ML-Code, D2L. 🔵 **Every figure is third-party and none is adopted** — this base reads stars from the authenticated index or not at all. 🔴 **Zero education repositories, and the structural cause is unchanged: GitHub Trending has no education category.**
+
+### 🟢 The leg that worked, and what changed was the VOCABULARY
+
+🟢 **Asked for the EXECUTION layer under assessment — sandbox, autograder, online judge — rather than for "education AI".**
+
+🔴 **[`judge0/judge0`](https://github.com/judge0/judge0) was absent from this repository's entire corpus**, `archive/` included — grep returned zero hits across every shelf and every archived tree.
+
+| | |
+|---|---|
+| stars · forks, first-hand **2026-10-21** | 🟢 **4 491 ★ · 945 forks** |
+| pushed | 🟢 **2026-10-21** — the day of measurement |
+| default branch, `--symref` | 🟡 **`master`** |
+| grant, read first-hand at `master/LICENSE` | 🟡 **`GPL-3.0`, 34 526 B** — *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"* |
+| its own topics | `ai-agent-tools`, `ai-agents`, `code-execution`, `online-judge`, `competitive-programming` |
+| open issues | 200 |
+
+🔵 **Checked against `gate-affero-rung` deliberately:** this is **GPL-3.0, not AGPL-3.0**. The payload carries no Affero clause, and at **34 526 B** it sits two bytes from the **34 524 B AGPL-3.0** text `p353` recorded elsewhere on these shelves — which is exactly the misreading that gate exists to prevent.
+
+🟢 **Promoted to `repos/foundations.md`'s copyleft arm** (ninth row there, eighteenth on the shelf) and wired into **`compose/patterns.md` as `P51`**, the language-agnostic autograding stack. 🟡 **Its topics name `ai-agents` and `ai-agent-tools` and twelve passes of agent-shaped queries still could not see it** — because what it is *called* is an online judge.
+
+> 🟡 **Recorded as a standing instruction for the successor, not an observation.** Run the supply legs **by function**: `autograder`, `online judge`, `lecture capture`, `curriculum ontology`, `LTI`, `SIS`, `proctoring`, `spaced repetition`, `rubric`. Keep the two prescribed legs as the **control** that shows the vocabulary gap is still open.
+
+### 🔴 A repository-age finding this shelf should carry, because it changes how to read every row
+
+🔴 **13 of 18** grant paths on `repos/foundations.md` are on **`master`** — **72.2 %** — against **3 of 29** on `agents/top.md`. 🟢 GitHub's default moved to `main` in 2020; the twelve are this sector's pre-2020 institutional cohort (`oppia`, `kolibri`, `ltijs`, `OpenOLAT`, `sakai`, `opencast`, `edx-platform`, `frontend-app-learning`, `canvas-lms`, `chamilo-lms`, `ILIAS`, `h5p-php-library`), and `judge0` joins them as a thirteenth `master` row.
+
+🔴 **`p353` bounded this risk at "about 6 % of the time".** Corpus-wide it is **34.0 %**, and on the foundation shelf **72.2 %**. 🔵 One cause — **age** — explains three separate classes of automated misreading this base found independently: copyleft licensing, grants at `COPYING.txt` / `docs/License.txt`, and `master` branch defaults. 🟢 **All three fail CLOSED**, so tooling calibrated on 2024-era repositories **under-reports what education has.**
+
 ## Pass 353 · 2026-10-21 — the prescribed trending leg returns listicles for the **NINETEENTH** consecutive pass. This pass spent the window on a question the open channels can actually answer: **does every address this base publishes still exist?** It does — **165 of 165**
 
 **Evidence:** [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv)

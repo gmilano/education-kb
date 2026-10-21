@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 · 2026-10-21 — the assessment stack had a hole where its EXECUTION layer should be: `nbgrader` is Jupyter-only and this base held nothing language-agnostic. **`judge0` fills it at 4 491 ★, GPL-3.0** — and every grant path this shelf publishes resolves `200`
+
+**Evidence:** [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv)
+
+🟢 **Every grant path published on this shelf resolves `200`, first-hand 2026-10-21**, as part of the 47-of-47 sweep discharging `ACTION ZZ-au` (`agents/top.md`).
+
+### 🟢 The platform census is unchanged, and this pass states why that is now a finding
+
+🔵 The vertical-platform leg ran again and returned the same set this base has carried for many passes — **Moodle** (GPL-3.0), **Open edX** (AGPL-3.0), **Canvas CE** (AGPL-3.0), **Chamilo** (GPL-3.0), **ILIAS** (GPL-3.0), **Sakai** (ECL-2.0), **OpenOLAT** (Apache-2.0), **Kolibri** (MIT), **OpenEduCat** (LGPL-3.0), **BigBlueButton**, **H5P**, **Opencast**.
+
+🔴 **`OpenOLAT` remains the ONLY Apache-licensed LMS, for the fourth consecutive pass.** 🟢 That is no longer a gap in the leg; it is a fact about the sector, and it is the reason this base's integration strategy is MCP-first: an MCP server is a separate program speaking a documented protocol, so it carries none of the host platform's copyleft.
+
+### 🟢 The hole that was actually there: the execution layer under assessment
+
+🔵 This shelf has carried autograding as **`jupyter/nbgrader`** (BSD-3-Clause) on `repos/foundations.md` — *"the de-facto standard for programming-course assessment in higher ed"*. 🔴 **It is Jupyter-only.** A client wanting a graded exercise in Java, C++, Go or SQL has nothing on these shelves to run it in.
+
+🟢 **New at p354: [`judge0/judge0`](https://github.com/judge0/judge0)** — *"robust, fast, scalable, and sandboxed open-source online code execution system for humans and AI"*, **4 491 ★ · 945 forks**, pushed **2026-10-21**, its own topics naming `ai-agent-tools`, `ai-agents`, `code-execution`, `online-judge`. **`GPL-3.0`, 34 526 B at `master/LICENSE`**, read first-hand.
+
+| layer | what this base now holds | licence | the boundary |
+|---|---|---|---|
+| authoring / delivery | Moodle · Open edX · Canvas · Sakai · OpenOLAT · Kolibri | GPL-3.0 → MIT | the platform you deploy, not the code you write |
+| interactive content | H5P | GPL-3.0 | player is GPL; your content types are yours |
+| notebook assessment | `jupyter/nbgrader` + `jupyterhub` | BSD-3-Clause | 🟢 permissive, and Jupyter-only |
+| 🟢 **language-agnostic execution** | 🟢 **`judge0/judge0`** — new at p354 | **GPL-3.0** | 🟡 **no network clause** — a private unmodified grading backend owes no source |
+| integration | 20 MCP rows + `ltijs` (Apache-2.0) | MIT / Apache-2.0 | 🟢 the layer a studio actually writes |
+
+🟡 **The honest limit on the new row:** `judge0` is an execution sandbox, not an assessment product. It runs submitted code and returns a result; the rubric, the feedback and the pedagogy are the engagement. 🔵 That is precisely why it is useful — it is the piece nobody should write themselves and the piece no LMS ships.
+
 ## Pass 353 · 2026-10-21 — the platform leg returned **no permissive LMS or SIS** again, and this pass adds the two figures that decide a platform choice in practice: **Moodle's installed base** and the one product that is **LMS and SIS on a single database**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv)

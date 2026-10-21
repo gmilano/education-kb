@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 354 — no new agent row for the **twelfth** consecutive pass, and this window finally has the **denominator** that explains why: the authenticated index, asked the same question, returns **65 repositories of which exactly one is educational and not already carried**. The week's real agent-layer news is that **every grant path on this tier now resolves `200`** — 47 of 47, checked first-hand
+
+**Evidence:** [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`l2-bench-resolution`](../evidence/l2-bench-resolution.2026-10-21-p354.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv)
+
+🟢 **Channel note.** `ls-remote`, blobless `clone` and `raw.githubusercontent.com` **OPEN**; the authenticated search index **OPEN and USED**. 🔴 `github.com` **400** and `api.github.com/repos/*` **403**. 🔴 **New channel class this window: the FALSE-OPEN.** `https://api.github.com` — the host **root** — answers **`200`**, while its `/repos/*` endpoints answer **403**. A successor probing the root as a channel test would declare the star channel open and then be unable to read a single figure from it. 🔵 **A `200` on a host's root is not a `200` on its endpoints.**
+
+### 🔴 The agent leg, with the denominator that makes the streak meaningful
+
+| leg | channel | returned | educational | not already carried |
+|---|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | WebSearch | Hermes, OpenClaw, OpenHands, CrewAI, LangChain/LangGraph, Agent Zero, LLMs-from-scratch | 🔴 **0** | 0 |
+| `github trending education AI 2026` | WebSearch | `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners`, 100-Days-Of-ML-Code, D2L | 🟡 courseware **about** AI | 0 |
+| `open source AI tutor agent 2026 adaptive learning` | WebSearch | DeepTutor, OpenTutor, OATutor, `Ebimsv/AITutorAgent`, `Naresh1401/education-tutor-agent`, `studymentor-adaptive-tutor` | 🟢 yes | 🟡 **1** (`studymentor`) — **not promoted** |
+| `AI tutor education agent stars:>150 pushed:>2026-09-01` | 🟢 authenticated index | **65 repositories** | `HKUDS/DeepTutor`, `classroomio/classroomio` | 🔴 **0** — both carried |
+
+🔴 **`sumaiyah-roses/studymentor-adaptive-tutor` is the only genuinely absent token and it is NOT promoted.** Its own description names it a **Multimodal AI Hackathon 2026, Track D** entry. 🔵 This base has a standing bar that a hackathon artefact does not clear — no release, no bench, no licence read — and `p323` already recorded the cost of promoting an unlicensed benchmark. 🟡 **Recorded so a successor does not re-discover it and waste the leg.**
+
+🟢 **Twelve passes is no longer just a streak; it is a measurement.** The agent-shaped query space for this vertical is **saturated at this base's quality bar**, and the structural cause is unchanged: **GitHub Trending has no education category**, so there is no ranking surface for the sector at all.
+
+### 🟢 The tier's own integrity, which is this window's real news
+
+🟢 **`ACTION ZZ-au` discharged: 47 of 47 published grant paths resolve `200`**, probed first-hand after a calibration pair reproduced exactly (`200` on this base's anchor row, `404` on `p353`'s documented defect). **Zero dead paths. Zero rows in a grant-bearing table without a path.** Wired as `make gate-grant-path` — `make hooks` is **31/31 in, 32/32 out**.
+
+🔴 **And the gate accused three CORRECT cells on its first run** — `tests/stubs/LICENSE.md`, `canvas-lms-mcp/LICENSE`, `packages/xapi/LICENSE`, all true repo-relative paths read as branches called `tests`, `canvas-lms-mcp` and `packages`. 🔵 **Fourth consecutive pass in which this base's own instrument was wrong and its shelf was right** (`p351` on a licence, `p352` on a star figure, `p353` on a table header, `p354` on a path). Fixed structurally: the parse binds to the **`Grant read at` column**, and all three are pinned as controls.
+
+### 🟢 First-hand star movement on the anchor row, and it is small
+
+| row | `p352` read | 🟢 `p354` read, first-hand 2026-10-21 | delta |
+|---|---:|---:|---:|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 41 918 ★ · 5 310 forks | 🟢 **41 932 ★ · 5 313 forks** | +14 ★ · +3 forks |
+
+🔵 **One day, fourteen stars on an 87-thousand-star-class sector anchor.** 🟢 The useful reading is the same one `p352` reached: on this corpus `carried` is a **safe** label for a star cell, and what a fresh read buys is a **date** rather than a correction.
+
+### 🟢 `ACTION ZZ-at` closed — `L2-Bench` has no address, and that is now MEASURED
+
+🟢 Asked of the strongest channel this base has: `"L2-Bench"` returns **21 repositories and none is the second-language-education benchmark** (`ascend-l2-bench` is Ascend hardware, `rec-l2-bench` recommenders, `esci-l2-bench` e-commerce, `L2_benchmarking` undescribed — all at `0 ★`). 🔵 The paper channel (`arxiv.org`, `aclanthology.org`, `huggingface.co`) remains `000`. 🟢 **Closed as `NOT PUBLISHED, MEASURED` rather than left pending**, and the **Evaluation tier stays at one row** for a reason that is now on the record.
+
 ## 2026-10-21 · Pass 353 — no new agent row for the **eleventh** consecutive pass, and the week's real agent-layer news is a **grant-path defect** rather than a star move: a permissively licensed connector on this shelf reads as ungranted because its branch is `master`
 
 **Evidence:** [`grant-recheck`](../evidence/grant-recheck.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv) · [`table-header-negative`](../evidence/table-header-negative.2026-10-21-p353.tsv)

@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 — 2026-10-21 — **`ACTION ZZ-au` DISCHARGED: 47 OF 47 PUBLISHED GRANT PATHS RESOLVE `200`, AND THE GATE THAT PROVES IT ACCUSED THREE *CORRECT* CELLS ON ITS FIRST RUN — FOURTH CONSECUTIVE PASS WHERE THIS BASE'S INSTRUMENT WAS WRONG AND ITS SHELF WAS RIGHT. `p353`'s "6 %" IS `34.0 %` CORPUS-WIDE AND THE HAZARD TRACKS REPOSITORY AGE. `p353` WROTE NO README SECTION, SO EVERY README-ANCHORED GATE SPENT THE DAY JUDGING `p352`'s TEXT. ONE NEW ROW — `judge0`, 4 491 ★, ABSENT FROM THE WHOLE CORPUS. `make hooks` — 31/31 IN, 32/32 OUT**
+
+🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and every evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit. 🔵 This is the **fifth pass of this date** (`p350`, `p351`, `p352` and `p353` earlier today).
+
+**Evidence:** [`grant-path-liveness`](evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`branch-default-by-age`](evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`channel-bindings`](evidence/channel-bindings.2026-10-21-p354.tsv) · [`l2-bench-resolution`](evidence/l2-bench-resolution.2026-10-21-p354.tsv) · [`discovery-legs`](evidence/discovery-legs.2026-10-21-p354.tsv) · [`regional-legs`](evidence/regional-legs.2026-10-21-p354.tsv)
+
+### 🟢 The gate state, first, because this pass changes it
+
+🟢 **`make hooks` RAN and was 31/31 GREEN ON ARRIVAL** — the second clean arrival in a row. 🟢 **On exit it is 32/32**, because this pass wires **`gate-grant-path`** (43 controls) plus its egress arm `gate-grant-path-online`.
+
+🔴 **`p353` committed without writing a `README.md` pass section.** The live write-up at this anchor file was still `p352`'s, so every README-anchored gate — `gate-census-currency` and `gate-readme-channel` among them — spent the whole of 2026-10-21 judging a text **two passes old**. 🔵 **`p345` found exactly this shape** (*"the gate that has been red for two passes was judging p343's text because p344 never wrote a README section"*), so this is the **second instance**, and it happened to the pass that otherwise ran the cleanest sweep in this base's history — 165 of 165 addresses alive. 🟡 **Attention is not the remedy, and `ACTION ZZ-ax` is registered:** no gate asserts that the live `README.md` pass section names the pass at `HEAD`.
+
+### 🟢 `ACTION ZZ-au` discharged, and the answer is clean
+
+🔵 `p353` registered it in one sentence: *"`make hooks` should assert that every published grant path resolves `200`, which would have caught this the pass it was introduced."*
+
+| | |
+|---|---:|
+| live grant claims published across the six rewritable shelves | **47** |
+| distinct `(slug, branch, path)` triples probed first-hand **2026-10-21** | **47** |
+| 🟢 **resolve `200`** | 🟢 **47 of 47** |
+| 🔴 do not resolve | 🟢 **0** |
+| rows in a grant-bearing table carrying **no** path | 🟢 **0** |
+
+🟢 **The calibration pair reproduced exactly** — this base's anchor row at `main/LICENSE` → `200`, and `p353`'s documented defect `sandraschi/classroom-mcp` at `main/LICENSE` → `404`. 🔵 A channel answering `404` for everything would have reported all 46 dead, so the pair is probed **before** any verdict and a control failure yields **no verdict** rather than a guess (`p293`).
+
+### 🔴 The gate's FIRST run accused three cells that were RIGHT
+
+🔴 Run before its scope was bound, the instrument reported **three defects and all three were its own fault**: `agents/top.md:341` publishes `tests/stubs/LICENSE.md`, `:386` publishes `canvas-lms-mcp/LICENSE`, `:387` publishes `packages/xapi/LICENSE` — **every one a true, first-hand, repo-relative path**, read by a `branch/path` parser as branches called `tests`, `canvas-lms-mcp` and `packages`. Two of them are `p347`'s depth findings.
+
+🔵 **Fourth consecutive pass of the same shape:**
+
+| pass | the token | what it actually belonged to |
+|---|---|---|
+| `p351` | a **licence** | `THIRD_PARTY_SCOPE` — something that is not the repository |
+| `p352` | a **star figure** | the comparison named in the same cell |
+| `p353` | a cell reading like a **table header** | a transposed key-value row where `repo` is a key |
+| **`p354`** | a **path** | the tree, not a raw URL |
+
+> 🔵 **A token's MEANING is given by the cell it sits in, never by its shape.**
+
+🔴 **No regex separates them** — `master/docs/License.txt` and `packages/xapi/LICENSE` are the same shape and different claims. 🟢 **The COLUMN separates them.** The parse binds to the `Grant read at` header; all three false positives are pinned as controls. 🔵 **And one ambiguity is declared rather than hidden:** `p353`'s repaired cell names two paths and the second exists to be refuted, so the rule is **FIRST-WINS inside the bound cell** — which is a rule about cell order, not about truth.
+
+### 🔴 `p353`'s `6 %` is `34.0 %`, and the mechanism is worth more than the ratio
+
+| shelf | live grant rows | `main` | `master` | `master` share |
+|---|---:|---:|---:|---:|
+| `agents/top.md` | 29 | 26 | 3 | 10.3 % |
+| `repos/foundations.md` | 18 | 5 | **13** | 🔴 **72.2 %** |
+| **all live shelves** | **47** | **31** | **16** | 🔴 **34.0 %** |
+
+🔴 **First, it is the `p352` ordering defect on a new quantity.** `p353` counted `2` of `31` **before writing its own correction** — and that correction is what made `sandraschi/classroom-mcp` a `master` row; its own shelf, as committed, carries **3**. `gate-census-currency` binds the address census; **nothing binds a ratio stated in prose.** 🟡 Registered as **`ACTION ZZ-aw`**.
+
+🟢 **Second, the useful half: the hazard tracks repository AGE.** GitHub's default moved to `main` in 2020 and `repos/foundations.md` is this sector's pre-2020 institutional cohort almost exactly. 🔵 **One cause explains three classes of misreading this base found separately** — copyleft licensing, grants at `COPYING.txt` and `docs/License.txt`, and `master` defaults — **and all three fail CLOSED**, so tooling calibrated on 2024-era repositories **under-reports what education has.** Published as **T41** on `intel/trends.md`.
+
+### 🔴 A channel class this base did not have: the FALSE-OPEN
+
+🔴 **`https://api.github.com` answers `200`. `https://api.github.com/repos/*` answers `403`.** `p353` recorded the host as 403 and was right about what matters; a successor probing the **root** as a channel test would declare the star channel open and then read nothing from it.
+
+> 🔵 **A `200` on a host's ROOT is not a `200` on its endpoints.** `p351` declared a channel shut that was open; this is the mirror image, and it fails **open**, which is the worse direction.
+
+🟢 **The working star channel remains the authenticated search index** (`p255`, `p352`): `HKUDS/DeepTutor` at **41 932 ★ · 5 313 forks**, against `p352`'s 41 918 ★ · 5 310 — **+14 ★ in a day** on the sector's anchor row, which confirms once more that `carried` is a safe label for a star cell and what a fresh read buys is a **date**.
+
+### 🟢 `ACTION ZZ-at` closed with a measured negative, not a third guess
+
+🟢 `"L2-Bench"` on the authenticated index returns **21 repositories and none is the second-language-education benchmark** (`ascend-l2-bench` is Ascend hardware, `rec-l2-bench` recommenders, `esci-l2-bench` e-commerce, `L2_benchmarking` undescribed — all at `0 ★`); the paper hosts remain `000`. 🟢 **Closed as `NOT PUBLISHED, MEASURED`**, and the Evaluation tier stays at one row for a reason now on the record.
+
+### 🟢 One new row, and the leg that found it changed VOCABULARY rather than threshold
+
+🔴 The two prescribed supply legs are saturated for the **twelfth** consecutive pass, and this pass gives the streak a denominator: the authenticated index, asked the same question, returns **65** repositories of which **exactly one** is educational and not already carried — and that one was already on three shelves.
+
+🟢 **A leg aimed at a FUNCTION returned [`judge0/judge0`](https://github.com/judge0/judge0)** — sandboxed code execution behind an HTTP API, the autograding backend under online judges — **absent from this base's entire corpus, `archive/` included**, at **4 491 ★ · 945 forks**, pushed 2026-10-21. 🟡 Grant read first-hand: **`GPL-3.0`, 34 526 B at `master/LICENSE`**, checked against `gate-affero-rung` because it sits two bytes from the AGPL-3.0 text. **GPL-3.0 has no network clause**, so an unmodified private grading backend owes no source.
+
+🟢 **Promoted to `repos/foundations.md`'s copyleft arm and wired as `P51`** — the language-agnostic autograding stack this base could not assemble before, because its only autograder (`nbgrader`, BSD-3-Clause) is Jupyter-only. 🔵 **Its own topics name `ai-agents` and `ai-agent-tools`, and twelve passes of agent-shaped queries still could not see it**, because what it is *called* is an online judge. Published as **T40**.
+
+### 🟢 The regional legs — all four ran, two returned a new token, and one claim was REFUSED
+
+🟢 **North America:** Colorado **repealed and replaced** its AI Act (**ADMTA / SB 26-189**, signed 2026-05-14, effective 2027-01-01) — so the US has **stopped converging** on one compliance shape and a multi-state deployment needs a posture per state. Published as **T42**.
+🟢 **EMEA:** the **Apply AI Alliance** is live and its **AI Skills Academy sector-tailored AI-literacy training starts Q4 2026 — now**, which is the funded demand-side counterpart to the Article 4 literacy duty this base already carries.
+🔴 **APAC** returned **no education-specific adoption figure for the fourth consecutive pass**; the placeable finding is that Korea's AI textbooks **fell below 30 % adoption** and lost official status, so the APAC risk is **adoption, not compliance**.
+🟡 **LATAM:** Mexico's **Public AI Training Center** (INFOTEC + **TecNM**, 14 companies, **10 000 specialists in 2026**) is a state skills pipeline rather than an edtech market — and the curriculum-and-assessment layer under it is exactly `P51`.
+
+🔴 **The claim this pass refused to publish.** One source states that Colorado's replacement framework *"carves out FERPA-covered educational institutions."* **Nine further sources on the same statute do not mention FERPA or any education carve-out.** 🟢 **So it is not published** — recorded as unverified so no successor promotes it from this base's own prose, which is `p289`'s restatement rule applied to a regulatory claim.
+
+### 🔵 What `gate-ladder-case` did to this pass's own instrument, recorded because it is the system working
+
+🔴 **The new gate's first wiring turned `gate-ladder-case` RED** — p283's audit graded `grant_path.py` **`STEM-ONLY`** on the `licence` family and **`SINGLE-SPELLING`** on `notice`, breaching `p286`'s ratchet (`STEM-ONLY` 3→4, `SINGLE-SPELLING` 17→18). 🟢 **It was right to.** The first draft listed lowercase spellings only and folded the candidate with `.lower()` forty lines below, and p283's predicate is **proximity** precisely because *"an immunity claim resting on any unrelated string-folding in a 400-line script"* is the overclaim this base's instruments keep being caught by.
+
+🟢 **The remedy was the one `p352` took when the same audit graded ITS anchor ladder: write the case variation into the literals where an auditor can read it.** Re-graded, the instrument is **`CASE-CLOSED`** on `copying` and **`FOLD-ON-PATH`** on `licence` and `notice`; `STANDING:CASE-CLOSED` rose 8→10 and `STANDING:CASE-UNVARIED` fell 7→6. 🔵 **The ceiling was not raised** — which is the whole point of a ratchet, and the thing eight earlier passes were trained to do instead.
+
+### 🟢 The census, derived as the LAST act before the commit — which is what `gate-census-currency` is for
+
+🟢 **`gate-census-currency` caught THIS pass, and that is the gate working rather than a defect.** Run after every shelf was written, it reported `2 of 3 cells STALE`: the live census sentence was still `p352`'s **2 478 → 33 → 2 445**, and this pass's own tree yields one more address.
+
+🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 479** harvested shapes → **33** are not addresses → **2 446 addresses** (1.33 % inflation).**
+
+🔵 **And the one new address is nameable, which settles the mechanism exactly as `p352` demanded:** `judge0/judge0`, this pass's own new `repos/foundations.md` row. 🟢 **Three passes in a row published a stale denominator and this is the first to publish a current one** — not because this pass was more careful, but because the gate refuses the other order: write the pass, derive, then state the figure.
+
+🔴 **And this pass hit the SAME ordering trap on the SAME quantity, which is the strongest evidence `ACTION ZZ-aw` could have.** Its first write-up published **`46` of `46`** grant paths and a **`32.6 %`** `master` share — both derived **before** it added its own `judge0` row to `repos/foundations.md`. 🟢 Re-run as the last act before the commit: **`47` of `47`**, and the share is **`16` of `47` = `34.0 %`**, with the foundation shelf at **`13` of `18` = `72.2 %`**. 🔵 **So the pass that measured `p353`'s stale ratio produced a stale ratio of its own, one section later, while writing the sentence that names the defect.** 🟡 `gate-census-currency` caught the address triple because a gate binds it; **nothing caught the ratio, because nothing binds a ratio** — which is exactly `ACTION ZZ-aw`, now with two instances in two consecutive passes and one of them self-inflicted.
+
+### 🟢 Registered for the successor pass
+
+- **`ACTION ZZ-aw`** — no gate binds a **RATIO** published in prose. 🔴 **Two instances in two consecutive passes and the second is this pass's own:** `p353` published `6 %` counted before its own correction, and `p354` published `32.6 %` and `46 of 46` counted before its own new row. 🔵 The shape is `p352`'s ordering defect on a quantity that is not an address count, and it is now demonstrably immune to care — `p354` wrote the sentence naming the defect and committed it in the same section.
+- **`ACTION ZZ-ax`** — no gate asserts that the live `README.md` pass section names the pass at `HEAD`. Second instance (`p344`, `p353`).
+- **`ACTION ZZ-ay`** — run the supply legs **by FUNCTION** (`autograder`, `online judge`, `lecture capture`, `curriculum ontology`, `LTI`, `SIS`, `proctoring`, `spaced repetition`, `rubric`) and keep the two prescribed legs as the control that shows the vocabulary gap is still open. `judge0` is the falsifying instance; five such legs returning nothing would refute **T40**.
+- 🔴 **Still open from `p353`:** no star or fork figure is first-hand except via the authenticated index, and `github.com` / `api.github.com/repos/*` remain closed.
+
 ## Pass 352 — 2026-10-21 — **`p351` DECLARED A GAP AGAINST A CHANNEL THAT WAS OPEN. 34 OF 34 PUBLISHED STAR CELLS ARE NOW FIRST-HAND AND 31 ARE EXACT. THE TWO CELLS THAT LOOKED WRONG WERE THIS PASS'S OWN INSTRUMENT, WHICH MAKES `p351`'s `THIRD_PARTY_SCOPE` DEFECT QUANTITY-INDEPENDENT. `p351`'s HEADLINE DENOMINATOR IS THE `p350` TREE'S FIGURE, AND THE GATE THAT CATCHES THAT IS NOW WIRED. `ACTION ZZ-as` DISCHARGED AT `+05:30` × 288. `make hooks` — 30/30 IN, 31/31 OUT**
 
 🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and every evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit. 🔵 This is the **fourth pass of this date** (`p350` and `p351` earlier today; `p349` on 2026-10-20).

@@ -1,0 +1,6 @@
+host	endpoint	http	veredicto	nota
+raw.githubusercontent.com	https://raw.githubusercontent.com/HKUDS/DeepTutor/main/LICENSE	200	ABIERTO	canal de concesiones
+api.github.com	https://api.github.com	200	ABIERTO	RAIZ del host
+api.github.com	https://api.github.com/repos/HKUDS/DeepTutor	403	CERRADO	endpoint util
+github.com	https://github.com	400	CERRADO	HTML
+#	hallazgo		FALSO-ABIERTO	api.github.com responde 200 en su RAIZ y 403 en /repos/* — probar la raiz de un host como test de canal da un ABIERTO FALSO

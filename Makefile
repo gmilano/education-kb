@@ -37,6 +37,7 @@ TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 SHAPE_LOG ?= /tmp/education-kb-gate-address-shape.log
 CURRENCY_LOG ?= /tmp/education-kb-gate-census-currency.log
+GRANTPATH_LOG ?= /tmp/education-kb-gate-grant-path.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
@@ -75,7 +76,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-template-identity gate-untitled-payload gate-region-headings \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
-             gate-address-shape gate-census-currency
+             gate-address-shape gate-census-currency gate-grant-path
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -393,6 +394,31 @@ address-shape-census: ## p351 — every rejected shape with its class.  A backlo
 gate-census-currency: ## p352 — a census over the shelves is re-derived AFTER the pass writes, never before
 	@cd compose/code/p352-census-currency && { $(PY) -I test_census_currency.py > $(CURRENCY_LOG) 2>&1 || { echo "🔴 p352-census-currency FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CURRENCY_LOG) ; false ; } ; } && echo "── p352-census-currency (24 controls: p351's own published sentence, the live-occurrence-wins rule, each of the three cells load-bearing alone, the anchor-file exclusion, P541's refusal as exit 2, and the CASE-CLOSED anchor ladder p283 demanded)" && echo "   PASS" || exit 1
 	@set -o pipefail; $(PY) -I compose/code/p352-census-currency/census_currency.py --root . 2>&1 | sed "s/^/   /" || exit 1
+
+# 🟢 p354 — ACTION ZZ-au, registered by p353: `make hooks` should assert that every published
+# grant path resolves `200`.  p353 found `sandraschi/classroom-mcp` published at `main/LICENSE`
+# (404) when its default branch is `master`, and established it was a REGRESSION — the same
+# shelf's carried history already had `master`, so a later pass normalised a correct branch
+# into an assumed one.  A wrong branch fails CLOSED: a permissive repo reads as ungranted.
+# 🔵 The OFFLINE arm is the EXTRACTOR, because that is the half that can be wrong silently — a
+# claim the parser misses is a claim the online arm never probes, so an under-counting parser
+# would report green over an unchecked corpus.  43 controls bind the parse.
+# 🔴 This instrument's FIRST run accused three CORRECT cells (`tests/stubs/LICENSE.md`,
+# `canvas-lms-mcp/LICENSE`, `packages/xapi/LICENSE` — all true repo-relative paths read as
+# branches).  Fourth consecutive pass of this base's own shape: a token's meaning comes from
+# its CELL, not its shape.  Fixed structurally — the parse binds to the `Grant read at`
+# column — and all three are pinned as controls so no successor re-introduces it.
+gate-grant-path: ## p354 — ACTION ZZ-au: a published grant path asserts a BRANCH and a FILE, and both must resolve
+	@cd compose/code/p354-grant-path && { $(PY) -I test_grant_path.py > $(GRANTPATH_LOG) 2>&1 || { echo "🔴 p354-grant-path FAILED — the suite's own report follows:" ; sed "s/^/   /" $(GRANTPATH_LOG) ; false ; } ; } && echo "── p354-grant-path (43 controls: p353's repaired cell and its FIRST-WINS rule, the three false positives this instrument's own first run produced, the column binding and its table-boundary reset, the live-region cut, P541's refusal as exit 2)" && echo "   PASS" || exit 1
+	@set -o pipefail; $(PY) -I compose/code/p354-grant-path/grant_path.py --root . 2>&1 | sed "s/^/   /" || exit 1
+
+# 🔴 ONLINE half — one `raw.githubusercontent.com` read per published grant path.  OUT of
+# `hooks`.  It CALIBRATES FIRST in `p293`'s shape: a positive control (this base's anchor row)
+# and a negative one (p353's own documented 404), because a channel answering 404 for
+# everything would report every row dead, and a failed control pair yields NO verdict.
+gate-grant-path-online: ## p354 — ACTION ZZ-au, the 200-check itself.  NEEDS EGRESS.
+	@$(PY) -I compose/code/p354-grant-path/grant_path.py --root . --online \
+	  --out evidence/grant-path-liveness-$$(date +%F).tsv || exit 1
 
 # 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
 # An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 · 2026-10-21 — a trend this base can state because it finally has the denominator: **this vertical's supply is named for its FUNCTION, not for "AI" or "education"** — twelve passes of agent-shaped queries could not see a 4 491-star repository the sector runs on
+
+**Evidence:** [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p354.tsv) · [`l2-bench-resolution`](../evidence/l2-bench-resolution.2026-10-21-p354.tsv)
+
+### 🟢 T40 — this sector's open-source supply is indexed by FUNCTION, and "AI education" queries cannot reach it
+
+🔵 **The claim.** Searching for *education AI agents* finds courseware about AI. The repositories an education engagement actually builds on are named for the **job they do** — grading, lecture capture, taxonomy, sandboxed execution, LTI integration — and carry neither *"AI"* nor *"education"* prominently.
+
+🟢 **The denominator, measured this pass.** Twelve consecutive passes of the two prescribed supply legs returned **zero** new education agents. The authenticated index, asked the same way (`AI tutor education agent`, `stars:>150`, `pushed:>2026-09-01`), returns **65** repositories of which **exactly one** is educational and not already carried — and that one was already on three shelves.
+
+🔴 **The falsifying instance, and it is large.** One leg aimed at a **function** — sandboxed execution under assessment — returned **[`judge0/judge0`](https://github.com/judge0/judge0)**, `4 491 ★ · 945 forks`, **absent from this base's entire corpus including `archive/`**. 🔵 `p326` recorded the identical shape (*"the largest artefact in this sector is a data repo, and twelve passes of agent-shaped queries could not see it"*).
+
+🟢 **What follows for a successor, stated as an instruction rather than an observation:** run the supply legs **by function** — `autograder`, `online judge`, `lecture capture`, `curriculum ontology`, `LTI`, `SIS`, `proctoring`, `spaced repetition`, `rubric` — and keep the two prescribed legs as the control that shows the vocabulary gap is still open.
+
+🟡 **Bound honestly.** This is a claim about **discoverability**, not about quality or quantity of supply. It predicts that further function-named legs will keep yielding; a successor that runs five such legs and finds nothing refutes it.
+
+### 🟢 T41 — education's foundation layer is OLD, and its age leaks into every automated read of it
+
+🔵 **The claim.** This sector's platform layer predates the conventions a 2026 toolchain assumes, and the mismatch produces **silent, fail-closed errors** rather than loud ones.
+
+🟢 **Measured this pass:** **13 of 18** grant paths on `repos/foundations.md` are on `master`, against **3 of 29** on `agents/top.md`. GitHub's default moved to `main` in 2020; the twelve are this sector's pre-2020 institutional cohort (`oppia`, `kolibri`, `ltijs`, `OpenOLAT`, `sakai`, `opencast`, `edx-platform`, `frontend-app-learning`, `canvas-lms`, `chamilo-lms`, `ILIAS`, `h5p-php-library`).
+
+🔴 **Why it is a trend and not trivia.** The same age explains three things this base has found separately: **six of eight Tier-1 platforms are GPL or AGPL** (pre-permissive-era licensing), **grants sit at `COPYING.txt` and `docs/License.txt`** rather than `LICENSE` (pre-GitHub conventions), and **branch defaults are `master`**. 🔵 **One cause, three classes of automated misreading, all failing closed** — an old permissive platform reads as ungranted, and an old copyleft platform reads as absent.
+
+🟢 **The studio consequence:** tooling calibrated on 2024-era repositories **under-reports what education has.** Derive the branch, enumerate the tree, and never let a one-rung ladder produce an absence.
+
+### 🔴 T42 — the US has stopped converging on one AI-compliance shape
+
+🔵 **The claim, new this pass.** Through early 2026 the direction of travel was one way: more states, broader duties, EU-shaped risk frameworks. 🔴 **Colorado reversed it** — the Colorado AI Act was **repealed and replaced on 2026-05-14** by the narrower **ADMTA / SB 26-189** (disclosure-centred, effective 2027-01-01), dropping mandatory risk-management programmes, impact assessments and the duty of reasonable care.
+
+🟡 **So a multi-state education deployment can no longer be served by one compliance programme**, which is the opposite of the EMEA picture, where the AI Act supplies a single high-risk framework with a known deadline (education deferred to **2027-12** and **2028-08**). 🔵 **For a studio this is a pricing and architecture fact:** a US engagement needs a **per-state policy surface** behind one product; an EU engagement needs one framework implemented deeply.
+
+🔴 **Bound: secondary sources only.** The state texts are unreachable from this session, and the education-specific reach of ADMTA is **not established** — this pass declined to publish a FERPA carve-out that one source asserted and nine others do not mention.
+
 ## Pass 353 · 2026-10-21 — the trend this pass can state that it could not last pass: **education's binding constraint is diverging by region**, and in exactly one region it is **compute** rather than governance. Plus a measured fact about this base's own corpus: **165 of 165 published addresses are live**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv)

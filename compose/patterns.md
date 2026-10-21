@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 · 2026-10-21 — two new recipes, and both exist because this pass measured something: **P51** wires the language-agnostic autograder this base lacked (`judge0`, new at p354), and **P52** is the 30-minute check that would have caught `p353`'s defect — *does every grant path you are about to quote still resolve?*
+
+**Evidence:** [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv)
+
+🟢 **Every component cited by every recipe on this shelf resolves `200` at its published grant path**, first-hand 2026-10-21 (47 of 47, `ACTION ZZ-au`). 🔵 `gate-evidence-store`'s recipe-citation arm already refuses a recipe that cites a component it cannot locate; this pass adds the complementary guarantee that the located component's **grant** is readable.
+
+### P51 — "Graded exercises in any language, and the sandbox is not the LLM" — the autograding stack for a programming or data course (any region; 6–8 weeks)
+
+🔴 **The problem, stated as a buyer states it.** *"We teach Java, SQL and C++. We want AI feedback on student code. We will not let a model decide a mark, and we will not run student code on our own web server."*
+
+🔴 **Why this base could not answer it until this pass.** The only autograder on these shelves was **[`jupyter/nbgrader`](https://github.com/jupyter/nbgrader)** (BSD-3-Clause, `main/LICENSE`) — the de-facto standard, and **Jupyter-only**. 🟢 **`judge0` is the missing layer.**
+
+| # | component | grant, read first-hand | what it does here |
+|---|---|---|---|
+| 1 | [`judge0/judge0`](https://github.com/judge0/judge0) | 🟡 **GPL-3.0**, `master/LICENSE`, 34 526 B | 🟢 **The sandbox.** Submitted code runs here, behind an HTTP API, never in the application process. **Deploy UNMODIFIED** and GPL-3.0 owes nothing — it has no network clause |
+| 2 | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0**, `master/LICENSE` | Certified LTI 1.3 launch from Moodle, Canvas, Open edX or Sakai, so the exercise appears inside the course the student already has |
+| 3 | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause**, `main/LICENSE` | Kept for the notebook half — release, collect, autograde. `judge0` covers every non-notebook language |
+| 4 | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT**, `main/LICENSE` | Bayesian Knowledge Tracing over the exercise outcomes, so mastery is an **inspectable model** rather than a prompt's opinion |
+| 5 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT**, `main/LICENSE` | Generates the exercise variants and distractors; its output is a candidate, never a mark |
+
+🟢 **How they wire together, and where the human sits.**
+
+1. **`ltijs`** receives the LTI 1.3 launch; the student never leaves the LMS and no roster is copied (`P49`'s boundary).
+2. **`educhain`** generates an exercise variant from the course's own topic list. 🔴 **Generation is the only LLM step in the mark path, and it happens before the student arrives** — so a model failure is a bad question caught in review, not a wrong grade.
+3. The submission goes to **`judge0`**, which runs it against the course's test cases in a sandbox and returns **pass/fail plus runtime**. 🟢 **The mark comes from the test cases. Deterministic, re-runnable, and defensible to an examination board** (`P35`'s rule, which this recipe now satisfies in any language rather than only in Python).
+4. **`OATutor`** updates the BKT mastery estimate from the outcome and chooses what comes next.
+5. An LLM writes **feedback prose only**, on an already-determined result, clearly labelled.
+
+🟡 **The three things to price honestly.** `judge0`'s sandbox needs real isolation (containers, cgroups, time and memory caps) — budget infrastructure, not just integration. **GPL-3.0 means do not fork it into your product**; run it as a service and keep your code on your side of the API. And **the test cases are the deliverable** — the engagement's real cost is writing and reviewing them, not wiring the stack.
+
+🟢 **Why the licence shape works.** The one copyleft component is deployed unmodified behind an API; everything a studio writes sits on MIT, Apache-2.0 and BSD-3-Clause rows. 🔵 **That is this base's standing education pattern** — copyleft in the platform, permissive in the layer you write — applied to execution for the first time.
+
+### P52 — "Does the stack you just quoted still exist?" — the grant-path liveness check to run before a proposal leaves the building (any region; 30 minutes)
+
+🔴 **The failure this prevents, from this base's own history.** `p353` found a row published as **MIT at `main/LICENSE`** where the default branch is `master`. The licence was real; the path was wrong; **`raw.githubusercontent.com` has no branch default**, so the read `404`s and a permissively licensed repository **reads as having no licence at all**. 🔴 **It fails CLOSED** — a proposal drops a usable component, or an engagement re-implements something it already had the right to use.
+
+🔵 **And it was a REGRESSION, not an oversight:** the same shelf's carried history had `master` with the same byte count, so a later pass normalised a correct branch into an assumed one. **Attention had already failed once**, which is why this is a gate rather than a checklist item.
+
+🟢 **The recipe, runnable from this repository today.**
+
+1. `make gate-grant-path` — offline. Parses every `Grant read at` cell on the live shelves and reports the denominator plus the branch histogram. **Zero claims is a FAIL**, so a broken parser cannot report green.
+2. `make gate-grant-path-online` — needs egress. **Calibrates first** (a known-good path and a known-404), then probes every published path and fails on anything that is not `200`.
+3. For a component **not** on these shelves, derive the branch rather than assume it:
+   `git ls-remote --symref https://github.com/OWNER/REPO HEAD` → take the `refs/heads/<branch>` it names, then read `https://raw.githubusercontent.com/OWNER/REPO/<branch>/LICENSE`.
+4. If that `404`s, **enumerate the tree** before concluding anything (`p275`): a one-rung ladder cannot prove an absence, and this base has found real grants at `COPYING.txt`, `docs/License.txt` and inside a `LICENSE` **directory**.
+
+🟢 **Why it is worth 30 minutes on a sector this old.** **13 of 18** rows on `repos/foundations.md` are `master`-default — **72.2 %** — because education's platform layer predates GitHub's 2020 change. 🔴 **The `main` assumption is wrong on seven of every ten rows of the shelf that decides what a studio can ship.**
+
+🟡 **The limit, stated.** A `200` proves the path is readable, not that the licence says what the cell claims. Pair it with `make gate-shelf-consistency` (no slug carrying disagreeing licence cells) and `make gate-payload-pin` (the three-valued GRANT / POINTER / RESERVED classifier) for the semantic half.
+
 ## Pass 353 · 2026-10-21 — two new patterns, both assembled **entirely from permissive rows already verified on these shelves**, and both answering a constraint this pass measured rather than a capability it wished for
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`grant-recheck`](../evidence/grant-recheck.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv)

@@ -1,0 +1,9 @@
+pierna	canal	consulta	resultado	nuevo_en_estanterias
+supply-1	WebSearch	top open source AI agents education 2026 github MIT license	agentes de proposito general (Hermes, OpenClaw, OpenHands, CrewAI, LangChain/LangGraph, Agent Zero) + LLMs-from-scratch	0
+supply-2	WebSearch	github trending education AI 2026 repository	rohitg00/ai-engineering-from-scratch, microsoft/generative-ai-for-beginners, 100-Days-Of-ML-Code, D2L	0
+supply-3	WebSearch	open source AI tutor agent github 2026 adaptive learning MIT Apache	DeepTutor, OpenTutor, OATutor, Ebimsv/AITutorAgent, Naresh1401/education-tutor-agent, studymentor-adaptive-tutor	0 promovidos
+supply-4	indice-autenticado	AI tutor education agent in:name,description,readme stars:>150 pushed:>2026-09-01	65 resultados; el unico educativo no llevado es classroomio/classroomio (ya en 3 estanterias)	0
+supply-5	indice-autenticado	plataforma LMS permisiva	OpenOLAT (Apache-2.0) ya en repos/foundations.md; Moodle GPL-3.0, Open edX AGPL-3.0, Canvas CE AGPL-3.0, Chamilo GPL-3.0 — todos llevados	0
+supply-6	indice-autenticado	ejecucion sandboxed / autograding	judge0/judge0 — AUSENTE de todo el corpus (incluido archive/). GPL-3.0, 34 526 B, master/LICENSE, 4 491 estrellas, 945 forks	1 PROMOVIDO
+#	hallazgo	piernas de descubrimiento saturadas	duodecimo pase consecutivo sin un agente educativo nuevo; causa estructural sin cambios: GitHub Trending no tiene categoria de educacion	
+#	hallazgo	la pierna que SI rindio	cambio de vocabulario: no "agente educativo" sino la CAPA DE EJECUCION bajo la evaluacion (sandbox, autograder, online judge)	

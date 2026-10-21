@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 · 2026-10-21 — **`ACTION ZZ-au` DISCHARGED: 47 of 47 published grant paths resolve `200`.** The gate that proves it **accused three CORRECT cells on its first run**, which makes this the fourth consecutive pass where this base's own instrument was wrong and its shelf was right. And `p353`'s *"6 %"* is **34.0 %** corpus-wide — the branch hazard tracks repository **AGE**, not carelessness
+
+**Evidence:** [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p354.tsv) · [`l2-bench-resolution`](../evidence/l2-bench-resolution.2026-10-21-p354.tsv) · [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p354.tsv)
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21**. 🟢 Artefacts are dated by MEASUREMENT, never by commit. 🔵 This is the **fifth pass of this date** (`p350`, `p351`, `p352` and `p353` earlier today).
+
+### 🟢 The gate state, first, because this pass changes it
+
+🟢 **`make hooks` was 31/31 GREEN ON ARRIVAL** — the second clean arrival in a row. 🟢 **On exit it is 32/32**, because this pass wires `gate-grant-path` (43 controls) plus its online arm `gate-grant-path-online`.
+
+🔴 **`p353` committed without writing a `README.md` pass section.** The live write-up at the anchor file is still `p352`'s, so every README-anchored gate spent this whole day judging a text two passes old. 🔵 **`p345` found exactly this** — *"the gate that has been red for two passes was judging p343's text because p344 never wrote a README section"* — so it is the **second instance**, and `p353` is the pass that otherwise ran the cleanest sweep in this base's history. 🟡 Registered as **`ACTION ZZ-ax`**: no gate asserts that the live `README.md` pass section names the pass at `HEAD`.
+
+### 🟢 `ACTION ZZ-au` discharged — and the answer is clean
+
+🔵 `p353` registered it in one sentence: *"`make hooks` should assert that every published grant path resolves `200`, which would have caught this the pass it was introduced."* Built as `compose/code/p354-grant-path/`, wired both arms, and run.
+
+| | |
+|---|---:|
+| live grant claims published across the six rewritable shelves | **47** |
+| distinct `(slug, branch, path)` triples probed first-hand **2026-10-21** | **47** |
+| 🟢 **resolve `200`** | 🟢 **47 of 47** |
+| 🔴 do not resolve | 🟢 **0** |
+| rows in a grant-bearing table carrying **no** path | 🟢 **0** |
+
+🟢 **The calibration pair reproduced exactly** — `HKUDS/DeepTutor` at `main/LICENSE` → `200`, and `p353`'s own documented defect `sandraschi/classroom-mcp` at `main/LICENSE` → `404`. 🔵 That matters more than the headline: a channel answering `404` for everything would have reported all 46 dead, so the pair is probed **before** any verdict is issued and a control failure yields **no verdict** rather than a guess (`p293`).
+
+### 🔴 The gate's FIRST run accused three cells that were RIGHT, and that is the better finding
+
+🔴 Run before the scope was bound, this instrument reported **three defects. All three were its own fault.**
+
+| the cell | what it publishes | what a `branch/path` parser read it as |
+|---|---|---|
+| `agents/top.md:341` | `tests/stubs/LICENSE.md` — a stub, *"correctly not counted as a second grant"* | a branch called `tests` |
+| `agents/top.md:386` | `canvas-lms-mcp/LICENSE` — the directory holding `@likr/canvas-lms-mcp` | a branch called `canvas-lms-mcp` |
+| `agents/top.md:387` | `packages/xapi/LICENSE`, beside its own `package.json` | a branch called `packages` |
+
+🟢 **Every one is a true, first-hand, REPO-RELATIVE path.** Probed as raw URLs they `404`, so the gate accused three correct cells — and two of them are `p347`'s depth findings, among the best work on this shelf.
+
+🔵 **This is this base's own recurring shape, now on its fourth consecutive quantity:**
+
+| pass | the token | what it actually belonged to |
+|---|---|---|
+| `p351` | a **licence** | `THIRD_PARTY_SCOPE` — something that is not the repository |
+| `p352` | a **star figure** | the comparison named in the same cell |
+| `p353` | a cell reading like a **table header** | a transposed key-value row where `repo` is a key |
+| **`p354`** | a **path** | the tree, not a raw URL |
+
+> 🔵 **A token's MEANING is given by the cell it sits in, never by its shape.**
+
+🔴 **No regex can separate them**: `master/docs/License.txt` and `packages/xapi/LICENSE` are the same shape and different claims. 🟢 **What separates them is the COLUMN.** The live tiers publish a dedicated **`Grant read at`** column holding exactly a `branch/path` for a raw read; a pass write-up's table has no such column and its path cells are tree-relative. The parse binds to the **header**, and all three false positives are pinned as controls so no successor re-introduces them.
+
+🔵 **One ambiguity this gate cannot remove, stated rather than hidden.** `p353`'s repaired cell names **two** paths and the second exists in order to be refuted (*"this cell read `main/LICENSE`, which is **404**"*). A parser taking the last, or all, would **report a defect against the one cell that was just repaired.** 🟢 The rule is **FIRST-WINS inside the bound cell** — the asserted value leads, commentary follows. 🟡 That is a rule about cell ORDER, not about truth: a pass that wrote the refuted path first would be mis-parsed and no gate here can catch it.
+
+### 🔴 `p353`'s `6 %` is `34.0 %`, and the mechanism is worth more than the ratio
+
+🔴 **`p353` published:** *"`2` of the `31` rows on these tiers are `master`-default, so the `main` assumption is wrong about **6 %** of the time."* 🔴 **Re-derived over every live grant row this base publishes: `16` of `47` — **34.0 %**, more than five times that figure.**
+
+| shelf | live grant rows | `main` | `master` | `master` share |
+|---|---:|---:|---:|---:|
+| `agents/top.md` | 29 | 26 | 3 | 10.3 % |
+| `repos/foundations.md` | 18 | 5 | **13** | 🔴 **72.2 %** |
+| **all live shelves** | **47** | **31** | **16** | 🔴 **34.0 %** |
+
+🔵 **Two separate things make the 6 % wrong and both are worth keeping.**
+
+🔴 **First, it is the `p352` ordering defect on a new quantity.** `p353` counted `2` of `31` **before writing its own correction** — and that correction is what made `sandraschi/classroom-mcp` a `master` row. Its own shelf, as committed, carries **3**. `gate-census-currency` binds the address census; **nothing binds a ratio stated in prose.** 🟡 Registered as **`ACTION ZZ-aw`**.
+
+🟢 **Second, and the useful half: the hazard is not uniform — it tracks repository AGE.** GitHub's default moved to `main` in 2020, and `repos/foundations.md` is this base's pre-2020 cohort almost exactly. **13 of its 18 rows are `master`.**
+
+> 🔴 **The `main` assumption is most wrong exactly where this KB's most-recommended rows are.** Education's foundation layer is old institutional software — six of eight Tier-1 learning platforms are GPL or AGPL — so the branch default a 2026 pass reaches for by habit is wrong on **72.2 %** of that shelf and on **10.3 %** of this one.
+
+### 🔴 A channel class this base did not have: the FALSE-OPEN
+
+🔴 **`https://api.github.com` answers `200` this pass.** 🟢 **`https://api.github.com/repos/HKUDS/DeepTutor` answers `403`.** 🔵 `p353` recorded the host as 403 and was right about the thing that matters; a successor probing the **root** as a channel test would read it as **OPEN** and publish figures it cannot get.
+
+> 🔵 **A `200` on a host's ROOT is not a `200` on its endpoints.** `p351` declared a channel shut that was open (false-shut); this is the mirror image, and it is the more dangerous direction because it fails **open**.
+
+🟢 **The star channel that does work remains the authenticated search index** (`p255`, `p352`). Used this pass: **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at `41 932 ★ · 5 313 forks`**, first-hand — `p352` read `41 918 ★ · 5 310`, so **+14 stars and +3 forks in one day** on the sector's anchor row.
+
+### 🟢 `ACTION ZZ-at` ANSWERED — with a measured negative rather than a third guess
+
+🔵 `p353` could not resolve **`L2-Bench`** to an address because `arxiv.org`, `aclanthology.org` and `huggingface.co` are all `000`, and declared the row rather than inventing one. 🟢 **This pass asked the strongest channel this base has** — the authenticated search index — and the answer is a clean negative.
+
+🔴 **`"L2-Bench"` returns 21 repositories and NONE of them is the second-language-education benchmark**: `wangbiao0814/ascend-l2-bench` is Ascend hardware, `bangadpurva/rec-l2-bench` is recommenders, `bangadpurva/esci-l2-bench` is e-commerce, `Furqan3/L2_benchmarking` is undescribed — every one at `0 ★`.
+
+🟢 **So `ZZ-at` closes as `NOT PUBLISHED, MEASURED`:** at 2026-10-21 `L2-Bench` has no resolvable GitHub address in the default index. 🔵 The **Evaluation tier stays at one row**, and it stays there for a reason that is now on the record rather than pending.
+
+### 🔴 The discovery legs are saturated for the TWELFTH consecutive pass — and the leg that broke the streak changed VOCABULARY
+
+🔴 All prescribed supply legs ran, globally and per region. `top open source AI agents education 2026 github MIT` returned general-purpose agents (Hermes, OpenClaw, OpenHands, CrewAI, LangChain/LangGraph, Agent Zero) and *"learn AI"* courseware; `github trending education AI 2026` returned `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners` and D2L. 🔵 **All of them teach AI; none teaches with AI.** Structural cause unchanged: **GitHub Trending has no education category.**
+
+🟢 **The authenticated index was also run, which the WebSearch legs cannot substitute for:** `AI tutor education agent in:name,description,readme stars:>150 pushed:>2026-09-01` returns **65** repositories. 🔴 **Exactly one is educational and not already carried** — `classroomio/classroomio` — **and this base already holds it on three shelves.** Zero promotions to this tier.
+
+🟢 **The leg that DID yield changed vocabulary rather than threshold**, and the row it found is on `repos/foundations.md`: not *"an education agent"* but **the execution layer underneath assessment** — sandbox, autograder, online judge. **[`judge0/judge0`](https://github.com/judge0/judge0)** was absent from this base's **entire corpus, `archive/` included**, at **4 491 ★**.
+
+> 🟡 **Twelve passes of agent-shaped queries could not see a 4 491-star repository this sector runs on.** `p326` wrote the same sentence about a data repo. The lesson is not *search harder*: it is that **this vertical's supply is named for its FUNCTION (grading, capture, taxonomy, execution) and almost never for "AI" or "education"**.
+
 ## Pass 353 · 2026-10-21 — the first **whole-corpus** liveness sweep: **165 of 165** published addresses answer and **30 of 31** live grants re-derive exactly. The one that did not is a real defect in a published cell, and it is in the **branch**, not the licence — which makes a grant path two claims where this shelf has been checking one
 
 **Evidence:** [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`grant-recheck`](../evidence/grant-recheck.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv) · [`table-header-negative`](../evidence/table-header-negative.2026-10-21-p353.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv)

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 354 · 2026-10-21 — this shelf is where the branch hazard LIVES: **13 of its 18 grant paths are `master`**, which is **72.2 %** against the `6 %` `p353` published. And the leg that finally yielded a row did it by changing VOCABULARY — **`judge0`, 4 491 ★, absent from this base's entire corpus**
+
+**Evidence:** [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv)
+
+🟢 **Every grant path on this shelf resolves `200`, read first-hand 2026-10-21** — 18 of 18, as part of the 47-of-47 corpus sweep that discharges `ACTION ZZ-au` (see `agents/top.md`). 🔴 **No star or fork figure here is first-hand except `judge0`'s**, which came from the authenticated search index; `github.com` and `api.github.com/repos/*` are 403.
+
+### 🔴 The `main`-assumption hazard is a property of THIS shelf, and the reason is its age
+
+🔴 `p353` registered `ACTION ZZ-au` after finding one row published at `main/LICENSE` whose default branch is `master`, and bounded the risk at *"about **6 %** of the time."* 🔴 **Re-derived over the live grant rows of all six rewritable shelves, the share is `16` of `47` — `34.0 %`. On THIS shelf it is `13` of `18`: `72.2 %`.**
+
+| shelf | live grant rows | `main` | `master` | `master` share |
+|---|---:|---:|---:|---:|
+| `agents/top.md` | 29 | 26 | 3 | 10.3 % |
+| **`repos/foundations.md`** | **18** | **5** | 🔴 **13** | 🔴 **72.2 %** |
+| all live shelves | 47 | 31 | 16 | 34.0 % |
+
+🟢 **The mechanism is datable rather than cultural.** GitHub's default moved to `main` in 2020. The twelve `master` rows here are this sector's pre-2020 institutional cohort, by name: `oppia/oppia`, `learningequality/kolibri`, `Cvmcosta/ltijs`, `OpenOLAT/OpenOLAT`, `sakaiproject/sakai`, `opencast/opencast`, `openedx/edx-platform`, `openedx/frontend-app-learning`, `instructure/canvas-lms`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `h5p/h5p-php-library`.
+
+> 🔴 **The agent tier is young and mostly `main`; the foundation tier is old and mostly `master`.** So the branch a 2026 pass assumes by habit is wrong on **seven of every ten rows of the shelf that decides what Globant can actually ship** — and it fails **CLOSED**, making a permissively licensed platform read as ungranted. 🟢 Derive the branch from `--symref`; the standing guard is `make gate-grant-path`.
+
+### 🟢 One new row, and the leg that found it changed VOCABULARY rather than threshold
+
+🔵 The platform leg returned nothing permissive for the fourth time (`OpenOLAT` remains the only Apache-2.0 LMS; Moodle GPL-3.0, Open edX and Canvas CE AGPL-3.0, Chamilo GPL-3.0 — all carried). 🟢 **A leg aimed at the EXECUTION layer under assessment — sandbox, autograder, online judge — returned a row this base had never held.**
+
+🔴 **[`judge0/judge0`](https://github.com/judge0/judge0) was absent from this repository's ENTIRE corpus, `archive/` included.** Grep returned zero hits across every shelf and every archived tree. **4 491 ★ · 945 forks**, pushed **2026-10-21** (the day of measurement), read first-hand from the authenticated index.
+
+🟢 **Grant read first-hand, and it is NOT what the permissive arm wanted:** `git ls-remote --symref` gives `ref: refs/heads/master`; `master/LICENSE` is **`GPL-3.0`, 34 526 B**, first line *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"*. 🔵 **Checked against `gate-affero-rung` deliberately** — this is `GPL-3.0`, **not** `AGPL-3.0`; the payload carries no Affero clause, and the two differ by two bytes from `p353`'s recorded `34 524 B` AGPL text, which is exactly the confusion that gate exists for.
+
+🟡 **Why it belongs on the copyleft arm and what that costs.** GPL-3.0 has **no network clause**: deploying `judge0` unmodified as a private grading backend owes no source, which is the whole difference from the four AGPL rows above it. Distributing a modified build does.
+
+### 🔵 What this shelf should be read as saying after this pass
+
+🟢 **18 foundation rows** (the `p339` heading below reads `17` and is a dated claim, correct against its own tree). 🟢 The permissive arm is unchanged at six rows; the ECL-2.0 arm at two; **the copyleft arm gains `judge0` to nine.** 🔴 The structural reading is unchanged and now has a second axis: **this sector's foundation layer is copyleft AND old** — so an engagement inherits both a licence boundary and a branch convention, and this base has now been wrong about the second one.
+
 ## Pass 353 · 2026-10-21 — every address this shelf publishes was checked first-hand and **all of them answer**; the platform leg returned **no permissive LMS or SIS for the third time**, which is now a finding about the sector rather than about the leg
 
 **Evidence:** [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv)
@@ -552,6 +586,7 @@ This shelf already splits it **MIT (code) / CC-BY-NC-SA-4.0 (data)** and already
 | https://github.com/chamilo/chamilo-lms | GPL-3.0 | `master/LICENSE` | LMS with notably strong adoption across Latin America and Francophone Africa — relevant precisely where Moodle and Canvas are weaker |
 | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | `master/LICENSE` | Long-established LMS with deep roots in German-speaking Europe and strong SCORM/assessment support; frequent answer to EU public-sector tenders |
 | https://github.com/h5p/h5p-php-library | GPL-3.0 | `master/LICENSE.txt` | H5P interactive content types (branching scenarios, interactive video, drag-and-drop) embeddable in Moodle, Canvas, Open edX and WordPress. 🔵 The fastest route to *interactive* content without building a player; grant at `LICENSE.txt` |
+| https://github.com/judge0/judge0 | GPL-3.0 | `master/LICENSE` | Sandboxed, self-hosted code-execution engine behind an HTTP API — the autograding backend under online judges and programming courses. **4 491 ★ · 945 forks**, pushed 2026-10-21, read first-hand from the authenticated index; grant **34 526 B** at `master/LICENSE`. 🔵 **The layer `nbgrader` cannot cover:** `nbgrader` is Jupyter-only, so a graded exercise in Java, C++, Go or SQL had nothing on this shelf to run it in. Its own topics name `ai-agent-tools`, `ai-agents`, `code-execution`, `online-judge`. 🟡 **GPL-3.0 has NO network clause** — deploy it unmodified as a private grading backend and no source is owed; distributing a modified build owes it. 🔵 Checked against `gate-affero-rung`: GPL-3.0, **not** AGPL-3.0. Wired as `P51` in `compose/patterns.md`. **New at p354** |
 
 > 🔴 **The AGPL rung is the one that ends engagements late.** AGPL-3.0 extends copyleft across the network boundary: host a modified Open edX or Canvas as a service and the modified source is owed to its users. Four rows above are AGPL. That is survivable — thousands of integrators ship Open edX commercially — but it must be decided at architecture time, not at delivery. The clean pattern is to keep client-proprietary logic in a **separate service the platform talks to over LTI 1.3 or MCP**, rather than patched into the AGPL tree. `ltijs` is in the permissive arm for exactly this reason.
 

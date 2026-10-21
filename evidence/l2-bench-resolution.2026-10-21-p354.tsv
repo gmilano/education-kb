@@ -1,0 +1,8 @@
+accion	canal	consulta	candidatos	veredicto
+ZZ-at	indice-autenticado	"L2-Bench" in:name,description,readme	21	NINGUNO es el benchmark de educacion de segunda lengua
+ZZ-at	candidato	wangbiao0814/ascend-l2-bench	0 estrellas	hardware Ascend — NO
+ZZ-at	candidato	bangadpurva/rec-l2-bench	0 estrellas	recomendadores — NO
+ZZ-at	candidato	bangadpurva/esci-l2-bench	0 estrellas	e-commerce ESCI — NO
+ZZ-at	candidato	Furqan3/L2_benchmarking	0 estrellas	sin descripcion, no educativo — NO
+ZZ-at	canal-cerrado	arxiv.org / aclanthology.org / huggingface.co	000 connect_rejected (p353)	la declaracion de disponibilidad de codigo sigue inalcanzable
+#	veredicto	ZZ-at RESPONDIDA con una NEGATIVA MEDIDA	el indice autenticado es el canal de descubrimiento mas fuerte de esta base y no devuelve direccion para L2-Bench al 2026-10-21	no inventar una tercera direccion

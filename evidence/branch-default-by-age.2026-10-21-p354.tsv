@@ -1,0 +1,52 @@
+archivo	slug	branch	path	clase
+agents/top.md	Aaradhya-Dev-Tamrakar/google-classroom-mcp	main	LICENSE	MAIN
+agents/top.md	AI-for-Education/pedagogy-benchmark	main	LICENSE	MAIN
+agents/top.md	ankimcp/anki-mcp-server	main	LICENSE	MAIN
+agents/top.md	AnonymousOnyx22/brightspace-d2l-mcp	main	LICENSE	MAIN
+agents/top.md	anthropics/k12-teacher-skills	main	LICENSE	MAIN
+agents/top.md	ArnaudGuiovanna/tutor-mcp	main	LICENSE	MAIN
+agents/top.md	blend-ed/openedx-mcp	master	LICENSE	MASTER-DEFAULT
+agents/top.md	CAHLR/OATutor	main	LICENSE	MAIN
+agents/top.md	DaRL-GenAI/instructional_agents	main	LICENSE	MAIN
+agents/top.md	falkenslab/moodle-mcp	main	LICENSE	MAIN
+agents/top.md	felipedias-ie/blackboard-mcp	main	LICENSE	MAIN
+agents/top.md	HKUDS/DeepTutor	main	LICENSE	MAIN
+agents/top.md	JhostinAleck/brightspace-mcp	main	LICENSE	MAIN
+agents/top.md	littlecookie0722/AI-Teaching-Agent	main	LICENSE	MAIN
+agents/top.md	Mcp-Brasil/mcp-brasil	main	LICENSE	MAIN
+agents/top.md	NiccoloSalvini/mcp-blackboard-ucsc	main	LICENSE	MAIN
+agents/top.md	OmarNiazi/classroom-mcp	main	LICENSE	MAIN
+agents/top.md	Open-TutorAi/open-tutor-ai-CE	main	LICENSE	MAIN
+agents/top.md	pablopc05/mcp-usc	main	LICENSE	MAIN
+agents/top.md	pengusto/google-classroom-mcp	master	LICENSE	MASTER-DEFAULT
+agents/top.md	psychquant/che-ntucool-mcp	main	LICENSE	MAIN
+agents/top.md	r-huijts/canvas-mcp	main	LICENSE	MAIN
+agents/top.md	RohanMuppa/brightspace-mcp-server	main	LICENSE	MAIN
+agents/top.md	sandraschi/classroom-mcp	master	LICENSE	MASTER-DEFAULT
+agents/top.md	satvik314/educhain	main	LICENSE	MAIN
+agents/top.md	skhdemo/uoft-quercus-mcp	main	LICENSE	MAIN
+agents/top.md	sonaiengine/ku-portal-mcp	main	LICENSE	MAIN
+agents/top.md	THU-MAIC/OpenMAIC	main	LICENSE	MAIN
+agents/top.md	vishalsachdev/canvas-mcp	main	LICENSE	MAIN
+repos/foundations.md	chamilo/chamilo-lms	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	Cvmcosta/ltijs	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	h5p/h5p-php-library	master	LICENSE.txt	MASTER-DEFAULT
+repos/foundations.md	ILIAS-eLearning/ILIAS	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	instructure/canvas-lms	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	jupyter/nbgrader	main	LICENSE	MAIN
+repos/foundations.md	jupyterhub/jupyterhub	main	LICENSE	MAIN
+repos/foundations.md	learningequality/kolibri	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	moodle/moodle	main	COPYING.txt	MAIN
+repos/foundations.md	opencast/opencast	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	openedx/edx-platform	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	openedx/frontend-app-learning	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	OpenOLAT/OpenOLAT	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	oppia/oppia	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	overhangio/tutor	main	LICENSE.txt	MAIN
+repos/foundations.md	sakaiproject/sakai	master	LICENSE	MASTER-DEFAULT
+repos/foundations.md	withmarbleapp/os-taxonomy	main	LICENSE	MAIN
+#	cifra	valor
+#	agents/top.md	3 de 29 master (10.3%)
+#	repos/foundations.md	12 de 17 master (70.6%)
+#	TOTAL	15 de 46 master (32.6%)
+#	p353_publico	2 de 31 (6%) — alcance: solo los cuatro tiers de agents/top.md, contado ANTES de su propia correccion
