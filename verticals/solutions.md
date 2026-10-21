@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — `ACTION ZZ-as` DISCHARGED: `Gego-K12/gegok12` is **APAC — India**, placed by commit stream at **288 of 290 commits on `+05:30`**, after the holder channel failed on it for four passes. And the `%ae` domain channel has a blind spot this row measures exactly: **120 of its 290 commits name no domain at all**
+
+**Evidence:** [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)
+
+🟢 **Channel note:** `make hooks` **30/30 on arrival**; the commit stream is **OPEN**; the **star channel is OPEN and was used** — every star figure in this shelf's tables was re-derived first-hand today and **all nine are exact**. 🔴 `api.github.com/repos/*` and `github.com` remain **403** by per-repository policy.
+
+### 🟢 `ACTION ZZ-as` DISCHARGED — and it took the channel the row had been waiting for
+
+🔴 `p348` could not place [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12): the holder line reads *"GegoSoft Technologies and GegoK12 Contributors"* and **names no jurisdiction**, which is `p348`'s bar and it does not clear it. `p349`, `p350` and `p351` all carried it **NOT PLACED**. 🟡 `p351` noted the commit stream *"could place it — it was not run, because the row was not otherwise re-read"* and registered `ZZ-as`.
+
+🟢 **Run this pass, and it is not a close call:**
+
+| | |
+|---|---|
+| commits | **290** |
+| timezone | 🟢 **`+05:30` × 288** · `+00:00` × 2 |
+| author domains (`%ae`) | **`gegok12.com` 93 · `gegosoft.com` 77** |
+| span | **2025-07-11T19:36:40+05:30 → 2026-09-23T16:46:21+05:30** — live |
+| stars / forks, first-hand | **54 ★ · 101 forks** — exact against this shelf |
+
+🟢 **Placed: APAC — India.** Two independent limbs agree — `+05:30` is India Standard Time and is unshared, and both project domains are the vendor's own. 🔵 **The row's own description, *"a full featured School Management System built with Laravel, Mobile Apps Ready, API First Design"*, now carries a region**, which is what a studio staffing an APAC engagement actually needs from this shelf.
+
+🟡 **One asymmetry worth keeping:** **101 forks against 54 stars.** A fork-to-star ratio above one is unusual and is what a *deployable* school-management system looks like — people take a copy and run a school on it rather than bookmarking it.
+
+### 🔴 The `%ae` domain channel's blind spot, measured on this row rather than asserted
+
+🔴 **120 of the 290 commits (41.4 %) have `%ae` of `users.noreply.github.com`.** That is GitHub's privacy mask: a real address exists and the stream does not carry it.
+
+🔵 **This sharpens `ACTION ZZ-ac`, which settled at `p349` that `%ae` is the key this base's author cells use.** It is — `%ae` gave **18** distinct authors on `terracotta` where `%an` gave 14, and `p346`'s PII refusal rules out `%an`. 🔴 **But a domain tally over `%ae` has a denominator problem the author tally does not:** masked addresses are fine for *counting authors* and useless for *placing them*.
+
+> 🟢 **The rule, stated so a successor does not have to rediscover it:** a `%ae` **author count** is taken over all commits; a `%ae` **domain share** is taken over the **unmasked** commits and must publish that denominator. On this row the share is **93 + 77 of 170 unmasked**, not of 290 — reported the other way it would halve both figures and look like weak attribution where the attribution is in fact total.
+
+🔵 **And it is a reason the TIMEZONE limb carries the placement here rather than the domain limb.** `+05:30` is present on **288 of 290** commits because the mask does not touch the committer date. 🟡 Where the two limbs disagree the domain limb is the more specific and the timezone limb the more complete, and a row should say which one placed it — as `discipline-classification` does in `repos/foundations.md` this pass, where **71 of 74 commits are the UPSTREAM's** and the domain limb is the one that found it.
+
+### 🟢 This shelf's star cells, re-derived — nine of nine exact, and three live rows confirmed archived upstream
+
+🟢 `opencast/opencast` **509** · `dodona-edu/dolos` **353** · `terracotta-education/terracotta` **21** · `jtylek/EpesiCRM` **43** · `Gego-K12/gegok12` **54** · `openwallet-foundation-labs/learner-credential-wallet` **89** · `DFE-Digital/teaching-vacancies` **27** · `DFE-Digital/publish-teacher-training` **12** · `kit-sdq/autograder` **18** · `learningequality/morango` **15** · `ls1intum/Ares2` **5** — **every figure exact against what this shelf publishes.**
+
+🟡 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) returns **`archived: true`** first-hand at **582 ★**, which this shelf already states with its own date (*"archived by its owner on 2024-12-12 and read-only"*). 🟢 **Recorded as a negative result across the whole re-derivation: no row this base presents as LIVE is archived upstream.** That is a cheap check and it had never been run.
+
+### 🟡 No new platform row, for the tenth consecutive pass, and the leg's own words
+
+🔴 **The prescribed vertical leg — `open source platform education ERP CRM MIT Apache` — returned a vendor listicle for the TENTH consecutive pass.** Its education hits were **OpenEduCat** (shelved), **ERPNext**'s education module (**GPL**, noted), **Dolibarr** (GPL-3.0), **Krayin** (MIT, not education), **Apache OFBiz** and **Huly** (Apache-2.0, not education), plus an MIT **Aureus ERP** that is not education either. 🔵 The leg itself said *"the search didn't turn up an education-specific ERP/CRM under MIT or Apache"* and, of OpenEduCat, *"the results don't state its license."* 🟢 **This shelf already carries OpenEduCat with its grant read first-hand, so the leg is returning a weaker version of what is already here.**
+
 ## Pass 351 · 2026-10-21 — this shelf was accused by this base's own gate and this shelf was RIGHT: `jtylek/EpesiCRM` is MIT, read payload-first at the root, and the GPL-3 the gate bound to it belongs to a component the repository declares is not part of the software. The gate was repaired, not the prose
 
 **Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv)

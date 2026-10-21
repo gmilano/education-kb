@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — all four prescribed regional legs ran and **all four returned material this base already carries**. That is the finding, it has a denominator, and the most useful thing in it is an **independent corroboration** of the deadline reversal `p351` published six hours ago — reproduced on a fresh leg that had not seen it
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv)
+
+🟢 **Channel note, because it bounds every claim below.** `make hooks` **30/30 on arrival**. 🔴 **Every EU primary legal host — `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu` — returns `000`, and the proxy names the cause: `connect_rejected`, a standing egress policy.** `p351` established this; it is **re-confirmed and must not be re-probed**. 🔴 **So every statute date below is SECONDARY-SOURCED by construction.** 🟡 Market sizing remains **unusable as a single figure** and is published as a spread, per `p350`.
+
+### 🔴 The legs, and the number that matters most about them
+
+| region | leg returned | anything NEW to this base? |
+|---|---|---|
+| North America | the US **state** legislative layer with a count, the federal **K-12 AI Literacy and Readiness Act of 2026**, the **AFT National Academy for AI Instruction** | 🔴 **NO** |
+| EMEA | **Digital Omnibus (EU) 2026/1744**, Art. 50 transparency, Art. 4 AI literacy, the **EC/OECD AI Literacy Framework (2026-06-18)** | 🔴 **NO** — but it **corroborates**, below |
+| APAC | **Vietnam Law 134/2025/QH15**, **Korea's AI Basic Act**, the **Ipsos Education Monitor 2026** | 🔴 **NO** |
+| LATAM | **UNESCO IESALC**'s 19-country study, the **UNESCO LAC Observatory**, **Colombia CONPES 4144**, **Uruguay** and the CoE Framework Convention | 🔴 **NO** |
+
+🟢 **Checked rather than assumed.** Each leg's load-bearing token was put through this base's own `claims` discipline before anything was written: `134/2025/QH15`, `AI Basic Act`, `Digital Omnibus` and `1744` **each already appear on these shelves**. 🔵 **4 legs run, 4 returning relevant material, 0 returning anything new** — and that is a cleaner statement than either *"the legs returned nothing"* (false) or silence (which, as this base's own brief says, *"looks exactly like coverage"*).
+
+#### 🟢 EMEA — the corroboration, and why an independent reproduction is worth more than a new fact
+
+🔴 **`p350` sold an EMEA engagement against `2026-08-02`.** `p351` withdrew it: the high-risk education obligations moved, and *"the live one is six weeks out and it is a different article."*
+
+🟢 **This pass's EMEA leg had not seen `p351` and returned the same correction, with both legs of the date:**
+
+| duty | date | article |
+|---|---|---|
+| **AI literacy**, deployers — schools included | **in force since 2025-02-02** | **Art. 4** |
+| **transparency / content marking**, new systems | **2026-08-02** | **Art. 50** |
+| **transparency / content marking**, systems already on the market | 🔴 **2026-12-02 — six weeks out** | **Art. 50** |
+| **high-risk** education systems — admissions, grading, proctoring, track assignment | 🟡 **deferred to 2027-12-02** | high-risk regime, deferred by **Regulation (EU) 2026/1744** |
+
+🟢 **So `p351`'s reversal is confirmed by a channel that did not inherit it, and the sixteen-month deferral now has its own date on this shelf rather than only a direction.** 🔵 **The engagement reading is unchanged and now firmer: the thing six weeks away is Article 50 content marking on systems already deployed, and the high-risk work a client will want to buy is a year further out than the Article 50 work they must ship.** `compose/patterns.md` carries the Article 50 recipe `p351` built; nothing in it changes.
+
+🔴 **Declared gap, explicitly:** the EMEA leg returned **no school-level adoption statistics for any European country** and **no list of commercial EMEA players**. Two legs on two dates have now failed to produce either. That is a standing hole, not a quiet one.
+
+#### 🟡 North America — a layer that is dense and a layer that is empty
+
+🟢 The **state** layer is where the activity is: **134 AI-in-education bills across 31 states** in the 2026 session against **53 bills in 21 states** in 2025, privacy dominant (**California AB 1159** barring student data from model training; **Oklahoma** and **Maryland** requiring human oversight and barring AI from high-stakes decisions about students; **Georgia** and **Mississippi** adding AI content to computer-science credit). District policy is real and specific — **Katy ISD** blocks generative chatbots below grade 7; **Charleston County** bars AI as the sole basis for discipline or placement.
+
+🔴 **Declared gap: Canada and Mexico returned no education-specific rule.** Canada has a national *"AI for All"* strategy (launched **2026-06-04**) with an AI-literacy push and **no statute and no legislative date**; Mexico has bills and **no regulator to enforce them**. 🟡 **For a North America engagement that is a two-country blank on a three-country region**, and it has now been blank on two consecutive measurement dates.
+
+#### 🟡 APAC — the only region where a binding, education-specific, dated obligation exists
+
+🟢 **Vietnam's Law No. 134/2025/QH15 is the sharpest instrument any region returned**, and this base already carries it: in force **2026-03-01**, extraterritorial, **education one of six sectors with identified high-risk systems** (automated assessment, behavioural monitoring), compliance **2027-03-01**, with a **six-month grace** for education, healthcare and finance systems already operating before **2026-08-15**. 🟢 **Korea's AI Basic Act** is in force from **2026-01-22**. 🔵 Singapore's agentic-AI framework and Australia's National AI Plan are **soft law**; China is the most prescriptive, with registration duties.
+
+🟡 Sentiment, which a studio pitching APAC should know: the **Ipsos Education Monitor 2026** finds **lower** support for banning AI in schools across the Asian markets surveyed — and **higher** support in **Australia and New Zealand**. 🔴 So *"APAC"* splits on this question and a single regional pitch will be wrong in one half of it.
+
+🔴 **Declared gap: no education-specific rule returned for China or Japan**, and the leg itself warned that *"policy data on South Asia and parts of Southeast Asia is thin."*
+
+#### 🟢 LATAM — the adoption figure is strong, the governance figure is the opportunity, and both are higher-education only
+
+🟢 **UNESCO IESALC, 200 institutions across 19 countries: 87 % use AI in at least one area of their activity, and 26 % have a formal AI strategy.** 🔵 **That 61-point gap is the LATAM opportunity stated as a single number** — adoption is already there and arrived bottom-up, *"driven by individual academics, researchers and students rather than institution-wide strategies."* 🟢 **The buyer is therefore governance, not adoption**: policy, data boundaries, an inventory of what is already running.
+
+🟢 Institutions and instruments: the **UNESCO LAC Observatory on AI in Education**, launched **2026-04-14** at ECLAC in Santiago, with a Mexico pilot (**CONALEP**, **DGETI**) reported August 2026; **Tecnológico de Monterrey**'s UNESCO agreement (March 2026); **Colombia CONPES 4144**; **Peru**'s regulatory sandboxes; **Uruguay**, the first in the region to sign the CoE Framework Convention.
+
+🔴 **Declared gap, and it is the same one as last time: everything here is HIGHER EDUCATION.** The leg returned **no K-12 regulation for any LATAM country** and left **Mexico's federal AI bill** unresolved. 🟡 Given that this base's LATAM supply rows are **K-12 and government-data** oriented — `Mcp-Brasil/mcp-brasil` carries **INEP** (ENEM microdata, national school census) and **FNDE** — **the demand evidence and the supply evidence are on different sides of the school/university line**, and that mismatch is the most useful thing to know before staffing a LATAM engagement.
+
+### 🟡 No change to the canonical opportunity block, and that is a decision
+
+🔵 This file's canonical **`## Opportunities by region`** block is **not edited this pass.** 🟢 **Four legs returned zero new facts, so there is nothing to add to it, and adding a re-worded version of what it already says would make the block look freshly measured when it is not** — the same reasoning by which `verticals/solutions.md` refuses to grow on a pass whose platform leg returned a listicle. 🟡 The regional *readings* above are new; the opportunities they imply are the ones already published.
+
 ## Pass 351 · 2026-10-21 — all four regional legs returned education-specific material, and the pass's sharpest number is a REVERSAL: `p350` sold EMEA against a deadline that had already moved sixteen months. The live EMEA deadline is **2026-12-02**, it is a different article, and it is six weeks out. APAC gained its first education-specific SUPPLY rows placed by commit stream, and the best of them is non-commercial
 
 **Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv)

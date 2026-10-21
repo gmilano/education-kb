@@ -1,0 +1,36 @@
+slug	published_star	derived_star	delta	forks	archived	created	last_updated	where_published	verdict
+Egonex-AI/Understand-Anything	87252	87262	+10	7363	no	2026-03-15	2026-10-21T02:33:31Z	agents/top.md:114	MOVED
+cs341-illinois/coursebook	3839	3840	+1	327	no	2018-01-26	2026-10-20T23:45:39Z	agents/top.md:272	MOVED
+Mcp-Brasil/mcp-brasil	1817	1818	+1	290	no	2026-03-26	2026-10-20T19:58:52Z	agents/top.md:683	MOVED
+Halleck45/OpenPronounce	144	145	+1	30	no	2025-08-26	2026-10-21T00:43:59Z	agents/top.md:110	MOVED
+kantord/LibreLingo	2632	2632	0	264	YES	2019-12-01	2026-10-18T00:23:50Z	agents/top.md:105	EXACT
+menthorlabs/menthor	582	582	0	35	YES	2023-04-16	2026-10-12T18:51:08Z	verticals/solutions.md:1055	EXACT
+opencast/opencast	509	509	0	260	no	2017-12-23	2026-10-19T22:57:41Z	verticals/solutions.md:53	EXACT
+dodona-edu/dolos	353	353	0	48	no	2019-06-23	2026-10-20T06:34:30Z	verticals/solutions.md:108	EXACT
+INGInious/INGInious	243	243	0	151	no	2014-08-03	2026-10-20T21:29:47Z	agents/top.md:104	EXACT
+1EdTech/openbadges-specification	205	205	0	76	no	2013-10-30	2026-10-08T18:38:19Z	agents/top.md:109	EXACT
+EduNLP/edu-convokit	117	117	0	16	no	2023-12-27	2026-08-25T04:07:58Z	agents/top.md:228;394	EXACT
+ktaletsk/learn-codebase	89	89	0	3	no	2026-01-23	2026-10-20T16:07:37Z	agents/top.md:133	EXACT
+openwallet-foundation-labs/learner-credential-wallet	89	89	0	50	no	2021-07-08	2026-10-05T02:05:32Z	verticals/solutions.md:117	EXACT
+paper-instruments/rubric	83	83	0	6	no	2025-04-09	2026-10-19T20:14:10Z	agents/top.md:112	EXACT
+ZhijieXiong/pyedmine	82	82	0	13	no	2025-03-03	2026-10-05T05:26:36Z	repos/foundations.md:1248	EXACT
+gokayfem/h3-max-education	72	72	0	9	no	2026-09-01	2026-10-11T11:24:49Z	agents/top.md:134	EXACT
+Gego-K12/gegok12	54	54	0	101	no	2025-07-11	2026-09-29T08:08:25Z	verticals/solutions.md:52	EXACT
+zmievsa/autograder	48	48	0	11	YES	2020-01-21	2026-06-23T12:19:04Z	agents/top.md:100	EXACT
+jtylek/EpesiCRM	43	43	0	24	no	2020-01-09	2026-10-20T19:39:19Z	verticals/solutions.md:51	EXACT
+elimu-ai/webapp	41	41	0	68	no	2016-01-02	2026-10-10T14:55:59Z	repos/foundations.md:1292	EXACT
+learning-commons-org/agent-skills	40	40	0	5	no	2026-06-25	2026-10-20T21:45:16Z	agents/top.md:226	EXACT
+bycs-lp/moodle-local_ai_manager	30	30	0	24	no	2024-03-12	2026-10-20T10:20:57Z	agents/top.md:107	EXACT
+DFE-Digital/teaching-vacancies	27	27	0	23	no	2018-02-20	2026-10-20T10:54:16Z	verticals/solutions.md:139	EXACT
+terracotta-education/terracotta	21	21	0	9	no	2021-05-10	2026-10-19T18:11:44Z	verticals/solutions.md:109	EXACT
+oaknational/oak-curriculum-ontology	20	20	0	6	no	2026-02-10	2026-09-04T11:30:12Z	repos/foundations.md:124	EXACT
+kit-sdq/autograder	18	18	0	8	no	2021-07-26	2026-10-20T08:30:48Z	verticals/solutions.md:142	EXACT
+learningequality/morango	15	15	0	23	no	2016-09-13	2026-10-19T18:39:13Z	verticals/solutions.md:143	EXACT
+AI-for-Education/pedagogy-benchmark	13	13	0	0	no	2025-06-24	2026-10-20T05:16:00Z	agents/top.md:693	EXACT
+isakskogstad/Skolverket-MCP	13	13	0	8	no	2025-10-30	2026-10-11T04:06:02Z	agents/top.md:113	EXACT
+DFE-Digital/publish-teacher-training	12	12	0	11	no	2018-12-19	2026-10-20T13:41:44Z	verticals/solutions.md:140	EXACT
+haanhtuandev/vgu-mcp	10	10	0	1	no	2026-09-02	2026-09-23T04:27:22Z	repos/foundations.md:132	EXACT
+byerlikaya/Septum	9	9	0	2	no	2026-03-09	2026-10-20T15:59:28Z	repos/foundations.md:89	EXACT
+ls1intum/Ares2	5	5	0	1	no	2024-04-18	2026-10-14T12:45:23Z	verticals/solutions.md:141	EXACT
+openeduhub/discipline-classification	0	0	0	0	no	2021-03-11	2021-06-10T12:11:13Z	repos/foundations.md:1268	EXACT (fork; absent from the default index)
+#	total_cells	34	exact	31	moved	4	not_in_default_index	1	channel	github-mcp-search_repositories@2026-10-21

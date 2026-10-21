@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 352 — the week's agent-layer movement, measured on a channel that was open for the whole week and that last pass declined: **`HKUDS/DeepTutor` is 41 918 ★ · 5 310 forks**, first-hand, the first non-carried reading of the sector's anchor row since the API closed. Nothing else on the agent layer moved more than ten stars in a day, and the discovery leg returned **zero** addresses this base does not already hold
+
+**Evidence:** [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`discovery-leg-carried`](../evidence/discovery-leg-carried.2026-10-21-p352.tsv) · [`figure-scope-misattribution`](../evidence/figure-scope-misattribution.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)
+
+🟢 **Channel note.** `make hooks` **30/30 on arrival**. 🔴 `api.github.com/repos/*`, `github.com` HTML, `codeload` and `graphql` are **403** — and the 403 body **names its cause**, *"not enabled for this session. Use `add_repo`"*, which is `p255`'s per-repository allow-list and `p163`'s refuted `ACTION IF`, not a new wall. 🟢 **The GitHub MCP repository search ANSWERS and is the star channel** (`p255`: *"the search endpoint is the only star channel this base has"*). `p351` named it and did not run it; **this pass ran it, in six batched calls over 34 addresses** — `repo:` qualifiers OR, so about eight slugs fit a 256-character query.
+
+### 🟢 Movement, first-hand on 2026-10-21
+
+| row | ★ | forks | Δ★ vs this base's published cell |
+|---|---:|---:|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 918** | 5 310 | 🟢 **first first-hand reading since the API closed** |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | **38 852** | — | carried row, re-dated |
+| [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | **87 262** | 7 363 | 🟡 **+10** (87 252) |
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | **3 840** | 327 | 🟡 **+1** (3 839) |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | **1 818** | 290 | 🟡 **+1** (1 817) |
+| [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | **145** | 30 | 🟡 **+1** (144) |
+| the other 27 published star cells | — | — | 🟢 **EXACT** |
+
+🔵 **The reading: this base's agent-layer star cells do not rot fast.** The largest drift in a day over 34 rows is **ten stars on an 87 000-star repository**, and 31 of 34 cells were already right. 🟢 **So `carried` was a safe label, and what the run actually buys is a DATE** — every cell can now be cited as measured 2026-10-21 rather than inherited, and a successor finding a 400-star gap will know it opened after today.
+
+### 🔴 The discovery leg: six candidates, zero new addresses
+
+🔴 **`make carried` returns `CARRIED` on all six** — `DeepTutor`, `500-AI-Agents-Projects`, `withmarbleapp/os-taxonomy` (**6 683 ★**, re-pinned by digest by `p351` the same date), `aclascollege/polymath` (shelved by `p351`, today) and two awesome-lists. 🟢 **The global agent leg's own summary is the honest headline:** *"none of the results name a dedicated, MIT-licensed AI tutoring agent."* 🔵 Eighteen passes of the trending leg and ten of the vertical leg now return listicles; **against a base at pass 352 the prescribed legs confirm rather than discover**, and the yield figure to carry forward is **0 of 6**.
+
+### 🔴 This pass's own extractor committed `p351`'s defect, on star counts
+
+🟡 A line-scoped harvester reported two large disagreements with the shelves. **Both were its own, and the shelves were right twice.** `pykt-team/pykt-toolkit`'s **450 ★** — named in the same cell, after the words *"Measured the same pass for comparison"* — was attributed to `ZhijieXiong/pyedmine` (**82**); and *"the org publishes 92 repos … all under 10 ★"* was attributed to `elimu-ai/webapp` (**41**). 🟢 **`p307`'s `RETRACTION` and `p351`'s `THIRD_PARTY_SCOPE` are the same rule on licences: a token adjacent to a slug is not that slug's token. It is quantity-independent.** Full account in `agents/top.md` and `intel/trends.md` this pass.
+
+### 🟡 One agent-adjacent row is a five-year-dormant fork, and no leg found it — the shelf did
+
+🔴 [`openeduhub/discipline-classification`](https://github.com/openeduhub/discipline-classification) — the one address of 34 absent from the default index — is **PROVEN a fork** by the two-probe test (absent by default, present under `fork:true`), **0 ★ / 0 forks**, **74 commits all between 2021-01-11 and 2021-06-10**, and **71 of those 74 from `yovisto.com`**, the upstream. Its own organisation wrote **two**. 🟢 Placed **EMEA by instrument** (`+01:00` ×64, `+02:00` ×10). Carried on `repos/foundations.md` since `p322`; this is the first time the commit stream was pointed at it.
+
 ## 2026-10-21 · Pass 351 — the week's agent-layer movement is NOT a release: it is that three measurement channels reopened, and the first thing they measured was this base's own gate accusing its own shelf wrongly. The prescribed discovery legs returned listicles for the SEVENTH consecutive pass, and the search engine said so in its own words
 
 **Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv)

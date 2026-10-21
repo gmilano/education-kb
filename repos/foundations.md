@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — this shelf's own justification for a row is **five years and four months out of date**: `openeduhub/discipline-classification` exists here *"despite 0 ★"* because it ships a pretrained model, and **the model was last touched on 2021-06-10**. Its own org contributed **2 of its 74 commits**. No new row, and the reason is measured
+
+**Evidence:** [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)
+
+🟢 **Channel note, carried so this shelf reads alone:** `make hooks` **30/30 on arrival**. `git ls-remote`, `git clone` and the `git log` **commit stream are OPEN**. 🟢 **The star channel is OPEN and was USED** — `p351` labelled every figure *carried*; **this pass re-derived all 34 and 31 are exact.** 🔴 `api.github.com/repos/*`, `github.com` HTML, `codeload` and `graphql` are **403**, and the body names the cause — *"not enabled for this session"* — which is `p255`'s per-repository allow-list, not a new wall.
+
+### 🔴 `openeduhub/discipline-classification` — the row is real, the grant is right, and the FRAMING is five years stale
+
+This shelf carries the row at `:1268` with an explicit justification: *"**A pretrained subject classifier for a real national curriculum, shipped in the repository** — rare, and **the reason this row exists despite 0 ★**."* 🟢 **The 0 ★ is confirmed first-hand** (0 stars, 0 forks). 🔴 **Everything about its liveness is not what the row implies.**
+
+| cell | this shelf | derived first-hand, **2026-10-21** | reading |
+|---|---|---|---|
+| stars / forks | 0 | 🟢 **0 / 0** | exact |
+| commits | **73** | 🟡 **74** | Δ **+1** |
+| first commit | — | **2021-01-11T13:27:12+01:00** | — |
+| **last commit** | — | 🔴 **2021-06-10T13:58:45+02:00** | **dormant 5 y 4 m** |
+| fork status | *"forked from `yovisto/wlo-classification`"*, read from the sidebar | 🟢 **PROVEN** — absent from the default index, present under `fork:true` | upgraded from a read to a measurement |
+| author domains (`%ae`) | — | 🔴 **`yovisto.com` 71 · `metaventis.com` 2 · `yoyo1.yovisto.com` 1** | **71 of 74 commits are UPSTREAM's** |
+| region | EMEA, **inferred** | 🟢 **EMEA, placed by instrument** — `+01:00` ×64, `+02:00` ×10 (CET/CEST) | upgraded |
+
+🔴 **So the fork added two commits.** Of 74 commits in the tree, **2** carry the `metaventis.com` address that is `openeduhub`'s own; the rest are `yovisto`'s, inherited at the fork point. 🔵 **That reframes the row entirely.** This base shelved it as *"the canonical home of `wlo-classification`"* — and canonical it may be, since `wlo-classification` redirects here. 🟡 **But canonical-by-redirect is not maintained**: the thing that redirects you is a five-year-dormant fork that its new owner barely touched.
+
+🟢 **The row STAYS, and its grant and substance stand unchanged** — GPL-3.0, Keras/TensorFlow, CherryPy on 8080, top-three disciplines with scores, `wirlernenonline.oeh.h5` in `data/`. 🔴 **What changes is the sentence a studio would act on.** The shelf already says *"keep it behind a service boundary and check the training-data provenance before a client deliverable."* **Add the date:** the artefact to check the provenance of is a **June 2021 Keras model**, and nothing in this repository has moved since. For a 2026 engagement that is not a caveat, it is the decision.
+
+🔵 **And it generalises to a question this shelf has never asked of its own rows.** *"Ships a pretrained model"* is a strong reason to shelve a 0-★ repository. 🔴 **It is a reason with a shelf life, and this shelf records no expiry on any of them.** Registered as `ACTION ZZ-au`.
+
+### 🟢 `os-taxonomy`, `p351`'s digest pin — the star cell, re-derived
+
+🟢 [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) is **6 683 ★ · 1 071 forks**, first-hand today, against the discovery leg's listicle figure of *"5,900"*. 🔵 `p351`'s finding stands and this adds nothing to it: the dataset is pinned by **`topics.json` @ `525aa943…d19cfd`**, manifest `generatedAt` **2026-10-20T20:52:33.520Z**, **1 616 topics / 3 317 edges** — *a third-party dataset is pinned by DIGEST, never by its own version string.* 🟡 The star figure is not part of the pin and should not be cited as if it were.
+
+### 🟡 No new row this pass, and the denominator says why
+
+🔴 **The prescribed foundational and trending legs returned six candidates and `make carried` returned `CARRIED` on all six** — `DeepTutor` (41 918 ★), `500-AI-Agents-Projects` (38 852 ★), `os-taxonomy` (6 683 ★), `aclascollege/polymath` (shelved by `p351` earlier today) and two awesome-lists. 🟢 **A shelf that grows on a pass whose legs returned nothing has stopped being a measurement** — `p351`'s words, and they apply unchanged.
+
+🔵 **This is the fourth pass of one date on one industry, and the discovery legs are now returning this base's own shelves back to it.** That is not a failure of the legs; it is what exhaustion looks like, and it is worth stating with the number: **0 new addresses on 6 candidates.**
+
 ## Pass 351 · 2026-10-21 — the biggest finding on this shelf is about a row it already holds: **`taxonomyVersion: v1` is not a version.** Every count this base published for `withmarbleapp/os-taxonomy` has moved under an unchanged label, the repository regenerated itself the day before this pass, and the correct pin is in the repository already. One genuinely new row, and it is 94 courses wearing a knowledge graph's description
 
 **Evidence:** [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv)

@@ -36,6 +36,7 @@ PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 SHAPE_LOG ?= /tmp/education-kb-gate-address-shape.log
+CURRENCY_LOG ?= /tmp/education-kb-gate-census-currency.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
@@ -74,7 +75,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-template-identity gate-untitled-payload gate-region-headings \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
-             gate-address-shape
+             gate-address-shape gate-census-currency
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -376,6 +377,22 @@ gate-address-shape: ## p351 — ACTION ZZ-an: the harvested denominator rejects 
 
 address-shape-census: ## p351 — every rejected shape with its class.  A backlog, never a failure.
 	@$(PY) -I compose/code/p351-address-shape/address_shape.py reject $(SHELF_FILES) || true
+
+# 🔴 p352: THE CENSUS ABOVE IS STALE IN THE PASS THAT PUBLISHES IT, STRUCTURALLY.
+# p351 published `2 476 harvested -> 33 -> 2 443 addresses`.  Re-derived over SHELF_FILES on
+# the tree p351 COMMITTED, the triple is `2 478 -> 33 -> 2 445`; the published figure is
+# exactly the one the p350 tree yields, and the two missing addresses are nameable --
+# `aclascollege/polymath`, which is p351's OWN new foundations row, and
+# `imsglobal/openbadges-validator-core`.  p350's commit message records the same shape about
+# p349 ("p349's own headline denominator is wrong by one group and two addresses").
+# 🟢 It is an ORDERING defect, not an arithmetic one: a census whose input is the shelves,
+# published in the pass that then writes to the shelves, is stale the moment it is written.
+# "Remember to re-run it" is what already failed three times, so this gate compares the
+# PUBLISHED triple with the DERIVED one and goes RED when they disagree.  The anchor is in
+# README.md, which is NOT a SHELF_FILE, so stating the figure cannot change it.
+gate-census-currency: ## p352 — a census over the shelves is re-derived AFTER the pass writes, never before
+	@cd compose/code/p352-census-currency && { $(PY) -I test_census_currency.py > $(CURRENCY_LOG) 2>&1 || { echo "🔴 p352-census-currency FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CURRENCY_LOG) ; false ; } ; } && echo "── p352-census-currency (24 controls: p351's own published sentence, the live-occurrence-wins rule, each of the three cells load-bearing alone, the anchor-file exclusion, P541's refusal as exit 2, and the CASE-CLOSED anchor ladder p283 demanded)" && echo "   PASS" || exit 1
+	@set -o pipefail; $(PY) -I compose/code/p352-census-currency/census_currency.py --root . 2>&1 | sed "s/^/   /" || exit 1
 
 # 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
 # An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so

@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — `p351` declared *"no star or fork figure this pass is first-hand"* and labelled every one **carried**. The channel was open the whole time. **All 34 published star cells are now first-hand, and 31 are exact** — and the only two cells that looked wrong were this pass's own instrument, not the shelf, which makes `p351`'s `THIRD_PARTY_SCOPE` defect **quantity-independent**
+
+**Evidence:** [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`figure-scope-misattribution`](../evidence/figure-scope-misattribution.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)
+
+### 🟢 The gap `p351` declared, closed — and closed on a channel nobody had to open
+
+🔴 **`p351` wrote, three times across three shelves:** *"no star or fork figure on this shelf is first-hand this pass — each is carried from `p350`."* Its reason was sound: `api.github.com` and `github.com` are **403**. 🟡 **But the star channel is neither of those.** `p255` settled this forty-seven passes ago — *"the search endpoint is the only star channel this base has"* — and `p350` used it (*"a GitHub MCP search for `user:latam-gpt` returns 7 repositories"*). `p351` named it and chose not to run it: *"the authenticated search index was **not used**, because the git channel answered and is the stronger instrument."*
+
+🟢 **It is the stronger instrument for identity. It is not an instrument for stars at all.** So a declared gap sat open for one pass against an open channel. **Run this pass in six batched calls over 34 addresses.**
+
+| | |
+|---|---:|
+| published star cells on `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` | **34** |
+| re-derived first-hand **2026-10-21** | **34 of 34** |
+| **EXACT** | 🟢 **31** |
+| moved, all upward, all small | 🟡 **4** — `Understand-Anything` **+10** (87 252 → **87 262**), `coursebook` **+1** (3 839 → **3 840**), `mcp-brasil` **+1** (1 817 → **1 818**), `OpenPronounce` **+1** (144 → **145**) |
+| absent from the default index | 🔴 **1** — and it is a finding in itself, below |
+
+🔵 **The honest reading of 31/34 exact is not that the channel was urgent.** It is that **`carried` was a safe label and this base's star cells do not rot fast** — the largest drift in a day across 34 rows is ten stars on an 87 000-star repository. 🟢 **What the run buys is not correction, it is a DATE**: every one of these cells can now be cited as measured on 2026-10-21 rather than inherited, and the next pass that finds a 400-star gap will know the gap opened *after* today.
+
+### 🔴 The two cells that looked wrong were this pass's INSTRUMENT, and the shelf was right both times
+
+A line-scoped extractor was used to harvest the published figures. It reported two large disagreements. **Both were its own.**
+
+| the row | what the extractor took | whose figure it actually is | what the shelf publishes | derived first-hand |
+|---|---|---|---:|---:|
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | **450 ★** | 🔴 **`pykt-team/pykt-toolkit`** — named in the *same cell*, in a sentence that begins *"Measured the same pass for comparison"* | **82** | 🟢 **82** |
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | **10 ★** | 🔴 **the 92 OTHER repositories of the `elimu-ai` org** — *"all MIT-org, all under 10 ★"* | **41** | 🟢 **41** |
+
+🟢 **This is `p351`'s finding, one pass later, on a different quantity — and `p351`'s finding was about LICENCES.** `p351` repaired `gate-shelf-consistency` with `THIRD_PARTY_SCOPE` because the gate read *"an optional GPL-3 Roundcube … not part of this software"* as `jtylek/EpesiCRM`'s own grant. 🔵 **Here the same shape appears on a star count, and once on a SIBLING scope rather than a third-party one.** So the class generalises past the thing it was found on:
+
+> 🔵 **A token adjacent to a slug is not that slug's token — whatever kind of token it is.** Licence, star count, fork count, commit count, date. `RETRACTION` (`p307`) withdraws *this* repository's grant; `THIRD_PARTY_SCOPE` (`p351`) attributes a grant to something that is *not* this repository; **a comparison figure and a sibling-org figure do the same to a number.**
+
+🟡 **And it says something about this shelf's prose that is worth keeping.** These cells are **right** because they are *verbose*: they name the comparison repository, they say *"for comparison"*, they say *"the org publishes 92 repos … all under 10 ★"*. 🔴 **A terser shelf would have been unparseable in the same way and wrong as well.** The cost of the house style is read length; the benefit is that a careless instrument fails **loudly** against it instead of quietly agreeing.
+
+### 🔴 One published address is absent from the default search index, and the two-probe test PROVES why
+
+🔴 [`openeduhub/discipline-classification`](https://github.com/openeduhub/discipline-classification) was the one address of 34 the default index did not return. 🟢 **`git ls-remote` answers on it** — HEAD `51ca00328fb5e5f9b8405b04ea05d20f63945973` — so it is live, and `p351`'s refutation of `ACTION ZZ-am` holds on a fresh case: **this channel is a POSITIVE-ONLY oracle and its silence proves nothing.**
+
+🟢 **But the silence is explainable, and a second probe turns `p350`'s inference into a proof.** `p350` wrote *"repository search excludes forks by default — the omission is the evidence."* Re-probed with **`fork:true`** the address returns, **`"fork": true`**. 🔵 **So there is a two-probe discriminator, and it is positive on both limbs:**
+
+> 🟢 **ABSENT under the default index + PRESENT under `fork:true` = PROVEN FORK.** Neither probe alone says it: the first is the positive-only oracle `ZZ-am` refuted, and the second alone cannot distinguish a fork from a non-fork.
+
+🟡 **The shelf already knew it was a fork** — `repos/foundations.md:1268`, `repos/trending.md:1353` and `agents/trending.md:1788` all say *"fork of `yovisto/wlo-classification`"*, read from the sidebar. 🟢 **What is new is that it is now proven by instrument, and that the commit stream says something the shelf does not.** That belongs on the shelf that carries the row, and it is in `repos/foundations.md` below.
+
+### 🟡 Three archived rows re-confirmed, no new ones
+
+🟢 [`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) (2 632 ★), [`zmievsa/autograder`](https://github.com/zmievsa/autograder) (48 ★) and [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (582 ★) all return **`archived: true`** first-hand. 🟢 **All three are already labelled archived on their shelves**, `menthor` with its own date (*"archived by its owner on 2024-12-12"*). 🔵 **Recorded as a negative result**: the archive flag was read for all 34 rows and found **no row this base presents as live that GitHub presents as archived.**
+
+### 🔴 The discovery leg returned SIX candidates and ZERO new addresses
+
+Run as prescribed — `top open source AI agents education 2026 github MIT` and `github trending education AI 2026`. Every candidate was put through `make carried`:
+
+| candidate | `make carried` | derived ★ |
+|---|---|---:|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **CARRIED** | **41 918** · 5 310 forks |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🔴 **CARRIED** | **38 852** |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔴 **CARRIED** | **6 683** · `p351` re-pinned it by digest the same date |
+| [`aclascollege/polymath`](https://github.com/aclascollege/polymath) | 🔴 **CARRIED** — shelved by `p351`, today | — |
+| `caramaschiHG/awesome-ai-agents-2026` · `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` | 🔴 **CARRIED** | awesome-lists |
+
+🟢 **Zero new addresses on a 6-candidate denominator**, and the global agent leg's own summary said it plainly: *"none of the results name a dedicated, MIT-licensed AI tutoring agent."* 🔵 **`DeepTutor` at 41 918 ★ is the only figure here worth carrying forward** — it is the sector's anchor row and the first first-hand reading of it since the API closed.
+
 ## Pass 351 · 2026-10-21 — every channel `p350` declared SHUT is OPEN, and the first thing they proved is that this base's own gate was wrong and its shelf was right. `ACTION ZZ-al` is RESOLVED by HEAD-equality, `ACTION ZZ-am` is ANSWERED and its PREMISE REFUTED: an identity oracle on this channel is POSITIVE-ONLY. `make hooks` ran — 28/29 on arrival, 30/30 on exit
 
 **Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv)

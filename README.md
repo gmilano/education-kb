@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 — 2026-10-21 — **`p351` DECLARED A GAP AGAINST A CHANNEL THAT WAS OPEN. 34 OF 34 PUBLISHED STAR CELLS ARE NOW FIRST-HAND AND 31 ARE EXACT. THE TWO CELLS THAT LOOKED WRONG WERE THIS PASS'S OWN INSTRUMENT, WHICH MAKES `p351`'s `THIRD_PARTY_SCOPE` DEFECT QUANTITY-INDEPENDENT. `p351`'s HEADLINE DENOMINATOR IS THE `p350` TREE'S FIGURE, AND THE GATE THAT CATCHES THAT IS NOW WIRED. `ACTION ZZ-as` DISCHARGED AT `+05:30` × 288. `make hooks` — 30/30 IN, 31/31 OUT**
+
+🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and every evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit. 🔵 This is the **fourth pass of this date** (`p350` and `p351` earlier today; `p349` on 2026-10-20).
+
+**Evidence:** [`star-cell-rederivation`](evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`figure-scope-misattribution`](evidence/figure-scope-misattribution.2026-10-21-p352.tsv) · [`census-currency`](evidence/census-currency.2026-10-21-p352.tsv) · [`fork-and-dormancy`](evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`commit-stream-placement`](evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`discovery-leg-carried`](evidence/discovery-leg-carried.2026-10-21-p352.tsv) · [`regional-legs`](evidence/regional-legs.2026-10-21-p352.tsv) · [`channel-bindings`](evidence/channel-bindings.2026-10-21-p352.tsv)
+
+### 🟢 The gate state, first, because this pass changes it
+
+🟢 **`make hooks` RAN and was 30/30 GREEN ON ARRIVAL** — the first clean arrival in five passes. 🟢 **On exit it is 31/31**, because this pass adds `gate-census-currency` (24 controls).
+
+### 🟢 `p351` declared a gap against a channel that was open all week
+
+🔴 **`p351` wrote, on three shelves:** *"no star or fork figure on this shelf is first-hand this pass — each is carried from `p350`."* Its reason was sound — `api.github.com` and `github.com` are **403** — 🟡 **but the star channel is neither of those.** `p255` settled it forty-seven passes ago (*"the search endpoint is the only star channel this base has"*) and `p350` used it. `p351` named it and chose not to: *"the authenticated search index was **not used**, because the git channel answered and is the stronger instrument."*
+
+🟢 **It is the stronger instrument for identity, and not an instrument for stars at all.** Run this pass in **six batched calls over 34 addresses** (`repo:` qualifiers OR; about eight slugs fit a 256-character query):
+
+| | |
+|---|---:|
+| published star cells across the three shelf files | **34** |
+| re-derived first-hand **2026-10-21** | **34** |
+| 🟢 **EXACT** | **31** |
+| 🟡 moved, all upward, all small | **4** — `Understand-Anything` **+10** (→ **87 262**), `coursebook` **+1** (→ **3 840**), `mcp-brasil` **+1** (→ **1 818**), `OpenPronounce` **+1** (→ **145**) |
+| 🔴 absent from the default index | **1** — and that is a finding, below |
+
+🔵 **The honest reading of 31/34 is not that the run was urgent.** It is that **`carried` was a safe label**: the largest drift in a day across 34 rows is ten stars on an 87 000-star repository. 🟢 **What the run buys is a DATE.** Every cell can now be cited as measured today rather than inherited, and the next pass that finds a 400-star gap will know the gap opened *after* 2026-10-21. 🟢 **The best single figure it produced:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at **41 918 ★ · 5 310 forks** — the sector's anchor row, read first-hand for the first time since the API closed.
+
+### 🔴 The two cells that looked wrong were this pass's INSTRUMENT, and that is the better finding
+
+| the row | what the extractor took | whose figure it is | the shelf publishes | derived |
+|---|---|---|---:|---:|
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | **450 ★** | 🔴 `pykt-team/pykt-toolkit`, named in the *same cell* after the words *"Measured the same pass for comparison"* | **82** | 🟢 **82** |
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | **10 ★** | 🔴 the **92 other repositories of the `elimu-ai` org** — *"all MIT-org, all under 10 ★"* | **41** | 🟢 **41** |
+
+🟢 **The shelves were right twice and the instrument was wrong twice**, which is exactly `p351`'s result one pass earlier — where this base's own gate accused its own shelf and the shelf was right. 🔵 **`p307` built `RETRACTION` for a licence the prose was withdrawing; `p351` built `THIRD_PARTY_SCOPE` for a licence belonging to something that is not the repository. Both bind LICENCES. This is the same shape on a NUMBER:**
+
+> 🔵 **A token adjacent to a slug is not that slug's token — whatever kind of token it is.** Licence, star count, fork count, commit count, date.
+
+🟡 **And it says something about the house style worth keeping.** These cells parse wrongly *because they are verbose* — they name the comparison, they say *"for comparison"*, they say *"the org publishes 92 repos."* 🔴 **A terser shelf would have been just as unparseable and wrong as well.** Registered as **`ACTION ZZ-av`**: `gate-tables` checks table *structure*, and **no gate binds a FIGURE to its cell.**
+
+### 🔴 `p351`'s headline denominator is, exactly, the `p350` tree's figure
+
+🔴 **`p351` published `ACTION ZZ-an` as: `2 476` harvested shapes → `33` are not addresses → `2 443 addresses` (1.33 % inflation).** 🔴 **Re-derived with `p351`'s own classifier over the nine `SHELF_FILES` of the tree `p351` committed — working tree clean, nothing edited first — the triple is `2 478 → 33 → 2 445`.**
+
+| tree | harvested | rejected | addresses |
+|---|---:|---:|---:|
+| `HEAD~2` — `p349` as committed | 2 473 | 33 | 2 440 |
+| `HEAD~1` — `p350` as committed | 2 476 | 33 | **2 443** ← 🔴 what `p351` published |
+| `HEAD` — `p351` as committed | 2 478 | 33 | **2 445** ← 🟢 what `p351`'s own tree yields |
+
+🟢 **The mechanism is settled by name, not inferred.** `p351`'s commit added exactly two folded addresses and removed none: **`aclascollege/polymath`** — which is `p351`'s *own* new `repos/foundations.md` row — and **`imsglobal/openbadges-validator-core`**.
+
+🔵 **So it is an ORDERING defect and it is structural.** A census whose input is the shelves, published in the pass that then writes to the shelves, is stale the moment it is written, and the ordering that produces it is the natural one: measure, then write up what you measured. 🔴 **`p350`'s own commit message records the same shape about `p349`** — *"p349's own headline denominator is wrong by one group and two addresses"* — **so the pass that wrote the correction committed the defect one pass later.** Attention is not the remedy.
+
+🟢 **`gate-census-currency` is.** It reads the live census sentence in `README.md`, derives the triple over `SHELF_FILES` with `p351`'s classifier — imported, never reimplemented — and goes **RED** on disagreement, so the census can only be published correctly: **write the pass, derive, then state the figure.** 🔵 Two boundaries carry it: the anchor file is deliberately **not** a `SHELF_FILE`, so stating the number cannot change it; and **only the live occurrence is judged**, because history below it was correct against *its* trees and a gate demanding otherwise would force exactly the retro-editing this base's dating convention forbids.
+
+🔴 **One defect it nearly shipped, recorded because it is `p253`'s.** The first recipe ended `… | sed "s/^/   /" || exit 1`, and **a pipeline returns its last command's status, so `sed`'s `0` masked the gate's `1`** — it printed `STALE` and exited `0`. That is `p253-gate-propagation`'s class in the one direction its note does not spell out: not `&&`-list errexit but **pipe masking**. Repaired with `set -o pipefail` and verified by watching the gate actually fail on `p351`'s live triple before this pass restated it.
+
+🔴 **And a second defect, caught by a sibling gate the moment this one was wired.** Adding `gate-census-currency` to `HOOK_GATES` turned **`gate-ladder-case` RED**: `STANDING:SINGLE-SPELLING` rose **17 → 18** and the eighteenth row was this pass's own instrument, graded on the single spelling `README.md`. 🟡 **The excuse was available and it was the scope argument this pass had just spent its length making** — `README.md` here is *this* repository's own fixed artefact, not a path probed on a stranger's repo. 🔴 **It is wrong on the merits:** rename this base's write-up to `Readme.md` and a gate pinned to one spelling reports its anchor MISSING and refuses — loud, and still a wrong answer about a file that is sitting there. 🟢 **So the ladder was CLOSED, not excepted:** `ANCHOR_LADDER` varies stem *and* extension case, `resolve_anchor` walks it first-hit-wins, and the re-audit grades it **`CASE-CLOSED`/`UPPER-EXT`**. 🔵 Pinned in [`ladder-case-audit`](evidence/ladder-case-audit-2026-10-21.tsv) at row 553; `STANDING:SINGLE-SPELLING` is back at its ceiling of **17**, `STANDING:CASE-CLOSED` up to **9**. 🔵 **Three gates in two passes have now accused this base of a scope error, and the score is 2–1 to the shelves:** `p351`'s `EpesiCRM` licence (shelf right, gate repaired), this pass's star extractor (shelf right, instrument wrong) — and this one, **where the gate was right and the new instrument was repaired.** A base that always concludes its own shelves were right has stopped measuring.
+
+🟢 **Stated under the new rule, derived AFTER every write this pass made:** **2 478** harvested shapes → **33** are not addresses → **2 445 addresses** (1.33 % inflation). 🔵 **Note the Δ against `p351`: `+2` harvested and `+2` addresses, and NOT ONE of them was added by this pass.** Every address cited above was already carried — the same result as this pass's *0 new addresses on 6 candidates*. The denominator moved because `p351`'s two new addresses are now counted, not because `p352` found any.
+
+### 🟢 `ACTION ZZ-as` DISCHARGED — `Gego-K12/gegok12` is APAC, and the holder channel never could have said so
+
+🔴 `p348` could not place it: the holder line reads *"GegoSoft Technologies and GegoK12 Contributors"* and names no jurisdiction. `p349`–`p351` carried it **NOT PLACED**. 🟢 **The commit stream places it and it is not close:** **`+05:30` on 288 of 290 commits**, domains **`gegok12.com` 93 / `gegosoft.com` 77**, span **2025-07-11 → 2026-09-23**. 🟢 **APAC — India**, two independent limbs agreeing. 🟡 Its **101 forks against 54 ★** is what a *deployable* school-management system looks like.
+
+🔴 **And the row measured a hole in the channel that placed it. `ACTION ZZ-aw` (NEW): 120 of its 290 commits (41.4 %) have `%ae` of `users.noreply.github.com`** — GitHub's privacy mask. Its real shares are 93 + 77 of **170 unmasked**, which is near-total attribution; computed over 290 the same row reads as weak. 🔴 **Every `%ae` domain share this base has published was computed over an unstated denominator.** 🟢 The author **count** is unaffected — that is `ZZ-ac`'s `%ae` finding. 🟡 **Prefer the TIMEZONE limb for placement:** the mask does not touch the committer date.
+
+### 🔴 `openeduhub/discipline-classification` — a foundations row whose REASON expired five years ago
+
+🔴 It was the one address of 34 the default index did not return. 🟢 **`git ls-remote` answers** (HEAD `51ca00328fb5e5f9b8405b04ea05d20f63945973`), so `ZZ-am`'s refutation holds on a fresh case: **this oracle is positive-only and its silence proves nothing.** 🟢 **And the silence is now explained by a positive test, upgrading `p350`'s inference to a proof:**
+
+> 🟢 **ABSENT under the default index + PRESENT under `fork:true` = PROVEN FORK.** Neither limb alone decides it.
+
+🟡 **The shelf already said "fork", read from the sidebar, in three places.** 🔴 **What the commit stream says, it does not:** **74 commits, every one between 2021-01-11 and 2021-06-10 — dormant 5 years 4 months** — and **71 of the 74 are the upstream `yovisto.com`'s**, against **2** from `metaventis.com`, the fork's own organisation. 🟢 Placed **EMEA by instrument** (`+01:00` ×64, `+02:00` ×10), where the shelf had inferred it.
+
+🔴 **This base shelved the row at `p322` explicitly *"despite 0 ★"* because it ships a pretrained national-curriculum classifier (`wirlernenonline.oeh.h5`).** The grant, the substance and the row all stand. 🔴 **The sentence a studio would act on does not: the artefact to check the provenance of is a June 2021 Keras model, and nothing in the repository has moved since.** 🟡 Registered as **`ACTION ZZ-au`** — *"ships a pretrained model"* is a strong reason to shelve a 0-★ row and **a reason with a shelf life, and this base records no expiry on any of them.**
+
+🟢 **No leg would have found this. It was already on the shelf**, and the lesson is in `intel/trends.md`: at pass 352 the yield is in **re-reading carried rows on channels not yet pointed at them.**
+
+### 🔴 The prescribed legs are exhausted against this base, and the number says so
+
+🔴 **4 regional legs run · 4 returned relevant material · 0 returned anything new.** Each leg's load-bearing token was put through this base's `claims` discipline *before* anything was written, and **each was already carried**: Vietnam **134/2025/QH15**, Korea's **AI Basic Act**, the EU **Digital Omnibus (EU) 2026/1744**, UNESCO **IESALC**. 🔴 **6 discovery candidates · 6 `CARRIED` · 0 new addresses.** 🔴 Vertical leg: a vendor listicle for the **tenth** consecutive pass; trending leg, the **eighteenth**.
+
+🟢 **The most useful thing any leg returned is a corroboration.** The EMEA leg had not seen `p351` and reproduced its deadline reversal independently, with both legs of the date: **Art. 50 content marking on systems already on the market — 2026-12-02, six weeks out**; **high-risk education duties deferred to 2027-12-02** by Regulation (EU) 2026/1744; Art. 4 AI literacy in force since **2025-02-02**. 🟡 The deferral's own date is new on these shelves even though its direction was not.
+
+🔴 **Gaps declared rather than left silent**, per region: **no Canadian or Mexican education-specific rule** (two of three North American countries, blank on two consecutive dates); **no EMEA school-level adoption statistics and no commercial EMEA player list** (two legs, two dates, neither produced either); **no education-specific rule for China or Japan**, and thin policy data for South and Southeast Asia; **LATAM is higher-education only — no K-12 regulation for any country**, which matters because this base's LATAM *supply* rows are K-12 and government-data oriented (`Mcp-Brasil/mcp-brasil` carries **INEP** and **FNDE**). 🔵 **The LATAM demand evidence and the LATAM supply evidence sit on opposite sides of the school/university line**, and that is the most useful thing to know before staffing the engagement.
+
+🟡 **`intel/market.md`'s canonical `## Opportunities by region` block is NOT edited this pass**, deliberately: four legs returned zero new facts, and re-wording the block would make it look freshly measured when it is not.
+
 ## Pass 351 — 2026-10-21 — **EVERY CHANNEL `p350` DECLARED SHUT IS OPEN, AND THE FIRST THING THEY PROVED IS THAT THIS BASE'S OWN GATE ACCUSED ITS OWN SHELF WRONGLY. `ACTION ZZ-al` RESOLVED, `ACTION ZZ-am` ANSWERED AND ITS PREMISE REFUTED, `ACTION ZZ-an` DISCHARGED AT 2 443. `p350`'s EMEA DEADLINE IS WITHDRAWN: THE LIVE ONE IS SIX WEEKS OUT AND IT IS A DIFFERENT ARTICLE. `make hooks` RAN — 28/29 IN, 30/30 OUT**
 
 🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and every evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.

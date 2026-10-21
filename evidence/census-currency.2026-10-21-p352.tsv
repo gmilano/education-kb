@@ -1,0 +1,5 @@
+tree	published_harvested	published_rejected	published_addresses	derived_harvested	derived_rejected	derived_addresses	verdict	note
+HEAD~2 (p349 as committed)	-	-	-	2473	33	2440	NOT PUBLISHED BY THIS INSTRUMENT	p351's address-shape filter did not exist at p349
+HEAD~1 (p350 as committed)	-	-	-	2476	33	2443	NOT PUBLISHED BY THIS INSTRUMENT	this is EXACTLY the triple p351 published
+HEAD (p351 as committed)	2476	33	2443	2478	33	2445	STALE in 2 of 3 cells	the published figure is the p350 tree's
+#	addresses_p351s_own_commit_ADDED	2	named	aclascollege/polymath (p351's OWN new repos/foundations.md row)	imsglobal/openbadges-validator-core	removed	0	gate	gate-census-currency (p352)

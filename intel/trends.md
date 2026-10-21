@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — three trends, and the one that will cost a studio money is not about the sector at all: **this base's measurement of itself drifts in a specific, repeating direction**, and the direction is *a figure near a slug gets attributed to that slug*. Twice in two passes, on two different kinds of figure
+
+**Evidence:** [`figure-scope-misattribution`](../evidence/figure-scope-misattribution.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv)
+
+### 🔴 T-a · The adjacency defect is a CLASS, it is quantity-independent, and it is the cheapest way to put wrong data in a client deliverable
+
+🟡 **`p307` found it first on a withdrawn licence** and built `RETRACTION`. 🔴 **`p351` found it on a third-party licence** — the GPL-3 of an *excluded* Roundcube read as `jtylek/EpesiCRM`'s own grant — and built `THIRD_PARTY_SCOPE`. 🔴 **`p352` found it twice on STAR COUNTS**, and the offender was this pass's own extractor: `pykt-team/pykt-toolkit`'s **450 ★**, named in the same cell as an explicit comparison, attributed to `ZhijieXiong/pyedmine` (**82**); and *"the org publishes 92 repos … all under 10 ★"* attributed to `elimu-ai/webapp` (**41**).
+
+🟢 **Three instruments, three quantities, one shape.** The trend to record is not *"watch out for licences"*:
+
+> 🔵 **Any automated reading that binds a token to the nearest slug on the line will be wrong wherever careful prose does the right thing — because naming the comparison, the sibling or the exclusion is exactly what careful prose does.** Verbose cells are not the problem; line-scoped parsing is.
+
+🔴 **Why it matters outside this base.** A studio's licence scanner, SBOM tool or repo-triage script is a line-scoped reader. 🟢 **Both of this pass's misattributions pointed the *dangerous* way on the licence axis and the *harmless* way on the star axis** — a 5.5× star inflation embarrasses a deck; a third-party GPL read as a project's own grant stops an engagement, and `p351` already measured the reverse direction (**a README narrower than the LICENCE**, which *"is the direction scanners do not catch"*). 🟡 **The axis is not permissive-vs-restrictive, it is scoped-vs-unscoped**, and nothing in a conventional scanner models scope.
+
+### 🔴 T-b · A self-referential census is stale in the pass that publishes it — measured three passes running
+
+🟢 **`p351` published `2 476 harvested → 33 → 2 443 addresses`. Its own committed tree yields `2 478 → 33 → 2 445`, and the published triple is EXACTLY the `p350` tree's.** The two addresses missing from `p351`'s own denominator are nameable: **`aclascollege/polymath`** — `p351`'s own new `repos/foundations.md` row — and **`imsglobal/openbadges-validator-core`**.
+
+🔴 **`p350`'s own commit message says the same thing about `p349`** (*"p349's own headline denominator is wrong by one group and two addresses"*). 🔵 **So the pass that wrote the correction committed the defect one pass later.** That rules out carelessness as the cause and names the real one: **a census whose input is the shelves, published by the pass that then writes to the shelves, is stale the moment it is written.** The natural order — measure, then write up — guarantees it.
+
+🟢 **Fixed as a gate, not a resolution.** `gate-census-currency` (`p352`, 24 controls, in `HOOK_GATES`) compares the published triple with the derived one and goes RED on disagreement, so the census can only be published correctly: **write the pass, derive, then state the figure.** 🔵 The anchor lives in `README.md`, which is deliberately **not** a `SHELF_FILE`, so stating the number cannot change it.
+
+🟡 **The general form, which applies to every count on these shelves and not only this one:** a quantity derived from the shelves must be derived **last**. `make recount`'s register already embodies the principle for five claims; this is the first time the mechanism of its failure has been isolated and named.
+
+### 🟢 T-c · The sector's prescribed legs are EXHAUSTED against this base, and the number says so
+
+🔴 **Four regional legs, four returning relevant material, ZERO returning anything new.** Every load-bearing token — Vietnam's **134/2025/QH15**, Korea's **AI Basic Act**, the EU **Digital Omnibus (EU) 2026/1744**, UNESCO **IESALC** — was already on these shelves before the leg ran, checked rather than assumed. 🔴 **Six discovery candidates, `make carried` returns CARRIED on all six.** 🔴 **The vertical leg returned a vendor listicle for the TENTH consecutive pass**, the trending leg for the **eighteenth**.
+
+🔵 **This is a trend about the method, and it is the honest one to publish at pass 352 of one industry.** The prescribed legs were built to find things; against a base that has run 351 passes they now mostly **confirm**. 🟢 **Confirmation has real value — the EMEA corroboration above is this pass's second-most useful result and it came from a leg that found nothing new.** 🔴 **What it does not have is yield**, and a successor should expect new rows to come from where this pass's did: **re-reading rows this base already holds on channels it has not yet pointed at them.**
+
+🟢 **The evidence for that is this pass's own best finding.** `openeduhub/discipline-classification` has been on `repos/foundations.md` since `p322`, shelved explicitly *"despite 0 ★"* because it ships a pretrained curriculum classifier. **Thirty passes later, the first run of the commit stream against it shows it has been dormant since 2021-06-10 and that its own organisation contributed 2 of its 74 commits.** 🔵 **No leg would ever have surfaced that. It was already on the shelf.**
+
+🟡 **Two carried trends re-confirmed, no change:** the EMEA deadline structure (Art. 50 content marking on already-deployed systems, **2026-12-02**; high-risk education deferred to **2027-12-02**) and the LATAM **87 % adoption / 26 % strategy** gap. Both are `p350`–`p351` findings; this pass reproduced them independently and neither moved.
+
 ## Pass 351 · 2026-10-21 — four trends, and the load-bearing one reverses a deadline this base sold an engagement on last pass: EMEA's live education AI deadline is **six weeks away and it is not the one on these shelves**. Also: a dataset's own version string is the least reliable field in it, and an identity oracle built on redirects can only ever say YES
 
 **Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv)

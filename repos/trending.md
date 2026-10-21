@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — the prescribed trending leg returns listicles for the **EIGHTEENTH** consecutive pass, and this pass stopped asking it for new rows and asked an open channel for **dates on old ones** instead. **34 of 34 published star cells re-derived first-hand; 31 exact.** The only row that moved meaningfully has not moved since **2021**
+
+**Evidence:** [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`discovery-leg-carried`](../evidence/discovery-leg-carried.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv)
+
+🟢 **Channel note:** `make hooks` **30/30 on arrival**; `ls-remote`, `clone` and the **commit stream** are OPEN; the **GitHub MCP repository search is OPEN and was used** (six batched calls, 34 addresses). 🔴 `api.github.com/repos/*` and `github.com` are **403** under `p255`'s per-repository allow-list, and the body says so.
+
+### 🔴 The leg, and its denominator
+
+🔴 **`github trending education AI 2026` returned, for the eighteenth pass running, aggregator posts rather than a trending ranking.** Its one education-specific hit was **`withmarbleapp/os-taxonomy`** — already shelved since `p326`, re-pinned by digest by `p351` earlier today — quoted at *"5,900 stars"* and *"1,590 micro-topics … 3,221 prerequisite edges."* 🟢 **First-hand today: 6 683 ★ · 1 071 forks**, and `p351` already measured the payload at **1 616 topics / 3 317 edges**. 🔵 **So the listicle is stale in both its star figure and its payload figures, and this base is ahead of it on all four.**
+
+🔴 **Six candidates across both discovery legs, `make carried` returns `CARRIED` on six.** Yield: **0 new addresses.**
+
+### 🟢 What the open channel bought instead: dates on rows this base already holds
+
+| row | ★ first-hand | forks | last activity | reading |
+|---|---:|---:|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 918** | 5 310 | 2026-10-19 | 🟢 the sector's anchor, live |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | **6 683** | 1 071 | 2026-10-21 | 🟢 regenerating daily |
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | **3 840** | 327 | 2026-10-20 | 🟡 +1 |
+| [`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) | **2 632** | 264 | 🔴 **archived** | already labelled |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | **1 818** | 290 | 2026-10-20 | 🟡 +1 · LATAM, INEP + FNDE |
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | **582** | 35 | 🔴 **archived** | already labelled, with its own date |
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | **82** | 13 | 2026-10-05 | 🟢 exact — and see below |
+| [`openeduhub/discipline-classification`](https://github.com/openeduhub/discipline-classification) | **0** | 0 | 🔴 **2021-06-10** | 🔴 **dormant 5 y 4 m, and a fork** |
+
+🟢 **`archived` was read for all 34 rows and the negative result is worth as much as the positives: no row this base presents as LIVE is archived upstream.** Three archived rows exist and all three are already labelled. That check had never been run.
+
+### 🔴 `openeduhub/discipline-classification` — this file carries it at `:1353`, and the row needs a date
+
+🔴 **74 commits, every one between 2021-01-11 and 2021-06-10. `71` of them from `yovisto.com`** — the upstream it was forked from — **and 2 from `metaventis.com`**, the fork's own organisation. 🟢 **Fork status PROVEN** by the two-probe test rather than read from a sidebar: it is the one address of 34 the default index omits, and it returns under **`fork:true`** with `"fork": true`. 🟢 Placed **EMEA by instrument** — `+01:00` ×64, `+02:00` ×10. 🟡 This file's cell says *"**73**"* commits; first-hand it is **74**.
+
+🔵 **It is `repos/foundations.md`'s row and the full reading is there**, including why it matters: the row exists *"despite 0 ★"* because it **ships a pretrained national-curriculum classifier** — and the model it ships was last touched in **June 2021**.
+
+### 🟡 A note on this file's own numbers, because a sibling gate caught one
+
+🔴 **`p351`'s headline denominator was the `p350` tree's figure**: published `2 476 → 33 → 2 443`, derived on its own committed tree `2 478 → 33 → 2 445`, and the two missing addresses are **`aclascollege/polymath`** — `p351`'s own new row — and **`imsglobal/openbadges-validator-core`**. 🟢 **A census whose input is the shelves, published by the pass that then writes to them, is stale by construction**, which is why `gate-census-currency` (`p352`, 24 controls) is now in `HOOK_GATES`: **write the pass, derive, then state the figure.** 🔵 Every count in this file is in scope of that rule.
+
 ## Pass 351 · 2026-10-21 — the prescribed trending leg returns listicles for the SEVENTEENTH consecutive pass; what actually moved is a repository this base already holds **regenerating itself the day before this pass under an unchanged version label**, and one new row whose description oversells its payload by an order of magnitude
 
 **Evidence:** [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv)

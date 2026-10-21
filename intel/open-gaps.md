@@ -1,8 +1,56 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 352 · 2026-10-21 — one gap closed with a measurement, one gap closed with a gate, and this register's own currency is now gated rather than trusted
+
+**Evidence:** [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p352.tsv)
+
+🔵 **This register was last written at `p349`.** `p350` and `p351` registered their actions in their own README sections, so `ZZ-aj` … `ZZ-at` are carried here for the first time rather than re-opened.
+
+**Gate state: MEASURED.** 🟢 `make hooks` ran — **30/30 green on arrival**; **31/31 green on exit** after this pass added `gate-census-currency` (24 controls). 🔴 **Via one RED in between, recorded below: the new instrument earned it, and it was repaired in the instrument rather than in the gate.**
+
+### 🟢 Closed this pass
+
+| gap | how it closed | the number |
+|---|---|---|
+| **`ACTION ZZ-as`** — place `Gego-K12/gegok12` by commit stream | the stream was run; two independent limbs agree | 🟢 **APAC — India**: `+05:30` on **288 of 290** commits; domains `gegok12.com` 93 / `gegosoft.com` 77 |
+| **`p351`'s declared star gap** — *"no star or fork figure this pass is first-hand"* | the GitHub MCP repository search, six batched calls | 🟢 **34 of 34** published star cells re-derived first-hand; **31 EXACT**, 4 moved by **+1/+1/+1/+10** |
+| **is any row this base presents as LIVE archived upstream?** — never asked before | `archived` read for all 34 rows | 🟢 **NO.** Three archived rows exist (`LibreLingo`, `zmievsa/autograder`, `menthor`) and **all three are already labelled** |
+| **why is one published address absent from the search index?** | the two-probe discriminator | 🟢 **It is a FORK.** `openeduhub/discipline-classification`: ABSENT by default, **PRESENT under `fork:true`** |
+
+### 🟢 `ACTION ZZ-am`'s refutation holds on a fresh case, and `p350`'s inference is now a PROOF
+
+🟡 `p351` refuted `ZZ-am`'s premise: the search-index oracle is **POSITIVE-ONLY**, so its silence proves nothing. 🟢 **Independently reproduced:** `openeduhub/discipline-classification` is silent under the default index and **answers `git ls-remote`** at HEAD `51ca00328fb5e5f9b8405b04ea05d20f63945973`.
+
+🟢 **And the silence is now explainable with a positive test.** `p350` wrote *"repository search excludes forks by default — the omission is the evidence,"* which is an **inference**. The second probe makes it a measurement:
+
+> 🟢 **ABSENT under the default index + PRESENT under `fork:true` = PROVEN FORK.** Neither limb alone decides: the first is the positive-only oracle, and the second cannot distinguish a fork from a non-fork.
+
+### 🟢 A gate accused this pass's own new instrument, and the gate was right
+
+🔴 **Wiring `gate-census-currency` into `HOOK_GATES` turned `gate-ladder-case` RED** — `STANDING:SINGLE-SPELLING` rose **17 → 18**, the eighteenth row being `compose/code/p352-census-currency/census_currency.py`, graded on the single spelling `README.md`. 🟡 **The available excuse was the very scope argument this pass spent its length documenting**, and it is wrong on the merits: rename this base's write-up to `Readme.md` and a one-rung ladder reports its anchor MISSING and refuses — loud, and still a wrong answer about a file that is sitting there. 🟢 **The ladder was CLOSED rather than the gate excepted** — `ANCHOR_LADDER` varies stem and extension case, walked first-hit-wins, re-audited **`CASE-CLOSED`/`UPPER-EXT`**; `make hooks` **31/31**. 🔵 Pinned in [`ladder-case-audit`](../evidence/ladder-case-audit-2026-10-21.tsv) at row 553, and `STANDING:SINGLE-SPELLING` is back at its ceiling of **17** with `STANDING:CASE-CLOSED` up to **9**.
+
+🔵 **Worth the score.** Three gates in two passes have accused this base of a scope error. `p351`'s `EpesiCRM` licence — **shelf right, gate repaired**. This pass's star extractor — **shelf right, instrument wrong**. This one — **gate right, new instrument repaired**. 🔴 **A base that always concludes its own shelves were right has stopped measuring.**
+
+🟡 **One note against `C14`'s own comment**, which argues the ratchet is safe because *"adding instruments can never break it."* 🔴 **A hooks-invoked instrument that spells a family literal once DOES raise `STANDING:SINGLE-SPELLING`.** That is the ratchet working — a new single-rung ladder in the standing set is exactly what it should refuse — but it surfaces as a *regression* when it is really an *admission*, and a successor reading that comment will not expect it. 🔵 Recorded rather than registered: no action, the behaviour is correct.
+
+### 🔴 Opened or re-measured this pass, each with a denominator
+
+- 🔴 **`ACTION ZZ-au` (NEW)** — **a shelf-row justification has a shelf life and this base records no expiry on any of them.** `openeduhub/discipline-classification` was shelved at `p322` explicitly *"despite 0 ★"* because it **ships a pretrained national-curriculum classifier**. 🔴 **The repository has been dormant since 2021-06-10 (5 y 4 m) and its own organisation wrote 2 of its 74 commits** — 71 are the upstream `yovisto.com`'s. The grant, the substance and the row all stand; the **framing** was five years stale and no instrument would have caught it. **How many other rows rest on a reason that has since expired? Unmeasured.** 🔵 Cheap first cut: the four-probe grade in `compose/patterns.md` (`R-p352-1`) over the rows shelved for an artefact rather than for activity.
+- 🔴 **`ACTION ZZ-av` (NEW)** — **the adjacency defect is quantity-independent and only the LICENCE axis is gated.** `p307` built `RETRACTION`, `p351` built `THIRD_PARTY_SCOPE`; both bind **licence** tokens. 🔴 **This pass reproduced the same shape twice on STAR COUNTS**, and the offender was this pass's own extractor (`pykt-team/pykt-toolkit`'s 450 ★ → `pyedmine`, which is **82**; *"all … under 10 ★"* describing 92 sibling repos → `elimu-ai/webapp`, which is **41**). 🟢 **The shelves were right both times**, so there is nothing to repair in them — but **no gate binds a FIGURE to its cell**, and `gate-tables` checks structure rather than attribution. Scope: fork counts, commit counts and dates are on the same axis.
+- 🔴 **`ACTION ZZ-aw` (NEW, and it is this register's own)** — **the `%ae` DOMAIN channel has no published denominator anywhere on these shelves.** Measured on `gegok12`: **120 of 290 commits (41.4 %) are `users.noreply.github.com`**, GitHub's privacy mask. Its real shares are 93 + 77 of **170 unmasked**. 🔴 **Every domain share this base has published was computed over an unstated denominator**, and `ZZ-ac`'s census found **220 of 230 author figures name no key at all (95.7 %)** — so the masked fraction of those is also unknown. 🟢 **The author COUNT is unaffected** (`%ae` over all commits, `p349`). 🟡 Prefer the **timezone** limb for placement: the mask does not touch the committer date.
+- 🟢 **`ACTION ZZ-ax` (NEW, and already DISCHARGED — recorded for the mechanism)** — **a census over the shelves, published by the pass that then writes to the shelves, is stale the moment it is written.** `p351` published `2 476 → 33 → 2 443`; its own committed tree yields `2 478 → 33 → 2 445`, and the published triple is **exactly the `p350` tree's**. The two addresses missing from `p351`'s own denominator: **`aclascollege/polymath`** — `p351`'s own new `repos/foundations.md` row — and **`imsglobal/openbadges-validator-core`**. 🔴 **`p350`'s commit message records the same shape about `p349`**, so the pass that wrote the correction committed the defect one pass later and attention is not the remedy. 🟢 **`gate-census-currency` (24 controls, in `HOOK_GATES`) is.**
+- 🔴 **The prescribed legs are EXHAUSTED against this base, with a number.** 🔴 **4 regional legs run, 4 returned relevant material, 0 returned anything new** — `134/2025/QH15`, `AI Basic Act`, `Digital Omnibus`/`1744` and `IESALC` were each checked against these shelves *before* being written up and each was already carried. 🔴 **6 discovery candidates, 6 `CARRIED`.** 🔴 Vertical leg: a listicle for the **tenth** consecutive pass; trending leg, the **eighteenth**. 🔵 **This is not a failure of the legs — the EMEA corroboration below is this pass's second-best result and came from a leg that found nothing new** — but a successor should expect new rows from **re-reading carried rows on channels not yet pointed at them**, which is where this pass's best finding came from.
+
+### 🟢 Re-confirmed, not re-opened
+
+- 🟢 **`p351`'s EMEA reversal is CORROBORATED by a leg that did not inherit it.** Art. 50 content marking on systems already on the market: **2026-12-02**, six weeks out. High-risk education duties: **deferred to 2027-12-02** by **Regulation (EU) 2026/1744**. Art. 4 AI literacy: in force since **2025-02-02**. 🔵 The deferral's own date is new on these shelves even though the direction was not.
+- 🔴 **Every EU primary legal host is `connect_rejected`** — `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu`, all `000`. A standing egress policy, re-confirmed. **No successor should spend probes here**, and every EU legal date on these shelves is secondary-sourced by construction.
+- 🔴 **`api.github.com/repos/*` is 403 by PER-REPOSITORY policy, and the body names the remedy** — *"not enabled for this session. Use `add_repo`"*. 🟢 Control: the two repositories this session *has* attached both answer **200**; `rate_limit` answers **200** at `core 15000`. 🔵 **This is `p255`'s finding and `p163`'s refuted `ACTION IF`, not a new channel.** The star channel is and remains the **repository search**.
+- 🟡 **Carried unchanged, not run this pass:** `ZZ-af` and `ZZ-ai` (the 54 education-token orphans; the 2 181 pre-filter-excluded addresses, to be sampled against the corrected **2 445**), `ZZ-ah` (16 alias groups still `UNKNOWN` for canonicality), `ZZ-aj` (17 `UNANSWERED` addresses), `ZZ-ak` (`presidio` has no Latin American recogniser set), `ZZ-ac`'s 220 unkeyed author figures, `ZZ-ap` (a per-subtree grant classifier would still misread `os-taxonomy`, which partitions by semantic layer inside the same files), `ZZ-aq` (`split_live_section` is anchored at `^## Pass` while `agents/trending.md` heads its sections with the DATE first — **this pass confirmed that mismatch while testing a hypothesis and it invalidated the test**), `ZZ-ar` (a rename's DIRECTION has no instrument), `ZZ-at` (a provenance column for the data-layer rows).
 
 ## Pass 349 · 2026-10-20 — gaps closed, gaps opened, and one gap this register was itself double-counting
 

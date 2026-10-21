@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 352 · 2026-10-21 — one recipe, and it is the one this pass needed itself: **grade a shelved repository's LIVENESS before you build on it**, in four probes that cost nothing and that this base had never run against rows it has carried for thirty passes
+
+**Evidence:** [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv)
+
+### 🟢 Recipe `R-p352-1` — the four-probe liveness grade, before a shelved repo enters a deliverable
+
+🔴 **The defect it exists for, from this pass:** [`openeduhub/discipline-classification`](https://github.com/openeduhub/discipline-classification) has been on `repos/foundations.md` since `p322` because it **ships a pretrained national-curriculum classifier** (`wirlernenonline.oeh.h5`, Keras/TensorFlow, CherryPy on 8080, top-three disciplines with scores). All of that is true. 🔴 **It is also a fork whose last commit is 2021-06-10, whose own organisation wrote 2 of its 74 commits, and whose star and fork counts are both 0.** A studio reading the row would have shipped a five-year-old model into a 2026 engagement.
+
+**The four probes, in cost order. None needs `api.github.com/repos/*`, which is 403 by per-repository policy.**
+
+```sh
+SLUG=openeduhub/discipline-classification
+
+# 1. EXISTENCE + default branch + HEAD.  Positive-only: silence proves nothing (ACTION ZZ-am).
+git ls-remote "https://github.com/$SLUG" HEAD
+#    -> 51ca00328fb5e5f9b8405b04ea05d20f63945973
+
+# 2. FORK STATUS, by the two-probe discriminator.  Repository search excludes forks by
+#    default, so ABSENT-by-default + PRESENT-under-fork:true is a POSITIVE test.
+#    (GitHub MCP search_repositories; `repo:` qualifiers OR, ~8 slugs per 256-char query.)
+#    repo:$SLUG            -> absent   |  repo:$SLUG fork:true -> "fork": true
+#    Same call returns stargazers_count, forks_count, archived, created_at, pushed_at.
+
+# 3. DORMANCY + REGION + who actually wrote it, from the commit stream.
+git clone --quiet --bare --filter=blob:none "https://github.com/$SLUG" r.git
+git -C r.git rev-list --all --count                                   # 74
+git -C r.git log --all --format='%ad' --date=iso-strict | sed -n '1p;$p'
+#    -> 2021-06-10T13:58:45+02:00 ... 2021-01-11T13:27:12+01:00   (dormant 5 y 4 m)
+git -C r.git log --all --format='%ae' | sed 's/.*@//' | sort | uniq -c | sort -rn
+#    -> 71 yovisto.com | 2 metaventis.com | 1 yoyo1.yovisto.com
+#       i.e. 71 of 74 commits are the UPSTREAM's; the fork added two.
+git -C r.git log --all --format='%ad' --date=iso-strict \
+  | grep -oE '[+-][0-9]{2}:[0-9]{2}$' | sort | uniq -c | sort -rn
+#    -> 64 +01:00 | 10 +02:00   ->  EMEA, placed by instrument (CET/CEST)
+
+# 4. GRANT, payload-first at the root, on the one host that answers 200.
+curl -s "https://raw.githubusercontent.com/$SLUG/main/LICENSE" | head -3
+```
+
+🟢 **The four verdicts a row needs, and which probe gives each:**
+
+| question a deliverable turns on | probe | on this row |
+|---|---|---|
+| does it exist, and at what pin? | `ls-remote` | 🟢 live, `51ca0032…` |
+| is it the project or a copy of one? | the **two-probe** fork test | 🔴 **a fork** |
+| is anyone still working on it? | commit stream, first/last `%ad` | 🔴 **no — 5 y 4 m** |
+| whose work is it, and where are they? | `%ae` domains + `%ad` timezones | 🔴 **the upstream's**; 🟢 **EMEA** |
+| may we ship it? | payload-first `LICENSE` | 🟡 **GPL-3.0** — service boundary |
+
+### 🔴 Two scoping rules the recipe must carry, or it produces confident wrong answers
+
+🔴 **1. A `%ae` DOMAIN SHARE is taken over UNMASKED commits and must publish that denominator.** Measured on [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) this pass: **120 of 290 commits (41.4 %) have `%ae` of `users.noreply.github.com`** — GitHub's privacy mask. 🟢 Its real shares are `gegok12.com` **93** and `gegosoft.com` **77** of **170 unmasked**, which is near-total attribution; computed over all 290 the same rows read as weak. 🔵 **The author COUNT is still taken over everything** — that is `ACTION ZZ-ac`'s `%ae` finding and it is unaffected. 🟢 **Prefer the TIMEZONE limb for placement**: the mask does not touch the committer date, so `+05:30` is present on **288 of 290** and placed the row **APAC — India** where four passes of the holder channel had failed (`ACTION ZZ-as`, discharged).
+
+🔴 **2. Never bind a figure to the nearest slug on the line.** This pass's own extractor took `pykt-team/pykt-toolkit`'s **450 ★** — named in the same cell as an explicit comparison — and reported it as `ZhijieXiong/pyedmine`'s (**82**), and took *"all MIT-org, all under 10 ★"*, which describes 92 sibling repositories, as `elimu-ai/webapp`'s (**41**). 🟢 **Read the CELL, not the line.** `p307`'s `RETRACTION` and `p351`'s `THIRD_PARTY_SCOPE` are the same rule on licences; **it is quantity-independent.**
+
+### 🟡 What this recipe composes with, unchanged
+
+🔵 `p351`'s two recipes stand and nothing here revises them: **pin a third-party curriculum dataset by DIGEST, never by its own version string** (`withmarbleapp/os-taxonomy` — `topics.json` @ `525aa943…d19cfd`, manifest `generatedAt` **2026-10-20T20:52:33.520Z**, **1 616 topics / 3 317 edges**; `taxonomyVersion: v1` has denoted at least three datasets), and **ship the Article 50 content-marking pack** — whose live date is **2026-12-02** for systems already on the market, independently corroborated by this pass's EMEA leg. 🟢 **Run `R-p352-1` first on every repo either of those recipes depends on**: a digest pin on a dormant dataset is still a dormant dataset, and it is better to know before the proposal than after.
+
 ## Pass 351 · 2026-10-21 — two recipes, and both are things a studio does to a dependency rather than with it: **pin the curriculum by digest** because its own version string moves under it, and **ship the Article 50 transparency kit against 2026-12-02** because that is EMEA's live deadline and not the one this base published last pass
 
 **Evidence:** [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv)
