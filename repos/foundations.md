@@ -6,6 +6,118 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
+**Pass 367 · 2026-10-21.** 🔴 **Every "absent from N addresses" figure this base has ever
+published was tested against a corpus missing 496 live repositories. `p367` built the
+second channel `ACTION ZZ-bv` prescribed, and the corpus-level error is 16.3% — twice the
+8.2% `p366` measured on its own population.**
+
+🔵 **Why the two numbers differ, stated so neither is quoted as the other.** `p366` asked a
+*lookup* question — of 330 companions already known to be absent, how many does this base
+hold as a bare slug? Answer **8.2%**. `p367` asks the *corpus* question — how many live
+repositories does this base hold that the URL channel cannot see at all? Answer **496**,
+against 2 542 URL-channel live addresses:
+
+| The true live corpus | Count | Share |
+|---|---:|---:|
+| channel **U** live (`p348`'s URL form) | **2 542** | 83.7% |
+| 🔴 channel **B** net-new live — invisible to every instrument here | **496** | **16.3%** |
+| **true live corpus** | **3 038** | 100% |
+
+🟢 **The 496 is a NET figure and the netting is first-hand.** Channel B returned **522**
+live addresses; **26** of them share a `HEAD` sha with a channel-U address and are therefore
+not new repositories. Those 26 were then split by a sharper test than `p366` had:
+
+| Identity class | Count | What it means |
+|---|---:|---|
+| 🟡 `SAME-REF-SET` — identical fingerprint over **all** refs | **23** | one repository at two addresses, or a fork nobody has pushed to |
+| 🟡 `SAME-HEAD-ONLY` — same `HEAD`, ref sets differ | **3** | a fork that has diverged somewhere other than `HEAD` |
+
+🔴 **`SAME-REF-SET` still cannot separate a rename-redirect from a pristine fork, and the
+specimen that proves it is in the table.** [`treeverse/dvc`](https://github.com/treeverse/dvc)
+and [`iterative/dvc`](https://github.com/iterative/dvc) have identical full ref sets —
+but `treeverse` is lakeFS's organisation, so a DVC *rename* is implausible and a never-touched
+fork is not. 🟢 `ls-remote` cannot tell them apart and this pass does not pretend otherwise.
+🔵 This is `ACTION ZZ-bw` advanced, not closed: `p366` could only compare `HEAD`, `p367` can
+compare every ref, and **neither can read a redirect**.
+
+🟢 **What the ref-set test DOES settle: eight organisation migrations this base writes both
+ways.** `imsglobal/` → [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library)
+(the IMS Global → 1EdTech rename), `edx/` → [`openedx/frontend-platform`](https://github.com/openedx/frontend-platform),
+`all-hands-ai/` → [`openhands/openhands`](https://github.com/openhands/openhands),
+`project-sunbird/` → `sunbird-knowlg/` and `sunbird-lern/`, `firebase/php-jwt` ≡
+`googleapis/php-jwt`, `data-privacy-stack/presidio` ≡ [`microsoft/presidio`](https://github.com/microsoft/presidio),
+`openedx/openedx-core` ≡ [`openedx/openedx-learning`](https://github.com/openedx/openedx-learning).
+
+### 🔴 `p366` published that the live row shelves were CLEAN. This base's own gate had been red since, and `p367` fixed the row
+
+🔵 **`p366` wrote:** *"the four live row shelves are CLEAN… every row uses the current
+canonical slug"*, with the pre-rename spellings surviving *"only in the APPEND-ONLY trend
+history."* 🔴 **`make gate-alias-canonical` disagreed on the day it was written**, and has
+been failing since, and `p367` found the defect on **two** shelves rather than the one the
+gate names: `agents/top.md` and `repos/foundations.md` each carried a live row addressed
+**`INGInious/INGInious`** (canonical: `UCL-INGI/INGInious`) — the pre-rename spelling of the pair `p366` itself had just
+identified.
+
+🟢 **Fixed this pass**: the row now cites [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious),
+the pair is entered in `p283`'s alias ledger — established on the ref-set fingerprint, which
+is the *"more than the HEAD"* that ledger's own header requires — and the gate is **green**.
+🔵 **The lesson is about the claim, not the row.** `p366` asserted cleanliness from a
+hand-read of the shelves while a standing gate built to answer exactly that question was
+sitting red in the same repository. Checking a claim against the gate that owns it costs
+one `make` invocation.
+
+### 🟢 The offline arms, and the control that proves they are not eating anything
+
+🔵 **Channel B over-collects by construction, because markdown prose is full of
+`owner/repo`-shaped things that are not repositories.** Four arms reject them, each named
+for the string that prompted it:
+
+| Arm | Rejects | Specimen | Count |
+|---|---|---|---:|
+| `REF-OR-PATH-SEGMENT` | a first segment that is a ref or a directory | `main/LICENSE` (483 occurrences), `agents/top.md` (504) | **404** |
+| `DOC-PATH` | a second segment that is a file | `openedx/__init__.py` | **101** |
+| `NUMERIC-PAIR` | a ratio or a date | `47/47`, `2026/1744` | **46** |
+| `GRANT-ID-PAIR` | a licence pair | `MIT/Apache-2.0` | **3** |
+| `p351`'s shape and namespace arms, **imported not reimplemented** | illegal owners, nav namespaces, placeholders | `topics/ai-tutor`, `yourusername/SUMRY` | **1 173** |
+
+🟢 **The arms are measured rather than trusted: 120 of the 1 727 rejected candidates were
+probed with `ls-remote` and 0 are live.** 🔴 **The first run of that control reported 2 —
+and both were artefacts of the control itself**, which split space-containing tokens on
+whitespace and probed the fragments. Both "finds" are already carried as URLs. 🔵 Recorded
+because a control that manufactures findings is worse than no control, and because the same
+broken run is what exposed the `GLUED-SLUG` class (159 candidates, **4** live, **2.5%**
+precision — included, with its precision stated).
+
+### 🔴 Arm 1's grant-family words are load-bearing, and `p283`'s audit was right for the wrong reason
+
+🔵 `make gate-ladder-case` graded this pass's instrument `SINGLE-SPELLING` on the `licence`
+family the moment it entered `HOOK_GATES`, breaching `p286`'s ratchet (17 → 18). 🟡 **Two
+remedies were tried and measured before the cause was found:**
+
+1. 🟡 Case-closing the words in the literals — `p352`'s and `p354`'s remedy. Moved the
+   reason from `no-upper-ext` to `UPPER-EXT` and **did not clear the grade.**
+2. 🔴 Deleting the grant-family words. **Refuted by measurement**: six non-addresses leaked
+   straight into the live population (`license/license`, `license/disclaimer`,
+   `license/license.code`, `license/license.original`, `license/license.output`,
+   `licenses/license-mit`).
+
+🟢 **The cause was the instrument's own identifiers.** `p283`'s `BARE` pattern is
+case-sensitive and unquoted, so it read the constant `LICENCE_TOKEN` and the status value
+`"LICENCE-PAIR"` as licence *path* spellings — `p286`'s `_METHODS` defect arriving through a
+constant and a status string instead of an attribute. Renamed `GRANT_ID_TOKEN` and
+`GRANT-ID-PAIR`; the grade clears and the ratchet returns to 17. 🔵 **The channel-B
+population was re-measured after each of the three attempts and is byte-identical at all
+four points — 823 candidates.** A gate fix that moves the measurement is a different
+instrument wearing the same name.
+
+🔵 **What `p367` deliberately did NOT do, and why it is a declaration rather than an
+omission.** Channel B is a **separate module**; `p348`'s `slugs_in` is untouched. Wiring it
+into the canonical harvester would change **every** denominator this base has ever
+published in a single commit, with no pass able to verify the result. Registered as
+`ACTION ZZ-ca`, with the 496 named by address in
+[`net-new-addresses`](../evidence/net-new-addresses.2026-10-21-p367.tsv) so the re-statement
+has no search step.
+
 **Pass 366 · 2026-10-21.** 🟢 **`p366` added no repository to this shelf and swept it for the
 first time.** `ACTION ZZ-bu` named this shelf and `agents/top.md` as the two `p364`'s
 companion sweep never read. 🔵 **Both are now swept: 199 addresses from this file, 159 from
@@ -55,8 +167,7 @@ absent count: **302, not 330.** Registered as `ACTION ZZ-bv`;
 migration. 🟢 This shelf's row uses the current canonical slug and is correct; the old slug
 survives in the append-only trend history. Same for
 [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)
-≡ `digitalcredentials/learner-credential-wallet` (`1c46a82ba3`) and `INGInious/INGInious` ≡
-`UCL-INGI/INGInious` (`b423828c02`). 🔵 **Slug equality cannot see any of the three** — only
+≡ `digitalcredentials/learner-credential-wallet` (`1c46a82ba3`) and `INGInious/INGInious` ≡ `UCL-INGI/INGInious` (`b423828c02`). 🔵 **Slug equality cannot see any of the three** — only
 the `HEAD` sha can. `ACTION ZZ-bw`.
 
 🟢 **`p366` evidence:** [`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
@@ -458,7 +569,7 @@ measured anchoring bias, and an IRT-calibrated item is the evidence that answers
 | --- | --- | --- | --- | ---: | --- |
 | Judge0 (code execution API) | [judge0/judge0](https://github.com/judge0/judge0) | GPL-3.0 | `master/LICENSE` | **4 492** | EMEA |
 | Dolos (plagiarism detection) | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | `main/LICENSE` | **353** | EMEA |
-| INGInious (exercise assessment) | [INGInious/INGInious](https://github.com/INGInious/INGInious) | AGPL-3.0 (*"most of the files"*) | `main/LICENSE` | **243** | EMEA |
+| INGInious (exercise assessment) | [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | AGPL-3.0 (*"most of the files"*) | `main/LICENSE` | **243** | EMEA |
 | UDOIT (accessibility inspection) | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | `main/LICENSE` | **117** | North America |
 | Ares2 (secure grading runner) | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | **MIT** | `main/LICENSE` | **5** | EMEA |
 | autograder — 🔴 **ARCHIVED** (`p361`) | [zmievsa/autograder](https://github.com/zmievsa/autograder) | GPL-3.0 | `main/LICENSE` | **48** | Not placed |

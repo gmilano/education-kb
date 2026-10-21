@@ -6,6 +6,12 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
+**Pass 367 · 2026-10-21.** Concrete recipes. 🆕 **Pattern 27 is `p367`'s**, and it closes the
+last axis in the Pattern 24 → 25 → 26 chain: those three grade the right noun, at the right
+pin, in the right direction — over a **population built from one spelling of an address**.
+🔴 On this base that population was missing **16.3%** of the repositories it was meant to
+cover.
+
 **Pass 366 · 2026-10-21.** Concrete recipes. 🆕 **Pattern 26 is `p366`'s**: it sits one step
 *before* Patterns 24 and 25, because both of those grade whatever a README named and only
 **17.8%** of README-named companions are declared dependencies — so it enumerates the closure
@@ -1214,3 +1220,84 @@ affordable: it cut the set worth grading from **330** candidate repositories to 
 step 5's unmeasurable 20.7% and step 2's requirement that a human confirm the ladder — because
 `p366`'s grader was wrong about **8.6%** of its cells on first run, and an audit that reports
 a clean closure it has not re-read is worth less than no audit at all.
+
+## 🆕 Pattern 27 — A two-channel dependency inventory, because Patterns 24–26 grade a population that one regex built
+
+**For:** the same client as Patterns 24, 25 and 26 — one whose licence register is a list of
+front pages — at the point where the audit is about to be **signed**. 🔵 Patterns 24–26 make
+the audit *correct*; this pattern makes it **complete**, and it is the cheapest of the four.
+
+🔴 **Why Patterns 24–26 are not sufficient on their own.** Pattern 24 closes the *component*
+axis (a platform's grant does not govern what it makes you install). Pattern 25 closes the
+*pin* axis (a grant is a function of the ref, not the branch). Pattern 26 closes the
+*direction* axis (a README names adopters as well as dependencies). 🔴 **All three take their
+population from a scan for `github.com/owner/repo`** — and a dependency named in a design
+doc, a ticket, a wiki page or an architecture diagram as a bare `owner/repo` is **invisible to
+all three at once**. 🟢 Measured on this base, where the convention is identical: **496 live
+repositories, 16.3% of the true corpus**, and the two worst omissions were the subjects of its
+own open gaps.
+
+### The recipe
+
+1. 🟢 **Harvest both channels over the client's own documents** — repository READMEs, ADRs,
+   design docs, runbooks, ticket exports, wiki dumps.
+   - channel **U**: `github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)`, folded, `.git` stripped.
+   - channel **B**: every **backticked** one-slash token.
+   Instrument: `compose/code/p367-bare-slug-channel/bare_slug_channel.py census <files…>`.
+   🔴 **Require the backticks.** Unticked prose `owner/repo` cannot be told from an English
+   word pair (`pass/fail`, `spanish/portuguese`) by any rule you can defend to a client.
+
+2. 🟢 **Reject the four prose classes offline**, each one a thing a document writes that is
+   not a repository: a ref or directory first segment (`main/LICENSE`, `docs/license`), a
+   file second segment (`openedx/__init__.py`), a ratio or date (`47/47`, `2026/1744`), a
+   licence pair (`MIT/Apache-2.0`). 🔵 Import a shape filter rather than writing a second
+   one; `p351-address-shape` is this base's.
+
+3. 🔴 **Adjudicate online, never offline.** `git ls-remote --symref https://github.com/<slug> HEAD`.
+   Instrument: `probe_slugs.sh adjudicate <candidates>`. 🟢 On this base the offline arms were
+   **62.9%** precise — and that is acceptable *because the online leg decides*. An offline-only
+   channel at an unmeasured precision is the instrument you cannot sign.
+
+4. 🟢 **Publish the precision, and run the false-rejection control.** Sample ~120 of the
+   rejected candidates and probe them with the same instrument; report how many are live. On
+   this base: **0 of 120**. 🔴 **Delimit the control's input by newline, not whitespace** —
+   rejected candidates legitimately contain spaces, and `p367`'s first control run split them
+   into fragments and reported two findings that did not exist.
+
+5. 🟡 **De-duplicate by identity, not by slug.** For each new address, compare its `HEAD` sha
+   against the known population; for every collision, compare the **fingerprint over all
+   refs** (`probe_slugs.sh refset`). Identical ref sets mean one repository *or* an untouched
+   fork — 🔴 `ls-remote` cannot separate those, so say so rather than calling it a rename. On
+   this base this step removed **26** of 522 addresses and surfaced eight real organisation
+   migrations, `imsglobal/` → `1edtech/` among them.
+
+6. 🔴 **Check the DOMAIN before the licence, not after.** Read each new repository's README
+   first line. 🟢 Two of the five permissively-licensed rows `p367` graded were a different
+   domain wearing an education name: `google/caliper` is a **Java microbenchmark harness**
+   (not 1EdTech Caliper Analytics) and `python-adaptive/adaptive` is **parallel sampling of
+   mathematical functions** (not adaptive learning). Both would have passed a licence gate and
+   a liveness gate and been wrong. **A 40% trap rate on the permissive subset.**
+
+7. 🟢 **Then run Patterns 26 → 25 → 24 over the UNION**, in that order: direction first (the
+   manifest, which cuts the grading backlog ~5.7×), then the pin, then the grant.
+   🔵 Steps 1–6 are a day's work and they decide what the other three patterns are even
+   looking at.
+
+### What to quote, and what not to
+
+🟢 **Quotable:** the corpus size by channel, the survivor precision, the false-rejection
+control result, the net-new count after ref-set de-duplication.
+🔴 **Not quotable:** *"we found every dependency."* The channel requires a backtick, so a
+dependency named in running prose or inside an image is still invisible, and **a bare-slug
+channel cannot be proven complete** — it can only be proven to have found more than the URL
+channel did. 🔵 Say the number it added and the control that bounds its error; that is the
+claim the evidence supports.
+
+### Cost and prerequisites
+
+🟢 **Cost:** one engineer-day for steps 1–6 on a corpus of this size; the online legs here
+were ~50 s for 823 addresses at 6-way parallelism and ~160 s for 2 628.
+🔴 **Prerequisite:** egress to `github.com` for `git ls-remote` and to
+`raw.githubusercontent.com` for payload. 🔵 Both answered in this environment where **0 of 16
+other hosts did**, so this pattern is runnable in restricted networks where a web-research
+pattern is not — which is a genuine reason to prefer it as the first deliverable.

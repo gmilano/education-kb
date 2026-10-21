@@ -1,0 +1,121 @@
+slug	verdict	head	control
+/ limb	NO-REF	-	FALSE-REJECTION-CONTROL
+regulation (eu) 2024/1689	NO-REF	-	FALSE-REJECTION-CONTROL
+echo "$p/$t"; [ "$p" = "$t" ] || exit 1	NO-REF	-	FALSE-REJECTION-CONTROL
+### global / unplaced	NO-REF	-	FALSE-REJECTION-CONTROL
+skills/*.md	NO-REF	-	FALSE-REJECTION-CONTROL
+{"name":"openmage/magento-lts","license":["osl-3.0"]}	NO-REF	-	FALSE-REJECTION-CONTROL
+| portabilis/i-educar | lgpl | 🔴 gpl-2.0 | latam |	NO-REF	-	FALSE-REJECTION-CONTROL
+.../opendashboard-api	NO-REF	-	FALSE-REJECTION-CONTROL
+aiact-50-2-pack/test_pack.py	NO-REF	-	FALSE-REJECTION-CONTROL
+grant-ladder-v2/pass90-results.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+lib/licence_path	NO-REF	-	FALSE-REJECTION-CONTROL
+reglamento (ue) 2026/1744	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/mea-region-queries.2026-10-13-p173.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+videos/…	NO-REF	-	FALSE-REJECTION-CONTROL
+pass275-grant-enumeration/	NO-REF	-	FALSE-REJECTION-CONTROL
+tests/test_star_invitation.py	NO-REF	-	FALSE-REJECTION-CONTROL
+allowbuilds: '@google/genai'	NO-REF	-	FALSE-REJECTION-CONTROL
+dados/license	NO-REF	-	FALSE-REJECTION-CONTROL
+mcp/validator.py	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/topic-count-reproduction.2026-10-13-p172.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+files.** 🔴 **the whole tao/qti assessment supply is excluded from moodle, chamilo, ilias and gibbon. 🟢	NO-REF	-	FALSE-REJECTION-CONTROL
+npx skills add xapi-labs/xapi-cli	NO-REF	-	FALSE-REJECTION-CONTROL
+ch/	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/verified-repos.2026-10-15-p213.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+.../phantom-claims.2026-10-11.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+/monitoring	NO-REF	-	FALSE-REJECTION-CONTROL
+.backup/	NO-REF	-	FALSE-REJECTION-CONTROL
+compose/patterns.md:221	NO-REF	-	FALSE-REJECTION-CONTROL
+copyright (c) 2026 [your name / organization]	NO-REF	-	FALSE-REJECTION-CONTROL
+@storybook/*	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/existence-verification.2026-10-12-p156.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+134 bills / 31 states	NO-REF	-	FALSE-REJECTION-CONTROL
+@iblai/*	NO-REF	-	FALSE-REJECTION-CONTROL
+services/	NO-REF	-	FALSE-REJECTION-CONTROL
+agents/top.md	NO-REF	-	FALSE-REJECTION-CONTROL
+src/client.ts	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/dolos-artefact-read.2026-10-13-p177.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+app/	NO-REF	-	FALSE-REJECTION-CONTROL
+8/8	NO-REF	-	FALSE-REJECTION-CONTROL
+repos/trending.md:12465	NO-REF	-	FALSE-REJECTION-CONTROL
+include/	NO-REF	-	FALSE-REJECTION-CONTROL
+12/12	NO-REF	-	FALSE-REJECTION-CONTROL
+'user-agent': 'ims-lti/3.0.2'	NO-REF	-	FALSE-REJECTION-CONTROL
+@repo/scorm-export-generator	NO-REF	-	FALSE-REJECTION-CONTROL
+curl registry.npmjs.org/<pkg>	NO-REF	-	FALSE-REJECTION-CONTROL
+./cli	NO-REF	-	FALSE-REJECTION-CONTROL
+mx/	NO-REF	-	FALSE-REJECTION-CONTROL
+p170/sweep_headref.sh	NO-REF	-	FALSE-REJECTION-CONTROL
+activities/contributing-to-open-source	NO-REF	-	FALSE-REJECTION-CONTROL
+licenses/	NO-REF	-	FALSE-REJECTION-CONTROL
+dmontgomery40/mcp-canvas-lms:license	NO-REF	-	FALSE-REJECTION-CONTROL
+compose/patterns.md:106	NO-REF	-	FALSE-REJECTION-CONTROL
+@napi-rs/canvas	NO-REF	-	FALSE-REJECTION-CONTROL
+find compose/code -name 'test_*.py' | wc -l	NO-REF	-	FALSE-REJECTION-CONTROL
+9/9	NO-REF	-	FALSE-REJECTION-CONTROL
+licenses/lgpl-2.1-or-later.txt	NO-REF	-	FALSE-REJECTION-CONTROL
+/seb-client-connection	NO-REF	-	FALSE-REJECTION-CONTROL
+11/11 checks	NO-REF	-	FALSE-REJECTION-CONTROL
+trending/typescript?since=weekly	NO-REF	-	FALSE-REJECTION-CONTROL
+develop/license	NO-REF	-	FALSE-REJECTION-CONTROL
+p228-shelf-gate/classify_grant.py	NO-REF	-	FALSE-REJECTION-CONTROL
+scripts/star_invitation.py	NO-REF	-	FALSE-REJECTION-CONTROL
+head/license.txt	NO-REF	-	FALSE-REJECTION-CONTROL
+github.com/search?…&type=repositories	NO-REF	-	FALSE-REJECTION-CONTROL
+github.com/trending?since=daily	NO-REF	-	FALSE-REJECTION-CONTROL
+agents/trending.md:3440	NO-REF	-	FALSE-REJECTION-CONTROL
+@censo/eth-contracts	NO-REF	-	FALSE-REJECTION-CONTROL
+@likr/canvas-lms-mcp	NO-REF	-	FALSE-REJECTION-CONTROL
+lib/agents.ts	NO-REF	-	FALSE-REJECTION-CONTROL
+examples/	NO-REF	-	FALSE-REJECTION-CONTROL
+grep -a6 'name="grp.any"' schemas12/imscp_rootv1p1p2.xsd	NO-REF	-	FALSE-REJECTION-CONTROL
+simonstang/*	NO-REF	-	FALSE-REJECTION-CONTROL
+mcp server slugs tabled on agents/top.md · published 20 · measured 21 · stale	NO-REF	-	FALSE-REJECTION-CONTROL
+repos/trending.md:3383	NO-REF	-	FALSE-REJECTION-CONTROL
+br/	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/p332-prefix-pair-probe.2026-10-20-p332.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+0/3	NO-REF	-	FALSE-REJECTION-CONTROL
+| 🟢 **an entire xapi/learning-record stack pushed in one window.**	NO-REF	-	FALSE-REJECTION-CONTROL
+repos/trending.md:18012	NO-REF	-	FALSE-REJECTION-CONTROL
+unitime-mcp-gate/test_gate.py	NO-REF	-	FALSE-REJECTION-CONTROL
+openedx_content/	NO-REF	-	FALSE-REJECTION-CONTROL
+@xapi/cmi5	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/p232-new-rows.2026-10-16-p232.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+/extract-field	NO-REF	-	FALSE-REJECTION-CONTROL
+hub.docker.com/v2	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/channel-conjunction-2x2.2026-10-14-p203.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+agents/top.md:4829	NO-REF	-	FALSE-REJECTION-CONTROL
+system/lrs.clj:459	NO-REF	-	FALSE-REJECTION-CONTROL
+p198/holder_of.sh	NO-REF	-	FALSE-REJECTION-CONTROL
+](../makefile) · [	NO-REF	-	FALSE-REJECTION-CONTROL
+intel/market.md:1834	NO-REF	-	FALSE-REJECTION-CONTROL
+/mod	NO-REF	-	FALSE-REJECTION-CONTROL
+db/pedagogical_decisions.go	NO-REF	-	FALSE-REJECTION-CONTROL
+lib/measure	NO-REF	-	FALSE-REJECTION-CONTROL
+xblock/{course_id}	NO-REF	-	FALSE-REJECTION-CONTROL
+opentutor/*	NO-REF	-	FALSE-REJECTION-CONTROL
+compose/code	NO-REF	-	FALSE-REJECTION-CONTROL
+/instruction	NO-REF	-	FALSE-REJECTION-CONTROL
+learn/models.py:62	NO-REF	-	FALSE-REJECTION-CONTROL
+gh api repos/{slug}	NO-REF	-	FALSE-REJECTION-CONTROL
+@longsightgroup/qti3-migrator@0.13.1	NO-REF	-	FALSE-REJECTION-CONTROL
+backend/	NO-REF	-	FALSE-REJECTION-CONTROL
+@iblai/iblai-js	NO-REF	-	FALSE-REJECTION-CONTROL
+compose/patterns.md:524	NO-REF	-	FALSE-REJECTION-CONTROL
+p196-none-tree-reach/tree_reach.sh	NO-REF	-	FALSE-REJECTION-CONTROL
+/h, and its	NO-REF	-	FALSE-REJECTION-CONTROL
+@genramzi/proctor	NO-REF	-	FALSE-REJECTION-CONTROL
+text/gpl-3.0-only.txt	NO-REF	-	FALSE-REJECTION-CONTROL
+blockcerts/	NO-REF	-	FALSE-REJECTION-CONTROL
+repos/foundations.md:2505	NO-REF	-	FALSE-REJECTION-CONTROL
+repository: bruchris/...	NO-REF	-	FALSE-REJECTION-CONTROL
+~39 % / ~19 %	NO-REF	-	FALSE-REJECTION-CONTROL
+yourusername/sumry	NO-REF	-	FALSE-REJECTION-CONTROL
+evidence/p53-default-branch.2026-10-12-p157.tsv	NO-REF	-	FALSE-REJECTION-CONTROL
+@longsightgroup/*	NO-REF	-	FALSE-REJECTION-CONTROL
+repos/trending.md:6887	NO-REF	-	FALSE-REJECTION-CONTROL
+@ink-waffle/moodle-mcp	NO-REF	-	FALSE-REJECTION-CONTROL
+qt/winpaths.py	NO-REF	-	FALSE-REJECTION-CONTROL
+registry.npmjs.org/issuebadge-mcp-server	NO-REF	-	FALSE-REJECTION-CONTROL
+@timeback/*	NO-REF	-	FALSE-REJECTION-CONTROL

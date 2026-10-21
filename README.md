@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 367 — 2026-10-21 — **THIS BASE HAS BEEN MEASURING ITS OWN COVERAGE AGAINST A CORPUS BUILT BY ONE REGEX. `p367` BUILT THE SECOND CHANNEL `ACTION ZZ-bv` PRESCRIBED AND FOUND 496 LIVE REPOSITORIES — 16.3% OF THE TRUE CORPUS — THAT NO CENSUS, IDENTITY OR ABSENCE INSTRUMENT HERE HAS EVER BEEN ABLE TO SEE. 🔴 TWO OF THEM ARE THE REPOSITORIES `Gap 239` AND `Gap 246` TURN ON. 🔴 AND THE SUITE `p366` COULD NOT RUN WAS SITTING RED ON A CLAIM `p366` PUBLISHED.**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+**Evidence:** [`slug-channel-census`](evidence/slug-channel-census.2026-10-21-p367.tsv) ·
+[`slug-channel-adjudication`](evidence/slug-channel-adjudication.2026-10-21-p367.tsv) ·
+[`net-new-addresses`](evidence/net-new-addresses.2026-10-21-p367.tsv) ·
+[`net-new-grants`](evidence/net-new-grants.2026-10-21-p367.tsv) ·
+[`slug-channel-false-rejection`](evidence/slug-channel-false-rejection.2026-10-21-p367.tsv) ·
+[`slug-channel-rejections`](evidence/slug-channel-rejections.2026-10-21-p367.tsv) ·
+[`slug-url-identity`](evidence/slug-url-identity.2026-10-21-p367.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-21-p367.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Actions discharged** | `ZZ-bv` (with an instrument), `ZZ-bx` (**negative** — the claim is refuted), `ZZ-by` (the suite was run) |
+| **Action advanced** | `ZZ-bw` — `HEAD`-sha identity sharpened to a full-ref-set fingerprint; still cannot read a redirect |
+| **Instrument added** | `compose/code/p367-bare-slug-channel/` — 22 offline controls, standing as `gate-bare-slug-channel` |
+| **Corpus** | channel U **2 542** live + channel B **496** net-new = **3 038**; 🔴 **16.3% was invisible** |
+| **Probes, all first-hand** | 3 451 `ls-remote` calls + 20 payload grant reads; **0** `api.github.com` calls |
+| **Gates** | 🟢 **34/34 green**, up from **32/34** at `p366`'s HEAD. `gate-alias-canonical` **fixed** (red since `p366`, on a claim `p366` published); `gate-ladder-case` and `gate-fold-identity` broken by this pass's own instrument and prose and **fixed**; `gate-census-currency` **restated last** |
+| **Defects found in `p367`'s own instruments** | **3**, each published with what it would have cost |
+| **Regional legs** | 12 run; the **EMEA and APAC legs were empty because of the query, not the region** — reshaping returned 9 national instruments |
+| **New gaps** | **473** (476 net-new ungraded), **474** (the harvester is still URL-only), **475** (the slug is not the domain — 40% trap rate), **476** (the prescribed region query) |
+
+### 🟢 The address census, re-derived AFTER this pass wrote to the shelves
+
+🔵 **`p352`'s rule, obeyed:** a census whose input is the shelves and whose publication is in
+the pass that then writes to them is stale the moment it is written, so it is derived last.
+🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 640**
+harvested shapes → **33** are not addresses → **2 607 addresses** (1.25 % inflation).**
+
+🔴 **And this is the figure `ACTION ZZ-ca` is about.** That denominator is channel **U**
+only. The true live corpus measured this pass is **3 038**, because **496** live
+repositories on these shelves are not written as URLs at all — so the triple above is
+correct as *"shapes harvested by `p348`'s regex"* and is **not** the number of repositories
+this base holds. 🔵 Both figures are published together deliberately: `p351`'s census
+answers *"how inflated is the URL channel"* (1.25%), and `p367`'s answers *"how incomplete
+is it"* (**16.3%**). Neither substitutes for the other.
+
+### 🔴 The finding, in one sentence
+
+🔵 `p348-fold-identity` harvests addresses with `github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)`
+and **every** instrument on this base imports it rather than reimplementing. 🟢 That is the
+right rule. 🔴 **It is also why a repository written as a bare backticked slug is invisible to
+all of them at once** — and the invisible class turns out to be where this base keeps the
+repositories it argues about: [`kristopherkyle/TAALED`](https://github.com/kristopherkyle/TAALED)
+(the NonCommercial blocker on `Gap 239`/`246`) and
+[`nilc-nlp/nilcmetrix`](https://github.com/nilc-nlp/nilcmetrix) (`Gap 239`'s AGPL oracle) are
+each discussed **3** times here with **0** `github.com/` occurrences.
+
+### 🟢 What a reader should take from it
+
+🟢 **Three MIT rows** out of the invisible class: `microsoft/generative-ai-for-beginners`
+(37 mentions, never an address), `microsoft/ai-edu`, `weiwei0614/math-bank`.
+🔴 **Seven platform components**, four of them **AGPL-3.0**, including Open edX's documented
+extension point `openedx-filters` and the only maintained SCORM player for Tutor.
+🔴 **A 40% trap rate** on the permissive subset: `google/caliper` is a Java microbenchmark
+harness and `python-adaptive/adaptive` is numerical function sampling — both permissive, both
+live, both wrong for these shelves.
+🟢 **Pattern 27** turns the whole method into a one-engineer-day client deliverable that runs
+in restricted networks, which is where **0 of 16** non-GitHub hosts answered this pass and
+GitHub's git and raw channels both did.
+
+---
+
 ## Pass 364 — 2026-10-21 — **THIS BASE PUBLISHED 60 EDUCATION PLATFORMS AND HAD NEVER READ WHAT THEY MAKE YOU INSTALL. `p364` READ ALL 60 READMEs: 91 COMPANION EDGES, 72 OF THEM ABSENT FROM 2 550 ADDRESSES, 69 DISTINCT REPOSITORIES GRADED FROM PAYLOAD — 19 COPYLEFT-OR-WORSE, 12 WITH NO GRANT AT ALL, AND ONE PLATFORM PUBLISHED HERE AS *MIT, REACH NONE* WHOSE OWN ORGANISATION'S COMPONENT IS AGPL-3.0. 🔴 AND THE PASS'S BEST FINDING IS A DEFECT IN ITS OWN FIRST DRAFT: A GRANT IS A FUNCTION OF THE **PIN**, AND ALL 299 GRANT CLAIMS ON THIS BASE ASSERT A **BRANCH**.**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every

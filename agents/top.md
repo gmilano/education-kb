@@ -6,6 +6,115 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
+**Pass 367 · 2026-10-21.** 🔴 **`p366` measured the blindness and registered `ACTION ZZ-bv`
+without fixing it. `p367` built the missing channel, and the blindness is TWICE the size
+`p366`'s rate implied: 496 live repositories — 16.3% of this base's true address corpus —
+have never been visible to a single census, identity or absence instrument on these
+shelves.**
+
+🔵 **Where the defect lives, named precisely, because it is one line.**
+`p348-fold-identity` harvests addresses with `github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)`,
+and **every** census, identity and absence instrument here imports `slugs_in` from it
+rather than reimplementing. 🟢 That is the right rule — it is why this base has no second
+channel disagreeing with itself — and 🔴 **it is exactly why the blindness is total.** A
+repository written as a bare backticked slug is invisible to all of them at once.
+
+| `p367`'s two channels over the ten shelf files | Count | Share |
+|---|---:|---|
+| channel **U** — `p348`'s URL form, untouched | **2 627** addresses | 2 542 live |
+| channel **B** — backticked one-slash tokens | 4 772 candidates | — |
+| 🔵 rejected offline (`p351`'s shape arms + `p367`'s four) | **1 727** | 36.2% |
+| 🔵 survivors already held as a URL | 2 222 | — |
+| 🔴 **survivors NOT in channel U — adjudicated by `ls-remote`** | **823** | the population |
+| 🟢 **LIVE** | **518** | **62.9%** precision |
+| 🟡 `NO-REF` — the offline arms over-collect, as designed | 305 | 37.1% |
+
+🟢 **The offline arms are measured, not trusted.** A 120-slug sample of the 1 727 rejected
+candidates was probed with the same instrument: **0 are live.** The arms reject shelf paths
+(`agents/top.md`, 504 occurrences), grant rungs (`main/LICENSE`, 483), ratios (`47/47`) and
+grant-identifier pairs (`MIT/Apache-2.0`) — and on this sample they eat nothing real.
+
+### 🔴 The two repositories that prove the cost are this base's OWN binding constraints
+
+🔵 **`ZZ-bv`'s specimen was `CAHLR/OATutor-Content`. `p367` found two worse ones.**
+
+| Repository | Mentions on these shelves | `github.com/` URL occurrences | What it is here |
+|---|---:|---:|---|
+| 🔴 [`kristopherkyle/TAALED`](https://github.com/kristopherkyle/TAALED) | **3** | **0** | the feature source `Gap 239`/`Gap 246` turn on — the NonCommercial blocker on the whole Portuguese essay-scorer chain |
+| 🔴 [`nilc-nlp/nilcmetrix`](https://github.com/nilc-nlp/nilcmetrix) | **3** | **0** | `Gap 239`'s AGPL-3.0 comparison oracle, the reason `Gap 236`'s remedy is a *reimplementation* |
+
+🔴 **Both are load-bearing subjects of open gaps, discussed at length, licence-graded in
+prose — and neither has ever been an address on this base.** 🔵 That is the shape of the
+cost: the invisible class is not a tail of incidental mentions, it is where this base keeps
+the repositories it argues about.
+
+🟢 **And `TAALED`'s grant was re-read first-hand this pass, with a result that matters for
+`Gap 246`.** The CC-BY-NC-SA-4.0 claim is **CORRECT** — and it is stated in **`README.md`
+line 18**, not in a `LICENSE` file at any of 18 rungs. 🔴 A payload-rung grader run over
+this repository returns *"no grant at 18 rungs"*, which is the `p366` defect class exactly:
+an instrument reporting ABSENCE when it means *"I did not look where this project put it."*
+The NonCommercial bar on `Gap 246` is confirmed, and the channel that confirms it is the
+README.
+
+### 🟢 Three MIT rows out of the invisible class — and a 40% trap rate on the rest
+
+🔵 **20 of the 496 were graded from payload this pass** (the other 476 are `ACTION ZZ-bz`).
+🔴 **Only three are both permissively licensed and actually about education:**
+
+| Repository | Licence | Grant read at | Mentions | What it is |
+|---|---|---|---:|---|
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | **MIT** | `main/LICENSE`, 1 140 B | **37** | the most-discussed repository this base has never held as an address: a 21-lesson GenAI curriculum, the natural spine for a client-team enablement track |
+| [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | **MIT** | `master/LICENSE.md`, 4 804 B | 3 | Microsoft Research Asia's AI teaching corpus — course material, not a product, and permissive |
+| [`weiwei0614/math-bank`](https://github.com/weiwei0614/math-bank) | **MIT** | `main/LICENSE`, 2 077 B | 8 | an MIT-licensed mathematics item bank, which is the asset class `Gap 235`'s Portuguese tier could not find permissively |
+
+🔴 **🆕 A NEW REJECTION CLASS, and it caught two of the five permissive rows — a 40% trap
+rate on the permissive subset.** An education-sounding slug is not an education repository:
+
+| Looks like | Actually is | Licence |
+|---|---|---|
+| 🔴 [`google/caliper`](https://github.com/google/caliper) — read as 1EdTech **Caliper Analytics** | a **Java microbenchmark harness**; its own README's first notice is about `microbenchmarks.appspot.com` shutting down in 2022 | Apache-2.0 |
+| 🔴 [`python-adaptive/adaptive`](https://github.com/python-adaptive/adaptive) — read as **adaptive learning** | *"Parallel Active Learning of Mathematical Functions"* — numerical sampling, no learner in it | BSD |
+
+🔵 **Stated as a rule for whoever grades the remaining 476: a licence grade is not a
+shelving decision, and the slug is not the domain.** Both rows above would have passed a
+licence gate and a liveness gate and been wrong on these shelves. Registered as
+`ACTION ZZ-cb`.
+
+🟡 **The copyleft half of the same 20 is worth as much as the permissive half**, and it
+lands on platforms this base publishes recipes for: [`openedx/openedx-filters`](https://github.com/openedx/openedx-filters)
+**AGPL-3.0**, [`overhangio/openedx-scorm-xblock`](https://github.com/overhangio/openedx-scorm-xblock)
+**AGPL-3.0**, [`instructure/analytics`](https://github.com/instructure/analytics) **AGPL**,
+[`bgwdotdev/libre-oneroster`](https://github.com/bgwdotdev/libre-oneroster) **AGPL**,
+[`lumieducation/h5p-nodejs-library`](https://github.com/lumieducation/h5p-nodejs-library)
+**GPL**, [`bigbluebutton/bbb-install`](https://github.com/bigbluebutton/bbb-install) **LGPL**,
+[`educationaltestingservice/factor_analyzer`](https://github.com/educationaltestingservice/factor_analyzer)
+**GPL**. 🔴 Five more carry **no grant at 18 rungs**, [`blamb/lti-tutor`](https://github.com/blamb/lti-tutor)
+and [`marcusgreen/moodle-tool_aiconnect`](https://github.com/marcusgreen/moodle-tool_aiconnect)
+among them.
+
+### 🟢 `p367` found three defects in its OWN instruments, and names what each would have cost
+
+| Defect | How it was caught | What it would have published |
+|---|---|---|
+| 🔴 `.git` not folded | `p366`'s sha test, reused | **7** spelling artefacts as distinct live repositories and 7 false identity rows (`cvmcosta/ltijs.git` ≡ `cvmcosta/ltijs`). 🟢 It did **not** move the net-new count, because each artefact collided with its own de-suffixed form — the only reason a reader would not have been misled |
+| 🔴 the empty-input guard fired on the per-slug CHILD | the sweep was **loud** — 823 refusals, zero measurements | nothing, this time. 🔴 But it is `P541`'s own class arriving *through the guard built to prevent it*, and a guard that had exited `0` would have published an empty adjudication as a clean result |
+| 🔴 the false-rejection control word-split its own input | it reported **two** live rows among the rejected, which read exactly like two false rejections | 🔴 **two manufactured findings.** Both dissolve twice over: the "hits" were fragments of space-containing tokens, and both addresses (`portabilis/i-educar`, `xapi-labs/xapi-cli`) are **already carried as URLs**. 🟢 The fragments were still worth having — they are how the `GLUED-SLUG` class below was found |
+
+🟡 **The `GLUED-SLUG` sub-channel, measured and reported rather than quietly folded in:** a
+backticked token that contains a slug plus other text yields **159** candidates and **4**
+live repositories — **2.5%** precision against the ticked channel's 62.9%. The four are
+included; the sub-channel is named with its precision so no successor over-trusts it.
+
+🟢 **`p367` evidence:** [`slug-channel-census`](../evidence/slug-channel-census.2026-10-21-p367.tsv) ·
+[`slug-channel-adjudication`](../evidence/slug-channel-adjudication.2026-10-21-p367.tsv) ·
+[`net-new-addresses`](../evidence/net-new-addresses.2026-10-21-p367.tsv) ·
+[`net-new-grants`](../evidence/net-new-grants.2026-10-21-p367.tsv) ·
+[`slug-channel-false-rejection`](../evidence/slug-channel-false-rejection.2026-10-21-p367.tsv) ·
+[`slug-channel-rejections`](../evidence/slug-channel-rejections.2026-10-21-p367.tsv) ·
+[`slug-url-identity`](../evidence/slug-url-identity.2026-10-21-p367.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p367.tsv). Instrument and 22 offline
+controls: `compose/code/p367-bare-slug-channel/`, standing as `gate-bare-slug-channel`.
+
 **Pass 366 · 2026-10-21.** 🟢 **`p366` added no row to this shelf and swept it for the first
 time on the axis `p364` opened.** `ACTION ZZ-bu` recorded that `p364`'s companion sweep read
 **one** shelf — `verticals/solutions.md`, 60 addresses — and that this shelf and
@@ -784,7 +893,7 @@ would ever have surfaced it: only reading the payload does.
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
 | Dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT (`LICENSE`) | `main/LICENSE` | **353** | EMEA | Source-code plagiarism detection for programming assignments. Ghent University, Belgium |
-| INGInious | [INGInious/INGInious](https://github.com/INGInious/INGInious) | **AGPL-3.0 — "most of the files"** (`LICENSE`) | `main/LICENSE` | **243** | EMEA | Secure automated exercise assessment. UCLouvain, Belgium. 🟡 The grant text itself scopes to *most* files — treat as mixed |
+| INGInious | [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | **AGPL-3.0 — "most of the files"** (`LICENSE`) | `main/LICENSE` | **243** | EMEA | Secure automated exercise assessment. UCLouvain, Belgium. 🟡 The grant text itself scopes to *most* files — treat as mixed |
 | pyedmine | [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | MIT (`LICENSE`) | `main/LICENSE` | **82** | APAC | Educational data mining framework (knowledge tracing, exercise recommendation) |
 | Ares2 | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | MIT (`LICENSE`) | `main/LICENSE` | **5** | EMEA | Automated grading / secure test execution. TU Munich chair of applied software engineering |
 | pykt-toolkit | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT (`LICENSE`) | `main/LICENSE` | **451** | APAC | Knowledge-tracing benchmark and model library |

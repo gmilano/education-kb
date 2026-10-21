@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 367 — 🔴 **the agent leg returns nothing for the twenty-third consecutive pass, and this pass found its agents in the 496 live repositories this base already discussed but had never indexed as addresses — including the two that `Gap 239` and `Gap 246` turn on**
+
+🟢 **Channel note — `ls-remote` and `raw.githubusercontent.com` both answered first-hand all
+pass**, which is the whole basis of the figures below. 🔴 **0 of 16 other hosts answered**
+(`wbur.org`, `unu.edu`, `digitaleducationcouncil.com`, `eur-lex.europa.eu`,
+`data.consilium.europa.eu`, `education.ec.europa.eu`, `oecd.org`, `cedefop.europa.eu`,
+`bostonpublicschools.org`, `govtech.com`, `governing.com`, `boston.com`, `pursuit.us`,
+`learn.playlab.ai`, `ess.iesalc.unesco.org`, `unesco.org`), so everything regional in this
+pass is snippet-sourced and says so.
+
+🔴 **The prescribed agent leg** (`top open source AI agents education 2026 github MIT`)
+returned SEO aggregators and general-purpose coding agents for the twenty-third pass running;
+the search tool's own summary said it *"didn't turn up a clear 2026 ranking of MIT-licensed AI
+agent projects aimed at education."* One in-domain candidate, `pguso/agents-from-scratch`
+(MIT, ~796★), is a **teaching repository about agents**, not an education agent.
+
+🟢 **So this pass looked where `ACTION ZZ-bv` said to look — at the addresses this base holds
+but cannot see.** `p348`'s harvester indexes `github.com/owner/repo` only; a repository
+written as a bare backticked slug is invisible to every census, identity and absence
+instrument here at once.
+
+| `p367`'s channel-B sweep over the ten shelf files | Count |
+|---|---:|
+| backticked one-slash tokens | 4 772 |
+| rejected offline (`p351`'s arms + `p367`'s four) | 1 727 |
+| 🔴 survivors not in the URL channel, adjudicated by `ls-remote` | **823** |
+| 🟢 **LIVE** | **518** (62.9% precision) |
+| `GLUED-SLUG` sub-channel, reported with its precision | 159 → **4** live (2.5%) |
+| 🟡 sha collisions with the URL channel, split by full ref set | **26** (23 `SAME-REF-SET`, 3 `SAME-HEAD-ONLY`) |
+| 🔴 **NET-NEW live repositories** | **496** = **16.3%** of the true corpus (3 038) |
+
+🔴 **Two of the 496 are this base's own binding constraints.**
+[`kristopherkyle/TAALED`](https://github.com/kristopherkyle/TAALED) — the NonCommercial
+blocker on `Gap 239`/`Gap 246` — and
+[`nilc-nlp/nilcmetrix`](https://github.com/nilc-nlp/nilcmetrix) — `Gap 239`'s AGPL-3.0
+comparison oracle — are each mentioned **3** times on these shelves with **0**
+`github.com/` occurrences. 🟢 `TAALED`'s CC-BY-NC-SA-4.0 grant was re-read first-hand and is
+**confirmed**: it is stated in **`README.md` line 18**, and a payload-rung grader over 18
+rungs returns *"no grant"* — so the gap's blocker stands, and the channel that proves it is
+the README, not a `LICENSE` file.
+
+🆕 **Three MIT rows out of the invisible class**, graded from payload:
+[`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners)
+(**MIT**, `main/LICENSE`, 1 140 B — **37 mentions**, the most-discussed repository this base
+has never held as an address), [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu)
+(**MIT**, `master/LICENSE.md`) and
+[`weiwei0614/math-bank`](https://github.com/weiwei0614/math-bank) (**MIT**, `main/LICENSE`).
+
+🔴 **🆕 And a new rejection class that caught 2 of the 5 permissive rows — a 40% trap rate.**
+[`google/caliper`](https://github.com/google/caliper) is a **Java microbenchmark harness**,
+not 1EdTech Caliper Analytics; [`python-adaptive/adaptive`](https://github.com/python-adaptive/adaptive)
+is *"Parallel Active Learning of Mathematical Functions"*, not adaptive learning. Both are
+permissive, live and **wrong for these shelves** — the slug is not the domain
+(`ACTION ZZ-cb`).
+
+🟢 **Three defects found in `p367`'s OWN instruments**, each published with what it would have
+cost: `.git` unfolded (7 spelling artefacts, 7 false identity rows, net-new count unaffected);
+the empty-input guard firing on the per-slug child (823 refusals, zero measurements — loud,
+and `P541`'s class arriving through the guard built to stop it); and the false-rejection
+control word-splitting its own input (**two manufactured findings**, both already carried as
+URLs). 🔵 The broken control is also how the `GLUED-SLUG` class was found.
+
+🟡 **`ACTION ZZ-bx` discharged, negative:** the Boston Public Schools *"first major US
+district to require AI fluency for graduation"* candidate is **refuted as worded** — the
+originating outlet corrected it to a proficiency goal, *"not yet a requirement."*
+
+🟢 **`ACTION ZZ-cc` registered:** the prescribed per-region query is itself the reason the
+EMEA and APAC legs have been empty for two passes. Naming countries instead of regions
+returned nine national instruments on the first attempt.
+
+---
+
 ## 2026-10-21 · Pass 366 — 🔴 **the agent leg returns nothing for the twenty-second consecutive pass, and this pass bought its findings from the repositories this base already holds instead: 484 companion edges across the two shelves nobody had swept, of which only 17.8% are a dependency**
 
 🟢 **Channel note — the transport `p365` lost is BACK, and it is the whole basis of this

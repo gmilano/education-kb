@@ -1,0 +1,21 @@
+slug	ref	family	rung	bytes	note
+bgwdotdev/libre-oneroster	master	AGPL	LICENSE	34522	-
+bigbluebutton/bbb-install	v4.0.x-release	LGPL	LICENSE	7650	-
+blamb/lti-tutor	main	NO-GRANT-18-RUNGS	-	0	-
+educationaltestingservice/factor_analyzer	main	GPL	LICENSE	18091	-
+google/caliper	master	Apache-2.0	COPYING	11357	NAME COLLISION — Java microbenchmark harness, not 1EdTech Caliper Analytics
+instructure/analytics	master	AGPL	LICENSE.txt	34519	-
+instructure/qtimigrationtool	master	UNCLASSIFIED	LICENSE.txt	1391	BSD-3-Clause (Univ. of Cambridge variant) — p367 grader phrase list too narrow, reported UNCLASSIFIED
+jaimearriagadarosas/plugin-feedback-canvas	main	NO-GRANT-18-RUNGS	-	0	-
+kristopherkyle/taaled	master	NO-GRANT-18-RUNGS	-	0	CC-BY-NC-SA-4.0 stated in README line 18, NOT in any LICENSE file at 18 rungs
+lumieducation/h5p-nodejs-library	master	GPL	LICENSE	35146	-
+marcusgreen/moodle-tool_aiconnect	main	NO-GRANT-18-RUNGS	-	0	-
+microsoft/ai-edu	master	MIT	LICENSE.md	4804	-
+microsoft/generative-ai-for-beginners	main	MIT	LICENSE	1140	-
+mohamurshid/elimuanalytics	main	NO-GRANT-18-RUNGS	-	0	-
+nilc-nlp/nilcmetrix	main	AGPL	LICENSE	34522	-
+openedx/openedx-filters	main	AGPL	LICENSE.txt	35136	-
+overhangio/openedx-scorm-xblock	master	AGPL	LICENSE.txt	34522	-
+python-adaptive/adaptive	main	BSD	LICENSE	1520	NAME COLLISION — parallel sampling of mathematical functions, not adaptive learning
+touchrefletz/maia	main	AGPL	LICENSE	34522	-
+weiwei0614/math-bank	main	MIT	LICENSE	2077	-

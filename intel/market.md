@@ -6,6 +6,146 @@ updated: 2026-10-21
 
 # Education — market map and regional intelligence
 
+**Pass 367 · 2026-10-21.** Researched **2026-10-21**. 🔴 **The prescribed EMEA and APAC legs
+returned zero education sources for the second consecutive pass. `p367` stopped treating
+that as an absence, changed the query, and both legs paid out on the first attempt. The
+region token was the defect.**
+
+🔵 **The prescribed leg is `AI {industry} {region} {year} adoption regulation players`.**
+🔴 *"EMEA"* and *"APAC"* are **enterprise-analyst words, not education words**: the leg
+returns CompTIA's IT-strategy pieces, a **2023** Workday study and OneTrust governance
+webinars, because that is the literature that uses those tokens. 🟢 Replacing the region
+token with the *countries and institutions* in it converted two empty legs into nine
+national instruments with dates.
+
+| Leg | Prescribed query | Reshaped query | Education sources |
+|---|---:|---:|---|
+| EMEA | 0 | **6 national instruments + 3 EU documents** | see below |
+| APAC | 0 | **3 national programmes** | see below |
+| LATAM | 4 | — | the only region whose prescribed leg works unreshaped, three passes running |
+| North America | 0 new | — | one candidate **refuted**, below |
+
+🔵 **This is `P521`'s lesson arriving on the regional axis:** this base's own evidence that
+*"the query's shape hides tiers"*, found when a Portuguese-language query returned six trees
+that ten passes of English queries had missed. Registered as `ACTION ZZ-cc` — the
+prescribed per-region query should name countries, not regions.
+
+### 🟢 EMEA: nine instruments, and the Annex III date is unchanged
+
+🟢 **EU level.** The Commission's **2026 update** to its ethical-AI guidelines for educators
+is the reference instrument — addressed to teachers and school leaders, in three parts
+(principles and legal context; guiding questions and scenarios; background resources), and
+it explains the AI Act and the GDPR together. A **Council document of 24 April 2026**
+(`ST-8262-2026-INIT`) treats AI in education as requiring evidence-informed handling and —
+the part that matters commercially — **distinguishes general-purpose AI tools from EdTech
+built specifically for education.** The **OECD Digital Education Outlook 2026** is the
+comparative source behind the national rows.
+
+🟢 **The Annex III date is CONFIRMED, not revised.** The Council's implementation timeline
+puts high-risk obligations for stand-alone Annex III systems at **2 December 2027**, which
+is what this file has held since `p233`. 🔴 **`Gap 241` does NOT close**: it asks for the
+amending instrument's identifier cited *primarily*, and this environment cannot reach it —
+see the reach note below.
+
+🆕 **Six national instruments new to this base**, all secondary-sourced and none shelved as
+settled law:
+
+| Country | Instrument | Status |
+|---|---|---|
+| Finland | National Agency for Education recommendations covering generative AI in practice | issued |
+| Lithuania | safe-implementation recommendations **including a national register of approved AI tools** | in preparation |
+| Slovenia | a national AI-competence system for teachers **plus a register of approved tools** | in development |
+| Luxembourg | **KI Kompass** as the national reference framework and contact point | operating |
+| Italy | ministry AI guidelines for schools (**August 2025**); an **AI-tutor pilot closed May 2026**, results expected September 2026 | pilot concluded |
+| Spain | a **non-binding April 2026** recommendation endorsing AI literacy from secondary onward, tool selection left to the regions | issued |
+
+🔵 **The two registers are the commercially interesting item.** Lithuania and Slovenia are
+both building **lists of approved AI tools**; a vendor not on a register does not get into a
+classroom in those markets, and a register is a procurement gate that open-source,
+self-hosted stacks can clear more easily than a hosted API.
+
+### 🟢 APAC: three national programmes, with dates
+
+🆕 **China.** The Ministry of Education **and four other ministries** released an
+**"AI+Education" action plan in April 2026**, building on the *Outline of the Plan for the
+Construction of China into an Education Powerhouse (2024–2035)*, targeting a system spanning
+primary school to university with **full implementation by 2030**. 🟢 Rollout is already
+provincial: **Beijing has required eight hours of AI education per year in both primary and
+secondary schools since 2025.** One source stresses the plan's emphasis on appropriate use
+and critical thinking rather than tool adoption.
+
+🆕 **India.** The Ministry of Education plans an **AI and Computational Thinking curriculum
+from Grade 3**, beginning with the **2026–27 academic year**, aligned to NEP 2020 and the
+2023 curriculum framework, with a **₹500 crore Centre of Excellence in AI for Education** in
+the 2025–26 Union Budget.
+
+🆕 **Singapore.** A national **AI-literacy** initiative for students and teachers, with
+**training for teachers at all levels, including those in training, by 2026**, and a
+government-funded research centre that **pilots tools with the Ministry of Education before
+they reach classrooms** rather than after.
+
+🔴 **All three are secondary-sourced.** The ministry documents are not reachable from this
+environment and no figure above should enter a client deliverable as a primary citation.
+
+### 🟡 LATAM: `Gap 242`'s instrument finally has figures, and it does NOT close
+
+🟢 **The UNESCO IESALC + UNU-IAS working paper (September 2026)** — the instrument `p44`
+located and declared *"NOT read"* as `P548` — returned **dimension figures** for the first
+time: AI adoption across **200 institutions in 19 countries** runs **teaching and learning
+73.5%**, **research 57.0%**, **administration 34.1%**, **community engagement 20.0%**.
+
+🔴 **`Gap 242` stays OPEN and the reason is the channel, not the content.** These figures
+arrived in a **search snippet**; `unu.edu` is unreachable here, so the paper's regional
+definitions — the precise property the DEC contradiction needs — are still unread. 🟡 A
+second DEC instrument also surfaced, **"AI in Higher Education LATAM Survey 2026"** (29
+institutions, 30 000+ responses, **students 92%**, **faculty 79%**, run with Tecnológico de
+Monterrey's Institute for the Future of Education): it is a *different* survey from the
+four-region one whose ordering `Gap 242` disputes, and 🔴 **it must not be used to settle
+that gap** — a LATAM-only instrument cannot adjudicate a cross-region ordering.
+
+🟢 **One governance figure worth a deck:** only about **30%** of Latin American universities
+have published a policy on AI use, against the 73.5% that are already using it in teaching.
+🔵 That gap — adoption far ahead of policy — is the most sellable finding in this leg, and it
+is the same shape the IDB/CEPAL **ILIA 2025** index reports across 19 countries.
+
+### 🔴 North America: `ACTION ZZ-bx` discharged, and the candidate is REFUTED
+
+🟢 **`p366` declined to shelve** the claim that **Boston Public Schools** becomes the first
+major US district to **require AI fluency for graduation** from September 2026, because its
+source could not confirm it against a primary source, and registered `ACTION ZZ-bx` with the
+cheap verification named.
+
+🔴 **The verification was run and the claim is wrong as worded.** The originating outlet
+issued a **correction**: the programme's goal is that students be **proficient** at AI, and
+it is **"not yet a requirement."** 🟢 What is real: announced by Mayor Wu in **March 2026**,
+launching across BPS high schools from **September 2026**, funded by a **$1 million seed
+grant from Paul English**, training **one teacher per high school across roughly two dozen
+schools**, curriculum work with **UMass Boston's AI institute**, and **grade 7–12 AI
+literacy and fluency benchmarks in development.** 🟡 Separately, the **Massachusetts
+Statewide Graduation Council has RECOMMENDED** that all students complete an AI and digital
+literacy module, with districts free to satisfy it through local coursework or a virtual
+module — 🔴 **a recommendation, not an enacted requirement.**
+
+🔵 **`p366` was right to hold it as a candidate, and the discharge is worth more than the
+fact would have been.** *"First major US district to require AI fluency for graduation"* is
+exactly the sentence that travels into a pitch deck and cannot be defended in the room. It
+is now refuted on these shelves rather than quietly carried.
+
+### 🔴 The reach note: what this environment can and cannot verify, measured
+
+🔴 **0 of 16 distinct non-GitHub hosts answered this pass** — `wbur.org`,
+`digitaleducationcouncil.com`, `pursuit.us`, `bostonpublicschools.org`, `govtech.com`,
+`governing.com`, `boston.com`, `learn.playlab.ai`, `ess.iesalc.unesco.org`, `unesco.org`,
+`unu.edu`, **`data.consilium.europa.eu`**, **`education.ec.europa.eu`**, **`oecd.org`**,
+**`cedefop.europa.eu`**, **`eur-lex.europa.eu`**. 🟢 `git ls-remote` and
+`raw.githubusercontent.com` both answered, which is why the instrument half of this pass is
+entirely first-hand and the regional half is entirely snippet-sourced.
+
+🔵 **`Gap 241`'s blockage is now measured across five EU hosts rather than `eur-lex` alone.**
+That changes the gap's remedy: it is not *"one pass with eur-lex reachable"* but *"one pass
+in an environment with EU institutional egress"*, which is a network-policy request rather
+than a scheduling one.
+
 **Pass 364 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
 number comes from a vendor blog or a commercial research summary rather than a primary
 source, it says so.

@@ -6,6 +6,58 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
+**Pass 367 · 2026-10-21.** 🔴 **`p364` read all 60 platform READMEs on this shelf and graded
+their companions against a corpus that could not see 496 live repositories. `p367` built the
+missing channel, and seven of the repositories it surfaced are components of platforms this
+shelf publishes — four of them AGPL-3.0.**
+
+🔵 **Why this shelf is where the defect bites hardest.** A platform row's commercial value
+is *"what does adopting this make you install?"* — `p362`'s `QingdaoU/OnlineJudge` finding,
+`p364`'s sweep, `p366`'s manifest channel. 🔴 All three tested absence against a
+**URL-only** corpus, so a component discussed here as a bare backticked slug counted as
+*absent from this base* when it was sitting on these shelves, and counted as *present* to
+nothing.
+
+| Component surfaced by channel B | Licence, read from payload | The platform it belongs to |
+|---|---|---|
+| 🔴 [`openedx/openedx-filters`](https://github.com/openedx/openedx-filters) | **AGPL-3.0** (`main/LICENSE.txt`, 35 136 B) | Open edX extension framework |
+| 🔴 [`overhangio/openedx-scorm-xblock`](https://github.com/overhangio/openedx-scorm-xblock) | **AGPL-3.0** (`master/LICENSE.txt`, 34 522 B) | the SCORM player for Open edX / Tutor |
+| 🔴 [`instructure/analytics`](https://github.com/instructure/analytics) | **AGPL** (`master/LICENSE.txt`, 34 519 B) | Canvas analytics |
+| 🔴 [`bgwdotdev/libre-oneroster`](https://github.com/bgwdotdev/libre-oneroster) | **AGPL** (`master/LICENSE`, 34 522 B) | OneRoster rostering |
+| 🟡 [`lumieducation/h5p-nodejs-library`](https://github.com/lumieducation/h5p-nodejs-library) | **GPL** (`master/LICENSE`, 35 146 B) | the Node implementation behind H5P |
+| 🟡 [`bigbluebutton/bbb-install`](https://github.com/bigbluebutton/bbb-install) | **LGPL** (`v4.0.x-release/LICENSE`) | BigBlueButton deployment |
+| 🟢 [`instructure/qtimigrationtool`](https://github.com/instructure/qtimigrationtool) | **BSD-3-Clause** (`master/LICENSE.txt`, 1 391 B) | QTI import for Canvas |
+
+🟢 **The `qtimigrationtool` cell is a correction to `p367`'s own grader, published beside the
+first verdict.** It was first graded `UNCLASSIFIED`, because the body reads *"Redistribution
+and use **of this software** in source and binary forms (where applicable)"* — a University
+of Cambridge BSD variant — and the classifier tested only the canonical *"Redistribution and
+use in source and binary forms"*. 🔴 That is the `p366` precedence/ladder defect in a third
+costume: **an instrument reporting UNCLASSIFIED when it means "my phrase list is too
+narrow."** 🔵 Read by hand, the body is plainly BSD-3-Clause, holder **University of
+Cambridge (2004–2008)**, GUI code **Pierre Gorissen**.
+
+### 🔴 What this means for the Open edX recipes on this base
+
+🔵 **Four AGPL components, and two of them sit in the middle of patterns this base already
+publishes.** 🔴 `openedx-scorm-xblock` is the only maintained SCORM player for the Tutor
+stack, and `openedx-filters` is the documented extension point — *the* hook an AI layer is
+supposed to attach to. 🟢 **Neither is a surprise about Open edX** (the platform is AGPL and
+this shelf says so), 🔴 **but neither was in the corpus**, so no absence or exposure figure
+this base published about the Open edX tier counted them.
+
+🟡 **The commercial reading, stated plainly for an engagement:** on Open edX, an AI layer
+that attaches through `openedx-filters` is attaching to AGPL-3.0, and **§13** is the live
+clause because a learning platform is a network service. 🟢 The pattern that avoids it is the
+one this base already prefers — a **separate service** the platform calls, with the AGPL
+component unmodified — and `compose/patterns.md` carries it. 🔴 What changes is that the
+exposure is now *measured on this shelf* rather than inferred from the platform's own grant.
+
+🔵 **`p367` adds no platform row.** The seven above are **components**, not platforms, and
+`p364`'s rule stands: a companion is never promoted to a component on the strength of a link,
+and a component is never shelved as a platform. They are recorded here because this is the
+shelf whose figures they change.
+
 **Pass 366 · 2026-10-21.** 🟢 **`p366` adds no platform and brings this shelf the
 discriminator that `p364`'s sweep of it lacked.** `p364` read the README of all 60 rows here,
 found **91** companion edges and graded **72 of 91 (79%)** as absent and ungraded. 🔵 **`p366`

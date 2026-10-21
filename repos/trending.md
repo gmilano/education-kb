@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 367 · 2026-10-21 — 🔴 **zero index calls and zero new repositories from the trending channel; the 496 repositories this pass added to the corpus were already on these shelves, written in a spelling no instrument here could read**
+
+🟢 **Channel note — `git ls-remote` answered for all 3 451 probes this pass** (823 channel-B
+candidates, 2 628 channel-U addresses, 120 control slugs, 62 ref-set fingerprints), and
+`raw.githubusercontent.com` served every payload read. 🔴 **0 of 16 non-GitHub hosts
+answered.** The instrument half of this pass is therefore entirely first-hand and the
+regional half entirely snippet-sourced.
+
+🔴 **The prescribed trending leg** (`github trending education AI 2026`) again could not reach
+`github.com/trending` and returned third-party aggregators. 🟡 One of them,
+`aneelv75/github-trending`, is itself in this pass's net-new set — **17 mentions on these
+shelves, never once as an address.**
+
+🟢 **`ACTION ZZ-bv` discharged with an instrument rather than a rate.** `p366` measured the
+bare-slug error at **8.2%** on its own 330-companion population and registered the fix for a
+successor. `p367` built the channel and measured the error on the **corpus**:
+
+| | Count | Share |
+|---|---:|---:|
+| channel **U** live (`p348`'s URL regex, untouched) | **2 542** | 83.7% |
+| 🔴 channel **B** net-new live | **496** | **16.3%** |
+| **true live corpus** | **3 038** | 100% |
+
+🔵 **The two figures measure different things and must not be substituted for each other:**
+8.2% is *"of known-absent companions, how many were held as a slug"*; 16.3% is *"of the real
+corpus, how much the URL channel cannot see."*
+
+🟢 **A sharper identity test than `p366` had.** Of 522 channel-B live addresses, 26 collide on
+`HEAD` with a channel-U address; fingerprinting **all** refs splits those into **23
+`SAME-REF-SET`** and **3 `SAME-HEAD-ONLY`**. 🔴 **It still cannot separate a rename-redirect
+from a never-touched fork** — [`treeverse/dvc`](https://github.com/treeverse/dvc) ≡
+[`iterative/dvc`](https://github.com/iterative/dvc) is the specimen, since `treeverse` is
+lakeFS's organisation and a DVC rename is implausible. 🟢 Eight genuine organisation
+migrations surfaced, including **`imsglobal/` → `1edtech/`** (the IMS Global rename),
+**`edx/` → `openedx/`**, **`all-hands-ai/openhands` → `openhands/openhands`** and
+**`project-sunbird/` → `sunbird-knowlg/`, `sunbird-lern/`**.
+
+🔴 **`p366` published that the four live row shelves were CLEAN of double-spelled pairs. This
+base's own `gate-alias-canonical` had been red since that commit**, with exactly one finding:
+`agents/top.md` carried `INGInious/INGInious` as a **live row address** — the pre-rename
+spelling of a pair `p366` had itself just identified. 🟢 Fixed this pass (the row now cites
+[`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious)), the pair entered in `p283`'s
+alias ledger on the ref-set fingerprint, and the gate is **green**.
+
+🆕 **Seven platform components surfaced, four of them AGPL-3.0:**
+[`openedx/openedx-filters`](https://github.com/openedx/openedx-filters) **AGPL-3.0**,
+[`overhangio/openedx-scorm-xblock`](https://github.com/overhangio/openedx-scorm-xblock)
+**AGPL-3.0**, [`instructure/analytics`](https://github.com/instructure/analytics) **AGPL**,
+[`bgwdotdev/libre-oneroster`](https://github.com/bgwdotdev/libre-oneroster) **AGPL**,
+[`lumieducation/h5p-nodejs-library`](https://github.com/lumieducation/h5p-nodejs-library)
+**GPL**, [`bigbluebutton/bbb-install`](https://github.com/bigbluebutton/bbb-install) **LGPL**,
+[`instructure/qtimigrationtool`](https://github.com/instructure/qtimigrationtool)
+**BSD-3-Clause**. 🔵 The last of those is a **correction to `p367`'s own grader**, published
+beside the first verdict: graded `UNCLASSIFIED` because its University of Cambridge BSD body
+reads *"Redistribution and use **of this software** in source and binary forms"* and the
+classifier tested only the canonical phrasing.
+
+🟢 **Instrument:** `compose/code/p367-bare-slug-channel/` — 22 offline controls, standing as
+`gate-bare-slug-channel`, suite **22/22**, `make hooks` 🟢 **34/34 green** — up from
+**32/34** at `p366`'s HEAD, where `gate-alias-canonical` and `gate-census-currency` were both
+red. 🔵 All three of this pass's own gate breakages were fixed rather than excepted:
+`gate-ladder-case` (the instrument's identifiers), `gate-fold-identity` and
+`gate-alias-canonical` (this pass's own prose citing a stale address and a new casing), and
+`gate-census-currency` restated last, per its own instruction.
+
+---
+
 ## Pass 366 · 2026-10-21 — 🔴 **zero index calls, zero new repositories, and the trending channel is not where this pass looked: the 329 addresses this base already holds yielded 484 companion edges, 302 genuinely absent repositories and three defects in `p366`'s own instruments**
 
 🟢 **Channel note — `ls-remote` is BACK.** `p365` recorded the git CLI refusing third-party

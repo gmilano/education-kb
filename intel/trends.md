@@ -6,6 +6,86 @@ updated: 2026-10-21
 
 # Education — current trends
 
+**Pass 367 · 2026-10-21.** Researched **2026-10-21**. 🔴 **This pass's finding is about
+measurement, and it generalises past this base: an instrument that indexes one spelling of
+an identifier reports absence when it means "I did not look there", and on this corpus that
+error is 16.3%.**
+
+### 🔴 Trend A — the identifier-channel error, and why it is systematically invisible
+
+🔵 **The failure has a shape worth naming because it recurs across every axis this base has
+audited this week.** In each case an instrument had one channel, the channel was correct, and
+its *silence* was indistinguishable from coverage:
+
+| Pass | The one channel | What it reported as absent | Measured error |
+|---|---|---|---:|
+| `p364` | a single `README.md` spelling | READMEs at other rungs | `p366`: **8.9%** of hosts |
+| `p366` | `github.com/`-prefixed addresses | repositories held as bare slugs | `p366`: **8.2%** of its population |
+| 🆕 `p367` | the same URL channel, measured on the CORPUS | **496 live repositories** | **16.3%** of the true corpus |
+| 🆕 `p367` | one BSD phrasing in its own grader | a Cambridge-variant BSD grant | 1 of 20 graded cells |
+| 🆕 `p367` | a licence-body ladder over 18 file rungs | a grant stated in `README.md` line 18 (`TAALED`) | 1 of 20 |
+
+🟢 **The common remedy is not a longer list, it is a SECOND CHANNEL with its precision
+published.** Channel B's offline arms are only **62.9%** precise and that is fine, because
+`ls-remote` adjudicates and the imprecision is measured — against a 120-sample control that
+found **0** false rejections. 🔴 A single channel claiming 100% and never tested is the
+worse instrument, and this base has shipped several.
+
+🔵 **The consequence a successor must carry:** every *"absent from N addresses"* figure on
+these shelves remains an over-estimate until it is re-derived over the union of both
+channels. `ACTION ZZ-ca` names that restatement and `p367` deliberately did not do it, so
+that a single commit does not move every published denominator at once with nothing able to
+verify the result.
+
+### 🔴 Trend B — the region token is a query defect, and it has cost this base two passes
+
+🔵 **For two consecutive passes the prescribed EMEA and APAC legs returned zero education
+sources**, and `p366` recorded that correctly as *"silence here would be indistinguishable
+from coverage."* 🟢 **`p367` tested the alternative hypothesis and it was right on the first
+attempt:** the words *"EMEA"* and *"APAC"* belong to enterprise IT analysis, not education
+policy. Naming countries instead returned **nine national instruments with dates** —
+Finland, Lithuania, Slovenia, Luxembourg, Italy and Spain in EMEA; China, India and Singapore
+in APAC.
+
+🔴 **So the two "empty" regional legs were never evidence about those regions.** They were
+evidence about the query, and this base carried them as regional findings for two passes.
+🔵 This is `P521`'s lesson — *"the query's shape hides tiers"* — arriving on the regional
+axis, and `ACTION ZZ-cc` records the remedy: the prescribed per-region query must name
+countries and institutions.
+
+🟢 **A measured corollary worth keeping.** LATAM is the only region whose *prescribed* leg
+has produced education sources three passes running. 🔴 The natural reading — that LATAM is
+the most active region — is **not supported**; the likelier reading is that *"LATAM"* is a
+token the education-policy literature actually uses, while *"EMEA"* is not. 🔵 A regional
+ordering derived from leg productivity is an artefact of vocabulary, which is a second reason
+`Gap 242`'s DEC ordering should not go in a pitch.
+
+### 🟢 Trend C — two national registers of approved AI tools, and what they imply for open source
+
+🆕 **Lithuania and Slovenia are both building national registers of approved AI tools for
+schools** (Lithuania's inside its safe-implementation recommendations, Slovenia's beside a
+teacher AI-competence system). 🔵 **This is a procurement gate, and it is the first one this
+base has seen in education.** A tool not on the register does not enter a classroom in those
+markets.
+
+🟡 **The implication is favourable to the stack this base curates and should be stated
+without overclaiming it.** A register asks what a tool does with pupil data, where it runs
+and who can audit it — questions a **self-hosted, permissively-licensed** component answers
+from its own source, and a hosted API answers with a contract. 🔴 **No source says
+open-source tools are favoured**, and none of the register criteria has been read here: both
+registers are *in preparation* and secondary-sourced. 🔵 What is safe to say in an EMEA
+engagement is that the register exists, that it is a gate, and that auditability is what
+clears it.
+
+### 🟡 Trend D — the adoption-policy gap is the LATAM number to lead with
+
+🟢 **73.5% of 200 institutions across 19 countries use AI in teaching and learning** (UNESCO
+IESALC + UNU-IAS, September 2026) against **~30% that have published a policy on AI use.**
+🔵 Both figures come through search snippets rather than the papers, so neither is primary —
+but the *gap between them* is the most sellable observation in this pass's regional legs,
+because it names the work: governance, not tooling. 🔴 And it is the same ordering problem
+`Gap 242` flags, so the two figures should be quoted together or not at all.
+
 **Pass 366 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
 across external sources. 🆕 **Trends 43–45 are `p366`'s**, and all three are *instrument*
 findings with an engagement consequence attached: §43 gives the direction of a companion edge
