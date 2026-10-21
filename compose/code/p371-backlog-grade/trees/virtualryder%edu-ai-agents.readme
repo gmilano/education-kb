@@ -1,0 +1,236 @@
+# EDU AI Agent Suite
+
+> ### 🛡️ Part of the Aegis Governed-Agent Portfolio — one solution, five repositories
+> This repository is **1 of 5 that form a single, review-as-one solution**: the **Aegis** governance
+> platform (the control plane) plus four vertical agent packs. All five conform to one versioned
+> governance contract — **AGP v1.0** — and one deploy pattern, so a CIO / CISO reviews and approves them
+> **together** for pilot.
+>
+> | # | Repository | Role |
+> |--:|---|---|
+> | 1 | **`aegis-ai-governance-platform-aws`** | Governance **platform & pattern** (deny-by-default control plane) |
+> | 2 | **`hcls-ai-agents`** | **Life sciences** — pharma / biotech / CRO |
+> | 3 | **`slg-ai-agents`** | **State & local government** |
+> | 4 | **`healthcare_ai_agents`** (**HPP**) | **Healthcare payer / provider** |
+> | 5 | **`edu-ai-agents`** | **Education** — K-12 & higher-ed |
+>
+> **▶ You are here: `edu-ai-agents`.**
+>
+> **New to the portfolio?** Start in the **`aegis-ai-governance-platform-aws`** repo:
+> `PORTFOLIO-EXECUTIVE-SUMMARY.md` (10-minute front door) → `SA-DEPLOYMENT-RUNBOOK.md` (deploy the
+> platform + heroes in a new AWS account) → `PORTFOLIO-MATURITY-SCORECARD.md` (what's proven) →
+> `DO-NOT-CLAIM.md` (the honesty boundary).
+>
+> **Naming:** **`healthcare_ai_agents` = HPP** (payer / provider: claims, prior-auth, denials) and
+> **`hcls-ai-agents` = life sciences** (pharmacovigilance, clinical, regulatory) are **distinct
+> products**; the underscore-vs-hyphen naming is historical.
+>
+> ---
+
+
+> ⚠️ **Before you cite anything here:** read [**What we will *not* claim**](NOT-CLAIMS.md) — this is an independent reference accelerator that runs on AWS. It is **not** an AWS service, **not** AWS-supported, **not** an official AWS solution, and **not** a compliance certification. That page governs if any wording elsewhere reads stronger.
+
+> 📊 **Honest status, one source of truth:** per-agent maturity, clean-account evidence, connector tiers, and the test count live in machine-readable [`MATURITY.yaml`](MATURITY.yaml); the four connector-maturity terms are defined in [`docs/CONNECTOR-MATURITY.md`](docs/CONNECTOR-MATURITY.md). Prose defers to `MATURITY.yaml`; a portfolio drift-checker (`tools/check_maturity.py`) keeps them aligned.
+
+> 🔗 **Conforms to the Aegis Governance Pattern (AGP) v1.0.** The 8 required controls (identity, deny-by-default gateway, least-privilege intersection, bound SoD approval, fail-closed masking, append-only+WORM audit, token budgets, model gateway+grounding) are mapped to their implementing module and proving test in [`AGP-CONFORMANCE.md`](AGP-CONFORMANCE.md).
+
+> ™ **Brand & trademark:** collateral follows two tracks — an **internal-AWS** track (approved templates only) and a **customer-safe public** track (neutral branding, plain-text "Built on AWS", no AWS logo). Rules in [`BRAND-AND-TRADEMARK.md`](BRAND-AND-TRADEMARK.md). Nothing here implies AWS sponsorship or endorsement.
+
+> 🧭 **Part of the governed-agent portfolio.** This pack conforms to the **Aegis Governance Pattern (AGP v1.0)**; **Aegis** (`aegis-ai-governance-platform-aws`) is the hub — see its `PORTFOLIO-START-HERE.md` (how the packs flow together) and `DEPLOY-EVERYTHING.md` (deploy everything end-to-end).
+
+> 📚 **Governance & readiness docs (this repo):** [`NOT-CLAIMS`](NOT-CLAIMS.md) · [`MATURITY.yaml`](MATURITY.yaml) · [`Connector maturity`](docs/CONNECTOR-MATURITY.md) · [`AGP conformance`](AGP-CONFORMANCE.md) · [`Operating model`](OPERATING-MODEL.md) · [`Release packet`](RELEASE-PACKET.md) · [`AWS run-cost`](AWS-RUN-COST.md) · [`Brand & trademark`](BRAND-AND-TRADEMARK.md)
+
+### Governed AI Agents for Education — Built on Amazon Bedrock
+
+> **Independent, open-source reference accelerator** for K–12 districts, community colleges, universities, online programs, and workforce-education providers. Eight AI agents that retrieve, analyze, draft, and recommend — while humans keep every consequential decision. Built on Amazon Bedrock with deny-by-default authorization, student-PII masking, human-in-the-loop enforcement, and a tamper-evident audit trail aligned to FERPA, COPPA, IDEA/504, ADA Title II, and state student-privacy law.
+
+> **What this is not:** an AWS service, a compliance certification, a penetration-tested product, or a turnkey deployment. Production requires customer-specific identity integration, connectors, security review, and legal/privacy sign-off. If you work at AWS, obtain internal approval before using this as a customer-facing asset.
+
+> **Maturity is governed by one authoritative file:** [`docs/STATUS-MANIFEST.md`](docs/STATUS-MANIFEST.md) — the per-agent / per-control capability matrix that every status statement in this repo derives from. New here? Start with the [documentation index](docs/README.md).
+
+## Capability maturity matrix
+
+✅ = evidence in this repo (code + passing test, shipped template, or documented artifact) · ◻ = not done here / customer-engagement work.
+Derived from the authoritative [`MATURITY.yaml`](MATURITY.yaml). **✅ in the *Deployed on AWS* column reflects the Agent-01 pilot** — a real CloudFormation stack deployed to `CREATE_COMPLETE` and verified live on **2026-07-12** (live College Scorecard retrieval + real grounded Bedrock answer, deny-by-default + record-scope DENY, HITL PENDING_APPROVAL, runtime PII masking, append-only CMK-encrypted audit), then torn down — plus the 2026-07-10 Cognito-JWT and axe-core evidence (see [`docs/evidence/`](docs/evidence/)). The **full `quickstart.yaml` nested stack** (VPC/edge/AgentCore/real IdP/real SIS) is not yet stood up, so *Integration-tested on AWS* and *Production-ready* stay empty.
+
+| Capability | Designed | Implemented (offline/tested) | Deployed on AWS (validated) | Integration-tested on AWS | Production-ready | Owner (Repo/Customer) |
+|---|:--:|:--:|:--:|:--:|:--:|---|
+| Identity / authN | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (real Cognito JWT verified by the prod `verify_jwt` path on AWS 2026-07-10; real external IdP federation: Customer) |
+| MCP / tool authorization gateway | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (deny-by-default governed flow proven live in the Agent-01 pilot 2026-07-12) |
+| Policy enforcement (deny-by-default) | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (fail-closed record-level scope: cross-record DENY proven live 2026-07-12) |
+| Human approval (SoD, single-use) | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (signed single-use approvals + reviewer service; consequential PENDING_APPROVAL proven live 2026-07-12) |
+| PII/PHI masking | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (runtime student-PII masking proven live in the deployed Lambda 2026-07-10/12) |
+| Audit (append-only + WORM) | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (append-only masked write to a DEPLOYED CMK-encrypted DynamoDB audit table proven live 2026-07-10/12; S3 WORM export: Customer) |
+| Bedrock + Guardrails | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (real Claude invocation + guardrail proven live in the deployed Lambda 2026-07-10/12) |
+| IaC deploy (golden path) | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (Agent-01 pilot + golden-path CFN stacks deployed to CREATE_COMPLETE + verified live 2026-07-12; full quickstart nested stack: Customer) |
+| Live connectors | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (live College Scorecard retrieval proven in the deployed pilot 2026-07-12; real SIS/LMS: Customer) |
+| CI/CD | ✅ | ✅ | ◻ | ◻ | ◻ | Repo (blocking cfn-lint + bandit/pip-audit/detect-secrets/checkov/SBOM; no cloud deploys in CI) / Customer |
+| Monitoring / alerts | ✅ | ✅ | ◻ | ◻ | ◻ | Customer (`observability.yaml` alarms + dashboard ship as templates, un-deployed-as-tested) |
+| DR / backup | ✅ | ✅ | ◻ | ◻ | ◻ | Customer (audit-table PITR enabled in the deployed pilot; multi-Region DR: Customer) |
+| Compliance evidence | ✅ | ✅ | ✅ | ◻ | ◻ | Repo (assurance docs + golden-transaction + pilot deploy evidence; axe-core WCAG pass) / Customer (conformance + sign-off) |
+
+Nothing in this repository is production-certified; see [`docs/PRODUCTION-READINESS-ACTION-PLAN.md`](docs/PRODUCTION-READINESS-ACTION-PLAN.md) and [`docs/STATUS-MANIFEST.md`](docs/STATUS-MANIFEST.md) for the full ownership breakdown (RACI).
+
+*Governance once, agents as add-ons: `platform_core` (`edu-agent-platform` 0.1.0) **implements the Aegis Governance Pattern (AGP) v1.0** — the shared governance contract defined in the Aegis platform repo (`docs/14-GOVERNANCE-PATTERN-VERSIONING.md`). Conformance is declared in `platform_core/edu_agent_platform/__init__.py` (`AEGIS_GOVERNANCE_PATTERN_VERSION`) and asserted by `platform_core/tests/test_agp_conformance.py`.*
+
+> **Validation update (2026-07-12) — Agent 01 pilot deployed on AWS.** A real CloudFormation stack (`infra/cloudformation/pilot-concierge.template.json`) deployed the governed concierge and was verified across four scenarios live, then torn down: **public info** → ALLOW with **live College Scorecard** retrieval + a real grounded Bedrock answer (Michigan 15.6%% admit / $17,736 in-state); **own record** → ALLOW (synthetic SIS); **cross-record** → DENY (record-scope); **consequential send** → PENDING_APPROVAL (HITL). Append-only CMK-encrypted audit, runtime PII masking. Zero residual resources; under $1. Canonical offline suite: **200 passed, 1 skipped**. Evidence: [`docs/evidence/pilot-deploy.md`](docs/evidence/pilot-deploy.md) · runbook: [`runbooks/agent-deploy/01-PILOT.md`](runbooks/agent-deploy/01-PILOT.md). STILL OPEN: the full `quickstart.yaml` nested stack, real IdP federation, real SIS connector, pen test, manual WCAG.
+
+### Hero pilot — Student & Family Concierge (lead, low-blast-radius)
+
+Agent 01 (**Student & Family Concierge**) is the recommended lead pilot: it answers, retrieves, and drafts, but touches no student education record to prove value, so it is the lowest-blast-radius way to stand the governed pattern up against a **real system of record**.
+
+It now ships a **REAL, read-only connector to the public [U.S. Department of Education College Scorecard API](https://collegescorecard.ed.gov/data/documentation/)** — genuine institution / cost / aid / admissions facts a concierge would consult — wired behind the same governance the whole suite uses:
+
+- **Governed.** Every read flows through the deny-by-default MCP gateway with least-privilege intersection (agent grant ∩ user entitlement), a per-call scoped token, and an append-only masked audit. A student cannot send outbound messages; a consequential family message is **human-gated** (`PENDING_APPROVAL`) until a verified approval is bound. Connector writes raise `NotImplementedError` — student-record writes stay human-gated to the SIS.
+- **Student-PII masked (FERPA/COPPA).** The masker runs fail-closed on every ingested summary even though Scorecard carries no PII, so the control is exercised, not assumed.
+- **Offline + live demo.** `SCORECARD_OFFLINE=1 python demo/demo_collegescorecard.py` (cassette, no network) or live against `api.data.gov` with `DEMO_KEY`; cassette-backed tests mean **no network in CI**.
+- **Scored quality benchmark.** `make eval-concierge` runs a labeled 20-case benchmark against thresholds — classification accuracy ≥ 0.90, entity F1 ≥ 0.85, grounding ≥ 0.90, answer completeness ≥ 0.95, duplicate/near-duplicate detection ≥ 0.90, and a **student-PII-leak-rate = 0 hard gate** — gated in CI (`evals` job, deterministic, no API key; uploads `eval-report-concierge.md`).
+
+Honest scope: this is a **reference accelerator**. College Scorecard is *public institution data*, not a student record — real SIS/LMS connectors (PowerSchool, Banner, Canvas, …) that touch the education record are separate, human-gated engagement work with FERPA sign-off. Connector: [`platform_core/edu_agent_platform/connectors/collegescorecard.py`](platform_core/edu_agent_platform/connectors/collegescorecard.py) · switch: `CONNECTOR_MODE=live CONCIERGE_SOURCE=collegescorecard`.
+
+---
+
+## Table of Contents
+
+- [Quick Start — Get Running in Minutes](#quick-start)
+- [The Problem This Solves](#the-problem-this-solves)
+- [The Eight Agents](#the-eight-agents)
+- [Stakeholder Positioning](#stakeholder-positioning)
+  - [For the CIO / Director of Architecture](#for-the-cio--director-of-architecture)
+  - [For the CISO / Privacy Officer](#for-the-ciso--privacy-officer)
+  - [For Academic Leadership (Provost, CAO)](#for-academic-leadership)
+  - [For the CFO / VP Finance](#for-the-cfo--vp-finance)
+- [Security & Regulatory Alignment](#security--regulatory-alignment)
+- [Platform Architecture](#platform-architecture)
+- [Deploy to AWS — Step by Step](#deploy-to-aws--step-by-step)
+- [Repository Structure](#repository-structure)
+- [Maturity & Roadmap](#maturity--roadmap)
+- [Compliance Disclaimer](#compliance-disclaimer)
+
+---
+
+<a id="quick-start"></a>
+## Quick Start — Get Running in Minutes
+
+No AWS account needed to see the agents work. Every agent runs locally in demo mode with deterministic fixtures — no API keys, no cloud, no cost.
+
+### Prerequisites
+
+- Python 3.10+ and pip
+- Git
+- Docker (optional, for container path)
+
+### 1. Clone and install
+
+```bash
+git clone https://github.com/virtualryder/edu-ai-agents.git
+cd edu-ai-agents
+make install                      # platform_core (editable) + pytest, langgraph, langchain-core, streamlit
+```
+
+### 2. Run any agent locally (demo mode)
+
+```bash
+export EXTRACT_MODE=demo          # deterministic fixtures, no LLM calls
+cd 01-student-family-concierge
+streamlit run app.py              # opens a browser UI
+```
+
+Every agent includes a Streamlit demo app, fixture data, and tests that run without credentials.
+
+### 3. Run the test suite
+
+```bash
+make test                         # runs the governance + agent suites (canonical offline total: 201 tests — see MATURITY.yaml; +7 provisioner tests via `make test-provisioner`)
+```
+
+### 4. Validate CloudFormation templates
+
+```bash
+make lint                         # cfn-lint on all 9 CloudFormation templates
+```
+
+### 5. When you're ready for AWS
+
+Follow the [step-by-step AWS deployment guide](#deploy-to-aws--step-by-step) below, or jump straight to the golden-path runbook:
+
+```bash
+# One-command deploy for Agent 01 (Concierge) — the recommended first agent
+make golden-path-01 \
+  LAMBDA_BUCKET=my-lambda-bucket \
+  TEMPLATE_BUCKET=my-cfn-bucket \
+  IDP_METADATA=https://your-idp/metadata
+```
+
+**Prove the full chain locally (no AWS):** `python 01-student-family-concierge/demo/golden_transaction.py` runs identity → gateway → scoped token → connector → signed single-use human approval → result → masked audit and writes an evidence bundle. The human-in-the-loop reviewer is in `platform_core/edu_agent_platform/reviewer/` (`streamlit run .../reviewer/app.py`).
+
+---
+
+<a id="the-problem-this-solves"></a>
+## The Problem This Solves
+
+Every institution is already paying for these problems — in staff time, lost tuition, replacement hiring, and compliance exposure. These agents target the eight workflows where that cost is largest and most measurable.
+
+| Problem | What it costs today |
+|---|---|
+| **Families can't self-serve.** Routine questions about status, aid, deadlines, and schedules bury staff. ~4M of 5.4M FAFSA-cycle calls went unanswered *(GAO, 2024)* | **~$1.2M–$1.6M/yr** in avoidable contact handling |
+| **No scalable tutoring after hours.** A purpose-built AI tutor drove >2× learning in an RCT *(Harvard, 2024)* | **~$1.2M–$2.5M/yr** to match with human tutoring for 1,000 students |
+| **Teachers are drowning.** 53 vs. 44 hrs/wk with ~4.4 hrs to plan *(RAND, 2024)*. Replacing one burned-out teacher costs $11,860–$24,930 *(LPI, 2024)* | **~$2.2B/yr nationally** in teacher turnover |
+| **Grading eats time.** ~9.9 hrs/wk on grading; feedback arrives too late to help *(2025 survey)* | **~$4,270/instructor/yr** in recoverable labor |
+| **Students leave before anyone acts.** Warning signs accumulate in separate systems. 22.4% of first-years don't return *(NSC, 2025)* | **~$5.6M/yr** in forgone recurring tuition |
+| **Transfer students lose credits.** ~43% of credits lost on average *(GAO / CHEPP)* | **$13,081–$26,396** added cost per transfer student |
+| **Documents pile up, accessibility deadlines loom.** ADA Title II (WCAG 2.1 AA) due Apr 2027/2028; ~95% of accessibility complaints are PDFs | **$665K–$815K** program-scale remediation + federal-funding risk |
+| **IT help desk is buried.** Password/access tickets are 20–50% of volume at ~$70/reset | **~$300K/yr** in deflectable tickets |
+
+**How the suite solves it:** Each agent follows the same governed pipeline — **retrieve** approved content and the user's own records through a deny-by-default gateway → **analyze** the request → **draft or recommend** an action → **stop at a framework-enforced human gate** for anything consequential → **write a tamper-evident audit record**. The agent deflects routine load and answers any hour in any language, while a named human keeps every grade, enrollment change, financial commitment, and privileged action.
+
+---
+
+<a id="the-eight-agents"></a>
+## The Eight Agents
+
+### Recommended deployment order
+
+Start where decision-risk is low and visible return is high. The governed platform (gateway, identity, audit, HITL) is proven on the first agent and shared by every agent after it.
+
+| Phase | Agents | Why |
+|---|---|---|
+| **Land** | **01 — Concierge** | Most visible to the most users, lowest risk, easiest to measure |
+| **Expand (best-first)** | **03 — Educator Copilot**, **07 — Document & Accessibility**, **08 — Service Desk** | Broad visibility, low decision-risk, mature workflows |
+| **Deepen (higher-governance)** | **02 — Tutor**, **04 — Assessment**, **05 — Student Success**, **06 — Pathway Navigator** | Touch learning and student outcomes directly; require stronger evaluation, bias testing, and educator oversight |
+
+---
+
+### Agent 01 — Student & Family Services Concierge
+**The best first deployment. Start here.**
+
+**The challenge:** Education information is scattered across websites, PDFs, portals, and staff inboxes. Families don't know which department to contact or what institutional terms mean. Seasonal peaks (enrollment, FAFSA, registration) overwhelm staff, and calls go unanswered.
+
+**What it does:**
+- **Public mode (unauthenticated):** Answers questions about enrollment, financial aid, calendars, transportation, meals, and deadlines — grounded in approved institutional content, never invented
+- **Authenticated mode:** Checks application/FA status, retrieves schedules, books advising appointments, opens cases, sends forms, and escalates — all scoped to the acting user's own records
+- Multilingual (Amazon Translate/Polly), multi-channel (Amazon Connect voice/SMS/chat, web, mobile)
+
+**Proof points:** UA-Pulaski Tech: 94.5% adoption, 253% admissions-engagement lift. Highline College: 75% reduction in FA status contacts.
+
+**Key regulations:** FERPA, COPPA, ADA/508/WCAG 2.2 AA, Title VI language access
+
+---
+
+### Agent 02 — Personalized Tutor & Study Companion
+
+**The challenge:** Students need help outside class hours at a scale human tutoring cannot meet. Generic public AI has no course context, no safeguards, and will complete assignments for students.
+
+**What it does:**
+- Curriculum-grounded, instructor-controlled Socratic tutoring: hints not answers, concept explanations, practice questions, prerequisite review, study planning
+- Instructor configures source material, pedagogy, tone, prohibited behaviors, and assistance level
+- **Never completes a graded or prohibited assessment** — enforced by Bedrock Guardrails, not just prompting
+- Knowledge base segmented by institution/course/section/role
+
+**Key regulations:** FERPA, COPPA, IDEA/504 accommodations, academic-integrity policy
+
+---
+
+### Agent 03 — Educator Copilot
+
+**The challenge:** Educators spend disproportionate time adapting content for differen

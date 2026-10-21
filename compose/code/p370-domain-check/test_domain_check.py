@@ -119,6 +119,83 @@ for slug in ("dddanielliu/nccu-moodle-mcp", "general-mudkip/d2l-mcp-server",
              "packbackbooks/lti-1-3-php-library", "openedx/XBlock"):
     check_eq("in domain: %s" % slug, verdict(slug), "EDUCATION")
 
+# ═══════════════════════════════════════════════════════════════════════════════════
+# 🔴 D5 — `p371`'s OUT-OF-SAMPLE run, which is the obligation `p370` declared on itself.
+# `p370` published 92.6 % recall and said in its own docstring that the figure was
+# IN-SAMPLE. `p371` ran this instrument over 1 859 held-out addresses and
+# hand-adjudicated a seeded stratified sample of 40: **26 of 34 decisive verdicts
+# correct (76.5 %)** — 16/16 on EDUCATION, 5/8 on NOT-EDUCATION, 5/10 on SLUG-TRAP.
+# 🟢 **All 8 errors fell in two classes, and neither was tutoring:** CREDENTIALING/OER
+# and CURRICULUM-STANDARDS, plus two non-English payloads.
+# Every string below is read from the payload that was misjudged, never invented.
+# ═══════════════════════════════════════════════════════════════════════════════════
+
+# the credentialing layer: two NOT-EDUCATION and one WEAK, all three in domain
+check_eq("D5: an Open Badge v3 widget is in domain",
+         check("opensalt/OB3DefinitionWidget",
+               "Open Badge v3 Definition Widget. This widget provides a simple form to "
+               "create an Open Badge v3 achievement definition.")["verdict"], "EDUCATION")
+check_eq("D5: an OpenBadges-to-Europass mapper is in domain",
+         check("impierce/credential-converter",
+               "ELM - OpenBadges v3 Mapper. Converts JSON files written in the "
+               "OpenBadges v3 standard to the ELM (Europass) standard and back.")["verdict"],
+         "EDUCATION")
+check_eq("D5: a verifiable-credential verifier is in domain",
+         check("digitalcredentials/verifier-plus",
+               "verifier-plus provides Credential Verification and Display - a web page "
+               "for viewing and verifying Verifiable Credentials.")["verdict"], "EDUCATION")
+
+# the OER layer
+check_eq("D5: an OER container builder is in domain",
+         check("sci-oer/automated-builder",
+               "Automated builder for the sci-oer open educational resource containers. "
+               "Builds a self-contained OER image.")["verdict"], "EDUCATION")
+
+# national curriculum standards
+check_eq("D5: Japan's MEXT Course of Study dataset is in domain",
+         check("jp-cos/jp-cos.github.io",
+               "Japanese Course of Study LOD (学習指導要領LOD). A structured dataset derived "
+               "from open data released by the Ministry of Education, Culture, Sports and "
+               "Technology (MEXT).")["verdict"], "EDUCATION")
+
+# 🔴 D4's class, a second time: a non-English education payload
+check_eq("D5: a Portuguese payload naming itinerários formativos is in domain",
+         check("sumeedu/bancodeitinerarios",
+               "O Banco de Itinerários é um projeto de código aberto que tem como objetivo "
+               "oferecer uma ferramenta colaborativa para auxiliar instituições de ensino, "
+               "secretarias educacionais e educadores da rede pública por meio do "
+               "intercâmbio de itinerários formativos e materiais educacionais.")["verdict"],
+         "EDUCATION")
+
+# an education-only foundation places its own repositories
+check_eq("D5: an Apereo LAI project is in domain on a generic README",
+         check("Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy",
+               "OpenDashboard. A web application that provides a framework for displaying "
+               "visualizations and data views called cards. An Apereo Learning Analytics "
+               "Initiative project.")["verdict"], "EDUCATION")
+check_eq("D5: Kennisnet's Edurep client is in domain",
+         check("Kennisnet/phpEdurepSearch",
+               "phpEdurepSearch is a PHP package for searching with the Edurep search "
+               "engines. In Edurep you can search in NLLOM metadata records.")["verdict"],
+         "EDUCATION")
+
+# a tutor AGENT, which scored one weak anchor and was called a trap
+check_eq("D5: a programming tutor agent is in domain",
+         check("rohit-dev45/programming-tutor-agent",
+               "AI Tutor Agent. Python programming tutor built with LangChain, Gemini and "
+               "MCP tools. The tutor agent answers coding questions.")["verdict"],
+         "EDUCATION")
+
+# 🟡 the negative control for D5's fix, and the reason the fix is NARROW: each of these
+# words is ambiguous outside education, so none was added to the vocabulary.
+for _text, _why in (
+        ("Compiled with the Elm language targeting the ELM runtime.", "elm/ELM"),
+        ("The CLR hosts the assembly at runtime.", "clr"),
+        ("Lessons learned while scaling the service.", "lesson"),
+        ("A LOM-format audio loop library for samplers.", "lom")):
+    check_eq("D5: deliberately not added stays out: %s" % _why,
+             check("someone/sometool", _text)["verdict"] == "EDUCATION", False)
+
 # --- the contract ---------------------------------------------------------------
 check_eq("only EDUCATION may be shelved", SHELVEABLE, ("EDUCATION",))
 check_eq("a SLUG-TRAP may not be shelved", may_shelve("SLUG-TRAP"), False)
@@ -128,7 +205,7 @@ check_eq("the slug channel is reported, never decisive",
          slug_promises_education("pawelkn/xapi-rs"), ["xapi"])
 check_eq("a slug with no promise reports none", slug_promises_education("a/b"), [])
 
-TOTAL = 43
+TOTAL = 56
 if _CALLS != TOTAL:
     print("🔴 p370-domain-check: %d controls ran, %d declared" % (_CALLS, TOTAL))
     sys.exit(1)

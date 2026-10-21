@@ -1,0 +1,380 @@
+# 🧹 Awesome LLM Unlearning
+
+<p align="center">
+  <a href="https://awesome.re"><img src="https://img.shields.io/badge/Awesome-%F0%9F%A7%B9_LLM_Unlearning-000000?style=for-the-badge&labelColor=000000" alt="Awesome LLM Unlearning"></a>
+  <a href="https://github.com/chrisliu298/awesome-llm-unlearning/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-llm-unlearning?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
+  <a href="https://github.com/chrisliu298/awesome-llm-unlearning/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-llm-unlearning?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
+  <a href="https://github.com/chrisliu298/awesome-llm-unlearning/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-llm-unlearning?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
+</p>
+
+A curated collection of papers, surveys, benchmarks, frameworks, and blog posts for machine unlearning in large language models.
+
+As of the last commit, there are **651** papers, **19** surveys and position papers, **3** frameworks, and **2** blog posts.
+
+> If you believe your paper on LLM unlearning is not included, or if you find a mistake, typo, or information that is not up to date, please open an issue or submit a pull request, and I will be happy to update the list.
+
+## Contents
+
+- [Papers](#papers)
+  - [2026](#2026)
+  - [2025](#2025)
+  - [2024](#2024)
+  - [2023](#2023)
+  - [2022](#2022)
+  - [2021](#2021)
+- [Surveys and Position Papers](#surveys-and-position-papers)
+- [Frameworks](#frameworks)
+- [Blog Posts](#blog-posts)
+- [Contributing](#contributing)
+- [Citation](#citation)
+  
+## Papers
+
+### 2026
+
+- [SIEVE: Selective attention-value Suppression for Vision-Language Models Unlearning](https://arxiv.org/abs/2610.01962)
+  - Author(s): Si Qi Goh, Cap Dang Xuan Kiet, Tat-Jen Cham, Kwok-Yan Lam
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [LLM Persona Unlearning](https://arxiv.org/abs/2609.39882)
+  - Author(s): Kemou Li, Zhuan Shi, Qizhou Wang, Fengpeng Li, Negar Rostamzadeh, Golnoosh Farnadi, Jiantao Zhou
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Preemptive LLM Unlearning against Forbidden Capability Acquisition via Gradient Sealing](https://arxiv.org/abs/2609.39866)
+  - Author(s): Kemou Li, Qizhou Wang, Yue Wang, Fengpeng Li, Zhuan Shi, Negar Rostamzadeh, Golnoosh Farnadi, Masashi Sugiyama, Jiantao Zhou
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Learning What to Forget: Distributional Unlearning for LLM Representation Spaces](https://arxiv.org/abs/2609.38929)
+  - Author(s): Pinaki Mohanty, Haoran Tang, Maggie Makar, Rajiv Khanna
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Unlearning Deceptive Behaviors in LLMs with Contrastive Forget Sets](https://arxiv.org/abs/2609.38909)
+  - Author(s): Haoran Tang, Rajiv Khanna
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Storage Is Not Strategy: State-Conditioned Support Control for LLM Unlearning](https://arxiv.org/abs/2609.37858)
+  - Author(s): Tianhao Qian, Ziming Hong, Chongyang Gao, Kezhen Chen, Lixu Wang
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [UnlearningSoup: Is Repeated Tuning Necessary for Large Language Model Unlearning?](https://arxiv.org/abs/2609.37076)
+  - Author(s): Puning Yang, Qizhou Wang, Junchi Yu, Bo Han, Xiuying Chen
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Do LLMs Really Forget? Hidden-State Leakage in Model Unlearning and How to Fix it](https://arxiv.org/abs/2609.36612)
+  - Author(s): Hadi Reisizadeh, Jiajun Ruan, Sijia Liu, Mingyi Hong
+  - Date: 2026-09
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/OptimAI-Lab/HiddenStateUnlearning)
+- [UNBIND: UNlearning By INference-time Directional Steering for Code LLMs](https://arxiv.org/abs/2609.35913)
+  - Author(s): Zhengyang Shan, Jiayun Xin, Yanjun Lin, Xu Qian, Zhiang Liu, Minghui Xu, Yue Zhang, Qin Hu, Kun Li, Xiuzhen Cheng
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [TULIP: Targeted LLM Unlearning at Layers Identified Per-Input](https://arxiv.org/abs/2609.34591)
+  - Author(s): Yejin Kim, William F. Shen, Seokwon Jung, Daeun Park, Seong Joon Oh
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Causal Routing for Unlearning](https://arxiv.org/abs/2609.34475)
+  - Author(s): Bardh Prenkaj, Andrea D'Angelo, Davide Mottin, Federico Fontana, Davide Gabrielli, Paola Velardi, Stefano Faralli
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Making LLMs Truly Forget: Deep Unlearning by Searching, Selecting, and Severing Knowledge Paths](https://arxiv.org/abs/2609.34442)
+  - Author(s): Jialu Wang, Peizhi Niu, Haoteng Yin, Hans Hao-Hsun Hsu, Pan Li, Rongzhe Wei
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [RADNPO: Reference-free Adaptive Negative Preference Optimization for LLM Unlearning](https://arxiv.org/abs/2609.34251)
+  - Author(s): Shenghan Tan, Ziyi Zhou, Wenpeng Hu, Mengyuan Zhang
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Trajectory Unlearning on LLM-based Agents](https://arxiv.org/abs/2609.33639)
+  - Author(s): Yingdan Shi, Ren Wang
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [LLM Unlearning Evaluation with TRIAGE](https://arxiv.org/abs/2609.32103)
+  - Author(s): Danial Ataee, Peter Triantafillou
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Neuralyzing the Trace: Selective Representation-Level Unlearning with Contrastive Sparse Autoencoders](https://arxiv.org/abs/2609.31056)
+  - Author(s): Itai Zehavi, Fanny Jourdan, Ulrich Aivodji
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [The Tokens Remember: When Tokenization Bypasses Knowledge Editing and Unlearning](https://arxiv.org/abs/2609.29045)
+  - Author(s): Manit Baser, Aditya Nawal, Dinil Mon Divakaran, Mohan Gurusamy
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Quantization-Robust Unlearning through the Lens of Retain-Forget Loss Landscapes Interaction](https://arxiv.org/abs/2609.27355)
+  - Author(s): Jialu Wang, Jianing Deng, Shuqing Luo, Yuanzhe Li, Dongwei Wang, Jingtong Hu, Huanrui Yang, Song Wang, Tianlong Chen
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [What Was Once Learned May Need to Be Unlearned: Machine Unlearning for Deprecated API Knowledge in Large Language Models](https://arxiv.org/abs/2609.25786)
+  - Author(s): Jin Liu, Yanzhong He, Guancheng Lin, Xiao Liu, Jacky Wai Keung, Xiao Yu, Xiaoxue Ma
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [GUARD: Natural Forgetting in Large Reasoning Models via Guided Answer-Reasoning Distillation](https://arxiv.org/abs/2609.21677)
+  - Author(s): Zeyu Yan, Guanghao Zhou, Minghui Qiu, Ming Gao, Cen Chen
+  - Date: 2026-09
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/zeyu-Yan/GUARD)
+- [$\mu^2$-Bench: A Multilingual Machine Unlearning Benchmark](https://arxiv.org/abs/2609.20945)
+  - Author(s): Kyomin Hwang, Hyeonjin Kim, Hyunho Lee, Yearim Kim, Yeji Song, Nojun Kwak
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Test-Time Unlearning via Sparse Autoencoder](https://arxiv.org/abs/2609.16229)
+  - Author(s): Pingzhi Li, Jinhao Duan, Vaishnav Tadiparthi, Nakul Agarwal, Kwonjoon Lee, Ehsan Moradi Pari, Hossein Nourkhiz Mahjoub, Sijia Liu, Tianlong Chen
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Machine Unlearning for Speech Question Answering in Large Audio-Language Models](https://arxiv.org/abs/2609.13195)
+  - Author(s): Zhe Liu
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [K-Bench: A Benchmark for LLM Unlearning in Agentic Deployments](https://arxiv.org/abs/2609.12808)
+  - Author(s): Guangsheng Yu, Yanna Jiang, Qin Wang, Baihe Ma, Xu Wang
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs](https://arxiv.org/abs/2609.10439)
+  - Author(s): Ravi Ranjan, Olivera Kotevska, Agoritsa Polyzou
+  - Date: 2026-09
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/raviranjan-ai/FOMUL-AACL-2026)
+- [When Retain Constraints Conflict: Mitigating Forget-Retain Interference in Tabular Data](https://arxiv.org/abs/2609.06786)
+  - Author(s): Zijie Liu, Jinhao Duan, Bingqi Shang, Xinming An, Sijia Liu, Tianlong Chen
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Beyond Cross-Lingual Transfer: Benchmarking Propagation Boundaries in Multilingual LLM Unlearning](https://arxiv.org/abs/2609.05976)
+  - Author(s): Pengyang Shao, Chuanpeng Lu, Wei Qin, Yanzheng Jin, Xiaohao Liu, Xi Ai, Kenji Kawaguchi, Richang Hong
+  - Date: 2026-09
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/CLLPU/CLLPU-bench)
+- [Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents](https://arxiv.org/abs/2609.04875)
+  - Author(s): Chao Yao, Yangbo Wei, Zhen Huang, Junhong Qian, Chenle Chen, Shaoqiang Lu, Chen Wu, Lei He
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Extracting Forgotten Prompts from Targeted Unlearned Models](https://arxiv.org/abs/2609.03662)
+  - Author(s): Au Ashley Hoi-Ting, Meghdad Kurmanji, William F. Shen, Nicholas D. Lane, Ligang He
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Confess What You Know: Forget-Set Misalignment with Model Knowledge in LLM Unlearning](https://arxiv.org/abs/2609.00605)
+  - Author(s): Miso Kim, Georu Lee, Seungwon Jeong, Woojin Lee
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Where Identity Lives: Localized, Retain-Free Identity Unlearning in Multimodal Large Language Models](https://arxiv.org/abs/2608.30649)
+  - Author(s): Kangwook Ko, Jaehyuk Jang, Wonjun Lee, Hee-Seon Kim, Changick Kim
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Partition-Aware Unlearning for Removing Spurious Correlations in Large Vision-Language Models](https://arxiv.org/abs/2608.29996)
+  - Author(s): Aditi Sarker, Nazreen Shah, Rafi Ibn Sultan, Rhongho Jang, Dongxiao Zhu, Prashant Khanduri
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [On the Recoverability of Private Information Unlearning in Large Language Models](https://arxiv.org/abs/2608.29943)
+  - Author(s): Shicheng Hu, Runzhi Tian, Ziqiao Wang, Yongyi Mao
+  - Date: 2026-08
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rzTian/LLM-Unlearning-Recovery)
+- [GRACE:Gradient-guided Coreset Selection for LLM Unlearning](https://arxiv.org/abs/2608.28361)
+  - Author(s): Praveen Bushipaka, Andrea D'Angelo, Lucia Passaro, Tommaso Cucinotta
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [AIM: Anchor Identity Features, Then Match for Multimodal Large Language Model Unlearning](https://arxiv.org/abs/2608.28312)
+  - Author(s): Wonjun Lee, Jaehyuk Jang, Kangwook Ko, Hee-Seon Kim, Changick Kim
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [A Model Merging Approach for Continual MLLM Unlearning](https://arxiv.org/abs/2608.04548)
+  - Author(s): Yuhang Wang, Linlin Zhang, Haoxuan Ji, Xianmin Ye, Zhenxing Niu, Haichang Gao
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Leak-Resistant Unlearning: A New Benchmark for Evaluating Multi-Hop Reasoning Consistency and Recovery Robustness](https://arxiv.org/abs/2608.04519)
+  - Author(s): Haoting Qian, Qingjie Zhang, Zhicong Huang, Cheng Hong, Han Qiu
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Does Forgetting Transfer Across Modalities? A Real-World Benchmark for Cross-Modal Knowledge Unlearning Evaluation](https://arxiv.org/abs/2608.03791)
+  - Author(s): Chunlin Liu, Junnian Chen, Haitong Jiang, Jianyu Zhao, Yingsen Pang, Jingchen Li, Jiabiao He, Youming Lu, Jinhe Bi, Yuntao Du
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Trajectory-Guided Forget-Recover Network for Continual LLM Unlearning](https://arxiv.org/abs/2608.03123)
+  - Author(s): Zezheng Wu, Xinghe Cheng, Qinggang Zhang, Haoran Luo, Jiapu Wang, Qing Yang, Jingwei Zhang
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Exploring and Bridging Knowledge Holes in Unlearned Multimodal Large Language Models](https://arxiv.org/abs/2608.01849)
+  - Author(s): Junxiang You, Junkai Chen, Yuhao He, Ruiqi Liu, Zhetao Guo, Shu Wu
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Toward Fine-Grained Forgetting:Attribute Unlearning for Multimodal Large Language Models](https://arxiv.org/abs/2608.01008)
+  - Author(s): Junkai Lin, Junkai Chen, Siqi Hou, Yuhao He, Ruiqi Liu, Chenhan Jin, Shengze Xu, Tieyong Zeng
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Beyond Binary Rewards: A Comparative Study of Reward Design for Reinforcement Unlearning](https://arxiv.org/abs/2607.27968)
+  - Author(s): Efstratios Zaradoukas, Davide Gabrielli, Bardh Prenkaj, Gjergji Kasneci
+  - Date: 2026-07
+  - Venue: ECML-PKDD 2026 WIPE-OUT Workshop
+  - Code: -
+- [Crossing the Margin Cliff: Toward Relearn-Robust LLM Unlearning via Margin Calibration](https://arxiv.org/abs/2607.27836)
+  - Author(s): Xiangyu Yin, Jiaxu Liu, Zhen Chen, Chih-Hong Cheng
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Subtract or Replay? Exact Deletion from Language-Model Memory](https://arxiv.org/abs/2607.27539)
+  - Author(s): Vishwajith Ramesh
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Between Suppression and Collapse: Evaluating Narrative Unlearning with LENS](https://arxiv.org/abs/2607.22657)
+  - Author(s): Viktoriia Makovska, George Fletcher
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Unlearning Under Imbalance: Benchmarking Fairness in Multimodal LLM Unlearning](https://arxiv.org/abs/2607.21300)
+  - Author(s): Lorenzo Orsingher, Thomas De Min, Massimiliano Mancini, Davide Talon, Elisa Ricci
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Unlearning as Distribution Restoration: A Controlled Counterfactual Study, a Validated Selective Screen, and the Limits of Oracle-Free Certification](https://arxiv.org/abs/2607.19442)
+  - Author(s): Sen Yang, Yuen-Hei Yeung
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Stochastic Meta-Unlearning: Bridging Language Backbone and Multimodal Unlearning](https://arxiv.org/abs/2607.18615)
+  - Author(s): Zijie Liu, Jinhao Duan, Gaowen Liu, Sijia Liu, Tianlong Chen
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [One Modality to Forget Them All: Enhancing Cross-Modal Unlearning in Vision-Language Models](https://arxiv.org/abs/2607.16442)
+  - Author(s): Sudharshan Balaji, Yili Ren, Guangjing Wang, Yimin Chen, Ning Wang
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [LLM Unlearning for Cyber Defense: A Survey on Methods, Challenges, and Emerging Threats](https://arxiv.org/abs/2607.16227)
+  - Author(s): Ruppikha Sree Shankar, Abhishek Bhardwaj, Arnav Doshi, Anusri Nagarajan, Troy Paulus Asia, Saptarshi Sengupta
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [HermesHFL: Incentive-Compatible Hierarchical Federated Unlearning for Dynamic LLM Fine-Tuning](https://arxiv.org/abs/2607.11528)
+  - Author(s): Chenxi Sun, Minghui Liwang, Wusi He, Zhang Liu, Yuhan Su, Seyyedali Hosseinalipour, Xianbin Wang, Yiguang Hong
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Forget Narrowly, Retain Broadly: Unlearning as an Asymmetric Generalization Problem](https://arxiv.org/abs/2607.09236)
+  - Author(s): Amit Peleg, Naman Deep Singh, Naama Pearl, Bibhabasu Mohapatra, Matthias Hein
+  - Date: 2026-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://amitpeleg.github.io/forget-narrowly-retain-broadly)
+- [Multimodal Unlearning Across Vision, Language, Video, and Audio: Survey of Methods, Datasets, and Benchmarks](https://arxiv.org/abs/2607.07907)
+  - Author(s): Nobin Sarwar, Shubhashis Roy Dipta, Zheyuan Liu, Vaidehi Patil
+  - Date: 2026-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/smsnobin77/Awesome-Multimodal-Unlearning)
+- [POPS: Recovering Unlearned Multi-Modality Knowledge in MLLMs with Prompt-Optimized Parameter Shaking](https://arxiv.org/abs/2607.06649)
+  - Author(s): Zhangheng LI, Jianing Zhu, Junyuan Hong, Sungmin Eum, Shuowen Hu, Suya You, Zhangyang Wang
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [MPSelectTune: Prompt-type Selection for Fine-tuning improves Concept Unlearning in LLMs](https://arxiv.org/abs/2607.03932)
+  - Author(s): Shubhadip Nag, Srinjoy Das, Agniva Saha, Anushree Ghosh, Soumi Das, Tarun Kumar, Suparna Bhattacharya, Sourangshu Bhattacharya
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [PPE-Bench: A Benchmark for Evaluating MLLM Unlearning under Private-Public Entanglement](https://arxiv.org/abs/2607.02897)
+  - Author(s): Xianren Zhang, Delvin Ce Zhang, Dongwon Lee, Suhang Wang
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning](https://arxiv.org/abs/2607.02513)
+  - Author(s): Matteo Boglioni, Thibault Rousset, Siva Reddy, Marius Mosbach, Verna Dankers
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Auditing Forgetting in Limited Memory Language Models](https://arxiv.org/abs/2607.00605)
+  - Author(s): Arya Raeesi, Hanna Roed
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Selective Span-Level Unlearning for Large Language Models](https://aclanthology.org/2026.acl-short.35/)
+  - Author(s): Chaewon Yoon, Dongjun Kim, Hyun-Je Song
+  - Date: 2026-07
+  - Venue: ACL 2026
+  - Code: -
+- [The Silence of the Facts: Popularity as a Barrier to Machine Unlearning](https://aclanthology.org/2026.acl-srw.46/)
+  - Author(s): Anna Borisiuk, Andrey Savchenko, Alexander Panchenko, Elena Tutubalina
+  - Date: 2026-07
+  - Venue: ACL 2026 SRW
+  - Code: -
+- [Thesis Proposal: Targeted and Unified Cross-Lingual Unlearning from Multilingual Language Models](https://aclanthology.org/2026.acl-srw.49/)
+  - Author(s): Jan Bronec, Jindřich Helcl
+  - Date: 2026-07
+  - Venue: ACL 2026 SRW
+  - Code: -
+- [Probing Stylistic Appropriation using Large Language Models: An Evaluation Framework for Copyright Infringement under EU Law](https://arxiv.org/abs/2606.31250)
+  - Author(s): Noah Scharrenberg, Chang Sun
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Towards Knowledge Alignment in Code LLMs: Contrastive Unlearning for Evolving APIs](https://arxiv.org/abs/2606.30810)
+  - Author(s): Huy Q. Tran, Dang H. Vu, Tuyen N. Dinh, Anh H. D. Nguyen, Anh N. H. Vu, Anh M. T. Bui, Phuong T. Nguyen
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [CBD: API-Only LLM Black-Box Unlearning through Controlled Behavioral Divergence](https://arxiv.org/abs/2606.27683)
+  - Author(s): Zhiqiang Xie, Yijing Lin, Zhipeng Gao, Dong In Kim
+  - Date: 2026-06
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/DGL-codes/CBD)
+- [Detect, Unlearn, Restore: Defending Text Summarization Models Against Data Poisoning](https://arxiv.org/abs/2606.26036)
+  - Author(s): Poojitha Thota, Shirin Nilizadeh
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Uncertainty-based Debiasing and Unlearning for Decontamination](https://arxiv.org/abs/2606.23313)
+  - Author(s): Guangzhi Sun, Xiao Zhan, Mark Gales
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Priority-Aware Learning-Unlearning Correction for Dynamic Decentralized LoRA Fine-Tuning](https://arxiv.org/abs/2606.22878)
+  - Author(s): Nuocheng Yang, Yechen He, Sihua Wang, Zihan Chen, Tony Q. S. Quek, Changchuan Yin
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Mechanism-Guided Selective Unlearning for RLVR-Induced Reasoning](https://arxiv.org/abs/2606.19222)
+  - Author(s): Chenyu Zhou, Qiliang Jiang, Shuning Wu, Xu Zhou
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [PreUnlearn: Auditing Collateral Knowledge Damage Before Large Language Model Unlearning](https://arxiv.org/abs/2606.18473)
+  - Author(s): Bo Su, Ankit Shah, Thai Le
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [

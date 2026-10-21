@@ -1,0 +1,64 @@
+slug	origin_region	origin_channel	origin_evidence	serves_region	serves_evidence
+3121n/nor-data-udir-mcp	EMEA	CCTLD	data-nsr.udir.no	Global	-
+aicoder2009/khanacademymcp	Global	-	-	Global	-
+apereo-learning-analytics-initiative/sakaixapi-provider	EMEA	CCTLD	www.uva.nl	Global	-
+api-evangelist/powerschool	Global	-	-	North America	Ed-Fi
+arjav0703/cbse-ai	Global	-	-	APAC	CBSE
+asterics/asterics-grid	Global	SPLIT	EMEA+North America	Global	-
+ayrtonmoura1/conectabncc	Global	-	-	Global	-
+bibo242/blackboard-mcp	Global	-	-	EMEA	GDPR
+brightspaceui/lms-context-provider	Global	-	-	Global	-
+bycs-lp/moodle-ci-workflows	Global	-	-	Global	-
+cassproject/cass-npm	Global	-	-	Global	-
+casys-ai/mcp-server	Global	-	-	Global	-
+cern-qti/latent-ad-qml	Global	-	-	Global	-
+cern-qti/quask	EMEA	CCTLD	quask.web.cern.ch	Global	-
+chatt-state/banner-mcp-server	Global	-	-	Global	-
+coimf/schoology-mcp	Global	-	-	Global	-
+d2l-ai/d2l-en	Global	-	-	Global	-
+davemckain/qtiworks	Global	-	-	Global	-
+dddanielliu/nccu-moodle-mcp	APAC	INSTITUTION	i.nccu.edu.tw	Global	-
+ddemszky/classroom-transcript-analysis	North America	CCTLD	www.icpsr.umich.edu	Global	-
+districtapi/districtapi-mcp	Global	-	-	Global	-
+edyvision/student-services-mcp	Global	-	-	Global	-
+general-mudkip/d2l-mcp-server	Global	-	-	Global	-
+git-pratap-shrey/uniai_mcp	Global	-	-	Global	-
+h5p/moodle-mod_hvp	Global	-	-	EMEA	GDPR
+hefi002/tfg-mcp-moodle-server	Global	-	-	Global	-
+hocphi-info/hocphi-info-mcp	Global	-	-	Global	-
+jeanlucio/moodle-dev-tools	Global	-	-	Global	-
+jinanshm/ncert-mcp	Global	-	-	APAC	CBSE
+kaiofelps/lti-consumer-poc	Global	-	-	North America	essa
+kristofb/ltijs	Global	-	-	Global	-
+marcusgreen/moodle-qtype_gapfill	Global	-	-	Global	-
+mattlo0546/canvas-mcp	EMEA	INSTITUTION	canvas.ox.ac.uk	Global	-
+microsoft/playwright-mcp	North America	OWNER	microsoft	Global	-
+morganrcu/awesome-eu-ai-act	EMEA	INSTITUTION	www.gov.uk	EMEA	GDPR
+n35da/brightspace-mcp	Global	-	-	Global	-
+nicolasviruel/moodle-utn-mcp	LATAM	INSTITUTION	tup.sied.utn.edu.ar	Global	-
+noor-ul-eman28/ai-tutor-mcp-toolkit	Global	-	-	Global	-
+openedx/XBlock	North America	OWNER	openedx	Global	-
+oxctl/spring-security-lti13-demo	Global	-	-	Global	-
+packbackbooks/lti-1-3-php-library	Global	-	-	Global	-
+pawalshriram06-ops/mcp-student-management-system	Global	-	-	Global	-
+pawelkn/xapi-rs	Global	-	-	Global	-
+peterszombati/xapi-node	Global	-	-	Global	-
+pie-framework/pie-elements-ng	Global	-	-	Global	-
+poorvika12-hub/student_mcp	Global	-	-	Global	-
+punkpeye/awesome-mcp-servers	Global	-	-	Global	-
+quizlar/mcp-server	Global	-	-	Global	-
+scollovati/awesome-lti	Global	-	-	Global	-
+shawnmcb/a11y-mcp-server	Global	-	-	Global	-
+sheikhcoders/interleaved-learning-mcp	Global	-	-	Global	-
+sumnerlab/talkmoves	Global	-	-	Global	-
+surlabs/aichatformoodle	Global	-	-	Global	-
+teamschools/powerschool	Global	-	-	Global	-
+totoketchup/adaptive-multispeaker-separation	Global	-	-	Global	-
+tunapanda/wp-xapi-lrs	Global	-	-	Global	-
+tutors-sdk/tutors-mono-repo	Global	-	-	Global	-
+uaiblaine/moodle-block_compass	Global	-	-	Global	-
+uaiblaine/moodle-block_feedback_tracker	Global	-	-	EMEA	GDPR
+universita-di-ferrara/moodle-aiprovider_gemini	EMEA	CCTLD	unife.it	Global	-
+vossenv/oneroster-python	North America	CCTLD	classlink.k12.nj.us	Global	-
+xiaochr/llm-aes	Global	-	-	Global	-
+zuvy/ps-mcp-server	Global	-	-	Global	-

@@ -1,0 +1,155 @@
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/haxtheweb/haxcms-php/badge)](https://securityscorecards.dev/viewer/?uri=github.com/haxtheweb/haxcms-php)
+[![Community Support](https://badgen.net/badge/support/community/cyan?icon=awesome)](/SUPPORT.md)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](/CODE_OF_CONDUCT.md)
+[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/aCGxmRHEJP)
+[![Lit](https://img.shields.io/badge/-Lit-324fff?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2aWV3Qm94PSIwIDAgMTYwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTYwIDgwdjgwbC00MC00MHptLTQwIDQwdjgwbDQwLTQwem0wLTgwdjgwbC00MC00MHptLTQwIDQwdjgwbDQwLTQwem0tNDAtNDB2ODBsNDAtNDB6bTQwLTQwdjgwbC00MC00MHptLTQwIDEyMHY4MGwtNDAtNDB6bS00MC00MHY4MGw0MC00MHoiLz48L3N2Zz4%3D)](https://lit.dev/)
+[![#HAXTheWeb](https://img.shields.io/badge/-HAXTheWeb-999999FF?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyBpZD0iZmVhMTExZTAtMjEwZC00Y2QwLWJhMWQtZGZmOTQyODc0Njg1IiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE4NC40IDEzNS45NyI+PGRlZnM+PHN0eWxlPi5lMWJjMjAyNS0xODAwLTRkYzItODc4NS1jNDZlZDEwM2Y0OTJ7ZmlsbDojMjMxZjIwO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iZTFiYzIwMjUtMTgwMC00ZGMyLTg3ODUtYzQ2ZWQxMDNmNDkyIiBkPSJNNzguMDcsODMuNDVWNTVIODYuMnY4LjEzaDE2LjI2djQuMDdoNC4wN1Y4My40NUg5OC40VjY3LjE5SDg2LjJWODMuNDVaIi8+PHBvbHlnb24gcG9pbnRzPSIxNTMuMTMgNjMuNyAxNTMuMTMgNTEuMzkgMTQwLjU0IDUxLjM5IDE0MC41NCAzOS4wOSAxMjcuOTUgMzkuMDkgMTI3Ljk1IDI2Ljc5IDEwMi43OCAyNi43OSAxMDIuNzggMzkuMDkgMTE1LjM2IDM5LjA5IDExNS4zNiA1MS4zOSAxMjcuOTUgNTEuMzkgMTI3Ljk1IDYzLjcgMTQwLjU0IDYzLjcgMTQwLjU0IDc2IDEyNy4zNiA3NiAxMjcuMzYgODguMyAxMTQuNzggODguMyAxMTQuNzggMTAwLjYxIDEwMi4xOSAxMDAuNjEgMTAyLjE5IDExMi45MSAxMjcuMzYgMTEyLjkxIDEyNy4zNiAxMDAuNjEgMTM5Ljk1IDEwMC42MSAxMzkuOTUgODguMyAxNTIuNTQgODguMyAxNTIuNTQgNzYgMTY1LjcyIDc2IDE2NS43MiA2My43IDE1My4xMyA2My43Ii8+PHBvbHlnb24gcG9pbnRzPSIzMy4xMyA2My43IDMzLjEzIDUxLjM5IDQ1LjcyIDUxLjM5IDQ1LjcyIDM5LjA5IDU4LjMxIDM5LjA5IDU4LjMxIDI2Djk4My40OCAyNi43OSA4My40OCAzOS4wOSA3MC44OSAzOS4wOSA3MC44OSA1MS4zOSA1OC4zMSA1MS4zOSA1OC4zMSA2My43IDQ1LjcyIDYzLjcgNDUuNzIgNzYgNTguODkgNzYgNTguODkgODguMyA3MS40OCA4OC4zIDcxLjQ4IDEwMC42MSA4NC4wNyAxMDAuNjEgODQuMDcgMTEyLjkxIDU4Ljg5IDExMi45MSA1OC44OSAxMDAuNjEgNDYuMzEgMTAwLjYxIDQ2LjMxIDg4LjMgMzMuNzIgODguMyAzMy43MiA3NiAyMC41NCA3NiAyMC41NCA2My43IDMzLjEzIDYzLjciLz48L3N2Zz4%3D)](https://haxtheweb.org/)
+[![X](https://img.shields.io/twitter/follow/haxtheweb.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=haxtheweb)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/haxtheweb/haxcms-php)
+# HAX
+The authoring experience of HAX and the ability to make fast, static file backed websites rapidly.
+Get all the details you want on [HAXTheWeb.org](https://haxtheweb.org/)!
+HAX seeks to be the smallest possible back-end CMS to make HAX work and be able to build websites with it. Leveraging JSON Outline Schema, HAX is able to author multiple pages, which it then writes onto the file system. This way a slim server layer is just for basic authentication, knowing how to save files, and placing them in version control.
+
+## Onboarding
+
+New to the HAX ecosystem? **[Start here](https://github.com/haxtheweb/issues/blob/master/CONTRIBUTING.md)** — the single onboarding guide covers prerequisites, cloning the core repos, installing, and running each project locally (including the PHP/container path for this repo).
+
+## Who HAXcms is for
+
+- **Faculty, instructors, and course designers** — author course sites, OER materials, and microsites in the browser with HAX, then publish them anywhere.
+- **Instructional designers and content teams** — build accessible, standards-based pages out of web components, with no build tooling to maintain.
+- **Campus IT and system administrators** — a self-hosted, database-free PHP 8.3+/Apache 2.4 stack: flat files, git-backed publishing, a JWT-authenticated v1 REST API, and configuration-driven deployment profiles.
+- **Students and learners** — consume fast, offline-capable, WCAG-aligned static sites on any device.
+- **Hosted-platform users** — Reclaim Hosting/Reclaim.cloud 1-click installs and HAXiam managed spaces for institutions that want HAX without self-hosting.
+
+## Features
+- All the UX of HAX brought to a small CMS
+- Incredibly simple, readable file structure of flat HTML files and lightning fast, high scale micro-sites
+- cdn friendly configuration
+- 0 config, 100% offline capable, PWA generation
+- clean, simple theme layer abstracted from content
+- No database (simple `.json` files help manage relationships, all pages html+webcomponents)
+- Files you can reach out and touch, fork, and theme with ease!
+- Support for multiple sites
+- automatic git repo creation and management (never touch commandline again, but dive in if you really needed)
+- Built in gh-pages publishing
+- Support for PHP and Express based backends
+
+# Hosted solutions
+
+## Reclaim Hosting / Cloud
+- https://reclaimhosting.com/ - 1 click install via cPanel (low cost, quick and easy to setup)
+- https://reclaim.cloud/ - 1 click install for a high scale / dedicated resources
+
+# HAXiam
+- HAX can also be installed in a "[HAXiam](https://github.com/haxtheweb/haxiam)" configuration where institutional users automatically get their own HAX spaces to work in by logging in.
+- Contact via issue queue if interested in this solution and collaborating to improve it's deployment methodology
+
+# Requirements (PHP)
+- Supports PHP 8.3+
+- Requires `curl`, `zip`, `gd`, and `xml` modules be installed
+- Apache 2.4
+# Requirements (node, still in development)
+```bash
+cd system/backend/nodejs
+yarn run dev
+```
+
+## Quick Install
+```bash
+$ curl -fsSL https://raw.githubusercontent.com/haxtheweb/haxcms/master/scripts/haxcmsme.sh -o haxcmsme.sh && sh haxcmsme.sh
+```
+## Installation Guides
+- There are full installation instructions available at https://haxtheweb.org/installation which details many different install routines.
+
+### GitHub Codespaces
+- Click the "Open in GitHub Codespaces" badge above, or go to this repo's `Code` button → `Codespaces` tab → `Create codespace on master`.
+- The devcontainer automatically installs dependencies, points Apache at the checked-out code, and seeds a super user (`admin`/`admin` - change this after first login!).
+- Once the container finishes starting, a browser preview for port 80 opens automatically with the running site.
+- This also works from the lightweight `github.dev` editor: `github.dev` itself has no compute, but its `Code → Codespaces` menu launches the same devcontainer described here.
+
+### Containers
+- Clone this repo: `git clone https://github.com/haxtheweb/haxcms.git`
+- Install a server container (recommended). Here are some options (We support 'em all!):  
+  - [docker](https://store.docker.com/search?type=edition&offering=community)
+  - [ddev](https://ddev.readthedocs.io/en/latest/#installation)
+  - [docksal](https://docksal.io/installation/)
+  - [lando](https://docs.devwithlando.io/installation/installing.html)
+  - [vagrant](https://www.vagrantup.com/downloads.html)
+- Open a terminal window, go to the directory where you downloaded your container app and type `ddev start` (for ddev) or `fin init` (for docksal) or `lando start && lando magic` (for lando) or `vagrant up` (for vagrant).
+- Go to the link any of them give you in a browser.
+- Username/password is `admin`/`admin` to get building out static sites locally that you can push up anywhere!
+- Click the icon in the top-right and you're off and running!
+### MAMP
+- Download [MAMP](https://www.mamp.info/)
+- Download this repo https://github.com/haxtheweb/haxcms/archive/master.zip
+- Place HAXcms files in the htdocs folder of MAMP.
+- Turn MAMP on and click "My website"
+- Copy the password it gives you, click to access HAX and then HAX YOUR WEB!
+## Scope
+Generate `.html` files which have only "content" in them. Meaning the contents of the page in question. A simple method of adding new pages and managing the organization of those pages into a simple hierarchy (outline). Support for multiple mini web sites so that you can write a lot about different topics. HAXcms is only intended to be a micro-site generator and play nicely with the rest of the HAX ecosystem without needing a monster CMS in order to utilize it.
+
+## Usage
+Go to `yoursite.com` and login with the username and password you entered in the `_config/config.php` by clicking on the login icon
+
+## Windows
+[Cygwin command line](https://www.cygwin.com/) is lightly tested, but slower than true Bash environment.
+
+### Windows Install
+To properly configure git endlines for Windows, run this configuration
+```bash
+$ git config --global core.autocrlf true
+```
+### Fedora (31/32) Troubleshooting
+Newer versions of Fedora use cgroupsv2 which is currently not supported by Docker. 
+To avoid a cgroup error before running HAX locally (e.g. before using "ddev start" or "fin init") run the following commands.
+```bash
+sudo mkdir /sys/fs/cgroup/systemd
+sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
+```
+## Testing
+
+This repo has a DDEV-based end-to-end test suite (browser-driven via puppeteer-core + system Chrome) ported from `haxcms-nodejs/test/e2e`. It covers login, create-site, archive-site, edit-content, export-site, and page-management flows against the PHP backend served by DDEV.
+
+```bash
+npm install          # devDependencies (puppeteer-core, sharp, axe-core, pixelmatch, pngjs, fs-extra, axios)
+ddev start           # seeds admin/admin via the post-start hook
+npm run test:e2e     # serialized (tests share one DDEV instance + fixed site name)
+```
+
+See [`test/e2e/README.md`](test/e2e/README.md) for full details, including the **PHP-specific `/sites/` vs `/_sites/` editor base path difference** (PHP dynamically picks `sitesDirectory='sites'` via the `/sites` symlink; NodeJS hardcodes `'_sites'`) — the key porting difference that affects editor-flow tests.
+
+## MCP and deployment profiles
+- MCP policy defaults are controlled via `_config/config.json`.
+- New installs include:
+  - `deploymentProfile`: `single-site`, `self-hosted-multi-site`, or `haxiam-managed`
+  - `mcp.enabled`: global MCP toggle
+  - `mcp.readOnly`: write-protection toggle for future MCP write tools
+- Default behavior:
+  - `haxiam-managed` defaults MCP to disabled unless explicitly enabled.
+  - Other profiles default to MCP enabled with read-only mode on.
+# Get Help / Issues / Support
+- Discord Channel - https://discord.gg/aCGxmRHEJP
+- Unified issue queue - https://github.com/haxtheweb/issues/issues
+- Using Merlin directly in any HAX spaces and type "Issue" to jump start a report!
+
+## Watch and Learn more about HAX here:
+- Try Hax: https://hax.cloud
+- HAXCellence https://haxtheweb.org/what-is-hax
+- Youtube channel - https://www.youtube.com/@haxtheweb
+
+# Related links and tech
+- [NPM Package list](https://www.npmjs.com/org/haxtheweb)
+- [HAXcms (NodeJS)](https://github.com/haxtheweb/haxcms-nodejs)
+- [HAXcms (PHP)](https://github.com/haxtheweb/haxcms-php)
+- [Storybook docs](https://open-apis.hax.cloud/)
+- [HAX [dot] PSU](https://hax.psu.edu)
+- [HAX doc site](https://haxtheweb.org/)
+- [HAX + 11ty](https://github.com/haxtheweb/hax11ty)
+
+
+![HAX Traveler: World Changer](https://raw.githubusercontent.com/haxtheweb/art/refs/heads/main/haxtheweb/hax-traveler-world-changer.jpg)

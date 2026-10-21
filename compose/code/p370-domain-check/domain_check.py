@@ -76,6 +76,14 @@ STRONG_SUBSTRING = (
     "moodle", "openedx", "open edx", "brightspace", "schoology", "powerschool",
     "oneroster", "scorm", "ellucian", "chamilo", "blackboard", "edx-platform",
     "learnworlds", "gradebook", "edufi", "edtech", "mooc",
+    # 🔴 D5 (p371, OUT OF SAMPLE): two foundations whose entire output is education
+    # software, and whose repositories therefore carry no other education token.
+    # `Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy` was called a TRAP on a
+    # README that says only *"a framework for displaying visualizations called cards"* —
+    # Apereo is Sakai's and uPortal's foundation. `Kennisnet/phpEdurepSearch` likewise:
+    # Kennisnet is the DUTCH NATIONAL EDUCATION ICT FOUNDATION and Edurep is its
+    # learning-resource repository.
+    "apereo", "kennisnet", "edurep", "nllom", "learnr",
 )
 
 #: Domain terms that need a word boundary — `lms` must not match `films`, `qti` must
@@ -100,6 +108,42 @@ STRONG_WORD = (
     "profesor", "professor", "学生", "学校", "教育", "授業", "학생", "학교",
     "छात्र", "विद्यालय", "शिक्षा", "طالب", "مدرسة", "öğrenci", "okul",
     "siswa", "sekolah", "học sinh", "trường học", "นักเรียน", "โรงเรียน",
+    # ───────────────────────────────────────────────────────────────────────────────
+    # 🔴 D5 (p371): THE CREDENTIALING, OER AND CURRICULUM-STANDARDS LAYER WAS ABSENT.
+    # `p370`'s in-sample recall was 92.6 %; `p371` ran this instrument out of sample on
+    # 1 859 addresses and hand-adjudicated a seeded sample of 40. **All 8 errors fell in
+    # two classes and neither was tutoring.** Every term below was then read out of the
+    # payload that the instrument had misjudged, never guessed:
+    #
+    #   opensalt/OB3DefinitionWidget        NOT-EDUCATION → "open badge", "achievement"
+    #   impierce/credential-converter       NOT-EDUCATION → "openbadges", "europass"
+    #   digitalcredentials/verifier-plus    WEAK          → "verifiable credential"
+    #   sci-oer/automated-builder           NOT-EDUCATION → "oer"
+    #   jp-cos/jp-cos.github.io             WEAK          → "course of study", "mext",
+    #                                                       "ministry of education",
+    #                                                       "学習指導要領"
+    #   showlab/Code2Video                  WEAK          → "educational video"
+    #   OpenIntroStat/ims-tutorials         SLUG-TRAP     → "learnr"
+    #   sumeedu/bancodeitinerarios          SLUG-TRAP     → "itinerários formativos",
+    #                                                       "instituições de ensino"
+    #   rohit-dev45/programming-tutor-agent SLUG-TRAP     → "tutor agent"
+    #
+    # 🟡 Deliberately NOT added, because each is ambiguous outside education and would
+    # buy recall with precision: bare "elm" (a programming language), bare "clr" (the
+    # .NET runtime), bare "lesson" ("lessons learned" is everywhere) and bare "lom".
+    "open badge", "open badges", "openbadges", "verifiable credential",
+    "verifiable credentials", "micro-credential", "microcredential",
+    "digital credential", "comprehensive learner record", "learner record",
+    "europass", "european learner model", "open educational resource",
+    "open educational resources", "oer", "learning object metadata",
+    "course of study", "学習指導要領", "mext", "ministry of education",
+    "ministerio de educación", "ministério da educação", "educational video",
+    "courseware", "course material", "course materials",
+    "itinerário formativo", "itinerários formativos", "itinerarios formativos",
+    "instituições de ensino", "instituciones educativas", "materiais educacionais",
+    "secretarias educacionais", "secretaria de educação",
+    "ai tutor", "tutor agent", "programming tutor", "math tutor", "tutoring system",
+    "study assistant", "homework",
 )
 
 #: Terms consistent with education but common elsewhere. Two are needed, and only
@@ -119,6 +163,8 @@ SLUG_TOKENS = (
     "schoology", "classroom", "quiz", "grade", "exam", "academic", "khanacademy",
     "ncert", "cbse", "bncc", "udir", "skolverket", "escolar", "aluno", "alumno",
     "pedago", "campus", "curricul", "academy",
+    # D5 (p371): the classes the out-of-sample run showed were missing
+    "oer", "credential", "badge", "itinerario", "itinerário", "ensino", "apereo",
 )
 
 #: >= this many distinct weak anchors, on the weak-only path (defect D1).

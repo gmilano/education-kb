@@ -1,0 +1,145 @@
+# Student Tutor (TAagent)
+
+Personalized tutoring backend for the Cursor Student Build Challenge.
+
+> Most AI tutors remember the conversation. **This system remembers the student.**
+
+**Language / region:** American English (`en-US`). Grok Bot owns explanation and
+open-ended grading. Local Qwen models own embedding, reranking, and optional
+ingestion-time graph extraction. OCR is not part of the MVP.
+
+## Spec Kit
+
+| Artifact | Path |
+|----------|------|
+| Constitution | [`.specify/memory/constitution.md`](.specify/memory/constitution.md) |
+| Spec | [`specs/001-student-tutor/spec.md`](specs/001-student-tutor/spec.md) |
+| Plan | [`specs/001-student-tutor/plan.md`](specs/001-student-tutor/plan.md) |
+| Tasks | [`specs/001-student-tutor/tasks.md`](specs/001-student-tutor/tasks.md) |
+| Data model | [`specs/001-student-tutor/data-model.md`](specs/001-student-tutor/data-model.md) |
+| API contract | [`specs/001-student-tutor/contracts/api.md`](specs/001-student-tutor/contracts/api.md) |
+| Quickstart | [`specs/001-student-tutor/quickstart.md`](specs/001-student-tutor/quickstart.md) |
+| Research | [`specs/001-student-tutor/research.md`](specs/001-student-tutor/research.md) |
+
+## Architecture
+
+Student → FastAPI (`POST /ask`) → Tutor harness (LangGraph):
+
+1. Load Redis session  
+2. Load Postgres learner model  
+3. Parallel retrieval: Milvus (Qwen vector embeddings) ∥ Neo4j (course graph)  
+4. Coach teaching plan  
+5. Return a grounded handoff to Grok Bot  
+6. Grok explains, asks the check, and grades the open-ended response  
+7. `POST /observations` updates mastery  
+
+For Grok, the same FastAPI process also exposes a Streamable HTTP MCP endpoint
+at `/mcp`. MCP is the actual tool interface; the Markdown skill files tell Grok
+when and how to use those tools.
+
+**Never expose** Redis / Postgres / Milvus / Neo4j to the public internet. Only tunnel FastAPI.
+
+## Quick start (stub mode — no Docker)
+
+```powershell
+cd industry-level-RAG-Agent\TAagent
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -e ".[dev,local-models]"
+$env:USE_STUB_STORES="true"
+$env:EMBEDDING_PROVIDER="mock"
+$env:RERANKER_PROVIDER="none"
+pytest -q
+python scripts\demo_loop.py
+uvicorn backend.main:app --host 0.0.0.0 --port 8000
+```
+
+The `X-API-Key` is owner-only. During a configured competition window, unknown
+judges can obtain isolated 72-hour-or-deadline guest tokens automatically;
+see [`deploy/README.md`](deploy/README.md).
+
+## Full stack (Docker)
+
+Requires **Docker Desktop running** on Windows.
+
+```powershell
+copy .env.example .env
+# set USE_STUB_STORES=false in .env
+docker compose up -d
+# wait until milvus/neo4j healthy (milvus start_period ~90s)
+pip install -e ".[dev,local-models]"
+python scripts\seed_and_ingest.py
+uvicorn backend.main:app --port 8000
+```
+
+Pause compute: `docker compose stop` · Resume: `docker compose start`
+
+If `docker compose` fails with `dockerDesktopLinuxEngine` pipe errors, start Docker Desktop first.
+
+## Free local retrieval models
+
+The competition configuration uses `Qwen/Qwen3-Embedding-0.6B` locally through
+SentenceTransformers and truncates its Matryoshka vector to 384 dimensions.
+No embedding API key is required. The first run downloads the model weights.
+
+`Qwen/Qwen3-Reranker-0.6B` reranks the Milvus candidate set. The competition
+configuration enables it. On low-memory machines, set `RERANKER_PROVIDER=none`;
+embedding retrieval still works without it.
+
+The deployed graph path uses `GRAPH_EXTRACTION_PROVIDER=qwen`. It loads
+`Qwen/Qwen3-4B` lazily during ingestion, validates model JSON against a fixed
+relationship vocabulary, attaches source provenance, and retains deterministic
+rules only as a safe per-chunk fallback if model extraction fails.
+
+When switching embedding models, re-ingest every document. Never mix vectors
+from different models in one Milvus collection. The sample configuration uses
+the new `lecture_chunks_qwen_v1` collection so legacy mock vectors stay separate.
+
+## Key endpoints
+
+| Method | Path | Purpose |
+|--------|------|---------|
+| GET | `/health` | Dependency health |
+| POST | `/auth/access-tokens` | Owner-only: mint scoped judge token |
+| POST | `/auth/demo-session` | Public-window bootstrap: isolated guest token |
+| POST | `/ask` | Full harness tutoring turn |
+| GET | `/students/{id}/model` | Learner model |
+| POST | `/students/{id}/observations` | Mastery / vocab updates |
+| POST | `/knowledge/search` | Parallel Milvus+Neo4j evidence |
+| POST | `/courses/{id}/ingest` | Upload PDF/Markdown/text; index chunks + graph |
+| MCP | `/mcp` | Grok Custom Connector with seven TAagent tools |
+
+## Demo target
+
+Initial mastery: Pipeline 91% · Control Hazard 58% · Branch Prediction 22%  
+After a correct comprehension check, mastery rises and the next explanation adapts.
+
+## Grok Bot (competition UI)
+
+Bot profiles + skills live in [`grok-bots/`](grok-bots/README.md) and [`.grok/skills/`](.grok/skills/).
+
+1. Start Docker + API  
+2. Publish HTTPS with a stable Cloudflare Tunnel  
+3. Add `https://<hostname>/mcp` as a Grok Custom Connector  
+4. Create one Tutor Bot; paste `grok-bots/profiles/tutor.md`  
+5. Enable `guest-session`, `tutor-ask`, `course-ingest`, and `observe-learning` skills  
+6. Attach a lecture to @Tutor or ask it a course question  
+
+Grok Bot is the only explainer and open-ended grader. The backend KnowledgeAgent
+owns retrieval; the other logical agents stay internal. `/ask` returns
+`generation_owner=grok_bot`, an empty `answer`, and a grounded handoff containing
+the teaching plan, evidence, graph context, learner context, and instructions.
+Full checklist: [`grok-bots/README.md`](grok-bots/README.md).
+
+## Public judge safety
+
+- Bearer tokens are HMAC-signed, expire automatically, and carry explicit scopes.
+- Guest tokens expire at the earlier of 72 hours or the configured competition deadline.
+- Student ids, sessions, and uploaded course ids are namespaced per token.
+- Prebuilt courses can be allow-listed as read-only when a token is minted.
+- Uploads are capped at 25 MiB by default and read in bounded chunks.
+- Redis enforces per-user upload limits and a global ingestion lock.
+- Redis also rate-limits guest-session creation and authenticated questions.
+- Milvus restores the previous vectors if replacement fails; Neo4j replaces a
+  document in one transaction.
+- All Docker database ports bind to `127.0.0.1`, not public interfaces.

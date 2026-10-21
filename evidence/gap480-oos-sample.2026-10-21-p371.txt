@@ -1,0 +1,120 @@
+### lengelhardt/bb-offline-interactive-dashboard	EDUCATION	terms=blackboard
+# Offline Interactive Dashboard & Downloader for Blackboard A local tool **for faculty** that downloads the student submissions from your Blackboard courses and builds an interactive HTML dashboard each morning: who submitted, who's late, who's missing — with the actual files (code, notebooks, plots
+
+### pie-framework/pie-qti	EDUCATION	terms=qti;rubric
+# PIE-QTI ![QTI 2.1, 2.2 & 3.0 Coverage](https://img.shields.io/badge/QTI%202.1%2C%202.2%20%26%203.0-Partial-orange) ![Interactions](https://img.shields.io/badge/Interaction%20extractors-21-blue) ![Tests](https://img.shields.io/badge/Tests-2700%2B-success) ![Accessibility](https://img.shields.io/bad
+
+### peopleworks/SignsofAI	EDUCATION	terms=classroom;syllabus;teacher
+# ✍︎ Signs of AI Writing [![Live demo](https://img.shields.io/badge/demo-live-brightgreen?logo=googlechrome&logoColor=white)](https://peopleworks.github.io/SignsofAI/) [![Windows app](https://img.shields.io/github/v/release/peopleworks/SignsofAI?filter=desktop-v*&label=Windows%20app&logo=windows&log
+
+### CAHLR/OATutor-AI-Feedback-Experiment	EDUCATION	terms=intelligent tutoring;knowledge tracing;lesson plan;lms;lti;s
+# OATutor OATutor is an Open-source Adaptive Tutoring System (OAT) based on Intelligent Tutoring System principles. It uses Bayesian Knowledge Tracing for skill mastery estimation and is implemented entirely in React JS with optional logging using [Firebase](https://firebase.google.com/). The system
+
+### iblai/higher-education-agents	EDUCATION	terms=canvas lms;ellucian;higher education;learning analytics;lms;
+<div align="center"> <a href="https://ibl.ai"><img src="https://ibl.ai/images/iblai-logo.png" alt="ibl.ai" width="300"></a> # Higher Education Agents Drop-in [OpenClaw](https://github.com/iblai/iblai-claw-setup) / [NemoClaw](https://github.com/NVIDIA/NemoClaw) agent configuration for the [ibl.ai](ht
+
+### ljchang/marimo-grader	EDUCATION	terms=gradebook
+# marimo-grader **Documentation:** https://marimograder.org/ — including a [live demo assignment](https://marimograder.org/demo/try-an-assignment/) that runs in the browser. The documentation and the [DartBrains](https://dartbrains.org) course book are built with [marimo-book](https://marimobook.org
+
+### AnubisLMS/Anubis	EDUCATION	terms=learning management;lms;professor
+<p align="center"> <a href="https://about.anubis-lms.io/"> <img alt="Anubis" src="https://raw.githubusercontent.com/AnubisLMS/Anubis/master/docs/design-tex/figures/anubis-icon-1.png" width="300" /> </a> </p> <div align="center"> <h1>Anubis LMS</h1> <p> Distributed LMS for automating Computing Scienc
+
+### GIGAyama/Digital_textbook	EDUCATION	terms=school;学校;授業;教育
+# 📚 教材プリントメーカー > ### ⚠️ 名称についての大事なお知らせ > **本アプリは、学校教育法第34条第2項に定める「学習者用デジタル教科書」ではありません。教科書発行者とは関係のない、個人が作成した教材ビューアです。** > 「デジタル教科書」は、検定教科書と結びついた制度上の呼び名です。本アプリは手元のPDF（自作プリントなど）に書き込むためだけの道具なので、制度上のデジタル教科書としては使えません。 > リポジトリ名（`Digital_textbook`）と公開URL（`digital-textbook.giga-school.com`）は経緯からそのままですが、**アプリ
+
+### Zemmeng/claude-study-system	EDUCATION	terms=transcript;学校;学生
+<div align="center"> <img src="docs/assets/banner.svg" alt="claude-study-system —— 让 Claude Code 带着你一页一页学课件" width="100%"> <br> [![License: MIT](https://img.shields.io/badge/license-MIT-0969da.svg)](LICENSE) [![Claude Code](https://img.shields.io/badge/Claude_Code-hooks_%2B_slash_commands-cc785c.svg
+
+### grantholle/powerschool-api	EDUCATION	terms=powerschool;school
+# PowerSchool API Taking inspiration from Laravel's database and Eloquent `Builder` class, this allows you to make api requests against PowerSchool very fluently and naturally. It handles token authentication automatically, so you can just worry about writing the requests and not the boilerplate. Th
+
+### openedx/credentials	EDUCATION	terms=edx-platform;open edx;openedx
+============================ Open edX Credentials Service ============================ | |status-badge| |license-badge| |CI| |Codecov| .. |CI| image:: https://github.com/openedx/credentials/actions/workflows/ci.yml/badge.svg :target: https://github.com/openedx/credentials/actions?query=workflow%3ACI
+
+### 3iPunt/wordpress-lti-1-3	EDUCATION	terms=gradebook;lms;lti
+# Wordpress-lti-1-3 This is an implementation of LTI 1.3 Advantage on Wordpress This code was developed during the IMS Europe Summit 2018 thanks to [James Rissler](https://github.com/jrissler) and [Martin Lenord](https://github.com/MartinLenord). We are using the PHP Library [https://github.com/IMSG
+
+### commonstandardsproject/api	EDUCATION	terms=classroom;curriculum;edtech;gradebook;k-12;k12
+[![Common Standards Project Homepage](https://cl.ly/3U43401V0P2o/download/Screen%20Shot%202016-08-19%20at%205.02.51%20PM.png)](http://commonstandardsproject.com) ## What is this? API for the Common Standards Project, a database of academic standards from all 50 states, organizations, districts, and 
+
+### DanielG0798/CourseGuide-AI	EDUCATION	terms=higher education
+# CourseGuide AI **Team:** instruct.ai **Course:** CEN 4930 — AI Agent Studio, Fall 2026 **Institution:** Florida Gulf Coast University (FGCU) An instructor-configurable AI learning agent for higher education. CourseGuide AI helps students reason through course-specific assignments according to inst
+
+### gazpachu/hypatia	EDUCATION	terms=lms;mooc
+# Hypatia. A JavaScript open source LMS (eLearning platform) for MOOCs and online courses [![Build Status](https://travis-ci.org/gazpachu/hypatia?branch=master)](https://travis-ci.org/gazpachu/hypatia) [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/l
+
+### stanfordnlp/edu-convokit	EDUCATION	terms=teacher;transcript
+<p align="center"> <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/full_logo.png" width="500"/> </p> <h1><img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/logo.png" height="30" /> Edu-ConvoKit: An Open-Source Framework for Education C
+
+### Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	SLUG-TRAP	terms=-
+OpenDashboard ============================ A web application that provides a framework for displaying visualizations and data views called "cards". Cards represent a single discrete visualization or data view but share an API and data model. **********************************************************
+
+### Kennisnet/phpEdurepSearch	SLUG-TRAP	terms=-
+# phpEdurepSearch This is a PHP package for searching with the Edurep or Edurep CatalogService search engines. In Edurep you can search in NLLOM metadata records, where you can search in CatalogService Entry metadata records in the CatalogService. Detailed API instructions for the respective service
+
+### chrisliu298/awesome-llm-unlearning	SLUG-TRAP	terms=-
+# 🧹 Awesome LLM Unlearning <p align="center"> <a href="https://awesome.re"><img src="https://img.shields.io/badge/Awesome-%F0%9F%A7%B9_LLM_Unlearning-000000?style=for-the-badge&labelColor=000000" alt="Awesome LLM Unlearning"></a> <a href="https://github.com/chrisliu298/awesome-llm-unlearning/stargaz
+
+### rohit-dev45/programming-tutor-agent	SLUG-TRAP	terms=-
+<p align="center"> <img src="docs/UD9Eh%20(2).jpg" alt="Programming Tutor Agent — LangChain · MCP" width="100%" /> </p> # AI Tutor Agent Python programming tutor built with LangChain, Gemini, and MCP tools. The agent answers coding questions. When a question needs a check (palindrome, prime, Fibonac
+
+### anthropics/prompt-eng-interactive-tutorial	SLUG-TRAP	terms=-
+# Welcome to Anthropic's Prompt Engineering Interactive Tutorial ## Course introduction and goals This course is intended to provide you with a comprehensive step-by-step understanding of how to engineer optimal prompts within Claude. **After completing this course, you will be able to**: - Master t
+
+### OpenIntroStat/ims-tutorials	SLUG-TRAP	terms=-
+# OpenIntro::Introduction to Modern Statistics Tutorials Learnr tutorials supporting [OpenIntro::Introduction to Modern Statistics](https://openintro-ims.netlify.app/). Each tutorial corresponds to one part of the book and is comprised of multiple lessons for a total of 35 lessons that cover the ent
+
+### xapi-labs/xapi-cli	SLUG-TRAP	terms=-
+# xapi-to Agent-friendly command-line interface for [xAPI](https://xapi.to) — discover and call capabilities and APIs from your terminal or AI agent. ## Installation ```bash # Via npx (no install needed) npx xapi-to --help # Or install globally with npm npm install -g xapi-to # Or from source cd xap
+
+### musmax/school-ease	SLUG-TRAP	terms=-
+# passgrade-backend
+
+### sumeedu/bancodeitinerarios	SLUG-TRAP	terms=-
+<!--suppress HtmlDeprecatedAttribute --> <h1 align="center">Banco de Itinerários</h1> <p align="center"> <a href="http://commitizen.github.io/cz-cli/"> <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"> </a> <img alt="GitHub" src="https://img.shiel
+
+### maxew6/ai-tutor-project	SLUG-TRAP	terms=-
+
+
+### latam-gpt/syco-bench	NOT-EDUCATION	terms=-
+# Syco-Bench: A Benchmark for Assessing Model Sycophancy Syco-Bench is a benchmark for evaluating model sycophancy across different language models. It currently consists of four distinct tests designed to measure how models adapt their responses based on user input and preferences, and how they han
+
+### UniversalDependencies/UD_Portuguese-CINTIL	NOT-EDUCATION	terms=-
+# Summary CINTIL-UDep is a dependency bank of Portuguese that is treebanked with Universal Dependencies. It contains over 38K annotated sentences (and 476K tokens), of mostly newspaper text. # Introduction CINTIL-UDep is a dependency bank of Portuguese with 38,400 sentences (and nearly 476,000 token
+
+### opensalt/OB3DefinitionWidget	NOT-EDUCATION	terms=-
+Open Badge v3 Definition Widget =============================== This widget provides a simple form to create an Open Badge v3 achievement definition. Usage ----- The widget can be added to an HTML page by 1. adding a div element as a placeholder (*ob3-definer* is the default id looked for) 2. includ
+
+### impierce/credential-converter	NOT-EDUCATION	terms=-
+# ELM - OpenBadges v3 Mapper ## Overview This project is a [Rust](https://www.rust-lang.org/)-based application that converts JSON files written in the [OpenBadges v3](https://www.imsglobal.org/spec/ob/v3p0) standard to the [ELM](https://europass.europa.eu/en/node/2128) standard and vice versa. The 
+
+### auth0/node-jsonwebtoken	NOT-EDUCATION	terms=-
+# jsonwebtoken | **Build** | **Dependency** | |-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------
+
+### caiuc/equipo-8-haCAIthon-2026	NOT-EDUCATION	terms=-
+# 🚌 Trasporte Chile (DaaS) > **Infraestructura comunitaria de datos abiertos de transporte para democratizar la movilidad en regiones.** [![License: AGPL v3] pendiente --- ## 📌 Visión & Misión En Chile, la brecha de información de transporte entre la capital y las regiones es crítica. Mientras Santi
+
+### sci-oer/automated-builder	NOT-EDUCATION	terms=-
+# Automated SCI-OER Image Builder [![Deployment](https://github.com/sci-oer/automated-builder/actions/workflows/deployment.yml/badge.svg)](https://github.com/sci-oer/automated-builder/actions/workflows/deployment.yml) ![GitHub](https://img.shields.io/github/license/sci-oer/automated-builder?style=pl
+
+### idiap/coqui-ai-TTS	NOT-EDUCATION	terms=-
+# <img src="https://raw.githubusercontent.com/idiap/coqui-ai-TTS/main/images/coqui-log-green-TTS.png" height="56"/> **🐸 Coqui TTS is a library for advanced Text-to-Speech generation.** 🚀 Pretrained models in +1100 languages. 🛠️ Tools for training new models and fine-tuning existing models in any lan
+
+### spatialaudio/data-driven-audio-signal-processing-lecture	WEAK	terms=-
+# Data Driven Audio Signal Processing This repository collects supplementary materials to the master's course Selected Topics in Audio Signal Processing given by [Sascha Spors](http://www.int.uni-rostock.de/Staff-Info.23+B6JmNIYXNoPWUxOTliMTNjY2U2MDcyZjJiZTI0YTc4MmFkYTE5NjQzJnR4X2pwc3RhZmZfcGkxJTVCY
+
+### jp-cos/jp-cos.github.io	WEAK	terms=-
+## Japanese Course of Study LOD (学習指導要領LOD) [![DOI](https://zenodo.org/badge/392285422.svg)](https://zenodo.org/badge/latestdoi/392285422) This repository provides a structured dataset derived from an open data released by Ministry of Education, Culture, Sports and Technology (MEXT). This dataset is
+
+### showlab/Code2Video	WEAK	terms=-
+# Code2Video: Video Generation via Code <p align="right"> <b>English</b> | <a href="./README.zh-CN.md">简体中文</a> </p> <p align="center"> <b>Code2Video: A Code-centric Paradigm for Educational Video Generation</b> <br> 以代码为中心的教学视频生成新范式 </p> <video src="assets/video.mp4" width="600" controls> Your brow
+
+### digitalcredentials/verifier-plus	WEAK	terms=-
+# verifier-plus verifier-plus is a [Next.js](https://nextjs.org/) application providing two related, but fundamentally separate services: * ***Credential Verification and Display*** - A web page for viewing and verifying [Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/). * ***Online
+
+### mlx-cassio/awesome-eu-ai-act	WEAK	terms=-
+# Awesome EU AI Act [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) > EU regulation governing the development and deployment of artificial intelligence systems, establishing a risk-based compliance framework with phased implementation timelines. --- ## Contents - [Official EU Sources]
+
+### WangyiNTU/nanobot-study	WEAK	terms=-
+<div align="center"> <pre> _ _ _ _ __ __ _ _ __ ___ | |__ ___ | |_ | '_ \ / _` | '_ \ / _ \| '_ \ / _ \| __| | | | | (_| | | | | (_) | |_) | (_) | |_ |_| |_|\__,_|_| |_|\___/|_.__/ \___/ \__| </pre> <h1>nanobot: 3-day Study Repository</h1> <p> <a href="./README_cn.md" style="font-size: 1.2em; border
+

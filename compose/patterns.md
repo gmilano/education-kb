@@ -453,6 +453,84 @@ the client's own students. 🔵 **And it is a budget conversation the client is 
 having:** the money is currently committed to a detection line item that their own
 academic board is moving away from.
 
+## 🆕 Pattern 14 — A credential a regulator will accept, assembled from the standards bodies' own code
+
+**Problem.** A client — a university, a ministry skills programme or a corporate academy —
+wants to issue digital credentials that a third party can verify, and wants them to still
+verify in five years. Their procurement will not accept a proprietary badge platform, and
+their legal team will not accept a copyleft obligation on the issuing service.
+
+**Why this pattern did not exist here until `p371`.** 🔴 §6 of
+[`intel/trends.md`](../intel/trends.md) has called credentials *"the skills-based hiring
+substrate"* since early in this base's life, and these shelves carried almost no
+credentialing rows — because the instrument that decides what may be shelved had no word
+for `open badge` or `verifiable credential`. The out-of-sample run that found the gap is in
+[`agents/trending.md`](../agents/trending.md); the tier it produced is on
+[`agents/top.md`](../agents/top.md).
+
+**Recipe.**
+1. **Validate against the standard before writing an issuer.** [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) (Apache-2.0, `HEAD/LICENSE` @ `6bf38234c7cb`) is the **standards body's own** validator, and [`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core) (Apache-2.0, `HEAD/LICENSE` @ `0a66b52a8a0b`) covers Open Badges. Run both in CI from day one: conformance is the deliverable, not a late check.
+2. **Issue and sign** with [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) (MIT, `HEAD/LICENSE` @ `6be5b41815b7`) over the data model in [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) (BSD-3-Clause, `HEAD/LICENSE` @ `15fb01872c49`), with subject identifiers resolved by [`digitalcredentials/did-io`](https://github.com/digitalcredentials/did-io) (BSD-3-Clause, `HEAD/LICENSE` @ `7040fac9167b`). 🔵 All three are **MIT Digital Credentials Consortium** code, which is the reference implementation a sceptical registrar is most likely to already know.
+3. **Verify in the browser, with no backend**, using [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) (MIT, `HEAD/LICENSE.md` @ `e86bb791f7c5`), and give the client something to look at on day three with [`digitalcredentials/verifier-plus`](https://github.com/digitalcredentials/verifier-plus) (MIT, `HEAD/LICENSE` @ `2378d988ab2b`).
+4. **Bind each credential to a competency**, not a course title, with [`cassproject/CASS`](https://github.com/cassproject/CASS) (Apache-2.0, `HEAD/LICENSE` @ `30929d303659`) — the competency-and-standards framework store. This is what makes the credential mean something to an employer.
+5. **Where immutability is a procurement requirement**, anchor with [`blockchain-certificates/cert-issuer`](https://github.com/blockchain-certificates/cert-issuer) (MIT, `HEAD/LICENSE` @ `199cd8be7c1d`) rather than building it; treat it as optional and justify the cost.
+6. **For an EMEA client, map to the European Learner Model** with [`impierce/credential-converter`](https://github.com/impierce/credential-converter) (OpenBadges v3 ↔ ELM/Europass). 🔴 **Do NOT cite [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) as a live dependency** — its README's first line is *"Archived Repository — no longer updated."* The model is live; that repository is not.
+
+🟢 **Licence boundary:** every component is MIT, Apache-2.0 or BSD-3-Clause, so the issuing
+service can ship closed. 🔴 **The diligence step that is not optional:** 235 of the 1 859
+addresses graded at `p371` carry **no licence file at all**, and the credentialing class is
+no cleaner than the rest — check the payload, at a pin, before any address enters the build.
+
+**Effort.** 6–8 weeks to a conformant issuing and verification service with competency
+binding; add 2–3 weeks for the ELM mapping on an EMEA engagement.
+
+---
+
+## 🆕 Pattern 15 — A LATAM university engagement that integrates the incumbent the client actually runs
+
+**Problem.** A Brazilian or Argentine university wants AI support for students —
+advising, timetable help, progress and risk signals. The proposal template says "integrate
+with the LMS and the SIS."
+
+**🔴 The mis-specification this pattern exists to prevent.** `p370` graded the
+incumbent-LMS bridge class and reached ten platforms: Moodle, Canvas, Blackboard Learn,
+D2L Brightspace, Schoology, PowerSchool, Ellucian Banner, Khan Academy, India's NCERT and
+Norway's UDIR. **Every one is North American, European or Asian software.** 🔴 **Brazilian
+federal universities run `SIGAA`. Argentine national universities run `SIU-Guaraní`.
+Neither appears in that table, and neither has a published API contract on these shelves.**
+A proposal that budgets a Canvas or Banner connector for a LATAM higher-education client
+has specified the wrong incumbent before any licence question arises.
+
+**Recipe.**
+1. **Start from the three permissive reaches that exist**, and size them honestly as
+   starting points rather than platforms: [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) (MIT, `HEAD/LICENSE` @ `6962638adbdd`, placed on `documentacion.siu.edu.ar`) for SIU-Guaraní; [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) (MIT, `HEAD/LICENSE` @ `7373c6abac62`, `sigaa.ufpb.br`) and [`luthierycosta/ConsertandoHorariosSIGAA`](https://github.com/luthierycosta/ConsertandoHorariosSIGAA) (MIT, `HEAD/LICENSE` @ `5a6106ed9ce2`, `unb.br`) for SIGAA. 🟡 **8, 8 and 42 refs** — read them as documentation of the integration surface, not as libraries to depend on.
+2. **Budget the connector as discovery work**, because it is. Scope a two-week spike to
+   establish what each installation exposes before committing to an integration estimate;
+   `SIGAA` is deployed per-university and the surface differs between them.
+3. **Ground the pedagogy in the regional corpus**, not a translated US one:
+   [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (MIT, `HEAD/LICENSE` @ `21a43a395ab4`, sourced from Chilean teacher-training material)
+   gives a measurable baseline, and the BNCC alignment path is Pattern 2.
+4. **Add the public-data layer the region does publish openly**:
+   [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) (MIT, `HEAD/LICENSE` @
+   `2efb258370b1`) for Brazilian federal open data and
+   [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, `HEAD/LICENSE` @
+   `940a63783461`) for Chile's. 🟢 This is where LATAM supply is genuinely strong.
+5. **Keep the compliance surface explicit.** 🔴 **Brazil's PL 2338 is still a bill**; the
+   binding instrument is **LGPD**, and Brazil's AI regulatory sandbox runs to **December
+   2026**. Design for LGPD now and for the framework later.
+
+🟢 **Licence boundary:** every component named is MIT. 🔵 **The deliverable that makes this
+engagement defensible** is the integration specification for the client's own SIGAA or
+SIU-Guaraní installation — on this base's evidence, nobody has published one, which makes
+it an asset rather than overhead.
+
+**Effort.** 2 weeks of integration-surface discovery, then 8–10 weeks to a grounded
+advising assistant against one installation. 🟡 Do not quote a fixed connector price before
+the spike.
+
+---
+
 ## 🆕 Pattern 13 — A statutory inclusion deliverable for a Colombian school system
 
 🔵 **The shape that makes this different from every other pattern on this file:** it is

@@ -19,6 +19,32 @@
 # `probe.sh` — so `STANDING:SINGLE-SPELLING` returns to 17 and no other bound moves.  The floor
 # is MIN 1 so a later pass cannot quietly delete the arm and send that row back to a spurious
 # `SINGLE-SPELLING`.
+# p371 — `STANDING:SINGLE-SPELLING` 17 -> 18, and the reason, because this file's own
+# header says a ratchet that cannot carry the reason for its numbers is useless and that
+# bumping a number is what eight passes were trained to do.
+#
+# WHAT WAS ADDED: `compose/code/p371-backlog-grade/build_backlog.py`, which derives
+# `Gap 477`'s backlog from the shelves and stands in `make hooks` as
+# `gate-backlog-denominator`.  Its only path-family literal is the token `readme` inside
+# `NOT_AN_OWNER` — GitHub's reserved first-path-segments, which the address-shape
+# predicate rejects.  The instrument NEVER probes a tree and never decides that a file is
+# absent, which is this audit's own scope sentence for when a ladder is a finding:
+# "a ladder is only a finding when the instrument uses it to decide that a file is ABSENT."
+#
+# TWO CHEAPER OPTIONS WERE CONSIDERED AND REJECTED, recorded so the next pass does not
+# re-derive them:
+#   1. Put a `.lower()` beside the token to earn `FOLD-ON-PATH`.  🔴 Refused: the
+#      membership test IS folded, but not within this audit's two-line window, and moving
+#      a fold next to vocabulary to flip a grade is exactly the overclaim `_near`'s
+#      docstring was written to stop.
+#   2. Delete the `readme` token.  🔴 Refused: measured 0 occurrences of
+#      `github.com/readme/` in this corpus today, but the ReadME Project publishes
+#      `/readme/stories/<name>`, which this base's slug regex WOULD harvest as
+#      `readme/stories`.  A guard that currently fires on nothing is still a guard.
+# 🟢 What WAS done instead: the instrument now IMPORTS `p235`'s committed `SHELVES` list
+# rather than restating it, which removed the file's second readme-family spelling
+# (`README.md`) and took the row from `STEM-ONLY` to `SINGLE-SPELLING` — a real
+# improvement, and the reason `STANDING:STEM-ONLY` stays at 3.
 verdict	direction	bound
 IMPORTED-LADDER	MIN	1
 CASE-CLOSED	MIN	24
@@ -28,4 +54,4 @@ COMMENT-ONLY	MIN	143
 STANDING:CASE-CLOSED	MIN	8
 STANDING:CASE-UNVARIED	MAX	7
 STANDING:STEM-ONLY	MAX	3
-STANDING:SINGLE-SPELLING	MAX	17
+STANDING:SINGLE-SPELLING	MAX	18

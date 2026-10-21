@@ -1,0 +1,319 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/header-dark.svg">
+    <img src="assets/readme/header-light.svg" alt="AI Engineering from Scratch" width="840">
+  </picture>
+</p>
+
+<p align="center">
+ <a href="https://www.star-history.com/rohitg00/ai-engineering-from-scratch">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=rohitg00/ai-engineering-from-scratch&type=rank&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=rohitg00/ai-engineering-from-scratch&type=rank" /><img alt="Star History Rank" src="https://api.star-history.com/badge?repo=rohitg00/ai-engineering-from-scratch&type=rank" /></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=rohitg00/ai-engineering-from-scratch&type=trending&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=rohitg00/ai-engineering-from-scratch&type=trending" /><img alt="GitHub Trending Repository of the Day" src="https://api.star-history.com/badge?repo=rohitg00/ai-engineering-from-scratch&type=trending" /></picture>
+ </a>
+</p>
+
+Implement model internals, retrieval pipelines, and agent runtimes. Test them, inspect failures, and keep the code and evaluation results.
+
+**[Start learning](https://aiengineeringfromscratch.com/lesson?path=phases/00-setup-and-tooling/01-dev-environment)** · **[Choose a path](#learning-routes)** · **[Try a lab](#interactive-lab)** · **[Build a project](#project-challenges)** · **[Browse the curriculum](#contents)**
+
+Free, open source, MIT. Learn on the website, with a coding agent, or by running local code.
+
+> 542 lessons. 20 phases. Python, TypeScript, Rust, Julia.
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1a1a1a?style=flat-square&labelColor=fafaf5" alt="MIT License"></a>
+  <a href="ROADMAP.md"><img src="https://img.shields.io/badge/lessons-542-3553ff?style=flat-square&labelColor=fafaf5" alt="542 lessons"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/phases-20-3553ff?style=flat-square&labelColor=fafaf5" alt="20 phases"></a>
+  <a href="https://github.com/rohitg00/ai-engineering-from-scratch/stargazers"><img src="https://img.shields.io/github/stars/rohitg00/ai-engineering-from-scratch?style=flat-square&labelColor=fafaf5&color=3553ff" alt="GitHub stars"></a>
+  <a href="https://aiengineeringfromscratch.com"><img src="https://img.shields.io/badge/web-aiengineeringfromscratch.com-3553ff?style=flat-square&labelColor=fafaf5" alt="Website"></a>
+</p>
+
+<details>
+<summary>Read in your language</summary>
+
+<p align="center">
+  <a href="README.md">🇬🇧 English</a> ·
+  <a href="i18n/zh/README.md">🇨🇳 简体中文</a> ·
+  <a href="i18n/zh-TW/README.md">🇹🇼 繁體中文（台灣）</a> ·
+  <a href="i18n/ja/README.md">🇯🇵 日本語</a> ·
+  <a href="i18n/ko/README.md">🇰🇷 한국어</a> ·
+  <a href="i18n/pt/README.md">🇵🇹 Português</a> ·
+  <a href="i18n/pt-BR/README.md">🇧🇷 Português (Brasil)</a> ·
+  <a href="i18n/es/README.md">🇪🇸 Español</a> ·
+  <a href="i18n/de/README.md">🇩🇪 Deutsch</a> ·
+  <a href="i18n/fr/README.md">🇫🇷 Français</a> ·
+  <a href="i18n/it/README.md">🇮🇹 Italiano</a> ·
+  <a href="i18n/nl/README.md">🇳🇱 Nederlands</a> ·
+  <a href="i18n/pl/README.md">🇵🇱 Polski</a> ·
+  <a href="i18n/cs/README.md">🇨🇿 Čeština</a> ·
+  <a href="i18n/ro/README.md">🇷🇴 Română</a> ·
+  <a href="i18n/hu/README.md">🇭🇺 Magyar</a> ·
+  <a href="i18n/el/README.md">🇬🇷 Ελληνικά</a> ·
+  <a href="i18n/sv/README.md">🇸🇪 Svenska</a> ·
+  <a href="i18n/da/README.md">🇩🇰 Dansk</a> ·
+  <a href="i18n/no/README.md">🇳🇴 Norsk</a> ·
+  <a href="i18n/fi/README.md">🇫🇮 Suomi</a> ·
+  <a href="i18n/ru/README.md">🇷🇺 Русский</a> ·
+  <a href="i18n/uk/README.md">🇺🇦 Українська</a> ·
+  <a href="i18n/tr/README.md">🇹🇷 Türkçe</a> ·
+  <a href="i18n/he/README.md">🇮🇱 עברית</a> ·
+  <a href="i18n/ar/README.md">🇸🇦 العربية</a> ·
+  <a href="i18n/fa/README.md">🇮🇷 فارسی</a> ·
+  <a href="i18n/hi/README.md">🇮🇳 हिन्दी</a> ·
+  <a href="i18n/bn/README.md">🇧🇩 বাংলা</a> ·
+  <a href="i18n/ur/README.md">🇵🇰 اردو</a> ·
+  <a href="i18n/th/README.md">🇹🇭 ไทย</a> ·
+  <a href="i18n/vi/README.md">🇻🇳 Tiếng Việt</a> ·
+  <a href="i18n/id/README.md">🇮🇩 Bahasa Indonesia</a> ·
+  <a href="i18n/tl/README.md">🇵🇭 Tagalog</a>
+</p>
+
+</details>
+
+### Sponsors
+
+<p align="center">
+  <a href="https://serpapi.com/ai-engineering-from-scratch"><picture><source media="(min-width: 768px)" srcset="assets/sponsors/serpapi-banner-compact.png" width="48%"><img src="assets/sponsors/serpapi-banner-compact.png" alt="SerpApi. Web Search API for your AI apps. Available in Markdown and JSON for any integration." width="440"></picture></a>
+</p>
+
+<p align="center">
+  <sub><span>Your support keeps every lesson free and open source.</span> <a href="#supporters">See all supporters</a> · <a href="SPONSORS.md">Become a sponsor</a></sub>
+</p>
+
+<a id="see-what-you-will-build-and-keep"></a>
+<a id="learning-routes"></a>
+
+## Learning paths
+
+| Route | Starting lesson |
+|---|---|
+| Model foundations | [Setup and tooling](https://aiengineeringfromscratch.com/lesson?path=phases/00-setup-and-tooling/01-dev-environment) |
+| LLM systems | [Prompt engineering](https://aiengineeringfromscratch.com/lesson?path=phases/11-llm-engineering/01-prompt-engineering) |
+| Agents and delivery | [The agent loop](https://aiengineeringfromscratch.com/lesson?path=phases/14-agent-engineering/01-the-agent-loop) |
+
+[Compare career paths](https://aiengineeringfromscratch.com/learning-paths.html) · [Prerequisites and study time](#study-guide)
+
+<a id="interactive-lab"></a>
+
+### Gradient descent
+
+Twenty starting points follow gradient descent on a quadratic loss. The graph shows their positions and mean loss after each update.
+
+<p align="center">
+  <a href="https://aiengineeringfromscratch.com/lesson?path=phases/01-math-foundations/08-optimization#loss-landscape-visualization">
+    <picture>
+      <source media="(max-width: 600px) and (prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="assets/readme/101-gradient-mobile-dark.png">
+      <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/readme/101-gradient-mobile-light.png">
+      <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="assets/readme/101-gradient-dark.png">
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/101-gradient-light.png">
+      <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/readme/101-gradient-mobile-dark.gif">
+      <source media="(max-width: 600px)" srcset="assets/readme/101-gradient-mobile-light.gif">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/101-gradient-dark.gif">
+      <img src="assets/readme/101-gradient-light.gif" alt="Gradient descent moves scattered starting points toward the loss minimum. The mean loss decreases with each update." width="840">
+    </picture>
+  </a>
+</p>
+
+[Adjust the learning rate in the lesson](https://aiengineeringfromscratch.com/lesson?path=phases/01-math-foundations/08-optimization#loss-landscape-visualization) · [Compare GD, momentum, and Adam in code](phases/01-math-foundations/08-optimization/code/optimizers.py)
+
+<a id="project-challenges"></a>
+
+### Projects
+
+Three projects with staged starters, reference implementations, and local graders. Run commands from the repository root after [setup](#local-setup). Starters fail until you implement the stages.
+
+<details>
+<summary><strong>01 · Retrieval Evaluation Lab</strong> · Python · Ranking metrics and regression checks</summary>
+
+A candidate improves mean NDCG while one query ranks its most relevant evidence lower. Build a query-by-query comparison that reports the regression and can fail a release check.
+
+Use Python 3.10+. Review [RAG](phases/11-llm-engineering/06-rag/docs/en.md) and [model evaluation](phases/02-ml-fundamentals/09-model-evaluation/docs/en.md). Implement ranking validation, precision and recall, rank-sensitive metrics, then system comparison.
+
+```bash
+python3 scripts/project_test.py retrieval-evaluation-lab \
+  --init learning-artifacts/retrieval-evaluation-lab
+python3 scripts/project_test.py retrieval-evaluation-lab \
+  --stage 1 --path learning-artifacts/retrieval-evaluation-lab --strict
+python3 scripts/project_test.py retrieval-evaluation-lab \
+  --all --path learning-artifacts/retrieval-evaluation-lab --strict
+```
+
+**Keep:** a reproducible comparison with per-query deltas and the judgments used to score them. Metrics describe those judgments; they do not establish answer correctness.
+
+[Start the project](https://aiengineeringfromscratch.com/project.html?id=retrieval-evaluation-lab) · [Inspect the reference](projects/retrieval-evaluation-lab/solution/) · [Run on your own inputs](projects/retrieval-evaluation-lab/README.md#run-with-your-own-inputs)
+
+</details>
+
+<details>
+<summary><strong>02 · Agent Trace Debugger</strong> · TypeScript · Trace parsing and timing</summary>
+
+A supplied trace still takes 100 ms, but total token usage rises by 200 and one span starts failing. Separate overlapping child work from parent execution time, then produce a report that exposes the change.
+
+Use Node.js 22.18+ and Python 3 for the grader. Implement JSONL parsing, parent validation, interval arithmetic, then an inspectable timeline.
+
+```bash
+python3 scripts/project_test.py agent-trace-debugger \
+  --init learning-artifacts/agent-trace-debugger
+python3 scripts/project_test.py agent-trace-debugger \
+  --stage 1 --path learning-artifacts/agent-trace-debugger --strict
+python3 scripts/project_test.py agent-trace-debugger \
+  --all --path learning-artifacts/agent-trace-debugger --strict
+```
+
+**Keep:** the input trace, an HTML timeline, and a JSON regression report. Preserve exclusive per-span token counts so parent and child usage are not counted twice.
+
+[Start the project](https://aiengineeringfromscratch.com/project.html?id=agent-trace-debugger) · [Inspect the reference](projects/agent-trace-debugger/solution/) · [Explore timing interactively](https://aiengineeringfromscratch.com/project.html?id=agent-trace-debugger&stage=03-timing)
+
+</details>
+
+<details>
+<summary><strong>03 · Tool Call Firewall</strong> · Rust · Role checks and approval receipts</summary>
+
+A write changes after review, or an approval is replayed. Validate the call envelope, check the caller's role and path, then consume an approval bound to the exact request and content.
+
+Use Rust and Python 3.10+. Review [tool schema design](phases/13-tools-and-protocols/05-tool-schema-design/docs/en.md) and [security boundaries](phases/17-infrastructure-and-production/25-security-secrets-audit/docs/en.md). The caller application supplies identity; the model proposes an operation.
+
+```bash
+python3 scripts/project_test.py tool-call-firewall \
+  --init learning-artifacts/tool-call-firewall
+python3 scripts/project_test.py tool-call-firewall \
+  --stage 1 --path learning-artifacts/tool-call-firewall --strict
+python3 scripts/project_test.py tool-call-firewall \
+  --all --path learning-artifacts/tool-call-firewall --strict
+```
+
+**Keep:** an audit receipt showing the requested operation and the policy decision. Approvals are single-use within one invocation; this project does not provide persistent authorization or an operating-system sandbox.
+
+[Start the project](https://aiengineeringfromscratch.com/project.html?id=tool-call-firewall) · [Inspect the reference](projects/tool-call-firewall/solution/) · [Explore approval boundaries](https://aiengineeringfromscratch.com/project.html?id=tool-call-firewall&stage=03-consume-a-request-bound-approval-once)
+
+</details>
+
+[Browse all projects](https://aiengineeringfromscratch.com/projects.html) · [Career practice guide](learning-paths/CAREER-PRACTICE.md)
+
+## Choose how to learn
+
+### On the website
+
+Open any completed lesson on [aiengineeringfromscratch.com](https://aiengineeringfromscratch.com) or expand a phase under [Contents](#contents). No setup, no cloning.
+
+### With an AI tutor
+
+If Node.js, `npx`, and a skill-capable coding agent are already installed, your coding agent can become your tutor. A repository clone is not needed to install or read the tutor. Runnable focused-path labs need `python3`. Agent Skills host labs also need a selected host and a writable user or project skill scope.
+
+```bash
+npx skills add rohitg00/ai-engineering-from-scratch
+```
+
+Choose the host and scope when the installer asks. Use `start-learning` in Codex, `/start-learning` in Claude Code, or ask your host to use the skill by name.
+
+<details>
+<summary>Tutor setup and host commands</summary>
+
+Check the local requirements first:
+
+```bash
+node --version
+npx --version
+python3 --version
+```
+
+`skills` writes to the host and scope selected during installation, such as
+`.claude/skills/`, `.cursor/skills/`, `.codex/skills/`, or another supported
+skills folder. Verify that the selected host discovers that exact destination.
+
+Invocation syntax belongs to the host, not to the portable `SKILL.md` format:
+
+| Host | Start the course | Start Model Context Protocol (MCP) | Start Agent Skills | Run a phase quiz |
+|---|---|---|---|---|
+| Codex | `start-learning`, or choose it from `/skills` | `learn-mcp`, or choose it from `/skills` | `learn-agent-skills`, or choose it from `/skills` | `check-understanding 13`, or choose it from `/skills` |
+| Claude Code | `/start-learning` | `/learn-mcp` | `/learn-agent-skills` | `/check-understanding 13` |
+| Other compatible hosts | `Use start-learning to begin the course.` | `Use learn-mcp to start the Model Context Protocol (MCP) path.` | `Use learn-agent-skills to start the Agent Skills Engineering path.` | `Use check-understanding to quiz me on Phase 13.` |
+
+A ten-question placement quiz maps what you already know to a starting phase and
+saves a personalized study plan to `LEARNING.md`. From there, the `learn` skill
+teaches one lesson per session: concept, math, code, quiz. It streams lessons
+straight from this repo, and the `course-guide` skill jumps you to the exact
+lesson that covers anything you are stuck on. In Codex, invoke these skills with
+`learn` and `course-guide`; in Claude Code, use `/learn` and `/course-guide`;
+in other compatible hosts, ask to use the skill by name.
+
+Only want Model Context Protocol (MCP)? Use the MCP invocation for your host. It creates
+`MCP-LEARNING.md` and follows one 17-lesson route through stateless
+requests, transports, bidirectional work, security, reliability, registry
+governance, and conformance evidence. The exact order and checkpoints live in
+the [Model Context Protocol (MCP) manifest](learning-paths/model-context-protocol.json).
+
+Only want Agent Skills? Use the Agent Skills invocation for your host. It
+creates `AGENT-SKILLS-LEARNING.md` and follows one coherent five-lesson route:
+contract, discovery, invocation, sandbox boundaries, then release evals and
+real-host portability. Start on the web with the
+[Agent Skills path](https://aiengineeringfromscratch.com/lesson?path=phases/13-tools-and-protocols/22-skills-and-agent-sdks&learningPath=agent-skills).
+
+The installer lists the hosts it can configure and asks where to install. If
+you do not have Node.js, `npx`, `python3`, a supported host, or a writable
+scope yet, use the website or read `docs/en.md` manually. That path teaches the
+concepts, but real-host discovery, invocation, script, and uninstall evidence
+remains pending until the preflight is available. Read the lessons at
+[aiengineeringfromscratch.com](https://aiengineeringfromscratch.com).
+
+### The learning skills
+
+| Skill | What it does |
+|---|---|
+| [`start-learning`](skills/start-learning/SKILL.md) | One-time onboarding: why you're learning, placement quiz, personalized plan saved to `LEARNING.md`. |
+| [`learn`](skills/learn/SKILL.md) | The tutor loop. Warm-up recall, then the next lesson taught interactively, then its quiz; records progress and a review queue. |
+| [`course-guide`](skills/course-guide/SKILL.md) | Topic router. "Where do I learn attention?" or "my loss is NaN" → the exact lessons, with links. |
+| [`learn-mcp`](skills/learn-mcp/SKILL.md) | Focused Model Context Protocol (MCP) tutor. Creates `MCP-LEARNING.md`, follows the 17-lesson manifest, and records wire, security, reliability, and conformance evidence. |
+| [`learn-agent-skills`](skills/learn-agent-skills/SKILL.md) | Focused Agent Skills tutor. Creates `AGENT-SKILLS-LEARNING.md`, teaches lessons 22, 24, 25, 26, and 27, and records real-host evidence. |
+| [`learn-reverse-engineering`](skills/learn-reverse-engineering/SKILL.md) | Focused Reverse Engineering tutor. Creates `REVERSE-ENGINEERING-LEARNING.md`, teaches Phase 13 lessons 32 to 45 on programs you build yourself, and records lab evidence. |
+| [`claude-certification`](skills/claude-certification/SKILL.md) | Certification tutor. Chooses CCAO-F, CCDV-F, CCAR-F, or CCAR-P; teaches each lesson; runs labs; reviews artifacts; administers diagnostics and mocks; saves progress. |
+| [`mcpa-certification`](skills/mcpa-certification/SKILL.md) | MCPA tutor. Follows the 34-lesson `mcpa-f` route on the 2026-07-28 protocol; teaches each lesson; runs labs and the wire checker; administers the diagnostic and three mocks; saves progress. |
+| [`find-your-level`](skills/find-your-level/SKILL.md) | Ten-question placement quiz. Maps your knowledge to a starting phase and produces a personalized path with hour estimates. |
+| [`check-understanding <phase>`](skills/check-understanding/SKILL.md) | Per-phase quiz, eight questions, with feedback and specific lessons to review. Use the Codex, Claude Code, or natural-language form in the invocation table above. |
+
+</details>
+
+<a id="local-setup"></a>
+
+### Run local code
+
+```bash
+git clone https://github.com/rohitg00/ai-engineering-from-scratch.git
+cd ai-engineering-from-scratch
+python3 phases/00-setup-and-tooling/01-dev-environment/code/verify.py --route beginner
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py
+```
+
+The preflight separates requirements needed now from tools needed later. Every
+required failure includes the detected reason and a corrective command. The
+`vectors.py` command is a dependency-free lesson and ends by showing that a matrix
+times a vector is the operation inside a neural network layer. Save that
+terminal output as your first evidence.
+
+<details>
+<summary>Use every lesson the same way</summary>
+
+### Use every lesson the same way
+
+1. **Read** `docs/en.md` and explain the core idea in your own words.
+2. **Type and build** the important code instead of treating the code block as decoration.
+3. **Run** the lesson command from the repository root, the directory containing `README.md` and `phases/`.
+4. **Keep evidence**: the command, working directory, exit code, meaningful output, and the artifact you changed or produced.
+5. **Continue** only when you can explain the output and make one small change without guessing.
+
+Commands in lesson pages are paths from the repository root unless the lesson
+explicitly says to change directories. If a lesson offers several languages,
+run the implementation for the language you are learning.
+
+</details>
+
+<a id="study-guide"></a>
+
+## Choose a learning path
+
+You do not need to scan 542 lessons before beginning. Pick one goal. Each link
+opens the same curriculum on GitHub or the website, and both versions use the
+same lesson code.
+
+| Your goal | Learn on GitHub | Learn on the website |
+|---|---|---|
+| I am new and want the complete foundation | [Phas

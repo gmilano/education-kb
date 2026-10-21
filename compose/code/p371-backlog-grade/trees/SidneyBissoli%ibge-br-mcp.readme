@@ -1,0 +1,488 @@
+# IBGE Brasil MCP Server
+
+[![npm version](https://img.shields.io/npm/v/ibge-br-mcp.svg)](https://www.npmjs.com/package/ibge-br-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/ibge-br-mcp.svg)](https://www.npmjs.com/package/ibge-br-mcp)
+[![node](https://img.shields.io/node/v/ibge-br-mcp)](https://www.npmjs.com/package/ibge-br-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io)
+[![LobeHub](https://lobehub.com/badge/mcp/sidneybissoli-ibge-br-mcp)](https://lobehub.com/mcp/sidneybissoli-ibge-br-mcp)
+[![smithery badge](https://smithery.ai/badge/sidneybissoli/ibge-br-mcp)](https://smithery.ai/server/sidneybissoli/ibge-br-mcp)
+[![ibge-br-mcp MCP server](https://glama.ai/mcp/servers/@SidneyBissoli/ibge-br-mcp/badges/score.svg)](https://glama.ai/mcp/servers/@SidneyBissoli/ibge-br-mcp)
+[![CI](https://github.com/SidneyBissoli/ibge-br-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/SidneyBissoli/ibge-br-mcp/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-%E2%89%A588%25-brightgreen.svg)](https://github.com/SidneyBissoli/ibge-br-mcp/blob/main/vitest.config.ts)
+[![GitHub stars](https://img.shields.io/github/stars/SidneyBissoli/ibge-br-mcp?style=flat&logo=github)](https://github.com/SidneyBissoli/ibge-br-mcp)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/SidneyBissoli?logo=githubsponsors&label=Sponsor&color=db61a2)](https://github.com/sponsors/SidneyBissoli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**Live, exact Brazilian public data for your AI assistant — with provenance, not guesswork.**
+
+Ask an LLM _"what was Belo Horizonte's population in the 2022 Census?"_ and you get a plausible number from its training data: maybe right, maybe outdated, with no source. `ibge-br-mcp` instead has your assistant query the official **IBGE** APIs in real time — returning the exact figure together with the table and period it came from.
+
+🇧🇷 [Leia em Português](LEIA-ME.md)
+
+This server implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) to give AI assistants live, structured access to Brazil's public geographic, demographic, economic, and health data — sourced from the IBGE APIs (including health indicators served through IBGE's SIDRA system).
+
+## See it in action
+
+Ask your assistant, in English or Portuguese:
+
+- *"What was Belo Horizonte's population in the 2022 Census?"* → `ibge_cidades` / `ibge_censo`
+- *"List the municipalities of Espírito Santo."* → `ibge_municipios`
+- *"Compare GDP across the Southeast state capitals."* → `ibge_comparar`
+
+The answers come live from the official IBGE APIs — exact figures with the table and period they came from, not numbers guessed from training data.
+
+Want to see a whole analysis rather than a single answer? The
+[**end-to-end demo**](docs/demo.md) works one real question — *which state grew
+most between the 2010 and 2022 Censuses, and what drove it* — from first call to
+conclusion, with every figure as it came back. The
+[**practical examples**](examples/README.md) are seven shorter recipes, including
+ranking all 5,570 municipalities in a single call.
+
+## Features
+
+- **23 tools** covering all major IBGE data domains — 21 `ibge_*` data tools plus `search`/`fetch` for ChatGPT Deep Research
+- **Provenance block on every response** — source, canonical URL, reference
+  period, real extraction timestamp, ready-to-use citation, and legal regime
+  (see [Data provenance](#data-provenance))
+- **Reference resources & analysis prompts** (MCP catalogs + ready-made templates)
+- **565 automated tests** — 88% overall coverage, 92% across the tools
+- **Automatic caching** with configurable TTL for optimal performance
+- **Retry mechanism** with exponential backoff for network resilience
+- **Comprehensive validation** for all input parameters
+- **Standardized error handling** with helpful suggestions
+- **Full TypeScript support** with strict typing
+
+📖 **Article (in Portuguese):** [Como achar a tabela certa no SIDRA — e como saber que é a certa](docs/artigo-sidra-tabela-certa.pt-BR.md) — finding the right SIDRA table, the metadata that settles it, a full worked example on 2022 Census data, and the four traps that cost the most. Also published on the site, in Portuguese and English: [sidneybissoli.com](https://sidneybissoli.com/en/blog/posts/sidra-tabela-certa/).
+
+🔌 **Tutorial:** [Querying SIDRA through MCP in Claude and ChatGPT](https://sidneybissoli.com/en/blog/posts/sidra-via-mcp/) — how to connect this server in claude.ai, Claude Desktop, Claude Code, ChatGPT (developer mode and Deep Research), Cursor, VS Code and Gemini CLI, then one real query end to end with the provenance block it returns. [Em português](https://sidneybissoli.com/blog/posts/sidra-via-mcp/).
+
+## Data provenance
+
+Since v3.3.0 every successful tool response carries a **provenance block**
+([portfolio contract v1.0](https://www.npmjs.com/package/@sbissoli/mcp-provenance)),
+so each number is citable, auditable, and reproducible. The block is emitted on
+three channels:
+
+1. `structuredContent.provenance` (parseable, visible to the model) — exactly
+   six keys: `source` (the IBGE API queried), `source_url` (canonical URL that
+   reproduces the query), `data_vintage` (reference period when the source
+   exposes one; `null` otherwise), `retrieved_at` (the REAL upstream extraction
+   instant, preserved across cache hits, Brasília time), `citation`
+   ("Fonte: IBGE — [pesquisa/tabela], [URL], extraído em [data]."), and
+   `license` — plus `attribution`, the canonical list of source URLs.
+2. `_meta` under `br.com.sidneybissoli.ibge/provenance` and `.../attribution`
+   (out-of-band mirror for audit/UI, zero model tokens).
+3. A compact text footer appended to the Markdown, for text-only clients.
+
+The IBGE APIs declare no license of their own; the legal regime is Brazil's
+open-data framework — Lei 12.527/2011 (LAI) and Decreto 8.777/2016
+(unrestricted reuse, free use, obligation limited to crediting the source).
+Statistics-mode responses (`estatisticas=true`) and `ibge_comparar` are marked
+`derived` with an explanatory note in the canonical block, since the
+aggregates are computed server-side from the raw IBGE values.
+
+**What each number is, and which version of it.** A SIDRA value says neither
+its period nor whether it is a monthly change, a year-to-date or 12-month
+accumulation, an index or a level — the record's period column and its
+`Variável` label do, and each `ibge_indicadores` entry is pinned to the one
+variable its name promises (since 5.7.0; before, nine of them mixed every
+variable of the table). `data_vintage` is ordered by the SIDRA period code, so
+a January–December request reads "janeiro 2024–dezembro 2024". Every value is
+the version SIDRA publishes at `retrieved_at`: IBGE revises published figures
+(quarterly GDP, PNAD reweighting, PIM/PMC/PMS) and keeps no earlier version.
+
+## Available Tools
+
+### Localities & Geography
+| Tool | Description |
+|:-----|:------------|
+| `ibge_estados` | List Brazilian states with region filtering |
+| `ibge_municipios` | List municipalities by state or search by name |
+| `ibge_localidade` | Get details of a locality by IBGE code |
+| `ibge_geocodigo` | Decode IBGE codes or search codes by name |
+| `ibge_vizinhos` | Find neighboring municipalities |
+
+### Statistical Data (SIDRA)
+| Tool | Description |
+|:-----|:------------|
+| `ibge_sidra` | Query SIDRA tables (Census, PNAD, GDP, etc.) |
+| `ibge_sidra_tabelas` | List and search available SIDRA tables (accent-insensitive; everyday Portuguese resolved to the IBGE's wording, and the response says so) |
+| `ibge_sidra_metadados` | Get table metadata (variables, periods, levels) |
+| `ibge_pesquisas` | List IBGE research surveys and their tables |
+
+### Economic & Social Indicators
+| Tool | Description |
+|:-----|:------------|
+| `ibge_indicadores` | Economic and social indicators (GDP, IPCA, unemployment) |
+| `ibge_censo` | Census data (1970-2022) with 16 themes |
+| `ibge_comparar` | Compare indicators across localities with rankings |
+
+### Municipal Data (Cidades@)
+| Tool | Description |
+|:-----|:------------|
+| `ibge_cidades` | Municipal indicators (population, HDI, GDP per capita, etc.) |
+
+### International Data
+| Tool | Description |
+|:-----|:------------|
+| `ibge_paises` | Country data following UN M49 methodology |
+
+### Demographics
+| Tool | Description |
+|:-----|:------------|
+| `ibge_nomes` | Name frequency and rankings in Brazil |
+
+### Classifications
+| Tool | Description |
+|:-----|:------------|
+| `ibge_cnae` | CNAE (National Classification of Economic Activities) |
+
+### Maps & Geographic Meshes
+| Tool | Description |
+|:-----|:------------|
+| `ibge_malhas` | Geographic meshes (GeoJSON, TopoJSON, SVG) |
+| `ibge_malhas_tema` | What a thematic recorte contains (biomes, Legal Amazon, semi-arid, coastal, border strip, metro regions, RIDEs) + the URL to download its geometry |
+
+### Health
+| Tool | Description |
+|:-----|:------------|
+| `ibge_datasaude` | Health indicators via IBGE's SIDRA |
+
+### News & Calendar
+| Tool | Description |
+|:-----|:------------|
+| `ibge_noticias` | IBGE news and press releases |
+| `ibge_calendario` | IBGE release and collection calendar |
+
+### ChatGPT Deep Research
+| Tool | Description |
+|:-----|:------------|
+| `search` | Searches the IBGE catalog (SIDRA tables, municipalities, known indicators) — OpenAI Deep Research contract |
+| `fetch` | Returns one catalog document (table metadata, municipality hierarchy + population, indicator series) with its public URL for citation |
+
+The two are the only tools without the `ibge_` prefix: their names are fixed by the OpenAI contract. For data queries keep using the `ibge_*` tools.
+
+## Which tool should I use?
+
+With 23 tools, several can touch the same topic. Quick guide for the common overlaps:
+
+### Population & demographics
+
+| You want… | Use |
+|:----------|:----|
+| A single municipality/state panel (population, HDI, GDP…) | `ibge_cidades` |
+| Census data or historical series (1970–2022) | `ibge_censo` |
+| Rank/compare 2–10 localities on one indicator | `ibge_comparar` |
+| A macro indicator time series (GDP, IPCA, unemployment…) | `ibge_indicadores` |
+| A specific SIDRA table / fine control | `ibge_sidra` |
+| The largest/smallest/mean/median across a whole table | `ibge_sidra`/`ibge_censo`/`ibge_indicadores`/`ibge_datasaude` with `estatisticas=true` |
+
+### Economic indicators
+
+| You want… | Use |
+|:----------|:----|
+| IPCA, INPC, GDP, unemployment (IBGE, primary source) | `ibge_indicadores` |
+
+### Localities & codes
+
+| You want… | Use |
+|:----------|:----|
+| List/search municipalities | `ibge_municipios` |
+| List states | `ibge_estados` |
+| Resolve a name→code at any level, or decode a code's structure | `ibge_geocodigo` |
+| Full record of one locality you already have the code for | `ibge_localidade` |
+| Neighboring municipalities | `ibge_vizinhos` |
+
+### SIDRA workflow
+
+Discover → inspect → query: `ibge_pesquisas` / `ibge_sidra_tabelas` (find a table) → `ibge_sidra_metadados` (its structure) → `ibge_sidra` (query). For common data, the wrappers above (`ibge_censo`, `ibge_indicadores`, `ibge_comparar`, `ibge_cidades`) are usually easier.
+
+### Ask in your words, not the IBGE's
+
+The IBGE names its tables in official statistical Portuguese, and `ibge_sidra_tabelas` matched
+your words against the table name as a plain substring, accents included — so `populacao`
+(no tilde, as anyone types it) returned *nothing at all*, and so did the everyday word for a
+concept the IBGE names differently. Measured over the 9,336 tables of the Aggregates API
+(2026-09-16), fixed since 5.1.0: both sides are normalised, every word must match (AND), and
+the everyday word is expanded to the IBGE's own — the response says so in `notas_vocabulario`,
+and zero results come with a way out.
+
+| you ask | hits before | the IBGE writes | hits |
+| --- | ---: | --- | ---: |
+| `populacao`, `ocupacao`, `instrucao`, `saude`, `area`, `agua` | 0 | população, ocupação, instrução, saúde, área, água | 520, 364, 698, 518, 956, 256 |
+| `desemprego` | 4 | desocupação | 33 |
+| `renda` | 72 | rendimento | 1,126 |
+| `inflação` | 0 | IPCA, INPC, preços | 37, 15, 75 |
+| `moradia`, `casa` | 14, 101 | domicílio | 3,606 |
+| `cidade` | 110 | município | 455 |
+| `natalidade`, `mortes` | 0, 1 | nascidos vivos, óbitos | 84, 33 |
+| `gênero` | 40 | sexo | 2,020 |
+| `negros` | 0 | cor ou raça | 1,134 |
+| `universidade`, `faculdade` | 0 | ensino superior | 12 |
+| `luz`, `fábrica`, `tabagismo`, `convênio`, `idosos` | 0 | energia elétrica, indústria, fumante, plano de saúde, 60 anos | 43, 248, 94, 101, 89 |
+
+Only measured pairs enter the table (`src/vocabulario.ts`, counts in the header): the word you ask
+with absent from the catalogue, the IBGE's word present. What the IBGE does not publish as an
+aggregate stays out and still returns zero — `turismo`, `aposentadoria`, `frota` — because an alias
+for data that does not exist promises what the source does not have. The same table feeds the
+Deep Research `search` index, which gets the everyday word as a keyword of the table whose name
+carries the IBGE's word.
+
+### Maps (meshes)
+
+| You want… | Use |
+|:----------|:----|
+| Administrative outlines (Brazil/region/state/municipality) | `ibge_malhas` |
+| Thematic areas (biomes, Legal Amazon, semi-arid, metro regions) | `ibge_malhas_tema` (IBGE Geosserviços WFS — the Malhas API does not publish these) |
+
+## Installation
+
+### Prerequisites
+
+- Node.js 22.x or higher (`engines.node`)
+- npm or yarn
+
+### From npm (recommended)
+
+```bash
+npm install -g ibge-br-mcp
+```
+
+### From source
+
+```bash
+# Clone the repository
+git clone https://github.com/SidneyBissoli/ibge-br-mcp.git
+cd ibge-br-mcp
+
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+```
+
+## Configuration
+
+### Remote endpoint (nothing to install)
+
+The server is also hosted, with the same tools, over Streamable HTTP and without a key:
+
+```
+https://ibge.sidneybissoli.com/mcp
+```
+
+It works with any client that accepts a remote MCP server — a custom connector in claude.ai (Settings → Connectors → Add custom connector), `claude mcp add --transport http ibge https://ibge.sidneybissoli.com/mcp` in Claude Code, an app in ChatGPT, the `mcp.json` of Cursor and VS Code. The step-by-step for each client is in the [tutorial](https://sidneybissoli.com/en/blog/posts/sidra-via-mcp/). The sections below cover the local form, via `npx`.
+
+### Claude Desktop
+
+Add to your Claude Desktop configuration file (`claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "ibge-br-mcp": {
+      "command": "npx",
+      "args": ["-y", "ibge-br-mcp"]
+    }
+  }
+}
+```
+
+Or if installed from source:
+
+```json
+{
+  "mcpServers": {
+    "ibge-br-mcp": {
+      "command": "node",
+      "args": ["/path/to/ibge-br-mcp/dist/index.js"]
+    }
+  }
+}
+```
+
+### Claude Code
+
+```json
+{
+  "mcpServers": {
+    "ibge-br-mcp": {
+      "command": "npx",
+      "args": ["-y", "ibge-br-mcp"]
+    }
+  }
+}
+```
+
+### ChatGPT (Deep Research)
+
+ChatGPT deep research (and company knowledge, and research workflows over the Responses API) only uses an MCP server that exposes exactly `search` and `fetch` — this server does, on top of the `ibge_*` tools. Point the connector at the hosted endpoint, no key required:
+
+```
+https://ibge.sidneybissoli.com/mcp
+```
+
+`search` ranks the query against SIDRA tables, municipalities and the known indicators and returns `{ id, title, url }`; `fetch` returns the document as readable Markdown with the canonical public URL (sidra.ibge.gov.br or cidades.ibge.gov.br), which is what ChatGPT cites. Both carry the same provenance block as every other tool. In ChatGPT's developer mode (Settings → Security and login → Developer mode) any tool is callable — the `ibge_*` tools remain the ones to use for data.
+
+## Tool Usage Examples
+
+### ibge_estados
+
+List all Brazilian states.
+
+```
+# List all states
+ibge_estados
+
+# States in Northeast region
+ibge_estados(regiao="NE")
+
+# States sorted by abbreviation
+ibge_estados(ordenar="sigla")
+```
+
+### ibge_municipios
+
+List Brazilian municipalities.
+
+```
+# Municipalities of São Paulo state
+ibge_municipios(uf="SP")
+
+# Search municipalities by name
+ibge_municipios(busca="Campinas")
+
+# Municipalities in MG containing "Belo"
+ibge_municipios(uf="MG", busca="Belo")
+```
+
+### ibge_cidades
+
+Query municipal indicators (similar to Cidades@ portal).
+
+```
+# Panorama of São Paulo
+ibge_cidades(tipo="panorama", municipio="3550308")
+
+# Population history
+ibge_cidades(tipo="historico", municipio="3550308", indicador="populacao")
+
+# List available research
+ibge_cidades(tipo="pesquisas")
+```
+
+**Available indicators:** populacao, area, densidade, pib_per_capita, idh, escolarizacao, mortalidade, salario_medio, receitas, despesas
+
+### ibge_paises
+
+Query international country data.
+
+```
+# List all countries
+ibge_paises(tipo="listar")
+
+# Brazil details
+ibge_paises(tipo="detalhes", pais="BR")
+
+# Search countries
+ibge_paises(tipo="buscar", busca="Argentina")
+
+# Countries in Americas
+ibge_paises(tipo="listar", regiao="americas")
+```
+
+**Regions:** americas, europa, africa, asia, oceania
+
+### ibge_sidra
+
+Query SIDRA tables (IBGE's Automatic Recovery System).
+
+```
+# Brazil population in 2023
+ibge_sidra(tabela="6579", periodos="2023")
+
+# Population by state
+ibge_sidra(tabela="6579", nivel_territorial="3", periodos="2023")
+
+# Census 2022 for São Paulo municipality
+ibge_sidra(tabela="9514", nivel_territorial="6", localidades="3550308")
+```
+
+**Common tables:**
+| Code | Description |
+|-----:|:------------|
+| 6579 | Population estimates (annual) |
+| 9514 | Census 2022 population |
+| 4714 | Population, territorial area and density (Census 2022) |
+| 4099 | Unemployment rate (PNAD Contínua, quarterly) |
+| 1846 | Quarterly GDP at current prices (Brazil) |
+| 5938 | Municipal GDP at current prices (annual) |
+| 6784 | Annual GDP and GDP per capita (Brazil) |
+
+**Territorial levels:**
+| Code | Level |
+|-----:|:------|
+| 1 | Brazil |
+| 2 | Region (North, Northeast, etc.) |
+| 3 | State (UF) |
+| 6 | Municipality |
+| 7 | Metropolitan Region |
+| 106 | Health Region |
+| 127 | Legal Amazon |
+| 128 | Semi-arid |
+
+**Statistics mode** (also on `ibge_censo`, `ibge_indicadores`, `ibge_datasaude`):
+for largest/smallest/mean/median/distribution/ranking questions, pass
+`estatisticas=true` — the server computes the full distribution (min/max/mean/
+median/std-dev/labeled percentiles) over **all** rows before pagination and
+returns `top`/`bottom` rankings (`topN`, default 10). `agruparPor="<column
+label>"` ranks groups by descending sum, each with its own mini-distribution.
+
+```
+# Which state has the largest estimated population?
+ibge_sidra(tabela="6579", nivel_territorial="3", estatisticas=true)
+
+# Census 2022 population distribution grouped by state
+ibge_censo(ano="2022", tema="populacao", nivel_territorial="3", estatisticas=true, agruparPor="Unidade da Federação")
+```
+
+### ibge_censo
+
+Query Census data (1970-2022).
+
+```
+# Population Census 2022
+ibge_censo(ano="2022", tema="populacao")
+
+# Historical population series
+ibge_censo(ano="todos", tema="populacao")
+
+# Literacy by state in 2010
+ibge_censo(ano="2010", tema="alfabetizacao", nivel_territorial="3")
+```
+
+**Available themes:** populacao, alfabetizacao, domicilios, idade_sexo, religiao, cor_raca, rendimento, migracao, educacao, trabalho
+
+### ibge_indicadores
+
+Query economic and social indicators.
+
+```
+# GDP
+ibge_indicadores(indicador="pib")
+
+# IPCA last 12 months
+ibge_indicadores(indicador="ipca", periodos="last 12")
+
+# Unemployment by state
+ibge_indicadores(indicador="desemprego", nivel_territorial="3")
+
+# List all indicators
+ibge_indicadores(indicador="listar")
+```
+
+**Available indicators:**
+| Category | Indicators |
+|:---------|:-----------|
+| Economic | pib, pib_variacao, pib_

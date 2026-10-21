@@ -1,0 +1,91 @@
+addresses graded	1859
+  multi-grant addresses	160
+  scope single-root	1474
+  scope no-grant	369
+  scope MULTI-ROOT	7
+  scope single-nonscoped	6
+  scope AMBIGUOUS	3
+  status OK	1813
+  status NO-REMOTE	46
+
+  domain EDUCATION	1238
+  domain NOT-EDUCATION	399
+  domain WEAK	116
+  domain SLUG-TRAP	60
+  domain NO-EVIDENCE	46
+
+IN DOMAIN	1238
+  permissive	781
+  no-grant	235
+  copyleft	163
+  unclassified	31
+  content	18
+  restricted	10
+
+IN DOMAIN + PERMISSIVE	781
+
+=== in-domain x ORIGIN region ===
+region	permissive	copyleft	content	restricted	no-grant	unclassified	total
+North America	84	17	2	2	11	2	118
+EMEA	46	17	8	1	12	2	86
+APAC	42	4	1	1	8	2	58
+LATAM	17	6	0	0	5	2	30
+Global	592	119	7	6	199	23	946
+
+=== in-domain + permissive, PLACED only, by region, top by refs ===
+
+-- North America (84 addresses)
+    2238  JuliaPluto/Pluto.jl                                  MIT            CCTLD       computationalthinking.mit.edu      LICENSE @ 90dc3cfe6bda
+    1827  Ed-Fi-Alliance-OSS/MetaEd-js                         Apache-2.0     OWNER       Ed-Fi-Alliance-OSS                 LICENSE @ a7f3c6986c05
+    1651  Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation          Apache-2.0     OWNER       Ed-Fi-Alliance-OSS                 LICENSE.txt @ b6b72e594bc4
+    1473  microsoft/Web-Dev-For-Beginners                      MIT            OWNER       microsoft                          LICENSE @ 78085398be0d
+    1448  LibreTexts/conductor                                 MIT            OWNER       LibreTexts                         LICENSE.md @ 352a657ec6de
+    1421  openedx/tutor-contrib-aspects                        Apache-2.0     OWNER       openedx                            LICENSE @ d60eef009420
+    1032  tl-its-umich-edu/my-learning-analytics               Apache-2.0     CCTLD       its.umich.edu                      LICENSE @ 44dbf906f7c8
+     904  adlnet/xAPI-Spec                                     Apache-2.0     OWNER       adlnet                             LICENSE @ ca782a1129bc
+     831  Ed-Fi-Alliance-OSS/ODS-Admin-API                     Apache-2.0     OWNER       Ed-Fi-Alliance-OSS                 LICENSE @ 6bcf500a186e
+     766  microsoft/ML-For-Beginners                           MIT            OWNER       microsoft                          LICENSE @ de2d4e122364
+     467  Ed-Fi-Alliance-OSS/Ed-Fi-Standard                    Apache-2.0     OWNER       Ed-Fi-Alliance-OSS                 LICENSE @ 3d24df6675c5
+     455  virtualryder/edu-ai-agents                           MIT            CCTLD       collegescorecard.ed.gov            LICENSE @ cfc1ef414fc6
+
+-- EMEA (46 addresses)
+    6593  DFE-Digital/register-trainee-teachers                MIT            INSTITUTION www.register-trainee-teachers.serv LICENCE @ a210ba1a13b4
+    1836  Dungeon-CampusMinden/Dungeon                         MIT            CCTLD       www.hsbi.de                        LICENSE.md @ 5856a782a8e0
+    1383  rage/secret-project-331                              Apache-2.0     CCTLD       www.mooc.fi                        LICENSE @ d198c94c8084
+    1250  geli-lms/geli                                        Apache-2.0     CCTLD       demo.geli.fbi.h-da.de              LICENSE @ 02ae52087e74
+    1213  openfun/joanie                                       MIT            OWNER       openfun                            LICENSE @ 21f6bfe29953
+    1139  inducer/relate                                       MIT            CCTLD       documen.tician.de                  LICENSE @ 7030dd609545
+     629  MadsLorentzen/ai-job-search                          MIT            CCTLD       jobindex.dk                        LICENSE @ e16acee3abda
+     522  m-bain/whisperX                                      BSD-2-Clause   INSTITUTION www.robots.ox.ac.uk                LICENSE @ db8fde4d31a3
+     295  openfun/warren                                       MIT            OWNER       openfun                            LICENSE.md @ 839fcbb411d1
+     266  Drone9/mereos                                        MIT            CCTLD       mereos.eu                          LICENSE @ 23815a7e604d
+     247  LiaScript/LiaScript-Exporter                         BSD-3-Clause   CCTLD       www.ilias.de                       LICENSE @ 1d13a119f6e5
+     245  ls1intum/Iris                                        MIT            CCTLD       artemis.cit.tum.de                 LICENSE @ d7b2c095204e
+
+-- APAC (42 addresses)
+   37556  frappe/frappe                                        MIT            OWNER       frappe                             LICENSE @ 1bebf6c8a2bc
+   11606  project-sunbird/sunbird-portal                       MIT            OWNER       project-sunbird                    LICENSE @ 9efc8b5819c6
+    7723  Coursemology/coursemology2                           MIT            INSTITUTION www.comp.nus.edu.sg                LICENSE @ 6310c973a303
+    2827  uccser/cs-field-guide                                MIT            INSTITUTION csfieldguide.org.nz                LICENCE @ 7e323930cf6f
+    1599  speechbrain/speechbrain                              Apache-2.0     INSTITUTION staff.ustc.edu.cn                  LICENSE @ c0241278f93e
+    1068  project-sunbird/sunbird-lms-mw                       MIT            OWNER       project-sunbird                    LICENSE @ fc470e0bec49
+     260  aiverify-foundation/moonshot-data                    Apache-2.0     OWNER       aiverify-foundation                LICENSE.md @ 30fac1237547
+     104  bigdata-ustc/EduData                                 Apache-2.0     INSTITUTION base.ustc.edu.cn                   LICENSE @ 7efdbc04711c
+      96  infosign/compeito                                    Apache-2.0     CCTLD       www.infosign.co.jp                 LICENSE @ 0656e106546c
+      66  bigdata-ustc/EduCDM                                  Apache-2.0     INSTITUTION staff.ustc.edu.cn                  LICENSE @ c610e6ae7f45
+      63  SaidBySolo/neispy                                    MIT            INSTITUTION open.neis.go.kr                    LICENSE @ ef50b19caba9
+      59  electronic-pig/gkvr_system_frontend                  MIT            CCTLD       www.gaokao.cn                      LICENSE @ 824c389743c2
+
+-- LATAM (17 addresses)
+     353  cortega26/chile-hub                                  MIT            INSTITUTION datos.gob.cl                       LICENSE @ 940a63783461
+     108  fhleonardi/openredlab                                MIT            CCTLD       opentecnologia.ar                  LICENSE @ c507d0b56aac
+     101  Universidade-Livre/ciencia-da-computacao             MIT            INSTITUTION books-sol.sbc.org.br               LICENSE @ b995c118fdb3
+      59  caiuc/equipo-16-haCAIthon-2026                       MIT            CCTLD       hacaithon.cai.cl                   LICENSE @ 8a143bfa780c
+      51  dasgltd/mcp-brasil                                   MIT            INSTITUTION portaldatransparencia.gov.br       LICENSE @ 2efb258370b1
+      42  juliancasaburi/siu-guarani-promedio-extension        MIT            INSTITUTION documentacion.siu.edu.ar           LICENSE @ 6962638adbdd
+      27  caiuc/equipo-12-haCAIthon-2026                       MIT            CCTLD       hacaithon.cai.cl                   LICENSE @ 53caa14b38bf
+      11  AI-for-Education/pedagogy-benchmark                  MIT            CCTLD       www.cpeip.cl                       LICENSE @ 21a43a395ab4
+       8  trindadetiago/sigaa-caiu                             MIT            CCTLD       sigaa.ufpb.br                      LICENSE @ 7373c6abac62
+       8  luthierycosta/ConsertandoHorariosSIGAA               MIT            CCTLD       unb.br                             LICENSE @ 5a6106ed9ce2
+       7  Diego694/LUMMER                                      MIT            CCTLD       instituto.pe                       LICENSE @ b66b0a77540c
+       5  marcellodesales/mcp-brasil                           MIT            INSTITUTION portaldatransparencia.gov.br       LICENSE @ 7a7c49cdfc23

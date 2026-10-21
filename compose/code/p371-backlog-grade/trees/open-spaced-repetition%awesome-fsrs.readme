@@ -1,0 +1,254 @@
+[<img src="https://github.com/open-spaced-repetition/fsrs4anki/assets/32575846/9efb2ca5-51bd-411d-9694-a77b09f51fa7" align="left" width="64" height="64">](https://github.com/open-spaced-repetition/awesome-fsrs)
+
+# Awesome FSRS [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+A curated list of awesome FSRS implementations, papers and resources. Feel free to suggest new projects in Issues or PR directly.
+
+## Implementation
+
+- Python
+  - Scheduler (v6) + Optimizer: [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs)
+  - Scheduler (v5): [rs-fsrs-python](https://github.com/open-spaced-repetition/rs-fsrs-python)
+  - Optimizer (v6): [fsrs-optimizer](https://github.com/open-spaced-repetition/fsrs-optimizer)
+  - Optimizer (v6): [fsrs-rs-python](https://github.com/open-spaced-repetition/fsrs-rs-python)
+  - [Deprecated] Optimizer: [fsrs-optimizer-tiny](https://github.com/open-spaced-repetition/fsrs-optimizer-tiny)
+- Rust
+  - Scheduler (v5): [rs-fsrs](https://github.com/open-spaced-repetition/rs-fsrs)
+  - Scheduler (v6) + Optimizer: [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs)
+    - Run in browsers: [fsrs-browser](https://github.com/open-spaced-repetition/fsrs-browser)
+- TypeScript
+  - Scheduler (v6): [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs)
+- Go
+  - Scheduler (v5): [go-fsrs](https://github.com/open-spaced-repetition/go-fsrs)
+- Java
+  - Scheduler (v5): [rs-fsrs-java](https://github.com/open-spaced-repetition/rs-fsrs-java)
+- Scala
+  - Scheduler (v6): [fsrs4s](https://github.com/jwbargsten/fsrs4s)
+- C
+  - Scheduler (v5): [rs-fsrs-c](https://github.com/open-spaced-repetition/rs-fsrs-c)
+- Nodejs
+  - Scheduler (v5): [rs-fsrs-nodejs](https://github.com/open-spaced-repetition/rs-fsrs-nodejs)
+- Dart
+  - Scheduler (v4.5): [dart-fsrs](https://github.com/open-spaced-repetition/dart-fsrs)
+- Swift
+  - Scheduler (v5): [swift-fsrs](https://github.com/open-spaced-repetition/swift-fsrs)
+- Clojure/ClojureScript
+  - Scheduler (v4): [cljc-fsrs](https://github.com/open-spaced-repetition/cljc-fsrs)
+- Ruby
+  - Scheduler (v4): [rb-fsrs](https://github.com/open-spaced-repetition/rb-fsrs)
+- Kotlin
+  - Scheduler (v6): [FSRS-Kotlin](https://github.com/open-spaced-repetition/FSRS-Kotlin)
+  - Scheduler (v4): [android-fsrs](https://github.com/open-spaced-repetition/android-fsrs)
+- Elixir
+  - Scheduler (v4): [ex_fsrs](https://github.com/open-spaced-repetition/ex_fsrs)
+- OCaml
+  - Scheduler (v5): [ocaml-fsrs](https://github.com/chaosarium/ocaml-fsrs)
+- Lisp
+  - Scheduler (v6): [lisp-fsrs](https://github.com/open-spaced-repetition/lisp-fsrs)
+- Haskell
+  - Scheduler (v7): [haskell-fsrs](https://github.com/kutyel/haskell-fsrs)
+
+## Application
+
+### General Flashcard
+
+#### [Anki](https://apps.ankiweb.net/)
+
+  Free and open source, content-agnostic flashcard application for Windows, Mac, Linux, iPhone, and Android. Supports text, images, audio, videos, and scientific markup (via LaTex). Offers free synchronization service using AnkiWeb, with community-shared add-ons and decks.
+
+- FSRS available as an opt-in feature replacing the default SM-2 algorithm.
+- Additionally, this [add-on](https://ankiweb.net/shared/info/759844606) offers a variety of extra features, such as Postpone, Advance, Load Balancing and Easy Days.
+
+#### [Avorio](https://avorio.ai/)
+
+  Avorio is a native flashcard app for macOS and iPhone built around FSRS-5. It imports Anki `.apkg` and `.colpkg` files with scheduling state, review history, media, tags, note types, cloze deletions and image occlusion cards intact, so decks resume on the schedule they were already on instead of resetting to new, and exports back to `.apkg`. Cards live in a local SQLite database and the review path makes no network calls, so it works offline and does not require an account. The flashcard app, FSRS-5, Anki import/export, local AI via Ollama, and offline mode are free; optional subscriptions add cloud AI generation and Mac-to-iPhone sync.
+
+- FSRS-5 is the default scheduler. SM-2 is available per deck, and switching between them does not reset progress.
+- On import, Avorio can fit FSRS parameters to your own Anki review log rather than using generic defaults.
+- Avorio uses its own FSRS-5 implementation in a shared Rust core, exposed to SwiftUI through [UniFFI](https://github.com/mozilla/uniffi-rs).
+
+#### [Discito](https://discito.app)
+
+  Discito is a native iOS flashcard app built around FSRS-6, with iCloud sync, on-device AI card generation, lecture-audio-to-flashcards, image occlusion authoring, and full-fidelity `.apkg` import/export. One-time purchase, no subscription.
+
+  Discito uses its own Swift FSRS-6 port (validated for parity against [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs)), with the parameter optimizer bridging [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) via swift-bridge FFI.
+
+#### [Dushed](https://dushed.com/)
+
+  Dushed is a web app that keeps your flashcards, notes, bookmarks, web feeds, Kindle highlights and files in one private library. A flashcard can refer to the note, web page, file or PDF page that it came from, and these references show during a review. Full-text search covers the whole library, including the text inside PDF files. A [demo](https://demo.dushed.com) is available without an account.
+
+- Uses its own Go implementation of FSRS.
+- Three ratings: Forgot, Good and Easy. Each rating shows the next due date before you select it.
+- Imports Anki decks or CSV files. You can export flashcards as CSV or `.tar` at any time.
+- The rest of the library:
+  - Notes in Markdown, with images, code and attached files.
+  - Kindle highlights and notes, imported from the Kindle notebook.
+  - Web feeds (RSS, Atom and JSON Feed), with OPML import and export.
+  - Bookmarks, with browser HTML and CSV import and export.
+  - Files of any type; images, PDF, audio and video open in the browser.
+- Flashcards need the Pro plan ($12/month). But there's a generous 30-day trial with no credit card required. Bookmarks are free up to 10,000.
+
+#### [Flipnem](https://flipnem.com/)
+
+An Anki compatible online Flashcard platform that supports PWA install.
+
+- Mnemonics, Deck Encryption, Deck Sharing, and an optional public profile to show off your progress
+- An MCP server that allows user to connect their own AI agent to their collections for quizzing, deck management, and mnemonic reinforcement.
+- Free and paid tiers
+- FSRS scheduled flashcard reviews that rely on [rs-fsrs](https://github.com/open-spaced-repetition/rs-fsrs)
+
+#### [Loudwalk](https://loudwalk.com)
+
+  Loudwalk is a native iPhone and Mac flashcard app that asks your cards out loud: it speaks the day's due cards, listens to your spoken answer, grades it against the answer written on the card, and schedules it. It imports Anki `.apkg` and `.colpkg` files with media, review history and each deck preset's FSRS parameters, so the queue is the one you left, and the Mac app writes a `.colpkg` or an `.apkg` to go back. Reviewing on screen is free; the voice tutor is a subscription.
+
+- FSRS-6, with the parameters and desired retention of each Anki deck preset; 17- and 19-value sets left by FSRS-4.5 and FSRS-5 are read the way Anki reads them. No optimizer runs in the app.
+- The memory model is a Swift port of [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs). Around it, the rules of Anki's v3 scheduler (learning steps, fuzz, daily limits, queue order) are held on every build to answers recorded from Anki itself: 750 answer transitions, 2,862 fuzz draws and 8 queue snapshots replay identically.
+
+#### [Markji](https://www.markji.com/)
+
+  Markji is a flashcard application designed to help users efficiently memorize and retain information. It's particularly popular for language learning, exam preparation, and other memorization-heavy subjects. The app is developed by MaiMemo Inc., the company also behind the popular language-learning APP in China, [MaiMemo](https://www.maimemo.com/).
+
+- Markji uses the MMX algorithm, a variant of FSRS developed by the same creator.
+
+#### [Mochi Cards](https://mochi.cards/)
+
+  **Mochi Cards** is a modern, Markdown-powered flashcard app available on Web, Desktop (Windows/macOS/Linux), and Mobile (iOS/Android).  
+
+- Use **Markdown** to create flexible, multi-sided flashcards and notes  
+- Create links between cards and notes, embed images/audio/video, cloze deletions  
+- Study using **Spaced Repetition** and optional **FSRS algorithm** for smarter scheduling  
+- Offline-first by default; sync securely across devices with a **Pro** subscription  
+- Import Anki decks or export `.mochi` packages for backup and sharing
+
+#### [MySummaries](https://mysummaries.app)
+
+  MySummaries builds a spatial study board from a learner's own material — PDFs, slides, pasted text and photos of handwritten pages — and generates the review material from that board rather than from a shared deck. Alongside flashcards it writes timed written papers, audio lectures with word-level read-along, and a spoken oral examiner that asks follow-up questions over WebRTC and marks the transcript against a rubric. Web and iOS, free tier with usage-metered credits after that.
+
+- Uses [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) for FSRS-6 scheduling with the default weights, across per-topic, per-subject and cross-subject due queues.
+- `enable_short_term: false` — a lapsed card comes back within the same session through the drill queue rather than as a sub-day `due`.
+- `enable_fuzz: true` and `maximum_interval: 365`, so a batch of cards generated together stops arriving together, and nothing is scheduled beyond a year.
+- Questions missed in a written paper or an oral are turned back into cards automatically, deduplicated against the existing deck.
+
+#### [Origa](https://github.com/yurvon-screamo/origa)
+
+  Open source Japanese learning app for desktop (Windows, Linux, macOS) and Android. Built-in dictionaries, kanji, grammar, and phrases — all scheduled with FSRS. Russian and English. Offline-first.
+
+- Uses [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) for FSRS-6 scheduling.
+
+#### [Quanta](https://quanta-study.de)
+
+  Quanta is an AI-powered flashcard and exam platform for German-speaking students (DACH region). It combines citation-first AI generation — where every card links to verifiable academic sources (Google Scholar, Wikipedia, textbooks) — with Bloom taxonomy control, LaTeX rendering, and MC quiz generation following Haladyna & Downing distractor guidelines.
+
+- Quanta uses [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) for native FSRS-6 scheduling across all review modes (classic, endless, exam simulation).
+- AI generates flashcards from topic, PDF, photo, or URL with mandatory source declaration before card creation (≥0.90 confidence threshold).
+- Includes interactive Bloom taxonomy pyramid, Feynman method AI tutor, and 350+ German study programs with context-aware generation.
+- Free tier includes FSRS-6 spaced repetition forever (50 AI cards/month). Pro €8/mo, Evo €14/mo with student discounts.
+
+#### [Read Frog](https://www.readfrog.app/)
+
+  Read Frog is an AI-powered language-learning platform centered on an open-source browser extension. It turns web pages and videos into an immersive study experience with bilingual page translation, streaming selection translation, context-aware explanations and article analysis, text-to-speech, and YouTube subtitle generation and translation—even for videos without captions. Users can bring their own models from more than 20 AI providers or use Read Frog's built-in AI.
+
+- Custom AI Actions turn selected text into reusable tools for dictionaries, explanations, rewriting, and other workflows; their structured results can be mapped directly into Notebase.
+- Vocabulary, definitions, example sentences, translations, and reading notes can be saved without leaving the current page, then converted into flashcards with customizable templates.
+- A sync engine keeps cards, review logs, and scheduling state synchronized across devices and renders review sessions from live synchronized data.
+- Its end-to-end spaced-repetition system uses [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) with the FSRS-6 model, middleware-based scheduling, and policy-driven review queues. A per-Notebase optimizer personalizes scheduling from review history.
+- See [pricing](https://www.readfrog.app/pricing) and the public [roadmap](https://feedback.readfrog.app/roadmap).
+- The [GPLv3-licensed browser extension](https://github.com/mengxi-ream/read-frog) is available for Chrome, Edge, and Firefox.
+
+#### [Rember](https://www.rember.com/)
+
+  A simple yet powerful spaced repetition system designed to help you remember more. It uses AI to automatically generate cards and FSRS-5 to schedule your reviews.
+
+  Rember uses [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs).
+
+#### [Revu](https://revu.cards/)
+
+  Revu is a local-first spaced repetition app for macOS built with SwiftUI. It features a Notion-inspired interface, Anki import (.apkg/.colpkg), study guides, exams, and workload forecasting.
+
+  Revu uses [swift-fsrs](https://github.com/open-spaced-repetition/swift-fsrs).
+
+#### [SpacedCards](https://spacedcards.app)
+
+  SpacedCards is an iOS flashcard app which forces students to review cards to unlock scrolltime. It works offline, is customizable & has AI for generating cards (images, audio or PDFs). 
+
+  SpacedCards uses [dart-fsrs]([https://github.com/open-spaced-repetition/ts-fsrs](https://github.com/open-spaced-repetition/dart-fsrs)).
+  
+
+#### [spacedrep](https://github.com/wpwilson10/spacedrep)
+
+  A CLI and MCP server for spaced repetition with .apkg import/export. Designed for scripting and AI agent workflows, no GUI required. Available on [PyPI](https://pypi.org/project/spacedrep/).
+
+  spacedrep uses [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs).
+
+#### [StudyDaily](https://www.studydaily.app/en)
+
+  StudyDaily is a flashcard app for iPhone, iPad, Mac, Android, Windows and the web, built around FSRS-6. It imports Anki `.apkg` and `.colpkg` files with scheduling state, FSRS memory (stability and difficulty), deck presets, review history and media, so imported cards keep their due dates instead of resetting to new, and exports back to `.apkg`, `.colpkg` or CSV. A [published round-trip test](https://www.studydaily.app/en/guides/anki-to-studydaily-migration-test) moves a deck built with Anki 26.9.3 into StudyDaily and back, and compares every card and review log entry. Study, import and export work offline without an account; optional Premium adds sync between devices.
+
+- Uses the official Dart package [fsrs](https://github.com/open-spaced-repetition/dart-fsrs) with the 21 FSRS-6 parameters; the rating buttons show the next interval before you answer.
+- Imported Anki presets keep their desired retention, learning steps and FSRS parameters.
+- Fuzz is applied with a seed derived from each review event, so replaying the review log on another device lands on the same due dates.
+
+### Note-taking
+
+#### [CuaderNote](https://cuadernote.com/)
+
+  CuaderNote is a native notes and study app for Mac, iPhone and iPad. It combines a block editor, a PDF, EPUB and web article reader, and a freehand notebook with Apple Pencil support. Notes can be turned into flashcards, and highlights from PDFs and EPUBs go into the same review queue. Cards are stored on the device and sync through iCloud, so reviews work offline. The current version is free on the App Store, with no in-app purchases or subscriptions.
+
+  - FSRS-6 with the default parameters and 90% desired retention. No optimizer runs in the app.
+  - Uses its own Swift port of [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs), checked against py-fsrs's reference review vectors in its unit tests.
+
+#### [Logseq](https://logseq.com/)
+
+  A privacy-first, open-source platform for knowledge management and collaboration. It focuses on privacy, longevity, and user control.
+
+  Logseq uses [cljc-fsrs](https://github.com/open-spaced-repetition/cljc-fsrs) in its database version.
+
+#### [Obsidian](https://obsidian.md/)
+
+  A personal notes, journaling, knowledge base, and project management application that allows the user to easily visualize relationships between information in graph form. Connect your notes via hyperlinks and install many community plugins made for Obsidian.
+
+  - [obsidian-spaced-repetition-recall](https://github.com/open-spaced-repetition/obsidian-spaced-repetition-recall) is a modified version of obsidian-spaced-repetition and merging recall plugin to use seperate json data file. It uses FSRS-6.
+
+  - [HiNote](https://github.com/CatMuse/HiNote) is a powerful Obsidian extension that helps you add comments to highlighted notes, use AI for thinking, and FSRS-6 for memory.
+
+  - [LearnKit](https://github.com/ctrlaltwill/LearnKit) helps you remember what you write. It brings flashcards, note review, tests, and AI-assisted study tools into Obsidian, so your vault becomes a place to learn, not just store information. It uses FSRS-6 for spaced repetition scheduling.
+
+  - [True Recall](https://github.com/pieralukasz/true-recall) is an Anki-like spaced repetition system for Obsidian on desktop, iOS and Android, with local-first SQLite storage, free cross-device sync, Anki import (including review history) and export, AI card generation, and detailed analytics. It uses FSRS-6 via [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs).
+
+#### [Org-srs](https://github.com/bohonghuang/org-srs)
+
+  Org-srs is a feature-rich and extensible spaced repetition system integrated with Org-mode, letting you learn and review without leaving Emacs.
+
+  - Keeps review data and configuration in Org files, making sync and version control straightforward.
+  - Bundles FSRS with parameter tuning, advanced scheduling features, and optional caching for large collections.
+  - Extensible via hooks with embeddable entries, rich item types, charts, and touchscreen-friendly controls.
+
+#### [Org-fc](https://github.com/l3kn/org-fc)
+
+  Org-fc brings spaced repetition to Org-mode through flexible flashcard templates.
+
+  - Marks Org headlines as cards with cloze, list, and custom layouts.
+  - Includes experimental FSRS-6 scheduling powered by a Python helper.
+  - Provides guides, migration tools, and mailing lists to support long-term study workflows.
+
+#### [RemNote](https://www.remnote.com/)
+
+  Multiplatform note-taking application with a simple and streamlined process of creating flashcards. Has an active community with student-made materials for exam preparation. Available for offline and online usage.
+
+  RemNote integrated FSRS-4.5 into its scheduling system in [release 1.16](https://feedback.remnote.com/changelog/remnote-1-16-ultimate-spaced-repetition).
+
+#### [SiYuan](https://github.com/siyuan-note/siyuan)
+
+  SiYuan is a privacy-first, self-hosted, open source personal knowledge management system, written in TypeScript and Golang. It supports fine-grained block-level reference and markdown WYSIWYG.
+
+  SiYuan's uses FSRS-5: [riff](https://github.com/siyuan-note/riff)
+
+#### [TiddlyWiki](https://github.com/TiddlyWiki/TiddlyWiki5)
+
+  TiddlyWiki is a customizable single HTML file personal wiki for creating interlinked notes. Its open-source nature and plugin ecosystem make it adaptable for various uses, from project management to knowledge systems. With the FSRS plugin, TiddlyWiki can also be used as a flashcard app for learning and memorization.
+
+  FSRS is available as a fork of the Tidme plugin for TiddlyWiki: [fsrs4tw](https://github.com/open-spaced-repetition/fsrs4tw)
+
+#### [ZKMemo](https://zkmemo.com)
+
+  ZKMemo is a free, offline-first note-taking and learning software that combines FSRS-based spaced repetition with incremental reading. It features a SuperMemo-like 

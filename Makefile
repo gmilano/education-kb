@@ -28,6 +28,8 @@ STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
 DOMAIN_LOG ?= /tmp/education-kb-gate-domain-check.log
+REGIONPLACE_LOG ?= /tmp/education-kb-gate-region-place.log
+BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
@@ -82,7 +84,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
              gate-companion-closure gate-bare-slug-channel \
-             gate-refset-register gate-domain-check
+             gate-refset-register gate-domain-check \
+             gate-region-place gate-backlog-denominator
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -870,4 +873,34 @@ gate-refset-register: ## p370 — only SAME-REF-SET may stand as STALE in the al
 # is read from the README PAYLOAD with the root tree as the fallback channel, never
 # from the slug.  No network: README and tree captures are committed.
 gate-domain-check: ## p370 — no row may be shelved on a slug that its payload does not support
-	@cd compose/code/p370-domain-check && { $(PY) -I test_domain_check.py > $(DOMAIN_LOG) 2>&1 || { echo "🔴 p370-domain-check FAILED — its own report follows:" ; sed "s/^/   /" $(DOMAIN_LOG) ; false ; } ; } && echo "── p370-domain-check (43 controls: the four REAL traps, each of the four defects D1-D4 in this instrument own first draft with the string that caused it, the tree channel on a repository with no README, and the NO-EVIDENCE refusal)" && echo "   PASS" || exit 1
+	@cd compose/code/p370-domain-check && { $(PY) -I test_domain_check.py > $(DOMAIN_LOG) 2>&1 || { echo "🔴 p370-domain-check FAILED — its own report follows:" ; sed "s/^/   /" $(DOMAIN_LOG) ; false ; } ; } && echo "── p370-domain-check (56 controls: the four REAL traps, each of the four defects D1-D4 in this instrument own first draft with the string that caused it, the tree channel on a repository with no README, the NO-EVIDENCE refusal, and p371's D5 — the credentialing/OER/curriculum-standards layer the OUT-OF-SAMPLE run found it discarding, with the four ambiguous terms it still refuses)" && echo "   PASS" || exit 1
+
+# 🟢 p371 (`ACTION ZZ-ce`): THE BRIEF'S OWN SENTENCE, WIRED.  The scheduled brief this
+# base answers says *"a finding with no region attached is worth less than one that is
+# placed"*, and `p370` graded 63 addresses while placing none of them — the READMEs were
+# on disk and nothing read them for geography.
+# 🔴 This instrument's first run over those same 63 placed EIGHT in LATAM, five of them
+# on the evidence strings `server.py`, `main.py`, `setup.py`, `database.py`, `api.py`.
+# `.py` is PARAGUAY in `p115`'s committed country table, and a Python filename is not a
+# hostname.  🟢 `p115` already required a `https?://` context and already shipped a
+# stoplist of registry/standards hosts; both are REUSED here rather than restated, which
+# is the only reason the second run is defensible.  Same class as `p369` paying to
+# rediscover `LICENSE.TXT` that `p189` had recorded and never gated.
+# 🔵 ORIGIN and SERVES are separate columns on purpose: `p115-E` is right that a repo
+# citing the EU AI Act is not a European repo, and an engagement still needs to know
+# which regime a tool implements.  Two claims, two cells, neither laundered into the
+# other.  No network.
+gate-region-place: ## p371 — a region comes from an institution or a standard the payload NAMES, never from a filename
+	@cd compose/code/p371-region-place && { $(PY) -I test_place_region.py > $(REGIONPLACE_LOG) 2>&1 || { echo "🔴 p371-region-place FAILED — its own report follows:" ; sed "s/^/   /" $(REGIONPLACE_LOG) ; false ; } ; } && echo "── p371-region-place (23 controls: D2's five filename strings that placed five rows in Paraguay, D3's RFC-2606 placeholders, D4's registrable-label rule with mycourses.rit.edu as its negative control, P800's maintainer-name control carried, p115's committed stoplist applied rather than copied, and the ORIGIN/SERVES split)" && echo "   PASS" || exit 1
+
+# 🔴 p371 (`ACTION ZZ-cf`): A QUANTITY PUBLISHED WITHOUT ITS LIST CANNOT BE CHECKED.
+# `Gap 477` registered *"2 248 ungraded"* with no committed list, so `p371` had to
+# re-derive the set before it could grade one element of it.  Derived from the same
+# shelves the gap cites, the remainder is **1 859**: the 2 311 denominator counted
+# strings that are not addresses and addresses the live shelves already carry.
+# 🟢 `T37`/`recount` already says every registered quantity must be re-derivable from
+# the rows; this extends that rule to the BACKLOG, which is the one quantity on this
+# base that was being carried forward by restatement.
+gate-backlog-denominator: ## p371 — `Gap 477`'s remainder is DERIVED from the shelves, never restated
+	@cd compose/code/p371-backlog-grade && { $(PY) -I test_build_backlog.py > $(BACKLOG_LOG) 2>&1 || { echo "🔴 p371-backlog-grade FAILED — its own report follows:" ; sed "s/^/   /" $(BACKLOG_LOG) ; false ; } ; } && echo "── p371-backlog-grade (8 controls: D1's '.../archive' relative path that entered the denominator as address number one, p351's tree-path and product-page classes, the .git fold, and the legal-dot negative control)" && echo "   PASS" || exit 1
+	@cd compose/code/p371-backlog-grade && $(PY) -I build_backlog.py ../../.. 2>&1 >/dev/null | sed "s/^/   /"

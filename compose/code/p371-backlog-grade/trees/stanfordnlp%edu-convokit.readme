@@ -1,0 +1,503 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/full_logo.png" width="500"/>
+</p>
+
+<h1><img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/logo.png" height="30" /> Edu-ConvoKit: An Open-Source Framework for Education Conversation Data </h1>
+
+**Accepted to NAACL 2024, Systems Track**
+
+The **Edu-ConvoKit** is an open-source framework designed to facilitate the study of conversation language data in educational settings.
+It provides a practical and efficient pipeline for essential tasks such as text pre-processing, annotation, and analysis, tailored to meet the needs of researchers and developers.
+This toolkit aims to enhance the accessibility and reproducibility of educational language data analysis, as well as advance both natural language processing (NLP) and education research.
+By simplifying these key operations, the Edu-ConvoKit supports the efficient exploration and interpretation of text data in education.
+
+Our publication on Edu-ConvoKit can be found here: https://arxiv.org/pdf/2402.05111.pdf
+
+## 📖 Table of Contents
+[**Installation**](#installation) | [**Tutorials**](#tutorials) | [**Example Usage**](#example-usage) | [**Documentation**](https://edu-convokit.readthedocs.io/en/latest/) | [**Papers with Edu-ConvoKit**](papers.md) | [**Citation**](#citation) | [**Future Extensions**](#future-features) | [**Contributing**]() | [**Contact**](#contact)
+
+## Installation
+
+You can install `edu-convokit` with pip:
+
+```bash
+
+pip install edu-convokit
+
+```
+
+## Overview of the `Edu-ConvoKit` Pipeline
+
+The **Edu-ConvoKit** pipeline consists of three key modules: `preprocess`, `annotate`, and `analyze`.
+The pipeline is designed to be modular, so you can use any combination of these modules to suit your needs.
+This pipeline has also been used by prior work in the field of education, so you can easily reproduce their results. 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/main_figure.png"/>
+</p>
+
+## Tutorials
+
+We have provided a series of tutorials to help you get started with the `Edu-ConvoKit`.
+
+### Demo Video
+
+Here is a 2-minute demo of what `Edu-ConvoKit` can do.
+
+
+<p>
+  <a href="https://youtu.be/zdcI839vAko?si=yOOgiBAR3wIdE5IV">
+    <img src="assets/video.png" width="200"/>
+  </a>
+</p>
+
+
+### Basics of `Edu-ConvoKit`
+
+There are three key modules of the `Edu-ConvoKit` pipeline: `preprocess`, `annotate`, and `analyze`.
+
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][textcolab] [Tutorial: Text Pre-processing][textcolab]
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][annotationcolab] [Tutorial: Annotation][annotationcolab]
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][analyzecolab] [Tutorial: Analysis][analyzecolab]
+...
+
+### Datasets with `Edu-ConvoKit`
+
+We've applied the `Edu-ConvoKit` to a variety of datasets. Here are some examples:
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][nctecolab] [Tutorial: NCTE Dataset][nctecolab]
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][ambercolab] [Tutorial: Amber Dataset][ambercolab]
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][talkmovescolab] [Tutorial: Talk Moves Dataset][talkmovescolab]
+
+
+## Example Usage
+
+Contents:
+- [Pre-Processing](#pre-processing)
+- [Annotation](#annotation)
+- [Analysis](#analysis)
+  - [Qualitative Analysis](#-qualitative-analysis)
+  - [Quantitative Analysis](#-quantitative-analysis)
+  - [Lexical Analysis](#-lexical-analysis)
+  - [Temporal Analysis](#-temporal-analysis)
+  - [GPT Analysis](#-gpt-analysis)
+
+
+### Pre-Processing
+
+The `preprocess` module provides a set of tools for cleaning and formatting raw text data. Text pre-processing is a critical step in handling education language data. 
+- It ensures the data is clean (education data is notoriously messy). 
+- It ensures the data is standardized, ready for annotation and analysis. 
+- It ensures that the students and educators are anonymized; this is important to protect the privacy of individuals involved and allow for safe secondary data analysis.
+
+Here's an example of using `preprocess` to anonymize the dataset with known names:
+
+```python 
+
+>> from edu_convokit.preprocessors import TextPreprocessor
+# For helping us flexibly load data
+>> from edu_convokit import utils
+
+# First get the data
+>> !wget "https://raw.githubusercontent.com/rosewang2008/edu-convokit/master/data/talkmoves/Boats and Fish 2_Grade 4.xlsx"
+>> data_fname = "Boats and Fish 2_Grade 4.xlsx"
+>> df = utils.load_data(data_fname) # Handles loading data from different file types including: .csv, .xlsx, .json
+
+# Show some lines that contain names in the speaker and text columns.
+>> df.iloc[25:35]
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/not_anonymized.png" width="500"/>
+</p>
+
+💡 Note: We see that the names occur in the speaker and text column. 
+- e.g., names like David and Meredith appear in the speaker and text column. 
+- The teacher is always shortened to “T” in the speaker column.
+
+We can use the `TextPreprocessor` to anonymize the data in both columns.
+
+```python
+
+# Creating variables for the columns we want to use
+>> TEXT_COLUMN = "Sentence"
+>> SPEAKER_COLUMN = "Speaker"
+
+# Show the names of the speakers. In your use case, you might load this from a file or database.
+>> print(df[SPEAKER_COLUMN].unique())
+['T' 'David' 'Meredith' 'Beth' 'Meredith and David' 'T 2']
+
+# Create list of names and replacement names. We will make the replacement names unique so that we can easily find them later.
+>> known_names = ["David", "Meredith", "Beth"]
+>> known_replacement_names = [f"[STUDENT_{i}]" for i in range(len(known_names))]
+>> print(known_replacement_names)
+['[STUDENT_0]', '[STUDENT_1]', '[STUDENT_2]']
+
+# Now let's anonymize the names in the text!
+>> processor = TextPreprocessor()
+>> df = processor.anonymize_known_names(
+    df=df,
+    text_column=TEXT_COLUMN,
+    names=known_names,
+    replacement_names=known_replacement_names,
+    # We will directly replace the names in the text column.
+    # If you want to keep the original text, you can set `target_text_column` to a new column name.
+    target_text_column=TEXT_COLUMN
+)
+>> df.iloc[25:35]
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/sentence_anonymized.png" width="500"/>
+</p>
+
+💡 Note: Nice, we can see that the text has been anonymized (e.g., line 31)! Now let's anonymize the names in the speaker column.
+
+```python
+
+df = processor.anonymize_known_names(
+    df=df,
+    text_column=SPEAKER_COLUMN,
+    names=known_names,
+    replacement_names=known_replacement_names,
+    target_text_column=SPEAKER_COLUMN
+)
+
+df.iloc[25:35]
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/anonymized.png" width="500"/>
+</p>
+
+🎉 Great, now we have anonymized the speaker names as well! Some other great things are that: 
+- We have a record of the original names and the anonymized names. So if we want to go back to the original names, we can do that. 
+- The anonymized names are consistent: So [STUDENT_0] in the SPEAKER_COLUMN will refer to the same [STUDENT_0] in the TEXT_COLUMN.
+
+We can also use the `TextPreprocessor` to group the utterances from the same speaker together.
+
+```python
+df = processor.merge_utterances_from_same_speaker(
+    df=df,
+    text_column=TEXT_COLUMN,
+    speaker_column=SPEAKER_COLUMN,
+    # We're going to directly replace the text in the text column.
+    target_text_column=TEXT_COLUMN
+)
+
+df.iloc[25:35]
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/merged.png" width="500"/>
+</p>
+
+### Annotation
+
+Annotation is a critical step in understanding your data, and it is important to do it right and consistently across datasets. 
+Annotation is useful because: 
+- It creates descriptive statistics about your data, which can help you understand the data. 
+- It quantifies the language used by your students and educators, which can help you understand the language. 
+- It measures the interaction between the student and the educator, which can help you understand the interaction.
+
+Edu-ConvoKit is designed to support these purposes with the `annotator` module. 
+Here's an example of using `annotator` to annotate the dataset for talktime, student reasoning, and teacher conversational uptake.
+We're going to use the same dataframe from the previous example; so `df` will be the dataframe with anonymized names and merged utterances.
+
+```python
+
+>> from edu_convokit.annotation import Annotator
+>> annotator = Annotator()
+
+# The talktime values will be populated in this column
+>> TALK_TIME_COLUMN = "talktime"
+>> df = annotator.get_talktime(
+    df=df,
+    text_column=TEXT_COLUMN,
+    analysis_unit="words",
+    output_column=TALK_TIME_COLUMN
+)
+
+df.head()
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/talktime.png" width="500"/>
+</p>
+
+🎉 We can see with a single function call, we’ve added our first annotation – talktime – to our data!
+
+Let's do the same for student reasoning and teacher conversational uptake.
+
+```python
+
+# The reasoning annotations will be populated in this column
+>> STUDENT_REASONING_COLUMN = "student_reasoning"
+>> df = annotator.get_student_reasoning(
+    df=df,
+    speaker_column=SPEAKER_COLUMN,
+    text_column=TEXT_COLUMN,
+    output_column=STUDENT_REASONING_COLUMN,
+    # Since this model is only trained on _student_ utterances,
+    # we can explicitly pass in the speaker names associated to students.
+    # It will only annotate utterances from these speakers.
+    speaker_value=known_replacement_names,
+)
+
+# The uptake annotations will be populated in this column.
+>> UPTAKE_COLUMN = "uptake"
+>> df = annotator.get_uptake(
+    df=df,
+    speaker_column=SPEAKER_COLUMN,
+    text_column=TEXT_COLUMN,
+    output_column=UPTAKE_COLUMN,
+    # Conversation uptake is about how much the teacher builds on what the students say.
+    # So, we want to specify the first speaker to be the students.
+    speaker1=known_replacement_names,
+    # And the second speaker to be the teacher.
+    speaker2='T'
+)
+>> df.head(20)
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/annotations.png" width="500"/>
+</p>
+
+With these annotations, we can now do some analysis on our data. We can save the annotated data to a file for later use.
+
+```python
+
+>> df.to_csv("annotated_data.csv", index=False)
+```
+
+### Analysis
+
+Analyzing your data with `Edu-ConvoKit` can help you understand the language used by your students and educators.
+Analysis on education data can happen in many ways. 
+- 🔍 It can happen qualitatively where you look at the data; for example, we annotated the data for student_reasoning and you might be interested in looking at the specific instances of student reasoning. 
+- 📊 It can also happen quantitatively where you look at the data in aggregate; for example, you might be interested in the average amount of time the student and educator talk. 
+- 💬 You might be interested in lexically analyzing the data; for example, you might be interested in what words the student uses the most compared to the educator. 
+- 📈 You might be interested in temporally analyzing the data; for example, you might be interested in the amount of time the student and educator talk over the course of their interaction.
+- 🤖 You might also be interested in using **GPT** to analyze the data; for example, you might want GPT4 to summarize the transcript.
+
+Here's an example of using `analyzer` for each for these analysis types. We'll be using the same dataframe from the previous example; so `df` will be the dataframe with annotations.
+
+#### 🔍 Qualitative Analysis
+
+Let’s start by looking at the data qualitatively. We will use the `QualitativeAnalyzer` to look at the data.
+Ever wondered whether there was a quick way to … 
+- Look at examples of student reasoning? 
+- Look at examples of high conversational uptake by the educator?
+
+This is where the `QualitativeAnalyzer` comes in handy!
+
+Let's look at some examples of student reasoning.
+
+```python
+
+>> from edu_convokit.analyzers import QualitativeAnalyzer,
+>> qual_analyzer = QualitativeAnalyzer()
+
+>> qual_analyzer.print_examples(
+    df=df,
+    speaker_column=SPEAKER_COLUMN,
+    text_column=TEXT_COLUMN,
+    # We want to look at examples for the reasoning feature
+    feature_column=STUDENT_REASONING_COLUMN,
+    # We want to look at positive examples of reasoning
+    feature_value=1.0,
+    # Let's look at 3 examples
+    max_num_examples=3
+)
+student_reasoning: 1.0
+>> [STUDENT_1]: one half by one sixth. Cause if you put six ones up to a whole
+
+student_reasoning: 1.0
+>> [STUDENT_0]: This would be one third, and this is one half of  dark green, and then it would be bigger by one sixth, because
+
+student_reasoning: 1.0
+>> [STUDENT_1]: I mean it's bigger than one tenth, I mean twelfth, one twelfth, one  twelfth.
+```
+
+🎉 Great! This is a quick way to look at examples of student reasoning.
+
+If you’re curious in looking at the preceding and succeeding utterances (for context), you can easily do that by specifying the number of lines:
+
+```python
+
+>> qual_analyzer.print_examples(
+    df=df,
+    speaker_column=SPEAKER_COLUMN,
+    text_column=TEXT_COLUMN,
+    feature_column=STUDENT_REASONING_COLUMN,
+    feature_value=1.0,
+    max_num_examples=3,
+    # We want to look at the previous 2 lines of context
+    show_k_previous_lines=2,
+    # We also want to look at the next 1 line of context
+    show_k_next_lines=1
+)
+
+student_reasoning: 1.0
+[STUDENT_1] and [STUDENT_0]: is bigger than
+T: You both agree?
+>> [STUDENT_1]: one half by one sixth. Cause if you put six ones up to a whole
+[STUDENT_0]: dark green
+
+student_reasoning: 1.0
+T: Ok
+[STUDENT_1]: So there’s six sixths
+>> [STUDENT_0]: This would be one third, and this is one half of  dark green, and then it would be bigger by one sixth, because
+T: Do you both agree with that?
+
+student_reasoning: 1.0
+[STUDENT_1]: Yeah, and you take the two dark green rods, those are the halves... And you take two  thirds, and put it up to it, and you take... two sixths, it's bigger than  two sixths. And  in this one, it you take this ...
+T 2: Can we go back to that one again?
+>> [STUDENT_1]: I mean it's bigger than one tenth, I mean twelfth, one twelfth, one  twelfth.
+T 2: How does that work? I'm confused about that. I’m confused about  the little white rods, I am following you right up to that point.
+
+```
+
+🎉 Awesome! Another handy way to use QualitativeAnalyzer is to look at both positive and negative examples of student reasoning. You can do that by omitting the feature values specification:
+
+```python
+
+>> qual_analyzer.print_examples(
+    df=df,
+    speaker_column=SPEAKER_COLUMN,
+    text_column=TEXT_COLUMN,
+    feature_column=STUDENT_REASONING_COLUMN,
+    max_num_examples=3,
+    show_k_previous_lines=2,
+    show_k_next_lines=1,
+    # feature_value="1.0", Omitted!
+)
+student_reasoning: 0.0
+T: I'm wondering which is bigger, one half or two thirds. Now  before you model it you might think in your head, before you begin  to model it what you is bigger and if so, if one is bigger, by how  much. Why don’t you work with your partner and see what you can  do.
+>> [STUDENT_0]: Try the purples. Get three purples. It doesn’t work, try the greens
+[STUDENT_1]: What was it? Two thirds?
+
+student_reasoning: 0.0
+[STUDENT_0]: Try the purples. Get three purples. It doesn’t work, try the greens
+[STUDENT_1]: What was it? Two thirds?
+>> [STUDENT_0]: It would be like brown or something like that.
+[STUDENT_1]: Ok
+
+student_reasoning: 0.0
+[STUDENT_0]: It would be like brown or something like that.
+[STUDENT_1]: Ok
+>> [STUDENT_0]: We’re not doing the one third, we’re doing two thirds. That is one  third
+[STUDENT_1]: First we’ve got to find out what a third of it is. What’s a third of an  orange?
+
+student_reasoning: 1.0
+[STUDENT_1] and [STUDENT_0]: is bigger than
+T: You both agree?
+>> [STUDENT_1]: one half by one sixth. Cause if you put six ones up to a whole
+[STUDENT_0]: dark green
+
+student_reasoning: 1.0
+T: Ok
+[STUDENT_1]: So there’s six sixths
+>> [STUDENT_0]: This would be one third, and this is one half of  dark green, and then it would be bigger by one sixth, because
+T: Do you both agree with that?
+
+student_reasoning: 1.0
+[STUDENT_1]: Yeah, and you take the two dark green rods, those are the halves... And you take two  thirds, and put it up to it, and you take... two sixths, it's bigger than  two sixths. And  in this one, it you take this ...
+T 2: Can we go back to that one again?
+>> [STUDENT_1]: I mean it's bigger than one tenth, I mean twelfth, one twelfth, one  twelfth.
+T 2: How does that work? I'm confused about that. I’m confused about  the little white rods, I am following you right up to that point.
+
+```
+
+Looking at examples of other annotations is similar---just specify the feature column and feature value.
+
+#### 📊 Quantitative Analysis
+
+Let’s start by looking at the data quantitatively. We will use the `QuantitativeAnalyzer` to look at the data.
+
+Ever wondered whether there was a quick way to report aggregate statistics on: 
+- Talk time? 
+- Student reasoning? 
+- Conversational uptake?
+
+This is where the QuantitativeAnalyzer comes in handy!
+
+Let’s say we want to understand the talk time percentage split between the student and educator. We might want to know the statistic and plot the data. Here’s how we can do that:
+
+```python   
+>> from edu_convokit.analyzers import QuantitativeAnalyzer
+>> analyzer = QuantitativeAnalyzer()
+# Create speaker mapping to A, B, C, D
+>> label_mapping = {
+    speaker: chr(ord('A') + i) for i, speaker in enumerate(df[SPEAKER_COLUMN].unique())
+}
+>> analyzer.plot_statistics(
+    # Everything else is the same
+    feature_column=TALK_TIME_COLUMN,
+    df=df,
+    speaker_column=SPEAKER_COLUMN,
+    value_as="prop",
+    # We want to use the mapping we created
+    label_mapping=label_mapping
+)
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rosewang2008/edu-convokit/main/assets/talktime_quantitative.png" width="500"/>
+</p>
+
+The other statistics are similar to the example above for talk time. For conciseness, we will omit them here; but the only thing you need to do is change the feature_column argument to the feature you want to analyze.
+
+
+#### 💬 Lexical Analysis
+A lexical analysis is an analysis on the words used in the data. This is useful for understanding the low-level language (i.e., word usage) used by the student and educator. While a lexical analysis may be too low-level for capturing e.g., the meaning of the discourse, it can be a useful first step in capturing language trends in the data.
+
+We will give a simple demonstration of two features of the `LexicalAnalyzer`: 
+- Word Frequency: We will look at the most frequent words used by each speaker. 
+- Log-Odds: We will look at the log-odds of words used by each speaker (i.e., which words are more likely to be used by the student vs. the educator).
+
+```python
+
+>> from edu_convokit.analyzers import LexicalAnalyzer
+>> analyzer = LexicalAnalyzer()
+
+>> analyzer.print_word_frequency(
+    df=df,
+    text_column=TEXT_COLUMN,
+    speaker_column=SPEAKER_COLUMN,
+    # We want to look at the top 5 words
+    topk=5,
+    # We want to format the text e.g., remove punctuation and stopwords (https://en.wikipedia.org/wiki/Stop_word)
+    run_text_formatting=True
+)
+Top Words By Speaker
+T
+works: 6
+one: 5
+bigger: 4
+models: 4
+write: 3
+
+
+[STUDENT_0]
+one: 10
+would: 5
+third: 4
+yeah: 3
+bigger: 3
+
+
+[STUDENT_1]
+one: 16
+two: 13
+take: 9
+put: 8
+yeah: 8
+
+
+[STUDENT_2]
+one: 1
+half: 1
+
+
+[STUDE

@@ -350,6 +350,57 @@ recommended for Moodle plugins — **as a plugin inside the client's existing GP
 never vendored into a studio deliverable. The AI layer Globant builds stays on the
 permissive side of the boundary and talks to the ERP over its API.
 
+## 🔴 🆕 `p371`: the 2026 open-source-LMS roundups were checked against first-hand payloads — **four licence claims checked, four wrong, and three wrong in the direction that costs a client money**
+
+🔵 **Why this check and not another listicle sweep.** This pass's prescribed vertical leg
+(`open source platform {industry} ERP CRM MIT Apache`) returned the same genre it has
+returned for fourteen consecutive passes: 2026 "best open-source LMS" roundups. 🟢 **`p371`
+stopped reading them for discovery and started reading them as CLAIMS** — each roundup
+states a licence, and a licence is checkable. Four were checked against the repository's
+own payload, in a blobless clone at a pinned sha.
+
+| What the roundups said, 2026 | What the payload says, measured `2026-10-21` | Direction of the error |
+|---|---|---|
+| *"Frappe LMS is the **MIT**-licensed lightweight option"* | 🔴 [`frappe/lms`](https://github.com/frappe/lms) is **AGPL-3.0**, 33 893 B at `HEAD/license.txt` | 🔴 **permissive → network copyleft** |
+| *"**Forma LMS** another **Apache 2.0** option, aimed at corporate training"* | 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) is **GPL-2.0**, 18 346 B at `master/html/license.txt` — and there is **no grant in the root tree at all** | 🔴 **permissive → copyleft** |
+| *"**Sakai** is the **Apache-licensed** option"* | 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) is **ECL-2.0**, 11 120 B at `HEAD/LICENSE` — an Apache-2.0 derivative with a different patent clause and its own SPDX id | 🟡 imprecise, same commercial effect |
+| *"**OpenEduCat** is the one option that combines LMS and SIS"* | 🔴 The address `openeducat/openeducat` **does not resolve**. The real one is [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), **LGPL-3.0** on branch `19.0` | 🔴 the feature claim holds, the address does not |
+
+🟢 **Every one of this shelf's own four cells was already right**, and each is now
+corroborated first-hand at a pinned sha rather than by restatement. 🔵 **That is the
+finding worth carrying into an engagement:** the licence cell in a 2026 LMS roundup is
+wrong about as often as it is right, and it errs toward *more* permissive than the
+repository actually grants. 🔴 **A studio that sizes a closed-source deliverable from a
+listicle will discover AGPL-3.0 at delivery**, which is exactly when it cannot be fixed.
+
+🟡 **What this does NOT establish.** Four claims is four claims: this is not a measured
+error rate for the genre, and `p371` makes no such claim. It is an existence proof that the
+channel is unreliable on the one field a studio cannot get wrong, and the cheapest possible
+remedy is already standing on this base — `make carried SLUG=owner/repo` before trusting
+any inbound licence cell.
+
+### 🟢 The platform class this base had no row for: **the incumbent LATAM university SIS**
+
+🔴 **`p370`'s bridge tier reaches ten platforms and not one of them is what a Brazilian or
+Argentine university runs.** Moodle, Canvas, Blackboard Learn, D2L Brightspace, Schoology,
+PowerSchool, Ellucian Banner, Khan Academy, NCERT and UDIR are North American, European and
+Asian systems. 🟢 **`p371`'s backlog grading found the LATAM incumbents, and they are
+`SIGAA` and `SIU-Guaraní`** — the first run by Brazil's federal universities, the second by
+the Argentine national system — with three permissive reaches, all MIT, all small:
+
+| Incumbent platform | Reach | Licence | Grant, at the pin | Placed by |
+|---|---|---|---|---|
+| **SIU-Guaraní** (Argentina, national university SIS) | [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | 🟢 **MIT** | `HEAD/LICENSE` @ `6962638adbdd` | `documentacion.siu.edu.ar` |
+| **SIGAA** (Brazil, federal universities) | [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) | 🟢 **MIT** | `HEAD/LICENSE` @ `7373c6abac62` | `sigaa.ufpb.br` |
+| **SIGAA** — timetable repair | [`luthierycosta/ConsertandoHorariosSIGAA`](https://github.com/luthierycosta/ConsertandoHorariosSIGAA) | 🟢 **MIT** | `HEAD/LICENSE` @ `5a6106ed9ce2` | `unb.br` |
+
+🔵 **The engagement consequence is specific.** A LATAM higher-education proposal that
+budgets a Canvas or Banner integration has mis-specified the integration: the data lives in
+SIGAA or SIU-Guaraní, neither has a published API contract on this base, and the only
+starting points are three small MIT extensions. 🟡 **They are starting points, not
+platforms** — 8, 8 and 42 refs — and `p371` shelves them as the honest state of that
+reach rather than as a recommendation.
+
 ## 🟢 🆕 `p370`: two platform-tier rows out of the backlog — one permissive full platform, and the **vendor's own** Brightspace component
 
 🟢 **Evidence for §`p370`:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p370.tsv) · [`tree-grant-domain`](../evidence/tree-grant-domain.2026-10-21-p370.tsv)

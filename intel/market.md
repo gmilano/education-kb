@@ -204,6 +204,34 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🟡 `p371`: all four regional legs ran in both forms — **the thirteenth consecutive near-nil on the PRESCRIBED form, two new facts in four regions — and the supply side was measured instead, first-hand, for 1 859 addresses**
+
+🔵 **Both forms were run again deliberately, because `Gap 476`/`ACTION ZZ-cc` is a claim
+about the method and a claim about a method has to be re-tested, not inherited.**
+
+| Leg | Prescribed form (`AI education {region} 2026 adoption regulation players`) | New to these shelves |
+|---|---|---|
+| **North America** | works as prescribed: the state patchwork, `H.R. 8747`, Maryland `S.B. 720` *(signed, effective 2026-06-01)*, Idaho `S.B. 1227`, Katy ISD's K-6 ban, NYC's traffic-light guidance | 🟡 **one** — Arizona **`HB 4040`**, introduced, which would require AI-use policies at K-12 schools **and public universities** |
+| **EMEA** | returns the AI Act layer this file already holds in full: Annex III at **2 December 2027** under `Regulation (EU) 2026/1744`, Article 50 live since **2 August 2026**, the emotion-inference ban since **2 February 2025**, the **27 July 2026** Omnibus | 🔴 **zero** |
+| **APAC** | China's labelling and standards, India's Class-3 curriculum from **2026–27**, Japan's promotion-oriented act, **Vietnam's** classification of education as high-risk | 🔴 **zero** |
+| **LATAM** | works as prescribed, fourth pass running: UNESCO's teacher-adoption figures, Brazil's **regulatory sandbox to December 2026**, CENIA, the HolonIQ **2026 Latin America EdTech 100** | 🟡 **one** — **Vetto** (Brazil), a HolonIQ-listed instructional-support company, alongside the carried Teachy and Ginia |
+
+🔴 **Thirteen passes of near-nil is no longer news about a query — it is the shape of the
+channel**, and `p371` draws the consequence `p370` stopped one step short of: **the
+demand-side literature for this industry is saturated against this base, and the supply
+side is not.** 🟢 So this pass spent its budget on the supply side, where the transport
+answers first-hand, and the result is below.
+
+🔴 **`Gap 241`, re-tested, sixth host set, unchanged.** `eur-lex.europa.eu`,
+`data.consilium.europa.eu`, `education.ec.europa.eu`, `oecd.org` and `unesco.org` all
+answered **`000`** from this environment; `api.github.com` and `github.com` answered
+**`403`**; `git` and `raw.githubusercontent.com` answered **`200`**. 🟢 The **2 December
+2027** date and `Regulation (EU) 2026/1744` are corroborated again from secondary
+commentary and remain uncitable primarily here. The remedy is still a network-policy
+request, not a scheduling one.
+
+---
+
 ## 🟡 `p370`: all four regional legs ran — the twelfth consecutive near-nil on the PRESCRIBED form, and the reshaped form returned four national instruments
 
 🔵 **Both forms were run deliberately, so the comparison is a measurement rather than an
@@ -547,6 +575,35 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+#### 🟢 🆕 `p371`: the supply here is the **state data standard**, and it is Apache-2.0 end to end
+
+🟢 **Measured, not sourced:** of 1 859 backlog addresses graded from payload this pass,
+**118 in-domain addresses place in North America** — the largest regional supply on this
+base — and **84 of them are permissive** (71 %). The placement is first-hand: an
+institution or a jurisdictional standard read out of each repository's own README at a
+pinned sha.
+
+🟢 **The opportunity, stated as an engagement rather than a trend.** The **Ed-Fi Alliance**
+publishes the US K-12 operational data standard *and* its implementation under
+**Apache-2.0** — [`Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation),
+[`ODS-Admin-API`](https://github.com/Ed-Fi-Alliance-OSS/ODS-Admin-API),
+[`Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard),
+[`MetaEd-js`](https://github.com/Ed-Fi-Alliance-OSS/MetaEd-js). 🔵 **That makes a US
+district integration specification work rather than vendor reverse-engineering**, and it is
+the only regional supply on this base with that property. Alongside it,
+[`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)
+(Apache-2.0) is learning analytics already running in a large public university, and
+**1EdTech's own** [`digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+(Apache-2.0) plus the **MIT Digital Credentials Consortium** family give a credential
+deliverable a permissive spine.
+
+🔴 **The constraint that shapes the work is unchanged and now has a supply-side
+counterpart:** several states bar AI as the *primary basis* for grading, discipline or
+placement, so human-in-the-loop is a design requirement — and **11 of the 118** placed
+in-domain North American addresses ship **no licence file at all**, so the diligence step
+is not optional.
+
+
 #### 🆕 `p370`: the leg ran and returned **one** new usable fact, plus a supply placement the shelf could make and had not
 
 🔴 **The demand-side leg was near-nil for the twelfth consecutive pass.** The prescribed
@@ -803,6 +860,34 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+#### 🟢 🆕 `p371`: a **national government service** is now shelvable here — and the EU's own ELM repository is archived
+
+🟢 **Measured:** **86 in-domain addresses place in EMEA**, **46 permissive** (53 %). 🟢 The
+headline is that the supply includes production public-sector software:
+[`DFE-Digital/register-trainee-teachers`](https://github.com/DFE-Digital/register-trainee-teachers)
+is the **UK Department for Education's** teacher-training register, **MIT**, 6 593 refs —
+the largest EMEA in-domain repository this pass placed. Beside it,
+[`rage/secret-project-331`](https://github.com/rage/secret-project-331) (Apache-2.0) is the
+**University of Helsinki's** MOOC platform, [`openfun/joanie`](https://github.com/openfun/joanie)
+and [`warren`](https://github.com/openfun/warren) (MIT) are **France Université
+Numérique's** commerce and analytics services, and
+[`ls1intum/Iris`](https://github.com/ls1intum/Iris) (MIT) is the **LLM tutor inside TUM's
+Artemis** — the companion to the row this shelf already recommends.
+
+🔵 **Why that matters against the regulatory picture above.** Lithuania and Slovenia are
+both building **registers of approved AI tools**, and an Annex III deployer owes its own
+duties from **2 December 2027**. 🟢 A stack assembled from national-agency and university
+software, self-hosted, clears a procurement register and a deployer assessment more easily
+than a hosted API does — and this pass is the first time this base can name eight such
+components with their grants read at a pin.
+
+🔴 **One archive, named so nobody bids on it.**
+[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+is the Commission's own ELM repository and its README's first line is **"Archived
+Repository — no longer updated."** The model is live; the repository is not. 🔵 A repository
+that answers is not a repository that is maintained.
+
 
 #### 🆕 `p370`: the prescribed EMEA query failed again — and the reshaped one returned the Annex III position in one leg
 
@@ -1169,6 +1254,36 @@ modification now has two bases that permit one.
 
 ### APAC
 
+#### 🟢 🆕 `p371`: the **production-scale national platforms** are here, and this is the fifth independent corroboration
+
+🟢 **Measured:** **58 in-domain addresses place in APAC**, **42 permissive — 72 %, the
+highest permissive share of any region this pass.** 🟢 And the volume leader on the entire
+run is here: [`project-sunbird/sunbird-portal`](https://github.com/project-sunbird/sunbird-portal)
+(**MIT**, 11 606 refs), the platform behind **India's DIKSHA**, with
+[`sunbird-lms-mw`](https://github.com/project-sunbird/sunbird-lms-mw) (MIT) beneath it.
+[`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) (MIT, 7 723
+refs) runs at **NUS Singapore**; [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData)
+and [`EduCDM`](https://github.com/bigdata-ustc/EduCDM) (Apache-2.0, **USTC**) are the
+education-data-mining and cognitive-diagnosis toolkits;
+[`aiverify-foundation/moonshot-data`](https://github.com/aiverify-foundation/moonshot-data)
+(Apache-2.0) is **Singapore IMDA's** AI-testing corpus; and
+[`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) (MIT) reaches **Korea's NEIS**
+national school-information service.
+
+🔵 **This is the fifth independent corroboration of §15 of
+[`trends.md`](trends.md) — APAC's "gap" is in the trade press, not in the supply — and the
+strongest form of it yet**, because it arrives from a leg that named no region at all: the
+addresses were placed by their own payloads after being graded for a different purpose.
+
+🟢 **The engagement consequence.** India's **AI and Computational Thinking curriculum from
+Grade 3, beginning 2026–27**, and China's **"AI+Education" plan to 2030** are delivery
+mandates at national scale, and the delivery platform for the Indian one is **MIT-licensed
+and public**. A multi-jurisdiction APAC engagement still needs per-country policy nodes —
+China's labelling rules, Korea's AI Basic Act, Vietnam's high-risk classification of
+education, Japan's fine-free framework — but it no longer needs to start the platform from
+zero.
+
+
 #### 🆕 `p370`: the prescribed APAC query failed with the EMEA one — and three national instruments came back when it was reshaped
 
 🔴 **Run as prescribed, the APAC leg returned enterprise IT**: a Boomi tech-priorities
@@ -1429,6 +1544,44 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+#### 🟡 🆕 `p371`: the LATAM supply is **small and differently shaped** — it reaches SIGAA and SIU-Guaraní, which no other region's supply does
+
+🟢 **Measured, and the number is the small one:** **30 in-domain addresses place in LATAM**,
+**17 permissive** — against 118 for North America and 86 for EMEA. 🔴 **That asymmetry is
+real and this file does not soften it.**
+
+🟢 **But the shape is the finding, not the count.** `p370` graded the incumbent-LMS bridge
+class and reached ten platforms — Moodle, Canvas, Blackboard Learn, D2L Brightspace,
+Schoology, PowerSchool, Ellucian Banner, Khan Academy, NCERT, UDIR — **all of them North
+American, European or Asian software.** 🔴 **The LATAM supply does not reach those systems.
+It reaches `SIGAA` and `SIU-Guaraní`**, the student-information systems that Brazilian
+federal and Argentine national universities actually run:
+[`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension)
+(MIT, placed on `documentacion.siu.edu.ar`),
+[`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) (MIT,
+`sigaa.ufpb.br`) and
+[`luthierycosta/ConsertandoHorariosSIGAA`](https://github.com/luthierycosta/ConsertandoHorariosSIGAA)
+(MIT, `unb.br`). Alongside them sit national open-data reaches —
+[`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, `datos.gob.cl`),
+[`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) (MIT,
+`portaldatransparencia.gov.br`) — and
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+(MIT), a pedagogy benchmark sourced from Chilean teacher-training material.
+
+🔴 **The engagement consequence is specific and it is a mis-specification risk.** A LATAM
+higher-education proposal that budgets a **Canvas or Banner** integration has specified the
+wrong incumbent: the records are in SIGAA or SIU-Guaraní, neither has a published API
+contract on this base, and the only permissive starting points are three small extensions
+(8, 8 and 42 refs). 🟡 **They are starting points, not platforms**, and are shelved as the
+honest state of that reach.
+
+🔵 **This also reframes the region's governance gap usefully.** With **56 % of Brazilian
+secondary teachers** using AI against an OECD average of 36 %, **73.5 %** of 200 surveyed
+institutions using it in teaching and only **~30 %** holding a published policy, the demand
+is ahead of both the framework and the local supply — and the integration surface the
+demand actually runs on is the one nobody has built for yet.
+
 
 #### 🆕 `p370`: a second adoption instrument for the region, and one permissive curriculum asset
 

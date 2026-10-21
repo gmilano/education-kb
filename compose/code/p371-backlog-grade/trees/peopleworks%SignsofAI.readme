@@ -1,0 +1,296 @@
+# ✍︎ Signs of AI Writing
+
+[![Live demo](https://img.shields.io/badge/demo-live-brightgreen?logo=googlechrome&logoColor=white)](https://peopleworks.github.io/SignsofAI/)
+[![Windows app](https://img.shields.io/github/v/release/peopleworks/SignsofAI?filter=desktop-v*&label=Windows%20app&logo=windows&logoColor=white&color=0078D4)](https://github.com/peopleworks/SignsofAI/releases?q=desktop&expanded=true)
+[![License: MIT](https://img.shields.io/github/license/peopleworks/SignsofAI?color=blue)](LICENSE)
+[![.NET 10](https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![Blazor WebAssembly](https://img.shields.io/badge/Blazor-WASM-512BD4?logo=blazor&logoColor=white)](https://learn.microsoft.com/aspnet/core/blazor/)
+[![GitHub stars](https://img.shields.io/github/stars/peopleworks/SignsofAI?style=social)](https://github.com/peopleworks/SignsofAI/stargazers)
+
+[![NuGet Core](https://img.shields.io/nuget/v/SignsOfAI.Core?logo=nuget&label=Core)](https://www.nuget.org/packages/SignsOfAI.Core)
+[![NuGet CLI](https://img.shields.io/nuget/v/SignsOfAI.Cli?logo=nuget&label=CLI)](https://www.nuget.org/packages/SignsOfAI.Cli)
+[![NuGet MCP](https://img.shields.io/nuget/v/SignsOfAI.Mcp?logo=nuget&label=MCP%20server)](https://www.nuget.org/packages/SignsOfAI.Mcp)
+[![Available on CodeGuilds](https://img.shields.io/badge/Available_on-CodeGuilds-6366f1?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6TTIgMTdsMTAgNSAxMC01TTIgMTJsMTAgNSAxMC01Ii8+PC9zdmc+)](https://codeguilds.dev/packages/signsofai)
+
+**[Are you a teacher? Start here &rarr;](https://peopleworks.github.io/SignsofAI/why.html)** — what this does and what it cannot do, in plain language, with the error rate drawn rather than tabulated. No badges, no interval notation, nothing to install. English & Spanish.
+
+**[Try the live demo &rarr;](https://peopleworks.github.io/SignsofAI/)** — English & Spanish, runs in your browser. No signup, and the analysis uploads nothing.
+
+**[Use it in your editor &rarr;](https://peopleworks.github.io/SignsofAI/skill)** — an agent skill for
+Claude Code, Codex, Gemini CLI and Cursor, in one line: `npx skills add peopleworks/SignsofAI -g`.
+It edits by the same rules this engine scores by, and it never invents a number.
+
+**[Download the Windows app &rarr;](https://peopleworks.github.io/SignsofAI/download)** — the same tool in a window. An installer that needs no administrator rights, with the .NET runtime bundled; a .zip too, if you would rather not.
+
+![Signs of AI Writing analyzing text live: the score climbs as AI tells accumulate, then every tell is highlighted with a fix](Docs/screenshots/analyze-live.gif)
+
+<sub>Real recording of the live demo — the score updates as you type, and every highlight comes with a suggested fix.</sub>
+
+**Rather watch than read?** The two-minute explainer:
+[**English**](https://youtu.be/pKkMRAku7ZQ) · [**Español**](https://youtu.be/7Rp3dlX_iig)
+
+A free, privacy-first toolkit for **academic and writing integrity**. It does two things:
+
+1. **De-AI-ify linter** — flags the tells of AI-generated writing (overused vocabulary, rhetorical
+   crutches, robotic sentence rhythm) and, for **every** finding, tells you *how to fix it*.
+2. **Originality checker** — *"did they write it, or copy it?"* Compares documents against each other
+   and surfaces the passages they share — verbatim copies, **reworded paraphrases** (even across
+   languages), and a whole-cohort overview — as **evidence a human judges**. Not a black-box verdict.
+
+> 🔒 **The analysis runs entirely in your browser, and nothing is uploaded to run it.** No account, no
+> telemetry, no server that sees your text.
+>
+> Four features can send text off the device, and **not one of them runs unless you turn it on**, each
+> disclosed in the interface at the moment you choose it: the **paraphrase check** and the
+> **perplexity measurement** (both call a server you or we host), the **live rewrite** when you supply
+> your own API key — the key stays on your device, the text goes to the provider you picked — and the
+> optional **web spot-check** for a distinctive phrase, which exists only if the operator configured a
+> search provider.
+>
+> Everything else — every rule, the score, the character scan, the citation cross-check, the writer
+> baseline, the report — is computed locally and stays there. In the desktop app, the perplexity
+> measurement is local too.
+>
+> The Windows app can also **check whether a newer version has been published**, because it has no
+> auto-update and never will. That is not one of the four: it sends no text, no account and no
+> identifier — one request to GitHub's public release list, the same one a browser would make. It
+> **asks before its first check**, at most one a day, and it never downloads or runs anything for
+> you.
+
+Built with **.NET 10** and **Blazor WebAssembly** by **Pedro Hernández (PeopleWorks)**, [Microsoft MVP for .NET](https://mvp.microsoft.com/en-US/mvp/profile/24060a02-dbc6-44ec-bca5-c213ff9835c5) — for the .NET and Microsoft developer community, *por y para la comunidad educativa*.
+
+Repo: https://github.com/peopleworks/SignsofAI
+
+English and Spanish are supported in two **independent** ways:
+
+- **The interface** switches EN ⇄ ES instantly from the toolbar — no page reload, remembered per
+  browser, and it follows your browser's language on a first visit. Translations are plain JSON files
+  anyone can contribute: see [*Translating the interface*](#translating-the-interface).
+- **The analysis** runs against a per-language rule-pack, auto-detected or selectable. The Spanish
+  rule-pack is an original derivation of AI-writing markers for Spanish.
+
+The two are separate on purpose, so findings stay in the language of the *text being analyzed*: advice
+about English prose is given in English even when the interface is in Spanish, because that's the
+language the advice is about.
+
+---
+
+## How often is it wrong about a human?
+
+Every AI detector gets asked this and almost none of them answer. **[`Docs/CALIBRATION.md`](Docs/CALIBRATION.md)
+is the answer**, measured against 296 texts written before 2022 — open-access
+research articles, pre-2022 encyclopedia revisions in both languages, and **206 classroom essays by
+adult learners of English**, one per student, from a corpus collected between 2006 and 2012.
+
+At a threshold of **30/100 it flags 2 of them**: an observed 0.7%, with a 95% interval reaching 2.4%.
+The recommendation is made from the uncertain end of the interval rather than the flattering one, so
+it stays cautious while the corpus is small, and it follows the data in whichever direction they
+move as the corpus grows.
+
+The learners are the group this whole category is accused of harming — studies report that other
+detectors flag 61% of their essays — and they are the reason the boundary sits at 30 rather than the 25 it sat at before they
+joined: at 25 the tool flagged 9 of their 206 essays, 4.4%, and none of the 90 published texts. That
+figure is on the page, by group, rather than averaged away. It is far below the numbers reported for
+other tools, and it is not zero.
+
+It is deliberately **not an accuracy figure**. Accuracy needs a collection of machine-written text,
+which is a sample of whichever models were around that month; a false-positive rate needs only human
+writing, and it measures the harm this category actually causes — studies report that detectors flag 61% of essays by
+non-native English speakers, and none of them publish that about themselves.
+
+The report also names **which rules misfire**, ranked. That list is uncomfortable and it is the most
+useful thing the exercise produces.
+
+The corpus is a JSON manifest anyone can extend, the tool that builds and measures it is in
+`tools/SignsOfAI.Calibration`, and the whole thing re-runs in one command. See
+[`Docs/Calibration/README.md`](Docs/Calibration/README.md) — Spanish academic writing is the most
+wanted contribution.
+
+---
+
+## For teachers: the part that is not software
+
+A detector is not what you need first. **[`Docs/Teaching/`](Docs/Teaching/README.md)** is syllabus
+language you can paste, a one-page sheet to hand students before anything goes wrong, and a procedure
+for the day a question becomes formal — all bilingual, all free of any licence, attribution or
+permission.
+
+None of it requires this tool. It exists because the hard part of AI writing in a classroom was never
+detection; it is what you do on the morning you suspect something and have nobody to ask. All three
+documents are built on the same rule: **a score is never the reason for a decision about a student**,
+and a conversation about the work settles what no software can.
+
+---
+
+## 1. The AI-writing linter ("Analyze")
+
+Unlike black-box detectors that only spit out a score, this is an **explainable, actionable, educational**
+linter. Paste, upload (`.docx` / `.txt` / `.md`), or **just start typing** — the 0–100 score, highlights,
+statistics, and per-finding fixes update **as you write**.
+
+| Category       | Examples |
+|----------------|----------|
+| **Lexical**     | *delve, tapestry, multifaceted, nuanced, pivotal, underscore, showcase, testament…* (weighted by post-ChatGPT excess frequency) |
+| **Rhetorical**  | Negative parallelisms (*"it's not just X, it's Y"*), cliché openers (*"in today's digital age"*), hedging (*"it's worth noting that"*), false ranges, rule-of-three |
+| **Syntactic**   | Copula avoidance (*"serves as a…"*, *"a testament to…"*), inflated constructions (*"plays a crucial role"*) |
+| **Statistical** | **Burstiness** — sentence-length uniformity. Machine text hovers at 0.0–0.2; human prose 0.6–0.8 |
+
+- **Sentence-rhythm visualization** — a per-sentence bar chart that makes *burstiness* visible.
+- **Per-finding recommendations** — every flagged tell carries a concrete fix and the research behind it.
+- **Live rewrite (on-device, no key)** — your text and a de-AI-ified version side by side, rebuilt on
+  every keystroke, with the score dropping as you go. It runs off the rule-pack — no model, no network,
+  no API key — so it is instant and free. Every change is listed with alternatives to pick from and a
+  one-click *leave this one alone*. Three strengths, from *only the strongest tells* to *delete the
+  empty intensifiers too*.
+
+  It only does what a word swap can honestly do, and **declines the edits it would get wrong**: it
+  won't turn "delve into" into "examine into", won't drop the "just" that a *"not just X, it's Y"*
+  construction depends on, and won't put "el" in front of a feminine noun. Rhythm and rhetorical
+  structure need real rewriting, so those stay in the recommendations — and the panel says how many.
+- **Humanize (optional, BYOK)** — connect an AI provider and rewrite the flagged text in one click.
+  Anthropic (`claude-opus-4-8`, works from the browser), OpenAI / DeepSeek, Azure OpenAI, or **Ollama**
+  (local, no key). Credentials live only in your browser and are sent **directly** to the provider.
+- **Before/after diff** and a **shareable result card** (a PNG summary that never includes your text).
+- **Custom catalogs (BYO rules)** — paste banned words or import a rule-pack JSON; merges live.
+- **Catalog page** — a searchable library of every AI-writing sign, in both languages, ranked with an
+  in-browser BM25 index.
+
+![The annotated text with every AI tell highlighted, beside the recommendation list explaining and fixing each one](Docs/screenshots/evidence.png)
+
+<sub>This is the difference: not "87% AI", but *which* words, *why* they were flagged, and *what to write instead*.</sub>
+
+## 2. The Originality checker ("Originality")
+
+*"¿Lo escribió la IA, lo copiaste, o lo parafraseaste para esconderlo?"* Drop in two or more documents —
+a thesis and its sources, a batch of student submissions — and see exactly what they share. The guiding
+principle is honest: **we surface the evidence and highlight it; a human judges. We never accuse.** This is
+**not** a whole-internet index like Turnitin.
+
+| Phase | What it catches | How | Where it runs |
+|-------|-----------------|-----|---------------|
+| **A — Literal copy** | verbatim shared passages, resistant to changed capitalization/accents | accent/case-folded word *k*-shingles + greedy longest-match tiling, verified token-by-token | 🔒 **in your browser** |
+| **B — Paraphrase** | *reworded* copies — same idea, different words — **even across languages** | sentence embeddings (Google **EmbeddingGemma-300M**, ONNX) + cosine similarity | 🌐 optional server (**opt-in**) |
+| **C — Cohort** | who copied whom across a whole class, at a glance | batch upload + an N×N **overlap heatmap**; click a cell to inspect the pair | 🔒 **in your browser** |
+| **D — Web spot-check** | whether a passage already exists online | extracts a document's most **distinctive passages** and hands you one-click exact-phrase searches (Google/Bing/DuckDuckGo) | 🔒 **in your browser** |
+
+- **Shared-passage evidence** — matches are highlighted in both documents, side by side; the headline
+  overlap number equals exactly what you see highlighted (the evidence *is* the score).
+- **Phase B is the one feature that leaves the device.** It's opt-in, disclosed in the UI, and sends only
+  the sentences you choose to check to the PeopleWorks server. Everything else stays on your machine.
+- **Phase D** is deliberately honest: we can't index the whole web, so instead of pretending to, we surface
+  the passages worth checking and prepare the searches — nothing is sent anywhere until *you* click one.
+  An **optional automatic web search** can be enabled by the server operator (see *Optional server* below).
+
+![Cohort overlap matrix showing which documents share text, with the most similar pairs ranked below](Docs/screenshots/originality.png)
+
+<sub>A whole class at a glance: every document against every other, then the shared passages themselves — evidence, not an accusation.</sub>
+
+## 3. The predictability meter (optional server)
+
+An honest reframing of perplexity. A small language model (Qwen2.5-0.5B or Microsoft Phi-4-mini, int8 ONNX)
+measures how *predictable / generic* a text's phrasing is. **This is not an AI-vs-human verdict** — on a
+labelled corpus the two overlap badly (memorized human text scores *predictable* too). We surface
+predictability honestly as one signal among many, calibrated per language. Opt-in; runs on the PeopleWorks
+server. The model lazily loads and idle-unloads to keep the server light.
+
+## 4. Use it from other apps — MCP server
+
+Everything above is also available to **Claude Desktop and any [MCP](https://modelcontextprotocol.io)
+client** through `SignsOfAI.Mcp`, a Model Context Protocol server (built on the official
+[`ModelContextProtocol`](https://www.nuget.org/packages/ModelContextProtocol) SDK, stdio transport). Because
+the engine lives in `SignsOfAI.Core` — pure .NET, no browser — the server just exposes it as tools:
+
+| Tool | What it does | Where it runs |
+|------|--------------|---------------|
+| `analyze_ai_writing` | score + verdict + findings (with fixes) + statistics | 🔒 on-device |
+| `check_originality` | overlap % and shared passages across 2+ documents | 🔒 on-device |
+| `search_catalog` | search the catalog of AI-writing signs (EN/ES) | 🔒 on-device |
+| `extract_distinctive_phrases` | distinctive phrases + ready-made web-search links | 🔒 on-device |
+| `inspect_characters` | invisible characters & letters impersonating Latin ones, with line/column | 🔒 on-device |
+| `check_citations` | where a document contradicts its own bibliography, with the line of each | 🔒 on-device |
+| `compare_to_baseline` | how a piece sits against the same writer's earlier work, on their own scale | 🔒 on-device |
+| `write_report` | the whole analysis as a document to keep, forward, or take to a committee | 🔒 on-device |
+| `measure_predictability` | perplexity via the optional server | 🌐 server (**opt-in**) |
+| `check_paraphrase` | reworded/translated matches via EmbeddingGemma | 🌐 server (**opt-in**) |
+
+The first eight run entirely on the machine; the last two disclose that they send text to the server
+(endpoint via the `SIGNSOFAI_API_ENDPOINT` environment variable).
+
+It ships on NuGet as [`SignsOfAI.Mcp`](https://www.nuget.org/packages/SignsOfAI.Mcp), so nothing needs
+building. Point Claude Desktop at it:
+
+```jsonc
+// %APPDATA%\Claude\claude_desktop_config.json
+{ "mcpServers": { "signs-of-ai": {
+  "command": "dnx",
+  "args": ["SignsOfAI.Mcp", "--yes"]
+}}}
+```
+
+Or install it as a global tool once — `dotnet tool install --global SignsOfAI.Mcp` — and use
+`"command": "signsofai-mcp"`. See `src/SignsOfAI.Mcp/README.md` for details.
+
+**VS Code**: the package ships an MCP manifest, so its
+[NuGet page](https://www.nuget.org/packages/SignsOfAI.Mcp) has an **MCP Server** tab with the config
+already generated — copy it into `.vscode/mcp.json` and you're done.
+
+## 5. Use it as an agent skill — `/signs-of-ai`
+
+**[The skill has its own page &rarr;](https://peopleworks.github.io/SignsofAI/skill)**, with the two
+modes side by side and what it refuses to do.
+
+Prefer to work inside your editor? [`SKILL.md`](SKILL.md) is a drop-in **agent skill** that de-slops a
+draft — or reports the tells a text carries — in **English and Spanish**. It is a human-readable
+distillation of the same `rules.en.json` / `rules.es.json` taxonomy, so it edits by the same rules the
+engine scores by.
+
+```bash
+# Claude Code, Codex, Gemini CLI, Cursor and the rest, in one command
+npx skills add peopleworks/SignsofAI -g
+```
+
+```
+# …or as a Claude Code plugin, from the marketplace manifest in this repository
+/plugin marketplace add peopleworks/SignsofAI
+/plugin install signs-of-ai
+```
+
+Then:
+
+```
+/signs-of-ai            <your draft>          # edit mode: rewrite + change summary
+/signs-of-ai is this AI slop?  <the text>     # examine mode: the tells, quoted, no rewrite
+```
+
+The skill deliberately **never fakes a numeric score**, and never says who wrote a text — for a
+calibrated 0–100 score, burstiness, originality, citations, a writer baseline or perplexity it hands
+off to this engine (web app, CLI, or the MCP tools above). It carries the same six rules about what a
+finding may claim that the report does, including the error rate that has to travel with any score.
+See `skill/README.md`.
+
+---
+
+## 6. Use it where the writing happens — the Word add-in
+
+A task pane inside Word. Press **Read the signs** on the Home tab and it reads the open document and
+answers in the sidebar: no copying into a browser, no uploading a file, no leaving the page you are
+writing on.
+
+**It is the same engine, not a smaller one.** Every rule, the character scan, the citation
+cross-check and the verdict rules arrive through `SignsOfAI.UI`, the class library the web app and
+the desktop app also render. Word is simply a third host.
+
+### Why a task pane is the right place for this particular tool
+
+A task pane is a browser. The WebAssembly engine is downloaded once and runs there, on the machine,
+which means **the document is never uploaded**. It is the guarantee the web app already makes, in the
+application where the document actually lives.
+
+That is not a nicety. Every other add-in in this category posts your text to an API, because their
+analysis is a server. Ours is not, so there is nothing to post it to. And the manifest asks for
+**`ReadDocument`**, not `ReadWriteDocument`: Word itself enforces that this add-in can only read
+your document, rather than asking you to trust a sentence on a website.
+
+### What it looks like on a real document
+
+![The Signs of AI Writing task pane open beside a document in Word on the web: a score of 0/100, the verdict withheld because the document is 357 words, and six no-break spaces 

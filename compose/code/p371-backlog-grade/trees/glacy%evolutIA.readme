@@ -1,0 +1,500 @@
+# EvolutIA: Generador de preguntas de examen
+
+Eres profesor de Métodos Matemáticos para Física e Ingeniería. Cada semestre te enfrentas al mismo desafío: crear exámenes desafiantes y justos que evalúen realmente el aprendizaje de tus estudiantes.
+
+El problema es real: **los estudiantes memorizan ejercicios de semestres anteriores**. Necesitas crear nuevas variaciones cada vez, lo que toma horas de tu tiempo valioso. Además, quieres mantener la coherencia con los materiales que enseñaste en clase: lecturas, prácticas y tareas.
+
+## ¿Qué es EvolutIA?
+
+EvolutIA es tu asistente de IA que transforma este proceso tedioso en algo tan simple como ejecutar un comando.
+
+> **En pocas palabras**: EvolutIA toma tus ejercicios existentes y genera versiones más complejas y desafiantes, manteniendo el formato y estructura que tus estudiantes ya conocen. O, si prefieres, puede crear ejercicios nuevos desde cero basados en los temas que impartiste.
+
+### ¿Por qué usar EvolutIA?
+
+| **Sin EvolutIA** | **Con EvolutIA** |
+|-----------------|-----------------|
+| 2-3 horas para crear variaciones de ejercicios | 5 minutos ejecutando un comando |
+| Riesgo de crear ejercicios muy simples | Validación automática de complejidad matemática |
+| Ejercicios desconectados de lo que enseñaste | Contexto alineado con tus lecturas y prácticas |
+| Proceso manual repetitivo y propenso a errores | Automatización consistente y confiable |
+| Dificultad para crear múltiples versiones | Generación ilimitada de variaciones únicas |
+
+### Características Principales
+
+- **🔄 Variación Inteligente**: Incrementa la complejidad matemática de ejercicios existentes mientras mantiene el formato familiar
+- **✨ Creación desde Cero**: Genera ejercicios nuevos basados en temas y tags que definiste
+- **📚 RAG (Retrieval-Augmented Generation)**: Usa tus propias lecturas y ejercicios previos como contexto para generar contenido perfectamente alineado a tu curso
+- **🤖 Multi-Proveedor**: Soporte nativo para OpenAI (GPT-4), Anthropic (Claude 3), Google (Gemini 1.5), DeepSeek y modelos locales vía Ollama
+- **✅ Validación Automática**: Asegura que las nuevas preguntas sean matemáticamente más exigentes
+- **📝 Formato MyST**: Salida compatible con Curvenote y Jupyter Book, lista para publicar
+
+---
+
+## Cómo Funciona en 3 Pasos
+
+### Paso 1: Prepara tus Materiales
+
+Organiza tus materiales en carpetas por tema:
+
+```
+MiCurso/
+├── analisis_vectorial/       # Tema 1
+│   ├── semana1_practica.md
+│   └── semana2_lectura.md
+├── matrices/                 # Tema 2
+│   ├── semana3_practica.md
+│   └── semana4_lectura.md
+├── tareas/                   # Tareas de evaluación
+│   ├── tarea1/tarea1.md
+│   └── tarea2/tarea2.md
+└── examenes/                 # Aquí aparecerán los exámenes generados
+```
+
+### Paso 2: Configura tu API Key
+
+Crea un archivo `.env` en la raíz de tu proyecto:
+
+```bash
+OPENAI_API_KEY=sk-...  # O el proveedor que prefieras
+```
+
+### Paso 3: Genera tu Examen
+
+```bash
+# ¡Un solo comando!
+evolutia --tema analisis_vectorial --num_ejercicios 3 --output examenes/parcial1
+```
+
+En 5 minutos, tendrás 3 ejercicios desafiantes, con sus soluciones, listos para tu examen.
+
+---
+
+## Historias de Uso Reales
+
+### 📖 Historia 1: Creando un Parcial de Análisis Vectorial
+
+**El contexto**: Es semana 8 del semestre y necesitas un parcial sobre Análisis Vectorial. Tienes los ejercicios de la práctica del semestre pasado, pero no puedes usarlos tal cual porque los estudiantes ya los conocen.
+
+**Con EvolutIA**:
+
+```bash
+evolutia --tema analisis_vectorial --num_ejercicios 5 --complejidad alta --output examenes/parcial1
+```
+
+**Resultado**:
+- ✅ 5 nuevos ejercicios, cada uno más complejo que el original
+- ✅ Soluciones completas paso a paso
+- ✅ Formato MyST listo para Jupyter Book
+- ✅ Archivos individuales por ejercicio para fácil distribución
+- ⏱️ Tiempo total: 5 minutos (en lugar de 2-3 horas manualmente)
+
+**Lo que obtienes**:
+```
+examenes/parcial1/
+├── examen_parcial1.md          # Examen completo
+├── ej1_parcial1.md             # Ejercicio 1 + solución
+├── ej2_parcial1.md             # Ejercicio 2 + solución
+├── ej3_parcial1.md             # Ejercicio 3 + solución
+├── ej4_parcial1.md             # Ejercicio 4 + solución
+└── ej5_parcial1.md             # Ejercicio 5 + solución
+```
+
+---
+
+### 📖 Historia 2: Generando un Quiz Rápido de Repaso
+
+**El contexto**: Es semana 12 y quieres un quiz rápido de 3 ejercicios de repaso sobre Matrices. No necesitas ejercicios muy complejos, solo una práctica refrescante.
+
+**Con EvolutIA**:
+
+```bash
+evolutia --tema matrices --num_ejercicios 3 --complejidad media --output examenes/quiz_repaso
+```
+
+**Resultado**:
+- ✅ 3 ejercicios de nivel medio, perfectos para un quiz rápido
+- ✅ Soluciones concisas y claras
+- ✅ Todos los ejercicios alineados con lo que enseñaste en clase
+- ⏱️ Tiempo total: 3 minutos
+
+---
+
+### 📖 Historia 3: Usando Contexto del Curso con RAG
+
+**El contexto**: Quieres crear un examen final sobre Teorema de Stokes. Enseñaste usando notación específica y ejemplos particulares en tus lecturas. Quieres que el examen refleje exactamente ese enfoque.
+
+**Primero, indexa tus materiales** (solo la primera vez):
+
+```bash
+evolutia --tema stokes --use_rag --reindex --output examenes/final
+```
+
+**Luego, genera el examen** (usará el contexto que ya tienes):
+
+```bash
+evolutia --tema stokes --num_ejercicios 4 --use_rag --output examenes/final
+```
+
+**Resultado**:
+- ✅ 4 ejercicios que usan la misma notación que tus lecturas
+- ✅ Ejemplos alineados con lo que enseñaste en clase
+- ✅ Referencias a los materiales específicos del curso
+- ⏱️ Tiempo total: 8 minutos (5 para indexar, 3 para generar)
+
+**Nota**: El índice RAG se reutiliza en futuros exámenes, así que el tiempo disminuye drásticamente.
+
+---
+
+## Instalación Rápida
+
+### Requisitos Previos
+
+- Python 3.8 o superior
+- API Key de tu proveedor preferido (OpenAI, Anthropic, Google) o un servidor local (Ollama)
+
+### Paso 1: Crear Entorno Virtual (Recomendado)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+
+### Paso 2: Instalar EvolutIA
+
+```bash
+pip install evolutia
+```
+
+### Paso 3: Configurar API Keys
+
+Crea un archivo `.env` en la raíz de tu proyecto:
+
+```bash
+OPENAI_API_KEY=sk-...
+# O el proveedor que prefieras:
+# ANTHROPIC_API_KEY=sk-ant-...
+# GOOGLE_API_KEY=...
+# DEEPSEEK_API_KEY=sk-...
+```
+
+### Paso 4: ¡Estás listo!
+
+```bash
+# Verifica que funciona
+evolutia --analyze
+```
+
+---
+
+## Guía de Uso Completa
+
+### Modos de Operación
+
+#### 🔄 Modo Variación (Más Común)
+
+Toma ejercicios existentes y crea versiones más complejas.
+
+**Uso básico**:
+```bash
+evolutia --tema <tema> --num_ejercicios <cantidad> --output <directorio>
+```
+
+**Ejemplos**:
+
+```bash
+# Generar 1 variación del tema 'analisis_vectorial'
+evolutia --tema analisis_vectorial --num_ejercicios 1 --output examenes/parcial1
+
+# Generar 3 variaciones con alta complejidad
+evolutia --tema matrices --num_ejercicios 3 --complejidad muy_alta --output examenes/dificil
+
+# Variar ejercicios específicos por su etiqueta (Label)
+evolutia --tema analisis_vectorial --label ex1-s1 ex2-s1 --output examenes/recuperacion
+```
+
+#### ✨ Modo Creación
+
+Genera ejercicios nuevos desde cero basados en temas y tags.
+
+**Uso básico**:
+```bash
+evolutia --mode creation --tema <tema> --num_ejercicios <cantidad> --output <directorio>
+```
+
+**Ejemplos**:
+
+```bash
+# Crear 3 ejercicios nuevos sobre 'numeros_complejos'
+evolutia --mode creation --tema numeros_complejos --num_ejercicios 3 --output examenes/quiz1
+
+# Crear ejercicios con tags específicos
+evolutia --mode creation --tema vectores --tags producto --num_ejercicios 2 --output examenes/quiz_producto
+```
+
+#### 📚 Modo RAG (Retrieval-Augmented Generation)
+
+Usa tus propias lecturas y prácticas como contexto para generar ejercicios perfectamente alineados a tu curso.
+
+**Primer uso (indexar materiales)**:
+```bash
+evolutia --tema <tema> --use_rag --reindex --num_ejercicios <cantidad> --output <directorio>
+```
+
+**Usos posteriores (usar índice ya creado)**:
+```bash
+evolutia --tema <tema> --use_rag --num_ejercicios <cantidad> --output <directorio>
+```
+
+**Ejemplo completo**:
+```bash
+# Primero: Indexar y generar examen final
+evolutia --tema stokes --use_rag --reindex --num_ejercicios 4 --output examenes/final
+
+# Después: Generar otro examen con el mismo índice (más rápido)
+evolutia --tema stokes --use_rag --num_ejercicios 3 --output examenes/recuperacion
+```
+
+### Consultar tu Base de Conocimiento
+
+Pregúntale al sistema qué sabe sobre un concepto (útil para verificar que RAG funcionó correctamente):
+
+```bash
+evolutia --query "Teorema de Stokes"
+evolutia --query "Producto vectorial en R^3"
+evolutia --query "Método de integración por partes"
+```
+
+---
+
+## Configuración Avanzada
+
+### Archivo de Configuración
+
+Puedes crear un archivo `evolutia_config.yaml` en la raíz de tu carpeta de curso para personalizar el comportamiento:
+
+```yaml
+api:
+  provider: "openai"  # openai, anthropic, gemini, deepseek, generic, local
+  model: "gpt-4"
+
+rag:
+  enabled: true
+  vector_store:
+    persist_directory: "./storage/vector_store"
+    collection_name: "ejercicios_mmfi"
+  retrieval:
+    top_k: 5
+    similarity_threshold: 0.7
+
+complexity:
+  default_level: "alta"  # media, alta, muy_alta
+```
+
+### Generar Configuración Automáticamente
+
+EvolutIA puede analizar tu estructura de carpetas y generar una configuración apropiada:
+
+```bash
+evolutia --analyze
+```
+
+### Argumentos CLI Disponibles
+
+| Argumento | Descripción | Default |
+|-----------|-------------|---------|
+| `--tema` | Identificador del tema (carpeta) | **Requerido** |
+| `--output` | Carpeta de salida | **Requerido** |
+| `--num_ejercicios` | Cantidad a generar | 1 |
+| `--complejidad` | Nivel objetivo (`media`, `alta`, `muy_alta`) | `alta` |
+| `--api` | Proveedor (`openai`, `anthropic`, `gemini`, `deepseek`, `generic`, `local`) | `openai` |
+| `--type` | Tipo de pregunta (`problem`, `multiple_choice`) | `problem` |
+| `--no_generar_soluciones` | Omitir la creación de archivos de solución | False |
+| `--model` | Nombre específico del modelo (útil para `generic`) | None |
+| `--base_url` | URL base de la API (útil para `generic` o `local`) | None |
+
+---
+
+## Proveedores de IA Soportados
+
+### OpenAI (GPT-4)
+
+```bash
+evolutia --tema analisis_vectorial --api openai --output examen_openai
+```
+
+### Anthropic (Claude 3)
+
+```bash
+evolutia --tema analisis_vectorial --api anthropic --output examen_anthropic
+```
+
+### Google (Gemini 1.5)
+
+```bash
+evolutia --tema analisis_vectorial --api gemini --output examen_gemini
+```
+
+### DeepSeek (Económico y Poderoso)
+
+```bash
+evolutia --tema analisis_vectorial --api deepseek --output examen_deepseek
+```
+
+### Modelos Locales (Offline y Gratis)
+
+Para usar modelos como Llama 3 o Mistral sin costo de API:
+
+1. Ejecuta tu servidor local:
+```bash
+ollama serve
+```
+
+2. Configura (opcional, usa defaults de Ollama):
+```yaml
+# evolutia_config.yaml
+local:
+  base_url: "http://localhost:11434/v1"
+  model: "llama3"
+```
+
+3. Ejecuta:
+```bash
+evolutia --tema analisis_vectorial --api local --output examen_local
+```
+
+### Proveedores Genéricos (Groq, Mistral API, etc.)
+
+```bash
+evolutia --tema analisis_vectorial --api generic --base_url https://api.groq.com/openai/v1 --model llama3-70b-8192 --output examen_groq
+```
+
+---
+
+## Gestión de Materiales
+
+### Cómo "Ve" EvolutIA tus Ejercicios
+
+EvolutIA usa una estrategia inteligente para encontrar tus materiales:
+
+**1. Escaneo de Carpetas**:
+Busca archivos `.md` dentro de la carpeta del tema:
+```
+analisis_vectorial/
+├── semana1_practica.md     # ✅ Encontrado automáticamente
+├── semana2_lectura.md      # ✅ Encontrado automáticamente
+```
+
+**2. Tags y Metadatos**:
+Para archivos fuera de la carpeta del tema (ej. en `tareas/`), usa el *frontmatter* YAML:
+
+```yaml
+---
+title: Tarea 1: Aplicaciones de Stokes
+tags:
+  - stokes                    # <--- ¡Importante! Esto permite encontrarlo
+  - analisis_vectorial
+  - integrales
+---
+```
+
+### Trazabilidad
+
+Los ejercicios generados heredan los tags de sus "padres". El archivo final del examen (`examenX.md`) resume todos los temas cubiertos, facilitando la trazabilidad de lo que se evalúa.
+
+---
+
+## Rendimiento y Optimizaciones
+
+EvolutIA está optimizado para ser rápido y eficiente, incluso generando múltiples ejercicios:
+
+### ⚡ Caché Inteligente
+
+- **Cache de respuestas LLM**: Evita llamar a la API para preguntas repetidas, ahorrando tiempo y dinero
+- **Cache de archivos escaneados**: No reescanea el filesystem si tus archivos no cambiaron
+- **Configuración**: Por defecto, usa 500MB de caché con expiración de 24 horas
+
+### 🚀 Generación Asíncrona
+
+- Genera múltiples ejercicios en paralelo usando async/await
+- Reintentos automáticos si la API falla temporalmente
+- Sistema de "Circuit Breaker" para evitar saturar servicios que están fallando
+
+### 📊 RAG Optimizado
+
+- **Lazy loading**: Los modelos de embeddings solo se cargan si usas RAG
+- **Paginación**: Queries limitadas para no cargar colecciones enteras en memoria
+- **Result**: Inicio rápido y uso eficiente de recursos
+
+### 💾 Ahorro de Espacio
+
+- Eliminado ~12k líneas duplicadas del código base
+- Build/ no versionado en git
+- Estructura limpia y mantenible
+
+---
+
+## Herramienta de IA Asistente: opencode
+
+El proceso de optimización de EvolutIA fue asistido por **opencode**, una herramienta de IA especializada en ingeniería de software, utilizando el modelo **GLM-4.7 (zai-coding-plan/glm-4.7)**.
+
+### Optimizaciones Implementadas
+
+Gracias a la asistencia de opencode, se implementaron 9 optimizaciones prioritarias:
+
+#### Prioridad Alta
+- ✅ Caché LLM: write-behind con debounce para reducir I/O de disco
+- ✅ Eliminación de build/ del control de versiones (reducción de ~12k líneas duplicadas)
+
+#### Prioridad Media
+- ✅ Implementación de async/await para llamadas LLM (mayor throughput)
+- ✅ Límite de memoria RAM para caché LLM (evitar saturación)
+
+#### Prioridad Baja
+- ✅ Imports centralizados en módulo evolutia/imports.py
+- ✅ Caché de rutas de archivos válidos en MaterialExtractor
+- ✅ Lazy loading de embeddings en RAGIndexer/RAGRetriever
+- ✅ Límite de paginación para queries ChromaDB
+- ✅ Sistema de retry automático con backoff exponencial
+
+### Beneficios Obtenidos
+
+- **Menos tiempo de desarrollo**: Las optimizaciones se implementaron de manera eficiente y coordinada
+- **Código más limpio**: Reducción de duplicación y mejora de mantenibilidad
+- **Mejor documentación**: Actualización completa de CHANGELOG y documentación técnica
+- **Tests pasando**: Todas las optimizaciones mantuvieron compatibilidad con tests existentes
+- **Arquitectura consistente**: Todas las optimizaciones siguen las convenciones y patrones del proyecto
+
+---
+
+## Estructura del Proyecto
+
+Se recomienda la siguiente estructura para tus cursos:
+
+```
+MiCurso/
+├── evolutia_config.yaml      # Configuración específica del curso
+├── analisis_vectorial/       # Materiales del tema 1
+│   ├── lectura.md
+│   └── practica.md
+├── matrices/                 # Materiales del tema 2
+├── examenes/                 # Salida generada por EvolutIA
+└── .env                      # API Keys (no subir a git)
+```
+
+---
+
+## Contribuciones y Desarrollo
+
+El código fuente está organizado modularmente en `evolutia/`:
+- `evolutia_engine.py`: Orquestador principal
+- `variation_generator.py`: Lógica de prompts y llamadas a LLMs
+- `rag/`: Subsistema de indexación y recuperación
+
+Para reportar bugs o mejoras, por favor visita el repositorio en GitHub.
+
+---
+
+## Licencia
+
+Apache 2.0

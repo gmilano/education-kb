@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 371 — 🟢 **the whole 1 859-address promotion backlog graded first-hand, `Gap 477` closed — and the class these shelves were missing is CREDENTIALING, found by running `p370`'s own domain check out of sample for the first time**
+
+🔵 **The discovery legs first, because they are again the part that did not work.** The
+prescribed global queries (*top open source AI agents education 2026 github MIT*, *github
+trending education AI 2026*) returned, for the **third** consecutive pass, learning material
+about AI rather than education infrastructure, plus general-purpose agent listicles:
+OpenClaw, Hermes, OpenHands, CrewAI, LangGraph. 🔴 **None belongs on an education shelf.**
+🟢 Of the handful of education-specific addresses the legs did return,
+`make carried` answered **CARRIED** for all but five:
+[`pedal-edu/pedal`](https://github.com/pedal-edu/pedal),
+[`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite),
+[`MUJINN/intelligent-correction`](https://github.com/MUJINN/intelligent-correction),
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor),
+[`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education)
+and [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) were all already here.
+🔵 **Discovery against this corpus is saturated for a fourth pass**, and the budget went
+somewhere it could still buy something.
+
+### 🔴 The two addresses the legs returned that were NEW, and both are unusable
+
+| Address | Measured `2026-10-21` | Verdict |
+|---|---|---|
+| [`daivikpurani/AI-Tutor`](https://github.com/daivikpurani/AI-Tutor) | in domain, **no licence file anywhere in the root tree** (8 refs, `HEAD` `2dbe7dcead77`) | 🔴 all rights reserved — not shelvable |
+| [`eshaanag/elyaitra`](https://github.com/eshaanag/elyaitra) | in domain (`syllabus`), **no licence file in the root tree** (14 refs, `HEAD` `7bcdadf38056`) | 🔴 all rights reserved — not shelvable |
+
+🔵 **Two for two on the open web's "AI tutor" results, and it is the same ratio `p370`
+measured on the LMS bridge class** (15 of 21 with no grant). The pattern now has two
+independent samples: **an education-AI repository that an open-web query surfaces is more
+likely to be ungranted than permissively licensed.**
+
+### 🟢 Where the budget went: all 1 859 remaining backlog addresses, graded
+
+🔴 **`Gap 477` was carried as a number without a list.** It read *"2 248 are not [graded]"*.
+`p371` derived the backlog from the shelves the gap cites and got **1 859** — the 2 311
+denominator counted strings that are not addresses (a relative path, `.../archive`, entered
+it as address number one) and addresses the live shelves already carry. 🟢 The derivation is
+now `gate-backlog-denominator`, so the figure is re-derivable instead of restated.
+
+| the run | `2026-10-21` |
+|---|---:|
+| addresses probed, 6 parallel shards, blobless partial clones | **1 859** |
+| 🟢 answered — `0` `CLONE-FAILED` | 🟢 **1 859 (100 %)** |
+| 🔴 cited on these shelves and **no longer resolving** | 🔴 **46** |
+| in domain by payload | **1 238** |
+| 🟢 permissive at an unscoped root grant | 🟢 **781** |
+| 🔴 no grant in the root tree | 🔴 **235** |
+| 🟢 placed in a region from their own payload | 🟢 **450** |
+
+### 🔴 The finding: `p370`'s 92.6 % was in-sample, and out of sample it is **76.5 %**
+
+🟢 **`p370` said so itself** — *"all four defects were derived from THIS pass's 63-slug
+sample … the out-of-sample run is this instrument's next obligation, not a result it
+already has."* 🟢 `p371` ran it: 1 859 held-out addresses, then a **seeded stratified
+sample of 40** hand-adjudicated (seed `371`, committed, in
+[`gap480-oos-sample`](../evidence/gap480-oos-sample.2026-10-21-p371.txt)).
+
+| class | sampled | correct | precision |
+|---|---:|---:|---:|
+| `EDUCATION` | 16 | 🟢 **16** | 🟢 **100 %** |
+| `NOT-EDUCATION` | 8 | 5 | 62.5 % |
+| `SLUG-TRAP` | 10 | 5 | 🔴 **50 %** |
+| `WEAK` *(by design: a human adjudicates)* | 6 | — | 4 of 6 promote |
+| **decisive total** | **34** | **26** | **76.5 %** |
+
+🟢 **All eight errors fell in two classes and neither was tutoring:** the credentialing /
+OER layer (`open badge`, `openbadges`, `verifiable credential`, `europass`, `oer`) and
+national curriculum standards (`course of study`, `mext`, `学習指導要領`), plus two
+non-English payloads — a Portuguese one naming **`itinerários formativos`**, the BNCC
+reform's own term. 🔵 **That is `D4`'s monolingual defect arriving a second time**, which is
+why `Gap 476` treats it as structural rather than a one-off.
+
+🟢 **Each missing term was read out of the payload that had been misjudged**, added to
+`gate-domain-check` (43 → **56** controls), and the instrument re-run over all 1 859:
+**80 verdicts moved, 73 recovered into the domain** — 41 from `NOT-EDUCATION`, 20 from
+`WEAK`, 12 from `SLUG-TRAP`. 🔴 **One false-positive class survives and is declared:**
+generic verifiable-credential infrastructure that is not education-specific
+([`Open-Attestation/open-attestation`](https://github.com/Open-Attestation/open-attestation),
+[`CogniPilot/credentials`](https://github.com/CogniPilot/credentials)). `Gap 481` holds it
+and names the next held-out run.
+
+### 🟢 The twelve credentialing and OER addresses a studio meets first
+
+🔵 58 of the 1 859 are in-domain, permissive, root-granted members of this class. The full
+tier with grant paths and pinned shas is on
+[`agents/top.md`](top.md); the headline rows:
+[`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+(Apache-2.0 — the standards body's own validator),
+[`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core)
+(Apache-2.0), the **MIT Digital Credentials Consortium** family
+([`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify),
+[`verifier-core`](https://github.com/digitalcredentials/verifier-core),
+[`vc`](https://github.com/digitalcredentials/vc),
+[`did-io`](https://github.com/digitalcredentials/did-io) — MIT and BSD-3-Clause),
+[`cassproject/CASS`](https://github.com/cassproject/CASS) (Apache-2.0, competency
+frameworks), [`blockchain-certificates/cert-issuer`](https://github.com/blockchain-certificates/cert-issuer)
+(MIT), [`LibreTexts/conductor`](https://github.com/LibreTexts/conductor) (MIT, OER),
+[`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) (Apache-2.0, Penn State)
+and [`X5GON/processing-pipeline-api`](https://github.com/X5GON/processing-pipeline-api)
+(BSD-2-Clause, EU).
+
+🔴 **And one archive, named so nobody bids on it.**
+[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+is the Commission's own ELM repository and its README opens **"Archived Repository — no
+longer updated."** The model is live; the repository is not.
+
+### 🟢 The regional legs, run in BOTH forms again — and the prescribed form's thirteenth near-nil
+
+| Leg | Prescribed form | New to these shelves |
+|---|---|---|
+| **North America** | state-by-state bills, `H.R. 8747`, Maryland `S.B. 720`, Idaho `S.B. 1227`, Katy ISD, NYC traffic-light | 🟡 **one** — Arizona **`HB 4040`** (introduced; would require AI-use policies at K-12 *and public universities*) |
+| **EMEA** | the AI Act, Annex III deferral, Article 50, the emotion-inference ban, Omnibus | 🔴 **zero.** Every instrument returned is carried, `Regulation (EU) 2026/1744` included |
+| **APAC** | China's rules, India's Class-3 curriculum, Japan's promotion act, Vietnam's high-risk education classification | 🔴 **zero** |
+| **LATAM** | UNESCO teacher adoption, Brazil's sandbox to Dec 2026, CENIA, the HolonIQ EdTech 100 | 🟡 **one** — **Vetto** (Brazil), a HolonIQ-listed instructional-support company |
+
+🔴 **`Gap 241` re-tested from this environment and the blockage reproduces for a sixth
+host set**: `eur-lex.europa.eu`, `data.consilium.europa.eu`, `education.ec.europa.eu`,
+`oecd.org` and `unesco.org` all answered `000`; `api.github.com` and `github.com` answered
+`403`; `raw.githubusercontent.com` and the git service answered `200`. 🟢 **Which is
+precisely why this pass's own contribution is first-hand and its regional *regulation* half
+is not** — the instrument channel works here and the institutional web does not.
+
 ## 2026-10-21 · Pass 370 — 🔴 **the prescribed trending legs returned AI curricula again, so the budget went to the bridge class — and 15 of 21 LMS/SIS MCP servers turn out to ship no licence file at all**
 
 🔵 **The discovery legs first, honestly, because they are the part that did not work.**

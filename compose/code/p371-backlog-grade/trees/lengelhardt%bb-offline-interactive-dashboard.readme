@@ -1,0 +1,265 @@
+# Offline Interactive Dashboard & Downloader for Blackboard
+
+A local tool **for faculty** that downloads the student submissions from your Blackboard
+courses and builds an interactive HTML dashboard each morning: who submitted, who's late, who's
+missing — with the actual files (code, notebooks, plots) pulled down for offline grading. It uses the official Blackboard REST
+API over OAuth 2.0. No browser automation, no scraping, no vendor cloud, no data leaving your
+machine.
+
+*Not affiliated with, or endorsed by, Anthology or Blackboard. "Blackboard" is a trademark of its
+respective owner; it's used here only to describe what this tool works with.*
+
+> **You'll need Python.** This is a Python program, so **Python 3 must be installed** to run it.
+> On **macOS**, Python 3 is already there (it ships with the system / Xcode Command Line Tools) —
+> nothing extra to install. On **Windows**, Python is a *separate* download from
+> [python.org](https://www.python.org/downloads/).
+>
+> **Operating system: macOS and Windows.** Built and tested on both. Every
+> operating‑system‑specific command lives in a single file — `bbdash/osutil.py` — which now
+> has working macOS and Windows branches (dialog, file‑opening, mail). Scheduling lives outside
+> Python: `launchd` on macOS (`install/launchagents/`), Windows Task Scheduler on Windows
+> (`install/windows/`). Linux is best‑effort (files/URLs via `xdg-open`, a tkinter dialog) but
+> not regularly tested.
+
+## Bring Your Own Key (BYOK)
+
+There is no shared account. Each instructor:
+
+1. Registers their own developer application and gets their own Key + Secret — see **`docs/SETUP.md`**.
+2. Gets their own campus IT to approve it on their Blackboard — see **`docs/IT_APPROVAL_EMAIL.md`**.
+3. Runs the tool locally with their own credentials.
+
+Read **`docs/SETUP.md` first.** Until your campus IT approves your Application ID, the tool cannot
+authenticate (you'll get HTTP 401) — that's expected, not a bug.
+
+---
+
+## Setting up with an AI assistant
+
+Not comfortable with a terminal? You can paste this README (and `docs/SETUP.md`) into an AI
+assistant such as ChatGPT or Claude and ask it to walk you through the setup step by step. It can
+help you install Python, create the virtual environment, run the guided `install/setup_config.py`,
+edit your config, and — most usefully — explain any error you hit (e.g. "what does HTTP 401 mean?").
+If you point a coding‑capable assistant at the downloaded folder, it will also read `AGENTS.md`,
+which is written for exactly this purpose.
+
+**Two steps only _you_ can do — no AI can do them for you:**
+
+1. **Register your developer application** on the Anthology developer portal to get your own
+   Application **Key** and **Secret** (`docs/SETUP.md`).
+2. **Get your campus IT to approve** your Application ID on your institution's Blackboard
+   (`docs/IT_APPROVAL_EMAIL.md` is a ready‑to‑send request).
+
+> **Safety:** never paste your Application **Secret** into a public AI chat — it's a password.
+> Share the *steps* and *error messages*, not the secret itself.
+
+---
+
+## Getting started
+
+You run the tool from its Python source — that's the whole program. (On macOS you can
+optionally wrap it in a one‑click Dock app, described further down; that app is just a launcher
+for this same code.)
+
+### 1. Get the code and install dependencies
+
+**macOS / Linux:**
+
+```bash
+cd /path/to/bb-offline-interactive-dashboard
+
+# Option 1: a virtual environment (recommended)
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+
+# Option 2: Anaconda
+# conda create -n bbdash python=3.11 && conda activate bbdash
+# pip install -r requirements.txt
+```
+
+**Windows (PowerShell):**
+
+```powershell
+cd C:\path\to\bb-offline-interactive-dashboard
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+(The only dependency is `requests`. On Windows, Python is a separate install from
+[python.org](https://www.python.org/downloads/).)
+
+### 2. Enter your credentials (one time)
+
+By default this **creates your config file and opens it in your editor** so you can paste your
+values in (Application Key, Secret, username; the Base URL is pre-filled) and save. Add
+`--interactive` instead to type each value at a prompt (with a masked Secret). See
+`docs/CONFIGURATION.md` for all fields.
+
+```bash
+python3 install/setup_config.py                 # macOS/Linux (add --interactive to type instead)
+```
+```powershell
+python install\setup_config.py                  # Windows (add --interactive to type instead)
+```
+
+Re-running never overwrites an existing config — it just reopens it for editing.
+
+### 3. Verify, then run
+
+```bash
+python3 -m bbdash --check    # macOS/Linux: authenticate + list courses, download nothing
+python3 -m bbdash            # full run: download + build dashboard + open it
+```
+```powershell
+python -m bbdash --check     # Windows (or: .\install\run.ps1 --check)
+python -m bbdash             # Windows (or: .\install\run.ps1)
+```
+
+Useful flags:
+
+```bash
+python3 -m bbdash --dry-run  # analyze + build dashboard, download nothing, save no state
+python3 -m bbdash --no-open  # don't auto-open the dashboard
+python3 -m bbdash --no-prompt# skip the "Run now / Not now" dialog
+```
+
+### 4. (Optional) clickable file links in the dashboard
+
+The dashboard's filenames can open in their native app (e.g. VS Code, Preview) via a tiny
+localhost‑only helper. To enable it, install the "opener" companion as described in the tool's
+operator notes. It binds to `127.0.0.1` only and is token‑protected (see `docs/ARCHITECTURE.md`). If
+you skip it, filenames fall back to plain `file://` links.
+
+---
+
+## Optional: one‑click launch (macOS Dock app)
+
+If you'd rather click an icon than use the terminal, you can wrap the tool in a small macOS app.
+This is a convenience, not a separate product — it just runs the same `python3 -m bbdash`.
+
+### Build the app once
+
+Run this **one** command, substituting your Python path and project path:
+
+```bash
+osacompile -o ~/Applications/"BB Offline Dashboard.app" \
+  -e 'do shell script "cd /path/to/bb-offline-interactive-dashboard && /path/to/python3 -m bbdash --no-prompt"'
+```
+
+- Find your Python path with `which python3` (or your conda env's python).
+- To use a custom icon, drop a `.png`/`.icns` onto the app's Get‑Info icon, or replace
+  `Contents/Resources/applet.icns` inside the app bundle.
+
+### Launch it
+
+1. **First launch only:** macOS Gatekeeper will warn that the app is from an unidentified
+   developer (it's unsigned). **Right‑click the app → Open → Open.** You only do this once. (If
+   your institution locks this down, IT can approve it; the app contains no third‑party code —
+   it just runs the Python you already reviewed.)
+2. It runs a download + builds the dashboard, then opens the dashboard in your browser. There is no
+   pop‑up to click through in this version — clicking the app *is* "run now."
+
+### One‑time setup still applies
+
+The app uses the same `~/.bbdash/config.json`. Run `python3 install/setup_config.py` once before the
+first launch (step 2 in **Getting started**). After that, the app just works on double‑click.
+
+### (Optional) run automatically every morning
+
+You can install a per‑user `launchd` agent that runs the tool at login and at a set time each
+morning (it wakes and runs even if the Mac was asleep). See the tool's operator notes / the
+included `install/launchagents/com.fmu.bbdash.plist` (edit the project path, then `launchctl bootstrap`). It runs as
+you, with your credentials, read‑only. Remove it anytime with `launchctl bootout`.
+
+---
+
+## Optional: one‑click launch (Windows Start Menu)
+
+The Windows equivalent of the macOS Dock app — a Start Menu shortcut that runs the dashboard with
+no terminal. From the project root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install\windows\install_shortcut.ps1
+```
+
+This adds **"BB Offline Dashboard"** to your Start Menu (press Start and type it). Clicking it
+shows the "Download from Blackboard?" dialog, then downloads + builds + opens the dashboard — using the project
+virtualenv's windowless `pythonw.exe`, so no console window appears. It's branded with the
+project icon. Options: `-NoPrompt` (run immediately, no dialog), `-Name "…"` (custom label),
+`-Remove` (delete it). Per‑user, no admin rights required. One‑time setup (credentials) still
+applies first.
+
+## Optional: run automatically every morning (Windows)
+
+On Windows, the same automation is done with **Task Scheduler**. From the project root in
+PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install\windows\install_tasks.ps1
+```
+
+This registers two per‑user tasks (no admin rights needed): a **morning dashboard** that runs at
+logon and daily at a set time — waking the PC and running the missed job if it was off/asleep —
+and the **opener companion**. Options: `-Time 07:30`, `-NoPrompt`, `-SkipOpener`. Remove
+everything with `install\windows\uninstall_tasks.ps1`. Full details, including how to run it by
+hand with `install\run.ps1`, are in **`install/windows/README.md`**.
+
+---
+
+## Troubleshooting
+
+| Symptom | Most likely cause | Fix |
+|---|---|---|
+| **HTTP 401 Unauthorized** (on `--check` or run) | Your campus IT has **not approved your Application ID** yet — *or* you pasted the Application **ID** into the Key field, or mistyped the Secret. | Confirm IT approval (`docs/IT_APPROVAL_EMAIL.md`). Then re‑check that `application_key` is the **Key** (not the ID) and re‑enter the Secret. |
+| **HTTP 403 Forbidden** (on a specific course) | Your account lacks **Instructor** privileges on that course, or the grant isn't entitled to read it. | Confirm you're the instructor of record for that course; ask IT whether the approved entitlements cover reading rosters/attempts. Use `course_filter` to skip courses you don't own. |
+| **"0 courses found"** | The username scoping isn't set, or the account teaches nothing this term. | Set `instructor_username` in your config (re‑run `install/setup_config.py`). Verify you have active courses. |
+| **Port binding error / "address already in use"** | Something else is using the companion's local port (`8765`). | Change `opener_port` in `~/.bbdash/config.json` to a free port (e.g. `8770`), or set it to `0` to disable the companion. |
+| **Gatekeeper: "cannot be opened…unidentified developer"** (Dock app) | The app is unsigned. | **Right‑click → Open → Open** (first launch only). Or have IT allow it — the app is just a launcher for the source you can review. |
+| **`ModuleNotFoundError: requests`** (running from source) | Dependencies not installed, or wrong Python. | `pip install -r requirements.txt` into the same interpreter you run with (mind venv/conda activation). |
+| **Dashboard opens but photos/file links don't work** | The optional companion isn't running, or its port changed. | Install/restart the "opener" companion, or ignore — the dashboard still works with plain links. |
+
+If `--check` fails, run it again and read the printed error — it names the failing step (auth vs
+course discovery).
+
+---
+
+## What's in this repository
+
+| Path | Purpose |
+|---|---|
+| `README.md` | This file — install, run, troubleshoot |
+| `README_TECHNICAL.md` | Deeper operator/developer notes (companion, scheduling, internals) |
+| `AGENTS.md` | Orientation for an AI assistant helping you set up (auto-read by coding assistants) |
+| `docs/` | `SETUP.md`, `IT_APPROVAL_EMAIL.md`, `ARCHITECTURE.md`, `CONFIGURATION.md`, `DESIGN_NOTES.md` |
+| `install/` | `setup_config.py` (guided credential setup), the run scripts, the macOS launch agents (`launchagents/`), and the Windows Task Scheduler setup (`windows/`) |
+| `demo/` | A self‑contained, fake‑data demo you can run to show colleagues |
+| `bbdash/` | The program's source code — **you don't need to open this** |
+| `config.example.json` | Template for your `~/.bbdash/config.json` |
+
+## Data & privacy (please read)
+
+Downloaded submissions and generated dashboards are **FERPA‑protected student records**. They live
+only on your machine (`~/BB Offline Dashboard/` and `~/.bbdash/`). Keep dashboard files to yourself,
+don't sync them to shared/cloud folders, and delete them when you no longer need them. Student
+photos can be turned off with `"student_photos": false`. See `docs/ARCHITECTURE.md §4` for the full
+data lifecycle and how to purge everything.
+
+## Possible future versions
+
+The current release runs from the Python source (with the optional one‑click Dock app above).
+The following are **ideas for future versions, not part of this release**:
+
+- **A pre‑built, code‑signed download** (macOS `.app` / Windows `.exe`) so faculty could install
+  without a terminal at all. The tradeoff is the cost of code signing and the Gatekeeper /
+  Windows‑SmartScreen friction of distributing an unsigned or newly‑signed binary.
+- **A "log in with your Blackboard account" (three‑legged OAuth) option**, as an alternative to
+  each instructor registering their own developer key.
+
+Design notes and rationale for these live in `docs/DESIGN_NOTES.md`.
+
+## Support & license
+
+This is faculty‑to‑faculty software provided as‑is, with no warranty. You are responsible for
+your own API credentials and for your institution's approval and data‑handling policies. It is
+released under the **MIT License** (see the [LICENSE](LICENSE) file at the project root) — you are free to
+use, modify, and redistribute it, keeping the copyright and license notice intact.

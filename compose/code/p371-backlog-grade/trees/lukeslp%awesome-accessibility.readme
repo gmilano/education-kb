@@ -1,0 +1,143 @@
+# Awesome Accessibility [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+> A curated list of resources, tools, guidelines and communities for building accessible, inclusive digital experiences.
+
+[![License: CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+Find guidance, code and assistive technology by task or access need. New additions are free resources or open-source projects; entries identify free-tier limits, eligibility and paid services where relevant. Existing commercial references remain for context.
+
+**Quick paths:** [Try free courses](#courses-and-training) · [Build a component](#component-libraries-and-design-systems) · [Add checks to CI](#testing-engines-and-ci) · [Explore AI tools](#ai-tools-for-builders) · [Find AAC](#speech-and-aac).
+
+Use the section index below or GitHub's outline to jump to a topic. Suggestions and corrections are welcome; see [Contributing](#contributing).
+
+## Contents
+
+- [Start here](#start-here)
+- [Standards and guidelines](#standards-and-guidelines)
+- [Laws and policy](#laws-and-policy)
+- [Accessibility programs](#accessibility-programs)
+- [Inclusive design](#inclusive-design)
+- [Web development](#web-development)
+- [Mobile and native apps](#mobile-and-native-apps)
+- [Testing and auditing](#testing-and-auditing)
+- [Content and media](#content-and-media)
+- [AI and accessibility](#ai-and-accessibility)
+- [Assistive technology](#assistive-technology)
+- [Gaming](#gaming)
+- [Built environment and maps](#built-environment-and-maps)
+- [Learning](#learning)
+- [Community](#community)
+- [Research and data](#research-and-data)
+
+## Start here
+
+New to accessibility? These cover the basics.
+
+- [W3C WAI resources](https://www.w3.org/WAI/resources/) - Index of the Web Accessibility Initiative's technical and educational resources, from introductions and tutorials to policy and planning guides.
+- [How people with disabilities use the web](https://www.w3.org/WAI/people-use-web/tools-techniques/) - W3C overview of the tools and techniques people use to browse, from screen readers and magnifiers to voice control and reading aids.
+- [The A11Y Project](https://www.a11yproject.com/) - Community-driven site with plain-language posts, a checklist and curated resources for making the web accessible.
+- [WebAIM articles](https://webaim.org/articles/) - Long-running library of practical articles on web accessibility, from alt text and forms to screen reader testing.
+- [MDN: Accessibility on the web](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility) - Free module in MDN's web development curriculum covering accessible HTML, CSS, JavaScript, WAI-ARIA and multimedia, with skill tests.
+
+## Standards and guidelines
+
+The technical standards most laws point to, and guides to reading them.
+
+- [Accessibility Conformance Testing (ACT) Rules](https://www.w3.org/WAI/standards-guidelines/act/) - W3C format and community-written rules that describe how to test WCAG success criteria consistently, used by automated tools and manual methods alike.
+- [Authoring Tool Accessibility Guidelines (ATAG) 2.0](https://www.w3.org/TR/ATAG20/) - W3C Recommendation for content management systems, editors and other authoring tools: they should be accessible to authors with disabilities and help everyone produce accessible content.
+- [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/) - European standard for ICT accessibility, from ETSI's official directory of versions. V3.2.1 is the version cited for legal presumption of conformity; V4.1.1, published September 2026, moves to WCAG 2.2 and maps its clauses to the European Accessibility Act.
+- [Essential components of web accessibility](https://www.w3.org/WAI/fundamentals/components/) - W3C explainer on how content, authoring tools, browsers and assistive technology work together, and which guidelines cover each.
+- [How to Meet WCAG 2.2 (quick reference)](https://www.w3.org/WAI/WCAG22/quickref/) - Filterable W3C reference to every WCAG 2.2 success criterion, with techniques, failures and understanding documents.
+- [Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/) - W3C Working Group Note from the Cognitive and Learning Disabilities Accessibility Task Force (COGA) with user needs, personas and design patterns for web content and applications. Its guidance goes beyond the WCAG requirements and is not needed for conformance.
+- [RESNA assistive technology standards](https://www.resna.org/AT-Standards) - Standards from the Rehabilitation Engineering and Assistive Technology Society of North America for assistive products such as wheelchairs.
+- [User Agent Accessibility Guidelines (UAAG) 2.0](https://www.w3.org/TR/UAAG20/) - W3C Working Group Note (2015) with guidance for browsers, media players and other user agents; it was not advanced to a Recommendation.
+- [WAI-ARIA overview](https://www.w3.org/WAI/standards-guidelines/aria/) - W3C overview of Accessible Rich Internet Applications: the roles, states and properties that expose custom widgets to assistive technology. ARIA 1.2 is the current Recommendation.
+- [WCAG 2 overview](https://www.w3.org/WAI/standards-guidelines/wcag/) - W3C introduction to the Web Content Accessibility Guidelines; WCAG 2.2 has 13 guidelines under four principles: perceivable, operable, understandable and robust.
+- [WCAG 2.1](https://www.w3.org/TR/WCAG21/) - Previous W3C Recommendation, still the version many laws cite; WCAG 2.2 is backward compatible with it.
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/) - The current W3C Recommendation, also published as ISO/IEC 40500:2025. It adds nine success criteria to WCAG 2.1 and removes 4.1.1 Parsing as obsolete.
+- [WCAG 2.2 map](https://intopia.digital/articles/intopia-launches-wcag-2-2-map/) - Intopia's visual map of all WCAG 2.2 success criteria, organized by principle, guideline and level.
+- [WCAG 3 introduction](https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/) - W3C introduction to the WCAG 3 Working Draft, most recently published in September 2026. It is years from completion; WCAG 2.2 remains the version to conform to.
+- [WCAG in Plain English](https://aaardvarkaccessibility.com/wcag-plain-english/) - Plain-English explanation of each WCAG success criterion, written for beginners.
+- [What's new in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) - W3C guide to the nine success criteria added in WCAG 2.2, including Focus Not Obscured, Focus Appearance, Dragging Movements, Target Size (Minimum), Consistent Help, Redundant Entry and Accessible Authentication.
+
+## Laws and policy
+
+Official sources first. Laws change; check the date on anything you rely on.
+
+### United States
+
+- [21st Century Communications and Video Accessibility Act (CVAA)](https://www.fcc.gov/consumers/guides/21st-century-communications-and-video-accessibility-act-cvaa) - FCC guide to accessibility rules for advanced communications services and video programming, including captions, video description and accessible menus.
+- [ADA National Network](https://adata.org/) - Ten regional centers that provide information, guidance and training on the Americans with Disabilities Act.
+- [ADA Title II rule (Federal Register)](https://www.federalregister.gov/documents/2024/04/24/2024-07758/nondiscrimination-on-the-basis-of-disability-accessibility-of-web-information-and-services-of-state) - Full text of the 2024 rule adopting WCAG 2.1 Level AA for state and local government web content and mobile apps, including its exceptions.
+- [ADA Title II small entity compliance guide](https://www.ada.gov/resources/small-entity-compliance-guide/) - Plain-language Department of Justice guide to who the Title II web rule covers, what it requires and how its exceptions work.
+- [ADA Title II web and mobile rule](https://www.ada.gov/resources/2024-03-08-web-rule/) - Department of Justice fact sheet on the 2024 rule requiring state and local government websites and mobile apps to meet WCAG 2.1 Level AA. An April 2026 interim final rule moved the compliance dates to 26 April 2027 (populations of 50,000 or more) and 26 April 2028 (smaller governments and special districts).
+- [ADA Title II web rule: first steps](https://www.ada.gov/resources/web-rule-first-steps/) - Department of Justice list of first steps for state and local governments working toward the web and mobile app requirements.
+- [ADA Title III News & Insights](https://www.adatitleiii.com/) - Seyfarth Shaw blog tracking ADA Title III lawsuits, court decisions and Department of Justice actions, including yearly website accessibility lawsuit counts.
+- [ADA.gov guidance on web accessibility](https://www.ada.gov/resources/web-guidance/) - Department of Justice guidance on web accessibility for state and local governments and businesses under the Americans with Disabilities Act.
+- [National Federation of the Blind v. Department of Justice](https://clearinghouse.net/case/48281/) - Civil Rights Litigation Clearinghouse record of the May 2026 lawsuit challenging the DOJ and HHS deadline extensions; useful for following whether the new dates hold.
+- [Revised Section 508 Standards](https://www.access-board.gov/ict/) - U.S. Access Board standards for information and communication technology that federal agencies buy, build or use; they incorporate WCAG 2.0 Level AA.
+- [Section 504 compliance date extension (HHS)](https://www.federalregister.gov/documents/2026/05/11/2026-09266/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web) - May 2026 interim final rule moving web and mobile deadlines for recipients of HHS funding to 11 May 2027 (15 or more employees) and 10 May 2028 (fewer than 15).
+- [Section508.gov](https://www.section508.gov/) - GSA's hub for federal IT accessibility: policy, procurement, testing methods and training.
+- [Section508.gov laws and policies](https://www.section508.gov/manage/laws-and-policies/) - Summary of U.S. federal IT accessibility laws, regulations and policies.
+- [Title II compliance date extension (Federal Register)](https://www.federalregister.gov/documents/2026/04/20/2026-07663/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web) - Text of the April 2026 interim final rule that moved the Title II web and mobile deadlines by one year; the WCAG 2.1 Level AA requirement is unchanged.
+
+### Europe
+
+- [AccessibleEU](https://accessible-eu-centre.ec.europa.eu/index_en) - The European Commission's accessibility resource centre, with guidance, training and a knowledge base on EU accessibility law.
+- [Directive (EU) 2019/882](https://eur-lex.europa.eu/eli/dir/2019/882/oj) - Official text of the European Accessibility Act, the primary source behind each member state's national law.
+- [EAA National Transposition by Member State](https://yakupefecaliskann.github.io/annex-site/eaa/transposition/) - The national instrument transposing the European Accessibility Act in each of the 27 EU member states, each row read from the official EUR-Lex transposition record. A business is judged against the national law rather than the directive itself.
+- [EN 301 549 V4.1.1 published](https://nda.ie/news/en301549-published) - Ireland's National Disability Authority on the September 2026 publication of EN 301 549 V4.1.1, which aligns with WCAG 2.2 and maps requirements to the European Accessibility Act.
+- [European Accessibility Act](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en) - European Commission overview of the directive that has applied since 28 June 2025 to products and services such as computers, phones, e-commerce, banking and e-books.
+- [Web Accessibility Directive](https://digital-strategy.ec.europa.eu/en/policies/web-accessibility) - European Commission page on the directive requiring public sector websites and apps to be accessible, with its monitoring methodology and model accessibility statement.
+
+### United Kingdom
+
+- [Public Sector Bodies Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/contents/made) - Text of the UK regulations requiring public sector websites and apps to meet accessibility standards and publish an accessibility statement.
+- [Understanding accessibility requirements for public sector bodies](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) - UK government guidance on the Public Sector Bodies Accessibility Regulations 2018: what must be fixed, exemptions, accessibility statements and monitoring.
+
+### Canada
+
+- [Accessibility Standards Canada](https://accessible.canada.ca/) - Federal agency that develops accessibility standards under the Accessible Canada Act, including Canada's adoption of EN 301 549 for ICT.
+- [Accessible Canada Act](https://www.canada.ca/en/employment-social-development/programs/accessible-canada.html) - Canadian federal law working toward a barrier-free Canada by 2040, with accessibility plans required for federally regulated organizations.
+- [Guidance on implementing the Standard on Web Accessibility](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/guidance-implementing-standard-web-accessibility.html) - Treasury Board of Canada guidance for federal departments on meeting the Government of Canada's web accessibility standard.
+- [Integrated Accessibility Standards (O. Reg. 191/11)](https://www.ontario.ca/laws/regulation/110191) - AODA regulation with Ontario's information and communications standard, including the exact website requirements and exceptions.
+- [Ontario: how to make websites accessible](https://www.ontario.ca/page/how-make-websites-accessible) - Ontario government guidance on website requirements under the Accessibility for Ontarians with Disabilities Act (AODA).
+- [WebAIM: web accessibility laws in Canada](https://webaim.org/articles/laws/canada/) - Summary of federal and provincial accessibility laws that apply to websites in Canada.
+
+### International and other regions
+
+- [Disability Discrimination Act 1992 (Australia)](https://www.legislation.gov.au/C2004A04426/latest/text) - Australian federal law prohibiting disability discrimination, including in goods, services and online information.
+- [@holmdigital/standards](https://www.npmjs.com/package/@holmdigital/standards) - Machine-readable regulatory database mapping WCAG to EN 301 549 and national law across 17 jurisdictions, with typed exports and enforcement-body lookups. Open source (MIT).
+- [Lei Brasileira de Inclusão (Brazil)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm) - Brazil's Inclusion of Persons with Disabilities law; Article 63 requires accessible websites for companies based in Brazil and for government bodies. In Portuguese.
+- [UN Convention on the Rights of Persons with Disabilities](https://social.desa.un.org/issues/disability/crpd/convention-on-the-rights-of-persons-with-disabilities-crpd) - International human rights treaty whose Article 9 commits states to accessibility, including of information and communications technology.
+- [W3C web accessibility laws and policies](https://www.w3.org/WAI/policies/) - Directory of accessibility laws and policies by country, maintained by the W3C Web Accessibility Initiative.
+- [WAIC](https://waic.jp/) - Japan's Web Accessibility Infrastructure Committee, which maintains guidance, translations and test resources for JIS X 8341-3, Japan's web accessibility standard.
+
+## Accessibility programs
+
+Planning, maturity models, procurement and accessibility statements for organizations.
+
+- [AbilityNet beginner's guide to digital accessibility](https://abilitynet.org.uk/resources/digital-accessibility/beginners-guide-digital-accessibility) - UK charity's overview of digital accessibility for organizations, covering audits, testing, training and policy.
+- [Access Declared](https://www.accessdeclared.com/) - Free, no-account checklist for event organizers, speakers and employers to publish which access provisions an event or interview offers, and which it does not.
+- [Accesserty Signal](https://accesserty.com/en/signal) - Chrome and Firefox extension that shows published accessibility certifications and statements for sites in Google and Bing results, and lets people report barriers they encounter.
+- [Accessibility statement generator (A11y Kit)](https://accessibilite.jalonel.com/en/) - Free, in-browser generator for accessibility statements following the European Accessibility Act Annex V structure, with French (RGAA) and German (BFSG) versions; exports HTML, Markdown and Word and sends no data. It formats your answers and does not test the site.
+- [Digital Accessibility Maturity Model (DAMM)](https://www.levelaccess.com/blog/the-digital-accessibility-maturity-model-introduction-to-damm/) - Level Access's maturity model for measuring and planning digital accessibility programs.
+- [Generate an accessibility statement](https://www.w3.org/WAI/planning/statements/generator/) - W3C tool that builds an accessibility statement from a guided form, with guidance on what a statement should cover.
+- [ISO/IEC 30071-1](https://www.iso.org/standard/70913.html) - International code of practice for building accessibility into an organization's policies and ICT development; it superseded BS 8878 and was confirmed by ISO in 2024.
+- [Microsoft Accessibility Evolution Model](https://blogs.microsoft.com/accessibility/accessibility-evolution-model/) - Microsoft's model for describing how mature an organization's accessibility practice is, and what the next stage looks like.
+- [Planning and managing web accessibility](https://www.w3.org/WAI/planning/) - W3C guidance on starting, planning, implementing and sustaining an organizational accessibility program.
+- [Sample accessibility statement (GOV.UK)](https://www.gov.uk/government/publications/sample-accessibility-statement) - UK government template for a public sector accessibility statement, with guidance on each section; a useful model in any sector.
+- [Voluntary Product Accessibility Template (VPAT)](https://www.itic.org/policy/accessibility/vpat) - ITI's template for Accessibility Conformance Reports, with editions for Section 508, EN 301 549, WCAG and an international edition combining them.
+- [W3C Accessibility Maturity Model](https://www.w3.org/TR/maturity-model/) - W3C Group Note (November 2025) for assessing and improving the maturity of an organization's accessibility program.
+- [Web Accessibility Framework](https://blog.pope.tech/2024/01/17/how-the-web-accessibility-framework-was-designed/) - Pope Tech's framework for planning an accessibility program around goals, scope, risk appetite, gaps and processes.
+
+## Inclusive design
+
+### Principles and toolkits
+
+- [Adobe Spectrum: inclusive design](https://spectrum.adobe.com/page/inclusive-design/) - How Adobe's Spectrum design system approaches inclusive design.
+- [Cards for Humanity](https://cardsforhumanity.frog.co/) - Card deck that deals a person and a trait, to test a product, service or concept from a different perspective.
+- [Centre for Inclusive Design](https://centreforinclusivedesign.org.au/) - Australian organization that helps teams build inclusive design processes, with research and training.
+- [Co-design kit](https://community-led.design/) - Open-source toolkit for community-led co-design.
+- [Designing for accessibility posters](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/) - UK Home Office do and don't posters for designing for autistic users, screen reader users, low vision, motor disabilities, deaf and hard of hearing users and dyslexia; openly licensed and widely translated.
+- [IBM Equal Access Toolkit](https://www.ibm.com/able/toolkit/) - IBM's step-by-step accessibility guidance

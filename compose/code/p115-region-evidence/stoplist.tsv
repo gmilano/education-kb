@@ -103,3 +103,20 @@ wikipedia.org	reference
 example.com	placeholder
 example.org	placeholder
 localhost	placeholder
+#
+# ADDED AT p371, by the run that needed them.  p371's region placer reused this file
+# rather than copying it (a copied table drifts), and its first run over p370's 63
+# addresses produced two false positives this list covers by class but did not yet
+# name.  Recorded here rather than in a second table:
+#
+#   adlnet.gov        `tunapanda/wp-xapi-lrs` placed NORTH AMERICA on this host.  ADL
+#                     is the US DoD xAPI steward and every LRS implementation cites it.
+#                     🔴 Tunapanda Institute is in NAIROBI.  p115-E, demonstrated.
+#   xapi.com          xAPI community reference host, cited by implementations
+#   imsproject.org    1EdTech legacy host, alongside the two already listed
+#   caliperanalytics.org  1EdTech Caliper spec host
+#
+adlnet.gov	standards steward (US DoD ADL / xAPI); cited by every LRS, maintains none — ADDED p371
+xapi.com	xAPI community reference host — ADDED p371
+imsproject.org	standards body (1EdTech legacy host) — ADDED p371
+caliperanalytics.org	standards body (1EdTech Caliper spec) — ADDED p371

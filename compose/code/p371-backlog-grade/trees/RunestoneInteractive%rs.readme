@@ -1,0 +1,219 @@
+Welcome
+=======
+
+`Runestone Academy <https://landing.runestone.academy>`_ is an open-source project and *our mission is to equip the nation's STEM teachers with open-source content, tools and strategies they need to create engaging, accessible, and effective learning experiences for their students.* You might do this through our website, https://runestone.academy or by running your own server.  Or you may be an author or budding author that has a great idea for a book. Or you may be a technology coordinator that wants to run a private server.  Or you may be a researcher at a large university that is looking for a platform to test your ideas.  We are here for you.  This repository is the home of the Runestone Academy software.  We would welcome your help.  And we are happy to help you get started.
+
+If you want to use the Runestone Academy servers to run a class using an existing book or if you want to author a book, you likely do not need to run your own copy of Runestone:
+
+* I want to run a class based on an existing book - `Instructor guide <https://guide.runestone.academy>`_
+* I want to author a book. This is now done using PreTeXt. PreTeXt is an authoring language that is designed to produce books that can be served on Runestone. `PreTeXt Author Guide <https://pretextbook.org/doc/guide/html/guide-toc.html>`_
+* I want to customize a book for my class - `Customizing a Textbook <https://runestone-monorepo.readthedocs.io/en/latest/custom_book.html>`_
+
+If you want to do development on Runestone, or run your own server, you will need to set up your own copy of the Runestone software:
+
+* I want to contribute to the Runestone Academy software - Finish reading this page, then move on to the `Contributing Guide <https://runestone-monorepo.readthedocs.io/en/latest/contributing.html>`_
+* Running a server for my own class? See `Running a Server <https://runestone-monorepo.readthedocs.io/en/latest/running.html>`_
+* Running a server for my school or larger group? See `Running a Server <https://runestone-monorepo.readthedocs.io/en/latest/running.html>`_
+
+.. image:: https://readthedocs.org/projects/runestone-monorepo/badge/?version=latest
+    :target: https://runestone-monorepo.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. image:: https://github.com/RunestoneInteractive/rs/actions/workflows/test-crud.yml/badge.svg
+    :target: https://github.com/RunestoneInteractive/rs/actions/workflows/test-crud.yml
+    :alt: Tests
+
+Chat with us on `Discord <https://discord.gg/f3Qmbk9P3U>`_
+
+Quick Start: Run Your Own Runestone Server
+===========================================
+
+Get a fully functional Runestone server running on your local machine with a single command:
+
+.. code-block:: bash
+
+   bash <(curl -fsSL https://raw.githubusercontent.com/RunestoneInteractive/rs/main/init_runestone.sh)
+
+The setup script will guide you through an interactive installation process.
+
+**Prerequisites:**
+
+* Docker Desktop with Docker Compose 2.20.2 or later
+* WSL2 (Windows users only - run the command from a WSL2 terminal)
+* Git (optional, but recommended for cloning book repositories)
+
+**Before you start:**
+
+Navigate to the directory where you want Runestone configuration files created:
+
+.. code-block:: bash
+
+   mkdir ~/runestone && cd ~/runestone
+
+**After installation:**
+
+* Access your server at http://localhost
+* Log in with username: ``testuser1``, password: ``xxx``
+* See the `Running a Server guide <https://runestone-monorepo.readthedocs.io/en/latest/running.html>`_ for complete documentation
+
+
+Why Runestone Exists
+====================
+
+Runestone exists to improve how students learn by making learning *active, observable, and improvable*. We believe students learn best when they engage directly—writing code, solving problems, answering questions, making mistakes, and receiving immediate feedback. Passive reading is not enough. Runestone is built to support that cycle at scale.
+
+What We Believe
+===============
+
+Active Learning First
+---------------------
+Runestone is designed around interaction, feedback, and engagement. Every feature must support students doing—not just consuming.
+
+Students Are the Primary Beneficiary
+------------------------------------
+Instructors adopt Runestone and institutions support it, but students are who we build for. When priorities conflict, we ask: *does this help students learn?*
+
+Open by Default
+---------------
+Runestone is free and open source. Anyone can run it, modify it, and extend it. Our hosted platform, Runestone Academy, exists to make adoption easy for instructors who cannot or do not want to run their own server. 
+
+Student Privacy is Non-Negotiable
+---------------------------------
+We collect only the data necessary to support learning. Personally identifiable student data is never sold, shared, or used for purposes unrelated to education.
+
+Accessibility is a Requirement
+------------------------------
+All students must be able to use Runestone. Accessibility is not an enhancement—it is a baseline requirement. If something is not accessible, it is not finished.
+
+Data Serves Learning
+--------------------
+Runestone collects fine-grained interaction data to improve learning outcomes.  We are not in the business of surveillance. Every piece of data we collect must have a clear pedagogical purpose.
+
+Insight Over Data
+-----------------
+Raw data is not the goal. Runestone provides instructors with actionable insights—tools that help them understand student progress and intervene effectively.
+
+Interoperability Over Lock-In
+-----------------------------
+Runestone integrates with other systems using open standards whenever possible. We avoid proprietary approaches that trap users or create unnecessary complexity.
+
+Pedagogy Drives Technology
+--------------------------
+New capabilities should have a clear rationale in learning science. Runestone is a platform for pedagogical research, and that research tradition should inform what we build and why. New features must be justified by their impact on teaching and learning, not by technical novelty.
+
+Empower Instructors
+-------------------
+Runestone amplifies the effectiveness of instructors. It does not attempt to replace them, automate them away, or reduce teaching to a dashboard.
+
+Simplicity Enables Sustainability
+---------------------------------
+Every feature carries a long-term cost. We favor simple, maintainable solutions and resist unnecessary complexity—even when it is tempting.
+
+Focus is a Feature
+------------------
+We deliberately choose what not to build. Protecting the core mission matters more than expanding scope.
+
+Built for Research
+------------------
+Runestone supports pedagogical research through transparency, reproducibility, and ethically collected data.
+
+Community Over Institution
+--------------------------
+Runestone's long-term sustainability depends on a broad community of contributors, adopters, and advocates — not on any single maintainer, organization, or funder. We make decisions that strengthen collective ownership.
+
+Anonymous Usage Telemetry
+-------------------------
+To understand how widely Runestone is used, self-hosted book servers send a small, **anonymous** weekly "check-in" to ``runestone.academy``. We believe in being completely transparent about this.
+
+**What is sent:** a random per-install identifier (a UUID, so we can count installs without identifying them), the Runestone version, the books (base courses) served, bucketed (never exact) counts of courses and students, and the operator's **self-declared** region/institution if you choose to set them.
+
+**What is never sent:** any personally identifiable data — no usernames, emails, names, answers, or grades — and **no IP-based location**. Location is only ever what you explicitly put in ``TELEMETRY_REGION``; the receiving server does not look at or store your IP address.
+
+**Seeing it / turning it off:**
+
+* Preview the exact payload at any time with ``rsmanage telemetry`` (add ``--send`` to transmit immediately).
+* Opt out entirely by setting ``TELEMETRY_ENABLED=false`` in your ``.env``.
+* Optionally set ``TELEMETRY_REGION`` (e.g. a country or continent) and ``TELEMETRY_INSTITUTION`` to appear on the community install map.
+
+
+Runestone MonoRepo
+==================
+
+This repository collects together the various repositories related to
+the Runestone Academy software. The idea of combining several
+repositories into a single structure was motivated and inspired by the
+Python polylith tools and projects.
+
+As Runestone grew over the years we accreted loads of new
+functionality without ever stopping to reconsider an architecture that
+would support easier implementation of new features while providing
+stability for fundamental parts of the project that need to scale.
+(Docker was not invented at the time Runestone development started!)
+
+
+
+
+
+This repository uses a `polylith structure <https://polylith.gitbook.io/polylith/introduction/polylith-in-a-nutshell>`__ in order to allow the several
+projects under the Runestone umbrella to share code, provide common ways
+of accomplishing similar tasks, and hopefully make it easier for a
+newcomer to contribute to the project.  If you don't know what a polylith is don't let that deter you.  It is just a fancy way of saying that we have a bunch of projects that share a lot of code.
+
+
+Finally, in 2023 we decided to move to a mono repo. The goal of this
+re-working of the Runestone code was to provide a very docker-friendly set
+of servers and services using a `polylith software architecture <https://polylith.gitbook.io/polylith/introduction/polylith-in-a-nutshell>`_. The
+following diagram shows what we are aiming at.
+
+.. image:: https://runestone-monorepo.readthedocs.io/en/latest/_static/RunestoneArch.svg
+   :alt: Runestone Architecture
+   :align: center
+
+
+Each of the servers in the diagram above has or will become a project in this
+repo. Each individual server is described by a docker file and can be run either
+as a docker container or on a physical server set up for the purpose. A collection of
+docker compose profiles are used to control which servers are started for which purposes.
+
+* ``basic`` - this will start up the default servers plus a database server in the composed app.
+* ``dev`` - this will start up the default servers plus development nginx server in the composed app.
+*  ``production`` - this will start up the default servers plus the ``pgbouncer`` server in the composed app.
+*  ``author`` - this will start up the default servers plus the ``author`` server in the composed app.
+
+
+Docs
+----
+
+See `Our Read the Docs page <https://runestone-monorepo.readthedocs.io/en/latest/index.html>`_ for more complete documentation. After reading the whole page, please continue to the `Contributing Guide <https://runestone-monorepo.readthedocs.io/en/latest/contributing.html>`_.
+
+
+Development Roadmap
+---------------------
+
+`Runestone Roadmap <https://github.com/orgs/RunestoneInteractive/projects/6/views/1>`_
+
+Contributing
+------------
+
+There is so much to do on this project, and we are happy to accept contributions.  Please see the `Contributing Guide <https://runestone-monorepo.readthedocs.io/en/latest/contributing.html>`_ for more information.  We are especially interested in contributions that help us to improve the documentation, and the test coverage of the code.
+
+If you want to know where we are going, and what things are in active development or in need of immediate help please take a look at our projects page on github: `Runestone Projects <https://github.com/orgs/RunestoneInteractive/projects>`_
+
+Longer term development goals are described in the `Runestone Roadmap <https://github.com/orgs/RunestoneInteractive/projects/6/views/1>`_.
+
+Note that the move to a mono repo means that the history of the individual repositories was lost.  I am sorry for this, but I think the benefits of a mono repo will be worth it.  The original repositories are still available, but they are no longer being actively developed. If you need to point to your contributions to Runestone, please use the old repos as a reference.
+
+
+Our Community
+-------------
+
+The Runestone community has been actively developing and supporting this project since 2011.
+
+Join us on `Discord <https://discord.gg/f3Qmbk9P3U>`_
+
+The new book authoring language is PreTeXt.  We have a very active community of PreTeXt authors and developers.  If you are interested in contributing to the PreTeXt project, please visit the `PreTeXt project page <https://pretextbook.org>`_.
+
+.. raw:: html
+
+    <blockquote class="badgr-badge" style="font-family: Helvetica, Roboto, &quot;Segoe UI&quot;, Calibri, sans-serif;"><a href="https://api.badgr.io/public/assertions/bhQ1jKReQj27qAt-jqqoPQ?identity__email=brad%40runestone.academy"><img width="120px" height="120px" src="https://media.badgr.com/uploads/badges/assertion-bhQ1jKReQj27qAt-jqqoPQ.png"></a><p class="badgr-badge-name" style="hyphens: auto; overflow-wrap: break-word; word-wrap: break-word; margin: 0; font-size: 16px; font-weight: 600; font-style: normal; font-stretch: normal; line-height: 1.25; letter-spacing: normal; text-align: left; color: #05012c;">POSE Training Program - Spring 2023 Pilot</p><p class="badgr-badge-date" style="margin: 0; font-size: 12px; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #555555;"><strong style="font-size: 12px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #000;">Awarded: </strong>May 18, 2023</p><p style="margin: 16px 0; padding: 0;"><a class="badgr-badge-verify" target="_blank" href="https://badgecheck.io?url=https%3A%2F%2Fapi.badgr.io%2Fpublic%2Fassertions%2FbhQ1jKReQj27qAt-jqqoPQ%3Fidentity__email%3Dbrad%2540runestone.academy&amp;identity__email=brad%40runestone.academy" style="box-sizing: content-box; display: flex; align-items: center; justify-content: center; margin: 0; font-size:14px; font-weight: bold; width: 48px; height: 16px; border-radius: 4px; border: solid 1px black; text-decoration: none; padding: 6px 16px; margin: 16px 0; color: black;">VERIFY</a></p><script async="async" src="https://badgr.com/assets/widgets.bundle.js"></script></blockquote>
+

@@ -1,0 +1,158 @@
+# Awesome LLM-generated Text Detection
+
+<div align="center" style="border-radius:50%;">
+  <img src="log.png" alt="Logo" width="200" class="avatar">
+</div>
+
+<p align="center">
+  <img src="https://awesome.re/badge.svg" alt="Awesome">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License-MIT">
+  <img src="https://img.shields.io/badge/PRs-Welcome-red" alt="PRs-Welcome">
+  <img src="https://img.shields.io/github/last-commit/junchaoIU/LLM-generated-Text-Detection/main?logo=github&color=blue" alt="last-commit">
+</p>
+
+The powerful ability of large language models (LLMs) to understand, follow, and generate complex languages has enabled LLM-generated texts to flood many areas of our daily lives at an incredible rate, with potentially negative impacts and risks on society and academia. As LLMs continue to expand, *how can we detect LLM-generated texts to help minimize the threat posed by the misuse of LLMs?*
+
+<div align="center">
+  <img src="cover.png" alt="cover" width="750">
+</div>
+<br>
+<!-- **Authors:** -->
+
+**_¹ [Junchao Wu](https://github.com/junchaoIU), ¹ [Shu Yang](https://twitter.com/shuyhere), ¹ [Runzhe Zhan](https://runzhe.me/), ¹ ² [Yulin Yuan](https://fah.um.edu.mo/yulin-yuan/), ¹ [Derek Fai Wong](https://www.fst.um.edu.mo/personal/derek-wong/), ¹ [Lidia Sam Chao]()_**
+
+
+<!-- **Affiliations:** -->
+
+¹ University of Macau, ² Peking University
+
+## 📢 News
+* [2026.05] ✨ Our paper is accepted by ACL 2026. We released DetectRL-X, a comprehensive multilingual benchmark for LLM-generated text detection, covering 8 languages, 6 domains, 4 commercial LLMs, and 8 evaluation dimensions. Please refer to arXiv: *[DetectRL-X: Towards Reliable Multilingual and Real-World LLM-Generated Text Detection](https://arxiv.org/abs/2605.15518)* and Github Repo *[DetectRL-X](https://github.com/AIDC-AI/Marco-LLM/tree/main/DetectRL-X)* for details.
+* [2025.12] ✨ Our paper is published in TACL. We released RepreGuard, an efficient statistics-based detection method that leverages hidden representation patterns of LLMs to distinguish between LLM-generated and human-written texts. Please refer to arXiv: *[RepreGuard: Detecting LLM-Generated Text by Revealing Hidden Representation Patterns](https://arxiv.org/abs/2508.13152)* and Github Repo *[RepreGuard](https://github.com/NLP2CT/RepreGuard)* for details.
+* [2025.03] ✨ Our survey paper is accepted by *Computational Linguistics* (Volume 51, Issue 1). Please refer to *[A Survey on LLM-Generated Text Detection: Necessity, Methods, and Future Directions](https://aclanthology.org/2025.cl-1.8/)* for details.
+* [2024.11.28] ✨ Our paper is accepted by COLING 2025. We released GECScore, a simple yet effective black-box zero-shot detection approach based on the observation that human-written texts typically contain more grammatical errors than LLM-generated texts. Please refer to arXiv: *[Who Wrote This? The Key to Zero-Shot LLM-Generated Text Detection Is GECScore](https://arxiv.org/abs/2405.04286)* and Github Repo *[GECScore](https://github.com/NLP2CT/GECScore)* for details.
+* [2024.09.26] ✨ Our benchmark paper is accepted by NeurIPS 2024 D&B track. We released DetectRL, a benchmark for real-world LLM-generated text detection, provide real utility to researchers on the topic and practitioners looking for consistent evaluation methods. Please refer to arXiv: *[DetectRL: Benchmarking LLM-Generated Text Detection in Real-World Scenarios](https://arxiv.org/abs/2410.23746)* and Github Repo *[DetectRL](https://github.com/NLP2CT/DetectRL)* for details.
+* [2023.10.24] Our survey paper is now available on arXiv: *[A Survey on LLM-generated Text Detection: Necessity, Methods, and Future Directions](https://arxiv.org/abs/2310.14724)*.
+* [2023.05.01] : We began to explore the topic of LLM-generated Text Detection.
+
+## 🔍 Table of Contents
+- [Awesome LLM-generated Text Detection](#awesome-llm-generated-text-detection)
+  - [📢 News](#-news)
+  - [� Table of Contents](#-table-of-contents)
+  - [📃 Papers](#-papers)
+    - [Overview](#overview)
+    - [Datasets](#datasets)
+      - [Benchmarks](#benchmarks)
+      - [Potential Datasets](#potential-datasets)
+    - [Detector](#detector)
+      - [Watermarking Technology](#watermarking-technology)
+      - [Statistics-based Detectors](#statistics-based-detectors)
+      - [Neural-based Detectors](#neural-based-detectors)
+      - [Human-assisted Methods](#human-assisted-methods)
+      - [Detector Attack](#detector-attack)
+      - [Shared Task](#shared-task)
+    - [Related Works](#related-works)
+      - [Other Surveys](#other-surveys)
+  - [🚩 Citation](#-citation)
+  - [Contributing](#contributing)
+
+## 📃 Papers
+### Overview
+A survey and reflection on the latest research breakthroughs in LLM-generated Text detection, including data, detectors, metrics, current issues and future directions. 
+Please refer to our article/paper for more details.
+
+
+### Datasets
+#### Benchmarks
+
+| Benchmarks / Datasets | Venue | Date | Use | Human | LLMs |
+|---|---|---|---|---|---|
+| [HC3](https://arxiv.org/abs/2301.07597) | arXiv | 2023-01 | train | 58k | 26k |
+| [HC3-Chinese](https://arxiv.org/abs/2301.07597) | arXiv | 2023-01 | train | 22k | 17k |
+| [CHEAT](https://arxiv.org/abs/2304.12008) | arXiv | 2023-04 | train | 15k | 35k |
+| [GROVER Dataset](https://arxiv.org/abs/1905.12616) | NeurIPS 2019 | 2019-05 | train valid test | 5k 2k 8k | 5k 1k 4k |
+| [TweepFake](https://arxiv.org/abs/2008.00036) | PLoS ONE | 2020-07 | train | 12k | 12k |
+| [GPT-2 Output Dataset](https://github.com/openai/gpt-2-output-dataset) | GitHub | - | train | 250k | 250k |
+| [TuringBench](https://aclanthology.org/2021.findings-emnlp.172/) | EMNLP 2021 Findings | 2021 | train | 10k | 190k |
+| [MGTBench](https://arxiv.org/abs/2303.14822) | arXiv | 2023-03 | train test | 2k 563 | 13k 3k |
+| [ArguGPT](https://arxiv.org/pdf/2304.07666.pdf) | arXiv | 2023-04 | train valid test | 3k 350 350 | 3k 350 350 |
+| [DeepfakeText-Dataset](https://arxiv.org/abs/2305.13242) | ACL 2024 | 2023-05 | train valid test | 95k 29k 29k | 236k 29k 28k |
+| [M4](https://arxiv.org/abs/2305.14902) | arXiv | 2023-05 | train valid test | 122k 500 500 | 122k 500 500 |
+| [GPABenchmark](https://arxiv.org/abs/2306.05524) | arXiv | 2023-06 | train | 600k | 600k |
+| [Scientific-articles Benchmark](https://aclanthology.org/2023.trustnlp-1.17/) | TrustNLP 2023 | 2023 | train test | 8k 4k | 8k 4k |
+| [DetectRL](https://arxiv.org/abs/2410.23746) | NeurIPS 2024 D&B | 2024-10 | train test | 101k | 134k (4 LLMs, 4 domains, 4 attacks) |
+| [DetectRL-X](https://arxiv.org/abs/2605.15518) | ACL 2026 | 2026-05 | test | 3.46M (8 langs, 6 domains, 4 LLMs, 8 attacks) | |
+| [MULTITuDE](https://arxiv.org/abs/2310.13606) | EMNLP 2023 | 2023-10 | test | - | 56k (7 langs, 8 LLMs) |
+| [RAID](https://arxiv.org/abs/2405.07940) | ACL 2024 | 2024-05 | test | - | 6M (11 models) |
+| [M4GT-Bench](https://arxiv.org/abs/2402.11175) | ACL 2024 | 2024-02 | test | - | - (4 domains, multi-lingual) |
+| [MultiSocial](https://arxiv.org/abs/2406.12549) | ACL 2025 | 2025-07 | test | 58k | 414k (22 langs, 5 platforms, 7 LLMs) |
+| [Detecting the Machine](https://arxiv.org/abs/2603.17522) | arXiv | 2026-03 | test | 23k | 15k (HC3 + ELI5, multiple LLMs) |
+
+#### Potential Datasets
+| Tasks                              | Datasets                                                                    |
+|------------------------------------|-----------------------------------------------------------------------------|
+| Questions Answering                | PubMedQA, Children book corpus (CBT), ELI5, TruthfulQA, NarrativeQA         |
+| Scientific writing                 | Peer Read, arXiv, TOEFL11                                                   | 
+| Story generation                   | WritingPrompts                                                              | 
+| News Article writing               | XSum                                                                        | 
+| Web Text                           | Wiki40b, WebText, Avax tweets dataset, Climate Change Tweets Ids            | 
+| Opinion statements                 | r/ChangeMyView (CMV) Reddit subcommunity, Yelp , IMDB Dataset               | 
+| Comprehension and Reasoning        | SciGen, ROCStories Corpora, HellaSwag, SQuAD                                | 
+
+### Detectors
+<!-- <div align="left">
+  <img src="image.png" alt="Detector" width="800">
+</div> -->
+
+#### Watermarking Technology
+
+| Paper | Venue | Date | Link |
+|---|---|---|---|
+| A watermark for large language models. | ICML 2023 | 2023-01 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2301.10226) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/jwkirchenbauer/lm-watermarking) |
+| On the Reliability of Watermarks for Large Language Models | ICLR 2024 | 2023-06 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2306.04634) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/jwkirchenbauer/lm-watermarking) |
+| A Private Watermark for Large Language Models | ICLR 2024 | 2023-07 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2307.16230) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/THU-BPM/private_watermark) |
+| Distillation-Resistant Watermarking for Model Protection in NLP | arXiv | 2022-10 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2210.03312) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/xuandongzhao/drw) |
+| Watermarking Pre-trained Language Models with Backdooring | arXiv | 2022-10 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2210.07543) |
+| CATER: Intellectual Property Protection on Text Generation APIs via Conditional Watermarks | NeurIPS 2022 | 2022-09 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2209.08773) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/xlhex/cater_neurips) |
+| An Adaptive Watermark for Large Language Models | ICML 2024 | 2024-01 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2401.13927) |
+| WaterBench: A Benchmark for LLM Watermarking | ACL 2024 | 2023-11 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2311.07138) |
+| Watermarking Makes Language Models Radioactive | arXiv | 2024-02 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2402.14904) |
+| SynthID-Text: Identifying AI-Generated Text Content | Nature 2024 | 2024-10 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://www.nature.com/articles/s41586-024-08025-4) |
+#### Statistics-based Detectors
+
+| Paper | Venue | Date | Link |
+|---|---|---|---|
+| DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature | ICML 2023 | 2023-01 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2301.11305) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/eric-mitchell/detect-gpt) |
+| Fast-DetectGPT: Efficient Zero-Shot Detection of Machine-Generated Text via Conditional Probability Curvature | ICLR 2024 | 2023-10 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2310.05130) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/baoguangsheng/fast-detect-gpt) |
+| Efficient Detection of LLM-generated Texts with a Bayesian Surrogate Model | arXiv | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2305.16617) |
+| DetectLLM: Leveraging Log Rank Information for Zero-Shot Detection of Machine-Generated Text | arXiv | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2306.05540) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/mbzuai-nlp/detectllm) |
+| GLTR: Statistical Detection and Visualization of Generated Text | ACL 2019 Demo | 2019-06 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/1906.04043) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/HendrikStrobelt/detecting-fake-text) |
+| HowkGPT: Investigating the Detection of ChatGPT-generated University Student Homework through Context-Aware Perplexity Analysis | arXiv | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2305.18226) |
+| Intrinsic Dimension Estimation for Robust Detection of AI-Generated Texts | arXiv | 2023-06 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2306.04723) |
+| Who Wrote This? The Key to Zero-Shot LLM-Generated Text Detection Is GECScore | COLING 2025 | 2024-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2405.04286) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/NLP2CT/GECScore) |
+| RepreGuard: Detecting LLM-Generated Text by Revealing Hidden Representation Patterns | TACL 2025 | 2025-08 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2508.13152) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/NLP2CT/RepreGuard) |
+| Is ChatGPT Involved in Texts? Measure the Polish Ratio to Detect ChatGPT-Generated Text | arXiv | 2023-07 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2307.11380) |
+| DNA-GPT: Divergent N-Gram Analysis for Training-Free Detection of GPT-Generated Text | ICLR 2024 | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2305.17359) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/Xianjun-Yang/DNA-GPT) |
+| Binoculars: Zero-Shot Detection of Machine-Generated Text | ICML 2024 | 2024-01 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2401.12070) |
+| LLMDet: A Third Party Large Language Models Generated Text Detection Tool | EMNLP 2023 Findings | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2305.15004) |
+| Ghostbuster: Detecting Text Ghostwritten by Large Language Models | arXiv | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2305.15047) |
+| GPT-who: An Information Density-based Machine-Generated Text Detector | arXiv | 2023-10 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2310.06202) |
+| BiScope: AI-generated Text Detection by Checking Memorization of Preceding Tokens | NeurIPS 2024 | 2024-06 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2406.05988) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/MarkGHX/BiScope) |
+| Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling (POGER) | IJCAI 2024 | 2024-02 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2402.09199) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/ICTMCG/POGER) |
+| AdaDetectGPT: Adaptive Detection of LLM-Generated Text with Statistical Guarantees | NeurIPS 2025 | 2025-10 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2510.01268) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/Mamba413/AdaDetectGPT) |
+| Exons-Detect: Identifying and Amplifying Exonic Tokens via Hidden-State Discrepancy for Robust AI-Generated Text Detection | ACL 2026 | 2026-03 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2603.24981) |
+| Segmenting Human–LLM Co-authored Text via Change Point Detection | arXiv | 2026-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2605.03723) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/Mamba413/DetectLLMSegmentation) |
+| Triospect: A Three-Dimensional Framework for Robust Statistical AI-Generated Text Detection Against Diverse Attacks | TACL 2026 | 2026-06 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2606.31074) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/baoguangsheng/triospect) |
+| Detecting LLM-Generated Tokens in Human–LLM Coauthored Text | arXiv | 2026-07 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2607.21458) |
+| Detecting LLM-Generated Text with Performance Guarantees | arXiv | 2026-01 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2601.06586) |
+#### Neural-based Detectors
+
+| Paper | Venue | Date | Link |
+|---|---|---|---|
+| How Close is ChatGPT to Human Experts? Comparison Corpus, Evaluation, and Detection | arXiv | 2023-01 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2301.07597) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/hello-simpleai/chatgpt-comparison-detection) |
+| Multiscale Positive-Unlabeled Detection of AI-Generated Texts | ICLR 2024 (Spotlight) | 2023-05 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2305.18149) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/yuchuantian/aigc_text_detector) |
+| Real or fake? Learning to discriminate machine from human generated text | arXiv | 2019-06 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/1906.03351) |
+| Automatic Detection of Generated Text is Easiest when Humans are Fooled | ACL 2020 | 2019-11 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/1911.00650) |
+| Stylometric Detection of AI-Generated Text in Twitter Timelines | arXiv | 2023-03 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2303.03697) |
+| TweepFake: about Detecting Deepfake Tweets | PLoS ONE | 2020-07 | [![Static Badge](https://img.shields.io/badge/paper-%23B31B1B?logo=arxiv&labelColor=grey)](https://arxiv.org/abs/2008.00036) [![Static Badge](https://img.shields.io/badge/code-black?logo=github)](https://github.com/tizfa/tweepfake_deepfake_text_detection) |
+| Towards a Robust Detection of Language Model Generated Text: Is ChatGPT that Easy to Detect? | TALN 2023 | 2023-06 | [![Static Badge](https://

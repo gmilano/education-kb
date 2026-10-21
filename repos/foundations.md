@@ -319,6 +319,134 @@ correctly-licensed repository as grantless. That has happened on this base befor
 spells its grant **`LICENCE`**, and `LICENSE` 404s (see `agents/top.md`).
 ---
 
+## 🟢 🆕 `p371`: the regional supply map, **placed from each repository's own payload** — 450 of 1 859 addresses carry geography, and APAC and North America are where the production-scale platforms are
+
+🔵 **Why this tier is different from every other region claim on this base.** The regional
+*demand* side — regulation, market size, ministry programmes — has always been
+snippet-sourced here, and `intel/market.md` says so on every line. 🟢 **This tier is the
+SUPPLY side and it is first-hand**: each row below was placed by reading an institution or
+a jurisdictional standard out of the repository's own README, at a pinned sha, in the same
+blobless clone that enumerated its tree. 🔴 **A maintainer's name never placed a row**
+(`P800`), a language never placed a row, and a filename never placed a row — the last of
+those only because the placer's first run placed five rows in Paraguay on `server.py` and
+`main.py`, which is `gate-region-place`'s `D2`.
+
+| the question | the answer, `2026-10-21` |
+|---|---:|
+| addresses graded this pass | **1 859** |
+| 🟢 placed in a region from their own payload | 🟢 **450 (24.2 %)** |
+| of those, by channel: a committed institutional owner | **122** |
+| an academic or government host | **82** |
+| any other country host | **246** |
+| 🟡 reported as `SPLIT` — two regions, so placed `Global` | 🟡 **20** |
+| 🟢 placed by the **jurisdiction they implement** (FERPA / GDPR / LGPD / DPDP) | 🟢 **125** |
+
+🔵 **`ORIGIN` and `SERVES` are separate cells and are never merged.** `p115`'s stoplist
+header is right that *"a repository that CITES the EU AI Act is not a European
+repository"* — and an engagement still needs to know which regime a tool implements. Two
+claims, two columns.
+
+### 🟢 In-domain supply by region, and the licence mix inside each
+
+| Region | permissive | copyleft | content | restricted | no grant | total in domain |
+|---|---:|---:|---:|---:|---:|---:|
+| **North America** | 🟢 **84** | 17 | 2 | 2 | 🔴 11 | **118** |
+| **EMEA** | 🟢 **46** | 17 | 8 | 1 | 🔴 12 | **86** |
+| **APAC** | 🟢 **42** | 4 | 1 | 1 | 🔴 8 | **58** |
+| **LATAM** | 🟢 **17** | 6 | 0 | 0 | 🔴 5 | **30** |
+| *unplaced (`Global`)* | 592 | 119 | 7 | 6 | 199 | 946 |
+
+🟢 **The permissive share is remarkably flat across the four regions** — 71 %, 53 %, 72 %,
+57 % — which is the fourth independent corroboration of §22 of
+[`intel/trends.md`](../intel/trends.md): **the licence variable is producer type, not
+geography.** 🔴 **What is NOT flat is volume.** North America and EMEA carry 204 of the 292
+placed in-domain addresses; LATAM carries 30. 🔵 That is a real asymmetry and it is not the
+one the trade press reports — see the LATAM note below, where the 30 turn out to reach
+something no other region's supply reaches.
+
+### 🟢 North America — the **state data standard** is the tier, and it is Apache-2.0 end to end
+
+| Component | Repo | Licence | Grant, at the pin | refs | Placed by |
+|---|---|---|---|---:|---|
+| The Ed-Fi ODS, the US K-12 operational data store | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | 🟢 **Apache-2.0** | `HEAD/LICENSE.txt` @ `b6b72e594bc4` | **1 651** | owner (Ed-Fi Alliance) |
+| Its admin API | [`Ed-Fi-Alliance-OSS/ODS-Admin-API`](https://github.com/Ed-Fi-Alliance-OSS/ODS-Admin-API) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `6bcf500a186e` | **831** | owner |
+| The data standard itself | [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `3d24df6675c5` | **467** | owner |
+| Its modelling toolchain | [`Ed-Fi-Alliance-OSS/MetaEd-js`](https://github.com/Ed-Fi-Alliance-OSS/MetaEd-js) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `a7f3c6986c05` | **1 827** | owner |
+| Learning analytics running in a real university | [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `44dbf906f7c8` | **1 032** | `its.umich.edu` |
+| The xAPI specification | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `ca782a1129bc` | **904** | owner (US DoD ADL) |
+| Open edX analytics, deployable | [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `d60eef009420` | **1 421** | owner |
+
+🔵 **Why this matters commercially and not just technically:** an Ed-Fi engagement is the
+one US K-12 integration whose target schema is **published, versioned and Apache-2.0**, so
+the integration work is specification work rather than reverse-engineering a vendor API.
+
+### 🟢 EMEA — a **national government service** is shelvable here, which is new
+
+| Component | Repo | Licence | Grant, at the pin | refs | Placed by |
+|---|---|---|---|---:|---|
+| 🆕 The UK Department for Education's teacher-training register, in production | [`DFE-Digital/register-trainee-teachers`](https://github.com/DFE-Digital/register-trainee-teachers) | 🟢 **MIT** | `HEAD/LICENCE` @ `a210ba1a13b4` | **6 593** | its own service host |
+| The University of Helsinki's MOOC platform | [`rage/secret-project-331`](https://github.com/rage/secret-project-331) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `d198c94c8084` | **1 383** | `www.mooc.fi` |
+| France Université Numérique's course-commerce service | [`openfun/joanie`](https://github.com/openfun/joanie) | 🟢 **MIT** | `HEAD/LICENSE` @ `21f6bfe29953` | **1 213** | owner (FUN) |
+| FUN's learning-analytics service | [`openfun/warren`](https://github.com/openfun/warren) | 🟢 **MIT** | `HEAD/LICENSE.md` @ `839fcbb411d1` | **295** | owner (FUN) |
+| 🆕 The LLM tutor inside TUM's Artemis | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | 🟢 **MIT** | `HEAD/LICENSE` @ `d7b2c095204e` | **245** | `artemis.cit.tum.de` |
+| A courseware platform used in real university courses | [`inducer/relate`](https://github.com/inducer/relate) | 🟢 **MIT** | `HEAD/LICENSE` @ `7030dd609545` | **1 139** | `documen.tician.de` |
+| A German university LMS | [`geli-lms/geli`](https://github.com/geli-lms/geli) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `02ae52087e74` | **1 250** | `demo.geli.fbi.h-da.de` |
+| Gamified CS teaching, assets licensed separately | [`Dungeon-CampusMinden/Dungeon`](https://github.com/Dungeon-CampusMinden/Dungeon) | 🟢 **MIT** (code) | `HEAD/LICENSE.md` @ `5856a782a8e0` | **1 836** | `www.hsbi.de` |
+
+🔴 **`Dungeon` is `gate-grant-scope`'s specimen and it is why this pass added `D6` to the
+census rule.** It carries **five** grant files — `LICENSE.md` **MIT** (the code),
+`LICENSE-ASSETS.md` **CC0-1.0**, `LICENSE-ICONS.md`, `LICENSE-NOTICE.md` **LGPL** and
+`LICENSE-PAPER.md` **CC-BY-SA-4.0** — and the first draft of this census ranked by
+permissiveness, so the repository's licence cell came from its **asset** grant. 🟢 An
+unscoped root file is the code grant; `LICENSE-<SCOPE>` describes something else. **160 of
+these 1 859 addresses carry more than one grant file**, so this is not a corner case.
+
+### 🟢 APAC — the **production-scale national platforms** are here
+
+| Component | Repo | Licence | Grant, at the pin | refs | Placed by |
+|---|---|---|---|---:|---|
+| 🆕 India's national learning platform (Sunbird / DIKSHA) — portal | [`project-sunbird/sunbird-portal`](https://github.com/project-sunbird/sunbird-portal) | 🟢 **MIT** | `HEAD/LICENSE` @ `9efc8b5819c6` | **11 606** | owner |
+| 🆕 Its LMS middleware | [`project-sunbird/sunbird-lms-mw`](https://github.com/project-sunbird/sunbird-lms-mw) | 🟢 **MIT** | `HEAD/LICENSE` @ `fc470e0bec49` | **1 068** | owner |
+| 🆕 NUS Singapore's course platform, in production | [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 🟢 **MIT** | `HEAD/LICENSE` @ `6310c973a303` | **7 723** | `www.comp.nus.edu.sg` |
+| 🆕 Education data mining toolkits (USTC) | [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `7efdbc04711c` | **104** | `base.ustc.edu.cn` |
+| 🆕 Cognitive diagnosis models (USTC) | [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `c610e6ae7f45` | **66** | `staff.ustc.edu.cn` |
+| 🆕 Singapore IMDA's AI-testing corpus | [`aiverify-foundation/moonshot-data`](https://github.com/aiverify-foundation/moonshot-data) | 🟢 **Apache-2.0** | `HEAD/LICENSE.md` @ `30fac1237547` | **260** | owner |
+| 🆕 Korea's NEIS school-information API client | [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) | 🟢 **MIT** | `HEAD/LICENSE` @ `ef50b19caba9` | **63** | `open.neis.go.kr` |
+| 🆕 New Zealand's CS curriculum field guide | [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | 🟢 **MIT** | `HEAD/LICENCE` @ `7e323930cf6f` | **2 827** | `csfieldguide.org.nz` |
+
+🟢 **Sunbird at 11 606 refs is the largest in-domain repository this pass placed anywhere**,
+and it is the platform behind India's DIKSHA. 🔵 Fifth independent corroboration of §15 of
+`intel/trends.md`: APAC's supposed gap is in the trade press, not in the supply.
+
+### 🟢 LATAM — only 17 permissive addresses, and they reach **the incumbent university SIS**, which no other region's supply does
+
+| Component | Repo | Licence | Grant, at the pin | refs | Placed by |
+|---|---|---|---|---:|---|
+| 🆕 A reach into **SIU-Guaraní**, the Argentine university SIS | [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | 🟢 **MIT** | `HEAD/LICENSE` @ `6962638adbdd` | **42** | `documentacion.siu.edu.ar` |
+| 🆕 A reach into **SIGAA**, the Brazilian federal-university SIS | [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) | 🟢 **MIT** | `HEAD/LICENSE` @ `7373c6abac62` | **8** | `sigaa.ufpb.br` |
+| 🆕 A second SIGAA reach, timetable repair | [`luthierycosta/ConsertandoHorariosSIGAA`](https://github.com/luthierycosta/ConsertandoHorariosSIGAA) | 🟢 **MIT** | `HEAD/LICENSE` @ `5a6106ed9ce2` | **8** | `unb.br` |
+| 🆕 Chile's open-data hub, education datasets included | [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🟢 **MIT** | `HEAD/LICENSE` @ `940a63783461` | **353** | `datos.gob.cl` |
+| 🆕 A pedagogy benchmark for LLMs, Chilean teacher-training source | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** | `HEAD/LICENSE` @ `21a43a395ab4` | **11** | `www.cpeip.cl` |
+| 🆕 Brazilian federal open-data MCP server | [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) | 🟢 **MIT** | `HEAD/LICENSE` @ `2efb258370b1` | **51** | `portaldatransparencia.gov.br` |
+| 🆕 An Argentine open-education lab | [`fhleonardi/openredlab`](https://github.com/fhleonardi/openredlab) | 🟢 **MIT** | `HEAD/LICENSE` @ `c507d0b56aac` | **108** | `opentecnologia.ar` |
+| 🆕 A Brazilian CS curriculum corpus | [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | 🟢 **MIT** | `HEAD/LICENSE` @ `b995c118fdb3` | **101** | `books-sol.sbc.org.br` |
+
+🟢 **This is the most useful thing `p371` found for a LATAM engagement, and it is a shape
+finding rather than a count.** `p370` graded the **incumbent-LMS** bridge class — Moodle,
+Canvas, Blackboard, Brightspace, PowerSchool, Banner — and that class is overwhelmingly
+North American and European software. 🔴 **The LATAM supply does not reach those systems.
+It reaches SIGAA and SIU-Guaraní**, the SIS platforms that Brazilian federal and Argentine
+national universities actually run, and which do **not** appear anywhere in `p370`'s
+ten-platform bridge table. 🔵 **A LATAM higher-education engagement that plans a Canvas or
+Banner integration is planning for the wrong incumbent**, and the two reaches above — 8
+and 42 refs, small and MIT — are the only published starting points this base has found in
+371 passes.
+
+🟡 **The honest limit on all four tables.** A ref count is not a star count: `api.github.com`
+answers `403` at this proxy, so popularity is unavailable and `refs` (branches plus tags
+plus pull refs) is a proxy for activity, not for adoption. It is reported because it was
+measured in the same request as the grant.
+
 ## 🟢 🆕 `p370`: the permissive **standards layer** under the bridge tier — LTI 1.3, OneRoster, xAPI and QTI, every grant enumerated from the git tree
 
 🔵 **Why a standards layer is a foundations question and not an agents question.** The

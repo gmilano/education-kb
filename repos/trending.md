@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 371 · 2026-10-21 — 🟢 **the fourth transport run at SCALE: 1 859 blobless partial clones, 1 859 answers, 0 failures — and the backlog `Gap 477` carried as a number now has a committed list**
+
+🔵 **The channel state first, measured this pass, so a successor has the matrix rather than
+the anecdote.** Unchanged from `p370` on every axis:
+
+| Channel | This pass | Note |
+|---|---|---|
+| `git` over https — `ls-remote`, blobless partial clone, `ls-tree` | 🟢 **200**, **1 859 of 1 859** | the only transport that ENUMERATES a tree; 6 parallel shards, no throttling, `0` `429` |
+| `raw.githubusercontent.com` | 🟢 **200** | works, but only for a path you can already NAME |
+| `github.com` HTML | 🔴 **403** | proxy denial, unchanged |
+| `api.github.com/repos/…` | 🔴 **403** | 🔴 so **no star counts this pass either**; `refs` is reported as an activity proxy and never as adoption |
+| `eur-lex.europa.eu`, `data.consilium.europa.eu`, `education.ec.europa.eu`, `oecd.org`, `unesco.org` | 🔴 **000** | `Gap 241`'s blockage reproduces; the remedy stays a network-policy request |
+
+🟢 **Cost, for whoever prices the next slice of a backlog on this base:** 1 859 addresses,
+six shards, **~95 minutes wall-clock**, one partial clone and one `ls-remote` per address.
+`p370` priced this at *"~1 000 addresses per pass … two or three passes, not a
+programme."* 🟢 **The estimate was right and the whole remainder fitted in one.**
+
+### 🟢 The run
+
+| | `2026-10-21` |
+|---|---:|
+| backlog derived from the shelves (`gate-backlog-denominator`) | **1 859** |
+| 🔴 `Gap 477`'s asserted remainder, published without a list | 🔴 **2 248** |
+| addresses answered | 🟢 **1 859 (100 %)** |
+| 🔴 `NO-REMOTE` — cited here, no longer resolving | 🔴 **46** |
+| in domain by payload | **1 238 (66.6 %)** |
+| 🟢 permissive at an unscoped root grant | 🟢 **781** |
+| 🔴 no grant file in the root tree | 🔴 **235 (19.0 % of in-domain)** |
+| copyleft · content · commercially restricted | **163** · **18** · **10** |
+| 🟡 carrying more than one grant file | 🟡 **160** |
+| 🟢 placed in a region from their own payload | 🟢 **450 (24.2 %)** |
+
+🟢 **Evidence:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p371.tsv) ·
+[`backlog-grade`](../evidence/backlog-grade.2026-10-21-p371.tsv) ·
+[`region-placement`](../evidence/region-placement.2026-10-21-p371.tsv) ·
+[`backlog-census`](../evidence/backlog-census.2026-10-21-p371.txt) ·
+[`gap480-oos-sample`](../evidence/gap480-oos-sample.2026-10-21-p371.txt) ·
+[`region-placement-p370-rows`](../evidence/region-placement-p370-rows.2026-10-21-p371.tsv)
+
+### 🔴 Five defects in this pass's own instruments, each published with the string that caused it
+
+| | Defect | The string |
+|---|---|---|
+| `D1` | the backlog deriver admitted a **relative path** as address number one | `.../archive` |
+| `D2` | the region placer read a **Python filename as a hostname** and put five rows in Paraguay | `server.py`, `main.py`, `setup.py`, `database.py`, `api.py` — `.py` is Paraguay in `p115`'s table |
+| `D3` | an **RFC-2606 placeholder** from a config sample placed two rows | `student.example.edu`, `d2l.myschool.edu` |
+| `D4` | the placeholder rule first matched **any label**, missing a hyphenated one and threatening real hosts | `blackboard.your-university.edu` missed; `mycourses.rit.edu` would have been wrongly dropped |
+| `D5` | a **link shortener** placed a row in LATAM | `mng.bz/orYv` — Manning's shortener, `.bz` is Belize |
+| `D6` | the census ranked grants by permissiveness, so a repo's licence cell came from its **asset** grant | `Dungeon-CampusMinden/Dungeon` → `LICENSE-ASSETS.md` CC0 instead of `LICENSE.md` MIT |
+
+🔴 **`D2` is the one that should not have happened, and it is a repeat of this base's own
+standing failure mode.** `p115` had **already** required an `https://` context before
+reading a host, and had **already** committed a `stoplist.tsv` whose header states the
+rule: *"A HOSTNAME WHOSE TLD IS A REAL COUNTRY CODE IS STILL NOT EVIDENCE WHEN THE HOST IS
+A SERVICE, A REGISTRY, A STANDARDS BODY OR A REGULATOR."* 🟢 Both disciplines are now
+reused by reading `p115`'s files rather than copying them — a copied table drifts. 🔵 Same
+shape as `p369` paying to rediscover `LICENSE.TXT` that `p189` had recorded and never
+gated: **the knowledge was committed, and was not wired into the next instrument that
+needed it.**
+
+🟢 **`p115`'s stoplist gained four rows this pass**, in `p115`'s own file and attributed
+there: `adlnet.gov` (the string that placed Nairobi-based
+[`tunapanda/wp-xapi-lrs`](https://github.com/tunapanda/wp-xapi-lrs) in North America),
+`xapi.com`, `imsproject.org` and `caliperanalytics.org`.
+
+### 🟢 Two new standing gates
+
+| Gate | What it refuses | Controls |
+|---|---|---:|
+| `gate-region-place` | a region placed from a filename, a placeholder host, a shortener, a language or a maintainer's name | **23** |
+| `gate-backlog-denominator` | a backlog quantity carried by restatement instead of derived from the rows | **8** |
+
+🔵 `gate-domain-check` went **43 → 56** controls on `D5`'s out-of-sample vocabulary, and
+`make hooks` now runs **38** gates.
+
 ## Pass 370 · 2026-10-21 — 🟢 **a FOURTH transport: `github.com` and `api.github.com/repos/…` were both 403 all pass, and `git` answered 200 for 63 of 63 — and unlike `raw`, it does not have to guess the licence filename**
 
 🔵 **The channel note first, because three consecutive passes have now reported three

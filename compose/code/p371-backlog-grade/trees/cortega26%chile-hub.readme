@@ -1,0 +1,355 @@
+<div align="center">
+
+<h1>
+  <img src="https://rawcdn.githack.com/twitter/twemoji/v14.0.2/assets/svg/1f1e8-1f1f1.svg" alt="Bandera de Chile" width="39" align="absmiddle">
+  chile-hub
+</h1>
+
+<p><strong>Deja de pelear con planillas, enlaces rotos y esquemas incompatibles.</strong></p>
+<p><strong>Datos públicos de Chile curados, normalizados, validados y listos para Python, SQL, Excel y pipelines.</strong></p>
+<p><em>La última milla entre “el dato existe” y “el dato ya sirve”.</em></p>
+
+[![CI/CD](https://github.com/cortega26/chile-hub/actions/workflows/pipeline-check.yml/badge.svg)](https://github.com/cortega26/chile-hub/actions)
+[![PyPI version](https://img.shields.io/pypi/v/chile-hub.svg)](https://pypi.org/project/chile-hub/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/chile-hub.svg)](https://pypi.org/project/chile-hub/)
+[![Coverage](https://img.shields.io/endpoint?url=https://tooltician.com/chile-hub/data/normalized/coverage_badge.json)](https://tooltician.com/chile-hub/data/normalized/hub_status.json)
+[![Data](https://img.shields.io/endpoint?url=https://tooltician.com/chile-hub/data/normalized/freshness_badge.json)](https://tooltician.com/chile-hub/data/normalized/hub_health.json)
+[![License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22968698.svg)](https://doi.org/10.5281/zenodo.22968698)
+<!-- START_PYTHON_BADGE -->
+[![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB.svg?style=flat&logo=python&logoColor=white)]()
+<!-- END_PYTHON_BADGE -->
+<!-- Convención de conteos (Plan 097): badge = 23 CONSTRUIBLES (claves del catálogo con `outputs`, lo que `make build` genera localmente, incl. consumo_electrico en carril candidate) · 22 PUBLICABLES (registry `publication_track: stable_publishable` + elegibles al ZIP) · 20 en el manifest (alias comunas_enriquecidas sin artefacto físico) · 26 REGISTRADAS (claves del catálogo) · 28 DOCS (con archivados). Fórmula del badge: sync_readme_dataset_badge() en src/builders/doc_sync.py. -->
+<!-- START_DATASET_BADGE -->
+[![Datasets](https://img.shields.io/badge/Datasets-23%20capas-16a34a.svg)]()
+<!-- END_DATASET_BADGE -->
+
+<p>
+  <a href="https://tooltician.com/chile-hub/"><strong>Explorar datos en el navegador</strong></a> ·
+  <a href="#instalar-y-usar-en-30-segundos">Instalar</a> ·
+  <a href="#qué-incluye">Ver capas</a> ·
+  <a href="#por-qué-confiar">Auditar calidad</a>
+</p>
+
+<a href="https://tooltician.com/chile-hub/">
+  <img src="https://raw.githubusercontent.com/cortega26/chile-hub/main/docs/assets/landing-hero.png" alt="Landing de chile-hub: capas de datos de Chile listas para consumir" width="860">
+</a>
+
+</div>
+
+## El dato público existe. El problema es dejarlo listo para usar.
+
+Si trabajas con datos de Chile, probablemente ya conoces la fricción: archivos Excel con formatos cambiantes, códigos territoriales que pierden ceros, fuentes dispersas, APIs inconsistentes y cruces que fallan por diferencias mínimas de nombres.
+
+**chile-hub convierte esa última milla en infraestructura reutilizable.**
+
+| Necesitas | chile-hub te entrega |
+|:---|:---|
+| Cruzar comunas, regiones o distritos sin limpiar claves a mano | Códigos CUT normalizados y contratos de esquema |
+| Analizar datos oficiales desde Python o SQL | Parquet + Polars + DuckDB + SQLite |
+| Llevar datos a Excel o automatizaciones | JSON y workbook multipestaña listos para consumo |
+| Saber de dónde salió un dato y cuándo se obtuvo | Procedencia, frescura, licencia y estado por capa |
+| Detectar cambios silenciosos en las fuentes | Validaciones, drift detection y pipeline fail-loud |
+
+> [!TIP]
+> **¿Solo quieres probarlo?** Abre el [explorador SQL](https://tooltician.com/chile-hub/) y consulta los Parquet directamente en tu navegador con DuckDB-WASM. Sin instalar nada.
+
+**En 30 segundos puedes pasar de “necesito datos de Chile” a un DataFrame listo para cruzar.**
+
+## Instalar y usar en 30 segundos
+
+```bash
+pip install chile-hub
+```
+
+```python
+from chile_hub import ChileHub
+
+hub = ChileHub()
+comunas = hub.load_polars("comunas")  # 346 comunas, códigos CUT como texto
+censo = hub.load_polars("censo_comunal")  # población censada por comuna
+
+# Cruce territorial garantizado: la clave es el CUT, nunca un int
+df = (
+    comunas.join(censo, on="codigo_comuna")
+    .select("codigo_comuna", "nombre_comuna", "nombre_region", "poblacion_censada")
+    .sort("poblacion_censada", descending=True)
+    .head(5)
+)
+print(df)
+```
+
+Resultado real (Censo 2024):
+
+```text
+shape: (5, 4)
+┌───────────────┬───────────────┬─────────────────────────────────┬───────────────────┐
+│ codigo_comuna ┆ nombre_comuna ┆ nombre_region                   ┆ poblacion_censada │
+│ ---           ┆ ---           ┆ ---                             ┆ ---               │
+│ str           ┆ str           ┆ str                             ┆ i64               │
+╞═══════════════╪═══════════════╪═════════════════════════════════╪═══════════════════╡
+│ 13201         ┆ Puente Alto   ┆ Región Metropolitana de Santia… ┆ 568086            │
+│ 13119         ┆ Maipú         ┆ Región Metropolitana de Santia… ┆ 503635            │
+│ 13101         ┆ Santiago      ┆ Región Metropolitana de Santia… ┆ 438856            │
+│ 02101         ┆ Antofagasta   ┆ Región de Antofagasta           ┆ 401096            │
+│ 13110         ┆ La Florida    ┆ Región Metropolitana de Santia… ┆ 374836            │
+└───────────────┴───────────────┴─────────────────────────────────┴───────────────────┘
+```
+
+En el sitio puedes consultar los mismos Parquet con SQL en el navegador (motor
+DuckDB-WASM, sin instalar nada):
+
+![Demo del explorador SQL de chile-hub](https://raw.githubusercontent.com/cortega26/chile-hub/main/docs/assets/demo-sql.webp)
+
+La primera ejecución descarga el bundle validado desde GitHub Releases, verifica su
+integridad SHA256 y lo deja en cache local; a partir de ahí todo corre contra el cache.
+La comprobación semanal de novedades no envía datos de uso y se desactiva con
+`CHILE_HUB_NO_UPDATE_CHECK=1` (`CHILE_HUB_LANG=es|en` elige el idioma del aviso).
+
+```bash
+chile-hub cache update     # Forzar descarga del bundle más reciente
+chile-hub cache status     # Ubicación y estado del cache local
+chile-hub cache clear      # Liberar espacio
+```
+
+> **Variante pipeline:** `pip install chile-hub[pipeline]` agrega DuckDB, Pandas,
+> XlsxWriter y curl_cffi para ejecutar el pipeline completo de extracción y build.
+> La instalación mínima solo incluye Polars, PyArrow, requests y platformdirs —
+> suficiente para consumir datos.
+
+> [!NOTE]
+> **chile-hub** no busca "tener todos los datos de Chile". Busca **reducir drásticamente
+> el costo técnico** de encontrar, limpiar, validar, cruzar y consumir datasets
+> geográficos, demográficos, electorales y económicos críticos de Chile.
+>
+> Tampoco es un portal ni una fuente oficial: trabaja aguas abajo de
+> [datos.gob.cl](https://datos.gob.cl/) y de las instituciones que publican cada dato,
+> y siempre enlaza a la fuente oficial. Es un proyecto independiente, sin afiliación con
+> esas instituciones. Misión y principios: [`docs/product-spec.md`](docs/product-spec.md).
+>
+> En la práctica, responde preguntas como:
+>
+> - ¿Cómo cruzo mi base de clientes, escuelas o centros de salud con comunas oficiales sin perder ceros en los códigos?
+> - ¿Qué comunas concentran población censada, establecimientos públicos o indicadores urbanos?
+> - ¿Cómo llevo datos oficiales a Polars, DuckDB, SQLite, Excel o CI sin depender de enlaces cambiantes?
+
+<!-- START_VERSION_PIN_EXAMPLE -->
+> **Versionado:** Para entornos productivos, fija la versión exacta en `requirements.txt`
+> (revisa el badge de PyPI al inicio de este README para la versión más reciente):
+> ```
+> chile-hub==1.50.0
+> ```
+> El bundle de datos se publica con cada release. La API del módulo `ChileHub` sigue
+> versionado semántico: cambios de interfaz pública solo en _major releases_.
+<!-- END_VERSION_PIN_EXAMPLE -->
+
+---
+
+## Por qué confiar
+
+Cada decisión de ingeniería de este proyecto está diseñada para que **no tengas que
+confiar ciegamente**: los datos vienen con la evidencia que los respalda.
+
+Trabajar con datos públicos chilenos suele implicar los mismos obstáculos:
+
+| Sin chile-hub | Con chile-hub |
+|:---|:---|
+| Enlaces rotos y APIs inconsistentes | Pipeline automatizado con fallbacks y verificación de integridad |
+| Planillas Excel deformes con celdas combinadas | Parquet, DuckDB y JSON listos para producción |
+| Códigos CUT que pierden ceros al leerse como `int` | CUT garantizados como `VARCHAR` de largo fijo (`"01101"`) |
+| Nombres de comunas imposibles de cruzar (_Ñuñoa_ vs _Nunoa_) | Columna `nombre_comuna_clean` normalizada para cruces exactos |
+| Cero trazabilidad sobre origen y vigencia del dato | Metadatos con fuente, fecha de extracción, licencia y modo |
+
+### Seis pilares, auditables y verificables en cada build
+
+| Pilar | Descripción | Artefacto auditable |
+|:---|:---|:---|
+| **Procedencia documentada** | Cada dataset declara su fuente oficial exacta con URL directa al organismo público emisor (BCN, INE, MINEDUC, BCCh, MINSAL, datos.gob.cl). | [`provenance_report.md`](data/normalized/provenance_report.md) — fuente, modo y timestamp por capa |
+| **Auditoría legal explícita** | <!-- START_REDISTRIBUTION_SUMMARY -->Licencia, atribución requerida y permiso de redistribución verificados dataset por dataset — reporte regenerado en cada build en [`redistribution_report.md`](data/normalized/redistribution_report.md).<!-- END_REDISTRIBUTION_SUMMARY --> | [`redistribution_report.md`](data/normalized/redistribution_report.md) + [`AGENTS.md §6`](AGENTS.md) |
+| **Pipeline fail-loud** | Si una validación falla, el pipeline **aborta** — no publica datos corruptos, no emite advertencias silenciosas. | [`ADR-001`](docs/adr/ADR-001-pipeline-lineal-determinista.md) — fail-loud como decisión de arquitectura |
+| **Contratos de esquema** | <!-- START_CONTRACT_COUNT -->26 contratos JSON Schema ([`contracts/datasets/`](contracts/datasets/)) definen columnas esperadas, tipos, claves primarias y cobertura. Se validan **en cada build** automáticamente.<!-- END_CONTRACT_COUNT --> | [`ADR-005`](docs/adr/ADR-005-contratos-esquema-json-schema.md) + `contracts/datasets/*.json` |
+| **Salud transparente** | <!-- START_HEALTH_SUMMARY -->Dashboard público con severidad, frescura, cobertura, drift y degradación por dataset — regenerado en cada build en [`hub_health.md`](data/normalized/hub_health.md).<!-- END_HEALTH_SUMMARY --> | [`hub_health.md`](data/normalized/hub_health.md) — estado completo actualizado en cada build |
+| **Calidad medida** | <!-- START_QUALITY_SUMMARY -->Puntuación compuesta A-F por dataset (validación, contrato, madurez de fuente, frescura, cobertura y política de reúso); scorecard completo en [`dataset_quality.md`](data/normalized/dataset_quality.md).<!-- END_QUALITY_SUMMARY --> | [`dataset_quality.md`](data/normalized/dataset_quality.md) — scorecard completo |
+
+Cada pilar se audita automáticamente en cada ejecución del pipeline. Los reportes se
+regeneran en cada build — no son documentos estáticos mantenidos a mano. Para auditar
+el estado exacto de cualquier capa:
+
+```bash
+chile-hub provenance   # fuente, modo y timestamp por dataset
+chile-hub health       # severidad, frescura, drift y cobertura
+```
+
+El mismo estado se publica en el sitio, con historial de builds y detalle por capa:
+
+![Estado operativo del hub](https://raw.githubusercontent.com/cortega26/chile-hub/main/docs/assets/landing-health.png)
+
+### Respaldo adicional
+
+<!-- START_TEST_COUNT -->
+- **1449 tests** (`pytest --collect-only`) que validan extracción, contratos e integridad de datos.
+<!-- END_TEST_COUNT -->
+<!-- START_ADR_COUNT -->
+- **24 ADRs** ([`docs/adr/`](docs/adr/)) que documentan cada decisión de arquitectura con su contexto, consecuencias y tradeoffs — no solo el "qué", sino el "por qué".
+<!-- END_ADR_COUNT -->
+- **Drift monitoreado:** todos los datasets bajo vigilancia de deriva de esquema; cualquier
+  cambio en la fuente se detecta y registra ([`drift_report.md`](data/normalized/drift_report.md)).
+- **Trazabilidad completa:** cada build registra timestamp, versión de extractor y
+  snapshot de entrada en [`provenance_report.md`](data/normalized/provenance_report.md).
+
+> Para una explicación más detallada de la arquitectura y las decisiones de diseño,
+> lee el [caso de estudio: cómo está construido chile-hub](docs/case-study-construccion-chile-hub.md).
+
+---
+
+## Qué incluye
+
+> **Cómo leer los conteos:** 22 capas construibles (`make build` local, incl. 1 en carril
+> `candidate`) · 21 publicables (bundle ZIP) · 25 registradas en el catálogo (3 filas sin
+> datos aún: geometría, delincuencia, autoridades locales). La convención completa vive
+> junto al badge superior y en [`data/source_registry.json`](data/source_registry.json).
+
+![Catálogo de capas publicado en el sitio](https://raw.githubusercontent.com/cortega26/chile-hub/main/docs/assets/landing-catalogo.png)
+
+Mapa territorial interactivo: las 346 comunas con 7 métricas seleccionables
+(población, pobreza, permisos, equipamiento, MP2.5) y ficha por comuna.
+
+![Mapa territorial interactivo de chile-hub](https://raw.githubusercontent.com/cortega26/chile-hub/main/docs/assets/landing-mapa.png)
+
+<!-- START_DATASET_TABLE -->
+
+| # | Capa | Fuente | Licencia | Actualización |
+|:--:|:---|:---|:---|:--:|
+| 1 | **Regiones** | BCN ArcGIS | CC BY | — |
+| 2 | **Provincias** | BCN ArcGIS | CC BY | — |
+| 3 | **Comunas** | BCN ArcGIS | CC BY | — |
+| 4 | **Comunas Enriquecidas** | BCN + INE | CC BY | — |
+| 5 | **Indicadores Económicos** | BCCh / mindicador.cl | Libre c/cita | Diaria |
+| 6 | **Censo Comunal 2024** | INE | CC BY 4.0 | Decenal |
+| 7 | **Censo Hogares y Viviendas** | INE | CC BY 4.0 | Decenal |
+| 8 | **Establecimientos de Salud** | MINSAL / datos.gob.cl | CC0 | Mensual |
+| 9 | **Distritos Electorales** | BCN / Ley 20.840 | CC0 | — |
+| 10 | **Establecimientos Educacionales** | MINEDUC | CC BY 3.0 CL | Anual |
+| 11 | **Finanzas Municipales** | SINIM / SUBDERE | Revisión términos | Anual |
+| 12 | **Resultados Educacionales** | MINEDUC | CC BY 3.0 CL | Anual |
+| 13 | **Indicadores Urbanos SIEDU** | INE / SIEDU | Datos abiertos INE | Anual |
+| 14 | **Perfil Territorial Comunal** | chile-hub derivado | Fuentes abiertas | Derivada |
+| 15 | **Empresas (RES)** | Min. Economía / datos.gob.cl | CC-BY 3.0 CL | Mensual |
+| 16 | **Pobreza Comunal (SAE)** | MDS / Observatorio Social | Datos abiertos MDS | Bienal/trienal |
+| 17 | **Consumo Eléctrico Comunal** | CNE / Energía Abierta | CC BY | Anual |
+| 18 | **Partidos Políticos** | Cámara de Diputados | CC BY | Bajo_demanda |
+| 19 | **Autoridades Electas** | Cámara de Diputados + Senado | CC BY | Bajo_demanda |
+| 20 | **Estadísticas Vitales** | INE | CC BY 4.0 | Anual |
+| 21 | **Permisos de Edificación** | MINVU / CEDOC | Uso c/cita | Mensual |
+| 22 | **Calidad del Aire** | MMA / SINCA | Revisión términos | Diaria |
+| 23 | **precipitaciones_dgac** | — | — | Trimestral |
+| 24 | **geometria_comunal** | — | — | — |
+| 25 | **Delincuencia Comunal** | CEAD / SPD | Revisión términos | — |
+| 26 | **Autoridades Locales** | BCN SIIT + Wikipedia | CC BY / CC BY-SA | — |
+
+> **Métricas por build:** el modo de la última extracción, el conteo de
+> registros, la cobertura y la frescura viven en
+> [`hub_health.md`](data/normalized/hub_health.md),
+> [`dataset_status.json`](data/normalized/dataset_status.json) y
+> [`dataset_quality.md`](data/normalized/dataset_quality.md), regenerados en cada
+> build; los badges resumen frescura y estado:
+> [![Data](https://img.shields.io/endpoint?url=https://tooltician.com/chile-hub/data/normalized/freshness_badge.json)](https://tooltician.com/chile-hub/data/normalized/hub_health.json)
+> [![Coverage](https://img.shields.io/endpoint?url=https://tooltician.com/chile-hub/data/normalized/coverage_badge.json)](https://tooltician.com/chile-hub/data/normalized/hub_status.json)
+> Para auditar el estado exacto de cada capa: `chile-hub provenance` y `chile-hub health`.
+
+<!-- END_DATASET_TABLE -->
+
+El schema de columnas, tipos y PK de cada capa vive en
+[`contracts/datasets/`](contracts/datasets/) y en [`docs/datasets/`](docs/datasets/);
+el volcado completo está en el [apéndice](#apéndice-esquemas-y-modelo-de-datos).
+
+### Formatos de salida
+
+Cada ejecución del pipeline genera en `data/normalized/`:
+
+| Tipo | Archivo | Uso |
+|:---|:---|:---|
+| **Base de datos** | `chile_data.duckdb` | Analítica local de alto rendimiento |
+| **Base de datos** | `chile_data.db` | SQLite para aplicaciones embebidas |
+| **Intercambio** | `*.parquet` por capa | Polars / Pandas / DuckDB |
+| **Intercambio** | `*.json` por capa | Pipelines y automatización |
+| **Intercambio** | `chile_data_latest.xlsx` | Excel multipestaña (códigos CUT como texto) |
+| **Metadatos** | `artifact_manifest.json`, `hub_health.*`, `dataset_status.json`, `dataset_changelog.json`, `dataset_catalog.*`, `provenance_report.*`, `redistribution_report.*` | Catálogo físico, salud, changelog y auditoría |
+| **Bundle** | `chile-hub-publishable-bundle.zip` | Paquete público con verificación SHA256 |
+
+---
+
+## Recetas de uso
+
+¿Prefieres notebooks? Las cuatro recetas están en
+[`examples/notebooks/`](examples/notebooks/) con botón de Colab, o ejecutables
+en el explorador SQL del sitio.
+
+**1. Últimos indicadores económicos disponibles**
+
+```python
+from chile_hub import ChileHub
+
+df = ChileHub().load_polars("indicadores")
+ultimos = (
+    df.sort("fecha", descending=True)
+    .group_by("codigo_indicador")
+    .first()
+    .select("codigo_indicador", "fecha", "valor")
+    .sort("codigo_indicador")
+)
+print(ultimos)
+```
+
+**2. Salud y educación por comuna**
+
+```python
+from chile_hub import ChileHub
+
+hub = ChileHub()
+salud = hub.load_polars("establecimientos_salud")
+educacion = hub.load_polars("establecimientos_educacionales")
+
+salud_por_comuna = salud.group_by("codigo_comuna").len("establecimientos_salud")
+educacion_por_comuna = educacion.group_by("codigo_comuna").len("establecimientos_educacionales")
+
+resumen = (
+    hub.load_polars("comunas")
+    .join(salud_por_comuna, on="codigo_comuna", how="left")
+    .join(educacion_por_comuna, on="codigo_comuna", how="left")
+    .fill_null(0)
+    .select(
+        "codigo_comuna", "nombre_comuna", "establecimientos_salud", "establecimientos_educacionales"
+    )
+)
+print(resumen.head())
+```
+
+**3. SQL directo con DuckDB**
+
+```sql
+-- Top 10 comunas por población censada
+SELECT nombre_comuna, poblacion_censada, hombres, mujeres
+FROM 'data/normalized/censo_comunal.parquet'
+ORDER BY poblacion_censada DESC
+LIMIT 10;
+
+-- Cruce territorial: comunas × distritos electorales
+SELECT c.nombre_comuna, c.nombre_region,
+       e.distrito_electoral, e.circunscripcion_senatorial
+FROM 'data/normalized/comunas.parquet' c
+JOIN 'data/normalized/distritos_electorales.parquet' e
+  ON c.codigo_comuna = e.codigo_comuna
+WHERE c.nombre_region = 'Valparaíso';
+```
+
+---
+
+## API y CLI
+
+### API Python compacta
+
+| API | Uso |
+|:---|:---|
+| `ChileHub()` | Inicializa el helper; descarga y verifica el bundle si no hay cache local. |
+| `ChileHub(data_dir="data/normalized")` | Usa artefactos locales genera

@@ -1,0 +1,437 @@
+# EduPage MCP Server
+
+<!-- mcp-name: io.github.oliverhruby/edupage-mcp -->
+
+[![GitHub release](https://img.shields.io/github/v/tag/oliverhruby/edupage-mcp.svg?sort=semver&label=release)](https://github.com/oliverhruby/edupage-mcp/releases)
+[![Glama Grade](https://img.shields.io/badge/Glama-A-success)](https://glama.ai/mcp/servers/oliverhruby/edupage-mcp)
+[![Quality gates](https://img.shields.io/github/actions/workflow/status/oliverhruby/edupage-mcp/quality-gates.yml.svg?label=quality%20gates)](https://github.com/oliverhruby/edupage-mcp/actions/workflows/quality-gates.yml)
+[![Security](https://img.shields.io/github/actions/workflow/status/oliverhruby/edupage-mcp/security.yml.svg?label=security)](https://github.com/oliverhruby/edupage-mcp/actions/workflows/security.yml)
+[![Container security](https://img.shields.io/github/actions/workflow/status/oliverhruby/edupage-mcp/container-security.yml.svg?label=container%20security)](https://github.com/oliverhruby/edupage-mcp/actions/workflows/container-security.yml)
+[![Coverage drift](https://img.shields.io/github/actions/workflow/status/oliverhruby/edupage-mcp/upstream-coverage.yml.svg?label=coverage%20drift)](https://github.com/oliverhruby/edupage-mcp/actions/workflows/upstream-coverage.yml)
+
+## Project
+
+A Model Context Protocol (MCP) server that exposes the full functionality of the
+[`edupage-api`](https://github.com/EdupageAPI/edupage-api) Python library to AI
+agents such as opencode, Claude, Cursor and any other MCP client.
+
+EduPage is a school information system used across Europe. This server lets you
+query and operate a student / teacher / parent EduPage account directly from
+your agent: timetables, grades, homework, substitutions, meals (including
+ordering), messages, rosters, parent child-switching and more — including
+**multiple schools** (e.g. two children attending different schools).
+
+> **⚠️ Unofficial API.** Like all EduPage MCP servers, this relies on the
+> community-maintained [`edupage-api`](https://github.com/EdupageAPI/edupage-api)
+> library, which talks to EduPage's undocumented endpoints. Use read-only
+> features freely; use the write features (`send_message`, meal ordering, child
+> switching) carefully.
+
+---
+
+## Table of Contents
+
+- [Why another EduPage MCP server?](#why-another-edupage-mcp-server)
+- [What it provides](#what-it-provides)
+- [Getting started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [1. Install](#1-install)
+  - [2. Configure credentials](#2-configure-credentials)
+  - [3. Register with your MCP client](#3-register-with-your-mcp-client)
+- [Prompt examples](#prompt-examples)
+- [Multiple schools (subdomains)](#multiple-schools-subdomains)
+- [Tool reference](#tool-reference)
+- [Data & safety notes](#data--safety-notes)
+- [Contributing](#contributing)
+- [Limitations](#limitations)
+- [Support](#support)
+- [License](#license)
+
+---
+
+## Why another EduPage MCP server?
+
+Two other EduPage MCP servers already exist:
+
+- [`mrtineu/edupage-mcp`](https://github.com/mrtineu/edupage-mcp) — also
+  published on PyPI as [`edupage-mcp`](https://pypi.org/project/edupage-mcp/)
+- [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp)
+
+Both are good and I have **no affiliation** with them — they are simply
+referenced here for honest comparison. They primarily focus on the **read-only**
+surface of the API.
+
+This project deliberately goes further:
+
+| Capability | mhlavac | mrtineu (PyPI) | **this project** |
+|---|---|---|---|
+| **Advanced login** — portal auto-detect, **2FA**, **session id** (`PHPSESSID`) | partial (portal) | basic only | ✅ |
+| Timetables (own + any teacher/class/room) | ✅ | ✅ | ✅ |
+| Grades (all / by term & year) | ✅ | ✅ | ✅ |
+| Substitutions / timetable changes | ✅ | ✅ | ✅ |
+| Meals — **read menu** | ✅ | ✅ | ✅ |
+| Meals — **choose / sign-off / rate** | ❌ | ❌ | ✅ |
+| Send messages (`send_message`) | ✅ | ❌ | ✅ |
+| Parent **student switching** (switch to/from student) | partial (list) | ❌ | ✅ |
+| Next ringing time / bell schedule | ❌ | ❌ | ✅ |
+| Raw session **custom request** | ❌ | ❌ | ✅ |
+| **Multiple schools** (auto-login + discovery) | ❌ | ❌ | ✅ |
+| **Role-aware** (parent / student / teacher) | ❌ | ❌ | ✅ |
+| **Day summaries** (one-call daily report) | ❌ | ❌ | ✅ |
+| Homework — **body text + attachments** | ❌ | ✅ | ✅ |
+| **Download a homework file to disk** | ❌ | ✅ | ✅ |
+
+**Key differentiators:**
+
+- **Multi-school automatic discovery.** Set `EDUPAGE_SUBDOMAINS` with one shared
+  login and the server auto-discovers students across all schools — no need to
+  maintain a manual "Student → school1, Student → school2" mapping. A student at
+  two schools (e.g. Student at `school1` + `school2`) is found automatically
+  with separate per-school results.
+- **Role-aware tools.** The server detects whether you're a parent, student, or
+  teacher at each school and behaves accordingly — `get_student_timetable`
+  switches to the student account for parents, returns direct timetables for
+  students. No tool duplication.
+- **Full write surface.** Meal ordering/rating, message sending, student switching
+  — the other servers don't cover these.
+
+*Comparison checked 2026-09-28. If a row is wrong, please open an issue.*
+
+---
+
+## What it provides
+
+A single stdio MCP server exposing **31 tools** (published on PyPI as
+[`edupage-mcp-full`](https://pypi.org/project/edupage-mcp-full/)):
+
+- **Authentication** — `login` (by credentials, portal auto-detect, or a
+  `PHPSESSID` cookie via `method=`), `login_all` (multi-school, one call),
+  `two_factor_finish` (complete a pending 2FA), `get_subdomains` (schools
+  available to the account with role/user id per school + env config, live
+  subdomain discovery for parents). The former `auth_status`,
+  `user_id`, `login_auto`, `login_from_session`, and
+  `two_factor_check_confirmed` tools are folded into these.
+- **Timetables** — `get_my_timetable`, `get_timetable` (teacher/student/class/
+  classroom; `end_date` for a range, formerly `get_timetable_range`),
+  `get_student_timetable` (student by name, cross-school), `get_next_week_timetable`,
+  `get_next_ringing_time`, `get_periods`, `get_school_year`
+- **Students** — `find_student` (name → person_id, cross-school),
+  `get_student_timetable` (cross-school, role-aware), `scan_students`
+  (auto-discover all students across schools), `get_my_students` (classmates or
+  school-wide for parents), `switch_to_student` (by id **or** name, parent only),
+  `switch_to_parent`, `clear_student_cache` (force refresh cached student lists)
+- **Schools** — `get_subdomains` (subdomains available to the account — live-discovered for parents, limited by `EDUPAGE_SUBDOMAINS` when set — plus session state per school)
+- **Grades** — `get_grades`
+- **Timeline / notifications** — `get_timeline` (`category=` for homework,
+  assignments, absences, events, news, or full history since a date)
+- **Homework** — `get_timeline(category='homework')` to list assignments
+  (ids in `additional_data.superid`), `get_homework_material` to read one
+  assignment's **body text**, dates and attachment list (the notification alone
+  only carries the title and due date), `download_attachment` to save one
+  attachment to disk
+- **Substitutions** — `get_timetable_changes`, `get_missing_teachers`
+- **Meals** — `get_meals`, `choose_meal`, `sign_off_meal`, `rate_meal`
+- **Day summaries** — `get_day_summary` (one call: timetable, substitutions,
+  missing teachers, grades, meals, homework, assignments, absences, news,
+  events, notifications for a date — "what happened yesterday at school" in a
+  single round trip; each section is isolated so one failure doesn't kill the
+  report). A bundled agent skill (`school-day-summary`) turns that JSON into a
+  human-readable daily report — install it with `edupage-mcp-full
+  install-skill` (see [Skills](#skills)); every client can also call
+  `get_day_summary` directly and read the JSON.
+- **Rosters** — `get_roster` (`roster_type=` for students, all students,
+  teachers, classes, classrooms, or subjects), `get_my_students`
+- **Actions** — `send_message`, `switch_to_student`, `switch_to_parent`, `custom_request`
+
+---
+
+## Getting started
+
+You need an MCP-capable client (opencode, Claude Desktop, Cursor, etc.).
+
+### 1. Install
+
+If you are using an AI coding client, a simple prompt is often enough to get
+started, for example: "Install the EduPage MCP as described in this GitHub
+repository oliverhruby/edupage-mcp". Most MCP-capable clients can then guide
+you through the available setup options.
+
+**Option A — as an agent plugin (recommended: the server *and* the skill in one install)**
+
+For VS Code, GitHub Copilot and Claude Code this repo ships a plugin that
+installs the server together with the `school-day-summary` agent skill:
+
+```bash
+copilot plugin marketplace add oliverhruby/edupage-mcp
+copilot plugin install edupage@edupage-plugins
+```
+
+Claude Code reads the same marketplace:
+
+```bash
+claude plugin marketplace add oliverhruby/edupage-mcp
+claude plugin install edupage@edupage-plugins
+```
+
+opencode, Cursor and Windsurf read Agent Skills but not plugins — for those, and
+for every other install route, see [docs/PLUGINS.md](docs/PLUGINS.md).
+
+**Option B — one-shot with [APM](https://microsoft.github.io/apm/) (the server *and* the skill in one command)**
+
+[APM](https://microsoft.github.io/apm/) (Agent Package Manager) is an emerging
+open standard for distributing agent context — think npm for agent skills, MCP
+servers and instructions. Install [the CLI](https://microsoft.github.io/apm/getting-started/installation/)
+once, then a single command deploys the `school-day-summary` skill into the
+harness's skills directory *and* writes the `uvx edupage-mcp-full` stdio MCP
+server config into the detected harness (Claude Code, GitHub Copilot, Cursor,
+opencode, Codex, and others):
+
+```bash
+apm install oliverhruby/edupage-mcp
+```
+
+The Claude Code plugin/marketplace install (Option A) remains supported and
+unchanged — APM is an additional install route, declared in this repo's
+`apm.yml`.
+
+**Option C — from MCP Registry (one-click, server only, no skill)**
+
+The server is listed in the [MCP Registry](https://registry.modelcontextprotocol.io/).
+In VS Code or GitHub Copilot, search for "EduPage MCP" and install with one click.
+Or use the direct deeplink: `mcp://install/io.github.oliverhruby/edupage-mcp`
+
+**Option D — from PyPI**
+
+Use this for normal usage with a released version.
+
+Requirements: `uv` for `uvx`, or Python **3.10+** for `pip`.
+
+```bash
+uvx edupage-mcp-full
+# or, if you prefer pip (into whatever environment your MCP client uses):
+pip install edupage-mcp-full
+```
+
+`uvx` runs the package without a persistent install. If `uvx` is unavailable,
+install `uv` first (`pip install uv` or `winget install astral-sh.uv`).
+
+**Option E — from GitHub (latest source)**
+
+Use this if you want the latest changes before a PyPI release.
+
+Requirements: `uv` for `uvx`, or Python **3.10+** for `pip`.
+
+```bash
+uvx --from "git+https://github.com/oliverhruby/edupage-mcp.git" edupage-mcp-full
+# or
+pip install "git+https://github.com/oliverhruby/edupage-mcp.git"
+```
+
+**Option F — Docker**
+
+Use this for an isolated container runtime.
+
+Requirements: Docker.
+
+Pull a prebuilt image (recommended):
+
+```bash
+docker pull ghcr.io/oliverhruby/edupage-mcp:latest
+
+docker run --rm -i \
+  -e EDUPAGE_USERNAME=your_username \
+  -e EDUPAGE_PASSWORD=your_password \
+  ghcr.io/oliverhruby/edupage-mcp:latest
+```
+
+Version tags are also available (for example `v0.4.0`) if you prefer pinned
+images.
+
+Build locally from source (fallback):
+
+```bash
+docker build -t edupage-mcp-full .
+
+docker run --rm -i \
+  -e EDUPAGE_USERNAME=your_username \
+  -e EDUPAGE_PASSWORD=your_password \
+  edupage-mcp-full
+```
+
+The container uses the same environment variables described in
+[Configure credentials](#2-configure-credentials). It also includes a
+`HEALTHCHECK` (stdio process liveness by default; local TCP check in HTTP
+transport modes).
+
+For HTTP transports, set optional runtime vars:
+
+- `MCP_TRANSPORT`: `stdio` (default), `sse`, or `streamable-http`
+- `MCP_HOST`: bind host (default `127.0.0.1`)
+- `MCP_PORT`: bind port (default `8000`)
+- `MCP_API_KEY`: optional bearer token for HTTP auth
+
+When `MCP_API_KEY` is set, HTTP requests must include `Authorization: Bearer <key>`.
+If `MCP_API_KEY` is not set, HTTP endpoints are unauthenticated. For production,
+prefer proper authentication and TLS via a reverse proxy or API gateway.
+
+> `pyproject.toml` pins `mcp<2` (the stable FastMCP v1 API). `mcp 2.x` renamed
+> `FastMCP` to `MCPServer` and changed the API surface; this server targets the
+> FastMCP v1 API for simplicity and stability.
+
+**Option G — development from source**
+
+Use this if you are contributing or debugging locally.
+
+Requirements: Python **3.10+**.
+
+```bash
+git clone https://github.com/oliverhruby/edupage-mcp.git
+cd edupage-mcp
+uv sync               # or: python -m venv .venv && .venv/bin/python -m pip install -e .
+uv run edupage-mcp-full
+```
+
+
+### 2. Configure credentials
+
+Either set environment variables **or** pass credentials to `login` (see
+[Prompt examples](#prompt-examples)).
+
+```bash
+# Windows (persistent, per-user)
+setx EDUPAGE_USERNAME "your_username"
+setx EDUPAGE_PASSWORD "your_password"
+setx EDUPAGE_SUBDOMAINS "s1,s2,s3"       # optional: multiple schools (auto-login + discovery)
+
+# macOS / Linux
+export EDUPAGE_USERNAME="your_username"
+export EDUPAGE_PASSWORD="your_password"
+export EDUPAGE_SUBDOMAINS="s1,s2,s3"     # optional
+```
+
+**Single school?** Just set `EDUPAGE_USERNAME` + `EDUPAGE_PASSWORD`. The server
+auto-discovers your school via the EduPage portal on startup — no subdomain needed.
+
+**Multiple schools?** Add `EDUPAGE_SUBDOMAINS` (comma-separated). The server
+logs into all of them on startup with your shared credentials.
+
+### 3. Register with your MCP client
+
+**opencode** — add to `~/.config/opencode/opencode.json` (or `opencode.jsonc`):
+
+```jsonc
+{
+  "mcp": {
+    "edupage": {
+      "type": "local",
+      "enabled": true,
+      "command": ["uvx", "edupage-mcp-full"],
+      "env": {
+        "EDUPAGE_USERNAME": "{env:EDUPAGE_USERNAME}",
+        "EDUPAGE_PASSWORD": "{env:EDUPAGE_PASSWORD}",
+        "EDUPAGE_SUBDOMAINS": "{env:EDUPAGE_SUBDOMAINS}"
+      }
+    }
+  }
+}
+```
+
+> Put credentials in your shell/environment (or a `.env`) and reference them with
+> `{env:VAR}`, or hardcode them under `env:` directly. `uvx` will auto-provision
+> the package the first time; it must be on your `PATH`.
+
+**Claude Desktop / Cursor** — use `claude_desktop_config.json` /
+`.mcp.json` with a `mcpServers` entry in the standard shape, pointing
+`command`/`args` at the venv python and the `edupage_mcp.py` path, plus an
+`env` block with your credentials.
+
+After editing client config, **restart the client** so the MCP server is loaded.
+
+---
+
+## Prompt examples
+
+| User prompt | Likely tool call(s) | Expected response |
+|---|---|---|
+| "Are we connected and logged in?" | `get_subdomains` | Available school subdomains (live-discovered for parents), active school/subdomain, env config, and login state per school. |
+| "What classes do I have today?" | `get_my_timetable` | A short timetable summary for today. |
+| "Show me the 9.A schedule for 2026-09-10" | `get_timetable target_type="class" target_id="9.A" date_str="2026-09-10"` | Class timetable for that date. |
+| "What grades do I have this term?" | `get_grades term="FIRST" year=2026` | Subject-by-subject grade overview for the selected term/year. |
+| "Any substitutions today?" | `get_timetable_changes` | Changes, cancellations, and replacements for today. |
+| "What is for lunch and order option 2 for tomorrow" | `get_meals` → `choose_meal date_str="2026-09-10" meal_type="lunch" number=2` | Meal menu and order confirmation (or a clear error if unavailable). |
+| "Find Student A's timetable for tomorrow" | `get_student_timetable name="Student A" date_str="2026-09-10"` | Student A's timetable; if found in multiple schools, one result per school. |
+| "List teachers and send a hello to Teacher456" | `get_roster roster_type="teachers"` → `send_message recipient_id="Teacher456" body="Hello!"` | Teacher list plus message sent confirmation. |
+| **"What happened at school yesterday for my kids?"** | `get_day_summary date_str="2026-09-09"` (discovery index) → `get_day_summary date_str="2026-09-09" name="Student A" subdomain="school-a"` → `... name="Student B" subdomain="school-b"` | **Discovery-first**: the no-name call lists each child per school; then one complete daily report call per child (timetable, substitutions, missing teachers, grades, meals, homework, assignments, absences, news, events, notifications). Keeps each response small and avoids mixing schools/students. |
+| **"How was school today for Student A?"** | `get_day_summary name="Student A"` (defaults to today) | Human-readable summary once you install the bundled `school-day-summary` skill (`edupage-mcp-full install-skill`). |
+
+---
+
+## Multiple schools & automatic student discovery
+
+Each subdomain (school) keeps its **own** logged-in session. There are two ways
+to log in to several schools at once:
+
+**A) Automatic on startup (recommended).** Set `EDUPAGE_SUBDOMAINS` (a
+comma-separated list) plus the shared `EDUPAGE_USERNAME` / `EDUPAGE_PASSWORD` —
+the server logs into all of them when it launches, so every tool is immediately
+ready and students are discoverable across all schools with **no login call and
+no student→school mapping**:
+
+```bash
+setx EDUPAGE_SUBDOMAINS "school1,school2,school3"   # Windows
+export EDUPAGE_SUBDOMAINS="school1,school2,school3" # macOS / Linux
+```
+
+```text
+get_subdomains   # lists school1, school2, school3 (logged in, with role)
+scan_students      # discovers Student A and Student B across those schools
+get_student_timetable name="Student A"   # is found at school1 AND school2
+```
+
+**B) On demand with `login_all`.** Authenticate several schools at once, then pass
+`subdomain` to any data tool (it defaults to the last active subdomain when
+omitted):
+
+```text
+login_all subdomains="school1,school2" usernames="u1,u2" passwords="p1,p2"
+
+get_my_timetable subdomain="school1"
+get_my_timetable subdomain="school2"
+get_subdomains         # shows all logged-in subdomains + which is active
+```
+
+You can also call `login` once per school to add/lookup sessions incrementally.
+
+> **Single school?** No `EDUPAGE_SUBDOMAINS` needed — the server auto-discovers
+> your school via the portal on startup. For two or more schools, set
+> `EDUPAGE_SUBDOMAINS` (auto-login) or use `login_all` / repeated `login` calls.
+
+---
+
+## Students by name (e.g. "timetable for Student A")
+
+Because the server **auto-discovers students across the configured
+`EDUPAGE_SUBDOMAINS`** (or every logged-in school when the variable is unset),
+you don't need to know or state which school a student is in. Just ask for the
+timetable by name and the server searches every school in scope:
+
+```text
+"timetable for Student A"  ->  get_student_timetable name="Student A"
+```
+
+`get_student_timetable` (with no `subdomain`):
+
+1. searches **every school in the discovery scope** — the configured
+   `EDUPAGE_SUBDOMAINS`, or all logged-in schools when unset — for a student
+   whose first/last/full name matches (`scan_students` does just the discovery
+   step),
+2. for each school where the student is found, switches to the student account if
+   you're logged in as a parent, returns that student's timetable for the date, and
+   switches back to the parent account afterwards,
+3. returns **one result per school**.
+
+A student attending **more than one school** (e.g. Student at `school1` +
+`school2`) therefore yields a list of two per-school timetables — separate
+results, never merged. This is the built-in replacement for maintaining a
+manual "Student → school1" mapping: with `EDUPAGE_SUBDOMAINS` set, discovery is
+f

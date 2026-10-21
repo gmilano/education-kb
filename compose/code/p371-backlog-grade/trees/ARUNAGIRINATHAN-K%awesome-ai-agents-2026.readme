@@ -1,0 +1,176 @@
+<div align="center">
+
+![](img/top.png)
+
+# Awesome AI Agents 2026
+
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
+[![GitHub stars](https://img.shields.io/github/stars/ARUNAGIRINATHAN-K/awesome-ai-agents-2026?style=social)](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+[![Last Commit](https://img.shields.io/github/last-commit/ARUNAGIRINATHAN-K/awesome-ai-agents-2026)](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026/commits/main)
+![Tools Listed](https://img.shields.io/badge/tools_listed-470%2B-blue?style=flat-square)
+[![Live Registry](https://img.shields.io/website?url=https%3A%2F%2Fai-agent-registry-kappa.vercel.app%2F&up_message=online&label=registry&style=flat-square)](https://ai-agent-registry-kappa.vercel.app/)
+[![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square)](LICENSE)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FARUNAGIRINATHAN-K%2Fawesome-ai-agents-2026)
+
+*The most comprehensive, structured guide to AI agent frameworks, tools, and resources.*  
+*Updated weekly. Compared side-by-side. Built for developers who ship.*
+
+**[Explore the Stack](#contents) • [Live App](https://ai-agent-registry-kappa.vercel.app/#live) • [Architecture](ARCHITECTURE.md) • [Data Schema](DATA_SCHEMA.md) • [Development](DEVELOPMENT.md) • [Contributing](#contributing) • [Agent Guide](AGENT.md)**
+
+</div>
+
+## Contents
+
+- [AI Registry Explorer](#ai-registry-explorer)
+- [Orchestration Frameworks](#orchestration-frameworks)
+- [Coding Agents](#coding-agents)
+- [Memory and Context](#memory-and-context)
+- [Multi-Agent Systems](#multi-agent-systems)
+- [Agent Communication Protocols](#agent-communication-protocols)
+- [Browser and Computer Use Agents](#browser-and-computer-use-agents)
+- [Agent Tooling and Infrastructure](#agent-tooling-and-infrastructure)
+- [Low and No-Code Builders](#low-and-no-code-builders)
+- [Voice and Multimodal Agents](#voice-and-multimodal-agents)
+- [Safety Guardrails and Observability](#safety-guardrails-and-observability)
+- [Agent Interfaces and UIs](#agent-interfaces-and-uis)
+- [Agent Deployment and Hosting](#agent-deployment-and-hosting)
+- [Agent Evaluation and Benchmarks](#agent-evaluation-and-benchmarks)
+- [Agent Testing & Debugging](#agent-testing--debugging)
+- [Industry-Specific Agents](#industry-specific-agents)
+- [Learning Resources](#learning-resources)
+- [Agent Communication](#agent-communication)
+- [Data Pipeline and Workflow](#data-pipeline-and-workflow)
+- [Secure Execution Environments](#secure-execution-environments)
+- [Creative AI Agents](#creative-ai-agents)
+- [Customer Support and CRM Agents](#customer-support-and-crm-agents)
+- [Voice Agent Platforms](#voice-agent-platforms)
+- [Deep Research Agents](#deep-research-agents)
+- [Prompt-to-App Builders](#prompt-to-app-builders)
+- [Multi-Agent Consumer Platforms](#multi-agent-consumer-platforms)
+- [Open-Source Models for Agents](#open-source-models-for-agents)
+- [Market Stats and Benchmarks 2026](#market-stats-and-benchmarks-2026)
+- [Local and Self-Hosted AI](#local-and-self-hosted-ai)
+- [AI Governance and Compliance](#ai-governance-and-compliance)
+- [Cybersecurity Agents](#cybersecurity-agents)
+- [Healthcare and Therapy Agents](#healthcare-and-therapy-agents)
+- [Translation and Localization Agents](#translation-and-localization-agents)
+- [Newsletters and Communities](#newsletters-and-communities)
+- [Changelog](#changelog)
+- [Star History](#star-history)
+
+---
+
+## AI Registry Explorer
+
+Interactive Next.js 14 web application for searching, filtering, and exploring AI agents, frameworks, and infrastructure tools.
+
+### Quick Start
+```bash
+npm install && npm run build:data && npm run dev
+```
+
+**Live Web Registry**: [https://ai-agent-registry-kappa.vercel.app](https://ai-agent-registry-kappa.vercel.app/#explorer)  
+**Local Web App**: `http://localhost:3000`  
+**Docker**: `docker compose up --build`  
+**One-Click Deploy**: [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FARUNAGIRINATHAN-K%2Fawesome-ai-agents-2026#deploy)
+
+### Submit an Agent
+
+Have an AI agent, framework, tool, skill, or infrastructure project worth sharing?
+
+- **Web Submission Portal**: [Submit a Resource](https://ai-agent-registry-kappa.vercel.app/submit)
+- **GitHub Issue Form**: [Open No-Code Submission Issue](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026/issues/new?template=submit_agent.yml)
+
+---
+
+## Orchestration Frameworks
+
+- [Agency Swarm](https://github.com/VRSEN/agency-swarm) `🚀` `[Python]` `[Multi-Agent]` - Orchestrates multi-agent systems built on the OpenAI Assistants API with role-based collaboration.
+- [AgentDescent](https://github.com/Birfy/agentdescent) `🔬` `[Python]` `[Research]` - Evolves agent skills, prompts, and harness modules by merging diffs from parallel workers against held-out reward.
+- [AgentScope](https://github.com/agentscope-ai/agentscope) `🚀` `[Python]` `[Multi-Agent]` - Alibaba multi-agent framework with distributed deployment and fault tolerance for production use.
+- [Agno](https://github.com/agno-agi/agno) `🌱` `[Python]` `[Multi-Agent]` - Multi-agent framework with a runtime and control plane for managing agent deployments at scale.
+- [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) `🚀` `[Python]` `[Anthropic]` - Official Claude SDK with tool use, computer control, and streaming for building Claude-native agents.
+- [AutoGen](https://github.com/microsoft/autogen) `🚀` `[Python]` `[Multi-Agent]` - Event-driven multi-agent framework merged with Semantic Kernel for production workflows.
+- [AWS Bedrock Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) `🚀` `[Python]` `[Compliance]` - Managed AWS infrastructure for agents with Bedrock models, enterprise compliance, and auto-scaling deployment.
+- [CAMEL](https://github.com/camel-ai/camel) `🌱` `[Python]` `[Multi-Agent]` - Role-based multi-agent simulation framework for collaborative reasoning and task completion.
+- [CopilotKit](https://github.com/CopilotKit/CopilotKit) `🌱` `[TypeScript]` `[Multi-Agent]` - Open-source platform for embedding custom AI copilots into React applications.
+- [CrewAI](https://github.com/crewAIInc/crewAI) `🚀` `[Python]` `[Multi-Agent]` - Production multi-agent framework with 5K+ GitHub stars, role-based collaboration, async execution, and 1500+ company adoptions.
+- [Doforu](https://doforu.ai) `🔬` `[Desktop]` `[Multi-Agent]` - Orchestrates parallel sub-agents on your desktop and verifies their results before merging.
+- [DSPy](https://github.com/stanfordnlp/dspy) `🌱` `[Python]` `[Research]` - Stanford framework that programmatically optimizes LLM prompts using machine learning.
+- [Ontheia](https://github.com/Ontheia/ontheia) `🌱` `[TypeScript]` `[MCP]` - Self-hosted MCP-native agent platform with visual workflow automation and multi-provider support.
+- [Google ADK](https://github.com/google/adk-python) `🌱` `[Python]` `[Multi-Agent]` - Modular agent dev kit with native Gemini and Vertex AI integration.
+- [Haystack](https://github.com/deepset-ai/haystack) `🚀` `[Python]` `[RAG]` - Production-ready AI orchestration framework focused on building customizable LLM applications and RAG pipelines.
+- [LangGraph](https://github.com/langchain-ai/langgraph) `🚀` `[Python]` `[LangChain]` - Stateful, graph-based agent workflow framework from LangChain.
+- [Letta](https://github.com/letta-ai/letta) `🌱` `[Python]` `[Memory]` - Stateful agents with built-in long-term memory and a REST API server.
+- [LightAgent](https://github.com/wanxingai/LightAgent) `🌱` `[Python]` `[MCP]` - Lightweight agent framework with memory, MCP/SSE, Tree-of-Thought planning, and LightSwarm collaboration.
+- [LlamaIndex](https://github.com/run-llama/llama_index) `🌱` `[Python]` `[RAG]` - The framework for connecting LLMs to your data, with indexing and retrieval capabilities.
+- [LangSmith Fleet](https://smith.langchain.com/hub/fleet) `🚀` `[Cloud]` `[LangChain]` - No-code agent orchestration platform with visual workflow builder and enterprise deployment.
+- [Mastra](https://github.com/mastra-ai/mastra) `🌱` `[TypeScript]` `[MCP]` - Opinionated TypeScript framework with RAG, observability, and MCP support built in.
+- [MicroAgent](https://github.com/BuilderIO/micro-agent) `🌱` `[TypeScript]` `[Multi-Agent]` - Lightweight agent framework with self-editing prompts and code for minimal-overhead agent loops.
+- [Modus](https://github.com/hypermodeinc/modus) `🔬` `[WebAssembly]` `[Serverless]` - Serverless framework for high-throughput agent workloads with minimal cold starts.
+- [Open-AutoGLM](https://github.com/zai-org/Open-AutoGLM) `🔬` `[Python]` `[Mobile]` - Open-source phone agent framework for building mobile device automation agents.
+- [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) `🚀` `[Python]` `[Multi-Agent]` - Lightweight multi-agent SDK with tracing and guardrails from OpenAI.
+- [PraisonAI](https://github.com/MervinPraison/PraisonAI) `🚀` `[Python]` `[MCP]` - Production multi-agent framework with self-reflection, MCP integration, and workflow automation.
+- [PydanticAI](https://github.com/pydantic/pydantic-ai) `🌱` `[Python]` `[Pydantic]` - Type-safe agent framework from the Pydantic team with a FastAPI-style developer experience.
+- [Semantic Kernel](https://github.com/microsoft/semantic-kernel) `🚀` `[C#]` `[Microsoft]` - Microsoft enterprise SDK for Python, C#, and Java with modular plugins, memory, and goal planning.
+- [Smolagents](https://github.com/huggingface/smolagents) `🌱` `[Python]` `[Research]` - Hugging Face code-first framework where agents write and execute Python instead of JSON tool calls.
+- [Strands Agents SDK](https://github.com/strands-agents/harness-sdk) `🌱` `[Python]` `[AWS]` - AWS model-driven agent SDK with native Bedrock integration.
+- [Upsonic](https://github.com/Upsonic/Upsonic) `🌱` `[Python]` `[MCP]` - Minimalist agent framework with MCP support and rapid setup for quick prototyping.
+
+## Coding Agents
+
+- [agent-manager](https://github.com/YoanWai/agent-manager) `🌱` `[Go]` `[Multi-Agent]` - Runs coding-agent CLIs side by side in persistent tmux sessions with live status, worktrees, and diff review.
+- [Aider](https://github.com/Aider-AI/aider) `🌱` `[Python]` `[CLI]` - Terminal-first pair programmer that edits code in local repos, preserves Git history, and supports multi-file changes.
+- [Amazon Q Developer](https://aws.amazon.com/q/developer/) `🚀` `[Python]` `[IDE]` - AWS-native AI coding assistant with Lambda, CloudWatch, infrastructure support, and security scanning.
+- [Atomic Agent](https://github.com/AtomicBot-ai/atomic-agent) `🌱` `[TypeScript]` `[Local]` - Local-first CLI and TUI coding agent running open-weight models on your machine with no API key.
+- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) `🌱` `[Python]` `[CLI]` - Mature autonomous agent platform with Forge framework and public benchmarks for evaluating agent capabilities.
+- [Claude Code](https://github.com/anthropics/claude-code) `🚀` `[TypeScript]` `[Anthropic]` - Terminal-first agentic coding from Anthropic with Computer Use integration, multi-file edits, persistent shell sessions, Git operations, and fine-tuning support.
+- [Cline](https://github.com/cline/cline) `🌱` `[TypeScript]` `[VS Code]` - Autonomous coding agent in your IDE that creates/edits files, runs commands, and uses the browser with permission-gated steps.
+- [CodeRabbit](https://www.coderabbit.ai) `🚀` `[Cloud]` `[GitHub]` - AI-powered PR reviewer with inline suggestions, security scanning, and automatic code quality checks.
+- [Codex CLI](https://github.com/openai/codex) `🚀` `[Python]` `[OpenAI]` - OpenAI's lightweight, open-source terminal coding agent with fast execution and strong benchmark scores.
+- [Codex-CLI](https://github.com/microsoft/Codex-CLI) `🌱` `[C#]` `[CLI]` - CLI tool that turns natural language commands into Bash, ZShell, and PowerShell equivalents.
+- [Continue](https://github.com/continuedev/continue) `🌱` `[TypeScript]` `[VS Code]` - Source-controlled AI checks enforceable in CI, powered by the open-source Continue CLI.
+- [Cursor](https://cursor.com) `🚀` `[TypeScript]` `[IDE]` - AI-native IDE with parallel Cloud Agents and 100K+ enterprise users.
+- [Devika](https://github.com/stitionai/devika) `🌱` `[Python]` `[Docker]` - Open-source AI software engineer that understands high-level instructions and writes full-featured code autonomously.
+- [Devin](https://devin.ai) `🚀` `[Cloud]` `[GitHub]` - Fully autonomous AI software engineer showing 8-12x efficiency gains in production (Nubank case study), cloud sandbox with persistent state, GitHub integration, and enterprise adoption growing 40% MoM.
+- [fractal](https://github.com/plasma-ai/fractal) `🌱` `[Python]` `[Multi-Agent]` - Orchestrates Claude Code, Codex, and other agents in per-node Git worktrees with recursive delegation and a live TUI.
+- [gemini-cli](https://github.com/google-gemini/gemini-cli) `🌱` `[Go]` `[CLI]` - Open-source CLI agent bringing Gemini AI directly into your terminal.
+- [GitHub Copilot](https://github.com/features/copilot) `🌱` `[TypeScript]` `[VS Code]` - Agent Mode in VS Code with Copilot Workspace for issue-to-PR workflows across Claude, GPT, and Gemini.
+- [Goose](https://github.com/aaif-goose/goose) `🌱` `[Rust]` `[CLI]` - Extensible open-source CLI agent that installs, executes, edits, and tests with any LLM.
+- [JetBrains AI](https://www.jetbrains.com/air/) `🌱` `[Kotlin]` `[JetBrains]` - Deep AI integration across all JetBrains IDEs with context-aware completions and refactoring.
+- [Juggler](https://github.com/juggler-ai/juggler) `🌱` `[Desktop]` `[Local]` - Multi-client desktop/remote GUI agent with inspectable tool calls, branching-thread editable context, and plugin extensibility.
+- [Kiro](https://kiro.dev) `🚀` `[Cloud]` `[IDE]` - Spec-driven development agent that writes specs, auto-generates tasks, implements code, and automates DevOps workflows.
+- [Kolega Code](https://github.com/kolega-ai/kolega-code) `🔬` `[Python]` `[CLI]` - Terminal coding agent where the model writes its own multi-agent workflows across 15+ model providers.
+- [mu](https://github.com/qybaihe/mu) `🔬` `[TypeScript]` `[CLI]` - Coding agent that sends routine decisions, such as which tool output enters context, to a small judge model.
+- [Open Interpreter](https://github.com/openinterpreter/openinterpreter) `🌱` `[Python]` `[CLI]` - Execute code locally via natural-language model instructions with a ChatGPT-like interface.
+- [opencode](https://github.com/anomalyco/opencode) `🌱` `[TypeScript]` `[Desktop]` - Open-source coding agent available as a desktop app with a visual interface.
+- [OpenHands](https://github.com/OpenHands/OpenHands) `🌱` `[Python]` `[Docker]` - AI-driven development platform that writes, tests, and deploys code autonomously.
+- [Orbi](https://github.com/orbi-build/orbi) `🌱` `[Python]` `[Self-Hosted]` - Turns labeled GitHub Issues into independently reviewed pull requests, then merges reviewed heads and tags releases.
+- [Ordewell](https://github.com/ordewell/ordewell) `🔬` `[TypeScript]` `[Multi-Agent]` - Turns one goal into an ordered, editable plan of coding-agent tasks, each with its own runner, model, and mode, verified by a completion marker in the runner's output.
+- [Ouroboros](https://github.com/Q00/ouroboros) `🌱` `[Python]` `[MCP]` - Pins an acceptance spec before the run and verifies the result, hiding grading commands from the executing agent.
+- [PR-Agent](https://github.com/The-PR-Agent/pr-agent) `🚀` `[Python]` `[GitHub]` - Open-source AI PR reviewer that auto-describes, reviews, and improves pull requests.
+- [Prime Agent](https://github.com/PrimeIntellect-ai/prime-agent) `🚀` `[TypeScript]` `[CLI]` - Open-source RLM coding and research agent designed for long-running autonomous tasks.
+- [Qodo](https://www.qodo.ai) `🚀` `[Cloud]` `[Security]` - AI code review platform with context-aware PR validation and security analysis.
+- [Relay](https://relayevals.com/) `🔬` `[TypeScript]` `[CLI]` - Runs a self-improving coding agent locally with your own models and re-runs tests before opening pull requests.
+- [RooCode](https://github.com/RooCodeInc/Roo-Code) `🌱` `[TypeScript]` `[VS Code]` - Cline fork with structured modes and reduced hallucinations for more reliable code generation.
+- [Snyk Code](https://snyk.io/product/snyk-code/) `🌱` `[Cloud]` `[Security]` - AI-powered security scanner with real-time vulnerability detection in agent-generated code.
+- [Sourcegraph Cody](https://sourcegraph.com/docs/cody) `🚀` `[TypeScript]` `[IDE]` - AI coding assistant that excels at large codebases with an enterprise context engine.
+- [SWE-agent](https://github.com/SWE-agent/SWE-agent) `🚀` `[Python]` `[GitHub]` - Takes a GitHub issue and tries to automatically fix it.
+- [Tabnine](https://www.tabnine.com) `🚀` `[TypeScript]` `[IDE]` - Privacy-first AI code completion with on-premise deployment and codebase fine-tuning options.
+- [TaskWeaver](https://github.com/microsoft/TaskWeaver) `🚀` `[Python]` `[Microsoft]` - A code-first agent framework from Microsoft for planning and executing data analytics tasks.
+- [Windsurf](https://devin.ai/desktop) `🌱` `[TypeScript]` `[IDE]` - AI-native IDE with Cascade agent for multi-step autonomous tasks and team workflows.
+- [workkit](https://github.com/ITW-Creative-Works/workkit) `🔬` `[JavaScript]` `[GitHub]` - Claude Code plugin that runs GitHub Issues as an agent pipeline, with a manager agent handing each issue to spec, build and verifier subagents.
+- [YYLO](https://github.com/yylo-dev/yylo) `🔬` `[Python]` `[Multi-Agent]` - Command-line orchestrator for coding agents with typed task, validation, merge, and release-readiness boundaries in a dedicated branch/worktree.
+
+- [Ivy Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril) - Open-source agentic software factory with an amazing UI that handles parallel Git worktrees for you, complete with programmatic verifications and fast review loops.
+## Memory and Context
+
+- [Acontext](https://github.com/memodb-io/Acontext) `🌱` `[Python]` `[Local]` - Manages agent skills and long-term memory as a layered data structure for persistent context.
+- [Agentage Memory](https://agentage.io) `🌱` `[Cloud]` `[MCP]` - Cross-vendor shared memory layer exposed as a remote MCP server at `memory.agentage.io/mcp` (Streamable HTTP, OAuth 2.1 + PKCE + DCR) that Claude, Cursor, and ChatGPT read and write as plain markdown you own.
+- [Chroma](https://github.com/chroma-core/chroma) `🌱` `[Python]` `[Vector DB]` - Lightweight, embeddable vector store for building memory-augmented AI agents with fast semantic retrieval.
+- [cognee](https://github.com/topoteretes/cognee) `🌱` `[Python]` `[Graph-Based]` - Knowledge engine for AI agent memory, set up in 6 lines of code with graph-based knowledge extraction.
+- [Cortex Memory](https://github.com/prem-research/cortex) `🌱` `[Python]` `[Vector DB]` - Full-stack solution for agent memory covering extraction, vector search, and optimization.
+- [deja](https://github.com/vshulcz/deja-vu) `🌱` `[Go]` `[MCP]` - Indexes the session transcripts 25 coding agents already write on the machine and serves them to any of the others, including sessions from before install; lexical retrieval, no LLM, no embeddings.
+- [Engrava](https://github.com/sovantica/engrava) `🔬` `[Python]` `[Graph-Based]` - Stores agent memory as a typed knowledge graph with hybrid search and a tamper-evident journal, embedded in SQLite.
+- [Folio](https://github.com/evergreen-it-dev/folio) `🔬` `[TypeScript]` `[MCP]` - Git-bac

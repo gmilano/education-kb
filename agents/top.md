@@ -23,6 +23,10 @@ and the tier tables; the audit sections are for whoever questions a licence cell
 | Course generation from existing content | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **MIT** | 387 | APAC (India) |
 | Tutor the client must self-host end to end, no SaaS | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** | 148 | Not placed |
 | Automated feedback inside a real university course | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **MIT** | **820** | EMEA (TUM) |
+| 🆕 The LLM tutor *inside* that course platform | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | **MIT** | — | EMEA (TUM) |
+| 🆕 Issue or verify a credential the client can show a regulator | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** | — | North America (1EdTech) |
+| 🆕 K-12 student data against the US state standard | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | **Apache-2.0** | — | North America (Ed-Fi Alliance) |
+| 🆕 National-scale delivery platform already in production | [`project-sunbird/sunbird-portal`](https://github.com/project-sunbird/sunbird-portal) | **MIT** | — | APAC (India) |
 | Reach a client LMS without writing a connector | the MCP tier → `## LMS-connected agents` | mostly MIT | — | mixed |
 
 🔵 **Reading the rest of the file.** `## Tutoring and learning agents` is the main shelf.
@@ -37,6 +41,108 @@ looking it (non-commercial + revenue share), and
 [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) is **ODbL-1.0**,
 whose share-alike binds a derivative *database*. Neither is a blocker if you know before
 you build; both are if you find out at delivery.
+
+## 🟢 🆕 `p371`: the whole promotion backlog graded — **1 859 addresses, first-hand, and the class these shelves were missing is CREDENTIALING, not tutoring**
+
+🔵 **What `p370` left and what `p371` did with it.** `p370` graded 63 addresses from payload
+and registered `Gap 477`: *"2 248 are not."* 🔴 **That figure had no committed list**, so
+`p371` derived the backlog from the same shelves it cites and got a different number —
+**1 859** — because the 2 311 denominator counted strings that are not addresses and
+addresses the live shelves already carry. 🟢 Then it graded **all 1 859**, which closes the
+gap rather than denting it. The derivation is now a gate (`gate-backlog-denominator`), so
+no later pass has to re-derive it.
+
+🟢 **Evidence for §`p371`:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p371.tsv) — 1 859 addresses with status, `HEAD`, ref count, enumerated licence paths and README path · [`backlog-grade`](../evidence/backlog-grade.2026-10-21-p371.tsv) — family, grant path, pinned sha and domain verdict per grant file · [`region-placement`](../evidence/region-placement.2026-10-21-p371.tsv) — the origin and jurisdiction cells with the evidence string for each · [`backlog-census`](../evidence/backlog-census.2026-10-21-p371.txt) · [`gap480-oos-sample`](../evidence/gap480-oos-sample.2026-10-21-p371.txt) — the 40 hand-adjudicated verdicts
+
+### 🟢 The run, in one table
+
+| the question | the answer, `2026-10-21` |
+|---|---:|
+| addresses in the derived backlog | **1 859** |
+| 🟢 answered through the git transport — `0` `CLONE-FAILED` | 🟢 **1 859 (100 %)** |
+| 🔴 addresses cited on these shelves that **no longer resolve** | 🔴 **46** |
+| in domain, by `gate-domain-check` on the README payload | **1 238 (66.6 %)** |
+| 🟢 of those: **permissive** at an unscoped root grant | 🟢 **781** |
+| 🔴 of those: **no licence file anywhere in the root tree** | 🔴 **235** |
+| 🔴 copyleft · content-licensed · commercially restricted | 🔴 **163** · **18** · **10** |
+| addresses carrying **more than one** grant file | **160** |
+| 🟢 addresses placed in a region from their own payload | 🟢 **450 (24.2 %)** |
+
+### 🔴 The finding: the gap on these shelves is the credentialing and OER layer
+
+🔴 **`p370`'s domain check was blind to it, and the blindness was systematic.** `p371` ran
+that instrument out of sample — which `p370` had named as its own next obligation — and
+hand-adjudicated a seeded stratified sample of 40 verdicts. **26 of 34 decisive verdicts
+were correct (76.5 %), against the 92.6 % `p370` published in sample.** 🟢 **All eight
+errors sat in two classes and neither was tutoring:**
+
+| what was misjudged | verdict before | the term that was missing |
+|---|---|---|
+| [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | NOT-EDUCATION | `open badge`, `achievement` |
+| [`impierce/credential-converter`](https://github.com/impierce/credential-converter) | NOT-EDUCATION | `openbadges`, `europass` |
+| [`digitalcredentials/verifier-plus`](https://github.com/digitalcredentials/verifier-plus) | WEAK | `verifiable credential` |
+| [`sci-oer/automated-builder`](https://github.com/sci-oer/automated-builder) | NOT-EDUCATION | `oer` |
+| [`jp-cos/jp-cos.github.io`](https://github.com/jp-cos/jp-cos.github.io) | WEAK | `course of study`, `mext`, `学習指導要領` |
+| [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | WEAK | `educational video` |
+| [`OpenIntroStat/ims-tutorials`](https://github.com/OpenIntroStat/ims-tutorials) | SLUG-TRAP | `learnr` |
+| [`sumeedu/bancodeitinerarios`](https://github.com/sumeedu/bancodeitinerarios) | SLUG-TRAP | `itinerários formativos` |
+
+🟢 **Each term was read out of the payload that had been misjudged, never guessed**, and
+each is now a control in `gate-domain-check` (43 → **56** controls). 🔵 **Re-run over all
+1 859 addresses, the fix moved 80 verdicts and recovered 73 into the domain** — 41 from
+`NOT-EDUCATION`, 20 from `WEAK`, 12 from `SLUG-TRAP`. 🔴 **And one class of
+false positive survives, declared rather than smoothed:** generic verifiable-credential
+infrastructure that is not education-specific — [`Open-Attestation/open-attestation`](https://github.com/Open-Attestation/open-attestation)
+(Singapore GovTech, *"any document types"*) and [`CogniPilot/credentials`](https://github.com/CogniPilot/credentials)
+(badges for a robotics community) both read as in-domain and are not. `Gap 481` holds it.
+
+### 🟢 The credentialing and OER tier — **58 permissive in-domain addresses**, the twelve a studio meets first
+
+🔵 Every row below is in domain by payload, permissively granted at an **unscoped root**
+file (`gate-grant-scope`'s rule: a `LICENSE-ASSETS` file is not the code grant), and its
+grant was read at the pinned sha in the same clone that enumerated its tree.
+
+| Need on day one | Build on | Licence | Grant, at the pin | refs | Region (origin) |
+| --- | --- | --- | --- | ---: | --- |
+| Validate a credential against the standard itself | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `6bf38234c7cb` | **55** | **North America** (1EdTech) |
+| Validate an Open Badge | [`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `0a66b52a8a0b` | **182** | Not placed |
+| Issue and sign a verifiable credential | [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) | 🟢 **MIT** | `HEAD/LICENSE` @ `6be5b41815b7` | **62** | Not placed |
+| Verify one in the browser, no backend | [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** | `HEAD/LICENSE.md` @ `e86bb791f7c5` | **82** | Not placed |
+| A hosted verifier a client can see working | [`digitalcredentials/verifier-plus`](https://github.com/digitalcredentials/verifier-plus) | 🟢 **MIT** | `HEAD/LICENSE` @ `2378d988ab2b` | **168** | Not placed |
+| The VC data-model library underneath both | [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 🟢 **BSD-3-Clause** | `HEAD/LICENSE` @ `15fb01872c49` | **83** | Not placed |
+| DID resolution for credential subjects | [`digitalcredentials/did-io`](https://github.com/digitalcredentials/did-io) | 🟢 **BSD-3-Clause** | `HEAD/LICENSE` @ `7040fac9167b` | **54** | Not placed |
+| Competency and standards framework store | [`cassproject/CASS`](https://github.com/cassproject/CASS) | 🟢 **Apache-2.0** | `HEAD/LICENSE` @ `30929d303659` | **706** | Not placed |
+| Blockchain-anchored academic certificates | [`blockchain-certificates/cert-issuer`](https://github.com/blockchain-certificates/cert-issuer) | 🟢 **MIT** | `HEAD/LICENSE` @ `199cd8be7c1d` | **278** | Not placed |
+| An OER platform with authoring and remix | [`LibreTexts/conductor`](https://github.com/LibreTexts/conductor) | 🟢 **MIT** | `HEAD/LICENSE.md` @ `352a657ec6de` | **1 448** | **North America** (LibreTexts) |
+| OER authoring as web components | [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | 🟢 **Apache-2.0** | `HEAD/LICENSE.md` @ `4593f7934a4a` | **331** | **North America** (`hax.psu.edu`) |
+| An OER metadata processing pipeline | [`X5GON/processing-pipeline-api`](https://github.com/X5GON/processing-pipeline-api) | 🟢 **BSD-2-Clause** | `HEAD/LICENSE` @ `7d37911ea42f` | **68** | **EMEA** (X5GON, EU) |
+
+🔴 **One address in this class is a trap of a different kind and it is worth a sentence.**
+[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+is the European Commission's own ELM repository and its README's first line is
+**"Archived Repository — no longer updated."** 🟢 The model is live and the *repository* is
+not; a studio citing this address in an EMEA bid is citing an archive. 🔵 `p370`'s standing
+lesson one field over: a repository that answers is not a repository that is maintained.
+
+### 🟢 What `p371` filled in on `p370`'s own rows
+
+🔴 **`p370` graded 63 addresses and placed none of them in a region**, although its probe
+had captured every README. 🟢 `p371` read them: **12 of the 63 place from their own
+payload** — and one of the twelve independently reproduces a cell `p370` wrote by hand,
+[`mattlo0546/canvas-mcp`](https://github.com/mattlo0546/canvas-mcp) → **EMEA**, on
+`canvas.ox.ac.uk`. 🔵 Full table in
+[`region-placement-p370-rows`](../evidence/region-placement-p370-rows.2026-10-21-p371.tsv).
+
+🔴 **And the first run of that placer was wrong in a way worth publishing.** It put **eight
+of the 63 in LATAM**, five of them on the evidence strings `server.py`, `main.py`,
+`setup.py`, `database.py`, `api.py`. **`.py` is Paraguay in `p115`'s committed country
+table, and a Python filename is not a hostname.** 🟢 `p115` had already solved this —
+its own extractor requires an `https://` context and it ships a stoplist of
+registry and standards hosts — and `p371` had to rediscover it before reusing it. 🔵 The
+same shape as `p369` paying to rediscover `LICENSE.TXT` that `p189` had recorded: the
+knowledge was committed and was not wired into the next instrument that needed it. Four
+further defects (`D3` RFC-2606 placeholders, `D4` the registrable-label rule, `D5` link
+shorteners, `D6` grant scope) are each a control in `gate-region-place`.
 
 ## 🔴 🆕 `p370`: the incumbent-LMS bridge class, graded end-to-end — **21 in-domain MCP servers reach ten platforms, and 15 of them ship no licence file at all**
 

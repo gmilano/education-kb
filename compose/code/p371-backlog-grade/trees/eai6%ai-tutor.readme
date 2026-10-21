@@ -1,0 +1,388 @@
+# AI Tutor
+
+An AI-powered tutoring platform for secondary school students, built with Django and powered by LLMs (Claude, GPT, Gemini, or local Ollama). Originally designed for Seychelles secondary schools covering Geography and Mathematics, but adaptable to any curriculum.
+
+Students learn through structured conversational sessions that follow research-based pedagogy (5E model), with automatic content generation, exit-ticket assessments, prerequisite gating, and real-time progress tracking.
+
+## Staging
+
+https://aitutor-staging-app.icyplant-cffb8b76.centralus.azurecontainerapps.io — deployed from the `dev` branch on push via GitHub Actions.
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Architecture Overview](#architecture-overview)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Django Apps](#django-apps)
+  - [accounts](#accounts)
+  - [curriculum](#curriculum)
+  - [tutoring](#tutoring)
+  - [dashboard](#dashboard)
+  - [llm](#llm)
+  - [media_library](#media_library)
+  - [safety](#safety)
+- [Configuration](#configuration)
+- [LLM Providers](#llm-providers)
+- [Content Generation Pipeline](#content-generation-pipeline)
+- [Management Commands](#management-commands)
+- [Deployment](#deployment)
+- [URL Routes](#url-routes)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
+
+- **Conversational AI Tutoring** -- LLM-driven sessions following the 5E instructional model (Engage, Explore, Explain, Practice, Evaluate) with Socratic questioning
+- **Automatic Content Generation** -- Upload a curriculum PDF/DOCX and the system generates lesson steps, media, exit tickets, and skill maps
+- **RAG Knowledge Base** -- ChromaDB vector store indexes textbooks, teaching materials, and exam papers for context-aware tutoring and content generation
+- **Multi-Provider LLM Support** -- Anthropic Claude, OpenAI GPT, Google Gemini, Azure OpenAI, or local Ollama with per-purpose model configuration
+- **Exit Ticket Assessments** -- 35-question banks per lesson, 10 randomly selected per session, 80% pass threshold
+- **Skill Extraction & Prerequisites** -- Automatic skill graph construction with lesson prerequisite detection and student mastery gating
+- **Multi-Tenancy** -- Institution-scoped content, users, and configuration with platform-wide curriculum support
+- **Teacher Dashboard** -- Curriculum management, content review/editing, student progress tracking, safety flagging review
+- **Adaptive Personalization** -- Difficulty adjustment, interleaved practice, remediation before exit tickets
+- **Image Generation** -- Educational diagrams via Gemini with anti-hallucination prompt engineering
+- **Safety & Compliance** -- Content flagging, GDPR consent tracking, audit logging, data export/deletion
+- **Cloud-Ready** -- Dockerized, Azure Container Apps deployment via Pulumi IaC, GitHub Actions CI/CD
+
+---
+
+## Architecture Overview
+
+```
+                                    +------------------+
+                                    |   Student/Teacher |
+                                    |     Browser       |
+                                    +--------+---------+
+                                             |
+                                    +--------v---------+
+                                    |  Django (Gunicorn)|
+                                    |  config/urls.py   |
+                                    +--------+---------+
+                                             |
+                +----------------------------+----------------------------+
+                |                            |                            |
+    +-----------v----------+    +------------v-----------+   +------------v-----------+
+    |   accounts app       |    |    tutoring app         |   |    dashboard app        |
+    | Auth, Institutions,  |    | ConversationalTutor,    |   | Admin panel, Content    |
+    | StudentProfile       |    | Sessions, Grading,      |   | management, Uploads,    |
+    |                      |    | Skills, Personalization  |   | Progress reports        |
+    +----------+-----------+    +-----+------+------+-----+   +------------+------------+
+               |                      |      |      |                      |
+    +----------v-----------+    +-----v------v------v-----+   +------------v------------+
+    |   curriculum app     |    |      llm app            |   |    safety app           |
+    | Course/Unit/Lesson/  |    | PromptPack, ModelConfig, |   | AuditLog, Consent,     |
+    | Step, KnowledgeBase, |    | Provider abstraction     |   | Flagging, GDPR         |
+    | ContentGenerator     |    +-------------------------+   +-------------------------+
+    +----------+-----------+
+               |
+    +----------v-----------+
+    |  media_library app   |
+    | MediaAsset, StepMedia|
+    +----------------------+
+               |
+    +----------v-----------+
+    | ChromaDB VectorStore |   <-- sentence-transformers (all-MiniLM-L6-v2)
+    +----------------------+
+```
+
+### Data Flow
+
+1. **Teacher uploads** a curriculum document (PDF/DOCX) via the dashboard
+2. **Parser** extracts course > unit > lesson hierarchy
+3. **Content generator** (LLM) creates lesson steps with media descriptions, worked examples, and vocabulary
+4. **Image service** generates educational diagrams via Gemini
+5. **Exit ticket generator** creates 35 MCQ questions per lesson
+6. **Skill extractor** builds a knowledge graph with prerequisites
+7. **Student** selects a lesson from the catalog, starts a tutoring session
+8. **ConversationalTutor** engine manages the step-by-step session via LLM
+9. **Exit ticket** is presented after all steps; 8/10 required to pass
+10. **Progress** is tracked per-student, per-lesson with mastery levels
+
+---
+
+## Quick Start
+
+### 1. Install Dependencies
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 2. Configure Environment
+
+Create a `.env` file in the project root:
+
+```bash
+# Required: provider key for the active model stack.
+# The defaults seeded by migration 0028 (tutoring + judge + regen) all
+# use Google Gemini 3.1 Flash Lite Preview, so GOOGLE_API_KEY is the
+# minimum to run the system out of the box. Anthropic is needed if you
+# generate content (default GENERATION ModelConfig is Anthropic) or if
+# you switch any runtime purpose to Claude.
+GOOGLE_API_KEY=xxxxx          # primary: tutoring + judge + regen
+ANTHROPIC_API_KEY=sk-ant-xxxxx  # used by content generation, image judge fallback
+OPENAI_API_KEY=sk-xxxxx        # used by image_generation (gpt-image-2)
+
+# Django settings
+DEBUG=True
+SECRET_KEY=your-secret-key-here   # generate: python -c "import secrets; print(secrets.token_urlsafe(64))"
+
+# Database (defaults to SQLite if not set)
+# DATABASE_URL=postgres://user:pass@host:5432/dbname
+
+# Embedding backend: 'local' (default, uses sentence-transformers) or 'openai'
+EMBEDDING_BACKEND=local
+```
+
+`GEMINI_API_KEY` is accepted as an alias — the Gemini client reads either.
+
+### 3. Initialize Database
+
+```bash
+python manage.py migrate                # also auto-seeds the ModelConfig defaults
+python manage.py createsuperuser
+python manage.py seed_seychelles        # Seed Seychelles curriculum (7 geo + 8 math units)
+```
+
+### 4. (Optional) Override the default model stack
+
+Migrations seed sensible defaults — you don't *need* to touch ModelConfig to get started. As of migration 0028 (2026-05-20) the runtime defaults are:
+
+| Purpose | Default model |
+|---|---|
+| `tutoring` | `google/gemini-3.1-flash-lite-preview` @ temp 0.2 |
+| `judge` | `google/gemini-3.1-flash-lite-preview` @ temp 0.0 |
+| `regen` | `google/gemini-3.1-flash-lite-preview` @ temp 0.2 |
+| `judge_fallback` | `google/gemini-3.5-flash` @ temp 0.0 |
+| `generation` | `anthropic/claude-sonnet-4` (curriculum + exit-ticket content) |
+| `image_generation` | `openai/gpt-image-2` |
+
+To switch any of these (e.g., back to Opus tutoring): edit the row in Django Admin → ModelConfig, or write a one-shot migration following the pattern in `apps/llm/migrations/0028_swap_runtime_to_gemini_3_1_flash_lite.py`. See [LLM Providers](#llm-providers) below for the per-provider matrix.
+
+### 5. Run the Server
+
+```bash
+python manage.py runserver
+```
+
+- **Student interface**: http://localhost:8000/tutor/
+- **Teacher dashboard**: http://localhost:8000/dashboard/
+- **Django admin**: http://localhost:8000/admin/
+
+### Test Accounts (after `seed_seychelles`)
+
+- **Student**: `student1` / `student123`
+- **Teacher**: `teacher1` / `teacher123`
+
+---
+
+## Project Structure
+
+```
+ai-tutor/
+├── apps/
+│   ├── accounts/          # Multi-tenancy, auth, user profiles
+│   ├── curriculum/        # Course hierarchy, knowledge base, content generation
+│   ├── dashboard/         # Teacher admin panel, upload processing
+│   ├── llm/               # LLM provider abstraction, prompt packs
+│   ├── media_library/     # Reusable media assets
+│   ├── safety/            # Compliance, flagging, GDPR
+│   └── tutoring/          # Conversational engine, sessions, skills, grading
+├── config/
+│   ├── settings.py        # Django configuration
+│   ├── urls.py            # Root URL routing
+│   ├── wsgi.py            # WSGI entry point
+│   └── asgi.py            # ASGI entry point
+├── templates/
+│   ├── base.html          # Master layout with theming
+│   ├── accounts/          # Login, registration
+│   ├── tutoring/          # Lesson catalog, chat interface
+│   ├── dashboard/         # Admin panel templates
+│   └── safety/            # Privacy pages
+├── static/                # CSS/JS assets
+├── media/                 # User uploads, vectordb
+├── infra/                 # Pulumi IaC for Azure
+├── .github/workflows/     # CI/CD pipeline
+├── Dockerfile             # Multi-stage production build
+├── requirements.txt       # Python dependencies
+└── manage.py
+```
+
+---
+
+## Django Apps
+
+### accounts
+
+**Purpose**: Multi-tenancy, authentication, and user profile management.
+
+Every record in the system is scoped to an `Institution` (school). Users belong to institutions via `Membership` records with role-based access (staff or student).
+
+#### Models
+
+| Model | Description |
+|-------|-------------|
+| `Institution` | A school or organization. The multi-tenancy root entity. Has a `get_global()` classmethod for platform-wide content. |
+| `Membership` | Links a `User` to an `Institution` with a role (`STAFF` or `STUDENT`). A user can have different roles at different institutions. |
+| `StudentProfile` | Extended profile for students: school name, grade level (S1-S5). OneToOne with Django `User`. |
+| `PlatformConfig` | Singleton for platform-wide settings: branding colors, logo, school list, grade list. Editable from the dashboard settings page. |
+| `StaffInvitation` | Token-based invitation system for staff members. Staff cannot self-register -- they must be invited by an existing staff member. |
+
+#### Key Files
+
+| File | Description |
+|------|-------------|
+| `models.py` | 5 models defining the multi-tenant user system |
+| `views.py` | Registration (students), login, profile management |
+| `urls.py` | Auth routes (`/accounts/login/`, `/accounts/register/`, etc.) |
+| `context_processors.py` | Injects institution theme (colors, logo) into all templates |
+| `admin.py` | Django admin configuration for all models |
+
+#### How It Works
+
+- Students self-register by choosing a school and grade level
+- Staff are invited via token links generated from the dashboard
+- The `institution_theme` context processor makes branding available in every template
+- `PlatformConfig` is a singleton (pk=1) that controls platform-wide settings
+- When `Institution` records exist, school choices come from the DB; otherwise falls back to `PlatformConfig.schools` JSON, then to hardcoded Seychelles defaults
+
+---
+
+### curriculum
+
+**Purpose**: Defines the course hierarchy and handles automated content generation powered by LLMs and a RAG knowledge base.
+
+This is the largest app -- it manages everything from curriculum document parsing to lesson step generation with media, educational materials, and Seychelles-localized context.
+
+#### Models
+
+| Model | Description |
+|-------|-------------|
+| `Course` | Top-level container (e.g., "S1 Geography"). Scoped to an institution or `null` for platform-wide. |
+| `Unit` | Groups related lessons within a course. Ordered by `order_index`. |
+| `Lesson` | A single teaching unit with an objective, mastery rule, estimated time, and content status (`empty` > `generating` > `ready` / `failed`). |
+| `LessonStep` | The atomic unit of instruction. Five types: `teach`, `worked_example`, `practice`, `quiz`, `summary`. Contains teacher script, questions, hints, media JSON, educational content JSON, curriculum context JSON, and 5E phase tags. |
+
+#### Key Files
+
+| File | Description |
+|------|-------------|
+| `models.py` | 4 models with rich JSON fields for media, educational content, and curriculum context |
+| `knowledge_base.py` | RAG system using ChromaDB + sentence-transformers. Indexes curriculum documents and teaching materials into vector collections. Provides semantic search for content generation, tutoring context, and exit ticket grounding. |
+| `content_generator.py` | LLM-powered lesson step generator. Uses Instructor library for structured output. Generates 8-12 steps per lesson following the 5E model, with media descriptions, vocabulary, worked examples, and Seychelles context. |
+| `curriculum_parser.py` | Extracts text from PDF/DOCX curriculum documents and parses the course > unit > lesson hierarchy. Supports pdfplumber, PyMuPDF, and python-docx. |
+| `pipeline.py` | Orchestrates the full upload-to-content pipeline: parse document, create DB records, generate steps, create media, build exit tickets. |
+| `signals.py` | Auto-creates exit tickets and seeds prerequisites when lessons are created. |
+
+#### LessonStep JSON Fields
+
+Each `LessonStep` has three rich JSON fields:
+
+**`media`** -- Images, videos, and audio for the step:
+```json
+{
+  "images": [
+    {"url": "/media/...", "alt": "...", "caption": "...", "type": "diagram", "source": "generated"}
+  ]
+}
+```
+
+**`educational_content`** -- Vocabulary, worked examples, formulas, key points:
+```json
+{
+  "key_vocabulary": [{"term": "...", "definition": "...", "example": "..."}],
+  "worked_example": {"problem": "...", "steps": [...], "final_answer": "..."},
+  "key_points": ["point 1", "point 2"],
+  "seychelles_context": "Local example..."
+}
+```
+
+**`curriculum_context`** -- Teaching strategies and differentiation from the knowledge base:
+```json
+{
+  "teaching_strategies": ["..."],
+  "differentiation": {"support": "...", "extension": "..."}
+}
+```
+
+#### Knowledge Base (RAG)
+
+The `CurriculumKnowledgeBase` class manages ChromaDB vector collections:
+
+- **Embedding**: `sentence-transformers/all-MiniLM-L6-v2` (local, offline, no API cost)
+- **Storage**: `VECTORDB_ROOT` setting (defaults to `media/vectordb`, overridable to `/tmp/vectordb` for fast local disk in production)
+- **Collections**: Separate per institution (with institution_id prefix)
+- **Query methods**:
+  - `query_for_content_generation()` -- lesson context for step generation
+  - `query_for_tutoring()` -- teaching strategies during live sessions
+  - `query_for_exit_ticket_generation()` -- exam questions for grounding
+  - `query_for_figure_descriptions()` -- textbook diagrams for reference
+
+#### Management Commands
+
+| Command | Description |
+|---------|-------------|
+| `seed_seychelles` | Seeds 7 geography units (20 lessons) + 8 math units (27 lessons) for Seychelles S1 curriculum |
+| `seed_sample_data` | Creates sample curriculum data |
+| `generate_content` | Generates lesson content for a course |
+| `generate_lesson_content` | Generates content for a single lesson |
+| `generate_media` | Generates images via Gemini for lesson steps |
+| `index_openstax` | Indexes OpenStax open-source resources into the knowledge base |
+
+---
+
+### tutoring
+
+**Purpose**: The core conversational tutoring engine, session management, student progress tracking, skill extraction, and exit ticket assessments.
+
+This app contains the AI tutoring logic that students interact with. It manages the full lifecycle of a tutoring session: from starting a lesson, through step-by-step instruction with LLM-generated responses, to exit ticket assessment and mastery tracking.
+
+#### Models
+
+| Model | Description |
+|-------|-------------|
+| `TutorSession` | A single student-lesson interaction. Tracks status (`active`/`completed`/`abandoned`), current step, engine state, and safety flags. |
+| `SessionTurn` | Individual messages in the conversation (system/tutor/student). Stores content, token counts, and metadata (hints, grading results). |
+| `StudentLessonProgress` | Cross-session mastery tracking per student per lesson. Tracks mastery level (`not_started`/`in_progress`/`mastered`), correct streaks, and best scores. |
+| `ExitTicket` | Summative assessment for a lesson. One per lesson, 80% pass threshold, 10 questions randomly selected per session from a bank of 30-35. |
+| `ExitTicketQuestion` | Individual MCQ with 4 options, correct answer, explanation, concept tag, and difficulty level (easy/medium/hard). Optional image field. |
+| `ExitTicketAttempt` | Records each student attempt with score, pass/fail, and detailed answer breakdown. |
+| `Skill` | An atomic, measurable learning outcome extracted from lessons. Has difficulty score, Bloom's level, and prerequisite relationships. |
+| `LessonPrerequisite` | Prerequisite relationship between lessons (direct or skill-inferred) with strength score. Powers the lock UI in the catalog. |
+| `StudentSkillMastery` | Per-student skill mastery tracking with performance history. |
+| `SkillPracticeLog` | Logs individual skill practice events for spaced repetition scheduling. |
+| `StudentKnowledgeProfile` | Aggregated knowledge profile per student for personalization. |
+
+#### Key Files
+
+| File | Description |
+|------|-------------|
+| `conversational_tutor.py` | **Core engine** (~3,250 lines). `ConversationalTutor` class manages the full session lifecycle: system prompt construction, media catalog building, step-by-step progression, LLM response generation, answer evaluation, step advancement, exit ticket triggering, and remediation. |
+| `views.py` | Student-facing endpoints: lesson catalog, session start/resume, chat respond, exit ticket submission, review lesson. |
+| `grader.py` | Answer evaluation: grades open-ended responses, scores MCQs, LLM-based rubric evaluation. |
+| `image_service.py` | Image generation via Gemini with enhanced prompts (lesson context, "SCHEMATIC map" style, anti-hallucination rules). |
+| `skill_extraction.py` | LLM-powered skill extraction from lesson content. Builds skill prerequisite graph and detects cross-lesson prerequisites. |
+| `skills_models.py` | Models for the skill knowledge graph (Skill, LessonPrerequisite, StudentSkillMastery, etc.). |
+| `personalization.py` | Adaptive difficulty, interleaved practice scheduling, prerequisite gating logic. |
+
+#### ConversationalTutor Engine
+
+The engine uses a `SessionState` enum with three states:
+- **`TUTORING`** -- Working through lesson steps (display phase comes from step's 5E `phase` field)
+- **`EXIT_TICKET`** -- Taking the summative assessment
+- **`COMPLETED`** -- Session finished
+
+Key methods:
+- `respond(student_input)` -- Main entry point. Evaluates answers, advances steps, generates tutor response via LLM.
+- `_evaluate_step()` -- LLM evaluator: determines answer correctness + step completion in one call.
+- `_should_advance_step()` -- Logic for when to move to the next step (safety valve at 8 exchanges).
+- `_build_media_catalog()` -- Creates numbered `[N] title` entries for deterministic media lookup.
+- `_parse_media_signal()` -- Extracts `|||MEDIA:N|||`

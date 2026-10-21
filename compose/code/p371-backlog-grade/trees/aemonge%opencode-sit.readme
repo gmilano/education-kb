@@ -1,0 +1,124 @@
+# OpenCode SIT
+
+SIT — **Socratic Intelligent Tutor** — is a read-only OpenCode agent for reducing comprehension debt in AI-assisted codebases.
+
+SIT does not write production code. It examines a developer's understanding of the local repository through Socratic questioning, trace exercises, brain-dumps, debug prediction, and optional disposable micro-homework prompts.
+
+<a href="https://www.buymeacoffee.com/aemonge"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;emoji=&amp;slug=aemonge&amp;button_colour=ffffff00&amp;font_colour=3D2B59&amp;font_family=Cookie&amp;outline_colour=3D2B59&amp;coffee_colour=3D2B59" alt="Buy me a coffee"></a>
+
+## Features
+
+- Local-code-first comprehension exams
+- Strict hint ladder: raw recall → directional hint → structural hint → surrender
+- Exercise modes for viva, trace, brain-dump, spot-the-gap, debug prediction, and invariant checks
+- Project-local mastery ledger convention
+- Disposable micro-homework convention
+- Read-only default OpenCode permissions
+- Registry metadata separated from OpenCode agent frontmatter
+
+## Quick Start
+
+Add SIT to your OpenCode config as a normal plugin:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-sit"]
+}
+```
+
+Restart OpenCode, then select the `sit` agent from the agent list.
+
+### Manual / Development Install
+
+If you are working from a local checkout of this repository, you can also install the agent file directly.
+
+Install globally:
+
+```bash
+./install.sh --global
+```
+
+Install into a project:
+
+```bash
+./install.sh --project /path/to/project
+```
+
+## Documentation
+
+- `docs/design.md` — MVP scope, product thesis, and distribution model
+- `docs/research-spec.md` — full rationale and learning-science background
+- `docs/local-install.md` — installer behavior and manual install paths
+- `docs/ledger-schema.md` — mastery ledger convention
+- `docs/micro-homework.md` — disposable homework convention
+- `examples/first-session.md` — example SIT examination flow
+- `examples/sit-ledger.md` — example mastery ledger artifact
+
+## Repository Layout
+
+```text
+.opencode/agent/learning/sit.md       # source agent for distribution
+.opencode/config/agent-metadata.json  # registry/discovery metadata
+registry.json                         # package registry entry
+install.sh                            # local installer
+docs/                                 # design and conventions
+examples/                             # example ledger/session artifacts
+```
+
+## Safety Model
+
+The default SIT agent denies:
+
+- file edits
+- bash
+- subagent delegation
+- web fetch/search
+- todo writes
+
+It allows only local read/search/list/LSP/question tools.
+
+## Local Development
+
+After creating this directory, move it wherever you keep projects:
+
+```bash
+mv ./opencode-sit ~/projects/.
+cd ~/projects/opencode-sit
+```
+
+See `docs/local-install.md` for installer behavior and manual install steps.
+
+## Validation
+
+Run the package validation checks before publishing or changing SIT behavior:
+
+```bash
+npm run check
+```
+
+The checks verify the OpenCode agent frontmatter, read-only permission model, metadata separation, installer invariants, prompt safety rules, and version consistency.
+
+For manual validation, use SIT to examine this repository itself. Start with `architecture` mode for the package layout or `module` mode for `.opencode/agent/learning/sit.md`.
+
+## TODO / Roadmap
+
+- Validate global and project install flows on a fresh OpenCode setup.
+- Add lightweight prompt checks that confirm SIT refuses edits, shell commands, web access, and subagent delegation.
+- Review registry compatibility before first public submission.
+- Add release notes and tag workflow for `0.1.x` releases.
+- Consider a separate `sit-writehomework` variant that can write only under `.opencode/homework/**`.
+- Consider stale-ledger detection using file fingerprints in a future read-only-safe workflow.
+- Polish examples after the first real SIT sessions.
+
+## Contributing
+
+Contributions are welcome. Start with `CONTRIBUTING.md`, especially the safety rules for preserving SIT's read-only examiner behavior.
+
+## Security
+
+SIT is designed to be read-only, but prompt/tool permission regressions are security-relevant. See `SECURITY.md` for reporting guidance.
+
+## License
+
+MIT. See `LICENSE`.

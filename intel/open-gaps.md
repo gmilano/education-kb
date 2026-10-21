@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 371 · 2026-10-21 — `Gap 477` **closed by grading all 1 859**, `Gap 480` **closed with an out-of-sample figure that is 16 points below the in-sample one**, and six defects in this pass's own instruments
+
+**Evidence:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p371.tsv) · [`backlog-grade`](../evidence/backlog-grade.2026-10-21-p371.tsv) · [`region-placement`](../evidence/region-placement.2026-10-21-p371.tsv) · [`backlog-census`](../evidence/backlog-census.2026-10-21-p371.txt) · [`gap480-oos-sample`](../evidence/gap480-oos-sample.2026-10-21-p371.txt) · [`region-placement-p370-rows`](../evidence/region-placement-p370-rows.2026-10-21-p371.tsv)
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+🟢 **Gate state: RUN, at `p370`'s HEAD and again at this pass's.** `make hooks` was
+**36/36** at `p370`'s HEAD and is **38/38** at this pass's, with two new standing gates and
+`gate-domain-check` grown from 43 to 56 controls.
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Gaps closed** | `Gap 477` (**closed** — all 1 859 remaining backlog addresses graded from payload) · `Gap 480` (**closed** — the out-of-sample run `p370` declared as its own obligation, with a figure) |
+| **Instruments added** | `compose/code/p371-region-place/` (23 controls, standing as `gate-region-place`) · `compose/code/p371-backlog-grade/` (8 controls, standing as `gate-backlog-denominator`, plus the census) |
+| **Instrument corrected** | `p370-domain-check`: **43 → 56** controls, on vocabulary read out of the payloads it had misjudged |
+| **Backlog graded** | **1 859** addresses, **1 859/1 859** answered, `0` `CLONE-FAILED`; **1 238** in domain, **781** permissive at an unscoped root grant |
+| **The commercial figure** | 🔴 **235 of 1 238 (19.0 %) in-domain addresses ship no licence file at all**; and **4 of 4** licence claims checked from 2026 LMS roundups were **wrong**, 3 of them toward *more* permissive than the payload grants |
+| **Region placement** | 🟢 **450 of 1 859 (24.2 %)** placed from their own payload; 118 North America, 86 EMEA, 58 APAC, 30 LATAM in-domain |
+| **Denominator corrected** | 🔴 `Gap 477` asserted **2 248**; derived from the shelves it cites, the remainder was **1 859** |
+| **Defects found in `p371`'s own instruments** | **6** (`D1`–`D6`), each published with the string that caused it, each now a control |
+| **New gaps** | **481** (the surviving false-positive class in the domain fix) · **482** (`p371`'s own fix is in-sample on its 40) · **483** (46 dead addresses still cited on these shelves) · **484** (235 ungranted in-domain addresses have no owner-contact path) |
+
+### 🟢 `Gap 477` — CLOSED, and the figure it carried was wrong
+
+🔴 **The gap read *"63 of the 2 311-address promotion backlog are now graded from payload;
+**2 248** are not"* — and it shipped no list.** 🟢 Derived at `p371` from the same shelves
+the gap cites, the remainder is **1 859**: the 2 311 denominator counted strings that are
+not addresses (a relative path, `.../archive`, entered as address number one) and addresses
+the live shelves already carry (800 of them). 🔵 **`T37`/`recount` already requires every
+registered quantity to be re-derivable from the rows; this pass extends that rule to the
+backlog**, which was the one quantity here being carried forward by restatement.
+`gate-backlog-denominator` now derives it on every `make hooks`.
+
+🟢 **And then all 1 859 were graded**, in six parallel shards, ~95 minutes wall-clock, one
+blobless partial clone and one `ls-remote` each. `p370` priced the remainder at *"two or
+three passes, not a programme"*; it fitted in one.
+
+### 🟢 `Gap 480` — CLOSED, and the honest number is **76.5 %**, not 92.6 %
+
+🟢 **`p370` stated the obligation on itself:** *"all four defects were derived from THIS
+pass's 63-slug sample, so the post-fix precision is an IN-SAMPLE figure … the out-of-sample
+run is this instrument's next obligation, not a result it already has."*
+
+🟢 **Run on 1 859 held-out addresses, with a seeded stratified sample of 40
+hand-adjudicated** (seed `371`, committed):
+
+| class | sampled | correct | precision |
+|---|---:|---:|---:|
+| `EDUCATION` | 16 | 🟢 **16** | 🟢 **100 %** |
+| `NOT-EDUCATION` | 8 | 5 | 62.5 % |
+| `SLUG-TRAP` | 10 | 5 | 🔴 **50 %** |
+| `WEAK` *(by design: a human adjudicates)* | 6 | — | 4 of 6 would promote |
+| **decisive** | **34** | **26** | **76.5 %** |
+
+🟢 **The instrument is safe in the direction that matters** — it did not shelve anything it
+should not have (16/16 on the only shelvable class) — 🔴 **and it was silently discarding
+a whole layer.** All eight errors sat in credentialing/OER and curriculum-standards, plus
+two non-English payloads. The fix recovered **73 addresses**; **58** of those are permissive
+with a root grant and are now shelved.
+
+### 🔴 The six defects in `p371`'s own instruments
+
+| | Defect | The string that caused it |
+|---|---|---|
+| `D1` | the backlog deriver admitted a **relative path** as address number one | `.../archive` |
+| `D2` | the region placer read a **filename as a hostname**, placing five rows in Paraguay | `server.py`, `main.py`, `setup.py`, `database.py`, `api.py` |
+| `D3` | an **RFC-2606 placeholder** out of a config sample placed two rows | `student.example.edu`, `d2l.myschool.edu` |
+| `D4` | the placeholder rule matched **any** label — missing one, and threatening real hosts | `blackboard.your-university.edu`; `mycourses.rit.edu` |
+| `D5` | a **link shortener** placed a row in LATAM | `mng.bz/orYv` — `.bz` is Belize |
+| `D6` | the census ranked grants by permissiveness, so a licence cell came from an **asset** grant | `Dungeon-CampusMinden/Dungeon` → `LICENSE-ASSETS.md` (CC0) instead of `LICENSE.md` (MIT) |
+
+🔴 **`D2` is the one that should not have happened**, and it is this base's standing failure
+mode rather than a new one: `p115` had **already** required an `https://` context before
+reading a host and **already** shipped a `stoplist.tsv` stating the rule. 🟢 Both are now
+reused by reading `p115`'s files rather than copying them, and `p115`'s stoplist gained four
+attributed rows (`adlnet.gov`, `xapi.com`, `imsproject.org`, `caliperanalytics.org`).
+🔵 Same shape as `p369` rediscovering `LICENSE.TXT` that `p189` had recorded: **committed
+knowledge that was never wired into the next instrument that needed it.**
+
+### 🟡 Live gaps declared by `p371` — remedy *and* cost, per `P469` / `P492`
+
+| Gap | Declared | Where | Status, remedy and cost |
+|---|---|---|---|
+| 🆕 **481** | **2026-10-21**, pass 371 | `compose/code/p370-domain-check/` · `ACTION ZZ-ch` | 🔴 **OPEN.** *"`D5`'s vocabulary admits generic verifiable-credential infrastructure that is not education-specific."* Specimens, both measured in domain and both wrong: [`Open-Attestation/open-attestation`](https://github.com/Open-Attestation/open-attestation) (Singapore GovTech, *"any document types on the blockchain"*) and [`CogniPilot/credentials`](https://github.com/CogniPilot/credentials) (badges for a robotics community). 🟢 **Remedy:** require a credential term to co-occur with a learner/institution anchor, which is one predicate and ~20 controls. **Cost: part of one pass.** 🟡 Rate on a 14-row sample of the 73 recovered: **2 wrong (14 %)** — recorded as a sample, not a precision. |
+| 🆕 **482** | **2026-10-21**, pass 371 | `evidence/gap480-oos-sample.2026-10-21-p371.txt` · `ACTION ZZ-ci` | 🔴 **OPEN, and declared against this pass's own fix.** *"`D5` was derived from the 40 verdicts it is measured on, so the post-fix figure would be in-sample exactly as `p370`'s was."* 🟢 **`p371` therefore publishes NO post-fix precision** — only the 76.5 % pre-fix figure and the 80-verdict movement. **Remedy:** a second seeded sample, held out from `D5`'s derivation, over the same 1 859. **Cost: ~40 hand adjudications, part of one pass.** 🔵 The trap `p370` fell into is cheap to repeat and this register names it rather than waiting to be caught. |
+| 🆕 **483** | **2026-10-21**, pass 371 | `evidence/git-tree-run.2026-10-21-p371.tsv` · `ACTION ZZ-cj` | 🟡 **OPEN.** *"**46** addresses cited on these shelves answer `NO-REMOTE` — they do not resolve at all."* 🟢 They are listed with their status in the evidence file, so the work is bounded and needs no search step. **Remedy:** for each, decide deleted / renamed / transferred (`p349`'s alias mechanism gives the method) and either repoint or retract the citation. **Cost: one pass for the whole set**, since the probe is committed and `ls-remote` answers. |
+| 🆕 **484** | **2026-10-21**, pass 371 | `evidence/backlog-grade.2026-10-21-p371.tsv` · `ACTION ZZ-ck` | 🟡 **OPEN, and it is a business gap rather than an instrument one.** *"**235** in-domain addresses ship no licence file, which makes them all-rights-reserved and unusable — and this base has never once asked an author to add one."* 🔵 `p370` measured the same thing at 71 % on the LMS bridge class and drew the same blank. 🟢 **Remedy:** rank the 235 by in-domain usefulness, and for the top tier record whether a contact path exists at all (a README contact, a declared org, an email in the tree). **Cost: part of one pass**, offline, over payloads already committed. 🔴 **Until then the industry's largest single supply constraint is one this base only ever counts.** |
+
+### 🟡 Earlier gaps, as `p371` leaves them
+
+| Gap | Status at `p371` |
+|---|---|
+| **`Gap 241`** | 🔴 **STILL OPEN, re-tested a sixth time and unchanged.** `eur-lex.europa.eu`, `data.consilium.europa.eu`, `education.ec.europa.eu`, `oecd.org` and `unesco.org` all answered **`000`** from this environment this pass. The **2 December 2027** Annex III date and `Regulation (EU) 2026/1744` are corroborated again, secondarily. 🟢 Remedy unchanged and re-priced once already: **an environment with EU institutional egress** — a network-policy request, not a scheduling one. |
+| **`Gap 476`** | 🟡 **OPEN, and strengthened by a second kind of evidence.** The prescribed regional leg returned its **thirteenth** consecutive near-nil (2 new facts across 4 regions). 🔴 And the same monolingual assumption appeared in a *second* instrument this pass: `gate-domain-check` called a Portuguese payload naming `itinerários formativos` a `SLUG-TRAP`. 🔵 The defect is structural, not a query-wording accident. |
+| **`Gap 478`** | 🟡 **OPEN, not advanced this pass.** The register's two `UNKNOWN` rows still have no canonical side. Stated so no reader takes `p371` for progress on it. |
+| **`Gap 479`** | 🟢 **Subsumed and effectively discharged.** It asked for *"two in-domain repositories the fixed domain check still misses"*; `p371`'s out-of-sample run found **eight** misses in two named classes and fixed the vocabulary for all of them. 🔵 The successor concern is `Gap 481`, not this. |
+
 ## Pass 370 · 2026-10-21 — `ACTION ZZ-bw` discharged, `ACTION ZZ-cb` discharged with an instrument, and the red gate `p369` left behind was red because of a REGISTER ROW, not a shelf
 
 **Evidence:** [`refset-rederivation`](../evidence/refset-rederivation.2026-10-21-p370.tsv) · [`alias-register-p370`](../evidence/alias-register.2026-10-21-p370.tsv) · [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p370.tsv) · [`tree-grant-domain`](../evidence/tree-grant-domain.2026-10-21-p370.tsv) · [`domain-check-firstdraft`](../evidence/domain-check-firstdraft.2026-10-21-p370.tsv) · [`transport-matrix`](../evidence/transport-matrix.2026-10-21-p370.tsv)

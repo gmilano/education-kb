@@ -1,0 +1,292 @@
+# AEGIS Academic Integrity Checker
+
+<!-- mcp-name: io.github.sunilgentyala/aegis-integrity -->
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-3.3.2-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-brightgreen?style=for-the-badge" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/offline-first-orange?style=for-the-badge" alt="Offline">
+  <img src="https://img.shields.io/badge/bias--aware-ESL%20(experimental)-purple?style=for-the-badge" alt="Bias aware, experimental">
+  <img src="https://img.shields.io/github/stars/sunilgentyala/aegis-integrity?style=for-the-badge" alt="Stars">
+</p>
+
+<p align="center">
+  <a href="https://github.com/sunilgentyala/aegis-integrity/actions/workflows/tests.yml"><img src="https://github.com/sunilgentyala/aegis-integrity/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+  <a href="https://github.com/sunilgentyala/aegis-integrity/actions/workflows/codeql.yml"><img src="https://github.com/sunilgentyala/aegis-integrity/actions/workflows/codeql.yml/badge.svg" alt="CodeQL"></a>
+  <a href="https://pypi.org/project/aegis-integrity/"><img src="https://img.shields.io/pypi/v/aegis-integrity" alt="PyPI"></a>
+  <a href="SECURITY.md"><img src="https://img.shields.io/badge/security-policy-blue" alt="Security policy"></a>
+  <a href="https://mcprush.com/sunilgentyala/aegis-academic-integrity-checker-mcp"><img src="https://img.shields.io/badge/mcprush-verified%20publisher%20%C2%B7%20grade%20A-brightgreen" alt="mcprush verified publisher, grade A"></a>
+  <a href="https://glama.ai/mcp/servers/sunilgentyala/aegis-integrity"><img src="https://glama.ai/mcp/servers/sunilgentyala/aegis-integrity/badges/score.svg" alt="sunilgentyala/aegis-integrity MCP server on Glama"></a>
+</p>
+
+<p align="center">
+  <img src="docs/demo/demo.gif" alt="AEGIS analysing a paper from the terminal: two invented DOIs are flagged as hallucinated citations" width="860">
+</p>
+<p align="center"><sub>Real CLI output on a synthetic sample paper (<code>docs/demo/sample_paper.txt</code>). Both DOIs in it are invented, and AEGIS flags them.</sub></p>
+
+> **Open-source, offline, bias-aware academic integrity analysis.**
+> Documents are processed entirely on your own hardware and never uploaded anywhere. Citation checks may query Crossref/OpenAlex with reference metadata (titles, authors, DOIs) when online verification is enabled.
+> Analyzes plagiarism, AI-generated content, citation hallucinations, ghostwriting, predatory references, and essay mill patterns in a single pipeline -- plus an experimental token-distribution heuristic for LLM watermark research.
+> **Plagiarism detection is corpus-based, not a live web/database crawl:** AEGIS compares your document against a corpus of papers *you supply* (your own prior works, a downloaded reference set, etc. -- see [Building a Corpus Index](HOWTO.md#9-building-a-corpus-index)). With no corpus loaded, plagiarism modules correctly report "no prior works loaded" rather than silently finding nothing to flag -- that isn't a scan failure.
+> Results are a supporting signal for human review, not a determination of misconduct.
+
+---
+
+## Get Started
+
+Pick the way you want to use AEGIS. All three run on your own computer.
+
+**1. In your browser (easiest).** Install once, then open the web app:
+```bash
+pip install "aegis-integrity[ml]"
+aegis ui
+```
+Drag in a PDF, Word, LaTeX or text file, choose *Full check*, *Private / offline*,
+*References only* or *Style & formatting*, and get a plain-language report:
+an overall rating, what to look at, every reference with its verification
+result, and a downloadable full report. A *Compare two papers* tab and a
+*My comparison library* tab cover self-plagiarism and building the corpus.
+On Windows, `install.bat` sets everything up and `start-aegis.bat` opens the
+web app with a double-click.
+
+**2. Inside Claude Code.** Install the package with the `mcp` extra, then add the plugin:
+```bash
+pip install "aegis-integrity[mcp,ml]"
+```
+```
+/plugin marketplace add sunilgentyala/aegis-integrity
+/plugin install aegis-integrity@aegis-integrity
+```
+Then ask in plain words ("check references in ~/drafts/paper.pdf", "is this
+ready for an Elsevier journal?"), or use the `/integrity-check` and
+`/submission-check` skills.
+
+**3. In Claude Desktop.** Install the package as in option 2, download
+`aegis-integrity-<version>.mcpb` from the
+[Releases](https://github.com/sunilgentyala/aegis-integrity/releases) page and
+open it. In the extension settings, choose the Python where AEGIS is
+installed. Any other MCP client can run the `aegis-mcp` command directly.
+
+**Not sure what works on your machine?** Run `aegis doctor`. It lists every
+capability, whether it's ready, and the one command that fixes it.
+`aegis doctor --warm-up` downloads the AI models ahead of time so your first
+full check doesn't wait on them.
+
+---
+
+## MCP Tools
+
+`aegis-mcp` exposes seven tools to Claude Code, Claude Desktop and any MCP client.
+
+Listed and claimed by the maintainer on [Glama](https://glama.ai/mcp/servers/sunilgentyala/aegis-integrity) and [mcprush](https://mcprush.com/sunilgentyala/aegis-academic-integrity-checker-mcp). See [what each listing status means](docs/DIRECTORY_LISTINGS.md).
+
+| Tool | What it does | Example prompt |
+|---|---|---|
+| `aegis_analyze_paper` | Full integrity pipeline on a PDF/DOCX/TEX/TXT | "Run a full integrity check on ~/drafts/paper.pdf" |
+| `aegis_check_citations` | Verify references against Crossref (finds hallucinated DOIs) | "Check the references in paper.docx" |
+| `aegis_check_guidelines` | Offline style pass vs IEEE, ACM, BCS, IET, ISACA, Elsevier | "Is this ready for an Elsevier journal?" |
+| `aegis_compare_papers` | Overlap between two papers (conference vs journal version) | "Compare v1.docx and v2.docx" |
+| `aegis_index_add` | Add a paper to your local comparison corpus | "Add Smith2025.pdf to my corpus" |
+| `aegis_index_summary` | List the corpus | "What is in my AEGIS corpus?" |
+| `aegis_status` | Which checks are ready and how to fix the rest | "Is AEGIS set up correctly?" |
+
+---
+
+## Security
+
+AEGIS is local-first and the MCP server runs over stdio. Documents never leave your machine; only reference metadata goes to Crossref/OpenAlex.
+
+- MCP tools read only `.pdf`, `.docx`, `.tex` and `.txt` files up to 50 MB (`AEGIS_MAX_FILE_MB`).
+- Set `AEGIS_ALLOWED_ROOTS` to confine every tool to specific folders (recommended when an agent drives AEGIS).
+- Tool output is stripped of control characters and truncated; tools carry read-only / non-destructive MCP hints.
+- DOIs from documents are percent-encoded and fetched without redirects. The MCP server never loads `./.env`.
+- CI runs tests, `bandit`, a blocking `pip-audit`, and CodeQL; Dependabot is on.
+
+Report vulnerabilities privately: see [SECURITY.md](SECURITY.md).
+
+---
+
+## Support the project
+
+If AEGIS helped you, a star on GitHub helps other researchers find it. Bug reports, sample papers that break it and pull requests are worth more: see the open issues labelled `good first issue`.
+
+---
+
+## How AEGIS Compares
+
+Every major integrity tool has blind spots. AEGIS v3.3 aims to close **fourteen** of them simultaneously.
+
+Based on each vendor's public documentation and pricing pages as of August 2026. "Not public" means the capability isn't documented publicly by that vendor -- not a confirmed absence. [Corrections welcome](https://github.com/sunilgentyala/aegis-integrity/issues).
+
+| Gap | **AEGIS v3.3** | Turnitin | iThenticate | CopyLeaks | GPTZero | Originality.ai |
+|-----|:--------------:|:--------:|:-----------:|:---------:|:-------:|:--------------:|
+| Open-source / self-hostable | **Yes** | No | No | No | No | No |
+| Citation hallucination detection | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| IEEE/ACM/Elsevier/IET/IETE/BCS -scoped venue-claim + duplicate-title check | **Yes (metadata-only via Crossref, free)** | Yes (full-text, paid Similarity Check membership) | Yes (full-text, paid Similarity Check membership) | Not public | Not public | Not public |
+| LLM watermark token-distribution heuristic (experimental, keyless) | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Citation network analysis (cartels, predatory) | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| ESL / non-native bias calibration (15 languages) | Partial (experimental) | Not public | Not public | Not public | Not public | Not public |
+| Paragraph-level AI scoring | **Yes** | Not public | Not public | Yes | Yes | Partial |
+| Semantic / paraphrase plagiarism (SBERT) | **Yes** | Partial | Not public | Partial | Not public | Not public |
+| Stylometric ghostwriting detection (Burrows' Delta) | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Self-plagiarism against open corpus | **Yes** | Not public | Paid | Not public | Not public | Not public |
+| Batch classroom / essay mill detection | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Semantic coherence AI-polish detection | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| OpenAlex journal quality integration | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Fully explainable per-sentence reports | **Yes** | Not public | Not public | Partial | Partial | Not public |
+| Mathematical formula checking (equation numbering, dangling references, notation) | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Grammar & language convention checking (contractions, US/UK spelling, agreement) | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Per-venue publisher guideline compliance (IEEE/ACM/BCS/IET/ISACA/Elsevier, checked separately) | **Yes** | Not public | Not public | Not public | Not public | Not public |
+| Offline / air-gapped operation | **Yes** | No | No | No | No | No |
+| REST API + CLI (free) | **Yes** | No | Paid | Paid | Paid | Paid |
+| Pricing model | **$0.00 (self-hosted)** | Institutional (not public) | Institutional (not public) | Paid (self-serve) | Paid (self-serve) | Paid (self-serve) |
+
+---
+
+## Fourteen Detection Modules
+
+### 1. Citation Hallucination Detection
+Resolves every DOI via the Crossref REST API and cross-checks author, year, and title.
+A peer-reviewed study found ChatGPT fabricated up to 55% of references depending on model
+version ([Walters & Wilder, *Scientific Reports*, 2023](https://doi.org/10.1038/s41598-023-41032-5)).
+
+**Verdicts:** `VALID` | `MISMATCH` | `HALLUCINATED` | `UNRESOLVABLE` | `NO_DOI`
+
+### 2. LLM Watermark Analysis -- Experimental (v2.1)
+AEGIS ships two distinct capabilities here, and they should not be confused:
+
+- **Experimental token-distribution anomaly heuristic** (default, `WatermarkMode.EXPERIMENTAL`):
+  a keyless statistic loosely modeled on the shape of the Kirchenbauer (2023) green-list z-test
+  and Zhao et al. (2023) entropy/rank-skew analysis. It does **not** have access to any real
+  LLM provider's watermark key, seeding scheme, or tokenizer -- the "green list" it tests
+  against is fabricated locally as a statistical null, not recovered from any actual
+  deployment. It can report `STATISTICAL_ANOMALY` or `NO_STATISTICAL_ANOMALY`, never a
+  definitive watermark claim, and it **never affects the overall integrity risk score**.
+- **Known-scheme verification** (`WatermarkMode.VERIFIED_SCHEME`, opt-in): for when the real
+  scheme, tokenizer, and key are actually known and supplied. AEGIS does not currently
+  implement a real scheme's verifier, so this mode reports `UNSUPPORTED_CONFIGURATION`
+  rather than silently falling back to the heuristic above.
+
+See [Watermark Detection: Capabilities and Limitations](#watermark-detection-capabilities-and-limitations)
+below before relying on any watermark output.
+
+### 3. Citation Network Analysis (v2.0 -- novel)
+Analyzes the full reference list for structural anomalies that single-citation DOI checking
+misses:
+- **Self-citation inflation** -- flags when >30% of references share an author with the submission
+- **Predatory journal detection** -- heuristic pattern matching against known predatory name patterns
+- **Citation clustering** -- detects when all references cluster in a single year (LLM fabrication signature)
+- **OpenAlex integration** -- free API lookup for journal quality tier and citation impact
+- **Missing DOI rate** -- very high DOI-absence is consistent with AI-hallucinated bibliographies
+
+### 4. ESL-Calibrated AI Content Detection
+Targets the bias documented by [Liang et al. (Stanford, 2023)](https://arxiv.org/abs/2304.02819):
+GPT detectors misclassified more than half of non-native-authored TOEFL essays as AI-generated,
+one detector flagging up to 98%, while native-English essays were scored accurately.
+Defines per-language threshold multipliers for 15 languages, but **this part is experimental**:
+the language is detected from the text, which is "en" for nearly all English submissions, so the
+non-English multipliers rarely fire (see the v3.1.1 changelog note). Do not treat AEGIS as having
+solved ESL false positives; keep a human in the loop. Paragraph-level scoring
+pinpoints injected AI sections rather than giving one document-level verdict.
+
+Signals: GPT-2 perplexity, burstiness, cross-perplexity ratio, stylometric ensemble,
+GPT-4/GPT-5-era lexical-tell density (v2.5 -- transition/elevation vocabulary
+disproportionately common in ChatGPT/GPT-4/GPT-5-family output, which GPT-2
+perplexity alone under-detects against fluent frontier-model text).
+
+### 5. Semantic Coherence Analysis (v2.0 -- novel)
+Detects AI-polished text that passes perplexity filters because it was post-processed
+by a humanizer. Targets the "too smooth to be human" signature:
+- Discourse connector density (AI overuses "Furthermore", "Moreover", "Additionally")
+- Sentence length uniformity (AI produces unnaturally low variance)
+- Epistemic hedging rate (AI hedges at a formulaic, characteristic frequency)
+- Section template matching (standard AI paper structure: Introduction -> Methods -> ...)
+
+### 6. Semantic / Paraphrase Plagiarism
+SBERT dense retrieval + CrossEncoder reranking catches concept-level paraphrase where
+no exact words are shared. Traditional BM25/TF-IDF-only tools miss this entirely.
+
+Model: `paraphrase-MiniLM-L6-v2` (80 MB, CPU-friendly). Index: FAISS `IndexFlatIP`.
+Requires a corpus you load first (`--corpus`) -- there is no built-in web/database
+crawl to compare against.
+
+### 7. N-Gram Plagiarism (MinHash LSH)
+Dual index: word 3-gram (verbatim copy) and character 5-gram (obfuscation via typos
+or character substitution). 128 MinHash permutations; sub-linear query time over large
+corpora via LSH banding. Also requires a loaded corpus -- same scope note as above.
+
+### 8. Stylometric Authorship Profiling (Burrows' Delta)
+60-dimensional feature vector per segment (10 scalar + 50 function-word dimensions).
+Segments with Burrows' Delta > 0.40 from the document baseline are flagged as potential
+ghostwritten sections. Catches professional essay mills that mix human and AI writing.
+
+### 9. Self-Plagiarism / Text Recycling
+Three-layer detection: character 5-gram Jaccard (verbatim), word 3-gram Jaccard
+(near-verbatim), SBERT cosine >= 0.88 (cross-language paraphrase recycling).
+Risk levels follow COPE text recycling guidelines (15% / 30% thresholds).
+
+### 10. Batch / Classroom Analysis (v2.0 -- novel)
+Detects essay mill operations and shared AI source documents by analyzing a set of
+submissions simultaneously:
+- Pairwise similarity matrix across all submissions (MinHash + rare vocabulary overlap)
+- Structural fingerprinting (identical section sequences with different surface text)
+- AI score clustering (statistically unlikely for a class to all independently write AI-like prose)
+- Union-Find clustering to group submissions by suspected common source
+
+### 11. Target-Publisher Verification (v2.4 -- novel)
+Scopes citation and duplicate-submission checking to six publishers authors most
+commonly ask about: **IEEE, ACM, Elsevier, IET, IETE, BCS**. No outside tool (this
+one included) can query those publishers' actual full-text plagiarism databases --
+Crossref's Similarity Check corpus that backs Turnitin/iThenticate is restricted to
+paying member organizations, and Scopus/IEEE Xplore's public APIs are metadata- or
+abstract-only even with a key. What this module does instead, entirely via free
+Crossref metadata:
+- **Venue-claim verification** -- flags a reference that reads as "IEEE Trans. ..."
+  or "Proc. ACM ..." whose DOI actually resolves to a different publisher (venue
+  misattribution or fabrication), reusing citations already resolved by module 1 --
+  no extra network calls.
+- **Duplicate-submission search** -- searches each target publisher (via Crossref
+  member id for IEEE/ACM/Elsevier/IET; via DOI-prefix + container-title matching
+  for IETE and BCS, which publish through Informa/Taylor & Francis and Oxford
+  University Press respectively rather than holding their own Crossref membership)
+  for near-identical titles already indexed under that venue.
+
+Configurable via `--target-publishers IEEE,ACM,...` (CLI) or
+`PipelineConfig.venue_target_publishers` (Python API); defaults to all six.
+
+### 12. Mathematical Formula Checking (v3.0 -- novel)
+Checks the structural integrity of numbered equations: consecutive numbering
+(catches duplicates, gaps, and out-of-order numbers), dangling in-text references
+to equation numbers that don't exist (a common leftover from renumbering during
+revision), orphaned equations that are numbered but never referenced, and a set of
+notation conventions sourced from actual publisher style manuals -- exponential
+notation (`5E03` vs. `5×10³`), decimal leading zeros, percentage-range formatting,
+and doubly-parenthesised references. Equations are extracted from LaTeX source
+(`\begin{equation}`/`align`/`eqnarray`/...), from Word's native OMML math XML
+(`python-docx` doesn't expose this at all -- `Paragraph.text` silently skips every
+equation in a `.docx`), or via text-pattern heuristics for PDF/TXT. Pure Python,
+no ML dependency. **This is a compliance/quality signal, not a misconduct signal --
+it never affects `overall_risk`.**
+
+### 13. Grammar & Language Convention Checking (v3.0 -- novel)
+An offline, dependency-light grammar/usage checker: contraction detection
+(`"don't"` in formal text), US/UK spelling-consistency detection across 30+ word
+pairs, subject/verb agreement heuristics (`"the data is"` vs. `"the data are"`),
+common usage errors (`"comprised of"`, `"could of"`, `"less samples"` vs. `"fewer
+samples"`, decade/acronym apostrophe misuse), and readability metrics. Runs fully
+in-process on regex + optional spaCy POS tagging (already an AEGIS dependency) --
+no Java runtime, no external grammar service, no new hard dependency. Also a
+compliance/quality signal, never part of `overall_risk`.
+
+### 14. Per-Venue Publisher Guideline Compliance (v3.0 -- novel; Elsevier added v3.1)
+Runs the math and grammar findings above against **six publishing bodies'
+own sourced style guidance, checked SEPARATELY** rather than one generic merged
+rule set -- so a document that's fine by ACM's conventions but violates an
+IEEE-specific one (or vice versa) is visible per venue instead of averaged away:
+
+| Venue | Sourced from | Distinguishing rule this catches |
+|-------|--------------|-----------------------------------|
+| **IEEE** | IEEE Editorial Style Manual for Authors (2024) | American spelling, no contractions, "(n)" equation citation, serial comma |
+| **ACM** | ACM Formatting/Reference Guide (Chicago Manual of Style base) | American spelling, numeric-bracket citations, serial comma |
+| **BCS** | *The Computer Journal* (OUP) General Instructions | No contraction/spelling rule published -- report

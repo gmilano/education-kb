@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 371 — 2026-10-21 — **`Gap 477` IS CLOSED: ALL 1 859 REMAINING BACKLOG ADDRESSES GRADED FROM PAYLOAD, 1 859 OF 1 859 ANSWERED. 🔴 AND RUNNING `p370`'s DOMAIN CHECK OUT OF SAMPLE — THE OBLIGATION IT DECLARED ON ITSELF — DROPPED ITS 92.6 % TO 76.5 % AND SHOWED THE INDUSTRY'S UNSHELVED LAYER IS CREDENTIALING, NOT TUTORING. 🟢 450 ADDRESSES ARE NOW PLACED IN A REGION FROM THEIR OWN PAYLOAD.**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+**Evidence:** [`git-tree-run`](evidence/git-tree-run.2026-10-21-p371.tsv) ·
+[`backlog-grade`](evidence/backlog-grade.2026-10-21-p371.tsv) ·
+[`region-placement`](evidence/region-placement.2026-10-21-p371.tsv) ·
+[`backlog-census`](evidence/backlog-census.2026-10-21-p371.txt) ·
+[`gap480-oos-sample`](evidence/gap480-oos-sample.2026-10-21-p371.txt) ·
+[`region-placement-p370-rows`](evidence/region-placement-p370-rows.2026-10-21-p371.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Gaps closed** | `Gap 477` (**closed** — the whole remaining backlog graded) · `Gap 480` (**closed** — with the out-of-sample figure `p370` said it did not have) |
+| **Instruments added** | `p371-region-place` (23 controls, `gate-region-place`) · `p371-backlog-grade` (8 controls, `gate-backlog-denominator`) |
+| **Instrument corrected** | `p370-domain-check`: **43 → 56** controls, on vocabulary read out of the payloads it had misjudged |
+| **Gates** | 🟢 **38/38 green**, up from **36/36** at `p370`'s HEAD |
+| **Probes, all first-hand** | **1 859** `ls-remote` fingerprints + **1 813** blobless partial clones + the licence blobs and READMEs they enumerated; **0** `CLONE-FAILED`; **0** successful `api.github.com/repos` calls, because the proxy answered **403** to all of them |
+| **Backlog** | 🔴 `Gap 477` asserted **2 248** ungraded with no committed list; derived from the shelves it cites, it was **1 859** — and **1 859** are now graded |
+| **The figure a studio needs** | 🔴 **235 of 1 238 (19.0 %) in-domain addresses ship no licence file at all** — and **4 of 4** licence claims checked from 2026 LMS roundups were wrong, 3 toward *more* permissive than the payload grants |
+| **Regions** | 🟢 **450 of 1 859 placed from their own payload**: **118** North America · **86** EMEA · **58** APAC · **30** LATAM in domain |
+| **Defects in `p371`'s own instruments** | **6**, each published with the string that caused it, each now a control |
+| **New gaps** | **481** (the surviving false-positive class), **482** (this pass's own fix is in-sample), **483** (46 dead addresses still cited here), **484** (235 ungranted addresses nobody has ever contacted) |
+
+### 🔴 The finding, in one sentence
+
+🟢 `p370` wrote the obligation into its own instrument: *"the post-fix precision is an
+IN-SAMPLE figure … the out-of-sample run is this instrument's next obligation, not a result
+it already has."* 🔴 **Run out of sample on 1 859 held-out addresses with 40 verdicts
+hand-adjudicated, it scores 76.5 % against the 92.6 % it published — and all eight errors
+sit in two classes, neither of which is tutoring:** digital credentialing (`open badge`,
+`verifiable credential`, `europass`, the **European Learner Model**) and open educational
+resources with national curriculum standards (`oer`, `course of study`, `mext`,
+`学習指導要領`). 🟢 **The instrument never shelved anything it should not have — 16 of 16 on
+the only shelvable class — it was silently discarding a layer.**
+
+### 🟢 What a reader should take from it
+
+🟢 **A trend can be recorded in a file and absent from the index at the same time, and
+nothing reconciles the two.** §6 of `intel/trends.md` has called digital credentials *"the
+skills-based hiring substrate"* since early in this base's life. 🔴 **The shelves carried
+almost no credentialing rows, because the gate that decides what may be shelved had no word
+for `open badge`.** Fixing the vocabulary recovered **73** addresses, **58** of them
+permissive with a root grant: 1EdTech's and IMS Global's own validators, the **MIT Digital
+Credentials Consortium** family, `cassproject/CASS`, Blockcerts, LibreTexts, Penn State's
+HAX and the EU's X5GON pipeline. 🔴 **With an archive in the middle of it** — the European
+Commission's own ELM repository opens *"Archived Repository — no longer updated."*
+
+🟢 **And the region field finally pays for itself.** The brief this base answers says *"a
+finding with no region attached is worth less than one that is placed"*; `p370` graded 63
+addresses and placed none, with every README already on disk. `p371` read them: **450 of
+1 859 place from their own payload**, and the regional picture that falls out is **not** the
+one the trade press reports. 🟢 The permissive share is flat across regions (71 %, 53 %,
+72 %, 57 % — producer type, not geography, for the fourth time), volume is four-to-one
+against LATAM, 🔴 **and the LATAM supply reaches `SIGAA` and `SIU-Guaraní` — the SIS
+platforms Brazilian federal and Argentine national universities actually run, and which
+appear in none of the ten platforms `p370`'s incumbent-LMS tier reaches.** A LATAM
+higher-education proposal that budgets a Canvas or Banner connector has specified the wrong
+incumbent before any licence question arises.
+
+🔴 **The defect worth copying out of this pass is `D2`, because it is this base's standing
+failure mode and not a new one.** The region placer's first run put **eight of `p370`'s 63
+addresses in LATAM**, five on the evidence strings `server.py`, `main.py`, `setup.py`,
+`database.py`, `api.py` — **`.py` is Paraguay in `p115`'s committed country table, and a
+Python filename is not a hostname.** 🟢 `p115` had already required an `https://` context
+and already shipped a stoplist of registry and standards hosts; `p371` rediscovered both
+before reusing them, exactly as `p369` paid to rediscover a `LICENSE.TXT` that `p189` had
+recorded and never gated. 🔵 **Committed knowledge that is not wired into the next
+instrument gets paid for twice.**
+
 ## Pass 370 — 2026-10-21 — **THE RED GATE `p369` LEFT BEHIND WAS RED BECAUSE OF A REGISTER ROW, NOT A SHELF. A HEAD SHA IS NOT AN IDENTITY PROOF, AND 22 OF THIS BASE'S ALIAS ROWS RESTED ON ONE — `p370` RE-DERIVED ALL 43 ADDRESSES ON THE REF-SET FINGERPRINT AND DEMOTED 5 FORKS THAT WERE BEING ENFORCED AS REDIRECTS. 🔴 AND `p367`, DISCHARGING THE SAME GATE, REWROTE TWO CORRECT LIVE ROWS INTO A STALE ADDRESS. 🟢 THE SAME PASS CLOSED `Gap 475` WITH AN INSTRUMENT AND GRADED 63 BACKLOG ADDRESSES THROUGH A FOURTH TRANSPORT: 15 OF 21 LMS/SIS MCP SERVERS SHIP NO LICENCE FILE AT ALL.**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
@@ -80,8 +153,16 @@ do are now shelved, and the standards layer underneath them is permissive and st
 🔵 **`p352`'s rule, obeyed, and `p367`'s restatement of it:** a census whose input is the
 shelves and whose publication sits in the pass that then writes to them is stale the moment
 it is written, so it is derived **last**. 🟢 **Re-derived over the nine `SHELF_FILES` of the
-tree this pass commits: **2 679** harvested shapes → **33** are not addresses →
-**2 646 addresses** (1.23 % inflation).**
+tree this pass commits: **2 682** harvested shapes → **33** are not addresses →
+**2 649 addresses** (1.23 % inflation).**
+
+🟢 **And `gate-census-currency` earned its place this pass rather than merely passing.** It
+went **RED** mid-pass on `2 679 → 2 682`, because `p371` wrote new rows to the shelves
+after deriving the triple — exactly the staleness `p352` built it to catch. The triple
+above is the re-derivation, taken as the last act before the commit. 🔵 The same rule
+applies to the backlog: **1 859** was the remainder `p371` graded, and re-derived after this
+pass's writes the cited-but-unshelved count is **1 807**, because the rows this pass
+promoted onto live shelves are no longer in it.
 
 🔵 **Both denominators still stand together.** This triple is channel **U** — the addresses
 `p348`'s regex can see. `p367` measured a second channel and found **496** live

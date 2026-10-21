@@ -551,9 +551,34 @@ compose/code/p350-contact-surface/superficie.py	readme	STEM-ONLY	no-upper-ext	HI
 compose/code/p351-address-shape/address_shape.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p351-address-shape/address_shape.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p352-census-currency/census_currency.py	readme	CASE-CLOSED	UPPER-EXT	STANDING	README README.MD README.md Readme.md readme readme.md
+compose/code/p354-grant-path/grant_path.py	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt Copying Copying.txt copying
+compose/code/p354-grant-path/grant_path.py	licence	FOLD-ON-PATH	UPPER-EXT	STANDING	LICENCE LICENCE.MD LICENCE.TXT LICENCE.md LICENCE.txt LICENSE LICENSE.MD LICENSE.RST LICENSE.TXT LICENSE.apache LICENSE.md LICENSE.mit LICENSE.rst LICENSE.txt Licence License License.md License.txt licence license
+compose/code/p354-grant-path/grant_path.py	notice	FOLD-ON-PATH	UPPER-EXT	STANDING	NOTICE NOTICE.TXT NOTICE.txt Notice Notice.txt notice
 compose/code/p356-citation-origin/origin.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p357-hint-layer-cession/hint_layer.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	license
+compose/code/p360-grant-path-gate/grant_path_gate.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
+compose/code/p360-grant-path-gate/probe_address.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
+compose/code/p360-grant-path-gate/probe_address.py	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.MD LICENSE.md LICENSE.txt licence licence.md license license.md license.txt
+compose/code/p364-companion-closure/companion_closure.py	readme	FOLD-ON-PATH	UPPER-EXT	STANDING	README README.MD README.RST README.TXT README.markdown README.md README.rst README.txt ReadMe.md Readme Readme.md readme readme.markdown readme.md readme.rst readme.txt
+compose/code/p364-companion-closure/probe_companions.sh	readme	CASE-CLOSED	UPPER-EXT	STANDING	README README.MD README.markdown README.md README.rst README.txt
+compose/code/p367-bare-slug-channel/bare_slug_channel.py	copying	COMMENT-ONLY	no-upper-ext	STANDING	COPYING
+compose/code/p367-bare-slug-channel/bare_slug_channel.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE LICENSE
+compose/code/p367-bare-slug-channel/bare_slug_channel.py	notice	COMMENT-ONLY	no-upper-ext	STANDING	NOTICE
+compose/code/p367-bare-slug-channel/bare_slug_channel.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
+compose/code/p367-bare-slug-channel/probe_slugs.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
+compose/code/p370-domain-check/domain_check.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p370-gap-gate/gap_gate.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p370-git-tree-payload/adjudicate.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p370-git-tree-payload/probe_tree.sh	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	copying
+compose/code/p370-git-tree-payload/probe_tree.sh	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENSE.TXT
+compose/code/p370-git-tree-payload/probe_tree.sh	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
+compose/code/p370-git-tree-payload/probe_tree.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p371-backlog-grade/build_backlog.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README.md readme
+compose/code/p371-backlog-grade/census.py	copying	FOLD-ON-PATH	no-upper-ext	STANDING	copying
+compose/code/p371-backlog-grade/census.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE LICENSE.md
+compose/code/p371-backlog-grade/census.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	NOTICE.md notice
+compose/code/p371-region-place/place_region.py	licence	COMMENT-ONLY	UPPER-EXT	STANDING	LICENSE.TXT
+compose/code/p371-region-place/place_region.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p385-binding-interval/binding_interval.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p385-binding-interval/binding_interval.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p386-pristine-dedup-gate/dedup_gate.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE

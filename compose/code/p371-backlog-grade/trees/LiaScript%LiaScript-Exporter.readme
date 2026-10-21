@@ -1,0 +1,520 @@
+# LiaScript-Exporter
+
+A generic LiaScript-Exporter that can export educational content into different
+formats, so that LiaScript courses can also be utilized in different Learning
+Management Systems (LMS) or as static documents (PDF, ePub, DOCX, ...).
+Supported export formats include SCORM 1.2, SCORM 2004, IMS, xAPI, Web, PDF,
+ePub, DOCX, Android, and more. See the last section
+[LMS Support List](#LMS-Support-List)
+
+**Try it now in your browser: <https://liascript.github.io/LiaScript-Exporter/>**
+— no installation needed.
+
+> __But__, it is still the easiest way to share your courses via
+> __`https://LiaScript.github.io/course/?YOUR_REPO`__. The LiaScript course
+> website is a fully fledged "offline-first" Progressive Web App (PWA), which
+> allows to store all of your courses and states directly within your browser. If
+> you are coming from Android, you can also directly install the website as an
+> app on your device. Actually, there is no need for a back-end system anymore,
+> but if you need to track the progress of your students, you can use this tool...
+
+## Usage
+
+The LiaScript-Exporter can be used in four ways:
+
+### 1. Web App (recommended for most users)
+
+Open **<https://liascript.github.io/LiaScript-Exporter/>** in your browser and
+start exporting. There is nothing to install, and everything runs in your
+browser: your course is never uploaded to a server.
+
+- Upload your course as Markdown files or as a `.zip` of the whole folder, or
+  import it from a public **GitHub repository**
+- All presets (Moodle, ILIAS, OPAL, SCORM Cloud, ...) and advanced settings are
+  available, just like in the desktop app
+- Supported formats: SCORM 1.2, SCORM 2004, IMS, xAPI, Web, PDF, ePub, DOCX,
+  JSON and RDF
+
+A few things work differently from the desktop app:
+
+- **Android** is not available in the browser. Use the
+  [Docker image](#docker-android-export) instead.
+- **PDF, ePub and DOCX** are created in the browser's memory, so very large
+  courses can be slow or run out of memory. For those, use the desktop app.
+- One export runs at a time, and only while its status page is open.
+- Private repositories and other git hosts (GitLab, ...) can't be imported;
+  download the course and upload it as a `.zip` instead.
+
+### 2. Desktop App
+
+Download and install the desktop application for your operating system directly from the
+[GitHub Releases](https://github.com/LiaScript/LiaScript-Exporter/releases)
+page. It provides the same web UI without needing to install Node.js or run any
+commands — just download, install, and open. Exports run in a separate process
+rather than in a browser tab, so it is the better choice for very large courses.
+
+<video src="https://github.com/user-attachments/assets/05ddc764-8522-437a-b569-00b4df7d98b6" controls width="600"></video>
+
+### 3. Web UI (via CLI)
+
+Install Node.js first (it includes `npm`):
+
+<https://nodejs.org/en/download/>
+
+Then install the LiaScript-Exporter globally:
+
+``` bash
+npm install -g @liascript/exporter
+```
+
+On Linux you may need `sudo`:
+
+``` bash
+sudo npm install -g @liascript/exporter
+```
+
+On Windows you may need to run the terminal with administrator privileges.
+
+Then start the local web server:
+
+``` bash
+$ liaex serve
+```
+
+<video src="https://github.com/user-attachments/assets/f9d02a38-f6e0-45ef-b7a1-f9f424f8f318" controls width="600"></video>
+
+This starts the LiaScript Export Server on port 3000 (default). You can specify a different port:
+
+``` bash
+$ liaex serve --port 8080
+```
+
+The web interface allows you to:
+
+- **Upload files** or specify a **Git repository** as your project source
+- Select an **export target** (Moodle, ILIAS, OPAL, Generic LMS, Web, PDF, ePub, DOCX, xAPI)
+- Configure **advanced settings** for your export
+- Queue export jobs and track their status
+
+All exports are processed asynchronously in a queue, with only one export running at a time. After submitting an export, you'll receive a job ID and can track the progress on a status page.
+
+### 4. CLI
+
+For scripting, automation, or CI/CD pipelines, the exporter can be used directly from the command line. Install the same way as above (Node.js + `npm install -g @liascript/exporter`).
+
+Once installed, use `liaex` or `liascript-exporter`. Core options:
+
+``` shell
+-h --help     show help
+-i --input    input file (Markdown or YAML for projects)
+-p --path     path to pack (defaults to the input file's directory)
+-o --output   output file name (default: "output"; extension set by format)
+-f --format   scorm1.2, scorm2004, ims, web, pdf, epub, docx, xapi,
+              android, project, rdf, json, fullJson (default: json)
+-s --style    additional CSS to inject
+-v --version  print version
+-k --key      ResponsiveVoice key for text-to-speech
+
+   --git-url     clone a git/GitHub repository and export from it (used instead of -i)
+   --git-branch  branch or tag to checkout (default: repository default)
+   --git-subdir  subdirectory within the repository to use as the root
+   --git-file    specific markdown file to export (default: README.md or first .md found)
+```
+
+Format-specific options are documented in the sections below. You can also run
+`liaex --help` at any time to see the full list.
+
+### Export from a Git repository
+
+Instead of pointing `-i` at a local file, you can let the exporter clone a
+repository and export directly from it with `--git-url`. The repo is cloned to a
+temporary directory and removed automatically when the export finishes.
+
+``` bash
+# Export the README.md of a repository to SCORM 2004
+liaex --git-url https://github.com/LiaScript/LiaScript -f scorm2004 -o course
+
+# Export a specific file from a branch/subdirectory
+liaex --git-url https://github.com/user/repo \
+  --git-branch main \
+  --git-subdir docs \
+  --git-file 01_Intro.md \
+  -f web -o course
+```
+
+### Presets
+
+Presets bundle a format together with the recommended options for a specific
+learning platform, so you don't have to remember the right `--scorm-*` flags for
+each LMS. Use them with `-f presets` followed by the preset flag:
+
+``` bash
+liaex -f presets --scormcloud-2004 -i course/README.md -o course
+```
+
+| Preset flag         | Platform     | Format    |
+| ------------------- | ------------ | --------- |
+| `--moodle3`         | Moodle 3.x   | scorm1.2  |
+| `--moodle4`         | Moodle 4.x   | scorm1.2  |
+| `--moodle5`         | Moodle 5.x   | scorm1.2  |
+| `--ilias`           | ILIAS        | scorm1.2  |
+| `--opal`            | OPAL         | scorm1.2  |
+| `--scormcloud-1.2`  | SCORM Cloud  | scorm1.2  |
+| `--scormcloud-2004` | SCORM Cloud  | scorm2004 |
+| `--openolat`        | OpenOlat     | scorm1.2  |
+| `--openedx`         | Open edX     | scorm2004 |
+| `--learnworlds`     | LearnWorlds  | scorm2004 |
+
+Run `liaex -f presets` to list the available presets, or
+`liaex -f presets --<preset>` (without an input) to print a preset's full
+configuration. Any extra options you pass on the command line override the
+preset's defaults.
+
+<video src="https://github.com/user-attachments/assets/591a6c89-f91e-401f-8b6d-8523f7173d78" controls width="600"></video>
+
+### Docker (Android export)
+
+Android exports require the Android SDK, which can be complex to set up locally.
+The easiest approach is to use the pre-built Docker image:
+
+``` bash
+docker pull liascript/exporter
+```
+
+Then run an Android export inside the container:
+
+``` bash
+docker run --rm -v $(pwd):/work liascript/exporter \
+  liaex -f android \
+  -i /work/README.md \
+  --android-appId io.github.liascript.mycourse \
+  --output /work/output
+```
+
+Alternatively you can build the image yourself from the provided `Dockerfile` in
+this repository:
+
+``` bash
+docker build -t liascript/exporter .
+```
+
+<video src="https://github.com/user-attachments/assets/f6cdc80d-1765-41bb-8f09-fa0a8fd26047" controls width="600"></video>
+
+You can also use the Docker container to run the web UI:
+
+``` bash
+docker run --rm -p 4000:4000 liascript/exporter
+```
+
+Then open <http://localhost:4000> in your browser to access the export UI.
+
+<video src="https://github.com/user-attachments/assets/10018dad-05b1-46f8-bfda-e5ffa9e81086" controls width="600"></video>
+
+## Format Reference
+
+### SCORM1.2
+
+If you want to generate a SCORM1.2 conformant package of your LiaScript-course,
+use the following command:
+
+``` shell
+$ liaex -i project/README.md --format scorm1.2 --output rockOn
+
+..
+project/README.md
+project/Lizenz.md
+..
+[17:8:33] SCORM 'Init'
+...
+[17:8:33] SCORM 'Archiving /tmp/lia202037-30349-o6yx80.zb0eo/pro to rockOn.zip'
+[17:8:34] SCORM 'rockOn.zip 4977779 total bytes'
+Done
+
+$ ls
+.. rockOn.zip ..
+```
+
+The format is `scorm1.2` and the input folder is `project/README.md`. All the
+content and sub-folders of this folder is then copied into your SCORM.zip. The
+name is defined by your output definition and contains the current version
+number of you course as well as the current date.
+
+> Note: SCORM 1.2 is too restrictive for storing data, that is why we currently
+> only support to store location information, all states of quizzes, surveys, etc.
+> will be lost after reload.
+>
+> Better use __SCORM2004__ as output
+
+__Text 2 Speech `--key`__
+
+If you want to use text2speech, you will have to register your website (where
+the scorm package will be served) at <https://responsivevoice.org/> ... it is free
+for educational and non commercial purposes. After your registration, you will
+get a key in the format of `KluQksUs`. To inject this key into your package,
+simply add the key as a parameter:
+
+``` shell
+$ liaex -i project/README.md --format scorm1.2 --key KluQksUs --output rockOn
+...
+```
+
+__Mastery Score `--scorm-masteryScore`__
+
+You can define the percentage of quizzes and surveys a student had to fullfil
+in order to accomplish or pass the course by adding the `--scorm-masteryScore`
+parameter. Just set it to 0 to allow all to pass the course, otherwise choose a
+value between 0 and 100. All quizzes and surveys are treated equally, thus if
+your course contains 10 quizzes, every quiz counts as 10%. If you do not set
+this parameter, a default value of 80 percent is used.
+
+``` shell
+$ liaex -i project/README.md --format scorm1.2 --scorm-masteryScore 0 --output rockOn
+...
+```
+
+__Other Root `--path`__
+
+If your README is not in the root of your project, you can also use the `--path`
+parameter to the directory to be copied into your scorm project. You will still
+have to use `--input` to define the main course document, but his has to be
+relative to path parameter.
+
+__`--scorm-organization`__
+
+This parameter simply sets the organization parameter in your SCORM
+`imsmanifest` file. All other parameters are taken from the course.
+
+__`--scorm-typicalDuration`__
+
+Set the expected duration of the course in ISO 8601 duration format (e.g. `PT1H30M0S` for 1.5 hours). Default is `PT0H5M0S`.
+
+__`--scorm-iframe`__
+
+Some LMS like ILIAS or OpenOlat seem to have problems with the required
+`startingParameter` and will not load SCORM1.2 courses properly. To fix this,
+this parameter can be used. It tries to run the course within an additional
+`<iframe>`.
+
+__`--scorm-embed`__
+
+Embed the Markdown source directly into the JavaScript code. Use this for Moodle 4 and other LMS that impose restrictions on dynamic loading of external resources.
+
+__`--lia-subfolder`__
+
+Place course files (Markdown, images, audio, etc.) into a `content/` subfolder, keeping LiaScript app files at the root. Automatically implies `--scorm-embed` for LMS compatibility.
+
+### SCORM2004
+
+This output format provides the same settings as `scorm1.2`, but it allows to
+store state information within the backend LMS. Currently supported are the
+states for:
+
+* quizzes
+* surveys
+* tasks
+
+coding elements currently exceed the max storage capacity, that is why these
+are not stored at the moment.
+
+``` shell
+$ liaex -i project/README.md --format scorm2004 --output rockOn
+..
+project/README.md
+project/Lizenz.md
+..
+[12:38:31] SCORM 'Init'
+...
+[12:38:31] SCORM 'Archiving /tmp/lia2022114-556265-d2jh0k.odg7e/pro to rockOn.zip'
+[12:38:32] SCORM 'rockOn.zip 19588706 total bytes'
+Done
+
+$ ls
+.. rockOn.zip ..
+```
+
+### SCORM Examples
+
+Minimal examples for SCORM1.2 and SCORM2004 for tested LMS:
+
+| LMS                                                   | Command                                                                                     |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| [ILIAS](https://www.ilias.de)                         | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe`             |
+| [learnworlds.com](https://learnworlds.com)            | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe`             |
+| Moodle 3.x                                            | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-iframe`              |
+|                                                       | [YouTube demonstration](https://www.youtube.com/watch?v=yk4uEqoKcpw)                        |
+| Moodle 4.x                                            | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
+| [OPAL](https://www.bps-system.de/opal-lernplattform/) | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
+| [open edX](https://openedx.org)                       | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
+| [OpenOlat](https://www.openolat.com)                  | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
+| [scorm.cloud](https://app.cloud.scorm.com)             | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe`             |
+|                                                       | Additionally check: Course Properties >> Compatibility Settings >> Wrap SCO Window with API |
+
+
+
+### IMS Content
+
+IMS Content is a very simplistic packaging format. Which allows you to embed
+your course different LMS. The standard for the packaging format is defined
+[here](https://www.imsglobal.org/content/packaging/index.html).
+
+We currently support the latest v1.1.4 standard.
+
+``` shell
+$ liaex -i project/README.md --format ims --output course
+..
+project/README.md
+project/Lizenz.md
+..
+6041733 total bytes
+archiver has been finalized and the output file descriptor has closed.
+
+$ ls
+.. course.zip ..
+```
+
+__`--ims-indexeddb`:__ By default no states are preserved, which means, if you
+reload the course, all quiz and coding states are destroyed. By using this
+option a course is generated, which stores the content within the browsers local
+`indexeddb`.
+
+__`--lia-subfolder`:__ Place course files (Markdown, images, audio, etc.) into a `content/` subfolder, keeping LiaScript app files at the root.
+
+``` shell
+$ liaex -i project/README.md --format ims --output course --ims-indexeddb
+..
+project/README.md
+project/Lizenz.md
+..Project settings:
+
+--project-no-meta          Disable the generation of meta information for OpenGraph and Twitter-cards.
+--project-no-categories    Disable the filter for categories/tags.
+--project-category-blur    Enable this and the categories will be blurred instead of deleted.
+--project-generate-pdf     PDFs are automatically generated and added to every card.
+6041733 total bytes
+archiver has been finalized and the output file descriptor has closed.
+
+$ ls
+.. course.zip ..
+```
+
+### WEB
+
+This format will generate an autonomous & standalone web-project that can be uploaded
+to any webserver.
+
+```
+$ liaex --format web -i project/README.md -o outputFolder
+updating title ...
+updating description ...
+updating logo ...
+```
+
+All required sources as well as your project are copied into the `outputFolder` and
+your course-file will be used as the default course. If you have defined the macros
+`comment` and `logo` within your course, these information will also be injected into
+the index.html. Such that, if you share your project via facebook or twitter, this
+information is used to generate preview cards properly.
+
+If you want your site to speak the text out loud, then you will have to add your
+responsivevoice-key via `--key`.
+
+__`--web-zip`:__ Use this parameter to directly bundle all input into a zip
+file instead of a folder.
+
+__`--web-iframe`:__ This will put the course into an secondary iframe, which will
+hide the course-URL (the Markdown-file). Unfortunately, it will not be possible
+anymore to link from outside to a specific slide.
+
+__`--web-indexeddb`:__ Generate a LiaScript package that will store states persistently.
+By default, the database is generated uniquely for the packed course. That means,
+every update will use a new database, which makes sense, if and only if, typos get
+corrected or content is added to the end of the document. Mixing content and moving
+quizzes and surveys to different slides might cause some problems in restoring the
+state. But you can use this parameter with a key:
+
+```shell
+liaex --format web -i project/README.md -o outputFolder --web-indexeddb someKeyToUse
+updating title ...
+updating description ...
+updating logo ...
+```
+
+> **Note:** Web exports must be served over HTTP — opening `index.html` directly
+> in a browser (`file://`) will not work due to browser security restrictions.
+> To preview locally, use any static file server, for example:
+>
+> ```shell
+> # using Node.js serve
+> npx serve outputFolder
+>
+> # using Python
+> python3 -m http.server --directory outputFolder
+> ```
+>
+> Then open `http://localhost:3000` (or the port shown) in your browser.
+
+### Android
+
+> **Tip:** Setting up the Android SDK locally can be complex. The easiest approach
+> is to use the pre-built Docker image — see [Docker (Android export)](#Docker-Android-export) above.
+
+To generate an APK project of your course locally, download the
+[Android SDK](https://developer.android.com/studio) and provide the path
+via the option `--android-sdk`. Additionally you will have to define an `appId`
+via `--android-appId`, which is in most cases a unique URL (in reverse order)
+that is pointing to your website/project. This export uses
+[capacitorjs](https://capacitorjs.com) to pack the entire LiaScript runtime
+environment and your resources into one installable Android apk.
+
+``` shell
+$ liaex -f android \
+  -i ../LiaBooks/Arbeitsbuch-Prolog/README.md \
+  --android-sdk /home/andre/Android/Sdk \
+  --android-appId io.github.liascript.arbeitsbuch-prolog
+...
+../LiaBooks/Arbeitsbuch-Prolog
+../LiaBooks/Arbeitsbuch-Prolog/img
+../LiaBooks/Arbeitsbuch-Prolog/img/turtle.png
+...
+added 401 packages, and audited 402 packages in 34s
+
+23 packages are looking for funding
+  run `npm fund` for details
+
+5 moderate severity vulnerabilities
+
+...
+✔ Adding native android project in android in 37.13ms
+✔ add in 38.39ms
+✔ Copying web assets from dist to android/app/src/main/assets/public in 97.33ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 207.60μs
+✔ copy android in 100.41ms
+✔ Updating Android plugins in 592.70μs
+[info] Found 1 Capacitor plugin for android:
+       @capacitor-community/text-to-speech@1.1.2
+✔ update android in 18.04ms
+✔ Syncing Gradle in 143.57μs
+[success] android platform added!
+Follow the Developer Workflow guide to get building:
+https://capacitorjs.com/docs/basics/workflow
+📦  Capacitor Resources v2.0.5
+-----------------------------
+
+Checking files and directories...
+ ✓  Processing files for: android
+ ✓  Icon file ok (1024x1024)
+ ✓  Splash file ok (2732x2732)
+ ✓  Output directory ok (resources)
+
+Generating files...
+ ✓  Generated icon files for android
+ ✓  Generated splash files for android
+ ✓  Successfully generated all files
+Root path: /tmp/lia202227-209284-1q2g2zd.tn3x
+
+----------------------------------------------
+
+📦  Capacitor resources generated successfully!
+...
+Currently detected usages in: root project 'android', project ':app', project ':capacitor-android', ...
+> Task :app:preBuild UP-T

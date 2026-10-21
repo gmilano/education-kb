@@ -1,0 +1,425 @@
+# Last Bell
+
+[![PyPI](https://img.shields.io/pypi/v/lastbell)](https://pypi.org/project/lastbell/)
+[![Python](https://img.shields.io/pypi/pyversions/lastbell)](https://pypi.org/project/lastbell/)
+[![tests](https://github.com/noestudios/lastbell/actions/workflows/ci.yml/badge.svg)](https://github.com/noestudios/lastbell/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+**Find out about the missing assignment the day the teacher flags it, not
+the night before report cards.**
+
+Last Bell watches your own students' ParentVUE gradebook and their Canvas
+coursework from a computer you control, and tells the people who should
+know, guardians and the students themselves, by email or push, in a
+message safe enough for a lock screen. It runs on a Raspberry Pi, a NAS, or
+the laptop that never sleeps. Free, open source, no account, no company in
+the middle: your credentials and your kids' data stay on a computer you own.
+
+> Not affiliated with Edupoint (ParentVUE / Synergy) or Instructure (Canvas).
+> Built and verified against Montgomery County Public Schools (MCPS). It should
+> work anywhere the Synergy PXP2 web portal runs ([check your district](#does-it-work-outside-mcps)).
+
+**What it tells you**
+
+- **Missing work** the moment Canvas or the gradebook says so.
+- **Due soon**, everything due in the next 7 days, before it's late.
+- **Grades posted** and **grade drops** past a threshold you set.
+- **Still ungraded** past the due date, the quiet kind of missing.
+- **Finals** when a marking period closes, once, then a clean start.
+
+Delivered per person: Mom gets everything in a 4pm digest with the urgent
+items sent right away; the student gets nudges about deadlines and missing
+work but no grades; Grandma gets a morning summary. Nobody logs into anything
+to receive it.
+
+![Home: one card per student with courses, grades, and open-item badges](assets/screenshots/home.png)
+
+<p align="center">
+<img src="assets/screenshots/mobile-student.png" width="40%" alt="Student page on a phone">
+&nbsp;&nbsp;
+<img src="assets/screenshots/mobile-alerts.png" width="40%" alt="Alerts on a phone">
+</p>
+
+*Every screenshot is from `lastbell seed-demo`, a fabricated family at
+end-of-quarter volume, no real students. [More screenshots below.](#a-tour-of-the-dashboard)*
+
+**[Click through the demo](https://noestudios.github.io/lastbell/)**: the
+same fabricated family as a site, nothing to install.
+
+---
+
+## Questions worth asking first
+
+### Who is this for?
+
+A parent or guardian with a student in a district that runs ParentVUE, who
+would prefer to have an easy-to-use dashboard and regular reminders, and
+who has (or can borrow) a computer that stays on. You need to be
+comfortable pasting three commands into a terminal. That's the whole bar;
+the setup wizard does the rest.
+
+### Where does my password go?
+
+Into your operating system's keyring and, at poll time, to your district's
+own login form over HTTPS. It isn't written to a settings file, the database,
+a log, or anywhere on the internet. The one exception is an always-on box
+with no usable keyring, such as a headless Pi, where the wizard explains the
+trade-off and does nothing until you say yes.
+[Exactly where it goes, with code links.](#credentials--student-data-the-actual-guarantees)
+
+### Where does my kids' data go?
+
+Nowhere. Snapshots, history, and alerts live in a SQLite file on the machine
+running Last Bell. The only outbound traffic is to your district's portal
+and Canvas, to the alert channels you configure, and to PyPI when you click
+**Check for updates**. What leaves is what you route, and alert messages
+carry a child's initials rather than a full name.
+[The full list, with code links.](#credentials--student-data-the-actual-guarantees)
+
+### Will the school notice? Is this allowed?
+
+Last Bell's traffic looks like what it is: one parent checking the gradebook
+a few times a day. Eight polls a day by default, with a 15-minute floor
+enforced in code, each one loading the same pages you would by clicking
+through your classes by hand. Portal terms vary by district and vendor and
+are yours to judge; [the entire footprint is listed](#being-a-good-neighbor-to-the-portal)
+so you can. For Canvas it uses the same observer-scoped API as the official
+Canvas Parent app, [within Instructure's policies](#canvas-the-leading-source).
+
+### Why Canvas too? I thought ParentVUE was the gradebook.
+
+It is — but it's the *trailing* one. Teachers flag work missing in Canvas,
+and the gradebook only sees it when the teacher syncs, often days later. So
+**Needs attention** and **Due soon** come from Canvas first, and ParentVUE
+keeps the course grades and the finals. No second password is involved.
+[How the two are merged.](#canvas-the-leading-source)
+
+### Does it work outside MCPS?
+
+Probably, if your district runs the Synergy PXP2 web portal. One command
+gives you a go/no-go without installing anything: pipx fetches Last Bell,
+runs the check, and keeps nothing.
+
+```bash
+pipx run lastbell preflight --district your-host.example --username you --report
+```
+
+Leave off `--username` for an anonymous check that sends no credentials
+anywhere.
+
+It prints a verdict and a redacted report you can paste into a district-report
+issue so the parsers can be taught your district.
+[What it checks, and how to file the report.](#the-district-preflight)
+
+### Why isn't this a phone app?
+
+Because a phone can't do the job. Last Bell's whole value is checking every
+few hours, and phones don't let apps run in the background on a schedule.
+Something always on has to do the watching — a Pi, a NAS, an old laptop.
+The dashboard is built for a phone screen (no separate app), and the `ntfy`
+and Pushover channels deliver real push notifications to one.
+
+### Why no text messages?
+
+On purpose. The carriers' free email-to-text gateways are gone or going
+(T-Mobile's shut down in December 2024, AT&T's in June 2025, Verizon's is
+being retired by March 2027 and already drops messages silently). A channel
+that reaches some people and never reaches others is worse than none, so a
+gateway address is refused at entry with that explanation. Email works
+everywhere; `ntfy` is free push if you want it on a lock screen.
+
+### Can my kid get the alerts too?
+
+Yes. Students are watchers like anyone else, and
+subscriptions are filtered by alert type, so a student typically gets
+missing-work and deadline nudges and no grades. The people being watched
+are on the watcher list.
+
+### What do I need?
+
+- A computer that stays on: Raspberry Pi, NAS, Mac, Linux box, or Windows
+  machine. It becomes a background service with one command.
+- Python 3.9 or newer and [pipx](https://pipx.pypa.io/stable/how-to/install-pipx.html)
+  — or Docker, if the box already runs it (see *Run it as a container*).
+- An email account it can send from (any SMTP account you own). The wizard
+  asks for it and sends a test.
+
+### What does it cost?
+
+It costs nothing and is MIT licensed. Email rides your own account; `ntfy` is
+free; Telegram and Pushover are optional.
+
+### What happens when it breaks?
+
+You hear about it. One failed poll just waits for the next cycle. When the
+failure lasts (two polls for a rejected sign-in, a day for an unreachable
+portal), every guardian gets one message on their own channels saying
+what is wrong and what to do, and one more when checking resumes. The
+home page footer names the failure meanwhile. While the portal is
+rejecting the sign-in, the poller slows to once a day so a stale password
+can't lock the account. If the portal changes shape, `lastbell preflight`
+tells you which parser stopped understanding what, in a redacted report
+you can file as an issue. If Canvas is unreachable, the gradebook still
+gets checked.
+
+If the whole machine stops, because the Pi lost power or the SD card died,
+nothing can email you from a box that is off. For that there is a
+heartbeat: point `LASTBELL_HEARTBEAT_URL` at a free
+[healthchecks.io](https://healthchecks.io) check or an Uptime Kuma push
+monitor, and Last Bell fetches it after every successful poll. That
+service raises the alarm when the pings stop.
+
+When you want to see for yourself, `lastbell status` puts it on one
+screen: which version is running and whether a newer one is installed but
+not yet restarted, whether the service is running, when the last
+successful check was and when the next is due, who is subscribed to whom,
+and where the password lives (never the password itself). Students appear
+as initials and home directories as `~`, so the output can go straight
+into an issue.
+
+### How do I remove it?
+
+```bash
+lastbell forget
+```
+
+It lists what it will remove (the background service, the database with
+every snapshot and alert, the settings file, the keyring entries), asks,
+and does it. Then `pipx uninstall lastbell` removes the program.
+
+---
+
+## Quickstart
+
+Three commands, no files to edit. First get
+[pipx](https://pipx.pypa.io/stable/how-to/install-pipx.html) (macOS: `brew install pipx`,
+Windows: `py -m pip install --user pipx`, Debian/Ubuntu: `sudo apt install pipx`),
+then:
+
+```bash
+pipx install lastbell
+```
+
+```bash
+lastbell setup
+```
+
+```bash
+lastbell run --loop
+```
+
+`lastbell setup` is an interactive wizard: it confirms your district's portal
+(MCPS offered as the default) before asking anything personal, puts your
+password straight into the OS keyring, verifies login + data path + parsers
+with the preflight, walks you through one notification channel (email; ntfy
+push for the terminal-minded) ending in a live test message, offers to run
+the first collection, and offers to install itself as a background service
+so the third command above becomes optional. Re-run it any time. It
+remembers your answers. Settings land in your user config dir, data in your
+user data dir (both printed at the end).
+
+**Keeping it running.** Alerts only happen while `lastbell run --loop` is
+running, so on the machine that will do the watching:
+
+```bash
+lastbell install-service
+```
+
+Linux gets a *user* systemd unit (no sudo) enabled at boot with login
+lingering, so it runs with nobody logged in; macOS gets a launchd agent that
+starts at login and restarts if it stops; Windows is shown the Task Scheduler
+command to paste. `--print` shows exactly what would be written and run
+without touching anything, `--uninstall` reverses it. On a Pi that boots
+without a desktop session, say **yes** when `lastbell setup` asks whether Last
+Bell will run as a background service. That moves the password from the
+keyring (which a boot-time service can't unlock) into the owner-only settings
+file, and the wizard says so before doing it. The installer also warns if the
+box's clock is on UTC: digests and quiet hours follow the local clock.
+
+**Upgrading.** The dashboard footer's **Check for updates** link tells you
+when a newer release exists. Then, on the machine running it:
+
+```bash
+lastbell upgrade
+```
+
+That runs `pipx upgrade lastbell` and, when it installed something newer
+(or an earlier upgrade was never followed by a restart), restarts **both**
+long-running copies, the poller and the dashboard, which each keep the old
+version in memory until restarted. When nothing changed it says "nothing to
+restart" and leaves them alone; `lastbell upgrade --restart-only` restarts
+them regardless. On Linux the restart is the two user units; on macOS the
+launchd agent, with a reminder about the dashboard. By hand, the same thing
+is `pipx upgrade lastbell`, then `systemctl --user restart lastbell` (plus
+`lastbell-dashboard` if you set that up) on Linux, or `lastbell
+install-service` again on macOS. The dashboard footer flags "installed —
+restart to use it" until its own process has been restarted.
+
+**Backing up.** One command, one file:
+
+```bash
+lastbell backup
+```
+
+The zip holds the database, copied through SQLite's own backup API so a copy
+taken mid-poll is still whole, and the settings file with every secret left
+out: the portal and SMTP passwords, channel tokens, the dashboard key. It is
+written owner-only and still holds names and grades, so keep it somewhere
+private. `lastbell restore <file>` brings it back on a fresh install. It
+refuses to replace an existing database unless told `--force` (and then keeps
+the old one beside it), merges settings without touching the secrets already
+there, and reminds you to store the password again with `lastbell setup` or
+`lastbell set-password`.
+
+### Run it as a container
+
+Already running Docker — on a NAS, a home server, a Pi with Portainer? Then
+Python and pipx aren't needed: every release is also a container image,
+`ghcr.io/noestudios/lastbell`, built by the same tag from the same wheel,
+for `linux/amd64` and `linux/arm64` (a 64-bit Raspberry Pi). Put
+[`docker-compose.yml`](docker-compose.yml) in an empty folder (on Linux,
+`mkdir -p data` there too, so the folder is yours and not root's) and run
+three commands:
+
+```bash
+docker compose run --rm lastbell setup
+```
+
+```bash
+docker compose up -d
+```
+
+```bash
+docker compose exec dashboard lastbell dashboard --show-key
+```
+
+The first is the same wizard as above, in a throwaway container: it takes
+the settings-file path without asking about keyrings (an image has none),
+runs the preflight and the first collection, and skips the service step —
+Docker is the service. The second starts the poller and the dashboard and
+keeps them running across reboots. The third prints the link to open once:
+inside a container even your own browser arrives over the Docker bridge, so
+the dashboard asks for its key one time and then remembers the browser.
+
+**The volume.** `./data` is mounted as `/data`, and that is everything: the
+database, the snapshots, and the settings file the wizard wrote (`data/env`,
+owner-only — the password is in it, in plain text, the same trade-off an
+always-on Pi makes, because the image has no keyring). Back it up by backing
+up the folder, or `docker compose exec lastbell lastbell backup` writes the
+usual zip into it. The image runs as an unprivileged user with id 1000; if
+the containers can't write to `data/` — the usual NAS symptom, and the
+wizard says so — hand the folder over once: `sudo chown -R 1000:1000 data`.
+
+**Upgrading.** Two commands, in the folder with `docker-compose.yml`:
+
+```bash
+docker compose pull && docker compose up -d
+```
+
+Compose restarts only the containers whose image changed. `lastbell
+upgrade`, `lastbell status`, and `lastbell install-service` know when they
+run in a container and say this instead of looking for pipx or systemd, and
+the footer's "restart to use it" badge never appears there, because the
+image is the only copy. To pin a release instead of following `latest`,
+change the two `image:` lines to `ghcr.io/noestudios/lastbell:X.Y.Z`.
+
+**Reaching it by name.** The compose file publishes the dashboard on the
+host's loopback only (`127.0.0.1:8321`). To open it from other devices,
+widen that line to `8321:8321`; and if you reach the host by a name (a NAS
+name, home DNS) list it in the one line under the dashboard service —
+`LASTBELL_DASHBOARD_HOSTNAMES: nas.home.arpa` — because the dashboard
+refuses names it doesn't recognize (see *The dashboard*, below). Set `TZ`
+in the compose file to your own time zone: digests and quiet hours follow
+it. Packaged apps for Umbrel, Home Assistant, and NAS app stores come later;
+this image is what they will wrap.
+
+<details>
+<summary>Running from a source checkout instead</summary>
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e .
+
+cp .env.example .env          # then edit: district + username (NOT the password)
+lastbell set-password       # stores the password in your OS keyring
+lastbell preflight          # district go/no-go check (values redacted)
+
+lastbell run                # one pass: snapshot, diff, alert (first run = baseline)
+lastbell run --loop         # keep polling every LASTBELL_POLL_MINUTES
+lastbell collect            # read-only JSON dump of what a run would persist
+```
+
+A checkout's `.env` (in the working directory) takes precedence over the
+installed settings file, and typically pins `LASTBELL_DB_PATH=data/lastbell.db`
+to keep state inside the repo tree. The `Dockerfile` is the one each release
+builds the published image from (*Run it as a container*, above); to build it
+from the working tree instead, uncomment the `build: .` lines in
+`docker-compose.yml` and `docker compose build`. `LASTBELL_PASSWORD_FILE` (a
+Docker secret) is still honored for anyone who would rather not keep the
+password in `data/env`.
+</details>
+
+## The dashboard
+
+Everything after setup happens in the dashboard. `lastbell dashboard` serves
+it at http://127.0.0.1:8321: students, assignments, grade history, the alert
+log, and a **Settings** page where you add the people who should hear about
+each student, give each an email address, pick which alert types they get,
+and set quiet hours. Every address row has a **test** button that sends the
+same one-line message the wizard did, so "does this actually reach Grandma's
+phone?" is one click. The footer shows the version you're running and a
+**Check for updates** link that asks PyPI, on that click only, whether a
+newer release exists.
+
+It listens on `127.0.0.1` only. `--host 0.0.0.0` (or
+`LASTBELL_DASHBOARD_HOST`) opens it to the rest of the house, and then two
+things apply. **A key.** Requests from the machine itself need nothing;
+every other device needs the dashboard's key once. The dashboard generates
+a long random one on first start, keeps it in the settings file, and prints
+a link like `http://raspberrypi.local:8321/?key=…`. Open that link on a
+phone and its browser is remembered; anything without the key gets a page
+asking for it. `lastbell dashboard --show-key` prints the link again. **A
+name check.** It answers only to names it recognizes: localhost, IP
+addresses, `.local` names, the bound address, and anything you list in
+`LASTBELL_DASHBOARD_HOSTNAMES`; a request addressed to any other hostname
+gets a refusal page explaining why. That is what stops a web page you
+happen to visit from reaching the dashboard through your own browser (DNS
+rebinding).
+
+The dashboard speaks plain HTTP, so the key crosses the network in the
+clear. On a home network or over Tailscale that is fine. On the public
+internet it is not: binding to a public address is refused, and the right
+shape there is loopback behind a TLS reverse proxy that does its own login.
+
+You start with one watcher automatically: the first run creates a guardian
+named after the credential holder, subscribed to every student, on the
+considerate default of one daily digest at 4pm, with urgent alert types
+(missing assignment, upcoming deadline, grade drop) sent immediately. Rename
+or remove it freely.
+
+Want to see it populated before pointing it at your own kids? `lastbell
+seed-demo` fabricates a fake family at end-of-quarter volume (two marking
+periods, hundreds of assignments, months of history, no real student data)
+and `lastbell dashboard --db <path it prints>` serves it.
+
+### A tour of the dashboard
+
+**The four tracking cards.** A student's page is a set of views, and the
+cards are both the summary and the switch:
+
+![The four tracking cards: Needs attention, Due soon, Recent grades, Everything](assets/screenshots/stat-cards.png)
+
+- **Needs attention.** Work the teacher marked missing, plus anything
+  past due with no grade posted. The count, this week's change, and a
+  six-week trend line, so a bad week and a slow slide look different.
+- **Due soon.** What's coming in the next 7 days (`LASTBELL_LOOKAHEAD_DAYS`),
+  with the next two named right on the card.
+- **Recent grades.** The average of the last ten scores, shown as bars
+  against the term average: the fastest read on how things are going
+  *right now*, before it moves the course grade.
+- **Everything.** The term average across all courses and its trend, and
+  the door into the full archive: every class, every assignment, closed
+  terms folded to their finals.
+
+<details>
+<summary>More screens: s

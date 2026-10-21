@@ -1574,3 +1574,69 @@ backwards. 🔵 **And the gate went green because `ALIAS_REGISTER` pointed at a 
 passes older than the best one on the base, which had no row for that pair at all.** A
 gate is only as current as the data file it is handed.
 
+## 50. 🟢 🆕 The licence cell in a 2026 "best open-source LMS" roundup errs toward **permissive** — four checked, four wrong, three in the direction that costs money
+
+🔴 **Four claims, four payloads, measured `2026-10-21`.** Frappe LMS, reported **MIT**, is
+**AGPL-3.0** (33 893 B at `HEAD/license.txt`). Forma LMS, reported **Apache-2.0**, is
+**GPL-2.0** (18 346 B at `master/html/license.txt`, with **no grant in the root tree at
+all**). Sakai, reported **Apache-licensed**, is **ECL-2.0** — an Apache derivative with a
+different patent clause and its own SPDX id. OpenEduCat, reported as the combined LMS/SIS
+option, is real but the address the roundups imply (`openeducat/openeducat`) **does not
+resolve**; the repository is `openeducat/openeducat_erp`, **LGPL-3.0** on branch `19.0`.
+
+🟢 **The direction is the trend, not the count.** Three of the four errors make a project
+look *more* permissive than its payload grants. 🔴 **An error in that direction is only
+discovered at delivery**, when a closed deliverable has already been sized and sold against
+a copyleft dependency. An error in the other direction merely loses an opportunity.
+
+🔵 **Why this belongs in a trends file rather than a defect log.** The roundup genre is the
+single most common inbound channel for platform selection — this base's own prescribed
+vertical leg has returned nothing else for fourteen consecutive passes — and it is
+systematically wrong on the one field that cannot be renegotiated. 🟡 Four claims is not a
+measured error rate for the genre, and this section claims none; it is an existence proof
+that the channel is unreliable where it matters most, with the remedy already standing:
+read the payload, at a pin, before the licence enters a proposal.
+
+## 51. 🔴 🆕 This industry's unshelved supply gap is **credentialing and OER**, not tutoring — and it was invisible because the domain filter had no word for it
+
+🟢 **Measured out of sample on 1 859 addresses.** `p370`'s domain classifier scored 92.6 %
+in sample and **76.5 %** on a hand-adjudicated held-out sample of 40 (16/16 on
+`EDUCATION`, 5/8 on `NOT-EDUCATION`, 5/10 on `SLUG-TRAP`). 🟢 **All eight errors fell in
+two classes, and neither was tutoring**: digital credentialing (`open badge`,
+`openbadges`, `verifiable credential`, `europass`, the **European Learner Model**) and open
+educational resources plus national curriculum standards (`oer`, `course of study`, `mext`,
+`学習指導要領`). Adding those terms recovered **73 addresses** into the domain, **58** of
+them permissive with a root grant.
+
+🔵 **The mechanism is worth naming because it generalises.** A domain filter built from the
+*products* an industry sells will miss the *standards layer* the industry runs on, because
+standards repositories describe a specification rather than a use. §6 of this file has
+called credentials *"the skills-based hiring substrate"* since early in this base's life —
+🔴 **and the shelves had almost no credentialing rows, because the instrument that decides
+what may be shelved could not see them.** A trend can be recorded in a file and absent from
+the index at the same time, and nothing reconciles the two automatically.
+
+🟢 **What the layer looks like now it is visible:** 1EdTech's and IMS Global's own
+validators (Apache-2.0), the **MIT Digital Credentials Consortium** family (MIT and
+BSD-3-Clause), `cassproject/CASS` for competency frameworks (Apache-2.0), Blockcerts'
+issuer (MIT), LibreTexts and Penn State's HAX for OER (MIT, Apache-2.0) and the EU's X5GON
+pipeline (BSD-2-Clause). 🔴 **With one archive in the middle of it** — the European
+Commission's own ELM repository, *"Archived Repository — no longer updated."*
+
+## 52. 🔴 🆕 Regional supply is asymmetric in **volume** and symmetric in **licence** — and LATAM's supply reaches a different incumbent entirely
+
+🟢 **Placed first-hand from 1 859 payloads**, not from prose: **118** in-domain addresses in
+North America, **86** EMEA, **58** APAC, **30** LATAM. 🟢 **The permissive share barely
+moves across them** — 71 %, 53 %, 72 %, 57 % — which is the fourth independent
+corroboration of §22: **the licence variable is producer type, not geography.**
+
+🔴 **The volume asymmetry is four-to-one against LATAM and is not softened here.** 🟢 **The
+shape difference is the more useful finding.** `p370`'s incumbent-LMS bridge class reaches
+ten platforms, every one of them North American, European or Asian software. The LATAM
+supply reaches **SIGAA** and **SIU-Guaraní** — the SIS platforms Brazilian federal and
+Argentine national universities actually run — and those appear in no bridge table on this
+base. 🔵 **So "LATAM has less supply" and "LATAM has supply for a system nobody else
+integrates" are both true, and only the second one changes a proposal.** A LATAM
+higher-education engagement that budgets a Canvas or Banner integration has specified the
+wrong incumbent before any licence question arises.
+

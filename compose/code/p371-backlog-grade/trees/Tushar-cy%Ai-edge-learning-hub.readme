@@ -1,0 +1,58 @@
+# Offline AI Tutor (Class 10)
+
+## Overview
+A zero-hallucination, RAG-based AI tutor for Class 10 Maths and Science.
+Runs entirely offline using Ollama and ChromaDB.
+
+## Prerequisites
+1.  **Python 3.10+**
+2.  **Node.js 18+**
+3.  **Ollama** installed and running (`ollama serve`).
+    *   Pull model: `ollama pull llama3` (or model defined in `rag/config.py`).
+
+## Setup
+
+### 1. Install Backend Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Install Frontend Dependencies
+```bash
+cd frontend
+npm install
+cd ..
+```
+
+## Running the System
+
+### 1. Start Ollama
+Ensure Ollama is running in the background.
+```bash
+ollama serve
+```
+
+### 2. Ingest Data
+Load the JSON content from `/boss` into the Vector Database.
+```bash
+python -m rag.ingestion
+```
+
+### 3. Start Backend Server
+```bash
+uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
+```
+Swagger UI available at: `http://localhost:8000/docs`
+
+### 4. Start Frontend
+```bash
+cd frontend
+npm run dev
+```
+Access UI at: `http://localhost:3000` (or displayed Network URL).
+
+## Project Structure
+- `boss/`: Source JSON reference books.
+- `rag/`: Retrieval Augmented Generation logic (Chroma + Ollama).
+- `backend/`: FastAPI application.
+- `frontend/`: React + Vite application.

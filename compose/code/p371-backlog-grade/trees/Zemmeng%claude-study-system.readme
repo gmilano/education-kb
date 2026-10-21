@@ -1,0 +1,369 @@
+<div align="center">
+
+<img src="docs/assets/banner.svg" alt="claude-study-system —— 让 Claude Code 带着你一页一页学课件" width="100%">
+
+<br>
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-0969da.svg)](LICENSE) [![Claude Code](https://img.shields.io/badge/Claude_Code-hooks_%2B_slash_commands-cc785c.svg)](https://claude.com/claude-code) [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-3776AB.svg?logo=python&logoColor=white)](#-依赖) [![Checks](https://img.shields.io/badge/consistency_checks-14-1a7f37.svg)](#-一致性检查) [![Docs](https://img.shields.io/badge/docs-中文-8250df.svg)](docs/架构说明.md) [![LLM](https://img.shields.io/badge/LLM-Claude_%7C_DeepSeek_%7C_Kimi_%7C_OpenAI--compatible-6e7781.svg)](docs/接入其他模型.md) [![Smoke test](https://github.com/Zemmeng/claude-study-system/actions/workflows/smoke.yml/badge.svg)](https://github.com/Zemmeng/claude-study-system/actions/workflows/smoke.yml)
+
+**中文** · [English](README_en.md) · [架构说明](docs/架构说明.md) · [自定义指南](docs/自定义指南.md) · [接入其他模型](docs/接入其他模型.md) · [作业审查](docs/作业审查.md) · [规则档案](shared/规则档案.md)
+
+</div>
+
+---
+
+一套跑在 **Claude Code** 里的学习架构。它不是一堆提示词，而是一个**带门禁的工作流**：
+
+- Claude 按课件一页一页讲，讲完一块就出题，你答完它批，进度记进账本。
+- **三个 hook** 分别在会话开始、每条消息、每个回合结束时介入，把「Claude 应该记得的规则」变成「做不到就拦住」。
+- **不绑定 Claude**：可以让 Claude Code 改用 DeepSeek、Kimi、智谱 GLM，也可以用自带的 `./study` 接任何 OpenAI 兼容模型（OpenAI、通义、OpenRouter、Ollama 本地模型…）。
+
+> 作者读 CS 硕士的一个学期里，四门课全程用它跑，[规则档案](shared/规则档案.md)里记着 53 条规则各自是怎么来的。
+> 这里是**脱敏后的模板版**：课程材料、作业、成绩都不在里面，示例数据是两门虚构课（`algorithms` / `networks`）。
+
+<details>
+<summary><b>目录</b></summary>
+
+- [特性](#-特性)
+- [架构总览](#-架构总览)
+- [一个会话的生命周期](#-一个会话的生命周期)
+- [学一份课件](#-学一份课件)
+- [写文件分区](#-写文件分区)
+- [交前审查](#-交前审查)
+- [实际长什么样](#-实际长什么样)
+- [快速开始](#-快速开始)
+- [接入其他模型](#-接入其他模型)
+- [命令](#-命令)
+- [一致性检查](#-一致性检查)
+- [目录结构](#-目录结构)
+- [依赖](#-依赖)
+- [常见问题](#-常见问题)
+
+</details>
+
+## ✨ 特性
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**🧭 一个对话只做一件事**
+
+`/学` 讲一份课件，`/作业` 推进一份作业，`/总控` 清杂活。开场 Claude 摆菜单让你点，不用记命令。
+
+</td>
+<td width="33%" valign="top">
+
+**🔒 三道门把规则机械化**
+
+开场注入导航层；每条消息注入必做清单；每个回合结束跑 14 项一致性检查，有硬伤就拦回。
+
+</td>
+<td width="33%" valign="top">
+
+**📒 账本是唯一事实来源**
+
+进度、截止、断点、学时都记在 `shared/` 的账本里。新对话从文件取，不靠记忆，也不凭印象。
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**✅ 完成 = 讲 + 答 + 批**
+
+一块不超过 5 页真内容，讲完必须停下出题。三件不齐，台账不许推进（凭证锁）。
+
+</td>
+<td valign="top">
+
+**🎙️ 转录只当配料**
+
+讲到第 N 页才去录音转录里找那一段。老师口头说的考点、不考、易错当场标出来。
+
+</td>
+<td valign="top">
+
+**📊 一键出看板**
+
+`/总控` 现算现编两份 PDF：接下来怎么排、欠什么、完成进度、学期 DDL。
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**🔍 交前多 agent 审查**
+
+`/审查`：多个 Sonnet 按镜头并行找问题 → 核实 → 判官出报告。按作业的 AI 政策分三档，不允许 AI 的作业只指出问题、不给答案。
+
+</td>
+<td valign="top">
+
+**🔌 不绑定模型**
+
+Claude Code 可以改用 DeepSeek、Kimi、GLM；自带运行时 `./study` 能接任何 OpenAI 兼容模型。
+
+</td>
+<td valign="top">
+
+**🧪 每次推送自动验证**
+
+GitHub Actions 在 Ubuntu 和 macOS 上跑新用户部署、运行时协议、审查编排三套测试。
+
+</td>
+</tr>
+</table>
+
+## 🧱 架构总览
+
+<p align="center"><img src="docs/assets/architecture.svg" alt="架构总览：守护层、会话层、状态层" width="100%"></p>
+
+三条设计原则：
+
+1. **规则写进文件，不靠对话记忆。** `CLAUDE.md` 每个会话自动加载。容易被埋在长上下文里的几条关键规则，再由每条消息都响的 hook 重新注入一遍。
+2. **每个事实只有一个出处。** 页数只记在台账里，别处只放指针。两处各抄一份必然分叉，原项目栽过三次。
+3. **能机械检查的，就别靠自觉。** `检查.py` 把账本之间的矛盾变成 ❌，再由 Stop hook 拦住这个回合。
+
+→ 每个组件的职责和契约见 **[架构说明](docs/架构说明.md)**。
+
+## 🔄 一个会话的生命周期
+
+<p align="center"><img src="docs/assets/session-lifecycle.svg" alt="开场门、消息门、收尾门在会话中的位置" width="100%"></p>
+
+| 门 | 做什么 | 拦 |
+|---|---|:-:|
+| **开场门**<br><sub>`SessionStart` · `inject-context.sh`</sub> | 注入约 5 KB 导航层：周次 · 近期硬截止 · 各课状态 · 断点 · 当天提醒 · 体检 | — |
+| **消息门**<br><sub>`UserPromptSubmit` · `inject-time.sh`</sub> | 当前时间 · 开讲前必查对照表 · 批改前先贴题干 · 出题全英文 · 新出现的硬伤 | — |
+| **收尾门**<br><sub>`Stop` · `stop-check.sh`</sub> | 跑 `检查.py`：有 ❌ 就 `exit 2` 拦回；全绿 → 行动项审计 → `git commit` 快照 | ✅ |
+
+## 📖 学一份课件
+
+<p align="center"><img src="docs/assets/study-loop.svg" alt="学一份课件的八步循环" width="100%"></p>
+
+块中只出判断、选择、填空，测的是「会不会」；简答和 justify 留到一讲结束的**收尾卷**，测的是「英文写不写得出得分的句子」。出题、批改、讲解形态的完整规则在 [`CLAUDE.md`](CLAUDE.md)。
+
+## 🔐 写文件分区
+
+<p align="center"><img src="docs/assets/write-partition.svg" alt="学习类与总控类会话的写权限和交接单通道" width="100%"></p>
+
+## 🔍 交前审查
+
+<p align="center"><img src="docs/assets/review-flow.svg" alt="作业交前审查：三档政策和七步流程" width="100%"></p>
+
+写完作业、交之前说一句「审一下」（或 `/审查 <课程> <代号>`）。它从原作者一个学期里 5 套真实的交前审查提炼而来，40 条踩过的坑逐条落成了规则。
+
+| | 做法 |
+|---|---|
+| **档位** | 读 `CLAUDE.md` 分级表里**那一份作业**的那一行定档，只能等于或严于它；表里没有的（未核）最多 `guided` |
+| **镜头** | 30 个镜头按作业类型（报告 · SQL · 代码 · 计算 · 简答 · 建模）选默认组合，`shared/工具/审查镜头库.json` 可增可减 |
+| **核实** | 每条发现先由 facts 镜头亲自核原文（默认不成立），成立的再由 marker 判会不会扣分；判官复现每一条必改 |
+| **防泄漏** | `guided` 档四层：schema 里没有改法字段 → prompt 禁止 → 正则剥除 → 判官通读删答案 |
+| **规模** | 默认 ≤ 10 个 agent，开跑前问一次；超过要单独同意。每个 agent 先落盘，撞限额能续跑 |
+| **不用 Claude Code** | `python3 shared/工具/作业审查.py run …` 用 `.env` 里的任意模型跑简化版（不运行代码、不看图，报告里写明）|
+
+设计、schema 和 40 条教训见 **[作业审查](docs/作业审查.md)**。
+
+## 📸 实际长什么样
+
+<p align="center"><img src="docs/assets/nav-layer.svg" alt="开场门注入的导航层" width="100%"></p>
+<p align="center"><sub>开场门注入的导航层（示例数据）。Claude 照最后的「现在可以做的」摆菜单给你点。</sub></p>
+
+<table>
+<tr>
+<td width="55%" valign="top"><img src="docs/assets/dashboard.png" alt="学习看板 PDF 第 1 页"><br><sub><code>/总控</code> 出的学习看板：接下来怎么排 · 完成进度 · 硬截止 · 还欠什么</sub></td>
+<td width="45%" valign="top"><img src="docs/assets/ddl-table.png" alt="学期 DDL 总表"><br><sub>学期 DDL 总表：只放 quiz · 作业 · 项目 · 考试，加上各门的权重构成</sub></td>
+</tr>
+</table>
+
+## 🚀 快速开始
+
+**1. 克隆并试跑示例**
+
+```bash
+git clone https://github.com/Zemmeng/claude-study-system.git
+cd claude-study-system
+python3 shared/工具/导航.py    # 预览开场门会注入什么
+python3 shared/工具/检查.py    # 跑一遍一致性检查（应该全绿）
+claude                         # 在项目根目录启动 Claude Code
+```
+
+开场会看到导航层和一个菜单。示例里 `algorithms` 的 `w02-L1` 停在半截，可以直接说「接着上次那一块」。
+
+**2. 换成你自己的学期**
+
+```bash
+$EDITOR shared/配置.json                 # ① 学期日历 + 你的课
+mkdir -p cs101/课件 && cp ~/Downloads/lec1.pdf cs101/课件/w01-L1.pdf   # ② 可选：已经拿到的课件先放进去
+python3 shared/工具/初始化.py            # ③ 预演，看它要做什么
+python3 shared/工具/初始化.py --apply    #    执行
+```
+
+`初始化.py --apply` 一条命令做完五件事：删掉两门示例课 → 给每门课建目录和 `CLAUDE.md` 模板 → 生成空白账本（周次表按配置里的学期日历算）→ 已放进去的课件自动登记台账并预扫 → 跑一遍检查。
+
+| 之后 | 怎么做 |
+|---|---|
+| 拿到新课件 / 加一门课 | 放进 `<课程>/课件/wNN-LN.pdf` 或改配置，再跑一次 `初始化.py --apply`，只补缺的，不覆盖已有内容 |
+| 个性化 | 改 `CLAUDE.md` 里带 ✏️ 的三节：「关于他」「他的作息」「他的课表」 |
+| 开始学 | `claude` |
+
+逐项说明和每份账本的格式契约见 **[自定义指南](docs/自定义指南.md)**。
+
+> [!WARNING]
+> **你自己的副本里会有课件、录音、作业，别设成 public。** 课件和录音一般是学校的版权，很多课明文禁止分享作业代码。
+
+## 🔌 接入其他模型
+
+不想用 Claude，或者想用自己的 API key，有两条路，共用同一份 `.env`：
+
+```bash
+cp .env.example .env      # 填 STUDY_PROVIDER（deepseek · kimi · glm · qwen · openai · openrouter · ollama …）和 STUDY_API_KEY
+```
+
+| 路线 | 适合 | 命令 |
+|---|---|---|
+| **A · Claude Code + 别家模型** | 功能最全（子 agent、MCP 都在）；厂商要有 Anthropic 兼容接口：DeepSeek · Kimi · 智谱 GLM | `python3 shared/工具/切换模型.py deepseek`，然后 `claude` |
+| **B · 自带运行时** | 不装 Claude Code；**任何 OpenAI 兼容接口**都行 | `./study` |
+
+两条路的三道门、规则、`/学` `/作业` `/总控` 都是同一套文件。功能差别、预设列表和权限说明见 **[接入其他模型](docs/接入其他模型.md)**。
+
+## 🧰 命令
+
+| 命令 | 做什么 |
+|---|---|
+| `/学 <课程> <deck>` | 只学一份课件：讲 → 出题 → 你答 → 批 → 记账 → 收尾卷 |
+| `/作业 <课程> <代号>` | 只推进一份作业：先查这份作业自己的 AI 条款，再读 spec → 指引 / 检查 / 排版 → 交 |
+| `/总控` | 杂活、基建、改脚本：先清交接单，再扫邮箱、归档、预扫、转录、出看板、体检 |
+| `/next` | 现算学习看板 PDF（`/总控` 的子流程）|
+| `/week` | 周复盘 + 下周计划 |
+| `/drill <课程> <知识点>` | 出题考你，用于复习和收尾卷 |
+| `/审查 <课程> <代号>` | 作业交前审查（`/作业` 的子流程）：多 agent 找问题 → 核实 → 判官出报告，按 AI 政策分三档 |
+| `/预扫` | 新课件到手先扫一遍：页数 · 页脚 offset · 是不是续篇 · 动画帧 · 前置链 |
+
+不想记命令也行：直接说「学 algorithms w02-L1」「我下了 w03 的录音」「有截图了」「编译一下」，Claude 自己会走对应的流程。
+
+## 🚦 一致性检查
+
+`shared/工具/检查.py` 只用标准库，跑一遍约 0.1 秒。Stop hook 每个回合都跑它，有 ❌ 就不许结束回合。
+
+| # | 查什么 | 级别 |
+|---|---|:-:|
+| `[0]` | 核心数据源都存在、可读 | 🔴 |
+| `[1·语义]` | 学习日志速查表说「全清」，台账却还是 ❌ | 🔴 |
+| `[2]` | 速查表里出现页码（页码只许在台账里）| 🔴 |
+| `[3]` | 规则文件里引用的路径都真实存在 | 🔴 |
+| `[4]` | 学时：顶部累计 = 各科小计 = 明细逐行求和 | 🔴 |
+| `[7]` | 看板 PDF 比账本旧 | 🟡 |
+| `[8]` | 台账页数 = 课件 PDF 真实页数（`pdfinfo`）| 🔴 |
+| `[9]` | 台账写「字幕已收」的，磁盘上真有那个文件 | 🔴 |
+| `[10]` | 收件箱已清空 | 🟡 |
+| `[11]` | 断点节不超过 40 行 | 🟡 |
+| `[12]` | 交接单已被总控处理 | 🟡 |
+| `[13]` | 主 `CLAUDE.md` 的规则改了，下游流程文件跟上了没有（段落哈希比对）| 🔴 |
+| `[14]` | 每份没讲完的课件都有预扫摘要 | 🟡 |
+| `[G1]` `[G3]` | **凭证锁**：台账推进必须同回合有学时记录；断点里有没答的题，不许把那几页记成完成 | 🔴 |
+
+<sub>🔴 = 能拦回合 · 🟡 = 只提示。凭证锁用 `git diff HEAD` 判断「本回合改了什么」，所以收尾门全绿时会自动提交一次快照。</sub>
+
+## 📂 目录结构
+
+<details>
+<summary>展开</summary>
+
+```
+CLAUDE.md                  常驻规则：会话类型 · 怎么讲 / 出题 / 批改 · 完成的定义 · 学术诚信 · 学生画像
+.claude/
+├── settings.json          三道门的 hook 注册
+├── hooks/                 inject-context.sh · inject-time.sh · stop-check.sh
+├── commands/              /学 /作业 /总控 /审查 /next /week /drill /预扫
+└── workflows/             assignment-review.js（/审查 用的保存型 workflow）
+shared/
+├── 配置.json              ⭐ 唯一要按自己学期改的配置
+├── 模型预设.json           各家模型的接口地址和默认模型
+├── lecture台账.md         ⭐ 页数 / 讲到哪 / 字幕 / 到场 —— 欠帐的唯一数据源
+├── deadlines.md           学期日历 + 时间线
+├── 学习日志.md            当前状态 · 断点 · 反复犯的错
+├── 学时记录.md            每次学完追加一行
+├── 公告.md                老师口头说的、公告、考试范围
+├── 提醒.tsv               日期触发的提醒
+├── 活动会话.tsv           谁开着 · 刚收尾了什么
+├── 交接/                  学习会话回写账本的唯一通道
+├── 审计/                  多 agent 任务的落盘区
+├── dashboard.tex/.pdf     学习看板
+├── 学期DDL总表.tex/.pdf   学期 DDL 总表
+├── 工具手册.md            杂活怎么做：转录 · 截图 · 归档 · 预扫 · 邮箱 · LaTeX
+├── 规则档案.md            每条规则为什么存在
+├── API笔记/               探过的工具 API（Canvas · Ed …）
+└── 工具/                  初始化.py 配置.py 导航.py 检查.py 预扫.py 作业审查.py 审查镜头库.json 切换模型.py …
+<课程>/                    示例：algorithms/ networks/
+├── CLAUDE.md              这门课的考核、hurdle、考试形式
+├── 课件/  课件/_预扫/      PDF + 每份 deck 的机械事实
+├── 字幕/                  转录 + <deck>-对照.md（按课件页码切的转录索引）
+├── 笔记/  收尾卷/  作业/  tute/  教材/  例卷/  录音/
+└── 答题表达套件.md         把概念写成得分英文句的句式库
+study  runtime/            自带运行时：接任意 OpenAI 兼容模型（配置 · 模型客户端 · hook 调度 · 工具）
+.env.example               模型配置模板（复制成 .env，不会被提交）
+docs/                      架构说明 · 自定义指南 · 接入其他模型 · 作业审查 · 图（tools/gen_diagrams.py 重新生成）
+tests/                     smoke.sh 部署 · runtime_test.py 运行时 · workflow_harness.mjs + review_test.py 审查
+```
+
+</details>
+
+## 📦 依赖
+
+| 必需 | 用途 |
+|---|---|
+| [Claude Code](https://claude.com/claude-code)，**或**任意 OpenAI 兼容模型的 API key | 路线 A 用 Claude Code；路线 B 用自带运行时 `./study`（见[接入其他模型](docs/接入其他模型.md)）|
+| macOS 或 Linux | Windows 请用 WSL |
+| Python ≥ 3.9 | 所有脚本和 hook，只用标准库 |
+| `git` | 收尾门的快照和凭证锁（没配 `user.name` 也行，快照会用本地兜底身份）|
+| poppler（`pdfinfo` `pdftotext` `pdftoppm`）| 数页数、预扫、把 PDF 渲染成图检查 |
+
+| 可选 | 用途 |
+|---|---|
+| XeLaTeX | 出看板 PDF、排版作业 |
+| whisper.cpp + ffmpeg | 录音离线转录（`shared/工具/转录.sh`）|
+| Gmail connector | `/总控` 扫邮箱 |
+| Claude Code 桌面版 | 总控核对会话列表（`list_sessions`）、把 PDF 发到侧边面板；CLI 下这两步跳过 |
+
+## ❓ 常见问题
+
+<details>
+<summary><b>只有 Claude Code CLI，没有桌面版，能用吗？</b></summary>
+
+能。依赖桌面版的只有两处：总控核对会话列表（`list_sessions`），以及把 PDF 发到侧边面板（`SendUserFile`）。CLI 下这两步跳过，改成报文件路径。三道门和所有脚本都和桌面版无关，`对齐.py` 读的 transcript 在 CLI 下同样存在。
+</details>
+
+<details>
+<summary><b>不用 Claude 行吗？</b></summary>
+
+行。DeepSeek、Kimi、智谱 GLM 可以直接接进 Claude Code；其他任何 OpenAI 兼容的模型用自带运行时 `./study`。规则、三道门、命令是同一套，见[接入其他模型](docs/接入其他模型.md)。建议用各家的旗舰模型：规则很长，小模型容易守不住。
+</details>
+
+<details>
+<summary><b>我的考试不是英文的，「术语保持英文」「答题表达套件」还要吗？</b></summary>
+
+不要。删掉 `CLAUDE.md` 里「术语保持英文」「核心 explanation 直接用英文写」两节，出题语言那条也改掉，`inject-time.sh` 里注入的「出题全英文」一并删。改完跑一次 `检查.py`，`[13]` 会提醒你同步下游文件。
+</details>
+
+<details>
+<summary><b>没有录音转录，能用吗？</b></summary>
+
+能。台账「字幕」列填 `➖不需要`，对照表只保留「📗 其他资料对应段落」那一节（教材章节、tute 讲义）。「那页没校对不许开讲」的门禁照样有效，校对对象换成你手头的其他材料。
+</details>
+
+<details>
+<summary><b>它会替我写作业吗？</b></summary>
+
+看那份作业自己的 spec。`CLAUDE.md` 的学术诚信节分两条线：spec 允许 AI 的，在允许范围内用、按要求如实声明；不允许的，最终交上去的东西由你自己产出，Claude 只讲概念、指出哪一步错、检查格式。判断依据永远是**那一份作业自己的 spec**，不许拿别的作业推。
+</details>
+
+<details>
+<summary><b>为什么文件名全是中文？</b></summary>
+
+原项目就是中文环境，`CLAUDE.md` 和脚本里到处是这些路径，改名的成本远大于收益。Python 和 shell 处理中文路径没问题，终端用 UTF-8 即可。想要英文版，可以让 Claude 帮你整体翻译重命名，改完跑 `检查.py`，`[3]` 会抓出所有漏改的引用。
+</details>
+
+## 🌱 设计来历
+
+这套架构不是一次设计出来的，是一个学期里一条条长出来的。原项目在 `1.x` 时一个对话什么都干，开场要注入 **180 KB** 状态。`2.0` 改成「一个对话只做一件事」，开场只给 **约 5 KB** 导航层，其余由各类会话按需去取。每条规�
