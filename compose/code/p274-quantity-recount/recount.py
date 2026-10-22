@@ -260,10 +260,16 @@ CLAIMS = [
      "intel/trends.md T21 + agents/top.md MCP section"),
     # 🟢 p278: the SCOPED companion.  Three defensible scopes give 19, 20 and 21, so a bare
     # count cannot be checked at all; registering the scope is the durable half of the fix.
+    # 🟢 p387: ANCHOR RE-POINTED, and this is the "re-point the anchor" half of p278's own
+    # instruction rather than a shelf edit.  The claim's NAME says *slugs in the section's
+    # table*; p278 anchored it to a sentence counting **rows**.  Those are different
+    # quantities -- 23 rows carry 25 slugs, because two rows NAME a fork inside their note --
+    # so the gate read STALE for two passes with nothing wrong on the shelf.  The anchor now
+    # pins the sentence that states the measured quantity, and the shelf states both numbers.
     ("MCP server slugs in the MCP SECTION's table (agents/top.md)",
      "mcp_slugs_in_mcp_section", "agents/top.md",
-     r"\*\*(\d+)\s+rows\s+in\s+the\s+table\s+below\*\*",
-     "agents/top.md, the MCP section's own lead sentence (new at p278)"),
+     r"\*\*(\d+)\s+distinct\s+MCP\s+server\s+slugs\s+appear\s+in\s+this\s+section",
+     "agents/top.md, the MCP section's own lead sentence (p278; anchor re-pointed at p387)"),
     ("LMS platforms reachable by MCP, agents/top.md", "lms_platforms_on_agents_top",
      "agents/top.md", r"\*\*(\d+)\s+platforms\*\*\s+are\s+reachable",
      "agents/top.md MCP section (p274). Was 3 on both shelves before this pass"),

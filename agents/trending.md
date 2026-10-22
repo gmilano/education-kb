@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p387` — **THE LATAM "STRUCTURAL NULL" WAS A NULL LEG: THREE GRANTED LATAM-NATIVE AGENTS SHELVED, IN THE LANGUAGE THAT FOUND THEM. 🟢 AND THE SHELF IS DATED FOR THE FIRST TIME — 26 PACKAGE READS, THREE RECOMMENDATIONS CHANGED.**
+
+🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — 15 addresses probed
+(12 granted reads, 11 distinct granted projects, 3 ungranted, 1 inferred slug refused) ·
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv) — 26 package reads.
+
+### 🔴 The correction, stated first because it changes what this base tells a LATAM client
+
+`Gap 386-C` recorded LATAM-native education-agent supply as a **"structural"** fourth consecutive
+null, and `intel/market.md` carried that framing. **It was not structural.** The prescribed leg
+(`AI education LATAM 2026 adoption regulation players`) returns market-research PDFs because that is
+what it asks for. Two legs phrased **in the languages of the region** —
+`agente de IA educação código aberto GitHub Brasil tutor 2026 licença MIT` and
+`agente IA educativo open source español GitHub MIT tutor inteligente 2026` — returned six candidate
+addresses, **three of them granted**, all three re-read first-hand today:
+
+| agent | ref · HEAD | licence read at | origin |
+|---|---|---|---|
+| [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main` · `032b5aa` | `main/LICENSE` — 🟢 **MIT**, 1,069 B, © 2026 Grupo Sirius | **Colombia** — Universidad Tecnológica de Pereira; Open edX XBlock + FastAPI + Claude API, TTS, avatar, teacher stats panel; built for **rural** higher ed in Risaralda |
+| [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main` · `79793ee` | `main/LICENSE` — 🟢 **MIT**, 1,074 B *(and `package.json` declares MIT)* | **Brazil** — BNCC-code-anchored lesson plans and exams; **an invented curriculum code is discarded before the teacher sees it**; keyed API v1; Gemini or DeepSeek per request |
+| [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main` · `6202933` | `main/LICENSE` — 🟢 **MIT**, 1,069 B, © 2026 Thiago Silva | **Brazil** — UFAPE; spec-driven tutoring where **the agent that teaches is not the agent that verifies** |
+
+🔴 **Ungranted, recorded so they are not re-found as candidates:**
+[Daniel-ux1026/Tutor-Inteligente](https://github.com/Daniel-ux1026/Tutor-Inteligente) (Peru,
+offline-first PWA, explainable decision tree — the one `Pattern D` wants and cannot use),
+[FXArth/Tutor-Programacao](https://github.com/FXArth/Tutor-Programacao),
+[henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) (default ref
+`master`). None has a licence file at any of eight probed paths or a `license` field in any manifest.
+
+🔵 **The method lesson, and it generalises past LATAM:** this base's own `p386` wrote that *"a count
+of addresses is not a count of grants."* The twin of that error is **a null leg reported as a null
+supply**. Three of these addresses were already in this file's harvest history and none had ever
+reached a shelf — so for four passes the shelves said the region had nothing while the base held
+three MIT grants. Shelved now as **Tier 4** on [`agents/top.md`](top.md).
+
+### 🟢 The shelf is dated — and `github.com` never had to open for it
+
+Six passes of *"no star counts, `github.com` 403, `api.github.com` 403"*. The **package registries
+answer a better question** and they are open: `registry.npmjs.org/<pkg>` and
+`pypi.org/pypi/<pkg>/json` return the **published grant** and **every publish date**.
+
+| finding | consequence on these shelves |
+|---|---|
+| npm `brightspace-mcp-server` **v5.0.8, published 2026-10-22** | the D2L shelf's "thin" supply contains the **most actively published** LMS server here |
+| npm `brightspace-d2l-mcp` v1.4.3 (2026-10-21) · `brightspace-mcp` v1.3.1 (2026-09-28) | both active; `p386`'s "most substantial D2L server" pick holds |
+| npm `canvas-mcp-server` (DMontgomery40, 54 tools) last published **2025-06-27** | 🔴 ~16 months stale vs `@r-huijts/canvas-mcp` **2026-09-21** — prefer the maintained one |
+| npm `d2l-mcp-server` last published **2025-11-28** | 🔴 ~11 months stale; its npm record **also declares MIT**, so the manifest-only grant is published twice |
+| npm `blackboard-learn-mcp` (nitsuah/bb-mcp) → **404** | 🔴 the only "institution-grade" Blackboard server has **no release at all**; npm `bb-mcp` is a *different*, licence-less, repo-less package — do not attribute it |
+| PyPI `pybryt` last published **2022-04-28** | 🔴 a `Pattern B` dependency, 4.5 years without a release → **vendor it** |
+| PyPI `deeptutor` **51 releases, 2026-05-21 → 2026-10-18** | 🟢 the Tier-1 tutor pick is heavily active (description links `HKUDS/DeepTutor`, so the attribution checks out) |
+| PyPI `educhain` last published **2025-12-03**, licence field **empty** on PyPI | 🟡 ~11 months stale; the MIT grant is in the repo, not in the publication |
+
+### 🟢 Two addresses the registries handed over that no repository search did
+
+- **`bscli`** — PyPI v**0.3.13**, **2026-09-04**, 🟢 **MIT** (the *whole payload* sits in PyPI's
+  `info.license`, © 2024 Ciske Harsema), authors `@ru.nl` → **Radboud University**. Bulk-downloads
+  Brightspace submissions, **distributes them to graders**, writes grades back, built for
+  institutions and adaptable to any Brightspace tenant. 🔴 **No git address resolved** —
+  `bscli.science.ru.nl` is DNS-unreachable here → `Gap 387-B`.
+- **`d2l-cli`** — PyPI v0.3.0, 2026-09-24, `Homepage` → [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli),
+  grant then read at `main/LICENSE` (🟢 **MIT**, 1,070 B, © 2026 Aaryan Kapoor). 🟢 **`Gap 386-E`
+  closed**: this is the project named in `RobertLMcCrary/D2L-MCP`'s stacked grant. `p386` was right
+  not to guess a slug — the registry is where the slug actually lived.
+
+### 🔴 This pass's own instrument error, published rather than tidied
+
+[faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server)
+declares the npm name **`class`** — an unrelated **2013** package by `deadlyicon`. Keyed on the
+manifest name alone, the recency sweep printed *"MIT, published 2013-08-15"* for a Google Classroom
+server before the attribution check caught it. **A manifest name is not a publication.** Now
+`Pattern L` **step 14**: accept a registry row only when its `repository` field or description links
+point back at the same slug. The same check collapses fork families — four Blackboard addresses
+declare `blackboard-mcp`, **one** publication exists.
+
+### 🔴 Channels, restated
+
+`github.com` HTML (incl. `/trending`) **403** · `api.github.com` **403** · `img.shields.io`,
+`api.star-history.com` blocked · **new refusals recorded this pass:** `zenodo.org`, `moodle.org`,
+`arxiv.org`, `docs.openedx.org`, `gittrend.io`, `trendshift.io`, `ossinsight.io`,
+`bscli.science.ru.nl`, `www.digitaleducationcouncil.com`, `discuss.openedx.org` — all **DNS
+ENOTFOUND**. 🟢 **Open and used:** `git ls-remote --symref`, `raw.githubusercontent.com`,
+`registry.npmjs.org`, `pypi.org/pypi/<pkg>/json`.
+🔴 One candidate refused on principle: a Zenodo record (`23454379`, *"Plugin para agentes de IA de
+asistencia docente"*, MIT, 18 Oct 2026) was returned by the Spanish leg and **cannot be read** —
+`zenodo.org` is unreachable — so it is **not** shelved. Recorded as `Gap 387-C` instead of printed
+as a finding.
+
+---
+
+
 ## 🟢 🆕 2026-10-22 · `p386` — **THE TWO PLATFORMS THIS BASE RECORDED AS HAVING NO VERIFIED GRANT HAVE TWELVE OF THEM. 🔴 BOTH "GAPS" WERE UNREAD GRANTS, NOT ABSENT ONES — AND THE REAL GAP, NOW MEASURED, IS A DIFFERENT GAP. 🟢 ONE NEW PERMISSIVE TUTOR ADDRESS.**
 
 🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.

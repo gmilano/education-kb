@@ -66,6 +66,18 @@ consolidation of what is already in use.**
 
 Opportunities that do not belong to one region, because the evidence for them is global:
 
+🔴 🆕 `p387` **What this pass's prescribed regional legs actually returned, stated because silence
+reads like coverage.** The four `AI education {region} 2026 adoption regulation players` legs were
+run. **North America** and **LATAM** returned education-specific, citable material (the LATAM leg
+reproduced the Digital Education Council and IESALC figures already on this shelf, from
+independent write-ups). **EMEA and APAC returned almost nothing education-specific** — the EMEA leg
+came back with enterprise-IT and HR-platform commentary, the APAC leg with enterprise tech-priority
+reports and corporate-training vendors. Neither is evidence about schools or universities, and
+neither was promoted. 🔵 The region-specific facts added to EMEA and APAC this pass came from
+**targeted** legs (the AI Act deferral; the supply probes), not from the prescribed regional leg —
+which is a finding about the instrument: *a regional leg phrased for market-research keywords
+returns market research.*
+
 1. **Governance before capability.** 88–95% usage against 26–54% policy awareness is the same gap
    in every region surveyed. The first deliverable in almost any engagement is a governed gateway
    with SSO, quota and an audit log — [LibreChat](https://github.com/danny-avila/LibreChat) (MIT) —
@@ -314,6 +326,20 @@ advisory:
 marking of AI-generated content for systems **already on the market** is **2 Dec 2026** — six weeks
 out — and the AILit work is the same engagement's natural second phase.
 
+🆕 `p387` **Two EMEA public-sector references a studio can name in a pitch, both verified this pass,
+both answering the objection that open source cannot be deployed institutionally.**
+- **Bavaria (Germany) ships the multi-tenant AI layer for Moodle as open source.**
+  [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager)
+  (GPL-3.0-or-later, release 5.1.1) is a **multi-tenant** AI backend with per-role provider
+  routing, rate limits, usage monitoring and an **Ollama** path for on-premises models — the
+  sovereign stack in `Pattern E`, running in a state school system rather than proposed in a deck.
+  🔵 Also published at `mebis-lp/moodle-local_ai_manager`: identical HEAD sha, **one project**.
+- **Radboud University (NL) ships Brightspace grading automation as MIT.** `bscli` (PyPI, v0.3.13,
+  **2026-09-04**, MIT) bulk-downloads submissions, distributes them to graders and **writes grades
+  back** against the official Brightspace API — the institution-grade half of the LMS story that
+  the MCP shelf does not have. 🟡 Its source address could not be resolved from this sandbox
+  (`bscli.science.ru.nl` is DNS-unreachable); the grant and the release date were read from PyPI.
+
 ### APAC
 
 **Regulation — no single model, and education is explicitly named in one regime.**
@@ -557,6 +583,29 @@ build-vs-buy opening in the entire rotation.**
    CONPES 4144 gives it a public-policy hook. Pair it with
    [`lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) (MIT) so the
    framework ships with measurement instead of a policy PDF.
+
+7. 🆕 `p387` **Stop pitching LATAM as a supply desert — and stop building the Spanish tutor from
+   zero.** This base told four passes of readers that LATAM-native agent supply was a *"structural"*
+   null. It is not. Three granted, LATAM-built agents were re-read first-hand on 2026-10-22 and are
+   now shelved on [`agents/top.md`](../agents/top.md):
+   - [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) (**MIT**, Universidad Tecnológica de
+     Pereira, **Colombia**) — a Spanish-language tutor delivered **as an Open edX plugin**, with a
+     teacher statistics panel and TTS, built for **rural** higher education. For any LATAM
+     engagement on Open edX this is a starting point, not a competitor.
+   - [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+     (**MIT**, **Brazil**) — lesson plans and exams anchored to **BNCC** skill codes, with invented
+     codes discarded before the teacher sees them. It is the curriculum-grounding pattern
+     (`Pattern H`) already built against Brazil's national curriculum, and it exposes a keyed
+     **API** so a school system can call it.
+   - [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) (**MIT**, UFAPE, **Brazil**).
+   **What the region is genuinely short of is not agents — it is tenancy, support and
+   institutional-grade packaging**, which is what a studio sells. The honest pitch is *"your
+   national-curriculum agent exists and is MIT; we make it multi-tenant, governed and supported."*
+8. 🆕 `p387` **The Brazilian SIS is the integration surface, and it is GPL.**
+   [portabilis/i-educar](https://github.com/portabilis/i-educar) (GPL-2.0-or-later, **real default
+   ref `2.12`**) is the student-records system a Brazilian municipal engagement is likely to already
+   run. Quote integration **over its API**, never a fork: it keeps the deliverable clean and it is
+   also the cheaper answer. See [`compose/patterns.md`](../compose/patterns.md) **Pattern O**.
 
 ## Sources
 

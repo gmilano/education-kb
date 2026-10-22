@@ -30,6 +30,11 @@ and what can be bolted onto it?** Same role Odoo plays for ERP or OpenMRS for he
 - **LATAM / Iberia:** [Chamilo](https://github.com/chamilo/chamilo-lms) (GPL-3.0) — strongest
   Spanish/Portuguese public-sector base. [academico-sis/academico](https://github.com/academico-sis/academico)
   (MIT) for SME-scale administration with Spanish built in.
+  🆕 `p387` For **Brazil specifically**, the base a municipal engagement will already be running is
+  [portabilis/i-educar](https://github.com/portabilis/i-educar) (GPL-2.0-or-later, **real default
+  ref `2.12`**) — see the administration table below — and the agent tier now has three granted
+  LATAM-native options on [`agents/top.md`](../agents/top.md),
+  including one that ships **as an Open edX plugin** rather than as a separate app.
 - **EMEA public sector:** [ILIAS](https://github.com/ILIAS-eLearning/ILIAS) (GPL-3.0, default ref
   `release_11`) and [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, Switzerland).
   [Serlo](https://github.com/serlo/serlo.org) (Apache-2.0, Germany) and
@@ -68,6 +73,7 @@ re-ran the search and the downgrade stands — in fact it goes further:**
 | **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | `main` | 🟢 MIT | Laravel, Spanish + French built in, SME-scale: courses, enrolments, scheduling, reports. |
 | **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 `master` | 🟡 GPL-2.0 — 🔴 grant at **`docs/License.txt`**, not at any root path | 🆕 `p384`. The K-12 default: enrolment, attendance, grades, scheduling, parent/student portals. GPL-2.0 is survivable the Moodle way — reach it over its API, never link. 🔵 A root-only licence read reports this repo as ungranted; it is not. |
 | **Frappe LMS** | [frappe/lms](https://github.com/frappe/lms) | 🔴 `develop` | 🔴 AGPL-3.0 (`license.txt`) | Only where the client already runs ERPNext — then the student record and the finance record are one system. |
+| **i-Educar** 🆕 `p387` | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **`2.12`** | 🟡 GPL-2.0-or-later (`2.12/LICENSE`, 18,092 B) | 🟢 **The LATAM row this table was missing.** Brazil's largest free education software — municipal student records, enrolment, grades — deployed by Brazilian municipalities at scale and maintained by Portabilis plus a community. 🔴 Its default ref is the version branch **`2.12`**: clone and read the grant there, not at `main` or `master`. Reach it over its API; keep AI alongside it, never inside it. Sibling `i-diario` (classroom diary) is **AGPL-3.0** — different grant, same organisation. |
 
 ### 🆕 `p386` — the permissive ERP **base**, since the permissive education ERP does not exist
 
@@ -122,6 +128,22 @@ stack fits the region's SME school market.
 ## 🟡 MCP has reached the LMS — and this is new as of 2026
 
 This did not exist a year ago and it changes the integration story:
+
+- 🆕 `p387` **Moodle, the tenancy layer — and this is the part a client-ready deployment needs
+  before any MCP server:** [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager)
+  (GPL-3.0-or-later, granted in `version.php`, release **5.1.1**) is a **multi-tenant AI backend**
+  offered as the alternative to Moodle 4.5's own single-tenant AI subsystem: `aitool` subplugins
+  connect providers (ChatGPT, Gemini, Dall-E, **Ollama** for on-premises), `aipurpose` subplugins
+  bind a purpose to a provider **per role**, with per-role rate limits, per-tenant enable/disable,
+  usage monitoring and capability-gated teacher visibility of student prompts. 🔵 The same project
+  is also published at `mebis-lp/moodle-local_ai_manager` — **identical HEAD sha, one project, two
+  addresses.** 🔴 Its own README warns it is **not compatible with core-AI-subsystem plugins and
+  vice versa**: choosing it is an architectural fork in the road, taken once, early.
+- 🆕 `p387` **Open edX, first-party AI extension point:**
+  [openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions) (AGPL-3.0-only)
+  is the platform org's own AI extensibility framework — **experimental**, but it is the contract to
+  build against instead of forking `edx-platform`. Pair it with
+  [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) for the agent-facing surface.
 
 - **Moodle, first-party path:** the **`webservice_mcp`** plugin in **Moodle's own plugin directory**
   (and the Moodle Marketplace) exposes Moodle's external functions as **MCP tools over JSON-RPC

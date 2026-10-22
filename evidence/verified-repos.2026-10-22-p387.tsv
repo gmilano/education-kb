@@ -1,0 +1,25 @@
+# p387 — 2026-10-22 — first-hand reads. Channels used, and their state this pass:
+#   LIVE  git ls-remote --symref https://github.com/<slug> HEAD   -> address + REAL default ref + HEAD sha
+#   LIVE  raw.githubusercontent.com/<slug>/<ref>/<path>           -> licence payload + byte length
+#   LIVE  registry.npmjs.org/<pkg>, pypi.org/pypi/<pkg>/json      -> published grant + publish dates (recency)
+#   403   github.com HTML (incl. /trending), api.github.com       -> no star counts, no trending page (6th pass)
+#   000   zenodo.org, moodle.org, arxiv.org, docs.openedx.org     -> DNS ENOTFOUND (new refusals recorded this pass)
+#   000   eur-lex.europa.eu, www.congress.gov, www.oecd.org       -> DNS ENOTFOUND; no primary legal text read (again)
+#   000   gittrend.io, trendshift.io, ossinsight.io, api.star-history.com -> trending/star substitutes all refused
+slug	real_default_ref	head_sha	grant_read_at	licence	bytes	holder	verdict	note
+LabSirius/TutorIA	main	032b5aa	main/LICENSE	MIT	1069	(c) 2026 Grupo Sirius	LIVE-GRANTED	LATAM-native; Open edX XBlock + FastAPI + Claude API; Universidad Tecnologica de Pereira, Colombia
+GuilhermeScarpini/agente-bncc-professores	main	79793ee	main/LICENSE	MIT	1074	(c) 2026 GuilhermeScarpini	LIVE-GRANTED	Brazil; BNCC-grounded lesson plans + exams; package.json also declares MIT
+thiagoudweb/techTutor	main	6202933	main/LICENSE	MIT	1069	(c) 2026 Thiago Silva	LIVE-GRANTED	Brazil, UFAPE; author!=verifier tutoring harness
+Aaryan-Kapoor/d2l-cli	main	2d65d69	main/LICENSE	MIT	1070	(c) 2026 Aaryan Kapoor	LIVE-GRANTED	Gap 386-E: the address named in RobertLMcCrary/D2L-MCP's stacked grant, resolved
+portabilis/i-educar	2.12	7903a3e	2.12/LICENSE	GPL-2.0	18092	FSF 1989,1991	LIVE-GRANTED	REAL default ref is 2.12 (not main, not master); composer.json GPL-2.0-or-later
+bycs-lp/moodle-local_ai_manager	main	4ff5a87	main/version.php	GPL-3.0-or-later	source-header	(header grant)	LIVE-GRANTED	multi-tenant Moodle AI backend; release 5.1.1, version 2026102305
+mebis-lp/moodle-local_ai_manager	main	4ff5a87	main/version.php	GPL-3.0-or-later	source-header	(header grant)	LIVE-GRANTED	SAME HEAD SHA as bycs-lp -> one repository at two addresses, count once
+mebis-lp/moodle-block_ai_chat	main	-	main/version.php	GPL-3.0-or-later	source-header	(header grant)	LIVE-GRANTED	chat frontend for local_ai_manager
+openedx/openedx-ai-extensions	main	66d0792	main/LICENSE	AGPL-3.0-only	34523	FSF 2007	LIVE-GRANTED	first-party Open edX AI Extensibility Framework; pyproject AGPL-3.0-only; experimental
+aulasneo/tutor-contrib-let	main	a8c56cb	main/LICENSE.txt	AGPL-3.0	34523	FSF 2007	LIVE-GRANTED	Aulasneo (Argentina) tutor plugin for Open edX customisation
+wenflow-org/wenflow	main	1c86890	main/LICENSE	MIT	1067	(c) 2026 wenflow-org	LIVE-GRANTED	early AI-learning prototype; npm name wenflow NOT published
+mattdig/brightspace-console	main	ad7446f	main/LICENSE.md	MIT	1064	(c) 2022 mattdig	LIVE-GRANTED	browser console for Brightspace admin/API calls; not an agent
+Daniel-ux1026/Tutor-Inteligente	main	7604578	(none at 8 paths)	-	-	-	LIVE-NOGRANT	Peru; offline-first PWA tutor, explainable decision tree. Do not ship
+FXArth/Tutor-Programacao	main	1b99a5c	(none at 8 paths)	-	-	-	LIVE-NOGRANT	Brazil; rule-based programming tutor
+henriquebotelhogomes/educacao	master	cda18eb	(none at 8 paths)	-	-	-	LIVE-NOGRANT	Brazil; RAG tutor (LangChain/Groq/Qdrant). Default ref master
+eduNEXT/platform-plugin-aiacc	(unresolved)	-	-	-	-	-	NO-ADDRESS	slug inferred from a search snippet, not published anywhere; NOT probed as data

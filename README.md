@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 387 — 2026-10-22 — **THE LATAM "STRUCTURAL" SUPPLY NULL WAS A NULL *LEG*: THREE MIT LATAM-NATIVE AGENTS SHELVED, TWO OF THEM FOUND BY SEARCHING IN PORTUGUESE. 🟢 AND THE SHELVES ARE DATED FOR THE FIRST TIME — 26 PACKAGE-REGISTRY READS, THREE RECOMMENDATIONS OVERTURNED, ONE OF THEM A PATTERN DEPENDENCY THAT HAS NOT SHIPPED SINCE 2022.**
+
+🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p387.tsv) — 15 addresses probed: 12 granted reads over 11 distinct granted projects (the mirror pair counts once), 3 ungranted, plus 1 inferred slug refused rather than probed ·
+[`registry-recency`](evidence/registry-recency.2026-10-22-p387.tsv) — 26 package reads.
+
+### 🔴 The correction, first, because it changes what this base tells a whole region
+
+`Gap 386-C` recorded LATAM-native education-agent supply as a **"structural"** fourth consecutive
+null. It is not structural. The prescribed leg (`AI education LATAM 2026 …`) returns market
+research because that is what its words ask for. Two legs in **Portuguese and Spanish** returned six
+addresses, **three granted**, all re-read first-hand today and now **Tier 4** on
+[`agents/top.md`](agents/top.md):
+
+| agent | licence read at | origin |
+|---|---|---|
+| [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main/LICENSE` — MIT, 1,069 B, © 2026 Grupo Sirius | Colombia — Universidad Tecnológica de Pereira; **an Open edX plugin**, not a standalone app; built for rural higher education |
+| [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main/LICENSE` — MIT, 1,074 B | Brazil — generation anchored to **BNCC** curriculum codes, with invented codes discarded before the teacher sees them |
+| [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main/LICENSE` — MIT, 1,069 B | Brazil — UFAPE; the teaching agent is **not** the verifying agent |
+
+🔴 **Root cause, one level above `p386`'s.** `p386` established that *a count of addresses is not a
+count of grants*. The twin error is **a null leg reported as a null supply** — and three of these
+addresses were already in this base's own harvest history, never promoted to a shelf. **The shelves
+claimed an absence the base did not have.** 🟢 The defensible claim, now on `intel/market.md`: what
+LATAM lacks is not agents but **tenancy, support and institution-grade packaging** — which is what a
+studio sells.
+
+### 🟢 The shelves are dated, and `github.com` never had to open
+
+Six passes of *"no star counts, 403, 403"*. The **package registries are open** and answer a better
+question: `registry.npmjs.org/<pkg>` and `pypi.org/pypi/<pkg>/json` publish the grant **and every
+release date**. 26 reads → three recommendations change:
+
+- 🔴 **PyPI `pybryt`: nothing since v0.7.0, 2022-04-28** — and it is a **`Pattern B` dependency**.
+  Pattern B now reads *vendor it, do not install it*.
+- 🔴 **npm `canvas-mcp-server`** (the 54-tool Canvas server): last published **2025-06-27**, ~16
+  months stale, against `@r-huijts/canvas-mcp` at **2026-09-21**.
+- 🔴 **npm `blackboard-learn-mcp`** (`nitsuah/bb-mcp`, the only "institution-grade" Blackboard
+  server): **404 — never published.** Unexecuted claims *and* no artefact.
+- 🟢 **npm `brightspace-mcp-server` v5.0.8, published 2026-10-22** — the "thin" D2L shelf holds the
+  most actively published LMS server here. 🟢 **PyPI `deeptutor`: 51 releases since May 2026.**
+
+🔴 **This pass's own error, published rather than tidied:** the sweep keyed on manifest package names
+and printed *"MIT, published 2013-08-15"* for a Google Classroom server whose `package.json` declares
+the name `class` — an unrelated 2013 package. Caught by an attribution check, now `Pattern L`
+**step 14**: match the registry's `repository` field back to the slug.
+
+### 🟢 Three structural additions to the shelves, all verified
+
+- **The Moodle tenancy layer** — [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager)
+  (GPL-3.0-or-later in `version.php`, release 5.1.1): a **multi-tenant** AI backend from Bavaria's
+  state school platform, per-role provider routing, rate limits, usage monitoring, **Ollama** for
+  on-premises models. 🔵 The `mebis-lp` address of it is **STALE** (canonical `bycs-lp/moodle-local_ai_manager`, registered `p350`/`p370`) and resolves to the identical HEAD sha `4ff5a87` — one project, counted once. This is `p386`'s tenancy gap, closed on Moodle and
+  still open on Canvas, Blackboard, D2L and Open edX (`Gap 387-A`).
+- **Brazil's SIS** — [portabilis/i-educar](https://github.com/portabilis/i-educar), GPL-2.0-or-later,
+  🔴 **real default ref `2.12`** (neither `main` nor `master`; a `master` read returns a plausible
+  tree that is not HEAD).
+- **Open edX's own AI extension point** — [openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions)
+  (AGPL-3.0-only, experimental): the documented answer to *"must we fork `edx-platform`?"* — no.
+
+Plus **`Gap 386-E` closed** (`d2l-cli` = [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli),
+MIT, resolved **via PyPI** rather than by guessing a slug) and one new institution-grade find,
+**`bscli`** (PyPI, MIT, Radboud University — Brightspace grading automation with grade write-back),
+whose **source address is unresolvable from here** (`Gap 387-B`).
+
+### 🟢 `make hooks` RAN — the lane `p382` recorded as denied by policy is OPEN, and it caught this pass's own defects
+
+`p382` had to record that *"`make hooks` COULD NOT BE RUN: the execution lane is denied by policy."*
+It is open here, and this is the first pass in several to have its own standing checks run against
+it. **45 gates. It caught three things before the commit:**
+
+| gate | what it caught | disposition |
+|---|---|---|
+| `gate-alias-canonical` | this pass published **both** addresses of the `local_ai_manager` mirror — the alias register already grades the `mebis-lp` one **STALE** against canonical `bycs-lp/moodle-local_ai_manager` | 🟢 **fixed before the commit**: one row, canonical address, the stale one named only on a line that carries `STALE` |
+| `recount` | **four registered quantities drifted**, three of them inherited: whole-file MCP slugs published as **12** against **27** measured; the MCP-section claim STALE for two passes because `p278` anchored a *slug* claim to a sentence counting *rows*; the "platforms are reachable" anchor **gone** (`NO-ANCHOR`); and this pass's own permissive-row count published as 22 against 23 | 🟢 **all four discharged**: 5/5 `MATCH`. The `p278` anchor was **re-pointed** at the quantity the instrument measures, which is the repair `p278`'s own note prescribes |
+| `gate-census-currency` · `gate-union-currency` | the published address census was derived **before** this pass wrote to the shelves | 🟢 **re-derived as the last act** — restated below |
+
+🔴 **Two gates are red and this pass did not cause them** — both were red at `HEAD` before a single
+character was written (verified by re-running them against the pre-pass tree):
+- `gate-fold-identity` — four live rows carry `AI-Shifu/ai-shifu` where the history published
+  `ai-shifu/ai-shifu`. 🔵 **Deliberately not "fixed":** the live casing is the owner's own, and the
+  discharge the gate wants would mean publishing a casing this base believes to be wrong. An
+  append-only shelf cannot be repaired backwards, so the honest state is red-and-explained.
+- `gate-census-union` — control 24 expects **both** of `p375`'s rejection classes to fire on the
+  live shelves; only `NAME-REF-OR-PATH` does. That is a statement about the fixture's coverage, not
+  about an address on a shelf, and it needs the instrument's author, not a shelf edit.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 613** harvested shapes → **34** are not
+addresses → **2 579 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 579** channel-U
+addresses and **3 030** channel-B survivors give **3 392 addresses over both channels**.
+
+🟢 **The delta is +16 on channel U** (2 563 → 2 579), **+10 on channel B** (3 020 → 3 030) and
+**+17 on the union** (3 375 → 3 392). 🔵 This pass is an increment with an unusually wide probe
+fan-out — three LATAM addresses, the Moodle tenancy family, the Open edX extension point, the two
+Brightspace CLIs, plus every address named in the recency sweep — so a double-digit positive delta
+is the expected shape. Rejected non-addresses are **unchanged at 34**.
+
+🔵 **New deliverable:** [`compose/patterns.md`](compose/patterns.md) **Pattern O — the LATAM
+engagement, built on what the region already shipped**: BNCC-grounded generation → delivery as an
+Open edX plugin (with the AGPL boundary spelled out) → i-educar over its API, never forked →
+multi-tenancy before anyone calls it a pilot → offline-first with a local model → measurement in the
+language of instruction.
+
+---
+
+
 ## Pass 386 — 2026-10-22 — **THE TWO PLATFORMS THIS BASE CALLED EMPTY HAVE TWELVE MIT GRANTS BETWEEN THEM. 🔴 FOR FOUR PASSES A SLUG COUNT WAS QUOTED AS A GRANT COUNT, AND IT PRODUCED A FALSE BUILD RECOMMENDATION. 🟢 ONE NEW PERMISSIVE TUTOR, THREE PERMISSIVE ERP BASES, AND THREE OFF-SHELF POLICY FACTS PROMOTED — ONE OF THEM NEW TO THIS REPOSITORY.**
 
 🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.

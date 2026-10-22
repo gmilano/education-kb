@@ -15,6 +15,51 @@ updated: 2026-10-22
 > [`agents/trending.md`](../agents/trending.md); this shelf is now about the industry.
 
 
+## 🆕 `p387` — Date the artefact, not the repository: the signal this industry's open-source shelf has been missing
+
+**Every star channel in this sandbox is closed and has been for six passes. The package registries
+are open — and for a studio choosing a base they are the better instrument.** `registry.npmjs.org`
+and `pypi.org/pypi/<pkg>/json` return the published licence *and* the full publish history. Twenty-six
+education packages were read this pass ([`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv)),
+and the dates reorder the shelf in ways a star count never would:
+
+| what the dates showed | why it matters to an engagement |
+|---|---|
+| `brightspace-mcp-server` is at **v5.0.8, published 2026-10-22** | The D2L supply `p386` described as thin-but-granted is the **most actively published** LMS integration on these shelves. A v5 line is a maintained project, not a weekend demo. |
+| `canvas-mcp-server` (the 54-tool Canvas server) last shipped **2025-06-27** | The richest tool surface on the Canvas shelf is **~16 months stale**, while the maintained alternative shipped a month ago. Tool count and maintenance point in opposite directions, and only one of them survives a two-year support contract. |
+| `pybryt` last shipped **2022-04-28** | A pattern on [`compose/patterns.md`](../compose/patterns.md) depends on it. The design is still right; the dependency is not. **Vendor it.** |
+| `nitsuah/bb-mcp` has **no published release at all** | The one server this base called institution-grade is also the one with no installable artefact — and its security claims were already unexecuted (`Gap 386-B`). |
+| Four Blackboard addresses, **one** publication | The registry collapses a fork family mechanically — same answer `p386` got from licence bytes, by a second, independent route. |
+
+🔵 **The general trend, which is not about this sandbox.** Open-source education tooling is mostly
+sub-institutional: single-maintainer servers, student-session integrations, demo repositories. In
+that supply, *popularity* measures attention and *publication cadence* measures whether anyone will
+still be there in eighteen months. A studio is buying the second. **Rank on publish dates, licence
+and fit; treat stars as marketing.** 🔴 And one caution, learnt the hard way this pass: a manifest's
+package name is not proof of a publication — one shelf repository declares the npm name `class`,
+which belongs to an unrelated 2013 package. Always match the registry's `repository` field back to
+the slug (`Pattern L` step 14).
+
+## 🆕 `p387` — The LATAM supply gap was a reading gap too, and the same mistake caused it
+
+`Gap 386-C` recorded LATAM-native agent supply as a *"structural"* fourth consecutive null. It was
+not structural: it was **a null leg reported as a null supply** — the same error `p386` itself
+diagnosed when a *slug* census was quoted as a *grant* census. Three granted LATAM-built agents
+(Colombia, Brazil) sat in this base's own harvest history, unshelved, while the market shelf told
+readers the region had none. They are shelved now
+([`agents/top.md` Tier 4](../agents/top.md)),
+and the regional pattern is worth stating plainly for any region, not only LATAM:
+
+> **A search leg returning nothing is a fact about the leg. It becomes a fact about the world only
+> after a differently-phrased leg returns nothing either** — and in this case the phrasing that
+> worked was simply **the local language**: `agente de IA educação código aberto` and
+> `agente IA educativo open source`, not `AI education LATAM`.
+
+🟡 What *is* structurally short in the region is not agents but **tenancy, support and
+institution-grade packaging** — which is what a studio actually sells, so the correction improves
+the pitch rather than weakening it.
+
+
 ## 🆕 `p386` — The LMS-integration gap is not a licence gap any more. It is a **tenancy** gap.
 
 For four passes this base recorded Blackboard and D2L as the two platforms where
@@ -171,13 +216,20 @@ As of 2026 the LMS is addressable by agents without a fork:
   fork [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp)).
 - 🔴 **No official server from Instructure or Moodle HQ**, and two of the most-advertised community
   Canvas/Moodle servers are **unlicensed** — see [`agents/top.md`](../agents/top.md).
-- **12 distinct education MCP server slugs are shelved** and verified first-hand this pass, and
-  across both agent shelves **MCP reaches **6 distinct LMS platforms**** — Canvas, Moodle, Google
-  Classroom, Blackboard, Brightspace/D2L and Open edX. The cumulative harvest behind that is
-  lopsided: **35 Canvas servers and 20 Moodle**, against **2 for Open edX**; **Blackboard has 9
-  with not one verified grant and D2L has 6 with the only one checked ungranted.** The work on
-  Canvas and Moodle is *selection*; on Blackboard and D2L a permissively-licensed server would be
-  a real contribution.
+- 🆕 `p387` **27 distinct education MCP server slugs are shelved** on
+  [`agents/top.md`](../agents/top.md) — re-derived by this base's own `recount` instrument, which
+  was runnable this pass for the first time in several (the figure stood at **12** here while the
+  shelf had grown to 27). Across both agent shelves **MCP reaches **6 distinct LMS platforms**** —
+  Canvas, Moodle, Google Classroom, Blackboard, Brightspace/D2L and Open edX. The cumulative
+  harvest behind that is lopsided: **35 Canvas servers and 20 Moodle**, against **2 for Open edX**.
+- 🔴 🆕 `p387` **A correction this shelf owed since `p386`, and did not carry.** The bullet above
+  used to end *"Blackboard has 9 with not one verified grant and D2L has 6 with the only one
+  checked ungranted"* — and concluded that a permissive server on either platform *"would be a real
+  contribution."* `p386` probed all fifteen addresses and found **6 MIT grants on Blackboard and 6
+  on D2L**; it corrected [`agents/top.md`](../agents/top.md) and **left this sentence standing**.
+  🔵 The live claim is: on Canvas and Moodle the work is *selection*; on Blackboard and D2L the
+  grants exist and the missing thing is **tenancy** — every granted server there authenticates as
+  the signed-in student (see `compose/patterns.md` **Pattern N**, and `Gap 387-A`).
 
 **So:** the integration cost of an LMS-aware agent dropped by an order of magnitude this year, and
 the remaining risk moved from engineering to licensing.
@@ -193,6 +245,14 @@ addresses — see [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.
 
 **So:** rank by licence permissiveness, maintenance signal and fit. Popularity was never the
 decision criterion for a studio engagement anyway.
+
+🟢 🆕 `p387` **Partially closed — and by a channel, not by a workaround.** "Maintenance signal" was
+the one criterion in that sentence this base could not actually measure. It can now: **package
+registries publish dates**, and 26 education packages are dated in
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv). 🔴 **Still open:** repository
+commit activity, contributor counts and issue latency (all behind `api.github.com`, 403), and the
+many shelf entries that are **not published packages at all** — for those, publication is absent
+rather than old, which is itself worth telling a client.
 
 ## Trend 9 — 🆕 `p384` The curriculum-data layer arrived, and its licence is a *database* licence
 

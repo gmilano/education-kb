@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p387` — **GITHUB TRENDING IS 403 FOR A SIXTH PASS, AND THREE SUBSTITUTE CHANNELS ARE ALSO DEAD — SO THIS PASS DATED THE SHELF FROM THE PACKAGE REGISTRIES INSTEAD. 🟢 THE BRAZILIAN SIS, THE MOODLE TENANCY LAYER AND OPEN edX'S OWN AI EXTENSION POINT ARE NOW ON THE FOUNDATIONS SHELF.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — 15 addresses probed
+(12 granted reads, 11 distinct granted projects, 3 ungranted, 1 inferred slug refused) ·
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv) — 26 package reads.
+
+### 🔴 The trending channel, and the three substitutes that do not work either
+
+`https://github.com/trending` → **403**. `api.github.com` → **403**. 🆕 This pass tried the
+third-party trackers that search results point at: **`gittrend.io`**, **`trendshift.io`** and
+**`ossinsight.io`** (incl. its API) → all **DNS ENOTFOUND**. `api.star-history.com` and
+`img.shields.io` remain blocked. **Sixth consecutive pass with no readable trending page and no star
+counts, and the substitute channels are now measured rather than assumed.**
+
+🟢 **What does work, and it answers the question stars were a proxy for:**
+`registry.npmjs.org/<pkg>` and `pypi.org/pypi/<pkg>/json` publish the grant **and every release
+date**. 26 reads this pass → [`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv).
+**Recency replaces popularity on these shelves.** Three recommendations changed as a result
+(`pybryt` 4.5 years stale, `canvas-mcp-server` ~16 months, `nitsuah/bb-mcp` never published) — see
+[`agents/trending.md`](../agents/trending.md) for the full table.
+
+### 🔴 A real default ref that is neither `main` nor `master` — and it is the LATAM platform
+
+[portabilis/i-educar](https://github.com/portabilis/i-educar) — *"o maior software livre educacional
+do Brasil"*, the student-record system Brazilian municipalities actually run — resolves to
+**`refs/heads/2.12`** (HEAD `7903a3e`). A `main`-assuming read 404s; a `master`-assuming read
+succeeds on a branch **that is not HEAD**, which is worse, because it returns a plausible tree
+silently. Grant read at **`2.12/LICENSE`**: 🟡 **GPL-2.0**, 18,092 B, with `composer.json` declaring
+**`GPL-2.0-or-later`**. 🔵 This base's earlier harvest recorded `LGPL-3.0` for this address from a
+badge; the payload says GPL-2.0. **Now on [`repos/foundations.md`](foundations.md) Tier 5** and in
+[`verticals/solutions.md`](../verticals/solutions.md), with the "integrate over its API, never fork"
+instruction that GPL-2.0 implies.
+
+### 🔵 One project at two addresses, proved mechanically
+
+The canonical address is [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager), and `mebis-lp/moodle-local_ai_manager` is the **STALE** alias of it — already registered as such in [`alias-register`](../evidence/alias-register.2026-10-21-p370.tsv) (resolved `p350`, STALE CONFIRMED `p370` on a ref-set fingerprint; `p226` had only the *weak* sibling-set inference).
+🟢 **This pass upgrades that inference to an identity read:** `git ls-remote --symref` returns **the
+same HEAD sha `4ff5a87`** at both addresses, and `version.php` the same `$plugin->component`, the
+same release **5.1.1** and the same version code **2026102305**. 🔵 Worth re-stating because the
+stale address is what a 2026 search returns first — which is exactly how a mirror becomes a phantom
+second data point in a supply census. **One project. One row.** (Bavaria's state school platform
+renamed; GitHub keeps the old address answering forever, at the same HEAD.)
+
+🟢 **And it is the answer to `p386`'s tenancy gap, at least on Moodle:** a **multi-tenant** AI
+backend offered as the alternative to Moodle 4.5's single-tenant core AI subsystem — `aitool`
+subplugins for providers (incl. **Ollama**, so on-premises models), `aipurpose` subplugins binding a
+purpose to a provider **per role**, per-role rate limits, per-tenant user enable/disable, usage
+monitoring, capability-gated teacher visibility of student prompts. Grant: 🟡
+**GPL-3.0-or-later in `version.php`**, no root licence file — **the second confirmed instance of
+`Pattern L` step 8 on a Moodle plugin**, which makes it a Moodle-wide rule rather than an anecdote.
+
+### 🟢 Open edX has a first-party AI extension point now
+
+[openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions) — `main`, HEAD
+`66d0792`, 🔴 **AGPL-3.0-only** (`LICENSE` 34,523 B; `pyproject.toml` `AGPL-3.0-only`), **marked
+experimental in its own docs**. It matters even while experimental: it is the platform org's own
+contract for adding AI, so *"do we fork `edx-platform`?"* now has a documented answer that is "no".
+Compare [aulasneo/tutor-contrib-let](https://github.com/aulasneo/tutor-contrib-let) (`main`,
+AGPL-3.0, **Aulasneo — Argentina**) for the LATAM-maintained customisation route.
+
+### 🟡 Also read, also live, not promoted
+
+[wenflow-org/wenflow](https://github.com/wenflow-org/wenflow) — `main`, 🟢 **MIT** (1,067 B, © 2026
+wenflow-org), self-hostable AI-learning prototype (Vue 3 / Node / SQLite). npm `wenflow` is **not
+published**. Early-stage single-maintainer work: trending-shelf material, not a foundation.
+[mattdig/brightspace-console](https://github.com/mattdig/brightspace-console) — `main`, 🟢 **MIT**
+(1,064 B, © **2022**), a browser console for Brightspace admin/API calls; useful as an API-surface
+reference, dated as a dependency.
+
+### 🔴 One slug refused rather than probed
+
+`eduNEXT/platform-plugin-aiacc` was **inferred** from a search snippet about an "AI Course Creator"
+plugin. It resolves to nothing, and the product the snippet described turns out to be **Blend-ed's
+commercial** course creator, not an eduNEXT open-source plugin. 🔵 Recorded as `NO-ADDRESS` in the
+evidence file: **an inferred slug is not an address**, and probing one manufactures supply.
+
+---
+
+
 ## 🟢 🆕 2026-10-22 · `p386` — **GITHUB TRENDING IS STILL 403, SO THIS PASS MEASURED A FORK FAMILY BY ITS LICENCE BYTES — AND FOUND THAT A NON-STOCK MIT PAYLOAD CAN MEAN *MORE ATTRIBUTION*, NOT A BESPOKE CLAUSE. 🟢 THREE PERMISSIVE ERP/CRM BASES VERIFIED FOR THE GAP THE FOUNDATIONS SHELF HAS DECLARED SINCE `p383`.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes.

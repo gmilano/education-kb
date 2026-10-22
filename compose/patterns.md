@@ -86,6 +86,13 @@ there, not only whether the answer matched →
 the student who guessed; pybryt's annotations let you detect the *intended method* and then have the
 model give feedback on the method. **Fully permissive — BSD-3 and MIT only, zero copyleft.**
 
+🔴 🆕 `p387` **Vendor pybryt; do not install it.** PyPI `pybryt` has shipped nothing since
+**v0.7.0, 2022-04-28** — four and a half years — so a client support contract cannot rest on it as a
+dependency. The pattern does not change: copy the annotation approach (and, licence permitting under
+its MIT grant, the code) into the deliverable and maintain it there, with the maintained BSD-3
+halves of this stack (`nbgrader`, `otter-grader`) carrying the running infrastructure. Dates:
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv).
+
 **Guardrail:** where DC-style rules apply, AI must not be the grader of record. Configure the LLM as
 a **feedback generator with a human grade-of-record** and keep the audit trail; that configuration is
 the deliverable, not a disclaimer.
@@ -367,6 +374,72 @@ data-protection officer — and it is available on every major LMS today, becaus
 already clear. 🔴 **Say the honest part too:** on D2L all six granted servers are student-side, so
 step 1 there is a genuine build and should be costed as one, not as a configuration.
 
+## Pattern O — 🆕 `p387` The LATAM engagement, built on what the region already shipped
+
+**For:** a Brazilian or Spanish-speaking LATAM client — ministry, municipality, university or
+school network — where the deliverable has to be in the local language, aligned to the *national*
+curriculum, and deployable by an institution rather than demoed to one.
+
+**The premise this pattern corrects:** the LATAM supply is not empty. Every component below is a
+real address with a grant read first-hand on 2026-10-22.
+
+**Wiring, Brazil (the fully-specified case):**
+
+1. **Start from the national curriculum, not from a prompt.**
+   [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+   (**MIT**, `main`) already anchors generation to **BNCC** skill codes and **discards an invented
+   code before the teacher sees it**. Keep that gate and extend it: the gate *is* the trust story,
+   and it is the same mechanism `Pattern H` specifies against a curriculum graph.
+2. **Deliver through the LMS the client runs, never a new portal.** On **Moodle**, the
+   `webservice_mcp` plugin per **Pattern A**; on **Open edX**, start from
+   [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) (**MIT**, `main`), which is already an
+   XBlock/plugin with a teacher statistics panel, TTS and cross-session context.
+   🔴 **Licence boundary, non-negotiable:** TutorIA's MIT grant covers *the plugin*. Open edX is
+   **AGPL-3.0** and hosting it is hosting AGPL software. Keep the agent a **separate service** the
+   plugin calls over HTTP, keep the plugin thin, and the client's AGPL obligations stay exactly
+   where they were before you arrived.
+3. **Integrate the student-record system over its API.**
+   [portabilis/i-educar](https://github.com/portabilis/i-educar) (**GPL-2.0-or-later**, real default
+   ref **`2.12`**) is what a Brazilian municipality is running. Read rosters and write results
+   through its API; **do not fork it** — the fork pulls GPL into the deliverable and buys nothing.
+   (Its sibling `i-diario` is AGPL-3.0; check per repository, not per organisation.)
+4. **Make it multi-tenant before anyone calls it a pilot.** A school network is many tenants. On
+   Moodle, [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager)
+   (**GPL-3.0-or-later**, in `version.php`) supplies exactly this — per-role provider routing, rate
+   limits, per-tenant enable/disable, usage monitoring — and it reaches the agent over its own API,
+   so the copyleft stays on the Moodle side. On Open edX, build the tenant boundary per
+   **Pattern N** steps 1–5.
+5. **Run it where connectivity is the constraint**, which is the actual deployment profile for
+   TutorIA's own users (rural Risaralda) and for most of the nine Google.org rollout countries:
+   [Kolibri](https://github.com/learningequality/kolibri) (**MIT**, default ref `develop`) per
+   **Pattern D**, with a local open-weight model behind the AI manager's **Ollama** tool rather than
+   a metered API.
+6. **Schedule retention, in the local language.**
+   [fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) (**MIT**) for the scheduler; the
+   content language is a data property, not a code property, so this layer ports unchanged.
+7. **Measure in the language of instruction, and publish the baseline.**
+   [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) (**MIT**) with
+   Portuguese/Spanish task sets built from the client's own past assessments. 🔴 Do **not** ship an
+   English benchmark number as evidence for a Portuguese deployment.
+8. **Say out loud what you are adding.** The agents exist and are MIT; **tenancy, support,
+   governance and curriculum QA are the deliverable.** That is a defensible studio pitch and an
+   honest one — and it is cheaper for the client than the rebuild a "no LATAM supply" story implies.
+
+**Spanish-speaking variant:** swap step 1's BNCC grounding for the client's national curriculum
+standard, keep TutorIA (Spanish-first) at step 2, and use
+[academico-sis/academico](https://github.com/academico-sis/academico) (**MIT**, Spanish built in) or
+[Chamilo](https://github.com/chamilo/chamilo-lms) (GPL-3.0) where no SIS/LMS is in place.
+
+🟡 **Two addresses this pattern deliberately does not use, and why.**
+[Daniel-ux1026/Tutor-Inteligente](https://github.com/Daniel-ux1026/Tutor-Inteligente) (Peru) is the
+offline-first PWA tutor with explainable difficulty selection that step 5 would otherwise want — it
+has **no grant at any of eight probed paths**, so it cannot enter a deliverable, and asking its
+author to add a licence is the cheapest possible contribution to the region's supply.
+[henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) (Brazil, RAG
+tutor, default ref `master`) is ungranted for the same reason.
+
+---
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
@@ -482,6 +555,30 @@ narrative. Run it before any repo enters a client deliverable.
     **how many were read**. When the second number is zero the honest word is **unread**, and the
     cost of the wrong word here was a false build recommendation on two platforms.
     🔵 Before any shelf states a supply gap, state which census it is quoting.
+
+13. 🆕 `p387` **Date the artefact you are about to ship, in the registry.** A grant tells you whether
+    you *may* use it; a publish date tells you whether anyone is still there. Read the package name
+    from the manifest at the real default ref, then:
+    `curl -s https://registry.npmjs.org/<name>` → `dist-tags.latest`, `time.created`,
+    `time.<latest>`, `versions.<latest>.license`, `.repository`; or
+    `curl -s https://pypi.org/pypi/<name>/json` → `info.version`, `info.license`,
+    `releases[*].upload_time`. 🟢 Three usable outputs: a **second, independently published grant**
+    (a manifest-only MIT becomes an MIT published to a registry); a **maintenance date** that
+    survives `api.github.com` being 403; and the discovery that an address ships **no artefact at
+    all**, which is a different conversation with a client than "it is old". 🔴 `p387` found a
+    four-and-a-half-year-stale dependency inside a pattern on this page, a 16-month-stale server
+    recommended for its tool count, and an "institution-grade" server with no release.
+
+14. 🆕 `p387` **A manifest's package name is not proof of a publication — match the registry back to
+    the slug.** [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server)
+    declares the npm name **`class`**, and npm's `class` is an unrelated **2013** package by
+    `deadlyicon`. Keyed on the name alone, a recency sweep would have printed *"MIT, published
+    2013-08-15"* onto a Google Classroom row. 🟢 **The check:** accept a registry row only when its
+    `repository` field — or the links in its description — point back at the same slug; otherwise
+    record `NOT PUBLISHED` and say so. The same check collapses fork families for free: four
+    Blackboard addresses declare `blackboard-mcp` and **one** publication exists, its `repository`
+    naming `felipedias-ie`; `mdweaver/canvas-mcp` carries upstream's scoped name
+    `@r-huijts/canvas-mcp`. **Count the artefact, not the slug.**
 
 **Channel note, so this is reproducible:** `curl -sI https://github.com/...` returns **403** through
 this sandbox's agent proxy and `api.github.com` returns **403**. `git ls-remote --symref` and

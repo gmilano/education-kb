@@ -32,6 +32,21 @@ the payload at each repository's real default ref.
 🔵 **But the gap did not disappear — it moved**, and the new shape is the finding. See
 *[The Blackboard and D2L supply, measured](#the-blackboard-and-d2l-supply-measured)*.
 
+🆕 **Pass `p387` · 2026-10-22 — increment, and it does two things `p386` could not.**
+**(1) It dates the shelf.** `github.com` and `api.github.com` are still **403**, so this base has
+published no maintenance signal at all — and a star count was never the right one. The **package
+registries are open**: `registry.npmjs.org` and `pypi.org/pypi/<pkg>/json` return the published
+grant *and* every publish date. Twenty-six packages were read: **three recommendations on this
+shelf change**, one of them a pattern dependency that has had no release since **April 2022**.
+**(2) It promotes the LATAM supply this base already held and never shelved.** `Gap 386-C` called
+LATAM-native agent supply a *"structural"* fourth consecutive null. The null was in that pass's
+search leg, not in the supply: **three granted LATAM-native agents** — Colombia and Brazil — were
+re-read first-hand today and are shelved below as **Tier 4**, where a studio can find them.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — **15 addresses
+probed**: 12 granted reads over **11 distinct granted projects** (one mirror pair counts once) and
+3 ungranted, plus 1 inferred slug **refused rather than probed** ·
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv) — **26 package reads**.
+
 ## 🔴 No star counts are published this pass, and that is deliberate
 
 Every popularity channel was closed in this sandbox: `api.github.com` → **403**,
@@ -70,9 +85,37 @@ permissiveness, maintenance signal and fit — and states the gap instead of fil
 | agent | repo | default ref | licence | what it actually does |
 |---|---|---|---|---|
 | **jupyter-ai** | [jupyterlab/jupyter-ai](https://github.com/jupyterlab/jupyter-ai) | `main` | 🟢 **BSD-3-Clause** | LLM assistance inside JupyterLab — the surface where most CS and data-science teaching already happens. |
-| **pybryt** | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Assesses the **approach** a student's code takes, not only its output. Pairs with an LLM that explains *why* the approach was wrong. |
+| **pybryt** | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Assesses the **approach** a student's code takes, not only its output. Pairs with an LLM that explains *why* the approach was wrong. 🔴 🆕 `p387` **No PyPI release since `v0.7.0`, 2022-04-28 — four and a half years.** The idea is still the best available statement of approach-assessment and `Pattern B` still stands on it, but treat it as **a reference implementation to vendor and maintain, not a dependency to install**. Repository commit activity is unreadable here (`github.com` 403), so this is a statement about the *published artefact*, which is what a client would install. |
 | **canvas-mcp** | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | `main` | 🟢 **MIT** | MCP server over Canvas LMS: courses, assignments, submissions, grading, rubrics, students. Fork [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) (MIT) adds office-hours, syllabus read/write and course-content copy. |
 | **Flat** | [netless-io/flat](https://github.com/netless-io/flat) | `main` | 🟢 **MIT** | Open-source online classroom (interactive whiteboard, recording) — the live-session substrate an agent can sit in. |
+
+## Tier 4 — 🆕 `p387` LATAM-native agents (the tier `Gap 386-C` said did not exist)
+
+Every row re-read first-hand on 2026-10-22 at the repository's **real default ref**, resolved with
+`git ls-remote --symref`. These are **not** English-language agents with Spanish strings bolted on:
+each is built by a LATAM institution or developer against a LATAM curriculum, platform or
+constraint, and the prose in the repository is Spanish or Portuguese first.
+
+| agent | repo | ref | licence | what it actually does | origin |
+|---|---|---|---|---|---|
+| **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main` | 🟢 **MIT** *(1,069 B, © 2026 Grupo Sirius)* | 🟢 **The one LATAM-native agent built as an LMS plugin rather than a standalone app.** Conversational tutor delivered **inside Open edX as an XBlock/plugin**, FastAPI backend, Claude API, TTS audio replies, animated avatar, **teacher statistics panel**, context persistence across sessions. Shipped for **rural higher education in Risaralda, Colombia**; first subjects Programación I (Python) and Introducción a la Matemática. Docker + Azure, GitHub Actions. 🟡 Read the licence boundary below before quoting it. | LATAM — Universidad Tecnológica de Pereira, Colombia |
+| **Agente BNCC para professores** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main` | 🟢 **MIT** *(1,074 B; `package.json` also declares MIT)* | 🟢 **Curriculum-grounded generation with the hallucination gate in the product, not the roadmap.** Lesson plans and exams-with-answer-keys anchored to official **BNCC** skill codes (Brazil's national curriculum): the model writes the prose, but every code and skill description comes from the official base and **an invented code is discarded before it reaches the teacher**. 1st year of Fundamental → 3rd year of Ensino Médio, cross-term skill selection, student/teacher PDF pairs, keyed **API v1** so a school's own systems call the same agent, Gemini or DeepSeek per request. Next.js 16 + TypeScript. | LATAM — Brazil |
+| **TechLead AI Tutor** | [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main` | 🟢 **MIT** *(1,069 B, © 2026 Thiago Silva)* | Programming and software-engineering tutor built to **refuse to hand over the code**: spec-driven planning before any line is written, and **the agent that teaches is not the agent that verifies** — mechanical sensors grade the build. The clearest open statement of anti-dependency tutoring design on these shelves. | LATAM — Universidade Federal do Agreste de Pernambuco (UFAPE), Brazil |
+
+🟡 **The licence boundary on TutorIA, stated because a studio will hit it on day one.** The plugin's
+own grant is MIT and a studio can keep its changes closed. **Open edX itself is AGPL-3.0**, and
+TutorIA is delivered as an XBlock inside it — so the *platform* obligations are untouched by the
+plugin's MIT grant. Deliver it the way `Pattern A` and `Pattern O` deliver every agent into a
+copyleft LMS: **the agent is a separate service the plugin calls**, and the plugin stays thin.
+
+🔴 **Ungranted, and recorded so nobody re-finds them as candidates** (no licence file at any of the
+eight probed paths, no `license` field in any manifest):
+[Daniel-ux1026/Tutor-Inteligente](https://github.com/Daniel-ux1026/Tutor-Inteligente) (Peru —
+offline-first PWA, 1.°–5.° de secundaria, explainable decision-tree difficulty selection; **this is
+the one that hurts**, because `Pattern D` wants exactly this and cannot use it),
+[FXArth/Tutor-Programacao](https://github.com/FXArth/Tutor-Programacao) (Brazil),
+[henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) (Brazil, RAG
+tutor, default ref **`master`**).
 
 ## Courseware, not agents — but the fastest way to staff a team
 
@@ -118,7 +161,7 @@ For Moodle, use the **`webservice_mcp` plugin from Moodle's own plugin directory
 ## Build-on-this tier
 
 The permissive shortlist: every agent on these shelves a studio can build on and still hand a
-client closed, client-owned code. 🆕 `p386`: **19 permissive rows** — MIT, Apache-2.0 or BSD-3 only, no
+client closed, client-owned code. 🆕 `p387`: **23 permissive rows** (19 at `p386`, **+4: three LATAM-native agents and `d2l-cli`**) — MIT, Apache-2.0 or BSD-3 only, no
 copyleft, no bespoke clause, every grant read first-hand at the repository's real default ref.
 
 | repo | ref | licence | use it for |
@@ -142,6 +185,10 @@ copyleft, no bespoke clause, every grant read first-hand at the repository's rea
 | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | `main` | MIT | the before/after measurement |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | `main` | MIT | retention scheduling with published parameters |
 | [tutors-sdk/tutors](https://github.com/tutors-sdk/tutors) | `development` | MIT | courseware delivery components |
+| [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main` | MIT | 🆕 `p387` — Spanish-language tutor **inside Open edX**; the LATAM reference deployment |
+| [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main` | MIT | 🆕 `p387` — BNCC-anchored teacher generation with a curriculum-code gate |
+| [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main` | MIT | 🆕 `p387` — tutoring that withholds the answer; author ≠ verifier |
+| [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli) | `main` | MIT | 🆕 `p387` — read-only Brightspace client written **for agents** (PyPI `d2l-cli` 0.3.0) |
 
 🔴 Deliberately **not** here, and why: `plastic-labs/tutor-gpt` (GPL-3.0) and
 `HugeCatLab/ChatTutor`, `learnhouse/learnhouse` (AGPL-3.0) are run as **separate services**, never
@@ -156,13 +203,21 @@ MIT grant is still readable at tag **`v0.1.0`** (1,081 B, read first-hand this p
 ## MCP servers by LMS platform
 
 MCP reached the LMS in 2026 and this is the integration path that did not exist a year ago.
-🆕 `p386`: **6 LMS platforms** are reachable through the servers below — Blackboard joins the table
-this pass, with a verified grant for the first time.
+🆕 `p386`: **6 platforms** are reachable through the servers below — LMS platforms, counting Anki's
+spaced-repetition loop separately because it is not an LMS. Blackboard joined the table at `p386`,
+with a verified grant for the first time.
 
 ### Agents over the systems
 
-**23 rows in the table below**, every one resolved and licence-read first-hand on 2026-10-22
-(12 at `p383`–`p385`, **11 added at `p386`**).
+🆕 `p387`: **25 distinct MCP server slugs appear in this section's table** — **23 platform rows**,
+every one resolved and licence-read first-hand on 2026-10-22 (12 at `p383`–`p385`, 11 added at
+`p386`), **plus two fork addresses named inside a row's note** (`lmgveerhoek/brightspace-mcp-server`
+and `matthewliu10/brightspace-mcp-server`, both byte-identical to their upstream).
+🔵 **The count and the scope are stated together on purpose.** `p278` registered this claim as
+*"MCP server slugs in the MCP section's table"* but anchored it to a sentence about **rows**, so
+the instrument measured 25 while the shelf said 23 and the gate read STALE with nothing actually
+wrong. `p387` re-points the anchor at the quantity the instrument measures — slugs — and keeps the
+row count in the same sentence, because a reader wants rows and the gate wants slugs.
 
 | platform | server | ref | licence | note |
 |---|---|---|---|---|
@@ -172,12 +227,12 @@ this pass, with a verified grant for the first time.
 | **Canvas** | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | `main` | 🟢 **MIT** | 🟢 **The clean default.** Courses, assignments, submissions, grading, rubrics, students. |
 | **Canvas** | [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) | `main` | 🟢 **MIT** | Fork of the above: adds office-hour appointment groups, announcement editing, syllabus read/write, student groups, course-content copy. |
 | **Canvas** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | `main` | 🟢 **MIT** | Independent implementation — useful as a second opinion on tool shape. |
-| **Canvas** | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | `main` | 🟡 **MANIFEST-ONLY MIT** | Advertises 54 tools and Streamable HTTP. No licence **file**, but `package.json` declares `"license": "MIT"` — and its `files` array names a `LICENSE` that is absent from the tree. Usable; get the file committed. |
+| **Canvas** | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | `main` | 🟡 **MANIFEST-ONLY MIT** — 🆕 `p387` **also published to npm as MIT**, a second independent grant publication | 🔴 🆕 `p387`: npm `canvas-mcp-server` **v2.2.3, last published 2025-06-27 — ~16 months stale**, while [r-huijts](https://github.com/r-huijts/canvas-mcp) published 2026-09-21. Its tool count is the largest on the Canvas shelf and its release is the oldest; prefer the maintained one unless you need those tools. Advertises 54 tools and Streamable HTTP. No licence **file**, but `package.json` declares `"license": "MIT"` — and its `files` array names a `LICENSE` that is absent from the tree. Usable; get the file committed. |
 | **Open edX** | [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) | `master` | 🔴 AGPL-3.0 | Matches the platform's own licence, which is the reason it can exist. |
 | **Open edX** | [blend-ed/tutor-contrib-openedxmcp](https://github.com/blend-ed/tutor-contrib-openedxmcp) | `master` | 🔴 AGPL-3.0 | The `tutor` plugin that installs it — the realistic deployment route. |
 | **Google Classroom** | [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server) | `main` | 🟢 **MIT** | Classroom is not an LMS a studio can fork, so MCP is the *only* integration surface. |
-| **Brightspace / D2L** | [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | `main` | 🟡 **MANIFEST-ONLY MIT** | The only D2L server verified this pass. No licence file; `package.json` declares `"license": "MIT"`. **D2L remains thin — one server, and its grant is a manifest line.** |
-| **Blackboard** | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | `main` | 🟢 **MIT** *(1,063 B)* | 🆕 `p386`. 🟢 **The only institution-grade LMS MCP server on this shelf.** Wraps the **official Blackboard Learn REST API**; README claims OAuth2, role gate, FERPA handling, rate limiting, PII scrub, JSON audit log, Prometheus `/metrics`, 40 tools incl. **grade write-back** and webhooks (self-claimed, read not executed). 🔴 Grade write-back is gated or prohibited in several jurisdictions — check [`policy-matrix`](../intel/policy-matrix.tsv) before enabling it. |
+| **Brightspace / D2L** | [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | `main` | 🟡 **MANIFEST-ONLY MIT** — 🆕 `p387` the npm record declares `MIT` too, so the grant is published twice | 🔴 🆕 `p387`: npm `d2l-mcp-server` **v1.0.1, published 2025-11-28 and never again — ~11 months stale.** The only D2L server verified this pass. No licence file; `package.json` declares `"license": "MIT"`. **D2L remains thin — one server, and its grant is a manifest line.** |
+| **Blackboard** | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | `main` | 🟢 **MIT** *(1,063 B)* | 🔴 🆕 `p387`: **it has never shipped a release.** Its `package.json` claims the npm name `blackboard-learn-mcp`, which is **404 on the registry**; the unrelated npm package `bb-mcp` (v1.0.0, 2026-06-19) carries **no licence field and no repository field** and must not be attributed to it. So the one institution-grade claim on this shelf is **unexecuted (`Gap 386-B`) *and* unpublished** — build from it, do not install it. 🆕 `p386`. 🟢 **The only institution-grade LMS MCP server on this shelf.** Wraps the **official Blackboard Learn REST API**; README claims OAuth2, role gate, FERPA handling, rate limiting, PII scrub, JSON audit log, Prometheus `/metrics`, 40 tools incl. **grade write-back** and webhooks (self-claimed, read not executed). 🔴 Grade write-back is gated or prohibited in several jurisdictions — check [`policy-matrix`](../intel/policy-matrix.tsv) before enabling it. |
 | **Blackboard** | [Mattlo0546/blackboard-mcp](https://github.com/Mattlo0546/blackboard-mcp) | `main` | 🟢 **MIT** *(1,067 B)* | 🆕 `p386`. Blackboard **Ultra**, student-side: signs in through the user's own university SSO/MFA in a real browser, **no API key**, read-only. Courses, deadlines, announcements, lecture-slide download. Same author ships Canvas and Moodle siblings. 🟡 A personal tool, not a tenant deployment. |
 | **Blackboard** | [alanwtom/blackboard-mcp](https://github.com/alanwtom/blackboard-mcp) | `main` | 🟢 **MIT** *(1,065 B)* | 🆕 `p386`. Local-first, read-only, reads the signed-in student's own Ultra data through their normal browser session. Upstream of the fork below. |
 | **Blackboard** | [lukecarroll15/blackboard-mcp](https://github.com/lukecarroll15/blackboard-mcp) | 🔴 **`tcd`** | 🟢 **MIT** *(1,065 B)* | 🆕 `p386`. 🔵 **Two lessons in one row.** The default ref is **`tcd`**, not `main` — a `main`-assuming read returns "no licence". And the payload is **byte-identical to upstream with the holder still `alanwtom`**, so the fork lineage is readable from the grant alone. |
@@ -189,6 +244,45 @@ this pass, with a verified grant for the first time.
 | **Brightspace / D2L** | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main` | 🟢 **MIT** *(🔵 **1,200 B** — non-stock)* | 🆕 `p386`. The extra bytes are **attribution, not restriction**: an inline notice *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."* See **Pattern L step 11**. |
 | **Brightspace / D2L** | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main` | 🟢 **MIT** *(🔵 **2,181 B** — **two stacked grants**)* | 🆕 `p386`. The payload is **two complete MIT licences**: its own (© 2026 Robert McCrary) **plus** *"Portions of this project are derived from d2l-cli: Copyright (c) 2026 Aaryan Kapoor."* 🟡 Shipping it means carrying **both** notices. Go, read-only, pre-1.0. |
 | **Anki** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | `main` | 🟢 **MIT** | Not an LMS — the spaced-repetition loop, which pairs with FSRS above. |
+
+### 🆕 `p387` — Dated: which of these servers actually ships a release
+
+Stars are unreadable here and always were a poor proxy. **A publish date is the signal a studio can
+act on**: it dates the artefact the client would install. Method and every raw row:
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv).
+
+| server | package | latest | last published | read it as |
+|---|---|---|---|---|
+| [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | npm `brightspace-mcp-server` | **5.0.8** | **2026-10-22** (today) | 🟢 the most actively published LMS MCP server on this shelf — and a **v5** line, not a weekend project |
+| [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | npm `brightspace-d2l-mcp` | 1.4.3 | 2026-10-21 | 🟢 active |
+| [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | npm `brightspace-mcp` | 1.3.1 | 2026-09-28 | 🟢 active — corroborates `p386`'s pick as the most substantial D2L base |
+| [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | npm `@r-huijts/canvas-mcp` | 1.5.1 | 2026-09-21 | 🟢 active — the Canvas default, now dated |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | npm `@ankimcp/anki-mcp-server` | 0.27.0 | 2026-10-04 | 🟢 active |
+| [felipedias-ie/blackboard-mcp](https://github.com/felipedias-ie/blackboard-mcp) | npm `blackboard-mcp` | 0.1.2 | 2026-09-10 | 🟡 one release, pre-1.0 — **and it is the only publication in its fork family** |
+| [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | npm `d2l-mcp-server` | 1.0.1 | 2025-11-28 | 🔴 ~11 months stale |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | npm `canvas-mcp-server` | 2.2.3 | 2025-06-27 | 🔴 ~16 months stale |
+| [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | npm `blackboard-learn-mcp` | — | **never** | 🔴 no published release (see its row above) |
+| [Mattlo0546/blackboard-mcp](https://github.com/Mattlo0546/blackboard-mcp) · [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | PyPI `blackboard-mcp` · npm `canvas-mcp-code-api` | — | **never** | 🟡 clone-and-run tools, not installable packages — fine, but say so to a client |
+
+🔵 **The fork families collapse mechanically, and now there is a second way to see it.** `p386`
+collapsed them by **licence bytes** (byte-identical payloads, upstream's copyright holder). The
+registry collapses them by **publication**: four Blackboard addresses
+([alanwtom](https://github.com/alanwtom/blackboard-mcp),
+[lukecarroll15](https://github.com/lukecarroll15/blackboard-mcp),
+[Loganxgreaves](https://github.com/Loganxgreaves/blackboard-mcp),
+[felipedias-ie](https://github.com/felipedias-ie/blackboard-mcp)) all declare the package name
+`blackboard-mcp`, and **exactly one publication exists** — its `repository` field points at
+`felipedias-ie`. Same for [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp), whose fork
+kept upstream's scoped name `@r-huijts/canvas-mcp`. **Four addresses, one artefact.** Two
+independent instruments, same answer: count the project, not the slug.
+
+🔴 **And this pass's own instrument error, published rather than tidied.**
+[faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server)
+declares the package name **`class`** — and npm's `class` is an unrelated **2013** package by
+`deadlyicon` (MIT, v0.1.4). A registry lookup keyed on the manifest name alone would have printed
+*"MIT, published 2013-08-15"* onto this shelf for a Google Classroom server. **A manifest name is
+not a publication.** The gate is now `Pattern L` **step 14**: accept a registry row only when its
+`repository` field — or its description links — point back at the same slug.
 
 ### 🔵 Supply census: how crowded each platform already is
 
@@ -260,6 +354,25 @@ TOTP/OAuth/browser auth strategies) is the closest thing to a base for one.
   [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (**MIT**, 1,065 B) as a campus
   LLM gateway where the licence has to be clean.
 
+## 🆕 `p387` — The institution-grade Brightspace tooling exists, and it is not an MCP server
+
+`Gap 386-A` is *"no institution-grade D2L MCP server exists"*, and that still holds. But the
+adjacent question a studio actually asks — *has anyone automated Brightspace against the official
+API at institutional scale?* — has an answer this base did not hold:
+
+| tool | channel it was found and read on | licence | what it is |
+|---|---|---|---|
+| **`bscli`** — Brightspace Command Line Interface | **PyPI** `bscli` (`pypi.org/pypi/bscli/json`) — v**0.3.13**, published **2026-09-04** | 🟢 **MIT** — the *full payload* is carried in the PyPI `info.license` field, © 2024 Ciske Harsema, read first-hand | Grading **operations** at university scale: bulk-download submissions, process them, **distribute them to graders**, collect grades and **upload them back to Brightspace**. Author e-mails are `@ru.nl` — **Radboud University**, EMEA — and the README states it is designed for educational institutions and adaptable to any Brightspace instance. |
+| **`d2l-cli`** | **PyPI** `d2l-cli` v0.3.0, published **2026-09-24**, `Homepage` → [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli); grant then read at `main/LICENSE` (MIT, 1,070 B, © 2026 Aaryan Kapoor) | 🟢 **MIT** | *"Read-only CLI client for D2L Brightspace student APIs, built for AI agents."* 🟢 **This closes `Gap 386-E`:** it is the address named in [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP)'s stacked grant, so anyone shipping that server now knows exactly what they are carrying attribution for. |
+
+🔵 **Why these were invisible for four passes, stated as a method lesson.** Both were found by
+**package-registry name**, not by a repository search. `bscli`'s own home,
+`bscli.science.ru.nl`, is **DNS-unreachable** from this sandbox and no git address for it was
+resolvable — so the *grant* is read, the *code* is installable, and the **source address remains
+unresolved** (`Gap 387-B`). For `d2l-cli` the registry handed over the address that a repository
+search for the string in a licence notice could not: `p386` was right not to guess a slug, and the
+registry is where the slug actually lives.
+
 ## Verification method
 
 `curl -sI https://github.com/...` returns **403** through this sandbox's agent proxy, and
@@ -309,6 +422,11 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | `main/LICENSE` | Apache-2.0 |
 | [jupyterlab/jupyter-ai](https://github.com/jupyterlab/jupyter-ai) | `main/LICENSE` | BSD-3-Clause |
 | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main/LICENSE` | MIT |
+| [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main/LICENSE` | MIT — 1,069 B, © 2026 Grupo Sirius *(`p387`)* |
+| [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main/LICENSE` | MIT — 1,074 B *(`p387`)* |
+| [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main/LICENSE` | MIT — 1,069 B, © 2026 Thiago Silva *(`p387`)* |
+| [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli) | `main/LICENSE` | MIT — 1,070 B, © 2026 Aaryan Kapoor *(`p387`)* |
+| `bscli` *(no git address resolved)* | PyPI `info.license` payload | MIT — © 2024 Ciske Harsema *(`p387`)* |
 | [netless-io/flat](https://github.com/netless-io/flat) | `main/LICENSE` | MIT |
 | [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) | `main/LICENSE` | MIT |
 | [tutors-sdk/tutors](https://github.com/tutors-sdk/tutors) | `development/LICENSE` | MIT |

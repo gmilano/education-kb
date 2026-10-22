@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 387 · 2026-10-22 — **`Gap 386-C` WAS NOT A SUPPLY GAP: THREE GRANTED LATAM-NATIVE AGENTS WERE IN THIS BASE'S OWN HARVEST, UNSHELVED FOR FOUR PASSES. 🟢 `Gap 386-E` CLOSED FROM A PACKAGE REGISTRY. 🟢 THE MAINTENANCE-SIGNAL GAP IS PARTLY CLOSED BY A CHANNEL NOBODY HAD TRIED — AND IT OVERTURNS THREE RECOMMENDATIONS, ONE OF THEM A PATTERN DEPENDENCY.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — 15 addresses probed: 12 granted reads over 11 distinct granted projects (the mirror pair counts once), 3 ungranted, plus 1 inferred slug refused rather than probed ·
+[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv) — 26 package reads.
+
+### 🔴 `Gap 386-C` CLOSED, and it was the same error `p386` itself diagnosed
+
+`Gap 386-C` called LATAM-native agent supply *"structural, not a search artefact"* after a fourth
+consecutive null leg. **It was a search artefact.** Two legs phrased in Portuguese and Spanish
+returned six candidates, **three granted** —
+[LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) (MIT, Colombia, Open edX XBlock),
+[GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+(MIT, Brazil, BNCC-code-gated generation),
+[thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) (MIT, Brazil, UFAPE) — all read
+first-hand today and now shelved as **Tier 4** on [`agents/top.md`](../agents/top.md).
+🔴 **Root cause, and it is this base's own `Pattern L` step 12 one level up:** `p386` established
+that *a count of addresses is not a count of grants*. The twin error is **a null leg reported as a
+null supply**. Worse, three of these addresses were already in `agents/trending.md`'s harvest
+history and had never reached a shelf — so the shelves claimed an absence the base did not have.
+🟢 **The replacement claim, which is defensible:** what LATAM lacks is not agents but **tenancy,
+support and institution-grade packaging** — recorded on `intel/market.md` as LATAM opportunity 7.
+
+### 🟢 `Gap 386-E` CLOSED — `d2l-cli` resolved, without guessing a slug
+
+PyPI `d2l-cli` v0.3.0 (published **2026-09-24**) carries `Homepage` →
+[Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli); the grant was then read at
+`main/LICENSE` (**MIT**, 1,070 B, © 2026 Aaryan Kapoor). Anyone shipping
+`RobertLMcCrary/D2L-MCP` now knows what the stacked notice attributes. 🔵 `p386` was right to refuse
+to guess an address; the lesson is **where** the address lived: a package registry, not a repository
+search.
+
+### 🟢 The maintenance-signal gap (Trend 8) PARTLY CLOSED — and three recommendations change
+
+`registry.npmjs.org` and `pypi.org/pypi/<pkg>/json` are **open** in this sandbox and publish release
+dates. 26 reads:
+- 🔴 **PyPI `pybryt`: no release since v0.7.0, 2022-04-28.** It is a **`Pattern B` dependency**.
+  Pattern B now says *vendor it, do not install it*.
+- 🔴 **npm `canvas-mcp-server` (DMontgomery40, the 54-tool server): last published 2025-06-27**,
+  ~16 months stale, against `@r-huijts/canvas-mcp` at 2026-09-21. The tool-count recommendation now
+  carries its date.
+- 🔴 **npm `blackboard-learn-mcp` (nitsuah/bb-mcp): 404 — never published.** The one
+  "institution-grade" Blackboard server has unexecuted claims (`Gap 386-B`) **and** no artefact.
+- 🟢 **npm `brightspace-mcp-server` v5.0.8, published 2026-10-22**; `brightspace-d2l-mcp` 2026-10-21;
+  `brightspace-mcp` 2026-09-28 — the D2L shelf is the *most* active, not the thinnest.
+- 🟢 **PyPI `deeptutor`: 51 releases, 2026-05-21 → 2026-10-18** — the Tier-1 pick, dated.
+🔴 **Still open:** commit activity, contributors and issue latency (behind `api.github.com`, 403),
+and every shelf entry that is not a published package at all.
+
+### 🔴 This pass's own error, published rather than tidied
+
+The recency sweep keyed on the manifest package name and printed **"MIT, published 2013-08-15"** for
+[faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server),
+whose `package.json` declares the name **`class`** — an unrelated 2013 npm package. Caught by an
+attribution check before it reached a shelf; the check is now **`Pattern L` step 14**.
+
+### 🔵 One project, two addresses — a phantom data point removed
+
+The alias register already calls `mebis-lp/moodle-local_ai_manager` **STALE** against canonical `bycs-lp/moodle-local_ai_manager` (resolved `p350`, confirmed `p370`; `p226`'s direction evidence was *weak*, sibling-set only).
+🟢 `p387` re-confirms it mechanically: **the same HEAD sha `4ff5a87`** at both addresses, plus the
+identical component, release 5.1.1 and version code 2026102305 in `version.php` — an identity read
+rather than an inference. Counted **once** on the foundations shelf, and `gate-alias-canonical`
+caught this pass publishing it as a second row before the commit.
+
+### 🔴 New gaps
+
+- **`Gap 387-A`: the tenancy gap is closed on Moodle and still open everywhere else.**
+  [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager)
+  (GPL-3.0-or-later) is a real multi-tenant AI backend, in production in a German state school
+  system. **Canvas, Blackboard, D2L and Open edX have no equivalent** on these shelves — every
+  granted server there is single-tenant or student-session. `Pattern N` remains the build spec.
+- **`Gap 387-B`: `bscli` is MIT, institution-grade, and has no resolvable source address.** The
+  grant and the release date are read from PyPI; `bscli.science.ru.nl` is DNS-unreachable here and no
+  git address was found. A pass with working DNS to `.ru.nl` should resolve it — a forge address is
+  needed before a studio can fork or audit it.
+- **`Gap 387-C`: a Zenodo-deposited MIT teacher-agent package cannot be read.** Record `23454379`
+  (*"Plugin para agentes de IA de asistencia docente"*, MIT, 18 Oct 2026, question banks / exam
+  generation / submission evaluation for Moodle) was returned by the Spanish leg; `zenodo.org` is
+  **DNS ENOTFOUND**, so it is **not shelved**. 🔵 Research-deposited education agents are a supply
+  channel this base has never been able to read at all — DOI repositories, not forges.
+- **`Gap 387-D`: the prescribed regional legs do not return education.** `AI education EMEA 2026
+  adoption regulation players` returned enterprise-IT and HR commentary; the APAC leg returned
+  enterprise tech-priority reports. Both were **run and promoted nothing**. The legs that produced
+  region-specific facts this pass were targeted ones (the AI Act deferral; local-language supply
+  legs). The regional leg's phrasing selects market research — rephrase it per region before
+  blaming the region.
+- **`Gap 387-E`: three substitute trending channels are dead too.** `gittrend.io`,
+  `trendshift.io`, `ossinsight.io` (and its API) → **DNS ENOTFOUND**, alongside the standing 403s on
+  `github.com/trending` and `api.github.com`. 🔵 Stop registering "read GitHub trending" as an action
+  for a successor pass: **six passes, five channels, no path.** Recency from the registries is the
+  replacement, and it is better evidence anyway.
+- **`Gap 387-F`: `openedx-ai-extensions` is the first-party AI contract and it is marked
+  experimental.** Nobody has yet tested whether a studio can build a client deliverable against it
+  or must still go around it. That test is a concrete deliverable for a pass with a runnable lane.
+
+### 🟢 The execution lane is OPEN — `make hooks` ran, 43/45 green, and it caught three defects in this pass's draft
+
+`p382` recorded that *"`make hooks` COULD NOT BE RUN: the execution lane is denied by policy, not by
+egress."* 🟢 **It ran here.** What it caught before the commit: this pass publishing **both**
+addresses of a registered alias (`gate-alias-canonical`), **four** drifted registered quantities
+(`recount` — three of them inherited, including a `NO-ANCHOR`), and a stale address census
+(`gate-census-currency` / `gate-union-currency`). All discharged; the census and union sentences are
+re-derived as the last act before the commit and restated in [`README.md`](../README.md).
+
+- **`Gap 387-G`: two gates are red and were red at `HEAD` before this pass wrote anything** —
+  verified by re-running them against the pre-pass tree. **`gate-fold-identity`**: four live rows
+  carry `AI-Shifu/ai-shifu` where the history published `ai-shifu/ai-shifu`; 🔵 **not "fixed" on
+  purpose**, because the live casing is the owner's own and the discharge would mean publishing a
+  casing this base believes wrong — an append-only shelf cannot be repaired backwards.
+  **`gate-census-union`**: control 24 wants both of `p375`'s rejection classes to fire on the live
+  shelves and only `NAME-REF-OR-PATH` does — a fixture-coverage claim, not a shelf defect. Both need
+  the instruments' author, not a shelf edit, and neither may be closed by weakening a control.
+- 🔵 **`recount`'s `p278` anchor was re-pointed, not re-numbered.** The claim is named *"MCP server
+  slugs in the MCP section's table"* and was anchored to a sentence counting **rows** — 23 rows
+  carry 25 slugs, because two rows name a fork inside their note, so the gate read STALE for two
+  passes with nothing wrong on the shelf. The anchor now pins the measured quantity and the shelf
+  states **both** numbers. This is the *"re-point the anchor"* half of `p278`'s own instruction.
+- 🔴 **And a correction `p386` owed and never carried:** [`intel/trends.md`](trends.md) still said
+  *"Blackboard has 9 with not one verified grant and D2L has 6 with the only one checked
+  ungranted"* — the exact sentence `p386` corrected on `agents/top.md` — and still drew the
+  "a permissive server would be a real contribution" conclusion from it. 🔵 **A correction applied
+  to one shelf is not applied.** Fixed this pass; the live claim is now the tenancy one.
+
+### 🟡 Carried, unchanged
+
+`Gap 386-A` (no institution-grade **D2L MCP** server — still true; `bscli` and `d2l-cli` are CLIs,
+not MCP servers, and `Pattern N` is still the build spec) · `Gap 386-B` (nitsuah/bb-mcp's security
+claims unexecuted — now compounded: it has never shipped a release) · `Gap 386-D` (no primary legal
+or policy text readable: `eur-lex.europa.eu`, `www.congress.gov`, `www.oecd.org` **and now**
+`arxiv.org`, `zenodo.org`, `moodle.org`, `docs.openedx.org` all DNS ENOTFOUND. The AI Act deferral
+to **2 Dec 2027** gained a further independent corroboration this pass — Parliament 16 Jun 2026,
+Council 29 Jun 2026 — and the grade stays **`CONVERGENT-SECONDARY, PRIMARY UNREAD`**).
+
+---
+
+
 ## Pass 386 · 2026-10-22 — **TWO DECLARED GAPS WERE NOT GAPS: Blackboard and D2L had 12 MIT GRANTS BETWEEN THEM, UNREAD FOR FOUR PASSES. 🔴 THE REPLACEMENT GAP IS TENANCY, NOT LICENSING. 🟢 THREE OFF-SHELF FACTS PROMOTED TO `intel/market.md`, ONE OF THEM NEW TO THIS REPOSITORY.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes, 19 live-granted, 2 ungranted, 2 dead.
