@@ -19,6 +19,7 @@ PY ?= python3
 # p277: the enumeration suite reports WHICH control failed on stdout and exits 1.
 # That report used to be redirected to /dev/null, so the gate could prove a failure
 # and could not name it.  It is captured here and printed on failure instead.
+PYPI_CACHE ?= /tmp/p393-pypi-index
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 BESPOKE_LOG ?= /tmp/education-kb-gate-bespoke-title.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
@@ -75,7 +76,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -869,6 +870,15 @@ gate-grant-scope: ## p348 — ACTION ZZ-z/ZZ-u/ZZ-y/ZZ-ab/ZZ-w: a grant has a SC
 # published under two repositories with different HEADs, which this pass found between
 # `anthropics/k12-teacher-skills` and `learning-commons-org/agent-skills` (`SKILL.md`
 # sha256 `152e3272fbd108fe`, byte-identical) — and that is `ACTION ZZ-ad`.
+pypi-index-sweep: ## p393 — the Python DISCOVERY channel Gap 392-C asked for. NEEDS NETWORK; never in `hooks`.
+	@cd compose/code/p393-pypi-index-channel && \
+	  $(PY) -I pypi_index_channel.py fetch --out $(PYPI_CACHE) && \
+	  $(PY) -I pypi_index_channel.py sweep --vocab vocab.education.txt --cache $(PYPI_CACHE)
+
+pypi-index-verify: ## p393 — per-package JSON read for candidates: make pypi-index-verify PKGS="a b"
+	@cd compose/code/p393-pypi-index-channel && $(PY) -I pypi_index_channel.py verify $(PKGS)
+
+
 hooks-online: ## p348 — the egress half of the standing check.  NEEDS NETWORK; never in `hooks`.
 	@rc=0; red=""; green=0; \
 	for g in gate-identity-online gate-online gate-mit-tier; do \

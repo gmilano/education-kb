@@ -1,0 +1,17 @@
+# p393 · 2026-10-22 · channels probed BEFORE anything was reasoned about (Gap 511's standing rule),
+# with p381's `tool` column, because Gap 532 is tool-scoped: the same URL answers differently per tool.
+channel	tool	code	bytes	state	note
+pypi.org/simple/ (PEP 691 JSON)	curl	200	45189043	🟢 OPEN	920,784 project names in 1.4 s, unauthenticated. THE CHANNEL Gap 392-C ASKED FOR. api-version 1.4.
+pypi.org/pypi/{pkg}/json	curl	200	~32KB	🟢 OPEN	per-package verification: version, releases, 3 licence channels, declared repo. Verifies; cannot discover.
+pypi.org/search	curl	-	3038	🔴 CLOSED	JavaScript bot-challenge page. p392's reading CONFIRMED — not a channel.
+packages.ecosyste.ms/api/v1	curl	000	0	🔴 PROXY-REFUSED	candidate cross-registry search named by Gap 392-C; not reachable here.
+api.deps.dev/v3	curl	000	0	🔴 PROXY-REFUSED	second candidate; not reachable here.
+libraries.io/api/search	curl	000	0	🔴 PROXY-REFUSED	third candidate; not reachable here.
+registry.npmjs.org/-/v1/search	curl	200	874	🟢 OPEN	p388's channel, still open. Unchanged.
+raw.githubusercontent.com	curl	200	varies	🟢 OPEN	licence payloads without a clone. Unchanged, 12th consecutive pass.
+git ls-remote --symref	git	-	-	🟢 OPEN	real default ref + HEAD sha. Unchanged.
+git clone --depth 1 --filter=blob:none	git	-	-	🟢 OPEN	HEAD commit date AND tree enumeration (ls-files). p389's method.
+github.com/{owner}/{repo}	WebFetch	200	-	🟢 OPEN	stars, forks, commit count, licence sidebar, ARCHIVED banner. p392's channel, confirmed 2nd pass.
+github.com/{owner}/{repo}	curl	403	-	🔴 CLOSED	same URL, different tool — Gap 532, EIGHTH replication.
+github.com/trending	curl	403	-	🔴 CLOSED	twelfth consecutive pass.
+eur-lex.europa.eu	curl	000	0	🔴 PROXY-REFUSED	Gap 391-E / 392-F carried a third pass. No EU primary text has ever been read here.

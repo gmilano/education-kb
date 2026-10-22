@@ -177,6 +177,39 @@ returns market research.*
 
 **Market.** Largest single region for AI-in-education spend. Canvas dominates higher-ed LMS.
 
+🆕 `p393` 🔴 **A correction to a claim in wide circulation, and this base nearly carried it.** The
+North America research leg returned, as its headline, *"Boston Public Schools became the first major US
+district to mandate AI fluency as a graduation requirement, starting September 2026."* **The primary
+coverage does not say that.** Two separate things were conflated:
+- 🟢 **Boston** runs a **district AI-literacy programme** — funded by a **$1 M gift**, curriculum built
+  with **UMass Boston** and a local industry group, teacher cohort trained over the summer, high-school
+  programming from **September**. The mayor's stated *goal* is that *"every single BPS graduate will have
+  fluency."* A goal and a funded programme — **not a diploma requirement**.
+- 🟡 **The graduation requirement is at STATE level and is still a PROPOSAL.** The **Massachusetts DESE**
+  is developing an **Artificial Intelligence and Digital Literacy** graduation requirement, recommended
+  in **June** by the **Statewide Graduation Council**. Not adopted.
+
+🔵 **Why this is on a market shelf and not only in a gap log.** The difference decides whether a studio
+pitches a **compliance-driven mandate** (a requirement a district must satisfy) or a **discretionary
+literacy programme** (a budget a district chose). Those are different buyers, different cycles and
+different money. 🔴 And `Gap 393-C` records the exposure plainly: this base holds **no primary-source US
+state or district education-AI rule**, and the secondary summaries it does hold have now been caught
+overstating one.
+
+🆕 `p393` 🟢 **The integration opportunity, now that the data standard has a granted client.** US K-12
+runs on **Ed-Fi**, and [`edanalytics/edfi_api_client`](https://github.com/edanalytics/edfi_api_client)
+(🟢 **Apache-2.0**, stock payload, HEAD **2026-10-06 — 16 d**) is a maintained Python client for it —
+the roster-and-outcomes join that `Gap 391-B`'s district-targeting instrument needs. 🔴 The
+**Canvas / Google Classroom / Schoology → Ed-Fi** extractors
+([`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit), Apache-2.0) were
+**archived by their owner on 2025-03-10**. 🔵 **That is the engagement:** the standard is alive, the
+reference integration is abandoned, and the field mappings are readable. Porting them is a scoped,
+defensible piece of work with no licence obstacle — and it is **not** available as a product.
+
+🆕 `p393` **Adoption and training, from this pass's leg (vendor-sourced, so treat as directional):**
+**10 %** of institutions have formal AI guidelines and **71 %** of US teachers report no AI training.
+🔵 The gap between use and governance is the sellable one: policy, training and audit, not models.
+
 **Regulation — state-by-state, and it moved fast in 2026.**
 
 🆕 `p390` **Canada and Mexico, because "North America" on these shelves has meant the US.**
@@ -405,6 +438,33 @@ with federal money and no incumbent vendor — the cheapest pilot to land and th
 
 ### EMEA
 
+🆕 `p393` 🔴 **This pass's EMEA research leg returned NO education-sector content, and that is written
+down rather than left silent.** The prescribed leg (*"AI education EMEA 2026 adoption regulation
+players"*) returned **enterprise** AI adoption only — CompTIA's 2026 IT outlook, a Workday study whose
+cited post is dated **2023** — with **no named education player, ministry or school rule**. The two
+figures worth keeping are not education-specific and are labelled as such: **38 %** of EMEA
+organisations have not begun piloting AI, and **94 %** say they are at least somewhat likely to invest
+in AI-specific training in 2026.
+
+🆕 `p393` 🔴 **And `p392`'s procurement-shaped replacement leg does NOT generalise out of Spanish and
+Portuguese.** `p392` found that a **buyer-shaped** leg in es/pt returned five live LATAM tenders where
+English supply-shaped legs returned nothing. Ported to **French and German** this pass, the same shape
+returned **no ministry tender for AI in education in France or Germany**. What it did return:
+🟡 **Aalborg University (DK)**, *"call for AI pilot projects 2026"* — an institutional buyer, not a
+ministry — and a **Council of Europe** consultancy call on AI in education that is **dated 2023**.
+🔵 **The honest reading:** either EMEA education-AI procurement is not published where this channel can
+see it, or it runs through framework agreements rather than discrete tenders. `Gap 393-D`. Until that is
+resolved, **an EMEA engagement should not be sized from tender flow** the way `p392` sized LATAM.
+
+🆕 `p393` 🟢 **One concrete EMEA supply fact to put in a proposal, because it bears on cost.**
+Assessment migration to **QTI 3.0** now has a working converter —
+[`Citolab/qti-convert-python`](https://github.com/Citolab/qti-convert-python), from the lab of **Cito,
+the Dutch national assessment institute** — but it is 🔴 **GPL-3.0**, as is its TypeScript sibling,
+**byte-identical payload**. 🔵 So the *licence* constraint here is **organisation-shaped, not
+language-shaped**: switching language does not escape it. Budget it as an **arm's-length batch service**
+(a container a pipeline invokes), which is a deployment component, not a library call — the same budget
+line `p391` wrongly attached to LTI.
+
 **Regulation — the dates are the product.**
 - **Regulation (EU) 2026/1744** (the "Digital Omnibus on AI", published in the Official Journal
   **24 Jul 2026**) moved the AI Act deadline for **stand-alone high-risk education systems** from
@@ -623,6 +683,23 @@ verification.
 
 ### APAC
 
+🆕 `p393` **What this pass's APAC leg added — commercial motion, and a declared regulatory nil.**
+- 🟢 **TCS and Pearson** announced a **multi-year AI learning alliance** aimed at employer skills gaps
+  and at proving return on technology investment — the clearest signal that **corporate reskilling**,
+  not K-12, is where APAC education-AI budget is moving.
+- 🟢 **LearnUpon** opened a **Sydney headquarters** with **Create+** AI course authoring; **Alteryx**
+  relaunched its Academy with personalised AI learning paths and credentials.
+- 🟡 **OpenAI hired an ANZ policy lead** as **Canberra tightens AI governance and copyright rules** —
+  copyright, in an education context, is a **content-licensing** question before it is a model question.
+- 🔴 **Governance lags adoption, measured:** **87 %** of organisations encourage AI-agent use while
+  **47 %** have governance, oversight and controls for them. **49 %** cite insufficient real-time data
+  infrastructure as the barrier.
+- 🔴 **Declared nil:** the leg returned **no education-specific regulation** — no ministry policy, no
+  school or university rule. The binding regimes named below come from earlier passes, not this one.
+
+🔵 **The APAC engagement shape this implies:** agent **governance and oversight** retrofitted onto
+programmes that already deployed agents, and **corporate academies** rather than ministry platforms.
+
 **Regulation — no single model, and education is explicitly named in one regime.**
 - **Binding AI rules:** South Korea, China, Vietnam. **Guidance/existing law:** Japan, Singapore,
   Hong Kong, Australia, India.
@@ -796,6 +873,36 @@ the application.
 engagement that cannot adopt DeepSeek Harness buys the *structure*, not the package.
 
 ### LATAM
+
+🆕 `p393` 🟢 **The LATAM leg was the ONLY prescribed regional leg this pass that returned
+primary-institutional research**, and it is the most structurally useful adoption data on this shelf.
+- **UNESCO IESALC with UNU-IAS** surveyed **200 institutions across 19 countries**, fielded
+  **Aug–Oct 2025**. Adoption by function: **teaching and learning 73.5 %**, **research 57.0 %**,
+  **administration 34.1 %**, **community engagement 20.0 %**.
+- 🔴 **Only 26 % have any formal framework** governing it. 🔵 **That single pair of numbers is the
+  LATAM pitch:** three quarters are teaching with it and one quarter has a policy for it.
+- **Adoption is uneven by institution type**, which decides who can actually buy: **private non-profit
+  84 %**, **public 68 %**, **private for-profit 52 %**.
+- A **Digital Education Council** survey with **Tecnológico de Monterrey** reports **92 % of students**
+  and **79 % of faculty** actively engaging with AI. 🔴 Different sample, not comparable with the
+  UNESCO figures — both are kept, neither is averaged.
+- **Regulation is uneven and mostly non-binding:** **Chile** leads with a National AI Policy (since
+  2021) and a law under discussion; **Brazil** and **Colombia** have national strategies **without
+  education-sector regulation**; in **Mexico**, SEP, ANUIES and the Observatorio IA have issued
+  recommendations that are **not binding**. The **IDB** publishes the **ILIA** index across 19 countries.
+- 🟢 🆕 **Brazil's MEC is running a REGULATORY SANDBOX for AI in education** — surfaced by this pass's
+  French/German procurement leg, of all things, via a federal university's internal call to select the
+  research group that will represent it. 🔵 A sandbox is a **named, time-boxed entry point** for a
+  studio with a compliance story, and it is the most actionable single item this pass found in the region.
+
+🆕 `p393` 🟢 **And the platform gap this section has carried since `p387` is now partly closed by
+supply, not by analysis.** [`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) —
+🟢 **Apache-2.0**, © BMO … **Sociedad Anónima, Nicaragua**, 676 files, 505 commits, 57 releases, HEAD
+**2026-08-31** — is the **only Spanish-language LMS on these shelves that a studio can fork, extend and
+ship closed**. Chamilo and i-educar are the public-sector incumbents and both are GPL. 🔴 At **21 ★**
+with no multi-tenancy claim it is an **SME and pilot** base, not a ministry platform — but it changes
+the four-way decision on [`verticals/solutions.md`](../verticals/solutions.md) for the first time in the
+region's favour.
 
 **Adoption — the best-measured region in this pass.**
 - **IDB** reviewed **193 initiatives** across Latin America and the Caribbean; its **Jan 2026**

@@ -6,6 +6,12 @@ updated: 2026-10-22
 
 # Education vertical platforms — real systems to customise with AI on top
 
+**🆕 Pass `p393` · 2026-10-22.** Three additions, all from the new `pypi.org/simple/` index-dump
+channel ([`compose/code/p393-pypi-index-channel/`](../compose/code/p393-pypi-index-channel/README.md)):
+🟢 a **permissive LATAM-native LMS** (`now-lms`, Apache-2.0, Nicaragua) on the four-way decision, the
+🟢 **Ed-Fi** K-12 data path for North America, and the 🔴 copyleft **QTI exchange** layer for EMEA
+assessment migration. Region placements updated under *Regional fit*.
+
 **Pass `p383` · 2026-10-22 · FULL REWRITE.** Prior version archived at
 [`archive/2026-10-22-p383-pre-rewrite/verticals-solutions.md`](../archive/2026-10-22-p383-pre-rewrite/verticals-solutions.md).
 All addresses and licences verified first-hand on this date —
@@ -43,10 +49,15 @@ obvious ERP address, and the Canvas row needs a sentence it did not have.
 | **MOOC scale, cohort analytics, deep data control** | [Open edX](https://github.com/openedx/edx-platform) + [tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 | AGPL reaches **hosted** use. Build XBlocks and LTI tools; keep proprietary logic the other side of the boundary. |
 | **🆕 `p389` No incumbent platform at all, and lessons needed now** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | Not an LMS: no enrolment, no gradebook of record, no SIS. You get the *teaching surface* and you still owe the system of record. See the section below. |
 | **🆕 `p390` To *ship* a modified platform, not host one** | [OLI Torus](https://github.com/Simon-Initiative/oli-torus) | 🟢 **MIT** | **The only permissive answer on this shelf, and the catch is staffing, not licensing.** Carnegie Mellon Open Learning Initiative's courseware engine: authoring + delivery, adaptive scripted activities, per-objective mastery reporting, LTI 1.3 delivery into a host LMS. Every other base of comparable scope here is GPL/AGPL, so this is the row to reach for when the deliverable is **software the client redistributes or embeds in a product**. 🔴 **Elixir/Phoenix + PostgreSQL** — a genuine staffing constraint; cost the hiring before proposing it. 🔴 Slug trap: `CMU-OpenLearning/oli-torus` does not resolve. Dated **2026-10-22**. |
+| **🆕 `p393` To ship a small permissive LMS, in Spanish, with billing already in it** | [now-lms](https://github.com/bmosoluciones/now-lms) | 🟢 **Apache-2.0** | **21 ★** and no multi-tenancy claim. A Flask application a studio can read in a day — which is the point — but not a ministry platform. |
 | **North American higher-ed integration reality** | [Canvas LMS](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0, open-**core** | The published tree ≠ the commercial ecosystem. Scope integrations against the real tenant, not the repo. 🆕 `p389` **And the published tree is also *older than it looks*: `master` last moved 2026-04-30 — 175 days — while the `stable/*` branches move.** Read the API surface off the tenant, and if you must read it off the repo, say which ref. 🟡 🆕 `p390` **Dating caveat, so nobody demotes Canvas off a bad read:** its `master` last moved **2026-04-30 — 175 days**, but Canvas **ships from tags** (`v5.14.2` current), not from the default ref. For any tag-releasing project, a last-commit-on-default-ref date under-reports maintenance; check `git ls-remote --tags` before calling it stale. |
 
 ### Regional fit
-- **LATAM / Iberia:** [Chamilo](https://github.com/chamilo/chamilo-lms) (GPL-3.0) — strongest
+- **LATAM / Iberia:** 🆕 `p393` **the permissive option now exists and it is regional:**
+  [now-lms](https://github.com/bmosoluciones/now-lms) (🟢 **Apache-2.0**, © BMO … S.A., **Nicaragua**;
+  676 files, 505 commits, HEAD **2026-08-31**) is the only Spanish-language LMS on this shelf a studio
+  can fork and ship **closed**. Use it for SME and pilot delivery; keep Chamilo for public-sector scale.
+  [Chamilo](https://github.com/chamilo/chamilo-lms) (GPL-3.0) — strongest
   Spanish/Portuguese public-sector base. [academico-sis/academico](https://github.com/academico-sis/academico)
   (MIT) for SME-scale administration with Spanish built in.
   🆕 `p387` For **Brazil specifically**, the base a municipal engagement will already be running is
@@ -56,6 +67,13 @@ obvious ERP address, and the Canvas row needs a sentence it did not have.
   including one that ships **as an Open edX plugin** rather than as a separate app.
 - **EMEA public sector:** [ILIAS](https://github.com/ILIAS-eLearning/ILIAS) (GPL-3.0, default ref
   `release_11`) and [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, Switzerland).
+  🆕 `p393` For **assessment migration**, which EMEA procurement is beginning to specify as QTI 3.0:
+  [Citolab/qti-convert-python](https://github.com/Citolab/qti-convert-python) (🔴 **GPL-3.0** — run it
+  as a batch tool at arm's length, never linked), from the lab of **Cito, the Dutch national assessment
+  institute**. For a **Swiss university** engagement,
+  [Dathis/swiss-moodle-mcp](https://github.com/Dathis/swiss-moodle-mcp) (🟢 MIT) already speaks ZHAW,
+  FHNW, ETH and EPFL Moodle with **SWITCH edu-ID** user-held authentication — 🔴 but at **0 ★** and
+  self-described as an unofficial student project, so it is a pilot reference, not a dependency.
   [Serlo](https://github.com/serlo/serlo.org) (Apache-2.0, Germany) and
   [Richie](https://github.com/openfun/richie) (MIT, France) for content and catalogue.
 - **APAC:** Moodle itself is Australian in origin; [netless-io/flat](https://github.com/netless-io/flat)
@@ -64,6 +82,12 @@ obvious ERP address, and the Canvas row needs a sentence it did not have.
   default ref `develop`) — offline-first by design, not as a degraded mode.
 - **K-12 administration anywhere:** [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic)
   (GPL-2.0, default ref `master`) — the student-record half that no permissive base supplies.
+- 🆕 `p393` **North America K-12 data integration:** the standard is **Ed-Fi**, and the granted client
+  is [edanalytics/edfi_api_client](https://github.com/edanalytics/edfi_api_client) (🟢 **Apache-2.0**,
+  stock 11,357 B, HEAD **2026-10-06 — 16 d**). The **Canvas / Google Classroom / Schoology → Ed-Fi**
+  extractors exist at [Ed-Fi-Exchange-OSS/LMS-Toolkit](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit)
+  (🟢 Apache-2.0) 🔴 **but that repository was ARCHIVED by its owner on 2025-03-10 and is read-only** —
+  port its field mappings, never depend on it.
 
 ## 🔴 The sovereign-stack story in EMEA, corrected
 
@@ -133,6 +157,8 @@ stack fits the region's SME school market.
 | layer | platform | licence | note |
 |---|---|---|---|
 | Interactive content | [H5P](https://github.com/h5p/h5p-php-library) | 🟡 **GPL-3.0** | Embeds in Moodle, Open edX, Canvas, Drupal, WordPress. 🔴 Widely mislabelled MIT. Treat as runtime content, not linked code. |
+| 🆕 `p393` H5P **inside Open edX** | [edly-io/h5pxblock](https://github.com/edly-io/h5pxblock) | 🟢 **MIT** *(1,064 B)* | 🟢 **The permissive way to get H5P content into an AGPL platform.** Self-hosted H5P player as an XBlock — HEAD **2026-10-16 — 6 d**, 82 commits, 23 releases, **19 ★**. 🔵 Note the licence shape, which is `p390`'s firewall again: the **content library** above is GPL-3.0 and the **platform** is AGPL-3.0, but this bridge is MIT, so the part a studio writes against stays permissive. |
+| 🆕 `p393` QTI assessment exchange | [vosslab/qti_package_maker](https://github.com/vosslab/qti_package_maker) (🟡 **LGPL-3.0**) · [Citolab/qti-convert-python](https://github.com/Citolab/qti-convert-python) (🔴 **GPL-3.0**) | 🟡 / 🔴 copyleft | **Write** QTI packages for Canvas/Blackboard, and **convert** QTI 2.x ↔ 3.0. The assessment-portability layer this shelf had no row for. 🔴 Neither is permissive: use the LGPL one as a **linked dependency** and the GPL one as an **arm's-length batch tool**. 🔴 A third family — PyPI's `timeback-qti` / `-oneroster` / `-caliper`, 147 releases, MIT **declared** — has an **unresolvable source repository**, so it is listed here only as a warning, not an option (`Gap 393-B`). |
 | Structured pedagogy | [Oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | Misconception-aware lesson branching. Permissive and pedagogically serious — unusual combination. |
 | Open-response assessment | [openedx/edx-ora2](https://github.com/openedx/edx-ora2) | 🔴 AGPL-3.0 | Peer + self + staff assessment rubrics. The place an LLM grader must plug in to stay auditable. |
 | Lecture capture | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 ECL-2.0 | Video pipeline → the transcript corpus every education RAG build needs. |

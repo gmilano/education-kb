@@ -1,0 +1,25 @@
+# p393 — the education vocabulary the first sweep used.  Token-exact keys.
+lti
+scorm
+xapi
+tincan
+qti
+caliper
+oneroster
+moodle
+openedx
+edx
+gradebook
+autograder
+proctor
+h5p
+openbadges
+sakai
+chamilo
+ilias
+blackboard
+brightspace
+canvas
+edfi
+d2l
+lms

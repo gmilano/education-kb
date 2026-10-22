@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p393` — **GITHUB TRENDING IS 403 FOR A TWELFTH PASS AND IT NO LONGER MATTERS: THE REGISTRY'S OWN INDEX IS A BETTER TRENDING SIGNAL THAN THE TRENDING PAGE. 🟢 A NEW **TIER 8** ON `repos/foundations.md` — THE 1EdTech STANDARDS LAYER — AND THE FIRST PERMISSIVE LMS ON TIER 1, FROM NICARAGUA.**
+
+🔵 **Dating note.** Every read below was taken on **2026-10-22**. **Evidence:**
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p393.tsv) ·
+[`pypi-index-channel`](../evidence/pypi-index-channel.2026-10-22-p393.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p393.tsv) · the instrument at
+[`compose/code/p393-pypi-index-channel/`](../compose/code/p393-pypi-index-channel/README.md).
+
+### 🟢 The repository that changes a decision, not just a shelf
+
+[`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) — 🟢 **Apache-2.0**, payload read
+first-hand: **10,915 B**, `sha256`₁₆ `a9c4042d767d`, © 2021–2024 **BMO Moreno Berroteran Ortiz
+Soluciones, S.A.** `main` · `53dcb60`, HEAD **2026-08-31 — 52 d**, **676 files**, **505 commits**,
+**57 releases**, PyPI `now-lms` **v2.0.4**, **21 ★**. Flask/Python; courses, delivery, certificates and
+**monetisation** in the box; *"simple-to-{install, use, configure, monetize, and maintain}"* in its own
+words.
+
+🟢 **Why a 21-★ repository goes on Tier 1 of `repos/foundations.md`.** Every other platform on that
+tier is **GPL-3.0** (Moodle), **AGPL-3.0** (Open edX, Canvas, frappe/lms) or **LGPL** (OpenEduCat).
+`now-lms` is the **only Tier 1 row a studio can fork, extend and ship closed** — the licence frontier
+this base opens `repos/foundations.md` by describing, finally crossed. And it is **Spanish-language and
+LATAM-native**, which is the region this base has had the least platform supply for since `p387`.
+🔴 **The trade is stated with it:** 21 ★, one company, no multi-tenancy claim — an **SME and pilot**
+base, not a ministry platform. New **`Pattern AA`** is built on exactly that scope.
+
+🔵 **A licence-byte note worth carrying.** `now-lms`'s Apache payload is **10,915 B** against stock
+**11,357 B** (this pass's reference, read from `edanalytics/edfi_api_client`). The difference is the
+**appendix FILLED IN** with the copyright holder — `Pattern L` step 4's **benign** non-stock case.
+🔴 Compare `Ed-Fi-Exchange-OSS/LMS-Toolkit` at **10,141 B**, where the appendix is **absent entirely**.
+Two non-stock Apache payloads, two different causes, same licence id: **a byte count is a question, not
+a verdict.**
+
+### 🟢 Tier 8 — the standards layer, which is the real shape of Python's education supply
+
+| repo | ref · HEAD | last commit | grant (payload) | ★ | what it supplies |
+|---|---|---|---|---|---|
+| [`edanalytics/edfi_api_client`](https://github.com/edanalytics/edfi_api_client) | `main` · `6b13cb9` | **2026-10-06 — 16 d** | 🟢 **Apache-2.0**, 11,357 B, `c71d239df917` — 🔵 **STOCK** | **15** | 🟢 **The first Ed-Fi row here.** Ed-Fi is the dominant **US K-12 data standard**; this is a maintained Python client — paging, auth, swagger introspection, async pulls. The **roster-and-outcomes join** `Gap 391-B`'s district instrument needs |
+| [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) | `main` · `b1266b7` | 2025-03-08 — **593 d** | 🟢 **Apache-2.0**, 10,141 B, `cc4d4de0920b` — 🔴 appendix **absent** | **11** | 🔴 **ARCHIVED BY ITS OWNER 2025-03-10 — READ-ONLY.** Extractors for **Canvas, Google Classroom, Schoology** → Ed-Fi, plus a harmonizer; 763 files. 🔵 Published **because** archived: the best available map of those field mappings. **Port it, never depend on it** |
+| [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker) | `main` · `e22fc04` | **2026-10-12 — 10 d** | 🟡 **LGPL-3.0**, 7,652 B, `e3a994d82e64`, at 🔴 **`LICENSE.LGPL-3.0`** | **4** | **Writes QTI** packages for Canvas and Blackboard. 381 commits. 🔴 This base first published it UNGRANTED — see the correction below |
+| [`Citolab/qti-convert-python`](https://github.com/Citolab/qti-convert-python) | `main` · `7a7ec60` | 2026-09-25 — 27 d | 🔴 **GPL-3.0**, 35,196 B, `f93eb1d94904` | **0** | **QTI 2.x → 3.0 and 3.0 → 2.1** — items, tests, stimuli, packages. From **Citolab**, the lab of **Cito, the Dutch national assessment institute**. 🔵 Its TypeScript sibling [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) serves the **byte-identical** payload: the grant is **org-shaped, not language-shaped** |
+| [`edly-io/h5pxblock`](https://github.com/edly-io/h5pxblock) | 🔴 `master` · `33fff53` | **2026-10-16 — 6 d** | 🟢 **MIT**, 1,064 B, `4d17b43eb718` | **19** | Self-hosted **H5P** inside Open edX. 🔵 `p390`'s firewall again: GPL content library, AGPL platform, **MIT bridge** — the part a studio writes against stays permissive |
+| [`superbuilders/timeback-dev-python`](https://github.com/superbuilders/timeback-dev-python) | 🔴 **does not resolve** | — | 🔴 **UNAUDITABLE** — MIT declared on PyPI for 3 packages | — | `timeback-qti` / `-oneroster` (v1.2) / `-caliper`, **147 releases**, last **2026-07-18**. The most complete 1EdTech family in Python **on paper** and the least usable in practice. `Gap 393-B` |
+
+### 🔴 The correction this pass owes its own Tier 8
+
+`vosslab/qti_package_maker` was first read as having **no licence**, from a **closed six-name filename
+probe**. The grant is real: **LGPL-3.0** at **`LICENSE.LGPL-3.0`**. 🟢 Corrected by **enumerating the
+tree** — `git ls-files | grep -i licen` over a blobless clone — which is now what the instrument's
+README prescribes and what the Tier 8 row records. 🔵 **Enumerate; do not guess.** A false absence of a
+grant costs a real component, and the probe that produced it was this base's own shortcut.
+
+🔵 **The row's grant also changes how it may be used, which the licence id alone would not tell a
+reader:** LGPL permits **linking** and not **forking into a product**, so Tier 8 and `Pattern AA` both
+say *use it as a dependency*.
+
+### 🔵 Why `github.com/trending` being 403 no longer costs this base anything
+
+Twelve consecutive passes of **403** on the trending page, and this pass makes the loss look small. A
+trending page ranks **attention**; a registry index enumerates **existence**, and for a studio question
+— *does a granted component for standard X exist in language Y* — existence is the question.
+🟢 **The registry index also carries recency for free**, per package: release count and upload date,
+which is how every Tier 8 row above is dated without a single GitHub API call.
+
+🔴 **What is still missing, and it is now the sharpest hole in this base's method:** no discovery
+channel for **Maven, NuGet, RubyGems or CRAN**. **CRAN first** — `otter-grader` (the most-adopted
+autograder on these shelves, measured at **161 ★** this pass) grades **R**, and the entire
+statistics-teaching stack is R-shaped, so the blind spot that hid five Python LTI libraries is still
+fully in place for one whole teaching discipline.
+
+---
+
+
 ## 🟢 🆕 2026-10-22 · `p392` — **GITHUB TRENDING IS 403 FOR AN ELEVENTH PASS, BUT THE POPULARITY CHANNEL IS OPEN ON ANOTHER TOOL. 🟢 FIVE NEW FOUNDATION ROWS, THREE OF THEM CLOSING GAPS `p391` OPENED THIS MORNING. 🔴 ONE GRANT PUBLISHED AS A CONFLICT RATHER THAN A LICENCE.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p392.tsv) — 15 addresses, every

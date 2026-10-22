@@ -1,0 +1,6 @@
+pkg	class	verdict	why
+proctor-ai	NAME-COLLISION	REJECT	name carries `proctor`; the package is a structured prompt-engineering library. No proctoring capability.
+xapi-python	NAME-COLLISION	REJECT	name carries `xapi`; the package is the xStation5 broker API. Not Experience API / Tin Can.
+xapi-guard-middleware	NAME-COLLISION-SUSPECT	UNADJUDICATED	same `xapi` ambiguity; not read first-hand by p393, so not published either way.
+django-lti	CAPABILITY-TRUE	ACCEPT	p392's row; the control that the sweep finds what identity-keyed search could not.
+vosslab/qti_package_maker	FILENAME-CLOSED-LIST	ACCEPT-AFTER-CORRECTION	grant sits at `LICENSE.LGPL-3.0`; a six-name licence-filename list read it as UNGRANTED. See README.

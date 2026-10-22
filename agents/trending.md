@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p393` — **`Gap 392-C` IS CLOSED BY A 1.4-SECOND FETCH: PyPI PUBLISHES ITS WHOLE INDEX (920,784 NAMES, 45 MB, PEP 691) AND THE FIRST SWEEP RETURNS 15 ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED ENGLISH LEGS. 🔴 `Gap 391-A` REFUTED A SECOND TIME — NOT THREE PYTHON LTI LIBRARIES BUT **FIVE**. 🔴 AND A NEW SUPPLY CLASS: 147 LIVE MIT RELEASES WHOSE SOURCE REPOSITORY DOES NOT EXIST.**
+
+🔵 **Dating note.** Every index fetch, registry read, clone, licence payload read and star read below
+was taken on **2026-10-22**. **Evidence:**
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p393.tsv) — 15 addresses ·
+[`pypi-index-channel`](../evidence/pypi-index-channel.2026-10-22-p393.tsv) — the sweep, key by key,
+with **shelvable** stated per key ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p393.tsv) — 14 channels **per tool** ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p393.tsv) — 10 legs · the instrument at
+[`compose/code/p393-pypi-index-channel/`](../compose/code/p393-pypi-index-channel/README.md),
+wired as `make pypi-index-sweep`.
+
+### 🟢 The channel, because it is the finding
+
+`p392` registered `Gap 392-C` in these words: *"There is no Python package DISCOVERY channel, and that
+is why `Gap 391-A` was invisible… A successor should look for a mirror, an index dump, or accept that
+Python supply is found through GitHub and papers only."*
+
+**The index dump exists.** PEP 691 renders the entire simple index as JSON:
+
+| | |
+|---|---|
+| URL | `https://pypi.org/simple/` with `Accept: application/vnd.pypi.simple.v1+json` |
+| result | 🟢 **HTTP 200**, **45,189,043 B**, **920,784 project names**, `api-version` 1.4 |
+| cost | **1.4 s**, unauthenticated, no challenge |
+| contrast | `pypi.org/search` — 🔴 still a JavaScript bot-challenge page, exactly as `p392` read it |
+
+🔵 **The two are different artefacts, which is why `p392`'s probe was right and its conclusion was
+not.** `search` is a rendered page defended against bots; the index is a **static file**. No ranking,
+no matching, no descriptions — and none needed, because the whole name space fits in memory and a
+token scan over it is free.
+
+### 🔴 `Gap 391-A` — refuted a second time, and `p392`'s count of three was low
+
+| address | ref · HEAD | last commit | grant (payload) | registry | ★ | verdict |
+|---|---|---|---|---|---|---|
+| [`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) | 🔴 `master` · `22c6f2f` | 2024-11-14 — **707 d** | 🟢 **MIT**, 1,078 B, `504c17f9869b` | PyPI `django-lti-toolbox` **v2.0.0**, 7 releases | **14** | 🟡 **the FOURTH Python LTI 1.3 implementation** — Open FUN, **France Université Numérique**, the French state's higher-ed platform operator. Builds LTI **Tool Providers**. Granted, architecturally instructive, 🔴 **cold** |
+| [`Harvard-University-iCommons/django-lti-dynamic-registration`](https://github.com/Harvard-University-iCommons/django-lti-dynamic-registration) | `main` · `2873d2f` | 2025-09-15 — **402 d** | 🟢 **MIT**, 1,100 B, `1ade29a33914` | PyPI v0.1.2, 3 releases | **3** | 🟢 **the FIFTH, and the only one covering LTI DYNAMIC REGISTRATION** — install a tool in an LMS without a human exchanging keys. An explicit add-on to `django-lti`, so it **composes with** `Pattern B`'s pick |
+
+🔵 **The generalisation `p392` drew survives but needs a maintenance clause.** `p392` concluded the
+constraint is *"licence-shaped, not language-shaped."* True — and now measurable: of **five** Python
+implementations, the permissive ones are **2 days** (`django-lti`), **113 days**
+(`ltiauthenticator`), **402 days** and **707 days** old, and the **best-maintained is AGPL-3.0**
+(`openedx/xblock-lti-consumer`, HEAD today). 🔴 So the honest sentence is: *the permissive Python LTI
+supply is real, plural, and largely unmaintained.* `Pattern B`'s pick is unchanged and now has two
+named fallbacks.
+
+### 🟢 Two new granted Moodle MCP servers, and one that cannot be read
+
+| address | ref · HEAD | last commit | grant | registry | ★ | note |
+|---|---|---|---|---|---|---|
+| [`Dathis/swiss-moodle-mcp`](https://github.com/Dathis/swiss-moodle-mcp) | `main` · `cdb11c0` | **2026-09-29 — 23 d** | 🟢 **MIT**, 1,063 B, `84e5d85f30e9` | PyPI `swiss-moodle-mcp` **v0.5.0** | **0** | 🟢 **EMEA/Switzerland.** ZHAW, FHNW, ETH, EPFL and any Moodle 4: courses, materials, downloads, deadlines, announcements. 🟢 **The user authenticates themselves, typically via SWITCH edu-ID, and the README states passwords are never seen or stored** — the posture `Pattern N` asks for, shipped by default. 🔴 0 ★, 21 commits, **self-described unofficial student project**: pilot reference, not a dependency |
+| [`Snaw80/moodle-mcp`](https://github.com/Snaw80/moodle-mcp) | `main` · `4fc83d0` | 2026-06-13 — 131 d | 🟢 **MIT**, 1,072 B, `b2bb31ce9d90` | PyPI `mcp-moodle` v0.1.2 | **4** | Moodle **Web Services** over MCP. 13 commits — a second opinion on tool shape, against the two GPL vendor servers this shelf already carries |
+| [`NmaaAlhawary/MCP-Moodle`](https://github.com/NmaaAlhawary/MCP-Moodle) | 🔴 **does not resolve** | — | 🔴 **UNAUDITABLE** — MIT declared on PyPI only | PyPI `moodle-mcp-bridge` **v1.7.0** | — | 🔴 Advertises *"a Moodle site as 88 typed AI tools"* and a docs site. No payload obtainable. `Gap 393-B` |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | `main` · `22cc56c` | 2026-06-28 — 116 d | 🔴 **UNGRANTED** | PyPI `moodle-mcp` v0.2.1 | — | 🔵 **Not a discovery — a RE-CONFIRMATION.** This shelf already carries it as ungranted; `p393` re-derived the same verdict from a second channel, with the tree **enumerated** (`ls-files`) rather than probed by filename, and `pyproject.toml` carrying no licence field either |
+
+### 🔴 The new supply class: live releases, dead source
+
+[`superbuilders/timeback-dev-python`](https://github.com/superbuilders/timeback-dev-python) is the
+declared `Repository` of **three** PyPI packages — `timeback-qti`, `timeback-oneroster` (OneRoster
+**v1.2**), `timeback-caliper` — **37 + 55 + 55 = 147 releases**, last **2026-07-18**, each declaring
+**MIT**. On paper that is the most complete **1EdTech** client family in Python, and exactly the gap
+`Trend 19` describes. 🔴 **The repository does not resolve for an unauthenticated clone.**
+
+🔵 **This is not `p388`'s "published but unreadable".** That class is a payload that exists and grants
+nothing. This is a payload that **cannot be fetched at all** while the artefact ships — so the MIT
+claim is unverifiable *in principle*, not merely unread. A studio may install these; it **cannot
+warrant them**, because warranting a grant means having read it. `Gap 393-B`, `Trend 23`.
+
+### 🔴 What the channel cost, measured on itself
+
+The dump carries **names only** — no summary, no classifier, no licence. So it discovers by **token**,
+and a token is not a capability:
+
+| candidate | matched on | what it actually is |
+|---|---|---|
+| `proctor-ai` | `proctor` | 🔴 a structured **prompt-engineering** library |
+| `xapi-python` | `xapi` | 🔴 the **xStation5 broker API** — not Experience API / Tin Can |
+
+Whole keys fail the same way: **`canvas`** returns 146 names dominated by HTML-canvas and AWS Nova
+Canvas; **`d2l`** is Dive-into-Deep-Learning; **`blackboard`** is mostly the drawing metaphor;
+**`sakai`** and **`chamilo`** are 🔵 **declared nils — the token is absent from all 920,784 names**.
+Both collisions are now fixtures in
+[`test_fixtures.tsv`](../compose/code/p393-pypi-index-channel/test_fixtures.tsv). 🔵 `Gap 393-A`, and
+it is **`Gap 392-A`'s defect from the opposite direction**: that one over-refutes on a runtime key,
+this one over-discovers on a name.
+
+### 🔴 The error this pass published against itself, and the method change it forces
+
+`p393`'s first read of [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker)
+(QTI packages for Canvas/Blackboard, 381 commits, HEAD **2026-10-12 — 10 d**, **4 ★**) returned
+**UNGRANTED**. 🔴 **Wrong.** The grant is **LGPL-3.0**, 7,652 B, `sha256`₁₆ `e3a994d82e64`, and it
+sits at **`LICENSE.LGPL-3.0`** — a filename absent from the six-name probe this pass used
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.LESSER`, `LICENCE`).
+
+🟢 **The fix is the method, not the row: enumerate the tree, do not guess the filename.**
+`git ls-files | grep -i licen` over a blobless clone costs nothing and is now what the instrument's
+README prescribes. 🔵 A false **absence of a grant** is the same error family as a false absence of a
+repository — and this base produced it with the cheaper half of its own method, two passes after
+building an instrument against exactly this class.
+
+### 🔵 Channel yields, measured so the next pass changes channel rather than vocabulary
+
+| channel | queries | results | shelvable | note |
+|---|---|---|---|---|
+| 🆕 `pypi.org/simple/` PEP 691 index dump | **1 fetch**, 24 token keys | 507 name hits | 🟢 **15 addresses** (13 live) | 🟢 **the highest-yield single artefact this base has ever fetched**, and it cost 1.4 s |
+| the four prescribed English **global** legs | 4 | — | 🔴 **0** | `Gap 387-D`, **fourth** consecutive confirmation |
+| the four prescribed English **regional** legs | 4 | — | 🔴 **0 addresses**, 14 facts | market intelligence, not supply. 🔴 **EMEA returned no education content at all** |
+| a procurement-shaped leg ported to **fr/de** | 1 | 2 items | 🔴 **0** | 🔴 `p392`'s es/pt finding **does not generalise**: no FR or DE ministry tender for AI in education |
+| `registry.npmjs.org/-/v1/search` | not re-run | — | — | 🔵 deliberately not re-run: `p392` measured it at a declining rate and this pass's question was Python |
+
+🔵 **The recommendation to the next pass, and it is a sourcing rule rather than a search tip.** A
+supply claim is only as wide as its registry. This base now names one channel per ecosystem — npm,
+PyPI, Packagist (measured, 0 yield) — and **still has none for Maven, NuGet, RubyGems or CRAN**. CRAN
+is the one to open next: `otter-grader` grades **R**, and the statistics-teaching stack is R-shaped, so
+the same blind spot that hid five LTI libraries is still in place for an entire teaching discipline.
+
+---
+
+
 ## 🟢 🆕 2026-10-22 · `p392` — **THE INSTRUMENT `p391` RANKED FIRST IS BUILT, AND ITS FIRST RUN REFUTES ALL THREE GAPS `p391` OPENED EIGHT HOURS EARLIER — EVERY REFUTATION ALREADY IN THIS FILE. 🟢 THE STAR CHANNEL IS OPEN (TOOL-SCOPED), AND THE FIRST THING IT DOES IS OVERTURN A SUPERLATIVE: DeepTutor 42.2k ★ > OpenMAIC 41.3k ★.**
 
 🔵 **Dating note.** Every clone, licence read, registry read, star read and date below was taken on

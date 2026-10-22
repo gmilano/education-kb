@@ -1,0 +1,30 @@
+# p393 · 2026-10-22 · the PyPI index-dump sweep, key by key, with the SHELVABLE count stated.
+# instrument: compose/code/p393-pypi-index-channel/ · vocabulary: vocab.education.txt (24 token-exact keys)
+# index: pypi.org/simple/ PEP 691 JSON, 45,189,043 B, 920,784 projects, api-version 1.4, 1.4 s.
+# 🔴 names only: no summary, no classifier, no licence. Every hit is a CANDIDATE until `verify` + a payload read.
+key	hits	shelvable	note
+lti	20	2	django-lti-toolbox (openfun), django-lti-dynamic-registration (Harvard) — both NEW, both MIT
+qti	9	3	qti-package-maker (LGPL-3.0), citolab-qti-convert (GPL-3.0), timeback-qti (dead source)
+oneroster	4	1	timeback-oneroster (dead source); `oneroster` itself last released 2020-07-20
+caliper	10	1	timeback-caliper (dead source); openedx-caliper-tracking already carried
+moodle	39	4	swiss-moodle-mcp (NEW), mcp-moodle/Snaw80 (NEW), moodle-mcp/loyaniu (UNGRANTED — ALREADY CARRIED, re-confirmed), moodle-mcp-bridge (dead source)
+autograder	21	2	autograder-py (MIT, NEW); otter-grader (BSD-3, 161 ★) re-derived but ALREADY CARRIED — a corroboration, not a discovery
+h5p	3	1	h5p-xblock (edly-io, MIT)
+edfi	10	2	edfi-api-client (Apache-2.0), edfi-lms-harmonizer → LMS-Toolkit (Apache-2.0, ARCHIVED)
+lms	40	1	now-lms (Apache-2.0, Nicaragua) — the only full permissive Python LMS in the sweep
+proctor	10	0	🔴 proctor-ai is a PROMPT-ENGINEERING library — name collision, rejected
+xapi	10	0	🔴 xapi-python is the xStation5 BROKER API — name collision, rejected
+scorm	3	0	all three are AGPL Open edX XBlocks or Tahoe forks; nothing new and nothing permissive
+gradebook	2	0	neither is education-related on inspection
+sakai	0	0	declared nil — token absent from 920,784 names
+chamilo	0	0	declared nil — token absent from 920,784 names
+openbadges	3	0	openbadges-bakery last released 2021-06-18; nothing current
+tincan	4	0	edx-tincan-py35 / capsulesu fork — Python 3.5-era, stale
+brightspace	2	0	thin wrappers, no grant worth shelving
+blackboard	12	0	mostly unrelated (`blackboard` as a drawing metaphor) — a second name-collision cluster
+canvas	146	0	🔴 the WORST key in the vocabulary: `canvas` is overwhelmingly HTML-canvas and AWS Nova Canvas, not Canvas LMS
+ilias	2	0	both are `mazegen-luuk-ilias`, unrelated to the ILIAS LMS
+d2l	9	0	`d2l` is overwhelmingly Dive-into-Deep-Learning, not D2L/Brightspace
+openedx	72	0	large but already-known territory; all AGPL platform plugins
+edx	76	0	same — openedx org packages already carried
+TOTAL	507	17	24 keys · 507 name hits · 17 PACKAGES shelvable → 15 DISTINCT addresses (the three timeback-* packages share one repository) · 13 LIVE and verified first-hand + 2 live-releases-dead-source · 🔵 of the 15, TWO are corroborations of rows already carried (otter-grader, loyaniu/moodle-mcp — both live), so THIRTEEN are new to these shelves: 11 live + 2 dead-source

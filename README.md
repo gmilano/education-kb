@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 393 — 2026-10-22 — **`Gap 392-C` IS CLOSED BY AN ARTEFACT THAT COSTS 1.4 SECONDS: PyPI PUBLISHES ITS ENTIRE INDEX (920,784 NAMES, 45 MB, PEP 691), AND ONE FETCH RETURNS 15 ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED ENGLISH LEGS. 🔴 `Gap 391-A` REFUTED A SECOND TIME — NOT THREE PYTHON LTI LIBRARIES BUT **FIVE**. 🔴 A NEW SUPPLY CLASS: 147 LIVE MIT RELEASES WHOSE SOURCE REPOSITORY DOES NOT EXIST. 🔴 AND THIS PASS PUBLISHED A FALSE "UNGRANTED" AGAINST A REAL LICENCE, CAUGHT IT, AND REGISTERED THE CAUSE AS A GAP RATHER THAN PATCHING IT.**
+
+🔵 **Dating note.** Every index fetch, registry read, clone, licence payload read, star read and
+search leg below was run on **2026-10-22**.
+
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p393.tsv) — 15 addresses ·
+[`pypi-index-channel`](evidence/pypi-index-channel.2026-10-22-p393.tsv) — 24 keys with **shelvable**
+stated per key · [`channel-state`](evidence/channel-state.2026-10-22-p393.tsv) — 14 channels **per
+tool** · [`regional-legs`](evidence/regional-legs.2026-10-22-p393.tsv) — 10 legs ·
+[`compose/code/p393-pypi-index-channel/`](compose/code/p393-pypi-index-channel/README.md) — the
+instrument, wired as `make pypi-index-sweep` / `make pypi-index-verify`.
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`Gap 392-C` CLOSED.** `p392` asked a successor to look for *"a mirror, an index dump, or accept that Python supply is found through GitHub and papers only."* **PEP 691 serves the whole simple index as JSON** at `pypi.org/simple/`: **200**, **45,189,043 B**, **920,784 project names**, **1.4 s**, unauthenticated. `pypi.org/search` is still the bot-challenge page `p392` found — 🔵 **two different artefacts, so `p392`'s probe was right and its conclusion was not.** The three channels `Gap 392-C` named as candidates (`ecosyste.ms`, `deps.dev`, `libraries.io`) are all **000 proxy-refused** here. |
+| 2 | 🔴 **`Gap 391-A`'s count corrected three → five.** [`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) (🟢 MIT 1,078 B, **France Université Numérique**, HEAD **707 d**, 14 ★) and [`Harvard-University-iCommons/django-lti-dynamic-registration`](https://github.com/Harvard-University-iCommons/django-lti-dynamic-registration) (🟢 MIT 1,100 B, HEAD **402 d**, 3 ★) — the latter the only **Dynamic Registration** implementation of the five. 🟢 `p392`'s *"licence-shaped, not language-shaped"* survives **with a maintenance clause**: the permissive Python LTI supply is real, plural and **largely unmaintained** (2 / 113 / 402 / 707 days), and the best-maintained is AGPL. |
+| 3 | 🟢 **A new Tier 8 on `repos/foundations.md`: the 1EdTech standards layer.** What the channel returned was not more agents but **plumbing** — LTI, QTI, OneRoster, Caliper, Ed-Fi. 🔵 The split is systematic and is now `Trend 22`: the **agent** layer is npm/TypeScript, the **standards and institutional-data** layer is PyPI/Python, so **a supply claim is only as wide as its registry** — and this base swept npm alone for eleven passes. |
+| 4 | 🟢 **The first permissive LMS on Tier 1, and it is LATAM-native.** [`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) — 🟢 **Apache-2.0** (10,915 B, `a9c4042d767d`, © BMO … **S.A., Nicaragua**), 676 files, 505 commits, 57 releases, HEAD **2026-08-31 — 52 d**, 21 ★. Every other Tier 1 row is GPL, AGPL or LGPL, so this is **the only platform base a studio can fork, extend and ship closed**. New **`Pattern AA`** builds an entirely permissive LATAM SME delivery stack on it. 🔴 At 21 ★ with no multi-tenancy claim it is an SME/pilot base, not a ministry platform — said in the pattern, not only here. |
+| 5 | 🔴 **A new supply class: LIVE RELEASES, DEAD SOURCE.** [`superbuilders/timeback-dev-python`](https://github.com/superbuilders/timeback-dev-python) is the declared source of `timeback-qti`, `timeback-oneroster` (v1.2) and `timeback-caliper` — **147 releases**, last 2026-07-18, each declaring **MIT** — and it **does not resolve unauthenticated**. Same class the same hour: `moodle-mcp-bridge` → `NmaaAlhawary/MCP-Moodle`. 🔵 **Not `p388`'s "published but unreadable"**: that is a payload that grants nothing, this is a payload that **cannot be obtained**, so the grant is unverifiable *in principle*. A studio may install these; it **cannot warrant them**. `Gap 393-B`, `Trend 23`. |
+| 6 | 🟢 **Two new granted Moodle MCP servers**, one of them region-placed: [`Dathis/swiss-moodle-mcp`](https://github.com/Dathis/swiss-moodle-mcp) (🟢 MIT, **EMEA/Switzerland**, ZHAW/FHNW/ETH/EPFL, user-held **SWITCH edu-ID** auth, passwords never stored — 🔴 but **0 ★** and an unofficial student project) and [`Snaw80/moodle-mcp`](https://github.com/Snaw80/moodle-mcp) (🟢 MIT). Plus the **Ed-Fi** K-12 data path for North America, **QTI** conversion for EMEA, H5P-in-Open-edX, and a new autograding client. |
+| 7 | 🔴 **The channel's precision cost, measured on itself.** The dump carries **names only**, so it discovers by token and a token is not a capability: `proctor-ai` is a **prompt-engineering** library and `xapi-python` is the **xStation5 broker API**. Whole keys are unusable (`canvas` → 146 names dominated by HTML-canvas and AWS Nova Canvas; `d2l` → Dive-into-Deep-Learning). Both collisions are fixtures. `Gap 393-A` — 🔵 **`Gap 392-A`'s defect from the opposite direction**: that one over-refutes on a runtime key, this one over-discovers on a name, and **one lexicon change should fix both**. |
+| 8 | 🔴 **`Gap 387-D`, fourth confirmation — and `p392`'s replacement does not generalise.** Four English global legs: **0 granted addresses**. Four prescribed regional legs: **0 addresses**, 14 facts. 🔴 The **EMEA** leg returned **no education content at all** (enterprise AI only, one source dated 2023). 🔴 `p392`'s procurement-shaped es/pt leg, ported to **fr/de**, found **no ministry tender** for AI in education in France or Germany (`Gap 393-D`). 🟢 **The comparison is the finding: four prescribed legs → 0 addresses; one 1.4-second fetch → 15.** The brief's legs are a market-intelligence instrument, not a supply instrument. |
+| 9 | 🔴 **A correction to a widely-repeated North America claim.** *"Boston Public Schools became the first major US district to mandate AI fluency as a graduation requirement"* conflates two bodies: Boston runs a **$1 M-funded district AI-literacy programme**; the **graduation requirement** is a **Massachusetts DESE proposal still in development**. 🔵 Mandate versus discretionary budget — different buyers, cycles and money. `Gap 393-C`. |
+| 10 | 🟢 **`make pypi-index-sweep` is wired**, with the channel's limits, its two name collisions and its licence-filename lesson documented as fixtures in the instrument rather than as prose in a pass. |
+
+### 🔴 The three errors this pass published against itself
+
+| | |
+|---|---|
+| 🔴 **A false `UNGRANTED` against a real licence** | [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker) was first graded ungranted from a **closed six-name filename probe** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.LESSER`, `LICENCE`). The grant is **LGPL-3.0**, 7,652 B, `sha256`₁₆ `e3a994d82e64`, at **`LICENSE.LGPL-3.0`**. 🟢 Corrected by **enumerating the tree** (`git ls-files | grep -i licen`). Registered as **`Gap 393-F`** and not merely fixed, because the probe is a **standing method** here and **no pass has ever re-read the UNGRANTED rows with `ls-files`** — this base has already found grants at `docs/License.txt`, lowercase `license.txt` and `COPYING.txt`, so the filename space is known to be wide. 🔵 That re-read is the highest-value audit available to the next pass. |
+| 🔴 **Two false-novelty 🆕 marks, caught by checking the shelves before publishing** | The draft marked [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) as a `p393` discovery — this base has carried it on Tier 3 and in `Pattern E` for passes — and `loyaniu/moodle-mcp` likewise. Both now publish as **corroborations from a second channel**, which is what they are, and the arithmetic is exact: **15 addresses, 2 corroborations, 13 new (11 live + 2 dead-source)**. 🔵 A new discovery channel's first temptation is to re-sell what you already own. |
+| 🔴 **A claim stated as a count before it was checkable** | The draft read *"eight of thirteen addresses are invisible to npm by construction."* Unverified, so replaced with what is provable: **all thirteen are PyPI distributions with no npm package**, so an npm-only sweep cannot return them by construction. |
+
+### 🔴 And `p392`'s own instrument, run as `p392` asked, found two defects in ITSELF
+
+🟢 **`p392`'s closing recommendation was explicit:** *"Run `make gate-capability-absence` **before**
+publishing an absence, and point `--fatal` at the files the pass is writing."* Done, against all six
+shelves this pass wrote. It returned **three** `REFUTED-CANDIDATE`s, all three adjudicated by hand:
+
+| candidate | adjudication |
+|---|---|
+| `repos/foundations.md:133` (the `pybryt` row, key `{python}`) | 🔵 **Known false positive — `Gap 392-A`**, already registered and ledgered by `p392`. Fired again because this pass added granted Python rows, which is the defect working exactly as described. |
+| `intel/market.md:1188` (`Gap 391-B`, key `{district-data, r:latam}`) | 🔵 **Known false positive — `Gap 392-G`**, the region-partitioned claim. |
+| `compose/patterns.md:1225` (`Pattern AA`'s withdrawal of `p391`'s claim) | 🔴 **NEW — `Gap 393-H`.** `p392`'s **class 3b** (a *quoted* absence must not count as a published one) is **incompletely fixed**: it handles a quote split by a colon on one line, and this one is split by a colon **and spans a newline**. 🔴 So the gate read a **correction as a fresh claim** — precisely what `p392` said a gate must never do. 🟢 **The prose stays as written and the instrument takes the fix**, because letting a gate reshape a correction is how corrections stop being written. |
+
+🔴 **And the ledger itself was stale, invisibly — `Gap 393-I`.** `p392`'s ledger is pinned by **line
+number**, and both its rows were moved by this pass's own inserts (`repos/foundations.md` **123 → 133**,
+`intel/market.md` **1081 → 1188**). 🔴 **`make hooks` cannot detect this**, because the gate it runs is
+the instrument's **unit suite**; the live fatal arm that reads the real shelves is invoked by hand. A
+successor would have met two *unexplained* fatal findings and re-adjudicated them from scratch.
+🟢 Re-pinned by hand, with the move recorded in each row. 🔵 **The remedy is a content anchor, not a
+line** — pin each entry to a `sha256` of the absence sentence, as `gate-payload-pin` already does for
+payloads, and put the fatal arm in `hooks` behind the existing offline guard.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 672** harvested shapes → **34** are not
+addresses → **2 638 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 638** channel-U
+addresses and **3 078** channel-B survivors give **3 457 addresses over both channels**.
+
+🟢 **The delta is +8 on channel U, +10 on channel B and +9 on the union** — the thirteen addresses new
+to these shelves this pass, less the ones already carried in this base's harvest history, plus the
+two `DEAD-OR-PRIVATE` rows recorded beside them. 🔵 **Channel B moved one further than channel U, and
+the reason is this pass's own gate fix:** `gate-dead-citation` I2 refused the two absent addresses as
+**links** on a live shelf, so they were rewritten as **bare slugs** — which channel B counts and
+channel U does not. 🔵 Stated because `p376`'s rule is that the union sentence is **standing**:
+re-derived every pass, never quoted from the last one.
+
+### 🟡 Gate state, reported rather than hidden
+
+🟡 **`make hooks` 44/46 at the baseline, before this pass wrote a byte**, and the two red —
+`gate-fold-identity` and `gate-census-union` — were **already red at `HEAD`** (`Gap 391-F`:
+inherited, not introduced; `gate-census-union`'s control 24 and `gate-fold-identity`'s own unit test,
+both in `compose/code/`, untouched here). 🔵 Per `p300`, both are published rather than masked.
+
+### 🟢 Ranked for the successor
+
+1. 🟢 **Re-read every `UNGRANTED` row with `git ls-files`** (`Gap 393-F`). This pass proved the
+   standing licence probe can manufacture a false absence, and it has never been run against the rows
+   that absence already condemned. Cheap, bounded, and it can only return real components.
+2. 🟢 **Open a CRAN discovery channel** (`Gap 393-G`). `otter-grader` — the most-adopted autograder on
+   these shelves, **161 ★** — grades **R**, and the statistics-teaching stack is R-shaped. The exact
+   blind spot that produced `Gap 391-A` is still fully in place for one whole teaching discipline.
+3. 🟡 **Add an `archived` column** (`Gap 393-E`). `Ed-Fi-Exchange-OSS/LMS-Toolkit` reads fine on
+   licence, date and stars and **will never take a security patch**. The `WebFetch` star channel
+   already returns the banner in the same read — a column, not an instrument.
+4. 🟡 **Probe TED and BOAMP directly** rather than re-asking a search engine (`Gap 393-D`), before any
+   EMEA engagement is sized from tender flow.
+5. 🔵 **Fix `Gap 392-A` and `Gap 393-A` with ONE lexicon change**, not two: over-refutation on a
+   runtime key and over-discovery on a name are the same missing distinction between a **string** and
+   a **capability**.
+6. 🔴 **Re-anchor the adjudication ledger on content, not line numbers, and put the live fatal arm in
+   `make hooks`** (`Gap 393-I`). Both of `p392`'s ledger rows silently broke this pass and the standing
+   check could not see it — an audit trail that drifts is worse than none, because it reads as current.
+7. 🔴 **Finish class 3b** (`Gap 393-H`): a quoted absence that follows a colon **and** spans a newline
+   still reads as a fresh claim, so the gate still punishes a correction.
+
+---
+
 ## Pass 392 — 2026-10-22 — **THE INSTRUMENT `p391` RANKED FIRST IS BUILT, AND ITS FIRST RUN REFUTES ALL THREE GAPS `p391` OPENED EIGHT HOURS EARLIER. 🟢 THE STAR CHANNEL IS OPEN ON A SECOND TOOL, AND THE FIRST STAR READ OVERTURNS A SHELF SUPERLATIVE.**
 
 🔵 **Dating note.** Every clone, licence read, registry read, star read and date below was taken on

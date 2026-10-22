@@ -1172,3 +1172,66 @@ district; this is the Brazilian instrument, and it is the closure of `Gap 391-B`
 🔴 **And know what you are walking into.** `Trend 21`: five live 2026 LATAM tenders, **none asking for
 open source** — they buy subscriptions and licences. This pattern makes the *total-cost* argument
 possible; it does not make the procurement ask for it.
+
+## Pattern AA — 🆕 `p393` The LATAM SME delivery stack, entirely permissive, with billing already in it
+
+**When to reach for this.** A LATAM client — a training provider, a professional body, a private
+school group, a corporate academy — needs to **deliver and sell courses in Spanish** and wants to own
+closed extensions. Every incumbent regional base is copyleft: **Chamilo** GPL-3.0, **i-educar**
+GPL-2.0-or-later, **Moodle** GPL-3.0, **frappe/lms** AGPL-3.0. Until `p393` this shelf had to answer
+either *"take the GPL"* or *"build a platform."*
+
+🟢 **The base, and it is new to these shelves:**
+[`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) — **Apache-2.0**, payload read
+first-hand (10,915 B, `sha256`₁₆ `a9c4042d767d`, © 2021–2024 BMO Moreno Berroteran Ortiz Soluciones,
+**S.A., Nicaragua**), `main` · `53dcb60`, HEAD **2026-08-31 — 52 d**, **676 files, 505 commits, 57
+releases**, PyPI `now-lms` v2.0.4. Flask/Python; courses, delivery, certificates and **monetisation**
+in the box.
+
+### The stack
+
+| layer | component | grant | why this one |
+|---|---|---|---|
+| **Platform** | [`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) | 🟢 **Apache-2.0** | The only Spanish-language LMS on these shelves you can fork, extend and **ship closed**. Flask — a studio reads the whole thing in a day. |
+| **Tutor / agent** | the LATAM-native agent tier on [`agents/top.md`](../agents/top.md) | 🟢 MIT | Three granted regional options; one ships as an Open edX plugin, so prefer the standalone ones here. |
+| **Interop edge** | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) 🟢 MIT, + [`…/django-lti-dynamic-registration`](https://github.com/Harvard-University-iCommons/django-lti-dynamic-registration) 🟢 MIT | 🟢 MIT | 🔴 **Django, and `now-lms` is Flask** — see the honest caveat below. Needed only when the client must appear **inside someone else's LMS**. |
+| **Autograding** (technical courses) | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) 🟢 BSD-3 (**161 ★**, 197 releases) + [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) 🟢 MIT | 🟢 permissive | Grading and submission halves respectively. Both Python, both beside the platform's own runtime. |
+| **Assessment import** | [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker) | 🟡 **LGPL-3.0** | Ingest existing question banks as QTI. 🟡 **Link it, do not fork it** — LGPL permits the first and not the second. |
+| **Public-data sizing** | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟡 MIT (code only) | For a **Brazilian** engagement, size the market from INEP `censo_escolar` before the first meeting — `Pattern Z`. |
+
+### Wiring it
+
+1. **Fork `now-lms`, pin the Apache-2.0 payload into the delivery record.** Record bytes and
+   `sha256`, per `Pattern L` step 1. The appendix is **filled in**, not narrowed — that is the benign
+   non-stock case, and worth noting in the record so a later reviewer does not re-raise it.
+2. **Keep the agent out of the platform process.** The tutor talks to `now-lms` over HTTP and holds
+   its own store. 🔵 This is `Pattern A`'s rule and it survives here for a different reason: not
+   copyleft containment, but so the platform fork stays rebaseable onto a 57-release upstream.
+3. **Add autograding only for the courses that need it.** `otter-grader` runs containerised; invoke
+   it as a job, not in the request path.
+4. **Decide the interop edge explicitly, and this is where the caveat bites** (below).
+5. **Bill through the platform's own monetisation**, which is the reason to pick this base over
+   `academico`. Verify it against the client's local payment rails before promising it — Nicaraguan
+   defaults are not Brazilian or Mexican ones.
+
+### 🔴 The caveats, because this base's own history says to write them next to the recipe
+
+- 🔴 **21 ★, and that is the real risk, not the licence.** One company, 505 commits, no multi-tenancy
+  claim. **Fork it and plan to own it** — budget maintenance as if upstream may stop. Do not put a
+  ministry on it; `Pattern O` and Chamilo remain the public-sector answer.
+- 🔴 **The LTI edge is Django and `now-lms` is Flask.** All five Python LTI implementations
+  (`p393`, refuting `Gap 391-A` a second time) are **Django** apps or JupyterHub authenticators. If
+  the client must launch from a third-party LMS, the edge is a **separate Django service** beside the
+  Flask app. 🔵 Note what this is and is not: `p391` published *"the interop edge must be a separate
+  runtime"* as a **language** claim and was wrong; here it is a **framework** claim about one specific
+  pairing, and it is a deployment line to cost, not an architecture verdict.
+- 🟡 **Three of the four non-platform components are copyleft or weak-copyleft** once assessment import
+  enters. Keep QTI conversion (`Citolab`, GPL-3.0) and packaging (LGPL-3.0) as **arm's-length tools**
+  invoked by a pipeline; nothing copyleft links into the delivered fork.
+- 🔴 **Do not reach for the `timeback-*` OneRoster/QTI clients**, however well they fit on paper:
+  147 releases, MIT **declared**, and a **source repository that does not resolve** (`Gap 393-B`,
+  `Trend 23`). You cannot warrant a grant you cannot read.
+
+🟢 **What the client gets that they cannot buy:** a Spanish-language delivery platform they own
+outright, with billing, autograding and an AI tutor — assembled from **four permissive grants read at
+the payload**, on a base whose entire source a studio can audit in an afternoon.

@@ -671,3 +671,73 @@ pricing, with the OEI-Chile scope (administrative management, compliance recomme
 implementation"* into a specification written for a product. 🟡 Graded **`ATTRIBUTED-UNVERIFIED`** —
 aggregators and news items; no official portal (COMPR.AR, ChileCompra, PNCP) is reachable here.
 
+
+## Trend 22 — 🆕 `p393` The education **interoperability layer is Python** while the agent layer is TypeScript, and a one-registry sweep answers half the question
+
+**What was measured.** `p393` opened the channel `Gap 392-C` said did not exist: `pypi.org/simple/`
+under PEP 691 returns **920,784 project names in 45,189,043 B in 1.4 seconds**, unauthenticated. A
+sweep of 24 token-exact education keys returned **507 name hits → 15 distinct addresses**, 13 live and
+verified first-hand.
+
+**What came back was a layer, not a list.** Not more tutors or more agents — **plumbing**:
+
+| standard / surface | granted Python supply found | grant |
+|---|---|---|
+| **LTI 1.3 / Advantage** | `openfun/django-lti-toolbox` (France Université Numérique), `Harvard-University-iCommons/django-lti-dynamic-registration` | 🟢 MIT, 🟢 MIT |
+| **QTI** (assessment exchange) | `vosslab/qti_package_maker`, `Citolab/qti-convert-python` (Cito, NL) | 🟡 LGPL-3.0, 🔴 GPL-3.0 |
+| **OneRoster / Caliper** | the `timeback-*` family — 🔴 **source unresolvable** | 🔴 unauditable |
+| **Ed-Fi** (US K-12 data) | `edanalytics/edfi_api_client`; `Ed-Fi-Exchange-OSS/LMS-Toolkit` 🔴 archived | 🟢 Apache-2.0 ×2 |
+| **LMS → agent bridge** | `Dathis/swiss-moodle-mcp`, `Snaw80/moodle-mcp` | 🟢 MIT ×2 |
+| **Autograding** | `edulinq/autograder-py`; `otter-grader` already carried, now measured at **161 ★** | 🟢 MIT, 🟢 BSD-3 |
+
+🔵 **Why this is a trend and not a haul.** The split is systematic. The **agent** layer — MCP servers
+for Canvas, tutors, parent agents — is overwhelmingly **npm/TypeScript**, which is why eleven passes of
+npm sweeps built a rich agent shelf. The **standards and institutional-data** layer is
+**PyPI/Python**, because it lives next to the Django and Flask applications that universities and
+ministries actually run (Open edX, `now-lms`, campus SIS integrations) and next to the
+notebook-and-grading stack. 🔴 **A supply claim is therefore only as wide as its registry.** This base
+published *"there is no maintained Python LTI 1.3 library"* (`Gap 391-A`) from a channel that
+**cannot index PyPI** — and then found five.
+
+🟢 **The rule for a studio:** one discovery channel per ecosystem, named before any absence is
+published. This base's set is now npm + PyPI + Packagist (measured, 0 yield) + `git ls-remote` and
+`raw.githubusercontent.com` for verification. 🔴 **Still missing: Maven, NuGet, RubyGems and CRAN** —
+and CRAN matters here, because `otter-grader` grades **R** and the statistics-teaching stack is
+R-shaped.
+
+🔴 **The cost of the channel, stated with it:** the dump carries **names only**, so it discovers by
+token and a token is not a capability. Two of fifteen candidates were pure collisions — `proctor-ai`
+is a **prompt-engineering** library, `xapi-python` is the **xStation5 broker API** — and whole keys are
+unusable (`canvas` returns 146 names dominated by HTML-canvas and AWS Nova Canvas; `d2l` is
+Dive-into-Deep-Learning). Discovery is cheap; **adjudication is the work**.
+
+## Trend 23 — 🆕 `p393` A new supply class: **live releases, dead source** — and the licence claim is unauditable in principle
+
+**The instances, found the same hour.** [`superbuilders/timeback-dev-python`](https://github.com/superbuilders/timeback-dev-python)
+is the declared `Repository` of **three** actively-released PyPI packages — `timeback-qti`,
+`timeback-oneroster` (OneRoster **v1.2**), `timeback-caliper` — **147 releases** between them, last
+**2026-07-18**, each declaring **MIT**, together the most complete 1EdTech client family in Python on
+paper. 🔴 **The repository does not resolve for an unauthenticated clone.** Second instance:
+`moodle-mcp-bridge` v1.7.0, advertising *"a Moodle site as 88 typed AI tools"* → `NmaaAlhawary/MCP-Moodle`,
+also unresolvable.
+
+🔵 **Why this is a distinct class and not a variant of an existing one.** This base already grades
+three failure modes, and none of them covers this:
+
+| class | the payload | the verdict |
+|---|---|---|
+| `UNGRANTED` (no licence file) | exists, is empty of a grant | read, and found wanting |
+| `README-ONLY` / `MANIFEST-ONLY` | a grant **asserted** somewhere other than a payload | downgraded, because the assertion is checkable against the absence |
+| 🆕 **`LIVE-RELEASES-DEAD-SOURCE`** | 🔴 **cannot be fetched at all** | **not assessable** — there is nothing to read, and no amount of care fixes it |
+
+🔴 **The procurement consequence is sharper than it looks.** `p388`'s *"published but unreadable"* was
+about a payload that says nothing; this is about a payload that **cannot be obtained**. A studio can
+install these packages — pip will resolve them happily — but it **cannot warrant the licence to a
+client**, because warranting a grant means having read it. And an MIT declaration in registry metadata
+is a claim by the uploader, not a grant in a distributable artefact.
+
+🟢 **What to do with it.** Evaluate in a sandbox if the capability is needed; **never ship it into a
+client deliverable**; ask the publisher to open the repository, which is a cheap request and a fair
+one. 🔵 And record the class, because the economics favour its growth: publishing to a registry is
+free and keeping a public repository is a maintenance commitment, so **more supply will arrive this
+shape**, not less.
