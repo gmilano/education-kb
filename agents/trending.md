@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 2026-10-22 · `p380` — **the zero-streak ends at five: three new agent rows, all MIT, all payload-read — and NOT ONE of them came from a prescribed global leg. 🟢 Star counts return to this base after ten passes, on a channel `curl` still cannot reach.**
+
+**Evidence:** [`address-yield`](../evidence/address-yield.2026-10-22-p380.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) · [`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv)
+
+🟢 **New agent rows this week: 3.** The first since `p374`, ending a five-pass run of zeros.
+
+🔴 **And the honest shape of it: the four prescribed global legs returned ZERO new addresses
+between them.** All three rows came from **narrowed** legs — a tutor leg, a grading leg and an
+MCP leg — at an overall yield of **3 new out of 18 candidates (17 %)**. 🔵 `p379` retired the
+in-language dial and named **address yield** as the thing that selects a leg; this week's
+measurement says the live axis is **narrowness**, not language and not geography.
+
+| This week's new addresses | Licence (payload) | ★ | Region | The property it was shelved for |
+|---|---|---:|---|---|
+| [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** `1 071 B` | **4** | **APAC** (India), 113/135 commits `+05:30` | A **first-class eval harness** on a tutor — the half this base's dozen tutor rows mostly lack |
+| [`Keshav0141/Auto-Assessment-Agent`](https://github.com/Keshav0141/Auto-Assessment-Agent) | 🟢 **MIT** `1 069 B` | **0** | 🟡 **APAC** (India), `n=4` commits, weak | A **0–1 confidence per grading decision**, default threshold **0.85**, below which it demands human review |
+| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 **MIT** `1 072 B` | **0** | 🔴 **NOT PLACED** (`-04:00` is EDT *and* Santiago in October) | **Read-only by construction** — *"It can never submit, edit or delete anything"* |
+
+🟢 **Star counts are available again, for the first time since `p370`.** `github.com` HTML
+answers **200** through `WebFetch` while `curl` gets **403** — a channel four consecutive
+sandboxes declared closed. 🔴 It was calibrated against `p369`'s API figures before any row
+quoted it (`OpenMAIC` **41.3k** vs **41 208**; `oppia` **6.9k** vs **6 871**), it **refuses** on a
+planted 404 rather than inventing a number, and it **rounds above 1 000** — so nothing under a
+100 ★ delta is measurable on it up there. `api.github.com` itself is **still 403**.
+
+🔴 **A trending figure REFUSED this week.** A roundup credited
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) with
+*"passed 5,900 stars"*. Measured first-hand today: **7.1k**. 🔵 The snippet is not adopted — not
+because it is far off, but because a figure copied from a roundup has no channel, and this base
+now has one. 🔴 **The same read found the grant is not what a trending list implies: its root
+payload is `ODbL-1.0` (25 289 B) and the sidebar names TWO grants — `ODbL-1.0` and
+`CC-BY-SA-4.0`.** Share-alike data, not a permissive base to build on, and the second live
+fixture for `ACTION ZZ-ap`'s unbuilt per-subtree classifier. `Gap 534`.
+
+🔵 **Nothing promoted from the awesome-list class, for the fifth pass running.** `L1` and `L2`
+returned `ashishpatel26/500-AI-Agents-Projects` and `caramaschiHG/awesome-ai-agents-2026`; both
+are curated **lists**, the class `p378` refused four times and `p379` once more.
+
 ## 2026-10-22 · `p379` — **this week in education agents: a fifth consecutive zero, and the first pass to establish WHY an in-language search will not break it. 🔴 The one new address of the week is German, MIT, and 16 months stale.**
 
 **Evidence:** [`inlanguage-yield`](../evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv) ·

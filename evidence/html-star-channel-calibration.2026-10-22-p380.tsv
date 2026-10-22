@@ -1,0 +1,8 @@
+slug	value_html_p380	channel_html_date	prior_value	prior_channel	prior_date	verdict	note
+gmilano/this-repo-does-not-exist-p380-control	404 NOT FOUND	2026-10-22	n/a	planted negative control	2026-10-22	REFUSES	the channel reports 404 and returns NO number - it does not invent one
+THU-MAIC/OpenMAIC stars	41.3k	2026-10-22	41208	api.github.com	2026-10-21	AGREE-WITHIN-RESOLUTION	41208 -> 41.2k; 41.3k one day later
+THU-MAIC/OpenMAIC forks	6.4k	2026-10-22	6381	api.github.com	2026-10-21	AGREE-WITHIN-RESOLUTION	6381 -> 6.4k
+oppia/oppia stars	6.9k	2026-10-22	6871	api.github.com	2026-10-21	AGREE-WITHIN-RESOLUTION	6871 -> 6.9k
+bncc-dev/bncc-dados stars	22	2026-10-22	9	p343 prose	2026-10-20	UNRESOLVED	exact value, below the rounding floor; 9 -> 22 in 2 days is growth OR channel disagreement, n=1, NOT resolved here
+withmarbleapp/os-taxonomy stars	7.1k	2026-10-22	5900 ('passed 5,900')	blog snippet	2026-10 undated	SNIPPET-REFUSED	the measured value exceeds the snippet; the snippet is not adopted
+RESOLUTION FLOOR	exact <= 999, rounded to 0.1k above	2026-10-22	-	-	-	MEASURED	22, 4, 0 exact; 41.3k, 6.9k, 7.1k rounded - no delta under 100 is measurable above 1k

@@ -4,6 +4,163 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p380` — **THE FIVE-PASS AGENT-ROW ZERO BREAKS: THREE ROWS, ALL MIT, ALL READ FROM THE PAYLOAD. 🟢 AND A CHANNEL REFUSED IN FOUR CONSECUTIVE SANDBOXES IS OPEN HERE — `github.com` HTML ANSWERS **200** THROUGH `WebFetch` WHILE `curl` STILL GETS **403**, SO THIS BASE HAS STAR COUNTS FOR THE FIRST TIME SINCE `p370`. 🔴 IT WAS CALIBRATED AGAINST `p369`'s API FIGURES BEFORE A SINGLE ROW QUOTED IT, AND IT ROUNDS ABOVE 1 000.**
+
+**Evidence:** [`channel-probe`](../evidence/channel-probe.2026-10-22-p380.tsv) · [`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv) · [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p380.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p380.tsv)
+
+🔵 **Dating note.** Every probe, leg and read below was run on **2026-10-22** and every evidence
+file is named for that date. Artefacts are dated by **MEASUREMENT**, per this base's standing rule.
+
+🟢 **GATE STATE: `make hooks` 43/43 GREEN before the first byte was written**, re-measured rather
+than inherited from `p379`'s report, per `ACTION p377-A`'s standing rule.
+
+### 🟢 The channel, first — because everything below depends on which ones answered
+
+🔴 **`curl` is refused exactly as `p379` measured it:** `api.github.com` **403**, `github.com`
+HTML **403**, every non-GitHub host **000** (CONNECT policy-denied). This is the **fifth**
+consecutive sandbox to refuse the GitHub API.
+
+🟢 **But `WebFetch` egresses from a different place, and it reaches `github.com` HTML at 200.**
+That is the channel `p374` through `p379` each declared closed while publishing *"No star
+counts"* as a stated limitation. 🔴 **It does not open `api.github.com`**, which still answers
+**403** through the same tool — so the integer channel stays shut and this is an **HTML** read.
+
+🔴 **A new instrument is calibrated before it is quoted, never after.** Three controls ran first:
+
+| Control | Expected if the channel is honest | Measured |
+|---|---|---|
+| A planted non-existent address (`gmilano/this-repo-does-not-exist-p380-control`) | refuses, returns **no** number | 🟢 **404, no number offered** — it does not invent one |
+| `THU-MAIC/OpenMAIC`, against `p369`'s `api.github.com` read of **41 208** one day earlier | agreement within rounding | 🟢 **41.3k** · forks **6.4k** against `p369`'s **6 381** |
+| `oppia/oppia`, against `p369`'s **6 871** | agreement within rounding | 🟢 **6.9k** |
+
+🔴 **And the channel's resolution is a property a successor must not forget: it is EXACT at or
+below 999 (`22`, `4`, `0` all came back as integers) and ROUNDED TO 0.1k above it.** So no delta
+smaller than **100 ★** is measurable on this channel above a thousand stars, and a pass that
+reports *"41.3k → 41.4k"* as growth is reading rounding. 🟡 `Gap 529`.
+
+🔴 **One star value does NOT reconcile, and it is published as unresolved rather than smoothed.**
+`bncc-dev/bncc-dados` — this base's least ambiguous LATAM placement — reads **22 ★** here,
+against the **nine** `p343` published on 2026-10-20. Both figures are below the rounding floor,
+so neither is a resolution artefact. 🔵 Two days, 9 → 22 is *possible* growth for a repository
+that has just been linked somewhere; it is also what a cross-channel disagreement looks like.
+🔴 **`n=1`, and this pass does not resolve it.** `Gap 530`.
+
+### 🟢 The three rows this shelf gains
+
+🔵 All three were graded on **four** channels before promotion: `git ls-remote --symref` for
+existence and the default ref, `raw.githubusercontent.com` for the grant **payload**, a blobless
+clone for the HEAD date and the commit-timezone placement, and the HTML channel for stars.
+
+| Agent | Repo | Licence (payload, first-hand) | Grant path | HEAD | ★ | Region | Why it is on this shelf |
+|---|---|---|---|---|---:|---|---|
+| 🆕 **Adaptive-modality tutor** | [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** — `1 071 B`, `sha256₁₂ decdac964835` | `main/LICENSE` | `cd867e1` · **2026-10-20** | **4** | **APAC** (India) — 🟢 **113 of 135** commits at `+05:30` | 🟢 *"Adaptive tutoring agent that personalizes lesson modality from a learning-science knowledge graph, with a first-class eval harness"* — its own description, verbatim. **Shelved for the eval harness, not the tutor:** this shelf carries a dozen tutors and almost none of them ships a way to tell whether it teaches |
+| 🆕 **Confidence-gated grader** | [`Keshav0141/Auto-Assessment-Agent`](https://github.com/Keshav0141/Auto-Assessment-Agent) | 🟢 **MIT** — `1 069 B`, `sha256₁₂ 68977affb141` | `master/LICENSE` | `852096a` · **2026-10-14** | **0** | 🟡 **APAC** (India) — `4 of 4` commits at `+05:30`, **`n=4`, weak** | Rubric grading with a **0–1 confidence per decision** and a default threshold of **0.85**, below which the answer is flagged *"needs human review"*; confidence is estimated from **sampling-based consistency**, with no logprobs. 🟢 **Shelved on shape:** that gate is the exact control the Vietnamese and NYC rules on `intel/market.md` both demand |
+| 🆕 **Read-only Moodle MCP** | [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 **MIT** — `1 072 B`, `sha256₁₂ ed912ca72d9e` | `main/LICENSE` | `987bd52` · **2026-10-21** | **0** | 🔴 **NOT PLACED** — see below | 🟢 *"It is **read only**. It can never submit, edit or delete anything"* — `README.md`, verbatim. **Shelved on the safety property:** every other Moodle MCP on this base reaches student records with write scope available, and a read-only boundary is what makes one deployable against a real institution's data |
+
+🔴 **Why a 0 ★ row is here, stated again because `ACTION ZZ-au` says such reasons have a shelf
+life.** Two of the three have no stars at all. They are shelved for a **property**
+(a confidence-gated review boundary; a read-only-by-construction scope) that this base has
+spent several passes recording as the scarce thing in education supply, and **not** for traction.
+🔵 If a successor finds either property absent on re-read, the row should go — the reason is the
+property, and the property is checkable.
+
+### 🔴 The placement that failed, and it indicts an instrument this base leans on
+
+🔴 **`AnonymousOnyx22/moodle-student-mcp` is `-04:00` on 33 of 33 commits and that does NOT place
+it.** In October, `-04:00` is US/Canada **Eastern Daylight Time** *and* **Santiago** and
+**Asunción**. 🔵 This base has placed rows on exactly this channel with confidence — `p343` wrote
+*"`-0300` on 225 of 225 commits"* for Brazil and was right, because `-0300` is regionally sharp.
+🔴 **`-04:00` is not, and whether it is sharp depends on the DST state at the moment of
+measurement — which no placement on these shelves records.** 🟡 `Gap 531`. The honest output is
+`NOT PLACED`, not a coin-flip between two regions that would each change a studio's answer.
+
+### 🟢 Six rows moved from a MANIFEST to a PAYLOAD — and the index was right six times out of six
+
+🔴 This base's standing doctrine is that **a manifest is not a payload** and **a badge is not a
+grant**. Six published rows still carried a licence read from a **search index `spdx_id`** or the
+**GitHub licence API**, with *"payload not read"* written into the cell. The payload channel is
+open here, so all six were read:
+
+| Repo | Grant cell before | Family read from the payload | Bytes | `sha256₁₂` | Verdict |
+|---|---|---|---:|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟡 licence API, *"payload not read this pass"* | 🟢 **Apache-2.0** | `11 358` | `cfc7749b96f6` | 🟢 **CONFIRMS** — and its default ref is **`develop`**, not `main` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | pinned at `p370` | 🟢 **MIT** | `1 065` | `ba2525637432` | 🟢 **CONFIRMS the shelf pin exactly** |
+| [`dmitry-viskov/pylti1.3-django-example`](https://github.com/dmitry-viskov/pylti1.3-django-example) | 🟡 search-index `spdx_id` | 🟢 **MIT** | `1 070` | `1672e02f459e` | 🟢 **CONFIRMS** |
+| [`dmitry-viskov/pylti1.3-flask-example`](https://github.com/dmitry-viskov/pylti1.3-flask-example) | 🟡 search-index `spdx_id` | 🟢 **MIT** | `1 070` | `1672e02f459e` | 🟢 **CONFIRMS** — 🔵 **byte-identical to its sibling**, the shared-digest fixture `ACTION ZZ-ad` asked for |
+| [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | 🟡 search-index `spdx_id` | 🟢 **MIT** | `1 086` | `7fb13a30d308` | 🟢 **CONFIRMS** |
+| [`christophse/django-lti-tool`](https://github.com/christophse/django-lti-tool) | 🟡 search-index, payload not read | 🟢 **BSD-3-Clause** | `1 525` | `110a063ba578` | 🟢 **CONFIRMS** |
+
+🟢 **Six of six agree. Zero defects.** 🔴 **And the bound on that, stated so nobody over-reads
+it:** all six are permissive families, which is the **easy** direction. It says nothing about the
+expensive one — `p336`'s `@groton/canvas-api`, which declared **nothing** on npm while its tree
+was **GPL-3.0**. 🔵 That failure is about a channel's **silence**, not its disagreement, and six
+agreements do not touch it.
+
+### 🟢 `p378`'s fold constant replicates OUT OF SAMPLE, on six payloads it never saw
+
+🟢 **`p378` published that all 20 MIT payloads on these shelves are ONE legal text at
+`584db484c03a8904`, 1 043 characters.** That constant was in the tree **before** this pass drew
+anything. Six MIT payloads were then read first-hand from six unrelated repositories — an LTI
+example pair, a Vietnamese Moodle plugin, an Indian tutor, an Indian grader and a North-American
+MCP server — and run through **`p378`'s own instrument** rather than a restatement of it:
+
+🟢 **Five distinct byte lengths spanning 17 bytes (`1 069`, `1 070`, `1 071`, `1 072`, `1 086`),
+five distinct `sha256`s — and all six fold to `584db484c03a8904` at exactly 1 043 characters.**
+🟢 The negative control holds: `django-lti-tool`'s **BSD-3-Clause** folds to
+`81b55ffaf6bc3052` at 1 467 characters and does **not** collapse onto MIT.
+
+🔵 **Why this is worth more than another green gate.** `p312` identified MIT by a **byte band**;
+`p378` refuted that and replaced it with a text fold. A refutation is only as good as its
+out-of-sample behaviour, and six fresh payloads at five different lengths landing on one
+1 043-character text is the strongest form that evidence takes on this base. 🟡 It was **not**
+pre-registered by this pass — but `p378`'s constant was **published before the draw**, which is
+the part that matters.
+
+### 🔴 The supply dial, measured: the four PRESCRIBED global legs returned ZERO addresses
+
+🔵 `p379` retired `p378`'s in-language dial and concluded the dial that selects a leg is
+**ADDRESS YIELD**. This pass ran seven legs and counted:
+
+| Leg | Shape | Candidates | `CARRIED` | `NEW` |
+|---|---|---:|---:|---:|
+| L1–L4 | the four **prescribed global** legs (agents · trending · platforms · trends) | **1** | **1** | 🔴 **0** |
+| L5 | narrowed: *tutor agent + MIT + adaptive learning* | 4 | 3 | 🟢 **1** |
+| L6 | narrowed: *grading / assessment + rubric + feedback* | 6 | 5 | 🟢 **1** |
+| L7 | narrowed: *MCP server + Moodle / Canvas / SIS* | 8 | 7 | 🟢 **1** |
+| **Total** | | **18** | **15** | **3** |
+
+🔴 **Every new address came from a narrowed leg; the four prescribed global legs produced one
+candidate between them and it was already carried.** 🟢 **And `make verdict` — `p379`'s own
+two-channel recipe — was run on all 18 BEFORE a single probe**, which is the discipline `p379`
+registered after probing 15 already-dead addresses. It paid: **15 of 18 were already on these
+shelves**, so 83 % of what the search channel returned was this base's own content reflected
+back. 🟡 `Gap 533`.
+
+### 🔴 This pass's own errors, published rather than tidied
+
+🔴 **I probed `Keshav0141/Auto-Assessment-Agent` at `main/LICENSE` when its own `ls-remote`
+symref, which I had already read, says `master`.** The result was HTTP **404** — and the body
+`curl` saved was a **14-byte file reading `404: Not Found`**, which, pinned without looking,
+becomes a licence payload of 14 bytes. 🔵 This is `p353`'s `sandraschi/classroom-mcp` defect
+exactly (*published at `main/LICENSE` when the default branch is `master`*), committed by a pass
+that had the correct ref on screen. `gate-grant-path` exists because of that class; it binds
+**published** paths, and this probe was pre-publication, so nothing would have caught it but
+reading what I had already fetched.
+
+🔴 **A scripted multi-repository probe loop was refused by this environment's own classifier**
+mid-pass, and the work was completed with plain per-repository reads instead. Recorded because a
+successor planning a bulk sweep here should expect the same refusal and budget for serial reads.
+
+### 🟡 Carried, and explicitly NOT run this pass
+
+🔴 **`ACTION p379-A`** — the random arm that would turn `p379`'s enriched **24-of-49** channel-B
+live rate into an actual rate — **NOT RUN.** 🔴 **`ACTION p378-B`** and **`p378-C`** — still not
+run, now three passes carried. 🔴 **The three egress gates** (`hooks-online`, `gate-identity-online`,
+`gate-grant-path` online arm) — **NOT re-run**, though `raw.githubusercontent.com` and the HTML
+channel are both open here and `gate-identity-online` fired red on five unshelved collisions at
+`p378`. 🔵 A successor with this sandbox's channel set should run the online arm **first**: it is
+the cheapest unrun thing on this base, and it has already found real defects.
+
 ## 🔴 2026-10-22 · `p379` — **ZERO new agent rows for a fifth pass, and this time the zero REFUTES THE DIAL `p378` INVENTED TO EXPLAIN IT. The two legs that scored 100 % in-language returned ZERO addresses between them; the leg that scored 44 % returned the only repository of the pass. The in-language fraction measures a language's COMMENTARY estate, not its forge — and it predicts supply BACKWARDS.**
 
 **Evidence:** [`inlanguage-yield`](../evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv) ·

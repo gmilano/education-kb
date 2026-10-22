@@ -1,0 +1,7 @@
+slug	prior_grant_channel	payload_family	grant_path	bytes	sha256_12	verdict
+THU-MAIC/OpenMAIC	shelf pin (p370)	MIT	main/LICENSE	1065	ba2525637432	CONFIRMS the pinned digest exactly
+oppia/oppia	GitHub licence API, payload NOT read	Apache-2.0	develop/LICENSE	11358	cfc7749b96f6	CONFIRMS; note default branch is develop, not main
+dmitry-viskov/pylti1.3-django-example	search-index spdx_id	MIT	master/LICENSE	1070	1672e02f459e	CONFIRMS
+dmitry-viskov/pylti1.3-flask-example	search-index spdx_id	MIT	master/LICENSE	1070	1672e02f459e	CONFIRMS; byte-identical to its sibling - the ZZ-ad shared-digest fixture
+kltn-moolde/moodle-adaptive-learning-plugin	search-index spdx_id	MIT	main/LICENSE	1086	7fb13a30d308	CONFIRMS
+christophse/django-lti-tool	search-index spdx_id	BSD-3-Clause	main/LICENSE	1525	110a063ba578	CONFIRMS

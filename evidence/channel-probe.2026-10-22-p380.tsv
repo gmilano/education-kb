@@ -1,0 +1,14 @@
+channel	probe	tool	result	note
+make	command -v make	shell	AVAILABLE	gates runnable; p379's precondition holds
+git ls-remote	moodle/moodle HEAD	git	OK	existence channel live
+raw.githubusercontent.com	moodle COPYING.txt	curl	200	grant-payload channel live
+raw.githubusercontent.com	moodle COPYING.txt	WebFetch	200	second reader agrees: GNU GENERAL PUBLIC LICENSE
+api.github.com	repos/moodle/moodle	curl	403	fifth consecutive sandbox refusal
+api.github.com	repos/moodle/moodle	WebFetch	403	NOT opened by the new channel
+github.com HTML	/moodle/moodle	curl	403	refused, as in all four prior sandboxes
+github.com HTML	/moodle/moodle	WebFetch	200	NEW CHANNEL - star counts available for the first time since p370
+non-GitHub host	www.oecd.org	curl	000	CONNECT policy-denied, as p379 measured
+non-GitHub host	www.oecd.org	WebFetch	ENOTFOUND	DNS-dead; NOT opened
+non-GitHub host	www.unesco.org	WebFetch	ENOTFOUND	second non-GitHub host, same refusal
+registry.npmjs.org	h5p-cli	curl	200	ACTION TJ's registry channel live
+WebSearch	prose legs	WebSearch	AVAILABLE	prose reachable; the ADDRESS of a prose citation is not

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p380` — **the trend with a date on it: education's high-risk compliance arm moved to `2 December 2027`, and the regulated object everywhere turns out to be the DECISION, not the model**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) ·
+[`address-yield`](../evidence/address-yield.2026-10-22-p380.tsv) ·
+[`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv)
+
+🟢 **1 · The EU's high-risk clock was reset, and the transparency clock was not.**
+`Regulation (EU) 2026/1744` (OJ **24 July 2026**, in force **27 July 2026**) moves Annex III —
+education's arm — to **2 December 2027**, on **fixed calendar dates** rather than the
+standards-dependent trigger originally proposed. 🔴 **Article 4 AI-literacy duties have bound
+schools as deployers since 2 February 2025 and Article 50 transparency is live**, so the live
+obligations are the cheap ones and the expensive one is deferred. 🔵 **The trend is therefore
+not "deregulation" — it is a 14-month window to ship governed systems before certification
+bites.**
+
+🟢 **2 · Three legal systems converged on the human-review boundary.** The EU regulates
+assessment and path-gating; **Vietnam** (Law **134/2025/QH15**, in force **1 March 2026**) makes
+it high-risk *only when AI output is the sole basis for a decision without meaningful human
+review*; **NYC** bars AI outright from grading, discipline and promotion. 🔵 Independent drafters
+landing on one line is the strongest signal this base has seen that **the boundary is a product
+requirement rather than a jurisdictional quirk**.
+
+🟢 **3 · Governance is the purchase, and buyers now ask for evidence.** The trends legs agree
+across otherwise weak sources that 2026 moved from pilots to embedded infrastructure with formal
+policy, data boundaries and evaluation processes — and that buyers increasingly demand proof a
+product improves learning rather than engagement. 🔵 **This is why this pass shelved a tutor for
+its EVAL HARNESS rather than its tutor** (`abhijeetgupta23/ai-agent-to-learn-faster-and-better`):
+the scarce half of an education agent in 2026 is the part that demonstrates it worked.
+
+🟢 **4 · Agents, not chatbots — and purpose-built over general.** Multiple legs name agentic,
+multi-step education tools and a move away from generic assistants, and digital credentials as
+the mechanism for skills-based learning and hiring.
+
+🔴 **5 · The counter-trend this base can measure, and it is about supply, not demand.** Seventeen
+per cent — **3 of 18** — of the addresses this pass's search legs returned were new; the other
+**15 were already on these shelves**, and the **four prescribed global legs returned zero new
+addresses between them**. 🔵 **Open-source education supply is not keeping pace with the policy
+story.** The regulation has law numbers and dates; the supply is 4-star and 0-star repositories
+shelved for a property rather than traction. 🟡 A studio reading only the trend half of this base
+will over-estimate what it can assemble off the shelf.
+
+🔵 **6 · The methodological trend, stated for successors: a channel's availability is not a
+property of this repository.** `github.com` HTML answered **403** in four consecutive sandboxes
+and **200** in this one, through a different tool in the same session where `curl` still gets
+**403**. 🔴 **Every *"no star counts"* limitation in `p374`–`p379` was a fact about a sandbox
+being read as a fact about the world.** Probe before concluding — `Gap 511`'s rule, earning its
+keep again.
+
 ## 🟢 2026-10-22 · `p379` — **the 2026 trend consensus is no longer "AI arrives" but "AI is governed", and this pass can finally put a MEASURED number on the gap it creates: 87 % of LATAM higher-ed institutions use AI, 26 % have a strategy. 🔴 The trend claim this base should NOT repeat is any 2026 market level.**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p379.tsv) ·

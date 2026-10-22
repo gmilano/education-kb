@@ -1,0 +1,9 @@
+leg	query_shape	candidates_harvested	CARRIED	NEW	new_rate
+L1 global	top open source AI agents education 2026 github MIT	0	0	0	0% - returned general-purpose agents, no education address
+L2 global	github trending education AI 2026	1	1	0	0% - os-taxonomy, already carried
+L3 global	open source platform education LMS SIS ERP MIT Apache	0	0	0	0% - named platforms only, all carried
+L4 global	AI education industry trends 2026	0	0	0	0% - prose only, no addresses
+L5 narrowed	open source AI tutor agent github MIT adaptive learning	4	3	1	25%
+L6 narrowed	open source AI grading assessment agent github rubric feedback	6	5	1	17%
+L7 narrowed	MCP server education Moodle Canvas SIS github	8	7	1	13%
+TOTAL	all legs	18	15	3	17% - the narrowed legs produced every new address; the four PRESCRIBED global legs produced ZERO

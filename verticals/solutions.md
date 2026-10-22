@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p380` — **Oppia's grant is read from its payload and its path corrected to `develop/LICENSE`; the LMS/SIS layer gets its licence picture re-checked against the one channel that answers here**
+
+**Evidence:** [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv)
+
+### 🟢 The platform row this pass repairs
+
+| Platform | Repo | Licence (payload, first-hand) | Grant path | HEAD | ★ | What changed |
+|---|---|---|---|---|---:|---|
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** — `11 358 B`, `sha256₁₂ cfc7749b96f6` | 🔴 **`develop/LICENSE`** — not `main` | `0a5e091` · **2026-10-22** | **6.9k** | Grant moved from *"licence API, payload not read"* to a **first-hand payload with a digest**, and the **path corrected** |
+
+🔵 **Why the path matters more than the family here.** The licence API was **right** about
+Apache-2.0. It is silent about *where the grant lives*, and `oppia` keeps its default ref on
+`develop` — so a vendoring script that fetches `main/LICENSE` gets nothing and a compliance
+reviewer concludes the platform is unlicensed. 🔴 `p353` lost a pass to this exact class.
+
+### 🔴 The licence picture of the LMS layer, re-stated because a 2026 roundup got it wrong
+
+🔵 The prescribed platform leg returned a comparison putting **Apache-2.0** against **Forma
+LMS** and **Sakai**, and **Apache-2.0** against **Open edX**. 🔴 **Those cells disagree with
+each other across the sources in the same leg** — Sakai appears as both Apache-2.0 and ECL-2.0,
+Open edX as both AGPL-3.0 and Apache-2.0, Forma as both GPL-2.0 and Apache-2.0. 🟢 **This base
+does not adopt any of them**, because it already holds first-hand payload reads for this layer
+and a roundup is not a channel. 🔵 The durable statement for a studio: **the open LMS layer this
+industry actually runs on is copyleft** — Moodle **GPL-3.0**, Open edX **AGPL-3.0**, Canvas
+community edition **AGPL-3.0**, OpenEduCat **LGPL-3.0** — and the permissive options are
+narrower and smaller (**OpenOlat**, **Sakai**'s ECL arm, **Oppia** at Apache-2.0). A client
+asking for a permissive LMS core is asking for the small end of the market, and should be told
+so before the ERP conversation starts, not after.
+
+🟡 **One claim from that leg is worth a successor's time and is NOT adopted here:**
+**OpenEduCat** described as *"the only platform putting LMS and SIS on one database"*
+(PostgreSQL, LGPL-3.0, with admissions, attendance, gradebook, fees, library, hostel and a
+parent app as modules). 🔵 If true it is the most studio-relevant structural fact in the
+vertical layer, because single-database LMS+SIS is exactly what an AI layer over a school needs
+and what Moodle-plus-a-SIS cannot give. 🔴 It comes from **OpenEduCat's own comparison page**,
+which is the vendor, and this base has refused its installed-base figure twice already. **Read
+the schema, not the page.**
+
 ## 🟡 2026-10-22 · `p379` — **the platform leg was deliberately NOT run for a fifth pass, on `p377`'s own instruction, and the vertical finding came from somewhere else: this shelf's platform names are colliding with unrelated repositories, and one collision was probed live this pass**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·

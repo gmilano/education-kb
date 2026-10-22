@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 2026-10-22 · `p380` — **this week's trending read is a GRANT read, not a star read: six published rows whose licence came from a search index have had their PAYLOAD read at last, and the index was right six times out of six.**
+
+**Evidence:** [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv)
+
+🔵 **Why this is the trending item.** This base has treated the search index's `spdx_id` and the
+GitHub licence API as weaker than a payload — correctly, on doctrine — and six rows still
+carried the words *"payload not read"* in their licence cell. The payload channel is open in this
+sandbox, so the question stopped being doctrinal and became measurable.
+
+| Repo | What the cell said | Family read from the payload | Bytes | `sha256₁₂` |
+|---|---|---|---:|---|
+| [`dmitry-viskov/pylti1.3-django-example`](https://github.com/dmitry-viskov/pylti1.3-django-example) | MIT, search-index `spdx_id` | 🟢 **MIT** | `1 070` | `1672e02f459e` |
+| [`dmitry-viskov/pylti1.3-flask-example`](https://github.com/dmitry-viskov/pylti1.3-flask-example) | MIT, search-index `spdx_id` | 🟢 **MIT** | `1 070` | `1672e02f459e` |
+| [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | MIT, search-index `spdx_id` | 🟢 **MIT** | `1 086` | `7fb13a30d308` |
+| [`christophse/django-lti-tool`](https://github.com/christophse/django-lti-tool) | BSD-3-Clause, search-index | 🟢 **BSD-3-Clause** | `1 525` | `110a063ba578` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | Apache-2.0, licence API | 🟢 **Apache-2.0** | `11 358` | `cfc7749b96f6` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | pinned at `p370` | 🟢 **MIT** | `1 065` | `ba2525637432` |
+
+🟢 **Six of six agree.** 🔴 **And the bound, because this is the easy direction:** every one is a
+permissive family. `p336` found the expensive case — `@groton/canvas-api`, declaring **nothing**
+on npm over a **GPL-3.0** tree — and that is a failure of a channel's **silence**, which no
+number of agreements can address.
+
+🟢 **A grant-path fact worth carrying: `oppia/oppia`'s default ref is `develop`, not `main`.**
+Its grant resolves at `develop/LICENSE`. 🔵 `p353` lost a pass to exactly this class on
+`sandraschi/classroom-mcp`, and this pass committed the same error live against
+`Keshav0141/Auto-Assessment-Agent` — probing `main` with `master` already on screen, and getting
+a **14-byte `404: Not Found` body** that would pin as a payload if saved blindly.
+
+🟢 **And the fold held out of sample.** The three MIT payloads above, plus the three drawn for
+this week's new agent rows, are **five distinct byte lengths across 17 bytes** and **five
+distinct `sha256`s** — and all six fold to `p378`'s published constant `584db484c03a8904` at
+**1 043 characters**, with BSD-3-Clause staying apart at `81b55ffaf6bc3052`. `p378`'s refutation
+of `p312`'s byte band now has six out-of-sample confirmations.
+
 ## 2026-10-22 · `p379` — **this week's trending read is a NEGATIVE one and it is the useful kind: 15 addresses these shelves publish do NOT RESOLVE, proved by first-hand `ls-remote`, and every one of them is invisible to every census instrument on this base.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·

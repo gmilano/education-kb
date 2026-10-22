@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p380` — **the LTI reference layer's grants are read from their payloads at last, and `oppia`'s grant path is `develop/LICENSE`, not `main`**
+
+**Evidence:** [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) ·
+[`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) ·
+[`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv)
+
+🔵 Every read below was taken on **2026-10-22** on `raw.githubusercontent.com` and
+`git ls-remote`, first-hand. Stars come from the `github.com` HTML channel described on
+`agents/top.md`, which is **exact at or below 999 and rounded to 0.1k above it**.
+
+### 🟢 Four interop-layer rows upgraded from a search index to a payload
+
+🔵 This base's **credentialing / interop tier** is the layer `p371` named as education's
+unshelved one and `p372` measured as **ten of ten** reference implementations unretrievable.
+Four of the rows that *do* exist in it carried a licence read from a search index rather than a
+grant file. All four now have a payload, a byte count and a digest:
+
+| Component | Repo | Licence (payload, first-hand) | Grant path | Bytes | `sha256₁₂` | Layer it serves |
+|---|---|---|---|---:|---|---|
+| LTI 1.3 Django reference | [`dmitry-viskov/pylti1.3-django-example`](https://github.com/dmitry-viskov/pylti1.3-django-example) | 🟢 **MIT** | `master/LICENSE` | `1 070` | `1672e02f459e` | LTI 1.3 tool-provider integration, Django |
+| LTI 1.3 Flask reference | [`dmitry-viskov/pylti1.3-flask-example`](https://github.com/dmitry-viskov/pylti1.3-flask-example) | 🟢 **MIT** | `master/LICENSE` | `1 070` | `1672e02f459e` | the same, Flask — 🔵 **byte-identical grant to its sibling** |
+| Minimal Django LTI tool | [`christophse/django-lti-tool`](https://github.com/christophse/django-lti-tool) | 🟢 **BSD-3-Clause** | `main/LICENSE` | `1 525` | `110a063ba578` | the smallest LTI surface on these shelves |
+| Moodle adaptive-learning plugin | [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | 🟢 **MIT** | `main/LICENSE` | `1 086` | `7fb13a30d308` | adaptive sequencing **inside** Moodle rather than beside it |
+
+🟢 **Four of four confirm the index.** 🔴 **And all four are permissive families, which is the
+easy direction** — `p336`'s `@groton/canvas-api` (silent on npm, **GPL-3.0** in the tree) is
+untouched by this result, because that failure is a channel's silence rather than its
+disagreement.
+
+### 🔴 A grant PATH correction a studio would otherwise lose a day to
+
+🔴 **[`oppia/oppia`](https://github.com/oppia/oppia)'s default ref is `develop`, not `main`.**
+Its grant is **Apache-2.0**, `11 358 B`, `sha256₁₂ cfc7749b96f6`, resolving at
+**`develop/LICENSE`** — and `main/LICENSE` is not the address. 🔵 Its row previously read
+*"GitHub licence API, payload not read this pass"*; the API answers correctly about the family
+and says nothing about **where the grant lives**, which is the half a vendoring script needs.
+🟢 HEAD `0a5e091` · **2026-10-22** · **6.9k ★**.
+
+### 🟡 A foundational-looking trending repo that is NOT a permissive foundation
+
+🔴 **[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — 7.1k ★,
+HEAD `a871973` (2026-10-22) — serves `ODbL-1.0` at `main/LICENSE` (25 289 B,
+`sha256₁₂ 77d2692c3d64`) and its sidebar names TWO grants: `ODbL-1.0` **and**
+`CC-BY-SA-4.0`.** 🔵 It is the curriculum prerequisite graph this base already knows (1 590
+topics, 3 221 prerequisite edges, tied to NGSS and Common Core), and a trending list naming it
+an open-source education repo is not wrong — but **share-alike on the data and share-alike on
+the content is not a base Globant can build a client deliverable on without the client
+inheriting the obligation.** 🟡 `Gap 534`, and the second live fixture for `ACTION ZZ-ap`'s
+per-subtree classifier, which remains unbuilt.
+
 ## 🔴 2026-10-22 · `p379` — **no new foundation, and the foundation work was a DEFECT IN THE INSTRUMENT A PASS CALLS BEFORE PUBLISHING A ROW: `carried_index.py` has never folded the `.git` clone suffix, for 144 passes, and it is the identical defect `p367`'s own docstring records in its first draft**
 
 **Evidence:** [`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·

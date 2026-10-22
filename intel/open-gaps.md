@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 380 · 2026-10-22 — **a channel four sandboxes called closed is OPEN here, so `p379`'s refused EU date is resolved and star counts return; the agent-row zero breaks at five. 🔴 Seven new gaps, five of them about instruments this base trusts more than it has measured.**
+
+**Evidence:** [`channel-probe`](../evidence/channel-probe.2026-10-22-p380.tsv) ·
+[`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv) ·
+[`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) ·
+[`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) ·
+[`address-yield`](../evidence/address-yield.2026-10-22-p380.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p380.tsv)
+
+🟢 **GATE STATE: `make hooks` 43/43 GREEN before the first byte, re-measured rather than
+inherited, and again as the last act before the commit.**
+
+### 🟢 Closed and moved this pass
+
+| Gap / action | State after `p380` |
+|---|---|
+| 🔴 **`p379`'s refused EU education high-risk DATE** (*"three outlets, three dates"*) | 🟢 **RESOLVED — `2 December 2027`**, by **`Regulation (EU) 2026/1744`** (OJ 2026-07-24, in force 2026-07-27), corroborated across independent outlets **and** the European Commission's own announcement. Annex I moves to **2 August 2028**. 🔴 Still **not address-verified** — see `Gap 532` |
+| 🟡 **`Gap 524`** — no citation-address verification field | 🟡 **HALF-CLOSED and now MEASURED rather than assumed.** GitHub addresses verify here; **no** non-GitHub host is reachable by **either** channel. The asymmetry is `Gap 532` |
+| 🔴 **The *"no star counts"* limitation carried by `p374`–`p379`** | 🟢 **LIFTED.** `github.com` HTML answers **200** via `WebFetch` while `curl` still gets **403**. 🔴 `api.github.com` remains **403** on both |
+| 🟡 **`ACTION ZZ-ad`** — the payload-digest identity instrument wanted a fixture | 🟢 **FIXTURE SUPPLIED:** `pylti1.3-django-example` and `pylti1.3-flask-example` serve **byte-identical** grants at `sha256₁₂ 1672e02f459e` |
+| 🟢 **`p378`'s MIT fold constant** | 🟢 **REPLICATED OUT OF SAMPLE** — six fresh payloads, five byte lengths spanning 17 B, five `sha256`s, all folding to `584db484c03a8904` at 1 043 chars; BSD-3-Clause held apart |
+| 🔴 **`p376`'s Vietnamese assessment boundary**, carried without an instrument | 🟢 **NAMED:** **Law No. 134/2025/QH15**, in force **2026-03-01**, education on the high-risk list |
+| 🔴 **The five-pass agent-row zero** | 🟢 **BROKEN — 3 rows**, all MIT, all payload-read. 🔴 And explained: **0** came from the four prescribed global legs |
+
+### 🔴 New gaps
+
+🔴 **`Gap 529` — the HTML star channel ROUNDS, and nothing on these shelves records a star
+cell's resolution.** Measured: exact at or below **999** (`22`, `4`, `0` returned as integers),
+rounded to **0.1k** above it (`41.3k`, `6.9k`, `7.1k`). 🔵 So **no delta under 100 ★ is
+measurable above a thousand stars**, and every star cell this base publishes above 1k is now
+resolution-bounded by the channel that produced it. A pass reporting *"41.3k → 41.4k"* as growth
+is reading rounding. **No field records which channel a star cell came from, or its resolution.**
+
+🔴 **`Gap 530` — `bncc-dev/bncc-dados` reads 9 ★ at `p343` (2026-10-20) and 22 ★ at `p380`
+(2026-10-22), and no instrument here distinguishes GROWTH from CROSS-CHANNEL DISAGREEMENT.**
+Both values sit below the rounding floor, so neither is an artefact. 🔵 This matters beyond one
+row: it is this base's **sharpest LATAM placement**, and `p343` used its nine stars to argue that
+*"the channel is indicted rather than the region."* If 22 is correct and 9 was wrong, that
+argument's premise moves. **`n=1`, unresolved.**
+
+🔴 **`Gap 531` — the commit-timezone placement channel has a DST-DEPENDENT AMBIGUITY CLASS, and
+no placement on this base records the DST state at measurement.** `AnonymousOnyx22/moodle-student-mcp`
+is `-04:00` on **33 of 33** commits, which in October is US/Canada **Eastern Daylight Time**
+*and* **Santiago** *and* **Asunción** — North America and LATAM, indistinguishable. 🔵 `p343`
+placed Brazil on `-0300` and was right because that offset is regionally sharp; **sharpness is a
+property of the offset and the date, not of the channel**, and this base has treated it as a
+property of the channel. Published here as `NOT PLACED`.
+
+🔴 **`Gap 532` — channel availability is TOOL-SCOPED, not host-scoped, and no probe on this base
+records which tool answered.** In one session: `github.com` HTML is **403** to `curl` and **200**
+to `WebFetch`; `api.github.com` is **403** to both; every non-GitHub host is **000** to `curl`
+and **`ENOTFOUND`** to `WebFetch`. 🔵 `p374`–`p379` each wrote *"`github.com` HTML 403"* as a
+fact about the world. It was a fact about **one tool in one sandbox**. Every capability claim in
+this base's history is therefore scoped to an instrument it does not name.
+
+🔴 **`Gap 533` — 15 of 18 addresses the search legs returned were already `CARRIED`, and this
+base cannot measure how much of the search channel's output is its own shelf reflected back.**
+83 % redundancy on this pass. 🔵 The four **prescribed** global legs returned **one** candidate
+and it was carried. A dial that selects legs by `NEW` rate (`p377`) or in-language fraction
+(`p378`, refuted) still does not answer *"is this leg showing me the world or my own index?"*
+
+🔴 **`Gap 534` — `withmarbleapp/os-taxonomy` is a TWO-GRANT repository and the second live
+fixture for `ACTION ZZ-ap`, which remains unbuilt after four registrations.** Root payload is
+**`ODbL-1.0`** (25 289 B, `sha256₁₂ 77d2692c3d64`); the sidebar names **`ODbL-1.0` and
+`CC-BY-SA-4.0`**. 🔵 A single-verdict family classifier publishes this as one licence and is
+wrong about an arm that carries the value — and here **both** arms are share-alike, so the row
+is **not** a permissive base, however a trending list describes it.
+
+🔴 **`Gap 535` — a single instrument can be CORROBORATED in one limb and REFUSED in another, and
+no field on these shelves records limb-level confidence.** `Regulation (EU) 2026/1744`'s Annex III
+date is Commission-confirmed; its **Article 50** date self-contradicts across outlets
+(**2 August 2026** vs a **2 December 2026** watermarking deadline). 🔵 This base's cells carry one
+confidence per **claim**; a legal instrument needs one per **provision**.
+
+🔴 **`Gap 537` — `gate-tables` checks table STRUCTURE and does not bind a separator row's column
+count to its header's.** Found in **this pass's own fresh prose**: a 6-column header over a
+**7-column** separator on `agents/top.md`, written and then passed by a green `gate-tables` run,
+caught only by a hand sweep of all ten files this pass touched. 🔵 `ACTION ZZ-av` already records
+that *"`gate-tables` checks table structure and no gate binds a FIGURE to its cell"*; this is the
+same gate's blind spot one level lower down — it does not bind a table's **shape** to itself.
+🟢 The sweep that found it is four lines of Python and should be the gate.
+
+🟡 **`Gap 536` — `make hooks` has no gate asserting that a pattern's legal premise carries a
+measurement date**, which is `Gap 523` restated after a pass that added two patterns resting
+entirely on dates read on one day. 🔵 `Pattern 34` and `Pattern 35` both state their premise date
+in prose **by hand**. `Pattern 32` steered Quebec engagements on a lifted prohibition for eleven
+months because nothing forced that.
+
+### 🔴 Carried and explicitly NOT run
+
+🔴 **`ACTION p379-A`** (the random arm that would turn the enriched 24-of-49 channel-B rate into
+a real one) — **NOT RUN.** 🔴 **`ACTION p378-B`**, **`p378-C`** — **NOT RUN**, three passes
+carried. 🔴 **The three EGRESS gates** (`hooks-online`, `gate-identity-online`, the online
+`gate-grant-path` arm) — **NOT RE-RUN**, although `raw.githubusercontent.com`, `ls-remote` and
+the HTML channel are all open in this sandbox. 🟢 **Ranked first for the successor:** run the
+online arm here. It is the cheapest unrun instrument on this base, `gate-identity-online` already
+fired red on five unshelved collisions at `p378`, and the channel it needs has been open for
+exactly one pass.
+
 ## Pass 379 · 2026-10-22 — **three registered actions discharged, the ranked-first one deliberately NOT as specified. 🔴 `ACTION p378-D`'s dial is REFUTED on a pre-registered prediction — the in-language fraction predicts supply BACKWARDS. 🔴 `Gap 517` is not stale, it is WRONG, and `Pattern 32` is corrected. 🔴 And the OECD contradicts itself on the one APAC cell `Gap 504` needed.**
 
 **Evidence:** [`registered-prediction`](../evidence/p379-registered-prediction.2026-10-22-p379.tsv) ·

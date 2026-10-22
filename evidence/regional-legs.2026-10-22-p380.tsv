@@ -1,0 +1,24 @@
+region	instrument_or_finding	identifier	date	channel	confidence
+EMEA	AI Act high-risk obligations for Annex III (education) DEFERRED	Regulation (EU) 2026/1744 (Digital Omnibus on AI)	OJ 2026-07-24; in force 2026-07-27; Annex III applies 2027-12-02	WebSearch, multiple independent outlets + European Commission digital-strategy page	CORROBORATED - closes p379's refused EU date; NOT address-verified (eur-lex unreachable here)
+EMEA	Annex I (AI embedded in regulated products) deferred	Regulation (EU) 2026/1744	2028-08-02	WebSearch	ATTRIBUTED-UNVERIFIED
+EMEA	AI literacy duty already binding on schools as deployers	EU AI Act Article 4	since 2025-02-02	WebSearch	ATTRIBUTED-UNVERIFIED
+EMEA	Article 50 transparency date SELF-CONTRADICTS	EU AI Act Art. 50	2026-08-02 vs 2026-12-02 (watermarking)	WebSearch	REFUSED - two dates, two outlets, same instrument
+EMEA	EU + OECD AI Literacy Framework for primary/secondary education	presented 2026-06-18	2026-06-18	WebSearch	ATTRIBUTED-UNVERIFIED
+APAC	First dedicated AI law in the region; EDUCATION is on the high-risk list	Vietnam Law No. 134/2025/QH15 on Artificial Intelligence	in force 2026-03-01	WebSearch	ATTRIBUTED-UNVERIFIED - corroborates p376's Vietnamese assessment-boundary finding and now carries a LAW NUMBER
+APAC	The operative trigger is DECISIONAL, not technological	Vietnam 134/2025/QH15 high-risk test	AI output as the SOLE basis for a decision without meaningful human review	WebSearch	ATTRIBUTED-UNVERIFIED - this is the sentence a studio designs against
+APAC	Grace period for education systems already running	Vietnam 134/2025/QH15	systems live before 2026-08-15 get +6 months	WebSearch	ATTRIBUTED-UNVERIFIED
+APAC	AI Basic Act, high-impact AI obligations	South Korea	effective 2026-01	WebSearch	ATTRIBUTED-UNVERIFIED
+APAC	Supply placed first-hand this pass	abhijeetgupta23/ai-agent-to-learn-faster-and-better	113 of 135 commits at +05:30	blobless clone, first-hand	MEASURED
+North America	134 AI-in-education bills across 31 states in the 2026 session	US state legislatures	2026 session	WebSearch	ATTRIBUTED-UNVERIFIED
+North America	Four states mandate BOTH state guidance and district-level AI policy	Maryland, Idaho, Oklahoma, Virginia	2026 laws	WebSearch	ATTRIBUTED-UNVERIFIED
+North America	District AI-use policy mandate deadline	Ohio	2026-07-01	WebSearch	ATTRIBUTED-UNVERIFIED
+North America	Red tier bars AI from grading, discipline, promotion/graduation decisions	NYC DOE traffic-light guidance	2026 preliminary	WebSearch	ATTRIBUTED-UNVERIFIED - the clearest statement of the decisional boundary in NA
+North America	Amended COPPA Rule general compliance date	US FTC	2026-04-22	WebSearch	ATTRIBUTED-UNVERIFIED
+North America	Thin coverage: Canada and Mexico returned no education-specific instrument on this leg	DECLARED GAP	2026-10-22	WebSearch	GAP DECLARED, not silence
+LATAM	First comprehensive AI law in the region	El Salvador	enacted; 2026 activity adds copyright/labour/criminal obligations	WebSearch	ATTRIBUTED-UNVERIFIED
+LATAM	First in LATAM to sign the Council of Europe Framework Convention on AI and Human Rights	Uruguay	2025	WebSearch	ATTRIBUTED-UNVERIFIED
+LATAM	First concrete BINDING obligations with direct compliance effect for companies	Mexico, 2026 amendments	2026	WebSearch	ATTRIBUTED-UNVERIFIED
+LATAM	Regulatory sandboxes for controlled AI trials	Peru	2026	WebSearch	ATTRIBUTED-UNVERIFIED
+LATAM	Regional AI-in-education observatory + Tec de Monterrey agreement; CONALEP/DGETI pilot in Mexico	UNESCO	2026	WebSearch	ATTRIBUTED-UNVERIFIED - UNESCO is the only education-specific actor the leg returned, so this is a SINGLE-PERSPECTIVE view
+LATAM	eLAC AI working group coordinated by Chile's National AI Center and Uruguay's AGESIC	ECLAC	2024 agenda, live	WebSearch	ATTRIBUTED-UNVERIFIED
+LATAM	NO education-specific AI regulation instrument found; education is integrating ahead of rules	DECLARED GAP	2026-10-22	WebSearch	GAP DECLARED - the leg found governance frameworks, not education rules

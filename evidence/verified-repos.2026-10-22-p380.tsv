@@ -1,0 +1,12 @@
+slug	exists	default_ref	head_sha	head_date	grant_path	family	bytes	sha256_12	stars_html	placement	disposition
+THU-MAIC/OpenMAIC	YES	main	b305df7	2026-10-22T16:11:08+08:00	main/LICENSE	MIT	1065	ba2525637432	41.3k	APAC (Tsinghua)	CARRIED - re-verified, digest matches the shelf pin
+oppia/oppia	YES	develop	0a5e091	2026-10-22T02:33:56+00:00	develop/LICENSE	Apache-2.0	11358	cfc7749b96f6	6.9k	not placed	CARRIED - grant UPGRADED from licence-API to first-hand payload
+withmarbleapp/os-taxonomy	YES	main	a871973	2026-10-22T10:47:18+02:00	main/LICENSE	ODbL-1.0 (sidebar names ODbL-1.0 + CC-BY-SA-4.0)	25289	77d2692c3d64	7.1k	not placed	CARRIED - NOT permissive; second fixture for ACTION ZZ-ap
+dmitry-viskov/pylti1.3-django-example	YES	master	-	-	master/LICENSE	MIT	1070	1672e02f459e	-	not placed	CARRIED - payload read
+dmitry-viskov/pylti1.3-flask-example	YES	master	-	-	master/LICENSE	MIT	1070	1672e02f459e	-	not placed	CARRIED - payload read
+kltn-moolde/moodle-adaptive-learning-plugin	YES	main	-	-	main/LICENSE	MIT	1086	7fb13a30d308	-	not placed	CARRIED - payload read
+christophse/django-lti-tool	YES	main	-	-	main/LICENSE	BSD-3-Clause	1525	110a063ba578	-	not placed	CARRIED - payload read
+abhijeetgupta23/ai-agent-to-learn-faster-and-better	YES	main	cd867e1	2026-10-20T11:38:34+00:00	main/LICENSE	MIT	1071	decdac964835	4	APAC (India) - 113/135 commits +05:30	NEW - PROMOTED on shape (eval harness), 4 stars stated
+Keshav0141/Auto-Assessment-Agent	YES	master	852096a	2026-10-14T11:18:00+05:30	master/LICENSE	MIT	1069	68977affb141	0	APAC (India) - 4/4 commits +05:30, n=4 WEAK	NEW - PROMOTED on shape (confidence-gated human review), 0 stars stated
+AnonymousOnyx22/moodle-student-mcp	YES	main	987bd52	2026-10-21T14:21:50-04:00	main/LICENSE	MIT	1072	ed912ca72d9e	0	NOT PLACED - -04:00 on 33/33 does not discriminate US Eastern (EDT) from Santiago/Asuncion in October	NEW - PROMOTED on shape (read-only by construction)
+bncc-dev/bncc-dados	YES	-	-	-	-	MIT code / CC BY 4.0 data (sidebar MIT)	-	-	22	LATAM (Brazil), per p343	CARRIED - star value UNRESOLVED against p343's 9

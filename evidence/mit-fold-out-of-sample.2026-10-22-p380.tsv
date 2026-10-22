@@ -1,0 +1,8 @@
+slug	bytes	sha256_12	presentation_digest_16	chars_after_fold	drawn_by
+dmitry-viskov/pylti1.3-django-example	1070	1672e02f459e	584db484c03a8904	1043	p380
+dmitry-viskov/pylti1.3-flask-example	1070	1672e02f459e	584db484c03a8904	1043	p380
+kltn-moolde/moodle-adaptive-learning-plugin	1086	7fb13a30d308	584db484c03a8904	1043	p380
+abhijeetgupta23/ai-agent-to-learn-faster-and-better	1071	decdac964835	584db484c03a8904	1043	p380
+Keshav0141/Auto-Assessment-Agent	1069	68977affb141	584db484c03a8904	1043	p380
+AnonymousOnyx22/moodle-student-mcp	1072	ed912ca72d9e	584db484c03a8904	1043	p380
+christophse/django-lti-tool (NEGATIVE CONTROL)	1525	110a063ba578	81b55ffaf6bc3052	1467	p380 - BSD-3-Clause must NOT fold onto MIT, and does not

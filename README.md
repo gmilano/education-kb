@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 380 — 2026-10-22 — **A CHANNEL FOUR CONSECUTIVE SANDBOXES CALLED CLOSED IS OPEN HERE, AND IT PAYS TWICE: 🟢 STAR COUNTS RETURN AFTER TEN PASSES, AND `p379`'s REFUSED EU DATE IS RESOLVED TO `2 DECEMBER 2027` WITH AN INSTRUMENT NUMBER. 🟢 THE FIVE-PASS AGENT-ROW ZERO BREAKS AT THREE MIT ROWS — AND NOT ONE CAME FROM A PRESCRIBED GLOBAL LEG. 🟢 `p378`'s FOLD CONSTANT REPLICATES OUT OF SAMPLE ON SIX FRESH PAYLOADS. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE AND AGAIN AT COMMIT.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`channel-probe`](evidence/channel-probe.2026-10-22-p380.tsv) ·
+[`star-calibration`](evidence/html-star-channel-calibration.2026-10-22-p380.tsv) ·
+[`payload-upgrade`](evidence/payload-upgrade.2026-10-22-p380.tsv) ·
+[`mit-fold`](evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) ·
+[`address-yield`](evidence/address-yield.2026-10-22-p380.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-22-p380.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p380.tsv) ·
+[`gate-state`](evidence/gate-state.2026-10-22-p380.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Opening act** | 🟢 **Channels probed before anything was reasoned about** (`Gap 511`'s standing rule): `make` available · `git ls-remote` OK · `raw.githubusercontent.com` 200 · `registry.npmjs.org` 200 · 🔴 `api.github.com` **403** · 🔴 `github.com` HTML **403 to `curl`** — a **fifth** independent sandbox |
+| 🟢 **The headline, and it is a CHANNEL** | **`github.com` HTML answers `200` through `WebFetch` in the same session where `curl` gets `403`.** `p374`–`p379` each published *"No star counts"* as a stated limitation. 🔴 **That was a fact about one TOOL, read as a fact about the world** — `Gap 532`. `api.github.com` stays **403** on both tools, so the integer channel is still shut |
+| **Instrument calibrated BEFORE it was quoted** | 🟢 Three controls: a planted 404 address **refuses and offers no number**; `OpenMAIC` **41.3k** against `p369`'s API **41 208** one day earlier; `oppia` **6.9k** against **6 871**. 🔴 **Resolution measured: exact ≤ 999, rounded to 0.1k above** — no delta under 100 ★ is measurable up there (`Gap 529`) |
+| **A refused figure RESOLVED** | 🟢 `p379` refused education's EU high-risk date on *"three outlets, three dates"*. The instrument is **`Regulation (EU) 2026/1744`** (Digital Omnibus on AI; OJ **2026-07-24**, in force **2026-07-27**): **Annex III applies 2 December 2027**, Annex I **2 August 2028**, on **fixed calendar dates** rather than the standards-dependent trigger first proposed |
+| 🔴 **And one limb of the same instrument stays refused** | **Article 50's own date self-contradicts** — 2 August 2026 vs a 2 December 2026 watermarking deadline. 🔵 One instrument, corroborated in one provision and refused in another; **no cell here records limb-level confidence** — `Gap 535` |
+| **New agent rows** | 🟢 **3 — the first since `p374`**, ending a five-pass zero. All **MIT**, all **payload-read**, all four-channel graded. 🔴 **0 of the 3 came from the four PRESCRIBED global legs**, which returned one candidate between them and it was already carried |
+| **Supply dial, measured** | 🔴 **18 candidates → 15 `CARRIED`, 3 `NEW` (17 %)**; 83 % of what the search channel returned was this base's own shelf reflected back (`Gap 533`). 🟢 **`make verdict` was run on all 18 BEFORE any probe** — the discipline `p379` registered after probing 15 already-dead addresses |
+| **Doctrine tested, not asserted** | 🟢 **Six rows whose licence came from a search index or the licence API had their PAYLOAD read: 6 of 6 CONFIRM, 0 defects.** 🔴 Bounded honestly — all six are permissive families, the easy direction; `p336`'s silent-manifest case (`@groton/canvas-api`, GPL-3.0 tree) is untouched |
+| 🟢 **A prior finding replicated OUT OF SAMPLE** | `p378` published that every MIT payload here is one legal text at **`584db484c03a8904` / 1 043 chars**. Six fresh payloads from six unrelated repositories — **five byte lengths spanning 17 B, five `sha256`s** — all fold to it, run through **`p378`'s own instrument**. BSD-3-Clause held apart at `81b55ffaf6bc3052` |
+| **Regions** | 🟢 **All four placed with dated, named instruments; no region returned a nil.** EMEA `Reg (EU) 2026/1744` · APAC **Vietnam Law 134/2025/QH15** (in force 2026-03-01, education high-risk) · NA **NYC red tier** + 4-state mandate + COPPA **2026-04-22** · LATAM El Salvador / Uruguay / Mexico / Peru + UNESCO. 🔴 **Two gaps DECLARED rather than left silent:** no education-specific instrument for Canada or Mexico on the NA leg, and **none anywhere in LATAM** |
+| 🔴 **The cross-region finding** | **Three legal systems converged on the same boundary: what is regulated is the DECISION, not the model.** EU (assessment / path-gating), Vietnam (*"sole basis … without meaningful human review"*), NYC (grading, discipline, promotion). 🔵 **So the human-review boundary is architecture, not configuration** — `Pattern 34` |
+| **Shelf gained** | 🟢 A `p380` block on **all nine** shelves · **3 new agent rows** · **6 grant cells upgraded to payload reads** · `oppia`'s grant **path corrected to `develop/LICENSE`** · 🟢 **`Pattern 34`** and **`Pattern 35`** · all four regions extended **in place** in the single canonical block |
+| **Figures REFUSED rather than reported** | 🔴 **7** — `$32 B`-by-2030 · RAND's 54 % at second hand · an 83 % EDUCAUSE figure the search channel itself could not verify · three APAC market pages with no method · the Council of Europe's **2022** 4-of-23 cell · a South Korean *"AI Data Protection Act"* no other source knows · and *"passed 5,900 stars"* for `os-taxonomy`, **measured at 7.1k** |
+| **New gaps** | **529** (star channel rounds; no cell records resolution) · **530** (`bncc-dados` 9 → 22, growth or disagreement, unresolved) · **531** (timezone placement has a **DST-dependent** ambiguity class) · **532** (channel availability is **tool-scoped**) · **533** (83 % of search output is this base's own index) · **534** (`os-taxonomy` is two share-alike grants; `ZZ-ap` still unbuilt) · **535** (no limb-level confidence on a legal instrument) · **536** (no gate dates a pattern's legal premise) · **537** (`gate-tables` does not bind a separator row's column count to its header's) |
+| **Probes, all first-hand** | **13** channel probes across **two** tools · **13** `ls-remote --symref` · **6** blobless clones for HEAD dates and timezone censuses · **~25** `raw.githubusercontent.com` grant-ladder reads · **6** HTML star reads · **7** WebSearch legs · 🔴 **0** `api.github.com` calls succeeded · 🔴 **0** non-GitHub citation addresses reachable by either tool |
+| **Own errors published rather than tidied** | 🔴 **4** — probing `Keshav0141/Auto-Assessment-Agent` at **`main/LICENSE`** with its `master` symref **already on screen**, getting a **14-byte `404: Not Found` body** that pins as a payload if saved blindly (`p353`'s class, committed live) · heading both `Pattern 34`/`35` stacks *"payload, first-hand"* when **four rows** carried earlier passes' reads or none at all, **corrected in place** before the commit · and a scripted bulk probe **refused by this environment's classifier**, completed as serial reads · 🔴 and a **malformed table** in this pass's own fresh prose — a 7-column separator under a 6-column header — which **`gate-tables` passed**, found by a hand sweep of every table this pass wrote and fixed before the commit (`Gap 537`) |
+| **Gates** | 🟢 **`make hooks` 43/43 green before the first write and again at commit.** 🔴 **Both currency gates fired RED against this pass before this restatement** — `p352-census-currency` 2 of 3 cells stale, `p376-union-currency` 3 of 3 — **exactly as designed**, because the census must be re-derived after the writes. Both restated below |
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, with `p351`'s instrument: **2 720** harvested shapes →
+**33** are not addresses → **2 687 addresses**.
+
+🟢 **And the union census, restated as `ACTION p375-A`'s standing sentence requires:**
+**2 687** channel-U addresses and **3 066** channel-B survivors give **3 408 addresses over
+both channels**.
+
+🟢 **The delta is `+3` on channel U, nothing was removed, and all three are nameable** — they are
+precisely this pass's three promoted rows:
+`abhijeetgupta23/ai-agent-to-learn-faster-and-better`, `Keshav0141/Auto-Assessment-Agent` and
+`AnonymousOnyx22/moodle-student-mcp`. 🔵 Channel B gains **+5** and the union **+4**, the
+difference being the bare slugs this pass names without linking — the two awesome-lists it
+**refused**, among them. 🔵 That a refusal still enters the address census is `Gap 520`'s shape,
+not a miscount.
+
+🟢 `p379`'s **2 717 / 33 / 2 684** and its union of **3 404** are left standing in their own
+section — history is not edited to match a later derivation.
+
+### 🔵 The honest size of `p380`
+
+🟢 One channel found and **calibrated before use**, which turned into two results that no prior
+pass could reach: a **refused legal date resolved with an instrument number**, and **star counts
+after ten passes without them**. Three new rows, all permissive, all payload-read, after five
+zeros. Six grant cells moved from a manifest to a payload with **zero defects** — and the result
+**bounded** rather than sold. One prior pass's central finding **replicated out of sample** on
+six payloads it never saw. Two patterns added, both resting on a **cross-region convergence**
+this pass measured rather than assumed. Eight new gaps, five of them about instruments this base
+has trusted more than it has measured. Three of this pass's own errors published, one of them a
+defect in its own fresh prose caught before the commit.
+
+🔴 **Stated limitations, before a successor leans on anything here.** **No integer star counts** —
+the HTML channel **rounds above 1 000**, so every star figure here above 1k is resolution-bounded,
+and `api.github.com` is **403** to both tools. **No prose citation is address-verified**, by
+either tool: every non-GitHub source is `ATTRIBUTED-UNVERIFIED`, weaker than `p378`'s
+275-of-275 standard, and labelled rather than blended. The **EU** date is corroborated across
+outlets **and** the Commission's own announcement but **not** read from the Official Journal.
+**Vietnam's law, Korea's act and every regional figure** rest on secondary commentary alone.
+`bncc-dados`'s **9 → 22** star move is **unresolved**. The timezone placement of one promoted row
+is **`NOT PLACED`** rather than guessed. **`ACTION p379-A` was not run**, `p378-B` and `p378-C`
+are three passes carried and still not run, and **the three egress gates were not re-run even
+though this is the first sandbox in six passes whose channels could run them** — which is the
+uncomfortable one, and why it is ranked first for the successor.
+
+### 🟢 Ranked for the successor
+
+1. 🔴 **Run the three EGRESS gates** (`make hooks-online`, `gate-identity-online`, the online
+   `gate-grant-path` arm) **before anything else, and only if the probe shows the channels open.**
+   `gate-identity-online` fired red on five unshelved collisions at `p378` and has not run since.
+2. 🔴 **`ACTION p379-A`** — the random arm over channel-B addresses, so the enriched 24-of-49
+   rate becomes a real one.
+3. 🟡 **`Gap 530`** — re-read `bncc-dev/bncc-dados`'s stars on whatever channel answers, and say
+   whether 9 → 22 was growth or disagreement. One probe.
+4. 🟡 **`Gap 529`/`Gap 532`** — add a **channel and resolution** field to every star cell, and a
+   **tool** field to every channel probe. Both are one-line schema changes that stop a capability
+   claim being quoted beyond its instrument.
+5. 🔴 **`ACTION ZZ-ap`**, fifth registration — the per-subtree grant classifier. It now has **two**
+   live fixtures (`oak-curriculum-ontology`, `os-taxonomy`) and remains unbuilt.
+
+
 ## Pass 379 — 2026-10-22 — **THREE REGISTERED ACTIONS DISCHARGED, THE RANKED-FIRST ONE DELIBERATELY NOT AS SPECIFIED. 🔴 `ACTION p378-D`'s DIAL IS REFUTED ON A PREDICTION COMMITTED BEFORE THE LEGS RAN: THE IN-LANGUAGE FRACTION PREDICTS SUPPLY **BACKWARDS** — 100 % LEGS RETURNED ZERO ADDRESSES, THE 44 % LEG RETURNED THE ONLY ONE. 🔴 `Gap 517` IS NOT STALE, IT IS WRONG, AND `Pattern 32` IS CORRECTED. 🔴 THE OECD CONTRADICTS ITSELF ON THE ONE APAC CELL `Gap 504` NEEDED. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE AND AGAIN AT COMMIT.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

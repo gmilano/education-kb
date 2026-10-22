@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p380` — **two recipes added, and both are built on the same discovery: what three legal systems regulate is the DECISION, so the human-review boundary is the architecture. 🟢 `Pattern 34` makes one assessment pipeline lawful in Brussels, Hanoi and New York. 🟢 `Pattern 35` builds the evidence buyers started asking for in 2026.**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) ·
+[`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv)
+
+## 🟢 🆕 `Pattern 34` (`p380`) — **One assessment pipeline that is lawful in Brussels, Hanoi and New York, because no grade reaches a student without a human decision record**
+
+🔵 **The problem it solves.** A client wants AI grading across three regions. The EU makes
+assessment **Annex III high-risk** from **2 December 2027** (`Regulation (EU) 2026/1744`);
+**Vietnam** (Law **134/2025/QH15**, in force **1 March 2026**) makes it high-risk **only when AI
+output is the sole basis for a decision without meaningful human review**; **NYC** bars AI from
+grading outright in its red tier. 🔴 **Three regimes, one boundary — and a studio that implements
+it per region ships three products.** Build the boundary once, in the write path.
+
+| Layer | Component | Licence — **and the channel it was read on** | Grant path | Why this one |
+|---|---|---|---|---|
+| System of record | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** — 🟡 payload read **this pass**, title line *"GNU GENERAL PUBLIC LICENSE"* verbatim; **bytes not pinned** | `main/COPYING.txt` | The LMS the client already runs; **not vendored** — reached over its API, so the copyleft never touches the deliverable |
+| Read boundary | [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 **MIT** `1 072 B`, `ed912ca72d9e` | `main/LICENSE` | 🟢 **Read-only by construction** — *"It can never submit, edit or delete anything"*. The agent physically cannot write a grade |
+| Grading proposal | [`Keshav0141/Auto-Assessment-Agent`](https://github.com/Keshav0141/Auto-Assessment-Agent) | 🟢 **MIT** `1 069 B`, `68977affb141` | `master/LICENSE` | Emits a **0–1 confidence per decision** (sampling-based consistency, no logprobs) and flags anything under **0.85** as *needs human review* |
+| Write path | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | 🟢 **Apache-2.0** `11 357 B` — 🟡 **`p374`'s first-hand read, NOT re-read this pass** | `master/LICENSE` | The only component on these shelves that **returns grades over LTI 1.3** — institutional-grade, and the write is auditable at the standard |
+| Rubric reference | [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) | 🔴 **grant NOT read on any pass** — `CARRIED` as an address only | — | Rubric-driven grading whose design point is an **audit trail**: prompts, criteria, inputs and outputs all retained |
+
+🟢 **The wiring, and the one rule that makes it lawful in all three.**
+1. The agent reads coursework **only** through the read-only MCP boundary. Scope is enforced by
+   the component, not by a prompt.
+2. The grader produces a **proposal plus a confidence**, never a grade. It writes nothing.
+3. **The gate:** a proposal under the threshold goes to a human queue. A proposal over it still
+   goes to a human **sign-off that is recorded** — because Vietnam's test is not *"was a human
+   available"* but *"was the AI output the sole basis"*.
+4. Only `mark` writes, and only on a **human decision record** carrying the reviewer, the
+   timestamp, the proposal and the confidence. That record is the compliance artefact in all
+   three regimes and the thing an auditor asks for.
+5. Retain the rubric audit trail from `genai-open-assessment` beside the decision record.
+
+🔵 **Why it travels.** Switching region changes the **threshold and the queue policy** — not the
+architecture. 🔴 **And the inverse is the trap:** a system where the model writes the grade and a
+human *reviews afterwards* fails Vietnam's test and NYC's red tier simultaneously, however good
+the review is, because the AI output *was* the sole basis at the moment of decision.
+🟡 **Estimate: 6–8 weeks** for the pipeline against one LMS, plus 2 weeks per additional region
+for threshold and queue policy. 🔴 **A dated legal premise, per `Gap 523`:** every date above was
+read on **2026-10-22** and is `ATTRIBUTED-UNVERIFIED`; the Official Journal and Vietnam's
+gazette are the checks, and `Pattern 32` exists because this base once steered an engagement on
+a legal premise that had moved eleven months earlier.
+
+## 🟢 🆕 `Pattern 35` (`p380`) — **Ship the evidence the 2026 buyer asks for: an eval harness beside the tutor, not a dashboard after it**
+
+🔵 **The problem it solves.** Every trends leg this pass agrees buyers now want proof that a
+product improves **learning**, not engagement. 🔴 **And this base's own shelf is the evidence of
+the gap:** `agents/top.md` carries a dozen tutor rows and almost none ships a way to tell whether
+it teaches. A studio that demos a tutor and promises measurement later has nothing to sell to a
+procurement officer who has read the 2026 guidance.
+
+| Layer | Component | Licence — **and the channel it was read on** | Grant path | Role |
+|---|---|---|---|---|
+| Tutor + harness | [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** `1 071 B`, `decdac964835` | `main/LICENSE` | 🟢 Adaptive modality from a **learning-science knowledge graph** with a **first-class eval harness** — the harness is the reason it is here |
+| Mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟡 **MIT per this base's earlier rows; NOT re-read this pass** | — | **Bayesian Knowledge Tracing** from UC Berkeley: a defensible mastery estimate rather than a completion count |
+| Curriculum spine | [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔴 **ODbL-1.0** + **CC-BY-SA-4.0** (`25 289 B`, `77d2692c3d64`) | `main/LICENSE` | 1 590 topics and 3 221 prerequisite edges against NGSS / Common Core. 🔴 **Share-alike — reference it, do NOT vendor it into a client deliverable** |
+| LATAM spine | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** code / **CC BY 4.0** data — 🟡 `p343`'s first-hand read; the **sidebar** corroborated MIT this pass | per its shelf row | 1 721 Brazilian basic-education objectives verified against MEC/CNE — attribution only, so it **can** ship |
+| Grade boundary | `Pattern 34` | — | — | If the harness ever gates a path, `Pattern 34`'s rule applies and this becomes high-risk |
+
+🟢 **The wiring.**
+1. Pin the curriculum spine **by reference** and resolve topics to prerequisite edges — Marble
+   for NGSS/Common Core, BNCC for Brazil. 🔴 Keep the ODbL arm out of the deliverable's tree.
+2. Instrument the tutor's sessions against **BKT** mastery per topic, not time-on-task.
+3. Run the eval harness as a **CI job on the engagement**, so every model or prompt change
+   produces a before/after on the same cohort definition.
+4. Report mastery **per prerequisite edge** — which is what *"did it teach"* means operationally,
+   and what a completion dashboard cannot answer.
+5. 🔴 The moment a mastery estimate **gates** a student's path, it is an access decision:
+   `Pattern 34`'s human decision record becomes mandatory.
+
+🟡 **Estimate: 4–6 weeks** to a first defensible before/after, assuming the client can define a
+cohort. 🔴 **Stated honestly: the tutor at the centre of this recipe has 4 stars and a HEAD of
+2026-10-20.** It is recommended for its **harness design**, which is checkable, and a successor
+should re-read the row before quoting it — `ACTION ZZ-au`: a shape-based reason has a shelf life.
+
 ## 🔴 2026-10-22 · `p379` — **`Pattern 32`'s Quebec default is CORRECTED HERE, not noted elsewhere: the suspension it defaults to was lifted ELEVEN MONTHS AGO and the regime that replaced it has a compliance deadline four and a half months in the past. 🟢 And `Pattern 33` is added: the three-channel address check a pass must run before it publishes a row.**
 
 **Evidence:** [`quebec-talis`](../evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv) ·

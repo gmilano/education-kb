@@ -1,0 +1,3 @@
+when	target	result	note
+before the first byte written	make hooks	43/43 GREEN	p377-A's standing rule; baseline inherited and re-measured, not assumed
+after all shelf writes	make hooks	see README p380 section	re-run as the last act before the commit
