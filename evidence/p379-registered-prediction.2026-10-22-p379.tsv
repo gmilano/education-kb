@@ -1,0 +1,33 @@
+# p379 REGISTERED PREDICTION — committed BEFORE any leg, probe or instrument run.
+# Discharges ACTION p378-A (ranked first) and ACTION p378-D.
+# Convention honoured: this base requires a prediction with its own refutation condition
+# committed with NO leg output in the tree (p376-A, p377-D, p378 precedent).
+#
+# CHANNEL STATE AT REGISTRATION (probed as this pass's opening act, Gap 511's standing rule):
+#   make=AVAILABLE  git-ls-remote=OK  raw.githubusercontent.com=200  repo1.maven.org=200
+#   api.github.com=403  github.com-HTML=403   <- FOURTH independent sandbox for the 403 pair
+#   make hooks = 43/43 GREEN before the first write
+#   NEW CHANNEL PRESENT AND REFUSED BY POLICY: a GitHub MCP server is mounted in this
+#   sandbox, but its repository scope is a single unrelated repository. It therefore cannot
+#   serve as a star-count or metadata channel for education addresses. Registered here so no
+#   successor reads "MCP present" as "star counts available".
+#
+# INSTRUMENT LIMIT STATED BEFORE THE LEGS RUN (bears on ACTION p378-D):
+#   The search transport available here documents itself as US-only. An in-language leg is
+#   therefore run through a US-located index. A low in-language fraction is consequently a
+#   candidate confound and must not be read as a property of the language alone.
+#
+# PRE-REGISTERED DEFECT IN THIS PASS'S OWN PREDICTION (p378 set this precedent; it is kept):
+#   D-LIMB-1 puts a >50% threshold on a dial with TWO passes of data and no calibration. A
+#   threshold on an uncalibrated dial cannot distinguish "the dial is real" from "the
+#   threshold was lucky". D-LIMB-2 and D-LIMB-3 are therefore the load-bearing limbs and
+#   D-LIMB-1 is the cheap one. Recorded now, not after the result.
+#
+action	limb	claim	refutation_condition	status_at_registration
+p378-A	A-LIMB-1	The 10 shelves carry >= 100 addresses visible ONLY to channel B (backticked bare slug), i.e. addresses carried_index.carried() grades NEW today	REFUTED if the channel-B-only count over the 10 SHELVES is < 100	OPEN
+p378-A	A-LIMB-2	Channel-B-only addresses are >= 10 percent of the shelf address population (B_only / size of U union B_only)	REFUTED if the share is < 10 percent	OPEN
+p378-A	A-LIMB-3	At least 3 channel-B-only addresses are LIVE repositories by first-hand git ls-remote	REFUTED if fewer than 3 of the probed B-only sample resolve live	OPEN
+p378-A	A-LIMB-4	Wiring channel B into carried() flips at least one address that a p377 or p378 leg published as NEW	REFUTED if no previously-published NEW grade flips to CARRIED	OPEN
+p378-D	D-LIMB-1	All three of ja, de, ru return in-language answer sets above 50 percent	REFUTED if ANY of the three legs returns an in-language fraction <= 50 percent	OPEN
+p378-D	D-LIMB-2	The three in-language fractions fall in a band of <= 30 points, i.e. large-forge languages behave as ONE class	REFUTED if max minus min of the three fractions > 30 points	OPEN
+p378-D	D-LIMB-3	NEW rate and in-language fraction stay UNCORRELATED (p378's retirement of the NEW dial replicates): the leg with the highest in-language fraction is NOT the leg with the highest NEW rate	REFUTED if the same leg tops both dials	OPEN
