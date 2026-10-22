@@ -69,6 +69,8 @@ permissiveness, maintenance signal and fit — and states the gap instead of fil
 | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | `main` | 🟢 **MIT** | 12-lesson agent curriculum. Frequently mis-listed as an agent in roundups; it is a course. |
 | [huggingface/agents-course](https://github.com/huggingface/agents-course) | `main` | 🟢 **Apache-2.0** | Hugging Face's agents course. |
 | [tutors-sdk/tutors](https://github.com/tutors-sdk/tutors) | 🔴 **`development`** | 🟢 **MIT** | Open courseware delivery components. Default ref is `development`. |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | `main` | 🟢 **MIT** *(1,070 B stock, © 2026)* | 🆕 `p384`. Model foundations → LLM systems → agents, with a retrieval-evaluation lab and local graders. A **staffing** asset for the studio, not a deliverable component. |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | `main` | 🟢 **MIT** *(1,070 B stock)* | 🆕 `p384`. Curated use-case index with an education section. 🟡 It is a **list** — roundups file it as an agent; it is not one. |
 
 ## 🔴 No licence file — and "ungranted" is three different things
 
@@ -196,6 +198,22 @@ brief was unavailable. Two stronger channels were used instead and are reproduci
 2. `raw.githubusercontent.com/<slug>/<real-ref>/<path>` — the licence **text**, read first-hand and
    recorded with its byte length, so a hand-edited or non-stock grant shows up as a length anomaly.
 
+🔵 **`p384` extended the probe set from seven paths to eight.**
+[OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) carries a standard GPL-2.0 grant
+at **`docs/License.txt`** — absent from all seven root paths, so the old read would have returned
+"ungranted" for the most widely deployed open-source SIS in K-12. The probe now also checks
+**`docs/License.txt`** and **`doc/LICENSE`** before any ungranted verdict is recorded. 🟡 **No
+`p383` verdict is overturned:** the two repositories ruled UNGRANTED
+([loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp),
+[Seechange-edu/act-ai-tutor-backend](https://github.com/Seechange-edu/act-ai-tutor-backend)) were
+re-probed at the new paths this pass and remain ungranted.
+
+🔵 **And a second failure mode `p384` found: an address that resolves with no tree behind it.**
+[projectfedena/fedena](https://github.com/projectfedena/fedena) returns refs from
+`git ls-remote --heads` but 404s on every content path probed. **`ls-remote` proves a ref, not a
+payload** — which is why channel 1 is never sufficient on its own, and why a census built on
+resolution alone over-counts the supply.
+
 ### Grant read at — provenance for every agent-tier address
 
 The exact ref-and-path each grant above was read from, so any reader can repeat the read.
@@ -237,6 +255,12 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | `main/package.json` (`"license": "MIT"`) | MIT, manifest-only — file absent |
 | [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | `main/package.json` (`"license": "MIT"`) | MIT, manifest-only — file absent |
 | [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | `main/version.php` (GPL header) | GPL-3.0-or-later, header-granted |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | `main/LICENSE` | MIT *(`p384`)* |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | `main/LICENSE` | MIT *(`p384`)* |
+| [inducer/relate](https://github.com/inducer/relate) | `main/LICENSE` | MIT *(`p384`)* |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | `main/LICENSE` | **ODbL** — share-alike database licence, no code grant *(`p384`)* |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | `master/docs/License.txt` | GPL-2.0 — 🔵 **8th probe path**, absent from all seven root paths *(`p384`)* |
+| [projectfedena/fedena](https://github.com/projectfedena/fedena) | — `master` resolves; `README`/`README.md`/`LICENSE`/`Gemfile`/`app` all 404 | **nothing read** — no tree to licence *(`p384`)* |
 
 **13 of the 58 live addresses are not on `main`** (`master`, `develop`, `dev`, `release`,
 `development`, `release_11`, `19.0`). Resolving the ref **before** reading the licence is not

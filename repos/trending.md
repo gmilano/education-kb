@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p384` — **A PERMISSIVE COURSEWARE PLATFORM AND A CURRICULUM GRAPH ENTER THE FOUNDATIONS; A VENDOR-LISTED "APACHE-2.0 SIS" TURNS OUT TO HAVE NO TREE.**
+
+🔵 **Incremental pass**, deliberately not a rewrite — `p383` rebuilt these shelves earlier today.
+`github.com/trending` is still **403** through this sandbox's agent proxy, so as in `p383` the
+trending signal comes from third-party roundups and is then **re-verified first-hand** before
+anything is written down. Three roundup claims were checked this pass; **one was stale, one was
+wrong, and one held.**
+
+### 🟢 New to the foundations
+
+| repo | real default ref | licence (read first-hand) | tier it joins |
+|---|---|---|---|
+| [**inducer/relate**](https://github.com/inducer/relate) | `main` | 🟢 **MIT** — `main/LICENSE`, 1,145 B, *"RELATE is licensed to you under the MIT/X Consortium license"* | **Tier 1 — Learning platforms.** 🟢 **Materially useful: the learning-platform tier on these shelves is otherwise almost all copyleft** (Moodle GPL-3, Open edX AGPL-3, Canvas CE AGPL-3). A Django courseware platform with autograding, flexible access rules, per-student statistics and multi-course support, under a clean MIT grant, is the base a studio can fork and still hand a client closed, client-owned code. |
+| [**withmarbleapp/os-taxonomy**](https://github.com/withmarbleapp/os-taxonomy) | `main` | 🟡 **ODbL** — `main/LICENSE`, 25,289 B; **no** separate code grant (`LICENSE-CODE`, `LICENSE.code`, `CODE_LICENSE`, `licenses/LICENSE` all 404) | **Tier 2 — Content, courseware and assessment.** `v1`: **1,930 micro-topics**, **4,102 prerequisite edges** (`hard`/`soft`, each with a reason), **9 subjects**, aligned to NGSS, Common Core, UK National Curriculum and the Australian curriculum. Data files: `data/topics.json`, `data/dependencies.json`, `data/teaching-research.json` (~24 MB). 🔴 Share-alike **database** licence — read the §4.3-vs-§4.4 table in [`agents/trending.md`](../agents/trending.md) before it enters a deliverable. |
+| [**OS4ED/openSIS-Classic**](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`master`** | 🟡 **GPL-2.0** — grant at **`master/docs/License.txt`**, 17,286 B (*"Version 2, June 1991"*); `index.php` and `Modules.php` headers pin *"version 2 of the License"* | **Tier 5 — Student information / administration.** The most widely deployed open-source SIS in the K-12 tier. GPL-2.0 is survivable the same way Moodle is: reach it over its API, do not link to it. |
+| [**rohitg00/ai-engineering-from-scratch**](https://github.com/rohitg00/ai-engineering-from-scratch) | `main` | 🟢 **MIT** — `main/LICENSE`, 1,070 B stock, © 2026 | **Courseware tier.** Model foundations, LLM systems, agents; includes a retrieval-evaluation lab with local graders. A staffing asset, not a deliverable component. |
+| [**ashishpatel26/500-AI-Agents-Projects**](https://github.com/ashishpatel26/500-AI-Agents-Projects) | `main` | 🟢 **MIT** — `main/LICENSE`, 1,070 B stock | **Courseware tier.** Curated use-case index with an education section. 🟡 A **list**, not an agent, despite how roundups file it. |
+
+### 🔴 Dead address found in common circulation this pass
+
+[**projectfedena/fedena**](https://github.com/projectfedena/fedena) — a vendor comparison article
+lists "Fedena" among open-source student information systems **under Apache-2.0**. Verified:
+
+- `git ls-remote --heads` **succeeds** and returns two refs (`master`, `projectfedena-patch-1`);
+- every content path probed at `master` — `README`, `README.md`, `LICENSE`, `Gemfile`, `app` —
+  returns **404**.
+
+🔵 **The lesson, which the KB has now hit twice from opposite directions.** `p383` found repos that
+*resolve* and have a payload but no root licence file; this pass found one that *resolves* and has
+**no readable payload at all**. `ls-remote` proves a **ref**, not a **tree**. Any address census
+based on resolution alone over-counts. The licence claim is therefore recorded as
+**unsubstantiated** — not as GPL, not as Apache-2.0, as *nothing read*.
+
+### 🔵 The licence probe set gains an eighth path
+
+`openSIS-Classic` carries a real, standard GPL-2.0 grant that the base's **seven** root paths miss,
+because it sits at **`docs/License.txt`**. `Pattern L` now probes `docs/License.txt` and
+`doc/LICENSE` before returning an "ungranted" verdict. 🟡 **No `p383` verdict is overturned** — the
+two UNGRANTED repos were re-probed at the new paths this pass and are still ungranted — but on the
+old probe set the single most-deployed open-source SIS in K-12 would have been wrongly rejected.
+
+### 🟡 Still missing from the open-source supply, restated because it did not change
+
+The searches run this pass (`open source platform education LMS SIS MIT Apache self-hosted`, plus
+the four regional matrices) returned **no** platform that is both an **LMS and a SIS** under a
+permissive licence. The honest shape of the supply: permissive **courseware** (`relate`, `tutors`),
+copyleft **LMS** (Moodle, Open edX, Canvas CE, OpenOLAT being the Apache-2.0 exception already on
+these shelves), copyleft **SIS** (openSIS GPL-2.0, OpenEduCat LGPL-3). Pairing is the only route;
+a single permissive LMS+SIS base does not exist to be found.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p383` — **GITHUB TRENDING WAS UNREADABLE (403), SO THIS PASS MEASURED SOMETHING IT COULD: **62 ADDRESSES RE-VERIFIED FIRST-HAND**, AND IT FOUND **4 DEAD ADDRESSES IN COMMON CIRCULATION**, **13 REF TRAPS**, AND THE ONLY PERMISSIVE MAJOR LMS IN THE INDUSTRY — WHICH NO ROUNDUP MENTIONS.**
 
 🔴 **Channel note, stated rather than worked around.** `github.com/trending` and all of

@@ -200,50 +200,148 @@ record. Most tutoring products shipped into IN/CN today do not do this and are a
 
 ---
 
+## Pattern H — 🆕 `p384` Prerequisite-aware tutoring, grounded on a curriculum graph you must **not** fork
+
+**For:** the adaptive-learning engagement everyone pitches and nobody can substantiate — "the tutor
+knows what the learner is missing". The missing ingredient was never the model; it was a
+machine-readable map of what must be mastered **before** the next topic. One now exists.
+
+🔴 **Read this first.** [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy)
+is licensed **ODbL** (`main/LICENSE`, 25,289 B), a **share-alike database licence**, and it has
+**no code grant**. The whole pattern is built around keeping it on the right side of §4.4:
+
+| what you do | ODbL clause | obligation |
+|---|---|---|
+| Tutor **output** grounded in the graph — next-topic choice, lesson plan, explanation, diagnosis | **§4.3** *Produced Work* | 🟢 **Attribution notice only.** Nothing to release. ODbL supplies the wording: *"Contains information from DATABASE NAME, which is made available here under the Open Database License (ODbL)."* |
+| Shipping the graph **extended or merged** — client topics added, standards remapped, graph re-cut | **§4.4** *Derivative Database* | 🔴 **Share-alike.** Must be publicly used only under ODbL / a later ODbL / a compatible licence. §4.4(b): extracting *"the whole or a Substantial part of the Contents into a new database"* **is** a Derivative Database. |
+
+🟢 **So the architectural rule is one sentence: join, never merge.** The client's curriculum data
+stays in the client's own store; the taxonomy stays a read-only input resolved at query time. Break
+that rule and the client's curriculum map becomes an ODbL obligation.
+
+**Wiring:**
+1. **Load the graph read-only, in its own store.** `data/topics.json` (1,930 micro-topics, each with
+   a plain-language description, mastery **evidence** criteria, a type — conceptual / procedural /
+   representational / language / meta — subject, domain and an approximate age range) and
+   `data/dependencies.json` (4,102 edges, `topicId` → `prerequisiteId`, each tagged `hard`/`soft`
+   with a one-line reason). 🔵 Keep it in a **separate schema or database** from anything client-
+   specific, and never write client rows into it — that separation *is* the §4.4 firewall, and it
+   should be visible in the deployment diagram so counsel can see it.
+2. **Map the client's own curriculum to it by reference, not by insertion.** A join table
+   `client_objective_id → topicId` in the **client's** store. The taxonomy's standards alignments
+   (**NGSS, Common Core, UK National Curriculum**, Australian curriculum — Mathematics 442
+   alignments across 325 topics, English 630/267, Science 245/131, HASS 210/124) usually give you
+   the hook. 🟡 Unmapped client objectives are a **finding to report**, not a gap to paper over.
+3. **Diagnose with the graph, not with the model's intuition.** Walk the DAG backwards from the
+   failed topic over `hard` edges to find unmet prerequisites. This is a **graph traversal, not a
+   generation** — deterministic, inspectable, and the reason the pattern can survive an audit that
+   a pure-LLM "diagnosis" cannot. Treat `soft` edges as ranking hints only.
+4. **Attach the tutor.** [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (**Apache-2.0**) for
+   persistent learner memory plus RAG over the learner's materials, with the traversal result from
+   step 3 injected as the lesson objective. Teacher-facing variant: feed the same unmet-prerequisite
+   list to [satvik314/educhain](https://github.com/satvik314/educhain) (**MIT**) to draft the
+   remediation worksheet — which is the side of the market that is actually growing (Trend 5).
+5. **Schedule the retention.** [fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki)
+   (**MIT**) over the mastered topics. The graph says *what* to review next; FSRS says *when*, with
+   published parameters. 🟢 Together they make "personalisation" two measurable quantities instead
+   of a claim.
+6. **Deliver it through the client's existing LMS**, per **Pattern A** — `webservice_mcp` for
+   Moodle, [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) (**MIT**) for Canvas. For
+   K-12 student records, [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) (**GPL-2.0**,
+   ref `master`) over its API — never linked.
+7. **Prove it on the prerequisite claim specifically.**
+   [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) (**MIT**) with
+   [GSM8K](https://github.com/openai/grade-school-math) (**MIT**) for the multi-step maths chain.
+   🟢 The honest measurement here is not a headline score: it is **whether remediating the
+   prerequisite the graph identified improves the dependent topic**. That is an A/B the client has
+   never been offered, and it is the whole value of the pattern.
+8. **Ship the attribution notice.** §4.3 costs one line in the product's about page and the
+   documentation. Put it in at step one; retrofitting a notice after a client review is avoidable
+   embarrassment.
+
+🟡 **Scope the research claim honestly.** The taxonomy's teaching-research payload
+(`data/teaching-research.json`, ~24 MB) covers **1,049** topics — Science and Mathematics — and the
+maintainers state that **881 topics have no research in this release**. "Research-backed guidance"
+is true for roughly half the graph. Check which half a client's subject mix lands in **before** the
+claim reaches a deck.
+
+🔵 **Coverage note:** `v1` is primary/elementary and strongest on the Australian and US/UK
+standards. Secondary and vocational curricula are not covered — for those, this pattern is the
+*shape* to build, with the client's own map in place of the taxonomy.
+
+**Licence posture:** client-owned code is MIT/Apache throughout. Two non-permissive components, both
+held at arm's length: the **taxonomy** (ODbL, read-only input, joined never merged — §4.3 notice
+only) and the **LMS/SIS** (GPL, reached over a published protocol). **Deliverable stays closed.**
+
+---
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
 narrative. Run it before any repo enters a client deliverable.
 
 1. **Resolve the real default ref first.** `git ls-remote --symref https://github.com/<slug> HEAD`.
-   **13 of 58 live addresses verified this pass are not on `main`** — `master`, `develop`, `dev`,
-   `release`, `development`, `release_11`, and OpenEduCat's `19.0`. A `main`-assuming read reports
-   "no licence" for every one of them, and that false negative looks exactly like a real one.
-2. **Probe more than one path.** Seven paths, in order: `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
-   `LICENCE`, `COPYING`, `LICENSE-MIT`, `license`. Verified instances where the grant is *not* at
-   `LICENSE`: **Moodle → `COPYING.txt`**, **Frappe LMS → `license.txt`** (lowercase),
+   **13 of 58 live addresses verified in `p383` are not on `main`** — `master`, `develop`, `dev`,
+   `release`, `development`, `release_11`, and OpenEduCat's `19.0`; `p384` adds **openSIS-Classic
+   → `master`**. A `main`-assuming read reports "no licence" for every one of them, and that false
+   negative looks exactly like a real one.
+2. **Probe more than one path — eight, not seven.** In order: `LICENSE`, `LICENSE.md`,
+   `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT`, `license`, and 🆕 **`docs/License.txt`**
+   (with `doc/LICENSE` as its variant). Verified instances where the grant is *not* at `LICENSE`:
+   **Moodle → `COPYING.txt`**, **Frappe LMS → `license.txt`** (lowercase),
    **ai-shifu → `LICENSE.txt`**, **lm-evaluation-harness → `LICENSE.md`**,
-   **H5P → `LICENSE.txt`**.
+   **H5P → `LICENSE.txt`**, and 🆕 **openSIS-Classic → `docs/License.txt`** (17,286 B, stock
+   GPL-2.0, *"Version 2, June 1991"*, corroborated by `"version 2 of the License"` headers in
+   `index.php` and `Modules.php`). 🔵 `p384` added the eighth path because the seven-path read
+   returned "ungranted" for **the most widely deployed open-source SIS in K-12** — a repository with
+   a perfectly ordinary grant sitting one directory down.
 3. **Check for a split grant.** **[microsoft/autogen](https://github.com/microsoft/autogen)**: root
    `LICENSE` is **CC-BY-4.0** (18,649 B, "Attribution 4.0 International"); the **code** grant is a
    separate file, `LICENSE-CODE` = **MIT**. One file read gives you the wrong answer either way.
+   Conversely, confirm a split grant is **absent** before assuming one:
+   [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) has **no** code grant —
+   `LICENSE-CODE`, `LICENSE.code`, `CODE_LICENSE` and `licenses/LICENSE` all **404** — so its ODbL
+   is the only grant on offer, for the tooling as well as the data.
 4. **Compare byte length against the stock text.** A licence whose length is off is a licence that
    was edited. **[open-webui/open-webui](https://github.com/open-webui/open-webui)**: `LICENSE` is
    **2,819 B** against stock BSD-3's ~1,500 B — BSD-3 text **plus** a branding restriction and a
    CLA, self-titled "Open WebUI License". Not an OSI-standard grant.
-5. **Treat "no licence" as a hard stop, not a formality.** Three live, functional, actively
-   advertised repositories verified this pass have **no grant at any of the seven paths**:
-   `loyaniu/moodle-mcp` and `Seechange-edu/act-ai-tutor-backend`. No grant means no right to
-   redistribute, whatever the README invites you to do.
-8. **But read the manifest and the source headers before you call it ungranted.** 🔴 **This pass's
+5. **Read the manifest and the source headers before you call anything ungranted.** 🔴 **`p383`'s
    own first draft failed this step and `gate-enumeration` refused it.** Five repositories had no
    licence file at any of the seven paths; only **two** turned out to be ungranted.
    `DMontgomery40/mcp-canvas-lms` and `general-mudkip/d2l-mcp-server` declare
    `"license": "MIT"` in `package.json` (**manifest-only** — reusable, but record the line and ask
    for the file). `onbirdev/moodle-webservice_mcp` carries the full **GPL-3.0-or-later** header in
    `version.php`, as Moodle requires of every plugin — **granted, with no licence file at all.**
-   Probe `package.json`, `pyproject.toml`, `composer.json` and the main source file's header
-   before rejecting a repository; a file-only read would have wrongly rejected three of five,
-   including the plugin Moodle's own directory distributes.
-6. **Ask what the grant covers, not just what it is.** A valid, unmodified, correctly-recognised
+   Probe `package.json`, `pyproject.toml`, `composer.json`, the `README`'s licence section and the
+   main source file's header before rejecting a repository; a file-only read would have wrongly
+   rejected three of five, including the plugin Moodle's own directory distributes.
+6. **Only now treat "no licence" as a hard stop — and it is a hard stop.** Two live, functional,
+   actively advertised repositories survive every check above with no grant anywhere:
+   `loyaniu/moodle-mcp` (no `license` field in `pyproject.toml` either) and
+   `Seechange-edu/act-ai-tutor-backend` (no manifest at all). 🔵 Both were **re-probed at the new
+   eighth path in `p384` and remain ungranted.** No grant means no right to redistribute, whatever
+   the README invites you to do.
+7. **Ask what the grant covers, not just what it is.** A valid, unmodified, correctly-recognised
    licence can still leave the part you are shipping ungranted — stock **ODbL** governs a database's
    *rights*, by its own preamble **not the contents of the database individually**. If you ship
    derivatives of the *contents* on the strength of "licence: ODbL-1.0", you have no grant for the
    part you shipped. Record the answer **per subtree** (`data/`, `docs/`, `scripts/`), and record
    "not stated" as distinct from "not granted".
-7. **Re-check dead addresses.** Four in common circulation do not resolve: `apereo/opencast`,
+   🟢 🆕 **This step was written abstractly in `p383`. `p384` gave it its first real instance** —
+   `os-taxonomy`, ODbL, no code grant — and the concrete reading is now **Pattern H** below. The
+   step was right in advance, which is reason to trust it on the next data artefact: education runs
+   on standards, item banks and curriculum maps, so this will not be the last one.
+8. **Re-check dead addresses.** Four in common circulation do not resolve: `apereo/opencast`,
    `edx/openassessment`, `openedx/openassessment`, `OpenEduCat/OpenEduCat`. Live replacements in
    [`repos/foundations.md`](../repos/foundations.md).
+9. 🆕 **Confirm there is a *tree*, not just a *ref*.** `git ls-remote` on
+   [projectfedena/fedena](https://github.com/projectfedena/fedena) returns two heads — and every
+   content path at `master` (`README`, `README.md`, `LICENSE`, `Gemfile`, `app`) returns **404**.
+   **`ls-remote` proves a ref, not a payload**, so step 1 can pass on a repository that has nothing
+   in it to licence. A vendor article lists this slug as an Apache-2.0 SIS; the correct record is
+   **"nothing read"** — neither granted nor ungranted. Any address census built on resolution alone
+   over-counts the supply.
 
 **Channel note, so this is reproducible:** `curl -sI https://github.com/...` returns **403** through
 this sandbox's agent proxy and `api.github.com` returns **403**. `git ls-remote --symref` and

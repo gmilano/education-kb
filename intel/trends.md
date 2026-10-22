@@ -26,8 +26,19 @@ That gap, not the adoption curve, is what 2026–27 budget buys.
   barrier**.
 - Digital Education Council (n=45,398, 35 countries): **88%** of students, **77%** of faculty.
 
+- 🆕 `p384` **UNESCO IESALC** (n=**200 institutions, 19 countries**, Sept 2026): **87%** of LAC
+  higher-ed institutions use AI in at least one area — **74%** in teaching and learning, **57%** in
+  research — against **26%** with a formal AI strategy. 🟢 **An independent, institutional source
+  landing on the same 26%** as Coursera's educator-reported figure, in a different region with a
+  different method. The governance gap is no longer an inference from one survey; it replicates.
+- 🆕 **OECD TALIS 2024** puts teacher AI use at **~50%+** in Brazil, Chile, Colombia and Costa Rica
+  against an **OECD average of 36%**; Uruguay's **Ceibal** reports **75%** of public-school
+  teachers. 🔵 Practitioner uptake is running ahead of the OECD mean in LATAM — the governance gap
+  is widest exactly where adoption is fastest, which is the opposite of the usual assumption.
+
 **So:** stop selling introduction. Sell policy-to-configuration, audit trails and a governed
-gateway. The shadow-AI estate already exists on every campus.
+gateway. The shadow-AI estate already exists on every campus. 🟢 And sell it **hardest in LATAM**,
+not last — the 87%/26% split there is the widest measured in this file.
 
 ## Trend 2 — The ROI reckoning arrived, and procurement is being rewired around evidence
 
@@ -132,3 +143,43 @@ addresses — see [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.
 
 **So:** rank by licence permissiveness, maintenance signal and fit. Popularity was never the
 decision criterion for a studio engagement anyway.
+
+## Trend 9 — 🆕 `p384` The curriculum-data layer arrived, and its licence is a *database* licence
+
+**Every adaptive-learning pitch rests on knowing what a learner must master before the next topic.
+Until this pass, no shelf here held that artefact. Now one does — and it is not licensed like code.**
+
+[withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) `v1` publishes **1,930
+micro-topics** and **4,102 prerequisite edges** as a DAG — each edge tagged `hard`/`soft` with a
+one-line reason — over **9 subjects**, aligned to **NGSS, Common Core, the UK National Curriculum**
+and the Australian curriculum. Its grant, read first-hand at `main/LICENSE` (25,289 B), is the
+**Open Data Commons Open Database License (ODbL)**. There is **no separate code grant**.
+
+**Why this is a trend and not just a row.** Every licence question these shelves have answered so
+far was a **copyright** question about code: can we link to it, can we ship closed extensions. ODbL
+is a **share-alike database right**, and it draws its line in a different place:
+
+- **§4.3 — a *Produced Work*** (the tutor's output: a lesson plan, a next-topic choice, an
+  explanation) needs **an attribution notice and nothing else**. 🟢 This is the permissive path.
+- **§4.4 — a *Derivative Database*** (the client's topics merged in, standards remapped, the graph
+  re-cut) must be publicly used **only** under ODbL, a later ODbL, or a compatible licence. §4.4(b)
+  is explicit that extracting *"the whole or a Substantial part of the Contents into a new
+  database"* **is** a Derivative Database. 🔴 This is the trap, and it is the thing a studio would
+  naturally do next.
+
+🔴 **A licence scanner pointed at code will not see this at all.** Neither will a licence badge:
+ODbL is not in the permissive/copyleft taxonomy these shelves have been using, so the row cannot be
+classified green or red — it is **green on one axis and red on the other, depending on what you
+ship**. `Pattern L` was built for the case where a badge misreports a code grant; this is the case
+where the *category* is wrong.
+
+**So:** three concrete consequences.
+1. **Ground on it, do not fork it.** Keep client curriculum data in a separate store joined at
+   query time, so the taxonomy stays an **input** rather than a component of the deliverable. That
+   is **Pattern H** in [`compose/patterns.md`](../compose/patterns.md).
+2. **Add a data-rights question to intake.** Alongside "what licence is the code", ask "what rights
+   govern the **data** we ground on". Education runs on standards, item banks and curriculum maps —
+   this will not be the last ODbL/CC-BY-SA artefact on these shelves.
+3. **Check coverage before promising it.** The maintainers state their own gap: teaching research
+   covers **1,049** topics (Science and Mathematics) and **881 topics have none**. A
+   research-backed-guidance claim is true for roughly half the graph.

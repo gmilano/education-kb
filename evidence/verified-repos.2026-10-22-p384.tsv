@@ -1,0 +1,24 @@
+# p384 · 2026-10-22 · first-hand verification of every GitHub address NEW to this pass's shelves.
+# Incremental pass: p383 (same day) verified 62 addresses and rewrote the eight shelves. p384 does
+# NOT re-verify that set and does NOT rewrite the shelves; it verifies only what it adds.
+# CHANNEL NOTE: unchanged from p383. `curl -sI https://github.com/...` returns 403 in this sandbox
+# (agent proxy) and api.github.com returns 403, so the brief's prescribed check is unavailable.
+# Two channels ARE open and were used instead, and both are stronger than a HEAD request:
+#   (1) `git ls-remote --symref https://github.com/<slug> HEAD` -> proves the address resolves AND
+#       gives the REAL default ref.
+#   (2) `raw.githubusercontent.com/<slug>/<real-ref>/<path>` -> the licence TEXT, read first-hand,
+#       recorded with its byte length so a non-stock grant shows as a length anomaly.
+# PROBE SET EXTENDED THIS PASS to EIGHT paths, in order:
+#   LICENSE LICENSE.md LICENSE.txt LICENCE COPYING LICENSE-MIT license docs/License.txt
+#   The 8th path was added because OS4ED/openSIS-Classic carries a stock GPL-2.0 grant there and
+#   returned "ungranted" on the seven-path read. No p383 verdict is overturned: the two UNGRANTED
+#   repos were re-probed at the new path this pass and remain ungranted.
+# NO STAR COUNTS: every popularity channel remains closed (api.github.com 403, github.com HTML 403,
+#   shields.io and star-history blocked). Per the v76 pipeline-inflation correction, none invented.
+slug	status	default_ref	license_path	license_bytes	license_read	note
+withmarbleapp/os-taxonomy	LIVE	main	LICENSE	25289	ODbL	curriculum prerequisite graph; share-alike DATABASE licence; NO code grant (LICENSE-CODE, LICENSE.code, CODE_LICENSE, licenses/LICENSE all 404); README at main states v1 = 1930 topics / 4102 edges / 9 subjects, correcting a roundup's 1590/3221; teaching research covers 1049 topics, 881 none
+inducer/relate	LIVE	main	LICENSE	1145	MIT	"MIT/X Consortium license"; Django courseware + autograding; permissive at platform level
+OS4ED/openSIS-Classic	LIVE	master	docs/License.txt	17286	GPL-2.0	NOT at any of the 7 root paths; "Version 2, June 1991"; corroborated by "version 2 of the License" headers in index.php and Modules.php; this repo is why the probe set is now 8 paths
+rohitg00/ai-engineering-from-scratch	LIVE	main	LICENSE	1070	MIT	stock MIT, (c) 2026; courseware tier, not an agent
+ashishpatel26/500-AI-Agents-Projects	LIVE	main	LICENSE	1070	MIT	stock MIT; a curated LIST, routinely mis-filed as an agent
+projectfedena/fedena	REF-ONLY	master	-	-	NOTHING READ	ls-remote returns 2 heads (master, projectfedena-patch-1) but README, README.md, LICENSE, Gemfile and app ALL 404 at master. No tree to licence. A vendor article lists this as an Apache-2.0 SIS; recorded as UNSUBSTANTIATED, neither granted nor ungranted. ls-remote proves a ref, not a payload.

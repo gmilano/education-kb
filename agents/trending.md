@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p384` — **THIS WEEK'S REAL NEW SUPPLY IS NOT AN AGENT AND NOT CODE: IT IS A 1,930-TOPIC CURRICULUM PREREQUISITE GRAPH, AND ITS LICENCE IS A *DATABASE* LICENCE.**
+
+🔵 **Incremental pass.** `p383` (earlier today) rewrote the eight shelves back into a usable
+knowledge base; this pass does **not** rewrite them again — an hourly full rewrite destroys the
+trend these files exist to record. `p384` adds what new first-hand verification and the full
+regional search matrix turned up, and corrects two third-party claims.
+
+### 🟢 Trending this week
+
+| what | when | licence | why it matters |
+|---|---|---|---|
+| [**withmarbleapp/os-taxonomy**](https://github.com/withmarbleapp/os-taxonomy) — an open curriculum **prerequisite graph** for primary/elementary learning | surfaced on **Oct 2026** trending roundups; `v1` in repo | 🟡 **ODbL** (Open Data Commons Open Database License, `main/LICENSE`, 25,289 B) | 🟢 **The headline, and a new licence class on these shelves.** `v1` ships **1,930 micro-topics** and **4,102 prerequisite edges** as a DAG — each edge tagged `hard`/`soft` and carrying a one-line *reason* — across **9 subjects**, aligned to **NGSS, Common Core, the UK National Curriculum** and the Australian curriculum. This is the artefact every adaptive-tutoring pitch has been hand-waving about: the thing that knows what a learner must master *before* the next topic. 🔴 But it is **not MIT/Apache** — see the share-alike reading below. |
+| [**inducer/relate**](https://github.com/inducer/relate) — Django courseware with autograding | existing project, newly verified here | 🟢 **MIT** (`main/LICENSE`, 1,145 B, "MIT/X Consortium license") | A genuinely **permissive** teaching platform, in a tier that is otherwise almost all copyleft (Moodle GPL-3, Open edX AGPL-3, Canvas CE AGPL-3 — [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT)'s Apache-2.0 remains the standing exception, and the only *major* permissive LMS). Flexible access rules, autograding, per-student statistics, multi-course. 🟡 Courseware-scale, not a Moodle replacement — it is the permissive base for a **course**, where OpenOLAT is the permissive base for an **institution**. Now on [`repos/foundations.md`](../repos/foundations.md). |
+| [**OS4ED/openSIS-Classic**](https://github.com/OS4ED/openSIS-Classic) — K-12/HE student information system | existing project, licence resolved this pass | 🟡 **GPL-2.0**, grant at **`master/docs/License.txt`** (17,286 B) | 🔵 **A methodological find, not just a repo.** No licence file at any of the base's **seven** probed root paths — but the grant is real and sits one directory down, and `index.php`/`Modules.php` headers pin *"version 2 of the License"*. The probe set is now **eight paths**; see the Pattern L note below. Default ref is **`master`**, not `main`. |
+| [**rohitg00/ai-engineering-from-scratch**](https://github.com/rohitg00/ai-engineering-from-scratch) | © **2026** | 🟢 **MIT** (`main/LICENSE`, 1,070 B stock) | Courseware, not an agent: model foundations → LLM systems → agents, with a retrieval-evaluation lab and local graders. Useful for **staffing** a studio team, which is why it goes in the courseware tier rather than the agent tier. |
+| [**ashishpatel26/500-AI-Agents-Projects**](https://github.com/ashishpatel26/500-AI-Agents-Projects) | © 2025, live | 🟢 **MIT** (`main/LICENSE`, 1,070 B stock) | A curated use-case index with an education section. 🟡 It is a **list**, repeatedly mis-filed as an agent in roundups — recorded in the courseware tier so the next pass does not re-chase it as a tutor. |
+
+### 🔴 The ODbL reading — because "open" here does not mean what the code shelves mean by it
+
+`os-taxonomy`'s grant was read first-hand at `main/LICENSE` and there is **no separate code
+grant** (`LICENSE-CODE`, `LICENSE.code`, `CODE_LICENSE`, `licenses/LICENSE` all **404**). ODbL is a
+**share-alike database licence**, and the distinction it draws decides whether a studio can use it:
+
+| what you do with it | ODbL clause | what you owe the client's counsel |
+|---|---|---|
+| Run a tutor whose **output** is grounded in the taxonomy (lesson plans, next-topic choices, explanations) | **§4.3** — a *Produced Work* | 🟢 **An attribution notice only.** No obligation to release anything. ODbL even supplies the notice text: *"Contains information from DATABASE NAME, which is made available here under the Open Database License (ODbL)."* |
+| Ship an **extended or merged taxonomy** — client topics added, standards remapped, graph re-cut | **§4.4** — a *Derivative Database* | 🔴 **Share-alike.** Publicly using it obliges you to licence the derived database under ODbL, a later ODbL, or a compatible licence. §4.4(b) is explicit: extracting *"the whole or a Substantial part of the Contents into a new database"* **is** a Derivative Database. |
+
+🟢 **So the usable pattern is: ground on it, do not fork it.** Keep the client's own curriculum
+data in a separate store joined at query time, and the taxonomy stays an input rather than a
+component of the deliverable. That is now **Pattern H** in
+[`compose/patterns.md`](../compose/patterns.md). 🔵 This is the first row on these shelves where
+the procurement question is a *database* right rather than a copyright licence — a licence scanner
+pointed at code will not see it at all.
+
+### 🔴 Two third-party claims corrected by first-hand reads
+
+- **Scale.** An October 2026 trending roundup reported `os-taxonomy` at **1,590 topics / 3,221
+  prerequisite edges**. The repository's own `README.md` at the real default ref `main` states
+  **1,930 topics / 4,102 edges / 9 subjects**. The roundup is not wrong so much as stale — but the
+  KB records the first-hand number. 🟡 The maintainers also state their **own** coverage gap, which
+  a roundup would not: teaching research covers **1,049** topics (Science and Mathematics), and
+  **881 topics have no research in this release**. Do not promise research-backed guidance on a
+  topic without checking which half it falls in.
+- **Non-finding: `projectfedena/fedena` is not a usable Apache-2.0 SIS.** A vendor comparison
+  article lists "Fedena" as an Apache-2.0 student information system. Verified: `git ls-remote`
+  **does** resolve `refs/heads/master`, so an existence check passes — but every content path
+  probed (`README`, `README.md`, `LICENSE`, `Gemfile`, `app`) returns **404**. There is no readable
+  tree to licence. 🔵 Recorded as a non-finding, and as a reminder that *resolving* is not
+  *existing*: `ls-remote` proves a ref, not a payload.
+
+### 🔵 The probe set is now eight paths, not seven
+
+`p383` probed seven root paths for a licence file and classified five repos as having none.
+`openSIS-Classic` shows the seven-path read has a blind spot one directory deep: its grant is at
+**`docs/License.txt`**. `Pattern L` step 2 now probes **`docs/License.txt` and `doc/LICENSE`**
+before any "ungranted" verdict. 🟡 This does **not** overturn any `p383` verdict — the two repos
+ruled UNGRANTED (`loyaniu/moodle-mcp`, `Seechange-edu/act-ai-tutor-backend`) were re-checked at the
+new paths this pass and remain ungranted — but it would have mis-rejected openSIS, and openSIS is
+the most widely deployed open-source SIS in the K-12 tier.
+
+### Verification method, unchanged and reproducible
+
+**Evidence:** [`verified-repos.2026-10-22-p384.tsv`](../evidence/verified-repos.2026-10-22-p384.tsv)
+— the **6 addresses new to these shelves this pass**, each with its real default ref, the exact
+path its grant was read from and that grant's byte length. `p383`'s 62-address set is **not**
+re-verified here and is not restated; this pass verifies only what it adds.
+
+`curl -sI https://github.com/...` and `api.github.com` both return **403** through this sandbox's
+agent proxy, so the brief's prescribed check is still unavailable. Same two stronger channels as
+`p383`: `git ls-remote --symref <url> HEAD` for existence **and the real default ref**, then
+`raw.githubusercontent.com/<slug>/<real-ref>/<path>` for the licence **text**, recorded with its
+byte length. 🔴 **No star counts are published this pass either** — every popularity channel
+remains closed, and the `v76` technology cycle's pipeline-inflation correction is reason enough not
+to carry unverifiable numbers. Where a secondary source gives a number it is labelled as reported,
+not endorsed.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p383` — **THE SHELVES WERE REWRITTEN BACK INTO A KNOWLEDGE BASE, AND THIS WEEK'S REAL AGENT NEWS IS AN LMS PLUGIN, NOT AN AGENT: MOODLE'S OWN PLUGIN DIRECTORY NOW SHIPS AN MCP SERVER.**
 
 🔵 **What changed in this base this pass.** `agents/top.md`, `repos/foundations.md`,
