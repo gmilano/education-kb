@@ -1,0 +1,51 @@
+# p374 — THE OUT-OF-SAMPLE TEST OF p373's HYPOTHESIS.  Measured 2026-10-22, one tool (WebSearch).
+#
+# p373's hypothesis, as committed: "the necessity of an in-language leg is NOT a property of the
+# query and NOT a property of the region.  It is a property of THE JURISDICTION'S OWN PUBLICATION
+# CORPUS."  p373 derived it from Germany (no English corpus -> German necessary) and Brazil
+# (English legal press -> English sufficient).  Both are jurisdictions p373 and its four
+# predecessors had ALREADY sampled.
+#
+# 🟢 WHY THIS IS THE STRONGER HALF.  ACTION p373-D asked only for a RE-RUN of the same four
+# cells.  A re-run cannot refute the hypothesis -- it can only add draws to the cells that
+# generated it.  A hypothesis about jurisdictions is tested on a jurisdiction it has never seen.
+# APAC was never touched by the crossed design at all, so both new cells are APAC.
+#
+# 🔴 PRE-REGISTERED, IN WRITING, BEFORE EITHER SEARCH RAN (scratchpad/p374/predictions.txt):
+#   O5 Japan -- corpus-language call: JAPANESE.  MEXT publishes in Japanese; no routine
+#               English-language education-policy press.  -> PREDICT NIL on the English leg.
+#   O6 India -- corpus-language call: ENGLISH.  The ministry publishes IN English.
+#               -> PREDICT PRODUCTIVE on the English leg.
+#   REFUTATION CONDITION, stated in advance: "O5 productive, or O6 nil.  Either one breaks the
+#   corpus-language account, because both are English legs naming country AND organ -- the exact
+#   cell shape that split Germany from Brazil."
+#
+cell	jurisdiction	region	query_language	jurisdiction_naming	prediction	outcome	prediction_held	facts_returned
+O5	Japan	APAC	English	COUNTRY + ORGAN (Japan, MEXT)	NIL	GREEN PRODUCTIVE	🔴 NO -- REFUTED	MEXT "Guidelines on the Use of Generative AI in Primary and Secondary Education ver. 2.0", Dec 2024, operative baseline; MEXT materials dated 2026-03-24 and 2026-03-30; education minister Yohei Matsumoto referred AI-in-schools to the Central Council for Education (Aug 2026) for the five-year basic education promotion program starting FY2028, recommendations due FY2027; MLex reports a revision in progress to cover image-generating AI.  Retrieved via MLex, Qatar Tribune, adnkronos English, Kyodo-derived English wire copy.
+O5b	Japan	APAC	Japanese	COUNTRY + ORGAN (文部科学省)	control, no prediction	GREEN PRODUCTIVE -- and returns a DIFFERENT FACT CLASS	n/a	MEXT paper 2026-06-30 to the Central Council special committee, "学校教育におけるAI活用に関するこれまでの取組と今後の方向性"; Ver.2.0 published 2024-12-26; 検討会議 stood up in R6/July; 🟢 generative-AI PILOT SCHOOLS expanded R6: 66 schools -> R7: 281 schools (incl. cooperating schools); NO 2026 revision confirmed as published.
+O6	India	APAC	English	COUNTRY + ORGAN (MoE / CBSE / NCERT)	PRODUCTIVE	GREEN PRODUCTIVE	🟢 YES	MoE Dept. of School Education and Literacy announced 2025-10-29 that AI & Computational Thinking becomes MANDATORY for Classes 3-8 from the 2026-27 session, extending to Classes 9-10 in 2027-28; AI stays an elective in Classes 11-12; CBSE expert committee chaired by Prof. Karthik Raman (IIT Madras), NCERT reviewing the draft; CBSE circular Academics-15/2026 dated 2026-04-01 cited as releasing the primary/upper-primary curriculum (secondary source, circular NOT retrieved); teacher training via NISHTHA; prior baseline a 15-hour Class VI AI module under NEP 2020.
+#
+# 🔴 THE PRE-REGISTERED REFUTATION CONDITION FIRED.  O5 is PRODUCTIVE.  p373's corpus-language
+# account is REFUTED out of sample, by the exact cell shape that generated it, on a prediction
+# written down before the measurement.
+#
+# 🟢 WHAT SURVIVES, AND IT FITS ALL SIX CELLS ACROSS FOUR JURISDICTIONS.  An English leg is
+# productive wherever the jurisdiction's education policy is covered by a CROSS-BORDER
+# SPECIALIST PRESS CHANNEL that publishes in English -- law firms and sector associations for
+# Brazil (Mattos Filho, ABMES), regulatory trade press and news wires for Japan (MLex, Kyodo
+# English), domestic English-language press for India.  It is NOT about the language the
+# JURISDICTION publishes in.  It is about whether a TRADE CHANNEL covers that jurisdiction in
+# the language of the query.  Germany is the one sampled jurisdiction where that channel is
+# thin -- and R2 found even there a FRENCH aggregator carrying the KMK decision.
+#
+# 🟢 AND THE PART A STUDIO SHOULD ACT ON, which neither Gap 476 nor p373 reached: O5 and O5b are
+# BOTH productive and they do NOT return the same facts.  The English leg returned POLICY
+# MILESTONES (who referred what to which council, due when).  The Japanese leg returned
+# OPERATIONAL DETAIL the English leg never mentioned -- the pilot-school count going 66 -> 281.
+# 🔴 So the two legs are NOT substitutes and "is an in-language leg necessary?" was the wrong
+# question for 168 passes.  Run both; they answer different questions.
+#
+# 🔴 STATED LIMITATION.  n=1 per new cell.  O5's refutation of p373 is a REFUTATION (one
+# productive draw is sufficient to break a claim of necessity) but O6's confirmation is NOT
+# an estimate.  The corpus-language COLUMN in regional-leg-register is therefore published as
+# a CALL WITH ITS BASIS, not as a measured property.

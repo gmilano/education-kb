@@ -1,0 +1,27 @@
+# p374 — THE COMMITTED LEGS TABLE.  Every regional leg this base has run FIRST-HAND and recorded
+# with enough detail to re-judge.  The gate reads this file; prose does not feed the gate.
+#
+# fact_class is the column no prior pass carried, and it is what J3 turns on:
+#   policy-milestones   who referred what to which body, instrument numbers, dates, legal status
+#   operational-detail  counts of schools/teachers/licences -- what is actually deployed
+#   survey-figures      measured attitudes or usage rates
+#
+# placenames is SEMICOLON-separated and is the literal set of places/organs the QUERY named.
+# 🔴 A placenames field holding ONLY a region label is J2 limb 1's refusal case.
+#
+# nil_disposition: for a NIL leg only.  PUBLISHED = this base offers it as a measured regional
+# nil.  WITHDRAWN-p374 = the nil was published once and J2 refuses it, so it is retracted and
+# may not be cited as evidence about the region.  🔴 J2 requires that every nil failing its two
+# limbs be marked WITHDRAWN -- a nil cannot be both inadmissible and still on offer.
+#
+leg_id	pass	jurisdiction	region	language	placenames	verdict	fact_count	fact_class	nil_disposition
+p373-c1	p373	Germany	EMEA	German	EMEA	NIL	0	policy-milestones	WITHDRAWN-p374
+p373-c1-de	p373	Germany	EMEA	German	Germany;EU	PRODUCTIVE	4	survey-figures	-
+p373-c2	p373	Germany	EMEA	English	Germany;KMK	NIL	0	policy-milestones	PUBLISHED
+p373-c3	p373	Brazil	LATAM	English	Brazil;CNE;Parecer CP 15/2026	PRODUCTIVE	5	policy-milestones	-
+p373-c4	p373	Brazil	LATAM	Portuguese	Brazil;CNE	PRODUCTIVE	4	policy-milestones	-
+p374-r2	p374	Germany	EMEA	English	Germany;KMK	PARTIAL	1	policy-milestones	-
+p374-r3	p374	Brazil	LATAM	English	Brazil;CNE;Parecer CP 15/2026	PRODUCTIVE	7	policy-milestones	-
+p374-o5	p374	Japan	APAC	English	Japan;MEXT	PRODUCTIVE	4	policy-milestones	-
+p374-o5b	p374	Japan	APAC	Japanese	Japan;文部科学省	PRODUCTIVE	4	operational-detail	-
+p374-o6	p374	India	APAC	English	India;MoE;CBSE;NCERT	PRODUCTIVE	6	policy-milestones	-

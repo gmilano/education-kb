@@ -1,8 +1,40 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
+
+## 🟢 🆕 `p374`: the assessment tier gets its two platforms — and the LTI grade-passback boundary is a **measured vulnerability**, not a policy promise
+
+**Evidence:** [`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p374.tsv)
+
+🟢 `Gap 490` asked for two LTI 1.3 graders to be located by product name. One is real,
+permissive and maintained; the other does not exist as far as two legs can reach.
+
+| Platform | Repo | Licence | Customise with AI on top? | Note |
+|---|---|---|---|---|
+| **Mark** | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | **Apache-2.0** | 🟢 it **is** the AI layer — assessment, feedback, multilingual, over LTI 1.3 | HEAD **2026-10-21**. Plugs into any LTI 1.3 consumer, Open edX included. |
+| **MarkUs** | [`MarkUsProject/Markus`](https://github.com/MarkUsProject/Markus) | **MIT** | 🟢 yes — a conventional Rails app holding the marks an AI layer must not write | HEAD **2026-10-21**. Human grading of code and written work. |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 | 🔵 carried — the LTI **consumer** both rows attach to | 🟢 **LTI Advantage Complete certified as of the Sumac release**, per the project's own docs. |
+
+### 🔴 The fact that changes how this tier should be wired
+
+🔴 **A GitLab advisory on `lti-consumer-xblock` reports that any LTI tool integrated with an
+Open edX platform can post a grade back for *any* LTI XBlock, provided it knows the
+`resource_link_id`** — a missing-authorisation issue affecting grade integrity.
+
+🟢 **So the "AI returns comments, a human returns the mark" design is not satisfiable by
+configuration or by policy.** If the AI tool is wired as an LTI tool with grade scope at all,
+the platform's own passback path is the hole. 🟢 **`Pattern 14` is built around that**: the AI
+component holds **no grade-write scope**, the mark lives in MarkUs, and the separation is a
+**permission fact an auditor can check** rather than a promise in a policy document.
+🔵 This is also the concrete reason the three-region statutory convergence in `intel/trends.md`
+— *no automated high-stakes decision* — cannot be met by asking a vendor nicely.
+
+🔴 **`OnMicro AI` remains unlocated.** Two legs (one by product name, one against the Open edX
+forum and 1EdTech) returned no product page, no vendor site and no repository. 🔵 **No address
+was constructed for it**, deliberately — that is the error `Gap 483` made twice. It stays open.
 
 ## Start here — picking the platform to customise
 

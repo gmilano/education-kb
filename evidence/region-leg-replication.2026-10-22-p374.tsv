@@ -1,0 +1,33 @@
+# p374 — REPLICATION OF p373's TWO DECISIVE CELLS.  Measured 2026-10-22, same tool (WebSearch),
+# queries copied VERBATIM from evidence/region-leg-crossed.2026-10-22-p373.tsv.
+#
+# WHY.  ACTION p373-D: "Re-run p373's four cells a second time to put variance on them.  n=1 per
+# cell is this pass's stated limitation and the finding rests on two cells pointing opposite ways."
+# p373's whole conclusion rests on cells 2 and 3.  Those are the two replicated here.
+#
+# PRE-REGISTERED, before either search ran (scratchpad/p374/predictions.txt):
+#   R2 Germany  -> PREDICT NIL        (to agree with p373 cell 2)
+#   R3 Brazil   -> PREDICT PRODUCTIVE (to agree with p373 cell 3)
+# A disagreement is VARIANCE and is published as variance, NOT re-attributed to a new cause.
+#
+cell	jurisdiction	region	query_language	jurisdiction_naming	p373_verdict	p374_verdict	replicates	p374_facts_returned
+R2	Germany	EMEA	English	COUNTRY + ORGAN (Germany, KMK)	RED NIL (0 for Germany; returned NORTH AMERICAN state policy instead)	YELLOW PARTIAL (1 dated German fact, via a FRENCH-language aggregator)	NO -- DISAGREES	KMK announced 2026-10-16 an update to its "Bildung in der digitalen Welt" competence framework to integrate AI competences (actuia.com, French-language aggregator; KMK's own document NOT retrieved).  Also surfaced: EC/OECD draft AI-competence framework for schools (heise.de), Luxembourg "KI Kompass" (gouvernement.lu), UNESCO AI competency framework.  NO North American state policy this time.
+R3	Brazil	LATAM	English	COUNTRY + ORGAN + INSTRUMENT Nr (Brazil, CNE, Parecer CP 15/2026)	GREEN PRODUCTIVE, 5 facts, 4 outlets	GREEN PRODUCTIVE, 7 facts, 7 outlets	YES -- AGREES, and returned MORE	approved unanimously 2026-09-01; no normative force until MEC's homologating act publishes (Lei 9.131/1995 art. 2); DOU summary 2026-10-06; FOUR risk tiers (low / moderate / high / "excessive or incompatible"); emotional surveillance and fully-automated promotion-or-retention decisions named in the EXCESSIVE tier; autonomous AI use by students PROHIBITED to the end of 5th grade (added after committee + public consultation); 12-month compliance window from homologation.  NEW outlets this leg: ABMES (carries the parecer AND its sumula as named pages + a dated PDF), Midiamax, Jornal do Comercio, DGABC, Tribuna do Sertao, TradeMap.
+#
+# THE RESULT.  One of the two decisive cells REPLICATES and one DOES NOT.
+#
+# 🔴 R2 is the one that matters, because p373 called cell 2 "THE DECISIVE CELL" -- the cell that
+# refuted ACTION PJ's "the axis is the ORGAN" and established that German is NECESSARY for Germany.
+# Re-run at n=2 the same query returned a dated, education-specific, German-jurisdiction fact.
+# So "English + organ = NIL for Germany" is NOT a stable property of the cell.  It is the kind of
+# result WebSearch returns sometimes, and p373 read a single draw as a property.
+#
+# 🔵 And the fact R2 returned is worth separating from the verdict: the retrieving outlet was
+# FRENCH (actuia.com), not German and not English.  p373's account -- "German school policy is
+# not carried in English at all" -- predicts a nil for any non-German leg.  A French-language
+# aggregator carrying a KMK decision six days old is outside that account entirely.
+#
+# 🔴 WHAT THIS PASS MAY NOT CLAIM.  n=2 is a REPLICATION, not a variance estimate.  Two draws
+# that disagree establish that the cell is NOT deterministic; they do not estimate how often it
+# returns which.  No variance figure is published, and ACTION p373-D is NOT closed by this file --
+# it is DOWNGRADED, because what it asked for (variance) needs more draws than a disagreement.

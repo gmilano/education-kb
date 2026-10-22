@@ -1,0 +1,34 @@
+# p374 — FIRST-HAND ADDRESS AND GRANT VERIFICATION.  Measured 2026-10-22.
+# 🔴 NO STAR COUNTS ARE PUBLISHED THIS PASS.  api.github.com and github.com HTML both answer 403
+# (see primary-text-egress.2026-10-22-p374.tsv), so a star count could only be copied from a
+# search snippet.  p373's rule, kept: a figure this base cannot read first-hand is not published.
+# 🔴 In particular a search snippet asserted "about 41.2k stars" for THU-MAIC/OpenMAIC.  It is
+# NOT recorded as a figure anywhere in this tree.
+#
+# channel: ls-remote = existence + default branch + HEAD.  raw.githubusercontent = grant payload.
+# blobless clone = HEAD commit date (the only channel for a date, with the API refused).
+#
+slug	ls_remote	default_branch	head	grant_path	licence	grant_bytes	head_commit_date	carried_before_p374
+ibm-skills-network/mark	LIVE	master	ecd591518da299a5d90e3bc3e4623550f5737710	master/LICENSE	Apache-2.0	11357	2026-10-21T15:55:17-04:00	🟢 NEW
+MarkUsProject/Markus	LIVE	master	86395e81f7eb9f621df35b7ff73993c6604884e2	master/LICENSE	MIT	1076	2026-10-21T10:45:09-04:00	🟢 NEW
+benjaminvialle/Markus	LIVE	master	664ca8a0077a5b96ce290652cbd01380d0d363b8	-	not read	-	-	🔵 FORK -- DIFFERENT HEAD from MarkUsProject/Markus, so a distinct repository, NOT a casing of it.  Not shelved; recorded so a successor does not shelve it as the canonical.
+THU-MAIC/OpenMAIC	LIVE	main	a8c745a79141121cf40ae8541a1a38ccbb09e14b	-	not re-read this pass	-	-	CARRIED
+littlecookie0722/AI-Teaching-Agent	LIVE	main	b90bd88a2899bef1285f2850434c61182b677839	-	not re-read this pass	-	-	CARRIED
+Naresh1401/education-tutor-agent	LIVE	main	2cb9dcf317c1f821ee93be6e9f92d7f501e4e240	-	not re-read this pass	-	-	CARRIED
+Selleo/mentingo	LIVE	main	f08c44b947f473df263249cc2ed1b0bb28ff31fc	-	not re-read this pass	-	-	CARRIED
+Li-Evan/Bloom	LIVE	main	68788b5e7d3444d92a05c7237f44d1605ff039a8	-	not re-read this pass	-	-	CARRIED
+artcc/freelingo	LIVE	main	8fb4f41828b682a3bd9dc1f7746882b499296183	-	not re-read this pass	-	-	CARRIED
+wenflow-org/wenflow	LIVE	main	1c86890946a33b646bf536ac8aba25fc9c745ef3	-	not re-read this pass	-	-	CARRIED
+kalvilabs/kalvi	LIVE	master	24fb777175afe2c5f0898192201432c83a969b95	-	not re-read this pass	-	-	CARRIED
+Professional-X/StudyCoach	LIVE	main	f3759a40328495eb78100390cb0e9816d4d8ed42	-	not re-read this pass	-	-	CARRIED
+Open-TutorAi/open-tutor-ai-CE	LIVE	main	196c547291da5df57b68165691e47ca7ffdbb137	main/LICENSE	BSD-3-Clause	1531	not probed	🔴 CARRIED -- re-read to settle Gap 491.  All three clauses verbatim; opens "All rights reserved.", which is BSD-3-Clause's OWN boilerplate and not a reservation of rights.  The CC BY-NC-SA 4.0 a search result showed is the ARXIV PAPER's licence, not the code's.
+openedx/edx-platform	LIVE	master	229f7e1a078f11406c47fa8487f8e1dab37f488b	-	egress control only	-	-	CARRIED
+#
+# 🟢 14 ls-remote probes, 3 grant payload reads, 2 blobless clones.  All first-hand, all this pass.
+#
+# 🔴 THE THIRD GRANT READ IS THE ONE WORTH THE LINE.  p374's own discovery leg EXCLUDED
+# Open-TutorAi/open-tutor-ai-CE from the permissive set on a search snippet showing CC BY-NC-SA 4.0.
+# The grant read says BSD-3-Clause, 1 531 B, all three clauses.  🔴 And agents/trending.md:12664
+# had ALREADY derived that, same byte count, with an explicit warning that the "All rights
+# reserved." opening "could easily mis-flag".  Committed knowledge, not wired into the step that
+# needed it -- the eighth instance of this base's signature defect, and this one was p374's own.

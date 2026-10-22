@@ -4,6 +4,142 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 374 · 2026-10-22 — `ACTION p373-A` **built, and the column it specified was the wrong column**: `p373`'s hypothesis is REFUTED out of sample on a pre-registered prediction, its decisive cell does NOT replicate, `Gap 490`'s grader is LIVE at an address whose owner was in the quoted source, and the EMEA duty `p373` sold was rewritten three months ago
+
+**Evidence:** [`region-leg-replication`](../evidence/region-leg-replication.2026-10-22-p374.tsv) ·
+[`region-leg-outofsample`](../evidence/region-leg-outofsample.2026-10-22-p374.tsv) ·
+[`regional-leg-register`](../evidence/regional-leg-register.2026-10-22-p374.tsv) ·
+[`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p374.tsv) ·
+[`supply-saturation`](../evidence/supply-saturation.2026-10-22-p374.tsv) ·
+[`primary-text-egress`](../evidence/primary-text-egress.2026-10-22-p374.tsv)
+
+🟢 **Gate state: RUN, at `p373`'s HEAD and again at this pass's.** `make hooks` was **39/39** at
+`p373`'s HEAD and is **40/40** at this pass's, with one new standing gate
+(`gate-regional-leg`, 51 controls over 9 groups).
+
+### 🟢 `ACTION p373-A` — DISCHARGED, with its specification corrected
+
+🟢 **Limb 1 was taken: the column is built and `Gap 489` has its owned home**
+(`evidence/regional-leg-register.2026-10-22-p374.tsv`). The four scattered attributions —
+`ACTION PJ`, `ACTION QJ`, `P870`, `Gap 476` — now live in one file that later passes amend
+rather than add a fifth to.
+
+🔴 **But two things in `ACTION p373-A` as written were wrong, and both were measured before the
+column was built rather than argued afterwards.**
+
+🔴 **(1) The column it specified encodes a refuted theory.** `p373-A` asked for a
+*"per-jurisdiction **corpus-language** column"*, which presupposes `p373`'s account — that what
+decides a leg is the language the jurisdiction publishes in. 🔴 **`p374` pre-registered a
+refutation condition and it fired:** Japan publishes its guidelines in Japanese, the English leg
+was predicted **NIL**, and it came back **PRODUCTIVE** (four dated facts via MLex and English
+wires). 🟢 Had the column been built as specified, a **standing gate** would now be enforcing a
+hypothesis this pass refuted. 🟢 **The column actually built** is the one that fits all six
+measured cells: *does a cross-border specialist press channel cover this jurisdiction in the
+query's language, and which one.*
+
+🔴 **(2) Its denominator was an estimate published as a figure.** `p373-A` says *"the 8
+jurisdictions already carried"*. 🔴 **Counted first-hand over the nine `SHELF_FILES`: 21.**
+Brazil 244 mentions, India 224, China 173, Korea 147, Chile 137, Singapore 112, Mexico 111,
+Colombia 91, Japan 88, Canada 79, Germany 76, France 55, Peru 54, Spain 51, Australia 50,
+Netherlands 42, Argentina 41, Uruguay 32, Italy 15, Portugal 14, Quebec 5.
+
+🔴 **And the register's own uncomfortable figure: 21 carried, 7 ever reached by a first-hand
+leg, 14 never.** Two of the 7 (Mexico, Quebec) rest on a single `p207` draw, **167 passes old**.
+🟢 This base's regional claims stand on **5 live cells**, and that was invisible until now.
+
+### 🔴 `I4` — REPLACED, negative-controlled, and the replacement had to be designed around a red gate
+
+🟢 **`J2` replaces `I4`.** A published regional nil is admissible only if **(limb 1)** the leg
+named a jurisdiction — a country or an organ, never a region label — **and (limb 2)** a leg in
+another language was run for that same jurisdiction.
+
+🔴 **Run over this base's own corpus, `J2` immediately turned RED on `p373`'s cell 1** — exactly
+the cell `p373` predicted `I4` would wrongly pass. 🔵 **A red gate was not an acceptable
+outcome**, because it would have left the base with a permanently failing hook *and* the bad nil
+still on the shelf. 🟢 **So `J2` carries a third limb — a disposition test: an unsound nil must
+be marked `WITHDRAWN`.** The defect is recorded rather than deleted, the nil stops being citable
+as evidence about EMEA, and the gate is green because the retraction is committed.
+🟢 **The limb is symmetric** — marking a *sound* nil withdrawn is refused too, so it is not an
+escape hatch (control group I).
+
+🟢 **`J3` is new and no prior pass asked its question.** A pass may call a language **redundant**
+for a jurisdiction only if both legs ran, both were productive, **and they returned the same
+fact class**. 🔴 **Japan is the negative control:** both legs productive, and the Japanese leg
+returned the only operational figure either produced — **pilot schools 66 (R6) → 281 (R7)**.
+🟢 `J3` admits `p373`'s Brazil claim (both legs `policy-milestones`) and refuses its
+generalisation. 🟢 **"Is an in-language leg necessary?" was the wrong question for 168 passes.
+Run both: they return different fact classes.**
+
+### 🔴 `ACTION p373-D` — NOT closed. DOWNGRADED, and the reason matters
+
+🔴 `p373-D` asked for a re-run *"to put variance on"* the four cells. 🟢 Both decisive cells were
+re-run verbatim. 🔴 **One replicated and one did not** — Brazil productive again (7 facts, 7
+outlets, more than `p373`), **Germany NOT nil** (one dated KMK fact of **2026-10-16**, via a
+**French** aggregator, and no North American policy this time).
+🔴 **Two draws that disagree establish that the cell is non-deterministic; they do not estimate
+how often it returns which.** 🟢 **No variance figure is published**, and `p373-D` is reopened as
+`ACTION p374-A` with the honest cost: variance needs more draws than a disagreement.
+
+### 🟢 `Gap 490` — HALF CLOSED, and the closed half is the signature defect for the seventh pass running
+
+🟢 **`IBM MARK` is [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark)** —
+**Apache-2.0** (11 357 B at `master/LICENSE`, read first-hand), HEAD `ecd5915` of **2026-10-21**,
+*"an AI-powered educational assessment platform that automates grading, provides intelligent
+feedback, and supports multilingual learning at scale"* per its own README.
+🔴 **The owner name was written out in the Open edX page `p373` was quoting** — *"an open-source
+grading platform from **IBM Skills Network**"* — while `p373` constructed `ibm/mark`, `IBM/mark`
+and `onmicro-ai/onmicro` and recorded all three as unlocatable.
+🟢 **`p373` was right** to class those as fabricated negative controls rather than dead
+addresses. 🔴 It guessed the owner with the owner in front of it.
+🔵 **Seventh consecutive pass:** `p369` `LICENSE.TXT` · `p371` the `https://` host rule · `p372`
+`apereo/opencast` · `p372` again on `ACTION PJ`'s correction · `p373` on `Gap 485`'s holdings ·
+`p373` here. 🟢 **Stated as a rule so it stops being an anecdote: BEFORE CONSTRUCTING AN
+ADDRESS, RE-READ THE SOURCE FOR THE OWNER.** Registered as `ACTION p374-E`.
+🔴 **`OnMicro AI` stays open** — two legs, no product page, no vendor site, no repository, and
+**no address was constructed for it**, deliberately.
+
+### 🟢 The register
+
+| # | Opened | Where | State |
+|---|---|---|---|
+| 🟢 **491** | **2026-10-22**, pass 374 | `agents/top.md` · `agents/trending.md:7447` | 🟢 **OPENED AND CLOSED IN THE SAME PASS, on a first-hand read.** *"`p374`'s own discovery leg excluded `Open TutorAI` from the permissive set because a search result showed its **arXiv** listing as **CC BY-NC-SA 4.0**."* 🟢 **Read first-hand instead:** `Open-TutorAi/open-tutor-ai-CE`, HEAD `196c547`, `main/LICENSE`, **1 531 B** — **BSD-3-Clause**, all three clauses verbatim. 🔵 It opens *"All rights reserved."*, which is **BSD-3-Clause's own boilerplate**, not a reservation of rights. 🔴 **The CC BY-NC-SA 4.0 belongs to the PAPER, not the code.** 🟢 **The row is permissive and usable for client work** — the exclusion was the error, not the shelf. 🔴 **And this base had already derived this, at `agents/trending.md:12664`, with the same byte count and an explicit warning that this exact shape *"could easily mis-flag"*.** 🔵 **The eighth instance of the signature defect, and this one was `p374`'s own.** 🟢 Remainder narrowed to `ACTION p374-I`. |
+| 🆕 **492** | **2026-10-22**, pass 374 | `intel/market.md` · `ACTION p374-F` | 🟡 **OPEN.** *"The Commission/OECD `AILit` Framework (launched **2026-06-18**, primary and secondary) has a **contested competence count** — **22** in May-2025 coverage of the draft, whose fourth area was *'Designing AI'*, versus **19** in commentary on the final, whose fourth area is *'shaping AI'*. The four areas are agreed; the count is not."* 🟢 Neither figure is published as settled. 🟢 **Remedy:** the 64-page document itself; `op.europa.eu` / `oecd.org` were not probed this pass. |
+| 🆕 **493** | **2026-10-22**, pass 374 | `intel/market.md` · `ACTION p374-B` | 🔴 **OPEN, and it is a CORRECTION to a claim one pass old.** *"`p373` sold the EMEA engagement on Article 4 binding schools to **ensure** a sufficient level of AI literacy. **Regulation (EU) 2026/1744** (OJ **2026-07-24**, in force **2026-07-27**) rewrote Article 4 to *'take measures to **support the development** of AI literacy of their **staff**'* — effort, not result, over staff, not learners; the Commission FAQ of **2026-07-27** says it *'does not require a specific level for any given person'*."* 🔴 **All of it is SECONDARY** — law-firm and compliance commentary plus one EUR-Lex **recital** snippet; the operative wording was not retrieved, because EU institutional egress is `Gap 241`. 🔴 **Sources also conflict** on the in-force day and on whether supervision starts 2 or 3 August 2026. 🟢 **Remedy:** the operative text, egress-enabled. **Until then the commercial reading is restated as evidence-production, and `p373`'s sentence is marked corrected, not deleted.** |
+| 🆕 **494** | **2026-10-22**, pass 374 | `evidence/regional-leg-register.2026-10-22-p374.tsv` · `ACTION p374-G` | 🔴 **OPEN, and it is a COVERAGE gap with a denominator.** *"**14 of 21** carried jurisdictions have never been reached by a first-hand regional leg** — China (173 mentions), Korea (147), Chile (137), Singapore (112), Canada (79), France (55), Peru (54), Spain (51), Australia (50), Netherlands (42), Argentina (41), Uruguay (32), Italy (15), and Portugal reached only as a conflation. Two of the 7 that were reached rest on one `p207` draw."* 🟢 **Remedy:** one leg per jurisdiction, cheapest first. 🟢 **Rank France first** — `p374`'s R2 found a **French** outlet carrying a **German** decision, so French-language press is a demonstrated cross-border channel and the highest-value unmeasured cell on the register. |
+| 🆕 🔴 **495** | **2026-10-22**, pass 374 | `evidence/census-channel-gap.2026-10-22-p374.tsv` · `ACTION p374-J` | 🔴 **OPEN, and it is a defect in the instrument every pass quotes.** *"The published address census reads **one address channel of two.** `p351`'s census imports `p348`'s harvester, whose pattern requires the literal `github.com/` prefix, so a **bare backticked `owner/repo` is invisible** — counted neither as an address nor as a reject. Measured over the nine `SHELF_FILES`: URL channel **2 687**, `p367`'s bare channel **3 039**, **756 addresses visible only to the bare channel.**"* 🔴 **`p367` BUILT that second channel** — its help text says *"so a bare backticked slug is no longer invisible to every census at once"* — **and wired it only into its own gate.** Seven passes have published a one-channel denominator with the second sitting green in `make hooks`. 🔴 **One of the 756 is `1edtech/badgr-server`, cited twelve times, and it is the address `p372`'s "ten of ten unretrievable" finding turns on.** 🟢 **Found by accident:** `p374` wrote `benjaminvialle/Markus` to three shelves and the delta came back `+2`. 🔴 **No corrected denominator is published** — 756 is a channel **disagreement**, not 756 repositories, and `admin-api/v1` in its own sample proves the bare channel has false positives. 🟢 **Remedy:** grade the 756, then switch `p351`'s harvester to the union of both channels with the rejects re-derived. **Cost: one pass, and it changes a figure in every prior section.** |
+
+### 🟢 Registered actions
+
+| Action | Limbs |
+|---|---|
+| 🔴 **`ACTION p374-A`** *(ranked first — it is cheap and it blocks a published conclusion)* | Re-run `p374`'s `R2` Germany cell a **third** time. 🔴 Two draws disagree, so `p373`'s *"THE DECISIVE CELL"* currently supports **neither** verdict. Until a third draw, no pass may cite cell 2 as evidence that English-plus-organ fails in Germany. |
+| 🔴 **`ACTION p374-B`** | `Gap 493` — the operative Article 4 text, egress-enabled. 🔴 Carries a **standing instruction** meanwhile: the EMEA pitch is **evidence-production** (show the measures taken for staff operating the system), **not** *"ensure a sufficient level"*. |
+| 🟢 **`ACTION p374-I`** *(the narrowed remainder of `Gap 491`)* | 🔴 `agents/trending.md:7447` grades `Open-TutorAi/open-tutor-ai-CE` as *"CC BY-NC-SA 4.0 — non-commercial"*. The live shelves say **BSD-3-Clause** and the grant confirms it. 🔵 **`gate-shelf-consistency` cannot see it** — that gate compares only the live shelves, so a wrong grade in a dated section is invisible to it. **limb 1:** extend the gate to flag a dated cell that contradicts the live answer for the same slug. **limb 2:** if dated sections must stay immutable, publish the contradiction as a standing correction note instead. 🔴 **Do not silently edit the dated section** — this base does not rewrite history to match a later derivation. |
+| 🔵 **`ACTION p374-D`** | Carry a **re-measurement date** on every cited regulatory obligation. 🔴 `p373`'s Article 4 reading was three months stale the day it was written and nothing in this base could have flagged it. **limb 1:** add the column to the instruments that cite obligations. **limb 2:** if that is not derivable, publish the staleness risk on `intel/market.md` as a standing caution. |
+| 🟢 **`ACTION p374-E`** | Wire *"before constructing an address, re-read the source for the owner"* into the slug-probe path, so the **seventh** instance of this defect is the last. 🔵 `p373` recorded the rule in prose; prose is what failed six times. |
+| 🔵 **`ACTION p374-F`** | `Gap 492` — the `AILit` competence count from the document itself. |
+| 🔵 **`ACTION p374-G`** | `Gap 494` — regional legs for the 14 unmeasured jurisdictions, **France first**. |
+| 🔵 **`ACTION p374-H`** | `OnMicro AI` (the open half of `Gap 490`) — a vendor page or a 1EdTech member entry. 🔴 **Construct no address for it.** |
+| 🔴 **`ACTION p374-J`** *(ranked second overall, below `p374-A` only because it is a pass rather than a leg)* | `Gap 495` — the census reads one channel of two. **limb 1:** grade the **756** bare-only addresses against `p351`'s classes and `p367`'s four arms, so the false positives (`admin-api/v1` is one) come out. **limb 2:** switch `p351`'s harvester to the **union** of both channels and re-derive the rejects. 🔴 **Publish the corrected denominator ONCE, in its own section, and do not edit the prior passes' figures** — each was correct for the tree it committed and for the channel it read. 🟢 **limb 3:** add a control that fails if the census and `p367`'s channel disagree by more than the graded false-positive count, so this cannot recur silently. |
+
+### 🔵 Carried, unchanged, and re-confirmed blocked by this pass's own egress matrix
+
+🟢 **`Gap 486`** (no successor-enumeration channel) — 🔴 `api.github.com` **403** again. 🆕 **And
+a more precise reason than another 403:** this session *does* carry an authenticated GitHub
+channel, but it is **scoped to two attached repositories**, so it is not a channel for public
+education repos either. 🔵 A credential would not have fixed this; recorded so a successor stops
+re-measuring the 403 as though one would.
+🟢 **`Gap 485`** (Brazil's article text) — still refused, 🟢 **but with a better first address**:
+ABMES carries the parecer **and its súmula** plus a dated PDF, and it is a **non-government**
+host, which every refused host so far has not been.
+🟢 **`Gap 487`** (`edugit.org`) · 🟢 **`Gap 488`** (Portugal, `diariodarepublica.pt`) ·
+🟢 **`Gap 241`** (EU institutional egress) · 🟢 **`T61`** / **`ACTION RO`** (government primary
+texts) — 🔴 all re-confirmed refused on **both** transports.
+🔴 **`WebFetch` is confirmed NOT an independent channel**, re-tested rather than assumed:
+`ENOTFOUND` where `curl` gets `403 connect_rejected`.
+
+---
 ## Pass 373 · 2026-10-22 — `Gap 485`'s **figure is withdrawn as false at the time of writing**, its channel is **measured and refused on both transports**, and the regional-leg question four passes answered four ways was run as a **crossed design**
 
 **Evidence:** [`gap485-prior-holdings`](../evidence/gap485-prior-holdings.2026-10-22-p373.tsv) ·

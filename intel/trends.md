@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 `p374`: three regions legislated the SAME PROHIBITION independently — and that convergence, not the market size, is what makes one build pattern sellable everywhere
+
+**Evidence:** [`region-leg-replication`](../evidence/region-leg-replication.2026-10-22-p374.tsv) ·
+[`region-leg-outofsample`](../evidence/region-leg-outofsample.2026-10-22-p374.tsv) ·
+[`regional-leg-register`](../evidence/regional-leg-register.2026-10-22-p374.tsv)
+
+### 🟢 Trend 1 — the automated high-stakes decision is being banned on three continents at once
+
+🟢 **Measured this pass, from three legs that share no sources:**
+
+| Region | Instrument | The prohibition |
+|---|---|---|
+| **LATAM** | `Parecer CNE/CP nº 15/2026` (Brazil) | 🔴 **fully automated decisions on promotion or retention** are in the *"excessive or incompatible"* tier; marks to be given **only by teachers** |
+| **North America** | Oklahoma, Maryland and the district-mandate statutes | 🔴 recurring statutory shape: **human oversight** + **no automated high-stakes decision** |
+| **EMEA** | AI Act **Annex III** (duties **2027-12-02**) | 🔴 education use cases sit in the **high-risk** register |
+
+🟢 **Three independent legal systems converged on the same operational boundary: an AI system
+may inform an assessment and may not decide one.** 🔵 That is unusual. Most of this base's
+regional findings diverge by jurisdiction — the whole `regional-leg-register` exists because
+they do. 🟢 **A boundary that holds in all three means one architecture is sellable in all
+three, and that is worth more to a studio than any market figure in `intel/market.md`.**
+
+🟢 **`Pattern 14` is that architecture**, and the reason it is built as a **permissions** fact
+rather than a policy promise is `p374`'s other measurement: the `lti-consumer-xblock` advisory
+shows an LTI tool can post a grade back for **any** XBlock given the `resource_link_id`. 🔴 So
+"the AI only suggests" cannot be delivered by configuration or by contract. It has to be
+delivered by the AI component **holding no grade-write scope at all**.
+
+### 🔴 Trend 2 — guidance is converting into dated duties, and the first deadlines are behind us
+
+🔴 **The 2026 shift is from *advice* to *deadline*.** Ohio's district AI-policy duty fell on
+**2026-07-01** — already passed. India's AI & CT requirement binds from the **2026-27** session.
+Korea's AI Basic Act has been in force since **2026-01-22**. Brazil's 12-month adaptation
+window starts on an act that **has not published yet**.
+🟢 **The engagement consequence:** the question to ask a client has changed from *"do you have
+an AI policy"* to *"which dated duty are you already late for"*.
+
+### 🔵 Trend 3 — the open-source supply side for education has gone quiet, and the gaps have not
+
+🔴 **Three consecutive passes of discovery legs returned ZERO new agent rows** (9/9 candidates
+already carried this pass, with the denominator published). 🟢 **One gap-closure returned two
+permissive, maintained platforms in a single pass** — `ibm-skills-network/mark` (Apache-2.0) and
+`MarkUsProject/Markus` (MIT), both with HEAD **2026-10-21**.
+🟢 **Read as a trend about the market rather than about this base:** the education-agent
+category has consolidated enough that *new* repositories are rarely the story; what moves is
+the **interop and assessment tier** — exactly the layer `p371` flagged as unshelved and `p372`
+measured as **ten of ten** reference implementations unretrievable.
+
+### 🔴 Trend 4 — the thing this base got wrong twice in two days, as a standing caution
+
+🔴 **A regulatory reading can be correct on Monday and wrong on Tuesday, and the base will not
+notice unless it re-measures.** `p373` sold the EMEA engagement on Article 4 binding schools to
+*ensure* literacy. **Regulation (EU) 2026/1744 had already rewritten that duty three months
+earlier** to an obligation of **effort**, over **staff**. 🟢 Nothing about `p373`'s reasoning was
+careless — the instrument simply moved and no leg had asked. 🔵 **The lesson is scheduling, not
+diligence: a cited obligation needs a re-measurement date, and this base has never carried one.**
+Registered as `ACTION p374-D`.
+
 ## Start here — the fourteen trends in one screen
 
 🟢 **This is the index this file exists to give.** Each line is a section below; the

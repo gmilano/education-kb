@@ -1,9 +1,29 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
+## 🟢 🆕 `p374`: the human-grading system of record this shelf had no row for — **MIT**, and read first-hand
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p374.tsv) ·
+[`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv)
+
+| Repo | Licence | Grant read at | HEAD | Why it is foundational here |
+|---|---|---|---|---|
+| [`MarkUsProject/Markus`](https://github.com/MarkUsProject/Markus) | **MIT** (1 076 B, *"Copyright (c) 2008-2022 by the authors"*) | `master/LICENSE` | `86395e8` · **2026-10-21** | 🟢 A **human** grading application (Ruby on Rails) for code and written assignments, maintained by a university project. It is the piece `Pattern 14` needs as the **system of record for marks**, so that an AI component can return comments while a human holds the grade. |
+
+🔵 **Found as a by-product of `Gap 490`, not by a discovery leg** — the search for `IBM MARK`
+returned MarkUs as its *"closest match"*, which it is not. 🟢 The mis-match was worth more than
+the match would have been: this shelf had assessment-generation rows and no row for the place a
+mark is actually recorded.
+
+🔴 **Do not merge it with [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark)**
+(Apache-2.0, AI assessment, IBM Skills Network). Two unrelated tools, one near-identical name —
+the collision is declared on `agents/top.md` and in the `Gap 490` evidence.
+🔵 `benjaminvialle/Markus` is a **distinct fork** (HEAD `664ca8a` ≠ `86395e8`), not a casing.
+
+🔴 **No star counts this pass** — `api.github.com` and `github.com` HTML both **403**.
 ## 🔴 🆕 `p372`: the learning-record and credentialing rows on this shelf are LIVE — and the REFERENCE IMPLEMENTATIONS behind the standards they speak are not
 
 **Evidence:** [`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) ·

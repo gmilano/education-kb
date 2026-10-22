@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 `Pattern 14` (`p374`) — **Assessment that returns comments and never a mark**, with the boundary enforced as a permission an auditor can check
+
+**Evidence:** [`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p374.tsv)
+
+🟢 **Why this pattern and not another.** `intel/trends.md` Trend 1 measures three legal systems
+converging on one boundary — **an AI system may inform an assessment and may not decide one**
+(Brazil's *excessive* tier, the US district statutes' human-oversight shape, EU Annex III).
+🟢 One architecture therefore sells in **LATAM, North America and EMEA** without redesign.
+🔵 It also targets the widest measured demand gap this base carries: **50 %** of LATAM students
+want AI-assisted feedback against **19 %** of faculty providing it.
+
+🔴 **And the reason it is built this way rather than configured this way.** A GitLab advisory on
+`lti-consumer-xblock` reports that **any** LTI tool integrated with an Open edX platform can post
+a grade back for **any** LTI XBlock if it knows the `resource_link_id` — a missing-authorisation
+issue. 🔴 So *"the AI only suggests"* is **not deliverable by policy, by contract, or by
+configuration** on that platform. It is deliverable only by the AI component **having no
+grade-write scope to begin with.**
+
+### 🟢 The components, every one verified first-hand on 2026-10-22
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| **Feedback engine** | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | **Apache-2.0** | grant read at `master/LICENSE` (11 357 B); HEAD `ecd5915`, **2026-10-21** |
+| **System of record for marks** | [`MarkUsProject/Markus`](https://github.com/MarkUsProject/Markus) | **MIT** | grant read at `master/LICENSE` (1 076 B); HEAD `86395e8`, **2026-10-21** |
+| **LTI 1.3 consumer / courseware** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 | `ls-remote` LIVE, HEAD `229f7e1`; **LTI Advantage Complete** since Sumac |
+| **Learning-record sink** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | carried | 764 refs (`p372`) — the maintained xAPI sibling |
+
+🔵 **Licence note for a client deck:** the two components a studio *modifies* are **Apache-2.0**
+and **MIT**. 🔴 Open edX is **AGPL-3.0** — fine as the platform you deploy and extend through its
+own plugin surfaces, and a decision to review before you fork it.
+
+### 🟢 How to wire it
+
+1. 🟢 **Register `mark` as an LTI 1.3 tool in Open edX with NO grade scope.** Omit
+   `https://purl.imsglobal.org/spec/lti-ags/scope/score` from the tool's registered scopes.
+   🔴 This is the whole pattern. If the scope is present, the advisory above applies and nothing
+   downstream restores the boundary.
+2. 🟢 **Point `mark` at the submission and let it return comments only** — its own README
+   describes automated grading, intelligent feedback and multilingual support; you are using the
+   **feedback** half and deliberately not the grading half.
+3. 🟢 **Route every comment into MarkUs as an annotation on the submission**, where a human
+   grader accepts, edits or discards it and **enters the mark**. MarkUs holds the grade; nothing
+   else can write one.
+4. 🟢 **Emit an xAPI statement per AI suggestion and per human decision** into `lrsql` — actor,
+   verb (`suggested` / `accepted` / `overrode`), object, timestamp. 🟢 This is the artefact that
+   satisfies Brazil's *"marks are given by teachers"*, the US statutes' human-oversight
+   requirement, and an Annex III audit trail **from one log**.
+5. 🟢 **Produce the Article 4 evidence pack from the same system**, since
+   Regulation (EU) 2026/1744 now asks a deployer to **show the measures it took** for staff
+   operating the system: the operator register is the list of graders with MarkUs accounts, and
+   the training record attaches to it.
+
+### 🔴 What to check before quoting this
+
+🔴 **The scope omission must be verified on the deployed tool, not in the design document** — it
+is the one control the whole pattern rests on, and it is checkable in minutes.
+🔴 **`mark`'s HEAD is one day old at the time of writing.** It is maintained; it is also young
+on this base, which has carried it for zero passes. Pin a sha.
+🔴 **Brazil's prohibitions are live on publication but the parecer has no normative force until
+MEC homologates**, which had not happened as of **2026-10-22**. Build to the prohibitions; do
+not tell a client the adequacy clock has started.
+🔵 **Effort: 5–7 weeks** for a single-institution pilot on an existing Open edX deployment, most
+of it in step 3 — MarkUs annotation ingest is the only component with no off-the-shelf path.
+
 ## Start here — pattern index
 
 🟢 **Pick the pattern that matches the engagement, then read only that section.**

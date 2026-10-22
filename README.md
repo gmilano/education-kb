@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 374 — 2026-10-22 — **`p373`'s DECISIVE CELL DOES NOT REPLICATE AND ITS HYPOTHESIS IS REFUTED OUT OF SAMPLE ON A PREDICTION REGISTERED BEFORE THE SEARCH RAN. 🔴 THE EMEA OBLIGATION `p373` SOLD YESTERDAY WAS REWRITTEN THREE MONTHS AGO. 🟢 AND `Gap 490`'s GRADER IS LIVE, APACHE-2.0 AND MAINTAINED, AT AN ADDRESS WHOSE OWNER WAS WRITTEN OUT IN THE PAGE `p373` WAS QUOTING.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`region-leg-replication`](evidence/region-leg-replication.2026-10-22-p374.tsv) ·
+[`region-leg-outofsample`](evidence/region-leg-outofsample.2026-10-22-p374.tsv) ·
+[`regional-leg-register`](evidence/regional-leg-register.2026-10-22-p374.tsv) ·
+[`gap490-product-name`](evidence/gap490-product-name.2026-10-22-p374.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p374.tsv) ·
+[`supply-saturation`](evidence/supply-saturation.2026-10-22-p374.tsv) ·
+[`primary-text-egress`](evidence/primary-text-egress.2026-10-22-p374.tsv) ·
+[`census-channel-gap`](evidence/census-channel-gap.2026-10-22-p374.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Action discharged** | 🟢 `ACTION p373-A` (ranked first by `p373`) — the owned home built, **and both halves of its specification corrected** |
+| **Hypothesis tested, not re-answered** | 🔴 `p373`'s corpus-language account — **REFUTED out of sample**, on a refutation condition written down **before** the search ran |
+| **Replication** | 🔴 **1 of 2** decisive cells replicates. Brazil yes (7 facts, 7 outlets, more than `p373`); **Germany no** |
+| **Invariant replaced** | 🟢 `I4` → `J2`, **two limbs plus a disposition test**, negative-controlled — and `p373`'s own cell 1 is the control that turns it red |
+| **Gates** | 🟢 **40/40 green**, up from **39/39** at `p373`'s HEAD (`gate-regional-leg`, **51** controls over 9 groups) |
+| **Gaps closed** | 🟢 `Gap 490` **half** (`IBM MARK` located, live, Apache-2.0) · 🟢 `Gap 491` **opened and closed in-pass** on a first-hand grant read |
+| **New agent / repo rows** | 🟢 **2** — `ibm-skills-network/mark` (**Apache-2.0**) and `MarkUsProject/Markus` (**MIT**), both HEAD **2026-10-21**, both grants read first-hand |
+| **New rows from the DISCOVERY legs** | 🔴 **ZERO**, denominator **9/9** — every candidate already `CARRIED`, by `make carried` rather than a grep |
+| **Probes, all first-hand** | **14** `ls-remote` · **3** grant payload reads · **2** blobless clones · **12** egress probes on **2** transports; 🔴 **0** successful `api.github.com` or `github.com` HTML calls (both `403`) — so **no star counts** |
+| **Shelf gained** | 🟢 `Pattern 14` (assessment that returns comments and never a mark, with the boundary as a **permission**) · a `p374` block under **each of the five** regions |
+| **New gaps** | **492** (`AILit` competence count contested) · **493** (Article 4 rewritten — a **correction** to a claim one pass old) · **494** (**14 of 21** jurisdictions never reached by a first-hand leg) |
+| **Address census, derived LAST** | 🟢 **2 687 → 33 → 2 654**, delta **+2**, both nameable |
+| 🆕 **Defect found in the census instrument itself** | 🔴 it reads **one address channel of two** — **756** addresses on the live shelves are invisible to every published census |
+
+### 🔴 The finding, in one sentence
+
+🔴 **`p373` called its cell 2 *"THE DECISIVE CELL"* and built a hypothesis on it; re-run verbatim
+one day later with the same tool, that cell returned a dated German fact instead of a nil — and
+the hypothesis it supports was refuted out of sample by Japan, on a prediction this pass wrote
+down before searching.**
+
+🟢 **What survives, and it fits all six measured cells across four jurisdictions:** an English
+leg works wherever a **cross-border specialist press channel** covers that jurisdiction in the
+query's language — law firms and sector associations for Brazil, regulatory trade press and
+wires for Japan, domestic English press for India. 🔴 It is **not** about the language the
+jurisdiction publishes in, which is what `p373` concluded, and **not** about the organ, which is
+what `ACTION PJ` concluded, and **not** about language alone, which is what `Gap 476` concluded.
+
+### 🟢 What a reader should take from it
+
+🟢 **The question was wrong for 168 passes.** Japan's English and Japanese legs were **both
+productive** and returned **different fact classes** — English gave policy milestones, Japanese
+gave the only operational figure either produced (**generative-AI pilot schools 66 → 281**).
+🟢 **So an in-language leg is not a fallback for a failed English leg. It is a different
+instrument, and both should run.** That is now enforced: `J3` refuses any claim that a language
+is *redundant* unless both legs ran **and returned the same fact class**.
+
+| Cell | Jurisdiction | Language | Predicted | Returned |
+|---|---|---|---|---|
+| `R2` | Germany | English + organ | NIL (to match `p373`) | 🔴 **PARTIAL** — 1 dated fact, via a **French** aggregator |
+| `R3` | Brazil | English + organ + nº | PRODUCTIVE | 🟢 **PRODUCTIVE**, 7 facts |
+| `O5` | **Japan** | English + organ | **NIL** | 🔴 **PRODUCTIVE** — the pre-registered refutation |
+| `O5b` | Japan | Japanese + organ | control | 🟢 **PRODUCTIVE**, *different fact class* |
+| `O6` | India | English + organ | PRODUCTIVE | 🟢 **PRODUCTIVE** |
+
+### 🔴 The commercial reading, and the part of it that is a correction
+
+🔴 **EMEA: the obligation `p373` sold yesterday was rewritten three months before it wrote it.**
+`p373` pitched *"Art. 4's AI-literacy duty binds providers AND deployers, and a school is a
+deployer — it is live now"*. **Regulation (EU) 2026/1744** (OJ **2026-07-24**, in force
+**2026-07-27**) replaced Article 4: *"ensure a sufficient level"* became *"take measures to
+**support the development** of AI literacy of their **staff**"*, and the Commission FAQ of
+**2026-07-27** says it *"does not require a specific level for any given person"*.
+🟢 **The engagement survives in a better shape:** it is **evidence-production** — a register of
+who operates which system, a documented programme, training records an auditor can read —
+live now, supervised from **August 2026**, with Annex III still at **2027-12-02**.
+🔴 **Graded: all secondary.** The operative wording was not retrieved (`Gap 241`), and sources
+conflict on the in-force day. 🟢 **`p373`'s sentence is marked corrected, not deleted.**
+
+🟢 **The convergence that is worth more than any market figure.** Three legal systems that share
+no sources have independently drawn the **same** operational boundary — **an AI system may
+inform an assessment and may not decide one**: Brazil's *excessive* tier bars fully automated
+promotion-or-retention decisions and reserves marks to teachers; the US district statutes'
+recurring shape is human oversight plus no automated high-stakes decision; EU **Annex III** puts
+education use cases in the high-risk register. 🟢 **One architecture sells in all three**, and
+`Pattern 14` is it.
+🔴 **And it cannot be delivered by policy or configuration.** A GitLab advisory on
+`lti-consumer-xblock` reports that **any** LTI tool on an Open edX platform can post a grade back
+for **any** XBlock given the `resource_link_id`. 🟢 So the AI component must hold **no
+grade-write scope at all** — a permission an auditor can check in minutes, not a promise.
+
+### 🔵 The honest size of `p374`
+
+🟢 Two new rows, both permissive and both maintained to within a day. One new pattern. One
+standing gate replacing an inadequate invariant. One action discharged with **both halves of its
+specification corrected**. Two gaps closed, three opened, one downgraded rather than claimed.
+🔴 **Zero rows from the discovery legs, published with its denominator (9/9).**
+🔴 **And the pass's own error is on the shelf:** it excluded `Open TutorAI` from the permissive
+set on a search snippet, when the grant says **BSD-3-Clause** and this base had **already**
+derived exactly that, same byte count, with a warning about that exact shape. 🔵 **Eighth
+consecutive instance of the signature defect, and this one was `p374`'s own.**
+
+🔴 **Stated limitation, before a successor leans on anything here.** `n=2` on the two replicated
+cells and `n=1` on the new ones. 🔴 **Two draws that disagree prove a cell is non-deterministic;
+they do not estimate how often it returns which, and no variance figure is published.**
+🟢 `ACTION p374-A` ranks the third Germany draw first, because until it runs, `p373`'s decisive
+cell supports **neither** verdict.
+
+### 🔵 The address census, re-derived as the LAST act before this commit — and the instrument that derives it is broken
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the nine `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, with `p351`'s instrument: **2 687** harvested shapes →
+**33** are not addresses → **2 654 addresses**.
+🟢 **The delta is `+2` and both are nameable:** `ibm-skills-network/mark` and
+`markusproject/markus`, the two rows this pass shelved. 🟢 `p373`'s **2 685 / 33 / 2 652** is
+left standing in its own section — history is not edited to match a later derivation.
+
+🔴 **But the `+2` is how a defect in the census instrument surfaced, by accident.** `p374` wrote
+`benjaminvialle/Markus` onto **three** live shelves, as a bare backticked slug, to record that
+it is a distinct fork and not a casing. 🔴 **The census delta came back `+2`, not `+3`** — and
+probing for the third showed the harvester sees it **neither as an address nor as a reject.**
+
+🔴 **The cause, read first-hand.** `p351`'s census imports `p348`'s harvester — its own comment
+says *"the harvester is `p348`'s, not rewritten"* — and `p348`'s pattern is
+`github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)`. **It requires the literal `github.com/`
+prefix**, so a backticked `owner/repo` with no URL matches nothing at all.
+
+🔴 **And this is the signature defect for the NINTH time, because `p367` already built the fix.**
+`gate-bare-slug-channel`'s own help text reads *"the SECOND address channel, so a bare backticked
+slug is no longer invisible to every census at once."* 🔴 **`p367` wired it into its own gate and
+never switched the census over.** Seven passes have published a denominator from one channel
+while the second sat green in `make hooks`.
+
+| Channel | Instrument | Shape-valid addresses | Counted by the published census? |
+|---|---|---:|---|
+| URL (`github.com/owner/repo`) | `p348`, imported by `p351` | **2 687** | 🟢 yes — this is the published denominator |
+| bare backticked (`owner/repo`) | `p367` | **3 039** | 🔴 **no** |
+| **disagreement (bare-only)** | derived | 🔴 **756** | 🔴 **never, in any pass** |
+
+🔴 **One of the 756 matters more than the count.** `1edtech/badgr-server` appears **twelve**
+times as a bare slug — and it is the address at the centre of `p372`'s *"ten of ten candidate
+reference implementations are unretrievable"* finding. 🔴 **The address that finding turns on is
+not in the denominator.** `1edtech/caliper-python`, `1edtech/oneroster` and
+`adl-opensource/xapi-spec` are in the same class — the credentialing/interop tier `p371` named
+as this base's unshelved layer.
+
+🔴 **What this pass does NOT claim, and the restraint is deliberate.** **756 addresses is not 756
+repositories.** The bare channel has a false-positive surface the URL channel cannot have, and
+`p374` can name one from its own sample: `admin-api/v1` survives as shape-valid and is plainly a
+version path. 🟢 **So the finding published is the DISAGREEMENT, not a corrected total:** two
+committed channels differ by **756** over the same nine files and the census reports one of them.
+🔴 **No corrected denominator is published this pass**, and grading the 756 is `ACTION p374-J`.
+
 ## Pass 373 — 2026-10-22 — **`Gap 485` WAS OPENED ASKING A SUCCESSOR TO FETCH WHAT THIS BASE ALREADY HELD, BETTER-SOURCED THAN THE GAP DESCRIBED. 🟢 AND THE REGIONAL-LEG QUESTION FOUR PASSES HAVE ANSWERED FOUR DIFFERENT WAYS WAS RUN AS A CROSSED DESIGN FOR THE FIRST TIME — THE TWO DECISIVE CELLS POINT OPPOSITE WAYS, AND BOTH ARE CLEAN.**
 
 🔵 **Dating note.** Every leg and probe below was run on **2026-10-22** and every evidence file

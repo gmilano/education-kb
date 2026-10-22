@@ -204,6 +204,113 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🔴 🆕 `p374`: p373's DECISIVE CELL DOES NOT REPLICATE, its hypothesis is REFUTED out of sample on a pre-registered prediction — and the EMEA obligation `p373` sold yesterday was REWRITTEN THREE MONTHS AGO
+
+**Evidence:** [`region-leg-replication`](../evidence/region-leg-replication.2026-10-22-p374.tsv) ·
+[`region-leg-outofsample`](../evidence/region-leg-outofsample.2026-10-22-p374.tsv) ·
+[`regional-leg-register`](../evidence/regional-leg-register.2026-10-22-p374.tsv) ·
+[`primary-text-egress`](../evidence/primary-text-egress.2026-10-22-p374.tsv)
+
+🔵 Every leg below ran on **2026-10-22**, one tool (`WebSearch`), and every evidence file is
+named for that date.
+
+### 🔴 The correction a studio must have before it quotes `p373`'s EMEA reading
+
+🔴 **`p373` published, yesterday: *"EMEA: sell the obligation that is NOT deferred … Art. 4's
+AI-literacy duty binds providers AND deployers, and a school is a deployer — it is live now."***
+🔴 **Measured this pass: Article 4 was REWRITTEN by the Digital Omnibus — Regulation (EU)
+2026/1744 — and the rewrite changed exactly the thing that reading was selling.**
+
+| | |
+|---|---|
+| **Instrument** | Regulation (EU) **2026/1744**, amending Regulation (EU) 2024/1689 |
+| **Published / in force** | OJ **2026-07-24**; in force **2026-07-27** (sources agree; one dissents on the day) |
+| **What changed** | 🔴 from *"**ensure** a sufficient level of AI literacy"* to *"take measures to **support the development of** AI literacy of their staff"* — an obligation of **effort**, not of **result** |
+| **Commission FAQ, 2026-07-27** | 🔴 the obligation *"does not require a specific level of AI literacy for any given person"* |
+| **Who it binds** | 🔴 providers' and deployers' **staff and persons operating AI on their behalf** — **not pupils**, and not the school's population at large |
+| **Enforcement** | national market surveillance authorities may supervise from **August 2026**; 🔵 Art. 4 is **not** in the AI Act's fixed EU-level fine tiers |
+
+🔴 **So the sellable shape changes.** *"You must bring your teachers to a sufficient level of AI
+literacy or face Annex III-tier exposure"* is no longer what the text says. 🟢 **What it does
+say is still billable, and it is a better fit for a studio:** a deployer must be able to
+**show the measures it took** for the staff operating the system. That is an evidence-production
+engagement — training records, a register of who operates what, a documented programme — and it
+is live **now**, with supervision from August 2026, while Annex III duties remain at
+**2027-12-02**. 🔵 `p373`'s *"roughly fourteen months of low-risk literacy and governance work
+sits in the gap between the two dates"* **survives the rewrite**; its legal basis does not.
+
+🔴 **Graded, because this base cannot read the operative text.** All of the above is
+**secondary** — law-firm and compliance commentary plus one EUR-Lex **recital** snippet. The
+operative Article 4 wording was **not** retrieved: EU institutional egress is `Gap 241`, still
+refused. 🔴 **The sources also conflict** on the in-force day and on whether supervision begins
+2 or 3 August 2026. 🟢 Registered as **`Gap 493`**, and `p373`'s sentence is **marked corrected,
+not deleted**, in its own section below.
+
+### 🟢 The second EMEA instrument, and it is education-specific in a way Article 4 is not
+
+🟢 **The European Commission and the OECD launched the `AILit` Framework for primary and
+secondary education on 2026-06-18.** Four areas — **engaging with AI, creating with AI,
+managing AI, shaping AI** — with classroom activities, a 64-page document, released in EN/FR/DE
+with all 24 EU languages stated for July 2026, and offline activities for schools with few
+devices. 🔴 **The competence COUNT is contested:** **22** in May-2025 coverage of the draft
+(whose fourth area was *"Designing AI"*), **19** in commentary on the final. 🔵 This base
+publishes **neither** as settled — registered as **`Gap 492`**. 🟢 It is the artefact to anchor
+an EMEA curriculum engagement on, because unlike Article 4 it speaks about **learners**.
+
+### 🔴 The methodological finding, which is why the two readings above are gradeable at all
+
+🔴 **`p373`'s cell 2 — the one it called *"THE DECISIVE CELL"* — does not replicate.** Re-run
+verbatim, same tool, one day later: `p373` got a **RED NIL** for Germany and returned North
+American state policy instead; `p374` got a **dated German fact** (the **KMK** announced on
+**2026-10-16** an update to *"Bildung in der digitalen Welt"* integrating AI competences) and
+**no** North American policy at all. 🔵 The retrieving outlet was **French** (`actuia.com`) —
+outside `p373`'s account entirely, which predicted a nil for any non-German leg.
+
+🔴 **And `p373`'s hypothesis is refuted out of sample, on a prediction written down before the
+search ran.** `p373` concluded the deciding factor is *"the jurisdiction's own publication
+corpus"*. `p374` pre-registered: Japan publishes in Japanese, so the English leg should be
+**NIL**. 🔴 **It was PRODUCTIVE** — four dated facts via MLex and English news wires. The
+refutation condition was stated in advance and it fired.
+
+🟢 **What survives, and it fits all six measured cells across four jurisdictions:** an English
+leg works wherever a **cross-border specialist press channel** covers that jurisdiction in the
+query's language — law firms and sector associations for Brazil (Mattos Filho, ABMES),
+regulatory trade press and wires for Japan (MLex, Kyodo English), domestic English press for
+India. 🔴 It is **not** about the language the jurisdiction publishes in.
+
+🟢 **And the part no prior pass reached, which is the one that changes practice:** Japan's
+English and Japanese legs were **both productive and returned different FACT CLASSES.** English
+returned policy milestones; Japanese returned the only operational figure either leg produced —
+**generative-AI pilot schools going from 66 (R6) to 281 (R7)**. 🟢 **The two legs are not
+substitutes. "Is an in-language leg necessary?" was the wrong question for 168 passes; the
+answer is run both, because they answer different questions.**
+
+🔵 **Both findings are now a standing gate** (`gate-regional-leg`, 51 controls) and the four
+scattered attributions have **one owned home** (`regional-leg-register`) — `ACTION p373-A`.
+
+### 🔴 The register's own figure, and it is the most uncomfortable number this pass produced
+
+🔴 **21 jurisdictions are named on these shelves. 7 have ever been reached by a first-hand
+regional leg. 14 never have** — China (173 mentions), Korea (147), Chile (137), Singapore
+(112), Canada (79), France (55), Peru (54), Spain (51), Australia (50), Netherlands (42),
+Argentina (41), Uruguay (32), Italy (15) among them. 🔴 **Two of the 7 (Mexico, Quebec) rest on
+a single draw from `p207`, 167 passes ago.** 🟢 So this base's regional claims stand on **5 live
+cells**, and until `regional-leg-register` existed that was not visible anywhere.
+🔴 **`ACTION p373-A` estimated the denominator at "8 jurisdictions already carried". It is 21.**
+
+### 🟢 One advance on `Gap 485`, and it is an address rather than an argument
+
+🟢 `p373` named a `gov.br` path as *"the address a successor should go to first"*. 🟢 **`p374`'s
+Brazilian leg surfaced a better one:** **ABMES**, the Brazilian private-HE association, carries
+**both** the parecer and its **súmula** as named pages plus a dated PDF —
+`abmes.org.br/legislacoes/parecer-cne-cp-no-15-5669`,
+`abmes.org.br/legislacoes/sumula-do-parecer-cne-cp-no-15-5667`,
+`abmes.org.br/arquivos/legislacoes/legislacoes-2026-10-06-8044766d.pdf`.
+🟢 **Why better: it is a NON-GOVERNMENT host**, and every government host this base has tried is
+refused. 🔴 It is refused **here** too — `403 connect_rejected` on `curl`, `ENOTFOUND` on
+`WebFetch`, which **re-confirms `p373`: WebFetch is not an independent channel.** `Gap 485`
+stays open and egress-enabled; what changed is the address a successor should ask for.
+
 ## 🟢 🆕 `p373`: the regional legs CROSSED for the first time — and the two decisive cells point opposite ways, so neither `ACTION PJ`'s rule nor `Gap 476`'s generalises
 
 **Evidence:** [`region-leg-crossed`](../evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
@@ -775,6 +882,33 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+#### 🔴 🆕 `p374`: guidance is becoming a **binding district mandate**, and the first deadline has already passed
+
+🟢 **The shift to name in a pitch:** state AI guidance (reported at **33–35+ states**, and the
+sources disagree on the count) is being replaced by **statutory duties on districts**.
+🔴 **Ohio's deadline was 2026-07-01** — every public district, community school and STEM school
+must have adopted a formal AI policy. 🔵 Tennessee likewise requires district policies (model
+policy via the school boards association).
+
+| Instrument | What it does | Status as reported |
+|---|---|---|
+| **Ohio** district AI policy duty | formal AI policy per district | 🔴 deadline **2026-07-01**, passed |
+| **Idaho S.B. 1227** | generative AI in public education; local policies + AI-literacy standards | enacted |
+| **Maryland S.B. 720** | state AI guidance, PD, help districts evaluate tools | enacted |
+| **Oklahoma S.B. 1734** | written district AI policy before 2027-28 | 🔴 **status conflicts** — "passed 1st chamber" vs "signed May 2026" |
+| **Virginia H.B. 5205** | model policies that **auto-apply** to districts not compliant by July 2027 | reported pending |
+| **New York A.9190** | would **prohibit** most classroom AI below grade 9 | 🔵 **introduced only** |
+| **Utah S.B. 322** | five-year edtech regulatory **sandbox** | reported |
+| **Alabama H.B. 329** | AI in graduation/CS requirements | reported enacted 2026 |
+
+🟢 **The engagement:** districts under a *dated* duty need a defensible policy plus evidence of
+human oversight on tools they already bought. 🔴 **Not an autonomous grader** — and New York's
+bill shows the floor can move to a ban below grade 9.
+🔴 **Graded:** several sources are advocacy or vendor trackers and their bill statuses are
+inconsistent; ECS and FutureEd are the trackers to verify against, and no primary text was
+retrieved this pass.
+
+
 #### 🆕 `p373`: the leg ran and returned **nothing this file does not already hold** — reported, not padded
 
 🟢 **Every figure the prescribed leg returned is already carried:** **36 %** regional share,
@@ -1074,6 +1208,36 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+#### 🔴 🆕 `p374`: the Article 4 duty was **rewritten**, so the EMEA pitch changes shape — and the education-specific artefact is the `AILit` framework, not the AI Act
+
+🔴 **Regulation (EU) 2026/1744** (OJ **2026-07-24**, in force **2026-07-27**) replaced Article 4
+of the AI Act: *"ensure a sufficient level"* became *"take measures to **support the
+development** of AI literacy of their **staff**"*. 🔴 The Commission FAQ of **2026-07-27** says
+it *"does not require a specific level of AI literacy for any given person"*, and Art. 4 is
+**not** in the fixed EU-level fine tiers. Supervision by national market surveillance
+authorities from **August 2026**.
+
+🟢 **Sell the evidence, not the standard.** A school is still a deployer, so the billable work
+is **showing the measures taken** for the staff who operate the system: a register of operators,
+a documented programme, training records an auditor can read. 🟢 Annex III high-risk duties
+remain **2027-12-02**, so the gap `p373` identified is real — **its legal basis was not.**
+
+🟢 **The artefact for a curriculum engagement:** the **Commission + OECD `AILit` Framework**,
+launched **2026-06-18** for primary and secondary — four areas (**engaging / creating /
+managing / shaping** AI), 64 pages, EN/FR/DE with 24 languages stated for July 2026, plus
+offline activities. 🔴 Competence count **contested**: 22 (draft) vs 19 (final) — `Gap 492`.
+
+🔵 **Germany, measured twice and the draws disagree.** The **KMK** announced on **2026-10-16**
+an update to *"Bildung in der digitalen Welt"* integrating AI competences — surfaced by a
+**French** aggregator, not a German or English one. 🔴 `p373`'s nil for the same query one day
+earlier does **not** replicate; see `region-leg-replication`.
+🔴 **Portugal stays snippet-only** (`Recomendação n.º 4/2026`, `Gap 488`) and
+`diariodarepublica.pt` is refused on both transports. 🔴 **France, Spain, Italy and the
+Netherlands have never been reached by a first-hand leg** despite 55/51/15/42 mentions here —
+and France is now the highest-value unmeasured cell on the register, because a French outlet
+carried a German decision.
+
 
 #### 🆕 `p373`: the obligation that is **NOT** deferred is the one to sell, and the refuted Annex III date now circulates in **German**
 
@@ -1505,6 +1669,36 @@ modification now has two bases that permit one.
 
 ### APAC
 
+#### 🟢 🆕 `p374`: the region's two biggest education systems both have **dated curriculum duties**, and this is the first pass to run an APAC leg in-language
+
+🟢 **India — a mandate with a date, not a strategy.** The Ministry of Education's Department of
+School Education and Literacy announced on **2025-10-29** that **AI & Computational Thinking
+becomes mandatory for Classes 3–8 from the 2026-27 session**, extending to **Classes 9–10 in
+2027-28**; AI stays an elective in Classes 11–12. A **CBSE** expert committee chaired by
+**Prof. Karthik Raman (IIT Madras)** designs it, **NCERT** reviews, teacher training runs
+through **NISHTHA**. 🔴 A CBSE circular **Academics-15/2026 (2026-04-01)** is cited as releasing
+the primary curriculum — **secondary source; the circular was not retrieved.**
+
+🟢 **Japan — the operational figure, and it took an in-language leg to get it.** MEXT's
+*Guidelines on the Use of Generative AI in Primary and Secondary Education (ver. 2.0)*,
+**2024-12-26**, remain the operative baseline; MEXT papers dated **2026-03-24**, **2026-03-30**
+and **2026-06-30** carry the revision work; in **August 2026** education minister **Yohei
+Matsumoto** referred AI-in-schools to the **Central Council for Education** for the five-year
+basic education promotion programme starting **FY2028**, with recommendations due **FY2027**.
+🟢 **And the figure the English leg never mentioned: generative-AI pilot schools went from 66
+(R6) to 281 (R7).** 🔴 No 2026 revision is confirmed as published.
+
+🔵 **The regulatory frame around it:** Korea's **AI Basic Act in force 2026-01-22** (penalties
+reported deferred one year, so 2026 is a preparation window); China's measures on
+**anthropomorphic interactive AI services, issued 2026-04-10, effective 2026-07-15**, atop its
+generative-AI and content-labelling rules; Singapore voluntary (**AI Verify**); Australia soft
+law plus a National AI Plan.
+
+🔴 **The gap, stated:** the APAC regulatory leg returned **almost nothing education-specific**
+and **named no edtech players**. China, Korea, Singapore and Australia have **never** been
+reached by a first-hand education leg here, despite 173/147/112/50 mentions.
+
+
 #### 🆕 `p373`: the leg ran, the dates reproduce, **nothing new**
 
 🟢 **Reproduced, all already carried:** **Vietnam's Law on AI** in force **`2026-03-01`**,
@@ -1807,6 +2001,37 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+#### 🟡 🆕 `p374`: Brazil's regime now has its **risk tiers and an age prohibition**, and the homologation still has not published
+
+🟢 **Re-measured first-hand, and the English leg returned MORE than `p373`'s:**
+**`Parecer CNE/CP nº 15/2026`** — approved **unanimously 2026-09-01**, DOU summary
+**2026-10-06**, **no normative force until MEC's homologating act publishes** (Lei nº 9.131/1995
+art. 2):
+
+| Tier | What falls in it |
+|---|---|
+| **low** | organising materials, accessibility tools |
+| **moderate / high** | graded uses between |
+| 🔴 **excessive or incompatible** | **emotional surveillance**; **fully automated decisions on promotion or retention** |
+
+🔴 **And an age rule added after committee and public consultation: autonomous AI use by
+students is prohibited to the end of 5th grade.** 🟢 **12-month compliance window from
+homologation — but the prohibitions bite on publication.** 🟢 **Build to the prohibitions now,
+to adequacy on the clock, and tell the client which is which.**
+
+🟡 **Colombia, one outlet only:** a **June 2026** generative-AI classroom roadmap — **180 000
+teachers** to be trained, institutional licences for **64 public universities**. 🔴 Single
+secondary source (`studyverso.com`), **not corroborated**; the same source says Chile published
+an education framework earlier and that Brazil and Mexico keep non-binding guidance.
+🔵 **Mexico has no general AI law** — sectoral only, proposals without dictamen.
+🔵 **A UNESCO figure worth the pitch, carried as secondary:** only **19 %** of institutions have
+an approved internal regulation.
+
+🔴 **Chile, Peru, Argentina and Uruguay have never been reached by a first-hand leg** here
+(137/54/41/32 mentions). 🔴 And the regional sources **contradict each other** on Brazil's
+PL 2338/2023 status and on the adoption ranking — recorded, not resolved.
+
 
 #### 🆕 `p373`: Brazil's rule is arriving **UNHOMOLOGATED**, and that distinction is the billable part
 
@@ -2135,6 +2360,28 @@ name a Brazilian engagement stack whose administration, curriculum and psychomet
 are each a real, licence-read repository. Pattern 28 wires them.
 
 ### Global
+
+#### 🟡 🆕 `p374`: the market figure is a **band, not a number**, and the spread is definitional
+
+🟡 **2026 AI-in-education market estimates, as published:** roughly **$6.4 B – $11.4 B**.
+Research and Markets ≈ **$10.6 B**, Precedence ≈ **$9.58 B**, Grand View ≈ **$11.4 B**.
+Long-range: ≈ **$42 B by 2030** to ≈ **$57 B by 2033**, and one house carries **$136.79 B by
+2035**.
+
+🔴 **The spread is not noise and should not be averaged.** It is **definitional** — some houses
+count broad edtech and corporate learning, others only AI-core teaching, learning and
+assessment. 🟢 **In a client conversation, quote the band and the definition, never a point
+estimate**; a single number here is a sourcing error in a suit.
+
+🟢 **The segment call, and it matches what this pass shelved:** assessment and grading is
+expected to grow fastest, driven by academic-integrity pressure. 🔵 Vendor-adjacent source,
+treated as directional — but it is the same tier `Gap 490` just produced two permissive
+platforms in, which is a supply-side corroboration rather than a second opinion.
+
+🔴 **Carried as secondary and NOT upgraded:** *60 % of US teachers* and *86 % of students
+worldwide* using AI, both from an aggregator, neither traced to a primary survey.
+🔴 **No higher-ed or corporate-training breakdown was retrievable** this pass.
+
 
 #### 🆕 `p373`: the global legs are **SATURATED**, and the regional-leg axis is a property of the **jurisdiction**
 

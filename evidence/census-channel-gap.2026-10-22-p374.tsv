@@ -1,0 +1,48 @@
+# p374 — THE ADDRESS CENSUS COUNTS ONE CHANNEL OF TWO, AND THE OTHER WAS BUILT SEVEN PASSES AGO.
+# Measured 2026-10-22, over the nine SHELF_FILES of the tree this pass commits.
+#
+# 🔴 HOW IT WAS FOUND, and it was an accident.  p374 wrote `benjaminvialle/Markus` onto three live
+# shelves as a bare backticked slug, to record that it is a DISTINCT FORK of MarkUsProject/Markus
+# and must not be shelved as a casing of it.  The census delta came back +2, not +3.  Probing for
+# the missing one: the harvester sees it NEITHER as an address NOR as a reject.  It is invisible.
+#
+# 🔴 THE CAUSE, first-hand.  p351's census imports p348's harvester -- the file says so:
+# "the harvester is p348's, not rewritten".  p348's pattern is:
+#       SLUG = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
+# It requires the literal `github.com/` prefix.  A backticked `owner/repo` with no URL matches
+# NOTHING, so it never enters the denominator and never enters the reject list.
+#
+# 🔴 AND THE PART THAT MAKES THIS THIS BASE'S SIGNATURE DEFECT FOR THE NINTH TIME: p367 BUILT the
+# second channel.  Its Makefile help text reads "the SECOND address channel, so a bare backticked
+# slug is no longer invisible to every census at once."  🔴 p367 wired it into its OWN gate
+# (gate-bare-slug-channel) and the CENSUS -- the thing that publishes the headline figure every
+# pass quotes -- was never switched over.  Seven passes have published a denominator from one
+# channel while the second sat green in `make hooks`.
+#
+channel	instrument	shape_valid_addresses	what_the_published_census_does_with_it
+URL (`github.com/owner/repo`)	p348 fold_identity.slugs_in, imported by p351	2687	🟢 THIS IS THE PUBLISHED DENOMINATOR -- 2 687 harvested -> 33 rejected -> 2 654 addresses
+bare backticked (`owner/repo`)	p367 bare_slug_channel.channel_b	3039	🔴 COUNTED BY NOTHING.  Never in any published census figure.
+disagreement (bare-only)	derived	756	🔴 addresses on the LIVE shelves that no published census has ever counted
+#
+# 🔴 THE FIGURE: 756 addresses, ~22% of the published denominator, visible to one committed
+# channel and invisible to the one that publishes.  Named samples, with occurrence counts:
+#   1edtech/badgr-server x12   -- 🔴 and this one MATTERS: p372 adjudicated badgr-server as an
+#                                 ABSENT reference implementation and it is cited twelve times
+#                                 as a bare slug, so the address at the centre of p372's
+#                                 "ten of ten unretrievable" finding is not in the denominator.
+#   1edtech/caliper-python x1  -- same class, same p372 finding
+#   1edtech/oneroster x1       -- the credentialing/interop tier p371 called this base's unshelved layer
+#   adl-opensource/xapi-spec x1
+#   airgolab-cefet-rj/textgrader x3
+#
+# 🔴 WHAT THIS PASS MAY NOT CLAIM, and the restraint is the point.
+# 🔴 "756 addresses" is NOT "756 repositories".  The bare channel has its own false-positive
+# surface that the URL channel cannot have, and this pass can already name one in its own
+# sample: `admin-api/v1` survives as shape-valid and is plainly a version path, not an address.
+# 🟢 So the honest statement is the DISAGREEMENT, not a corrected total: the two committed
+# channels differ by 756 on the same nine files, and the published census reports one of them.
+# 🔴 Grading the 756 is NOT done here and no corrected denominator is published this pass.
+# 🟢 p352's standing rule is obeyed exactly as written -- the census is re-derived over
+# SHELF_FILES AFTER every shelf write, with p351's instrument, and 2 687 / 33 / 2 654 stands as
+# THE figure for the tree p374 commits.  What p374 adds is that the rule's instrument reads one
+# channel of two, which is a defect in the INSTRUMENT and not in the arithmetic.

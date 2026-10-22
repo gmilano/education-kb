@@ -4,6 +4,24 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p374` — two rows, both from a gap rather than a trending leg
+
+🔵 **APPEND-ONLY.** Added at the top; the history below is kept.
+
+| Repo | Licence | Grant read at | HEAD | Tier |
+|---|---|---|---|---|
+| [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | Apache-2.0 (11 357 B) | `master/LICENSE` | `ecd5915` · 2026-10-21 | assessment / LTI 1.3 interop |
+| [`MarkUsProject/Markus`](https://github.com/MarkUsProject/Markus) | MIT (1 076 B) | `master/LICENSE` | `86395e8` · 2026-10-21 | human grading, system of record |
+
+🔴 **The trending leg itself returned nothing new.** `"github trending education AI 2026 open
+source learning platform"` surfaced six repositories — `Selleo/mentingo`, `Li-Evan/Bloom`,
+`artcc/freelingo`, `kalvilabs/kalvi`, `wenflow-org/wenflow`, `Professional-X/StudyCoach` — and
+**all six were already carried**. 🔵 It also returned GitHub **topic** pages rather than the
+Trending page, so it is not a velocity ranking and is not recorded as one.
+
+🔵 **Recorded so it is not re-probed as canonical:** `benjaminvialle/Markus` is LIVE with HEAD
+`664ca8a`, a **different** HEAD from `MarkUsProject/Markus` — a distinct fork, not a casing.
+
 ## Pass 373 · 2026-10-22 — 🟢 **`raw.githubusercontent.com` is OPEN this pass, so grants were read from payload again — 🔴 and the primary-text egress `p372` left UNMEASURED is now measured on BOTH transports, and it is refused on both.**
 
 🔵 **The channel state first, measured this pass**, so a successor inherits the matrix rather

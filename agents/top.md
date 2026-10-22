@@ -1,9 +1,103 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
+## 🟢 🆕 `p374`: `Gap 490`'s GRADER IS REAL, PERMISSIVE AND MAINTAINED — and the owner name was written out in the page `p373` was quoting when it declared the address absent
+
+**Evidence:** [`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p374.tsv) ·
+[`supply-saturation`](../evidence/supply-saturation.2026-10-22-p374.tsv)
+
+🔵 Every probe below was run on **2026-10-22**, first-hand: `git ls-remote` for existence,
+`raw.githubusercontent.com` for the grant payload, a blobless clone for the HEAD date.
+🔴 **No star counts.** `api.github.com` and `github.com` HTML both answer **403** this pass, so
+a star figure could only be copied from a search snippet — and one snippet did offer
+*"about 41.2k stars"* for `THU-MAIC/OpenMAIC`. It is recorded **nowhere** in this tree.
+
+### 🟢 The row this shelf gains
+
+| Agent | Repo | Licence | Grant read at | HEAD | What it does |
+|---|---|---|---|---|---|
+| **Mark** | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | **Apache-2.0** (11 357 B, read first-hand) | `master/LICENSE` | `ecd5915` · **2026-10-21** | 🟢 *"An AI-powered educational assessment platform that automates grading, provides intelligent feedback, and supports multilingual learning at scale"* — its own `README.md`, verbatim. Returns grades over **LTI 1.3**; public org project board at `/orgs/ibm-skills-network/projects/9`. |
+
+🟢 **Why it matters more than one row.** It sits in the **credentialing / interop tier** `p371`
+named as this industry's unshelved layer, and `p372` measured that tier as **ten of ten**
+candidate reference implementations unretrievable. 🟢 This is a **live, maintained,
+Apache-2.0** component in exactly that gap — committed to **one day before this pass**.
+
+### 🔴 How it was found, and why that is the finding
+
+🔴 **`Gap 490` (`p373`) reads: *"`IBM MARK` and `OnMicro AI` … have no address located.
+`ibm/mark`, `IBM/mark`, `onmicro-ai/onmicro` were constructed to test them and all answer
+`NO-REMOTE`."*** 🟢 `p373` was **right** to class those three as fabricated negative controls
+rather than dead addresses. 🔴 **But the Open edX proposal page it was quoting says the tool is
+*"an open-source grading platform from IBM Skills Network"* — in the same sentence that names
+MARK.** The owner was in the text. `ibm-skills-network/mark` resolves on the **first** probe.
+
+🔵 **That is the SEVENTH consecutive pass paying this base's signature defect** — `p369` on
+`LICENSE.TXT`, `p371` on the `https://` host rule, `p372` on `apereo/opencast`, `p372` again on
+`ACTION PJ`'s committed correction, `p373` on `Gap 485`'s own prior holdings, and `p373` here.
+🟢 **The class is now sharp enough to state as a rule, so it stops being a story:
+BEFORE CONSTRUCTING AN ADDRESS, RE-READ THE SOURCE FOR THE OWNER.**
+
+### 🔴 The name collision, declared before anyone builds on it
+
+🔴 **"MARK" resolves to two unrelated grading tools**, and the discovery leg returned the wrong
+one as the *"closest match"*:
+
+| Name | Address | Licence | What it actually is |
+|---|---|---|---|
+| **Mark** | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | Apache-2.0 | AI assessment + feedback, IBM Skills Network, LTI 1.3 |
+| **MarkUs** | [`MarkUsProject/Markus`](https://github.com/MarkUsProject/Markus) | **MIT** (1 076 B, first-hand) | 🔵 A **human** grading application (Ruby on Rails), a university project, **not IBM** |
+
+🟢 Both are shelved by this pass as **separate rows**, and `Pattern 14` uses them **together** —
+one for feedback, one as the human system of record. 🔴 A successor must not merge them.
+🔵 `benjaminvialle/Markus` is LIVE with a **different HEAD** (`664ca8a`), so it is a distinct
+fork, **not a casing** of the canonical — recorded so it is not shelved as such.
+
+### 🔴 Zero new rows from the discovery legs, with the denominator
+
+🔴 Two fresh discovery legs — one licence-filtered, one trending — surfaced **nine** live
+candidates. 🔴 **All nine were already `CARRIED`**, by this base's own `make carried` oracle
+rather than a grep: `THU-MAIC/OpenMAIC`, `littlecookie0722/AI-Teaching-Agent`,
+`Naresh1401/education-tutor-agent`, `Selleo/mentingo`, `Li-Evan/Bloom`, `artcc/freelingo`,
+`wenflow-org/wenflow`, `kalvilabs/kalvi`, `Professional-X/StudyCoach`. 🟢 **9/9.** That is
+`ACTION QJ`'s saturation reproduced a **third** time, now on the licence-filtered and trending
+legs independently.
+
+🟢 **And the asymmetry is the actionable part:** the two rows this pass gained came from
+**neither** discovery leg. They came from **closing a gap**. 🔴 Three passes of discovery legs
+have yielded **zero** rows while one gap-closure yielded **two**. 🟢 **At this base's
+saturation, reading its own open gaps is a higher-yield acquisition channel than searching for
+new repositories** — and that is a scheduling instruction, not an observation.
+
+### 🔴 One candidate I excluded on licence — wrongly, and this base had already corrected me
+
+🔴 **I excluded `Open TutorAI` from this pass's discovery leg because a search result showed its
+arXiv listing as CC BY-NC-SA 4.0**, which is not in the permissive set. 🟢 **Then I read the
+grant first-hand and the exclusion was wrong.**
+
+🟢 **Measured 2026-10-22:** [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE),
+HEAD `196c547`, grant at `main/LICENSE`, **1 531 B** — **BSD-3-Clause**, all three clauses
+verbatim with the standard BSD disclaimer. 🔵 It opens *"All rights reserved."*, **which is
+BSD-3-Clause's own boilerplate and not a reservation of rights.**
+🔴 **The CC BY-NC-SA 4.0 is the licence of the PAPER on arXiv, not of the software.** Conflating
+an arXiv listing's licence with its project's code is the error, and it is an easy one.
+
+🔴 **And this base had already derived exactly that, and warned about exactly this shape.**
+`agents/trending.md:12664` reads: *"`BSD-3-Clause` — `1 531` B, all three clauses verbatim.
+Opens 'All rights reserved.', which is `BSD-3`'s own template and **not** a reservation of
+rights — a shape a vocabulary probe could easily mis-flag."* 🟢 **Same byte count, same reading,
+already committed.** 🔴 Meanwhile `agents/trending.md:7447` — a dated section — grades the same
+slug *"CC BY-NC-SA 4.0 — non-commercial"*, and `gate-shelf-consistency` does not catch it
+because that gate compares only the **live** shelves.
+
+🔵 **So the signature defect claimed an EIGHTH instance this pass, and this time it was mine:**
+committed knowledge, not wired into the step that needed it. 🟢 The row is **permissive and
+usable for client work**; `Gap 491` is **closed on the grant** and reopened narrowly as
+`ACTION p374-I` for the one stale cell.
 ## 🔴 🆕 `p372`: the learning-record and credentialing rows on this shelf are LIVE — and the REFERENCE IMPLEMENTATIONS behind the standards they speak are not
 
 **Evidence:** [`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) ·

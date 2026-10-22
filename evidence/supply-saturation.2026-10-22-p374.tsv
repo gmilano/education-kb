@@ -1,0 +1,36 @@
+# p374 — THE SUPPLY-SIDE ZERO, WITH ITS DENOMINATOR.  Measured 2026-10-22.
+#
+# 🟢 p373 published "ZERO new agent rows, with the denominator named" and reproduced ACTION QJ's
+# saturation on the global legs.  p374 ran two FRESH discovery legs and reproduces it again --
+# this time on a licence-filtered leg and a trending leg, which is the pair QJ measured.
+#
+# The two legs:
+#   L1  "top open source AI agents education 2026 github MIT license tutoring"   (extended)
+#   L2  "github trending education AI 2026 open source learning platform"        (extended)
+#
+# Every candidate the two legs surfaced, probed for existence and then run through this base's own
+# `make carried` oracle.  🔴 The oracle, not a grep: a grep over nine shelves is what produced
+# this base's casing and alias defects.
+#
+candidate	leg	ls_remote	make_carried	new_row
+THU-MAIC/OpenMAIC	L1	LIVE	CARRIED	no
+littlecookie0722/AI-Teaching-Agent	L1	LIVE	CARRIED	no
+Naresh1401/education-tutor-agent	L1	LIVE	CARRIED	no
+Selleo/mentingo	L2	LIVE	CARRIED	no
+Li-Evan/Bloom	L2	LIVE	CARRIED	no
+artcc/freelingo	L2	LIVE	CARRIED	no
+wenflow-org/wenflow	L2	LIVE	CARRIED	no
+kalvilabs/kalvi	L2	LIVE	CARRIED	no
+Professional-X/StudyCoach	L2	LIVE	CARRIED	no
+ashishpatel26/500-AI-Agents-Projects	L1	not probed	-	🔵 EXCLUDED BY SCOPE -- a curated cross-industry link list, not an education agent.  Same exclusion p373 applied to agentscope-ai/openjudge and mondaycom/sensei.
+Open TutorAI	L1	-	-	🔵 EXCLUDED BY LICENCE -- its arXiv listing shows CC BY-NC-SA 4.0, which is NOT in the permissive set this base builds on.  🔴 Note the base already carries an `Open TutorAI CE` row citing BSD-3-Clause and Apache-2.0 in different places; the licence of this family is UNRESOLVED and is registered as a gap by this pass.
+#
+# 🔴 RESULT: 9 live candidates, 9 already CARRIED, ZERO new agent rows from the discovery legs.
+# 🟢 DENOMINATOR: 9/9.  The saturation ACTION QJ reported and p373 reproduced on the global legs
+# reproduces a THIRD time, on a licence-filtered leg and a trending leg run independently.
+#
+# 🟢 AND THE ASYMMETRY WORTH RECORDING: the two new rows this pass DID gain -- ibm-skills-network/mark
+# and MarkUsProject/Markus -- came from NEITHER discovery leg.  They came from closing a GAP
+# (Gap 490, by product name).  🔴 Three passes of discovery legs have now yielded zero rows while
+# gap-closure yielded two in one pass.  For this base, at this saturation, READING ITS OWN OPEN
+# GAPS IS A HIGHER-YIELD ACQUISITION CHANNEL THAN SEARCHING FOR NEW REPOSITORIES.

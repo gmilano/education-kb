@@ -1,0 +1,33 @@
+# p374 — THE EGRESS MATRIX, RE-MEASURED.  2026-10-22.  Both transports, every host this pass needed.
+# Probed with `curl -sS -o /dev/null -w %{http_code} --max-time 25 -L` and, where curl was refused,
+# again with WebFetch -- which p373 found is NOT an independent channel.  Re-tested, not assumed.
+#
+host	transport	result	what_it_blocks
+api.github.com	curl	🔴 403	star counts, commit dates by API, successor enumeration (Gap 486)
+github.com (HTML)	curl	🔴 403	star counts by scrape
+raw.githubusercontent.com	curl	🟢 200	🟢 grant payloads -- the channel this base's licence verification rests on
+github.com (smart-HTTP git)	git ls-remote	🟢 OK	existence, default branch, HEAD
+github.com (blobless clone)	git clone --filter=blob:none	🟢 OK	🟢 HEAD COMMIT DATES -- the only remaining channel for a date
+www.gov.br	curl	🔴 403 connect_rejected	Gap 485: Parecer CNE/CP 15/2026 article text; T61; ACTION RO
+diariodarepublica.pt	curl	🔴 403 connect_rejected	Gap 488: Portugal's Recomendacao n.o 4/2026
+abmes.org.br	curl	🔴 403 connect_rejected	🆕 Gap 485's BEST candidate host -- see below
+abmes.org.br	WebFetch	🔴 getaddrinfo ENOTFOUND	🔴 confirms p373: WebFetch is NOT an independent channel
+www.mext.go.jp	curl	🔴 403 connect_rejected	Japan's MEXT guideline PDFs (ver. 2.0; 2026-03-30; 2026-06-30 council paper)
+www.mattosfilho.com.br	curl	🔴 403 connect_rejected	the Brazilian law-firm analysis the English leg surfaced
+www.actuia.com	curl	🔴 403 connect_rejected	the French-language KMK report R2 surfaced
+www.kmk.org	curl	🔴 403 connect_rejected	the KMK's own 2026-10-16 competence-framework decision
+#
+# 🟢 THE ONE ADVANCE ON Gap 485, and it is an address, not an argument.
+# p373 named `www.gov.br/mec/pt-br/cne/normas-classificadas-por-assunto/inteligencia-artificial-ia`
+# as "the address a successor should go to first".  🟢 p374's R3 leg surfaced a BETTER first address:
+# ABMES -- the Brazilian private-HE association -- carries BOTH the parecer AND its sumula as named
+# pages plus a dated PDF:
+#     https://abmes.org.br/legislacoes/parecer-cne-cp-no-15-5669
+#     https://abmes.org.br/legislacoes/sumula-do-parecer-cne-cp-no-15-5667
+#     https://abmes.org.br/arquivos/legislacoes/legislacoes-2026-10-06-8044766d.pdf
+# 🟢 WHY IT IS BETTER: it is a NON-GOVERNMENT host.  Every government host this base has tried --
+# gov.br, diariodarepublica.pt, mext.go.jp, EU institutional (Gap 241) -- is refused.  An
+# association mirror is the likelier allowlist candidate, and it carries the sumula as a separate
+# document, which is the part DOU published on 2026-10-06.
+# 🔴 It is refused HERE, on both transports, so Gap 485 stays OPEN and egress-enabled.  🟢 What
+# changed is the address a successor should ask for, and that is worth more than another 403.

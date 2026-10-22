@@ -31,6 +31,7 @@ DOMAIN_LOG ?= /tmp/education-kb-gate-domain-check.log
 REGIONPLACE_LOG ?= /tmp/education-kb-gate-region-place.log
 BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
 DEADCITE_LOG ?= /tmp/education-kb-gate-dead-citation.log
+REGIONLEG_LOG ?= /tmp/education-kb-gate-regional-leg.log
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
@@ -87,7 +88,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-companion-closure gate-bare-slug-channel \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
-             gate-dead-citation
+             gate-dead-citation gate-regional-leg
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -922,3 +923,15 @@ gate-backlog-denominator: ## p371 — `Gap 477`'s remainder is DERIVED from the 
 gate-dead-citation: ## ACTION ZZ-cj — a dead address may be RECORDED, never RECOMMENDED; and a proven successor must be REGISTERED
 	@cd compose/code/p372-dead-citation && { $(PY) -I test_dead_citation.py > $(DEADCITE_LOG) 2>&1 || { echo "🔴 p372-dead-citation FAILED — its own report follows:" ; sed "s/^/   /" $(DEADCITE_LOG) ; false ; } ; } && echo "── p372-dead-citation (28 controls over 11 groups: the API-URL-path shape, p371's D1 relative paths, documentation placeholders, this base's own negative controls, the rc=0/empty-advertisement live class, and the proxy-refusal-is-not-an-absence arm)" && echo "   PASS" || exit 1
 	@cd compose/code/p372-dead-citation && $(PY) -I dead_citation_gate.py --root ../../.. || exit 1
+
+# 🔴 p374: ACTION p373-A.  `I4` (p372) refused a published regional nil unless an in-language
+# leg had been run.  p373 found it INADEQUATE in both directions -- satisfiable without naming
+# a jurisdiction (its own cell 1 passes it) and over-firing on Brazil, where English + organ
+# returns MORE than Portuguese -- and deliberately did NOT patch it, per p305: no new standing
+# rule without first running it over this base's own corpus.  p374 runs it over the ten legs
+# this base has actually recorded, and J2 replaces I4 with two limbs plus a disposition test.
+# 🟢 The negative control is in group C: un-withdrawing p373's cell 1 turns J2 red, and the
+# same group shows I4 passing that identical cell.  OFFLINE -- it reads a committed table.
+gate-regional-leg: ## ACTION p373-A — a regional NIL names a jurisdiction AND has an in-language sibling, and "redundant" needs a fact-class test
+	@cd compose/code/p374-regional-leg && { $(PY) -I test_regional_leg.py > $(REGIONLEG_LOG) 2>&1 || { echo "🔴 p374-regional-leg FAILED — its own report follows:" ; sed "s/^/   /" $(REGIONLEG_LOG) ; false ; } ; } && echo "── p374-regional-leg (51 controls over 9 groups: p373's cell 1 un-withdrawn turns J2 red, I4 passing that same cell recorded beside it, Japan refusing the redundancy claim p373 generalised, and the disposition limb refused symmetrically so a sound nil cannot be hidden)" && echo "   PASS" || exit 1
+	@cd compose/code/p374-regional-leg && $(PY) -I regional_leg_gate.py || exit 1

@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p374` — the week's real movement is a **grader that was already findable**, and a supply side that is saturated 9/9
+
+🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the
+record. 🟢 All probes **2026-10-22**, first-hand. 🔴 **No star counts** — `api.github.com`
+and `github.com` HTML both **403** this pass.
+
+### 🟢 New this week
+
+| Agent | Repo | Licence | HEAD | Note |
+|---|---|---|---|---|
+| **Mark** | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | Apache-2.0 | `ecd5915` · 2026-10-21 | 🟢 AI assessment + multilingual feedback over **LTI 1.3**, IBM Skills Network. Closes half of `Gap 490`. |
+| **MarkUs** | [`MarkUsProject/Markus`](https://github.com/MarkUsProject/Markus) | MIT | `86395e8` · 2026-10-21 | 🔵 **Human** grading system of record. Not IBM, despite the name. |
+
+### 🔴 Probed, live, and already carried — the saturation figure, with its denominator
+
+🔴 **9 of 9.** Two discovery legs (one licence-filtered, one trending) surfaced nine live
+candidates and this base's `make carried` oracle says every one is already shelved:
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (`a8c745a`) ·
+[`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) (`b90bd88`) ·
+[`Naresh1401/education-tutor-agent`](https://github.com/Naresh1401/education-tutor-agent) (`2cb9dcf`) ·
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) (`f08c44b`) ·
+[`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (`68788b5`) ·
+[`artcc/freelingo`](https://github.com/artcc/freelingo) (`8fb4f41`) ·
+[`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (`1c86890`) ·
+[`kalvilabs/kalvi`](https://github.com/kalvilabs/kalvi) (`24fb777`) ·
+[`Professional-X/StudyCoach`](https://github.com/Professional-X/StudyCoach) (`f3759a4`).
+
+🟢 **The trend this records, and it is about the channel rather than the market:** three
+consecutive passes of discovery legs have returned **zero** new rows, while one gap-closure
+returned **two** in a single pass. 🔴 A weekly "what's new" leg against this base is no longer
+finding anything; its own open gaps are.
+
+🔵 **Excluded, with the reason:** `ashishpatel26/500-AI-Agents-Projects` is a cross-industry
+link list, not an education agent — the same scope exclusion `p373` applied to
+`agentscope-ai/openjudge` and `mondaycom/sensei`. `Open TutorAI` is excluded on **licence**
+(arXiv listing shows CC BY-NC-SA 4.0) and that exclusion opened `Gap 491`.
+
 ## 2026-10-22 · Pass 373 — 🔴 **`Gap 485` was opened asking a successor to fetch what this base ALREADY HELD, better-sourced than the gap described. 🟢 And the regional-leg question that four passes have answered four different ways was run as a CROSSED design for the first time — the two decisive cells point OPPOSITE WAYS, and both are clean.**
 
 🔵 **Dating note.** Every leg and probe below was run **2026-10-22**; artefacts are dated by

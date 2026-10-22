@@ -1,0 +1,40 @@
+# p374 — ACTION p373-C / Gap 490: LOCATE `IBM MARK` AND `OnMicro AI` BY PRODUCT NAME.
+# Measured 2026-10-22.  One WebSearch leg per product name, then first-hand address probes.
+#
+# 🟢 Gap 490 as written: "`IBM MARK` and `OnMicro AI` -- two LTI 1.3 graders named in an Open edX
+# proposal page -- have NO address located.  `ibm/mark`, `IBM/mark`, `onmicro-ai/onmicro` were
+# constructed to test them and all answer NO-REMOTE."  🟢 p373 was right to class those three as
+# FABRICATED NEGATIVE CONTROLS rather than dead addresses, and right to say the remedy was a
+# search by PRODUCT NAME rather than by guessed slug.
+#
+product	leg	what_the_source_says	address_probed	ls_remote	default_branch	head	grant_path	licence	head_commit_date
+IBM MARK	"IBM Skills Network MARK open source grading platform github repository"	🟢 The Open edX proposal page (openedx.atlassian.net, [Proposal] AI Supported Grading in Discussions) describes it as "an open-source grading platform from IBM Skills Network that returns grades over LTI 1.3"	ibm-skills-network/mark	🟢 LIVE	master	ecd591518da299a5d90e3bc3e4623550f5737710	master/LICENSE	Apache-2.0 (11 357 B, read first-hand)	2026-10-21T15:55:17-04:00
+IBM MARK	case-fold control (p348 gate)	-	IBM-Skills-Network/mark	🟢 LIVE -- IDENTICAL HEAD, so ONE repository under two casings	master	ecd591518da299a5d90e3bc3e4623550f5737710	-	-	-
+OnMicro AI	"IBM Skills Network MARK ..." + the LTI/1EdTech leg	🔴 NOTHING.  Two legs returned no product page, no vendor site, no 1EdTech member entry, no repository	(none constructed -- p373's lesson applied)	🔴 NOT PROBED, DELIBERATELY	-	-	-	-	-
+#
+# 🟢 GAP 490 IS HALF CLOSED, AND THE HALF THAT CLOSED IS THE SIGNATURE DEFECT AGAIN.
+# 🔴 The owner name was IN THE SOURCE p373 WAS ALREADY READING.  The Open edX proposal page says
+# "from IBM Skills Network" in the same sentence that names MARK.  p373 constructed `ibm/mark`,
+# `IBM/mark` and `onmicro-ai/onmicro` -- it guessed at the owner while the owner was written out
+# in the text it quoted.  🟢 `ibm-skills-network/mark` resolves on the first probe.
+# 🔵 That is the SEVENTH consecutive pass paying this base's signature defect: p369 LICENSE.TXT,
+# p371 the https:// host rule, p372 apereo/opencast, p372 again on ACTION PJ's correction, p373
+# on Gap 485's own prior holdings, and p373 again here.  🟢 The class is now precise enough to
+# state as a rule: BEFORE CONSTRUCTING AN ADDRESS, RE-READ THE SOURCE FOR THE OWNER.
+#
+# 🟢 WHAT `mark` ACTUALLY IS, first-hand from master/README.md: "Mark is an AI-powered educational
+# assessment platform that automates grading, provides intelligent feedback, and supports
+# multilingual learning at scale."  Apache-2.0, HEAD 2026-10-21 (one day before this pass), a
+# public org project board at /orgs/ibm-skills-network/projects/9.  🟢 It is a LIVE, MAINTAINED,
+# PERMISSIVELY LICENSED education agent in the credentialing/interop tier p371 named as this
+# industry's unshelved layer, and this base has had a gap open on it instead of a row.
+#
+# 🔴 THE NAME COLLISION, registered before anyone builds on it.  "MARK" resolves to TWO unrelated
+# grading tools: `ibm-skills-network/mark` (Apache-2.0, AI assessment, IBM Skills Network) and
+# `MarkUsProject/Markus` (MIT, Ruby on Rails, a university project, NOT IBM -- the search leg
+# returned it as the "closest match" and it is not a match at all).  🟢 Both are shelved by this
+# pass, as separate rows, with this collision noted on each.  A successor must not merge them.
+#
+# 🔴 OnMicro AI: an INFORMED NIL, not an absence.  Two legs, no result.  It is NOT reclassified as
+# dead and NO address is constructed for it -- that is the error Gap 483 made twice and Gap 490
+# was opened to avoid.  It stays OPEN, scoped to: find a vendor page or a 1EdTech member entry.

@@ -1,0 +1,70 @@
+# p374 — THE REGIONAL-LEG REGISTER.  ACTION p373-A, limb 1.  THE OWNED HOME Gap 489 ASKED FOR.
+#
+# 🟢 Gap 489: "This base has published FOUR different attributions for what makes a regional leg
+# work -- ACTION PJ (organ), ACTION QJ (shape was never the defect), P870 (jurisdiction phrasing),
+# Gap 476 (language) -- in FOUR different files, none citing another.  There is no single place
+# where 'what makes a regional leg work' is recorded."  🟢 THIS FILE IS THAT PLACE.  Every later
+# claim about regional legs cites this register or amends it; no fifth file.
+#
+# 🔴 TWO CORRECTIONS TO ACTION p373-A AS IT WAS WRITTEN, both measured before building the column.
+#
+# 🔴 (1) THE DENOMINATOR.  p373-A says "the column is derivable for the 8 jurisdictions already
+# carried".  Counted first-hand over the nine SHELF_FILES this pass commits, the base names at
+# least 21: Brazil 244, India 224, China 173, Korea 147, Chile 137, Singapore 112, Mexico 111,
+# Colombia 91, Japan 88, Canada 79, Germany 76, France 55, Peru 54, Spain 51, Australia 50,
+# Netherlands 42, Argentina 41, Uruguay 32, Italy 15, Portugal 14, Quebec 5 (word-boundary
+# matches).  "8" was an estimate published as a denominator.  The register carries all 21 and
+# marks the 15 that are UNMEASURED as unmeasured, because a blank cell is information and an
+# absent row is not.
+#
+# 🔴 (2) THE COLUMN p373-A SPECIFIED IS THE WRONG COLUMN, and building it as specified would have
+# wired a refuted theory into a standing gate.  p373-A asks for "a per-jurisdiction CORPUS-LANGUAGE
+# column so a leg's adequacy is checkable".  That column presupposes p373's account -- that what
+# decides a leg is the language THE JURISDICTION publishes in.  🔴 p374's cell O5 refutes it on a
+# pre-registered prediction: Japan publishes its guidelines in Japanese and the ENGLISH leg was
+# productive anyway, through MLex and English news wires.  🟢 The column that actually predicts the
+# six measured cells is the one below: DOES A CROSS-BORDER SPECIALIST PRESS CHANNEL COVER THIS
+# JURISDICTION'S EDUCATION POLICY IN THE QUERY LANGUAGE, AND WHICH ONE.
+#
+# COLUMNS.  measured_by: the pass that ran the leg first-hand -- never an inference from prose.
+# en_leg / inlang_leg: PRODUCTIVE | PARTIAL | NIL | UNMEASURED.
+# en_channel: the named outlet that carried the facts on the English leg, or NONE-FOUND.
+# fact_class_differs: did the in-language leg return a DIFFERENT class of fact, not merely more?
+#
+jurisdiction	region	en_leg	inlang_leg	en_channel	fact_class_differs	measured_by	basis
+Brazil	LATAM	PRODUCTIVE	PRODUCTIVE	Mattos Filho (law firm, publishes in English), ABMES (sector association), Migalhas, Poder360, TradeMap	NO -- same class, English returned MORE	p373 cell 3, p374 R3	two independent draws, both productive; instrument NUMBER is a language-independent token
+Germany	EMEA	NIL then PARTIAL	PRODUCTIVE	🔴 NONE-FOUND in English; 🟢 actuia.com in FRENCH carried the 2026-10-16 KMK decision	YES -- German leg returned teacher-survey figures the English leg never had	p373 cells 1-2, p374 R2	🔴 THE TWO ENGLISH DRAWS DISAGREE (NIL at p373, PARTIAL at p374).  Not a stable cell.
+Japan	APAC	PRODUCTIVE	PRODUCTIVE	MLex (regulatory trade press), Kyodo English wire, adnkronos English, Qatar Tribune	🟢 YES -- Japanese leg returned the pilot-school count 66 -> 281; English leg returned policy milestones only	p374 O5, O5b	🔴 REFUTES p373's corpus-language account on a prediction registered in advance
+India	APAC	PRODUCTIVE	n/a -- English IS an official publication language	Careers360, The Statesman, domestic English-language education press	n/a	p374 O6	prediction held; no in-language control is meaningful here
+Mexico	LATAM	PRODUCTIVE	UNMEASURED	Spanish-language legal press; English coverage asserted by ACTION PJ, not re-measured since	UNKNOWN	ACTION PJ (p207)	🔴 carried from PJ's sample; NOT re-measured at p373 or p374
+Quebec	North America	PRODUCTIVE	UNMEASURED	asserted by ACTION PJ, not re-measured since	UNKNOWN	ACTION PJ (p207)	🔴 carried from PJ's sample; n=1, 167 passes old
+Portugal	EMEA	PARTIAL	UNMEASURED	🔴 search snippet only; diariodarepublica.pt proxy-refused on BOTH transports	UNKNOWN	p373 cell 4 (incidental), p374 egress probe	🔴 reached only as a CONFLATION of Brazil's CNE with Portugal's CNE -- see Gap 488
+China	APAC	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 173 mentions on the shelves, ZERO first-hand regional legs ever run
+Korea	APAC	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 147 mentions, ZERO first-hand legs.  AI Basic Act in force 2026-01-22 is carried from general-regulation legs, not an education leg.
+Chile	LATAM	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 137 mentions, ZERO first-hand legs
+Singapore	APAC	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 112 mentions, ZERO first-hand legs
+Colombia	LATAM	PARTIAL	UNMEASURED	studyverso.com (single secondary outlet) for the June 2026 generative-AI classroom roadmap	UNKNOWN	p374 LATAM leg	🟡 one secondary outlet only; 180 000 teachers / 64 public universities NOT corroborated
+Canada	North America	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 79 mentions, ZERO first-hand legs (Quebec was sampled as a province, not Canada)
+France	EMEA	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 55 mentions, ZERO first-hand legs -- 🟢 and p374's R2 found a FRENCH outlet carrying a GERMAN decision, so this is the highest-value unmeasured cell on the register
+Peru	LATAM	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 54 mentions, ZERO first-hand legs
+Spain	EMEA	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 51 mentions, ZERO first-hand legs
+Australia	APAC	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 50 mentions, ZERO first-hand legs
+Netherlands	EMEA	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 42 mentions, ZERO first-hand legs
+Argentina	LATAM	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 41 mentions, ZERO first-hand legs
+Uruguay	LATAM	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 32 mentions, ZERO first-hand legs
+Italy	EMEA	UNMEASURED	UNMEASURED	UNMEASURED	UNKNOWN	-	🔴 15 mentions, ZERO first-hand legs
+#
+# 🔴 THE FIGURE THIS REGISTER EXISTS TO MAKE VISIBLE: 21 jurisdictions carried, 7 ever reached by
+# a first-hand regional leg, 14 never.  Two of the 7 (Mexico, Quebec) rest on a single draw from
+# p207, 167 passes ago.  🟢 The base's regional claims are therefore built on 5 live cells, and
+# until this file existed that was not visible anywhere.
+#
+# 🟢 THE STANDING RULE THIS REGISTER CARRIES, replacing the one-limb I4 (see p374-regional-leg):
+#   A published regional NIL is admissible only if (limb 1) the leg NAMED a jurisdiction -- a
+#   country or an organ, not a region label like "EMEA" -- AND (limb 2) an in-language leg was
+#   also run for that same jurisdiction.  🔴 p373's cell 1 is exactly what limb 1 exists to
+#   refuse: an in-language leg naming no jurisdiction, which returned an explicit nil for every
+#   EMEA country except the language's own.  I4 would have passed it.
+#   AND: no pass may call a language REDUNDANT for a jurisdiction unless both legs ran AND
+#   returned the SAME fact class.  🔴 Japan is the negative control: both legs productive, and
+#   the Japanese leg returned the only operational figure either leg produced.
