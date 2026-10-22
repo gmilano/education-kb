@@ -1,0 +1,15 @@
+# p372 POSITIVE CONTROL — does this transport follow GitHub's rename/transfer redirect?
+# Measured 2026-10-21 by `git ls-remote https://github.com/<old address>`.
+# WHY IT MATTERS: every ABSENT verdict on this base (p230's GONE, p371's NO-REMOTE) assumes
+# that a renamed or transferred repository would ANSWER at its old address.  That assumption
+# had never been tested here.  If it were false, every GONE verdict would be unsafe.
+# RESULT: it is TRUE.  A renamed repo and an org-transferred repo both answer in full at the
+# OLD address.  Therefore NO-REMOTE rules OUT rename and transfer, and an ABSENT verdict is
+# safe in exactly that respect.
+old_address	known_change	lsremote_p372	refs	verdict
+Significant-Gravitas/Auto-GPT	renamed to Significant-Gravitas/AutoGPT	OK	12137	🟢 redirect FOLLOWED — rename is transparent to this transport
+hwchase17/langchain	transferred to org langchain-ai	OK	27996	🟢 redirect FOLLOWED — org transfer is transparent to this transport
+moodle/moodle	unchanged (live baseline)	OK	1959	🟢 baseline positive
+openai/gpt-3	unchanged (live baseline, tiny ref set)	OK	4	🟢 baseline positive, small-refset arm
+this-org-does-not-exist-zzz9/nope	never existed (negative control)	NO-REMOTE	0	🟢 negative control fires: rc=128 `Authentication failed`
+moodle/moodle-definitely-not-a-real-repo-p152	never existed, under a LIVE org	NO-REMOTE	0	🟢 negative control fires under a live owner too

@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 372 · 2026-10-21 — 🔴 **the absence classifier had no class for a LIVE repository, and two passes published two live addresses as dead. 🟢 The rename-redirect control that makes every `GONE` on this base safe was run for the first time — and it holds.**
+
+🔵 **The channel state first, measured this pass**, so a successor has the matrix rather than
+the anecdote. 🔴 Two NEW closures are recorded, because a closure read as an absence is how
+this base publishes a wrong verdict:
+
+| Channel | This pass | Note |
+|---|---|---|
+| `github.com` smart-HTTP — `ls-remote`, `clone --depth 1` | 🟢 **OK** | the **only** first-hand transport this pass has; every verdict rests on it |
+| `github.com` HTML — `curl -sI` | 🔴 **403** (proxy) | 🔴 **consequence:** no `Location` header is readable, so a `MOVED` successor **cannot be read off a 301**. The successor had to be proven from the payload instead |
+| `api.github.com/repos/…` | 🔴 **403** (proxy) | 🔴 **consequence:** no owner-repo **enumeration**, so `OWNER-ALIVE-REPO-ABSENT` can only be established via a **known live sibling**, never exhaustively. Stated as a bound on this pass's verdicts |
+| 🆕 `edugit.org` (GitLab — **AlekSIS's real home**) | 🔴 `fatal: CONNECT tunnel failed, response 403` | 🔴 AlekSIS liveness is **UNMEASURED first-hand**; placed on secondary evidence only, and **not shelved** |
+| 🆕 `gitlab.com` | 🔴 `remote: HTTP Basic: Access denied` | 🔴 anonymous GitLab read unavailable; the second-forge arm of this pass is secondary-only |
+
+### 🟢 The positive control, which is the reason this pass's negatives mean anything
+
+🔴 **No pass on this base had ever tested whether a renamed repository still answers at its
+old address** — and every `GONE` verdict here assumes it does. Run at `p372`:
+
+| Old address | Known change | Result | Refs |
+|---|---|---|---:|
+| `Significant-Gravitas/Auto-GPT` | renamed | 🟢 `OK` | 12 137 |
+| `hwchase17/langchain` | org transfer | 🟢 `OK` | 27 996 |
+| `openai/gpt-3` | unchanged, tiny ref set | 🟢 `OK` | 4 |
+| `moodle/moodle` | unchanged baseline | 🟢 `OK` | 1 959 |
+| `this-org-does-not-exist-zzz9/nope` | never existed | 🟢 `NO-REMOTE` | 0 |
+| `moodle/moodle-definitely-not-a-real-repo-p152` | never existed, **live owner** | 🟢 `NO-REMOTE` | 0 |
+
+🟢 **Both redirect shapes are transparent to this transport, and both negative controls
+fire.** Therefore `NO-REMOTE` **excludes** rename and transfer. 🔵 The small-refset arm
+(`openai/gpt-3`, 4 refs) is there deliberately: it proves a thin ref set is not mistaken for
+an empty one.
+
+### 🔴 The re-derivation of `Gap 483`, which asserted 46 and committed a list
+
+| Class at `p372` | n | Was it dead? |
+|---|---:|---|
+| `ABSENT-NO-SUCCESSOR-FOUND` | **27** | 🔴 yes |
+| `OWNER-ALIVE-REPO-ABSENT` | **5** | 🔴 yes at the cited address; the owner still ships |
+| `MOVED` | **1** | 🔴 yes at the cited address — 🟢 **successor live and now registered** |
+| `ALIVE-OTHER-FORGE` | **1** | 🔴 yes on GitHub — 🟡 project alive elsewhere (secondary) |
+| `NOT-AN-ADDRESS/NEG-CONTROL` | **5** | 🟢 **no — never an address** |
+| `NOT-AN-ADDRESS/URL-PATH` | **4** | 🟢 **no — never an address** |
+| `NOT-AN-ADDRESS/PLACEHOLDER` | **1** | 🟢 **no — never an address** |
+| `EXISTS-EMPTY` | **2** | 🟢 **no — LIVE repositories with zero commits** |
+| **total** | **46** | 🔴 **34 genuinely absent, 12 not dead** |
+
+🟢 **`gate-backlog-denominator`'s rule, applied to this gap:** the partition is re-derived
+from the committed rows on every `make hooks`, and `gate-dead-citation`'s `I1` cross-checks
+each row's filed class against what the classifier would assign — so the file cannot be
+hand-edited into a class the code would refuse.
+
+### 🔴 `LICENSE`-less is not the only absence shape: the reference-implementation layer
+
+🟢 **Probed first-hand this pass, each candidate address:**
+
+| Standard | Reference implementation | At `p372` | The maintained sibling |
+|---|---|---|---|
+| **Caliper Analytics** (learning analytics) | `caliper-java` · `caliper-js` · `caliper-php` · `caliper-python`, across `1EdTech/` and `imsglobal/` | 🔴 **absent in ALL FOUR language bindings, at BOTH org spellings** | 🟢 [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) — **400 refs** |
+| **Open Badges** (credentialing) | `concentricsky/badgr-server` · `1EdTech/badgr-server` | 🔴 **absent at BOTH** | 🟢 [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) — **182 refs** |
+| **xAPI** (learning records) | `yetanalytics/lrspipe` · `yetanalytics/lrs-pipe` | 🔴 **absent at both spellings** | 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) — **764 refs** |
+| **LTI 1.3** | `UOC/java-lti-1.3-provider` | 🔴 absent | 🟢 [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) — 38 refs · [`…-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) — 17 refs |
+
+🔴 **The pattern is consistent and it is the finding: the SPECS and VALIDATORS are
+maintained; the runnable REFERENCE IMPLEMENTATIONS are the part that has disappeared.**
+🟢 **`p371` found credentialing to be the layer these shelves were missing. `p372` finds that
+the layer's runnable starting points are the part you cannot get.** For an engagement this
+inverts the usual advice: **budget to implement the standard from its spec, not to adopt a
+reference implementation** — and treat "there is a reference implementation" in a roundup as
+a claim to probe, because **ten of ten** candidate reference-implementation addresses probed here are unretrievable. 🟢 `p372` additionally re-probed the **six** `p230`-only `ABSENT` verdicts with the corrected classifier, confirming all six — so the empty-repo exposure across **both** prior absence sweeps is now fully measured at exactly **2** instances rather than left open. 🔵 This base had already recorded the other half of the Caliper picture at `repos/trending.md`: `npm:@timeback/caliper` is *"the only LIVE Caliper Analytics client this KB has found"* and it ships **no grant and no source**.
+
+### 🟢 One repository recovered onto a live shelf
+
+| Repo | Licence | Grant path | Refs | HEAD | Region |
+|---|---|---|---:|---|---|
+| 🆕 [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** (`Educational Community License, Version 2.0`, read from payload) | `LICENSE` (11 340 B) | **7 870** | `9767932b7902` · **2026-10-19** | **Global** |
+
+🟢 Lecture capture and video management for education — **the video tier this base's platform
+shelves had no row for**. 🟢 Successor link proven from its own `NOTICES`
+(*"Copyright <2015>, The Apereo Foundation"*). 🔵 Ships `AGENTS.md` + `CLAUDE.md` in-tree,
+8 587 B byte-identical — recorded as an observation on one repository, not as a trend.
+
+### 🔵 Discovery null, stated so silence is not mistaken for coverage
+
+🔴 The prescribed repo-discovery legs (*github trending education AI 2026*, *open source
+platform education ERP CRM MIT Apache*) returned **no new in-domain addresses** for a fifth
+consecutive pass — AI learning material and LMS vendor marketing. 🟡 The one platform-tier
+item worth recording is **negative**: a 2026 LMS roundup again presented **Open edX** and
+**Moodle** without their grants, and this base's first-hand reads remain **AGPL-3.0** and
+**GPL-3.0** respectively — consistent with `p371`'s finding that **4 of 4** roundup licence
+claims it checked were wrong, three toward *more* permissive than the payload grants.
+
 ## Pass 371 · 2026-10-21 — 🟢 **the fourth transport run at SCALE: 1 859 blobless partial clones, 1 859 answers, 0 failures — and the backlog `Gap 477` carried as a number now has a committed list**
 
 🔵 **The channel state first, measured this pass, so a successor has the matrix rather than

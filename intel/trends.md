@@ -110,6 +110,54 @@ but the *gap between them* is the most sellable observation in this pass's regio
 because it names the work: governance, not tooling. 🔴 And it is the same ordering problem
 `Gap 242` flags, so the two figures should be quoted together or not at all.
 
+### 🔴 Trend E — the standards survive and their reference implementations do not
+
+🟢 **Measured first-hand at `p372` across four education standards, every candidate address
+probed:** Caliper Analytics — **absent in ALL FOUR language bindings**: `1EdTech/caliper-java`, `1EdTech/caliper-js`, `1edtech/caliper-php` and `imsglobal/caliper-python`, at both org spellings, Open
+Badges (`concentricsky/badgr-server` and `1EdTech/badgr-server`, **both absent**), xAPI
+(`yetanalytics/lrspipe`, **absent at both spellings**), LTI 1.3
+(`UOC/java-lti-1.3-provider`, **absent**). 🟢 **In every case a sibling is maintained** —
+`1EdTech/caliper-spec` (400 refs), `1EdTech/openbadges-validator-core` (182),
+`yetanalytics/lrsql` (764), `UOC/java-lti-1.3` (38).
+
+🔴 **The consequence inverts the usual engagement advice.** For the interoperability layer in
+education, **budget to implement the standard from its specification, not to adopt its
+reference implementation** — and treat *"there is a reference implementation"* in a vendor
+roundup as a claim to probe, because **ten of ten** candidate reference-implementation addresses probed here are unretrievable.
+🔵 `p371` found credentialing to be the layer these shelves were missing; this is the reason
+the layer was thin everywhere, not just here.
+
+### 🔴 Trend F — an empty repository is a market signal, and two passes here read it as a dead one
+
+🟢 **A repository with zero commits answers smart-HTTP `rc=0` with an empty ref
+advertisement, and `git clone` labels it: *"warning: You appear to have cloned an empty
+repository."*** 🔴 `p230` and `p371` both classified two such addresses as gone.
+
+🟢 **The distinction is commercial.** A deleted connector is a dead end; an **empty** one is a
+reserved name — named, never pushed to. Both instances sit in the **LMS/SIS bridge layer** this
+base has repeatedly measured as the thinnest supply in the industry: an **Ed-Fi MCP server**
+and an **Edgenuity ↔ Aeries grade-passback** bridge. 🔵 **Read as absences they are
+discouraging; read correctly they are two named, unoccupied slots** — and the second is the
+more useful intelligence for a studio deciding what to build.
+
+### 🔴 Trend G — the query language, not the region, is what has been empty
+
+🟢 **Tested under control at `p372`:** the prescribed English EMEA leg returned **0**
+education-specific dated facts — the fourteenth consecutive near-nil — and a **German** leg in
+the same pass returned **4**, including the German school sector's own published position on
+*when educational AI counts as high-risk* (NLQ with Wikimedia Deutschland, second *"Offene KI
+in der Schule"* conference, **February 2026**). 🟢 The **Portuguese** LATAM leg returned
+Brazil's **CNE school-AI regulation** with a risk-classification scheme and a
+**no-autonomous-grading-of-interpretive-work** rule, which the English leg did not surface.
+
+🔴 **This base has now found this axis three times** — `P521`, `ACTION ZZ-cc`, `Gap 476` — and
+each time it stayed an observation. 🟢 **At `p372` it is an invariant:**
+`gate-dead-citation`'s `I4` refuses a published regional nil unless an in-language leg was run
+for that region, negative-controlled by deleting the German row and watching the gate go red.
+🔵 **The generalisation for any industry KB:** a regional nil is a statement about the query
+before it is a statement about the region, and it should not be publishable without the
+second channel.
+
 **Pass 366 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
 across external sources. 🆕 **Trends 43–45 are `p366`'s**, and all three are *instrument*
 findings with an engagement consequence attached: §43 gives the direction of a companion edge

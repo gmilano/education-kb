@@ -1,0 +1,8 @@
+# p372 — channels CLOSED to this environment, recorded so a closure is never read as an absence.
+# Measured 2026-10-21.
+channel	probe	answer	consequence_for_p372
+github.com smart-HTTP (git)	git ls-remote / git clone --depth 1	🟢 OPEN	the ONLY first-hand transport this pass has; every verdict rests on it
+github.com HTML	curl -sI https://github.com/moodle/moodle	🔴 403 (proxy)	no redirect Location header readable -> a MOVED successor cannot be read off a 301
+api.github.com	(not retried; p370/p371 recorded 403 on all calls)	🔴 403 (proxy)	no owner-repo ENUMERATION -> `OWNER-ALIVE-REPO-ABSENT` can only be established via a KNOWN live sibling, never exhaustively
+edugit.org (GitLab, AlekSIS upstream)	git ls-remote https://edugit.org/AlekSIS/official/AlekSIS-Core	🔴 fatal: CONNECT tunnel failed, response 403	AlekSIS liveness is UNMEASURED first-hand; placed on SECONDARY evidence only and marked as such
+gitlab.com	git ls-remote https://gitlab.com/opencast/opencast	🔴 remote: HTTP Basic: Access denied	anonymous GitLab read unavailable; second-forge arm of this pass is secondary-only

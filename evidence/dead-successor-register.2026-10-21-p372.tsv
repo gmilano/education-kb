@@ -1,0 +1,24 @@
+# p372 — THE SUCCESSOR REGISTER.  Measured 2026-10-21.
+#
+# 🔴 WHY THIS FILE EXISTS.  `apereo/opencast -> opencast/opencast` was PROVEN on 2026-10-15
+# by `p230` and written into PROSE (`intel/open-gaps.md:4347`).  It was never written into
+# any register a gate reads.  Six days later `p371` re-counted it as one of "46 dead
+# addresses" and opened `Gap 483` to adjudicate it again.  🔵 `p371` named this exact
+# failure mode in its own README -- "committed knowledge that is not wired into the next
+# instrument gets paid for twice" -- while paying for it.  This file is the wiring, and
+# `gate-dead-citation` reads it.
+#
+# PROOF STANDARD.  `first_hand_proof` must name evidence from the PAYLOAD or the TRANSPORT,
+# not an assertion.  A rename cannot be proven by ref-set fingerprint here (the dead address
+# has no ref set to fingerprint), so the proof is the SUCCESSOR's own committed tree.
+dead_address	successor	state	refs_p372	head_p372	licence_p372	first_hand_proof	note
+apereo/opencast	opencast/opencast	MOVED-PROVEN	7870	9767932b7902 (2026-10-19)	ECL-2.0 (`LICENSE`, 11 340 B, "Educational Community License, Version 2.0")	🟢 the SUCCESSOR's own committed `NOTICES` lines 1-3 read "Copyright <2015>, The Apereo Foundation / This project includes software developed by The Apereo Foundation. / http://www.apereo.org/" — read from a blobless partial clone at `p372`	Lecture capture and video management for education. Live and maintained: HEAD is 2 days before this pass. 🟢 Ships `AGENTS.md` and `CLAUDE.md` (8 587 B, byte-identical) in-tree
+AlekSIS/AlekSIS-Core	edugit.org/AlekSIS	ALIVE-OTHER-FORGE-SECONDARY	—	—	EUPL-1.2 (per the project's own release metadata)	🔴 NO first-hand proof is possible from this environment: `edugit.org` answers `CONNECT tunnel failed, response 403`. Secondary only: the NLnet project page for AlekSIS and the PyPI `AlekSIS-Core` release pages both name edugit.org as the source location	🟡 Teckids e.V., Bonn — EMEA. 🔴 EUPL-1.2 is COPYLEFT: a studio cannot build proprietary on it. Individual apps live on a THIRD host (`code.teckids.org`)
+1EdTech/caliper-java	—	ABSENT-SIBLING-LIVE	0	—	—	🟢 `1EdTech/caliper-spec` (400 refs) and `1EdTech/openbadges-validator-core` (182 refs) both answer at `p372`; `imsglobal/caliper-java` (pre-rename org) does NOT	🔴 The SPEC is maintained and the Java REFERENCE IMPLEMENTATION is not retrievable at either org spelling
+concentricsky/badgr-server	—	ABSENT-NO-SIBLING	0	—	—	🟢 both `concentricsky/badgr-server` and `1EdTech/badgr-server` answer `fatal: Authentication failed` at `p372`	🔴 The Open Badges reference SERVER is gone at every address this base can construct
+yetanalytics/lrspipe	—	ABSENT-SIBLING-LIVE	0	—	—	🟢 `yetanalytics/lrsql` (764 refs) answers; `yetanalytics/lrs-pipe` does not	🟡 Vendor alive, xAPI pipeline component gone
+UOC/java-lti-1.3-provider	—	ABSENT-SIBLING-LIVE	0	—	—	🟢 `UOC/java-lti-1.3` (38 refs) and `UOC/java-lti-1.3-provider-example` (17 refs) both answer	🟡 NOT proven to be a rename — the EXAMPLE outlived the provider it exemplifies
+plastic-labs/bloom	—	ABSENT-SIBLING-LIVE	0	—	—	🟢 `plastic-labs/honcho` (1 574 refs) answers	🟡 Owner alive; the Bloom tutor address is gone
+fh-yarbouh/oak-curriculum-ontology	oaknational/oak-curriculum-ontology	FORK-OF-LIVE-CANONICAL	49	—	OGL-3.0 + MIT (split, already shelved)	🟢 `oaknational/oak-curriculum-ontology` (49 refs) and `oaknational/oak-open-curriculum-ecosystem` (2 095 refs) both answer at `p372`	🟢 NO shelf repair needed: the canonical is already the shelved row. This base recorded the dead address as a fork at `repos/trending.md:29346`
+cdweaver1992/edfi-mcp-server	—	EXISTS-EMPTY	0	—	none shipped	🟢 `git clone --depth 1` answers rc=0 with "warning: You appear to have cloned an empty repository."	🔴 NOT dead. An Ed-Fi MCP server that was NAMED and never shipped
+openfresno/edgenuity-aeries-grade-passback	—	EXISTS-EMPTY	0	—	none shipped	🟢 same self-labelling clone answer at `p372`	🔴 NOT dead. An Edgenuity<->Aeries grade-passback bridge that was NAMED and never shipped

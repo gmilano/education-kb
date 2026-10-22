@@ -201,6 +201,67 @@ sweep: 277 live, 0 dead** — and, for the first time since `p355`, a **star
 re-derivation**: the GitHub index is open through the session's MCP search tool, though
 `api.github.com` still answers 403 by `curl`. See `agents/top.md`.
 
+## 🟢 🆕 `p372`: a PLATFORM recovered from the dead-address list — permissive, maintained, and proven from the successor's own tree
+
+**Evidence:** [`dead-successor-register`](../evidence/dead-successor-register.2026-10-21-p372.tsv) ·
+[`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) ·
+[`rename-redirect-control`](../evidence/rename-redirect-control.2026-10-21-p372.tsv)
+
+🔵 All probes below taken **2026-10-21**, first-hand, by `git ls-remote` and one blobless
+partial clone. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+🔴 **`Gap 483` listed 46 addresses as dead. One of them is a maintained education platform
+that this shelf does not carry.** `apereo/opencast` is indeed absent — and
+**`opencast/opencast` answers with 7 870 refs, HEAD `9767932b7902` dated 2026-10-19, two
+days before this pass.**
+
+| Platform | Address | Licence | Grant path | Refs | Region | What it is, and why it belongs on this shelf |
+|---|---|---|---|---:|---|---|
+| 🆕 Opencast | [opencast/opencast](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** — `Educational Community License, Version 2.0`, read from payload (`LICENSE`, 11 340 B) | `LICENSE` | **7 870** | **Global** | 🟢 **Lecture capture and video management for education** — recording, processing, and distributing lecture video at institutional scale. ECL-2.0 is an Apache-2.0 derivative and **permissive**, so a closed deliverable is possible. 🟢 Same grant family as **Sakai**, already on this shelf |
+
+🟢 **The successor link is proven from the successor's own committed tree, not asserted.**
+`opencast/opencast`'s `NOTICES` opens:
+
+> `Copyright <2015>, The Apereo Foundation` ·
+> `This project includes software developed by The Apereo Foundation.` · `http://www.apereo.org/`
+
+🔵 That matters because the usual identity proof on this base — `p370`'s ref-set
+fingerprint — **cannot work here**: the dead address has no ref set to fingerprint. The
+payload is the only channel that can carry the link, and it does.
+
+### 🟢 Why this row changes an engagement answer
+
+🟢 **The video tier was a hole on this shelf.** An institution's lecture-capture estate is
+usually the single largest media system in the stack, and this base's platform tiers
+covered LMS, SIS/ERP, assessment, integrity and code execution — **not video**. A client
+asking for AI transcription, search-in-video, chaptering or auto-captioning over existing
+lecture recordings now has a permissive, maintained base to start from rather than a
+proprietary capture vendor.
+
+🟢 **And it is already agent-aware.** Opencast ships **`AGENTS.md` and `CLAUDE.md` in-tree,
+8 587 B and byte-identical** — an education platform publishing harness instructions for
+coding agents alongside its build docs. 🔵 That is the first instance of this shape on
+this base's platform shelf, and it is recorded as an observation on **one** repository, not
+as a trend.
+
+### 🟡 One platform NOT promoted, and the reason is the channel
+
+| Platform | Address | Licence | Status at `p372` |
+|---|---|---|---|
+| AlekSIS | `AlekSIS/AlekSIS-Core` (GitHub) — **absent**; project lives at `edugit.org/AlekSIS` | 🔴 **EUPL-1.2** — copyleft | 🟡 **RECORDED, NOT SHELVED.** The GitHub address answers `fatal: Authentication failed`. The real home, `edugit.org`, answers **`CONNECT tunnel failed, response 403`** to this environment, so liveness is **UNMEASURED first-hand** |
+
+🔴 **It is not shelved because the evidence is secondary** — the NLnet project page for
+AlekSIS and the PyPI `AlekSIS-Core` release pages both name `edugit.org` as the source
+location, and that is corroboration, not a probe. 🟢 **Two things are worth carrying even
+so.** First, a German school-information system that Brazilian- or German-sector work might
+reach for is **EUPL-1.2**, which is copyleft: a closed deliverable built on it is not
+available, and the "SIS/ERP" tier of this shelf should not imply otherwise. Second, its
+individual apps live on a **third** host (`code.teckids.org`), so an engagement that
+budgeted one forge has mis-specified the integration surface before any licence question.
+
+🔵 **Recorded as `Gap 487`** — AlekSIS liveness and grant need an environment that can
+reach `edugit.org`. Same shape as `Gap 241`: a network-policy request, not a scheduling one.
+
 ## 🔴 `p364`: the permissive headline with the copyleft deployment — and the version axis nobody here was reading
 
 ### The correction: `openfun/marsha`

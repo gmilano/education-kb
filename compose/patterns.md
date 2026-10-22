@@ -18,6 +18,7 @@ Each one names the specific repos and how to wire them.
 | 5 | Offline-first delivery for low-connectivity regions | Rural LATAM, Sub-Saharan Africa, remote APAC |
 | 6 | Modernising a legacy SCORM corporate estate | Enterprise L&D with years of SCORM content |
 | 7 | Curriculum knowledge graph from raw textbooks | No structured curriculum data exists yet |
+| 12 | 🆕 AI over an existing lecture-video estate | Client has years of recordings and wants search, captions and chapters |
 | 8 | Verifiable credentials for skills-based hiring | Employability / workforce engagements |
 | 9 | Licence-clean programming-assessment stack | Coding academy, deliverable must be closed |
 | 10 | Add retention to a tutor that already works | Tutor exists, outcomes do not stick |
@@ -215,6 +216,23 @@ the registrar, and tie them to demonstrated skills rather than seat time.
 
 🔵 1EdTech names credentials a core 2026 mechanism for skills-based learning and
 hiring; this is the open stack for it.
+
+🔴 **`p372` CORRECTION to step 3, and it changes the cost of this pattern.** Step 3 says to
+carry evidence *"as Caliper/xAPI records"*, which reads as though a reference implementation
+were available to adopt. **It is not.** Probed first-hand **2026-10-21**: Caliper Analytics is
+absent in **all four** language bindings (`caliper-java`, `caliper-js`, `caliper-php`,
+`caliper-python`) across **both** org spellings (`1EdTech/`, `imsglobal/`), and the Open Badges
+reference server is absent at **both** of its (`concentricsky/badgr-server`,
+`1EdTech/badgr-server`). 🟢 **What IS maintained is the specification and the validators** —
+[`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) (400 refs) and
+[`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core)
+(182 refs) — plus a working xAPI store,
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (764 refs). 🔴 **So step 3 is an
+IMPLEMENT-FROM-SPEC task, not an adopt-a-library task**, and it should be estimated as one.
+🟢 **The cheapest licence-clean route is xAPI, not Caliper:** `lrsql` exists and runs, whereas
+Caliper has no retrievable client at all — this base's own earlier measurement found that the
+one live Caliper client, `npm:@timeback/caliper`, ships **no grant and no source**. See
+`intel/trends.md` **Trend E**.
 
 ## 🆕 Pattern 9 — A licence-clean programming-assessment stack for a coding academy
 
@@ -1573,3 +1591,48 @@ offline gate runs, and they replace the artefact a client's counsel will otherwi
 a scoping document whose integration assumption rests on an unlicensed repository.
 🔴 **Prerequisite:** git over https. It needs **no** GitHub API and **no** HTML — both of
 which were 403 in this environment on the day this pattern was written.
+
+## 🆕 Pattern 12 — AI over an existing lecture-video estate, on a permissive base
+
+**Problem.** A university has years of lecture recordings in a capture system and wants
+transcription, search-inside-video, auto-chaptering and captions for accessibility
+compliance. 🔴 **The usual blocker is that the capture vendor is proprietary**, so the
+deliverable either locks the client in further or cannot be built at all.
+
+🟢 **Why this pattern exists now.** `p372` recovered the platform tier this base had no row
+for: [`opencast/opencast`](https://github.com/opencast/opencast) — **ECL-2.0**, **7 870 refs**,
+HEAD `9767932b7902` dated **2026-10-19**, read from payload. ECL-2.0 is an Apache-2.0
+derivative and **permissive**, so a closed deliverable is available. 🔵 It is the same grant
+family as **Sakai**, already on `verticals/solutions.md`.
+
+**Recipe.**
+1. **The video platform itself:** [`opencast/opencast`](https://github.com/opencast/opencast)
+   (ECL-2.0) — ingest, processing, distribution. Build with the repo's own Maven wrapper
+   (`./mvnw`), which its in-tree `AGENTS.md` makes a hard requirement; a system `mvn` breaks
+   `${opencast.basedir}` resolution.
+2. **Transcription as an Opencast workflow operation, not a bolt-on.** Opencast's processing
+   model is workflow operations over a media package, so ASR belongs **inside** it — the
+   output lands as a track on the same media package and inherits its access control.
+   🟢 That is the difference between a captioning pilot and something a registrar can run.
+3. **Search and chaptering:** index the transcript segments with their timecodes into
+   [`qdrant/qdrant`](https://github.com/qdrant/qdrant) (Apache-2.0) and serve retrieval over
+   it; chapter boundaries come from the same segments, so no second model is needed.
+4. **Reach the LMS over LTI, never by integration into it:** [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)
+   (Apache-2.0), exactly as Pattern 1 does. 🟢 Moodle's GPL-3.0 and Canvas's and Open edX's
+   AGPL-3.0 then never touch your code.
+5. **Learning records, if the client wants them:** [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)
+   (764 refs) as the xAPI store. 🔴 **Not Caliper** — see the `p372` correction on Pattern 8:
+   Caliper has no retrievable reference client in any language.
+
+🔴 **The licence line that decides the engagement.** Opencast (ECL-2.0), Tsugi
+(Apache-2.0) and Qdrant (Apache-2.0) are all permissive, so **steps 1–4 can ship closed**.
+🟢 Nothing in this chain is copyleft, and the only copyleft in the picture — the LMS — is
+reached across an LTI boundary.
+
+🟡 **What is NOT established, stated so it is not assumed.** This pass read Opencast's
+`LICENSE`, `NOTICES`, `README.md`, `pom.xml` and root file list from a blobless partial clone.
+🔴 It did **not** enumerate the grants of Opencast's **own dependencies**, and this base has a
+standing finding (`p364`) that a permissive headline can carry a copyleft deployment
+component. 🟢 Before quoting this pattern, run `p364-companion-closure` and
+`dependency-licence-closure` over the Opencast tree. **Cost: one partial clone plus two
+offline gate runs** — the same price Pattern 9 and Pattern 11 pay, and for the same reason.

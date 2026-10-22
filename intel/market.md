@@ -204,6 +204,120 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🟢 🆕 `p372`: `Gap 476`'s hypothesis TESTED and CONFIRMED — the near-nils were a QUERY-LANGUAGE artefact, and the in-language legs returned a risk-classification regime for school AI in Brazil and the German school sector's own high-risk position
+
+**Evidence:** [`region-leg-inlanguage`](../evidence/region-leg-inlanguage.2026-10-21-p372.tsv)
+
+🔵 All legs run **2026-10-21**, same pass, same tool, English and in-language side by side.
+🔴 **Everything in this section is SECONDARY** — it is search-returned reporting, not a
+first-hand probe. The grant and liveness claims elsewhere on this base are first-hand; these
+are not, and are marked so throughout.
+
+### 🟢 The controlled result, because thirteen passes of nil deserved a test rather than a fourteenth nil
+
+🟢 **`Gap 476` said the regional leg's thirteen consecutive near-nil returns were caused by a
+MONOLINGUAL query assumption, not by an absence of regional fact.** `p372` ran the brief's
+prescribed English query **and** an in-language query for the same region, in the same pass.
+
+| Region | English leg | In-language leg | Delta |
+|---|---:|---:|---|
+| North America | **3** facts | — (not needed; the corpus is English) | 🟢 English adequate here |
+| EMEA | 🔴 **0** facts | 🟢 **4** facts (German) | 🟢 **0 → 4 on one language switch** |
+| APAC | 🟢 **2** facts, both dated statutes | — | 🟢 productive unreshaped this pass |
+| LATAM | 🟢 **3** facts | 🟢 **4** facts (Portuguese) | 🟢 **the most consequential fact of the pass came from the non-English leg** |
+
+🔴 **This base has now found the language axis three times and made it standing zero times.**
+`P521` recorded that *"a Portuguese-language query returned six trees that ten passes of
+English queries had missed"*; `ACTION ZZ-cc` registered that *"the prescribed per-region
+query should name countries, not regions"*; `Gap 476` stated the hypothesis. 🟢 **At `p372`
+it becomes an invariant:** `gate-dead-citation`'s `I4` refuses a published regional nil
+unless an in-language leg was also run, and it was negative-controlled — removing the German
+row turns the gate red.
+
+### 🟢 LATAM: Brazil now has a RISK-CLASSIFICATION regime for AI in schools, and a state bill with a statutory preference for open source
+
+🔴 **This is the finding a LATAM education proposal has to know, and the English leg did not
+return it.** Reported via the Portuguese leg, all **secondary, single-source each**:
+
+- 🔴 **Brazil's Conselho Nacional de Educação has approved the country's first regulation
+  specifically for AI use in schools.** As reported: children up to the **5th year** of
+  *ensino fundamental* may not use AI tools **without supervision**; AI **may not
+  autonomously grade** texts or exams that require interpretation; and **technologies used
+  in schools are classified by the risk they pose to students**.
+- 🟢 **Goiás** may pass the country's first *state* AI policy, and the draft includes a
+  **statutory preference for open-source AI**, AI in the public-school curriculum, and a
+  state compute centre. 🟡 **A text under discussion, not a law.**
+- 🔵 **MEC regulatory sandbox:** the call ran **30 March – 13 May 2026**; the window has
+  closed and the outcome is not in these results.
+- 🔵 **`PL 3615/2026`**, filed **9 July 2026**, inserts AI into the digital-education focus
+  of the LDB for fundamental and secondary education.
+
+🔴 **Why it changes a proposal.** A risk-classified school-technology regime plus a
+no-autonomous-grading rule means **the automated-grading recipes on this base cannot be sold
+into Brazilian schools as autonomous graders** — they have to be specified as
+teacher-in-the-loop, for interpretive work by rule rather than by preference. 🟢 And a
+statutory open-source preference in Goiás is a procurement *advantage* for exactly the
+permissive shelf this base maintains.
+
+🟡 **What is still missing, stated so the gap is not mistaken for coverage:** the **CNE
+resolution's own number and text**. The claim above rests on reporting, not on the primary
+instrument. 🔵 Registered as **`Gap 485`**.
+
+### 🟢 EMEA: the German leg reached the education-HIGH-RISK question that `Gap 241` has been unable to reach for six passes — and it did it through a non-EU-institutional host
+
+🟢 **`Gap 241` is blocked on egress:** `eur-lex.europa.eu`, `education.ec.europa.eu`,
+`oecd.org` and `unesco.org` all answer `000` from this environment, re-tested a sixth time at
+`p371`. 🔵 **The German leg did not need them.**
+
+- 🟢 **The Niedersächsisches Landesinstitut für schulische Qualitätsentwicklung (NLQ), with
+  Wikimedia Deutschland, held the second *"Offene KI in der Schule"* conference in
+  **February 2026**, and its *Ergebnisbericht* is published** (hosted on Wikimedia Commons —
+  reachable, unlike the EU institutional hosts). 🔴 **Its recommendation is precisely the
+  open question `Gap 241` tracks: define clearly WHEN educational AI counts as high-risk.**
+  It also names the **usage and copyright status of open-weights models** as unresolved for
+  school deployment.
+- 🟢 **Baden-Württemberg** runs its **`F13`** AI assistant on an open-source approach with
+  the architecture published on **Open CoDE**. 🟡 **Public administration, not schools** —
+  scoped honestly rather than counted as an education win.
+- 🟢 **Federal:** the **`KIPITZ`** platform is to use **exclusively open-source language
+  models**, with Länder and Kommunen reached through the **"Deutschland-Stack"**.
+- 🔵 **Older context:** a Bundestag document records an eight-Land AI-supported school-cloud
+  programme with **€55M** federal funding; its 2026 status is not in these results.
+
+🔴 **`Gap 241` does NOT close.** The Annex III date and `Regulation (EU) 2026/1744` still
+have no primary-source confirmation from here. 🟢 **What changed is that the substantive
+question — what counts as high-risk educational AI — has been reached for the first time,
+from a member-state school authority rather than from the Commission.** For an EMEA
+engagement that is the more useful artefact anyway: the body a German school actually answers
+to has published its working position.
+
+### 🟢 APAC: the 2026 clock has two more dated statutes, and one of them names education explicitly
+
+- 🟢 **Vietnam's AI law took effect 1 March 2026**, with grace periods of **up to 18 months
+  for legacy high-risk systems in health, education and finance**. 🔴 **Education is named
+  in the high-risk tier**, and the grace window means **legacy** school systems have a
+  deadline rather than an exemption.
+- 🟢 **South Korea's AI Basic Act entered into force 22 January 2026**; sector-specific
+  guidelines are still being issued, so the education-specific obligations are **not yet
+  readable**.
+- 🔵 APAC AI-in-education market, vendor projection, recorded as such: **$591.6M (2024) →
+  $1 848.1M (2029), ~20.9% CAGR.**
+
+### 🟡 North America: the adoption-vs-governance gap is the figure to lead with, and it is wider than LATAM's
+
+- 🔴 **10%** of institutions have formal AI guidelines; **71%** of US teachers report no AI
+  training; the region still holds the largest share of spend (**36%**).
+- 🔵 **Regulation is a vacuum with state-level patches** — Colorado and Texas named as
+  introducing piecemeal requirements, with no education-sector federal instrument. Canada's
+  **AIDA** remains a **proposal**, not enacted.
+- 🟡 Market projection, vendor-sourced: **$951M (2024) → $2 303.2M (2029), ~15.9% CAGR.**
+
+🔵 **The cross-regional reading.** LATAM's often-quoted weakness — *"only ~30% of
+universities have published AI policies"* — is **better than North America's institutional
+figure of 10%**, measured against a comparable denominator. 🟢 **A LATAM engagement should
+not be positioned as governance-behind.** The governance gap is global; LATAM's is simply the
+one that has been measured and published most often.
+
 ## 🟡 `p371`: all four regional legs ran in both forms — **the thirteenth consecutive near-nil on the PRESCRIBED form, two new facts in four regions — and the supply side was measured instead, first-hand, for 1 859 addresses**
 
 🔵 **Both forms were run again deliberately, because `Gap 476`/`ACTION ZZ-cc` is a claim

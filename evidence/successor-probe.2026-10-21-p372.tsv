@@ -1,0 +1,49 @@
+# p372 — candidate successors / live siblings, each probed FIRST-HAND 2026-10-21 by git ls-remote.
+# A successor is PROVEN only where the candidate answers with a ref set.  Where the candidate is
+# a sibling rather than the same project, the class is OWNER-ALIVE-REPO-ABSENT and this file says so:
+# an owner still shipping is NOT the same claim as a rename, and this base does not conflate them.
+dead_address	candidate_probed	lsremote	refs	relation_established
+apereo/opencast	opencast/opencast	OK	7870	🟢 SUCCESSOR PROVEN — same project, new org. p230 proved this on 2026-10-15 and it was never written into the alias register
+1EdTech/caliper-java	imsglobal/caliper-java	NO-REMOTE	0	🔴 pre-rename org spelling also absent — both spellings dead
+1EdTech/caliper-java	1EdTech/caliper-spec	OK	400	🟡 SIBLING — the Caliper Analytics SPEC is maintained; the Java reference implementation is not retrievable
+1EdTech/caliper-java	1EdTech/openbadges-validator-core	OK	182	🟡 SIBLING — the 1EdTech org is live and shipping validators
+concentricsky/badgr-server	concentricsky/badgr-server	NO-REMOTE	0	🔴 Open Badges reference SERVER absent at both known addresses
+concentricsky/badgr-server	1EdTech/badgr-server	NO-REMOTE	0	🔴 post-rename org spelling also absent
+yetanalytics/lrspipe	yetanalytics/lrs-pipe	NO-REMOTE	0	🔴 hyphenation variant absent
+yetanalytics/lrspipe	yetanalytics/lrsql	OK	764	🟡 SIBLING — the vendor's LRS product is live; the pipeline component is gone
+UOC/java-lti-1.3-provider	UOC/java-lti-1.3	OK	38	🟡 SIBLING — LTI 1.3 work continues under a shorter name; NOT proven to be the same repository renamed
+UOC/java-lti-1.3-provider	UOC/java-lti-1.3-provider-example	OK	17	🟡 SIBLING — the EXAMPLE outlived the provider it exemplifies
+plastic-labs/bloom	plastic-labs/honcho	OK	1574	🟡 SIBLING — Plastic Labs is live; the Bloom tutor address is gone
+fh-yarbouh/oak-curriculum-ontology	oaknational/oak-curriculum-ontology	OK	49	🟢 CANONICAL is live — the dead address was a FORK (this base recorded it as a fork at repos/trending.md:29346)
+fh-yarbouh/oak-curriculum-ontology	oaknational/oak-open-curriculum-ecosystem	OK	2095	🟢 companion live and already shelved
+AlekSIS/AlekSIS-Core	AlekSIS/AlekSIS	NO-REMOTE	0	🔴 no GitHub address answers
+AlekSIS/AlekSIS-Core	edugit.org/AlekSIS/official/AlekSIS-Core	🔴 PROXY-REFUSED	0	🟡 ALIVE-OTHER-FORGE on SECONDARY evidence (NLnet project page + PyPI AlekSIS-Core releases both name edugit.org); first-hand probe impossible from here
+apereo/opencast	apereo/opencast-helm	NO-REMOTE	0	🔴 no second apereo address survives
+superbuilders/timeback-dev-python	superbuilders/timeback	NO-REMOTE	0	🔴 no shorter-name sibling
+# ---- p230 CLOSURE ARM, added at p372 ----
+# p230's sweep (2026-10-15) produced 26 ABSENT verdicts with the same two-outcome classifier
+# that p371 used.  Six of them were NOT in p371's 46 and so had never been re-probed with the
+# rc-first classifier.  All six re-probed here: all genuinely ABSENT (rc=128), no EXISTS-EMPTY
+# among them.  🟢 The empty-repo exposure across BOTH prior absence sweeps is therefore now
+# FULLY MEASURED at exactly 2 instances, not left open as a gap.
+1EdTech/caliper-js	(self, re-probe)	NO-REMOTE	0	🔴 ABSENT confirmed — Caliper JS binding
+1edtech/caliper-php	(self, re-probe)	NO-REMOTE	0	🔴 ABSENT confirmed — Caliper PHP binding
+imsglobal/caliper-python	(self, re-probe)	NO-REMOTE	0	🔴 ABSENT confirmed — Caliper Python binding, pre-rename org
+concentricsky/badgr-server	(self, re-probe)	NO-REMOTE	0	🔴 ABSENT confirmed — Open Badges reference server
+Epesi-Team/epesi	(self, re-probe)	NO-REMOTE	0	🔴 ABSENT confirmed
+tuanha/vgu-mcp	(self, re-probe)	NO-REMOTE	0	🔴 ABSENT confirmed — single-author MCP tier
+# ---- LIVE-SHELF SPOT-CHECK ARM, p372 ----
+# gate-dead-citation's I2 proves no address from Gap 483's 46 is a live-shelf row.  That is not
+# the same as "the live shelves point at live addresses".  Nine learning-record / standards-layer
+# rows carried on agents/top.md and repos/foundations.md were therefore probed first-hand.
+# ALL NINE ARE LIVE.  🟢 And the first of them matters for scope: the apereo ORGANISATION is NOT
+# defunct -- only `apereo/opencast` moved.  p372 does not claim otherwise.
+apereo-learning-analytics-initiative/sakaixapi-provider	(self)	OK	20	🟢 LIVE — the apereo-family org is active; only `apereo/opencast` moved
+adlnet/xAPI-Spec	(self)	OK	904	🟢 LIVE
+adlnet/SCORM-to-xAPI-Wrapper	(self)	OK	13	🟢 LIVE
+LearningLocker/learninglocker	(self)	OK	1385	🟢 LIVE
+openfun/ralph	(self)	OK	589	🟢 LIVE
+jeffyding/OpenLRW	(self)	OK	2	🟢 LIVE — thin ref set, and the small-refset control proves 2 refs is not an empty advertisement
+digital-learning-gmbh/educa-lrs	(self)	OK	15	🟢 LIVE
+pawelkn/xapi-rs	(self)	OK	17	🟢 LIVE
+peterszombati/xapi-node	(self)	OK	277	🟢 LIVE

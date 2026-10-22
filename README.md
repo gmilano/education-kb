@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 372 — 2026-10-21 — **`Gap 483` IS CLOSED AND ITS FIGURE OF 46 WAS WRONG IN BOTH DIRECTIONS: TEN OF THE 46 WERE NEVER ADDRESSES AND TWO ARE LIVE REPOSITORIES THAT TWO PASSES PUBLISHED AS DEAD. 🔴 THE ONE ADDRESS WITH A PROVEN SUCCESSOR HAD BEEN PROVEN SIX DAYS EARLIER AND FILED ONLY IN PROSE. 🟢 AND `Gap 476`'s HYPOTHESIS, TESTED UNDER CONTROL, IS CONFIRMED — THE ENGLISH EMEA LEG RETURNED 0 FACTS AND THE GERMAN LEG RETURNED 4.**
+
+🔵 **A dating note, and this pass is the first here where it bites.** Every read and probe
+below was taken on **2026-10-21** and every evidence file is named for that date. 🔴 **The
+commit lands on 2026-10-22**, because the pass ran across local midnight. 🟢 The artefacts
+keep the **measurement** date, per this base's standing rule — artefacts are dated by
+MEASUREMENT, never by commit — so a `p372` filename reading `2026-10-21` beside a `2026-10-22`
+commit timestamp is **correct, not stale**, and a successor should not "fix" it.
+
+**Evidence:** [`dead-citation-reprobe`](evidence/dead-citation-reprobe.2026-10-21-p372.tsv) ·
+[`dead-successor-register`](evidence/dead-successor-register.2026-10-21-p372.tsv) ·
+[`successor-probe`](evidence/successor-probe.2026-10-21-p372.tsv) ·
+[`rename-redirect-control`](evidence/rename-redirect-control.2026-10-21-p372.tsv) ·
+[`empty-repo-clone-control`](evidence/empty-repo-clone-control.2026-10-21-p372.txt) ·
+[`proxy-refusal`](evidence/proxy-refusal.2026-10-21-p372.tsv) ·
+[`region-leg-inlanguage`](evidence/region-leg-inlanguage.2026-10-21-p372.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Gaps closed** | `Gap 483` (**closed** — all 46 re-probed first-hand and re-derived into 8 classes) |
+| **Gap tested instead of restated** | `Gap 476` (**CONFIRMED under control**, same pass, same tool, two languages) |
+| **Instrument added** | `p372-dead-citation` (28 controls, 11 groups, four invariants, standing as `gate-dead-citation`) |
+| **Register added** | `dead-successor-register` — 🔴 the register `apereo/opencast` needed at `p230` and did not get |
+| **Gates** | 🟢 **39/39 green**, up from **38/38** at `p371`'s HEAD |
+| **Probes, all first-hand** | **46** re-probes · **18** successor candidates · **6** `p230`-closure re-probes · **4** rename-redirect controls · **4** clone probes · **1** blobless partial clone; 🔴 **0** successful `api.github.com` or `github.com` HTML calls — both **403** |
+| **The denominator corrected** | 🔴 `Gap 483` asserted **46 dead**; re-derived, **34** are absent and **12 are not dead at all** |
+| **The figure a studio needs** | 🔴 **Ten of ten** candidate reference-implementation addresses for Caliper, Open Badges, xAPI and LTI 1.3 are **unretrievable**, while every one of those standards has a **maintained** spec or validator sibling |
+| **Shelf gained** | 🟢 `opencast/opencast` — **ECL-2.0**, 7 870 refs, HEAD **2026-10-19** — the video tier this base had no row for |
+| **New gaps** | **485** (the CNE resolution's primary text) · **486** (no successor-search channel for the 27) · **487** (`edugit.org` egress) |
+
+### 🔴 The finding, in one sentence
+
+🔴 **`Gap 483`'s "46 dead addresses" contained ten strings that were never addresses — and
+this base was already rejecting five of them in a GREEN STANDING GATE.**
+`p351-address-shape`, run by `gate-address-shape` on every `make hooks`, classifies
+`repos/moodle`, `repos/HKUDS`, `repos/openedx` and `repos/dodona-edu` as **`NAV-NAMESPACE`**
+(a slug extractor matching inside an API URL: `api.github.com/repos/HKUDS/DeepTutor` yields
+`repos/HKUDS`) and `your-username/SafeTutors` as **`PLACEHOLDER-OWNER`**. The other five are
+slugs this base **fabricated** as negative controls for its own existence oracles.
+🔴 **Plus two LIVE repositories that hold zero commits and therefore answer `rc=0` with an
+empty ref advertisement**, which `p230` called `GONE` and `p371` called `NO-REMOTE`.
+🟢 **34 are genuinely absent, and `git clone` names the live class itself:** *"warning: You
+appear to have cloned an empty repository."*
+
+### 🟢 What a reader should take from it
+
+🟢 **An absence verdict is three questions, and running them together is what produced a
+wrong figure twice.** *Is the string an address? Does the address answer? Is a dead address
+being cited as a live claim, or as a record of a measurement?* 🔵 The third question is the
+one that decides the remedy, and `gate-dead-citation`'s `I2` answers it mechanically: **zero**
+of the 34 absent addresses is a linked row on any live shelf. They sit in append-only
+histories, where rewriting them would destroy the very trend those files exist to record.
+🟢 **`Gap 483`'s prescribed remedy — "repoint or retract" — was therefore mostly already
+satisfied by this base's structure; the one repair the shelves needed was an ADDITION.**
+
+🔴 **The defect worth copying out of this pass is `E2`, and `p372` can state it more sharply
+than `p371` could.** 🔵 The failure mode is NOT that knowledge goes unrecorded — the
+`repos/*` rejections sit in a **green standing gate** and the Opencast successor sits in
+**committed prose**. 🔴 **It is that two instruments measuring the same corpus never read
+each other's verdicts:** `p351`'s address-shape census and every absence census here have
+run side by side for scores of passes without one ever consulting the other, so a string
+this base formally rejects as a non-address was still counted as a dead address. 🟢 `p372`
+joins them in `I1`, which cross-checks every filed class against what the classifier would
+assign.
+
+🔴 **And the narrower version of the same thing, which `p371` named while committing it:** `apereo/opencast → opencast/opencast` was **proven on 2026-10-15** by
+`p230` and written into prose at `intel/open-gaps.md:4347`. It was never written into any
+register a gate reads, so six days later `p371` counted it among 46 unknowns and opened a gap
+to adjudicate it again. 🔵 *"Committed knowledge that is not wired into the next instrument
+gets paid for twice"* — this is the third consecutive pass to pay it (`p369`'s `LICENSE.TXT`,
+`p371`'s `https://` host rule, now this). 🟢 **`p372` answers with a register and an invariant
+rather than a fourth restatement**, and proves the successor from the successor's own
+committed `NOTICES` — because `p370`'s ref-set fingerprint, this base's usual identity proof,
+**cannot** settle a rename whose old address has no ref set.
+
+🟢 **And the control that had never been run is the reason any of this is safe.** Every
+absence verdict here rested on an untested assumption: that a renamed or transferred
+repository still answers at its old address. Measured at `p372`, it does —
+`Significant-Gravitas/Auto-GPT` returns 12 137 refs and `hwchase17/langchain` returns 27 996
+at their old addresses — so `NO-REMOTE` **excludes** rename and transfer. 🔵 **The verdicts
+are safe because that was measured, not because it was assumed.**
+
+🟢 **The other half of the pass is that a thirteen-pass nil turned out to be about the
+query.** `Gap 476` hypothesised that the regional legs' near-nils came from a monolingual
+query assumption. Run side by side in one pass: the prescribed **English** EMEA leg returned
+**0** education-specific dated facts; the **German** leg returned **4**, including the German
+school sector's own published position on when educational AI counts as high-risk — the
+substance `Gap 241` has been unable to reach for six passes, from a host outside the blocked
+EU institutional set. The **Portuguese** LATAM leg returned **Brazil's CNE school-AI
+regulation**: risk classification for school technology, no unsupervised AI below the 5th
+year, and **no autonomous AI grading of work that requires interpretation** — which means the
+automated-grading recipes on this base cannot be sold into Brazilian schools as autonomous
+graders at all. 🔴 **This base has found the language axis three times and made it standing
+zero times** (`P521`, `ACTION ZZ-cc`, `Gap 476`). 🟢 `I4` now refuses a published regional nil
+unless an in-language leg was run, and it was negative-controlled: removing the German row
+turns the gate red.
+
+🔴 **The commercial reading, and it is the part a studio should act on.** `p371` found
+credentialing to be the layer these shelves were missing. 🔴 **`p372` finds that the layer's
+runnable starting points are the part that has disappeared:** Caliper Analytics is absent in
+**all four** language bindings at **both** org spellings, the Open Badges reference server is
+absent at both of its, and the xAPI pipeline is absent at both spellings — while
+`caliper-spec`, `openbadges-validator-core` and `lrsql` are all maintained. 🟢 **For the
+interoperability layer in education, budget to implement the standard from its specification,
+not to adopt a reference implementation** — and treat *"there is a reference implementation"*
+in a 2026 roundup as a claim to probe, because ten of ten probed here are unretrievable.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed.** A census whose input is the shelves and whose publication sits
+in the pass that then writes to them is stale the moment it is written, so it is derived
+**last**. 🟢 Re-derived over the nine `SHELF_FILES` of the tree this pass commits:
+**2 683** harvested shapes → **33** are not addresses → **2 650 addresses**.
+
+🟢 **`gate-census-currency` went RED mid-pass**, on `2 682 → 2 683`, because `p372` wrote
+`opencast/opencast` onto `verticals/solutions.md` and `repos/trending.md` after the triple
+had been derived — exactly the staleness `p352` built it to catch. 🔵 The triple above is the
+re-derivation; `p371`'s **2 682 / 33 / 2 649** is left standing in its own section, because
+it was correct for the tree `p371` committed and **history is not edited to match a later
+derivation**.
+
+🔵 **The one net address this pass adds is the whole delta**, which is the honest size of
+`p372`: its work was corrective and instrumental, not acquisitive — 46 re-probes, 18
+successor candidates, six closure re-probes, one new standing gate, one recovered platform.
+
 ## Pass 371 — 2026-10-21 — **`Gap 477` IS CLOSED: ALL 1 859 REMAINING BACKLOG ADDRESSES GRADED FROM PAYLOAD, 1 859 OF 1 859 ANSWERED. 🔴 AND RUNNING `p370`'s DOMAIN CHECK OUT OF SAMPLE — THE OBLIGATION IT DECLARED ON ITSELF — DROPPED ITS 92.6 % TO 76.5 % AND SHOWED THE INDUSTRY'S UNSHELVED LAYER IS CREDENTIALING, NOT TUTORING. 🟢 450 ADDRESSES ARE NOW PLACED IN A REGION FROM THEIR OWN PAYLOAD.**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every

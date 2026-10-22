@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 🔴 🆕 `p372`: the learning-record and credentialing rows on this shelf are LIVE — and the REFERENCE IMPLEMENTATIONS behind the standards they speak are not
+
+**Evidence:** [`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) ·
+[`dead-citation-reprobe`](../evidence/dead-citation-reprobe.2026-10-21-p372.tsv)
+
+🔵 All probes **2026-10-21**, first-hand `git ls-remote`. 🟢 Artefacts are dated by MEASUREMENT.
+
+🟢 **The good news first, because it bounds the finding.** Nine learning-record and
+standards-layer rows carried on this shelf and on `repos/foundations.md` were probed
+first-hand and **all nine are live**: `apereo-learning-analytics-initiative/sakaixapi-provider`
+(20 refs), `adlnet/xAPI-Spec` (904), `adlnet/SCORM-to-xAPI-Wrapper` (13),
+`LearningLocker/learninglocker` (1 385), `openfun/ralph` (589), `jeffyding/OpenLRW` (2),
+`digital-learning-gmbh/educa-lrs` (15), `pawelkn/xapi-rs` (17), `peterszombati/xapi-node` (277).
+🔵 **And the apereo ORGANISATION is not defunct** — only `apereo/opencast` moved, to
+`opencast/opencast`. 🟢 `gate-dead-citation`'s `I2` separately proves that **none** of the 34
+absent addresses `p372` adjudicated is a linked row on any live shelf.
+
+🔴 **What IS missing is one layer down: the runnable reference implementations of the
+standards these rows speak.** Probed first-hand this pass, every candidate address:
+
+| Standard | Reference implementation probed | Result | Maintained sibling |
+|---|---|---|---|
+| **Caliper Analytics** | `caliper-java`, `caliper-js`, `caliper-php`, `caliper-python` across `1EdTech/` and `imsglobal/` | 🔴 **absent — ALL FOUR bindings, BOTH org spellings** | 🟢 [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) (400 refs) |
+| **Open Badges** | `concentricsky/badgr-server`, `1EdTech/badgr-server` | 🔴 **absent at both** | 🟢 [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) (182 refs) |
+| **xAPI** | `yetanalytics/lrspipe`, `yetanalytics/lrs-pipe` | 🔴 **absent at both** | 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (764 refs) |
+| **LTI 1.3** | `UOC/java-lti-1.3-provider` | 🔴 absent | 🟢 [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) (38), [`…-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) (17) |
+
+🔴 **Ten of ten candidate reference-implementation addresses are unretrievable, while every
+one of those standards has a maintained spec or validator sibling** — enumerated so the figure
+is checkable: `1EdTech/caliper-java`, `imsglobal/caliper-java`, `1EdTech/caliper-js`, `1edtech/caliper-php`, `imsglobal/caliper-python`, `concentricsky/badgr-server`, `1EdTech/badgr-server`, `yetanalytics/lrspipe`, `yetanalytics/lrs-pipe`, `UOC/java-lti-1.3-provider`. 🟢 **The engagement
+consequence is a budgeting one:** for education's interoperability layer, cost
+**implement-from-spec**, not **adopt-a-library** — and treat *"there is a reference
+implementation"* in a 2026 roundup as a claim to probe. 🔵 This is the operational edge of
+`p371`'s finding that credentialing is the layer these shelves were missing: the layer is thin
+everywhere, not just here, and the reason is that its runnable starting points are gone.
+
+🟡 **A cross-current recorded rather than resolved.** A 2026 edtech trends roundup rates
+skills-based **microcredentials as growing** while listing **blockchain credentialing among
+the trends fading fast** — which cuts against the Blockcerts-shaped part of the credentialing
+supply `p371` recovered. 🔴 One secondary source against first-hand payload evidence: recorded
+as a tension, not as a refutation. See `intel/trends.md` **Trend E**.
+
+
 # Education — AI agents worth building on
 
 ## Start here — the engagement shortlist

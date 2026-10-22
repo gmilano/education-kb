@@ -1,0 +1,47 @@
+slug	lsremote_p372	refs	class_p372	successor_or_sibling
+a-ariff/canvas-instant-mcp	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+Ahmed-html/unlimited-ai-platform	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+aule-org/AImauta	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+belentani7/aprende-brasil	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+Cleison-Morais/koba	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+Creaditor/frontend	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+Dondo0936/vietnamese-ai-for-beginner	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+EastArctica/canvas-mcp	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+Eduware-Inc/eduware-oneroster	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+GegoK12/gegok12	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+gegok12/school-erp	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+HanChein/ElimuAI	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+huaxx-lab/LeetLens	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+invincible-summer/Next-Tutor-Agent	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+jakerains/scormplayer	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+jmolpea/moodle-block_openaiagent	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+joojdev/academic-tracker-mcp	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+LongsightGroup/qti3-core	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+marsley01/Edyfra	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+NiccoloSalvini/mcp-moodle-staff	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+NiccoloSalvini/mcp-moodle-teacher	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+projectremedy-ai/remedy-canvas-lti	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+radhepa/Teacher-MCP	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+superbuilders/timeback-dev-python	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+tipsedu2019/tips_dashboard	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+xmike04/canvas-student-mcp	NO-REMOTE	0	ABSENT-NO-SUCCESSOR-FOUND	— (no enumeration channel: see proxy-refusal)
+AlekSIS/AlekSIS-Core	NO-REMOTE	0	ALIVE-OTHER-FORGE	edugit.org/AlekSIS (EUPL-1.2, Teckids e.V.) — secondary only, edugit.org proxy-refused
+cdweaver1992/edfi-mcp-server	OK-EMPTY-ADVERT	0	EXISTS-EMPTY	n/a — the address itself is live
+openfresno/edgenuity-aeries-grade-passback	OK-EMPTY-ADVERT	0	EXISTS-EMPTY	n/a — the address itself is live
+apereo/opencast	NO-REMOTE	0	MOVED	opencast/opencast
+moodle/moodle-definitely-not-a-real-repo-p152	NO-REMOTE	0	NOT-AN-ADDRESS/NEG-CONTROL	—
+openedx/fake-repo-zzz999	NO-REMOTE	0	NOT-AN-ADDRESS/NEG-CONTROL	—
+this-definitely-does-not-exist-xyz123/nope	NO-REMOTE	0	NOT-AN-ADDRESS/NEG-CONTROL	—
+this-org-does-not-exist-zzz9/nope	NO-REMOTE	0	NOT-AN-ADDRESS/NEG-CONTROL	—
+UniTime/this-repo-does-not-exist-xyz123	NO-REMOTE	0	NOT-AN-ADDRESS/NEG-CONTROL	—
+your-username/SafeTutors	NO-REMOTE	0	NOT-AN-ADDRESS/PLACEHOLDER	—
+repos/dodona-edu	NO-REMOTE	0	NOT-AN-ADDRESS/URL-PATH	—
+repos/HKUDS	NO-REMOTE	0	NOT-AN-ADDRESS/URL-PATH	—
+repos/moodle	NO-REMOTE	0	NOT-AN-ADDRESS/URL-PATH	—
+repos/openedx	NO-REMOTE	0	NOT-AN-ADDRESS/URL-PATH	—
+1EdTech/caliper-java	NO-REMOTE	0	OWNER-ALIVE-REPO-ABSENT	1EdTech/caliper-spec (400 refs), 1EdTech/openbadges-validator-core (182 refs)
+fh-yarbouh/oak-curriculum-ontology	NO-REMOTE	0	OWNER-ALIVE-REPO-ABSENT	oaknational/oak-curriculum-ontology (49 refs) — canonical; the dead address was a fork
+plastic-labs/bloom	NO-REMOTE	0	OWNER-ALIVE-REPO-ABSENT	plastic-labs/honcho (1574 refs)
+UOC/java-lti-1.3-provider	NO-REMOTE	0	OWNER-ALIVE-REPO-ABSENT	UOC/java-lti-1.3 (38 refs), UOC/java-lti-1.3-provider-example (17 refs)
+yetanalytics/lrspipe	NO-REMOTE	0	OWNER-ALIVE-REPO-ABSENT	yetanalytics/lrsql (764 refs)

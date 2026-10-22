@@ -30,6 +30,7 @@ REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
 DOMAIN_LOG ?= /tmp/education-kb-gate-domain-check.log
 REGIONPLACE_LOG ?= /tmp/education-kb-gate-region-place.log
 BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
+DEADCITE_LOG ?= /tmp/education-kb-gate-dead-citation.log
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
@@ -56,7 +57,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
-.PHONY: gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census
+.PHONY: gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -85,7 +86,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-address-shape gate-census-currency gate-grant-path \
              gate-companion-closure gate-bare-slug-channel \
              gate-refset-register gate-domain-check \
-             gate-region-place gate-backlog-denominator
+             gate-region-place gate-backlog-denominator \
+             gate-dead-citation
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -904,3 +906,19 @@ gate-region-place: ## p371 — a region comes from an institution or a standard 
 gate-backlog-denominator: ## p371 — `Gap 477`'s remainder is DERIVED from the shelves, never restated
 	@cd compose/code/p371-backlog-grade && { $(PY) -I test_build_backlog.py > $(BACKLOG_LOG) 2>&1 || { echo "🔴 p371-backlog-grade FAILED — its own report follows:" ; sed "s/^/   /" $(BACKLOG_LOG) ; false ; } ; } && echo "── p371-backlog-grade (8 controls: D1's '.../archive' relative path that entered the denominator as address number one, p351's tree-path and product-page classes, the .git fold, and the legal-dot negative control)" && echo "   PASS" || exit 1
 	@cd compose/code/p371-backlog-grade && $(PY) -I build_backlog.py ../../.. 2>&1 >/dev/null | sed "s/^/   /"
+
+# 🔴 p372 (`ACTION ZZ-cj`): `Gap 483` published *"46 addresses cited on these shelves answer
+# `NO-REMOTE` — they do not resolve at all."*  Re-probed first-hand at `p372`, **12 of the 46
+# are not dead**: TEN are not addresses (four are a slug extractor matching inside an API URL
+# — `api.github.com/repos/HKUDS/DeepTutor` yields `repos/HKUDS`; one is the documentation
+# placeholder `your-username/SafeTutors`, which this base had ALREADY labelled a citation
+# artefact; five are negative controls this base FABRICATED to test its own existence oracles)
+# and TWO are LIVE repositories holding zero commits, which answer `rc=0` with an EMPTY ref
+# advertisement.  `p230` called both of those `GONE` and `p371` called them `NO-REMOTE`.
+# 🔵 A classifier that keys on "zero refs" folds a live repository into the absent bucket.
+# 🔴 And `I3` is the invariant `apereo/opencast` needed: PROVEN at `p230`, written into prose,
+# never wired into a register a gate reads, re-adjudicated as unknown six passes later.
+# No network — it reads this pass's committed evidence.
+gate-dead-citation: ## ACTION ZZ-cj — a dead address may be RECORDED, never RECOMMENDED; and a proven successor must be REGISTERED
+	@cd compose/code/p372-dead-citation && { $(PY) -I test_dead_citation.py > $(DEADCITE_LOG) 2>&1 || { echo "🔴 p372-dead-citation FAILED — its own report follows:" ; sed "s/^/   /" $(DEADCITE_LOG) ; false ; } ; } && echo "── p372-dead-citation (28 controls over 11 groups: the API-URL-path shape, p371's D1 relative paths, documentation placeholders, this base's own negative controls, the rc=0/empty-advertisement live class, and the proxy-refusal-is-not-an-absence arm)" && echo "   PASS" || exit 1
+	@cd compose/code/p372-dead-citation && $(PY) -I dead_citation_gate.py --root ../../.. || exit 1

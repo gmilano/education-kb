@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 372 · 2026-10-21 — `Gap 483` **closed, and its figure of 46 was wrong in both directions**: ten of the 46 were never addresses, two are LIVE, and the one with a proven successor had been proven six days earlier and filed only in prose
+
+**Evidence:** [`dead-citation-reprobe`](../evidence/dead-citation-reprobe.2026-10-21-p372.tsv) · [`dead-successor-register`](../evidence/dead-successor-register.2026-10-21-p372.tsv) · [`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) · [`rename-redirect-control`](../evidence/rename-redirect-control.2026-10-21-p372.tsv) · [`empty-repo-clone-control`](../evidence/empty-repo-clone-control.2026-10-21-p372.txt) · [`proxy-refusal`](../evidence/proxy-refusal.2026-10-21-p372.tsv) · [`region-leg-inlanguage`](../evidence/region-leg-inlanguage.2026-10-21-p372.tsv)
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+🟢 **Gate state: RUN, at `p371`'s HEAD and again at this pass's.** `make hooks` was
+**38/38** at `p371`'s HEAD and is **39/39** at this pass's, with one new standing gate.
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Gaps closed** | `Gap 483` (**closed** — all 46 re-probed first-hand, re-derived into 8 classes, successors registered) |
+| **Gap tested rather than restated** | `Gap 476` (**hypothesis CONFIRMED under control** — the English EMEA leg returned 0 facts, the German leg 4, same pass, same tool) |
+| **Instrument added** | `compose/code/p372-dead-citation/` (28 controls over 11 groups; four invariants `I1`–`I4`, standing as `gate-dead-citation`) |
+| **Registers added** | `dead-successor-register` — 🔴 the register `apereo/opencast` needed at `p230` and did not get |
+| **Gates** | 🟢 **39/39 green**, up from **38/38** at `p371`'s HEAD |
+| **Probes, all first-hand** | **46** re-probes + **18** successor candidates + **6** `p230`-closure re-probes + **4** rename-redirect controls + **4** clone probes + **1** blobless partial clone; 🔴 **0** successful `api.github.com` or `github.com` HTML calls — both answered **403** |
+| **The denominator corrected** | 🔴 `Gap 483` asserted **46 dead addresses**; re-derived, **34** are absent and **12 are not dead at all** |
+| **Shelf gained** | 🟢 `opencast/opencast` — **ECL-2.0, 7 870 refs, HEAD 2026-10-19** — the video tier this base had no row for |
+| **New gaps** | **485** (the Brazilian CNE resolution's primary text) · **486** (no successor-search channel for the 27) · **487** (`edugit.org` egress, for AlekSIS) |
+
+### 🟢 `Gap 483` — CLOSED, and the figure it carried was wrong in BOTH directions
+
+🔴 **The gap read *"**46** addresses cited on these shelves answer `NO-REMOTE` — they do not
+resolve at all"*, and said the work was bounded because the list was committed.** 🟢 The list
+was indeed committed, and re-probing it first-hand is what showed the count to be three
+different questions folded into one:
+
+| Class at `p372` | n | Dead? |
+|---|---:|---|
+| `ABSENT-NO-SUCCESSOR-FOUND` | **27** | 🔴 yes |
+| `OWNER-ALIVE-REPO-ABSENT` | **5** | 🔴 yes at the cited address; owner still shipping |
+| `MOVED` | **1** | 🔴 yes — 🟢 successor live, now **registered** |
+| `ALIVE-OTHER-FORGE` | **1** | 🔴 yes on GitHub; 🟡 alive elsewhere (secondary evidence only) |
+| `NOT-AN-ADDRESS/NEG-CONTROL` | **5** | 🟢 **no** — fabricated by this base to test its own oracles |
+| `NOT-AN-ADDRESS/URL-PATH` | **4** | 🟢 **no** — a slug extractor matching inside an API URL |
+| `NOT-AN-ADDRESS/PLACEHOLDER` | **1** | 🟢 **no** — a documentation placeholder |
+| `EXISTS-EMPTY` | **2** | 🟢 **no** — LIVE repositories holding zero commits |
+| **total** | **46** | **34 absent · 12 not dead** |
+
+🟢 **And the remedy the gap asked for — *"repoint or retract the citation"* — was mostly
+already satisfied by this base's own structure.** `gate-dead-citation`'s `I2` checked all
+three live shelves: **zero** of the 34 absent addresses is a linked row anywhere on
+`agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`. 🔵 They live in the
+append-only histories and in this register, where a dead address is **a record of a
+measurement, not a recommendation** — and rewriting those would destroy the trend the files
+exist to carry. The one repair the shelves did need was an **addition**, not a retraction:
+`opencast/opencast`.
+
+### 🔴 The two defects in prior passes that this one had to find first
+
+| | Defect | Where it was published |
+|---|---|---|
+| `E0` | **Five of the 46 are strings a GREEN STANDING GATE already rejects.** `p351-address-shape`, run by `gate-address-shape` on every `make hooks`, grades `repos/moodle`, `repos/HKUDS`, `repos/openedx`, `repos/dodona-edu` as `NAV-NAMESPACE` and `your-username/SafeTutors` as `PLACEHOLDER-OWNER` — and catches a sixth fragment (`repos/packbackbooks`) the gap's list lacks. 🔴 The address-shape census and the absence census have never read each other | 🔴 `p371`'s `Gap 483`; the rejection has been standing since `p351` |
+| `E1` | **`rc=0` with an empty ref advertisement classified as absent.** A repository with zero commits answers smart-HTTP successfully with no refs; `git clone` labels the class itself (*"warning: You appear to have cloned an empty repository"*). Two addresses were published dead and are live | 🔴 `p230` as `GONE`; `p371` as `NO-REMOTE` |
+| `E2` | **A proven successor filed in prose and in no register a gate reads.** `apereo/opencast → opencast/opencast` was proven **2026-10-15** at `p230` and recorded at `intel/open-gaps.md:4347`; `p371` re-counted it as unknown six days later | 🔴 `p371`'s `Gap 483` |
+
+🔴 **`E2` is this base's standing failure mode and `p371` named it while committing it:**
+*"committed knowledge that is not wired into the next instrument gets paid for twice."*
+🟢 **`p372`'s answer is a register plus `I3`, not a third narration.**
+
+🟢 **The control that had never been run.** Every absence verdict here assumed a renamed or
+transferred repository would still answer at its old address — untested until now.
+`Significant-Gravitas/Auto-GPT` (renamed) returns **12 137** refs and `hwchase17/langchain`
+(org-transferred) returns **27 996** at their OLD addresses, while both negative controls
+fire. 🟢 **`NO-REMOTE` therefore excludes rename and transfer, and the 34 absences are safe
+in exactly that respect** — because it was measured, not assumed.
+
+### 🟢 `Gap 476` — TESTED under control, hypothesis CONFIRMED, and the axis is now an invariant
+
+🟢 **The gap said the regional leg's thirteen consecutive near-nils came from a monolingual
+query assumption rather than from an absence of regional fact.** `p372` ran both forms in the
+same pass: the prescribed **English** EMEA leg returned **0** education-specific dated facts
+(the fourteenth consecutive nil) and a **German** leg returned **4**. The **Portuguese** LATAM
+leg returned the pass's most consequential regional fact — Brazil's **CNE** school-AI
+regulation, with risk classification and a no-autonomous-grading rule for interpretive work.
+
+🔴 **This base has found this axis three times and made it standing zero times:** `P521` (*a
+Portuguese query returned six trees ten English passes had missed*), `ACTION ZZ-cc` (*the
+prescribed per-region query should name countries, not regions*), and `Gap 476` itself.
+🟢 **`I4` now refuses a published regional nil unless an in-language leg was run for that
+region, and it was negative-controlled: deleting the German row turns the gate red.**
+🟡 **`Gap 476` stays OPEN** on its remedy — the brief's prescribed query list is still
+monolingual, and changing the brief is not this pass's to do — but it is no longer
+unfalsified, and it can no longer be silently re-nil'd.
+
+### 🟡 Live gaps declared by `p372` — remedy *and* cost, per `P469` / `P492`
+
+| Gap | Declared | Where | Status, remedy and cost |
+|---|---|---|---|
+| 🆕 **485** | **2026-10-21**, pass 372 | `intel/market.md` · `ACTION ZZ-cl` | 🟡 **OPEN.** *"Brazil's CNE school-AI regulation is carried on a single secondary source — a newspaper column — with no resolution number and no primary text."* 🔴 It is the strongest regional fact of the pass and the weakest-sourced. 🟢 **Remedy:** read the CNE resolution itself (number, date, articles) and restate the three rules from it. **Cost: part of one pass**, if `gov.br`/CNE hosts answer from this environment — 🔴 which is **unmeasured**, and is the same class as `Gap 241`'s blocked EU egress. |
+| 🆕 **486** | **2026-10-21**, pass 372 | `evidence/dead-citation-reprobe.2026-10-21-p372.tsv` · `ACTION ZZ-cm` | 🟡 **OPEN, and it is a CHANNEL gap, not an effort gap.** *"**27** of the 34 absent addresses are `ABSENT-NO-SUCCESSOR-FOUND`, and that verdict means **no successor was found**, not that none exists."* 🔴 `api.github.com` and `github.com` HTML both answer **403**, so an owner's repositories cannot be **enumerated** — a successor can only be caught where a sibling was already known by name. 🟢 **Remedy:** either an environment with `api.github.com` egress, or one web-search leg per address for the in-domain top tier. **Cost: part of one pass for the top tier**, a programme for all 27. 🔵 Stated so `ABSENT-NO-SUCCESSOR-FOUND` is never read as `GONE`. |
+| 🆕 **487** | **2026-10-21**, pass 372 | `verticals/solutions.md` · `evidence/proxy-refusal.2026-10-21-p372.tsv` · `ACTION ZZ-cn` | 🟡 **OPEN.** *"`AlekSIS`'s real home, `edugit.org`, answers `CONNECT tunnel failed, response 403`, so a German school-information system is placed on secondary evidence only and not shelved."* 🟢 **Remedy:** an environment that can reach `edugit.org` and `code.teckids.org`; then read the grant from payload and shelve or reject it. **Cost: part of one pass once egress exists** — a network-policy request, exactly like `Gap 241`. 🔵 Its **EUPL-1.2** grant is copyleft on secondary evidence, which is enough to warn an engagement and not enough to shelve. |
+
+### 🟡 Earlier gaps, as `p372` leaves them
+
+| Gap | Status at `p372` |
+|---|---|
+| **`Gap 241`** | 🟡 **STILL OPEN on its primary source, and advanced for the first time in six passes on its SUBSTANCE.** No EU institutional host was reachable, so the Annex III date and `Regulation (EU) 2026/1744` remain secondarily corroborated only. 🟢 **But the underlying question — what counts as high-risk educational AI — was reached from a member-state school authority instead:** the NLQ/Wikimedia Deutschland *"Offene KI in der Schule"* **February 2026** report, hosted outside the blocked EU hosts, recommends defining exactly that and names open-weights licensing as unresolved. 🔵 Remedy unchanged: EU institutional egress. |
+| **`Gap 481`** | 🔴 **OPEN, NOT advanced this pass.** The generic verifiable-credential false-positive class in `p370-domain-check` is untouched. Stated so no reader takes `p372` for progress on it. |
+| **`Gap 482`** | 🔴 **OPEN, NOT advanced this pass.** The held-out second sample over the same 1 859 was not run. Stated explicitly. |
+| **`Gap 484`** | 🔴 **OPEN, NOT advanced this pass.** The 235 ungranted in-domain addresses still have no contact-path ranking. 🔵 `p372` adds one relevant datum from the other direction: the standards layer's **reference implementations** are not merely ungranted, they are **unretrievable** (`Trend E`), so the usable-supply constraint is worse than the licence count alone implies. |
+| **`Gap 478`** | 🟡 **OPEN, not advanced.** The register's two `UNKNOWN` rows still have no canonical side. |
+| **`Gap 479`** | 🟢 Remains subsumed under `Gap 481`, as `p371` left it. |
+
 ## Pass 371 · 2026-10-21 — `Gap 477` **closed by grading all 1 859**, `Gap 480` **closed with an out-of-sample figure that is 16 points below the in-sample one**, and six defects in this pass's own instruments
 
 **Evidence:** [`git-tree-run`](../evidence/git-tree-run.2026-10-21-p371.tsv) · [`backlog-grade`](../evidence/backlog-grade.2026-10-21-p371.tsv) · [`region-placement`](../evidence/region-placement.2026-10-21-p371.tsv) · [`backlog-census`](../evidence/backlog-census.2026-10-21-p371.txt) · [`gap480-oos-sample`](../evidence/gap480-oos-sample.2026-10-21-p371.txt) · [`region-placement-p370-rows`](../evidence/region-placement-p370-rows.2026-10-21-p371.tsv)

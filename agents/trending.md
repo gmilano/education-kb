@@ -4,6 +4,171 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 372 — 🔴 **`Gap 483`'s "46 dead addresses" re-probed first-hand: TWELVE OF THE 46 ARE NOT DEAD. Ten were never addresses and two are LIVE repositories holding zero commits, which `p230` and `p371` both published as gone. 🟢 And the one address with a proven successor had been proven SIX DAYS EARLIER and written only into prose.**
+
+🔵 **Dating note.** Every probe below was taken **2026-10-21** by `git ls-remote` plus, where
+it settles a class, `git clone --depth 1`. 🟢 Artefacts are dated by MEASUREMENT, never by commit.
+
+**Evidence:** [`dead-citation-reprobe`](../evidence/dead-citation-reprobe.2026-10-21-p372.tsv) ·
+[`dead-successor-register`](../evidence/dead-successor-register.2026-10-21-p372.tsv) ·
+[`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) ·
+[`rename-redirect-control`](../evidence/rename-redirect-control.2026-10-21-p372.tsv) ·
+[`empty-repo-clone-control`](../evidence/empty-repo-clone-control.2026-10-21-p372.txt) ·
+[`proxy-refusal`](../evidence/proxy-refusal.2026-10-21-p372.tsv) ·
+[`region-leg-inlanguage`](../evidence/region-leg-inlanguage.2026-10-21-p372.tsv)
+
+### 🟢 The control that had never been run, and without which no `GONE` verdict here was safe
+
+🔴 **Every absence verdict on this base — `p230`'s `GONE`, `p371`'s `NO-REMOTE` — rests on an
+assumption that was never tested: that a RENAMED or TRANSFERRED repository would still answer
+at its old address.** If that were false, every `GONE` on this base would be unsafe.
+
+| Old address | Known change | `ls-remote` at `p372` | Refs |
+|---|---|---|---:|
+| `Significant-Gravitas/Auto-GPT` | renamed to `…/AutoGPT` | 🟢 **OK** | 12 137 |
+| `hwchase17/langchain` | transferred to org `langchain-ai` | 🟢 **OK** | 27 996 |
+| `this-org-does-not-exist-zzz9/nope` | never existed | 🟢 `NO-REMOTE` (control fires) | 0 |
+| `moodle/moodle-definitely-not-a-real-repo-p152` | never existed, under a LIVE org | 🟢 `NO-REMOTE` (control fires) | 0 |
+
+🟢 **The assumption holds.** A rename and an org transfer are both transparent to this
+transport, so `NO-REMOTE` **rules out** rename and transfer. 🔵 The verdicts are safe — and
+they are safe because this was measured, not because it was assumed.
+
+### 🔴 The third verdict class: `EXISTS-EMPTY`, and git labels it itself
+
+🔴 **`p230` published both of these as `GONE`. `p371` published both as `NO-REMOTE`. Both are
+LIVE.**
+
+```
+$ git ls-remote https://github.com/cdweaver1992/edfi-mcp-server
+rc=0, 0 bytes                                   ← the server ANSWERED
+
+$ git ls-remote https://github.com/1EdTech/caliper-java
+rc=128, fatal: Authentication failed for ...    ← the server REFUSED
+
+$ git clone --depth 1 https://github.com/openfresno/edgenuity-aeries-grade-passback
+warning: You appear to have cloned an empty repository.   ← git names the class
+```
+
+🔵 **A repository with zero commits advertises zero refs, and an empty advertisement is not
+an error.** Any classifier keying on "zero refs" folds a live repository into the absent
+bucket, and two passes did.
+
+🟢 **And the distinction is commercial, not pedantic.** A **deleted** connector is a dead
+end. An **empty** one is a reserved name — the name was taken and nothing was ever pushed to it:
+
+| Address | What the NAME says it was to be (the only evidence a commitless repo carries) | Layer |
+|---|---|---|
+| [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | an **Ed-Fi** (SIS data standard) MCP server | 🔴 the LMS/SIS bridge layer this base has measured as the thinnest |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | an **Edgenuity ↔ Aeries** grade-passback bridge | 🔴 same layer; a named gap with nobody in it |
+
+### 🔴 Ten of the 46 were never addresses, and this base had already said so about three of them
+
+🔴 **And this base was ALREADY rejecting five of them, in a GREEN STANDING GATE, on every
+`make hooks`.** `p351-address-shape`'s census — run by `gate-address-shape`, 38/38 green at
+`p371`'s HEAD — classifies `repos/moodle`, `repos/HKUDS`, `repos/openedx` and
+`repos/dodona-edu` as **`NAV-NAMESPACE`** and `your-username/SafeTutors` as
+**`PLACEHOLDER-OWNER`**, and it catches a fifth namespace fragment (`repos/packbackbooks`)
+that `Gap 483`'s list does not even contain. 🔵 **So `p372` does not get to claim the string
+class: `p351` built it.** What no instrument here had done is **join the two questions** —
+the address-shape census and the absence census have never read each other, so a string this
+base formally rejects as a non-address was still counted as a dead address.
+
+| Class | n | The strings |
+|---|---:|---|
+| **URL-PATH-FRAGMENT** (🟢 `p351`'s `NAV-NAMESPACE`) | **4** | `repos/moodle`, `repos/HKUDS`, `repos/openedx`, `repos/dodona-edu` — a slug extractor matching **inside an API URL**: `api.github.com/repos/HKUDS/DeepTutor` yields `repos/HKUDS` |
+| **NEG-CONTROL** | **5** | `UniTime/this-repo-does-not-exist-xyz123`, `moodle/moodle-definitely-not-a-real-repo-p152`, `openedx/fake-repo-zzz999`, `this-definitely-does-not-exist-xyz123/nope`, `this-org-does-not-exist-zzz9/nope` — slugs this base **fabricated** to test its own existence oracles. One that fails to resolve is the control **passing** |
+| **PLACEHOLDER** (🟢 `p351`'s `PLACEHOLDER-OWNER`) | **1** | `your-username/SafeTutors` — a documentation placeholder |
+
+🔴 **`agents/trending.md:26044` already carried the row *"↳ citation artefacts, not
+repositories | 4 | ⚠️ `owner/repo`, `your-username/SafeTutors`, `repos/HKUDS`, a truncated
+`UOC/java-lti-1.3-provider`"*.** 🔵 So the class was identified in prose, enforced in a green
+gate, **and** its members were still counted as dead addresses one pass later. 🟢 **That is
+the sharpest available statement of this base's standing failure mode:** the problem is not
+that knowledge goes unrecorded, it is that two instruments measuring the same corpus never
+read each other's verdicts.
+
+### 🔴 The headline, and it is about this base rather than GitHub
+
+🟢 **`apereo/opencast → opencast/opencast` was PROVEN on 2026-10-15 by `p230`** — recorded in
+`intel/open-gaps.md:4347` as *"`MOVED` vs `GONE` separated, and proven for exactly one"*.
+🔴 **It was written into prose and into no register any gate reads. Six days later `p371`
+re-counted it among "46 dead addresses" and opened `Gap 483` to adjudicate it again.**
+
+🔴 **`p371` named this exact failure mode in its own README while paying for it:**
+*"committed knowledge that is not wired into the next instrument gets paid for twice."*
+🟢 **`p372`'s answer is a register and a gate, not a third narration:**
+`evidence/dead-successor-register.2026-10-21-p372.tsv`, enforced by `gate-dead-citation`'s
+`I3` — every `MOVED` row must carry a first-hand proof, or the gate is red.
+
+🟢 **And the proof is first-hand this time.** `p370`'s ref-set fingerprint cannot settle a
+rename whose old address has no ref set, so the proof came from the successor's own committed
+tree: `opencast/opencast`'s `NOTICES` opens *"Copyright <2015>, The Apereo Foundation."*
+🟢 **7 870 refs, HEAD `9767932b7902` dated 2026-10-19, ECL-2.0 read from `LICENSE` (11 340 B)
+— a maintained, permissive education platform recovered onto `verticals/solutions.md`.**
+
+### 🟡 What the 34 genuinely-absent addresses say as a CLASS
+
+🔵 The per-row adjudications are in the register. The pattern is the intelligence:
+
+- 🔴 **The credentialing and learning-analytics REFERENCE IMPLEMENTATIONS are gone while
+  their standards are maintained.** `1EdTech/caliper-java` is absent at **both** org
+  spellings (`imsglobal/` too), and `concentricsky/badgr-server` — the Open Badges reference
+  server — is absent at both. 🟢 Meanwhile `1EdTech/caliper-spec` (400 refs) and
+  `1EdTech/openbadges-validator-core` (182 refs) answer. 🔴 **`p371` identified credentialing
+  as the layer these shelves were missing; `p372` finds that the layer's runnable reference
+  code is the part that has disappeared.** A client told "there is a reference
+  implementation" needs to be told it is not retrievable.
+- 🟡 **Five are owner-alive-repo-absent**, which is NOT a rename and is not recorded as one:
+  `yetanalytics/lrspipe` gone while `yetanalytics/lrsql` (764 refs) ships;
+  `plastic-labs/bloom` gone while `plastic-labs/honcho` (1 574 refs) ships;
+  `UOC/java-lti-1.3-provider` gone while `UOC/java-lti-1.3` **and**
+  `UOC/java-lti-1.3-provider-example` both answer — 🔵 **the example outlived the provider it
+  exemplifies.**
+- 🔴 **The single-author MCP tier keeps churning**, as `p230` already observed. It is not
+  individually worth chasing; the class finding is that **an MCP server named in a roundup is
+  not a dependency you can plan on**, and this base now has two passes of evidence for it.
+- 🟢 **No live shelf was recommending any of the 34.** `gate-dead-citation`'s `I2` checked all
+  three live shelves and found zero linked rows. 🔵 **`Gap 483`'s remedy — *"repoint or retract
+  the citation"* — was therefore mostly already satisfied by this base's own structure:** the
+  dead addresses live in append-only histories and gap registers, where they are **records of
+  a measurement**, not recommendations. Retracting them would destroy the trend the files
+  exist to carry.
+
+### 🔴 `Gap 476` tested rather than restated — and the language axis finally becomes an invariant
+
+🟢 **The prescribed English EMEA leg returned ZERO education-specific facts, for the
+fourteenth consecutive pass. The German leg, same pass, same tool, returned FOUR.** The
+Portuguese LATAM leg returned the most consequential regional fact of the pass: **Brazil's
+CNE has approved a risk-classification regime for AI in schools, including a rule that AI may
+not autonomously grade interpretive work.** Full detail and epistemic status in
+`intel/market.md`.
+
+🔴 **Three findings of the same axis, zero invariants, until now.** `P521`, `ACTION ZZ-cc` and
+`Gap 476` each recorded it. 🟢 `gate-dead-citation`'s `I4` now refuses a published regional
+nil unless an in-language leg was run for that region — **and it was negative-controlled:
+deleting the German row turns the gate red.**
+
+### 🔵 The discovery legs, with the null stated
+
+🔴 **The prescribed global queries are saturated for a FIFTH consecutive pass.** *top open
+source AI agents education 2026 github MIT* and *github trending education AI 2026* returned
+AI **learning material** (`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`,
+`h9-tect/AI-Roadmaps`, Microsoft's *AI Agents for Beginners*) and general-purpose agent
+listicles — **not education infrastructure**. 🟢 Recorded as a null, not as coverage: the
+query shape, not the corpus, is what has stopped producing.
+
+🟡 **One cross-current worth carrying against `p371`'s credentialing finding:** a 2026 edtech
+trends roundup rates **skills-based microcredentials as growing** while listing **blockchain
+credentialing among the trends fading fast**. 🔴 That cuts against the Blockcerts-shaped part
+of the credentialing supply `p371` recovered, and is recorded as a tension to resolve, not as
+a refutation — it is one secondary source against first-hand payload evidence.
+
+### 🟢 Gate state
+
+🟢 **`make hooks` was 38/38 at `p371`'s HEAD and is 39/39 at this pass's**, with
+`gate-dead-citation` (28 controls, four invariants `I1`–`I4`) added as standing.
+
 ## 2026-10-21 · Pass 371 — 🟢 **the whole 1 859-address promotion backlog graded first-hand, `Gap 477` closed — and the class these shelves were missing is CREDENTIALING, found by running `p370`'s own domain check out of sample for the first time**
 
 🔵 **The discovery legs first, because they are again the part that did not work.** The

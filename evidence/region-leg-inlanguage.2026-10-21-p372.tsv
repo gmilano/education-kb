@@ -1,0 +1,13 @@
+# p372 — `Gap 476`'s HYPOTHESIS TESTED.  Measured 2026-10-21.
+# Gap 476 says the regional leg's THIRTEEN consecutive near-nil returns are caused by a
+# MONOLINGUAL query assumption, not by an absence of regional fact.  p372 ran the brief's
+# English regional query AND an in-language query for the same region, same pass, same tool.
+# PREDICTION if Gap 476 is right: the in-language leg returns education-specific DATED fact
+# where the English leg returns generic enterprise-AI commentary.  It did.
+region	query_language	query	education_specific_dated_facts_returned	verdict
+North America	English	AI education North America 2026 adoption regulation players	3 (NA 36% share; 10% of institutions with formal AI guidelines; 71% of US teachers untrained)	🟢 English leg adequate — the corpus IS English here
+EMEA	English	AI education EMEA 2026 adoption regulation players	0 — every hit was enterprise IT/CEO-sentiment commentary, none about schools or ministries	🔴 NEAR-NIL, the fourteenth consecutive
+EMEA	German	KI Schule Open Source Lernplattform 2026 Deutschland Bundesland Einsatz	4 (NLQ x Wikimedia DE 2nd `Offene KI in der Schule` conference Feb 2026 + published Ergebnisbericht; BW `F13` open-source assistant on Open CoDE; federal `KIPITZ` open-models-only platform via Deutschland-Stack; 8-Land AI school cloud, EUR 55M)	🟢 HYPOTHESIS CONFIRMED — 0 -> 4 on one language switch
+APAC	English	AI education APAC 2026 adoption regulation players	2 (Vietnam AI law in force 1 Mar 2026, up to 18-month grace for legacy high-risk systems in education; South Korea AI Basic Act in force 22 Jan 2026)	🟢 English leg productive this pass — APAC's 2026 clock now has DATES
+LATAM	English	AI education LATAM 2026 adoption regulation players	3 (DEC LATAM survey 2026: 92% students / 79% faculty; UNESCO IESALC 200 institutions / 19 countries, teaching-and-learning 73.5%; ~30% of LatAm universities have published AI policies)	🟢 productive
+LATAM	Portuguese	inteligencia artificial educacao Brasil 2026 codigo aberto plataforma regulamentacao	4 (CNE approved Brazil's FIRST school-specific AI regulation: no unsupervised AI below 6th year, no autonomous AI grading of interpretive work, school tech classified BY RISK TO STUDENTS; Goias state bill with a statutory PREFERENCE for open-source AI; MEC regulatory sandbox call 30 Mar - 13 May 2026; PL 3615/2026 filed 9 Jul 2026)	🟢 HYPOTHESIS CONFIRMED — the single most consequential regional fact of this pass came from the non-English leg

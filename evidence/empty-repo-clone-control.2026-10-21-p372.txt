@@ -1,0 +1,42 @@
+p372 — THE THIRD VERDICT CLASS: `EXISTS-EMPTY`.  Measured 2026-10-21.
+
+p230 published both addresses below as `GONE`.  p371 published both as `NO-REMOTE`.
+Both are LIVE.  They are repositories that exist and hold ZERO commits, so the smart-HTTP
+ref advertisement is EMPTY -- and an empty advertisement is not an error:
+
+  $ git ls-remote https://github.com/cdweaver1992/edfi-mcp-server
+  rc=0, 0 bytes of output
+
+  $ git ls-remote https://github.com/moodle/moodle-definitely-not-a-real-repo-p152
+  rc=128, "fatal: Authentication failed for ..."
+
+rc=0 + empty  is NOT  rc=128 + fatal.  Any classifier that keys on "zero refs" alone folds
+a LIVE repository into the ABSENT bucket.  That is the defect in both prior passes.
+
+CONFIRMED by a second transport, in which git LABELS THE CLASS ITSELF:
+
+  $ git clone --depth 1 https://github.com/cdweaver1992/edfi-mcp-server
+  Cloning into '.../x'...
+  warning: You appear to have cloned an empty repository.
+  rc=0
+
+  $ git clone --depth 1 https://github.com/openfresno/edgenuity-aeries-grade-passback
+  Cloning into '.../x'...
+  warning: You appear to have cloned an empty repository.
+  rc=0
+
+  $ git clone --depth 1 https://github.com/1EdTech/caliper-java
+  fatal: Authentication failed for 'https://github.com/1EdTech/caliper-java/'
+  rc=128
+
+WHY A STUDIO CARES, and it is not a pedantic distinction:
+an EMPTY repository is a RESERVED NAME -- the name was taken and nothing was ever pushed to it.
+
+PRECISION ON THE EVIDENCE: a commitless repository has NO README, NO licence and NO manifest,
+because it has no tree at all.  So the ONLY evidence of intent is the repository NAME, and
+that is all either row below is claiming.  What each project was MEANT to be is read off its
+name and nothing else:
+`cdweaver1992/edfi-mcp-server`               -> names an Ed-Fi (SIS data standard) MCP server.
+`openfresno/edgenuity-aeries-grade-passback` -> names an Edgenuity<->Aeries grade-passback bridge.
+A DELETED connector is a dead end.  An UNSHIPPED one is an opportunity with a name on it,
+and both of these sit in the LMS/SIS bridge layer this base has measured as the thinnest.
