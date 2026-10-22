@@ -1,0 +1,51 @@
+# ACTION p377-D — does the in-language SUPPLY yield vary BY LANGUAGE, or is language a uniform axis?
+# Written and committed BEFORE any of the four legs ran, per p374's standing rule that a
+# prediction registered after the result is not a prediction.  The commit that carries this
+# file carries NO leg output; the result file lands in a LATER commit.
+#
+# WHAT p377 REGISTERED, quoted exactly so a successor can see it was not re-worded:
+#   "run the in-language SUPPLY leg in Hindi, Arabic, Indonesian and French.  The language
+#    hypothesis is confirmed; the question now is whether yield varies by language in a way
+#    that lets a successor CHOOSE legs instead of running all of them.  Refutation condition
+#    to register first: if these four return a NEW rate within +/-10 points of the zh/ko/pt/es
+#    rate (67%), language is a uniform axis and one leg per engagement region suffices; if the
+#    rates diverge sharply, leg choice is itself an instrument."
+field	value
+action	ACTION p377-D
+rank_assigned_by_p377	fourth of five
+leg_languages	Hindi (hi) · Arabic (ar) · Indonesian (id) · French (fr)
+baseline	p377's in-language legs: 6 NEW of 9 probed addresses = 66.7%.  English control same day: 0 NEW of 6 = 0%.
+unit_of_measurement	ADDRESSES (owner/repo), CARRIED/NEW graded by `make carried SLUG=...` — the p235 instrument itself, NOT by hand.  p377 could not run it (its sandbox refused to execute repository code); this pass can, and the grade is therefore instrument-derived rather than index-eyeballed.
+#
+# 🔴 FIRST, A DEFECT IN THE REGISTERED ACTION ITSELF, recorded BEFORE the result so it cannot
+# be read as an excuse constructed afterwards.  p377's condition is ONE test doing TWO jobs.
+# "A pooled NEW rate within +/-10 of 67%" and "the rates diverge sharply" are NOT complements:
+# a pooled rate of exactly 67% is consistent with four legs at 67/67/67/67 AND with four legs
+# at 0/40/100/100.  The first licenses "run one leg"; the second forbids it.  p377's single
+# condition cannot separate them, so this pass registers the two limbs SEPARATELY and reports
+# both regardless of which way each falls.
+defect_in_registered_action	p377-D's refutation condition conflates the POOLED RATE (does 67% generalise to four untested languages?) with the DISPERSION (does yield depend on WHICH language?).  They are logically independent.  Filed as a limb, not as a complaint.
+#
+# LIMB 1 — THE POOLED RATE.  Predicted OUTSIDE p377's band, on the HIGH side.
+limb_1_prediction	The four legs TOGETHER return a NEW rate ABOVE 77% (i.e. above 67% + 10), not inside [57%, 77%].
+limb_1_mechanism	p377's 9 in-language addresses were drawn from zh/ko/pt/es.  TWO of those four index neighbourhoods had already been swept by this base (p376 ran a Korean POLICY leg; p375 ran a French POLICY leg), and 3 of p377's 9 graded CARRIED.  Hindi, Arabic and Indonesian have NEVER had ANY leg run on this base, in any fact class.  Carried density in an unswept neighbourhood should be lower, so the NEW rate should be HIGHER than the mixed zh/ko/pt/es baseline.
+limb_1_refutation	The pooled rate lands inside [57%, 77%].  Then the 67% is a property of the INDEX rather than of this base's sweep history, the mechanism above is wrong, and p377's "uniform axis" reading stands on the pooled measure.
+#
+# LIMB 2 — THE DISPERSION, which is the limb that decides whether a successor may skip legs.
+limb_2_prediction	The per-leg NEW rates DIVERGE: the spread between the highest and the lowest leg that returns at least one address exceeds 15 points.  Leg choice is an instrument.
+limb_2_mechanism	p377 found the four legs returned four DIFFERENT FACT CLASSES (zh supply at volume · ko commentary · pt one production agent · es academic papers and zero addresses).  A measurement that already varies in KIND by language is unlikely to be constant in RATE.  The es leg returning ZERO addresses at all is itself a 0%-vs-67% spread inside p377's own data, which p377 did not read as dispersion.
+limb_2_refutation	All four per-leg rates fall inside a single 15-point band.  Then yield is language-independent, one leg per engagement region suffices, and this pass's own mechanism is refuted.
+#
+# LIMB 3 — THE COMMERCIAL LIMB, registered because NEW ADDRESS and USABLE ROW are different
+# measurements (p376 returned 3 NEW and 0 agent rows; p377 returned 6 NEW and 1).
+limb_3_prediction	AT MOST 1 of the NEW addresses across all four legs clears the agents/top.md bar (permissive grant READ FIRST-HAND + maintained + actually an agent).
+limb_3_refutation	2 or more clear.  Then the per-row cost of an in-language leg is lower than p377's "1 agent row for 4 legs" and this base should buy more of them.
+#
+# A ZERO-ADDRESS LEG, graded in advance so the denominator cannot be chosen after the fact.
+zero_address_leg_rule	A leg that returns NO GitHub address at all (as es did at p377) contributes 0 to the numerator AND 0 to the denominator of the POOLED rate, and is reported separately as a FACT-CLASS result.  It is NOT scored as 0% in limb 2's spread, because a rate over an empty denominator is undefined.  Stated here, before the legs run, because es's nil is exactly the case that would otherwise let this pass pick the flattering arithmetic.
+#
+# STATED LIMIT, carried forward from p377's registration unchanged and non-negotiable:
+# WebSearch is documented US-only.  A nil on a non-English leg does NOT prove the absence of
+# non-English supply; it proves THIS INDEX does not reach it.  Every nil below is a nil OF
+# THIS INDEX and must never be shelved as an absence.
+stated_limit	US-only index.  Every nil is a nil of the index, not of the industry.
