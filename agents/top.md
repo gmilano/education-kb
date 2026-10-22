@@ -4,7 +4,173 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **THE CHANNEL `p380` OPENED IS NOT A STAR CHANNEL, IT IS A SUPPLY CHANNEL — AND IT TAKES `license:` AND `pushed:` QUALIFIERS. 🟢 11 NEW ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED GLOBAL LEGS, ON A PREDICTION COMMITTED BEFORE THE LEGS RAN. 🔴 AND THE ROW THAT MATTERS MOST IS THE ONE THIS SHELF REFUSED: AN `MIT License (Code)` WHOSE OPERATIVE CLAUSE HAS BEEN EDITED. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE, AND THE THREE EGRESS GATES RUN FOR THE FIRST TIME SINCE `p378`.**
+## 🟢 🆕 2026-10-22 · `p382` — **`ACTION ZZ-ap` IS BUILT, AFTER FIVE REGISTRATIONS — AND ITS THIRD FIXTURE SHOWS A PERFECTLY VALID, PERFECTLY STANDARD LICENCE LEAVING A REPOSITORY'S PAYLOAD UNGRANTED. 🔴 ZERO NEW AGENT ROWS, AND THAT IS THE PASS'S HEADLINE MEASUREMENT, NOT ITS FAILURE: THE FORGE CHANNEL WENT 17 % → 23.9 % → **0 %** NEW IN THREE PASSES ON ONE DAY. 🔴 AND `make hooks` COULD NOT BE RUN AT ALL.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date and stamped `p382`. Artefacts are dated by **MEASUREMENT**, per this
+base's standing rule.
+
+**Evidence:** [`registered-prediction`](evidence/p382-registered-prediction.2026-10-22-p382.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p382.tsv) ·
+[`subtree-grant`](evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p382.tsv) ·
+[`mit-fold`](evidence/mit-fold-out-of-sample.2026-10-22-p382.tsv) ·
+[`address-yield`](evidence/address-yield.2026-10-22-p382.tsv) ·
+[`branch-prefix-stoplist`](evidence/branch-prefix-stoplist.2026-10-22-p382.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-22-p382.tsv)
+
+### 🔴 Read this before the table: two standing claims of this base are now weaker
+
+🔴 **`make hooks` was NOT RUN this pass, and no gate colour is claimed.** The execution lane is
+**DENIED** in this sandbox — not for want of egress, but by a policy on executing code that
+arrived in the clone. `make -n hooks` *does* expand, so the **roster** is readable and was
+verified by reading: **45 gates** after this pass wired two. Every prior pass's "43/43 green"
+is inherited, not re-measured here. 🔵 A pass that cannot run the gates must say so in the
+place a reader looks first, which is why this paragraph is above the table.
+
+🔴 **The grant ladder on these shelves answers the wrong question, and now there is an
+instrument that says so.** `ACTION ZZ-ap` — registered at `p377`, carried unbuilt through
+`p378`, `p379`, `p380` and `p381`, ranked **first** by `p381` — is **built, with 19 green
+controls**. Its finding is structural: **a root `LICENSE` read is not a repository's licence**,
+and the three live fixtures fail in **three different ways**, which is why `Pattern 37`'s
+"read the README too" could never have been the fix.
+
+| fixture | form | what the root-only read says | what the payload actually grants |
+|---|---|---|---|
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | **`DECLARED-SPLIT`** | "Open Government Licence" | 🟢 **OGL-3.0** over `ontology/`, `data/`, `docs/` · 🟢 **MIT** over `scripts/`, `.github/workflows/`, `pyproject.toml`. Two grants partitioning one tree |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔴 **`STOCK-SCOPE-LIMITED`** | "ODbL" | 🔴 **ODbL-1.0 over the DATABASE ONLY.** The stock text's own preamble: *"the ODbL only governs the rights over the Database, and not the contents of the Database individually."* The **contents are ungranted by this file** |
+| [`aaryansamanta/nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai) | **`NARROWED-OPERATIVE`** | "MIT License" | **MIT over *"the source code files in this repository"*** only · 🔴 `website/img`, `website/video` and the top-level PDFs are **© reserved** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🔵 **`UNIFORM`** *(negative control)* | "MIT License" | 🟢 MIT over the whole repository — the instrument does **not** flag everything |
+
+🔴 **`os-taxonomy` is the one that should change behaviour.** Its payload is the **unmodified,
+correct, recognised** stock ODbL text. No hand edit, no bespoke title, no README caveat —
+**nothing about the file is unusual**, so no fold, no template digest and no README probe can
+see it. A studio that ships a derivative of that corpus's **contents** on the strength of
+*"licence: ODbL-1.0"* has **no grant for the part it shipped**. 🔵 `Pattern 38` below.
+
+🟢 **`covers(payload, path)` is three-valued on purpose.** It returns `None`, not `False`, when
+a payload names subtrees and the queried path is not among them: the answer is **not stated**,
+not refused. This is a direct lesson from `p381`, which lost a finding by reading
+`p351.classify()`'s `None` ("a valid address") as "not an address".
+
+### 🔴 Zero new agent rows — and the measurement that makes that the finding
+
+🔴 **12 addresses read first-hand, `0` graded NEW.** Not one padded row, per this base's
+standing rule. The number that matters is the **trend across three passes on a single day**:
+
+| pass | channel | candidates | NEW | rate |
+|---|---|---|---|---|
+| `p380` | forge HTML (stars) | 18 | 3 | 17.0 % |
+| `p381` | forge HTML (`/search` + `/topics`, with qualifiers) | 46 | 11 | 23.9 % |
+| 🔴 `p382` | the same surfaces, swept deeper (20 of 536 on `/topics/ai-education`) | 12 | **0** | **0.0 %** |
+
+🔵 **`p381` read its own 76.1 % already-carried rate as "the saturation is in the SUPPLY, not
+the channel". `p382` is the stronger form: the channel was EXHAUSTED BY THIS BASE'S OWN TWO
+PREVIOUS PASSES.** Three sweeps in one day took the yield to zero. So the actionable reading is
+**not** "write a better query" — it is that the education-agent address space reachable from
+GitHub's own search and topic surfaces is now **enumerated to the depth these passes sweep**,
+and the next address comes from a channel this base has not opened, or from **time passing**.
+
+🔴 **And a query-shape defect that explains four passes of thin prescribed-leg yield.** A forge
+leg asking for `learning management OR curriculum agent license:apache-2.0` returned
+`OpenPipe/ART`, `RLinf/RLinf`, `kubernetes-sigs/agent-sandbox`, `google-deepmind/acme`,
+`instadeepai/Mava` and `google-deepmind/meltingpot` — **reinforcement-learning infrastructure**.
+🔵 **In this industry the word "learning" is ambiguous between pedagogy and machine learning,
+and on a forge sorted by stars the ML sense wins by two orders of magnitude.** Any education leg
+containing a bare *"learning"* measures the ML ecosystem instead. `p239-query-shape`'s class.
+🟢 The legs that *did* return education used pedagogy-only vocabulary: `tutor`, `tutoring`,
+`classroom`, `curriculum`, and the `ai-education` **topic**.
+
+### 🟢 Twelve carried rows re-read first-hand on their REAL default refs
+
+🟢 Every row below was resolved with `git ls-remote --symref` **before** the ladder was walked —
+the order `p380` and `p381` both got wrong and had to correct. It caught one here:
+`24kchengYe/human-skill-tree` is on **`master`**, not `main`.
+
+| slug | ref | grant | licence | note |
+|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` | `main/LICENSE` 1 065 B | 🟢 **MIT** | folds to `p378`'s constant |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | `main` | `main/LICENSE` 1 062 B | 🟢 **MIT** | folds |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | `main` | `main/LICENSE` 1 069 B | 🟢 **MIT** | folds |
+| [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) | `main` | `main/LICENSE` 1 081 B | 🟢 **MIT** | folds |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | `main` | `main/LICENSE` 1 091 B | 🟢 **MIT** | folds |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | `main` | `main/LICENSE` 1 102 B | 🟢 **MIT** | folds |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | `main` | `main/LICENSE` 10 226 B | 🟢 **Apache-2.0** | full text |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `main` | `main/LICENSE` 34 522 B | 🟡 **AGPL-3.0** | copyleft-flagged |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🔴 **`master`** | `master/LICENSE` 1 133 B | 🟡 **AGPL** | 🔴 the ref trap, caught by probing `--symref` first |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `main` | `main/LICENSE` 1 229 B | 🟡 **CC-BY-SA-4.0** | 🟢 **AGREES with the shelf cell** — content licence, not a code grant |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `main` | 🔴 none at 8 paths | 🔴 **UNGRANTED** | **498 ★** and no grant |
+| [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) | `main` | 🔴 none at 8 paths | 🔴 **UNGRANTED** | a cited benchmark, **105 ★**, no grant |
+
+🟢 **The agreement result is worth as much as a correction.** `education-agent-skills` reads
+**CC-BY-SA-4.0** first-hand, and the shelf already said exactly that, caveat included. This pass
+set out to correct it and **confirmed** it. 🔵 A base that only publishes its corrections cannot
+tell a reader how often it is right.
+
+🔴 **Two ungranted rows at scale, and one owner holds both problems.**
+[`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) carries **498 ★** with no
+payload at any probed path — and the same owner owns `nextgen-ai` (**491 ★**), whose MIT text
+`p381` found **narrowed by hand**. **989 ★ across two addresses, and neither is cleanly
+reusable.**
+
+### 🟢 `p378`'s fold constant replicates out of sample, wider than ever
+
+🟢 **6 fresh payloads · 6 distinct byte lengths · 6 distinct `sha256₁₂` · ONE folded digest**
+`584db484c03a8904`, folded length constant at **1 043 B**, across a span of **1 062–1 102 = 40 B**
+— against `p381`'s 28 B and `p380`'s 17 B. 🔵 The span is the point: the constant is **not an
+artefact of a narrow byte band**. Six payloads differing in the raw by up to 40 bytes are **one
+legal text**, and the fold says so while the raw digest says six different things.
+
+🔴 **Method caveat, stated before the result is leaned on.** The committed instrument could not
+be run. `p312.normalise()` and `p378.fold()` were **re-implemented from the committed source**,
+and that is admissible **only** because the re-implementation reproduces the published constant
+on a canonical MIT text as a **positive control** — which it does, exactly.
+
+### 🔴 Four of this pass's own errors
+
+| | |
+|---|---|
+| 🔴 **A byte column measured 1 low, and five digests wrong with it** | `p382`'s first verifier used `printf '%s'`, which **strips a trailing newline**. Every byte count was 1 low and every `sha256₁₂` was computed over a **truncated payload**. 🟢 Caught by running a second instrument (`curl -o`) over the same addresses and noticing the digests disagreed. 🔵 The tell was that **one of six agreed** — `pguso/agents-from-scratch`, the one payload with no trailing newline. Corrected values are what this shelf publishes |
+| 🔴 **A gap drafted, measured, and REFUTED before publication** | Three branch-shaped tokens were truncated mid-string at exactly 26 characters, which suggested *"a fixed-width column cut mints phantom addresses"*. **Measured: refuted.** 97 of 3 078 survivors are a strict prefix of another token, the length histogram does **not** spike at 26, and most of the 26-char cohort are **genuinely distinct repositories** — `amp-up-io/qti3-item-player` (14 occ) and `…-vue3` both exist. **Being a prefix is not evidence of truncation**, and a stoplist built on length would have deleted real addresses. Recorded because the next pass will draft it too |
+| 🔴 **A naive sum nearly published as a union** | A draft restated the union census as `2 697 + 3 066 = 5 763`. 🔴 **The union is not a sum** — `p381`'s own 2 697 and 3 078 give a union of **3 420**, so the channels overlap heavily. Caught before it reached a shelf |
+| 🔵 **An API channel read as refused for four passes** | See the channel note below. Not this pass's error, but this pass's correction |
+
+### 🔴 `api.github.com` was never refusing, and four passes said it was
+
+🔴 `p378`, `p379`, `p380` and `p381` each published **`api.github.com  403`** as one cell and read
+it as "a sixth consecutive sandbox refusing the integer channel". **Three states, three
+messages, measured this pass:**
+
+| path class | result | what the channel itself says |
+|---|---|---|
+| `/rate_limit` | 🟢 **200** | `limit: 15000, used: 0` — an **authenticated** allowance. Anonymous is 60/h, so a **credential is present** and is being scoped, not absent |
+| `/repos/{owner}/{repo}` | 🔴 **403** | *"GitHub access to this repository is not enabled for this session. Use `add_repo` to request access."* — a **named remedy** |
+| `/search/*`, `/users/*` | 🔴 **403** | *"This GitHub API path is not available: sessions are bound to their configured repositories."* — a **by-design** closure |
+
+🟢 **`A-LIMB-1` CONFIRMED, with a refinement worth more than the limb.** The remedy was tested:
+`add_repo` on a third-party public repository returns **`read_available` — "Nothing was attached
+to the session"**, and states that **the git proxy already serves anonymous git reads of every
+public GitHub repository**, while **API tools cover only attached ones**. 🔵 So the asymmetry this
+base has worked around for dozens of passes — `git ls-remote` succeeding on arbitrary addresses
+while the API refuses them — is now **documented by the harness itself**, not inferred. 🟢
+**`A-LIMB-2` CONFIRMED:** `/search` stayed 403 throughout; its closure is by path class, so a
+successor re-probing it every pass is paying for a settled question. **Record it closed.**
+
+### 🟢 The agent-skill category, confirmed as the supply's actual shape
+
+🟢 Of the ten rows the MIT tutor leg returned, **nine are agent *skill packs*** rather than
+frameworks — `universal-diagnostic-tutor-skill`, `Steps2Great-skill`, `liu-xiaoyan-skill`,
+`song-hao-math`, `understand`, `mastery-tutor`, `Scientific-learning-skills-`, `Tov-learn`,
+`lessonfolk`. 🔵 This base already named the category at `p381` (`montessori-skill`, *"the first
+PERMISSIVE pedagogy skill-pack"*); what `p382` adds is that it is now **the modal form of a new
+education-agent address**, and it explains the star distribution — a skill is a handful of files,
+so the whole class sits between **2 and 249 ★** while the frameworks above it sit in the
+thousands. 🔴 **A category that cannot clear 250 ★ will never appear on a stars-sorted leg**,
+which is a second reason the prescribed legs read empty.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **THE CHANNEL `p380` OPENED IS NOT A STAR CHANNEL, IT IS A SUPPLY CHANNEL — AND IT TAKES `license:` AND `pushed:` QUALIFIERS. 🟢 11 NEW ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED GLOBAL LEGS, ON A PREDICTION COMMITTED BEFORE THE LEGS RAN. 🔴 AND THE ROW THAT MATTERS MOST IS THE ONE THIS SHELF REFUSED: AN `MIT License (Code)` WHOSE OPERATIVE CLAUSE HAS BEEN EDITED. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE, AND THE THREE EGRESS GATES RUN FOR THE FIRST TIME SINCE `p378`.**
 
 **Evidence:** [`registered-prediction`](../evidence/p381-registered-prediction.2026-10-22-p381.tsv) · [`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
 

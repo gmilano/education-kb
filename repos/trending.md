@@ -4,7 +4,101 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **`ACTION p379-A` DISCHARGED: THE RANDOM ARM OVER CHANNEL B IS **65 %** LIVE AGAINST `p379`'s ENRICHED **49 %** — SO THE "UPPER BOUND" WAS AN UPPER BOUND ON NOTHING, AND THE ENRICHMENT SELECTED *TOWARD THE DEAD*. 🔴 AND TWO OF THE 40 SAMPLED ADDRESSES ARE GIT BRANCH NAMES.**
+## 🟢 🆕 2026-10-22 · `p382` — **`Gap 539`'s STOPLIST IS BUILT AND IT FOUND **8**, NOT 1 — SO THE GAP EXCEEDED ITS OWN FIXTURE. 🟢 AND BUILDING IT TURNED UP A SECOND ARM NOBODY HAD LOOKED FOR: **4** PHANTOM ADDRESSES WHOSE REPOSITORY NAME IS LITERALLY `...`, PASSED BY EVERY ARM OF BOTH FILTERS. 🔴 CENSUS 3 078 → 3 066.**
+
+**Evidence:** [`branch-prefix-stoplist`](evidence/branch-prefix-stoplist.2026-10-22-p382.tsv) ·
+[`address-yield`](evidence/address-yield.2026-10-22-p382.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p382.tsv)
+
+### 🟢 `p381`'s ranked-2 item, discharged — and it was more than one commit
+
+🟢 **Positive control first.** The committed harvester could not be **run** (execution lane
+denied), so its vocabularies were copied **verbatim** from source and the harvest
+re-implemented. That is admissible only against a published number: it reproduces
+**3 078 channel-B survivors**, which is **exactly** what `p381` published. **Delta +0.**
+
+🟢 **`C-LIMB-1` CONFIRMED** — `feature/x`, the fake address `p381` wrote into its own census
+*inside the sentence declaring the defect*, is rejected.
+🟢 **`C-LIMB-2` CONFIRMED** — it was **not** the only one.
+
+| rejected token | occ | note |
+|---|---|---|
+| `feat/cloud-rubric-tabs` | 3 | |
+| `feature/openedx-integration` | 3 | |
+| `feature/x` | 2 | 🔴 `p381`'s own fixture |
+| `chore/release-0.4.0-and-deps` | 1 | |
+| `chore/release-0.4.0-and-de` | 1 | also a truncation residue |
+| `feat/batch-optimization` | 1 | |
+| `feature/openedx-integratio` | 1 | also a truncation residue |
+| `fix/accept-token-without-p` | 1 | also a truncation residue |
+
+🔵 **Why only these.** `release`, `main`, `master`, `develop`, `dev`, `head`, `trunk`, `stable`
+and `latest` were **already** in `p367`'s `REF_OR_PATH`, so `Arm 5` adds exactly what `p381`
+asked for **minus what was already caught**, plus the rest of git-flow and Conventional Commits.
+🔴 **The false-positive risk is declared in the committed source rather than discovered later:**
+`fix`, `patch`, `perf`, `ci`, `style`, `task` and `wip` are all **legal GitHub owner names**, so
+this arm will reject a real repository owned by anyone so named. That is the same trade
+`REF_OR_PATH` already makes for `api`, `app`, `core` and `web`, for the same reason — channel B
+harvests **markdown prose**, where `feature/foo` is a branch far more often than an owner.
+
+### 🟢 Arm 6, found by building Arm 5 — and the wide version of it was refuted first
+
+Three of the eight are truncated mid-token at **exactly 26 characters**, which suggested a
+general rule. 🔴 **It was drafted, measured and REFUTED before publication:**
+
+> *"A fixed-width cut at 26 characters mints phantom addresses."* **97** of 3 078 survivors are
+> a strict prefix of another harvested token; the length histogram does **not** spike at 26
+> (len=16 → 15, len=13 → 9, len=26 → 8); and most of the 26-char cohort are **genuinely distinct
+> repositories** — `amp-up-io/qti3-item-player` (14 occ) and `amp-up-io/qti3-item-player-vue3`
+> both exist, as do `pie-elements`/`pie-elements-ng` and `brightspace-mcp`/`brightspace-mcp-server`.
+
+🔵 **Being a prefix is not evidence of truncation**, and a stoplist built on length would have
+**deleted real addresses from this base**. Recorded because the next pass will draft it too.
+
+🟢 **What survives is a MARKER, not a length** — and it is in the live census:
+
+| rejected token | occ | class |
+|---|---|---|
+| `emaanrana012/...` | 1 | `NAME-DEGENERATE` |
+| `genai-gurus/...` | 1 | `NAME-DEGENERATE` |
+| `manahil2731/...` | 1 | `NAME-DEGENERATE` |
+| `mebis-lp/...` | 1 | `NAME-DEGENERATE` |
+
+🔴 **Why nothing had ever reported these, and it is a precise asymmetry.** `.` **is** a legal
+`NAME_SHAPE` character, so a repository name of `...` passes every arm of `p351` **and** all four
+of `p367`. The **Unicode** ellipsis `…` is **not** in `[a-z0-9._-]`, so it is already rejected as
+`NAME-ILLEGAL` — `narender-rk10/myproctor.ai-…` never reached the census. 🔵 **So an
+ASCII-ellipsis truncation survived while a Unicode one did not, and the two are visually
+identical in a rendered table.** `p351`'s `NAME_RESERVED` held `.` and `..` and stopped **one
+character short**. 🟢 Fixed as a **rule** (`set(name) == {"."}`) rather than three more literals,
+so `....` cannot reopen it.
+
+### 🔴 The census moved, and the move is attributable
+
+`p367`'s own standing warning is that *"a gate fix that moves the measurement is a different
+instrument wearing the same name"*. So, declared:
+
+| state | channel-B survivors |
+|---|---|
+| `p381`, committed rules | 3 078 |
+| after `Arm 5` — `BRANCH-PREFIX` | 3 070 *(−8)* |
+| after `Arm 6` — `NAME-DEGENERATE` | **3 066** *(−4, overlap 0)* |
+
+🟢 All twelve are **named** above, none silently dropped. 🔵 And every one is a **rejection**, not
+a lost repository: the census shrinks because it was counting things that were never addresses.
+
+### 🔴 Nothing trended into this file this pass
+
+🔴 **`0` new trending repository rows.** The four prescribed legs and four forge legs returned
+**12 candidates, all already carried**. 🟢 `/topics/ai-education` reports **536** tagged
+repositories against the **20** swept here, so the enumerable backlog is real — but it descends
+by stars into the band where, on this pass's own reads, **2 of 12 addresses had no grant at 8
+ladder paths**. 🔵 That 1-in-6 ungranted rate at three figures of stars is the number to carry
+into the backlog.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **`ACTION p379-A` DISCHARGED: THE RANDOM ARM OVER CHANNEL B IS **65 %** LIVE AGAINST `p379`'s ENRICHED **49 %** — SO THE "UPPER BOUND" WAS AN UPPER BOUND ON NOTHING, AND THE ENRICHMENT SELECTED *TOWARD THE DEAD*. 🔴 AND TWO OF THE 40 SAMPLED ADDRESSES ARE GIT BRANCH NAMES.**
 
 **Evidence:** [`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
 

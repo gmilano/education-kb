@@ -101,7 +101,24 @@ PLACEHOLDER_WORD = re.compile(
     r"(?:[-_]?(?:username|user|name|org|repo|account))?$")
 
 # A name that is reserved or degenerate rather than a repository.
+# 🆕 p382: this set held `.` and `..` and STOPPED THERE, and the omission was load-bearing.
+# `.` is a legal NAME_SHAPE character, so a name of `...` passes every arm of this filter AND
+# all four of p367's — while `…`, the UNICODE ellipsis, is already rejected as NAME-ILLEGAL
+# because it is not in `[a-z0-9._-]`.  So an ASCII-ellipsis truncation survived and a Unicode
+# one did not, which is why nothing had ever reported it.
+# 🔴 Not hypothetical: FOUR phantom addresses were in the live channel-B census at p382 —
+# `emaanrana012/...`, `genai-gurus/...`, `manahil2731/...` and `mebis-lp/...` — each one a
+# markdown table cell that cut a real address off and left the dots behind.  A length or a
+# prefix test does NOT find these (p382 drafted one, measured it, and refuted it: 97 of 3 078
+# survivors are a strict prefix of another token, and most are genuinely distinct repositories
+# — `amp-up-io/qti3-item-player` and `…-vue3` both exist).  The MARKER is what works.
+# 🟢 Expressed as a RULE rather than three more literals, so `....` cannot reopen it.
 NAME_RESERVED = frozenset({".", ".."})
+
+
+def degenerate_name(name):
+    """🆕 p382 — a name made ENTIRELY of dots is a truncation residue, not a repository."""
+    return bool(name) and set(name) == {"."}
 
 
 def classify(folded):
@@ -127,6 +144,8 @@ def classify(folded):
         return "OWNER-ILLEGAL"
     if not NAME_SHAPE.match(name) or name in NAME_RESERVED:
         return "NAME-ILLEGAL"
+    if degenerate_name(name):
+        return "NAME-DEGENERATE"        # 🆕 p382 — an all-dots truncation residue
     if owner in NAV_NAMESPACES:
         return "NAV-NAMESPACE"
     if PLACEHOLDER_WORD.match(owner):

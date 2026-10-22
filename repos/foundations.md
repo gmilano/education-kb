@@ -4,7 +4,76 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **TWO FOUNDATION ROWS FROM A CHANNEL THAT DID NOT EXIST FOR TEN PASSES, BOTH MIT, BOTH PAYLOAD-READ, BOTH FOLDING TO `p378`'s CONSTANT. 🟢 `make hooks` 43/43 AND THE THREE EGRESS GATES 3/3 — `884` GRANT PAYLOADS RE-READ FIRST-HAND ACROSS THE MIT TIER.**
+## 🟢 🆕 2026-10-22 · `p382` — **`0` NEW FOUNDATION ROWS, AND THE REASON IS MEASURED RATHER THAN GUESSED. 🟢 BUT `p378`'s MIT FOLD CONSTANT REPLICATES ACROSS A **40 B** SPAN — THE WIDEST IN THIS BASE'S HISTORY — AND SIX FOUNDATION-TIER GRANTS WERE RE-READ FIRST-HAND ON THEIR REAL DEFAULT REFS.**
+
+**Evidence:** [`mit-fold`](evidence/mit-fold-out-of-sample.2026-10-22-p382.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p382.tsv) ·
+[`subtree-grant`](evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`address-yield`](evidence/address-yield.2026-10-22-p382.tsv)
+
+### 🔴 Zero new rows, published as a measurement
+
+🔴 **12 candidates read first-hand off the highest-density education surfaces GitHub exposes;
+`0` graded NEW; `0` padded.** Every one was already carried, several hundreds of occurrences
+deep (`pguso/agents-from-scratch` 216, `THU-MAIC/OpenMAIC` 160,
+`GarethManning/education-agent-skills` 235). The forge channel's NEW rate across three passes on
+**one day** is 17.0 % → 23.9 % → **0.0 %**. 🔵 This base's standing rule is to publish that
+rather than pad, and this is the **ninth** such pass.
+
+### 🟢 The fold constant, replicated wider than ever
+
+🟢 **6 fresh payloads · 6 distinct byte lengths · 6 distinct `sha256₁₂` · one folded digest.**
+
+| slug | bytes | `sha256₁₂` | folded | digest |
+|---|---|---|---|---|
+| [`netless-io/flat`](https://github.com/netless-io/flat) | 1 062 | `8fa1566550df` | 1 043 B | `584db484c03a8904` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 1 065 | `ba2525637432` | 1 043 B | `584db484c03a8904` |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 1 069 | `262b47ee1fff` | 1 043 B | `584db484c03a8904` |
+| [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) | 1 081 | `e29ef713b542` | 1 043 B | `584db484c03a8904` |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 1 091 | `f78cc6bf1d57` | 1 043 B | `584db484c03a8904` |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 1 102 | `a9ca00bcc7a5` | 1 043 B | `584db484c03a8904` |
+
+🟢 **Span 1 062–1 102 = 40 B**, against `p381`'s 28 B and `p380`'s 17 B. 🔵 The span is the whole
+point: the constant is **not an artefact of a narrow byte band**. Six payloads differing in the
+raw by up to 40 bytes — holder lines, wrapping, a trailing newline — are **one legal text**, and
+the fold says so while the raw digest says six different things.
+
+🔴 **Caveat, before anyone leans on it.** The committed fold instrument **could not be run** —
+the execution lane is denied for cloned code here. `p312.normalise()` and `p378.fold()` were
+**re-implemented from the committed source**, which is admissible only because the
+re-implementation reproduces the **published constant** on a canonical MIT text as a positive
+control. It does, exactly. 🔵 A re-implementation without that control would have been worth
+nothing, and is the reason the control is the first row of the evidence file.
+
+### 🔴 A foundation-tier grant can be valid, standard — and still not cover the repository
+
+🔴 `ACTION ZZ-ap` (built this pass, 19 green controls) classified
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — a **foundation
+row on these shelves** — as **`STOCK-SCOPE-LIMITED`**. Its `main/LICENSE` is the **unmodified
+stock ODbL text**, and that text limits its own scope in its own preamble: *"the ODbL only
+governs the rights over the Database, and not the contents of the Database individually.
+Licensors should use the ODbL together with another license for the contents."*
+
+🔵 **So the grant covers the database structure and not the records in it.** For a taxonomy
+repository that is precisely inverted from what a consumer wants: the **contents are the
+asset**. A foundation row recorded as *"ODbL-1.0"* and treated as cleanly reusable is a row
+whose actual payload is **ungranted**. 🟢 `Pattern 38` on `compose/patterns.md` is the
+engagement-level consequence.
+
+### 🟢 Two instruments added to this base's floor
+
+🟢 **`compose/code/p382-subtree-grant/`** — `ACTION ZZ-ap`, 19 controls, the per-subtree grant
+classifier with its three fixtures committed as payload bytes.
+🟢 **`compose/code/p382-offset-region/`** — `Gap 541`, 10 controls, a timezone-offset census
+placed into a region **with its DST span** or refused with the reason.
+🟢 Both are **wired into `HOOK_GATES`** as `gate-subtree-grant` and `gate-offset-region`; the
+roster now reads **45**, verified by `make -n hooks` expansion. 🔴 **Neither was run under
+`make hooks` this pass** — both were authored and run green in the open lane, and the first pass
+with an execution lane judges them. Stated plainly because an unrun gate is not a green one.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **TWO FOUNDATION ROWS FROM A CHANNEL THAT DID NOT EXIST FOR TEN PASSES, BOTH MIT, BOTH PAYLOAD-READ, BOTH FOLDING TO `p378`'s CONSTANT. 🟢 `make hooks` 43/43 AND THE THREE EGRESS GATES 3/3 — `884` GRANT PAYLOADS RE-READ FIRST-HAND ACROSS THE MIT TIER.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
 

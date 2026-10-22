@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 382 · 2026-10-22 — **`ACTION ZZ-ap` CLOSED after five registrations, `Gap 539` and `Gap 541` closed with it — and the gate state itself becomes a gap, because `make hooks` COULD NOT BE RUN: the execution lane is denied by policy, not by egress, and no channel cell had a field for that.**
+
+**Evidence:** [`registered-prediction`](../evidence/p382-registered-prediction.2026-10-22-p382.tsv) ·
+[`channel-probe`](../evidence/channel-probe.2026-10-22-p382.tsv) ·
+[`subtree-grant`](../evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`branch-prefix-stoplist`](../evidence/branch-prefix-stoplist.2026-10-22-p382.tsv) ·
+[`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p382.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p382.tsv) ·
+[`address-yield`](../evidence/address-yield.2026-10-22-p382.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p382.tsv)
+
+🔴 **GATE STATE: `make hooks` WAS NOT RUN, and no gate colour is claimed anywhere in this pass.**
+The execution lane is **DENIED** in this sandbox — not for want of egress, but by a policy on
+executing code that arrived in the clone. 🟢 `make -n hooks` **does** expand, so the **roster** was
+verified **by reading**: **45 gates** after this pass wired two. 🔵 Every "43/43" on these shelves
+is inherited from `p381`, not re-measured here. This is `P0a`'s "execution lane DENIED" precedent
+with a different mechanism, and it is stated at the top because a pass that cannot run its gates
+must say so where a reader looks first.
+
+### 🟢 Closed, moved or resolved this pass
+
+| Gap / Action | Was | Now |
+|---|---|---|
+| 🟢 **`ACTION ZZ-ap`** — the per-subtree grant classifier | registered at `p377`, **carried unbuilt FIVE passes**, ranked **1st** by `p381` with three live fixtures | 🟢 **CLOSED. BUILT, 19 controls green**, `compose/code/p382-subtree-grant/`. `B-LIMB-1` and `B-LIMB-2` both **CONFIRMED** — all three fixtures classify correctly **and** all three contradict a root-only read |
+| 🟢 **`Gap 539`** — channel B admits git branch names | one fixture (`feature/x`, which `p381` put in its own census) | 🟢 **CLOSED.** `Arm 5` `BRANCH-PREFIX` in `p367`. **8** distinct tokens, not 1 — `C-LIMB-2` **CONFIRMED**. Census 3 078 → 3 070 |
+| 🟢 **`Gap 541`** — `-0500` cannot tell NA from LATAM | a known ambiguity, hand-applied | 🟢 **CLOSED, and discharged BEYOND its registration.** `compose/code/p382-offset-region/`, 10 controls. `p381` asked for two rules; this adds the **DST-span** test `ACTION ZI-b` demanded in prose |
+| 🔴 **`D-LIMB-1`** — the gap was costing a wrong placement | predicted ≥1 specimen re-grades from a confident region | 🔴 **REFUTED, by this pass's own measurement.** No specimen moves: `undergraduate-coding-tutor` was already `NOT PLACED` and `learning-kit` already `NOT RESOLVED`. 🔵 **The gap cost a missing CODIFICATION, not a wrong placement** — the hand discipline was already right, and what was missing was the instrument so the next pass need not re-derive it |
+| 🟢 **`ACTION ZI-b`** — a `-0500` placement must state its DST span | prose-only | 🟢 **WIRED.** `intellectif/learning-kit` (months 05 08 09 10) now reads **AMBIGUOUS with US Eastern RULED OUT** — strictly more than its previous `NOT RESOLVED` |
+| 🔴 **`Gap 529`/`542`** — the integer star channel | "`api.github.com` 403, a sixth sandbox refusing the integer channel" | 🔴 **THE READING WAS WRONG FOR FOUR PASSES.** `/rate_limit` answers **200** with an **authenticated 15 000** allowance; `/repos/*` refuses naming **`add_repo`** as a remedy; `/search`+`/users` refuse **by design**. See `Gap 545` |
+| 🟢 **`A-LIMB-1`/`A-LIMB-2`** — is the remedy real? | untested in this base's history | 🟢 **BOTH CONFIRMED.** `add_repo` on a third-party public repo returns `read_available`, **"Nothing was attached"**, and states the git proxy **already serves anonymous reads of every public repo** while API tools cover **only attached** ones. `/search` stayed 403 throughout |
+| 🟢 **`p378` fold constant** — out-of-sample replication | 17 B span (`p380`), 28 B (`p381`) | 🟢 **WIDEST YET: 40 B.** 6 fresh payloads, 6 distinct lengths, 6 distinct `sha256₁₂`, one digest, folded length constant 1 043 B |
+| 🟡 **`p381`'s `openDesk Edu` headline** | "the largest named open-source education deployment this base has ever recorded", 8 600 schools | 🟡 **DOWNGRADED to `ATTRIBUTED-UNVERIFIED`** and the **superlative retired**. The figure traces to one news item; the leg's own summary says no official confirmation was found. 🟢 Not withdrawn, and better specified: ZenDiS, `ILIAS`+`OpenProject`, SSO, 29 Jul 2026 |
+| 🟢 **`Gap 533`** — forge-channel saturation | 83 %, then 76.1 % already-carried | 🟢 **CLOSED AS A CHANNEL QUESTION, REOPENED AS A SUPPLY ONE.** NEW rate 17 % → 23.9 % → **0 %** in three passes on one day. The channel was exhausted by this base's own sweeps |
+| 🔴 **`E-LIMB-2`** — the forge out-yields the prescribed legs | confirmed at `p380` and `p381` | 🔴 **REFUTED.** They **tied at zero**. A channel cannot out-yield another when both are empty |
+| 🔴 **`Gap 544`** — egress artefacts were date-keyed | fixed at `p381` | 🔵 **UNTESTED HERE** — the egress recipes could not be run, so `p381`'s `PASS`-stamp fix is not re-measured. Carried |
+| 🔴 **`ACTION p378-B` / `p378-C`** | four passes carried, not run | 🔴 **FIVE passes carried, still not run.** Both need an execution lane |
+
+### 🔴 New gaps
+
+| Gap | Statement |
+|---|---|
+| **545** | **A channel cell has no field for the EXECUTION lane.** `p381` added `tool`; `p382` adds `mechanism` and still cannot express "the host answers but the local policy will not let me run the instrument that reads it". Reachability and **runnability** are independent axes, and this base has only ever recorded the first |
+| **546** | **A REFUSED FIGURE HAS NO RE-MATCH ON INTAKE, so a refusal does not persist against the channel.** `p381` refused nine figures by name; `p382`'s NA leg returned **four of them unchanged**. Refusal is a decision about what gets published and does nothing to the supply. `ACTION SH`'s table must run at **intake**, not at write-up |
+| **547** | **A figure cell records its SOURCE but not its POPULATION**, which is exactly what made `p381`'s splice unnameable. `92 % → 66 %` is a LATAM survey figure joined to a global one; both halves are real and only the **population** field would have caught it |
+| **548** | **No leg cell records its SORT ORDER.** Three of four prescribed legs are stars-sorted, and the live education-agent category (skill packs) cannot clear **250 ★** — so the legs are sorted by the one dimension on which the live supply cannot compete, and nothing in the record says so |
+| **549** | **The licence column cannot distinguish a CODE grant from a CONTENT or DATABASE grant.** Of 12 addresses read first-hand this pass, **4** carry a non-code or absent grant. Education's open assets are curricula, taxonomies and item banks, licensed under ODbL/OGL/CC — instruments with **scope clauses**. This base's column was built for code |
+| **550** | **`p351`'s `NAME_RESERVED` stopped one character short** — it held `.` and `..`, so a name of `...` passed every arm while the **Unicode** ellipsis was already rejected. Four phantoms were in the live census. 🟢 **Fixed this pass** as a rule, not three literals |
+| **552** | **An OFF-DOMAIN address cannot be rejected, because it is not ill-formed.** Six of this pass's eight census additions are the ML-infrastructure repos it cited *as the query-shape defect* — `google-deepmind/acme`, `meltingpot`, `instadeepai/mava`, `kubernetes-sigs/agent-sandbox`, `openpipe/art`, `rlinf/rlinf`. Every one is a **real repository**, so no shape, path or vocabulary arm can reject it. 🔵 Every census defect this base has fixed so far rejected a **non-address**; this is the first that would have to reject a **valid address for being off-topic**, and that is a different instrument. `website/img` and `website/video` are the easy half (`website` belongs in `REF_OR_PATH`) |
+| **551** | **A pass cannot publish "roster verified, colour unknown".** The gate vocabulary is binary — green or red — so a pass that reads the roster but cannot run it has no honest cell to write, and the inherited "43/43" sits on the shelves looking current |
+
+### 🔵 The errors this pass published against itself
+
+| | |
+|---|---|
+| 🔴 **A byte column 1 low, and five digests wrong** | `printf '%s'` strips a trailing newline. Caught by a second instrument disagreeing; the tell was that **1 of 6 agreed** — the one payload with no trailing newline |
+| 🔴 **A gap drafted and REFUTED before publication** | "a 26-character column cut mints phantom addresses". 97 of 3 078 survivors are a strict prefix of another token, no spike at 26, and most of that cohort are **genuinely distinct repositories**. A length-based stoplist would have **deleted real addresses** |
+| 🔴 **A naive sum nearly published as a union** | `2 697 + 3 066 = 5 763` is **not** a union — `p381`'s own figures give 3 420, so the channels overlap heavily. Caught before it reached a shelf |
+
+---
+
 ## Pass 381 · 2026-10-22 — **six new gaps, and five of them are MISSING FIELDS rather than missing facts: a census with no file-set, a sample with no selection rule, a star with no surface, an offset that cannot tell two regions apart, and a shape filter with no vocabulary.**
 
 **Evidence:** [`registered-prediction`](../evidence/p381-registered-prediction.2026-10-22-p381.tsv) ·

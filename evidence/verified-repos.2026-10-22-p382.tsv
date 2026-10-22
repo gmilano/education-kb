@@ -1,0 +1,38 @@
+# p382 VERIFIED REPOS — every row read FIRST-HAND on 2026-10-22, on its REAL DEFAULT REF.
+# The default ref is resolved by `git ls-remote --symref` BEFORE the grant ladder is walked.
+# That order is p380's and p381's published error (both read `main`/`master` with the
+# --symref output already on screen, and p381 had to re-read ILIAS at `release_11` and
+# Artemis at `develop`). It caught one here: 24kchengYe/human-skill-tree is on `master`.
+#
+# 🔴 AN OWN ERROR, PUBLISHED: the `bytes` and `sha256_12` columns below are the CORRECTED
+# values. p382's first verifier used `printf '%s'` to measure the payload, which STRIPS A
+# TRAILING NEWLINE, so it reported every byte count 1 low and every digest computed over a
+# truncated payload. Five of six MIT digests were therefore wrong; the sixth
+# (pguso/agents-from-scratch) AGREED across both runs, which is the tell — that payload has
+# no trailing newline. Caught by running a second instrument (curl -o, which preserves the
+# byte stream) over the same addresses and noticing the digests did not match.
+slug	default_ref	head	grant_path	http	bytes	sha256_12	licence_title_line	verdict
+THU-MAIC/OpenMAIC	main	c119eefc	main/LICENSE	200	1065	ba2525637432	MIT License	🟢 PERMISSIVE — folds to p378's constant
+pguso/agents-from-scratch	main	da3f9df2	main/LICENSE	200	1091	f78cc6bf1d57	MIT License	🟢 PERMISSIVE — folds to p378's constant
+assafkip/claudemy	main	438a6288	main/LICENSE	200	1069	262b47ee1fff	MIT License	🟢 PERMISSIVE — folds to p378's constant
+SenmuuuuW/universal-diagnostic-tutor-skill	main	075c1895	main/LICENSE	200	1102	a9ca00bcc7a5	MIT License	🟢 PERMISSIVE — folds to p378's constant
+Fazmin/AILearningGuide	main	d0bd92f3	main/LICENSE	200	1081	e29ef713b542	MIT License	🟢 PERMISSIVE — folds to p378's constant
+netless-io/flat	main	d194d5b0	main/LICENSE	200	1062	8fa1566550df	MIT License	🟢 PERMISSIVE — folds to p378's constant
+SimonsTang/feifei-companion	main	c9c6295d	main/LICENSE	200	10226	40be2052a21d	Apache License	🟢 PERMISSIVE — Apache-2.0, full text
+HugeCatLab/ChatTutor	main	7d9e9052	main/LICENSE	200	34522	20b067f86de3	GNU AFFERO GENERAL PUBLIC LICENSE	🟡 COPYLEFT-FLAGGED — AGPL-3.0
+24kchengYe/human-skill-tree	master	be589ddd	master/LICENSE	200	1133	d418291875a2	GNU AFFERO GENERAL PUBLIC LICENSE	🟡 COPYLEFT-FLAGGED — AGPL, and the ref is `master` NOT `main`
+GarethManning/education-agent-skills	main	6bbbce41	main/LICENSE	200	1229	40db9b472090	Creative Commons Attribution-ShareAlike 4.0 International	🟡 CONTENT licence, share-alike — NOT a code grant. 🟢 AGREES with the shelf cell
+aaryansamanta/ai-ethos	main	9acaafc7	NONE-AT-8-PATHS	404	-	-	-	🔴 UNGRANTED — no payload at 8 ladder paths, at 498 ★
+DAMO-NLP-SG/M3Exam	main	832a4958	NONE-AT-8-PATHS	404	-	-	-	🔴 UNGRANTED — a cited benchmark with no grant, at 105 ★
+#
+# Ladder walked, in order: LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md COPYING
+# LICENSE-MIT license   (8 paths, on the real default ref)
+#
+# 🟢 THE AGREEMENT RESULT, which is worth as much here as a correction: `education-agent-skills`
+# reads CC-BY-SA-4.0 first-hand and the shelf ALREADY says "CC-BY-SA-4.0 (`LICENSE`) ... Content
+# licence, share-alike — not a code grant". p382 set out to correct it and instead CONFIRMED it.
+# A base that only publishes its corrections cannot tell a reader how often it is right.
+#
+# 🔴 TWO UNGRANTED ROWS AT SCALE. `aaryansamanta/ai-ethos` carries 498 ★ with no grant at any
+# probed path — and its owner also owns `nextgen-ai` (491 ★), whose MIT text p381 found narrowed
+# BY HAND. One owner, 989 ★ across two addresses, and NEITHER is cleanly reusable.

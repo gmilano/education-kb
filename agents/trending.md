@@ -4,7 +4,79 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **A SUPPLY CHANNEL, NOT A STAR CHANNEL: 46 ADDRESSES FROM FOUR FORGE LEGS AGAINST FOUR FROM FOUR PRESCRIBED SEARCH LEGS. 🟢 11 `NEW` AGAINST **ZERO**. 🔴 AND 76 % OF WHAT THE FORGE'S OWN SEARCH RETURNED WAS ALREADY ON THESE SHELVES, SO `Gap 533`'s SATURATION IS A PROPERTY OF THE SUPPLY AND NOT OF THE CHANNEL.**
+## 🟢 🆕 2026-10-22 · `p382` — **THE SUPPLY RAN DRY, AND IT IS MEASURED: 17 % → 23.9 % → **0 %** NEW ACROSS THREE PASSES ON ONE DAY, ON THE SAME CHANNEL. 🔴 `0` NEW ROWS, `0` PADDED. 🟢 AND THE MODAL FORM OF A NEW EDUCATION AGENT IS NOW A *SKILL PACK* THAT CANNOT CLEAR 250 ★ — WHICH IS WHY EVERY STARS-SORTED LEG READS EMPTY.**
+
+**Evidence:** [`address-yield`](evidence/address-yield.2026-10-22-p382.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p382.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p382.tsv) ·
+[`registered-prediction`](evidence/p382-registered-prediction.2026-10-22-p382.tsv)
+
+### 🔴 The trend this file exists to record, and this pass it points down
+
+| pass | surfaces swept | candidates | NEW | rate |
+|---|---|---|---|---|
+| `p380` | forge HTML, stars | 18 | 3 | 17.0 % |
+| `p381` | forge HTML `/search` + `/topics`, with `license:`/`pushed:` | 46 | 11 | 23.9 % |
+| 🔴 `p382` | the same, swept deeper — 20 of 536 on `/topics/ai-education`, 4 legs | 12 | **0** | **0.0 %** |
+
+🟢 **`E-LIMB-1` CONFIRMED** — the four prescribed global legs returned **zero** NEW addresses for
+a **third consecutive pass**. 🔴 **`E-LIMB-2` REFUTED, and by this pass's own result:** it
+predicted the forge would again out-yield the prescribed legs on NEW. **It did not — they tied
+at zero.** A channel cannot out-yield another when both are empty, and the registration did not
+anticipate that the forge's own advantage could go to zero in one day.
+
+🔵 **The honest reading.** `p381` measured 76.1 % of forge output already shelved and concluded
+*"the saturation is in the SUPPLY, not the channel"*. `p382` sharpens it: **the channel was
+exhausted by this base's own two previous passes.** `Gap 533` is therefore **closed as a channel
+question and reopened as a supply one** — the next address will come from a forge this base has
+not opened, a registry, a national procurement record, or from **time passing**. Writing a
+better query is not the remedy, and three passes of evidence now say so.
+
+### 🟢 The shape of the supply, which is the week's real signal
+
+🟢 Nine of the ten rows on the MIT tutor leg are **agent *skill packs***, not frameworks:
+[`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill)
+(249 ★, 🟢 MIT, payload-read) · `wildcat430524/Steps2Great-skill` · `tong666-bit/liu-xiaoyan-skill`
+· `tong666-bit/song-hao-math` · `fcescob/understand` · `fanfanfanfanfan626/mastery-tutor` ·
+`hwl668/Scientific-learning-skills-` · `TovTechOrg/Tov-learn` · `CGSeb/lessonfolk`.
+
+🔴 **And the structural consequence, which is new.** A skill pack is a handful of files, so the
+entire class sits between **2 and 249 ★** while frameworks sit in the thousands. **A category
+that cannot clear 250 ★ is invisible to every stars-sorted leg** — including three of this
+base's four prescribed ones. 🔵 So the prescribed legs are not merely reaching a saturated
+commentary index; they are **sorted by the one dimension on which the live category cannot
+compete**. That is a second, independent cause of four passes of thin yield, and it is fixable:
+sort by `pushed:` or enumerate the topic, never by stars alone.
+
+### 🔴 A refused figure is not a retired figure
+
+🔴 `p381` refused **nine** figures by name. `p382`'s North America leg returned **four of them
+back, unchanged**: `$951 M → $2.3 B` (15.9 % CAGR), the **36 %** NA share, **10 %** of
+institutions with formal AI guidelines, **71 %** of US teachers untrained. Same class of source,
+one pass later. 🔵 **Refusal is a decision about what this base publishes; it does nothing to the
+channel**, which re-serves the figure on the next sweep. So a refusal has to be written down
+*as a refusal* and **re-matched on intake**, or every pass pays the adjudication cost again.
+`ACTION SH`'s refuted-claims table is exactly that instrument — and this regression is the
+argument for running it at **intake** rather than at write-up.
+
+🟢 **And the splice mechanism is finally named.** `p381` refused *"92 % → 66 % student usage"* as
+a cross-population splice but could not say where the halves came from. `p382` can: the **92 %
+is the Digital Education Council's LATAM figure** (29 LATAM institutions, >30 000 responses, Feb
+2026) and the **66 % is a 2024 GLOBAL figure**. The splice presents a **LATAM survey result as a
+global year-on-year rise**. 🔵 Both halves are real; the sentence joining them is not.
+
+### 🟢 What a successor can still harvest here
+
+🟢 `/topics/ai-education` reports **536 repositories** and this base has swept **20**. The
+remaining ~516 are the one enumerable backlog left on this channel — but they are ordered by
+stars, so they descend into the sub-10 ★ band where, on this pass's evidence, grants go missing:
+of 12 addresses read first-hand, **2 had no payload at 8 ladder paths** (`aaryansamanta/ai-ethos`
+at 498 ★, `DAMO-NLP-SG/M3Exam` at 105 ★). 🔴 **A 1-in-6 ungranted rate at three figures of stars
+is the number to carry into that backlog**, not an optimistic one.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **A SUPPLY CHANNEL, NOT A STAR CHANNEL: 46 ADDRESSES FROM FOUR FORGE LEGS AGAINST FOUR FROM FOUR PRESCRIBED SEARCH LEGS. 🟢 11 `NEW` AGAINST **ZERO**. 🔴 AND 76 % OF WHAT THE FORGE'S OWN SEARCH RETURNED WAS ALREADY ON THESE SHELVES, SO `Gap 533`'s SATURATION IS A PROPERTY OF THE SUPPLY AND NOT OF THE CHANNEL.**
 
 **Evidence:** [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`registered-prediction`](../evidence/p381-registered-prediction.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv)
 

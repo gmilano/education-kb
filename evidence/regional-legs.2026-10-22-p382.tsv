@@ -1,0 +1,74 @@
+# p382 REGIONAL LEGS — four prescribed regional legs plus two IN-LANGUAGE sibling legs.
+# p381's Pattern 36 step 0: "Run the forge for addresses, the national language for
+# instruments." p382 tested that prescription and it REPLICATES, twice.
+region	leg	language	result	grade
+North America	"AI education North America 2026 adoption regulation players"	EN	🔴 NIL on NEW instruments — and worse than nil, see the regression note below	DECLARED NIL
+EMEA	"AI education EMEA 2026 adoption regulation players"	EN	🔴 NIL. Returned enterprise-AI trend pieces (CompTIA, Workday, Bandwidth-Cavell); nothing on schools, universities, edtech vendors or ministries	DECLARED NIL
+EMEA	"inteligencia artificial educación superior 2026 política universidades código abierto plataforma"	ES	🟢 THE FINDING OF THE PASS'S REGIONAL HALF — a named instrument in preparation, invisible to the English leg	PLACED
+EMEA	"Open Source Lernplattform Schulen KI 2026 Bundesland Einführung openDesk"	DE	🟡 p381's own headline QUALIFIED — see the openDesk note	PLACED, WITH A CORRECTION
+APAC	"AI education APAC 2026 adoption regulation players"	EN	🔴 NIL on instruments. Vendor alliances only (TCS–Pearson multi-year AI learning alliance; Alteryx academy relaunch; LearnUpon APAC expansion). One Forrester prediction, dated to its 2025 outlook	DECLARED NIL
+LATAM	"AI education LATAM 2026 adoption regulation players"	EN	🟢 THE ONLY METHOD-BEARING LEG, for a THIRD consecutive pass	PLACED
+#
+# 🟢 EMEA / SPAIN — NEW, and found ONLY in Spanish. Spain's Ministerio de Ciencia, Innovación
+# y Universidades is preparing a Real Decreto de enseñanzas universitarias which will, FOR THE
+# FIRST TIME, carry an article specific to AI in university teaching. It is negotiated with
+# CRUE and student representatives and frames AI across FOUR planes — the classroom,
+# institutional use, research, and the university's own administration. The Secretary General
+# of Universities, Francisco García Pascual, states an ETHICAL CODE for AI use will be
+# OBLIGATORY. Intended publication in the BOE before the academic year ends.
+# 🔴 Dated to APRIL 2026 at source, so whether it has since been published is NOT established
+# here and is NOT asserted. ATTRIBUTED-UNVERIFIED: the BOE itself was not read — no non-GitHub
+# citation address was reachable by either tool this pass (see the channel probe).
+#
+# 🟡 EMEA / GERMANY — A QUALIFICATION OF p381'S OWN HEADLINE, which is why this leg was re-run.
+# p381 published `openDesk Edu` in "8 600 SCHOOLS" as "THE LARGEST NAMED OPEN-SOURCE EDUCATION
+# DEPLOYMENT THIS BASE HAS EVER RECORDED". The German leg re-run here returns the same single
+# origin — a borncity news item — and the leg's own summary states that the article rests on
+# that ONE source and that no official confirmation was found.
+# 🔴 So the 8 600 figure is SINGLE-SOURCED SECONDARY REPORTING, not an official deployment
+# record, and p381's superlative rests on it. It is NOT withdrawn — a single source is still a
+# source — but it is DOWNGRADED to ATTRIBUTED-UNVERIFIED and the superlative is retired until
+# an official ZenDiS or ministry record is read first-hand.
+# 🟢 What IS newly established and consistent: the integration is dated 29 July 2026, it unites
+# the LMS `ILIAS` with `OpenProject` behind single sign-on, the suite is built by ZenDiS
+# (Centre for Digital Sovereignty in Public Administration), and it was first used at the
+# Ministerpräsidentenkonferenz in October 2024.
+# 🟢 A SECOND German instrument, new: the Ergebnisbericht of the conference "Offene KI in der
+# Schule 2026", which recommends using the Digitalpakt 2.0 window to build sovereign,
+# data-protection-compliant, scalable AI infrastructure for schools, and notes that open-source
+# strategies already exist in many Bundesländer.
+#
+# 🟢 LATAM — method-bearing for a third consecutive pass, and p382 adds a BREAKDOWN p381 lacked.
+# UNESCO IESALC / UNU-IAS, 200 institutions across 19 countries, fielded Aug–Oct 2025:
+#     teaching and learning  73.5 %   |   research        57.0 %
+#     administration         34.1 %   |   community       20.0 %
+#   🔵 p381 carried the 200/19 sample but not the per-function split. The ORDER is the finding:
+#      adoption is deepest exactly where governance is thinnest.
+# Digital Education Council + Tecnológico de Monterrey (Institute for the Future of Education),
+# 29 LATAM institutions, >30 000 responses, released February 2026: 92 % of students and
+#     🟢 79 % OF FACULTY actively engaging with AI. p381 had the student figure; the faculty
+#     figure is new here, and it is the one that matters to a studio — faculty are the buyers.
+# Regulation: Chile has had a National AI Policy since 2021 with a law under discussion; Brazil
+#     and Colombia have national strategies but NO education-specific rules; Mexico's SEP,
+#     ANUIES and Observatorio IA guidance is explicitly NON-BINDING. ~30 % of LATAM universities
+#     have published an AI-use policy (Tec de Monterrey, Bossio).
+# Players: Digital Education Council · Tec de Monterrey IFE · UNESCO IESALC · UNU-IAS · UNAM ·
+#     UPC (Peru) · IDB and CEPAL (the ILIA index, 19 countries) · SEP and ANUIES (Mexico).
+#
+# 🔴 THE NORTH AMERICA REGRESSION, AND IT IS A FINDING ABOUT THIS BASE'S OWN METHOD.
+# p381 REFUSED nine figures by name. Its list included: `$951 M -> $2.3 B`, the `36 %` NA share,
+# `10 %` formal-guidelines, `71 %` untrained teachers, and the `92 % -> 66 %` student-usage
+# splice. p382's North America leg returned `$951 M -> $2.3 B` (15.9 % CAGR), `36 %` NA share,
+# `10 %` with formal AI guidelines and `71 %` of US teachers lacking AI training — THE SAME SET,
+# from the same class of source, one pass later.
+# 🔵 A REFUSED FIGURE IS NOT A RETIRED FIGURE. Refusal is a decision about what this base
+# publishes; it does nothing to the channel, which re-serves the figure on the next sweep. So a
+# refusal must be WRITTEN DOWN AS A REFUSAL and re-matched on arrival, or every pass pays the
+# adjudication cost again. `ACTION SH`'s refuted-claims table is exactly this instrument, and
+# the regression here is the argument for running it on INTAKE rather than at write-up.
+#
+# 🟢 AND THE SPLICE MECHANISM, NAMED AT LAST. p381 refused "92 % -> 66 % student usage" as a
+# cross-population splice but could not say where the halves came from. p382 can: the 92 % is
+# the DIGITAL EDUCATION COUNCIL'S **LATAM** FIGURE (29 LATAM institutions, Feb 2026), and the
+# 66 % is a 2024 GLOBAL figure. The splice takes a LATAM survey result and presents it as a
+# global year-on-year rise. 🔵 Both halves are real; the sentence joining them is not.

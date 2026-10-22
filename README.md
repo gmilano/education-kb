@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 382 — 2026-10-22 — **`ACTION ZZ-ap` IS BUILT AFTER FIVE REGISTRATIONS, AND ITS THIRD FIXTURE IS THE ONE THAT MATTERS: A PERFECTLY VALID, UNEDITED, CORRECTLY-IDENTIFIED LICENCE THAT LEAVES THE REPOSITORY'S ACTUAL PAYLOAD UNGRANTED. 🔴 `make hooks` COULD NOT BE RUN AT ALL — THE EXECUTION LANE IS DENIED BY POLICY, NOT EGRESS — SO NO GATE COLOUR IS CLAIMED ANYWHERE IN THIS PASS. 🔴 AND `api.github.com` WAS NEVER REFUSING: FOUR PASSES READ ONE 403 CELL WHERE THERE ARE THREE STATES, ONE OF WHICH NAMES ITS OWN REMEDY. 🔴 ZERO NEW ADDRESSES, BECAUSE THE SUPPLY IS EXHAUSTED — 17 % → 23.9 % → 0 % IN THREE PASSES ON ONE DAY.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date and stamped `p382`. Artefacts are dated by **MEASUREMENT**, per this
+base's standing rule.
+
+**Evidence:** [`registered-prediction`](evidence/p382-registered-prediction.2026-10-22-p382.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p382.tsv) ·
+[`subtree-grant`](evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`branch-prefix-stoplist`](evidence/branch-prefix-stoplist.2026-10-22-p382.tsv) ·
+[`mit-fold`](evidence/mit-fold-out-of-sample.2026-10-22-p382.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p382.tsv) ·
+[`address-yield`](evidence/address-yield.2026-10-22-p382.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-22-p382.tsv) ·
+[`census`](evidence/census.2026-10-22-p382.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Opening act** | 🟢 **Channels probed before anything was reasoned about** (`Gap 511`), with `p381`'s `tool` column plus a new **`mechanism`** column: `make` present · `git ls-remote` OK · `raw.githubusercontent.com` **200** · `registry.npmjs.org` **200** · 🟢 `pypi.org` **200** · 🟢 **`gitlab.com/api/v4` 200 unauthenticated** · 🟢 `github.com` HTML **200 to `WebFetch`** (a seventh sandbox) · 🔴 `github.com` HTML **403 to `curl`** · 🔴 `eur-lex`, `unesco.org`, `oecd.org`, `huggingface.co` all **`000` proxy-refused** |
+| 🔴 **THE CONSTRAINT THAT SHAPES THE WHOLE PASS** | **The execution lane is DENIED.** `make hooks` and every suite under `compose/code/` **cannot be run here** — not for want of egress, but by a policy on executing code that arrived in the clone. 🟢 `make -n hooks` **does** expand, so the **roster** was verified **by reading**: **45 gates** after this pass wired two. 🔴 **This pass therefore claims NO gate colour, and the "43/43" on these shelves is `p381`'s, inherited.** `P0a`'s precedent, new mechanism. `Gap 545`, `Gap 551` |
+| 🟢 **A prediction registered BEFORE the legs, in its own commit** | `8339dfb`, with **no leg output in the tree**: ten limbs across five actions, and **four pre-declared defects in the prediction itself** |
+| 🔴 **`api.github.com` was never refusing, and the correct reading names a remedy** | `p378`–`p381` each published **one** `403` cell and read it as a sandbox refusing the integer channel. **Three states:** `/rate_limit` **200** with an **authenticated 15 000** allowance (anonymous is 60/h, so a credential IS present and is being *scoped*) · `/repos/*` **403** *"not enabled for this session. Use `add_repo`"* · `/search`+`/users` **403** *"sessions are bound to their configured repositories"* — **by design** |
+| 🟢 **…and the remedy was tested, which no pass had done** | 🟢 **`A-LIMB-1` CONFIRMED:** `add_repo` on a third-party public repo returns `read_available`, **"Nothing was attached to the session"** — and states that **the git proxy already serves anonymous git reads of every public GitHub repository**, while API tools cover **only attached** ones. 🔵 So the asymmetry this base has worked around for dozens of passes — `ls-remote` succeeding where the API refuses — is now **documented by the harness**, not inferred. 🟢 **`A-LIMB-2` CONFIRMED:** `/search` stayed 403 throughout. **Record it closed and stop paying for the probe** |
+| 🟢 **Ranked-1 discharged, after five passes carried** | **`ACTION ZZ-ap` BUILT — 19 controls green**, `compose/code/p382-subtree-grant/`. 🟢 **`B-LIMB-1` CONFIRMED** (all three fixtures classify correctly) and 🟢 **`B-LIMB-2` CONFIRMED** (all three **contradict** a root-only read, so the instrument earns its existence) |
+| 🔴 **And its real finding is the fixture nobody expected** | **`withmarbleapp/os-taxonomy` is `STOCK-SCOPE-LIMITED`.** Its payload is the **unmodified, correct, recognised** stock ODbL text — and that text limits its own scope in its own preamble: *"the ODbL only governs the rights over the Database, and not the contents of the Database individually."* 🔴 **A licence can be perfectly valid and still leave the asset ungranted**, and **nothing about the file looks unusual** — no fold, template digest or README probe can see it. For a taxonomy the **records are the asset**. `Pattern 38` |
+| 🟢 **Ranked-2 discharged, and it was more than "one commit"** | **`Gap 539`'s stoplist**, `Arm 5` in `p367`. 🟢 **`C-LIMB-1` CONFIRMED** — `feature/x`, the fake address `p381` wrote into its own census while describing this defect, is rejected. 🟢 **`C-LIMB-2` CONFIRMED** — **8** branch-shaped tokens, **not 1**, so the gap exceeded its fixture |
+| 🟢 **…and building it found an arm nobody was looking for** | **`Arm 6` `NAME-DEGENERATE`: 4 phantom addresses whose repository name is literally `...`**, passed by **every** arm of **both** filters. 🔴 The asymmetry: `.` **is** a legal `NAME_SHAPE` character, so `...` survives, while the **Unicode** ellipsis `…` was already rejected as `NAME-ILLEGAL` — **and the two are visually identical in a rendered table.** `p351`'s `NAME_RESERVED` held `.` and `..` and stopped **one character short**. `Gap 550`, fixed as a rule |
+| 🟢 **Ranked-3 discharged, beyond its specification** | **`Gap 541`**, `compose/code/p382-offset-region/`, 10 controls. `p381` asked for two rules; this adds the **DST-span** test `ACTION ZI-b` had demanded in prose only, so `intellectif/learning-kit` now reads **AMBIGUOUS with US Eastern RULED OUT** rather than `NOT RESOLVED` — strictly more information. `p376`'s precedent for a limb discharged not-as-specified |
+| 🔴 **…and its registered limb is REFUTED** | **`D-LIMB-1` REFUTED.** No specimen re-grades from a confident region: `undergraduate-coding-tutor` was already `NOT PLACED`, `learning-kit` already `NOT RESOLVED`. 🔵 **The gap cost a missing CODIFICATION, not a wrong placement** — the hand discipline was already right, and what was missing was the instrument so a successor need not re-derive it |
+| 🔴 **The headline measurement: the supply ran dry** | **12 addresses read first-hand, `0` graded NEW, `0` padded.** Forge NEW rate across three passes **on one day**: `p380` 17.0 % → `p381` 23.9 % → 🔴 **`p382` 0.0 %**. 🟢 **`E-LIMB-1` CONFIRMED** (prescribed legs: zero NEW, third consecutive pass). 🔴 **`E-LIMB-2` REFUTED** — it predicted the forge would again out-yield them; **they tied at zero** |
+| 🔵 **The honest reading of it** | `p381` concluded *"the saturation is in the SUPPLY, not the channel"*. **`p382` is the stronger form: the channel was exhausted by this base's own two previous passes.** `Gap 533` closes as a channel question and **reopens as a supply one** — the next address comes from a forge this base has not opened, a registry, a procurement record, or **time passing**. `Pattern 39` is the stopping rule |
+| 🔴 **Two independent causes of four passes of thin yield, both newly named** | **(1) Query-shape poisoning** — a leg on `learning management OR curriculum agent` returned `OpenPipe/ART`, `RLinf`, `kubernetes-sigs/agent-sandbox`, `deepmind/acme`, `Mava`, `meltingpot`: **reinforcement-learning infrastructure**. In education *"learning"* is ambiguous and the ML sense wins by two orders of magnitude. **(2) Sort-order blindness** — the live category is the **skill pack**, which sits at **2–249 ★**, so **a category that cannot clear 250 ★ is invisible to every stars-sorted leg**. `Gap 548` |
+| 🟢 **A prior finding replicated out of sample, wider than ever** | `p378`'s MIT fold constant: **6** fresh payloads, **6 distinct byte lengths spanning 40 B** (`1 062`–`1 102`), **6 distinct `sha256₁₂`**, **one** digest `584db484c03a8904`, folded length constant **1 043 B**. `p381`'s span was 28 B, `p380`'s 17 B 🔴 **Caveat: the committed instrument could not be RUN.** `p312.normalise()`/`p378.fold()` were **re-implemented from source**, admissible only because the re-implementation reproduces the published constant on a canonical text as a **positive control** — which it does, exactly |
+| **Regions** | 🟢 **All four placed, two by a DECLARED NIL.** 🟢 **EMEA is the headline and English could not see it again:** the Spanish leg returned **Spain's forthcoming Real Decreto de enseñanzas universitarias**, carrying **for the first time an article specific to AI in university teaching** across four planes, with an **obligatory ethical code**. 🟢 **LATAM method-bearing for a third pass**, now with the **per-function breakdown** (73.5 / 57.0 / 34.1 / 20.0) and **79 % of FACULTY** alongside the 92 % of students. 🔴 **NA and APAC: declared nil on instruments** |
+| 🟡 **A correction to `p381`'s own headline** | `openDesk Edu`'s **8 600 schools** traces to a **single news item** whose own leg summary says no official confirmation was found. 🟡 **Downgraded to `ATTRIBUTED-UNVERIFIED` and the superlative RETIRED** — not withdrawn. 🟢 Better specified instead: **ZenDiS**, `ILIAS` + `OpenProject` behind SSO, **29 July 2026** |
+| 🔴 **A refused figure is not a retired figure** | `p381` refused nine figures by name; the NA leg returned **four of them unchanged** one pass later. 🔵 **Refusal is a decision about what this base publishes and does nothing to the channel.** `ACTION SH`'s table must run at **intake**, not at write-up. `Gap 546` |
+| 🟢 **And the splice `p381` could not explain is named** | *"92 % → 66 % student usage"*: the **92 % is the Digital Education Council's LATAM figure** (29 LATAM institutions, Feb 2026), the **66 % is a 2024 GLOBAL figure**. The splice presents a **LATAM result as a global rise**. 🔵 Both halves are real; the sentence joining them is not. `Gap 547` |
+| **Figures REFUSED rather than reported** | 🔴 **8** — three irreconcilable 2026 market bases in one leg **again** (`$79.6 B`/31.35 % · `$57.2 B`/25.9 % · `$10.6 B`/**40.9 %**) · 37.5 % NA share · `$951 M→$2.3 B` · 10 % formal-guidelines · 71 % untrained teachers · AI-tutor `$1.63 B→$7.99 B` · cloud 71 % share |
+| **Shelf gained** | 🟢 A `p382` block on **all nine** shelves + this README · 🟢 **two new instruments** (`p382-subtree-grant` 19 controls, `p382-offset-region` 10 controls) **wired into `HOOK_GATES`** · 🟢 **two new arms** in the committed harvesters · 🟢 **`Pattern 38`** and **`Pattern 39`** · all five regions extended **in place** in the single canonical block · **8 new gaps** (545–552) · 🔴 **0 new address rows, 0 padded** |
+| **Probes, all first-hand** | **19** channel probes across **4** tools (`curl`, `git`, `WebFetch`, `python3`) · **4** forge legs through `WebFetch` · **8** WebSearch legs (4 prescribed + 4 regional) · **2** in-language sibling legs (ES, DE) · **12** `git ls-remote --symref` · **~40** `raw.githubusercontent.com` grant-ladder reads · **1** `add_repo` remedy test · 🔴 **0** gate runs · 🔴 **0** non-GitHub citation addresses reachable by **either** tool |
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly** — derived over the nine `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, and `Gap 538`'s asked-for **`file_set`** field is now a
+column:
+
+| channel | harvested | rejected | result |
+|---|---|---|---|
+| **U** (`p348`, `github.com/` URLs) | 2 730 | 33 | **2 697 addresses** |
+| **B** (`p367` backticked, + `p382`'s Arm 5 and Arm 6) | 4 696 | 1 622 | **3 074 survivors** |
+| 🟢 **UNION over both channels** | — | — | **3 444 addresses** |
+
+🟢 **Channel U is UNCHANGED from `p381` — 2 730 / 33 / 2 697, identical totals — and that is a
+measurement, not a coincidence.** This pass cited twelve repository addresses with URLs and added
+**zero** distinct channel-U addresses, because every one was already carried. 🔵 **A pass that had
+promoted a new row could not produce an unchanged channel-U census**, so the census corroborates
+the zero-NEW headline independently of the yield table.
+
+🔵 **And the union is not a sum:** 2 697 + 3 074 = 5 771 against a true union of **3 444**; the
+channels overlap on **2 327** addresses. A `p382` draft nearly published the sum, and `p381`'s own
+figures carry the same lesson.
+
+🔴 **Channel B gains `+8`, all eight nameable — and six are an own-error of `p381`'s exact
+class.** Six are the reinforcement-learning repositories this pass cited **specifically as the
+query-shape defect** (`google-deepmind/acme`, `meltingpot`, `instadeepai/mava`,
+`kubernetes-sigs/agent-sandbox`, `openpipe/art`, `rlinf/rlinf`): **by documenting that those
+addresses do not belong in an education knowledge base, this pass entered all six into the
+education knowledge base's census.** The other two are `website/img` and `website/video` — the
+excluded subtree **paths** from `nextgen-ai`'s carve-out, which survive because `website` is not
+in `REF_OR_PATH` (which holds `web` and `www`). 🟢 **Kept, not deleted, on `p381`'s precedent**,
+and both classes now have a fixture. 🔴 The off-domain six are the harder half and get their own
+gap: `google-deepmind/acme` is a **real repository**, so no shape, path or vocabulary arm can
+reject it — every census defect this base has fixed so far rejected a **non-address**, and this
+would be the first to reject a **valid address for being off-topic**. `Gap 552`.
+
+🔴 **And a declared discontinuity, because this pass changed two filters.** `p367`'s own standing
+warning is that *"a gate fix that moves the measurement is a different instrument wearing the
+same name"*. `Arm 5` and `Arm 6` remove **12 non-addresses** that every prior census counted.
+🟢 **All twelve are named** in `branch-prefix-stoplist.2026-10-22-p382.tsv`, and every one is a
+**rejection, not a lost repository**: the census shrinks because it was counting things that were
+never addresses. 🟢 `p381`'s **2 697 / 3 078 / 3 420** is left standing in its own section —
+history is not edited to match a later derivation.
+
+### 🔵 The honest size of `p382`
+
+🟢 The oldest debt on this base is **paid**: `ACTION ZZ-ap`, five registrations and three fixtures
+old, is **built with 19 green controls**, and `p381`'s ranked-2 and ranked-3 items are built with
+it. All three were authored and run in the one lane that was open, because the lane this base
+normally uses was shut. 🟢 Two of the three found **more than they were registered to find** — the
+stoplist's 8-not-1, and a sixth arm nobody was looking for — and one **refuted its own registered
+limb**. 🟢 A four-pass misreading of a channel is corrected with the channel's own three messages
+quoted, and the remedy it names was **tested** rather than assumed. 🟢 A prior finding replicated
+across the widest span yet. 🔴 And the pass's defining measurement is a **zero**: no new address,
+published as a measurement with a three-point trend behind it rather than padded.
+
+🔴 **Stated limitations, before a successor leans on anything here.** **No gate was run** — the
+roster is verified by reading at 45, and every gate colour on these shelves is `p381`'s. Both
+currency gates (`p352-census-currency`, `p376-union-currency`) would normally fire RED against a
+pass that writes before re-deriving; **they could not fire at all**, so the census below is
+derived **by a re-implementation** rather than confirmed by the committed instrument — admissible
+only because it reproduces `p381`'s published 3 078 **exactly**. **No integer star counts**: every
+star figure quoted is from a search or topic **listing**, `Gap 542`'s uncalibrated surface, and the
+API that would settle it is scope-closed **by design**. **No prose citation is address-verified by
+either tool** — every non-GitHub source is `ATTRIBUTED-UNVERIFIED`, weaker than `p378`'s
+275-of-275 standard, and **labelled rather than blended**. The **EU** date is still unread at
+source for a fourth pass. **`ZZ-ap` has three fixtures chosen by the pass that wrote it** — a
+detector, not a census, and **no base rate**. And `ACTION p378-B` and `p378-C` are **five** passes
+carried and still not run, for want of the same lane.
+
+### 🟢 Ranked for the successor
+
+1. 🔴 **Run the gates.** The first pass with an execution lane should run `make hooks` (**45**
+   gates now) and `make hooks-online`, and publish the colours — including the two this pass
+   wired but could not judge, `gate-subtree-grant` and `gate-offset-region`. 🔵 Everything else
+   below is cheaper if this is done first, because three passes of inherited green is now the
+   oldest unverified claim on this base.
+2. 🟢 **Give `ZZ-ap` a DENOMINATOR.** Run `subtree_grant.classify()` across the MIT tier's **884**
+   read grant payloads and publish **how many of them are not `UNIFORM`**. The instrument exists;
+   what is missing is the base rate, and `Gap 549` cannot be sized without it. This is the single
+   highest-value measurement available to the next pass.
+3. 🟡 **`Gap 546` — run `ACTION SH`'s refuted-claims table at INTAKE.** It has a fixture set
+   already: the four figures `p381` refused by name and this pass's NA leg returned unchanged.
+   One commit, and it stops every future pass re-adjudicating the same cells.
+4. 🟡 **Open a channel this base has not opened**, since the forge is exhausted. 🟢 Probed open and
+   unspent here: **`gitlab.com/api/v4` 200 unauthenticated** — a second forge **with an
+   integer-bearing API**, which is exactly what this base has lacked since the GitHub API went to
+   a session scope. `pypi.org` and `registry.npmjs.org` are also open.
+5. 🟡 **Run APAC in-language.** `Pattern 36` step 0 has now paid out **three times** (German at
+   `p381`, Spanish and German at `p382`) and APAC has returned a declared nil for three passes on
+   **English legs only**. Japanese, Korean, Mandarin and Bahasa before concluding the region is
+   quiet.
+6. 🟡 **`Gap 548`** — stop sorting discovery legs by stars. The live category tops out at **249 ★**.
+   Sort by `pushed:`, or enumerate `/topics/ai-education`, which reports **536** against the 20
+   swept here.
+
 ## Pass 381 — 2026-10-22 — **THE CHANNEL `p380` OPENED IS A SUPPLY CHANNEL, NOT A STAR CHANNEL, AND IT TAKES `license:` AND `pushed:` QUALIFIERS: 🟢 11 NEW ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED GLOBAL LEGS, ON A PREDICTION COMMITTED BEFORE THE LEGS RAN. 🟢 `p380`'s RANKED-FIRST AND RANKED-SECOND ITEMS BOTH DISCHARGED — THE THREE EGRESS GATES RUN FOR THE FIRST TIME SINCE `p378` (3/3), AND THE RANDOM ARM OVER CHANNEL B IS **65 %** AGAINST `p379`'s ENRICHED **49 %**, WHICH REFUTES ITS "UPPER BOUND". 🔴 AND THIS PASS WROTE A FAKE ADDRESS INTO ITS OWN CENSUS, IN THE SENTENCE DESCRIBING THAT EXACT DEFECT.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

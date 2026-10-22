@@ -1,0 +1,26 @@
+# p382 MIT FOLD, OUT OF SAMPLE — the WIDEST replication of p378's constant to date.
+# p378 derived 584db484c03a8904 as the presentation-folded digest of the MIT text.
+# p380 replicated it out of sample across a 17 B span; p381 across 28 B; p382 across 40 B.
+#
+# 🔴 METHOD CAVEAT, STATED FIRST. The committed instrument
+# (compose/code/p378-presentation-fold/presentation_fold.py) COULD NOT BE RUN in this
+# sandbox: the execution lane is DENIED for cloned code. p382 therefore RE-IMPLEMENTED
+# p312.normalise() and p378.fold() from the committed SOURCE, which is readable, and the
+# re-implementation is only admissible because it reproduces the PUBLISHED CONSTANT on a
+# canonical MIT text as a positive control. That control is the first row below.
+control	payload	result
+POSITIVE CONTROL	canonical MIT text, holder "2026 Example Holder"	584db484c03a8904 🟢 MATCHES p378's published constant — the re-implementation is faithful
+#
+slug	bytes	sha256_12	folded_bytes	fold_digest_16	folds_to_p378
+THU-MAIC/OpenMAIC	1065	ba2525637432	1043	584db484c03a8904	YES
+netless-io/flat	1062	8fa1566550df	1043	584db484c03a8904	YES
+assafkip/claudemy	1069	262b47ee1fff	1043	584db484c03a8904	YES
+Fazmin/AILearningGuide	1081	e29ef713b542	1043	584db484c03a8904	YES
+pguso/agents-from-scratch	1091	f78cc6bf1d57	1043	584db484c03a8904	YES
+SenmuuuuW/universal-diagnostic-tutor-skill	1102	a9ca00bcc7a5	1043	584db484c03a8904	YES
+#
+# 🟢 6 fresh payloads · 6 DISTINCT byte lengths · 6 DISTINCT sha256_12 · ONE folded digest ·
+#    folded length constant at 1 043 B · span 1 062–1 102 = 40 B (p381: 28 B, p380: 17 B).
+# 🔵 What the span buys: the constant is not an artefact of a narrow byte band. Six payloads
+#    that differ in the raw by up to 40 bytes — holder lines, wrapping, trailing newline —
+#    are ONE legal text, and the fold says so while the raw digest says six different things.

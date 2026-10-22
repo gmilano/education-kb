@@ -4,7 +4,103 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **TWO PATTERNS, BOTH RUN BEFORE THEY WERE WRITTEN: A LICENCE-AND-RECENCY-FILTERED SUPPLY SWEEP THAT MEASURED 11.5 ADDRESSES/LEG AGAINST 1.0, AND A GRANT-INTEGRITY CHECK THAT CAUGHT A HAND-NARROWED MIT CLAUSE 491 ★ DEEP.**
+## 🟢 🆕 2026-10-22 · `p382` — **TWO PATTERNS, BOTH RUN BEFORE THEY WERE WRITTEN: A PER-SUBTREE GRANT CHECK THAT SEPARATES THE THREE WAYS A VALID LICENCE FAILS A REPOSITORY, AND A SUPPLY-EXHAUSTION TEST THAT TELLS A STUDIO WHEN TO STOP SEARCHING A CHANNEL AND CHANGE IT.**
+
+**Evidence:** [`subtree-grant`](../evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`address-yield`](../evidence/address-yield.2026-10-22-p382.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p382.tsv) ·
+[`branch-prefix-stoplist`](../evidence/branch-prefix-stoplist.2026-10-22-p382.tsv)
+
+### 🟢 `Pattern 38` — Clear a repository for reuse by SUBTREE, not by its licence badge
+
+🔴 **The failure it prevents, in one sentence:** a studio reads `LICENSE` at the root, records
+*"MIT"* or *"ODbL-1.0"*, ships a derivative — and has **no grant for the part it shipped**.
+`p381` found the first instance by accident; `p382` built the instrument and found that the
+failure has **three distinct mechanisms**, only one of which a README check would catch.
+
+**Wire it together like this.**
+
+1. **Resolve the real default ref first.**
+   `git ls-remote --symref https://github.com/<slug> HEAD`
+   🔴 Non-negotiable, and this base has paid for it twice: `p380` and `p381` both read
+   `main`/`master` with the `--symref` output already on screen and had to re-read `ILIAS` at
+   `release_11` and `Artemis` at `develop`. `p382` caught a third —
+   [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) is on
+   **`master`**. A ladder walked on the wrong ref produces a **404 that reads as "ungranted"**.
+2. **Walk the grant ladder on that ref**, 8 paths:
+   `LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md COPYING LICENSE-MIT license`
+   via `raw.githubusercontent.com`, which is open where the API is not.
+3. **Classify the payload per subtree** — `compose/code/p382-subtree-grant/`:
+   `subtree_grant.classify(payload)` → one of four forms, and
+   `subtree_grant.covers(payload, path)` → `True` / `False` / **`None`**.
+4. **Branch on the form, because the remedy differs:**
+
+| form | fixture | what to do before shipping |
+|---|---|---|
+| 🟢 `UNIFORM` | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, 1 065 B) | nothing further — the badge is the grant |
+| **`DECLARED-SPLIT`** | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **Map the subtree you consume to its own grant.** `ontology/`, `data/`, `docs/` are **OGL-3.0** (commercial use on attribution alone); `scripts/`, `.github/workflows/` are **MIT**. Vendor them under **different** terms in the same build |
+| 🔴 `STOCK-SCOPE-LIMITED` | [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) (ODbL, 25 289 B) | 🔴 **Read what the stock text says it governs.** ODbL covers the **Database**, *"and not the contents of the Database individually"*. For a taxonomy the **records are the asset** — so obtain a contents licence, or consume only the structure |
+| `NARROWED-OPERATIVE` | [`aaryansamanta/nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai) | **Diff the operative clause against the stock text.** MIT's *"this software and associated documentation files"* became *"the source code files in this repository"*; `website/img`, `website/video` and top-level PDFs are **© reserved** |
+
+5. **Treat `None` as "not stated", never as "no".** `covers()` is three-valued on purpose.
+   🔵 `p381` lost a finding by reading `p351.classify()`'s `None` as a refusal; an undefined grant
+   published as `False` is a **false refusal**, and this base refuses rows for a living.
+6. **Cross-check with the fold.** `p378`'s presentation fold (`584db484c03a8904` for MIT) catches
+   a **whole-text** edit; `ZZ-ap` catches a **scope** edit. 🔵 They are complementary and neither
+   subsumes the other: `nextgen-ai` fails the fold **and** the scope test, while `os-taxonomy`
+   **passes** the fold cleanly — its text is unmodified — and still fails on scope.
+
+🔴 **The pattern's own blind spot, named in its own text.** The three fixtures were **chosen by
+the pass that wrote the classifier**. 19 green controls show it handles the three known shapes;
+they establish **no base rate** for how common per-subtree grants are in the wild. 🟢 **The next
+pass with an execution lane should run `gate-subtree-grant` across the MIT tier's 884 read
+payloads and publish the DENOMINATOR.** Until then this is a detector, not a census.
+
+### 🟢 `Pattern 39` — Know when a discovery channel is exhausted, and change it rather than re-query it
+
+🔴 **The failure it prevents:** a team keeps refining queries against a channel that has nothing
+left to give, and reads its own zero as a research failure instead of a **completed enumeration**.
+
+**The test, which `p382` ran on itself.** Sweep the channel on successive passes and record
+`NEW / candidates` **against the shelves you already hold**:
+
+| pass (all 2026-10-22) | candidates | NEW | rate |
+|---|---|---|---|
+| `p380` | 18 | 3 | 17.0 % |
+| `p381` | 46 | 11 | 23.9 % |
+| 🔴 `p382` | 12 | **0** | **0.0 %** |
+
+🟢 **Read it like this.** A rate that **rises** means the channel was under-swept — keep going,
+and deepen. A rate that **collapses to zero on the same surfaces** means the reachable address
+space is **enumerated**, and further queries are pure cost. 🔵 That is a **stopping rule**, which
+is the thing a studio discovery phase almost never has.
+
+🔴 **Two independent causes to check before declaring exhaustion, because both masquerade as it.**
+
+1. **Query-shape poisoning.** A leg asking `learning management OR curriculum agent
+   license:apache-2.0` returned `OpenPipe/ART`, `RLinf/RLinf`,
+   `kubernetes-sigs/agent-sandbox`, `google-deepmind/acme`, `instadeepai/Mava` and
+   `google-deepmind/meltingpot` — **reinforcement-learning infrastructure**. 🔵 In education
+   *"learning"* is ambiguous between pedagogy and machine learning, and on a stars-sorted forge
+   the ML sense wins by two orders of magnitude. 🟢 **Use pedagogy-only vocabulary** — `tutor`,
+   `tutoring`, `classroom`, `curriculum`, `syllabus`, `assessment` — or the topic itself.
+2. **Sort-order blindness.** The live category of new education agent is the **skill pack**, and
+   it sits between **2 and 249 ★** while frameworks sit in the thousands. 🔴 **A category that
+   cannot clear 250 ★ is invisible to every stars-sorted leg.** 🟢 **Sort by `pushed:`, or
+   enumerate `/topics/<topic>`** — `ai-education` reports **536** repositories against the 20
+   swept here.
+
+🟢 **And when the channel really is done, change the channel.** Probed open and unspent in this
+sandbox: `registry.npmjs.org` **200**, `pypi.org` **200**, 🟢 **`gitlab.com/api/v4` 200
+unauthenticated** — a **second forge with an integer-bearing API**, which is exactly what this
+base has lacked since the GitHub API went to a session scope. 🔵 National procurement records are
+the other untouched channel, and `p382`'s own regional result argues for them: the two best
+findings of the pass (Spain's Real Decreto, Germany's `openDesk Edu`) came from **in-language
+government and press sources, not from a forge at all**.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **TWO PATTERNS, BOTH RUN BEFORE THEY WERE WRITTEN: A LICENCE-AND-RECENCY-FILTERED SUPPLY SWEEP THAT MEASURED 11.5 ADDRESSES/LEG AGAINST 1.0, AND A GRANT-INTEGRITY CHECK THAT CAUGHT A HAND-NARROWED MIT CLAUSE 491 ★ DEEP.**
 
 **Evidence:** [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv)
 

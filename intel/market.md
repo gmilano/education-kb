@@ -4,7 +4,118 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **ALL FOUR REGIONS PLACED, TWO OF THEM BY A DECLARED NIL, AND THE BEST REGIONAL FINDING OF THE PASS WAS INVISIBLE TO ENGLISH. 🟢 LATAM RETURNED THE ONLY METHOD-BEARING FIGURES — 92 % OF STUDENTS USING AI AGAINST 30 % OF UNIVERSITIES WITH A POLICY. 🔴 NINE FIGURES REFUSED.**
+## 🟢 🆕 2026-10-22 · `p382` — **ALL FOUR REGIONS PLACED, TWO BY A DECLARED NIL, AND SPAIN'S FIRST AI-IN-TEACHING REGULATION WAS INVISIBLE TO ENGLISH — FOUND ONLY BY THE SPANISH LEG. 🟢 LATAM IS METHOD-BEARING FOR A THIRD PASS AND GAINS A PER-FUNCTION BREAKDOWN. 🔴 AND FOUR FIGURES `p381` REFUSED BY NAME CAME BACK UNCHANGED, WHICH IS A FINDING ABOUT THIS BASE'S METHOD, NOT ABOUT THE MARKET.**
+
+**Evidence:** [`regional-legs`](evidence/regional-legs.2026-10-22-p382.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p382.tsv) ·
+[`registered-prediction`](evidence/p382-registered-prediction.2026-10-22-p382.tsv)
+
+🔵 **Regional opportunities for this pass are extended IN PLACE in the single
+`## Opportunities by region` block below**, one `###` per region — never a new block and never a
+LATAM-only section.
+
+### 🟢 The four regions in one table
+
+| region | leg | result |
+|---|---|---|
+| **North America** | EN | 🔴 **DECLARED NIL on new instruments** — and worse than nil: the leg re-served four figures `p381` refused by name. See below |
+| **EMEA** | EN | 🔴 **DECLARED NIL.** Enterprise-AI trend pieces only (CompTIA, Workday, Bandwidth-Cavell); nothing on schools, universities, vendors or ministries |
+| **EMEA** | 🟢 **ES** | 🟢 **PLACED — the regional finding of the pass.** Spain is preparing a *Real Decreto de enseñanzas universitarias* carrying, **for the first time, an article specific to AI in university teaching** |
+| **EMEA** | 🟡 **DE** | 🟡 **PLACED WITH A CORRECTION** — `p381`'s own `openDesk Edu` headline downgraded to `ATTRIBUTED-UNVERIFIED`; see `verticals/solutions.md` |
+| **APAC** | EN | 🔴 **DECLARED NIL on instruments.** Vendor alliances only — TCS–Pearson multi-year AI learning alliance, Alteryx academy relaunch, LearnUpon APAC expansion. One Forrester prediction, dated to its **2025** outlook |
+| **LATAM** | EN | 🟢 **PLACED — the only method-bearing leg, for a THIRD consecutive pass** |
+
+🟢 **`F-LIMB-1` CONFIRMED** — at least one region returned a declared nil rather than a finding.
+Two did, and both are named rather than left silent, because **silence looks exactly like
+coverage**.
+
+### 🟢 EMEA / Spain — a named regulation, and English could not see it
+
+🟢 **Spain's Ministerio de Ciencia, Innovación y Universidades** is preparing a **Real Decreto de
+enseñanzas universitarias**, negotiated with **CRUE** and student representatives, which will
+carry **for the first time an article specific to the relationship between AI and university
+teaching**. It frames AI across **four planes**: the classroom, institutional use, research, and
+the university's own administration. The Secretary General of Universities, **Francisco García
+Pascual**, states that an **ethical code for AI use will be obligatory**. Intended publication in
+the **BOE** before the academic year ends.
+
+🔴 **Dated APRIL 2026 at source.** Whether it has since been published is **not established here
+and is not asserted** — `ATTRIBUTED-UNVERIFIED`, because the BOE itself was not readable: no
+non-GitHub citation address was reachable by **either** tool this pass.
+
+🔵 **This replicates `p381`'s `Pattern 36` step 0 — "run the forge for addresses, the national
+language for instruments" — for a second pass and in a second language.** The English EMEA leg
+returned a nil; the Spanish sibling returned a named legal instrument with a named official and
+four named scopes. 🔴 **A base running English legs only would have recorded EMEA as quiet while
+a member state was drafting the region's first AI-in-teaching rule.**
+
+### 🟢 LATAM — method-bearing again, and now with the breakdown `p381` lacked
+
+🟢 **UNESCO IESALC / UNU-IAS** — 200 institutions, 19 countries, fielded **Aug–Oct 2025**:
+
+| function | adoption |
+|---|---|
+| teaching and learning | **73.5 %** |
+| research | **57.0 %** |
+| administration | **34.1 %** |
+| community engagement | **20.0 %** |
+
+🔵 `p381` carried the 200/19 sample but **not** the per-function split. **The order is the
+finding: adoption is deepest exactly where governance is thinnest.**
+
+🟢 **Digital Education Council + Tecnológico de Monterrey (Institute for the Future of
+Education)** — 29 LATAM institutions, **>30 000 responses**, released **February 2026**: **92 % of
+students** and 🟢 **79 % of faculty** actively engaging with AI. 🔵 The **faculty** figure is new
+here and it is the one that matters to a studio — **faculty are the buyers**, and a 79 % number
+retires the "resistant academics" objection a LATAM engagement is usually sold against.
+
+🟢 **Regulation:** Chile has had a **National AI Policy since 2021** with a law under discussion ·
+Brazil and Colombia have national strategies but **no education-specific rules** · Mexico's
+**SEP**, **ANUIES** and **Observatorio IA** guidance is explicitly **non-binding** · only **~30 %**
+of LATAM universities have published an AI-use policy.
+
+🟢 **Players:** Digital Education Council · Tec de Monterrey IFE · UNESCO IESALC · UNU-IAS · UNAM ·
+UPC (Peru) · **IDB** and **CEPAL** (the **ILIA** index, 19 countries) · SEP and ANUIES (Mexico).
+
+### 🔴 A refused figure is not a retired figure — and the splice is finally named
+
+🔴 `p381` refused **nine** figures by name. `p382`'s North America leg returned **four of them
+back, unchanged**: **`$951 M → $2.3 B`** (15.9 % CAGR) · the **36 %** NA share · **10 %** of
+institutions with formal AI guidelines · **71 %** of US teachers lacking AI training.
+
+🔵 **Refusal is a decision about what this base publishes; it does nothing to the channel**,
+which re-serves the figure on the next sweep. A refusal therefore has to be written down *as a
+refusal* and **re-matched on intake**, or every pass pays the adjudication cost again.
+`ACTION SH`'s refuted-claims table is exactly that instrument, and this regression is the
+argument for running it at **intake** rather than at write-up.
+
+🟢 **And the splice mechanism `p381` could not explain is now named.** It refused
+*"92 % → 66 % student usage"* as a cross-population splice without being able to say where the
+halves came from. They are: **92 % = the Digital Education Council's LATAM figure** (29 LATAM
+institutions, Feb 2026) and **66 % = a 2024 GLOBAL figure**. 🔴 **The splice presents a LATAM
+survey result as a global year-on-year rise.** 🔵 Both halves are real; the sentence joining them
+is not — which is why a figure must carry its **population** and not only its source.
+
+### 🔴 Figures REFUSED this pass rather than reported — eight
+
+| figure | why refused |
+|---|---|
+| `$6.4 B` (2025) → `$79.6 B` (2034), 31.35 % CAGR | one publisher, promotional page, no method |
+| `$8.3 B` (2025) → `$57.2 B` (2033), 25.9 % CAGR | **second publisher, incompatible base** |
+| `$7.52 B` (2025) → `$10.6 B` (2026), **40.9 %** CAGR | 🔴 **third publisher, third 2026 base** — three irreconcilable bases in one leg, again |
+| **37.5 %** NA share (2025) | conflicts with the **36 %** the same leg class served `p381` |
+| `$951 M` → `$2.3 B`, 15.9 % CAGR | 🔴 **refused at `p381` by name, re-served unchanged** |
+| **10 %** with formal AI guidelines · **71 %** untrained teachers | 🔴 **refused at `p381` by name, re-served unchanged**; source itself not well-sourced |
+| AI-tutor market `$1.63 B` (2024) → `$7.99 B` (2030) | vendor blog, no instrument |
+| cloud deployment **71 %** share (2024) | vendor blog, no instrument, and a stale window |
+
+🔵 **Eight refusals and three of this pass's figures survive** — the LATAM breakdowns and the
+Spanish instrument — which is the usual ratio on this file and the reason the refusals are listed
+rather than quietly dropped.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **ALL FOUR REGIONS PLACED, TWO OF THEM BY A DECLARED NIL, AND THE BEST REGIONAL FINDING OF THE PASS WAS INVISIBLE TO ENGLISH. 🟢 LATAM RETURNED THE ONLY METHOD-BEARING FIGURES — 92 % OF STUDENTS USING AI AGAINST 30 % OF UNIVERSITIES WITH A POLICY. 🔴 NINE FIGURES REFUSED.**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv)
 
@@ -1235,6 +1346,17 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+🔴 **`p382` — a DECLARED NIL on new instruments, and a regression worth more than a nil.** The
+English NA leg returned **four figures `p381` refused by name**, unchanged: `$951 M → $2.3 B`
+(15.9 % CAGR), the **36 %** regional share, **10 %** of institutions with formal AI guidelines,
+**71 %** of US teachers lacking AI training. 🔵 **A refused figure is not a retired figure** — see
+`Gap 546`. What the leg *does* establish, and it is an opportunity rather than a datum: education
+AI in the US operates with **no sector regulator**, adoption decided school-by-school and
+district-by-district, with **Colorado** and **Texas** introducing piecemeal requirements and
+Canada's **AIDA** still proposed. 🟢 **So the NA engagement sells governance, not compliance** —
+there is no certificate to obtain and no deadline to beat, which means the buyer is an
+institution managing its own risk, not a regulator's calendar.
+
 🔴 **`p381` adds no new North American instrument and says so.** The English NA leg returned
 vendor market pages and one secondary compilation, and **seven figures were REFUSED**: `$951 M`
 2024 → `$2.3 B` 2029 and a 45 % CAGR (two vendors, no method, disagreeing with each other), a 36 %
@@ -1791,6 +1913,25 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+🟢 **`p382` — the region's first AI-in-teaching regulation, found ONLY by the Spanish leg.**
+Spain's **Ministerio de Ciencia, Innovación y Universidades** is preparing a **Real Decreto de
+enseñanzas universitarias** which will carry, **for the first time, an article specific to AI and
+university teaching**, negotiated with **CRUE** and student representatives, across **four
+planes**: the classroom, institutional use, research, and university administration. An **ethical
+code for AI use will be obligatory** (Secretary General of Universities, Francisco García
+Pascual). Intended **BOE** publication before the academic year ends. 🔴 Dated **April 2026** at
+source; publication **not** confirmed here — `ATTRIBUTED-UNVERIFIED`, the BOE was unreachable on
+both tools.
+🟡 **And a correction to this base's own EMEA headline:** `openDesk Edu`'s **8 600 schools** is
+**single-sourced secondary reporting** and the superlative `p381` attached to it is **retired**.
+🟢 Better specified instead: **ZenDiS**, `ILIAS` + `OpenProject` behind **SSO**, dated **29 July
+2026**; plus the *Ergebnisbericht* of **"Offene KI in der Schule 2026"**, urging use of the
+**Digitalpakt 2.0** window for sovereign school AI infrastructure and noting that open-source
+strategies **already exist in many Bundesländer**.
+🔵 **The opportunity that follows:** in EMEA the strategies exist and the infrastructure does not
+— a sovereignty-constrained integration practice (self-hosted LMS + self-hosted models) has a
+named procurement window and a named incumbent stack to attach to.
 
 🟢 **`p381`'s headline is EMEA's, and an English leg could not see it.** The English EMEA leg
 returned **nothing education-specific** — a nil the channel declared itself. The **German** sibling
@@ -2436,6 +2577,19 @@ modification now has two bases that permit one.
 
 ### APAC
 
+🔴 **`p382` — a DECLARED NIL on instruments, for a third consecutive pass.** The English APAC leg
+returned **vendor activity only**: a **TCS–Pearson** multi-year AI learning alliance aimed at
+employer skills gaps, an **Alteryx** academy relaunch with AI learning paths, and **LearnUpon**
+expanding AI course authoring in the region. The one forecast it produced (60 % of firms and
+governments in markets such as India and China combining local LLMs with global ones) is
+**Forrester's 2025 outlook**, i.e. dated. 🔵 Governance commentary is enterprise-wide, not
+education-specific — Singapore consulting on AI in financial institutions, Canberra tightening AI
+governance and copyright. 🔴 **No APAC education regulation or adoption statistic was obtained.**
+🟢 **Stated as a gap rather than left silent**, and the remedy is `Pattern 36` step 0: this is the
+region where no in-language sibling leg has yet been run, and the two best findings this pass came
+from exactly such legs in Spanish and German. **Run APAC in Japanese, Korean, Mandarin and Bahasa
+before concluding the region is quiet.**
+
 🔴 **`p381`'s APAC leg is a declared NIL on instruments, and the nil is the information.** The
 English APAC leg returned enterprise-AI material — TCS + Pearson's multi-year AI learning alliance,
 LearnUpon's Sydney HQ and `Create+` authoring, an Alteryx academy relaunch, a 49 % *"insufficient
@@ -2952,6 +3106,28 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+🟢 **`p382` — method-bearing for a third consecutive pass, and now with the per-function
+breakdown.** **UNESCO IESALC / UNU-IAS**, 200 institutions across 19 countries, fielded **Aug–Oct
+2025**: teaching and learning **73.5 %** · research **57.0 %** · administration **34.1 %** ·
+community engagement **20.0 %**. 🔵 **The ORDER is the finding — adoption is deepest exactly where
+governance is thinnest.**
+🟢 **Digital Education Council + Tec de Monterrey (IFE)**, 29 LATAM institutions, **>30 000
+responses**, **February 2026**: **92 % of students** and 🟢 **79 % of faculty** actively engaging
+with AI. The **faculty** figure is new here and it is the one that sells: **faculty are the
+buyers**, and 79 % retires the "resistant academics" objection a LATAM engagement is usually
+pitched against.
+🟢 **Regulation:** Chile — National AI Policy since **2021**, law under discussion · Brazil and
+Colombia — national strategies, **no education-specific rules** · Mexico — **SEP**, **ANUIES**,
+**Observatorio IA** guidance explicitly **non-binding** · only **~30 %** of universities have a
+published AI-use policy.
+🔵 **The opportunity, stated as the gap it is:** **92 % use against ~30 % policy** is the widest
+use-to-governance spread of any region on this file. 🟢 **An AI-governance-and-enablement offer
+for universities — policy, faculty training, assessment redesign — has a 70 % addressable gap and
+a named set of reference institutions** (UNAM, UPC, Tec de Monterrey) plus two multilateral
+publishers to cite (**IDB** and **CEPAL**, via the **ILIA** index across 19 countries).
+🔴 And the methodological correction this region forced: the **92 %** figure is **LATAM's**, and
+the splice `p381` refused took it for a **global** year-on-year rise. See `Gap 547`.
 
 🟢 **`p381`'s LATAM leg is the richest of the four, and the only one that returned sources with a
 STATED METHOD** — which is why its figures are graded `ATTRIBUTED-UNVERIFIED but METHOD-BEARING`
@@ -3510,6 +3686,22 @@ name a Brazilian engagement stack whose administration, curriculum and psychomet
 are each a real, licence-read repository. Pattern 28 wires them.
 
 ### Global
+
+🔴 **`p382` — the global cell is about what this base can SEE, and it moved twice.**
+🔴 **The address supply is exhausted, not merely saturated.** The forge channel's NEW rate across
+three passes on **one day**: 17.0 % → 23.9 % → **0.0 %**. `Gap 533` closes as a channel question
+and reopens as a supply one. 🟢 The stopping rule is `Pattern 39`.
+🔴 **And a global licence finding that changes the engagement checklist.** Of 12 addresses read
+first-hand, **4** carry a **non-code or absent** grant: `education-agent-skills` (CC-BY-SA-4.0),
+`os-taxonomy` (ODbL, **scope-limited to the database and not its contents**), `ai-ethos` (none at
+8 paths, **498 ★**), `M3Exam` (none at 8 paths). 🔵 **Education's open assets are data and
+content** — curricula, taxonomies, item banks, ontologies — licensed under **ODbL / OGL /
+CC-BY-SA**, instruments with **scope clauses**, while this base's licence column was built for
+code. `Gap 549`, and `Pattern 38` is the remedy.
+🟢 **Regulation is arriving through higher-education law rather than AI acts.** Spain's Real
+Decreto and LATAM's institutional-policy gap both bind sooner than the **2 December 2027** Annex
+III date under **Reg (EU) 2026/1744**. 🔴 **An engagement compliance-checking only against the AI
+act is checking the later and looser of the two.**
 
 🟢 **`p379` — the two constraints that now repeat across every legal system surveyed, and
 they are build constraints rather than market claims.** An **age floor** (US districts bar

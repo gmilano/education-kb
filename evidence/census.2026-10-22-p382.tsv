@@ -1,0 +1,68 @@
+# p382 ADDRESS CENSUS — re-derived as the LAST act, after every shelf write (p352's rule).
+#
+# 🔴 DERIVED BY A RE-IMPLEMENTATION. The committed instruments could not be RUN here (execution
+# lane denied), and BOTH currency gates — p352-census-currency and p376-union-currency — could
+# not fire at all. They would normally fire RED against a pass that writes before re-deriving,
+# by design. This derivation is admissible only against a published control, which is the first
+# row below.
+control	value	result
+POSITIVE CONTROL	channel-B survivors under the COMMITTED rules, on p381's tree	3078 🟢 p381 published 3078 — delta +0
+#
+# 🆕 Gap 538 asked that every published census total carry a FILE-SET field. It does, from here on:
+field	value
+file_set	the 9 SHELF_FILES: agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
+derived_at	AFTER all p382 shelf writes, as the last act before the commit
+instrument	re-implementation of p348.slugs_in / p367.channel_b / p351.classify, vocabularies copied verbatim from the committed source
+#
+channel	harvested	rejected	result
+U (p348, github.com/ URLs)	2730	33	2697 ADDRESSES
+B (p367 backticked, + p382 Arm 5 and Arm 6)	4696	1622	3074 SURVIVORS
+UNION over both channels	-	-	3444 ADDRESSES
+#
+# union composition: channel-U only 370 · channel-B only 747 · present in both 2327
+# 🔵 This is why the union is NOT a sum, and a p382 draft nearly published one: 2 697 + 3 074 =
+# 5 771, against a true union of 3 444. The channels overlap on 2 327 addresses. p381's own
+# figures (2 697 and 3 078 giving 3 420) carry the same lesson and the draft missed it.
+#
+# 🟢 CHANNEL U IS UNCHANGED FROM p381: 2 730 / 33 / 2 697, byte-identical totals.
+# 🔵 That is a measurement, not a coincidence, and it CORROBORATES this pass's headline
+# independently of the yield table: p382 cited twelve repository addresses with URLs and added
+# ZERO distinct channel-U addresses, because every one was already carried. A pass that had
+# promoted a new row could not produce an unchanged channel-U census.
+#
+# 🔴 CHANNEL B GAINS +8, AND ALL EIGHT ARE NAMEABLE — and six of them are an error of exactly
+# the kind p381 published against itself.
+added_token	occ	class
+google-deepmind/acme	3	off-domain ML infrastructure, cited as the query-shape defect
+google-deepmind/meltingpot	3	off-domain ML infrastructure, cited as the query-shape defect
+instadeepai/mava	3	off-domain ML infrastructure, cited as the query-shape defect
+kubernetes-sigs/agent-sandbox	3	off-domain ML infrastructure, cited as the query-shape defect
+openpipe/art	1	off-domain ML infrastructure, cited as the query-shape defect
+rlinf/rlinf	3	off-domain ML infrastructure, cited as the query-shape defect
+website/img	2	🔴 NOT AN ADDRESS — an excluded SUBTREE PATH from nextgen-ai's carve-out
+website/video	2	🔴 NOT AN ADDRESS — an excluded SUBTREE PATH from nextgen-ai's carve-out
+#
+# 🔴 THE SELF-DEMONSTRATING ERROR, PUBLISHED. p381's defining own-error was that it wrote
+# `feature/x` into Gap 539's text as an EXAMPLE of a branch prefix and its own harvester
+# harvested the example. p382 has done the same thing twice over:
+#   SIX of the eight additions are the reinforcement-learning repositories this pass cited
+#   SPECIFICALLY AS THE QUERY-SHAPE DEFECT — the repos that prove a bare "learning" query
+#   measures the ML ecosystem instead of education. By documenting that those addresses do NOT
+#   belong in an education knowledge base, this pass entered all six INTO the education
+#   knowledge base's census.
+#   TWO more are `website/img` and `website/video` — the excluded subtree paths from
+#   `nextgen-ai`'s licence carve-out. They are PATHS, not repositories, and they survive because
+#   `website` is not in p367's REF_OR_PATH (which holds `web` and `www`, but not `website`).
+#
+# 🟢 KEPT, NOT DELETED, exactly on p381's precedent: a refusal or an illustration entering the
+# census is Gap 520's shape, not a miscount, and deleting it would hide the mechanism. Both
+# classes are named here and both now have a fixture:
+#   - `website` is the next addition to REF_OR_PATH (Arm 1). Fixture: these two rows.
+#   - The off-domain class has no arm at all, and is the harder problem: `google-deepmind/acme`
+#     is a perfectly real repository, so NO shape, path or vocabulary filter can reject it. It
+#     is off-domain, not ill-formed. 🔵 That is a DIFFERENT kind of census defect from every
+#     one this base has fixed so far, all of which rejected non-addresses. Registered as
+#     Gap 552 rather than guessed at.
+#
+# 🟢 p381's 2 697 / 3 078 and its union of 3 420 are left standing in their own section —
+# history is not edited to match a later derivation.

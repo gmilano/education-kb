@@ -1,0 +1,54 @@
+# p382 — `Gap 539`'s STOPLIST (p381's ranked-2 item), and a SECOND arm found by building it.
+#
+# 🔴 METHOD CAVEAT FIRST. The committed harvester could not be RUN (execution lane denied),
+# so the vocabularies were copied VERBATIM from the committed source and the harvest
+# re-implemented. Admissible only because it reproduces a published number exactly:
+control	value	result
+POSITIVE CONTROL	channel-B survivors under the COMMITTED rules	3078 🟢 p381 published 3078 — delta +0, the re-implementation is faithful
+#
+# ARM 5 — BRANCH-PREFIX (Gap 539). 8 distinct tokens, census 3 078 -> 3 070.
+# 🟢 C-LIMB-1 CONFIRMED: `feature/x` — the fake address p381 wrote into its OWN census while
+#    describing this exact defect — is rejected.
+# 🟢 C-LIMB-2 CONFIRMED: it is NOT the only one. 8, not 1, so the gap exceeded its fixture.
+rejected_token	occurrences	class
+feat/cloud-rubric-tabs	3	BRANCH-PREFIX
+feature/openedx-integration	3	BRANCH-PREFIX
+feature/x	2	BRANCH-PREFIX 🔴 p381's own fixture
+chore/release-0.4.0-and-de	1	BRANCH-PREFIX (also a truncation residue)
+chore/release-0.4.0-and-deps	1	BRANCH-PREFIX
+feat/batch-optimization	1	BRANCH-PREFIX
+feature/openedx-integratio	1	BRANCH-PREFIX (also a truncation residue)
+fix/accept-token-without-p	1	BRANCH-PREFIX (also a truncation residue)
+#
+# ARM 6 — NAME-DEGENERATE (NEW at p382, found by building Arm 5). 4 tokens, 3 070 -> 3 066.
+# Three of Arm 5's eight are TRUNCATED mid-token, which prompted a wider hypothesis. That
+# hypothesis was DRAFTED, MEASURED AND REFUTED before it was published — recorded here
+# because the next pass will draft it too:
+#   🔴 REFUTED: "a fixed-width cut at 26 characters mints phantom addresses". 97 of 3 078
+#      survivors are a strict prefix of another harvested token; the length histogram does
+#      NOT spike at 26 (len=16 -> 15, len=13 -> 9, len=26 -> 8); and most of the 26-char
+#      cohort are GENUINELY DISTINCT repositories — `amp-up-io/qti3-item-player` (14 occ)
+#      and `amp-up-io/qti3-item-player-vue3` both exist, as do `pie-elements`/`pie-elements-ng`
+#      and `brightspace-mcp`/`brightspace-mcp-server`. BEING A PREFIX IS NOT EVIDENCE OF
+#      TRUNCATION, and a stoplist built on length would have deleted real addresses.
+#   🟢 WHAT SURVIVES is a MARKER, not a length:
+rejected_token	occurrences	class
+emaanrana012/...	1	NAME-DEGENERATE
+genai-gurus/...	1	NAME-DEGENERATE
+manahil2731/...	1	NAME-DEGENERATE
+mebis-lp/...	1	NAME-DEGENERATE
+#
+# 🔴 WHY NOTHING HAD EVER REPORTED THESE, and it is a precise asymmetry. `.` IS a legal
+# NAME_SHAPE character, so a repository name of `...` passes p351's every arm and all four of
+# p367's. The UNICODE ellipsis `…` is NOT in `[a-z0-9._-]`, so it is already rejected as
+# NAME-ILLEGAL — `narender-rk10/myproctor.ai-…` never reached the census. So an ASCII-ellipsis
+# truncation SURVIVED while a Unicode one did not, and the two forms are visually identical in
+# a rendered table. p351's NAME_RESERVED held `.` and `..` and stopped one character short.
+# 🟢 Fixed as a RULE (`set(name) == {"."}`) rather than three more literals, so `....` cannot
+# reopen it.
+#
+# CENSUS EFFECT, declared so the move is attributable (p367's own standing warning: "a gate
+# fix that moves the measurement is a different instrument wearing the same name"):
+#   channel-B survivors  3 078 (p381, committed rules)
+#                     -> 3 070 (Arm 5, BRANCH-PREFIX, -8)
+#                     -> 3 066 (Arm 6, NAME-DEGENERATE, -4)   overlap 0

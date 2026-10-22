@@ -145,6 +145,28 @@ cc-by-nc-sa-4.0 cc0 unlicense proprietary sata epl-2.0 isc zlib wtfpl
 """.split())
 
 
+# 🆕 Arm 5 (p382) — a first segment that is a git BRANCH PREFIX.  `Gap 539`, and p381 gave
+# it its first fixture the hard way: p381 wrote `feature/x` into Gap 539's own text as an
+# EXAMPLE of a branch prefix, and THIS HARVESTER HARVESTED THE EXAMPLE, putting a fake
+# address into p381's own census inside the sentence declaring the defect.
+# 🔵 `release`, `main`, `master`, `develop`, `dev`, `head`, `trunk`, `stable` and `latest`
+# are already in REF_OR_PATH above, so they are deliberately NOT repeated here: this set is
+# what p381 asked for MINUS what was already caught, plus the rest of git-flow and
+# Conventional Commits.
+# 🔴 THE FALSE-POSITIVE RISK, DECLARED HERE RATHER THAN DISCOVERED LATER: `fix`, `patch`,
+# `perf`, `ci`, `style`, `task` and `wip` are all LEGAL GitHub owner names, so this arm will
+# reject a real repository owned by anyone so named.  That is the same trade REF_OR_PATH
+# already makes for `api`, `app`, `core` and `web`, and it is made for the same reason —
+# channel B harvests MARKDOWN PROSE, where `feature/foo` is a branch far more often than an
+# owner.  🟢 Measured at p382 over the nine SHELF_FILES: 8 distinct tokens rejected, census
+# 3 078 -> 3 070, and all 8 are named in evidence/branch-prefix-stoplist.2026-10-22-p382.tsv.
+BRANCH_PREFIX = frozenset("""
+feature feat fix bugfix hotfix chore refactor perf style ci revert
+wip tmp temp backport patch task story epic spike draft
+dependabot renovate
+""".split())
+
+
 def fold(token):
     """One address, one spelling — `gate-fold-identity`'s rule applied at source."""
     return NAME_TRAILERS.sub("", token.strip()).lower()
@@ -168,6 +190,8 @@ def classify_b(folded):
         return "NUMERIC-PAIR"
     if owner in GRANT_ID_TOKEN or name in GRANT_ID_TOKEN:
         return "GRANT-ID-PAIR"
+    if owner in BRANCH_PREFIX:
+        return "BRANCH-PREFIX"          # 🆕 p382, Gap 539
     return None
 
 

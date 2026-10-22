@@ -49,6 +49,8 @@ CURRENCY_LOG ?= /tmp/education-kb-gate-census-currency.log
 UNIONCUR_LOG ?= /tmp/education-kb-gate-union-currency.log
 UNION_LOG ?= /tmp/education-kb-gate-census-union.log
 GRANTPATH_LOG ?= /tmp/education-kb-gate-grant-path.log
+SUBTREE_LOG ?= /tmp/education-kb-gate-subtree-grant.log
+OFFSET_LOG ?= /tmp/education-kb-gate-offset-region.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
@@ -73,7 +75,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -105,7 +107,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
              gate-dead-citation gate-regional-leg gate-census-union \
-             gate-union-currency
+             gate-union-currency \
+             gate-subtree-grant gate-offset-region
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -196,6 +199,40 @@ gate-untitled-payload: ## p314 — ACTION p313-R item 5 + items 2a and 4: the un
 
 untitled-arm: ## p314 — the dynamic arm alone: titled vs untitled, family held constant
 	@cd compose/code/p314-untitled-payload-arm && $(PY) -I run_untitled.py
+
+# 🟢 p382 — `ACTION ZZ-ap`, BUILT.  Registered at p377 and carried unbuilt through p378,
+# p379, p380 and p381, which ranked it FIRST with three live fixtures and wrote: "there is
+# no excuse left about where to look".
+#
+# 🔴 THE DEFECT IT CLOSES, in p381's words: "A classifier that reads the root `LICENSE` and
+# stops is right about the code and wrong about the repository — and that is this base's
+# entire ladder."  Every other grant instrument here answers ONE licence id for ONE
+# repository; this one answers WHICH SUBTREES a grant reaches and which it leaves ungranted.
+#
+# 🔵 The three fixtures are three DIFFERENT mechanisms, which is why one rule cannot catch
+# them: a DECLARED-SPLIT payload that names its own parts (`oak-curriculum-ontology`), an
+# UNEDITED stock text that limits its own scope (`os-taxonomy`'s ODbL governs the Database
+# and not its contents), and a HAND-NARROWED operative clause (`nextgen-ai`).
+#
+# 🔴 p382 could NOT RUN this suite in its own sandbox: the execution lane was DENIED for
+# cloned code, by policy rather than by egress.  It was authored and run 19/19 green in the
+# open lane and wired here so the first pass WITH a lane puts it under `make hooks`.  No
+# network — the fixtures are committed payload bytes.
+gate-subtree-grant: ## p382 — ACTION ZZ-ap: a grant has SUBTREES, and a root-only read is wrong about the repository
+	@cd compose/code/p382-subtree-grant && { $(PY) -I test_subtree_grant.py > $(SUBTREE_LOG) 2>&1 || { echo "🔴 p382-subtree-grant FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SUBTREE_LOG) ; false ; } ; } && echo "── p382-subtree-grant (19 controls: DECLARED-SPLIT, STOCK-SCOPE-LIMITED, NARROWED-OPERATIVE, fixture byte-identity, negative controls)" && echo "   PASS" || exit 1
+
+# 🟢 p382 — `Gap 541`, p381's ranked-3 item.  `-0500` alone cannot tell North America from
+# LATAM — it is US Eastern in winter AND Colombia, Peru, Ecuador and most of Mexico all year
+# round — and those are the two regions this base is specifically required to place apart.
+#
+# 🔵 Discharged BEYOND its registration, which asked only for `-0500` -> AMBIGUOUS and
+# `{-0400,-0500}` -> North America.  Both are implemented, plus the DST-SPAN test that
+# `ACTION ZI-b` already demanded in prose: the MONTHS a `-0500` commit falls in rule
+# candidates OUT, so `intellectif/learning-kit` (months 05 08 09 10) now reads AMBIGUOUS
+# WITH US EASTERN EXCLUDED rather than `NOT RESOLVED`.  p376's precedent governs a limb
+# discharged not-as-specified.
+gate-offset-region: ## p382 — Gap 541: a timezone offset census is placed with its DST span, or refused with the reason
+	@cd compose/code/p382-offset-region && { $(PY) -I test_offset_region.py > $(OFFSET_LOG) 2>&1 || { echo "🔴 p382-offset-region FAILED — the suite's own report follows:" ; sed "s/^/   /" $(OFFSET_LOG) ; false ; } ; } && echo "── p382-offset-region (10 controls: p381's two specimens, the L1 DST-degeneracy specimen, positive LATAM resolution, negative controls)" && echo "   PASS" || exit 1
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \

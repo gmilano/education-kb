@@ -4,7 +4,86 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **FOUR TRENDS, AND THE TWO THAT MATTER ARE ABOUT WHAT A KNOWLEDGE BASE CAN SEE: THE FORGE'S OWN INDEX IS **76 %** THIS BASE'S REFLECTION, SO THE SUPPLY IS SATURATED AND NOT THE CHANNEL. 🔴 AND AN ENGLISH LEG CANNOT SEE A NATIONAL DEPLOYMENT.**
+## 🟢 🆕 2026-10-22 · `p382` — **FOUR TRENDS, AND THE TWO THAT MATTER ARE ABOUT WHAT THIS BASE CAN SEE: THE ADDRESS SUPPLY WENT TO **ZERO NEW** IN THREE PASSES ON ONE DAY, AND THE LIVE CATEGORY OF EDUCATION AGENT CANNOT CLEAR **250 ★**, SO EVERY STARS-SORTED LEG READS EMPTY WHILE THE CATEGORY GROWS.**
+
+**Evidence:** [`address-yield`](evidence/address-yield.2026-10-22-p382.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-22-p382.tsv) ·
+[`subtree-grant`](evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p382.tsv)
+
+### 🔴 Trend 1 — the address supply is exhausted, not merely saturated
+
+| pass (all 2026-10-22) | candidates | NEW | rate |
+|---|---|---|---|
+| `p380` | 18 | 3 | 17.0 % |
+| `p381` | 46 | 11 | 23.9 % |
+| 🔴 `p382` | 12 | **0** | **0.0 %** |
+
+🔵 `p381` measured 76.1 % of forge output already shelved and read it as *"the saturation is in
+the SUPPLY, not the channel"*. 🔴 **`p382` is the stronger form: the channel was exhausted by
+this base's own two previous passes.** Three sweeps in one day took the yield to zero on the
+same surfaces. 🟢 **So `Gap 533` closes as a channel question and reopens as a supply one**, and
+the remedy is not a better query — it is a **forge this base has not opened**, a registry, a
+national procurement record, or **time passing**.
+
+### 🔴 Trend 2 — the live category is structurally invisible to a stars-sorted leg
+
+🟢 Nine of ten rows on the MIT tutor leg are **agent *skill packs*** rather than frameworks. A
+skill pack is a handful of files, so the whole class sits between **2 and 249 ★** while
+frameworks sit in the thousands.
+
+🔴 **A category that cannot clear 250 ★ is invisible to every stars-sorted leg** — including
+three of this base's four prescribed ones. 🔵 So four passes of thin prescribed-leg yield have a
+**second, independent cause** beyond index saturation: the legs are **sorted by the one dimension
+on which the live category cannot compete**. 🟢 Fixable, and cheaply: sort by `pushed:`, or
+enumerate the **topic**, never by stars alone.
+
+🔴 **And a vocabulary trap underneath it.** A forge leg asking `learning management OR curriculum
+agent license:apache-2.0` returned `OpenPipe/ART`, `RLinf/RLinf`, `kubernetes-sigs/agent-sandbox`,
+`google-deepmind/acme`, `instadeepai/Mava`, `google-deepmind/meltingpot` — **reinforcement-learning
+infrastructure**. 🔵 **In education the word "learning" is ambiguous between pedagogy and machine
+learning, and on a stars-sorted forge the ML sense wins by two orders of magnitude.** Any
+education leg containing a bare *"learning"* measures the ML ecosystem. `p239-query-shape`'s class.
+
+### 🟢 Trend 3 — a valid, standard licence can leave the asset ungranted
+
+🟢 `ACTION ZZ-ap`, built this pass, found the three ways a root grant fails a repository, and the
+third is the one that generalises: **`STOCK-SCOPE-LIMITED`**. The stock **ODbL** text limits its
+own scope in its own preamble — *"the ODbL only governs the rights over the Database, and not the
+contents of the Database individually"* — so a **correct, unedited, correctly-identified** licence
+can cover the structure while leaving **the records ungranted**.
+
+🔵 **Why this is a trend and not a curiosity:** education's open assets are overwhelmingly
+**data and content** — curricula, taxonomies, item banks, ontologies — and the licences that
+ecosystem reaches for (**ODbL**, **OGL**, **CC-BY-SA**, **CC-BY-NC-ND**) are **content and
+database** instruments with scope clauses, not code grants. 🔴 **This base's entire licence column
+was built for code.** Of the 12 addresses read first-hand this pass, **4** carry a non-code or
+absent grant: `education-agent-skills` (CC-BY-SA-4.0), `os-taxonomy` (ODbL, scope-limited),
+`ai-ethos` (none at 8 paths), `M3Exam` (none at 8 paths). **One in three.**
+
+### 🟢 Trend 4 — regulation is arriving through higher-education rules, not AI acts
+
+🟢 Two of this pass's three surviving regional findings are **universities** regulation, and
+neither came from an AI act: **Spain**'s forthcoming *Real Decreto de enseñanzas universitarias*
+with its first AI-in-teaching article and an **obligatory ethical code**, and **LATAM**'s picture
+of **~30 %** of universities with a published AI-use policy against **92 % student / 79 % faculty**
+use. 🔵 **The binding instrument for education AI is turning out to be ordinary education law and
+institutional policy**, which moves faster and lands sooner than the horizontal AI regulation
+this base has tracked at `2 December 2027` (`Reg (EU) 2026/1744`). 🔴 **An engagement that
+compliance-checks only against the AI act is checking the later and looser of the two.**
+
+### 🔴 What this file cannot see, stated plainly
+
+🔴 **No non-GitHub citation address was first-hand readable this pass.** `eur-lex.europa.eu`,
+`www.unesco.org`, `www.oecd.org` and `huggingface.co` are all **proxy-refused (`000`)** to `curl`
+here, and `eur-lex` was **DNS-dead** to `WebFetch` at `p381`. Every prose citation above is
+therefore **`ATTRIBUTED-UNVERIFIED`** — **labelled rather than blended**, and weaker than
+`p378`'s 275-of-275 standard. 🔴 **And `make hooks` was not run at all**: the execution lane is
+denied for cloned code in this sandbox, so no gate colour is claimed anywhere in this pass.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **FOUR TRENDS, AND THE TWO THAT MATTER ARE ABOUT WHAT A KNOWLEDGE BASE CAN SEE: THE FORGE'S OWN INDEX IS **76 %** THIS BASE'S REFLECTION, SO THE SUPPLY IS SATURATED AND NOT THE CHANNEL. 🔴 AND AN ENGLISH LEG CANNOT SEE A NATIONAL DEPLOYMENT.**
 
 **Evidence:** [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv)
 

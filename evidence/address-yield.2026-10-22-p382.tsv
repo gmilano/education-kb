@@ -1,0 +1,37 @@
+# p382 ADDRESS YIELD — the pass where the supply ran dry, measured rather than asserted.
+# Every candidate below was graded against the nine SHELF_FILES before any row was written.
+leg	channel	tool	candidates_read	already_carried	NEW	note
+prescribed-1 "top open source AI agents education 2026 github MIT"	commentary index	WebSearch	1	1	0	only `pguso/agents-from-scratch` was education-specific; carried (216 occurrences)
+prescribed-2 "github trending education AI 2026"	commentary index	WebSearch	0	0	0	🔴 NO primary trending snapshot; every result an aggregator or a LinkedIn post
+prescribed-3 "open source platform education ERP CRM MIT Apache"	commentary index	WebSearch	0	0	0	returned OpenEduCat + generic ERP roundups, no licence stated at source
+prescribed-4 "AI education industry trends 2026"	commentary index	WebSearch	0	0	0	market-research summaries only; see the refused-figure table
+forge-1 `education tutor agent license:mit pushed:>2026-08-01`	github.com/search	WebFetch	10 of 58	10	0	9 of 10 are agent SKILL packs; `YJLi-new/undergraduate-coding-tutor` is p381's own row
+forge-2 `learning management OR curriculum agent license:apache-2.0 pushed:>2026-08-01`	github.com/search	WebFetch	10 of 444	10	0	🔴 QUERY-SHAPE DEFECT — see below. Top 10 by stars are RL infrastructure, not education
+forge-3 `tutoring OR classroom OR curriculum license:mit pushed:>2026-09-01`	github.com/search	WebFetch	10 of 3100	10	0	`THU-MAIC/OpenMAIC` 41.3k ★ and `netless-io/flat` 6.4k ★ — both long carried
+forge-4 `/topics/ai-education`	github.com/topics	WebFetch	20 of 536	20	0	the highest-density education surface this base knows, swept to 20 of 536
+TOTAL	-	-	12 distinct verified first-hand	12	0	🔴 NEW rate 0.0 %
+#
+# 🔴 THE FINDING, AND IT IS THE HEADLINE OF THIS PASS. The forge supply channel's NEW rate
+# across three passes ON THE SAME DAY (2026-10-22):
+#       p380  3 NEW of 18 candidates   = 17.0 %
+#       p381 11 NEW of 46 addresses    = 23.9 %
+#       p382  0 NEW of 12 verified     =  0.0 %
+# p381 read its own 76.1 % already-carried rate as evidence that "the saturation is in the
+# SUPPLY, not the channel". p382 is the stronger form of the same result: the channel is not
+# merely saturated in general, it was EXHAUSTED BY THIS BASE'S OWN TWO PREVIOUS PASSES. Three
+# sweeps in one day took the yield to zero.
+# 🔵 So the actionable reading for a successor is NOT "find a better query". It is: the
+# education-agent address space reachable from GitHub's own search and topic surfaces is now
+# ENUMERATED to the depth these passes sweep, and the next address will come from a channel
+# this base has not opened (a second forge, a registry, a national procurement record) or
+# from TIME PASSING. `Gap 533` is closed as a channel question and reopened as a supply one.
+#
+# 🔴 THE QUERY-SHAPE DEFECT, which explains four passes of thin prescribed-leg yield.
+# forge-2 asked for `learning management OR curriculum agent` and returned OpenPipe/ART,
+# RLinf/RLinf, kubernetes-sigs/agent-sandbox, google-deepmind/acme, google-deepmind/bsuite,
+# instadeepai/Mava and google-deepmind/meltingpot — reinforcement-LEARNING infrastructure.
+# 🔵 In this industry the word "learning" is AMBIGUOUS between pedagogy and machine learning,
+# and on a forge sorted by stars the ML sense wins by two orders of magnitude. Any education
+# leg containing a bare "learning" measures the ML ecosystem. `p239-query-shape`'s class.
+# 🟢 The queries that DID return education were the ones using pedagogy-only vocabulary:
+# `tutor`, `tutoring`, `classroom`, `curriculum`, and the `ai-education` TOPIC.

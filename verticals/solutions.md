@@ -4,7 +4,93 @@ region: Global
 updated: 2026-10-22
 ---
 
-## 🟢 🆕 2026-10-22 · `p381` — **THE LARGEST NAMED OPEN-SOURCE EDUCATION DEPLOYMENT THIS BASE HAS EVER RECORDED, AND AN ENGLISH LEG COULD NOT SEE IT: GERMANY'S FEDERAL `openDesk Edu` PUTS AN OPEN-SOURCE LMS IN **8 600 SCHOOLS**, FOUND ONLY BY THE IN-LANGUAGE SIBLING LEG. 🔴 AND TWO PLATFORM GRANTS WERE RE-READ ON THEIR REAL DEFAULT REFS, BECAUSE NEITHER IS `main`.**
+## 🟢 🆕 2026-10-22 · `p382` — **`p381`'s OWN HEADLINE IS DOWNGRADED BY A RE-RUN OF THE LEG THAT FOUND IT: `openDesk Edu`'s **8 600 SCHOOLS** TRACES TO A SINGLE NEWS ITEM WITH NO OFFICIAL CONFIRMATION. 🟢 WHAT SURVIVES IS BETTER SPECIFIED — ZenDiS, `ILIAS` + `OpenProject` BEHIND SSO, DATED 29 JULY 2026. 🔴 AND A PLATFORM-TIER GRANT THAT IS VALID, STANDARD, AND DOES NOT COVER ITS OWN CONTENTS.**
+
+**Evidence:** [`regional-legs`](evidence/regional-legs.2026-10-22-p382.tsv) ·
+[`subtree-grant`](evidence/subtree-grant.2026-10-22-p382.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p382.tsv)
+
+### 🔴 `openDesk Edu`: the finding stands, the superlative does not
+
+`p381` published this as **"THE LARGEST NAMED OPEN-SOURCE EDUCATION DEPLOYMENT THIS BASE HAS
+EVER RECORDED"** — an open-source LMS in **8 600 schools**, found only by its German-language
+sibling leg. 🟢 `p382` re-ran that leg specifically to test it, because a superlative resting on
+one pass's single leg is the kind of claim this base is supposed to attack.
+
+🔴 **Result: the 8 600 figure traces to a single `borncity` news item, and the leg's own summary
+states the article rests on that one source and that no official confirmation was found.** So it
+is **single-sourced secondary reporting**, not an official deployment record.
+
+🟡 **It is NOT withdrawn** — a single source is still a source, and nothing contradicts it. It is
+**downgraded to `ATTRIBUTED-UNVERIFIED`** and **the superlative is retired** until a ZenDiS or
+ministry record is read first-hand. 🔵 `eur-lex`, `unesco.org` and `oecd.org` are all dead on
+both tools in this sandbox, so **no** non-GitHub citation address was first-hand readable this
+pass; the downgrade is a statement about this base's reach, not about Germany.
+
+🟢 **And the leg paid for itself anyway, because what survives is better specified than what
+`p381` published:**
+
+| cell | `p382` first-hand from the German leg |
+|---|---|
+| **Suite** | `openDesk Edu`, built by **ZenDiS** — Centre for Digital Sovereignty in Public Administration |
+| **Components** | 🟢 the LMS **`ILIAS`** united with **`OpenProject`**, behind **single sign-on** |
+| **Date** | 🟢 integration dated **29 July 2026** |
+| **Provenance** | openDesk first used at the **Ministerpräsidentenkonferenz, October 2024** |
+| **Scale** | 🔴 **8 600 schools — `ATTRIBUTED-UNVERIFIED`, single secondary source** |
+
+🟢 **A second German instrument, new this pass:** the *Ergebnisbericht* of the conference
+**"Offene KI in der Schule 2026"**, which recommends using the **Digitalpakt 2.0** window to
+build sovereign, data-protection-compliant, scalable AI infrastructure for schools, and records
+that **open-source strategies already exist in many Bundesländer**. 🔵 That is the procurement
+context an EMEA engagement actually sells into: the strategies exist, the infrastructure does
+not yet.
+
+### 🔴 A platform-tier grant that does not cover its own payload
+
+🔴 `ACTION ZZ-ap`, built this pass, classifies
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) as
+**`STOCK-SCOPE-LIMITED`**. The payload is the **unmodified, correct stock ODbL text** — and that
+text limits its own scope in its own preamble: *"the ODbL only governs the rights over the
+Database, and not the contents of the Database individually. Licensors should use the ODbL
+together with another license for the contents."*
+
+🔵 **For a taxonomy platform this is exactly inverted from what a consumer needs.** The grant
+covers the **database structure**; the **records are the asset**, and they are **ungranted by
+this file**. 🔴 Nothing about the file looks unusual — no hand edit, no bespoke title, no README
+caveat — so no fold, template digest or README probe can see it. **Only reading what the text
+says it governs.** 🟢 `Pattern 38`.
+
+### 🟢 Platform rows re-read first-hand on their real default refs
+
+🟢 Resolved with `git ls-remote --symref` **before** walking the ladder — the order `p380` and
+`p381` both got wrong. It caught one again this pass:
+[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) is on **`master`**,
+not `main`, and reads **AGPL**.
+
+| platform-adjacent row | ref | grant | licence |
+|---|---|---|---|
+| [`netless-io/flat`](https://github.com/netless-io/flat) — Agora Flat open-source classroom, web + Windows + macOS clients | `main` | `main/LICENSE` 1 062 B | 🟢 **MIT** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — multi-agent interactive classroom | `main` | `main/LICENSE` 1 065 B | 🟢 **MIT** |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) — visual interactive AI tutor | `main` | `main/LICENSE` 34 522 B | 🟡 **AGPL-3.0** |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🔴 **`master`** | `master/LICENSE` 1 133 B | 🟡 **AGPL** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) — 165 skills for teachers and school leaders (UK) | `main` | `main/LICENSE` 1 229 B | 🟡 **CC-BY-SA-4.0** — content, not code. 🟢 **AGREES with the shelf** |
+
+🟢 **The agreement is worth recording.** `education-agent-skills` reads CC-BY-SA-4.0 first-hand
+and this shelf already said exactly that, caveat included. This pass tried to correct it and
+**confirmed** it instead.
+
+### 🔴 The ERP/CRM-shaped leg returned nothing verifiable, and says so
+
+🔴 The prescribed `open source platform education ERP CRM MIT Apache` leg returned **OpenEduCat**
+(an education suite built on an open-source ERP framework), **Apache OFBiz**, and roundups of
+Odoo Community / ERPNext / Dolibarr / iDempiere / metasfresh / ADempiere / Tryton — 🔴 **none with
+a licence stated at source, and none read first-hand this pass.** No row is added on that basis.
+🔵 `OpenEduCat` is the one worth a first-hand grant read next pass: it is the only
+education-specific ERP-tier name the leg produced, and this base does not yet carry its payload.
+
+---
+
+## 🟢 2026-10-22 · `p381` — **THE LARGEST NAMED OPEN-SOURCE EDUCATION DEPLOYMENT THIS BASE HAS EVER RECORDED, AND AN ENGLISH LEG COULD NOT SEE IT: GERMANY'S FEDERAL `openDesk Edu` PUTS AN OPEN-SOURCE LMS IN **8 600 SCHOOLS**, FOUND ONLY BY THE IN-LANGUAGE SIBLING LEG. 🔴 AND TWO PLATFORM GRANTS WERE RE-READ ON THEIR REAL DEFAULT REFS, BECAUSE NEITHER IS `main`.**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv)
 

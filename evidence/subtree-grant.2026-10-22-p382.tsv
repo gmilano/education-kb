@@ -1,0 +1,50 @@
+# p382 — `ACTION ZZ-ap` BUILT. Registered at p377; carried unbuilt through p378, p379, p380
+# and p381; ranked FIRST by p381 with the words "there is no excuse left about where to look".
+#
+# 🔴 THE DEFECT, in p381's own sentence: "A classifier that reads the root `LICENSE` and stops
+# is right about the code and wrong about the repository — and that is this base's entire
+# ladder." Every grant instrument here answers ONE licence for ONE repository.
+#
+# 🔵 THE THREE FIXTURES ARE THREE DIFFERENT MECHANISMS. That is the structural result, and it
+# is why `Pattern 37` (p381's interim: "read the README too") could not have been the fix —
+# only one of the three states its carve-out in a README.
+fixture	ref	path	bytes	form	grants_found	exclusions	root_only_read	contradicts_root_only
+oaknational/oak-curriculum-ontology	main	LICENSE.md	1867	DECLARED-SPLIT	OGL-3.0 over `ontology/` `data/` `docs/` + MIT over `scripts/` `.github/workflows/` `pyproject.toml`	none — the two grants partition the tree	"Open Government Licence"	🟢 YES
+withmarbleapp/os-taxonomy	main	LICENSE	25289	STOCK-SCOPE-LIMITED	ODbL-1.0 over the DATABASE only	the Database's CONTENTS are not granted by this file	"ODbL"	🟢 YES
+aaryansamanta/nextgen-ai	main	LICENSE	1327	NARROWED-OPERATIVE	MIT over "the source code files in this repository"	`website/img` `website/video` + top-level PDFs, © reserved	"MIT License"	🟢 YES
+THU-MAIC/OpenMAIC	main	LICENSE	1065	UNIFORM	MIT over `<whole repository>`	none	"MIT License"	🔵 NO — negative control
+#
+# 🟢 B-LIMB-1 CONFIRMED — all three fixtures classify correctly, 19/19 controls green.
+# 🟢 B-LIMB-2 CONFIRMED — and on all three, not just one. The instrument earns its existence.
+#
+# 🔴 FIXTURE B IS THE ONE THAT CHANGES HOW THIS BASE MUST READ A GRANT, and it was the least
+# expected. `os-taxonomy`'s payload is the UNMODIFIED, CORRECT, RECOGNISED stock ODbL text.
+# Nothing about the FILE is unusual — no hand edit, no bespoke title, no README caveat. The
+# scope limit is IN THE STOCK TEXT'S OWN PREAMBLE:
+#     "the ODbL only governs the rights over the Database, and not the contents of the
+#      Database individually. Licensors should use the ODbL together with another license
+#      for the contents, if the contents have a single set of rights..."
+# 🔵 So a licence can be perfectly valid, perfectly standard, correctly identified by every
+# instrument on this base — and still leave the repository's actual payload UNGRANTED. Neither
+# a fold (whole-text identity), a template digest, nor a README probe can see this; only
+# reading what the text says it governs. A studio that ships a derivative of an ODbL corpus's
+# CONTENTS on the strength of "licence: ODbL-1.0, permissive-ish" has no grant for the part it
+# shipped.
+#
+# 🟢 `covers(payload, path)` IS THREE-VALUED, and that is deliberate. It returns None — not
+# False — when the payload names subtrees and the queried path is not among them, because the
+# answer is NOT STATED rather than refused. 🔵 This is a direct lesson from p381, which lost a
+# finding by reading p351.classify()'s None ("a valid address") as "not an address". An
+# undefined grant reported as False would read as a refusal and would be published as one.
+#
+# 🔴 THE INSTRUMENT'S OWN DECLARED LIMIT, pre-registered before it was built: these are three
+# fixtures CHOSEN by the pass that wrote the classifier. 19 green controls show it handles the
+# three known shapes; they establish NO BASE RATE for how common per-subtree grants are in the
+# wild. The next pass with an execution lane should run it across the MIT tier's 884 read
+# payloads and publish the DENOMINATOR.
+#
+# 🔴 AND THE LANE: p382 could not run this under `make hooks` — the execution lane is DENIED
+# for cloned code in this sandbox (policy, not egress). The suite was authored and run 19/19
+# green in the open lane (own-authored code, scratchpad) and is WIRED into HOOK_GATES as
+# `gate-subtree-grant` so the first pass with a lane judges it. Roster now reads 45 gates,
+# verified by `make -n hooks` expansion rather than by a run.
