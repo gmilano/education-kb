@@ -1,0 +1,29 @@
+# p375 — EVERY ADDRESS THIS PASS PUBLISHES OR RELIES ON, PROBED FIRST-HAND 2026-10-22.
+# Transport matrix re-measured this pass: git ls-remote OK; raw.githubusercontent.com 200;
+# 🔴 api.github.com 403 and github.com HTML 403 -- so NO STAR COUNTS are published.
+#
+slug	ls_remote	head	grant_path	grant_bytes	grant_sha256_12	licence	role_in_this_pass
+mlabonne/llm-course	LIVE	7abd96e8284bfae232048fdb77b52397a2114847	main/LICENSE	11357	c71d239df917	Apache-2.0	🟢 NEW ROW -- repos/foundations.md + repos/trending.md, curriculum tier
+cvmcosta/ltijs	LIVE	41f150c069	-	-	-	Apache-2.0 (carried)	Pattern 15 interop boundary -- THE CORRECTED address
+1EdTech/ltijs	🔴 ABSENT rc=128	-	-	-	-	-	🔴 p375's OWN constructed address, WRONG, caught before commit
+moodle/moodle	LIVE	46c042e7da	-	-	-	GPL-3.0 (carried)	Pattern 15 learner record
+openedx/edx-platform	LIVE	229f7e1a07	-	-	-	Apache-2.0 (carried)	Pattern 15 learner record alternative
+HKUDS/DeepTutor	LIVE	a31d82624c	-	-	-	Apache-2.0 (carried)	Pattern 15 tutoring surface
+BerriAI/litellm	LIVE	f2118fc767	-	-	-	MIT (carried)	Pattern 15 stage-aware routing -- the virtual-key gate
+ollama/ollama	LIVE	efabf6bc45	-	-	-	MIT (carried)	Pattern 15 local inference
+vllm-project/vllm	LIVE	4643f41853	-	-	-	Apache-2.0 (carried)	Pattern 15 local inference
+ibm-skills-network/mark	LIVE	ecd591518d	-	-	-	Apache-2.0 (carried)	Pattern 15 evidence layer, p374's row
+latam-gpt/.github	LIVE	b936437e2b	-	-	-	not read	🟢 PROVES the Latam-GPT ORG exists
+latam-gpt/latam-gpt	🔴 ABSENT rc=128	-	-	-	-	-	🔴 one of SIX dead Latam-GPT constructions
+latam-gpt/latam-gpt-recipes	🔴 ABSENT rc=128	-	-	-	-	-	🔴 dead construction
+cenia/latam-gpt	🔴 ABSENT rc=128	-	-	-	-	-	🔴 dead construction
+cenia-cl/latam-gpt	🔴 ABSENT rc=128	-	-	-	-	-	🔴 dead construction
+cenia-chile/latam-gpt	🔴 ABSENT rc=128	-	-	-	-	-	🔴 dead construction
+cenia-chile/latamgpt	🔴 ABSENT rc=128	-	-	-	-	-	🔴 dead construction
+mattpocock/skills	LIVE	5beb35b040	-	-	-	not read	🟢 NEGATIVE CONTROL: proves a blanket name-position reject would eat a live repo
+vercel-labs/skills	LIVE	a80e4c9d12	-	-	-	not read	🟢 NEGATIVE CONTROL, second instance
+junjie1005/plataforma-ia-educativa-rutas-personalizadas	LIVE-EMPTY rc=0	-	-	-	-	-	🔵 p372's third class: a LIVE repository holding zero commits
+gmilano/education-kb	LIVE	82d715c9c6	-	-	-	-	🔵 control: this base's own remote answers, so the gmilano/* absences are PLANTED controls
+#
+# 🔵 The 756-row bare-only adjudication is NOT repeated here; it is
+# evidence/census-union-grade.2026-10-22-p375.tsv.  This file holds only what p375 PUBLISHES.

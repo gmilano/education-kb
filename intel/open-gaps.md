@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 375 · 2026-10-22 — `ACTION p374-A` **discharged and it demotes `p373`'s decisive cell to the minority draw**; `ACTION p374-J` **graded: 453 of the 756 invisible addresses are LIVE repositories**, two standing instruments are found ONE-SIDED, and four jurisdictions turn out to have drawn the same age floor
+
+**Evidence:** [`census-union-grade`](../evidence/census-union-grade.2026-10-22-p375.tsv) ·
+[`region-leg-thirddraw`](../evidence/region-leg-thirddraw.2026-10-22-p375.tsv) ·
+[`regional-first-measurements`](../evidence/regional-first-measurements.2026-10-22-p375.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p375.tsv)
+
+🟢 **Gate state: RUN, at `p374`'s HEAD and again at this pass's.** `make hooks` was **40/40** at
+`p374`'s HEAD and is **41/41** at this pass's, with one new standing gate
+(`gate-census-union`, 27 controls over 5 groups).
+
+### 🟢 `ACTION p374-A` — DISCHARGED, and the answer is not the one either prior pass wanted
+
+🟢 **The third draw ran on the verbatim query and the pre-registered prediction HELD:** PARTIAL,
+one dated German fact. 🔴 **So the three draws are NIL / PARTIAL / PARTIAL, and `p373`'s
+*"THE DECISIVE CELL"* is the minority draw at 1 of 3.** No pass may now cite cell 2 as evidence
+that an English-plus-organ leg fails in Germany.
+
+🟢 **And the stronger half, which `p374-A` did not ask for.** `p374`'s surviving account — *"an
+English leg is productive wherever a cross-border specialist press channel covers that
+jurisdiction **in the language of the query**"* — makes a sharp prediction nobody had run: a
+**French** leg naming Germany and the KMK should beat the English leg. 🔴 **Pre-registered,
+measured, REFUTED: the French leg returned the same single fact from the SAME SINGLE OUTLET
+(`actuia.com`) that the English leg reached.**
+
+🟢 **What replaces it, fitting all three Germany draws plus `p374`'s Japan, Brazil and India
+cells:** the unit is neither a language nor a jurisdiction — **it is an OUTLET.** A leg is
+productive when at least one indexed outlet covers that jurisdiction's education policy in a
+language the query can reach; query language matters only insofar as it changes *which* outlets
+are reachable. 🔴 **For Germany the reachable set has SIZE ONE in both languages tested, and a
+jurisdiction served by one outlet is one outlet away from a nil** — which is exactly what draw 1
+returned. That is a **fragility** property of the jurisdiction's coverage, not a property of the
+query. 🔵 `n=1` on the French cell; this is a refutation of a necessity claim, not a variance
+estimate, and no frequency is published.
+
+### 🟢 `ACTION p374-J` — limbs 1 and 3 DISCHARGED, limb 2 built where the dependency graph allows it
+
+🟢 **Limb 1, the measurement `p374` refused to guess at: all 756 bare-only addresses adjudicated
+first-hand**, with `p367`'s own prober reused rather than rewritten, then re-probed on **return
+code** so `p372`'s three-way split is honoured instead of collapsed:
+
+| Class | Count | What it is |
+|---|---|---|
+| `LIVE-ADDRESS` | 🟢 **452** | answers `ls-remote` with refs |
+| `LIVE-COMMITLESS` | 🟢 **1** | `rc=0` with an EMPTY advertisement — `p372`'s third class, a real repository holding zero commits |
+| `ABSENT-ADDRESS` | 🔴 **256** | `rc=128`; a plausible address that does not answer — `p372`'s dead-citation question, not this instrument's |
+| `NAME-REF-OR-PATH` | 🔴 **22** | false positive by shape — see below |
+| `NAME-DOT-RUN` | 🔴 **4** | false positive by shape — see below |
+| `OWN-NEGATIVE-CONTROL` | 🔵 **21** | this base's own planted controls, which must not inflate an absence figure |
+
+🔴 **So `p374`'s restraint was right and its worry was wrong.** It declined to publish a
+corrected total because *"756 addresses is not 756 repositories"* and named `admin-api/v1` as a
+false positive. 🟢 **Graded: `admin-api/v1` is indeed absent, but only 26 of the 756 are false
+positives by shape — and 453 are LIVE REPOSITORIES the published census has never counted.**
+
+🔴 **Both false-positive classes are ONE-SIDED ARMS in gates that were already green.**
+
+| Class | The defect | Instance count |
+|---|---|---|
+| `NAME-REF-OR-PATH` | `p367`'s arm 1 rejects a ref-or-path word in the **OWNER** position (`main/license` is its own control 5) and **never tests the NAME position** | 16 `*/license` in the 756; 24 across the union |
+| `NAME-DOT-RUN` | `p351`'s `NAME_RESERVED` is `{".", ".."}` while `NAME_SHAPE` admits dots, so a **three-dot** name was accepted. `p351` already rejects the OWNER form of exactly this as `OWNER-ELLIDED` | 4 |
+
+🟢 **Limb 3 is the load-bearing repair and it is now standing.** The invariant is not a bound on
+a difference — it is that **every channel-B survivor must be ACCOUNTED FOR by the census**,
+counted as an address or named in a rejection class. 🔵 **That count was 756 before this pass
+and is 0 after it.**
+
+🔴 **The first formulation of limb 3 was wrong and is recorded rather than quietly replaced.**
+`p375` first wrote the control as `channel_b_survivors - union_addresses <= graded false
+positives`. 🔴 **That quantity goes NEGATIVE once the census is a union, because a union is a
+superset of either channel — a control that is green for the wrong reason.**
+
+🟡 **Limb 2 is done in the sense that matters and NOT done as literally written, with the reason
+being the dependency graph rather than a preference.** `p374-J` says *"switch `p351`'s harvester
+to the union of both channels"*. 🔴 **`p351` cannot import `p367`: `p367` already imports
+`p351`** (`_address_shape()` loads it), so putting the union inside `p351` is an import cycle.
+🟢 **So the union lives in a third instrument that imports both**, `p375-census-union`, wired
+into `make hooks`. 🔵 `p351` keeps the standing single-channel triple that `gate-census-currency`
+governs, and the union denominator is published **once, in its own section**, exactly as the
+action requires — with no prior pass's figure edited. 🟢 `ACTION p375-A` carries the remaining
+step: move `p352`'s anchor onto the union triple, which is a one-pass change that moves a figure
+every prior section quotes.
+
+### 🟢 The register
+
+| # | Opened | Where | State |
+|---|---|---|---|
+| 🆕 **496** | **2026-10-22**, pass 375 | `intel/market.md` · `evidence/region-leg-thirddraw.2026-10-22-p375.tsv` | 🔴 **OPEN.** *"The KMK's own document for the **2026-10-16** update to `Bildung in der digitalen Welt` was **not retrieved on either of two language legs**. Every German fact this base holds for that decision traces to **one** outlet, `actuia.com`, a French-language AI-news directory."* 🔴 Three draws of the Germany cell and the reachable outlet set has size one. 🟢 **Remedy:** `kmk.org`, egress-enabled. 🔵 Until then no German competence-framework detail may be stated beyond the framework's name and the date. |
+| 🆕 **497** | **2026-10-22**, pass 375 | `intel/market.md` · `ACTION p375-D` | 🔴 **OPEN, and it is a REFUSED CLAIM rather than a missing one.** *"A commercial parent-guide site asserts a nationwide **mandatory weekly AI class, grades 3–12, from autumn 2026** in China. **No MOE document corroborating it appeared in the result set**, and the site describes itself as based on the policy text."* 🟢 The two 2025 MOE guides ARE shelved, on two secondary outlets each. 🟢 **Remedy:** `moe.gov.cn`. 🔵 **Conflation guard recorded with it:** the same result set carried a **Hong Kong EDB** circular on a 2026/27 primary framework — a different jurisdiction and a different organ, not to be fused with the mainland MOE, exactly as Brazil's and Portugal's `CNE` must not be. |
+| 🆕 **498** | **2026-10-22**, pass 375 | `intel/market.md` · `ACTION p375-F` | 🟡 **OPEN, and it is the one fact that decides a Korean engagement's shape.** *"Korea's **AI Basic Act** took effect **January 2026** and puts its obligations on **high-impact** systems. **Whether education is classed high-impact is not established by any source retrieved.**"* 🟢 If it is, a Korean engagement is a conformity project on the EMEA template; if not, it is a governance one. 🟢 **Remedy:** the Act's high-impact schedule, or MSIT/MOE guidance. |
+| 🆕 🔴 **499** | **2026-10-22**, pass 375 | `intel/market.md` · `evidence/verified-repos.2026-10-22-p375.tsv` | 🔴 **OPEN, and it is SIX dead addresses for one real project.** *"This base holds **seven** addresses for **Latam-GPT** and six are `rc=128`: `latam-gpt/latam-gpt`, `latam-gpt/latam-gpt-recipes`, and **four spellings of the owner** — `cenia/latam-gpt`, `cenia-cl/latam-gpt`, `cenia-chile/latam-gpt`, `cenia-chile/latamgpt`. The seventh, `latam-gpt/.github`, is **LIVE** (HEAD `b936437e2b`), which proves the **org exists**."* 🔴 **Four owner spellings for one project is the signature of a CONSTRUCTED address**, the defect `ACTION p374-E` exists to stop. 🟢 **`p375` constructs no further address:** the launch coverage retrieved names no repository and states **no licence**. 🟢 **Remedy:** CENIA's own site or a Hugging Face org page — a SOURCE, not a guess. |
+| 🆕 **500** | **2026-10-22**, pass 375 | `verticals/solutions.md` | 🟡 **OPEN, and deliberately left as an absence.** *"**OpenEduCat** — LMS plus SIS in one record, OneRoster and Ed-Fi rostering, **LGPL-3.0** per the vendor's own Community License page — has **no GitHub address in any source retrieved**, so none is shelved."* 🔵 Its interest is the SIS half, which is the stage-of-learner source `Pattern 15` needs and which this base currently splits across two systems. 🔴 LGPL-3.0 is **not** in the permissive tier. 🟢 **Remedy:** the vendor's repository link or a package manifest. |
+
+### 🟢 Registered actions
+
+| Action | Limbs |
+|---|---|
+| 🔴 **`ACTION p375-A`** *(ranked first — it is the remaining half of `p374-J`, and it moves a figure every prior section quotes)* | Move `p352`'s census anchor onto the **union** triple, so the standing denominator reads both address channels. 🔵 `p375` built the union and wired its accounting invariant, but left `gate-census-currency` governing `p351`'s single-channel triple, because repointing it changes the figure in every prior section at once. **limb 1:** repoint the anchor and publish the union triple as THE figure. **limb 2:** re-derive the dependent coverage ratios that quote the old denominator. 🔴 **Do not edit prior passes' figures** — each was correct for the tree it committed and the channel it read. |
+| 🔴 **`ACTION p375-B`** *(ranked second — it is cheap and it tests this pass's own headline)* | The age-floor convergence is observed on **four** cells and no fifth jurisdiction was tested. **Pre-register** a prediction for a jurisdiction with no retrieved floor (🟢 **rank India first** — `p374` reached it, its ministry publishes in English, and its mandatory AI curriculum for Classes 3–8 is already carried) and run the leg. 🔴 A confirmation is not an estimate; a **nil** would bound the convergence, which is the more valuable outcome. |
+| 🟢 **`ACTION p375-C`** | Change the discovery instrument, not the query. Three passes have returned **zero** new education agents from `"AI agents education"`-shaped legs. 🟢 Run the next supply leg against the **credentialing / interop** layer `p371` named and `p374` showed was outside the denominator — `1edtech/*`, `adl-opensource/*`, Open Badges, Caliper, xAPI, LTI — now that `p375` has put those 453 live addresses inside it. |
+| 🔵 **`ACTION p375-D`** | `Gap 497` — the Chinese MOE primary text, and with it the refused weekly-class claim settled either way. |
+| 🔵 **`ACTION p375-E`** | `Gap 494`'s remainder, now **10 of 21**: Canada, Mexico, Singapore, Japan-in-Korean… 🟢 **Rank Canada and Mexico first** — both were silent on this pass's North American leg, and **Mexico's only cell is `p207`'s, 168 passes old**. 🔴 Neither may be published as a nil without an in-language sibling leg (`J2`). |
+| 🔵 **`ACTION p375-F`** | `Gap 498` — Korea's high-impact schedule. |
+| 🔵 **`ACTION p375-G`** | `Gap 499` — a **sourced** Latam-GPT repository address. 🔴 **Construct none.** The org is proven live; that is not permission to guess a repo name, and six prior guesses are the reason this gap exists. |
+| 🔴 **`ACTION p375-H`** *(carried, unaddressed)* | 🔵 `ACTION p374-I` is **still open**: `agents/trending.md:7447` grades `Open-TutorAi/open-tutor-ai-CE` as *"CC BY-NC-SA 4.0 — non-commercial"* where the live shelves and the payload say **BSD-3-Clause**. `gate-shelf-consistency` cannot see a dated cell. 🟢 `p375` re-affirmed the correct grade on `agents/top.md` but did **not** build the gate limb, and says so rather than letting it drop. |
+
 ## Pass 374 · 2026-10-22 — `ACTION p373-A` **built, and the column it specified was the wrong column**: `p373`'s hypothesis is REFUTED out of sample on a pre-registered prediction, its decisive cell does NOT replicate, `Gap 490`'s grader is LIVE at an address whose owner was in the quoted source, and the EMEA duty `p373` sold was rewritten three months ago
 
 **Evidence:** [`region-leg-replication`](../evidence/region-leg-replication.2026-10-22-p374.tsv) ·

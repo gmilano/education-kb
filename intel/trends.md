@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p375` — **four jurisdictions, three legal systems, one boundary nobody coordinated: an AGE FLOOR on autonomous pupil use of generative AI**
+
+🟢 **This is the pass's headline finding and it is a second, independent convergence class
+beside `p374`'s.** `p374` found that three legal systems had drawn the same line on
+*assessment* — **an AI system may inform a mark and may not decide one**. 🟢 **`p375`'s legs
+found a different line, drawn just as independently, on *who may drive the tool at all*:**
+
+| Jurisdiction | The floor, as reported | Instrument | Grade |
+|---|---|---|---|
+| 🇨🇳 **China** | 🔴 **primary pupils may NOT independently use open-ended content generation**; junior high limited to analysing generated content; senior high inquiry use | 《中小学生成式人工智能使用指南（2025年版）》 | 🟡 secondary, in-language leg |
+| 🇧🇷 **Brazil** | 🔴 **autonomous AI use by pupils prohibited to the end of 5th grade** — added after committee and public consultation | `Parecer CNE/CP nº 15/2026` | 🟡 multi-outlet secondary |
+| 🇫🇷 **France** | autonomous pupil use only **from classe de quatrième** | *cadre d'usage de l'IA en éducation* | 🔴 single source, via a bill's *exposé des motifs* |
+| 🇺🇸 **New York** (state bill) | would **prohibit most classroom AI below grade 9** | `A.9190` | 🔵 **introduced only** |
+
+🟢 **Why this is a finding and not a coincidence.** These four share no sources, no legal
+tradition and no drafting body — a Chinese ministry guideline, a Brazilian council *parecer*, a
+French ministerial framework and a US state bill. 🔵 **Three of the four land in the same
+band**: end of primary / start of lower-secondary, roughly ages 11–13. 🔴 **The outlier is the
+one that is only a bill.**
+
+🟢 **And unlike a market figure, it is a BUILD CONSTRAINT.** A tutoring or assistant product
+sold into more than one of these jurisdictions cannot satisfy them with a policy document: it
+needs **capability gating keyed to the learner's stage**, where the open-ended generation
+surface is *absent* for the youngest cohort rather than *discouraged*. 🟢 `Pattern 15` is that
+build, and it composes with `Pattern 14`'s permission-level boundary rather than replacing it.
+
+🔴 **The honest limits, stated before a successor leans on it.** All four cells are
+**secondary**: no primary instrument text was retrieved for any of them, government egress is
+`Gap 241` and the Chinese and French primary documents are `Gap 497` and `Gap 496`. 🔴 **France
+rests on a SINGLE source, and that source is a bill's explanatory memorandum describing the
+ministry's framework — not the framework.** 🔵 The band (ages 11–13) is an observation across
+four cells, not a measured distribution, and **no fifth jurisdiction was tested against it**.
+🟢 `ACTION p375-B` registers the pre-registered test that would: pick a jurisdiction with no
+retrieved floor, predict one in the same band, and run the leg.
+
+### 🟢 The second trend, and three regions measured it independently this pass
+
+🟢 **Small, sovereign, self-hosted — and it is now a procurement preference rather than an
+architectural taste.**
+
+| Where | The signal | Grade |
+|---|---|---|
+| 🇫🇷 **France** | the national framework **recommends free / open-source tools** and a *frugal* approach; consumer services only with no personal data | 🟡 secondary |
+| 🌎 **LATAM** | **Latam-GPT** launched 2026-02-10, 60+ institutions / 15 countries, explicitly a regional-sovereignty project | 🟡 secondary |
+| 🌐 **Global** | Futuresource flags **small language models** as institutions seek *"secure, curriculum-specific AI environments"*, driven by governance needs such as the EU AI Act | 🟡 secondary |
+
+🟢 **For a studio this is the most actionable convergence on the shelf**, because it is the one
+direction of travel where a permissively-licensed, self-hostable stack is the *compliant*
+answer and not merely the cheaper one. 🔴 **And it is also where this base is weakest on
+supply:** the sovereign-model row LATAM would want is `Latam-GPT`, and this base holds **seven
+addresses for it, six of them dead** (`Gap 499`).
+
+### 🔴 The adoption-governance gap, now measured in three regions with three different instruments
+
+| Region | Adoption | Governance | Source type |
+|---|---|---|---|
+| 🌐 Global | **92 %** of students used AI (2025, up from 66 % in 2024) | 🔴 **10 %** of institutions have formal AI guidelines | survey roundup |
+| 🇺🇸 North America | majority of teachers used AI in 2024-25 | 🔴 **19 %** said their school had an AI policy (Gallup) | survey |
+| 🇩🇪 Germany | **~50 %** of teachers use AI tools | 🔴 **88 %** have barely engaged with the rules (Telekom-Stiftung, Mar 2026) | foundation study |
+
+🟢 **Three instruments that share no methodology report the same shape**, and the North
+American figure is the one that bites hardest because `p374` established that districts there
+are acquiring a **statutory duty** to hold the policy that 81 % of them do not have.
+
 ## 🟢 🆕 `p374`: three regions legislated the SAME PROHIBITION independently — and that convergence, not the market size, is what makes one build pattern sellable everywhere
 
 **Evidence:** [`region-leg-replication`](../evidence/region-leg-replication.2026-10-22-p374.tsv) ·

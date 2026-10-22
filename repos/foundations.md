@@ -4,6 +4,28 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p375` — one foundational row added, in the **curriculum** tier, grant read first-hand
+
+| Repo | Licence | Grant read at | HEAD | Tier | Why foundational |
+|---|---|---|---|---|---|
+| [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) | Apache-2.0 (11 357 B, sha256₁₂ `c71d239df917`) | `main/LICENSE` | `7abd96e` | curriculum / practitioner upskilling | 🟢 the most-adopted open LLM curriculum in this window's legs, and **permissively granted**, so a studio can fork it into client enablement material rather than linking out to it |
+
+🟢 **Verified this pass, both channels, first-hand:** `git ls-remote --symref` gives
+`ref: refs/heads/main`, HEAD `7abd96e8284bfae232048fdb77b52397a2114847`; the grant was read from
+its payload at **11 357 B**, the canonical Apache-2.0 body, byte-identical on `main` and
+`master`. 🔴 **No star count** — `api.github.com` and `github.com` HTML are both `403` here.
+
+🔵 **Why it belongs on this shelf.** `p371` named **curriculum and credentialing** as this
+base's unshelved layer. The LMS, knowledge-tracing and tutoring tiers below are well covered;
+the layer that turns a studio's own people into deliverers was represented only by material
+this base already carried and never graded as foundational.
+
+🔴 **Zero other foundational rows this pass, with the reason.** The vertical-platform leg
+returned one vendor's own multilingual pages plus a listicle; every platform they name
+(Open edX, Moodle, Chamilo, Sakai, ILIAS) is **already carried**, and the one new name —
+**OpenEduCat** — has **no GitHub address in any source retrieved**, so none is shelved.
+`verticals/solutions.md` carries it with its licence channel and `Gap 500` carries the address.
+
 ## 🟢 🆕 `p374`: the human-grading system of record this shelf had no row for — **MIT**, and read first-hand
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p374.tsv) ·

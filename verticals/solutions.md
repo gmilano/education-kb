@@ -4,6 +4,30 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟡 2026-10-22 · `p375` — one platform added **without an address**, deliberately, and its licence is not permissive
+
+🔴 **`OpenEduCat` is the only new vertical platform the leg returned, and this pass constructs
+no address for it.** `ACTION p374-E`'s rule is *"before constructing an address, re-read the
+source for the owner"*, and the sources retrieved this pass — the vendor's own solution and
+community-licence pages, in seven languages — **name no repository**.
+
+| Platform | What it is | Licence, and the channel it came from | Address |
+|---|---|---|---|
+| **OpenEduCat** | LMS **plus** student information system in one record — admissions, attendance, grades, fees; SIS rostering via **OneRoster** and **Ed-Fi**; PostgreSQL, Odoo/Python architecture | 🔴 **LGPL-3.0**, from the vendor's own *Community License* page (the Free Edition) | 🔴 **not sourced — none constructed.** `Gap 500` |
+
+🔴 **Two cautions a studio needs before this is quoted.** Every figure above is a **vendor
+claim** from the vendor's own site (*"over 3 million users across 50+ countries"* is theirs, not
+a measurement). 🔴 **And LGPL-3.0 is not in this base's permissive tier** — it is usable, but it
+is a copyleft grant with linking conditions, so it does not belong in a recommendation that
+asks for MIT / Apache-2.0 / BSD. 🟢 **Its genuine interest is the SIS half**: `OneRoster` and
+`Ed-Fi` rostering in the same record as the LMS is exactly the stage-of-learner source
+`Pattern 15` requires, and the platforms this base already carries split that across two systems.
+
+🟢 **Everything else the leg named is already carried** — Open edX (Apache-2.0), Moodle
+(GPL-3.0), Chamilo, Sakai, ILIAS. 🔴 **The leg did not establish an MIT or Apache-2.0 licence
+for any LMS/SIS pair it returned**, which was the question asked; that is reported rather than
+answered optimistically.
+
 ## 🟢 🆕 `p374`: the assessment tier gets its two platforms — and the LTI grade-passback boundary is a **measured vulnerability**, not a policy promise
 
 **Evidence:** [`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·

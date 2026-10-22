@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p375` — one row, read first-hand, and it is a **curriculum** repo rather than a trending-leg find
+
+🔵 **APPEND-ONLY.** Added at the top; the history below is kept.
+
+| Repo | Licence | Grant read at | HEAD | Tier |
+|---|---|---|---|---|
+| [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) | Apache-2.0 (11 357 B, sha256₁₂ `c71d239df917`) | `main/LICENSE` | `7abd96e` · default branch `main` | curriculum / practitioner upskilling |
+
+🟢 **Verified first-hand this pass, both channels:** `git ls-remote --symref` returns
+`ref: refs/heads/main` with HEAD `7abd96e8284bfae232048fdb77b52397a2114847`, and the grant was
+read from its payload — **11 357 B**, the canonical Apache-2.0 body, byte-identical on `main`
+and `master`. 🔴 **No star count is published**: `api.github.com` and `github.com` HTML are
+both `403` here, and the one figure a search result offered (~79.9k ★, via a third-party
+aggregator) is **not first-hand and is not shelved as data**.
+
+🔵 **Why it is shelved here and not in `agents/top.md`.** It does not act on a learner; it is
+course material. It sits in the tier `p371` named as this base's unshelved layer — curriculum
+and credentialing — and it is the only one of **11** discovery-leg candidates that was both new
+and permissively granted.
+
+🔴 **The trending leg itself returned nothing else usable.** `"github trending education AI
+2026 repository"` returned trend-aggregator pages (trendshift.io, gittrend.io, ossinsight.io)
+and a weekly-roundup newsletter. 🟢 Published as a measurement, not padded: **1 usable row from
+2 global supply legs**, and the per-candidate denominator is in `agents/trending.md`.
+
 ## 🟢 2026-10-22 · `p374` — two rows, both from a gap rather than a trending leg
 
 🔵 **APPEND-ONLY.** Added at the top; the history below is kept.

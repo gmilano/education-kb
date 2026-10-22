@@ -4,6 +4,29 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🔴 2026-10-22 · `p375` — **no agent row added or changed**, and the denominator is published
+
+🟢 **The four prescribed discovery legs ran and produced 11 candidate addresses; `make carried`
+graded 9 of 11 already on these shelves, and the 2 that were new are not agents** — one is a
+curriculum repository (`repos/trending.md`) and one is a vertical platform for which **no
+address was sourced** (`verticals/solutions.md`). The per-candidate table is in
+`agents/trending.md`.
+
+🔴 **Third consecutive pass at zero new agent rows.** `p373` reported `0` with a `9/9`
+denominator, `p374` reported `0` with `9/9`, `p375` reports `0` with **9 of 11 carried**.
+🟢 **This is published as a property of the LEG, not of the industry**, and `ACTION p375-C`
+registers the change of instrument: run the next discovery leg against the
+**credentialing / interop** layer `p371` named, whose canonical addresses `p374` showed were not
+even in the census denominator until this pass fixed it.
+
+🔵 **One grade on an existing row is re-affirmed rather than changed.**
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) is
+**BSD-3-Clause** and usable for client work — `Gap 491`'s finding, which `p374` opened and
+closed on a first-hand payload read (1 531 B, all three clauses). 🔴 The contradicting
+*"CC BY-NC-SA 4.0"* cell in `agents/trending.md`'s dated history is `ACTION p374-I` and is
+**still open**; it is not silently edited, because this base does not rewrite history to match a
+later derivation.
+
 ## 🟢 🆕 `p374`: `Gap 490`'s GRADER IS REAL, PERMISSIVE AND MAINTAINED — and the owner name was written out in the page `p373` was quoting when it declared the address absent
 
 **Evidence:** [`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·

@@ -1,0 +1,60 @@
+# p375 — ACTION p374-A (RANKED FIRST by p374): THE THIRD DRAW OF THE GERMANY CELL.
+# Measured 2026-10-22, same tool (WebSearch), query copied VERBATIM from
+# evidence/region-leg-crossed.2026-10-22-p373.tsv cell 2 via p374's replication file.
+#
+# WHY.  p374: "Two draws disagree, so p373's 'THE DECISIVE CELL' currently supports NEITHER
+# verdict.  Until a third draw, no pass may cite cell 2 as evidence that English-plus-organ
+# fails in Germany."
+#   draw 1 (p373): RED NIL        -- 0 German facts; returned NORTH AMERICAN state policy
+#   draw 2 (p374): YELLOW PARTIAL -- 1 dated German fact, via a FRENCH-language aggregator
+#
+# PRE-REGISTERED IN WRITING BEFORE THE SEARCH RAN (scratchpad/p375/predictions.txt):
+#   PREDICT PARTIAL or PRODUCTIVE (>=1 dated German education fact).
+#   MECHANISM, so the prediction is falsifiable rather than a coin-flip: the KMK competence-
+#   framework update of 2026-10-16 is a REAL DATED EVENT that POST-DATES p373's draw.  p373
+#   searched before the event existed to retrieve; p374 six days after; p375 twelve days after.
+#   If the mechanism holds, retrievability is non-decreasing in time since the event.
+#   REFUTATION CONDITION: zero dated German facts => mechanism refuted, NIL modal at 2 of 3.
+#
+# p375 ALSO RUNS A SECOND CELL THE SURVIVING HYPOTHESIS HAD NEVER BEEN TESTED ON.
+# p374's surviving account: "an English leg is productive wherever a CROSS-BORDER SPECIALIST
+# PRESS CHANNEL covers that jurisdiction in THE LANGUAGE OF THE QUERY."  p374 derived it partly
+# from the accident that its one German fact arrived via actuia.com, a FRENCH aggregator.
+# That account makes a sharp untested prediction: a FRENCH leg naming Germany + KMK should
+# OUTPERFORM the English leg on the same jurisdiction and the same organ.
+#   PREDICT F1 PRODUCTIVE, and RICHER than the English leg.
+#   REFUTATION CONDITION: F1 nil while English is productive => the account is refuted and
+#   the actuia.com hit was a single-outlet accident rather than a channel.
+#
+cell	jurisdiction	region	query_language	jurisdiction_naming	prediction	outcome	prediction_held	facts_returned	retrieving_outlets
+R2-draw3	Germany	EMEA	English	COUNTRY + ORGAN (Germany, KMK)	PARTIAL or PRODUCTIVE	YELLOW PARTIAL	🟢 YES	KMK announced 2026-10-16 an update to its "Bildung in der digitalen Welt" competence framework to integrate AI competences.  Also surfaced: EC/OECD draft AI-competence framework for schools with a final expected 2026 (heise.de); Luxembourg "KI Kompass" (gouvernement.lu); UNESCO AI competency framework 2024.  NO North American state policy, same as draw 2.	🔴 actuia.com ONLY for the German fact -- a FRENCH-language AI-news directory.  KMK's own document NOT retrieved.
+F1	Germany	EMEA	French	COUNTRY + ORGAN (Allemagne, KMK)	PRODUCTIVE, and RICHER than the English leg	YELLOW PARTIAL -- same single fact, SAME SINGLE OUTLET	🔴 NO -- productive but NOT richer	The same KMK 2026-10-16 "Bildung in der digitalen Welt" AI-competence update, with the same framing and no additional dated detail.  No competence list, no decision text.	🔴 actuia.com ONLY -- byte-for-byte the same source page the ENGLISH leg reached.
+#
+# RESULT 1 -- ACTION p374-A IS DISCHARGED, and the three draws are: NIL / PARTIAL / PARTIAL.
+# 🔴 p373's "THE DECISIVE CELL" is the MINORITY draw at 1 of 3.  The claim it was built to
+# support -- "English + organ = NIL for Germany, so German is NECESSARY" -- is NOT a stable
+# property of the cell and no pass may cite cell 2 for it.
+# 🔵 This is NOT a variance estimate.  n=3 on a non-deterministic tool establishes that the
+# cell is non-deterministic; it does not say how often it returns which, and no frequency
+# figure is published.  p375 declines to compute 2/3 as a rate.
+#
+# RESULT 2 -- AND IT IS THE STRONGER HALF: p374's SURVIVING ACCOUNT IS REFUTED FOR GERMANY,
+# on a prediction registered before the search.
+# 🔴 The French leg did not outperform the English leg.  Both legs reached THE SAME SINGLE
+# OUTLET.  So for Germany the operative variable is NOT the language of the query: it is the
+# EXISTENCE OF ONE PAGE, which both language legs happen to index.
+# 🟢 What replaces it, and it fits all three Germany draws plus p374's Japan/Brazil/India cells:
+# the unit is not a language and not a jurisdiction -- it is AN OUTLET.  A leg is productive
+# when at least one indexed outlet covers that jurisdiction's education policy in ANY language
+# the query can reach; the query's language matters only insofar as it changes WHICH outlets are
+# reachable, and for Germany the reachable set has SIZE ONE in both languages tested.
+# 🔴 The sharp consequence a successor must not soften: a jurisdiction served by ONE outlet is
+# ONE OUTLET AWAY FROM A NIL, which is exactly why draw 1 returned nothing.  That is a
+# FRAGILITY property of the jurisdiction's coverage, not a property of the query language.
+#
+# 🔴 STATED LIMITATIONS.
+#   1. n=1 on F1.  One French draw cannot establish that French reaches only actuia.com.
+#   2. "Same outlet" is measured as the same domain returning the same dated fact; the two
+#      legs' full result sets differ in their NON-German items, which is not evidence either way.
+#   3. The KMK primary document was not retrieved on EITHER leg -- Gap 496.  Every German fact
+#      in this file is secondary and single-sourced.

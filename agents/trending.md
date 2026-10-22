@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p375` — **zero new agent rows for the third pass running, and this time the denominator is published as 9 of 11 CARRIED plus 2 that are not education agents at all**
+
+🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the
+record. 🟢 All probes **2026-10-22**, first-hand. 🔴 **No star counts** — `api.github.com`
+and `github.com` HTML are both **403** from this environment, re-measured this pass.
+
+### 🔴 New agent rows this week: **ZERO**, with the denominator
+
+🟢 **The four discovery legs the rotation prescribes were run** (`top open source AI agents
+education 2026 github MIT`, `github trending education AI 2026`, the vertical-platform leg and
+the industry-trends leg). 🔴 **They returned 11 candidate addresses and not one is a new
+education agent.** Graded by `make carried`, first-hand:
+
+| Candidate | `make carried` | Why it is not a new agent row |
+|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🔵 CARRIED | curriculum, already shelved |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🔵 CARRIED | curriculum, already shelved |
+| [`1111philo/learn`](https://github.com/1111philo/learn) | 🔵 CARRIED | already shelved |
+| [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | 🔵 CARRIED | already shelved |
+| [`aicademyorg/aicademy`](https://github.com/aicademyorg/aicademy) | 🔵 CARRIED | already shelved |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🔵 CARRIED | already shelved |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔵 CARRIED | LMS, not an agent |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔵 CARRIED | LMS, not an agent |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 CARRIED | LMS, not an agent |
+| [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) | 🟢 **NEW** | 🔵 **shelved — but as a CURRICULUM repo, not an agent.** See `repos/trending.md` |
+| `OpenEduCat` | 🟢 **NEW** | 🔴 **no address shelved: none was sourced.** See `verticals/solutions.md` |
+
+🔴 **So the saturation `ACTION QJ` measured and `p373`/`p374` reproduced holds a third time, and
+`p375` can state it more precisely than its predecessors:** the global English discovery legs are
+not returning education agents because they return **general-purpose agent roundups and SEO
+aggregator pages**. Of the 11 candidates, **6 are AI-curriculum repositories** (teaching people
+to build agents) and **3 are LMS platforms**. 🟢 **Nothing in this window is an agent that acts
+on a learner.**
+
+🔵 **What a successor should NOT do with this.** Three passes of zero is evidence about the
+**leg**, not about the industry. 🟢 `ACTION p375-C` registers the change of instrument that
+would actually test it: the supply this base is missing was named by `p371` as the
+**credentialing / interop** layer, and `p374` showed its canonical addresses
+(`1edtech/badgr-server` and siblings) are **not even in the census denominator** — which
+`p375` has now fixed. The next discovery leg should be run **against that layer**, not against
+`"AI agents education"` for a fourth time.
+
 ## 🟢 2026-10-22 · `p374` — the week's real movement is a **grader that was already findable**, and a supply side that is saturated 9/9
 
 🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the

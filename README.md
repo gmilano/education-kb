@@ -4,6 +4,174 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 375 — 2026-10-22 — **`p373`'s "DECISIVE CELL" IS NOW THE MINORITY DRAW AT 1 OF 3, AND THE FRENCH LEG THAT WAS SUPPOSED TO BEAT THE ENGLISH ONE RETURNED THE SAME SINGLE OUTLET — SO THE UNIT WAS NEVER A LANGUAGE, IT IS AN OUTLET. 🟢 THE 756 ADDRESSES NO CENSUS COULD SEE ARE GRADED: 453 ARE LIVE REPOSITORIES, AND BOTH FALSE-POSITIVE CLASSES ARE ONE-SIDED ARMS IN GATES THAT WERE ALREADY GREEN. 🟢 AND FOUR JURISDICTIONS ACROSS THREE LEGAL SYSTEMS HAVE DRAWN THE SAME AGE FLOOR WITHOUT COORDINATING.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`census-union-grade`](evidence/census-union-grade.2026-10-22-p375.tsv) ·
+[`region-leg-thirddraw`](evidence/region-leg-thirddraw.2026-10-22-p375.tsv) ·
+[`regional-first-measurements`](evidence/regional-first-measurements.2026-10-22-p375.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p375.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Action discharged** | 🟢 `ACTION p374-A` (ranked first by `p374`) — the third Germany draw, on the verbatim query, with the prediction registered first |
+| **Action discharged** | 🟢 `ACTION p374-J` (ranked second) — **limbs 1 and 3**; limb 2 built where the dependency graph allows, with the reason measured rather than argued |
+| **Prior conclusion demoted** | 🔴 `p373`'s cell 2 is **1 of 3** draws. *"English + organ = NIL for Germany"* may no longer be cited |
+| **`p374`'s own account refuted** | 🔴 the *"channel in the **query's language**"* clause — a French leg naming Germany returned the **same fact from the same single outlet** as the English leg |
+| **Invariant added** | 🟢 limb 3: every channel-B survivor must be **accounted for** by the census. **756 → 0** |
+| **Instrument defects found, both in GREEN standing gates** | 🔴 `p367`'s arm 1 tests the **owner** position only · 🔴 `p351`'s `NAME_RESERVED` misses a **three-dot** name |
+| **Gates** | 🟢 **41/41 green**, up from **40/40** at `p374`'s HEAD (`gate-census-union`, **27** controls over 5 groups) |
+| **Jurisdictions reached for the FIRST time** | 🟢 **4** — France, China (in Chinese), Chile, Colombia. `Gap 494` narrows **14 → 10** |
+| **New agent rows** | 🔴 **ZERO**, third pass running, denominator **9 of 11 carried** and the other 2 are not agents |
+| **New repo rows** | 🟢 **1** — [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course), **Apache-2.0**, grant read first-hand at 11 357 B |
+| **Shelf gained** | 🟢 `Pattern 15` (stage-gated generation) · a `p375` block under **each of the five** regions |
+| **New gaps** | **496** (KMK text, one outlet) · **497** (a China claim **refused**, not missing) · **498** (Korea high-impact) · **499** (**six dead** Latam-GPT addresses) · **500** (OpenEduCat address) |
+| **Probes, all first-hand** | **756** `ls-remote` adjudications + **304** rc re-probes + **21** published-address probes · **2** grant payload reads · 🔴 **0** successful `api.github.com` or `github.com` HTML calls (both `403`) — so **no star counts** |
+| **Address census, derived LAST** | 🟢 **2 690 → 33 → 2 657**, delta **+3**, all three nameable |
+| 🆕 **The union denominator, published once** | 🟢 **3 385** addresses over both channels — the figure no census has ever reported |
+
+### 🔴 The finding, in one sentence
+
+🔴 **`p374` reasoned that its one German fact arrived through a French outlet because a
+cross-border press channel covered Germany *in the language of the query*; `p375` ran the French
+leg that account predicts should win, and it returned the identical fact from the identical
+single page (`actuia.com`) that the English leg had already found.**
+
+🟢 **So the unit of analysis was wrong for three passes, and it is not a language.** A leg is
+productive when **at least one indexed outlet** covers that jurisdiction's education policy in a
+language the query can reach. Query language matters only insofar as it changes *which* outlets
+are reachable — and for Germany the reachable set has **size one in both languages tested**.
+
+| Draw | Pass | Language | Verdict | German facts | Retrieving outlet |
+|---|---|---|---|---|---|
+| 1 | `p373` | English | 🔴 **NIL** | 0 (returned North American state policy) | — |
+| 2 | `p374` | English | 🟡 PARTIAL | 1 | `actuia.com` (French) |
+| 3 | `p375` | English | 🟡 PARTIAL | 1 | `actuia.com` (French) |
+| F1 | `p375` | **French** | 🟡 PARTIAL | 1, **no richer** | `actuia.com` — **the same page** |
+
+🔴 **The sharp consequence, which a successor should not soften: a jurisdiction served by one
+outlet is one outlet away from a nil.** That is what draw 1 was. It is a **fragility** property
+of Germany's coverage, not evidence about German as a language — and `Gap 476`, `ACTION PJ`,
+`p373` and `p374` were each reading a different shadow of it.
+
+### 🟢 `ACTION p374-J`: the 756 invisible addresses, graded
+
+🟢 **`p374` found that the census every pass quotes reads one address channel of two, and
+refused to publish a corrected total because *"756 addresses is not 756 repositories"*.** It was
+right to refuse and its worry was the smaller half of the answer:
+
+| Class | Count |
+|---|---|
+| 🟢 **live repositories** (`452` with refs + `1` commitless) | **453** |
+| 🔴 absent, `rc=128` — `p372`'s dead-citation question | **256** |
+| 🔴 **false positives by shape** | **26** |
+| 🔵 this base's **own planted negative controls** | **21** |
+
+🔴 **Both false-positive classes are one-sided arms inside gates that were green the whole
+time.** `p367`'s arm 1 rejects a ref-or-path word in the **owner** position — `main/license` is
+its own control 5 — and never tests the **name** position, so `aoe-web-backend/license` and 15
+siblings sailed through. `p351`'s `NAME_RESERVED` holds `{".", ".."}` while its `NAME_SHAPE`
+admits dots, so a **three-dot** name was accepted, although `p351` already rejects the *owner*
+form of exactly that as `OWNER-ELLIDED`.
+
+🔴 **And the blanket fix is REFUTED BY MEASUREMENT, which is why the vocabulary is derived
+rather than copied.** Rejecting all of `p367`'s `REF_OR_PATH` words in the name position would
+have eaten **two live repositories** — `mattpocock/skills` and `vercel-labs/skills`. 🟢 So the
+rejection set holds only words measured **0 live** across all 756, `skills` is pinned as a
+negative control, and control 12 **re-reads the committed 756-row measurement** so that a later
+edit adding a word with a live instance turns the suite red.
+
+🔵 **Two of this pass's own errors are on the shelf rather than tidied away.** Limb 3's first
+formulation (`b_survivors − union_addresses ≤ false positives`) **goes negative** once the census
+is a union, so it would have been green for the wrong reason. And `p375` wrote `1EdTech/ltijs`
+into `Pattern 15` by reasoning from the standards body's name; `ls-remote` says `rc=128` and the
+live address is `cvmcosta/ltijs`, which this base already carried. 🟢 **Tenth instance of the
+signature defect and the first caught before the commit** — because every address in that table
+was probed before publication, not after.
+
+### 🟢 The commercial reading, and it is a build constraint rather than a market figure
+
+🟢 **Four jurisdictions, three legal systems, no shared drafting body, and the same boundary: an
+AGE FLOOR on autonomous pupil use of generative AI.** China's MOE guide bars primary pupils from
+independently using open-ended generation; Brazil's `Parecer CNE/CP nº 15/2026` prohibits
+autonomous use to the end of 5th grade; France's framework permits it **from classe de
+quatrième**; New York's `A.9190` would bar most classroom AI below grade 9. 🔵 **Three of the
+four land in the same band — end of primary, roughly ages 11–13.**
+
+🟢 **This is `p374`'s convergence repeated on a second, independent axis.** `p374` found that
+three legal systems agree an AI system **may inform a mark and may not decide one**. `p375` finds
+they also agree on **who may drive the tool at all**. 🟢 **Neither is satisfiable with a policy
+document**, and `Pattern 15` builds the second one the same way `Pattern 14` built the first: as
+a **permission an auditor can check in minutes** — a per-stage virtual key at the gateway with no
+generative model attached for the youngest cohort, rather than a prompt instruction or a hidden
+button.
+
+🟢 **And France hands an open-source studio the most directly commercial sentence in this base's
+EMEA section:** its national framework **recommends free and open-source tools**, favours frugal
+use, and tolerates consumer services only where **no personal or sensitive data** is entered.
+🔵 It converges with Futuresource's **small-language-model** finding (institutions seeking
+*"secure, curriculum-specific AI environments"*, driven by governance needs) and with
+**Latam-GPT**'s sovereignty premise. 🟢 **Small, self-hosted and auditable is the one direction
+where a permissively-licensed stack is the *compliant* answer and not merely the cheaper one.**
+
+🔴 **Graded honestly: every jurisdictional cell above is SECONDARY.** No primary instrument text
+was retrieved for any of the four floors — government egress is `Gap 241`, the Chinese and German
+documents are `Gap 497` and `Gap 496`. 🔴 **France rests on a single source, and that source is a
+bill's explanatory memorandum describing the ministry's framework rather than the framework.**
+🔴 **And one circulating claim is refused rather than reported:** a commercial site asserts a
+nationwide mandatory weekly AI class in China for grades 3–12 from autumn 2026, with **no MOE
+document behind it** in the result set.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the nine `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, with `p351`'s instrument: **2 690** harvested shapes →
+**33** are not addresses → **2 657 addresses**.
+🟢 **The delta is `+3` and all three are nameable:** `mlabonne/llm-course` — this pass's one new
+row — plus `berriai/litellm` and `vllm-project/vllm`, the two `Pattern 15` components that had
+never appeared as a URL on a shelf. 🟢 All three answered `ls-remote` first-hand this pass.
+🟢 `p374`'s **2 687 / 33 / 2 654** is left standing in its own section — history is not edited to
+match a later derivation.
+
+🆕 **And for the first time, the figure the other channel sees, published once in its own
+section as `ACTION p374-J` requires:**
+
+| Channel | Instrument | Addresses |
+|---|---|---|
+| URL only — **the standing triple above** | `p348` → `p351` | **2 657** |
+| bare backticked, post-arms | `p367` | 3 042 |
+| 🟢 **union, both channels, both shape filters** | `p375` | 🟢 **3 385** |
+
+🔵 **The union figure does not replace the standing triple this pass.** `gate-census-currency`
+governs `p351`'s sentence, and repointing its anchor changes a number quoted in every prior
+section, so it is `ACTION p375-A` and ranked first — **not** done quietly here. 🔴 **`p351` could
+not simply be switched, either, and the reason is structural rather than a preference:
+`p367` already imports `p351`, so putting the union inside `p351` is an import cycle.** The union
+therefore lives in a third instrument that imports both.
+
+🟢 **What IS closed is the blindness:** `b_unaccounted`, the count of channel-B survivors no
+census could see, was **756** at `p374`'s HEAD and is **0** at this one, enforced by
+`gate-census-union` on every `make hooks`.
+
+🔵 **The honest size of `p375`.** One new repo row. One new pattern. One new standing gate. Two
+actions discharged, one of them the ranked-first. Four jurisdictions measured for the first time.
+Two prior conclusions demoted with their replacements measured. Two instrument defects found in
+green gates, and **two of this pass's own errors published rather than tidied**. 🔴 **Zero new
+agent rows for the third consecutive pass, with the denominator**, and `ACTION p375-C` changes
+the instrument rather than re-running the query a fourth time.
+
+🔴 **Stated limitation, before a successor leans on anything here.** `n=1` on the French cell and
+on each of the four new jurisdiction cells; `n=3` on Germany establishes that the cell is
+**non-deterministic** and **does not** estimate how often it returns which, so no frequency is
+published. The age-floor band is an observation across **four** cells, not a distribution, and
+**no fifth jurisdiction was tested against it** — `ACTION p375-B` is that test, and a nil would
+be the more valuable result.
+
 ## Pass 374 — 2026-10-22 — **`p373`'s DECISIVE CELL DOES NOT REPLICATE AND ITS HYPOTHESIS IS REFUTED OUT OF SAMPLE ON A PREDICTION REGISTERED BEFORE THE SEARCH RAN. 🔴 THE EMEA OBLIGATION `p373` SOLD YESTERDAY WAS REWRITTEN THREE MONTHS AGO. 🟢 AND `Gap 490`'s GRADER IS LIVE, APACHE-2.0 AND MAINTAINED, AT AN ADDRESS WHOSE OWNER WAS WRITTEN OUT IN THE PAGE `p373` WAS QUOTING.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

@@ -882,6 +882,36 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+#### 🆕 `p375`: the mandate `p374` found is colliding with a **compliance figure**, and that gap is the engagement
+
+🟢 **The leg ran** (`AI education North America 2026 adoption regulation players state policy`)
+and it corroborates `p374`'s district-mandate finding from different sources, then adds the
+number `p374` did not have:
+
+| Fact | As reported | Grade |
+|---|---|---|
+| State bills in 2026 that could directly affect students' K-12 AI use | **~100**, tracked by the PIE Network, inside **>1 500** AI bills nationwide | 🟡 advocacy tracker |
+| Districts with a formal AI policy | 🔴 **only 19 %** of teachers said their school had one (Gallup) | 🟡 survey, secondary |
+| Federal layer | executive orders **2025 → early 2026** produced a national framework and a **K-12 AI task force** | 🟡 secondary |
+| Graduation requirements | **Georgia** and **Mississippi** moving to CS credits that include AI instruction, late 2020s | 🟡 secondary |
+| Regional guidance | **SREB AI Commission**, 9 recommendations (2025) | 🟡 secondary |
+| Model guardrails | ExcelinEd: privacy, transparency, safety, **product design** | 🟡 advocacy |
+
+🔴 **The commercial reading, and it is sharper than either pass alone.** `p374` established
+that districts are acquiring **statutory duties** to hold an AI policy — Ohio's deadline
+**2026-07-01** has already passed. 🔴 **This pass's figure says 19 % of schools have one.**
+🟢 **So the North American sale is not strategy and it is not tooling: it is
+policy-to-evidence conversion against a deadline that is already behind them** — the same
+evidence-production shape `ACTION p374-B` requires for EMEA, arriving from a different legal
+mechanism. 🔵 ECS's own characterisation is the supporting argument: guidance is *"largely
+nonbinding and decentralized"*, and teacher training *"lacks state-level standards or stable
+funding"*.
+
+🔴 **Declared gap, not silence:** the leg returned **nothing on Canada or Mexico**. Both are
+carried jurisdictions (Canada 79 mentions, Mexico 111) and neither has been reached by a
+first-hand leg naming it — Mexico's only cell is `p207`'s, **168 passes old**. Registered under
+`ACTION p375-E` with `Gap 494`'s remainder.
+
 #### 🔴 🆕 `p374`: guidance is becoming a **binding district mandate**, and the first deadline has already passed
 
 🟢 **The shift to name in a pitch:** state AI guidance (reported at **33–35+ states**, and the
@@ -1208,6 +1238,37 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+#### 🟢 🆕 `p375`: **France measured for the first time** — and its framework *recommends open-source tools*, which is the most directly commercial sentence this base has found in EMEA
+
+🟢 **`ACTION p374-G` ranked France first** among the 14 carried-but-never-measured
+jurisdictions, on the grounds that `p374`'s one German fact arrived through a **French**
+outlet. The leg ran in French, naming the country and its organ. 🟢 **It is PRODUCTIVE, and it
+is a first measurement** — no prior pass has a French cell to agree or disagree with.
+
+| Instrument | What it does | Date | Grade |
+|---|---|---|---|
+| **Cadre d'usage de l'IA en éducation** (ministère de l'Éducation nationale) | first framework covering **professional, pedagogical and administrative** uses of generative AI | published **2025-06-14**, after a consultation Jan–May 2025 | 🟡 secondary, multi-outlet |
+| its conditions | republican values, **RGPD**, **loi SREN**, the EU AI Act, plus ethical and environmental principles | — | 🟡 secondary |
+| 🟢 its tooling preference | **frugal use, and it RECOMMENDS free / open-source tools**; consumer services tolerated only where **no personal or sensitive data** is entered | — | 🟡 secondary |
+| autonomous pupil use | permitted only **from classe de quatrième** | — | 🔴 single source, via a bill's *exposé des motifs* |
+| **Proposition de loi** (Nov 2025) | transparency, equity, sovereignty; would **formally prohibit behavioural biometrics** in schools | filed Nov 2025 | 🔴 **status not verified** |
+| **CSEFRS avis** | recommends a *national* regulatory framework; finds **no coherent institutional framework** exists | **April 2026** | 🟡 advisory, non-binding |
+| teacher/pupil training | online AI training for collège and lycée announced for **rentrée 2025** | Feb 2025 | 🟡 secondary |
+
+🟢 **Why the open-source sentence matters more than the market figures above it.** A national
+framework that *recommends* free software and *discourages* sending data to consumer services
+is a procurement preference written into policy, and it is the condition under which a
+self-hosted, permissively-licensed stack is the compliant choice rather than the cheap one.
+🔵 It converges with the APAC and Global findings in this same pass — **sovereign, small,
+self-hosted models** — and that convergence is `intel/trends.md`'s subject.
+
+🔴 **And the Germany cell is where this pass spent `ACTION p374-A`.** The verbatim third draw
+is in `evidence/region-leg-thirddraw.2026-10-22-p375.tsv`; the short version is that the
+English leg returned the **same single French outlet** as `p374`'s, and a French leg naming
+Germany returned **that same outlet and nothing more**. 🔴 **So p374's "channel in the query's
+language" account does no work in Germany: both languages bottom out in one page.** The KMK's
+own document was **not retrieved on either leg** — `Gap 496`.
 
 #### 🔴 🆕 `p374`: the Article 4 duty was **rewritten**, so the EMEA pitch changes shape — and the education-specific artefact is the `AILit` framework, not the AI Act
 
@@ -1669,6 +1730,42 @@ modification now has two bases that permit one.
 
 ### APAC
 
+#### 🟢 🆕 `p375`: **China measured for the first time, in Chinese** — and it is the strictest pupil-facing rule this base has found anywhere
+
+🟢 **China was the largest unmeasured jurisdiction on `p374`'s register — 173 mentions, never
+reached by a first-hand leg.** The leg ran in Chinese, naming 教育部 (MOE). 🟢 **PRODUCTIVE.**
+
+| Instrument | What it does | Grade |
+|---|---|---|
+| 《中小学人工智能通识教育指南（2025年版）》 *AI General Education Guide for Primary & Secondary Schools* | **spiral curriculum by stage** — primary: interest and basic cognition; junior high: technical principles and basic application; senior high: systems thinking and innovative practice | 🟡 two outlets, secondary |
+| 《中小学生成式人工智能使用指南（2025年版）》 *Generative AI Use Guide for Pupils* | 🔴 **primary pupils may NOT independently use open-ended content-generation**; junior high may explore logical analysis of generated content; senior high may use it for inquiry-based study | 🟡 secondary |
+| national basic-education deployment meeting | push AI into **curriculum standards, daily teaching and exam evaluation** | **Feb 2026**, 🟡 secondary |
+
+🔴 **One claim is REFUSED rather than reported.** A commercial parent-guide site asserts a
+nationwide **mandatory weekly AI class from grade 3 to grade 12 from autumn 2026**. 🔴 **No MOE
+document corroborating it appeared in the result set**, the site is commercial content that
+describes itself as based on the policy text, and this base does not shelve a curriculum
+mandate on that basis. 🟢 Registered as `Gap 497` with the remedy named: `moe.gov.cn`.
+
+🔵 **And a conflation guard, which is `p373`'s CNE lesson arriving in a second jurisdiction.**
+The same result set carried a **Hong Kong EDB** circular on a 2026/27 primary curriculum
+framework. 🔴 **Hong Kong is a different jurisdiction from the mainland and its EDB is not the
+MOE** — the two must not be fused, exactly as Brazil's and Portugal's *Conselho Nacional de
+Educação* must not be. 🟢 Recorded here so a successor reading this section cannot make the
+merge silently.
+
+🟡 **Korea, from the pan-regional leg:** the **AI Basic Act** passed Dec 2024, was legislated
+Jan 2025 and **took effect January 2026** after a one-year transition; it creates a national AI
+committee with a three-year plan and puts its obligations on **high-impact** systems.
+🔴 **Whether education is classed high-impact is NOT established by any source retrieved** —
+`Gap 498`, and it is the single fact that decides whether a Korean engagement is a conformity
+project or not.
+
+🔴 **Singapore is NOT published as a nil.** The pan-regional leg returned only a section
+heading for it, and `J2` forbids a jurisdiction nil without an in-language sibling leg, which
+was not run. 🟢 **So the honest statement is coverage, not absence:** Singapore (112 mentions)
+remains unreached, under `Gap 494`.
+
 #### 🟢 🆕 `p374`: the region's two biggest education systems both have **dated curriculum duties**, and this is the first pass to run an APAC leg in-language
 
 🟢 **India — a mandate with a date, not a strategy.** The Ministry of Education's Department of
@@ -2001,6 +2098,40 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+#### 🟢 🆕 `p375`: **Chile and Colombia measured for the first time** — and the region's sovereign-model project has a **live GitHub org and no shelvable repository**
+
+🟢 **Two more of `Gap 494`'s 14 unmeasured jurisdictions reached**, in Spanish, naming each
+country and its organ.
+
+| Jurisdiction | What the leg returned | Grade |
+|---|---|---|
+| **Chile** | 🔴 **no AI-specific regulation**; a **National AI Policy since 2021** and a bill in discussion. Use decisions are left to schools, teachers and pupils | 🔴 legal opinion column + one undated source |
+| **Colombia** | **National AI Policy sanctioned Feb 2025**, six strategic objectives incl. digital-talent training and ethical governance; **Aug 2025** the government filed an AI bill in Congress; the education minister states it incorporates AI **at all educational levels** plus teacher training | 🟡 secondary; 🔴 **bill's current status not verified** |
+| **Mexico · Colombia · Chile** (higher ed) | 🟢 **all three require pupils to DECLARE AI use, with sanctions for fraudulent use** — an EdLatam comparative | 🟡 secondary |
+| regional analysis | Uniandes + Konrad-Adenauer report on LATAM AI regulation, lessons from **Peru and Chile** | **Aug 2026**, 🔴 **not read** |
+
+🟢 **The declaration requirement is the commercially useful one**, because it is a *product*
+requirement rather than a principle: three jurisdictions expect an AI-use disclosure attached
+to submitted work, which is an attribution and provenance feature, not a policy document.
+
+🔴 **And `Latam-GPT` is a defect in this base, found by `ACTION p374-J`'s probe rather than by a
+search.** The project is real and regionally important — launched **2026-02-10** by **CENIA**
+with 60+ institutions across 15 LAC countries, >8 TB of regional and synthetic data, Spanish
+and Portuguese with Indigenous languages planned, backed by the Chilean science ministry, AWS
+and CAF, and reported as the first open-source LLM built for Latin America. 🔴 **This base holds
+SEVEN addresses for it and six are dead:**
+
+| Address | `ls-remote`, 2026-10-22 |
+|---|---|
+| `latam-gpt/.github` | 🟢 **LIVE**, HEAD `b936437e2b` — **so the org exists** |
+| `latam-gpt/latam-gpt` · `latam-gpt/latam-gpt-recipes` | 🔴 ABSENT (`rc=128`) |
+| `cenia/latam-gpt` · `cenia-cl/latam-gpt` · `cenia-chile/latam-gpt` · `cenia-chile/latamgpt` | 🔴 ABSENT (`rc=128`) — **four spellings of one owner** |
+
+🔴 **Four owner spellings for one project is the signature of a CONSTRUCTED address**, which is
+precisely what `ACTION p374-E` exists to stop. 🟢 **`p375` constructs no further address for
+it**: the launch coverage retrieved this pass names no repository and states **no licence**, so
+the row is not shelved. `Gap 499`, remedy named — CENIA's own site or a Hugging Face org page.
 
 #### 🟡 🆕 `p374`: Brazil's regime now has its **risk tiers and an age prohibition**, and the homologation still has not published
 
@@ -2360,6 +2491,47 @@ name a Brazilian engagement stack whose administration, curriculum and psychomet
 are each a real, licence-read repository. Pattern 28 wires them.
 
 ### Global
+
+#### 🆕 `p375`: the market figures, with their spread published rather than averaged — and the one structural claim worth more than any of them
+
+🔴 **Four estimates were retrieved and they do not agree. They are published as a spread,
+because averaging vendor-research figures with different definitions of "AI in education"
+manufactures a precision none of them has.**
+
+| Source | Figure | Horizon |
+|---|---|---|
+| IMARC | **US$ 9.0 bn** in 2026 (from 6.4 bn in 2025) → **79.6 bn by 2034**, CAGR **31.35 %** | 2034 |
+| EssayShark (press release) | 6.9 bn (2025) → **>41 bn by 2030** | 2030 |
+| unattributed projection in the same roundup | **136.79 bn by 2035**, CAGR 34.52 % | 2035 |
+
+🔴 **Grade: all secondary, all market-research or press-release provenance.** 🔵 Treat as
+directional only; this base does not compute a mid-point.
+
+🟢 **The adoption figures are more useful than the dollar figures**, and the gap between two of
+them is the whole commercial argument:
+
+| Measure | Reported |
+|---|---|
+| global student AI usage | **66 % (2024) → 92 % (2025)** |
+| teachers using AI for academic work | **65 %** |
+| 🔴 institutions with **formal AI guidelines** | **10 %** |
+| 🔴 US teachers **lacking AI training** | **71 %** |
+
+🔴 **92 % usage against 10 % governance is the same shape as North America's 19 % and
+Germany's 88 %-have-barely-engaged-with-the-rules.** 🟢 **Three regions, three instruments, one
+finding: adoption has already happened and governance has not.** That is a
+governance-and-evidence engagement in every region, and it does not depend on any of the
+dollar figures above being right.
+
+🟢 **The structural claim, and it is the one to carry into a pitch.** Futuresource reports
+institutions moving **from isolated pilots to structured implementations** backed by formal
+policy and professional development, and flags **agentic AI** and **small language models** —
+the latter driven by governance needs such as the EU AI Act, as institutions seek *"secure,
+curriculum-specific AI environments"*. 🔵 It also puts **AI PCs at ~15 % of institutional PC
+shipments in 2026, rising to ~half by 2030**. 🟢 **This converges with France recommending
+open-source tools and with Latam-GPT's sovereign-model premise: the direction of travel is
+small, self-hosted and auditable, which is the one architecture an open-source studio is
+structurally better placed to deliver than a frontier-model vendor.**
 
 #### 🟡 🆕 `p374`: the market figure is a **band, not a number**, and the spread is definitional
 

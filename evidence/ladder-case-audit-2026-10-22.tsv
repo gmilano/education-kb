@@ -579,7 +579,9 @@ compose/code/p371-backlog-grade/census.py	licence	COMMENT-ONLY	no-upper-ext	STAN
 compose/code/p371-backlog-grade/census.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	NOTICE.md notice
 compose/code/p371-region-place/place_region.py	licence	COMMENT-ONLY	UPPER-EXT	STANDING	LICENSE.TXT
 compose/code/p371-region-place/place_region.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
-compose/code/p372-dead-citation/dead_citation.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p372-dead-citation/dead_citation.py	licence	COMMENT-ONLY	UPPER-EXT	STANDING	LICENSE.TXT
+compose/code/p372-dead-citation/dead_citation.py	readme	FOLD-ON-PATH	no-upper-ext	STANDING	README.md
+compose/code/p375-census-union/census_union.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	license
 compose/code/p385-binding-interval/binding_interval.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p385-binding-interval/binding_interval.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p386-pristine-dedup-gate/dedup_gate.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE

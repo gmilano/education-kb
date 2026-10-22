@@ -45,6 +45,7 @@ TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 SHAPE_LOG ?= /tmp/education-kb-gate-address-shape.log
 CURRENCY_LOG ?= /tmp/education-kb-gate-census-currency.log
+UNION_LOG ?= /tmp/education-kb-gate-census-union.log
 GRANTPATH_LOG ?= /tmp/education-kb-gate-grant-path.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
@@ -58,7 +59,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
-.PHONY: gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census
+.PHONY: gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -88,7 +89,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-companion-closure gate-bare-slug-channel \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
-             gate-dead-citation gate-regional-leg
+             gate-dead-citation gate-regional-leg gate-census-union
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -390,6 +391,29 @@ gate-address-shape: ## p351 — ACTION ZZ-an: the harvested denominator rejects 
 
 address-shape-census: ## p351 — every rejected shape with its class.  A backlog, never a failure.
 	@$(PY) -I compose/code/p351-address-shape/address_shape.py reject $(SHELF_FILES) || true
+
+# 🟢 p375 — `ACTION p374-J`, registered by `p374` as ranked SECOND overall: the published
+# address census reads ONE address channel of TWO.  `p351`'s census imports `p348`'s harvester,
+# whose pattern requires the literal `github.com/` prefix, so a bare backticked `owner/repo` is
+# invisible to it -- counted neither as an address nor as a reject.  `p367` BUILT the second
+# channel seven passes earlier and wired it into its own gate only.
+# 🔵 limb 1 is a MEASUREMENT and it is committed, not re-run here: all 756 bare-only addresses
+# adjudicated first-hand with `ls-remote` (`evidence/census-union-grade.2026-10-22-p375.tsv`),
+# 453 live, 303 rc=128, 26 graded non-addresses by shape.
+# 🔴 The gate's load-bearing control is limb 3's: EVERY channel-B survivor must be ACCOUNTED
+# FOR -- counted as an address or named in a rejection class.  That count was 756 before this
+# pass and is 0 after it, so the blindness cannot return silently.
+# 🔴 The vocabulary is DERIVED, never copied: a blanket name-position rejection of `p367`'s
+# REF_OR_PATH words would have eaten `mattpocock/skills` and `vercel-labs/skills`, both LIVE.
+gate-census-union: ## p375 — ACTION p374-J: the census reads one address channel of two, and every channel-B survivor must be accounted for
+	@cd compose/code/p375-census-union && { $(PY) -I test_census_union.py > $(UNION_LOG) 2>&1 || { echo "🔴 p375-census-union FAILED — the suite's own report follows:" ; sed "s/^/   /" $(UNION_LOG) ; false ; } ; } && sed "s/^/   /" $(UNION_LOG) || exit 1
+	@$(PY) -I compose/code/p375-census-union/census_union.py disagreement $(SHELF_FILES) | sed "s/^/   /"
+
+census-union: ## p375 — the UNION denominator over both address channels, with its rejection classes
+	@$(PY) -I compose/code/p375-census-union/census_union.py census $(SHELF_FILES)
+
+census-union-grade: ## p375 — re-grade an adjudication file: make census-union-grade ADJ=file.tsv
+	@$(PY) -I compose/code/p375-census-union/census_union.py grade $(ADJ)
 
 # 🔴 p352: THE CENSUS ABOVE IS STALE IN THE PASS THAT PUBLISHES IT, STRUCTURALLY.
 # p351 published `2 476 harvested -> 33 -> 2 443 addresses`.  Re-derived over SHELF_FILES on

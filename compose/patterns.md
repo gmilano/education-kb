@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 `Pattern 15` (`p375`) — **Stage-gated generation**: the open-ended surface is ABSENT for the youngest cohort, not merely discouraged
+
+🟢 **The constraint this exists for is measured in `intel/trends.md` this pass: four
+jurisdictions across three legal systems independently set an AGE FLOOR on autonomous pupil use
+of generative AI** — China (no independent open-ended generation in primary), Brazil (prohibited
+to end of 5th grade), France (from classe de quatrième), New York `A.9190` (would bar most
+classroom AI below grade 9). 🔴 **A policy document does not satisfy any of them**, and
+`Pattern 14`'s permission boundary is about *marks*, not about *who may prompt*.
+
+🔵 **The design rule, stated so it is checkable rather than aspirational:** for a learner below
+the configured stage, the generation endpoint is **not reachable from that learner's session** —
+not hidden in the UI, not guarded by a prompt instruction, not filtered after the fact.
+
+### The composition, with the specific repositories
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| Learner record + stage | [`moodle/moodle`](https://github.com/moodle/moodle) cohorts, or [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | GPL-3.0 / Apache-2.0 | the stage must come from the **system of record**, never from a self-declared profile |
+| Interop boundary | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (LTI 1.3) | Apache-2.0 | the LTI launch already carries role and context claims; the stage travels with the launch |
+| Tutoring surface | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | its mode set is the natural gate: Socratic / quiz / flashcard modes are **retrieval and dialogue over fixed content**, not open-ended generation |
+| Stage-aware routing | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | MIT | one place to bind a **virtual key per stage**, so the youngest cohort's key has no generation model attached at all |
+| Local inference | [`ollama/ollama`](https://github.com/ollama/ollama) or [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | MIT / Apache-2.0 | France's framework **recommends open-source tools** and tolerates consumer services only with no personal data: self-hosting is the compliant configuration, not the thrifty one |
+| Evidence | [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) | Apache-2.0 | returns comments and never a mark — `Pattern 14`'s boundary, carried through |
+
+🔴 **One address in the table above was WRONG in this pass's first draft, and recording it is
+cheaper than a successor finding it.** `p375` first wrote the LTI component as `1EdTech/ltijs`,
+reasoning from the standards body's name. 🔴 **`ls-remote` says `rc=128`: it does not exist.**
+The live address is [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (HEAD `41f150c069`,
+read **2026-10-22**), which this base already carried — 🔵 **and `gate-fold-identity` then caught
+`p375` publishing it as `cvmcosta/…`, a second casing of the spelling these shelves already use.
+Two gates, two catches, one address, all before the commit.** 🟢 **This is the signature defect's tenth
+instance and the FIRST caught before the commit rather than by the next pass** — `ACTION
+p374-E`'s rule ("before constructing an address, re-read the source for the owner") worked, but
+only because every address in this table was probed before publication rather than after.
+
+### How the gate is actually enforced, and why it is a permission rather than a prompt
+
+🟢 **The load-bearing step is that the stage-gate lives in the KEY, not in the application.**
+LiteLLM issues a **virtual key per stage**; the primary-stage key is provisioned with
+**retrieval and classification models only and no generative completion model**. A request for
+generation on that key fails at the gateway with a 4xx — which is a log line an auditor can
+read, and which no amount of prompt injection from the learner's side can reach around.
+
+🔴 **The failure mode this avoids, and it is the one `p374` found in the Open edX advisory.** A
+gate implemented as *configuration inside the learning tool* is only as strong as the tool's own
+boundary; `p374` recorded that **any** LTI tool on an Open edX platform can post a grade back for
+**any** XBlock given the `resource_link_id`. 🟢 The same reasoning applies here: hold the
+capability outside the component that the learner can talk to.
+
+### What to tell the client, per region
+
+🟢 **France / EMEA** — the gate plus self-hosting answers the framework's open-source
+recommendation and its data condition in one architecture; pair it with the
+**evidence-production** posture `ACTION p374-B` requires (training records, a register of who
+operates which system) rather than with *"ensure a sufficient level"*, which was **rewritten**.
+🟢 **Brazil / LATAM** — build to the **prohibitions now** and to adequacy on the 12-month clock,
+and add the **AI-use declaration** that Mexico, Colombia and Chile all require of pupils: that is
+an attribution feature, not a policy.
+🟢 **China / APAC** — the three-tier spiral (primary / junior / senior) maps directly onto three
+stage keys; 🔴 the *mandatory weekly class* claim circulating commercially is **not corroborated
+by any MOE document** (`Gap 497`) and must not be quoted to a client.
+🟢 **North America** — the gate is the artefact that makes a district's statutory AI policy
+**demonstrable** rather than declared, which is the gap behind the 19 % figure.
+
+🔴 **Stated limit.** Every jurisdictional cell behind this pattern is **secondary**; no primary
+instrument text was retrieved for any of the four floors. 🔵 The pattern is sound as an
+architecture regardless, because it is strictly more conservative than any of the four readings —
+but the **specific grade boundary** per country must be confirmed against the instrument before
+it goes in a statement of work.
+
 ## 🟢 🆕 `Pattern 14` (`p374`) — **Assessment that returns comments and never a mark**, with the boundary enforced as a permission an auditor can check
 
 **Evidence:** [`gap490-product-name`](../evidence/gap490-product-name.2026-10-22-p374.tsv) ·

@@ -1,0 +1,46 @@
+p375 PRE-REGISTERED PREDICTIONS — written 2026-10-22 BEFORE any search ran.
+
+=== LEG A — ACTION p374-A (ranked first by p374): the THIRD Germany draw ===
+Query, copied VERBATIM from evidence/region-leg-crossed.2026-10-22-p373.tsv cell 2:
+  "Germany KMK artificial intelligence schools guidance 2026 competence framework decision"
+Draw 1 (p373): RED NIL       — 0 German facts, returned North American state policy
+Draw 2 (p374): YELLOW PARTIAL — 1 dated German fact (KMK 2026-10-16), via a FRENCH aggregator
+
+PREDICTION: PRODUCTIVE or PARTIAL (i.e. >=1 dated German education fact).
+MECHANISM, stated so the prediction is falsifiable and not a coin-flip: the KMK competence-
+framework update of 2026-10-16 is a REAL DATED EVENT that post-dates p373's draw. p373's draw
+ran before the event existed to retrieve; p374's ran 6 days after; mine runs 12 days after.
+If the mechanism is right, retrievability should be non-decreasing in time since the event.
+
+REFUTATION CONDITION, stated in advance: if draw 3 returns ZERO dated German education facts,
+the mechanism is refuted, NIL is modal at 2 of 3, and p373's cell 2 survives as "usually nil".
+EITHER WAY: n=3 is not a variance estimate. No frequency figure will be published.
+
+=== LEG B — the SURVIVING hypothesis, tested OUT OF SAMPLE (new cell, p375's own) ===
+p374's surviving account: "an English leg is productive wherever a CROSS-BORDER SPECIALIST PRESS
+CHANNEL covers that jurisdiction in the LANGUAGE OF THE QUERY."  p374 derived it partly from the
+accident that its one German fact arrived via actuia.com, a FRENCH-language aggregator.
+That account makes a sharp, untested prediction nobody has run:
+
+Cell F1: a FRENCH-language leg naming GERMANY + KMK.
+PREDICTION: PRODUCTIVE. If a French channel demonstrably carries KMK decisions, then French —
+a language Germany does not publish in — should outperform the English leg on the SAME
+jurisdiction and the SAME organ.
+REFUTATION CONDITION: if F1 is NIL while English (leg A) is productive, the "channel in the
+query's language" account is refuted, and the actuia.com hit was a single-outlet accident
+rather than a channel.
+This is the first cell on this base to vary LANGUAGE while holding JURISDICTION AND ORGAN fixed
+against a language the jurisdiction does NOT publish in.  Germany is the control-rich cell.
+
+=== LEG C — ACTION p374-G: France, ranked first by p374 among 14 unmeasured jurisdictions ===
+Cell F2: FRENCH leg naming FRANCE + its organ (Ministere de l'Education nationale / CNIL).
+No prediction registered: France has never been reached by a first-hand leg on this base, so
+there is no prior to agree or disagree with.  Published as a FIRST MEASUREMENT.
+
+=== STANDING CONSTRAINTS this pass accepts in advance ===
+- Any nil published must satisfy J2: name a jurisdiction (country or organ, never a region
+  label) AND have a sibling leg in another language for that same jurisdiction.
+- J3: no claim that a language is redundant unless both legs ran and returned the same fact class.
+- No star counts: api.github.com and github.com HTML are both 403 from this environment.
+- Every new address verified first-hand by ls-remote; every licence read from its payload.
+- The address census is re-derived AFTER every shelf write, never before (p352's rule).
