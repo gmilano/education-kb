@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p390` — **GITHUB TRENDING IS 403 FOR A NINTH PASS. THIS PASS STOPPED ASKING AND AUDITED THE SHELVES INSTEAD: 158 ADDRESSES, 145 LIVE, EVERY RECOMMENDATION DATED. 🔴 FOUR SHELVED FOUNDATIONS ARE PAST 1,300 DAYS AND ONE OF THEM IS THE LTI LIBRARY.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p390.tsv) — 158 addresses,
+145 live, 13 unreadable, every licence read from the payload at the **real default ref**, every live
+row dated. Full narrative and the new finds in [`agents/trending.md`](../agents/trending.md).
+
+### 🔴 The trending channel, ninth consecutive pass
+
+`https://github.com/trending` → **403** · `api.github.com/search/*` → **403** · `github.com` HTML →
+**403**. Re-probed this pass; unchanged. **There is still no readable popularity or trending page in
+this sandbox, and no row on these shelves carries a star count** except OpenMAIC's `~41.3k ★`, which
+`p389` read off a rendered page and which stays labelled as such.
+
+### 🟢 What replaced it this pass — the shelves themselves, ranked by staleness
+
+A trending page answers *what is new*. This pass answered the question the shelves actually needed:
+**what that we already recommend has stopped moving?** Every slug in `agents/top.md`,
+`repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md` — 138 distinct addresses —
+was dated, together with 18 new candidates from the prescribed search legs. **The staleness
+distribution across all 158 probed addresses:**
+
+| bucket | count | reading |
+|---|---|---|
+| **moved in the last 7 days** | **79** | 🟢 the healthy core — platforms, Jupyter stack, Open edX, Moodle, most MCP servers |
+| 8–30 days | 22 | 🟢 normal cadence for small single-maintainer projects |
+| 31–180 days | 21 | 🟡 watch; several are MCP servers whose upstream LMS APIs move faster than they do |
+| **181–999 days** | 16 | 🔴 verify before recommending |
+| **1,000+ days** | **7** | 🔴 listed in full below — **three are genuine problems, two are frozen benchmarks that should not move, two are superseded or wrong slugs** |
+| unreadable | 13 | 🔵 private or deleted — a clone cannot distinguish the two |
+
+🟢 **The headline is reassuring and worth stating plainly: 101 of 145 live addresses (70%) moved
+within the last 30 days.** This industry's open-source supply is not a graveyard. The corrections
+below matter because of *which* seven are stale, not because staleness is widespread.
+
+### 🔴 The 1,000-plus bucket, which is where the corrections are
+
+| repo | days since last commit | licence | was it carrying a recommendation? |
+|---|---|---|---|
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | **3,746** | 🔴 **no licence file at all** | yes — `repos/foundations.md`, `compose/patterns.md` |
+| [`PeerTube/PeerTube`](https://github.com/PeerTube/PeerTube) | **3,660** | GPL-3.0 | no — and it is the **wrong slug**; canonical is [`Chocobozzz/PeerTube`](https://github.com/Chocobozzz/PeerTube) (AGPL-3.0, **6 days**) |
+| [`apache/ofbiz`](https://github.com/apache/ofbiz) | **3,539** | Apache-2.0 | no — superseded by [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework), already corrected in `p384` |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | **2,332** | Apache-2.0 | 🔴 **yes — on three shelves, as "the copyleft firewall"** |
+| [`openai/grade-school-math`](https://github.com/openai/grade-school-math) | **1,797** | MIT | yes — **and this one is fine**: GSM8K is a frozen *benchmark dataset*; staleness is the point |
+| [`serlo/serlo.org`](https://github.com/serlo/serlo.org) | **1,351** | Apache-2.0 | 🔴 **yes — as the permissive EMEA-native platform base** |
+| [`hendrycks/test`](https://github.com/hendrycks/test) | **1,276** | MIT | yes — **also fine**: MMLU, a frozen benchmark |
+
+🔵 **The distinction that makes this table usable rather than alarming: a frozen benchmark and an
+abandoned library are both "stale" and only one is a problem.** GSM8K and MMLU *should* never change —
+a moving benchmark is a broken benchmark. A PHP library doing JWT signing, and a platform codebase,
+should. Staleness is only a defect relative to what the artefact is for, and any shelf that ranks by
+date alone will get this wrong in both directions.
+
+### 🟢 New permissive, actively-maintained repos added to the shelves this pass
+
+| repo | licence | dated | shelf |
+|---|---|---|---|
+| [`Simon-Initiative/oli-torus`](https://github.com/Simon-Initiative/oli-torus) | 🟢 **MIT** | **today** | `verticals/solutions.md` + `repos/foundations.md` — **CMU OLI courseware; the only *shippable* platform base here** |
+| [`livekit/agents`](https://github.com/livekit/agents) | 🟢 **Apache-2.0** | **today** | `repos/foundations.md` Tier 4 — realtime voice substrate (turn detection, barge-in) |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | 🟢 **MIT** | 15d | `agents/top.md` Tier 4 — pt-BR voice maths tutor, LATAM-native |
+| [`mozilla/common-voice`](https://github.com/mozilla/common-voice) | 🟡 MPL-2.0 code · 🟢 **CC0-1.0 corpora** | 1d | `repos/foundations.md` Tier 4 — ~130 language variants for ASR eval/fine-tune |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) · [`xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 **Apache-2.0** | **today** | `compose/patterns.md` `Pattern A` — the in-platform permissive boundary (see `Trend 16`) |
+
+🔵 **Slug note worth keeping:** `CMU-OpenLearning/oli-torus` does **not** resolve — the canonical
+owner is `Simon-Initiative`. Four other plausible slugs tried this pass and missed:
+`catalyst/moodle-tool_aiconnect`, `Moodle-An-Hochschulen/moodle-local_ai_manager`,
+`ILIAS-eLearning/ILIAS-Docker`, `edly-io/wizardai`. Recorded so the next pass does not re-spend the
+probes; an inferred slug is a guess until a clone returns a tree.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p389` — **GITHUB TRENDING IS 403 FOR AN EIGHTH PASS, BUT THE SIGNAL THIS SHELF ACTUALLY WANTED IS OPEN: `git` READ ACCESS DATES ANY PUBLIC REPO IN ~1.2 s. 🟢 60 ADDRESSES DATED; 48 OF 58 LIVE ONES MOVED INSIDE 30 DAYS; 7 ARE PAST 120 AND FOUR OF THOSE CARRIED A RECOMMENDATION.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv) — 60 addresses,
@@ -25,7 +95,7 @@ after pass, is a **maintenance** instrument: *is anyone still working on this?* 
 it was open the whole time.
 
 ```bash
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r   # ~1.2 s
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/&lt;owner&gt;/&lt;repo&gt; r   # ~1.2 s
 git -C r log -1 --format='%cI'        # last commit date at the real default ref
 ```
 
@@ -1534,10 +1604,10 @@ before recording a closure, which is exactly what **T27** was written for.
 | Transport | Verdict | What it returns |
 |---|---|---|
 | `git ls-remote --symref` (git CLI) | 🔴 **CLOSED** | credential prompt on any unattached repository |
-| 🟢 `curl https://github.com/OWNER/REPO/info/refs?service=git-upload-pack` | 🟢 **OPEN** | **the complete ref advertisement** — `symref=HEAD:refs/heads/*`, the `HEAD` sha, and **every** `refs/tags/*`. For `moodle/moodle`: 126 613 B, `main`, **591 tags** |
+| 🟢 `curl https://github.com/&lt;owner&gt;/&lt;repo&gt;/info/refs?service=git-upload-pack` | 🟢 **OPEN** | **the complete ref advertisement** — `symref=HEAD:refs/heads/*`, the `HEAD` sha, and **every** `refs/tags/*`. For `moodle/moodle`: 126 613 B, `main`, **591 tags** |
 | `curl https://raw.githubusercontent.com/...` | 🟢 **OPEN** | grant payloads, **and it accepts a TAG as the pin** — which is the only reason the version axis is measurable at all |
 | `curl https://api.github.com/*` | 🔴 403 | unchanged from `p363`, `p364` |
-| `curl https://github.com/OWNER/REPO` (HTML) | 🔴 403 | 🔵 **newly recorded:** the HTML host refuses `curl` while the smart-HTTP path on the **same host** answers 200 |
+| `curl https://github.com/&lt;owner&gt;/&lt;repo&gt;` (HTML) | 🔴 403 | 🔵 **newly recorded:** the HTML host refuses `curl` while the smart-HTTP path on the **same host** answers 200 |
 | `curl .../tags.atom`, `.../releases.atom` | 🔴 403 | the documented API-free tag feed is **not** a transport here |
 | 🟢 **WebFetch** on `github.com` HTML | 🟢 **OPEN** | a *different* transport to the host `curl` is refused by. Read `caccl`'s release page: *"Initial Version"*, `gabeabrams`, `d9c8cd2`, labelled **Latest** |
 | 🟢 **WebFetch** on `github.com/topics/*` | 🟢 **OPEN** | **the only star-count source found this pass** — 20 of 741 rows with stars, language and description |
@@ -10075,7 +10145,7 @@ p230   ([A-Za-z0-9][A-Za-z0-9_.-]*)(?=[)\s`,;:'"\]]|$)       GREEDY, terminator 
 🟢 **WORKING:** `raw.githubusercontent.com` `200` *(~`30` requests; every first-hand grant this pass came through it)* · `registry.npmjs.org` `200` · `pypi.org` `200`.
 🔴 **BLOCKED:** `api.github.com` `403` *(`19`th consecutive)* · `moodle.org` `000` · `unesco.org` `000` · `eur-lex.europa.eu` `000` · 🆕 🔴 **`github.com` HTML `403`.**
 
-🔴 **`github.com` going `403` removed the obvious instrument for this pass's headline.** A rename shows up as a `301` on `github.com/OWNER/REPO`; without it, a mirror pair cannot be resolved by asking GitHub. 🟢 **So it was resolved by asking the NAMESPACE: probe a fifth repository name under both owners and look for a path present in one and absent in the other.** 🔵 **`moodle-local_ai_injection` is `200` under `bycs-lp` and `404` under `mebis-lp`, which refutes a rename in either direction — see [`agents/top.md`](../agents/top.md) `T224-1`.**
+🔴 **`github.com` going `403` removed the obvious instrument for this pass's headline.** A rename shows up as a `301` on `github.com/&lt;owner&gt;/&lt;repo&gt;`; without it, a mirror pair cannot be resolved by asking GitHub. 🟢 **So it was resolved by asking the NAMESPACE: probe a fifth repository name under both owners and look for a path present in one and absent in the other.** 🔵 **`moodle-local_ai_injection` is `200` under `bycs-lp` and `404` under `mebis-lp`, which refutes a rename in either direction — see [`agents/top.md`](../agents/top.md) `T224-1`.**
 
 🟢 **That is the discriminator [`ACTION RY`](../intel/open-gaps.md) was registered as lacking.** 🟡 **It needs no API, no HTML and no authentication — only the raw host, which is the one host that works. `RY`'s `openedx` pair can now be decided the same way.**
 

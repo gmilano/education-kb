@@ -41,6 +41,15 @@ something you *integrate* — which is why `Pattern B` vendors `pybryt` and why 
      assignments, submissions, grading, rubrics, students; or the fork
      [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) (**MIT**) which adds office-hour
      appointment groups, syllabus read/write, student groups and course-content copy.
+   - 🆕 `p390` *Open edX:* skip the MCP hop and run **inside** the platform as an **XBlock** — and the licence maths
+     works out better than it looks. The platform is **AGPL-3.0**, but the component API your plugin imports,
+     [`openedx/XBlock`](https://github.com/openedx/XBlock), and the [`xblock-sdk`](https://github.com/openedx/xblock-sdk)
+     you develop against are both **Apache-2.0** (`LICENSE.TXT`, both dated 2026-10-22). **So the XBlock you write can stay
+     MIT or proprietary while running in an AGPL host** — no fork, no LTI hop, and full access to course state.
+     [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, Colombia) is the working proof.
+     🔴 **Check the boundary per package, not per org:** [`openedx/openedx-learning`](https://github.com/openedx/openedx-learning)
+     and the `frontend-app-*` MFEs are **AGPL-3.0**, so an import from those pulls network copyleft straight back in.
+     Keep the plugin's dependency list to `XBlock` plus your own code and audit it in CI.
    - 🟡 **Grant status, corrected:** the plugin repo
      [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) has **no
      root licence file**, but `version.php` carries the full **GPL-3.0-or-later** header Moodle
@@ -708,6 +717,66 @@ bring-your-own-agent, one-learner case; use `Pattern Q` whenever a client is the
 
 ---
 
+## Pattern V — 🆕 `p390` The spoken tutor, and the two things that make or break it
+
+**For:** learners who cannot or will not type their way through a lesson — early grades, low typing
+fluency, shared-device households, visually impaired learners, and language learning where
+*pronunciation is the skill being assessed*. This is also the pattern that reaches the LATAM and
+APAC households `Trend 10` describes, where the phone is the only device.
+
+**Why it is a separate pattern:** a voice tutor is not a text tutor with TTS bolted on. Two
+properties decide whether a child keeps talking to it, and neither is in the LLM:
+
+1. **Turn-taking.** The tutor must know when the learner has stopped speaking, tolerate a
+   four-second pause while a 9-year-old thinks, and **stop talking the moment it is interrupted**.
+2. **Latency budget.** Past roughly a second of silence the learner starts talking over it, and the
+   session degrades into collision recovery.
+
+**Wiring:**
+
+1. **Do not write the voice loop.** [`livekit/agents`](https://github.com/livekit/agents)
+   (🟢 **Apache-2.0**, dated 2026-10-22) is the substrate: full-duplex WebRTC transport, pluggable
+   STT/LLM/TTS, **turn detection, interruption and barge-in handling**. All three legs are
+   provider-swappable, which is what makes step 4 possible.
+2. **Start from the working reference.** [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent)
+   ("Manu", 🟢 **MIT**, dated 2026-10-07) is a pt-BR maths tutor on exactly that substrate, scaling
+   its explanation from 1st grade to university. 🔴 Its README says **"in development" with no public
+   deployment** — take the pipeline and the prompt-scaffolding, not a production claim.
+3. 🔴 **Put a symbolic checker behind any arithmetic.** Manu's correctness layer is the LLM itself.
+   For a maths tutor that is the one unacceptable gap: route every numeric or algebraic claim through
+   SymPy (or the client's own CAS) and have the agent *read back* the verified result. A spoken wrong
+   answer is harder for a learner to catch than a written one — there is no transcript to re-read.
+4. **Localise the ASR, not just the prompt.** Accent and dialect coverage is where regional voice
+   tutors fail. [`mozilla/common-voice`](https://github.com/mozilla/common-voice) ships **CC0-1.0**
+   corpora across ~130 language variants (pt-BR, es-419 variants, Hindi, Bengali, Kiswahili) — use
+   them to *evaluate* candidate ASR models on the client's actual learner population before picking
+   one, and to fine-tune where the gap is real. 🟢 CC0 means no attribution and no share-alike, so
+   this is safe in a commercial deliverable. 🟡 MPL-2.0 covers the **platform code**, not the corpora.
+5. **Keep the mastery model outside the voice path.** Voice is an I/O channel, not a pedagogy.
+   [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) (🟢 MIT, dated 2026-10-22) holds the Bayesian
+   Knowledge Tracing state so "what comes next" survives a dropped call and stays inspectable — which
+   is also what makes the decision auditable under step 6.
+6. 🔴 **Voice raises the compliance stakes, so settle three things before the pilot.**
+   - **Biometrics.** A voice recording is biometric data under GDPR Art. 9 and most LATAM regimes
+     (Brazil's LGPD included). Default to **transcribe-and-discard**, keep no audio unless the client
+     has a lawful basis and a retention policy, and write that down.
+   - **Emotion inference is prohibited in EU education** (AI Act, in force since 2 Feb 2025) — and
+     voice is the modality vendors are most tempted to infer affect from. Do not ship it in EMEA,
+     and strip it from any upstream SDK feature you enable.
+   - **Disclosure.** AI Act Art. 50 applies from **2 Aug 2026**: a synthetic voice must be
+     disclosed as synthetic. Say it in the first turn, in the learner's language, every session.
+7. **Measure it as a tutor, not as a demo.** Score the *transcripts* with
+   [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness)
+   (🟢 MIT) on the client's own item bank, and track interruption rate and mean response latency
+   alongside learning gain — a tutor that is pedagogically right and 1.5 s slow will still be
+   abandoned.
+
+**Licence position:** Apache-2.0 substrate + MIT reference + CC0 data + MIT mastery model — the whole
+chain is permissive, so this pattern can ship as a closed client deliverable with attribution only.
+
+**What this pattern does not solve:** there is **no granted, maintained open-source voice tutor for
+an African or South Asian language** on these shelves. See `Gap 390-A`.
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
@@ -866,7 +935,7 @@ narrative. Run it before any repo enters a client deliverable.
     🔵 **Three sub-rules:**
     **(a)** A manifest reading **`"SEE LICENSE IN LICENSE"` that points into an unreadable
     repository is not a grant** — it is a circular reference
-    ([ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit) is the live example).
+    — [ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit) is the worked example, and 🆕 `p390` re-confirmed its repository is **still unreadable**, so the circle is still closed.
     **(b)** Steps 1–10 clear a repository **by subtree**; when there is no readable subtree, *this*
     step is the only one available, and it can only ever yield 🟡 manifest-only or 🔴 ungranted —
     **never a clean clearance**.
@@ -883,7 +952,7 @@ one proves the address and its real ref, the other reads the grant itself.
 whole gate in ~1.2 s, from the payload, with no API and no credentials:
 
 ```bash
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/&lt;owner&gt;/&lt;repo&gt; r
 git -C r symbolic-ref --short HEAD    # the real default ref (step 1)
 git -C r ls-tree --name-only HEAD     # is there a LICENSE at all, and where (steps 2-3)
 git -C r show HEAD:LICENSE            # the grant text itself (step 4)

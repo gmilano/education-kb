@@ -50,6 +50,28 @@ North America is the largest region (Precedence). Broader edtech is an order of 
 an aggregator cites HolonIQ at **$404B in 2026 @16.3%**, but that page carries several
 unverifiable statistics, so treat the edtech total as directional only.
 
+### 🆕 `p390` Sizing by region — so a non-LATAM, non-US engagement can be sized at all
+
+Every figure above is global. The table below is the per-region 2026 split, which is what a studio
+actually needs to size an EMEA or APAC proposal. 🔴 **Read the caveat before quoting it.**
+
+| region | 2026 | 2030 | CAGR | corroboration |
+|---|---|---|---|---|
+| **North America** | **$3.68B** (36% share) | largest absolute gain (**+$8.0B** 2026→30) | ~30% | 🟢 **Strong.** Three houses independently make NA the largest region; Technavio puts it at **41.7% of global growth** over the forecast |
+| **APAC** | **$2.85B** | **~$9.7B** | **35.3%** | 🟢 **Directionally strong** — every source surveyed calls APAC the fastest-growing region; one outlier forecast claims 44.2% |
+| **EMEA (Europe)** | **$2.64B** | **~$8.0B** | **31.9%** | 🟡 **Single-source on the number**, consistent on the direction |
+| **LATAM** | **$0.67B** | — | — | 🟡 **Single-source.** ~6% of global spend against ~8% of world population — the under-indexed region, which is the opportunity in `Opportunities by region → LATAM` |
+| **MEA** | **$0.56B** | — | — | 🟡 **Single-source.** Gulf states are the demand centre (see `Trend 14`) |
+
+🔴 **Caveat, stated because the rows are quotable and three of them rest on one house.** The EMEA,
+LATAM and MEA figures all come from a **single aggregator (Resourcera)** and are **not corroborated**
+by a second source in this pass. The regional *ordering* (NA > APAC > EMEA > LATAM > MEA) and the
+*growth ranking* (APAC fastest, NA largest) **are** multiply corroborated and safe to present. The
+individual dollar figures are **planning inputs, not citable market facts** — and they sum to about
+**$10.4B**, which lands inside the global working range above, so they are at least internally
+consistent. Quote the share and the rank; quote the dollars only with the source named.
+
+
 ## The one number that should shape every pitch
 
 | measure | value | source |
@@ -144,6 +166,22 @@ returns market research.*
 **Market.** Largest single region for AI-in-education spend. Canvas dominates higher-ed LMS.
 
 **Regulation — state-by-state, and it moved fast in 2026.**
+
+🆕 `p390` **Canada and Mexico, because "North America" on these shelves has meant the US.**
+- 🇨🇦 **Canada has a strategy, not a statute.** The federal **"AI for All"** national strategy
+  launched **4 Jun 2026**, with a national **AI-literacy** commitment at its centre. There is still
+  **no federal AI Act** (AIDA died with the previous parliament) and **no confirmed date** for one,
+  so procurement is governed by **PIPEDA plus provincial privacy law** — and education is provincial,
+  so the binding requirements are per-province (BC, Ontario and Quebec differ materially; Quebec's
+  Law 25 is the strictest). 🟢 **Consequence for a studio:** an AI-literacy programme is the
+  fundable, politically-backed entry point in Canada right now, ahead of an assessment tool.
+  Pair it with the granted BC curriculum layer already on these shelves
+  ([`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server), MIT).
+- 🇲🇽 **Mexico: bills, no regulator.** Several AI bills are in play and **no enforcement body is
+  yet constituted**, so the operative constraints are the **LFPDPPP** (data protection) and SEP
+  curriculum rules. 🟡 Treat an unregulated market as a *timing* advantage with a **documented
+  governance posture anyway** — the rules will land mid-contract, and Chamilo's Spanish-language
+  public-sector footprint is the realistic base.
 - **134 bills across 31 states** on AI in education — 🆕 `p384` **attribution corrected**: that is
   **MultiState's** count (as of **Mar 2026**), *not* a figure both trackers share. **FutureEd**
   counts **~71 bills across 27 states**, and a third tracker **77 across 27**. 🔵 The spread is a

@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p390` — **THE FIRST FULL AUDIT OF THIS BASE'S OWN SHELVES: 158 ADDRESSES, EVERY RECOMMENDATION-CARRYING SLUG DATED. 🔴 THE LTI LIBRARY THREE SHELVES RECOMMEND HAS BEEN DEAD FOR 2,332 DAYS. 🟢 AND THE OPEN edX COPYLEFT FIREWALL TURNS OUT TO BE APACHE-2.0 INSIDE AN AGPL PLATFORM.**
+
+🔵 **Dating note.** Every clone, licence read and date below was taken on **2026-10-22**.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p390.tsv) — **158 addresses,
+145 live, 13 unreadable**, every licence read from the payload at the repository's **real default
+ref**, every live row dated.
+
+### 🔵 What was different about this pass
+
+`p389` proved `git` read access dates any public repository in ~1.2 s and dated **60** addresses with
+it. This pass pointed that instrument at **this base's own recommendations**: every GitHub slug
+carried in `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and
+`compose/patterns.md` — **138 distinct addresses** — plus 18 new candidates from the prescribed
+search legs. The previous passes measured the *supply*. This one measured **the shelves**, which is
+where a client engagement actually starts, and that is why four of the five findings below are
+corrections to this base rather than news about the industry.
+
+### 🔴 Finding 1 — The LTI integration path is abandoned, and it is recommended in three places
+
+[`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · Apache-2.0 ·
+**last commit `2020-06-03` — 2,332 days (6.4 years).**
+
+This is the most consequential result of the pass. LTI 1.3 is *the* standards surface for putting an
+agent inside Moodle, Canvas, Blackboard or D2L, and this base recommends this library as "the
+copyleft firewall" in `repos/foundations.md`, `verticals/solutions.md` **and** `compose/patterns.md`.
+
+🔵 **The nuance that keeps it on the shelf.** LTI 1.3 is a *frozen specification*, and a frozen
+reference implementation of a frozen spec is not automatically wrong — the architectural role is
+unchanged and still correct. 🔴 **But this library handles OAuth 2 / JWT signing and key rotation.**
+An unmaintained crypto path is a *security* dependency, not merely a compatibility one, and six years
+without a commit spans several JWT-library advisories. Corrected guidance, now on all three shelves:
+**vendor it, pin it, review the crypto yourself and budget for it — or drive LTI from the host
+platform's own current library** (Moodle and Open edX both ship one). Do not `composer require` it
+and call the integration done.
+
+### 🟢 Finding 2 — The Open edX copyleft firewall is Apache-2.0, inside an AGPL platform
+
+Read per-package from the payload, all four on **2026-10-22**:
+
+| package | role | licence |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | the platform you deploy | 🔴 **AGPL-3.0** |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | the component API a plugin imports | 🟢 **Apache-2.0** *(`LICENSE.TXT`)* |
+| [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | what you develop against | 🟢 **Apache-2.0** *(`LICENSE.TXT`)* |
+| [`openedx/openedx-learning`](https://github.com/openedx/openedx-learning) | newer core data layer | 🔴 **AGPL-3.0** |
+
+**An XBlock can be MIT or proprietary while running inside an AGPL host** — no fork, no LTI hop, and
+full access to course state. This is the licence explanation for something already on these shelves
+and previously unexplained: [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT,
+Universidad Tecnológica de Pereira, Colombia) ships as an Open edX plugin and is MIT.
+🔴 **The edge:** the boundary is per-package and **moving** — as functionality migrates into
+`openedx-learning` (AGPL-3.0), the permissive import set shrinks. Audit it in CI.
+🔵 Note both Apache grants sit at **`LICENSE.TXT`**, so a root-`LICENSE` or badge read misses them —
+`Pattern L` again.
+
+### 🟢 Finding 3 — Two genuinely new, permissive, actively-maintained projects were missing from every shelf here
+
+- **[`Simon-Initiative/oli-torus`](https://github.com/Simon-Initiative/oli-torus)** · 🟢 **MIT** ·
+  committed **today**. **Carnegie Mellon Open Learning Initiative's** courseware engine: authoring
+  and delivery, adaptive scripted activities, per-objective mastery reporting, LTI 1.3 delivery,
+  research-grade analytics. 🟢 **MIT courseware at this scale is rare** — Open edX is AGPL-3.0,
+  Canvas AGPL-3.0, Moodle GPL-3.0 — so this is the only base on these shelves a client can *ship*
+  rather than host. 🔴 **Slug trap:** `CMU-OpenLearning/oli-torus` does not resolve.
+  🟡 Elixir/Phoenix is a real staffing constraint; cost it before proposing it.
+- **[`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent)** ("Manu") · 🟢 **MIT** ·
+  **15 days**. **The first voice-first row on these shelves, and LATAM-native**: a spoken maths tutor
+  in **Brazilian Portuguese**, 1st grade → university, on [`livekit/agents`](https://github.com/livekit/agents)
+  (Apache-2.0). 🔴 README says *"in development"*, no public deployment, and **the maths-correctness
+  layer is the LLM itself** — take the voice pipeline, not a production claim. New **Tier 4** row and
+  🆕 `Pattern V`.
+
+### 🔴 Finding 4 — A wrong-slug trap that inverts the licence, not just the date
+
+| slug | status | licence |
+|---|---|---|
+| [`PeerTube/PeerTube`](https://github.com/PeerTube/PeerTube) | 🔴 stale mirror — **3,660 days** | **GPL-3.0** |
+| [`Chocobozzz/PeerTube`](https://github.com/Chocobozzz/PeerTube) | 🟢 canonical — **6 days** | **AGPL-3.0** |
+
+Both resolve. A licence read off the wrong one returns **the wrong grant for the project**, not
+merely a stale date — and GPL-3.0 vs AGPL-3.0 is exactly the distinction that decides whether a
+client can host it as a service. Same shape, date only, for
+[`apache/ofbiz`](https://github.com/apache/ofbiz) (**3,539 days**) vs
+[`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework). 🔵 **Generalised rule:** when
+two slugs resolve for one project name, **read the licence from both and prefer the one with
+commits**, because a fork can carry a different grant indefinitely.
+
+### 🟡 Finding 5 — Two dating caveats, so nobody demotes a healthy project off a bad read
+
+1. **Tag-shipping projects under-report.** [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms)
+   `master` last moved **2026-04-30 (175 days)**, but Canvas **ships from tags** — `v5.14.2` is
+   current. Check `git ls-remote --tags` before calling a project stale. Canvas is **not** demoted.
+2. **A failed clone cannot distinguish private from deleted.** The 13 non-live rows in this pass's
+   evidence are recorded as `DEAD-OR-PRIVATE` and **no row claims a repository was removed from
+   GitHub**. The five "published-but-unreadable" repositories `p388` recorded
+   ([`thanh01pmt/interactive-quiz-kit`](https://github.com/thanh01pmt/interactive-quiz-kit),
+   [`Mckaroff/GraphLMS`](https://github.com/Mckaroff/GraphLMS),
+   [`ale-alejandro/beadkit`](https://github.com/ale-alejandro/beadkit),
+   [`AI-Matrix-Engine/aidream`](https://github.com/AI-Matrix-Engine/aidream),
+   [`yokowasis/autograder`](https://github.com/yokowasis/autograder)) plus
+   [`santillana-ai/tutor-sdk`](https://github.com/santillana-ai/tutor-sdk) are **all still
+   unreadable** — status **confirmed, not new**. Nothing changed about them this pass.
+
+### 🟢 Corroboration — the OpenMAIC licence claim, now sourced on both sides
+
+`p389` read **MIT** from [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)'s payload and
+flagged that "a 2026 review states AGPL-3.0." This pass **located the contradicting sources**:
+**SourcePulse** publishes *"Licensed under GNU Affero General Public License v3.0 (AGPL-3.0) … for
+commercial licensing, contact thu_maic@tsinghua.edu.cn"*, and **AllClaw** calls it *"fully
+open-source (AGPL-3.0)."* Re-read first-hand today: `LICENSE` is **"MIT License, Copyright (c) 2026
+THU-MAIC"** and `package.json` declares `"license": "MIT"` — **two independent artefacts in the
+payload agreeing with each other and against both review sites.** 🔵 The AGPL claim would
+disqualify OpenMAIC from most commercial engagements, so this is the highest-stakes instance of
+`Pattern L` on these shelves: **read the payload, not the review site.**
+
+### 🔴 `Gap 390-A` — the voice gap outside Portuguese, stated rather than left as silence
+
+The searches for an open-source voice or multilingual tutor in an **African or South Asian language**
+returned **nothing granted and maintained**: one India-first multilingual *toolkit* (not a tutor), an
+arXiv framework for low-cost home language learning with **no public code located**, and a repository
+teaching *Spanish to non-speakers* — the inverse of a Spanish-language tutor, a category error this
+base first recorded in `p388` and which keeps recurring in search results. 🔵 **A null in the
+open-source supply, not a null in demand.** The substrate is permissive and ready
+(`livekit/agents` Apache-2.0, `mozilla/common-voice` **CC0-1.0** across ~130 language variants); the
+localised tutor does not exist and would be built. See `Trend 17`.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p389` — **THE MAINTENANCE SIGNAL WAS NEVER MISSING: `git` READ ACCESS IS OPEN, AND A 1.2-SECOND BLOBLESS CLONE DATES ANY PUBLIC REPOSITORY. 🟢 60 ADDRESSES DATED — AND IT TURNED UP THE LARGEST EDUCATION-NATIVE AGENT IN OPEN SOURCE, MISSING FROM EVERY SHELF HERE: OpenMAIC (MIT, TSINGHUA, ~41.3k ★).**
 
 🔵 **Dating note.** Every clone, licence read and date below was taken on **2026-10-22**.
@@ -19,7 +146,7 @@ the popularity channels to a conclusion about all channels.** They are different
 one that matters was open the whole time:
 
 ```bash
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r   # ~1.2 s
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/&lt;owner&gt;/&lt;repo&gt; r   # ~1.2 s
 git -C r symbolic-ref --short HEAD    # the REAL default ref
 git -C r log -1 --format='%H %cI'     # HEAD sha + LAST COMMIT DATE  ← the signal
 git -C r ls-tree --name-only HEAD     # the whole root tree
@@ -2178,10 +2305,10 @@ before recording a closure, which is exactly what **T27** was written for.
 | Transport | Verdict | What it returns |
 |---|---|---|
 | `git ls-remote --symref` (git CLI) | 🔴 **CLOSED** | credential prompt on any unattached repository |
-| 🟢 `curl https://github.com/OWNER/REPO/info/refs?service=git-upload-pack` | 🟢 **OPEN** | **the complete ref advertisement** — `symref=HEAD:refs/heads/*`, the `HEAD` sha, and **every** `refs/tags/*`. For `moodle/moodle`: 126 613 B, `main`, **591 tags** |
+| 🟢 `curl https://github.com/&lt;owner&gt;/&lt;repo&gt;/info/refs?service=git-upload-pack` | 🟢 **OPEN** | **the complete ref advertisement** — `symref=HEAD:refs/heads/*`, the `HEAD` sha, and **every** `refs/tags/*`. For `moodle/moodle`: 126 613 B, `main`, **591 tags** |
 | `curl https://raw.githubusercontent.com/...` | 🟢 **OPEN** | grant payloads, **and it accepts a TAG as the pin** — which is the only reason the version axis is measurable at all |
 | `curl https://api.github.com/*` | 🔴 403 | unchanged from `p363`, `p364` |
-| `curl https://github.com/OWNER/REPO` (HTML) | 🔴 403 | 🔵 **newly recorded:** the HTML host refuses `curl` while the smart-HTTP path on the **same host** answers 200 |
+| `curl https://github.com/&lt;owner&gt;/&lt;repo&gt;` (HTML) | 🔴 403 | 🔵 **newly recorded:** the HTML host refuses `curl` while the smart-HTTP path on the **same host** answers 200 |
 | `curl .../tags.atom`, `.../releases.atom` | 🔴 403 | the documented API-free tag feed is **not** a transport here |
 | 🟢 **WebFetch** on `github.com` HTML | 🟢 **OPEN** | a *different* transport to the host `curl` is refused by. Read `caccl`'s release page: *"Initial Version"*, `gabeabrams`, `d9c8cd2`, labelled **Latest** |
 | 🟢 **WebFetch** on `github.com/topics/*` | 🟢 **OPEN** | **the only star-count source found this pass** — 20 of 741 rows with stars, language and description |

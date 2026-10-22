@@ -15,50 +15,15 @@ updated: 2026-10-22
 > [`agents/trending.md`](../agents/trending.md); this shelf is now about the industry.
 
 
-## 🆕 `p387` — Date the artefact, not the repository: the signal this industry's open-source shelf has been missing
+## 🆕 `p390` — note on what was removed from this shelf
 
-**Every star channel in this sandbox is closed and has been for six passes. The package registries
-are open — and for a studio choosing a base they are the better instrument.** `registry.npmjs.org`
-and `pypi.org/pypi/<pkg>/json` return the published licence *and* the full publish history. Twenty-six
-education packages were read this pass ([`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv)),
-and the dates reorder the shelf in ways a star count never would:
-
-| what the dates showed | why it matters to an engagement |
-|---|---|
-| `brightspace-mcp-server` is at **v5.0.8, published 2026-10-22** | The D2L supply `p386` described as thin-but-granted is the **most actively published** LMS integration on these shelves. A v5 line is a maintained project, not a weekend demo. |
-| `canvas-mcp-server` (the 54-tool Canvas server) last shipped **2025-06-27** | The richest tool surface on the Canvas shelf is **~16 months stale**, while the maintained alternative shipped a month ago. Tool count and maintenance point in opposite directions, and only one of them survives a two-year support contract. |
-| `pybryt` last shipped **2022-04-28** | A pattern on [`compose/patterns.md`](../compose/patterns.md) depends on it. The design is still right; the dependency is not. **Vendor it.** |
-| `nitsuah/bb-mcp` has **no published release at all** | The one server this base called institution-grade is also the one with no installable artefact — and its security claims were already unexecuted (`Gap 386-B`). |
-| Four Blackboard addresses, **one** publication | The registry collapses a fork family mechanically — same answer `p386` got from licence bytes, by a second, independent route. |
-
-🔵 **The general trend, which is not about this sandbox.** Open-source education tooling is mostly
-sub-institutional: single-maintainer servers, student-session integrations, demo repositories. In
-that supply, *popularity* measures attention and *publication cadence* measures whether anyone will
-still be there in eighteen months. A studio is buying the second. **Rank on publish dates, licence
-and fit; treat stars as marketing.** 🔴 And one caution, learnt the hard way this pass: a manifest's
-package name is not proof of a publication — one shelf repository declares the npm name `class`,
-which belongs to an unrelated 2013 package. Always match the registry's `repository` field back to
-the slug (`Pattern L` step 14).
-
-## 🆕 `p387` — The LATAM supply gap was a reading gap too, and the same mistake caused it
-
-`Gap 386-C` recorded LATAM-native agent supply as a *"structural"* fourth consecutive null. It was
-not structural: it was **a null leg reported as a null supply** — the same error `p386` itself
-diagnosed when a *slug* census was quoted as a *grant* census. Three granted LATAM-built agents
-(Colombia, Brazil) sat in this base's own harvest history, unshelved, while the market shelf told
-readers the region had none. They are shelved now
-([`agents/top.md` Tier 4](../agents/top.md)),
-and the regional pattern is worth stating plainly for any region, not only LATAM:
-
-> **A search leg returning nothing is a fact about the leg. It becomes a fact about the world only
-> after a differently-phrased leg returns nothing either** — and in this case the phrasing that
-> worked was simply **the local language**: `agente de IA educação código aberto` and
-> `agente IA educativo open source`, not `AI education LATAM`.
-
-🟡 What *is* structurally short in the region is not agents but **tenancy, support and
-institution-grade packaging** — which is what a studio actually sells, so the correction improves
-the pitch rather than weakening it.
-
+Two `p387` sections that stood here (*"Date the artefact, not the repository"* and *"The LATAM
+supply gap was a reading gap too"*) were **measurement-apparatus notes, not industry trends** —
+exactly what `p383`'s rewrite note above says this shelf is not for. They are preserved verbatim in
+[`archive/2026-10-22-p390-pre-trim/intel-trends.md`](../archive/2026-10-22-p390-pre-trim/intel-trends.md)
+and their durable content lives where it belongs: the dating method in
+[`agents/top.md`](../agents/top.md) under *How these rows were verified*, and the LATAM supply in
+`Tier 4` of that same shelf. Nothing was lost; it was filed.
 
 ## 🆕 `p386` — The LMS-integration gap is not a licence gap any more. It is a **tenancy** gap.
 
@@ -495,3 +460,70 @@ client should be sold is the **consent and revocation mechanism itself** — per
 revocable, auditable — as a first-class feature, not a checkbox. 🟡 **Mexico: informed gap.** No
 education-specific AI guidance or student-data rule was found for Mexico in this pass; the general
 position is a data-protection regime and no AI statute. Stated, not inferred.
+
+## Trend 16 — 🆕 `p390` The copyleft firewall moved inside the platform, and it is a packaging decision rather than a licensing one
+
+For several passes this shelf framed "permissive agent + copyleft platform" as a problem solved at
+the **boundary**: hold the agent outside the LMS and talk to it over LTI or MCP, so no copyleft
+reaches your code. That is still a valid pattern, but `p390` found the cleaner answer was in the
+platforms' own packaging the whole time, and **nobody had read it per-package**:
+
+| package | role | licence |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | the platform you deploy | 🔴 **AGPL-3.0** |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | the component API your plugin imports | 🟢 **Apache-2.0** |
+| [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | what you develop against | 🟢 **Apache-2.0** |
+| [`openedx/openedx-learning`](https://github.com/openedx/openedx-learning) | newer core data layer | 🔴 **AGPL-3.0** |
+
+All four read from the payload at their real default ref on **2026-10-22**; the two Apache grants are
+at `LICENSE.TXT`, which is also why a badge-level or root-`LICENSE` read misses them.
+
+**Why this is a trend and not a trivium.** It means the in-platform plugin — the deepest, most
+useful integration, with full access to course state and no network hop — is **also** the one that
+can stay MIT or proprietary. The industry had been treating depth of integration and licence freedom
+as a trade-off, and for Open edX specifically they are not. [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA)
+(MIT, Universidad Tecnológica de Pereira) has been shipping on exactly this basis.
+
+🔴 **The trend has a sharp edge: the boundary is per-package, and it is moving.** `openedx-learning`
+is the newer core data layer and it is **AGPL-3.0**. As more platform functionality migrates there,
+the set of imports that keeps a plugin permissive **shrinks**. Audit the dependency list in CI, not
+once at kick-off. The general rule this generalises to: **licence is a property of the package you
+import, not of the organisation that publishes it** — and in education, where every major platform is
+copyleft, that distinction is worth real money.
+
+## Trend 17 — 🆕 `p390` Voice is the next interface gap, and the open-source supply has not arrived
+
+Across seven passes these shelves accumulated tutors, graders, LMS connectors, parent portals and a
+generated classroom. **Every one of them is text-first.** `p390` found exactly **one** granted
+voice-first education agent in the open-source supply — [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent)
+(MIT, Brazil, pt-BR, 15 days old, self-described as *"in development"* with no public deployment).
+
+**Why the gap matters commercially.** Voice is not a convenience feature in this industry; it is an
+access feature, and it maps onto precisely the markets with the fastest growth and the least supply:
+
+- **Early grades**, where reading and typing fluency is the thing being taught, not assumed.
+- **Shared-device and phone-only households** — the LATAM and APAC reality `Trend 10` documents.
+- **Language learning**, where pronunciation *is* the assessed skill and text cannot carry it.
+- **Accessibility**, which in EMEA public procurement is frequently a scored requirement rather
+  than a nice-to-have.
+
+**Why the gap is narrow rather than deep, which is the opportunity.** The hard parts are already
+permissive and maintained: [`livekit/agents`](https://github.com/livekit/agents) (Apache-2.0) solves
+turn detection, interruption and barge-in — the things that actually make a spoken tutor usable — and
+[`mozilla/common-voice`](https://github.com/mozilla/common-voice) supplies **CC0-1.0** speech corpora
+across ~130 language variants for ASR evaluation and fine-tuning. What is missing is not
+infrastructure; it is **an education-grade assembly of it** — mastery model in the loop, symbolic
+checking behind the arithmetic, and the biometric/disclosure posture a school can sign.
+🆕 `Pattern V` in [`compose/patterns.md`](../compose/patterns.md) is that assembly.
+
+🔴 **`Gap 390-A` — the informed gap, stated rather than left as silence.** The searches this pass ran
+for an open-source voice or multilingual tutor in an **African or South Asian language** returned
+**nothing granted and maintained**. What came back instead: one India-first multilingual *toolkit*
+(not a tutor), an arXiv framework for low-cost home language learning with **no public code located**,
+and a repository that teaches *Spanish to non-speakers* inside an agent CLI — which is the inverse of
+a Spanish-language tutor for Spanish-speaking learners, a category error this base recorded in `p388`
+and which keeps recurring in search results. 🔵 **Read this as a null result in the open-source
+supply, not a null in demand** — Africa is among the fastest-growing online-education markets. For a
+client engagement in those languages the honest position is: **the substrate is permissive and ready,
+the localised tutor does not exist and would be built, and Common Voice is where its evaluation set
+comes from.**

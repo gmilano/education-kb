@@ -6,121 +6,71 @@ updated: 2026-10-22
 
 # Top education AI agents
 
-**Pass `p383` · 2026-10-22 · FULL REWRITE.** Every row below was verified first-hand on this date
-(see *Verification method*). The previous version of this file is kept at
-[`archive/2026-10-22-p383-pre-rewrite/agents-top.md`](../archive/2026-10-22-p383-pre-rewrite/agents-top.md).
+**Pass `p390` · 2026-10-22.** The shelves below are the deliverable: real repositories, licences read
+from the payload, and a **last-commit date on every row**. This pass trimmed the ~120-line pass
+narrative that had grown back above the first table — a studio opening a client engagement should hit
+a usable shortlist in the first screen, not a journal about how the shortlist was measured. The
+trimmed text is kept verbatim at
+[`archive/2026-10-22-p390-pre-trim/agents-top.md`](../archive/2026-10-22-p390-pre-trim/agents-top.md);
+the method that survived it is one paragraph under *[How these rows were verified](#how-these-rows-were-verified)*,
+and the durable licence lesson is `Pattern L` in [`compose/patterns.md`](../compose/patterns.md).
 
-> **Why this file was rewritten.** Passes `p3xx` had turned this shelf into a journal about the
-> knowledge base's own measurement apparatus — licence-reading instruments, channel-yield rates,
-> pre-registered predictions — with a carried table of sub-1k-star hobby repositories. A studio
-> opening a client engagement could not read a usable agent shortlist out of it. This pass restores
-> the shelf to what it is for: **real agents, real licences, real descriptions, placed by region.**
-> The one genuinely reusable result of that apparatus — that a repository's licence badge does not
-> tell you what its payload grants — survives as `Pattern L` in
-> [`compose/patterns.md`](../compose/patterns.md), as a procurement gate rather than a narrative.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p390.tsv) — **158 addresses
+probed, 145 live, 13 unreadable**, every licence read from the payload at the repository's **real
+default ref**, every live row dated. This pass audited **every slug carried as a recommendation**
+across `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md`
+(138 distinct addresses), which is why the corrections below are about *this base's own shelves*
+rather than about the supply in general.
 
-**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.tsv) — 62 addresses,
-58 live, 4 dead, every licence read from the raw payload at the repository's **real default ref**.
+## What `p390` changes
 
-🆕 **Pass `p386` · 2026-10-22 — increment, and it overturns a recommendation on this shelf.** This pass
-went straight at the two platforms the *Supply census* below called empty: **Blackboard — "nine servers and
-not one verified grant"** — and **D2L — "six and the only one checked is ungranted."** Twenty-two addresses
-were probed first-hand. **Both claims are now false: 6 MIT grants on Blackboard and 6 on D2L**, read from
-the payload at each repository's real default ref.
-**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes, 19 live-granted,
-2 ungranted, 2 dead.
-🔵 **But the gap did not disappear — it moved**, and the new shape is the finding. See
-*[The Blackboard and D2L supply, measured](#the-blackboard-and-d2l-supply-measured)*.
+| # | finding | where it bites |
+|---|---|---|
+| 1 | 🔴 **The LTI integration path on three shelves is abandoned.** [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (Apache-2.0) last moved **2020-06-03 — 2,332 days**. LTI 1.3 is *the* standards surface for putting an agent inside Moodle, Canvas, Blackboard or D2L, and this base recommends it in `repos/foundations.md`, `verticals/solutions.md` **and** `compose/patterns.md`. | Treat as a **spec reference to vendor**, never a dependency to install. The grant is fine; the maintenance is not. |
+| 2 | 🟢 **The Open edX copyleft firewall is in the platform's own packaging, and it is better than the stale LTI route.** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) is **AGPL-3.0** — but the component API a plugin actually imports, [`openedx/XBlock`](https://github.com/openedx/XBlock), and its [`xblock-sdk`](https://github.com/openedx/xblock-sdk), are both **Apache-2.0** (read from `LICENSE.TXT`, both dated **2026-10-22**). So an XBlock can be **MIT or proprietary while running inside an AGPL platform**, with no LTI hop and no fork. 🔴 The boundary is per-package, not per-org: [`openedx/openedx-learning`](https://github.com/openedx/openedx-learning) and the frontend apps are **AGPL-3.0**, so importing those pulls copyleft back in. | This is the licence explanation for why [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, Tier 4) can ship as an Open edX plugin at all. Recorded in `Pattern A`. |
+| 3 | 🔴 **Two more shelved foundations are effectively abandoned.** [`serlo/serlo.org`](https://github.com/serlo/serlo.org) (Apache-2.0) → **1,351 days**; [`projectfedena/fedena`](https://github.com/projectfedena/fedena) → **3,746 days and no licence file at all**. | Both demoted in `repos/foundations.md`. |
+| 4 | 🔴 **A wrong-slug trap, and it inverts the licence.** [`PeerTube/PeerTube`](https://github.com/PeerTube/PeerTube) is a **3,660-day** stale mirror reading **GPL-3.0**; the canonical project is [`Chocobozzz/PeerTube`](https://github.com/Chocobozzz/PeerTube) — **AGPL-3.0, 6 days**. Same for [`apache/ofbiz`](https://github.com/apache/ofbiz) (**3,539 days**) vs [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework). | A slug that resolves is not a slug that is maintained, **and the two refs can carry different grants.** |
+| 5 | 🟢 **A permissive courseware platform was missing from every shelf here.** [`Simon-Initiative/oli-torus`](https://github.com/Simon-Initiative/oli-torus) — **MIT**, committed **today**: Carnegie Mellon's Open Learning Initiative courseware engine with adaptive activities and learning analytics. Note the slug: `CMU-OpenLearning/oli-torus` **does not resolve**. | New row in `verticals/solutions.md` and `repos/foundations.md`. MIT courseware is rare; almost everything at this scale is AGPL. |
+| 6 | 🟢 **A LATAM-native voice tutor, and it is the first voice-first row on these shelves.** [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) ("Manu") — **MIT, 15 days**, Brazilian-Portuguese spoken maths tutor on **LiveKit Agents**, 1st grade → university. | New **Tier 4** row below, and 🆕 `Pattern V` in [`compose/patterns.md`](../compose/patterns.md). |
+| 7 | 🟡 **A licence read corrected, in this base's favour.** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) has **no root licence file**, which reads as ungranted — but `docs/License.txt` carries the full **GPL-2.0** text. | Granted, copyleft. Recorded in `verticals/solutions.md`. The root tree is not the whole payload. |
+| 8 | 🔴 **The curriculum-taxonomy licence now has an exact SPDX pair, and it is worse than "a database licence."** [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) declares **`(ODbL-1.0 AND CC-BY-SA-4.0)`** in `package.json`, with a second `LICENSE-CONTENT` file. | **Share-alike on the content**: a curriculum derived from it inherits CC-BY-SA-4.0. That is a client-deliverable question, not an engineering one. |
+| 9 | 🟡 **`instructure/canvas-lms` `master` is 175 days stale — and that is not the signal.** Canvas ships from **tags** (`v5.14.2` is current). A last-commit date on the default ref under-reports any project that releases off tags. | Dating caveat recorded; Canvas is *not* demoted. |
+| 10 | 🟢 **`OpenMAIC` is MIT, and the AGPL claim in circulation is now sourced.** `p389` read MIT from the payload; this pass found the contradicting claim in the wild — **SourcePulse** and **AllClaw** both publish "AGPL-3.0, commercial licensing by contact." The payload `LICENSE` ("MIT License, Copyright (c) 2026 THU-MAIC") and `package.json` (`"license": "MIT"`) agree with each other and against them. | `Pattern L` holds: **read the payload, not the review site.** |
 
-🆕 **Pass `p387` · 2026-10-22 — increment, and it does two things `p386` could not.**
-**(1) It dates the shelf.** `github.com` and `api.github.com` are still **403**, so this base has
-published no maintenance signal at all — and a star count was never the right one. The **package
-registries are open**: `registry.npmjs.org` and `pypi.org/pypi/<pkg>/json` return the published
-grant *and* every publish date. Twenty-six packages were read: **three recommendations on this
-shelf change**, one of them a pattern dependency that has had no release since **April 2022**.
-**(2) It promotes the LATAM supply this base already held and never shelved.** `Gap 386-C` called
-LATAM-native agent supply a *"structural"* fourth consecutive null. The null was in that pass's
-search leg, not in the supply: **three granted LATAM-native agents** — Colombia and Brazil — were
-re-read first-hand today and are shelved below as **Tier 4**, where a studio can find them.
-**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — **15 addresses
-probed**: 12 granted reads over **11 distinct granted projects** (one mirror pair counts once) and
-3 ungranted, plus 1 inferred slug **refused rather than probed** ·
-[`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv) — **26 package reads**.
+🔵 **One honest non-finding.** The five "published-but-unreadable" repositories `p388` recorded
+([`thanh01pmt/interactive-quiz-kit`](https://github.com/thanh01pmt/interactive-quiz-kit),
+[`Mckaroff/GraphLMS`](https://github.com/Mckaroff/GraphLMS),
+[`ale-alejandro/beadkit`](https://github.com/ale-alejandro/beadkit),
+[`AI-Matrix-Engine/aidream`](https://github.com/AI-Matrix-Engine/aidream),
+[`yokowasis/autograder`](https://github.com/yokowasis/autograder)) plus
+[`santillana-ai/tutor-sdk`](https://github.com/santillana-ai/tutor-sdk) **are all still unreadable**
+— they are the 13 non-live rows in this pass's evidence, together with speculative slugs this pass
+tried and missed. A blobless clone cannot tell *private* from *deleted*, so these are recorded as
+`DEAD-OR-PRIVATE` and **no row claims they were removed from GitHub**. Nothing changed about them;
+the status is confirmed, not new.
 
-🆕 **Pass `p388` · 2026-10-22 — increment, and it adds a whole persona plus 22 granted addresses.**
-`p382` had recorded that this industry's **address supply was exhausted**. It was not: the supply was
-exhausted *in the channels this base was asking*. **`registry.npmjs.org/-/v1/search` is open and is a
-discovery channel** — 29 education queries returned **383 GitHub addresses that appear nowhere in this
-base**, of which **22 are granted and education-specific**. The most consequential results:
-**(1) 🟢 The parent/guardian is now a shelved persona** — three MIT servers, including **the first
-SIS-side parent portal** (Infinite Campus) on these shelves. New **Tier 5** below, and
-🆕 **`Pattern P`** in [`compose/patterns.md`](../compose/patterns.md).
-**(2) 🟢 The Canvas shelf is reordered** — a **187-tool MIT** server with a **FERPA mode**, published
-**today** across 87 npm versions, and a **209-tool MIT** student-side pair. `p387`'s "richest Canvas
-surface is 16 months stale" finding is now *actionable*, not just recorded.
-**(3) 🟢 `Pattern B`'s stale dependency has a maintained replacement** — `jupyter-ai-tutor` (BSD-3,
-QuantStack), which carries its tutor persona in a version-controlled `TUTOR.md`.
-**(4) 🔴 A major LATAM/Iberia publisher's tutor SDK is ungranted** — and the package a client would
-actually depend on declares **no licence at all** across **115 published versions**. See
-*[No licence file](#-no-licence-file--and-ungranted-is-three-different-things)*.
-**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p388.tsv) — **32 addresses
-probed**, 26 live, **22 granted**, 2 manifest-only, **6 published-but-unreadable** (the repository
-prompts for credentials while the npm package ships normally — a category this base could not name
-before `git ls-remote` was used to separate *private* from *absent*).
+## How these rows were verified
 
-🆕 **Pass `p389` · 2026-10-22 — increment, and it closes the gap `p387` and `p388` both named as unclosable.**
-**(1) 🟢 The maintenance signal exists.** Not through any popularity channel — those are still shut —
-but through **git read access, which is open to every public repository in this sandbox**. A
-`git clone --depth 1 --filter=blob:none --no-checkout` costs **~1.2 s** and returns the **real default
-ref**, the **HEAD SHA**, the **last commit date**, the root tree, and — via `git show HEAD:LICENSE` —
-the **licence text from the payload at that ref**. `p387` wrote that "this base has published no
-maintenance signal at all." That is now false. **Sixty addresses are dated in this pass**, in
-days since last commit, and the dating overturns four recommendations on these shelves.
-**(2) 🟢 The largest education-native agent in open source was missing from every shelf here** —
-**[OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)** (Tsinghua, **MIT**, ~41.3k ★ read off the
-repository page, committed **today**). It is not a tutor bolted to an LMS; it is a generated
-classroom with an AI teacher, teaching assistants and simulated classmates. See *Tier 1*.
-**(3) 🔴 And the licence claim in circulation about it is wrong.** A 2026 review states OpenMAIC is
-"**AGPL-3.0**, with commercial licensing available by contact" — which would disqualify it from most
-engagements. The payload says otherwise, and `package.json` agrees. See
-*[Two licence traps](#-two-licence-traps-that-a-badge-read-would-miss)*.
-**(4) 🔴 `Pattern B`'s and `Tier 1`'s stale dependencies now have *maintained*, MIT replacements** —
-`CAHLR/pyBKT` and `CAHLR/OATutor` (UC Berkeley), both moved **yesterday**, neither on any shelf here.
-**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv) — **60 addresses,
-58 live, 2 dead**, every licence read from the payload at the real default ref, **every row dated**.
-
-## 🔴 No star counts are published this pass, and that is deliberate
-
-Every popularity channel was closed in this sandbox: `api.github.com` → **403**,
-`github.com` HTML → **403**, `img.shields.io/github/stars` → blocked, `api.star-history.com` →
-blocked. The technology cycle (`v76`) had to publish a correction that earlier cycles' star counts
-were **pipeline-inflated** across several industries. Carrying forward unverifiable numbers would
-repeat exactly that error, so this shelf ranks by **what a studio can act on** — licence
-permissiveness, maintenance signal and fit — and states the gap instead of filling it.
-
-🆕 `p389` — **two corrections to the paragraph above.**
-
-🟢 **The maintenance half of that sentence is no longer a gap.** `p387` and `p388` both read "no
-maintenance signal," and that was a conclusion drawn from the *popularity* channels being closed.
-They are different channels. **`git` read access is open**, and one blobless shallow clone per
-repository publishes the signal that actually matters to a studio — *is anyone still working on
-this* — with no API, no HTML scrape and no star count involved:
+No popularity channel is readable in this sandbox — `api.github.com` → **403**, `github.com` HTML →
+**403** — so **no row here carries a star count**, with the single exception of OpenMAIC's `~41.3k ★`,
+which `p389` read off a rendered page and is labelled as such. Ranking is by what a studio can act
+on: licence permissiveness, maintenance date and fit. Dating and licence reads come from `git` read
+access, which **is** open to every public repository:
 
 ```bash
 # ~1.2 s per repository, no credentials, no API
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r
-git -C r symbolic-ref --short HEAD      # the REAL default ref
-git -C r log -1 --format='%H %cI'       # HEAD sha + last commit date  ← the signal
-git -C r ls-tree --name-only HEAD       # root tree: is there a LICENSE at all?
-git -C r show HEAD:LICENSE              # the GRANT, from the payload at that ref
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/&lt;owner&gt;/&lt;repo&gt; r
+git -C r symbolic-ref --short HEAD    # the REAL default ref — not always main/master
+git -C r log -1 --format='%H %cI'     # HEAD sha + last commit date  ← the maintenance signal
+git -C r ls-tree --name-only HEAD     # root tree: is there a LICENSE at all?
+git -C r show HEAD:LICENSE            # the GRANT, from the payload at that ref
+git -C r show HEAD:package.json       # the manifest, which must agree with it
 ```
 
-🔴 **One popularity number *is* readable and the gap statement overstated it.** `curl` to
-`github.com` returns **403**, but a **fetch-and-render of the repository page succeeds** and prints
-the star count. `api.github.com/search/*` and `api.github.com/repos/*` remain **403** ("sessions are
-bound to their configured repositories"), so there is **no way to rank or enumerate** — a count can
-be *confirmed for an address you already have*, never discovered. Two such counts appear in this
-pass, each attributed to that read. The ranking still does not use them.
+Two limits of that method, stated because they shape the rows: a **last-commit date under-reports
+tag-shipping projects** (finding 9), and a **failed clone cannot distinguish private from deleted**
+(the non-finding above).
+
 
 ## Tier 1 — Tutoring and instruction agents
 
@@ -174,6 +124,7 @@ constraint, and the prose in the repository is Spanish or Portuguese first.
 | **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main` | 🟢 **MIT** *(1,069 B, © 2026 Grupo Sirius)* | 🟢 **The one LATAM-native agent built as an LMS plugin rather than a standalone app.** Conversational tutor delivered **inside Open edX as an XBlock/plugin**, FastAPI backend, Claude API, TTS audio replies, animated avatar, **teacher statistics panel**, context persistence across sessions. Shipped for **rural higher education in Risaralda, Colombia**; first subjects Programación I (Python) and Introducción a la Matemática. Docker + Azure, GitHub Actions. 🟡 Read the licence boundary below before quoting it. | LATAM — Universidad Tecnológica de Pereira, Colombia |
 | **Agente BNCC para professores** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main` | 🟢 **MIT** *(1,074 B; `package.json` also declares MIT)* | 🟢 **Curriculum-grounded generation with the hallucination gate in the product, not the roadmap.** Lesson plans and exams-with-answer-keys anchored to official **BNCC** skill codes (Brazil's national curriculum): the model writes the prose, but every code and skill description comes from the official base and **an invented code is discarded before it reaches the teacher**. 1st year of Fundamental → 3rd year of Ensino Médio, cross-term skill selection, student/teacher PDF pairs, keyed **API v1** so a school's own systems call the same agent, Gemini or DeepSeek per request. Next.js 16 + TypeScript. | LATAM — Brazil |
 | **TechLead AI Tutor** | [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main` | 🟢 **MIT** *(1,069 B, © 2026 Thiago Silva)* | Programming and software-engineering tutor built to **refuse to hand over the code**: spec-driven planning before any line is written, and **the agent that teaches is not the agent that verifies** — mechanical sensors grade the build. The clearest open statement of anti-dependency tutoring design on these shelves. | LATAM — Universidade Federal do Agreste de Pernambuco (UFAPE), Brazil |
+| **Manu** 🆕 `p390` | [Jeanikt/tutor-ai-agent](https://github.com/Jeanikt/tutor-ai-agent) | `main` | 🟢 **MIT** | 🟢 **The first voice-first row on these shelves, and it is LATAM-native.** A spoken maths tutor in **Brazilian Portuguese** that re-pitches the same concept from 1st grade to university, built on **[LiveKit Agents](https://github.com/livekit/agents)** (Apache-2.0) in TypeScript — so the realtime STT → LLM → TTS pipeline, turn detection and interruption handling are an upstream dependency rather than this project's own code. 🟢 Voice matters more here than in English-first markets: it reaches learners with low typing fluency and the shared-device households that `Trend 10` describes, and it sidesteps the written-Portuguese barrier for early grades. 🔴 **Early — the README states "in development" with no public deployment**, and the maths-correctness layer is the LLM itself, with no symbolic checker. Dated **2026-10-07 (15 days)**. Take it as a **working reference for the voice pipeline**, not a deployable tutor; see 🆕 `Pattern V`. | LATAM — Brazil (pt-BR) |
 
 🟡 **The licence boundary on TutorIA, stated because a studio will hit it on day one.** The plugin's
 own grant is MIT and a studio can keep its changes closed. **Open edX itself is AGPL-3.0**, and
@@ -340,6 +291,9 @@ copyleft, no bespoke clause, every grant read first-hand at the repository's rea
 | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | `main` | MIT | 🆕 `p387` — Spanish-language tutor **inside Open edX**; the LATAM reference deployment |
 | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main` | MIT | 🆕 `p387` — BNCC-anchored teacher generation with a curriculum-code gate |
 | [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main` | MIT | 🆕 `p387` — tutoring that withholds the answer; author ≠ verifier |
+| [Jeanikt/tutor-ai-agent](https://github.com/Jeanikt/tutor-ai-agent) | `main` | MIT | 🆕 `p390` — **voice-first pt-BR maths tutor**; the reference for a spoken tutor |
+| [livekit/agents](https://github.com/livekit/agents) | `main` | Apache-2.0 | 🆕 `p390` — the **realtime voice substrate** (STT→LLM→TTS, turn detection) under any spoken tutor |
+| [Simon-Initiative/oli-torus](https://github.com/Simon-Initiative/oli-torus) | `master` | MIT | 🆕 `p390` — **permissive courseware engine** (CMU OLI) with adaptive activities + analytics |
 | [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli) | `main` | MIT | 🆕 `p387` — read-only Brightspace client written **for agents** (PyPI `d2l-cli` 0.3.0) |
 | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | `main` | MIT | 🆕 `p388` — **187-tool teacher/admin Canvas surface with a FERPA mode**; 87 releases, published 2026-10-22 |
 | [Fireiscoolsolo/canvas-lms-mcp-local](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local) | `main` | MIT | 🆕 `p388` — 209-tool **student-side** Canvas surface, opens no port |
