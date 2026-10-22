@@ -33,6 +33,18 @@ graded the same way: **CONVERGENT-SECONDARY, PRIMARY UNREAD**. 🟡 Two informed
 rather than papered over: **no Nigeria or South Africa** result in the Africa leg, and **no
 education-specific AI or student-data rule found for Mexico**.
 
+🆕 **Pass `p392` · 2026-10-22.** Two corrections and two additions, all four regionally placed. 🔴 The
+**EMEA** engagement-cost line `p391` added yesterday (*"budget a separate Node or PHP service in front
+of the Python agent"*) is **withdrawn** — `django-lti` (MIT, 2 days) puts LTI 1.3 in-process. 🟢
+**`Gap 391-B` is CLOSED for Brazil**: `Mcp-Brasil/mcp-brasil` serves **INEP Censo Escolar and ENEM**
+under an MIT *code* grant, keyless, which is the LATAM analogue of the US district-targeting
+instrument — and it was in this base's own harvest log when the gap was written. 🟢 **LATAM gains a
+procurement picture** from a replacement leg shaped like a buyer rather than a supplier: five live 2026
+tenders, **none specifying open source**. 🔴 The four prescribed English legs returned, for a third
+consecutive pass, nothing this base does not hold more precisely (`Gap 387-D`).
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p392.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p392.tsv).
+
 ## Market size — use the range, never a single figure
 
 The spread between reputable houses is roughly **1.7×** on the current year and far wider on the
@@ -585,10 +597,23 @@ versions) and [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackb
 **not** need to budget for vendoring and security-reviewing a six-year-stale JWT/key-rotation library
 — it needs a maintained dependency and an integration. See `Trend 19`.
 
-🔴 **What it does add to the budget:** there is **no maintained Python LTI library**
-([`pylti1.3`](https://github.com/dmitry-viskov/pylti1.3): 1,431 days, PyPI frozen at 2022-11-20), so
-the interop edge is a **separate Node or PHP service** in front of a Python agent. That is a real
-deployment component, not a library call — cost it explicitly (`Gap 391-A`).
+🔴 🆕 `p392` **And the line `p391` added to the budget here comes back out.** `p391` wrote: *"there is
+no maintained Python LTI library, so the interop edge is a separate Node or PHP service in front of a
+Python agent — a real deployment component, cost it explicitly."* **Withdrawn.**
+[`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) is 🟢 **MIT**
+(1,098 B, © The Regents of the University of Michigan), HEAD **2026-10-20 — 2 days**, PyPI
+**`django-lti` v0.10.1** (17 releases, 2026-08-07), **26 ★**, and it puts **LTI Advantage inside the
+Django process**: one installed app, one middleware, one migration.
+[`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (🟢 **BSD-3-Clause**,
+**73 ★**, HEAD 2026-07-01) does the same for a JupyterHub, which is what most EMEA CS and
+data-science teaching already runs. 🟢 **What this is worth to an EMEA proposal, concretely:** no
+second runtime to deploy, monitor, patch and explain to the client's security review — the edge
+becomes a dependency and an integration test. 🔴 The constraint that does survive is **framework
+shape, not language**: a FastAPI or Flask agent still handles the launch outside its own process, and
+[`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) — the best-maintained
+Python implementation of the three, HEAD **2026-10-22** — is **AGPL-3.0**, so it is a boundary to
+respect rather than a dependency to ship. `Gap 391-A` **CLOSED**; `Pattern A`, `Pattern B` and
+`Pattern N` updated.
 
 🔵 **Regulatory position unchanged this pass.** Four regional legs and a targeted EU Digital Omnibus
 leg returned nothing this base does not already hold more precisely. 🔴 And `eur-lex.europa.eu` is
@@ -1031,6 +1056,57 @@ was found this pass exposing them as a queryable, granted component, and `zenodo
 Recorded as `Gap 391-B`. 🔵 It is a **channel-and-supply** gap, not a claim that the data does not
 exist: a pass with working DNS to those hosts, or one that reads INEP/SEP portals directly, should
 re-test it rather than inherit this line.
+
+#### 🟢 🆕 `p392` — CLOSED for Brazil, 24 hours later, by a component this base already carried
+
+🔴 **It was a reading gap, not a supply gap, and the instrument built this pass is what found it.**
+The sentence above — *"nothing was found this pass exposing them as a queryable, granted component"* —
+was published while [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) sat in this
+base's own harvest log with a licence, a star count and a date against it.
+
+| | |
+|---|---|
+| **what it is** | An MCP server over **70 Brazilian public data sources** — 533 tools, 131 resources, **66 APIs needing no key** — with the large datasets cached locally and queried through embedded **DuckDB** |
+| **the education half** | **INEP `censo_escolar`** — the national school census, which is the per-school enrolment and infrastructure base a Brazilian pilot is scoped and priced against — and **INEP `enem`**, the national exam microdata |
+| **grant** | 🟡 **MIT, 1,072 B, code only** (© 2025-2026 MCP Brasil; `pyproject.toml` and the PyPI classifier agree). 🔴 The README is explicit that the grant covers **the code alone**: each of the 70 sources carries its own licence in `SOURCES.md`, under an `ACCEPTABLE_USE.md` policy |
+| **dates** | HEAD `2efb258` · **2026-08-18 — 65 days**; PyPI **`mcp-brasil` v0.14.0**, 18 releases, 2026-04-24 |
+| **LGPD posture** | 🟢 Documented, not assumed: `SOURCES.md` grades *Educação* **RISCO ALTO**, records INEP's **2022 withdrawal** of microdata under LGPD and its **2024 anonymised resumption**, states the bundled snapshot is **2023, post-LGPD**, and names a **code safeguard** — `COLUNAS_DISTINCT_PERMITIDAS` whitelists aggregate categories only (UF, sex, age band, race, school) and **excludes** `NU_INSCRICAO`, name and CPF |
+| 🔴 **limits to put in the proposal** | The data is a **2023 snapshot** — currency is the risk, not the licence; the project's own note is to *validate a sample to confirm anonymisation*; and it is **explicitly not an official government service**, so a ministry engagement cites INEP and uses this as the access layer |
+
+🟢 **What a Brazilian engagement can now do before the first meeting**, which is the whole point of
+the North American instrument this one answers: size the municipality or state network from the school
+census, locate the schools by infrastructure and enrolment band, and put a per-school number in the
+proposal — **keyless, MIT code, no procurement to read the data.**
+
+🔴 **Still open, and narrowed rather than closed:** there is no equivalent for **Mexico** (SEP), none
+for **EMEA**, none for **APAC**. `Gap 391-B` is **CLOSED for LATAM/Brazil** and **carried for the other
+three regions** — and its successor is a sharper question than the original: *who exposes a national
+education-statistics office as a granted, queryable component?* Brazil, now. Nobody else found yet.
+
+#### 🆕 `p392` LATAM is procuring AI education platforms right now, and not one tender asks for open source
+
+🔵 **The prescribed regional legs were replaced, as `Gap 387-D` asked.** A **public-procurement-shaped**
+leg in Spanish and Portuguese — the buyer's side rather than the supplier's — returned four live 2026
+instruments where three passes of stars-sorted English legs returned nothing:
+
+| buyer | instrument | what is being bought | 🔴 open source named? |
+|---|---|---|---|
+| **Santa Fe province, Argentina** — Ministry of Government and Public Innovation | Public Tender **01/26**, offers opened end of June 2026 | *Subscriptions* to AI-enhanced educational and corporate cloud platforms | **No** |
+| **OEI (Organization of Ibero-American States), Chile** | **OEI-LIC-1-25** | Design and build of an **AI platform for administrative management in Chilean schools** — regulatory, financial and operational data, with personalised compliance recommendations | **No** |
+| **UNOPS, Argentina** | **ITB/2026/62779**, closed 10 June 2026 | Long-term agreements for **educational platform software licences**, 2 years + 2×1 extensions | **No** |
+| **CIEDEPAR consortium, Paraná, Brazil** | registry-of-prices, opened 15 Sep 2026 | Multi-municipality **SaaS integrated education-management platform** | **No** |
+| **Francisco Morato (SP), Brazil** | opened 24 Jul 2026 | AI-supported education management, **R$1,924,665.00** | **No** |
+
+🔴 **The finding is the absence in the last column.** LATAM public buyers are buying **subscriptions
+and licences**, specified as products, while this knowledge base's entire thesis is permissive
+open-source assembly. 🟢 **Two things follow for a studio, and they are opposite in sign.** (1) The
+*competitive* opening is real: an open-source-assembled platform can be bid against subscription
+pricing with a total-cost argument the incumbents cannot match, and the OEI-Chile scope — administrative
+management over regulatory and financial data — is almost exactly the `i-educar` + agent shape on these
+shelves. (2) 🔴 But the *procurement* will not ask for it, so the open-source case has to be made inside
+a specification written for a product, which is a bid-writing problem before it is an engineering one.
+🟡 **Graded `ATTRIBUTED-UNVERIFIED`**: each tender is from an aggregator or a news item, and no official
+portal (COMPR.AR, ChileCompra, PNCP) is reachable from this sandbox to read the primary notice.
 
 🟢 **What has not changed:** `p387`'s replacement claim still stands — LATAM's shortage is not agents
 (Tier 4 shelves four LATAM-native ones) but **tenancy, support and institution-grade packaging**, which

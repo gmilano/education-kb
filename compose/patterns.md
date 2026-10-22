@@ -207,7 +207,7 @@ a small local model on the same device for the tutoring loop →
 retention is the one outcome measurable without a network →
 content authored in [H5P](https://github.com/h5p/h5p-php-library) — 🟡 **GPL-3.0, keep it as
 runtime content, not linked code** → periodic sync to the central LMS over
-[LTI 1.3](https://github.com/Cvmcosta/ltijs) (**Apache-2.0**) when a link is available. 🆕 `p391` **Use a maintained implementation:** `ltijs` (npm v7.0.7, 2026-10-06) for Node or `packbackbooks/lti-1p3-tool` (packagist v6.4.4, 2026-09-23) for PHP — **not** the standards-body copy `p390` cited, which is 2,333 days stale; and **not** `pylti1.3`, which is 1,431 days stale, so a Python agent sits behind a Node or PHP edge rather than speaking LTI itself.
+[LTI 1.3](https://github.com/Cvmcosta/ltijs) (**Apache-2.0**) when a link is available. 🆕 `p392` **Use a maintained implementation, and pick it by language — all three majors have one.** **Python:** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) (🟢 MIT, PyPI v0.10.1, HEAD 2026-10-20) **in-process** for a Django agent, or [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (🟢 BSD-3) for a JupyterHub. **Node:** `ltijs` (Apache-2.0, npm v7.0.7, 2026-10-06), or [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) (🟢 MIT, npm `@lti-tool/core` v1.3.2) when the target is **Lambda or Cloudflare Workers**. **PHP:** `packbackbooks/lti-1p3-tool` (Apache-2.0, packagist v6.4.4). 🔴 **Not** the standards-body copy `p390` cited (2,333 days stale) and **not** `pylti1.3` (1,431 days) — but `p391`'s conclusion from that second fact, *"a Python agent sits behind a Node or PHP edge rather than speaking LTI itself"*, is **withdrawn**: `Gap 391-A` is closed and the extra service comes out of the budget.
 
 **Why FSRS matters here:** it has published parameters, so "the student is retaining more" is a
 number you can defend to a ministry, offline, without telemetry.
@@ -861,10 +861,16 @@ even where the repository itself is not used.
 4. **Emit evidence, do not hoard it.** `lk-core`'s **xAPI builder** sends statements to the client's
    own LRS — [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) where one is needed — so the learning
    record stays the client's property and the tutor stays replaceable.
-5. **Launch it from the LMS over a maintained LTI edge.** [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs)
-   (🟢 **Apache-2.0**, npm v7.0.7) in front of the agent — see the `Pattern A` note and `Gap 391-A`:
-   the Python LTI library is 1,431 days stale, so the edge is Node or PHP regardless of what the agent
-   is written in.
+5. **Launch it from the LMS over a maintained LTI edge — in the agent's own language.** 🆕 `p392`
+   For a **Django** agent, [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+   (🟢 **MIT**, PyPI `django-lti` v0.10.1, HEAD **2026-10-20**): one installed app, one middleware,
+   one migration, **no second service**. For a **JupyterHub**,
+   [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (🟢 **BSD-3-Clause**).
+   For **Node**, [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (🟢 **Apache-2.0**, npm v7.0.7)
+   or [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) (🟢 **MIT**) if the deployment is
+   serverless. 🔴 `p391`'s *"the edge is Node or PHP regardless of what the agent is written in"* is
+   **withdrawn** — `Gap 391-A` is closed. The constraint that remains is a **licence** one: the
+   best-maintained Python implementation, `openedx/xblock-lti-consumer`, is **AGPL-3.0**.
 
 🔴 **What this pattern does not give you.** `dsh-diagnostic-tutor` is **v0.1.1 and early by its own
 account**: no PDF or document ingestion, no RAG, no flashcards, no analytics, and **a route never
@@ -1063,6 +1069,106 @@ decision with a maintenance line**, which is precisely the call this base made f
 reading a *registry* date; the clone reads it for any repository, published package or not. 🟡 Read
 the date against the artefact: a release branch can trail a default ref
 ([instructure/canvas-lms](https://github.com/instructure/canvas-lms), `master` **175 days** behind its
-moving `stable/*` branches), and a finished specification is not decaying. 🔴 And the limit: this
-channel gives no stars, forks or releases, and `api.github.com/search/*` stays **403**, so
-**discovery** remains web search and package registries. Only **verification** is first-hand.
+moving `stable/*` branches), and a finished specification is not decaying. 🔴 And the limit, **re-measured at `p392` and narrower than it was**: the `git` channel itself gives no
+stars, forks or releases — but `github.com/{owner}/{repo}` answers **200 via WebFetch** (403 via
+curl), so **stars, forks, commit counts and release tags are readable again**, and `api.github.com`
+answers **200** while refusing **by scope** rather than outright (`/search/*` is closed by design).
+**Discovery** remains web search and package registries; **verification** is first-hand; and
+**popularity** is back, per tool. See [`channel-state`](../evidence/channel-state.2026-10-22-p392.tsv).
+
+## Pattern Y — 🆕 `p392` Exam integrity the client can defend, without becoming a high-risk deployer
+
+**For:** a client — a university, a certification body, a bootcamp — who asks for proctoring, and
+whose actual requirement is *"we must be able to defend a result if it is challenged"*.
+
+🔴 **Read this first, because it is the whole pattern.** For four passes these shelves said proctoring
+had *"no credible permissive open-source option"*. That was wrong (`Gap 391-C`, closed this pass). But
+the granted supply covers **deterministic lockdown and event telemetry**, while the **inference**
+layer — identity matching, gaze, multi-face, behavioural scoring — is absent, roadmapped, or the
+proprietary service an AGPL workflow brokers (`Trend 20`). 🟢 **That asymmetry is a gift, not a
+shortfall:** the half you can build permissively is the half that is explainable in an appeal, and the
+half you cannot is the half that makes the client a **deployer of an Annex III high-risk system** with
+standalone obligations from **2 Dec 2027**.
+
+**Wiring:**
+1. **Signals in the browser, permissively.**
+   [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) (🟢 **MIT**, 1,069 B,
+   manifest agrees, HEAD **2026-09-28**, npm v0.5.1): tab-switch, right-click, DevTools shortcuts,
+   clipboard events, camera state, **faces**, audio loudness, and **virtual-camera / loopback /
+   screen-share detection**. Face detection is `@vladmandic/face-api` 1.7.15 on TF.js, **in the
+   browser**. 🔴 **Two things to change before a pilot:** self-host the model weights (it loads
+   face-api **and** its weights from jsDelivr by default — a supply-chain and data-residency defect in
+   any EU or public-sector deployment, and the README documents the self-hosted path), and read all
+   46 commits — this is **1 ★ and one maintainer**, so vendor it and own it.
+   🟡 *Alternative when you need lockdown rather than detection:*
+   [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) — 398 commits,
+   HEAD **2026-10-13** — blocks copy/paste/cut, right-click, selection and shortcuts and reports eight
+   named violation types. 🔴 Its grant is a **CONFLICT** (Apache-2.0 in the payload, `ISC` in
+   `package.json` and on npm): both readings are permissive, so it is usable, but get the two files
+   reconciled before a client depends on it. 🔴 And its AI features are marked *"(To be Done)"* — do
+   not quote them.
+2. **Keep the record, not the video.** Both components POST to an endpoint **you** build. Store the
+   **event trail** (what happened, when, on which element) and resist storing webcam frames: snapshots
+   are off by default in `proctoring.js`, and leaving them off is a defensible default, not a
+   limitation. Audio is analysed in memory and discarded — say so in the privacy notice.
+3. **Put the decision in a human's hands, in the workflow.** The attempt/review state machine already
+   exists: [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) (🔴 **AGPL-3.0**,
+   253 releases, `master` HEAD **2026-10-22** — re-read first-hand this pass) if the client runs Open edX — brokered over the platform boundary, not forked — or
+   [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit)'s (🟢 **MIT**)
+   **deferred grading** when you are building the assessment surface yourself. **No automatic
+   flagging decides anything**; a flagged attempt opens a review task.
+4. **Launch and report over LTI 1.3, in the agent's own language.**
+   [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) (🟢 MIT) for a
+   Django service, [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) (🟢 MIT) for a
+   serverless one — so the integrity result lands in the gradebook of record as an **LTI AGS score**
+   with a reviewable note attached, rather than in a side system nobody audits.
+5. **Write the Art. 50 and Annex III position down before you build.** Students are told, in advance,
+   which signals are collected and what a flag does; the review path and the appeal path are named; the
+   retention period is set. 🟢 This is cheap here **because** step 1 does no inference — the honest
+   disclosure is short.
+
+**Effort:** 4–6 weeks for steps 1–4 on an existing assessment surface; step 5 is a day of writing and
+the thing that gets the deployment approved.
+
+🔴 **What this pattern refuses to build, and tell the client why:** automated cheating *verdicts*,
+identity verification from a webcam, and gaze or emotion scoring. The permissive supply does not have
+them, the obligations land on the client rather than on us, and a flag that cannot be explained in an
+appeal is a liability dressed as a feature.
+
+## Pattern Z — 🆕 `p392` Size and price a Brazilian education engagement before the first meeting
+
+**For:** a LATAM pitch — a municipal or state network, a private group — where the honest answer to
+*"how big is this?"* has until now been *"we will need to scope it."* `Pattern W` does this for a US
+district; this is the Brazilian instrument, and it is the closure of `Gap 391-B` for one country.
+
+**Wiring:**
+1. **Install the access layer.** [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil)
+   (🟡 **MIT — code only**, 1,072 B; PyPI **`mcp-brasil` v0.14.0**, 18 releases; HEAD **2026-08-18**):
+   an MCP server over **70 Brazilian public sources**, 533 tools, **66 of them keyless**, with large
+   datasets cached locally and queried through embedded **DuckDB**. No procurement, no API key, no
+   vendor.
+2. **Query the school census.** `censo_escolar` (INEP) is the per-school base: network, enrolment,
+   infrastructure. Build the target list — how many schools, which bands, which municipalities — and
+   put a **per-school number** in the proposal instead of a range. `enem` adds outcome context where
+   the engagement is secondary-level.
+3. **Match it to the platform the client already runs.**
+   [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (🔴 GPL-2.0-or-later, real default
+   ref **`2.12`**) is the municipal SIS a Brazilian engagement actually meets;
+   [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (GPL-3.0) for Portuguese/Spanish
+   course delivery. Integrate **over the boundary** — web services or LTI 1.3 — so the copyleft stays
+   on their side of it (`Pattern A`).
+4. **Put the agent in Portuguese, from the shelf.** Tier 4 of [`agents/top.md`](../agents/top.md)
+   holds the LATAM-native, Portuguese-first granted agents; `Pattern O` is the full regional build.
+5. 🔴 **State the three limits in the proposal, in writing.** The bundled INEP data is a **2023
+   snapshot** — currency is the risk, not the licence; the project's own `SOURCES.md` asks you to
+   **validate a sample to confirm anonymisation**; and `mcp-brasil` is **not an official government
+   service**, so a ministry-facing document cites **INEP** as the source and this as the access path.
+   🟢 Its LGPD handling is genuinely documented: education is graded *RISCO ALTO*, the 2022 withdrawal
+   and 2024 anonymised resumption are recorded, and `COLUNAS_DISTINCT_PERMITIDAS` whitelists aggregate
+   columns only — no `NU_INSCRICAO`, name or CPF.
+
+**Effort:** 2–3 days to a priced, school-level proposal; the integration in step 3 is the engagement.
+
+🔴 **And know what you are walking into.** `Trend 21`: five live 2026 LATAM tenders, **none asking for
+open source** — they buy subscriptions and licences. This pattern makes the *total-cost* argument
+possible; it does not make the procurement ask for it.

@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 392 — 2026-10-22 — **THE INSTRUMENT `p391` RANKED FIRST IS BUILT, AND ITS FIRST RUN REFUTES ALL THREE GAPS `p391` OPENED EIGHT HOURS EARLIER. 🟢 THE STAR CHANNEL IS OPEN ON A SECOND TOOL, AND THE FIRST STAR READ OVERTURNS A SHELF SUPERLATIVE.**
+
+🔵 **Dating note.** Every clone, licence read, registry read, star read and date below was taken on
+**2026-10-22**. **Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p392.tsv) — 15
+addresses, 21 of the 23 slugs in this pass's diff re-probed live at commit time (the 2 that fail are
+the 2 published as `DEAD-OR-PRIVATE`) ·
+[`channel-state`](evidence/channel-state.2026-10-22-p392.tsv) — 24 channels measured **per tool** ·
+[`capability-absence-census`](evidence/capability-absence-census.2026-10-22-p392.txt) ·
+[the instrument](compose/code/p392-capability-absence/README.md), 15 controls, wired as
+`gate-capability-absence`.
+
+### 🟢 What this pass did
+
+1. **Built `Gap 391-D`'s remedy** with the predicate `p391` had itself corrected: an absence check
+   keyed on **capability**, not on string identity, so an absence written *"no maintained Python LTI
+   1.3 library"* meets a harvest row written *"`academic-innovation/django-lti` · MIT · LTI Advantage
+   · PyPI v0.10.1"* **although the two share no token**. 1,116 evidence-complete harvest rows, 17
+   capabilities, 356 absence sentences adjudicated.
+2. **Closed `Gap 391-A`** — three maintained Python LTI 1.3 implementations exist
+   ([`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) MIT, 2 days,
+   **in-process**; [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)
+   BSD-3; [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) AGPL-3.0,
+   committed today). `p391`'s *"the interop edge must be a separate Node or PHP service"* is withdrawn
+   from six places, including an **EMEA budget line**.
+3. **Closed `Gap 391-C`** — [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js)
+   (MIT, manifest agrees) and [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard)
+   (🔴 grant **CONFLICT**: Apache-2.0 payload vs `ISC` manifest and npm). The granted supply covers
+   **lockdown**, not **inference** — which is the inverse of where the regulatory exposure sits
+   (`Trend 20`, new `Pattern Y`).
+4. **Closed `Gap 391-B` for Brazil** — [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil)
+   (MIT **code only**) serves **INEP Censo Escolar and ENEM** among 70 sources, 66 keyless, with a
+   documented LGPD posture. New `Pattern Z`. Carried for Mexico, EMEA and APAC.
+5. **Re-opened the popularity channel.** `github.com/{o}/{r}` → **200 via WebFetch**, **403 via curl**;
+   `api.github.com` → **200**, authenticated, refusing **by scope** rather than outright. Four passes
+   had recorded both as 403. 🔴 First consequence: `agents/top.md`'s *"largest education-native
+   repository"* superlative is **retired** — **DeepTutor 42.2k ★ > OpenMAIC 41.3k ★**.
+6. **Replaced the prescribed regional legs** that `Gap 387-D` asked be rephrased: a
+   **procurement-shaped** leg in es/pt returned **five live 2026 LATAM tenders**, **none specifying
+   open source** (`Trend 21`).
+
+🔴 **And the gate failed on its own author's draft**, which found two more defects in it: quote
+detection ran per-segment while the segmenter cuts on `:`, so this pass's own *withdrawal* of `p391`'s
+claim read as a fresh absence; and a **struck-through retraction** read as a claim, which would have
+**punished the correction**. Both are controls now (11 → 15), and the two surviving candidates are
+**registered as `Gap 392-A` and `Gap 392-G` and written into an
+[adjudication ledger](compose/code/p392-capability-absence/adjudicated.2026-10-22-p392.tsv) with a
+reason** — a gate that fails on an adjudicated fact gets switched off; one that filters it silently
+hides the measurement.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 664** harvested shapes → **34** are not
+addresses → **2 630 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 630** channel-U
+addresses and **3 068** channel-B survivors give **3 448 addresses over both channels**.
+
+🟢 **The delta is +4 on channel U and +5 on channel B** — the seven granted addresses this pass
+shelved (`django-lti`, `ltiauthenticator`, `xblock-lti-consumer`, `lti-tool`, `proctoring.js`,
+`exam-guard`, `mcp-brasil`), less the ones this base's harvest history already carried, plus the
+alias and the two `DEAD-OR-PRIVATE` rows recorded beside them. 🔵 Stated because `p376`'s rule is that
+the union sentence is **standing**: re-derived every pass, never quoted from the last one.
+
+🟡 **Gate state at commit: `make hooks` 44/46.** The two red — `gate-fold-identity` and
+`gate-census-union` — were **red at `HEAD` before this pass wrote anything** (`Gap 391-F`, inherited,
+established by stashing and re-running at `HEAD`). 46 rather than 45 because this pass added a gate,
+and that gate is **green**.
+
+
 ## Pass 388 — 2026-10-22 — **THE SUPPLY WAS NEVER EXHAUSTED: `registry.npmjs.org/-/v1/search` IS AN OPEN *DISCOVERY* CHANNEL, AND IT HANDED OVER 22 GRANTED ADDRESSES PLUS A PERSONA THESE SHELVES NEVER HAD — THE PARENT. 🟢 THE CANVAS SHELF IS REORDERED BY A 187-TOOL MIT SERVER PUBLISHED TODAY, WITH A FERPA MODE. 🔴 AND A MAJOR PUBLISHER'S TUTOR SDK IS UNGRANTED ACROSS 115 VERSIONS.**
 
 🔵 **Dating note.** Every leg, probe, licence read and registry read below was run on **2026-10-22**.

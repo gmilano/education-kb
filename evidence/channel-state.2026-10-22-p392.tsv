@@ -1,0 +1,30 @@
+# p392 · 2026-10-22 · channel state, measured per TOOL (Gap 532: reachability is tool-scoped)
+# 🔴 THE HEADLINE: `api.github.com` is NOT 403 as p391 recorded for a fourth consecutive pass.
+#    It answers 200 with an authenticated 15,000/h allowance and refuses by SCOPE, naming the
+#    remedy; and `github.com` HTML is readable via WebFetch, so STAR COUNTS ARE OPEN AGAIN.
+host_or_path	tool	http	verdict	note
+api.github.com/rate_limit	curl	200	OPEN	authenticated, limit 15000, search allowance 30
+api.github.com/repos/{owner}/{repo}	curl	200-with-refusal-body	SCOPED	"GitHub access to this repository is not enabled for this session. Use add_repo" — attached repos only
+api.github.com/search/repositories	curl	refusal-body	CLOSED-BY-DESIGN	"sessions are bound to their configured repositories"
+github.com/{owner}/{repo}	WebFetch	200	OPEN	🟢 stars, forks, commit count, licence sidebar, release tag — the channel p391 recorded as 403
+github.com/{owner}/{repo}	curl	403	CLOSED	same URL, other tool — Gap 532 replicated a seventh time
+github.com/trending	curl	403	CLOSED	eleventh consecutive pass
+raw.githubusercontent.com	curl	200	OPEN	🟢 any public repo file without cloning — README, SOURCES.md, manifests
+git clone (https, blobless)	git	ok	OPEN	the dating and licence-payload channel; anonymous, every public repo
+registry.npmjs.org	curl	200	OPEN	package metadata and /-/v1/search
+registry.npmjs.org/-/v1/search	curl	200	OPEN	the p388/p391 discovery channel; yield still falling
+api.npmjs.org/downloads	curl	000	CLOSED	proxy CONNECT 403 — no download counts
+pypi.org/pypi/{pkg}/json	curl	200	OPEN	version, releases, upload date, licence classifier
+pypi.org/search	curl	200-bot-challenge	CLOSED	JavaScript "Client Challenge" page, 3,038 B — NO Python discovery channel exists here
+packagist.org/search.json	curl	200	OPEN	🆕 keyless discovery WITH a popularity signal (downloads, favers) — the only popularity channel that is not GitHub
+huggingface.co/api	curl	000	CLOSED	proxy CONNECT 403
+codeberg.org/api/v1	curl	000	CLOSED	proxy CONNECT 403 — non-GitHub forge supply still unreadable
+download.moodle.org/api	curl	000	CLOSED	the Moodle plugin directory, the largest LMS plugin index, unreachable
+moodle.org/plugins	curl	000	CLOSED	same
+export.arxiv.org/api	curl	DNS	CLOSED	Could not resolve host — research-deposited supply unreadable (Gap 387-C class)
+api.openalex.org	curl	000	CLOSED	proxy CONNECT 403
+zenodo.org/api	curl	000	CLOSED	Gap 387-C confirmed again
+libraries.io/api	curl	000	CLOSED	proxy CONNECT 403
+api.ossinsight.io	curl	000	CLOSED	proxy CONNECT 403
+gitlab.com/api/v4/projects	curl	500	CLOSED	answers but errors on search
+eur-lex.europa.eu	curl	-	CLOSED	Gap 391-E carried: the primary EU text has never been read by this base

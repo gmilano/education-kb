@@ -1,0 +1,281 @@
+── p392-capability-absence · capability-keyed absence check
+   harvest index: 1116 evidence-complete rows over 17 capabilities
+   absence sentences read: 356  NO-KEY=306  REFUTED-CANDIDATE=46  UNREFUTED=4
+
+   🔴 REFUTED-CANDIDATE  repos/foundations.md:123  key={python}
+      absence: **PyPI `pybryt` has had no release since v0.7.0 on 2022-04-28.** Keep it as the design it states, vendor the code, and do not sell a client a dependency that ha
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/market.md:1081  key={district-data, r:latam}
+      absence: 🔴 **Still open, and narrowed rather than closed:** there is no equivalent for **Mexico** (SEP), none
+      harvest: agents/trending.md:4435  - 🟢 **[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — MIT (1 072 B, read at pin), 1 817 ★, 301 forks, 246 commits, pushed 2026-10-20.** An
+      harvest: agents/trending.md:41106  | 🟢 **`dasgltd/mcp-brasil`** v0.14.0 | **MIT** ✅ (`LICENSE`, *«(c) 2025-2026 MCP Brasil»*) | **2026-08-18** (1,5 m, commit **humano**) · 246 commits · **23 tags
+      harvest: repos/trending.md:32  | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `main` · `2efb258` | **2026-08-18 — 65 d** | 🟡 **MIT — CODE ONLY**, 1,072 B (data: 70 pe
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:19  key={lti, python}
+      absence: no maintained Python LTI 1.3 library;
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:20  key={proctoring}
+      absence: no granted proctoring row, and proctoring is an Annex III surface
+      harvest: agents/trending.md:70  | [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.js
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:18102  | [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) | **MIT** | 10 | 2026-04-17 | 🆕 PHP; face tracking, tab-switch
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:21  key={district-data, r:north-america}
+      absence: the district-targeting instrument is North America only, no analogue anywhere else
+      harvest: agents/trending.md:4435  - 🟢 **[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — MIT (1 072 B, read at pin), 1 817 ★, 301 forks, 246 commits, pushed 2026-10-20.** An
+      harvest: agents/trending.md:11077  | 🟢 [`yetanalytics/*`](https://github.com/yetanalytics) — `11` repos | `Apache-2.0` | `1`–`71` | `2026-10-15/16` | 🟢 **an entire xAPI/learning-record stack push
+      harvest: agents/trending.md:11894  - [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) — 🟢 **`Apache-2.0`**, `2`★, `main` `579864c`, pushed `2026-10-13`. Electron + Lang
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:31  key={proctoring, r:apac}
+      absence: **A grant CONFLICT has no rung on the ladder a shelf can publish.** `Scaler-Opensource/exam-guard` reads **Apache-2.0** in its payload and **`ISC`** in `package
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: repos/trending.md:31  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — Apache-2.0 pa
+      harvest: repos/trending.md:31633  | `@genramzi/proctor` | **Apache-2.0** | 0.1.0 | `GenRamzi/Proctor` |
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:32  key={python}
+      absence: **There is no Python package DISCOVERY channel, and that is why `Gap 391-A` was invisible.** `pypi.org/search` serves a JavaScript bot-challenge page (3,038 B).
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:81  key={lti, python}
+      absence: there is no maintained Python LTI 1.3 library, and that is an architecture
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:91  key={district-data, r:north-america}
+      absence: the district-targeting instrument is North America only, and there is no analogue
+      harvest: agents/trending.md:4435  - 🟢 **[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — MIT (1 072 B, read at pin), 1 817 ★, 301 forks, 246 commits, pushed 2026-10-20.** An
+      harvest: agents/trending.md:11077  | 🟢 [`yetanalytics/*`](https://github.com/yetanalytics) — `11` repos | `Apache-2.0` | `1`–`71` | `2026-10-15/16` | 🟢 **an entire xAPI/learning-record stack push
+      harvest: agents/trending.md:11894  - [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) — 🟢 **`Apache-2.0`**, `2`★, `main` `579864c`, pushed `2026-10-13`. Electron + Lang
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:101  key={proctoring}
+      absence: there is no granted proctoring row, and proctoring is an Annex III high-risk
+      harvest: agents/trending.md:70  | [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.js
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:18102  | [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) | **MIT** | 10 | 2026-04-17 | 🆕 PHP; face tracking, tab-switch
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:2287  key={district-data}
+      absence: SEPARATED into two phenomena.** `sakai` + `opencast` are a **vocabulary gap** (`ECL-2.0`, which `lib/license_family.sh` reads correctly and `pass257` has no run
+      harvest: agents/trending.md:191  | [`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data) | `main` · `060371b` | 🟢 **MIT**, 1,069 B; `package.json` agrees | npm v
+      harvest: agents/trending.md:193  | [`SenmuuuuW/dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor) | `main` · `727ef90` | 🟢 **MIT**, 1,089 B; `package.json` agrees | npm v
+      harvest: agents/trending.md:610  | [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` · `971d58f` | `main/LICENSE` — 🟢 **MIT**, 1,067 B | `infinitecampus
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:4397  key={district-data}
+      absence: 🟢 **There is no threshold separating modified from unmodified**, so a byte count can neither confirm nor refute a grant.
+      harvest: agents/trending.md:191  | [`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data) | `main` · `060371b` | 🟢 **MIT**, 1,069 B; `package.json` agrees | npm v
+      harvest: agents/trending.md:193  | [`SenmuuuuW/dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor) | `main` · `727ef90` | 🟢 **MIT**, 1,089 B; `package.json` agrees | npm v
+      harvest: agents/trending.md:610  | [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` · `971d58f` | `main/LICENSE` — 🟢 **MIT**, 1,067 B | `infinitecampus
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:4653  key={lti}
+      absence: the 2025 **AI Promotion Act has no explicit penalties**), **ID
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:6232  key={php}
+      absence: 🟢 `packagist.org` → `200` is still the cheap channel to try first and has not been tried**
+      harvest: agents/trending.md:166  | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `master` · `66d8e4e` | **2026-10-16 — 6 days** | packagist `pack
+      harvest: agents/trending.md:5120  | [BlackyDrum/ai-tutor](https://github.com/BlackyDrum/ai-tutor) | 🔴 **MIT but two years silent** — 818 commits · 3 authors · last **2024-10-19**. Laravel/Vue/Po
+      harvest: agents/trending.md:12017  | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 *(`35 121` B)* | PHP school management. 🔴 **Default branch is the RELEASE branch `v31.0.00`*
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:7747  key={interop, r:apac}
+      absence: `edfi-oneroster` (`Apache-2.0`, `24` `GET`s, `0` writes), and no permissive row in this KB gives
+      harvest: agents/trending.md:11077  | 🟢 [`yetanalytics/*`](https://github.com/yetanalytics) — `11` repos | `Apache-2.0` | `1`–`71` | `2026-10-15/16` | 🟢 **an entire xAPI/learning-record stack push
+      harvest: agents/trending.md:11078  | 🟢 [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) *(carried)* | `Apache-2.0` | `12` | 🟢 **`2026-
+      harvest: agents/trending.md:12042  | [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) | 🟢 **Apache-2.0** | Ed-Fi / executable acceptance g
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:9015  key={lti}
+      absence: A multi-hour interval does not exist inside a `~40`–`60` min pass**
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:9037  key={lti}
+      absence: falsifier, because the falsifier was about a multi-hour count that still has not been taken.**
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:9100  key={interop}
+      absence: `openedx/openedx-oneroster` does not exist.
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:9313  key={interop}
+      absence: 🟢 **xAPI PRESENT (`78` paths) where OpenOLAT has none**;
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:9348  key={lti}
+      absence: 🆕 🔴 **No permissive platform on this shelf has BOTH tenancy and LTI**
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:9365  key={lti}
+      absence: 🔴 *Refuted if `edx-platform` has NO multi-tenancy*
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:10765  key={interop}
+      absence: - 🔴 **Caliper Analytics still has no supply**
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:10833  key={interop}
+      absence: *"the most-used SCORM library in the world has no licence … there is no right to
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:10868  key={interop}
+      absence: - 🔴 **Caliper Analytics still has no supply.** Not re-probed this pass;
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:10981  key={interop}
+      absence: - 🔴 **Caliper Analytics has no supply at all.** One repository, **0★**, no licence file, last
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:10995  key={python}
+      absence: - 🔴 **No permissive Python library for Open Badges.** Both Python rows are copyleft (LGPL-2.1,
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:11003  key={interop}
+      absence: **measure the dependency closure of `pipwerks/scorm-api-wrapper`.** It has no
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:11109  key={proctoring}
+      absence: no permissive proctoring project with an institutional owner.** 🟢 **SURVIVES**
+      harvest: agents/trending.md:70  | [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.js
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:18102  | [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) | **MIT** | 10 | 2026-04-17 | 🆕 PHP; face tracking, tab-switch
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:11227  key={proctoring}
+      absence: **No permissive proctoring project with an institutional owner**
+      harvest: agents/trending.md:70  | [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.js
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:18102  | [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) | **MIT** | 10 | 2026-04-17 | 🆕 PHP; face tracking, tab-switch
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:14911  key={node}
+      absence: 🔴 **`CyanXLab/Phonos` has NO licence payload** across 24 filenames at `main` · `8a13a3b7611a3d`.
+      harvest: agents/trending.md:70  | [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.js
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:167  | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `master` · `41f150c` | **2026-10-13 — 9 days** | npm `ltijs` **v7.0.7**, 207 versions, **2026-10-06** 
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15227  key={sen}
+      absence: 🔴 **And the most capable row is ungranted:** `qed42/ai-accessibility-checker` is **published as MIT and has no payload in 24 names**.
+      harvest: agents/trending.md:634  | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | `main` · `34e6156` | 🟢 **MIT**, 1,070 B | `canvas-lms-mcp` **v2.9.0 — 87 versions, 202
+      harvest: repos/trending.md:3269  **9,598 commits · 180 distinct authors · 1,020 commits in 2026 · 2,121 published npm versions · head 2026-10-19 · `d2l.com` on 2,748 commits.** 🟢 **Apache-2.0, 
+      harvest: repos/trending.md:8802  🟢 **CENIA, the centre behind it, is NOT cold** — [`CENIA-DEV/MVP-AIEP`](https://github.com/CENIA-DEV/MVP-AIEP) *(`MIT`, `2026-08-04`)* and [`CENIA-DEV/multiling
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15240  key={sen}
+      absence: 🔴 **This KB published for five passes that no permissive AI accessibility checker in education existed.**
+      harvest: agents/trending.md:634  | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | `main` · `34e6156` | 🟢 **MIT**, 1,070 B | `canvas-lms-mcp` **v2.9.0 — 87 versions, 202
+      harvest: repos/trending.md:3269  **9,598 commits · 180 distinct authors · 1,020 commits in 2026 · 2,121 published npm versions · head 2026-10-19 · `d2l.com` on 2,748 commits.** 🟢 **Apache-2.0, 
+      harvest: repos/trending.md:8802  🟢 **CENIA, the centre behind it, is NOT cold** — [`CENIA-DEV/MVP-AIEP`](https://github.com/CENIA-DEV/MVP-AIEP) *(`MIT`, `2026-08-04`)* and [`CENIA-DEV/multiling
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15316  key={district-data, r:apac}
+      absence: primary-school AI literacy has no permissive curriculum.** 🟢 Four jurisdictions now MANDATE AI instruction (China ≥ 8 h/year from age six since Sep 2025;
+      harvest: agents/trending.md:11077  | 🟢 [`yetanalytics/*`](https://github.com/yetanalytics) — `11` repos | `Apache-2.0` | `1`–`71` | `2026-10-15/16` | 🟢 **an entire xAPI/learning-record stack push
+      harvest: agents/trending.md:11894  - [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) — 🟢 **`Apache-2.0`**, `2`★, `main` `579864c`, pushed `2026-10-13`. Electron + Lang
+      harvest: agents/trending.md:32856  | 🆕 **RegRails** | https://github.com/Polycentric-Labs/regrails | **Apache-2.0**, `main/LICENSE` **11.282 B**, `sha256:7269084894a7`, `Copyright 2026 Allen Byrd
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15538  key={interop, lti}
+      absence: a tag whose term has no use outside education.** 🟢 **Costed candidates, none opened:** `topics/learning-analytics`, `topics/nbgrader`, `topics/lti`, `topics/sco
+      harvest: agents/trending.md:41360  `Ed-Fi-Alliance-OSS/edfi-oneroster` — **Apache-2.0**, Node.js, 6 ★, **86 tags**, último **v1.0.2**, `HEAD`
+      harvest: repos/trending.md:9105  🔴 **The mutilation dropped everything from the DOT onward and CASE-FOLDED the remainder.** Both are visible in one row: `Questgen.ai` → `questgen`. 🟢 **`6` of `
+      harvest: repos/trending.md:13937  | 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 🔴 **`master`** | `3368a6b` | 🟢 **2026-10-12** | 🟢 **`0` days — committe
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15783  key={lti}
+      absence: this pass can.** 🔴 Still no permissive AI-grading component with an LTI 1.3 + AGS seam.
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15875  key={lti}
+      absence: NOT closed, and this pass sharpens what remains.** 🔴 No permissive AI-grading component acquired an LTI 1.3 + AGS seam;
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:15964  key={lti}
+      absence: no permissive component acquired an LTI 1.3 + AGS seam this pass, and the discovery battery that would have found one is measured saturated (`agents/top.md`).
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16128  key={node}
+      absence: The SDK that holds it is permissive and has no source.** Read from the npm registry, latest tags:
+      harvest: agents/trending.md:70  | [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.js
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:167  | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `master` · `41f150c` | **2026-10-13 — 9 days** | npm `ltijs` **v7.0.7**, 207 versions, **2026-10-06** 
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16142  key={lti}
+      absence: 🟢 **For six passes this shelf has held that no permissive component holds LTI 1.3 + AGS *because the protocol holders are closed products* (Gradescope, Turnitin
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16318  key={lti, r:apac}
+      absence: 🔴 **No permissive component holds the protocol.** 🟢 **The seam this shelf has named for five passes is still one protocol hop wide, and `ltijs` (Apache-2.0, `0e
+      harvest: agents/trending.md:71  | [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is 
+      harvest: agents/trending.md:166  | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `master` · `66d8e4e` | **2026-10-16 — 6 days** | packagist `pack
+      harvest: agents/trending.md:167  | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `master` · `41f150c` | **2026-10-13 — 9 days** | npm `ltijs` **v7.0.7**, 207 versions, **2026-10-06** 
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16451  key={interop}
+      absence: Ed-Fi DMS is the only permissive system of record and has no OneRoster and no change feed;
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16481  key={lti}
+      absence: 🔴 **What survives of pass 69's capture thesis, and it survives intact:** the six closed vendors (EduGears AI, LearnWise, ibl.ai, campusmind.ai, Asyntai, edusage
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16648  key={lti}
+      absence: 🟢 **So the shelf's only permissive system-of-record substrate has no rostering standard and no change feed.** 🟢 **Remedy (iii) is now the measured-best call, no
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16694  key={interop}
+      absence: 🔴 but `docs/PRD-v8.1.md` lists **OneRoster rostering integration** as absent from Ed-Fi DMS v8.0, and the six-system SIS census found **no permissive SIS at all
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:16694  key={interop}
+      absence: 🔵 **So there is no permissive OneRoster *provider* on this shelf
+      harvest: agents/trending.md:192  | [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif
+      harvest: agents/trending.md:692  | [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | `@thanh01.pmt/interactive-quiz-kit` **v1.4.10, 103 versions**, 2025-06
+      harvest: agents/trending.md:4366  | [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-
+
+   🔴 REFUTED-CANDIDATE  intel/open-gaps.md:18274  key={lti}
+      absence: 🔴 **There is no permissive multi-agent *scoring*
+      harvest: agents/trending.md:34  *"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+      harvest: agents/trending.md:41  | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The 
+      harvest: agents/trending.md:42  | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 201
+
+   (census — never fails)

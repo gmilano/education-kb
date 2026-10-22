@@ -14,6 +14,15 @@ All addresses and licences verified first-hand on this date —
 below: Blackboard and D2L both have verified MIT servers now.
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv).
 
+🆕 **Pass `p392` · 2026-10-22.** Two of this shelf's sentences are **withdrawn and replaced**, both
+of them absences this base held the refutation for in its own harvest log: the **interop boundary**
+row (Python LTI 1.3 is in-process after all — `django-lti`, MIT, 2 days) and the **proctoring**
+bullet at the end (two granted components, one clean). Both were found by the instrument built this
+pass — [`gate-capability-absence`](../compose/code/p392-capability-absence/README.md) — rather than by
+accident, which is the first time that is true of this error class.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p392.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p392.tsv).
+
 This shelf answers one question: **what existing system does the client already run (or could run),
 and what can be bolted onto it?** Same role Odoo plays for ERP or OpenMRS for healthcare.
 
@@ -129,7 +138,7 @@ stack fits the region's SME school market.
 | Lecture capture | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 ECL-2.0 | Video pipeline → the transcript corpus every education RAG build needs. |
 | 🆕 `p390` Self-hosted video delivery | [Chocobozzz/PeerTube](https://github.com/Chocobozzz/PeerTube) | 🔴 **AGPL-3.0** | Federated (ActivityPub) video hosting — the option when lecture video must stay off YouTube and off a hyperscaler, which is a recurring EMEA public-sector requirement. 🔴 **Network copyleft: hosting it as a service for the client triggers source obligations** — fine for a public institution, usually not for a commercial product. Dated **2026-10-16**. 🔴 **A wrong-slug trap worth naming, because it inverts the licence:** [`PeerTube/PeerTube`](https://github.com/PeerTube/PeerTube) also resolves, is **3,660 days stale**, and reads **GPL-3.0** — so a careless licence read off that slug gets the *wrong grant* for the project, not merely a stale one. The canonical owner is `Chocobozzz`. |
 | Live classroom | [netless-io/flat](https://github.com/netless-io/flat) | 🟢 MIT | Whiteboard, recording, real-time session. |
-| Interop boundary | 🆕 `p391` [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) (Node) · [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) (PHP) | 🟢 **Apache-2.0** both | **The copyleft firewall, and it is maintained after all.** 🔴 `p390` dated the standards-body reference copy at 2,332 days and concluded the boundary had no installable implementation; that was wrong. **`ltijs`** — npm v7.0.7, **207 versions, published 2026-10-06**, HEAD 2026-10-13 — and **`packbackbooks/lti-1p3-tool`** — packagist v6.4.4, **68 versions, published 2026-09-23**, HEAD 2026-10-16 — are both live, both Apache-2.0, and either one keeps permissive code the right side of a GPL/AGPL platform boundary without linking to it. Prefer **`ltijs`** unless the client's platform work is already PHP. 🔴 Cite [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) as the **spec reference only** — 2,333 days, and `IMSGlobal/lti-1-3-php-library` is the same project at a renamed org (identical HEAD `3a192de`). 🔴 There is **no maintained Python LTI library**, so the edge is Node or PHP in front of a Python agent. Full note in [`repos/foundations.md`](../repos/foundations.md). |
+| Interop boundary | 🆕 `p392` [academic-innovation/django-lti](https://github.com/academic-innovation/django-lti) (**Python**) · [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) (Node) · [lti-tool/lti-tool](https://github.com/lti-tool/lti-tool) (Node, **serverless**) · [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) (PHP) | 🟢 **MIT / Apache-2.0 / MIT / Apache-2.0** | **The copyleft firewall, and as of `p392` it is maintained in THREE languages including Python.** 🆕 `p392` `django-lti` (🟢 MIT, 1,098 B, HEAD **2026-10-20**, PyPI v0.10.1) puts LTI Advantage **inside** a Django agent — one middleware, no second runtime — so `p391`'s *"the edge must be Node or PHP in front of the agent"* is withdrawn; `lti-tool/lti-tool` (🟢 MIT, HEAD **2026-10-20**, npm `@lti-tool/core` v1.3.2) is the **serverless** Node option for Lambda / Cloudflare Workers, where `ltijs` assumes a long-running process with Mongo. 🔴 `p390` dated the standards-body reference copy at 2,332 days and concluded the boundary had no installable implementation; that was wrong. **`ltijs`** — npm v7.0.7, **207 versions, published 2026-10-06**, HEAD 2026-10-13 — and **`packbackbooks/lti-1p3-tool`** — packagist v6.4.4, **68 versions, published 2026-09-23**, HEAD 2026-10-16 — are both live, both Apache-2.0, and either one keeps permissive code the right side of a GPL/AGPL platform boundary without linking to it. Prefer **`ltijs`** unless the client's platform work is already PHP. 🔴 Cite [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) as the **spec reference only** — 2,333 days, and `IMSGlobal/lti-1-3-php-library` is the same project at a renamed org (identical HEAD `3a192de`). 🔴 There is **no maintained Python LTI library**, so the edge is Node or PHP in front of a Python agent. Full note in [`repos/foundations.md`](../repos/foundations.md). |
 | Local-first tutoring workspace | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | 🆕 `p386`. Self-hosted, block-based adaptive workspace: PDF in → notes, flashcards, quizzes and an adapting tutor out, with **FSRS** scheduling, a knowledge graph and cognitive-load detection. Runs on local open-weight models — **no API key, no data leaving the host**, which is the answer to a DPO who will not approve an external model call at all. |
 | Campus LLM gateway | [LibreChat](https://github.com/danny-avila/LibreChat) | 🟢 MIT | Multi-provider, SSO, quota, audit log. The audit log is what gets a deployment past a university's data-protection officer. |
 | Courseware platform | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT** | 🆕 `p384`. Django courseware with autograding, flexible access rules and per-student statistics. Course-scale and permissive — the base when the client must own the platform code but does not need an institutional LMS. |
@@ -316,6 +325,20 @@ An informed gap, recorded so silence is not mistaken for coverage:
   university scale. See [`intel/market.md`](../intel/market.md) — this is the clearest
   build-vs-buy opening in the current rotation.
 - **No official Instructure or Moodle-HQ MCP server** (community only, as above).
-- **Proctoring and AI-detection** have no credible permissive open-source option — and under the EU
-  AI Act both are squarely high-risk, so this gap is also a liability boundary worth naming to a
-  client rather than filling.
+- 🔴 🆕 `p392` **~~Proctoring and AI-detection have no credible permissive open-source option~~ —
+  WITHDRAWN. There are two granted components, and one of them is clean.**
+  [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) (🟢 **MIT**, 1,069 B,
+  manifest agrees, HEAD **2026-09-28**, npm v0.5.1) does tab-switch, camera, **face** (face-api on
+  TF.js, in-browser), audio and **virtual-camera / loopback / screen-share** detection, and states
+  *"nothing leaves the page unless you set `backend.endpoint`"*.
+  [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) (🔴 **grant
+  CONFLICT** — Apache-2.0 payload, ISC manifest and npm; HEAD **2026-10-13**, 398 commits) is the
+  bigger codebase but ships **lockdown and event telemetry only** — its README marks object
+  detection, multi-face and eye tracking *"(To be Done)"*.
+  🔵 **What survives of the old sentence, and it is the half worth saying to a client:** the
+  *liability* boundary is real and unchanged — an exam decision driven by either component makes the
+  client a **deployer of an Annex III high-risk system** (standalone obligations from **2 Dec 2027**).
+  The absence of code was never what made proctoring expensive; the obligations are. 🟢 So the honest
+  advice flips from *"we cannot build this"* to **"we can build this, and here is what it commits you
+  to"** — see [`compose/patterns.md`](../compose/patterns.md) `Pattern Y`. Full rows on
+  [`repos/foundations.md`](../repos/foundations.md).

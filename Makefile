@@ -108,7 +108,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-region-place gate-backlog-denominator \
              gate-dead-citation gate-regional-leg gate-census-union \
              gate-union-currency \
-             gate-subtree-grant gate-offset-region
+             gate-subtree-grant gate-offset-region \
+             gate-capability-absence
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -231,6 +232,14 @@ gate-subtree-grant: ## p382 — ACTION ZZ-ap: a grant has SUBTREES, and a root-o
 # candidates OUT, so `intellectif/learning-kit` (months 05 08 09 10) now reads AMBIGUOUS
 # WITH US EASTERN EXCLUDED rather than `NOT RESOLVED`.  p376's precedent governs a limb
 # discharged not-as-specified.
+gate-capability-absence: ## p392 — Gap 391-D with p391's CORRECTED predicate: an absence keyed on CAPABILITY, not on string identity.  `gate-absence` catches a RESTATED absence; this catches one whose refutation is in the base's own harvest log under different words — which is every instance this base has published.
+	@cd compose/code/p392-capability-absence && { $(PY) -I test_capability_absence.py > $(CAPABS_LOG) 2>&1 || { echo "🔴 p392-capability-absence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CAPABS_LOG) ; false ; } ; } && echo "── p392-capability-absence (15 controls: the capability meeting, five false-positive classes — two of them found by this gate failing on its own author — evidence completeness, the hand-adjudication ledger, the fatal arm)" && echo "   PASS" || exit 1
+
+capability-absence-census: ## p392 — the whole-shelf arm: a measurement, never a failure
+	@$(PY) -I compose/code/p392-capability-absence/capability_absence.py --root . --census
+
+CAPABS_LOG ?= /tmp/education-kb-gate-capability-absence.log
+
 gate-offset-region: ## p382 — Gap 541: a timezone offset census is placed with its DST span, or refused with the reason
 	@cd compose/code/p382-offset-region && { $(PY) -I test_offset_region.py > $(OFFSET_LOG) 2>&1 || { echo "🔴 p382-offset-region FAILED — the suite's own report follows:" ; sed "s/^/   /" $(OFFSET_LOG) ; false ; } ; } && echo "── p382-offset-region (10 controls: p381's two specimens, the L1 DST-degeneracy specimen, positive LATAM resolution, negative controls)" && echo "   PASS" || exit 1
 

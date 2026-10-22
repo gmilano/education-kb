@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p392` — **THE INSTRUMENT `p391` RANKED FIRST IS BUILT, AND ITS FIRST RUN REFUTES ALL THREE GAPS `p391` OPENED EIGHT HOURS EARLIER — EVERY REFUTATION ALREADY IN THIS FILE. 🟢 THE STAR CHANNEL IS OPEN (TOOL-SCOPED), AND THE FIRST THING IT DOES IS OVERTURN A SUPERLATIVE: DeepTutor 42.2k ★ > OpenMAIC 41.3k ★.**
+
+🔵 **Dating note.** Every clone, licence read, registry read, star read and date below was taken on
+**2026-10-22**. **Evidence:**
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p392.tsv) — 15 addresses ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p392.tsv) — 24 channels, measured **per tool** ·
+[`capability-absence-census`](../evidence/capability-absence-census.2026-10-22-p392.txt) — 364 absence
+sentences adjudicated · the instrument at
+[`compose/code/p392-capability-absence/`](../compose/code/p392-capability-absence/README.md), **15 controls** — 🔴 two of them classes this gate found by **failing on its own author's draft**.
+
+### 🟢 The instrument, and why it is the deliverable
+
+`p391` registered, as the top-ranked item for this pass: *"an absence check keyed on **capability** (the
+standard, the integration surface, the task) rather than on **string identity**."* Built:
+[`gate-capability-absence`](../compose/code/p392-capability-absence/README.md), wired into `make hooks`,
+which now runs **46** gates.
+
+| | |
+|---|---|
+| predicate | an absence sentence on a shelf, scoped to **its own segment**, whose **capability key** is qualified, is `REFUTED-CANDIDATE` when a harvest row carries the whole key set **and** is **evidence-complete** (slug + licence + date-or-version) |
+| harvest index | **1,116** evidence-complete rows over **17** capabilities |
+| absence sentences read | **356** → `NO-KEY` 306 · `REFUTED-CANDIDATE` **46** · `UNREFUTED` 4 |
+| where the 46 sit | **36** in `intel/open-gaps.md`'s historical pass sections; **8** in this pass's own closure table (correct firings); **2** on the live shelves, both known-false and both ledgered |
+| precision, first run | **7 of 8 true** on hand-adjudication — those seven are the three gaps closed below. The two survivors (`Gap 392-A`, the `pybryt` row keyed `{python}` alone; `Gap 392-G`, a region-partitioned claim) are **named, registered and ledgered with a reason**, not filtered away |
+
+🔵 **Why identity could not have found these.** Not one of the six instances shares a distinctive token
+across the two sides. The absence says *"no maintained Python LTI 1.3 library"*; the refutation says
+*"`academic-innovation/django-lti` · MIT · LTI Advantage · PyPI v0.10.1"*. Both sides are projected
+into one capability space and meet at `{lti, python}`.
+
+### 🔴 `Gap 391-A` — refuted. There are THREE Python LTI 1.3 implementations
+
+| address | ref · HEAD | last commit | grant (payload) | registry | ★ | verdict |
+|---|---|---|---|---|---|---|
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B, © The Regents of the **University of Michigan** | PyPI `django-lti` **v0.10.1**, 17 releases, 2026-08-07 | **26** | 🟢 **INSTALL THIS** — *"LTI Advantage support for Django"*, in-process: one app, one middleware, one migration |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B, © 2016 Project Jupyter Contributors | PyPI `jupyterhub-ltiauthenticator` **v1.6.3**, 15 releases, 2026-03-26 | **73** | 🟢 **LTI 1.1 *and* 1.3** into JupyterHub — the launch edge `Pattern B` was missing |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | `master` · `5ba9d16` | **2026-10-22 — 0 d** | 🔴 **AGPL-3.0**, 34,520 B | PyPI `lti-consumer-xblock` **v11.4.2** | — | 🔴 **the best-maintained of the three, and off the permissive shelf** — a boundary, not a pick |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `master` · `d8fa43e` | 2022-11-21 — 1,431 d | 🟡 MIT | PyPI `PyLTI1p3` 2.0.0, **2022-11-20** | — | 🔴 dead — `p391`'s read **confirmed**; its *conclusion* is what was wrong |
+| [`mitodl/pylti`](https://github.com/mitodl/pylti) | `master` · `e3774ef` | 2023-06-12 — 1,227 d | — | — | — | 🔴 LTI **1.1 only**, stale |
+
+🔴 **What `p391` published from a correct reading:** *"the interop edge must be a **separate Node or PHP
+service** in front of the agent — a deployment component every LMS-integration proposal has to cost."*
+That sentence reached `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
+`intel/market.md` (as an **EMEA budget line**), `intel/trends.md` (`Trend 19`) and two patterns. All
+six are corrected this pass.
+
+🔵 **And the generalisation is better than the correction.** The constraint is **licence-shaped, not
+language-shaped**: the best-maintained Python implementation is AGPL-3.0, the permissive Python ones
+are smaller (26 ★, 73 ★) and framework-bound. The question is never *"does this language have LTI"* but
+**"does the maintained implementation in my language carry a grant I can ship?"**
+
+🟢 **A fourth LTI row, new to these shelves and a different deployment shape:**
+[`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) — 🟢 **MIT** (1,076 B), `main` · `1fa0148`,
+**2026-10-20 — 2 d**, npm **`@lti-tool/core` v1.3.2, 2026-10-21**, 353 commits, **8 ★**.
+*"Serverless-native LTI 1.3 toolkit for Node.js (Lambda, Workers, Hono)"* — seven packages, session
+store chosen at deploy time (`memory`, `dynamodb`, `postgresql`, `mysql`, `d1`), with OIDC, AGS, NRPS,
+Deep Linking and Dynamic Registration all implemented. 🔴 8 ★ and no project-level production claim:
+pilot it, do not put a ministry on it this quarter.
+
+### 🔴 `Gap 391-C` — refuted. Two granted proctoring components, and the clean one is the smaller one
+
+| address | ref · HEAD | last commit | grant | registry | ★ | what it actually does |
+|---|---|---|---|---|---|---|
+| [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; `package.json` agrees | npm `proctoring.js` **v0.5.1**, 2026-09-24 | **1** | 🟢 tab-switch, right-click, DevTools shortcuts, clipboard events, camera, **faces** (face-api 1.7.15 on TF.js, in-browser), audio RMS, **virtual-camera / loopback / screen-share detection**. *"No hidden network calls… nothing leaves the page unless you set `backend.endpoint`"*; audio discarded; clipboard never read; screenshots **off by default** |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — `LICENSE` is stock **Apache-2.0** (11,356 B); `package.json` **and** npm say **`ISC`** | npm `@exam_guard/core` **v10.1.0**, 2026-10-13 (7 versions; the unscoped `exam-guard` is stale at **10.0.4, 2026-01-22**) | **3** | 🟡 lockdown + telemetry: blocks copy/paste/cut, right-click, selection, shortcuts; detects `tabSwitch`, `browserBlur`, `rightClick`, `exitTab`, `copyPasteCut`, `restrictedKeyEvent`, `textSelection`, `fullScreen`; snapshots POSTed to an `eventsUrl` **you build**. 🔴 README marks object detection, multi-face and eye tracking *"(To be Done)"* |
+| [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) | `main` · **`d1193a6`** | 2026-10-13 | identical payload | npm `exam-guard` 10.0.4 | — | 🔵 **the same project** — identical HEAD sha. Counted **once** (`gate-alias-canonical`) |
+| [`InCruiter-NewProducts/proctoring-sdk`](https://github.com/InCruiter-NewProducts/proctoring-sdk) | — | — | — | npm `@incproctor/proctoring-sdk` 1.0.4, 2026-09-25 | — | 🔴 **DEAD-OR-PRIVATE**, confirming `p391` |
+
+🔴 **This base's own earlier read of `exam-guard` was ISC, cold and not-recommended** — correct when it
+was taken (`HEAD` 2025-10-09, 7.9 months stale). The project **revived**: the canonical owner is now the
+`Scaler-Opensource` org, HEAD is 9 days old, and the payload says Apache-2.0 while the manifest still
+says ISC. 🔵 That is a **payload-vs-metadata conflict** (`gate-conflict`'s class, `p121`/`p278`), not a
+licence change to announce — both readings are permissive and OSI-approved, so the row is publishable
+**with the conflict stated** and the maintainer should reconcile the two files.
+
+🔵 **The shape of the supply is the real finding** (`Trend 20`): what is granted is **deterministic
+lockdown and event telemetry**; the **inference** — identity, gaze, multi-face, behavioural scoring —
+is absent, roadmapped, or the proprietary service that an AGPL workflow (`openedx/edx-proctoring`,
+253 releases) brokers. And the regulatory exposure runs the **other** way: lockdown does no biometric
+inference. New `Pattern Y` is built on exactly that split.
+
+### 🟢 `Gap 391-B` — closed for Brazil, by a row this base has carried for passes
+
+[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — `main` · `2efb258`,
+**2026-08-18 — 65 d**, 🟡 **MIT, 1,072 B, CODE ONLY** (© 2025-2026 MCP Brasil; `pyproject.toml` and the
+PyPI classifier agree), PyPI **`mcp-brasil` v0.14.0**, 18 releases, 2026-04-24. **70 Brazilian public
+data sources, 533 tools, 66 keyless**, large datasets cached locally and queried through embedded
+DuckDB — including **INEP `censo_escolar`** (the national school census) and **INEP `enem`**.
+
+🟢 **Documented LGPD posture**, which is what makes it shelvable rather than merely findable:
+`SOURCES.md` grades *Educação* **RISCO ALTO**, records INEP's 2022 withdrawal of microdata under LGPD
+and its 2024 anonymised resumption, states the bundled snapshot is **2023, post-LGPD**, and names the
+code safeguard — `COLUNAS_DISTINCT_PERMITIDAS` whitelists aggregate categories only (UF, sex, age band,
+race, school), excluding `NU_INSCRICAO`, name and CPF.
+
+🔴 **Three limits**, published: a **2023 snapshot** (currency is the risk, not the licence); the
+project's own instruction to *validate a sample to confirm anonymisation*; and it is **not an official
+government service**. 🔴 **A dating disagreement left visible rather than resolved:** this file's own
+harvest row reads *"pushed 2026-10-20"*; `main`'s HEAD commit is **2026-08-18**. `pushed_at` spans every
+ref, a HEAD commit date does not — two signals, both real, and the shelf now carries the HEAD date with
+the discrepancy noted. 🔵 This row is also **`Gap 549` in the flesh**: one repository, **a code grant and
+70 data grants**, and the licence column was built for the first.
+
+### 🟢 The star channel is open, and `p391`'s limitation was a one-tool reading
+
+| channel | tool | result |
+|---|---|---|
+| `github.com/{owner}/{repo}` | **WebFetch** | 🟢 **200** — stars, forks, commit count, licence sidebar, release tag |
+| `github.com/{owner}/{repo}` | curl | 🔴 **403** — the same URL (`Gap 532`, seventh replication) |
+| `api.github.com/rate_limit` | curl | 🟢 **200**, authenticated, **15,000/h** |
+| `api.github.com/repos/{o}/{r}` | curl | 🟡 **scoped** — attached repositories only, `add_repo` named as the remedy; **not 403** as four passes recorded |
+| `api.github.com/search/*` | curl | 🔴 closed **by design** |
+| `github.com/trending` | curl | 🔴 **403** — eleventh consecutive pass |
+| `raw.githubusercontent.com` | curl | 🟢 **200** — any public file **without a clone** |
+| `packagist.org/search.json` | curl | 🟢 **200** — 🆕 keyless discovery **with** a popularity signal (`downloads`, `favers`), the only non-GitHub one |
+| `pypi.org/search` | curl | 🔴 **200 bot-challenge page** — so there is **no Python discovery channel** here, which is why `Gap 391-A`'s supply was invisible |
+
+🔴 **And the first thing the restored channel does is overturn a superlative on `agents/top.md`.** That
+shelf called OpenMAIC *"the largest education-native repository in the open-source supply (~41.3k ★)"*.
+Read today, same channel, same minute: **OpenMAIC 41.3k ★** (6.4k forks, 750 commits — `p389`'s figure
+confirmed) and **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) 42.2k ★** (5.3k forks, 2,935
+commits, release **v1.6.15**, 2026-10-19, Apache-2.0) — **already two rows below it, with no star count
+against it.** Superlative retired on both rows. 🔵 `p381`'s `openDesk` lesson, again: **a superlative
+needs the comparison that would refute it**, and a shelf with one measured row cannot carry one.
+
+### 🔵 Channel yields, measured so the next pass changes channel rather than vocabulary
+
+| channel | queries | results | shelvable | note |
+|---|---|---|---|---|
+| **this base's own harvest log**, via the new instrument | 1 run | 8 live candidates | **6 rows** across 3 closed gaps | 🟢 **the highest-yield channel this base has, and it was already paid for** |
+| npm `/-/v1/search` | 3 fresh vocabularies | 36 | **3** (`lti-tool`, `proctoring.js`, `exam-guard`) | 🟡 still working, at a lower rate than `p388`'s 5.7% |
+| `packagist.org/search.json` 🆕 | 2 | 7 | **0** | 🔵 recorded as a **declared nil** so it is not re-run expecting a yield |
+| `pypi.org/search` | 1 | — | — | 🔴 bot-challenge page; **no channel** |
+| the four prescribed English legs | 4 | — | **0 promoted** | 🔴 `Gap 387-D`, third consecutive confirmation |
+| 🆕 a **public-procurement-shaped** leg (es/pt) | 1 | 5 live tenders | 🟢 **`Trend 21`** | 🟢 the replacement `Gap 387-D` asked for, and it yielded |
+
+🔵 **The generalisation, and it is this pass's recommendation to the next one.** Six of the eight rows
+this pass shelved came from **re-reading what this base already held**, not from a new forge. `Gap
+391-D` is not a research problem; it is a **promotion** problem, and it now has an instrument. Run
+`make gate-capability-absence` **before** publishing an absence, and point `--fatal` at the files the
+pass is writing.
+
 ## 🟢 🆕 2026-10-22 · `p391` — **`p390`'S HEADLINE FINDING IS HALF WRONG AND THE REFUTATION WAS ALREADY IN THIS FILE: THE LTI 1.3 LIBRARY IS MAINTAINED, AT A DIFFERENT ADDRESS, IN TWO LANGUAGES. 🔴 BUT NOT IN PYTHON, WHICH IS AN ARCHITECTURE CONSTRAINT. 🟢 THREE GRANTED NEW ROWS, AND THE REGISTRY CHANNEL'S YIELD MEASURED AT 0.9% AGAINST `p388`'S 5.7%.**
 
 🔵 **Dating note.** Every clone, licence read, registry read and date below was taken on **2026-10-22**.

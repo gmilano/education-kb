@@ -15,6 +15,15 @@ updated: 2026-10-22
 > [`agents/trending.md`](../agents/trending.md); this shelf is now about the industry.
 
 
+## 🆕 `p392` — what changed on this shelf
+
+🔴 **`Trend 19`'s closing claim is withdrawn** (*"Node and PHP have maintained LTI 1.3; Python does
+not"*) — three Python implementations read first-hand, and withdrawing it turns a language constraint
+into a **licence** constraint, which is the more useful statement. 🟢 **Two new trends**: `Trend 20`,
+the granted proctoring supply covers the lockdown and not the inference — the inverse of where the
+regulatory exposure sits; and `Trend 21`, LATAM's public buyers are procuring AI education platforms
+as **subscriptions**, with no tender asking for open source.
+
 ## 🆕 `p390` — note on what was removed from this shelf
 
 Two `p387` sections that stood here (*"Date the artefact, not the repository"* and *"The LATAM
@@ -589,8 +598,76 @@ reference implementation dates badly, the next question is *who ships this in pr
 *should we vendor the spec*. Check the fork network and the package registry before concluding a path
 is closed.
 
-🔴 **And the language asymmetry is the architecture constraint.** Node and PHP have maintained LTI
-1.3; **Python does not**, and almost every agent on these shelves is Python. The interop edge is
-therefore a **separate Node or PHP service** in front of the agent — not a library call inside it.
-That is a deployment component a proposal has to cost, and it is recorded as `Gap 391-A`.
+🔴 🆕 `p392` **The "language asymmetry" half of this trend is WITHDRAWN, and withdrawing it sharpens
+the rule above rather than weakening it.** `p391` closed this trend with: *"Node and PHP have
+maintained LTI 1.3; Python does not… the interop edge is therefore a separate Node or PHP service in
+front of the agent."* Read first-hand this pass, **Python has three**:
+
+| address | grant | last commit | registry | role |
+|---|---|---|---|---|
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (1,098 B) | **2026-10-20 — 2 d** | PyPI `django-lti` **v0.10.1**, 17 releases, 2026-08-07 | 🟢 **in-process**, Django app + middleware |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (1,528 B) | 2026-07-01 — 113 d | PyPI **v1.6.3**, 15 releases | 🟢 LTI 1.1 **and** 1.3 into JupyterHub |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | 🔴 **AGPL-3.0** (34,520 B) | **2026-10-22 — 0 d** | PyPI `lti-consumer-xblock` **v11.4.2** | 🔴 best-maintained of the three, **copyleft** |
+
+🟢 **And the maintainer pattern holds in Python too, which is the trend's real content.** The three
+Python implementations are maintained by a **university innovation centre** (Michigan), an
+**ecosystem project** (Jupyter) and a **platform vendor** (Open edX) — not by the standards body. The
+rule is unchanged and now has six instances instead of four: *in standards-driven education interop,
+ask who ships this in production.*
+
+🔴 **What survives as a constraint is licence-shaped, not language-shaped**, and that is a more useful
+thing to tell a client: the best-maintained Python LTI implementation is **AGPL-3.0**, the
+best-maintained Node one is Apache-2.0, and the permissive Python options are smaller (26 ★ and 73 ★)
+and framework-bound. The question is never *"does this language have LTI"* but *"does the maintained
+implementation in my language carry a grant I can ship?"* `Gap 391-A` **CLOSED**.
+
+## Trend 20 — 🆕 `p392` The granted proctoring supply covers the **lockdown**, not the **inference** — which is the opposite of the regulatory exposure
+
+For four passes this base recorded proctoring as having *"no credible permissive open-source option"*
+and treated that as a liability boundary to name rather than fill. Probed first-hand, the supply
+exists — and its **shape** is the trend:
+
+| component | grant | last commit | what it actually does | the AI part |
+|---|---|---|---|---|
+| [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | 🟢 **MIT** (1,069 B, manifest agrees) | **2026-09-28** | tab-switch, right-click, DevTools shortcuts, clipboard events, camera state, **faces**, audio loudness, **virtual-camera / loopback / screen-share detection** | 🟢 **real** — face-api on TF.js, **in the browser** |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | 🔴 **CONFLICT** — Apache-2.0 payload, `ISC` manifest **and** npm | **2026-10-13**, 398 commits | blocks copy/paste/cut, right-click, selection, shortcuts; detects `tabSwitch`, `browserBlur`, `exitTab`, `fullScreen`; periodic page and webcam snapshots POSTed to an endpoint you build | 🔴 **absent** — object detection, multi-face and eye tracking are marked *"(To be Done)"* |
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🔴 **AGPL-3.0** | 🆕 re-read `p392`: `master` HEAD **2026-10-22 — 0 d** (this base's harvest row said 2026-05-30; the live read is today), 253 releases | the exam **workflow** — attempts, review states, integration points | 🔴 none; it brokers a vendor |
+
+🔵 **The asymmetry, stated as a rule:** open-source proctoring is **deterministic browser lockdown and
+event telemetry**, while the **inference** — identity, gaze, multiple faces, behavioural scoring — is
+either absent, roadmapped, or the proprietary service the AGPL workflow brokers. 🟢 **And the
+regulatory exposure runs the other way.** Lockdown and event logs do no biometric inference: they
+are not what the EU AI Act's Annex III is reaching for, and they are explainable to a student
+(*"you left fullscreen at 14:03"*). The inference layer is where high-risk obligations, biometric
+rules and the whole evidentiary argument live — and that is exactly the layer the permissive supply
+does not have.
+
+🟢 **So the honest advice to a client flips, and it is now sellable in both directions:** *we can
+build the integrity layer you can defend — lockdown, event trail, human review — permissively and
+today; the part that would flag a student automatically is the part that makes you a deployer of a
+high-risk system, and neither of us should want it in v1.* 🔴 The obligation attaches to the
+**deployment**, not the dependency, so an open-source grant transfers no compliance relief whatsoever.
+
+## Trend 21 — 🆕 `p392` LATAM's public buyers are procuring AI education platforms as **subscriptions**, and no tender asks for open source
+
+A replacement regional leg shaped like a **buyer** rather than a supplier — public-procurement
+vocabulary in Spanish and Portuguese — returned five live 2026 instruments where three passes of
+English, stars-sorted supply legs returned nothing: Santa Fe province (Argentina, Tender 01/26,
+*subscriptions* to AI-enhanced educational cloud platforms), **OEI-Chile `OEI-LIC-1-25`** (design and
+build of an AI platform for **administrative management in Chilean schools** over regulatory,
+financial and operational data), UNOPS Argentina `ITB/2026/62779` (educational platform **licences**,
+2+2 years), the **CIEDEPAR** consortium in Paraná (multi-municipality SaaS education management) and
+Francisco Morato, SP (**R$1,924,665.00**).
+
+🔴 **Not one of the five specifies free or open-source software.** The spend is real, the AI framing
+is explicit, and the procurement shape is **product subscription**.
+
+🔵 **Why this is a trend and not five anecdotes:** it is the demand-side mirror of *Trend 6*. This
+base's whole thesis is permissive assembly, and the buyers writing the cheques are specifying
+subscriptions — so the binding constraint on an open-source education engagement in LATAM is **the
+specification, not the licence frontier**. 🟢 The opening is a total-cost bid against subscription
+pricing, with the OEI-Chile scope (administrative management, compliance recommendations) matching the
+`i-educar` + agent shape these shelves already hold; the work is to get *"or equivalent open-source
+implementation"* into a specification written for a product. 🟡 Graded **`ATTRIBUTED-UNVERIFIED`** —
+aggregators and news items; no official portal (COMPR.AR, ChileCompra, PNCP) is reachable here.
 

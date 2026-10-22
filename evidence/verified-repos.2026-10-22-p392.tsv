@@ -1,0 +1,21 @@
+# p392 · 2026-10-22 · every address probed first-hand with a blobless shallow clone
+# method: git clone --depth 1 --filter=blob:none --no-checkout ; symbolic-ref --short HEAD ;
+#         log -1 --format='%H %cI' ; ls-tree --name-only HEAD ; show HEAD:<LICENCE|manifest>
+# star column: read from github.com HTML via WebFetch (OPEN at p392 — see channel-state tsv);
+#              curl to the same URL is 403, which is Gap 532's tool-scoped asymmetry
+slug	real_default_ref	head_sha	last_commit	days	licence_payload	licence_bytes	manifest_licence	registry	registry_version	registry_date	stars_webfetch	verdict	note
+academic-innovation/django-lti	main	1ac0b56	2026-10-20	2	MIT	1098	MIT (classifier)	PyPI django-lti	0.10.1	2026-08-07	26	GRANTED	LTI Advantage (1.3) for Django; (c) 2022 Regents of the University of Michigan; REFUTES Gap 391-A
+jupyterhub/ltiauthenticator	main	c0c3bf3	2026-07-01	113	BSD-3-Clause	1528	BSD-3-Clause	PyPI jupyterhub-ltiauthenticator	1.6.3	2026-03-26	73	GRANTED	LTI 1.1 + 1.3 for JupyterHub; (c) 2016 Project Jupyter Contributors
+openedx/xblock-lti-consumer	master	5ba9d16	2026-10-22	0	AGPL-3.0	34520	-	PyPI lti-consumer-xblock	11.4.2	-	-	COPYLEFT	best-maintained Python LTI 1.3 in any language, and off the permissive shelf
+dmitry-viskov/pylti1.3	master	d8fa43e	2022-11-21	1431	MIT	1070	MIT	PyPI PyLTI1p3	2.0.0	2022-11-20	-	DEAD	confirms p391's read; 29 releases, none since
+mitodl/pylti	master	e3774ef	2023-06-12	1227	-	-	-	-	-	-	-	STALE	LTI 1.1 only
+lti-tool/lti-tool	main	1fa0148	2026-10-20	2	MIT	1076	-	npm @lti-tool/core	1.3.2	2026-10-21	8	GRANTED	serverless-native LTI 1.3 for Node (Lambda/Workers/Hono); 7 packages; full AGS+NRPS+Deep Linking+Dynamic Registration
+Cvmcosta/ltijs	master	41f150c	2026-10-13	9	Apache-2.0	-	Apache-2.0	npm ltijs	7.0.7	2026-10-06	-	GRANTED	re-read; carried from p391
+mdestafadilah/proctoring.js	main	c49b41c	2026-09-28	24	MIT	1069	MIT	npm proctoring.js	0.5.1	2026-09-24	1	GRANTED	zero-dependency browser proctoring: tab-switch, camera, face (face-api/TFJS), audio, virtual-camera and screen-share detection; REFUTES Gap 391-C
+Scaler-Opensource/exam-guard	main	d1193a6	2026-10-13	9	Apache-2.0	11356	ISC	npm @exam_guard/core	10.1.0	2026-10-13	3	CONFLICT	payload says Apache-2.0, package.json AND npm say ISC; both permissive, so the row is publishable with the conflict stated
+aswanth9495/exam-guard	main	d1193a6	2026-10-13	9	Apache-2.0	11356	ISC	npm exam-guard	10.0.4	2026-01-22	-	ALIAS	identical HEAD sha d1193a6 — one project at two addresses, counted ONCE (gate-alias-canonical)
+InCruiter-NewProducts/proctoring-sdk	-	-	-	-	-	-	-	npm @incproctor/proctoring-sdk	1.0.4	2026-09-25	-	DEAD-OR-PRIVATE	confirms p391; a blobless clone cannot tell private from deleted
+thanh01pmt/curriculum-kit	-	-	-	-	-	-	-	npm @thanh01.pmt/curriculum-kit	2.0.37	2026-10-09	-	DEAD-OR-PRIVATE	the p388 published-but-unreadable class, fifth member
+Mcp-Brasil/mcp-brasil	main	2efb258	2026-08-18	65	MIT (CODE ONLY)	1072	MIT (classifier)	PyPI mcp-brasil	0.14.0	2026-04-24	1817 (harvest)	GRANTED-CODE-ONLY	INEP Censo Escolar + ENEM microdata, 66 keyless APIs, DuckDB local cache; README states the MIT grant covers code only, each source has its own licence (SOURCES.md) + AUP; REFUTES Gap 391-B for LATAM; instantiates Gap 549
+HKUDS/DeepTutor	main	-	-	-	Apache-2.0	-	-	-	v1.6.15	2026-10-19	42200	GRANTED	42.2k stars — LARGER than OpenMAIC, which refutes agents/top.md's superlative
+THU-MAIC/OpenMAIC	main	-	-	-	MIT	-	MIT	-	v1.3.0-rc.1	2026-10-22	41300	GRANTED	41.3k stars re-read today by the same channel; p389's figure confirmed

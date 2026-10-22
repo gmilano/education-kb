@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 392 · 2026-10-22 — **THE REMEDY `p391` RANKED FIRST IS BUILT, AND ITS FIRST RUN REFUTES ALL THREE GAPS `p391` OPENED EIGHT HOURS EARLIER. 🔵 `Gap 391-D` WAS NEVER A RESEARCH PROBLEM; IT WAS A PROMOTION PROBLEM, AND IT NOW HAS AN INSTRUMENT.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p392.tsv) — 15 addresses ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p392.tsv) — 24 channels per tool ·
+[`capability-absence-census`](../evidence/capability-absence-census.2026-10-22-p392.txt) — 364 absence
+sentences · [`compose/code/p392-capability-absence/`](../compose/code/p392-capability-absence/README.md)
+— the instrument, 11 controls, wired as `gate-capability-absence`.
+
+### 🟢 Closed, and all three were closed by this base's own harvest log
+
+| Gap | Was | Now |
+|---|---|---|
+| 🟢 **`Gap 391-A`** — no maintained Python LTI 1.3 library; *"the interop edge must be a separate Node or PHP service in front of the agent"* | opened by `p391` this morning, propagated to **six** places (3 shelves, `Trend 19`, 2 patterns) and priced into an **EMEA budget line** | 🔴 **CLOSED — REFUTED.** Three live Python implementations: [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) (🟢 MIT 1,098 B, HEAD **2026-10-20 — 2 d**, PyPI v0.10.1, **26 ★**) **in-process**; [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (🟢 BSD-3, 2026-07-01, **73 ★**) LTI 1.1+1.3; [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) (🔴 AGPL-3.0, HEAD **today**), the best-maintained and the one off the permissive shelf. 🔵 **The surviving constraint is licence-shaped, not language-shaped** |
+| 🟢 **`Gap 391-C`** — no granted proctoring row, and proctoring is an Annex III surface | opened by `p391` this morning | 🟢 **CLOSED.** [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) (🟢 MIT 1,069 B, manifest agrees, **2026-09-28**, npm v0.5.1) — faces, audio, virtual-camera/loopback/screen-share, *"nothing leaves the page unless you set `backend.endpoint`"*. [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) (**2026-10-13**, 398 c) is bigger, 🔴 grant **CONFLICT** (Apache-2.0 payload vs `ISC` manifest **and** npm), AI half *"(To be Done)"*. 🔵 The *liability* half of the old sentence **survives** and is now `Pattern Y`'s premise |
+| 🟡 **`Gap 391-B`** — the district-targeting instrument is North America only, no analogue anywhere else | opened by `p391` this morning, stated on `intel/market.md` under LATAM *"because silence there would read as coverage"* | 🟢 **CLOSED FOR BRAZIL**, carried for EMEA, APAC and Mexico. [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (🟡 **MIT, code only**, 1,072 B; PyPI v0.14.0, 18 releases) serves **INEP `censo_escolar`** and **`enem`** among 70 sources / 533 tools / **66 keyless**, DuckDB-cached, with a documented LGPD posture (education *RISCO ALTO*; 2022 withdrawal and 2024 anonymised resumption recorded; `COLUNAS_DISTINCT_PERMITIDAS` excludes `NU_INSCRICAO`, name, CPF). 🔴 **2023 snapshot**, HEAD **2026-08-18 — 65 d**, not an official service |
+| 🟢 **`Gap 391-D`** — the harvest history does not promote to the shelves; *"every instance so far was caught by accident"* | ranked first for this pass, **with its predicate already corrected by `p391`** | 🟢 **INSTRUMENT BUILT and the accident ended.** `gate-capability-absence`, **15 controls**: **1,116** evidence-complete harvest rows over **17** capabilities, **356** absence sentences, **46** `REFUTED-CANDIDATE` (36 in this file's historical sections, 8 in this pass's own closure table, **2** on the live shelves — both known-false, both **ledgered with a reason**). The first run returned **8 live candidates, 7 true**, and those seven are the three gaps above: found **by the instrument**, not by eye. 🔵 The gap is **not** marked closed as a *defect*: the instrument reports, a pass still adjudicates and promotes by hand |
+| 🔴 **Trend 8 / the measurement gap** — *"`api.github.com` 403, `github.com` 403 for a fourth consecutive pass: no stars, no commit activity"* | carried as closed-channel since `p374`, restated by `p391` | 🔴 **THE READING WAS TOOL-SCOPED, FOR A FIFTH PASS.** `github.com/{o}/{r}` → **200 via WebFetch**, **403 via curl**; `api.github.com` → **200**, authenticated 15,000/h, refusing **by scope** and naming `add_repo`, with `/search/*` closed by design. Stars, forks, commits and release tags are **readable**. 🔴 And the first measurement **overturned a shelf superlative**: DeepTutor **42.2k ★** > OpenMAIC **41.3k ★** |
+| 🟡 **`Gap 387-D`** — the prescribed regional legs do not return education; *"rephrase or replace them, do not re-run them"* | two consecutive passes of nil | 🟡 **HALF-DISCHARGED, with a working replacement.** The four English legs returned nil a **third** time. 🟢 A **public-procurement-shaped** leg in es/pt returned **five live 2026 LATAM tenders** (Santa Fe 01/26; OEI-Chile `OEI-LIC-1-25`; UNOPS `ITB/2026/62779`; CIEDEPAR Paraná; Francisco Morato R$1,924,665.00) → **`Trend 21`**. 🔵 A leg shaped like a **buyer** returns buyers; `Gap 548`'s point with a counter-example |
+
+### 🔴 New gaps
+
+| Gap | Statement |
+|---|---|
+| **`392-A`** | **A `{runtime}`-only capability key over-refutes, and the instrument's one live false positive is exactly that.** `repos/foundations.md:104` (the `microsoft/pybryt` row) keys as `{python}` alone and is adjudicated against every granted Python row. The lexicon cannot distinguish *"there is no maintained Python X"* from *"this Python thing is stale"*. 🔵 Registered rather than patched with a stoplist: the fix is a narrower lexicon entry, and a stoplist would have hidden the measurement that found it. |
+| **`392-B`** | **A grant CONFLICT has no rung on the ladder a shelf can publish.** `Scaler-Opensource/exam-guard` reads **Apache-2.0** in its payload and **`ISC`** in `package.json` *and* on npm. Both are permissive and OSI-approved, so refusing the row loses a real component and shelving one licence id publishes a falsehood. This pass published **`CONFLICT` as the licence value** — the first time this base has done so on a shelf rather than in a conflict table. 🔵 `gate-conflict` detects the class; the *shelf vocabulary* has no cell for it. |
+| **`392-C`** | **There is no Python package DISCOVERY channel, and that is why `Gap 391-A` was invisible.** `pypi.org/search` serves a JavaScript bot-challenge page (3,038 B). npm search has carried every registry sweep this base has run, so **the discovery channel's language bias became a supply claim** — the one asymmetry that would hide exactly the finding `p391` got wrong. 🔵 `pypi.org/pypi/{pkg}/json` verifies but cannot discover; a successor should look for a mirror, an index dump, or accept that Python supply is found through GitHub and papers only. |
+| **`392-D`** | **`pushed_at` and a HEAD commit date are different signals and this base has one column for both.** `Mcp-Brasil/mcp-brasil` reads **2026-08-18** at `main`'s HEAD and *"pushed 2026-10-20"* in this base's own harvest row — 63 days apart, both correct, because `pushed_at` spans every ref. Published side by side rather than reconciled. 🔵 Same family as `p390`'s tag-vs-default-ref caveat on Canvas: **a date cell needs a REF and a SIGNAL**, not only a value. |
+| **`392-E`** | **A revived project cannot be told from a misread one by any field this base carries.** `exam-guard` was read **ISC, 2025-10-09, 7.9 months cold, "no recomendar"** — correct then — and reads **Apache-2.0 payload, HEAD 9 days, 398 commits** now, under a **different owner account** (`Scaler-Opensource` vs `aswanth9495`, identical HEAD sha). Nothing in the record distinguishes *"we were wrong"* from *"it changed"*, and the two call for opposite actions. |
+| **`392-G`** | **A capability key cannot express a REGION-PARTITIONED claim, and this pass published one.** `intel/market.md` now says `Gap 391-B` is *"closed for Brazil, open for Mexico, EMEA and APAC"* — and the instrument refutes the open half with the Brazilian row that closed the other, because `Mexico` is a surface form of `r:latam`. 🔵 The region dimension is **continental** while the claim is **national**, which is the same granularity defect `Gap 541` found in timezone offsets. Ledgered as a false positive with its reason rather than reworded into something vaguer. |
+| **`392-F`** | **`Gap 391-E` carried, unchanged:** `eur-lex.europa.eu` was not reachable this pass either, so every EU date on these shelves still rests on multi-house secondary corroboration. This base has **never** read the primary text of Regulation (EU) 2026/1744 or 2024/1689. |
+
+### 🟡 Carried, unchanged
+
+- **`Gap 387-A` (LMS tenancy)** — `GuoMonth/dsh-multi-tenant` still supplies only the hosting half; no
+  Canvas/Blackboard/D2L/Open edX tenancy surface was found this pass. Stands as written.
+- **`Gap 387-C` (Zenodo/DOI-deposited supply)** — `zenodo.org` **000**, `api.openalex.org` **000**,
+  `export.arxiv.org` **DNS-unreachable**. Research-deposited supply remains unreadable here.
+- **`Gap 549` (code grant vs data grant)** — **a new instance, not progress**:
+  `Mcp-Brasil/mcp-brasil` is one repository with **one code grant and 70 data grants**, published as
+  `MIT — CODE ONLY`.
+- **`Gap 391-F` (two red gates)** — `gate-fold-identity` and `gate-census-union` were **red at `HEAD`
+  before this pass wrote anything** and are red still: inherited, not introduced. 🟢 `make hooks` ran in
+  full at **44/46** — 46 because this pass added one, and the gate it added is **green**.
+
+### 🔵 The errors this pass published against itself
+
+| | |
+|---|---|
+| 🔴 **The instrument's first draft returned 75 candidates and was unpublishable** | Four false-positive classes, each now a named control: a table row read as a sentence; a region treated as a capability; a **quoted** absence counted as a published one (`p279` hit this too); and a negated region scope "refuted" by the very region it excludes. 75 → **46**, and 7-of-8 precision on the live shelves. |
+| 🔴 **And then the gate FAILED ON THIS PASS'S OWN DRAFT, which found two more defects in it** | Pointed at the shelves `p392` had just written, the fatal arm failed on four candidates. Two were real bugs in the instrument: (a) quote detection ran **per segment** while the segmenter cuts on `:` — so this pass's own **withdrawal** of `p391`'s claim, which quotes it across a colon, read as an unchecked absence; (b) a **struck-through retraction** read as a fresh claim, which would have **punished the correction** — the one thing a gate must never do. Both are classes 3b and 5 now, and the suite went 11 → **15 controls**. 🔵 This is the first instrument on this base whose own author's draft was its best test case. |
+| 🔵 **A gate needs a LEDGER, and this pass nearly learned that the expensive way** | With two known-false candidates surviving on the live shelves, the options were to fail `make hooks` on adjudicated facts (the gate gets switched off) or to filter them (the measurement is hidden). Neither. `--ledger` subtracts a candidate **only** against a written file, line, verdict and **reason**, and prints the reason every run — the same discipline this base already uses for a declared nil. |
+| 🔴 **A runtime key was marked COMMON and the controls caught it** | With `python` requiring two surface forms, *"no maintained Python LTI library"* keyed as `{lti}` alone — so a **Node** row refuted a **Python** claim, destroying the one distinction the instrument exists to preserve. Caught by a control, not by the census. |
+| 🔴 **This pass nearly published `mcp-brasil` as 2026-10-20** | That date is the harvest row's `pushed_at`. The first-hand HEAD read is **2026-08-18**. `Gap 392-D` exists because the near-miss was a *schema* defect, not a care defect. |
+
+### 🔵 Ranked for the next pass
+
+1. **Run `make gate-capability-absence --fatal` before publishing any absence** — the instrument only
+   pays if it runs at write time. `Gap 392-A`'s lexicon fix is the cheapest improvement to it.
+2. **Re-probe every channel this base calls closed, on a second tool.** Two "closed" channels
+   (`github.com` HTML, `api.github.com`) were open all along, and one of them was carrying a
+   limitation note on a live shelf for eleven passes.
+3. **Close `Gap 391-B` for a second region** — the Brazilian answer exists; find whether Mexico (SEP),
+   India (UDISE+) or the EU (Eurydice) is exposed as a granted, queryable component.
+4. **Give the shelf licence column a `CONFLICT` cell** (`Gap 392-B`), and a date cell a **ref** and a
+   **signal** (`Gap 392-D`).
+
 ## Pass 391 · 2026-10-22 — **THE THIRD INSTANCE OF ONE ERROR, AND THIS TIME IT COST A RECOMMENDATION PUBLISHED THE SAME DAY: A STALE UPSTREAM IS NOT A DEAD DEPENDENCY. 🔴 THE REAL GAP IS THAT THIS BASE'S HARVEST HISTORY HAS NO PROMOTION MECHANISM TO ITS SHELVES.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p391.tsv) — 17 probed, 16 live ·

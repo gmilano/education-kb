@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p392` — **GITHUB TRENDING IS 403 FOR AN ELEVENTH PASS, BUT THE POPULARITY CHANNEL IS OPEN ON ANOTHER TOOL. 🟢 FIVE NEW FOUNDATION ROWS, THREE OF THEM CLOSING GAPS `p391` OPENED THIS MORNING. 🔴 ONE GRANT PUBLISHED AS A CONFLICT RATHER THAN A LICENCE.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p392.tsv) — 15 addresses, every
+licence read from the payload at the **real default ref** ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p392.tsv) — 24 channels **per tool** ·
+[`capability-absence-census`](../evidence/capability-absence-census.2026-10-22-p392.txt). Full
+narrative in [`agents/trending.md`](../agents/trending.md).
+
+🔴 **`github.com/trending` is still `403`** — eleventh consecutive pass, so no trending *ranking* is
+readable here. 🟢 **But the per-repository pages are**: `github.com/{owner}/{repo}` answers **200 via
+WebFetch** while curl gets **403** on the same URL, so **stars, forks, commit counts and release tags
+are readable again** after eleven passes of this file saying they were not. That is `Gap 532`'s
+tool-scoped asymmetry, replicated a seventh time, and it means **a channel this base declares closed
+should be re-probed on a second tool before it is inherited.**
+
+### 🟢 New foundation rows
+
+| address | ref · HEAD | last commit | grant (payload) | registry | ★ | role |
+|---|---|---|---|---|---|---|
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | `main` · `1ac0b56` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,098 B (© Regents of the University of Michigan) | PyPI `django-lti` **v0.10.1**, 17 releases, 2026-08-07 | **26** | 🟢 **in-process Python LTI 1.3** — closes `Gap 391-A` |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` · `c0c3bf3` | 2026-07-01 — 113 d | 🟢 **BSD-3-Clause**, 1,528 B | PyPI **v1.6.3**, 15 releases | **73** | 🟢 LTI 1.1 + 1.3 into JupyterHub — the missing launch edge for `Pattern B` |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | `master` · `5ba9d16` | **2026-10-22 — 0 d** | 🔴 **AGPL-3.0**, 34,520 B | PyPI `lti-consumer-xblock` **v11.4.2** | — | 🔴 best-maintained Python LTI 1.3 **in any language**, and copyleft — a boundary |
+| [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) | `main` · `1fa0148` | **2026-10-20 — 2 d** | 🟢 **MIT**, 1,076 B | npm `@lti-tool/core` **v1.3.2**, 2026-10-21 | **8** | 🟢 **serverless** Node LTI 1.3 (Lambda / Workers / Hono), 7 packages, pluggable session store |
+| [`mdestafadilah/proctoring.js`](https://github.com/mdestafadilah/proctoring.js) | `main` · `c49b41c` | **2026-09-28 — 24 d** | 🟢 **MIT**, 1,069 B; manifest agrees | npm **v0.5.1**, 2026-09-24 | **1** | 🟢 browser proctoring with a real privacy posture — closes `Gap 391-C` |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `main` · `d1193a6` | **2026-10-13 — 9 d** | 🔴 **CONFLICT** — Apache-2.0 payload (11,356 B) vs **`ISC`** in `package.json` **and** npm | npm `@exam_guard/core` **v10.1.0**, 2026-10-13 | **3** | 🟡 lockdown + telemetry (the AI half is marked *"To be Done"*) |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `main` · `2efb258` | **2026-08-18 — 65 d** | 🟡 **MIT — CODE ONLY**, 1,072 B (data: 70 per-source licences in `SOURCES.md` + an AUP) | PyPI `mcp-brasil` **v0.14.0**, 18 releases, 2026-04-24 | — | 🟢 **INEP Censo Escolar + ENEM**, 66 keyless APIs, DuckDB — closes `Gap 391-B` for Brazil |
+
+### 🔴 Two rows that are corrections rather than additions
+
+| | |
+|---|---|
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🔴 **Still dead — 1,431 days, PyPI frozen 2022-11-20.** `p391`'s *reading* was right. 🔴 Its *conclusion* — *"so there is no maintained in-process Python LTI option; the edge must be Node or PHP"* — is **withdrawn**: three live Python implementations above. |
+| [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) | 🔵 **Identical HEAD sha `d1193a6`** to `Scaler-Opensource/exam-guard` — one project at two addresses, counted **once**. Also: this base's earlier read of it (**ISC**, `HEAD` 2025-10-09, *"no recomendar"*) was correct when taken; the project **revived** under the org account. |
+
+### 🔴 "Published but unreadable" gains a fifth and sixth member
+
+[`InCruiter-NewProducts/proctoring-sdk`](https://github.com/InCruiter-NewProducts/proctoring-sdk)
+(npm `@incproctor/proctoring-sdk` 1.0.4, 2026-09-25) and
+[`thanh01pmt/curriculum-kit`](https://github.com/thanh01pmt/curriculum-kit)
+(npm `@thanh01.pmt/curriculum-kit` 2.0.37, 2026-10-09) both clone-fail while their packages publish.
+🔵 A blobless clone cannot tell **private** from **deleted**, so both are recorded `DEAD-OR-PRIVATE`
+and **no row claims they were removed from GitHub** (`Trend 12`'s class).
+
+### 🔵 Channel yield, so the next pass changes channel and not vocabulary
+
+| channel | queries | results | shelvable |
+|---|---|---|---|
+| 🟢 **this base's own harvest log**, read by [`gate-capability-absence`](../compose/code/p392-capability-absence/README.md) | 1 run | 8 live candidates | **6 rows / 3 gaps closed** |
+| npm `/-/v1/search` | 3 | 36 | **3** |
+| `packagist.org/search.json` 🆕 keyless, with `downloads`+`favers` | 2 | 7 | **0** — declared nil |
+| `pypi.org/search` | 1 | bot challenge | 🔴 **no channel** |
+| `github.com/trending` | — | 403 | — |
+
+🔵 **The lesson this file should carry forward:** the highest-yield discovery channel available to this
+base on 2026-10-22 was **its own 45,000 lines of harvest history**, read by capability instead of by
+eye. Six rows and three closed gaps came out of it in one run.
+
 ## 🟢 🆕 2026-10-22 · `p391` — **GITHUB TRENDING IS 403 FOR A TENTH PASS. 🔴 THE FOUNDATION `p390` DECLARED ABANDONED HAS A MAINTAINED SUCCESSOR IT NEVER LOOKED FOR — TWO OF THEM. 🟢 TWO NEW FOUNDATION ROWS, AND THE PYTHON LTI ROUTE IS CONFIRMED DEAD.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p391.tsv) — 17 addresses
