@@ -1,8 +1,120 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
+
+## Pass 373 — 2026-10-22 — **`Gap 485` WAS OPENED ASKING A SUCCESSOR TO FETCH WHAT THIS BASE ALREADY HELD, BETTER-SOURCED THAN THE GAP DESCRIBED. 🟢 AND THE REGIONAL-LEG QUESTION FOUR PASSES HAVE ANSWERED FOUR DIFFERENT WAYS WAS RUN AS A CROSSED DESIGN FOR THE FIRST TIME — THE TWO DECISIVE CELLS POINT OPPOSITE WAYS, AND BOTH ARE CLEAN.**
+
+🔵 **Dating note.** Every leg and probe below was run on **2026-10-22** and every evidence file
+is named for that date; the commit lands the same day. Artefacts are dated by **MEASUREMENT**,
+per this base's standing rule.
+
+**Evidence:** [`region-leg-crossed`](evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
+[`attribution-ledger`](evidence/attribution-ledger.2026-10-22-p373.tsv) ·
+[`gap485-prior-holdings`](evidence/gap485-prior-holdings.2026-10-22-p373.tsv) ·
+[`primary-text-egress`](evidence/primary-text-egress.2026-10-22-p373.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p373.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Gap restated, figure withdrawn** | `Gap 485` — 🔴 two of its three clauses were **false when written**; its cost estimate is **withdrawn** and it is **reclassified** to egress-enabled-run |
+| **Question tested instead of re-answered** | the regional-leg axis — 🟢 **first CROSSED (factorial) design on this base**, 4 cells, one pass, one tool |
+| **Prior passes reconciled** | 🟢 **four** (`ACTION PJ`, `ACTION QJ`, `P870`, `Gap 476`) — explained, not refuted |
+| **Invariant found inadequate** | 🔴 `I4` (`p372`) — satisfiable without doing the thing that works, **and** over-firing. 🔵 **Not patched, deliberately** (`p305`'s rule); registered as `ACTION p373-A` |
+| **Channel measured that `p372` left unmeasured** | 🟢 government primary-text egress — 🔴 **refused on BOTH transports**, and `WebFetch` is **not** an independent channel |
+| **Probes, all first-hand** | **12** `ls-remote` · **13** `raw.githubusercontent.com` payload reads · 🔴 **0** successful `api.github.com` or `github.com` HTML calls (both `403`) — so **no star counts** are published this pass |
+| **New agent rows** | 🔴 **ZERO**, with the denominator named — `ACTION QJ`'s saturation reproduced on the **global** legs, which `QJ` never tested |
+| **New foundational repo rows** | 🔴 **ZERO** — the vertical leg returned one vendor's own pages naming seven platforms, **all seven already shelved** |
+| **Shelf gained** | 🟢 `Pattern 13` (assistive feedback that returns comments and never a mark) · 🟢 a `p373` block under **each of the five** regions of the standing `## Opportunities by region` section — 🔵 **including the two that returned nothing, said so** |
+| **New gaps** | **488** (Portugal's CNE text + the two-CNE collision) · **489** (four attributions, four files, no owned home) · **490** (`IBM MARK` / `OnMicro AI` have no located address) |
+| **Address census, derived LAST** | 🟢 **2 685 → 33 → 2 652** |
+
+### 🔴 The finding, in one sentence
+
+🔴 **`Gap 485` said Brazil's CNE regulation was carried *"on a single secondary source — a
+newspaper column — with no resolution number and no primary text"*, and at the moment it was
+written this base held `Parecer CNE/CP nº 15/2026` by name in three files, with the DOU
+publication cited and its own sourcing graded *"two-outlet secondary"*.**
+🟢 Blame bottoms out at boundary commit `beaab9e`, **2026-10-19** — two days earlier.
+
+🔵 **Why this instance is worse than the five before it.** `p369` paid this base's signature
+defect on `LICENSE.TXT`, `p371` on the `https://` host rule, `p372` on `apereo/opencast`. Those
+were **facts** left unwired. 🔴 **Here the unwired artefact is a GAP STATEMENT — an instrument
+whose only purpose is to direct a successor's effort — and it directed them to run a full
+discovery leg for a number sitting on three of its own shelves.** 🟢 **An unwired fact is paid
+for twice; an unwired gap is paid for by every successor until someone checks.**
+
+### 🟢 What a reader should take from it
+
+🟢 **The regional-leg axis is not a property of the query. It is a property of the
+jurisdiction.** Four passes each found a different answer because each sampled different
+jurisdictions, and `p373` crossed the two factors they kept confounding:
+
+| Cell | Language | Jurisdiction named | Result |
+|---|---|---|---|
+| **Germany** | English | ✅ country + organ (`KMK`) | 🔴 **NIL** — returned **North American** state policy instead |
+| **Brazil** | English | ✅ country + organ + instrument nº | 🟢 **PRODUCTIVE, four outlets** — more than `p372`'s Portuguese leg returned |
+
+🟢 **Both cells are clean and they point opposite ways, so neither prior rule generalises.** For
+**Germany** an in-language leg is **necessary**; for **Brazil** it is **redundant**, because
+Brazilian education policy is carried by English-language legal press (Mattos Filho publishes
+in English) and an instrument **number** is a language-independent token. 🔵 **`ACTION PJ`
+sampled Brazil, Mexico and Quebec — all with English legal press — and concluded language does
+nothing. `Gap 476` sampled Germany and concluded language is everything. Both are locally
+correct; neither generalises.**
+
+🔴 **And `p372` reached its conclusion by changing two variables at once — the exact error
+`p207` corrected `p206` for, with that correction committed on this base the whole time.**
+`p372`'s English legs are pan-regional (*"AI education EMEA 2026…"*) while its German leg names
+**Deutschland/Bundesland** and its Portuguese leg names **Brasil**. 🟢 **`Gap 489` answers with
+a structural remedy rather than a fifth attribution: the four answers live in four files, none
+citing another, and there is no single place where *"what makes a regional leg work"* is
+recorded.**
+
+### 🟢 The commercial reading, and it is the part a studio should act on
+
+🟢 **EMEA: sell the obligation that is NOT deferred.** Annex III high-risk duties apply
+**`2027-12-02`** — 🔴 **and the refuted *"August 2026"* date is now circulating in GERMAN
+practitioner guidance**, so an EMEA engagement will meet it in the client's own language.
+🟢 **Art. 4's AI-literacy duty binds providers AND deployers, and a school is a deployer — it is
+live now.** Against it, Telekom-Stiftung's **Trendmonitor (March 2026)**: **~50 %** of German
+teachers already use AI tools and **88 %** have barely engaged with the rules. 🔵 **Roughly
+fourteen months of low-risk literacy and governance work sits in the gap between the two
+dates**, and the common reading *"nothing applies until 2027"* is wrong.
+
+🔴 **LATAM: Brazil's rule is arriving UNHOMOLOGATED, and that distinction is billable.**
+`Parecer CNE/CP nº 15/2026` has **no normative force** until the homologating act publishes
+(art. 2, Lei nº 9.131/1995) — 🔴 **but its prohibitions bite immediately on publication, while
+only the adequacy requirements get the 12-month window.** 🟢 **Build to the prohibitions now and
+to adequacy on the clock, and tell the client which is which.** 🟢 `Pattern 13` is that build:
+**comments, never a mark**, with no grade-write scope on the service account — which is a
+permissions fact an auditor can check rather than a policy promise. 🔵 It also targets the
+widest measured demand gap here: **50 %** of LATAM students want AI-assisted feedback and
+**19 %** of faculty provide it.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed.** Derived over the nine `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write: **2 685** harvested shapes → **33** are not addresses →
+**2 652 addresses**.
+🔵 **The delta is `+2`, and both are nameable:** `agentscope-ai/openjudge` and
+`mondaycom/sensei`, written onto the trending shelves — 🔴 **neither shelved as an education
+agent**, one because it judges agents rather than learners and one because it is not an
+education project at all. 🟢 `p372`'s **2 683 / 33 / 2 650** is left standing in its own
+section, because it was correct for the tree `p372` committed and **history is not edited to
+match a later derivation**.
+
+🔵 **The honest size of `p373`:** two net addresses, zero new agent rows, zero new foundational
+rows, one new pattern, one standing regional section, three new gaps — and **one gap statement
+and one invariant corrected**. Its work was **corrective and methodological, not acquisitive**,
+and the supply-side zero is published with its denominator rather than padded.
+
+🔴 **Stated limitation, before a successor leans on the finding:** **n=1 per cell.** `WebSearch`
+is not deterministic and these four cells are not re-runs. The design **separates** the two
+factors; it does **not** estimate variance. 🟢 **`ACTION p373-D` registers the re-run that would.**
 
 ## Pass 372 — 2026-10-21 — **`Gap 483` IS CLOSED AND ITS FIGURE OF 46 WAS WRONG IN BOTH DIRECTIONS: TEN OF THE 46 WERE NEVER ADDRESSES AND TWO ARE LIVE REPOSITORIES THAT TWO PASSES PUBLISHED AS DEAD. 🔴 THE ONE ADDRESS WITH A PROVEN SUCCESSOR HAD BEEN PROVEN SIX DAYS EARLIER AND FILED ONLY IN PROSE. 🟢 AND `Gap 476`'s HYPOTHESIS, TESTED UNDER CONTROL, IS CONFIRMED — THE ENGLISH EMEA LEG RETURNED 0 FACTS AND THE GERMAN LEG RETURNED 4.**
 

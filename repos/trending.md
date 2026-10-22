@@ -1,7 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
+---
+
+## Pass 373 · 2026-10-22 — 🟢 **`raw.githubusercontent.com` is OPEN this pass, so grants were read from payload again — 🔴 and the primary-text egress `p372` left UNMEASURED is now measured on BOTH transports, and it is refused on both.**
+
+🔵 **The channel state first, measured this pass**, so a successor inherits the matrix rather
+than the anecdote.
+
+| Channel | This pass | Note |
+|---|---|---|
+| `github.com` smart-HTTP — `ls-remote`, `clone` | 🟢 **OK** | 1 493 refs on `HKUDS/DeepTutor`; every existence verdict rests on it |
+| `raw.githubusercontent.com` | 🟢 **200** | 🟢 **grant payloads ARE readable this pass** — bytes + `sha256₁₂` first-hand, no inference |
+| `api.github.com` | 🔴 **403** (proxy) | 🔴 **consequence: NO star counts in this pass's tables.** A star figure here could only be a search-snippet hearsay, so it is omitted rather than carried |
+| `github.com` HTML | 🔴 **403** (proxy) | as `p372` |
+| `www.gov.br` · `www.in.gov.br` · `www.kmk.org` · `diariodarepublica.pt` | 🔴 **`connect_rejected`** | 🔴 **the government primary texts. Refused on `curl` AND on `WebFetch`** |
+
+### 🔴 `Gap 485`'s remedy was costed against an unmeasured channel, and the measurement makes it unbuyable here
+
+🔴 **`p372` priced `Gap 485` at *"part of one pass, **if** `gov.br`/CNE hosts answer from this
+environment — which is **unmeasured**"*. 🟢 It is measured now, and they do not.** All four
+government hosts answer `CONNECT tunnel failed, response 403` from the egress proxy;
+`portal.mec.gov.br` does not resolve at all.
+🟢 **NEW, and the part that matters for costing:** `WebFetch` is **not** a second channel — it
+fails at **DNS** (`getaddrinfo ENOTFOUND`) where `curl` fails at **CONNECT**, so the two
+transports do **not** have independent host allowlists and must not be costed as if they do.
+🔵 **A proxy refusal is not an absence** — every one of those hosts may serve the document
+perfectly to a client allowed to reach it. 🟢 **Consequence: `Gap 485` is not closeable from
+this environment at any cost**, and a successor should stop ranking it as ordinary pass backlog.
+It joins `T61`, `ACTION RO` and `Gap 241`/`487` as an **egress-enabled-run** item.
+
+### 🟢 Probes, all first-hand, `2026-10-22`
+
+| Slug | refs | Grant payload | Verdict |
+|---|---:|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **1 493** | 🟢 Apache-2.0 · `11 408 B` · `cd2f54e1e506` | 🟢 control — the anchor row, re-verified live |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **6** | 🟢 MIT · `1 081 B` · `3b2ca73e81ad` | 🟢 **REPRODUCES** `repos/trending.md:4611` byte-for-byte |
+| [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) | **208** | 🟢 Apache-2.0 · `11 357 B` · `c71d239df917` | 🟡 **candidate, NOT shelved as education** — judges agents, not learners |
+| [`mondaycom/sensei`](https://github.com/mondaycom/sensei) | **18** | 🟢 MIT · `1 067 B` · `40b0d5f2e8b7` | 🔴 **not education, deliberately not shelved** — see the collision below |
+| `ibm/mark` · `IBM/mark` · `onmicro-ai/onmicro` | **0** | — | 🔴 **`NO-REMOTE`, and NOT a dead-address finding** |
+
+🔴 **The three `NO-REMOTE` rows are slugs `p373` CONSTRUCTED** to test two product *names*
+(`IBM MARK`, `OnMicro AI`) read off an Open edX proposal page that gives no address.
+🟢 **Per `p372`'s eight-class partition they are FABRICATED negative controls, not absences**
+— the precise class that made `Gap 483`'s figure wrong twice. **They are not published as
+dead, and a successor must not count them.**
+
+🔵 **`algo-sensei`'s `1 081 B / 3b2ca73e81ad` also lands inside `p304`'s `1 060–1 180 B`
+permissive band** — now **nine** samples, still a cheap screen and still not a classifier,
+exactly as `p305` demoted it.
+
+### 🟢 New foundational repo rows this pass: **ZERO**, with the denominator named
+
+🟢 Four mandated global legs ran. 🔴 **Zero education-specific repositories these shelves do
+not carry.** The vertical-platform leg returned a **single vendor's own comparison pages**
+(OpenEduCat, in eight languages) naming Moodle, Open edX, Sakai, ILIAS, Canvas, Chamilo and
+OpenEduCat — 🟢 **all seven already on `verticals/solutions.md`.** 🔵 Published as a
+measurement, per this base's rule that an informed null is what distinguishes a saturated
+channel from an unrun one.
+
 ---
 
 ## Pass 372 · 2026-10-21 — 🔴 **the absence classifier had no class for a LIVE repository, and two passes published two live addresses as dead. 🟢 The rename-redirect control that makes every `GONE` on this base safe was run for the first time — and it holds.**

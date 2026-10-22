@@ -1,0 +1,38 @@
+# p373 — THE FIRST CROSSED (FACTORIAL) REGIONAL-LEG DESIGN ON THIS BASE.  Measured 2026-10-22.
+#
+# WHY.  Four passes have each attributed the regional legs' yield to a DIFFERENT variable:
+#   ACTION PJ  (p207, 2026-10-14)  "Language did nothing in 4 of 4 test cells. The axis is the ORGAN."
+#   ACTION QJ  (agents/trending.md:10915)  "The region SHAPE was never the defect; the regional
+#              cells are saturated on BOTH shapes."
+#   P870       (agents/trending.md:20483)  "The EMEA drought broke on jurisdiction phrasing
+#              — CONFIRMED for EMEA."
+#   Gap 476    (p372, 2026-10-21)  "the near-nils came from a MONOLINGUAL query assumption."
+# Not one of the four CROSSED language against jurisdiction-naming.  p206 was corrected by p207
+# for changing two variables at once and crediting the wrong one; p372 changed the same two
+# variables at once -- its English legs are PAN-REGIONAL ("AI education EMEA ...") while its
+# German and Portuguese legs NAME A COUNTRY ("Deutschland"/"Bundesland", "Brasil") -- and
+# credited language.  p373 crosses the two factors in ONE pass, ONE tool, same day.
+#
+# LIMITATION, stated before the result.  n=1 per cell.  WebSearch is not deterministic and
+# these cells are not re-runs.  The design separates the factors; it does not estimate variance.
+#
+cell	region	query_language	jurisdiction_naming	query	education_specific_dated_facts	verdict
+1	EMEA	German	NONE (pan-regional: "EMEA")	KI Bildung EMEA 2026 Akzeptanz Regulierung Akteure	4 for DE/EU (Telekom-Stiftung Trendmonitor Maerz 2026: ~50% of teachers use AI tools, 88% have engaged little or not at all with the RULES; Digital Omnibus defers Annex III to Dec 2027 and Annex I to Aug 2028; AI Act Art. 4 AI-literacy duty binds providers AND deployers; each member state must stand up >=1 Reallabor by Aug 2026) -- and an EXPLICIT nil for the rest of the region: "keine Daten zur Akzeptanz in anderen EMEA-Laendern"	GREEN productive for Germany, RED nil for non-German EMEA -- in-language WITHOUT jurisdiction-naming reaches only the language's own jurisdiction
+2	EMEA	English	COUNTRY + ORGAN (Germany, KMK)	Germany KMK artificial intelligence schools guidance 2026 competence framework decision	0 for Germany. Returned NORTH AMERICAN state policy instead (Maryland guidance Feb 2026; NYC preliminary guidance Mar 2026; North Carolina model-policy deadline 2026-12-31). The only German item was a PARENT GUIDE citing the KMK recommendation of 2024-10-10	RED NIL -- THE DECISIVE CELL. Organ-naming does NOT rescue an English leg in Germany, so ACTION PJ's "the axis is the ORGAN" does NOT generalise beyond Latin America
+3	LATAM	English	COUNTRY + ORGAN + INSTRUMENT NUMBER (Brazil, CNE, Parecer CP 15/2026)	Brazil CNE Parecer CP 15/2026 artificial intelligence education guidelines homologation MEC	5 (approved 2026-09-01; DOU summary 2026-10-06 edicao 189 secao 1 pagina 18; no normative force until the homologating act is published, Lei no 9.131/1995 art. 2; marks to be given only by teachers and AI barred from deciding pass/fail; 12-month adaptation window with the prohibitions immediate) across FOUR outlets (Mattos Filho, Migalhas, Anup, Poder360)	GREEN productive -- THE SECOND DECISIVE CELL. An ENGLISH leg returned MORE of the Brazilian primary-source locus than p372's Portuguese leg did, so Gap 476 / I4's "in-language is necessary" does NOT generalise either
+4	LATAM	Portuguese	COUNTRY + ORGAN (CNE)	resolucao CNE inteligencia artificial escolas 2026 texto	4 for Brazil, and a CONFLATION: the same result set carried PORTUGAL's Conselho Nacional de Educacao, Recomendacao n.o 4/2026 de 21 de maio, Diario da Republica -- a DIFFERENT country's organ of the SAME NAME and the SAME ACRONYM	YELLOW productive but CONFLATED -- reproduces p372's cell and exposes a two-jurisdiction name collision on the acronym CNE
+#
+# THE RESULT, which reconciles all four prior attributions instead of adding a fifth.
+# Cell 2 and cell 3 point OPPOSITE WAYS, and both are clean:
+#   - Germany: English + organ = NIL.  German is NECESSARY.
+#   - Brazil:  English + organ = PRODUCTIVE.  Portuguese is REDUNDANT.
+# So the necessity of an in-language leg is NOT a property of the query, and NOT a property of
+# the region.  It is a property of THE JURISDICTION'S OWN PUBLICATION CORPUS: Brazilian
+# education policy is carried by English-language legal and business press (Mattos Filho
+# publishes in English; an instrument NUMBER is a language-independent token), German school
+# policy is not carried in English at all.
+# This is why four passes found four different axes: each sampled different jurisdictions.
+#   PJ  sampled Brazil, Mexico, Quebec -- all with English-language legal press -> "language did nothing"
+#   372 sampled Germany                -- no English corpus                     -> "language is the axis"
+# BOTH ARE LOCALLY CORRECT AND NEITHER GENERALISES.  A single global rule will be wrong in one
+# direction or the other for some jurisdiction, in BOTH directions, which is what has happened.

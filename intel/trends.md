@@ -1,13 +1,58 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
 ## Start here — the fourteen trends in one screen
 
 🟢 **This is the index this file exists to give.** Each line is a section below; the
-audit material above `## 1. From pilots to governance` is provenance.
+audit material above `## 🆕 `p373` · 2026-10-22 — audit: what the trend legs returned, and the one trend statement this pass CHANGES
+
+**Evidence:** [`region-leg-crossed`](../evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
+[`attribution-ledger`](../evidence/attribution-ledger.2026-10-22-p373.tsv)
+
+🟢 **Trend 5, *"Regulatory divergence is now a design constraint"*, gains its sharpest
+specimen and does not change.** 🔴 Trend 1, *"From pilots to governance"*, **does** change, in
+one respect worth writing down: **governance is arriving UNHOMOLOGATED.** Brazil's
+`Parecer CNE/CP nº 15/2026` has been approved since **2026-09-01**, summarised in the DOU on
+**2026-10-06**, reported as imminent on **2026-10-13** — and **has no normative force at all**
+until the homologating act is published (**art. 2, Lei nº 9.131/1995**). 🔵 **The engagement
+consequence is specific: a client reading the press believes a rule binds them that does not
+bind them yet, and the prohibitions — unlike the 12-month adequacy window — take effect
+IMMEDIATELY on publication.** 🟢 **So the correct advice is to build to the prohibitions now
+and to the adequacy requirements on the 12-month clock, and to say which is which.**
+
+🔴 **The *"August 2026"* Annex III error is now circulating in GERMAN.** This base has refuted
+it from the English corpus repeatedly (`p365`, `p366`, and `p300`'s inbound catch).
+🟢 **`2027-12-02` stands, and is corroborated this pass from two German sources** reporting the
+Digital Omnibus deferral — **Annex III to December 2027, Annex I to August 2028**. 🔵 **What is
+new is the language of the error, not the error.** An EMEA engagement will now meet the wrong
+date in the client's own language, from a practitioner source they trust, and the rebuttal has
+to be ready in that language.
+
+🟢 **The not-deferred obligation is the one to sell against.** **Art. 4** of the AI Act — the
+**AI-literacy duty** — binds **providers AND deployers**, and a school is a deployer. It is in
+force while Annex III is deferred to **Dec 2027**. 🔵 **The deferral of the hard conformity
+regime is routinely read as "nothing applies until 2027". That reading is wrong**, and the gap
+between the two dates is roughly fourteen months of billable, low-risk literacy and governance
+work. Against it: **Telekom-Stiftung's Trendmonitor (March 2026)** finds **~50 %** of German
+teachers already using AI tools and **88 %** having barely engaged with the rules — demand and
+unreadiness measured in the same survey.
+
+🟡 **Trend 2, *"Evidence becomes a procurement gate"*, gains a counter-signal from LATAM worth
+holding.** The Digital Education Council's 2026 LATAM survey puts **student** appetite for
+AI-assisted feedback at **50 %** and **faculty** use of it at **19 %**. 🔵 **The gate in LATAM
+higher education is not evidence of learning gain — it is faculty consent.** A pilot that
+proves gain and does not bring faculty along will stall at **19 %** regardless of its numbers.
+
+🔵 **No new trend is opened this pass.** 🟢 Three of four regional legs and all four global legs
+returned instruments and figures this base already carries, which is `ACTION QJ`'s saturation
+finding reproduced on the global legs — reported as a measurement rather than converted into a
+fifteenth trend.
+
+---
+## 1. From pilots to governance` is provenance.
 
 1. **From pilots to governance** — 2026 is the year AI in education becomes governed infrastructure.
 2. **Evidence becomes a procurement gate** — buyers want proof of learning gain before they buy.

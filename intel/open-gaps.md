@@ -1,9 +1,81 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
+## Pass 373 · 2026-10-22 — `Gap 485`'s **figure is withdrawn as false at the time of writing**, its channel is **measured and refused on both transports**, and the regional-leg question four passes answered four ways was run as a **crossed design**
+
+**Evidence:** [`gap485-prior-holdings`](../evidence/gap485-prior-holdings.2026-10-22-p373.tsv) ·
+[`primary-text-egress`](../evidence/primary-text-egress.2026-10-22-p373.tsv) ·
+[`region-leg-crossed`](../evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
+[`attribution-ledger`](../evidence/attribution-ledger.2026-10-22-p373.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p373.tsv)
+
+### 🔴 `Gap 485` — RESTATED, with its figure withdrawn
+
+🔴 **As written (`p372`, `2026-10-21`):** *"carried on a single secondary source — a newspaper
+column — with no resolution number and no primary text."* 🔴 **Two of those three clauses were
+already false.** `Parecer CNE/CP nº 15/2026` was named in full in **three files**
+(`README.md:5642`, `intel/open-gaps.md:2019`, `agents/trending.md:7531`), the DOU publication
+was cited, and this base's **own grade** at `open-gaps.md:2019` was **"two-outlet secondary"**.
+🟢 Blame bottoms out at boundary commit `beaab9e`, **`2026-10-19`** — two days before the gap
+was written; enclosing pass sections **280** and **284**, both `2026-10-18`.
+🟢 **Re-derived this pass:** **four** outlets (Mattos Filho, Migalhas, Anup, Poder360) and an
+**exact DOU locus — `2026-10-06`, edição 189, seção 1, página 18**.
+🟢 **True remainder: the ARTICLE TEXT and the homologating act.** 🔴 **And its cost estimate is
+withdrawn too** — `p372` priced the remedy at *"part of one pass, if `gov.br`/CNE hosts answer
+— which is unmeasured"*. **Measured now: `403 connect_rejected` on `curl`, `ENOTFOUND` on
+`WebFetch`.** 🟢 **Reclassified from pass backlog to egress-enabled-run**, with `T61`,
+`ACTION RO`, `Gap 241` and `Gap 487`. 🟢 **The address a successor should go to first:**
+`www.gov.br/mec/pt-br/cne/normas-classificadas-por-assunto/inteligencia-artificial-ia`.
+
+### 🟢 The register
+
+| # | Opened | Where | State |
+|---|---|---|---|
+| 🆕 **488** | **2026-10-22**, pass 373 | `intel/market.md` · `ACTION p373-B` | 🟡 **OPEN.** *"**Portugal's** Conselho Nacional de Educação, `Recomendação n.º 4/2026` de 21 de maio, Diário da República — a named, numbered, dated EMEA instrument on AI in education — is carried on a **search snippet only**, and `diariodarepublica.pt` is proxy-refused on both transports."* 🔴 **Declared with a collision warning:** *"the CNE recommendation on AI in education"* resolves to **two different countries' instruments in two different regions**, and `Gap 485` is scoped to **Brazil** — a later pass must not satisfy it with Portugal's text. 🟢 **Remedy:** an egress-enabled run against `diariodarepublica.pt`; then shelve Portugal's recommendation as an EMEA row in its own right. **Cost: part of one pass once egress exists.** |
+| 🆕 **489** | **2026-10-22**, pass 373 | `evidence/attribution-ledger.2026-10-22-p373.tsv` · `ACTION p373-A` | 🔴 **OPEN, and it is a STRUCTURAL gap, not a fact gap.** *"This base has published **four different attributions** for what makes a regional leg work — `ACTION PJ` (organ), `ACTION QJ` (shape was never the defect), `P870` (jurisdiction phrasing), `Gap 476` (language) — in **four different files, none citing another**. There is no single place where *'what makes a regional leg work'* is recorded."* 🔴 **That is why `p372` repeated `p206`'s two-variables-at-once error with `p207`'s correction committed on this base the whole time.** 🟢 **Remedy:** one owned section, plus a per-jurisdiction corpus-language column so a leg's adequacy is **checkable** rather than argued. **Cost: part of one pass.** |
+| 🆕 **490** | **2026-10-22**, pass 373 | `verticals/solutions.md` · `ACTION p373-C` | 🟡 **OPEN.** *"`IBM MARK` and `OnMicro AI` — two **LTI 1.3** graders named in an Open edX proposal page — have **no address located**. `ibm/mark`, `IBM/mark`, `onmicro-ai/onmicro` were constructed to test them and all answer `NO-REMOTE`."* 🔴 **These are FABRICATED negative controls, not absences**, per `p372`'s partition, and **must not be counted as dead addresses** — the error `Gap 483` made twice. 🟢 They matter because they sit in the **credentialing/interop layer** `p371` identified as this industry's unshelved tier. 🟢 **Remedy:** one search leg per product name, against the Open edX forum and `1EdTech` member lists rather than against GitHub. **Cost: part of one pass.** |
+
+### 🔴 `I4` — the invariant `p372` built last pass does not match the measurement
+
+🔴 **`I4` refuses a published regional nil unless an in-language leg was run.** 🔴 **It is
+satisfiable without doing the thing that works:** `p373`'s cell 1 is an in-language leg with
+**no jurisdiction named**, and it returned an **explicit nil for every EMEA country except the
+language's own** (*"keine Daten zur Akzeptanz in anderen EMEA-Ländern"*) — `I4` would pass it.
+🔴 **And it over-fires:** it would demand a Portuguese leg for Brazil, where cell 3 shows
+**English + organ is sufficient and returns more**.
+🟢 **The condition that matches the measurement has two limbs and is PER-JURISDICTION:** a leg
+must **name a jurisdiction** AND be **in that jurisdiction's publication language where the
+jurisdiction has no English-language corpus**.
+🔵 **NOT patched this pass, deliberately.** `p305`'s standing demand: no pass publishes a new
+standing rule without first running it over this base's own corpus. `I4` lives inside a green
+gate with its own controls, and replacing it needs its own negative control — removing the
+German row must turn the new gate red, as it does the old one. 🟢 **Registered as
+`ACTION p373-A` with `Gap 489`, which is the same work.**
+
+### 🟢 Registered actions
+
+| Action | Limbs |
+|---|---|
+| 🔴 **`ACTION p373-A`** *(ranked first)* | Give *"what makes a regional leg work"* **one owned home** and a **per-jurisdiction corpus-language column**; then replace `I4`'s one-limb test with the two-limb one, negative-controlled. **limb 1:** the column is derivable for the 8 jurisdictions already carried → build it. **limb 2:** it is not → publish the crossed table as the record and leave `I4` standing with its limitation **stated on it** |
+| 🟡 **`ACTION p373-B`** | `Gap 488` — Portugal's `Recomendação n.º 4/2026` at source, **and** a note on the two-CNE collision wherever `Gap 485` is cited |
+| 🔵 **`ACTION p373-C`** | `Gap 490` — locate `IBM MARK` and `OnMicro AI` by **product name**, not by guessed slug |
+| 🟢 **`ACTION p373-D`** | Re-run `p373`'s four cells **a second time** to put variance on them. 🔴 **n=1 per cell is this pass's stated limitation** and the finding rests on two cells pointing opposite ways; a re-run is what turns a design into an estimate |
+
+### 🔵 Carried, unchanged, and not re-argued
+
+🟢 **`Gap 486`** (no successor-enumeration channel — `api.github.com` still `403` this pass) ·
+🟢 **`Gap 487`** (`edugit.org` egress) · 🟢 **`Gap 241`** (EU institutional egress) ·
+🟢 **`T61`** / **`ACTION RO`** (government primary texts) — 🔴 **all four re-confirmed blocked by
+this pass's own egress matrix**, and `Gap 485` now joins them.
+🟢 **`open-gaps.md` item 2** (the `copying` family's uppercase extension): 🔵 **`moodle/moodle`
+is NOT a specimen for it** — its grant reads at **`master/COPYING.txt`** (`35 147 B`,
+`8ceb4b9ee5ad`, GPL-3.0, first-hand this pass) and `COPYING.TXT` is a **404**. The hole is real
+and Moodle does not demonstrate it.
+
+---
 ## Pass 372 · 2026-10-21 — `Gap 483` **closed, and its figure of 46 was wrong in both directions**: ten of the 46 were never addresses, two are LIVE, and the one with a proven successor had been proven six days earlier and filed only in prose
 
 **Evidence:** [`dead-citation-reprobe`](../evidence/dead-citation-reprobe.2026-10-21-p372.tsv) · [`dead-successor-register`](../evidence/dead-successor-register.2026-10-21-p372.tsv) · [`successor-probe`](../evidence/successor-probe.2026-10-21-p372.tsv) · [`rename-redirect-control`](../evidence/rename-redirect-control.2026-10-21-p372.tsv) · [`empty-repo-clone-control`](../evidence/empty-repo-clone-control.2026-10-21-p372.txt) · [`proxy-refusal`](../evidence/proxy-refusal.2026-10-21-p372.tsv) · [`region-leg-inlanguage`](../evidence/region-leg-inlanguage.2026-10-21-p372.tsv)

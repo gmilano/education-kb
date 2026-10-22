@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
 ## Start here — pattern index
@@ -22,6 +22,7 @@ Each one names the specific repos and how to wire them.
 | 8 | Verifiable credentials for skills-based hiring | Employability / workforce engagements |
 | 9 | Licence-clean programming-assessment stack | Coding academy, deliverable must be closed |
 | 10 | Add retention to a tutor that already works | Tutor exists, outcomes do not stick |
+| 13 | 🆕 Assistive feedback that returns comments and never a mark | LATAM HE, Brazilian K-12, or any no-automated-decision statute |
 | 11 | England-curriculum tutor, client keeps the curriculum model | UK engagements |
 | 12 | Process-evidence assessment | Detection-based integrity has failed |
 | 13 | Statutory inclusion deliverable, Colombian school system | LATAM public sector, legal mandate |
@@ -1636,3 +1637,70 @@ standing finding (`p364`) that a permissive headline can carry a copyleft deploy
 component. 🟢 Before quoting this pattern, run `p364-companion-closure` and
 `dependency-licence-closure` over the Opencast tree. **Cost: one partial clone plus two
 offline gate runs** — the same price Pattern 9 and Pattern 11 pay, and for the same reason.
+
+## Pattern 13 — Assistive feedback that returns comments and never a mark
+
+🔵 **Use when** the engagement is LATAM higher education or Brazilian K-12, or anywhere a
+statute bars automated high-stakes decisions — Oklahoma and Maryland in the US, Annex III in
+the EU from `2027-12-02`. 🟢 **It is also the pattern that fits the widest measured demand gap
+on this base:** DEC's 2026 LATAM survey has **50 %** of students wanting AI-assisted feedback
+and **19 %** of faculty providing it.
+
+🔴 **The constraint that shapes the whole build.** Brazil's `Parecer CNE/CP nº 15/2026`
+(approved `2026-09-01`, DOU summary `2026-10-06`, 🔴 **not yet homologated** — no force until
+the homologating act publishes, art. 2 of Lei nº 9.131/1995) is reported to require that
+**marks be given only by teachers**, to **bar AI from deciding pass/fail**, and to prohibit
+**unsupervised AI below the 5th year**. 🔴 **Its prohibitions bite immediately on publication;
+only the adequacy requirements get the 12-month window.** 🟢 **So the mark-writing path must be
+architecturally incapable of being driven by the model — not merely configured not to.**
+
+### The wiring
+
+| Role | Repo | Grant, read first-hand `2026-10-22` |
+|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** · `master/COPYING.txt` · `35 147 B` · `8ceb4b9ee5ad` · 1 959 refs |
+| Feedback generation | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `11 408 B` · `cd2f54e1e506` · 1 493 refs |
+| Who needs feedback first | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · `1 066 B` · `f5f955194636` · 187 refs |
+| Audit trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** · `11 357 B` · `c71d239df917` · 764 refs |
+
+🔵 **Licence note, and it decides the deliverable's shape.** Moodle is **GPL-3.0**: stay on the
+**plugin boundary** and keep the feedback service a **separate process behind its own API**, so
+your work is not a derivative of the LMS. 🟢 Everything doing the actual work is **MIT or
+Apache-2.0**.
+
+### How it goes together
+
+1. **`pykt-toolkit` ranks, it does not judge.** Train a knowledge-tracing model on the LMS's
+   existing attempt history and use it to order students by predicted struggle. 🟢 This is the
+   queue, and it is also the learning-gain instrument you will need for `Trend 2`'s procurement
+   gate.
+2. **`DeepTutor` drafts comments against a rubric** for the top of that queue. 🔴 **Prompt and
+   schema constrain the output to prose and rubric-dimension notes — no numeric field exists in
+   the response object.** A mark it cannot emit is a mark it cannot leak.
+3. **Every draft lands in your own `feedback_draft` table, never in the gradebook.** 🔴 **The
+   service account holds NO grade-write scope in Moodle.** This is the compliance claim, and it
+   is a permissions fact rather than a policy promise — which is what an auditor can check.
+4. **A teacher accepts, edits or rejects each draft in the LMS**, and the teacher's action is
+   what writes the mark. 🟢 **`lrsql` records the xAPI statement for each accept/edit/reject**,
+   so the audit trail shows a human in the loop per mark — the artefact Oklahoma's and
+   Maryland's human-oversight language asks for, and the evidence of teacher authorship the
+   Brazilian rule requires.
+5. **Below the 5th year, the student-facing surface is switched off entirely** and the drafts go
+   only to the teacher. 🟢 One flag, set from the LMS's own year-of-study field.
+
+### What this pattern deliberately does not do
+
+🔴 **It does not score, rank or gate a student, and it does not touch proctoring.** 🟢 That
+keeps it outside EU **Annex III point 3** (which applies `2027-12-02`, **not** August 2026 —
+see `intel/trends.md`) and outside the Brazilian prohibitions. 🔵 **The day a client asks for
+the numeric field, the pattern changes category** and `Pattern 3`'s conformity wrapper and a
+high-risk assessment become the scope, not an add-on.
+
+🟡 **One tool considered and left out, with the reason:**
+[`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) (🟢 Apache-2.0 ·
+`11 357 B` · `c71d239df917` · 208 refs) auto-generates rubrics from a task description, which
+is tempting at step 2. 🔴 **It is built to judge AI agents, not learners**, and nothing in it is
+education-specific. 🟢 **Usable offline to draft a rubric a human then owns; not in the
+request path.**
+
+---

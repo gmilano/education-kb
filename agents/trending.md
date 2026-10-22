@@ -1,7 +1,126 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
+---
+
+## 2026-10-22 · Pass 373 — 🔴 **`Gap 485` was opened asking a successor to fetch what this base ALREADY HELD, better-sourced than the gap described. 🟢 And the regional-leg question that four passes have answered four different ways was run as a CROSSED design for the first time — the two decisive cells point OPPOSITE WAYS, and both are clean.**
+
+🔵 **Dating note.** Every leg and probe below was run **2026-10-22**; artefacts are dated by
+MEASUREMENT, per this base's standing rule.
+
+**Evidence:** [`region-leg-crossed`](../evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
+[`attribution-ledger`](../evidence/attribution-ledger.2026-10-22-p373.tsv) ·
+[`gap485-prior-holdings`](../evidence/gap485-prior-holdings.2026-10-22-p373.tsv) ·
+[`primary-text-egress`](../evidence/primary-text-egress.2026-10-22-p373.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p373.tsv)
+
+### 🔴 The finding, in one sentence
+
+🔴 **`Gap 485` says Brazil's CNE regulation is carried *"on a single secondary source — a
+newspaper column — with no resolution number and no primary text"*. Two of those three clauses
+were already false when the gap was written.** `Parecer CNE/CP nº 15/2026` is named in full in
+**three separate files** — [`README.md:5642`](../README.md), `intel/open-gaps.md:2019` and
+`agents/trending.md:7531` — and this base's own grade for the sourcing, at `open-gaps.md:2019`,
+is **"two-outlet secondary"**, not a newspaper column. 🟢 Blame bottoms out at boundary commit
+`beaab9e`, **2026-10-19**, two days before `p372` wrote the gap; the enclosing append-only pass
+sections are **280** and **284**, both `2026-10-18`.
+
+🔵 **Why this one is worse than the five before it.** `p369` paid this base's signature defect
+on `LICENSE.TXT`, `p371` on the `https://` host rule, `p372` on `apereo/opencast`. Those were
+**facts** that went unwired. 🔴 **Here the unwired thing is a GAP STATEMENT — an instrument
+whose entire purpose is to direct a successor's effort — and what it directed them to do was a
+full discovery leg for a number sitting on three of its own shelves.** The cost of an unwired
+fact is paying twice; the cost of an unwired gap is paying *every successor* until someone
+checks.
+
+### 🟢 The crossed design, and it reconciles four passes instead of adding a fifth claim
+
+🔴 **Four passes, four different answers to one question, in four files, none citing another:**
+
+| Where | The published attribution | What it actually varied |
+|---|---|---|
+| `ACTION PJ` (`p207`) | *"Language did nothing in 4 of 4 cells. **The axis is the ORGAN**"* | shape only — sampled **Brazil, Mexico, Quebec** |
+| `ACTION QJ` | *"**The region SHAPE was never the defect**; the cells are saturated on both shapes"* | shape, counting **novelty** not fact |
+| `P870` | *"The EMEA drought broke on **jurisdiction phrasing** — CONFIRMED for EMEA"* | jurisdiction phrasing |
+| `Gap 476` (`p372`) | *"the near-nils came from a **MONOLINGUAL query assumption**"* | 🔴 **language AND jurisdiction-naming** |
+
+🔴 **`p372` changed two variables at once and credited one — the exact error `p207` corrected
+`p206` for, with that correction committed on this base the whole time.** Its English legs are
+pan-regional (*"AI education EMEA 2026…"*); its German leg names **Deutschland/Bundesland** and
+its Portuguese leg names **Brasil**.
+
+🟢 **`p373` crossed them. One pass, one tool, same day. The two decisive cells:**
+
+| Cell | Language | Jurisdiction named | Result |
+|---|---|---|---|
+| **Germany** | 🔵 **English** | ✅ country + organ (`KMK`) | 🔴 **NIL.** Returned **North American** state policy — Maryland, NYC, North Carolina. The only German item was a *parent guide* citing KMK **2024**-10-10 |
+| **Brazil** | 🔵 **English** | ✅ country + organ + instrument nº | 🟢 **PRODUCTIVE across four outlets** — and it returned **more** of the primary-source locus than `p372`'s Portuguese leg did |
+
+🟢 **They point opposite ways and both are clean, so neither prior rule generalises:**
+for **Germany** an in-language leg is **necessary** — organ-naming does not rescue English.
+For **Brazil** it is **redundant** — English + organ beats Portuguese + country.
+
+🔵 **The reconciliation, which is the actual contribution:** *the necessity of an in-language
+leg is not a property of the query, and not a property of the region — it is a property of
+**the jurisdiction's own publication corpus**.* Brazilian education policy is carried by
+English-language legal and business press (**Mattos Filho** publishes in English; an instrument
+**number** is a language-independent token). German school policy is not carried in English at
+all. 🟢 **That is why four passes found four axes: each sampled different jurisdictions.** `PJ`
+sampled Brazil/Mexico/Quebec — all with English legal press — and concluded language does
+nothing. `p372` sampled Germany and concluded language is everything. **Both are locally
+correct and neither generalises.**
+
+### 🔴 What this does to `I4`, the invariant `p372` built last pass
+
+🔴 **`I4` refuses a published regional nil unless an in-language leg was run. It is satisfiable
+without doing the thing that works, and it over-fires on the thing that does not need doing.**
+A pan-regional in-language query satisfies `I4` — and `p373`'s German cell 1 shows exactly that
+shape returning **an explicit nil for every EMEA country except the language's own**
+(*"keine Daten zur Akzeptanz in anderen EMEA-Ländern"*). Meanwhile `I4` would demand a
+Portuguese leg for Brazil, where English + organ is already sufficient.
+🟢 **The condition that matches the measurement is PER-JURISDICTION and has two limbs: a leg
+must name a jurisdiction AND be in that jurisdiction's publication language *where the
+jurisdiction has no English-language corpus*.** 🔵 **Not patched this pass, deliberately** —
+`p305`'s standing demand is that no pass publishes a new standing rule without first running it
+over this base's own corpus, and `I4` lives inside a green gate. Registered as `ACTION p373-A`.
+
+### 🟢 Agent rows this pass: **ZERO**, and that is the measurement
+
+🟢 All four mandated global legs ran — open-source agents, GitHub trending, vertical platforms,
+industry trends. 🔴 **Not one education-specific repository these shelves do not already
+carry.** They returned general-purpose agent frameworks (`OpenClaw`, `CrewAI`, `AutoGen`,
+`LangGraph`), market-research summaries and vendor blogs. 🔵 **This reproduces `ACTION QJ`'s
+saturation finding on the GLOBAL legs, which `QJ` never tested.** Published as a measurement;
+fewer real rows beat padding.
+
+### 🔴 A bare-name collision, settled by payload — and a positive result for `p370`
+
+🔴 **`sensei` is two different projects**, and a yield-chasing pass would have merged them:
+
+| Slug | Grant, read first-hand `2026-10-22` | What it is |
+|---|---|---|
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT**, `1 081 B`, `3b2ca73e81ad`, 6 refs | **Already carried** (`agents/top.md:1200`) — DSA mentor that withholds solutions |
+| [`mondaycom/sensei`](https://github.com/mondaycom/sensei) | 🟢 **MIT**, `1 067 B`, `40b0d5f2e8b7`, 18 refs | 🔴 **NOT education** — it certifies **AI agents**, not students. **Deliberately not shelved** |
+
+🟢 **Same bare name, same licence family, 14 bytes apart — and the payload fingerprint settles
+it mechanically.** That is `p367`'s bare-slug hazard with a worked specimen, and a positive
+result for `p370`'s payload-identity discipline. 🟢 **`algo-sensei` also REPRODUCES:**
+`repos/trending.md:4611` published `1 081 B / 3b2ca73e81ad` and the re-read this pass is
+byte-identical.
+
+🔵 **One candidate recorded but NOT shelved as an education agent:**
+[`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) — 🟢 **Apache-2.0**,
+`11 357 B`, `c71d239df917`, 208 refs. Auto-generates evaluation rubrics from a task
+description, which is adjacent to assessment — 🔴 **but it judges agents, not learners.**
+Filed with its domain status stated rather than counted, per `p370-domain-check`.
+
+🔴 **And two names that are NOT dead addresses:** `IBM MARK` and `OnMicro AI`, two LTI 1.3
+graders named in an Open edX proposal page **with no address given**. `p373` constructed
+`ibm/mark`, `IBM/mark` and `onmicro-ai/onmicro` to test them; all three answer `NO-REMOTE`.
+🟢 **Per `p372`'s partition these are FABRICATED negative controls, not absences, and are not
+publishable as dead** — the distinction `Gap 483` got wrong twice.
+
 ---
 
 ## 2026-10-21 · Pass 372 — 🔴 **`Gap 483`'s "46 dead addresses" re-probed first-hand: TWELVE OF THE 46 ARE NOT DEAD. Ten were never addresses and two are LIVE repositories holding zero commits, which `p230` and `p371` both published as gone. 🟢 And the one address with a proven successor had been proven SIX DAYS EARLIER and written only into prose.**

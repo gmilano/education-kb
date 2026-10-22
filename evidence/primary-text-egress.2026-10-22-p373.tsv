@@ -1,0 +1,24 @@
+# p373 — THE PRIMARY-TEXT EGRESS MATRIX, MEASURED.  2026-10-22.
+# p372 costed Gap 485's remedy at "part of one pass, IF gov.br/CNE hosts answer from this
+# environment -- which is UNMEASURED."  It is no longer unmeasured.  Measured here on both
+# transports this session has.  A PROXY REFUSAL IS NOT AN ABSENCE: every host below may serve
+# the document perfectly to a client that is allowed to reach it.
+host	document_sought	transport	result	class
+www.gov.br	Parecer CNE/CP no 15/2026, primary text (MEC CNE normas index)	curl -sSL	connect tunnel failed, response 403 -- agent proxy connect_rejected	PROXY-REFUSED, not absent
+www.in.gov.br	DOU 2026-10-06 edicao 189 secao 1 pagina 18 (the parecer's own publication)	curl -sSL	connect tunnel failed, response 403 -- agent proxy connect_rejected	PROXY-REFUSED, not absent
+portal.mec.gov.br	CNE portal	curl -sSL	Could not resolve host	DNS-FAILED
+diariodarepublica.pt	Recomendacao n.o 4/2026 de 21 de maio (PORTUGAL's CNE)	curl -sSL	connect tunnel failed, response 403 -- agent proxy connect_rejected	PROXY-REFUSED, not absent
+diariodarepublica.pt	same	WebFetch	getaddrinfo ENOTFOUND	DNS-FAILED -- the SECOND transport shares the restriction
+www.kmk.org	Grundsaetze fuer digital gestuetzten Unterricht an Deutschen Auslandsschulen, 2026-06-18 (PDF)	curl -sSL	connect tunnel failed, response 403 -- agent proxy connect_rejected	PROXY-REFUSED, not absent
+github.com smart-HTTP (ls-remote, clone)	-- control --	git	OK, 1 493 refs on HKUDS/DeepTutor	GREEN
+raw.githubusercontent.com	-- control --	curl	200 on HKUDS/DeepTutor main/LICENSE	GREEN -- first-hand grant payloads ARE readable this pass
+api.github.com	-- control --	curl	403	PROXY-REFUSED, as p372
+github.com HTML	-- control --	curl	403	PROXY-REFUSED, as p372
+#
+# CONSEQUENCE FOR Gap 485, and it is a DOWNGRADE of p372's cost estimate, not a discharge.
+# The remedy p372 priced at "part of one pass" is NOT AVAILABLE FROM THIS ENVIRONMENT ON EITHER
+# TRANSPORT.  Gap 485 is not closeable here at any cost, and a successor should stop ranking it
+# as ordinary pass backlog -- it needs an egress-enabled run, which is exactly what T61 and
+# ACTION RO already say about every government primary text on this base.  The NEW fact is that
+# WebFetch is not a second channel: it fails at DNS where curl fails at CONNECT, so the two
+# transports do not have independent host allowlists and should not be costed as if they do.

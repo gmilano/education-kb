@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
 ## Start here — the engagement brief
@@ -204,6 +204,92 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🟢 🆕 `p373`: the regional legs CROSSED for the first time — and the two decisive cells point opposite ways, so neither `ACTION PJ`'s rule nor `Gap 476`'s generalises
+
+**Evidence:** [`region-leg-crossed`](../evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
+[`attribution-ledger`](../evidence/attribution-ledger.2026-10-22-p373.tsv) ·
+[`gap485-prior-holdings`](../evidence/gap485-prior-holdings.2026-10-22-p373.tsv) ·
+[`primary-text-egress`](../evidence/primary-text-egress.2026-10-22-p373.tsv)
+
+🔵 All legs run **2026-10-22**, one pass, one tool. 🔴 **Everything in this section is
+SECONDARY** — search-returned reporting, not a government host read at source. The four
+government hosts that would make it primary are **proxy-refused on both transports** (below).
+
+### 🔴 `Gap 485` is restated, not closed — and its figure is withdrawn as false at the time of writing
+
+🔴 **`Gap 485` claimed the Brazilian instrument was carried *"on a single secondary source — a
+newspaper column — with no resolution number and no primary text"*.** At the moment it was
+written this base held `Parecer CNE/CP nº 15/2026` **by name, in three files**, with the DOU
+publication cited, and graded the sourcing itself as **"two-outlet secondary"**.
+🟢 **Re-derived this pass it is stronger still: four outlets** (Mattos Filho — a law firm, on
+the effect of **Lei nº 9.131/1995**; Migalhas; Anup; Poder360) **and an exact DOU locus —
+2026-10-06, edição 189, seção 1, página 18.**
+🟢 **The true remainder of `Gap 485` is the ARTICLE TEXT and the homologating act**, and
+`p373` adds the address an egress-enabled successor should go to first:
+`www.gov.br/mec/pt-br/cne/normas-classificadas-por-assunto/inteligencia-artificial-ia`.
+
+### 🔴 The egress matrix, measured — because `p372` costed this gap against an unmeasured channel
+
+| Host | Document | `curl` | `WebFetch` |
+|---|---|---|---|
+| `www.gov.br` | the parecer, MEC/CNE index | 🔴 `403` `connect_rejected` | — |
+| `www.in.gov.br` | **DOU 2026-10-06 ed. 189** | 🔴 `403` `connect_rejected` | — |
+| `www.kmk.org` | KMK *Grundsätze*, **2026-06-18** | 🔴 `403` `connect_rejected` | — |
+| `diariodarepublica.pt` | **Portugal**, Recomendação nº 4/2026 | 🔴 `403` `connect_rejected` | 🔴 `ENOTFOUND` |
+
+🟢 **`WebFetch` is not a second channel** — it fails at DNS where `curl` fails at CONNECT.
+🔵 **A proxy refusal is not an absence.** 🟢 **Consequence: `Gap 485` is unbuyable from this
+environment at any cost** and should be reclassified with `T61`/`ACTION RO`/`Gap 241` as an
+egress-enabled-run item rather than pass backlog.
+
+### 🟢 EMEA: a SECOND CNE, in a different country, and a name collision worth declaring
+
+🟡 **`p373`'s Portuguese leg returned two different organs under one acronym.** Alongside
+Brazil's CNE it returned **Portugal's Conselho Nacional de Educação, `Recomendação n.º 4/2026`,
+de 21 de maio, published in the Diário da República** — a **named, numbered, dated** EMEA
+instrument on AI in the Portuguese education system. 🟢 **New to these shelves** —
+`diariodarepublica` had **zero** occurrences before this pass. 🔴 **Its text is unread**: the
+host is proxy-refused on both transports.
+🔵 **Declared as a hazard, not just a row:** *"the CNE recommendation on AI in education"*
+resolves to **two different countries' instruments in two different regions**, and a successor
+running a Portuguese-language leg will meet both in one result set. 🟢 **`Gap 485` is correctly
+scoped to Brazil; this note exists so a later pass does not satisfy it with Portugal's text.**
+
+### 🟢 EMEA: the German leg, and what it adds beyond `p372`'s four facts
+
+🟢 **Telekom-Stiftung Trendmonitor, March 2026** — **~50 %** of teachers use AI tools, **88 %**
+have engaged little or not at all with the regulations. 🟢 **KMK** decided an update to the
+competence framework *"Bildung in der digitalen Welt"* in **October 2026**, specifying what
+pupils must learn about AI — 🔴 criticised in the German press for naming **no resources and no
+binding teacher-qualification requirement**. 🟢 **KMK *Grundsätze für digital gestützten
+Unterricht an Deutschen Auslandsschulen*, `2026-06-18`** — a dated primary document, **unread**
+(host refused). 🔵 All three are **new to these shelves** (`Trendmonitor`, `Kompetenzrahmen`,
+`Auslandsschulen`: zero prior occurrences). 🔴 **The KMK recommendation that binds nothing is
+still the October 2024 one** — reproduced for a fourth pass, per `ACTION SQ`.
+
+### 🔴 EMEA: the refuted Annex III date arrives from a FIFTH direction, now in German
+
+🔴 **A German practitioner article in this pass's result set prints *"August 2026"* for full
+high-risk obligations.** 🟢 **It is wrong and this base has refuted it repeatedly: Annex III
+point 3 applies `2027-12-02`; `2026-08-02` is Article 50 transparency.** 🟢 **Corroborated
+within the same leg by two German sources reporting the Digital Omnibus deferral — Annex III to
+December 2027, Annex I to August 2028.** 🔵 **What is new is the LANGUAGE**: the error was
+previously an English-corpus artefact (`p365`, `p366`, and `p300`'s inbound catch). It is now
+circulating in German practitioner guidance, which is what an EMEA client will have read.
+
+### 🟢 North America, APAC, LATAM: the legs ran and returned what this base already holds
+
+🟢 **North America** — 36 % share, $3.68 B→$32 B, 60 %/32 % teacher use, 134 bills/31 states,
+AB 1159, H.R. 8747, Canada's *AI for All*: 🔵 **all already carried.**
+🟢 **APAC** — Vietnam `2026-03-01` (education named high-risk), South Korea `2026-01-22`,
+Taiwan Dec 2025, Japan principles-only: 🔵 **already carried.**
+🟢 **LATAM** — DEC 92 %/79 %, IESALC September 2026: 🔵 **already carried.** 🟢 **New only:**
+the faculty-sentiment split (**72 %** regional vs **57 %** global) and the **19 % faculty /
+50 % student** feedback gap.
+🔵 **Three of four regional legs returned zero new instruments. That is `ACTION QJ`'s
+saturation finding reproduced, and it is reported rather than dressed up.**
+
+---
 ## 🟢 🆕 `p372`: `Gap 476`'s hypothesis TESTED and CONFIRMED — the near-nils were a QUERY-LANGUAGE artefact, and the in-language legs returned a risk-classification regime for school AI in Brazil and the German school sector's own high-risk position
 
 **Evidence:** [`region-leg-inlanguage`](../evidence/region-leg-inlanguage.2026-10-21-p372.tsv)
@@ -689,6 +775,20 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+#### 🆕 `p373`: the leg ran and returned **nothing this file does not already hold** — reported, not padded
+
+🟢 **Every figure the prescribed leg returned is already carried:** **36 %** regional share,
+**$3.68 B (2026) → $32 B (2030)**, **60 %** of US K-12 teachers using AI tools in 2024-25 with
+**32 %** weekly, **134 bills across 31 states**, **California AB 1159**, **H.R. 8747**, and
+Canada's *AI for All* (**2026-06-04** — AI-literacy push, watermarking, **Trusted AI
+Certification**). 🔵 **Zero new instruments.**
+🟢 **The engagement read is unchanged and is the one to lead with:** the recurring statutory
+shape is **human oversight** plus **no automated high-stakes decision** (Oklahoma, Maryland), so
+the sellable work is audit-trail and human-in-the-loop retrofit on tools districts have already
+bought — `Pattern 13` is that build. 🔴 **Not an autonomous grader; the statutes are moving
+against it.**
+
+
 #### 🟢 🆕 `p371`: the supply here is the **state data standard**, and it is Apache-2.0 end to end
 
 🟢 **Measured, not sourced:** of 1 859 backlog addresses graded from payload this pass,
@@ -974,6 +1074,43 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+#### 🆕 `p373`: the obligation that is **NOT** deferred is the one to sell, and the refuted Annex III date now circulates in **German**
+
+🟢 **Annex III point 3 applies `2027-12-02`.** 🟢 **Corroborated this pass from two German
+sources** reporting the **Digital Omnibus** deferral — **Annex III to December 2027, Annex I to
+August 2028**. 🔴 **And a German practitioner article in the same result set still prints
+*"August 2026"*.** 🔵 **What is new is the LANGUAGE of the error, not the error**: it was an
+English-corpus artefact (`p365`, `p366`, `p300`'s inbound catch) and is now in German
+practitioner guidance, which is what an EMEA client will have read. **The rebuttal has to be
+ready in that language.**
+
+🟢 **The commercial point: `Art. 4`'s AI-literacy duty binds providers AND deployers — a school
+is a deployer — and it is in force now, while Annex III is deferred.** 🔵 The common reading
+*"nothing applies until 2027"* is wrong, and the gap between the two dates is roughly **fourteen
+months** of low-risk literacy and governance work. Each member state must also stand up **at
+least one regulatory sandbox (Reallabor) by August 2026**.
+🟡 **Demand and unreadiness, measured in one survey:** Telekom-Stiftung **Trendmonitor, March
+2026** — **~50 %** of German teachers use AI tools, **88 %** have engaged little or not at all
+with the rules. 🔵 New to these shelves.
+
+🟢 **Two dated German instruments located, both UNREAD (host proxy-refused):** KMK
+*Grundsätze für digital gestützten Unterricht an Deutschen Auslandsschulen*, **`2026-06-18`**;
+and a KMK decision of **October 2026** updating the competence framework *"Bildung in der
+digitalen Welt"* to specify what pupils must learn about AI — 🔴 criticised in the German press
+for naming **no resources and no binding teacher-qualification requirement**. 🔴 **The KMK
+recommendation that binds nothing is still the October 2024 one**, reproduced for a fourth pass
+per `ACTION SQ`. 🔴 Germany's implementation sits with the **16 Länder**.
+
+🟡 **A SECOND CNE, in a different country — declared as a collision, not just a row.**
+**Portugal's** Conselho Nacional de Educação, **`Recomendação n.º 4/2026` de 21 de maio**,
+published in the **Diário da República**: a named, numbered, dated EMEA instrument on AI in
+education, 🟢 **new to these shelves** (`diariodarepublica` had zero prior occurrences), 🔴 **its
+text unread — the host is proxy-refused on both transports.** 🔴 ***"The CNE recommendation on
+AI in education"* resolves to two different countries' instruments in two different regions.**
+🟢 `Gap 485` is correctly scoped to **Brazil**; `Gap 488` carries Portugal's, so that a later
+pass does not satisfy one with the other's text.
+
 
 #### 🟢 🆕 `p371`: a **national government service** is now shelvable here — and the EU's own ELM repository is archived
 
@@ -1368,6 +1505,18 @@ modification now has two bases that permit one.
 
 ### APAC
 
+#### 🆕 `p373`: the leg ran, the dates reproduce, **nothing new**
+
+🟢 **Reproduced, all already carried:** **Vietnam's Law on AI** in force **`2026-03-01`**,
+**naming education in its high-risk category**, with up to an 18-month grace for legacy systems;
+**South Korea's AI Basic Act** in force **`2026-01-22`**; **Taiwan's AI Basic Act** passed
+December 2025; **Japan's AI Promotion Act** principles-only with no penalties; **China** holding
+the most binding rules (algorithms, deep synthesis, generative AI). 🔵 **Zero new instruments.**
+🟢 **The engagement read: Vietnam is the near-term forcing function** — an education deployment
+there needs high-risk classification work **this year**, which is `Pattern 3`'s conformity
+scaffolding pointed at a different annex.
+
+
 #### 🟢 🆕 `p371`: the **production-scale national platforms** are here, and this is the fifth independent corroboration
 
 🟢 **Measured:** **58 in-domain addresses place in APAC**, **42 permissive — 72 %, the
@@ -1658,6 +1807,32 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+#### 🆕 `p373`: Brazil's rule is arriving **UNHOMOLOGATED**, and that distinction is the billable part
+
+🔴 **`Parecer CNE/CP nº 15/2026` has NO normative force until the homologating act publishes**
+(**art. 2, Lei nº 9.131/1995**) — approved **`2026-09-01`**, DOU summary **`2026-10-06`**
+(🟢 **exact locus, new this pass: edição 189, seção 1, página 18**), reported on **`2026-10-13`**
+as imminent **with changes**, 🔴 **and still not homologated in any source found.**
+🔴 **Its prohibitions bite immediately on publication; only the adequacy requirements get the
+12-month window.** 🟢 **So the advice is: build to the prohibitions now, to adequacy on the
+clock, and say which is which** — a client reading the press believes a rule binds them that
+does not bind them yet.
+🟢 Reported content: **risk-tiered classification** of school AI, **marks given only by
+teachers** with AI barred from deciding **pass/fail**, **no unsupervised AI below the 5th year**.
+🟢 **Sourcing upgraded to four outlets** (Mattos Filho — a law firm, on the effect of Lei nº
+9.131/1995 — Migalhas, Anup, Poder360), which is what withdraws `Gap 485`'s *"single secondary
+source"* figure.
+
+🟢 **The widest measured demand gap on this base, and the pitch that fits it.** DEC's **2026
+LATAM survey** (**30 000+** responses, **29** institutions): **92 %** of students and **79 %** of
+faculty actively engaging; **72 %** of regional faculty positive about AI in education against
+**57 %** globally. 🔴 **But 50 % of students want AI-assisted feedback and only 19 % of faculty
+provide it.** 🟢 **`Pattern 13` is the compliant shape for exactly that gap: comments, never a
+mark, with no grade-write scope on the service account** — a permissions fact an auditor can
+check, not a policy promise. 🔴 **Do not sell an autonomous grader into Brazilian schools.**
+🔵 **UNESCO IESALC** (September 2026) finds adoption broad and **governance lagging** — carried.
+
 
 #### 🟡 🆕 `p371`: the LATAM supply is **small and differently shaped** — it reaches SIGAA and SIU-Guaraní, which no other region's supply does
 
@@ -1960,6 +2135,35 @@ name a Brazilian engagement stack whose administration, curriculum and psychomet
 are each a real, licence-read repository. Pattern 28 wires them.
 
 ### Global
+
+#### 🆕 `p373`: the global legs are **SATURATED**, and the regional-leg axis is a property of the **jurisdiction**
+
+🔴 **All four mandated global legs ran — open-source agents, GitHub trending, vertical
+platforms, industry trends — and returned ZERO education-specific repositories these shelves do
+not already carry.** They returned general-purpose agent frameworks, market-research summaries
+and vendor blogs; the vertical leg returned **one vendor's own comparison pages** naming Moodle,
+Open edX, Sakai, ILIAS, Canvas, Chamilo and OpenEduCat — 🟢 **all seven already shelved.**
+🔵 **This reproduces `ACTION QJ`'s saturation finding on the GLOBAL legs, which `QJ` never
+tested**, and is published as a measurement: an informed null is what distinguishes a saturated
+channel from an unrun one.
+
+🟢 **The method finding that governs every regional cell above.** Four passes have attributed
+the legs' yield to four different variables — `ACTION PJ` (**organ**), `ACTION QJ` (**shape was
+never the defect**), `P870` (**jurisdiction phrasing**), `Gap 476` (**language**) — in four
+files, none citing another. 🟢 **`p373` crossed language against jurisdiction-naming for the
+first time.** The two decisive cells point **opposite ways** and both are clean: **English +
+organ is NIL for Germany**, and **English + organ is PRODUCTIVE for Brazil, returning more than
+`p372`'s Portuguese leg did.**
+🔵 **So the necessity of an in-language leg is not a property of the query and not a property of
+the region — it is a property of the JURISDICTION'S OWN PUBLICATION CORPUS.** Brazilian
+education policy is carried by English-language legal press; German school policy is not carried
+in English at all. 🟢 **That is why four passes found four axes: each sampled different
+jurisdictions, and all four are locally correct.**
+🔴 **Stated limitation: n=1 per cell**; the design separates the factors, it does not estimate
+variance (`ACTION p373-D`). Evidence:
+[`region-leg-crossed`](../evidence/region-leg-crossed.2026-10-22-p373.tsv) ·
+[`attribution-ledger`](../evidence/attribution-ledger.2026-10-22-p373.tsv)
+
 
 **`p364` adds one funding instrument and one engagement question.** 🟢 **The instrument:
 the Gates Foundation pledged at least US$1 billion over two years for equitable AI

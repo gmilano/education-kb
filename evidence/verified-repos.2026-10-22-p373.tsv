@@ -1,0 +1,35 @@
+# p373 — FIRST-HAND REPOSITORY PROBES.  Measured 2026-10-22.
+# Transport: `git ls-remote https://github.com/<slug>` for existence and ref count;
+# `curl https://raw.githubusercontent.com/<slug>/<branch>/LICENSE` for the grant PAYLOAD.
+# api.github.com and github.com HTML are both 403 from here, so there are NO star counts in
+# this table.  A star count this pass could only be hearsay, and is therefore omitted rather
+# than carried over from a search snippet.
+slug	refs	licence_payload	bytes	sha256_12	family	on_these_shelves	verdict
+karanb192/algo-sensei	6	main/LICENSE	1081	3b2ca73e81ad	MIT	YES -- agents/top.md:1200, repos/trending.md:4611	GREEN REPRODUCES. repos/trending.md:4611 published "MIT 1 081 B 3b2ca73e81ad"; re-read first-hand this pass, byte-identical. A prior pass's payload fingerprint reproduces exactly
+mondaycom/sensei	18	main/LICENSE	1067	40b0d5f2e8b7	MIT	NO	NOT SHELVED, AND DELIBERATELY NOT SHELVED -- see the collision note below. Not an education project: it tests, evaluates and certifies AI AGENTS, not students
+agentscope-ai/openjudge	208	main/LICENSE	11357	c71d239df917	Apache-2.0	NO	NOT SHELVED AS AN EDUCATION AGENT. A general agent/chatbot evaluation framework that auto-generates rubrics from a task description. Adjacent, not education-specific; recorded as a candidate with its domain status stated, per p370-domain-check
+HKUDS/DeepTutor	1493	main/LICENSE	11408	cd2f54e1e506	Apache-2.0	YES	GREEN control -- the shelf's anchor row, re-verified live this pass
+ibm/mark	0	--	--	--	--	NO	NO-REMOTE -- AND THIS IS NOT A DEAD-ADDRESS FINDING. "IBM MARK" is a NAME read off an Open edX proposal page; the slug was CONSTRUCTED by p373 to test it. Per p372's partition this is a FABRICATED negative control, not an absence. NOT publishable as dead
+IBM/mark	0	--	--	--	--	NO	NO-REMOTE -- same class, second capitalisation tried
+onmicro-ai/onmicro	0	--	--	--	--	NO	NO-REMOTE -- same class. "OnMicro AI" is a NAME with no address located
+#
+# THE BARE-NAME COLLISION, which is a genuine hazard and is settled here by payload.
+# "sensei" on these shelves is karanb192/algo-sensei -- MIT, 1 081 B, 3b2ca73e81ad, a DSA
+# interview mentor that withholds solutions, already carried at agents/top.md:1200.
+# "sensei" in this week's search corpus is mondaycom/sensei -- MIT, 1 067 B, 40b0d5f2e8b7, an
+# agent-certification engine with no education function at all.
+# TWO DIFFERENT PROJECTS, SAME BARE NAME, SAME LICENCE FAMILY, 14 BYTES APART.
+# A yield-chasing pass that merged them would put a non-education row on the agent shelf under
+# a name the shelf already carries, and the licence column would not flinch.
+# GREEN: the 14-byte payload difference settles it mechanically, which is a positive result for
+# p370's ref-set/payload identity discipline -- the instrument that exists for exactly this.
+# This is the hazard p367's bare-slug channel was built for, now with a worked specimen.
+#
+# NEW EDUCATION-SPECIFIC AGENT ROWS THIS PASS: ZERO.
+# Four mandated global legs ran (open-source agents / GitHub trending / vertical platforms /
+# industry trends).  They returned general-purpose agent frameworks, market-research summaries
+# and vendor blogs.  NOT ONE education-specific repository that these shelves do not already
+# carry.  This REPRODUCES ACTION QJ's finding -- "the regional cells are saturated on BOTH
+# shapes" -- on the GLOBAL legs, which QJ did not test.
+# Published as a measurement.  Fewer real rows beat padding, and a zero with a named
+# denominator is information.

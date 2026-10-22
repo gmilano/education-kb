@@ -1,0 +1,23 @@
+# p373 — THE ATTRIBUTION LEDGER.  Measured 2026-10-22 by reading this base's own committed text.
+# Every claim this base has published about WHY the regional legs return what they return,
+# with WHAT EACH ONE ACTUALLY VARIED.  The point of the table is the last column.
+pass_or_action	where_committed	the_published_attribution	what_the_leg_actually_varied	confounded
+p206	superseded by p207	"the hole was the query LANGUAGE"	language AND naming the ministry	YES -- and p207 said so
+ACTION PJ (p207)	intel/open-gaps.md:5094 + evidence/query-shape-control.2026-10-14-p207.tsv	"Language did nothing in 4 of 4 test cells. The axis is the ORGAN."	query SHAPE, holding language; 4 cells, all in Brazil / Mexico / Quebec	NO for its sample -- but GENERALISED beyond it, and cell 2 of p373 refutes the generalisation
+ACTION QJ	agents/trending.md:10915	"The region SHAPE was never the defect; the regional cells are saturated on BOTH shapes"	shape, measuring NEW instruments only (yield of NOVELTY, not yield of FACT)	NO -- but it answers a DIFFERENT question from PJ and the two have never been read together
+P870	agents/trending.md:20483	"The EMEA drought broke on jurisdiction phrasing -- CONFIRMED for EMEA"	jurisdiction phrasing	NO -- and it AGREES with p373 cell 1, which no later pass noticed
+Gap 476 (p372)	README.md:1 + evidence/region-leg-inlanguage.2026-10-21-p372.tsv	"the regional legs' near-nils came from a MONOLINGUAL query assumption"	language AND jurisdiction-naming -- its English legs are pan-regional, its German leg names Deutschland/Bundesland and its Portuguese leg names Brasil	YES -- the SAME confound p207 corrected p206 for, 165 passes later
+p373	this pass	the necessity of an in-language leg is a property of the JURISDICTION'S PUBLICATION CORPUS, not of the query and not of the region	language CROSSED WITH jurisdiction-naming, 4 cells, one pass, one tool	NO -- but n=1 per cell, stated
+#
+# THE DEFECT CLASS, and it is this base's signature one for the sixth consecutive pass.
+# p369 paid it on LICENSE.TXT, p371 on the https:// host rule, p372 on apereo/opencast ->
+# opencast/opencast, and p372 ITSELF paid it a second time without noticing: ACTION PJ's
+# correction -- "p206 changed two variables at once and credited the wrong one" -- was sitting
+# in intel/open-gaps.md, committed, when p372 changed the same two variables at once and
+# credited the wrong one.  Committed knowledge that is not wired into the next instrument gets
+# paid for twice; a committed CORRECTION that is not wired in gets REPEATED.
+#
+# AND THE STRUCTURAL REASON, which is worth more than the finding: PJ, QJ, P870 and Gap 476 are
+# four answers to ONE question, held in FOUR DIFFERENT FILES, none of them citing another.
+# There is no single place on this base where "what makes a regional leg work" is recorded.
+# That is what ACTION p373-A asks for.
