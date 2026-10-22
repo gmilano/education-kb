@@ -1,0 +1,18 @@
+host	http	verdict
+api.github.com	403	REFUSED: no star counts, no commit activity, no contributors (replicates p388-p390)
+github.com (HTML)	403	REFUSED
+registry.npmjs.org	200	OPEN: search + release dates
+pypi.org	200	OPEN: release dates
+repo.packagist.org	200	OPEN: PHP release dates + licence array
+gitlab.com/api/v4	200	OPEN (already instrumented since p329 / compose/code/gitlab-api-channel)
+raw.githubusercontent.com	200	OPEN: READMEs and licence payloads
+git (anonymous clone)	OK	OPEN: real default ref, HEAD sha, commit date, payload licence
+eur-lex.europa.eu	ENOTFOUND	REFUSED (DNS): the EU primary text remains unreadable; EMEA dates rest on secondary corroboration
+zenodo.org	000	REFUSED: Gap 387-C stays open
+doi.org	000	REFUSED: DOI-deposited supply still unreadable
+moodle.org	000	REFUSED: the Moodle plugin directory is still not a channel
+huggingface.co/api	000	REFUSED
+codeberg.org/api	000	REFUSED
+api.crates.io	000	REFUSED
+api.openalex.org	000	REFUSED
+sourceforge.net	403	REFUSED

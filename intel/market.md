@@ -367,6 +367,30 @@ returns market research.*
   in 2024-25 and **32% weekly**. Quote with the source named, never as bare figures — the *Market
   size* range above is the honest form.
 
+
+#### 🆕 `p391` Qualify the district before the pitch — the targeting data is open, keyless and MIT
+
+🟢 **The opportunity:** US school AI money is not discretionary the way enterprise AI money is — it
+arrives on identifiable federal, state and local lines, and the largest flexible federal line,
+**Title I**, is allocated on **Census child-poverty counts rather than enrolment**. That means a
+studio can price a pilot against a named district's real budget *before* the first call, and almost
+nobody does.
+
+[`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data) (🟢 **MIT**,
+HEAD 2026-10-21) exposes four keyless federal sources as MCP tools: the **NCES Common Core of Data**
+district and school directory (enrolment, teacher counts, charter/magnet status, grade range,
+free/reduced-price lunch counts), the **CCD F-33 school-district finance survey** (revenue split
+federal / state / local, expenditure by function, **computed per-pupil spending**) and **Census
+SAIPE** child-poverty estimates for ages 5–17. Wiring and the three caveats are `Pattern W`.
+
+🔴 **The qualifier that keeps this honest:** the finance survey **lags the directory by 1–2 years**,
+the integration is **unofficial**, and the default endpoint is a **hosted gateway** — the data is
+public, but which districts a studio is sizing up is commercially sensitive, so self-host before
+running it against a named client list.
+
+🟢 **Where the margin is:** high child-poverty rate **plus** low per-pupil spend identifies districts
+with federal money and no incumbent vendor — the cheapest pilot to land and the hardest to displace.
+
 ### EMEA
 
 **Regulation — the dates are the product.**
@@ -546,6 +570,32 @@ before concluding anything about EMEA supply or adoption depth.
   [Kolibri](https://github.com/learningequality/kolibri) (MIT, committed **0 d**) — offline-first by
   design — and it is not African in origin.
 
+
+#### 🆕 `p391` The LTI integration path is open, which changes the cost of an EMEA LMS engagement
+
+🟢 EMEA institutional education runs on **Moodle, ILIAS, Chamilo and Open edX** — copyleft platforms
+where the commercial question is always *how does permissive work talk to an AGPL/GPL platform without
+being absorbed by it*. The answer is the **LTI 1.3 boundary**, and `p390` had recorded that boundary
+as having no maintained implementation.
+
+🔴 **That was wrong, and the correction is worth money here specifically.** Both
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0, npm **v7.0.7, 2026-10-06**, 207
+versions) and [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library)
+(Apache-2.0, packagist **v6.4.4, 2026-09-23**, 68 versions) are live. An EMEA proposal therefore does
+**not** need to budget for vendoring and security-reviewing a six-year-stale JWT/key-rotation library
+— it needs a maintained dependency and an integration. See `Trend 19`.
+
+🔴 **What it does add to the budget:** there is **no maintained Python LTI library**
+([`pylti1.3`](https://github.com/dmitry-viskov/pylti1.3): 1,431 days, PyPI frozen at 2022-11-20), so
+the interop edge is a **separate Node or PHP service** in front of a Python agent. That is a real
+deployment component, not a library call — cost it explicitly (`Gap 391-A`).
+
+🔵 **Regulatory position unchanged this pass.** Four regional legs and a targeted EU Digital Omnibus
+leg returned nothing this base does not already hold more precisely. 🔴 And `eur-lex.europa.eu` is
+**DNS-unreachable** from this sandbox, so the EU dates on these shelves still rest on multi-house
+secondary corroboration rather than the primary text — stated so no one mistakes repetition for
+verification.
+
 ### APAC
 
 **Regulation — no single model, and education is explicitly named in one regime.**
@@ -700,6 +750,25 @@ before concluding anything about EMEA supply or adoption depth.
   26%, Singapore 28%, Japan and Malaysia 29%, **South Korea 31%**, with Australia and New Zealand
   higher. Teacher-facing deployments do not meet this resistance; student-facing ones do — which is
   the same conclusion *Trend 5* reached from growth data.
+
+
+#### 🆕 `p391` APAC's export is now a *packaging model*, not only repositories
+
+`Trend 14` recorded APAC as the net exporter of open-source education AI. This pass sharpens what is
+being exported: **the harness-extension model**. Three MIT education plugins to the *same* agent
+harness, by three unrelated maintainers, all published within about ten days —
+[`BaronCyrus/dsh-aha-tutor`](https://github.com/BaronCyrus/dsh-aha-tutor) (tutor),
+[`SenmuuuuW/dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor) (diagnosis-first
+runtime) and [`GuoMonth/dsh-multi-tenant`](https://github.com/GuoMonth/dsh-multi-tenant) (K8s + OIDC
+multi-tenant hosting) — all China-origin, all bilingual EN/zh-CN. `Trend 18` has the mechanism.
+
+🟢 **The opportunity for a studio:** these ship faster and cheaper than anything built application-first,
+and the **separation of pedagogy from runtime** that `dsh-diagnostic-tutor` demonstrates is directly
+reusable in a regulated market (`Pattern X`) — an auditor can read the teaching policy without reading
+the application.
+
+🔴 **The constraint to price in:** a harness extension is not deployable without its harness, so an
+engagement that cannot adopt DeepSeek Harness buys the *structure*, not the package.
 
 ### LATAM
 
@@ -947,6 +1016,27 @@ build-vs-buy opening in the entire rotation.**
 - 🟡 **Mexico: informed gap.** No education-specific AI guidance or student-data rule for Mexico was
   found in this pass. The general position — data-protection law in force, no AI statute — is all that
   is supported. Stated rather than inferred.
+
+
+#### 🆕 `p391` An informed gap, not coverage: there is no LATAM analogue of the district-targeting data
+
+🔴 **Stated explicitly because silence here would look like coverage.** The North America opportunity
+added this pass rests on US federal data being **open, keyless and per-district** (NCES CCD, CCD F-33
+finance, Census SAIPE). **No equivalent instrument exists on these shelves for LATAM** — no
+per-district enrolment, spend or poverty source that a studio could use to size and price a pilot
+before the first meeting. Brazil's INEP and Mexico's SEP publish education statistics, but nothing
+was found this pass exposing them as a queryable, granted component, and `zenodo.org` and `doi.org`
+— the channels most likely to carry a research-deposited one — are **both DNS-unreachable** here.
+
+Recorded as `Gap 391-B`. 🔵 It is a **channel-and-supply** gap, not a claim that the data does not
+exist: a pass with working DNS to those hosts, or one that reads INEP/SEP portals directly, should
+re-test it rather than inherit this line.
+
+🟢 **What has not changed:** `p387`'s replacement claim still stands — LATAM's shortage is not agents
+(Tier 4 shelves four LATAM-native ones) but **tenancy, support and institution-grade packaging**, which
+remains LATAM opportunity 7 above. 🟡 `GuoMonth/dsh-multi-tenant` (MIT) supplies a **generic**
+multi-tenant hosting substrate that a LATAM integrator could use for the hosting half of that gap —
+it has no LMS surface, so it narrows the problem rather than solving it.
 
 ## Sources
 

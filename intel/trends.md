@@ -362,6 +362,16 @@ the repo, which is private, but from the artefact, which is not. 🔵 And the co
 internalise: **commercial education vendors are starting to distribute as closed SaaS with an npm
 veneer.** The npm scope looks like open source, installs like open source, and grants nothing.
 
+🔵 🆕 `p391` **The channel now has a decay curve, not just a verdict.** Re-run with 32 queries of
+*fresh* vocabulary (tenancy, SEN/IEP, proctoring, QTI, xAPI, OneRoster, FERPA, standards, personas):
+**321** addresses absent from this base → 37 past a domain filter → 11 probed → **3 shelvable**.
+That is **0.9%**, against `p388`'s **5.7%** (22 of 383). 🟢 The channel is **depleting, not
+exhausted** — it still produced three rows, one of which opened a category (`Pattern W`). 🔴 But the
+seam `p388` opened is largely mined, so the next pass should change **channel**, not vocabulary.
+🔴 **And the instrument nearly lied:** the first draft of the domain filter matched the query column
+of its own output and "confirmed" 37 education rows that were Vercel, AWS and Storybook packages.
+Caught before a shelf. *A filter that scores its own prompt is not a filter.*
+
 ## Trend 13 — 🆕 `p389` The supply has a currency problem, and it is now a number
 
 This base has built a careful discipline about *licences* and almost none about *time*. `p387` and
@@ -527,3 +537,60 @@ supply, not a null in demand** — Africa is among the fastest-growing online-ed
 client engagement in those languages the honest position is: **the substrate is permissive and ready,
 the localised tutor does not exist and would be built, and Common Voice is where its evaluation set
 comes from.**
+
+
+## Trend 18 — 🆕 `p391` Education AI is shipping as **harness extensions**, not standalone applications
+
+Three of this base's education rows are now plugins to the *same* agent harness, by **three
+unrelated maintainers**, all MIT, all published inside about ten days:
+
+| row | what it is | published |
+|---|---|---|
+| [`BaronCyrus/dsh-aha-tutor`](https://github.com/BaronCyrus/dsh-aha-tutor) (`p388`, Tier 1) | narrated-blackboard adaptive tutor | npm v1.7.0, 2026-10-22 |
+| [`SenmuuuuW/dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor) (🆕 `p391`, Tier 1) | diagnosis-first learning runtime | npm v0.1.1, 2026-10-17 |
+| [`GuoMonth/dsh-multi-tenant`](https://github.com/GuoMonth/dsh-multi-tenant) (🆕 `p391`) | K8s + OIDC multi-tenant hosting for the same harness | npm v0.10.0-rc.1, 2026-10-12 |
+
+They are extensions to **DeepSeek Harness**, and the pattern is not harness-specific — this pass also
+read [`mackt/pi-language-tutor`](https://github.com/mackt/pi-language-tutor) (MIT) as an extension to
+the Pi agent. 🟢 **Why it is a trend and not a coincidence:** a harness extension inherits model
+plumbing, tool calling, auth, UI shell and a distribution channel for free, so a single maintainer can
+ship a credible tutor in weeks. The economics now favour the plugin over the application.
+
+🔵 **The operational consequence, and it explains a channel result this base has hit repeatedly.** The
+distribution channel for education AI is becoming **the agent harness's package registry** — which is
+why `registry.npmjs.org` keeps yielding education supply while `moodle.org` has never once been
+reachable *or* necessary. Looking for education AI in LMS plugin directories is looking where it was
+built in 2019.
+
+🔴 **The cost a studio inherits, stated plainly.** A harness extension is **not deployable without its
+harness**. `dsh-diagnostic-tutor` requires DeepSeek Harness; adopting it means adopting that runtime,
+its update cadence and its governance. For a client who cannot, the move is to copy the *structure*
+(see `Pattern X`) rather than the package — which is exactly why `Pattern X` separates the pedagogy
+from the runtime instead of recommending the repository wholesale.
+
+## Trend 19 — 🆕 `p391` The standards body's reference implementation goes stale; the **vendor fork** carries the maintenance
+
+`p390` dated [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) at 2,332
+days and concluded the LTI 1.3 integration path had no installable implementation. The grant and the
+dating were both right; the conclusion was wrong, because the maintained line is not at the
+authoritative-looking address:
+
+| address | last commit | registry | verdict |
+|---|---|---|---|
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **2026-10-16** | packagist `lti-1p3-tool` **v6.4.4**, 68 versions, 2026-09-23 | 🟢 **install this** |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Node) | **2026-10-13** | npm `ltijs` **v7.0.7**, 207 versions, 2026-10-06 | 🟢 **install this** |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 2020-06-03 | — | 🔴 spec citation only |
+| [`IMSGlobal/lti-1-3-php-library`](https://github.com/IMSGlobal/lti-1-3-php-library) | 2020-06-03, **identical sha `3a192de`** | — | 🔴 the same project, renamed org |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (Python) | 2022-11-21 | PyPI `PyLTI1p3` 2.0.0, **2022-11-20** | 🔴 genuinely dead |
+
+🟢 **The generalisable rule:** in standards-driven education interop, the consortium publishes the
+spec and a demonstration; a **vendor with production traffic** maintains the library. So when a
+reference implementation dates badly, the next question is *who ships this in production* — not
+*should we vendor the spec*. Check the fork network and the package registry before concluding a path
+is closed.
+
+🔴 **And the language asymmetry is the architecture constraint.** Node and PHP have maintained LTI
+1.3; **Python does not**, and almost every agent on these shelves is Python. The interop edge is
+therefore a **separate Node or PHP service** in front of the agent — not a library call inside it.
+That is a deployment component a proposal has to cost, and it is recorded as `Gap 391-A`.
+

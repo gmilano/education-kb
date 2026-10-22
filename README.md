@@ -153,11 +153,11 @@ are re-derived and restated below.
 ### 🔵 The address census, re-derived as the LAST act before this commit
 
 🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
-**after** every shelf write, with `p351`'s instrument: **2 641** harvested shapes → **34** are not
-addresses → **2 607 addresses**.
+**after** every shelf write, with `p351`'s instrument: **2 660** harvested shapes → **34** are not
+addresses → **2 626 addresses**.
 
-🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 607** channel-U
-addresses and **3 031** channel-B survivors give **3 419 addresses over both channels**.
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 626** channel-U
+addresses and **3 063** channel-B survivors give **3 444 addresses over both channels**.
 
 🟢 **The delta is +28 on channel U** (`p387` published 2 579) and **+1 on channel B** — the 22 granted
 addresses this pass shelved, their siblings and the ungranted/unreadable rows recorded beside them,

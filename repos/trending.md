@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p391` — **GITHUB TRENDING IS 403 FOR A TENTH PASS. 🔴 THE FOUNDATION `p390` DECLARED ABANDONED HAS A MAINTAINED SUCCESSOR IT NEVER LOOKED FOR — TWO OF THEM. 🟢 TWO NEW FOUNDATION ROWS, AND THE PYTHON LTI ROUTE IS CONFIRMED DEAD.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p391.tsv) — 17 addresses
+probed, 16 live, 1 unreadable, every licence read from the payload at the **real default ref** ·
+[`npm-discovery-yield`](../evidence/npm-discovery-yield.2026-10-22-p391.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p391.tsv). Full narrative in
+[`agents/trending.md`](../agents/trending.md).
+
+🔴 **`github.com/trending` is still `403`** — tenth consecutive pass. No trending *ranking* is
+readable here, so this section reports what the **registry and `git` channels** surface instead, and
+says so rather than presenting a ranking it cannot see.
+
+### 🔴 The foundation correction
+
+[`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) — which `p390`
+demoted this morning at **2,332 days**, correctly — has a **maintained successor in two languages**,
+and the PHP one was already in this base's harvest history, unshelved:
+
+| address | last commit | registry | verdict |
+|---|---|---|---|
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **2026-10-16** | packagist `lti-1p3-tool` **v6.4.4**, 68 versions, 2026-09-23 | 🟢 **Apache-2.0 — new foundation row** |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | **2026-10-13** | npm `ltijs` **v7.0.7**, 207 versions, 2026-10-06 | 🟢 **Apache-2.0 — new foundation row**, and the better default for an agent stack |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 2022-11-21 | PyPI `PyLTI1p3` 2.0.0, **2022-11-20** | 🔴 **MIT and dead** — 1,431 days, 29 releases, none since |
+
+🆕 `Gap 391-A`: with Python's LTI library dead and most agents here written in Python, the interop
+edge is a **separate Node or PHP service**, not an in-process library. Costed as a deployment
+component. `Trend 19` has the general rule.
+
+### 🟢 Two new foundation rows from the registry sweep
+
+- [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) — 🟢 **MIT**, HEAD
+  **2026-10-18**. A **permissive headless alternative to H5P**: pure scoring engine, **rubric and
+  deferred grading**, attempt plans, redaction and an **xAPI builder**, zero runtime deps beyond Zod.
+  Shelved in Tier 2.
+- [`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data) — 🟢 **MIT**,
+  HEAD **2026-10-21**. US K-12 **district finance and child poverty** over keyless federal data
+  (NCES CCD, CCD F-33, Census SAIPE). Shelved in Tier 4; wiring and caveats in `Pattern W`.
+
+🔴 **Not shelved, and why:** [`moodlehq/design-system`](https://github.com/moodlehq/design-system) is
+**GPL-3.0-only** and UI tokens only, despite being the official Moodle org;
+[`OpenSourceAGI/qwksearch-research-agent`](https://github.com/OpenSourceAGI/qwksearch-research-agent)
+carries a **bespoke non-OSI licence (PROSPER 1.0.0)** in a 9,655 B `LICENSE.md`; and
+[`htl-leo-novedu/novedu-app`](https://github.com/htl-leo-novedu/novedu-app) (EMEA, Austrian school)
+has **no licence file at all**.
+
+🔵 **Channel yield, stated as a number:** 321 addresses absent from this base → 37 past the domain
+filter → 11 probed → **3 shelvable**. **0.9%**, against `p388`'s **5.7%** on the same channel.
+`DEPLETING`, not exhausted.
+
 ## 🟢 🆕 2026-10-22 · `p390` — **GITHUB TRENDING IS 403 FOR A NINTH PASS. THIS PASS STOPPED ASKING AND AUDITED THE SHELVES INSTEAD: 158 ADDRESSES, 145 LIVE, EVERY RECOMMENDATION DATED. 🔴 FOUR SHELVED FOUNDATIONS ARE PAST 1,300 DAYS AND ONE OF THEM IS THE LTI LIBRARY.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p390.tsv) — 158 addresses,

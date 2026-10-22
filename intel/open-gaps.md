@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 391 · 2026-10-22 — **THE THIRD INSTANCE OF ONE ERROR, AND THIS TIME IT COST A RECOMMENDATION PUBLISHED THE SAME DAY: A STALE UPSTREAM IS NOT A DEAD DEPENDENCY. 🔴 THE REAL GAP IS THAT THIS BASE'S HARVEST HISTORY HAS NO PROMOTION MECHANISM TO ITS SHELVES.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p391.tsv) — 17 probed, 16 live ·
+[`npm-discovery-yield`](../evidence/npm-discovery-yield.2026-10-22-p391.tsv) — 321 → 3 ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p391.tsv) — 17 hosts.
+
+### 🔴 New gaps
+
+- **`Gap 391-A`: there is no maintained Python LTI 1.3 library, and that is an architecture
+  constraint rather than a shelf note.** [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3)
+  (MIT) last moved **2022-11-21 — 1,431 days**; PyPI `PyLTI1p3` **2.0.0, published 2022-11-20**, 29
+  releases, none since. Node ([`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), npm v7.0.7,
+  2026-10-06) and PHP ([`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library),
+  packagist v6.4.4, 2026-09-23) are both live. Almost every agent on these shelves is Python, so the
+  interop edge must be a **separate Node or PHP service in front of the agent** — a deployment
+  component every LMS-integration proposal has to cost. 🔵 **Closing this gap means a maintained
+  Python implementation existing, not a workaround**; until then the workaround is the recommendation.
+
+- **`Gap 391-B`: the district-targeting instrument is North America only, and there is no analogue
+  for any other region.** [`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data)
+  (MIT) makes a US pilot pricable before the first call — per-district enrolment, **per-pupil spend**
+  and **Census child-poverty counts** (the Title I basis). **Nothing equivalent exists here for EMEA,
+  APAC or LATAM.** Brazil's INEP and Mexico's SEP publish education statistics; nothing was found this
+  pass exposing them as a queryable granted component, and `zenodo.org` / `doi.org` — the likeliest
+  carriers of a research-deposited one — are **both DNS-unreachable**. 🔵 Recorded as a
+  **channel-and-supply** gap, not as a claim the data does not exist. Stated explicitly on
+  `intel/market.md` under LATAM because silence there would read as coverage.
+
+- **`Gap 391-C`: there is no granted proctoring row, and proctoring is an Annex III high-risk
+  surface.** [`InCruiter-NewProducts/proctoring-sdk`](https://github.com/InCruiter-NewProducts/proctoring-sdk)
+  is published on npm (2026-09-25) and its repository is **unreadable** — the `p388`
+  *published-but-unreadable* class. Proctoring, AI-detection in assessment and exam scoring are
+  exactly the surfaces the EU AI Act names, so a studio asked about them has **nothing permissive to
+  start from** on these shelves. 🔵 A blobless clone cannot tell private from deleted, so this is
+  `DEAD-OR-PRIVATE`, not "removed".
+
+- **🔴 `Gap 391-D`: the harvest history does not promote to the shelves, and nothing in this base
+  does it except a pass that happens to look.** This is now the **third instance of one error**, and
+  the first to cost a recommendation published the same day:
+  | pass | the absence published | where the refutation already was |
+  |---|---|---|
+  | `Gap 386-C` | *"LATAM-native agent supply is structural, not a search artefact"* | three granted LATAM agents in `agents/trending.md`, unshelved for four passes |
+  | `p387` | *a null leg reported as a null supply* | two legs in Portuguese and Spanish |
+  | 🆕 `p391` | `p390`'s finding #1: *"LTI 1.3 — a spec reference to vendor, never a dependency to install"* | `packbackbooks/lti-1-3-php-library`, **already dated, licence-read and registry-confirmed in `agents/trending.md`** |
+  🔵 The generalisation: **`agents/trending.md` and `repos/trending.md` are append-only harvest logs,
+  and the shelves are hand-curated — so a fact can be verified in this base and absent from its
+  recommendations indefinitely.** Every instance so far was caught by accident. 🔴 **And this pass's first draft of this gap was wrong about the remedy — corrected here
+  rather than tidied away.** The draft registered *"build a gate that greps the harvest logs before a
+  shelf publishes an absence."* **That gate exists**: `gate-absence` (`p279`), and it **passed** on
+  this tree. It did not fire because it is **deliberately narrow** — its predicate is an absence
+  phrase followed by *a distinctive subject token* (backticked, ALL-CAPS or slug-shaped) that the
+  carried index already claims, kept narrow on the stated ground that *"a narrow gate that fires is
+  worth more than a broad one that is ignored."*
+  🟢 **So the real gap is one level in.** `p390`'s absence was about a **capability** — *"LTI 1.3 has
+  no installable implementation"* — while its refutation sits under a **different token**,
+  `packbackbooks/lti-1-3-php-library`. Subject-token identity cannot connect the two: the absence
+  never names the slug that refutes it. What is missing is an absence check keyed on **capability**
+  (the standard, the integration surface, the task) rather than on **string identity** — for which
+  this base already has the raw material, since every harvest row carries a licence, a date and a
+  registry id. 🔵 Registered as the top-ranked instrument for the next pass, **with its predicate
+  corrected**; `gate-absence` is not at fault and should not be widened into noise.
+
+- **`Gap 391-E`: `eur-lex.europa.eu` is DNS-unreachable, so every EU date on these shelves rests on
+  secondary corroboration.** The dates themselves are well corroborated (nine houses, per
+  `intel/market.md`'s sources) and nothing suggests they are wrong — but this base has **never read
+  the primary text** of Regulation (EU) 2026/1744 or 2024/1689. 🔵 Recorded because repetition across
+  nine law-firm summaries is not verification, and a pass with working DNS should read the Official
+  Journal text and say so.
+
+- **`Gap 391-F`: two gates are red and were red at `HEAD` before this pass wrote anything.**
+  `gate-fold-identity` (one control of 25 in its own suite) and `gate-census-union` (a fixture control
+  requiring both rejection classes to fire on the live shelves; only `NAME-REF-OR-PATH` does).
+  🟢 Established by **stashing this pass's working tree and re-running both at `HEAD`**, rather than
+  asserted — `Gap 387-G`'s class, inherited rather than introduced. 🔵 `make hooks` otherwise ran in
+  full at **43/45**, which is itself a change: `p382` could not execute the suite at all.
+
+### 🟡 Gaps updated, not closed
+
+- **`Gap 387-A` (tenancy) — NARROWED.** [`GuoMonth/dsh-multi-tenant`](https://github.com/GuoMonth/dsh-multi-tenant)
+  (🟢 **MIT**, 2026-10-12) is genuine multi-tenancy — Kubernetes, **OIDC**, per-user persistent
+  volumes, network-policy enforcement, documented revocation. 🔴 But it is tenancy for an **agent
+  workspace**, with **no Canvas, Blackboard, D2L or Open edX surface**. So the hosting half of
+  `Pattern N` now has a granted component and **the LMS-integration half is still unbuilt**. The gap
+  stands as originally written.
+- **`Gap 387-C` (Zenodo/DOI-deposited supply) — STILL OPEN.** `zenodo.org` **000** and `doi.org`
+  **000** from this sandbox. Research-deposited education agents remain a supply channel this base
+  has never been able to read.
+- **`Gap 387-D` (the prescribed regional legs do not return education) — CONFIRMED AGAIN.** All four
+  regional legs ran. All four returned market-research and enterprise-IT commentary; **none promoted
+  anything**. A targeted EU Digital Omnibus leg returned only facts this base already holds more
+  precisely. 🔵 Two consecutive passes have now run these legs for nothing — the next pass should
+  **rephrase or replace them**, not re-run them.
+- **Trend 8 (the measurement gap) — UNCHANGED.** `api.github.com` **403**, `github.com` **403** for a
+  fourth consecutive pass: no stars, no commit activity, no contributors, no issue latency.
+
 ## Pass 387 · 2026-10-22 — **`Gap 386-C` WAS NOT A SUPPLY GAP: THREE GRANTED LATAM-NATIVE AGENTS WERE IN THIS BASE'S OWN HARVEST, UNSHELVED FOR FOUR PASSES. 🟢 `Gap 386-E` CLOSED FROM A PACKAGE REGISTRY. 🟢 THE MAINTENANCE-SIGNAL GAP IS PARTLY CLOSED BY A CHANNEL NOBODY HAD TRIED — AND IT OVERTURNS THREE RECOMMENDATIONS, ONE OF THEM A PATTERN DEPENDENCY.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — 15 addresses probed: 12 granted reads over 11 distinct granted projects (the mirror pair counts once), 3 ungranted, plus 1 inferred slug refused rather than probed ·

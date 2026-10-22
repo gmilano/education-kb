@@ -1,0 +1,14 @@
+metric	value	note
+queries_run	32	fresh vocabulary: tenancy, personas, SEN/IEP, proctoring, QTI, xAPI, OneRoster, FERPA, standards
+addresses_returned_not_in_base	321	deduped against 3338 known addresses across every shelf and evidence file
+survived_domain_filter	37	filter applied to slug+package+description ONLY
+probed_at_payload	11	includes 2 follow-on leads from read READMEs
+granted_and_shelvable	3	pipeworx-io/mcp-education-data, intellectif/learning-kit, SenmuuuuW/dsh-diagnostic-tutor
+granted_but_marginal_fit	3	universal-diagnostic-tutor-skill, dsh-multi-tenant, pi-language-tutor
+refused_bespoke_licence	1	OpenSourceAGI/qwksearch-research-agent: PROSPER 1.0.0
+refused_ungranted	1	htl-leo-novedu/novedu-app: no licence file
+dead_or_private	1	InCruiter-NewProducts/proctoring-sdk
+copyleft_not_shelved	1	moodlehq/design-system GPL-3.0-only
+yield_rate_p391	0.9pct	3 shelvable of 321 new addresses
+yield_rate_p388	5.7pct	22 granted of 383 new addresses, same channel, different vocabulary
+verdict	DEPLETING_NOT_EXHAUSTED	the channel still returns grants; the education-specific seam p388 opened is largely mined

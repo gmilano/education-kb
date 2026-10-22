@@ -207,7 +207,7 @@ a small local model on the same device for the tutoring loop →
 retention is the one outcome measurable without a network →
 content authored in [H5P](https://github.com/h5p/h5p-php-library) — 🟡 **GPL-3.0, keep it as
 runtime content, not linked code** → periodic sync to the central LMS over
-[LTI 1.3](https://github.com/1EdTech/lti-1-3-php-library) (**Apache-2.0**) when a link is available.
+[LTI 1.3](https://github.com/Cvmcosta/ltijs) (**Apache-2.0**) when a link is available. 🆕 `p391` **Use a maintained implementation:** `ltijs` (npm v7.0.7, 2026-10-06) for Node or `packbackbooks/lti-1p3-tool` (packagist v6.4.4, 2026-09-23) for PHP — **not** the standards-body copy `p390` cited, which is 2,333 days stale; and **not** `pylti1.3`, which is 1,431 days stale, so a Python agent sits behind a Node or PHP edge rather than speaking LTI itself.
 
 **Why FSRS matters here:** it has published parameters, so "the student is retaining more" is a
 number you can defend to a ministry, offline, without telemetry.
@@ -776,6 +776,102 @@ chain is permissive, so this pattern can ship as a closed client deliverable wit
 
 **What this pattern does not solve:** there is **no granted, maintained open-source voice tutor for
 an African or South Asian language** on these shelves. See `Gap 390-A`.
+
+## Pattern W — 🆕 `p391` Qualify the district *before* the pitch (North America)
+
+**For:** a North America K-12 engagement, at the stage before anyone has written code — choosing
+which districts to approach, and pricing a pilot against a budget that actually exists. Every other
+pattern here answers *what to build*; this one answers *for whom, and with whose money*.
+
+**Why it is a pattern and not a sales note:** US school AI spending is not discretionary in the way
+enterprise AI spending is. It comes from identifiable federal, state and local lines, and the
+largest flexible federal line — **Title I** — is allocated on **Census child-poverty counts**, not
+on enrolment. A pilot proposed without that number is priced blind, and a district with a high
+poverty count and a low per-pupil spend is a different conversation from the inverse.
+
+**Wiring:**
+
+1. **Pull the universe.** [`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data)
+   (🟢 **MIT**, HEAD 2026-10-21) — `education_find_districts` for a state returns every local
+   education agency with its **LEA id**, school count, enrolment and teacher counts. The `leaid` is
+   the join key for everything below.
+2. **Add the budget.** `education_district_finance` on that `leaid` returns revenue split
+   **federal / state / local** and expenditure by function, with **per-pupil spending computed**.
+   🔴 **The survey lags the directory by 1–2 years** — quote it as "FY-whatever per-pupil", never as
+   current-year, or the first CFO in the room ends the meeting.
+3. **Add the federal lever.** `education_child_poverty` returns Census **SAIPE** counts and rates of
+   children 5–17 in poverty by district — the figures Title I formulas run on. High poverty rate plus
+   low per-pupil spend identifies districts with *federal* money and *no* incumbent vendor: the
+   cheapest pilot to land and the hardest to displace later.
+4. **Add the surface.** `education_find_schools` carries **charter/magnet status, grade range and
+   free/reduced-price lunch counts** per school, so the pilot can be scoped to named schools rather
+   than to a district abstraction.
+5. **Then pick the build.** Hand the shortlist to whichever pattern fits the client's platform —
+   `Pattern F` (teacher-facing, the one the market and the regulator agree on) is the usual answer at
+   this budget, `Pattern N` if they run an LMS already.
+
+🔴 **Three things to decide before the first call, not after.** The integration is **unofficial** and
+not affiliated with the upstream provider — fine for your own targeting, not something to resell as a
+data product. The default path is a **hosted gateway** (`gateway.pipeworx.io`): the underlying data is
+public federal data, but the **query pattern is not** — which districts a studio is sizing up is
+commercially sensitive, so self-host before running this against a named client list. And a scoped
+endpoint lists roughly **30 shared gateway meta-tools** alongside the four that matter, so budget the
+context or connect once to the full gateway rather than to several pack endpoints.
+
+🔵 **Regional honesty.** This is a **North America–only** instrument: it is NCES/Census data and has
+no EMEA, APAC or LATAM analogue on these shelves. The equivalent question in those regions is still
+answered by hand — recorded as `Gap 391-B` rather than left to look like coverage.
+
+## Pattern X — 🆕 `p391` Keep the client's pedagogy as a separate, reviewable artefact
+
+**For:** any tutoring engagement that will be audited, handed over, or argued about — which, under
+EU AI Act high-risk obligations and most North American district procurement, is all of them. Also
+the pattern for a studio that wants the *teaching* it built to outlive the *runtime* it shipped on.
+
+**Why it is a separate pattern:** in nearly every tutor on these shelves, the pedagogy is diffused
+through the application — prompt fragments, conditional branches, UI copy. That makes two things
+expensive that clients ask for routinely: *show me the teaching policy* and *change the teaching
+policy without a release*. [`SenmuuuuW/dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor)
+(🟢 **MIT**, HEAD 2026-10-21) is the first row here built the other way round, and it is worth copying
+even where the repository itself is not used.
+
+**The split, which is the whole point:**
+
+| | owns | where it lives |
+|---|---|---|
+| [`universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) (🟢 **MIT**, → 2026-09-24) | **what to teach next**: diagnosis, teaching moves, pacing, when a check is passed, what the next step is | its own repository, versioned independently |
+| [`dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor) (🟢 **MIT**) | **where it is kept**: learner state, the diagnosis map, structured lessons, the UI | the runtime, which contains **no teaching logic at all** |
+
+**Wiring:**
+
+1. **Put the pedagogy in a versioned repository of its own**, as prose and rules rather than code:
+   diagnosis strategy, teaching moves, mastery criteria, escalation. This is the artefact a client
+   reviews, a subject expert edits without a developer, and an auditor reads **without reading the
+   application**. It is also the thing a studio can hand over at the end of an engagement.
+2. **Make the runtime record decisions, never make them.** The runtime stores what the teaching layer
+   decided and renders it; every pedagogical choice arrives from the policy artefact. Test this by
+   grepping the runtime for teaching rules — if `if blocked, explain the prerequisite` lives in the
+   application, the separation has already leaked.
+3. **Put the assessment behind a pure function.** [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit)
+   (🟢 **MIT**, HEAD 2026-10-18) — `@intellectif/lk-core` gives schemas, a **pure scoring engine**,
+   **rubric and deferred grading**, attempt plans and redaction, with no runtime dependency beyond
+   Zod. Scoring that is a pure function is unit-testable by the client and readable by a regulator;
+   **deferred grading keeps a human marker in the loop by construction**, which is what high-risk
+   assessment obligations ask for rather than something to retrofit.
+4. **Emit evidence, do not hoard it.** `lk-core`'s **xAPI builder** sends statements to the client's
+   own LRS — [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) where one is needed — so the learning
+   record stays the client's property and the tutor stays replaceable.
+5. **Launch it from the LMS over a maintained LTI edge.** [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs)
+   (🟢 **Apache-2.0**, npm v7.0.7) in front of the agent — see the `Pattern A` note and `Gap 391-A`:
+   the Python LTI library is 1,431 days stale, so the edge is Node or PHP regardless of what the agent
+   is written in.
+
+🔴 **What this pattern does not give you.** `dsh-diagnostic-tutor` is **v0.1.1 and early by its own
+account**: no PDF or document ingestion, no RAG, no flashcards, no analytics, and **a route never
+marks knowledge as mastered**. It also **requires DeepSeek Harness** — it is a harness extension, not
+a standalone application, so an engagement that cannot adopt that harness should copy the *structure*
+(steps 1–2) onto a tutor it can deploy, not adopt the repository. 🟢 Take the separation; shop for the
+runtime.
 
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 

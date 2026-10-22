@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p391` — **`p390`'S HEADLINE FINDING IS HALF WRONG AND THE REFUTATION WAS ALREADY IN THIS FILE: THE LTI 1.3 LIBRARY IS MAINTAINED, AT A DIFFERENT ADDRESS, IN TWO LANGUAGES. 🔴 BUT NOT IN PYTHON, WHICH IS AN ARCHITECTURE CONSTRAINT. 🟢 THREE GRANTED NEW ROWS, AND THE REGISTRY CHANNEL'S YIELD MEASURED AT 0.9% AGAINST `p388`'S 5.7%.**
+
+🔵 **Dating note.** Every clone, licence read, registry read and date below was taken on **2026-10-22**.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p391.tsv) — **17 addresses
+probed, 16 live, 1 unreadable** ·
+[`npm-discovery-yield`](../evidence/npm-discovery-yield.2026-10-22-p391.tsv) — the funnel, 321 → 3 ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p391.tsv) — 17 hosts measured.
+
+### 🔴 The correction, and it is this base's own recurring error class
+
+`p390` — eight hours earlier, this morning — dated
+[`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) at **2,332 days** and
+published, as its finding #1 across three shelves and two patterns: *"Treat as a spec reference to
+vendor, never a dependency to install."* The dating was right. **The conclusion was wrong.**
+
+| address | ref · HEAD | last commit | registry | verdict |
+|---|---|---|---|---|
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `master` · `66d8e4e` | **2026-10-16 — 6 days** | packagist `packbackbooks/lti-1p3-tool` **v6.4.4**, 68 versions, **2026-09-23** | 🟢 **Apache-2.0** — install this (PHP) |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `master` · `41f150c` | **2026-10-13 — 9 days** | npm `ltijs` **v7.0.7**, 207 versions, **2026-10-06** | 🟢 **Apache-2.0** — install this (Node) |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | `master` · `3a192de` | 2020-06-03 — **2,333 days** | — | 🔴 spec citation only; `composer.json` has no licence field |
+| [`IMSGlobal/lti-1-3-php-library`](https://github.com/IMSGlobal/lti-1-3-php-library) | `master` · **`3a192de`** | 2020-06-03 | — | 🔴 **the same project** — identical HEAD sha, renamed org. Counted **once** |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `master` · `d8fa43e` | 2022-11-21 — **1,431 days** | PyPI `PyLTI1p3` 2.0.0, **2022-11-20**, 29 releases | 🔴 MIT, and genuinely dead |
+
+🔴 **Where the refutation was sitting.** In **this file**, already dated and licence-read:
+*"`packbackbooks/lti-1-3-php-library` — Apache-2.0 · manifest @ `master` · packagist
+`packbackbooks/lti-1p3-tool` v6.4.4, 2026-09-23."* It had **never reached a shelf**. This is the
+third instance of one error: `Gap 386-C` (three LATAM agents in the harvest, unshelved for four
+passes), `p387`'s *a null leg is not a null supply*, and now **a stale upstream is not a dead
+dependency**. In all three the base published an absence it did not have. 🔵 The harvest history is
+not a shelf, and nothing currently promotes between them except a pass that happens to look.
+
+🔴 **The genuinely new constraint, and it is the useful half.** Node and PHP have maintained LTI 1.3;
+**Python does not.** Almost every agent on these shelves is Python, so the interop edge is a
+**separate Node or PHP service in front of the agent**, not a library call inside it — a deployment
+component a proposal must cost. 🆕 `Gap 391-A`, and `Trend 19` has the generalisable rule: in
+standards-driven interop the consortium publishes the spec, a **vendor with production traffic**
+maintains the library, so ask *who ships this in production* before concluding a path is closed.
+
+### 🟢 Three granted new rows
+
+| row | ref · HEAD | licence read | registry | what it is |
+|---|---|---|---|---|
+| [`pipeworx-io/mcp-education-data`](https://github.com/pipeworx-io/mcp-education-data) | `main` · `060371b` | 🟢 **MIT**, 1,069 B; `package.json` agrees | npm v0.1.3 → **2026-10-21** | 🟢 **The first instrument here that answers *which district* rather than *what to build*.** Four tools over keyless US federal data: NCES CCD school/district directory, **CCD F-33 finance** (federal/state/local revenue split, **computed per-pupil spend**), and **Census SAIPE child poverty** — the counts Title I money runs on. 🔴 Unofficial integration; default path is a **hosted gateway**; a scoped endpoint also lists ~30 shared meta-tools; finance lags the directory 1–2 years. 🆕 `Pattern W`. |
+| [`intellectif/learning-kit`](https://github.com/intellectif/learning-kit) | `main` · `1e39e9e` | 🟢 **MIT**, 1,071 B; `package.json` agrees | npm `@intellectif/lk-core` → **2026-10-18** | 🟢 **A permissive headless alternative to H5P.** `lk-core`: schemas, a **pure scoring engine**, **rubric and deferred grading**, assessment composition, attempt plans, redaction and an **xAPI builder**, zero runtime deps beyond Zod; `lk-react` adds a resumable exam/review pager. Pure-function scoring is client-testable and auditor-readable, and **deferred grading keeps a human marker in the loop by construction**. 🔴 Deliberately not a CMS. |
+| [`SenmuuuuW/dsh-diagnostic-tutor`](https://github.com/SenmuuuuW/dsh-diagnostic-tutor) | `main` · `727ef90` | 🟢 **MIT**, 1,089 B; `package.json` agrees | npm v0.1.1 → **2026-10-17** | 🟢 **The cleanest separation of pedagogy from runtime on these shelves.** The teaching brain is a *different repository* — [`universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) (🟢 MIT, v2.1, → 2026-09-24) — and this runtime holds **no teaching logic at all**: it stores what the tutor decided and never decides it. New **Tier 1** row; 🆕 `Pattern X`. 🔴 v0.1.1 and early by its own account: no PDF ingestion, no RAG, no flashcards, no analytics, routes never mark mastery; requires DeepSeek Harness. |
+
+### 🔴 Two refusals, and the first is a licence trap
+
+- [`OpenSourceAGI/qwksearch-research-agent`](https://github.com/OpenSourceAGI/qwksearch-research-agent)
+  ships a **9,655 B `LICENSE.md`** — and it is **PROSPER 1.0.0**, a bespoke non-OSI licence
+  (`rights.institute/prosper`), not MIT and not Apache. 🔴 **"Has a LICENSE file" is not "is
+  granted", and an SPDX matcher that returns `UNKNOWN` is a finding rather than a miss.** Refused.
+- [`htl-leo-novedu/novedu-app`](https://github.com/htl-leo-novedu/novedu-app) — **no licence file at
+  all** → ungranted. 🔵 Worth naming anyway: it is **EMEA, school-built** (HTL Leonding, Austria), a
+  tutor/quiz/writing/coding YAML validator, HEAD 2026-10-19. An ungranted address with a region is
+  still information.
+- [`InCruiter-NewProducts/proctoring-sdk`](https://github.com/InCruiter-NewProducts/proctoring-sdk)
+  — published on npm (2026-09-25), repository **unreadable**: the `p388` *published-but-unreadable*
+  class. 🔵 Notable because **proctoring is an Annex III high-risk surface** and this base has no
+  granted proctoring row.
+
+### 🟡 The tenancy gap is narrowed, not closed
+
+[`GuoMonth/dsh-multi-tenant`](https://github.com/GuoMonth/dsh-multi-tenant) (🟢 **MIT**, `main` ·
+`2c86445`, **2026-10-12**; npm v0.10.0-rc.1) is real multi-tenancy: **Kubernetes, OIDC sign-in,
+per-user persistent volumes, network-policy enforcement, HTTPS ingress**, with documented
+stop/restart/revocation semantics. 🔴 But it is tenancy for an **agent workspace**, not for an **LMS
+integration** — no Canvas, Blackboard, D2L or Open edX surface anywhere in it. `Gap 387-A` stays
+open; this supplies the **hosting half** of `Pattern N` and the integration half is still unbuilt.
+
+### 🔵 The channel result, with a number instead of an adjective
+
+32 fresh queries (tenancy, SEN/IEP, proctoring, QTI, xAPI, OneRoster, FERPA, standards, personas)
+against `registry.npmjs.org`:
+
+| stage | count |
+|---|---|
+| addresses returned **absent from this base** (deduped against **3,338** known) | **321** |
+| survived a domain filter applied to **slug + package + description only** | 37 |
+| probed at the payload | 11 |
+| 🟢 **granted and shelvable** | **3** |
+| granted but marginal fit | 3 · refused 2 · dead-or-private 1 · copyleft not shelved 1 |
+
+🟢 **0.9% yield, against `p388`'s 5.7%** (22 of 383) on the same channel with different vocabulary.
+🔵 **The verdict is `DEPLETING`, not `EXHAUSTED`** — it still produced three rows, one of which
+opens a category. But `p388`'s seam is largely mined, so the next pass should change **channel**, not
+vocabulary. 🔴 **And the filter is the lesson:** the first draft of it matched my own query column and
+"confirmed" 37 education rows that were Vercel, AWS and Storybook packages — *100 confident
+irrelevant rows read exactly like coverage*, caught before it reached a shelf.
+
+### 🟢 The gate suite RAN, and the two red gates were red before this pass wrote anything
+
+`make hooks` — which `p382` recorded as **unrunnable from its sandbox** ("the execution lane is denied
+by policy") — **ran here in full**: **43 of 45 gates green**, `p300`'s no-masking runner confirming
+every gate ran.
+
+🔴 **The two reds, and the check that establishes whose they are.** `gate-fold-identity` and
+`gate-census-union` are RED. Before claiming they are inherited, this pass **stashed its own working
+tree and re-ran both at `HEAD`**: both were **already RED** at the commit this pass started from. They
+are `Gap 387-G`'s class, not this pass's. `gate-census-union`'s failure is a fixture control asserting
+that two rejection classes both fire on the live shelves (only `NAME-REF-OR-PATH` fires);
+`gate-fold-identity`'s is one control of 25 inside its own suite.
+
+🟢 **One red gate *was* this pass's, and it caught a real defect in this pass's own writing.**
+`gate-tables` ("no shelf may publish a data row that renders as a table header") went red on
+`repos/foundations.md:95` and `:124` — the two new foundation rows had been inserted **after a blank
+line**, which splits a markdown table so that the inserted row renders as a *new table's header*.
+That is exactly this base's most-repeated error, committed again by the instrument-less path of a
+scripted insert, and caught by the gate rather than by review. Fixed; `gate-tables` green, 10 shelves,
+no row published as a header.
+
+🔵 **And the currency gates did their job.** `gate-census-currency` and `gate-union-currency` both went
+red *because this pass wrote to the shelves* — which is their purpose. Re-derived as the last act
+before the commit: **2 660** harvested shapes → **34** non-addresses → **2 626 addresses**; union
+**2 626** channel-U + **3 063** channel-B survivors = **3 444 addresses over both channels**. The
+README sentence was restated to the derived figures, never the reverse.
+
+### 🔵 Channel state, and one honest non-finding
+
+`api.github.com` **403**, `github.com` **403** — a fourth consecutive pass, so **no row carries a star
+count**. Open: `git` anonymous clone, `raw.githubusercontent.com`, `registry.npmjs.org`, `pypi.org`,
+`repo.packagist.org`, `gitlab.com/api/v4`. 🔴 Still refused: `zenodo.org`, `doi.org` (`Gap 387-C`
+stays open), `moodle.org`, `huggingface.co`, `codeberg.org`, `api.crates.io`, `api.openalex.org`,
+`sourceforge.net` — and 🆕 **`eur-lex.europa.eu` is DNS-unreachable**, so this base's EU dates still
+rest on multi-house secondary corroboration rather than the primary text.
+
+🔴 **The honest non-finding.** All four prescribed regional legs plus a targeted EU Digital Omnibus
+leg **returned nothing this base does not already hold more precisely** — Art. 50 live 2 Aug 2026,
+the 2 Dec 2026 transitional marking date, high-risk 2 Dec 2027, Annex I 2 Aug 2028, Vietnam, Korea.
+Recorded so a later pass does not re-run the same legs expecting a finding. `Gap 387-D` holds.
+
 ## 🟢 🆕 2026-10-22 · `p390` — **THE FIRST FULL AUDIT OF THIS BASE'S OWN SHELVES: 158 ADDRESSES, EVERY RECOMMENDATION-CARRYING SLUG DATED. 🔴 THE LTI LIBRARY THREE SHELVES RECOMMEND HAS BEEN DEAD FOR 2,332 DAYS. 🟢 AND THE OPEN edX COPYLEFT FIREWALL TURNS OUT TO BE APACHE-2.0 INSIDE AN AGPL PLATFORM.**
 
 🔵 **Dating note.** Every clone, licence read and date below was taken on **2026-10-22**.
