@@ -45,6 +45,7 @@ TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 SHAPE_LOG ?= /tmp/education-kb-gate-address-shape.log
 CURRENCY_LOG ?= /tmp/education-kb-gate-census-currency.log
+UNIONCUR_LOG ?= /tmp/education-kb-gate-union-currency.log
 UNION_LOG ?= /tmp/education-kb-gate-census-union.log
 GRANTPATH_LOG ?= /tmp/education-kb-gate-grant-path.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
@@ -59,7 +60,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
-.PHONY: gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -89,7 +90,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-companion-closure gate-bare-slug-channel \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
-             gate-dead-citation gate-regional-leg gate-census-union
+             gate-dead-citation gate-regional-leg gate-census-union \
+             gate-union-currency
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -427,6 +429,30 @@ census-union-grade: ## p375 — re-grade an adjudication file: make census-union
 # "Remember to re-run it" is what already failed three times, so this gate compares the
 # PUBLISHED triple with the DERIVED one and goes RED when they disagree.  The anchor is in
 # README.md, which is NOT a SHELF_FILE, so stating the figure cannot change it.
+# 🟢 p376 — `ACTION p375-A`, the action `p375` ranked FIRST and deliberately did not do
+# quietly.  `p375` measured the union of both address channels at a figure no census had ever
+# reported and published it ONCE, in a side table, because repointing `gate-census-currency`
+# would have made a standing gate judge today's tree against a number quoted in every prior
+# section — the retro-editing this base's `dated-by-measurement` convention forbids — and
+# because `p367` already imports `p351`, so the union cannot live inside `p351` without a
+# cycle.
+# 🟢 So this is NOT a repoint.  `p352` is untouched, every historical quote of its triple stays
+# true against the tree that produced it, and the union becomes a SECOND governed sentence with
+# its own derivation and its own red state.  The instrument is a FOURTH layer (it imports
+# `p375`, which imports `p351` and `p367`, and it imports `p352` for the one anchor ladder), and
+# nothing imports it, so the cycle `p375` named cannot form here in either direction.
+# 🔴 Its own suite caught two defects in this pass's first draft: a fixture pinning the live
+# derived totals — which is exactly what group 5 exists to forbid — and a control asserting
+# object identity across a fresh `importlib` load, which is untrue by construction.  Both are
+# fixed and both are recorded, because an instrument whose controls never fired on its author
+# has not been tested.
+gate-union-currency: ## p376 — ACTION p375-A: the UNION census is a standing sentence, not a figure published once
+	@cd compose/code/p376-union-currency && { $(PY) -I test_union_currency.py > $(UNIONCUR_LOG) 2>&1 || { echo "🔴 p376-union-currency FAILED — the suite's own report follows:" ; sed "s/^/   /" $(UNIONCUR_LOG) ; false ; } ; } && sed -n "1,2p" $(UNIONCUR_LOG) || exit 1
+	@set -o pipefail; $(PY) -I compose/code/p376-union-currency/union_currency.py --root . 2>&1 | sed "s/^/   /" || exit 1
+
+union-currency: ## p376 — the union sentence's derivation alone, to restate it before a commit
+	@$(PY) -I compose/code/p376-union-currency/union_currency.py --root .
+
 gate-census-currency: ## p352 — a census over the shelves is re-derived AFTER the pass writes, never before
 	@cd compose/code/p352-census-currency && { $(PY) -I test_census_currency.py > $(CURRENCY_LOG) 2>&1 || { echo "🔴 p352-census-currency FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CURRENCY_LOG) ; false ; } ; } && echo "── p352-census-currency (24 controls: p351's own published sentence, the live-occurrence-wins rule, each of the three cells load-bearing alone, the anchor-file exclusion, P541's refusal as exit 2, and the CASE-CLOSED anchor ladder p283 demanded)" && echo "   PASS" || exit 1
 	@set -o pipefail; $(PY) -I compose/code/p352-census-currency/census_currency.py --root . 2>&1 | sed "s/^/   /" || exit 1

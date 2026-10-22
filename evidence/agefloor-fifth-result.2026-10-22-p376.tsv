@@ -1,0 +1,38 @@
+# ACTION p375-B — the fifth-jurisdiction age-floor test.  The prediction was registered in
+# evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv BEFORE either leg ran.
+# Both legs run per p374's J3: an in-language leg is a DIFFERENT instrument, not a fallback.
+jurisdiction	leg_language	productive	autonomy_age_floor	what_bounds_the_same_risk_instead	instrument_type	grade
+South Korea	English	YES	🔴 NONE FOUND	AI Basic Act, in force 2026-01-22, classes student assessment at early-childhood / elementary / secondary as HIGH-IMPACT, triggering a mandatory impact assessment — a PROCEDURAL duty on the institution, not a grade line on the pupil	statute	SECONDARY
+South Korea	English	YES	🔴 NONE FOUND	the AI digital textbook was DEMOTED from "textbook" to "education material" by a National Assembly revision (Aug 2025), making it optional and supplementary — a PROCUREMENT/status axis	statute amendment	SECONDARY
+South Korea	Korean	YES	🔴 NONE FOUND	teacher and pupil guidelines (Gyeonggi-do Office of Education) require compliance with the SERVICE PROVIDER's own age limits plus guardian consent or school-administrator approval — the floor is the vendor's, adopted by reference	provincial guideline	SECONDARY
+South Korea	Korean	YES	🔴 NONE FOUND	PIPA: under-14 requires guardian consent for third-party provision of personal data (e.g. social login) — a CONSENT-AGE axis	statute	SECONDARY
+South Korea	Korean	YES	🔴 NONE FOUND	MOE + all 17 metropolitan/provincial offices, Dec 2025: AI-use management for 수행평가 (performance assessment), applying FROM the 2026 school year, over five areas — scope of permitted AI use, labelling of the process, prior pupil training, assessment design, personal-data protection	national administrative measure	SECONDARY
+#
+# VERDICT ON THE PREDICTION: 🟢 CONFIRMED.  No Korean national instrument draws a grade or age
+# line on AUTONOMOUS pupil use of generative AI.  Korea bounds the same risk on three other
+# axes — consent age, procurement status, and assessment process.  p375 wrote that a nil would
+# be the more valuable result; this is that nil, and it was predicted rather than discovered.
+# CONSEQUENCE: the age floor is NOT a property of education law generally.  It is 4 of 5.
+#
+# 🆕 AND THE KOREAN-LANGUAGE LEG RETURNED A JURISDICTION THE ENGLISH ONE DID NOT: NORWAY.
+# This is J3's point measured a second time — the in-language leg returned a different FACT
+# CLASS, not a translation of the English one.  Norway was then given its own two legs:
+jurisdiction	leg_language	productive	autonomy_age_floor	wording	instrument_type	grade
+Norway	English	YES	🟢 YES — grades 1-7, ages ~6-13	near-total ban on generative AI for pupils in 1st-7th grade; announced by PM Jonas Gahr Store 19 Jun 2026, effective at the start of the school year in late Aug 2026; ages 14-16 permitted under teacher supervision; 17+ encouraged to learn responsible use	national RECOMMENDATION, not legislation	SECONDARY, multiple independent outlets
+Norway	Norwegian	YES	🟢 YES — and the WORDING DIFFERS FROM THE ENGLISH REPORTING	Udir: on grades 1-7 pupils "should in general not be GIVEN ACCESS TO" generative AI; grades 8-10 may use it "gradually and carefully, provided teachers first have adequate competence".  The restriction covers pupils' OWN USE; learning ABOUT AI is NOT covered as currently worded.  Exceptions to be listed, e.g. adapted teaching and special needs	directorate recommendation	SECONDARY
+#
+# THREE THINGS THE NORWEGIAN LEG ADDS THAT THE ENGLISH LEG DID NOT:
+# 1. ACCESS vs USE.  The government says AI should not be USED in primary school; Udir says
+#    pupils should not be GIVEN ACCESS.  Access is a deployment property an auditor can check;
+#    use is a behaviour.  Pattern 15's stage-gated virtual key already builds the access form.
+# 2. A COMPETENCE PRECONDITION, which is a NEW axis not present in any of p375's four cells:
+#    grades 8-10 are gated on the TEACHER's competence, not on the pupil's age.
+# 3. A CARVE-OUT FOR TEACHING *ABOUT* AI, which means an AI-literacy deliverable is NOT
+#    blocked by the floor — commercially the most important sentence in the cell.
+#
+# 🔴 GRADED HONESTLY: every cell above is SECONDARY.  Zero primary instrument texts were
+# retrieved, and the reason is NOT effort — see primary-text-resolver.2026-10-22-p376.tsv:
+# udir.no, regjeringen.no, goe.go.kr and english.moe.go.kr do not RESOLVE from this
+# environment, on either transport.
+# 🔴 n=1 on each Norwegian cell.  Udir promised elaborated recommendations by 1 Oct 2026; that
+# date has passed and no source in the result set confirms publication.  Gap 503.

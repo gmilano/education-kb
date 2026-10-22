@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p376` — **`ACTION p375-C`'s re-pointed leg, per candidate: 9 probed, 8 live, 3 NEW, 0 agents — and the layer `p372` called "ten of ten unretrievable" is mostly retrievable**
+
+🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the
+record. 🟢 All probes **2026-10-22**, first-hand: `git ls-remote --symref` for existence and
+default branch, `raw.githubusercontent.com` for the grant payload, a blobless `--depth 1` clone
+for the HEAD date. 🔴 **No star counts** — `api.github.com` and `github.com` HTML are both
+**403**, re-measured this pass.
+
+**Evidence:** [`credentialing-layer-grade`](../evidence/credentialing-layer-grade.2026-10-22-p376.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p376.tsv)
+
+### The 9 candidates, graded
+
+| Address | `ls-remote` | HEAD | Date | Grant read at | Bytes | Family | `make carried` | Agent? |
+|---|---|---|---|---|---|---|---|---|
+| [`digitalcredentials/lti-issuer`](https://github.com/digitalcredentials/lti-issuer) | 🟢 `rc=0` `master` | `75a3c5d` | 🔴 **2024-04-22** | `master/LICENSE` | 1 076 | 🟢 **MIT** (untitled payload) | 🟢 **NEW** | 🔴 no — an LTI credential issuer |
+| [`open-ent/openbadges`](https://github.com/open-ent/openbadges) | 🟢 `rc=0` `develop` | `a978850` | 🟢 2026-10-16 | 🔴 **NONE** | — | 🔴 **RESERVED** | 🟢 **NEW** | 🔴 no — an issuer module |
+| [`w3c-ccg/edu_occ_verifiable_credentials`](https://github.com/w3c-ccg/edu_occ_verifiable_credentials) | 🟢 `rc=0` `master` | `989dbcc` | 🔴 **2020-12-28** | `master/LICENSE.md` | 439 | W3C-Software-and-Document | 🟢 **NEW** | 🔴 no — a reports work item |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `rc=0` `master` | `41f150c` | 🟢 2026-10-13 | `master/LICENSE` | 11 361 | 🟢 **Apache-2.0** | CARRIED | 🔴 no — an LTI library |
+| [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) | 🟢 `rc=0` `main` | `d34f262` | 🟢 2026-10-05 | `main/LICENSE` | 1 080 | 🟢 **MIT** | CARRIED | 🔴 no — a validator |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🟢 `rc=0` `main` | `6fd0a11` | 🟢 2026-08-24 | `main/LICENSE` | 33 820 | 🔴 AGPL-3.0 | CARRIED | 🔴 no |
+| [`edubadges/edubadges-server`](https://github.com/edubadges/edubadges-server) | 🟢 `rc=0` `develop` | `cd31fdd` | 🟢 2026-10-20 | `develop/LICENSE` | 34 519 | 🔴 AGPL-3.0 | CARRIED | 🔴 no |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🟢 `rc=0` `master` | `598a57b` | 🟢 2026-10-21 | `master/LICENSE.txt` | 7 650 | 🟡 LGPL-3.0 | CARRIED | 🔴 no — a signing library |
+| `1EdTech/ltijs` | 🔴 **`rc=128`** | — | — | — | — | — | — | 🔵 negative control |
+
+### 🟢 Three things this table establishes that are not "zero agents"
+
+🟢 **1. `p372`'s figure for this tier is CORRECTED.** `p372` measured the credentialing/interop
+layer at *"ten of ten candidate reference implementations unretrievable"*. **8 of 9 answered on
+the first probe.** The gap `p371` named is real — but it is a gap in *permissive, maintained*
+supply, not in retrievability, and that is a different engagement problem.
+
+🔴 **2. A hypothesis this pass formed and then REFUTED with its own measurement.** After the
+first two rows — `lti-issuer` permissive but two and a half years stale, `open-ent/openbadges`
+committed six days ago with no grant at all — this pass wrote down *"permissive and maintained
+are DISJOINT in this layer"*. 🟢 **Completing the maintenance axis refutes it:**
+`Cvmcosta/ltijs` (Apache-2.0, `2026-10-13`) and `TanimowoObaloluwaDavid/credential-lens` (MIT,
+`2026-10-05`) are both. 🔵 Published rather than tidied away, and the order matters: the claim
+was two data points from being shelved as a finding.
+
+🟢 **3. The layer's two usable members were ALREADY CARRIED.** Both permissive-and-maintained
+rows were on these shelves before this leg ran. 🔵 So the honest summary of `ACTION p375-C` is
+that it **improved the base's knowledge of a tier it already had the best of** — which is worth
+knowing, and is not the same as finding new supply.
+
+### 🔴 `open-ent/openbadges`: `RESERVED` on all three channels, and why it is still on the shelf
+
+🔴 **The grant is absent from every channel this base reads.** The five-rung ladder returns no
+payload; the **tree was enumerated** (`p275`'s rule — no shelf may assert an absent grant that
+an enumeration refutes) and contains **no licence file at any path**; `pom.xml` carries **no
+`<licenses>` block**; and the README mentions no licence. 🟡 Its parent POM is `fr.openent`'s
+`app-parent` 1.2.0, which is **not in this repository** — so a grant may exist at the
+superproject boundary, which is `p291`'s pin-grant axis and is **not verifiable from here**.
+**`Gap 501`.**
+
+🟢 **It is published as a WITHHELD row because its README is the best primary engineering text
+this pass retrieved on any channel** — and two constraints in it are load-bearing for
+`Pattern 16`, read first-hand:
+
+- 🟢 **public verification routes must carry no authentication.** Its own words: the public
+  routes — JWKS, badge, issuer, revocation list, credential — bear *"aucun `@SecuredAction`"*,
+  because *"si elles exigeaient une session, l'attestation serait invérifiable, c'est-à-dire
+  sans valeur"*. A credential behind a login is not a credential.
+- 🟢 **the signing key cannot be rotated casually:** changing the `kid` without publishing the
+  old key *"rend invérifiables toutes les attestations déjà délivrées"* — it silently
+  invalidates every credential ever issued.
+- 🔵 And holder identity appears only as a salted `sha256` with the salt travelling inside the
+  credential, with the subject id a `urn:uuid:` rather than a URL, *because* a URL of the form
+  `/subjects/<id>` would tell any reader that this person holds an account on the platform.
+
+🔵 **That is a design specification a studio can implement under its own licence**, which is
+exactly how an ungranted repository can still be worth a row.
+
 ## 🟢 2026-10-22 · `p375` — **zero new agent rows for the third pass running, and this time the denominator is published as 9 of 11 CARRIED plus 2 that are not education agents at all**
 
 🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the

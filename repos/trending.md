@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🔴 2026-10-22 · `p376` — the GitHub-trending leg returned **zero education repositories**, and that is published as a nil with what was searched
+
+🔵 **APPEND-ONLY.** Added at the top; the history below is kept.
+
+🔴 **The prescribed trending leg (`github trending education AI 2026`) produced no new
+education address.** What it returned was general agent-framework and LLM-tooling rankings from
+third-party blogs — `OpenClaw`, `opencode`, `OpenHands`, `CrewAI`, `LangGraph`, Hermes,
+diffusion and context-compression repos — none of which is an education repository, and several
+of which this base already carries under other tiers.
+
+🔵 **Recorded explicitly rather than left silent, because a nil and a gap look identical from
+below.** What was searched, verbatim:
+
+| Leg | Query | Education addresses returned |
+|---|---|---|
+| trending | `github trending education AI 2026` | 🔴 **0 new** |
+| agents | `top open source AI agents education 2026 github MIT` | 🔴 **0 new** |
+| verticals | `open source platform education ERP CRM MIT Apache` | 🟢 5 permissive, **none education-specific** — see `verticals/solutions.md` |
+| trends | `AI education industry trends 2026` | 🔴 0 addresses (policy and market only) |
+| 🆕 `ACTION p375-C` | the credentialing / interop layer | 🟢 **3 NEW**, 0 agents — see `agents/trending.md` |
+
+🔴 **Two caveats on the trending leg that a successor should not spend a pass rediscovering.**
+None of the sources reached is **GitHub's own trending page**: `github.com` HTML answers `403`
+from this environment and `api.github.com` answers `403`, so "trending" here means *what
+third-party rankings published about trending*, one remove from the measurement. 🔵 Combined
+with the resolver finding in `primary-text-resolver.2026-10-22-p376.tsv`, the honest statement
+is that **this base cannot observe GitHub trending directly at all** — a standing limitation of
+the harness, not of the leg.
+
+🟡 **One row from the prior window is re-affirmed rather than re-added:**
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy), the primary and
+elementary curriculum graph (1 590 topics, 3 221 prerequisite edges), is still the only
+education repository a trending leg has surfaced in this window and is already carried. Its
+split-grant-by-semantic-layer problem remains `ACTION ZZ-ap` and is **not** fixed by a
+per-subtree classifier.
+
 ## 🟢 2026-10-22 · `p375` — one row, read first-hand, and it is a **curriculum** repo rather than a trending-leg find
 
 🔵 **APPEND-ONLY.** Added at the top; the history below is kept.

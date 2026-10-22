@@ -1,0 +1,23 @@
+# p376 — EVERY ADDRESS THIS PASS PUBLISHES OR RELIES ON, PROBED FIRST-HAND 2026-10-22.
+# Transport matrix re-measured this pass: git ls-remote OK; raw.githubusercontent.com 200;
+# 🔴 api.github.com 403 and github.com HTML 403 -- so NO STAR COUNTS are published.
+# 🆕 And a THIRD transport class measured for the first time: the primary-text hosts do not
+#    RESOLVE (see primary-text-resolver.2026-10-22-p376.tsv).  NXDOMAIN, not 403.
+#
+slug	ls_remote	head	grant_path	grant_bytes	grant_sha256_12	licence	role_in_this_pass
+digitalcredentials/lti-issuer	LIVE	75a3c5d8b5470e1101c6559b8bb981e53e18c5d4	master/LICENSE	1076	5ea29d532cac	MIT (UNTITLED payload — p314's class)	🟢 NEW ROW — repos/foundations.md, credentialing/interop tier; 🔴 HEAD 2024-04-22, published WITH the staleness
+open-ent/openbadges	LIVE	a97885043a3416e358d60662e65dd4566b18d67b	NONE — tree enumerated	-	-	🔴 RESERVED — no grant on the ladder, none in pom.xml, none in README	🟡 NEW, published as WITHHELD with the reason; its README is cited for two design constraints in Pattern 16
+w3c-ccg/edu_occ_verifiable_credentials	LIVE	989dbcccec44908bdbd1e80a872166a7929042f9	master/LICENSE.md	439	cad8da640419	W3C-Software-and-Document	🟡 NEW, classified NOT-SOFTWARE (a reports/work-item repo); HEAD 2020-12-28
+Cvmcosta/ltijs	LIVE	41f150c0693b8c60810be6881af6f1de9d2d5409	master/LICENSE	11361	-	Apache-2.0 (carried)	🟢 Pattern 16's LTI boundary.  NOTE the carried casing is `Cvmcosta` (96 occurrences); p375's section wrote `cvmcosta`
+TanimowoObaloluwaDavid/credential-lens	LIVE	d34f262a61bea94c7a1fbd2916d0f437163cdf74	main/LICENSE	1080	-	MIT (carried)	🟢 Pattern 16's offline verifier; refutes this pass's own disjointness hypothesis
+Schroedinger-Hat/certo	LIVE	6fd0a11fe2ff616d49da2a935b3e9d2cb88e1ffe	main/LICENSE	33820	-	AGPL-3.0 (carried)	layer census only.  🔴 `schroedinger-Hat/certo` returns the SAME HEAD — one repository, two casings; the carried casing (20 occurrences) is used
+edubadges/edubadges-server	LIVE	cd31fdd07f73e4c84b9d2f3527a677f85bbfeb1d	develop/LICENSE	34519	-	AGPL-3.0 (carried)	layer census only
+luisgf/openbadgeslib	LIVE	598a57bb644bfebeca55c0f9665e5a34061a4b3c	master/LICENSE.txt	7650	-	LGPL-3.0 (carried)	layer census only; Pattern 16 names it as the signer IF weak copyleft is acceptable
+1EdTech/ltijs	🔴 ABSENT rc=128	-	-	-	-	-	🔵 re-probed as a NEGATIVE CONTROL: p375's constructed address is still absent
+krayin/laravel-crm	LIVE	-	2.2/LICENSE	1078	-	MIT	verticals/solutions.md — general-purpose CRM, permissive
+aureuserp/aureuserp	LIVE	-	master/LICENSE	1077	-	MIT	verticals/solutions.md — general-purpose ERP, permissive
+apache/ofbiz-framework	LIVE	-	trunk/LICENSE	11906	-	Apache-2.0	verticals/solutions.md — general-purpose ERP, permissive
+cortezaproject/corteza	LIVE	-	2026.9.x/LICENSE	11358	-	Apache-2.0	verticals/solutions.md — general-purpose CRM/low-code, permissive
+hcengineering/platform	LIVE	-	develop/LICENSE	14197	-	🔴 EPL-2.0, NOT Apache-2.0	🔴 an inbound claim REFUTED first-hand: "apache" occurs ZERO times in the payload
+openeducat/openeducat_erp	LIVE	-	19.0/LICENSE	8241	-	LGPL-3.0	🔴 POINTER with a DEAD target (COPYRIGHT 404 on three rungs) and a self-description the payload does not satisfy (GPL text claimed enclosed, absent)
+openedx/edx-platform	LIVE	229f7e1a078f11406c47fa8487f8e1dab37f488b	-	-	-	AGPL-3.0 (carried)	🔵 the egress calibration probe; used to establish that ls-remote and raw still answer this pass

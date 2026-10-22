@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 `Pattern 16` (`p376`) — **A credential that still verifies after the issuer is gone**, assembled from permissive code with the issuer written rather than forked
+
+🔵 **The problem this solves, and why the obvious build is wrong.** A client wants verifiable
+credentials — badges, micro-credentials, completion records — issued from the LMS they already
+run. The obvious move is to fork the most complete open-source issuer. 🔴 **Measured this pass,
+that move is unavailable on permissive terms:** the credentialing/interop tier's complete
+issuers are `AGPL-3.0` (`Schroedinger-Hat/certo`, `edubadges/edubadges-server`) or carry **no
+grant at all** (`open-ent/openbadges`), and the one permissively granted LTI-to-VC bridge
+(`digitalcredentials/lti-issuer`, MIT) has not moved since **2024-04-22**.
+([`credentialing-layer-grade`](../evidence/credentialing-layer-grade.2026-10-22-p376.tsv))
+
+🟢 **So the recipe inverts the usual shape: fork nothing at the issuer, and buy the hard parts
+— the LMS boundary and the verifier — off the permissive shelf.**
+
+### 🟢 The components, every grant read first-hand on 2026-10-22
+
+| Role | Component | Licence | HEAD | Why this one |
+|---|---|---|---|---|
+| **LMS boundary** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (11 361 B) | `41f150c` · 2026-10-13 | LTI 1.3 tool provider; launches from Moodle, Open edX, Canvas and Blackboard without per-LMS work. **Permissive and maintained** |
+| **Offline verifier** | [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) | 🟢 **MIT** (1 080 B) | `d34f262` · 2026-10-05 | validates Open Badges 3.0 / W3C VC with **zero dependencies, offline**. The acceptance test a relying party can run without the issuer |
+| **Issuer** | 🔴 **written, not forked** — to the 1EdTech OB 3.0 + W3C VCDM 2.0 specs | the client's own | — | the only piece with no permissive maintained option. Scope is small: sign a VC-JWT, serve five URIs |
+| **Signing** (optional) | [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🟡 **LGPL-3.0** (7 650 B) | `598a57b` · 2026-10-21 | OB 2.0 JWS + OB 3.0 VC-JWT signing. **Take it only if weak copyleft is acceptable**; dynamic linking keeps the client's code separate. Otherwise RS256 over a JWKS is ~200 lines |
+| **Reference design** | [`open-ent/openbadges`](https://github.com/open-ent/openbadges) | 🔴 **RESERVED — read, never linked** | `a978850` · 2026-10-16 | the most complete OB 3.0 issuer seen; its README is the specification source for the three constraints below |
+| **Reference bridge** | [`digitalcredentials/lti-issuer`](https://github.com/digitalcredentials/lti-issuer) | 🟢 MIT (1 076 B) | `75a3c5d` · 🔴 2024-04-22 | the LTI→VC seam, as a **reading**. MIT means you may lift code; the HEAD date means you should not depend on it |
+
+### 🔴 The three constraints that decide whether this works, read first-hand from a primary text
+
+🔵 These are not design preferences. They come from `open-ent/openbadges`'s own README — the
+best primary engineering text this pass retrieved on any channel — and each one, if missed,
+produces credentials that are **worthless rather than merely imperfect**.
+
+1. 🔴 **The public verification routes must carry NO authentication.** JWKS, badge, issuer,
+   revocation list and credential endpoints bear *"aucun `@SecuredAction`"*, because *"si elles
+   exigeaient une session, l'attestation serait invérifiable, c'est-à-dire sans valeur"*. A
+   credential that a third party must log in to check is not a credential. **This is the single
+   most common way this build fails**, because every other route in an LMS integration *should*
+   be authenticated and the pattern looks like a security defect to a reviewer.
+2. 🔴 **The signing key cannot be rotated casually.** Changing the `kid` without continuing to
+   publish the old key *"rend invérifiables toutes les attestations déjà délivrées"* — every
+   credential ever issued silently stops verifying. 🟢 Budget key *retention*, not key rotation:
+   the JWKS is append-mostly and old keys are served indefinitely.
+3. 🟢 **Holder identity goes in as a salted digest, with the salt travelling inside the
+   credential**, and the subject id is a `urn:uuid:` rather than a URL — because a subject URL
+   of the form `/subjects/<id>` tells every future reader that this person holds an account on
+   the platform. 🔵 Showing a credential must not disclose the learner's address.
+
+🟡 **A fourth constraint, from the same text, worth pricing:** every URI the credential carries
+must keep answering **for as long as the credential is meant to be believed** — credential,
+badge, issuer, revocation list and JWKS. 🔴 **None is decorative.** That is a hosting commitment
+measured in years and it belongs in the SOW, not in the architecture diagram.
+
+### 🟢 Shape of the engagement
+
+🔵 **8–10 weeks**, and the sequence matters because the verifier is the acceptance test:
+
+1. **Week 1–2** — stand up `Cvmcosta/ltijs` against the client's actual LMS. 🔴 Do not assume
+   "LTI support" is one capability; that is the standing warning of this base's earlier
+   LTI-reach pattern.
+2. **Week 2–3** — wire `credential-lens` into CI **first**, as the oracle. A credential the
+   verifier rejects is a failing test rather than a discovery in month three.
+3. **Week 3–6** — write the issuer: VC-JWT (RS256), JWKS published, the five URIs served, the
+   `1EdTechRevocationList` served publicly. Constraints 1–3 are acceptance criteria, not notes.
+4. **Week 6–8** — key-retention runbook, and an **external** verification rehearsal: a relying
+   party with no account verifies a credential, offline, with the issuer's service stopped.
+5. **Week 8–10** — hand over the hosting commitment for the credential's URI set, explicitly.
+
+🟢 **Why a studio can defend this on licence grounds:** the LMS boundary is Apache-2.0, the
+verifier is MIT, the issuer is the client's own code written against a public specification, and
+**nothing AGPL-3.0 is linked**. 🔵 The one component that would have saved weeks — a complete
+issuer — is exactly the one that cannot be taken without either a copyleft obligation or a
+missing grant, and that is the whole reason this pattern is shaped the way it is.
+
+🔴 **Where it does NOT apply.** If the client will accept AGPL-3.0, fork `edubadges-server`
+(`cd31fdd`, **2026-10-20**, SURF, LTI 1.3 already present) and finish in half the time. This
+pattern is for clients who will not.
+
 ## 🟢 🆕 `Pattern 15` (`p375`) — **Stage-gated generation**: the open-ended surface is ABSENT for the youngest cohort, not merely discouraged
 
 🟢 **The constraint this exists for is measured in `intel/trends.md` this pass: four

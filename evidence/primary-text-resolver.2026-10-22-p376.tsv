@@ -1,0 +1,20 @@
+# p376 — Gap 241 is MIS-SCOPED, and the measurement says so.
+# Gap 241 has been carried as "government egress".  Two transports (curl, WebFetch) over ten
+# hosts show the refusal is not about government and not about policy on the server side: the
+# NAME DOES NOT RESOLVE.  Calibrated against a planted nonexistent host.
+host	class	dns	transport	is_government	note
+raw.githubusercontent.com	REACHABLE	185.199.108.133	301	no	the grant-read channel every pass uses
+github.com	PROXY-403	140.82.114.3	403	no	resolves; transport refuses.  A DIFFERENT class from NXDOMAIN
+api.github.com	PROXY-403	resolves	403	no	why no pass since p373 publishes a star count
+pypi.org	REACHABLE	151.101.128.223	-	no	control: a non-GitHub host CAN resolve
+www.udir.no	RESOLVER-NXDOMAIN	NXDOMAIN	-	yes	Norwegian Directorate for Education — p376's own jurisdiction cell
+www.regjeringen.no	RESOLVER-NXDOMAIN	NXDOMAIN	-	yes	the 19 Jun 2026 announcement itself
+www.goe.go.kr	RESOLVER-NXDOMAIN	NXDOMAIN	yes	yes	the Gyeonggi teacher/pupil guideline PDFs
+english.moe.go.kr	RESOLVER-NXDOMAIN	NXDOMAIN	-	yes	Korean MOE
+www.unesco.org	RESOLVER-NXDOMAIN	NXDOMAIN	-	NO — UN agency	refutes the "government" scoping
+www.1edtech.org	RESOLVER-NXDOMAIN	NXDOMAIN	-	NO — standards body	refutes it again; this is the LTI/Open Badges normative text
+eur-lex.europa.eu	RESOLVER-NXDOMAIN	NXDOMAIN	-	NO — EU legal database	the AI Act primary text
+www.barnevakten.no	RESOLVER-NXDOMAIN	NXDOMAIN	-	NO — private press	refutes it a third time: ordinary specialist press does not resolve either
+www.oecd.org	NOT-TESTED	-	-	-	dropped from the run; the probe that would have included it was refused for reading resolver config alongside it
+this-host-cannot-exist-p376.invalid	NEGATIVE-CONTROL	NXDOMAIN	-	-	planted.  Proves NXDOMAIN cannot be distinguished from a real refusal BY SHAPE
+planted-control-p376-globant.no	NEGATIVE-CONTROL	NXDOMAIN	-	-	planted in the .no TLD specifically, so the class is not a TLD property

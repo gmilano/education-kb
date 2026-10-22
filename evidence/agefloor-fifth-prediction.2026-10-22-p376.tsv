@@ -1,0 +1,17 @@
+# ACTION p375-B — the FIFTH-JURISDICTION age-floor test.
+# Written and committed-to BEFORE the search leg ran, per p374's standing rule that a
+# prediction registered after the result is not a prediction.
+# p375's band: an AGE FLOOR on AUTONOMOUS pupil use of generative AI, found in 4
+# jurisdictions / 3 legal systems: China (MOE guide, primary barred), Brazil
+# (Parecer CNE/CP 15/2026, to end of 5th grade), France (permitted from quatrieme),
+# New York (A.9190, bar below grade 9).  3 of 4 land at end-of-primary, ~ages 11-13.
+field	value
+action	ACTION p375-B
+jurisdiction_chosen	South Korea
+why_this_one	Gap 498 names Korea high-impact and never reached by a first-hand leg; Korea is a 4th legal system (not civil-code-Brazil, not PRC administrative, not US state statute) and has a NAMED national instrument (AI Basic Act, AI digital textbooks) so a nil here is informative rather than merely thin
+prediction	NO grade-or-age floor on AUTONOMOUS pupil use of generative AI will be found in a Korean national instrument.  Korea will instead regulate the same risk on a DIFFERENT axis: data-processing consent age (PIPA, under-14 guardian consent) and/or procurement-and-vetting of the AI digital textbook, not a pupil-autonomy grade line.
+refutation_condition	A Korean MOE / ministerial instrument that names a grade or age below which pupils may not INDEPENDENTLY use open-ended generative AI.  If found, the band generalises to a 5th jurisdiction and a 4th legal system.
+confirmation_condition	Korean instruments found that bound the same risk by consent age or by procurement, with NO pupil-autonomy grade line.  Then the band is 4-of-5 and p375's convergence is a property of a SUBSET of legal systems, not of education law generally.
+what_a_nil_would_mean	p375 wrote that a nil would be the more valuable result.  Recorded here so a successor can check that this pass did not retro-fit which outcome it wanted.
+leg_language_1	English
+leg_language_2	Korean (ko) — run per p374's J3: an in-language leg is a DIFFERENT instrument, not a fallback

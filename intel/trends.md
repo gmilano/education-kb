@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟡 2026-10-22 · `p376` — **`p375`'s age floor is 4 of 5, and the fifth jurisdiction was PREDICTED to be a nil before the search ran. A sixth, found by the Korean-language leg, carries the strongest floor yet — as a RECOMMENDATION**
+
+**Evidence:** [`agefloor-fifth-prediction`](../evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv) ·
+[`agefloor-fifth-result`](../evidence/agefloor-fifth-result.2026-10-22-p376.tsv) ·
+[`primary-text-resolver`](../evidence/primary-text-resolver.2026-10-22-p376.tsv)
+
+🟢 **`ACTION p375-B` is discharged in the form `p375` asked for.** `p375` found an age floor on
+autonomous pupil use of generative AI in four jurisdictions across three legal systems, noted
+that **no fifth jurisdiction had been tested**, and wrote that **a nil would be the more
+valuable result**. 🟢 This pass registered its prediction — *South Korea, NO autonomy grade
+line, the risk bounded by consent age and procurement instead* — **in a committed file before
+either leg ran**, and the prediction is **CONFIRMED**.
+
+### 🟢 Korea: the nil, and what stands in the floor's place
+
+🔴 **No Korean national instrument draws a grade or age line on autonomous pupil use of
+generative AI.** Korea bounds the same risk on **three other axes**, which is the useful part:
+
+| Axis | Instrument | What it actually requires |
+|---|---|---|
+| **Procedural duty on the institution** | **AI Basic Act**, in force **2026-01-22** | classes student assessment at early-childhood, elementary and secondary level as **high-impact**, triggering a **mandatory impact assessment**. The duty lands on the school, not on the pupil's age |
+| **Procurement / artefact status** | National Assembly revision, **Aug 2025** | the **AI digital textbook was DEMOTED** from "textbook" to **"education material"** — optional and supplementary rather than mandatory |
+| **Consent age** | **PIPA**, plus provincial guidelines | under-14 needs guardian consent for third-party provision of personal data; the Gyeonggi teacher and pupil guidelines require compliance with the **service provider's own age limits** plus guardian consent or administrator approval — 🔵 **the floor is the vendor's, adopted by reference** |
+| **Assessment process** | MOE + all **17** metropolitan/provincial offices, **Dec 2025**, applying **from the 2026 school year** | AI use in **수행평가** (performance assessment) over five areas: permitted scope, **labelling of the process**, prior pupil training, assessment design, personal-data protection |
+
+🟢 **The consequence, stated sharply because `p375`'s framing invites the opposite reading: the
+age floor is NOT a property of education law. It is 4 of 5.** Three legal systems converging
+does not make a fourth converge, and the one jurisdiction tested *as a test* diverged.
+
+🔵 **And Korea's divergence is not an absence of regulation** — it is arguably a **heavier**
+regime than three of `p375`'s four, since an impact assessment is an auditable obligation
+whereas a grade line is a rule about who touches a tool.
+
+### 🟢 🆕 Norway: the strongest floor yet, found by the KOREAN-language leg
+
+🟢 **The Korean-language leg returned a jurisdiction the English leg did not: Norway.** 🔵 This
+is `p374`'s `J3` measured a second time and on a new axis — an in-language leg returned a
+**different fact class**, not a translation. Norway was then given its own two legs.
+
+| | Government framing | Udir framing (the directorate) |
+|---|---|---|
+| **Grades 1–7** (ages ~6–13) | AI should *"in all essentials not be used"* in primary school | pupils *"should in general not be **GIVEN ACCESS TO**"* generative AI |
+| **Grades 8–10** (ages ~14–16) | permitted under teacher supervision | *"gradually and carefully, provided **teachers first have adequate competence**"* |
+| **Upper secondary** (17+) | encouraged to learn responsible use | — |
+| **Instrument** | 🔴 announced **19 Jun 2026**, effective at the school year's start in **late Aug 2026** | 🔴 a **RECOMMENDATION via Utdanningsdirektoratet, NOT legislation** |
+
+🟢 **Three things the Norwegian-language leg added that the English reporting did not**, and all
+three are commercially load-bearing:
+
+1. 🟢 **ACCESS, not use.** The directorate's verb is *given access to*; the government's is
+   *used*. 🔵 **Access is a deployment property an auditor can check in minutes; use is a
+   behaviour nobody can verify.** `Pattern 15`'s stage-gated virtual key already builds the
+   access form, which means this base's existing pattern satisfies the stricter reading.
+2. 🟢 **A COMPETENCE precondition — a new axis absent from all four of `p375`'s cells.** Grades
+   8–10 are gated on the **teacher's** competence, not the pupil's age. 🔵 That turns a
+   restriction into a **teacher-enablement deliverable**, which is a thing a studio sells.
+3. 🟢 **Teaching *about* AI is NOT covered** as currently worded — only pupils' own use. 🔵 **An
+   AI-literacy programme for grades 1–7 is therefore not blocked by the strictest floor in this
+   base**, and that is the single most useful sentence in the cell.
+
+### 🔵 The band, restated honestly across six jurisdictions
+
+| Jurisdiction | Floor | Binding? |
+|---|---|---|
+| **Norway** | grades 1–7, default **no access** | 🔴 recommendation |
+| **China** | primary pupils barred from independent open-ended generation (MOE guide) | administrative guide |
+| **Brazil** | autonomous use prohibited to end of 5th grade (`Parecer CNE/CP nº 15/2026`) | opinion/parecer |
+| **France** | permitted **from** classe de quatrième | national framework |
+| **New York** | would bar most classroom AI below grade 9 (`A.9190`) | 🔴 **a bill** |
+| 🔴 **South Korea** | **none** — impact assessment, consent age and procurement instead | statute (in force) |
+
+🟢 **Five of six land in the same band — end of primary, roughly ages 11–13 — and NOT ONE of
+the five is primary legislation in force.** 🔵 A guide, a parecer, a framework, a bill and a
+recommendation. The one jurisdiction with a **statute in force** is the one with **no floor**.
+🔴 **A successor must not sell this band as law.** It is a remarkably consistent *expectation*,
+and the commercially correct reading is `p375`'s: build the permission so an auditor can check
+it, because the expectation is stable even where the instrument is not.
+
+### 🔴 Why every cell above is SECONDARY, and why that is now structural
+
+🔴 **Zero primary instrument texts were retrieved this pass, and the reason is not effort.**
+`udir.no`, `regjeringen.no`, `goe.go.kr` and `english.moe.go.kr` **do not resolve** from this
+environment — NXDOMAIN on both transports — and neither do `unesco.org`, `1edtech.org`,
+`eur-lex.europa.eu` or ordinary Norwegian press. 🟢 `Gap 241` has been carried as *"government
+egress"* and that scoping is **refuted**: four of those hosts are not governments. 🔵 The
+consequence for this shelf is that **SECONDARY is the ceiling, by construction** — see
+`agents/top.md`'s transport note and `ACTION p376-B`.
+
 ## 🟢 2026-10-22 · `p375` — **four jurisdictions, three legal systems, one boundary nobody coordinated: an AGE FLOOR on autonomous pupil use of generative AI**
 
 🟢 **This is the pass's headline finding and it is a second, independent convergence class

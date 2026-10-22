@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🔴 2026-10-22 · `p376` — **fourth consecutive pass with no agent row, and `ACTION p375-C`'s instrument change is what finally EXPLAINED the zero instead of repeating it**
+
+🟢 **`ACTION p375-C` is discharged.** `p375` registered it in preference to running the agent
+query a fourth time: *"run the next discovery leg against the credentialing / interop layer
+`p371` named."* 🟢 **As a DISCOVERY instrument the change worked** — the leg probed **9**
+addresses, **8** answered `ls-remote`, and `make carried` graded **3 of 8 NEW**, against **0**
+new rows from three consecutive passes of the agent query.
+
+🔴 **And not one of the three is an agent.** They are an LTI credential issuer, an Open Badges
+3.0 issuer module, and a specification work item. 🟢 **So the zero on this shelf is now a
+MEASURED property of the leg rather than a fourth unexplained nil:** the layer `p371` named is
+an **interop** layer, and a leg aimed at interop cannot return agents however well it
+retrieves. The per-candidate table is in `agents/trending.md`; the graded layer is
+[`credentialing-layer-grade`](../evidence/credentialing-layer-grade.2026-10-22-p376.tsv).
+
+🔵 **Denominator, stated the way `p374` required:** 9 probed · 8 live · 1 absent (`1EdTech/ltijs`,
+`p375`'s own constructed address, re-probed as a negative control and still `rc=128`) · 5
+CARRIED · 3 NEW · **0 agents**.
+
+🔴 **No star counts.** `api.github.com` and `github.com` HTML both answer **403** from this
+environment, re-measured this pass. 🆕 A **third** transport class was measured for the first
+time and it is worse than a 403 — see the note below.
+
+### 🟢 `ACTION p376-A` — the leg changes again, and this time on a tested principle rather than a hunch
+
+🟢 **`p374` established that an in-language leg is a DIFFERENT INSTRUMENT, not a fallback for a
+failed English one** — Japan's English and Japanese legs were both productive and returned
+**different fact classes**. That finding is now enforced as invariant `J3`. 🔴 **But it was
+established on POLICY text, and no pass has tested whether it holds for SUPPLY.**
+
+🔴 **Three passes of English-language agent queries returning `9/9`, `9/11` and now `5/8`
+carried is consistent with saturation of the ENGLISH INDEX, and this base has been reading it
+as saturation of the industry.** Those are different claims and only one of them has been
+measured. 🟢 `ACTION p376-A` is the test: run the agent discovery leg in **Chinese, Korean,
+Portuguese and Spanish**, with the refutation condition written down first — if the
+in-language legs return the same carried set, English saturation and industry saturation are
+the same thing here and this shelf's zero is a fact about education AI; if they return new
+addresses, every "zero new agents" conclusion from `p373` onward was an artefact of query
+language.
+
+🔵 **Why this is worth a pass.** `p375` found this base's jurisdictional coverage was limited by
+which outlets the index reaches in which language. The supply side is read through the same
+index. The asymmetry — policy tested for language sensitivity, supply never — is the largest
+untested assumption on these shelves.
+
+### 🔴 The transport note, because it changes what "SECONDARY" means on every shelf
+
+🔴 **`Gap 241` has been carried as "government egress" for many passes. It is MIS-SCOPED, and
+the measurement is in
+[`primary-text-resolver`](../evidence/primary-text-resolver.2026-10-22-p376.tsv).** Ten hosts
+over two transports: `raw.githubusercontent.com` and `pypi.org` resolve; `github.com` resolves
+and is refused with a **403**; and **every primary-text host answers NXDOMAIN** — `udir.no`,
+`regjeringen.no`, `goe.go.kr`, `english.moe.go.kr`, and also `unesco.org` (a UN agency),
+`1edtech.org` (**the standards body whose LTI and Open Badges texts this pass's own rows
+implement**), `eur-lex.europa.eu` (the AI Act's primary text) and `barnevakten.no` (ordinary
+private press).
+
+🟢 **Four of those are not governments, which is what refutes the scoping.** 🔴 **And the honest
+limit: NXDOMAIN is indistinguishable BY SHAPE from a host that does not exist** — two planted
+controls, `this-host-cannot-exist-p376.invalid` and `planted-control-p376-globant.no`, return
+the identical answer. What makes it a refusal rather than an absence is that the search index
+returns live pages from those same hosts.
+
+🔵 **The consequence a successor must not soften: every jurisdictional cell on these shelves is
+SECONDARY BY CONSTRUCTION, not by a failure of diligence** — and any action registered to
+"retrieve the primary text" is **unsatisfiable in this harness**. `ACTION p376-B` replaces that
+class of action with one that can actually be discharged: corroborate a claim across
+independent outlets at QUOTE level, and grade the number of outlets, which is a thing this
+environment can measure.
+
 ## 🔴 2026-10-22 · `p375` — **no agent row added or changed**, and the denominator is published
 
 🟢 **The four prescribed discovery legs ran and produced 11 candidate addresses; `make carried`

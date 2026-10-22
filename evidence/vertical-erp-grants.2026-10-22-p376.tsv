@@ -1,0 +1,22 @@
+# The vertical-platform leg (`open source platform education ERP CRM MIT Apache`), graded
+# first-hand on 2026-10-22.  Two inbound claims from the result set are REFUTED by payload.
+address	default_branch	grant_path	grant_bytes	family_first_hand	inbound_claim	verdict
+krayin/laravel-crm	2.2	2.2/LICENSE	1078	MIT (holder: Webkul Software, 2010-2025)	"MIT"	CONFIRMED
+aureuserp/aureuserp	master	master/LICENSE	1077	MIT (holder: Webkul Software, 2010-2025)	"MIT"	CONFIRMED
+apache/ofbiz-framework	trunk	trunk/LICENSE	11906	Apache-2.0	"Apache-2.0"	CONFIRMED
+cortezaproject/corteza	2026.9.x	2026.9.x/LICENSE	11358	Apache-2.0	"Apache 2.0"	CONFIRMED
+hcengineering/platform	develop	develop/LICENSE	14197	EPL-2.0 — "Eclipse Public License - v 2.0", and the token "apache" occurs ZERO times in 14 197 B	"Huly Platform is also licensed under Apache License 2.0"	REFUTED first-hand
+openeducat/openeducat_erp	19.0	19.0/LICENSE	8241	LGPL-3.0	"LGPL-3.0"	CONFIRMED as to family, but see the two payload defects below
+#
+# TWO DEFECTS IN THE OpenEduCat PAYLOAD, both first-hand and both decision-relevant:
+# 1. POINTER WITH A DEAD TARGET.  Line 1 reads "For copyright information, please see the
+#    COPYRIGHT file."  COPYRIGHT, COPYRIGHT.md and COPYRIGHT.txt all answer 404 on branch 19.0.
+# 2. A SELF-DESCRIPTION THE PAYLOAD DOES NOT SATISFY.  The file states the GPL text "is
+#    included at the bottom as well".  In 8 241 B the string "GNU GENERAL PUBLIC LICENSE"
+#    occurs ZERO times; the file ends mid-LGPL, at "...for the Library."  The operative grant
+#    is LGPL-3.0; a reader relying on the file's own claim would be citing enclosed terms that
+#    are not enclosed.
+#
+# THE LEG'S ACTUAL FINDING: the EDUCATION-ERP tier has no permissively-licensed member.
+# OpenEduCat is LGPL-3.0, Moodle GPL-3.0, Open edX AGPL-3.0, Odoo and ERPNext GPL.  Every
+# permissive option the leg returned is GENERAL-PURPOSE (krayin, aureuserp, ofbiz, corteza).

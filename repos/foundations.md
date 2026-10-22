@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟡 2026-10-22 · `p376` — one row in the **credentialing / interop** tier, published WITH its staleness, and one withheld for having no grant at all
+
+**Evidence:** [`credentialing-layer-grade`](../evidence/credentialing-layer-grade.2026-10-22-p376.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p376.tsv)
+
+| Repo | Licence | Grant read at | HEAD | Tier | Why foundational — and the caveat |
+|---|---|---|---|---|---|
+| [`digitalcredentials/lti-issuer`](https://github.com/digitalcredentials/lti-issuer) | **MIT** (1 076 B, sha256₁₂ `5ea29d532cac`, **untitled** payload) | `master/LICENSE` | `75a3c5d` · 🔴 **2024-04-22** | credentialing / interop | 🟢 the only **permissively granted** code this base has located that joins **LTI** to **W3C Verifiable Credentials** — an LTI producer that issues a VC, which is the exact seam `p371` named as unshelved. 🔴 **Read it as a REFERENCE, not a dependency:** HEAD has not moved in two and a half years |
+
+🟢 **Verified first-hand this pass.** `git ls-remote --symref` gives `ref: refs/heads/master`,
+HEAD `75a3c5d8b5470e1101c6559b8bb981e53e18c5d4`; the grant payload was read at **1 076 B** and
+digested from a **file**, never through command substitution — `p178`'s one-byte channel defect.
+🔴 **No star count** — `api.github.com` and `github.com` HTML are both `403` here.
+
+### 🔵 The grade, and the two instruments that answer differently about it
+
+🟡 **The payload is the MIT body verbatim and carries NO TITLE.** It opens on
+`Copyright 2020 Center for 21st Century Universities` — note the holder is **Georgia Tech's
+C21U**, not MIT the institution, despite the `digitalcredentials` org being the **MIT Digital
+Credentials Consortium**. A successor reading "MIT" in both senses on one row should not
+conflate them.
+
+🔵 **Two of this base's own instruments give different answers, and they are NOT in conflict:**
+
+| Instrument | Answer | What it was asked |
+|---|---|---|
+| `p228-shelf-gate` `classify` — **the grade of record for a shelf cell** | 🟢 **`MIT`**, "title line @53" | *which family is this grant?* |
+| `p312-template-identity` `identify` | `UNKNOWN-TEMPLATE`, form `FILL-IN`/`HOLDER`, normalised 1 025 | *is this payload one of the templates I have PINNED?* |
+
+🟢 **`p312` is documented to behave exactly this way** — *"An unrecognised payload returns
+`UNKNOWN-TEMPLATE`, never a nearest match"* — and its registry is built from its own 17 pinned
+fixtures. 🔴 **So `UNKNOWN-TEMPLATE` is not evidence of a bespoke or irregular grant**, and a
+successor must not read it as one: run `p312`'s identifier over `p314`'s committed fixtures and
+it returns `UNKNOWN-TEMPLATE` for **10 of 11** payloads that `p314` committed *with declared
+families*, including three MIT ones. 🔵 That is the registry's coverage, not a defect in those
+payloads — but it does mean the two instruments must be quoted for the question each answers.
+**`ACTION p376-C`**: pin this payload as a `p312` fixture, so the untitled-MIT template the
+credentialing tier actually ships becomes identifiable rather than merely classifiable.
+
+### 🔴 Withheld, deliberately: `open-ent/openbadges`
+
+🔴 **No grant on any channel** — ladder, enumerated tree, `pom.xml`, README — so it is **not
+usable for client work** and gets no foundational row. 🟢 It is maintained (`a978850`,
+**2026-10-16**) and is the most complete Open Badges 3.0 / VC-JWT issuer this pass saw; the
+reasoning is in `agents/trending.md` and its design constraints are built into `Pattern 16`.
+**`Gap 501`.**
+
+### 🔵 What the tier looks like once the maintenance axis is measured
+
+🟢 **Permissive AND maintained, both already carried:** [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs)
+(Apache-2.0, `2026-10-13`) and [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens)
+(MIT, `2026-10-05`).
+🔴 **Maintained but copyleft:** `Schroedinger-Hat/certo` and `edubadges/edubadges-server` (both
+AGPL-3.0), `luisgf/openbadgeslib` (LGPL-3.0).
+🔴 **Permissive but stale:** this pass's own new row, and `w3c-ccg/edu_occ_verifiable_credentials`
+(HEAD **2020-12-28**, and a reports repository rather than software).
+
+🟢 **The build consequence, which is the point of the tier:** a studio can assemble a
+standards-conformant credential path **entirely from permissive, maintained code** —
+`Cvmcosta/ltijs` for the LTI 1.3 boundary and `credential-lens` for offline verification — but
+there is **no permissive, maintained ISSUER**. The issuer is the piece that must be written,
+and `Pattern 16` is the recipe for writing it against a specification rather than forking an
+AGPL one.
+
 ## 🟢 2026-10-22 · `p375` — one foundational row added, in the **curriculum** tier, grant read first-hand
 
 | Repo | Licence | Grant read at | HEAD | Tier | Why foundational |

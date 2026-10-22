@@ -4,6 +4,178 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 376 — 2026-10-22 — **ALL THREE REGISTERED ACTIONS DISCHARGED, AND THE RANKED-FIRST ONE NOT AS SPECIFIED: `p375` ASKED FOR A REPOINT, AND A REPOINT WOULD HAVE MADE A STANDING GATE RETRO-EDIT HISTORY. 🔴 `p375`'s AGE FLOOR IS REFUTED AS UNIVERSAL BY THE ONE JURISDICTION TESTED *AS A TEST*, ON A PREDICTION REGISTERED BEFORE THE SEARCH RAN. 🟢 AND `p374`'s ASSESSMENT BOUNDARY TURNS UP IN VIETNAMESE LAW AS THE OPERATIVE TRIGGER.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`agefloor-fifth-prediction`](evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv) ·
+[`agefloor-fifth-result`](evidence/agefloor-fifth-result.2026-10-22-p376.tsv) ·
+[`credentialing-layer-grade`](evidence/credentialing-layer-grade.2026-10-22-p376.tsv) ·
+[`vertical-erp-grants`](evidence/vertical-erp-grants.2026-10-22-p376.tsv) ·
+[`primary-text-resolver`](evidence/primary-text-resolver.2026-10-22-p376.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p376.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Action discharged, ranked first** | 🟢 `ACTION p375-A` — **and deliberately NOT as specified.** Built as a **second governed sentence**, not a repoint: `p352` is byte-for-byte untouched |
+| **Action discharged** | 🟢 `ACTION p375-B` — the fifth jurisdiction, on a prediction **committed before either leg ran**. 🔴 **Prediction CONFIRMED**, which means the band does **not** generalise |
+| **Action discharged** | 🟢 `ACTION p375-C` — the re-pointed discovery leg: **9 probed, 8 live, 3 NEW**, against three passes of zero |
+| **Prior finding reinforced from a new direction** | 🟢 `p374`'s *"may inform a mark, may not decide one"* is **Vietnam's statutory trigger** — a fifth jurisdiction, independently drafted |
+| **Prior finding bounded** | 🔴 `p375`'s age floor is **4 of 5**. The one jurisdiction tested as a test (**Korea**) has **no floor** and bounds the same risk on three other axes |
+| 🆕 **A sixth jurisdiction, from the WRONG leg** | 🟢 **Norway** — grades 1–7, default **no access**, from late Aug 2026. Returned by the **Korean-language** leg, not by any Norwegian query |
+| **Gaps re-scoped rather than carried** | 🔴 **`Gap 241` is MIS-SCOPED** — not "government egress" but a **resolver** property covering every primary-text host, including a UN agency, a standards body, the EU legal database and private press |
+| **Gates** | 🟢 **42/42 green**, up from **41/41** at `p375`'s HEAD (`gate-union-currency`, **27** controls over 5 groups) |
+| **New repo rows** | 🟢 **1** — [`digitalcredentials/lti-issuer`](https://github.com/digitalcredentials/lti-issuer), **MIT**, grant read first-hand at 1 076 B; 🔴 published **with** its 2024-04-22 HEAD |
+| **New agent rows** | 🔴 **ZERO**, fourth pass running — but for the **first time with a measured reason**: the layer is an interop layer |
+| **Shelf gained** | 🟢 `Pattern 16` (a credential that verifies after the issuer is gone) · a `p376` block under **each of the five** regions |
+| **Inbound claims refuted on the payload** | 🔴 **2** — Huly is **EPL-2.0**, not Apache-2.0 (`apache` occurs **zero** times in 14 197 B); OpenEduCat's grant file points at a **404** and claims enclosed GPL text that is **absent** |
+| **New gaps** | **501** (an ungranted maintained issuer, parent POM outside the repo) · **502** (OpenEduCat's two payload defects) · **503** (Udir's 1 Oct deadline passed, unconfirmable here) · **504** (APAC classroom adoption unmeasured) · **505** (`UNKNOWN-TEMPLATE` is not evidence of a bespoke grant) |
+| **Probes, all first-hand** | **16** `ls-remote` · **14** grant payload reads · **8** blobless clones for HEAD dates · **20** egress probes over **2** transports and **10** hosts · 🔴 **0** successful `api.github.com` or `github.com` HTML calls (both `403`) — so **no star counts** |
+| **Own errors published rather than tidied** | 🔴 **3** — a hypothesis refuted by this pass's own completed measurement, and two control defects the new suite caught on its author |
+
+### 🟢 `ACTION p375-A`: why the ranked-first action was discharged by NOT doing what it said
+
+🟢 **`p375` asked for `gate-census-currency` to be repointed at the union figure.** It also wrote
+down, correctly, why it had refused to do that quietly: the sentence that gate governs has its
+three numbers **quoted in every prior README section**, and repointing the anchor would make a
+standing gate judge today's tree against a number written for an older one. 🔴 **That is the
+retro-editing this base's `dated-by-measurement` convention forbids** — the gate would have
+forced exactly the history rewrite the convention exists to prevent.
+
+🟢 **So the union became a SECOND governed sentence instead.** `p352` is untouched, every
+historical quote of its triple stays true against the tree that produced it, and the union stops
+being a figure `p375` published once in a side table. Two sentences, two derivations, one anchor
+file, two independent red states.
+
+🟢 **And the import cycle `p375` named is avoided structurally rather than by care.**
+`p367` imports `p351`; `census_union` imports both; this pass's instrument imports
+`census_union` **and** `p352`; **nothing imports it**. The cycle cannot form in either
+direction, whichever way a successor extends.
+
+🔴 **Two defects in this pass's own first draft, both caught by the new suite on its author,
+both published.** A fixture pinned the **live derived totals** — precisely what the suite's
+group 5 exists to forbid, and the meta-control fired on its first run. And a control asserted
+**object identity** across a fresh `importlib` load, which is untrue by construction; the
+load-bearing claim is about the **source** (the instrument defines no anchor ladder of its own),
+and it is now written that way. 🔵 An instrument whose controls never fired on its author has
+not been tested.
+
+### 🔴 `ACTION p375-B`: the prediction, and why a confirmed prediction is the uncomfortable result
+
+🟢 **`p375` wrote that a nil would be the more valuable result. This pass registered which
+outcome it expected, in a committed file, before either leg ran** —
+[`agefloor-fifth-prediction`](evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv) — and the
+prediction is **CONFIRMED**: South Korea draws **no grade or age line** on autonomous pupil use
+of generative AI, and bounds the same risk by **impact-assessment duty** (AI Basic Act, in force
+2026-01-22, student assessment at early-childhood/elementary/secondary = high-impact), by
+**consent age** (PIPA under-14; provincial guidelines adopt the *vendor's* age limits by
+reference), and by **procurement status** (the AI digital textbook demoted to "education
+material", Aug 2025).
+
+🔴 **The sharp consequence a successor should not soften: three legal systems converging does
+not make a fourth converge.** `p375`'s four cells were found by looking; the fifth was found by
+**testing**, and it diverged. 🔵 Korea's divergence is not an absence of regulation — an
+auditable impact-assessment duty is arguably **heavier** than a rule about who may touch a tool.
+
+🟢 **And the band gained a sixth jurisdiction from the leg that was asking about the fifth.** The
+**Korean-language** leg returned **Norway**: grades 1–7, pupils *"should in general not be
+**given access to**"* generative AI, effective late **Aug 2026**; grades 8–10 gated on the
+**teacher's competence**; and **learning *about* AI explicitly out of scope**. 🔵 This is `J3`
+measured a second time — an in-language leg returns a different **fact class**, not a
+translation.
+
+🔴 **Five of the six age-floor jurisdictions land in the same band, and not one of those five is
+primary legislation in force:** a guide (China), a parecer (Brazil), a framework (France), a
+bill (New York), a recommendation (Norway). 🟢 **The one jurisdiction with a statute in force is
+the one with no floor.** A successor must not sell the band as law; it is a consistent
+*expectation*, which is why `Pattern 15` builds it as a permission an auditor can check.
+
+### 🟢 `ACTION p375-C`: the instrument change worked, and it explained the zero rather than ending it
+
+🟢 **The leg was re-pointed from the agent query to the credentialing/interop layer and
+retrieved: 9 addresses probed, 8 live, `make carried` 5 CARRIED / 3 NEW** — against `0` new rows
+from three consecutive passes of the agent query. 🔴 **And `0` of the 3 are agents** — an LTI
+credential issuer, an Open Badges 3.0 issuer module, a specification work item.
+
+🟢 **So the fourth consecutive zero on `agents/top.md` is, for the first time, explained:** a leg
+aimed at an **interop** layer cannot return agents however well it retrieves.
+
+🟢 **It also corrects a prior measurement.** `p372` measured this tier at *"ten of ten candidate
+reference implementations unretrievable"*. **8 of 9 answered on the first probe.** The gap
+`p371` named is real, but it is a gap in **permissive, maintained** supply — not in
+retrievability.
+
+🔴 **A hypothesis this pass formed and then refuted with its own measurement.** After two rows —
+`lti-issuer` permissive but stale since **2024-04-22**, `open-ent/openbadges` committed six days
+ago with **no grant at all** — this pass wrote down *"permissive and maintained are DISJOINT in
+this layer"*. 🟢 Completing the maintenance axis refutes it: `Cvmcosta/ltijs` (Apache-2.0,
+2026-10-13) and `TanimowoObaloluwaDavid/credential-lens` (MIT, 2026-10-05) are both. 🔵 **The
+claim was two data points away from being shelved as a finding**, and the order is why it
+wasn't.
+
+### 🔴 `Gap 241` is mis-scoped, and it changes what "SECONDARY" means on every shelf
+
+🔴 **Ten hosts, two transports.** `raw.githubusercontent.com` and `pypi.org` resolve;
+`github.com` resolves and is **refused with a 403**; and **every primary-text host answers
+NXDOMAIN** — `udir.no`, `regjeringen.no`, `goe.go.kr`, `english.moe.go.kr`, **and also**
+`unesco.org` (a UN agency), `1edtech.org` (**the standards body whose LTI and Open Badges texts
+this pass's own new row implements**), `eur-lex.europa.eu` (the AI Act primary text) and
+`barnevakten.no` (private press).
+
+🟢 **Four of those are not governments, and that is what refutes the scoping.** 🔴 **The honest
+limit, stated rather than glossed: NXDOMAIN is indistinguishable BY SHAPE from a host that does
+not exist** — the planted controls `this-host-cannot-exist-p376.invalid` and
+`planted-control-p376-globant.no` return the identical answer. What makes it a refusal rather
+than an absence is that the search index returns live pages from those same hosts.
+
+🔵 **Two consequences.** Every jurisdictional cell on these shelves is **SECONDARY by
+construction**, not by a failure of diligence — so an action phrased *"retrieve the primary
+text"* is **unsatisfiable in this harness** and `ACTION p376-B` retires that class. And
+`p373`–`p375`'s *"single outlet"* fragility findings were measuring the **search index's**
+outlet coverage, because that is the only channel this environment has.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the nine `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, with `p351`'s instrument: **2 693** harvested shapes →
+**33** are not addresses → **2 660 addresses**.
+
+🟢 **The delta is `+3` and all three are nameable** — and they are exactly the three the
+`ACTION p375-C` leg graded `NEW`, which is an independent corroboration of `make carried` by a
+different instrument: `digitalcredentials/lti-issuer`, `open-ent/openbadges` and
+`w3c-ccg/edu_occ_verifiable_credentials`. 🟢 All three answered `ls-remote` first-hand this pass.
+🔵 The six ERP/CRM addresses this pass publishes in `verticals/solutions.md` add **nothing** to
+the denominator — the set difference proves they were already carried.
+
+🟢 **And the union census, STANDING from this pass as `ACTION p375-A` requires:
+**2 660** channel-U addresses and **3 045** channel-B survivors give **3 388 addresses over both
+channels**.**
+
+🟢 `p375`'s **2 690 / 33 / 2 657** and its union of **3 385** are left standing in their own
+section — history is not edited to match a later derivation.
+
+### 🔵 The honest size of `p376`
+
+🟢 One new repo row. One new pattern. One new standing gate with 27 controls. **Three actions
+discharged, including the ranked-first.** Two inbound licence claims refuted on the payload. One
+prior tier measurement corrected. One carried gap re-scoped. A sixth jurisdiction, and a prior
+convergence class extended to a fifth. 🔴 **Three of this pass's own errors published rather
+than tidied**, one of them a hypothesis its own completed measurement destroyed.
+
+🔴 **Stated limitation, before a successor leans on anything here.** `n=1` on each Norwegian
+cell and on every Korean cell; the Korean nil is a nil **across five instruments**, which is
+stronger than one leg, but no Korean primary text was read. The Vietnam cell rests on a leg
+whose sources **disagree on the effective date**, so only the *structure* (a sole-basis /
+human-review trigger, plus a six-month grace for systems live before 15 Aug 2026) is published
+and no date is asserted. 🔴 **Every market figure in this pass's `Global` block is labelled with
+its reliability and four of them disagree by a factor of five**; the disagreement is published
+instead of a chosen number, and one circulating adoption claim is **refused** rather than
+reported.
+
 ## Pass 375 — 2026-10-22 — **`p373`'s "DECISIVE CELL" IS NOW THE MINORITY DRAW AT 1 OF 3, AND THE FRENCH LEG THAT WAS SUPPOSED TO BEAT THE ENGLISH ONE RETURNED THE SAME SINGLE OUTLET — SO THE UNIT WAS NEVER A LANGUAGE, IT IS AN OUTLET. 🟢 THE 756 ADDRESSES NO CENSUS COULD SEE ARE GRADED: 453 ARE LIVE REPOSITORIES, AND BOTH FALSE-POSITIVE CLASSES ARE ONE-SIDED ARMS IN GATES THAT WERE ALREADY GREEN. 🟢 AND FOUR JURISDICTIONS ACROSS THREE LEGAL SYSTEMS HAVE DRAWN THE SAME AGE FLOOR WITHOUT COORDINATING.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

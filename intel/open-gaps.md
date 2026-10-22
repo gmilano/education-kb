@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 376 · 2026-10-22 — `ACTION p375-A` **discharged as a SECOND governed sentence rather than a repoint**; `ACTION p375-B` **discharged on a prediction registered first, and the band is refuted as universal**; `ACTION p375-C` **discharged, and the zero it was registered to explain is now explained**
+
+**Evidence:** [`agefloor-fifth-prediction`](../evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv) ·
+[`agefloor-fifth-result`](../evidence/agefloor-fifth-result.2026-10-22-p376.tsv) ·
+[`credentialing-layer-grade`](../evidence/credentialing-layer-grade.2026-10-22-p376.tsv) ·
+[`vertical-erp-grants`](../evidence/vertical-erp-grants.2026-10-22-p376.tsv) ·
+[`primary-text-resolver`](../evidence/primary-text-resolver.2026-10-22-p376.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p376.tsv)
+
+🟢 **Gate state: `make hooks` was `41/41` at `p375`'s HEAD, re-run before this pass wrote a
+line, and is `42/42` at this one** — `gate-union-currency`, **27** offline controls, added by
+`ACTION p375-A`.
+
+### 🟢 The three registered actions, all three discharged
+
+| Action | `p375`'s rank | Disposition |
+|---|---|---|
+| `ACTION p375-A` | **first** | 🟢 **DISCHARGED, and NOT as specified.** `p375` asked for the standing census anchor to be repointed at the union. A repoint would make a standing gate judge today's tree against a number quoted in every prior section — the retro-editing this base forbids. 🟢 Built instead as a **second governed sentence** with its own derivation and its own red state: `p352` is untouched, every historical quote stays true, and the union stops being a figure published once |
+| `ACTION p375-B` | third | 🟢 **DISCHARGED on a pre-registered prediction**, and the prediction is **CONFIRMED** — Korea is the nil `p375` said would be more valuable. 🟢 A **sixth** jurisdiction (Norway) arrived from the Korean-language leg |
+| `ACTION p375-C` | second | 🟢 **DISCHARGED.** The re-pointed leg returned **3 NEW of 9 probed** against three passes of zero — and **0 agents**, because the layer is an interop layer. The zero is now a measured property of the leg |
+
+### 🔴 New gaps
+
+| Gap | What is missing, and why it is a gap rather than a nil |
+|---|---|
+| **`Gap 501`** | [`open-ent/openbadges`](https://github.com/open-ent/openbadges) is maintained (`a978850`, 2026-10-16) and has **no grant on any channel** — ladder, enumerated tree, `pom.xml`, README. Its parent POM `fr.openent:app-parent:1.2.0` is **not in the repository**, so a grant may exist at the superproject boundary (`p291`'s pin-grant axis) and **cannot be verified from here** |
+| **`Gap 502`** | `openeducat/openeducat_erp`'s `LICENSE` points to a `COPYRIGHT` file that is **404 on three rungs**, and claims the GPL text is *"included at the bottom as well"* when `GNU GENERAL PUBLIC LICENSE` occurs **zero** times in its 8 241 B. The family (LGPL-3.0) is unaffected; the **licence memo** a studio would write from it is not |
+| **`Gap 503`** | Udir said it would elaborate Norway's age-adapted recommendations **by 1 Oct 2026**. That date has passed and **no source confirms publication**. `udir.no` does not resolve here, so this cannot be closed from this environment |
+| **`Gap 504`** | APAC **school-level AI adoption rates** were not found by any leg this pass. An informed gap: the region's statutes are measured, its classroom uptake is not |
+| **`Gap 505`** | `p312-template-identity`'s registry returns `UNKNOWN-TEMPLATE` for **10 of 11** payloads `p314` committed *with declared families*. This is its documented behaviour, **not a defect** — but it means no pass may read `UNKNOWN-TEMPLATE` as evidence of a bespoke grant, and the untitled-MIT template the credentialing tier ships is unpinned (`ACTION p376-C`) |
+| **`Gap 241`** · **RE-SCOPED, not closed** | Carried for many passes as *"government egress"*. 🔴 **Refuted as a government property:** `unesco.org`, `1edtech.org`, `eur-lex.europa.eu` and private Norwegian press also fail to resolve. It is a **resolver** property covering every primary-text host, and 🔴 **NXDOMAIN is indistinguishable by shape from a nonexistent host** — two planted controls return the identical answer |
+
+### 🟢 Registered for the successor pass, ranked
+
+🟢 **`ACTION p376-A` (ranked FIRST)** — run the **agent discovery leg in Chinese, Korean,
+Portuguese and Spanish**, with the refutation condition written down **before** the search, as
+`p374` and this pass both did. 🔴 **The largest untested assumption on these shelves:** `p374`
+proved an in-language leg is a *different instrument* for **policy** text, and no pass has
+tested whether that holds for **supply**. Four passes of English agent queries returning
+`9/9`, `9/11` and `5/8` carried is equally consistent with saturation of the **English index**
+— which this base has been reading as saturation of the **industry**. If the in-language legs
+return the same carried set, the zero is a fact about education AI; if they return new
+addresses, every "zero new agents" conclusion from `p373` onward is an artefact of query
+language.
+
+🟢 **`ACTION p376-B` (ranked second)** — **retire the unsatisfiable action class.** Any action
+phrased as "retrieve the primary text" cannot be discharged in this harness, measured on two
+transports over ten hosts. Replace it with one that can: corroborate a claim at **quote level
+across independently counted outlets**, and publish the outlet count as the grade. 🔵 This also
+reframes `p373`–`p375`'s "single outlet" fragility findings — they were measuring the **search
+index's** outlet coverage, because that is the only channel that exists here.
+
+🟡 **`ACTION p376-C` (ranked third)** — pin `digitalcredentials/lti-issuer`'s **untitled MIT**
+payload (1 076 B, sha256₁₂ `5ea29d532cac`) as a `p312` fixture, so the template the
+credentialing tier actually ships becomes identifiable rather than merely classifiable, and
+`Gap 505`'s asymmetry narrows by one real payload.
+
+🔴 **`ACTION p376-D`** — `Gap 501` is a **live test case for `p291`'s pin-grant axis at a
+boundary the superproject does not contain**. Find the channel that reads a Maven **parent
+POM** grant from outside the repository, or establish that there is none here and record the
+class.
+
+🔵 **Re-registered, NOT run this pass:** `ACTION ZZ-ap` (the `os-taxonomy` grant partitions by
+**semantic layer inside the same files**, so a per-subtree classifier still misreads it),
+`ACTION ZZ-aq` (`split_live_section` is anchored at `^## Pass` while `agents/trending.md` writes
+date-first headings — **fix the gate, not the file**; the file's convention was kept again this
+pass), `ACTION ZZ-af` / `ZZ-ai`, `ACTION ZZ-ar` / `ZZ-as` / `ZZ-at`, `ACTION p375-A`'s sibling
+question of whether the **union** should eventually become the only census (not decided here —
+both sentences now stand and a successor has two passes of data to choose on).
+
 ## Pass 375 · 2026-10-22 — `ACTION p374-A` **discharged and it demotes `p373`'s decisive cell to the minority draw**; `ACTION p374-J` **graded: 453 of the 756 invisible addresses are LIVE repositories**, two standing instruments are found ONE-SIDED, and four jurisdictions turn out to have drawn the same age floor
 
 **Evidence:** [`census-union-grade`](../evidence/census-union-grade.2026-10-22-p375.tsv) ·

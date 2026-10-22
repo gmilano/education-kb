@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🔴 2026-10-22 · `p376` — the education-ERP tier has **no permissively licensed member**, measured; and two inbound licence claims are REFUTED by payload
+
+**Evidence:** [`vertical-erp-grants`](../evidence/vertical-erp-grants.2026-10-22-p376.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p376.tsv)
+
+🟢 **The prescribed vertical leg ran (`open source platform education ERP CRM MIT Apache`) and
+its finding is a licence structure rather than a platform.** Every grant below was read
+first-hand from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported,
+on **2026-10-22**.
+
+### 🔴 The tier, by grant
+
+| Platform | Address | Default branch | Grant read at | Bytes | Family | Education-specific? |
+|---|---|---|---|---|---|---|
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `19.0` | `19.0/LICENSE` | 8 241 | 🔴 **LGPL-3.0** | 🟢 yes — admissions, courses, exams, fees |
+| **Moodle** | carried | — | carried | — | 🔴 GPL-3.0 | 🟢 yes |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | carried | — | 🔴 AGPL-3.0 | 🟢 yes |
+| **Krayin CRM** | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `2.2` | `2.2/LICENSE` | 1 078 | 🟢 **MIT** | 🔴 no — general CRM |
+| **Aureus ERP** | [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `master` | `master/LICENSE` | 1 077 | 🟢 **MIT** | 🔴 no — general ERP |
+| **Apache OFBiz** | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | `trunk` | `trunk/LICENSE` | 11 906 | 🟢 **Apache-2.0** | 🔴 no — general business suite |
+| **Corteza** | [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | `2026.9.x` | `2026.9.x/LICENSE` | 11 358 | 🟢 **Apache-2.0** | 🔴 no — general low-code/CRM |
+| **Huly** | [`hcengineering/platform`](https://github.com/hcengineering/platform) | `develop` | `develop/LICENSE` | 14 197 | 🔴 **EPL-2.0** — *not* Apache-2.0 | 🔴 no |
+
+### 🔴 The finding, in one sentence
+
+🔴 **Every education-specific platform in this tier is copyleft, and every permissively licensed
+option is general-purpose.** The intersection — a permissive, education-specific ERP/SIS — is
+**empty** in this leg's result set. 🟢 **That is a build constraint a studio should hear before a
+proposal, not during one:** an engagement that needs permissive licensing in the
+administrative layer is an engagement that **adapts a general ERP** (`aureuserp`, `ofbiz`,
+`corteza`) rather than one that forks an education one.
+
+### 🔴 Two inbound claims refuted on the payload
+
+🔴 **1. Huly is EPL-2.0, not Apache-2.0.** The result set asserted *"Huly Platform is also
+licensed under Apache License 2.0"*. The payload at `develop/LICENSE` is **14 197 B** beginning
+`Eclipse Public License - v 2.0`, and the token `apache` occurs **ZERO** times in it. 🔵 EPL-2.0
+is a weak copyleft with a **file-level** reciprocity and a patent clause; it is not
+interchangeable with Apache-2.0 in a client's licence review, which is why this matters beyond
+pedantry.
+
+🔴 **2. OpenEduCat's `LICENSE` has two defects, and the family is still LGPL-3.0.** It is
+graded `LGPL-3.0` first-hand and that grade stands. But:
+
+- 🔴 **a POINTER with a dead target.** Line 1 reads *"For copyright information, please see the
+  COPYRIGHT file."* `COPYRIGHT`, `COPYRIGHT.md` and `COPYRIGHT.txt` all answer **404** on
+  branch `19.0`. This is `p307`'s `POINTER` class with no resolvable destination.
+- 🔴 **a self-description the payload does not satisfy.** The file states the GPL text *"is
+  included at the bottom as well"*. In 8 241 B the string `GNU GENERAL PUBLIC LICENSE` occurs
+  **ZERO** times; the file ends mid-LGPL at *"...for the Library."* 🟢 A reviewer relying on the
+  document's own claim would be citing enclosed terms that are **not enclosed**.
+
+🔵 **Neither defect changes what a studio may do** — LGPL-3.0 is the operative grant either way
+— **but both change what a studio may SAY in a licence memo**, and that is the artefact this
+shelf exists to serve. **`Gap 502`.**
+
+🟡 **`p375`'s OpenEduCat row is therefore AMENDED rather than contradicted.** `p375` published
+the platform **without an address**, correctly, because the vendor pages it retrieved named no
+repository. 🟢 This pass locates the address — [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp),
+`ls-remote rc=0`, default branch `19.0` — and reads its grant. `p375`'s refusal to construct an
+address was right; the address existed and a different channel found it.
+
 ## 🟡 2026-10-22 · `p375` — one platform added **without an address**, deliberately, and its licence is not permissive
 
 🔴 **`OpenEduCat` is the only new vertical platform the leg returned, and this pass constructs
