@@ -1,0 +1,75 @@
+# ACTION p377-D — RESULT.  The prediction is in
+# evidence/agentleg-language-dispersion-prediction.2026-10-22-p378.tsv and was committed
+# (729d9fa) with NO leg output in the tree, before any leg ran.
+#
+# METHOD, first-hand on 2026-10-22: CARRIED/NEW graded by `make carried SLUG=...` — the p235
+# instrument ITSELF, not by index-eyeballing.  p377 could not run it (its sandbox refused to
+# execute repository code); this sandbox runs it, and the planted control
+# `this-owner-cannot-exist-p378/negative-control` grades NEW while `THU-MAIC/OpenMAIC` grades
+# CARRIED, so both arms discriminate.  Existence and default branch by `git ls-remote --symref`;
+# grant payload by `raw.githubusercontent.com` over 6 rungs; HEAD date by blobless clone.
+# NO STAR COUNTS: api.github.com and github.com HTML both answer 403, unchanged from p376/p377.
+address	leg	ls_rc	branch	head_date	grant_path	grant_bytes	sha256_12	family	carried	readme_language	is_edu_agent	clears_bar	note
+littlecookie0722/AI-Teaching-Agent	hi	0	main	2026-08-23	main/LICENSE	1069	297c4cba7b33	MIT	CARRIED	en	YES	carried	Payload re-read first-hand; agrees with the carried cell at agents/top.md:683
+DHRUVvkdv/teaching-assistant	hi	0	main	2024-07-25	-	-	-	NONE	NEW	en	YES	NO	NO GRANT — earned by p275 FULL-TREE enumeration, 38 files, NONE_IN_TREE (not a 6-rung guess).  HEAD 2024-07-25: 27 months stale
+y-kanchan/AI-Teaching-Agent	hi	0	main	2026-06-17	-	-	-	NONE	NEW	en	YES	NO	NO GRANT — p275 enumeration, 28 files, NONE_IN_TREE.  Maintained and genuinely an education multi-agent (4 agents, Ollama, offline) — fails on GRANT ALONE.  The best near-miss of the pass
+KayvanShah1/VirtuTA	hi	0	main	2026-03-03	main/LICENSE	1068	9182ffc261fc	MIT	CARRIED	en	YES	carried	Agrees with agents/trending.md:3596
+THU-MAIC/OpenMAIC	hi	0	main	2026-10-22	main/LICENSE	1065	ba2525637432	MIT	CARRIED	en	YES	carried	HEAD moved to 2026-10-22 (p377 read the same digest at e19ed13)
+avinash201199/free-ai-agents-resources	ar	0	main	2026-03-01	main/LICENSE	1070	12edec716aa1	MIT	CARRIED	en	NO	carried	A resource list, not an agent
+12britz/awesome-free-models	ar	0	main	2026-10-11	main/LICENSE	137	99b4c41f664e	CC0-PARAPHRASE	NEW	en	NO	NO	🔴 A LIST, and the grant is a 137-BYTE PARAPHRASE of CC0, not CC0's legal code.  See evidence/mit-presentation-fold for the classifier consequence
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	ar	0	main	2026-10-20	main/LICENSE	5875	a0e8192ef96d	CC0-1.0	CARRIED	en	NO	carried	🟢 LICENCE CELL UPGRADED: p377 published this row with grant '—'.  Read first-hand: CC0 1.0 Universal, Statement of Purpose, 5 875 B
+syauqi/learnify	id	0	main	2022-06-11	main/LICENSE	1084	84797876a522	MIT	NEW	id	NO	NO	🟢 GENUINELY IN-LANGUAGE (README entirely Indonesian).  But CodeIgniter e-learning from 2022, NO AI, HEAD 52 months stale
+Gchism94/ai-tutor	id	0	main	2025-05-08	main/LICENSE	1070	3d5a24e51479	MIT	CARRIED	en	YES	carried	Agrees with the carried cell
+HKUDS/DeepTutor	id	0	main	2026-10-19	main/LICENSE	11408	cd2f54e1e506	Apache-2.0	CARRIED	en	YES	carried	The anchor row
+Agenta-AI/awesome-ai-agent-platforms	fr	0	main	2026-10-01	main/LICENSE	7048	a2010f343487	CC0-1.0	NEW	en	NO	NO	A LIST.  CC0 full legal code, 7 048 B — a THIRD CC0 payload shape this pass
+JPMichon/MonTuteur	fr	0	main	2026-10-04	main/LICENSE	20849	1349a4b61484	CC-BY-NC-SA-4.0	NEW	fr	YES	NO	🟢 GENUINELY IN-LANGUAGE (README entirely French, Québec secondary 1-5).  🔴 NonCommercial + ShareAlike — unusable in a client deliverable.  Grant read first-hand, confirming the leg's own report
+wenflow-org/wenflow	fr	0	main	2026-10-20	main/LICENSE	1067	b6fac57d4710	MIT	CARRIED	zh	NO	carried	🔴 THIS PASS'S OWN ERROR, CORRECTED: first drafted as 'French + Chinese'.  The README is CHINESE-primary with an English translation and NO French.  A French leg returned a Chinese repository
+msitarzewski/agency-agents	fr	0	main	2026-10-19	main/LICENSE	1079	9a45258434d5	MIT	🔴 CARRIED (make carried said NEW and WAS WRONG)	en	NO	carried	🔴 THIS PASS'S LOAD-BEARING ERROR.  `make carried` graded this NEW; it is on repos/trending.md:21457 as a BARE BACKTICKED SLUG, invisible to carried_index.py:28's github.com/ regex.  See evidence/carried-index-channel-b.2026-10-22-p378.tsv.  Also fails on DOMAIN: a marketing/dev agency persona roster, not education
+Zenglian990/AI_Tutor_Release	fr	0	master	2026-10-21	master/LICENSE	1068	695941afdd1f	MIT	CARRIED	zh	YES	carried	Default branch is master; BOTH master/LICENSE and main/LICENSE return 200 — see this pass's published error 1
+ashishpatel26/500-AI-Agents-Projects	fr	0	main	2026-07-27	main/LICENSE	1070	2108a479cb7f	MIT	CARRIED	en	NO	carried	A list
+this-owner-cannot-exist-p378/negative-control	control	128	-	-	-	-	-	-	NEW	-	-	-	NEGATIVE CONTROL — ls-remote rc=128 fires; `make carried` grades NEW.  Both arms discriminate
+#
+# DENOMINATOR, stated the way p374 requires.  The planted control is EXCLUDED from both
+# numerator and denominator, per the prediction's own zero-address rule.
+#   17 addresses probed · 17 live · 1 planted absent (rc=128)
+#   11 CARRIED · 6 NEW
+#   hi: 5 probed · 2 NEW · 40.0 %
+#   ar: 3 probed · 1 NEW · 33.3 %
+#   id: 3 probed · 1 NEW · 33.3 %
+#   fr: 6 probed · 2 NEW · 33.3 %
+#   POOLED: 17 probed · 6 NEW · 35.3 %
+#   NEW rows clearing the agent bar: 0
+#
+# 🔴 THESE ARE THE CORRECTED FIGURES.  This file first published 7 NEW / 41.2 % pooled /
+# fr 50.0 % / spread 16.7 points, because `make carried` — the instrument this pass's own
+# pre-registration named as the grading authority — returned a FALSE NEW on
+# msitarzewski/agency-agents.  The cause, the re-grade and the consequence for every limb are
+# in evidence/carried-index-channel-b.2026-10-22-p378.tsv.  The first figures are not deleted
+# from the record; they are stated here as superseded, with the reason.
+#
+# LIMB 1 — predicted the pooled rate ABOVE 77 %.
+limb_1	REFUTED	35.3 % (41.2 % before the carried-index correction).  Not merely outside the predicted direction — BELOW p377's [57 %, 77 %] band as well.  So neither this pass's prediction NOR p377's "uniform axis" reading survives on the pooled measure.  The mechanism this pass registered ("Hindi, Arabic and Indonesian neighbourhoods were never swept, so carried density is lower") was wrong in its PREMISE, not its logic: those neighbourhoods were not unswept, they DO NOT EXIST in this index — see the in-language result below, which is why three of four legs landed back in the heavily-swept ENGLISH neighbourhood.
+# LIMB 2 — predicted a spread above 15 points between the highest and lowest leg.
+limb_2	🔴 REFUTED — AND IT WAS CONFIRMED UNTIL THIS PASS FOUND ITS OWN INSTRUMENT DEFECT	Corrected spread: 40.0 - 33.3 = 6.7 points, against a registered threshold of 15.  The four per-leg rates are 40.0 / 33.3 / 33.3 / 33.3 — essentially UNIFORM.  🔴 Before the correction the spread was 16.7 points and this limb read CONFIRMED.  🟢 The draft had ALREADY declared it not load-bearing, on the registered ground that "the ar and id legs have denominators of 3: ONE address moving either way changes the verdict".  One address moved.  🔵 So p377-D's "uniform axis" reading is CONFIRMED on DISPERSION and REFUTED on LEVEL, and the two halves of its single condition fall OPPOSITE WAYS — which is exactly what this pass's pre-registered defect note said the condition could not distinguish.
+# LIMB 3 — predicted AT MOST 1 of the NEW addresses clears the agent bar.
+limb_3	CONFIRMED, AT ZERO	0 of 6 (0 of 7 before the correction).  Two have no grant at all (p275 full-tree enumeration, not a rung guess); one is CC-BY-NC-SA; two are curated lists; one is a 2022 non-AI e-learning site; one is MIT, maintained and out of domain.  🔵 The nearest miss is y-kanchan/AI-Teaching-Agent — genuinely an education multi-agent system, maintained, and it fails on GRANT ALONE.
+#
+# 🔴 THE FINDING THIS PASS DID NOT PREDICT, AND THE ONE A SUCCESSOR MUST ACT ON.
+# Each leg's answer set was graded for the README language of the repositories it returned:
+inlanguage_hi	0 of 5	🔴 The Hindi leg returned a 100 % ENGLISH answer set
+inlanguage_ar	0 of 3	🔴 The Arabic leg returned a 100 % ENGLISH answer set
+inlanguage_id	1 of 3	syauqi/learnify, README entirely Indonesian
+inlanguage_fr	1 of 6	JPMichon/MonTuteur, README entirely French.  🔴 The leg ALSO returned a CHINESE repository (wenflow)
+inlanguage_pooled	2 of 17 = 11.8 %  (unaffected by the carried-index correction: README language is read from the payload, not from the index)	Against p377's zh/ko/pt legs, which returned genuinely in-language repositories in every productive cell
+#
+# WHAT THIS LICENSES A SUCCESSOR TO BELIEVE — and what it RETIRES.
+consequence_1	p377's "query language is an instrument axis" is NARROWED, not refuted.  It holds where the language has an INDEXED DEVELOPER-FORGE POPULATION (zh, ko, pt, and partly id and fr).  It does NOT hold for hi or ar: an in-language query there returns the ENGLISH answer set, because this index has no Hindi or Arabic supply neighbourhood to reach.
+consequence_2	🔴 So the rule is NOT "run a leg in the engagement region's language".  A successor reading p377 alone would run a Hindi leg for an India engagement and get the English index back at full price.  The rule is "run a leg in a language with an indexed forge population", and this pass's measurement says hi and ar are not such languages FROM THIS INDEX.
+consequence_3	🔴 The NEW rate is the WRONG dial for choosing a leg, and the CORRECTED figures make the case better than the draft's did.  The four NEW rates sit in a 6.7-point band (40.0 / 33.3 / 33.3 / 33.3) while the in-language fraction ranges from 0 % (hi, ar) to 33 % (id).  So the ar leg — which returned a 100 % ENGLISH answer set — and the id leg — which reached a genuinely Indonesian repository — scored the SAME 33.3 % NEW.  🔵 The two measurements are UNCORRELATED: NEW rate measures this base's sweep history, the in-language fraction measures the leg's reach, and NEW rate cannot tell a leg that reached a foreign forge from one that did not.  A successor choosing legs by NEW rate is choosing by noise.
+consequence_4	The yield is 0 agent rows for 4 legs and 6 NEW addresses, against p377's 1 for 4 legs and 6 NEW.  Two consecutive passes put the per-row cost of an in-language supply leg between 1-in-4 and 0-in-4.  🟢 A successor should stop buying in-language SUPPLY legs by default and spend the same budget on the GRANT gap instead: the two best near-misses across both passes (aifrenz/pcu-2026 at p377, y-kanchan/AI-Teaching-Agent here) failed on grant, not on language and not on substance.
+#
+# STATED LIMIT, carried from the registration unchanged: WebSearch is documented US-only.
+# Every nil above is a nil OF THIS INDEX, never of the industry.  The hi and ar results in
+# particular say "this index does not reach a Hindi or Arabic forge neighbourhood" and must
+# NEVER be shelved as "there is no Hindi or Arabic education-agent supply".
+stated_limit	US-only index.  hi/ar = the index's reach, NOT the industry's supply.

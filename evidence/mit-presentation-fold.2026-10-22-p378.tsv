@@ -1,0 +1,64 @@
+# ACTION p377-B — DISCHARGED, and it refutes the conclusion that registered it.
+#
+# WHAT p377 ASKED: "read the other two MIT templates the way p376-C made this one readable.
+# p312's registry now holds 5 fill-in templates and the new one (7768d3beb7949a85, the
+# untitled variant) came from a single pinned payload.  Eight payloads share one digest and
+# two digests have exactly one payload each — a template known from one example is a template
+# that has not been tested.  Pin a second untitled MIT payload from an unrelated repository
+# and establish whether 7768d3beb7949a85 is a real template or one project's edit."
+#
+# METHOD: 10 MIT payloads were drawn FIRST-HAND this pass from 10 unrelated repositories
+# (the p377-D leg corpus, chosen before this action was started, so the draw is not selected
+# to produce an answer), read over raw.githubusercontent.com, and run through
+# p312-template-identity's OWN identify() — not through a reimplementation.
+#
+# PART 1 — THE DRAW.  10 unrelated repositories, 10 MIT payloads.
+payload	bytes	whole_sha12	template_digest16	family	form	constant
+THU-MAIC/OpenMAIC	1065	ba2525637432	16d6b7b5799875f6	MIT	FILL-IN	1038
+wenflow-org/wenflow	1067	b6fac57d4710	16d6b7b5799875f6	MIT	FILL-IN	1038
+KayvanShah1/VirtuTA	1068	9182ffc261fc	16d6b7b5799875f6	MIT	FILL-IN	1038
+Zenglian990/AI_Tutor_Release	1068	695941afdd1f	16d6b7b5799875f6	MIT	FILL-IN	1038
+littlecookie0722/AI-Teaching-Agent	1069	297c4cba7b33	16d6b7b5799875f6	MIT	FILL-IN	1038
+Gchism94/ai-tutor	1070	3d5a24e51479	16d6b7b5799875f6	MIT	FILL-IN	1038
+avinash201199/free-ai-agents-resources	1070	12edec716aa1	16d6b7b5799875f6	MIT	FILL-IN	1038
+ashishpatel26/500-AI-Agents-Projects	1070	2108a479cb7f	16d6b7b5799875f6	MIT	FILL-IN	1038
+msitarzewski/agency-agents	1079	9a45258434d5	16d6b7b5799875f6	MIT	FILL-IN	1038
+syauqi/learnify	1084	84797876a522	16d6b7b5799875f6	MIT	FILL-IN	1038
+#
+# PART 1 RESULT — the question p377 actually asked.
+draw_result	10 of 10 land on 16d6b7b5799875f6, the canonical template.  ZERO land on 7768d3beb7949a85.
+registry_before	16d6b7b5799875f6: 8 payloads · 7768d3beb7949a85: 1 · d936246a542832f3: 1
+registry_after	16d6b7b5799875f6: 18 payloads · 7768d3beb7949a85: STILL 1 · d936246a542832f3: STILL 1
+answer_to_p377_B	On 10 fresh independent draws, 7768d3beb7949a85 attracted none.  It is ONE PROJECT'S PAYLOAD, not a circulating template — which is what its count of 1 suggested and what p377 could not establish.
+#
+# PART 2 — AND THE ANSWER IS STRONGER THAN "ONE PROJECT'S EDIT", because the EDIT WAS NAMED.
+# p377 recorded 7768d3beb7949a85 as "a THIRD distinct MIT template" and moved the corpus
+# ratchet 4 -> 5 on it.  This pass diffed it against the canonical payload under
+# template_identity.normalise() and the difference is entirely PRESENTATION:
+diff_1	NO TITLE LINE.  The canonical payload opens "MIT License"; mit-lti-issuer-1076 opens "Copyright 2020 Center for 21st Century Universities".
+diff_2	NO LINE WRAPPING.  The canonical payload hard-wraps each paragraph at ~76 columns (20 newlines after normalisation); the variant is one long line per paragraph (6 newlines).
+diff_3	ZERO differences in the OPERATIVE WORDS.  None.
+#
+# THE PROOF, run as a measurement rather than argued:
+proof_A	template_digest(untitled) = 7768d3beb7949a85 ; template_digest(canonical) = 16d6b7b5799875f6 — DISTINCT, as p377 recorded
+proof_B	collapse every whitespace run to one space: untitled -> 584db484c03a8904 ; canonical -> 2fc2289951b3876e — still distinct, because the canonical still carries its title line
+proof_C	canonical with the title line removed AND whitespace collapsed -> 584db484c03a8904 — IDENTICAL to the untitled payload, 1 043 characters on both sides
+proof_D	the third MIT digest, d936246a542832f3 (mitparen-typed-japanese-1086), differs from the canonical by its TITLE LINE ALONE: "The MIT License (MIT)" instead of "MIT License".  Body word-identical.
+#
+# PART 2 RESULT — the withdrawal.
+finding	🔴 ALL 20 MIT payloads on these shelves — 10 p312 fixtures and 10 drawn fresh this pass from unrelated repositories — ARE ONE LEGAL TEXT.  The three distinct template_digests differ only in (a) the wording of the title line and (b) line wrapping.  There is no second MIT text on this base.
+withdrawal	🔴 p377's ratchet move 4 -> 5 is an ARTEFACT OF LINE WRAPPING, not evidence of a fifth template in circulation.  p377 wrote "a THIRD distinct MIT template"; there is one MIT text in three PRESENTATIONS.
+#
+# THE DEFECT, stated as a property of the instrument rather than as a mistake of p377's:
+defect	template_identity.normalise() folds CASE and the HOLDER SLOT but NOT LINE WRAPPING and NOT the title line.  So re-wrapping a licence file — which any editor, formatter or copy-paste can do, and which changes no word of the grant — MINTS A NEW TEMPLATE IDENTITY.  The registry can be inflated without a single new licence text entering it.
+why_it_matters	p312 exists so that a family is identified by TEMPLATE and never by a byte band.  A template count that moves on reflow is a byte band wearing a digest's clothes: it answers precisely, and at the reflow boundary it answers wrongly and silently — exactly the failure mode p312's own docstring names.
+#
+# THE REPAIR, and what this pass deliberately did NOT do.
+repair	A SEPARATE presentation-folding instrument, compose/code/p378-presentation-fold, with its own controls, wired into `make hooks`.  It reports "N texts in M presentations" alongside p312's digest count.
+not_done	normalise() and template_digest() are LEFT UNCHANGED.  Editing them would silently re-key every digest this base has published since p312 and break every historical citation — the same reason p377 renumbered its pattern to 31 rather than repairing Gap 506's collisions retroactively.  History is not retro-edited to match a later derivation.
+negative_controls_required	The fold must NOT merge different licences.  Controls prove it keeps apart: MIT vs Apache-2.0 · the 137-byte CC0 PARAPHRASE vs CC0's real legal code · CC0's Statement of Purpose (5 875 B) vs its full Legal Code (7 048 B) · and it must not strip a first line that is OPERATIVE text (the untitled payload's first line is a copyright line and must survive).
+#
+# PART 3 — AN ADJACENT CLASS THE SAME DRAW EXPOSED, filed because it is a LIVE commercial risk.
+cc0_shapes	Three CC0 payloads were read first-hand this pass at THREE different sizes: 12britz/awesome-free-models 137 B · ARUNAGIRINATHAN-K/awesome-ai-agents-2026 5 875 B · Agenta-AI/awesome-ai-agent-platforms 7 048 B.  All three return UNKNOWN-TEMPLATE, which is correct and is the gate holding.
+cc0_defect	🔴 But identify()'s LABEL is taken from the payload's FIRST LINE.  The 137-byte payload's first line is "CC0 1.0 Universal", so the instrument reports label="CC0 1.0 Universal" for a text that is NOT CC0 — it is a 3-line hand paraphrase ("the author has waived all copyright and related or neighboring rights to this work") with none of CC0's operative sections and none of its fallback-licence clause.
+cc0_consequence	A pass that published the LABEL rather than the FAMILY would shelve a 137-byte paraphrase as "CC0 1.0 Universal".  The family cell is UNKNOWN-TEMPLATE and is the one to trust.  Filed as a gap; the paraphrase is pinned beside this file.

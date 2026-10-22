@@ -3,6 +3,171 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## Pass 378 · 2026-10-22 — **all five registered actions discharged; `ACTION p377-D`'s LIMB 1 REFUTED and LIMB 2 FLIPPED by a defect this pass found in the instrument its own pre-registration had named as the authority. 🟢 `make hooks` 42/42 and the THREE EGRESS GATES RUN FOR THE FIRST TIME IN THIS BASE'S HISTORY. 🔴 And this file's market headline was a cross-publisher SPLICE.**
+
+**Evidence:** [`language-dispersion-prediction`](../evidence/agentleg-language-dispersion-prediction.2026-10-22-p378.tsv) ·
+[`language-dispersion-result`](../evidence/agentleg-language-dispersion-result.2026-10-22-p378.tsv) ·
+[`carried-index-channel-b`](../evidence/carried-index-channel-b.2026-10-22-p378.tsv) ·
+[`mit-presentation-fold`](../evidence/mit-presentation-fold.2026-10-22-p378.tsv) ·
+[`market-outlet-tier`](../evidence/market-outlet-tier.2026-10-22-p378.tsv) ·
+[`market-headline-splice`](../evidence/market-headline-splice.2026-10-22-p378.tsv) ·
+[`northamerica-legs`](../evidence/northamerica-legs.2026-10-22-p378.tsv) ·
+[`repo-identity-adjudication`](../evidence/repo-identity-adjudication.2026-10-22-p378.tsv) ·
+[`classifier-reuse-failure`](../evidence/classifier-reuse-failure.2026-10-22-p378.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p378.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p378.tsv) ·
+pinned payloads [`cc0-paraphrase-137`](../evidence/cc0-paraphrase-137.2026-10-22-p378.LICENSE) ·
+[`cc0-statement-of-purpose-5875`](../evidence/cc0-statement-of-purpose-5875.2026-10-22-p378.LICENSE) ·
+[`cc0-legal-code-7048`](../evidence/cc0-legal-code-7048.2026-10-22-p378.LICENSE)
+
+🟢 **GATE STATE: `make hooks` 43/43 GREEN, run BEFORE the first write (at 42/42) and again as
+the last act before the commit.** `make` is available in this sandbox. 🔴 **So `p376`'s
+`42/42` is confirmed as *observed* and `p377`'s "16 of ~42" is superseded by a full run, not by
+argument.** The 43rd is this pass's own `gate-presentation-fold`.
+
+🟢 **AND THE EGRESS HALF, WHICH NO PASS HAS EVER RUN.** `make hooks-online` is deliberately out
+of `hooks`. `p336`, `p376` and `p377` each recorded a sandbox that refused `make`, egress, or
+both. This one has `git ls-remote`, `raw.githubusercontent.com` and `repo1.maven.org`.
+
+| Egress gate | First-ever result |
+|---|---|
+| `gate-grant-path-online` | 🟢 **PASS — 275 of 275** published grant paths resolve `200`, both calibration arms correct |
+| `gate-online` (`p229` 55-rung ladder) | 🟢 PASS |
+| `gate-mit-tier` | 🟢 PASS — 🔴 one `UNREAD`: `uoc/java-lti-1.3-provider` |
+| `gate-identity-online` | 🔴 **RED on first run** — 501 addresses, **0** registered aliases, **5 NEW** collisions → adjudicated → 🟢 PASS, `NEW=0` |
+
+### 🟢 The five registered actions, and their disposition
+
+| Action | `p377`'s rank | Disposition |
+|---|---|---|
+| `ACTION p377-A` | **first** | 🟢 **DISCHARGED IN FULL, and it retires a capability claim.** `make hooks` 42/42 before any write; the three egress gates run for the first time ever. 🔴 The refusal `p336`/`p376`/`p377` recorded was **a property of the sandbox, not of this repository** |
+| `ACTION p377-B` | second | 🟢 **DISCHARGED, and it WITHDRAWS the finding that registered it.** 10 MIT payloads from 10 unrelated repositories: **10 on the canonical digest, 0 on `7768d3beb7949a85`**. 🔴 And the diff names the edit — **no title line, no line wrapping, not one operative word**. All 20 MIT payloads here are ONE text; `p377`'s ratchet `4 → 5` was an artefact of reflow |
+| `ACTION p377-C` | third | 🟢 **DISCHARGED, and it produced the OPPOSITE of its premise.** Tier grading **widens** the 2026 band from 28 % to **649 %** (`$3.05 B – $22.86 B`, six self-consistent publishers). **5 figures refused**, including `p377`'s own `$12.3 B` top end, which is **not found at the publisher it names** |
+| `ACTION p377-D` | fourth | 🟢 **DISCHARGED on a prediction committed in `729d9fa` before any leg ran.** 🔴 **LIMB 1 REFUTED** (35.3 % against a predicted >77 %). 🔴 **LIMB 2 FLIPPED from CONFIRMED to REFUTED** by this pass's own instrument defect. 🟢 **LIMB 3 CONFIRMED at zero of six** |
+| `ACTION p377-E` | fifth | 🟢 **DISCHARGED — `Gap 507` CLOSED.** Canada placed with **four** provincial instruments across two languages; Mexico with a dated TIER-1 federal sequence |
+
+### 🔴 The three findings a successor must not soften
+
+🔴 **1. `p377`'s language axis holds only where the language has an INDEXED DEVELOPER-FORGE
+POPULATION.** The Hindi leg returned **0 of 5** addresses with a Hindi README and the Arabic leg
+**0 of 3** — both returned the **English** answer set. 🟢 `J3`-for-supply holds for `zh`, `ko`,
+`pt` and partly `id`/`fr`; it does **not** hold for `hi` or `ar`. 🔴 A successor reading `p377`
+alone would run a Hindi leg for an India engagement and buy the English index at full price.
+
+🔴 **2. The NEW rate is the wrong dial, and the IN-LANGUAGE FRACTION is the right one.** Four
+legs, NEW rates in a **6.7-point** band (40.0 / 33.3 / 33.3 / 33.3), in-language fractions from
+**0 %** to **33 %**. The `ar` leg (zero foreign reach) and the `id` leg (a genuinely Indonesian
+repository) scored the **same** NEW rate. 🔵 The measurements are **uncorrelated**: NEW rate
+measures this base's sweep history, the in-language fraction measures the leg's reach.
+
+🔴 **3. `p377-D`'s single refutation condition fell BOTH WAYS AT ONCE** — "uniform axis"
+**confirmed on dispersion**, **refuted on level**. 🟢 This pass registered that defect *before*
+running anything: the condition conflated the pooled rate with the dispersion, and those are
+independent. 🔵 A successor must register a condition per question.
+
+### 🔴 This pass's own errors, published rather than tidied — every one caught by an instrument or a shelf cell this base ALREADY HELD
+
+🔴 **1. `make carried` returned a FALSE NEW, and it flipped a registered limb.**
+`msitarzewski/agency-agents` is on `repos/trending.md:21457` as a **bare backticked slug**;
+`carried_index.py:28` harvests on `github\.com/(owner/repo)` — **the URL channel only**. 🔵
+This is `p367`'s channel-B blindness **in the carried index rather than in the census**, and the
+carried index is the instrument a pass runs *immediately before publishing a row*. 🔴 **`p377`'s
+cruder raw-text grep would have caught it**, and this pass's pre-registration called that grep
+inferior. **An instrument is not better than a grep because it is an instrument.**
+
+🔴 **2. This pass reintroduced the GPL-3.0/AGPL-3.0 defect that this base built a shared control
+to prevent.** An inline shell ladder read **`moodle/moodle` as AGPL-3.0**; it is **GPL-3.0**,
+and `verticals/solutions.md:769` already said so. GPL-3.0 §13 is titled *"Use with the GNU
+Affero General Public License"*. 🔴 `compose/code/lib/license_family.sh` exists for exactly
+this and its header says *"pass 77 reintroduced the defect anyway, because it wrote a new
+classifier from scratch... A rule that has to be remembered is not a control. This file is the
+control."* 🔴 **`gate-affero-rung` ran GREEN on this pass** — it judges *instruments*, and an
+inline pipeline is not one. 🟢 1 misclassification in 17, caught before publication, on the
+most-deployed platform on these shelves.
+
+🔴 **3. This pass published THREE second casings of carried addresses** —
+`1edtech/…`, `imsglobal/…`, `mcp-brasil/…` against the carried `1EdTech/…`, `IMSGlobal/…`,
+`Mcp-Brasil/…`. 🟢 `gate-fold-identity` fired, as it did on `p377`, and all three are now in
+the carried casing. 🔴 The cause: casings typed from `ls-remote` URLs rather than read off the
+shelves. 🔵 **Three of this pass's four errors are the same error — not asking what this base
+already knows.**
+
+🔴 **4. This pass predicted a stale-branch defect it had not probed.** `Zenglian990/AI_Tutor_Release`
+answers `ls-remote --symref` with `refs/heads/master` while `agents/top.md:677` publishes
+`main/LICENSE`, and this pass wrote that up as a defect **before** testing it. 🟢 Both refs
+return `200`, and `gate-grant-path-online` then graded **275/275**. **A default branch is not
+the only branch.**
+
+🔴 **5. A one-character defect in the only recipe no pass had ever run.**
+`gate-identity-online` wrote its capture to `evidence/repo-identity-$$(date +%%F).tsv`; make
+does not treat `%%` as an escape in a recipe, so the file was named
+**`evidence/repo-identity-%F.tsv`** — after the format string. The base's three other online
+recipes use `+%F` correctly. 🟢 Fixed; the 503-row capture is committed under its real name.
+🔵 **A recipe that has never executed is untested code**, and this one could not fail a suite:
+it produces a file rather than an error, and no offline control can see it.
+
+### 🔴 New gaps
+
+| Gap | What is missing, and why it is a gap rather than a nil |
+|---|---|
+| **`Gap 512`** | 🔴 **`carried_index.py` is blind to address channel B.** Its harvester is `github\.com/(owner/repo)`, so a **bare backticked slug** is invisible, and `make carried` has a **false-NEW** class. `p367` built the channel-B arm and `make hooks` already runs it **on the census**; nobody imported it into the carried index. 🔵 This is the instrument a pass runs immediately before publishing a row, so its false-NEW is the one that actually puts a duplicate on a shelf. Until it is fixed: run `make carried` **and** `grep -ric` over the nine shelves, and **where they disagree the grep wins** |
+| **`Gap 513`** | 🔴 **The licence classifier is not reachable from the place a pass works.** `license_family.sh` says *"source this, do not rewrite it"* and `gate-affero-rung` enforces it — both aimed at **instruments under `compose/code/`**. A pass reading grants ad hoc in a shell, which is how every leg here reads a grant, passes through **neither**. pass 77 broke it in two instruments; `p378` broke it in a one-line pipeline. Same defect, one layer out, and no gate can see that layer |
+| **`Gap 514`** | 🔴 **`family_of()` and `identify()` disagree on an abbreviated grant, and nothing requires both.** The 137-byte CC0 **paraphrase** at `12britz/awesome-free-models` classifies `CC0-1.0` on the title block and `UNKNOWN-TEMPLATE` on the text. Each is right about its own question — *what is it named after* vs *is it the real text* — and a permissive shelf cell needs both. 🔵 `P171`'s title-block rule, which exists to stop a body grep lying, is exactly what makes the classifier trust a paraphrase's heading |
+| **`Gap 515`** | 🔴 **`p274-window-sweep` reads a hand-registered `CELLS` table, so a claim in PROSE is unswept.** `make sweep` graded 28 registered triples this pass and the **market headline** — the sentence under *"this is the answer this file exists to give"* — was never one. It is a cross-publisher **SPLICE** at **−9.63 %**. 🔵 `p367`'s class again: an instrument that reads one channel while the shelves write two. A list maintained by the same passes whose claims it audits measures **the list** |
+| **`Gap 516`** | 🔴 **Mexico is placed under BOTH `### North America` and `### LATAM`** on `intel/market.md`. The closed five-value vocabulary has no rule for a country with two defensible homes, so two passes placed it twice and neither knows about the other |
+| **`Gap 517`** | 🟡 **Quebec's suspension of AI assistants — the strictest fact on the Canadian leg and the default `Pattern 32` is built around — was last confirmed in force in DECEMBER 2025**, on a TIER-2 outlet, with no 2026 update found on a targeted leg. Ten months stale. A cheap recurring check, declared rather than assumed |
+| **`Gap 518`** | 🔴 **Mexico's SEP survey PARTICIPATION BASE is conflicted across reports** — 1 143 451 students + 133 582 teachers / 2 900 institutions in one, *"more than 1.5 million students + 166 000 teachers"* in another. The **>60 % daily-use** finding is quoted from the TIER-1 issuer; the participation base is **not assertable** |
+| **`Gap 519`** | 🔴 **A TIER-4 outlet attributes `$23 B` (2026) to Grand View Research — 2.0× the figure GVR's own curve gives.** Refused, but it means *"Grand View says"* is now ambiguous on these shelves: a successor must name **which GVR series** |
+| **`Gap 511`** · **EXTENDED, and the extension is larger than the gap** | `p377` filed it as *"nothing tells a successor that `make`-refused ≠ gate-refused"*. 🔴 The symmetric half: **the refusal was a property of the SANDBOX.** Three passes generalised one sandbox's limits into a claim about what this base can measure, and three passes of gate state sat unmeasured for a reason that evaporated when a different sandbox ran the same command. 🟢 **A pass must probe its own channels as its opening act.** 🔴 `api.github.com`/`github.com` HTML `403` is stable across **three** sandboxes — *that* one carries forward |
+| **`Gap 510`** · **SHARPENED** | `p377` filed the Spanish supply nil as a possible index-reach limit. 🟢 `p378` makes it a pattern rather than an anomaly: `es` returned 0 addresses at `p377`, and `hi` and `ar` returned **100 % English answer sets** here. 🔵 The gap is no longer *"where is VTutor"*; it is **which languages this index has a forge neighbourhood for at all**, and the in-language fraction is the instrument that answers it |
+| **`Gap 507`** · 🟢 **CLOSED** | Canada placed with four provincial instruments (Quebec suspension · BC framework · Ontario ministry-silent with ECNO/board layer · New Brunswick curriculum) across two languages, and Mexico with a dated TIER-1 federal sequence. Any future "North America" cell must name its jurisdiction |
+| **`Gap 504`** · **UNTOUCHED** | APAC **K-12** adoption still unmeasured after three passes. 🟢 The named channel (OECD TALIS or a ministry release) is still unpointed. Not attempted this pass and said so |
+
+### 🟢 Registered for the successor pass, ranked
+
+🟢 **`ACTION p378-A` (ranked FIRST)** — **close `Gap 512`: give `carried_index.py` the
+channel-B arm `p367` already wrote.** 🔵 It is ranked first because it is the only instrument on
+this base whose failure mode is *publishing a duplicate row*, and it failed on this pass, on a
+live address, in the direction that publishes. 🔴 **This is not a one-line import.** Re-grading
+CARRIED/NEW changes denominators several published sentences rest on, so the currency gates
+(`p352`, `p376`) must be in view and their sentences restated in the same pass. Register a
+prediction first: **how many of the base's published `NEW` grades flip?** `p378` found 1 in 17
+on a single leg; if the corpus rate is near 6 %, several shelf rows are duplicates.
+
+🟢 **`ACTION p378-B` (ranked second)** — **close `Gap 515`: harvest `(base, base_year, horizon,
+horizon_year, cagr)` triples from shelf PROSE and feed `p274`'s `classify()`.** 🔴 The splice it
+would have caught is the most-quoted sentence on `intel/market.md`. 🔵 Pin `9.58 → 42.48 @
+41.5 % = SPLICE −9.63 %` as the fixture, so the harvester is tested against the claim that
+motivated it. State the denominator: how many prose triples exist, and how many are SPLICE.
+
+🟢 **`ACTION p378-C` (ranked third)** — **close `Gap 514` with a gate arm: no shelf may publish
+a bare permissive family for a payload `identify()` grades `UNKNOWN-TEMPLATE`, unless the cell
+names the disagreement.** 🔵 The two pinned CC0 payloads and the 137-byte paraphrase are already
+in `evidence/` as its fixtures. 🔴 Measure the backlog first — how many permissive cells on
+these shelves rest on a title-block classification alone? — and publish it as a census, never
+as a failure.
+
+🟢 **`ACTION p378-D`** — **test the in-language axis on the NEW dial, not the old one.** 🔵
+`p378` retired the NEW rate as a leg-selection instrument and introduced the **in-language
+fraction**; it has two passes of data and is not calibrated. Run `ja`, `de` and `ru` — three
+languages with large indexed forge populations that this base has never queried — and **register
+the prediction on the IN-LANGUAGE FRACTION**: if all three return **>50 %** in-language answer
+sets while `hi`/`ar` returned 0 %, the fraction is a real property of the language's forge
+population and a successor can choose legs by it. If they return `hi`/`ar`-like fractions, the
+in-language fraction is a property of **English-language dominance in this index** and the whole
+axis is narrower than even `p378` claims.
+
+🟡 **`ACTION p378-E`** — **re-confirm `Gap 517` (Quebec, ten months stale) and close `Gap 504`
+(APAC K-12) through the OECD TALIS channel `p377` named and no pass has pointed.** 🔵 Quebec is
+cheap and load-bearing: `Pattern 32` defaults to it.
+
+🔵 **Re-registered, NOT run this pass:** `ACTION ZZ-ap` (the `os-taxonomy` grant partitions),
+`ACTION ZZ-aq` (`split_live_section` anchored at `^## Pass` while the trending shelves write
+date-first headings — **fix the gate, not the file**; the convention was kept again this pass),
+`ACTION ZZ-af` / `ZZ-ai`, `ACTION ZZ-ar` / `ZZ-as` / `ZZ-at`, `p375-A`'s open question of
+whether the **union** should become the only census, and `Gap 506`'s two overlapping pattern
+series (`Pattern 32` took the next free number and widened nothing).
+
 
 ## Pass 377 · 2026-10-22 — `ACTION p376-A` **discharged on a prediction committed before the legs ran, and BOTH LIMBS CONFIRMED: the four-pass agent zero was an artefact of QUERY LANGUAGE**; `ACTION p376-B` **built and run twice**; `ACTION p376-D` **discharged POSITIVELY — the channel exists**
 
@@ -59,6 +224,14 @@ tier.** `p376` concluded from ten NXDOMAIN hosts that every jurisdictional cell 
 wording, through the index** — the same hosts that do not resolve over HTTP. 🔵 Tier-1
 **attribution** is available here; a byte-level read of the issuer's page is not. The two must
 not be conflated in either direction.
+
+🔴 **5. A one-character defect in the only recipe no pass had ever run.**
+`gate-identity-online` wrote its capture to `evidence/repo-identity-$$(date +%%F).tsv`; make
+does not treat `%%` as an escape in a recipe, so the file was named
+**`evidence/repo-identity-%F.tsv`** — after the format string. The base's three other online
+recipes use `+%F` correctly. 🟢 Fixed; the 503-row capture is committed under its real name.
+🔵 **A recipe that has never executed is untested code**, and this one could not fail a suite:
+it produces a file rather than an error, and no offline control can see it.
 
 ### 🔴 New gaps
 
@@ -134,6 +307,14 @@ line, and is `42/42` at this one** — `gate-union-currency`, **27** offline con
 | `ACTION p375-A` | **first** | 🟢 **DISCHARGED, and NOT as specified.** `p375` asked for the standing census anchor to be repointed at the union. A repoint would make a standing gate judge today's tree against a number quoted in every prior section — the retro-editing this base forbids. 🟢 Built instead as a **second governed sentence** with its own derivation and its own red state: `p352` is untouched, every historical quote stays true, and the union stops being a figure published once |
 | `ACTION p375-B` | third | 🟢 **DISCHARGED on a pre-registered prediction**, and the prediction is **CONFIRMED** — Korea is the nil `p375` said would be more valuable. 🟢 A **sixth** jurisdiction (Norway) arrived from the Korean-language leg |
 | `ACTION p375-C` | second | 🟢 **DISCHARGED.** The re-pointed leg returned **3 NEW of 9 probed** against three passes of zero — and **0 agents**, because the layer is an interop layer. The zero is now a measured property of the leg |
+
+🔴 **5. A one-character defect in the only recipe no pass had ever run.**
+`gate-identity-online` wrote its capture to `evidence/repo-identity-$$(date +%%F).tsv`; make
+does not treat `%%` as an escape in a recipe, so the file was named
+**`evidence/repo-identity-%F.tsv`** — after the format string. The base's three other online
+recipes use `+%F` correctly. 🟢 Fixed; the 503-row capture is committed under its real name.
+🔵 **A recipe that has never executed is untested code**, and this one could not fail a suite:
+it produces a file rather than an error, and no offline control can see it.
 
 ### 🔴 New gaps
 

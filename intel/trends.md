@@ -3,6 +3,61 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 2026-10-22 · `p378` — **three trends, and two of them are withdrawals of this base's own readings rather than movements in the market**
+
+### 🔴 `T-p378-1` — "query language is an instrument axis" is NARROWED: it holds only where the language has an indexed developer-forge population
+
+🟢 `p377` broke a four-pass zero by querying in Chinese, Korean, Portuguese and Spanish, and
+concluded that query language is a real instrument axis for **supply**. 🔴 **`p378` ran the
+same instrument in Hindi, Arabic, Indonesian and French and the axis did not extend.** The
+Hindi leg returned **0 of 5** addresses with a Hindi README; the Arabic leg **0 of 3**. Both
+returned the **English** answer set.
+
+🔵 **So the trend is not "the industry speaks more languages". It is that GitHub's indexed
+author population does** — and only for some. `zh`, `ko` and `pt` have an indexed forge
+neighbourhood this index reaches; from here, `hi` and `ar` do not. 🔴 A studio or a successor
+that reads `p377` as *"run a leg in the engagement region's language"* will pay full price for
+the English index on an India or MENA engagement.
+
+🟢 **The dial that works is the IN-LANGUAGE FRACTION of the answer set, not the NEW rate.** The
+four `p378` legs returned NEW rates inside a **6.7-point** band (40.0 / 33.3 / 33.3 / 33.3)
+while their in-language fractions ranged from **0 %** to **33 %**. The `ar` leg, which reached
+no foreign repository at all, and the `id` leg, which reached a genuinely Indonesian one, scored
+the **same** NEW rate. 🔵 The two measurements are **uncorrelated**.
+
+### 🔴 `T-p378-2` — the 2026 market figure is not a 28 % band; it is a 7.5× band, and tier grading WIDENS it
+
+🔴 Two passes have published the 2026 AI-in-education market as a tight disagreement —
+`p374` at *"$6.4 B – $11.4 B"*, `p377` at *"28 %"*. 🟢 Graded by **outlet and tier** and then by
+`p274`'s own arithmetic classifier, **six** publishers survive and they span **$3.05 B to
+$22.86 B — 7.5×**. Five further figures are **refused**, including the $12.3 B that was `p377`'s
+own top end and is **not found at the publisher it names**.
+
+🟢 **The trend a studio should take to a client: the spread is DEFINITIONAL and it is not
+narrowing.** MarketsandMarkets counts AI-core teaching and assessment; Knowledge Sourcing
+counts something seven times larger. 🔵 Both re-derive to their own labelled CAGR within **0.1
+points**, so neither can be dismissed as sloppy. **Quote a publisher and its curve, or quote
+the band and the definitions — never a point estimate, and never a blend.**
+
+### 🟢 `T-p378-3` — the binding constraint in LATAM's largest Spanish-speaking system is GOVERNANCE, and the ministry's own survey says so
+
+🟢 Mexico's SEP measured **>60 %** daily generative-AI use among university students and
+teachers — and **76.7 % of public-institution students do not know whether their own school has
+guidelines**. 🔴 There is **no binding national lineamiento in force**: what exists is a survey,
+ten proposed higher-education actions, a national consultation heading for **Congress**, and a
+**UNESCO** letter of intent.
+
+🔵 **That pair of numbers is the trend.** Demand is already universal and unmanaged. The gap is
+not a model and not a tutor; it is **policy templates, disclosure workflows and teacher-facing
+audit trails** — the governance layer. 🔴 And it is a window that closes when the Congress
+initiative lands. 🟢 Canada points the same way from the opposite direction: four provinces
+with four incompatible positions and **no federal instrument**, so the product that sells there
+is one whose policy is **configuration**, defaulting to the narrowest live rule.
+
+🔴 **Stated limit on all three:** WebSearch is US-only. Every nil above is a nil **of this
+index**, and the Francophone and Spanish-language instruments are attributions **through** it,
+not byte-level reads of ministry pages.
+
 
 ## 🟢 2026-10-22 · `p377` — **three trends, and the first one is a correction to this base's own reading rather than a movement in the market**
 

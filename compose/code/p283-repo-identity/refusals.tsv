@@ -1,0 +1,19 @@
+# p378 -- THE REFUSAL LEDGER: pairs that share a HEAD and are NOT one repository.
+#
+# `aliases.tsv` was ONE-SIDED.  `gate-identity-online` prints a HEAD collision and tells a
+# pass to "adjudicate it, then record it in aliases.tsv" -- but aliases.tsv can only record
+# the verdict SAME REPOSITORY.  A correctly REFUSED collision had nowhere to go, so the gate
+# stayed red on it for ever, which is the "a permanently red gate teaches nothing" problem
+# p348's own docstring names for the inherited-collision case.
+#
+# A row here is the OTHER verdict, and it needs MORE evidence than a HEAD, not less: the gate
+# collects HEADs only, and HEAD equality is precisely what p370 established is not an identity
+# proof.  The admissible proof is the REF-SET FINGERPRINT -- sha256 over the sorted (sha, ref)
+# pairs of a full `git ls-remote --symref` -- captured under
+# compose/code/p370-refset-register/refsets/.
+#
+# 🔵 Two distinct forks share a HEAD on the day one is forked from the other.  That is the
+# whole reason this file exists and the reason it may never be filled in from a HEAD alone.
+#
+# address_a	address_b	refused_by	head_at_refusal
+dasgltd/mcp-brasil	mcp-brasil/mcp-brasil	p378-refset-fingerprint — SAME HEAD 2efb258370b1, DIFFERENT REF SETS: 52 refs / bfff3ef0fa182ce3 against 101 refs / 5ba234d58670509e, both symref refs/heads/main. Two distinct repositories agreeing at the tip. Had this been adjudicated on the HEAD the gate prints, a FALSE alias would have entered the register and taught every successor that one of these two LATAM addresses is a stale name for the other	2efb258370b1

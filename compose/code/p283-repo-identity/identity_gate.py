@@ -108,6 +108,28 @@ def load_aliases(path):
     return pairs
 
 
+def load_refusals(path):
+    """owner/repo <TAB> owner/repo <TAB> why <TAB> head -- the shelved REFUSAL ledger.
+
+    🔴 p378: `aliases.tsv` records only the verdict SAME REPOSITORY, so a collision this
+    base adjudicated and REFUSED had nowhere to be recorded and left the online gate
+    permanently red on a correct answer.  This is the other verdict.  The file format is
+    deliberately identical so one loader shape serves both and neither can drift.
+    """
+    pairs = []
+    p = pathlib.Path(path)
+    if not p.exists():
+        return pairs
+    for raw in p.read_text(encoding="utf-8").splitlines():
+        if not raw.strip() or raw.lstrip().startswith("#"):
+            continue
+        f = raw.split("\t")
+        if len(f) >= 2:
+            pairs.append((f[0].strip().lower(), f[1].strip().lower(),
+                          f[2].strip() if len(f) > 2 else "?"))
+    return pairs
+
+
 def live_rows(text, subject_only=False):
     """Yield (table_id, lineno, addresses) for every LIVE markdown table data row.
 
@@ -223,9 +245,15 @@ def ls_remote_head(addr, timeout=40):
     return r.stdout.split()[0], "OK"
 
 
-def check_online(root, aliases, out_tsv):
-    """ls-remote every build-on address; equal HEAD == one repository."""
+def check_online(root, aliases, out_tsv, refusals=()):
+    """ls-remote every build-on address; equal HEAD == one repository.
+
+    🔵 Three verdicts, not two: KNOWN-ALIAS (shelved as one repository),
+    ADJUDICATED-DISTINCT (shelved as two repositories that share a tip) and
+    HEAD-COLLISION-NEW (nobody has looked yet).  Only the third is a failure.
+    """
     known = {frozenset((a, b)) for a, b, _ in aliases}
+    refused = {frozenset((a, b)) for a, b, _ in refusals}
     addrs = set()
     for shelf in SHELVES:
         p = root / shelf
@@ -244,7 +272,12 @@ def check_online(root, aliases, out_tsv):
             for i in range(len(group)):
                 for j in range(i + 1, len(group)):
                     pair = frozenset((group[i], group[j]))
-                    tag = "KNOWN-ALIAS" if pair in known else "HEAD-COLLISION-NEW"
+                    if pair in known:
+                        tag = "KNOWN-ALIAS"
+                    elif pair in refused:
+                        tag = "ADJUDICATED-DISTINCT"
+                    else:
+                        tag = "HEAD-COLLISION-NEW"
                     findings.append(f"{tag}\t{group[i]}\t{group[j]}\t{sha[:12]}")
     if out_tsv:
         pathlib.Path(out_tsv).write_text(
@@ -257,22 +290,27 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
     ap.add_argument("--aliases", default=str(HERE / "aliases.tsv"))
+    ap.add_argument("--refusals", default=str(HERE / "refusals.tsv"))
     ap.add_argument("--online", action="store_true")
     ap.add_argument("--out")
     a = ap.parse_args()
     root = pathlib.Path(a.root).resolve()
     aliases = load_aliases(a.aliases)
+    refusals = load_refusals(a.refusals)
 
     if a.online:
-        findings, n_addr, n_heads = check_online(root, aliases, a.out)
+        findings, n_addr, n_heads = check_online(root, aliases, a.out, refusals)
         new = [f for f in findings if f.startswith("HEAD-COLLISION-NEW")]
+        distinct = [f for f in findings if f.startswith("ADJUDICATED-DISTINCT")]
         for f in findings:
             print(f)
         print(f"# addresses={n_addr} distinct-HEADs={n_heads} "
-              f"known-alias-pairs={len(findings) - len(new)} NEW={len(new)}")
+              f"known-alias-pairs={len(findings) - len(new) - len(distinct)} "
+              f"adjudicated-distinct={len(distinct)} NEW={len(new)}")
         if new:
-            print("# 🔴 FAIL — a HEAD collision this base has not shelved. "
-                  "Adjudicate it, then record it in aliases.tsv.")
+            print("# 🔴 FAIL — a HEAD collision this base has not shelved. Adjudicate it "
+                  "on the REF-SET FINGERPRINT, then record it in aliases.tsv if it is one "
+                  "repository or in refusals.tsv if it is two.")
             return 1
         print("# 🟢 PASS — every live build-on address is a distinct repository, "
               "or a collision this base has already adjudicated.")

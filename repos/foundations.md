@@ -3,6 +3,65 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 2026-10-22 · `p378` — **no new foundational repo, and the pass's foundation work was ADDRESS HYGIENE instead: 8 alias pairs registered where there were 2, and every published grant path proved LIVE for the first time**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p378.tsv) ·
+[`repo-identity-adjudication`](../evidence/repo-identity-adjudication.2026-10-22-p378.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p378.tsv)
+
+🔴 **No address this pass found is a foundation.** The six NEW addresses are two curated lists,
+a 2022 non-AI e-learning site, a NonCommercial parent-built tutor, and two education agents
+with **no licence file anywhere in the tree**. Nothing to promote.
+
+🟢 **What the pass did buy this shelf is the thing a foundation shelf most needs and had never
+been given: proof that its addresses and its grant paths are real.**
+
+| Measurement, first run in this base's history | Result |
+|---|---|
+| Distinct published **grant paths** that resolve `200` | 🟢 **275 of 275** |
+| Grant claims published across the shelves | 334 (36 rows carry no path) |
+| Calibration arms on that check | 🟢 both correct — a known-present `200`, a known-absent `404` |
+| Live build-on addresses `ls-remote`'d | **501** |
+| Alias pairs in the register **before** this pass | 🔴 **2** |
+| Alias pairs in the register **after** | 🟢 **8**, plus a new **refusal** ledger with 1 |
+
+🔴 **The register was the weakest structure on this base and nothing could see it.** Six pairs
+of addresses that are **one repository** were being published as two, four of them found by
+running `gate-identity-online` for the first time and two found by sweeping this base's **own
+prose** — where earlier passes had **proven** the identity first-hand and then filed it in a
+paragraph instead of a register.
+
+| Now registered as one repository | Proof |
+|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) ← `IMSGlobal/openbadges-validator-core` | ref-set `99c029966cdfcc28`, 183 refs both sides |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) ← `digitalcredentials/learner-credential-wallet` | ref-set `89173e3ece0b749a`, 586 refs both sides |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) ← `openedx/edx-platform` | ref-set `e8bd3fa5967f5181`, 49 791 refs both sides |
+| [`meta-pytorch/opacus`](https://github.com/meta-pytorch/opacus) ← `pytorch/opacus` | ref-set `62070ec06ae7b9d7`, 563 refs both sides |
+| [`Teaching-Knowledge-Graph/TeachingKG`](https://github.com/Teaching-Knowledge-Graph/TeachingKG) ← `naiayti/TeachingKG` | ref-set `8bfdee83b6fc287d`, 10 refs both sides |
+| [`openHPI/quiz-recap`](https://github.com/openHPI/quiz-recap) ← `christophblessing/quiz-recap` | ref-set `9ae94c5705e376bd`, 211 refs both sides |
+
+🟢 **Two of those six matter directly to a credentials engagement.** `openbadges-validator-core`
+is published here under the **dead** `imsglobal` org name as well as the live `1edtech` one, and
+the learner-credential wallet under both the **MIT DCC** and the **OpenWallet Foundation Labs**
+owner. 🔵 A studio citing the stale half of either pair in a proposal is citing an organisation
+that no longer owns the code.
+
+🔴 **One pair REFUSED, and it is the LATAM one.** `dasgltd/mcp-brasil` and
+`Mcp-Brasil/mcp-brasil` share HEAD `2efb258370b1` and have **52 refs against 101** — two
+distinct repositories agreeing at the tip. 🟢 Refused on `p370`'s ref-set rule, which the gate
+itself does not use; adjudicated on the HEAD the gate prints, this pass would have collapsed
+two Brazilian addresses into one.
+
+🟡 **One address remains UNREAD after the MIT tier was swept first-hand**:
+`uoc/java-lti-1.3-provider`, 5 paths × 2 guessed refs, no grant reachable. 🔵 Recorded so it is
+not re-probed blind.
+
+🔴 **And the honest limit on all of it.** `api.github.com` and `github.com` HTML answer `403`
+here, as at `p376` and `p377` — **three independent sandboxes now** — so this shelf still
+carries **no star counts** and no authenticated canonicality check. For three of the six
+registered pairs the canonical **direction** rests on the organisations' published renames,
+not on a channel this pass could read; only `openedx` has a TIER-1 issuer behind its direction.
+
 
 ## 🟢 2026-10-22 · `p377` — **no new foundational repo, and for once the reason is measured: `ACTION p376-C`'s payload is pinned and `ACTION p376-D`'s missing channel turns out to EXIST**
 

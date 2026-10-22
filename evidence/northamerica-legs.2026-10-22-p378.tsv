@@ -1,0 +1,49 @@
+# ACTION p377-E — DISCHARGED.  `Gap 507` CLOSED: "North America" on these shelves no longer
+# means the United States.
+#
+# WHAT p377 ASKED: "close Gap 507 with Canadian and Mexican legs, in English, French and
+# Spanish, before another pass publishes a 'North America' cell built only from US sources."
+#
+# WHY IT WAS A GAP: p377's regional leg returned NO Canadian and NO Mexican material at all,
+# while this base's North America cell carried US-only content (36 % share, $3.68 B 2026,
+# 60 % of US K-12 teachers, 134 bills / 31 states, AB 1159, H.R. 8747) and was read as
+# continental.
+#
+# LEGS RUN, first-hand on 2026-10-22, with the query recorded per ACTION RE:
+leg_ca	"AI education policy Canada 2026 provincial guidance K-12 adoption ministry generative AI"
+leg_mx	"inteligencia artificial educacion Mexico 2026 SEP lineamientos adopcion escuelas"
+#
+# TIER SCALE as p377 fixed it: TIER-1 ISSUER · TIER-2 INSTITUTIONAL · TIER-3 PRESS · TIER-4 COMMENTARY.
+jurisdiction	instrument	status	date	outlet	tier	fact
+Canada — British Columbia	"Considerations for Using AI Tools in K-12 Schools"	IN FORCE as guidance	carried	gov.bc.ca (Ministry of Education and Child Care)	TIER-1 ISSUER	A decision framework for integrating AI tools, not a ban and not a mandate.  BC has also developed materials to help school boards write LOCAL AI policies
+Canada — Quebec	Ministerial directive suspending AI assistants	IN FORCE as of the last reported check	2025-03, still in place 2025-12	EDCAN brief	TIER-2	🔴 The MOST RESTRICTIVE Canadian stance found.  A Nov 2024 guide for education staff accompanies it.  🔴 No 2026 update to the directive was found on this leg
+Canada — Ontario	NONE at the provincial level	NO MEMORANDUM	as at this leg	parent guide + OTF paper	TIER-2 / TIER-4	🔴 The Ministry of Education has issued NO memorandum on AI; SCHOOL BOARDS set the rules.  Boards are releasing board-approved GenAI systems for teachers and students
+Canada — Ontario	OTF discussion paper, "Generative AI in K-12 Ontario Education"	discussion paper	2026-01 (PDF dated 2026-03)	otffeo.on.ca (Ontario Teachers' Federation)	TIER-2 INSTITUTIONAL	The teachers' federation and its affiliates, not the ministry.  A position, not an instrument
+Canada — Ontario	ECNO "English Generative AI Guidelines v1.3"	guidance	v1.3	ecno.org	TIER-2 INSTITUTIONAL	Educational Computing Network of Ontario — a board-IT consortium guideline, the de facto layer where the ministry is silent
+Canada — New Brunswick	AI written into the K-12 CURRICULUM	in progress, contested	2026	CBC	TIER-3 PRESS	🔵 The only CANADIAN CURRICULUM-LEVEL approach found, "drawing praise — and pushback".  The Francophone education department published parallel guidance for the Francophone system
+Canada — federal	K-12 is PROVINCIAL jurisdiction	structural	—	EDCAN + CBC	TIER-2 / TIER-3	🔴 There is no federal K-12 AI instrument to find, and critics argue federal AI legislation does not address K-12 risks or minors' data at all
+Mexico — SEP	NO national binding lineamiento in force	NOT YET AN INSTRUMENT	as at 2026-10	educacionsuperior.sep.gob.mx	TIER-1 ISSUER	🔴 What exists is a SURVEY, PRINCIPLES for higher education, a CONSULTATION and a UNESCO letter of intent.  No mandatory national rule
+Mexico — SEP	National generative-AI survey + 10 proposed actions for Higher Education	published	2026-04-15	educacionsuperior.sep.gob.mx	TIER-1 ISSUER	Ethical and critical use of GenAI in Educacion Superior.  SEP reports MORE THAN 60 % of university students and teachers use GenAI daily
+Mexico — SEP	76.7 % of public-institution students do not know whether their school has guidelines	published	2026-04	SEP survey	TIER-1 ISSUER	🟢 The single most useful number on this leg for a studio: the demand is not for a model, it is for governance that reaches the student
+Mexico — SEP	National consultation, three regional forums	announced	2026-07	lmnoticias.com.mx	TIER-3 PRESS	Feeds an initiative that then goes to CONGRESS.  Scope includes phones and social media.  17 states have already set their own measures
+Mexico — SEP + UNESCO	Letter of Intent on ethical AI in education	signed	2026-09-07	jornada.com.mx	TIER-3 PRESS carrying TIER-1 signatories	UNESCO to provide technical support for public policy
+Mexico — teacher capacity	More than 1 000 000 teachers to be trained	stated challenge	2026-08	estadored.mx	TIER-4	🔴 Reported, not refused, but NOT load-bearing: a single commentary outlet.  The underlying point — that the binding constraint is teacher capability, not tooling — is corroborated by the SEP survey's own governance gap
+Mexico — UNAM	First online admission exam, then an in-person control exam	event	2026-08	news.jointly.mx	TIER-4	🔵 An ASSESSMENT-INTEGRITY event, the fact class p374 found to be Vietnam's statutory trigger.  Recorded as a lead, not as a policy fact
+#
+# 🔴 FIGURES REFUSED ON THIS LEG.
+refused_1	"Three-quarters of Canadian students already use generative AI for schoolwork" — carried by a single TIER-4 outlet (BriefGlance) reporting a June 2026 education ministers' meeting.  🔴 REFUSED: one outlet, lowest tier, and the leg's own summary flags it as "a blog".  An adoption rate is exactly the kind of number a studio would put in a deck, so it does not get softened.
+refused_2	Mexico's SEP survey PARTICIPATION figures are CONFLICTED across reports — 1 143 451 students + 133 582 teachers from 2 900 institutions in one, "more than 1.5 million students + 166 000 teachers" in another.  🔴 The >60 % daily-use finding is quoted; the participation base is NOT assertable.  Filed as a gap.
+#
+# 🟢 WHAT THE LEG ESTABLISHES FOR A STUDIO, and it is a build constraint rather than a market figure.
+finding_1	🔴 CANADA HAS NO NATIONAL K-12 AI POSITION AND CANNOT HAVE ONE: K-12 is provincial.  A single "Canada" cell is as wrong as a single "North America" cell was.  The live instruments span a FULL RANGE — Quebec SUSPENDS AI assistants, BC publishes a decision framework, Ontario's ministry is SILENT and its boards and board-IT consortium fill the gap, New Brunswick writes AI INTO THE CURRICULUM.
+finding_2	🟢 So the Canadian engagement unit is the PROVINCE, and in Ontario it is the SCHOOL BOARD.  A product configurable per-province, defaulting to the NARROWEST live rule (Quebec's suspension), satisfies all four; one built to BC's framework fails Quebec.  🔵 Same structure as p377's Norway finding, where Udir bars ACCESS and regjeringen.no bars USE: build the narrower one.
+finding_3	🟢 MEXICO IS PRE-INSTRUMENT AND SAYS SO ITSELF.  There is no binding national rule; there IS a consultation heading for Congress, a UNESCO technical-support agreement, and a measured 76.7 % of public-institution students who do not know whether their own school has guidelines.  🔵 The opportunity is the GOVERNANCE LAYER — policy templates, disclosure workflows, teacher-facing audit trails — not another tutor.  And it is a window that closes when the Congress initiative lands.
+finding_4	🔵 Mexico's higher-education demand is MEASURED (>60 % daily use, SEP's own survey) while its basic-education demand is NOT.  The same split p377 left open for APAC, now recorded for LATAM's largest Spanish-speaking system.
+#
+# 🟢 GAP 507 DISPOSITION
+gap_507	CLOSED.  Canada is placed with four distinct provincial instruments across two languages and Mexico with a dated TIER-1 federal sequence.  Any future "North America" cell on these shelves must name its jurisdiction.
+new_gap_ca	🔴 Quebec's directive was last CONFIRMED in force in December 2025.  Ten months old at this pass, on a TIER-2 outlet, and no 2026 update was found.  A suspension is the strictest fact on the Canadian leg and it is the least currently evidenced.
+#
+# STATED LIMIT: WebSearch is US-only.  The Canadian French-language and Mexican Spanish-language
+# material reached here came through a US index; the Quebec and New Brunswick Francophone
+# instruments are attributions THROUGH that index, not byte-level reads of ministry pages.

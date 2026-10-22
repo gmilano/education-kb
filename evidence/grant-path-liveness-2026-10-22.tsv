@@ -1,0 +1,312 @@
+archivo	linea	slug	branch	path	http	veredicto
+agents/top.md	241	ibm-skills-network/mark	master	LICENSE	200	ALIVE
+agents/top.md	537	bibo242/blackboard-mcp	HEAD	LICENSE	200	ALIVE
+agents/top.md	538	mattlo0546/canvas-mcp	HEAD	LICENSE	200	ALIVE
+agents/top.md	539	aicoder2009/khanacademymcp	HEAD	LICENSE	200	ALIVE
+agents/top.md	540	hocphi-info/hocphi-info-mcp	HEAD	LICENSE	200	ALIVE
+agents/top.md	541	quizlar/mcp-server	HEAD	LICENSE	200	ALIVE
+agents/top.md	542	hefi002/tfg-mcp-moodle-server	HEAD	LICENSE	200	ALIVE
+agents/top.md	825	microsoft/generative-ai-for-beginners	main	LICENSE	200	ALIVE
+agents/top.md	826	microsoft/ai-edu	master	LICENSE.md	200	ALIVE
+agents/top.md	827	weiwei0614/math-bank	main	LICENSE	200	ALIVE
+agents/top.md	1176	microsoft/StudentSim	main	LICENSE	200	ALIVE
+agents/top.md	1177	iwangjian/Coding-Tutor	main	LICENSE	200	ALIVE
+agents/top.md	1178	yale-nlp/LLM-Metacognition	main	LICENSE	200	ALIVE
+agents/top.md	1395	tura-learn/Dhee	main	LICENSE	200	ALIVE
+agents/top.md	1396	nuwa-skills/montessori-skill	master	LICENSE	200	ALIVE
+agents/top.md	1397	XiaoCow666/CodeSense	main	LICENSE	200	ALIVE
+agents/top.md	1398	digital-learning-gmbh/educa-lrs	main	LICENSE.md	200	ALIVE
+agents/top.md	1512	ZeKaiNie/universal-examprep-skill	main	LICENSE	200	ALIVE
+agents/top.md	1513	karanb192/algo-sensei	main	LICENSE	200	ALIVE
+agents/top.md	1514	SenmuuuuW/universal-diagnostic-tutor-skill	main	LICENSE	200	ALIVE
+agents/top.md	1515	KeWang0622/kaogong-skill	main	LICENSE	200	ALIVE
+agents/top.md	1516	shigella520/MindTrain	main	LICENSE	200	ALIVE
+agents/top.md	1522	kaorii-ako/Shiori-v1	master	LICENSE	200	ALIVE
+agents/top.md	1523	AnonymousOnyx22/brightspace-d2l-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1524	isakskogstad/Skolverket-MCP	master	LICENSE	200	ALIVE
+agents/top.md	1525	alejooroncoy/campus-cli	main	LICENSE	200	ALIVE
+agents/top.md	1526	ProjectAJ14/eklavya	main	LICENSE	200	ALIVE
+agents/top.md	1527	UltimaPhoenix/dev-coach	main	LICENSE	200	ALIVE
+agents/top.md	1534	oaknational/oak-open-curriculum-ecosystem	main	LICENCE	200	ALIVE
+agents/top.md	1535	silicq/ordkort	main	LICENSE	200	ALIVE
+agents/top.md	1536	sid-thephysicskid/leap-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1537	BlinkZer0/Phys-MCP	main	LICENSE	200	ALIVE
+agents/top.md	1552	HKUDS/DeepTutor	main	LICENSE	200	ALIVE
+agents/top.md	1554	virgiliojr94/book-to-skill	master	LICENSE.md	200	ALIVE
+agents/top.md	1555	CaviraOSS/PageLM	main	LICENSE.md	200	ALIVE
+agents/top.md	1556	beltromatti/get-it	main	LICENSE	200	ALIVE
+agents/top.md	1557	GarethManning/education-agent-skills	main	LICENSE	200	ALIVE
+agents/top.md	1558	satvik314/educhain	main	LICENSE	200	ALIVE
+agents/top.md	1559	sitor-ai/frametell	main	LICENSE	200	ALIVE
+agents/top.md	1560	SYuan03/Skill-Anything	main	LICENSE	200	ALIVE
+agents/top.md	1561	assafkip/claudemy	main	LICENSE	200	ALIVE
+agents/top.md	1562	ai-shifu/ai-shifu	main	LICENSE.txt	200	ALIVE
+agents/top.md	1563	Li-Evan/Bloom	main	LICENSE	200	ALIVE
+agents/top.md	1564	helixnow/deep-student	main	LICENSE	200	ALIVE
+agents/top.md	1565	CAHLR/OATutor	main	LICENSE	200	ALIVE
+agents/top.md	1566	read2017/learn-anything-with-AI	main	LICENSE	200	ALIVE
+agents/top.md	1567	artcc/freelingo	main	LICENSE	200	ALIVE
+agents/top.md	1568	HumphreySun98/Smart-Study-Agent	main	LICENSE	200	ALIVE
+agents/top.md	1595	OpenStudy-dev/OpenStudy	main	LICENSE	200	ALIVE
+agents/top.md	1596	RohanMuppa/brightspace-mcp-server	main	LICENSE	200	ALIVE
+agents/top.md	1597	chrisryugj/schoolinfo-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1598	r1ckyIn/canvas-ed-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1599	SonAIengine/ku-portal-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1600	vishalsachdev/canvas-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1601	falkenslab/moodle-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1602	ArnaudGuiovanna/tutor-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1603	blend-ed/openedx-mcp	master	LICENSE	200	ALIVE
+agents/top.md	1604	ankimcp/anki-mcp-server	main	LICENSE	200	ALIVE
+agents/top.md	1605	sandraschi/classroom-mcp	master	LICENSE	200	ALIVE
+agents/top.md	1606	likr/canvas-lms-agent	master	canvas-lms-mcp/LICENSE	200	ALIVE
+agents/top.md	1607	Mcp-Brasil/mcp-brasil	main	LICENSE	200	ALIVE
+agents/top.md	1608	bruchris/canvas-lms-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1609	G36maid/moodle-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1610	AnonymousOnyx22/canvas-lms-student-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1611	Yuanpeng-Li/gradescope-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1612	gabrielmahia/elimu-mcp	main	LICENSE	200	ALIVE
+agents/top.md	1613	hughsibbele/Canvas-Agent	main	LICENSE	200	ALIVE
+agents/top.md	1614	Neutralmilkzzz/moodle-cli-hku	main	LICENSE	200	ALIVE
+agents/top.md	1615	microsoft/moodle-ai-assistant	main	LICENSE	200	ALIVE
+agents/top.md	1669	dodona-edu/dolos	main	LICENSE	200	ALIVE
+agents/top.md	1670	INGInious/INGInious	main	LICENSE	200	ALIVE
+agents/top.md	1671	ZhijieXiong/pyedmine	main	LICENSE	200	ALIVE
+agents/top.md	1672	ls1intum/Ares2	main	LICENSE	200	ALIVE
+agents/top.md	1673	pykt-team/pykt-toolkit	main	LICENSE	200	ALIVE
+agents/top.md	1674	anthropics/k12-teacher-skills	main	LICENSE	200	ALIVE
+agents/top.md	1675	learning-commons-org/agent-skills	main	LICENSE	200	ALIVE
+agents/top.md	1676	learning-commons-org/evaluators	main	LICENSE.md	200	ALIVE
+agents/top.md	1677	jeffyding/OpenLRW	master	LICENSE	200	ALIVE
+agents/top.md	1688	LabSirius/TutorIA	main	LICENSE	200	ALIVE
+agents/top.md	1689	Dramoscuello/openpiar	main	LICENSE	200	ALIVE
+agents/top.md	1690	Riskbreaker2077/open-test	main	LICENSE	200	ALIVE
+agents/top.md	1725	echo-loop/Echo-Loop	main	LICENSE	200	ALIVE
+agents/top.md	1726	open-spaced-repetition/fsrs4anki	main	LICENSE	200	ALIVE
+agents/top.md	1727	nagisanzenin/engram	main	LICENSE	200	ALIVE
+agents/top.md	1728	Miaotofu01/Study-Mate	main	LICENSE	200	ALIVE
+agents/top.md	1729	trane-project/trane	master	LICENSE	200	ALIVE
+agents/top.md	1730	open-spaced-repetition/free-spaced-repetition-scheduler	main	LICENSE	200	ALIVE
+agents/top.md	1731	24kchengYe/human-skill-tree	master	LICENSE	200	ALIVE
+agents/top.md	1732	open-spaced-repetition/py-fsrs	main	LICENSE	200	ALIVE
+agents/top.md	1733	ChenChenyaqi/learn-anything	main	LICENSE	200	ALIVE
+agents/top.md	1734	hluaguo/learn-faster-kit	main	LICENSE	200	ALIVE
+agents/top.md	1754	naufaldi/teacher-exam	main	LICENSE	200	ALIVE
+agents/top.md	1755	ajjalti/EvalStudio	main	LICENSE	200	ALIVE
+agents/top.md	1756	guillaume-behr/open-quiz	master	LICENSE	200	ALIVE
+agents/top.md	1757	nvaes/CEB	main	LICENSE	200	ALIVE
+agents/top.md	1758	diego-costanzo/tournesol-scolaire	main	LICENSE	200	ALIVE
+agents/top.md	1815	JudgePeach/math-question-bank	main	LICENSE	200	ALIVE
+agents/top.md	1817	erictrainnlpinxihu/Grader-agent	main	LICENSE	200	ALIVE
+agents/top.md	1818	gygy-open/question-bank	main	LICENSE	200	ALIVE
+agents/top.md	1841	vardanagarwal/Proctoring-AI	master	LICENSE	200	ALIVE
+agents/top.md	1843	lebmatter/exampro	main	license.txt	200	ALIVE
+agents/top.md	1844	openedx/edx-proctoring	master	LICENSE.txt	200	ALIVE
+agents/top.md	1845	eLearning-BS23/moodle-quizaccess_proctoring	master	LICENSE.md	200	ALIVE
+agents/top.md	1846	shaheeranser/exam-proctor	main	LICENSE	200	ALIVE
+agents/top.md	1847	OpenProct/openproct	main	LICENSE	200	ALIVE
+agents/top.md	1910	dg13788/iep-system	main	LICENSE	200	ALIVE
+agents/top.md	1911	The-Burnes-Center/a-iep	main	LICENSE	200	ALIVE
+agents/top.md	1913	boktoday/iep-agent-hermes-agent	main	LICENSE	200	ALIVE
+agents/top.md	1953	withmarbleapp/os-taxonomy	main	LICENSE	200	ALIVE
+agents/top.md	1954	xiaoyang111222/cn-math-taxonomy	main	LICENSE	200	ALIVE
+agents/top.md	1955	learning-commons-org/knowledge-graph	main	LICENSE.md	200	ALIVE
+agents/top.md	1956	bncc-dev/bncc-dados	main	LICENSE	200	ALIVE
+agents/top.md	1957	clownjee/knowledge-import-pipeline	main	LICENSE	200	ALIVE
+agents/top.md	1958	aclascollege/polymath	main	LICENSE	200	ALIVE
+agents/top.md	1959	oaknational/oak-curriculum-ontology	main	LICENSE.md	200	ALIVE
+agents/top.md	1960	devissaputra/curriculum_knowledge_graph	main	LICENSE	200	ALIVE
+agents/top.md	2005	helalaou/LectureLab	main	LICENSE	200	ALIVE
+agents/top.md	2006	PLus123456/lecture-live	main	LICENSE	200	ALIVE
+agents/top.md	2007	CapSoftware/Cap	main	LICENSE	200	ALIVE
+agents/top.md	2008	sardorml/captureflow	main	LICENSE	200	ALIVE
+agents/top.md	2056	Egonex-AI/Understand-Anything	main	LICENSE	200	ALIVE
+repos/foundations.md	110	digitalcredentials/lti-issuer	master	LICENSE	200	ALIVE
+repos/foundations.md	171	mlabonne/llm-course	main	LICENSE	200	ALIVE
+repos/foundations.md	196	MarkUsProject/Markus	master	LICENSE	200	ALIVE
+repos/foundations.md	707	Cvmcosta/ltijs	HEAD	LICENSE	200	ALIVE
+repos/foundations.md	708	packbackbooks/lti-1-3-php-library	HEAD	LICENSE.md	200	ALIVE
+repos/foundations.md	709	oxctl/spring-security-lti13-demo	HEAD	LICENSE.txt	200	ALIVE
+repos/foundations.md	710	kaiofelps/lti-consumer-poc	HEAD	LICENSE	200	ALIVE
+repos/foundations.md	711	vossenv/oneroster-python	HEAD	LICENSE.txt	200	ALIVE
+repos/foundations.md	713	openedx/XBlock	HEAD	LICENSE.TXT	200	ALIVE
+repos/foundations.md	714	ayrtonmoura1/conectabncc	HEAD	LICENSE	200	ALIVE
+repos/foundations.md	715	ddemszky/classroom-transcript-analysis	HEAD	LICENSE	200	ALIVE
+repos/foundations.md	816	openedx/openedx-platform	master	LICENSE	200	ALIVE
+repos/foundations.md	817	moodle/moodle	main	COPYING.txt	200	ALIVE
+repos/foundations.md	818	instructure/canvas-lms	master	LICENSE	200	ALIVE
+repos/foundations.md	819	frappe/lms	develop	license.txt	200	ALIVE
+repos/foundations.md	820	classroomio/classroomio	main	LICENSE	200	ALIVE
+repos/foundations.md	821	learningequality/kolibri	develop	LICENSE	200	ALIVE
+repos/foundations.md	822	overhangio/tutor	release	LICENSE.txt	200	ALIVE
+repos/foundations.md	823	chamilo/chamilo-lms	master	LICENSE	200	ALIVE
+repos/foundations.md	824	moodlehq/moodleapp	main	COPYING.txt	200	ALIVE
+repos/foundations.md	825	sakaiproject/sakai	master	LICENSE	200	ALIVE
+repos/foundations.md	826	OpenOLAT/OpenOLAT	master	LICENSE	200	ALIVE
+repos/foundations.md	827	elmsln/elmsln	master	LICENSE.md	200	ALIVE
+repos/foundations.md	850	edificeio/entcore	master	LICENSE	200	ALIVE
+repos/foundations.md	851	OPEN-ENT-NG/cahier-de-textes	dev	LICENSE	200	ALIVE
+repos/foundations.md	852	OPEN-ENT-NG/presences	dev	LICENCE	200	ALIVE
+repos/foundations.md	853	OPEN-ENT-NG/competences	dev	LICENCE	200	ALIVE
+repos/foundations.md	854	open-ent/exercizer	master	LICENCE	200	ALIVE
+repos/foundations.md	855	edificeio/blog	develop	LICENSE	200	ALIVE
+repos/foundations.md	856	OPEN-ENT-NG/mindmap	develop	LICENSE	200	ALIVE
+repos/foundations.md	894	tsugiproject/tsugi	master	LICENSE	200	ALIVE
+repos/foundations.md	895	jcputney/scorm-again	master	LICENSE	200	ALIVE
+repos/foundations.md	896	openfun/marsha	master	LICENSE	200	ALIVE
+repos/foundations.md	897	Cvmcosta/ltijs	master	LICENSE	200	ALIVE
+repos/foundations.md	898	dmitry-viskov/pylti1.3	master	LICENSE	200	ALIVE
+repos/foundations.md	899	lti-tool/lti-tool	main	LICENSE	200	ALIVE
+repos/foundations.md	900	Liberate-Labs/ltikit-sdk	main	LICENSE	200	ALIVE
+repos/foundations.md	901	openfun/django-lti-toolbox	master	LICENSE	200	ALIVE
+repos/foundations.md	902	harvard-edtech/caccl	main	LICENSE.md	200	ALIVE
+repos/foundations.md	903	jupyterhub/ltiauthenticator	main	LICENSE	200	ALIVE
+repos/foundations.md	904	1EdTech/caliper-spec	master	LICENSE.md	200	ALIVE
+repos/foundations.md	905	iamlucasb/lti-core	main	LICENSE	200	ALIVE
+repos/foundations.md	906	DecoyLex/ltix	main	LICENSE	200	ALIVE
+repos/foundations.md	907	SanDiegoCodeSchool/lti-node-library	master	LICENSE	200	ALIVE
+repos/foundations.md	908	edugatorlabs/ltijs	master	LICENSE	200	ALIVE
+repos/foundations.md	970	yetanalytics/lrsql	main	LICENSE	200	ALIVE
+repos/foundations.md	971	pelotech/xapi-lrs	main	LICENSE	200	ALIVE
+repos/foundations.md	972	adlnet/ADL_LRS	master	LICENSE	200	ALIVE
+repos/foundations.md	973	Apereo-Learning-Analytics-Initiative/Larissa	master	LICENSE	200	ALIVE
+repos/foundations.md	974	DavidLMS/learnmcp-xapi	main	LICENSE	200	ALIVE
+repos/foundations.md	975	Apereo-Learning-Analytics-Initiative/OpenLRW	master	LICENSE	200	ALIVE
+repos/foundations.md	1039	joakimwallmark/irtorch	main	LICENSE.txt	200	ALIVE
+repos/foundations.md	1040	eribean/girth	master	LICENSE.txt	200	ALIVE
+repos/foundations.md	1041	eribean/girth_mcmc	main	LICENSE.txt	200	ALIVE
+repos/foundations.md	1042	mhw32/variational-item-response-theory-public	master	LICENSE	200	ALIVE
+repos/foundations.md	1098	judge0/judge0	master	LICENSE	200	ALIVE
+repos/foundations.md	1101	ucfopen/UDOIT	main	LICENSE	200	ALIVE
+repos/foundations.md	1103	zmievsa/autograder	main	LICENSE	200	ALIVE
+repos/foundations.md	1122	hydro-dev/Hydro	master	LICENSE	200	ALIVE
+repos/foundations.md	1123	QingdaoU/OnlineJudge	master	LICENSE	200	ALIVE
+repos/foundations.md	1124	zhblue/hustoj	master	LICENSE	200	ALIVE
+repos/foundations.md	1125	DMOJ/online-judge	master	LICENSE	200	ALIVE
+repos/foundations.md	1126	online-judge-tools/oj	master	LICENSE	200	ALIVE
+repos/foundations.md	1127	DMOJ/judge-server	master	LICENSE	200	ALIVE
+repos/foundations.md	1128	ZsgsDesign/NOJ	master	LICENSE	200	ALIVE
+repos/foundations.md	1129	HimitZH/HOJ	master	LICENSE	200	ALIVE
+repos/foundations.md	1130	syzoj/syzoj	master	LICENSE	200	ALIVE
+repos/foundations.md	1131	SDUOJ/OnlineJudge	main	LICENSE	200	ALIVE
+repos/foundations.md	1132	QingdaoU/Judger	newnew	LICENSE	200	ALIVE
+repos/foundations.md	1133	mjnaderi/Sharif-Judge	Version-1	LICENSE	200	ALIVE
+repos/foundations.md	1134	ucbds-infra/otter-grader	master	LICENSE	200	ALIVE
+repos/foundations.md	1135	webtech-network/autograder	main	LICENSE	200	ALIVE
+repos/foundations.md	1136	okpy/ok-client	master	LICENSE	200	ALIVE
+repos/foundations.md	1159	QingdaoU/OnlineJudgeFE	master	LICENSE	200	ALIVE
+repos/foundations.md	1160	QingdaoU/JudgeServer	master	LICENSE	200	ALIVE
+repos/foundations.md	1314	jupyterhub/jupyterhub	main	LICENSE	200	ALIVE
+repos/foundations.md	1315	bigbluebutton/bigbluebutton	v4.0.x-develop	LICENSE	200	ALIVE
+repos/foundations.md	1316	SJRiz/pytogether	main	LICENSE	200	ALIVE
+repos/foundations.md	1317	opencast/opencast	develop	LICENSE	200	ALIVE
+repos/foundations.md	1318	h5p/h5p-php-library	master	LICENSE.txt	200	ALIVE
+repos/foundations.md	1319	h5p/h5p-cli	master	LICENSE	200	ALIVE
+repos/foundations.md	1320	openpatch/hyperbook	main	LICENSE.md	200	ALIVE
+repos/foundations.md	1331	openeducat/openeducat_erp	19.0	LICENSE	200	ALIVE
+repos/foundations.md	1332	francoisjacquet/rosariosis	mobile	LICENSE	200	ALIVE
+repos/foundations.md	1333	openwallet-foundation-labs/learner-credential-wallet	main	LICENSE	200	ALIVE
+repos/foundations.md	1334	terracotta-education/terracotta	development	LICENSE	200	ALIVE
+repos/foundations.md	1335	OS4ED/openSIS-Classic	master	docs/License.txt	200	ALIVE
+repos/foundations.md	1336	FenixEdu/fenixedu-academic	master	LICENSE	200	ALIVE
+repos/foundations.md	1337	academico-sis/academico	main	LICENSE	200	ALIVE
+repos/foundations.md	1338	frappe/erpnext	develop	license.txt	200	ALIVE
+repos/foundations.md	1394	freeCodeCamp/freeCodeCamp	main	LICENSE.md	200	ALIVE
+repos/foundations.md	1395	ossu/computer-science	master	LICENSE	200	ALIVE
+repos/foundations.md	1396	microsoft/mcp-for-beginners	main	LICENSE	200	ALIVE
+repos/foundations.md	1397	kabartay/openunivcourses	main	LICENSE	200	ALIVE
+repos/foundations.md	1398	elimu-ai/webapp	main	LICENSE	200	ALIVE
+repos/foundations.md	1449	openeduhub/duplicate-detection	main	LICENSE	200	ALIVE
+repos/foundations.md	1450	openeduhub/edu-sharing-python-client	main	LICENSE	200	ALIVE
+repos/foundations.md	1455	openeduhub/ki-prompt-benchmark	main	LICENSE	200	ALIVE
+repos/foundations.md	1456	openeduhub/lernpfadeditor	main	LICENSE	200	ALIVE
+repos/foundations.md	1457	openeduhub/llm-judge	main	LICENSE	200	ALIVE
+repos/foundations.md	1458	openeduhub/mappings	main	LICENSE	200	ALIVE
+repos/foundations.md	1461	openeduhub/metadata-browser-plugin-fuerapi	main	LICENSE	200	ALIVE
+repos/foundations.md	1462	openeduhub/metalookup	main	LICENSE.txt	200	ALIVE
+repos/foundations.md	1463	openeduhub/oeh-metadata-vocabs	master	LICENSE	200	ALIVE
+repos/foundations.md	1467	openeduhub/skohub-vocabs-oeh-patched	main	LICENSE	200	ALIVE
+repos/foundations.md	1469	openeduhub/text-statistics	main	LICENSE	200	ALIVE
+repos/foundations.md	1471	openeduhub/tutor-chatbot	main	LICENSE	200	ALIVE
+repos/foundations.md	1472	openeduhub/wlo-quellenliste	main	LICENSE	200	ALIVE
+repos/foundations.md	1479	openedx/frontend-base	main	LICENSE	200	ALIVE
+repos/foundations.md	1480	openedx/frontend-platform	master	LICENSE	200	ALIVE
+repos/foundations.md	1481	openedx/openedx-proposals	master	LICENSE	200	ALIVE
+repos/foundations.md	1487	openfun/ashley	master	LICENSE	200	ALIVE
+repos/foundations.md	1488	openfun/potsie	main	LICENSE.md	200	ALIVE
+repos/foundations.md	1494	Brightspace/test-reporting-node	main	LICENSE	200	ALIVE
+repos/foundations.md	1495	BrightspaceUI/core	main	LICENSE	200	ALIVE
+repos/foundations.md	1496	BrightspaceUI/intl	main	LICENSE	200	ALIVE
+repos/foundations.md	1497	BrightspaceUI/labs	main	LICENSE	200	ALIVE
+repos/foundations.md	1503	adamzammit/ltiplugin	master	LICENSE	200	ALIVE
+repos/foundations.md	1504	annoto/ims-lti	master	LICENSE	200	ALIVE
+repos/foundations.md	1506	longsightgroup/lti-tool	main	LICENSE	200	ALIVE
+repos/foundations.md	1507	scormflow/scorm-engine-client	main	LICENSE	200	ALIVE
+repos/foundations.md	1513	mizcausevic-dev/curriculum-knowledge-graph	main	LICENSE	200	ALIVE
+repos/foundations.md	1521	arx-deidentifier/arx	master	LICENSE	200	ALIVE
+repos/foundations.md	1522	greenmaskio/greenmask	main	LICENSE	200	ALIVE
+repos/foundations.md	1523	hitsz-ids/synthetic-data-generator	main	LICENSE	200	ALIVE
+repos/foundations.md	1524	meta-pytorch/opacus	main	LICENSE	200	ALIVE
+repos/foundations.md	1525	OpenMined/PyDP	dev	LICENSE	200	ALIVE
+repos/foundations.md	1526	rizzo-ai-academy/rizzo-pii	main	LICENSE	200	ALIVE
+repos/foundations.md	1527	securitybunker/databunker	master	LICENSE	200	ALIVE
+repos/foundations.md	1528	synthetichealth/synthea	master	LICENSE	200	ALIVE
+repos/foundations.md	1529	thoughtbot/top_secret	main	LICENSE.txt	200	ALIVE
+repos/foundations.md	1535	freeCodeCamp/curriculum-helpers	main	LICENSE	200	ALIVE
+repos/foundations.md	1537	openki/openki	dev	LICENSE	200	ALIVE
+repos/foundations.md	1538	panaversity/learn-agentic-ai	main	LICENSE	200	ALIVE
+repos/foundations.md	1539	weecology/forecasting-course	main	LICENSE.md	200	ALIVE
+repos/foundations.md	1546	chrischall/gogcli-mcp	main	LICENSE	200	ALIVE
+repos/foundations.md	1547	christophblessing/quiz-recap	main	LICENSE	200	ALIVE
+repos/foundations.md	1548	damphuquy/agent-as-a-tutor	main	LICENSE	200	ALIVE
+repos/foundations.md	1549	dymchenkko/claude-study-agent	main	LICENSE	200	ALIVE
+repos/foundations.md	1550	groton-school/canvas-cli	main	LICENSE	200	ALIVE
+repos/foundations.md	1551	ibenian/algebench	main	LICENSE	200	ALIVE
+repos/foundations.md	1553	lucasspinola/assistentes-educacionais-com-ia	main	LICENSE	200	ALIVE
+repos/foundations.md	1554	molecule-dev/molecule	main	LICENSE	200	ALIVE
+repos/foundations.md	1556	muhammedalakbarli/imparo	main	LICENSE	200	ALIVE
+repos/foundations.md	1557	nichochar/ari	main	LICENSE	200	ALIVE
+repos/foundations.md	1559	smashburger-dev/argmin	main	LICENSE	200	ALIVE
+repos/foundations.md	1560	viendinhcom/supermemo	master	LICENSE	200	ALIVE
+verticals/solutions.md	74	krayin/laravel-crm	2.2	LICENSE	200	ALIVE
+verticals/solutions.md	75	aureuserp/aureuserp	master	LICENSE	200	ALIVE
+verticals/solutions.md	76	apache/ofbiz-framework	trunk	LICENSE	200	ALIVE
+verticals/solutions.md	77	cortezaproject/corteza	2026.9.x	LICENSE	200	ALIVE
+verticals/solutions.md	78	hcengineering/platform	develop	LICENSE	200	ALIVE
+verticals/solutions.md	639	tutors-sdk/tutors-mono-repo	HEAD	LICENSE	200	ALIVE
+verticals/solutions.md	640	brightspaceui/lms-context-provider	HEAD	LICENSE	200	ALIVE
+agents/top.md	1528	plyght/canvas-mcp				NO-PATH
+agents/top.md	1553	THU-MAIC/OpenMAIC				NO-PATH
+agents/top.md	1816	JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant				NO-PATH
+agents/top.md	1842	reneverland/CBIT-AiExam-plus				NO-PATH
+agents/top.md	1912	omerpanay/special-education-rag				NO-PATH
+agents/top.md	1914	sumry-app/SUMRY				NO-PATH
+agents/top.md	1915	JeabtiE/jump-hackathon-demo				NO-PATH
+agents/top.md	1916	Pragmatic-Works/Rapid-IEP				NO-PATH
+agents/top.md	2062	kitschpatrol/yanki				NO-PATH
+repos/foundations.md	712	apereo-learning-analytics-initiative/sakaixapi-provider				NO-PATH
+repos/foundations.md	1162	QingdaoU/OnlineJudgeDeploy				NO-PATH
+repos/foundations.md	1321	kitschpatrol/yanki				NO-PATH
+repos/foundations.md	1399	cs341-illinois/coursebook				NO-PATH
+repos/foundations.md	1422	eth-nlped/mathdial				NO-PATH
+repos/foundations.md	1423	eth-nlped/socratic-generation				NO-PATH
+repos/foundations.md	1451	openeduhub/its-data				NO-PATH
+repos/foundations.md	1452	openeduhub/its-jointprobability				NO-PATH
+repos/foundations.md	1453	openeduhub/its-prep				NO-PATH
+repos/foundations.md	1454	openeduhub/its-qna				NO-PATH
+repos/foundations.md	1459	openeduhub/metadata-agent-api				NO-PATH
+repos/foundations.md	1460	openeduhub/metadata-agent-canvas				NO-PATH
+repos/foundations.md	1464	openeduhub/oeh-search-etl				NO-PATH
+repos/foundations.md	1465	openeduhub/oeh-search-frontend				NO-PATH
+repos/foundations.md	1466	openeduhub/python-kidra				NO-PATH
+repos/foundations.md	1468	openeduhub/text-extraction				NO-PATH
+repos/foundations.md	1470	openeduhub/topic-statistics				NO-PATH
+repos/foundations.md	1473	openeduhub/z-api-runner				NO-PATH
+repos/foundations.md	1505	godmartinz/node-lti-1.3-library				NO-PATH
+repos/foundations.md	1514	oseducation/knowledge-graph				NO-PATH
+repos/foundations.md	1515	razi-03/ncert-ckg				NO-PATH
+repos/foundations.md	1536	h5p/h5p-interactive-video				NO-PATH
+repos/foundations.md	1545	010ankushsharma/adaptalearn				NO-PATH
+repos/foundations.md	1552	kyyota-wang/cloverailab				NO-PATH
+repos/foundations.md	1555	mthatipamula/educational-assessment-ai-agent-platform				NO-PATH
+repos/foundations.md	1558	risnake/canvas-mcp-server				NO-PATH
+verticals/solutions.md	73	openedx/edx-platform				NO-PATH

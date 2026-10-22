@@ -42,6 +42,7 @@ AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
+PRESFOLD_LOG ?= /tmp/education-kb-gate-presentation-fold.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 SHAPE_LOG ?= /tmp/education-kb-gate-address-shape.log
 CURRENCY_LOG ?= /tmp/education-kb-gate-census-currency.log
@@ -60,7 +61,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
-.PHONY: gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -83,7 +84,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
-             gate-template-identity gate-untitled-payload gate-region-headings \
+             gate-template-identity gate-presentation-fold \
+             gate-untitled-payload gate-region-headings \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
@@ -142,6 +144,27 @@ risk-order: ## p311 — the fixture queue on BOTH axes: descending cells, and wh
 gate-template-identity: ## p312 — ACTION p310-R item 1: MIT and Apache-2.0 identified by TEMPLATE, never by a byte band
 	@cd compose/code/p312-template-identity && { $(PY) test_template_identity.py > $(TEMPLATE_LOG) 2>&1 || { echo "🔴 p312-template-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(TEMPLATE_LOG) ; false ; } ; } && echo "── p312-template-identity (80 controls: the refuted MIT band and this module's own three wrong rungs as live negative controls, the 7-payload template collapse at a constant of 1038, Apache's prefix bimodality, and the UNKNOWN-TEMPLATE abstention contract)" && echo "   PASS" || exit 1
 	@cd compose/code/p312-template-identity && $(PY) -I template_identity.py || exit 1
+
+# 🟢 p378 (`ACTION p377-B`): A LICENCE TEXT IS NOT ITS PRESENTATION, and `p312` was counting
+# both.  `p377` pinned `7768d3beb7949a85` as "a THIRD distinct MIT template" and moved the
+# corpus ratchet 4 -> 5 on it.  🔴 It is the canonical MIT text with the title line absent and
+# the paragraph wrap removed, and not one operative word different: strip the title, collapse
+# the whitespace, and both digests land on `584db484c03a8904`, 1 043 characters.  The third MIT
+# digest differs by its title line alone (`The MIT License (MIT)`).
+# 🔵 So all 20 MIT payloads on these shelves — 10 `p312` fixtures and 10 drawn first-hand at
+# `p378` from unrelated repositories — are ONE LEGAL TEXT, and `template_digest()` normalises
+# case and the holder slot but NOT line wrapping.  Any reflow mints a new template identity: a
+# template count that moves on reflow is a byte band wearing a digest's clothes, which is the
+# failure `p312`'s own docstring was written to prevent.
+# 🟢 REPAIRED BY ADDING.  `p312`'s `normalise()` and `template_digest()` are left byte-for-byte
+# alone — re-keying them would silently break every digest citation since `p312`, the same
+# reason `p377` renumbered its pattern rather than repairing `Gap 506` retroactively.
+# 🔴 The negative controls are the point: MIT must not fold onto Apache-2.0, BSD-2-Clause or
+# GPL; the 137-byte CC0 PARAPHRASE read at `p378` must not fold onto CC0's real legal code;
+# CC0's Statement of Purpose must not fold onto CC0's full Legal Code; and the untitled
+# payload's own first line — a COPYRIGHT line — must survive the fold.  No network.
+gate-presentation-fold: ## p378 — ACTION p377-B: one licence TEXT may not be counted as three TEMPLATES because it was re-wrapped
+	@cd compose/code/p378-presentation-fold && { $(PY) -I test_presentation_fold.py > $(PRESFOLD_LOG) 2>&1 || { echo "🔴 p378-presentation-fold FAILED — its own report follows:" ; sed "s/^/   /" $(PRESFOLD_LOG) ; false ; } ; } && echo "── p378-presentation-fold (24 controls: all three p312 MIT digests folded to one text and p312 proved STILL to see three, the inflation census, all ten MIT fixtures as one text, and the negative controls that keep Apache/BSD/GPL, the 137-byte CC0 paraphrase and CC0's two real shapes apart — plus the closed title list, the operative first line that must survive, and P541's empty-input refusal)" && echo "   PASS" || exit 1
 
 # 🔴 p314: EVERY ARM ON THIS BASE HAS BEEN KEYED ON A LICENCE FAMILY.  This one is keyed
 # on a payload SHAPE and holds the family constant, because `p313` found a complete,
@@ -530,7 +553,7 @@ ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit F
 # A HEAD collision is a FINDING, not a verdict: two distinct forks share a HEAD on the day
 # one is forked from the other.  Adjudicate, then shelve the pair in `aliases.tsv`.
 gate-identity-online: ## ACTION p283 — ls-remote every address; equal HEAD == one repository
-	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . --online --out evidence/repo-identity-$$(date +%%F).tsv
+	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . --online --out evidence/repo-identity-$$(date +%F).tsv
 
 # 🔴 ONLINE half — needs a blobless clone + raw.githubusercontent.com.  OUT of `hooks`.
 provenance-sweep: ## ACTION p280 — grade every manifest in a slug list: make provenance-sweep SLUGS=f

@@ -3,6 +3,72 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 2026-10-22 · `p378` — **`ACTION p377-D` per candidate: 17 probed, 17 live, 6 NEW — and the instrument this pass trusted over `p377`'s grep returned a FALSE NEW that flipped a registered limb**
+
+🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the
+record. 🟢 All probes **2026-10-22**, first-hand: `git ls-remote --symref` for existence and
+default branch, `raw.githubusercontent.com` over a 6-rung root ladder for the grant payload, a
+blobless `--depth 1` clone for the HEAD date, `make enumerate` (`p275` full-tree) for every
+grant absence, and `p312-template-identity`'s own `identify()` for every family. 🔴 **No star
+counts** — `api.github.com` and `github.com` HTML are both **403**, re-measured this pass.
+
+🟢 **`make` RUNS in this sandbox**, so `make carried` was available for the first time — and
+🔴 **it was wrong once, in the direction that matters.** The `Grade` column below is the
+**raw-text re-grade over both address channels**; the `make carried` column is kept beside it
+so the disagreement is visible rather than tidied away.
+
+| Address | Leg | `ls-remote` | HEAD date | Grant | Family | `make carried` | Shelf hits | Grade | Edu agent? |
+|---|---|---:|---|---:|---|---|---:|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | hi | `0` | **2026-10-22** | 1 065 B `ba2525637432` | 🟢 **MIT** | CARRIED | 47 | CARRIED | YES |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | hi | `0` | 2026-08-23 | 1 069 B `297c4cba7b33` | 🟢 **MIT** | CARRIED | 21 | CARRIED | YES |
+| [`KayvanShah1/VirtuTA`](https://github.com/KayvanShah1/VirtuTA) | hi | `0` | 2026-03-03 | 1 068 B `9182ffc261fc` | 🟢 **MIT** | CARRIED | 4 | CARRIED | YES |
+| [`DHRUVvkdv/teaching-assistant`](https://github.com/DHRUVvkdv/teaching-assistant) | hi | `0` | 🔴 2024-07-25 | 🔴 **NONE_IN_TREE** (38 files) | 🔴 **NONE** | NEW | **0** | 🆕 **NEW** | 🔴 no grant · 27 months stale |
+| [`y-kanchan/AI-Teaching-Agent`](https://github.com/y-kanchan/AI-Teaching-Agent) | hi | `0` | 2026-06-17 | 🔴 **NONE_IN_TREE** (28 files) | 🔴 **NONE** | NEW | **0** | 🆕 **NEW** | 🟡 **YES — and it fails on GRANT ALONE** |
+| [`avinash201199/free-ai-agents-resources`](https://github.com/avinash201199/free-ai-agents-resources) | ar | `0` | 2026-03-01 | 1 070 B `12edec716aa1` | 🟢 MIT | CARRIED | 36 | CARRIED | 🔴 no — a list |
+| [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | ar | `0` | 2026-10-20 | 5 875 B `a0e8192ef96d` | 🟢 **CC0 1.0** 🆙 | CARRIED | 16 | CARRIED | 🔴 no — a list |
+| [`12britz/awesome-free-models`](https://github.com/12britz/awesome-free-models) | ar | `0` | 2026-10-11 | 🔴 **137 B** `99b4c41f664e` | 🔴 **CC0 PARAPHRASE** | NEW | **0** | 🆕 **NEW** | 🔴 no — a list |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | id | `0` | 2026-10-19 | 11 408 B `cd2f54e1e506` | 🟢 Apache-2.0 | CARRIED | 162 | CARRIED | YES — the anchor row |
+| [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | id | `0` | 2025-05-08 | 1 070 B `3d5a24e51479` | 🟢 MIT | CARRIED | 4 | CARRIED | YES |
+| [`syauqi/learnify`](https://github.com/syauqi/learnify) | id | `0` | 🔴 2022-06-11 | 1 084 B `84797876a522` | 🟢 MIT | NEW | **0** | 🆕 **NEW** | 🔴 no — **no AI**, 52 months stale |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | fr | `0` | **2026-10-21** | 1 068 B `695941afdd1f` | 🟢 **MIT** | CARRIED | 31 | CARRIED | YES |
+| [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | fr | `0` | 2026-10-20 | 1 067 B `b6fac57d4710` | 🟢 MIT | CARRIED | 6 | CARRIED | 🔴 no — learning-path prototype |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | fr | `0` | 2026-07-27 | 1 070 B `2108a479cb7f` | 🟢 MIT | CARRIED | 52 | CARRIED | 🔴 no — a list |
+| [`Agenta-AI/awesome-ai-agent-platforms`](https://github.com/Agenta-AI/awesome-ai-agent-platforms) | fr | `0` | 2026-10-01 | 7 048 B `a2010f343487` | 🟢 **CC0 1.0** | NEW | **0** | 🆕 **NEW** | 🔴 no — a list |
+| [`JPMichon/MonTuteur`](https://github.com/JPMichon/MonTuteur) | fr | `0` | 2026-10-04 | 20 849 B `1349a4b61484` | 🔴 **CC BY-NC-SA 4.0** | NEW | **0** | 🆕 **NEW** | 🟡 yes, and **NonCommercial** |
+| [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | fr | `0` | 2026-10-19 | 1 079 B `9a45258434d5` | 🟢 MIT | 🔴 **NEW — WRONG** | **1** | 🔴 **CARRIED** | 🔴 no — horizontal |
+| `this-owner-cannot-exist-p378/negative-control` | control | 🔴 `128` | — | — | — | NEW | **0** | 🟢 **fires** | — |
+
+🔴 **The false NEW, and why it is the most useful row in the table.**
+`msitarzewski/agency-agents` sits at `repos/trending.md:21457` as a **bare backticked slug**.
+`carried_index.py:28` harvests on `github\.com/(owner/repo)` — the **URL channel only** — so
+`make carried` cannot see it. 🔵 This is `p367`'s channel-B blindness **in the carried index
+rather than in the census**, and the carried index is the instrument a pass runs immediately
+before publishing a row. 🔴 **`p377`'s raw-text grep would have caught it**; this pass's
+pre-registration called that grep inferior and lost a true CARRIED by replacing it. Full
+working in [`carried-index-channel-b`](../evidence/carried-index-channel-b.2026-10-22-p378.tsv).
+
+🟢 **The corrected rates, which are what the pass publishes:**
+`hi` **40.0 %** · `ar` **33.3 %** · `id` **33.3 %** · `fr` **33.3 %** · pooled **35.3 %**
+(6 NEW of 17). Before the correction: 41.2 % pooled and `fr` at 50.0 %.
+
+🔴 **And the column the table does NOT have, which is the one that answered `p377-D`.** Of the
+17 addresses, **2** have a README in the language of the leg that found them — `syauqi/learnify`
+(Indonesian) and `JPMichon/MonTuteur` (French). The Hindi leg returned **0 of 5** and the
+Arabic leg **0 of 3**: both returned the **English** answer set. 🟢 So an in-language supply
+leg is only a different instrument where the language has an **indexed developer-forge
+population**, and from this index Hindi and Arabic do not.
+
+🟡 **One licence cell upgraded**: `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` carried an empty
+grant cell at `p377` and is now **CC0 1.0 Universal**, read from the payload. 🔵 Usable in paid
+work; still a list, so it stays off `agents/top.md`.
+
+🔴 **One grant that is NOT what its first line says.** `12britz/awesome-free-models` serves a
+**137-byte** LICENSE whose first line is `CC0 1.0 Universal` and whose body is a **three-line
+paraphrase** — none of CC0's operative sections, and none of its fallback-licence clause.
+`p312`'s `identify()` returns `UNKNOWN-TEMPLATE` for the family, which is the gate holding
+correctly, but its **label** is taken from the first line. 🔵 A pass publishing the label would
+shelve a paraphrase as CC0. **Trust the family cell, never the label.**
+
 
 ## 🟢 2026-10-22 · `p377` — **`ACTION p376-A` per candidate: 11 probed, 11 live, 6 NEW — and the NEW/CARRIED split falls almost exactly along the language of the query**
 

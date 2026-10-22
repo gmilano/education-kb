@@ -1,0 +1,39 @@
+# p378 — THE MARKET SHELF'S OWN HEADLINE SENTENCE IS A CROSS-PUBLISHER SPLICE, and the
+# instrument built to catch splices has never been able to see it.
+#
+# THE SENTENCE, quoted from intel/market.md:109-110 exactly as it stands, directly under the
+# line "🟢 **This is the answer this file exists to give.**":
+#
+#   "Shape of the market.  Global AI-in-education sits around $9.58 B (2026) heading to
+#    ~$42.5 B by 2030 (~41.5 % CAGR)."
+#
+# Restated at intel/market.md:893 as "$9.58 B (2026) -> $42.48 B by 2030, CAGR ~41.5 %".
+#
+# PROVENANCE OF ITS THREE NUMBERS, each traced to a different publisher:
+#   $9.58 B (2026)  -> PRECEDENCE RESEARCH, whose own horizon is $136.79 B by 2035 at 34.52 %
+#   $42.48 B (2030) -> THE BUSINESS RESEARCH CO., whose own 2026 base is $10.6 B
+#   41.5 % CAGR     -> THE BUSINESS RESEARCH CO., the CAGR of ITS curve, not of Precedence's
+#
+# GRADED BY p274-window-sweep's OWN classify(), not by a recomputation:
+cell	labelled_cagr	implied_cagr	mismatch_as_labelled_pct	verdict
+market.md:109 HEADLINE as written	41.50	45.13	-9.63	🔴 SPLICE
+market.md:893 same splice, exact figures	41.50	45.11	-9.59	🔴 SPLICE
+the sentence with TBRC's OWN base ($10.6 B)	41.50	41.49	+0.03	🟢 PASS
+the sentence with Precedence's OWN horizon ($136.79 B/2035)	34.52	34.37	+1.02	🟢 ROUNDING
+#
+# 🔴 THE FINDING.  The splice is THIS BASE'S, not a publisher's.  Each parent study passes
+# p274 on its own figures.  The three numbers in the headline cannot all be true: $9.58 B
+# compounding to $42.5 B over four years implies 45.1 %, and the 41.5 % published beside them
+# belongs to a $10.6 B base.
+#
+# 🔴 WHY NO GATE CAUGHT IT, which is the more useful half.
+root_cause	p274-window-sweep reads a HAND-REGISTERED `CELLS` table in window_sweep.py.  `make sweep` graded 28 cells this pass (PASS=14 · ROUNDING=2 · SPLICE=9 · WINDOW_FIX=3) and every one of them is a registered triple.  The headline is PROSE.  No cell for 9.58 -> 42.48 has ever existed, so the splice instrument has never been pointed at the single most load-bearing market claim on these shelves.
+defect_class	🔵 This is p367's class exactly: an instrument that reads ONE channel while the shelves write TWO.  p367 found the address census blind to bare backticked slugs; this is the market sweep blind to prose.  An instrument whose input is a hand-maintained list measures the list, and the list is maintained by the same passes whose claims it audits.
+#
+# THE REPAIR THIS PASS MADE, and the one it registered rather than faked.
+done	The headline sentence is REWRITTEN on intel/market.md to quote ONE publisher per curve, with the tier-graded 7.5x band from evidence/market-outlet-tier.2026-10-22-p378.tsv.  The splice is published here and in the pass section rather than quietly corrected.
+registered	A harvester that extracts (base, base_year, horizon, horizon_year, cagr) triples from shelf PROSE and feeds p274's classify() — so the sweep's denominator stops being a list somebody remembered to update.  NOT built this pass.  Stated so it is not mistaken for done.
+#
+# 🔵 History is not retro-edited: p374's "$6.4 B - $11.4 B band" section and p377's "28 %"
+# section are LEFT STANDING in their own pass sections, with this pass's correction recorded
+# in this pass's section, per this base's standing rule.

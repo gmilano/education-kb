@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🟢 🆕 `Pattern 32` (`p378`) — **One codebase into four Canadian provinces that disagree, defaulting to the narrowest live rule — and a grant bill of materials that survives a provincial procurement review**
+
+🔵 **Why `32`:** `Pattern 31` is `p377`'s and `1`–`30` belong to the older series. `Gap 506`'s
+collision is **not** widened here.
+
+🔴 **The problem this solves, measured at `p378`.** Canada has **no national K-12 AI position
+and cannot have one** — K-12 is provincial — and the four live provincial positions span the
+entire range: **Quebec** suspends AI assistants, **British Columbia** publishes a decision
+framework, **Ontario's** ministry is silent so **boards** and the ECNO consortium set the rule,
+and **New Brunswick** writes AI into the curriculum. 🔴 A product built to BC's framework
+**fails Quebec**. One built to Quebec satisfies all four and sells in none without
+configuration. Evidence: [`northamerica-legs`](../evidence/northamerica-legs.2026-10-22-p378.tsv).
+
+### 🟢 The components, every grant read FIRST-HAND at `p378` through `family_of()`
+
+| Layer | Build on | Grant, read this pass | Why this one |
+|---|---|---|---|
+| Host LMS, GPL route | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** — `main/COPYING.txt`, 35 147 B, sha256₁₂ `8ceb4b9ee5ad` | 🟡 A **plugin** is a derivative work → GPL-3.0. An **external** agent over web services / LTI is not |
+| Host LMS, AGPL route | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** — `master/LICENSE`, 35 136 B, sha256₁₂ `e12d78569742` | 🔴 **Network copyleft.** Cite this address, not `openedx/edx-platform`: `p378` proved them one repository (ref-set `e8bd3fa5967f5181`) and this is the canonical name |
+| Open edX deployment | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** — `release/LICENSE.txt`, 34 523 B, sha256₁₂ `0d96a4ff68ad` | 🔴 The deployer carries the **same** copyleft as the platform — `p364`'s companion-grant class |
+| Tutor engine | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** — `main/LICENSE`, 11 408 B, sha256₁₂ `cd2f54e1e506`, HEAD **2026-10-19** | 🟢 Permissive, maintained, patent grant — the one component safe to embed in a closed deliverable |
+| Classroom orchestration | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** — `main/LICENSE`, 1 065 B, sha256₁₂ `ba2525637432`, HEAD **2026-10-22** | 🟢 Multi-agent classroom; MIT confirmed on the bytes at `p377` and re-read here |
+| Grade 1–9 RAG tutor | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **MIT** — `master/LICENSE`, 1 068 B, sha256₁₂ `695941afdd1f`, HEAD **2026-10-21** | 🟢 Closest fit to a K-12 cohort; both `main` and `master` serve the grant |
+
+### 🟢 How to wire it: policy is CONFIGURATION, and the default is the strictest live rule
+
+1. **Put the policy outside the model.** A per-province profile — not a prompt — with three
+   switches the four regimes actually differ on: **(a)** is a generative assistant reachable by
+   a student at all, **(b)** may it produce a draft the student submits, **(c)** must each
+   interaction be logged against a curriculum outcome.
+2. **Default every switch to Quebec**: assistant **unreachable** by students, staff-facing only.
+   🔵 Same construction as `p377`'s Norway finding — Udir bars **access**, regjeringen.no bars
+   **use**, and a product satisfying one fails the other, so **build the narrower one**.
+3. **BC** turns (a) on behind a board-level decision record, because BC's instrument is a
+   *decision framework*: the artefact it wants is the **documented decision**, not a setting.
+4. **Ontario** inherits the **board** as the unit, not the province. Ship the profile per board
+   and name ECNO's *English Generative AI Guidelines v1.3* as the default template.
+5. **New Brunswick** turns (c) on and binds every interaction to a curriculum outcome, in both
+   the Anglophone and Francophone streams — the province writes AI **into curriculum**, so the
+   deliverable is traceability, not restraint.
+6. **Keep the agent EXTERNAL to the LMS** and talk to it over web services / LTI. On the Moodle
+   route this is what keeps the agent out of GPL-3.0 derivative scope; on the Open edX route it
+   is what keeps your own code outside **AGPL-3.0's network clause**. 🔴 On that route the
+   deployer (`tutor`) is AGPL too, so "we only deploy it" is not an exemption.
+7. **Ship the grant bill of materials as a deliverable, not an appendix.** Every row above
+   carries its path, byte count and `sha256₁₂` because a provincial procurement review asks
+   which licence, from which file, at which commit.
+
+### 🔴 Three checks `p378` learned the hard way — run them before the BOM leaves the building
+
+| Check | Why |
+|---|---|
+| Classify every grant with `family_of()` from `compose/code/lib/license_family.sh`, **never your own grep** | 🔴 `p378`'s inline ladder read **Moodle as AGPL-3.0**: GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"*, so a body grep for *affero* labels every GPL-3.0 payload AGPL. GPL vs AGPL decides whether you may host without publishing your source |
+| Run `identify()` from `p312` **as well**, and publish any disagreement | 🔴 A 137-byte **paraphrase** of CC0 read this pass classifies as clean `CC0-1.0` on the title block and `UNKNOWN-TEMPLATE` on the text. One instrument answers *what is it named after*, the other *is it the real text*. A permissive cell needs both |
+| Cite the **canonical** address, checked against `aliases.tsv` | 🔴 Six pairs on these shelves were one repository published as two until `p378`. `openedx/edx-platform` and `imsglobal/openbadges-validator-core` are **dead names** — citing one names an owner that no longer holds the code |
+
+### 🟡 What this pattern does NOT solve, stated so it is not oversold
+
+🔴 **Quebec's suspension — the default this whole pattern is built around — was last confirmed
+in force in December 2025**, on a TIER-2 outlet, with no 2026 update found. It is the strictest
+fact on the Canadian leg and the **least currently evidenced**. Re-check it before a proposal
+quotes it. 🔴 And **Mexico needs a different pattern**: there is no binding national rule to
+configure against, 🟢 but **76.7 % of public-institution students do not know whether their own
+school has guidelines** — so the artefact there is the **governance layer** (policy templates,
+disclosure workflows, teacher-facing audit trails), not a tutor, and the window closes when the
+SEP's consultation reaches Congress.
+
 
 ## 🟢 🆕 `Pattern 31` (`p377`) — **Prove you met the age floor, against two issuers who disagree about what the floor restricts**
 

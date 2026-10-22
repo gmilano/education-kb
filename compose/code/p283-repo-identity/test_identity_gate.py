@@ -10,7 +10,8 @@ import sys
 import tempfile
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from identity_gate import check_offline, live_rows  # noqa: E402
+from identity_gate import (check_offline, live_rows, load_aliases,  # noqa: E402
+                           load_refusals)
 
 LEDGER = [("ls1intum/iris", "ls1intum/pyris", "p282")]
 FAILED = []
@@ -153,6 +154,53 @@ print(f"{'  ok  ' if n_all == n_sub == 1 else '  FAIL'} C17 subject scope change
 if not (n_all == n_sub == 1):
     FAILED.append("C17")
 
-TOTAL = 17
+# ───────────────────────────────────────────────────────────────────────────────────────
+# p378 — THE REFUSAL LEDGER.  `gate-identity-online` told a pass to "adjudicate it, then
+# record it in aliases.tsv", and aliases.tsv can record only the verdict SAME REPOSITORY.
+# So a collision correctly adjudicated as TWO repositories had nowhere to go and left the
+# gate permanently red on a right answer.  C18-C22 are that second verdict's controls.
+
+
+def run_refusal(name, cond, detail=""):
+    print(f"{'  ok  ' if cond else '  FAIL'} {name}{(' — ' + detail) if detail else ''}")
+    if not cond:
+        FAILED.append(name)
+
+
+_R = load_refusals(str(pathlib.Path(__file__).resolve().parent / "refusals.tsv"))
+
+# C18 — the shipped ledger parses, and it holds the pair p378 refused.  A file that
+# parses to nothing would make every later control vacuously true.
+run_refusal("C18 refusals.tsv parses and is not empty", len(_R) >= 1,
+            f"{len(_R)} refused pair(s)")
+
+# C19 — the pair itself.  dasgltd/mcp-brasil and mcp-brasil/mcp-brasil share HEAD
+# 2efb258370b1 and have 52 vs 101 refs: two repositories agreeing at the tip.
+run_refusal("C19 the p378 LATAM fork pair is the refused row",
+            ("dasgltd/mcp-brasil", "mcp-brasil/mcp-brasil") in [(a, b) for a, b, _ in _R])
+
+# C20 — ORDER MUST NOT MATTER.  The online arm compares frozensets; a loader or a gate
+# that was order-sensitive would re-raise the collision whenever ls-remote happened to
+# sort the pair the other way.
+_pairs = {frozenset((a, b)) for a, b, _ in _R}
+run_refusal("C20 a refused pair is recognised in either order",
+            frozenset(("mcp-brasil/mcp-brasil", "dasgltd/mcp-brasil")) in _pairs)
+
+# C21 — 🔴 THE LOAD-BEARING NEGATIVE CONTROL.  A refusal ledger that could silence an
+# UNADJUDICATED collision would be strictly worse than no ledger: it would turn the gate
+# from a detector into a mute button.  A pair nobody has refused must NOT be in the set.
+run_refusal("C21 an unrefused pair is NOT silenced",
+            frozenset(("some-owner/a", "other-owner/a")) not in _pairs)
+
+# C22 — the two ledgers must stay DISJOINT.  One pair cannot be both one repository and
+# two repositories, and a pair in both files would make the gate's verdict depend on
+# which file it read first.
+_alias_pairs = {frozenset((a, b)) for a, b, _ in load_aliases(
+    str(pathlib.Path(__file__).resolve().parent / "aliases.tsv"))}
+run_refusal("C22 aliases.tsv and refusals.tsv are disjoint",
+            not (_alias_pairs & _pairs),
+            f"{len(_alias_pairs)} alias pair(s), {len(_pairs)} refused")
+
+TOTAL = 22
 print(f"\n{TOTAL - len(FAILED)}/{TOTAL} controls pass")
 sys.exit(1 if FAILED else 0)

@@ -3,6 +3,40 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 2026-10-22 · `p378` — **no new platform, and the vertical finding is that this shelf has been publishing Open edX at an address its own owner renamed — proven by an earlier pass, never corrected here**
+
+**Evidence:** [`repo-identity-adjudication`](../evidence/repo-identity-adjudication.2026-10-22-p378.tsv)
+
+🔴 **The platform rows on this shelf carry a stale address for the largest AGPL platform on
+it.** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) and
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) are **one
+repository** — ref-set fingerprint `e8bd3fa5967f5181`, **49 791 refs on both sides**, HEAD
+`229f7e1a078f`, re-derived first-hand this pass. 🟢 **The canonical name is
+`openedx/openedx-platform`**, and the direction is the one rename on this base with a **TIER-1
+issuer** behind it: the Open edX project's own forum announcement.
+
+| Platform | Address a proposal should cite | Grant | Note |
+|---|---|---|---|
+| **Open edX** | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | 🔴 Do **not** cite `openedx/edx-platform`; it is the pre-rename name of the same repository |
+
+🔴 **And an earlier pass already proved this.** `repos/foundations.md` carries a section headed
+*"Alias correction applied this pass"* that states the identical-HEAD finding and says *"this
+base has been publishing the stale one"*. 🔵 It corrected **one table** and left this shelf's
+rows, and the register, untouched — so the stale address survived here while the proof sat two
+files away. **A correction applied to one table is not a correction.**
+
+🟡 **The platform leg itself returned nothing new**, and that is now a four-pass nil. `p377`'s
+leg returned only platforms already shelved; this pass ran no fresh platform query and says so
+rather than implying coverage. 🔵 The vertical axis is where this base is most stable and least
+informative, and a successor should spend a leg on the **deployment companions** `p364` opened
+rather than on the platform list again.
+
+🔴 **One figure stays REFUSED, restated so it is not quietly re-adopted.** `p377` refused
+OpenEduCat's *"30 000+ institutions in 130+ countries"* — one outlet, the vendor, whose own
+About page says **`1 000+`**, a 30× self-contradiction. 🟢 Still refused. Installed base is the
+number that decides whether a studio proposes OpenEduCat or Moodle to a ministry, and this base
+does not have it for OpenEduCat at any tier.
+
 
 ## 🟡 2026-10-22 · `p377` — **the vertical leg returned ONLY platforms these shelves already carry, and the one new thing it produced is a REFUSED NUMBER**
 

@@ -3,6 +3,178 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 2026-10-22 · `p378` — **ZERO new agent rows, and the zero is THE RESULT: `ACTION p377-D`'s prediction was committed before the legs ran and LIMB 1 IS REFUTED. The Hindi and Arabic supply legs returned a 100 % ENGLISH answer set, so `p377`'s language axis is NARROWED, not extended. 🟢 And `p377`'s "third distinct MIT template" is ONE TEXT RE-WRAPPED — all 20 MIT payloads on these shelves are the same words.**
+
+**Evidence:** [`language-dispersion-prediction`](../evidence/agentleg-language-dispersion-prediction.2026-10-22-p378.tsv) ·
+[`language-dispersion-result`](../evidence/agentleg-language-dispersion-result.2026-10-22-p378.tsv) ·
+[`mit-presentation-fold`](../evidence/mit-presentation-fold.2026-10-22-p378.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p378.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p378.tsv)
+
+🟢 **The prediction was registered the way this base requires**: three limbs, each with its
+own refutation condition, committed in `729d9fa` with **no leg output in the tree**. It also
+recorded, before any result, a defect in the action it was discharging — `p377-D`'s single
+condition conflated the **pooled rate** with the **dispersion**, and those are independent.
+
+| | `p377`'s legs (zh · ko · pt · es) | `p378`'s legs (hi · ar · id · fr) |
+|---|---:|---:|
+| Addresses probed | 9 | 17 |
+| NEW after the carried-index correction | 6 · **67 %** | 6 · **35 %** |
+| Answer set actually in the leg's language | productive in every cell | **2 of 17 · 12 %** |
+| New rows clearing this shelf's bar | 1 | **0** |
+
+🔴 **LIMB 1 REFUTED, and refuted against this pass's own prediction.** This pass predicted a
+pooled NEW rate **above 77 %**, reasoning that Hindi, Arabic and Indonesian neighbourhoods had
+never been swept so carried density would be lower. The pooled rate is **35.3 %** — below
+`p377`'s band as well as this pass's. 🔵 **The mechanism was sound and its premise was wrong:
+those neighbourhoods were not unswept, they are not REACHED.** Three of the four legs landed
+back in the English neighbourhood this base has swept hardest.
+
+🔴 **The finding, and no successor should soften it: an in-language query is only a different
+instrument where the language has an INDEXED DEVELOPER-FORGE POPULATION.** The Hindi leg
+returned **0 of 5** addresses with a Hindi README; the Arabic leg **0 of 3**. Both returned
+English repositories — `littlecookie0722/AI-Teaching-Agent`, `KayvanShah1/VirtuTA`,
+`avinash201199/free-ai-agents-resources` and the rest. 🟢 `p377`'s `J3`-for-supply holds for
+`zh`, `ko`, `pt` and partly for `id` and `fr`. 🔴 It does **not** hold for `hi` or `ar`.
+
+🔴 **So the rule a successor would have drawn from `p377` alone is wrong.** "Run a leg in the
+engagement region's language" buys the English index back at full price for an India or MENA
+engagement. 🟢 The rule is **"run a leg in a language with an indexed forge population"**, and
+this index does not reach a Hindi or Arabic one.
+
+🔴 **LIMB 2 REFUTED — and it read CONFIRMED until this pass caught a defect in its own
+instrument.** The four NEW rates are **40.0 / 33.3 / 33.3 / 33.3**: a **6.7-point** band
+against a registered threshold of 15. 🔵 So `p377-D`'s single condition falls **both ways at
+once** — "uniform axis" is **confirmed on dispersion** and **refuted on level** — which is
+precisely what this pass's pre-registered defect note said that condition could not
+distinguish.
+
+🔴 **And the NEW rate is the wrong dial for choosing a leg; the corrected figures make the
+case better than the draft's did.** The NEW rates sit in a 6.7-point band while the
+in-language fraction ranges from **0 %** (`hi`, `ar`) to **33 %** (`id`). The `ar` leg, which
+returned a 100 % English answer set, and the `id` leg, which reached a genuinely Indonesian
+repository, scored the **same 33.3 %**. 🔵 The two measurements are **uncorrelated**: NEW rate
+measures *this base's sweep history*, the in-language fraction measures *the leg's reach*. A
+successor choosing legs by NEW rate is choosing by noise.
+
+🟢 **Limb 3 CONFIRMED, at zero of six.** Two addresses ship **no grant anywhere in the tree** —
+earned by `p275` full-tree enumeration (38 and 28 files, `NONE_IN_TREE`), not by a rung guess.
+One is **CC BY-NC-SA 4.0**. Two are curated lists. One is a 2022 non-AI e-learning site.
+
+### 🔴 This pass's own error, and it is the most useful thing in this section
+
+🔴 **`make carried` — the instrument this pass's pre-registration named as its grading
+authority, in preference to `p377`'s "index-eyeballing" — returned a FALSE NEW.**
+[`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) is on
+`repos/trending.md:21457` as a **bare backticked slug**, and
+`compose/code/p235-carried-index/carried_index.py:28` harvests on
+`github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)` — **the URL channel only**.
+
+🔵 **This is `p367`'s channel-B blindness, in the CARRIED index rather than in the census.**
+`p367` found 496 live repositories invisible to every census here; `p375` built the union
+census for the census side. 🔴 **Nobody checked the carried index** — and it is the instrument
+a pass runs *immediately before publishing a row*, so its false-NEW class is the one that
+actually puts a duplicate on a shelf.
+
+🔴 **And `p377`'s cruder method was better.** `p377` could not run `make carried` and graded by
+case-insensitive raw-text index over the nine `SHELF_FILES` — both channels, no regex. That
+**would** have caught this. 🔵 An instrument is not better than a `grep` because it is an
+instrument.
+
+🟢 **The caution that makes this readable was registered before the cause was known.** The
+result file, written before the error was found, already said of limb 2: *"the `ar` and `id`
+legs have denominators of 3: ONE address moving either way changes the verdict. This pass
+therefore does NOT rest anything on limb 2's arithmetic."* One address moved, and the verdict
+changed. 🔵 **Until `carried_index.py` gains the channel-B arm `p367` already wrote, a pass
+must run both `make carried SLUG=x` and `grep -ric -- x` over the nine shelves — and where
+they disagree, the GREP WINS.**
+
+### 🔴 The near-miss, named because it says what to buy next
+
+[`y-kanchan/AI-Teaching-Agent`](https://github.com/y-kanchan/AI-Teaching-Agent) is genuinely an
+education multi-agent system — four specialised agents, Ollama, fully offline, no cloud API
+cost, persistent history — with HEAD **2026-06-17**. It fails this shelf on **grant alone**:
+28 files enumerated, **no licence file anywhere**. 🔵 Across `p377` and `p378` the two best
+near-misses (`aifrenz/pcu-2026`, this one) both failed on **grant**, never on language and
+never on substance. 🟢 **That is where the next budget should go** — an offline, local-first
+tutor is exactly the architecture `p374`'s AI-PC trend and France's open-source recommendation
+both point at, and the only thing between this one and a client deliverable is a `LICENSE`
+file its author has not added.
+
+### 🟢 One licence cell upgraded from unread to a payload read
+
+| Address | Grant as `p377` published it | Grant read first-hand this pass |
+| --- | --- | --- |
+| [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | — (cell empty) | 🟢 **CC0 1.0 Universal** — 5 875 B, sha256₁₂ `a0e8192ef96d`, Statement of Purpose |
+
+🔵 CC0 is a public-domain dedication, so this row is usable in paid work. It is a curated
+list, not an agent, and it stays off the rows above.
+
+### 🔴 `ACTION p377-B` discharged, and it WITHDRAWS `p377`'s template finding
+
+`p377` pinned `7768d3beb7949a85` as **"a THIRD distinct MIT template"** and moved the `p312`
+corpus ratchet **4 → 5** on it. This pass drew **10 MIT payloads from 10 unrelated
+repositories** and ran them through `p312`'s own `identify()`:
+
+| Where the 10 fresh payloads landed | Count |
+| --- | ---: |
+| `16d6b7b5799875f6` — the canonical MIT template | **10** |
+| `7768d3beb7949a85` — `p376-C`'s pinned "third template" | **0** |
+
+🔴 **And the diff names the edit.** `7768d3beb7949a85` differs from the canonical payload by
+(a) **no title line** and (b) **no line wrapping** — and by **not one operative word**. Strip
+the title and collapse the whitespace and both collapse to the **same 1 043 characters**,
+digest `584db484c03a8904`. The third digest, `d936246a542832f3`, differs by its title line
+alone: `The MIT License (MIT)` instead of `MIT License`.
+
+🔴 **So all 20 MIT payloads on these shelves — 10 `p312` fixtures and 10 drawn fresh — ARE ONE
+LEGAL TEXT, and `p377`'s ratchet move was an artefact of line wrapping.** 🔵 `template_digest()`
+folds case and the holder slot but **not** wrapping, so any reflow of a licence file mints a
+new template identity. A template count that moves on reflow is a byte band wearing a digest's
+clothes — the failure `p312`'s own docstring was written to prevent.
+
+🟢 **Repaired by ADDING, not by editing.** `compose/code/p378-presentation-fold` (24 controls,
+wired into `make hooks`) reports *"N texts in M presentations"* beside `p312`'s digest count.
+`p312`'s `normalise()` and `template_digest()` are left byte-for-byte alone: re-keying them
+would silently break every digest citation since `p312`. 🔵 Its negative controls are the
+point — MIT must not fold onto Apache-2.0, BSD-2-Clause or GPL, the **137-byte CC0 paraphrase**
+read this pass must not fold onto CC0's real legal code, and the untitled payload's own first
+line (a copyright line) must survive the fold.
+
+### 🟢 `ACTION p377-A` discharged in full, and the egress gates ran for the FIRST time ever
+
+🟢 **`make` is available in this sandbox.** `make hooks` ran as the **first act of this pass,
+before a byte was written: 42/42 green**, `p300`'s no-masking runner confirming every gate
+ran. So `p376`'s `42/42` is confirmed as *observed*, and `p377`'s "16 of ~42" is superseded by
+a full run rather than by argument.
+
+🟢 **And `make hooks-online` — out of `hooks` because it needs network, and never run by any
+pass — ran here.** The headline result a studio can use: **275 of 275 distinct published grant
+paths resolve `200`**, both calibration arms correct. Every grant path on these shelves is
+**live**, measured rather than assumed.
+
+🔴 **`gate-identity-online` fired RED on its first unsupervised run**: 501 addresses, 494
+distinct HEADs, **0 registered alias pairs**, **5 new collisions**. Four are one repository
+under two names and are now registered; the fifth is **refused**. Details on
+`repos/trending.md` and in
+[`repo-identity-adjudication`](../evidence/repo-identity-adjudication.2026-10-22-p378.tsv).
+
+🔴 **The capability finding, which outlasts every number above.** `Gap 511` recorded that
+nothing tells a successor `make`-refused ≠ gate-refused. The symmetric half is bigger: **the
+refusal was a property of the SANDBOX, not of this repository.** `p336`, `p376` and `p377`
+each generalised one sandbox's limits into a claim about what this base can measure, and three
+passes of gate state sat "unmeasured" for a reason that evaporated when a different sandbox ran
+the same command. 🟢 **A pass must probe its own channels as its opening act and record the
+result as a measurement of that run.** 🔴 `api.github.com` and `github.com` HTML answer `403`
+here too — stable across three independent sandboxes now, which is what makes *that* one worth
+carrying forward where the `make` refusal was not. **No star counts this pass.**
+
+🔴 **Stated limitations.** Zero new rows, so this shelf's bar is untested against new supply
+this pass. Every nil on a non-English leg is a nil **of a US-only index** and must never be
+shelved as an absence of supply. The `ar` and `id` legs have denominators of 3. And the
+in-language fraction is a **new** measurement with two passes of data behind it: it is the
+right dial, and it is not yet a calibrated one.
+
 
 ## 🟢 2026-10-22 · `p377` — **THE FOUR-PASS ZERO IS BROKEN, AND IT WAS BROKEN BY THE QUERY LANGUAGE. `ACTION p376-A`'s prediction was committed before the legs ran; BOTH LIMBS CONFIRMED. 🔴 And `OpenMAIC`'s MIT cell — carried on licence-API detection since `p366` — is now READ FROM THE PAYLOAD.**
 

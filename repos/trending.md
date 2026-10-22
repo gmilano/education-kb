@@ -3,6 +3,95 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 2026-10-22 · `p378` — **`gate-identity-online` RUN FOR THE FIRST TIME EVER: 5 HEAD collisions this base had never shelved, 4 of them one repository, and the fifth REFUSED by an instrument the gate does not use**
+
+🔵 **APPEND-ONLY.** Added at the top; everything below is kept as the record.
+
+🟢 **`p348` built `gate-identity-online` and no pass has ever run it.** It is deliberately out
+of `make hooks` because it needs egress, and `p336`, `p376` and `p377` each recorded a sandbox
+that refused `make`, egress, or both. This sandbox has both. 🔴 **It fired RED on its first
+unsupervised run.**
+
+| The run | Value |
+|---|---:|
+| Live build-on addresses probed by `ls-remote` | **501** |
+| Distinct HEADs | 494 |
+| Alias pairs already registered | 🔴 **0** |
+| New HEAD collisions | 🔴 **5** |
+
+🔴 **So the register was EMPTY of every collision these shelves actually contain**, and the
+gate had no way to say so until somebody ran it.
+
+### 🟢 The adjudication — on `p370`'s ref-set rule, never on the HEAD the gate prints
+
+🔵 `p370` established that **a HEAD sha is not an identity proof**. All ten addresses were
+re-probed with a full `git ls-remote --symref` and graded on the **ref-set fingerprint**
+(sha256 over the sorted `(sha, ref)` pairs). The ten captures are committed under
+`compose/code/p370-refset-register/refsets/`.
+
+| Pair | Refs | Ref-set fingerprint | Verdict |
+|---|---:|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) + [`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core) | 183 / 183 | `99c029966cdfcc28` both | 🟢 **SAME-REF-SET** — one repository |
+| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) + [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 586 / 586 | `89173e3ece0b749a` both | 🟢 **SAME-REF-SET** — and this is `p348`'s own specimen |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) + [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 49 791 / 49 791 | `e8bd3fa5967f5181` both | 🟢 **SAME-REF-SET** — one repository |
+| [`meta-pytorch/opacus`](https://github.com/meta-pytorch/opacus) + [`pytorch/opacus`](https://github.com/pytorch/opacus) | 563 / 563 | `62070ec06ae7b9d7` both | 🟢 **SAME-REF-SET** — one repository |
+| [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) + [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🔴 **52 / 101** | 🔴 `bfff3ef0fa182ce3` vs `5ba234d58670509e` | 🔴 **DIFFERENT-REF-SET — REFUSED, not an alias** |
+
+🔴 **The refusal is the finding, and `p370`'s instrument earned its keep on its first
+unsupervised run.** `dasgltd/mcp-brasil` and `Mcp-Brasil/mcp-brasil` share HEAD `2efb258370b1`
+and have **52 refs against 101**: two distinct repositories agreeing at the tip — exactly the
+fork case `gate-identity-online`'s own recipe comment warns about. 🔵 Adjudicated on the HEAD
+the gate prints, this pass would have written a **false alias** into the register and taught
+every successor that one of these two **LATAM** addresses is a stale name for the other. The
+refused pair is the LATAM one, on the region this base is thinnest in.
+
+### 🔴 A defect in the register itself, found by being the first pass to need the other verdict
+
+🔴 **`aliases.tsv` was ONE-SIDED.** The gate says *"adjudicate it, then record it in
+`aliases.tsv`"* — and `aliases.tsv` can only record the verdict **SAME REPOSITORY**. A
+correctly **refused** collision had nowhere to go, so the gate would have stayed red on a
+right answer for ever. 🔵 That is the *"a permanently red gate teaches nothing"* problem
+`p348`'s own docstring names for the inherited-collision case.
+
+🟢 **Fixed in the gate, not in the data.** A second ledger, `refusals.tsv`, and a third verdict:
+`KNOWN-ALIAS` · `ADJUDICATED-DISTINCT` · `HEAD-COLLISION-NEW`. Only the third fails. The suite
+goes **17 → 22 controls**, and the two that matter are negative: a refusal ledger must **not**
+silence an unadjudicated collision (or the gate becomes a mute button), and the two ledgers
+must stay **disjoint** (one pair cannot be both one repository and two). 🟢 Re-run:
+**502 addresses · 4 known aliases · 1 adjudicated-distinct · NEW=0 · PASS.**
+
+### 🔴 And a finding about this base rather than about GitHub
+
+🔴 `digitalcredentials/learner-credential-wallet` + `openwallet-foundation-labs/learner-credential-wallet`
+is the pair **named in `p348`'s own docstring** as the specimen that motivated building the
+gate — *"ONE repository, published twice, under owners that share no characters."* `p348`
+proved it, wrote it into its prose, and **never added it to `aliases.tsv`.** 🔵 Nine passes
+later the gate it built found its own example unregistered, because nobody could run the gate.
+**A finding filed in prose and not in a register is a finding this base loses** — the same
+class as `p372`'s address with a proven successor that had been proven six days earlier and
+filed only in prose.
+
+🔴 **What is NOT established, stated rather than promoted to agree.** For three of the four
+registered pairs the canonical **direction** is not first-hand: `raw.githubusercontent.com`
+serves **both** names `200` (GitHub follows the rename redirect on the raw channel too) and
+`api.github.com` answers `403` here, so no channel available to this pass distinguishes the old
+name from the new. The directions recorded for the IMS Global/1EdTech, DCC/OpenWallet and
+pytorch/meta-pytorch pairs rest on those organisations' published renames — **secondary
+attribution**, labelled as such in the register. 🟢 Only `openedx/edx-platform →
+openedx/openedx-platform` has a **TIER-1 issuer**: the project's own forum announcement.
+🔵 **A useful null for a successor: the raw channel cannot be used as a canonicality oracle.**
+
+### 🟢 The other two egress gates, also first runs
+
+| Gate | Result |
+|---|---|
+| `gate-grant-path-online` | 🟢 **PASS** — **275 of 275** distinct published grant paths resolve `200`, both calibration arms correct |
+| `gate-online` (`p229` 55-rung ladder) | 🟢 **PASS** — the shelves' grants re-read first-hand |
+| `gate-mit-tier` | 🟢 **PASS** — 🔴 one `UNREAD` remains: `uoc/java-lti-1.3-provider`, 5 paths × 2 guessed refs |
+
+🟢 **Every grant path on these shelves is LIVE, measured rather than assumed** — a claim no
+pass has been able to make before this one.
+
 
 ## 🟢 2026-10-22 · `p377` — **the in-language legs as a REPO instrument: what they return when you are not looking for agents**
 
@@ -1648,7 +1737,7 @@ curriculum data layered on top. That is a pattern, not a deficiency — see
 
 ### 🟡 A note on this file's own numbers, because a sibling gate caught one
 
-🔴 **`p351`'s headline denominator was the `p350` tree's figure**: published `2 476 → 33 → 2 443`, derived on its own committed tree `2 478 → 33 → 2 445`, and the two missing addresses are **`aclascollege/polymath`** — `p351`'s own new row — and **`imsglobal/openbadges-validator-core`**. 🟢 **A census whose input is the shelves, published by the pass that then writes to them, is stale by construction**, which is why `gate-census-currency` (`p352`, 24 controls) is now in `HOOK_GATES`: **write the pass, derive, then state the figure.** 🔵 Every count in this file is in scope of that rule.
+🔴 **`p351`'s headline denominator was the `p350` tree's figure**: published `2 476 → 33 → 2 443`, derived on its own committed tree `2 478 → 33 → 2 445`, and the two missing addresses are **`aclascollege/polymath`** — `p351`'s own new row — and **`IMSGlobal/openbadges-validator-core`**. 🟢 **A census whose input is the shelves, published by the pass that then writes to them, is stale by construction**, which is why `gate-census-currency` (`p352`, 24 controls) is now in `HOOK_GATES`: **write the pass, derive, then state the figure.** 🔵 Every count in this file is in scope of that rule.
 
 ## Pass 351 · 2026-10-21 — the prescribed trending leg returns listicles for the SEVENTEENTH consecutive pass; what actually moved is a repository this base already holds **regenerating itself the day before this pass under an unchanged version label**, and one new row whose description oversells its payload by an order of magnitude
 

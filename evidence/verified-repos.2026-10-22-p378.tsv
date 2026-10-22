@@ -1,0 +1,49 @@
+# p378 — every repository figure published this pass, first-hand, 2026-10-22.
+#
+# CHANNELS USED: `git ls-remote --symref` (existence, default branch, full ref set) ·
+# `raw.githubusercontent.com` over a 6-rung root ladder (grant payload) ·
+# `git clone --filter=blob:none --no-checkout --depth 1` (HEAD date) ·
+# `make enumerate` = p275 FULL-TREE enumeration (absence of a grant) ·
+# `make carried` = p235 carried-index (CARRIED/NEW) ·
+# p312-template-identity's identify() (licence family by TEMPLATE, never by a byte band).
+#
+# 🔴 NOT AVAILABLE, unchanged from p376 and p377: api.github.com and github.com HTML both
+# answer 403 from this environment.  NO STAR COUNTS are published this pass.
+# 🟢 NEW THIS PASS: `make` runs, so the gates and the census instruments were run as
+# designed rather than invoked one by one — see evidence/gate-state.2026-10-22-p378.tsv.
+address	ls_rc	branch	head	grant_path	grant_bytes	sha256_12	family	head_date
+littlecookie0722/AI-Teaching-Agent	0	main	b90bd88	main/LICENSE	1069	297c4cba7b33	MIT	2026-08-23
+DHRUVvkdv/teaching-assistant	0	main	2b938ca	-	-	-	-	2024-07-25
+y-kanchan/AI-Teaching-Agent	0	main	789b534	-	-	-	-	2026-06-17
+KayvanShah1/VirtuTA	0	main	987198f	main/LICENSE	1068	9182ffc261fc	MIT	2026-03-03
+THU-MAIC/OpenMAIC	0	main	e19ed13	main/LICENSE	1065	ba2525637432	MIT	2026-10-22
+avinash201199/free-ai-agents-resources	0	main	a80de73	main/LICENSE	1070	12edec716aa1	MIT	2026-03-01
+12britz/awesome-free-models	0	main	d123e94	main/LICENSE	137	99b4c41f664e	UNCLASSIFIED	2026-10-11
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	0	main	05ea30f	main/LICENSE	5875	a0e8192ef96d	CC	2026-10-20
+syauqi/learnify	0	main	0a03051	main/LICENSE	1084	84797876a522	MIT	2022-06-11
+Gchism94/ai-tutor	0	main	cdee3f5	main/LICENSE	1070	3d5a24e51479	MIT	2025-05-08
+HKUDS/DeepTutor	0	main	a31d826	main/LICENSE	11408	cd2f54e1e506	Apache-2.0	2026-10-19
+Agenta-AI/awesome-ai-agent-platforms	0	main	0517acd	main/LICENSE	7048	a2010f343487	CC	2026-10-01
+JPMichon/MonTuteur	0	main	1969884	main/LICENSE	20849	1349a4b61484	CC-BY-NC	2026-10-04
+wenflow-org/wenflow	0	main	1c86890	main/LICENSE	1067	b6fac57d4710	MIT	2026-10-20
+msitarzewski/agency-agents	0	main	4e3ac3c	main/LICENSE	1079	9a45258434d5	MIT	2026-10-19
+Zenglian990/AI_Tutor_Release	0	master	8f212e8	master/LICENSE	1068	695941afdd1f	MIT	2026-10-21
+ashishpatel26/500-AI-Agents-Projects	0	main	9beeb72	main/LICENSE	1070	2108a479cb7f	MIT	2026-07-27
+this-owner-cannot-exist-p378/negative-control	128	-	-	-	-	-	-	-
+#
+# NEGATIVE CONTROL: this-owner-cannot-exist-p378/negative-control -> ls-remote rc=128 and
+# `make carried` grades NEW.  Both arms discriminate, so neither a liveness claim nor a
+# CARRIED claim on this table rests on an instrument that answers the same way to everything.
+#
+# GRANT ABSENCES ON THIS TABLE ARE EARNED BY FULL-TREE ENUMERATION, NOT BY A RUNG GUESS:
+#   DHRUVvkdv/teaching-assistant   38 files   NONE_IN_TREE
+#   y-kanchan/AI-Teaching-Agent    28 files   NONE_IN_TREE
+#   msitarzewski/agency-agents    383 files   LICENSE   (present; the row fails on DOMAIN)
+#
+# 🔴 THIS PASS'S OWN ERROR, PUBLISHED: Zenglian990/AI_Tutor_Release answers
+# `ls-remote --symref` with refs/heads/MASTER while agents/top.md:677 publishes the grant at
+# `main/LICENSE`.  This pass wrote that up as a stale-branch defect BEFORE probing it.
+# 🟢 BOTH refs return 200 — the repository carries both branches — and
+# `make gate-grant-path-online` then graded all 275 published grant paths 200/275 with both
+# calibration arms correct.  A default branch is not the only branch, and a symref mismatch
+# is not a grant-path defect.

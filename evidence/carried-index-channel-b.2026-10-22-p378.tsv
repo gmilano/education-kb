@@ -1,0 +1,69 @@
+# p378 — THE INSTRUMENT THIS PASS CHOSE OVER p377's CRUDER METHOD IS BLIND TO ONE ADDRESS
+# CHANNEL, AND THE BLINDNESS FLIPPED A PRE-REGISTERED LIMB FROM CONFIRMED TO REFUTED.
+#
+# This file is this pass's own error, published rather than tidied, and it is the most useful
+# thing the pass found.
+#
+# WHAT THIS PASS COMMITTED TO, in evidence/agentleg-language-dispersion-prediction.2026-10-22-p378.tsv,
+# before any leg ran:
+#   "unit_of_measurement: ADDRESSES (owner/repo), CARRIED/NEW graded by `make carried SLUG=...`
+#    — the p235 instrument ITSELF, NOT by hand.  p377 could not run it (its sandbox refused to
+#    execute repository code); this pass can, and the grade is therefore instrument-derived
+#    rather than index-eyeballed."
+#
+# 🔴 THE ERROR.  `make carried` graded `msitarzewski/agency-agents` NEW.  It is not new.  It
+# sits on `repos/trending.md:21457` and has since an earlier pass:
+#
+#   | `msitarzewski/agency-agents` | agent scaffolding | 🔴 **Horizontal**, not education |
+#
+# 🔴 THE CAUSE, read from the instrument's own source rather than inferred.
+# compose/code/p235-carried-index/carried_index.py:28
+#   SLUG = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
+# The harvester matches the URL channel ONLY.  A BARE BACKTICKED SLUG carries no `github.com/`
+# prefix, so it is invisible to `make carried` — and the shelves write both channels.
+#
+# 🔵 THIS IS p367's CHANNEL-B BLINDNESS, in the CARRIED instrument rather than in the census.
+# p367 found 496 live repositories — 16.3 % of the true corpus — that no census here could see,
+# because every census read channel U (URLs) and the shelves also write channel B (bare
+# backticked slugs).  p375 built the union census for the census side.  🔴 NOBODY CHECKED THE
+# CARRIED INDEX, and `make carried` is the instrument a pass runs immediately BEFORE publishing
+# a row — so its false-NEW class is the one that actually puts a duplicate on a shelf.
+#
+# 🔴 AND THE UNCOMFORTABLE PART: p377's METHOD WAS BETTER THAN THIS PASS'S INSTRUMENT.
+# p377 could not run `make carried` and graded CARRIED/NEW by "case-insensitive index over the
+# nine SHELF_FILES" — raw text, both channels, no regex.  That cruder method WOULD have caught
+# msitarzewski.  🔵 This pass replaced it with the real instrument, called that an improvement
+# in its own pre-registration, and lost a true CARRIED by doing so.  An instrument is not
+# better than a grep because it is an instrument.
+#
+# THE RE-GRADE, by raw text over all nine SHELF_FILES (both channels):
+address	make_carried	raw_text_hits	true_grade	note
+msitarzewski/agency-agents	🔴 NEW (WRONG)	1	CARRIED	repos/trending.md:21457, bare backticked slug
+DHRUVvkdv/teaching-assistant	NEW	0	NEW	agrees
+y-kanchan/AI-Teaching-Agent	NEW	0 before this pass's own write	NEW	agrees
+12britz/awesome-free-models	NEW	0	NEW	agrees
+syauqi/learnify	NEW	0	NEW	agrees
+Agenta-AI/awesome-ai-agent-platforms	NEW	0	NEW	agrees
+JPMichon/MonTuteur	NEW	0	NEW	agrees
+this-owner-cannot-exist-p378/negative-control	NEW	0	NEW	planted control, agrees
+#
+# 🔴 THE CONSEQUENCE FOR ACTION p377-D, worked through rather than buried.
+before	7 NEW of 17 = 41.2 % pooled · hi 40.0 % · ar 33.3 % · id 33.3 % · fr 50.0 % · spread 16.7 points
+after	6 NEW of 17 = 35.3 % pooled · hi 40.0 % · ar 33.3 % · id 33.3 % · fr 33.3 % · spread 6.7 points
+limb_1	REFUTED either way, and MORE firmly after the correction: 35.3 % against a predicted >77 % and against p377's [57 %, 77 %] band
+limb_2	🔴 FLIPPED.  CONFIRMED at 16.7 points before the correction; REFUTED at 6.7 points after.  The registered threshold was 15.
+limb_3	CONFIRMED at zero either way: 0 of 6 NEW addresses clear the agent bar (was 0 of 7)
+#
+# 🟢 AND THE PRE-REGISTRATION IS WHAT MAKES THIS READABLE RATHER THAN EMBARRASSING.
+# The result file written BEFORE this error was found already said of limb 2:
+#   "CONFIRMED ON THE LETTER, AND DECLARED NOT LOAD-BEARING ... the ar and id legs have
+#    denominators of 3: ONE address moving either way changes the verdict.  This pass
+#    therefore does NOT rest anything on limb 2's arithmetic."
+# 🔵 One address moved, and the verdict changed.  The caution was registered before the cause
+# was known, which is the only reason a successor can tell that this pass did not retro-fit
+# its reading to the correction.
+#
+# 🟢 THE REPAIR, and the honest scope of it.
+done	This pass's published rates are the AFTER row, derived by raw text over both channels.  The defect is published here, in the pass section, and on agents/trending.md beside the table it changed.
+registered	`carried_index.py`'s harvester must gain p367's channel-B arm — the SAME arm `p367-bare-slug-channel` already implements and `make hooks` already runs on the CENSUS.  The arm exists; it is simply not imported here.  NOT built this pass, because changing the carried index re-grades the denominators of several published sentences and that needs its own pass with the currency gates in view.  Stated so it is not mistaken for done.
+cheapest_check	🟢 Until that is built, a pass must run BOTH: `make carried SLUG=x` AND `grep -ric -- x <the nine SHELF_FILES>`.  Where they disagree, the GREP WINS — it reads raw text and therefore sees both channels.

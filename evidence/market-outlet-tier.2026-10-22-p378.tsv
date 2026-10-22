@@ -1,0 +1,49 @@
+# ACTION p377-C — DISCHARGED, and it produced the OPPOSITE of the result it was registered
+# to produce.
+#
+# WHAT p377 ASKED: "point the outlet instrument at the MARKET figures.  It was built for
+# jurisdictional claims and ran on two.  The four 2026 market sizes on these shelves disagree
+# by 28 % and are quoted bare in places.  Grade each by outlet and tier, and REFUSE the ones
+# that do not survive — as this pass refused OpenEduCat's 30 000+."
+#
+# THE IMPLICIT PREMISE, named before the result: p377 expected tier grading to NARROW the
+# band, leaving a defensible number.  🔴 It widens it, from 28 % to 649 %, and it widens it
+# with the figures that SURVIVE grading rather than the ones that fail.
+#
+# TIER SCALE, as p377 fixed it before counting: TIER-1 ISSUER · TIER-2 INSTITUTIONAL (here:
+# the research house's own page or press release) · TIER-3 PRESS · TIER-4 COMMENTARY.
+# ARITHMETIC VERDICT is p274-window-sweep's own classify(), not a recomputation.
+publisher	figure_2026	horizon	labelled_cagr	implied_cagr	p274_verdict	outlet_tier	reached_how	disposition
+MarketsandMarkets	$3.05 B (derived)	$5.82 B by 2030	17.50	17.51	PASS	TIER-2	publisher press release	🟢 SURVIVES — and it is 3.1x BELOW this base's published band
+MarkWide Research	$8.70 B	$100.21 B by 2035	31.20	31.20	PASS	TIER-2 (carried)	carried cell	🟢 SURVIVES
+Precedence Research	$9.48 B (derived)	$136.79 B by 2035	34.52	34.37	ROUNDING	TIER-2	publisher page	🟢 SURVIVES
+The Business Research Co.	$10.60 B	$42.48 B by 2030	41.50	41.49	PASS	TIER-3 carrying TIER-2	press syndication	🟢 SURVIVES
+Grand View Research	$11.41 B (derived)	$57.20 B by 2033	25.90	25.91	PASS	TIER-2 (carried)	carried cell	🟢 SURVIVES
+Knowledge Sourcing Intelligence	$22.86 B (derived)	$48.626 B by 2030	20.77	20.77	PASS	TIER-2 via reseller	reseller listing	🟢 SURVIVES
+HolonIQ	$12.3 B	—	—	—	not testable	🔴 NOT FOUND AT THE OUTLET	targeted leg	🔴 REFUSED
+"Grand View, $23 B in 2026"	$23 B	—	—	—	not testable	TIER-4	third-party statistics page	🔴 REFUSED
+Technavio	$3.37 B	—	—	—	🔴 CATEGORY ERROR	TIER-2	publisher page	🔴 REFUSED as a SIZE
+unattributed	$1.94 B	$48.36 B by 2035	42.95	—	not testable	TIER-4	aggregator	🔴 REFUSED
+Trend X Insights	$7.30 B	$61.26 B by 2034	31.50	—	not testable	TIER-4	aggregator	🔴 REFUSED
+#
+# 🔴 REFUSAL 1 — AND IT IS THE FIGURE p377's OWN "28 %" RESTED ON.
+holoniq	p377 published HolonIQ at $12.3 B as "the high end of 2026".  A targeted leg at HolonIQ returns NO AI-in-education figure at all.  HolonIQ's own pages size the BROAD market: EdTech to $404 B by 2025, total education near $10 T by 2030.  Grade: ZERO outlets carry the $12.3 B attribution, including the publisher it names.  🔴 REFUSED, not softened — and with it goes the top end of p377's 28 % spread, which was therefore a spread between a sourced figure and an unsourced one.
+#
+# 🔴 REFUSAL 2 — A CATEGORY ERROR, not a disagreement.
+technavio	Technavio publishes an INCREMENT, not a market size: "forecast to increase BY USD 4.03 billion at a CAGR of 59.2 % between 2024 and 2029" (and USD 2 321.8 mn for 2023-2028).  The $3.37 B circulating for 2025-2030 is of the same shape and was NOT found at the outlet.  🔴 An increment compared against a level is a category error, and any shelf that ranks it beside $9.58 B is comparing a delta with a total.
+#
+# 🔴 REFUSAL 3 — a doubled figure attributed to a publisher this base quotes DIRECTLY.
+gvr_23b	A third-party statistics page attributes "$23 B in 2026, fastest-growing segment at +42 % CAGR" to Grand View Research.  This base carries Grand View at $11.4 B for 2026, derived from GVR's own $57.2 B/2033 at 25.9 %.  🔴 TIER-4 outlet, 2.0x the figure the publisher's own curve gives.  REFUSED, and filed as a gap: a successor quoting "Grand View" must say WHICH GVR series.
+#
+# 🟢 THE RESULT, and it is a widening.
+band_as_p377_published	$9.58 B - $12.3 B.  "A 28 % spread on the current year."
+band_after_tier_grading	$3.05 B - $22.86 B.  SIX publishers, every one of them TIER-2 or TIER-3-carrying-TIER-2, every one of them arithmetically SELF-CONSISTENT under p274's classify() (5 PASS, 1 ROUNDING).  Spread: 7.5x, or 649 %.
+why_wider	🔴 The figures p377 sampled happened to cluster near $10 B.  The two that move the band are MarketsandMarkets at the bottom and Knowledge Sourcing at the top, and NEITHER can be refused: both are publisher-direct and both re-derive to their own labelled CAGR within 0.1 points.  🔵 So the disagreement is not a quality problem that grading can clean up.  It is DEFINITIONAL, exactly as p374 said, and the honest spread is 7.5x rather than the 28 % two passes have published.
+#
+# 🔴 THE INSTRUMENT RESULT, which is the part a successor should take: the outlet instrument
+# CANNOT pick a market number, and expecting it to was the error in p377-C's framing.
+instrument_verdict	Tier grading is a FILTER on attribution, not on definition.  It correctly refuses 5 figures that no publisher stands behind.  It cannot adjudicate between six publishers who each measure a different market competently.  🟢 Use it to refuse unsourced figures.  🔴 Never use it to narrow a definitional band.
+#
+# 🔴 THE BIGGER FINDING, FOUND WHILE DOING THIS, AND IT IS A DEFECT IN THIS BASE'S OWN
+# HEADLINE SENTENCE.  See evidence/market-headline-splice.2026-10-22-p378.tsv.
+headline	intel/market.md:109 — the sentence introduced by "🟢 This is the answer this file exists to give" — is graded SPLICE by p274's own classifier.

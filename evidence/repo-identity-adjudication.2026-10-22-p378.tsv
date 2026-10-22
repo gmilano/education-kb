@@ -1,0 +1,46 @@
+# ACTION p377-A, the ONLINE half — `gate-identity-online` RUN FOR THE FIRST TIME.
+#
+# p348 BUILT this gate.  No pass has ever run it: it needs egress, it is deliberately out of
+# `hooks`, and p336/p376/p377 all recorded a sandbox that refused `make` or refused egress.
+# This sandbox runs both.  It fired RED on its first unsupervised run.
+#
+# DENOMINATOR, as the gate printed it: addresses=501 · distinct-HEADs=494 ·
+# known-alias-pairs=0 · NEW=5.  So the register was EMPTY of every collision the shelves
+# actually contain, and the gate had no way to say so until it was run.
+#
+# ADJUDICATION METHOD — p370's rule, not HEAD equality.  p370 established that "a HEAD sha is
+# not an identity proof" and re-derives identity on the REF-SET FINGERPRINT: the sha256 of the
+# sorted (sha, ref) pairs of a full `git ls-remote --symref`.  All ten addresses were probed
+# first-hand on 2026-10-22 and the ten .refs captures are committed under
+# compose/code/p370-refset-register/refsets/.
+pair	refs_a	refs_b	refset_fp_a	refset_fp_b	symref	head	verdict	disposition
+1edtech/openbadges-validator-core + imsglobal/openbadges-validator-core	183	183	99c029966cdfcc28	99c029966cdfcc28	refs/heads/develop	0a66b52a8a0b	SAME-REF-SET	🟢 REGISTERED as one repository
+digitalcredentials/learner-credential-wallet + openwallet-foundation-labs/learner-credential-wallet	586	586	89173e3ece0b749a	89173e3ece0b749a	refs/heads/main	1c46a82ba384	SAME-REF-SET	🟢 REGISTERED — and this is p348's OWN specimen
+openedx/edx-platform + openedx/openedx-platform	49791	49791	e8bd3fa5967f5181	e8bd3fa5967f5181	refs/heads/master	229f7e1a078f	SAME-REF-SET	🟢 REGISTERED as one repository
+meta-pytorch/opacus + pytorch/opacus	563	563	62070ec06ae7b9d7	62070ec06ae7b9d7	refs/heads/main	df040e4a1594	SAME-REF-SET	🟢 REGISTERED as one repository
+dasgltd/mcp-brasil + mcp-brasil/mcp-brasil	52	101	bfff3ef0fa182ce3	5ba234d58670509e	refs/heads/main	2efb258370b1	🔴 DIFFERENT-REF-SET	🔴 REFUSED — NOT an alias
+#
+# 🔴 THE FINDING p370's RULE EARNED ON ITS FIRST UNSUPERVISED RUN.
+refusal	dasgltd/mcp-brasil and mcp-brasil/mcp-brasil share a HEAD (2efb258370b1) and have DIFFERENT REF SETS — 52 refs against 101.  They are two distinct repositories that currently agree at the tip, which is exactly the fork case gate-identity-online's own recipe comment warns about: "two genuinely distinct forks share a HEAD on the day one is forked from the other."
+why_it_matters	Had this pass adjudicated on HEAD — the only evidence the gate itself prints — it would have written a FALSE alias into the register and taught every successor that one of these two addresses is a stale name for the other.  🟢 p370's instrument refused it on evidence the gate does not collect.  An instrument built two passes ago caught the pass that was running it.
+latam_note	🔵 And the refused pair is the LATAM one.  mcp-brasil is this base's thinnest region; collapsing two Brazilian addresses into one would have cost a region that has 1 agent row.
+#
+# 🟢 AND TWO MORE PAIRS THE GATE COULD NOT PRINT, found by sweeping this base's OWN PROSE.
+# agents/top.md's index-recall table already proved three renames first-hand in an earlier
+# pass — openedx, plus two OWNER transfers — and registered none of them.  The two owner
+# transfers were never printed by gate-identity-online because the stale address is no longer
+# in a LIVE build-on row, so the online gate's denominator (501 live addresses) cannot reach
+# them.  Both were re-probed first-hand this pass:
+extra_pair	refs_a	refs_b	refset_fp	head	verdict	disposition
+naiayti/TeachingKG + Teaching-Knowledge-Graph/TeachingKG	10	10	8bfdee83b6fc287d both	9f8c0a3f6704	SAME-REF-SET	🟢 REGISTERED
+christophblessing/quiz-recap + openHPI/quiz-recap	211	211	9ae94c5705e376bd both	0927b556d2e4	SAME-REF-SET	🟢 REGISTERED
+register_total	aliases.tsv goes 2 -> 8 rows this pass; refusals.tsv is created with 1.
+#
+# 🔴 THE SECOND FINDING, which is about this base rather than about GitHub.
+systemic	🔴 THE PATTERN IS SYSTEMIC, not one lapse.  Across this base's history at least FIVE address identities were PROVEN FIRST-HAND and written into prose — p348's wallet specimen, the openedx rename, and the two owner transfers above, plus the inginious pair that WAS registered — and before this pass aliases.tsv held TWO rows.  🔵 The register is the only form a successor's instrument can read; prose is the form only a reader can.
+p348_specimen	digitalcredentials/learner-credential-wallet + openwallet-foundation-labs/learner-credential-wallet is the pair NAMED IN p348's OWN DOCSTRING as the specimen that motivated building the gate — "ONE repository, published twice, under owners that share no characters."  p348 proved it, wrote it into its prose, and never added it to aliases.tsv.  🔵 Nine passes later the gate it built found its own example unregistered, because nobody could run the gate.  A finding filed in PROSE and not in a REGISTER is a finding this base loses — the same class as p372's "the one address with a proven successor had been proven six days earlier and filed only in prose".
+#
+# 🔴 WHAT IS NOT ESTABLISHED, stated rather than promoted to agree.
+direction_limit	For three of the four registered pairs the canonical DIRECTION is NOT first-hand.  raw.githubusercontent.com serves BOTH names with a 200 (GitHub follows the rename redirect on the raw channel too), and api.github.com answers 403 from here, so no channel available to this pass distinguishes the old name from the new.  The direction recorded for the IMS Global/1EdTech, DCC/OpenWallet and pytorch/meta-pytorch pairs rests on the organisations' published renames — secondary attribution — and is labelled as such in the register.
+direction_established	openedx/edx-platform -> openedx/openedx-platform is the one direction with a named source: discuss.openedx.org's own rename announcement ("Renaming edx-platform to openedx-platform on Jan 26").  TIER-1 ISSUER on p377's outlet scale: the project's own forum.
+raw_channel_result	🔵 A useful null for a successor: the raw channel CANNOT be used as a canonicality oracle.  Both sides of all four renamed pairs return 200, and openedx returns 404 on both sides (no README.md at the probed path).  Recorded so no successor re-derives it.

@@ -3,6 +3,90 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+## 🔴 🆕 `p378`: **`ACTION p377-C` discharged, and it produced the OPPOSITE of what it was registered to produce — tier grading WIDENS the 2026 market band from 28 % to 649 %. 🔴 And this file's own headline sentence is graded SPLICE by this base's own classifier.**
+
+**Evidence:** [`market-outlet-tier`](../evidence/market-outlet-tier.2026-10-22-p378.tsv) ·
+[`market-headline-splice`](../evidence/market-headline-splice.2026-10-22-p378.tsv) ·
+[`northamerica-legs`](../evidence/northamerica-legs.2026-10-22-p378.tsv)
+
+🟢 **`ACTION p377-C` asked for the outlet instrument to be pointed at the market figures** and
+to **refuse** the ones that do not survive, as `p377` refused OpenEduCat's *"30 000+
+institutions"*. 🔵 **Its implicit premise, named here before the result: `p377` expected tier
+grading to NARROW the band and leave a defensible number.** It does not.
+
+### 🔴 The five figures REFUSED
+
+| Figure | Attributed to | Why it is refused |
+|---|---|---|
+| **$12.3 B** (2026) | HolonIQ | 🔴 **Not found at the outlet it names.** A targeted leg at HolonIQ returns **no AI-in-education figure at all** — HolonIQ sizes the *broad* market (EdTech to $404 B by 2025; total education near $10 T by 2030). Zero outlets carry the attribution, the named publisher included |
+| **$23 B** (2026) | "Grand View Research", via a statistics page | 🔴 TIER-4 outlet, **2.0×** the figure Grand View's own curve gives for 2026. A successor quoting "Grand View" must say **which GVR series** |
+| **$3.37 B** | Technavio | 🔴 **Category error.** Technavio publishes an **increment** — *"forecast to increase BY USD 4.03 billion"* (2024-29) — not a level. An increment ranked beside $9.58 B compares a delta with a total. The $3.37 B variant was also not found at the outlet |
+| **$1.94 B** (2026) | unattributed | 🔴 TIER-4 aggregator, no publisher |
+| **$7.30 B** (2026) | Trend X Insights | 🔴 TIER-4 aggregator |
+
+🔴 **And the first refusal takes `p377`'s own headline with it.** `p377` published *"four 2026
+market figures that disagree by 28 %"* with HolonIQ's $12.3 B as the top end. That spread was
+therefore measured between a sourced figure and an **unsourced** one.
+
+### 🔴 The six figures that SURVIVE — and they disagree by 7.5×
+
+Every row below is publisher-direct (or press carrying a publisher) **and** arithmetically
+self-consistent under `p274-window-sweep`'s own `classify()`. The 2026 point is read
+**backward from each horizon**, per `p272`'s standing rule.
+
+| Publisher | 2026 point | Its own horizon | `p274` verdict |
+|---|---:|---|---|
+| **MarketsandMarkets** | **$3.05 B** | $5.82 B by 2030 @ 17.5 % | 🟢 PASS |
+| **MarkWide Research** | $8.70 B | $100.21 B by 2035 @ 31.2 % | 🟢 PASS |
+| **Precedence Research** | $9.48 B | $136.79 B by 2035 @ 34.52 % | 🟢 ROUNDING |
+| **The Business Research Co.** | $10.60 B | $42.48 B by 2030 @ 41.5 % | 🟢 PASS |
+| **Grand View Research** | $11.41 B | $57.20 B by 2033 @ 25.9 % | 🟢 PASS |
+| **Knowledge Sourcing Intelligence** | **$22.86 B** | $48.626 B by 2030 @ 20.77 % | 🟢 PASS |
+
+🔴 **$3.05 B to $22.86 B — a 7.5× spread, and not one of the six can be refused.** The two that
+move the band are MarketsandMarkets at the bottom and Knowledge Sourcing at the top, and both
+re-derive to their own labelled CAGR within **0.1 points**. 🔵 So the disagreement is not a
+quality problem that grading can clean up. It is **definitional**, as `p374` said — and the
+honest spread is **7.5×**, not the 28 % two passes have published.
+
+🟢 **The instrument result, which is what a successor should take.** Tier grading is a filter on
+**attribution**, not on **definition**. 🟢 Use it to refuse figures no publisher stands behind
+— it refused five. 🔴 Never use it to narrow a definitional band; expecting it to was the error
+in `p377-C`'s framing.
+
+### 🔴 And the larger finding: this file's own headline is a cross-publisher SPLICE
+
+The sentence directly under *"🟢 **This is the answer this file exists to give.**"* read:
+
+> *Global AI-in-education sits around **$9.58 B (2026)** heading to **~$42.5 B by 2030**
+> (**~41.5 % CAGR**).*
+
+| Where each number comes from | Publisher |
+|---|---|
+| $9.58 B (2026) | **Precedence Research** — whose own horizon is $136.79 B by 2035 @ 34.52 % |
+| $42.48 B (2030) | **The Business Research Co.** — whose own 2026 base is **$10.6 B** |
+| 41.5 % CAGR | **The Business Research Co.** — the CAGR of *its* curve |
+
+🔴 **Graded by `p274`'s own `classify()`: SPLICE, at −9.63 %.** The three numbers cannot all be
+true — $9.58 B compounding to $42.5 B over four years implies **45.1 %**, and the 41.5 %
+published beside them belongs to a $10.6 B base. 🟢 Each parent study **passes** on its own
+figures (TBRC `PASS`, Precedence `ROUNDING`). **The splice is this base's, not a publisher's.**
+
+🔴 **Why no gate caught it, which is the more useful half.** `p274-window-sweep` reads a
+**hand-registered `CELLS` table**. `make sweep` graded 28 cells this pass
+(`PASS=14 · ROUNDING=2 · SPLICE=9 · WINDOW_FIX=3`) and every one is a registered triple. **The
+headline is prose.** No cell for `9.58 → 42.48` has ever existed, so the splice instrument has
+never been pointed at the single most load-bearing market claim on these shelves.
+
+🔵 **This is `p367`'s class exactly: an instrument that reads ONE channel while the shelves
+write TWO** — and it is the *second* instance of that class this pass found, the other being
+`make carried`'s blindness to bare slugs. An instrument whose input is a hand-maintained list
+measures **the list**, and the list is maintained by the same passes whose claims it audits.
+
+🟢 **The headline sentence is rewritten below.** 🔵 `p374`'s *"$6.4 B – $11.4 B"* section and
+`p377`'s *"28 %"* section are **left standing in their own pass sections** — history is not
+retro-edited to match a later derivation.
+
 
 ## 🟢 🆕 `p377`: **the regional legs ran in five languages and the sharpest result is a SPLIT BETWEEN TWO GOVERNMENT ISSUERS — Norway's directorate restricts ACCESS, Norway's government restricts USE, and a product that satisfies one fails the other**
 
@@ -106,11 +190,18 @@ quote-level corroboration across independently counted outlets.
 🟢 **This is the answer this file exists to give.** The audit sections above
 `## Market size` record which legs ran on which pass and what they returned.
 
-**Shape of the market.** Global AI-in-education sits around **$9.58 B (2026) heading to
-~$42.5 B by 2030** (~41.5 % CAGR). North America holds the largest single share (~36 %);
-Europe is ~$2.64 B growing at ~31.9 %. 🟡 **Every one of these figures is commercial
-research or a vendor summary — none traces to a primary statistical source.** Use them to
-size an argument, never to anchor a contract.
+**Shape of the market.** 🔴 **There is no single 2026 figure, and `p378` withdrew the one
+this line used to carry.** Six publishers that are each arithmetically self-consistent put the
+2026 market anywhere from **$3.05 B** (MarketsandMarkets) to **$22.86 B** (Knowledge Sourcing)
+— a **7.5× spread** that is **definitional**, not a quality problem. 🟢 **Quote a publisher and
+its own curve, never a blend:** *Precedence* $9.48 B (2026) → $136.79 B (2035) @ 34.52 %, or
+*The Business Research Co.* $10.6 B (2026) → $42.48 B (2030) @ 41.5 %, or *Grand View*
+$11.41 B (2026) → $57.2 B (2033) @ 25.9 %. 🔴 **The sentence that stood here until `p378`
+spliced Precedence's base onto TBRC's horizon and CAGR and was graded `SPLICE` at −9.63 % by
+this base's own classifier** — see the `p378` section above. North America holds the largest
+single share (~36 %); Europe is ~$2.64 B growing at ~31.9 %. 🟡 **Every one of these figures is
+commercial research or a vendor summary — none traces to a primary statistical source.** Use
+them to size an argument, never to anchor a contract.
 
 **What is actually changing in 2026**, and it is consistent across independent sources:
 AI in education has stopped being a pilot portfolio and become **governed infrastructure**
@@ -890,7 +981,7 @@ sourcing, not a quiet success.**
 
 | Scope | Figure | Source quality |
 |---|---|---|
-| Global AI-in-education, carried from prior cycles | $9.58 B (2026) → **$42.48 B by 2030**, CAGR ~41.5 % | 🟡 Carried; commercial research, not re-verified this pass |
+| Global AI-in-education, carried from prior cycles | 🔴 ~~$9.58 B (2026) → **$42.48 B by 2030**, CAGR ~41.5 %~~ — **WITHDRAWN by `p378`: graded `SPLICE` at −9.63 %, Precedence's base on TBRC's horizon.** Quote one publisher per curve; the tier-graded band is **$3.05 B – $22.86 B** | 🔴 Corrected `p378`, first-hand arithmetic |
 | **Europe** AI-in-education | **$2.64 B (2026) → $8.0 B by 2030**, CAGR **31.9 %** | 🟡 Secondary (vendor summary) |
 | North America share of global market | **~36 %** — the largest regional share | 🟡 Secondary (vendor roundup) |
 
@@ -978,6 +1069,71 @@ it is **auditability, curriculum alignment and an evidence story**.
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 `p378`: **`Gap 507` CLOSED — "North America" stops meaning the United States. Canada has FOUR live provincial positions spanning the full range, and Mexico is PRE-INSTRUMENT and says so itself**
+
+**Evidence:** [`northamerica-legs`](../evidence/northamerica-legs.2026-10-22-p378.tsv)
+
+🟢 **`ACTION p377-E` discharged.** `Gap 507` recorded that this region's cell was built only
+from US sources — `p377`'s regional leg returned **no Canadian and no Mexican material at
+all** — while carrying 36 % share, $3.68 B, 60 % of US K-12 teachers, 134 bills / 31 states,
+`AB 1159` and `H.R. 8747`, and being read as continental.
+
+🔴 **Canada has no national K-12 AI position and cannot have one: K-12 is PROVINCIAL.** A
+single "Canada" cell would repeat the error `Gap 507` named one level down.
+
+| Jurisdiction | Instrument | Where it sits | Outlet tier |
+|---|---|---|---|
+| **Quebec** | Ministerial directive **suspending** AI assistants (2025-03; still in force at the last reported check, 2025-12), plus a Nov 2024 guide for education staff | 🔴 **The most restrictive stance found** | TIER-2 |
+| **British Columbia** | *Considerations for Using AI Tools in K-12 Schools* — a decision framework, plus materials to help boards write **local** AI policies | 🟢 The most developed enabling position | **TIER-1 ISSUER** (`gov.bc.ca`) |
+| **Ontario** | 🔴 **No ministry memorandum at all.** Boards set the rules; the OTF published a discussion paper (2026-01) and **ECNO** publishes *English Generative AI Guidelines v1.3* | 🔵 The de facto layer is the **board** and the board-IT consortium | TIER-2 INSTITUTIONAL |
+| **New Brunswick** | AI written **into the K-12 curriculum**, contested; the Francophone department published parallel guidance | 🔵 The only curriculum-level Canadian approach found | TIER-3 PRESS |
+| **Federal** | 🔴 None, structurally — and critics argue federal AI legislation does not address K-12 risks or minors' data | — | TIER-2 / TIER-3 |
+
+🟢 **So the Canadian engagement unit is the PROVINCE, and in Ontario it is the SCHOOL BOARD.**
+A product configurable per-province and defaulting to the **narrowest live rule** — Quebec's
+suspension — satisfies all four. One built to BC's framework **fails Quebec**. 🔵 Same shape as
+`p377`'s Norway finding, where Udir bars **access** and regjeringen.no bars **use**: build the
+narrower one.
+
+🔴 **Mexico is pre-instrument, and the SEP's own survey is the evidence.**
+
+| What exists | Date | Outlet tier |
+|---|---|---|
+| 🔴 **No binding national lineamiento in force** | as at 2026-10 | **TIER-1 ISSUER** (`educacionsuperior.sep.gob.mx`) |
+| National generative-AI survey + **10 proposed actions** for Higher Education; SEP reports **>60 %** of university students and teachers using GenAI daily | 2026-04-15 | **TIER-1 ISSUER** |
+| 🟢 **76.7 % of public-institution students do not know whether their school has guidelines** | 2026-04 | **TIER-1 ISSUER** |
+| National consultation, three regional forums, feeding an initiative to **Congress**; scope includes phones and social media; **17 states** already have their own measures | 2026-07 | TIER-3 PRESS |
+| **SEP + UNESCO** Letter of Intent on ethical AI in education, with UNESCO technical support for policy | 2026-09-07 | TIER-3 carrying TIER-1 signatories |
+
+🟢 **The opportunity Mexico actually describes is the GOVERNANCE LAYER, not another tutor** —
+policy templates, disclosure workflows, teacher-facing audit trails — and **76.7 %** is the
+number that says so. 🔴 **It is a window that closes when the Congress initiative lands.**
+
+🔴 **Two figures REFUSED on this leg.** *"Three-quarters of Canadian students already use
+generative AI for schoolwork"* — one TIER-4 outlet, flagged as a blog by the leg's own summary;
+an adoption rate is exactly what ends up in a deck, so it is not softened. And Mexico's SEP
+survey **participation base** is conflicted across reports (1 143 451 students + 133 582
+teachers / 2 900 institutions vs *"more than 1.5 million students + 166 000 teachers"*): the
+**>60 % daily-use finding is quoted, the participation base is not assertable.**
+
+🟡 **One carried fact is now the least-evidenced thing in this cell.** Quebec's suspension was
+last **confirmed** in force in **December 2025** — ten months before this pass, on a TIER-2
+outlet — and no 2026 update was found. 🔵 It is the **strictest** fact on the Canadian leg and
+the one a product would be built against. A cheap recurring check, declared rather than
+assumed.
+
+🔴 **A region-vocabulary defect found while placing this, and filed rather than resolved.**
+**Mexico appears under BOTH `### North America` and `### LATAM` on this shelf** — this section
+carries it (and `Gap 507` asked for it here), while the LATAM section carries Mexico's
+ethical-framework cell. The closed five-value vocabulary has no rule for a country with two
+defensible homes, so the two placements were made by different passes and neither knows about
+the other.
+
+🟢 **Stated limit, unchanged:** WebSearch is US-only. The Quebec and New Brunswick Francophone
+instruments and the Mexican Spanish-language material are attributions **through** that index,
+not byte-level reads of ministry pages.
+
 
 #### 🟢 🆕 `p377`: the state-bill COUNT this base published last pass is contradicted by this pass's leg — and the disagreement is the finding
 

@@ -1,0 +1,70 @@
+# p378 — THIS PASS REINTRODUCED THE GPL-3.0/AGPL-3.0 DEFECT THAT THIS BASE BUILT A SHARED
+# CONTROL TO PREVENT, AND THE CONTROL'S OWN HEADER PREDICTS THE FAILURE IN THE PASS TENSE.
+#
+# This is the second of this pass's errors published rather than tidied, and like the first
+# (evidence/carried-index-channel-b) it was caught by something this base already owned.
+#
+# WHAT HAPPENED.  While reading platform grants first-hand for Pattern 32, this pass used an
+# inline shell ladder of its own:
+#
+#   grep -qi 'GNU AFFERO' $f && echo AGPL-3.0 || (grep -qi 'GNU GENERAL PUBLIC' ... )
+#
+# It returned AGPL-3.0 for `moodle/moodle`.
+#
+# 🔴 MOODLE IS GPL-3.0, AND THE SHELVES ALREADY SAID SO.
+# verticals/solutions.md:769 publishes "GPL-3.0 (`COPYING.txt`)".  Read on the bytes
+# (main/COPYING.txt, 35 147 B, sha256_12 8ceb4b9ee5ad):
+#   title block                        "GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"
+#   "GNU AFFERO GENERAL PUBLIC LICENSE"   0 occurrences
+#   "GNU GENERAL PUBLIC LICENSE"          1 occurrence
+#   "Affero"                              3 occurrences  <-- the trap
+# 🔵 GPL-3.0's SECTION 13 IS TITLED "Use with the GNU Affero General Public License".  A
+# classifier that greps the BODY for "affero" labels every GPL-3.0 payload AGPL-3.0.
+#
+# 🔴 AND THE CONTROL ALREADY EXISTS, FOR EXACTLY THIS.  compose/code/lib/license_family.sh,
+# header quoted verbatim:
+#   "This base had already paid for the GPL-3.0/AGPL-3.0 defect and registered it as P171 ...
+#    And pass 77 reintroduced the defect anyway, in two fresh instruments, because it wrote a
+#    new classifier from scratch instead of reusing a hardened one.  The correction did not
+#    travel: it lived in five instruments and in prose, and a sixth instrument inherited none
+#    of it.  A rule that has to be remembered is not a control.  This file is the control."
+# 🔴 `gate-affero-rung` is in `make hooks` and its one-line description is
+# "no classifier may read GPL-3.0 as AGPL-3.0".  It ran GREEN on this pass — because it judges
+# THE INSTRUMENTS, and this pass's ladder was an inline shell fragment that is not one.
+#
+# 🟢 THE RE-CLASSIFICATION.  Every payload this pass read was re-run through family_of().
+payload	bytes	p378_inline_ladder	license_family.sh	verdict
+moodle/moodle	35147	🔴 AGPL-3.0	GPL-3.0	🔴 THE ERROR — caught before publication by checking against the shelf cell
+openedx/openedx-platform	35136	AGPL-3.0	AGPL-3.0	🟢 agrees — genuinely AGPL
+overhangio/tutor	34523	AGPL-3.0	AGPL-3.0	🟢 agrees — genuinely AGPL
+THU-MAIC/OpenMAIC	1065	MIT	MIT	🟢 agrees
+littlecookie0722/AI-Teaching-Agent	1069	MIT	MIT	🟢 agrees
+KayvanShah1/VirtuTA	1068	MIT	MIT	🟢 agrees
+Zenglian990/AI_Tutor_Release	1068	MIT	MIT	🟢 agrees
+Gchism94/ai-tutor	1070	MIT	MIT	🟢 agrees
+avinash201199/free-ai-agents-resources	1070	MIT	MIT	🟢 agrees
+ashishpatel26/500-AI-Agents-Projects	1070	MIT	MIT	🟢 agrees
+msitarzewski/agency-agents	1079	MIT	MIT	🟢 agrees
+wenflow-org/wenflow	1067	MIT	MIT	🟢 agrees
+syauqi/learnify	1084	MIT	MIT	🟢 agrees
+JPMichon/MonTuteur	20849	CC-BY-NC	CC-BY-NC-SA-4.0	🟢 agrees, and the control is SHARPER (names the SA limb)
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	5875	CC	CC0-1.0	🟢 agrees, and the control is SHARPER
+Agenta-AI/awesome-ai-agent-platforms	7048	CC	CC0-1.0	🟢 agrees, and the control is SHARPER
+12britz/awesome-free-models	137	CC0-PARAPHRASE	🔴 CC0-1.0	🔴 SEE THE CROSS-INSTRUMENT DISAGREEMENT BELOW
+#
+# SCORE: 1 misclassification in 17.  🔴 One is enough: it was on the single most-deployed
+# platform on these shelves, and GPL-3.0 vs AGPL-3.0 is the difference between shipping a
+# hosted service without disclosing source and not being able to.
+#
+# 🔴 THE STRUCTURAL FINDING, which is the reason this file exists.
+finding	The control is not reachable from the place a pass actually works.  `license_family.sh` says "source this, do not rewrite it", `gate-affero-rung` enforces it, and BOTH are aimed at INSTRUMENTS under compose/code/.  🔴 A pass reading payloads ad hoc in a shell — which is how every leg on this base reads a grant — passes through neither.  pass 77 wrote a fresh classifier in two instruments; this pass wrote one in a one-line pipeline.  Same defect, one layer further out, and the gate cannot see that layer.
+rule	🟢 No pass may publish a licence family from its own grep.  Every family cell goes through `family_of()` from compose/code/lib/license_family.sh, or through p312's `identify()`, and where the two disagree the disagreement is the finding — not something to resolve by picking one.
+#
+# 🔴 THE CROSS-INSTRUMENT DISAGREEMENT, found by running both, and it is the commercially
+# consequential half.
+paraphrase	12britz/awesome-free-models serves a 137-BYTE LICENSE: three lines whose first is "CC0 1.0 Universal" and whose body reads "To the extent possible under law, the author has waived all copyright and related or neighboring rights to this work."  That is a PARAPHRASE.  It carries none of CC0's operative sections and NOT its fallback-licence clause.
+family_of_says	🔴 CC0-1.0 — a clean permissive cell.  It classifies on the TITLE BLOCK, by design (P171), and the title block of a paraphrase is the real licence's name.
+identify_says	🟢 UNKNOWN-TEMPLATE — it abstains, because the payload matches no registered template.  Its LABEL field still reads "CC0 1.0 Universal", taken from the first line, so a pass publishing the LABEL rather than the FAMILY would shelve the paraphrase as CC0 anyway.
+reading	🔵 The two instruments are each correct about their own question and a shelf cell needs BOTH.  `family_of()` answers "what licence is this text NAMED after"; `identify()` answers "is this the licence's ACTUAL TEXT".  🔴 A permissive cell published on the first alone can be a paraphrase, a truncation or a summary — and P171's title-block rule, which exists to stop a BODY grep lying, is exactly what makes the title-block classifier trust a paraphrase's heading.
+rule_2	🟢 A permissive family cell is publishable only when BOTH agree, or when the disagreement is published beside it.  This pass publishes 12britz as CC0-PARAPHRASE on that rule, not as CC0-1.0.
+registered	A gate arm asserting that no shelf publishes a bare permissive family for a payload `identify()` grades UNKNOWN-TEMPLATE, unless the cell names the disagreement.  NOT built this pass.  Stated so it is not mistaken for done.
