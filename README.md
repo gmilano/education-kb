@@ -3,6 +3,106 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## Pass 379 — 2026-10-22 — **THREE REGISTERED ACTIONS DISCHARGED, THE RANKED-FIRST ONE DELIBERATELY NOT AS SPECIFIED. 🔴 `ACTION p378-D`'s DIAL IS REFUTED ON A PREDICTION COMMITTED BEFORE THE LEGS RAN: THE IN-LANGUAGE FRACTION PREDICTS SUPPLY **BACKWARDS** — 100 % LEGS RETURNED ZERO ADDRESSES, THE 44 % LEG RETURNED THE ONLY ONE. 🔴 `Gap 517` IS NOT STALE, IT IS WRONG, AND `Pattern 32` IS CORRECTED. 🔴 THE OECD CONTRADICTS ITSELF ON THE ONE APAC CELL `Gap 504` NEEDED. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE AND AGAIN AT COMMIT.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`registered-prediction`](evidence/p379-registered-prediction.2026-10-22-p379.tsv) ·
+[`inlanguage-yield`](evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv) ·
+[`channel-mix`](evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·
+[`quebec-talis`](evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-22-p379.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p379.tsv) ·
+[`gate-state`](evidence/gate-state.2026-10-22-p379.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Opening act** | 🟢 **Channels probed before anything was reasoned about** (`Gap 511`'s standing rule): `make` available · `git ls-remote` OK · `raw.githubusercontent.com` 200 · `repo1.maven.org` 200 · 🔴 `api.github.com` **403** · 🔴 `github.com` HTML **403** — a **fourth** independent sandbox |
+| **Action discharged, ranked first** | 🟢 `ACTION p378-A` — **and NOT as specified.** It asked for channel B to be unioned into `carried()`; it is wired as a **THIRD VALUE** instead. 🔴 Because **≥73** of the 774 channel-B-only addresses sit beside a death or refusal marker ONLY — a union would have answered `CARRIED` for a **published refutation** |
+| **Action discharged** | 🟢 `ACTION p378-D` — prediction committed in `91e47a2` with **no leg output in the tree**. 🔴 `D-LIMB-1` **REFUTED** · 🔴 `D-LIMB-2` **REFUTED** (band **55.6** pts vs 30) · 🟢 `D-LIMB-3` **CONFIRMED** |
+| 🔴 **The headline, and it retires the instrument `p378` introduced** | `ja` **100 %** in-language → **0 addresses**. `ru` **100 %** → **0**. `de` **44 %** → **1**. An in-language query reaches a language's **COMMENTARY estate** (Qiita, Zenn, Habr, `vc.ru`, tproger) before its forge. 🔵 The dial that selects a leg is **ADDRESS YIELD**; `p377`'s NEW rate does not track it and `p378`'s in-language fraction tracks it **inverted** |
+| **Action discharged, and both halves overturn it** | 🟢 `ACTION p378-E` — 🔴 **`Gap 517` is WRONG, not stale**: Quebec's suspension was lifted **December 2025** and the replacement regime's compliance deadline (**5 June 2026**) is 4.5 months past. 🟡 **`Gap 504` partially closed** and the channel self-contradicts |
+| 🔴 **A prior limb refuted in the useful direction** | `A-LIMB-4` **REFUTED at 0 flips** — and the reason is the finding: `msitarzewski/agency-agents` does **not appear among** the 774, because `p378` published it **with a URL**. 🔵 **The flip set is self-erasing**: publishing a false `NEW` destroys the evidence the blindness produced it. `Gap 526` |
+| 🔴 **A 144-pass defect in the instrument a pass calls before publishing a row** | `carried_index.py` never folded the **`.git`** clone suffix — the **identical defect `p367`'s own docstring records in its first draft**. Found by **measurement** (2 724 vs 2 717), not by reading. Latent, not firing; fixed; harvester disagreement **8 → 1** |
+| 🔴 **A TIER-1 issuer refused for contradicting itself** | Japan's teacher-AI cell: **17 %** (OECD country note + Education GPS) vs **"over 50 %"** in the same main report's chart, cited to Table 1.59. 🔴 **REFUSED.** `Gap 522` |
+| 🔴 **This sandbox cannot verify a prose citation AT ALL** | `curl` CONNECT policy-denied — **38 of 38** candidate addresses at `000` — and the fetch channel is DNS-dead. Every non-GitHub citation added here is marked **`ATTRIBUTED-UNVERIFIED`** rather than quietly equated with this base's norm. `Gap 524` |
+| **Gates** | 🟢 **`make hooks` 43/43 green before the first write and again at commit.** `p235-carried-index` suite **23 → 50** controls. 🔴 **4 fired RED on this pass before it committed** — `gate-absence`, `gate-region-headings`, `p352-census-currency`, `p376-union-currency` — **all 4 fixed**, and the region one caught a structural breach this pass introduced |
+| **New repo rows** | 🔴 **0 promoted.** 14 addresses graded first-hand; 1 new (`telekom/ki-in-schulen`, MIT, 🔴 16.5 months stale, 🔴 teaching material not code) |
+| **New agent rows** | 🔴 **0** — a fifth consecutive zero, and the first pass to establish **why an in-language search will not break it** |
+| **Shelf gained** | 🟢 `Pattern 33` (the three-channel address check) · 🔴 `Pattern 32` **corrected in place** · a `p379` block on **all nine** shelves · two new recipes (`make verdict`, `make channels`) · all four regions placed and dated |
+| **Figures REFUSED rather than reported** | 🔴 **7** — `$12.3 B` 2026 (now at a **second** outlet, same unnamed origin: *a figure repeated is not a figure corroborated*) · NA `$3.68 B`/36 % · 60 % US teacher use · Japan's TALIS cell · EU education high-risk **date** (three outlets, three dates) · LATAM market ordering · OpenEduCat installed base (still) |
+| **New gaps** | **520** (channel B is unswept **supply**) · **521** (every absence instrument is channel-U-only) · **522** (OECD vs itself on Japan) · **523** (no pattern dates its legal premise) · **524** (no citation-address verification field) · **525** (`kolibri_engine` ≠ Kolibri) · **526** (the flip set is self-erasing) · **527** (MCP present, repo-scoped, still no stars) · **528** (`gate-absence` extracts the wrong subject) |
+| **Probes, all first-hand** | **63** `ls-remote` (49 B-only sample + 14 graded) · **11** true-cased re-probes · **13** blobless clones for HEAD dates · **~90** `raw.githubusercontent.com` grant-ladder reads · **38** citation-address checks, 🔴 **all policy-denied** · 🔴 **0** `api.github.com` or `github.com` HTML calls succeeded — **no star counts** |
+| **Own errors published rather than tidied** | 🔴 **7** — probing 15 addresses this base had already **proven dead** without running `make claims` first · the 144-pass `.git` fold · this pass's **broken language-hint column** (one value for all 13 rows, caught by a known-German control) · `make verdict` **collapsing its own three-way** into make's exit 2 · `D-LIMB-3` registered as *"uncorrelated"* when the measured relation is **inverse** · a **second `## Opportunities by region` block** added to `intel/market.md`, caught by `gate-region-headings` · and a draft that **claimed no gate had fired red**, written before the shelf writes were gated. 🔵 Five of the seven were caught by an instrument or a control this base already held |
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, with `p351`'s instrument: **2 717** harvested shapes →
+**33** are not addresses → **2 684 addresses**.
+
+🟢 **And the union census, restated as `ACTION p375-A`'s standing sentence requires:**
+**2 684** channel-U addresses and **3 061** channel-B survivors give **3 404 addresses over
+both channels**.
+
+🔴 **The delta is `+8`, nothing was removed, all eight are nameable — and all eight demonstrate
+this pass's own finding happening live.** Diffed address-by-address against `p378`'s tree
+(`31dc5d6`): `8bitprodigy/kolibri_engine`, `adityasarade/agentic_ai_tutor`,
+`aflah02/open-unlearning`, `alfredang/ai-cms`, `bobuel/bloom-taxonomy-quiz-builder-skill`,
+`hatchedland/ncert-mcp`, `librarycarpentry/lc-data-intro`,
+`studentsuite/awesome-skills-plugins-for-students`.
+
+🔵 **Every one of the eight was ALREADY on these shelves as a channel-B bare slug, and none was
+new supply.** They entered the census because `p379` published them **with a URL** while
+grading them. 🔴 **That is `Gap 526` — the self-erasing flip set — occurring in this pass's own
+census delta.** Eight addresses that no census here could see yesterday are visible today, and
+the only thing that changed is that a pass linked them. 🔵 A successor measuring the channel-B
+blindness must therefore measure the **unpublished remainder**: `ACTION p379-A`'s random arm.
+
+🟢 **The union gained `+1` against channel U's `+8`**, which is the arithmetic a reader should
+expect and not a discrepancy: seven of the eight were already counted as channel-B survivors in
+`p378`'s union, so promoting them to channel U moves them between channels without changing the
+union. The eighth is a genuine union addition.
+
+🟢 `p378`'s **2 709 / 33 / 2 676** and its union of **3 403** are left standing in their own
+section — history is not edited to match a later derivation.
+
+🔴 **Both currency gates were RED against this pass before this restatement** —
+`p352-census-currency` at 2 of 3 cells stale and `p376-union-currency` at 3 of 3. 🟢 Together
+with `gate-absence` and `gate-region-headings`, **four** gates fired on `p379` before it
+committed, which corrects this pass's own earlier claim that none did.
+
+### 🔵 The honest size of `p379`
+
+🟢 Three registered actions, all three discharged, **the ranked-first one by refusing its own
+specification** and **all three overturning or inverting something that registered them**. Zero
+new rows, and the zero is now **explained** rather than repeated. One instrument extended
+(23 → 50 controls), one 144-pass latent defect closed, two recipes added, one pattern added and
+one **corrected in place**. All four regions placed with dated, attributed material and **no
+region returned a nil**. Nine new gaps, five carried gaps moved, two closed. **Seven of this
+pass's own errors published**, five of them caught by a control, a gate or an instrument this
+base already held, one by running a recipe instead of trusting it, and one by re-reading a
+claim this pass had made too early.
+
+🔴 **Stated limitations, before a successor leans on anything here.** **No star counts** —
+`api.github.com` and `github.com` HTML `403` across **four** sandboxes, and the GitHub MCP
+server mounted here is scoped to one unrelated repository. **No prose citation was
+address-verified**, by any channel, at all: every non-GitHub source this pass adds is
+`ATTRIBUTED-UNVERIFIED`, which is weaker than `p378`'s 275-of-275 standard and is labelled, not
+blended. The **24-of-49** live rate on channel B comes from a **deliberately enriched** sample
+and is an **upper bound**, not a rate — `ACTION p379-A` adds the random arm that would make it
+one. The **address-yield** dial that replaces `p378`'s has **one pass** of data and three legs.
+`ACTION p378-B` was **not run** and `p378-C` not run as a census. The three egress gates were
+**not** re-run, though the channel for three of them exists here. And the uncomfortable one:
+`Pattern 32` steered Quebec engagements on a lifted prohibition for roughly **eleven months**,
+no instrument this base carries dates a pattern's legal premise, and `Gap 523` is open
+precisely because that is still true.
+
 ## Pass 378 — 2026-10-22 — **ALL FIVE REGISTERED ACTIONS DISCHARGED. 🔴 `ACTION p377-D`'s LIMB 1 IS REFUTED AND LIMB 2 FLIPPED FROM CONFIRMED TO REFUTED BY A DEFECT THIS PASS FOUND IN THE VERY INSTRUMENT ITS OWN PRE-REGISTRATION NAMED AS THE AUTHORITY. 🟢 `make hooks` 43/43 AND THE THREE EGRESS GATES RUN FOR THE FIRST TIME IN THIS BASE'S HISTORY — 275 OF 275 GRANT PATHS LIVE, AND `gate-identity-online` FIRED RED ON FIVE UNSHELVED COLLISIONS. 🔴 `p377`'s "THIRD MIT TEMPLATE" IS ONE TEXT RE-WRAPPED, AND THIS BASE'S MARKET HEADLINE WAS A CROSS-PUBLISHER SPLICE.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

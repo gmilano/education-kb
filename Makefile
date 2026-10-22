@@ -61,7 +61,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
-.PHONY: gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -857,6 +857,35 @@ index: ## ACTION UG (p235) — rebuild the carried-row index and report the UH c
 # by hand and found 0 new; p253 ran it by hand and found the one new row in sixteen passes.
 carried: ## ACTION UG — is this row already on the shelves?  make carried SLUG=owner/repo
 	@$(PY) -I compose/code/p235-carried-index/carried_index.py check "$(SLUG)" .
+
+# 🟢 p379 — `ACTION p378-A`, and it is ADDITIVE on purpose.  `Gap 512`: `make carried` reads
+# only the `github.com/owner/repo` URL form, so an address the shelves discuss as a backticked
+# bare slug grades NEW.  p378 hit it live on `msitarzewski/agency-agents`.
+# 🔴 The action asked for the channel-B arm to be UNIONED into `carried()`.  It is not, and the
+# measurement is the reason: of the 774 channel-B-only addresses, at least 73 sit beside a
+# death or refusal marker ONLY — they are addresses earlier passes PROVED DEAD and wrote down
+# as bare slugs *because* they were reporting a negative.  A union would have answered
+# "CARRIED" for a published refutation.
+# 🟢 So `carried` above is BYTE-UNCHANGED in behaviour and this is a THIRD value.  Exit codes
+# are deliberately distinct — 0 NEW, 1 CARRIED, 3 MENTIONED-B — so a caller that only knows
+# `check`'s 0/1 gets a status it does not recognise rather than silently reading the middle
+# case as NEW.  `p376-A`'s rule: a standing instrument that silently re-grades retro-edits
+# every denominator that rests on it.
+# 🔴 p379's OWN ERROR, found by RUNNING this recipe rather than by writing it.  GNU make exits
+# **2** for any failed recipe, so `make verdict` collapses the script's 1 (CARRIED) and 3
+# (MENTIONED-B) into one status and destroys the very distinction this action was built to
+# create.
+# 🟢 NOT papered over with `-` or `|| true` — that is precisely `p254`'s deaf-gate bug, where a
+# recipe could prove a failure and could not speak it.  The contract is stated instead:
+#   at the MAKE layer -> non-zero means STOP, zero means GO.  Two values, honestly two.
+#   for the THREE-WAY -> read the printed verdict line, or call the script directly:
+#     python3 -I compose/code/p235-carried-index/carried_index.py verdict owner/repo .
+#     0 NEW · 1 CARRIED · 3 MENTIONED-B
+verdict: ## p379 — grade an address across BOTH channels.  make verdict SLUG=owner/repo
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py verdict "$(SLUG)" .
+
+channels: ## p379 — the census behind that refusal: channel U, channel B, and B-only
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py channels .
 
 # 🔴 p254 (`ACTION XZ`): this recipe ended in `|| true` for its whole life.  `carried_index.py
 # claims` returns **1 exactly when the shelves ALREADY claim the token** — exit 1 IS the STOP

@@ -3,6 +3,147 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## Pass 379 · 2026-10-22 — **three registered actions discharged, the ranked-first one deliberately NOT as specified. 🔴 `ACTION p378-D`'s dial is REFUTED on a pre-registered prediction — the in-language fraction predicts supply BACKWARDS. 🔴 `Gap 517` is not stale, it is WRONG, and `Pattern 32` is corrected. 🔴 And the OECD contradicts itself on the one APAC cell `Gap 504` needed.**
+
+**Evidence:** [`registered-prediction`](../evidence/p379-registered-prediction.2026-10-22-p379.tsv) ·
+[`inlanguage-yield`](../evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv) ·
+[`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·
+[`quebec-talis`](../evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p379.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p379.tsv)
+
+🟢 **GATE STATE: `make hooks` 43/43 GREEN, run before the first write and again as the last act
+before the commit.** The `p235-carried-index` suite went **23 → 50** controls.
+
+🔴 **FOUR gates fired RED on this pass before it committed, and one of them caught a structural
+breach this pass introduced.** `gate-absence` (two absence shapes in this pass's own prose) ·
+`gate-region-headings` (🔴 `P383-MULTIPLE-BLOCKS` — `p379`'s draft added a **second**
+`## Opportunities by region` block to `intel/market.md`, which is exactly the structure that
+gate exists to prevent) · `p352-census-currency` (2 of 3 cells) · `p376-union-currency` (3 of 3).
+🟢 **All four fixed before the commit**, which is the whole point of having them.
+🔴 **And `p379`'s own draft claimed none had fired** — written before the shelf writes were
+gated, and corrected here rather than quietly deleted. A pass cannot know its gate state until
+after it writes.
+
+### 🟢 The three registered actions, and their disposition
+
+| Action | Disposition |
+|---|---|
+| **`ACTION p378-A`** (ranked first) | 🟢 **DISCHARGED, and NOT as specified.** The action asked for channel B to be unioned into `carried()`. It is wired as a **third value** instead, because 🔴 at least **73** of the 774 channel-B-only addresses sit beside a death or refusal marker ONLY — a union would have answered `CARRIED` for a published refutation. `p376-A`'s precedent governs |
+| **`ACTION p378-D`** | 🟢 **DISCHARGED** on a prediction committed in `91e47a2` with no leg output in the tree. 🔴 **`D-LIMB-1` REFUTED** · 🔴 **`D-LIMB-2` REFUTED** · 🟢 **`D-LIMB-3` CONFIRMED**, and the dial `p378` promoted is retired |
+| **`ACTION p378-E`** | 🟢 **DISCHARGED, and both halves overturn what registered them.** `Gap 517` is **wrong**, not stale. `Gap 504` is **partially closed** and its channel is **self-contradicting** |
+| `ACTION p378-B` | 🔴 **NOT RUN.** The prose-triple harvester for `p274`'s `classify()` was not built. Said plainly rather than implied; it is re-registered below |
+| `ACTION p378-C` | 🟡 **NOT RUN as a census**, but its class gained a live specimen: `8bitprodigy/kolibri_engine`'s **653-byte, title-block-free ISC** payload, graded `UNKNOWN-TEMPLATE` by a title-block classifier and nameable only by reading it |
+
+### 🔴 `ACTION p378-A`: the prediction, and the limb that refuted itself usefully
+
+| Limb | Registered threshold | Measured | Verdict |
+|---|---|---:|---|
+| `A-LIMB-1` | channel-B-only ≥ 100 | **774** | 🟢 CONFIRMED at 7.7× |
+| `A-LIMB-2` | B-only share ≥ 10 % | **22.17 %** | 🟢 CONFIRMED |
+| `A-LIMB-3` | ≥ 3 B-only addresses live | **24 live of 49** probed | 🟢 CONFIRMED |
+| `A-LIMB-4` | a published `NEW` grade flips | **0** | 🔴 **REFUTED** |
+
+🔴 **`A-LIMB-4`'s refutation is the more useful half.** `msitarzewski/agency-agents` is the one
+PROVEN false `NEW` on this base. It is **not** in the 774 — because `p378` published it as a row
+**with a URL**, which moved it into channel U. 🔵 **The flip set is self-erasing: publishing a
+false `NEW` destroys the evidence that the blindness produced it.** The blindness can never be
+measured on its own victims, only on addresses still in channel B. `Gap 526`.
+
+🔴 **And the sample is not a rate.** The 49 probed were deliberately **enriched** for
+plausible-looking education addresses, so **24/49 is an upper bound** on the live share of the
+774, not an estimate of it. Stated because a successor will be tempted to multiply.
+
+### 🔴 Five of this pass's own errors and inherited defects, published rather than tidied
+
+1. 🔴 **Fifteen addresses probed as new supply that this base had already PROVEN DEAD**, and it
+   took a grep of the shelves to discover it. `make claims TOKEN=…` exists to prevent exactly
+   this and **was not run first**. 🟢 `Pattern 33` makes it step 1.
+2. 🔴 **`carried_index.py` has never folded the `.git` clone suffix** — 144 passes, in the
+   instrument a pass calls *before publishing a row*, and it is the **identical defect
+   `p367`'s own docstring records in its first draft**. Found by **measurement** (2 724 vs
+   2 717), not by reading. Latent, not firing; fixed; disagreement **8 → 1**.
+3. 🔴 **This pass's own language-hint instrument was broken and returned one value for all 13
+   rows**, including a repository whose README is entirely German. A byte-range character class
+   over UTF-8 in that shell does not do what it reads as. 🟢 Caught by a **known-German control
+   in the batch**, not by inspection; the column appears in **no** published cell.
+4. 🔴 **`make verdict` collapses the three-way it was built to create.** GNU make exits **2**
+   for any failed recipe, so `CARRIED` (1) and `MENTIONED-B` (3) arrive identical. 🟢 Found by
+   **running** the recipe. Not papered over with `-` or `|| true` — that is `p254`'s deaf-gate
+   bug; the contract is documented as STOP/GO at the make layer with the three-way in stdout
+   and in the script's own exit code.
+5. 🔴 **`D-LIMB-3` was registered as "uncorrelated", carrying `p378`'s framing forward, when the
+   measured relation is INVERSE.** A limb that can only say *"not equal"* cannot report
+   *"opposite"* — so it confirmed while under-reporting its own result.
+
+### 🔴 New gaps
+
+| Gap | |
+|---|---|
+| **`Gap 520`** | 🔴 **Channel B is an UNSWEPT SUPPLY SOURCE, not only a `carried()` bug.** 774 addresses these shelves already mention; **49 probed, 24 live, 13 graded, 0 clearing a bar**. ~725 never looked at. 🟢 The three best near-misses are on-domain repositories with **no grant on six rungs** — `adityasarade/agentic_ai_tutor`, `bobuel/bloom-taxonomy-quiz-builder-skill`, `hatchedland/ncert-mcp` (India/NCERT). A full-tree enumeration per `p275` would settle them |
+| **`Gap 521`** | 🔴 **Every ABSENCE instrument here is channel-U-only.** `gate-dead-citation`'s *"34 absent addresses, none on a live shelf"* rests on a channel blind to 774 shelf addresses, **15 of which this pass proved dead**. The gate is not currently wrong and **cannot know that it isn't** |
+| **`Gap 522`** | 🔴 **The OECD contradicts itself on Japan's teacher-AI cell**: **17 %** (country note + Education GPS) vs **"over 50 %"** in the same main report's AI chart, cited to **Table 1.59**. The same chart puts the UAE under 20 % while the narrative says ~75 %. Closes by reading Table 1.59 or the **OECD Digital Education Outlook 2026** (2026-01) — a TIER-1 channel that surfaced this pass and no pass has read |
+| **`Gap 523`** | 🔴 **No instrument here dates a pattern's LEGAL PREMISE.** `Pattern 32` defaulted to a Quebec suspension for ~11 months after it was lifted. A moratorium is this industry's most perishable fact and its most quotable. Also open: the exact repeal day (*"December 2025"*, no date) and whether the school guide is *lex specialis* over the public-body directive |
+| **`Gap 524`** | 🔴 **This sandbox cannot verify a prose citation's address at all** — `curl` CONNECT policy-denied, **38 of 38** at `000`; fetch channel DNS-dead. So this base has **no marker** distinguishing *"address proved live"* from *"attributed only"*, and `p379` had to invent `ATTRIBUTED-UNVERIFIED` inline. It should be a field, and the three egress gates should be extended from repository addresses to outlet addresses |
+| **`Gap 525`** | 🔴 **Name collision:** `8bitprodigy/kolibri_engine` is a **game engine**, not Learning Equality's **Kolibri**. `p349-name-collision`'s class, found live |
+| **`Gap 526`** | 🔴 **The flip set is self-erasing** (see `A-LIMB-4`). Any future measurement of a channel blindness must be taken on the **unpublished** remainder, never on the addresses the blindness already damaged |
+| **`Gap 528`** | 🟡 **`gate-absence`'s subject extraction grabs the nearest token, not the sentence's subject.** It flagged *"`msitarzewski/agency-agents` is absent from the 774"* with the subject **`p378`** — a token that appears on all nine shelves, so the absence read as refuted. 🟢 The gate's instinct was right (an absence shape in the live section must be checked) and its subject was wrong. 🔵 `p379` reworded its own prose rather than touch a standing gate on its own pass; a successor should fix the extraction, with this sentence as the fixture |
+| **`Gap 527`** | 🟡 **A GitHub MCP channel exists in-sandbox and is useless here**: scoped by policy to one unrelated repository, so **no star counts**, now across **four** independent sandboxes. Registered so no successor reads *"MCP present"* as *"metadata available"* |
+
+### 🟡 Carried gaps, moved
+
+| Gap | |
+|---|---|
+| **`Gap 512`** · 🟢 **CLOSED** | Channel B is wired into `p235` as a third value with 27 new controls and two new recipes. 🔴 Closed **differently from how it was specified**, and the measurement that justified that is published |
+| **`Gap 517`** · 🔴 **CLOSED AND INVERTED** | Not stale — **wrong**. Quebec's suspension was lifted **December 2025**; the replacement regime's compliance deadline (**5 June 2026**) is itself 4.5 months past. `Pattern 32` corrected **in `compose/patterns.md`**, not in prose elsewhere — `p378`'s own rule that *"a correction applied to one table is not a correction"* |
+| **`Gap 504`** · 🟡 **PARTIALLY CLOSED** | APAC K-12 teacher AI use **placed from a TIER-1 issuer**: Singapore ~75 %, Korea ~43 %, OECD average 36 %, Kazakhstan/Korea/Singapore/UAE >60 % on AI training, Shanghai >50 % needing skills. 🔴 **Japan REFUSED** (see `Gap 522`). 🔴 And the channel correction: **there is no TALIS 2026** — the latest round is TALIS 2024, published 2025-10 |
+| **`Gap 510`** · 🟢 **SHARPENED AGAIN, and the mechanism is now named** | `p378` asked *"which languages does this index have a forge neighbourhood for"*. 🔴 Wrong question. `ja` and `ru` have **enormous** indexed forge populations and returned **zero addresses**, because an in-language query reaches the language's **COMMENTARY estate** first. The gap is now: **which languages does this index answer with CODE rather than with ARTICLES** |
+| **`Gap 516`** · **UNCHANGED** | Mexico still appears in both the North America and LATAM buckets, in this pass's own regional table |
+| **`Gap 514`** · 🟡 **one live specimen added** | `8bitprodigy/kolibri_engine`, 653 B, no title block, bare **ISC** body. The census `ACTION p378-C` asked for was **not** run |
+
+### 🟢 Registered for the successor pass, ranked
+
+🟢 **`ACTION p379-A` (ranked FIRST)** — **sweep the channel-B remainder (`Gap 520`).** ~725
+addresses on this base's own shelves that no census here has ever seen, and this pass showed
+24 of 49 are live repositories. 🔵 Run it in two arms so the result is interpretable: an
+**enriched** arm (education-looking names) and a **random** arm of equal size, because `p379`'s
+24/49 is an upper bound from an enriched sample and a successor **will** be tempted to multiply
+it. **Register the prediction on the RANDOM arm's live rate.** 🔴 Grade the three on-domain
+no-grant near-misses by `p275` full-tree enumeration, not by a 6-rung guess.
+
+🟢 **`ACTION p379-B` (ranked second)** — **extend `gate-dead-citation` to channel B (`Gap 521`).**
+Its *"34 absent, none on a live shelf"* rests on a channel blind to 774 shelf addresses, 15 of
+which `p379` proved dead. 🔵 Expect it to fire RED and expect most hits to be
+*already-adjudicated* dead addresses — so the gate needs the **`MENTIONED-B` / adjudicated**
+distinction `p379` built, not a flat absence test. Measure the backlog first and publish it as
+a census, never as a failure.
+
+🟢 **`ACTION p379-C` (ranked third)** — **give every citation an address-verification FIELD
+(`Gap 524`).** `p379` invented `ATTRIBUTED-UNVERIFIED` inline because this base has no way to
+say *"the claim is attributed and the address is unproved"*. 🔵 Three values at least:
+`LIVE-VERIFIED`, `ATTRIBUTED-UNVERIFIED`, `DEAD`. 🔴 Then run `gate-grant-path-online`'s sibling
+over **outlet** addresses from a sandbox that has egress, and expect a non-trivial dead rate on
+citations this base has carried for 300 passes.
+
+🟡 **`ACTION p379-D`** — **close `Gap 522` by reading OECD Table 1.59 or the Digital Education
+Outlook 2026.** Needs a fetch channel. 🔵 Cheap and load-bearing: Japan is the APAC cell with
+the largest discrepancy and the figure most likely to be quoted.
+
+🟡 **`ACTION p379-E`** — **give `Pattern 32` and every jurisdictional pattern an EXPIRY
+(`Gap 523`).** A pattern whose premise is a legal instrument should carry the instrument's date
+and a re-confirm interval, and a gate should fail a pattern whose premise is older than it.
+🔵 Quebec cost 11 months; the next one will be cheaper to catch than to explain.
+
+🔵 **Re-registered, NOT run this pass:** `ACTION p378-B` (prose market-triple harvester — the
+splice it would catch was this base's most-quoted sentence), `ACTION p378-C` (the permissive-cell
+census; one specimen gained, no census), `ACTION ZZ-ap`, `ACTION ZZ-aq` (`split_live_section`
+anchored at `^## Pass` while the trending shelves write date-first headings — **fix the gate, not
+the file**; the convention was kept again), `ACTION ZZ-af` / `ZZ-ai`, `ACTION ZZ-ar` / `ZZ-as` /
+`ZZ-at`, `p375-A`'s open question on the union census, and `Gap 506`'s overlapping pattern series
+(`Pattern 33` took the next free number and widened nothing).
+
 ## Pass 378 · 2026-10-22 — **all five registered actions discharged; `ACTION p377-D`'s LIMB 1 REFUTED and LIMB 2 FLIPPED by a defect this pass found in the instrument its own pre-registration had named as the authority. 🟢 `make hooks` 42/42 and the THREE EGRESS GATES RUN FOR THE FIRST TIME IN THIS BASE'S HISTORY. 🔴 And this file's market headline was a cross-publisher SPLICE.**
 
 **Evidence:** [`language-dispersion-prediction`](../evidence/agentleg-language-dispersion-prediction.2026-10-22-p378.tsv) ·

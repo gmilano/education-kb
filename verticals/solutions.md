@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 🟡 2026-10-22 · `p379` — **the platform leg was deliberately NOT run for a fifth pass, on `p377`'s own instruction, and the vertical finding came from somewhere else: this shelf's platform names are colliding with unrelated repositories, and one collision was probed live this pass**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·
+[`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv)
+
+🟢 **A deliberate nil, and the reason is on the record.** `p377` measured this layer as
+saturated — its platform leg returned Moodle, Open edX, OpenEduCat, RosarioSIS, openSIS,
+Gibbon, Chamilo, ILIAS, Sakai and ERPNext/Frappe Education, **every one already shelved** — and
+told a successor to *"stop paying for this leg every pass and run it quarterly"*. 🔵 `p379`
+followed that instruction and says so, rather than running the leg and implying coverage.
+🟡 One confirming data point arrived free: a general vertical query this pass returned
+**OpenEduCat's own marketing site in eight languages** and nothing else — the layer is not just
+saturated, its search surface is owned by one vendor.
+
+### 🔴 The finding: a platform NAME on this shelf is not a platform ADDRESS
+
+🔴 [`8bitprodigy/kolibri_engine`](https://github.com/8bitprodigy/kolibri_engine) is **live**,
+probed first-hand this pass — `main`, 5 refs, HEAD **2026-04-01** — and it is **a game
+engine**. It has nothing to do with **Kolibri**, Learning Equality's offline-first learning
+platform that these shelves carry as a vertical row. 🔵 It surfaced because it sits in the
+**774-address channel-B population** nobody has swept, and it was probed as a candidate because
+its name reads like an education platform.
+
+| Trap | Why it matters to a proposal |
+|---|---|
+| `kolibri_engine` ≠ **Kolibri** | A studio searching the forge for "kolibri" lands on a game engine with an **ISC** grant and no education code. `Gap 525` |
+| 🔴 `studip/studip`, `aleksis/aleksis`, `sunbird-ed/sunbird-ed-portal` all `rc=128` | These are **real platforms** (Stud.IP, AlekSIS, Sunbird Ed) whose addresses as written on these shelves **do not resolve**. The products exist; the slugs do not. A proposal citing them cites nothing |
+
+🟢 **And the grant on the collision is itself worth a line**, because it is `ACTION p378-C`'s
+class: **653 bytes, no title block**, which a title-block classifier returns as
+`UNKNOWN-TEMPLATE`. Read first-hand it is the bare **ISC** body. 🔵 A permissive grant that no
+instrument here can name is more dangerous than a restrictive one it can.
+
+### 🟢 The platform rows a proposal should still cite, unchanged and restated for reach
+
+🔵 `p378` corrected Open edX's address and the correction stands; it is restated here because
+`p378`'s own finding was that *"a correction applied to one table is not a correction"*.
+
+| Platform | Address to cite | Grant | Note |
+|---|---|---|---|
+| **Open edX** | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | 🔴 Do **not** cite `openedx/edx-platform` — the pre-rename name of the same repository |
+| **Moodle** | 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | Vendor claims 400 M users / 150 k sites; 🔴 vendor-published, not adopted as a figure here |
+| **OpenEduCat** | carried | — | 🔴 Installed base **still REFUSED**: `p377` caught *"30 000+ institutions"* against the vendor's own *"1 000+"* About page, a 30× self-contradiction. 🟢 Still refused at `p379` |
+
+🔴 **The AGPL/GPL fact a studio must not discover late.** The two largest platforms on this
+shelf are **AGPL-3.0** and **GPL-3.0**. `verticals/` is where Globant's "build on top" story
+meets a copyleft grant, and `p379` adds nothing permissive to it. 🔵 The permissive layer in
+this industry remains the **standards and integration** tier — LTI, OneRoster, xAPI, Open
+Badges — not the platform tier. 🔴 And this pass proved **nine** of those standards-tier
+addresses, as written on these shelves, are dead.
+
+🟡 **One deployment-companion cell, still unopened.** `p364`'s companion axis and `p377`'s
+advice both point at **deployment companions** rather than the platform list. `p379` did not
+open it either, and that is now a two-pass deferral rather than an oversight.
+
 ## 🔴 2026-10-22 · `p378` — **no new platform, and the vertical finding is that this shelf has been publishing Open edX at an address its own owner renamed — proven by an earlier pass, never corrected here**
 
 **Evidence:** [`repo-identity-adjudication`](../evidence/repo-identity-adjudication.2026-10-22-p378.tsv)

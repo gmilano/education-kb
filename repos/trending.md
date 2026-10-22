@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 2026-10-22 · `p379` — **this week's trending read is a NEGATIVE one and it is the useful kind: 15 addresses these shelves publish do NOT RESOLVE, proved by first-hand `ls-remote`, and every one of them is invisible to every census instrument on this base.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·
+[`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p379.tsv)
+
+🔴 **No GitHub trending list was readable this week, and the reason is a channel fact rather
+than an absence of effort.** `api.github.com` and `github.com` HTML both answer **403** — a
+fourth independent sandbox — and `curl` CONNECT to every non-allowlisted host is policy-denied,
+so third-party trend trackers are unreachable too (**38 of 38** candidate addresses at `000`).
+🟢 What **is** reachable: `github.com` over git, `raw.githubusercontent.com`, `repo1.maven.org`.
+🔵 So "trending" this week means **what moved on addresses this base can prove**, not a ranking.
+
+### 🟢 Moved recently, proved first-hand
+
+| Address | HEAD | Refs | Grant, read first-hand |
+|---|---|---:|---|
+| [`studentsuite/awesome-skills-plugins-for-students`](https://github.com/studentsuite/awesome-skills-plugins-for-students) | 🟢 **2026-10-21** | 57 | MIT, canonical 1 069 B, `sha256:537c697c69a5` |
+| [`alfredang/ai-cms`](https://github.com/alfredang/ai-cms) | 🟢 2026-10-16 | 6 | 🔴 **none on 6 rungs** — UNREAD |
+| [`librarycarpentry/lc-data-intro`](https://github.com/librarycarpentry/lc-data-intro) | 🟢 2026-10-06 | 232 | 🟡 Creative Commons, 3 328 B, `sha256:1b7f11e8511b` |
+| [`aflah02/open-unlearning`](https://github.com/aflah02/open-unlearning) | 2026-09-17 | 12 | MIT, 1 069 B, `sha256:2f6df7a76faa` |
+| [`bobuel/bloom-taxonomy-quiz-builder-skill`](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 2026-09-05 | 3 | 🔴 **none on 6 rungs** — UNREAD |
+| [`8bitprodigy/kolibri_engine`](https://github.com/8bitprodigy/kolibri_engine) | 2026-04-01 | 5 | 🔴 **ISC**, 653 B, no title block — a game engine, **not** Kolibri |
+
+🔵 Every one of the six arrived through **channel B** — a bare backticked slug on these shelves
+— and not one of them has ever been visible to a census, identity or absence instrument here.
+
+### 🔴 The negative result: 15 published addresses that do not resolve
+
+🔴 `1edtech/badgr-server` · `concentricsky/badgr-server` · `concentricsky/badgr-ui` ·
+`1edtech/ltijs` · `1edtech/oneroster` · `1edtech/caliper-python` · `studip/studip` ·
+`aleksis/aleksis` · `sunbird-ed/sunbird-ed-portal` · `xapijs/xapi.js` ·
+`adl-opensource/xapi-spec` · `vtutortools/vtutor` · `owentaylor/canvas-mcp` ·
+`selleo/mentingo-scorm` · `jdolny/oneroster.js` — **all `rc=128`**, re-probed with true owner
+casing where one was guessable.
+
+🟢 **The probe is sound, not the addresses:** two true-cased controls answer `rc=0` —
+`Cvmcosta/ltijs` and `adlnet/xAPI-Spec`.
+🟡 **Most are already-adjudicated**: earlier passes proved them dead and wrote them as bare
+slugs inside dead-citation sweeps. 🔴 **But `gate-dead-citation` cannot know that**, because its
+census reads channel U only. Its published *"34 absent addresses, none on a live shelf"* rests
+on a channel blind to **774** shelf addresses. `Gap 521`.
+🔴 **And the product-vs-slug trap it exposes:** Stud.IP, AlekSIS and Sunbird Ed are **real
+platforms**. The slugs written for them here are not real addresses. A proposal citing them
+cites nothing.
+
+### 🟢 Instrument change shipped this week
+
+🟢 `make verdict SLUG=owner/repo` — a **three-valued** address grade across both channels
+(`CARRIED` / `MENTIONED-B` / `NEW`), plus `make channels` for the census behind it.
+`make carried` is **behaviour-unchanged**. 🟢 `carried_index.py` now folds the **`.git`** clone
+suffix, closing an 8-address disagreement with the base's canonical harvester down to **1**.
+🟢 `make hooks` **43/43** green before the first write and again at commit; the
+`p235-carried-index` suite **23 → 50** controls.
+
 ## 🔴 2026-10-22 · `p378` — **`gate-identity-online` RUN FOR THE FIRST TIME EVER: 5 HEAD collisions this base had never shelved, 4 of them one repository, and the fifth REFUSED by an instrument the gate does not use**
 
 🔵 **APPEND-ONLY.** Added at the top; everything below is kept as the record.

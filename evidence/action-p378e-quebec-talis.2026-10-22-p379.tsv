@@ -1,0 +1,65 @@
+# p379 — ACTION p378-E, RESULT.  Two halves, and BOTH overturn what registered them.
+#
+# ============================================================================
+# HALF 1 — Gap 517 (Quebec).  p378 filed it as "ten months stale".
+# 🔴 IT IS NOT STALE.  IT IS WRONG, AND `Pattern 32` DEFAULTS TO IT.
+# ============================================================================
+#
+# What this base carried: a Quebec SUSPENSION of generative-AI virtual assistants, decreed
+# 13 March 2025 by the Ministere de la Cybersecurite et du Numerique, which an earlier pass
+# recorded as pausing new generative-AI initiatives in Quebec public schools.  p378's own
+# limitation note: "last confirmed in force ten months ago on a TIER-2 outlet".
+#
+# What the French leg found, run 2026-10-22 and then corroborated by a second domain-filtered leg:
+finding	date	outlet	tier	address_status
+The March 2025 suspension was LIFTED by a December 2025 directive that REPEALED indication IA-RI-2025-001-OP and replaced it with a structured governance framework	2025-12	cyberjustice.ca (Universite de Montreal cyberjustice laboratory)	TIER-2 academic	ATTRIBUTED-UNVERIFIED
+Covered public bodies had to be FULLY COMPLIANT with the replacement directive by 5 June 2026	2026-06-05	gouvernance.ai and florianbrobst.com, both naming the same date; UQAM Collimateur names the same deadline	TIER-3 x2 + TIER-2 university watch	ATTRIBUTED-UNVERIFIED
+Scope is the bodies in s.2 of the public-sector information-resources governance law: ministries, municipalities, health-network institutions, state corporations	-	subventions-obnl.ca	TIER-3	ATTRIBUTED-UNVERIFIED
+A PRIMARY DOCUMENT EXISTS on a gouv.qc.ca domain: "123-02 Directive visant a baliser l'utilisation de l'intelligence [artificielle generative]", csspb.gouv.qc.ca, uploaded 2026/10	2026-10	csspb.gouv.qc.ca (a Quebec centre de services scolaire)	🟢 TIER-1 by domain	ATTRIBUTED-UNVERIFIED — and it is the address a successor should read FIRST
+The Ministere de l'Education published a 2026 edition of its pedagogical/ethical/legal generative-AI guide for teaching staff, in force from the late-August 2026 school year, which delegates tool authorisation to school bodies	2026-08	ecolebranchee.com and gouvernance.ai; the guide PDF itself is on cdn-contenu.quebec.ca	TIER-3 x2 relaying a TIER-1 document	ATTRIBUTED-UNVERIFIED
+The January 2026 update to the government MCN/IT management framework carried generative-AI guidelines for Quebec public bodies for the first time	2026-01	gouvernance.ai	TIER-3	ATTRIBUTED-UNVERIFIED
+#
+# 🔴 CONSEQUENCE, and it is a correction to a live pattern rather than a gap note.
+# `Pattern 32` defaults to a Quebec prohibition.  That prohibition ended roughly ELEVEN MONTHS
+# before this pass, the regime that replaced it is PERMISSIVE-WITH-GOVERNANCE, and even that
+# regime's compliance deadline (5 June 2026) is four and a half months in the past.  A studio
+# proposing to a Quebec school body on `Pattern 32`'s default would arrive with the wrong
+# premise AND the wrong posture: not "you may not", but "you must have had a governance
+# structure, named approvers and alignment with the government framework since June".
+# 🟡 The correction is applied to `compose/patterns.md` in THIS pass and not left in prose.
+# p378's own finding was that "a correction applied to one table is not a correction".
+# 🔴 WHAT IS STILL NOT ESTABLISHED: the exact repeal date (sources say "December 2025" without
+# a day), and whether the school-sector guide interacts with the public-body directive as
+# lex specialis.  Neither is readable from here.  Gap 523 carries the first; the TIER-1
+# gouv.qc.ca address above is the channel for both.
+#
+# ============================================================================
+# HALF 2 — Gap 504 (APAC K-12) through the OECD TALIS channel p377 named.
+# 🟡 PARTIALLY CLOSED.  🔴 AND THE CHANNEL CONTRADICTS ITSELF ON THE APAC CELL.
+# ============================================================================
+#
+# 🔴 FIRST CORRECTION, to the channel itself: THERE IS NO TALIS 2026.  The most recent round
+# is TALIS 2024, published October 2025.  p377 named "OECD TALIS or a ministry release" as the
+# channel to close Gap 504; the TALIS half cannot yield a 2026 figure at all, for any region.
+# 🟢 TALIS does survey LOWER SECONDARY teachers, so the channel is right in KIND for K-12.
+# 🟢 A SEPARATE AND UNUSED TIER-1 CHANNEL SURFACED: OECD Digital Education Outlook 2026,
+# published 2026-01 at oecd.org/content/dam/.../oecd-digital-education-outlook-2026_...pdf.
+# Not read this pass (no fetch channel).  It is the better pointer for Gap 504's remainder.
+#
+system	figure	measure	outlet	tier	disposition
+OECD average	36 pct of teachers report having used AI in their work	TALIS 2024	OECD main report	TIER-1 issuer	🟢 ADOPTED as the denominator
+Korea	about 43 pct, above the OECD average; commonest uses lesson plans, real-life practice scenarios, topic summarisation	TALIS 2024	OECD country note	TIER-1 issuer	🟢 ADOPTED — an APAC K-12 cell, dated, from the issuer
+Singapore	about 75 pct of teachers use AI in their work; 76 pct participated in AI-focused professional learning, the highest measured	TALIS 2024	OECD main report	TIER-1 issuer	🟢 ADOPTED — the APAC high-water mark
+Kazakhstan, Korea, Singapore, UAE	AI-focused training participation above 60 pct	TALIS 2024	OECD main report	TIER-1 issuer	🟢 ADOPTED
+Shanghai (China)	more than 50 pct of teachers report NEEDING to gain AI skills	TALIS 2024	OECD main report	TIER-1 issuer	🟢 ADOPTED — a demand signal, not an adoption one, and the two are not the same cell
+Japan	🔴 17 pct (country note + Education GPS profile, two OECD surfaces agreeing) VERSUS "over 50 pct" in the same main report's AI chart text, cited to Table 1.59	TALIS 2024	OECD, both sides	TIER-1 issuer on both sides	🔴 REFUSED. One publisher, two incompatible values for one cell. The chart text also places the UAE under 20 pct while the narrative places it at about 75 pct — so the chart is measuring something else and does not say what
+#
+# 🔴 SO Gap 504 IS PARTIALLY CLOSED AND ITS REMAINDER IS SHARPER THAN BEFORE.
+# APAC K-12 teacher AI use is now PLACED for Korea, Singapore, Kazakhstan and Shanghai from a
+# TIER-1 issuer with a named instrument and round.  It is REFUSED for Japan, and the reason is
+# not a weak outlet — it is the strongest possible outlet disagreeing with itself.
+# 🔵 What closes the remainder: OECD Table 1.59 read directly, or the Digital Education
+# Outlook 2026.  Both need a fetch channel this sandbox does not have.  Gap 522.
+# 🔴 AND THE HONEST LIMIT ON THE WHOLE HALF: every figure here reached this pass through a
+# search transport, not through a read of the OECD document.  Two OECD surfaces agreeing on
+# Japan's 17 pct is two surfaces as REPORTED, not two documents as READ.

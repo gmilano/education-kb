@@ -3,6 +3,63 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 🟢 2026-10-22 · `p379` — **the 2026 trend consensus is no longer "AI arrives" but "AI is governed", and this pass can finally put a MEASURED number on the gap it creates: 87 % of LATAM higher-ed institutions use AI, 26 % have a strategy. 🔴 The trend claim this base should NOT repeat is any 2026 market level.**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p379.tsv) ·
+[`quebec-talis`](../evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv) ·
+[`inlanguage-yield`](../evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv)
+
+🔴 **Verification posture for this whole shelf, stated first:** every non-GitHub citation below
+is **`ATTRIBUTED-UNVERIFIED`** — this sandbox cannot resolve a non-GitHub address at all
+(`curl` CONNECT policy-denied, 38 of 38 at `000`; fetch channel DNS-dead). `Gap 524`.
+
+### 🟢 What four independent regional legs agree on
+
+| Trend | Evidence across regions | Confidence |
+|---|---|---|
+| **From pilots to governed infrastructure** | EU: ~two-thirds of European education systems have an AI strategy/guidance (EC, 22 Sep 2026). LATAM: only **26 %** of institutions do, against **87 %** using AI. Quebec: a suspension replaced by a *compliance-deadline* regime | 🟢 **High** — four regions, same direction, different instruments |
+| **The binding constraint is an AGE FLOOR, not a capability** | US districts: Katy ISD bars K-6, NYC moratorium through grade 8. Vietnam names behavioural monitoring and automated assessment as high-risk | 🟢 **High**, and it **re-confirms `p375`'s age-floor pattern out of sample** in a third legal system |
+| **Assessment is the regulated boundary everywhere** | EU Annex III (access, assessment, learning paths); Vietnam's statutory trigger is automated assessment; US states bar AI from high-stakes student decisions | 🟢 **High** — and it corroborates `p374`'s assessment boundary a third time |
+| **Teacher adoption is bimodal, not rising uniformly** | TALIS 2024: Singapore ~75 % and Korea ~43 % against an OECD average of **36 %**, France and Japan under 20 % | 🟡 **Medium** — TIER-1 issuer, but 🔴 the issuer contradicts itself on Japan |
+| **Evidence-of-learning becomes a procurement requirement** | HolonIQ expects buyers to demand proof of learning, persistence or job-relevant skill gains | 🟡 **Medium** — one outlet, and a forecast rather than a measurement |
+| **Credentials as hiring currency** | Digital credentials named as a core skills-based hiring mechanism; 1EdTech names governance as its 2026 watch item | 🟡 **Medium**, and it is 🟢 **consistent with `p371`'s finding** that this industry's unshelved layer is **credentialing, not tutoring** |
+
+🔵 **The two that matter most for a studio are the ones that repeat across legal systems.** An
+age floor and an assessment boundary have now each been drawn independently by the EU, by
+Vietnam, and by US state and district policy. Neither is a vendor forecast; both are build
+constraints, and both were predicted by earlier passes here on narrower evidence.
+
+### 🔴 The trend claim to stop repeating
+
+🔴 **Any 2026 market LEVEL.** `$12.3 B` is refused at two outlets with one unnamed origin; the
+`~$6 B → ~$32 B` series contradicts it; the North-America `$3.68 B`/36 % split is TIER-4; and
+this base's own `$9.58 B → $42.5 B @ 41.5 %` headline was withdrawn by `p378` as a
+cross-publisher **splice**. 🟢 **Four passes have now failed to source a defensible level.**
+That is a finding about the sector's data, not about this base's effort: AI-in-education market
+sizing is published by aggregators who do not name their studies.
+🔵 **What to say instead**, and it is better for a proposal anyway: *adoption* is measured
+(TALIS, UNESCO IESALC), *governance* is measured (EC, UNESCO), and the **gap between them** is
+the engagement.
+
+### 🟡 A trend this pass measured accidentally, about the industry's own visibility
+
+🔴 **An in-language query reaches a language's COMMENTARY estate before its code.** Japanese and
+Russian legs returned **100 %** in-language answer sets and **zero** repositories; the German
+leg returned 44 % in-language and the pass's only repository. 🔵 Read as an industry trend
+rather than an instrument note: **education-AI open source is discussed in many languages and
+published in English.** The one counter-example found all year — `telekom/ki-in-schulen`,
+German, MIT — is **teaching material**, not code. 🟢 A studio should expect to localise
+*content* and inherit *code* in English.
+
+### 🔴 And a trend correction with a client-facing cost
+
+🔴 **Quebec.** This base carried a Quebec generative-AI suspension as a live default for months
+after it ended. It was **lifted in December 2025**; the replacement regime's compliance deadline
+(**5 June 2026**) is itself four and a half months past. 🔵 The general lesson, filed as
+`Gap 523`: **no instrument here dates a pattern's legal premise.** A moratorium is the most
+perishable fact in this industry and the most likely to be quoted from a slide.
+
 ## 🔴 2026-10-22 · `p378` — **three trends, and two of them are withdrawals of this base's own readings rather than movements in the market**
 
 ### 🔴 `T-p378-1` — "query language is an instrument axis" is NARROWED: it holds only where the language has an indexed developer-forge population

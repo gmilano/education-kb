@@ -88,9 +88,93 @@ check("bare form with comma", ci.carried("c/d", idx), True)
 check("bare form with period", ci.carried("e/f", idx), True)
 check("dotted repo name survives", ci.carried("g/h.js", idx), True)
 
+# ── p379: `ACTION p378-A` — the three-valued grade, and the controls that pin WHY it is
+# three-valued rather than a union. Every fixture below is a real string from this base.
+#
+# 🔴 The specimen that registered Gap 512: p378's `make carried` graded this NEW while
+# repos/trending.md already carried it as a backticked bare slug.
+d = shelf_dir({
+    "repos/trending.md": "a roster at `msitarzewski/agency-agents` — not education\n",
+    "README.md": "linked https://github.com/HKUDS/DeepTutor is the anchor row\n",
+})
+check("grade: channel U still CARRIED", ci.grade("HKUDS/DeepTutor", root=d), ci.CARRIED)
+check("grade: Gap 512's own specimen is MENTIONED-B",
+      ci.grade("msitarzewski/agency-agents", root=d), ci.MENTIONED_B)
+check("grade: a true absence is still NEW", ci.grade("acme/nope", root=d), ci.NEW)
+check("grade: MENTIONED-B is case-folded", ci.grade("MSITARZEWSKI/Agency-Agents", root=d),
+      ci.MENTIONED_B)
+
+# 🟢 carried() MUST NOT MOVE. p376-A's lesson: a standing instrument that silently re-grades
+# retro-edits published denominators. These two controls are the ones that fail if a
+# successor "simplifies" grade() into carried().
+idx = ci.harvest(d)
+check("carried() unchanged: channel-B address is still NOT carried",
+      ci.carried("msitarzewski/agency-agents", idx), False)
+check("carried() unchanged: channel-U address is still carried",
+      ci.carried("hkuds/deeptutor", idx), True)
+
+# 🔴 THE REASON FOR THE THIRD VALUE, pinned as a control. These two addresses appear on
+# agents/top.md inside a DEAD-CITATION sweep, written as bare slugs because the pass was
+# reporting a negative. Both answered rc=128 first-hand at p379. A union into carried()
+# would have reported them as rows this base carries.
+d2 = shelf_dir({"agents/top.md": (
+    "dead addresses: `concentricsky/badgr-server`, `1EdTech/badgr-server` — both rc=128\n")})
+check("adjudicated-dead slug grades MENTIONED-B, not CARRIED",
+      ci.grade("1EdTech/badgr-server", root=d2), ci.MENTIONED_B)
+check("adjudicated-dead slug is NOT carried()",
+      ci.carried("1EdTech/badgr-server", ci.harvest(d2)), False)
+
+# 🔵 Channel B's over-collection must not reach grade() as an address. p351's shape filter
+# and p367's four arms own this; these controls prove grade() inherits them rather than
+# re-deciding. `main/LICENSE` is a grant rung, `47/47` a ratio, `agents/top.md` a shelf path.
+d3 = shelf_dir({"README.md": "grant at `main/LICENSE`, ratio `47/47`, shelf `agents/top.md`\n"})
+check("grant rung is not an address", ci.grade("main/LICENSE", root=d3), ci.NEW)
+check("ratio is not an address", ci.grade("47/47", root=d3), ci.NEW)
+check("shelf path is not an address", ci.grade("agents/top.md", root=d3), ci.NEW)
+
+# 🟢 An unticked prose slug stays invisible, which is p367's documented limit and not a bug:
+# unticked `owner/repo` cannot be told from an English word pair by any honest rule.
+d4 = shelf_dir({"README.md": "we looked at acme/widget yesterday\n"})
+check("unticked prose slug is NOT channel B", ci.grade("acme/widget", root=d4), ci.NEW)
+
+# 🔴 DEGRADATION ARM: if p367 is unavailable, channel B must be EMPTY and grade() must
+# collapse to carried()'s two values — never guess a channel. Pinned by pointing the module
+# constant at a path that does not exist.
+_saved = ci._B_MODULE
+try:
+    ci._B_MODULE = "/nonexistent/p379/bare_slug_channel.py"
+    check("degraded: harvest_b is empty, not guessed", ci.harvest_b(d), set())
+    check("degraded: grade falls back to NEW, not MENTIONED-B",
+          ci.grade("msitarzewski/agency-agents", root=d), ci.NEW)
+    check("degraded: channel U is unaffected", ci.grade("HKUDS/DeepTutor", root=d), ci.CARRIED)
+finally:
+    ci._B_MODULE = _saved
+check("degradation arm restored the module path", ci.harvest_b(d) != set(), True)
+
+# 🔵 The three values are distinct strings, so `if grade(...)` cannot read MENTIONED-B as a
+# bool the way `if carried(...)` reads True.
+check("the three values are distinct", len({ci.CARRIED, ci.MENTIONED_B, ci.NEW}), 3)
+
+# ── p379: the `.git` suffix fold. Found by running this module's census beside p367's and
+# measuring the 8-address disagreement, not by reading the code.
+check("fold strips .git", ci.fold("cvmcosta/ltijs.git"), "cvmcosta/ltijs")
+check("fold strips .GIT case-blind", ci.fold("CVMCOSTA/Ltijs.GIT"), "cvmcosta/ltijs")
+check("fold strips .git after punctuation", ci.fold("a/b.git)"), "a/b")
+check("fold leaves a dotted repo NAME alone", ci.fold("g/h.js"), "g/h.js")
+check("fold leaves a repo literally named git alone", ci.fold("a/git"), "a/git")
+check("fold is still idempotent with the suffix arm", ci.fold(ci.fold("A/B.git")), "a/b")
+
+# THE FALSE NEGATIVE THIS CLOSES: an address published ONLY in clone-suffix form.
+d5 = shelf_dir({"README.md": "clone it: https://github.com/cvmcosta/ltijs.git\n"})
+idx5 = ci.harvest(d5)
+check("a .git-only address is CARRIED for its bare form", ci.carried("cvmcosta/ltijs", idx5), True)
+check("one address, not two spellings", len(idx5), 1)
+check("grade agrees with carried on the .git-only case",
+      ci.grade("cvmcosta/ltijs", root=d5), ci.CARRIED)
+
 if FAILED:
     print(f"FAIL ({len(FAILED)})")
     for line in FAILED:
         print("  " + line)
     sys.exit(1)
-print("PASS — 23 controls")
+print("PASS — 23 controls + p379's 18 on the three-valued grade + 9 on the .git fold = 50")

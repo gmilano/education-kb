@@ -1,0 +1,60 @@
+# p379 — the four regional legs plus ACTION p378-E, run 2026-10-22.
+#
+# 🔴 THE VERIFICATION LIMIT OF THIS SANDBOX, STATED BEFORE ANY ROW BELOW IS READ.
+# This base's standing rule is that a published address must be proved live first-hand.
+# p378 did that for 275 of 275 grant paths.  THIS SANDBOX CANNOT DO IT FOR A PROSE CITATION:
+#   curl  -> the egress policy answers 403 to CONNECT for every non-allowlisted host.  All 38
+#            candidate citation URLs returned 000 (connect refused).  The proxy's own status
+#            endpoint names the denials, e.g. host "excelined.org:443", kind
+#            "connect_rejected".  Its README says not to retry a policy denial.
+#   fetch -> the page-fetch channel fails DNS resolution (ENOTFOUND) for the same hosts.
+#   github.com git + raw.githubusercontent.com + repo1.maven.org -> REACHABLE, which is how
+#            every row in verified-repos.2026-10-22-p379.tsv was proved.
+# 🟢 SO EVERY NON-GITHUB CITATION THIS PASS ADDS IS MARKED `ATTRIBUTED-UNVERIFIED`: the claim
+# is attributed to a named outlet, and the ADDRESS is not proved to resolve.  That is weaker
+# than this base's norm and it is labelled rather than quietly equated with it.  Gap 524.
+# 🔵 A second channel does exist and was used where it mattered: an independent search leg,
+# domain-filtered, run to see whether a second outlet carries the same claim.  That raises an
+# outlet count; it does not prove an address.
+#
+region	jurisdiction	claim	outlet	tier	address_status	disposition
+North America	US (federal)	K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747) advanced at a July 2026 committee markup	multistate.us legislative tracker	TIER-3 tracker	ATTRIBUTED-UNVERIFIED	REPORTED as attributed; bill status not read from the committee record
+North America	US (states)	134 AI-in-education bills introduced across 31 states in the 2026 session; themes student data privacy, classroom-use limits, curriculum	multistate.us	TIER-3 tracker	ATTRIBUTED-UNVERIFIED	REPORTED as attributed — a single tracker, and the count is the kind of figure that moves weekly
+North America	US (California, Idaho)	California AB 1159 and Idaho SB 1227 target student data use in AI tools	multistate.us	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED; bill texts not read
+North America	US (Oklahoma, Maryland)	Require human oversight; bar AI from high-stakes decisions about students	multistate.us	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED
+North America	US (districts)	Katy ISD (TX) bans generative AI chatbots for K-6, supervised access from grade 7; New York City one-year moratorium on student-facing AI through grade 8	pursuit.us / CDT summary	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED — district-level, and the most actionable NA cell for a studio because it is a procurement boundary
+North America	Canada (federal)	"AI for All" strategy June 2026 includes an AI-literacy push; NO federal AI statute and no legislated date	regulations.ai summary	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED as an absence of statute, which is the load-bearing half
+North America	Canada (Quebec)	🔴 See ACTION p378-E below — this is a CORRECTION, not a cell
+North America	Mexico	Bills exist; no enforcing regulator yet	regulations.ai summary	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED; p378's dated TIER-1 federal sequence remains the better Mexico cell
+North America	US (market)	North America holds 36 pct regional share, 3.68 USD bn in 2026	unnamed market-research aggregate via azumo.com	TIER-4	ATTRIBUTED-UNVERIFIED	🔴 REFUSED as a figure, reported only as "the aggregators put NA first by share". A share and a level from one TIER-4 outlet, and the level disagrees with this base's refused headline band
+North America	US (K-12 teachers)	60 pct of US K-12 teachers used AI tools in the 2024-25 school year	azumo.com statistics page	TIER-4	ATTRIBUTED-UNVERIFIED	🔴 REFUSED — a statistics-roundup page with no named primary
+EMEA	EU	AI Act amendments adopted June 2026, in force 27 July 2026; AI Office and national authorities enforcing from 2 August 2026	European Commission digital-strategy page	TIER-1 issuer	ATTRIBUTED-UNVERIFIED	REPORTED — TIER-1 by issuer, address unproved here
+EMEA	EU	Education is Annex III high-risk (access, assessment, learning paths)	EU AI Act text via two secondary guides	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED — consistent across both guides and with this base's carried cells
+EMEA	EU	🔴 CONFLICT: education high-risk obligations pushed from 2 August 2026 to 2 DECEMBER 2027 (one outlet) vs "delayed to end-2027" (another) vs 2 August 2027 for a DIFFERENT Annex-I category (a third)	planbe.eco / iapp.org / rockinst.org	TIER-2 / TIER-2 / TIER-2	ATTRIBUTED-UNVERIFIED	🔴 REFUSED AS A DATE. Three outlets, three dates, two of which are about different categories. A studio cannot plan a compliance date on this and must read the Official Journal
+EMEA	EU	Transparency duties already live from 2 August 2026: people must be told they are dealing with an AI system; deepfakes disclosed. AI-literacy duty retained but "support" rather than guarantee	planbe.eco	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED — and this is the part that bites a 2026 engagement, not the delayed high-risk half
+EMEA	EU	Two European Commission reports published 22 September 2026 describe generative AI as mainstream in EU education; nearly two-thirds of European education systems now have an AI strategy, guidance or policy framework	acceleras.io quarterly review citing the Commission	TIER-3 relaying TIER-1	ATTRIBUTED-UNVERIFIED	REPORTED with the relay named. The "two-thirds" figure is the useful one and it is second-hand
+EMEA	EU	Apply AI Alliance launched as a multi-stakeholder forum	European Commission	TIER-1 issuer	ATTRIBUTED-UNVERIFIED	REPORTED
+EMEA	France	France imposes one hour per week of AI literacy in schools; Quebec contrasted as choosing integration over a timetabled hour	gouvernance.ai	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED as attributed — a concrete curriculum mandate and the sharpest EMEA/NA contrast found this pass
+EMEA	Germany	🟢 telekom/ki-in-schulen — see verified-repos: the ONE address this pass added, and it is a German one, found by the German leg
+APAC	Vietnam	AI law in force 1 March 2026, extraterritorial to foreign providers; education one of six high-risk sectors (automated assessment, behavioural monitoring); systems running before 15 August 2026 get a further six months	lw.com (Latham) APAC survey	TIER-2 law firm	ATTRIBUTED-UNVERIFIED	REPORTED — and it CORROBORATES p376's independent finding of Vietnam's assessment trigger from a different outlet
+APAC	South Korea	AI Basic Act in force from 22 January 2026	lw.com	TIER-2 law firm	ATTRIBUTED-UNVERIFIED	REPORTED
+APAC	Japan, Taiwan	Framework / promotion instruments rather than binding horizontal law	lw.com	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED
+APAC	Singapore, Australia	Voluntary frameworks plus existing statutes	lw.com	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED
+APAC	region	Ipsos Education Monitor 2026: lower support for banning AI in schools across the Asian markets surveyed; Australia and New Zealand the exception with higher support for a ban	ipsos.com	TIER-2 named survey house	ATTRIBUTED-UNVERIFIED	REPORTED — a named survey house with its own instrument, the strongest APAC sentiment cell found
+APAC	region	"Adoption breadth is extraordinary but depth remains shallow"	digitalinasia.com executive summary	TIER-3	ATTRIBUTED-UNVERIFIED	REPORTED as a characterisation, not a measurement
+APAC	K-12	🔴 See ACTION p378-E below — Gap 504 is PARTIALLY closed and the channel is CONFLICTED
+LATAM	19 countries	UNESCO IESALC: 200 higher-education institutions across 19 countries; 87 pct use AI in at least one area; 74 pct in teaching and learning; only 26 pct have a formal AI strategy; adoption driven by individual academics and students rather than institutional plans; private institutions have more governance capacity than public	UNESCO IESALC	TIER-1 issuer	ATTRIBUTED-UNVERIFIED	🟢 REPORTED and it is the best-sourced regional cell of the pass: a named instrument, a stated sample, a stated denominator. The 87/26 gap is the commercial finding
+LATAM	region	UNESCO launched an Observatory on AI in Education for Latin America and the Caribbean on 14 April 2026	UNESCO	TIER-1 issuer	ATTRIBUTED-UNVERIFIED	REPORTED — a dated institutional channel a successor can point at
+LATAM	region	School-level AI education and postgraduate programmes are growing but remain exceptions	Latin American AI Index (ILIA) 2025	TIER-2 named index	ATTRIBUTED-UNVERIFIED	REPORTED — note the index is the 2025 edition published 2026-03, so the K-12 cell is a year behind the higher-ed one
+LATAM	Uruguay	Signed the Council of Europe AI framework convention in 2025	EU IP Helpdesk	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED
+LATAM	Mexico	Federal AI bill in the Senate, risk-based	EU IP Helpdesk	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED. 🔴 Gap 516 stands: Mexico keeps appearing in both the NA and LATAM buckets
+LATAM	Colombia	National AI policy CONPES 4144, February 2025	EU IP Helpdesk	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED
+LATAM	Peru	AI law with phased implementation	EU IP Helpdesk	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED, undated phases — too vague to plan on
+LATAM	Chile	Preparing a data-protection authority to oversee AI	EU IP Helpdesk	TIER-2	ATTRIBUTED-UNVERIFIED	REPORTED
+LATAM	region	Brazil largest market, Argentina fastest-growing; Softtek named as an implementation partner	marketdataforecast / nivelics	TIER-4	ATTRIBUTED-UNVERIFIED	🔴 REFUSED as a figure; the ordering is reported as a vendor claim only
+#
+# 🟢 NO REGION RETURNED A NIL THIS PASS.  All four legs produced placed, dated material, so
+# p374-regional-leg's J2 invariant (every published nil names a jurisdiction and has an
+# in-language sibling) has nothing to bind here.  Said explicitly: silence would look like
+# coverage, and this is not silence.
+# 🔵 The in-language sibling legs that DID run were fr (Quebec, below), ja, de and ru.

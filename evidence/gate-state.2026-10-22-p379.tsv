@@ -1,0 +1,49 @@
+# p379 — gate state, run as the OPENING ACT and again as the LAST ACT before the commit.
+# Gap 511's standing rule: a pass probes its own channels before it reasons about them.
+#
+when	command	result
+before the first write	make hooks	🟢 43/43 GREEN
+before the first write	channel probe	make AVAILABLE · git ls-remote OK · raw.githubusercontent.com 200 · repo1.maven.org 200 · api.github.com 403 · github.com HTML 403
+after the instrument change	make hooks	🟢 43/43 GREEN
+after the instrument change	p235-carried-index suite	🟢 PASS — 50 controls (23 carried forward + 18 new on the three-valued grade + 9 new on the .git fold)
+#
+# 🔴 FOUR GATES FIRED RED ON THIS PASS BEFORE IT COMMITTED, AND ALL FOUR WERE FIXED.
+gate	what it caught	fix
+gate-absence	Two absence-claim shapes in this pass's own prose: "is absent from the 774" and "nothing on this base could have caught it".  🔵 The subject the gate extracted for the first was `p378`, not the address the sentence is actually about — the gate's subject extraction grabs the nearest token.  The sentence was reworded rather than the gate changed, and the extraction quirk is recorded here	Both sentences rephrased; gate green
+gate-region-headings	🔴 `P383-MULTIPLE-BLOCKS bloques=2` — p379's draft added a SECOND `## Opportunities by region` block to intel/market.md, plus `P383-MISSING-REGION Global`.  🟢 This is precisely the structure p383's contract exists to prevent, and no human would have seen it in a 3 500-line file	p379's regional cells MOVED INTO the single canonical block, dated, one per `###`; a `Global` cell written; a pointer left where the draft's block had been
+p352-census-currency	2 of 3 cells STALE — the census was derived BEFORE the shelf writes	Re-derived after every write: 2 717 -> 33 -> 2 684, restated in README's census section
+p376-union-currency	3 of 3 union cells STALE, and then the restatement was NOT PARSED because the governed sentence requires `**N**` bold numerals and the draft bolded the whole sentence instead	Restated in the governed shape: 2 684 channel-U, 3 061 channel-B survivors, 3 404 over both channels
+#
+# 🔴 AND THIS PASS'S OWN PREMATURE CLAIM, corrected rather than deleted: the draft of this file
+# and of two shelves stated "NO GATE FIRED RED ON THIS PASS".  That was written BEFORE the
+# shelf writes were gated.  🔵 A pass cannot know its gate state until after it writes, and
+# this base's convention of running `make hooks` as the LAST act exists for exactly that
+# reason.  p379 added 27 controls to one existing suite and no new gate.
+#
+# 🔴 THE EGRESS HALF, which p378 ran for the first time ever, WAS NOT RUN HERE.
+# `make hooks-online` depends on channels this sandbox only partly has:
+gate	runnable here	reason
+gate-grant-path-online	🟡 PARTIALLY	raw.githubusercontent.com answers 200, so the 275 published grant paths are re-checkable; NOT run this pass for time, and said so rather than implied
+gate-online (p229 55-rung ladder)	🟡 PARTIALLY	same channel
+gate-mit-tier	🟡 PARTIALLY	same channel
+gate-identity-online	🟢 YES in principle	git ls-remote works; 501 addresses would re-probe. NOT run this pass
+#
+# 🔴 WHAT IS NOT RUNNABLE HERE AT ALL, AND IS NEW INFORMATION ABOUT THIS BASE'S CHANNELS:
+# a check over a PROSE CITATION's address.  curl CONNECT is policy-denied (403) for every
+# non-allowlisted host — 38 of 38 candidate citation URLs returned 000 — and the page-fetch
+# channel fails DNS.  So the gate class p378's grant-path check belongs to CANNOT be extended
+# from repository addresses to outlet addresses from this sandbox.  Gap 524.
+#
+# 🔴 A CHANNEL PRESENT AND REFUSED BY POLICY, registered so nobody reads it as an opening:
+# a GitHub MCP server is mounted in this sandbox.  Its repository scope is a single unrelated
+# repository, so it cannot read metadata for ANY education address.  Star counts remain
+# unavailable, now across four independent sandboxes.  Gap 527.
+#
+# 🔵 A PASS'S OWN INSTRUMENT THAT FAILED, published rather than dropped quietly:
+# this pass's ad-hoc grant probe carried a `readme_lang_hint` column implemented as
+# `grep -qE '[<unicode range>]'` in bash.  It returned the SAME value for all 13 rows,
+# including a repository whose README is entirely German.  A byte-range character class over
+# UTF-8 in that shell does not do what it reads as.  🟢 Caught because the batch contained a
+# known-German specimen — by a control, not by inspection.  The column is discarded and
+# appears in NO published cell.  The grant, branch, ref-count and HEAD-date columns come from
+# real HTTP and real git and stand.

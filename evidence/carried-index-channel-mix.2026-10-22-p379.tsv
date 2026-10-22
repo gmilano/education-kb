@@ -1,0 +1,65 @@
+# p379 — ACTION p378-A, RESULT.  Prediction registered in 91e47a2 with no leg output in tree.
+#
+# WHAT WAS MEASURED, first-hand on 2026-10-22, over the TEN SHELVES only (never evidence/,
+# never archive/, never compose/code/ — carried_index.py's own corpus rule):
+#   channel U  = the github.com/owner/repo URL form (p348 slugs_in, imported)
+#   channel B  = a backticked one-slash token surviving p351's shape filter and p367's four arms
+#
+# METHOD for the mix column: for each channel-B-only address, every occurrence window on the
+# shelves (+-160 chars) was classified by the words in it.
+#   ADJUDICATED-NEGATIVE  a death/refusal marker and NO licence/grant/row marker
+#   ROWISH                a licence/grant/pattern/row marker and no negative marker
+#   MIXED-CONTEXT         both
+#   BARE-MENTION          neither
+# 🔴 STATED LIMIT, in the direction that matters: the markers are ENGLISH and this base also
+# writes verdicts inside TABLE CELLS that the window may not reach.  ADJUDICATED-NEGATIVE is
+# therefore a FLOOR, not a point estimate, and the ROWISH count is an upper bound.
+# 🔴 SECOND LIMIT: channel B over-collects by construction (p367 says so).  `admin-api/v1`,
+# `info/refs` and `origin/main` are in this population and are not addresses at all.  The
+# ls-remote sample below is the only thing that says which are repositories.
+#
+cifra	valor
+channel_u_addresses_p348_imported	2717
+channel_u_addresses_p235_own_regex_BEFORE_fix	2724
+channel_u_addresses_p235_own_regex_AFTER_git_fold	2718
+channel_b_survivors	3101
+channel_b_only	774
+shelf_address_population_U_union_Bonly	3491
+channel_b_only_share_pct	22.17
+#
+# THE MIX
+class:ROWISH	309
+class:BARE-MENTION	258
+class:MIXED-CONTEXT	134
+class:ADJUDICATED-NEGATIVE	73
+#
+# LIMB DISPOSITION
+limb	claim_threshold	measured	verdict
+A-LIMB-1	channel_b_only >= 100	774	CONFIRMED — 7.7x the registered threshold
+A-LIMB-2	B-only share >= 10 pct	22.17 pct	CONFIRMED
+A-LIMB-3	>= 3 B-only addresses live by first-hand ls-remote	24 live of 49 probed	CONFIRMED
+A-LIMB-4	a p377/p378-published NEW grade flips to CARRIED	0 flipped	🔴 REFUTED — and the reason is this pass's finding
+#
+# 🔴 WHY A-LIMB-4 IS REFUTED, AND IT IS THE MORE USEFUL RESULT.
+# `msitarzewski/agency-agents` is the one PROVEN false NEW on this base: p378's `make carried`
+# graded it NEW while repos/trending.md:21457 already carried it as a bare backticked slug.
+# It is NOT in the 774.  p378 published it as a row WITH A URL, which moved it into channel U.
+# 🔵 So the flip set is SELF-ERASING: the act of publishing a false NEW destroys the evidence
+# that the blindness produced it.  The blindness cannot be measured retrospectively on its own
+# victims — only on addresses that are still B-only.  Filed as Gap 526.
+#
+# 🔴 WHY THE ARM WAS NOT UNIONED INTO carried(), WHICH IS WHAT ACTION p378-A ASKED FOR.
+# 73 of the 774 (a floor) sit beside a death or refusal marker ONLY.  Two of them were probed
+# first-hand this pass:
+address	channel	ls_remote_rc	where_on_the_shelves	what_a_union_would_have_said
+1EdTech/badgr-server	B-only	128	agents/top.md:520 and agents/trending.md:10670, inside a DEAD-CITATION sweep	CARRIED — i.e. "this base carries this row"
+concentricsky/badgr-server	B-only	128	same two cells, same sweep	CARRIED
+concentricsky/badgr-ui	B-only	128	repos/trending.md:17868, successor-org axis	CARRIED
+AlekSIS/AlekSIS-Core	U	128 (published by an earlier pass)	agents/trending.md:10528, REFUSED as dead	n/a — kept for contrast: this one was written WITH a URL
+# 🟢 carried()'s caller asks "would publishing this be a duplicate row?".  For an address whose
+# only appearance here is a published refutation, neither CARRIED nor NEW is true.  A
+# two-valued predicate has nowhere to put that, so p379 added a THIRD value rather than a
+# wider first one.  carried(), claims(), harvest() and `make carried` are behaviour-unchanged;
+# `grade()` and `make verdict` are additive and a caller opts in.
+# 🔵 p376-A is the governing precedent: the ranked-first action was discharged by NOT doing
+# what it said, because doing it would have made a standing instrument retro-edit history.

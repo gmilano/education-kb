@@ -3,6 +3,100 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 🔴 2026-10-22 · `p379` — **ZERO new agent rows for a fifth pass, and this time the zero REFUTES THE DIAL `p378` INVENTED TO EXPLAIN IT. The two legs that scored 100 % in-language returned ZERO addresses between them; the leg that scored 44 % returned the only repository of the pass. The in-language fraction measures a language's COMMENTARY estate, not its forge — and it predicts supply BACKWARDS.**
+
+**Evidence:** [`inlanguage-yield`](../evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv) ·
+[`registered-prediction`](../evidence/p379-registered-prediction.2026-10-22-p379.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·
+[`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p379.tsv)
+
+🟢 **The prediction was registered the way this base requires** — three limbs, each with its
+own refutation condition, committed in `91e47a2` with **no leg output in the tree**, together
+with a pre-registered note naming `D-LIMB-1` as the cheap limb because it puts a threshold on
+a dial with two passes of data and no calibration.
+
+| `ACTION p378-D`'s legs | in-language fraction | **addresses returned** | new rows clearing this shelf's bar |
+|---|---:|---:|---:|
+| `ja` 教育 AI エージェント… | 🟢 **100 %** (9/9) | 🔴 **0** | 0 |
+| `de` Open Source KI-Agent Bildung… | 🔴 **44 %** (4/9) | 🟢 **1** | 0 |
+| `ru` ИИ агент образование… | 🟢 **100 %** (9/9) | 🔴 **0** | 0 |
+
+🔴 **`D-LIMB-1` REFUTED** — `de` is at **44.4 %**, below the registered 50 %.
+🔴 **`D-LIMB-2` REFUTED** — the band is **55.6 points** against a registered threshold of
+**30**. Large-forge languages are emphatically **not** one class.
+🟢 **`D-LIMB-3` CONFIRMED**, and in a stronger form than the limb could express.
+
+🔴 **The finding, and no successor should soften it: `p378` promoted the in-language fraction
+as "the right dial" for choosing a leg, and it is the WRONG dial — it runs the wrong way.**
+Japanese and Russian carry two of the largest in-language developer-writing estates on the web
+— Qiita, Zenn, Habr, `vc.ru`, tproger — so an in-language query in those languages is
+**answered by articles about repositories instead of by repositories**. German's commentary
+estate is thinner, the German leg fell through to a forge, and what it found was a **German**
+repository. 🔵 The dial that selects a productive leg is the **ADDRESS YIELD**. `p377`'s NEW
+rate does not predict it and `p378`'s in-language fraction predicts it **inverted**.
+
+🔴 **And this pass's own registration error, published rather than tidied.** `D-LIMB-3` was
+registered as *"stay UNCORRELATED"*, carrying `p378`'s framing forward. The measured relation
+is **inverse**. A limb that can only say *"not equal"* cannot report *"opposite"* — so the
+limb confirmed while under-reporting its own result.
+
+### 🟡 The one address the three legs produced, and why it is not a row here
+
+| Address | Grant, read first-hand | HEAD | Verdict |
+|---|---|---|---|
+| [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) | 🟢 **MIT**, `master/LICENSE`, 1 228 B, `sha256:6929393c58a1`, holder *"Copyright 2021 Deutsche Telekom AG"* | 🔴 **2025-06-04** · 16.5 months stale | 🔴 **NOT promoted** |
+
+🟢 **It is real, it is permissively licensed and it is placed** — Deutsche Telekom's
+DigITal@School / AI@School initiative, German-language MINT teaching material, 15 refs, default
+branch **`master`** not `main`. 🔴 **It is not an agent and not a library**: it is a project
+list for volunteers running AI lessons in schools. It fails on **domain** and on **recency**,
+and passes on **grant**. 🔵 Recorded in full so a successor does not re-find it and does not
+promote it either.
+
+🟢 **It also CORROBORATES `p378-B` rather than denting it.** `p378` found all 20 MIT payloads
+on these shelves to be one legal text re-wrapped. This payload's **1 228 B** against the
+canonical **1 069 B** is explained entirely by an added `https://opensource.org/licenses/MIT`
+line and a holder line — the same text, a third presentation.
+
+### 🔴 The supply source these shelves have been sitting on and could not see
+
+🔴 **Channel B is not only a `carried()` bug. It is 774 addresses of UNSWEPT SUPPLY on this
+base's own shelves.** 49 were probed by `ls-remote` this pass and **24 are live**; 13 were
+graded for grant and recency. 🔴 **None clears this shelf's bar**, and the failure modes are
+worth more than the nil:
+
+| Address | Grant | HEAD | Why it is not a row |
+|---|---|---|---|
+| [`studentsuite/awesome-skills-plugins-for-students`](https://github.com/studentsuite/awesome-skills-plugins-for-students) | 🟢 MIT, canonical 1 069 B | 🟢 **2026-10-21** | 🔴 An *awesome* **LIST** — the class `p378` refused four times |
+| [`adityasarade/agentic_ai_tutor`](https://github.com/adityasarade/agentic_ai_tutor) | 🔴 **none on 6 rungs** | 2026-01-19 | Squarely on-domain by name; **grant UNREAD**, 2 refs |
+| [`bobuel/bloom-taxonomy-quiz-builder-skill`](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 🔴 **none on 6 rungs** | 2026-09-05 | On-domain; **grant UNREAD** |
+| [`hatchedland/ncert-mcp`](https://github.com/hatchedland/ncert-mcp) | 🔴 **none on 6 rungs** | 2026-03-21 | NCERT is India's national curriculum body — right domain, **APAC**; grant UNREAD |
+| [`aflah02/open-unlearning`](https://github.com/aflah02/open-unlearning) | 🟢 MIT 1 069 B | 2026-09-17 | Machine unlearning — fails on **domain** |
+| [`librarycarpentry/lc-data-intro`](https://github.com/librarycarpentry/lc-data-intro) | 🟡 **Creative Commons** 3 328 B | 🟢 2026-10-06 | Real maintained curriculum; a **CC grant on teaching text**, not build-on code |
+
+🔴 **One of the 13 is a grant this base's classifiers cannot name, and it is `ACTION p378-C`'s
+exact class.** [`8bitprodigy/kolibri_engine`](https://github.com/8bitprodigy/kolibri_engine)
+ships a **653-byte** payload with **no title block**, which a title-block classifier returns as
+`UNKNOWN-TEMPLATE`. 🟢 Read first-hand it is the bare **ISC** body — *"Permission to use, copy,
+modify, and/or distribute this software for any purpose with or without fee is hereby
+granted"* — holder `chrisxdeboy@gmail.com`, 2025. 🔴 **And it is a NAME COLLISION TRAP**: it is
+a game engine, **not** Learning Equality's Kolibri, the offline-first learning platform these
+shelves carry. `Gap 525`.
+
+### 🔴 This pass's load-bearing error, and it is the one `make claims` exists to prevent
+
+🔴 **Fifteen addresses were probed as new supply that this base had already PROVEN DEAD.**
+`1edtech/badgr-server`, `concentricsky/badgr-server`, `concentricsky/badgr-ui`,
+`studip/studip`, `aleksis/aleksis`, `sunbird-ed/sunbird-ed-portal`, `vtutortools/vtutor`,
+`xapijs/xapi.js`, `selleo/mentingo-scorm` and six more — all `rc=128`. 🔵 They are in channel B
+**because** earlier passes wrote them as bare slugs *inside dead-citation sweeps*, reporting a
+negative. 🟢 Two true-cased controls prove the probe was sound, not the addresses:
+`Cvmcosta/ltijs` `rc=0` and `adlnet/xAPI-Spec` `rc=0`. 🔴 **`make claims TOKEN=…` was not run
+first, and it would have said so in one command.** The instrument existed; the pass did not
+use it.
+
 ## 🔴 2026-10-22 · `p378` — **ZERO new agent rows, and the zero is THE RESULT: `ACTION p377-D`'s prediction was committed before the legs ran and LIMB 1 IS REFUTED. The Hindi and Arabic supply legs returned a 100 % ENGLISH answer set, so `p377`'s language axis is NARROWED, not extended. 🟢 And `p377`'s "third distinct MIT template" is ONE TEXT RE-WRAPPED — all 20 MIT payloads on these shelves are the same words.**
 
 **Evidence:** [`language-dispersion-prediction`](../evidence/agentleg-language-dispersion-prediction.2026-10-22-p378.tsv) ·

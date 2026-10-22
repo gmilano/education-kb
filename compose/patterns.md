@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 🔴 2026-10-22 · `p379` — **`Pattern 32`'s Quebec default is CORRECTED HERE, not noted elsewhere: the suspension it defaults to was lifted ELEVEN MONTHS AGO and the regime that replaced it has a compliance deadline four and a half months in the past. 🟢 And `Pattern 33` is added: the three-channel address check a pass must run before it publishes a row.**
+
+**Evidence:** [`quebec-talis`](../evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv) ·
+[`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv)
+
+### 🔴 `Pattern 32` — CORRECTED
+
+🔴 **The defect.** `Pattern 32` defaults a Quebec school engagement to a **prohibition** on
+generative AI, resting on the Ministère de la Cybersécurité et du Numérique's suspension of
+**13 March 2025**. `p378` flagged it as *"last confirmed in force ten months ago on a TIER-2
+outlet"* and registered `ACTION p378-E` to re-confirm it.
+
+🔴 **It is not stale. It is wrong.**
+
+| What `Pattern 32` assumes | What the French leg established, 2026-10-22 |
+|---|---|
+| A suspension is in force | 🔴 **Lifted.** A **December 2025** directive repealed indication `IA-RI-2025-001-OP` and replaced it with a structured governance framework |
+| The posture is *"you may not"* | 🟢 The posture is **"you may, with governance"** — a formal structure, defined roles, named approvers of generative-AI systems, alignment with the government digital-governance framework |
+| No deadline is in play | 🔴 Covered bodies had to be **fully compliant by 5 June 2026** — **four and a half months before this pass** |
+| Schools inherit the public-body rule | 🟡 The **Ministère de l'Éducation** published a **2026** edition of its pedagogical/ethical/legal generative-AI guide, in force from the **late-August 2026** school year, which **delegates tool authorisation to school bodies** |
+
+🟢 **CORRECTED DEFAULT for a Quebec school engagement.** Arrive assuming the client **is already
+past a compliance deadline** and that **the school body, not the ministry, authorises the
+tool**. The deliverable a Quebec engagement needs first is a *governance and approver map*, not
+a permission argument. 🔵 The confidentiality rule survives the change: client data must not be
+entered into the tool.
+
+🔵 **Primary channel for a successor, and it is the one to read first:** a `gouv.qc.ca`-domain
+directive, *"123-02 Directive visant à baliser l'utilisation de l'intelligence [artificielle
+générative]"*, at `csspb.gouv.qc.ca`, uploaded **2026-10**. 🔴 **Not readable from this
+sandbox** — see `Gap 524` — so it is pointed at, not quoted.
+
+🔴 **What is still open:** the exact repeal date (sources say *"December 2025"* with no day),
+and whether the school-sector guide operates as *lex specialis* over the public-body directive.
+`Gap 523`.
+
+🔵 **And the general lesson, which is bigger than Quebec.** A moratorium is the most perishable
+fact in this industry and the most likely to end up on a slide. **No instrument on this base
+dates a pattern's legal premise.** `Pattern 32` was not wrong when written; it was never given
+an expiry.
+
+### 🟢 `Pattern 33` — the three-channel address check, before publishing any row
+
+🔵 **Why it exists:** this pass probed **fifteen** addresses as new supply that this base had
+already **proven dead**, and it took a grep of the shelves to find that out. The instrument
+that prevents it already existed and was not run.
+
+**Recipe, in order. Each step is a command this repository already carries.**
+
+1. 🟢 **Ask what the shelves already say** — before anything online:
+   `make claims TOKEN=owner/repo`
+   Non-zero means **STOP and read the cells**. A hit may be a row, or it may be a published
+   refutation. 🔴 This is the step `p379` skipped.
+2. 🟢 **Grade the address across BOTH channels** — new at `p379`:
+   `make verdict SLUG=owner/repo`
+   `CARRIED` channel U has it, a new row duplicates · `MENTIONED-B` only the bare-slug channel
+   has it, **go read the cell** · `NEW` neither channel does.
+   🔵 `make carried` is **unchanged** and still two-valued; it cannot tell you the middle case.
+   🔴 **Read the printed verdict, not make's exit code.** GNU make exits **2** for any failed
+   recipe, so it collapses `CARRIED` (1) and `MENTIONED-B` (3) into one status — `p379`'s own
+   error, found by running the recipe. At the make layer the contract is only **STOP / GO**.
+   For the three-way, call the script:
+   `python3 -I compose/code/p235-carried-index/carried_index.py verdict owner/repo .`
+3. 🟢 **Prove the address exists**, which no offline step can:
+   `git ls-remote --symref https://github.com/owner/repo HEAD`
+   Note the **default branch** — this pass found `telekom/ki-in-schulen` on `master` and
+   `52north/wps` on `dev`, and a `main/LICENSE` guess returns `404` on both.
+4. 🟢 **Read the grant payload first-hand**, on the branch step 3 reported:
+   `curl https://raw.githubusercontent.com/owner/repo/<branch>/LICENSE`
+   🔴 Record **bytes and sha256**, not just a family name. A **653-byte, title-block-free**
+   payload found this pass is the bare **ISC** body, which a title-block classifier calls
+   `UNKNOWN-TEMPLATE`; a **1 228-byte** MIT is MIT with an added URL line.
+5. 🟡 **Date it:** `git clone --filter=blob:none --no-checkout --depth 1` then `git log -1`.
+   Six of this pass's fourteen graded addresses are **over nine months stale**.
+6. 🔴 **Do not expect star counts.** `api.github.com` and `github.com` HTML answer **403** —
+   now across **four** independent sandboxes. A GitHub MCP server is mounted in this one and is
+   **scoped to one unrelated repository**, so it is not a way around it either. `Gap 527`.
+
+🔵 **Composes with:** `Pattern 32` (corrected above) for the jurisdictional default, and
+`p364`'s companion closure for what else a deployment needs. 🔴 **Does not** compose with any
+market figure on `intel/market.md` — four passes have failed to source a defensible 2026 level,
+and `Pattern 33` is about addresses, not sizing.
+
 ## 🟢 🆕 `Pattern 32` (`p378`) — **One codebase into four Canadian provinces that disagree, defaulting to the narrowest live rule — and a grant bill of materials that survives a provincial procurement review**
 
 🔵 **Why `32`:** `Pattern 31` is `p377`'s and `1`–`30` belong to the older series. `Gap 506`'s

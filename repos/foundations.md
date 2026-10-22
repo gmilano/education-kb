@@ -3,6 +3,64 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 🔴 2026-10-22 · `p379` — **no new foundation, and the foundation work was a DEFECT IN THE INSTRUMENT A PASS CALLS BEFORE PUBLISHING A ROW: `carried_index.py` has never folded the `.git` clone suffix, for 144 passes, and it is the identical defect `p367`'s own docstring records in its first draft**
+
+**Evidence:** [`channel-mix`](../evidence/carried-index-channel-mix.2026-10-22-p379.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p379.tsv)
+
+🔴 **No address this pass found is a foundation.** 14 were graded first-hand; the permissive
+ones are a list, a research repo out of domain, a stale German teaching-material project and
+two two-ref personal apps. Nothing to promote, and the detail is on `agents/top.md`.
+
+🟢 **What this shelf did buy is that its own duplicate-check now agrees with the base's
+canonical harvester.**
+
+| Measurement over the ten shelves | Before | After |
+|---|---:|---:|
+| `p235/carried_index.py` own `SLUG` regex | 🔴 **2 724** | 🟢 **2 718** |
+| `p348/fold_identity.slugs_in` — the harvester every census imports | 2 717 | 2 717 |
+| Addresses the two **disagree** on | 🔴 **8** | 🟢 **1** |
+
+🔴 **The whole disagreement was the `.git` clone suffix.** `cvmcosta/ltijs.git` and
+`cvmcosta/ltijs` are one address. `p348` has always stripped it; `p235` never did, so it
+published seven addresses twice — `cvmcosta/ltijs`, `dmontgomery40/mcp-canvas-lms`,
+`examplary/qti`, `felipedias-ie/blackboard-mcp`, `trilogy-group/oneroster-ts`,
+`ucfopen/pylti1.3`, `git_user_id/git_repo_id`. 🔵 The residual **1** is the documentation
+placeholder `owner/repo`, which `p351`'s shape filter rejects and `p235` does not; left as a
+named residual rather than special-cased.
+
+🔵 **Found by MEASUREMENT, not by reading.** Nobody read the regex and spotted it. Two
+censuses were run side by side over the same ten files and the totals differed by seven.
+
+🟡 **Latent, not firing — and the distinction is stated so no successor overclaims it.** Every
+one of the seven de-suffixed forms was independently present, so no address was being graded
+`NEW` because of this. The costs were an index inflated by seven and a **false negative
+waiting**: an address published only as `foo/bar.git` would have graded `foo/bar` as `NEW`.
+🟢 Pinned by nine new controls, including the `.git`-only fixture that closes it and a
+negative control proving a repository literally named `git` is untouched.
+
+🔴 **It is the SAME defect, in the SAME base, written down in advance.** `p367`'s docstring
+says of its own first draft: *"it did not move the net-new count, because each artefact
+collided with its own de-suffixed form — which is the only reason a reader of the first draft
+would not have been misled."* 🔵 `p367` fixed it in `p367`. Nobody carried the lesson one
+directory across to the instrument a pass calls **before publishing a row**.
+
+🟢 **Safe to change, and checked before changing it.** Both totals were grepped across all
+nine shelves first: **nothing published rests on a `p235` index size**. And the change can only
+move a verdict `NEW → CARRIED` — the direction that prevents a duplicate rather than creating
+one.
+
+### 🔴 Every absence figure on this shelf rests on a channel that cannot see 774 of its own addresses
+
+🔴 **`gate-dead-citation` publishes *"34 absent addresses, none on a live shelf"*. That census
+is channel-**U**-only, like every identity, census and absence instrument here.** Channel B
+sees **774** shelf addresses channel U cannot, and this pass proved **15 of them dead** by
+first-hand `ls-remote`. 🟢 Those 15 happen to be *already-adjudicated* dead addresses, so the
+gate is not currently wrong — 🔴 but it cannot know that, and a genuinely dead bare-slug
+citation would be invisible to it. `Gap 521`.
+
 ## 🔴 2026-10-22 · `p378` — **no new foundational repo, and the pass's foundation work was ADDRESS HYGIENE instead: 8 alias pairs registered where there were 2, and every published grant path proved LIVE for the first time**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p378.tsv) ·

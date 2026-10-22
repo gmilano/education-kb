@@ -1,0 +1,52 @@
+# p379 — every address graded first-hand on 2026-10-22.
+#
+# CHANNELS USED, and the ones refused:
+#   git ls-remote --symref        default branch + liveness        WORKS
+#   git ls-remote (full)          ref count                        WORKS
+#   git clone --filter=blob:none  HEAD commit date                 WORKS
+#   raw.githubusercontent.com     grant payload over a 6-rung ladder   200
+#   repo1.maven.org               reachable (unused this pass)      200
+#   api.github.com               403  -> NO STAR COUNTS
+#   github.com HTML              403  -> NO STAR COUNTS
+# 🔴 FOURTH independent sandbox for the 403 pair (p376, p377, p378, p379).
+# 🔴 NEW THIS PASS: a GitHub MCP server is mounted in this sandbox but is scoped by policy to
+# one unrelated repository, so it is NOT a metadata channel for these addresses.  Gap 527.
+#
+# WHY THESE ADDRESSES: 13 of them come from CHANNEL B — addresses these shelves already
+# mention as bare backticked slugs and that no census, identity or absence instrument here can
+# see.  That is a supply source nobody has swept.  One comes from the German leg.
+#
+address	source	branch	n_refs	head_date	grant_path	grant_bytes	sha256_12	family	clears_a_bar	note
+telekom/ki-in-schulen	de leg (NEW)	master	15	2025-06-04	master/LICENSE	1228	6929393c58a1	MIT	NO	🟢 Deutsche Telekom AG, DigITal@School / AI@School. Payload read first-hand: MIT legal text with an added opensource.org URL line, holder "Copyright 2021 Deutsche Telekom AG" — which is why 1228 B and not the canonical 1069. 🔴 NOT an agent and not a library: it is a GERMAN-language MINT teaching-material project list. 🔴 HEAD 2025-06-04 = 16.5 months stale. Fails on DOMAIN and RECENCY, passes on GRANT
+studentsuite/awesome-skills-plugins-for-students	channel B	main	57	2026-10-21	main/LICENSE	1069	537c697c69a5	MIT	NO	HEAD yesterday, canonical 1069-byte MIT. 🔴 An "awesome" LIST, not an agent — the class p378 refused four times
+librarycarpentry/lc-data-intro	channel B	main	232	2026-10-06	main/LICENSE.md	3328	1b7f11e8511b	Creative Commons	NO	🟢 Real, maintained teaching curriculum (Library Carpentry, regex/data literacy). 🔴 A CC grant on a CURRICULUM, not build-on code
+aflah02/open-unlearning	channel B	main	12	2026-09-17	main/LICENSE	1069	2f6df7a76faa	MIT	NO	Canonical MIT, maintained. 🔴 Machine unlearning research — fails on DOMAIN, not education
+8bitprodigy/kolibri_engine	channel B	main	5	2026-04-01	main/LICENSE	653	a4d2126e2d6b	🔴 ISC (read first-hand; NO title block)	NO	🔴 TWO findings. (1) ACTION p378-C's class: 653 B, no title line, so a title-block classifier returns UNKNOWN-TEMPLATE. Read first-hand it is the bare ISC body ("Permission to use, copy, modify, and/or distribute ... with or without fee"), holder chrisxdeboy@gmail.com 2025. (2) 🔴 NAME COLLISION: a game engine, NOT Learning Equality's Kolibri. Gap 525
+afdhalpower/sekolahgego	channel B	main	2	2026-05-13	main/LICENSE	1150	b8694396d7dc	MIT	NO	Indonesian school app (APAC/Indonesia). 2 refs, 5 months stale — below any bar on size
+edwin1719/avataracademy	channel B	main	2	2025-12-04	main/LICENSE	1078	7ed71a782d7e	MIT	NO	2 refs, 10.5 months stale
+52north/wps	channel B	dev	331	2023-10-20	dev/LICENSE	17987	ab15fd526bd8	GNU GPL	NO	Geospatial OGC WPS. Fails on DOMAIN and on GRANT for a client deliverable; 36 months stale
+hatchedland/ncert-mcp	channel B	main	3	2026-03-21	-	-	-	🔴 NONE on the 6-rung ladder	NO	NCERT = India's national curriculum body, so the DOMAIN is right and the region is APAC. 🔴 No grant reachable on 6 rungs — not enumerated full-tree this pass, so recorded as UNREAD rather than NONE_IN_TREE
+alfredang/ai-cms	channel B	main	6	2026-10-16	-	-	-	🔴 NONE on the 6-rung ladder	NO	HEAD 6 days old. Grant UNREAD on 6 rungs
+adityasarade/agentic_ai_tutor	channel B	main	2	2026-01-19	-	-	-	🔴 NONE on the 6-rung ladder	NO	Name is squarely on-domain (agentic AI tutor). Grant UNREAD; 9 months stale
+bobuel/bloom-taxonomy-quiz-builder-skill	channel B	main	3	2026-09-05	-	-	-	🔴 NONE on the 6-rung ladder	NO	On-domain (Bloom taxonomy quiz builder). Grant UNREAD
+alexandrel0pes/q-scraper	channel B	master	73	2021-02-21	-	-	-	🔴 NONE on the 6-rung ladder	NO	56 months stale
+this-owner-cannot-exist-p379/negative-control	planted	-	0	-	-	-	-	-	-	🟢 NEGATIVE CONTROL FIRES: ls-remote rc=128, `verdict` grades NEW. Both arms discriminate
+#
+# THE B-ONLY LIVENESS SAMPLE (A-LIMB-3), 49 addresses probed, 24 live:
+# 🔴 AND THE SAMPLE IS NOT A RATE.  It was deliberately ENRICHED for plausible-looking
+# education addresses, so 24/49 is an UPPER BOUND on the live share of the 774, never an
+# estimate of it.  Stated because a successor will be tempted to multiply.
+#
+# 🔴 THE 15 ADDRESSES THIS PASS EXPECTED TO BE REAL SUPPLY AND WHICH ARE NOT.
+# 1edtech/badgr-server, concentricsky/badgr-server, concentricsky/badgr-ui, 1edtech/ltijs,
+# 1edtech/oneroster, 1edtech/caliper-python, studip/studip, aleksis/aleksis,
+# sunbird-ed/sunbird-ed-portal, xapijs/xapi.js, adl-opensource/xapi-spec, vtutortools/vtutor,
+# owentaylor/canvas-mcp, selleo/mentingo-scorm, jdolny/oneroster.js, krayin/krayin-crm,
+# airgolab-cefet-rj/textgrader, angelitux/estudiauni, juliusgi/elementary-learning-hub,
+# cjaikaeo/elabsheet — all rc=128, re-probed with true owner casing where one was guessable.
+# 🟢 Two true-cased controls prove the probe is not the problem: Cvmcosta/ltijs rc=0 and
+# adlnet/xAPI-Spec rc=0.  The dead ones are dead.
+# 🔴 They are dead because they are THIS BASE'S OWN PUBLISHED DEAD ADDRESSES, written as bare
+# slugs inside dead-citation sweeps.  See this pass's published error 2: `make claims` exists
+# precisely to prevent re-probing what the shelves have already adjudicated, and it was not
+# run first.

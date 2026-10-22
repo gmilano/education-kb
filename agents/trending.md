@@ -3,6 +3,51 @@ industry: education
 region: Global
 updated: 2026-10-22
 ---
+
+## 2026-10-22 · `p379` — **this week in education agents: a fifth consecutive zero, and the first pass to establish WHY an in-language search will not break it. 🔴 The one new address of the week is German, MIT, and 16 months stale.**
+
+**Evidence:** [`inlanguage-yield`](../evidence/agentleg-inlanguage-yield.2026-10-22-p379.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p379.tsv)
+
+🔴 **New agent rows this week: 0.** Fifth pass running. 🟢 The zero is now **explained** rather
+than merely repeated, and the explanation retires the instrument `p378` introduced to chase it.
+
+| This week's legs (`ACTION p378-D`) | in-language | addresses | rows |
+|---|---:|---:|---:|
+| `ja` 教育 AI エージェント オープンソース GitHub MIT ライセンス 2026 | **100 %** | 🔴 **0** | 0 |
+| `de` Open Source KI-Agent Bildung Schule GitHub MIT Lizenz 2026 | **44 %** | 🟢 **1** | 0 |
+| `ru` ИИ агент образование открытый исходный код GitHub MIT лицензия 2026 | **100 %** | 🔴 **0** | 0 |
+
+🔴 **The week's methodological result: `p378`'s in-language fraction predicts supply
+BACKWARDS.** The two legs that returned entirely in-language answer sets returned **no
+repositories at all** — Japanese and Russian queries are answered by Qiita, Zenn, Habr,
+`vc.ru` and tproger, i.e. by **commentary about** repositories. The leg with the *lowest*
+in-language fraction returned the only repository. 🔵 Choose a leg by **address yield**; neither
+`p377`'s NEW rate nor `p378`'s in-language fraction tracks it.
+
+🟡 **The one new address, in full, including why it is not a row:**
+[`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) — Deutsche Telekom
+DigITal@School / AI@School, 🟢 **MIT** (`master/LICENSE`, 1 228 B, `sha256:6929393c58a1`, holder
+*"Copyright 2021 Deutsche Telekom AG"*), 15 refs, default branch **`master`**. 🔴 German-language
+**MINT teaching material**, not an agent; HEAD **2025-06-04**, 16.5 months stale.
+
+🔴 **A licence change worth recording, from the Japanese commentary layer** — the one thing the
+`ja` leg bought: **AITuberKit** was MIT at `v1.x.x` and is **no longer MIT from `v2.0.0`**, which
+is paid outside personal non-commercial and educational use. 🔵 A reminder that a permissive
+grade has a **version**, not just a repository.
+
+🟢 **Channel B opened as a supply source this week** — 774 addresses these shelves already
+mention as bare slugs and no census here could see. 49 probed, **24 live**, 13 graded,
+🔴 **0 clearing this shelf's bar**. The near-misses are three on-domain repositories with **no
+grant on six rungs** (`adityasarade/agentic_ai_tutor`, `bobuel/bloom-taxonomy-quiz-builder-skill`,
+`hatchedland/ncert-mcp` — the last an India/NCERT curriculum MCP server) and one MIT repository
+that is an *awesome* list with a HEAD from yesterday
+(`studentsuite/awesome-skills-plugins-for-students`).
+
+🔴 **No star counts, a fourth sandbox running.** `api.github.com` and `github.com` HTML both
+`403`. A GitHub MCP server is mounted here and is scoped to one unrelated repository, so it is
+not a way around it.
+
 ## 🔴 2026-10-22 · `p378` — **`ACTION p377-D` per candidate: 17 probed, 17 live, 6 NEW — and the instrument this pass trusted over `p377`'s grep returned a FALSE NEW that flipped a registered limb**
 
 🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the

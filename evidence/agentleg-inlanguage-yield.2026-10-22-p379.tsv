@@ -1,0 +1,61 @@
+# p379 — ACTION p378-D, RESULT.  Prediction registered in 91e47a2 BEFORE any leg ran.
+#
+# ACTION p378-D asked for ja, de and ru — three languages with large indexed forge populations
+# this base had never queried — with the prediction registered on p378's NEW dial replacement,
+# the IN-LANGUAGE FRACTION.
+#
+# MEASUREMENT DEFINITIONS, fixed before the result was read:
+#   in_language_fraction = results whose returned page is in the leg's language / results returned
+#   address_yield        = distinct github.com addresses the leg's answer set actually named
+# 🔴 STATED CONFOUND, registered before the legs ran: the search transport here documents
+# itself as US-only, so every leg is run through a US-located index.
+#
+# LEG QUERIES, run 2026-10-22:
+#   ja  教育 AI エージェント オープンソース GitHub MIT ライセンス 2026
+#   de  Open Source KI-Agent Bildung Schule GitHub MIT Lizenz 2026
+#   ru  ИИ агент образование открытый исходный код GitHub MIT лицензия 2026
+#
+leg	results	in_language	in_language_fraction_pct	address_yield	new_addresses	note
+ja	9	9	100.0	0	0	zenn.dev, qiita.com, opensourcelab.jp, re-study.jp, daikun4.com, ai-heartland.com, jp.ext.hp.com, eigent.ai/ja, ai-news.iru-yo.com — every result Japanese, every result a BLOG
+de	9	4	44.4	1	1	enablechange.de, eigent.ai/de, eesel.ai (DE-localised title) and the repository itself; the other 5 English (dev.to, 2x en.wikipedia, digitalapplied, pasqualepillitteri/en)
+ru	9	9	100.0	0	0	site-analyzer.ru, tproger.ru, vc.ru x2, thecode.media, smyslokod.ru, habr.com, designrevision/ru, opencode.ai (RU-localised title) — every result Russian, every result a BLOG
+#
+# 🟡 ONE AMBIGUOUS CELL IN EACH DIRECTION, recorded rather than resolved silently:
+#   de  eesel.ai/blog/best-open-source-ai-agents returned a GERMAN title on an /blog/ path.
+#       Counted IN-LANGUAGE.  Counting it English instead gives de = 33.3 pct and makes
+#       D-LIMB-1 and D-LIMB-2 fall harder, never softer.
+#   ru  opencode.ai returned a RUSSIAN title on a root English domain.  Counted IN-LANGUAGE.
+#       Counting it English gives ru = 88.9 pct; D-LIMB-2's band stays above its threshold.
+# 🟢 So neither reading changes a single limb's verdict.  Said here so no successor re-grades
+# these two cells and reports a different outcome from the same leg output.
+#
+limb	claim_threshold	measured	verdict
+D-LIMB-1	all three legs > 50 pct in-language	ja 100.0 / de 44.4 / ru 100.0	🔴 REFUTED — de is at or below the threshold
+D-LIMB-2	band of the three fractions <= 30 points	55.6 points (100.0 - 44.4)	🔴 REFUTED
+D-LIMB-3	the top in-language leg is NOT the top NEW leg	top in-language = ja and ru (0 addresses); top yield = de (1)	🟢 CONFIRMED
+#
+# 🔴 THE FINDING, and it refutes the methodological claim p378 built on this dial.
+# p378 retired the NEW rate as a leg-selection instrument and promoted the IN-LANGUAGE
+# FRACTION as "the right one".  p379 refutes the promotion.  The two legs at 100 pct
+# in-language returned ZERO addresses between them.  The leg at 44 pct returned the only new
+# repository of the pass, and it was a GERMAN repository.
+# 🟢 MECHANISM: a high in-language fraction means the leg reached that language's COMMENTARY
+# estate, not its forge.  Japanese and Russian carry two of the largest in-language developer
+# writing populations on the web — Qiita, Zenn, Habr, vc.ru, tproger — and an in-language query
+# is therefore ANSWERED BY ARTICLES ABOUT REPOSITORIES rather than by repositories.  German's
+# commentary estate is thinner, so the German leg fell through to a repository.
+# 🔵 The dial that selects a productive leg is the ADDRESS YIELD.  p377's NEW rate does not
+# predict it and p378's in-language fraction predicts it BACKWARDS.
+# 🔴 AND AN ERROR IN THIS PASS'S OWN REGISTRATION: D-LIMB-3 was registered as "UNCORRELATED",
+# carrying p378's framing forward.  The measured relation is INVERSE, which is a stronger
+# claim than the limb was built to express.  A limb that can only say "not equal" cannot
+# report "opposite".
+#
+# WHAT THE ja AND ru LEGS DID BUY, since a nil is only honest if its content is stated:
+#   ja  AITuberKit is NOT MIT from v2.0.0 onward (paid outside personal non-commercial and
+#       educational use); v1.x.x was MIT.  A licence-change specimen, and the Japanese
+#       commentary layer is where it was reported.
+#   ru  no education address; the answer set is coding-agent commentary (Spec Kit, OpenCode,
+#       Cline, CrewAI, Langflow, LangChain) already carried on these shelves.
+# 🔴 NO STAR COUNTS from either leg's claims: api.github.com and github.com HTML both 403.
+# The ru leg reported "135 thousand stars" for Spec Kit; UNVERIFIABLE here and not adopted.
