@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 383 — 2026-10-22 — **THE EIGHT SHELVES WERE REWRITTEN BACK INTO A KNOWLEDGE BASE. 🟢 `make hooks` RAN — THE EXECUTION LANE IS NOT DENIED — AND LANDED **43/45**, WITH BOTH REDS NAMED BELOW RATHER THAN INHERITED. 🟢 62 ADDRESSES VERIFIED FIRST-HAND, 4 DEAD ONES IN COMMON CIRCULATION CORRECTED, 13 REF TRAPS, AND THE ONLY PERMISSIVE MAJOR LMS IN THE INDUSTRY SURFACED. 🔴 NO STAR COUNTS, BECAUSE EVERY POPULARITY CHANNEL IS 403.**
+
+🔵 **Dating note.** Every search leg, probe and licence read below was run on **2026-10-22** and the
+pass's evidence file is stamped `p383`.
+
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p383.tsv)
+
+### 🔴 What this pass changed, and why it is a rewrite rather than an increment
+
+Six shelves — `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
+`intel/market.md`, `intel/trends.md`, `compose/patterns.md` — had become a **journal about this
+base's own measurement apparatus**: channel-yield rates, address-supply exhaustion, pre-registered
+predictions, fold constants, star thresholds. `agents/top.md`'s carried table was sub-1k-★ hobby
+repositories; `intel/trends.md`'s headline trends were about *what this base could see*. A studio
+opening a client engagement could not read a usable shortlist out of any of them, which is the one
+job the brief gives these files.
+
+All six were **fully rewritten** (prior versions in
+[`archive/2026-10-22-p383-pre-rewrite/`](archive/2026-10-22-p383-pre-rewrite/)). The two
+append-only shelves, `agents/trending.md` and `repos/trending.md`, got a dated `p383` section
+prepended with their full history intact beneath, as their contract requires.
+
+🟢 **The apparatus's one durable result was kept, in a usable form.** *A repository's licence badge
+does not tell you what its payload grants* is now **`Pattern L`** in
+[`compose/patterns.md`](compose/patterns.md) — a seven-step procurement gate — instead of a
+narrative. It earned its keep this pass: it caught `microsoft/autogen`'s split grant
+(root `LICENSE` CC-BY-4.0, code grant `LICENSE-CODE` MIT), `open-webui`'s non-stock BSD-3,
+Moodle's grant living in `COPYING.txt`, Frappe LMS's in lowercase `license.txt`, H5P being GPL-3.0
+rather than the MIT it is routinely called, and **five live, advertised repositories with no grant
+at any of seven probed paths** — among them the GitHub home of the Moodle plugin-directory MCP
+plugin.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 595** harvested shapes → **34** are not
+addresses → **2 561 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 561** channel-U
+addresses and **3 019** channel-B survivors give **3 374 addresses over both channels**.
+
+🔴 **The delta is NEGATIVE for the first time in this base's history, and that is the intended
+consequence of the rewrite, not a loss.** Channel U falls **2 697 → 2 561** (−136), channel B
+**3 078 → 3 019** (−59), the union **3 420 → 3 374** (−46). The removed addresses are the carried
+hobby-repository rows and the apparatus's own census tables, which the rewrite replaced with
+**62 first-hand-verified addresses**. Rejected non-addresses rose **33 → 34**. 🔵 **A census that
+can only grow is a census of accumulation, not of curation** — the shrink is the measurement that
+the shelves now carry fewer, better-verified addresses.
+
+### 🟢 `make hooks` — 43 of 45 green, and the execution lane is NOT denied
+
+`p382` recorded that `make hooks` "could not be run at all — the execution lane is DENIED by
+policy". 🔴 **That is refuted: the suite ran here in full.** Result **43/45**, after this pass
+fixed **six of the eight** that came back red across two runs:
+
+| gate | first run | after | what it caught |
+|---|---|---|---|
+| `recount` | 🔴 NO-ANCHOR ×5 | 🟢 **MATCH ×5** | the rewrite had deleted all five registered anchor sentences. Restored as real content: a `## Build-on-this tier` permissive shortlist (**18 rows**) and an `### Agents over the systems` MCP table (**12 rows**, **5 platforms**, **6** across both agent shelves) |
+| `gate-identity` | 🔴 1 finding | 🟢 **PASS** | a **genuine defect in this pass's own draft** — `openedx/edx-ora2` published as two live rows of one table in `repos/foundations.md`. Merged |
+| `gate-grant-path` | 🔴 0 claims parsed | 🟢 **PASS, 28 claims** | the rewrite had dropped the `grant read at` column entirely. Restored as a provenance table: every agent-tier address with the exact `<ref>/<path>` its grant was read from |
+| `gate-census-currency` | 🔴 3/3 stale | 🟢 **PASS** | restated above, after the writes |
+| `gate-union-currency` | 🔴 3/3 stale | 🟢 **PASS** | restated above, after the writes |
+| 🟢 `gate-enumeration` | 🔴 1 REFUTED | 🟢 **PASS** | **the most valuable catch of the pass, and it was against this pass's own draft.** The draft declared five repositories **UNGRANTED** on a licence-file read alone. The gate enumerated the trees and refuted it: `DMontgomery40/mcp-canvas-lms` declares `"license": "MIT"` in `package.json` (and its `files` array names a `LICENSE` absent from the tree); so does `general-mudkip/d2l-mcp-server`; and `onbirdev/moodle-webservice_mcp` — the GitHub home of the **Moodle plugin-directory MCP plugin** — carries the full **GPL-3.0-or-later** header in `version.php`, as Moodle requires of every plugin. **Only two of the five are genuinely ungranted.** A file-only read would have wrongly rejected three, including the one plugin Moodle itself distributes. Now **`Pattern L` step 8** |
+| 🔴 `gate-census-union` | 🔴 control 24 | 🔴 **STILL RED — caused by this pass** | the suite asserts *both* new rejection classes fire on the live shelves "so neither arm is dead code carried for a fixture". `NAME-DOT-RUN` no longer fires because **the rewrite removed the phantom `...`-named addresses that made it fire**. The arm is now exercised only by its fixture. 🔵 Fixing it would mean re-introducing the junk it was built to catch, so it is left red and named here instead |
+| 🔴 `gate-fold-identity` | 🔴 1 of 25 controls | 🔴 **STILL RED — inherited, not caused** | the instrument's **own unit test** fails (`compose/code/`, untouched by this pass). Its live-shelf scan is **clean, 0 findings**. Pre-existing; recorded so the next pass does not re-attribute it |
+
+🔵 **Both remaining reds are published rather than hidden**, per `p300`'s rule that no gate may mask
+a sibling. Neither is a defect in the shelves.
+
+### 🔴 No star counts anywhere in this pass
+
+`api.github.com` → **403** (with an `add_repo` remedy message), `github.com` HTML → **403**,
+`img.shields.io/github/stars` → blocked, `api.star-history.com` → blocked. The technology cycle
+(`v76`) had to publish a correction that earlier cycles' star counts were **pipeline-inflated
+across several industries**; carrying unverifiable figures forward would repeat exactly that error.
+🟢 **What *was* verified first-hand for all 58 live addresses:** liveness, real default ref, and the
+licence text itself — via `git ls-remote --symref` and `raw.githubusercontent.com`, which together
+are a stronger check than the `curl -sI` the brief prescribes and which is itself 403 here.
+
+---
+
 ## Pass 382 — 2026-10-22 — **`ACTION ZZ-ap` IS BUILT AFTER FIVE REGISTRATIONS, AND ITS THIRD FIXTURE IS THE ONE THAT MATTERS: A PERFECTLY VALID, UNEDITED, CORRECTLY-IDENTIFIED LICENCE THAT LEAVES THE REPOSITORY'S ACTUAL PAYLOAD UNGRANTED. 🔴 `make hooks` COULD NOT BE RUN AT ALL — THE EXECUTION LANE IS DENIED BY POLICY, NOT EGRESS — SO NO GATE COLOUR IS CLAIMED ANYWHERE IN THIS PASS. 🔴 AND `api.github.com` WAS NEVER REFUSING: FOUR PASSES READ ONE 403 CELL WHERE THERE ARE THREE STATES, ONE OF WHICH NAMES ITS OWN REMEDY. 🔴 ZERO NEW ADDRESSES, BECAUSE THE SUPPLY IS EXHAUSTED — 17 % → 23.9 % → 0 % IN THREE PASSES ON ONE DAY.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

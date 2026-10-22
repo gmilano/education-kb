@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p383` — **THE SHELVES WERE REWRITTEN BACK INTO A KNOWLEDGE BASE, AND THIS WEEK'S REAL AGENT NEWS IS AN LMS PLUGIN, NOT AN AGENT: MOODLE'S OWN PLUGIN DIRECTORY NOW SHIPS AN MCP SERVER.**
+
+🔵 **What changed in this base this pass.** `agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `intel/market.md`, `intel/trends.md` and `compose/patterns.md` were
+**fully rewritten** (prior versions in [`archive/2026-10-22-p383-pre-rewrite/`](../archive/2026-10-22-p383-pre-rewrite/)).
+Those shelves had become a journal about this base's own measurement apparatus — channel yield
+rates, address-supply exhaustion, pre-registered predictions, star thresholds — with a carried
+agent table of sub-1k-star hobby repositories. A studio opening a client engagement could not read
+a usable shortlist out of it. The apparatus's one durable result survives as **`Pattern L`** in
+[`compose/patterns.md`](../compose/patterns.md): *a repository's licence badge does not tell you
+what its payload grants.* That is now a seven-step procurement gate instead of a narrative. This
+trending file keeps its full history below, as it must.
+
+### 🟢 Trending this week
+
+| what | when | licence | why it matters |
+|---|---|---|---|
+| **Moodle `webservice_mcp` plugin** — Moodle's **own plugin directory** and Marketplace | latest release **23 Jul 2026** | plugin (Moodle 4.5–5.2) | 🟢 **The headline.** Moodle's external functions served as **MCP tools over JSON-RPC 2.0**, gated on `webservice/mcp:use`. An agent can read and write the LMS **with no fork and therefore no GPL exposure**. The integration cost of an LMS-aware agent dropped by an order of magnitude. |
+| [**HKUDS/DeepTutor**](https://github.com/HKUDS/DeepTutor) reached GitHub trending after **v1.5.11** | this cycle | 🟢 Apache-2.0 | Lifelong personalised tutoring — persistent learner memory plus RAG over the learner's own materials. A secondary source puts its topic page at **41.6k ★**; 🔴 **not verified first-hand — every star channel is closed in this sandbox** (`api.github.com` 403, `github.com` HTML 403, shields.io and star-history blocked). Reported, not endorsed. Commentary notes evidence beyond project benchmarks is still limited. |
+| [**mdweaver/canvas-mcp**](https://github.com/mdweaver/canvas-mcp) fork of [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | current | 🟢 MIT both | Adds office-hour appointment groups, announcement editing, syllabus read/write, student groups, course navigation control and course-content copy on top of the base server's courses/assignments/submissions/grading/rubrics. Canvas is now agent-addressable under a clean MIT grant. |
+| **OpenAI Study Mode** + *AI for Educators* course in **Brazilian Portuguese** | mid-**Oct 2026** | 🔴 closed | Not open source, but the clearest signal yet that the majors are localising for **LATAM**. Step-by-step subject exploration with questions, hints and comprehension checks — the behaviour an open build is now benchmarked against. |
+| [**Open-TutorAi/open-tutor-ai-CE**](https://github.com/Open-TutorAi/open-tutor-ai-CE) **v1.0.0** | **May 2026** | 🟢 BSD-3-Clause | Self-hostable tutoring platform with local RAG over textbooks and notes — the data-residency option. Dated here honestly: v1.0.0 is May, not this month. |
+| 🔴 [**Seechange-edu/act-ai-tutor-backend**](https://github.com/Seechange-edu/act-ai-tutor-backend) UAT release | **21 Oct 2026** | 🔴 **UNGRANTED** | Surfaced by a release-tag search as the only October-dated education-agent artefact. Verified: **no licence at seven probed paths**, release page carries deployment config and no feature description. Recorded as a non-finding so the next pass does not re-chase it. |
+
+### 🔴 Two newly verified ungranted agents — do not ship
+
+Live, functional, advertised, and with **no licence file at `LICENSE` `LICENSE.md` `LICENSE.txt`
+`LICENCE` `COPYING` `LICENSE-MIT` `license`**:
+[loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) (and no `license` field in its
+`pyproject.toml` either — genuinely ungranted) ·
+[Seechange-edu/act-ai-tutor-backend](https://github.com/Seechange-edu/act-ai-tutor-backend).
+
+🟡 **And a correction this pass made to its own draft, forced by this base's `gate-enumeration`.**
+Three further repositories with no licence file turned out to be **granted elsewhere**:
+[DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) and
+[general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) declare
+`"license": "MIT"` in `package.json` (**manifest-only**; the file `mcp-canvas-lms`'s own `files`
+array names is absent from the tree), and
+[onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) — the GitHub
+home of the Moodle plugin-directory MCP plugin — carries the full **GPL-3.0-or-later** header in
+`version.php`, as Moodle requires. **A file-only read would have wrongly rejected three of five,
+including the one plugin Moodle itself distributes.** Now `Pattern L` step 8.
+
+### 🟡 Two licence traps verified this pass
+
+- [microsoft/autogen](https://github.com/microsoft/autogen) — root `LICENSE` is **CC-BY-4.0**
+  (18,649 B); the **code** grant is a *different file*, `LICENSE-CODE` = **MIT**. A single-file
+  read is wrong in both directions.
+- [open-webui/open-webui](https://github.com/open-webui/open-webui) — `LICENSE` is **2,819 B**
+  against stock BSD-3's ~1,500 B: BSD-3 text **plus** a branding restriction and a CLA,
+  self-titled "Open WebUI License". Prefer [LibreChat](https://github.com/danny-avila/LibreChat)
+  (**MIT**, 1,065 B) as a campus gateway.
+
+### 🔵 Negative result worth recording: the word "learning" is ambiguous in this industry
+
+Carried forward and re-confirmed by this pass's searches. A query containing a bare *"learning"*
+returns the **machine-learning** ecosystem, not pedagogy — on any forge sorted by popularity the ML
+sense wins by two orders of magnitude. The queries that returned education used pedagogy-only
+vocabulary: **`tutor`, `tutoring`, `classroom`, `curriculum`**, and the **`ai-education` topic**.
+Every education search leg should be written that way.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p382` — **THE SUPPLY RAN DRY, AND IT IS MEASURED: 17 % → 23.9 % → **0 %** NEW ACROSS THREE PASSES ON ONE DAY, ON THE SAME CHANNEL. 🔴 `0` NEW ROWS, `0` PADDED. 🟢 AND THE MODAL FORM OF A NEW EDUCATION AGENT IS NOW A *SKILL PACK* THAT CANNOT CLEAR 250 ★ — WHICH IS WHY EVERY STARS-SORTED LEG READS EMPTY.**
 
 **Evidence:** [`address-yield`](evidence/address-yield.2026-10-22-p382.tsv) ·

@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p383` — **GITHUB TRENDING WAS UNREADABLE (403), SO THIS PASS MEASURED SOMETHING IT COULD: **62 ADDRESSES RE-VERIFIED FIRST-HAND**, AND IT FOUND **4 DEAD ADDRESSES IN COMMON CIRCULATION**, **13 REF TRAPS**, AND THE ONLY PERMISSIVE MAJOR LMS IN THE INDUSTRY — WHICH NO ROUNDUP MENTIONS.**
+
+🔴 **Channel note, stated rather than worked around.** `github.com/trending` and all of
+`github.com` HTML return **403** through this sandbox's agent proxy; `api.github.com` returns
+**403** with an `add_repo` message; `img.shields.io/github/stars` and `api.star-history.com` are
+blocked. **So no trending ranking and no star counts are published this pass.** Two channels *are*
+open and were used for everything below — `git ls-remote --symref` (address + **real default ref**)
+and `raw.githubusercontent.com` (the **licence text itself**). Together they are a stronger check
+than the `curl -sI` the run brief prescribes: one proves the address and its ref, the other reads
+the grant. Full results: [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.tsv) —
+**62 addresses, 58 live, 4 dead.**
+
+### 🟢 The finding worth the pass: the licence frontier runs *across* the stack
+
+Measured over all 58 live addresses, not asserted:
+
+| tier | what the payloads actually say |
+|---|---|
+| **LMS / platform** | 🔴 copyleft throughout — Moodle **GPL-3.0**, Open edX **AGPL-3.0**, Canvas **AGPL-3.0**, Chamilo **GPL-3.0**, ILIAS **GPL-3.0**, Tutor **AGPL-3.0**, Frappe LMS **AGPL-3.0**, Sakai **ECL-2.0**, Opencast **ECL-2.0**, OpenEduCat **LGPL-3.0**, H5P **GPL-3.0** |
+| **the exception** | 🟢 **[OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) — Apache-2.0.** The **only** major open-source LMS a studio can extend with closed code. Absent from every "best open source LMS 2026" roundup read this pass, all of which lead with Moodle, Open edX and Canvas. |
+| **agents / tooling** | 🟢 MIT / Apache-2.0 / BSD-3 almost without exception |
+
+That asymmetry is the architecture: **compose permissive agents over a copyleft platform across
+LTI 1.3, MCP or web services — never fork the platform.** The interop boundary is a legal artefact
+as much as a technical one. Recipes in [`compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 Four dead addresses in common circulation, corrected
+
+| dead | live replacement |
+|---|---|
+| `apereo/opencast` | [opencast/opencast](https://github.com/opencast/opencast) — ECL-2.0, default ref `develop` |
+| `edx/openassessment` | [openedx/edx-ora2](https://github.com/openedx/edx-ora2) — AGPL-3.0, default ref `master` |
+| `openedx/openassessment` | [openedx/edx-ora2](https://github.com/openedx/edx-ora2) |
+| `OpenEduCat/OpenEduCat` | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) — LGPL-3.0, default ref `19.0` |
+
+### 🔴 13 of 58 live addresses are **not on `main`**
+
+A `main`-assuming licence read returns "no licence" for every one of them, and that false negative
+is indistinguishable from a real one:
+
+`master` → openedx/edx-platform · instructure/canvas-lms · chamilo/chamilo-lms · sakaiproject/sakai ·
+OpenOLAT/OpenOLAT · h5p/h5p-php-library · openfun/richie · openedx/edx-ora2 ·
+1EdTech/lti-1-3-php-library · ucbds-infra/otter-grader · hendrycks/test · openai/grade-school-math
+· **`develop`** → oppia/oppia · learningequality/kolibri · opencast/opencast · frappe/lms ·
+**`dev`** → learnhouse/learnhouse · **`release`** → overhangio/tutor · **`development`** →
+tutors-sdk/tutors · **`release_11`** → ILIAS-eLearning/ILIAS · **`19.0`** →
+openeducat/openeducat_erp.
+
+### 🔴 Five repositories whose grant is **not** at `LICENSE`
+
+| repo | where the grant actually is | licence |
+|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | **`COPYING.txt`** — there is no root `LICENSE` at all | GPL-3.0 |
+| [frappe/lms](https://github.com/frappe/lms) | **`license.txt`** (lowercase) | AGPL-3.0 |
+| [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `LICENSE.txt` | Apache-2.0 |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `LICENSE.txt` | 🔴 **GPL-3.0 — routinely mislabelled MIT** |
+| [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | `LICENSE.md` | MIT |
+
+### 🟢 New to these shelves this pass
+
+Addresses that were not carried before and are now verified: **[OpenOLAT](https://github.com/OpenOLAT/OpenOLAT)**
+(Apache-2.0) · **[openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp)**
+(LGPL-3.0) · **[academico-sis/academico](https://github.com/academico-sis/academico)** (MIT, Spanish
+built in — the only permissive Spanish-native administration platform found, against a measured
+**LATAM open-source supply gap**) · **[1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library)**
+(Apache-2.0, the copyleft firewall) · **[opencast/opencast](https://github.com/opencast/opencast)**
+(ECL-2.0) · **[openedx/edx-ora2](https://github.com/openedx/edx-ora2)** (AGPL-3.0) ·
+**[microsoft/pybryt](https://github.com/microsoft/pybryt)** (MIT) ·
+**[ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader)** (BSD-3) ·
+**[open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki)** (MIT) ·
+**[Future-House/paper-qa](https://github.com/Future-House/paper-qa)**,
+**[AkariAsai/OpenScholar](https://github.com/AkariAsai/OpenScholar)**,
+**[allenai/ai2-scholarqa-lib](https://github.com/allenai/ai2-scholarqa-lib)** (all Apache-2.0) ·
+**[danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)** (MIT) ·
+**[serlo/serlo.org](https://github.com/serlo/serlo.org)** (Apache-2.0) ·
+**[openfun/richie](https://github.com/openfun/richie)** (MIT) ·
+**[netless-io/flat](https://github.com/netless-io/flat)** (MIT) ·
+**[r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp)** and
+**[mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp)** (MIT).
+
+### 🔴 Measured gap: LATAM
+
+A targeted search for LATAM-origin open-source education software on GitHub — **SIGAA** source,
+Portuguese/Spanish-language academic management, AI-enabled administration from the region —
+**returned nothing usable.** No SIGAA source is published. The closest fits are
+`academico-sis/academico` (MIT, SME-scale) and Chamilo's public-sector install base; OpenEduCat's
+Brazil and Mexico country pages are **vendor marketing with unverified feature claims**. Recorded
+as a **supply gap, not a search failure** — and it is the clearest build-vs-buy opening in the
+rotation. Detail in [`intel/market.md`](../intel/market.md).
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p382` — **`Gap 539`'s STOPLIST IS BUILT AND IT FOUND **8**, NOT 1 — SO THE GAP EXCEEDED ITS OWN FIXTURE. 🟢 AND BUILDING IT TURNED UP A SECOND ARM NOBODY HAD LOOKED FOR: **4** PHANTOM ADDRESSES WHOSE REPOSITORY NAME IS LITERALLY `...`, PASSED BY EVERY ARM OF BOTH FILTERS. 🔴 CENSUS 3 078 → 3 066.**
 
 **Evidence:** [`branch-prefix-stoplist`](evidence/branch-prefix-stoplist.2026-10-22-p382.tsv) ·

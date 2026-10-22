@@ -1,0 +1,69 @@
+# p383 · 2026-10-22 · first-hand verification of every GitHub address written into this pass's shelves.
+# CHANNEL NOTE: `curl -sI https://github.com/...` returns 403 in this sandbox (agent proxy), and
+# api.github.com returns 403 with an add_repo message. Two channels ARE open and were used instead,
+# and both are stronger than a HEAD request:
+#   (1) `git ls-remote --symref https://github.com/<slug> HEAD` -> proves the address resolves AND
+#       gives the REAL default ref. A 404/private/renamed repo fails here.
+#   (2) `raw.githubusercontent.com/<slug>/<real-ref>/<path>` -> the licence TEXT, read first-hand.
+# Licence paths probed in order: LICENSE LICENSE.md LICENSE.txt LICENCE COPYING LICENSE-MIT license
+slug	status	default_ref	license_path	license_bytes	license_read	note
+HKUDS/DeepTutor	LIVE	main	LICENSE	11407	Apache-2.0	agent tier
+plastic-labs/tutor-gpt	LIVE	main	LICENSE	35148	GPL-3.0	copyleft-flagged
+Open-TutorAi/open-tutor-ai-CE	LIVE	main	LICENSE	1530	BSD-3-Clause	
+HugeCatLab/ChatTutor	LIVE	main	LICENSE	34522	AGPL-3.0	network copyleft
+Selleo/mentingo	LIVE	main	LICENSE	1062	MIT	
+satvik314/educhain	LIVE	main	LICENSE	1091	MIT	
+AI-Shifu/ai-shifu	LIVE	main	LICENSE.txt	11341	Apache-2.0	grant NOT at LICENSE
+learnhouse/learnhouse	LIVE	dev	LICENSE	34522	AGPL-3.0	REF TRAP: default ref is `dev`
+microsoft/ai-agents-for-beginners	LIVE	main	LICENSE	1140	MIT	courseware
+huggingface/agents-course	LIVE	main	LICENSE	11356	Apache-2.0	courseware
+assafelovic/gpt-researcher	LIVE	main	LICENSE	11356	Apache-2.0	
+Future-House/paper-qa	LIVE	main	LICENSE	11340	Apache-2.0	
+AkariAsai/OpenScholar	LIVE	main	LICENSE	11356	Apache-2.0	
+allenai/ai2-scholarqa-lib	LIVE	main	LICENSE	11356	Apache-2.0	
+jupyterlab/jupyter-ai	LIVE	main	LICENSE	1515	BSD-3-Clause	
+jupyter/nbgrader	LIVE	main	LICENSE	1512	BSD-3-Clause	
+ucbds-infra/otter-grader	LIVE	master	LICENSE	1559	BSD-3-Clause	REF TRAP: `master`
+microsoft/pybryt	LIVE	main	LICENSE	1140	MIT	
+danny-avila/LibreChat	LIVE	main	LICENSE	1065	MIT	campus LLM gateway
+tutors-sdk/tutors	LIVE	development	LICENSE	1087	MIT	REF TRAP: `development`
+r-huijts/canvas-mcp	LIVE	main	LICENSE	1064	MIT	MCP
+mdweaver/canvas-mcp	LIVE	main	LICENSE	1064	MIT	MCP, fork of r-huijts
+netless-io/flat	LIVE	main	LICENSE	1061	MIT	online classroom
+academico-sis/academico	LIVE	main	LICENSE	1093	MIT	Laravel SIS, es/fr built-in
+openedx/edx-platform	LIVE	master	LICENSE	35135	AGPL-3.0	REF TRAP: `master`
+moodle/moodle	LIVE	main	COPYING.txt	-	GPL-3.0	NO root LICENSE: grant is in COPYING.txt
+instructure/canvas-lms	LIVE	master	LICENSE	34519	AGPL-3.0	REF TRAP: `master`
+chamilo/chamilo-lms	LIVE	master	LICENSE	35146	GPL-3.0	REF TRAP: `master`
+sakaiproject/sakai	LIVE	master	LICENSE	11119	ECL-2.0	Apache-derived education licence
+OpenOLAT/OpenOLAT	LIVE	master	LICENSE	10982	Apache-2.0	only permissive major LMS
+ILIAS-eLearning/ILIAS	LIVE	release_11	LICENSE	35146	GPL-3.0	REF TRAP: `release_11`
+opencast/opencast	LIVE	develop	LICENSE	11339	ECL-2.0	REF TRAP: `develop`
+oppia/oppia	LIVE	develop	LICENSE	11357	Apache-2.0	REF TRAP: `develop`
+h5p/h5p-php-library	LIVE	master	LICENSE.txt	35146	GPL-3.0	NOT MIT - corrects a common claim
+learningequality/kolibri	LIVE	develop	LICENSE	1096	MIT	REF TRAP: `develop`
+serlo/serlo.org	LIVE	main	LICENSE	11356	Apache-2.0	
+openfun/richie	LIVE	master	LICENSE	1077	MIT	REF TRAP: `master`
+overhangio/tutor	LIVE	release	LICENSE.txt	34522	AGPL-3.0	REF TRAP: `release`
+frappe/lms	LIVE	develop	license.txt	-	AGPL-3.0	grant is lowercase `license.txt`
+openeducat/openeducat_erp	LIVE	19.0	LICENSE	8240	LGPL-3.0	REF TRAP: default ref is `19.0`
+openedx/edx-ora2	LIVE	master	LICENSE	35135	AGPL-3.0	open-response assessment
+1EdTech/lti-1-3-php-library	LIVE	master	LICENSE	11342	Apache-2.0	LTI 1.3 interop
+jupyterhub/jupyterhub	LIVE	main	LICENSE	1474	BSD-3-Clause	
+EleutherAI/lm-evaluation-harness	LIVE	main	LICENSE.md	1066	MIT	grant at LICENSE.md
+hendrycks/test	LIVE	master	LICENSE	1069	MIT	MMLU
+openai/grade-school-math	LIVE	master	LICENSE	1062	MIT	GSM8K
+open-spaced-repetition/fsrs4anki	LIVE	main	LICENSE	1078	MIT	
+stanfordnlp/dspy	LIVE	main	LICENSE	1084	MIT	
+infiniflow/ragflow	LIVE	main	LICENSE	11356	Apache-2.0	
+Unstructured-IO/unstructured	LIVE	main	LICENSE.md	11359	Apache-2.0	
+ankitects/anki	LIVE	main	LICENSE	1929	AGPL-3.0	
+microsoft/autogen	LIVE	main	LICENSE	18649	CC-BY-4.0	SPLIT GRANT: code grant is LICENSE-CODE = MIT
+open-webui/open-webui	LIVE	main	LICENSE	2819	NOT-STOCK-BSD	BSD-3 text + branding restriction + CLA
+loyaniu/moodle-mcp	LIVE	main	-	0	UNGRANTED	no licence at 7 probed paths - do not ship
+DMontgomery40/mcp-canvas-lms	LIVE	main	-	0	UNGRANTED	no licence at 7 probed paths - do not ship
+Seechange-edu/act-ai-tutor-backend	LIVE	main	-	0	UNGRANTED	no licence at 7 probed paths
+apereo/opencast	DEAD	-	-	-	-	moved: use opencast/opencast
+edx/openassessment	DEAD	-	-	-	-	moved: use openedx/edx-ora2
+openedx/openassessment	DEAD	-	-	-	-	moved: use openedx/edx-ora2
+OpenEduCat/OpenEduCat	DEAD	-	-	-	-	wrong case/org: use openeducat/openeducat_erp
