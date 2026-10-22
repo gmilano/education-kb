@@ -396,3 +396,102 @@ major publisher's tutoring SDK (**115 published versions**) carries **no licence
 the repo, which is private, but from the artefact, which is not. 🔵 And the corollary a studio should
 internalise: **commercial education vendors are starting to distribute as closed SaaS with an npm
 veneer.** The npm scope looks like open source, installs like open source, and grants nothing.
+
+## Trend 13 — 🆕 `p389` The supply has a currency problem, and it is now a number
+
+This base has built a careful discipline about *licences* and almost none about *time*. `p387` and
+`p388` both recorded that no maintenance signal was available. It was: **`git` read access is open to
+every public repository**, and a blobless shallow clone returns the last commit date at the real
+default ref in about a second. Sixty addresses were dated this pass.
+
+**The distribution, which is the trend.** 58 live, 2 dead. **48 of 58 moved within 30 days**, and 17
+of those were committed **on the day of the pass**. That is a healthier supply than this industry's
+reputation suggests — education tooling is unglamorous, not abandoned. But **7 of 58 are past 120
+days, and four of those seven carried a recommendation on these shelves**:
+
+| stale address | days | what it was being recommended for |
+|---|---|---|
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | 343 | a Tier-1 tutor |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | 242 | Moodle integration |
+| [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | 209 | North American curriculum grounding |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 144 | Canvas integration — **and it is ungranted** |
+
+🔵 **The general shape, and it is this base's fourth instance of one error.** `p386`: a count of
+addresses is not a count of grants. `p387`: a null leg is not a null supply. `p388`: an exhausted
+channel is not an exhausted supply. **`p389`: a closed popularity channel is not a closed maintenance
+channel.** Four passes, one mistake — *a property of the instrument reported as a property of the
+industry* — and each time the fix was to ask which channel was actually being measured.
+
+🔴 **The procurement consequence, which outlives the instrument.** A licence tells you whether you
+*may* build on something. A date tells you whether you will be **alone** on it. Those are different
+risks and they price differently: an MIT repository that has not moved in eight months is a
+**vendoring decision with a maintenance line in the estimate**, not an integration. Both numbers
+belong in the same row of a proposal, and until this pass only one of them was here.
+
+🟡 **And the limit, stated so the number is not over-read.** A commit date says someone pushed — not
+to the branch a release is cut from, and not that the project is healthy.
+[instructure/canvas-lms](https://github.com/instructure/canvas-lms) is the case in point: `master` is
+175 days behind while its `stable/*` branches move, because that is how Instructure ships. A
+specification or a dataset that is *finished* is not decaying either. Read the date against what the
+artefact is.
+
+## Trend 14 — 🆕 `p389` APAC has become the net exporter of open-source education AI, and the Gulf the net importer
+
+**The supply side.** The largest education-native repository in open source is
+[**OpenMAIC**](https://github.com/THU-MAIC/OpenMAIC) — **MIT**, ~41.3k ★, from **Tsinghua
+University**, committed the day of this pass, published in **JCST 2026** and validated inside the
+university on **700+ students**. It is not an outlier in its region: the Tier-1 tutor shelf on
+[`agents/top.md`](../agents/top.md) is now **majority APAC by origin** — DeepTutor (HKU, Apache-2.0),
+ai-shifu (China, Apache-2.0), educhain (India, MIT), OpenTutor (China, MIT), Aha Tutor (China, MIT),
+learn-shell (China), ChatTutor (APAC) — against one EMEA entry (mentingo, Poland) and, at Tier 1, one
+North American (tutor-gpt, now 343 days stale). 🔵 **The pattern is not "China ships a lot of AI."**
+It is that **the pedagogy is being designed in the repository** — mastery estimates that record
+*confidence* separately from correctness, FSRS review built in, cognitive-load detection,
+misconception-aware branching — in projects whose authors are university teaching groups rather than
+startups. That is a supply a studio can build a practice on, and its licences are permissive.
+
+**The demand side, created by statute rather than by procurement.** The **UAE** approved an AI
+curriculum across **all public and private schools** by Cabinet decision in September 2026, with
+**22,000 teachers and education professionals** to be trained, and for 2026-27 merged Design,
+Innovation and Computer Science into a single subject, *Artificial Intelligence and Technology*,
+KG–Grade 12. **Saudi Arabia** began a comprehensive AI curriculum across all levels of public
+education in the 2025-26 academic year, led by the **National Curriculum Center** with **SDAIA**.
+These are the most aggressive AI-in-education mandates anywhere: not permission to pilot, a
+**compulsory subject with a teacher-training number attached**.
+
+🔴 **And the mismatch is the opportunity.** This pass found **no Gulf-origin and no Arabic-first
+open-source education agent or platform** — not one address. The region with the world's strongest
+statutory demand for AI teaching material has, as far as this base can see, **no local open-source
+supply at all**, while the permissive supply that does exist is EN + zh-CN. The gap is not a model
+gap; it is **curriculum-grounding and language**: Arabic-first content, alignment to the UAE MoE's
+seven curriculum areas, and the teacher-training surface those 22,000 professionals will be trained
+on. 🟡 Recorded as an informed gap, not a finding: the searches run were English-language, and an
+Arabic-language search is the obvious next leg.
+
+## Trend 15 — 🆕 `p389` The parent surface now has a cautionary case, and it is in LATAM
+
+`p388` added the parent/guardian persona and named **FERPA** as the line that splits a family-run
+assistant from a district-hosted one. The LATAM equivalent of that line is **LGPD Article 14**, and
+unlike FERPA it already has a public failure attached to it.
+
+- **Brazil has no AI statute in force.** As of October 2026 **PL 2338/2023** — passed by the Senate
+  in December 2024 — is still in the Câmara dos Deputados, with reports that the vote resumes after
+  the October 2026 elections. So the binding instrument for an education engagement today is the
+  **LGPD**, not an AI law.
+- **Children's data has its own consent basis.** For core teaching a school generally relies on
+  contract and legal obligation, but uses **beyond** that — images, communications, extracurricular
+  activity — require **specific, explicit, recorded and revocable consent from a parent or guardian**
+  under Art. 14. An AI parent portal is squarely in the "beyond" category.
+- **The cautionary case.** In 2023 the São Paulo state education department (**SEDUC**) had its
+  *Minha Escola* app installed on parents' phones without notice or consent; Data Privacy Brasil
+  assessed it as a probable LGPD violation. 🔵 **This is the precise failure mode of the persona
+  `p388` added** — a district-hosted parent surface deployed *to* families rather than *for* them —
+  and it is the reference a LATAM client will have in mind, so bring it up first.
+
+🟢 **What this makes defensible rather than risky.** The pattern that survives Art. 14 is the one
+`Pattern P-1` already describes: the **family runs the agent and exercises its own access right**, so
+no new disclosure is created. For the district-hosted variant (`P-2`), the deliverable a Brazilian
+client should be sold is the **consent and revocation mechanism itself** — per-guardian, recorded,
+revocable, auditable — as a first-class feature, not a checkbox. 🟡 **Mexico: informed gap.** No
+education-specific AI guidance or student-data rule was found for Mexico in this pass; the general
+position is a data-protection regime and no AI statute. Stated, not inferred.

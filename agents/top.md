@@ -68,6 +68,27 @@ probed**, 26 live, **22 granted**, 2 manifest-only, **6 published-but-unreadable
 prompts for credentials while the npm package ships normally — a category this base could not name
 before `git ls-remote` was used to separate *private* from *absent*).
 
+🆕 **Pass `p389` · 2026-10-22 — increment, and it closes the gap `p387` and `p388` both named as unclosable.**
+**(1) 🟢 The maintenance signal exists.** Not through any popularity channel — those are still shut —
+but through **git read access, which is open to every public repository in this sandbox**. A
+`git clone --depth 1 --filter=blob:none --no-checkout` costs **~1.2 s** and returns the **real default
+ref**, the **HEAD SHA**, the **last commit date**, the root tree, and — via `git show HEAD:LICENSE` —
+the **licence text from the payload at that ref**. `p387` wrote that "this base has published no
+maintenance signal at all." That is now false. **Sixty addresses are dated in this pass**, in
+days since last commit, and the dating overturns four recommendations on these shelves.
+**(2) 🟢 The largest education-native agent in open source was missing from every shelf here** —
+**[OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)** (Tsinghua, **MIT**, ~41.3k ★ read off the
+repository page, committed **today**). It is not a tutor bolted to an LMS; it is a generated
+classroom with an AI teacher, teaching assistants and simulated classmates. See *Tier 1*.
+**(3) 🔴 And the licence claim in circulation about it is wrong.** A 2026 review states OpenMAIC is
+"**AGPL-3.0**, with commercial licensing available by contact" — which would disqualify it from most
+engagements. The payload says otherwise, and `package.json` agrees. See
+*[Two licence traps](#-two-licence-traps-that-a-badge-read-would-miss)*.
+**(4) 🔴 `Pattern B`'s and `Tier 1`'s stale dependencies now have *maintained*, MIT replacements** —
+`CAHLR/pyBKT` and `CAHLR/OATutor` (UC Berkeley), both moved **yesterday**, neither on any shelf here.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv) — **60 addresses,
+58 live, 2 dead**, every licence read from the payload at the real default ref, **every row dated**.
+
 ## 🔴 No star counts are published this pass, and that is deliberate
 
 Every popularity channel was closed in this sandbox: `api.github.com` → **403**,
@@ -77,16 +98,42 @@ were **pipeline-inflated** across several industries. Carrying forward unverifia
 repeat exactly that error, so this shelf ranks by **what a studio can act on** — licence
 permissiveness, maintenance signal and fit — and states the gap instead of filling it.
 
+🆕 `p389` — **two corrections to the paragraph above.**
+
+🟢 **The maintenance half of that sentence is no longer a gap.** `p387` and `p388` both read "no
+maintenance signal," and that was a conclusion drawn from the *popularity* channels being closed.
+They are different channels. **`git` read access is open**, and one blobless shallow clone per
+repository publishes the signal that actually matters to a studio — *is anyone still working on
+this* — with no API, no HTML scrape and no star count involved:
+
+```bash
+# ~1.2 s per repository, no credentials, no API
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r
+git -C r symbolic-ref --short HEAD      # the REAL default ref
+git -C r log -1 --format='%H %cI'       # HEAD sha + last commit date  ← the signal
+git -C r ls-tree --name-only HEAD       # root tree: is there a LICENSE at all?
+git -C r show HEAD:LICENSE              # the GRANT, from the payload at that ref
+```
+
+🔴 **One popularity number *is* readable and the gap statement overstated it.** `curl` to
+`github.com` returns **403**, but a **fetch-and-render of the repository page succeeds** and prints
+the star count. `api.github.com/search/*` and `api.github.com/repos/*` remain **403** ("sessions are
+bound to their configured repositories"), so there is **no way to rank or enumerate** — a count can
+be *confirmed for an address you already have*, never discovered. Two such counts appear in this
+pass, each attributed to that read. The ranking still does not use them.
+
 ## Tier 1 — Tutoring and instruction agents
 
 | agent | repo | default ref | licence | what it actually does | origin |
 |---|---|---|---|---|---|
+| **OpenMAIC** 🆕 `p389` | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | `main` | 🟢 **MIT** *(1,066 B, "Copyright (c) 2026 THU-MAIC"; `package.json` also declares `"license": "MIT"`)* | **The whole classroom, generated — and the largest education-native repository in the open-source supply (~41.3k ★).** A topic or an uploaded document becomes a multi-agent lesson: an AI teacher with a voice, teaching assistants, simulated classmates, narrated slides, auto-graded quizzes, HTML interactives and a shared whiteboard, with **agentic mid-lesson chat about any slide element**. Grew out of **MAIC**, deployed inside Tsinghua and validated on **700+ real students**; paper in **JCST 2026**. 🟢 Three properties that decide a school deployment and that almost nothing else on this shelf has: **server-first** generation (v1.2.0) that survives closed tabs and restarts on PostgreSQL; **central model governance** — every AI use is a named *slot* in `openmaic.yml`, each slot pinned to a provider, with an option to **forbid user-supplied keys** outright and `video: null` to switch a capability off; and **export of a finished classroom as one offline HTML file** (or a PPTX that keeps every scene). 🟢 Local-model path is real: **Lemonade** for local inference, **FunASR** for local ASR. 🟢 **24 built-in skills** plus per-owner authored skills; the course agent works through validated tools (patch one scene atomically, reorder pages, import `.pptx` with layout) rather than rewriting opaque blobs. 🟢 Security is handled like a product, not an afterthought — five releases since September carry SSRF, DNS-rebinding and provider-redirect fixes under published GHSAs. 🔴 Current head is **v1.3.0-rc.1** (knowledge base, 2026-10-22) with **breaking upgrade conditions and no rollback below it**; pin **v1.2.1** (2026-10-18) for a pilot. 🔴 Needs Node ≥ 22.19, pnpm ≥ 10, PostgreSQL 16 and a long-running server — Vercel deployments are capped at the 1.1.x line. | APAC — Tsinghua University, China (EN + zh-CN) |
+| **OATutor** 🆕 `p389` | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | `main` | 🟢 **MIT** | **The adaptive tutor with the mastery model in the open, and the one with an academic maintainer behind it** — UC Berkeley's CAHLR. Intelligent-tutoring scaffolds over an open problem bank, with **Bayesian Knowledge Tracing** driving what comes next, so "adaptive" is a parameterised model a client can inspect and re-estimate rather than a prompt. Pairs with [`pyBKT`](https://github.com/CAHLR/pyBKT) (MIT) on [`repos/foundations.md`](../repos/foundations.md), which fits the model from the client's own interaction logs. 🟢 Dated **2026-10-21** — this is a live project, not a paper artefact. 🟡 Content-first: the win is the scaffold-and-mastery machinery, not an LLM. | North America — UC Berkeley CAHLR |
 | **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `main` | 🟢 **Apache-2.0** | Lifelong personalised tutoring: persistent learner memory plus RAG grounded in the learner's own uploaded materials. The most substantial permissive tutor in the open-source supply. | APAC — HKU Data Intelligence Lab, Hong Kong |
 | **ai-shifu** | [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `main` | 🟢 **Apache-2.0** *(grant at `LICENSE.txt`, not `LICENSE`)* | AI-led chat-based course delivery — the agent drives the lesson script rather than waiting to be asked. | APAC — China |
 | **educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | `main` | 🟢 **MIT** | Content generation for instructors: quizzes, lesson plans, question banks, YouTube-to-course. Teacher-facing, which is where the fastest-growing region's market actually is. | APAC — India |
 | **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | `main` | 🟢 **MIT** | AI-native LMS with an AI Mentor and role-play scenarios built in rather than bolted on. | EMEA — Selleo, Poland |
 | **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` | 🟢 **BSD-3-Clause** | Self-hostable tutoring platform with local RAG over textbooks and notes — the data-residency option. | not verified this pass |
-| **tutor-gpt** | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | `main` | 🟡 **GPL-3.0** | Theory-of-Mind tutoring: models the learner's mental state to pitch the explanation, rather than retrieving a better paragraph. Pedagogically the most interesting approach here. | North America |
+| **tutor-gpt** | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | `main` | 🟡 **GPL-3.0** | Theory-of-Mind tutoring: models the learner's mental state to pitch the explanation, rather than retrieving a better paragraph. Pedagogically the most interesting approach here. 🔴 🆕 `p389` **Dated: last commit `2025-11-13` — 343 days.** Keep it on the shelf as the clearest *statement* of learner-state modelling, but it is no longer a maintained dependency, and GPL-3.0 was always the harder sell. | North America |
 | **ChatTutor** | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | `main` | 🔴 **AGPL-3.0** | Visual, interactive tutor. Network copyleft — hosting it as a service triggers source obligations. | APAC |
 | **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 **`dev`** | 🔴 **AGPL-3.0** | AI-native course platform. Note the default ref is `dev`: a `main`-assuming clone or licence read fails silently. | EMEA |
 | **Learn Shell** | [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) | `main` | 🔴 **AGPL-3.0** at `main` — 🟢 **MIT at tag `v0.1.0`** | 🆕 `p385`. **Agent-native teaching OS: the classroom is the server and the agent is bring-your-own.** Courses, lessons, FSRS-scheduled flashcards, graded exercises, mindmap, document reader, and a memory layer the agent reads back (`get_context` / `get_learner_brief`) instead of re-deriving the learner each session. ~50 tools over MCP, self-describing via a `manifest://capabilities` resource. 🔴 v1 is explicitly **single-machine and unauthenticated** — not multi-tenant as it stands. | APAC — China (MCP tool descriptions and prep-report are Chinese-first; docs English-first) |
@@ -459,6 +506,22 @@ TOTP/OAuth/browser auth strategies) is the closest thing to a base for one.
 
 ## 🟡 Two licence traps that a badge-read would miss
 
+🆕 `p389` — **and a third kind: the trap is not in the repository at all, it is in the write-up.**
+
+- [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — a 2026 third-party review of this
+  project states it is "**AGPL-3.0**, with commercial licensing available by contact." **It is not.**
+  Read first-hand at the real default ref (`main` @ `269fde2d991f`, 2026-10-22): `LICENSE` is **1,066 B
+  of stock MIT text**, "MIT License / Copyright (c) 2026 THU-MAIC", and the root `package.json`
+  independently declares `"license": "MIT"`. Two sources inside the payload agree; the review is
+  simply wrong. 🔵 **Why this one matters more than a badge mismatch.** A badge mismatch is caught by
+  the probe on this page. A *licence claim in a review* is caught by nothing — it is read by a studio
+  lead doing exactly the sort of search that produced this pass, and "AGPL + commercial licence"
+  reads as *do not propose this to a client*. The largest education-native repository in the supply
+  was one secondary source away from being ruled out of every engagement. 🟢 **Procurement rule:
+  never let a third-party write-up decide a licence. `Pattern L` is the gate, and it reads the
+  payload.**
+
+
 - [microsoft/autogen](https://github.com/microsoft/autogen) — root `LICENSE` is **CC-BY-4.0**
   (18,649 B, "Attribution 4.0 International"). The **code** grant is a *different file*,
   `LICENSE-CODE` = **MIT**. A tool that reads one file and reports "CC-BY" is wrong about the code,
@@ -488,6 +551,57 @@ unresolved** (`Gap 387-B`). For `d2l-cli` the registry handed over the address t
 search for the string in a licence notice could not: `p386` was right not to guess a slug, and the
 registry is where the slug actually lives.
 
+## 🆕 `p389` — Dated: every address on these shelves, in days since last commit
+
+The instrument is the blobless shallow clone described above. **60 addresses, 58 live, 2 dead**, each
+dated at its **real default ref** on 2026-10-22. Full table:
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv). What the dates change:
+
+### 🔴 Stale — and four of them carry a recommendation on these shelves
+
+| address | real ref | days since last commit | licence (payload) | what the date changes |
+|---|---|---|---|---|
+| [apache/ofbiz](https://github.com/apache/ofbiz) | `trunk` | 🔴 **3,539** *(2017-02-12)* | Apache-2.0 | **A lookalike at the obvious address.** This is the retired monolith. The ERP base recommended on [`verticals/solutions.md`](../verticals/solutions.md) is [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) — **dated 0 days, committed today**. 🟢 The shelf had the right address; a client's engineer typing the obvious one lands on a nine-year-dead tree. Name the `-framework` suffix in the proposal. |
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | `main` | 🔴 **343** *(2025-11-13)* | 🟡 GPL-3.0 | Demoted in *Tier 1* above: a reference for learner-state modelling, not a dependency. |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | `main` | 🔴 **242** *(2026-02-22)* | 🟢 MIT | The Moodle MCP supply is **thinner than its address count** — see the *Supply census*. MIT and 8 months idle is a **vendoring candidate**, not an integration to depend on. |
+| [allenai/olmocr](https://github.com/allenai/olmocr) | `main` | 🔴 **211** *(2026-03-25)* | 🟢 Apache-2.0 | 🆕 Not previously on these shelves and **not added as a dependency** because of this date. For parsing scanned course material prefer [docling-project/docling](https://github.com/docling-project/docling) (**MIT, 0 days**) — see [`repos/foundations.md`](../repos/foundations.md). |
+| [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | `main` | 🔴 **209** *(2026-03-27)* | 🟢 MIT | Confirms `p388`'s own caveat quantitatively: the risk is **currency**, not licence. A curriculum crawl 7 months old is a crawl to re-run, and the MIT grant means you may. |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | `main` | 🔴 **144** *(2026-05-31)* | 🔴 **NO LICENCE FILE** | Both failure modes at once. It is cited in round-ups as "another open-source option" for Canvas; it is **ungranted and idle**. Not a Canvas option. |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | `master` | 🔴 **175** *(2026-04-30)* | 🔴 AGPL-3.0 | 🔵 **The one that should change how the Canvas shelf is pitched.** Eleven Canvas integrations are catalogued on this page, and **the platform's own default ref has not moved in ~6 months** while its `stable/*` branches have. Nothing is wrong with Canvas — this is how Instructure ships — but *anyone cloning `master` to reason about the API surface is reading an April tree*. State the ref you integrated against. |
+
+### 🟢 Live — dated, so the claim is now checkable rather than asserted
+
+**Committed on 2026-10-22, the day of this pass:** [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)
+(MIT) · [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) (MIT) ·
+[withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) (ODbL-1.0) ·
+[apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) · [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) (MIT) ·
+[learningequality/kolibri](https://github.com/learningequality/kolibri) (MIT) · [oppia/oppia](https://github.com/oppia/oppia) (Apache-2.0) ·
+[OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0) · [docling-project/docling](https://github.com/docling-project/docling) (MIT) ·
+[chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) · [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) ·
+[openedx/edx-platform](https://github.com/openedx/edx-platform) · [opencast/opencast](https://github.com/opencast/opencast) ·
+[frappe/erpnext](https://github.com/frappe/erpnext) · [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) ·
+[crewAIInc/crewAI](https://github.com/crewAIInc/crewAI).
+
+**Within a week:** `HKUDS/DeepTutor` (3 d) · `chrischall/infinitecampus-mcp` (3 d) ·
+`learningequality/ricecooker` (3 d) · `CAHLR/OATutor` (1 d) · `CAHLR/pyBKT` (1 d) ·
+`vishalsachdev/canvas-mcp` (1 d) · `academico-sis/academico` (1 d) · `moodle/moodle` (1 d) ·
+`jupyter/nbgrader` (1 d) · `krayin/laravel-crm` (1 d) · `langchain-ai/langgraph` (1 d) ·
+`chroma-core/chroma` (1 d) · `ankitects/anki` (1 d) · `Mattlo0546/canvas-mcp` (2 d) ·
+`mem0ai/mem0` (2 d) · `h5p/h5p-php-library` (2 d) · `overhangio/tutor` (2 d) ·
+`francoisjacquet/rosariosis` (5 d) · `jupyterlite/jupyterlite` (6 d) · `microsoft/autogen` (6 d).
+
+### 🔴 Two addresses that do not resolve
+
+| address | correction |
+|---|---|
+| `openedx/tutor` | The Open edX deployment tool is **[overhangio/tutor](https://github.com/overhangio/tutor)** (AGPL-3.0, `release`, 2 d). The `openedx/` org does not carry it. |
+| `edx/openedx-app-android` | The `edx/` org is not where the mobile apps live; the Open edX work is under `openedx/`. No mobile client is recommended on these shelves on the strength of a guessed address. |
+
+🟡 **One limit of the instrument, stated.** A date tells you **someone pushed**, not that the project
+is healthy, nor that the push was to the branch a release is cut from — `instructure/canvas-lms` is
+the whole argument for that caveat. And the reverse: a repository that is *finished* (a
+specification, a dataset) is not unhealthy for being quiet. Read the date against what the thing is.
+
 ## Verification method
 
 `curl -sI https://github.com/...` returns **403** through this sandbox's agent proxy, and
@@ -499,6 +613,15 @@ brief was unavailable. Two stronger channels were used instead and are reproduci
    request against GitHub's HTML would not have distinguished those.
 2. `raw.githubusercontent.com/<slug>/<real-ref>/<path>` — the licence **text**, read first-hand and
    recorded with its byte length, so a hand-edited or non-stock grant shows up as a length anomaly.
+3. 🆕 `p389` — **`git clone --depth 1 --filter=blob:none --no-checkout`**, which subsumes both of the
+   above and adds the signal they could not reach. One ~1.2 s call yields the real default ref, the
+   **HEAD SHA**, the **last commit date**, the **whole root tree** (so "is there a `LICENSE` at all"
+   is answered by listing, not by guessing eight paths), and any blob on demand via
+   `git show HEAD:<path>` — the grant *and* the manifest that should agree with it. 🟢 It also fixes
+   `p384`'s "resolves but has no tree" failure mode by construction: a clone that produces no `HEAD`
+   is reported `EMPTY`, distinct from `DEAD`. 🔴 It does **not** give stars, forks, watchers, release
+   metadata or an enumeration of the supply — `api.github.com/search/*` stays **403**, so *discovery*
+   is still web-search and package registries, and only *verification* is first-hand.
 
 🔵 **`p384` extended the probe set from seven paths to eight.**
 [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) carries a standard GPL-2.0 grant

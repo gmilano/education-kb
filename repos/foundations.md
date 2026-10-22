@@ -12,6 +12,14 @@ Every address verified first-hand on this date — method and channel notes in
 [`agents/top.md`](../agents/top.md#verification-method), raw results in
 [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.tsv).
 
+🆕 **Pass `p389` · 2026-10-22 — increment.** Every address on this shelf is now **dated**: a blobless
+shallow clone (`git clone --depth 1 --filter=blob:none --no-checkout`, ~1.2 s, no API, no credentials)
+returns the real default ref, the HEAD SHA and the **last commit date**, and `git show HEAD:LICENSE`
+returns the grant from the payload at that ref. Method in
+[`agents/top.md`](../agents/top.md#verification-method); **60 rows** in
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv). **This changes the headline claim
+of this file — see the paragraph after the table below** — and it adds three repos to *Tier 4*.
+
 ## 🔴 Read this before choosing a base: the licence frontier in education runs the wrong way
 
 **The platform tier is copyleft. The agent tier is permissive.** That is the single most
@@ -22,6 +30,24 @@ consequential structural fact in this industry for a studio that needs to ship c
 | **LMS / platform** | GPL-3.0 (Moodle, Chamilo, ILIAS, H5P), AGPL-3.0 (Open edX, Canvas, Tutor, Frappe LMS), ECL-2.0 (Sakai, Opencast), LGPL-3.0 (OpenEduCat) | Forking the platform pulls copyleft into the deliverable. AGPL additionally reaches **hosted** use. |
 | **the one exception** | 🟢 **Apache-2.0 — [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT)** | The only major open-source LMS a studio can extend with closed code. Underweighted by every roundup we read. |
 | **agents / tooling** | MIT, Apache-2.0, BSD-3 almost throughout | Permissive. |
+
+🆕 `p389` — **the "one exception" row is wrong, and the dating is what shows it.** There are **four**
+permissive platform-tier bases on this shelf, not one, and the reason the claim survived this long is
+that the other three were each filed as something narrower than a platform:
+
+| permissive platform base | licence | last commit | the role it actually fills |
+|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 🟢 **2026-10-22 (0 d)** | The permissive base for an **institution**. Swiss, mature, full LMS. |
+| [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | 🟢 **2026-10-22 (0 d)** | The permissive base for **pedagogy**: misconception-aware branching lessons. Filed in *Tier 2* as content, but it is a platform. |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 🟢 **2026-10-22 (0 d)** | The permissive base for **low-connectivity delivery**, and the only MIT one. Filed as a runtime; it is the platform in any engagement where bandwidth is the constraint. |
+| [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT** | 🟢 **2026-10-21 (1 d)** | The permissive base for a **course**. |
+
+🔵 **What to say instead of "the platform tier is copyleft."** *The platform tier is copyleft wherever
+the install base is* — Moodle, Canvas, Open edX, Chamilo, ILIAS are where the clients already are, and
+those are GPL/AGPL/ECL. **Permissive platform bases exist, are all actively maintained, and all cost you
+the install base.** That is a trade a client can be walked through; "there is one exception" was not.
+The design consequence below is unchanged and is still the default — it is the *greenfield* branch of
+the decision that just got three more options.
 
 🆕 `p385` **And a third axis the table above cannot show: the grant can differ by *ref* within one
 repository.** [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) reads **AGPL-3.0** at
@@ -85,6 +111,9 @@ rather than forking the platform. Recipes in [`compose/patterns.md`](../compose/
 | [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | `main` | 🟢 **Apache-2.0** *(`LICENSE.md`)* | Ingest for the formats education actually runs on: PDF, DOCX, PPTX, scans. |
 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | `main` | 🟢 **MIT** | Programmatic prompt optimisation — turns "we tuned the tutor prompt" into something with a metric attached. |
 | [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) | `main` | 🟢 **MIT** | The campus LLM gateway universities actually deploy: multi-provider, SSO, per-user quota, audit. MIT where the obvious alternative is not (see [`agents/top.md`](../agents/top.md)). |
+| [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 🔴 `master` | 🟢 **MIT** | 🆕 `p389`. **Bayesian Knowledge Tracing, fitted from the client's own interaction logs** — and the maintained answer to a gap this base has carried for two passes. `Pattern B` stands on [microsoft/pybryt](https://github.com/microsoft/pybryt), whose published artefact has had **no release since 2022-04**; this is a *different* job (mastery estimation, not approach assessment) but it is the piece that makes "adaptive" a number instead of an adjective. 🟢 **Last commit 2026-10-21 (1 d)**, from UC Berkeley's CAHLR, who also maintain [`OATutor`](https://github.com/CAHLR/OATutor) (MIT) on [`agents/top.md`](../agents/top.md). 🟢 Per-skill learn/guess/slip/forget parameters are inspectable and defensible — which is what a district's procurement rubric asks for when it asks how the system decides a student is behind. |
+| [docling-project/docling](https://github.com/docling-project/docling) | `main` | 🟢 **MIT** | 🆕 `p389`. **Course-material ingest, MIT, and committed today (0 d).** Layout-aware parsing of PDF, DOCX, PPTX, XLSX, HTML and images into a structured document model, with table structure and reading order preserved — which is the difference between a tutor that can cite page 7's table and one that cannot. 🟢 Chosen over [allenai/olmocr](https://github.com/allenai/olmocr) (Apache-2.0) **on the date**: olmocr's last commit is **2026-03-25, 211 days**. 🟢 Complements, not replaces, [`unstructured`](https://github.com/Unstructured-IO/unstructured) — docling is the stronger reader for textbook-shaped PDFs, `unstructured` has the wider connector set. |
+| [jupyterlite/jupyterlite](https://github.com/jupyterlite/jupyterlite) | `main` | 🟢 **BSD-3-Clause** | 🆕 `p389`. **Jupyter with no server: the kernel runs in the browser via WebAssembly.** Last commit 2026-10-16 (6 d). 🟢 Two education problems it solves outright: a CS or data-science exercise that needs **no per-student compute, no container and no install** (the cost line that kills notebook teaching at scale), and a **lab that works offline once the page is cached** — the `Pattern D` constraint, met without shipping a server. 🟡 No server means no server-side autograding: pair it with [`nbgrader`](https://github.com/jupyter/nbgrader) on a submitted notebook rather than expecting it to assess in place. |
 
 ## Tier 5 — Student information / administration
 

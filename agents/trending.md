@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p389` — **THE MAINTENANCE SIGNAL WAS NEVER MISSING: `git` READ ACCESS IS OPEN, AND A 1.2-SECOND BLOBLESS CLONE DATES ANY PUBLIC REPOSITORY. 🟢 60 ADDRESSES DATED — AND IT TURNED UP THE LARGEST EDUCATION-NATIVE AGENT IN OPEN SOURCE, MISSING FROM EVERY SHELF HERE: OpenMAIC (MIT, TSINGHUA, ~41.3k ★).**
+
+🔵 **Dating note.** Every clone, licence read and date below was taken on **2026-10-22**.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv) — **60 addresses,
+58 live, 2 dead**, every licence read from the payload at the repository's **real default ref**, and
+for the first time on this shelf **every row carries a last-commit date**.
+
+### 🟢 The channel finding, stated first because it retires a standing verdict of this base
+
+`p387` wrote: *"`github.com` and `api.github.com` are still 403, so this base has published no
+maintenance signal at all."* `p388` carried the same statement forward. **Both were reasoning from
+the popularity channels to a conclusion about all channels.** They are different channels, and the
+one that matters was open the whole time:
+
+```bash
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r   # ~1.2 s
+git -C r symbolic-ref --short HEAD    # the REAL default ref
+git -C r log -1 --format='%H %cI'     # HEAD sha + LAST COMMIT DATE  ← the signal
+git -C r ls-tree --name-only HEAD     # the whole root tree
+git -C r show HEAD:LICENSE            # the grant, from the payload at that ref
+git -C r show HEAD:package.json       # the manifest that must agree with it
+```
+
+One command subsumes `git ls-remote` **and** the eight-path `raw.githubusercontent.com` licence probe
+this base built over `p383`–`p387`, and adds the date they could not reach. It also fixes `p384`'s
+*"resolves but has no tree"* failure mode by construction: a clone producing no `HEAD` is `EMPTY`,
+which is a different verdict from `DEAD`.
+
+🔵 **The method lesson, and it is this base's fourth instance of one error.** `p386`: a count of
+addresses is not a count of grants. `p387`: a null leg is not a null supply. `p388`: an exhausted
+channel is not an exhausted supply. **`p389`: a closed popularity channel is not a closed maintenance
+channel.** Every one of the four was *a property of the instrument reported as a property of the
+industry*, and every fix began by asking which channel was actually being measured.
+
+🟢 **Channel state this pass** (first-hand, so the next pass need not re-derive it):
+
+| channel | state | what it gives |
+|---|---|---|
+| **`git clone --depth 1 --filter=blob:none`** | 🟢 **200, ~1.2 s, no credentials** | real default ref · HEAD sha · **last commit date** · root tree · any blob on demand |
+| `git ls-remote --symref` | 🟢 200 | address + real ref (now redundant, kept for the private-vs-absent distinction) |
+| `raw.githubusercontent.com` | 🟢 200 | licence text by path |
+| `registry.npmjs.org` · `pypi.org` | 🟢 200 | published grant + full publish history (`p387`, `p388`) |
+| **repository page, fetched and rendered** | 🟡 **succeeds** — `curl` to `github.com` is 403, a render is not | **star count for an address already in hand**; no ranking, no enumeration |
+| `api.github.com/repos/*` · `/search/*` | 🔴 **403** | *"sessions are bound to their configured repositories"* — no discovery, no ranking |
+| `codeload.github.com` · `huggingface.co` · `codeberg.org` | 🔴 403 | — |
+
+🟡 **One correction to `p388`'s channel table, in this base's own interest:** "no star count at all"
+was slightly too strong. A *rendered* repository page returns one. It cannot **enumerate or rank**
+the supply — that needs the search API, which is 403 — so a count can only ever be *confirmed for an
+address already in hand*, and this shelf still does not rank by it. Two such counts appear in this
+pass and each says where it came from.
+
+### 🟢 The supply finding: the biggest education-native agent in open source was not on these shelves
+
+| | |
+|---|---|
+| **Repository** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — *Open Multi-Agent Interactive Classroom* |
+| **Licence** | 🟢 **MIT** — `LICENSE` is 1,066 B of stock MIT text, *"Copyright (c) 2026 THU-MAIC"*; root `package.json` independently declares `"license": "MIT"` |
+| **Real default ref** | `main` @ `269fde2d991f` |
+| **Dated** | 🟢 **2026-10-22 — 0 days.** Committed the day of this pass |
+| **Reach** | ~**41.3k ★** (rendered repository page) — the largest education-native repository this base has recorded |
+| **Provenance** | **Tsinghua University** (THU-MAIC). Grew out of the internal **MAIC** system, validated on **700+ real students**; paper in **JCST 2026** |
+| **Stack** | Next.js 16 · React 19 · TypeScript 5 · **PostgreSQL 16** · Docker |
+
+**What it is.** Not a tutor bolted onto an LMS: a **classroom, generated and then taught**. A topic or
+an uploaded document becomes narrated slides with an **AI teacher that has a voice**, teaching
+assistants, **simulated classmates**, auto-graded quizzes, HTML interactives and a shared whiteboard —
+with agentic mid-lesson chat about any slide element, drawing or interactive.
+
+**The three properties that make it institutional rather than impressive:**
+
+1. 🟢 **Server-first generation (v1.2.0).** Generation runs on the server and survives closed tabs and
+   restarts; the web app and the API share one pipeline. A teacher who shuts a laptop does not lose a
+   lesson.
+2. 🟢 **Central model governance in one file.** Every AI use is a named **slot** in `openmaic.yml`
+   (`llm`, `course.outline`, slide content, TTS, web search, `video`), each pinned to a declared
+   provider, keys referenced as `${VAR}`; a capability is disabled with `video: null`, and the server
+   can be set to **forbid user-supplied keys**. 🔵 **This is the artefact a district's or ministry's AI
+   policy is actually written against** — *which model saw student input, under whose contract* — and
+   almost nothing else in this base can answer it in one reviewable page.
+3. 🟢 **Export as one offline, self-contained HTML file** that plays the lesson (or PPTX keeping every
+   scene). Authoring centralises; delivery needs a browser. That is the `Pattern D` constraint met
+   without shipping a server per school.
+
+🟢 **Also real:** local inference via **Lemonade** and local ASR via **FunASR** (a configuration, not
+a fork, for data-residency deployments) · **24 built-in skills** plus per-owner authored skills · a
+course agent working through **validated tools** (patch one scene atomically, reorder pages, import
+`.pptx` with layout preserved) rather than rewriting opaque blobs · **security handled as product
+work** — five releases since September 2026 carrying SSRF, DNS-rebinding, access-token-expiry and
+provider-redirect fixes under published **GHSAs**.
+
+🔴 **What it is not, said plainly:** no enrolment, no gradebook of record, no transcripts, no SIS, no
+stated LTI story. It is a **teaching surface**; the system of record stays where it is.
+🔴 **Pin `v1.2.1` (2026-10-18).** Head is `v1.3.0-rc.1` (knowledge base, 2026-10-22) with published
+breaking upgrade conditions and **no rollback below that release**. 🔴 **Operational floor:** Node ≥
+22.19, pnpm ≥ 10, PostgreSQL 16, a long-running server — **Vercel is capped at the 1.1.x line**.
+
+→ New **`Pattern Q`** in [`compose/patterns.md`](../compose/patterns.md) wires it end to end, and says
+what it supersedes in `Pattern M`.
+
+### 🔴 And the licence claim in circulation about it is wrong — a third kind of trap
+
+A 2026 third-party review of OpenMAIC states it is **"AGPL-3.0, with commercial licensing available by
+contact."** **It is not.** Two independent reads inside the payload say MIT, quoted above.
+
+🔵 **Why this is worse than a badge/payload mismatch.** A badge mismatch is caught by the probe on
+[`agents/top.md`](../agents/top.md). **A licence claim inside a write-up is caught by nothing** — it
+is read by a studio lead running exactly the search that produced this pass, and *"AGPL plus a
+commercial licence"* reads as *do not propose this*. The largest education-native repository in the
+supply was one secondary source away from being ruled out of every engagement. **Procurement rule:
+never let a third-party write-up decide a licence; `Pattern L` reads the payload.**
+
+### 🟢 New granted addresses this pass, each dated
+
+| agent / library | repo | licence (payload) | dated | why it is new here |
+|---|---|---|---|---|
+| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | **0 d** | above |
+| **OATutor** | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | **1 d** | The adaptive tutor with its **mastery model in the open** and a university maintainer (UC Berkeley CAHLR). BKT-driven scaffolds over an open problem bank — "adaptive" as a parameterised model a client can inspect, not a prompt. |
+| **pyBKT** | [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | **1 d** | Fits **Bayesian Knowledge Tracing** on the client's own interaction logs: per-skill learn/guess/slip/forget parameters. The maintained mastery layer `Pattern B` never had. |
+| **docling** | [docling-project/docling](https://github.com/docling-project/docling) | 🟢 **MIT** | **0 d** | Layout-aware course-material ingest (PDF/DOCX/PPTX/XLSX/HTML) preserving table structure and reading order. Chosen over [olmocr](https://github.com/allenai/olmocr) (Apache-2.0) **on the date** — olmocr is **211 d**. |
+| **JupyterLite** | [jupyterlite/jupyterlite](https://github.com/jupyterlite/jupyterlite) | 🟢 **BSD-3** | **6 d** | Kernel in the browser via WebAssembly: notebook exercises with **no server and no per-student compute**, offline once cached. |
+
+🔴 **Ungranted, so recorded and not recommended:**
+[slayadapraya/School-Agent](https://github.com/slayadapraya/School-Agent) (active, 1 d, **no licence
+file** — a self-hosted student/teacher/admin workspace that would otherwise be the most
+school-shaped thing found this pass) ·
+[1EdTech/openbadges-specification](https://github.com/1EdTech/openbadges-specification) (14 d, **no
+licence file** — worth knowing given how often digital credentials are pitched as a 2026 deliverable).
+
+### 🔴 Four recommendations on these shelves change because of a date
+
+| address | days | consequence |
+|---|---|---|
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | **343** | Demoted in Tier 1: a reference for learner-state modelling, not a dependency. GPL-3.0 was always the harder sell. |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | **242** | MIT and 8 months idle → **vendor it**, do not integrate it. |
+| [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | **209** | Confirms `p388`'s own caveat with a number: the risk is **currency**, not licence. Budget the re-crawl the MIT grant permits. |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | **144** | Cited in round-ups as a Canvas option; **ungranted and idle**. Use [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (MIT, 1 d) or [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) (MIT, 0 d). |
+
+🔵 **And one that is not a recommendation change but belongs in every Canvas conversation:**
+[instructure/canvas-lms](https://github.com/instructure/canvas-lms) default ref `master` last moved
+**2026-04-30 — 175 days** — while its `stable/*` branches move. Nothing is wrong with Canvas; that is
+how Instructure ships. But eleven Canvas integrations are catalogued on these shelves, and anyone
+cloning `master` to reason about the API surface is reading an April tree. **State the ref you
+integrated against.**
+
+🟡 **The limit of the instrument, stated so the number is not over-read.** A date says *someone
+pushed* — not that it was to the branch a release is cut from, and not that the project is healthy.
+A finished specification or dataset is not decaying for being quiet. Read the date against what the
+artefact is.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p388` — **THE ADDRESS SUPPLY IS NOT EXHAUSTED: `registry.npmjs.org/-/v1/search` IS AN OPEN *DISCOVERY* CHANNEL, AND IT HANDED OVER A PERSONA THESE SHELVES NEVER HAD — THE PARENT. 🟢 22 NEW GRANTED ADDRESSES, AND THE CANVAS SHELF IS REORDERED BY A SERVER PUBLISHED TODAY.**
 
 🔵 **Dating note.** Every probe, licence read and registry read below was run on **2026-10-22**.

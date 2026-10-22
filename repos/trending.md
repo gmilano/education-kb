@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p389` — **GITHUB TRENDING IS 403 FOR AN EIGHTH PASS, BUT THE SIGNAL THIS SHELF ACTUALLY WANTED IS OPEN: `git` READ ACCESS DATES ANY PUBLIC REPO IN ~1.2 s. 🟢 60 ADDRESSES DATED; 48 OF 58 LIVE ONES MOVED INSIDE 30 DAYS; 7 ARE PAST 120 AND FOUR OF THOSE CARRIED A RECOMMENDATION.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv) — 60 addresses,
+58 live, 2 dead, every licence read from the payload at the **real default ref**, **every row dated**.
+Full narrative and the OpenMAIC find in [`agents/trending.md`](../agents/trending.md).
+
+### 🔴 The trending channel, eighth consecutive pass
+
+`https://github.com/trending` → **403** · `api.github.com/search/*` → **403** *("sessions are bound to
+their configured repositories")* · `codeload.github.com` → 403 · `huggingface.co`, `codeberg.org` →
+403 at CONNECT · `gittrend.io`, `trendshift.io`, `ossinsight.io` → DNS ENOTFOUND. **There is still no
+readable trending page and no way to rank or enumerate this industry's supply from inside this
+sandbox.**
+
+### 🟢 What this pass found instead — and it is the thing a trending page was a proxy for
+
+A trending page is a **popularity** instrument. What this shelf has actually been asking for, pass
+after pass, is a **maintenance** instrument: *is anyone still working on this?* That one is open, and
+it was open the whole time.
+
+```bash
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r   # ~1.2 s
+git -C r log -1 --format='%cI'        # last commit date at the real default ref
+```
+
+No API, no credentials, no HTML. 🔵 **And it is the better instrument for this industry anyway, for
+the same reason `p388` gave about package registries:** education tooling is institutional and
+low-star — a parent-portal server for a US K-12 SIS will never trend anywhere — but **every
+repository has a commit date**, and that date is what a studio needs to price an integration.
+
+🟡 **One correction to `p388`'s channel verdict, recorded against this base's own interest.** That
+pass wrote there is "no star count for this industry from inside this sandbox." A **rendered**
+repository page does return one (`curl` to `github.com` is 403; a fetch-and-render is not). It still
+cannot **rank or enumerate**, so a count is only ever *confirmable for an address already in hand* —
+which is why this shelf continues not to rank by it.
+
+### 🟢 The distribution — the closest thing to a trend line this shelf has ever published
+
+| bucket | count | notes |
+|---|---|---|
+| committed **on 2026-10-22** | **17** | `OpenMAIC` · `canvas-lms-mcp` · `os-taxonomy` · `ofbiz-framework` · `aureuserp` · `kolibri` · `oppia` · `OpenOLAT` · `docling` · `chamilo-lms` · `ILIAS` · `edx-platform` · `opencast` · `erpnext` · `jupyterhub` · `crewAI` · `i-educar` |
+| within **7 days** | **+23** | incl. `DeepTutor` (3 d) · `OATutor` (1 d) · `pyBKT` (1 d) · `vishalsachdev/canvas-mcp` (1 d) · `academico` (1 d) · `relate` (1 d) · `moodle` (1 d) · `nbgrader` (1 d) · `overhangio/tutor` (2 d) · `rosariosis` (5 d) · `jupyterlite` (6 d) |
+| within **30 days** | **48 of 58 live** | the supply is **unglamorous, not abandoned** — which is the opposite of this industry's reputation |
+| past **120 days** | **7** | and **four carried a recommendation on these shelves**: `tutor-gpt` 343 d · `peancor/moodle-mcp-server` 242 d · `bc-curriculum-mcp-server` 209 d · `DMontgomery40/mcp-canvas-lms` 144 d *(also ungranted)*. The other three are not recommendation failures: `allenai/olmocr` 211 d *(evaluated and declined on this date)* · `instructure/canvas-lms` `master` 175 d *(that is how Instructure ships)* · `apache/ofbiz` **3,539 d** *(the attic lookalike below)* |
+| **dead** | **2** | `openedx/tutor` → the real address is [overhangio/tutor](https://github.com/overhangio/tutor) · `edx/openedx-app-android` → the org is `openedx/`, not `edx/` |
+
+### 🔴 The lookalike, and it is the one a client's engineer will find
+
+[**apache/ofbiz**](https://github.com/apache/ofbiz) resolves, carries a perfectly valid **Apache-2.0**
+grant, and its `trunk` **last moved 2017-02-12 — 3,539 days ago**. It is the retired monolith. The
+ERP base recommended on [`verticals/solutions.md`](../verticals/solutions.md) is
+[**apache/ofbiz-framework**](https://github.com/apache/ofbiz-framework), which committed **today**.
+🔵 **The shelf had the right address all along; the risk is that nobody reading the proposal types the
+suffix.** Write `-framework` into the text, because a client engineer who checks the obvious address
+finds a nine-year-dead tree and concludes the recommendation was careless. 🔵 **Generalise it:** a
+*dated* probe distinguishes a live project from its own attic, and an undated one cannot. That is a
+second thing a licence read alone could never have told this base.
+
+### 🟢 New repos added to the shelves this pass
+
+| repo | licence (payload) | dated | shelf |
+|---|---|---|---|
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | **0 d** | `agents/top.md` Tier 1 · `verticals/solutions.md` as a platform · new `Pattern Q` |
+| [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | **1 d** | `repos/foundations.md` Tier 4 · revised `Pattern B` |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | **1 d** | `agents/top.md` Tier 1 |
+| [docling-project/docling](https://github.com/docling-project/docling) | 🟢 **MIT** | **0 d** | `repos/foundations.md` Tier 4 |
+| [jupyterlite/jupyterlite](https://github.com/jupyterlite/jupyterlite) | 🟢 **BSD-3** | **6 d** | `repos/foundations.md` Tier 4 · revised `Pattern D` |
+
+### 🟢 The structural claim on `repos/foundations.md` was wrong, and dating is what exposed it
+
+That shelf has led for six passes with *"the platform tier is copyleft — with one exception,
+OpenOLAT."* **There are four permissive platform-tier bases, and all four are actively maintained:**
+
+| base | licence | dated |
+|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | **0 d** |
+| [oppia/oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | **0 d** |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | **0 d** |
+| [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT** | **1 d** |
+
+🔵 The claim survived because the other three were each **filed as something narrower than a
+platform** — oppia as content, Kolibri as a runtime, relate as courseware. The honest replacement:
+**the platform tier is copyleft wherever the install base is** (Moodle, Canvas, Open edX, Chamilo,
+ILIAS), and **permissive platform bases exist, are maintained, and all cost you the install base.**
+That is a trade a client can be walked through. "There is one exception" was not.
+
+🟡 **And the limit on every date above.** A commit date says someone pushed — not to the branch a
+release is cut from (`instructure/canvas-lms` is the whole argument), and not that the project is
+healthy. A finished specification or dataset is not decaying for being quiet.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p388` — **GITHUB TRENDING IS 403 FOR A SEVENTH PASS — SO THIS PASS STOPPED LOOKING FOR A TRENDING PAGE AND FOUND A *DISCOVERY* CHANNEL INSTEAD. 🟢 `registry.npmjs.org/-/v1/search` YIELDED 383 UNSEEN ADDRESSES, 22 OF THEM GRANTED AND EDUCATION-SPECIFIC.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p388.tsv) — 32 addresses probed,

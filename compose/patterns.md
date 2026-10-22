@@ -17,6 +17,14 @@ payload at the repository's **real default ref**, which for 13 of 58 live addres
 permissive. Every pattern below therefore puts a **documented interop boundary** — LTI 1.3, MCP, or
 web services — between client-owned code and the platform. None of them forks an LMS.
 
+🆕 **`p389`** adds **`Pattern Q`** (the generated classroom, the greenfield answer when there is no
+LMS to bolt onto), gives **`Pattern B`** a maintained mastery model, and gives **`Pattern D`** two
+components that remove its server. Every repository named in those changes was **dated** this pass —
+last commit at the real default ref:
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv). 🔵 **Read a date as a cost line:**
+a permissive repository nobody has touched in eight months is something you *vendor and maintain*, not
+something you *integrate* — which is why `Pattern B` vendors `pybryt` and why `Pattern Q` pins a ref.
+
 ---
 
 ## Pattern A — Tutor over the client's existing LMS (no fork, no copyleft exposure)
@@ -119,9 +127,40 @@ labour this produces, and it is the one the guardrail below wants anyway: `jupyt
 and never grades**, `nbgrader`/`otter-grader` grade and never explain. 🟡 It requires
 `jupyter-ai-jupyternaut` (<0.1) for the agent, so pin that bound.
 
+🟢 🆕 `p389` **And the missing third component: the mastery model.** Everything above assesses a
+*submission*. Nothing in it answers the question a programme director actually asks — **which skills
+has this student mastered, and what should come next** — and this base has carried that gap while
+recommending a dependency that stopped shipping in 2022. The maintained answer is
+[**CAHLR/pyBKT**](https://github.com/CAHLR/pyBKT) (**MIT**, real ref `master`, **last commit
+2026-10-21 — 1 day**), from UC Berkeley's CAHLR, who also maintain
+[**OATutor**](https://github.com/CAHLR/OATutor) (**MIT**, `main`, **1 day**) as the tutoring front end
+built on it.
+
+- **What it adds to this wiring:** fit **Bayesian Knowledge Tracing** on the client's *own*
+  `nbgrader`/`otter-grader` outcome logs — one row per (student, skill, attempt, correct) — and you get
+  per-skill **learn, guess, slip and forget** parameters plus a running mastery probability per student.
+- 🟢 **Why it is the defensible choice and not just the available one:** those four parameters are
+  **inspectable numbers a client can argue with**, re-estimated on their own cohort. "The model thinks
+  Ana has not mastered partial fractions, with these parameters fitted on this data" survives a
+  procurement review; "the LLM judged her weak" does not. North American and Maryland-style rules that
+  bar AI from high-stakes decisions about students are satisfiable here precisely *because* the
+  decision rule is a published model rather than a generation.
+- **Revised wiring, end to end:** `jupyterhub` → `nbgrader` → `otter-grader` (lifecycle + isolated
+  grading) → **`pyBKT`** fitted on the outcome log (mastery per skill) → **`jupyter-ai-tutor`** with a
+  per-course `TUTOR.md` for in-notebook explanation → **vendored `pybryt` annotations** for approach
+  assessment. 🟢 **Still fully permissive: BSD-3 and MIT only, zero copyleft.** 🔵 The sequencing
+  matters: `pyBKT` decides *what to work on*, the tutor explains *why the attempt failed*, and the
+  graders remain the only components that produce a grade.
+- 🟡 **Cold start is the real constraint**, not the licence: BKT needs interaction history. For a new
+  cohort, serve `OATutor`'s scaffolds with default parameters, log, and re-fit at the end of the first
+  module — and say so in the estimate rather than discovering it in week three.
+
 **Guardrail:** where DC-style rules apply, AI must not be the grader of record. Configure the LLM as
 a **feedback generator with a human grade-of-record** and keep the audit trail; that configuration is
-the deliverable, not a disclaimer.
+the deliverable, not a disclaimer. 🆕 `p389` The same rule governs the mastery model: a BKT mastery
+probability is **advisory input to a human decision**, and the moment it auto-finalises anything
+consequential it is the "sole basis for a decision without meaningful human review" that Vietnam's
+Decision 33/2026 and EU Annex III both reach.
 
 ---
 
@@ -163,6 +202,32 @@ runtime content, not linked code** → periodic sync to the central LMS over
 
 **Why FSRS matters here:** it has published parameters, so "the student is retaining more" is a
 number you can defend to a ministry, offline, without telemetry.
+
+🟢 🆕 `p389` **Two components that remove a server from this pattern, which is the cost line that
+actually kills offline deployments.**
+
+1. **Lesson delivery with no application server at all.**
+   [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) (**MIT**, committed **0 d**) exports a
+   finished classroom as **one self-contained offline HTML file that plays the lesson** (or as a PPTX
+   that keeps every scene). 🔵 **So the authoring server and the delivery target separate cleanly:**
+   generate lessons once where there is power and bandwidth — a ministry office, a regional hub, a
+   studio — and ship HTML files to the edge, where they need nothing but a browser. That is a
+   fundamentally cheaper edge than "a Kolibri server per school", and the two compose: Kolibri remains
+   the catalogue, progress store and sync layer; the exported HTML is the content it serves. 🟡 The
+   export is a *playback* artefact — the agentic mid-lesson chat needs the server — so scope it as
+   narrated, interactive courseware, not as a tutor that answers back offline.
+2. **Notebook exercises with no per-student compute.**
+   [jupyterlite/jupyterlite](https://github.com/jupyterlite/jupyterlite) (**BSD-3**, 6 d) runs the
+   kernel **in the browser via WebAssembly**: no container, no install, no server, and it works offline
+   once the page is cached. For a CS or data-science module this deletes the single largest
+   infrastructure line in `Pattern B` at the edge. 🟡 No server also means no server-side autograding —
+   collect the notebook and grade it with `nbgrader` when a link is available.
+
+🔵 **What this pattern now says to a ministry.** The old answer was "a server per school, syncing when
+it can." The 2026 answer is **generate centrally, deliver as files, compute in the browser, sync
+progress when a link exists** — and every component in it is MIT or BSD-3, so the ministry owns the
+deliverable outright. 🔴 One licence caution unchanged: H5P content stays **runtime content** under
+GPL-3.0, never linked code.
 
 ---
 
@@ -556,6 +621,93 @@ obligation and no product. 🔵 See `Trend 10` in [`intel/trends.md`](../intel/t
 
 ---
 
+## Pattern Q — 🆕 `p389` The generated classroom, governed (and what it supersedes in `Pattern M`)
+
+**For:** a client with **no usable LMS** — a corporate academy, a ministry training programme, a
+vocational provider, a new institution — who needs **teachable lessons in weeks, not a platform in
+quarters**. Also the fastest credible answer to the EMEA teacher-training demand recorded in
+[`intel/market.md`](../intel/market.md): the UAE has **22,000 teachers and education professionals**
+to train on a curriculum that became compulsory by Cabinet decision.
+
+**The base:** [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — 🟢 **MIT** (read from the
+payload at `main` @ `269fde2d991f`; `package.json` agrees), Tsinghua University, **committed
+2026-10-22**, ~41.3k ★, **JCST 2026** paper, grown out of the internal **MAIC** system and validated
+on **700+ students**. 🔴 **Pin `v1.2.1` (2026-10-18), not head.** Head is `v1.3.0-rc.1`, and the
+project states breaking upgrade conditions with **no rollback below that release** — a pilot does not
+want to be the first to find that out.
+
+### Wiring
+
+1. **Stand up the authoring server.** Node ≥ 22.19, pnpm ≥ 10, **PostgreSQL 16**, a long-running
+   server (🔴 **not Vercel** — Vercel deployments are capped at the 1.1.x line, so "we'll host it
+   serverless" is a downgrade). Generation is **server-first** from v1.2.0: it survives closed tabs and
+   restarts, which is what makes it usable by teachers rather than by engineers.
+2. **Write the governance file first, before any content.** `openmaic.yml` declares **providers** and
+   assigns every AI use — a named **slot** (`llm`, `course.outline`, slide content, TTS, web search,
+   `video`) — to one of them, with keys referenced as `${VAR}` from `.env.local`. 🟢 **Three settings
+   are the compliance deliverable, not configuration:** pin each slot to the provider under the
+   client's own contract; set the server to **forbid user-supplied keys**, so no teacher can route
+   student work through an unvetted account; and set unused capabilities to `null` rather than leaving
+   them available. 🔵 **This file is the artefact that answers a district's or ministry's AI policy
+   question** — *which model saw student input, under whose contract* — in one reviewable, diffable
+   page. Almost nothing else in this base can answer it at all.
+3. **Ground the content in the client's curriculum, not in the model.** Feed the jurisdiction's own
+   material through the **knowledge base** (v1.3.0 line) or as per-course uploads — parsed once and
+   reused — and where a standards graph exists, drive the lesson plan from it rather than from a
+   prompt: [`os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) (🔴 **ODbL-1.0 — a database
+   licence; reach it over a service, do not fork it into the deliverable**, per `Pattern H`), or
+   [`bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) (**MIT**) for a
+   North American engagement — 🟡 whose crawl is **209 days** old, so budget the re-crawl its MIT grant
+   permits.
+4. **Keep the record of record outside it.** 🔴 OpenMAIC has **no enrolment, no gradebook of record,
+   no transcripts and no stated LTI story**. Pair it with the administration base the client already
+   runs or should: [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) (GPL-2.0, over its API),
+   [academico](https://github.com/academico-sis/academico) (**MIT**) at SME scale,
+   [i-educar](https://github.com/portabilis/i-educar) (ref `2.12`) for Brazilian municipal work, or
+   [OpenEduCat](https://github.com/openeducat/openeducat_erp) (LGPL-3.0) where an ERP is wanted.
+   **Completion and scores flow out of OpenMAIC into that system; identity and enrolment flow in.**
+5. **Add the mastery model it does not have.** Quiz results are events, not a mastery estimate. Fit
+   [`pyBKT`](https://github.com/CAHLR/pyBKT) (**MIT**, 1 d) on the quiz log per skill, as in the
+   revised `Pattern B`, and use it to choose the next lesson. 🟢 This is also what keeps the
+   high-risk-assessment line on the right side: the progression decision becomes **a published model
+   plus a human review step**, not a generation.
+6. **Deliver to the edge as files.** Export each finished classroom as **one offline HTML file** (or
+   PPTX). See `Pattern D` — authoring stays central, delivery needs only a browser.
+7. **Run the models where the data has to stay.** **Lemonade** for local inference and **FunASR** for
+   local ASR are supported paths, not forks — so a deployment that may not send audio or text
+   off-premises is a configuration change.
+
+### Why this supersedes `Pattern M` for institutional delivery
+
+`Pattern M` is built on [learn-shell](https://github.com/sf-shenfeng/learn-shell), whose v1 is
+explicitly **single-machine and unauthenticated**, and whose grant is **AGPL-3.0 at `main`** (MIT only
+at tag `v0.1.0`). That is a fine shape for an individual learner and an impossible one for an
+institution. OpenMAIC is **MIT at head**, server-first, multi-user, with central model governance and
+a published security practice — five releases since September 2026 carrying SSRF, DNS-rebinding,
+token-expiry and provider-redirect fixes under **GHSAs**. 🔵 **Keep `Pattern M` for the
+bring-your-own-agent, one-learner case; use `Pattern Q` whenever a client is the buyer.**
+
+### Guardrails
+
+- 🔴 **Auto-graded quizzes are the regulated surface.** Assessment is **Annex III high-risk** in the
+  EU and named explicitly in **Vietnam's Decision 33/2026/QD-TTg**. The trigger in both is a decision
+  taken on the system's output **without meaningful human review**, so ship the human review step for
+  anything consequential and keep its audit trail. A practice score is not consequential; a module
+  pass that gates progression is.
+- 🔴 **Simulated classmates must be labelled.** An AI teacher with a voice and AI peers in a classroom
+  is exactly the surface **EU AI Act Art. 50** transparency and China's labelling rules address, and
+  `Pattern G` already covers the mechanics. Label in the UI, not in the terms of service.
+- 🟡 **Generated content is a draft until a teacher signs it.** The 2026 procurement trend is evidence
+  of instructional benefit; a lesson nobody reviewed cannot be put in front of a class at a client's
+  reputational risk. Make teacher review a workflow state, and bill it — it is the part of the
+  engagement that is actually about teaching.
+- 🟡 **Language and regional fit:** interface is **EN + zh-CN** and the provider catalogue is built for
+  a market that includes DeepSeek and Kimi. For a Gulf or LATAM engagement, **localisation of the
+  teaching surface is a line item**, and there is no Arabic-first alternative in the open-source supply
+  (see `intel/market.md`, EMEA).
+
+---
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
@@ -726,3 +878,26 @@ narrative. Run it before any repo enters a client deliverable.
 this sandbox's agent proxy and `api.github.com` returns **403**. `git ls-remote --symref` and
 `raw.githubusercontent.com` both work, and together they are a stronger check than a HEAD request —
 one proves the address and its real ref, the other reads the grant itself.
+
+🟢 🆕 `p389` **Step 11, and it makes steps 1–10 one command.** A **blobless shallow clone** does the
+whole gate in ~1.2 s, from the payload, with no API and no credentials:
+
+```bash
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/OWNER/REPO r
+git -C r symbolic-ref --short HEAD    # the real default ref (step 1)
+git -C r ls-tree --name-only HEAD     # is there a LICENSE at all, and where (steps 2-3)
+git -C r show HEAD:LICENSE            # the grant text itself (step 4)
+git -C r show HEAD:package.json       # the manifest that must agree with it (step 5)
+git -C r log -1 --format='%H %cI'     # ← NEW: who still works on this, and when
+```
+
+🔵 **Why the last line belongs in a procurement gate and not just in a research note.** The gate has
+only ever answered *may we use this*. It now also answers *will we be alone on it* — and the two
+produce different estimates. **A permissive grant plus an eight-month-old HEAD is a vendoring
+decision with a maintenance line**, which is precisely the call this base made for `pybryt` after
+reading a *registry* date; the clone reads it for any repository, published package or not. 🟡 Read
+the date against the artefact: a release branch can trail a default ref
+([instructure/canvas-lms](https://github.com/instructure/canvas-lms), `master` **175 days** behind its
+moving `stable/*` branches), and a finished specification is not decaying. 🔴 And the limit: this
+channel gives no stars, forks or releases, and `api.github.com/search/*` stays **403**, so
+**discovery** remains web search and package registries. Only **verification** is first-hand.

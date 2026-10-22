@@ -1,0 +1,61 @@
+repo	status	real_default_ref	head_sha	last_commit_date	days_stale	licence_file	licence_read_from_payload	note
+1EdTech/openbadges-specification	LIVE	develop	04c4bc2ee16d	2026-10-08	14	-	NO-LICENCE-FILE	
+academico-sis/academico	LIVE	main	965b0628708b	2026-10-21	1	LICENSE	MIT	1094 B
+allenai/olmocr	LIVE	main	f7cfe4c22098	2026-03-25	211	LICENSE	Apache-2.0	11359 B
+ankitects/anki	LIVE	main	8d6e0a0f462f	2026-10-21	1	LICENSE	AGPL-3.0	1930 B
+apache/ofbiz	LIVE	trunk	3f276d51e233	2017-02-12	3539	LICENSE	Apache-2.0	ATTIC/lookalike: trunk last moved 2017; active repo is apache/ofbiz-framework · 13759 B
+apache/ofbiz-framework	LIVE	trunk	d353c6180ac2	2026-10-22	0	LICENSE	Apache-2.0	11906 B
+aureuserp/aureuserp	LIVE	master	f899d1fdc18c	2026-10-22	0	LICENSE	MIT	1077 B
+bruchris/canvas-lms-mcp	LIVE	main	34e615692db1	2026-10-22	0	LICENSE	MIT	1070 B
+CAHLR/OATutor	LIVE	main	e24c8456e5f7	2026-10-21	1	LICENSE	MIT	1105 B
+CAHLR/pyBKT	LIVE	master	d72409fe9674	2026-10-21	1	LICENSE	MIT	1132 B
+chamilo/chamilo-lms	LIVE	master	814cc53f85c0	2026-10-22	0	LICENSE	GPL-3.0	35147 B
+chrischall/infinitecampus-mcp	LIVE	main	971d58ffbbee	2026-10-19	3	LICENSE	MIT	1067 B
+chroma-core/chroma	LIVE	main	52ce8448cb38	2026-10-21	1	LICENSE	Apache-2.0	11357 B
+crewAIInc/crewAI	LIVE	main	570e26ac487d	2026-10-22	0	LICENSE	MIT	"LICENSE text is MIT but opens with the Copyright line, so a head-match on ""MIT License"" misses it · 1055 B"
+danieltyukov/tudelft-mcp	LIVE	main	3c680e019d87	2026-10-08	14	LICENSE	MIT	1070 B
+DMontgomery40/mcp-canvas-lms	LIVE	main	c0646ba10ac2	2026-05-31	144	-	NO-LICENCE-FILE	
+docling-project/docling	LIVE	main	1ee1db0f648c	2026-10-22	0	LICENSE	MIT	1072 B
+edx/openedx-app-android	DEAD	-	-	-	-	-	-	address does not resolve as a public repo over git read
+francoisjacquet/rosariosis	LIVE	mobile	143ec74abd7d	2026-10-17	5	LICENSE	GPL-2.0	15214 B
+frappe/erpnext	LIVE	develop	f5e6f81c66e9	2026-10-22	0	license.txt	GPL-3.0	35149 B
+h5p/h5p-php-library	LIVE	master	1e21b7a2da4a	2026-10-20	2	LICENSE.txt	GPL-3.0	35146 B
+HKUDS/DeepTutor	LIVE	main	a31d82624c27	2026-10-19	3	LICENSE	Apache-2.0	11408 B
+huggingface/smolagents	LIVE	main	96f33faaf028	2026-10-06	16	LICENSE	Apache-2.0	11357 B
+ILIAS-eLearning/ILIAS	LIVE	release_11	d16c0e002e99	2026-10-22	0	LICENSE	GPL-3.0	35147 B
+inducer/relate	LIVE	main	7030dd609545	2026-10-21	1	LICENSE	MIT	"LICENSE text is MIT, self-titled ""RELATE is licensed to you under the MIT license"" · 1145 B"
+instructure/canvas-lms	LIVE	master	1c9f0bb8013e	2026-04-30	175	LICENSE	AGPL-3.0	34520 B
+jupyter/nbgrader	LIVE	main	c2e1ab63512b	2026-10-21	1	LICENSE	BSD-3-Clause	1512 B
+jupyterhub/jupyterhub	LIVE	main	716974bc188b	2026-10-22	0	LICENSE	BSD-3-Clause	1475 B
+jupyterlite/jupyterlite	LIVE	main	e851060d83a8	2026-10-16	6	LICENSE	BSD-3-Clause	1525 B
+krayin/laravel-crm	LIVE	2.2	5eecae04634a	2026-10-21	1	LICENSE	MIT	1078 B
+langchain-ai/langgraph	LIVE	main	3cd57c038ad8	2026-10-21	1	LICENSE	MIT	1072 B
+learningequality/kolibri	LIVE	develop	81f5ec7711b6	2026-10-22	0	LICENSE	MIT	1097 B
+learningequality/ricecooker	LIVE	main	189f3edc00c8	2026-10-19	3	LICENSE	MIT	1087 B
+loyaniu/moodle-mcp	LIVE	main	22cc56c7ce57	2026-06-28	116	-	NO-LICENCE-FILE	
+Mattlo0546/canvas-mcp	LIVE	main	b6c26ba52c14	2026-10-20	2	LICENSE	MIT	1067 B
+mem0ai/mem0	LIVE	main	2c81af3bbe27	2026-10-20	2	LICENSE	Apache-2.0	11349 B
+microsoft/autogen	LIVE	main	004749e6b710	2026-10-16	6	LICENSE	CC-BY-4.0 (root LICENSE)	root LICENSE is CC BY 4.0 for docs; the CODE grant is MIT in LICENSE-CODE · 18650 B
+moodle/moodle	LIVE	main	46c042e7da65	2026-10-21	1	COPYING.txt	GPL-3.0	35147 B
+open-spaced-repetition/fsrs4anki	LIVE	main	ff7c85cee735	2026-08-14	69	LICENSE	MIT	re-verification (Pattern D dependency)
+opencast/opencast	LIVE	develop	153d1b15c93a	2026-10-22	0	LICENSE	ECL-2.0	Educational Community License 2.0 - Apache-2.0 derivative, different patent clause · 11340 B
+OpenEduCat/openeducat_erp	LIVE	19.0	46a5d7d40082	2026-10-13	9	LICENSE	LGPL-3.0	8241 B
+openedx/edx-platform	LIVE	master	6d461044c809	2026-10-22	0	LICENSE	AGPL-3.0	35136 B
+openedx/frontend-app-learning	LIVE	master	50faa45272d8	2026-10-21	1	LICENSE	AGPL-3.0	34523 B
+openedx/tutor	DEAD	-	-	-	-	-	-	address does not resolve as a public repo over git read
+OpenOLAT/OpenOLAT	LIVE	master	214380648364	2026-10-22	0	LICENSE	Apache-2.0	10982 B
+oppia/oppia	LIVE	develop	71dcade64361	2026-10-22	0	LICENSE	Apache-2.0	11358 B
+OS4ED/openSIS-Classic	LIVE	master	5d546f20117e	2026-10-05	17	-	NO-LICENCE-FILE-AT-ROOT	re-verification: confirms the grant is at docs/License.txt, not at any root path (p384 finding holds)
+overhangio/tutor	LIVE	release	279f774331a9	2026-10-20	2	LICENSE.txt	AGPL-3.0	34523 B
+pdg6/bc-curriculum-mcp-server	LIVE	main	687c55b7ed3c	2026-03-27	209	LICENSE	MIT	1070 B
+peancor/moodle-mcp-server	LIVE	main	666f12222ed6	2026-02-22	242	LICENSE	MIT	1064 B
+plastic-labs/tutor-gpt	LIVE	main	5c2f92416c04	2025-11-13	343	LICENSE	GPL-3.0	35149 B
+portabilis/i-educar	LIVE	2.12	435649b0474f	2026-10-22	0	LICENSE	GPL-2.0	re-verification: 18,092 B, exactly the byte length recorded in p387; composer.json declares GPL-2.0-or-later · 18092 B
+QuantStack/jupyter-ai-tutor	LIVE	main	139bb1160312	2026-09-25	27	LICENSE	BSD-3-Clause	1532 B
+run-llama/llama_index	LIVE	main	619d74664e84	2026-10-14	8	LICENSE	MIT	1065 B
+sf-shenfeng/learn-shell	LIVE	main	04e6c71a4783	2026-09-07	45	LICENSE	AGPL-3.0	re-verification: AGPL-3.0 at main, as p385 recorded (MIT only at tag v0.1.0)
+slayadapraya/School-Agent	LIVE	main	4dc203a67e5a	2026-10-21	1	-	NO-LICENCE-FILE	
+THU-MAIC/OpenMAIC	LIVE	main	269fde2d991f	2026-10-22	0	LICENSE	MIT	1065 B
+ucbds-infra/otter-grader	LIVE	master	190c1a4c3e97	2026-10-01	21	LICENSE	BSD-3-Clause	re-verification (Pattern B dependency)
+vishalsachdev/canvas-mcp	LIVE	main	d2cf392ab869	2026-10-21	1	LICENSE	MIT	1071 B
+withmarbleapp/os-taxonomy	LIVE	main	a8719737ff86	2026-10-22	0	LICENSE	ODbL-1.0	Open Data Commons Open Database Licence - a DATABASE licence, not a code licence · 25289 B

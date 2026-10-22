@@ -17,6 +17,14 @@ below: Blackboard and D2L both have verified MIT servers now.
 This shelf answers one question: **what existing system does the client already run (or could run),
 and what can be bolted onto it?** Same role Odoo plays for ERP or OpenMRS for healthcare.
 
+🆕 **`p389` adds a fifth answer to that question, and it is a different kind of answer: what if the
+client runs nothing, and the *classroom itself* is the platform?** See
+*[The generated classroom as a platform](#-p389--the-generated-classroom-as-a-platform-openmaic)*.
+`p389` also **dates every base on this shelf** — 60 addresses, last-commit date read from the payload
+at the real default ref — and the dates change two things below: a decade-dead lookalike sits at the
+obvious ERP address, and the Canvas row needs a sentence it did not have.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p389.tsv).
+
 ## Choosing the base: the four-way decision
 
 | if the client needs… | base | licence | the catch |
@@ -24,7 +32,8 @@ and what can be bolted onto it?** Same role Odoo plays for ERP or OpenMRS for he
 | **To own closed extensions to the platform itself** | [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | Smaller plugin ecosystem than Moodle; more build, less assemble. **The only permissive major LMS.** |
 | **The widest plugin ecosystem and the largest talent pool** | [Moodle](https://github.com/moodle/moodle) | 🟡 GPL-3.0 (`COPYING.txt`) | Copyleft on anything linked. Extend through web services / the MCP plugin, not by patching core. |
 | **MOOC scale, cohort analytics, deep data control** | [Open edX](https://github.com/openedx/edx-platform) + [tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 | AGPL reaches **hosted** use. Build XBlocks and LTI tools; keep proprietary logic the other side of the boundary. |
-| **North American higher-ed integration reality** | [Canvas LMS](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0, open-**core** | The published tree ≠ the commercial ecosystem. Scope integrations against the real tenant, not the repo. |
+| **🆕 `p389` No incumbent platform at all, and lessons needed now** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | Not an LMS: no enrolment, no gradebook of record, no SIS. You get the *teaching surface* and you still owe the system of record. See the section below. |
+| **North American higher-ed integration reality** | [Canvas LMS](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0, open-**core** | The published tree ≠ the commercial ecosystem. Scope integrations against the real tenant, not the repo. 🆕 `p389` **And the published tree is also *older than it looks*: `master` last moved 2026-04-30 — 175 days — while the `stable/*` branches move.** Read the API surface off the tenant, and if you must read it off the repo, say which ref. |
 
 ### Regional fit
 - **LATAM / Iberia:** [Chamilo](https://github.com/chamilo/chamilo-lms) (GPL-3.0) — strongest
@@ -87,7 +96,7 @@ licence payloads read first-hand this pass:
 |---|---|---|---|
 | [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | 🔴 **`master`** | 🟢 **MIT** *(1,077 B, "Copyright 2010-2025, Webkul Software"; `composer.json` also declares `"license": "MIT"`)* | Laravel 13 + FilamentPHP 5 modular ERP **with a plugin system**: accounting, inventory, HR, CRM, projects, and a Filament admin panel a client's staff can actually use. 🔴 **No education module** — admissions, curriculum, fees, attendance and transcripts are **your build**. |
 | [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | 🔴 **`2.2`** *(version branch; no `main`)* | 🟢 **MIT** *(1,078 B, same Webkul holder)* | The **admissions funnel** as a CRM: lead → applicant → enrolment, with the pipeline, activity log and email already built. The piece an SIS always lacks and a school always asks for. |
-| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🔴 **`trunk`** | 🟢 **Apache-2.0** *(11,906 B; `NOTICE` 166 B, "Copyright 2001-2026 The Apache Software Foundation")* | The ASF alternative: accounting, CRM, manufacturing, order management. 🔴 Developer-facing and heavy — pick it for ASF governance and longevity, not for time-to-first-demo. |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🔴 **`trunk`** | 🟢 **Apache-2.0** *(11,906 B; `NOTICE` 166 B, "Copyright 2001-2026 The Apache Software Foundation")* | The ASF alternative: accounting, CRM, manufacturing, order management. 🔴 Developer-facing and heavy — pick it for ASF governance and longevity, not for time-to-first-demo. 🆕 `p389` **Dated: `trunk` committed 2026-10-22 — 0 days. The ASF-longevity argument holds up.** 🔴 **But write the `-framework` suffix into the proposal.** [apache/ofbiz](https://github.com/apache/ofbiz) — the address anyone guesses — resolves, carries a valid Apache-2.0 grant, and its `trunk` **last moved 2017-02-12, 3,539 days ago**. It is the retired monolith. A client engineer who checks the obvious address finds a nine-year-dead tree and concludes the recommendation was careless. |
 
 🔵 **What this changes in a pitch.** [OpenEduCat](https://github.com/openeducat/openeducat_erp)'s
 **LGPL-3.0** used to be the only road to an open-source education ERP, so it was not a decision. It
@@ -247,6 +256,51 @@ get approved.
 plugin, a 250-operation contract**, Moodle 4.5+, with an optional experimental **WebMCP** browser
 path. GPL survives here for the same reason it does for `webservice_mcp`: the agent reaches it over
 REST, it is not linked.
+
+## 🆕 `p389` — The generated classroom as a platform (OpenMAIC)
+
+[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — 🟢 **MIT**, Tsinghua University, real
+default ref `main` @ `269fde2d991f`, **committed 2026-10-22 (0 d)**, ~41.3k ★. Grant read from the
+payload: `LICENSE` is stock MIT text, `package.json` declares `"license": "MIT"`.
+🔴 **A 2026 third-party review of this project reports it as AGPL-3.0 with paid commercial licensing.
+That is false** — see [`agents/top.md`](../agents/top.md#-two-licence-traps-that-a-badge-read-would-miss).
+
+**Why it belongs on *this* shelf and not only the agent shelf.** Every other row here is a system of
+record that AI gets bolted onto. OpenMAIC inverts it: the artefact is a **classroom** — narrated
+slides, an AI teacher with a voice, teaching assistants, simulated classmates, auto-graded quizzes,
+HTML interactives, a shared whiteboard — generated from a topic or an uploaded document, and then
+*taught*. It is a Next.js 16 / React 19 / TypeScript application on **PostgreSQL 16**, self-hosted
+with Docker, and it has the three properties that separate a platform from a demo:
+
+| property | what it is | why an institution needs it |
+|---|---|---|
+| **Server-first generation** (v1.2.0) | Generation runs on the server, survives closed tabs and restarts; the web app and the API share one pipeline | A teacher who closes a laptop does not lose a lesson. The demo-grade alternative generates in the tab. |
+| **Central model governance** | Every AI use is a named **slot** in `openmaic.yml` (outline, slide content, TTS, web search, …), each pinned to a declared provider, keys referenced as `${VAR}` from `.env.local`; a capability is switched off with `video: null`, and the server can be configured to **forbid user-supplied keys** | This is the artefact a district's AI policy is actually written against: *which model saw student input, under whose contract*. Almost nothing else in this base can answer that in one file. |
+| **Export to one offline HTML file** | A finished classroom exports as a single self-contained HTML that plays the lesson, or as a PPTX that keeps every scene | The low-connectivity story (`Pattern D`) **and** the procurement story: a reviewer can be sent the lesson without being given access to the system. |
+
+🟢 **Local inference is a supported path, not a fork:** **Lemonade** for local models and **FunASR**
+for local ASR, so a deployment that may not send audio or text off-premises has a configuration
+rather than a rewrite. 🟢 **Provenance:** grew out of **MAIC**, run inside Tsinghua and validated on
+**700+ students**; paper in **JCST 2026**. 🟢 **Security handled as product work** — five releases
+since September 2026 carry SSRF, DNS-rebinding, access-token-expiry and provider-redirect fixes under
+published GHSAs, which is a maturity signal almost nothing else on the agent shelf has.
+
+🔴 **What you still owe, and it is the whole administrative half.** No enrolment, no gradebook of
+record, no transcripts, no SIS, no LTI story stated. It is a **teaching surface**, so in an engagement
+with an incumbent LMS it sits *beside* Moodle/Canvas/Open edX as a content and delivery tool, and the
+system of record stays where it is. 🔴 **Pin the ref.** Head is **v1.3.0-rc.1** (knowledge base,
+2026-10-22) and the project states **breaking upgrade conditions with no rollback below that
+release**; a pilot pins **v1.2.1** (2026-10-18). 🔴 **Operational floor:** Node ≥ 22.19, pnpm ≥ 10,
+PostgreSQL 16, a long-running server — Vercel is capped at the 1.1.x line, so "we'll put it on Vercel"
+is a downgrade, not a deployment.
+
+🔵 **Where it lands by region.** Origin is **APAC** (China), the interface is EN + zh-CN, and the
+provider catalogue is built for a market that includes DeepSeek and Kimi alongside OpenAI, Anthropic
+and Gemini. For an engagement under **EU AI Act** or **FERPA** constraints the slot-pinning and
+forbid-user-keys controls are an asset, and the *data-residency* question is answered by the local
+Lemonade/FunASR path — but the assessment features (auto-graded quizzes, mastery signals) are exactly
+what Annex III and Vietnam's Decision 33/2026 treat as high-risk, so human review of any consequential
+score is a build item, not a setting. See [`intel/trends.md`](../intel/trends.md).
 
 ## What is *not* available as open source, and matters
 
