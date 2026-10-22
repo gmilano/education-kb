@@ -23,6 +23,14 @@ consequential structural fact in this industry for a studio that needs to ship c
 | **the one exception** | 🟢 **Apache-2.0 — [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT)** | The only major open-source LMS a studio can extend with closed code. Underweighted by every roundup we read. |
 | **agents / tooling** | MIT, Apache-2.0, BSD-3 almost throughout | Permissive. |
 
+🆕 `p385` **And a third axis the table above cannot show: the grant can differ by *ref* within one
+repository.** [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) reads **AGPL-3.0** at
+`main` (34,523 B) and **MIT** at tag **`v0.1.0`** (1,081 B) — both read first-hand this pass. It relicensed on
+**2026-08-16**. 🔵 So "what is this repository licensed as?" is not a well-formed question; **"what is it
+licensed as at the ref I am shipping?"** is. That is now **Pattern L step 10**, and it cuts both ways: a
+permissive grant can be *retrievable at a tag* after the project has moved away from it, and a repository
+a prior audit cleared as MIT can be AGPL at `main` today.
+
 **The design consequence**, not a preference: compose permissive agents **over** a copyleft platform
 across a documented interop boundary — **LTI 1.3**, **MCP**, or the platform's web-services API —
 rather than forking the platform. Recipes in [`compose/patterns.md`](../compose/patterns.md).

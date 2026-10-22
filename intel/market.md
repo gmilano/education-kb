@@ -101,6 +101,19 @@ Opportunities that do not belong to one region, because the evidence for them is
   protection, family transparency and periodic review.
 - **Maryland SB 720** — MSDE must publish guidance, offer professional development and help
   districts evaluate AI tools; establishes a statewide K-12 AI collaborative.
+  🆕 `p385` **Dates and the clock that matters:** approved by the Governor **26 May 2026** (SB 720 /
+  HB 1057, the *Artificial Intelligence Ready Schools Act*), reported effective **1 Jun 2026** — and
+  local school systems must adopt an AI policy **aligned to MSDE's guidance within 120 days of its
+  release**. 🔵 That is a procurement trigger with a deadline attached to someone else's publication
+  date: when MSDE publishes, every Maryland district has four months. Worth watching rather than
+  filing.
+- 🆕 `p385` **Illinois SB 2909 — the first US limit found on AI in *teacher* evaluation.** Amends
+  §24A-5 of the Illinois School Code to restrict the use of AI in evaluating teachers, **effective
+  1 Jan 2027**. Separately, **ISBE released statewide guidance on 9 Jul 2026** covering AI in teaching,
+  learning and school operations. 🔵 DC's non-mandatory policy already barred AI from teacher
+  evaluations; Illinois makes that a statute. **Employment-adjacent AI is becoming its own regulated
+  surface in education, distinct from student-facing AI** — and a product that grades teachers is a
+  different compliance object from one that grades students.
 - **Alabama HB 329** — an approved CS course including AI instruction becomes a graduation
   requirement.
 - **Illinois** — AI-literacy instruction for grades 6–12 from **1 Aug 2026**; one source describes
@@ -170,7 +183,19 @@ Opportunities that do not belong to one region, because the evidence for them is
 **Regulation — the dates are the product.**
 - **Regulation (EU) 2026/1744** (the "Digital Omnibus on AI", published in the Official Journal
   **24 Jul 2026**) moved the AI Act deadline for **stand-alone high-risk education systems** from
-  **2 Aug 2026** to 🟢 **2 Dec 2027**. Corroborated by two independent sources this pass.
+  **2 Aug 2026** to 🟢 **2 Dec 2027**. 🆕 `p385` **corroboration upgraded: `p384` had two independent
+  sources; this pass reproduces the same regulation number, the same OJ date and the same deferral across
+  **nine** independent houses** (Cooley · FPF · Gibson Dunn · Jones Walker · Usercentrics · ActuIA ·
+  Winston Taylor · Praxikon · aiacto). 🔴 **The grade does not change: `CONVERGENT-SECONDARY, PRIMARY
+  UNREAD`.** EUR-Lex, `artificialintelligenceact.eu` and every law-firm host return DNS `ENOTFOUND` from
+  this sandbox, so no primary text was read. Nine agreeing secondaries are still not the Official Journal.
+- 🆕 `p385` **The nearest binding date is not 2027 — it is six weeks away.** The **Art. 50 transitional
+  deadline for machine-readable marking of AI-generated content on systems ALREADY on the market is
+  2 Dec 2026.** A tutor the client is running *today* is in scope on that date; the 2027 deferral does
+  nothing for it. 🔵 This date was recorded in `intel/open-gaps.md` but had never reached this shelf,
+  which is the shelf an engagement reads.
+- 🆕 `p385` **Annex I (AI embedded in regulated products) moves to 2 Aug 2028** — a different date from
+  the Annex III education one, and routinely conflated with it in vendor summaries.
 - 🔴 **What did *not* move:** **Article 50 transparency obligations apply from 2 Aug 2026.**
 - 🔴 **Already in force:** **Article 4 AI-literacy duty since 2 Feb 2025**, binding on every
   organisation that *uses* an AI system — therefore every school. **Emotion recognition in
@@ -242,6 +267,20 @@ Opportunities that do not belong to one region, because the evidence for them is
 - **India** — no dedicated AI law yet; amended **IT Rules require prominent labels and provenance
   markers on AI-generated content from 20 Feb 2026**; a dedicated law is in stakeholder
   consultation and drafting (IAPP).
+- 🆕 `p385` **Australia — the governing document is still non-binding, and that is the finding.**
+  The **Australian Framework for Generative AI in Schools** was agreed by education ministers in
+  **Oct 2023** and applied from **Term 1 2024**; it covers privacy, student data, teaching/learning
+  outcomes and wellbeing, and it is **not legislation — schools are not required to follow it**. The
+  federal **National AI Plan (Dec 2025)** names education a priority and folds the schools framework
+  into its commitments. 🔴 **A targeted search found no 2026 ministry update**, so a pitch that assumes
+  Australia has moved to binding school rules this year is wrong. Sell to the framework's language and
+  to institutional risk appetite, not to a mandate that does not exist.
+- 🆕 `p385` **Commercial signal — TCS × Pearson, announced Mar 2026.** A multi-year alliance pairing
+  Pearson's assessment products with TCS consulting and the **TCS iON** learning platform, including
+  putting Pearson's **Versant** English test into TCS hiring and workforce programmes, plus AI-validated
+  skill benchmarking and certification. 🔵 Relevant as **competitive context, not a client**: the
+  corporate-skills/assessment lane in APAC is being consolidated by integrators, which is the same lane
+  a Globant L&D engagement sells into. 🟡 Vendor-announced; not independently verified.
 - 🔴 **UNCONFIRMED, both widely repeated:** that AI became a **compulsory subject in China from age
   six** by Sep 2025 with **≥8 hours/year** in Beijing schools; and that **India** will make AI and
   computational thinking **compulsory from Class 3 in 2026-27**. Neither was found in a government
@@ -299,6 +338,32 @@ Opportunities that do not belong to one region, because the evidence for them is
 - **UNESCO's** regional AI-in-education observatory has a **Mexico pilot with CONALEP and DGETI
   announced Aug 2026**; partners include **CETIC.br** (Brazil) and **Tecnológico de Monterrey**
   (Mexico).
+
+🆕 `p385` **A second, independent survey lands on the same gap — and adds the one split that tells a
+studio what to BUILD.** The **Digital Education Council's *AI in Higher Education LATAM Survey 2026***
+(**30,000+ responses, 29 institutions**) reports **92% of students** and **79% of faculty** actively
+using AI, against **~30% of LATAM universities with a published AI policy** (Tec de Monterrey summary).
+🟢 That is a **third** independent instrument converging on the 26–30% governance band already recorded
+here from Coursera and IESALC — different method, different sample, same answer. Stop hedging it.
+
+🔵 **And the actionable split, which the headline adoption numbers hide:** **50% of students support
+AI-assisted feedback on their assignments, while only 19% of faculty currently use AI that way.** 🟢
+**A 31-point demand gap on one named feature** — not "AI in education" in general, but *feedback on
+submitted work*. That is a build target with its own evidence, and it points at the assessment stack
+already on these shelves ([edx-ora2](https://github.com/openedx/edx-ora2) rubrics,
+[pybryt](https://github.com/microsoft/pybryt) for approach-level assessment,
+[nbgrader](https://github.com/jupyter/nbgrader)) rather than at another tutor.
+🟡 Industry-produced survey; treat the figures as directional and cite the Council by name.
+
+🆕 `p385` **Regulation, placed by country — heterogeneous, and no regional framework exists.**
+**Chile** is furthest along: a **National AI Policy since 2021** and a law under discussion.
+**Brazil** (PL 2.338/2023) and **Colombia** (CONPES 4144) have national strategies **with no
+education-sector rules**. **Mexico** has proposals from **SEP**, **ANUIES** and the Observatorio IA
+that **lack binding force**. 🔵 **The consequence for an engagement: in most of LATAM the binding
+constraint is the institution's own policy, not the state's** — which is exactly why the 70% of
+universities with no published policy is a services opportunity and not merely a risk statistic.
+Instruments to cite: **ILIA** (Latin American AI Index, 19 countries, with ECLAC/CEPAL) and the
+**IDB**'s AI-regulation and AI-in-education frameworks.
 
 **🆕 `p384` — the governance gap now has a number, and it is the single most useful statistic in
 this file for a LATAM pitch.** UNESCO IESALC's *AI Implementation in Higher Education in Latin
@@ -405,6 +470,17 @@ Regulation (EU) 2026/1744 (OJ 24 Jul 2026) · European Schools (eursc.eu) · Hol
 200 and LATAM EdTech 100 · Wikipedia (openDesk, ZenDiS) · IAPP · Latham & Watkins APAC AI
 regulation · Ipsos Education Monitor 2026 · IDB · CENIA via Foreign Policy · UNESCO LAC AI-in-
 Education Observatory · AlSur · EdTech Innovation Hub (Google.org).
+
+**Added `p385`:** Digital Education Council, *AI in Higher Education LATAM Survey 2026*
+(30,000+ responses, 29 institutions) · Tecnológico de Monterrey (TecScience) on LATAM university AI
+policy coverage · Illinois **SB 2909** and **ISBE** statewide guidance (9 Jul 2026) · Maryland
+**SB 720 / HB 1057** *Artificial Intelligence Ready Schools Act* (approved 26 May 2026) ·
+**Australian Framework for Generative AI in Schools** (education ministers, Oct 2023; applied Term 1
+2024) and Australia's **National AI Plan** (Dec 2025) · TCS–Pearson alliance announcement (Mar 2026,
+vendor-announced) · nine-house corroboration of **Regulation (EU) 2026/1744** (Cooley, FPF, Gibson
+Dunn, Jones Walker, Usercentrics, ActuIA, Winston Taylor, Praxikon, aiacto) — 🔴 **all secondary;
+EUR-Lex and every law-firm host are DNS-unreachable from this sandbox, so the primary text remains
+unread and the EU dates keep their `CONVERGENT-SECONDARY` grade.**
 
 **Added `p384`:** UNESCO IESALC, *AI Implementation in Higher Education in Latin America and the
 Caribbean* (Digital Learning Week, Paris, Sept 2026 — 200 institutions, 19 countries) · OECD

@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p385` — **ONE NEW ADDRESS THIS PASS, AND IT INVERTS THE BASE'S OWN THESIS: THE CLASSROOM IS THE MCP SERVER AND THE AGENT IS BRING-YOUR-OWN. 🔴 IT IS ALSO AGPL AT `main` AND MIT AT A TAG — THE SAME REPOSITORY, TWO GRANTS, BOTH READ FIRST-HAND. 🔴 THE FOUR PRESCRIBED GLOBAL LEGS RETURNED `0` NEW FOR THE FOURTH PASS RUNNING.**
+
+🔵 **Dating note.** Every leg and payload read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p385.tsv) — 6 reads, 5 slugs.
+
+### 🟢 The one new address: `sf-shenfeng/learn-shell`
+
+[`sf-shenfeng/learn-shell`](https://github.com/sf-shenfeng/learn-shell) is **absent from every file in
+this repository** — checked against all eight shelves *and* the 2.4 MB `intel/open-gaps.md`, so this is
+a genuine first sighting, not a re-find.
+
+| property | value, read first-hand |
+|---|---|
+| default ref | `main` (`git ls-remote --symref`) |
+| grant at `main` | 🔴 **AGPL-3.0**, `LICENSE`, **34,523 B**, stock header *"Version 3, 19 November 2007"* |
+| grant at tag `v0.1.0` | 🟢 **MIT**, `LICENSE`, **1,081 B**, *"Copyright (c) 2026 Learn Shell contributors"* |
+| refs published | `main` + exactly one tag, `v0.1.0` |
+| relicensed | **2026-08-16**, MIT → AGPL-3.0, stated by the maintainer in the README |
+| surface | ~**50 MCP tools**, self-describing through a `manifest://capabilities` resource generated from the live registries |
+| what it holds | courses, lessons, FSRS-scheduled flashcards, graded exercises, mindmap, document reader, and a learner-memory layer (`get_context` / `get_learner_brief`) |
+| deployment | Docker + Postgres; 🔴 **v1 is single-machine and unauthenticated by the maintainer's own description** |
+| region | **APAC** — China. MCP tool descriptions and prep-report Chinese-first; docs English-first |
+| dogfooded since | **2026-07-02** |
+
+🟢 **Why it earns a row rather than a mention.** Every other integration on these shelves points the
+same way: an agent reaching *into* an LMS over MCP, LTI or web services — `Pattern A`, and the whole
+reason the copyleft-platform problem is survivable. **This points the other way.** The classroom is the
+server; the agent is a client and is replaceable. For an engagement with **no LMS worth integrating**
+(corporate L&D, a bootcamp, a ministry pilot) that inversion is the product: the client is not buying a
+model, so swapping the model does not invalidate the asset. Written up as 🆕 **`Pattern M`** in
+[`compose/patterns.md`](../compose/patterns.md), with its three honest caveats stated in the pattern
+rather than buried here.
+
+🔴 **No star count is published for it, as for every row on these shelves.** A directory listing claims
+3; `api.github.com` is **403** for unattached repositories and `github.com` HTML is **403** to `curl`,
+so it is not verifiable here and is not carried.
+
+### 🔴 The grant is a property of the REF, and this is the base's first instance in the buyer's favour
+
+This base already knew relicensing happens — [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai)
+went **AGPL-3.0 → proprietary** (`p241`), `AIHawk` went MIT for releases after a date. **Both ran against
+the buyer.** `learn-shell` runs the other way: **permissive → copyleft, with the permissive grant still
+retrievable at `v0.1.0`.**
+
+🔵 **The durable lesson, now `Pattern L` step 10:** *"what is this repository licensed as?"* is not a
+well-formed question. **"What is it licensed as at the ref I am shipping?"** is. Record
+**slug + ref + licence + date-read** — never slug + licence — and re-read before each release. A cached
+audit is a statement about a ref that has moved.
+
+🟡 **And the cost of the dodge, stated plainly:** pinning `v0.1.0` for MIT buys a frozen tree with no
+upstream path, from a maintainer who has signalled they do not want the code used on those terms.
+
+### 🔴 The four prescribed global legs: `0` new, fourth consecutive pass
+
+| prescribed leg | what it returned | NEW |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | general-agent listicles (Hermes, AutoGPT, CrewAI); `pguso/agents-from-scratch`, `500-AI-Agents-Projects` | **0** — both already carried, and both already correctly classed as *courseware about agents*, not education agents |
+| `github trending education AI 2026` | aggregator snapshots; `rohitg00/ai-engineering-from-scratch` (carried `p384`), `h9-tect/AI-Roadmaps` (carried) | **0** — 🔴 GitHub Trending itself is unreadable: `github.com` HTML **403** to `curl` |
+| `open source platform education ERP CRM MIT Apache` | one vendor's own glossary (OpenEduCat) across nine language paths | **0** |
+| `AI education industry trends 2026` | market-forecast aggregators disagreeing by 3× on market size | **0** |
+
+🔵 **`p382`'s reading holds and is now four passes old: the supply is exhausted on these channels, not
+the channels on this supply.** The one new address this pass came from a **targeted MCP-education leg**,
+not from any prescribed global one. 🟢 That is the actionable finding for a successor: **the prescribed
+agent leg has not produced a new education agent in four passes.** Spend the budget on forge and
+MCP-shaped legs instead.
+
+### 🟡 Two re-reads that CONFIRM standing records rather than changing them
+
+- [`moarshy/mcp-tutor`](https://github.com/moarshy/mcp-tutor) — re-probed at eight paths, still **no
+  licence file**, `pyproject.toml` still has **no `license` field**. 🔵 Worth restating *why* it is a
+  trap: it **has** a `## License` section, and that section's entire body is *"This project is
+  experimental and intended for educational and research purposes."* That grants **nothing** while
+  satisfying any check that asks whether a licence section exists — and "for educational purposes" can
+  even read as permission to a hurried reviewer. The base's existing **`sin licencia`** record is
+  correct and is now reinforced in `Pattern L` step 5.
+- [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) — README states *"provided under the
+  [MIT License](LICENSE)"* and **that `LICENSE` link 404s**. A prose assertion with a dead link is
+  weaker evidence than a manifest field, which is weaker than the text itself. Graded **README-ONLY**,
+  not MIT.
+
+### 🔴 Declared gaps — what was searched and did not yield
+
+- 🔴 **The prescribed EMEA regional leg is not a working channel for education.**
+  `AI education EMEA 2026 adoption regulation players` returned **only enterprise-AI material**
+  (CompTIA's 2026 outlook — US respondents only; a **2023** Workday study; a Bandwidth-Cavell
+  enterprise survey). **Zero education-specific players, ministries, vendors or repositories.** Every
+  EMEA finding this pass came from a **substituted** query aimed at the AI Act. Recorded so the silence
+  is not mistaken for coverage — and so a successor substitutes the leg instead of re-running it.
+- 🔴 **No primary legal text could be read.** `eur-lex.europa.eu`, `artificialintelligenceact.eu` and
+  every law-firm host return DNS **`ENOTFOUND`** from this sandbox. The EU dates are corroborated
+  across **nine** independent secondary houses this pass — up from `p384`'s two — and the grade is
+  **unchanged at `CONVERGENT-SECONDARY, PRIMARY UNREAD`**. Nine agreeing secondaries are not the
+  Official Journal, and more of them do not become one.
+- 🔴 **No 2026 Australian ministry update found.** The governing document is still the **non-binding**
+  2023 framework. An informed gap, not an absence of regulation.
+- 🔴 **No star counts, no GitHub Trending read** — unchanged since `p383`.
+- 🟢 **One channel fact that IS new, and a successor should have it:** `p382`–`p384` each recorded the
+  industry-KB push as **blocked by session scoping**. **It is not blocked — `add_repo` attaches the
+  industry KB to the session, and this pass pushed through it.** The remedy was in the harness's own
+  403 message all along, exactly as `p382` found for `api.github.com`.
+
+
 ## 🟢 🆕 2026-10-22 · `p384` — **THIS WEEK'S REAL NEW SUPPLY IS NOT AN AGENT AND NOT CODE: IT IS A 1,930-TOPIC CURRICULUM PREREQUISITE GRAPH, AND ITS LICENCE IS A *DATABASE* LICENCE.**
 
 🔵 **Incremental pass.** `p383` (earlier today) rewrote the eight shelves back into a usable

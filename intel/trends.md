@@ -61,7 +61,7 @@ Four regimes moved in four different directions in a single year:
 
 | region | 2026 direction |
 |---|---|
-| **EU** | **Regulation (EU) 2026/1744** (OJ 24 Jul 2026) pushed high-risk education systems from 2 Aug 2026 to **2 Dec 2027** — while **Art. 50 transparency still starts 2 Aug 2026** and **Art. 4 AI literacy has bound every school since 2 Feb 2025**. Emotion recognition in education: prohibited. |
+| **EU** | **Regulation (EU) 2026/1744** (OJ 24 Jul 2026) pushed high-risk education systems from 2 Aug 2026 to **2 Dec 2027** — while **Art. 50 transparency still starts 2 Aug 2026** and **Art. 4 AI literacy has bound every school since 2 Feb 2025**. Emotion recognition in education: prohibited. 🆕 `p385` **The nearest date is neither of those: machine-readable marking of AI-generated content on systems ALREADY on the market is due 2 Dec 2026.** Annex I (AI embedded in regulated products) moves to **2 Aug 2028**. |
 | **US** | No federal rule; **134+ bills across 31 states**, **33–35 states** with guidance, and binding district-policy mandates (Idaho SB 1227 effective 1 Jul 2026; Oklahoma SB 1734 by 2027-28). |
 | **India / China** | **Content labelling and provenance**: India's amended IT Rules from **20 Feb 2026**; China's labelling measures from **1 Sep 2025** (988 services filed by 30 Jun 2026). |
 | **Vietnam / Brazil / Mexico** | **Sectoral high-risk designation**: Vietnam names education among six high-risk sectors; Brazil's PL 2.338/2023 reportedly covers student selection; Mexico replicates the EU risk model. |
@@ -69,6 +69,15 @@ Four regimes moved in four different directions in a single year:
 **So:** regional configuration is now a product requirement. The same tutor needs provenance
 watermarking for India, a transparency notice for the EU, a prohibited-uses lockout for DC, and a
 teacher-facing-only mode for ANZ and Brazil.
+
+🆕 `p385` **Two corrections to how this trend gets sold.** First, **the EU deferral is widely
+misread as breathing room.** It defers the *high-risk* regime; it defers nothing for a system already
+deployed, which owes machine-readable marking on **2 Dec 2026**. A client told "the EU moved to 2027"
+and nothing else has been misinformed about the only date within the current budget year. Second,
+**employment-adjacent AI is separating from student-facing AI as its own regulated surface**:
+**Illinois SB 2909** restricts AI in *teacher* evaluation from **1 Jan 2027**, where DC had only a
+non-mandatory ban. A product that evaluates staff is a different compliance object from one that
+teaches learners, and the two are still being scoped as one in most pitches.
 
 ## Trend 4 — Restriction is a real countertrend, not noise
 

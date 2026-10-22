@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 385 — 2026-10-22 — **ONE NEW ADDRESS, AND IT CARRIES TWO LICENCES AT TWO REFS. 🔴 THE FOUR PRESCRIBED GLOBAL LEGS RETURNED `0` NEW FOR THE FOURTH PASS RUNNING, AND THE PRESCRIBED EMEA LEG RETURNED NO EDUCATION CONTENT AT ALL. 🟢 AND THE PUSH THAT THREE PASSES RECORDED AS BLOCKED WAS NEVER BLOCKED.**
+
+🔵 **Dating note.** Every leg, probe and licence read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p385.tsv)
+
+### 🟢 This is an increment, deliberately
+
+`p383` rewrote six shelves that had become a journal about this base's own apparatus. **That lesson is
+honoured here by not repeating the rewrite**: `p385` adds what it verified and changes nothing it did
+not measure. The honest size of the pass is **one new address, two promoted dates, two new regional
+statutes and one sharpened procurement step** — and most of what the prescribed research legs returned
+was already correctly on these shelves, which is itself the finding.
+
+### 🟢 The one new address — and the licence result that generalises
+
+[`sf-shenfeng/learn-shell`](https://github.com/sf-shenfeng/learn-shell), absent from all eight shelves
+*and* from the 2.4 MB `intel/open-gaps.md` before this pass. An **agent-native teaching OS**: ~50 MCP
+tools over courses, lessons, FSRS-scheduled flashcards, graded exercises and a persistent learner-memory
+layer (`get_context` / `get_learner_brief`). **APAC — China.** Dogfooded since 2026-07-02.
+
+| ref | grant | bytes |
+|---|---|---|
+| `main` | 🔴 **AGPL-3.0** | 34,523 (stock) |
+| tag `v0.1.0` | 🟢 **MIT** | 1,081, *"Copyright (c) 2026 Learn Shell contributors"* |
+
+🔴 **Same repository, two grants, both read first-hand.** Relicensed **2026-08-16**. This base already
+knew relicensing happens (`snflwr-ai` AGPL→proprietary at `p241`; `AIHawk`), but **both prior instances
+ran against the buyer.** This one runs the other way — permissive → copyleft with the permissive grant
+**still retrievable at a tag** — and that is the case a procurement gate has to handle.
+
+🔵 **Now `Pattern L` step 10:** *"what is this repository licensed as?"* is not a well-formed question.
+**"What is it licensed as at the ref I am shipping?"** is. Record **slug + ref + licence + date-read**,
+never slug + licence. 🟡 With the cost of the dodge stated: pinning `v0.1.0` buys a frozen tree with no
+upstream path, from a maintainer who has signalled they do not want the code used on those terms.
+
+🟢 **It also inverts this base's integration thesis**, which is why it earns a pattern rather than a row.
+Every other integration here points an agent *into* an LMS (`Pattern A`). Here the **classroom is the MCP
+server and the agent is bring-your-own** — the shape for an engagement with no LMS worth integrating.
+🆕 **`Pattern M`**, with its three real caveats in the pattern: AGPL reaches hosted use, **v1 is
+single-machine and unauthenticated**, and it is one maintainer's project.
+
+### 🔴 Two dates were measured by earlier passes and never reached a shelf
+
+| date | what it is |
+|---|---|
+| **2 Dec 2026** | Art. 50 transitional deadline for **machine-readable marking of AI-generated content on systems already on the market** — 🔴 **six weeks out** |
+| **2 Aug 2028** | Annex I, AI embedded in regulated products |
+
+🔴 **The EU's widely-reported "deferral to 2027" defers the high-risk regime and defers nothing for a
+tutor a client is already running.** A client told only "the EU moved to 2027" has been misinformed
+about the only EU date inside the current budget year. 🔵 **The general lesson:**
+`intel/open-gaps.md` is 2.4 MB and `intel/market.md` is 32 KB — a fact in the gaps file that was never
+promoted has been *recorded* but not *delivered*, and the shelf is what an engagement reads.
+
+### 🟢 New regional intelligence, placed
+
+- **North America** — 🆕 **Illinois SB 2909** restricts AI in **teacher evaluation** (School Code
+  §24A-5) from **1 Jan 2027**; ISBE issued statewide guidance **9 Jul 2026**. 🆕 **Maryland SB 720 /
+  HB 1057** approved **26 May 2026**, and districts must adopt an aligned policy **within 120 days of
+  MSDE publishing its guidance** — a procurement trigger on someone else's clock. 🔵 **Employment-adjacent
+  AI is separating from student-facing AI as its own regulated surface**, and the two are still scoped
+  as one in most pitches.
+- **EMEA** — the Omnibus deferral is corroborated across **nine** independent houses this pass, up from
+  `p384`'s two. 🔴 **The grade does not change:** `CONVERGENT-SECONDARY, PRIMARY UNREAD`. EUR-Lex,
+  `artificialintelligenceact.eu` and every law-firm host are DNS **`ENOTFOUND`** here.
+- **APAC** — 🆕 Australia's governing document is still the **non-binding** *Australian Framework for
+  Generative AI in Schools* (ministers Oct 2023, applied Term 1 2024); the **National AI Plan** (Dec
+  2025) names education a priority. **No 2026 ministry update was found** — a pitch assuming binding
+  Australian school rules this year is wrong. 🆕 **TCS × Pearson** (Mar 2026) as competitive context.
+- **LATAM** — 🆕 the **Digital Education Council LATAM Survey 2026** (30,000+ responses, 29 institutions):
+  **92% of students / 79% of faculty** using AI against **~30% of universities with a published policy**
+  — a **third** independent instrument landing in the same 26–30% governance band. 🟢 **And the split
+  worth building against: 50% of students want AI-assisted feedback on assignments; 19% of faculty use
+  AI that way — a 31-point demand gap on one named feature**, which points at the assessment stack, not
+  at another tutor. Regulation placed by country: **Chile** furthest (National AI Policy since 2021, law
+  in discussion); **Brazil** and **Colombia** have strategies with **no education-sector rules**;
+  **Mexico**'s SEP/ANUIES proposals **lack binding force**.
+
+### 🔴 Declared gaps — searched, and empty
+
+- 🔴 **The prescribed EMEA regional leg is not a working channel for education.** It returned only
+  enterprise-AI material (CompTIA — US respondents only; a **2023** Workday study; a Bandwidth-Cavell
+  enterprise survey): **zero** education-specific players, ministries, vendors or repositories. Every
+  EMEA finding here came from a **substituted** query. A successor should substitute, not re-run.
+- 🔴 **The prescribed global agent leg has produced no new education agent in four passes.** What it
+  returns is courseware about agents (`pguso/agents-from-scratch`, `500-AI-Agents-Projects`) — already
+  carried and already correctly classified. Spend the budget on forge and MCP-shaped legs.
+- 🔴 **No GitHub Trending read and no star counts** (`github.com` HTML 403 to `curl`; `api.github.com`
+  403 for unattached repos) — unchanged since `p383`.
+- 🟡 **Two re-reads confirmed standing records rather than changing them:**
+  [`moarshy/mcp-tutor`](https://github.com/moarshy/mcp-tutor) is still ungranted — and the reason it is a
+  trap is that it **has** a `## License` section whose whole body is *"This project is experimental and
+  intended for educational and research purposes"*, which grants nothing while satisfying any check that
+  asks whether a licence section exists. [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps)
+  asserts MIT in its README with a **404 link** to the licence — graded **README-ONLY**, not MIT. Both
+  sharpen `Pattern L` step 5: read what the section *says*, not that it *exists*.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 597** harvested shapes → **34** are not
+addresses → **2 563 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 563** channel-U
+addresses and **3 020** channel-B survivors give **3 375 addresses over both channels**.
+
+🟢 **The delta is +2 on channel U** (2 561 → 2 563), **+1 on channel B** (3 019 → 3 020) and **+1 on
+the union** (3 374 → 3 375). 🔵 `p383`'s negative delta was the intended consequence of a rewrite;
+this pass is an increment, so a small positive delta is the expected shape. The new addresses are
+`sf-shenfeng/learn-shell` and the two re-read specimens cited in `Pattern L` step 5. Rejected
+non-addresses are **unchanged at 34**.
+
+### 🔴 `make hooks` — 43 of 45 green, and the two reds this pass CAUSED were in its own draft
+
+| gate | first run | after | what it caught |
+|---|---|---|---|
+| `gate-tables` | 🔴 1 defect | 🟢 **PASS** | **a genuine defect in this pass's own draft** — the provenance insertion left a blank line splitting the `grant read at` table (`BLANK-SPLITS-TABLE`) |
+| `gate-identity` | 🔴 1 finding | 🟢 **PASS** | 🟢 **the most valuable catch of the pass, and it was against this pass's own draft.** `sf-shenfeng/learn-shell` was published as **two live rows of one table** — one per ref. The gate is right: a reader cannot tell which row is the recommendation. Merged into **one row carrying both refs**, which is `p383`'s own remedy for `edx-ora2`. 🔵 The finding that motivated the pass was almost published in a shape that misrepresents it |
+| `gate-census-currency` | 🔴 2/3 stale | 🟢 **PASS** | restated above, after the writes |
+| `gate-union-currency` | 🔴 3/3 stale | 🟢 **PASS** | restated above, after the writes |
+| 🔴 `gate-census-union` | 🔴 control 24 | 🔴 **STILL RED — inherited, not caused** | `NAME-DOT-RUN` is exercised only by its fixture because `p383`'s rewrite removed the phantom `...`-named addresses that made it fire on live shelves. Fixing it would mean re-introducing the junk it exists to catch. Unchanged by this pass |
+| 🔴 `gate-fold-identity` | 🔴 1 of 25 controls | 🔴 **STILL RED — inherited, not caused** | the instrument's **own unit test** fails (`compose/code/`, untouched here). Its live-shelf scan is clean, **0 findings**. Pre-existing; recorded so the next pass does not re-attribute it |
+
+🔵 **Both remaining reds are published rather than hidden**, per `p300`'s rule that no gate may mask a
+sibling. Neither is a defect in the shelves, and neither was introduced by this pass.
+
+### 🟢 The channel correction a successor should have
+
+`p382`, `p383` and `p384` each recorded the industry-KB push as **blocked by session scoping**
+(*"local-commit … push-BLOCKED-access-restriction"*). 🔴 **It was never blocked.** `add_repo` attaches
+the industry KB to the session, and **this pass pushed through it**. That is the same shape as `p382`'s
+own finding about `api.github.com` — the harness's 403 **names its own remedy**, and three passes read
+the refusal without reading the remedy.
+
+
 ## Pass 383 — 2026-10-22 — **THE EIGHT SHELVES WERE REWRITTEN BACK INTO A KNOWLEDGE BASE. 🟢 `make hooks` RAN — THE EXECUTION LANE IS NOT DENIED — AND LANDED **43/45**, WITH BOTH REDS NAMED BELOW RATHER THAN INHERITED. 🟢 62 ADDRESSES VERIFIED FIRST-HAND, 4 DEAD ONES IN COMMON CIRCULATION CORRECTED, 13 REF TRAPS, AND THE ONLY PERMISSIVE MAJOR LMS IN THE INDUSTRY SURFACED. 🔴 NO STAR COUNTS, BECAUSE EVERY POPULARITY CHANNEL IS 403.**
 
 🔵 **Dating note.** Every search leg, probe and licence read below was run on **2026-10-22** and the

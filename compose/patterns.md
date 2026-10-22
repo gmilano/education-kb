@@ -275,6 +275,44 @@ only) and the **LMS/SIS** (GPL, reached over a published protocol). **Deliverabl
 
 ---
 
+## Pattern M — 🆕 `p385` The agent-native classroom (when the client has **no** LMS to bolt onto)
+
+**Pattern A inverts the usual build: an agent over the client's existing LMS. Pattern M is for the
+engagement where there is no LMS worth integrating** — corporate L&D, a bootcamp, a professional body,
+a ministry pilot — and the deliverable is the learning loop itself, not a Moodle plugin.
+
+**The shape.** The classroom is an **MCP server**; the agent is bring-your-own and replaceable. That
+inversion is what makes it worth a pattern: the client is not buying a model, so a model swap (or a
+provider outage, or a procurement decision two years out) does not invalidate the asset.
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| Classroom / state | [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) | 🔴 AGPL-3.0 (`main`) · 🟢 MIT at `v0.1.0` | ~50 MCP tools over courses, lessons, graded exercises and a persistent learner memory. Read **Pattern L step 10 before you pick a ref** — this decision is the whole procurement question |
+| Retention scheduling | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 MIT | learn-shell schedules flashcards with FSRS already; use the upstream parameters so retention is a published model, not a vendor claim |
+| Course material ingest | [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | 🟢 Apache-2.0 | the client's PDFs, DOCX and slide decks are the corpus |
+| Grounding | [infiniflow/ragflow](https://github.com/infiniflow/ragflow) | 🟢 Apache-2.0 | document-aware retrieval over that corpus |
+| Measurement | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 MIT | the before/after on the client's own subject mix, which `intel/trends.md` Trend 2 makes a procurement precondition |
+| Gateway / audit | [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) | 🟢 MIT | per-user quota and an audit log, which is what gets it past a DPO |
+
+**Wiring.** The agent reaches learn-shell over MCP (JSON-RPC), exactly the boundary Pattern A uses to
+stay clear of Moodle's GPL — so the agent code and the prompt/curriculum assets stay the client's.
+`unstructured` → `ragflow` builds the grounding index; the agent writes lessons, exercises and
+flashcards **into learn-shell** so the evidence of teaching outlives the context window; FSRS decides
+what comes back and when; `lm-evaluation-harness` runs the before/after.
+
+🔴 **Three things to say out loud in the pitch, because they are real:**
+1. **AGPL reaches hosted use.** If you deploy `main` for the client as a service, the AGPL obligations
+   attach to the deployment. The MIT `v0.1.0` tag avoids that and costs you every fix since
+   2026-08-16. There is no third option, and this is the decision, not a detail.
+2. **v1 is single-machine and unauthenticated by the maintainer's own description.** It is a pilot
+   substrate. Multi-tenant auth, isolation and backup are *your* scope — budget them, do not discover them.
+3. **It is one maintainer's project.** Weigh that against what it replaces: the alternative is building
+   course/lesson/exercise/memory state from scratch, which is the part of this pattern nobody costs correctly.
+
+🔵 **When NOT to use this.** If the client already runs Moodle, Canvas or Open edX, **Pattern A is
+strictly better** — the learner records, rostering and gradebook already exist and integration beats
+migration. Pattern M is for a greenfield loop, and its honest competitor is not an LMS but a spreadsheet.
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
@@ -314,7 +352,14 @@ narrative. Run it before any repo enters a client deliverable.
    for the file). `onbirdev/moodle-webservice_mcp` carries the full **GPL-3.0-or-later** header in
    `version.php`, as Moodle requires of every plugin — **granted, with no licence file at all.**
    Probe `package.json`, `pyproject.toml`, `composer.json`, the `README`'s licence section and the
-   main source file's header before rejecting a repository; a file-only read would have wrongly
+   main source file's header before rejecting a repository;
+   🆕 `p385` — **but read what that section *says*, not that it *exists*.** Two failure modes, both on
+   these shelves: [moarshy/mcp-tutor](https://github.com/moarshy/mcp-tutor) has a `## License` heading whose
+   entire body is *"This project is experimental and intended for educational and research purposes"* —
+   which grants **nothing**, while satisfying any check that asks "is there a licence section?";
+   [h9-tect/AI-Roadmaps](https://github.com/h9-tect/AI-Roadmaps) states *"provided under the
+   [MIT License](LICENSE)"* and **that `LICENSE` link 404s**. A prose assertion is weaker evidence than a
+   manifest field, which is weaker than the text itself — grade them separately and never as "MIT"; a file-only read would have wrongly
    rejected three of five, including the plugin Moodle's own directory distributes.
 6. **Only now treat "no licence" as a hard stop — and it is a hard stop.** Two live, functional,
    actively advertised repositories survive every check above with no grant anywhere:
@@ -342,6 +387,19 @@ narrative. Run it before any repo enters a client deliverable.
    in it to licence. A vendor article lists this slug as an Apache-2.0 SIS; the correct record is
    **"nothing read"** — neither granted nor ungranted. Any address census built on resolution alone
    over-counts the supply.
+
+10. 🆕 **Read the grant at the ref you are shipping — the licence is a property of the *ref*, not of the
+    repository.** [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) is **AGPL-3.0** at
+    `main` (`LICENSE`, 34,523 B, stock) and **MIT** at tag **`v0.1.0`** (`LICENSE`, 1,081 B,
+    *"Copyright (c) 2026 Learn Shell contributors"*). Both were read first-hand in `p385`; the project
+    relicensed on **2026-08-16**. 🔵 This base already knew relicensing happens —
+    `snflwr-ai/snflwr.ai` went AGPL-3.0 → proprietary (`p241`), `AIHawk` went MIT for releases after a date.
+    What `p385` adds is the **direction that favours the buyer**: permissive → copyleft, with the permissive
+    grant **still retrievable at a tag**. 🔴 The trap in both directions is a cached audit. "We cleared that
+    repo as MIT last quarter" is a statement about a ref that has moved. Record **slug + ref + licence +
+    date-read**, never slug + licence — and re-read before each release, not once per engagement.
+    🟡 And when you pin a tag to keep a permissive grant, say out loud what it costs: a frozen tree, no
+    upstream fixes, and a maintainer who has signalled they do not want that code used on those terms.
 
 **Channel note, so this is reproducible:** `curl -sI https://github.com/...` returns **403** through
 this sandbox's agent proxy and `api.github.com` returns **403**. `git ls-remote --symref` and

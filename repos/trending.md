@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p385` — **GITHUB TRENDING IS STILL UNREADABLE (403), SO THIS PASS MEASURED A REPOSITORY'S LICENCE AT TWO REFS AND GOT TWO DIFFERENT ANSWERS. 🔴 AND TWO DATES THAT MATTER TO AN ENGAGEMENT WERE SITTING IN `open-gaps.md` INSTEAD OF ON A SHELF.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p385.tsv).
+
+### 🔴 The trending channel, restated because it has not reopened
+
+`github.com` HTML is **403** to `curl`; `api.github.com` is **403** for repositories not attached to
+this session. **There is no GitHub Trending read this pass, and no star count anywhere in it.** The
+aggregator snapshots the prescribed leg returns (Trendshift, GitTrend, LinkedIn roundups) are
+**secondhand, mutually inconsistent and months stale** — `p383`'s judgement that they are not worth
+carrying as data stands.
+
+🟢 **What was measurable instead:** `git ls-remote --symref` and `raw.githubusercontent.com`, which
+together prove the address, its real default ref **and** the grant text — a stronger check than the
+`curl -sI` the brief prescribes, and the only one available here.
+
+### 🟢 One repository entered the foundations story, and it entered it twice
+
+[`sf-shenfeng/learn-shell`](https://github.com/sf-shenfeng/learn-shell) — an **agent-native teaching
+OS** (~50 MCP tools over courses, lessons, FSRS flashcards, graded exercises and a persistent
+learner-memory layer). Absent from every file in this repository before this pass.
+
+| ref | grant | bytes |
+|---|---|---|
+| `main` | 🔴 **AGPL-3.0** | 34,523 (stock) |
+| tag `v0.1.0` | 🟢 **MIT** | 1,081 |
+
+🔴 **Same repository. Two grants. Both read first-hand.** Relicensed **2026-08-16**. The licence
+frontier in [`repos/foundations.md`](foundations.md) now carries a **third axis** because of it: not
+just *platform tier is copyleft / agent tier is permissive*, but **the grant can differ by ref inside
+one repository**. `Pattern L` step 10.
+
+🔵 **Why this is a foundations question and not a curiosity.** This base's licence census, its
+`verified-repos` evidence files and every audit built on them record **slug → licence**. That shape
+cannot represent what was measured here. The record that survives contact with a release is
+**slug + ref + licence + date-read**.
+
+### 🔴 Two dates were in the gaps file and not on any shelf
+
+Both now promoted to [`intel/market.md`](../intel/market.md) and [`intel/trends.md`](../intel/trends.md):
+
+| date | what it is | why it was the wrong thing to bury |
+|---|---|---|
+| **2 Dec 2026** | Art. 50 transitional deadline for **machine-readable marking of AI-generated content on systems already on the market** | 🔴 **Six weeks out.** The EU's widely-reported "deferral to 2027" defers the *high-risk* regime and defers **nothing** for a tutor a client is already running. This is the only EU date inside the current budget year |
+| **2 Aug 2028** | Annex I — AI embedded in regulated products | routinely conflated with the Annex III education date in vendor summaries |
+
+🔵 **The general lesson for this base, worth more than the two dates:** `intel/open-gaps.md` is
+**2.4 MB** and `intel/market.md` is **32 KB**. A fact recorded in the gaps file and not promoted to a
+shelf has been *recorded* but not *delivered* — and the shelf is what an engagement reads. Both dates
+had been correctly measured by earlier passes and were simply never carried across.
+
+### 🟡 Nothing else entered the foundations
+
+The prescribed `open source platform education ERP CRM MIT Apache` leg returned **one vendor's own
+glossary across nine language paths** (OpenEduCat) and no new addresses. The standing structural gap
+is **unchanged and was re-checked**: there is still **no permissive platform that is both an LMS and a
+SIS**. The shape remains permissive courseware ([relate](https://github.com/inducer/relate),
+[tutors](https://github.com/tutors-sdk/tutors)), exactly one permissive major LMS
+([OpenOLAT](https://github.com/OpenOLAT/OpenOLAT)), and copyleft everywhere else.
+
+
 ## 🟢 🆕 2026-10-22 · `p384` — **A PERMISSIVE COURSEWARE PLATFORM AND A CURRICULUM GRAPH ENTER THE FOUNDATIONS; A VENDOR-LISTED "APACHE-2.0 SIS" TURNS OUT TO HAVE NO TREE.**
 
 🔵 **Incremental pass**, deliberately not a rewrite — `p383` rebuilt these shelves earlier today.

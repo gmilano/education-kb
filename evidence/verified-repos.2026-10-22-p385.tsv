@@ -1,0 +1,11 @@
+# p385 — 2026-10-22 — first-hand reads. Channels: `git ls-remote --symref` (address + real default ref)
+# and raw.githubusercontent.com (licence payload, byte length). `curl -sI github.com` = 403,
+# api.github.com = 403 for unattached repos, so no star counts. EUR-Lex / artificialintelligenceact.eu /
+# law-firm hosts = DNS ENOTFOUND, so no primary legal text was read this pass.
+slug	ref	grant_path	licence	bytes	verdict	note
+sf-shenfeng/learn-shell	main	LICENSE	AGPL-3.0	34523	LIVE-GRANTED	stock AGPL-3.0 head "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007"
+sf-shenfeng/learn-shell	v0.1.0	LICENSE	MIT	1081	LIVE-GRANTED	"MIT License / Copyright (c) 2026 Learn Shell contributors" — the permissive grant survives at the TAG only
+pguso/agents-from-scratch	main	LICENSE	MIT	1091	LIVE-GRANTED	CARRIED, not new — already shelved and already classed as courseware-about-agents, not an education agent
+h9-tect/AI-Roadmaps	main	(none at 8 paths)	MIT asserted in README only	-	README-ONLY	README: "These roadmaps are provided under the [MIT License](LICENSE)" — that LICENSE link 404s. Content repo, already known to the base
+moarshy/mcp-tutor	main	(none at 8 paths)	UNGRANTED	-	LIVE-NOGRANT	CONFIRMS the base's existing "sin licencia" record. Its "## License" section grants nothing: "This project is experimental and intended for educational and research purposes." pyproject.toml has no license field
+HKUDS/DeepTutor	main	LICENSE	Apache-2.0	11408	LIVE-GRANTED	control re-read: channel calibration for this pass
