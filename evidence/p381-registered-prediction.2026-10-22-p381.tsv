@@ -1,0 +1,50 @@
+# p381 REGISTERED PREDICTION — committed BEFORE any leg, search or supply probe runs.
+# No leg output exists in the tree at this commit. Convention: p376-A, p377-D, p378, p379,
+# p380 precedent — a prediction carries its own refutation condition and is committed first.
+#
+# CHANNEL STATE AT REGISTRATION (this pass's opening act, Gap 511's standing rule).
+# Gap 532 asked that every channel probe carry a TOOL field. It does, from here on:
+#   tool=make            make                          AVAILABLE (GNU Make 4.3)
+#   tool=git             git ls-remote --symref         OK (HKUDS/DeepTutor -> refs/heads/main)
+#   tool=curl            raw.githubusercontent.com      200
+#   tool=curl            registry.npmjs.org             200
+#   tool=curl            api.github.com                 403
+#   tool=curl            github.com HTML                403   <- SIXTH consecutive sandbox
+#   tool=curl            eur-lex.europa.eu              000   (CONNECT policy-denied)
+#   tool=curl            www.unesco.org                 000   (CONNECT policy-denied)
+#   tool=WebFetch        github.com HTML                200   <- p380's channel REPLICATES here
+#   tool=WebFetch        eur-lex.europa.eu              ENOTFOUND (DNS-dead on the fetch channel)
+#   make hooks = 43/43 GREEN before the first byte was written (re-measured, not inherited)
+#
+# So Gap 532 holds in a SIXTH sandbox and now in BOTH directions: github.com is tool-scoped
+# OPEN (WebFetch) and tool-scoped CLOSED (curl); eur-lex is closed on BOTH tools by two
+# DIFFERENT mechanisms (proxy refusal vs DNS). "Unreachable" is not one state.
+#
+# WHAT THIS PASS IS TESTING, AND WHY IT IS NOT A STAR QUESTION:
+# p380 opened github.com HTML through WebFetch and spent it entirely on STAR COUNTS. The same
+# channel also serves /search and /topics — i.e. it is a SUPPLY channel, not just a metadata
+# one. p379 measured that the dial which selects a leg is ADDRESS YIELD; p380 measured that
+# 0 of its 3 promoted rows came from the four PRESCRIBED global WebSearch legs, which returned
+# one candidate between them and it was already carried, and that 83% of search-channel output
+# is this base's own shelf reflected back (Gap 533). If the forge's own search answers, it is a
+# different population from the commentary index the prescribed legs reach.
+#
+# PRE-REGISTERED DEFECTS IN THIS PASS'S OWN PREDICTION (p378 set this precedent; kept):
+#   E-LIMB-2 contrasts two channels with n=1 leg each, on one day, over queries that are not
+#   word-for-word equivalent. A single leg's address count is not a rate, and an advantage
+#   measured once is not a dial. E-LIMB-3's 17% baseline comes from p380's 18-candidate queue,
+#   which was assembled by a different channel: that is a comparison across POPULATIONS, not a
+#   controlled contrast. Both are stated now, not after the result.
+#   G-LIMB-1 is a two-point reading of a single repository's counter with no third channel to
+#   adjudicate. It can distinguish "p380 misread" from "not a transient"; it CANNOT distinguish
+#   growth from a persistent cross-channel disagreement. Recorded before the probe.
+#
+action	limb	claim	refutation_condition	status_at_registration
+p380-ranked-1	A-LIMB-1	The three EGRESS gates (hooks-online: gate-identity-online, gate-online, gate-mit-tier) RUN in this sandbox, the first since p378	REFUTED if any of the three cannot run for want of a channel	OPEN
+p380-ranked-1	A-LIMB-2	gate-identity-online fires RED again on unshelved HEAD collisions, as it did at p378 on five	REFUTED if it reports zero collisions	OPEN
+p381-E	E-LIMB-1	github.com/search?type=repositories answers 200 through WebFetch and returns >= 10 distinct repository addresses for one education query	REFUTED if the address returns 403/404 on WebFetch, or yields < 10 distinct addresses	OPEN
+p381-E	E-LIMB-2	One HTML-search leg returns MORE addresses that carried_index.carried() grades NEW than the four PRESCRIBED global WebSearch legs return between them	REFUTED if the prescribed legs equal or beat the HTML-search leg on NEW addresses	OPEN
+p381-E	E-LIMB-3	The HTML-search channel's NEW rate exceeds p380's measured 17 percent (3 NEW of 18 candidates)	REFUTED if the HTML-search leg's NEW/total is <= 17 percent	OPEN
+p381-E	E-LIMB-4	github.com/topics/<education-topic> answers 200 through WebFetch and is a usable enumeration surface	REFUTED if no topic page answers 200 through WebFetch	OPEN
+p381-G	G-LIMB-1	Gap 530: bncc-dev/bncc-dados reads >= 22 stars on the HTML channel today, i.e. p380's 22 was not a misread	REFUTED if it reads < 22	OPEN
+p381-H	H-LIMB-1	At least one row promoted this pass carries a payload-read permissive grant whose MIT text folds to p378's 584db484c03a8904 constant, extending p380's out-of-sample replication	REFUTED if no MIT payload read this pass folds to that constant	OPEN
