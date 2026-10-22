@@ -313,6 +313,60 @@ what comes back and when; `lm-evaluation-harness` runs the before/after.
 strictly better** — the learner records, rostering and gradebook already exist and integration beats
 migration. Pattern M is for a greenfield loop, and its honest competitor is not an LMS but a spreadsheet.
 
+## Pattern N — 🆕 `p386` Harden a student-side LMS MCP server into one an institution can deploy
+
+**When to use it.** The client runs **Blackboard, D2L/Brightspace, Canvas or Moodle** and wants an
+agent over it. As of `p386` there is a granted community MCP server for **every** one of those
+platforms (see [`agents/top.md`](../agents/top.md#the-blackboard-and-d2l-supply-measured)) — so this
+is never a greenfield build. 🔴 But **11 of the 12 granted Blackboard/D2L servers authenticate as the
+signed-in student**: they ride the user's own browser SSO session, hold whatever rights that user
+holds, and have no audit trail. **Licence-clean and still undeliverable.** This pattern is the gap
+between the two.
+
+**The parts.**
+
+| role | pick | licence | why this one |
+|---|---|---|---|
+| Blackboard, institution-grade start | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | 🟢 MIT | The only server on these shelves that targets the **official Blackboard Learn REST API** and claims OAuth2, a role gate, FERPA handling, rate limiting, PII scrub and a JSON audit log. 🟡 Self-claims — **verify by execution before you quote them** |
+| D2L start | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | 🟢 MIT | Multi-strategy auth (TOTP/OAuth/browser), retry + circuit-breaker + cache, **opt-in** writes. The nearest thing to a hardening base on D2L |
+| Canvas start | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | 🟢 MIT | The clean default; [mdweaver](https://github.com/mdweaver/canvas-mcp) fork adds office hours and syllabus write |
+| Moodle start | [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | 🟡 GPL-3.0-or-later, header-granted | First-party route: it is in **Moodle's own plugin directory**, and the agent reaches it over JSON-RPC so GPL never reaches the agent — **Pattern A**'s boundary |
+| Identity / gateway | [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) | 🟢 MIT | SSO, per-user quota and the audit log that gets a deployment past a DPO |
+| Jurisdiction gate | [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv) | — | A granted licence does not make **grade write-back** lawful where you are deploying it |
+
+**The work, in order — this is the whole deliverable.**
+
+1. **Replace the session with a service identity.** Swap browser-session auth for the platform's
+   own OAuth2 / API-key flow against a **service account scoped to the courses in scope**. If the
+   chosen server cannot do this (most cannot), this step is a fork, and it is the reason the
+   engagement exists.
+2. **Scope by role, server-side.** Student / instructor / admin tool sets, enforced in the server,
+   never in the prompt. A model that *can* call `update_grade` and is *asked not to* is not a
+   control.
+3. **Split read from write, and default write off.** Ship read-only first; put every mutation behind
+   an explicit per-deployment flag. `JhostinAleck/brightspace-mcp`'s opt-in-writes design is the
+   shape to copy.
+4. **Gate grade write-back on the jurisdiction, before any code.** Several jurisdictions in the
+   policy matrix gate or prohibit automated grading outright — Oklahoma and Maryland bar AI from
+   high-stakes student decisions, the EU AI Act puts assessment in Annex III high-risk, Vietnam
+   names automated assessment explicitly, and Illinois SB 2909 reaches *teacher* evaluation. 🔴 This
+   gate decides the product's tool list, so run it in week one, not at security review.
+5. **Add an audit trail that answers a DPO's actual question**: who (service identity + end user),
+   which tool, which course, which record, when, and what the platform returned. Structured JSON to
+   the client's existing log sink.
+6. **Pin the contract, not the login page.** Pin the vendor API version and put contract tests
+   around the tools you use; a student-side server breaks silently when the vendor restyles SSO.
+7. **Carry the attribution the payload actually requires** — per **Pattern L step 11**. If you
+   started from a fork-family server, the NOTICE file may owe **two** credits.
+8. **Prove it before handover.** Execute the maintainer's claims rather than quoting them: run the
+   role gate against an under-privileged token, confirm the audit record exists for every mutation,
+   and confirm the PII scrub on a real transcript.
+
+🟢 **Why this sells.** It is small, bounded, and the client can show the output to their
+data-protection officer — and it is available on every major LMS today, because the licences are
+already clear. 🔴 **Say the honest part too:** on D2L all six granted servers are student-side, so
+step 1 there is a genuine build and should be costed as one, not as a configuration.
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
@@ -400,6 +454,34 @@ narrative. Run it before any repo enters a client deliverable.
     date-read**, never slug + licence — and re-read before each release, not once per engagement.
     🟡 And when you pin a tag to keep a permissive grant, say out loud what it costs: a frozen tree, no
     upstream fixes, and a maintainer who has signalled they do not want that code used on those terms.
+
+11. 🆕 `p386` **Classify a byte-length anomaly before you judge it — "longer than stock" has two
+    opposite meanings.** Step 4 says a non-stock length means the text was edited. True, and `p386`
+    found the benign half of that read, which a length check alone cannot distinguish from the
+    hostile one:
+
+    | repo | bytes | the excess is | what you do |
+    |---|---|---|---|
+    | [open-webui/open-webui](https://github.com/open-webui/open-webui) | 2,819 (BSD-3 ≈1,500) | 🔴 **added restriction** — branding clause + CLA | walk away, or get written permission |
+    | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | 1,200 (MIT ≈1,065) | 🟢 **added attribution** — inline notice, *"Portions … derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License"* | ship it, carry the extra notice |
+    | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | 2,181 | 🟢 **two complete MIT grants concatenated** — its own plus `d2l-cli`, © 2026 Aaryan Kapoor | ship it, carry **both** notices |
+    | [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 11,906 (Apache-2.0 ≈11,358) | 🟢 **ASF's appended notice text** | ship it, keep `NOTICE` |
+
+    🔵 **So the test is not "is the length stock?" but "does the delta add a condition or a
+    credit?"** Added conditions are procurement stops. Added credits are NOTICE-file entries — and
+    they are *obligations you inherit silently*: ship `D2L-MCP` and you owe attribution to a project
+    you never chose, which no SBOM built from a licence **identifier** will tell you.
+    🟡 Record the delta's content, not just the byte count.
+
+12. 🆕 `p386` **Count grants, not addresses — and never let a count of zero reads print as
+    "ungranted".** For four passes [`agents/top.md`](../agents/top.md) said *"Blackboard has nine
+    servers and not one verified grant; D2L has six and the only one checked is ungranted"*, and
+    concluded both platforms needed a permissive server built. `p386` probed all fifteen: **6 MIT on
+    Blackboard, 6 MIT on D2L**. 🔴 The grants existed; the reads did not. A harvest column headed
+    *"distinct slugs"* answers **how many addresses exist**; `LIVE-GRANTED` / `LIVE-NOGRANT` answers
+    **how many were read**. When the second number is zero the honest word is **unread**, and the
+    cost of the wrong word here was a false build recommendation on two platforms.
+    🔵 Before any shelf states a supply gap, state which census it is quoting.
 
 **Channel note, so this is reproducible:** `curl -sI https://github.com/...` returns **403** through
 this sandbox's agent proxy and `api.github.com` returns **403**. `git ls-remote --symref` and

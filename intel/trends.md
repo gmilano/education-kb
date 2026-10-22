@@ -14,6 +14,47 @@ updated: 2026-10-22
 > education. They are preserved in the archive and in
 > [`agents/trending.md`](../agents/trending.md); this shelf is now about the industry.
 
+
+## 🆕 `p386` — The LMS-integration gap is not a licence gap any more. It is a **tenancy** gap.
+
+For four passes this base recorded Blackboard and D2L as the two platforms where
+*"a permissively-licensed MCP server would be a genuine contribution."* `p386` probed all fifteen
+addresses first-hand: **6 MIT grants on Blackboard, 6 on D2L, 1 ungranted, 2 dead.** The licences
+were there the whole time; nobody had read them.
+
+🔵 **What replaced the gap is a sharper and more useful trend.** Eleven of the twelve granted
+servers authenticate **as the signed-in student** — the learner's own browser SSO/MFA session or
+session cookies, no admin API key, read-only because nothing else is possible from that position.
+They are built by students, for themselves, at their own university, and several hard-code it.
+
+That makes the 2026 community LMS-MCP supply a **personal-tooling** supply, and it does not become
+an institutional one by being licensed well:
+
+| what an institution needs | what a session-scraping server has |
+|---|---|
+| tenant identity, per-role scope | the rights of whoever signed in |
+| an audit trail of every agent action | nothing, or stdout |
+| a stable contract against the vendor's API | a login page that changes without notice |
+| a data-protection answer for a DPO | the student's session cookie in a config file |
+
+🟢 **Exactly one address read as institution-grade** — [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp)
+(MIT): official REST API, OAuth2, role gate, FERPA handling, PII scrub, JSON audit log, Prometheus
+metrics, grade write-back (maintainer self-claims, read not executed). **One in twelve.**
+
+🔵 **The consequence for a studio, and it is a sellable one.** The scarce artefact in LMS
+integration is no longer a permissive server — it is a **hardened** one. The work is: take a granted
+community server, put tenant auth, role scoping, rate limiting and an audit trail around it, and
+pin it to the vendor's documented API rather than its login page. That is a small, well-bounded
+engagement with a deliverable the client can show their data-protection officer, and it is
+available on **every** major LMS as of this pass. 🔴 On D2L it is still partly greenfield: all six
+granted Brightspace servers are student-side.
+
+🔴 **And the methodological trend underneath it, because it will recur in every industry in this
+rotation:** a census that counts **addresses** and a census that counts **grants** are different
+measurements, and the first one silently masquerades as the second. *"Nine servers and not one
+verified grant"* described this base's own reading, not the world — the honest word for a count of
+zero reads is **unread**, never **ungranted**.
+
 ## Trend 1 — Adoption is finished. Governance is the market.
 
 **88–95% of students and faculty already use AI; 26–54% can name a governing policy.**

@@ -10,6 +10,9 @@ updated: 2026-10-22
 [`archive/2026-10-22-p383-pre-rewrite/verticals-solutions.md`](../archive/2026-10-22-p383-pre-rewrite/verticals-solutions.md).
 All addresses and licences verified first-hand on this date —
 [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.tsv).
+🆕 **`p386` adds the permissive-base row this shelf has been missing**, and corrects the MCP section
+below: Blackboard and D2L both have verified MIT servers now.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv).
 
 This shelf answers one question: **what existing system does the client already run (or could run),
 and what can be bolted onto it?** Same role Odoo plays for ERP or OpenMRS for healthcare.
@@ -66,6 +69,40 @@ re-ran the search and the downgrade stands — in fact it goes further:**
 | **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 `master` | 🟡 GPL-2.0 — 🔴 grant at **`docs/License.txt`**, not at any root path | 🆕 `p384`. The K-12 default: enrolment, attendance, grades, scheduling, parent/student portals. GPL-2.0 is survivable the Moodle way — reach it over its API, never link. 🔵 A root-only licence read reports this repo as ungranted; it is not. |
 | **Frappe LMS** | [frappe/lms](https://github.com/frappe/lms) | 🔴 `develop` | 🔴 AGPL-3.0 (`license.txt`) | Only where the client already runs ERPNext — then the student record and the finance record are one system. |
 
+### 🆕 `p386` — the permissive ERP **base**, since the permissive education ERP does not exist
+
+Every row in the table above is copyleft except `academico` (MIT, SME-scale). The prescribed ERP/CRM
+research leg was run directly at that gap. **It does not close it** — no education-specific
+permissive ERP was found, which *confirms* the structural claim on
+[`repos/foundations.md`](../repos/foundations.md) — but it returns three permissive bases, all three
+licence payloads read first-hand this pass:
+
+| base | real default ref | licence | what you get, and what you build |
+|---|---|---|---|
+| [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | 🔴 **`master`** | 🟢 **MIT** *(1,077 B, "Copyright 2010-2025, Webkul Software"; `composer.json` also declares `"license": "MIT"`)* | Laravel 13 + FilamentPHP 5 modular ERP **with a plugin system**: accounting, inventory, HR, CRM, projects, and a Filament admin panel a client's staff can actually use. 🔴 **No education module** — admissions, curriculum, fees, attendance and transcripts are **your build**. |
+| [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | 🔴 **`2.2`** *(version branch; no `main`)* | 🟢 **MIT** *(1,078 B, same Webkul holder)* | The **admissions funnel** as a CRM: lead → applicant → enrolment, with the pipeline, activity log and email already built. The piece an SIS always lacks and a school always asks for. |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🔴 **`trunk`** | 🟢 **Apache-2.0** *(11,906 B; `NOTICE` 166 B, "Copyright 2001-2026 The Apache Software Foundation")* | The ASF alternative: accounting, CRM, manufacturing, order management. 🔴 Developer-facing and heavy — pick it for ASF governance and longevity, not for time-to-first-demo. |
+
+🔵 **What this changes in a pitch.** [OpenEduCat](https://github.com/openeducat/openeducat_erp)'s
+**LGPL-3.0** used to be the only road to an open-source education ERP, so it was not a decision. It
+is now a **trade against a named alternative**:
+
+- **Take OpenEduCat (LGPL-3.0)** → admissions, curriculum, fees, library and hostel exist today, on
+  the Odoo ecosystem, and AI features can be ordinary Odoo addons. You accept LGPL on the modules
+  and the Odoo version-branch cadence (`19.0`).
+- **Take Aureus (MIT) + Krayin (MIT)** → the client owns every line, including the education
+  modules you write. You are costing **admissions, curriculum, fees, attendance and transcripts as
+  a build**, on a base whose plugin system is designed for exactly that.
+
+🔴 **Do not sell the second option as "an open-source education ERP."** It is a permissive ERP plus
+a scoped education build, and the honest version of that sentence is the one that survives the
+client's own technical review.
+
+🟡 **Still not found, and still the clearest build-vs-buy opening in the rotation:** no open-source
+Brazilian or Mexican academic-management system. Aureus + Krayin is now the most *defensible*
+starting point for one — Laravel, MIT, and `academico` (MIT, Spanish-native) already proves that
+stack fits the region's SME school market.
+
 ## Content, assessment and media layers
 
 | layer | platform | licence | note |
@@ -76,6 +113,7 @@ re-ran the search and the downgrade stands — in fact it goes further:**
 | Lecture capture | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 ECL-2.0 | Video pipeline → the transcript corpus every education RAG build needs. |
 | Live classroom | [netless-io/flat](https://github.com/netless-io/flat) | 🟢 MIT | Whiteboard, recording, real-time session. |
 | Interop boundary | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 Apache-2.0 | **The copyleft firewall.** Standards-body reference implementation. |
+| Local-first tutoring workspace | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | 🆕 `p386`. Self-hosted, block-based adaptive workspace: PDF in → notes, flashcards, quizzes and an adapting tutor out, with **FSRS** scheduling, a knowledge graph and cognitive-load detection. Runs on local open-weight models — **no API key, no data leaving the host**, which is the answer to a DPO who will not approve an external model call at all. |
 | Campus LLM gateway | [LibreChat](https://github.com/danny-avila/LibreChat) | 🟢 MIT | Multi-provider, SSO, quota, audit log. The audit log is what gets a deployment past a university's data-protection officer. |
 | Courseware platform | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT** | 🆕 `p384`. Django courseware with autograding, flexible access rules and per-student statistics. Course-scale and permissive — the base when the client must own the platform code but does not need an institutional LMS. |
 | **Agent-native teaching OS** | [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) | 🔴 **AGPL-3.0** (`main`) · 🟢 MIT at tag `v0.1.0` | 🆕 `p385`. The **inverse** of every other row here: instead of bolting an agent onto an LMS, the classroom itself is an MCP server (~50 tools) and the agent is bring-your-own. Courses, lessons, FSRS flashcards, graded exercises, and a persistent learner-memory layer (`get_context` / `get_learner_brief`) that survives a change of model or session. 🔴 **v1 is single-machine and unauthenticated** — a pilot substrate, not a tenant-ready platform. AGPL reaches hosted use, so a client deployment must either accept that or pin the MIT `v0.1.0` tag and forgo upstream. |
@@ -97,7 +135,28 @@ This did not exist a year ago and it changes the integration story:
   tools and Streamable HTTP; it has **no licence file**, but `package.json` declares
   `"license": "MIT"` — 🟡 **manifest-only MIT**, usable if you record the manifest line and ask for
   the file.
-- **No official server** from Instructure or Moodle HQ beyond the community plugin. Verified gap.
+- 🆕 `p386` **Blackboard, community path — and it is no longer empty.** Nine addresses probed,
+  **6 MIT grants read first-hand**, 1 ungranted, 2 dead. 🟢 **[nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp)
+  (MIT) is the only institution-grade LMS MCP server on any of these shelves**: official Blackboard
+  Learn REST API, OAuth2, role gate, FERPA handling, rate limiting, PII scrub, JSON audit log,
+  Prometheus `/metrics`, 40 tools including **grade write-back** (maintainer self-claims, read not
+  executed). The other five —
+  [Mattlo0546](https://github.com/Mattlo0546/blackboard-mcp),
+  [alanwtom](https://github.com/alanwtom/blackboard-mcp),
+  [lukecarroll15](https://github.com/lukecarroll15/blackboard-mcp) (ref **`tcd`**),
+  [felipedias-ie](https://github.com/felipedias-ie/blackboard-mcp),
+  [Loganxgreaves](https://github.com/Loganxgreaves/blackboard-mcp) (ref **`master`**) — are
+  **student-side**: they ride the signed-in user's own browser SSO session. 🔴 Granted, useful, and
+  **not deliverable to an institution**.
+- 🆕 `p386` **Brightspace / D2L — six addresses, six MIT grants.**
+  [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) is the fullest
+  (TOTP/OAuth/browser auth strategies, retry + circuit-breaker + cache, **opt-in writes**);
+  [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) is the
+  upstream of a fork family whose copies publish **byte-identical** licence payloads, so count it
+  once. 🔵 **All six are student-side** — an institution-grade D2L server is the one genuine
+  greenfield contribution left on this platform.
+- **No official server** from Instructure, Moodle HQ, Anthology/Blackboard or D2L. 🟡 Verified gap —
+  every server named on this shelf is community-built.
 - 🔴 [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) is **UNGRANTED** — no licence file
   *and* no `license` field in its `pyproject.toml`. Use the plugin-directory route for Moodle:
   [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) has no root

@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 386 — 2026-10-22 — **THE TWO PLATFORMS THIS BASE CALLED EMPTY HAVE TWELVE MIT GRANTS BETWEEN THEM. 🔴 FOR FOUR PASSES A SLUG COUNT WAS QUOTED AS A GRANT COUNT, AND IT PRODUCED A FALSE BUILD RECOMMENDATION. 🟢 ONE NEW PERMISSIVE TUTOR, THREE PERMISSIVE ERP BASES, AND THREE OFF-SHELF POLICY FACTS PROMOTED — ONE OF THEM NEW TO THIS REPOSITORY.**
+
+🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes, 19 live-granted, 2 ungranted, 2 dead.
+
+### 🔴 The correction, first, because it changes a recommendation
+
+[`agents/top.md`](agents/top.md) told four passes of readers that **"Blackboard has nine servers and
+not one verified grant; D2L has six and the only one checked is ungranted"** — and concluded that
+both were places where *"a permissively-licensed server would be a genuine contribution."* This pass
+probed all fifteen addresses first-hand:
+
+| platform | probed | 🟢 MIT, payload read | 🔴 ungranted | 🔴 dead |
+|---|---|---|---|---|
+| Blackboard | 9 | **6** | 1 | 2 |
+| Brightspace / D2L | 6 | **6** | 0 | 0 |
+
+🔴 **Neither was a supply gap. Both were a reading gap.** The census column counted *addresses*; the
+sentence reported it as if it counted *grants*. When a count of reads is zero, the honest word is
+**unread** — never **ungranted**. That is now `Pattern L` **step 12**.
+
+### 🟢 The gap moved, and the new one is the useful one
+
+**Eleven of the twelve granted servers authenticate as the signed-in student** — the user's own
+browser SSO session, no admin API key, read-only because nothing else is reachable from there. They
+are personal tools, and a studio cannot hand one to an institution: no tenant identity, no role
+boundary, no audit trail, and it breaks when the vendor restyles a login page.
+
+🟢 **Exactly one reads as institution-grade:** [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp)
+(MIT, 1,063 B) — official Blackboard Learn REST API, OAuth2, role gate, FERPA handling, PII scrub,
+JSON audit log, Prometheus metrics, 40 tools including **grade write-back**. 🟡 Maintainer
+self-claims, **read and not executed** (`Gap 386-B`). 🔴 And grade write-back is exactly what
+[`intel/policy-matrix.tsv`](intel/policy-matrix.tsv) gates by jurisdiction.
+
+🔵 So the restated advice: on these platforms the work is **selection plus hardening**, not building
+— written up as 🆕 **Pattern N** in [`compose/patterns.md`](compose/patterns.md), eight concrete
+steps from service identity to executing the claims before handover. On D2L step 1 is still a real
+build: all six granted servers are student-side.
+
+### 🟢 One new agent address: `zijinz456/OpenTutor` (MIT, verified)
+
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — **MIT**, `main/LICENSE`, **1,068 B**,
+© 2026 Zijin Zhang. A **block-based adaptive workspace that runs entirely on the client's own
+machine**: PDF in → structured notes, flashcards, quizzes and an adapting tutor out, with **FSRS**
+scheduling, a knowledge graph and cognitive-load detection as shipped features. No API key, **no data
+leaving the host** — the strongest form of the data-residency argument, and the first *permissive*
+occupant of that slot. **APAC — China.** 🟡 One maintainer.
+
+### 🟢 Three permissive ERP/CRM bases — a declared gap tested, and partly answered
+
+The prescribed ERP/CRM leg found **no permissive education platform**, which **confirms** this
+base's structural claim rather than failing to look. It did return three permissive *bases*, all
+payloads read first-hand: [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) (**MIT**,
+ref 🔴 `master`, Laravel 13 + FilamentPHP 5 **with a plugin system**),
+[krayin/laravel-crm](https://github.com/krayin/laravel-crm) (**MIT**, ref 🔴 `2.2`) and
+[apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) (**Apache-2.0**, ref 🔴 `trunk`).
+🔵 **None ships an education module**, so OpenEduCat's LGPL-3.0 becomes a *choice against a named
+alternative* — buy the modules and take LGPL, or take MIT and build them — instead of the only road.
+🔴 Do not sell the second as "an open-source education ERP"; it is a permissive ERP plus a scoped
+build. See [`verticals/solutions.md`](verticals/solutions.md).
+
+### 🟢 A licence-reading refinement: "longer than stock" has two opposite meanings
+
+This base's rule (earned on `open-webui`: BSD-3 + branding clause + CLA at 2,819 B) is that a
+non-stock byte length means **read the text**. Correct — and this pass found the benign half:
+`AnonymousOnyx22/brightspace-d2l-mcp` at **1,200 B** is MIT **plus an inline derivation notice**, and
+`RobertLMcCrary/D2L-MCP` at **2,181 B** is **two complete MIT grants concatenated** (its own plus
+`d2l-cli`, © Aaryan Kapoor). 🔵 **The test is not "is the length stock?" but "does the delta add a
+condition or a credit?"** — added conditions stop procurement, added credits are obligations you
+inherit silently and no identifier-based SBOM will show you. `Pattern L` **step 11**.
+🔵 The same read is a cheap **fork-family fingerprint**: three Brightspace slugs return a
+byte-identical payload still holding `© 2026 Rohan Muppa`, so a slug census over-counts the supply.
+
+### 🟢 Three policy facts promoted to a shelf, one of them new to this repository
+
+| fact | was | now on |
+|---|---|---|
+| **AILit framework** — *"Empowering Learners for the Age of AI"*, OECD + European Commission, **final 18 Jun 2026**: 4 domains (*Engage / Create / Manage / Shape*), **19 competences**, 3 levels, non-binding | 🔴 **absent from this entire repository** | `intel/market.md` → EMEA. 🟢 **Art. 4 is binding since 2 Feb 2025 and says only "sufficient AI literacy"; AILit is the detailed, optional thing a ministry or procurement panel will reach for to define it.** New EMEA opportunity 6 is built on exactly that pairing |
+| **Korea AI Basic Act**, effective **Jan 2026** | only `intel/policy-matrix.tsv` | `intel/market.md` → APAC |
+| **H.R. 8747**, K–12 AI Literacy and Readiness Act of 2026 — Rep. Randy Fine (R-FL), introduced 12 May 2026, **ordered reported (amended) 21 Jul 2026, 18–15**; amends ESEA so federal funds may cover AI curriculum and teacher training; **not law** | 🔴 nowhere | `intel/market.md` → North America |
+
+### 🔴 Corrections and nulls, stated so silence is not read as coverage
+
+- [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) — 🔴 **UNGRANTED** (nothing at 9
+  probe paths, no manifest licence field), and still returned by the global leg as "an open-source
+  AI tutor". **The most-cited tutor on the open web and the most-cited granted tutor are not the
+  same repository.**
+- [`e9x/blackboard-mcp`](https://github.com/e9x/blackboard-mcp) and
+  [`parkseokjune/unist-blackboard-mcp`](https://github.com/parkseokjune/unist-blackboard-mcp) —
+  🔴 **do not resolve**, though search results list both as live MIT servers and the second as *"the
+  first open-source Blackboard MCP"*. A roundup's **existence** claim fails the same way its licence
+  claim does, and only the latter has ever been checked by habit.
+- **LATAM: fourth consecutive null on a region-native agent address.** The targeted Spanish-language
+  leg returned one ungranted repo that teaches Spanish *to non-speakers*. Structural, not a search
+  artefact — and recorded on the market shelf, not only in the gaps file.
+- **Channel state:** `github.com` HTML + `api.github.com` → **403** (no star counts; a search
+  result's "41.2k stars" for DeepTutor is **not** published here), `github.com/trending` unreadable
+  for a fifth pass, and `www.oecd.org` / `www.congress.gov` / `eur-lex.europa.eu` → DNS
+  **`ENOTFOUND`**, so every policy fact above is graded **`CONVERGENT-SECONDARY, PRIMARY UNREAD`**.
+  `git ls-remote --symref` + `raw.githubusercontent.com` are live and are the whole basis of the 22
+  first-hand probes.
+- 🔵 **Four more non-`main` default refs** found in 22 probes — **`tcd`**, **`master`**, **`2.2`**,
+  **`trunk`**. A `main`-assuming licence read would have reported **5 of this pass's 19 granted
+  repositories as ungranted**.
+
+---
+
 ## Pass 385 — 2026-10-22 — **ONE NEW ADDRESS, AND IT CARRIES TWO LICENCES AT TWO REFS. 🔴 THE FOUR PRESCRIBED GLOBAL LEGS RETURNED `0` NEW FOR THE FOURTH PASS RUNNING, AND THE PRESCRIBED EMEA LEG RETURNED NO EDUCATION CONTENT AT ALL. 🟢 AND THE PUSH THAT THREE PASSES RECORDED AS BLOCKED WAS NEVER BLOCKED.**
 
 🔵 **Dating note.** Every leg, probe and licence read below was run on **2026-10-22**.

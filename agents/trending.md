@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p386` — **THE TWO PLATFORMS THIS BASE RECORDED AS HAVING NO VERIFIED GRANT HAVE TWELVE OF THEM. 🔴 BOTH "GAPS" WERE UNREAD GRANTS, NOT ABSENT ONES — AND THE REAL GAP, NOW MEASURED, IS A DIFFERENT GAP. 🟢 ONE NEW PERMISSIVE TUTOR ADDRESS.**
+
+🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes, 19 live-granted, 2 ungranted, 2 dead.
+
+### 🔴 The correction, stated first because it changes a recommendation
+
+[`agents/top.md`](top.md) has told four passes of readers that **"Blackboard has nine servers and not
+one verified grant; D2L has six and the only one checked is ungranted"**, and concluded both were
+places where *"a permissively-licensed server would be a genuine contribution."* This pass probed
+**all fifteen** addresses first-hand:
+
+| platform | probed | 🟢 MIT, payload read | 🔴 ungranted | 🔴 dead |
+|---|---|---|---|---|
+| Blackboard | 9 | **6** | 1 | 2 |
+| Brightspace / D2L | 6 | **6** | 0 | 0 |
+
+🔴 **Neither was a supply gap. Both were a reading gap** — the census counted addresses and the
+shelf reported the count as if it were a grant census. 🔵 **The general lesson, and it is this
+base's own apparatus turned on itself:** a column that says *"distinct slugs harvested"* answers
+*how many addresses exist*. A sentence that says *"not one verified grant"* answers *how many were
+read*. When the second number is zero, the honest statement is **"unread"**, never **"ungranted"** —
+and this base has a `LIVE-NOGRANT` verdict precisely so the two cannot be confused. It was confused
+in prose anyway.
+
+### 🟢 What the twelve granted servers actually are — the gap that is real
+
+Eleven of twelve authenticate **as the signed-in student**: the user's own browser SSO/MFA session or
+session cookies, no admin API key, read-only by design and by necessity. 🔴 **A studio cannot deliver
+one of those to an institution.** No tenant identity, no role boundary, no audit trail, and it breaks
+when the vendor changes a login page.
+
+🟢 **One reads as institution-grade: [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp)** (MIT,
+1,063 B) — the **official Blackboard Learn REST API**, with OAuth2, a role gate, FERPA handling, rate
+limiting, PII scrub, a structured JSON audit log, Prometheus `/metrics` and 40 tools including **grade
+write-back** and webhook subscriptions. 🟡 **Maintainer self-claims, read and not executed this pass.**
+🔴 And grade write-back is the exact surface [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv)
+gates or prohibits by jurisdiction — clearing the licence clears the *first* gate, not the last.
+
+🔵 **So the restated recommendation:** on Blackboard the work is **selection plus hardening**, not
+building. The genuine remaining contribution is **an institution-grade D2L server** — all six granted
+Brightspace servers are student-side, and [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp)
+(TOTP/OAuth/browser strategies, opt-in writes) is the nearest base for one.
+
+### 🟢 The one new agent address: `zijinz456/OpenTutor`
+
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — 🟢 **MIT**, `main/LICENSE`, **1,068 B**,
+*"Copyright (c) 2026 Zijin Zhang"*, read first-hand. Absent from all eight shelves before this pass.
+
+A **block-based adaptive workspace that runs locally**: drop in a PDF, get structured notes,
+flashcards, quizzes and a tutor that reshapes the workspace as the learner works. **FSRS** spaced
+repetition, a knowledge graph and cognitive-load detection are shipped features, not roadmap.
+Next.js 16 + Python 3.11, Docker, **runs on local open-weight models — no API key, no data leaving the
+host**. Bilingual EN / zh-CN. **APAC — China.**
+
+🟢 **Why it earns a Tier 1 row:** the data-residency slot on this shelf had exactly one permissive
+occupant ([Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai-CE), BSD-3) and it was
+*not verified* at `p383`. OpenTutor is MIT, verified, and pairs natively with
+[`fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) already on the foundations shelf.
+🟡 One maintainer.
+
+### 🔴 Two addresses that circulate as open-source tutors and grant nothing
+
+| repo | verdict | why it matters |
+|---|---|---|
+| [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | 🔴 **UNGRANTED** — nothing at 9 probe paths, no manifest licence field | It is still returned by the prescribed global search leg and described as "an AI personal tutor, open source". **The most-cited tutor on the open web and the most-cited *granted* tutor are not the same repository.** |
+| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | 🔴 **UNGRANTED** | Returned by the **LATAM** leg — and a category error on top: it teaches **Spanish to non-speakers** inside an agent CLI. That is not a Spanish-language tutor for Spanish-speaking learners, which is what the LATAM gap is about. |
+
+### 🔴 Two addresses a search result called live MIT servers, which do not resolve
+
+[`e9x/blackboard-mcp`](https://github.com/e9x/blackboard-mcp) and
+[`parkseokjune/unist-blackboard-mcp`](https://github.com/parkseokjune/unist-blackboard-mcp) — `git
+ls-remote` returns nothing for either. The second was described by a search result as **"the first
+open-source Blackboard MCP"**. 🔵 A roundup's licence claim and a roundup's *existence* claim fail
+the same way, and only the first one has ever been checked by habit.
+
+### 🔵 Research legs run this pass, with their nulls stated
+
+| leg | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` (global) | **0 new education agents.** Returned general agent roundups (OpenClaw, opencode, OpenHands, CrewAI, LangGraph) and courseware already shelved. Yielded one *correction*: `Nutlope/llamatutor` ungranted. |
+| `github trending education AI 2026` (global) | **0 new.** `github.com/trending` itself is still **403** from this sandbox — unreadable for the *fifth* consecutive pass. The one education repo named, `withmarbleapp/os-taxonomy`, was shelved at `p384`. |
+| `open source platform education ERP CRM MIT Apache 2026` (global) | **0 new education platforms**, and it **confirms** this base's structural claim: no permissive education ERP exists. It did yield three verified permissive *general* bases — see [`verticals/solutions.md`](../verticals/solutions.md). |
+| `AI education industry trends 2026` (global) | **0 new repos.** Direction consistent with [`intel/trends.md`](../intel/trends.md): pilots → governed infrastructure, education-specific tools over generic chatbots, evidence-of-learning demands, digital credentials. |
+| **North America** | H.R. 8747 and one district-level ban were **off-shelf** — promoted to [`intel/market.md`](../intel/market.md) this pass. |
+| **EMEA** | 🟢 **One finding absent from this entire repository**: the OECD/European Commission **AILit framework**, final publication **18 Jun 2026**. Promoted. |
+| **APAC** | Korea's **AI Basic Act** was in [`policy-matrix.tsv`](../intel/policy-matrix.tsv) but on **no shelf**. Promoted. |
+| **LATAM** | **0 new.** UNESCO IESALC/UNU-IAS (87% / 26%) and the LAC Observatory are already on the market shelf. 🔴 **No LATAM-native education agent address was found for the fourth consecutive pass** — the search returned one Spanish-teaching CLI tutor, ungranted. |
+
+🔴 **Channel state, unchanged:** `github.com` HTML and `api.github.com` → **403** (so **no star
+counts**, and a search result's claim of "41.2k stars" for DeepTutor is **not** published here).
+`www.oecd.org`, `www.congress.gov`, `eur-lex.europa.eu` → **DNS `ENOTFOUND`**, so every policy fact
+below stays graded **`CONVERGENT-SECONDARY, PRIMARY UNREAD`**. `git ls-remote` and
+`raw.githubusercontent.com` → **live**, and they are the whole basis of this pass.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p385` — **ONE NEW ADDRESS THIS PASS, AND IT INVERTS THE BASE'S OWN THESIS: THE CLASSROOM IS THE MCP SERVER AND THE AGENT IS BRING-YOUR-OWN. 🔴 IT IS ALSO AGPL AT `main` AND MIT AT A TAG — THE SAME REPOSITORY, TWO GRANTS, BOTH READ FIRST-HAND. 🔴 THE FOUR PRESCRIBED GLOBAL LEGS RETURNED `0` NEW FOR THE FOURTH PASS RUNNING.**
 
 🔵 **Dating note.** Every leg and payload read below was run on **2026-10-22**.

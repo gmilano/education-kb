@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p386` — **GITHUB TRENDING IS STILL 403, SO THIS PASS MEASURED A FORK FAMILY BY ITS LICENCE BYTES — AND FOUND THAT A NON-STOCK MIT PAYLOAD CAN MEAN *MORE ATTRIBUTION*, NOT A BESPOKE CLAUSE. 🟢 THREE PERMISSIVE ERP/CRM BASES VERIFIED FOR THE GAP THE FOUNDATIONS SHELF HAS DECLARED SINCE `p383`.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes.
+
+### 🔴 The trending channel, restated because it has not reopened
+
+`https://github.com/trending` → **403**. `api.github.com` → **403**. `img.shields.io` and
+`api.star-history.com` → blocked. **Fifth consecutive pass with no readable trending page and no star
+counts.** What this shelf can still do is what it does below: resolve addresses, read payloads, and
+measure something about them that a star count would not have told anyone.
+
+### 🟢 Measuring a fork family by its licence payload
+
+Six Brightspace/D2L servers were probed. Three of them — [`rohanmuppa`](https://github.com/rohanmuppa/brightspace-mcp-server),
+[`lmgveerhoek`](https://github.com/lmgveerhoek/brightspace-mcp-server),
+[`matthewliu10`](https://github.com/matthewliu10/brightspace-mcp-server) — return a **byte-identical
+1,068 B MIT payload still holding `© 2026 Rohan Muppa`**. 🔵 **Three addresses, one project.** The same
+read puts [`lukecarroll15/blackboard-mcp`](https://github.com/lukecarroll15/blackboard-mcp) (1,065 B,
+holder `alanwtom`, default ref **`tcd`**) with its upstream [`alanwtom/blackboard-mcp`](https://github.com/alanwtom/blackboard-mcp).
+
+🔵 **So: `(byte length, copyright holder)` is a cheap fork-family fingerprint** — available from the
+one channel that still works, on a platform where the fork graph API is 403. A supply census that
+counts slugs over-counts; this is how much, and in which direction.
+
+### 🟢 A non-stock MIT length is not necessarily a bespoke clause — `Pattern L` gains step 11
+
+This base's rule, earned on `open-webui` (2,819 B of "BSD-3 plus a branding restriction and a CLA"),
+is that **a byte length away from stock is a reason to read the text**. Correct — and this pass found
+the *other* outcome of that read:
+
+| repo | bytes | what the excess actually is |
+|---|---|---|
+| [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | **1,200** | 🟢 An inline notice: *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."* |
+| [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | **2,181** | 🟢 **Two complete MIT grants concatenated** — its own (© 2026 Robert McCrary) plus *"Portions of this project are derived from d2l-cli: Copyright (c) 2026 Aaryan Kapoor."* |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | **11,906** | 🟢 Apache-2.0 (stock ≈11,358 B) with ASF's appended notice text. Not a modified grant. |
+
+🔵 **Step 11, now in [`compose/patterns.md`](../compose/patterns.md): classify the anomaly before you
+judge it.** *More restriction* (open-webui) and *more attribution* (these three) look identical to a
+byte-length check and point in opposite procurement directions — one is a reason to walk away, the
+other is a reason to **carry both notices** in the deliverable's NOTICE file. 🔴 And the attribution
+case has a trap of its own: ship `D2L-MCP` and you owe **two** attributions, one to a project you
+never chose.
+
+### 🟢 Three permissive ERP/CRM bases — verified against a declared gap
+
+[`repos/foundations.md`](foundations.md) has recorded since `p383` that **no platform is both an LMS
+and a SIS under a permissive licence**, and [`verticals/solutions.md`](../verticals/solutions.md)
+records that **no open-source Brazilian or Mexican academic-management system was found**. The
+prescribed ERP/CRM leg was run against exactly that gap. **It does not close it** — and it returns
+three permissive *bases* that were never on a shelf:
+
+| repo | real default ref | licence (payload read) | what it is, honestly |
+|---|---|---|---|
+| [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | 🔴 **`master`** | 🟢 **MIT**, 1,077 B, *"Copyright 2010-2025, Webkul Software"*; `composer.json` also declares `"license": "MIT"` | Laravel 13 + FilamentPHP 5 modular ERP with a **plugin system**: accounting, inventory, HR, CRM, projects. 🔴 **No education module.** A permissive ERP *base* on which the education modules are **your build**, not a download. |
+| [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | 🔴 **`2.2`** | 🟢 **MIT**, 1,078 B, same Webkul holder | Laravel CRM — the **admissions-funnel** base (lead → applicant → enrolment). 🔵 Default ref is a **version branch**; there is no `main` at HEAD. |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🔴 **`trunk`** | 🟢 **Apache-2.0**, 11,906 B; `NOTICE` 166 B, *"Copyright 2001-2026 The Apache Software Foundation"* | The other permissive ERP base: accounting, CRM, manufacturing. 🔴 No education module, developer-facing, heavy. |
+
+🔵 **The honest reading, and it is the reason these go on `verticals/solutions.md` rather than
+`repos/foundations.md`:** the permissive education ERP still does not exist. What exists is a
+permissive ERP **with a plugin system** — so the LGPL-3.0 of
+[OpenEduCat](https://github.com/openeducat/openeducat_erp) is now a **choice against a named
+alternative** (buy the education modules and take LGPL; or take MIT and build them) instead of the
+only road. 🟡 Scope it as a build: admissions, curriculum, fees, attendance, transcripts.
+
+### 🔵 Non-`main` default refs added to the register this pass
+
+**`tcd`** · **`master`** (×2) · **`2.2`** · **`trunk`** — four new ref spellings from 22 probes, which
+is the same rate the base has been recording since `p383`. A `main`-assuming licence read would have
+reported **five** of this pass's nineteen granted repositories as ungranted.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p385` — **GITHUB TRENDING IS STILL UNREADABLE (403), SO THIS PASS MEASURED A REPOSITORY'S LICENCE AT TWO REFS AND GOT TWO DIFFERENT ANSWERS. 🔴 AND TWO DATES THAT MATTER TO AN ENGAGEMENT WERE SITTING IN `open-gaps.md` INSTEAD OF ON A SHELF.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p385.tsv).

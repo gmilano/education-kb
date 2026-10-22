@@ -128,3 +128,17 @@ a SIS** under a permissive licence. The shape is permissive *courseware*
 Moodle GPL-3, Open edX AGPL-3, Canvas CE AGPL-3, openSIS GPL-2.0, OpenEduCat LGPL-3. **Pairing two
 bases is the only route**; the single permissive LMS+SIS does not exist to be found, and a pitch
 that assumes it will be found is a pitch with a hole in it.
+
+🆕 `p386` **— the claim survives a search aimed straight at it, and gains a third route.** The
+prescribed ERP/CRM leg (`open source platform education ERP CRM MIT Apache 2026`) returned **no
+permissive education platform**, which is this shelf's claim holding up under test rather than for
+want of looking. What it did return is three **permissive general ERP/CRM bases**, licence payloads
+read first-hand: [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) (🟢 **MIT**, 1,077 B,
+default ref **`master`**, Laravel 13 + FilamentPHP 5 **with a plugin system**),
+[krayin/laravel-crm](https://github.com/krayin/laravel-crm) (🟢 **MIT**, 1,078 B, default ref
+**`2.2`**) and [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) (🟢 **Apache-2.0**,
+11,906 B, default ref **`trunk`**). 🔵 So the pairing routes are now three, not two: copyleft
+LMS + copyleft SIS, copyleft LMS + permissive courseware, or **copyleft LMS + a permissive ERP base
+whose education modules you build**. The trade is written out on
+[`verticals/solutions.md`](../verticals/solutions.md) — and none of the three bases ships an
+education module, so the third route is a **build**, costed as one.

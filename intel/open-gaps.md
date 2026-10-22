@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 386 · 2026-10-22 — **TWO DECLARED GAPS WERE NOT GAPS: Blackboard and D2L had 12 MIT GRANTS BETWEEN THEM, UNREAD FOR FOUR PASSES. 🔴 THE REPLACEMENT GAP IS TENANCY, NOT LICENSING. 🟢 THREE OFF-SHELF FACTS PROMOTED TO `intel/market.md`, ONE OF THEM NEW TO THIS REPOSITORY.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes, 19 live-granted, 2 ungranted, 2 dead.
+
+### 🔴 Gap closed by measurement, not by supply: `Blackboard/D2L = no verified grant`
+
+`agents/top.md` carried *"Blackboard has nine servers and not one verified grant; D2L has six and
+the only one checked is ungranted"* from `p383` to `p385`, and drew a **build** recommendation from
+it. All fifteen addresses were probed this pass: **6 MIT on Blackboard** (1 ungranted, 2 dead
+addresses), **6 MIT on D2L** (three of which are one upstream plus two byte-identical forks).
+🔴 **Root cause: a slug census was quoted as a grant census.** `Pattern L` gains **step 12** so the
+word *unread* cannot print as *ungranted* again.
+
+### 🟢 New gap, replacing it — `Gap 386-A`: no institution-grade D2L MCP server exists
+
+All six granted Brightspace servers authenticate as the **signed-in student** (browser session, no
+admin API, no audit trail). On Blackboard exactly one address —
+[nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) (MIT) — targets the official REST API with
+OAuth2, a role gate, FERPA handling and a JSON audit log, **as maintainer self-claims that were read
+and not executed**. 🔵 **`Gap 386-A` is therefore narrow and buildable**, and it is written up as a
+deliverable in `compose/patterns.md` **Pattern N**, not left here.
+
+### 🟡 `Gap 386-B`: nitsuah/bb-mcp's security claims are unexecuted
+
+OAuth2, role gate, FERPA handling, rate limiting, PII scrub, audit log, 40 tools, grade write-back —
+all read from the README's architecture block. **Nothing was executed.** A pass with a runnable lane
+should run the role gate against an under-privileged token before this base recommends the server
+by name to a client. 🔴 Until then every citation of it carries the self-claim marker.
+
+### 🔴 `Gap 386-C`: LATAM-native education agent supply — fourth consecutive null
+
+The targeted Spanish-language leg returned one candidate,
+[`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer), **ungranted** and
+aimed at teaching Spanish *to non-speakers*. **The gap is structural, not a search artefact** — and
+it is recorded on `intel/market.md` this pass rather than only here, per `p385`'s lesson that a gap
+recorded in this file has not been delivered.
+
+### 🔴 `Gap 386-D`: no primary legal or policy text was readable, again
+
+`www.oecd.org`, `www.congress.gov` and `eur-lex.europa.eu` all return DNS **`ENOTFOUND`**;
+`github.com` HTML and `api.github.com` return **403** (so no star counts, and
+`github.com/trending` is unreadable for a fifth pass). Every policy fact promoted this pass —
+the **AILit framework** (OECD/EC, 18 Jun 2026), **H.R. 8747** (committee action 21 Jul 2026,
+18–15), **Korea's AI Basic Act** (effective Jan 2026) — is graded
+**`CONVERGENT-SECONDARY, PRIMARY UNREAD`** on its shelf.
+
+### 🔵 Promoted off-shelf this pass (the `p385` failure mode, applied)
+
+| fact | was | now |
+|---|---|---|
+| OECD/EC **AILit framework** — 4 domains, 19 competences, 3 levels, final 18 Jun 2026 | 🔴 **absent from this entire repository** | `intel/market.md` → EMEA, with EMEA opportunity 6 built on it |
+| **Korea AI Basic Act**, effective Jan 2026 | only in `intel/policy-matrix.tsv` | `intel/market.md` → APAC |
+| **H.R. 8747** K–12 AI Literacy and Readiness Act | nowhere | `intel/market.md` → North America |
+
+### 🟡 `Gap 386-E`: `d2l-cli` is named in a grant this base now ships advice about
+
+`RobertLMcCrary/D2L-MCP`'s licence payload attributes *"Portions of this project are derived from
+d2l-cli: Copyright (c) 2026 Aaryan Kapoor."* **The `d2l-cli` address itself was not probed this
+pass** — no slug was given in the notice and guessing one would manufacture an address. A later pass
+should resolve it, because anyone shipping `D2L-MCP` inherits that attribution.
+
+---
+
 ## Pass 382 · 2026-10-22 — **`ACTION ZZ-ap` CLOSED after five registrations, `Gap 539` and `Gap 541` closed with it — and the gate state itself becomes a gap, because `make hooks` COULD NOT BE RUN: the execution lane is denied by policy, not by egress, and no channel cell had a field for that.**
 
 **Evidence:** [`registered-prediction`](../evidence/p382-registered-prediction.2026-10-22-p382.tsv) ·

@@ -1,0 +1,32 @@
+# p386 — 2026-10-22 — first-hand reads. Channels used, and their state this pass:
+#   LIVE  git ls-remote --symref https://github.com/<slug> HEAD   -> address + REAL default ref
+#   LIVE  raw.githubusercontent.com/<slug>/<ref>/<path>           -> licence payload + byte length
+#   403   github.com HTML (incl. /trending), api.github.com       -> no star counts, no trending page
+#   000   www.oecd.org, www.congress.gov, eur-lex.europa.eu       -> DNS ENOTFOUND; no primary legal/policy text read
+# Probe set: 9 paths (LICENSE LICENSE.md LICENSE.txt LICENCE COPYING LICENSE-MIT license
+# docs/License.txt doc/LICENSE), then manifest fallback (package.json, pyproject.toml, composer.json).
+# TARGET OF THIS PASS: the two platforms agents/top.md recorded as "not one verified grant"
+# (Blackboard, 9 servers) and "the only one checked is ungranted" (D2L/Brightspace, 6 servers).
+slug	ref	grant_path	licence	bytes	verdict	note
+Mattlo0546/blackboard-mcp	main	LICENSE	MIT	1067	LIVE-GRANTED	"Copyright (c) 2026 Mattlo0546". Blackboard Ultra, student-side: own browser SSO/MFA session, no API key, read-only by design. Same author ships canvas-mcp and moodle-mcp
+alanwtom/blackboard-mcp	main	LICENSE	MIT	1065	LIVE-GRANTED	"Copyright (c) 2026 alanwtom" — upstream of the tcd fork below
+lukecarroll15/blackboard-mcp	tcd	LICENSE	MIT	1065	LIVE-GRANTED	NON-MAIN REF `tcd`. Payload byte-identical to alanwtom and still holder "alanwtom" — fork lineage readable from the grant alone. Local-first, read-only
+felipedias-ie/blackboard-mcp	main	LICENSE	MIT	1084	LIVE-GRANTED	"Copyright (c) 2026 blackboard-mcp contributors" — collective holder, 1084 B
+nitsuah/bb-mcp	main	LICENSE	MIT	1063	LIVE-GRANTED	"Copyright (c) 2026 nitsuah". THE INSTITUTION-GRADE ONE: wraps the OFFICIAL Blackboard Learn REST API; README architecture block states OAuth2, role gate, FERPA, rate limiting, PII scrub, structured JSON audit log, Prometheus /metrics, 40 tools incl. GRADE WRITE-BACK and webhook subscriptions (all maintainer self-claim, not executed here)
+Loganxgreaves/blackboard-mcp	master	LICENSE	MIT	1070	LIVE-GRANTED	NON-MAIN REF `master`. "Copyright (c) 2026 loganxgreaves". Read-only, defaulted to Sheffield Hallam
+anastasasenov/bbmcps	main	(none at 9 paths)	UNGRANTED	-	LIVE-NOGRANT	No licence file at any of the 9 probe paths AND no licence field in any manifest probed. Do not ship
+e9x/blackboard-mcp	-	-	-	-	DEAD-OR-PRIVATE	ls-remote returns nothing. Listed by a search result as an MIT Blackboard server for Ultra and Classic
+parkseokjune/unist-blackboard-mcp	-	-	-	-	DEAD-OR-PRIVATE	ls-remote returns nothing. A search result calls this "the first open-source Blackboard MCP" — the address does not resolve, so the claim is unverifiable here
+JhostinAleck/brightspace-mcp	main	LICENSE	MIT	1070	LIVE-GRANTED	"Copyright (c) 2026 Jhostin Aleck". D2L Brightspace; multi-strategy auth (TOTP, OAuth, browser), retry/circuit-breaker/cache tiers, OPT-IN WRITE operations
+AnonymousOnyx22/brightspace-d2l-mcp	main	LICENSE	MIT	1200	LIVE-GRANTED	NON-STOCK LENGTH, AND IT IS ATTRIBUTION NOT RESTRICTION: MIT plus an inline notice "Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License"
+RobertLMcCrary/D2L-MCP	main	LICENSE	MIT	2181	LIVE-GRANTED	NON-STOCK LENGTH = TWO FULL MIT GRANTS CONCATENATED: its own ("Copyright (c) 2026 Robert McCrary") plus "Portions of this project are derived from d2l-cli: Copyright (c) 2026 Aaryan Kapoor". Go, read-only, pre-1.0. Shipping it carries two notices
+rohanmuppa/brightspace-mcp-server	main	LICENSE	MIT	1068	LIVE-GRANTED	"Copyright (c) 2026 Rohan Muppa" — upstream of the npm `brightspace-mcp-server` fork family
+lmgveerhoek/brightspace-mcp-server	main	LICENSE	MIT	1068	LIVE-GRANTED	Byte-identical payload, holder still "Rohan Muppa" — fork, not an independent implementation
+matthewliu10/brightspace-mcp-server	main	LICENSE	MIT	1068	LIVE-GRANTED	Byte-identical payload, holder still "Rohan Muppa" — fork, not an independent implementation
+zijinz456/OpenTutor	main	LICENSE	MIT	1068	LIVE-GRANTED	"Copyright (c) 2026 Zijin Zhang". NEW AGENT ADDRESS: self-hosted local-first block-based adaptive workspace — PDF in, structured notes + flashcards + quizzes + tutor out; FSRS spaced repetition, knowledge graph, cognitive-load detection; Next.js 16 + Python 3.11, Docker, runs on local open-weight models with no API key. Bilingual EN / zh-CN
+Nutlope/llamatutor	main	(none at 9 paths)	UNGRANTED	-	LIVE-NOGRANT	CORRECTION: circulated widely as an open-source AI tutor; no licence file at 9 paths and no licence field in any manifest probed. Not reusable as it stands
+jarodise/Language-Transfer	main	(none at 9 paths)	UNGRANTED	-	LIVE-NOGRANT	Spanish-teaching tutor that runs inside an agent CLI. Ungranted. Also teaches Spanish TO non-speakers — not a Spanish-language tutor for LATAM learners
+aureuserp/aureuserp	master	LICENSE	MIT	1077	LIVE-GRANTED	NON-MAIN REF `master`. "MIT License Copyright 2010-2025, Webkul Software"; composer.json also declares "license": "MIT". Laravel 13 + FilamentPHP 5 modular ERP with a plugin system. NO education module — it is a permissive ERP BASE, not an education ERP
+krayin/laravel-crm	2.2	LICENSE	MIT	1078	LIVE-GRANTED	NON-MAIN REF `2.2` — a version branch, no `main` at HEAD. Same holder as Aureus ("Webkul Software"). Laravel CRM; the admissions-funnel base
+apache/ofbiz-framework	trunk	LICENSE	Apache-2.0	11906	LIVE-GRANTED	NON-MAIN REF `trunk`. Apache-2.0, 11906 B (stock Apache-2.0 is ~11358 B — the excess is ASF's appended NOTICE-style text, not a bespoke clause); NOTICE 166 B "Apache OFBiz Copyright 2001-2026 The Apache Software Foundation". No education module
+HKUDS/DeepTutor	main	LICENSE	Apache-2.0	11408	LIVE-GRANTED	Control re-read for channel calibration: same slug, ref, path and byte length as p385

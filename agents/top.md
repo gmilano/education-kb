@@ -22,6 +22,16 @@ updated: 2026-10-22
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p383.tsv) — 62 addresses,
 58 live, 4 dead, every licence read from the raw payload at the repository's **real default ref**.
 
+🆕 **Pass `p386` · 2026-10-22 — increment, and it overturns a recommendation on this shelf.** This pass
+went straight at the two platforms the *Supply census* below called empty: **Blackboard — "nine servers and
+not one verified grant"** — and **D2L — "six and the only one checked is ungranted."** Twenty-two addresses
+were probed first-hand. **Both claims are now false: 6 MIT grants on Blackboard and 6 on D2L**, read from
+the payload at each repository's real default ref.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p386.tsv) — 22 probes, 19 live-granted,
+2 ungranted, 2 dead.
+🔵 **But the gap did not disappear — it moved**, and the new shape is the finding. See
+*[The Blackboard and D2L supply, measured](#the-blackboard-and-d2l-supply-measured)*.
+
 ## 🔴 No star counts are published this pass, and that is deliberate
 
 Every popularity channel was closed in this sandbox: `api.github.com` → **403**,
@@ -44,6 +54,7 @@ permissiveness, maintenance signal and fit — and states the gap instead of fil
 | **ChatTutor** | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | `main` | 🔴 **AGPL-3.0** | Visual, interactive tutor. Network copyleft — hosting it as a service triggers source obligations. | APAC |
 | **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 **`dev`** | 🔴 **AGPL-3.0** | AI-native course platform. Note the default ref is `dev`: a `main`-assuming clone or licence read fails silently. | EMEA |
 | **Learn Shell** | [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) | `main` | 🔴 **AGPL-3.0** at `main` — 🟢 **MIT at tag `v0.1.0`** | 🆕 `p385`. **Agent-native teaching OS: the classroom is the server and the agent is bring-your-own.** Courses, lessons, FSRS-scheduled flashcards, graded exercises, mindmap, document reader, and a memory layer the agent reads back (`get_context` / `get_learner_brief`) instead of re-deriving the learner each session. ~50 tools over MCP, self-describing via a `manifest://capabilities` resource. 🔴 v1 is explicitly **single-machine and unauthenticated** — not multi-tenant as it stands. | APAC — China (MCP tool descriptions and prep-report are Chinese-first; docs English-first) |
+| **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | `main` | 🟢 **MIT** *(1,068 B, © 2026 Zijin Zhang)* | 🆕 `p386`. **Block-based adaptive workspace that runs entirely on the client's own machine.** Course material in (PDF), structured notes, flashcards, quizzes and an adapting tutor out; **FSRS** spaced repetition, a knowledge graph and cognitive-load detection are in the product rather than on the roadmap. Next.js 16 + Python 3.11, Docker, **runs on local open-weight models with no API key and no data leaving the host**. 🟢 The data-residency tutor with a *permissive* grant — which [Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3) was the only other candidate for. 🟡 One maintainer; bilingual EN / zh-CN. | APAC — China |
 
 ## Tier 2 — Research and literature agents (higher education)
 
@@ -88,6 +99,14 @@ three classes that call for three different decisions:
 | [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | ✔ | `package.json` → **`"license": "MIT"`** | 🟡 **MANIFEST-ONLY MIT** |
 | [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | ✔ | **`version.php` carries the full GPL-3.0-or-later header** — *"either version 3 of the License, or (at your option) any later version"* | 🟢 **GPL-3.0-or-later, granted in the source headers.** Standard and required practice for a Moodle plugin; the missing root file is a packaging habit, not a missing grant |
 
+🆕 `p386` — **three more ungranted addresses, and one of them matters more than the others.**
+
+| repo | result | why it is recorded |
+|---|---|---|
+| [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | 🔴 **UNGRANTED** — nothing at 9 paths, no manifest licence field | 🔴 **It circulates widely as "an open-source AI personal tutor"** and is still returned by the prescribed global search leg. It is not reusable as it stands. The most-cited tutor on the open web and the most-cited *granted* tutor are not the same repository. |
+| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | 🔴 **UNGRANTED** | Surfaced by the LATAM search leg. 🔵 Also a category error worth naming: it teaches **Spanish to non-speakers** inside an agent CLI — it is not a Spanish-language tutor for Spanish-speaking learners, which is the thing the LATAM supply gap is actually about. |
+| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | 🔴 **UNGRANTED** | The one ungranted server of the nine Blackboard addresses probed. |
+
 🔵 **The lesson is now `Pattern L` step 8** in [`compose/patterns.md`](../compose/patterns.md):
 *a missing `LICENSE` file is a reason to read the manifest and the source headers, not a verdict.*
 Three of these five would have been wrongly rejected by a file-only read — including the one
@@ -99,12 +118,13 @@ For Moodle, use the **`webservice_mcp` plugin from Moodle's own plugin directory
 ## Build-on-this tier
 
 The permissive shortlist: every agent on these shelves a studio can build on and still hand a
-client closed, client-owned code. **18 permissive rows** — MIT, Apache-2.0 or BSD-3 only, no
+client closed, client-owned code. 🆕 `p386`: **19 permissive rows** — MIT, Apache-2.0 or BSD-3 only, no
 copyleft, no bespoke clause, every grant read first-hand at the repository's real default ref.
 
 | repo | ref | licence | use it for |
 |---|---|---|---|
 | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `main` | Apache-2.0 | tutoring with learner memory |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | `main` | MIT | 🆕 `p386` — local-first adaptive workspace; tutoring with **no data leaving the host** |
 | [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `main` | Apache-2.0 | agent-led course delivery |
 | [satvik314/educhain](https://github.com/satvik314/educhain) | `main` | MIT | teacher-facing content generation |
 | [Selleo/mentingo](https://github.com/Selleo/mentingo) | `main` | MIT | AI-native LMS starting point |
@@ -136,11 +156,13 @@ MIT grant is still readable at tag **`v0.1.0`** (1,081 B, read first-hand this p
 ## MCP servers by LMS platform
 
 MCP reached the LMS in 2026 and this is the integration path that did not exist a year ago.
-**5 platforms** are reachable through the servers below.
+🆕 `p386`: **6 LMS platforms** are reachable through the servers below — Blackboard joins the table
+this pass, with a verified grant for the first time.
 
 ### Agents over the systems
 
-**12 rows in the table below**, every one resolved and licence-read first-hand on 2026-10-22.
+**23 rows in the table below**, every one resolved and licence-read first-hand on 2026-10-22
+(12 at `p383`–`p385`, **11 added at `p386`**).
 
 | platform | server | ref | licence | note |
 |---|---|---|---|---|
@@ -155,6 +177,17 @@ MCP reached the LMS in 2026 and this is the integration path that did not exist 
 | **Open edX** | [blend-ed/tutor-contrib-openedxmcp](https://github.com/blend-ed/tutor-contrib-openedxmcp) | `master` | 🔴 AGPL-3.0 | The `tutor` plugin that installs it — the realistic deployment route. |
 | **Google Classroom** | [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server) | `main` | 🟢 **MIT** | Classroom is not an LMS a studio can fork, so MCP is the *only* integration surface. |
 | **Brightspace / D2L** | [general-mudkip/d2l-mcp-server](https://github.com/general-mudkip/d2l-mcp-server) | `main` | 🟡 **MANIFEST-ONLY MIT** | The only D2L server verified this pass. No licence file; `package.json` declares `"license": "MIT"`. **D2L remains thin — one server, and its grant is a manifest line.** |
+| **Blackboard** | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | `main` | 🟢 **MIT** *(1,063 B)* | 🆕 `p386`. 🟢 **The only institution-grade LMS MCP server on this shelf.** Wraps the **official Blackboard Learn REST API**; README claims OAuth2, role gate, FERPA handling, rate limiting, PII scrub, JSON audit log, Prometheus `/metrics`, 40 tools incl. **grade write-back** and webhooks (self-claimed, read not executed). 🔴 Grade write-back is gated or prohibited in several jurisdictions — check [`policy-matrix`](../intel/policy-matrix.tsv) before enabling it. |
+| **Blackboard** | [Mattlo0546/blackboard-mcp](https://github.com/Mattlo0546/blackboard-mcp) | `main` | 🟢 **MIT** *(1,067 B)* | 🆕 `p386`. Blackboard **Ultra**, student-side: signs in through the user's own university SSO/MFA in a real browser, **no API key**, read-only. Courses, deadlines, announcements, lecture-slide download. Same author ships Canvas and Moodle siblings. 🟡 A personal tool, not a tenant deployment. |
+| **Blackboard** | [alanwtom/blackboard-mcp](https://github.com/alanwtom/blackboard-mcp) | `main` | 🟢 **MIT** *(1,065 B)* | 🆕 `p386`. Local-first, read-only, reads the signed-in student's own Ultra data through their normal browser session. Upstream of the fork below. |
+| **Blackboard** | [lukecarroll15/blackboard-mcp](https://github.com/lukecarroll15/blackboard-mcp) | 🔴 **`tcd`** | 🟢 **MIT** *(1,065 B)* | 🆕 `p386`. 🔵 **Two lessons in one row.** The default ref is **`tcd`**, not `main` — a `main`-assuming read returns "no licence". And the payload is **byte-identical to upstream with the holder still `alanwtom`**, so the fork lineage is readable from the grant alone. |
+| **Blackboard** | [felipedias-ie/blackboard-mcp](https://github.com/felipedias-ie/blackboard-mcp) | `main` | 🟢 **MIT** *(1,084 B, © "blackboard-mcp contributors")* | 🆕 `p386`. Ultra: courses, content, files, grades, deadlines over the user's own browser session. Collective copyright holder rather than a named individual. |
+| **Blackboard** | [Loganxgreaves/blackboard-mcp](https://github.com/Loganxgreaves/blackboard-mcp) | 🔴 **`master`** | 🟢 **MIT** *(1,070 B)* | 🆕 `p386`. Read-only, defaulted to one university (Sheffield Hallam) — re-point via config. Non-`main` default ref. |
+| **Blackboard** | [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | `main` | 🔴 **UNGRANTED** | 🆕 `p386`. No licence file at **any of 9 probe paths** and **no licence field in any manifest**. Do not ship. |
+| **Brightspace / D2L** | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p386`. 🟢 **The most substantial D2L server found.** Multi-strategy auth (TOTP, OAuth, browser), retry / circuit-breaker / cache tiers, and **opt-in write operations**. The closest available base for an institution-grade D2L server. |
+| **Brightspace / D2L** | [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | `main` | 🟢 **MIT** *(1,068 B)* | 🆕 `p386`. 🔵 **Upstream of a fork family — count it once.** [`lmgveerhoek`](https://github.com/lmgveerhoek/brightspace-mcp-server) and [`matthewliu10`](https://github.com/matthewliu10/brightspace-mcp-server) publish **byte-identical** payloads still holding `© 2026 Rohan Muppa`; several more forks share the npm name. Grades, due dates, assignments, announcements, rosters, syllabus. Automated login is wired per school. |
+| **Brightspace / D2L** | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main` | 🟢 **MIT** *(🔵 **1,200 B** — non-stock)* | 🆕 `p386`. The extra bytes are **attribution, not restriction**: an inline notice *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."* See **Pattern L step 11**. |
+| **Brightspace / D2L** | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main` | 🟢 **MIT** *(🔵 **2,181 B** — **two stacked grants**)* | 🆕 `p386`. The payload is **two complete MIT licences**: its own (© 2026 Robert McCrary) **plus** *"Portions of this project are derived from d2l-cli: Copyright (c) 2026 Aaryan Kapoor."* 🟡 Shipping it means carrying **both** notices. Go, read-only, pre-1.0. |
 | **Anki** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | `main` | 🟢 **MIT** | Not an LMS — the spaced-repetition loop, which pairs with FSRS above. |
 
 ### 🔵 Supply census: how crowded each platform already is
@@ -173,12 +206,47 @@ the twelve rows above are the verified subset):
 | Open edX | 2 |
 | Anki | 1 |
 
+🆕 `p386` — **and the two rows that were only counts are now measured.** Of the nine Blackboard
+slugs harvested, nine were probed first-hand this pass: **6 MIT, 1 ungranted, 2 dead**. Of the six
+D2L slugs, **6 MIT** — three of them one upstream and two byte-identical forks. The census column
+above counts *addresses*; it never counted *grants*, and for four passes the difference read as an
+absence of supply.
+
 🔵 **Read the shape, not the totals.** Canvas and Moodle are saturated with near-duplicate
 community servers, of which a minority carry a usable licence — so the work there is **selection**,
-not building. Open edX has two, both AGPL and both from one vendor. **Blackboard has nine servers
-and not one verified grant; D2L has six and the only one checked is ungranted.** Those two are
-where a permissively-licensed server would be a genuine contribution rather than the 36th Canvas
-clone.
+not building. Open edX has two, both AGPL and both from one vendor.
+
+## The Blackboard and D2L supply, measured
+
+🆕 `p386`. Until this pass this shelf said **"Blackboard has nine servers and not one verified grant;
+D2L has six and the only one checked is ungranted"**, and concluded that both were places where
+*"a permissively-licensed server would be a genuine contribution."* 🔴 **That conclusion was wrong,
+and it was wrong because nobody had read the grants — not because the grants were absent.**
+
+| platform | probed this pass | 🟢 MIT, payload read | 🔴 ungranted | 🔴 address dead |
+|---|---|---|---|---|
+| **Blackboard** | 9 | **6** | 1 (`anastasasenov/bbmcps`) | 2 (`e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp`) |
+| **Brightspace / D2L** | 6 | **6** | 0 | 0 |
+
+🔵 **The gap moved, it did not close — and the new shape is the actionable part.** Eleven of the
+twelve granted servers authenticate as **the signed-in student**: the user's own browser SSO/MFA
+session or session cookies, no admin API key, read-only by design and by necessity. Those are
+**personal tools**, and a studio cannot deliver one to an institution — it has no tenant identity,
+no role boundary, no audit trail, and it breaks whenever the vendor changes a login page.
+
+🟢 **Exactly one reads as institution-grade: [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp)
+(MIT, 1,063 B).** It wraps the **official Blackboard Learn REST API** and its README's architecture
+block claims OAuth2, a role gate, FERPA handling, rate limiting, PII scrubbing, a structured JSON
+audit log, Prometheus `/metrics`, and 40 tools including **grade write-back** and webhook
+subscriptions. 🟡 **Those are maintainer self-claims — read, not executed, this pass**; and the
+grade-write-back surface is precisely what [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv)
+gates or prohibits by jurisdiction, so the licence clearing it is the *first* gate, not the last.
+
+🔵 **So the restated recommendation:** on Blackboard and D2L the work is **selection plus hardening**
+— take a granted server and add tenant auth, role scoping and an audit trail — not greenfield
+building. The genuine remaining contribution is **an institution-grade D2L server**: all six granted
+Brightspace servers are student-side, and `JhostinAleck/brightspace-mcp` (opt-in writes,
+TOTP/OAuth/browser auth strategies) is the closest thing to a base for one.
 
 ## 🟡 Two licence traps that a badge-read would miss
 
@@ -268,6 +336,24 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | `master/docs/License.txt` | GPL-2.0 — 🔵 **8th probe path**, absent from all seven root paths *(`p384`)* |
 | [projectfedena/fedena](https://github.com/projectfedena/fedena) | — `master` resolves; `README`/`README.md`/`LICENSE`/`Gemfile`/`app` all 404 | **nothing read** — no tree to licence *(`p384`)* |
 | [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) | `main/LICENSE` **and** `v0.1.0/LICENSE` | 🔴 **AGPL-3.0** at `main` (34,523 B stock) · 🟢 **MIT** at tag `v0.1.0` (1,081 B, *"Copyright (c) 2026 Learn Shell contributors"*) — 🔵 **one repository, two refs, two grants**, both read first-hand; relicensed 2026-08-16 *(`p385`)* |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | `main/LICENSE` | MIT — 1,068 B, © 2026 Zijin Zhang *(`p386`)* |
+| [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | `main/LICENSE` | MIT — 1,063 B *(`p386`)* |
+| [Mattlo0546/blackboard-mcp](https://github.com/Mattlo0546/blackboard-mcp) | `main/LICENSE` | MIT — 1,067 B *(`p386`)* |
+| [alanwtom/blackboard-mcp](https://github.com/alanwtom/blackboard-mcp) | `main/LICENSE` | MIT — 1,065 B *(`p386`)* |
+| [lukecarroll15/blackboard-mcp](https://github.com/lukecarroll15/blackboard-mcp) | 🔴 **`tcd`**`/LICENSE` | MIT — 1,065 B, holder still `alanwtom` *(`p386`)* |
+| [felipedias-ie/blackboard-mcp](https://github.com/felipedias-ie/blackboard-mcp) | `main/LICENSE` | MIT — 1,084 B, © "blackboard-mcp contributors" *(`p386`)* |
+| [Loganxgreaves/blackboard-mcp](https://github.com/Loganxgreaves/blackboard-mcp) | 🔴 **`master`**`/LICENSE` | MIT — 1,070 B *(`p386`)* |
+| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
+| [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | `main/LICENSE` | MIT — 1,070 B *(`p386`)* |
+| [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | `main/LICENSE` | MIT — 1,068 B; `lmgveerhoek` and `matthewliu10` byte-identical *(`p386`)* |
+| [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main/LICENSE` | MIT — 1,200 B, inline derivation notice *(`p386`)* |
+| [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main/LICENSE` | MIT — 2,181 B, **two stacked MIT grants** (own + `d2l-cli`) *(`p386`)* |
+| [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
+| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
+| [e9x/blackboard-mcp](https://github.com/e9x/blackboard-mcp) · [parkseokjune/unist-blackboard-mcp](https://github.com/parkseokjune/unist-blackboard-mcp) | — `ls-remote` returns nothing | **DEAD / private** — both listed by search results as live MIT servers *(`p386`)* |
 **13 of the 58 live addresses are not on `main`** (`master`, `develop`, `dev`, `release`,
-`development`, `release_11`, `19.0`). Resolving the ref **before** reading the licence is not
+`development`, `release_11`, `19.0`) — 🆕 `p386` adds **four more refs** to that list from 22 new
+probes: **`tcd`** (`lukecarroll15/blackboard-mcp`), **`master`** (`Loganxgreaves/blackboard-mcp`,
+`aureuserp/aureuserp`), **`2.2`** (`krayin/laravel-crm`, a version branch with no `main`) and
+**`trunk`** (`apache/ofbiz-framework`). Resolving the ref **before** reading the licence is not
 optional; a `main`-assuming read returns "no licence" for every one of them.

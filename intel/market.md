@@ -9,6 +9,14 @@ updated: 2026-10-22
 **Pass `p383` · 2026-10-22 · FULL REWRITE.** Prior version archived at
 [`archive/2026-10-22-p383-pre-rewrite/intel-market.md`](../archive/2026-10-22-p383-pre-rewrite/intel-market.md).
 
+🆕 **Pass `p386` · 2026-10-22.** All four regional legs were run again. **Three off-shelf facts are
+promoted here this pass** — one of them absent from this entire repository until now (the OECD/EC
+**AILit framework**, EMEA), one recorded only in [`policy-matrix.tsv`](policy-matrix.tsv) (Korea's
+**AI Basic Act**, APAC), one never recorded at all (**H.R. 8747**, North America). 🔴 Channel state
+unchanged: `www.oecd.org`, `www.congress.gov` and `eur-lex.europa.eu` all return DNS `ENOTFOUND`
+from this sandbox, so **every policy fact added below is graded `CONVERGENT-SECONDARY, PRIMARY
+UNREAD`** and says so.
+
 All four regions were searched this pass and **all four are placed with findings** — none by a
 declared nil. Where a claim could not be traced to a primary source it is marked
 🔴 **UNCONFIRMED** and the reason is given, because an informed gap is information and silence
@@ -125,6 +133,29 @@ Opportunities that do not belong to one region, because the evidence for them is
 - **Federal:** US Department of Education "Dear Colleague" letter urges states to evaluate AI and
   ed-tech by **measurable learning outcomes rather than screen time**, and to build **evidence
   requirements into procurement**. No new federal rules.
+- 🆕 `p386` **Federal legislation — the first AI-in-education bill found moving through Congress,
+  and it is a *funding-eligibility* change, not a mandate.** **H.R. 8747, the K–12 AI Literacy and
+  Readiness Act of 2026** (119th Congress), introduced by **Rep. Randy Fine (R-FL)** on
+  **12 May 2026**, was **ordered to be reported (amended) by the House Education and Workforce
+  Committee on 21 Jul 2026, 18–15**. It would amend the **Elementary and Secondary Education Act**
+  so districts may spend **existing federal funds** on AI curriculum and teacher training.
+  🔴 **No floor vote, no Senate action, not law** — and the committee vote was close and party-split,
+  so do not price on it passing. 🟢 **What it is useful for anyway:** it names the funding streams a
+  district would use, which is the question a K-12 buyer asks before the question about the product.
+  🟡 Grade: `CONVERGENT-SECONDARY, PRIMARY UNREAD` — congress.gov and govinfo both carry it, neither
+  is reachable from this sandbox; one snapshot still shows only "introduced and referred", so cite
+  the **21 Jul 2026** committee action with its source.
+- 🆕 `p386` **District-level bans are now specific enough to name.** **Katy ISD (Texas)** prohibits
+  generative-AI chatbots for **K-6** and phases in supervised access **from grade 7, starting in
+  2026-27**. 🔵 This is the shape the restriction movement actually takes — **not a state ban but a
+  district age-gate** — and it is a procurement constraint a vendor meets in configuration: an
+  age-banded deployment where the youngest cohorts get no chatbot surface at all. 🟡 Secondary
+  sources only.
+- 🟡 `p386` **The New York City moratorium: a second independent sighting, same grade.** This pass's
+  North America leg returned the **one-year moratorium on student-facing AI through eighth grade**
+  from a different source than the EdWeek item below. 🔴 **Still `UNCONFIRMED`** — two secondaries
+  with inconsistent date metadata are not a primary, and the NYC Chancellor's office is not
+  reachable from here. Keep it out of a client deck.
 - 🆕 **Federal privacy — the amended COPPA Rule is the binding deadline that already passed.** The
   FTC's amended Children's Online Privacy Protection Rule took effect **23 Jun 2025** with **full
   compliance due 22 Apr 2026**. It brings a **broader definition of personal information**,
@@ -169,8 +200,10 @@ Opportunities that do not belong to one region, because the evidence for them is
    policy, no third-party sharing without separate consent, and an audit trail that shows it.
    🟢 Self-hostable components make this provable —
    [Kolibri](https://github.com/learningequality/kolibri) (MIT),
-   [Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3) and
-   [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) (GPL-2.0, over its API) keep the
+   [Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3),
+   🆕 `p386` [OpenTutor](https://github.com/zijinz456/OpenTutor) (**MIT**, runs on local
+   open-weight models with **no external model call at all** — the strongest form of this argument)
+   and [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) (GPL-2.0, over its API) keep the
    student record on the client's own infrastructure. Pairs with the DC/Maryland prohibited-uses
    control set in opportunity 2.
 5. 🆕 **Sell to the system, not the campus.** SUNY's systemwide policy with AI literacy in general
@@ -198,7 +231,23 @@ Opportunities that do not belong to one region, because the evidence for them is
   the Annex III education one, and routinely conflated with it in vendor summaries.
 - 🔴 **What did *not* move:** **Article 50 transparency obligations apply from 2 Aug 2026.**
 - 🔴 **Already in force:** **Article 4 AI-literacy duty since 2 Feb 2025**, binding on every
-  organisation that *uses* an AI system — therefore every school. **Emotion recognition in
+  organisation that *uses* an AI system — therefore every school.
+  🆕 `p386` **And as of this pass there is an official competence model to discharge that duty
+  against — it was absent from this entire knowledge base.** The **OECD and the European
+  Commission** published **"Empowering Learners for the Age of AI: an AI literacy framework for
+  primary and secondary education"** (the **AILit framework**) as a **final** report on
+  **18 Jun 2026**, after a May 2025 draft and a consultation the authors describe as involving
+  **2,000+ people**, with support from **CodeAI** (formerly Code.org). Structure: **four domains —
+  *Engage*, *Create*, *Manage*, *Shape* AI — 19 competences**, each on a **three-level learner
+  progression**, mixing technical knowledge with dispositions (responsibility, curiosity, empathy),
+  plus classroom examples on bias, misinformation and human oversight.
+  🔴 **It is non-binding** — and that is exactly why it matters: **Article 4 is binding and vague,
+  the AILit framework is detailed and optional**, so it is what a ministry, an inspectorate or a
+  procurement panel will reach for when it has to say what "sufficient AI literacy" *means*.
+  🟡 Grade: `CONVERGENT-SECONDARY, PRIMARY UNREAD` — the OECD publication page, the EC pages and
+  every secondary host are DNS-unreachable from this sandbox; the title, the publisher pair, the
+  18 Jun 2026 date and the 4-domain / 19-competence / 3-level structure reproduce across
+  independent secondaries, the OECD catalogue listing included. **Emotion recognition in
   education institutions has been prohibited since 2 Feb 2025** (narrow medical/safety exception).
 - **High-risk when it lands:** admissions, assessment, proctoring, plagiarism/AI-detection used in
   assessment, and personalised-learning systems that **steer learning paths**.
@@ -247,11 +296,42 @@ Opportunities that do not belong to one region, because the evidence for them is
    place for a next pass to search in-language (Arabic, Turkish) the way the Spain finding was made.
    Do not read this file as saying EMEA = EU.
 
+🆕 `p386` **6. AI-literacy compliance as a product, now that there is a framework to deliver
+against.** **Article 4 has been binding on every school since 2 Feb 2025** and says only that
+deployers must ensure sufficient AI literacy. As of **18 Jun 2026** the **OECD/EC AILit framework**
+supplies the missing operational content: **4 domains, 19 competences, 3 proficiency levels**.
+🟢 That combination — a binding duty with no definition, plus an official non-binding definition —
+is the most sellable shape in EMEA education right now, and the deliverable is concrete rather than
+advisory:
+- map the client's existing curriculum and staff training onto the **19 competences**, producing a
+  gap matrix per competence and per progression level;
+- turn it into evidence an inspectorate accepts: who was trained, on what, when, assessed how;
+- 🟡 and make the AI the client already runs part of the answer — a tutor that **cites its sources
+  and declines without evidence** ([paper-qa](https://github.com/Future-House/paper-qa), Apache-2.0)
+  teaches the *Manage* and *Shape* domains by being used, which is the only form of AI literacy
+  that survives contact with a classroom.
+🔴 **Sell it with the deadline that is actually near, not the 2027 one:** Art. 50 machine-readable
+marking of AI-generated content for systems **already on the market** is **2 Dec 2026** — six weeks
+out — and the AILit work is the same engagement's natural second phase.
+
 ### APAC
 
 **Regulation — no single model, and education is explicitly named in one regime.**
 - **Binding AI rules:** South Korea, China, Vietnam. **Guidance/existing law:** Japan, Singapore,
   Hong Kong, Australia, India.
+- 🆕 `p386` **South Korea's rule now has a name and a date on this shelf.** The **AI Basic Act**
+  (Framework Act on AI Development and Trust) **takes effect January 2026** and is described across
+  independent sources as among the **first comprehensive national AI statutes anywhere**, structured
+  around risk tiers, transparency duties for generative output and a domestic-representative
+  requirement for large foreign providers. 🔵 It is **not** education-specific — that distinction in
+  APAC still belongs to Vietnam — but it is the regime a Korean engagement is governed by, and Korea
+  is also where one of the two named regional edtech players sits (**Riiid**). 🔴 **This fact was
+  already in [`policy-matrix.tsv`](policy-matrix.tsv) and had never reached this shelf** — the same
+  failure mode `p385` recorded for the Art. 50 date: recorded is not delivered.
+  🟡 Grade: `CONVERGENT-SECONDARY, PRIMARY UNREAD`. 🔴 **And a claim this pass refuses:** one market
+  report asserts education-specific AI statutes in Korea and Japan (e.g. a Korean "AI Data
+  Protection Act" for EdTech). That conflicts with every regulatory summary read and is **not
+  recorded as fact** — it is recorded here as a vendor claim to disbelieve.
 - **Vietnam** — its decree names **education among six high-risk sectors**, covering **automated
   assessment and behavioural monitoring**. The most education-specific binding rule in the region.
   🆕 `p384` **the dates, which change how it is sold:** compliance is due **1 Mar 2027**, and
@@ -338,6 +418,19 @@ Opportunities that do not belong to one region, because the evidence for them is
 - **UNESCO's** regional AI-in-education observatory has a **Mexico pilot with CONALEP and DGETI
   announced Aug 2026**; partners include **CETIC.br** (Brazil) and **Tecnológico de Monterrey**
   (Mexico).
+- 🔴 🆕 `p386` **The LATAM leg was re-run in full and returned nothing new — stated so that silence
+  is not read as coverage.** Everything it surfaced is already on this shelf: the UNESCO
+  IESALC/UNU-IAS survey (**200 institutions, 19 countries, 87% using AI in at least one area, 26%
+  with a formal AI strategy**), the **LAC Observatory** launched **14 Apr 2026** at ECLAC in
+  Santiago, Uruguay as the first LAC signatory of the Council of Europe AI convention, Colombia's
+  **CONPES 4144**, Peru's sandbox-based framework and Mexico's pending federal bill. 🟢 Re-running a
+  leg that returns only known facts **is** a result: it means this shelf is current, not that the
+  search failed.
+- 🔴 🆕 `p386` **And the one thing the leg still does not return, for the fourth consecutive pass:
+  a LATAM-native open-source education agent address.** The targeted Spanish-language search
+  returned exactly one candidate — [`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer),
+  which is **ungranted** (verified this pass) and teaches Spanish *to non-speakers* rather than
+  teaching *in* Spanish. **The regional supply gap is structural, not a search artefact.**
 
 🆕 `p385` **A second, independent survey lands on the same gap — and adds the one split that tells a
 studio what to BUILD.** The **Digital Education Council's *AI in Higher Education LATAM Survey 2026***
@@ -436,7 +529,12 @@ build-vs-buy opening in the entire rotation.**
 **Opportunities.**
 1. **Build the gap.** A permissive, Portuguese/Spanish-native academic-management layer with AI
    built in has no open-source incumbent. Start from `academico` (MIT) or OpenEduCat's Odoo base
-   (LGPL) rather than from zero.
+   (LGPL) rather than from zero. 🆕 `p386` **A third starting point, verified this pass and
+   licence-clean:** [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) (**MIT**, ref
+   `master`) + [krayin/laravel-crm](https://github.com/krayin/laravel-crm) (**MIT**, ref `2.2`) —
+   a plugin-based Laravel ERP plus a CRM for the admissions funnel, the same stack `academico`
+   already proves fits the region's SME school market, with the client owning every line including
+   the education modules. 🔴 Cost it as a build: no education module ships in either.
 2. **Teacher-facing, which is where the market and the regulation agree.** HolonIQ finds regional AI
    concentrated in instructional support, and Brazil's draft law targets **student-selection** uses.
    Lesson preparation, assessment drafting and feedback — [educhain](https://github.com/satvik314/educhain)
