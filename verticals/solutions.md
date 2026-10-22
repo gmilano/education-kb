@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟡 2026-10-22 · `p377` — **the vertical leg returned ONLY platforms these shelves already carry, and the one new thing it produced is a REFUSED NUMBER**
+
+**Evidence:** [`outlet-corroboration`](../evidence/outlet-corroboration.2026-10-22-p377.tsv)
+
+🟡 **A measured nil on the platform axis, published as a nil.** The vertical leg
+(*"open source education platform LMS SIS ERP Apache MIT Moodle Open edX alternative 2026"*)
+returned **Moodle, Open edX, OpenEduCat, RosarioSIS, openSIS, Gibbon, Chamilo, ILIAS, Sakai
+and ERPNext/Frappe Education**. 🟢 **Every one is already on these shelves** — index hits
+across the nine `SHELF_FILES`: RosarioSIS **91**, `frappe/education` **100**, openSIS **129**,
+Gibbon **86**, Chamilo **133**, ILIAS **104**. 🔵 No new address, and no row added.
+
+🔵 **That nil is itself a result worth one line.** Unlike the agent shelf, where the English
+index was hiding supply, the **vertical** layer really is saturated for this base: the
+platforms are few, old, well-indexed and already read. A successor should stop paying for this
+leg every pass and run it quarterly.
+
+### 🔴 `ACTION p376-B`'s instrument, applied to a number a studio would otherwise put in a deck
+
+🔴 **OpenEduCat's "30 000+ institutions in 130+ countries" does not survive an outlet count,
+and it does not even survive the vendor's own site.**
+
+| Outlet | Tier | Figure |
+|---|---|---|
+| `openeducat.org` product page | 🔴 **TIER-4 VENDOR** | **30 000+** institutions, 130+ countries |
+| `openeducat.org` about page | 🔴 **TIER-4 VENDOR, same outlet** | 🔴 **1 000+** institutions, 3M+ users, 90+ countries |
+| Any independent outlet | — | 🔴 **NONE FOUND** |
+
+🔴 **Grade: 1 outlet · TIER-4 · and it contradicts itself by a factor of 30.** 🟢 **Verdict:
+REFUSED — not "approximately 30 000", not "up to 30 000". The figure is not reportable at any
+value**, because the only source publishing it also publishes `1 000+` on an adjacent page and
+nothing independent corroborates either.
+
+🔵 **Why this belongs on the verticals shelf rather than in a methodology note.** Installed
+base is the number that decides whether a studio proposes OpenEduCat or Moodle to a ministry.
+🟢 **The honest line for a proposal is: OpenEduCat's installed base is UNVERIFIED and the
+vendor's own figures disagree by 30×.** Moodle's scale, by contrast, is corroborated well
+outside the vendor and is the safer citation when a client asks "who else runs this".
+
+🔴 **And `Gap 502` still stands against OpenEduCat on the licence axis**, independently of the
+marketing: `p376` read its `LICENSE` first-hand and found a pointer to a `COPYRIGHT` file that
+is **404 on three rungs**, plus a claim that the GPL text is *"included at the bottom as
+well"* when `GNU GENERAL PUBLIC` occurs **zero** times in its 8 241 B. 🟢 The **family**
+(LGPL-3.0) is unaffected. 🔴 **The licence memo a studio would write from that payload is.**
+
+🔵 **Net for an engagement:** OpenEduCat remains a legitimate Odoo-based education ERP and a
+reasonable technical starting point. 🔴 **Quote neither its installed base nor its own
+licence file.** Cite the family, cite the payload defect, and size the deployment from the
+client's own estate.
+
+
 ## 🔴 2026-10-22 · `p376` — the education-ERP tier has **no permissively licensed member**, measured; and two inbound licence claims are REFUTED by payload
 
 **Evidence:** [`vertical-erp-grants`](../evidence/vertical-erp-grants.2026-10-22-p376.tsv) ·

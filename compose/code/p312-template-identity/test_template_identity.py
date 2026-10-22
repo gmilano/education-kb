@@ -201,7 +201,14 @@ check("no live registry digest is spelled as a literal in the source — the "
       "tables are DERIVED from the payloads (p308's rule)",
       not any(d in src for d in live_digests),
       "a hand-typed digest is a second source of truth")
-check("the registry holds 4 fill-in templates", len(T.TEMPLATES) == 4,
+# 🟢 p377 (`ACTION p376-C`): 4 -> 5. `digitalcredentials/lti-issuer`'s grant was pinned as
+# `mit-lti-issuer-1076.LICENSE` and it is a THIRD distinct MIT template, digest
+# `7768d3beb7949a85` -- it collapses onto neither the 8-payload template at `16d6b7b5799875f6`
+# nor `mitparen`'s at `d936246a542832f3`. It is the UNTITLED variant: it opens on the copyright
+# line with no "MIT License" title. 🔵 This control is a corpus RATCHET, not an invariant: it
+# exists so no pass can grow the registry silently, and it moves only with the payload that
+# moved it named here.
+check("the registry holds 5 fill-in templates", len(T.TEMPLATES) == 5,
       "got %d" % len(T.TEMPLATES))
 check("the registry holds 6 fixed documents", len(T.DOCUMENTS) == 6,
       "got %d" % len(T.DOCUMENTS))

@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p377` — **three trends, and the first one is a correction to this base's own reading rather than a movement in the market**
+
+### 🔴 `T-p377-1` — "the open-source education-agent space is saturated" was a statement about ENGLISH, and it is withdrawn
+
+🔴 **Three passes graded `9/9`, `9/11` and `5/8` carried and this base read saturation.** 🟢
+Run on the same day against the same shelves, the **English** control returned **0 NEW
+addresses** and four **in-language** legs returned **6**, one of which is a maintained,
+permissive, production-grade agent. 🔵 **`p374`'s invariant `J3` — an in-language leg is a
+different INSTRUMENT, not a fallback — was proved on policy text and now holds for SUPPLY.**
+
+🟢 **The durable form of the trend, for a studio:** the open-source education-AI market looks
+consolidated **in English** and is **more fragmented than that elsewhere**, with national
+curriculum standards (BNCC, and by implication the Mexican, Chilean and Indian equivalents) as
+the organising axis of the non-English long tail. 🔵 A competitor scan run only in English
+will systematically miss the incumbent a local client already knows.
+
+🔴 **The counterweight, published so this is not sold as a gold rush: the yield was 1 usable
+row in 6**, and **3 of 6** new addresses carry **no licence at all**. In-language legs are
+expensive per usable row and are worth running for **placement**, not volume.
+
+### 🟢 `T-p377-2` — grounding has stopped being an architecture diagram and become the product
+
+🟢 **`agente-bncc-professores` is the clearest instance this base has shelved.** The selling
+point is not the model: it is that **the model cannot invent a curriculum code**. The
+habilidade text comes from a database built from the ministry's own PDF, the response schema
+admits only codes that were sent in, and a post-generation check discards anything else.
+
+🔵 **Three independent forces are converging on the same build**, and they appear in three
+different regional blocks of `intel/market.md`:
+
+1. 🔴 **An APAC outcome study** — 25 000+ grade 7–12 students, self-directed AI use **raised
+   homework scores and lowered exam scores**. Ungrounded generation has a measured downside.
+2. 🔴 **EMEA's Article 50**, live since **2 August 2026**: disclose the AI, mark synthetic
+   content. A system that cannot say where a sentence came from cannot comply cheaply.
+3. 🟢 **LATAM's profile** — teachers 20 points above the OECD adoption average inside systems
+   with no curriculum framework for AI.
+
+🟢 **The trend: the defensible education-AI product in 2026 is the one that can show its
+source for every generated claim**, and open-source curriculum grounding is how that is built
+without a frontier-lab contract.
+
+### 🔴 `T-p377-3` — the regulatory floor is converging on an age band while the ENFORCEABLE text diverges on what it restricts
+
+🟢 **Six jurisdictions now draw a line at roughly end-of-primary** — China, Brazil, France,
+New York, Norway, and Korea as the tested exception that draws none. 🔴 **`p376`'s warning
+holds: five of the six are not primary legislation in force.**
+
+🔴 **And this pass adds a sharper problem than softness: two TIER-1 issuers IN THE SAME
+COUNTRY restrict different things.** Norway's directorate bars **access** (*"gis tilgang
+til"*); Norway's government bars **use** (*"brukes"*). 🔵 **Convergence on WHO is not
+convergence on WHAT**, and a vendor shipping one compliance posture across the band will
+satisfy some issuers and fail others.
+
+🟢 **The commercial consequence, and it is the most actionable line in this file:** the
+deliverable is not a policy document and not a banner. It is a **per-stage capability
+decision, taken at the gateway, that leaves an artefact an inspector can read** — which is
+`Pattern 15`, and which `Pattern 31` now makes auditable against *both* readings at once.
+🔵 Two Norwegian TIER-3 outlets call the national advice *"temporary and weakly binding"* and
+*"timid"*: **a weakly binding rule nobody can test is exactly the market for a gate that
+produces evidence.**
+
+
 ## 🟡 2026-10-22 · `p376` — **`p375`'s age floor is 4 of 5, and the fifth jurisdiction was PREDICTED to be a nil before the search ran. A sixth, found by the Korean-language leg, carries the strongest floor yet — as a RECOMMENDATION**
 
 **Evidence:** [`agefloor-fifth-prediction`](../evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv) ·

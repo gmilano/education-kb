@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 `p377`: **the regional legs ran in five languages and the sharpest result is a SPLIT BETWEEN TWO GOVERNMENT ISSUERS — Norway's directorate restricts ACCESS, Norway's government restricts USE, and a product that satisfies one fails the other**
+
+**Evidence:** [`outlet-corroboration`](../evidence/outlet-corroboration.2026-10-22-p377.tsv) ·
+[`agentleg-language-result`](../evidence/agentleg-language-result.2026-10-22-p377.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p377.tsv)
+
+🟢 **`ACTION p376-B` is discharged and the instrument it asked for exists.** `p376` retired the
+unsatisfiable *"retrieve the primary text"* action class and asked for a replacement that this
+harness can actually run: corroborate a claim at **quote level across independently counted
+outlets**, and publish the **outlet count and tier** as the grade. 🔵 Tiers are fixed before
+counting — **TIER-1 ISSUER** (the body that issued it, on its own domain), **TIER-2
+INSTITUTIONAL**, **TIER-3 PRESS**, **TIER-4 COMMENTARY** — and an outlet counts once.
+
+### 🔴 The methodological correction, and it changes how `p376`'s transport note must be read
+
+🔴 **`p376` concluded that every jurisdictional cell on these shelves is "SECONDARY BY
+CONSTRUCTION" because every primary-text host answers NXDOMAIN.** 🟢 **That is true of the
+TRANSPORT and FALSE of the EVIDENCE TIER.** The Norwegian-language leg returned **`udir.no`
+and `regjeringen.no`'s own pages, with their own wording**, through the search index — the
+same two hosts that do not resolve over HTTP from here.
+
+🔵 **So this base has a TIER-1 channel it did not know it had.** It is not a byte-level read of
+the issuer's page, and it must never be written up as one. It is a **tier-1 attribution**:
+strictly better than `p376`'s `n=1`, strictly worse than a payload read. 🟢 Every regional cell
+can now be graded on tier instead of carrying a blanket "secondary" label.
+
+### 🟢 `p376`'s own stated weakness, retired
+
+🔴 **`p376` published this limitation: *"`n=1` on each Norwegian cell."*** 🟢 **The Norway cell
+now rests on 12 outlets across 2 languages — 2 TIER-1 ISSUER, 2 TIER-2, 3 TIER-3 PRESS, 5
+TIER-4.** The age-floor band's sixth jurisdiction is corroborated at the issuer tier.
+
+🔴 **And one circulating variant is REFUTED by that count rather than by argument.** A TIER-4
+outlet reports Norway's measure as a **legislated ban** on *"all Norwegian government
+schools"*. 🟢 Both TIER-1 issuers call it an **anbefaling** — a recommendation. 🔵 This is
+`p376`'s *"a successor must not sell the band as law"*, now with a named outlet attached to the
+error instead of a general warning.
+
+### 🔴 The divergence between two TIER-1 issuers, which is the finding a studio must build against
+
+🔴 **Udir and regjeringen.no do not say the same thing, and the difference is operative.**
+
+| Issuer | Tier | What it restricts | Wording |
+|---|---|---|---|
+| **Udir** (directorate) | TIER-1 | 🔴 **ACCESS** | pupils in grades 1–7 *"skal i all hovedsak ikke **gis tilgang til** generativ KI"* |
+| **regjeringen.no** (government) | TIER-1 | 🟡 **USE** | *"Kunstig intelligens skal i all hovedsak ikke **brukes** i barneskolen"* |
+
+🟢 **A studio must implement the NARROWER one.** A product that merely *discourages use*
+satisfies the government's wording and **fails the directorate's**: Udir's test is whether the
+pupil was **given access to** the surface at all. 🔵 That is a build instruction, not a nuance —
+it is the difference between a policy banner and an **absent feature**, and it is exactly what
+`Pattern 15`'s stage gate already builds. 🟢 **`Pattern 31` below makes the two readings
+separately auditable** so a deployment can prove which one it meets.
+
+🟢 **Corroborated on a third outlet:** the restriction covers the pupil's **own** use, and
+learning **about** AI is **out of scope** (`kiforskolen.no`, TIER-2) — `p376`'s Norway cell,
+independently confirmed.
+
+### 🔵 How to read every regional block below
+
+🟢 Each region carries a `p377` block. 🔴 **Where a leg returned nothing usable, the block says
+so and names the query** — an informed gap is information; silence reads as coverage.
+
+
 ## 🟢 🆕 `p376`: **`p374`'s assessment boundary reaches a FIFTH jurisdiction as the operative legal test — and `p375`'s age floor is refuted as universal by the one jurisdiction tested as a test**
 
 **Evidence:** [`agefloor-fifth-prediction`](../evidence/agefloor-fifth-prediction.2026-10-22-p376.tsv) ·
@@ -915,6 +979,52 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+#### 🟢 🆕 `p377`: the state-bill COUNT this base published last pass is contradicted by this pass's leg — and the disagreement is the finding
+
+🔴 **`p376` published "134 AI-in-education bills across 31 states in 2026". This pass's leg
+returns "nearly 100 state bills" from the PIE Network tracker.** 🟢 **Neither is retracted and
+neither is averaged.** They are different trackers with different inclusion rules — "could
+affect student AI use" is a wider net than "AI-in-education bill" — and 🔵 **a studio quoting
+either must name the tracker, because the two differ by ~35 %.**
+
+🟢 **Instruments with dates, graded by tier.**
+
+| Instrument | Tier of the claim | State |
+|---|---|---|
+| **Idaho SB 1227** — statewide AI framework, mandatory local district policies, AI-literacy standards, educator training, data-privacy requirements, **bars AI from replacing human teachers** | TIER-4 trackers, 🔴 effective dates **disagree across sources** | Enacted per trackers |
+| **Ohio** — every district, community school and STEM school to adopt an AI-use policy by **1 July** | TIER-4 | 🟢 Deadline **passed**; policies should exist now |
+| **Oklahoma SB 1734** — age-appropriate tools, **teacher review of AI output**, **parent opt-out**, district policies before the **2027-28** school year | TIER-4 | Enacted |
+| **Maryland SB 720** — department AI guidance, professional development, district tool evaluation | 🔴 **CONFLICTED** — one tracker says passed one chamber, others say signed | 🔴 **Do not assert** |
+| **NYC DOE** — preliminary guidance **March 2026** on a **traffic-light framework** (permitted / cautioned / prohibited), full playbook expected June 2026 | TIER-4 | Live |
+| **H.R. 8747** — K-12 AI Literacy and Readiness Act of 2026, ESEA amendment letting schools spend federal funds on AI literacy | TIER-4 | 🔴 **Advanced in committee, largely party-line. NOT passed** |
+
+🔴 **`p376`'s standing warning is re-affirmed and now has a second instance:** do not upgrade
+*"advanced in committee"* to *"enacted"* (H.R. 8747), and do not resolve Maryland SB 720 at
+all until an issuer-tier source is found. 🔵 Both would be TIER-1-checkable on a resolving
+host, and neither is from here.
+
+🟢 **The procurement signal, and it is the largest single number in this block.** **Utah** is
+deploying **Google Gemini for Education across all public schools from 2026-27** — roughly
+**680 000 students and 28 000 educators, at no cost to the state**. 🔴 **A free statewide
+incumbent changes what an open-source proposal has to argue in that market**: not cost, but
+data residency, curriculum grounding and exit. 🔵 The counter-position is the one this base
+already holds — a district cannot *prove* a free vendor tool enforces its own K-6 line, and
+`Pattern 15`/`Pattern 31` are exactly that proof.
+
+🟢 **Against that, the district-level floor `p376` found still holds** (NYC's one-year
+moratorium through grade 8; Katy ISD's K-6 chatbot ban), and districts remain the buyers.
+
+🟢 **A placement gained this pass, on evidence rather than inference.**
+[`digitalcredentials/lti-issuer`](https://github.com/digitalcredentials/lti-issuer)'s grant
+payload names **"Center for 21st Century Universities"** (Georgia Tech C21U) in its copyright
+line, read first-hand. 🔵 `p376` carried the row unplaced; it is **North America** on the
+standard `p371-region-place` requires.
+
+🔴 **Declared gap:** this leg returned **no Canadian and no Mexican** material at all. Query:
+*"AI education North America 2026 adoption regulation K-12 district policy"*. 🔵 "North
+America" in every cell on this shelf currently means **the United States**, and a successor
+should run Canada and Mexico as their own legs rather than assume coverage.
+
 #### 🟢 🆕 `p376`: the floor this base has been tracking nationally appears in North America at **DISTRICT** level — which is where the procurement decision actually sits
 
 🟢 **The legislative volume, measured:** **134** AI-in-education bills introduced across **31
@@ -1307,6 +1417,55 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+#### 🟢 🆕 `p377`: the Annex III deferral arrives from a SIXTH independent direction with its REGULATION NUMBER — and Norway's two issuers split on access versus use
+
+🟢 **`Regulation (EU) 2026/1744` — the Digital Omnibus — named, numbered, and corroborated
+across 10 outlets this pass.** 🔵 These shelves have refuted the "August 2026" reading five
+times already; this is the sixth direction and the first time the leg returned the **amending
+instrument's own number** rather than commentary about a deferral.
+
+| Obligation | Date | State on these shelves |
+|---|---|---|
+| **Annex III high-risk** (education: admission, assigning learners, **evaluating learning outcomes**, access level, **exam monitoring**) | **2 December 2027** | 🟢 **CONFIRMED, unchanged.** `p373`'s refutation holds |
+| **Article 50 transparency** (disclose the AI, mark synthetic content) | 🔴 **2 August 2026 — LIVE NOW** | 🟢 Unchanged |
+| Art. 50(2) marking of **pre-existing** generative systems | 2 December 2026 | 🆕 New to these shelves |
+| **Annex I** (AI inside regulated products) | **2 August 2028** (moved from 2 Aug 2027) | 🆕 New to these shelves |
+| Systems operated by **public authorities** | 2 August 2030 | 🆕 New to these shelves |
+| **Emotion recognition in education** | 🔴 **Prohibited since February 2025** | 🟢 Re-confirmed |
+
+🟢 **Publication 24 July 2026, entry into force 27 July 2026**, per several outlets. 🔴 **The
+Omnibus changed TIMING, not classification** — education stays high-risk in Annex III, so the
+sixteen extra months are build time, not an exemption. 🔵 **The commercially sharp reading
+stays what `p373` established: Article 50 is the obligation that binds a student-facing
+chatbot TODAY, and Annex III is the one a procurement cycle must be designed against.**
+
+🔴 **Still TIER-4 only.** Every outlet above is commentary; `eur-lex.europa.eu` is NXDOMAIN
+here, so the consolidated text remains unread. 🟢 Under `ACTION p376-B` that is now a **graded**
+state (10 outlets, 0 TIER-1) rather than an unsatisfiable action.
+
+🟢 **Norway — the age-floor band's sixth jurisdiction, now corroborated at TIER-1 and SPLIT.**
+Full grading is in the pass summary at the top of this file: **12 outlets, 2 of them the
+issuers themselves**, and the two issuers restrict different things — **Udir: access**
+(*"gis tilgang til"*), **regjeringen.no: use** (*"brukes"*). 🔴 **Build against access.**
+
+🔴 **`Gap 503` is no longer unconfirmable — it is an EVIDENCED nil.** Udir undertook to
+elaborate the age-adapted recommendations **by 1 October 2026**. That date passed **21 days**
+before this pass. 🔴 **No outlet at any tier reports publication, and Udir's own page — TIER-1,
+as the index renders it — still describes the elaboration in the future tense**, including
+advice on *how exceptions may be practised*. 🟢 Two outlets, one TIER-1: thin, and declared
+thin. 🔵 This is now a cheap recurring check rather than a blocked one.
+
+🔴 **Two TIER-3 Norwegian outlets add a characterisation this base should carry:** the advice
+is *"midlertidige og lite forpliktende"* — temporary and weakly binding (`utdanningsnytt.no`)
+— and *"pinglete"*, timid (`barnevakten.no`). 🔵 **That matters commercially: a weakly binding
+recommendation that an inspector cannot test is precisely the market for a gate that produces
+an artefact**, which is what `Pattern 31` is.
+
+🟢 **National frameworks named this pass, new to these shelves:** Spain **#CompDigEdu**,
+Portugal's **Digital Transition Plan**, Italy's **National Digital School Strategy** — the
+instruments EU-level duties are being aligned onto locally. 🔵 Teacher training is reported as
+the binding constraint on scale, not procurement.
 
 #### 🟡 🆕 `p376`: the Act's education obligations restated as four CHECKABLE capabilities — and the region's own adoption brake named by a vendor, on the record
 
@@ -1841,6 +2000,53 @@ modification now has two bases that permit one.
 
 ### APAC
 
+#### 🟡 🆕 `p377`: `Gap 504` is NARROWED, NOT CLOSED — APAC higher education is now measured, APAC K-12 is still not, and the one APAC outcome study points the WRONG WAY
+
+🔴 **`p376` opened `Gap 504` because APAC school-level adoption was unfound. This pass ran the
+leg again in English and in Korean and `Gap 504` SURVIVES at K-12.** 🟢 It narrows, because
+higher education is now measured and one K-12 **outcome** signal exists.
+
+🟢 **Higher education, measured.** The **Digital Education Council AI in Higher Education
+Global Survey 2026** — **45 398 responses across 35 countries** — reports:
+
+- 🔴 **APAC faculty intent to use AI FELL from 76 % (2025) to 67 % (2026) — a 9-point drop,
+  and the LOWEST future-adoption intent of any region.**
+- 🟢 **And APAC faculty are simultaneously the MOST optimistic: 57 % say they are excited
+  about AI.**
+
+🔵 **Those two findings are not contradictory and the tension is the regional insight.**
+Enthusiasm is high and *planned* use is falling — the profile of a region that has moved past
+the pilot and hit governance, workload and assessment-integrity friction. 🟢 **In APAC the
+product that sells is not another capability; it is the thing that makes capability
+defensible** — assessment integrity, audit trail, teacher control.
+
+🔴 **The APAC K-12 outcome study, and it must not be softened.** A Chinese study of **25 000+
+grade 7–12 students** found that **self-directed AI use RAISED homework scores and LOWERED
+exam scores**. 🔴 Single county, not national. 🔵 **A studio pitching learner-facing AI into
+an APAC school system should expect this paper in the room**, and the honest answer is the
+architecture, not a denial: generation that produces *practice* rather than *answers*, which
+is `Pattern 15`'s posture and `agente-bncc-professores`'s teacher-facing one.
+
+🟡 **Fragments, published as fragments because that is what they are.** Singapore's
+general-population generative-AI adoption is **61 %** (2026 AI Index) — **not** a school
+figure. Japan's only retrieved number is **84.7 % of 118 first-year medical students**
+(April 2025) — **not** K-12, and not representative. Singapore planned AI-literacy training
+for teachers at all levels by 2026 (no usage percentage given).
+
+🔴 **`Gap 504`, restated precisely so a successor can discharge it:** no cross-national APAC
+**K-12** adoption rate was found by an English or a Korean leg across two passes. 🟢 **The
+named next channel is OECD TALIS or a ministry release** — TALIS already produced the LATAM
+figures in the block below, so the instrument is proven; it has simply not been pointed at
+APAC. 🔵 That is a discharge-able action, not a blocked one.
+
+🟢 **Supply, confirmed first-hand.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)
+— Tsinghua's multi-agent interactive classroom, the second-largest education AI repository
+this base knows — is **MIT, read from the payload this pass** (1 065 B, sha256₁₂
+`ba2525637432`, `Copyright (c) 2026 THU-MAIC`), HEAD **2026-10-22**. 🔴 **The AGPL-3.0 claim
+still on the vendor site and on forks is refuted on the bytes.** 🔵 APAC is the only region
+where this base holds a top-tier, permissive, actively maintained platform **and** has now
+verified its grant at payload level.
+
 #### 🟢 🆕 `p376`: Vietnam is a FIFTH jurisdiction for `p374`'s assessment boundary — and it writes the boundary almost exactly as `p374` derived it
 
 🟢 **This is the pass's strongest cross-regional result and it was not what the leg was looking
@@ -2248,6 +2454,55 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+#### 🟢 🆕 `p377`: LATAM gains the thing it has been short of — not another statistic, but a MAINTAINED, PERMISSIVE, CURRICULUM-GROUNDED AGENT, found only because the leg ran in Portuguese
+
+🟢 **The row.**
+[`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+— **MIT** (payload read first-hand: 1 074 B, sha256₁₂ `2121152fdef1`), HEAD **2026-10-21**,
+~100 tests with CI. It generates **lesson plans and graded assessments anchored to the BNCC**,
+with habilidade codes and their literal text drawn from **1 580 habilidades extracted from the
+MEC PDF** — never from the model — and a post-generation check that discards invented codes,
+malformed questions and invalid answer keys.
+
+🔵 **Placement rests on the STANDARD, which is the evidence `p371-region-place` demands.** The
+payload names BNCC 50 times and expands it in full; the token *"Brasil"* occurs **zero** times.
+
+🔴 **And it was invisible to four consecutive English legs.** 🟢 **This is the regional lesson
+of the whole pass: LATAM supply is under-counted on these shelves not because it is absent but
+because the index was being queried in the wrong language.** Every prior "LATAM is thin on
+open-source supply" reading must be re-opened.
+
+🟢 **Adoption, and the figures are TIER-1/TIER-2, not vendor.** **OECD TALIS 2024**: **56 % of
+secondary teachers in Brazil** and **55 % in Chile** used AI in the preceding year, against an
+**OECD average of 36 %**. 🔵 **LATAM teachers are ~20 points ahead of the OECD mean.** The IDB's
+analysis of **193 regional AI initiatives** (January 2026) finds **59 % use generative AI**.
+
+🔴 **Against that, the capability gap, which is the actual engagement.** **CENIA** finds **13
+of the 19 regional countries it analysed do not teach AI early in schools**, and UNESCO's
+position is that institutional frameworks are **not keeping pace with adoption**. 🟢 **So the
+regional profile is: teachers already using AI, above OECD rates, inside systems with neither
+curriculum nor governance for it.** That is a governance-and-grounding engagement, not an
+adoption one — and it is precisely what a BNCC-anchored generator with a refusal path sells
+into.
+
+🟢 **Institutional movement this pass.** UNESCO launched a **regional Observatory on AI in
+Education for Latin America and the Caribbean** in **Santiago, April 2026**. In **Mexico**, a
+pilot with **CONALEP and DGETI** is building centres of excellence.
+
+🟡 **Regulation, with its uncertainty stated.** **Brazil** — the AI framework bill is
+**postponed**, with a **120-day extension** for the Senate committee (TIER-4, and these
+shelves already carry Brazil's education-specific **Parecer CNE/CP 15/2026** separately).
+**Chile** — a national AI policy exists and a bill is in discussion; the compliance framework
+is still planned. **Mexico** — an ethical framework proposal, **no law passed**. 🔴 All three
+rest on TIER-4 commentary and the legislative status of Brazil and Mexico is explicitly
+flagged as possibly stale by the leg's own sources. 🔵 **Do not quote a LATAM legislative
+status without re-checking it in the same week.**
+
+🟢 **The one durable LATAM compliance fact remains Brazil's `Parecer CNE/CP 15/2026`** age
+floor to the end of 5th grade, already on these shelves and part of the six-jurisdiction band.
+🔵 `agente-bncc-professores` sits **outside** that band by construction: it is teacher-facing,
+so it does not put a generative surface in front of a grade 1–5 pupil at all.
 
 #### 🟢 🆕 `p376`: the region's governance gap now has a HARD NUMBER from a UN agency — and LATAM teacher adoption is ~20 points ABOVE the OECD average
 
@@ -2687,6 +2942,50 @@ name a Brazilian engagement stack whose administration, curriculum and psychomet
 are each a real, licence-read repository. Pattern 28 wires them.
 
 ### Global
+
+#### 🔴 🆕 `p377`: four 2026 market figures that disagree by 28 %, a funding line that is DOWN on every tracker, and one number this pass REFUSES to report
+
+🔴 **The market size, published as a disagreement rather than as a number.**
+
+| Source | 2026 | Horizon | Implied CAGR shape |
+|---|---:|---|---|
+| **Precedence Research** | **$9.58 B** | $136.79 B by **2035** | The most aggressive long curve |
+| **Grand View Research** | **$11.4 B** | $57.2 B by **2033** | |
+| **HolonIQ** | **$12.3 B** | — | The high end of 2026 |
+| **Research & Markets / M&M class** | in band | — | |
+| *(context)* **Fortune Business Insights**, total EdTech | **$380 B** | — | 🔵 A different market; never compare it to the rows above |
+
+🔴 **Low to high is $9.58 B → $12.3 B: a 28 % spread on the CURRENT year**, and the 2035 and
+2033 endpoints are not comparable at all. 🟢 **The honest line for a deck: "AI in education is
+a $9.6–12.3 B market in 2026 depending on definition", with the firm named.** 🔵 Any single
+figure quoted bare is a choice disguised as a measurement.
+
+🔴 **Funding is DOWN, and both trackers agree on direction.** EdTech raised **$1 B in H1 2026,
+down 26 %** from **$1.35 B** in H1 2025. **Q1 2026: $512 M across 63 deals, down 24 %** in
+value year on year. 🟢 **Largest named round: Preply, $150 M, January 2026, at a $1.2 B
+valuation.** 🔵 **Capital is contracting while adoption expands** — which is the condition
+under which buyers prefer open-source foundations with a services wrap over another funded
+SaaS, and it is the strongest commercial argument these shelves carry.
+
+🟢 **Adoption, from the largest instrument in this pass** (Digital Education Council, 45 398
+responses, 35 countries): **88 % of students** use AI in their learning; **77 % of faculty**
+use it in teaching, **up 16 points** on 2025.
+
+🔴 **And the gap that creates the work: only 29 % of students believe their instructors are
+equipped to guide them on AI use, 57 % say their assessments come with inadequate AI guidance,
+and just 31 % of faculty agree their institution involves them meaningfully in shaping AI
+policy.** 🔵 **Near-universal use, institutional readiness at a third.** Every regional block
+above is a local expression of that one global number.
+
+🔴 **One number this pass REFUSES to report, under `ACTION p376-B`.** OpenEduCat's *"30 000+
+institutions"* is published by **one outlet — the vendor — whose own About page says
+`1 000+`**. 🔴 **Grade: 1 outlet, TIER-4, self-contradictory by 30×. Not reportable at any
+value.** 🟢 Full working in `verticals/solutions.md`. 🔵 **This is what the new instrument is
+for: a count of one, from the party that benefits, is a refusal — not a soft citation.**
+
+🔴 **A figure this pass could NOT grade.** "86 % of education organisations use generative AI"
+and "83 % of K-12 teachers" circulate widely; both trace to secondary aggregators with
+US-weighted samples and 2024-25 collection windows. 🟢 Recorded as **ungraded**, not repeated.
 
 #### 🔴 🆕 `p376`: the market figures DISAGREE BY A FACTOR OF FIVE, and this pass publishes the disagreement instead of choosing a number
 

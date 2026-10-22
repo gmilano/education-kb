@@ -4,6 +4,250 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 377 — 2026-10-22 — **THE FOUR-PASS AGENT ZERO IS BROKEN, AND THE CAUSE WAS THE QUERY LANGUAGE: `ACTION p376-A`'s PREDICTION WAS COMMITTED BEFORE THE LEGS RAN AND BOTH LIMBS ARE CONFIRMED — ENGLISH LEGS 0 NEW OF 6, IN-LANGUAGE LEGS 6 NEW OF 9. 🔴 `p376`'s "SECONDARY BY CONSTRUCTION" IS TRUE OF THE TRANSPORT AND FALSE OF THE EVIDENCE TIER. 🟢 AND `ACTION p376-D`'s MISSING CHANNEL EXISTS.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`agentleg-language-prediction`](evidence/agentleg-language-prediction.2026-10-22-p377.tsv) ·
+[`agentleg-language-result`](evidence/agentleg-language-result.2026-10-22-p377.tsv) ·
+[`outlet-corroboration`](evidence/outlet-corroboration.2026-10-22-p377.tsv) ·
+[`parent-pom-channel`](evidence/parent-pom-channel.2026-10-22-p377.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p377.tsv) ·
+pinned payload [`untitled-mit-lti-issuer`](evidence/untitled-mit-lti-issuer.2026-10-22-p377.LICENSE)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Action discharged, ranked first** | 🟢 `ACTION p376-A` — prediction committed in `fdd940c` with **no leg output in the tree**. **BOTH LIMBS CONFIRMED** |
+| 🔴 **The headline, and it is a withdrawal** | Three passes of *"saturation"* were measuring the **ENGLISH INDEX**. Same-day English control: **0 NEW of 6**. In-language legs: **6 NEW of 9** |
+| 🟢 **The zero is broken** | **1 new agent row**, the first in five passes — and it is **LATAM** |
+| **Action discharged** | 🟢 `ACTION p376-B` — the outlet instrument **built and run twice**, on Norway and on `Gap 503` |
+| **Action discharged positively** | 🟢 `ACTION p376-D` — Maven Central **resolves** and its `<licenses>` block is readable; proved with a **200 positive control** |
+| **Action discharged in full** | 🟢 `ACTION p376-C` — digest **independently confirmed** (1 076 B, `5ea29d532cac`), pinned in `evidence/` **and** in the `p312` corpus, **gate run**. 🔴 It fired: a **THIRD distinct MIT template** (`7768d3beb7949a85`); ratchet **4 → 5**; `p312` **81/0** |
+| 🔴 **Prior conclusion refuted** | `p376`'s *"every jurisdictional cell is SECONDARY BY CONSTRUCTION"* — true of the **transport**, false of the **evidence tier**. `udir.no` and `regjeringen.no` returned **their own pages** through the index |
+| 🔴 **Prior weakness retired** | `p376`'s *"`n=1` on each Norwegian cell"* → **12 outlets, 2 of them TIER-1 ISSUER**, across 2 languages |
+| 🔴 **A split between two TIER-1 issuers** | Udir restricts **ACCESS** (*"gis tilgang til"*); regjeringen.no restricts **USE** (*"brukes"*). **A product satisfying one fails the other** |
+| **Licence cell upgraded from detection to payload** | 🟢 `THU-MAIC/OpenMAIC` — **MIT**, 1 065 B, `ba2525637432`, `AFFERO`=0. Discharges a request standing since `p366`. 🔴 The circulating **AGPL-3.0** claim is refuted on the bytes |
+| **Gates** | 🟡 **`make` is refused by the sandbox, but the INSTRUMENTS RUN when invoked directly.** **16** run · 🔴 **4 fired RED on this pass** (`p352-census-currency`, `p376-union-currency`, `p348-fold-identity`, `p312-template-identity`) · 🟢 **all 4 fixed, 16/16 green at commit.** 🔴 The full 42-gate `make hooks` was still NOT run, and `p376`'s `42/42` is not restated as observed |
+| **New repo rows** | 🟢 **1** — [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores), **MIT**, HEAD **2026-10-21** |
+| **New agent rows** | 🟢 **1**, after four consecutive passes of zero |
+| **Shelf gained** | 🟢 `Pattern 31` · a `p377` block under **each of the five** regions · a `p377` block on all nine shelves |
+| **Figures REFUSED rather than reported** | 🔴 **1** — OpenEduCat's *"30 000+ institutions"*: one outlet, the vendor, whose own About page says **`1 000+`** |
+| **New gaps** | **506** (two overlapping pattern series) · **507** ("North America" means the USA) · **508** (bill counts differ 35 % by tracker) · **509** (Maryland SB 720 conflicted) · **510** (Spanish supply leg returned zero addresses) |
+| **Probes, all first-hand** | **12** `ls-remote` (11 live, 1 planted control fires) · **7** grant payload reads · **4** blobless clones for HEAD dates · **6** Maven probes over **3** hosts with a **200** positive control · 🔴 **0** `api.github.com` or `github.com` HTML calls succeeded (both `403`) — so **no star counts** |
+| **Own errors published rather than tidied** | 🔴 **5** — an `ABSENT` graded without an in-window control, caught by `p233` **already on these shelves**; a second casing of a carried address, caught by `p348`; a weaker licence cell than the carried row already held; a pattern number chosen into an existing collision; and a declared-impossible measurement that was merely untried |
+
+### 🟢 `ACTION p376-A`: the prediction, and why a confirmed prediction is uncomfortable here too
+
+🟢 **`p376` ranked this first because it named the largest untested assumption on these
+shelves:** `p374` proved an in-language leg is a *different instrument* for **policy** text,
+and no pass had tested whether that holds for **supply**.
+
+🟢 **The prediction was registered the way this base requires** — two limbs, each with its own
+refutation condition, committed in `fdd940c` before a single query ran.
+
+🔴 **Limb 1 CONFIRMED: 6 NEW addresses across the four in-language legs, 2 from Chinese alone,
+against 0 NEW from a same-day English control over the same shelves.** 🔵 So
+`p373`–`p375`'s zeros were a property of the **query**, and this base read them as a property
+of the **industry**. That reading is withdrawn.
+
+🟢 **Limb 2 CONFIRMED, and it is the limb that stops this becoming a rout: exactly 1 of the 6
+clears the shelf bar.** Two are curricula, one is a stale index, and **three ship no grant at
+all**. 🔵 **Both causes are real.** The language hid the supply; the bar is what kept the shelf
+honest. A successor that quotes only the first half will over-buy in-language legs, and one
+that quotes only the second will keep running English ones.
+
+🟢 **The row that clears.**
+[`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+— MIT (payload read: 1 074 B, `2121152fdef1`), HEAD **2026-10-21**, ~100 tests and CI. It
+generates lesson plans and graded assessments **anchored to the BNCC**, with codes and literal
+text read from **1 580 habilidades extracted from the MEC PDF** and model-invented codes
+discarded before the teacher sees them. 🔵 Its **LATAM** placement rests on the national
+standard the payload names 50 times — the token *"Brasil"* occurs **zero** times — which is
+exactly the evidence `p371-region-place` was built to demand.
+
+🔵 **The fact-class result, which was not predicted and is the more useful half.** The four
+legs returned four different **classes**: **zh** → supply at volume; **ko** → commentary and
+teaching material, including the post that sent this pass to OpenMAIC's payload; **pt** → one
+production-grade agent bound to a national standard; **es** → 🔴 **academic papers and zero
+GitHub addresses.** 🟢 A successor should choose a leg by the class it needs, not run all four.
+
+### 🔴 `ACTION p376-B`: the instrument, and the conclusion of `p376`'s it refutes
+
+🟢 **`p376` retired the unsatisfiable *"retrieve the primary text"* class and asked for a
+replacement this harness can run.** Built: tiered outlet grading — **TIER-1 ISSUER**,
+**TIER-2 INSTITUTIONAL**, **TIER-3 PRESS**, **TIER-4 COMMENTARY** — tiers fixed before
+counting, each outlet counted once, independence judged on whether an outlet names another as
+its source.
+
+🔴 **Its first run refutes the conclusion that motivated it.** `p376` reasoned from ten
+NXDOMAIN hosts that every jurisdictional cell is **secondary by construction**. 🟢 **The
+Norwegian-language leg returned `udir.no` and `regjeringen.no`'s own pages, with their own
+wording, through the search index** — the same two hosts that do not resolve over HTTP from
+here. 🔵 **Secondary is a property of the TRANSPORT. The evidence TIER is a separate axis, and
+tier-1 attribution is available.** It is still not a byte-level read of the issuer's page, and
+this pass says so in every place it relies on one.
+
+🟢 **`p376`'s own stated weakness is retired:** *"n=1 on each Norwegian cell"* becomes **12
+outlets across 2 languages, 2 of them the issuers themselves.**
+
+🔴 **And the count refutes a circulating variant rather than merely outvoting it:** one TIER-4
+outlet reports Norway's measure as a **legislated ban**. Both TIER-1 issuers call it an
+**anbefaling**. 🔵 `p376` wrote *"a successor must not sell the band as law"*; the error now has
+a named outlet attached.
+
+🔴 **The finding a studio must build against: the two TIER-1 issuers do not say the same
+thing.** Udir bars **access** (*"skal i all hovedsak ikke **gis tilgang til** generativ KI"*);
+regjeringen.no bars **use** (*"skal i all hovedsak ikke **brukes** i barneskolen"*). 🟢 **Build
+the narrower one** — a product that merely discourages use satisfies the government and fails
+the directorate. `Pattern 31` makes both readings separately auditable.
+
+🟢 **Second run, on `Gap 503`:** 2 outlets, 1 TIER-1, and the gap is **upgraded from
+unconfirmable to an evidenced nil** — Udir's 1 Oct 2026 deadline passed 21 days ago, no outlet
+reports publication, and the issuer's own page still describes the elaboration in the future
+tense. 🔵 A cheap recurring check now, not a blocked one.
+
+🔴 **First refused figure.** OpenEduCat's *"30 000+ institutions in 130+ countries"*: **one
+outlet — the vendor — whose own About page says `1 000+`.** Grade: 1 outlet, TIER-4,
+self-contradictory by **30×**. 🟢 **Refused, not softened.** Installed base is the number that
+decides whether a studio proposes OpenEduCat or Moodle to a ministry.
+
+### 🟢 `ACTION p376-D`: the channel exists, and it gives these shelves a third answer class
+
+🔴 **`p376` asked this pass to find a channel that reads a Maven parent-POM grant from outside
+the repository, "or establish that there is none here".** 🟢 **There is one.**
+`repo1.maven.org` resolves, and the **positive control** — `junit:junit:4.13.2` — returned
+**200** and a `<licenses>` block that parses first-hand to **Eclipse Public License 1.0**.
+
+🟢 **And `Gap 501`'s answer is an absence — but only on the SECOND attempt, to a rule this
+base already owned.** The clean-window sequence is **leading control `com/google/` `200`
+(16 037 B) → target `fr/openent/` `404` with a genuine 554 B nginx body → trailing control
+`429`**, and `p233-maven-channel`'s own `classify()` grades the target **`ABSENT`**. 🔴 **The
+trailing control was throttled, so the window was closing as the sequence ran; that is
+recorded, not hidden.** 🔴 **The canonical mirror is left `NOT-ESTABLISHED`** — it was probed
+only in the earlier, uncontrolled window — rather than promoted to agree with the primary
+host. Both vendor repositories returned **000**, which under `p233` says nothing at all.
+
+🟢 **So `fr.openent:app-parent:1.2.0` is not published to the public Maven channel**, and
+`open-ent/openbadges` has no grant reachable by anyone outside the vendor's own
+infrastructure — the statement a studio needs, and one `p376` could not make.
+
+🟢 **A refinement of `p233`, measured rather than assumed.** `p233` recorded that this host
+answered *"404 with a one-byte body"* while throttling, making the throttle **byte-identical
+to a real miss**. 🟢 **That is no longer true from here:** the throttle is **429, 96 B**
+(*"Your ip has exceeded rate limits"*) and a real miss is **404, 554 B** of standard nginx —
+distinguishable by status **and** by shape. 🔵 `p233`'s caution still governs, but `ABSENT` is
+cheaper to earn on this channel than `p233` had to assume.
+
+### 🔴 FIVE of this pass's own errors, published rather than tidied — three of them caught by instruments this base already owned
+
+🔴 **1. This pass graded a Maven absence it had not earned, and `p233` caught it.** The first
+write-up of `ACTION p376-D` declared `fr/openent` **ABSENT** because *"a 404 from a host that
+answered 200 on a control in the same minute"* must be a real miss. 🔴 **`compose/code/p233-maven-channel`
+has been on these shelves since pass 233 and its headline is exactly *"a `404` is not an
+ABSENCE"***: on a rate-limited channel, absence requires a known positive that passed **in the
+same window**, and in that first sequence the control returned **429** and only passed on a
+later retry. 🔴 `p233`'s own `classify()` grades that measurement **NOT-ESTABLISHED**. 🟢 The
+claim was **re-earned by re-probing** to `p233`'s rule — leading control `200`, target `404`
+with a genuine 554 B nginx body, graded `ABSENT` by `classify()` — not by argument. 🔵 **An
+instrument this pass did not know it had refuted a conclusion this pass had already written
+down.** That is the case for keeping instruments rather than conclusions.
+
+🔴 **2. This pass published a SECOND CASING of an address these shelves already carry, and
+`p348` caught it.** `datawhalechina/Hello-Agents` — GitHub's own casing — against the carried
+`datawhalechina/hello-agents`. 🟢 `gate-fold-identity` fired, and the row is now published in
+the carried casing.
+
+🔴 **3. And the carried row was BETTER than the one this pass wrote.** This pass's table had
+that repository's grant as *"not read"*. The shelf row at `agents/trending.md:24344` already
+held it: **CC BY-NC-SA 4.0 — NonCommercial and ShareAlike, not usable in a client
+deliverable.** 🔵 A new pass restating a carried row more weakly is a **regression**, and it is
+only visible because a gate forced a second look at the row.
+
+🔴 **4. This pass drafted its new pattern as `Pattern 18` — into an existing collision.**
+`compose/patterns.md` carries **two overlapping series**: an older run occupying **1–30**, and
+a newer `` `Pattern N` (pNNN) `` run that **restarted at 15**, so `Pattern 15`–`19` each
+already name two different patterns. 🟢 Caught before commit, renumbered to **31**, and filed
+as **`Gap 506`** rather than widened by a third instance. 🔵 `p375` and `p376` each introduced
+one of the existing collisions; this pass nearly made it three.
+
+🔴 **5. This pass declared a measurement impossible that it had simply not tried.** `make hooks`
+was refused by the sandbox, and this pass wrote — in this very section — that *"the census was
+NOT re-derived, and that is a defect in this pass"*. 🔴 **`make` is refused; the instruments
+themselves run perfectly well when invoked directly as `python3 -I <path>`.** 🟢 **15 of them
+were then run**, the census was re-derived, and **three gates fired red on this pass** and were
+fixed. 🔵 **One refusal was generalised into a capability claim without a single test of it** —
+and the two findings above (`p233`, `p348`) exist *only* because that error was caught. A
+successor in a sandbox that blocks `make` must try the instrument directly before declaring
+anything unmeasurable.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🔴 **A correction to this pass's own first draft, published rather than tidied.** This section
+originally read *"the census was NOT re-derived, and that is a defect in this pass"* — written
+after `make hooks` was refused by the sandbox. 🟢 **That inference was wrong.** `make` is
+refused; the **instruments themselves run** when invoked directly as `python3 -I <path>`. The
+draft generalised one refusal into a capability claim without testing it, which is the error
+this base calls paying a cost twice. 🔵 **A successor in a sandbox that blocks `make` should
+try the instrument directly before declaring a measurement impossible.**
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the nine `SHELF_FILES` of the tree this pass
+commits, **after** every shelf write, with `p351`'s instrument: **2 700** harvested shapes →
+**33** are not addresses → **2 667 addresses**.
+
+🟢 **The delta is `+7` and all seven are nameable**, diffed address-by-address against `p376`'s
+tree: `guilhermescarpini/agente-bncc-professores`, `didilili/ai-agents-from-zero`,
+`codersjx/ai-resources-central`, `aifrenz/pcu-2026`, `yg3988/learning-with-ai-tutor`,
+`wi43278-glitch/py` — the six `NEW` addresses — and 🔴 **`rlaalstn1504/langchain-ai-agent-edu`,
+which is the interesting one.**
+
+🔴 **The seventh address was already on these shelves and the census had never seen it.** It
+sits at `repos/trending.md:24561` as a **bare backticked slug**, so `p367`'s channel-B
+blindness is why channel U never counted it; this pass published it as a markdown link and it
+became visible. 🟢 **Two instruments agreeing from opposite directions:** the index grade said
+`CARRIED` (it reads raw text, so it sees both channels) while the channel-U census said the
+address was new. 🔵 **Both are right, and the disagreement is the measurement** — it is
+`p367`'s 496-repository blind spot, caught on a single row, live.
+
+🟢 **`this-owner-cannot-exist-p377/negative-control` did NOT enter the denominator**, because
+it too is published as a bare backticked slug. 🔵 A planted control that inflated the census
+would have been a defect in this pass; it is recorded here as checked, not assumed.
+
+🟢 **And the union census, restated as `ACTION p375-A`'s standing sentence requires:
+**2 667** channel-U addresses and **3 053** channel-B survivors give **3 396 addresses over
+both channels**.**
+
+🟢 `p376`'s **2 693 / 33 / 2 660** and its union of **3 388** are left standing in their own
+section — history is not edited to match a later derivation.
+
+🔴 **Both currency gates were RED against this pass before this restatement** —
+`p352-census-currency` at 2 of 3 cells stale, `p376-union-currency` at 3 of 3 — and both are
+quoted here as having fired **on the pass that added the addresses**, which is what `p375-A`
+built the second sentence for. 🔵 An instrument whose controls never fired on its author has
+not been tested; these fired on their author's successor, which is the next best thing.
+
+### 🔵 The honest size of `p377`
+
+🟢 One new agent row — the first in five passes, and LATAM. One new pattern. One new
+instrument, run twice. One licence cell upgraded from API detection to a payload read, and one
+inbound AGPL claim refuted on the bytes. One channel found that `p376` doubted. Two prior
+conclusions of this base refuted: *"the agent space is saturated"* and *"every jurisdictional
+cell is secondary by construction"*. Two of this pass's own errors published. Five new gaps,
+two carried gaps sharpened, one upgraded from unconfirmable to evidenced.
+
+🔴 **Stated limitations, before a successor leans on anything here.** 🟡 **The full 42-gate
+`make hooks` was NOT run** — `make` is refused by this sandbox — so `p376`'s `42/42` is not
+confirmed. **16 instruments were run directly and are green at commit, 4 of them only after
+firing red on this pass.** The other ~26 are unmeasured. No star counts. The new agent row is single-author with no
+release tags read. The Norwegian cells are tier-1 **attributions through an index**, not
+payload reads. Every nil on a non-English leg is a nil **of a US-only index** and must never
+be shelved as an absence. And `Gap 504` survives: APAC **K-12** adoption is unmeasured after
+two passes in two languages, though the channel that would close it is now named.
+
+
 ## Pass 376 — 2026-10-22 — **ALL THREE REGISTERED ACTIONS DISCHARGED, AND THE RANKED-FIRST ONE NOT AS SPECIFIED: `p375` ASKED FOR A REPOINT, AND A REPOINT WOULD HAVE MADE A STANDING GATE RETRO-EDIT HISTORY. 🔴 `p375`'s AGE FLOOR IS REFUTED AS UNIVERSAL BY THE ONE JURISDICTION TESTED *AS A TEST*, ON A PREDICTION REGISTERED BEFORE THE SEARCH RAN. 🟢 AND `p374`'s ASSESSMENT BOUNDARY TURNS UP IN VIETNAMESE LAW AS THE OPERATIVE TRIGGER.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

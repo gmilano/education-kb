@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p377` — **THE FOUR-PASS ZERO IS BROKEN, AND IT WAS BROKEN BY THE QUERY LANGUAGE. `ACTION p376-A`'s prediction was committed before the legs ran; BOTH LIMBS CONFIRMED. 🔴 And `OpenMAIC`'s MIT cell — carried on licence-API detection since `p366` — is now READ FROM THE PAYLOAD.**
+
+**Evidence:** [`agentleg-language-prediction`](../evidence/agentleg-language-prediction.2026-10-22-p377.tsv) ·
+[`agentleg-language-result`](../evidence/agentleg-language-result.2026-10-22-p377.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p377.tsv)
+
+🟢 **`ACTION p376-A` is discharged, and the prediction was registered the way this base
+requires**: committed in `fdd940c` with **no leg output in the tree**, before a single query
+ran. Both limbs are **CONFIRMED**, and they are independent findings.
+
+| | English legs | In-language legs (zh · ko · pt · es) |
+|---|---:|---:|
+| Addresses graded | 6 | 9 |
+| `carried` NEW | **0** | **6** |
+| New rows clearing this shelf's bar | 0 | **1** |
+
+🔴 **Limb 1 CONFIRMED — so three passes of "saturation" were measuring the ENGLISH INDEX.**
+`p373`–`p375` graded `9/9`, `9/11` and `5/8` carried and this base read that as saturation of
+education AI. Run on the **same day against the same shelves**, the English control returned
+**0 NEW** and the four in-language legs returned **6**. 🔵 **`p374`'s invariant `J3` — an
+in-language leg is a different INSTRUMENT, not a fallback — was established on policy text and
+now holds for SUPPLY.** No pass may quote the prior zeros as a fact about the industry.
+
+🟢 **Limb 2 CONFIRMED, and it is the half that stops this becoming a rout.** Of the 6 NEW
+addresses, **exactly 1** clears the bar. Two are curricula, one is a stale list, and **three
+ship no grant at all**. The bar is real and it is what held the shelf at zero; the language
+is what hid the one row that clears it.
+
+### 🟢 The row. First agent row in five passes, and it is LATAM
+
+| Need on day one | Build on | Licence | ★ | Region |
+| --- | --- | --- | ---: | --- |
+| 🆕 Lesson plans and graded assessments that an inspector can trace to the national curriculum | [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | **MIT** (1 074 B, sha256₁₂ `2121152fdef1`) | — | **LATAM** |
+
+🟢 **Why it clears the bar when five siblings did not.** MIT read from the payload; HEAD
+**2026-10-21**; ~100 tests under `node:test` with CI on every push; and the thing it actually
+does is the thing this base keeps saying LATAM engagements need. It generates lesson plans and
+exams **anchored to the BNCC** — the official Brazilian curriculum — with the habilidade codes
+and their literal text read from a database of **1 580 habilidades extracted from the MEC
+PDF**, never from the model. A JSON Schema accepts only the codes that were sent in, and a
+post-generation check discards invented codes, questions missing their four alternatives,
+duplicate alternatives and invalid answer keys. 🔵 **That is the grounding architecture this
+base has been describing as a pattern, shipped by someone else, in production, under MIT.**
+
+🟢 **Its placement satisfies `p371-region-place` on a STANDARD, not a filename or a guess.**
+The payload names **BNCC (Base Nacional Comum Curricular)** 50 times, expands it in full, and
+names the **MEC** PDF as its source. 🔵 The token *"Brasil"* occurs **zero** times — the LATAM
+placement rests entirely on the national standard the code implements, which is exactly the
+evidence the gate was built to require.
+
+🔴 **Stated limits, before a studio leans on it.** Single author. No release tags read by this
+pass. It is a **teacher-facing** generator, not a learner-facing tutor, so it does not touch
+the age-floor band at all — which, for grades 1–7 work, is a feature. And it ships
+`gemini-embedding-2` vectors inside a committed SQLite file: a client who needs a different
+embedding provider re-indexes 1 580 rows, which is minutes, but it is not zero.
+
+### 🔴 `OpenMAIC`: the licence cell this shelf has been carrying on detection is now read from the bytes
+
+🟢 **`p366` wrote the request and `p367` carried it:** *"these three cells should be re-read
+from payload by the next pass that can, and `OpenMAIC`'s especially, because its MIT claim is
+the reason it is worth promoting."* 🟢 **This pass could, and did.**
+
+🟢 **[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) `main/LICENSE` — 1 065 B,
+sha256₁₂ `ba2525637432`, `Copyright (c) 2026 THU-MAIC`, titled `MIT License`.** Token counts
+on the payload: `AFFERO` **0** · `GNU GENERAL PUBLIC` **0** · `Apache` **0** · `MIT License`
+**1**. HEAD **`e19ed13`, 2026-10-22** — committed the day this pass read it.
+
+🔴 **And the AGPL-3.0 claim in circulation is REFUTED ON THE PAYLOAD, not merely doubted.**
+The project's own marketing site and at least one fork still publish **AGPL-3.0 with a
+commercial-licensing contact**. 🔵 **A studio that had checked the vendor site instead of the
+repository would have priced a copyleft risk that does not exist** — the inverse of the
+`PageLM` trap two sections below, and the reason this shelf reads payloads.
+
+🔵 **How this pass came to look.** The **Korean** leg returned a post whose subject was
+precisely that OpenMAIC's licence is still being reported wrongly. The English legs did not
+return it. That is `J3` paying for itself twice in one pass: once in supply, once in a
+correction.
+
+### 🔵 The fact-class result, which was not predicted and is the more useful half
+
+🔴 **The four legs did not return the same kind of thing in four languages. They returned four
+different CLASSES**, and a successor should choose a leg by the class it needs:
+
+| Leg | What it actually returns | Use it for |
+|---|---|---|
+| **zh** | Large maintained platforms and curricula, with real addresses | Supply discovery. The highest-volume leg |
+| **ko** | Commentary and teaching material — including the licence correction above | Auditing a claim this base already carries |
+| **pt** | **One production-grade agent bound to a national curriculum standard** | Placement, not volume |
+| **es** | 🔴 **Academic only** — `alphaxiv`/arXiv papers, **zero** GitHub addresses | Literature, not supply |
+
+🔴 **The Spanish nil is declared with its query, per `ACTION RE`:** *"agentes de IA educación
+código abierto github licencia MIT 2026 tutor inteligente"*. `VTutor` was then chased on a
+second targeted leg and **no GitHub URL and no licence** was found on either. 🔵 **This is the
+reach of a US-only index, not evidence that Spanish-language supply does not exist** — and a
+successor must not shelve it as an absence.
+
+### 🔴 What this pass could NOT do, stated before anything below is trusted
+
+🟡 **`make` is refused by this sandbox — the same refusal `p336` recorded — so the full
+42-gate `make hooks` was NOT run and `p376`'s `42/42` is NOT restated as observed.** 🔴 **But
+this pass first wrote that no gate could be measured at all, and that was wrong:** `make` is
+refused; **the instruments run when invoked directly** as `python3 -I <path>`.
+
+🟢 **16 instruments were run that way, and 4 of them fired RED on this pass:**
+
+| Gate | Verdict |
+|---|---|
+| `p352-census-currency` · `p376-union-currency` | 🔴 **RED** — this pass added 7 addresses and had not restated either standing census sentence. 🟢 Both restated, both green |
+| `p348-fold-identity` | 🔴 **RED** — this pass published `datawhalechina/Hello-Agents`, a **second casing** of the carried `datawhalechina/hello-agents`. 🟢 Corrected to the carried casing, green |
+| `p312-template-identity` | 🔴 **RED** — the `ACTION p376-C` payload is a **third distinct MIT template**, so the corpus ratchet moved **4 → 5**. 🟢 Updated with the payload named in the control; **81/0** |
+| `p383-region-heading` · `p277-table-structure` · `p283-repo-identity` · `p223-selfclaim-date` · `p371-region-place` (23/23) · `p279-absence-claims` · `p308-shelf-consistency` · `p349-keyed-authors` · `pass275-grant-enumeration` · `p372-dead-citation` · `p371-backlog-grade` · `p351-address-shape` | 🟢 **PASS** |
+
+🔵 **The four reds are the most valuable thing in this block**: they fired on the pass that
+caused them, which is what `p352` and `ACTION p375-A` built them for. 🔴 **~26 gates remain
+unmeasured.**
+
+🟢 **Everything published above was verified on the channels that WERE available** —
+`git ls-remote`, `raw.githubusercontent.com`, blobless clones and `repo1.maven.org` — and
+**every repository figure in this pass is first-hand**.
+
+🔴 **`ACTION p377-A` — the next pass with `make` available must run the full `make hooks`
+BEFORE touching a byte** and report the delta across `p376 → p377`, covering the ~26 gates
+this pass could not reach.
+
+
 ## 🔴 2026-10-22 · `p376` — **fourth consecutive pass with no agent row, and `ACTION p375-C`'s instrument change is what finally EXPLAINED the zero instead of repeating it**
 
 🟢 **`ACTION p375-C` is discharged.** `p375` registered it in preference to running the agent
@@ -257,6 +382,7 @@ and the tier tables; the audit sections are for whoever questions a licence cell
 | 🆕 Issue or verify a credential the client can show a regulator | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** | — | North America (1EdTech) |
 | 🆕 K-12 student data against the US state standard | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | **Apache-2.0** | — | North America (Ed-Fi Alliance) |
 | 🆕 National-scale delivery platform already in production | [`project-sunbird/sunbird-portal`](https://github.com/project-sunbird/sunbird-portal) | **MIT** | — | APAC (India) |
+| 🆕 Lesson plans and graded assessments traceable to the national curriculum | [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | **MIT** | — | **LATAM** (BNCC/MEC) |
 | Reach a client LMS without writing a connector | the MCP tier → `## LMS-connected agents` | mostly MIT | — | mixed |
 
 🔵 **Reading the rest of the file.** `## Tutoring and learning agents` is the main shelf.

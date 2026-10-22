@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p377` — **no new foundational repo, and for once the reason is measured: `ACTION p376-C`'s payload is pinned and `ACTION p376-D`'s missing channel turns out to EXIST**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p377.tsv) ·
+[`parent-pom-channel`](../evidence/parent-pom-channel.2026-10-22-p377.tsv) ·
+pinned payload [`untitled-mit-lti-issuer`](../evidence/untitled-mit-lti-issuer.2026-10-22-p377.LICENSE)
+
+🔴 **No address this pass found is a foundation.** The six new addresses are one agent (shelved
+on `agents/top.md`), two curricula, a stale index and three grantless teaching repositories.
+🟢 Stated as a measured nil rather than padded with a row that would not survive a licence read.
+
+### 🟢 `ACTION p376-C` — the untitled MIT payload is pinned, and `p376`'s digest is independently confirmed
+
+🟢 **`digitalcredentials/lti-issuer`'s grant was re-read first-hand this pass: `master/LICENSE`,
+**1 076 B**, sha256₁₂ **`5ea29d532cac`** — byte-for-byte what `p376` recorded.** 🔵 Two passes,
+two independent reads, one digest: `p376`'s measurement is confirmed rather than inherited.
+
+🟢 **It is pinned at
+[`evidence/untitled-mit-lti-issuer.2026-10-22-p377.LICENSE`](../evidence/untitled-mit-lti-issuer.2026-10-22-p377.LICENSE)**,
+and the bytes are now in the tree, so the template the credentialing tier ships is
+identifiable rather than merely classifiable — which is what `ACTION p376-C` was for.
+
+🟢 **And it IS in the gate corpus, with the gate run — `ACTION p376-C` is fully discharged.**
+The payload is committed as `compose/code/p312-template-identity/fixtures/mit-lti-issuer-1076.LICENSE`,
+where `fixtures.py` derives `DECLARED` from the payloads on disk rather than from a typed list.
+
+🔴 **It fired the gate, and the firing is the finding.** `p312`'s corpus ratchet asserted
+*"the registry holds 4 fill-in templates"* and the pinned payload made it **5**. 🟢 **This
+payload is a THIRD DISTINCT MIT TEMPLATE** — normalised digest **`7768d3beb7949a85`** — which
+collapses onto **neither** the eight-payload template at `16d6b7b5799875f6` **nor**
+`mitparen`'s at `d936246a542832f3`.
+
+🔵 **So the credentialing tier does not merely ship an untitled MIT grant; it ships a template
+this base had never seen.** `Gap 505`'s asymmetry narrows by one **identified** payload rather
+than by one merely classified. 🟢 The ratchet is updated **4 → 5** with the payload that moved
+it named in the control itself, and `p312-template-identity` is **81 passed / 0 failed**, up
+from 80.
+
+🟢 **And the read produced a placement `p376` did not have.** The payload's first line is
+`Copyright 2020 Center for 21st Century Universities` — **Georgia Tech's C21U**, a named
+institution. 🔵 The row was carried unplaced; it is **North America** on the evidence standard
+`p371-region-place` requires.
+
+🔵 **A template observation, offered as data and not as a fixture.** This pass read four MIT
+payloads: three at **1 065 B** (`OpenMAIC`, `ai-agents-from-zero`, `AI-Resources-Central`) and
+one at **1 074 B** (`agente-bncc-professores`), differing **only** in the copyright line — a
+fourth independent confirmation of `p312`'s finding that MIT length is
+`constant(template) + len(holder)`. `lti-issuer` at **1 076 B** is the **untitled** variant: it
+opens on the copyright line with no `MIT License` title at all.
+
+### 🟢 `ACTION p376-D` — the channel `Gap 501` needed exists, and it is calibrated
+
+🔴 **`p376` asked this pass to find a channel that reads a Maven PARENT POM grant from outside
+the repository, "or establish that there is none here".** 🟢 **There is one.**
+
+| Order | Probe | HTTP | Body | `p233` grade |
+|---:|---|---:|---:|---|
+| 1 | 🟢 **LEADING CONTROL** `maven2/com/google/` | **200** | 16 037 B | 🟢 **PRESENT** — the channel was serving real responses immediately before the target |
+| 2 | **TARGET** `maven2/fr/openent/` | 404 | 554 B (genuine nginx) | 🟢 **ABSENT** — earned, with a passing control in the same window |
+| 3 | 🔴 TRAILING CONTROL `junit-4.13.2.pom` | **429** | 96 B | 🔴 **THROTTLED** — the window degraded after the target. Recorded, not hidden |
+| — | 🟢 **GRANT READ** `junit-4.13.2.pom` | **200** | 27 018 B | 🟢 **PRESENT** — `<licenses>` parsed first-hand to **Eclipse Public License 1.0** |
+
+🟢 **So `Gap 501` is re-scoped and the new scope is EARNED.** `fr/openent` is **absent from
+Maven Central** — the whole groupId. [`open-ent/openbadges`](https://github.com/open-ent/openbadges)'s
+parent POM is therefore not merely unread: it is **not published to the public Maven channel
+at all**, and no grant for it is reachable by anyone outside the vendor's own infrastructure.
+🔵 That is the statement a studio needs, and `p376` could not make it.
+
+### 🔴 This pass got that wrong first, and an instrument these shelves already owned caught it
+
+🔴 **The first draft of this section graded `fr/openent` ABSENT on the strength of a 404 "from
+a host that answered 200 on a control in the same minute".** 🔴 **It then found
+`compose/code/p233-maven-channel` already in this repository, whose headline is precisely
+*"a `404` is not an ABSENCE"***: on a rate-limited channel **presence is provable and absence
+is not**, unless a known positive passed **in the same window**.
+
+🔴 **In the first sequence the control returned `429` and only passed on a later retry — so no
+control passed in the target's window, and `p233`'s own `classify()` grades that first
+measurement `NOT-ESTABLISHED`, not `ABSENT`.** 🟢 **The claim was re-earned by re-probing to
+`p233`'s rule, not by argument.** 🔵 An overstatement this pass had already written down was
+caught by an instrument it did not know it had — which is the case *for* keeping instruments
+rather than conclusions.
+
+🟢 **And the re-probe refines `p233` on a point `p233` could not have known.** `p233` recorded
+that this host answered **"404 with a one-byte body" while throttling**, making the throttle
+**byte-identical to a real miss**. 🟢 **That is no longer true from here:** the throttle is
+**HTTP 429, 96 B** (*"Your ip has exceeded rate limits"*), a real miss is **HTTP 404, 554 B**
+of standard nginx. 🔵 They differ by status **and** by shape. `p233`'s caution still governs —
+a control must still pass in-window — but **ABSENT is cheaper to earn on this channel than
+`p233` had to assume.**
+
+🔴 **Two limits kept rather than smoothed.** The **canonical mirror**
+`repo.maven.apache.org` was probed only in the first, uncontrolled window; its 404 is left
+**NOT-ESTABLISHED** rather than promoted to agree with the primary host. And both vendor
+repositories returned **000** — transport never completed, which under `p233` says nothing at
+all about the resource.
+
 ## 🟡 2026-10-22 · `p376` — one row in the **credentialing / interop** tier, published WITH its staleness, and one withheld for having no grant at all
 
 **Evidence:** [`credentialing-layer-grade`](../evidence/credentialing-layer-grade.2026-10-22-p376.tsv) ·

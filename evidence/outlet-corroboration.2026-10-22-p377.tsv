@@ -1,0 +1,60 @@
+# ACTION p376-B — the REPLACEMENT ACTION CLASS, built and then run on this base's own
+# weakest cell.
+#
+# p376 measured that every primary-text host answers NXDOMAIN from this environment
+# (udir.no, regjeringen.no, eur-lex.europa.eu, unesco.org, 1edtech.org, goe.go.kr ...), so an
+# action phrased "retrieve the primary text" is UNSATISFIABLE here and was retired.  The
+# replacement it registered: corroborate a claim at QUOTE level across INDEPENDENTLY COUNTED
+# OUTLETS, and publish the outlet count as the grade.  This file is that instrument's first run.
+#
+# THE GRADING RULE, fixed before the count so it cannot be bent to the result:
+#   TIER-1 ISSUER        the body that issued the instrument, on its own domain
+#   TIER-2 INSTITUTIONAL a public body, university or sector organisation that is not the issuer
+#   TIER-3 PRESS         an identifiable news outlet with an editor
+#   TIER-4 COMMENTARY    blog, substack, forum, vendor or aggregator
+#   An outlet counts ONCE.  Outlets are INDEPENDENT only if neither cites the other as its
+#   source.  A quote must be a QUOTE — a proposition attributable to the outlet's own text,
+#   not this pass's paraphrase.
+#
+# 🔴 THE FINDING THAT MATTERS MOST, and it corrects how p376's transport note should be read:
+# THE INDEX REACHES TIER-1 ISSUER PAGES ON HOSTS THAT ARE NXDOMAIN BY TRANSPORT.  udir.no and
+# regjeringen.no do not resolve over HTTP from here, and both returned their OWN pages, with
+# their own text, through the search index.  "SECONDARY BY CONSTRUCTION" is therefore true of
+# the TRANSPORT and NOT of the EVIDENCE TIER.  A successor must stop treating the two as one.
+#
+## CLAIM 1 — chosen because p376 named it as its own n=1 weakness: "Norway: grades 1-7,
+## pupils should in general not be GIVEN ACCESS TO generative AI; grades 8-10 gated on the
+## teacher's competence; learning ABOUT AI explicitly out of scope; effective late Aug 2026."
+outlet	tier	domain	leg_language	quote_or_proposition_attributable_to_that_outlet	independent
+udir.no	TIER-1 ISSUER	udir.no	no	"elevene paa 1.-7. trinn i all hovedsak ikke skal gis tilgang til generativ KI" — the issuer's own wording, and it is ACCESS that is restricted	YES
+regjeringen.no	TIER-1 ISSUER	regjeringen.no	no	"Kunstig intelligens skal i all hovedsak ikke brukes i barneskolen" — the government frames it as USE in barneskolen, not as ACCESS	YES
+kiforskolen.no	TIER-2 INSTITUTIONAL	kiforskolen.no	no	The restriction covers pupils' OWN use; "aa laere om KI ... er ikke omfattet av begrensningen" — learning ABOUT AI is out of scope	YES
+utdanningsnytt.no	TIER-3 PRESS	utdanningsnytt.no	no	Udir's advice is "midlertidige og lite forpliktende" — temporary and weakly binding	YES
+barnevakten.no	TIER-3 PRESS	barnevakten.no	no	Characterises it as a "pinglete veileder" — a timid guide.  Critical framing, same underlying fact	YES
+sol.no	TIER-3 PRESS	sol.no	no	"Regjeringen innfoerer nasjonale anbefalinger for kunstig intelligens i skolen" — national RECOMMENDATIONS	YES
+all-things-nordic.com	TIER-4 COMMENTARY	all-things-nordic.com	en	Gives the effective date as the start of the 2026-27 school year, late August	YES
+dig.watch	TIER-4 COMMENTARY	dig.watch	en	"Norway restricts generative AI use in primary schools"	YES
+aacrao.org	TIER-2 INSTITUTIONAL	aacrao.org	en	"Norway imposes near ban on AI in primary school" — a US registrars' association, independent sector body	YES
+educationtracker.org	TIER-4 COMMENTARY	educationtracker.org	en	Dates the national recommendations to June 2026	YES
+universal-sci.com	TIER-4 COMMENTARY	universal-sci.com	en	Ties the restriction to declining national school results	YES
+thefinkelfiles.substack.com	TIER-4 COMMENTARY	thefinkelfiles.substack.com	en	🔴 REFUTED BY THE TIER-1 OUTLETS: calls it a legislated BAN on "all Norwegian government schools".  Both issuers say ANBEFALING / recommendation	YES
+#
+claim_1_grade	12 OUTLETS · 2 TIER-1 ISSUER · 2 TIER-2 · 3 TIER-3 PRESS · 5 TIER-4 · across 2 LANGUAGES
+claim_1_verdict	CORROBORATED AT TIER 1.  p376's "n=1 on each Norwegian cell" is RETIRED: the cell now rests on the issuer's own text plus 11 further outlets.
+claim_1_divergence	🔴 The two TIER-1 issuers DO NOT SAY THE SAME THING.  Udir restricts ACCESS ("gis tilgang"); regjeringen.no restricts USE ("brukes").  Access and use are different obligations and a studio building a stage gate must implement the NARROWER one (access), because a product that merely discourages use satisfies regjeringen.no and fails Udir.
+claim_1_refuted_variant	🔴 One TIER-4 outlet reports a statutory BAN.  Refuted by both TIER-1 issuers.  Published here rather than dropped, because the outlet count would otherwise look like unanimity.
+#
+## CLAIM 2 — Gap 503, carried by p376 as unconfirmable: "Udir said it would elaborate the
+## age-adapted recommendations BY 1 OCTOBER 2026.  That date has passed."
+outlet	tier	domain	leg_language	quote_or_proposition_attributable_to_that_outlet	independent
+udir.no	TIER-1 ISSUER	udir.no	no	Its page is titled "Nye anbefalinger om tilpasset bruk av KI etter trinn og alder" and still describes the elaboration as something being PREPARED; it says Udir "vil ogsaa gi raad om hvordan unntak kan praktiseres"	YES
+kiforskolen.no	TIER-2 INSTITUTIONAL	kiforskolen.no	no	States the deadline explicitly — the advice was to be elaborated by 1 Oct 2026 — and the page's own last-updated state is July 2026	YES
+#
+claim_2_grade	2 OUTLETS · 1 TIER-1 ISSUER · 1 TIER-2 · 1 language.  THIN, and declared thin.
+claim_2_verdict	🔴 NOT CONFIRMED PUBLISHED, and that is now an EVIDENCED nil rather than an unreachable one.  The deadline passed 21 days before this pass.  No outlet at any tier reports publication, and the ISSUER'S OWN PAGE, as the index renders it, still describes the elaboration in the future tense.
+claim_2_what_would_close_it	A dated Udir page or a TIER-2/TIER-3 outlet reporting the elaborated recommendations as issued.  This is now a CHEAP recurring check, not a blocked one.
+#
+## THE INSTRUMENT'S OWN LIMITS, stated so a successor does not over-read a high count.
+limit_1	Outlet count measures INDEX COVERAGE, not truth.  Twelve outlets repeating one wire story would score 12.  Tier is what carries the weight, which is why tier is counted separately and why claim 1's verdict rests on TIER-1, not on the number 12.
+limit_2	Independence is judged on whether an outlet NAMES another as its source in the retrieved text.  Undeclared copying is invisible to this instrument and is NOT excluded.
+limit_3	A quote retrieved THROUGH the index is still not a byte-level read of the issuer's page.  It is a tier-1 ATTRIBUTION, which is strictly better than p376's n=1 and strictly worse than a payload read.

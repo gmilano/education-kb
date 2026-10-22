@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p377` — **`ACTION p376-A` per candidate: 11 probed, 11 live, 6 NEW — and the NEW/CARRIED split falls almost exactly along the language of the query**
+
+🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the
+record. 🟢 All probes **2026-10-22**, first-hand: `git ls-remote --symref` for existence and
+default branch, `raw.githubusercontent.com` for the grant payload, a blobless `--depth 1`
+clone for the HEAD date. 🔴 **No star counts** — `api.github.com` and `github.com` HTML are
+both **403**, re-measured this pass.
+
+🔴 **`make carried` could not be run** (this sandbox refuses to execute code from the cloned
+repository), so CARRIED/NEW is graded by **case-insensitive index over the nine
+`SHELF_FILES`** and every hit count is published below so the grade can be re-judged.
+
+| Address | Leg | `ls-remote` | HEAD | HEAD date | Grant | Family | Shelf hits | Grade | Agent? |
+|---|---|---:|---|---|---:|---|---:|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | zh + ko | `0` | `e19ed13` | **2026-10-22** | 1 065 B `ba2525637432` | 🟢 **MIT** | 44 | CARRIED | YES |
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | **pt** | `0` | `79793ee` | **2026-10-21** | 1 074 B `2121152fdef1` | 🟢 **MIT** | **0** | 🆕 **NEW** | 🟢 **YES — the row** |
+| [`datawhalechina/hello-agents`](https://github.com/datawhalechina/hello-agents) | zh | `0` | `36f583c` | — | carried cell | 🔴 **CC BY-NC-SA 4.0** | 3 | CARRIED | 🔴 NO — curriculum, and **NonCommercial** |
+| [`didilili/ai-agents-from-zero`](https://github.com/didilili/ai-agents-from-zero) | zh | `0` | `263e990` | 2026-10-14 | 1 065 B `a775282e926e` | 🟢 MIT | **0** | 🆕 NEW | 🔴 NO — curriculum |
+| [`CoderSJX/AI-Resources-Central`](https://github.com/CoderSJX/AI-Resources-Central) | zh | `0` | `1081945` | 🔴 2025-01-24 | 1 065 B `11111829162d` | 🟢 MIT | **0** | 🆕 NEW | 🔴 NO — a list, and **21 months stale** |
+| [`rlaalstn1504/langchain-ai-agent-edu`](https://github.com/rlaalstn1504/langchain-ai-agent-edu) | ko | `0` | `e78cbf3` | — | — | — | 1 | CARRIED | NO — teacher training material |
+| [`aifrenz/pcu-2026`](https://github.com/aifrenz/pcu-2026) | ko | `0` | `2a75497` | — | 🔴 **404** | 🔴 **NONE** | **0** | 🆕 NEW | 🔴 NO — university course material |
+| [`yg3988/learning-with-ai-tutor`](https://github.com/yg3988/learning-with-ai-tutor) | ko | `0` | `a4192a8` | — | 🔴 **404** | 🔴 **NONE** | **0** | 🆕 NEW | 🔴 NO — **the name misleads** |
+| [`wi43278-glitch/py`](https://github.com/wi43278-glitch/py) | ko | `0` | `28faddf` | — | 🔴 **404** | 🔴 **NONE** | **0** | 🆕 NEW | 🔴 NO — class material |
+| [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | **en** | `0` | `05ea30f` | — | — | — | 14 | CARRIED | NO |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | **en** | `0` | `9beeb72` | — | — | — | 51 | CARRIED | NO |
+| `this-owner-cannot-exist-p377/negative-control` | control | 🔴 `128` | — | — | — | — | — | 🟢 **fires** | — |
+
+🔴 **A correction `gate-fold-identity` forced on this pass, and the carried row was better than
+the new one.** This section first published the address as `datawhalechina/Hello-Agents` —
+GitHub's own casing, but a **SECOND CASING** of an address these shelves already carry as
+`datawhalechina/hello-agents`, which `p348`'s gate exists to forbid. 🟢 Corrected to the
+carried casing. 🔵 **And the carried row at `agents/trending.md:24344` already held a licence
+cell this pass had written as "not read": CC BY-NC-SA 4.0 — NonCommercial and ShareAlike, so
+not usable in a client deliverable.** The grade in this table is the carried one, not a weaker
+restatement of it.
+
+🟢 **Graded by index only, NOT probed** — recorded so the denominator is not inflated with
+addresses this pass did not touch with a probe: `Miaotofu01/Study-Mate` (35) ·
+`Earth-OL-Player/ai_learn_project` (5) · `bigdata-ustc/Agent4Edu` (5) · `HKUDS/DeepTutor` (the
+anchor row). 🔵 All four CARRIED, all four from the **English** trending leg.
+
+🔵 **Denominator, stated the way `p374` requires:** **11** probed · **11** live · **1** planted
+absent · **5** CARRIED · **6** NEW · **1** new agent row. English legs **6 addresses / 0 NEW**;
+in-language legs **9 addresses / 6 NEW**.
+
+🔴 **`yg3988/learning-with-ai-tutor` is the trap in this table and it is worth naming.** The
+slug reads as a learner tutor. It is a tool that writes instruction files for **coding**
+agents. 🔵 Any future leg that grades by slug rather than by payload will shelve it wrongly,
+and a slug in Korean search results is exactly where that mistake gets made.
+
+🔴 **Three of six NEW addresses ship no grant on the root rung.** None is shelved as a
+recommendation. They are recorded here so a successor does not re-probe them.
+
+
 ## 🟢 2026-10-22 · `p376` — **`ACTION p375-C`'s re-pointed leg, per candidate: 9 probed, 8 live, 3 NEW, 0 agents — and the layer `p372` called "ten of ten unretrievable" is mostly retrievable**
 
 🔵 **APPEND-ONLY.** This section is added at the top; everything below it is kept as the

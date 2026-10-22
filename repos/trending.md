@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 2026-10-22 · `p377` — **the in-language legs as a REPO instrument: what they return when you are not looking for agents**
+
+🔵 **APPEND-ONLY.** Added at the top; everything below is kept as the record.
+
+🟢 **The four `ACTION p376-A` legs are a general discovery instrument, not only an agent one**,
+and graded as repositories rather than as agents the yield reads differently: **6 new
+addresses, 3 of them permissive and one of those maintained-and-substantive.**
+
+| Address | Leg | Grant | HEAD date | What it is | Worth a shelf row? |
+|---|---|---|---|---|---|
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | pt | 🟢 **MIT** 1 074 B | **2026-10-21** | Curriculum-grounded lesson/assessment generator, RAG over 1 580 BNCC habilidades | 🟢 **YES** — promoted to `agents/top.md` |
+| [`didilili/ai-agents-from-zero`](https://github.com/didilili/ai-agents-from-zero) | zh | 🟢 MIT 1 065 B | 2026-10-14 | Agent-engineering curriculum: LangChain/LangGraph/MCP/RAG, deployment, interview bank | 🟡 **As TEACHING MATERIAL only.** Commercially reusable under MIT, which is the axis `T12` tracks |
+| [`CoderSJX/AI-Resources-Central`](https://github.com/CoderSJX/AI-Resources-Central) | zh | 🟢 MIT 1 065 B | 🔴 2025-01-24 | Curated global AI project index | 🔴 **NO** — 21 months stale. Recorded so it is not re-probed |
+| [`aifrenz/pcu-2026`](https://github.com/aifrenz/pcu-2026) | ko | 🔴 **none** | — | Paichai University AI course, day-by-day | 🔴 NO — no grant |
+| [`yg3988/learning-with-ai-tutor`](https://github.com/yg3988/learning-with-ai-tutor) | ko | 🔴 **none** | — | Writes instruction files for coding agents | 🔴 NO — no grant, and mis-named |
+| [`wi43278-glitch/py`](https://github.com/wi43278-glitch/py) | ko | 🔴 **none** | — | Class material | 🔴 NO — no grant |
+
+🔴 **The grant rate is the number to carry forward: 3 of 6 new addresses have NO grant at all,
+and all three came from the Korean leg.** 🔵 A leg that returns teaching repositories returns
+repositories written to be *read*, not to be *reused*, and their authors do not file licences.
+A successor costing an in-language leg should expect roughly half its yield to be unusable on
+the licence axis before it looks at substance.
+
+🟢 **One carried row re-confirmed from a second direction.**
+[`rlaalstn1504/langchain-ai-agent-edu`](https://github.com/rlaalstn1504/langchain-ai-agent-edu)
+was already on `repos/trending.md:24561` with **"none"** and **"0 of 13 probes"**. This pass
+reached it through a Korean-language leg instead of a probe ladder and it answered `ls-remote`
+`0` at `e78cbf3`. 🔵 The row's **grant** state is unchanged; what is new is that the address is
+**live**, which the 13 failed probes did not establish.
+
+
 ## 🔴 2026-10-22 · `p376` — the GitHub-trending leg returned **zero education repositories**, and that is published as a nil with what was searched
 
 🔵 **APPEND-ONLY.** Added at the top; the history below is kept.

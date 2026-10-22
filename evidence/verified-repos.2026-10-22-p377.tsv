@@ -1,0 +1,19 @@
+# p377 — every repository figure published by this pass, verified first-hand on 2026-10-22.
+# NO STAR COUNTS: api.github.com and github.com HTML both answer 403 from this environment,
+# unchanged from p376 and re-confirmed by this pass's own probes.
+address	ls_remote_rc	branch	head	head_date	grant_path	grant_bytes	grant_sha256_12	family	region	placement_basis
+GuilhermeScarpini/agente-bncc-professores	0	main	79793ee	2026-10-21	main/LICENSE	1074	2121152fdef1	MIT	LATAM	🟢 p371-region-place SATISFIED BY A STANDARD, NOT A FILENAME: the payload names BNCC (Base Nacional Comum Curricular) 50 times, expands it in full, and names the MEC PDF as the source of its 1 580 habilidades.  The token "Brasil" occurs ZERO times — the placement rests entirely on the national standard the payload implements, which is exactly what the gate requires
+THU-MAIC/OpenMAIC	0	main	e19ed13	2026-10-22	main/LICENSE	1065	ba2525637432	MIT	APAC	Tsinghua (THU-MAIC), named in the payload's copyright line: "Copyright (c) 2026 THU-MAIC"
+didilili/ai-agents-from-zero	0	main	263e990	2026-10-14	main/LICENSE	1065	a775282e926e	MIT	UNPLACED	🔴 No institution or standard named in the grant payload.  NOT placed by this pass
+CoderSJX/AI-Resources-Central	0	main	1081945	2025-01-24	main/LICENSE	1065	11111829162d	MIT	UNPLACED	🔴 Not placed.  Also STALE — 21 months to HEAD
+aifrenz/pcu-2026	0	main	2a75497	-	LICENSE	404	-	NONE	-	No grant on the root rung; not shelved as a recommendation
+yg3988/learning-with-ai-tutor	0	main	a4192a8	-	LICENSE	404	-	NONE	-	No grant on the root rung; not shelved as a recommendation
+wi43278-glitch/py	0	main	28faddf	-	LICENSE	404	-	NONE	-	No grant on the root rung; not shelved as a recommendation
+digitalcredentials/lti-issuer	-	master	-	-	master/LICENSE	1076	5ea29d532cac	MIT (UNTITLED)	North America	🟢 ACTION p376-C: payload re-read this pass and p376's digest INDEPENDENTLY CONFIRMED byte-for-byte.  Copyright holder read first-hand: "Center for 21st Century Universities" (Georgia Tech C21U) — a NAMED INSTITUTION, so this row is now PLACEABLE where p376 left it unplaced
+#
+# 🟢 THE TEMPLATE OBSERVATION, offered to p312 as data rather than as a fixture.
+# Three of this pass's MIT payloads are 1 065 B and one is 1 074 B, and they differ ONLY in the
+# copyright line — which is p312's published finding that MIT length is
+# constant(template) + len(holder), confirmed again on three unrelated repositories.
+# digitalcredentials/lti-issuer at 1 076 B is the UNTITLED variant: it opens on the copyright
+# line with NO "MIT License" title, where the other three carry the title.

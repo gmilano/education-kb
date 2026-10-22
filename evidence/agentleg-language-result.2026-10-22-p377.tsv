@@ -1,0 +1,60 @@
+# ACTION p376-A — RESULT.  The prediction is in
+# evidence/agentleg-language-prediction.2026-10-22-p377.tsv and was committed (fdd940c) with
+# NO leg output in the tree, before any leg ran.
+#
+# METHOD, first-hand on 2026-10-22: `git ls-remote --symref` for existence and default branch;
+# `raw.githubusercontent.com` for the grant payload; `git clone --filter=blob:none
+# --no-checkout --depth 1` for the HEAD date.  NO STAR COUNTS: api.github.com and github.com
+# HTML both answer 403 from this environment, unchanged from p376.
+# CARRIED/NEW is graded by index over the nine SHELF_FILES.  `make carried` could NOT be run:
+# this sandbox refuses to execute code from the cloned repository (see the gate note below).
+address	leg	ls_remote_rc	branch	head	head_date	grant_path	grant_bytes	grant_sha256_12	family	carried	is_agent	note
+THU-MAIC/OpenMAIC	zh + ko	0	main	e19ed13	2026-10-22	main/LICENSE	1065	ba2525637432	MIT	CARRIED	YES	Payload READ FIRST-HAND for the first time — discharges p366's standing request.  AGPL-3.0 claim REFUTED on the bytes: AFFERO=0, GNU GENERAL PUBLIC=0, "MIT License"=1, Copyright (c) 2026 THU-MAIC
+GuilhermeScarpini/agente-bncc-professores	pt	0	main	79793ee	2026-10-21	main/LICENSE	1074	2121152fdef1	MIT	NEW	YES	THE ONE ROW.  RAG grounded on 1 580 BNCC habilidades extracted from the MEC PDF; model-invented codes discarded before the teacher sees them; ~100 tests, CI, API v1
+datawhalechina/hello-agents	zh	0	main	36f583c	-	carried cell	-	-	CC-BY-NC-SA-4.0	CARRIED	NO	Curriculum, and NonCommercial+ShareAlike — not usable in a client deliverable.  PUBLISHED IN THE CARRIED CASING: p348 gate-fold-identity rejected GitHub's own casing (Hello-Agents) as a SECOND CASING of an address these shelves already carry.  The carried row at agents/trending.md:24344 already held the licence this pass had first written as 'not read'
+didilili/ai-agents-from-zero	zh	0	main	263e990	2026-10-14	main/LICENSE	1065	a775282e926e	MIT	NEW	NO	Curriculum / interview-prep guide.  Permissive and maintained, but not an agent
+CoderSJX/AI-Resources-Central	zh	0	main	1081945	2025-01-24	main/LICENSE	1065	11111829162d	MIT	NEW	NO	A LIST, and STALE — 21 months to HEAD
+rlaalstn1504/langchain-ai-agent-edu	ko	0	main	e78cbf3	-	-	-	-	-	CARRIED	NO	Carried at repos/trending.md:24561 with "none" and "0 of 13 probes" already recorded
+aifrenz/pcu-2026	ko	0	main	2a75497	-	LICENSE	404	-	NONE	NEW	NO	Paichai University course material.  No grant on the root rung
+yg3988/learning-with-ai-tutor	ko	0	main	a4192a8	-	LICENSE	404	-	NONE	NEW	NO	Name misleads: it generates instruction files for CODING agents.  Not a learner tutor.  No grant
+wi43278-glitch/py	ko	0	main	28faddf	-	LICENSE	404	-	NONE	NEW	NO	Class material.  No grant
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	en	0	main	05ea30f	-	-	-	-	-	CARRIED	NO	English control leg
+ashishpatel26/500-AI-Agents-Projects	en	0	main	9beeb72	-	-	-	-	-	CARRIED	NO	English control leg
+this-owner-cannot-exist-p377/negative-control	control	128	-	-	-	-	-	-	-	-	-	NEGATIVE CONTROL — fires.  The instrument discriminates
+#
+# GRADED BY INDEX ONLY, NOT ls-remote probed (English trending leg; recorded so the
+# denominator below is not inflated by addresses this pass did not touch with a probe):
+# Miaotofu01/Study-Mate CARRIED(35) · Earth-OL-Player/ai_learn_project CARRIED(5) ·
+# bigdata-ustc/Agent4Edu CARRIED(5) · HKUDS/DeepTutor CARRIED(the anchor row)
+#
+# DENOMINATOR, stated the way p374 requires:
+#   11 addresses probed · 11 live · 1 planted absent (negative control, rc=128)
+#   5 CARRIED · 6 NEW
+#   ENGLISH legs:      2 probed + 4 index-graded = 6 addresses · 0 NEW   (0 %)
+#   IN-LANGUAGE legs:  9 probed                                · 6 NEW  (67 %)
+#   NEW rows clearing the agent bar (permissive + maintained + actually an agent): 1
+#
+# LIMB 1 — predicted >= 3 NEW across the four legs, >= 1 from Chinese alone.
+limb_1	CONFIRMED	6 NEW across the four in-language legs; Chinese alone returned 2 (didilili/ai-agents-from-zero, CoderSJX/AI-Resources-Central).  The English control returned 0 NEW on the same day against the same shelves.  J3 EXTENDS TO SUPPLY.
+# LIMB 2 — predicted AT MOST 1 of the NEW addresses clears the agent-row bar.
+limb_2	CONFIRMED	Exactly 1 of 6 clears: GuilhermeScarpini/agente-bncc-professores.  Two are curricula, one is a stale list, three ship no grant at all.
+#
+# WHAT THIS LICENSES A SUCCESSOR TO BELIEVE — and what it does NOT.
+consequence_1	The three "zero new agents" verdicts from p373 onward were measuring the ENGLISH INDEX, not the industry.  They must not be quoted as saturation of education AI.
+consequence_2	But the shelf bar is REAL and is what kept the shelf at zero: 5 of 6 NEW addresses fail it on grant or on substance, not on language.  Both limbs are findings; the pass publishes both.
+consequence_3	The yield is 1 agent row for 4 legs.  In-language legs are EXPENSIVE per usable row.  A successor should run them for PLACEMENT (the one row is LATAM, a region this base is thin on) rather than for volume.
+#
+# THE FACT-CLASS RESULT, which was not predicted and is the more interesting half.
+# Each leg returned a DIFFERENT CLASS of thing, which is J3 sharpened rather than merely confirmed:
+fact_class_zh	SUPPLY — large maintained platforms and curricula, with real addresses
+fact_class_ko	COMMENTARY + teaching material — including a Korean post specifically about OpenMAIC's licence being reported wrongly, which is what sent this pass to the payload
+fact_class_pt	ONE PRODUCTION-GRADE AGENT anchored to a NATIONAL CURRICULUM STANDARD.  Not volume; placement
+fact_class_es	ACADEMIC — alphaxiv/arXiv papers (Open TutorAI 2602.07176 [carried], VTutor 2502.04103, AgentTutor 2601.04219, ITAS 2604.24808) and ZERO GitHub addresses
+#
+# THE SPANISH NIL IS INFORMED, NOT EMPTY — recorded explicitly, per the standing rule that a
+# declared regional blank must be published WITH the query that produced it (ACTION RE):
+es_nil_query	"agentes de IA educación código abierto github licencia MIT 2026 tutor inteligente"
+es_nil_reading	The Spanish leg reached the ACADEMIC fact class and returned no repository address.  VTutor was chased on a second, targeted leg ("VTutor github repository ... Unity WebGL SDK license") and NO GitHub URL and NO licence was found on either.  This is the index's reach, NOT evidence that Spanish-language education-agent supply does not exist.
+#
+# STATED LIMIT, carried forward from the pre-registration unchanged: WebSearch is documented
+# US-only.  Every nil above is a nil OF THIS INDEX.

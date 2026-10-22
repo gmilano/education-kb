@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 `Pattern 31` (`p377`) — **Prove you met the age floor, against two issuers who disagree about what the floor restricts**
+
+🔴 **NUMBERING DEFECT, found by this pass while choosing a number, and recorded rather than
+repeated.** `compose/patterns.md` carries **two overlapping series**: an older
+`## 🆕 Pattern N` run that already occupies **1–30**, and a newer `` ## 🟢 🆕 `Pattern N` (pNNN) ``
+run that **restarted at 15**. 🔴 **So `Pattern 15`, `16`, `17`, `18` and `19` each name TWO
+DIFFERENT patterns on this shelf** — `p375`'s stage gate collides with an older `Pattern 15`,
+and `p376`'s revocable credential collides with *"A special-education IEP deliverable"*.
+🟢 **This pattern therefore takes `31`, the first free number in the single series**, and the
+collision is filed as `Gap 506` instead of being widened by a third instance. 🔵 Every
+`Pattern 15`/`Pattern 16` reference written by `p375`, `p376` and this pass means the **newer**
+one; nothing is renamed here, because retro-editing the older headings would break every
+historical citation — which is the same reason `p376` refused `p375`'s repoint.
+
+🔵 **Nearest neighbour, named so a reader can tell them apart:** the older **`Pattern 18` —
+*Curriculum-bound exam generation for a national curriculum*** is the closest existing work.
+This pattern is not that one: its subject is **proving a cohort was never given access**, and
+curriculum-bound generation is the component it uses to replace the thing it removes.
+
+🔴 **The problem this pattern exists for, and it is new to these shelves this pass.** The
+six-jurisdiction age band converges on **who** (roughly end-of-primary) and **diverges on
+what**. Norway's two TIER-1 issuers, read through the index this pass, say different things:
+
+| Issuer | Restricts | Operative test |
+|---|---|---|
+| **Udir** (directorate) | 🔴 **ACCESS** — *"skal i all hovedsak ikke **gis tilgang til** generativ KI"* | Was the pupil **given access to** the surface? |
+| **regjeringen.no** (government) | 🟡 **USE** — *"skal i all hovedsak ikke **brukes** i barneskolen"* | Did the pupil **use** it? |
+
+🟢 **A deployment that discourages use satisfies the government and FAILS the directorate.**
+🔵 So the build target is the narrower one — **absence of the surface** — and the deliverable
+is an artefact that demonstrates *which* reading was met, per cohort, on a date.
+
+### 🟢 The components, every grant read first-hand on 2026-10-22
+
+| Role | Component | Licence | HEAD | Why this one |
+|---|---|---|---|---|
+| **The gate itself** | `Pattern 15`'s per-stage virtual key at the gateway | — | — | The capability is **absent** for the gated cohort, not refused at the prompt. This is what satisfies Udir's *access* test |
+| **Teacher-facing generation** (the gated cohort's replacement) | [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** (1 074 B, `2121152fdef1`) | `79793ee` · **2026-10-21** | 🟢 **The key move.** Grades 1–7 get no generative surface; the **teacher** does. Material reaches the pupil having passed through an adult, which is inside both readings |
+| **Curriculum anchor** | the client's national standard — **BNCC** in the shipped case | the ministry's | — | Codes and their literal text come from the standard, never the model. Swap BNCC for the local equivalent; the architecture is the transferable part |
+| **LMS boundary** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (11 361 B) | `41f150c` · 2026-10-13 | LTI 1.3 launch from Moodle, Open edX, Canvas, Blackboard. The LMS already knows the pupil's **grade**, which is the gate's input |
+| **The artefact** | a per-cohort decision log emitted by the gateway | the client's own | — | 🔴 The thing an inspector actually reads. Small: cohort, stage, capability set, date, policy version |
+
+### 🟢 How to wire it, and the one decision that matters
+
+1. 🟢 **Take the stage from the LMS launch claim, not from a profile field.** `ltijs` surfaces
+   the LTI context; the pupil's grade arrives with the launch and cannot be self-asserted.
+2. 🔴 **Issue a DIFFERENT gateway key per stage, and give the grades 1–7 key no generative
+   model at all.** Not a lower quota, not a stricter system prompt — **no route**. A key that
+   cannot reach a model is the only configuration that answers *"were they given access?"*
+   with evidence rather than with intent.
+3. 🟢 **Point the teacher-facing generator at the same cohort.** `agente-bncc-professores`
+   produces the lesson plan and the assessment for that class, grounded in the standard, with
+   invented curriculum codes discarded before the teacher sees them.
+4. 🟢 **Emit the decision log on every launch**, including the refusals. A log that records
+   only what was allowed cannot demonstrate a floor.
+5. 🔵 **Mark the output.** EMEA's **Article 50** has been live since **2 August 2026** and is
+   independent of the Annex III deferral to **2 December 2027**: synthetic content needs
+   marking now, in the teacher-facing path too.
+
+### 🔴 What to check before quoting this
+
+🔴 **`agente-bncc-professores` is single-author**, no release tags were read by this pass, and
+its embeddings (`gemini-embedding-2`, 768-dim) ship inside a committed SQLite file — a client
+on a different embedding provider re-indexes **1 580** rows. Minutes, but not zero.
+
+🔴 **BNCC is Brazilian.** The grounding **architecture** transfers; the **data** does not. For
+any other jurisdiction, budget the curriculum extraction as its own work item — it is the
+expensive part, and it is the part the client's ministry can supply.
+
+🔴 **The Norwegian cell is corroborated at TIER-1 but is still not a byte-level read**:
+`udir.no` and `regjeringen.no` are NXDOMAIN from this environment and were reached **through
+the search index**. 🟢 12 outlets, 2 of them the issuers. 🔴 **And `Gap 503` is open** — Udir
+undertook to elaborate these recommendations by **1 October 2026** and no outlet, including
+Udir's own page, reports publication. 🔵 **Re-check before a Norwegian engagement quotes the
+detail; the headline rule is safe, the exceptions regime is not yet written.**
+
+🟢 **Where this sells today, with no legislative dependency:** a **US district** (NYC's
+moratorium through grade 8, Katy ISD's K-6 ban) has already written the policy and cannot
+currently prove it holds. 🔵 The decision log is a board-meeting artefact, and the district —
+not the state — is the buyer.
+
+
 ## 🟢 🆕 `Pattern 16` (`p376`) — **A credential that still verifies after the issuer is gone**, assembled from permissive code with the issuer written rather than forked
 
 🔵 **The problem this solves, and why the obvious build is wrong.** A client wants verifiable

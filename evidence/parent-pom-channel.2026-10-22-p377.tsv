@@ -1,0 +1,46 @@
+# ACTION p376-D — "find the channel that reads a Maven PARENT POM grant from outside the
+# repository, or establish that there is none here and record the class."
+#
+# 🟢 THE CHANNEL EXISTS, and a parent-POM <licenses> block IS readable from this environment.
+# 🔴 AND THIS PASS'S FIRST WRITE-UP OF THE SECOND HALF WAS WRONG.  Both are recorded.
+#
+## 🔴 THE ERROR, FIRST, BECAUSE IT IS THE MORE USEFUL HALF.
+# This pass's first draft graded fr/openent/ ABSENT on a 404, reasoning that "a 404 from a host
+# that answered 200 on a control in the same minute is a measured absence".  It then found
+# `compose/code/p233-maven-channel` ALREADY ON THESE SHELVES, whose headline is exactly
+# "a 404 is not an ABSENCE": on a rate-limited channel PRESENCE is provable and ABSENCE is not,
+# unless a known positive passed IN THE SAME WINDOW.  🔴 In the first probe sequence the control
+# returned 429 and only passed on a LATER retry — so there was NO passing control in the target's
+# window, and p233's own classifier grades that first measurement NOT-ESTABLISHED, not ABSENT.
+# 🔵 The claim was re-earned by re-probing, not by argument.  An instrument this base already
+# owned caught an overstatement its author had already written down.
+#
+## 🟢 THE RE-PROBE, run to p233's rule: control and target in ONE window, each probe to its OWN file.
+order	probe	url	http	body_bytes	p233_classify	note
+1	LEADING CONTROL	repo1.maven.org/maven2/com/google/	200	16 037	🟢 PRESENT	The channel was serving real responses immediately before the target probe
+2	TARGET	repo1.maven.org/maven2/fr/openent/	404	554	🟢 **ABSENT**	Genuine nginx 404 body, with a passing control in the same window
+3	TRAILING CONTROL	repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.pom	429	96	🔴 THROTTLED	The window DEGRADED after the target.  Recorded, not hidden
+#
+## 🟢 THE GRANT-READ CONTROL — this is what actually discharges p376-D.
+probe	url	http	body_bytes	result
+PARENT-POM GRANT READ	repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.pom	200	27 018	🟢 PRESENT (expect_token "<licenses>").  Parsed first-hand: <name>Eclipse Public License 1.0</name>, url eclipse.org/legal/epl-v10.html, <distribution>repo</distribution>
+#
+## 🟢 A REFINEMENT OF p233, measured rather than assumed — the channel's behaviour has CHANGED.
+# p233 recorded that repo1.maven.org answered "404 with a one-byte body" while throttling, which
+# made the throttle BYTE-IDENTICAL to a real miss.  🟢 THAT IS NO LONGER TRUE FROM HERE:
+#   throttle  = HTTP 429, 96 B, body "Your ip has exceeded rate limits. Find out more here ..."
+#   real miss = HTTP 404, 554 B, nginx's standard error page
+# 🟢 They are distinguishable by STATUS and by SHAPE.  p233's CAUTION still governs — a control
+# must still pass in-window — but the two responses are no longer indistinguishable, which makes
+# ABSENT cheaper to earn on this channel than p233 had to assume.
+#
+## 🔴 OTHER HOSTS, and these are NOT re-graded as absences.
+host	http	class
+repo.maven.apache.org (canonical mirror)	404	🔴 NOT-ESTABLISHED — probed only in the FIRST, uncontrolled window.  Not re-probed in a clean window; no absence is claimed for it
+maven.opendigitaleducation.com	000	UNREACHABLE — transport never completed.  Says nothing about the resource (p233)
+maven.web-education.net	000	UNREACHABLE — same
+#
+gap_501_disposition	RE-SCOPED, and the new scope is EARNED.  fr/openent/ is ABSENT from Maven Central — the whole groupId, graded by p233's classifier with a passing in-window control.  So open-ent/openbadges' parent POM is not merely unread: it is NOT PUBLISHED to the public Maven channel, and no grant for it is reachable by anyone outside the vendor's own infrastructure.  That is the statement a studio needs and p376 could not make.
+p376_d_verdict	DISCHARGED POSITIVELY.  The channel exists, is calibrated, and reads a parent-POM grant first-hand.  p291's pin-grant axis gains a package-registry rung with a working positive control.
+honest_limit_1	🔴 ONE host, ONE groupId, re-probed in ONE clean window.  The trailing control was throttled, so the window was closing as the sequence ran.  A successor repeating this should expect 429s and must not grade through them.
+honest_limit_2	🔴 The canonical-mirror 404 is deliberately left NOT-ESTABLISHED rather than quietly promoted to agree with the primary host.  Two hosts agreeing would be better evidence; this pass has it for one.
