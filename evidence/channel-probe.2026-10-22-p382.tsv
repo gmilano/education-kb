@@ -1,0 +1,43 @@
+# p382 CHANNEL PROBE — the opening act, before anything was reasoned about (Gap 511's standing rule).
+# Gap 532's `tool` field is a COLUMN, per p381's precedent. This pass adds a second column the
+# probe has never carried: `mechanism`. p381 proved "unreachable" is not one state (eur-lex is
+# closed on two tools by two different causes). This pass proves the stronger form: ONE HOST ON
+# ONE TOOL IS NOT ONE STATE EITHER. api.github.com answers 200, 403-scope and 403-path at the
+# same instant, on three different paths, and the three carry three different messages.
+tool	channel	address_probed	result	mechanism	note
+make	local	GNU Make 4.3	AVAILABLE	-	the binary is present and `make -n hooks` expands
+make	local	`make hooks` / any suite in compose/code	DENIED	sandbox execution policy	SEVENTH sandbox, and a NEW mechanism: not egress. Cloned-repo code may not be EXECUTED here
+python3	local	own-authored script, scratchpad	OK	-	3.11.17. The interpreter is fine; the DENIAL is scoped to code that arrived in the clone
+git	git-smart-http	pykt-team/pykt-toolkit	OK	-	ls-remote --symref -> refs/heads/main, ccbaf37b
+curl	raw.githubusercontent.com	pykt-team/pykt-toolkit/main/LICENSE	200	-	the grant ladder is open, as at p381
+curl	registry.npmjs.org	/	200	-	package channel open
+curl	pypi.org	/pypi/jupyterhub/json	200	-	NEW THIS PASS: the Python registry answers JSON
+curl	gitlab.com	/api/v4/projects?search=moodle	200	-	NEW THIS PASS: a SECOND forge's API answers, unauthenticated
+curl	api.github.com	/rate_limit	200	-	🔴 CORRECTS A PUBLISHED CELL. limit=15000, used=0 — an AUTHENTICATED allowance exists
+curl	api.github.com	/repos/pykt-team/pykt-toolkit	403	session repo scope	"GitHub access to this repository is not enabled for this session. Use add_repo to request access."
+curl	api.github.com	/repos/openedx/XBlock	403	session repo scope	same message, second address — the refusal is per-REPOSITORY, not per-host
+curl	api.github.com	/search/repositories?q=...	403	API path closure	"This GitHub API path is not available: sessions are bound to their configured repositories."
+curl	api.github.com	/users/pykt-team	403	API path closure	same message as /search — the closure is by PATH CLASS, not by repository
+curl	github.com HTML	/search?q=test	403	tool scope	refused to curl exactly as p379, p380, p381 measured
+WebFetch	github.com HTML	/search?q=education+ai+agent&type=repositories	200	-	p380/p381's SUPPLY channel REPLICATES in a seventh sandbox: 3 addresses read off the first screen
+curl	eur-lex.europa.eu	/legal-content/EN/TXT/	000	proxy CONNECT refusal	dead for a FOURTH consecutive pass; the EU date stays unread at the source
+curl	www.unesco.org	/en/digital-education	000	proxy CONNECT refusal	the LATAM instrument channel p381 leaned on is NOT first-hand readable here
+curl	www.oecd.org	/	000	proxy CONNECT refusal	p379's self-contradicting APAC cell cannot be re-read here either
+curl	huggingface.co	/api/models?search=education	000	proxy CONNECT refusal	the model-hub channel is closed on curl
+#
+# 🔴 THE FINDING IN THE PROBE ITSELF, AND IT OVERTURNS FOUR PASSES OF THIS BASE'S OWN READING.
+# p378, p379, p380 and p381 each published `api.github.com  403` as ONE cell and read it as the
+# integer-star channel being refused by a "sixth consecutive sandbox". That reading is wrong in a
+# way that mattered: the host is NOT refusing. It is answering 200 on /rate_limit with a 15 000-unit
+# AUTHENTICATED allowance, and refusing two OTHER path classes for two DIFFERENT, SELF-DECLARED
+# reasons — one of which names its own remedy (`add_repo`) and one of which is a by-design closure
+# ("sessions are bound to their configured repositories").
+#
+# 🔵 Why the distinction is load-bearing and not pedantry:
+#   1. A rate-limit/blanket-block reading implies WAIT OR GIVE UP. A session-scope reading implies
+#      a REMEDY EXISTS for the /repos class, and no pass has ever tried it. p382 tests it (p382-API).
+#   2. The /search and /users closure is BY DESIGN and permanent in this harness. A successor that
+#      keeps re-probing it every pass is spending a probe on a settled question. Record it CLOSED
+#      and stop paying for it.
+#   3. `limit: 15000` is not an anonymous allowance (anonymous is 60/h). So a credential IS present
+#      and is being scoped, not absent. "No API" was never the right description.

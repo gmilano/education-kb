@@ -1,0 +1,48 @@
+# p382 REGISTERED PREDICTION — committed BEFORE any leg, search or supply probe runs.
+# No leg output exists in the tree at this commit. Convention: p376-A, p377-D, p378, p379, p380,
+# p381 precedent — a prediction carries its own refutation condition and is committed first.
+#
+# CHANNEL STATE AT REGISTRATION: see evidence/channel-probe.2026-10-22-p382.tsv, committed with
+# this file. Two states in it are NEW and both constrain this pass before it starts:
+#   🔴 THE EXECUTION LANE IS DENIED. `make hooks` and every suite under compose/code/ CANNOT BE
+#      RUN in this sandbox — not for want of egress, but by an execution policy on code that
+#      arrived in the clone. `make -n hooks` DOES expand, so the ROSTER is readable and verifiable
+#      even though the SUITES are not runnable. This pass therefore CANNOT claim 43/43, and will
+#      not. It states the roster it verified by reading, and nothing about gate colour.
+#      This is p-P0a's "execution lane DENIED" precedent, with a different mechanism.
+#   🟢 api.github.com IS NOT REFUSING. /rate_limit answers 200 with an authenticated 15 000
+#      allowance; /repos/* refuses with a named remedy; /search|/users refuse by design.
+#
+# WHAT THIS PASS IS TESTING:
+# p381 ranked five items. Ranked-1 (ZZ-ap, the per-subtree grant classifier) is FIVE registrations
+# old with THREE live fixtures and is still unbuilt; p381's own words were "there is no excuse left
+# about where to look". The denial of the execution lane is exactly the excuse that would retire it
+# for a sixth pass, so this pass builds the instrument in a lane that IS open (own-authored code,
+# run from the scratchpad against first-hand payloads) rather than carrying it again.
+#
+# PRE-REGISTERED DEFECTS IN THIS PASS'S OWN PREDICTION (p378 set this precedent; kept):
+#   B-LIMB-1/B-LIMB-2 will be run by an instrument this pass WRITES, against fixtures this pass
+#   also SELECTS. That is a classifier graded on its author's own chosen cases: it can show the
+#   instrument works on the three known shapes, it CANNOT establish a base rate for per-subtree
+#   grants in the wild. Stated now, not after the result.
+#   C-LIMB-2 predicts a count over 3 078 channel-B survivors that this pass has not yet read. If
+#   the stoplist's yield is 1 (only p381's own `feature/x`), the gap was real but SMALL, and a
+#   one-fixture gap is a weaker finding than p381's ranking implied. Recorded before the sweep.
+#   D-LIMB-1 rests on timezone specimens already on these shelves, selected by p381 for a different
+#   purpose. Re-using a sample chosen for one question to answer another is the defect p381 named
+#   in Gap 540 (no cell records a sample's selection rule). This one's rule is recorded: it is
+#   p381's own two specimens, and there is no third.
+#   A-LIMB-1 has n=1. One add_repo attempt on one address cannot distinguish "the remedy works"
+#   from "the remedy works for THIS repository".
+#
+action	limb	claim	refutation_condition	status_at_registration
+p382-API	A-LIMB-1	The /repos 403 names `add_repo` as its remedy, but the remedy will NOT open a third-party public repository to this session: the scope is set by configuration, not requestable on demand	REFUTED if add_repo on a third-party public education repository returns success AND /repos/<that-repo> then answers 200	OPEN
+p382-API	A-LIMB-2	/search/repositories stays 403 regardless of repository scope, because its refusal is a PATH-class closure and not a repository-scope one	REFUTED if /search/repositories answers 200 at any point this pass	OPEN
+p381-ranked-1	B-LIMB-1	A per-subtree grant classifier (ZZ-ap) built this pass classifies all THREE live fixtures correctly: oaknational/oak-curriculum-ontology (OGL-3.0 on ontology+data+docs, MIT on scripts), withmarbleapp/os-taxonomy (ODbL-1.0 database scope), aaryansamanta/nextgen-ai (MIT narrowed to source files, non-code carved out)	REFUTED if the instrument cannot return a correct per-subtree verdict for any one of the three	OPEN
+p381-ranked-1	B-LIMB-2	On at least one of the three fixtures, a root-LICENSE-only read returns a verdict that the per-subtree read CONTRADICTS — i.e. the instrument earns its existence rather than agreeing everywhere	REFUTED if root-only and per-subtree agree on all three fixtures	OPEN
+p381-ranked-2	C-LIMB-1	Gap 539's stoplist, built in p115's committed style, rejects `feature/x` — the fake address p381 wrote into its own census — as a non-address	REFUTED if the stoplist does not reject it	OPEN
+p381-ranked-2	C-LIMB-2	The stoplist finds MORE than one branch-shaped member across the channel-B survivors, i.e. `feature/x` is not the only one and the gap is more than its own fixture	REFUTED if `feature/x` is the ONLY branch-shaped address found	OPEN
+p381-ranked-3	D-LIMB-1	Gap 541's rule, implemented, re-grades at least one specimen on these shelves from a confident region to AMBIGUOUS-NA-LATAM — i.e. the gap was costing this base a wrong placement, not just a missing caveat	REFUTED if no specimen's placement changes under the new rule	OPEN
+p382-E	E-LIMB-1	The four PRESCRIBED global WebSearch legs again return ZERO addresses that grade NEW, for a THIRD consecutive pass (p380 and p381 both measured zero from the prescribed legs)	REFUTED if any prescribed global leg returns an address that grades NEW	OPEN
+p382-E	E-LIMB-2	The forge supply channel (github.com/search via WebFetch, with license: and pushed: qualifiers) again out-yields all four prescribed legs together on NEW addresses	REFUTED if the prescribed legs equal or beat the forge legs on NEW addresses	OPEN
+p382-F	F-LIMB-1	At least one of the four regions returns a DECLARED NIL rather than a finding, continuing p380 and p381's pattern that regional instrument supply is thinner than regional commentary supply	REFUTED if all four regions return a new, dated, first-hand instrument	OPEN
