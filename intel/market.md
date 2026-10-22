@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **ALL FOUR REGIONS PLACED, TWO OF THEM BY A DECLARED NIL, AND THE BEST REGIONAL FINDING OF THE PASS WAS INVISIBLE TO ENGLISH. 🟢 LATAM RETURNED THE ONLY METHOD-BEARING FIGURES — 92 % OF STUDENTS USING AI AGAINST 30 % OF UNIVERSITIES WITH A POLICY. 🔴 NINE FIGURES REFUSED.**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every leg below was run on **2026-10-22**. Dated by **MEASUREMENT**.
+
+🔴 **READ THIS FIRST: every non-GitHub source added by this pass is `ATTRIBUTED-UNVERIFIED`.** The
+citation channel is dead on **both** tools in this sandbox — `curl` returns `000` (proxy CONNECT
+refusal) and `WebFetch` returns `ENOTFOUND` (DNS) for every non-GitHub host probed. That is weaker
+than `p378`'s 275-of-275 address-verified standard, and it is **labelled rather than blended**.
+
+### 🟢 The four regions in one table
+
+| Region | Verdict | What was placed, and by which channel |
+|---|---|---|
+| **EMEA** | 🟢 **PLACED, and it is the pass's headline** | 🔴 English leg: **NIL**, declared. 🟢 **German sibling leg: `openDesk Edu` + `ILIAS` in `8 600` schools (July 2026), servers in Germany, no student registration.** Plus NLQ + Wikimedia Deutschland's *"Offene KI in der Schule"* (Feb 2026) and KI-Schule des Jahres 2026. 🟢 First-hand supply: `ls1intum/Artemis`, MIT on `develop` |
+| **LATAM** | 🟢 **PLACED, and the only METHOD-BEARING leg** | UNESCO IESALC (200 institutions, 19 countries, Aug–Oct 2025) and the Digital Education Council survey (>30 000 responses, 29 institutions, Feb 2026). 🔴 Still **no education-specific instrument anywhere in the region** — `p380`'s declared gap **corroborated, not closed** |
+| **APAC** | 🔴 **NIL on new instruments, DECLARED** | Leg returned enterprise AI, not education rules. `p380`'s Vietnam `134/2025/QH15` and Korea's AI Basic Act **carried forward unchanged**. 🟢 First-hand supply: `cram-engine` (`+0800`, HEAD today), `Seeed_Studio_Courses` (`+0800`, 🔴 21.5 months stale) |
+| **North America** | 🔴 **NIL on new instruments, DECLARED** | Leg returned vendor market pages and one flagged compilation. `p380`'s NYC red tier, four-state mandate, Ohio deadline and COPPA date **stand unchanged**. 🟢 First-hand supply: `ml-from-scratch-book/code`. 🔴 One placement **REFUSED** (`Gap 541`) |
+
+### 🟢 The cross-region finding, and it is about the knowledge base rather than the market
+
+🔵 **Two regions returned a nil in English and one of them returned the pass's best material in
+German.** Same day, same transport, same region, opposite results. `p379` established that
+in-language legs yield **zero addresses** and retired them as a supply instrument; this pass
+confirms the zero **and** finds that the same leg is the **only** channel that saw a national
+deployment covering `8 600` schools.
+
+🟢 **So the rule for a global studio is sharper than "search in English":** a national education
+ministry's programme is documented in the national language and a forge is documented in English.
+🔴 **A base that runs only English legs will systematically under-report EMEA, APAC and LATAM
+public-sector deployment while over-reporting Anglophone repository supply** — and will look
+exactly like a base with good coverage. `Pattern 36`'s step 0.
+
+### 🔴 The nine figures REFUSED this pass rather than reported
+
+| Figure | Source shape | Why refused |
+|---|---|---|
+| `$951 M` 2024 → `$2.3 B` 2029 (NA) | vendor market page | No method; and it disagrees with the next row |
+| 45 % CAGR / 41.7 % NA growth | second vendor | No regional baseline stated; disagrees with the row above |
+| `$10.6 B` / `$11.4 B` / `$6.4 B` 2026 bases | three vendors in one leg | 🔴 **Three bases for the same year** — a spread, not a figure |
+| 36 % NA adoption share | secondary roundup | Already refused at `p379`; nothing new attached |
+| 10 % of institutions with formal AI guidelines | same roundup | The search channel **itself** flagged it unverified |
+| 71 % of US teachers lack AI training | same roundup | Same |
+| 92 % → 66 % global student AI usage (2024→2025) | vendor blog | No instrument, no n, no population |
+| K-12 = 45.62 % of adoption | vendor report | Two-decimal precision with no method is a presentation, not a measurement |
+| *"EU AI Act fully effective August 2026"* for education | 2026 commentary page, undated | 🔴 **Contradicted by `Regulation (EU) 2026/1744`**, OJ 2026-07-24, Annex III **2027-12-02**. `Gap 543` |
+
+🔵 **The three LATAM figures that SURVIVE do so on one property the nine lack: a stated method.**
+`n`, the institution count and the survey window are all published, so they can be checked by
+someone who reaches the address this sandbox cannot.
+
+---
+
 ## 🟢 2026-10-22 · `p380` — **`p379`'s REFUSED EU DATE IS RESOLVED: the instrument is `Regulation (EU) 2026/1744` and education's high-risk arm applies from `2 December 2027`. 🟢 APAC's high-risk rule gets a law number. 🔴 And the two rules converge on the SAME boundary — a decision made without a human in it — which is now the one design input that travels to every region.**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) ·
@@ -1181,6 +1235,26 @@ it is **auditability, curriculum alignment and an evidence story**.
 
 ### North America
 
+🔴 **`p381` adds no new North American instrument and says so.** The English NA leg returned
+vendor market pages and one secondary compilation, and **seven figures were REFUSED**: `$951 M`
+2024 → `$2.3 B` 2029 and a 45 % CAGR (two vendors, no method, disagreeing with each other), a 36 %
+regional adoption share (already refused at `p379`), *"only 10 % of institutions have formal AI
+guidelines"* and *"71 % of US teachers lack AI training"* — the last two from a roundup the search
+channel **itself** flagged as unverified secondary compilation. 🟢 **`p380`'s NA instruments stand
+unchanged and are the ones to quote:** NYC's red tier, the four-state guidance-plus-district
+mandate, Ohio's past deadline, and COPPA's 22 April 2026 general compliance date.
+🔴 **One NA claim is actively contradicted by a better instrument**: a 2026 commentary page states
+the EU AI Act is *"fully effective August 2026"* for education, against `Regulation (EU) 2026/1744`
+deferring Annex III to **2 December 2027** (`Gap 543`). 🔵 **The engagement consequence is a
+deliverable:** a 2026 NA or EMEA stakeholder may be working to a deadline that moved, so the dated
+instrument table in this file is the first artefact to hand them.
+🟢 **Supply placed first-hand this pass:** `ml-from-scratch-book/code` (18 of 18 commits at NA
+offsets, `-0400` **and** `-0500` — one US location across a DST boundary).
+🔴 **And a placement REFUSED rather than guessed:** `YJLi-new/undergraduate-coding-tutor` sits at
+`-0500` only, which is US Eastern in winter **and** Colombia, Peru, Ecuador and most of Mexico all
+year — `NOT PLACED`, `Gap 541`.
+
+
 🟢 **`p380` adds the decisional boundary in its sharpest published form, and a federal date.**
 🔴 **New York City's guidance is a traffic-light framework whose RED tier bars AI from grading,
 discipline, and promotion or graduation decisions** — which is, almost word for word, the same
@@ -1717,6 +1791,28 @@ base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the L
 these districts run.
 
 ### EMEA
+
+🟢 **`p381`'s headline is EMEA's, and an English leg could not see it.** The English EMEA leg
+returned **nothing education-specific** — a nil the channel declared itself. The **German** sibling
+leg returned the **largest named open-source education deployment on this base**:
+🟢 **`openDesk Edu`, the German federal open-source workplace suite, integrated the LMS `ILIAS` in
+July 2026 across `8 600` schools, with servers located in Germany and no student registration
+required.** 🔵 Those last two properties are the commercially load-bearing ones: *no student
+registration* removes the hardest compliance object in a K-12 engagement — a per-minor account with
+a lawful basis — and *servers in Germany* answers the residency question before it is asked.
+🔴 **The licence is the constraint: `ILIAS` is GPL (`35 147 B`, read first-hand from its real
+default ref `release_11`), not Apache or MIT — so the AI layer belongs beside it over its APIs, not
+inside its tree.** 🟢 **Where that is unacceptable, the permissive EMEA alternative is
+`ls1intum/Artemis`** (TU Munich, **MIT** `1 091 B` on `develop/LICENSE`, 820 ★, pushed minutes
+before this read) — the only platform on these shelves that is both permissively licensed and
+institution-operated at scale.
+🟢 **Two further dated German signals:** the second **"Offene KI in der Schule"** conference (NLQ +
+Wikimedia Deutschland, Hannover-Lehrte, **February 2026**, working groups on AI law, competence
+models and open AI infrastructure), and **KI-Schule des Jahres 2026** (Margot-Friedländer-Gymnasium
+Geestland, reported **2026-09-21**). 🔴 **One German claim REFUSED:** an NRW *"chose Moodle"* item
+the channel surfaced **undated**. 🟢 **`p380`'s `Regulation (EU) 2026/1744` dates are unchanged**:
+Annex III (education) **2027-12-02**, Annex I **2028-08-02**.
+
 
 🟢 **The obligation that bites a 2026 engagement is the TRANSPARENCY one, already live.** From
 **2 August 2026** people must be told they are dealing with an AI system and deepfakes must be
@@ -2340,6 +2436,26 @@ modification now has two bases that permit one.
 
 ### APAC
 
+🔴 **`p381`'s APAC leg is a declared NIL on instruments, and the nil is the information.** The
+English APAC leg returned enterprise-AI material — TCS + Pearson's multi-year AI learning alliance,
+LearnUpon's Sydney HQ and `Create+` authoring, an Alteryx academy relaunch, a 49 % *"insufficient
+real-time infrastructure"* barrier figure — and **no national education-specific AI rule at all**.
+🟢 **So `p380`'s APAC instruments stand and are carried forward unchanged rather than re-derived:**
+**Vietnam Law No. 134/2025/QH15** (in force **2026-03-01**, education on the high-risk list, the
+operative trigger being AI output as the *sole basis* for a decision without meaningful human
+review, with a +6-month grace period for systems live before 2026-08-15) and **South Korea's AI
+Basic Act** (high-impact obligations, effective **2026-01**).
+🟢 **Supply placed first-hand, and APAC supplied the best new row of the pass:**
+`liuliu667/cram-engine` — **16 of 16** commits at `+0800`, HEAD **2026-10-22** (the day of the
+read), **MIT** `1 064 B` folding to `p378`'s constant, **174 ★** — a learning-science exam-prep
+agent with a named **four-stage** interactive contract. 🟡 **And one stale APAC row, flagged:**
+`Seeed-Studio/Seeed_Studio_Courses` (8 of 9 at `+0800`, **MIT**, Edge AI on Jetson hardware) whose
+HEAD is **2025-01-07** — **21.5 months old**, so a reference and not a dependency.
+🔵 **The regional reading for a studio: APAC's rule layer is the clearest in the world on the
+decision boundary and its education supply is the most active, but no 2026 leg on this base has
+yet found an APAC education instrument that `p380` did not already have.**
+
+
 🟢 **`p380` gives this region's high-risk rule a LAW NUMBER, which is what `p376` was missing.**
 `p376` found the assessment boundary turning up in Vietnamese law as the operative trigger;
 the instrument is **Law No. 134/2025/QH15 on Artificial Intelligence**, in force
@@ -2836,6 +2952,31 @@ largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 �
 AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
+
+🟢 **`p381`'s LATAM leg is the richest of the four, and the only one that returned sources with a
+STATED METHOD** — which is why its figures are graded `ATTRIBUTED-UNVERIFIED but METHOD-BEARING`
+rather than refused outright alongside the vendor market pages.
+🟢 **UNESCO IESALC working paper — 200 higher-education institutions across 19 countries, surveyed
+August–October 2025.** Institutional AI use by function: **teaching and learning 73.5 %**, research
+**57.0 %**, administration **34.1 %**, community engagement **20.0 %**, with governance treated as
+a cross-cutting dimension. 🔵 **Teaching leads administration by better than two to one, which
+inverts the usual enterprise pattern and tells a studio where the first LATAM deliverable lands.**
+🟢 **Digital Education Council LATAM survey (February 2026, with Tecnológico de Monterrey and the
+Institute for the Future of Education): `92 %` of students and `79 %` of faculty actively engaging
+with AI, from more than `30 000` responses across `29` institutions.**
+🔴 **And the gap that is the actual commercial opening: only about `30 %` of LATAM universities have
+published a policy on AI use.** 🔵 A 92 % usage rate against a 30 % policy rate is not an adoption
+problem, it is a **governance-debt** problem — the engagement is writing and instrumenting the
+policy that usage has already outrun.
+🔴 **The regulatory picture is fragmented and still has NO education-specific instrument anywhere
+in the region, which CORROBORATES `p380`'s declared LATAM gap rather than closing it:** Chile has a
+national AI policy since 2021 and a bill under discussion; Brazil and Colombia have national
+strategies with no education-specific rules; Mexico's SEP and ANUIES issue **non-binding**
+recommendations. Policy and index bodies named: **IDB**, **CEPAL**, and the **ILIA 2025** index
+covering 19 countries. 🔴 **`p381` found no LATAM-origin supply at all** — no address on any leg
+placed to a LATAM timezone, and `Gap 541` means a `-0500`-only census could not have placed one
+anyway.
+
 
 🟢 **`p380`'s leg places four jurisdictions with named instruments and declares what it could not
 find.** 🟡 **El Salvador** is the first country in the region with a **comprehensive AI law**;

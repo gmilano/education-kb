@@ -1,0 +1,66 @@
+# p381 — ACTION p379-A DISCHARGED.  THE RANDOM ARM OVER CHANNEL-B-ONLY ADDRESSES.
+# p379 probed a DELIBERATELY ENRICHED sample: 24 of 49 live, published as an UPPER BOUND on the
+# channel-B live rate and registered as needing a random arm to become a rate.  This is that arm.
+#
+# SAMPLING RULE, STATED BEFORE THE NUMBERS (Gap 540 is what its absence costs):
+#   population = carried_index.harvest_b(root) - set(carried_index.harvest(root)) = 768 addresses
+#   sample     = random.Random(381).sample(population, 40)     <- seed is the pass number, reproducible
+#   probe      = git ls-remote https://github.com/<addr> HEAD   <- first-hand, serial, one per address
+slug	result
+openacs/dotlrn	LIVE
+olmps/memo	LIVE
+sagorbrur/bnlp	LIVE
+alvaarocl/taskbot	LIVE
+evgkatis/ccso	LIVE
+cenia-chile/latamgpt	DEAD-OR-REFUSED
+imsglobal/caliper-php-public	DEAD-OR-REFUSED
+tong666-bit/liu-xiaoyan-skill	LIVE
+feature/openedx-integration	DEAD-OR-REFUSED
+plyght/studentvue	LIVE
+srinivasan-78/cairn	LIVE
+schooltool/schooltool	DEAD-OR-REFUSED
+snaw80/mcp-moodle	DEAD-OR-REFUSED
+sirfizx/standards-data	LIVE
+huni1023/eqump	DEAD-OR-REFUSED
+sumedhakoranga/tutorai	LIVE
+geraservicesuk/mcp-geralearn	DEAD-OR-REFUSED
+maisie-the-cat/nomad	LIVE
+syrah111/student_dropout_prediction	LIVE
+frappe/press	LIVE
+oer/emacs-reveal	DEAD-OR-REFUSED
+feat/cloud-rubric-tabs	DEAD-OR-REFUSED
+akihikowatanabe/paper_notes	LIVE
+agnesmuthia/agnes_skb2027	LIVE
+shubhsarin/youtube-study-helper	LIVE
+moinsen-dev/tool-teacher	LIVE
+vtutortools/vtutor	DEAD-OR-REFUSED
+dkavargy/escoplus2	DEAD-OR-REFUSED
+scottdaniels/labaaoom	LIVE
+adl-opensource/xapi-spec	DEAD-OR-REFUSED
+koolreport/school	DEAD-OR-REFUSED
+my-language-skills/open-badges-framework	LIVE
+voodoo2man/iobroker	DEAD-OR-REFUSED
+cockroachdb/cockroach	LIVE
+mdkhaled/school-management-system	LIVE
+nvidia-nemo/nemo	LIVE
+nzokos06/gestion_school	LIVE
+qianliwanli/cregs	LIVE
+me-shaon/bangla-programming-resources	LIVE
+lucasmation/microdadosbrasil	LIVE
+#
+# RESULT: 26 LIVE of 40 = 65.0 %, against p379's enriched 24 of 49 = 49.0 %.
+#
+# 🔴 AND IT REFUTES THE FRAMING THAT REGISTERED IT.  p379 published its enriched figure as an
+# UPPER bound.  The random arm is 16 POINTS HIGHER, so the enrichment selected for addresses that
+# were MORE likely to be dead, not less.  The mechanism is in p379's own text: it reports that
+# >= 73 of the channel-B-only addresses "sit beside a death or refusal marker ONLY".  An address
+# this base DISCUSSES without linking is disproportionately an address a pass PROVED DEAD —
+# so "enriched for discussion" is enrichment TOWARD the dead.  Direction, not magnitude, is the
+# error, and no cell on this base records a sample's SELECTION RULE.  Gap 540.
+#
+# 🔴 SECOND FINDING, IN THE DENOMINATOR.  Two of the 40 are not repositories at all —
+# `feature/openedx-integration` and `feat/cloud-rubric-tabs` are git BRANCH NAMES harvested as
+# bare slugs.  Both probe DEAD, so the liveness arm absorbs them; the CENSUS does not.  p351's
+# address-shape instrument passes both, correctly by its own contract, because `feature/x` is a
+# legal owner/repo shape.  Among the 38 shape-plausible addresses the live rate is 26/38 = 68.4 %.
+# BOTH figures are published because the denominator choice is the finding.  Gap 539.

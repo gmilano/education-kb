@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 381 · 2026-10-22 — **six new gaps, and five of them are MISSING FIELDS rather than missing facts: a census with no file-set, a sample with no selection rule, a star with no surface, an offset that cannot tell two regions apart, and a shape filter with no vocabulary.**
+
+**Evidence:** [`registered-prediction`](../evidence/p381-registered-prediction.2026-10-22-p381.tsv) ·
+[`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv) ·
+[`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) ·
+[`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) ·
+[`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv) ·
+[`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) ·
+[`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
+
+🟢 **GATE STATE: `make hooks` 43/43 GREEN before the first byte, re-measured rather than inherited,
+and again as the last act before the commit. `make hooks-online` 3/3 — the first egress run since
+`p378`.**
+
+### 🟢 Closed, moved or resolved this pass
+
+| Gap / Action | Was | Now |
+|---|---|---|
+| **`p380` ranked-1** — run the three EGRESS gates | not run since `p378` | 🟢 **DISCHARGED.** `make hooks-online` **3/3**. `gate-identity-online` 518 addresses, 508 distinct HEADs, `NEW=0`; `gate-mit-tier` **884 READ / 53 UNREAD** |
+| **`ACTION p379-A`** — the random arm over channel B | an enriched 24-of-49 published as an upper bound | 🟢 **DISCHARGED, and it REFUTES its own framing.** Random seeded arm: **26 of 40 = 65.0 %** (68.4 % on a shape-plausible denominator) |
+| **`Gap 530`** — `bncc-dados` 9 → 22 | unresolved, `n=1` | 🟡 **HALF-CLOSED.** `G-LIMB-1` CONFIRMED: it reads **22** again today, so `p380` did **not** misread. 🔴 Growth vs a persistent **cross-channel** disagreement with `p343`'s API read of 9 is still open, and the API is `403` here |
+| **`Gap 532`** — channel availability is tool-scoped | one sandbox | 🟢 **REPLICATED in a sixth**, and now in **both directions at once**: `github.com` is tool-scoped OPEN (`WebFetch` 200) and CLOSED (`curl` 403), while `eur-lex` is closed on **both** tools by **two different mechanisms** (proxy `000` vs DNS `ENOTFOUND`) |
+| **`Gap 529`/`532`** — no channel, resolution or tool field | prose only | 🟢 **SCHEMA CHANGED.** `channel-probe` carries a `tool` column; every star cell this pass publishes carries **channel · resolution**, and two rounded figures are marked `ROUNDED` rather than written as integers |
+| **`ACTION ZZ-ap`** — the per-subtree grant classifier | two fixtures, unbuilt | 🟡 **THIRD FIXTURE, still unbuilt.** `aaryansamanta/nextgen-ai` — and it is the first whose exclusion is **inside the LICENSE payload**, not in a README |
+| **`p378` fold constant** | replicated once, 17 B span | 🟢 **REPLICATED AGAIN**, by a second pass, on a disjoint sample: **6 payloads, 6 byte lengths spanning 28 B, 6 digests, 1 fold** |
+| **`ACTION XH`** — unreadable MIT grants | 60 at `p247` | 🟡 **53** here. Movement recorded, not attributed — the seven are not individually named by this pass's output |
+
+### 🔴 New gaps
+
+**`Gap 538` — A PUBLISHED ADDRESS CENSUS TOTAL CARRIES NO FILE-SET FIELD, AND TWO INSTRUMENTS ON
+THIS BASE DISAGREE BY 42 BECAUSE OF IT.** `make channels` reports `channel_u_addresses` =
+**2 739**; `p352`'s census instrument, which `gate-census-currency` checks, reports **2 697**. 🟢
+**Neither is wrong.** `carried_index.SHELVES` is **ten** files and includes `README.md`; `p352`'s
+`SHELF_FILES` is **nine** and excludes it. 🔴 **No published census cell says which file set
+produced it**, so the two totals read as a contradiction to anyone who has not opened both
+modules. 🟢 **The delta is `42` and it is STABLE** — derived twice, before and after this pass's
+shelf writes (`2 729`/`2 687`, then `2 739`/`2 697`), so it is a structural property of the file
+sets and not drift: exactly 42 addresses live in `README.md` alone — and a successor reconciling them will "fix" a non-defect. 🔵 One field: `file_set=U10`
+or `SHELF_FILES9`.
+
+**`Gap 539` — CHANNEL B ADMITS GIT BRANCH NAMES AS ADDRESSES, AND SHAPE CANNOT REJECT THEM.**
+`feature/openedx-integration` and `feat/cloud-rubric-tabs` were drawn in a **random** 40-address
+sample of the channel-B-only population — 5 % of the sample. 🟢 `p351`'s `address_shape.classify()`
+passes both **correctly by its own contract**: `feature/x` is a legal `owner/repo` shape. 🔴 **So
+no instrument here can reject them, and the census counts them.** 🔵 The discriminator is a
+**vocabulary**, not a shape: `feature/`, `feat/`, `fix/`, `chore/`, `release/`, `hotfix/` as a
+first segment are branch prefixes, not GitHub owners. One stoplist, in `p115`'s committed style.
+
+**`Gap 540` — NO CELL RECORDS A SAMPLE'S SELECTION RULE, SO AN "UPPER BOUND" CANNOT BE CHECKED FOR
+DIRECTION.** `p379` published 24-of-49 as an **upper** bound on the channel-B live rate. The random
+arm is **65 %** against its **49 %** — the enriched sample was **lower**, because enrichment ran
+*toward* addresses sitting beside death and refusal markers. 🔴 **The figure alone cannot say which
+way its own bias points**, and this base publishes rates in tables with no selection field. 🔵
+`selection=random(seed)` / `selection=enriched(criterion)` beside every rate.
+
+**`Gap 541` — `-0500` CANNOT DISTINGUISH NORTH AMERICA FROM LATAM, THE TWO REGIONS THIS BASE IS
+REQUIRED TO PLACE APART.** `Gap 531` recorded a DST-dependent ambiguity class; this is the specific,
+costly instance. **`-0500` is US Eastern in winter AND Colombia, Peru, Ecuador and most of Mexico
+all year round.** 🔴 `YJLi-new/undergraduate-coding-tutor` (3 of 3 commits at `-0500`) is published
+**`NOT PLACED`** rather than guessed. 🟢 **And the discriminator exists:** a repository showing
+**both `-0400` and `-0500`** crossed a DST boundary, which the non-DST LATAM `-0500` zones cannot
+do — `ml-from-scratch-book/code` places on exactly that. 🔵 `p371`'s `region_place` should hold the
+rule: `-0500` alone → `AMBIGUOUS-NA-LATAM`; `{-0400, -0500}` → North America.
+
+**`Gap 542` — A STAR FIGURE RECORDS ITS CHANNEL BUT NOT ITS SURFACE, AND THIS PASS READ A SURFACE
+NOBODY CALIBRATED.** `p380` calibrated the HTML channel's **repo page** against `p369`'s API
+figures. Every star figure in this pass's supply table came off a **search or topic LISTING**, which
+is a different renderer. 🟢 **One control was run: `liuliu667/cram-engine` reads `174` on the topic
+listing and `174` on its repo page.** 🔴 **`n=1`, below the rounding floor, same direction only.**
+🔵 A `star_surface` field (`repo-page` / `search-listing` / `topic-listing`) plus two more controls
+**above** 1 000 ★, where the listing might round differently from the page.
+
+**`Gap 543` — NOTHING RANKS A DATED INSTRUMENT ABOVE AN UNDATED SECONDARY PAGE, SO A SUPERSEDED
+DEADLINE PROPAGATES UNCHALLENGED.** A 2026 commentary page states the EU AI Act is *"fully
+effective August 2026"* for education; `p380`'s **Regulation (EU) 2026/1744** (OJ **2026-07-24**)
+defers Annex III to **2 December 2027**. 🟢 The judgement is obvious to a reader. 🔴 **No gate
+encodes it**, `Gap 523` already noted that no pattern dates its legal premise, and `Gap 536` that
+no gate dates one either. 🔵 The cheap version is a `supersedes` / `superseded_by` pair on the
+instrument rows in `intel/market.md`, so a contradicting page is answered by a table rather than by
+a successor's memory.
+
+**`Gap 544` — FOUND AT COMMIT TIME, AND FIXED IN THE SAME COMMIT: THE EGRESS ARTEFACTS WERE KEYED
+ON A DATE WHILE THIS BASE'S UNIT OF WORK IS A PASS.** 🔴 Running `make hooks-online` **overwrote
+`evidence/repo-identity-2026-10-22.tsv`, which `p378` committed the same morning** — four passes
+ran on 2026-10-22 and the file can hold one of them. 🔵 Every **hand-written** evidence file here
+is `<name>.<date>-p<pass>.tsv`; the **four ONLINE recipes** were `<name>-$(date +%F).tsv`, date
+only, so the loss is silent because the path never changes. 🔴 **And the defect bites hardest on
+the instrument a successor is most likely to run**, since `p380` ranked re-running these exact
+gates first. 🟢 **Repaired in this commit:** `p378`'s artefact was restored with
+`git checkout`, this pass's run is saved as `repo-identity.2026-10-22-p381.tsv`, and all four
+recipes now take an overridable `PASS` stamp (`make hooks-online PASS=p382`) — verified by
+expansion in both the default and overridden form, with `make hooks` re-measured 43/43 after the
+edit. 🟡 **What is NOT repaired:** the artefacts those recipes wrote on earlier days are still
+date-keyed on disk, and any pass that shared a day with another has already lost one of them.
+
+### 🔵 A gap this pass DREW UP AND WITHDREW, recorded because the next pass will draft it too
+
+This pass drafted a gap claiming the digest column is unbound, on finding a **12-character** digest
+and a **14-character** one published for the same `7 048 B` CC0 payload. 🟢 **Withdrawn before it
+was written: the table headers disambiguate them** — one column says `sha256₁₂`, the other says
+`SHA-40 prefix` (a commit). 🔵 Recorded because the two values occupy the same visual position in
+adjacent tables and **only the header tells them apart**, so the near-miss is a property of the
+layout and will recur.
+
+---
+
 ## Pass 380 · 2026-10-22 — **a channel four sandboxes called closed is OPEN here, so `p379`'s refused EU date is resolved and star counts return; the agent-row zero breaks at five. 🔴 Seven new gaps, five of them about instruments this base trusts more than it has measured.**
 
 **Evidence:** [`channel-probe`](../evidence/channel-probe.2026-10-22-p380.tsv) ·

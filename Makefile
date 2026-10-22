@@ -61,6 +61,18 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 
+# 🔴 p381 — FOUR PASSES RAN ON 2026-10-22 AND THE EGRESS ARTEFACTS CAN HOLD ONE OF THEM.
+# Every hand-written evidence file on this base is named `<name>.<date>-p<pass>.tsv`.  The four
+# ONLINE recipes below were named `<name>-$(date +%F).tsv` — DATE ONLY.  Measured at p381: running
+# `make hooks-online` OVERWROTE `evidence/repo-identity-2026-10-22.tsv`, which p378 had committed
+# that same morning, and the loss is silent because the path does not change.
+#
+# 🔵 The generalisable error: AN ARTEFACT KEYED ON A COARSER GRAIN THAN THE THING IT MEASURES.
+# This base's unit of work is a PASS, not a day, and `p380` ranked re-running these exact gates
+# first — so the naming defect bites hardest on the instrument a successor is most likely to run.
+# `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
+PASS ?= p381
+
 .PHONY: verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
@@ -503,14 +515,14 @@ gate-grant-path: ## p354 — ACTION ZZ-au: a published grant path asserts a BRAN
 # everything would report every row dead, and a failed control pair yields NO verdict.
 gate-grant-path-online: ## p354 — ACTION ZZ-au, the 200-check itself.  NEEDS EGRESS.
 	@$(PY) -I compose/code/p354-grant-path/grant_path.py --root . --online \
-	  --out evidence/grant-path-liveness-$$(date +%F).tsv || exit 1
+	  --out evidence/grant-path-liveness.$$(date +%F)-$(PASS).tsv || exit 1
 
 # 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
 # An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so
 # a control-pair failure reports NO verdict rather than a guess.
 slug-probe: ## ACTION p293 — is it a repository?  make slug-probe SLUGS="owner/a owner/b"
 	@test -n "$(SLUGS)" || { echo 'usage: make slug-probe SLUGS="owner/name owner/other"'; exit 2; }
-	@$(PY) -I compose/code/p293-slug-existence-oracle/slug_oracle.py --online $(SLUGS) --out evidence/p293-slug-oracle-$$(date +%F).tsv
+	@$(PY) -I compose/code/p293-slug-existence-oracle/slug_oracle.py --online $(SLUGS) --out evidence/p293-slug-oracle.$$(date +%F)-$(PASS).tsv
 
 # 🔴 p364 — `ACTION ZZ-bo` (p362): EVERY GRANT INSTRUMENT ON THIS BASE TAKES ONE
 # REPOSITORY'S BYTES, and p362 proved with `QingdaoU/OnlineJudge` that a platform's headline
@@ -547,13 +559,13 @@ gate-ladder-case: ## ACTION p283 — which path ladders can find an uppercase ex
 	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . | tail -2
 
 ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit FAMILY=readme
-	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . $(if $(FAMILY),--family $(FAMILY),) --out evidence/ladder-case-audit-$$(date +%F).tsv
+	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . $(if $(FAMILY),--family $(FAMILY),) --out evidence/ladder-case-audit.$$(date +%F)-$(PASS).tsv
 
 # 🔴 ONLINE half — one `git ls-remote` per live build-on address.  OUT of `hooks`.
 # A HEAD collision is a FINDING, not a verdict: two distinct forks share a HEAD on the day
 # one is forked from the other.  Adjudicate, then shelve the pair in `aliases.tsv`.
 gate-identity-online: ## ACTION p283 — ls-remote every address; equal HEAD == one repository
-	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . --online --out evidence/repo-identity-$$(date +%F).tsv
+	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . --online --out evidence/repo-identity.$$(date +%F)-$(PASS).tsv
 
 # 🔴 ONLINE half — needs a blobless clone + raw.githubusercontent.com.  OUT of `hooks`.
 provenance-sweep: ## ACTION p280 — grade every manifest in a slug list: make provenance-sweep SLUGS=f

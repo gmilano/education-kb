@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **TWO PATTERNS, BOTH RUN BEFORE THEY WERE WRITTEN: A LICENCE-AND-RECENCY-FILTERED SUPPLY SWEEP THAT MEASURED 11.5 ADDRESSES/LEG AGAINST 1.0, AND A GRANT-INTEGRITY CHECK THAT CAUGHT A HAND-NARROWED MIT CLAUSE 491 ★ DEEP.**
+
+**Evidence:** [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Both patterns were executed on **2026-10-22** before being written down; every
+figure quoted is this pass's own measurement, not an estimate. Dated by **MEASUREMENT**.
+
+🔴 **Legal premise, dated, because `Gap 523` and `Gap 536` say a pattern must carry one.** Both
+patterns below are **channel and licence** procedures and rest on **no** legal instrument. Where a
+deliverable built with them touches an assessment, grading, promotion or admission decision, the
+governing instruments as of **2026-10-22** are **Regulation (EU) 2026/1744** (Annex III, education:
+applies **2027-12-02**), **Vietnam Law 134/2025/QH15** (in force **2026-03-01**) and **NYC DOE's
+red tier**, all carried on `intel/market.md`, and `Pattern 34`'s human-review boundary applies.
+
+---
+
+### 🟢 `Pattern 36` — Licence-and-recency-filtered supply discovery, on the forge's own index
+
+**The problem it solves.** Every pass on this base has discovered supply through a commentary
+index, then applied licence and freshness filters **by hand**, by reading payloads one at a time:
+`p380` read 18 to promote 3. 🔴 **The filters were always applied in the wrong order** — after
+retrieval, by the most expensive step.
+
+**Why it is available now.** `github.com` HTML answers `200` through `WebFetch` in sandboxes where
+`curl` gets `403` (`Gap 532`, six sandboxes), and `/search` and `/topics` accept qualifiers that no
+commentary index has.
+
+**The recipe — every step is an instrument that already exists in this repository.**
+
+```bash
+# 1. ENUMERATE, with the filters applied BY THE FORGE rather than by you.
+#    /topics is the richer surface: it is education-specific by construction.
+#    (These are WebFetch reads, NOT curl — the channel is tool-scoped.)
+      /topics/ai-education                                   # 536 tagged; 20/page, stars + descriptions
+      /search?q=topic:education+topic:artificial-intelligence+stars:>200&type=repositories&s=stars
+      /search?q=education+tutor+agent+license:mit+pushed:>2026-08-01&type=repositories&s=stars
+
+# 2. GRADE EVERY ADDRESS AGAINST THE SHELVES BEFORE PROBING ANYTHING.
+make verdict SLUG=owner/repo      # CARRIED | MENTIONED-B | NEW   (three-valued; B is a STOP)
+make claims  TOKEN=owner/repo     # read the cells before publishing an absence
+
+# 3. PROBE ONLY THE `NEW` ONES, AND TAKE THE DEFAULT REF FROM THE PROBE.
+git ls-remote --symref https://github.com/owner/repo HEAD     # existence AND the real default ref
+
+# 4. READ THE GRANT FROM THAT REF — never from a guessed `main`.
+curl https://raw.githubusercontent.com/owner/repo/<default-ref>/LICENSE
+
+# 5. CONFIRM THE GRANT IS THE CANONICAL TEXT, NOT A LABEL.  -> Pattern 37
+python3 compose/code/p378-presentation-fold/presentation_fold.py   # presentation_digest()
+
+# 6. PLACE THE ROW.
+git clone --filter=blob:none https://github.com/owner/repo      # HEAD date + commit-timezone census
+```
+
+**Measured, this pass, not projected.**
+
+| | Forge channel | The four prescribed commentary legs |
+|---|---:|---:|
+| Addresses per leg | 🟢 **11.5** | 🔴 **1.0** |
+| `NEW` addresses | 🟢 **11** | 🔴 **0** |
+| `NEW` rate | 🟢 **23.9 %** | 🔴 **0 %** |
+| Promotions after the payload read | 🟢 **5** | **0** |
+
+🔴 **Two limits a studio must price in, both measured.** **(1)** `76.1 %` of what the forge
+returned was already on these shelves, so the pattern does **not** solve saturation — it only makes
+the remainder cheap to find (`T-p381-1`). **(2)** Of 11 `NEW`, **6 failed the payload read**, so
+step 5 is not optional polish; it is where the pattern earns its keep.
+
+🔵 **The regional corollary, and it is step 0.** `p379` proved in-language legs return **zero
+addresses**, and this pass's German leg returned zero too — **yet it found the largest open-source
+education deployment on this base** (`openDesk Edu`, `ILIAS`, 8 600 schools) where the English leg
+found nothing. 🟢 **Run the forge for ADDRESSES; run the national language for INSTRUMENTS AND
+DEPLOYMENTS.** They are different harvests and one leg cannot do both.
+
+---
+
+### 🟢 `Pattern 37` — Grant-integrity check: fold the payload before you build on the label
+
+**The problem it solves, with the specimen that found it.**
+[`aaryansamanta/nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai) — **491 ★** — has
+`MIT License (Code)` on its title line. 🔴 **A string matcher, a licence API field and a package
+manifest all return "MIT". The grant is not MIT:** its operative clause is narrowed to *"the source
+code files in this repository"*, and the payload itself carves out brand assets, team photos,
+videos, logos and the top-level PDFs as *"not covered by the MIT license above"*.
+
+**The check, in three lines.**
+
+```python
+import presentation_fold as pf                          # compose/code/p378-presentation-fold/
+digest = pf.presentation_digest(open("LICENSE").read())[:16]
+# 584db484c03a8904  -> the canonical MIT text.  Build on it.
+# anything else     -> the payload has been EDITED.  Read it before you ship.
+```
+
+**Why a fold and not a byte length, a `sha256` or a label.** All six canonical MIT payloads this
+pass read first-hand have **different byte lengths** (`1 063`–`1 091`) and **different `sha256`s**,
+because the holder string and the line wrapping differ. 🟢 **One fold digest.** So byte length and
+`sha256` answer *"is this the same FILE?"* — the question `p311` showed is the wrong one — while the
+fold answers *"is this the same GRANT?"*.
+
+**The decision table a studio can act on.**
+
+| Fold digest | Reading | Action |
+|---|---|---|
+| `584db484c03a8904` | 🟢 Canonical MIT, whatever the bytes | Build on it |
+| Any other digest, MIT-ish title | 🔴 **The text was edited** | 🔴 **Read the payload end to end before scoping** — the scope may be narrower than the repository |
+| `81b55ffaf6bc3052` | BSD-3-Clause, held apart by `p378` | Build on it; keep the clause |
+| `18344ce9830de41c` (`35 147 B`) | GPL — e.g. `ILIAS` | 🟡 Beside it over APIs, **not inside its tree** |
+| `9298f70d1aeaaf67` · `b201beff45fc2666` | 🔴 CC **BY-NC-ND** · CC **BY-SA** | 🔴 **Not a code grant.** Do not ship |
+| `7 048 B` · `a2010f343487` | CC0-1.0 — public-domain dedication | Build on it; no attribution condition |
+
+🔴 **What this pattern does NOT do, stated so it is not oversold.** It reads the **root** `LICENSE`
+only. A per-subtree grant — a `LICENSE` in a subdirectory contradicting the root, or a silent
+manifest like `p336`'s `@groton/canvas-api` GPL tree — is **invisible** to it. 🟡 That classifier is
+`ACTION ZZ-ap`, registered five times and **still unbuilt**; it now has **three** live fixtures
+(`oak-curriculum-ontology`, `os-taxonomy`, and `nextgen-ai` — the first whose exclusion is **inside
+the LICENSE payload**). 🔵 **Until it ships, `Pattern 37` is the interim and its blind spot is
+named.**
+
+---
+
 ## 🟢 2026-10-22 · `p380` — **two recipes added, and both are built on the same discovery: what three legal systems regulate is the DECISION, so the human-review boundary is the architecture. 🟢 `Pattern 34` makes one assessment pipeline lawful in Brussels, Hanoi and New York. 🟢 `Pattern 35` builds the evidence buyers started asking for in 2026.**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) ·

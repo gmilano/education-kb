@@ -1,0 +1,56 @@
+# p381 — THE HTML CHANNEL TESTED AS A SUPPLY CHANNEL. Every address below was returned by
+# github.com through WebFetch and graded by this base's OWN instrument BEFORE any probe ran:
+#   python3 -I compose/code/p235-carried-index/carried_index.py verdict <slug> .
+# CARRIED = channel U (the shelves cite it as an address). MENTIONED-B = channel B only
+# (discussed as a bare slug, never linked). NEW = neither channel has it.
+# Stars are read off the LISTING surface of the HTML channel, not the repo page — see Gap 542.
+leg	query_or_path	address	stars_listing	verdict
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	ahmedEid1/lumen	90	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	A-R007/Multi-Agent-Study-Assistant	64	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	zhangl1001/civil-ai	41	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	towardsai/ai-tutor-app	33	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	koukekoukej-glitch/feynman-tutor	32	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	lowwwbank/anything-to-course	26	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	idoforgod/Vibe-learning-AgenticWorkflow	25	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	WangyiNTU/nanobot-study	19	CARRIED
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	tong666-bit/liu-xiaoyan-skill	18	MENTIONED-B
+H1	/search?q=education+AI+tutor+agent&type=repositories&s=stars	hwl668/Scientific-learning-skills-	15	CARRIED
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	ibenian/algebench	8	CARRIED
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	fcescob/understand	5	MENTIONED-B
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	YJLi-new/undergraduate-coding-tutor	4	NEW
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	tong666-bit/song-hao-math	4	MENTIONED-B
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	CGSeb/lessonfolk	3	MENTIONED-B
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	fanfanfanfanfan626/mastery-tutor	3	MENTIONED-B
+H2	/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01	wildcat430524/Steps2Great-skill	2	MENTIONED-B
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	ls1intum/Artemis	820	CARRIED
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	RoseCityRobotics/ai-developer-resources	768	NEW
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	mehmetkahya0/AI-Catalog	497	MENTIONED-B
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	kuzand/Computer-Vision-Video-Lectures	446	NEW
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	ystemsrx/mini-nanoGPT	383	CARRIED
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	marimo-team/learn	360	NEW
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	ml-from-scratch-book/code	319	NEW
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	GeminiLight/awesome-ai-llm4education	220	CARRIED
+H3	/search?q=topic:education+topic:artificial-intelligence+stars:>200	NiluK/worldmodels101	204	NEW
+H4	/topics/ai-education	HugeCatLab/ChatTutor	1.3k-ROUNDED	CARRIED
+H4	/topics/ai-education	pguso/agents-from-scratch	1.1k-ROUNDED	CARRIED
+H4	/topics/ai-education	GarethManning/education-agent-skills	887	CARRIED
+H4	/topics/ai-education	24kchengYe/human-skill-tree	576	CARRIED
+H4	/topics/ai-education	aaryansamanta/ai-ethos	498	CARRIED
+H4	/topics/ai-education	aaryansamanta/nextgen-ai	491	NEW
+H4	/topics/ai-education	assafkip/claudemy	357	CARRIED
+H4	/topics/ai-education	SenmuuuuW/universal-diagnostic-tutor-skill	249	CARRIED
+H4	/topics/ai-education	Fazmin/AILearningGuide	225	CARRIED
+H4	/topics/ai-education	liuliu667/cram-engine	174	NEW
+H4	/topics/ai-education	SimonsTang/feifei-companion	109	CARRIED
+H4	/topics/ai-education	DAMO-NLP-SG/M3Exam	105	CARRIED
+H4	/topics/ai-education	Imboyeong/Fact-vs-Fiction-LLM-Test-	93	NEW
+H4	/topics/ai-education	sgaofen/vibe-schooling	80	CARRIED
+H4	/topics/ai-education	Seeed-Studio/Seeed_Studio_Courses	78	NEW
+H4	/topics/ai-education	dvbs2000/visible-ai	48	NEW
+H4	/topics/ai-education	AarambhDevHub/exam-cheating-detection	47	CARRIED
+H4	/topics/ai-education	vincenzo-afk/KingstonConnect	41	MENTIONED-B
+H4	/topics/ai-education	TovTechOrg/Tov-learn	36	CARRIED
+H4	/topics/ai-education	Jeremy-xuan/SocraticNovel	32	CARRIED
+#
+# DISTINCT ADDRESSES = 46.  CARRIED = 27.  MENTIONED-B = 8.  NEW = 11.
+# NEW RATE = 11/46 = 23.9 %.  ALREADY ON THESE SHELVES (U or B) = 35/46 = 76.1 %.

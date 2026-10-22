@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **THE CHANNEL `p380` OPENED IS NOT A STAR CHANNEL, IT IS A SUPPLY CHANNEL — AND IT TAKES `license:` AND `pushed:` QUALIFIERS. 🟢 11 NEW ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED GLOBAL LEGS, ON A PREDICTION COMMITTED BEFORE THE LEGS RAN. 🔴 AND THE ROW THAT MATTERS MOST IS THE ONE THIS SHELF REFUSED: AN `MIT License (Code)` WHOSE OPERATIVE CLAUSE HAS BEEN EDITED. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE, AND THE THREE EGRESS GATES RUN FOR THE FIRST TIME SINCE `p378`.**
+
+**Evidence:** [`registered-prediction`](../evidence/p381-registered-prediction.2026-10-22-p381.tsv) · [`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every probe, leg and read below was run on **2026-10-22** and every evidence
+file is named for that date. Artefacts are dated by **MEASUREMENT**, per this base's standing rule.
+
+🟢 **GATE STATE: `make hooks` 43/43 GREEN before the first byte**, re-measured rather than
+inherited, and `make hooks-online` **3/3** — the first run of the three egress gates since `p378`,
+which was `p380`'s ranked-first item for its successor.
+
+### 🟢 The two rows this shelf gains
+
+🔵 Both were graded on four channels before promotion: `git ls-remote --symref` for existence and
+the **default ref**, `raw.githubusercontent.com` for the grant **payload**, a blobless clone for
+the HEAD date and the commit-timezone census, and the HTML channel for stars.
+
+| Agent | Repo | Licence (payload, first-hand) | Grant path | HEAD | ★ (channel · resolution) | Region | Why it is on this shelf |
+|---|---|---|---|---|---|---|---|
+| 🆕 **Four-stage exam-prep teacher** | [`liuliu667/cram-engine`](https://github.com/liuliu667/cram-engine) | 🟢 **MIT** — `1 064 B`, `sha256₁₂ c33ea68946e4`, 🟢 folds to `p378`'s constant | `main/LICENSE` | `982cd31` · **2026-10-22** (the day of this read) | **174** · HTML repo-page **and** topic-listing, in agreement · exact | **APAC** (China) — 🟢 **16 of 16** commits at `+0800` | 🟢 Its own description, verbatim: *"基于学习科学的考前快速学习与复习 Skill。通过四阶段交互式教学"* — a learning-science cram agent in **four interactive stages**. **Shelved for the staging, not the cramming:** this shelf carries many tutors that answer and few that sequence, and a named four-stage contract is a thing a studio can hold a deliverable to |
+| 🆕 **Undergraduate coding tutor** | [`YJLi-new/undergraduate-coding-tutor`](https://github.com/YJLi-new/undergraduate-coding-tutor) | 🟢 **MIT** — `1 065 B`, `sha256₁₂ 86b434fab451`, 🟢 folds to `p378`'s constant | `main/LICENSE` | `90b85f9` · **2026-10-18** | **4** · HTML search-listing · exact | 🔴 **NOT PLACED** — see `Gap 541` | 🟡 **Thin and shelved anyway, with the thinness stated:** `3` commits, `4` stars. It is here because it is the **only** `NEW` address of the eleven that is a coding tutor with a permissive payload-read grant, and because its timezone census is the specimen that found `Gap 541` |
+
+🔴 **Why `NOT PLACED` rather than North America, and it is a correction to this base's own
+method.** All three of `undergraduate-coding-tutor`'s commits sit at `-0500`. `Gap 531` already
+recorded that timezone placement has a DST-dependent ambiguity class; this row sharpens it into
+something worse. **`-0500` is US Eastern in winter AND Colombia, Peru, Ecuador and most of Mexico
+all year round.** So a `-0500`-only census cannot distinguish **North America from LATAM** — the
+two regions this base is specifically required to place apart. 🔵 `ml-from-scratch-book/code`, on
+`repos/foundations.md` this pass, is the contrast that proves the rule is usable: its 18 commits
+carry **both** `-0400` and `-0500`, which is one US location crossing a DST boundary and not a
+LATAM one. 🟡 `Gap 541`.
+
+### 🔴 The row this shelf REFUSED, and it is the finding of the pass
+
+**[`aaryansamanta/nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai)** — **491 ★**, and its
+`LICENSE` title line reads **`MIT License (Code)`**. It would satisfy any string matcher, any
+licence API field and any package manifest. 🔴 **It is not the MIT grant.** Two things were done
+to the text by hand:
+
+1. The operative clause's object is **narrowed**: the canonical *"of this software and associated
+   documentation files (the "Software")"* is replaced by *"of the **source code files in this
+   repository** (the "Software")"*.
+2. The payload carries an **explicit carve-out** below the warranty clause: brand assets, team
+   photos, videos, logos and the top-level PDFs *"remain © NextGenAI and are **not covered by the
+   MIT license above**"*.
+
+🟢 **`p378`'s fold instrument catches it for free, and that is why the fold is load-bearing rather
+than decorative.** Six MIT payloads read fresh this pass fold to `584db484c03a8904`; this one
+folds to **`937b89139521aaa7`**, because the fold is of the **TEXT**, not of a label, a byte band
+or a manifest field. 🔴 **A classifier that reads the root `LICENSE` and stops is right about the
+code and wrong about the repository — and that is this base's entire grant ladder.**
+
+🔵 **And it finally gives `ACTION ZZ-ap` — the per-subtree grant classifier, registered five times
+and still unbuilt — a THIRD live fixture**, alongside `oak-curriculum-ontology` and `os-taxonomy`.
+🟢 **This one is different from both in the way that matters:** its exclusion is stated **inside
+the `LICENSE` payload itself**, not in a README or a sibling file. So the fixture set now spans
+both locations, and the classifier no longer has an excuse about where to look. The interim manual
+procedure is `Pattern 37`.
+
+### 🟢 `p378`'s fold constant replicates out of sample, a second time and wider
+
+| | `p378` | `p380` | 🆕 `p381` |
+|---|---|---|---|
+| Fresh payloads folded | the 10 shelf fixtures + 10 drawn first-hand | 6 | 🟢 **6** |
+| Distinct byte lengths | — | 5, spanning **17 B** | 🟢 **6, spanning 28 B** (`1 063`–`1 091`) |
+| Distinct `sha256₁₂` | — | 5 | 🟢 **6** |
+| Fold digests | **1** | **1** | 🟢 **1** — `584db484c03a8904` |
+
+🔵 The six are `marimo-team/learn` (1 063 B), `liuliu667/cram-engine` (1 064), `YJLi-new/undergraduate-coding-tutor` (1 065), `Seeed-Studio/Seeed_Studio_Courses` (1 069), `ml-from-scratch-book/code` (1 077) and `ls1intum/Artemis` (1 091, on `develop`) — six repositories neither `p378` nor `p380` ever touched, run through `p378`'s own `presentation_digest()` unmodified. 🟢 **H-LIMB-1 CONFIRMED.**
+
+### 🔴 This pass's own errors, published rather than tidied
+
+1. 🔴 **The grant-path trap fired, on two rows, with the symref already on screen.** `ILIAS-eLearning/ILIAS`'s default ref is **`release_11`** and `ls1intum/Artemis`'s is **`develop`** — neither is `main` or `master`. This pass's first read of both guessed `master`/`main` anyway, which is *exactly* the error `p380` published as its own and *exactly* the reason `p380` corrected `oppia` to `develop/LICENSE`. Both were re-read on the correct ref. 🟢 **Realised loss: zero** — the payload is byte-identical on both refs in both repositories. 🔵 **Exposure: not zero**, and published, because the next repository whose refs diverge will not be so forgiving.
+2. 🔴 **A misread return contract, caught by the instrument's own documented control.** `p351`'s `address_shape.classify()` returns `None` for a shape-valid address. This pass first read `None` as *"not an address"* and was one step from publishing *"the shape instrument classifies nothing"*. It was caught by running the instrument's **own** documented placeholder, `your-username/safetutors`, which returns `PLACEHOLDER-OWNER` — a positive control that exists in the module's docstring. 🔵 The lesson is the cheap one and this base keeps relearning it: **run a known positive before believing a negative.**
+3. 🔴 **A near-miss on a column this pass almost declared inconsistent.** Two shelf tables publish a 12-character digest and a 14-character one for the same 7 048 B CC0 payload. This pass drafted a gap claiming the digest field is unbound — then read the **header**, which says `SHA-40 prefix` on one and `sha256₁₂` on the other. 🟢 **The schema is sound and the gap was withdrawn before it was written.** 🔵 It is recorded because the two values sit in the same visual position in adjacent tables and only the header tells them apart.
+
+### 🔴 Stated limitations, before a successor leans on anything here
+
+**Two rows promoted, and one of them is thin** (`3` commits, `4` stars) with its thinness on the
+row. **No star figure above 999 is exact**: the HTML channel rounds to `0.1k`, so `ChatTutor`'s
+*"1.3k"* and `agents-from-scratch`'s *"1.1k"* are recorded with a `ROUNDED` marker and no delta
+under 100 ★ is measurable up there (`Gap 529`). **The LISTING surface this pass read stars from is
+calibrated at `n=1`** against the repo-page surface `p380` calibrated — `cram-engine` reads `174`
+on both — and one control is one control (`Gap 542`). **No prose citation is address-verified**:
+every non-GitHub source is `ATTRIBUTED-UNVERIFIED`, because the citation channel is dead on both
+tools here. **`ACTION p378-B` and `p378-C` are four passes carried and still not run.** And
+**`ACTION ZZ-ap` now has three fixtures and remains unbuilt**, which is the uncomfortable one.
+
+---
+
 ## 🟢 🆕 2026-10-22 · `p380` — **THE FIVE-PASS AGENT-ROW ZERO BREAKS: THREE ROWS, ALL MIT, ALL READ FROM THE PAYLOAD. 🟢 AND A CHANNEL REFUSED IN FOUR CONSECUTIVE SANDBOXES IS OPEN HERE — `github.com` HTML ANSWERS **200** THROUGH `WebFetch` WHILE `curl` STILL GETS **403**, SO THIS BASE HAS STAR COUNTS FOR THE FIRST TIME SINCE `p370`. 🔴 IT WAS CALIBRATED AGAINST `p369`'s API FIGURES BEFORE A SINGLE ROW QUOTED IT, AND IT ROUNDS ABOVE 1 000.**
 
 **Evidence:** [`channel-probe`](../evidence/channel-probe.2026-10-22-p380.tsv) · [`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv) · [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p380.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p380.tsv)

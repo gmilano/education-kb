@@ -1,0 +1,29 @@
+# p381 — ADDRESS YIELD BY CHANNEL, the dial p379 established and p380 measured once.
+# This is the registered contrast of E-LIMB-2 and E-LIMB-3, run on one day, in one session.
+channel	tool	legs	addresses_returned	distinct	CARRIED	MENTIONED_B	NEW	new_rate	addresses_per_leg
+github.com HTML (search + topics)	WebFetch	4	49	46	27	8	11	23.9%	11.5
+prescribed global WebSearch legs	WebSearch	4	4	4	3	1	0	0.0%	1.0
+regional legs (4 English + 1 German sibling)	WebSearch	5	0	0	0	0	0	n/a	0.0
+#
+# E-LIMB-1  CONFIRMED — /search answers 200 through WebFetch and returned 10 addresses on leg H1
+#                       (the page itself states 163 results), against a registered floor of 10.
+# E-LIMB-2  CONFIRMED — 11 NEW addresses from the HTML channel against 0 from all four prescribed
+#                       global legs between them.  Address yield 11.5/leg against 1.0/leg.
+# E-LIMB-3  CONFIRMED — 23.9 % NEW against p380's 17 %, the registered threshold.
+# E-LIMB-4  CONFIRMED — /topics/ai-education answers 200 and states 536 repositories tagged, paged
+#                       20 at a time with stars and descriptions.  It is the richer surface: 5 of
+#                       the 11 NEW came from ONE topic page.
+#
+# 🔴 AND THE LIMITS OF THAT RESULT, STATED WITH IT.
+# 1. n=1 leg per channel-query shape, one day, one session.  An advantage measured once is not a dial.
+# 2. The queries are not word-for-word equivalent across channels; they cannot be, because the
+#    qualifiers (`license:mit`, `pushed:>`, `topic:`, `stars:>`) EXIST ONLY on the forge.  That is
+#    itself the finding, and it also means this is not a controlled contrast.
+# 3. Gap 533 said 83 % of search-channel output is this base's own index reflected back.  The forge
+#    channel returns 76.1 % — BETTER, but the same order.  So the saturation is a property of the
+#    SUPPLY, not of the channel, and no channel will fix it.
+# 4. 🔴 HIGH ADDRESS YIELD IS NOT HIGH SHELF YIELD.  Of the 11 NEW, only 5 carry a permissive,
+#    payload-read grant; 2 have no grant file at all on either guessed ref; 2 are CC content
+#    licences with a NonCommercial-NoDerivatives or ShareAlike condition; 1 is an MIT text whose
+#    grant has been NARROWED by hand; 1 is CC0 teaching material last touched in 2021.  The channel
+#    multiplies CANDIDATES, and every one still has to be read.

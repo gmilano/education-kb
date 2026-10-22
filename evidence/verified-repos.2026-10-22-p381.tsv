@@ -1,0 +1,28 @@
+# p381 — EVERY ADDRESS THIS PASS GRADED FIRST-HAND.  Four channels per row where the row is
+# promoted: git ls-remote --symref (existence + DEFAULT REF), raw.githubusercontent.com (the grant
+# PAYLOAD), a blobless clone (HEAD date + commit-timezone census), and the HTML channel (stars).
+# Grant bytes and sha256_12 are of the payload this pass read, not of a manifest or a search index.
+slug	default_ref	grant_path	grant	bytes	sha256_12	fold_digest_16	HEAD	head_date	commits	tz_majority	stars	star_surface	disposition
+liuliu667/cram-engine	main	main/LICENSE	MIT	1064	c33ea68946e4	584db484c03a8904	982cd31	2026-10-22	16	16/16 +0800	174	repo-page AND topic-listing, agree	PROMOTED - agents/top.md
+YJLi-new/undergraduate-coding-tutor	main	main/LICENSE	MIT	1065	86b434fab451	584db484c03a8904	90b85f9	2026-10-18	3	3/3 -0500	4	search-listing	PROMOTED - agents/top.md, region NOT PLACED (Gap 541)
+marimo-team/learn	main	main/LICENSE	MIT	1063	ab987ab9f287	584db484c03a8904	477e2cb	2026-04-30	454	165/454 +0530, no majority	360	search-listing	PROMOTED - repos/foundations.md
+ml-from-scratch-book/code	main	main/LICENSE	MIT	1077	dc75509865d3	584db484c03a8904	4310090	2026-07-19	18	18/18 NA offsets (-0400/-0500)	319	search-listing	PROMOTED - repos/foundations.md
+Seeed-Studio/Seeed_Studio_Courses	main	main/LICENSE	MIT	1069	20d9e7381152	584db484c03a8904	e07138e	2025-01-07	9	8/9 +0800	78	topic-listing	PROMOTED - repos/trending.md, FLAGGED 21.5 months stale
+ls1intum/Artemis	develop	develop/LICENSE	MIT	1091	63a0a2b4d6d9	584db484c03a8904	-	-	-	-	820	search-listing	CARRIED - grant re-read on the CORRECT default ref, EMEA placement
+aaryansamanta/nextgen-ai	main	main/LICENSE	MIT, SCOPE-NARROWED	1327	31d2ea3bba94	937b89139521aaa7	50fd696	-	-	-	491	topic-listing	NOT PROMOTED - per-subtree exclusion inside the payload; third ZZ-ap fixture
+dvbs2000/visible-ai	main	main/LICENSE	CC BY-NC-ND 4.0	1458	4b5ffb7babc5	9298f70d1aeaaf67	6c42da1	-	-	-	48	topic-listing	REFUSED as build-on - NonCommercial AND NoDerivatives
+NiluK/worldmodels101	main	main/LICENSE	CC BY-SA 4.0	20137	23ee78c8bae4	b201beff45fc2666	f45445e	-	-	-	204	search-listing	REFUSED as build-on - share-alike content licence
+kuzand/Computer-Vision-Video-Lectures	master	master/LICENSE	CC0-1.0	7048	a2010f343487	-	aa2fa9e	-	-	-	446	search-listing	NOT PROMOTED - public archive, last touched 2021; grant sha REPRODUCES this base's pin
+Imboyeong/Fact-vs-Fiction-LLM-Test-	main	-	NO GRANT	-	-	-	0e902dc	-	-	-	93	topic-listing	REFUSED - 404 on LICENSE, LICENSE.md and LICENSE.txt at main
+RoseCityRobotics/ai-developer-resources	main	-	NO GRANT	-	-	-	15500e1	-	-	-	768	search-listing	REFUSED - 404 on LICENSE and LICENSE.md at BOTH main and master; last touched Nov 2024
+ILIAS-eLearning/ILIAS	release_11	release_11/LICENSE	GPL (35 147 B)	35147	8ceb4b9ee5ad	18344ce9830de41c	-	-	-	-	-	-	CARRIED - grant re-read on the default ref for the openDesk Edu finding
+bncc-dev/bncc-dados	-	-	MIT (sidebar)	-	-	-	-	-	-	-	22	repo-page	Gap 530 PROBE - reads 22 again, see G-LIMB-1
+#
+# 🔴 THE GRANT-PATH TRAP, FIRED AT THIS PASS AND CAUGHT BEFORE IT REACHED A SHELF.
+# ILIAS's default ref is `release_11` and Artemis's is `develop` — NEITHER is `main` or `master`.
+# This pass's first read of both used `master`/`main` with the symref already on screen, which is
+# precisely the error p380 published as its own (and p380's own correction of `oppia` to
+# `develop/LICENSE`).  Both were re-read on the correct default ref.  🟢 The realised loss is ZERO:
+# the payload is byte-identical on both refs in both repositories (same sha256_12).  🔵 The
+# exposure was not zero, and it is published rather than tidied, because the next repository whose
+# refs diverge will not be so forgiving.

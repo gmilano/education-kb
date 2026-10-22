@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 381 — 2026-10-22 — **THE CHANNEL `p380` OPENED IS A SUPPLY CHANNEL, NOT A STAR CHANNEL, AND IT TAKES `license:` AND `pushed:` QUALIFIERS: 🟢 11 NEW ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED GLOBAL LEGS, ON A PREDICTION COMMITTED BEFORE THE LEGS RAN. 🟢 `p380`'s RANKED-FIRST AND RANKED-SECOND ITEMS BOTH DISCHARGED — THE THREE EGRESS GATES RUN FOR THE FIRST TIME SINCE `p378` (3/3), AND THE RANDOM ARM OVER CHANNEL B IS **65 %** AGAINST `p379`'s ENRICHED **49 %**, WHICH REFUTES ITS "UPPER BOUND". 🔴 AND THIS PASS WROTE A FAKE ADDRESS INTO ITS OWN CENSUS, IN THE SENTENCE DESCRIBING THAT EXACT DEFECT.**
+
+🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence
+file is named for that date; the commit lands the same day. Artefacts are dated by
+**MEASUREMENT**, per this base's standing rule.
+
+**Evidence:** [`registered-prediction`](evidence/p381-registered-prediction.2026-10-22-p381.tsv) ·
+[`channel-probe`](evidence/channel-probe.2026-10-22-p381.tsv) ·
+[`html-supply-channel`](evidence/html-supply-channel.2026-10-22-p381.tsv) ·
+[`address-yield`](evidence/address-yield.2026-10-22-p381.tsv) ·
+[`random-b-arm`](evidence/random-b-arm.2026-10-22-p381.tsv) ·
+[`mit-fold`](evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) ·
+[`verified-repos`](evidence/verified-repos.2026-10-22-p381.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-22-p381.tsv) ·
+[`gate-state`](evidence/gate-state.2026-10-22-p381.tsv)
+
+### 🟢 The pass in one table
+
+| | |
+|---|---|
+| **Opening act** | 🟢 **Channels probed before anything was reasoned about** (`Gap 511`), and `Gap 532`'s asked-for **`tool`** field is now a COLUMN: `make` OK · `git ls-remote` OK · `raw.githubusercontent.com` **200** · `registry.npmjs.org` **200** · 🔴 `api.github.com` **403** · 🔴 `github.com` HTML **403 to `curl`** — a **sixth** independent sandbox · 🟢 `github.com` HTML **200 to `WebFetch`** |
+| 🟢 **A prediction registered BEFORE the legs, in its own commit** | `0a6ea8b`, with **no leg output in the tree**: eight limbs across four actions. 🟢 **`E-LIMB-1` to `E-LIMB-4` all CONFIRMED · `A-LIMB-1` CONFIRMED · `G-LIMB-1` CONFIRMED · `H-LIMB-1` CONFIRMED · 🔴 `A-LIMB-2` REFUTED** |
+| 🟢 **The headline** | **The channel `p380` opened serves `/search` and `/topics`, so it is SUPPLY — and it accepts `license:mit`, `pushed:>`, `topic:` and `stars:>`.** 🔵 Those are the two filters every pass here has applied **by hand after retrieval**, by reading payloads one at a time. The forge applies them before it answers |
+| **The yield, measured both ways** | 🟢 **46 distinct addresses from 4 forge legs (11.5/leg) against 4 from the 4 PRESCRIBED legs (1.0/leg).** 🟢 **11 `NEW` against 0.** `NEW` rate **23.9 %** against `p380`'s 17 % |
+| 🔴 **And the honest reading of it** | **35 of 46 — `76.1 %` — were already on these shelves.** `Gap 533` measured 83 % on the commentary channel and read it as a property of that channel. A completely different population returns the **same order**. 🔵 **The saturation is in the SUPPLY, not the channel**, which retires the hope that a better search was what this base lacked |
+| 🔴 **High address yield is NOT high shelf yield** | Of the **11 `NEW`**: **5** promoted · **2** have **no grant file** at four probed paths · **2** are CC **NC-ND** / **BY-SA** · **1** is an **MIT text narrowed by hand** · **1** is CC0 **teaching material last touched 2021**. The channel multiplies candidates; every one still needs a payload read |
+| 🟢 **Ranked-1 discharged** | **`make hooks-online` 3/3 — the first egress run since `p378`.** `gate-identity-online`: **518** addresses, **508** distinct HEADs, 6 known aliases, 🔴 **`NEW=0`**. `gate-mit-tier`: **884** grant payloads **READ**, 53 `UNREAD`. `gate-online`: 55 ladder paths |
+| 🔴 **…and it refuted its own prediction, usefully** | `A-LIMB-2` predicted `gate-identity-online` would fire red again on unshelved collisions, as it did at `p378` on five. **`NEW=0`** — those five went into the dated alias register and the register works. 🔵 A gate that goes quiet because the finding was *shelved* is the only kind whose green means anything |
+| 🟢 **Ranked-2 discharged, and it overturns the framing that registered it** | **`ACTION p379-A`**, the random arm: **26 of 40 = 65.0 %** live (68.4 % on a shape-plausible denominator) against `p379`'s **enriched 24 of 49 = 49.0 %**, published as an **UPPER** bound. 🔴 **The random arm is 16 points HIGHER**, so the enrichment selected *toward the dead* — `p379`'s own text names the mechanism (**≥73** channel-B addresses sit beside a death or refusal marker **only**). `Gap 540` |
+| 🔴 **THE ERROR THIS PASS IS MOST OBLIGED TO PUBLISH** | **The census gained a FAKE ADDRESS, written by this pass, inside the sentence describing that exact defect.** `Gap 539` says channel B admits git branch names as addresses and cites `` `feature/` `` as a branch prefix. 🔴 **The backticked example `feature/x` was itself harvested as a channel-B address.** It is **named** in the delta below and **kept, not deleted** — `p379`'s precedent (a refusal still entering the census is `Gap 520`'s shape, not a miscount) governs, and it gives `Gap 539`'s proposed stoplist its **first fixture** |
+| 🔴 **A second own error: the grant-path trap, on two platform rows** | `ILIAS`'s default ref is **`release_11`** and `Artemis`'s is **`develop`** — this pass read `master`/`main` first **with the `--symref` output on screen**, which is `p380`'s own published error and the reason `p380` corrected `oppia`. Both re-read. 🟢 **Realised loss zero** (byte-identical payloads on both refs); 🔵 exposure not zero |
+| 🔴 **A third: a misread return contract** | `p351`'s `classify()` returns `None` for a **valid** address. This pass read `None` as *"not an address"* and nearly published *"the shape instrument classifies nothing"*. 🟢 Caught by running the module's **own documented** positive control, `your-username/safetutors` → `PLACEHOLDER-OWNER` |
+| 🔵 **A fourth, withdrawn before it was written** | A drafted gap claiming the digest column is unbound, on a 12-char and a 14-char digest for the same `7 048 B` payload. 🟢 **The headers disambiguate them** (`sha256₁₂` vs `SHA-40 prefix`). Withdrawn, and recorded because the next pass will draft it too |
+| 🟢 **A prior finding replicated out of sample, a second time and wider** | `p378`'s MIT fold constant: **6** fresh payloads from 6 untouched repositories, **6 distinct byte lengths spanning 28 B** (`1 063`–`1 091`), **6 distinct `sha256₁₂`**, **one** digest `584db484c03a8904`. `p380`'s span was 17 B. 🟢 A **free** third reproduction of `p310`'s CC0 pin: `kuzand/…` at exactly `7 048 B`, `a2010f343487`, on a `master` ref |
+| 🔴 **The load-bearing row is the one that did NOT fold** | **`aaryansamanta/nextgen-ai`**, 491 ★, title line `MIT License (Code)`. Its operative clause is **edited** to cover only *"the source code files"*, and the payload **itself** carves out brand assets, videos, logos and PDFs. 🔴 **A classifier that reads the root `LICENSE` and stops is right about the code and wrong about the repository — and that is this base's entire ladder.** `Pattern 37`; third fixture for `ACTION ZZ-ap` |
+| **Regions** | 🟢 **All four placed, and two by a DECLARED NIL.** 🟢 **EMEA is the headline and English could not see it:** the English leg returned a nil, the **German** sibling returned **`openDesk Edu` + `ILIAS` in 8 600 schools** (July 2026, servers in Germany, no student registration). 🟢 **LATAM is the only method-bearing leg** (UNESCO IESALC: 200 institutions, 19 countries, Aug–Oct 2025; DEC: >30 000 responses, 29 institutions). 🔴 **APAC and NA: nil on NEW instruments, declared** — `p380`'s stand carried forward |
+| 🔴 **The cross-region finding** | **A base that runs only English legs will systematically under-report public-sector deployment in EMEA, APAC and LATAM while over-reporting Anglophone repository supply — and will look exactly like a base with good coverage.** 🔵 `p379` proved in-language legs yield **zero addresses** and that holds here; what is new is that the same leg is the **only** channel that saw a national deployment. **Run the forge for addresses, the national language for instruments.** `Pattern 36` step 0 |
+| **Shelf gained** | 🟢 A `p381` block on **all nine** shelves + this README · **2 agent rows** · **2 foundation rows** · **1 trending row** (stale-flagged) · the `openDesk Edu`/`ILIAS` and `Artemis` platform cells · 🟢 **`Pattern 36`** and **`Pattern 37`** · all four regions extended **in place** in the single canonical block |
+| **Figures REFUSED rather than reported** | 🔴 **9** — `$951 M→$2.3 B` · 45 % CAGR · **three** different 2026 market bases in one leg · 36 % NA share (again) · 10 % formal-guidelines · 71 % untrained teachers · 92 %→66 % student usage · K-12 at **45.62 %** (two decimals, no method) · and *"EU AI Act fully effective August 2026"*, contradicted by `Reg (EU) 2026/1744` |
+| 🔴 **A fifth own error, found AT COMMIT TIME and fixed in the same commit** | **Running the egress gates OVERWROTE `p378`'s `evidence/repo-identity-2026-10-22.tsv`** — four passes ran on 2026-10-22 and the four ONLINE recipes were keyed on a **date** while this base's unit of work is a **pass**. 🟢 `p378`'s artefact restored, this pass's run saved pass-stamped, and all four recipes re-keyed on an overridable `PASS` stamp, with `make hooks` re-measured 43/43 after the edit. `Gap 544` |
+| **New gaps** | **538** (a census total carries no **file-set** field — two instruments here differ by 42 and both are right) · **539** (channel B admits **git branch names**; shape cannot reject them) · **540** (no cell records a sample's **selection rule**, so an "upper bound" cannot be checked for direction) · **541** (**`-0500` cannot tell North America from LATAM** — and the `{-0400,-0500}` pair can) · **542** (a star figure records its channel but not its **surface**) · **543** (nothing ranks a **dated instrument** above an undated page) · **544** (the egress artefacts were **date-keyed**, so a second pass on one day silently overwrote the first — **fixed in this commit**) |
+| **Probes, all first-hand** | **13** channel probes across **2** tools · **4** forge legs through `WebFetch` · **66** `verdict` gradings before any probe · **51** `git ls-remote` (40 random channel-B + 11 `NEW`) · **5** blobless clones for HEAD dates and timezone censuses · **~30** `raw.githubusercontent.com` grant-ladder reads · **2** HTML star reads for calibration and `Gap 530` · **9** WebSearch legs (4 prescribed + 4 regional + 1 in-language sibling) · 🔴 **0** `api.github.com` calls succeeded · 🔴 **0** non-GitHub citation addresses reachable by **either** tool |
+| **Gates** | 🟢 **`make hooks` 43/43 green before the first byte and again at commit.** 🟢 **`make hooks-online` 3/3.** 🔴 **Both currency gates fired RED against this pass before this restatement** — `p352-census-currency` 2 of 3 cells stale, `p376-union-currency` 3 of 3 — **exactly as designed**, because the census must be re-derived after the writes. Both restated below |
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 730** harvested shapes → **33** are not
+addresses → **2 697 addresses**.
+
+🟢 **And the union census, restated as `ACTION p375-A`'s standing sentence requires:**
+**2 697** channel-U addresses and **3 078** channel-B survivors give **3 420 addresses over both
+channels**.
+
+🟢 **The delta is `+10` on channel U, nothing was removed, and all ten are nameable** — they are
+precisely the ten addresses this pass graded first-hand and published **with a URL**:
+`aaryansamanta/nextgen-ai`, `dvbs2000/visible-ai`, `kuzand/Computer-Vision-Video-Lectures`,
+`liuliu667/cram-engine`, `marimo-team/learn`, `ml-from-scratch-book/code`, `NiluK/worldmodels101`,
+`RoseCityRobotics/ai-developer-resources`, `Seeed-Studio/Seeed_Studio_Courses` and
+`YJLi-new/undergraduate-coding-tutor`. 🔵 **Five are promotions and five are published refusals** —
+a refusal entering the census is `Gap 520`'s shape, not a miscount.
+
+🔴 **Channel B gains `+12` and the union `+12`, and the two extra beyond those ten are the finding.**
+They are `Imboyeong/Fact-vs-Fiction-LLM-Test-`, named **without a link** because it has no grant to
+link to — and 🔴 **`feature/x`, which is not a repository at all.** It is the *example string* this
+pass wrote into `Gap 539` to illustrate that channel B harvests git branch prefixes as addresses,
+and channel B **harvested it**. 🔵 **The gap demonstrated itself inside the sentence that declared
+it.** It is kept rather than deleted, named here, and it is now the first fixture for the stoplist
+`Gap 539` asks for.
+
+🟢 `p380`'s **2 720 / 33 / 2 687** and its union of **3 408** are left standing in their own
+section — history is not edited to match a later derivation.
+
+### 🔵 The honest size of `p381`
+
+🟢 A channel one pass old, **re-purposed and measured**: `11` new addresses against `0` from every
+prescribed leg, on limbs registered in their own commit before a single leg ran. **Both** of
+`p380`'s ranked items discharged, and **both refuted something** — one its own prediction, one the
+framing of the action that registered it. Five promotions out of eleven candidates, each one
+payload-read on its **real default ref**. One prior finding replicated out of sample wider than
+before, and a second reproduced for free. Two patterns, both **executed before they were written**.
+Six new gaps, five of them **missing fields** rather than missing facts. Four of this pass's own
+errors published — one of them a fake address this pass wrote into its own census while describing
+that exact defect, and one a gap **withdrawn** because the schema turned out to be sound.
+
+🔴 **Stated limitations, before a successor leans on anything here.** **No integer star counts** —
+the HTML channel rounds above 1 000 (`Gap 529`), and every star figure this pass quotes came off a
+**search or topic LISTING**, a surface calibrated at **`n=1`** against the repo page `p380`
+calibrated (`Gap 542`). **No prose citation is address-verified by either tool**: every non-GitHub
+source is `ATTRIBUTED-UNVERIFIED`, weaker than `p378`'s 275-of-275 standard, and **labelled rather
+than blended**. The **EU** date is still not read from the Official Journal — `eur-lex` is dead on
+both tools here, by two different mechanisms. **One promoted row is thin** (`3` commits, `4` stars)
+and **one placement is `NOT PLACED`** rather than guessed. **`Gap 530` is only half-closed**: `22`
+reads again, so `p380` did not misread, but growth versus a cross-channel disagreement with
+`p343`'s `9` cannot be settled while the API is `403`. The **65 %** channel-B live rate rests on
+**one** seeded sample of 40. **`ACTION p378-B` and `p378-C` are four passes carried and still not
+run.** And the uncomfortable one: **`ACTION ZZ-ap` now has THREE live fixtures and is still
+unbuilt**, which is why it is ranked first below.
+
+### 🟢 Ranked for the successor
+
+1. 🔴 **Build `ACTION ZZ-ap`** — the per-subtree grant classifier. Five registrations, and now
+   **three** live fixtures spanning **both** locations an exclusion can hide in: `README`-stated
+   (`oak-curriculum-ontology`, `os-taxonomy`) and **payload-stated** (`nextgen-ai`). `Pattern 37`
+   is the interim and its blind spot is named in its own text. There is no excuse left about where
+   to look.
+2. 🔴 **`Gap 539`'s stoplist, and it is one commit** — reject `feature/`, `feat/`, `fix/`,
+   `chore/`, `release/`, `hotfix/` as a first segment in the channel-B harvester, in `p115`'s
+   committed style. It has a fixture: **`feature/x`, which this pass put in its own census.**
+3. 🟡 **`Gap 541` into `p371`'s `region_place`** — `-0500` alone → `AMBIGUOUS-NA-LATAM`;
+   `{-0400, -0500}` → North America. Both specimens are on this pass's shelves, one of each.
+4. 🟡 **`Gap 542`** — two more star controls **above 1 000 ★**, read on the repo page **and** a
+   listing, to find out whether the two surfaces round the same way. `n=1` below the floor is not
+   a calibration.
+5. 🟡 **`Gap 538`** — a `file_set` field on every published census total, so `make channels`'
+   **2 739** and `p352`'s **2 697** stop reading as a contradiction. The delta is a stable **42**,
+   measured twice.
+
 ## Pass 380 — 2026-10-22 — **A CHANNEL FOUR CONSECUTIVE SANDBOXES CALLED CLOSED IS OPEN HERE, AND IT PAYS TWICE: 🟢 STAR COUNTS RETURN AFTER TEN PASSES, AND `p379`'s REFUSED EU DATE IS RESOLVED TO `2 DECEMBER 2027` WITH AN INSTRUMENT NUMBER. 🟢 THE FIVE-PASS AGENT-ROW ZERO BREAKS AT THREE MIT ROWS — AND NOT ONE CAME FROM A PRESCRIBED GLOBAL LEG. 🟢 `p378`'s FOLD CONSTANT REPLICATES OUT OF SAMPLE ON SIX FRESH PAYLOADS. 🟢 `make hooks` 43/43 BEFORE THE FIRST BYTE AND AGAIN AT COMMIT.**
 
 🔵 **Dating note.** Every leg, probe and read below was run on **2026-10-22** and every evidence

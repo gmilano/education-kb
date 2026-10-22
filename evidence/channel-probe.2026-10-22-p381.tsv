@@ -1,0 +1,23 @@
+# p381 CHANNEL PROBE — the opening act, before anything was reasoned about (Gap 511's standing rule).
+# 🟢 Gap 529/532 asked for a TOOL field on every channel probe and a CHANNEL + RESOLUTION field on
+# every star cell. Both are added here, and this is the first probe table on this base that carries
+# the tool as a column rather than as prose.
+tool	channel	address_probed	result	note
+make	local	GNU Make 4.3	AVAILABLE	hooks runnable
+git	git-smart-http	HKUDS/DeepTutor	OK	ls-remote --symref -> refs/heads/main, a31d8262
+curl	raw.githubusercontent.com	HKUDS/DeepTutor/main/LICENSE	200	the grant ladder is open
+curl	registry.npmjs.org	/react	200	package channel open
+curl	api.github.com	/repos/HKUDS/DeepTutor	403	SIXTH consecutive sandbox to refuse the integer channel
+curl	github.com HTML	/HKUDS/DeepTutor	403	refused exactly as p379 and p380 measured it for curl
+curl	eur-lex.europa.eu	/legal-content/EN/TXT/?uri=OJ:L_202601744	000	CONNECT policy-denied by the egress proxy
+curl	www.unesco.org	/en/digital-education	000	CONNECT policy-denied by the egress proxy
+WebFetch	github.com HTML	/HKUDS/DeepTutor	200	p380's channel REPLICATES in a sixth, independent sandbox
+WebFetch	github.com HTML	/search?type=repositories	200	NEW THIS PASS: the same channel serves SEARCH, with qualifiers
+WebFetch	github.com HTML	/topics/ai-education	200	NEW THIS PASS: 536 repositories tagged, 20 per page with stars and descriptions
+WebFetch	eur-lex.europa.eu	/legal-content/EN/TXT/?uri=OJ:L_202601744	ENOTFOUND	DNS-dead on the fetch channel — a DIFFERENT mechanism from curl's refusal
+#
+# 🔵 THE FINDING IN THE PROBE ITSELF. Gap 532 said channel availability is tool-scoped. It holds in a
+# sixth sandbox and now in BOTH directions at once: github.com is tool-scoped OPEN (WebFetch 200) and
+# tool-scoped CLOSED (curl 403), while eur-lex is closed on BOTH tools by TWO DIFFERENT mechanisms —
+# a proxy CONNECT refusal and a DNS failure. "Unreachable" is therefore not one state, and a pass that
+# records a single verdict per host loses the distinction that tells it whether to try another tool.

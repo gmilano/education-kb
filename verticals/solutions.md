@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **THE LARGEST NAMED OPEN-SOURCE EDUCATION DEPLOYMENT THIS BASE HAS EVER RECORDED, AND AN ENGLISH LEG COULD NOT SEE IT: GERMANY'S FEDERAL `openDesk Edu` PUTS AN OPEN-SOURCE LMS IN **8 600 SCHOOLS**, FOUND ONLY BY THE IN-LANGUAGE SIBLING LEG. 🔴 AND TWO PLATFORM GRANTS WERE RE-READ ON THEIR REAL DEFAULT REFS, BECAUSE NEITHER IS `main`.**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`channel-probe`](../evidence/channel-probe.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every leg and read below was run on **2026-10-22**. Dated by **MEASUREMENT**.
+
+### 🟢 `openDesk Edu` — a sovereign stack with a learning-management system in it
+
+| Fact | Value | Grade |
+|---|---|---|
+| What | **`openDesk Edu`**, the German federal open-source workplace suite, **adds the LMS `ILIAS`** | `ATTRIBUTED-UNVERIFIED` |
+| When | **July 2026** | `ATTRIBUTED-UNVERIFIED` |
+| Scale | **8 600 schools** | `ATTRIBUTED-UNVERIFIED` |
+| The two properties that make it a reference architecture | 🟢 **servers located in Germany** · 🟢 **students do not need to register** | `ATTRIBUTED-UNVERIFIED` |
+| The underlying repository, probed first-hand | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) · default ref **`release_11`** · **GPL**, `35 147 B`, `sha256₁₂ 8ceb4b9ee5ad` | 🟢 **MEASURED** |
+
+🔵 **Why those two properties matter more than the headcount.** *"No student registration"* removes
+the single hardest compliance object in a K-12 engagement — a per-minor account with a lawful basis
+— and *"servers in Germany"* is the answer to the EMEA data-residency question before it is asked.
+🟢 **Together they are a buildable pattern and not a procurement anecdote**, which is why this is
+on a shelf rather than in `intel/`.
+
+🔴 **And the licence is the constraint a studio must price in: `ILIAS` is GPL, at `35 147 B` read
+from its real default ref.** Not Apache, not MIT. Customisation that ships back to the institution
+is fine; a derived product that does not publish its source is not. 🔵 **The AI layer therefore
+belongs beside `ILIAS` over its APIs, not inside its tree** — which is the single most important
+architectural consequence on this shelf this pass.
+
+### 🟢 `ls1intum/Artemis` — the EMEA platform row, grant corrected
+
+| Repo | Licence (payload, first-hand) | Grant path | ★ | Origin | Why it is here |
+|---|---|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** — `1 091 B`, `sha256₁₂ 63a0a2b4d6d9`, 🟢 folds to `p378`'s constant | 🔴 **`develop/LICENSE`** — *not* `main` | **820** · HTML search-listing · exact | **EMEA** — Technical University of Munich (`ls1intum`) | 🟢 **An interactive learning platform with automated, instant assessment at university scale, under MIT.** 🔵 It is the only platform on this shelf that is **both** permissively licensed **and** institution-operated at scale, which makes it the default starting point for an EMEA higher-education engagement where `ILIAS`'s GPL is a problem. Pushed **minutes** before this read |
+
+### 🔴 The grant-path trap fired on BOTH platform rows, and it is published rather than tidied
+
+`ILIAS`'s default ref is **`release_11`**. `Artemis`'s is **`develop`**. 🔴 **Neither is `main` or
+`master`, and this pass's first read of both guessed anyway — with the `--symref` output already on
+screen.** That is exactly the error `p380` published as its own, and exactly why `p380` corrected
+`oppia`'s grant path to `develop/LICENSE`.
+
+🟢 **Realised loss: zero.** Both payloads are **byte-identical** on the guessed ref and the real
+one (same `sha256₁₂` in both repositories), so no published cell was ever wrong. 🔵 **Exposure: not
+zero**, and recorded, because a platform that maintains a release branch is exactly the kind of
+repository whose `master` eventually stops tracking its `release_*`.
+
+### 🔴 The channel finding this shelf owes its best row to
+
+The **English** EMEA leg returned **nothing education-specific** — the search channel said so
+itself. The **German** sibling leg returned `openDesk Edu`, the **NLQ + Wikimedia Deutschland**
+*"Offene KI in der Schule"* conference (February 2026, Hannover-Lehrte, with working groups on AI
+law, competence models and open AI infrastructure) and the **KI-Schule des Jahres 2026** award.
+
+🔵 **`p379` measured that in-language legs return ZERO ADDRESSES and retired them as a supply
+instrument. That finding stands and is not contradicted here.** 🟢 **What this pass adds is that
+the same legs are the BEST instrument for DEPLOYMENTS AND INSTRUMENTS** — same region, same day,
+same transport, opposite verdicts, because what a national education ministry does is written up
+in the national language and not in English. 🔵 **The dial depends on what is being harvested:
+addresses or facts.** `Pattern 36` carries the operational form.
+
+🔴 **One German-language claim was REFUSED:** an item reporting that NRW *"chose Moodle for
+schools"* was surfaced **undated** by the channel itself. An undated claim is not a dated one.
+
+---
+
 ## 🟢 2026-10-22 · `p380` — **Oppia's grant is read from its payload and its path corrected to `develop/LICENSE`; the LMS/SIS layer gets its licence picture re-checked against the one channel that answers here**
 
 **Evidence:** [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) ·

@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **FOUR TRENDS, AND THE TWO THAT MATTER ARE ABOUT WHAT A KNOWLEDGE BASE CAN SEE: THE FORGE'S OWN INDEX IS **76 %** THIS BASE'S REFLECTION, SO THE SUPPLY IS SATURATED AND NOT THE CHANNEL. 🔴 AND AN ENGLISH LEG CANNOT SEE A NATIONAL DEPLOYMENT.**
+
+**Evidence:** [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-22-p381.tsv) · [`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every measurement below was taken on **2026-10-22**. Dated by **MEASUREMENT**.
+
+### 🔴 `T-p381-1` — The saturation is in the SUPPLY, not in the channel, and that retires a hope
+
+`Gap 533` measured that **83 %** of the commentary channel's output was this base's own shelf
+reflected back, and read it as a property of *that* channel. 🟢 **The forge's own search index — a
+different population, reached by a different tool, with qualifiers no commentary index has —
+returns `76.1 %` already-carried.** 🔵 **Same order of magnitude.** So the answer to *"why does a
+pass find so little new"* is **not** *"we are searching in the wrong place"*. The open-source
+education-agent supply visible to any index is **small enough that this base has most of it**.
+
+🔵 **The consequence for a studio is concrete and it is not pessimistic:** stop budgeting discovery
+and start budgeting **verification**. Of 11 genuinely new addresses this pass, **5** survived a
+payload read — the other six failed on a missing grant, a NonCommercial condition, a share-alike
+condition, a hand-narrowed MIT clause, or a five-year-stale archive. 🟢 **The scarce resource is a
+read grant, not a search result.**
+
+### 🟢 `T-p381-2` — What a leg harvests decides which language it should be run in
+
+🔵 Same region, same day, same transport, opposite results:
+
+| Leg | Addresses returned | Placeable facts returned |
+|---|---:|---|
+| EMEA, **English** | 0 | 🔴 **nothing education-specific** — the channel declared its own gap |
+| EMEA, **German** | 0 | 🟢 `openDesk Edu` + `ILIAS` in **8 600 schools** · NLQ + Wikimedia Deutschland conference · KI-Schule des Jahres 2026 |
+
+🔵 `p379` measured address yield across in-language legs, found `ja` 100 % → 0 addresses and `ru`
+100 % → 0, and retired the in-language leg as a supply instrument. 🟢 **That finding is not
+contradicted — this pass's German leg also returned zero addresses.** 🔴 **What is new is that the
+same leg returned the single largest open-source education deployment on this base.** A national
+education ministry's programme is written up in the national language; a forge is written up in
+English. 🔵 **So the rule is not "run in language" or "do not" — it is: run in language for
+INSTRUMENTS AND DEPLOYMENTS, run on the forge for ADDRESSES.** `Pattern 36`.
+
+### 🔴 `T-p381-3` — The permissive label is drifting away from the permissive grant
+
+This pass read **ten** grant payloads first-hand from repositories this base had never touched.
+🟢 Six were the canonical MIT text — one legal text at **six different byte lengths**. 🔴 **The
+other four each break a different assumption a label would let you keep:**
+
+| What the label would say | What the payload says |
+|---|---|
+| `MIT License (Code)` → **MIT** | 🔴 Operative clause **edited** to cover only *"the source code files"*, with brand assets, videos and PDFs carved out **inside the LICENSE payload** |
+| "Creative Commons" → **open** | 🔴 **BY-NC-ND 4.0** — NonCommercial *and* NoDerivatives |
+| "Creative Commons" → **open** | 🔴 **BY-SA 4.0** — share-alike, a content licence and not a code grant |
+| 768 ★, a real organisation → **surely licensed** | 🔴 **No `LICENSE` at all**, at four probed paths across two refs |
+
+🔵 **The trend is that "MIT" is becoming a brand rather than a text**, and the only instrument that
+sees the difference is a **payload fold**. `p378` built it to settle a template count; it is now
+the cheapest grant-integrity check on this base. 🟢 `Pattern 37` is the manual procedure until
+`ACTION ZZ-ap` ships.
+
+### 🔴 `T-p381-4` — A dated premise, quietly contradicted by a page with no date
+
+A 2026 commentary page surfaced on the North America leg states the EU AI Act is *"fully effective
+August 2026"* and classifies education AI as high-risk. 🔴 **That contradicts `p380`'s instrument:
+Regulation (EU) 2026/1744 (OJ 2026-07-24) defers Annex III — education — to 2 December 2027.**
+
+🔵 The resolution is not in doubt: **an instrument with an OJ number and a date outranks an undated
+secondary page.** 🔴 **But nothing on this base ENFORCES that ranking**, and the contradicting page
+is the kind a client will arrive holding. 🟢 **The trend worth naming is therefore a market one:
+the deferral has not propagated.** A 2026 EMEA education engagement will meet stakeholders who
+believe a compliance deadline that moved. 🔵 **That is a deliverable, not a nuisance** — the dated
+instrument table on `intel/market.md` is the artefact to hand them. 🟡 `Gap 543`.
+
+---
+
 ## 🟢 2026-10-22 · `p380` — **the trend with a date on it: education's high-risk compliance arm moved to `2 December 2027`, and the regulated object everywhere turns out to be the DECISION, not the model**
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-22-p380.tsv) ·

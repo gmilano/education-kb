@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **A SUPPLY CHANNEL, NOT A STAR CHANNEL: 46 ADDRESSES FROM FOUR FORGE LEGS AGAINST FOUR FROM FOUR PRESCRIBED SEARCH LEGS. 🟢 11 `NEW` AGAINST **ZERO**. 🔴 AND 76 % OF WHAT THE FORGE'S OWN SEARCH RETURNED WAS ALREADY ON THESE SHELVES, SO `Gap 533`'s SATURATION IS A PROPERTY OF THE SUPPLY AND NOT OF THE CHANNEL.**
+
+**Evidence:** [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`address-yield`](../evidence/address-yield.2026-10-22-p381.tsv) · [`registered-prediction`](../evidence/p381-registered-prediction.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every leg below was run on **2026-10-22**. Dated by **MEASUREMENT**.
+
+### 🟢 The instrument, and it was predicted before it was run
+
+`p380` opened `github.com` HTML through `WebFetch` in a sandbox where `curl` gets `403`, and spent
+the whole channel on **star counts**. 🔵 **The same channel serves `/search` and `/topics` — so it
+is a SUPPLY surface, and it accepts qualifiers that no commentary index has:**
+
+```
+/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01&type=repositories&s=stars
+/topics/ai-education
+```
+
+🟢 **`license:` and `pushed:` are the two filters every pass on this base has had to apply BY HAND
+after the fact**, by reading 18 payloads to find 3 permissive ones. The forge applies them before
+it answers. That is the capability, and it was registered as `E-LIMB-1` through `E-LIMB-4` in
+`0a6ea8b` with **no leg output in the tree**.
+
+| Limb | Claim at registration | Verdict |
+|---|---|---|
+| `E-LIMB-1` | `/search` answers `200` through `WebFetch` and returns ≥ 10 addresses | 🟢 **CONFIRMED** — 10 returned, the page states **163** results |
+| `E-LIMB-2` | One forge leg beats all four prescribed global legs on `NEW` addresses | 🟢 **CONFIRMED** — **11 `NEW` against 0** |
+| `E-LIMB-3` | The forge channel's `NEW` rate exceeds `p380`'s measured 17 % | 🟢 **CONFIRMED** — **23.9 %** |
+| `E-LIMB-4` | `/topics/<education-topic>` answers `200` and is a usable enumeration surface | 🟢 **CONFIRMED** — **536** repositories tagged `ai-education`, paged 20 at a time with stars and descriptions |
+
+### 🔴 The yield table, and the row that should slow a successor down
+
+| Channel | Tool | Legs | Distinct addresses | `CARRIED` | `MENTIONED-B` | `NEW` | `NEW` rate | Addresses / leg |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| 🟢 `github.com` HTML — `/search` + `/topics` | `WebFetch` | 4 | **46** | 27 | 8 | 🟢 **11** | 🟢 **23.9 %** | 🟢 **11.5** |
+| 🔴 The four **PRESCRIBED** global legs | `WebSearch` | 4 | **4** | 3 | 1 | 🔴 **0** | 🔴 **0 %** | 🔴 **1.0** |
+| 🔴 Regional legs (4 English + 1 German sibling) | `WebSearch` | 5 | **0** | 0 | 0 | 0 | n/a | 🔴 **0.0** |
+
+🔴 **And the honest reading of the big number: 35 of 46 — 76.1 % — were ALREADY on these shelves.**
+`Gap 533` measured 83 % on the commentary channel and read it as a property of *that* channel. The
+forge's own index, a completely different population, returns **76 %**. 🔵 **Same order. So the
+saturation is a property of the SUPPLY, and no change of channel will fix it** — which retires the
+hope that a better search is what this base has been missing.
+
+### 🔴 High address yield is NOT high shelf yield, and here is the arithmetic
+
+Of the **11 `NEW`** addresses, every one probed live by `git ls-remote`, and every grant read
+first-hand from `raw.githubusercontent.com`:
+
+| Disposition | Count | Which |
+|---|---:|---|
+| 🟢 Permissive, payload-read, **PROMOTED** | **5** | `cram-engine`, `undergraduate-coding-tutor`, `marimo-team/learn`, `ml-from-scratch-book/code`, `Seeed_Studio_Courses` |
+| 🔴 **No grant file at all** on either guessed ref | **2** | `Imboyeong/Fact-vs-Fiction-LLM-Test-` (404 at three paths), `RoseCityRobotics/ai-developer-resources` (404 at four) |
+| 🔴 CC content licence with a **NonCommercial / NoDerivatives / ShareAlike** condition | **2** | `dvbs2000/visible-ai` (BY-NC-ND 4.0), `NiluK/worldmodels101` (BY-SA 4.0) |
+| 🔴 **MIT text, grant NARROWED by hand** | **1** | `aaryansamanta/nextgen-ai` — see `agents/top.md` |
+| 🟡 CC0, but a **public archive last touched 2021** | **1** | `kuzand/Computer-Vision-Video-Lectures` |
+
+🔵 **So the channel multiplies CANDIDATES, not rows.** 11 `NEW` became **5** promotions, and the
+six rejections each needed the same first-hand payload read the old channel needed. The gain is
+real and it is in the **denominator**, not the yield.
+
+### 🟢 The full candidate table, every address graded by this base's own instrument first
+
+🔵 `make verdict` was run on all 46 **before any probe**, which is the discipline `p379` registered
+after probing 15 already-dead addresses, and `p380` kept.
+
+| Leg | Surface | Addresses | `CARRIED` | `MENTIONED-B` | `NEW` |
+|---|---|---:|---:|---:|---:|
+| `H1` | `/search?q=education+AI+tutor+agent&s=stars` (163 results) | 10 | 9 | 1 | 0 |
+| `H2` | `/search?q=education+tutor+agent+license:mit+pushed:>2026-08-01` (57 results) | 10 | 3 | 6 | 1 |
+| `H3` | `/search?q=topic:education+topic:artificial-intelligence+stars:>200` (9 results) | 9 | 3 | 1 | **5** |
+| `H4` | `/topics/ai-education` (536 tagged, first 20) | 20 | 14 | 1 | **5** |
+
+🟢 **`H4` and `H3` carried 10 of the 11 `NEW` between them, and `H1` — the leg shaped like a
+prescribed query — returned ZERO.** 🔵 The difference is that `H3` and `H4` select on **topic
+membership and a star floor** rather than on words in a description, so they reach repositories
+whose README never says *"AI tutor agent"*. A successor choosing one leg should choose a `/topics`
+page.
+
+🔴 **The biggest single row in the whole channel is one this shelf cannot use:**
+`RoseCityRobotics/ai-developer-resources` at **768 ★** has **no `LICENSE` at either `main` or
+`master`, at either `LICENSE` or `LICENSE.md`** — four probes, four `404`s — and was last touched
+**November 2024**. 🔵 Star count is not a grant.
+
+---
+
 ## 2026-10-22 · `p380` — **the zero-streak ends at five: three new agent rows, all MIT, all payload-read — and NOT ONE of them came from a prescribed global leg. 🟢 Star counts return to this base after ten passes, on a channel `curl` still cannot reach.**
 
 **Evidence:** [`address-yield`](../evidence/address-yield.2026-10-22-p380.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv) · [`star-calibration`](../evidence/html-star-channel-calibration.2026-10-22-p380.tsv)

@@ -1,0 +1,12 @@
+# p381 — GATE STATE, measured rather than inherited (ACTION p377-A's standing rule).
+when	suite	result	detail
+before the first byte	make hooks	43/43 GREEN	every gate ran, none masked (p300's runner contract)
+before the first byte	gate-identity-online	GREEN	518 addresses ls-remote'd · 508 distinct HEADs · 6 known-alias pairs · 1 adjudicated-distinct · NEW=0
+before the first byte	gate-online (grant-ladder reach)	GREEN	tierA=30 tierB=15 tierC=10 total=55 · byte-floor=1B · ref=ls-remote-default+main+master
+before the first byte	gate-mit-tier	GREEN	881 distinct MIT slugs on the shelves · 884 grant payloads READ · 53 UNREAD at 5 paths x 2 guessed refs
+before the first byte	make hooks-online	3/3 GREEN	THE FIRST RUN OF THE THREE EGRESS GATES SINCE p378 - p380's ranked-first item, discharged
+#
+# A-LIMB-1 CONFIRMED — all three egress gates ran; the channels were open and were probed first.
+# A-LIMB-2 REFUTED  — gate-identity-online reports NEW=0 unshelved collisions.  It fired RED at p378
+#                     on five, and those five were shelved into the alias register; the register is
+#                     doing its job, so the refutation is in the useful direction.

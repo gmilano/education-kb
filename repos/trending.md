@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **`ACTION p379-A` DISCHARGED: THE RANDOM ARM OVER CHANNEL B IS **65 %** LIVE AGAINST `p379`'s ENRICHED **49 %** — SO THE "UPPER BOUND" WAS AN UPPER BOUND ON NOTHING, AND THE ENRICHMENT SELECTED *TOWARD THE DEAD*. 🔴 AND TWO OF THE 40 SAMPLED ADDRESSES ARE GIT BRANCH NAMES.**
+
+**Evidence:** [`random-b-arm`](../evidence/random-b-arm.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every probe below was run on **2026-10-22**. Dated by **MEASUREMENT**.
+
+### 🟢 `ACTION p379-A`, `p380`'s ranked-second item, discharged with its sampling rule stated first
+
+🔵 **The rule, committed before the numbers, because `Gap 540` is what its absence costs:**
+
+```
+population = carried_index.harvest_b(root) - set(carried_index.harvest(root))   # 768 addresses
+sample     = random.Random(381).sample(population, 40)        # seed = pass number, reproducible
+probe      = git ls-remote https://github.com/<addr> HEAD      # first-hand, serial, one per address
+```
+
+| Arm | Sample | Live | Rate |
+|---|---:|---:|---:|
+| `p379` — **deliberately enriched**, published as an **UPPER BOUND** | 49 | 24 | **49.0 %** |
+| 🆕 `p381` — **random, seeded, reproducible** | 40 | 26 | 🟢 **65.0 %** |
+| 🆕 `p381` — random, **shape-plausible denominator only** | 38 | 26 | 🟢 **68.4 %** |
+
+🔴 **The result REFUTES THE FRAMING THAT REGISTERED IT, and the mechanism is in `p379`'s own
+text.** `p379` called its enriched figure an upper bound. The random arm is **16 points higher**,
+so the enrichment selected for addresses *more* likely to be dead. Why: `p379` reports that **≥ 73
+of the channel-B-only addresses "sit beside a death or refusal marker ONLY"**. 🔵 **An address this
+base DISCUSSES without linking is disproportionately an address a pass PROVED DEAD** — so
+"enriched for discussion" is enrichment **toward the dead**. The error is in the **direction**, not
+the magnitude, and nothing on this base records a sample's **selection rule** in a field. 🟡 `Gap 540`.
+
+### 🔴 The second finding is in the denominator, and it is a git ref wearing an address
+
+Two of the 40 are not repositories: **`feature/openedx-integration`** and
+**`feat/cloud-rubric-tabs`** are git **BRANCH NAMES**, harvested as backticked bare slugs and
+counted in the channel-B population. 🟢 Both probe **DEAD**, so the liveness arm absorbs them. 🔴
+**The CENSUS does not.** And `p351`'s `address_shape` instrument passes both — *correctly by its
+own contract*, because `feature/x` is a perfectly legal `owner/repo` shape. 🔵 **Shape alone cannot
+reject a branch name; only a vocabulary can** (`feature/`, `feat/`, `fix/`, `chore/`, `release/` as
+a first segment). No instrument here holds one. 🟡 `Gap 539`.
+
+### 🟢 The row this shelf gains, flagged for exactly what is wrong with it
+
+| Repo | Licence (payload, first-hand) | Grant path | HEAD | ★ | Region | Signal — and the flag |
+|---|---|---|---|---|---|---|
+| 🆕 [`Seeed-Studio/Seeed_Studio_Courses`](https://github.com/Seeed-Studio/Seeed_Studio_Courses) | 🟢 **MIT** — `1 069 B`, `sha256₁₂ 20d9e7381152`, 🟢 folds to `584db484c03a8904` | `main/LICENSE` | 🔴 `e07138e` · **2025-01-07** | **78** · HTML topic-listing · exact | 🟢 **APAC** — `8/9` commits at `+0800` | 🟢 **Edge-AI course material tied to real Jetson hardware** — the only candidate this pass found that teaches inference on a device rather than against an API, which is the shape of a vocational or TVET engagement. 🔴 **FLAGGED: HEAD is 21.5 months old.** It is on *trending* and not on *foundations* for that single reason, and `p379`'s `telekom/ki-in-schulen` precedent governs: a vendor's teaching material with a stale HEAD is a reference, not a dependency |
+
+### 🔴 Three addresses this shelf REFUSED, each for a different reason, all named
+
+| Repo | ★ | Why refused |
+|---|---|---|
+| [`RoseCityRobotics/ai-developer-resources`](https://github.com/RoseCityRobotics/ai-developer-resources) | **768** | 🔴 **No grant.** `404` at `LICENSE` and `LICENSE.md`, on **both** `main` and `master` — four probes. Last touched **November 2024**. 🔵 The highest star count the forge channel returned all pass, and unusable |
+| [`NiluK/worldmodels101`](https://github.com/NiluK/worldmodels101) | **204** | 🔴 **CC BY-SA 4.0** at `20 137 B`, `sha256₁₂ 23ee78c8bae4`. A **share-alike content** licence, not a code grant — `p310`'s docstring names this error direction as the one that puts unusable supply into a client deliverable |
+| [`dvbs2000/visible-ai`](https://github.com/dvbs2000/visible-ai) | **48** | 🔴 **CC BY-NC-ND 4.0** at `1 458 B`, `sha256₁₂ 4b5ffb7babc5`. **NonCommercial *and* NoDerivatives** — the strictest grant this pass read, and the fold held it apart from MIT at `9298f70d1aeaaf67` |
+
+### 🟢 A free out-of-sample control on `p310`'s CC0 pin, from a repository no pass here has touched
+
+[`kuzand/Computer-Vision-Video-Lectures`](https://github.com/kuzand/Computer-Vision-Video-Lectures)
+answers at **`master/LICENSE`** with **CC0-1.0** at **exactly `7 048 B`** and
+**`sha256₁₂ a2010f343487`** — byte length *and* digest identical to the figures this base has
+published for `GeminiLight/gen-mentor` and `Agenta-AI/awesome-ai-agent-platforms`. 🟢 **A third
+independent reproduction of the pin, on a `master` ref, from a repository outside every prior
+sample.** 🟡 **Not promoted:** it is a **public archive** last touched in **2021**.
+
+---
+
 ## 2026-10-22 · `p380` — **this week's trending read is a GRANT read, not a star read: six published rows whose licence came from a search index have had their PAYLOAD read at last, and the index was right six times out of six.**
 
 **Evidence:** [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p380.tsv) · [`verified-repos`](../evidence/verified-repos.2026-10-22-p380.tsv)

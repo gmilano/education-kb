@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p381` — **TWO FOUNDATION ROWS FROM A CHANNEL THAT DID NOT EXIST FOR TEN PASSES, BOTH MIT, BOTH PAYLOAD-READ, BOTH FOLDING TO `p378`'s CONSTANT. 🟢 `make hooks` 43/43 AND THE THREE EGRESS GATES 3/3 — `884` GRANT PAYLOADS RE-READ FIRST-HAND ACROSS THE MIT TIER.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p381.tsv) · [`mit-fold`](../evidence/mit-fold-out-of-sample.2026-10-22-p381.tsv) · [`html-supply-channel`](../evidence/html-supply-channel.2026-10-22-p381.tsv) · [`gate-state`](../evidence/gate-state.2026-10-22-p381.tsv)
+
+🔵 **Dating note.** Every read below was run on **2026-10-22**. Dated by **MEASUREMENT**.
+
+### 🟢 The two rows this shelf gains
+
+| Repo | Licence (payload, first-hand) | Grant path | HEAD | Commits | ★ (channel · resolution) | Region | Why it is a FOUNDATION and not a trend |
+|---|---|---|---|---:|---|---|---|
+| 🆕 [`marimo-team/learn`](https://github.com/marimo-team/learn) | 🟢 **MIT** — `1 063 B`, `sha256₁₂ ab987ab9f287`, 🟢 folds to `584db484c03a8904` | `main/LICENSE` | `477e2cb` · 🟡 **2026-04-30** | **454** | **360** · HTML search-listing · exact | 🔴 **NOT PLACED** — `165/454` at `+0530`, no majority | 🟢 **Executable, reactive notebooks as the teaching artefact** — the curriculum *is* the runnable program, so a lesson cannot silently drift from the code it teaches. 454 commits from a named organisation behind the `marimo` runtime. 🔵 **The foundation claim is the format, not the content:** it is the only candidate this pass found where the delivery medium enforces reproducibility by construction. 🟡 **HEAD is ~6 months old** and that is on the row |
+| 🆕 [`ml-from-scratch-book/code`](https://github.com/ml-from-scratch-book/code) | 🟢 **MIT** — `1 077 B`, `sha256₁₂ dc75509865d3`, 🟢 folds to `584db484c03a8904` | `main/LICENSE` | `4310090` · **2026-07-19** | **18** | **319** · HTML search-listing · exact | 🟢 **North America** — `18/18` at NA offsets | 🟢 **A from-scratch ML curriculum with the book's code as the single source of truth.** 🔵 On this shelf because *"explain the model you are shipping"* is a real client ask in every regulated engagement on `intel/market.md`, and a from-scratch implementation is the cheapest honest answer to it |
+
+🟢 **`ml-from-scratch-book/code`'s placement is also this base's first clean use of the DST
+boundary as a SIGNAL rather than a nuisance.** Its 18 commits carry **both `-0400` and `-0500`**,
+which is one US location crossing a daylight-saving boundary. 🔵 A LATAM location at `-0500`
+(Colombia, Peru, Ecuador) **does not observe DST and therefore cannot produce both offsets.** So a
+census showing the *pair* places a row in North America, while a census showing `-0500` **alone**
+— as `agents/top.md`'s new coding-tutor row does — distinguishes nothing. 🟡 `Gap 541`.
+
+### 🟢 The MIT tier, re-read first-hand — the egress half that had not run since `p378`
+
+🔵 `p380` ranked *"run the three EGRESS gates"* first for its successor, and this is that run.
+
+| Gate | Result | Measured |
+|---|---|---|
+| `gate-identity-online` | 🟢 **GREEN** | **518** addresses `ls-remote`'d · **508** distinct HEADs · **6** known-alias pairs · 1 adjudicated-distinct · 🔴 **`NEW=0`** |
+| `gate-online` (grant-ladder reach) | 🟢 **GREEN** | `tierA=30` `tierB=15` `tierC=10` · **55** paths · byte-floor `1 B` |
+| `gate-mit-tier` | 🟢 **GREEN** | **881** distinct MIT slugs on these shelves · 🟢 **884** grant payloads **READ** · 🔴 **53** `UNREAD` at 5 paths × 2 guessed refs |
+
+🔴 **`A-LIMB-2` was REFUTED, and in the useful direction.** It predicted `gate-identity-online`
+would fire red again on unshelved HEAD collisions, as it did at `p378` on five. It reports
+**`NEW=0`**: those five went into the dated alias register and the register is doing its job. 🔵 A
+gate that stops firing because the finding was *shelved* is the only kind whose green means
+anything.
+
+🟡 **`ACTION XH`'s remainder moved: 60 unreadable MIT grants at `p247`, `53` here.** The seven are
+not individually named in this pass's output, so the movement is recorded and not attributed.
+
+---
+
 ## 🟢 2026-10-22 · `p380` — **the LTI reference layer's grants are read from their payloads at last, and `oppia`'s grant path is `develop/LICENSE`, not `main`**
 
 **Evidence:** [`payload-upgrade`](../evidence/payload-upgrade.2026-10-22-p380.tsv) ·

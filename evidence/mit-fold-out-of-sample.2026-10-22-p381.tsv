@@ -1,0 +1,36 @@
+# p381 — p378's FOLD CONSTANT, REPLICATED OUT OF SAMPLE A SECOND TIME, BY A SECOND PASS.
+# p378 published that every MIT payload on these shelves is ONE legal text at the presentation
+# digest `584db484c03a8904`.  p380 replicated it on six fresh payloads spanning 17 bytes.  This
+# pass draws SIX MORE from six repositories neither p378 nor p380 ever touched, and runs them
+# through p378's OWN instrument, unmodified:
+#   compose/code/p378-presentation-fold/presentation_fold.py :: presentation_digest()
+payload	bytes	sha256_12	fold_digest_16	verdict
+marimo-team/learn main/LICENSE	1063	ab987ab9f287	584db484c03a8904	FOLDS
+liuliu667/cram-engine main/LICENSE	1064	c33ea68946e4	584db484c03a8904	FOLDS
+YJLi-new/undergraduate-coding-tutor main/LICENSE	1065	86b434fab451	584db484c03a8904	FOLDS
+Seeed-Studio/Seeed_Studio_Courses main/LICENSE	1069	20d9e7381152	584db484c03a8904	FOLDS
+ml-from-scratch-book/code main/LICENSE	1077	dc75509865d3	584db484c03a8904	FOLDS
+ls1intum/Artemis develop/LICENSE	1091	63a0a2b4d6d9	584db484c03a8904	FOLDS
+aaryansamanta/nextgen-ai main/LICENSE	1327	31d2ea3bba94	937b89139521aaa7	HELD APART - and correctly
+dvbs2000/visible-ai main/LICENSE	1458	4b5ffb7babc5	9298f70d1aeaaf67	HELD APART - CC BY-NC-ND 4.0
+NiluK/worldmodels101 main/LICENSE	20137	23ee78c8bae4	b201beff45fc2666	HELD APART - CC BY-SA 4.0
+ILIAS-eLearning/ILIAS release_11/LICENSE	35147	8ceb4b9ee5ad	18344ce9830de41c	HELD APART - GPL
+#
+# H-LIMB-1 CONFIRMED.  SIX payloads, SIX distinct byte lengths spanning 28 B (1 063 - 1 091), SIX
+# distinct sha256_12, ONE fold digest.  p380's span was 17 B; this one is wider, and it is a
+# SECOND pass reaching the same constant from a disjoint sample.
+#
+# 🟢 THE LOAD-BEARING ROW IS THE ONE THAT DID NOT FOLD.  `aaryansamanta/nextgen-ai` has
+# `MIT License (Code)` on its title line and would satisfy any string matcher, any licence API and
+# any manifest field.  Its operative clause has been EDITED — the canonical "of this software and
+# associated documentation files" is replaced by "of the source code files in this repository" —
+# and its payload carries an explicit carve-out: brand assets, team photos, videos, logos and the
+# top-level PDFs are "not covered by the MIT license above".  🔴 A classifier that reads the root
+# LICENSE and stops is RIGHT ABOUT THE CODE AND WRONG ABOUT THE REPOSITORY, and that is this
+# base's whole ladder.  p378's fold catches it for free, because the fold is of the TEXT.
+#
+# 🟢 SEPARATELY, A FREE OUT-OF-SAMPLE CONTROL ON p310's CC0 PIN.  `kuzand/Computer-Vision-Video-
+# Lectures` answers at `master/LICENSE` with CC0-1.0 at EXACTLY 7 048 B and sha256_12
+# `a2010f343487` — the identical byte length AND digest this base has published for
+# `GeminiLight/gen-mentor`, `Agenta-AI/awesome-ai-agent-platforms` and others.  A repository no
+# pass here has ever touched, on a `master` ref, reproduces the pin exactly.
