@@ -1,0 +1,39 @@
+# ACTION p376-A — does an in-language leg return a DIFFERENT SUPPLY SET, or the same one?
+# Written and committed BEFORE any of the four in-language legs ran, per p374's standing rule
+# that a prediction registered after the result is not a prediction.  The commit that carries
+# this file carries NO leg output; the result file lands in a LATER commit.
+#
+# THE UNTESTED ASSUMPTION, as p376 stated it: p374 proved an in-language leg is a DIFFERENT
+# INSTRUMENT for POLICY text (Japan's English and Japanese legs returned different FACT
+# CLASSES, now invariant J3).  No pass has tested whether J3 holds for SUPPLY.  Three passes
+# of English agent queries grading 9/9, 9/11 and 5/8 CARRIED is equally consistent with
+# saturation of the ENGLISH INDEX as with saturation of the INDUSTRY.  This base has been
+# reading it as the second.
+field	value
+action	ACTION p376-A
+rank_assigned_by_p376	FIRST
+leg_languages	Chinese (zh) · Korean (ko) · Portuguese (pt) · Spanish (es)
+control_leg	English — re-run this pass so the comparison is same-pass, not against p375's record
+unit_of_measurement	ADDRESSES (owner/repo), graded by `make carried` where runnable and by index lookup against the nine SHELF_FILES where it is not.  NOT outlets, NOT pages.
+#
+# THE PREDICTION — two limbs, because p376 proved NEW ADDRESS and NEW AGENT ROW are different
+# measurements (its leg returned 3 NEW and 0 agents).  A successor must be able to see that
+# this pass did not collapse them after the fact.
+limb_1_prediction	The four in-language legs TOGETHER return at least 3 addresses that `carried` grades NEW.  The Chinese leg alone returns at least 1.  I.e. J3 EXTENDS to supply: query language is a real instrument axis, and the English-index reading of the three prior zeros was partly an artefact.
+limb_2_prediction	Of those NEW addresses, AT MOST 1 clears this base's bar for a row on agents/top.md.  I.e. the agent-shelf zero is a property of the SHELF'S BAR (permissive grant + maintained + actually an agent), not of the index's language.
+#
+limb_1_refutation	All four in-language legs return a carried set IDENTICAL to the English control — 0 NEW addresses across all four.  Then English saturation and industry saturation are THE SAME THING here, J3 is a property of policy text only, and the zero on agents/top.md is a fact about education AI rather than about the query.
+limb_2_refutation	2 or more of the NEW addresses clear the agent-row bar.  Then the bar was never what was holding the shelf at zero, and every "saturated" verdict from p373 onward is an artefact of query LANGUAGE, exactly as p376 feared.
+#
+both_limbs_confirmed_means	Language is an instrument axis for supply AND the shelf bar is what produces the zero.  These are independent findings and the pass must publish both, not the more flattering one.
+limb_1_refuted_means	The strongest result available to this pass: it would RETIRE the language hypothesis for supply and licence a successor to stop paying for in-language supply legs.  Recorded here so a successor can check this pass did not retro-fit the outcome it wanted.
+#
+# WHY THESE LANGUAGES, stated before the result so the choice cannot be re-justified later.
+why_zh	Largest non-English GitHub author population; p376's own Korean leg returned Norway, proving an in-language leg reaches outlets the English one does not.  If any leg breaks the zero, this is the one.
+why_ko	Direct comparison to p376's Korean POLICY leg, which WAS productive.  Same language, different fact class — isolates the policy/supply axis with language held constant.
+why_pt	Globant's LATAM remit; Brazil is already a measured policy cell (Parecer CNE/CP 15/2026) with no measured supply cell.
+why_es	Same, and it tests whether two Romance languages behave alike or whether the unit is the COUNTRY's outlet set rather than the language — p375 found the unit was an OUTLET, not a language.
+#
+# STATED LIMIT, before the fact: WebSearch is documented US-only.  A nil on a non-English leg
+# therefore does NOT prove the absence of non-English supply; it proves this index does not
+# reach it.  That distinction must survive into whatever this pass publishes.
