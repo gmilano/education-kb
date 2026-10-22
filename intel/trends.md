@@ -293,3 +293,106 @@ where the *category* is wrong.
 3. **Check coverage before promising it.** The maintainers state their own gap: teaching research
    covers **1,049** topics (Science and Mathematics) and **881 topics have none**. A
    research-backed-guidance claim is true for roughly half the graph.
+
+## Trend 10 — 🆕 `p388` The parent is the unserved persona in education AI, and the statutes are pushing toward them
+
+Every market map this base has built, and every roundup it has read, segments education AI into
+**student-facing** and **teacher-facing** — `Trend 5` is about which of the two is growing faster.
+Both categories are about people *inside* the institution. **The parent is outside it, and is the
+person who actually logs into the portal.**
+
+**The supply arrived this pass and it is not a prototype tier.**
+[chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) (**MIT**, 20 tools
+over **Infinite Campus / Campus Parent**, **47 published releases**) and
+[chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp) (**MIT**, 18 tools,
+**43 releases**) are maintained, deliberately scoped to the observer surface, and built by one
+maintainer working the same problem across two platforms — which is what a real need looks like
+rather than a weekend demo.
+
+**Three reasons this is a trend and not a curiosity:**
+
+1. **The statutes are already there.** Every North American instrument this base tracks puts
+   **family transparency** in the text — Oklahoma SB 1734 names it outright; Maryland's Chapter 634
+   is built around guidance districts must hand down to families. Regulators keep asking
+   institutions to *explain AI to parents*; nobody is building the surface that would.
+2. **There is no incumbent to displace.** The parent portal is a **feature of the SIS**, not a
+   market. No vendor defends it, and the SIS vendors have no incentive to open it. That is the rarest
+   condition in education software, where every other surface has a 20-year incumbent.
+3. **It inverts the tenancy problem instead of solving it.** `p386`'s finding — every granted LMS
+   server authenticates as the signed-in user, so a studio cannot hand one to an institution — reads
+   as a *defect* for student and teacher tools. For the parent it is **the correct architecture**:
+   the parent's own credential, the parent's own child, no institutional tenancy required at all.
+
+🔴 **And the boundary that defines the engagement, because it is not a licence boundary.** Hosted by a
+family, these tools are a person exercising their own access. **Hosted by a studio for a district, the
+identical API call becomes a FERPA-governed disclosure of an education record.** The code does not
+change; the obligation does. 🔵 So the honest market shape is **two different products**: a
+parent-side tool (no tenancy, no FERPA exposure, no institutional sale) and a district-side one (full
+tenancy, full FERPA, a real procurement cycle). Conflating them is how this gets sold wrong.
+`Pattern P` in [`compose/patterns.md`](../compose/patterns.md) is built on that split.
+
+## Trend 11 — 🆕 `p388` Jurisdictional curriculum content is becoming the defensible layer, and it is arriving region by region
+
+`Trend 9` recorded that a curriculum-data layer had arrived and that its licence was a **database**
+licence. `p388` shows the *shape* that layer is taking, and it is not one global graph:
+
+| region | asset | licence | what makes it local |
+|---|---|---|---|
+| **North America** | 🆕 [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | 🟢 MIT | The **BC Ministry** K–12 curriculum in its real three-column **KDU** structure — and the **First Peoples Principles of Learning**, a provincial requirement no imported product carries |
+| **LATAM** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) (`p387`) | 🟢 MIT | **BNCC** skill codes, Brazil's national curriculum, with invented codes discarded before a teacher sees them |
+| **Global** | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) (`p384`) | 🟡 **ODbL** (database licence) | 1,590 topics / 3,221 prerequisite edges mapped to NGSS and Common Core |
+
+**The pattern across the three:** the model is interchangeable, the *curriculum authority* is not.
+A tutor that cites a BNCC code, a BC Big Idea or an NGSS standard is doing something a
+general-purpose tutor **cannot** — not because its reasoning is better, but because it is anchored to
+the instrument the jurisdiction grades against.
+
+**Three consequences for an engagement:**
+
+1. **Curriculum grounding is now demonstrable in three regions, not described in one.** `Pattern H`
+   stops being a proposal and becomes a reference build with a local example in hand.
+2. 🟡 **The risk on these assets is currency, not licence.** The BC server is 🟢 MIT — clean — but it
+   is a **crawl** of `curriculum.gov.bc.ca`, last published **2026-03-27**. Curricula are revised on
+   political timetables. **Quote the re-crawl as a maintenance line item**, and never let a client
+   believe a crawl is a feed.
+3. **Keep asking the data-rights question from `Trend 9`.** Two of the three assets above are code
+   (MIT); one is a **database** under ODbL. "What licence is the code?" and "what rights govern the
+   data we ground on?" remain two different intake questions with two different answers.
+
+## Trend 12 — 🆕 `p388` An exhausted channel is not an exhausted supply — and "published but unreadable" is now a real category
+
+This is a trend about **how this industry's open-source supply is actually distributed**, and it has
+a direct procurement consequence.
+
+**The discovery finding.** `p382` recorded that this industry's address supply was **exhausted**.
+What was exhausted were four search-engine legs. **`registry.npmjs.org/-/v1/search` is open**, and 29
+education queries returned **383 GitHub addresses absent from this entire base**, of which **22 are
+granted and education-specific** — the largest single intake in this base's recorded history. 🔵 The
+general lesson, and it is the third of its kind here: `p386` learned *a count of addresses is not a
+count of grants*; `p387` learned *a null leg is not a null supply*; `p388` adds *an exhausted channel
+is not an exhausted supply*. All three are one error — **a property of the instrument reported as a
+property of the industry.**
+
+🔵 **Why a package registry is structurally the better instrument for this industry.** A trending page
+ranks by attention over days. Education tooling is **institutional, unglamorous and
+low-star** — a 47-release parent-portal server for a US K-12 SIS will never trend anywhere. The
+registry indexes it anyway, and returns its **entire publish history in the same call**, which
+answers "is it maintained?" at the moment of discovery rather than two steps later.
+
+🔴 **The new supply category, and it is the uncomfortable half.** Of 32 addresses probed, **6 publish
+to npm from a repository that is not publicly readable** — `git ls-remote` prompts for credentials,
+so the repository is **closed, not missing**. The package installs; the provenance cannot be audited.
+The costliest instance is **103 published versions** of an AI-generation quiz library **with SCORM
+support** ([thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit)); the
+most instructive is [ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit), whose manifest
+declares **`"SEE LICENSE IN LICENSE"` — pointing at a file inside a repository nobody can read.**
+
+**So the licence-reading discipline this base built needs one more rule.** `Pattern L` clears a
+repository by reading its **subtree**; for these there *is* no subtree. The rule that replaces it:
+**for an npm-only dependency, the manifest is a claim and the tarball is the evidence** —
+`registry.npmjs.org/<pkg>/-/<pkg>-<v>.tgz` serves the published artefact even when the repository is
+closed, and **it is the licence that actually ships**. 🔴 That is how this pass established that a
+major publisher's tutoring SDK (**115 published versions**) carries **no licence at all**: not from
+the repo, which is private, but from the artefact, which is not. 🔵 And the corollary a studio should
+internalise: **commercial education vendors are starting to distribute as closed SaaS with an npm
+veneer.** The npm scope looks like open source, installs like open source, and grants nothing.

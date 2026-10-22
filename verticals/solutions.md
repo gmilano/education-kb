@@ -185,6 +185,69 @@ This did not exist a year ago and it changes the integration story:
   licence file either, but its `version.php` carries the full **GPL-3.0-or-later** header that
   Moodle requires of every plugin, so it *is* granted.
 
+## 🆕 `p388` — The parent portal is a platform surface, and it was missing from this shelf
+
+This shelf asks *"what does the client already run, and what can be bolted onto it?"* For every
+platform below it answered that for **the learner, the teacher and the administrator**. It never
+answered it for **the parent** — yet in K-12 the parent portal is a shipped feature of every SIS and
+the one surface families actually log into.
+
+| platform | server | ref · HEAD | licence | what it bolts on |
+|---|---|---|---|---|
+| **Infinite Campus** (Campus Parent) | [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` · `971d58f` | 🟢 **MIT** (1,067 B) | 🟢 **The first SIS parent portal on this shelf.** 20 tools: schedule, assignments (`missingOnly`), grades + 14-day recent window, **attendance events with codes and comments**, behavior, food service, documents, standardized **assessment scores**, fees, messaging from three sources. Linked districts auto-discovered via **CUPS SSO**; `FeatureDisabled`-aware, so a district that has switched a module off degrades instead of erroring. **47 npm releases**, → 2026-10-19. |
+| **Canvas** | [chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp) | `main` · `428b78b` | 🟢 **MIT** (1,067 B) | 18 `canvas_*` tools held to **the read-only observer surface** (`canvas_list_observees` is the hinge) plus student self-access; four auth modes in priority order; hardened file download (host-pinned, directory-confined, no symlink writes, `0600`). **43 releases**, → 2026-10-16. |
+
+🔵 **Why it belongs on the *verticals* shelf and not only on the agents shelf.** Infinite Campus is a
+**major North American K-12 SIS** that this base has only ever been able to name as a proprietary
+system with nothing attachable. It now has a granted, maintained, MIT integration surface — so the
+"what can be bolted on" answer for a US K-12 district changes from *nothing* to *the parent portal*.
+
+🔴 **The boundary that decides the engagement, and it is not a licence boundary.** Both servers
+authenticate as **a person** — a parent's own token, OAuth, or a scraped session. Deployed by a family
+for their own child, that is the parent exercising their own access. **Hosted by a studio on behalf of
+a district, the same call becomes an institutional disclosure of an education record and FERPA
+governs it.** The code is identical; the obligation is not. 🆕 `Pattern P` in
+[`compose/patterns.md`](../compose/patterns.md) is built around that line, and it is the same
+tenancy problem `p386` found for student-side LMS servers — **the parent surface inherits it
+unchanged**, which is worth knowing before a district pilot is scoped.
+
+## 🆕 `p388` — Canvas: the integration surface reordered, and a FERPA mode shipped as a feature
+
+`p387` recorded that the richest Canvas server (`canvas-mcp-server`, 54 tools) had not shipped since
+**2025-06-27**. For a client engagement that mattered and there was nothing better to recommend.
+There is now:
+
+- 🟢 **[bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp)** — `main` · `34e6156`,
+  🟢 **MIT** (1,070 B), `canvas-lms-mcp` **v2.9.0 across 87 releases, 2026-04-13 → 2026-10-22
+  (today)**. **187 tools on the teacher/admin surface**, including the ones an institution asks about
+  and demos usually lack: gradebook *history*, quiz **accommodations**, grading standards, content
+  exports and migrations, outcomes, analytics, appointment groups, plus **link audit**,
+  **accessibility audit** and **grade projection**. Three deployment modes (stdio, HTTP, library
+  import). 🟢 **It ships a FERPA mode.** That is the first time on these shelves that an education
+  compliance regime appears as a *product feature* of an open-source component rather than as a
+  caveat this base has to supply — and in a procurement conversation it is worth more than the tool
+  count.
+- 🟢 **[Fireiscoolsolo/canvas-lms-mcp-local](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local)**
+  (`c7e5725`) and its remote twin
+  **[`-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server)** (`8e424f1`) — 🟢 **MIT**
+  (1,091 B each), **209 tools on the student surface**, split deliberately into a **Local Edition**
+  that opens no port and a **Remote Edition** on ngrok with OAuth 2.1 and multi-computer failover.
+  🔴 The Remote Edition exposes a **public HTTPS address**: a school's decision, never a default, and
+  not a thing to leave switched on in a pilot.
+
+🔵 **Pick by persona, not by tool count.** 187 (teacher/admin) vs 209 (student) vs 20 (parent) is
+**scope**, not quality: three different people reading the same institutional data. An engagement
+usually needs one, occasionally two, and should deploy them separately — the FERPA posture differs
+per surface, and a single server covering all three personas would be the hardest version of this to
+get approved.
+
+🟢 **And a wider Moodle surface than `webservice_mcp`:**
+[gafapa/moodlia-cli](https://github.com/gafapa/moodlia-cli) — `main` · `7962e49`, 🟡 **GPL-3.0**
+(284 B short-form notice) — a Node client and CLI against Moodle Core web services **plus the MoodlIA
+plugin, a 250-operation contract**, Moodle 4.5+, with an optional experimental **WebMCP** browser
+path. GPL survives here for the same reason it does for `webservice_mcp`: the agent reaches it over
+REST, it is not linked.
+
 ## What is *not* available as open source, and matters
 
 An informed gap, recorded so silence is not mistaken for coverage:

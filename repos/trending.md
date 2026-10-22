@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-22
 ---
 
+## 🟢 🆕 2026-10-22 · `p388` — **GITHUB TRENDING IS 403 FOR A SEVENTH PASS — SO THIS PASS STOPPED LOOKING FOR A TRENDING PAGE AND FOUND A *DISCOVERY* CHANNEL INSTEAD. 🟢 `registry.npmjs.org/-/v1/search` YIELDED 383 UNSEEN ADDRESSES, 22 OF THEM GRANTED AND EDUCATION-SPECIFIC.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p388.tsv) — 32 addresses probed,
+26 live, 22 granted, 2 manifest-only, **6 published-but-unreadable**. Full narrative and every new
+row in [`agents/trending.md`](../agents/trending.md).
+
+### 🔴 The trending channel, seventh consecutive pass
+
+`https://github.com/trending` → **403**. `api.github.com` → **403**. 🆕 `codeload.github.com` → **403**
+(probed this pass for the first time). `gittrend.io`, `trendshift.io`, `ossinsight.io` → DNS
+ENOTFOUND (`p387`). **There is still no readable trending page and no star count for this industry
+from inside this sandbox.**
+
+### 🟢 What replaces it, and it is better than a trending page for this purpose
+
+`p387` established that the package registries publish licences and release dates. **This pass found
+they also publish a search index**, which is the part a trending page was wanted for:
+
+```
+GET https://registry.npmjs.org/-/v1/search?text=<query>&size=25     ->  200 JSON
+```
+
+29 education queries → **535 packages**, 453 with a `repository` field, **383 addresses not present
+anywhere in this base** (deduped against 3,303 known GitHub addresses across all shelves and evidence
+files). Narrowed to education-specific AI work: 26 candidates → **22 granted**.
+
+🔵 **Why this beats a trending list for a studio.** Trending ranks by *attention over a few days*. The
+registry ranks by **query relevance and tells you the publish history** — so "is this maintained?"
+is answered in the same call that finds it. The registry also indexes packages whose repositories
+have **no stars at all** and would never trend, which is most of the education supply.
+
+🆕 **Two further channel facts confirmed first-hand, both useful to the next pass:**
+- **`registry.npmjs.org/<pkg>/-/<pkg>-<version>.tgz` → 200.** The *published artefact* is readable.
+  **This reads the licence that actually ships**, which is not always the licence the repo states —
+  and it works even when the repository is private.
+- **`git ls-remote --symref https://github.com/<slug> HEAD` distinguishes private from absent.** A
+  credentials prompt means the repository **exists and is closed**; it is not a dead address. Six
+  addresses this pass are in that state while publishing to npm normally.
+
+### 🟢 New on the foundations shelf
+
+Promoted to [`repos/foundations.md`](foundations.md) this pass — see that shelf for the tiering:
+
+| repo | ref · HEAD | licence | tier |
+|---|---|---|---|
+| [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | `main` · `34e6156` | 🟢 MIT | **187 tools, 87 npm versions, published 2026-10-22 (today)** — the maintained teacher/admin Canvas surface, **with a FERPA mode** |
+| [Fireiscoolsolo/canvas-lms-mcp-local](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local) | `main` · `c7e5725` | 🟢 MIT | 209 tools, student-side, **no port opened**; [`-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) (`8e424f1`, MIT) is its remote twin |
+| [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` · `971d58f` | 🟢 MIT | 🆕 **the first SIS parent-portal integration on these shelves** — 47 npm versions |
+| [chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp) | `main` · `428b78b` | 🟢 MIT | the Canvas parent-observer scope, 43 npm versions |
+| [QuantStack/jupyter-ai-tutor](https://github.com/QuantStack/jupyter-ai-tutor) | `main` · `139bb11` | 🟢 BSD-3-Clause | the **maintained** notebook-tutor layer — replaces a four-and-a-half-year-stale dependency in `Pattern B` |
+| [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | `main` · `687c55b` | 🟢 MIT | the **North American** curriculum-grounding instance (BC K–12, incl. First Peoples Principles of Learning) |
+| [danieltyukov/tudelft-mcp](https://github.com/danieltyukov/tudelft-mcp) | `main` · `3c680e0` | 🟢 MIT | **EMEA**, four university systems behind one MFA sign-in, **every write confirmed by preview** |
+| [Ryfter/canvas-toolchain](https://github.com/Ryfter/canvas-toolchain) | `main` · `ac0c75f` | 🟢 MIT | teacher-facing semester refresh; **topic-currency scoring** |
+| [gafapa/moodlia-cli](https://github.com/gafapa/moodlia-cli) | `main` · `7962e49` | 🟡 GPL-3.0 | a **250-operation** Moodle contract — far wider than `webservice_mcp` |
+| [SuperPiTT/moodle-rag](https://github.com/SuperPiTT/moodle-rag) | `main` · `a333415` | 🟢 MIT | RAG over the **Moodle codebase** — cuts the build cost of `Pattern A`, not a teaching tool |
+
+### 🔴 Six repositories that publish to npm from a source nobody can read
+
+A supply category this base has not had a name for. The *package* ships; the *repository* prompts for
+credentials. Full table in [`agents/trending.md`](../agents/trending.md); the one that matters most:
+
+**[thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit)** —
+`@thanh01.pmt/interactive-quiz-kit`, **v1.4.10 across 103 published versions**, 2025-06-12 →
+2026-09-23, manifest MIT, **source closed**. Interactive quizzes with AI generation **and SCORM
+support**, which is genuinely scarce in permissive open source. 🔵 Recorded as a *reachable
+dependency with unreadable provenance* — a different risk from an unmaintained repo, and one the
+`Pattern L` subtree check cannot clear because there is no subtree to read.
+
+### 🔵 Carried-column audit
+
+No row on [`repos/foundations.md`](foundations.md) was removed this pass. `p387`'s recency verdicts
+stand unchanged (`pybryt` 2022-04-28; `canvas-mcp-server` 2025-06-27; `brightspace-mcp-server`
+2026-10-22). **The `canvas-mcp-server` staleness finding is now actionable rather than merely
+recorded**, because two maintained MIT alternatives exist — see above.
+
+---
 ## 🟢 🆕 2026-10-22 · `p387` — **GITHUB TRENDING IS 403 FOR A SIXTH PASS, AND THREE SUBSTITUTE CHANNELS ARE ALSO DEAD — SO THIS PASS DATED THE SHELF FROM THE PACKAGE REGISTRIES INSTEAD. 🟢 THE BRAZILIAN SIS, THE MOODLE TENANCY LAYER AND OPEN edX'S OWN AI EXTENSION POINT ARE NOW ON THE FOUNDATIONS SHELF.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p387.tsv) — 15 addresses probed

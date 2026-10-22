@@ -1,0 +1,41 @@
+# p388 — 2026-10-22 — first-hand reads. Channels used, and their state this pass:
+#   LIVE   git ls-remote --symref https://github.com/<slug> HEAD        -> address + REAL default ref + HEAD sha  (OPEN)
+#   LIC    https://raw.githubusercontent.com/<slug>/<ref>/<path>        -> licence read from the raw payload      (OPEN)
+#   NPM    https://registry.npmjs.org/<pkg>                             -> declared licence + full publish history (OPEN)
+#   NEW    https://registry.npmjs.org/-/v1/search?text=<q>&size=25      -> DISCOVERY of new addresses             (OPEN — new this pass)
+#   BLOCKED: github.com HTML 403 · api.github.com 403 · codeload.github.com 403
+#   'AUTH-REQUIRED(private-or-absent)' = ls-remote prompted for credentials: the repository is NOT publicly readable,
+#   even though the package is published on npm. licence_read '-' on such a row means no payload could be read at all.
+slug	ls_remote_status	real_default_ref	head	licence_path	licence_read	licence_bytes	npm_package	npm_license_field	npm_latest	npm_versions	npm_created	npm_modified
+BaronCyrus/dsh-aha-tutor	LIVE	main	7d4a44b	LICENSE	MIT	1067	dsh-aha-tutor	MIT	1.7.0	9	2026-10-18	2026-10-22
+bruchris/canvas-lms-mcp	LIVE	main	34e6156	LICENSE	MIT	1070	canvas-lms-mcp	MIT	2.9.0	87	2026-04-13	2026-10-22
+chrischall/canvas-parent-mcp	LIVE	main	428b78b	LICENSE	MIT	1067	canvas-parent-mcp	MIT	2.1.10	43	2026-05-03	2026-10-16
+code-dibyajyotirout/vibelocus-npm-package	LIVE	main	eba11bf	LICENSE	AGPL-3.0	4000	vibelocus	AGPL-3.0-only	1.0.1	2	2026-08-21	2026-08-21
+crazystuffxyz/deepthink-js	LIVE	main	411a239	LICENSE	MIT	1069	deepthink-js	MIT	2.1.0	11	2026-04-19	2026-08-29
+CSOAI-ORG/flashcard-ai-mcp	LIVE	main	c09f7d9	LICENSE	MIT	1081	flashcard-ai-mcp	MIT	1.0.0	1	2026-05-04	2026-05-04
+CSOAI-ORG/quiz-generator-ai-mcp	LIVE	main	9efa6f4	LICENSE	MIT	1081	quiz-generator-ai-mcp	MIT	1.0.0	1	2026-05-04	2026-05-04
+danieltyukov/tudelft-mcp	LIVE	main	3c680e0	LICENSE	MIT	1070	tudelft-mcp	MIT	0.1.4	4	2026-10-01	2026-10-07
+engramo-developer/engramo-mcp	LIVE	main	5e54830	LICENSE	MIT	1075	@engramo/mcp	MIT	1.2.13	20	2026-08-17	2026-10-17
+epic-coder97/no-sidequests	LIVE	main	5369c0c	LICENSE	MIT	1069	no-sidequests	MIT	1.1.4	7	2026-08-27	2026-09-26
+Fireiscoolsolo/canvas-lms-mcp-local	LIVE	main	c7e5725	LICENSE	MIT	1091	canvas-lms-mcp-local	MIT	1.0.1	3	2026-10-14	2026-10-21
+firme-coding/thepplbot	LIVE	main	5f38db2	LICENSE	MIT	1069	thepplbot	MIT	0.3.0	7	2026-07-12	2026-08-26
+gafapa/moodlia-cli	LIVE	main	7962e49	LICENSE	GPL-3.0	284	-	-	-	-	-	-
+hanzoai/extension	LIVE	main	bfb4aaf	LICENSE	MIT	1060	@hanzo/canvas-lms	MIT	1.0.2	3	2026-07-04	2026-09-30
+jhwadman/melch-ai	LIVE	main	63b9005	LICENSE	MIT	1069	melchizedek-agents	MIT	1.10.3	31	2026-08-20	2026-10-22
+jonathanong/agent-blackboard	LIVE	main	aa65c2d	LICENSE	MIT	1069	agent-blackboard	MIT	0.7.0	12	2026-07-19	2026-10-17
+Kuldeep2822k/cli	LIVE	main	f622fdf	LICENSE	MIT	1064	@kuldeep2822k/palee	MIT	1.0.0	10	2026-08-10	2026-10-10
+mtgibbs/canvas-lms-mcp	LIVE	main	9b7efdc	LICENSE	MIT	1064	@mtgibbs/canvas-lms-mcp	MIT	0.2.18	15	2026-01-22	2026-02-13
+pdg6/bc-curriculum-mcp-server	LIVE	main	687c55b	LICENSE	MIT	1070	bc-curriculum-mcp-server	MIT	1.1.1	2	2026-03-27	2026-03-27
+QuantStack/jupyter-ai-tutor	LIVE	main	139bb11	LICENSE	BSD	1532	jupyter-ai-tutor	BSD-3-Clause	0.3.2	7	2026-06-16	2026-09-25
+Ryfter/canvas-toolchain	LIVE	main	ac0c75f	LICENSE	MIT	1063	@canvas-toolchain/curriculum-intelligence	MIT	2.3.0	3	2026-08-21	2026-08-29
+SuperPiTT/moodle-rag	LIVE	main	a333415	LICENSE	MIT	1094	@pytt0n/moodle-rag	MIT	1.0.0	1	2025-10-12	2025-10-12
+chrischall/infinitecampus-mcp	LIVE	main	971d58f	LICENSE	MIT	1067	infinitecampus-mcp	MIT	3.2.2	47	2026-04-16	2026-10-19
+Fireiscoolsolo/canvas-lms-mcp-server	LIVE	main	8e424f1	LICENSE	MIT	1091	-	-	-	-	-	-
+nanobpm/nano-ide	LIVE	main	9c39df5	-	-	-	@nanobpm/agentic	Apache-2.0	0.15.0	13	2026-08-13	2026-10-01
+TecFancy/dsh-deeptutor	LIVE	main	0cb81a7	-	-	-	dsh-deeptutor	MIT	0.1.9	10	2026-08-13	2026-08-14
+AI-Matrix-Engine/aidream	AUTH-REQUIRED(private-or-absent)	-	-	-	-	-	@ai-matrx/print	-	-	-	-	-
+ale-alejandro/beadkit	AUTH-REQUIRED(private-or-absent)	-	-	-	-	-	beadkit	SEE LICENSE IN LICENSE	0.1.0	2	2026-08-26	2026-10-12
+Mckaroff/GraphLMS	AUTH-REQUIRED(private-or-absent)	-	-	-	-	-	rhizome-lms-mcp	MIT	0.3.1	4	2026-04-30	2026-05-03
+santillana-ai/tutor-sdk	AUTH-REQUIRED(private-or-absent)	-	-	-	-	-	@santillana-ai/create-tutor-app	MIT	5.9.0	63	2025-08-28	2025-10-21
+thanh01pmt/interactive-quiz-kit	AUTH-REQUIRED(private-or-absent)	-	-	-	-	-	@thanh01.pmt/interactive-quiz-kit	MIT	1.4.10	103	2025-06-12	2026-09-23
+yokowasis/autograder	AUTH-REQUIRED(private-or-absent)	-	-	-	-	-	-	-	-	-	-	-

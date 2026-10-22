@@ -47,6 +47,27 @@ probed**: 12 granted reads over **11 distinct granted projects** (one mirror pai
 3 ungranted, plus 1 inferred slug **refused rather than probed** ·
 [`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv) — **26 package reads**.
 
+🆕 **Pass `p388` · 2026-10-22 — increment, and it adds a whole persona plus 22 granted addresses.**
+`p382` had recorded that this industry's **address supply was exhausted**. It was not: the supply was
+exhausted *in the channels this base was asking*. **`registry.npmjs.org/-/v1/search` is open and is a
+discovery channel** — 29 education queries returned **383 GitHub addresses that appear nowhere in this
+base**, of which **22 are granted and education-specific**. The most consequential results:
+**(1) 🟢 The parent/guardian is now a shelved persona** — three MIT servers, including **the first
+SIS-side parent portal** (Infinite Campus) on these shelves. New **Tier 5** below, and
+🆕 **`Pattern P`** in [`compose/patterns.md`](../compose/patterns.md).
+**(2) 🟢 The Canvas shelf is reordered** — a **187-tool MIT** server with a **FERPA mode**, published
+**today** across 87 npm versions, and a **209-tool MIT** student-side pair. `p387`'s "richest Canvas
+surface is 16 months stale" finding is now *actionable*, not just recorded.
+**(3) 🟢 `Pattern B`'s stale dependency has a maintained replacement** — `jupyter-ai-tutor` (BSD-3,
+QuantStack), which carries its tutor persona in a version-controlled `TUTOR.md`.
+**(4) 🔴 A major LATAM/Iberia publisher's tutor SDK is ungranted** — and the package a client would
+actually depend on declares **no licence at all** across **115 published versions**. See
+*[No licence file](#-no-licence-file--and-ungranted-is-three-different-things)*.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p388.tsv) — **32 addresses
+probed**, 26 live, **22 granted**, 2 manifest-only, **6 published-but-unreadable** (the repository
+prompts for credentials while the npm package ships normally — a category this base could not name
+before `git ls-remote` was used to separate *private* from *absent*).
+
 ## 🔴 No star counts are published this pass, and that is deliberate
 
 Every popularity channel was closed in this sandbox: `api.github.com` → **403**,
@@ -70,6 +91,7 @@ permissiveness, maintenance signal and fit — and states the gap instead of fil
 | **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 **`dev`** | 🔴 **AGPL-3.0** | AI-native course platform. Note the default ref is `dev`: a `main`-assuming clone or licence read fails silently. | EMEA |
 | **Learn Shell** | [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell) | `main` | 🔴 **AGPL-3.0** at `main` — 🟢 **MIT at tag `v0.1.0`** | 🆕 `p385`. **Agent-native teaching OS: the classroom is the server and the agent is bring-your-own.** Courses, lessons, FSRS-scheduled flashcards, graded exercises, mindmap, document reader, and a memory layer the agent reads back (`get_context` / `get_learner_brief`) instead of re-deriving the learner each session. ~50 tools over MCP, self-describing via a `manifest://capabilities` resource. 🔴 v1 is explicitly **single-machine and unauthenticated** — not multi-tenant as it stands. | APAC — China (MCP tool descriptions and prep-report are Chinese-first; docs English-first) |
 | **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | `main` | 🟢 **MIT** *(1,068 B, © 2026 Zijin Zhang)* | 🆕 `p386`. **Block-based adaptive workspace that runs entirely on the client's own machine.** Course material in (PDF), structured notes, flashcards, quizzes and an adapting tutor out; **FSRS** spaced repetition, a knowledge graph and cognitive-load detection are in the product rather than on the roadmap. Next.js 16 + Python 3.11, Docker, **runs on local open-weight models with no API key and no data leaving the host**. 🟢 The data-residency tutor with a *permissive* grant — which [Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3) was the only other candidate for. 🟡 One maintainer; bilingual EN / zh-CN. | APAC — China |
+| **Aha Tutor** (开窍) | [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | `main` | 🟢 **MIT** *(1,067 B)* | 🆕 `p388`. **The most complete statement of adaptive-tutoring design on these shelves.** Builds a course from one sentence or an uploaded textbook, establishing the learner's baseline, goal, time budget and desired course size *before* writing a unit → chapter → lesson blueprint. Delivery is a **narrated handwriting blackboard** (formula-driven curves computed point-by-point, draggable parameters). 🟢 Mid-lesson checks **record confidence**, so a lucky guess, a hesitant answer and a confident wrong answer are three different events; weak points earn an automatic consolidation lesson. 🟢 A **"this step is wrong?"** button re-checks, corrects the blackboard, and **re-grades past attempts and the mastery estimate**. FSRS review, printable cheat sheets, video/PDF export. Built as a **DeepSeek Harness** extension; npm `dsh-aha-tutor` v1.7.0, published **2026-10-22**. 🟡 Single maintainer. | APAC — China (Chinese-first) |
 
 ## Tier 2 — Research and literature agents (higher education)
 
@@ -88,6 +110,10 @@ permissiveness, maintenance signal and fit — and states the gap instead of fil
 | **pybryt** | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Assesses the **approach** a student's code takes, not only its output. Pairs with an LLM that explains *why* the approach was wrong. 🔴 🆕 `p387` **No PyPI release since `v0.7.0`, 2022-04-28 — four and a half years.** The idea is still the best available statement of approach-assessment and `Pattern B` still stands on it, but treat it as **a reference implementation to vendor and maintain, not a dependency to install**. Repository commit activity is unreadable here (`github.com` 403), so this is a statement about the *published artefact*, which is what a client would install. |
 | **canvas-mcp** | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | `main` | 🟢 **MIT** | MCP server over Canvas LMS: courses, assignments, submissions, grading, rubrics, students. Fork [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) (MIT) adds office-hours, syllabus read/write and course-content copy. |
 | **Flat** | [netless-io/flat](https://github.com/netless-io/flat) | `main` | 🟢 **MIT** | Open-source online classroom (interactive whiteboard, recording) — the live-session substrate an agent can sit in. |
+| **jupyter-ai-tutor** | [QuantStack/jupyter-ai-tutor](https://github.com/QuantStack/jupyter-ai-tutor) | `main` | 🟢 **BSD-3-Clause** *(1,532 B)* | 🆕 `p388`. **The maintained notebook-tutor layer, and the replacement for `Pattern B`'s stale dependency.** Per-cell **Explain Code** button sends the cell source, kernel language, **the error traceback**, and the preceding cells up to the last markdown cell *as the exercise statement*. 🟢 Two pedagogically serious details: the tutor persona lives in a **`TUTOR.md` discovered by walking up from the notebook's directory**, so each course or folder carries its own in version control; and an optional **`reference_solution` + `evaluation_criteria` in cell metadata, ROT13-encoded** to keep it out of the student's view. From **QuantStack**, a known Jupyter-ecosystem maintainer. Requires `jupyter-ai-jupyternaut` (<0.1). v0.3.2, 7 releases, → 2026-09-25. |
+| **BC Curriculum MCP** | [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p388`. **The North American curriculum-grounding instance** — the third region to get one, after Brazil's BNCC agent (`p387`) and `os-taxonomy` (`p384`). 12 MCP tools over the **entire BC Ministry of Education K–12 curriculum**, crawled into SQLite: Big Ideas / Curricular Competencies / Content in the real three-column **KDU** structure with elaborations, Core Competencies, grade progressions, cross-subject connections, full-text search — and the **First Peoples Principles of Learning**, a jurisdictional requirement no generic tutor carries. Hosted HTTP endpoint or local stdio via `npx`. 🟡 2 releases, both **2026-03-27**; the data is a crawl, so currency is the risk, not the licence. |
+| **tudelft-mcp** | [danieltyukov/tudelft-mcp](https://github.com/danieltyukov/tudelft-mcp) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p388`. **The EMEA institution-specific pattern, and the best-governed write path read so far.** One server over **four** systems a real university runs — Brightspace, **OSIRIS** (official records), MyTimetable and the public Study Guide — behind a single browser sign-in **including MFA**, with a self-renewing session. 🟢 **Every write (submitting an assignment, joining a group, replying in a discussion, registering for a course or exam) shows a preview and requires confirmation** — the human-in-the-loop control EU high-risk obligations ask for, shipped as the default. v0.1.4, → 2026-10-07. |
+| **Canvas Toolchain** | [Ryfter/canvas-toolchain](https://github.com/Ryfter/canvas-toolchain) | `main` | 🟢 **MIT** *(1,063 B)* | 🆕 `p388`. **Teacher-facing semester refresh** — `Trend 5`'s shape exactly. Reads a Canvas backup archive plus lecture transcripts, **scores topic currency**, plans the next semester, and emits Canvas-safe HTML. 🟢 The **no-token "generate the HTML and paste it in"** path is first-class, so it delivers value without an API token or admin approval — which is how a pilot actually starts. 🟡 Installer is not code-signed; `npx canvas-toolchain` avoids it. → 2026-08-29. |
 
 ## Tier 4 — 🆕 `p387` LATAM-native agents (the tier `Gap 386-C` said did not exist)
 
@@ -116,6 +142,32 @@ the one that hurts**, because `Pattern D` wants exactly this and cannot use it),
 [FXArth/Tutor-Programacao](https://github.com/FXArth/Tutor-Programacao) (Brazil),
 [henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) (Brazil, RAG
 tutor, default ref **`master`**).
+
+## Tier 5 — 🆕 `p388` Parent and guardian agents (the persona no shelf here had)
+
+These shelves have carried the learner, the teacher and the institution since they were built. **The
+parent was absent** — the word "observer" appeared in exactly one file before this pass. The registry
+discovery channel surfaced three granted servers for that persona, two by one maintainer working the
+problem deliberately across two different platforms.
+
+🔵 **Why it is a market fact, not a curiosity.** Every North American instrument this base tracks puts
+**family transparency** in the statute — Oklahoma SB 1734 names it outright, and Maryland's act is
+built around guidance districts must hand down. A parent-facing read surface is the one place where
+"transparency" becomes a *product* instead of a policy document. It is also the only education
+persona with **no incumbent vendor lock**, because the parent portal is a feature of the SIS rather
+than a market of its own.
+
+| agent | repo | ref | licence | what it actually does | platform |
+|---|---|---|---|---|---|
+| **infinitecampus-mcp** | [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` | 🟢 **MIT** *(1,067 B)* | 🟢 **The first SIS-side parent portal on these shelves.** 20 tools over **Campus Parent**: schedule, assignments (`missingOnly`), grades plus a 14-day recent-grades window, **attendance events with codes and comments**, behavior, food service, documents, standardized **assessment scores**, fees, and messaging from three distinct sources. Linked districts auto-discovered via **CUPS SSO**, and it is `FeatureDisabled`-aware, so it degrades per district instead of erroring. **47 npm releases**, → 2026-10-19. | Infinite Campus |
+| **canvas-parent-mcp** | [chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp) | `main` | 🟢 **MIT** *(1,067 B)* | The same scope against Canvas: 18 `canvas_*` tools held deliberately to **the read-only parent-observer surface** (`canvas_list_observees` is the hinge), plus student self-access. Four auth modes tried in priority order. 🟢 The download tool is properly hardened — host-pinned to your Canvas origin, writes only inside a download directory, never through a symlink, new files `0600`. **43 npm releases**, → 2026-10-16. | Canvas |
+| **mtgibbs/canvas-lms-mcp** | [mtgibbs/canvas-lms-mcp](https://github.com/mtgibbs/canvas-lms-mcp) | `main` | 🟢 **MIT** *(1,064 B)* | Canvas read access framed first at *"parents monitoring their child's academic progress"*: due-this-week, missing work across all classes, grade questions in natural language. 🟡 **Last published 2026-02-13** — eight months. Shelved for the framing; take the row above as the dependency. | Canvas |
+
+🔴 **The compliance edge, stated before anyone builds on these.** All three are **personal-credential**
+tools — a parent's own token, OAuth, or a scraped session. That is fine for a parent acting for their
+own child. **The moment a studio hosts one on behalf of a district, the credential becomes
+institutional and the read becomes a FERPA-governed disclosure of an education record.** The persona
+is new; the obligation is not. `Pattern P` is built around that boundary.
 
 ## Courseware, not agents — but the fastest way to staff a team
 
@@ -158,6 +210,59 @@ plugin Moodle's own directory distributes.
 For Moodle, use the **`webservice_mcp` plugin from Moodle's own plugin directory** instead
 (Moodle 4.5–5.2, latest release 23 Jul 2026) — see [`compose/patterns.md`](../compose/patterns.md).
 
+### 🆕 `p388` — a fourth class: **the licence can be missing from the payload while the manifest claims it, and the repository can be closed while the artefact is readable**
+
+The discovery sweep turned up a case that none of the three classes above describes, and it involves
+the largest organisation to appear on these shelves: **Santillana**, one of the biggest education
+publishers in Spain and Latin America. It is the first time a major regional publisher's own AI
+tutoring code has surfaced here. **It does not survive procurement.**
+
+| package | npm history | declared licence | licence file **in the published tarball** | repository |
+|---|---|---|---|---|
+| `@santillana-ai/create-tutor-app` | **v5.9.0, 63 versions**, 2025-08-28 → 2025-10-21 | 🟡 **`"license": "MIT"`** in `package.json` | 🔴 **NONE** — tarball read first-hand (38,447 B): `README.md` and templates only | 🔴 [santillana-ai/tutor-sdk](https://github.com/santillana-ai/tutor-sdk) — `git ls-remote` **prompts for credentials** |
+| `@santillana-ai/typescript-tutor-sdk` | **v5.9.0, 115 versions**, 2025-08-27 → 2025-10-21 | 🔴 **`license` field absent entirely** | 🔴 **NONE** — tarball read first-hand (896,006 B): `README.md` only | 🔴 no `repository` field at all |
+
+🔴 **Verdict: UNGRANTED — do not ship.** Note *which* package fails. The MIT claim sits on the
+**scaffolder**, a one-command project generator. The package a client's codebase would actually
+depend on — **`typescript-tutor-sdk`, 115 published versions** — declares **no licence at all**,
+ships no licence text, and names no repository. Both are in any case **clients for a proprietary
+keyed API**, so even a clean grant would buy an SDK, not a tutoring engine.
+
+🔵 **Three method points that generalise past this case:**
+1. **`git ls-remote` separates *private* from *absent*.** A credentials prompt is not a 404 — the
+   repository exists and is closed. This base can now write "closed" instead of "dead".
+2. **The tarball is the artefact, and npm serves it even when the repo is closed.** The licence that
+   *ships* is a different question from the licence the repository *states*. Here the tarball settles
+   it; `raw.githubusercontent.com` could not have.
+3. 🔴 **A scoped npm org is not a corporate attestation.** `@santillana-ai` is consistent with
+   Santillana and the sole maintainer is a plausible individual account, but **nothing read this pass
+   ties the scope to the company** — recorded as `Gap 388-E`. The licence verdict does not depend on
+   resolving it.
+
+🔴 **And the same sweep found five more repositories in the published-but-unreadable state** — the
+package ships, the source prompts for credentials. The one that costs the most:
+**[thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit)**,
+`@thanh01.pmt/interactive-quiz-kit` **v1.4.10 across 103 published versions** (2025-06-12 →
+2026-09-23), manifest MIT, source closed — interactive quizzes with AI generation **and SCORM
+support**, which is genuinely scarce in permissive open source. Also
+[Mckaroff/GraphLMS](https://github.com/Mckaroff/GraphLMS) (`rhizome-lms-mcp`, manifest MIT),
+[ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit) — whose manifest reads
+🔴 **`"SEE LICENSE IN LICENSE"`, pointing at a file in a repository nobody can read**, a perfectly
+circular grant — [AI-Matrix-Engine/aidream](https://github.com/AI-Matrix-Engine/aidream) and
+[yokowasis/autograder](https://github.com/yokowasis/autograder). Full table in
+[`agents/trending.md`](trending.md).
+
+🔵 **The procurement rule this yields, and it is `Pattern L`'s new step:** for an npm-only
+dependency, **the manifest is a claim and the tarball is the evidence**. A grant that points into an
+unreadable repository is not a grant — and it is the one case where re-reading the payload cannot
+save it.
+
+🟡 **Two more manifest-only grants found this pass** (`Pattern L` class 3, reusable with the caveat
+recorded): [TecFancy/dsh-deeptutor](https://github.com/TecFancy/dsh-deeptutor) — no licence file at
+10 probed paths, npm `dsh-deeptutor` declares **MIT**; a DeepSeek Harness learning extension — and
+[nanobpm/nano-ide](https://github.com/nanobpm/nano-ide) — no licence file, `@nanobpm/agentic`
+declares **Apache-2.0**.
+
 ## Build-on-this tier
 
 The permissive shortlist: every agent on these shelves a studio can build on and still hand a
@@ -189,6 +294,16 @@ copyleft, no bespoke clause, every grant read first-hand at the repository's rea
 | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `main` | MIT | 🆕 `p387` — BNCC-anchored teacher generation with a curriculum-code gate |
 | [thiagoudweb/techTutor](https://github.com/thiagoudweb/techTutor) | `main` | MIT | 🆕 `p387` — tutoring that withholds the answer; author ≠ verifier |
 | [Aaryan-Kapoor/d2l-cli](https://github.com/Aaryan-Kapoor/d2l-cli) | `main` | MIT | 🆕 `p387` — read-only Brightspace client written **for agents** (PyPI `d2l-cli` 0.3.0) |
+| [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | `main` | MIT | 🆕 `p388` — **187-tool teacher/admin Canvas surface with a FERPA mode**; 87 releases, published 2026-10-22 |
+| [Fireiscoolsolo/canvas-lms-mcp-local](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local) | `main` | MIT | 🆕 `p388` — 209-tool **student-side** Canvas surface, opens no port |
+| [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` | MIT | 🆕 `p388` — **the parent/guardian persona, SIS-side**; 47 releases |
+| [chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp) | `main` | MIT | 🆕 `p388` — parent-observer scope over Canvas, hardened downloads |
+| [QuantStack/jupyter-ai-tutor](https://github.com/QuantStack/jupyter-ai-tutor) | `main` | BSD-3-Clause | 🆕 `p388` — notebook tutor with a version-controlled `TUTOR.md` persona; **replaces `pybryt` as the live dependency** |
+| [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | `main` | MIT | 🆕 `p388` — **North American** curriculum grounding (BC K–12, incl. First Peoples Principles of Learning) |
+| [danieltyukov/tudelft-mcp](https://github.com/danieltyukov/tudelft-mcp) | `main` | MIT | 🆕 `p388` — **EMEA**; four university systems, one MFA sign-in, **every write preview-confirmed** |
+| [Ryfter/canvas-toolchain](https://github.com/Ryfter/canvas-toolchain) | `main` | MIT | 🆕 `p388` — teacher-facing semester refresh with **topic-currency scoring**; works with no API token |
+| [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | `main` | MIT | 🆕 `p388` — adaptive tutoring that **records answer confidence** and re-grades on correction |
+| [SuperPiTT/moodle-rag](https://github.com/SuperPiTT/moodle-rag) | `main` | MIT | 🆕 `p388` — RAG over the **Moodle codebase**; cuts `Pattern A`'s build cost |
 
 🔴 Deliberately **not** here, and why: `plastic-labs/tutor-gpt` (GPL-3.0) and
 `HugeCatLab/ChatTutor`, `learnhouse/learnhouse` (AGPL-3.0) are run as **separate services**, never

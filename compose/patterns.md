@@ -93,6 +93,32 @@ its MIT grant, the code) into the deliverable and maintain it there, with the ma
 halves of this stack (`nbgrader`, `otter-grader`) carrying the running infrastructure. Dates:
 [`registry-recency`](../evidence/registry-recency.2026-10-22-p387.tsv).
 
+🟢 🆕 `p388` **And the notebook-tutor half now has a maintained component, which changes what you
+vendor.** [QuantStack/jupyter-ai-tutor](https://github.com/QuantStack/jupyter-ai-tutor) (**BSD-3**,
+`main` · `139bb11`, **v0.3.2, 7 releases, → 2026-09-25**, from a known Jupyter-ecosystem maintainer)
+replaces the ad-hoc "wire `jupyter-ai` into the grading loop" step with a component built for exactly
+this job:
+
+- A per-cell **Explain Code** button sends the cell source, the kernel language, **the error
+  traceback**, and the preceding cells up to the last markdown cell **as the exercise statement** —
+  so the model sees the task, not just the broken line.
+- 🟢 **The tutor persona lives in a `TUTOR.md`, discovered by walking up from the notebook's
+  directory to the server root.** Each course, module or folder carries its own pedagogy **in version
+  control**. This is the single most useful thing on this shelf for a client engagement: *"AI must
+  not give the answer"* stops being a prompt someone pasted and becomes a reviewable file in the
+  course repository, diffable and auditable per cohort.
+- 🟢 **`reference_solution` and `evaluation_criteria` ride in cell metadata, ROT13-encoded** so they
+  are not casually readable by a student holding the notebook — the same instinct as `pybryt`'s
+  annotations, shipped in a maintained package.
+
+**Revised wiring:** `jupyterhub` → `nbgrader` → `otter-grader` for the lifecycle and
+container-isolated grading (all BSD-3, all maintained) → **`jupyter-ai-tutor`** for the in-notebook
+explanation layer, configured by a per-course `TUTOR.md` → **vendored `pybryt` annotations** for
+approach assessment, maintained inside the deliverable as `p387` requires. 🔵 Note the division of
+labour this produces, and it is the one the guardrail below wants anyway: `jupyter-ai-tutor` **explains
+and never grades**, `nbgrader`/`otter-grader` grade and never explain. 🟡 It requires
+`jupyter-ai-jupyternaut` (<0.1) for the agent, so pin that bound.
+
 **Guardrail:** where DC-style rules apply, AI must not be the grader of record. Configure the LLM as
 a **feedback generator with a human grade-of-record** and keep the audit trail; that configuration is
 the deliverable, not a disclaimer.
@@ -440,6 +466,96 @@ tutor, default ref `master`) is ungranted for the same reason.
 
 ---
 
+## Pattern P — 🆕 `p388` The parent and guardian surface (and the FERPA line that splits it in two)
+
+**For:** a K-12 district, school group or education provider that is being asked — by statute, by
+families, or by its own board — to make a student's progress legible to parents, and an engagement
+that wants a real deliverable rather than another policy PDF.
+
+🔴 **Read this first: this is two different products, and conflating them is how the engagement
+fails.** The code is the same; the obligations are not.
+
+| | **P-1 · parent-side** | **P-2 · district-side** |
+|---|---|---|
+| Who holds the credential | the **parent**, for their own child | the **institution** |
+| What a read is | a parent exercising their own access | a **FERPA-governed disclosure of an education record** |
+| Tenancy | none needed — single user, single family | **full multi-tenant**, per-district, per-role |
+| Who buys | a provider bundling it, or nobody (it is a tool, not a sale) | the district, through procurement |
+| Build cost | days | the real engagement |
+
+**Components (all verified first-hand 2026-10-22 — [`verified-repos`](../evidence/verified-repos.2026-10-22-p388.tsv)):**
+
+- **Infinite Campus (SIS):** [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp)
+  — `main` · `971d58f`, 🟢 **MIT** (1,067 B), **47 npm releases → 2026-10-19**. 20 tools over **Campus
+  Parent**: schedule, assignments (`missingOnly`), grades plus a 14-day recent window, **attendance
+  events with codes and comments**, behavior, food service, documents, standardized **assessment
+  scores**, fees, and messaging from three distinct sources. Linked districts auto-discovered via
+  **CUPS SSO**; `FeatureDisabled`-aware, so a district with a module switched off degrades instead of
+  erroring — which is what makes it deployable across a group of districts rather than one.
+- **Canvas (LMS):** [chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp)
+  — `main` · `428b78b`, 🟢 **MIT** (1,067 B), **43 releases → 2026-10-16**. 18 `canvas_*` tools held
+  to the **read-only observer scope** (`canvas_list_observees` is the hinge), plus student
+  self-access. Four auth modes in priority order. 🟢 Copy its download hardening rather than
+  re-inventing it: host-pinned to the Canvas origin, confined to a download directory, never writes
+  through a symlink, new files `0600`.
+
+### Wiring P-1 (parent-side) — days, not weeks
+
+1. Parent installs the MCP server locally against **their own** portal credential (token, OAuth, or
+   session). Nothing is hosted; no institutional agreement is needed because no institutional
+   credential is used.
+2. Keep it **read-only**. Both servers are already scoped that way; do not add write tools. A parent
+   agent that can submit work on a child's behalf is an academic-integrity incident waiting to be
+   filed.
+3. Add a **digest** rather than a chat surface: *"what changed this week, what is missing, what is
+   due."* 🔵 The persona's actual job is **noticing**, not conversing — the portal already answers
+   questions, badly, and nobody logs in.
+
+### Wiring P-2 (district-side) — the real engagement
+
+1. 🔴 **Do not host the parent-side tool for the district.** The moment the credential is
+   institutional, every read is a FERPA disclosure. Build the institutional path deliberately:
+2. **Put the district's own identity in front of it.** Parent identity comes from the district IdP,
+   and **the parent↔student relationship is authoritative from the SIS** — never from a claim the
+   agent accepts. `ic_list_students` / `canvas_list_observees` define the blast radius of the whole
+   system, so that relationship check is the security boundary, not a feature.
+3. **Borrow the tenancy layer that already exists.** This is the same problem `p386` identified for
+   student-side LMS servers, and `Pattern A`'s answer applies unchanged: per-tenant configuration,
+   per-role rate limits and usage monitoring — on Moodle,
+   [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager) is the
+   worked example to copy the *shape* of.
+4. **Log every read as a disclosure, not as a request.** Who asked, for which student, which fields,
+   under which relationship, at what time. 🔵 This log is the deliverable a district's counsel signs
+   off on, and it is cheap to build on day one and near-impossible to retrofit.
+5. **Keep the model away from the record where you can.** Fetch and render deterministically;
+   use the model for **summary and prioritisation over data already authorised**, not as the thing
+   that decides what to fetch. Smaller surface, smaller disclosure, cheaper review.
+6. **Ship the translation layer — it is the actual product.** Gradebook rows are not an answer to
+   *"is my kid okay?"* Convert to plain language, in the family's language, at a reading level the
+   district specifies, with **no inference about the child beyond what the record states**. A tool
+   that volunteers *"your child seems disengaged"* has invented an education record.
+
+**Guardrails:**
+- 🔴 **No predictions, no risk scores, no labels.** A parent-facing risk score about a student is
+  the high-stakes automated decision Oklahoma and Maryland's frameworks are written to restrain, and
+  under the EU AI Act Annex III it is squarely high-risk. Report the record; do not score the child.
+- 🔴 **Attendance, behavior, food-service and fee data are the sensitive tail.** `infinitecampus-mcp`
+  exposes all four. Free-lunch status and behavior records are the fields a district will refuse last
+  and worry about most — scope them out explicitly unless the district asks for them in writing.
+- 🟡 **Both servers authenticate as a person.** Treat credential custody as the top risk in the
+  design review; a stored parent credential in a studio-hosted service is the worst of both worlds.
+- 🔵 **Multiple children, multiple districts.** `ic_list_districts` + CUPS SSO exist because families
+  span districts. Test the two-children-two-districts case before a demo; it is the common case and
+  the one that breaks naive implementations.
+
+**Why this pattern is worth having at all:** it is the only education surface this base has found
+with **granted, maintained components and no incumbent vendor** — the parent portal is a feature of
+the SIS, not a market. And **family transparency is already in the statutes** (Oklahoma SB 1734
+names it; Maryland's Chapter 634 is built on guidance districts hand down), so the buyer has an
+obligation and no product. 🔵 See `Trend 10` in [`intel/trends.md`](../intel/trends.md).
+
+---
+
 ## Pattern L — Clear a repository for reuse by **subtree**, not by its licence badge
 
 **The one durable result of the `p3xx` apparatus**, kept as a procurement gate rather than a
@@ -579,6 +695,32 @@ narrative. Run it before any repo enters a client deliverable.
     Blackboard addresses declare `blackboard-mcp` and **one** publication exists, its `repository`
     naming `felipedias-ie`; `mdweaver/canvas-mcp` carries upstream's scoped name
     `@r-huijts/canvas-mcp`. **Count the artefact, not the slug.**
+
+11. 🆕 `p388` **If the repository is unreadable, read the *artefact*. The manifest is a claim; the
+    tarball is the evidence.** `git ls-remote` distinguishes two states a 404 conflates: a
+    **credentials prompt means the repository exists and is closed**, not absent. For such a package
+    — and **6 of 32 addresses probed in `p388` are in this state while publishing to npm
+    normally** — the published tarball is still readable and is **the licence that actually ships**:
+    ```
+    curl -s https://registry.npmjs.org/<pkg> | jq -r '.versions[.["dist-tags"].latest].dist.tarball'
+    curl -s <tarball> | tar -tz | grep -i -E 'license|copying'      # is a grant shipped at all?
+    ```
+    🔴 **This is how `p388` established that a major publisher's tutoring SDK is ungranted.**
+    `@santillana-ai/typescript-tutor-sdk` — **115 published versions** — has **no `license` field in
+    `package.json`**, **no licence file anywhere in its 896,006-byte tarball**, and **no `repository`
+    field at all**; its sibling scaffolder claims `"license": "MIT"` in the manifest while shipping
+    **no licence file either**. Neither the repo (private) nor the badge (absent) could have settled
+    it; the artefact did.
+    🔵 **Three sub-rules:**
+    **(a)** A manifest reading **`"SEE LICENSE IN LICENSE"` that points into an unreadable
+    repository is not a grant** — it is a circular reference
+    ([ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit) is the live example).
+    **(b)** Steps 1–10 clear a repository **by subtree**; when there is no readable subtree, *this*
+    step is the only one available, and it can only ever yield 🟡 manifest-only or 🔴 ungranted —
+    **never a clean clearance**.
+    **(c)** 🔴 Check **which** package in a scope carries the grant. Here the MIT claim sits on the
+    *scaffolder* and the **dependency a client's code would actually import carries nothing**. Read
+    the licence of the package you will `import`, not of the one you will `npx` once.
 
 **Channel note, so this is reproducible:** `curl -sI https://github.com/...` returns **403** through
 this sandbox's agent proxy and `api.github.com` returns **403**. `git ls-remote --symref` and

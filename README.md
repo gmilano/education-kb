@@ -4,6 +4,180 @@ region: Global
 updated: 2026-10-22
 ---
 
+## Pass 388 — 2026-10-22 — **THE SUPPLY WAS NEVER EXHAUSTED: `registry.npmjs.org/-/v1/search` IS AN OPEN *DISCOVERY* CHANNEL, AND IT HANDED OVER 22 GRANTED ADDRESSES PLUS A PERSONA THESE SHELVES NEVER HAD — THE PARENT. 🟢 THE CANVAS SHELF IS REORDERED BY A 187-TOOL MIT SERVER PUBLISHED TODAY, WITH A FERPA MODE. 🔴 AND A MAJOR PUBLISHER'S TUTOR SDK IS UNGRANTED ACROSS 115 VERSIONS.**
+
+🔵 **Dating note.** Every leg, probe, licence read and registry read below was run on **2026-10-22**.
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-22-p388.tsv) — **32 addresses probed,
+26 live, 22 granted, 2 manifest-only, 6 published-but-unreadable**, every licence read from the raw
+payload at the repository's **real default ref**, resolved with `git ls-remote --symref`.
+
+### 🟢 The finding that overturns this base's own standing verdict
+
+`p382` recorded **"zero new addresses because the supply is exhausted."** That was a property of the
+four prescribed search legs, not of the industry. `p387` had already found the package registries
+open and used them to **date** what this base already knew. This pass asked the next question —
+**does a registry also *find* things?**
+
+```
+GET https://registry.npmjs.org/-/v1/search?text=<query>&size=25     ->  200 JSON
+```
+
+29 education queries → **535 packages**, 453 carrying a `repository` field, **383 GitHub addresses
+that appear nowhere in this base** (deduped against all **3,303** known addresses across every shelf
+and evidence file). Filtered to education-specific AI work: **26 candidates → 22 granted.** The
+largest single intake of new granted addresses in this file's recorded history, from a channel that
+was open the whole time.
+
+🔵 **Third instance of one error.** `p386`: *a count of addresses is not a count of grants.* `p387`:
+*a null leg is not a null supply.* `p388`: **an exhausted channel is not an exhausted supply.** All
+three are a property of the instrument reported as a property of the industry.
+
+### 🟢 The parent is a user, and no shelf here had them
+
+The word "observer" appeared in **exactly one file** before this pass. Three granted servers exist
+for that persona, two by one maintainer working it across two platforms:
+
+| server | ref · HEAD | licence read | npm | what it is |
+|---|---|---|---|---|
+| [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp) | `main` · `971d58f` | `main/LICENSE` — 🟢 **MIT**, 1,067 B | **v3.2.2, 47 releases** → 2026-10-19 | 🟢 **The first SIS parent portal on these shelves.** 20 tools over **Campus Parent**: schedule, assignments, grades, **attendance events with codes**, behavior, food service, documents, standardized assessment scores, fees, messaging from three sources. Districts auto-discovered via **CUPS SSO**; `FeatureDisabled`-aware. |
+| [chrischall/canvas-parent-mcp](https://github.com/chrischall/canvas-parent-mcp) | `main` · `428b78b` | `main/LICENSE` — 🟢 **MIT**, 1,067 B | **v2.1.10, 43 releases** → 2026-10-16 | The read-only **observer** scope over Canvas, 18 tools; hardened downloads (host-pinned, directory-confined, no symlink writes, `0600`). |
+| [mtgibbs/canvas-lms-mcp](https://github.com/mtgibbs/canvas-lms-mcp) | `main` · `9b7efdc` | `main/LICENSE` — 🟢 **MIT**, 1,064 B | v0.2.18 → 2026-02-13 | Canvas read access framed first at parents. 🟡 Eight months quiet. |
+
+🔵 **Why it is a market fact:** every North American instrument this base tracks puts **family
+transparency** in the statute, and the parent portal is a **feature of the SIS, not a market** — the
+only education surface with granted components and **no incumbent to displace**. 🔴 **And the line
+that defines the engagement is not a licence:** these authenticate as *a person*. A family running one
+for their own child exercises its own access; **a studio hosting one for a district turns the same
+call into a FERPA-governed disclosure of an education record.** Two products, not one — 🆕 `Pattern P`.
+
+### 🟢 The Canvas shelf, reordered — and compliance ships as a feature
+
+`p387` found the richest Canvas server (54 tools) stale since **2025-06-27**, with nothing better to
+recommend. Now: **[bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp)** (`main` ·
+`34e6156`, 🟢 **MIT**) — **187 tools** on the teacher/admin surface including gradebook *history*,
+quiz **accommodations**, link audit, accessibility audit and grade projection, in three deployment
+modes — **`canvas-lms-mcp` v2.9.0 across 87 releases, published 2026-10-22 (today)**, the most
+actively published LMS integration here. 🟢 **It ships a "FERPA mode"** — the first time an education
+compliance regime appears as a *product feature* on these shelves rather than as a caveat this base
+has to supply. Alongside it, **[Fireiscoolsolo/canvas-lms-mcp-local](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local)**
+(`c7e5725`) and its remote twin (`8e424f1`), 🟢 **MIT**, **209 tools** on the *student* surface with
+real grade intelligence (`what_if_grade`, `compute_needed_score`, `grade_impact_ranking`).
+🔵 **187 vs 209 vs 20 is scope, not quality** — three different people reading the same data.
+
+### 🟢 Three more granted agents filling named holes
+
+- **[QuantStack/jupyter-ai-tutor](https://github.com/QuantStack/jupyter-ai-tutor)** — 🟢 **BSD-3**,
+  1,532 B, v0.3.2 → 2026-09-25. **The live answer to `p387`'s `pybryt` problem** (no release since
+  2022-04-28). Per-cell *Explain Code* sends source, kernel language, **the traceback** and preceding
+  cells as the exercise statement; 🟢 the tutor persona lives in a **`TUTOR.md` found by walking up
+  from the notebook**, so pedagogy is per-course and **in version control**; reference solutions ride
+  in cell metadata **ROT13-encoded**. `Pattern B` rewired around it.
+- **[pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server)** — 🟢 **MIT**.
+  **The North American curriculum-grounding instance** — the third region to get one. The whole **BC
+  Ministry K–12 curriculum** over 12 tools in its real three-column KDU structure, **including the
+  First Peoples Principles of Learning**. 🟡 Two releases, both 2026-03-27; it is a crawl, so
+  **currency is the risk, not the licence**.
+- **[danieltyukov/tudelft-mcp](https://github.com/danieltyukov/tudelft-mcp)** — 🟢 **MIT**. **EMEA**,
+  and the best-governed write path read so far: Brightspace + **OSIRIS** + MyTimetable + Study Guide
+  behind one MFA sign-in, and 🟢 **every write shows a preview and requires confirmation** — the
+  human-oversight control EU high-risk obligations ask for, shipped as the default.
+
+### 🔴 A major publisher's tutor SDK, ungranted — and the method that proved it
+
+**Santillana**, one of the largest education publishers in Spain and Latin America, is the first such
+publisher's own AI tutoring code to reach these shelves. **It does not survive procurement:**
+
+| package | npm | declared licence | licence file **in the published tarball** | repository |
+|---|---|---|---|---|
+| `@santillana-ai/create-tutor-app` | **v5.9.0, 63 versions** | 🟡 `"license": "MIT"` | 🔴 **NONE** (38,447 B read: README + templates only) | 🔴 `git ls-remote` **prompts for credentials** |
+| `@santillana-ai/typescript-tutor-sdk` | **v5.9.0, 115 versions** | 🔴 **field absent** | 🔴 **NONE** (896,006 B read: README only) | 🔴 no `repository` field at all |
+
+🔴 **Note which package fails.** The MIT claim is on the *scaffolder*; **the package a client's code
+would actually import carries no licence at all.** Both are clients for a **proprietary keyed API**,
+so a clean grant would have bought an SDK, not a tutoring engine.
+
+🔵 **Two channel facts this established, now `Pattern L` step 11.** **(1)** `git ls-remote`
+distinguishes **private from absent** — a credentials prompt means the repository exists and is
+**closed**, not dead. **(2)** **The tarball is the artefact and npm serves it even when the repo is
+closed**, so the licence that *ships* is readable when the licence the repo *states* is not. Neither
+the badge nor the repo could settle Santillana; the artefact did.
+
+### 🔴 "Published but unreadable" — a supply category measured for the first time
+
+**6 of 32 addresses publish to npm from a repository that prompts for credentials.** The dependency
+installs; its provenance cannot be audited. Costliest:
+[thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) — **103
+published versions**, manifest MIT, AI quiz generation **with SCORM support**, source closed. Most
+instructive: [ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit), whose manifest reads
+🔴 **`"SEE LICENSE IN LICENSE"` — pointing at a file in a repository nobody can read.** 🔵 `Pattern L`
+clears a repo **by subtree**; here there is no subtree, so this class can only ever yield
+manifest-only or ungranted — **never a clean clearance**.
+
+### 🔵 The prescribed legs, stated plainly
+
+All four global legs ran. **None produced a new granted address** — generic agent roundups; GitHub
+trending still **403** with third-party blogs returning `os-taxonomy` (shelved since `p384`); the
+ERP/CRM leg returning OFBiz, Corteza, Krayin, ERPNext, OpenEduCat (all read at `p386`); trends
+material consistent with `Trend 1` and `Trend 5` but with headline figures tracing to vendor blogs,
+so **not promoted**. **Every new granted address this pass came from the registry channel.**
+
+Regional legs, run once per region, with gaps recorded rather than left silent:
+- **North America** — 🟢 new: **Maryland SB 720 is Chapter 634**, and it requires MSDE to publish an
+  **AI-tool evaluation rubric a district applies *before piloting or purchasing*** any AI product, a
+  **central-office non-instructional AI coordinator** per district, and **AI literacy in state
+  standards by 1 Jun 2027**. 🔵 One tracker's claim that it bans high-stakes automated decisions
+  **could not be corroborated and is not recorded as fact**.
+- **EMEA** — 🔴 **no new supply, no new regulatory fact**; only the Digital Omnibus dates `p380`
+  already resolved. **Fourth consecutive pass with no national-ministry data for UK / Germany /
+  France / Gulf.** The EMEA supply win (`tudelft-mcp`) came from the registry, not this leg.
+- **APAC** — 🟡 regulation consistent with what this base holds; 🔴 **Vietnam's instrument name and
+  date remain unsettled across sources and were not promoted.** 🟢 Real yield was supply: the
+  **DeepSeek Harness** tutoring ecosystem ([BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor),
+  MIT, published today — confidence-recording checks and a *"this step is wrong?"* control that
+  re-grades past attempts).
+- **LATAM** — 🔴 **no new addresses from the English leg**, exactly as `p387` predicted; 🟢 but usable
+  depth data (**Digital Education Council 2026**: 92% of students / 79% of faculty engaging, **88% of
+  faculty at minimal-to-moderate**, lowest in **assessment** uses, 61% of students fearing peer
+  misuse; **UNESCO IESALC Sep 2026**: governance lags adoption). The region is short of **depth in
+  the surface carrying the most governance risk**, not of access.
+
+### 🔵 Gate state, reported rather than hidden
+
+`make hooks` → **41/45 green**. Two gates were **red before this pass touched the tree** and are the
+instrument author's, not a shelf edit: `gate-fold-identity`, and `gate-census-union`, whose control 24
+wants both rejection classes to fire on the live shelves while only `NAME-REF-OR-PATH` does — a
+statement about **fixture coverage**, not about an address. 🟢 The two census-currency gates were
+**green pristine and went red on this pass's writes**, which is exactly what they exist to do; both
+are re-derived and restated below.
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 641** harvested shapes → **34** are not
+addresses → **2 607 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 607** channel-U
+addresses and **3 031** channel-B survivors give **3 419 addresses over both channels**.
+
+🟢 **The delta is +28 on channel U** (`p387` published 2 579) and **+1 on channel B** — the 22 granted
+addresses this pass shelved, their siblings and the ungranted/unreadable rows recorded beside them,
+less the overlap already carried in this base's harvest history. 🔵 Stated because `p376`'s rule is
+that the union sentence is **standing**: it is re-derived every pass, never quoted from the last one.
+
+### Gaps carried out of `p388`
+
+- 🔴 **`Gap 388-A`** — `p382`'s "the supply is exhausted" is **withdrawn**.
+- 🔴 **`Gap 388-B`** — the parent persona is shelved, but **no evidence either way** was found on
+  whether any *district* deploys a parent-facing agent, as opposed to parents self-serving.
+- 🔴 **`Gap 388-C`** — **PyPI was not swept for discovery.** Only npm was. `pypi.org` is open and
+  reachable; the **Python-side education supply is unmeasured, not absent**, and the
+  `pybryt` / `jupyter-ai` / `paper-qa` tier lives there. **Highest-value lever for `p389`.**
+- 🔴 **`Gap 388-D`** — no star or popularity signal for a **seventh** pass; recency stands in.
+- 🟡 **`Gap 388-E`** — the tie between the `@santillana-ai` npm scope and Santillana the company is
+  **unverified**; the ungranted verdict does not depend on it.
+
+---
+
 ## Pass 387 — 2026-10-22 — **THE LATAM "STRUCTURAL" SUPPLY NULL WAS A NULL *LEG*: THREE MIT LATAM-NATIVE AGENTS SHELVED, TWO OF THEM FOUND BY SEARCHING IN PORTUGUESE. 🟢 AND THE SHELVES ARE DATED FOR THE FIRST TIME — 26 PACKAGE-REGISTRY READS, THREE RECOMMENDATIONS OVERTURNED, ONE OF THEM A PATTERN DEPENDENCY THAT HAS NOT SHIPPED SINCE 2022.**
 
 🔵 **Dating note.** Every leg, probe and payload read below was run on **2026-10-22**.

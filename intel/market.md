@@ -223,6 +223,42 @@ returns market research.*
    implementation — policy-to-configuration across member institutions, one evidence baseline,
    shared gateway — is a materially larger engagement than a single-campus pilot for the same work.
 
+6. 🆕 `p388` **Maryland's act is a procurement gate, not just a policy deadline — and that changes
+   who the buyer is.** The instrument is **Chapter 634** (SB 720 / HB 1057). Beyond the 120-day
+   clock `p385` recorded, three provisions make it a sales fact: **(a)** MSDE must publish an
+   **AI-tool evaluation rubric that a district applies *before it pilots or purchases* any AI
+   product** — so in Maryland the rubric, not the demo, is the first gate a studio's product meets;
+   **(b)** every district must designate a **central-office, non-instructional AI coordinator** —
+   a named, findable buyer who did not exist in the org chart last year; **(c)** **AI literacy enters
+   state standards by 1 Jun 2027**, which is a curriculum engagement with a date on it. 🟢 The
+   priceable work is *passing someone else's rubric*: an evidence pack mapped to MSDE's published
+   criteria, reusable across all 24 districts. 🔵 Sources are secondary trackers and vendor blogs
+   that disagree on detail; the primary instrument is Chapter 634, and one tracker's claim that the
+   act **bans high-stakes automated decisions** could **not** be corroborated — it is not recorded
+   here as fact.
+7. 🆕 `p388` **The parent/guardian is an unserved persona with a granted, maintained surface — and no
+   incumbent.** Three MIT servers now exist (see [`agents/top.md`](../agents/top.md) **Tier 5**),
+   including [chrischall/infinitecampus-mcp](https://github.com/chrischall/infinitecampus-mcp)
+   (**47 releases**) over **Infinite Campus**, a major North American K-12 SIS this base could
+   previously only name as closed. 🟢 **Why this is commercially interesting rather than merely new:**
+   the parent portal is a *feature of the SIS*, not a market, so there is no incumbent vendor
+   defending it; and **family transparency is written into the statutes** — Oklahoma SB 1734 names it
+   explicitly, Maryland's act is built on guidance districts must hand down. A parent-facing surface
+   is the one place "transparency" becomes a product instead of a PDF. 🔴 **The whole engagement turns
+   on one line:** these tools authenticate as *a person*. A family running one for their own child is
+   exercising their own access; **a studio hosting one for a district turns the same call into a
+   FERPA-governed disclosure of an education record.** That boundary — not the licence — is the
+   deliverable. See `Pattern P`.
+8. 🆕 `p388` **Canada: the curriculum-data layer is granted, and jurisdictional content is the moat.**
+   [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) (**MIT**) serves
+   the entire **BC Ministry of Education K–12 curriculum** over 12 MCP tools in its real three-column
+   KDU structure — **including the First Peoples Principles of Learning**, which no generic tutor
+   carries and no US-built product will. 🟢 This makes North America the **third region** with a
+   curriculum-grounding asset (after Brazil's BNCC agent and `os-taxonomy`), so `Pattern H` is now
+   demonstrable in a Canadian engagement rather than described. 🟡 Two releases, both **2026-03-27**,
+   and the data is a crawl — **budget for currency, not for licence risk**: the grant is clean, the
+   freshness is the liability, and a re-crawl is a maintenance line item a client should see quoted.
+
 ### EMEA
 
 **Regulation — the dates are the product.**
@@ -340,6 +376,27 @@ both answering the objection that open source cannot be deployed institutionally
   the MCP shelf does not have. 🟡 Its source address could not be resolved from this sandbox
   (`bscli.science.ru.nl` is DNS-unreachable); the grant and the release date were read from PyPI.
 
+🆕 `p388` **The institution-shaped integration exists now, and it is the best governance reference on
+these shelves.** [danieltyukov/tudelft-mcp](https://github.com/danieltyukov/tudelft-mcp) (**MIT**,
+`main` · `3c680e0`) spans **four** systems a real European university runs — Brightspace, **OSIRIS**
+(official academic records), MyTimetable and the public Study Guide — behind **one browser sign-in
+including MFA**, with a self-renewing session. 🟢 **Every write action (submitting an assignment,
+joining a group, replying in a discussion, registering for a course or exam) shows a preview and
+requires explicit confirmation.** That is precisely the human-oversight control EU high-risk
+obligations ask for, shipped as a default rather than written into a compliance annex — which makes
+it the cheapest available *demonstration* of Annex III readiness for an EMEA pitch. 🔵 Note what it
+implies about scope: a European engagement is rarely "integrate the LMS". It is **the LMS plus the
+system of record plus the timetable**, each with its own auth, and this repository is the first
+worked example of that on these shelves.
+
+🔴 🆕 `p388` **Gap, stated rather than left as silence: still no national-ministry adoption data for
+the UK, Germany, France or the Gulf states.** The prescribed EMEA leg returned EU AI Act framing and
+the Digital Omnibus dates this base already resolved at `p380` — **no new regulatory fact and no new
+supply.** This is the **fourth consecutive pass** with that gap, and the prescribed English-language
+phrasing demonstrably does not reach it. 🟢 The fix is known and tested: **national-language legs**
+are what broke the four-pass LATAM null at `p387`. `p389` should run German, French and Arabic legs
+before concluding anything about EMEA supply or adoption depth.
+
 ### APAC
 
 **Regulation — no single model, and education is explicitly named in one regime.**
@@ -430,6 +487,30 @@ both answering the objection that open source cannot be deployed institutionally
    EMEA — classify the system, design human oversight into automated assessment, document it — and
    it is **portable**: an EU AI Act Annex III conformity asset adapts to Vietnam's risk model far
    more cheaply than it rebuilds. 🟢 Same asset, three markets: EU, Mexico, Vietnam.
+
+6. 🆕 `p388` **The most advanced agent-native tutoring products in the world right now are
+   Chinese-first, MIT, and invisible to an English-language search.** Three of them are on these
+   shelves: [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) (**MIT**,
+   published **2026-10-22**), [TecFancy/dsh-deeptutor](https://github.com/TecFancy/dsh-deeptutor)
+   (manifest MIT) and `p385`'s [sf-shenfeng/learn-shell](https://github.com/sf-shenfeng/learn-shell).
+   🟢 **Two are built on DeepSeek Harness as a *platform*** — an agent-extension ecosystem for
+   education forming outside the Western stack entirely. Aha Tutor's feature set is the most complete
+   statement of adaptive-tutoring design read anywhere on these shelves: it establishes the learner's
+   baseline, goal and time budget *before* writing the syllabus; **records answer confidence** so a
+   lucky guess and a confident error are different events; and exposes a **"this step is wrong?"**
+   control that re-checks, corrects, and **re-grades past attempts and the mastery estimate**.
+   🔵 The commercial reading: the *pedagogy* is ahead of the Western open-source supply while the
+   *packaging* is behind it — all three are single-maintainer, Chinese-first projects. **That is
+   exactly the arbitrage a studio is for:** the design work is done and permissively licensed; the
+   tenancy, localisation, support and institutional packaging are not. 🔴 A studio reading only
+   English roundups sees none of this and will quote a build that already exists.
+7. 🔴 🆕 `p388` **One regulatory detail deliberately *not* promoted:** sources disagree on Vietnam's
+   instrument — one describes a law effective **1 Mar 2026** naming education among its high-risk
+   sectors, another a *Digital Technology Industry Law* beginning in 2026. This base already carries
+   a dated Vietnam roadmap (opportunity 5 above, compliance **1 Mar 2027**). 🔵 **The name and the
+   date are not settled**, and the two readings imply different deadlines for the same client, so
+   nothing here is revised on the strength of a search summary. Resolve against the primary
+   instrument before quoting any Vietnamese date.
 
 ### LATAM
 
@@ -606,6 +687,36 @@ build-vs-buy opening in the entire rotation.**
    ref `2.12`**) is the student-records system a Brazilian municipal engagement is likely to already
    run. Quote integration **over its API**, never a fork: it keeps the deliverable clean and it is
    also the cheaper answer. See [`compose/patterns.md`](../compose/patterns.md) **Pattern O**.
+
+9. 🆕 `p388` **A major regional publisher has shipped AI tutoring code — and a studio cannot build on
+   it.** The registry sweep surfaced **`@santillana-ai/*`**: **Santillana**, one of the largest
+   education publishers in Spain and Latin America, and the first major regional publisher's own
+   tutoring code to appear on these shelves. 🔴 **It is ungranted.** The MIT claim sits on the
+   *scaffolder* (`create-tutor-app`, 63 versions) whose published tarball contains **no licence file
+   at all**; the package a client's codebase would actually depend on —
+   **`typescript-tutor-sdk`, 115 published versions** — **declares no licence whatsoever**, ships no
+   licence text, and names no repository. The GitHub address prompts for credentials: **closed, not
+   missing**. Both are in any case clients for a **proprietary keyed API**, so a clean grant would
+   have bought an SDK, not a tutoring engine. 🔵 **What it tells a studio about the region:** the
+   commercial LATAM/Iberia education stack is **arriving as closed SaaS with an npm veneer**, while
+   the *granted* LATAM supply remains the university and individual work `p387` shelved (TutorIA,
+   the BNCC agent, techTutor). The competitive pitch writes itself — *your national-curriculum agent
+   is already MIT and auditable; the publisher's is neither* — but it must be made before publisher
+   SDKs become the default integration path. 🟡 The tie between the `@santillana-ai` npm scope and
+   Santillana the company is **unverified** (`Gap 388-E`); the licence verdict does not depend on it.
+10. 🆕 `p388` **The adoption numbers hold, and the shape of them is the opportunity.** The prescribed
+   LATAM leg returned the **Digital Education Council LATAM survey 2026** — **92% of students and
+   79% of faculty** engaging with AI, from **7,319 faculty across 29 institutions** — alongside
+   **UNESCO IESALC (Sep 2026)**, which finds adoption widespread **while governance lags**. 🟢 The
+   actionable detail is not the headline: **88% of faculty sit at "minimal" to "moderate"
+   engagement**, and the *lowest* adoption is in **assessment** uses — feedback generation and
+   academic-integrity checking — while **61% of students fear misuse by peers**. So the region is
+   not short of enthusiasm or access; it is short of **depth in exactly the surface that carries the
+   most governance risk**. An engagement that lands assessment-side AI *with* the governance wrapper
+   sells into a near-universal adoption base against almost no incumbent depth. 🔴 Note the method
+   fact too: the English-language leg returns survey PDFs, **not supply** — `p387`'s Spanish- and
+   Portuguese-language legs are what found the actual agents, and that remains the only phrasing
+   that works here.
 
 ## Sources
 
