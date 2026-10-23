@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+**🆕 Pass `p397` · reads and commit both 2026-10-23 — the THIRD pass dated today, after `p395` and
+`p396`.** 🟢 **`p396` ranked running its fork arm over the existing shelf FIRST. It is done: 551
+candidate pairs derived with no network, 21 adjudicated — and the arm's own verdict label turned out
+to be wrong.** 🔴 **And a superlative this base has published in five places across three passes is
+refuted by a row this base already held.** Evidence:
+[`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv) — 21 pairs ·
+[`shelf-fork-candidates`](../evidence/shelf-fork-candidates.2026-10-23-p397.tsv) — 121 groups ·
+[`record-layer-redating`](../evidence/record-layer-redating.2026-10-23-p397.tsv) — 22 addresses ·
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p397.tsv) · instrument and controls at
+[`p397-shelf-fork-audit`](../compose/code/p397-shelf-fork-audit/README.md).
+
+### 🔴 The correction first: `okpy/ok` is the most-starred autograder on these shelves, and it is not close
+
+`p394` published — and `p395`, `p396` carried — *"`gradethis` at 164 ★ edges `otter-grader` at
+161 ★, so the most-starred autograder on these shelves was never the Python one, and it is MIT."*
+
+🔴 **That is false, and the refuting row was already on these shelves when it was written.**
+[`okpy/ok`](https://github.com/okpy/ok) — **Apache-2.0**, **370 ★**, **UC Berkeley** — has been
+carried here since `pass 85`, and [`agents/trending.md`](trending.md) names it **in the same
+comparison group as `otter-grader`**, one line apart. Re-read first-hand this pass: **370 ★**,
+Apache-2.0, 88 forks, 🟢 **no archived banner**, HEAD `f5610a7` **2025-05-07 — 532 d**.
+
+| autograder | licence | ★ | HEAD | days |
+|---|---|---|---|---|
+| [`okpy/ok`](https://github.com/okpy/ok) | 🟢 Apache-2.0 | **370** | `f5610a7` | 🔴 **532** |
+| [`rstudio/gradethis`](https://github.com/rstudio/gradethis) | 🟢 MIT | 164 | — | 🟡 126 |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3-Clause | 161 | — | 🟢 21 |
+
+🔵 **The claim holds only under a qualifier nobody wrote down: *"excluding the stale ones."*** That
+qualifier is defensible — 532 days is not a base a studio should start on — but it is a **judgement
+that belongs in the sentence**, and leaving it out turned a reasonable preference into a false fact.
+🔴 **The failure mode is not the arithmetic, it is the denominator**: a superlative was derived over
+the rows the author was looking at rather than over the shelf, and three passes re-published it
+without re-deriving it. 🟢 **Corrected at all EIGHT live-shelf sites** that carried it — four on this shelf, two on
+[`repos/foundations.md`](../repos/foundations.md), two in [`compose/patterns.md`](../compose/patterns.md) —
+rather than only here. 🔵 **The two mentions in `agents/trending.md` and `repos/trending.md` are left
+exactly as written**: those shelves are append-only history, and a correction belongs in a new dated
+entry, not in a rewrite of the entry that got it wrong. 🔵 **This paragraph's own first draft said
+"five places" before the sites were counted** — the same not-deriving-the-denominator error, one
+screen above its own diagnosis. `Gap 397-A`.
+
+### 🟢 `396-F`'s arm, run over the shelf — and the label it returns is wrong
+
+🟢 **`396-F` stated the blocker honestly:** *"it needs a suspected upstream to compare against —
+discovery of the pair is still WebSearch's job."* 🟢 **So the pairs were derived from the shelves
+instead, with no network at all:** two addresses sharing a repository **name** under different
+**owners** are a candidate. **2 694 harvested → 34 rejected → 2 660 addresses → 121 collision
+groups → 551 candidate pairs.** The denominator is **p351's, imported rather than re-implemented**,
+so it agrees with the published channel-U census to the address.
+
+🔴 **21 pairs adjudicated, and the headline is that `SHARED-ROOT -> FORK LINEAGE` over-claims.** A
+shared root commit is shared **ancestry** — equally implied by a fork, an organisation **rename**, a
+repository **transfer** and a re-push. 🔵 **This is the `Trend 25` error inside the instrument built
+to fix `Trend 25`**, which is worth stating plainly rather than quietly patching.
+
+🟢 **The discriminator is one extra field off the same clone:** compare HEAD as well as root.
+
+| verdict | n | what it means | examples |
+|---|---|---|---|
+| 🔴 `SAME-REPO-ALIAS` (shared root, **same HEAD**) | **8** | **ONE artefact, TWO shelf addresses** — a census duplicate, not a fork | `1EdTech`↔`IMSGlobal` ×3 (the standards-body rename), `edx`↔`openedx` `ease`, `pytorch`↔`meta-pytorch` `opacus`, `kantord`↔`LibreLingo`, `digitalcredentials`↔`openwallet-foundation-labs` |
+| 🟢 `DIVERGENT-FORK` (shared root, **different HEAD**) | **7** | two artefacts, one ancestry — a real choice to adjudicate | `DavidLMS`↔`ashleycribb` `learnmcp-xapi` (`p396`'s catch, reproduced blind), `dmitry-viskov`↔`ucfopen` `pylti1.3`, `EleutherAI`↔`latam-gpt` `lm-evaluation-harness` |
+| 🟢 `INDEPENDENT` (distinct roots) | **4** | same name, unrelated code | `OpenLRS`, `qti-convert`, `ims-lti`, `lrs` |
+| 🔵 `INCONCLUSIVE-UNRESOLVABLE` | **2** | 🔵 never called INDEPENDENT from a failed read | `apereo/opencast` (404 — 🔵 **already known dead since `p230`**, see below), and the base's own dead-address control |
+
+🟢 **The control that matters most:** `agent0ai/agent-zero` ↔ `frdel/agent-zero` returns
+`SAME-REPO-ALIAS`, and the committed alias register — built `p349` by a **completely different
+method** (the search index's `full_name`) — already records exactly that relation. 🔵 **Two
+independent methods, one answer.**
+
+### 🔵 A near-miss worth publishing: the arm's one `404` is a CORROBORATION, not a discovery
+
+🔴 **This pass's draft announced `apereo/opencast` as "a dead
+address that fell out of the audit." It is nothing of the kind, and checking the tree before
+publishing is what stopped it.** This base **proved** that address dead at **`p230` on 2026-10-15**,
+carries the successor mapping on [`repos/foundations.md`](../repos/foundations.md) *(twice)* and in
+[`repos/trending.md`](trending.md), and holds it in a **`dead-successor-register`** built for exactly
+this row. `opencast/opencast`'s **ECL-2.0** grant and its 🔴 **`develop`** default ref are both
+already shelved too — so the *"a ref-guessing probe would miss this"* line the draft reached for was
+also already owned.
+
+🟢 **What is genuinely worth recording is the arm's behaviour:** handed a pair where one side does not
+resolve, it returned **`INCONCLUSIVE-UNRESOLVABLE`** and 🟢 **declined to call the other side
+`INDEPENDENT`** — which is the control `C10` exists for, and the `p393` false-`UNGRANTED` class
+avoided by construction. 🔵 **A third method agreeing with a register built by two others is a real
+result; it is just not a new address.** 🔴 **`p393`'s warning — *"a new discovery channel's first
+temptation is to re-sell what you already own"* — has now fired on three consecutive passes, and
+`p397` is the one where it fired twice** (here, and on the `topic:education` candidates below).
+
+🔴 **Stated as a backlog, not a result: 551 pairs derived, 21 adjudicated, 530 unexamined.**
+
+### 🟢 Three new addresses, every grant read by enumerating the tree
+
+🔵 Found through `396-A`'s reopened enumeration channel using **curated topics** rather than free
+tokens — `topic:autograder` returns **124** results where the free-token query returned general
+agent infrastructure (`393-A`, confirmed again).
+
+| Address | Licence — read first-hand | ★ | HEAD | Note |
+|---|---|---|---|---|
+| 🆕 [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) | 🟢 **MIT** · `LICENSE`, 1,070 B, `sha256`₁₆ `1fa57a15a75b` · © 2022 **Turnitin, LLC** | **38** | `5689b27` · **69 d** | Python package for building **Gradescope** autograders. 🔵 The grant is **Turnitin's** — Gradescope's owner — so this is a commercial vendor's permissive client library, not a university project. The cheapest path to an autograder a US institution **already licenses**. |
+| 🆕 [`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples) | 🔴 **UNGRANTED AT ROOT** — no licence file anywhere in the tree except two **vendored** copies at `java/src/main/java/com/gradescope/jh61b/LICENSE.txt` and `java_template/src/com/gradescope/jh61b/LICENSE.txt` (both 1,075 B, `8a6114b1d4ae`, MIT © 2016 Josh Hug) | **91** | `6832253` · **69 d** | 🔴 **`p382`'s subtree axis, in its purest form: 91 ★ and the only MIT in the tree belongs to somebody else's library.** 🟢 **GitHub shows no licence either**, so this base's verdict and GitHub's agree — unlike `p394`'s README-ONLY class where both were wrong. **Read the samples, do not vendor the repository.** |
+| 🆕 [`TricksterGuy/complx`](https://github.com/TricksterGuy/complx) | 🟡 **GPL-3.0** · `LICENSE`, 32,422 B, `963392e038d7`; plus vendored Scintilla at `lc3edit/wxScintilla/src/scintilla/License.txt` (868 B, `94a798c912d4`) | 68 | `73ce7ab` · 🔴 **1 392 d** | LC-3 teaching simulator. 🔴 Copyleft **and** four years dead — shelved so a successor does not re-find it. 🔵 Its Scintilla payload carries *"All Rights Reserved"*, the exact phrase `P459` had to stop treating as a non-grant. |
+
+### 🔴 Found this pass and DECLINED — because this base already holds every one of them
+
+🟢 `topic:education topic:ai stars:>30` on the reopened channel returned **48 results**, and the top
+of that list looks like a haul: `learnhouse/learnhouse` (**2.4k ★**, HEAD **0 d**),
+`CaviraOSS/PageLM` (**2k ★**), `echo-loop/Echo-Loop` (**4.2k ★**), `penecho/penecho` (**2.5k ★**).
+
+🔴 **All four are already on these shelves** — `learnhouse` appears in **129** files here, `PageLM`
+in **56**. 🔵 **Checked before writing, not after**, which is the only reason this section says
+"declined" instead of "discovered". 🟢 The genuinely new supply from the same channel is the **three
+rows above**, and it came from `topic:autograder`, not from the education topic at all.
+
+🔵 **The lesson is about the channel, not the pass:** a topic query sorted by stars returns a
+region's **most adopted** repositories, which is precisely the set a mature base has already
+harvested. 🟢 **The new supply sits further down the adoption curve**, which is where
+`topic:autograder`'s 124 results had it.
+
+### 🟡 `396-H` re-dated, as `p396` asked — the bridge has not moved
+
+| Address | `p396` | `p397` | verdict |
+|---|---|---|---|
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 419 d, HEAD `fbf6091` | 🔴 **419 d, HEAD `fbf6091` — byte-identical** | 🔴 **Unmoved.** The entire open-source agent↔LRS supply is one 15 ★ repo, fourteen months dead, under every logging duty this base has recorded. 🟢 `396-H`'s *"fork and own it"* only gets stronger. |
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23.** 🔴 **No new education-native agent cleared
 this pass, and the honest headline is that the one the search channel offered was a fork of a dead
 project.** The supply finding is stated here rather than padded over:
@@ -213,7 +338,7 @@ new controls in [`compose/code/licence-grant-gate/`](../compose/code/licence-gra
 | 2 | 🔴 **Two condemned rows REFUTED — by the README, which `p288` made a standing channel ~100 passes before `p386` condemned them.** [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps): *"This project is open-source and available under the MIT License."* (`readme.md:84`). [`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer): `## License` → `MIT` (`README.md:167`, **31 ★**). Both carry **no** licence file and **no** manifest, and 🔴 **GitHub's own sidebar shows no licence for either**, so the base's verdict and GitHub's agree — and both are wrong. | Rows corrected below and in the provenance table. New class: **README-ONLY** — one rung weaker than `p383`'s MANIFEST-ONLY, because nothing machine-readable asserts it. 🔵 **The lesson is not "add the README to the probe": the gate for it already existed. The verdict pipeline did not call it.** |
 | 3 | 🔴 **`bbmcps` is not a Blackboard integration, and the census has carried it as one for eight passes.** No `blackboard.com`, no Learn REST, no OAuth; dependencies `mcp` + `sqlite3`; `blackboard://` is the **blackboard architectural pattern** (shared memory, knowledge graph), credited in its own README to `dx-corp/shared-memory-mcp`. **Blackboard: 9 → 8 addresses**, and the family's only ungranted row leaves it: **8 probed = 6 MIT + 2 dead, 0 ungranted.** | Census and the measured-supply table corrected below. 🔵 **This is `Gap 393-A` on this base's own shelf**, not in a new channel — and it is the strongest argument for `p393`'s ranked item 5, because it shows the defect does not only mis-discover, it mis-*files* what it already owns. |
 | 4 | 🔴 **`licence-grant-gate` read `granted: False` on verbatim BSD-3-Clause — a false absence of a GRANT, the most expensive error class this base has.** Specimen: `open-webui/LICENSE` vendored inside `Lamb-Project/lamb`, 1,510 B, `sha256`₁₆ `6c4b8d8034b9`, stock BSD-3 and **untitled**. Cause isolated by experiment: the phrase **"all rights reserved"**, in the gate's `NON_GRANT_MARKERS` since `P455` and **line 2 of the canonical BSD-3/BSD-2 templates**. Title made no difference; removing the phrase flipped the verdict. 🟢 `P455`'s own specimen (`murderszn/open-tutor`, 869 B, `c341a936e405b61d`, re-read **200** today) **contains the phrase nowhere** — four other markers carry its refusal. | 🟢 **Fixed as `P459`**, the marker made conditional on the absence of an operative grant sentence; **12 new controls, 2 of them negative** so the old defect stays reproducible; suite **47 → 59**; `make hooks` unchanged at its inherited **44/46**. 🟡 **Realised damage: NIL** — no published row was graded from an untitled BSD payload. Exposure was prospective across **297 BSD-3-Clause + 201 BSD-UNVERSIONED** cells. |
-| 5 | 🟢 **`Gap 393-G` half closed: an R supply tier exists, and three of its rows are PERMISSIVE.** 🟢 [`rstudio/gradethis`](https://github.com/rstudio/gradethis) — **MIT**, `sha256`₁₆ `48c18e68ffed`, **164 ★**, 41 forks, HEAD **126 d**, Posit Software PBC. 🟢 [`rstudio/learnr`](https://github.com/rstudio/learnr) — **Apache-2.0**, `60a581bccd57`, **738 ★**, 241 forks. 🟢 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) — **BSD-3-Clause**, `1677c5307530`, the R extension **for `otter-grader`**, this base's most-adopted autograder. Plus GPL psychometrics: [`philchalmers/mirt`](https://github.com/philchalmers/mirt) (**235 ★**, HEAD **1 DAY**), [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) (**47 ★**), `cran/catR` (**computerized adaptive testing**), `cran/TAM`. | New **Tier 6** below; rows on [`repos/foundations.md`](../repos/foundations.md); **`Trend 24`**; new **`Pattern AB`**. 🔵 **`gradethis` at 164 ★ edges `otter-grader` at 161 ★** — so the most-starred autograder on these shelves was never the Python one, and it is MIT. |
+| 5 | 🟢 **`Gap 393-G` half closed: an R supply tier exists, and three of its rows are PERMISSIVE.** 🟢 [`rstudio/gradethis`](https://github.com/rstudio/gradethis) — **MIT**, `sha256`₁₆ `48c18e68ffed`, **164 ★**, 41 forks, HEAD **126 d**, Posit Software PBC. 🟢 [`rstudio/learnr`](https://github.com/rstudio/learnr) — **Apache-2.0**, `60a581bccd57`, **738 ★**, 241 forks. 🟢 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) — **BSD-3-Clause**, `1677c5307530`, the R extension **for `otter-grader`**, this base's most-adopted autograder. Plus GPL psychometrics: [`philchalmers/mirt`](https://github.com/philchalmers/mirt) (**235 ★**, HEAD **1 DAY**), [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) (**47 ★**), `cran/catR` (**computerized adaptive testing**), `cran/TAM`. | New **Tier 6** below; rows on [`repos/foundations.md`](../repos/foundations.md); **`Trend 24`**; new **`Pattern AB`**. 🔵 **`gradethis` at 164 ★ edges `otter-grader` at 161 ★** — so the most-starred autograder on these shelves was never the Python one, and it is MIT. 🔴 **`p397` correction: refuted as written.** `okpy/ok` (Apache-2.0, **370 ★**, Berkeley) was already on these shelves when this was published; the claim holds only for *maintained* rows — see `Gap 397-A`. |
 | 6 | 🟢 **`cran/exams` is the broadest assessment exporter on these shelves, and it lands directly on `p393`'s new Tier 8.** R/exams v2.4-5 (Achim Zeileis, R-project) emits **QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam** — read from the `R/` source filenames in the clone, not from prose — plus **NOPS**: printed, scanned, automatically marked PDF. 🟡 **GPL-2 \| GPL-3, disjunctive** — the licensee picks the rung. | 🔵 Compare `p393`'s [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker): LGPL-3.0, **4 ★**, Canvas and Blackboard only. **The QTI story on this shelf changes shape**: the generator with the widest reach is GPL and ten years old, not the new LGPL one. 🟢 **NOPS is the paper-assessment path** — the one thing in this whole base that works where connectivity does not. |
 | 7 | 🟢 **A no-code LLM-assistant builder that publishes into Moodle over LTI, and it is EMEA-authored and peer-reviewed.** [`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb) — **GPL-3.0** (35,349 B, `17fe6d0ffa96`, stock GPL-3 under a four-line project header), Marc Alier (**UPC Barcelona**) and Juanan Pereira (**UPV/EHU**), 7,087 files, HEAD **2 d**, published in *Computer Standards & Interfaces*. Companion [`Lamb-Project/lamba`](https://github.com/Lamb-Project/lamba) is the **LTI activity module for assignments graded by a LAMB assistant**. 🔴 A Moodle.org thread (Feb 2026) calls it *"at a very beta stage"* with *"a few universities running pilots"* — carried on every LAMB row, because a 2-day HEAD reads as momentum and the forum reads as pilot-stage. | New row below and on [`verticals/solutions.md`](../verticals/solutions.md); **`Pattern AC`**. 🔴 **Three grants in one tree** (`p382`'s subtree axis): root GPL-3, `lamb-kb-server-stable/` stock GPL, and the vendored `open-webui/` BSD-3 — the last being the specimen that exposed `P459`. 🔴 **Fold recorded:** `Lamb-Project/LAMBA` is the same repository as `lamba` (identical head `87e203a`, identical payload `sha256`), published once per `p348`. |
 | 8 | 🔴 **`Gap 393-G`'s channel question answered precisely, and the answer is a per-tool absence.** CRAN: **`curl` 000 proxy-refused, `WebFetch` ENOTFOUND** — closed on **both** tools, so unlike `Gap 532` this is a real absence rather than a tool artefact. r-universe, the obvious substitute: **also refused**. 🟢 The substitute that works is **`github.com/cran/<pkg>`**, a read-only mirror of every CRAN package's `DESCRIPTION`, with a calibrated oracle: `catR`/`TAM`/`learnr` present, `gradethis`/`qti`/nonsense-control absent. 🔴 **It verifies; it cannot discover.** | [`channel-state`](../evidence/channel-state.2026-10-22-p394.tsv). **`Gap 394-C`** asks for the one missing piece: an org listing for `cran` (≈22,000 packages) would turn the lookup mirror into an index. 🔵 **Also localised: `api.github.com` 403 is SESSION REPOSITORY SCOPING, not a proxy block** — earlier cycles recorded it as "github-api-proxy-blocked", which pointed at the wrong remedy. |
@@ -294,7 +419,7 @@ tag-shipping projects** (finding 9), and a **failed clone cannot distinguish pri
 | **OpenMAIC** 🆕 `p389` | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | `main` | 🟢 **MIT** *(1,066 B, "Copyright (c) 2026 THU-MAIC"; `package.json` also declares `"license": "MIT"`)* | **The whole classroom, generated.** 🔴 🆕 `p392` *(This row said "and the largest education-native repository in the open-source supply (~41.3k ★)". **Retired.** Read today through the one open channel: OpenMAIC **41.3k ★** — `p389`'s figure confirmed — against [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at **42.2k ★**, which was already two rows below with no star count against it. The superlative was published because the comparison was unmeasured, not because it had been made.)* A topic or an uploaded document becomes a multi-agent lesson: an AI teacher with a voice, teaching assistants, simulated classmates, narrated slides, auto-graded quizzes, HTML interactives and a shared whiteboard, with **agentic mid-lesson chat about any slide element**. Grew out of **MAIC**, deployed inside Tsinghua and validated on **700+ real students**; paper in **JCST 2026**. 🟢 Three properties that decide a school deployment and that almost nothing else on this shelf has: **server-first** generation (v1.2.0) that survives closed tabs and restarts on PostgreSQL; **central model governance** — every AI use is a named *slot* in `openmaic.yml`, each slot pinned to a provider, with an option to **forbid user-supplied keys** outright and `video: null` to switch a capability off; and **export of a finished classroom as one offline HTML file** (or a PPTX that keeps every scene). 🟢 Local-model path is real: **Lemonade** for local inference, **FunASR** for local ASR. 🟢 **24 built-in skills** plus per-owner authored skills; the course agent works through validated tools (patch one scene atomically, reorder pages, import `.pptx` with layout) rather than rewriting opaque blobs. 🟢 Security is handled like a product, not an afterthought — five releases since September carry SSRF, DNS-rebinding and provider-redirect fixes under published GHSAs. 🔴 Current head is **v1.3.0-rc.1** (knowledge base, 2026-10-22) with **breaking upgrade conditions and no rollback below it**; pin **v1.2.1** (2026-10-18) for a pilot. 🔴 Needs Node ≥ 22.19, pnpm ≥ 10, PostgreSQL 16 and a long-running server — Vercel deployments are capped at the 1.1.x line. 🔵 🆕 `p392` **Measured: `41.3k ★` · 6.4k forks · 750 commits** *(github.com HTML · WebFetch · 2026-10-22)*. | APAC — Tsinghua University, China (EN + zh-CN) |
 | **OATutor** 🆕 `p389` | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | `main` | 🟢 **MIT** | **The adaptive tutor with the mastery model in the open, and the one with an academic maintainer behind it** — UC Berkeley's CAHLR. Intelligent-tutoring scaffolds over an open problem bank, with **Bayesian Knowledge Tracing** driving what comes next, so "adaptive" is a parameterised model a client can inspect and re-estimate rather than a prompt. Pairs with [`pyBKT`](https://github.com/CAHLR/pyBKT) (MIT) on [`repos/foundations.md`](../repos/foundations.md), which fits the model from the client's own interaction logs. 🟢 Dated **2026-10-21** — this is a live project, not a paper artefact. 🟡 Content-first: the win is the scaffold-and-mastery machinery, not an LLM. | North America — UC Berkeley CAHLR |
 | **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `main` | 🟢 **Apache-2.0** | Lifelong personalised tutoring: persistent learner memory plus RAG grounded in the learner's own uploaded materials. The most substantial permissive tutor in the open-source supply. 🟢 🆕 `p392` **And the largest education-native repository on these shelves, measured: `42.2k ★` · 5.3k forks · 2,935 commits · release `v1.6.15`, 2026-10-19** *(github.com HTML · WebFetch · 2026-10-22)* — ahead of OpenMAIC's 41.3k, which this shelf had called the largest. Apache-2.0 **and** bigger **and** actively released is an unusually easy recommendation; the reason to still reach for OpenMAIC is the governance surface (named model slots, forbid-user-keys, offline HTML export), not the size. | APAC — HKU Data Intelligence Lab, Hong Kong |
-| **ai-shifu** | [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `main` | 🟢 **Apache-2.0** *(grant at `LICENSE.txt`, not `LICENSE`)* | AI-led chat-based course delivery — the agent drives the lesson script rather than waiting to be asked. | APAC — China |
+| **ai-shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | `main` | 🟢 **Apache-2.0** *(grant at `LICENSE.txt`, not `LICENSE`)* | AI-led chat-based course delivery — the agent drives the lesson script rather than waiting to be asked. | APAC — China |
 | **educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | `main` | 🟢 **MIT** | Content generation for instructors: quizzes, lesson plans, question banks, YouTube-to-course. Teacher-facing, which is where the fastest-growing region's market actually is. | APAC — India |
 | **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | `main` | 🟢 **MIT** | AI-native LMS with an AI Mentor and role-play scenarios built in rather than bolted on. | EMEA — Selleo, Poland |
 | **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` | 🟢 **BSD-3-Clause** | Self-hostable tutoring platform with local RAG over textbooks and notes — the data-residency option. | not verified this pass |
@@ -322,7 +447,7 @@ tag-shipping projects** (finding 9), and a **failed clone cannot distinguish pri
 | **jupyter-ai** | [jupyterlab/jupyter-ai](https://github.com/jupyterlab/jupyter-ai) | `main` | 🟢 **BSD-3-Clause** | LLM assistance inside JupyterLab — the surface where most CS and data-science teaching already happens. |
 | **pybryt** | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Assesses the **approach** a student's code takes, not only its output. Pairs with an LLM that explains *why* the approach was wrong. 🔴 🆕 `p387` **No PyPI release since `v0.7.0`, 2022-04-28 — four and a half years.** The idea is still the best available statement of approach-assessment and `Pattern B` still stands on it, but treat it as **a reference implementation to vendor and maintain, not a dependency to install**. Repository commit activity is unreadable here (`github.com` 403), so this is a statement about the *published artefact*, which is what a client would install. |
 | **canvas-mcp** | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | `main` | 🟢 **MIT** | MCP server over Canvas LMS: courses, assignments, submissions, grading, rubrics, students. Fork [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) (MIT) adds office-hours, syllabus read/write and course-content copy. |
-| 🆕 `p393` **autograder-py** | [edulinq/autograder-py](https://github.com/edulinq/autograder-py) | `main` | 🟢 **MIT** *(1,071 B, `7eb48830c022`)* | Python client for the **edulinq autograding server** — the submission/feedback half rather than the grading half, so it **pairs with** rather than competes against `otter-grader`. **49 releases**, 494 commits, HEAD `7984bd2` **2026-10-02 — 20 d**, **16 ★**. 🔵 [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) is **not** a `p393` discovery — this base has carried it on [`repos/foundations.md`](../repos/foundations.md) Tier 3 and in `Pattern E` for several passes. What `p393` adds to it is its **first measurement**: 🟢 **161 ★**, **197 releases**, 3,825 commits, HEAD `190c1a4` **2026-10-01 — 21 d**, which makes it the most-adopted autograder on these shelves. |
+| 🆕 `p393` **autograder-py** | [edulinq/autograder-py](https://github.com/edulinq/autograder-py) | `main` | 🟢 **MIT** *(1,071 B, `7eb48830c022`)* | Python client for the **edulinq autograding server** — the submission/feedback half rather than the grading half, so it **pairs with** rather than competes against `otter-grader`. **49 releases**, 494 commits, HEAD `7984bd2` **2026-10-02 — 20 d**, **16 ★**. 🔵 [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) is **not** a `p393` discovery — this base has carried it on [`repos/foundations.md`](../repos/foundations.md) Tier 3 and in `Pattern E` for several passes. What `p393` adds to it is its **first measurement**: 🟢 **161 ★**, **197 releases**, 3,825 commits, HEAD `190c1a4` **2026-10-01 — 21 d**, which makes it the most-adopted *maintained* autograder on these shelves (🔴 `okpy/ok`, Apache-2.0, **370 ★**, leads on adoption but is **532 d** stale — `Gap 397-A`). |
 | **Flat** | [netless-io/flat](https://github.com/netless-io/flat) | `main` | 🟢 **MIT** | Open-source online classroom (interactive whiteboard, recording) — the live-session substrate an agent can sit in. |
 | **jupyter-ai-tutor** | [QuantStack/jupyter-ai-tutor](https://github.com/QuantStack/jupyter-ai-tutor) | `main` | 🟢 **BSD-3-Clause** *(1,532 B)* | 🆕 `p388`. **The maintained notebook-tutor layer, and the replacement for `Pattern B`'s stale dependency.** Per-cell **Explain Code** button sends the cell source, kernel language, **the error traceback**, and the preceding cells up to the last markdown cell *as the exercise statement*. 🟢 Two pedagogically serious details: the tutor persona lives in a **`TUTOR.md` discovered by walking up from the notebook's directory**, so each course or folder carries its own in version control; and an optional **`reference_solution` + `evaluation_criteria` in cell metadata, ROT13-encoded** to keep it out of the student's view. From **QuantStack**, a known Jupyter-ecosystem maintainer. Requires `jupyter-ai-jupyternaut` (<0.1). v0.3.2, 7 releases, → 2026-09-25. |
 | **BC Curriculum MCP** | [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p388`. **The North American curriculum-grounding instance** — the third region to get one, after Brazil's BNCC agent (`p387`) and `os-taxonomy` (`p384`). 12 MCP tools over the **entire BC Ministry of Education K–12 curriculum**, crawled into SQLite: Big Ideas / Curricular Competencies / Content in the real three-column **KDU** structure with elaborations, Core Competencies, grade progressions, cross-subject connections, full-text search — and the **First Peoples Principles of Learning**, a jurisdictional requirement no generic tutor carries. Hosted HTTP endpoint or local stdio via `npx`. 🟡 2 releases, both **2026-03-27**; the data is a crawl, so currency is the risk, not the licence. |
@@ -387,7 +512,8 @@ is new; the obligation is not. `Pattern P` is built around that boundary.
 ## Tier 6 — 🆕 `p394` The R teaching, autograding and psychometrics stack
 
 🔵 **Why this tier did not exist until now.** `p393` ranked a CRAN channel second and gave the reason:
-`otter-grader`, the most-adopted autograder on these shelves, **grades R**, and the statistics-teaching
+`otter-grader`, the most-adopted *maintained* autograder on these shelves (🔴 `okpy/ok` at **370 ★**
+leads on adoption and is **532 d** stale — `Gap 397-A`), **grades R**, and the statistics-teaching
 stack is R-shaped — so one whole teaching discipline sat in a blind spot. The channel it asked for is
 **closed on both tools** (CRAN `curl` 000 / `WebFetch` ENOTFOUND; r-universe refused), but the supply
 is reachable by clone, and `github.com/cran/<pkg>` mirrors every CRAN `DESCRIPTION`. Every row below
@@ -398,7 +524,8 @@ three **delivery** components are permissive and the four **measurement** compon
 
 | repo | ref · HEAD | licence | ★ | what it is |
 |---|---|---|---|---|
-| [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · **126 d** | 🟢 **MIT** *(1,078 B, `sha256`₁₆ `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **164** | 🆕 `p394`. **Automated feedback for student exercises**, from **Posit Software, PBC**. Two grading modes: compare against a model solution (`grade_this_code()`), or write the predicate yourself (`grade_this()`). 41 forks. 🟢 **The most-starred autograder on these shelves and the most permissive** — it edges `otter-grader` (161 ★). 🔴 **Not on CRAN** (`cran/gradethis` ABSENT), so a CRAN index would have missed it. |
+| [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · **126 d** | 🟢 **MIT** *(1,078 B, `sha256`₁₆ `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **164** | 🆕 `p394`. **Automated feedback for student exercises**, from **Posit Software, PBC**. Two grading modes: compare against a model solution (`grade_this_code()`), or write the predicate yourself (`grade_this()`). 41 forks. 🟢 **The most-starred *maintained* autograder on these shelves and the most permissive** — it edges
+`otter-grader` (161 ★). 🔴 **Not the most-starred outright:** `okpy/ok` holds **370 ★** at 532 d (`Gap 397-A`). 🔴 **Not on CRAN** (`cran/gradethis` ABSENT), so a CRAN index would have missed it. |
 | [rstudio/learnr](https://github.com/rstudio/learnr) | `main` · **343 d** | 🟢 **Apache-2.0** *(10,472 B, `60a581bccd57`; `DESCRIPTION`: `Apache License (>= 2.0)`)* | **738** | 🆕 `p394`. **Interactive tutorials in R Markdown** — the runtime `gradethis` grades inside. 241 forks. 🟡 HEAD is 343 days: this is a **stable substrate**, not an abandoned one; the movement is in `gradethis`. |
 | [ucbds-infra/ottr](https://github.com/ucbds-infra/ottr) | `master` · **108 d** | 🟢 **BSD-3-Clause** *(1,555 B, `1677c5307530`; `DESCRIPTION`: `BSD_3_clause + file LICENSE`)* | 3 | 🆕 `p394`. **The R autograding extension for `otter-grader`** — UC Berkeley Data Science Education Program. Grades R scripts, Rmd documents and Jupyter notebooks with R kernels. 🟢 So `otter-grader`'s R half is permissive. 🔴 **3 ★: the adoption is on the Python parent**, and this is the component you would actually deploy for an R course. |
 | [philchalmers/mirt](https://github.com/philchalmers/mirt) | `main` · **1 DAY** | 🟡 **GPL (>= 3)** — 🔴 **grant lives only in `DESCRIPTION`; no licence file at any tree path** | **235** | 🆕 `p394`. **Multidimensional item response theory** — the canonical IRT engine, v1.48.2, 88 forks, committed **yesterday**. 🔵 This base has carried `adaptive-knowledge-graph` (IRT + BKT, ~350 ★) and `OATutor` (BKT) as its adaptive layer; `mirt` is the thing those are approximating. |
@@ -539,7 +666,7 @@ copyleft, no bespoke clause, every grant read first-hand at the repository's rea
 |---|---|---|---|
 | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `main` | Apache-2.0 | tutoring with learner memory |
 | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | `main` | MIT | 🆕 `p386` — local-first adaptive workspace; tutoring with **no data leaving the host** |
-| [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `main` | Apache-2.0 | agent-led course delivery |
+| [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | `main` | Apache-2.0 | agent-led course delivery |
 | [satvik314/educhain](https://github.com/satvik314/educhain) | `main` | MIT | teacher-facing content generation |
 | [Selleo/mentingo](https://github.com/Selleo/mentingo) | `main` | MIT | AI-native LMS starting point |
 | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` | BSD-3-Clause | self-hosted tutoring, data residency |
@@ -881,7 +1008,7 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | repo | grant read at | licence |
 |---|---|---|
 | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `main/LICENSE` | Apache-2.0 |
-| [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `main/LICENSE.txt` | Apache-2.0 |
+| [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | `main/LICENSE.txt` | Apache-2.0 |
 | [satvik314/educhain](https://github.com/satvik314/educhain) | `main/LICENSE` | MIT |
 | [Selleo/mentingo](https://github.com/Selleo/mentingo) | `main/LICENSE` | MIT |
 | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main/LICENSE` | BSD-3-Clause |

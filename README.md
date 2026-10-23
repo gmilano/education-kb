@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 397 — reads and commit both 2026-10-23 — **`396-C` SAID EXECUTING THIS REPOSITORY'S CODE WAS PERMANENTLY REFUSED AND THAT THREE RANKED ITEMS WERE BLOCKED FOREVER. IT RUNS ON THE FIRST ATTEMPT — 59 CHECKS, 0 FAILURES — AND WHILE NOBODY WAS LOOKING, THREE GATES DRIFTED RED: 44/46 → 41/46. 🟢 `396-F`'s RANKED-FIRST SHELF RUN IS DONE: 551 PAIRS DERIVED WITH NO NETWORK, AND THE ARM'S OWN VERDICT LABEL IS WRONG — 8 OF 15 "FORKS" ARE RENAMES. 🔴 AND A SUPERLATIVE THREE PASSES RE-PUBLISHED IS REFUTED BY A ROW THIS BASE HAS HELD SINCE PASS 85.**
+
+🔵 **Dating note.** Every clone, tree enumeration, licence payload read, star read, archived-banner
+read, registry probe and search leg below was run on **2026-10-23**, and the commit lands
+**2026-10-23**. 🔵 **This is the third pass dated today**, after `p395` and `p396`.
+
+**Evidence:** [`shelf-lineage`](evidence/shelf-lineage.2026-10-23-p397.tsv) — 21 pairs ·
+[`shelf-fork-candidates`](evidence/shelf-fork-candidates.2026-10-23-p397.tsv) — 121 groups ·
+[`record-layer-redating`](evidence/record-layer-redating.2026-10-23-p397.tsv) — 22 addresses ·
+[`verified-repos`](evidence/verified-repos.2026-10-23-p397.tsv) ·
+[`channel-state`](evidence/channel-state.2026-10-23-p397.tsv) — 11 channels **per tool** ·
+[`casing-canonical`](evidence/casing-canonical.2026-10-23-p397.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-23-p397.tsv) — 9 legs · instrument, controls and
+unedited output at [`compose/code/p397-shelf-fork-audit/`](compose/code/p397-shelf-fork-audit/README.md).
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **`396-C` REFUTED, and it is the most expensive inherited belief this base has carried.** `395-C` and `396-C` both recorded that *"executing repository code is refused by the environment classifier"*, concluded that *"three ranked items are permanently blocked"*, and told successors to **stop ranking instrument work first**. 🟢 **`cd compose/code/licence-grant-gate && python3 -I test_grant_gate.py` → "ok — 59 checks, 0 failures."** `make hooks` → **runs**. 🔵 **Cause localised by experiment, not inference:** this pass's own opening command was a **compound** `curl …; curl …; python3 …` refused as a whole; decomposed one clause at a time, every clause runs but one — and **that one is a genuine HTTP 403 from `github.com`, not a classifier refusal at all.** 🔴 **`396-A` warned about exactly this one pass earlier and it happened anyway**, which is why `397-D` adds a third axis to `396-B`: a refusal is ambiguous between the command and a **clause** of it. |
+| 2 | 🔴 **The price of that belief, measured: two passes of gate blindness.** `make hooks` was **41/46** at `HEAD`, not the **44/46** `p394` last reported. 🔴 **Three gates had gone red unseen** — `gate-region-headings` (🔴 `p395` wrote a **second** `## Opportunities by region` block into `intel/market.md`, which the brief forbids) and `gate-census-currency` + `gate-union-currency` (🔴 both shelves written without re-deriving the census). 🟢 **The gates were working the whole time; nothing was reading them.** 🟢 All three green in this commit. `397-B`. |
+| 3 | 🟢 **`396-F`'s ranked-FIRST item discharged, and scaled differently than prescribed.** `396-F`'s stated blocker was real: *"it needs a suspected upstream… discovery of the pair is still WebSearch's job"* — and WebSearch cannot hand over 551 pairs. 🟢 **So the pairs are derived from the shelves, with NO network:** two addresses sharing a repository **name** under different **owners**. **2 697 harvested → 34 rejected → 2 663 addresses → 2 457 names → 121 collision groups → 551 candidate pairs.** 🟢 **p351's rejection classes are imported, not re-implemented** (control `C5`), so the denominator agrees with the published channel-U census to the address. |
+| 4 | 🔴 **And the arm's verdict label is wrong — `Trend 25` inside the instrument built to fix `Trend 25`.** `396-F` returns `SHARED-ROOT -> FORK LINEAGE`. A shared root is shared **ancestry**, which a fork, an organisation **rename**, a repository **transfer** and a re-push all produce. 🟢 **Fixed with one more field off the same clone — compare HEAD too:** same root + **same HEAD** = `SAME-REPO-ALIAS` (**one artefact, two addresses**); same root + **different HEAD** = `DIVERGENT-FORK`; distinct roots = `INDEPENDENT`; either side unresolvable = `INCONCLUSIVE`, 🔵 **never "independent" from a failed read**. **21 pairs adjudicated: 8 aliases, 7 real forks, 4 independent, 2 inconclusive.** 🔴 **8 of 15 shared-root pairs — 53% — were renames, not forks.** |
+| 5 | 🟢 **The control that matters most, and it is not one this pass designed.** `agent0ai/agent-zero` ↔ `frdel/agent-zero` returns `SAME-REPO-ALIAS`, and the committed `p349` alias register — built from the **search index's `full_name`**, a completely different method — already records exactly that relation. 🔵 **Two independent methods, one answer.** Plus `p395`'s catch reproduced **blind** (`learnmcp-xapi`, root `95ba79652b92`) and two dead addresses as a negative control. |
+| 6 | 🔴 **`397-A`: a superlative published in eight places is refuted by a row this base has held since `pass 85`.** `p394` wrote *"the most-starred autograder on these shelves was never the Python one, and it is MIT"* (`gradethis`, 164 ★); `p395` and `p396` carried it. 🔴 [`okpy/ok`](https://github.com/okpy/ok) is **Apache-2.0, 370 ★, UC Berkeley, no archived banner, HEAD `f5610a7` 2025-05-07 — 532 d**, and **`agents/trending.md` names it in the same comparison group as `otter-grader`, one line apart.** 🔵 The claim is true only under an unwritten *"excluding the stale ones"* — a defensible judgement that belonged **in the sentence**. 🟢 **Corrected at all eight live-shelf sites**; the two append-only mentions left exactly as written, because a correction belongs in a new dated entry, not in a rewrite of the entry that got it wrong. |
+| 7 | 🟢 **`396-H` and the xAPI 2.0 bake-off re-dated, as `p396` ranked second — and they answer differently.** 🔴 [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi): **419 d, HEAD `fbf6091` — byte-identical, unmoved.** The entire open-source agent↔LRS supply is still one dead 15 ★ repo under every logging duty this base records, so *"fork and own it"* strengthens. 🟢 **The bake-off split in two:** [`nurullahturkoglu/xapi-dotnet`](https://github.com/nurullahturkoglu/xapi-dotnet) **1 d** and [`codetakt/kiva`](https://github.com/codetakt/kiva) **2 d** are under active development; 🔴 [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) **has not moved at all (75 d)**. 🔴 **And the tooling is what aged:** [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) is **413 d** unchanged while its CI harness (`yetanalytics/lrs-test-runner`, `xapi-schema`, both **6 d**) is live. `Pattern AE` **amended, not restated.** |
+| 8 | 🟢 **Three new addresses, every grant read by enumerating the tree.** 🟢 [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) — **MIT**, 1,070 B, `sha256`₁₆ `1fa57a15a75b`, © 2022 **Turnitin, LLC**, **38 ★**, 69 d: a permissive autograder harness from the **platform vendor itself**, so an institution already paying for Gradescope needs no new procurement. 🔴 [`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples) — **91 ★ and UNGRANTED AT ROOT**; the only MIT in the tree is a **vendored** `jh61b` library two directories down (1,075 B, `8a6114b1d4ae`, © 2016 Josh Hug). 🟢 **GitHub shows no licence either — so for once this base's verdict and GitHub's classifier agree**, unlike `p394`'s README-ONLY class where both were wrong. 🟡 [`TricksterGuy/complx`](https://github.com/TricksterGuy/complx) — **GPL-3.0**, 68 ★, 🔴 **1 392 d**. |
+| 9 | 🔴 **`397-E`: a malformed query and a true absence render IDENTICALLY, and this base was one sentence from shelving one.** `topic:a OR topic:b OR topic:c` returns **"0 results (15 ms)"** and *"your search did not match any repositories"* — byte-for-byte the page a real nil returns. 🔴 **GitHub does not support `OR` across `topic:` qualifiers.** `topic:autograder` **alone returns 124 results.** 🟢 **Writing rule: never record a nil from a query whose syntax has not been proved on a positive control.** 🔵 **One nil from this pass is therefore left UNRESOLVED rather than published as an absence** — the `license:apache-2.0` LMS query, which returned 0 and shares the suspect shape. |
+| 10 | 🟢 **`397-C`: `p348`'s casing gate infers canonicality from publication order, and on one of two live cases the inference was wrong.** Read first-hand from the repository breadcrumb: `ai-shifu/ai-shifu` **is** lowercase (326 ★, Apache-2.0 — 🟢 gate agreed, 4 uppercase variants normalised **down**), but 🔴 **`StevenWeathers/peregrine-lti` is capitalised** (7 ★, Apache-2.0) **and the gate held the lowercase as canonical** — so "fixing" toward the first-published casing would have published the **wrong** address shape. 6 lowercase variants normalised **up**. 🔵 **`p349` already set the rule this violates:** *"a gate NEVER decides canonicality at run time… the register is evidence, and the gate reads it."* Casing has no such register; one is started. |
+| 11 | 🟢 **All four regional legs returned facts and zero addresses — the instrument working as designed — and the two thinnest say so.** 🟢 **North America:** two **curriculum** mandates new to this shelf — **Alabama HB 329** (AI instruction inside a graduation requirement) and **California AB 2876** (AI literacy across four subjects) — 🔵 a different buyer from a governance mandate. 🟡 **EMEA:** independent secondaries now agree on **Regulation (EU) 2026/1744, OJ 2026-07-24**, deferring Annex III education obligations to **2027-12-02**, with **Article 50** transparency live since **2026-08-02** — 🔴 but `eur-lex.europa.eu` is refused on **both** tools, so `394-D` stays open and every date is **secondary**. 🟢 **APAC:** **South Korea**'s comprehensive binding AI law in force **January 2026**, **China**'s AI instruction compulsory **from age six** plus content labelling since **2025-09-01**, **India**'s AI compulsory **from Class 3 in 2026–27**, 🟡 **Japan**'s Promotion Act with **no penalties** — 🔵 **four regimes, no convergence**, so an APAC policy layer must be configurable per country rather than compiled in. 🟢 **LATAM:** an August 2026 study counts **716 AI regulatory instruments across 23 countries**, concluding that legislating fast is not legislating well — 🔵 read against `394-E`'s **87% adopting / 26% with a strategy**, the state has rules and the institution has none, which is the governance-first sale with a number behind it. 🔴 **Informed gap, stated so silence cannot read as coverage: APAC returned no education-AI adoption percentages for the fourth consecutive pass.** |
+| 12 | 🔴 **`397-F` is a correction of this pass's own draft, and `gate-alias-canonical` is what forced it.** The draft called `SAME-REPO-ALIAS` *"a census-integrity defect this base has no gate for"* and offered all eight pairs as findings. 🔴 **The gate has been standing ~48 passes, the register has held these pairs since `p349` — and the gate went RED on the draft shelves, which is how this was caught.** 🔴 **Six of eight were already registered**; `learner-credential-wallet`'s row even carries `p350`'s note that the canonical was *already applied* to the two shelves the draft "found" it on. 🟢 **Genuinely new: two** (`lti-1-3-php-library`, `opacus`). 🟢 **What the arm does add is a second channel where the register's is blind:** for `ease` both register rows read `index-returns-ZERO` / `NO-CANONICAL` — the reason **`ACTION ZZ-al`** is unresolved since `p350` — and the arm proves identity from git alone (root `79dd16652a23`, HEAD `056da0adc6f3`). 🔴 **It cannot say which side is canonical, so `ZZ-al` is narrowed, not closed.** |
+
+### 🔴 What this pass got wrong, and caught
+
+| | |
+|---|---|
+| 🔴 **It was going to publish a 404 this base proved dead eight passes ago as a discovery** | The draft announced [`apereo/opencast`](https://github.com/apereo/opencast)'s 404 as *"a dead address that fell out of the audit."* 🟢 Caught by grepping this tree first: **`p230` proved it dead on 2026-10-15**, the successor mapping is on `repos/foundations.md` **twice** and in `repos/trending.md`, and there is a **`dead-successor-register`** built for that row — and `opencast/opencast`'s **ECL-2.0** grant and 🔴 **`develop`** default ref are both already shelved too, so the *"a ref-guessing probe would miss this"* line the draft reached for was **also** already owned. 🟢 **Rewritten as a corroboration**, with the genuinely new part kept: handed a pair with one unresolvable side, the arm returned `INCONCLUSIVE` and **declined to call the other side independent** — control `C10`, and the `p393` false-`UNGRANTED` class avoided by construction. 🔴 **`p393`'s warning that a new channel's first temptation is to re-sell what you already own has now fired on three consecutive passes.** |
+| 🔴 **It wrote a count before deriving it — in the paragraph diagnosing that exact error** | The draft read *"Corrected in all five places."* 🟢 The sites were then **counted**: there are **eight** on live shelves, plus two on append-only shelves that must not be touched. 🔵 **The same not-deriving-the-denominator mistake as `397-A`, one screen above its own diagnosis** — published that way rather than silently fixed, because `397-A`'s whole point is that the error is structural rather than careless. |
+| 🔴 **Its first instrument fixtures tested nothing, twice, and both times the instrument was right** | `candidates.py`'s controls used `a/thing` and `a/t` — rejected by p351 as **degenerate names** — and then backticked bare slugs, which p351 does not harvest at all because **it reads channel U (URLs); bare slugs are channel B (`p367`)**. 🟢 Both fixtures returned a clean tree and looked like passes. 🟢 **Both lessons are now written into the suite as comments beside the controls they broke**, and the second one is why this instrument's denominator is explicitly the **channel-U** census. |
+| 🔴 **It nearly announced a four-repository haul it already owned** | `topic:education topic:ai stars:>30` returned **48 results** whose top four — `learnhouse` (**2.4k ★**, HEAD 0 d), `PageLM` (2k ★), `Echo-Loop` (4.2k ★), `penecho` (2.5k ★) — are **all already shelved**; `learnhouse` appears in **129 files** here. 🟢 Checked **before** writing, so they publish as **declined**. 🔵 **The lesson is about the channel:** a topic query sorted by stars returns a field's **most adopted** repositories, which is exactly the set a mature base has already harvested — the new supply sits further down the adoption curve, which is where `topic:autograder` had it. |
+
+### 🔵 The address census, re-derived as the LAST act before this commit
+
+🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
+**after** every shelf write, with `p351`'s instrument: **2 697** harvested shapes → **34** are not
+addresses → **2 663 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 663** channel-U
+addresses and **3 120** channel-B survivors give **3 494 addresses over both channels**.
+🔵 Derived from **3 552** harvested shapes over both channels less **58** rejected by `p351`'s classes.
+
+🟢 **The delta is +16 on channel U, +28 on channel B and +26 on the union.** 🔵 Channel B again moves
+further than channel U, for `p394`'s measured reason: this pass discusses many addresses in prose
+with backticks and links only some of them, and **channel B counts a backticked slug where channel U
+counts only a link**.
+
+🔵 **And a standing caveat on all three figures, which is older than this pass.** At least **eight**
+channel-U addresses are **two addresses for one artefact** — the `SAME-REPO-ALIAS` pairs above, six
+of which [`alias-register`](evidence/alias-register.2026-10-21-p370.tsv) has recorded since `p349`.
+🟢 So the census over-counts **artefacts** by at least that much while remaining exactly correct as a
+count of **harvested shapes**, which is all it claims to be. 🔵 Not a new defect and not this pass's
+to fix: the register exists, `gate-alias-canonical` enforces it, and what `397-F` asks for is that
+the register be **fed from the clone arm as well as the search index**.
+
+### 🟡 Gate state, reported rather than hidden
+
+🔴 **`make hooks` was `41/46` at `HEAD` before this pass wrote a byte** — not the `44/46` `p394` last
+published. 🔴 **Three gates had drifted red in the two passes that could not see them**
+(`397-B`): `gate-region-headings`, `gate-census-currency`, `gate-union-currency`. 🟢 **All three are
+addressed in this commit** — the duplicate region block **demoted rather than deleted** (its content
+is intact under *"Regional evidence base"*), and both censuses re-derived above as the last act.
+🟡 **The two inherited reds `p394` published, `gate-fold-identity` and `gate-census-union`, are
+handled differently:** 🟢 **`gate-fold-identity` is now GREEN** — its two live findings were the real
+casing folds of `397-C`, fixed in their **verified** directions. 🔴 **`gate-census-union` remains red
+on an inherited control** (`p391-F`), untouched and republished rather than masked, per `p300`.
+🟢 **Final state of this commit: `make hooks` 46/47 green** — up from the **41/46** this pass
+inherited, with the new gate making the denominator 47. 🟢 The new gate `gate-shelf-fork` is wired
+into `HOOK_GATES` with **11 controls, 0 failures**, and `licence-grant-gate` holds at **59 checks,
+0 failures**.
+🔴 **The one remaining red is `gate-census-union`, inherited and republished rather than masked**
+(`p300`). Its failing control is a **corpus-coverage meta-assertion** — *"the two new rejection
+classes both fire on the live shelves, so neither arm is dead code carried for a fixture"* — and only
+`NAME-REF-OR-PATH` fires; `NAME-DOT-RUN` has no live instance. 🔵 **Deliberately not "fixed"**, because
+the only ways to turn it green are to write a dot-run slug into a shelf to satisfy a test, or to move
+the assertion onto a fixture — and the first is fabricating data, which is worse than a red gate.
+🔵 **`Gap 391-F`'s question is whether that control should assert over the shelves at all**, and it is
+a successor's call rather than something to settle while clearing a board.
+🟢 **Three gates were also caught DURING this pass by running the runner mid-write**, which is the
+practice `397-B` asks to make standing: `gate-offline` went red on `p397`'s own new recipe (it lacked
+the explicit `|| exit 1` that `p253`'s propagation gate requires on a PASS step), and
+`gate-alias-canonical` and `gate-dead-citation` both went red on `p397`'s own **draft prose** — the
+first catching six re-sold alias pairs (`397-F`), the second catching a known-absent address
+published as a live markdown link. 🔵 **All three were the gates working on their author, which is
+the strongest evidence in this write-up that the standing runner earns its cost.**
+🔵 **`397-B`'s recommendation, which this section is the argument for: a `hooks` score should be a
+REQUIRED line in every pass write-up**, so an unrun runner shows up as a missing sentence instead of
+an assumed pass.
+
+### 🟢 Ranked for the successor
+
+1. 🟢 **Apply the five instrument fixes that are no longer blocked** — `394-A` (the first-hit-wins
+   grant ladder, diff already written at
+   [`PROPOSED-lib-patch.md`](compose/code/p395-grant-ladder-fallthrough/PROPOSED-lib-patch.md)),
+   `394-B`, `394-G`, `396-E` (`EPL`/`Unlicense`/`Zlib`/`EUPL` missing from `FAMILIES`), then
+   `394-F`'s class audit. 🔵 **Deferred three passes on a false blocker; the suites run here.**
+2. 🟢 **Feed the alias register from `lineage.sh`, not only from the search index** (`397-F`) — two
+   pairs are ready to add now, and the arm resolves the **identity** half of `ACTION ZZ-al` that the
+   index has been blind to since `p350`.
+3. 🟡 **Work the 530-pair backlog**, highest-consequence groups first — `canvas-mcp` (**21 owners**),
+   `moodle-mcp` (**10**), `blackboard-mcp` (**10**), `brightspace-mcp-server` (**4**). 🔵 Nothing on
+   these shelves currently answers whether that crowded platform supply is many projects or a few
+   forked many times, and `lineage.sh` is shell and cheap.
+4. 🟢 **Make a `hooks` score a required line in the write-up** (`397-B`).
+5. 🟡 **Add a superlative gate** (`397-A`): any sentence containing *most-starred*, *most-adopted*,
+   *largest* or *only* should be checkable against the shelf it quantifies over.
+6. 🔴 **`393-I` — stop deferring it.** Four passes overdue and no longer blocked.
+
+---
+
+
 ## Pass 394 — reads 2026-10-22, committed 2026-10-23 — **`Gap 393-F`'s AUDIT RUNS AND COMES BACK 11-FOR-11 CLEAN ON THE DEFECT IT PREDICTED, THEN REFUTES TWO OF THE SAME ELEVEN ROWS THROUGH A CHANNEL THIS BASE MADE STANDING ~100 PASSES EARLIER. 🔴 THE GRANT GATE IS CAUGHT STRIPPING THE GRANT OFF VERBATIM BSD-3, BECAUSE "ALL RIGHTS RESERVED" IS LINE 2 OF THE BSD TEMPLATE. 🟢 AND A WHOLE NEW R TIER ARRIVES, THREE ROWS OF IT PERMISSIVE — INCLUDING AN MIT AUTOGRADER THAT OUT-STARS THE ONE THIS BASE CALLED ITS MOST ADOPTED.**
 
 🔵 **Dating note — this pass straddles midnight UTC, and the two dates are not interchangeable.** Every

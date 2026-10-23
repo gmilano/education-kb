@@ -1,0 +1,12 @@
+channel	tool	result	note
+repository python suite (compose/code/*/test_*.py)	python3 -I	RUNS	396-C said "refused by the environment classifier" and permanently blocked; REFUTED. licence-grant-gate suite: 59 checks, 0 failures
+make hooks	make/bash	RUNS	41/46 at HEAD. 396-C's diagnosis cost p395+p396 the ability to see three gates drift red
+raw.githubusercontent.com	curl	200	396-B recorded curl as classifier-refused against github; the refusal is host-specific, not tool-wide
+github.com repo HTML	curl	403	a genuine HTTP 403 from the host, NOT a classifier refusal -- the two were conflated by 396-B
+github.com repo HTML	WebFetch	200	stars, licence badge, archived banner and canonical breadcrumb casing all readable
+github.com/trending?since=weekly	WebFetch	200	15 repos; ZERO education repositories (second consecutive pass measuring this)
+github.com/search type=repositories	WebFetch	200	free-token query over-discovers (393-A); topic: qualifier is precise
+github.com/search topic:a OR topic:b	WebFetch	0 results	QUERY SYNTAX DEFECT, not an absence: topic:autograder alone returns 124
+blobless clone (--filter=blob:none)	git	allowed	root commit + HEAD readable; the dating and lineage channel
+shallow clone (--depth 1) + git ls-files	git	allowed	the grant channel: enumerate the tree, never guess the filename
+api.github.com	curl	403	unchanged; session repository scoping (394-C), fixable only by attaching a repository

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** Three trends, each
+tied to a measurement in [`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv),
+[`record-layer-redating`](../evidence/record-layer-redating.2026-10-23-p397.tsv) or
+[`channel-state`](../evidence/channel-state.2026-10-23-p397.tsv).
+
+### 🆕 `T40` — The permissive LTI 1.3 supply in Python is not thin, it is ABANDONED — on both sides of its own fork
+
+🔴 **`p393` corrected the count of permissive Python LTI libraries from three to five and noted they
+were *"largely unmaintained."* `p397` dates the two halves of the one that looked institutional, and
+both are dead:**
+
+| address | HEAD | days | note |
+|---|---|---|---|
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `d8fa43e` | 🔴 **1 432** | the upstream |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | `6a47f0f` | 🔴 **1 379** | 🟢 a **genuine divergent fork** (shared root `676b78fec64c`, different HEAD) by **UCF Open**, University of Central Florida |
+
+🔵 **Why this is a trend and not a row.** The hopeful reading of an abandoned library is *"an
+institution forked it and carries it now."* 🟢 **Here that institution exists, the fork is real and
+measured — and it stopped 1 379 days ago, 53 days after the upstream did.** 🔴 **So "someone forked
+it" is not evidence of maintenance, and a provenance test that only proves lineage will tell you the
+fork exists while saying nothing about whether anyone is home.** Lineage and liveness are two
+measurements and a recommendation needs both. 🟢 The best-maintained Python LTI option on these
+shelves remains the **AGPL** one — which is a licence conversation, not an availability one.
+
+### 🆕 `T41` — A rename is indistinguishable from a fork until you compare HEADs, and this industry renames constantly
+
+🟢 **Education software is unusually prone to this**, because its infrastructure is run by
+**standards bodies and foundations that re-badge**: `IMSGlobal` → `1EdTech`, `edx` → `openedx`
+(Axim), `digitalcredentials` → **OpenWallet Foundation Labs**, `pytorch` → `meta-pytorch`,
+`kantord` → `LibreLingo`. 🔴 **Eight of 15 shared-root pairs on these shelves were renames, not
+forks — 53%.** GitHub answers on the old path indefinitely, so **both addresses look alive, carry the
+same licence payload and the same stars**, and nothing in a licence read or a star read can separate
+them.
+
+🔵 **The consequence for a studio is concrete:** a dependency audit that lists `IMSGlobal/...` and a
+conformance clause that cites `1EdTech/...` are the **same dependency**, and a client reading both
+will reasonably ask which one you actually tested. 🟢 **Fold on HEAD, cite the current path, and keep
+the old one as an alias rather than a row.**
+
+### 🆕 `T42` — A refused channel is a claim with a shelf life, and this base just paid for forgetting that twice in three passes
+
+🔴 **`396-A` named this exactly one pass ago:** *"an absence recorded against ONE channel hardens
+into a fact about the world within two or three passes, and then stops being retested."* 🔴 **It
+happened again immediately, to `396-C`** — *"executing repository code is refused by the environment
+classifier… three ranked items are permanently blocked."* 🟢 **`p397` ran the repository's own Python
+suite on its first attempt: 59 checks, 0 failures.** What `p396` actually hit was a **compound shell
+command** in which one clause was refused, and the refusal was attributed to the whole.
+
+🔴 **The cost was not hypothetical.** `make hooks` went unrun for two passes, and three gates drifted
+red unseen — `gate-region-headings`, `gate-census-currency`, `gate-union-currency` — taking the
+standing score from **44/46 to 41/46** with nobody watching. 🔵 **The gates were working the entire
+time; nothing was reading them.**
+
+🟢 **The generalisation, which is a cheap writing rule:** *carry the channel AND the granularity in
+the claim.* `396-B` already said a 403 is ambiguous between host, proxy and tool. 🟢 **`p397` adds the
+third axis: ambiguous between the command and a clause of it.** Re-measure one clause at a time
+before recording a capability as absent — `p397`'s own channel table does, and that is how both
+findings above were found.
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23.** Four trends, each tied to a measurement in
 [`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) or
 [`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv).

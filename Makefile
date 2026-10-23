@@ -54,6 +54,7 @@ SUBTREE_LOG ?= /tmp/education-kb-gate-subtree-grant.log
 OFFSET_LOG ?= /tmp/education-kb-gate-offset-region.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
+FORKAUDIT_LOG ?= /tmp/education-kb-gate-shelf-fork.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
 ALIAS_LOG ?= /tmp/education-kb-gate-alias-canonical.log
 AUTHORKEY_LOG ?= /tmp/education-kb-gate-author-key.log
@@ -76,7 +77,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -109,7 +110,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-region-place gate-backlog-denominator \
              gate-dead-citation gate-regional-leg gate-census-union \
              gate-union-currency \
-             gate-subtree-grant gate-offset-region \
+             gate-subtree-grant gate-offset-region gate-shelf-fork \
              gate-capability-absence
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
@@ -472,6 +473,17 @@ shelf-census: ## p308 — where the DATED shelves disagree with the live answer.
 gate-address-shape: ## p351 — ACTION ZZ-an: the harvested denominator rejects non-addresses by shape
 	@cd compose/code/p351-address-shape && { $(PY) -I test_address_shape.py > $(SHAPE_LOG) 2>&1 || { echo "🔴 p351-address-shape FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SHAPE_LOG) ; false ; } ; } && echo "── p351-address-shape (22 controls: p350's 8 non-addresses, the 5 ZZ-an's own prescription misses, both arms load-bearing, the awkward-but-legal addresses that must survive)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p351-address-shape/address_shape.py census $(SHELF_FILES) | sed "s/^/   /"
+
+#: 🟢 p397 — `396-F`'s arm at SHELF SCALE.  `p396` ranked this FIRST and could not run it,
+#: because the arm needs a suspected upstream and WebSearch cannot hand over 551 pairs.
+#: `candidates.py` derives them from the shelves with NO network, importing p351's
+#: rejection classes rather than re-implementing them so the denominator agrees with
+#: the published channel-U census (2 694 -> 34 -> 2 660 addresses, 121 groups, 551 pairs).
+gate-shelf-fork: ## p397 — the shelf-wide fork-candidate derivation and the lineage verdict table
+	@cd compose/code/p397-shelf-fork-audit && { $(PY) -I test_candidates.py > $(FORKAUDIT_LOG) 2>&1 || { echo "🔴 p397-shelf-fork-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FORKAUDIT_LOG) ; false ; } ; } && echo "── p397-shelf-fork-audit (11 controls: p351's classes honoured not reimplemented, the channel-U fixture lesson, and the four-way lineage table with SAME-REPO-ALIAS split from DIVERGENT-FORK)" && echo "   PASS" || exit 1
+
+shelf-fork-candidates: ## p397 — the 551 shelf-derived fork candidate pairs, offline
+	@$(PY) compose/code/p397-shelf-fork-audit/candidates.py $(SHELF_FILES)
 
 address-shape-census: ## p351 — every rejected shape with its class.  A backlog, never a failure.
 	@$(PY) -I compose/code/p351-address-shape/address_shape.py reject $(SHELF_FILES) || true

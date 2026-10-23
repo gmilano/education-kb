@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **A platform's
+address and a platform's *project* are not the same thing, and this pass can finally tell the
+difference without reading prose.** `396-F`'s root-commit arm, extended with a HEAD comparison and
+run over the shelf, folded **eight** address pairs into single artefacts — and one of those folds is
+a **governance** change a studio should quote to a client. Evidence:
+[`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv).
+
+### 🔴 The fold this pass thought it had found, and the register that already held it
+
+🔴 **`p397`'s draft announced the credential wallet's move to a Linux Foundation umbrella as a
+governance finding. This shelf already carries it, and `p350` put it there.**
+[`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)
+is recorded `CANONICAL` in [`alias-register`](../evidence/alias-register.2026-10-21-p370.tsv), with
+`digitalcredentials/learner-credential-wallet` as its **STALE** sibling, proven at `p349` from the
+search index's `full_name` and repository `id` — and `p350`'s note says in so many words that the
+canonical was **already applied to this shelf**. 🟢 Caught by `gate-alias-canonical`, which went red
+on the draft.
+
+🟢 **The substance stands and is worth restating once, because it is what a client actually asks:**
+the MIT Digital Credentials Consortium wallet is maintained under **OpenWallet Foundation Labs**, a
+**Linux Foundation** project — a materially better answer to *"who maintains this after the grant
+ends"* than *"a university lab"*. 🔵 **What `p397` adds is corroboration from an independent
+channel**, not the fact: shared root `af51e5505cbf`, identical HEAD `1c46a82ba384`, read from git
+with no index and no API.
+
+🟡 **And one register row this pass can genuinely move.** For `ease`, the register's index channel is
+**blind** — both rows read `index-returns-ZERO` / `NO-CANONICAL`, which is why **`ACTION ZZ-al`** has
+been unresolved since `p350`. 🟢 The clone arm proves [`openedx/ease`](https://github.com/openedx/ease)
+and `edx/ease`, its **STALE** sibling, are **one repository** (shared root `79dd16652a23`, identical
+HEAD `056da0adc6f3`) without the index at all. 🔴 **It cannot say which address is canonical**, which
+is `ZZ-al`'s real question — so the identity half is proven and the direction half is still open.
+🔵 Prefer the `openedx` path for anything written today, on the stewardship argument rather than on
+the register.
+
+### 🔵 The standards layer, de-duplicated
+
+🟢 **`IMSGlobal` → `1EdTech`** is a rename GitHub keeps answering on both paths, and this base
+harvested both for `caliper-spec`, `openbadges-specification` and `lti-1-3-php-library` — three
+"pairs" that are three repositories, not six. 🟢 **Cite the `1EdTech` path** when writing a conformance
+clause into a statement of work; it is the one the standards body publishes from.
+
+🔵 **What did NOT fold, and that is the useful half:** `OpenLRS`
+(`Apereo-Learning-Analytics-Initiative` vs `openHPI`), `qti-convert` (`citolab` vs `rolfis`),
+`ims-lti` (`instructure` vs `omsmith`) and `lrs` (`yetanalytics` vs `escolalms`) all have **distinct
+root commits** — same name, unrelated code. 🔴 **Four same-name pairs on this shelf that a
+name-matching de-duplication would have wrongly merged**, which is the error the arm was built not to
+commit.
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23.** 🟢 **The platform question this shelf could not
 answer until now: once a platform is customised, where does the learning data go, and can the client
 own it?** `p395` settled how an agent *launches* from Moodle, Canvas, Blackboard or D2L (LTI 1.3).

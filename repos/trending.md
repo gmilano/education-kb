@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+## 🔴 🆕 2026-10-23 · `p397` — **"0 RESULTS" FROM A MALFORMED QUERY IS INDISTINGUISHABLE FROM AN ABSENCE, AND THIS BASE WAS ONE SENTENCE AWAY FROM SHELVING ONE. 🟢 THE CURATED-TOPIC CHANNEL IS THE PRECISE HALF OF `396-A`, AND IT PAYS: `topic:autograder` → 124 RESULTS.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23**, the third pass today. **Evidence:**
+[`channel-state`](../evidence/channel-state.2026-10-23-p397.tsv) — 11 channels **per tool** ·
+[`shelf-fork-candidates`](../evidence/shelf-fork-candidates.2026-10-23-p397.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p397.tsv).
+
+### 🔴 The finding `396-A` predicted, one pass later, in a new disguise
+
+`396-A` said an absence recorded against **one channel** hardens into a fact. 🔴 **`p397` found the
+next layer down: an absence recorded against a MALFORMED QUERY.**
+
+| query | result | truth |
+|---|---|---|
+| `topic:intelligent-tutoring-system OR topic:learning-analytics OR topic:autograding OR topic:autograder` | 🔴 **"0 results (15 ms)"** | 🔴 **a SYNTAX defect — GitHub does not support `OR` across `topic:` qualifiers** |
+| `topic:autograder` | 🟢 **124 results** | 🟢 the supply was there all along |
+| `(lms OR moodle OR canvas OR "learning management") license:apache-2.0 stars:>50 pushed:>2026-06-01` | 🔴 **0 results** | 🟡 **unresolved** — plausibly real, but it shares the defective shape, so it is NOT recorded as an absence |
+
+🔵 **The page renders a malformed query and a true nil identically** — same "0 results", same "did not
+match any repositories", same 15 ms. 🟢 **The writing rule, which costs nothing: never record a nil
+from a query whose syntax has not been proved on a positive control.** `p397` proved it by
+decomposing the OR into its single terms, and the first one returned 124.
+
+### 🟢 Channel state, re-measured PER TOOL — and `396-B` needs narrowing
+
+| channel | `curl` | `WebFetch` | note |
+|---|---|---|---|
+| repository python suites | 🟢 **RUNS** | — | 🔴 **`396-C` said permanently refused. REFUTED** — 59 checks, 0 failures |
+| `make hooks` | 🟢 **RUNS** | — | 41/46 at HEAD; three gates had drifted red unseen |
+| `raw.githubusercontent.com` | 🟢 **200** | 🟢 200 | 🔴 `396-B` recorded `curl` as classifier-refused *against github*; the refusal is **host-specific, not tool-wide** |
+| `github.com` repo HTML | 🔴 **403** | 🟢 **200** | 🔵 **a genuine HTTP 403 from the host — NOT a classifier refusal.** `396-B` conflated the two, and they have different remedies |
+| `github.com/trending?since=weekly` | — | 🟢 200 | 🔴 **15 repos, ZERO education** — second consecutive pass measuring this |
+| `github.com/search` | — | 🟢 200 | 🟢 precise on `topic:`, 🔴 over-discovers on free tokens (`393-A`) |
+| `eur-lex.europa.eu`, `artificialintelligenceact.eu` | 🔴 **000 `connect_rejected`** | 🔴 **ENOTFOUND** | 🔴 refused on **both** tools — `Gap 394-D` stays open on a host refusal, not a tool artefact |
+| `api.github.com` | 🔴 403 | — | unchanged: session repository scoping (`394-C`) |
+| blobless / shallow clone | 🟢 allowed | — | the dating, lineage and grant channels — **56 clones this pass** |
+
+🔴 **Trending carries no education repository for the second pass running.** 15 weekly repos: agent
+infrastructure, coding tools, media, one NSA reverse-engineering suite. 🔵 **Recorded as a measured
+absence with its channel named, not as a thin pass.**
+
+### 🟢 What the precise channel actually returned
+
+🟢 `topic:autograder`, sorted by stars — the top of it re-orders this base's own adoption table:
+[`okpy/ok`](https://github.com/okpy/ok) **370 ★** (🔴 532 d), `otter-grader` 161 ★ (🟢 21 d),
+🆕 [`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples) **91 ★**
+(🔴 ungranted at root), 🆕 [`TricksterGuy/complx`](https://github.com/TricksterGuy/complx) 68 ★
+(🔴 1 392 d), `webtech-network/autograder` 62 ★, 🆕
+[`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) **38 ★** (🟢 **MIT**,
+© Turnitin), `infomark-org/infomark` 35 ★, `pedal-edu/pedal` 32 ★.
+🔵 **Three of eight were new; the rest this base already held** — which is the honest hit rate for a
+precise channel over a mature shelf, and it is far better than the free-token query's zero.
+
+### 🔵 Two casing folds adjudicated by reading the breadcrumb, not by publication order
+
+🔴 **`p348`'s gate assumes the FIRST-published casing is canonical. On one of two live cases it was
+wrong.** Read first-hand from the repository header:
+
+| folded | first published here | canonical, read first-hand | agrees? |
+|---|---|---|---|
+| `ai-shifu/ai-shifu` | `ai-shifu/ai-shifu` | 🟢 **`ai-shifu/ai-shifu`** (326 ★, Apache-2.0) | 🟢 yes — 4 uppercase variants normalised **down** |
+| `stevenweathers/peregrine-lti` | `stevenweathers/peregrine-lti` | 🔴 **`StevenWeathers/peregrine-lti`** (7 ★, Apache-2.0) | 🔴 **NO** — 6 lowercase variants normalised **up** |
+
+🟢 `gate-fold-identity` is green and both directions are evidenced in
+[`casing-canonical`](../evidence/casing-canonical.2026-10-23-p397.tsv). 🔵 **The deeper point is
+`p349`'s own rule, which this gate does not yet follow:** canonicality is **evidence to be
+registered**, never something a gate infers at run time — and publication order is an inference.
+`Gap 397-C`.
+
+---
+
 ## 🟢 🆕 2026-10-23 · `p396` — **GITHUB TRENDING IS BACK: 200 AFTER FOURTEEN PASSES OF 403, AND `github.com/search` ENUMERATES 150 RESULTS. 🔴 THE "WE CANNOT ENUMERATE GITHUB" FINDING THAT EXPLAINED FIVE THIN PASSES WAS A TOOL CHOICE, NOT A NETWORK FACT. 🔴 AND THE REOPENED CHANNEL'S DATES ARE WRONG BY UP TO 702 DAYS.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23**, the second pass today. **Evidence:**
@@ -930,7 +1002,7 @@ openeducat/openeducat_erp.
 |---|---|---|
 | [moodle/moodle](https://github.com/moodle/moodle) | **`COPYING.txt`** — there is no root `LICENSE` at all | GPL-3.0 |
 | [frappe/lms](https://github.com/frappe/lms) | **`license.txt`** (lowercase) | AGPL-3.0 |
-| [AI-Shifu/ai-shifu](https://github.com/AI-Shifu/ai-shifu) | `LICENSE.txt` | Apache-2.0 |
+| [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | `LICENSE.txt` | Apache-2.0 |
 | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `LICENSE.txt` | 🔴 **GPL-3.0 — routinely mislabelled MIT** |
 | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | `LICENSE.md` | MIT |
 
@@ -10187,7 +10259,7 @@ Nine `classroom-resources` repositories and `github/gh-classroom` enter these sh
 | [`msaaqcom/nelc-xapi-php-sdk`](https://github.com/msaaqcom/nelc-xapi-php-sdk) | 🟢 **MIT** | xAPI | `2026-10-16`, `master` @ `99386b8ee0a5` | Saudi `NELC` national xAPI profile SDK + Laravel companion |
 | [`lrnfast/lrnr-lti`](https://github.com/lrnfast/lrnr-lti) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `master` @ `d8e118470110` | `5.x` Node LTI provider with a Sequelize store package |
 | [`bnsoftware/lti-1p3-tool`](https://github.com/bnsoftware/lti-1p3-tool) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `master` @ `7e9b1bafa3cf` | permissive PHP LTI 1.3 tool |
-| [`stevenweathers/peregrine-lti`](https://github.com/stevenweathers/peregrine-lti) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `main` @ `a442a55a9ab9` | Go LTI launch validation, narrow by design |
+| [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `main` @ `a442a55a9ab9` | Go LTI launch validation, narrow by design |
 | [`grokify/go-qti`](https://github.com/grokify/go-qti) | 🟢 **MIT** | assessment | `2026-10-16`, `main` @ `26943408ab01` | QTI types in Go |
 | [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | 🟢 **BSD-3-Clause** | assessment | `2026-10-16`, `master` @ `80dac052bec7` | Markdown → QTI authoring, six years of releases |
 | [`BLPS/oneroster-php-api`](https://github.com/BLPS/oneroster-php-api) | 🔴 **GPL-3.0** | rostering | `2026-10-16`, `main` @ `ef87887bf0b1` | 🔴 copyleft-flagged, comparison only |

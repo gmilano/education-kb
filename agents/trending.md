@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+## 🟢 🆕 2026-10-23 · `p397` — **`396-F`'s ARM RUN OVER THE WHOLE SHELF: 551 PAIRS DERIVED WITH NO NETWORK, AND ITS OWN VERDICT LABEL IS WRONG — 8 OF 15 "FORKS" ARE RENAMES. 🔴 AND A SUPERLATIVE THREE PASSES RE-PUBLISHED IS REFUTED BY A ROW THIS BASE ALREADY HELD.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23** — the **third** pass dated today, after
+`p395` and `p396`. **Evidence:**
+[`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv) — 21 pairs ·
+[`shelf-fork-candidates`](../evidence/shelf-fork-candidates.2026-10-23-p397.tsv) — 121 groups ·
+[`record-layer-redating`](../evidence/record-layer-redating.2026-10-23-p397.tsv) — 22 addresses ·
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p397.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-23-p397.tsv) ·
+[`casing-canonical`](../evidence/casing-canonical.2026-10-23-p397.tsv) · instrument, controls and
+unedited output at
+[`compose/code/p397-shelf-fork-audit/`](../compose/code/p397-shelf-fork-audit/README.md).
+
+### 1. 🔴 `okpy/ok` — 370 ★, Apache-2.0, and it refutes a sentence on five shelves
+
+`p394` wrote *"the most-starred autograder on these shelves was never the Python one, and it is
+MIT"* (`gradethis`, 164 ★). 🔴 **[`okpy/ok`](https://github.com/okpy/ok) — Apache-2.0, 370 ★, UC
+Berkeley — has been on these shelves since `pass 85`, and `agents/trending.md` names it in the same
+comparison group as `otter-grader`, one line apart.** Re-read first-hand: **370 ★**, 88 forks,
+🟢 no archived banner, HEAD `f5610a7` **2025-05-07 — 532 d**.
+🔵 The claim holds only under an unwritten *"excluding the stale ones"*. 🟢 **Corrected at all eight
+live-shelf sites**; the two mentions on the append-only shelves are left as written, because a
+correction belongs in a new dated entry. `Gap 397-A`.
+
+### 2. 🟢 The arm, at shelf scale — and the label `396-F` got wrong
+
+🟢 **`396-F` named its own blocker:** the arm *"needs a suspected upstream… discovery of the pair is
+still WebSearch's job."* 🟢 **So the pairs were derived from the shelves:** same repository **name**,
+different **owners**. **2 694 harvested → 34 rejected → 2 660 addresses → 121 groups → 551 pairs**,
+on p351's imported rejection classes so the denominator matches the published channel-U census.
+
+🔴 **`SHARED-ROOT -> FORK LINEAGE` is a string matched to a property — the `Trend 25` error inside
+the instrument built to fix `Trend 25`.** A shared root is shared **ancestry**: a fork, a **rename**,
+a **transfer** and a re-push all produce it. 🟢 **Fixed with one more field off the same clone:**
+
+| verdict | n | examples |
+|---|---|---|
+| 🔴 `SAME-REPO-ALIAS` (same root, **same HEAD**) | **8** | `1EdTech`↔`IMSGlobal` ×3, `edx`↔`openedx` `ease`, `pytorch`↔`meta-pytorch` `opacus`, `kantord`↔`LibreLingo`, `digitalcredentials`↔`openwallet-foundation-labs` |
+| 🟢 `DIVERGENT-FORK` (same root, **different HEAD**) | **7** | `learnmcp-xapi` (`p396`'s catch, reproduced **blind**), `pylti1.3`, `lm-evaluation-harness`, `ltijs`, `OpenLRW`, `open-unlearning`, `lti-1-3-php-library` |
+| 🟢 `INDEPENDENT` (distinct roots) | **4** | `OpenLRS`, `qti-convert`, `ims-lti`, `lrs` — same name, unrelated code |
+| 🔵 `INCONCLUSIVE-UNRESOLVABLE` | **2** | 🔵 never called INDEPENDENT from a failed read |
+
+🟢 **The control that matters:** `agent0ai/agent-zero`↔`frdel/agent-zero` returns `SAME-REPO-ALIAS`,
+and the `p349` alias register — built from the search index's `full_name`, a **completely different
+method** — already records that relation. **Two methods, one answer.**
+🔴 **Backlog, stated: 551 derived, 21 adjudicated, 530 unexamined.**
+
+### 3. 🔴 `396-C` is REFUTED, and it cost two passes of gate blindness
+
+`396-C`: *"executing repository code is refused by the environment classifier… three ranked items are
+permanently blocked."* 🟢 **`p397` ran the suite on its first attempt — `licence-grant-gate`,
+59 checks, 0 failures.** `p396` had hit a **compound shell command** with one refused clause and
+attributed the refusal to the whole thing.
+🔴 **The price:** `make hooks` unrun for two passes, **three gates drifted red unseen** —
+`gate-region-headings`, `gate-census-currency`, `gate-union-currency` — taking the standing score
+from **44/46 to 41/46**. 🔵 **The gates worked the whole time; nothing read them.** `T42`, `397-B`.
+
+### 4. 🟢 Three new addresses, and `396-H` unmoved
+
+🟢 [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) — **MIT**
+(1,070 B, `1fa57a15a75b`, © 2022 **Turnitin, LLC**), **38 ★**, 69 d.
+🔴 [`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples) — **91 ★** and
+**ungranted at root**; the only MIT in the tree is a **vendored** `jh61b` library two directories
+down (1,075 B, `8a6114b1d4ae`). GitHub shows no licence either, so for once both agree.
+🟡 [`TricksterGuy/complx`](https://github.com/TricksterGuy/complx) — **GPL-3.0**, 68 ★, 🔴 **1 392 d**.
+🔴 [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) re-dated as `p396` asked:
+**419 d, HEAD `fbf6091` — byte-identical, unmoved.** The whole agent↔LRS supply, still one dead repo.
+
+### 5. 🔴 What this pass caught in its own draft
+
+- 🔴 It was going to publish `apereo/opencast`'s 404 as a discovery. **This base proved it dead at
+  `p230` on 2026-10-15** and holds it in a `dead-successor-register`. Rewritten as a corroboration.
+  🔵 `p393`'s *"a new channel's first temptation is to re-sell what you already own"* has now fired
+  three passes running.
+- 🔴 It wrote *"corrected in all five places"* **before counting the sites**. There are **eight** —
+  the same not-deriving-the-denominator error as `Gap 397-A`, one screen above its own diagnosis.
+- 🔴 **It offered all eight `SAME-REPO-ALIAS` pairs as findings and claimed this base had no gate for
+  them. `gate-alias-canonical` — standing ~48 passes — went RED on the draft shelves and caught it.**
+  🔴 **Six of the eight have been in [`alias-register`](../evidence/alias-register.2026-10-21-p370.tsv)
+  since `p349`**, and `learner-credential-wallet`'s row carries `p350`'s note that the canonical was
+  *already applied* to the two shelves the draft "found" it on. 🟢 **Genuinely new: two**
+  (`lti-1-3-php-library`, `opacus`). 🟢 **The arm's real contribution is a second channel where the
+  register's is blind** — `ease` reads `index-returns-ZERO` in the register, and the arm proves
+  identity from git alone. See `397-F`.
+- 🔴 `topic:education topic:ai stars:>30` returned **48 results** whose top four (`learnhouse` 2.4k ★,
+  `PageLM` 2k ★, `Echo-Loop` 4.2k ★, `penecho` 2.5k ★) are **all already shelved** — `learnhouse` in
+  129 files here. Declined, not announced.
+
+---
+
 ## 🟡 🆕 2026-10-23 · `p396` — **THE RECORD LAYER IS MAPPED AND THE AGENTS ARE NOT ON IT: ONE 15 ★ MIT MCP BRIDGE, 419 DAYS DEAD, IS THE WHOLE OF THE AGENT↔LRS SUPPLY. 🟢 AND THE FORK ARM `395-A` ASKED FOR NOW EXISTS, RUNS, AND CAUGHT ONE ON ITS FIRST OUTING.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23** — the *second* pass dated today, after
@@ -12422,7 +12513,7 @@ p236 called `45`% *"this KB's steady-state rediscovery rate at its current reach
 | [`msaaqcom/nelc-xapi-php-sdk`](https://github.com/msaaqcom/nelc-xapi-php-sdk) | 🟢 **MIT** | xAPI / national conformance | `2026-10-16`, `master` @ `99386b8ee0a5` | written against the Saudi `NELC` national xAPI profile — the only national-profile row here. EMEA, placed on its name |
 | [`lrnfast/lrnr-lti`](https://github.com/lrnfast/lrnr-lti) | 🟢 **Apache-2.0** | standards-native / LTI 1.3 | `2026-10-16`, `master` @ `d8e118470110` | a `5.x` Node LTI provider — ends `ltijs` being this shelf's single Node dependence |
 | [`bnsoftware/lti-1p3-tool`](https://github.com/bnsoftware/lti-1p3-tool) | 🟢 **Apache-2.0** | standards-native / LTI 1.3 (PHP) | `2026-10-16`, `master` @ `7e9b1bafa3cf` | a PERMISSIVE PHP LTI tool, where the `oat-sa` estate is `GPL`/`LGPL` throughout |
-| [`stevenweathers/peregrine-lti`](https://github.com/stevenweathers/peregrine-lti) | 🟢 **Apache-2.0** | standards-native / LTI launch | `2026-10-16`, `main` @ `a442a55a9ab9` | narrow-scoped Go launch validation; the comparison implementation for `T232-C` |
+| [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti) | 🟢 **Apache-2.0** | standards-native / LTI launch | `2026-10-16`, `main` @ `a442a55a9ab9` | narrow-scoped Go launch validation; the comparison implementation for `T232-C` |
 | [`grokify/go-qti`](https://github.com/grokify/go-qti) | 🟢 **MIT** | assessment / QTI types | `2026-10-16`, `main` @ `26943408ab01` | QTI item/response/section/test types in Go — the live sibling of the `404` the registry also lists |
 | [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | 🟢 **BSD-3-Clause** | assessment / QTI authoring | `2026-10-16`, `master` @ `80dac052bec7` | authors QTI from Markdown — the input end of the chain p231 closed the judging end of |
 | [`BLPS/oneroster-php-api`](https://github.com/BLPS/oneroster-php-api) | 🔴 **GPL-3.0** | rostering / OneRoster | `2026-10-16`, `main` @ `ef87887bf0b1` | 🔴 COPYLEFT-FLAGGED, carried for comparison only |

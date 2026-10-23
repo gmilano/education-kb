@@ -4,6 +4,19 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **All four regional
+legs returned facts and none returned an address, which is this instrument working as designed
+(`393-A`): the brief's legs are market intelligence, not supply.** Every region below carries a dated
+`p397` entry, and the two that returned least say so explicitly. 🔴 **A structural fix shipped here
+too:** this file carried **two** `## Opportunities by region` blocks — `gate-region-headings` had
+been red since `p395` wrote the second one and **no pass could see it, because `make hooks` went
+unrun for two passes on `396-C`'s false diagnosis.** 🟢 The `p395` block is **demoted, not deleted**
+(its content is intact under *"Regional evidence base"*), the gate is green, and the single block is
+the fresher one. Evidence:
+[`regional-legs`](../evidence/regional-legs.2026-10-23-p397.tsv) — 9 legs ·
+[`channel-state`](../evidence/channel-state.2026-10-23-p397.tsv) — 11 channels per tool.
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23.** 🟢 **`Gap 394-E` is substantively ANSWERED, and
 the way it was answered corrects `395-B`'s remedy.** `394-E` asked for the reason behind LATAM's
 thin assessment demand, named the UNESCO IESALC instrument as the likeliest place a *why* was written
@@ -65,6 +78,19 @@ never quote a single point.
 
 ### North America
 
+🟢 **🆕 `p397` · 2026-10-23 — the K-12 statute list, corroborated and extended on a second leg.** This
+pass's North America leg returns the same binding core and adds two curriculum mandates this shelf
+did not carry: 🟢 **Alabama HB 329** (an approved computer-science course **including AI instruction**
+as a **high-school graduation requirement**) and 🟢 **California AB 2876** (AI literacy integrated
+into K-12 **maths, science, history–social science and ELA**). 🔵 **These are a different buyer from
+the policy mandates:** a graduation requirement is a **curriculum and teacher-training** procurement,
+not a governance document. 🟢 Also corroborated: **Ohio** (district AI policies due **1 July 2026**)
+and **Tennessee** as the two earliest binding district mandates.
+🔴 **`393-C` still stays open and the reason is now measured on two tools, not one:**
+`www.multistate.us` and `crpe.org` are `connect_rejected` on **curl and WebFetch alike**, so no US
+state rule on this shelf has been read at its primary source. 🔵 Every figure in this subsection is
+**secondary**.
+
 🔴 **Regulation is K-12 and it is binding.** A tracker counts **35 states plus Puerto Rico** with
 official K-12 AI guidance (August 2026); **134+ bills across 31 states** were introduced this
 session. Enacted and specific: **Maryland S.B. 720** (state AI guidance, professional development,
@@ -82,6 +108,22 @@ and Canada faculty intent to use AI **down 9 points, 76% → 67%**.
 `crpe.org` are both `connect_rejected` (`396-D`).
 
 ### EMEA
+
+🟡 **🆕 `p397` · 2026-10-23 — the contested date, now with a consistent secondary account and a
+primary channel that is still shut.** This pass's EMEA leg returns a specific instrument:
+🟡 **the Digital Omnibus, Regulation (EU) 2026/1744, published in the Official Journal on
+2026-07-24**, deferring the **Annex III** high-risk education obligations from **2026-08-02** to
+🟡 **2027-12-02**. It also places **Article 50** transparency as applying **since 2026-08-02** — so a
+student-facing chatbot must already disclose that it is AI — and confirms the **emotion-recognition
+prohibition** in education as in force since **2025-02-02**.
+🔴 **`Gap 394-D` is NOT closed, and this pass is explicit about why.** `eur-lex.europa.eu` and
+`artificialintelligenceact.eu` were re-measured on the cadence `396-A` asks for and are
+**`connect_rejected` on BOTH curl and WebFetch** — a host-level refusal, not a tool artefact. 🔵 So
+the two dates are no longer *equally* supported — the deferral account is consistent across
+independent secondaries — but **nothing here has been read in the Official Journal.** 🟢 Quote the
+deferral, name it secondary, and have counsel confirm before a client plans around **2027-12-02**.
+🔵 **The engineering consequence does not move either way:** Article 50 disclosure and Article 26
+deployer logging are live now, and both are record-layer work.
 
 🔴 **The prohibition is the thing to design around, not the obligations.** Emotion-inference in
 education is **banned outright** under the AI Act (in force since 2 February 2025, alongside the AI
@@ -104,6 +146,28 @@ a European sovereignty conversation.
 
 ### APAC
 
+🟢 **🆕 `p397` · 2026-10-23 — APAC's regulatory asymmetry is the sellable fact, and the mandates are
+now dated.** 🟢 **South Korea** has the region's **first comprehensive binding AI law, in force
+January 2026** — the same jurisdiction whose AI-textbook rollback this shelf already records, so it is
+now both the region's cautionary adoption tale **and** its strictest regime. 🟢 **China**: no general
+AI law, but service-specific rules including **AI-generated-content labelling in force since
+2025-09-01**, and **AI instruction compulsory in schools from age six** — the largest mandated
+deployment anywhere. 🟢 **India**: no dedicated AI statute; **AI and computational thinking
+compulsory from Class 3 beginning in the 2026–27 academic year**, backed by the **IndiaAI Mission**
+and teacher training, with **synthetic-content labelling from 2026-02-20**. 🟡 **Japan**: the **AI
+Promotion Act carries no penalties and no power to name non-compliant operators**, and a second **AI
+Basic Plan** (July 2026) is a strategy document rather than a statute.
+🔵 **So one region spans a binding comprehensive law, a labelling-only regime, a mandate with no
+statute behind it and a promotion-first framework — and a multi-jurisdiction APAC deployment needs
+the policy layer to be configurable per country rather than compiled in.** 🟢 This corroborates
+`p394`'s one-engineering-obligation reading from the opposite direction: NA/EU converge on *"a
+reviewable decision with an override path"*, APAC does **not** converge at all.
+🔴 **Still an informed gap, stated so silence cannot read as coverage:** this leg returned
+**no APAC education-AI adoption percentages** — the fourth consecutive pass with none, against
+LATAM's two independent surveys. 🟡 The one attitudinal reading available is Ipsos Education
+Monitor 2026: lower support for banning AI in schools across the Asian markets surveyed, **with
+Australia and New Zealand the exception**.
+
 🔴 **The region's lesson this year is a failure, and it is the most useful thing in it.** **South
 Korea** rolled AI digital textbooks back to optional *"educational material"* within a year —
 adoption below **30%** by March, official status removed by the National Assembly — then committed
@@ -121,6 +185,21 @@ The LRS layer is North American (Yet Analytics, ADL, pelotech) and European (Fra
 Numérique). An APAC engagement adopts foreign infrastructure on this layer or builds.
 
 ### LATAM
+
+🟢 **🆕 `p397` · 2026-10-23 — the regulatory volume behind `396-D`'s governance finding, quantified.**
+🟢 An **August 2026 study counts 716 AI regulatory instruments across 23 Latin American countries and
+territories**, described as a normative wave beginning in 2023 — and its own conclusion is that
+**legislating fast is not legislating well**. 🔵 **Read it against the `87% adopting / 26% with a
+formal strategy` split this base closed `394-E` on:** the instruments exist at *state* level while
+**institutions** have no strategy, so a vendor meets a jurisdiction that has rules and a client that
+has none. 🟢 **That is the governance-first sale, with a number behind it now.**
+🟢 **UNESCO's Observatory on AI in Education for Latin America and the Caribbean** is the regional
+instrument to cite, and a regional **roadmap for 2026–2027** is reported agreed. 🔴 **No shared
+higher-education AI framework exists** — university-level decisions are taken in isolation, which
+corroborates IESALC from an independent source.
+🔵 **All of this is secondary** (`396-D`: every LATAM host measured here is refused), and the
+Spanish-language leg is again what returned it — the fourth pass running where a non-English leg
+out-performs its English sibling on this region.
 
 🟢 Figures above: **87% adopting, 26% with a strategy**, private non-profits leading at 84%, public
 institutions at 68%.
@@ -287,7 +366,7 @@ sits at 26–54% and ROI satisfaction at 29%. Ellucian names **data privacy as t
 The sellable work in 2026–27 is not "introduce AI" — it is **governance, evidence and
 consolidation of what is already in use.**
 
-## Opportunities by region
+## Regional evidence base — detail carried from earlier passes
 
 ### Global
 
@@ -1118,7 +1197,7 @@ programmes that already deployed agents, and **corporate academies** rather than
    generation path**. This is a build, not a policy memo, and it is already overdue.
 2. **The region is the open-source supply.** The strongest permissive education agents are APAC:
    [DeepTutor](https://github.com/HKUDS/DeepTutor) (Apache-2.0, HKU),
-   [ai-shifu](https://github.com/AI-Shifu/ai-shifu) (Apache-2.0, China),
+   [ai-shifu](https://github.com/ai-shifu/ai-shifu) (Apache-2.0, China),
    [educhain](https://github.com/satvik314/educhain) (MIT, India),
    [Flat](https://github.com/netless-io/flat) (MIT) — and Moodle itself is Australian in origin.
    An APAC engagement can be built almost entirely on region-native permissive code.

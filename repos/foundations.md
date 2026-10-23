@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🔴 **Eight addresses on
+these shelves are not eight repositories.** `396-F`'s arm, run over the whole shelf for the first
+time, found **eight pairs that share a root commit AND a HEAD** — one artefact answering at two
+addresses — and three of those pairs sit on the **standards tier this shelf added at `p393`.**
+Evidence: [`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv) ·
+[`shelf-fork-candidates`](../evidence/shelf-fork-candidates.2026-10-23-p397.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p397.tsv).
+
+### 🔴 The standards tier carries the same artefacts twice, under a rename this shelf never folded
+
+🟢 **`IMSGlobal` became `1EdTech`** in 2022, GitHub keeps the old organisation path answering, and
+**this shelf harvested both.** Proven by root **and** HEAD, not by the name:
+
+| folded pair | root (12) | HEAD (12) | verdict |
+|---|---|---|---|
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) ↔ `IMSGlobal/caliper-spec` | `563b4accbb4a` | `1849e118b47a` | 🔴 **SAME REPO** |
+| [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) ↔ `IMSGlobal/openbadges-specification` | `21cbb1d20fcc` | `04c4bc2ee16d` | 🔴 **SAME REPO** |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) ↔ `IMSGlobal/lti-1-3-php-library` | `db5856f2f782` | `3a192de99f37` | 🔴 **SAME REPO** |
+| `1EdTech/lti-1-3-php-library` ↔ [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `db5856f2f782` | 🟢 `66d8e4e4b9bd` **differs** | 🟢 **genuine divergent fork** |
+
+🔵 **The fourth row is why the HEAD field had to be added.** `packbackbooks` shares the ancestry and
+has moved independently — so of four same-name pairs on one tier, **three are a bookkeeping artefact
+and one is a real engineering choice**, and `396-F`'s single `FORK LINEAGE` verdict called all four
+the same thing. 🟢 **Use the `1EdTech` path**: it is where the standards body publishes now.
+
+### 🔴 And the correction this pass owes its own audit: SIX of the eight folds were ALREADY REGISTERED
+
+🔴 **`p397`'s draft presented all eight `SAME-REPO-ALIAS` pairs as findings, and claimed this base
+had no gate for them. Both halves are wrong, and `gate-alias-canonical` is what caught it** — the
+gate went red on this very shelf while the draft sat in the tree.
+
+🟢 **The register and the gate both already exist**, built at `p349`/`p350` from the **search
+index's `full_name` and repository `id`** — a channel entirely independent of this pass's clone
+arm. Against [`alias-register`](../evidence/alias-register.2026-10-21-p370.tsv):
+
+| pair | register state | new to the register? |
+|---|---|---|
+| `1EdTech/caliper-spec` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
+| `1EdTech/openbadges-specification` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
+| `kantord/LibreLingo` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
+| `agent0ai/agent-zero` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
+| [`openedx/ease`](https://github.com/openedx/ease) + `edx/ease`, its STALE sibling | 🟡 `NO-CANONICAL` ×2 — **`ACTION ZZ-al`, unresolved since `p350`** | 🔴 **no** |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) + `digitalcredentials/learner-credential-wallet`, its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` — 🔵 **`p350` already applied the canonical to this shelf and `verticals/solutions.md`** | 🔴 **no** |
+| `1EdTech/lti-1-3-php-library` + `IMSGlobal/lti-1-3-php-library` | 🆕 **absent** | 🟢 **YES** |
+| `pytorch/opacus` + `meta-pytorch/opacus` | 🆕 **absent** | 🟢 **YES** |
+
+🔴 **So the honest arithmetic is 2 new alias pairs, not 8** — and the draft's *"a census-integrity
+defect this base has no gate for"* was describing a gate that has been standing for ~48 passes.
+🔵 **`p393`'s warning fired for the third time in this one pass.**
+
+🟢 **What the clone arm genuinely adds, and it is not nothing.** The register's channel is the
+**search index**, and for `ease` that channel is **blind**: both rows read `index-returns-ZERO`,
+`NO-CANONICAL`, *"the index answers neither address"* — which is why `ACTION ZZ-al` has sat
+unresolved since `p350`. 🟢 **The clone arm answers from git alone: shared root `79dd16652a23`,
+identical HEAD `056da0adc6f3`, so the two addresses are provably ONE repository** even though the
+index cannot see either. 🔴 **It still cannot say WHICH is canonical** — that is `p349`'s rule and
+`ZZ-al`'s actual question — so `ZZ-al` is **narrowed, not closed**: the *identity* half is now
+proven, the *direction* half still needs a channel the arm does not have.
+
+### 🟢 One new permissive row, grant read by enumerating the tree
+
+| Repo | Ref · HEAD | Licence — first-hand | ★ | Why it is here |
+|---|---|---|---|---|
+| 🆕 [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) | `master` · `5689b27` · **69 d** | 🟢 **MIT** *(`LICENSE`, 1,070 B, `sha256`₁₆ `1fa57a15a75b`, © 2022 **Turnitin, LLC**)* | **38** | Python harness for **Gradescope** autograders: result JSON, visibility, per-test weighting. 🔵 **The grant is the platform vendor's own** — Gradescope belongs to Turnitin — so an institution that already pays for Gradescope can have a permissive autograder on top of what it licenses, with no new procurement. 🟢 Pairs with `otter-grader` and `edulinq/autograder-py` rather than competing. |
+
+🔴 **And one 91 ★ address that must NOT be vendored:**
+[`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples) has **no licence
+at its root** — the only grants in the tree are two **vendored** `jh61b` MIT files (1,075 B,
+`8a6114b1d4ae`, © 2016 Josh Hug). 🟢 GitHub shows no licence either, so for once this base's verdict
+and GitHub's classifier agree. 🔵 **`p382`'s subtree axis at its sharpest: the MIT in the tree belongs
+to a third party's teaching library, and it does not travel to the samples.** Read it; do not fork it.
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23 — second pass of the day, after `p395`.**
 🟢 **`p395` dated the LAUNCH layer (LTI 1.3) end to end. This pass does the matching RECORD layer
 (xAPI / Learning Record Store) — 28 addresses, one sitting — and the two tables together answer a
@@ -142,7 +215,8 @@ CS-teaching stack**, and the surprise is in the licence column rather than the t
 components that run the teaching loop are **permissive** (`gradethis` 🟢 MIT **164 ★**, `learnr`
 🟢 Apache-2.0 **738 ★**, `ottr` 🟢 BSD-3-Clause), and every component that **measures the learner** is
 GPL (`exams`, `mirt`, `catR`, `TAM`, `ShinyItemAnalysis`). 🟢 **`gradethis` at 164 ★ edges
-`otter-grader` at 161 ★**, so the most-adopted autograder on this shelf was never the Python one.
+`otter-grader` at 161 ★**, so the most-adopted *maintained* autograder on this shelf was never the
+Python one. 🔴 **`Gap 397-A`:** outright, `okpy/ok` leads at **370 ★** — Apache-2.0, Berkeley, **532 d** stale.
 🟢 **And `cran/exams` is the broadest assessment exporter this base carries** — QTI 1.2 and 2.1,
 Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS and six more, **plus NOPS**, a printed exam that is
 scanned and marked automatically, which is the only offline assessment loop here. 🔴 Five of those
@@ -279,7 +353,7 @@ rather than forking the platform. Recipes in [`compose/patterns.md`](../compose/
 | [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🔴 `master` | 🟢 **BSD-3-Clause** | Autograding at Berkeley cohort scale; container-isolated execution. |
 | 🆕 `p393` [edulinq/autograder-py](https://github.com/edulinq/autograder-py) | `main` · `7984bd2` | 🟢 **MIT** *(1,071 B, `7eb48830c022`)* | The **submission and feedback** client for the edulinq autograding server — the half `nbgrader` and `otter-grader` leave to the institution. **49 releases**, 494 commits, HEAD **2026-10-02 — 20 d**, **16 ★**. 🔵 Pairs with `otter-grader` (grading) rather than competing with it. |
 | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Pedagogical assessment of *how* code was written. The missing half of autograding. 🔴 🆕 `p387`: **PyPI `pybryt` has had no release since v0.7.0 on 2022-04-28.** Keep it as the design it states, vendor the code, and do not sell a client a dependency that has not shipped in four and a half years. The maintained halves of this tier (`nbgrader`, `otter-grader`) are where the running infrastructure should sit. |
-| 🆕 `p394` [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · `48aaf89` | 🟢 **MIT** *(1,078 B, `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **Automated feedback for student exercises**, from **Posit Software, PBC**. `grade_this_code()` compares against a model solution; `grade_this()` takes a predicate you write. HEAD **2026-06-18 — 126 d**, **164 ★**, 41 forks. 🟢 **The most-starred autograder on this shelf and the most permissively licensed** — it edges `otter-grader` at 161 ★. 🔴 **Not a CRAN package** (`cran/gradethis` ABSENT), so install from GitHub or r-universe, not from CRAN. |
+| 🆕 `p394` [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · `48aaf89` | 🟢 **MIT** *(1,078 B, `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **Automated feedback for student exercises**, from **Posit Software, PBC**. `grade_this_code()` compares against a model solution; `grade_this()` takes a predicate you write. HEAD **2026-06-18 — 126 d**, **164 ★**, 41 forks. 🟢 **The most-starred *maintained* autograder on this shelf and the most permissively licensed** — it edges `otter-grader` at 161 ★. 🔴 `okpy/ok` leads outright at **370 ★**, 532 d stale (`Gap 397-A`). 🔴 **Not a CRAN package** (`cran/gradethis` ABSENT), so install from GitHub or r-universe, not from CRAN. |
 | 🆕 `p394` [rstudio/learnr](https://github.com/rstudio/learnr) | `main` · `e7164a8` | 🟢 **Apache-2.0** *(10,472 B, `60a581bccd57`)* | **Interactive tutorials in R Markdown** — the runtime `gradethis` grades inside; the two are a pair, not alternatives. **738 ★**, 241 forks. 🟡 HEAD **2025-11-13 — 343 d**: a stable substrate rather than an abandoned one, and the movement is in `gradethis`. |
 | 🆕 `p394` [ucbds-infra/ottr](https://github.com/ucbds-infra/ottr) | 🔴 `master` · `693b3df` | 🟢 **BSD-3-Clause** *(1,555 B, `1677c5307530`; `DESCRIPTION`: `BSD_3_clause + file LICENSE`)* | **The R autograding extension for `otter-grader`** (row above), UC Berkeley Data Science Education Program — grades R scripts, Rmd documents and Jupyter notebooks with R kernels. HEAD **2026-07-06 — 108 d**. 🟢 So this tier's flagship autograder is permissive in **both** languages. 🔴 **3 ★**: the adoption sits on the Python parent, but this is the component an R course actually deploys. |
 | 🆕 `p394` [cran/exams](https://github.com/cran/exams) | `master` · `baa3e28` | 🟡 **GPL-2 \| GPL-3** — 🔴 **disjunctive**, and 🔴 **no licence file at any tree path**: the grant is the `License:` field in `DESCRIPTION` | **R/exams v2.4-5**, Achim Zeileis (R-project). HEAD **2026-10-08 — 14 d**. 🟢 **The broadest assessment exporter on these shelves**: QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam — read from the `R/` source filenames in the clone (`exams2qti21.R`, `exams2moodle.R`, `exams2canvas.R`, …), not from its prose. 🟢 **Plus NOPS**: a standardised PDF printed, scanned and marked automatically — the only offline assessment loop in this base. 🔵 Belongs with **Tier 8** as much as here; it is the generator the standards layer consumes. |

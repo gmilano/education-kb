@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-23
 ---
 
+
+**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **`p396` ranked
+re-running the xAPI 2.0 bake-off second, on the grounds that *"three claimants at 1 star between them
+will move fast or die; either outcome changes the recommendation."* They moved — and they did not
+move together.** One new pattern, and `Pattern AE` amended rather than restated. Evidence:
+[`record-layer-redating`](../evidence/record-layer-redating.2026-10-23-p397.tsv) ·
+[`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv).
+
+## 🟢 `Pattern AE` AMENDED — the xAPI 2.0 bake-off now has an activity ranking
+
+🔵 `Pattern AE` told a studio to adjudicate three zero-star LRS claimants itself, because *"reputation
+cannot decide this."* That still stands. 🟢 **What `p397` adds is the one signal that was missing:
+which of them is actually being built.** Dated on the git channel, never on the HTML "Updated" column
+(`396-G`):
+
+| candidate | stack | `p396` | `p397` HEAD | days | reading |
+|---|---|---|---|---|---|
+| [`nurullahturkoglu/xapi-dotnet`](https://github.com/nurullahturkoglu/xapi-dotnet) | ASP.NET Core | "under 75 d" | `0d47d65` 2026-10-21 | 🟢 **1** | 🟢 **under active daily development** |
+| [`codetakt/kiva`](https://github.com/codetakt/kiva) | Rust, F\* proofs | "under 75 d" | `addf100` 2026-10-21 | 🟢 **2** | 🟢 **also moving**; 🔵 still the only one whose README *withdraws its own conformance claim* |
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | TypeScript/Hono/Postgres | "under 75 d" | `4d18e0c` 2026-08-08 | 🔴 **75** | 🔴 **has not moved at all** since `p396` measured it |
+
+🟢 **So the "all three are under 75 days" sentence has split into two live projects and one
+stalled one**, and the bake-off order changes accordingly: 🟢 **run `xapi-dotnet` and `kiva` first**,
+and treat `xapi-lrs` as the control rather than a contender until it commits again.
+
+🔴 **The tooling half of `Pattern AE` is the part that has aged, and it matters more than the
+candidates.** [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+is 🟢 MIT, 78 ★ — and **`5bc232d`, 2025-09-04, 413 d**, unchanged. 🔵 **You are asked to certify
+2.0 conformance with a suite that has not been touched in fourteen months**, while the implementations
+it judges change weekly. 🟢 [`yetanalytics/lrs-test-runner`](https://github.com/yetanalytics/lrs-test-runner)
+(Apache-2.0, **6 d**) and [`yetanalytics/xapi-schema`](https://github.com/yetanalytics/xapi-schema)
+(**6 d**) are both live, so the **CI harness around the suite is maintained even though the suite is
+not.** 🔴 **Quote that asymmetry to a client before you quote a pass rate.**
+
+## 🆕 `Pattern AF` — prove provenance BEFORE you prove the licence, in two commands
+
+**When.** Any engagement that is about to adopt, fork or warrant an open-source education component
+— and especially when the candidate came out of a search result rather than a standards document.
+
+🔴 **Why it goes first.** A licence read **cannot** tell a fork from its upstream: the payload is
+usually byte-identical, so the grant channel is blind by construction (`395-A`). A star read cannot
+tell a rename from a fork either: GitHub answers on the old organisation path indefinitely and shows
+the same stars. 🔴 **On these shelves, 8 of 15 shared-root pairs were renames and 7 were real
+forks** — and nothing short of comparing commits separates them.
+
+**The recipe, and it needs no API, no HTML and no credentials.**
+
+1. **Root commit** — shared root means shared ancestry:
+   `git clone --filter=blob:none --no-checkout -q https://github.com/OWNER/REPO d && git -C d rev-list --max-parents=0 HEAD`
+2. **HEAD** on the same clone: `git -C d rev-parse --short=12 HEAD`
+3. **Adjudicate**: same root + same HEAD → **one artefact, two addresses** (fold them, cite the
+   current path); same root + different HEAD → **a real fork** (now decide which side to carry);
+   distinct roots → **unrelated** despite the shared name; either side unresolvable → **inconclusive**,
+   never "independent".
+4. 🟢 **Then date both sides**, because step 3 tells you the fork is real and nothing about whether
+   anyone maintains it. `T40` is the cautionary case: `ucfopen/pylti1.3` is a genuine institutional
+   fork of `dmitry-viskov/pylti1.3`, and **both are over 1 370 days dead.**
+5. **Only now read the grant**, and read it by enumerating the tree
+   (`git ls-files | grep -iE '(licen[cs]e|copying)'`) rather than guessing filenames — that is how
+   this pass found [`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples)
+   ungranted at root with vendored third-party MIT two directories down.
+
+🟢 **Wired and runnable:** `bash compose/code/p397-shelf-fork-audit/lineage.sh OWNER_A/REPO OWNER_B/REPO`,
+with `make shelf-fork-candidates` deriving the candidate pairs from the shelves themselves and
+`make gate-shelf-fork` holding 11 controls. 🔴 **Stated limit:** a squashed or re-rooted fork reads as
+independent — no false positives, possible false negatives.
+
+🔵 **Cost: two blobless clones per pair, a few seconds each.** `p397` ran 21 pairs inside one pass.
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23.** Two patterns, both built on grants and dates
 read first-hand this pass:
 [`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv).
@@ -164,7 +233,8 @@ and WeChat**, so a non-APAC deployment replaces the messaging layer. And at **10
 
 **🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** Two new patterns, both built on grants
 read at the payload this pass. 🟢 **`Pattern AB`** — the **R statistics course graded automatically**,
-closing the hole `p393` named when it pointed out that this base's most-adopted autograder grades R
+closing the hole `p393` named when it pointed out that this base's most-adopted *maintained*
+autograder grades R
 while the shelves held no R components; its delivery layer is permissive (`gradethis` MIT, `learnr`
 Apache-2.0, `ottr` BSD-3) and its measurement layer is GPL behind a process boundary, and its last
 step is **the only offline assessment loop in this base** (`cran/exams` NOPS: printed, scanned, marked
@@ -1410,7 +1480,7 @@ the payload**, on a base whose entire source a studio can audit in an afternoon.
 
 **When to reach for this.** The client teaches **R** — statistics, biostatistics, econometrics,
 data science, any quantitative methods course — and wants automated feedback at cohort scale.
-🔵 `p393` flagged that this base's most-adopted autograder **grades R** while the shelves held no R
+🔵 `p393` flagged that this base's most-adopted *maintained* autograder **grades R** while the shelves held no R
 components at all; this pattern is the hole closed. 🟢 **And its last step is the only offline
 assessment loop in this entire base**, which is what makes it worth reaching for in LATAM and APAC
 rather than only in a well-connected university.

@@ -1,0 +1,130 @@
+cifra	valor
+harvested_folded	2694
+rejected_non_addresses	34
+shelf_addresses	2660
+distinct_repo_names	2457
+name_collision_groups	121
+candidate_pairs	551
+
+name	owners
+adaptive-ai-tutor	soumics sujal-shejwal
+adaptive-tutor	algenlab natiworldclass
+agent-zero	agent0ai frdel
+agents	ed-donner livekit
+agents-radar	duanyytop kouweizhu
+ai-teaching-agent	littlecookie0722 y-kanchan
+ai-tutor	blackydrum codewithjv daivikpurani eai6 gchism94 hari7261 hawary00 marid5
+ai-tutor-app	nitoni-jim towardsai
+api	commonstandardsproject inepdadosabertos
+auto-assessment-agent	asu2304 keshav0141
+autograder	johnswyou kit-sdq otterden-lab ovsyanka83 webtech-network yokowasis zmievsa
+awesome-ai-agents-2026	arunagirinathan-k caramaschihg
+awesome-eu-ai-act	genai-gurus mlx-cassio
+badgr-server	concentricsky edubadges mint-o-badges
+blackboard-mcp	alanwtom bibo242 e9x felipedias-ie loganxgreaves lukecarroll15 mattlo0546 p1ckle3 rd2100
+blog	edificeio okanbulut
+bloom	li-evan plastic-labs
+brightspace-mcp-server	lmgveerhoek matthewliu10 pranav-vijayananth rohanmuppa
+caliper	google vsoch
+caliper-spec	1edtech imsglobal
+canvas-lms-mcp	ahnopologetic algorithm0r bruchris chiptoe-svg crevextech mtgibbs
+canvas-mcp	abr-projects admin978 amirf194 aryankeluskar bartmassey-upstream caleb-media-studio eastarctica fdis111 harrywang jsrodr lindsay-cheng lucanardinocchi mattlo0546 mdweaver nelsonspencer plyght r-huijts sirdanielm vishalsachdev yeetingwaterbottle zhenghh04
+catsim	datacamp douglasrizzo
+certo	arqueon schroedinger-hat
+classroom-mcp	davipac omarniazi sandraschi
+core	gibbonedu openemis
+correcaoredacao	ic-redacoes-utfpr yurimatsumotosantos
+credentials	cognipilot openedx
+crm	churchcrm iblai
+d2l-mcp	joshuasoup robertlmccrary
+django-lti	academic-innovation harvard-university-icommons
+dvc	iterative treeverse
+ease	edx openedx
+edfi-oneroster	csr2017 ed-fi-alliance-oss
+edu-convokit	edunlp rosewang2008 stanfordnlp
+eduagent	anirudhlohiya aryan6238
+education-ai-suite	open-edge-platform wiwaszko-intel
+edupage-mcp	mhlavac oliverhruby
+entcore	edificeio open-ent open-ent-ng opendigitaleducation
+epesi	cezarc epesi-team telaxus
+exam-guard	aswanth9495 scaler-opensource
+fedena	foradian mazhar266 projectfedena
+folio	srsatt stella
+frontend	creaditor heliumedu
+gegok12	gego-k12 gegok12
+git-novice	mambelli swcarpentry
+go-oneroster	bgwdotdev fffnite
+google-classroom-mcp	aaradhya-dev-tamrakar adriasantacreu alanmagno1 pengusto praisethefacts shimahikojin
+google-classroom-mcp-server	faizan45640 sevenc-nanashi
+gradescope-mcp	yeetingwaterbottle yuanpeng-li
+ims-lti	cahlr instructure omsmith
+inginious	inginious juezun ucl-ingi
+inno-agent	hhyqhh poki-cbq
+judger	qingdaou shibing624
+kolibri	learningequality public-ui
+kt	0awei0 seewoo5
+learn	1111philo amosblomqvist
+learn-anything	chenchenyaqi nar101
+learner-credential-wallet	digitalcredentials openwallet-foundation-labs
+learnflow-ai	bbar0n234 pulkitpareek18
+learnmcp-xapi	ashleycribb davidlms
+librelingo	kantord librelingo
+lm-evaluation-harness	eleutherai latam-gpt
+lms	frappe iblai soham-3t
+lrs	escolalms ki-campus yetanalytics
+lti	astiusa macewan-cs
+lti-1-3-php-library	1edtech imsglobal packbackbooks
+ltijs	cvmcosta edugatorlabs kristofb
+lxhive	g3i leogaggl
+mcp-brasil	dasgltd marcellodesales mcp-brasil
+mcp-canvas-lms	dmontgomery40 mistercommand
+mcp-server	issuebadge quizlar
+mcp-tutor	moarshy mohaneesh-03
+mirt	philchalmers xzhaopsy
+moodle	azure moodle
+moodle-local_ai_manager	bycs-lp mebis-lp
+moodle-mcp	1alexandrer a2br falkenslab g36maid ink-waffle linomck loyaniu marcosnahuel saadrahman01 snaw80
+moodle-mcp-server	csmediapro jawadh-salih lmscloud-io peancor
+moodler-mcp	dymayo ghaithalhallak8
+nope	this-definitely-does-not-exist-xyz123 this-org-does-not-exist-zzz9
+oak-curriculum-ontology	fh-yarbouh oaknational
+oneroster	gotranseo longsightgroup tci
+oneroster.net	jdolny theopenem
+onlinejudge	qingdaou sduoj
+opacus	meta-pytorch pytorch
+open-unlearning	aflah02 locuslab
+openbadges-specification	1edtech imsglobal
+openbadges-validator-core	1edtech imsglobal
+opencast	apereo opencast
+opencred	19otherrsh-dot nfh-trust-labs
+openedx-lti-tool-plugin	edunext pearson-advance
+openlrs	apereo-learning-analytics-initiative openhpi
+openlrw	apereo-learning-analytics-initiative jeffyding
+openpronounce	chinobv halleck45 ronald-tr
+opentutor	adity982 learnablelabs lkh081231 tutornew zijinz456
+peertube	chocobozzz peertube
+platform	hcengineering heliumedu pawtograder
+powerschool-api	aydenp grantholle
+proctor	sudosylabs timadey
+purdue-mcp	rohanmuppa sharziki
+pyirt	17zuoye junchenfeng
+pylti1.3	dmitry-viskov ucfopen
+qti	examplary instructure
+qti-components	citolab kennisnet
+qti-convert	citolab rolfis
+rice	kuali kualico
+rubric	paper-instruments promptster-ai the-llm-data-company
+school-management-system	hrshadhin ldsalud meleksebri projectsandprograms tanzim557
+scorm	gamestdio perfectlynormal
+sis	eagles-edu zeydsaeed
+skills	accesslint ai-shifu android
+skolverket-mcp	isakskogstad ksaklfszf921
+suap-mcp	frjunioalves vnschneider
+tutor	overhangio themeum
+tutor-mcp	arnaudguiovanna kvnloo
+tutoria	fborrasumh labsirius
+understand-anything	egonex-ai lum1104
+usp-mcp	caiocastro1 idavi
+vgu-mcp	haanhtuandev tuanha
+xapi	studiolxd xapijs
+xapi-rs	pawelkn raif-s-naffah
