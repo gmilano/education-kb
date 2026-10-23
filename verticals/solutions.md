@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+### 🔴 NEW licence-trap class: **three channels, three different answers, in one repository**
+
+🔴 **[`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) — default ref `master` (not
+`main`), HEAD `e935dec` 2026-08-15 · 69 d.** An actively-developed open-source ERP/CRM
+(`backend/` + `frontend/`, Node + React), returned by this pass's ERP/CRM leg as a permissive
+platform to build on. 🔴 **It is not one.**
+
+| channel | what it says | authoritative |
+|---|---|---|
+| the web search result, read **2026-10-23** | 🔴 *"iDURAR is fully open-source under the **MIT** license"* | 🔴 **NO** |
+| `backend/package.json` → `"license"` | 🔴 **`"Fair-code License"`** | 🔴 **NO** — not an OSI licence and **not an SPDX identifier**; it is the source-available marketing term of the n8n family |
+| `README.md` → `## License` | 🟢 *"Released under the GNU Affero General Public License v3.0"* | 🟡 agrees with the payload |
+| **`LICENSE` payload at root** | 🟢 **34,230 B**, first line `GNU AFFERO GENERAL PUBLIC LICENSE`, `Version 3, 19 November 2007` | 🟢 **YES** |
+
+🟢 **Verdict: AGPL-3.0. Network copyleft.** Deploying a modified iDURAR as a hosted service for a
+client triggers §13 — the client's modifications must be offered to its own users. 🔴 **Not a
+build-on base for a client SaaS**, whatever the search result or the manifest says.
+
+🔵 **Why this is a NEW class, and not one of the five this shelf already carries.** The existing
+traps are all *upstream being misread at one channel*: a grant one directory down
+(`openSIS-Classic`), a grant at `LICENSE.txt` (`ai-shifu`), AGPL text inside a GPL-named file
+(`moodle-local_copilot`), a manifest claiming a grant whose payload is absent (`p388`), a fork
+freezing its upstream's pre-relicence grant (`p408`'s `project-sunbird`). 🔴 **This one has three
+channels returning three distinct answers simultaneously, and the two wrong ones err in OPPOSITE
+directions** — the search says *more* permissive than the truth, the manifest says something
+*outside the licence vocabulary altogether*. A reader who checks one extra channel and stops at the
+manifest ends up **worse off than one who checked none**, because `"Fair-code License"` reads like a
+deliberate, specific answer.
+
+🟢 **The gate that catches it is cheap and it is the same one every time:** read the **payload at the
+root of the default ref**, and read the **default ref** too — `master` here, which a `main`-only
+probe would have missed entirely.
+
+### 🟡 `Gap 297` restated — the Open edX MCP side-car EXISTS, and the gap should never have said otherwise
+
+🔵 **`intel/open-gaps.md:18053` declares `Gap 297` — "Open edX has no MCP side-car, and it is the
+second-largest open LMS" — and the ledger at `:18120` still carries it as 🔴 open.** 🔴 **That row is
+stale, and this base's own shelves refute it:** `agents/top.md:1378` carries
+[`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (`master`, **AGPL-3.0**,
+34,524 B payload-read, `v0.1.5`, 2★) together with its deployment half,
+[`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp).
+
+🟢 **This pass's Open edX leg corroborates the shelf from an independent channel**: run fresh on
+2026-10-23, it returned `blend-ed/openedx-mcp` as **the only** Open edX MCP server in existence —
+the same singleton the shelf recorded, found by a different route. It exposes staff/superuser admin
+operations (course, user, role, enrolment, certificate, report, authoring) over **native
+`openedx-platform` APIs only**, with access resting on the platform's own staff and superuser flags
+re-checked live per request, and it is reached over streamable HTTP with a bearer key.
+
+🟢 **So the honest restatement, which is narrower and more useful than the original:**
+
+> 🔴 **`Gap 297-R`** — Open edX has an MCP side-car, but **no permissive one**. The only
+> implementation is **AGPL-3.0**, matching the platform's own grant, and it is **2★ and
+> `v0.1.5`** — experimental by its own versioning. The absence is of a *permissive, production-graded*
+> Open edX side-car, not of a side-car.
+
+🔵 **That distinction decides an engagement.** A client extending Open edX is already inside AGPL, so
+`blend-ed` costs nothing extra in licence terms — it is the **maturity**, not the grant, that is the
+risk there. A client wanting an MCP side-car *beside* a non-AGPL estate has no option on this shelf
+at all. 🔴 The original gap wording would have sent both clients to the wrong answer.
+
+### 🔴 The SIS layer, re-tested: permissive grants on dead code, live code under copyleft
+
+🟢 Full six-row table in `repos/foundations.md`. The one-line consequence for a vertical build:
+**there is no permissive SIS to fork**, so the SIS stays where it is and the AI layer integrates
+against it. `coderzaman/Student-Information-System` is the only MIT SIS the leg returned and it is
+**726 days stale**; `rosariosis` (GPL-2.0) is the live one; `openeducat_erp` (LGPL-3.0) is the
+complete one; `fedena` (Apache-2.0) is the one permissive lineage and it could not be dated.
+
 ## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.

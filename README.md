@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 409 — reads and commit both 2026-10-23 — **A SEARCH RESULT SAYS `MIT` OVER A 34,230-BYTE AGPL PAYLOAD, AND THE MANIFEST SAYS SOMETHING THAT IS NOT A LICENCE AT ALL. 🟢 THE REPOSITORY BEHIND THIS BASE'S OWN *UNATTRIBUTABLE* NPM ROW IS FOUND — AND UNGRANTED ON FOUR CHANNELS. 🔵 AND THE PRESCRIBED BRIEF IS SATURATED FOR A SECOND CONSECUTIVE PASS.**
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The brief ran in full — four global legs and one per region.
+🔴 **It returned ~20 candidate addresses, 6 of them unshelved against a base of 2,695, and not one
+new regional instrument.** `p408` reported the same eight legs returning nothing, so **the
+saturation is now a second reading rather than one bad draw — and it is the finding, not the
+preamble.** 🟢 The legs that would have been spent padding were spent re-testing this base's own
+**declared absences**, which is the one thing a saturated brief can still move.
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A sixth licence-trap class: THREE channels, three different answers, erring in OPPOSITE directions.** [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) — default ref **`master`**, HEAD `e935dec` 2026-08-15. The search result says **`MIT`**; `backend/package.json` says **`"Fair-code License"`** (not OSI, **not an SPDX identifier**); the `README` says AGPL-3.0; the **`LICENSE` payload says `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`, 34,230 B**. 🔴 **A reader who checks the manifest as their second channel ends up WORSE OFF than one who checked none**, because `"Fair-code License"` reads like a deliberate, specific answer |
+| 2 | 🟢 **The repository behind an `unauditable` row, LOCATED — and the verdict HARDENS.** `repos/trending.md:16076` carried `@n35da/brightspace-mcp@0.4.0` as *"no `repository` field … live, recent, and unauditable."* The repo is [`n35da/brightspace-mcp`](https://github.com/n35da/brightspace-mcp), HEAD `132c222` **2026-09-22** — the same date as the npm publish. 🔴 **`git ls-tree -r HEAD` returns ZERO licence-shaped paths at any depth**; no manifest field; README silent; registry silent. **Ungranted on four channels** — the row moves from *unknown* to *settled-negative* |
+| 3 | 🟡 **`Gap 386-A` sharpened, not closed.** The D2L supply is nine addresses, MIT, and npm `brightspace-mcp-server` shipped **5.0.8 → 5.0.12 inside one day** while its git HEAD stood still at `1fbc693`. 🔴 But it is **one fork family of a student-facing, credential-holding browser client**, and the one member that is architecturally institution-shaped — `n35da`, read-only, every tool a `GET`, straight against D2L's JSON API — **is the ungranted one.** The absence is of a *grant on the code that is shaped right* |
+| 4 | 🟡 **`Gap 297` RESTATED as `Gap 297-R`, because this base's own shelves refute it.** The gap says *"Open edX has no MCP side-car"*; `agents/top.md:1378` carries [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (AGPL-3.0, `v0.1.5`, 2★) and its deployment half. 🟢 This pass's Open edX leg returned that same singleton from an independent channel. **The real absence is a *permissive, production-graded* side-car** — and the original wording would have sent two different clients to the wrong answer |
+| 5 | 🔴 **`Gap 298` re-tested and now MEASURED rather than asserted: the permissive SIS grants sit on dead code, and the live SIS code is copyleft.** The only MIT SIS the leg returned, [`coderzaman/Student-Information-System`](https://github.com/coderzaman/Student-Information-System) (MIT, 1,069 B), is **726 days stale** and a teaching demo. That is a different problem from scarcity and it has a different answer — don't fork the SIS, integrate against it |
+| 6 | 🔵 **`Gap 386-C` corroborated IN-LANGUAGE.** The LATAM leg, run in Spanish and naming Brazil, Argentina and Mexico, returned **two** unshelved addresses, **both ungranted** (`BrayanG877/ia-educativa-reto`, a Socratic tutor live by 6 days; `joscanoav/agente-ia-edu`, a news collector and not an agent) — **and not one Portuguese-language project**, which is the sharper half |
+| 7 | 🟢 **A re-date that AGREES with the shelf exactly.** An independent clone returns `RohanMuppa/brightspace-mcp-server` at `1fbc693` 2026-10-22, MIT, 1,068 B — same sha, date, licence and byte count as `agents/top.md:275`. 🔵 Worth recording precisely because `p405`–`p407` were all repairs to this base's dating layer: it is not drifting |
+| 8 | 🟢 **`Pattern AH`** — the LMS-of-record assistant, built where there is no permissive SIS to fork: read-only against the system of record, never ingest, a named human on every write, teacher-facing first |
+| 9 | 🔴 **`p383`'s gate caught this pass opening a SECOND `## Opportunities by region` block** (`P383-MULTIPLE-BLOCKS`, `bloques=2`). The four regional paragraphs were folded into the canonical block instead, each marked `🆕 p409`, and `p406`'s statute-level detail left **intact** — superseding a richer block with a thinner one would have been a regression dressed as an update |
+
+🔵 **Gate score: 47 of 51 on the first run, 50 of 51 after repair.** 🔴 **Three gates went red on
+this pass's own writes, from two distinct defects, and both are recorded rather than quietly
+fixed:**
+
+| gate | defect | state |
+|---|---|---|
+| `gate-fold-identity` | 🔴 **A new casing variant this pass published** — `fenixedu/fenixedu-academic` against the base's `FenixEdu/fenixedu-academic`. Exactly the *"each variant becomes its own bucket"* failure the brief warns about, committed by the pass that quotes the warning | 🟢 corrected, green |
+| `gate-census-currency` · `gate-union-currency` | 🔴 **One defect in two gates:** the published census triple and union sentence went `STALE` the moment this pass shelved six new addresses | 🟢 re-derived LAST, both MATCH |
+🟢 The lone remaining red is still `gate-census-union` control 24, `Gap 400-B`'s
+unsatisfiable-by-construction control, deliberately red for a **sixth** pass.
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 730** harvested shapes → **35** are not addresses →
+**2 695 addresses**. 🔵 **2 695** channel-U addresses and **3 157** channel-B survivors give
+**3 529 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🔴 **And both currency gates CAUGHT this pass mid-write, exactly as they caught `p408`:** `p408`'s
+triple (**2 722 / 35 / 2 687**, union **3 520**) went `STALE` the moment this pass shelved its six
+new addresses, and the gates refused the commit until the figures were re-derived. 🟢 `p408`'s
+figures are **left standing in their own section — history is not edited to match.**
+
+
 ## Pass 408 — reads and commit both 2026-10-23 — **A FORK CARRIES THE GRANT UPSTREAM ABANDONED, AND BOTH ANSWERS ARE RIGHT. 🟢 INDIA'S EDUCATION DPI IS `MIT` AT NATIONAL SCALE — AND `311` / `399` DAYS STALE. 🔵 AND EIGHT PRESCRIBED LEGS RETURNED NOTHING THIS BASE DID NOT ALREADY HOLD.**
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**,

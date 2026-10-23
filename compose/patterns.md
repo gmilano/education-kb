@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+### 🆕 `p409` — Pattern AH: the LMS-of-record assistant, built where there is no permissive SIS to fork
+
+🔵 **When to reach for it.** A school, district or university engagement in **North America** (or
+anywhere under a human-oversight mandate) where the client already runs **Brightspace/D2L**, Open edX
+or Moodle plus a copyleft or commercial SIS, and the ask is an AI assistant over their own records.
+🔴 **The constraint that shapes the whole build is measured on these shelves and not negotiable:
+there is no permissive SIS to fork** (`repos/foundations.md`, `Gap 298` — the MIT SIS grants sit on
+dead code, the live SIS code is GPL/LGPL), and the regulatory layer in Oklahoma, Maryland and
+California bars AI from high-stakes student decisions and from training on student data.
+
+🟢 **So the pattern is: never ingest, never decide. Integrate read-only against the system of record,
+and put a named human on every write.**
+
+**Step 0 — the licence gate, before a single dependency is chosen.** 🔴 Three channels, in this
+order, for every candidate:
+1. `git clone --depth 1 --filter=blob:none --no-checkout <url>` then
+   `git symbolic-ref --short HEAD` — **read the default ref first**; `idurar/idurar-erp-crm` is
+   `master`, and a `main`-only probe reports "no licence file" on a repository that has one.
+2. `git cat-file -p HEAD:LICENSE | head -1` and `git cat-file -s HEAD:LICENSE` — **the payload and
+   its byte count**, not a badge. Try `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `license.txt`,
+   `COPYING` before concluding absence (`frappe/lms` is lowercase `.txt`).
+3. `git ls-tree -r --name-only HEAD | grep -iE 'licen|copying|notice'` — **whole tree, every depth**,
+   because `openSIS-Classic` keeps its grant one directory down.
+🔴 **Never accept a manifest's `"license"` field as the answer** — iDURAR's says `"Fair-code
+License"`, which is not a licence, over a payload that is AGPL-3.0.
+
+**Step 1 — the LMS leg.** 🟢 **Brightspace/D2L:**
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) — MIT
+(1,068 B payload-read), HEAD `1fbc693` 2026-10-22, **472 commits, 6 tags**, root of an eight-member
+fork family, npm `brightspace-mcp-server` **5.0.12** published 2026-10-23. 🔴 **Pin the exact
+version** — it shipped four patch releases inside one day, and `@latest` in a client runbook moves
+under you. 🔴 **Do not reach for [`n35da/brightspace-mcp`](https://github.com/n35da/brightspace-mcp)
+however well it fits** — read-only, every tool a `GET`, straight against D2L's JSON API, and
+**ungranted on four channels**: no licence at any depth in the tree, no manifest field, README
+silent, npm record silent. 🟡 It is the right shape and you have no permission to use it; **write
+that server yourself** if read-only-by-construction is a client requirement, and treat `n35da` as
+the design sketch you may read but not copy.
+🟢 **Open edX:** [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) +
+[`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) —
+**AGPL-3.0**, `v0.1.5`, 2★. 🔵 Costs nothing extra in licence terms if the client is already inside
+Open edX's own AGPL; the risk is **maturity**, so budget for hardening, not for relicensing. Native
+`openedx-platform` APIs only, and authorisation rests on the platform's **own** staff/superuser
+flags, re-checked live per request — which is exactly the property a human-oversight mandate wants.
+
+**Step 2 — leave the SIS alone.** 🔴 No fork, no migration, no ingest. Read it through whatever
+interface it already exposes (OneRoster where present), and **keep the records where the registrar's
+authority already sits**. 🟢 This is what makes AB 1159 answerable: student data never enters a
+training set because it never leaves the SIS.
+
+**Step 3 — the oversight layer, which is the deliverable.** 🟢 Every AI action lands as a
+*proposal* against a named human approver, with the model slot pinned to one provider —
+`OpenMAIC`'s `openmaic.yml` governance model is the shelf's working reference (named slots,
+user-supplied keys forbiddable, a capability switchable off with `video: null`). 🔴 In Oklahoma and
+Maryland this is not a feature, it is the thing that makes the deployment lawful.
+
+**Step 4 — teacher-facing first.** 🟡 NYC's one-year moratorium on student-facing AI through grade 8
+is being copied. Ship the teacher workflow (drafting, grading support, communications) and keep the
+student-facing surface behind a flag you can turn off per jurisdiction.
+
+🟢 **Shape and timing.** 6–8 weeks to a governed pilot on one LMS: 1 week on Step 0 and the
+read-only integration surface, 2–3 weeks on the LMS MCP leg and its auth, 2 weeks on the
+oversight/approval layer, 1–2 weeks hardening. 🔵 **The whole pattern is permissive except the Open
+edX leg**, which is AGPL by the platform's own choice — so quote D2L and Moodle engagements as MIT
+all the way down, and Open edX engagements with the AGPL stated up front.
+
 ## Pattern AG
 
 ### 🆕 `p408` — the India DPI engagement: MIT the whole way down, with the fork check as step 0

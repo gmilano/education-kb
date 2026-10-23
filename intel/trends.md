@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+### 🔴 Trend: the licence signal now fails in **three directions**, and checking one extra channel can make a reader worse off
+
+🟢 **`p408` established that a grant is a property of a *ref*, not of a project.** 🔴 **This pass adds
+that it is also a property of a *channel*, and that the channels do not merely disagree — they
+disagree in opposite directions on the same repository.**
+
+`idurar/idurar-erp-crm`, read four ways on one day at one ref:
+
+| channel | answer | error direction |
+|---|---|---|
+| web search result | **MIT** | 🔴 **too permissive** |
+| `backend/package.json` `"license"` | **`"Fair-code License"`** | 🔴 **outside the vocabulary** — not OSI, not SPDX |
+| `README.md` | AGPL-3.0 | 🟢 correct |
+| `LICENSE` payload at root of `master` | **AGPL-3.0** (34,230 B) | 🟢 **authoritative** |
+
+🔴 **The practical consequence inverts the usual advice.** "Check a second channel" is normally
+strictly protective. Here, a reader who checks the *manifest* — the most natural second channel for
+a Node project, and the one every SBOM tool reads — gets `"Fair-code License"`, which **looks like a
+precise, deliberate answer** and is not a licence at all. They stop there with false confidence.
+🟢 **Only the payload read, at the default ref, is safe — and the default ref here is `master`, so a
+`main`-only probe returns nothing and may be read as "no licence file".** Two independent ways to get
+this repository wrong, in one specimen.
+
+🔵 **This is the sixth distinct licence-trap class on these shelves**, after: grant one directory
+down, grant at `LICENSE.txt`, AGPL text in a GPL-named file, manifest claiming an absent payload, and
+a fork freezing its upstream's pre-relicence grant.
+
+### 🟢 Trend: the **registry is the faster clock, git is the authoritative one** — one specimen of each failure, same week
+
+🔴 **Neither channel is sufficient alone, and this pass has both failures side by side:**
+
+| specimen | registry | git | which channel failed |
+|---|---|---|---|
+| `brightspace-mcp-server` | 🟢 **5.0.8 → 5.0.12 in one day** | 🔴 HEAD frozen at `1fbc693` 2026-10-22 | 🔴 **git** — dating this project from `main` understates it by four releases |
+| `@n35da/brightspace-mcp` | 🔴 **no `repository`, no licence field** — recorded by this base as *unauditable* | 🟢 tree fully readable; licence definitively absent at every depth | 🔴 **the registry** — it withheld the address, and the verdict it forced was *unknown* rather than *negative* |
+
+🟢 **The rule that follows: date from the registry, grant from the tree.** 🔵 And when a registry row
+has no `repository` field, treat the address as **absent from that channel**, not absent — an
+ordinary subject-matter search leg recovered this one.
+
+### 🟡 Trend: the prescribed research brief is **saturated**, two passes running — and the gap layer is where movement remains
+
+🔴 **Eight legs, ~20 candidates, 6 unshelved against a base of 2,702 addresses, and zero new regional
+instruments** — `p408` reported the same, so this is a second consecutive reading rather than one
+bad draw. 🟢 **The legs that did move something were the ones aimed at this base's own declared
+absences**, which returned: a restatement (`Gap 297` → `Gap 297-R`, the side-car exists but no
+permissive one), a sharpened cause (`Gap 386-A`, the shaped-right D2L server is the ungranted one),
+a measured shape (`Gap 298`, permissive grants on dead code and live code under copyleft), and a
+further corroboration in-language (`Gap 386-C`).
+
+🔵 **The trend to record for whoever runs the next pass:** on a saturated supply, **a declared
+absence is worth more per leg than a search for new supply** — it either closes, narrows, or gets
+re-dated, and all three outcomes are checkable. 🔴 A ninth re-run of `top open source AI agents
+education 2026 github MIT` is not.
+
 ## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.

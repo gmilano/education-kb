@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+### 🔵 The four regional legs returned NOTHING unshelved — stated explicitly, so silence cannot read as coverage
+
+🟢 **All four ran** (`AI education {region} 2026 adoption regulation players`, one leg each for North
+America, EMEA, APAC and LATAM). 🔴 **Every policy instrument and adoption figure they surfaced was
+already carried on these shelves.** Checked token by token against the base before writing:
+
+| region | what the leg surfaced | already held? |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states in 2026; **California AB 1159** (bars student data from training AI models); Idaho SB 1227; Oklahoma + Maryland human-oversight mandates barring AI from high-stakes student decisions; Georgia + Mississippi CS-credit-with-AI requirements; **NYC's one-year moratorium** on student-facing AI through grade 8; **H.R. 8747** K-12 AI Literacy and Readiness Act out of committee; Canada's June 2026 *AI for All* strategy with no statute; Mexico — bills, no regulator; NA = **36 %** of the AI-in-education market, **$3.68 B in 2026** | 🔵 **all of it** |
+| **EMEA** | EU AI Act enforcement from **2026-08-02**; **Digital Omnibus, Regulation (EU) 2026/1744**, OJ 2026-07-24, applicable 2026-07-27; Annex III stand-alone **2027-12-02**; embedded-in-product **2028-08-02**; education scoring/admissions as Annex III high-risk; Commission ethical guidelines for educators; UK principles-based regime; Germany's €20 bn 2025–2030 commitment | 🔵 **all of it** |
+| **APAC** | **Vietnam Decision No. 33/2026/QD-TTg** naming education among six high-risk sectors (automated assessment, behavioural monitoring); **Korea AI Framework Act in force 2026-01-22** with a one-year penalty grace period MSIT treats as a pilot year; **Taiwan AI Basic Act**, Dec 2025; China's binding algorithm/deep-synthesis/genAI rules; Japan + Singapore voluntary | 🔵 **all of it** |
+| **LATAM** | **UNESCO IESALC**, Sept 2026 — 200 institutions, 19 countries, *adoption outpacing governance*; **Digital Education Council LATAM 2026** — 30,000+ responses, 29 institutions, **92 % of students / 79 % of faculty** active, **88 % of faculty at minimal-to-moderate** engagement, assessment the least-common use, **72 % of regional faculty positive vs 57 % globally**; ILIA third edition | 🔵 **all of it** |
+
+🔴 **Two passes running, the regional brief has returned no new instrument.** 🟢 That is a real
+signal about the *brief*, not about the regions: the policy layer in all four regions has been
+stable since the EU's August enforcement date and Vietnam's decision, and this base caught both at
+the time. 🔵 **Pre-registered for the next pass, so the leg is not simply re-run blind:** the
+instruments most likely to move next are **Vietnam's implementing guidance** under Decision 33 (the
+decision names education but not yet the conformity procedure), **Korea's end of the grace period
+(2027-01-22)**, and the **EU's 2027-12-02 Annex III date**, which is the first one that bites
+stand-alone education scoring systems.
+
+🔴 **One genuinely new regional datum, and it is a negative:** the LATAM leg was run **in Spanish**
+and named Brazil, Argentina and Mexico explicitly
+(`agente educativo IA open source github MIT Brasil Argentina México 2026`). It returned **two**
+unshelved addresses, **both ungranted** (`BrayanG877/ia-educativa-reto`, a Socratic tutor agent live
+by 6 days, no licence file; `joscanoav/agente-ia-edu`, a news collector, not an agent, no licence
+file) — and **not one Portuguese-language project at all**, despite Brazil being named in the query.
+🔵 **`Gap 386-C`** — *LATAM-native agent supply is structural, not a search artefact* — is
+corroborated for a further pass, now from an in-language leg, and the Portuguese absence is the
+sharper half of it.
+
+### 🔵 Opportunity updates — folded into this file's single canonical block, not duplicated
+
+🔴 **This pass's first draft opened a SECOND `## Opportunities by region` block, which is exactly the
+defect [`p383-region-heading-gate`](../compose/code/p383-region-heading-gate/README.md) exists to
+catch — and the gate caught it** (`P383-MULTIPLE-BLOCKS`, `bloques=2`). 🟢 **The brief's contract is
+one such heading per file, so the four regional paragraphs were folded into the canonical block
+below instead**, each marked `🆕 p409` under its own `###` subsection, and `p406`'s statute-level
+detail (Ohio Revised Code § 3301.24, AB 1159, HB 329, SB 720, SB 1546, PL 2338, ILIA 2026
+preparedness scores) is left **intact** — superseding a richer block with a thinner one would have
+been a regression dressed as an update. 🔵 `p383`'s gate is the reason this is a note and not a
+defect shipped.
 ## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
@@ -123,6 +190,18 @@ Colleague letter pushes **outcomes-based contracting**, and named Arkansas, Indi
 Michigan and Texas for it. 🔵 So the saleable asset is a **policy-plus-evidence pack** — the policy
 document, plus the measurement design that lets a district show the outcome it contracted for.
 
+
+**🆕 `p409` · 2026-10-23 — this pass's addition to North America.**
+🔴 **The regulatory shape is the opportunity.** Oklahoma and Maryland bar AI from high-stakes student
+decisions and require human oversight; California AB 1159 bars student data from training. 🟢 **What
+sells into that is an audit trail, not a model**: read-only, `GET`-only integrations against the
+LMS/SIS of record, with every AI action logged against a named human approver. 🔵 The
+`brightspace-mcp-server` family (MIT, shipping four times a day) and `blend-ed/openedx-mcp` are the
+two LMS footholds; the **binding constraint is that the distinctive read-only D2L server
+(`n35da`) is ungranted**, so a US engagement must either use the browser-client family or write its
+own read-only server. 🟡 NYC's grade-8 moratorium is being copied — assume student-facing K-8 is
+closed and sell **teacher-facing** workflow instead.
+
 ### EMEA
 
 🟢 **Annex III conformity for education, as a reusable asset.** Education sits in the AI Act's
@@ -133,6 +212,17 @@ one. 🟢 So the honest pitch is **readiness on a ~14-month clock**, not complia
 has passed; only **10 %** of 450+ surveyed institutions have formal guidelines. 🟢 **And the asset is PORTABLE** — the
 same conformity work adapts to Vietnam's risk model and to Mexico's far more cheaply than it
 rebuilds. 🔵 One asset, three markets.
+
+
+**🆕 `p409` · 2026-10-23 — this pass's addition to EMEA.**
+🔴 **2027-12-02 is the date to sell against.** Annex III stand-alone obligations bite education
+scoring and admissions ranking then, and institutions that buy in 2026–27 will be asked for
+conformity evidence they do not have. 🟢 **The offer is a conformity-ready assessment pipeline**:
+documented data lineage, human-in-the-loop on every scoring decision, and the model slot pinned to a
+named provider. 🔵 `OpenMAIC`'s central model governance (`openmaic.yml` — every AI use a named slot,
+user-supplied keys forbiddable) is the one shelf asset that maps directly onto an AI Act technical
+file. 🟡 Germany's €20 bn commitment and the UK's principles-based divergence mean **two different
+sales motions inside one region** — do not quote a single EMEA playbook.
 
 ### APAC
 
@@ -168,6 +258,17 @@ returned *above* upstream in search, holding a **byte-identical** copy of the gr
 abandoned on **2018-06-21**. A badge-read confirms that AGPL and is right to. 🔵 Recipe and the
 four-command check: `Pattern AG` in [`compose/patterns.md`](../compose/patterns.md).
 
+
+**🆕 `p409` · 2026-10-23 — this pass's addition to APAC.**
+🔴 **Vietnam Decision 33/2026/QD-TTg names automated assessment and behavioural monitoring as
+high-risk, which is precisely what an education AI pilot does.** 🟢 The opportunity is to arrive with
+the risk classification already answered. 🔵 India remains the one market where the **whole stack can
+be MIT** — see `compose/patterns.md` Pattern AG and `repos/foundations.md` on the DPI layer going
+stale (311/399 days), which is itself the opening: the national reference implementations are
+permissive and under-maintained, so a studio can contribute upstream and own the integration.
+🟡 Korea's grace period ends **2027-01-22**; work booked in 2026 should be written to the Framework
+Act as if penalties already applied.
+
 ### LATAM
 
 🟢 **The curriculum wave arrived and the capacity did not.** ILIA 2026: **11 of 20** countries now
@@ -178,6 +279,18 @@ already using AI, the gap is not adoption, it is **governance and teacher capabi
 regulatory asset is the same one EMEA pays for: Brazil's **PL 2338/2023** is risk-tiered on the EU
 model, so an Annex III pack ports. 🔴 It is still pending in the Chamber of Deputies — so sell
 **readiness**, not compliance, and say which it is.
+
+
+**🆕 `p409` · 2026-10-23 — this pass's addition to LATAM.**
+🔴 **UNESCO IESALC's finding — adoption outpacing governance across 200 institutions in 19
+countries — is the engagement, stated by the region's own research body.** 🟢 With **92 % of students
+and 79 % of faculty already using AI** but **88 % of faculty only minimally-to-moderately engaged**
+and assessment the least-common use, the gap is not adoption and not enthusiasm (72 % positive, vs
+57 % globally) — it is **institutional policy and assessment integrity**. Sell the governance layer:
+an institutional AI-use policy, an assessment-redesign programme, and the audit trail to evidence
+both. 🔴 **Do not plan on LATAM-native agent supply**: `Gap 386-C` holds for a further pass, and the
+two addresses an in-language leg returned this pass are both **ungranted**, so neither can be built
+on. 🔵 Build on the Global shelf and localise.
 
 ### Global
 

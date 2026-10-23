@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+🔵 **APPEND-ONLY: this section is added above the history, which is left intact.**
+
+### 🔴 The trending ERP/CRM leg returned a licence answer that is wrong in BOTH directions at once
+
+🟢 **The `open source platform education ERP CRM MIT Apache` leg returned one unshelved address** —
+[`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) — and it is carried in
+`verticals/solutions.md`, because the finding is a licence finding, not an education finding.
+🔴 **Headline: the search result asserted MIT; the payload is AGPL-3.0; and the project's own
+manifest says something that is neither.** Full four-channel read in
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv).
+
+🔵 **Everything else the leg returned was already shelved**, and the shelf's grants held on re-read:
+`apache/ofbiz` + `apache/ofbiz-framework` (Apache-2.0, the strongest permissive CRM-depth option and
+still not education-shaped), `hcengineering/platform` (Apache-2.0, general infrastructure),
+`openeducat/openeducat_erp` (LGPL-3.0), `frappe/education` + ERPNext (GPL-3.0),
+`gego-k12/gegok12` (MIT, the one MIT education ERP already carried).
+
+### 🟢 npm channel re-dates — the registry moved, the repositories did not
+
+| package | shelf carried | read **2026-10-23** | note |
+|---|---|---|---|
+| [`brightspace-mcp-server`](https://www.npmjs.com/package/brightspace-mcp-server) | **5.0.8** · 2026-10-22 | 🔴 **5.0.12** · **2026-10-23** | **+4 patch releases in one day.** 🟢 Registry declares `MIT` and names `RohanMuppa/brightspace-mcp-server` in its `repository` field — the grant is published twice and the two agree. |
+| [`@n35da/brightspace-mcp`](https://www.npmjs.com/package/@n35da/brightspace-mcp) | **0.4.0** · 2026-09-22 · 🔴 no licence, no `repository` | 🟢 **0.4.0 · 2026-09-22 — unmoved**, still no licence field and still no `repository` field | 🟢 **But the repository is now KNOWN**: [`n35da/brightspace-mcp`](https://github.com/n35da/brightspace-mcp), HEAD `132c222` **2026-09-22** — the *same date as the publish*, so package and repo are one artefact at one moment. 🔴 Licence: **zero licence-shaped paths in the entire tree**. The `repos/trending.md:16076` row's *"unauditable"* becomes **audited and ungranted**. |
+
+🔵 **The pattern across both rows is the same and it is worth naming:** on these shelves the
+**registry is the faster clock and git is the authoritative one**. `brightspace-mcp-server` advanced
+four releases with its default ref frozen; `@n35da` stood still in the registry while the thing the
+registry would not name turned out to be fully readable. 🔴 **Date a package from the registry; grant
+it from the tree. Neither channel alone is sufficient, and this pass has one specimen of each
+failure.**
+
 ## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.

@@ -1,0 +1,12 @@
+# p409 · 2026-10-23 · first-hand probe of every address the eight prescribed legs returned UNSHELVED
+# channel: git only — api.github.com returns 403 through this session's proxy (corroborates p408)
+# method: git clone --depth 1 --filter=blob:none --no-checkout ; symbolic-ref ; log -1 ; cat-file -s/-p
+# licence_path searched in order: LICENSE LICENSE.md LICENSE.txt LICENCE COPYING LICENSE-MIT
+slug	default_ref	head_sha	head_date	age_days	licence_path	licence_bytes	licence_first_line	verdict
+n35da/brightspace-mcp	main	132c222	2026-09-22	31	-	0	NO LICENCE FILE AT ROOT	UNGRANTED-4-CHANNELS
+ElliotDrel/brightspace-mcp-server	main	23ca7e5	2026-10-05	18	LICENSE	1068	MIT License	GRANTED-MIT-FORK-FAMILY
+BrayanG877/ia-educativa-reto	main	64ee7f3	2026-10-17	6	-	0	NO LICENCE FILE AT ROOT	UNGRANTED
+joscanoav/agente-ia-edu	main	e94df59	2026-10-12	11	-	0	NO LICENCE FILE AT ROOT	UNGRANTED-AND-NOT-AN-AGENT
+idurar/idurar-erp-crm	master	e935dec	2026-08-15	69	LICENSE	34230	GNU AFFERO GENERAL PUBLIC LICENSE	GRANTED-AGPL3-SEARCH-SAID-MIT
+coderzaman/Student-Information-System	main	9714b11	2024-10-27	726	LICENSE	1069	MIT License	GRANTED-MIT-BUT-726d-STALE-DEMO
+RohanMuppa/brightspace-mcp-server	main	1fbc693	2026-10-22	1	LICENSE	1068	MIT License	RE-DATE-AGREES-WITH-SHELF-EXACTLY

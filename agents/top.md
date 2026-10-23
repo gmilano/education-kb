@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+### 🟢 Every unshelved address the eight legs returned, licence payload-read at a pin
+
+| repo | default ref | licence *(payload, bytes)* | HEAD · age | what it is | origin |
+|---|---|---|---|---|---|
+| [n35da/brightspace-mcp](https://github.com/n35da/brightspace-mcp) | `main` | 🔴 **NONE — zero licence-shaped paths in the WHOLE tree** *(`git ls-tree -r HEAD` → no `LICENSE`, `LICENCE`, `COPYING` or `NOTICE` at any depth; no `license` field in `package.json`; README silent; npm record silent)* | `132c222` **2026-09-22 — 31 d** | **Read-only** D2L/Brightspace MCP server that calls **D2L's own JSON API directly** rather than driving the web UI page by page — architecturally the one D2L server on these shelves that is not a browser-scraper. 22 published paths, `server.mjs` + `lib/`, every tool a `GET`, and the README states no data is posted, submitted or changed. 🔴 **Ungranted on four independent channels, so unusable regardless of quality.** 🔵 **This address is the repository behind [`repos/trending.md:16076`](../repos/trending.md)** — the npm row this base recorded as *"no `repository` field … live, recent and unauditable."* It is now auditable, and the verdict hardens rather than softens. | not placed — no origin signal in the tree |
+| [ElliotDrel/brightspace-mcp-server](https://github.com/ElliotDrel/brightspace-mcp-server) | `main` | 🟢 **MIT** *(1,068 B — byte-size identical to upstream's)* | `23ca7e5` **2026-10-05 — 18 d** | An **eighth** member of the `brightspace-mcp-server` fork family, README near-identical to upstream's. 🔵 Shelved so a successor does not spend a probe on it: **count the family once, at `RohanMuppa`.** | not placed |
+| [BrayanG877/ia-educativa-reto](https://github.com/BrayanG877/ia-educativa-reto) | `main` | 🔴 **NO LICENCE FILE AT ROOT** *(0 B)* | `64ee7f3` **2026-10-17 — 6 d** | Spanish-language **Socratic tutor agent** — *"guía al estudiante mediante preguntas y razonamiento progresivo"*, i.e. it withholds the answer and advances by questioning, which is the pedagogy most tutor agents on this shelf skip. 🟢 **Live by 6 days.** 🔴 **Ungranted.** 🟡 Its README also carries unrelated Claude Code material, so the tree is not clean. | LATAM — Spanish-language, no country signal in the tree |
+| [joscanoav/agente-ia-edu](https://github.com/joscanoav/agente-ia-edu) | `main` | 🔴 **NO LICENCE FILE AT ROOT** *(0 B)* | `e94df59` **2026-10-12 — 11 d** | 🔴 **Published as a negative row, with the reason.** It surfaces on an *agente educativo* leg and it is **not an agent**: a *"recolector de noticias sobre inteligencia artificial y educación"* — a news collector. Ungranted as well. 🔵 On the shelf so the same leg does not re-return it as supply. | LATAM — Spanish-language |
+| [coderzaman/Student-Information-System](https://github.com/coderzaman/Student-Information-System) | `main` | 🟢 **MIT** *(1,069 B)* | `9714b11` **2024-10-27 — 🔴 726 d** | PHP/MySQL university-operations demo: admin, teacher and student panels over courses, fees, results and profiles. 🔴 **The only MIT-licensed SIS the `Gap 298` leg returned, and it is 726 days stale and a teaching project** — see `repos/foundations.md` for why the gap stays open. | not placed |
+
+🔵 **`idurar/idurar-erp-crm` was the sixth, and it belongs in `verticals/solutions.md`** — it is an
+ERP/CRM, not an agent, and its finding is a licence finding. It is carried there.
+
+### 🟡 `Gap 386-A` — the D2L supply is shipping **four times a day**, and the distinctive one is the ungranted one
+
+🟢 **Re-dated against the shelf's own figure, and the shelf was exactly right.** `agents/top.md:275`
+carries `RohanMuppa/brightspace-mcp-server` at HEAD **`1fbc693` 2026-10-22 · 1 d**, MIT *(1,068 B)*.
+An independent clone and `log -1` this pass returns **`1fbc693` 2026-10-22 · 1 d, MIT (1,068 B)** —
+🟢 **the same sha, date, licence and byte count.** 🔵 Two instruments, one answer: this base's dating
+layer is not drifting, which is worth recording precisely because `p405`–`p407` were all repairs to
+that layer.
+
+🔴 **The npm figure, however, has moved four releases in one day:**
+
+| channel | shelf carried (`p387`/`p389`) | read this pass | delta |
+|---|---|---|---|
+| npm `brightspace-mcp-server` | **5.0.8** · 2026-10-22 | 🔴 **5.0.12** · **2026-10-23** | **+4 patch releases inside one day** |
+| git HEAD | `1fbc693` · 2026-10-22 | 🟢 `1fbc693` · 2026-10-22 | unchanged |
+
+🟢 **The registry declares `MIT` and names the upstream** (`repository: git+https://github.com/RohanMuppa/brightspace-mcp-server.git`),
+so for this family the grant is published twice and the two agree.
+
+🔴 **`Gap 386-A` therefore stays open, and the reason is now sharper than "no institution-grade
+server exists".** The D2L supply is large (nine addresses on these shelves), MIT, and shipping
+multiple times a day — but it is **one fork family of a student-facing, credential-holding
+browser client**. The one member that is architecturally institution-shaped — `n35da`, read-only,
+straight against D2L's JSON API, every tool a `GET` — is the one with **no grant at all**. 🔵 The
+absence is not of code. It is of a *grant* on the code that is shaped right.
+
 ## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.

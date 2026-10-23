@@ -1,0 +1,12 @@
+# p409 · 2026-10-23 · the licence answer PER CHANNEL for the two addresses where channels disagree
+# npm channel read from https://registry.npmjs.org/<pkg> (the one registry the proxy serves)
+slug	channel	reads	authoritative	note
+idurar/idurar-erp-crm	web-search-result-2026-10-23	MIT	NO	"iDURAR is fully open-source under the MIT license" — wrong in the permissive direction
+idurar/idurar-erp-crm	backend/package.json "license"	Fair-code License	NO	not an OSI licence and not an SPDX identifier; the n8n-family source-available term
+idurar/idurar-erp-crm	README.md "## License"	AGPL-3.0	NO	agrees with the payload
+idurar/idurar-erp-crm	LICENSE payload at root	AGPL-3.0	YES	34230 B; first line "GNU AFFERO GENERAL PUBLIC LICENSE"
+n35da/brightspace-mcp	git ls-tree -r HEAD (whole tree)	none	YES	zero licence-shaped paths anywhere in the tree, not just at root
+n35da/brightspace-mcp	package.json "license"	absent	YES	no field
+n35da/brightspace-mcp	README.md	silent	YES	no licence section
+n35da/brightspace-mcp	npm @n35da/brightspace-mcp@0.4.0	absent	YES	no license, no licenses, no repository field
+brightspace-mcp-server	npm registry 2026-10-23	MIT	YES	v5.0.12 published 2026-10-23; repository field git+https://github.com/RohanMuppa/brightspace-mcp-server.git

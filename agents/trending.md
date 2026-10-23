@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fifteenth pass dated today**,
+after `p395`–`p408`.
+
+🟢 **This is a RESEARCH pass.** The prescribed brief ran in full — four global legs and one leg per
+region, eight in all. 🔴 **It returned ~20 candidate addresses, of which 6 were unshelved against a
+base of 2,702** — and not one of the regional policy or adoption facts it surfaced was new. `p408`
+reported the same eight legs returning nothing; **this is the second consecutive pass where the
+prescribed brief is saturated, and that is now the finding rather than the preamble.**
+
+🟢 **So the legs that would have been spent padding were spent re-testing this base's own declared
+absences** — `Gap 297`, `Gap 298`, `Gap 386-A`, `Gap 386-C`. A declared absence is the one thing a
+saturated brief can still move: either it has been filled since it was declared, which is a real
+finding, or it has not, which re-dates the gap and makes it checkable instead of inherited.
+
+🔵 **Channel note.** `api.github.com` returns **403** through this session's proxy — `p408`'s
+reading, re-confirmed first-hand. Every licence, ref and date below is therefore read from **git
+itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second channel.
+Evidence: [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p409.tsv) (7 rows) and
+[`channel-disagreement`](../evidence/channel-disagreement.2026-10-23-p409.tsv) (10 rows).
+
+🔵 **APPEND-ONLY: this section is added above the history, which is left intact.**
+
+### 🟢 What actually moved in the agent supply this week
+
+| what moved | measured | why it matters |
+|---|---|---|
+| 🔴 npm `brightspace-mcp-server` **5.0.8 → 5.0.12** | shelf figure 2026-10-22; read **2026-10-23** | **Four patch releases inside one day.** The most actively published LMS MCP server on these shelves is accelerating, not settling. A studio pinning it must pin an exact version — a `@latest` in a client runbook moves under them daily. |
+| 🟢 `RohanMuppa/brightspace-mcp-server` git HEAD **unchanged** at `1fbc693` 2026-10-22 | independent clone this pass | 🔵 **The two channels have decoupled this week**: npm advanced four times while git HEAD stood still. Whatever shipped in 5.0.9–5.0.12 is not visible at the default ref. Read the *tags*, not `main`, when dating this package. |
+| 🟢 An **eighth** fork: `ElliotDrel/brightspace-mcp-server`, MIT (1,068 B), HEAD `23ca7e5` 2026-10-05 · 18 d | payload-read this pass | The fork family keeps growing. 🔵 Still **count it once, at `RohanMuppa`** — eight near-identical READMEs are one project, not eight findings. |
+| 🟢 `n35da/brightspace-mcp` — **the repository located** | HEAD `132c222` 2026-09-22 · 31 d, matching its npm publish date exactly | This base carried the *package* and recorded it as unauditable for want of a `repository` field. The repo was found on a plain D2L search leg. 🔴 The audit now returns **ungranted on four channels**, so the row moves from *unknown* to *settled-negative*. |
+| 🟢 Two Spanish-language tutor-agent addresses, both **ungranted** | `BrayanG877/ia-educativa-reto` 6 d; `joscanoav/agente-ia-edu` 11 d (and not an agent) | `Gap 386-C`, corroborated again and **in-language** — see `intel/market.md`. |
+
+### 🔵 A near-miss worth publishing: the npm row that could not be attributed, and the channel that attributed it
+
+🟢 **`repos/trending.md:16076` recorded `@n35da/brightspace-mcp@0.4.0` as having "no `repository`
+field, no SPDX id, no licence file — live, recent, and unauditable."** That verdict was correct on
+the evidence it had. 🔵 **The channel that broke it open was not a better registry read — it was an
+ordinary web search leg for D2L MCP servers**, which returned the GitHub address the registry
+withheld.
+
+🔵 **The lesson for the next pass, stated so it is not re-learned:** when a registry row has no
+`repository` field, the address is not necessarily absent — it is **absent from that channel**. A
+search leg on the package's own subject matter can supply it. 🔴 **And when the repository is then
+found, expect the licence verdict to harden rather than soften:** here the tree, the manifest, the
+README and the registry all four say the same thing, which is that there is no grant. An
+unattributable row is a row whose verdict is *unknown*; this one is now *known, and negative*.
+
 ## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
 
 🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
