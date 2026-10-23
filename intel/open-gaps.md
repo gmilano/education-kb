@@ -4,6 +4,29 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p405` · 2026-10-23 — gaps opened and gaps moved
+
+🟢 **`item 3`'s lineage half is CLOSED below** for all four groups, with the non-uniform result that no
+single correction factor applies. 🔴 **Four new gaps are registered here**, each named so a successor
+cannot mistake it for worked.
+
+| 🆕 | gap | why it is registered rather than fixed here |
+|---|---|---|
+| 🔴 **`Gap 405-A` — the name-collision backlog is keyed on the SLUG, which is the wrong key for the engagement question** | `p404` worked the slug **`moodle-mcp-server`** and concluded *"`peancor` is the only permissive option … 0 tags."* 🟢 **Two MIT Moodle MCP servers with published releases sit under the slug `moodle-mcp`** — [`falkenslab`](https://github.com/falkenslab/moodle-mcp) *(npm, 6 tags)* and [`G36maid`](https://github.com/G36maid/moodle-mcp) *(crates.io, 7 tags)* — and no amount of work on the first slug reaches them. 🔴 **A client asks *"which Moodle MCP server?"*, not *"which `moodle-mcp-server`?"*** 🟢 **The fix is NEARER than it looks: a capability key already exists and is already wired in this repository.** `make recount` prints MCP servers **by platform** across both agent shelves — Canvas **38**, Moodle **23**, Blackboard **14**, Brightspace/D2L **10**, Google Classroom **12**, Open edX **2**. 🔴 **Those populations are 1.9× the slug groups `p405` measured**, so the lineage question is open over a far larger set than item 3 closed, and `p405`'s *27 projects* is a statement about four **slugs**, never about Canvas-MCP supply as a whole. 🔵 Not attempted here because this pass spent its clone budget on item 3 |
+| 🔴 **`Gap 405-B` — the licence ladder has no ANCESTOR channel** | `local_italiciamcp` is a real Moodle plugin with **0 of 18 PHP files carrying a GPL mention** and **no licence file inside the plugin directory** — its only grant is the repository root's **MIT**, two directories up. 🟢 `p401`'s channels **P** and **L** both read nothing; `p382-subtree-grant` asks the **inverse** question *(does a grant narrow itself?)*. 🔴 **So a plugin can be graded *"no grant / unknown"* when a grant does reach it** — and `p401` named that error's direction: ungranted reads as *unencumbered*. 🔵 The fix is one rung — *"walk up to the nearest licence-shaped ancestor before recording an absence"* — and it needs a census over this base's 60 plugin slugs to know how many rows it moves. Rows: [`plugin-inherited-grant`](../evidence/plugin-inherited-grant.2026-10-23-p405.tsv) |
+| 🟡 **`Gap 405-C` — no instrument re-checks a carried address's EXISTENCE** | 🔴 **Four addresses this base carries went unresolvable and only a pass that happened to clone them noticed:** `owen-x-tech/canvas-mcp`, `owentaylor/canvas-mcp`, `nahuelalbornoz/moodle-mcp`, `e9x/blackboard-mcp`. 🟡 **This is the THIRD measurement of the same decay** — `p332`'s 22 truncations and `p397`'s six non-existent carried slugs are the first two, and this file's own line ~2985 says in writing that *"there is still no standing instrument that re-checks existence of carried rows."* 🟢 **Now with a denominator: 5 of 47 addresses, 10.6%**, which is the number a standing gate would be sized against |
+| 🟡 **`Gap 405-D` — `canvas-mcp`'s group has THREE address shapes `p402`'s probe list did not hold** | `p402` probed **21**; an exact-slug sweep of these shelves returns **24** shapes for the same group, the extra three being `owen-x-tech/canvas-mcp`, `owentaylor/canvas-mcp` and `io.github.vishalsachdev/canvas-mcp`. 🟢 **The third is not an address at all** — it is the **MCP registry identifier** for `vishalsachdev/canvas-mcp`, the family head. 🔴 **So a group's membership is itself channel-dependent**, and a crowding count inherits whichever probe list produced it. 🔵 Named because the **27 projects** figure above is computed over the 42 that resolve, not over every shape these shelves hold |
+
+🔵 **One near-miss checked and rejected, so it is not re-found as a fix.** `gate-census-union`'s control
+24 wants both rejection classes to fire on the live shelves, and `NAME-DOT-RUN` is the one that does
+not. 🔴 **`io.github.vishalsachdev/canvas-mcp` is NOT that specimen**: the rule tests the repository
+**NAME** position for `^\.{3,}$`, and this dot run is in the **OWNER** position. 🟢 `p398`'s and
+`p404`'s diagnosis therefore stands — the control is unsatisfiable without manufacturing the data — and
+the gate is left red deliberately for a third pass.
+
+---
+
+
 
 ## Pass 400 · reads and commit both 2026-10-23 — **THE "ALREADY SHELVED" CHECK EVERY PASS RUNS BY HAND IS A SUBSTRING MATCH, AND IT DROPPED A REAL ADDRESS. 🟢 IT NOW HAS AN INSTRUMENT. 🔴 AND `market.md` CONTRADICTED ITSELF ABOUT CHINA'S AND INDIA'S MANDATES WITH THE GREEN COPY ON TOP.**
 
@@ -317,10 +340,22 @@ census delta **+1** address.
    the ref-set channel, **20 resolve, 20 distinct HEADs, 20 distinct fingerprints, 0 aliases**
    (`eastarctica/canvas-mcp` UNRESOLVED) —
    [`canvas-mcp-crowding`](../evidence/canvas-mcp-crowding.2026-10-23-p402.tsv).
-   🔴 **So the crowding is real supply, not census noise.** 🔴 **Still open:** a distinct HEAD rules
-   out an alias and a non-divergent fork but **not a divergent fork** — the **lineage** half needs
-   the root commit (`Pattern AF` steps 1–2), and `moodle-mcp`, `blackboard-mcp` and
-   `brightspace-mcp-server` are **untouched**.
+   🔴 **So the crowding is real supply, not census noise.**
+   🟢 **`p405` CLOSED the lineage half, for all four groups.** 42 resolved addresses, **269 pairs**,
+   every pair graded from a full clone on 2026-10-23 —
+   [`group-lineage`](../evidence/group-lineage.2026-10-23-p405.tsv), instrument and 12 controls at
+   [`compose/code/p405-group-lineage/`](../compose/code/p405-group-lineage/README.md).
+   🔴 **And it REFUTES the "real supply" reading by 1.56×: 42 addresses are 27 projects.**
+   `canvas-mcp` **20 → 9** *(an eleven-address family on root commit `afe32c3e1721` by
+   `vishalsachdev`)*, `brightspace-mcp-server` **4 → 2** *(three of four are `RohanMuppa`'s lineage)*,
+   `blackboard-mcp` **8 → 6**, and 🟢 `moodle-mcp` **10 → 10** — 45 pairs, 45 `INDEPENDENT`, zero
+   shared commits and zero shared trees. 🔵 **The non-uniformity is the result**: the crowding reading
+   was right for one group of the four and wrong for three, so no single correction factor applies
+   (`p405-T1`).
+   🟡 **What stays open from this item:** it answered the question as asked — *how many projects* —
+   and **not** quality, and 🔴 **5 of 47 addresses do not resolve** (`eastarctica/canvas-mcp`, 🆕
+   `owen-x-tech/canvas-mcp`, 🆕 `owentaylor/canvas-mcp`, 🆕 `nahuelalbornoz/moodle-mcp`,
+   🆕 `e9x/blackboard-mcp`), named so they are not re-probed.
 4. 🟢 **Make a `hooks` score a required line in the write-up** (`397-B`) — a one-line convention that
    would have surfaced three red gates two passes earlier.
 5. 🟡 **Add a superlative gate** (`397-A`): any sentence containing *most-starred*, *most-adopted*,

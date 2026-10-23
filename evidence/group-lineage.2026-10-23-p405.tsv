@@ -1,0 +1,349 @@
+# p405 group-lineage -- the four name-collision groups intel/open-gaps.md item 3 names,
+# graded by FULL history, every address read first-hand on 2026-10-23.
+# Instrument: compose/code/p405-group-lineage/ -- forkgroup.sh collects, grouplineage.py grades.
+# p404's verdict.grade is IMPORTED, never reimplemented, so a group verdict and a pair verdict
+# on the same two addresses are the same function call and cannot drift.
+#
+# SECTION 1 -- one row per address.
+# `refs_clonelocal` is `git show-ref | wc -l` in a FRESH FULL CLONE.  It is NOT comparable with
+# p402's ls-remote ref counts: a different instrument measuring a different population, so it must
+# never be read as a currency cell or diffed against p402's numbers (Gap 400-A).
+# `component` is the connected component over the related-pair graph: lineage is TRANSITIVE and a
+# pair test is not, so the citable unit is the FAMILY, not the pair.
+group	address	status	head12	branch	head_date	refs_clonelocal	tags	commits	trees	roots	root12	root_date	root_author	licence_path	licence_bytes	licence_title	component
+canvas-mcp	vishalsachdev/canvas-mcp	OK	ebab8d6969cc	main	2026-10-22	70	23	1089	973	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	bartmassey-upstream/canvas-mcp	OK	b62e1ec8abd6	main	2026-10-11	115	23	1001	877	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	lindsay-cheng/canvas-mcp	OK	bf446a6f5060	main	2026-09-27	94	21	928	815	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	sirdanielm/canvas-mcp	OK	64cd9d1f11ac	main	2026-10-20	40	21	972	860	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	amirf194/canvas-mcp	OK	0955a1abd65f	main	2026-08-20	56	20	671	616	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	caleb-media-studio/canvas-mcp	OK	c40b5a3b0317	main	2026-10-05	18	0	132	121	1	96daa3fa20a3	2026-10-04	Caleb Mau <caleb.mau@icloud.com>	LICENSE	1066	MIT License	SOLE
+canvas-mcp	nelsonspencer/canvas-mcp	OK	92b7fbc9cd33	main	2026-10-16	33	15	472	441	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	r-huijts/canvas-mcp	OK	711549f163ef	main	2026-09-21	7	3	61	56	1	731aa116052b	2024-12-12	R.Huijts <r.huijts@fontys.nl>	LICENSE	1065	MIT License	FAMILY-2(n=2)
+canvas-mcp	admin978/canvas-mcp	OK	cead98e79f38	main	2026-07-23	7	3	33	24	1	03e490cb810c	2026-05-11	AGENTE 404 <admin@agente404.com>	LICENSE	1072	MIT License	SOLE
+canvas-mcp	aryankeluskar/canvas-mcp	OK	882f53172855	master	2026-03-11	6	0	61	59	1	7d7241951bd5	2025-03-19	Aryan Keluskar <aryankeluskar6@gmail.com>	LICENSE	746	ISC License	SOLE
+canvas-mcp	abr-projects/canvas-mcp	OK	b5caf148151e	main	2026-10-13	8	0	672	623	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	mattlo0546/canvas-mcp	OK	b6c26ba52c14	main	2026-10-20	6	3	5	5	1	36161a6e38c8	2026-10-19	Mattlo0546 <mattlo0546@gmail.com>	LICENSE	1067	MIT License	SOLE
+canvas-mcp	fdis111/canvas-mcp	OK	294cb1129bcd	main	2026-10-02	4	0	301	285	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	lucanardinocchi/canvas-mcp	OK	f0dbbcb28ec8	main	2026-05-08	3	0	3	3	1	75ae284711d6	2026-02-06	Luca Nardinocchi <lucanardinocchi@Lucas-MacBook-Air-2.local>	NONE	-	-	SOLE
+canvas-mcp	harrywang/canvas-mcp	OK	0fccce281a11	main	2026-09-11	4	0	709	650	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	yeetingwaterbottle/canvas-mcp	OK	94c05ccf63c9	main	2026-10-03	4	0	873	791	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	jsrodr/canvas-mcp	OK	8a4420dd5611	main	2026-08-18	3	0	555	527	1	afe32c3e1721	2025-02-27	vishalsachdev <svishal2001@gmail.com>	LICENSE	1071	MIT License	FAMILY-1(n=11)
+canvas-mcp	mdweaver/canvas-mcp	OK	739f07f6bb18	main	2026-10-01	3	0	64	60	1	731aa116052b	2024-12-12	R.Huijts <r.huijts@fontys.nl>	LICENSE	1065	MIT License	FAMILY-2(n=2)
+canvas-mcp	plyght/canvas-mcp	OK	f4d82996f6ed	master	2025-10-30	3	0	2	2	1	fa048cd88be7	2025-10-30	plyght <plyght@peril.lol>	NONE	-	-	SOLE
+canvas-mcp	zhenghh04/canvas-mcp	OK	0ef723f32600	main	2026-10-05	3	0	3	3	1	d1906f4a4f5c	2026-10-05	Huihuo Zheng <zhenghh04@gmail.com>	LICENSE	1069	MIT License	SOLE
+canvas-mcp	eastarctica/canvas-mcp	UNRESOLVED	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+canvas-mcp	owen-x-tech/canvas-mcp	UNRESOLVED	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+canvas-mcp	owentaylor/canvas-mcp	UNRESOLVED	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+moodle-mcp	1alexandrer/moodle-mcp	OK	96b6fb1a4f3e	master	2026-04-21	4	1	47	47	1	9c09e5055e0f	2026-04-14	1alexandrer <alexandre.ribeiro1509@Gmail.com>	LICENSE	1074	MIT License	SOLE
+moodle-mcp	a2br/moodle-mcp	OK	2d55ca063cba	main	2026-10-17	3	0	2	2	1	9e02d7482663	2026-09-25	Anatole Debierre <62328077+a2br@users.noreply.github.com>	LICENSE	1073	MIT License	SOLE
+moodle-mcp	falkenslab/moodle-mcp	OK	7da66c1d9c98	main	2026-10-22	9	6	194	194	1	4ef7ec5fd59c	2026-10-08	Francisco Vargas Ruiz <4354486+fvarrui@users.noreply.github.com>	LICENSE	1067	MIT License	SOLE
+moodle-mcp	G36maid/moodle-mcp	OK	18bd1777eb0b	main	2026-10-20	10	7	163	163	1	9a2cf8ea0148	2026-10-13	G36maid <G36_maid@proton.me>	LICENSE	1064	MIT License	SOLE
+moodle-mcp	ink-waffle/moodle-mcp	OK	719538eccd86	main	2026-10-01	3	0	2	2	1	55b4941ef3cc	2026-09-17	Damir Kairov <kairof.dr@gmail.com>	NONE	-	-	SOLE
+moodle-mcp	linomck/moodle-mcp	OK	acb304654ae6	main	2025-11-06	9	0	17	12	1	3a94ab9a67c2	2025-10-24	Lino Mack <lino.mack@bergfreunde.de>	NONE	-	-	SOLE
+moodle-mcp	loyaniu/moodle-mcp	OK	22cc56c7ce57	main	2026-06-28	3	0	17	13	1	1368f23bf32a	2025-04-03	Zhonglin-Niu <zn23@calvin.edu>	NONE	-	-	SOLE
+moodle-mcp	marcosnahuel/moodle-mcp	OK	d5ca68e8cd1b	main	2026-05-03	14	10	65	63	1	77d17187e403	2026-04-18	Nahuel <nahuelachu@gmail.com>	LICENSE	1065	MIT License	SOLE
+moodle-mcp	nahuelalbornoz/moodle-mcp	UNRESOLVED	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+moodle-mcp	saadrahman01/moodle-mcp	OK	2260553aaee0	main	2026-06-07	4	1	9	9	1	32f71b97b945	2026-06-06	Saad Rahman <saad.rahman@192.168.10.9>	LICENSE	1068	MIT License	SOLE
+moodle-mcp	snaw80/moodle-mcp	OK	4fc83d0af28d	main	2026-06-13	6	3	13	13	1	86612e46ef4c	2026-05-18	Arthur <arthurloup.l@gmail.com>	LICENSE	1072	MIT License	SOLE
+blackboard-mcp	alanwtom/blackboard-mcp	OK	5c7462019957	main	2026-10-22	5	1	26	22	1	881f50968ac3	2026-08-29	alanwtom <alanwtom@users.noreply.github.com>	LICENSE	1065	MIT License	FAMILY-1(n=2)
+blackboard-mcp	bibo242/blackboard-mcp	OK	1fd96db0378d	main	2026-09-10	14	3	28	28	1	946d69b33dfa	2026-09-10	felipedias-ie <231931438+felipedias-ie@users.noreply.github.com>	LICENSE	1084	MIT License	FAMILY-2(n=2)
+blackboard-mcp	e9x/blackboard-mcp	UNRESOLVED	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+blackboard-mcp	felipedias-ie/blackboard-mcp	OK	fb057928ae20	main	2026-10-14	6	3	21	21	1	946d69b33dfa	2026-09-10	felipedias-ie <231931438+felipedias-ie@users.noreply.github.com>	LICENSE	1084	MIT License	FAMILY-2(n=2)
+blackboard-mcp	Loganxgreaves/blackboard-mcp	OK	c2629aee9a13	master	2026-10-08	3	0	2	2	1	53b909bd3577	2026-10-08	loganxgreaves <lhgreaves@outlook.com>	LICENSE	1070	MIT License	SOLE
+blackboard-mcp	lukecarroll15/blackboard-mcp	OK	1aeb80b98a73	tcd	2026-09-14	5	1	20	20	1	881f50968ac3	2026-08-29	alanwtom <alanwtom@users.noreply.github.com>	LICENSE	1065	MIT License	FAMILY-1(n=2)
+blackboard-mcp	Mattlo0546/blackboard-mcp	OK	9ad0878fbbeb	main	2026-10-20	5	2	4	4	1	1b596a4a6882	2026-10-17	Mattlo0546 <128586420+Mattlo0546@users.noreply.github.com>	LICENSE	1067	MIT License	SOLE
+blackboard-mcp	p1ckle3/blackboard-mcp	OK	32af42d9742d	main	2026-07-28	3	0	1	1	1	32af42d9742d	2026-07-28	Tenon <tenonpenklis@gmail.com>	NONE	-	-	SOLE
+blackboard-mcp	rd2100/blackboard-mcp	OK	5ce8000938bd	main	2026-05-11	3	0	7	7	1	d8a417a448c1	2026-05-09	RD <RD2100@users.noreply.github.com>	LICENSE	1059	MIT License	SOLE
+brightspace-mcp-server	lmgveerhoek/brightspace-mcp-server	OK	f5a081beeec0	main	2026-09-27	5	0	308	286	1	fb3d6c0a57bf	2026-02-07	RohanMuppa <rohanmuppawork@gmail.com>	LICENSE	1068	MIT License	FAMILY-1(n=3)
+brightspace-mcp-server	matthewliu10/brightspace-mcp-server	OK	03f17efd7ddc	main	2026-09-12	9	5	251	234	1	fb3d6c0a57bf	2026-02-07	RohanMuppa <rohanmuppawork@gmail.com>	LICENSE	1068	MIT License	FAMILY-1(n=3)
+brightspace-mcp-server	pranav-vijayananth/brightspace-mcp-server	OK	6300b323b47d	main	2025-10-14	3	0	7	7	1	998b2b1061d1	2025-09-12	Pranav Vijayananth <63816100+pranav-vijayananth@users.noreply.github.com>	LICENSE	11357	                                 Apache License	SOLE
+brightspace-mcp-server	RohanMuppa/brightspace-mcp-server	OK	1fbc693bf9e1	main	2026-10-22	25	6	472	451	1	fb3d6c0a57bf	2026-02-07	RohanMuppa <rohanmuppawork@gmail.com>	LICENSE	1068	MIT License	FAMILY-1(n=3)
+#
+# SECTION 2 -- every pair, graded.  C(n,2) per group; 269 pairs over 42 resolved addresses.
+group	addr_a	addr_b	commits_a	commits_b	shared_commits	shared_trees	a_contains_b_head	b_contains_a_head	verdict	direction
+canvas-mcp	vishalsachdev/canvas-mcp	bartmassey-upstream/canvas-mcp	1089	1001	804	727	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	lindsay-cheng/canvas-mcp	1089	928	809	731	True	False	SUPERSET	a
+canvas-mcp	vishalsachdev/canvas-mcp	sirdanielm/canvas-mcp	1089	972	816	740	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	amirf194/canvas-mcp	1089	671	596	558	True	False	SUPERSET	a
+canvas-mcp	vishalsachdev/canvas-mcp	caleb-media-studio/canvas-mcp	1089	132	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	nelsonspencer/canvas-mcp	1089	472	419	402	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	r-huijts/canvas-mcp	1089	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	admin978/canvas-mcp	1089	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	aryankeluskar/canvas-mcp	1089	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	abr-projects/canvas-mcp	1089	672	664	616	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	mattlo0546/canvas-mcp	1089	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	fdis111/canvas-mcp	1089	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	lucanardinocchi/canvas-mcp	1089	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	harrywang/canvas-mcp	1089	709	709	650	True	False	SUPERSET	a
+canvas-mcp	vishalsachdev/canvas-mcp	yeetingwaterbottle/canvas-mcp	1089	873	868	786	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	jsrodr/canvas-mcp	1089	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	vishalsachdev/canvas-mcp	mdweaver/canvas-mcp	1089	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	plyght/canvas-mcp	1089	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	vishalsachdev/canvas-mcp	zhenghh04/canvas-mcp	1089	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	lindsay-cheng/canvas-mcp	1001	928	919	807	True	False	SUPERSET	a
+canvas-mcp	bartmassey-upstream/canvas-mcp	sirdanielm/canvas-mcp	1001	972	825	746	False	False	DIVERGED-FORK	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	amirf194/canvas-mcp	1001	671	661	606	True	False	SUPERSET	a
+canvas-mcp	bartmassey-upstream/canvas-mcp	caleb-media-studio/canvas-mcp	1001	132	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	nelsonspencer/canvas-mcp	1001	472	468	438	False	False	DIVERGED-FORK	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	r-huijts/canvas-mcp	1001	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	admin978/canvas-mcp	1001	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	aryankeluskar/canvas-mcp	1001	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	abr-projects/canvas-mcp	1001	672	664	616	False	False	DIVERGED-FORK	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	mattlo0546/canvas-mcp	1001	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	fdis111/canvas-mcp	1001	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	lucanardinocchi/canvas-mcp	1001	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	harrywang/canvas-mcp	1001	709	709	650	True	False	SUPERSET	a
+canvas-mcp	bartmassey-upstream/canvas-mcp	yeetingwaterbottle/canvas-mcp	1001	873	798	724	False	False	DIVERGED-FORK	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	jsrodr/canvas-mcp	1001	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	mdweaver/canvas-mcp	1001	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	plyght/canvas-mcp	1001	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	bartmassey-upstream/canvas-mcp	zhenghh04/canvas-mcp	1001	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	sirdanielm/canvas-mcp	928	972	830	750	False	True	SUPERSET	b
+canvas-mcp	lindsay-cheng/canvas-mcp	amirf194/canvas-mcp	928	671	661	606	True	False	SUPERSET	a
+canvas-mcp	lindsay-cheng/canvas-mcp	caleb-media-studio/canvas-mcp	928	132	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	nelsonspencer/canvas-mcp	928	472	468	438	False	False	DIVERGED-FORK	None
+canvas-mcp	lindsay-cheng/canvas-mcp	r-huijts/canvas-mcp	928	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	admin978/canvas-mcp	928	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	aryankeluskar/canvas-mcp	928	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	abr-projects/canvas-mcp	928	672	664	616	False	False	DIVERGED-FORK	None
+canvas-mcp	lindsay-cheng/canvas-mcp	mattlo0546/canvas-mcp	928	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	fdis111/canvas-mcp	928	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	lindsay-cheng/canvas-mcp	lucanardinocchi/canvas-mcp	928	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	harrywang/canvas-mcp	928	709	709	650	True	False	SUPERSET	a
+canvas-mcp	lindsay-cheng/canvas-mcp	yeetingwaterbottle/canvas-mcp	928	873	803	728	False	True	SUPERSET	b
+canvas-mcp	lindsay-cheng/canvas-mcp	jsrodr/canvas-mcp	928	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	lindsay-cheng/canvas-mcp	mdweaver/canvas-mcp	928	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	plyght/canvas-mcp	928	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lindsay-cheng/canvas-mcp	zhenghh04/canvas-mcp	928	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	amirf194/canvas-mcp	972	671	613	573	True	False	SUPERSET	a
+canvas-mcp	sirdanielm/canvas-mcp	caleb-media-studio/canvas-mcp	972	132	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	nelsonspencer/canvas-mcp	972	472	427	408	False	False	DIVERGED-FORK	None
+canvas-mcp	sirdanielm/canvas-mcp	r-huijts/canvas-mcp	972	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	admin978/canvas-mcp	972	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	aryankeluskar/canvas-mcp	972	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	abr-projects/canvas-mcp	972	672	664	616	False	False	DIVERGED-FORK	None
+canvas-mcp	sirdanielm/canvas-mcp	mattlo0546/canvas-mcp	972	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	fdis111/canvas-mcp	972	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	sirdanielm/canvas-mcp	lucanardinocchi/canvas-mcp	972	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	harrywang/canvas-mcp	972	709	709	650	True	False	SUPERSET	a
+canvas-mcp	sirdanielm/canvas-mcp	yeetingwaterbottle/canvas-mcp	972	873	815	740	False	False	DIVERGED-FORK	None
+canvas-mcp	sirdanielm/canvas-mcp	jsrodr/canvas-mcp	972	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	sirdanielm/canvas-mcp	mdweaver/canvas-mcp	972	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	plyght/canvas-mcp	972	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	sirdanielm/canvas-mcp	zhenghh04/canvas-mcp	972	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	caleb-media-studio/canvas-mcp	671	132	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	nelsonspencer/canvas-mcp	671	472	468	438	False	False	DIVERGED-FORK	None
+canvas-mcp	amirf194/canvas-mcp	r-huijts/canvas-mcp	671	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	admin978/canvas-mcp	671	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	aryankeluskar/canvas-mcp	671	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	abr-projects/canvas-mcp	671	672	590	555	False	True	SUPERSET	b
+canvas-mcp	amirf194/canvas-mcp	mattlo0546/canvas-mcp	671	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	fdis111/canvas-mcp	671	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	amirf194/canvas-mcp	lucanardinocchi/canvas-mcp	671	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	harrywang/canvas-mcp	671	709	590	555	False	True	SUPERSET	b
+canvas-mcp	amirf194/canvas-mcp	yeetingwaterbottle/canvas-mcp	671	873	590	555	False	True	SUPERSET	b
+canvas-mcp	amirf194/canvas-mcp	jsrodr/canvas-mcp	671	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	amirf194/canvas-mcp	mdweaver/canvas-mcp	671	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	plyght/canvas-mcp	671	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	amirf194/canvas-mcp	zhenghh04/canvas-mcp	671	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	nelsonspencer/canvas-mcp	132	472	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	r-huijts/canvas-mcp	132	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	admin978/canvas-mcp	132	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	aryankeluskar/canvas-mcp	132	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	abr-projects/canvas-mcp	132	672	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	mattlo0546/canvas-mcp	132	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	fdis111/canvas-mcp	132	301	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	lucanardinocchi/canvas-mcp	132	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	harrywang/canvas-mcp	132	709	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	yeetingwaterbottle/canvas-mcp	132	873	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	jsrodr/canvas-mcp	132	555	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	mdweaver/canvas-mcp	132	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	plyght/canvas-mcp	132	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	caleb-media-studio/canvas-mcp	zhenghh04/canvas-mcp	132	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	r-huijts/canvas-mcp	472	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	admin978/canvas-mcp	472	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	aryankeluskar/canvas-mcp	472	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	abr-projects/canvas-mcp	472	672	414	399	False	False	DIVERGED-FORK	None
+canvas-mcp	nelsonspencer/canvas-mcp	mattlo0546/canvas-mcp	472	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	fdis111/canvas-mcp	472	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	nelsonspencer/canvas-mcp	lucanardinocchi/canvas-mcp	472	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	harrywang/canvas-mcp	472	709	414	399	False	False	DIVERGED-FORK	None
+canvas-mcp	nelsonspencer/canvas-mcp	yeetingwaterbottle/canvas-mcp	472	873	414	399	False	False	DIVERGED-FORK	None
+canvas-mcp	nelsonspencer/canvas-mcp	jsrodr/canvas-mcp	472	555	414	399	False	False	DIVERGED-FORK	None
+canvas-mcp	nelsonspencer/canvas-mcp	mdweaver/canvas-mcp	472	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	plyght/canvas-mcp	472	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	nelsonspencer/canvas-mcp	zhenghh04/canvas-mcp	472	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	admin978/canvas-mcp	61	33	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	aryankeluskar/canvas-mcp	61	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	abr-projects/canvas-mcp	61	672	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	mattlo0546/canvas-mcp	61	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	fdis111/canvas-mcp	61	301	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	lucanardinocchi/canvas-mcp	61	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	harrywang/canvas-mcp	61	709	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	yeetingwaterbottle/canvas-mcp	61	873	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	jsrodr/canvas-mcp	61	555	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	mdweaver/canvas-mcp	61	64	60	56	False	True	SUPERSET	b
+canvas-mcp	r-huijts/canvas-mcp	plyght/canvas-mcp	61	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	r-huijts/canvas-mcp	zhenghh04/canvas-mcp	61	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	aryankeluskar/canvas-mcp	33	61	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	abr-projects/canvas-mcp	33	672	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	mattlo0546/canvas-mcp	33	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	fdis111/canvas-mcp	33	301	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	lucanardinocchi/canvas-mcp	33	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	harrywang/canvas-mcp	33	709	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	yeetingwaterbottle/canvas-mcp	33	873	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	jsrodr/canvas-mcp	33	555	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	mdweaver/canvas-mcp	33	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	plyght/canvas-mcp	33	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	admin978/canvas-mcp	zhenghh04/canvas-mcp	33	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	abr-projects/canvas-mcp	61	672	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	mattlo0546/canvas-mcp	61	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	fdis111/canvas-mcp	61	301	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	lucanardinocchi/canvas-mcp	61	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	harrywang/canvas-mcp	61	709	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	yeetingwaterbottle/canvas-mcp	61	873	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	jsrodr/canvas-mcp	61	555	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	mdweaver/canvas-mcp	61	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	plyght/canvas-mcp	61	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	aryankeluskar/canvas-mcp	zhenghh04/canvas-mcp	61	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	abr-projects/canvas-mcp	mattlo0546/canvas-mcp	672	5	0	0	False	False	INDEPENDENT	None
+canvas-mcp	abr-projects/canvas-mcp	fdis111/canvas-mcp	672	301	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	abr-projects/canvas-mcp	lucanardinocchi/canvas-mcp	672	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	abr-projects/canvas-mcp	harrywang/canvas-mcp	672	709	664	616	False	False	DIVERGED-FORK	None
+canvas-mcp	abr-projects/canvas-mcp	yeetingwaterbottle/canvas-mcp	672	873	664	616	False	False	DIVERGED-FORK	None
+canvas-mcp	abr-projects/canvas-mcp	jsrodr/canvas-mcp	672	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	abr-projects/canvas-mcp	mdweaver/canvas-mcp	672	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	abr-projects/canvas-mcp	plyght/canvas-mcp	672	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	abr-projects/canvas-mcp	zhenghh04/canvas-mcp	672	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	fdis111/canvas-mcp	5	301	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	lucanardinocchi/canvas-mcp	5	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	harrywang/canvas-mcp	5	709	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	yeetingwaterbottle/canvas-mcp	5	873	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	jsrodr/canvas-mcp	5	555	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	mdweaver/canvas-mcp	5	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	plyght/canvas-mcp	5	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mattlo0546/canvas-mcp	zhenghh04/canvas-mcp	5	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	fdis111/canvas-mcp	lucanardinocchi/canvas-mcp	301	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	fdis111/canvas-mcp	harrywang/canvas-mcp	301	709	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	fdis111/canvas-mcp	yeetingwaterbottle/canvas-mcp	301	873	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	fdis111/canvas-mcp	jsrodr/canvas-mcp	301	555	293	279	False	False	DIVERGED-FORK	None
+canvas-mcp	fdis111/canvas-mcp	mdweaver/canvas-mcp	301	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	fdis111/canvas-mcp	plyght/canvas-mcp	301	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	fdis111/canvas-mcp	zhenghh04/canvas-mcp	301	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lucanardinocchi/canvas-mcp	harrywang/canvas-mcp	3	709	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lucanardinocchi/canvas-mcp	yeetingwaterbottle/canvas-mcp	3	873	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lucanardinocchi/canvas-mcp	jsrodr/canvas-mcp	3	555	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lucanardinocchi/canvas-mcp	mdweaver/canvas-mcp	3	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lucanardinocchi/canvas-mcp	plyght/canvas-mcp	3	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	lucanardinocchi/canvas-mcp	zhenghh04/canvas-mcp	3	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	harrywang/canvas-mcp	yeetingwaterbottle/canvas-mcp	709	873	709	650	False	True	SUPERSET	b
+canvas-mcp	harrywang/canvas-mcp	jsrodr/canvas-mcp	709	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	harrywang/canvas-mcp	mdweaver/canvas-mcp	709	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	harrywang/canvas-mcp	plyght/canvas-mcp	709	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	harrywang/canvas-mcp	zhenghh04/canvas-mcp	709	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	yeetingwaterbottle/canvas-mcp	jsrodr/canvas-mcp	873	555	548	520	False	False	DIVERGED-FORK	None
+canvas-mcp	yeetingwaterbottle/canvas-mcp	mdweaver/canvas-mcp	873	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	yeetingwaterbottle/canvas-mcp	plyght/canvas-mcp	873	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	yeetingwaterbottle/canvas-mcp	zhenghh04/canvas-mcp	873	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	jsrodr/canvas-mcp	mdweaver/canvas-mcp	555	64	0	0	False	False	INDEPENDENT	None
+canvas-mcp	jsrodr/canvas-mcp	plyght/canvas-mcp	555	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	jsrodr/canvas-mcp	zhenghh04/canvas-mcp	555	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mdweaver/canvas-mcp	plyght/canvas-mcp	64	2	0	0	False	False	INDEPENDENT	None
+canvas-mcp	mdweaver/canvas-mcp	zhenghh04/canvas-mcp	64	3	0	0	False	False	INDEPENDENT	None
+canvas-mcp	plyght/canvas-mcp	zhenghh04/canvas-mcp	2	3	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	a2br/moodle-mcp	47	2	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	falkenslab/moodle-mcp	47	194	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	G36maid/moodle-mcp	47	163	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	ink-waffle/moodle-mcp	47	2	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	linomck/moodle-mcp	47	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	loyaniu/moodle-mcp	47	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	marcosnahuel/moodle-mcp	47	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	saadrahman01/moodle-mcp	47	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	1alexandrer/moodle-mcp	snaw80/moodle-mcp	47	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	falkenslab/moodle-mcp	2	194	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	G36maid/moodle-mcp	2	163	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	ink-waffle/moodle-mcp	2	2	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	linomck/moodle-mcp	2	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	loyaniu/moodle-mcp	2	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	marcosnahuel/moodle-mcp	2	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	saadrahman01/moodle-mcp	2	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	a2br/moodle-mcp	snaw80/moodle-mcp	2	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	G36maid/moodle-mcp	194	163	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	ink-waffle/moodle-mcp	194	2	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	linomck/moodle-mcp	194	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	loyaniu/moodle-mcp	194	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	marcosnahuel/moodle-mcp	194	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	saadrahman01/moodle-mcp	194	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	falkenslab/moodle-mcp	snaw80/moodle-mcp	194	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	G36maid/moodle-mcp	ink-waffle/moodle-mcp	163	2	0	0	False	False	INDEPENDENT	None
+moodle-mcp	G36maid/moodle-mcp	linomck/moodle-mcp	163	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	G36maid/moodle-mcp	loyaniu/moodle-mcp	163	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	G36maid/moodle-mcp	marcosnahuel/moodle-mcp	163	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	G36maid/moodle-mcp	saadrahman01/moodle-mcp	163	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	G36maid/moodle-mcp	snaw80/moodle-mcp	163	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	ink-waffle/moodle-mcp	linomck/moodle-mcp	2	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	ink-waffle/moodle-mcp	loyaniu/moodle-mcp	2	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	ink-waffle/moodle-mcp	marcosnahuel/moodle-mcp	2	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	ink-waffle/moodle-mcp	saadrahman01/moodle-mcp	2	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	ink-waffle/moodle-mcp	snaw80/moodle-mcp	2	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	linomck/moodle-mcp	loyaniu/moodle-mcp	17	17	0	0	False	False	INDEPENDENT	None
+moodle-mcp	linomck/moodle-mcp	marcosnahuel/moodle-mcp	17	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	linomck/moodle-mcp	saadrahman01/moodle-mcp	17	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	linomck/moodle-mcp	snaw80/moodle-mcp	17	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	loyaniu/moodle-mcp	marcosnahuel/moodle-mcp	17	65	0	0	False	False	INDEPENDENT	None
+moodle-mcp	loyaniu/moodle-mcp	saadrahman01/moodle-mcp	17	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	loyaniu/moodle-mcp	snaw80/moodle-mcp	17	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	marcosnahuel/moodle-mcp	saadrahman01/moodle-mcp	65	9	0	0	False	False	INDEPENDENT	None
+moodle-mcp	marcosnahuel/moodle-mcp	snaw80/moodle-mcp	65	13	0	0	False	False	INDEPENDENT	None
+moodle-mcp	saadrahman01/moodle-mcp	snaw80/moodle-mcp	9	13	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	alanwtom/blackboard-mcp	bibo242/blackboard-mcp	26	28	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	alanwtom/blackboard-mcp	felipedias-ie/blackboard-mcp	26	21	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	alanwtom/blackboard-mcp	Loganxgreaves/blackboard-mcp	26	2	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	alanwtom/blackboard-mcp	lukecarroll15/blackboard-mcp	26	20	18	18	False	False	DIVERGED-FORK	None
+blackboard-mcp	alanwtom/blackboard-mcp	Mattlo0546/blackboard-mcp	26	4	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	alanwtom/blackboard-mcp	p1ckle3/blackboard-mcp	26	1	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	alanwtom/blackboard-mcp	rd2100/blackboard-mcp	26	7	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	bibo242/blackboard-mcp	felipedias-ie/blackboard-mcp	28	21	15	15	False	True	SUPERSET	b
+blackboard-mcp	bibo242/blackboard-mcp	Loganxgreaves/blackboard-mcp	28	2	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	bibo242/blackboard-mcp	lukecarroll15/blackboard-mcp	28	20	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	bibo242/blackboard-mcp	Mattlo0546/blackboard-mcp	28	4	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	bibo242/blackboard-mcp	p1ckle3/blackboard-mcp	28	1	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	bibo242/blackboard-mcp	rd2100/blackboard-mcp	28	7	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	felipedias-ie/blackboard-mcp	Loganxgreaves/blackboard-mcp	21	2	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	felipedias-ie/blackboard-mcp	lukecarroll15/blackboard-mcp	21	20	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	felipedias-ie/blackboard-mcp	Mattlo0546/blackboard-mcp	21	4	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	felipedias-ie/blackboard-mcp	p1ckle3/blackboard-mcp	21	1	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	felipedias-ie/blackboard-mcp	rd2100/blackboard-mcp	21	7	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	Loganxgreaves/blackboard-mcp	lukecarroll15/blackboard-mcp	2	20	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	Loganxgreaves/blackboard-mcp	Mattlo0546/blackboard-mcp	2	4	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	Loganxgreaves/blackboard-mcp	p1ckle3/blackboard-mcp	2	1	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	Loganxgreaves/blackboard-mcp	rd2100/blackboard-mcp	2	7	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	lukecarroll15/blackboard-mcp	Mattlo0546/blackboard-mcp	20	4	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	lukecarroll15/blackboard-mcp	p1ckle3/blackboard-mcp	20	1	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	lukecarroll15/blackboard-mcp	rd2100/blackboard-mcp	20	7	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	Mattlo0546/blackboard-mcp	p1ckle3/blackboard-mcp	4	1	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	Mattlo0546/blackboard-mcp	rd2100/blackboard-mcp	4	7	0	0	False	False	INDEPENDENT	None
+blackboard-mcp	p1ckle3/blackboard-mcp	rd2100/blackboard-mcp	1	7	0	0	False	False	INDEPENDENT	None
+brightspace-mcp-server	lmgveerhoek/brightspace-mcp-server	matthewliu10/brightspace-mcp-server	308	251	246	230	False	False	DIVERGED-FORK	None
+brightspace-mcp-server	lmgveerhoek/brightspace-mcp-server	pranav-vijayananth/brightspace-mcp-server	308	7	0	0	False	False	INDEPENDENT	None
+brightspace-mcp-server	lmgveerhoek/brightspace-mcp-server	RohanMuppa/brightspace-mcp-server	308	472	298	278	False	False	DIVERGED-FORK	None
+brightspace-mcp-server	matthewliu10/brightspace-mcp-server	pranav-vijayananth/brightspace-mcp-server	251	7	0	0	False	False	INDEPENDENT	None
+brightspace-mcp-server	matthewliu10/brightspace-mcp-server	RohanMuppa/brightspace-mcp-server	251	472	246	230	False	False	DIVERGED-FORK	None
+brightspace-mcp-server	pranav-vijayananth/brightspace-mcp-server	RohanMuppa/brightspace-mcp-server	7	472	0	0	False	False	INDEPENDENT	None
+#
+# SECTION 3 -- per-group result, as printed by the instrument.
+# group=canvas-mcp addresses=23 resolved=20 unresolved=3 pairs=190
+# verdicts DIVERGED-FORK=39 INDEPENDENT=134 SUPERSET=17
+# families [abr-projects/canvas-mcp,amirf194/canvas-mcp,bartmassey-upstream/canvas-mcp,fdis111/canvas-mcp,harrywang/canvas-mcp,jsrodr/canvas-mcp,lindsay-cheng/canvas-mcp,nelsonspencer/canvas-mcp,sirdanielm/canvas-mcp,vishalsachdev/canvas-mcp,yeetingwaterbottle/canvas-mcp] [mdweaver/canvas-mcp,r-huijts/canvas-mcp]
+# unresolved eastarctica/canvas-mcp owen-x-tech/canvas-mcp owentaylor/canvas-mcp
+# group=moodle-mcp addresses=11 resolved=10 unresolved=1 pairs=45
+# verdicts INDEPENDENT=45
+# families  none
+# unresolved nahuelalbornoz/moodle-mcp
+# group=blackboard-mcp addresses=9 resolved=8 unresolved=1 pairs=28
+# verdicts DIVERGED-FORK=1 INDEPENDENT=26 SUPERSET=1
+# families [alanwtom/blackboard-mcp,lukecarroll15/blackboard-mcp] [bibo242/blackboard-mcp,felipedias-ie/blackboard-mcp]
+# unresolved e9x/blackboard-mcp
+# group=brightspace-mcp-server addresses=4 resolved=4 unresolved=0 pairs=6
+# verdicts DIVERGED-FORK=3 INDEPENDENT=3
+# families [RohanMuppa/brightspace-mcp-server,lmgveerhoek/brightspace-mcp-server,matthewliu10/brightspace-mcp-server]

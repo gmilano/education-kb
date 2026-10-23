@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p405` · reads and commit both 2026-10-23 — the ELEVENTH pass dated today.** 🔴 **The LMS-MCP
+crowding this base has been citing as "real supply" is 42 addresses and only 27 PROJECTS — and the
+inflation is NOT uniform: `canvas-mcp` absorbs 11 addresses into one family while `moodle-mcp` absorbs
+none.** 🟢 **`intel/open-gaps.md` item 3's lineage half is CLOSED for all four groups it names.**
+
+🔵 **Why `p402`'s channel could not see this, stated as a property and not as a fault.** `p402` probed
+**ref sets** and got **20 distinct HEADs, 20 distinct fingerprints, 0 aliases** on `canvas-mcp` — and
+wrote its own limit: *"a distinct HEAD rules out an alias and a non-divergent fork, and does **not** rule
+out a **divergent** fork."* 🟢 **Every one of the 11 `canvas-mcp` family members has a distinct HEAD and
+they all share the same root commit.** The ref-set answer was correct and the question it answers is a
+different one.
+
+🟢 **Measured 2026-10-23 from full clones — 42 addresses, 269 pairs, every pair graded.**
+
+| group | addresses | resolved | pairs | 🟢 **projects** | related pairs | families |
+|---|---|---|---|---|---|---|
+| `canvas-mcp` | 23 | **20** | 190 | 🔴 **9** | **56** | **11** + **2** |
+| `moodle-mcp` | 11 | **10** | 45 | 🟢 **10** | 🟢 **0** | 🟢 **none** |
+| `blackboard-mcp` | 9 | **8** | 28 | **6** | **2** | 2 + 2 |
+| `brightspace-mcp-server` | 4 | **4** | 6 | 🔴 **2** | **3** | **3** |
+| 🟢 **total** | **47** | **42** | **269** | 🟢 **27** | **61** | 5 families, **15** addresses absorbed |
+
+🟢 **Evidence:** [`group-lineage`](../evidence/group-lineage.2026-10-23-p405.tsv) — 47 address rows ·
+269 pair rows · 21 columns · instrument, **12 controls / 0 failures**, and a facts cache that re-grades
+without re-cloning, at [`compose/code/p405-group-lineage/`](../compose/code/p405-group-lineage/README.md).
+
+### 🔴 Which address to build on, per family — four of the five were not the one this base cites most
+
+🟢 **The origin is named by the ROOT COMMIT's author, first-hand, not inferred from currency or from
+star count.**
+
+| family | 🟢 **build on this** | measured | the rest of the family |
+|---|---|---|---|
+| `canvas-mcp` **FAMILY-1 (11)** | 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **1,089 commits · 23 tags · HEAD `ebab8d6969cc` 2026-10-22 · 1 d** · MIT *(1,071 B)* · root `afe32c3e1721` **2025-02-27**, root-commit author identity (`%an <%ae>`) `vishalsachdev <svishal2001@gmail.com>` — 🟢 **and that same root commit, by that same author, is the root of all eleven** | `bartmassey-upstream` (1,001 · 23 tags · 12 d) · `sirdanielm` (972 · 3 d) · `lindsay-cheng` (928 · 26 d) · `yeetingwaterbottle` (873 · 20 d) · `harrywang` (709 · 42 d) · `abr-projects` (672 · 10 d) · `amirf194` (671 · 64 d) · `jsrodr` (555 · 66 d) · `nelsonspencer` (472 · 7 d) · `fdis111` (301 · 21 d) |
+| `canvas-mcp` **FAMILY-2 (2)** | 🟡 **keep** [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | 61 commits · **3 tags** · HEAD `711549f163ef` 2026-09-21 · 32 d · MIT *(1,065 B)* · root `731aa116052b` **2024-12-12**, root-commit author identity (`%an <%ae>`) `R.Huijts <r.huijts@fontys.nl>` *(Fontys, NL)* | 🔴 [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) is a **`SUPERSET`** — 64 commits, r-huijts's HEAD is an ancestor — **22 d**, and **0 tags**. 🟡 **Three commits ahead is not canonical**: the published artefact and the institutional provenance are both on `r-huijts` |
+| `brightspace-mcp-server` **(3)** | 🟢 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **472 commits · 6 tags · HEAD `1fbc693bf9e1` 2026-10-22 · 1 d** · MIT *(1,068 B)* · root `fb3d6c0a57bf` **2026-02-07**, root-commit author identity (`%an <%ae>`) `RohanMuppa <rohanmuppawork@gmail.com>` — 🟢 **root of all three** | `lmgveerhoek` (308 · 0 tags · 26 d) and `matthewliu10` (251 · 5 tags · 41 d), both `DIVERGED-FORK` |
+| `blackboard-mcp` **FAMILY-1 (2)** | 🟢 [`alanwtom/blackboard-mcp`](https://github.com/alanwtom/blackboard-mcp) | 26 commits · 1 tag · HEAD `5c7462019957` **2026-10-22 · 1 d** · MIT *(1,065 B)* · root `881f50968ac3` 2026-08-29, root-commit author identity (`%an <%ae>`) `alanwtom <alanwtom@users.noreply.github.com>` | `lukecarroll15` (20 · 39 d), `DIVERGED-FORK` |
+| `blackboard-mcp` **FAMILY-2 (2)** | 🟢 [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 21 commits · 3 tags · HEAD `fb057928ae20` 2026-10-14 · **9 d** · MIT *(1,084 B)* · root `946d69b33dfa` 2026-09-10, root-commit author identity (`%an <%ae>`) `felipedias-ie <231931438+felipedias-ie@users.noreply.github.com>` | 🔵 `bibo242` carries **28** commits over all refs and is the **ANCESTOR** — see the trap below |
+
+🔴 **The trap in that last row, and it is the one a commit count walks straight into.**
+`bibo242/blackboard-mcp` has **28** commits to `felipedias-ie`'s **21**, and `felipedias-ie` is
+nonetheless the **descendant**: `git merge-base --is-ancestor` puts `bibo242`'s HEAD inside
+`felipedias-ie`'s history. 🟢 **The extra commits sit on refs that are not reachable from `bibo242`'s
+own HEAD.** 🔵 So ancestry must be asked against **`rev-list HEAD`**, never against `rev-list --all`,
+and this instrument's load-bearing control is exactly that case.
+
+### 🔴 `bartmassey-upstream/canvas-mcp` — the slug says upstream and the history says fork
+
+🔴 **It is not upstream.** Its root commit is `afe32c3e1721`, authored by **`vishalsachdev`**, and it is a
+`DIVERGED-FORK` of `vishalsachdev/canvas-mcp` at **1,001 commits against 1,089**. 🟢 Same class as
+`p402`'s `*-unsupported` finding, with the sign reversed: there an owner name **was** the stewardship
+fact, here an owner name **asserts** a provenance the history denies. 🔵 **The rule for a licence or
+provenance cell:** an owner or slug containing `upstream`, `canonical`, `official` or `main` is a
+**claim**, and the root commit is the measurement.
+
+### 🟢 What this does NOT change
+
+| | |
+|---|---|
+| 🟢 **`moodle-mcp` is genuinely 10 projects** | **45 pairs, 45 `INDEPENDENT`, 0 shared commits and 0 shared trees anywhere in the group.** 🔵 The crowding reading was right for this group and wrong for the other three, which is why a per-group measurement was needed rather than one verdict about "LMS MCP supply" |
+| 🟡 **7 of `canvas-mcp`'s 20 are real sole projects** | `caleb-media-studio`, `admin978`, `aryankeluskar` *(🔵 **ISC**, 746 B — still the only non-MIT/Apache/BSD permissive grant these shelves carry)*, `mattlo0546`, `lucanardinocchi` *(🔴 **no grant**)*, `plyght` *(🔴 **no grant**, 2 commits, 358 d)* and `zhenghh04` |
+| 🔴 **It does not grade quality** | A shared commit proves a relation. **Nothing here says the family head is good software** — only that the other ten addresses are not independent evidence of ecosystem breadth |
+| 🔴 **5 of 47 addresses do not resolve** | `eastarctica/canvas-mcp` *(already known `UNRESOLVED` at `p402`)*, 🆕 `owen-x-tech/canvas-mcp`, 🆕 `owentaylor/canvas-mcp`, 🆕 `nahuelalbornoz/moodle-mcp`, 🆕 `e9x/blackboard-mcp`. 🟡 **Four of the five are new**, and they are named so they are not re-probed |
+
+🔵 **One more shape, recorded so it is not mistaken for an address.** `io.github.vishalsachdev/canvas-mcp`
+appears on [`agents/trending.md`](trending.md) and is the **MCP registry identifier**, not a GitHub
+address — it is the registry name of `vishalsachdev/canvas-mcp`, the family head above. 🔴 **It is also
+NOT the dot-run specimen `gate-census-union`'s control 24 wants**: that rule tests the repository **NAME**
+position for `^\.{3,}$`, and this dot run is in the **OWNER** position. Checked, so a successor does not
+read it as the fix for that red gate.
+
+---
+
+
 **🆕 Pass `p404` · reads and commit both 2026-10-23 — the TENTH pass dated today.** 🟢 **`p402`'s
 three open-direction pairs are CLOSED, in one channel nobody here had used: a FULL-history clone.
 Three pairs, three different verdicts.** 🔴 **One of the three REFUTES `p402`'s own note, and the

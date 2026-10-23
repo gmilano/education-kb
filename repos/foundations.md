@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-23
 ---
 
+### 🆕 `p405` — two MIT Moodle MCP rows with PUBLISHED artefacts, and they refute a live recommendation
+
+🟢 **Both read first-hand on 2026-10-23 from FULL clones** — grant from the payload at `HEAD`, tag list
+from the clone's own refs, provenance from the root commit and from named files in the tree.
+🔴 **Promoted from `p370`'s backlog**, where both have sat on
+[`repos/trending.md`](trending.md) and [`agents/trending.md`](../agents/trending.md) without ever
+reaching a build-on tier. 🔵 That backlog has been *"carried unmoved"* for eight passes; this moves
+**two** rows off it, which is not clearing it.
+
+| repo | layer | licence *(payload, first-hand)* | HEAD · age | tags | published artefact | why it earns a row |
+|---|---|---|---|---|---|---|
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | **Tier 7 — Integration / MCP** | 🟢 **MIT** *(1,067 B, title line `MIT License`)*, and `package.json` declares `"license": "MIT"` — 🟢 **two channels agreeing** | `7da66c1a...` · 🟢 **1 d** *(2026-10-22)* | 🟢 **6** — `v0.1.0 … v0.5.0` | 🟢 **npm `@falkenslab/moodle-mcp`** | 🟢 **~230 Moodle tools, and it needs NOTHING installed in Moodle** — no web-service token, no admin, no plugin. It drives a **real browser session** (Playwright) logged in as the teacher, so it works on any Moodle 4.5 / 5.x site the user can already log into, SSO and 2FA included. 🟢 **Students are pseudonymised to the model** (`A-7KQ2XM` aliases, de-aliased only on the operator's machine) — `pseudonymization` is a declared `package.json` keyword, not a README adjective. 🟡 Write tools confirm before acting. **194 commits** |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | **Tier 7 — Integration / MCP** | 🟢 **MIT** *(1,064 B)*, and `Cargo.toml` declares `license = "MIT"` — 🟢 **two channels agreeing** | `18bd1777...` · 🟢 **3 d** *(2026-10-20)* | 🟢 **7** — `v0.1.0 … v0.2.1` | 🟢 **crates.io `moodle-mcp`** | 🟢 **A Rust MCP server over Moodle's own Web Services** *(`rmcp` 3.5, Rust 1.88, edition 2024)* — a single static binary, which is the deployment shape a school IT department will accept where a Node runtime will not. Moodle **3.7 → 5.x** via the mobile-app web service. CI + Codecov. **163 commits**, docs as mdBook, README in **8 languages** |
+
+🟢 **Region, for the filter — and one of the two is settled first-hand.**
+
+| repo | region | 🟢 **what the payload says**, not what the name suggests |
+|---|---|---|
+| `G36maid/moodle-mcp` | 🟢 **APAC** | 🟢 **Established from the tree:** `src/sso/ntust.rs` is a dedicated SSO driver for **NTUST** *(National Taiwan University of Science and Technology)*, and the docs name the two verified deployments as *"NTNU by the credentials mode, NTUST by the SSO driver"*. `Cargo.toml` `homepage = "https://moodle.ntnu.cc"`, and **繁體中文** is the first of the seven translations. 🔵 **Taiwan.** The bare string `NTNU` is ambiguous *(it also names a Norwegian university)* — the **`ntust.rs` driver is what settles it**, because no Norwegian institution is NTUST |
+| `falkenslab/moodle-mcp` | 🟡 **Global** | 🔴 **Jurisdiction NOT established, and recorded that way rather than guessed.** The signals are Spanish-language: the only translated docs tree is `/es/`, and the root commit's author is `Francisco Vargas Ruiz`. 🔴 **All 194 commits are authored from `users.noreply.github.com`**, so there is no domain, no institution and no country in the payload — Spain and Spanish-speaking LATAM are both consistent with everything measurable here. 🔵 `T82`: that licenses *"the payload does not name a jurisdiction"*, never *"the project is European"* |
+
+🔴 **What these two refute, and it is a LIVE recommendation on two other shelves.** `p404` wrote, in
+[`compose/patterns.md`](../compose/patterns.md)'s layer-2 decision tree: *"`peancor` is the only
+permissive option measured here, and its **0 tags** means the pattern vendors a pinned commit rather
+than tracking a release."* 🟢 **Both rows above are MIT, both carry tags, and both publish to a package
+registry** — so the *"vendor a pinned commit because there is no release"* instruction is no longer the
+only option for a studio that cannot ship GPL. 🔵 The correction is made where it bites, on
+[`compose/patterns.md`](../compose/patterns.md).
+
+🟡 **The slug that made this invisible, named as a method note.** `p404` measured the group
+**`moodle-mcp-server`** and these two are **`moodle-mcp`** — a different slug, so no amount of work on
+the first group reaches the second. 🔴 **Both groups answer the same engagement question** *("which
+Moodle MCP server do we deploy?")*, and this base's name-collision backlog is keyed on the **slug**,
+which is exactly the wrong key for that question. 🔵 Registered on
+[`intel/open-gaps.md`](../intel/open-gaps.md).
+
+---
+
+
 ### 🆕 `p404` — the Go LTI 1.3 row is 1,125 days out of date, and a new foundation row replaces it
 
 🟢 **Read first-hand on 2026-10-23 from a FULL-history clone**, not from a rendered page

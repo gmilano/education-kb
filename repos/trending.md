@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p405` — what the trending channel returned, and what a full clone said instead
+
+🔴 **The trending leg is saturated for a THIRD consecutive pass.** `github trending education AI 2026`
+reached no live `github.com/trending` page on this channel; it returned third-party snapshots
+(Trendshift, GitTrend) whose addresses — `rohitg00/ai-engineering-from-scratch`,
+`MadsLorentzen/ai-job-search`, `h9-tect/AI-Roadmaps`, `aneelv75/github-trending` — are **all
+exact-shelved**. 🔵 Across all **8** legs run this pass: **6 distinct addresses returned, 6 already on
+these shelves.** The denominator is the finding; *"nothing new"* without one is indistinguishable from a
+bad search.
+
+🟢 **Where the week's actual repository movement came from: a clone, not a leg.** Four name-collision
+groups, 42 resolved addresses, **269 pairs graded**, and the live heads are what moved:
+
+| repo | 🟢 what the clone says | why it is this week's news |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **1,089 commits · 23 tags · HEAD 2026-10-22 · 1 d** · MIT 1,071 B | 🟢 **The root-commit author of an ELEVEN-address family.** This base cites `r-huijts` and `mdweaver` — a *separate*, 61-commit project — more heavily |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | **194 commits · 6 tags · 1 d** · MIT 1,067 B · npm `@falkenslab/moodle-mcp` | 🟢 **Nothing to install in Moodle** — Playwright browser session, no token, no admin, no plugin; ~230 tools; students pseudonymised |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | **163 commits · 7 tags · 3 d** · MIT 1,064 B · crates.io `moodle-mcp` | 🟢 **Rust single binary over Moodle Web Services**, Moodle 3.7→5.x, CI + Codecov, docs in 8 languages, **Taiwan** (`src/sso/ntust.rs`) |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | **472 commits · 6 tags · HEAD 2026-10-22 · 1 d** · MIT 1,068 B | 🟢 Root of all three Brightspace family addresses; the other two are **26 d** and **41 d** forks |
+
+🔴 **And one row this channel would have ranked wrongly.** `bibo242/blackboard-mcp` shows **28** commits
+against `felipedias-ie`'s **21** — and `felipedias-ie` is the **descendant**, because `bibo242`'s extra
+commits sit on refs unreachable from its own HEAD. 🔵 A commit count is not a recency signal.
+
+🟢 Evidence: [`group-lineage.2026-10-23-p405.tsv`](../evidence/group-lineage.2026-10-23-p405.tsv) ·
+[`regional-legs.2026-10-23-p405.tsv`](../evidence/regional-legs.2026-10-23-p405.tsv).
+
+---
+
 ## 🆕 2026-10-23 · `p404` — the trending legs are 20-for-20 already-shelved, and the week's real movement is a canonical owner
 
 🔵 **Append-only. Every repository fact below was read first-hand on 2026-10-23 from a FULL-history

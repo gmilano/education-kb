@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p405` — the LMS-MCP agent supply is 42 addresses and 27 projects
+
+🔴 **The crowding is 1.56× inflated, and not evenly.** Every address in the four name-collision groups
+[`intel/open-gaps.md`](../intel/open-gaps.md) item 3 names was cloned in full on **2026-10-23** and
+every pair graded — **269 pairs over 42 resolved addresses**.
+
+| group | resolved | pairs | 🟢 **projects** | related pairs | absorbed |
+|---|---|---|---|---|---|
+| `canvas-mcp` | 20 | 190 | 🔴 **9** | 56 | **11** |
+| `moodle-mcp` | 10 | 45 | 🟢 **10** | 🟢 **0** | 🟢 **0** |
+| `blackboard-mcp` | 8 | 28 | **6** | 2 | 2 |
+| `brightspace-mcp-server` | 4 | 6 | 🔴 **2** | 3 | 2 |
+
+🟢 **New this week, measured rather than announced** — the five family heads a studio should actually
+clone: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(1,089 commits, 23
+tags, **1 d**, MIT — and the root commit author of all eleven family members)*,
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(472
+commits, 6 tags, **1 d**, MIT — root of all three)*,
+[`alanwtom/blackboard-mcp`](https://github.com/alanwtom/blackboard-mcp) *(**1 d**, MIT)*,
+[`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) *(**9 d**, 3 tags,
+MIT)* and [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) *(kept: 3 tags and Fontys
+institutional provenance, against `mdweaver`'s 3-commit superset with 0 tags)*.
+
+🔴 **`bartmassey-upstream/canvas-mcp` is not upstream.** Root commit `afe32c3e1721` by `vishalsachdev`;
+it is a `DIVERGED-FORK` at 1,001 commits against 1,089. 🔵 An owner or slug saying `upstream`,
+`canonical`, `official` or `main` is a **claim**; the root commit is the measurement.
+
+🟢 **Two MIT Moodle MCP agents promoted to a build-on tier this week**, both with published artefacts —
+[`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) *(npm, 6 tags, 194 commits, **1 d**,
+~230 tools through a real browser session, students pseudonymised)* and
+[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(crates.io, 7 tags, 163 commits, **3 d**,
+Rust single binary, **Taiwan** — `src/sso/ntust.rs`)*. 🔴 They refute `p404`'s *"`peancor` is the only
+permissive option … 0 tags"* line on [`compose/patterns.md`](../compose/patterns.md).
+
+🔴 **Four newly-unresolvable addresses, named so they are not re-probed:** `owen-x-tech/canvas-mcp`,
+`owentaylor/canvas-mcp`, `nahuelalbornoz/moodle-mcp`, `e9x/blackboard-mcp`. 🟡 `eastarctica/canvas-mcp`
+was already `UNRESOLVED` at `p402`.
+
+🟢 Evidence: [`group-lineage.2026-10-23-p405.tsv`](../evidence/group-lineage.2026-10-23-p405.tsv) ·
+instrument and 12 controls at
+[`compose/code/p405-group-lineage/`](../compose/code/p405-group-lineage/README.md).
+
+---
+
 ## 🆕 2026-10-23 · `p404` — what moved: a canonical owner changed hands, and the week's agent legs are 20-for-20 already-shelved
 
 🔵 **Append-only, as this file requires. Every read below was taken first-hand on 2026-10-23**, via

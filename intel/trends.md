@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p405` — what changed on this shelf
+
+🟢 **One new trend, `p405-T1`, opened because it is a *measurement defect* this base has been
+publishing as an ecosystem reading** — not because a pass needed a finding. 🟡 **One amendment** to the
+licence ladder: a cell `p401` and `p382` between them do not have. 🔴 **No trend is retired.**
+
+### 🔴 `p405-T1` — an address count is not a project count, and the error is NOT uniform across groups
+
+🔵 **The shape.** This base counts **addresses**. Its census, its crowding findings and its
+*"real supply, not census noise"* conclusion are all address-denominated. 🔴 **Measured over the four
+name-collision groups `intel/open-gaps.md` item 3 names: 42 resolved addresses are 27 projects.**
+
+| group | addresses | 🟢 projects | absorbed | inflation |
+|---|---|---|---|---|
+| `canvas-mcp` | 20 | 9 | **11** | 🔴 **2.22×** |
+| `brightspace-mcp-server` | 4 | 2 | 2 | 🔴 **2.00×** |
+| `blackboard-mcp` | 8 | 6 | 2 | 1.33× |
+| `moodle-mcp` | 10 | **10** | 🟢 **0** | 🟢 **1.00×** |
+| **total** | **42** | **27** | **15** | **1.56×** |
+
+🔴 **The non-uniformity is the trend, and it is what makes a single correction factor useless.** A base
+that applied **1.56×** everywhere would be wrong about three of the four groups, and most wrong about
+the one where the count is already correct. 🟢 **So the prediction, in a form a successor can refute:**
+inflation tracks **how easy the platform is to get credentials for**, not how popular it is. Canvas and
+Brightspace have free instructor sandboxes, so a working server attracts forks that are *tutorials*;
+Moodle must be self-hosted, so each of its ten implementations was written by someone who already had a
+server. 🔵 **Refutable:** measure a group whose platform needs no credentials at all and the inflation
+should be higher than `canvas-mcp`'s 2.22×.
+
+🔴 **Why the existing channels could not see it, stated as absence rather than weakness.** `p402`'s
+ref-set test answers *"one repository or two"* and `p404`'s pair test answers *"which of these two."*
+🟢 **Neither can answer *"how many projects are in this group of twenty"*, because that is a property of
+the whole pair graph** — and it needs **`C(N,2)` verdicts**, which is why it stayed open at a clone per
+pair. 🟢 **The cost is now `O(N)` clones for `C(N,2)` verdicts** — 20 clones for 190 pairs
+([`compose/code/p405-group-lineage/`](../compose/code/p405-group-lineage/README.md), 12 controls) — so
+the question is affordable at group grain for the first time.
+
+🟡 **Two second-order consequences worth writing down.**
+
+| | |
+|---|---|
+| 🟡 **A platform-coverage claim is address-denominated and therefore wrong** | *"Twenty open-source Canvas MCP servers"* is true about addresses and **false** about what a client buys. By projects, Canvas has **fewer** than Moodle. Placed on [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🔴 **Transitivity is claimed and did NOT bind here** | Lineage is transitive, so the citable unit is the connected **component**. 🟢 **In all four groups measured, every within-family pair was directly related**, so components equal naive pair-clusters. 🔵 Named rather than left as an untested strength of the instrument |
+
+### 🟡 Amendment to the licence ladder — a plugin's grant can live ABOVE it in the tree
+
+🔴 **`p401` read 51 Moodle plugin grants through two channels and found every one
+`GPL-3.0-or-later` — *"Not one MIT, Apache-2.0 or BSD in 51 reads."*** 🟢 **Here is a 52nd, and it is
+neither.** `local_italiciamcp`, shipped inside
+[`marcosnahuel/moodle-mcp`](https://github.com/marcosnahuel/moodle-mcp), is a real Moodle local plugin —
+`$plugin->component = 'local_italiciamcp'`, `db/services.php`, `db/access.php`, 13
+`classes/external/` web-service functions, `$plugin->supported = [400, 501]`:
+
+| channel | `p401`'s question | 🟢 **measured here** |
+|---|---|---|
+| **P** — the grant in the plugin's own PHP headers | reads 51 of 60 | 🔴 **0 of 18 PHP files carry any GPL mention** — not the *"version 3 … or any later version"* paragraph, not the word `GPL` anywhere |
+| **L** — a licence-shaped file inside the plugin | reads 24 of 60 | 🔴 **0** — no `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` or `LICENCE` at any path inside the plugin directory |
+| 🆕 **A** — the nearest licence file in an **ANCESTOR** directory | 🔴 **no cell** | 🟢 **MIT**, 1,065 B, two directories up at the repository root; README reads *"MIT © 2026 Italicia"* |
+
+🟢 **`p382-subtree-grant` does not cover this, and the direction is why.** That instrument asks
+*"which subtrees does this grant **narrow itself** to?"* — a property the payload declares.
+🔴 **This asks the inverse: what grant reaches a subtree that declares NOTHING?** 🔵 Both are needed,
+and only one existed.
+
+🔴 **The commercial read, which is the opposite of what *"an MIT Moodle plugin"* sounds like.** A plugin
+calling Moodle's GPL APIs is normally held to GPL distribution terms, so the likeliest explanation is a
+**licensing defect on the author's side** — and a studio that treated the MIT file as permission to
+build closed derivative work on it would be relying on the author's mistake. 🟢 **`p401`'s boundary rule
+is UNCHANGED:** a studio's permissive code belongs **outside** the plugin boundary. 🔵 **What changes is
+the ladder**, which must now ask for the nearest ancestor grant before recording a plugin as
+*"no grant / unknown"* — and `p401` already named the direction of that error: an ungranted plugin reads
+as *unencumbered*, which is the opposite of the truth. Rows:
+[`plugin-inherited-grant.2026-10-23-p405.tsv`](../evidence/plugin-inherited-grant.2026-10-23-p405.tsv).
+
+### 🔵 A null worth recording, because it is the THIRD pass to spend it
+
+🔴 **The four English regional legs returned zero new facts for a third consecutive pass — and two of
+the four no longer reach education at all.** EMEA and APAC returned *enterprise* AI material
+(a 2023 Workday study, a Pearson–TCS alliance, a Sydney office). 🟢 **That is a change in kind, not
+degree:** the legs are not reporting stale education facts, they are reporting non-education facts.
+🔵 `T82` governs — that licenses *"these legs do not reach education in these regions"*, never
+*"there is no EMEA education AI news."* 🔴 A fourth English regional leg is a **predictable** null, so
+the successor move is a channel change. See [`market.md`](market.md).
+
+---
+
+
 ## 🆕 `p404` — what changed on this shelf
 
 🟢 **One new trend is opened, `p404-T1`, and it is opened because it is a *class* this base has been

@@ -5,6 +5,95 @@ updated: 2026-10-23
 ---
 
 
+## Pass 405 — reads and commit both 2026-10-23 — **`intel/open-gaps.md` ITEM 3's LINEAGE HALF IS CLOSED FOR ALL FOUR GROUPS IT NAMES, AND IT REFUTES THIS BASE'S OWN "REAL SUPPLY" READING: 42 ADDRESSES ARE 27 PROJECTS. 🔴 THE INFLATION IS NOT UNIFORM — `canvas-mcp` 2.22×, `moodle-mcp` 1.00× — SO NO CORRECTION FACTOR APPLIES. 🔴 AND A LIVE LAYER-2 RECOMMENDATION WAS WRONG BECAUSE IT WAS KEYED ON A SLUG.**
+
+🔵 **Dating note.** Every clone, history probe, payload read and search leg below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the eleventh pass dated today**,
+after `p395`–`p404`.
+
+🟢 **This is a BACKLOG pass, and it takes the item `p404` ranked FIRST** — *"run `forkdir.sh` over the
+`DISTINCT`-labelled subset … the instrument exists and is controlled; the only cost is clone budget."*
+🔴 **The clone budget is exactly why it had not been done**, and the fix is not a bigger budget.
+
+**Evidence:** [`group-lineage`](evidence/group-lineage.2026-10-23-p405.tsv) — 47 address rows · 269
+pair rows · 21 columns · [`plugin-inherited-grant`](evidence/plugin-inherited-grant.2026-10-23-p405.tsv)
+— the 52nd Moodle plugin grant · [`regional-legs`](evidence/regional-legs.2026-10-23-p405.tsv) — 8
+legs · instrument, **12 controls / 0 failures**, and a facts cache that re-grades without re-cloning,
+at [`compose/code/p405-group-lineage/`](compose/code/p405-group-lineage/README.md).
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`405-A`: item 3's lineage half is CLOSED for all four groups, and the answer refutes the reading this base published.** `p402` answered the **identity** half on the ref-set channel and wrote its own limit in full: *"a distinct HEAD rules out an alias and a non-divergent fork, and does **not** rule out a **divergent** fork."* 🟢 **Measured from full clones: 42 resolved addresses, 269 pairs, every pair graded.** `canvas-mcp` **20 → 9 projects**, `brightspace-mcp-server` **4 → 2**, `blackboard-mcp` **8 → 6**, `moodle-mcp` **10 → 10**. 🔴 **42 addresses are 27 projects — 1.56× — so `p402`'s *"the crowding is real supply, not census noise"* is right for one group of four and wrong for three.** 🔵 Every one of the eleven `canvas-mcp` family members has a **distinct HEAD** and they all share root commit `afe32c3e1721`: the ref-set answer was correct about the question it answers. |
+| 2 | 🔴 **And the non-uniformity is the result, not a caveat on it.** `canvas-mcp` inflates **2.22×** and `moodle-mcp` **1.00×** — 45 pairs, 45 `INDEPENDENT`, zero shared commits *and* zero shared trees. 🔴 **A base applying a single 1.56× correction would be wrong about three of the four groups and most wrong about the one already correct.** 🟢 **The prediction, in refutable form** (`p405-T1`): inflation tracks how easy it is to get *credentials* for the platform, not its popularity — Canvas and Brightspace hand out free instructor sandboxes, so a working server attracts forks that are tutorials; Moodle must be self-hosted, so each of its ten implementations was written by someone who already had a server. |
+| 3 | 🟢 **`405-B`: the instrument is `O(N)` clones for `C(N,2)` verdicts, which is why the question was affordable at all.** `p404`'s pairwise tool clones two repositories per pair, so `canvas-mcp` would have cost **380 clones for 190 pairs**; this pass spent **20**. 🟢 Every fact a pair verdict needs is a property of **one** repository, so each address is cloned once and cached and the pairs are set operations. 🟢 **`p404`'s `verdict.grade` is IMPORTED, never reimplemented**, so a group verdict and a pair verdict on the same two addresses are the same function call and cannot drift from the 11 controls that pin it. |
+| 4 | 🔴 **`405-C`: a live layer-2 recommendation was wrong, and the cause is that this base's backlog is keyed on the SLUG.** `p404` worked the slug **`moodle-mcp-server`** and concluded *"`peancor` is the only permissive option measured here, and its **0 tags** means the pattern vendors a pinned commit rather than tracking a release."* 🟢 **Two MIT Moodle MCP servers with PUBLISHED releases sit under the slug `moodle-mcp`:** [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) *(MIT 1,067 B, **6 tags**, npm `@falkenslab/moodle-mcp`, 194 commits, HEAD **1 d**)* and [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(MIT 1,064 B, **7 tags**, crates.io `moodle-mcp`, 163 commits, HEAD **3 d**)*. 🔴 **A client asks *"which Moodle MCP server?"*, never *"which `moodle-mcp-server`?"*** — registered as `Gap 405-A`, and the decision tree on [`compose/patterns.md`](compose/patterns.md) is rewritten to branch on **what you can install on the client's Moodle** rather than on grant, because with four options three of which are MIT, grant no longer discriminates. |
+| 5 | 🟢 **`405-D`: both promotions come off `p370`'s backlog, which no pass had moved for eight passes.** Both addresses had sat on the two `trending` shelves without ever reaching a build-on tier. 🔴 **Two rows is not clearing a 1,152-slug backlog**, and it is recorded as a choice rather than as progress. |
+| 6 | 🔴 **`405-E`: the ROOT COMMIT names the origin, and four of the five family heads were not the address this base cites most.** 🟢 All eleven `canvas-mcp` family members share root `afe32c3e1721`, root-commit author identity (`%an <%ae>`) `vishalsachdev <svishal2001@gmail.com>` — so [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(1,089 commits, 23 tags, **1 d**)* is the origin **and** the live head. 🔴 This base cites `r-huijts` and `mdweaver` more heavily — a **separate** project, root 2024-12-12, 61 commits, Fontys (NL). 🟢 **`p402` flagged exactly this mismatch and deferred it** *("flagged for a pass that can measure commit recency, not acted on here")*; it is acted on now. 🟡 **And `r-huijts` is KEPT**: `mdweaver` is a 3-commit `SUPERSET` with **0 tags**, and three commits ahead is not canonical when the other side holds the published artefact and the institutional provenance. |
+| 7 | 🔴 **`405-F`: `bartmassey-upstream/canvas-mcp` is not upstream.** Root commit `afe32c3e1721` by `vishalsachdev`; it is a `DIVERGED-FORK` at **1,001 commits against 1,089**. 🟢 Same class as `p402`'s `*-unsupported` finding with the sign reversed — there an owner name **was** the stewardship fact, here an owner name **asserts** a provenance the history denies. 🔵 **The rule now on the shelves:** an owner or slug containing `upstream`, `canonical`, `official` or `main` is a **claim**; the root commit is the measurement. |
+| 8 | 🔴 **`405-G`: a commit count is not a recency signal, and the specimen is on these shelves.** `bibo242/blackboard-mcp` carries **28** commits over all refs to `felipedias-ie`'s **21**, and `felipedias-ie` is the **descendant** — `git merge-base --is-ancestor` puts `bibo242`'s HEAD inside its history, because `bibo242`'s extra commits sit on refs unreachable from its own HEAD. 🟢 **So ancestry must be asked against `rev-list HEAD`, never `rev-list --all`**, and that is this instrument's load-bearing control. |
+| 9 | 🟢 **`405-H`: the 52nd Moodle plugin grant, and it is the first that is not `GPL-3.0-or-later` — through a channel `p401`'s ladder does not have.** `local_italiciamcp`, shipped inside [`marcosnahuel/moodle-mcp`](https://github.com/marcosnahuel/moodle-mcp), is a real Moodle local plugin: `$plugin->component`, `db/services.php`, `db/access.php`, 13 `classes/external/` web-service functions, `$plugin->supported = [400, 501]`. 🔴 **Channel P reads 0 of 18 PHP files** *(no GPL mention anywhere)* and **channel L reads 0** *(no licence-shaped file at any path inside the plugin)*; the only grant reaching it is the repository root's **MIT**, 1,065 B, two directories up. 🟢 **`p382-subtree-grant` does not cover this: it asks whether a grant NARROWS itself, and this asks what grant REACHES a subtree that declares nothing.** 🔴 **The commercial read is the opposite of what *"an MIT Moodle plugin"* sounds like** — a plugin calling Moodle's GPL APIs is normally held to GPL distribution terms, so the likeliest reading is a defect on the author's side, and a studio relying on the MIT file would be relying on that mistake. 🟢 **`p401`'s boundary rule is UNCHANGED.** Registered as `Gap 405-B`. |
+| 10 | 🔴 **`405-J`: three gates went red on this pass's OWN writes, and one of them was this instrument's own defect.** 🟢 **`gate-ladder-case`** caught `forkgroup.sh` probing a **fixed list of licence spellings** — `p283`'s ratchet, with `p401`'s `readme.md` specimen as the precedent, and `git cat-file -e HEAD:LICENSE` is case-sensitive exactly as `raw.githubusercontent.com` is. 🟢 **Fixed by ENUMERATING the root tree and folding the case**, which is what a full clone makes free. 🟢 **The honest part: the corrected instrument reproduces all four groups BYTE-IDENTICALLY** — so the defect was **latent, not harmless**, and the six `NONE` verdicts are now *calibrated absences* (`p293`'s shape) rather than list misses. 🟢 **`gate-author-key`** caught three root-commit lines naming a bare author with no key; all five now name `%an <%ae>` explicitly. 🟢 **`gate-union-currency`** caught the census, as designed — see below. |
+| 11 | 🔴 **`405-K`: the four regional legs returned ZERO new facts for a THIRD consecutive pass, and TWO of the four no longer reach education at all.** 🟢 Named leg by leg on [`intel/market.md`](intel/market.md). 🔴 **EMEA returned no education instrument for the FOURTH consecutive pass** *(`p400` finding 11, `402-G`, `404-G`, now this)* and printed its own gap: *"for education-specific EMEA material … a follow-up search would be needed."* 🔴 **APAC returned no ministry instrument for the third**, serving a Pearson–TCS alliance and a Sydney office instead of Vietnam's 2026–27 commencement or Korea's `AI Basic Act`. 🟢 **This is a change in KIND, not degree:** the legs are not returning stale education facts, they are returning **enterprise-AI** facts — so a fourth English regional leg is a *predictable* null, and the successor move is a channel change. |
+| 12 | 🔴 **`405-L`: saturation with a denominator — 8 legs, 6 distinct addresses returned, 6 already shelved.** All four global legs plus all four regional. 🟢 Every address exact-slug matched: `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `MadsLorentzen/ai-job-search`, `h9-tect/AI-Roadmaps`, `aneelv75/github-trending`, `Significant-Gravitas/AutoGPT`. 🔵 The ratio is the finding: *"nothing new"* without a denominator is indistinguishable from a bad search. 🟡 **The platform leg reproduced `p403` exactly**, and every licence claim it produced came from a vendor page — a **POINTER, never a grant** (`p288`). |
+| 13 | 🟢 **`405-M`: the new instrument arrives GATED, in the same change as the suite.** [`gate-group-lineage`](Makefile) is wired into `HOOK_GATES` **with** the instrument and exits explicitly, so it never joins `p252`'s silent-zero population. 🟢 **`HOOK_GATES` 48 → 49.** 🔵 This is `p261`'s remedy and the second consecutive pass to do it at the first attempt. |
+| 14 | 🟡 **`405-N`: four addresses this base carries have gone unresolvable, and only a pass that happened to clone them noticed.** 🆕 `owen-x-tech/canvas-mcp`, 🆕 `owentaylor/canvas-mcp`, 🆕 `nahuelalbornoz/moodle-mcp`, 🆕 `e9x/blackboard-mcp` *(plus `eastarctica/canvas-mcp`, already known at `p402`)*. 🔴 **Third measurement of the same decay** — after `p332`'s 22 truncations and `p397`'s six non-existent slugs — and this file already says in writing that no standing instrument re-checks a carried row's existence. 🟢 **Now with a denominator: 5 of 47, 10.6%.** Registered as `Gap 405-C`. |
+| 15 | 🟢 **`405-P`: one APAC repository row placed first-hand, and one EMEA row honestly REFUSED.** [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) is **Taiwan**, established from the tree: `src/sso/ntust.rs` is an SSO driver for **NTUST**, and the docs name the two verified deployments as NTNU and NTUST. 🔵 The bare string `NTNU` is ambiguous *(it also names a Norwegian university)* — **the `ntust.rs` driver is what settles it**. 🔴 **And `falkenslab/moodle-mcp` is NOT placeable:** its only locational signals are a Spanish-language `/es/` docs tree and a Spanish author name, and **all 194 commits are authored from `users.noreply.github.com`**, so Spain and Spanish-speaking LATAM are equally consistent. Filed **Global**. 🟢 `T82`: that licenses *"the payload names no jurisdiction"*, never *"the project is European."* |
+
+### 🟢 `make hooks` — 48 / 49, as `397-B` and `open-gaps` item 4 require a write-up to state
+
+🟢 **`48 / 49 gates green.`** 🔵 The tree this pass inherited was **47 / 48**; this pass added
+`gate-group-lineage` and turned **three** of its own reds green — `gate-ladder-case`,
+`gate-author-key` and `gate-union-currency`, each caught on this pass's own writes and each fixed
+rather than accommodated.
+
+🔴 **The one red is `gate-census-union`, and it is left red deliberately for a THIRD pass.** Its
+control 24 wants both rejection classes to fire on the live shelves and only `NAME-REF-OR-PATH`
+does. 🟢 `p398`'s diagnosis stands — **unsatisfiable by construction** — and turning it green from
+here means putting an address whose repository **name** is a run of three or more dots on a live
+shelf, i.e. manufacturing the data the gate looks for. 🔵 Not done, and named instead.
+
+### 🟢 The census, re-derived AFTER every shelf write — as `p352` and `p376` require
+
+🔵 **Derived last, not first.** 🟢 Both triples below were re-derived with `p351`'s instrument **after**
+this pass's ten shelf writes, and [`README.md`](README.md) is not a `SHELF_FILE`, so stating them here
+cannot move them.
+
+🟢 **The shape census:** **2 716** harvested shapes → **34** are not addresses → **2 682 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 682** channel-U
+addresses and **3 144** channel-B survivors give **3 515 addresses over both channels**.
+
+🔵 **The deltas, and why they are asymmetric.** `+2` channel-B survivors and `+2` union addresses
+against `p404`'s **3 142 / 3 513**, and 🟢 **zero** change to the shape census *(`p404`'s 2 716 / 34 /
+2 682 exactly)*. 🔵 That is the expected shape for this pass: the addresses it promoted were already
+**harvested** — they came off `p370`'s backlog, not off a search leg — so channel U already held them
+and only the bare-slug channel moved.
+
+### 🔴 What this pass did NOT do
+
+| | |
+|---|---|
+| 🔴 **It did not sweep `p397`'s 551 pairs** | It swept **four named groups — 269 pairs, 42 addresses** — which is `p404`'s ranked item at the grain `p402`'s `Exfil Scouting` refusal permits: explicitly named addresses in bounded batches. 🔴 `p402`'s remaining **296** addresses and `p370`'s **1,152**-slug promotion backlog are both still there; two rows came off the latter |
+| 🔴 **It did not grade quality** | A shared commit proves a relation. 🔴 **Nothing here says a family head is good software** — only that the other ten addresses are not independent evidence of ecosystem breadth. 🟡 7 of `canvas-mcp`'s 20 are genuinely sole projects |
+| 🔴 **It did not fix `Gap 405-A`, and the fix is nearer than the gap says** | 🟢 **This base's own `make recount` already counts MCP servers by PLATFORM across both agent shelves** — Canvas **38**, Moodle **23**, Blackboard **14**, Brightspace/D2L **10**, Google Classroom **12**, Open edX **2** — i.e. a **capability** key already exists and is already wired. 🔴 **Those populations are 1.9× the slug groups measured here**, so the lineage question is open over a much larger set than this pass closed, and `405-A`'s *"27 projects"* is a statement about **four slugs**, never about Canvas-MCP supply as a whole |
+| 🔴 **It left `gate-census-union` red for a THIRD pass** | Its control 24 wants both rejection classes to fire on the live shelves and only `NAME-REF-OR-PATH` does. 🟢 `p398`'s diagnosis stands: **unsatisfiable by construction**. 🔵 **One near-miss was checked and rejected so it is not re-found as the fix:** `io.github.vishalsachdev/canvas-mcp` *(the MCP **registry identifier** for the family head, not a GitHub address)* has its dot run in the **OWNER** position, and the rule tests the **NAME** position for `^\.{3,}$` |
+| 🔴 **It did not re-measure the `aiprovider_openaicompatible` or `lti` pairs** | `p404` closed both. 🔵 `p401`'s standing warning against re-selling a held fact |
+| 🟡 **It added no *new* address from a search leg** | **Zero** of eight legs returned an unshelved address. 🟢 Every address on a build-on tier this pass came from a **clone** of something already harvested — which is the brief's own rule that fewer real rows beat padding, applied to a pass that found its supply by measuring rather than by searching |
+
+### 🟢 Ranked for a successor
+
+| rank | item | why it is ranked here |
+|---|---|---|
+| **1** | 🟢 **Run `forkgroup.sh` over the CAPABILITY groups `make recount` already prints, starting with Canvas (38) and Moodle (23)** | `Gap 405-A`. The instrument is built, controlled and `O(N)`; the capability key is **already wired** in this repository; and the populations are **1.9×** the slug groups, so this is where the remaining inflation is. The clone budget for 38 addresses is one pass |
+| **2** | 🟡 **Add the ANCESTOR rung to the licence ladder and census this base's 60 Moodle plugin slugs against it** | `Gap 405-B`. 🔴 `p401` graded 9 of 60 as unreadable; an ancestor rung may move some of them, and the error's direction is the dangerous one — ungranted reads as unencumbered |
+| **3** | 🟡 **Build the standing existence gate, now that it has a denominator** | `Gap 405-C`: **5 of 47, 10.6%**, third measurement of the same decay, and this README has said twice that no instrument does it |
+| **4** | 🔴 **Change the regional CHANNEL — do not run a fourth English regional leg** | `405-K` measured that EMEA and APAC legs no longer reach education **at all**. 🔵 A national-language leg for a jurisdiction whose mandate has just commenced is `p404`'s rank 4 and still unspent; this pass adds the evidence that the English alternative is now a *predictable* null, not a cheap one |
+
+
+
+
 ## Pass 404 — reads and commit both 2026-10-23 — **`p402` RECORDED FORK DIRECTION AS UNESTABLISHED FOR FOUR PAIRS. THREE ARE CLOSED HERE IN ONE CHANNEL NOBODY HAD USED — A FULL-HISTORY CLONE — AND THEY COME OUT AS THREE DIFFERENT MECHANISMS. 🔴 ONE VERDICT REFUTES `p402`'s OWN NOTE, AND THE REFUTED ADDRESS IS RECOMMENDED ON ALL FOUR BUILD-ON TIERS WHILE ITS 1,125-DAY-FRESHER SUPERSET IS CITED ONCE. 🔴 THE FIVE PRESCRIBED LEGS ARE 20-FOR-20 ALREADY-SHELVED.**
 
 🔵 **Dating note.** Every repository read, clone, history probe and search leg below was run on

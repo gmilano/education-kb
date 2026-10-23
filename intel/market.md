@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p405` · 2026-10-23 — the four regional legs returned ZERO new facts for a THIRD consecutive pass, and TWO of the four returned no education instrument at all
+
+🔴 **All four prescribed regional legs were run, plus all four global legs. Across the eight, SIX
+distinct repository addresses were returned and SIX are already on these shelves.** 🟢 Named with its
+state, so the result is checkable rather than asserted:
+
+| leg | what it returned | state on these shelves |
+|---|---|---|
+| **North America** | Market-research pages only. **Colorado** and **Texas** named as piecemeal; NA share restated at **36%** *(and at **37.5%** by a second firm)*; low formal-guideline share and untrained-teacher share repeated | 🔴 **All carried.** 🔴 **No statute, bill number or deadline this base does not hold** — and nothing on Ohio's **2026-07-01** framework, MD `S.B. 720`, ID `SB 1227`, `H.R. 8747` or Boston's AI-fluency graduation requirement, all of which this file already carries more precisely than any leg has stated them |
+| **EMEA** | 🔴 **No education instrument at all.** Enterprise-AI material: the EU AI Act as *backdrop*, a **2023** Workday study, CompTIA's 2026 outlook *(US-sampled, EMEA-framed)*, a Feb-2026 Bandwidth-Cavell barriers study | 🔴 **FOURTH consecutive pass of this exact null** — `p400` finding 11, `p402`'s `402-G`, `p404`'s `404-G`, and now this. 🟢 **The leg printed its own gap:** *"for education-specific EMEA material … a follow-up search would be needed."* 🔵 `ACTION NU-EU` already says **STOP re-verifying** the Omnibus set; this leg does not even reach it |
+| **APAC** | 🔴 **No ministry-level instrument, for the THIRD consecutive pass.** Corporate items only: a **Pearson–TCS** learning alliance, **LearnUpon**'s Sydney HQ, a 2025 Forrester local-LLM prediction, Singapore FI consultations, Australia tightening AI governance and copyright | 🔴 **Nothing on Vietnam's 12-periods-per-class-per-year from 2026–27, Korea's `AI Basic Act`, Korea's textbook walk-back, Japan's 2030 posture or India's compulsory Class-3 mandate** — every one of which this base holds. 🔵 The region with the largest mandated deployments on earth returns corporate training news on an English leg |
+| **LATAM** | Best regional yield again, and all of it held: **Brazil Bill 2.338/2023**, **Chile**'s updated National AI Policy and risk-based bill, **ILIA**, `indicelatam.cl`, Mexico's computational-thinking push, and a **UFLO** repository comparative study of AI regulation in higher education across **AR / BR / CL / PE / ES** | 🔴 **All carried** — Bill **2.338** appears in **27** files here, `ILIA` in **144**, `indicelatam` in **6**, the UFLO study in **3**. 🟡 The one unheld **string** is Foreign Policy's framing *"Brazil wants regulation, Argentina rejects it"* — a characterisation of facts this base already holds, not a new fact |
+
+🟢 **Three consecutive passes of four-for-four regional nulls is now the strongest form of
+`p401-T1`'s prediction**, and this pass adds the sharper version: **the English regional legs no longer
+reach the education domain at all in EMEA and APAC.** 🔵 They are not returning stale education facts;
+they are returning enterprise-AI facts. 🔴 **A fourth English regional leg is therefore not a cheap
+null — it is a predictable one**, and the successor move is a channel change, not another leg.
+
+🔴 **The `## Opportunities by region` block below is UNCHANGED by this pass, and that is deliberate.**
+Zero new regional facts means zero new regional opportunities; editing that block to look worked would
+put a pass's activity where a region's evidence belongs. 🔵 The regional **deltas** this pass does carry
+are repository facts, and they are placed where they belong instead:
+
+| region | 🆕 `p405` delta | where |
+|---|---|---|
+| **APAC** | 🟢 **A new APAC repository row, with institutional provenance settled from the payload.** [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) — MIT, 163 commits, **7 tags**, crates.io, HEAD **3 d** — carries `src/sso/ntust.rs`, an SSO driver for **NTUST** *(National Taiwan University of Science and Technology)*, and its docs name the two verified deployments as NTNU and NTUST. 🔵 **Taiwan**, established by the driver rather than by the ambiguous `NTNU` string | [`repos/foundations.md`](../repos/foundations.md) |
+| **North America** | 🟡 **A citation-weight correction, not new supply.** The Canvas MCP family head is [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(1,089 commits, 23 tags, **1 d**)* — root-commit author of **eleven** addresses — while this base cites `r-huijts` *(Fontys, **NL**)* and `mdweaver` more heavily. 🔵 Two regions, two different projects, one slug | [`agents/top.md`](../agents/top.md) |
+| **EMEA** | 🔴 **No delta, and an honest downgrade.** `r-huijts/canvas-mcp`'s Fontys (NL) provenance is intact, and the **second** Moodle MCP promoted this pass, [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp), is 🔴 **NOT placeable**: its only locational signals are a Spanish-language `/es/` docs tree and a Spanish author name, and **all 194 commits are authored from `users.noreply.github.com`**. Spain and Spanish-speaking LATAM are equally consistent, so it is filed **Global** | [`repos/foundations.md`](../repos/foundations.md) |
+| **LATAM** | 🔴 **`Gap 343` STANDS — still no LATAM repository row placed.** 🟡 The nearest candidate this base has yet measured is [`marcosnahuel/moodle-mcp`](https://github.com/marcosnahuel/moodle-mcp): MIT, **10 tags**, npm `@nahuelalbornoz/moodle-mcp`, and 🟢 **a tool API named in Spanish** — `crear_curso`, `duplicar_curso`, `ocultar_seccion`, `reordenar_secciones` — serving the **Italicia** language-teaching workflow. 🔴 **Not counted as a closure:** a Spanish-language API and the author name `Nahuel` are not a jurisdiction, and the payload names no country | [`intel/open-gaps.md`](open-gaps.md) |
+
+🔵 **Why an address's region is a market fact and not only a repository fact.** A studio pitching an
+APAC engagement can now point at **code written against two Taiwanese universities' own login flows** —
+which is a different claim from *"the ecosystem supports Moodle."* 🔴 And the EMEA row above is the
+honest counterweight: **this pass could not place one of the two repositories it promoted**, and says so
+rather than letting a Spanish-language docs tree stand in for a country.
+
+---
+
+
 ## 🆕 `p404` · 2026-10-23 — the four regional legs returned ZERO new facts for a SECOND consecutive pass, and the one regional *correction* came from a repository, not a leg
 
 🔴 **All four prescribed regional legs were run. Every fact they produced is already on these shelves,

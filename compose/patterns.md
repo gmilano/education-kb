@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p405` — the layer-2 Moodle MCP choice was a GPL-or-vendor-a-commit decision, and it is not any more
+
+🔴 **`p404` wrote this file's layer-2 decision tree and closed it with:** *"`peancor` is the only
+permissive option measured here, and its **0 tags** means the pattern vendors a pinned commit rather
+than tracking a release."* 🟢 **Refuted, with two addresses, both read first-hand from full clones on
+2026-10-23.** 🔵 The reason `p404` could not see them is a method fact worth keeping: it measured the
+slug **`moodle-mcp-server`**, and these are **`moodle-mcp`** — a different slug for the same
+engagement question.
+
+```
+layer 2 of Pattern I (the network boundary), Moodle side — REVISED, pick by DEPLOYMENT not by grant:
+
+  no Moodle-side install possible (no admin, no token, SSO/2FA in the way)
+      -> falkenslab/moodle-mcp                MIT  1,067 B   npm @falkenslab/moodle-mcp
+         Node + Playwright; drives a REAL BROWSER SESSION as the teacher
+         + nothing to install in Moodle: no web-service token, no plugin, no administrator
+         + ~230 tools; works on any Moodle 4.5 / 5.x the user can already log into
+         + students pseudonymised to the model (A-7KQ2XM), de-aliased only on the operator's box
+         + 6 tags v0.1.0..v0.5.0, 194 commits, HEAD 1 d        <- A PUBLISHED RELEASE
+         - a browser session is a seat, not a service: it acts AS one teacher, not as the site
+
+  Moodle Web Services available, and IT wants one binary to deploy
+      -> G36maid/moodle-mcp                   MIT  1,064 B   crates.io moodle-mcp
+         Rust (rmcp 3.5, edition 2024, Rust 1.88); single static binary, stdio
+         + Moodle 3.7 -> 5.x via the mobile-app web service; CI + Codecov
+         + 7 tags v0.1.0..v0.2.1, 163 commits, HEAD 3 d       <- A PUBLISHED RELEASE
+         + SSO driver for NTUST, credentials mode verified at NTNU (Taiwan)
+         - student-first tool surface: a teacher-side workflow needs the option above
+
+  GPL-3.0 acceptable (internal tooling, or the client owns the deployment)
+      -> lmscloud-io/moodle-mcp-server        GPL-3.0  35,148 B   Python/fastmcp
+         + 3 tags; root commit by Marina Glancy (Moodle core provenance)
+         - copyleft: it cannot sit inside a proprietary layer-3
+
+  same Node runtime as ltijs / lti-tool, and MIT required
+      -> peancor/moodle-mcp-server            MIT  1,064 B   TypeScript/Node
+         - 0 tags: still vendor a pinned commit.  NO LONGER the only permissive option
+
+  wire-up, all cases, unchanged:
+      Moodle core_ai provider  ->  HTTP/MCP  ->  your layer-3 (retrieval, grounding, eval)
+      ADORSYS-GIS/moodle-aiprovider_openaicompatible  is layer 1 (GPL, thin, contributed back)
+```
+
+🟢 **The decision axis changed, and that is the useful part.** `p404`'s tree branched on **grant**,
+because grant was the only thing that distinguished the two addresses it had. 🔴 **With four options,
+grant stops discriminating** — three of the four are MIT — and the question becomes *what can you
+actually install on the client's Moodle?* 🔵 **Ask the client's LMS administrator one question before
+choosing:** *can we have a web-service token?* A `no` eliminates two of the four options and makes
+`falkenslab` the answer; a `yes` opens the Rust binary, which is the one a school IT department will
+sign off on.
+
+🟡 **A config line this pattern needs, same class as `p404`'s.** `falkenslab` runs a **browser session
+as a real user**, so it inherits that user's permissions and **nothing narrows them server-side**.
+🔴 The limits are enforced in the MCP server's own config, which means **the agent's blast radius is a
+client-side setting**. 🟢 Pin it in the engagement's config, enable read-only or course-scoped mode
+explicitly, and treat *"students are pseudonymised"* as a property to verify in the deployment rather
+than to quote from the README.
+
+### 🟢 New, concrete: picking an LMS MCP server when the client's LMS is NOT Moodle
+
+🔴 **This file and [`verticals/solutions.md`](../verticals/solutions.md) have cited LMS MCP servers by
+bare slug, and the slug is a name-collision group of up to 20 addresses.** 🟢 Measured
+2026-10-23 — 42 addresses, 269 pairs — the heads are:
+
+```
+pick by the client's LMS; each line is a MEASURED family head, not the first search result:
+
+  Canvas      -> vishalsachdev/canvas-mcp          MIT 1,071 B  1,089 commits  23 tags  1 d
+                 + root-commit author of ELEVEN of the 20 Canvas addresses
+                 ! do NOT clone bartmassey-upstream/canvas-mcp: the slug says upstream and
+                   the root commit says fork (1,001 commits, DIVERGED-FORK)
+                 ! r-huijts/canvas-mcp is a SEPARATE project (root 2024-12-12, Fontys NL),
+                   61 commits, 3 tags, npm - keep it if you want the npm package, and know
+                   that mdweaver/canvas-mcp is its 3-commit superset with 0 tags
+
+  Blackboard  -> alanwtom/blackboard-mcp           MIT 1,065 B     26 commits   1 tag   1 d
+              or felipedias-ie/blackboard-mcp      MIT 1,084 B     21 commits   3 tags  9 d
+                 ! the largest Blackboard address is 28 commits: READ these, do not depend
+                   on them.  Budget writing your own.
+                 ! bibo242/blackboard-mcp shows 28 commits and is the ANCESTOR of
+                   felipedias-ie - its extra commits are on refs unreachable from its HEAD
+
+  Brightspace -> RohanMuppa/brightspace-mcp-server MIT 1,068 B    472 commits   6 tags  1 d
+                 ! THREE of the four Brightspace addresses are this one author's lineage.
+                   Price it as a single-maintainer dependency and say so in the SOW.
+                   The only independent address is 7 commits, Apache-2.0, 374 d.
+
+  Moodle      -> see the revised layer-2 tree above: TEN independent implementations,
+                 the only genuinely uncollapsed supply of the four platforms.
+```
+
+🔵 **Why the "!" lines are the valuable part of this recipe.** Each one is a wrong clone a studio would
+otherwise make from the search index: a fork named `upstream`, a 28-commit repository that looks newer
+than its own descendant, and a four-address "ecosystem" that is one person. 🟢 Instrument, 12 controls
+and all 269 graded pairs:
+[`compose/code/p405-group-lineage/`](code/p405-group-lineage/README.md) ·
+[`group-lineage.2026-10-23-p405.tsv`](../evidence/group-lineage.2026-10-23-p405.tsv).
+
+---
+
+
 ## 🆕 `p404` — two recipes on this file named the wrong address, and the fix is one line each
 
 🟢 **Both corrections come from full-history clones read on 2026-10-23**, with the instrument and its

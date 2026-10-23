@@ -1,0 +1,22 @@
+# p405 -- the 52nd Moodle plugin grant, and the first that is NOT GPL-3.0-or-later.
+# Read first-hand from a FULL clone of marcosnahuel/moodle-mcp at HEAD d5ca68e8cd1b (2026-05-03),
+# 2026-10-23.  p401 measured 60 Moodle plugin slugs, read 51 grants and published "all 51 are
+# GPL-3.0-or-later ... Not one MIT, Apache-2.0 or BSD in 51 reads".  This is a 52nd instance in a
+# channel p401's two-channel ladder does not have: the plugin declares NOTHING and inherits the
+# grant from a licence file ABOVE it in the tree.
+#
+# channel P = the grant in the header of the plugin's own PHP files (p401's channel P)
+# channel L = a licence-shaped file inside the plugin directory  (p401's channel L)
+# channel A = the nearest licence-shaped file in an ANCESTOR directory              <- NEW
+measurement	value	note
+repository	marcosnahuel/moodle-mcp	MIT at the repository root; npm @nahuelalbornoz/moodle-mcp; 10 tags v0.1.0..v0.5.1-plugin-v0.4.7; 65 commits, single author Nahuel <nahuelachu@gmail.com>
+plugin_component	local_italiciamcp	declared in plugin-companion/local_italiciamcp/version.php; a real Moodle local plugin -- db/services.php, db/access.php, lang/en/, 13 classes/external/ WS functions
+plugin_release	v0.5.0	$plugin->version = 2026050300; $plugin->requires = 2022041900 (Moodle 4.0+); $plugin->maturity = MATURITY_STABLE
+plugin_supported	[400, 501]	Moodle 4.0 to 5.1 -- DECLARED, unlike p404's ADORSYS-GIS which dropped its $plugin->supported line
+channel_P_php_files	18	every .php file under plugin-companion/local_italiciamcp/
+channel_P_with_gpl	0	ZERO of 18 carry any GPL mention -- not the "version 3 of the License, or (at your option) any later version" paragraph, not the word GPL anywhere
+channel_L_licence_files	0	no LICENSE, LICENSE.md, LICENSE.txt, COPYING or LICENCE at any path inside the plugin directory
+channel_A_grant	MIT	repository root LICENSE, 1065 B, title line "MIT License"; README section reads "MIT (c) 2026 Italicia"
+verdict	GRANT-INHERITED-FROM-ANCESTOR	the only grant that reaches this Moodle plugin is the repository's MIT file, which sits two directories above it
+p401_census_effect	51/51 GPL-3.0-or-later -> 51/52	the uniformity claim is now one counter-instance short, and the counter-instance is invisible to BOTH of p401's channels
+commercial_read	DILIGENCE FLAG, NOT A SHORTCUT	a Moodle plugin calling Moodle's GPL APIs is normally held to GPL distribution terms, so an MIT-declared plugin is most likely a defect on the AUTHOR's side.  p401's boundary rule is UNCHANGED: a studio's permissive code still belongs outside the plugin boundary.  This row is a reason to ask the question in diligence, never a permissive Moodle plugin to build on

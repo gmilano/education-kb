@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p405` — the LMS-MCP layer, per platform: how much supply each LMS actually has
+
+🔴 **This file, and `agents/top.md`, have cited LMS MCP servers by bare slug while this base's own
+[`intel/open-gaps.md`](../intel/open-gaps.md) item 3 recorded that nothing here knew whether the
+crowding was *"many projects or a few forked many times."*** 🟢 **Measured 2026-10-23 from full clones
+— 42 addresses, 269 pairs, every pair graded** — and the answer differs **per platform**, which is the
+grain an engagement actually asks at.
+
+| the LMS a client runs | addresses | 🟢 **independent projects** | 🟢 **clone this** | what a studio should conclude |
+|---|---|---|---|---|
+| **Moodle** | 10 *(`moodle-mcp`)* + the `moodle-mcp-server` pair | 🟢 **10 + 2** | 🟢 [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) *(MIT, npm, 6 tags, **1 d**)* or [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(MIT, crates.io, 7 tags, **3 d**)* | 🟢 **The deepest and the only genuinely uncollapsed supply: 45 pairs, 45 `INDEPENDENT`, zero shared commits and zero shared trees anywhere.** Ten real implementations means a real **choice** — by runtime (Node vs. a Rust static binary) and by integration channel (browser session vs. Web Services) |
+| **Canvas** | 20 resolvable | 🔴 **9** | 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(MIT, 1,089 commits, 23 tags, **1 d**)* | 🔴 **The most overstated: 11 of the 20 are one family on root commit `afe32c3e1721`, authored by `vishalsachdev`.** A market map that counted addresses would show Canvas with twice Moodle's supply; by projects it has **fewer** |
+| **Blackboard** | 8 resolvable | **6** | 🟢 [`alanwtom/blackboard-mcp`](https://github.com/alanwtom/blackboard-mcp) *(MIT, **1 d**)* or [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) *(MIT, 3 tags, **9 d**)* | 🟡 **Thin everywhere.** The largest of the eight is **28** commits. 🔴 No address here is a dependency; they are reference implementations to read before writing your own |
+| **Brightspace / D2L** | 4 | 🔴 **2** | 🟢 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(MIT, 472 commits, 6 tags, **1 d**)* | 🔴 **Effectively ONE maintained project.** Three of the four share root `fb3d6c0a57bf` by `RohanMuppa`; the only independent address, `pranav-vijayananth`, is **7 commits, Apache-2.0, 374 d**. 🟡 Sell this as a single-vendor dependency with the risk stated |
+
+🔴 **Why this correction belongs on THIS file and not only on a repo shelf.** A platform-coverage claim
+is what a client hears as *"the ecosystem supports our LMS."* 🟢 **Canvas and Brightspace coverage is
+narrower than their address counts**, and Brightspace in particular rests on **one maintainer**. 🔵 A
+pitch that says *"there are twenty open-source Canvas MCP servers"* is true about addresses and wrong
+about the thing the client is buying.
+
+🟢 **The deployment seam is unchanged**, and is the reason the choice is free: the MCP server sits at
+layer 2, so it can be MIT or GPL without reaching a studio's layer-3 — see
+[`compose/patterns.md`](../compose/patterns.md). 🟢 **What changes is that the Moodle side now has an
+MIT option with a published release**, where `p404` could only offer *"vendor a pinned commit."*
+
+🟡 **One grant note with an engagement consequence, measured on a fifth address.**
+[`marcosnahuel/moodle-mcp`](https://github.com/marcosnahuel/moodle-mcp) *(MIT, 1,065 B, 10 tags, npm
+`@nahuelalbornoz/moodle-mcp`, **173 d**)* **ships a real Moodle plugin inside the MIT repository** —
+`local_italiciamcp`, with `db/services.php`, `db/access.php` and 13 `classes/external/` web-service
+functions. 🔴 **18 PHP files, ZERO GPL mentions, and no licence file anywhere inside the plugin
+directory**, so the only grant reaching a Moodle plugin here is the repository's **MIT**. 🔴 **Read this
+as a diligence flag, not a shortcut:** a plugin calling Moodle's GPL APIs is normally held to GPL
+distribution terms, so the most likely reading is a defect on the author's side. 🟢 **`p401`'s boundary
+rule is unchanged** — a studio's permissive code still belongs **outside** the plugin boundary. Rows:
+[`plugin-inherited-grant.2026-10-23-p405.tsv`](../evidence/plugin-inherited-grant.2026-10-23-p405.tsv).
+
+🔵 **The platform leg itself stayed saturated**, as `p403` predicted: `open source platform education
+ERP CRM MIT Apache` returned `openeducat.org` vendor glossary pages in six languages plus **ERPNext**
+(GPL-3.0), **Twenty** (BSL-1.1) and a **2010** CK-ERP mailing-list post. 🔴 Every licence claim it
+produced came from a vendor page — a **POINTER, never a grant** (`p288`).
+
+---
+
+
 ## 🆕 `p404` — the `aiprovider_openaicompatible` pair is NOT two independent vendors, and this file said it was
 
 🟢 **Measured first-hand on 2026-10-23 from full-history clones.** 🔴 **This file's own text read
