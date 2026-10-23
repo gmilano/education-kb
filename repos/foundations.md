@@ -5,6 +5,66 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p401` · reads and commit both 2026-10-23.** 🔴 **The licence ladder this shelf grades
+every candidate with is structurally blind to the largest family on this base — and the family it
+cannot see is uniformly copyleft, which is the direction that costs money.**
+
+🔴 **`401-A`, measured over every Moodle plugin address these shelves hold — 60 slugs.** A Moodle
+plugin declares its grant in the **header of every PHP file**, because the plugin is the
+distribution unit and `version.php` is mandatory. A repository can therefore be unambiguously
+licensed and carry **no licence file at all**:
+
+| channel | what it reads | grants found |
+|---|---|---|
+| **L** — the ladder every prior pass probed | `LICENSE` · `LICENSE.md` · `LICENSE.txt` · `COPYING` | **24** |
+| **P** — the family's actual convention | a GNU GPL notice in the **PHP file header** | **51** |
+
+🔴 **27 of 51 readable grants (53%) are invisible to channel L.** 🟢 Where both channels answer
+they **agree in all 24** — `CHANNEL_CONFLICT` is **0**, so this is a *coverage* defect and not a
+contradiction. Census:
+[`moodle-plugin-grant-channel`](../evidence/moodle-plugin-grant-channel.2026-10-23-p401.tsv);
+instrument and 20 controls at
+[`p401-plugin-grant-channel`](../compose/code/p401-plugin-grant-channel/README.md).
+
+🔴 **Why it is a foundations problem and not a bookkeeping one.** A ladder-blind plugin grades
+*"no grant"* or *"unknown"*, and on this shelf an unknown reads as **unencumbered** — the exact
+opposite of `GPL-3.0-or-later`. 🟢 **All 51 grants in the family are `GPL-3.0-or-later`. Not one
+MIT, Apache-2.0 or BSD in 51 reads.** 🔵 So the single most active integration surface in
+education AI is the one a studio can least build a closed product on, and the ladder was quietly
+reporting it as the opposite.
+
+🔵 **Lineage, so this is not re-sold as new.** `p275` found this class for **manifests** and
+`docs/License.txt` and wrote the rule — *"the LADDER, not the slug, is the defect."* `p394` found
+it for **CRAN `DESCRIPTION`**, and [`philchalmers/mirt`](https://github.com/philchalmers/mirt) is
+**already on this shelf** labelled *"grant lives only in `DESCRIPTION`; no licence file at any
+tree path."* 🟢 **`p401` is that same class in the one large family nobody had tested.** The
+general rule, now stated for whichever pass meets the next ecosystem: **read the grant where the
+ECOSYSTEM puts it** — `DESCRIPTION` for CRAN, `version.php` for Moodle, `*.csproj`/`nuspec` for
+.NET, `pubspec.yaml` for Dart — and treat a four-path licence ladder as a *default*, never as a
+denominator.
+
+🔴 **Two address-hygiene findings fall out of the same census.** **7 of the 60 are PHANTOM** —
+404 on `version.php` at `main` and `master` **and** 0 results from the authenticated API **with
+`fork:true`** (the flag matters: forks are excluded from search by default, so without it a fork
+reads as absent): `catalyst/moodle-tool_aiconnect`,
+`industria-elearning/moodle-local_forum_ai`, `jmolpea/moodle-block_openaiagent`,
+`moodlehq/moodle-local_oneroster`, `moodlehq/moodle-enrol_lti`, `moodle/moodle-enrol_oneroster`,
+`Moodle-An-Hochschulen/moodle-local_ai_manager`. 🔵 **Two of those owners — `catalyst` and
+`Moodle-An-Hochschulen` — are real Moodle houses whose other plugins exist**, which is exactly how
+a plausible wrong address gets written down and never questioned. 🟡 And one
+`EXISTS_EMPTY_TREE`: `bycs-lp/moodle-report_ai_analysis` exists per the API (created 2025-10-23,
+default `master`) with **no file resolving at `master`**.
+
+🔴 **`401-C`: one live repository was lost to a lowercase letter.**
+[`marcusgreen/moodle-tool_aiconnect`](https://github.com/marcusgreen/moodle-tool_aiconnect) —
+**10 ★**, default `main`, not archived, `GPL-3.0-or-later` in `version.php` — graded
+`ADDRESS_UNRESOLVED` by this pass's first census because it carries **`readme.md`** and
+`raw.githubusercontent.com` is **case-sensitive**. 🟢 Rescued. 🔵 `p283`'s `gate-ladder-case`
+asks the case-fold question of **licence** ladders; the **branch-control** ladder was never asked.
+🔴 **A branch control that is one file makes "no README under that exact name" indistinguishable
+from "this branch does not exist", and the damage is quiet: it does not produce a wrong licence,
+it produces a smaller shelf.**
+
 **🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🔴 **No
 foundational repo added.** 🟢 **What changed for this shelf is that its GRANT CHANNEL was
 re-measured and is OPEN, which is the opposite of what a reader would infer from the policy

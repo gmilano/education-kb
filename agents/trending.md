@@ -5,6 +5,55 @@ updated: 2026-10-23
 ---
 
 
+## 🆕 2026-10-23 · `p401` — the Arabic seedbed appears, and the Moodle plugin layer is confirmed copyleft end to end
+
+🔵 **Append-only: this section is added above `p400`'s and nothing below it is rewritten.**
+
+### What is new this week
+
+- 🟢 **An Arabic-first education supply exists, and it is six weeks old.** Three MIT grants, all
+  payload-read on 2026-10-23: [`okba-boubakeur/Taqyeed-AI`](https://github.com/okba-boubakeur/Taqyeed-AI)
+  **(4 ★, created 2026-09-14)**, [`kazoya/build-your-own-agent-ar`](https://github.com/kazoya/build-your-own-agent-ar)
+  **(0 ★, 2026-10-12)**, [`openaziz00-sudo/Arab-Artificial-Intelligence`](https://github.com/openaziz00-sudo/Arab-Artificial-Intelligence)
+  **(0 ★, 2026-10-13)**. 🔵 **This is a trend precisely because of the dates** — three unrelated
+  Arabic-first education repositories inside six weeks, against a region whose mandates
+  (SA 2025/26, AE 2025/26) landed a year earlier. 🔴 **Supply is following statute with roughly a
+  one-year lag, and it is starting from zero.**
+- 🆕 **A PISA-aligned permissive agent, which is new as a CATEGORY on these shelves.**
+  [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) — **Apache-2.0**
+  *(11,356 B, both refs)*, Socratic tutoring + spaced repetition + **PISA-aligned diagnostics**,
+  French-curriculum aligned, pushed **2026-10-20**. 🔴 **0 ★.** 🔵 Every other curriculum-aligned
+  agent this base holds aligns to a *national* standard; this one aligns to an **international
+  assessment**, which is the first thing that would travel across an EMEA engagement.
+- 🔴 **The Moodle AI plugin wave is real and it is uniformly GPL.** Across **60** Moodle plugin
+  addresses, **51 readable grants, every one `GPL-3.0-or-later`** — not one MIT, Apache or BSD.
+  🔵 So the fastest-moving integration surface in education AI is also the one a studio can least
+  build a closed product on. Full census:
+  [`moodle-plugin-grant-channel`](../evidence/moodle-plugin-grant-channel.2026-10-23-p401.tsv).
+- 🟡 **Fork-pair watch, measured and not adjudicated.**
+  [`ADORSYS-GIS/moodle-aiprovider_openaicompatible`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible)
+  and [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible)
+  carry the same plugin name and a **byte-identical `classes/provider.php` at 3,963 B**. Two
+  independent vendors shipping the same OpenAI-compatible provider shim is a signal about where
+  Moodle's `core_ai` subsystem is being extended; 🔴 **direction of the fork is not established.**
+
+### 🔴 What did NOT move, said plainly
+
+- 🔴 **The four prescribed global tails returned 0 unshelved education-native addresses for the
+  FOURTH consecutive pass.** 9 of 13 candidates graded `SHELVED-EXACT` by exact address.
+- 🔴 **North America: nothing new in supply.** The regional leg returned **policy** only (134 bills
+  across 31 states, Idaho `SB 1227`, California `AB 1159`, the committee-advanced federal
+  `H.R. 8747`) — all already shelved or not law. **No new repository.**
+- 🔴 **APAC: nothing new in supply.** The leg returned regulation (Vietnam's AI law, Korea's AI
+  Basic Act) that this base **already holds as typed rows**, and no address.
+- 🔴 **LATAM: nothing new in supply.** The leg returned UNESCO IESALC governance findings
+  (**87%** of 200 institutions across 19 countries using AI in at least one area, **26%** with a
+  formal AI strategy) and the **UNESCO Observatory on AI in Education for LAC**, launched
+  **2026-04-14** in Santiago — intelligence, not supply. **No address.**
+- 🔴 **Africa: no supply, a sixth consecutive pass.** 🔵 An Arabic leg was run this pass and paid;
+  **a French-language leg for Francophone Africa has still never been run** and is the obvious
+  next move, by the same argument that made this pass's Arabic leg work.
+
 ## 🟢 🆕 2026-10-23 · `p400` — **THE "ALREADY SHELVED" CHECK THAT GUARDS EVERY SHELF IS A SUBSTRING MATCH, AND IT DROPPED A REAL ADDRESS ON THIS PASS. 🟢 IT NOW HAS AN INSTRUMENT, 14 CONTROLS AND A MUTATION-VERIFIED SUITE. 🔴 AND `make hooks` WAS NEVER THE GATE SUITE: 31 OF 32 CONTROL SUITES RUN.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23** — the **sixth** pass dated today, after

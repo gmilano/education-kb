@@ -5,6 +5,132 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p401` · reads and commit both 2026-10-23.** 🟢 **The Gulf enters the TYPED layer after
+twelve passes as prose only — three rows. 🟢 And the Arabic-language supply leg this file
+prescribed and nobody ran refutes its own absolute null.** 🔴 **The Saudi "≈6 million" figure
+could not be settled: the official state source exists and the host is unreachable.**
+
+### 🟢 `401-F` — the Gulf was prose-only, and `policy-matrix.tsv` is what a region filter reads
+
+🔴 **The defect in one sentence.** This file has described the Gulf as *"the most aggressive
+AI-education jurisdiction in the world"* since `p389`, and
+[`policy-matrix.tsv`](policy-matrix.tsv) held **zero Gulf rows** — `p400`'s finding-5 class
+exactly: *prose carries it, the typed layer does not*. 🔵 Prose is not queryable; a studio filtering
+the matrix for `EMEA` + `MANDATED` to scope an engagement would have seen Nigeria, Egypt, Kenya and
+the EU, and **missed the two largest school AI mandates in the region**.
+
+🟢 **Three rows added, and the SCOPE of each is the sellable part** — `p400`'s lesson that a
+mandate pitch is only as good as its jurisdiction:
+
+| region | jurisdiction | function | verdict | effective | instrument |
+|---|---|---|---|---|---|
+| EMEA | `SA` | `curriculum_mandate` | **MANDATED** | 2025/26 | MoE / National Curriculum Center AI curriculum, with **SDAIA** |
+| EMEA | `SA-higher-ed` | `ai_literacy_instruction` | **MANDATED** | 2026-01 | **SDAIA** national data-and-AI university curriculum |
+| EMEA | `AE` | `curriculum_mandate` | **MANDATED** | 2025/26 | UAE **Cabinet decision** (May 2025); MoE subject merge for 2026-27 |
+
+🔵 **Why `SA-higher-ed` is a separate row and not a note.** Saudi Arabia's school curriculum and
+its **mandatory undergraduate data-and-AI course** (January 2026, all disciplines, all Saudi
+universities) are **two different instruments with two different buyers** — a ministry curriculum
+centre and a university system. 🔴 Collapsing them into one `SA` row is the error that made
+`p400` rewrite China: one row cannot carry two scopes.
+
+🟡 **The UAE row's scope is the contested one, and it stays contested.** Public schools from
+2025/26 is firm; for **2026-27** the Ministry merged **Design, Innovation and Computer Science**
+with the AI curriculum into a single subject, **"Artificial Intelligence and Technology."** 🔴 A
+September 2026 Cabinet decision is reported to extend the rollout to **private** schools with
+**22,000 teachers** trained — **not independently confirmed**, and this file already records the
+sources disagreeing about which step was the binding one. 🔵 Band for all three rows:
+`CONVERGENT-SECONDARY, PRIMARY UNREAD`.
+
+🔴 **`401-G` — the Saudi "≈6 million students" figure is STILL UNCONFIRMED, and the attempt is
+recorded instead of the hope.** This base has carried it as 🔴 *vendor blog, untraceable* since
+`p389`. The leg this pass surfaced it from the **Saudi Press Agency (`spa.gov.sa`) — the official
+state outlet**, which would have settled it outright. 🔴 **`www.spa.gov.sa` → `ENOTFOUND`.** 🟢 The
+band is unchanged and the **better source is now named** for whichever pass has egress. 🔵 `p400`'s
+channel finding reproduces exactly: this session settles a **licence** first-hand and **cannot
+settle a statute at all**.
+
+### 🟢 `401-E` — the Arabic supply null was a property of the LEG, as this file predicted in writing
+
+🔴 **The claim refuted, quoted from this file:** *"**No** Gulf-origin and **no** Arabic-first
+open-source education agent or platform was found — **not one address**, against the strongest
+statutory demand in the world."* 🟢 It carried the honest rider — *"the leg was English-language;
+an Arabic-language search is the next step"* — and **five passes did not run it**. Run on
+2026-10-23, an Arabic query returns education-native addresses on the first page.
+
+🟢 **Three MIT grants, payload-read:** [`okba-boubakeur/Taqyeed-AI`](https://github.com/okba-boubakeur/Taqyeed-AI)
+(**4 ★**, Arabic-first student note-taking), [`kazoya/build-your-own-agent-ar`](https://github.com/kazoya/build-your-own-agent-ar)
+(**0 ★**, Arabic agent-building path), [`openaziz00-sudo/Arab-Artificial-Intelligence`](https://github.com/openaziz00-sudo/Arab-Artificial-Intelligence)
+(**0 ★**, 1,650 Arabic prompts). Rows and bands:
+[`arabic-supply-leg`](../evidence/arabic-supply-leg.2026-10-23-p401.tsv).
+
+🔴 **And the correction to the correction, which is the part worth selling.** The ceiling is
+**4 ★**; all three were **created within the last six weeks**; **not one is a platform**. 🟢 **So
+the absolute null is false and the PRODUCTION-GRADE gap is real and now bounded**: what does not
+exist is an Arabic-first *platform*; what exists is a six-week-old seedbed. 🔵 **Supply is
+following statute with roughly a one-year lag and starting from zero** — the mandates landed
+2025/26, the first repositories appeared September–October 2026. 🟢 For a studio that is the
+strongest possible timing argument: the demand is statutory and the supply is not yet anybody's.
+
+#### 🆕 `p401` — North America: no supply, policy-only, and the federal item is NOT law
+
+🔴 **The leg returned zero repositories.** What it returned is already shelved or not binding:
+**134 bills across 31 states** in the 2026 session, **California `AB 1159`** and **Idaho
+`SB 1227`** on student-data and teacher-replacement, Ohio's and Maryland's district-policy duties.
+🟡 **`H.R. 8747`, the K-12 AI Literacy and Readiness Act of 2026, was advanced out of the House
+Education and Workforce Committee on 2026-07-21 — committee passage is not enactment**, and it is
+deliberately **not** typed into the matrix, because a `PROPOSED` row with no commencement date is
+what `p271`'s sweep exists to keep out of planning. 🔵 **Canada's "AI for All" strategy
+(2026-06-04)** includes a national AI-literacy push and is a **strategy, not a statute**; Mexico
+has bills and no regulator. 🔴 **Opportunity here is unchanged and it is compliance-shaped, not
+supply-shaped.**
+
+#### 🆕 `p401` — EMEA: the opportunity is Arabic-first grounding, and it is now dated
+
+🟢 **The buildable gap, narrowed from "nothing exists" to a date.** The UAE's seven curriculum
+areas and the Saudi curriculum both need **Arabic-first curriculum grounding** and a
+**teacher-training surface** — and the three MIT addresses above are the entire permissive supply,
+all under six weeks old. 🔵 `kazoya/build-your-own-agent-ar` is the closest fit to the UAE's
+22,000-teacher training obligation and it is **one person's HTML repository**. 🟢 **A studio
+entering now is not competing with an incumbent open-source stack; there is not one yet.**
+
+🟡 **The EU timing is unchanged and this file already has it right** — Annex III high-risk
+application dates **2027-12-02** (stand-alone) and **2028-08-02** (embedded), with Art. 4 AI
+literacy in force since **2025-02-02**. 🔵 A 2026 secondary source still quoting "August 2026" for
+high-risk is **stale**; the Digital Omnibus moved it. 🔵 The counter-intuitive sales point stands:
+a deadline moving *out* does not reduce the work, because conformity assessment must be complete
+**before** placing on the market.
+
+🔴 **Africa: no supply for a sixth consecutive pass**, against four typed instrument rows
+(`NG`, `EG`, `ZA`, `KE`) that say the demand is real. 🟢 **The cause is now a tested hypothesis
+rather than a shrug:** this pass's Arabic leg proved a national-language leg breaks an
+English-language null, and **a French-language leg for Francophone Africa has never been run.**
+🔵 That is the single highest-value unrun search on this base.
+
+#### 🆕 `p401` — APAC: no supply, and the regulation was already typed
+
+🔴 **Zero new addresses.** The leg returned **Vietnam's** AI law (education among the high-risk
+sectors — this base already holds `VN` rows for `assessment_grading`, `proctoring_behaviour`,
+`tutoring_supplementary` and `emotion_recognition`) and **Korea's** AI Basic Act (already typed as
+`KR` `general_ai_statute` `IN_FORCE_UNENFORCED`, 2026-01-22). 🟢 **Nothing to correct — the typed
+layer was ahead of the search**, which is what it is for. 🔵 Ipsos' 2026 Education Monitor adds one
+usable fact: support for *banning* AI in schools is **lower** across the Asian markets surveyed and
+**higher** in Australia and New Zealand — so an ANZ engagement carries a public-consent risk that a
+Singapore or Japan engagement does not.
+
+#### 🆕 `p401` — LATAM: no supply, and the governance gap is the opportunity
+
+🔴 **Zero new addresses.** 🟢 **But the sharpest intelligence this pass came from here, and it is
+a number a studio can sell against:** UNESCO IESALC with UNU-IAS surveyed **200 institutions across
+19 countries** — **87% use AI in at least one area of activity, and only 26% have a formal AI
+strategy**. Adoption is driven by individual academics and students rather than institutions.
+🔵 **That 61-point spread between use and governance is the engagement.** 🟢 UNESCO launched an
+**Observatory on AI in Education for Latin America and the Caribbean** on **2026-04-14** in
+Santiago, and runs capacity-building with **CONALEP and DGETI in Mexico** — named counterparties,
+not a market abstraction. 🟡 **ILIA 2025** places **Chile** first in regional AI maturity, with
+school-level AI education still exceptional. 🔵 Band: `reported` — the primary hosts are
+unreachable from this session.
+
 **🆕 Pass `p400` · reads and commit both 2026-10-23 — the SIXTH pass dated today.** 🔴 **This
 file contradicted itself about the two largest education-AI mandates in the world, and one side
 of the contradiction was green.** 🟢 **Settled in the direction the file's own warning pointed,

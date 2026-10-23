@@ -5,6 +5,50 @@ updated: 2026-10-23
 ---
 
 
+## 🆕 2026-10-23 · `p401` — a 60-address grant census, 7 phantoms, and three six-week-old Arabic repos
+
+🔵 **Append-only: this section is added above `p400`'s and nothing below it is rewritten.**
+
+### The census that moved this week
+
+🟢 **Every Moodle plugin address on these shelves was read through two grant channels** — the
+four-path licence ladder, and the GNU GPL notice in the PHP file header. **60 slugs, 2026-10-23:**
+
+| verdict | n | what it means |
+|---|---|---|
+| `LADDER_BLIND` | **27** | grant readable **only** in the PHP header — the ladder sees nothing |
+| `BOTH_AGREE` | **24** | both channels answer and agree on the family |
+| `PHANTOM` | **7** | 404 on `version.php` at `main`+`master` **and** 0 API results with `fork:true` |
+| `EXISTS_EMPTY_TREE` | **1** | repository exists per the API; no file resolves at its default branch |
+| `NO_GRANT_EITHER_CHANNEL` | **1** | branch control passes; no grant in either channel |
+| `CHANNEL_CONFLICT` | **0** | 🟢 the two channels never disagreed |
+
+🔴 **51 grants, every one `GPL-3.0-or-later`. Zero permissive in the whole family.** Full rows:
+[`moodle-plugin-grant-channel`](../evidence/moodle-plugin-grant-channel.2026-10-23-p401.tsv).
+
+🔴 **A trap worth recording for anyone reading payloads by substring.** **GPL-3.0 section 13 is
+titled *"Use with the GNU Affero General Public License."*** A classifier keyed on a family's name
+appearing **anywhere** in the payload grades **every GPL-3.0 text as AGPL** — and this pass's own
+first run did exactly that, **7 times**, producing a clean-looking `CHANNEL_CONFLICT` table that
+was entirely an artefact. 🟢 Caught by reading title lines: all three sampled payloads were
+**35,149 B** — canonical GPL-3.0 — with **3** AFFERO occurrences and the title
+`GNU GENERAL PUBLIC LICENSE`. Keyed on the **title line**, conflicts fall to **0**.
+
+### New addresses this week
+
+| repo | ref | licence | ★ · created | what it is |
+|---|---|---|---|---|
+| [braiinz94/braiinz-education](https://github.com/braiinz94/braiinz-education) | `main` | 🟢 **Apache-2.0** *(11,356 B on both `main` and `master`)* | **0 ★** · 2026-04-16, pushed 2026-10-20 | 🆕 Socratic tutoring + spaced repetition + **PISA-aligned diagnostics**, French-curriculum aligned. Python. 🔵 First **international-assessment**-aligned permissive agent here; every other curriculum-aligned agent on these shelves targets a *national* standard. |
+| [okba-boubakeur/Taqyeed-AI](https://github.com/okba-boubakeur/Taqyeed-AI) | `main` | 🟢 **MIT** *(1,373 B)* | **4 ★** · 2026-09-14 | 🆕 Arabic-first lecture recording, note-taking and custom AI actions for students. TypeScript. The highest-adoption Arabic-first education repo found. |
+| [kazoya/build-your-own-agent-ar](https://github.com/kazoya/build-your-own-agent-ar) | `main` | 🟢 **MIT** *(1,070 B)* | **0 ★** · 2026-10-12 | 🆕 Arabic step-by-step agent-building path. Teaching material, not a runtime — aimed at the surface the UAE's **22,000-teacher** programme has to fill. |
+| [openaziz00-sudo/Arab-Artificial-Intelligence](https://github.com/openaziz00-sudo/Arab-Artificial-Intelligence) | `main` | 🟢 **MIT** *(1,609 B)* | **0 ★** · 2026-10-13 | 🆕 Arabic AI prompt library, **1,650 prompts / 17 categories**, students named in its audience. Seed content; no model, no retrieval, no runtime. |
+| [marcusgreen/moodle-tool_aiconnect](https://github.com/marcusgreen/moodle-tool_aiconnect) | `main` | 🟡 **GPL-3.0-or-later** — 🔴 **no licence file at any of 4 ladder paths; grant read from `version.php`** | **10 ★** · — | ♻️ **Not new — RESCUED.** Graded `ADDRESS_UNRESOLVED` by this pass's first census because it carries **`readme.md`** lowercase and `raw.githubusercontent.com` is case-sensitive. Live, not archived. |
+
+🔴 **Nothing trended into this shelf from North America, APAC or LATAM.** Those legs returned
+policy and governance intelligence — US state bills, Vietnam's and Korea's AI statutes, UNESCO
+IESALC's 200-institution survey — and **not one repository**. Recorded as a null with its cause,
+because silence on a shelf reads exactly like coverage.
+
 ## 🟢 🆕 2026-10-23 · `p400` — **THE SHELF'S OWN ADDRESS SET, RE-ASKED FROM THE OUTSIDE: 24 CANDIDATES GRADED BY EXACT ADDRESS OVER BOTH CHANNELS, 23 CARRIED, 1 LOST TO A SUBSTRING. 🟢 AND THE GRANT CHANNEL IS OPEN WHILE EVERY POLICY HOST IS `000`.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23**, the sixth pass today. 🟢 The repository

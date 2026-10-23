@@ -5,6 +5,50 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p401` · reads and commit both 2026-10-23.** 🔴 **The Moodle plugin layer — the most
+active AI integration surface in education — is uniformly `GPL-3.0-or-later`, and half of those
+grants are invisible to a licence-file check. This is the file where that costs an engagement
+money, so the rule is written here.**
+
+## 🆕 `p401` — the plugin boundary rule: where a studio's permissive code may and may not sit
+
+🟢 **The measurement first.** Every Moodle plugin address on these shelves — **60 slugs**, read
+2026-10-23 through two channels — yields **51 grants, every one `GPL-3.0-or-later`**. 🔴 **Not one
+MIT, Apache-2.0 or BSD in 51 reads.** And **27 of the 51 carry no licence file at any of
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`** — the grant lives in the header of
+`version.php` and every other PHP file, because the plugin is the distribution unit. Census:
+[`moodle-plugin-grant-channel`](../evidence/moodle-plugin-grant-channel.2026-10-23-p401.tsv).
+
+🔴 **The failure mode this prevents, stated as a sentence a studio lead can act on.** A plugin
+with no licence file looks unlicensed, and an unlicensed-looking component gets treated as
+*unencumbered*. It is the opposite: it is **strong copyleft with a "or-later" clause**. 🔵 A
+pre-flight that asks *"does this repo have a LICENSE file?"* returns **a wrong answer in the
+dangerous direction for 53% of this family.**
+
+### 🟢 What the rule actually permits
+
+| where the code sits | licence consequence | verdict for a studio |
+|---|---|---|
+| **Inside** a Moodle plugin (`local_*`, `block_*`, `mod_*`, `aiprovider_*`, `tiny_*`, `qtype_*`) | The plugin is a derivative work of Moodle and is distributed under **GPL-3.0-or-later**. Moodle's own plugin directory requires it. | 🔴 **Never the home for proprietary logic.** Fork, extend and **contribute back** — a perfectly good engagement, but it is services, not a product. |
+| **Outside** the plugin, called over a network boundary — an **MCP server**, a REST service, a queue worker | GPL-3.0 is **not** a network-copyleft licence. Code the plugin merely *calls* across a process/network boundary is not a derivative work of it. | 🟢 **This is where a studio's permissive or proprietary IP goes.** The plugin becomes a thin GPL adapter; the model routing, retrieval, grounding corpus and evaluation harness stay outside it. |
+| Inside a plugin, but linked to an **AGPL** component | AGPL's §13 reaches users interacting **over a network** — a hosted LMS is exactly that. | 🔴 **Check before hosting.** 🟢 This census found **zero** AGPL in the plugin family, so the risk here is theoretical for Moodle today — but `bycs-lp/moodle-tiny_ai`, `limekiller/moodle-block_openai_chat`, `cgrevisse/moodle-qbank_genai`, `danielcregg/moodle-local_aitutor`, `adamjenkins/moodle-local_nomoreai`, `yedidiaklein/moodle-local_aiquestions` and `saylordotorg/moodle-local_ai_course_assistant` all ship a **full 35,149 B GPL-3.0 text whose §13 names the AGPL**, and a substring check reads that as AGPL. 🔵 Do not let a tool tell you these are AGPL. They are not. |
+
+🔵 **The `aiprovider_*` shim is the tell, and it is where the ecosystem is heading.** Moodle's
+`core_ai` subsystem now has provider plugins, and two independent vendors —
+[`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) and
+[`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) — ship an
+OpenAI-compatible provider under the **same plugin name** with a **byte-identical
+`classes/provider.php` at 3,963 B**. 🟢 **Both are `LADDER_BLIND` `GPL-3.0-or-later`.** 🔵 For a
+studio this is the cheapest supported seam in the whole platform: implement the provider
+interface, point it at your own gateway, and keep everything behind the gateway. 🔴 Fork direction
+between the two is **not established** — equal bytes do not say who forked whom.
+
+🟡 **The permissive exception, named so the table above is not read as "Moodle is closed to
+permissive work".** [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant)
+is **MIT** *(1,084 B, payload-read 2026-10-23)* — an accelerator for deploying an AI agent against
+Moodle rather than a plugin living inside it, which is the boundary rule above demonstrated by its
+author. 🔴 It is **alpha (0.1.0)**; this shelf already carries it and `p401` does not re-promote it.
+
 **🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🔴 **No platform
 was added**, and the vertical-platform leg returned the standing result again: **no
 education-specific MIT or Apache platform exists**; the capable systems are GPL, AGPL or

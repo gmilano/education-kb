@@ -5,6 +5,56 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p401` · reads and commit both 2026-10-23.** 🟢 **One new pattern, and it exists because
+the licence census forced its shape.**
+
+## 🆕 `Pattern Q` — the GPL-adapter sandwich: Arabic-first AI on a Moodle base without surrendering the IP
+
+🔵 **Why this pattern and not a tutor demo.** Two measurements from this pass fix the architecture
+before any product decision: the Gulf mandates are **statutory and dated** (`SA` and `AE`
+`curriculum_mandate` `MANDATED`, 2025/26), and **every one of the 51 readable grants in the Moodle
+plugin family is `GPL-3.0-or-later`**. 🔴 So the obvious build — put the clever part in a Moodle
+plugin — gives the clever part away. 🟢 The pattern puts the GPL boundary where it costs nothing.
+
+### The three layers, with the licence of each stated
+
+| layer | component | licence | why it is here |
+|---|---|---|---|
+| **1 · in-platform adapter** *(GPL, thin, contributed back)* | A `core_ai` provider plugin, cloned from [`ADORSYS-GIS/moodle-aiprovider_openaicompatible`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) or [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟡 **GPL-3.0-or-later** *(read from `version.php`; **no licence file** at any ladder path)* | Moodle's own supported extension point, so no core patching and no upgrade debt. 🟢 Both vendors' `classes/provider.php` is **byte-identical at 3,963 B** — a de-facto standard shim. 🔵 Keep it thin: auth, request shaping, error mapping. Nothing proprietary crosses into it. |
+| **2 · the boundary** | An **MCP server** the plugin calls over the network | 🟢 **Yours — MIT/Apache or closed** | 🔵 GPL-3.0 is **not** network copyleft. Code the plugin merely *calls* across a process boundary is not a derivative work of it, which is what makes layer 3 ownable. 🔴 This boundary is the entire point of the pattern; collapse it and layer 3 becomes GPL. |
+| **3 · the grounding and the IP** | Arabic curriculum corpus + retrieval + evaluation | 🟢 **Yours**, seeded from **MIT** sources | Seed content from [`openaziz00-sudo/Arab-Artificial-Intelligence`](https://github.com/openaziz00-sudo/Arab-Artificial-Intelligence) (**MIT**, 1,650 Arabic prompts / 17 categories) and teacher-facing scaffolds from [`kazoya/build-your-own-agent-ar`](https://github.com/kazoya/build-your-own-agent-ar) (**MIT**). 🔴 **Do NOT seed from** [`sartaj1995/arabic-tutor`](https://github.com/sartaj1995/arabic-tutor) (100 levels, 1,367 exercises — **no grant at the ladder**) or [`michaelsboost/ArabEngo`](https://github.com/michaelsboost/ArabEngo) (**CC-BY-NC-4.0**, NonCommercial). |
+
+### Wiring it, concretely
+
+1. **Fork the provider plugin** and point its endpoint at your gateway, not at a model vendor.
+   🔵 Read the grant from `version.php`, not from the GitHub sidebar — 27 of this family's 51
+   grants have **no licence file to read**.
+2. **Stand the MCP server up outside the LMS**, exposing exactly the tools the curriculum needs
+   (retrieve-objective, generate-practice, grade-free-text, explain-in-Arabic). 🔵 The parent- and
+   teacher-facing MCP servers already on [`agents/top.md`](../agents/top.md) are the shape to copy.
+3. **Ground on the corpus you own**, aligned to the UAE MoE's **seven curriculum areas** for an
+   AE engagement and to the National Curriculum Center's scope for `SA`.
+4. **Keep the evaluation harness on your side of the boundary.** 🟢 It is the deliverable the EU AI
+   Act's Annex III conformity assessment will want evidence of for any EMEA client whose system
+   touches assessment — and the same artefacts serve a Gulf ministry procurement.
+5. **Contribute layer 1 upstream.** 🔵 It is GPL anyway; contributing it buys maintenance you would
+   otherwise owe, and credibility with the one platform the client already runs.
+
+### 🔴 What this pattern does NOT claim
+
+🔴 **There is no Arabic-first platform to start from.** The entire permissive Arabic education
+supply found on 2026-10-23 is **three repositories, 4 ★ at best, all created within six weeks**
+([`arabic-supply-leg`](../evidence/arabic-supply-leg.2026-10-23-p401.tsv)). 🟢 Layer 3 is **built,
+not assembled**, and the pattern says so rather than implying a stack exists. 🔵 That is also the
+argument for moving now: the demand is statutory and the supply is not yet anybody's.
+
+🔴 **And the one component that would make this cheap is the one that is unlicensed.**
+`sartaj1995/arabic-tutor`'s 1,367 structured exercises are the single richest Arabic content asset
+this base has found, and with **no grant at any ladder path** they cannot be used. 🟢 **An email to
+that maintainer asking for an explicit MIT grant is a lower-cost first move than building the
+corpus** — and it is the kind of ask that succeeds, because the repository already reads as
+intended-open.
+
 **🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🔴 **No pattern
 was added: the one unshelved address this pass found is unlicensed, and there is nothing to
 compose with an unlicensed repository.** 🟢 **Both axes of the two-axis pre-flight got sharper

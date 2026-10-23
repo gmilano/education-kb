@@ -5,6 +5,67 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p401` · reads and commit both 2026-10-23 — the SEVENTH pass dated today.** 🟢 **The
+Arabic-language leg that `p389` named as *"the next step"* and that five passes did not run has
+been run, and it refutes this base's absolute supply null.** 🔴 **What it found is six weeks old
+and tops out at 4 ★, so none of it is promoted to a build-on tier — the rows below carry their
+real counts so nobody mistakes a seedbed for a starting point.**
+
+🔴 **The claim that is refuted, quoted exactly.** [`intel/market.md`](../intel/market.md) has
+carried, as a 🔴 supply gap, *"**No** Gulf-origin and **no** Arabic-first open-source education
+agent or platform was found — **not one address**, against the strongest statutory demand in the
+world"* — with the honest rider *"the leg was English-language; an Arabic-language search is the
+next step."* 🟢 **The rider was right.** An Arabic-language query returns education-native
+addresses on the first page, and `p387` had already proved this exact fix on the four-pass LATAM
+null with Spanish and Portuguese legs.
+
+## Tier 7 — 🆕 `p401` The Arabic-first watch tier · **NOT a build-on tier**
+
+🔵 **Why this is a tier and not a promotion.** Every grant below was read by **payload** on
+2026-10-23 and every count comes from the **authenticated API** the same day. 🔴 **The ceiling is
+four stars.** All three permissive addresses were created between **2026-09-14** and
+**2026-10-13**, none is a platform, and a studio cannot stand an engagement on a six-week-old
+repository with no adopters. 🟢 **They are shelved because the ABSENCE was load-bearing** — this
+base was telling itself the Arabic supply was empty, and it is not.
+
+| agent | repo | ref | licence | ★ · created | what it actually does | region |
+|---|---|---|---|---|---|---|
+| **Taqyeed-AI** | [okba-boubakeur/Taqyeed-AI](https://github.com/okba-boubakeur/Taqyeed-AI) | `main` | 🟢 **MIT** *(1,373 B, payload-read)* | **4 ★** · 2026-09-14 | 🟢 **The only STUDENT-FACING Arabic-first tool found with a verified permissive grant.** *"قَيِّدْ عِلْمَكَ"* — smart lecture and lesson recording, note-taking, and custom AI actions, addressed in its own description to *طلبة العلم*. TypeScript. 🔵 Arabic-first in the **interface and the framing**, not a translation layer bolted onto an English product. | EMEA |
+| **build-your-own-agent-ar** | [kazoya/build-your-own-agent-ar](https://github.com/kazoya/build-your-own-agent-ar) | `main` | 🟢 **MIT** *(1,070 B, payload-read)* | **0 ★** · 2026-10-12 | 🟡 **Teaching MATERIAL, not a runnable platform** — an Arabic step-by-step path to building a working agent. 🟢 **It lands on the one surface the Gulf demand actually names:** the UAE's decision attaches **22,000 teachers** to be trained, and teacher-facing AI-literacy material *in Arabic* is the scarcest input in that programme. HTML. | EMEA |
+| **Arab-Artificial-Intelligence** | [openaziz00-sudo/Arab-Artificial-Intelligence](https://github.com/openaziz00-sudo/Arab-Artificial-Intelligence) | `main` | 🟢 **MIT** *(1,609 B, payload-read)* | **0 ★** · 2026-10-13 | 🟡 **Curriculum-grounding raw material, not an agent.** An Arabic AI library of **1,650 prompts across 17 categories**, audience explicitly including **students** (*والطلاب*). Python. 🔵 Useful as seed content for Arabic prompt scaffolds; it carries no model, no retrieval and no runtime. | EMEA |
+
+🔴 **Four further Arabic addresses carry NO grant at the ladder, each with a PASSING branch
+control** — a measured absence in `p293`'s shape, not an inference from a blank sidebar:
+[`ehtsmulhq/ArabicTutorRAG`](https://github.com/ehtsmulhq/ArabicTutorRAG) (a Madinah-grammar RAG
+tutor whose **README claims MIT for code** with content held non-commercial — `p288`: a
+README-only claim is a **POINTER**, never a verified grant),
+[`sartaj1995/arabic-tutor`](https://github.com/sartaj1995/arabic-tutor) (**100 curriculum levels,
+1,367 exercises** as structured JSON — the richest *content* asset found, and unlicensed),
+[`wajhullah/arabic-literature-ai`](https://github.com/wajhullah/arabic-literature-ai) and
+[`jibrilsettles-dot/Arabic-Tutor`](https://github.com/jibrilsettles-dot/Arabic-Tutor).
+🔴 [`michaelsboost/ArabEngo`](https://github.com/michaelsboost/ArabEngo) is **CC-BY-NC-4.0**
+*(17,766 B)* and is **excluded outright** — NonCommercial is not an OSI grant and forbids the
+commercial derivative a studio engagement produces.
+
+🟡 **One new address from the global supply tail, promotion also refused.**
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) —
+*"Socratic tutoring, spaced repetition, PISA-aligned diagnostics … aligned with French
+curriculum"*, 🟢 **Apache-2.0 read by payload at 11,356 B on BOTH `main` and `master`**, Python,
+pushed **2026-10-20**, not archived. 🔴 **0 ★, 1 fork.** 🟢 It is the first
+**EMEA-curriculum-aligned** permissive agent on these shelves and the only one found anywhere
+that names a **PISA** alignment — worth watching for that alone. 🔵 Its fork
+`sbkriz/braiinz-education` reports licence `NOASSERTION` against the source's Apache-2.0;
+flagged, not adjudicated.
+
+🔴 **The four prescribed global tails are saturated for a FOURTH pass.** `OpenClaw`, `Hermes`,
+`OpenHands`, `CrewAI`, `LangGraph`, `500-AI-Agents-Projects`, `withmarbleapp/os-taxonomy`,
+`luongnv89/claude-howto`, `plastic-labs/tutor-gpt`, `microsoft/moodle-ai-assistant`,
+`openedx/openedx-ai-extensions`, `saylordotorg/moodle-local_ai_course_assistant`,
+`yedidiaklein/moodle-local_aiquestions`, `X5GON/x5moodle` — **9 of 13 graded `SHELVED-EXACT` by
+exact address**, the remainder forks of shelved upstreams
+([`raccoongang/openedx-ai-extensions`](https://github.com/raccoongang/openedx-ai-extensions) under
+shelved `openedx`) or unlicensed. 🟢 **Checked with `p400`'s exact-address test, not a grep.**
+
 **🆕 Pass `p400` · reads and commit both 2026-10-23 — the SIXTH pass dated today.** 🔴 **No row
 added, for the third consecutive pass — but this time the reason is a measured property of the
 ADMISSION TEST, not of the supply.** 🟢 **The test that decides what reaches this shelf now has

@@ -1,0 +1,70 @@
+# p401 — the Moodle PLUGIN grant channel, over the WHOLE shelf family.
+# Question: can the LICENSE-path ladder see this family's grants?  Answer: half of them, no.
+# channel_L = LICENSE / LICENSE.md / LICENSE.txt / COPYING  (what prior passes probed)
+# channel_P = a GNU GPL notice in the PHP file header       (this family's real convention)
+# Family identified by TEXT TITLE, never by a name occurring anywhere: GPL-3.0 section 13
+#   is titled 'Use with the GNU Affero General Public License', so a name-anywhere match
+#   grades every GPL-3.0 payload AGPL (p401-B; it did, 7 times, in this pass's first run).
+# Verdicts: LADDER_BLIND BOTH_AGREE CHANNEL_CONFLICT NO_GRANT_EITHER_CHANNEL PHANTOM EXISTS_EMPTY_TREE
+# All probes 2026-10-23 via raw.githubusercontent.com; existence via authenticated search (fork:true).
+slug	branch_control	channel_L_license_path	L_bytes	channel_P_php_header	verdict	note
+adamjenkins/moodle-local_nomoreai	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+bycs-lp/moodle-block_ai_chat	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+bycs-lp/moodle-block_ai_control	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+bycs-lp/moodle-local_ai_content	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+bycs-lp/moodle-local_ai_injection	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+bycs-lp/moodle-local_ai_manager	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+bycs-lp/moodle-mod_aichat	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+bycs-lp/moodle-qbehaviour_deferred_for_aitext	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+bycs-lp/moodle-qbehaviour_immediate_for_aitext	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+bycs-lp/moodle-quizaccess_ai	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+bycs-lp/moodle-report_ai_analysis	404/404	none	-	none	EXISTS_EMPTY_TREE	API: exists, created 2025-10-23, default master; no file resolves at master (version.php/README/LICENSE/.gitignore all 404)
+bycs-lp/moodle-tiny_ai	200	GPL-3.0-or-later@LICENSE.md	35178	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+caiocarvalhofre/moodle-mod_maici	200	GPL-3.0-or-later@LICENSE.md	35178	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+catalyst/moodle-tool_aiconnect	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+cgrevisse/moodle-qbank_genai	200	GPL-3.0-or-later@LICENSE.md	35178	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+danielcregg/moodle-local_aitutor	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+eLearning-BS23/moodle-quizaccess_proctoring	200(master)	GPL-3.0-or-later@LICENSE.md	35178	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+eledia/moodle-block_elediaai_tutor	200(master)	none	-	none	NO_GRANT_EITHER_CHANNEL	branch control 200; no grant in either channel
+gafapa/moodle-local_moodlia	200	GPL-3.0-or-later@LICENSE	652	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+h5p/moodle-mod_hvp	200(master)	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+HernanDiaz/moodle-local_aigrader	200	GPL-3.0-or-later@LICENSE	1594	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+human2human-ai/moodle-tool_human2human	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+ictinnovations/moodle-mod_ictexam	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+industria-elearning/moodle-local_forum_ai	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+jeanlucio/moodle-availability_playerhud	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-block_playerhud	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-filter_playerhud	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-local_aihub	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-local_studiolms	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_codereview	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_playercross	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_playergroup	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_playervideo	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_playerwords	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_reflect	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jeanlucio/moodle-mod_syllabus	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+jmolpea/moodle-block_openaiagent	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+Limekiller/moodle-block_openai_chat	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+lmscloud-io/moodle-aiprovider_openaicompatible	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+marcusgreen/moodle-qtype_aitext	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+marcusgreen/moodle-qtype_gapfill	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+marcusgreen/moodle-tool_aiconnect	200 @main/readme.md	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	rescued-p401C: README.md 404 but readme.md 200; API: 10 stars, default main, not archived
+mebis-lp/moodle-local_ai_manager	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+michael-milette/moodle-local_aiid	200(master)	GPL-3.0-or-later@LICENSE.md	32477	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+moodle/moodle-enrol_oneroster	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+Moodle-An-Hochschulen/moodle-local_ai_manager	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+moodlehq/moodle-enrol_lti	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+moodlehq/moodle-enrol_oneroster	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+moodlehq/moodle-local_oneroster	404/404	none	-	none	PHANTOM	404 on version.php main+master AND authenticated search with fork:true returns 0 results
+moodlehq/moodle-tool_dataprivacy	200(master)	GPL-3.0-or-later@LICENSE	35147	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+onbirdev/moodle-webservice_mcp	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+rabser/moodle-aiprovider_openwebui	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+saylordotorg/moodle-local_ai_course_assistant	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+uaiblaine/moodle-block_compass	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+uaiblaine/moodle-block_feedback_tracker	200	none	-	GPL-3.0-or-later@version.php	LADDER_BLIND	grant readable ONLY in the PHP file header
+universita-di-ferrara/moodle-aiprovider_gemini	200	GPL-3.0-or-later@LICENSE	35149	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+Utdanningsdirektoratet/moodle-block_hero	200	GPL-3.0-or-later@LICENSE	35148	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained	200(master)	GPL-3.0-or-later@LICENSE	35147	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+willianmano/moodle-theme_moove	200	GPL-3.0-or-later@LICENSE.md	34903	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family
+yedidiaklein/moodle-local_aiquestions	200	GPL-3.0-or-later@LICENSE.md	35178	GPL-3.0-or-later@version.php	BOTH_AGREE	both channels agree on the family

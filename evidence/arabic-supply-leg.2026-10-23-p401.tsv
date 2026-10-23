@@ -1,0 +1,18 @@
+# p401 — the ARABIC-LANGUAGE supply leg, which p389 named as 'the next step' and which
+# four passes (p389, p397, p398, p399, p400) did not run.
+# It REFUTES, as an absolute, the standing claim on intel/market.md that 'no Gulf-origin and
+# no Arabic-first open-source education agent or platform was found - not one address'.
+# It does NOT refute the PRODUCTION-GRADE gap: the ceiling here is 4 stars, every permissive
+# address was created within the last 6 weeks, and not one is a platform.
+# Grants read by PAYLOAD on raw.githubusercontent.com, 2026-10-23; metadata via authenticated API.
+# shelf_status from p401's own exact-address membership instrument over both channels.
+slug	grant	bytes	grant_path	shelf_status	stars	forks	created	pushed	language	note
+kazoya/build-your-own-agent-ar	MIT	1070	main/LICENSE	UNSHELVED	0	0	2026-10-12	2026-10-16	HTML	Arabic step-by-step path to build an AI agent. Teaching MATERIAL, not a platform — fits the teacher-training surface the UAE's 22,000-teacher programme needs.
+okba-boubakeur/Taqyeed-AI	MIT	1373	main/LICENSE	UNSHELVED	4	0	2026-09-14	2026-09-27	TypeScript	Arabic-first lecture recording / note-taking with custom AI actions, addressed to students ('talabat al-ilm'). The only STUDENT-FACING Arabic-first tool found with a verified permissive grant.
+openaziz00-sudo/Arab-Artificial-Intelligence	MIT	1609	main/LICENSE	UNSHELVED	0	0	2026-10-13	2026-10-21	Python	Arabic prompt library, 1,650 prompts in 17 categories, audience includes students. Curriculum-grounding raw material, not an agent.
+mohammed-bahumaish/awesome-arabic-ai	CC (7,048 B, CC0-shaped)	7048	main/LICENSE	NAME-OTHER-OWNER	-	-	-	-	-	Curated Arabic AI index (LLMs, datasets, benchmarks, OCR). Base already holds omarsalah26/awesome-arabic-ai — same name, different owner; lineage NOT adjudicated this pass.
+michaelsboost/ArabEngo	CC-BY-NC-4.0	17766	master/LICENSE.md	UNSHELVED	-	-	-	-	-	EXCLUDED from any build-on tier: NonCommercial is not an OSI grant and forbids the commercial derivative a studio engagement produces.
+ehtsmulhq/ArabicTutorRAG	NONE-AT-LADDER	-	-	UNSHELVED	-	-	-	-	-	RAG tutor for Madinah Arabic grammar. README CLAIMS MIT for code with content non-commercial; p288 — a README-only claim is a POINTER, not a verified grant. Branch control 200 @main/README.md.
+sartaj1995/arabic-tutor	NONE-AT-LADDER	-	-	UNSHELVED	-	-	-	-	-	MSA web app; 100 curriculum levels, 1,367 exercises as structured JSON. Grant absent at 4 paths x 2 branches, branch control 200 — a MEASURED absence.
+wajhullah/arabic-literature-ai	NONE-AT-LADDER	-	-	UNSHELVED	-	-	-	-	-	Cross-lingual RAG tutor for Classical Arabic literature; QLoRA DeepSeek-R1-Distill-Qwen-14B on vLLM. Grant absent at ladder, branch control 200.
+jibrilsettles-dot/Arabic-Tutor	NONE-AT-LADDER	-	-	UNSHELVED	-	-	-	-	-	Fusha/Qur'anic tutor on a proprietary API. Grant absent at ladder, branch control 200 @master/README.md.

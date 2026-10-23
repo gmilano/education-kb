@@ -5,6 +5,68 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p401` · reads and commit both 2026-10-23.** 🟢 **Three trends this pass can evidence
+rather than quote, and one it can date.**
+
+### 🆕 `p401-T1` — national-language supply is appearing roughly one year behind national mandates
+
+🟢 **Evidenced, not asserted.** The Gulf school mandates took effect in the **2025/26** academic
+year (Saudi Arabia, UAE). The **first permissive Arabic-first education repositories on these
+shelves were created 2026-09-14, 2026-10-12 and 2026-10-13** — three unrelated projects inside six
+weeks, after a year of nothing. 🔵 The same shape is already on this base from the other
+direction: `p387` broke a four-pass LATAM supply null with Spanish and Portuguese legs, after
+LATAM policy had been typed for passes.
+
+🔴 **The actionable form of the trend is a warning about measurement, not about markets.** An
+English-language search reports the pre-lag state indefinitely, because the supply that appears is
+named and documented in the local language. 🟢 **A regional supply claim is only as good as the
+language of the leg that produced it** — and this base asserted *"not one address"* for the Gulf
+across five passes on English legs alone.
+
+### 🆕 `p401-T2` — the AI integration surface in education is consolidating into platform plugin APIs, and that surface is copyleft
+
+🟢 **Measured this pass.** Moodle's `core_ai` subsystem now has a **provider-plugin** interface,
+and the shelf holds **60** Moodle plugin addresses with **51 readable grants — every one
+`GPL-3.0-or-later`, not one permissive**. Two independent vendors ship the *same*
+OpenAI-compatible provider shim with a **byte-identical `classes/provider.php`**. 🔵 Integration is
+standardising on the platform's own extension point rather than on bespoke forks, which is good
+engineering and a **licence ceiling**: the standard seam is GPL by construction.
+
+🔴 **The consequence contradicts the usual read of "open source is consolidating".** Consolidation
+here *reduces* what a studio can own: the more the ecosystem converges on plugin APIs, the more of
+the integration lives inside the copyleft boundary. 🟢 The counter-move is architectural and is
+written up on [`verticals/solutions.md`](../verticals/solutions.md) — keep the plugin a thin GPL
+adapter and put the IP behind a network boundary.
+
+### 🆕 `p401-T3` — the gap between institutional USE and institutional GOVERNANCE is the measurable market
+
+🟢 **The cleanest number any leg returned this pass.** UNESCO IESALC with UNU-IAS, **200
+institutions across 19 countries** in Latin America and the Caribbean: **87% use AI in at least one
+area; 26% have a formal AI strategy.** Adoption is driven by **individual academics and students**,
+not institutions. 🔵 Independent sources describe the same gap elsewhere in different words — a
+2026 survey across 450+ institutions reporting roughly **10%** with formal AI-use guidelines, and
+the broad 2026 framing of a shift *"from experimentation to governance."*
+
+🟡 **Why this is a trend and not a statistic.** Where use precedes policy by that margin, the first
+paid work is **not** building a tutor — it is inventory, data-boundary definition, an acceptable-use
+policy and an audit trail for AI already in use. 🔵 That is also the work the EU AI Act's Art. 4
+literacy duty and Annex III high-risk classification will require evidence of, so it is **billable
+twice**.
+
+### 🟡 `p401-T4` — "purpose-built for education" is now the stated direction of travel, and it is still mostly a claim
+
+🟡 **Convergent across 2026 commentary**, including the OECD's Digital Education Outlook framing and
+1EdTech's watch-list: a move away from general-purpose assistants toward systems **built for
+learning**, with evidence of durable gains, plus teacher-first deployment and digital credentials
+as a skills-verification mechanism. 🔴 **Band: `reported`, and deliberately not promoted.** The
+specific adoption figures circulating with this framing — an *"83% AI teaching assistant
+deployment"*, a *"42% outcome gain"*, *"92% of university students using AI"* — are **secondary and
+untraceable to a primary instrument from this session**, and this base does not put a number in a
+deck it cannot source. 🟢 **What IS evidenced here:** the one new PISA-aligned permissive agent
+([`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education), Apache-2.0, 0 ★)
+is the first address on these shelves aligned to an **international assessment** rather than a
+national curriculum — one data point in the predicted direction, and a thin one.
+
 **🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🟢 **Two new
 trends, both measured, and the first one is about this base's own repair habit rather than about
 the industry.**
