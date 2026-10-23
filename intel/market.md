@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
+
+🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
+
+🟢 **This is a RESEARCH pass, not an instrument pass.** `p405`–`p407` were all repairs to this base's own measurement layer. This one runs the prescribed brief — four global legs and one leg per region — and reports what the supply and the regional instruments actually returned, including where they returned nothing.
+
+### 🔵 The regional legs returned NOTHING this base did not already hold — stated so silence cannot read as coverage
+
+🔴 **All four regional legs plus the four global legs were run, and the regulatory yield was
+zero-new.** Every instrument the legs returned was checked against these shelves by name and found
+already carried:
+
+| leg | what the leg returned | already on these shelves |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states; Oklahoma `S.B. 1734`; Ohio's 2026-07-01 policy deadline; North Carolina `Session Law 2026-41`; Idaho `S.B. 1227`; ED's grant-priority rule; COPPA amendments; NYC traffic-light guidance; SUNY's 64-campus policy | 🟢 **all of it** — `intel/market.md`, `intel/policy-matrix.tsv`, `intel/open-gaps.md` |
+| **EMEA** | EU AI Act education-as-high-risk; the Digital Omnibus, `Regulation (EU) 2026/1744`; Commission guidelines for educators | 🟢 **all of it**, and this base's dates are the **corrected** ones — `p407` repaired exactly this paragraph |
+| **APAC** | Vietnam `Decision 33/2026/QĐ-TTg` (issued **2026-06-30**, in force **2026-08-15**, 46 systems / 6 sectors, education = 3, pre-existing education systems to **2027-09-01**); Korea's `AI Basic Act`; China's registration and labelling regime; Japan's principles-only act; Singapore's agentic framework; Taiwan; the Philippines | 🟢 **all of it** — and `p406` had already resolved this file's own Vietnam date contradiction |
+| **LATAM** | UNESCO IESALC (200 institutions / 19 countries, 87 % using AI in ≥1 area, 74 % in teaching, 26 % with a formal strategy); TALIS 2024 teacher use in Brazil / Chile / Colombia / Costa Rica against the OECD mean; the UNESCO AI-in-education Observatory; ILIA / CENIA | 🟢 **all of it** — `intel/market.md`, `intel/trends.md` |
+
+🟢 **The one genuine increment is CONFIDENCE, not content.** `p406` recorded in writing that
+**no primary text was read** — `tilleke.com`, `vietnam-briefing.com` and `aipolicydesk.com` all
+refused through this proxy — and left the Vietnamese official gazette named as the read that would
+close it. 🟢 This pass reached Decision 33's figures through an **independent secondary channel**
+(law-firm and regulatory-tracker commentary) and they **agree with the reconciled values already on
+the shelf**, including the **2027-09-01 / 2027-03-01** split and the 46-systems / 6-sectors appendix
+shape. 🔴 **This does not promote the band and must not be written up as one.** The gazette is still
+unread and `p388`'s instruction still stands. What it removes is narrower and worth having: the
+possibility that the shelf's Vietnamese dates rest on a single secondary source.
+
+🔴 **The informed gap, named rather than left silent: AFRICA, now the SEVENTH consecutive pass.**
+An explicit African open-source education leg was run in **English** and returned **no
+African-origin education agent, curriculum instrument or ministry repository** — the roundup layer
+itself said so and proposed the next step. 🔴 **And that next step is the one this base has already
+registered as never attempted:** `intel/market.md` ~line 366 states that *a French-language leg for
+Francophone Africa has never been run*, and this pass did **not** run it either — nor a Swahili or
+Yoruba leg. 🔵 So the honest shape of the gap is two-layered and should be quoted that way: the
+**English** nil is now measured seven passes running, and the **in-language** nil is not measured at
+all. Only the first of those is evidence about Africa; the second is evidence about this base's
+legs. It is written down because an unstated nil and genuine coverage look identical on a shelf.
+
 ## 🆕 `p406` · 2026-10-23 — the APAC leg RESOLVED this file's own Vietnam contradiction, and it refutes a live opportunity row
 
 🔴 **For a THIRD consecutive pass the four regional legs returned almost no unshelved fact — and the
@@ -113,6 +153,20 @@ subscriptions at **≈₩300 million**, with teacher research groups building le
 formative-assessment use. 🔴 **Whether those six are open source is NOT established** and the
 source does not say. 🔵 **This is Mexico's and Canada's shape a third time** (`P955`): in a
 devolved system the instrument is provincial, and a national query reports an empty world.
+
+🆕 **`p408` — the India opportunity is a MAINTENANCE sale, and the grant is already won.**
+🟢 **Sunbird ED is MIT** — the building block **DIKSHA** runs on — which is the licence outcome
+[`repos/foundations.md`](../repos/foundations.md) opens by saying education never gets. 🔴 **And the
+published implementation is stale: the portal `311 d` since HEAD, the mobile app `399 d`, and
+`Sunbird-Ed/sunbird-learning-platform` resolves no ref at all.** 🟡 **That inverts the usual pitch.**
+Against Moodle or Open edX a studio sells *around* the grant; against Sunbird there is nothing to
+sell around, so the engagement is **fork, pin, CVE-sweep and maintain**, and the money sits in the
+staffing plan rather than in legal review. 🟢 It prices cleanly because it is checkable: every
+number above is a `git` read a client can repeat without credentials. 🔴 **The mandatory step 0 is
+provenance, not licensing:** `p408` found a Sunbird documentation fork carrying **AGPL-3.0**,
+returned *above* upstream in search, holding a **byte-identical** copy of the grant upstream
+abandoned on **2018-06-21**. A badge-read confirms that AGPL and is right to. 🔵 Recipe and the
+four-command check: `Pattern AG` in [`compose/patterns.md`](../compose/patterns.md).
 
 ### LATAM
 

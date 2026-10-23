@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
+
+🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
+
+🟢 **This is a RESEARCH pass, not an instrument pass.** `p405`–`p407` were all repairs to this base's own measurement layer. This one runs the prescribed brief — four global legs and one leg per region — and reports what the supply and the regional instruments actually returned, including where they returned nothing.
+
+### 🟢 New supply and one correctly-excluded negative, all read first-hand
+
+| repo | default ref | licence *(payload, bytes)* | HEAD · age | what it is | origin |
+|---|---|---|---|---|---|
+| [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) | `main` | 🟢 **MIT** *(1,091 B, "Copyright (c) 2026 Naitik")* | `1286a97` **2026-10-03 — 20 d** | **CBSE / NCERT assessment generation for Grades 9–12**, built to compose questions *without* reproducing verbatim NCERT text — the copyright constraint stated as a design goal rather than a disclaimer. Real application tree, not a notebook: `server.ts`, `api/`, `src/`, Bun + Vite + Vercel. Runs on **open-weight Gemma**, so the inference can sit in-country. 🟡 Its own README says **public beta** and asks for subject-matter review before classroom use — publish it as a pilot base, never as a graded instrument. | APAC — India |
+| [crpf-mitadt/Indian-AI-for-Education](https://github.com/crpf-mitadt/Indian-AI-for-Education) | `main` | 🔴 **CC0-1.0** *(`LICENSE`, 7,048 B — "Creative Commons Legal Code / CC0 1.0 Universal")* | `c4ac229` **2026-08-24 — 60 d** | A curated map of Indian education AI: datasets, ASR/TTS/OCR, translation, benchmarks, and the DPI layer (Sunbird, Kolibri). 🔴 **CC0 is a public-domain dedication over the DOCUMENT, not a software grant over anything it points at.** Every address in it keeps its own licence, so this is an index to build **from**, never a dependency to build **on**. 🔵 The distinction this shelf's licence column cannot express, third instance. | APAC — India (MIT-ADT) |
+| `sreejinsreenivasan/tutor-ai-agent` | `main` | 🔴 **NO LICENCE FILE AT ROOT** *(0 B — `git ls-tree HEAD` has no `LICENSE`, `LICENCE` or `COPYING`)* | `b5ba103` **2024-03-27 — 940 d** | 🔴 **Published as a negative row, with the reason.** It surfaces on a tutor-agent search and it is unusable twice over: ungranted (no permission to copy, modify or deploy — not "permissive by default") and abandoned by 940 days. 🔵 It is on this shelf so the next pass does not spend a probe discovering it again. | not placed — no origin signal in the tree |
+### 🔴 The fork carries the grant upstream ABANDONED — and the forker re-licensed nothing
+
+🔴 **A fork that outranks its own upstream in search carries AGPL-3.0 over material whose upstream
+has been MIT for eight years.** Direction was established from **full history**, which is the only
+channel that can establish it — `p404`'s `gate-fork-direction` says a ref-set test cannot:
+
+| fact | value |
+|---|---|
+| upstream [`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io) | default ref 🔴 **`dev`** · HEAD `53c3e63` **2018-12-21** · `LICENSE` **1,072 B 🟢 MIT**, *"Copyright (c) 2018 Project Sunbird"* |
+| fork [`rajeevsathish/project-sunbird.github.io`](https://github.com/rajeevsathish/project-sunbird.github.io) | default ref 🔴 **`dev`** · HEAD `48184a2` **2018-03-27** · `LICENSE` **34,520 B 🔴 AGPL-3.0** |
+| the relicence commit, in **upstream's own** history | `006b8246` **2018-06-21**, subject literally *"Changed license to MIT"* |
+| upstream's `LICENSE` blob at `006b8246^` (before the switch) | `dbbe3558157f5861bff35dcb37b328b679b0ccfd` · 34,520 B |
+| the **fork's** `LICENSE` blob at HEAD | `dbbe3558157f5861bff35dcb37b328b679b0ccfd` · 34,520 B — 🔴 **byte-identical** |
+
+🟢 **The blob sha is the proof, not the prose.** The fork holds upstream's *own* pre-relicence
+grant, unmodified, and its HEAD pre-dates the switch by **86 days**. This is a **frozen grant**, not
+a re-licensing, and the forker did nothing wrong.
+
+🔴 **The hazard is search ranking, not bad faith.** On this pass's `Sunbird … license MIT` leg the
+**fork was returned above the upstream repository**. A studio that takes the first result inherits
+network copyleft on documentation whose upstream is MIT — and a licence-badge read *confirms* the
+AGPL, correctly. 🔵 **New class for this shelf.** Every licence trap carried here so far is
+*upstream being misread*: a grant one directory down (`openSIS-Classic`), a grant at `LICENSE.txt`
+(`ai-shifu`), an AGPL text inside a GPL file (`moodle-local_copilot`). This one is **upstream having
+changed its mind, and a fork being right about the old answer** — neither party is in error and the
+two answers are both true, at different refs.
+
+🔵 **The reproduction, in four commands, no credentials:**
+```bash
+git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/project-sunbird/project-sunbird.github.io u
+git -C u fetch -q --depth=1000 origin dev
+git -C u log --format='%h %cI %s' --follow -- LICENSE   # → 006b8246 2018-06-21 Changed license to MIT
+git -C u rev-parse 006b8246^:LICENSE                    # → dbbe3558157f5861bff35dcb37b328b679b0ccfd
+```
+
 **🆕 Pass `p407` · reads and commit both 2026-10-23 — the THIRTEENTH pass dated today.**
 🟢 **`Gap 406-A` is CLOSED, and the gap asked the wrong question.** It expected *"a disagreement
 would be a finding on one of them."* 🔴 **The two instruments disagree on 14 of 59 — and `I2` is
@@ -1037,6 +1085,7 @@ tag-shipping projects** (finding 9), and a **failed clone cannot distinguish pri
 | **BC Curriculum MCP** | [pdg6/bc-curriculum-mcp-server](https://github.com/pdg6/bc-curriculum-mcp-server) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p388`. **The North American curriculum-grounding instance** — the third region to get one, after Brazil's BNCC agent (`p387`) and `os-taxonomy` (`p384`). 12 MCP tools over the **entire BC Ministry of Education K–12 curriculum**, crawled into SQLite: Big Ideas / Curricular Competencies / Content in the real three-column **KDU** structure with elaborations, Core Competencies, grade progressions, cross-subject connections, full-text search — and the **First Peoples Principles of Learning**, a jurisdictional requirement no generic tutor carries. Hosted HTTP endpoint or local stdio via `npx`. 🟡 2 releases, both **2026-03-27**; the data is a crawl, so currency is the risk, not the licence. |
 | **tudelft-mcp** | [danieltyukov/tudelft-mcp](https://github.com/danieltyukov/tudelft-mcp) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p388`. **The EMEA institution-specific pattern, and the best-governed write path read so far.** One server over **four** systems a real university runs — Brightspace, **OSIRIS** (official records), MyTimetable and the public Study Guide — behind a single browser sign-in **including MFA**, with a self-renewing session. 🟢 **Every write (submitting an assignment, joining a group, replying in a discussion, registering for a course or exam) shows a preview and requires confirmation** — the human-in-the-loop control EU high-risk obligations ask for, shipped as the default. v0.1.4, → 2026-10-07. |
 | **Canvas Toolchain** | [Ryfter/canvas-toolchain](https://github.com/Ryfter/canvas-toolchain) | `main` | 🟢 **MIT** *(1,063 B)* | 🆕 `p388`. **Teacher-facing semester refresh** — `Trend 5`'s shape exactly. Reads a Canvas backup archive plus lecture transcripts, **scores topic currency**, plans the next semester, and emits Canvas-safe HTML. 🟢 The **no-token "generate the HTML and paste it in"** path is first-class, so it delivers value without an API token or admin approval — which is how a pilot actually starts. 🟡 Installer is not code-signed; `npx canvas-toolchain` avoids it. → 2026-08-29. |
+| 🆕 `p408` **CurriculumCraft AI** | [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) | `main` | 🟢 **MIT** *(1,091 B, "Copyright (c) 2026 Naitik")* | **Curriculum-bound item generation for a named jurisdiction — CBSE / NCERT, Grades 9–12.** 🟢 The row's value is the constraint, not the generator: it is built to compose questions **without reproducing verbatim NCERT text**, which is the copyright exposure a client's counsel asks about first and which almost no tutor on these shelves addresses at all. Real application tree (`server.ts`, `api/`, `src/`, Bun + Vite + Vercel), and it targets **open-weight Gemma**, so inference can be served in-country — the APAC data-residency posture without a sovereign-cloud contract. HEAD `1286a97` **2026-10-03 — 20 d**. 🔴 **Public beta by its own README**, which asks for subject-matter review before classroom use: wire it behind human review and never as the graded instrument. 🟡 Single maintainer. Origin: **APAC — India**. |
 
 ## Tier 4 — 🆕 `p387` LATAM-native agents (the tier `Gap 386-C` said did not exist)
 

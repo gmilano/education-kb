@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
+
+🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
+
+🟢 **This is a RESEARCH pass, not an instrument pass.** `p405`–`p407` were all repairs to this base's own measurement layer. This one runs the prescribed brief — four global legs and one leg per region — and reports what the supply and the regional instruments actually returned, including where they returned nothing.
+
+### 🔴 Trend: a grant is a property of a **ref**, not of a project — and this pass has the first specimen where BOTH answers are right
+
+🔴 **Every licence trap this base carries is a variant of "the grant was read in the wrong place."**
+A grant one directory down (`openSIS-Classic`, `docs/License.txt`). A grant at `LICENSE.txt` rather
+than `LICENSE` (`ai-shifu`, `tutor`). An AGPL text sitting inside a file labelled GPL
+(`moodle-local_copilot`, §13). A grant at the submodule pin rather than the superproject
+(`gate-pin-grant`). In every one of them there is a single correct answer and a reader who missed it.
+
+🟢 **`p408` adds a class where there is no such answer.** `project-sunbird/project-sunbird.github.io`
+is **MIT** today and was **AGPL-3.0** until `006b8246` on **2018-06-21**; a fork whose HEAD is
+**2018-03-27** carries the AGPL text with a **byte-identical blob sha**. Both repositories report
+their licence correctly. Both badge-reads are right. **The project has two grants and the ref
+decides which one you got.**
+
+🔵 **Why this is a trend and not an anecdote.** Three forces now push education repositories through
+relicensing: public-money DPI programmes that need permissive terms to be adopted across
+jurisdictions (Sunbird's own 2018 MIT switch is this), the AI-extension wave rebasing education
+plugins onto platform grants they did not originally carry, and the single-maintainer tutor supply
+this base has been cataloguing since `p385`, where a licence is changed as casually as a README.
+🔴 **The operational consequence is a dating requirement on the licence column itself:** every
+licence cell on these shelves is *"the grant at the ref we read, on the date we read it"*, and a
+fork — even a dormant one — is a **separate licence fact**, never an inherited one.
+
+🟡 **The second trend this pass measures: the grant is no longer the scarce thing — maintenance is.**
+Sunbird ED is MIT at national-platform scale, which is the licence outcome
+[`repos/foundations.md`](../repos/foundations.md) opens by saying education does not get; and its
+portal is **311 days** without a commit, its mobile app **399**, and one of its named repositories
+no longer resolves. 🔵 The classic education trade was *current code, hostile grant* (Moodle, Open
+edX, Canvas). This is the **inverse**, and it prices differently: a permissive-but-stale base is a
+fork-and-maintain engagement, and the cost lands in the staffing plan rather than in legal review.
+
 ## 🆕 `p407` · 2026-10-23 — the instruments are now the thing most likely to be wrong
 
 🔴 **Trend: this base's measurement layer has overtaken its subject as the source of error.**

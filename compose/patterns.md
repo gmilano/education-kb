@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pattern AG
+
+### 🆕 `p408` — the India DPI engagement: MIT the whole way down, with the fork check as step 0
+
+🔵 **When to reach for it.** An APAC/India engagement where the client is a state education
+department, a DIKSHA-adjacent programme or a CBSE/NCERT-aligned private network, and the
+requirement is in-country inference plus a permissive grant the client can extend without
+publishing the extension. 🟢 This is the one stack on these shelves that is **MIT at every layer**.
+
+**Step 0 — the fork-provenance check, and it is not optional here.**
+🔴 `p408` found a fork of Sunbird documentation carrying **AGPL-3.0** while upstream is **MIT**,
+returned *above* upstream by search. Before any Sunbird address enters a proposal, pin the grant to
+the ref:
+```bash
+git ls-remote --symref https://github.com/<slug> HEAD          # the REAL default ref (Sunbird docs = dev, portal = master)
+git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/<slug> r
+git -C r cat-file -s HEAD:LICENSE                               # 1,072 B ≈ MIT · 34,520 B ≈ AGPL-3.0
+git -C r fetch -q --depth=1000 origin "$(git -C r symbolic-ref --short HEAD)"
+git -C r log --format='%h %cI %s' --follow -- LICENSE            # did the grant CHANGE, and in which direction?
+```
+🟢 The last line is the one `p404`'s gate exists for: **direction is only establishable from full
+history**, and a byte-identical blob sha against upstream's pre-relicence blob proves *frozen*
+rather than *re-licensed*.
+
+**Step 1 — the platform.** [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal)
+(`master`, 🟢 MIT) as the content-and-delivery spine, with
+[`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) (`main`,
+🟢 MIT) where a handset is the real client. 🔴 **Budget the staleness, do not discover it:** 311 d
+and 399 d since HEAD respectively. Fork at a pinned SHA, run the client's own dependency and CVE
+sweep before week 1 ends, and price a maintenance line. 🔴 Do **not** name
+`Sunbird-Ed/sunbird-learning-platform` in a deliverable — it does not resolve.
+
+**Step 2 — the offline edge.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+(🔴 `develop`, 🟢 MIT) for low-connectivity districts, which is most of the addressable footprint
+and already this shelf's most important repo for that constraint.
+
+**Step 3 — the assessment layer.** [`Naitik-xd/CurriculumCraft-AI`](https://github.com/Naitik-xd/CurriculumCraft-AI)
+(`main`, 🟢 MIT, HEAD **2026-10-03**) for CBSE/NCERT Grades 9–12 item generation. 🟢 Take its
+*constraint* as the requirement, not just its code: it is built to generate without reproducing
+verbatim NCERT text, which is the copyright exposure a client's counsel will actually ask about.
+🔴 It is **public beta** and says so — wire it behind human review, never as the graded instrument.
+
+**Step 4 — inference, in country.** `CurriculumCraft-AI` already targets **open-weight Gemma**, so
+serve it locally rather than re-architecting: this is the APAC data-residency posture without a
+sovereign-cloud contract.
+
+**Step 5 — grounding, and the licence trap to avoid.** Use
+[`crpf-mitadt/Indian-AI-for-Education`](https://github.com/crpf-mitadt/Indian-AI-for-Education) as
+the **discovery index** for Indian ASR/TTS/OCR and translation assets. 🔴 **It is CC0-1.0 over the
+document only** — every asset it names keeps its own grant, so each one re-enters at Step 0. Never
+cite the index as the licence for anything inside it.
+
+**Shape of the engagement.** 10–12 weeks: 1 week for Step 0 across every address plus the CVE
+sweep; 4 weeks portal fork, pin and deploy; 2 weeks Kolibri edge sync; 3 weeks assessment layer
+behind review; 1–2 weeks local-inference hardening.
+🟡 **What this pattern does NOT give you:** multi-tenancy (no Sunbird row here claims it), a current
+upstream to pull from, or a compliance story. For the last of those, Vietnam's Decision 33 and
+Korea's `AI Basic Act` are the APAC instruments — see [`intel/market.md`](../intel/market.md) — and
+India's own posture is a separate read this base has not closed.
+
 ## 🆕 `p406` — a standing existence check becomes a step in every pattern, and `Pattern C` gets a dated APAC variant
 
 ### 🟢 `Pattern Z` — the pre-engagement address audit, now a command rather than a habit

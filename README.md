@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 408 — reads and commit both 2026-10-23 — **A FORK CARRIES THE GRANT UPSTREAM ABANDONED, AND BOTH ANSWERS ARE RIGHT. 🟢 INDIA'S EDUCATION DPI IS `MIT` AT NATIONAL SCALE — AND `311` / `399` DAYS STALE. 🔵 AND EIGHT PRESCRIBED LEGS RETURNED NOTHING THIS BASE DID NOT ALREADY HOLD.**
+
+🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**,
+and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after
+`p395`–`p407`.
+
+🟢 **This is a RESEARCH pass, not an instrument pass.** `p405`–`p407` were all repairs to this
+base's own measurement layer. `p408` runs the prescribed brief — four global legs plus one leg per
+region — and reports the supply and the regional instruments as they came back, including the
+nils.
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A new licence class: the FROZEN grant.** [`rajeevsathish/project-sunbird.github.io`](https://github.com/rajeevsathish/project-sunbird.github.io) carries **AGPL-3.0 (34,520 B)**; upstream [`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io) carries **MIT (1,072 B)**. Upstream relicensed at `006b8246` **2018-06-21** (*"Changed license to MIT"*); the fork's HEAD is **2018-03-27**, and its `LICENSE` blob sha `dbbe3558157f5861bff35dcb37b328b679b0ccfd` is **byte-identical to upstream's pre-relicence blob**. 🟢 The fork re-licensed nothing — it froze. **Both badge-reads are correct; the ref decides which grant you got.** 🔴 The hazard is **search ranking**: the fork was returned *above* upstream |
+| 2 | 🔴 **India's education DPI is permissive and going stale.** `SunbirdEd-portal` `master` `9efc8b5` **2025-12-16 — 311 d**, MIT; `SunbirdEd-mobile-app` `main` `9de5e08` **2025-09-19 — 399 d**, MIT; `Sunbird-Ed/sunbird-learning-platform` **resolves no ref**. 🟢 Promoted to `repos/foundations.md` Tier 1 and `verticals/solutions.md` — the first permissive row there with a **ministry** adopter |
+| 3 | 🟢 **New supply:** [`Naitik-xd/CurriculumCraft-AI`](https://github.com/Naitik-xd/CurriculumCraft-AI) — `main`, **MIT** (1,091 B), HEAD `1286a97` **2026-10-03 — 20 d**. CBSE/NCERT Grades 9–12 item generation on **open-weight Gemma**, built to avoid verbatim NCERT text. 🔴 Public beta by its own README |
+| 4 | 🟡 **A licence class the column cannot express:** [`crpf-mitadt/Indian-AI-for-Education`](https://github.com/crpf-mitadt/Indian-AI-for-Education) is **CC0-1.0** (7,048 B) — a public-domain dedication over the **document**, not a grant over anything it indexes |
+| 5 | 🔴 **One negative row published with its reason:** `sreejinsreenivasan/tutor-ai-agent` has **no licence file at root** and HEAD **2024-03-27 — 940 d**. Ungranted *and* abandoned, recorded so the next pass does not re-probe it |
+| 6 | 🔵 **Eight legs, zero new regulatory content.** North America, EMEA, APAC and LATAM each returned instruments already carried here by name. The one increment is **confidence**: Decision 33's dates now hold on an independent secondary channel — **the Vietnamese gazette is still unread** and `p388`'s instruction stands |
+| 7 | 🔴 **Africa: the English nil is now SEVEN consecutive passes — and the in-language leg has still never been run.** Two different facts, quoted as two |
+| 8 | 🟢 **`Pattern AG`** — the India DPI engagement, MIT at every layer, with the four-command fork-provenance check as **step 0** |
+
+### 🔴 What this pass did NOT do
+
+🔴 **`make hooks` was not run.** This environment refused to execute the repository's own gate
+suite (external-code policy), so **none of the 51 gates judged this pass's edits**. The structural
+contracts were held by hand instead and should be re-verified by the next pass with execution
+rights: frontmatter present with `updated: 2026-10-23` on all eight shelves, `region` inside the
+closed vocabulary, the single `## Opportunities by region` block left with exactly its five `###`
+children, both trending files appended **above** an untouched history, and no header row published
+as data. 🔵 **This is a declared gap, not a clean bill** — `make hooks` is the first thing to run
+next pass.
+
 ## Pass 407 — reads and commit both 2026-10-23 — **`Gap 406-A` IS CLOSED AND THE GAP ASKED THE WRONG QUESTION. 🔴 `I2` IS CORRECT ON EVERY ADDRESS IT CAN SEE — THE DEFECT IS ITS SCOPE AND `p406`'s NUMERATOR. 🔴 AND `gate-dates` WAS GREEN WHILE A POSSESSIVE APOSTROPHE LAUNDERED THE ONE CLAIM IT EXISTS TO CATCH.**
 
 🔵 **Dating note.** Every probe, clone, payload read and search leg below was run on

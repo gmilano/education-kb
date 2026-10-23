@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
+
+🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
+
+🟢 **This is a RESEARCH pass, not an instrument pass.** `p405`–`p407` were all repairs to this base's own measurement layer. This one runs the prescribed brief — four global legs and one leg per region — and reports what the supply and the regional instruments actually returned, including where they returned nothing.
+
+### 🔴 India's education DPI is MIT — and its reference implementation is going stale
+
+🟢 **Sunbird ED is the grant this shelf's own licence thesis says should not exist at this scale.**
+[`repos/foundations.md`](../repos/foundations.md) opens by stating that *the licence frontier in
+education runs the wrong way*: Moodle GPL, Open edX AGPL, Canvas AGPL, OpenEduCat LGPL. Sunbird ED
+is **MIT**, and it is the platform **DIKSHA** — India's national school platform — is built on.
+🔴 **And its published implementation has not taken a commit in almost a year:**
+
+| repo | default ref | licence *(payload, bytes)* | HEAD | days since |
+|---|---|---|---|---:|
+| [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🔴 `master` | 🟢 **MIT** *(`LICENSE`, 1,072 B)* | `9efc8b5` **2025-12-16** | 🔴 **311 d** |
+| [Sunbird-Ed/SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | `main` | 🟢 **MIT** *(`LICENSE`, 1,078 B)* | `9de5e08` **2025-09-19** | 🔴 **399 d** |
+| `Sunbird-Ed/sunbird-learning-platform` | — | — | 🔴 **no ref resolves** | — |
+
+🔴 **The third row is the one to read carefully.** `git ls-remote --symref` returns no HEAD for it,
+and this base already states the limit that makes that verdict partial: **a failed resolve cannot
+distinguish private from deleted.** What it does establish is that the address is not clonable from
+here today, so it must not be named in a recipe.
+
+🟡 **What this changes for an APAC engagement.** The grant is the easy part and it is already won —
+MIT, at national scale, with a ministry adopter. The cost is **maintenance**: a studio taking
+Sunbird inherits a reference implementation ~10–13 months behind, which is a fork-and-maintain
+engagement, not an integrate-and-extend one. 🔵 That is the opposite trade from Moodle, where the
+code is current and the **grant** is the obstacle.
+### 🔴 The fork carries the grant upstream ABANDONED — and the forker re-licensed nothing
+
+🔴 **A fork that outranks its own upstream in search carries AGPL-3.0 over material whose upstream
+has been MIT for eight years.** Direction was established from **full history**, which is the only
+channel that can establish it — `p404`'s `gate-fork-direction` says a ref-set test cannot:
+
+| fact | value |
+|---|---|
+| upstream [`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io) | default ref 🔴 **`dev`** · HEAD `53c3e63` **2018-12-21** · `LICENSE` **1,072 B 🟢 MIT**, *"Copyright (c) 2018 Project Sunbird"* |
+| fork [`rajeevsathish/project-sunbird.github.io`](https://github.com/rajeevsathish/project-sunbird.github.io) | default ref 🔴 **`dev`** · HEAD `48184a2` **2018-03-27** · `LICENSE` **34,520 B 🔴 AGPL-3.0** |
+| the relicence commit, in **upstream's own** history | `006b8246` **2018-06-21**, subject literally *"Changed license to MIT"* |
+| upstream's `LICENSE` blob at `006b8246^` (before the switch) | `dbbe3558157f5861bff35dcb37b328b679b0ccfd` · 34,520 B |
+| the **fork's** `LICENSE` blob at HEAD | `dbbe3558157f5861bff35dcb37b328b679b0ccfd` · 34,520 B — 🔴 **byte-identical** |
+
+🟢 **The blob sha is the proof, not the prose.** The fork holds upstream's *own* pre-relicence
+grant, unmodified, and its HEAD pre-dates the switch by **86 days**. This is a **frozen grant**, not
+a re-licensing, and the forker did nothing wrong.
+
+🔴 **The hazard is search ranking, not bad faith.** On this pass's `Sunbird … license MIT` leg the
+**fork was returned above the upstream repository**. A studio that takes the first result inherits
+network copyleft on documentation whose upstream is MIT — and a licence-badge read *confirms* the
+AGPL, correctly. 🔵 **New class for this shelf.** Every licence trap carried here so far is
+*upstream being misread*: a grant one directory down (`openSIS-Classic`), a grant at `LICENSE.txt`
+(`ai-shifu`), an AGPL text inside a GPL file (`moodle-local_copilot`). This one is **upstream having
+changed its mind, and a fork being right about the old answer** — neither party is in error and the
+two answers are both true, at different refs.
+
+🔵 **The reproduction, in four commands, no credentials:**
+```bash
+git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/project-sunbird/project-sunbird.github.io u
+git -C u fetch -q --depth=1000 origin dev
+git -C u log --format='%h %cI %s' --follow -- LICENSE   # → 006b8246 2018-06-21 Changed license to MIT
+git -C u rev-parse 006b8246^:LICENSE                    # → dbbe3558157f5861bff35dcb37b328b679b0ccfd
+```
+
 ### 🆕 `p406` — the foundation tier swept for decay, and one carried row is a REPAIR not a deletion
 
 🟢 **Five of this shelf's addresses do not resolve** (`ale-alejandro/beadkit`, `apereo/opencast`,
@@ -598,6 +663,8 @@ rather than forking the platform. Recipes in [`compose/patterns.md`](../compose/
 | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **`release`** | 🔴 **AGPL-3.0** *(`LICENSE.txt`)* | The Docker distribution for Open edX and the de-facto deployment path. Nobody should be installing `edx-platform` without it. |
 | [inducer/relate](https://github.com/inducer/relate) | `main` | 🟢 **MIT** *(`LICENSE`, 1,145 B — "MIT/X Consortium license")* | 🆕 `p384`. Django courseware with autograding, flexible access rules, per-student statistics and multi-course support. 🟢 **Permissive at the platform level**, which almost nothing else in this tier is. 🟡 Courseware-scale: the permissive base for a **course**, where OpenOLAT is the permissive base for an **institution**. Do not pitch it as a Moodle replacement. |
 | [openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions) | `main` | 🔴 **AGPL-3.0-only** *(`LICENSE`, 34,523 B; `pyproject.toml` → `AGPL-3.0-only`)* | 🆕 `p387`. 🟢 **The platform's own AI extension point — read this before anyone proposes forking Open edX to add AI.** First-party `openedx` org, so the extension surface is maintained with the platform rather than against it; the grant matches the platform's, which is why it can exist inside it. 🟡 Marked **experimental, not for production** in its own docs, so treat it as the contract to build against, not the thing to ship. Compare [aulasneo/tutor-contrib-let](https://github.com/aulasneo/tutor-contrib-let) (`main`, AGPL-3.0, Aulasneo — Argentina) for the LATAM-maintained customisation route. |
+| 🆕 `p408` [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🔴 `master` | 🟢 **MIT** *(`LICENSE`, 1,072 B, "Copyright (c) 2018 Project Sunbird")* | 🟢 **The counter-example to this file's opening thesis, and the largest one available: a permissive grant at NATIONAL-PLATFORM scale.** Sunbird ED is the building block **DIKSHA**, India's national school platform, is built on — so unlike every other permissive row here it comes with a ministry adopter rather than a pilot. 🔴 **The cost is maintenance, and it is large:** HEAD `9efc8b5` **2025-12-16 — 311 d**. Fork at a pinned SHA, run the client's CVE sweep before week 1 ends, and price a maintenance line; this is a fork-and-maintain base, not an integrate-and-extend one. 🔵 The exact inverse of Moodle's trade (current code, hostile grant) — see `Pattern AG`. 🔴 Sibling `Sunbird-Ed/sunbird-learning-platform` **resolves no ref** and must not be named in a deliverable; a failed resolve cannot distinguish private from deleted. |
+| 🆕 `p408` [Sunbird-Ed/SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | `main` | 🟢 **MIT** *(`LICENSE`, 1,078 B)* | The handset client for the row above, and the surface that matters wherever the learner's only device is a phone. 🔴 HEAD `9de5e08` **2025-09-19 — 399 d**, staler than the portal, so the mobile path carries the heavier maintenance share. 🔵 Pairs with [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) rather than competing with it: Kolibri owns the offline-first runtime, this owns the DPI-aligned content contract. |
 
 ## Tier 2 — Content, courseware and assessment
 

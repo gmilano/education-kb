@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p408` · 2026-10-23 — a fork that FROZE an abandoned grant, India's **MIT** DPI going stale, and eight legs that returned nothing unshelved
+
+🔵 **Dating note.** Every probe, clone, licence read and search leg below was run on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the fourteenth pass dated today**, after `p395`–`p407`.
+
+🟢 **This is a RESEARCH pass, not an instrument pass.** `p405`–`p407` were all repairs to this base's own measurement layer. This one runs the prescribed brief — four global legs and one leg per region — and reports what the supply and the regional instruments actually returned, including where they returned nothing.
+
+🔵 **APPEND-ONLY: this section is added above the history, which is left intact.**
+
+### 🟢 New supply and one correctly-excluded negative, all read first-hand
+
+| repo | default ref | licence *(payload, bytes)* | HEAD · age | what it is | origin |
+|---|---|---|---|---|---|
+| [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) | `main` | 🟢 **MIT** *(1,091 B, "Copyright (c) 2026 Naitik")* | `1286a97` **2026-10-03 — 20 d** | **CBSE / NCERT assessment generation for Grades 9–12**, built to compose questions *without* reproducing verbatim NCERT text — the copyright constraint stated as a design goal rather than a disclaimer. Real application tree, not a notebook: `server.ts`, `api/`, `src/`, Bun + Vite + Vercel. Runs on **open-weight Gemma**, so the inference can sit in-country. 🟡 Its own README says **public beta** and asks for subject-matter review before classroom use — publish it as a pilot base, never as a graded instrument. | APAC — India |
+| [crpf-mitadt/Indian-AI-for-Education](https://github.com/crpf-mitadt/Indian-AI-for-Education) | `main` | 🔴 **CC0-1.0** *(`LICENSE`, 7,048 B — "Creative Commons Legal Code / CC0 1.0 Universal")* | `c4ac229` **2026-08-24 — 60 d** | A curated map of Indian education AI: datasets, ASR/TTS/OCR, translation, benchmarks, and the DPI layer (Sunbird, Kolibri). 🔴 **CC0 is a public-domain dedication over the DOCUMENT, not a software grant over anything it points at.** Every address in it keeps its own licence, so this is an index to build **from**, never a dependency to build **on**. 🔵 The distinction this shelf's licence column cannot express, third instance. | APAC — India (MIT-ADT) |
+| `sreejinsreenivasan/tutor-ai-agent` | `main` | 🔴 **NO LICENCE FILE AT ROOT** *(0 B — `git ls-tree HEAD` has no `LICENSE`, `LICENCE` or `COPYING`)* | `b5ba103` **2024-03-27 — 940 d** | 🔴 **Published as a negative row, with the reason.** It surfaces on a tutor-agent search and it is unusable twice over: ungranted (no permission to copy, modify or deploy — not "permissive by default") and abandoned by 940 days. 🔵 It is on this shelf so the next pass does not spend a probe discovering it again. | not placed — no origin signal in the tree |
+### 🔴 India's education DPI is MIT — and its reference implementation is going stale
+
+🟢 **Sunbird ED is the grant this shelf's own licence thesis says should not exist at this scale.**
+[`repos/foundations.md`](../repos/foundations.md) opens by stating that *the licence frontier in
+education runs the wrong way*: Moodle GPL, Open edX AGPL, Canvas AGPL, OpenEduCat LGPL. Sunbird ED
+is **MIT**, and it is the platform **DIKSHA** — India's national school platform — is built on.
+🔴 **And its published implementation has not taken a commit in almost a year:**
+
+| repo | default ref | licence *(payload, bytes)* | HEAD | days since |
+|---|---|---|---|---:|
+| [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🔴 `master` | 🟢 **MIT** *(`LICENSE`, 1,072 B)* | `9efc8b5` **2025-12-16** | 🔴 **311 d** |
+| [Sunbird-Ed/SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | `main` | 🟢 **MIT** *(`LICENSE`, 1,078 B)* | `9de5e08` **2025-09-19** | 🔴 **399 d** |
+| `Sunbird-Ed/sunbird-learning-platform` | — | — | 🔴 **no ref resolves** | — |
+
+🔴 **The third row is the one to read carefully.** `git ls-remote --symref` returns no HEAD for it,
+and this base already states the limit that makes that verdict partial: **a failed resolve cannot
+distinguish private from deleted.** What it does establish is that the address is not clonable from
+here today, so it must not be named in a recipe.
+
+🟡 **What this changes for an APAC engagement.** The grant is the easy part and it is already won —
+MIT, at national scale, with a ministry adopter. The cost is **maintenance**: a studio taking
+Sunbird inherits a reference implementation ~10–13 months behind, which is a fork-and-maintain
+engagement, not an integrate-and-extend one. 🔵 That is the opposite trade from Moodle, where the
+code is current and the **grant** is the obstacle.
+### 🔴 The fork carries the grant upstream ABANDONED — and the forker re-licensed nothing
+
+🔴 **A fork that outranks its own upstream in search carries AGPL-3.0 over material whose upstream
+has been MIT for eight years.** Direction was established from **full history**, which is the only
+channel that can establish it — `p404`'s `gate-fork-direction` says a ref-set test cannot:
+
+| fact | value |
+|---|---|
+| upstream [`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io) | default ref 🔴 **`dev`** · HEAD `53c3e63` **2018-12-21** · `LICENSE` **1,072 B 🟢 MIT**, *"Copyright (c) 2018 Project Sunbird"* |
+| fork [`rajeevsathish/project-sunbird.github.io`](https://github.com/rajeevsathish/project-sunbird.github.io) | default ref 🔴 **`dev`** · HEAD `48184a2` **2018-03-27** · `LICENSE` **34,520 B 🔴 AGPL-3.0** |
+| the relicence commit, in **upstream's own** history | `006b8246` **2018-06-21**, subject literally *"Changed license to MIT"* |
+| upstream's `LICENSE` blob at `006b8246^` (before the switch) | `dbbe3558157f5861bff35dcb37b328b679b0ccfd` · 34,520 B |
+| the **fork's** `LICENSE` blob at HEAD | `dbbe3558157f5861bff35dcb37b328b679b0ccfd` · 34,520 B — 🔴 **byte-identical** |
+
+🟢 **The blob sha is the proof, not the prose.** The fork holds upstream's *own* pre-relicence
+grant, unmodified, and its HEAD pre-dates the switch by **86 days**. This is a **frozen grant**, not
+a re-licensing, and the forker did nothing wrong.
+
+🔴 **The hazard is search ranking, not bad faith.** On this pass's `Sunbird … license MIT` leg the
+**fork was returned above the upstream repository**. A studio that takes the first result inherits
+network copyleft on documentation whose upstream is MIT — and a licence-badge read *confirms* the
+AGPL, correctly. 🔵 **New class for this shelf.** Every licence trap carried here so far is
+*upstream being misread*: a grant one directory down (`openSIS-Classic`), a grant at `LICENSE.txt`
+(`ai-shifu`), an AGPL text inside a GPL file (`moodle-local_copilot`). This one is **upstream having
+changed its mind, and a fork being right about the old answer** — neither party is in error and the
+two answers are both true, at different refs.
+
+🔵 **The reproduction, in four commands, no credentials:**
+```bash
+git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/project-sunbird/project-sunbird.github.io u
+git -C u fetch -q --depth=1000 origin dev
+git -C u log --format='%h %cI %s' --follow -- LICENSE   # → 006b8246 2018-06-21 Changed license to MIT
+git -C u rev-parse 006b8246^:LICENSE                    # → dbbe3558157f5861bff35dcb37b328b679b0ccfd
+```
+### 🔵 The regional legs returned NOTHING this base did not already hold — stated so silence cannot read as coverage
+
+🔴 **All four regional legs plus the four global legs were run, and the regulatory yield was
+zero-new.** Every instrument the legs returned was checked against these shelves by name and found
+already carried:
+
+| leg | what the leg returned | already on these shelves |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states; Oklahoma `S.B. 1734`; Ohio's 2026-07-01 policy deadline; North Carolina `Session Law 2026-41`; Idaho `S.B. 1227`; ED's grant-priority rule; COPPA amendments; NYC traffic-light guidance; SUNY's 64-campus policy | 🟢 **all of it** — `intel/market.md`, `intel/policy-matrix.tsv`, `intel/open-gaps.md` |
+| **EMEA** | EU AI Act education-as-high-risk; the Digital Omnibus, `Regulation (EU) 2026/1744`; Commission guidelines for educators | 🟢 **all of it**, and this base's dates are the **corrected** ones — `p407` repaired exactly this paragraph |
+| **APAC** | Vietnam `Decision 33/2026/QĐ-TTg` (issued **2026-06-30**, in force **2026-08-15**, 46 systems / 6 sectors, education = 3, pre-existing education systems to **2027-09-01**); Korea's `AI Basic Act`; China's registration and labelling regime; Japan's principles-only act; Singapore's agentic framework; Taiwan; the Philippines | 🟢 **all of it** — and `p406` had already resolved this file's own Vietnam date contradiction |
+| **LATAM** | UNESCO IESALC (200 institutions / 19 countries, 87 % using AI in ≥1 area, 74 % in teaching, 26 % with a formal strategy); TALIS 2024 teacher use in Brazil / Chile / Colombia / Costa Rica against the OECD mean; the UNESCO AI-in-education Observatory; ILIA / CENIA | 🟢 **all of it** — `intel/market.md`, `intel/trends.md` |
+
+🟢 **The one genuine increment is CONFIDENCE, not content.** `p406` recorded in writing that
+**no primary text was read** — `tilleke.com`, `vietnam-briefing.com` and `aipolicydesk.com` all
+refused through this proxy — and left the Vietnamese official gazette named as the read that would
+close it. 🟢 This pass reached Decision 33's figures through an **independent secondary channel**
+(law-firm and regulatory-tracker commentary) and they **agree with the reconciled values already on
+the shelf**, including the **2027-09-01 / 2027-03-01** split and the 46-systems / 6-sectors appendix
+shape. 🔴 **This does not promote the band and must not be written up as one.** The gazette is still
+unread and `p388`'s instruction still stands. What it removes is narrower and worth having: the
+possibility that the shelf's Vietnamese dates rest on a single secondary source.
+
+🔴 **The informed gap, named rather than left silent: AFRICA, now the SEVENTH consecutive pass.**
+An explicit African open-source education leg was run in **English** and returned **no
+African-origin education agent, curriculum instrument or ministry repository** — the roundup layer
+itself said so and proposed the next step. 🔴 **And that next step is the one this base has already
+registered as never attempted:** `intel/market.md` ~line 366 states that *a French-language leg for
+Francophone Africa has never been run*, and this pass did **not** run it either — nor a Swahili or
+Yoruba leg. 🔵 So the honest shape of the gap is two-layered and should be quoted that way: the
+**English** nil is now measured seven passes running, and the **in-language** nil is not measured at
+all. Only the first of those is evidence about Africa; the second is evidence about this base's
+legs. It is written down because an unstated nil and genuine coverage look identical on a shelf.
+
 ## 🆕 `p407` · 2026-10-23 — a cross-check, two gate repairs, and one new verified plugin
 
 🔵 **APPEND-ONLY: this section is added above the history, which is left intact.**
