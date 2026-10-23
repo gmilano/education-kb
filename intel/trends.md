@@ -6,6 +6,53 @@ updated: 2026-10-23
 
 # Education industry trends
 
+**🆕 Pass `p395` · reads and commit both 2026-10-23.** Four trends, each tied to a measurement in
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p395.tsv),
+[`lti-layer-dating`](../evidence/lti-layer-dating.2026-10-23-p395.tsv) or
+[`channel-state`](../evidence/channel-state.2026-10-23-p395.tsv).
+
+### 🆕 `T33` — Regulation has started FORBIDDING feature classes, not just risk-rating them
+
+🔴 The EU AI Act bans **emotion-inference systems in educational settings** outright — unacceptable
+risk, in the same tier as social scoring and predictive policing. 🔵 Every other regulatory fact on
+these shelves is an *obligation* (assess it, document it, keep a human in the loop); this one is a
+**prohibition**, and it is the first thing in this base that makes a feature unshippable rather than
+expensive. 🟢 **Read it as a design-review input, not a legal-review input.** "Engagement detection"
+and "attention scoring" are the two product names this most often hides behind, and both are
+routinely proposed in edtech pitches. 🟡 Note the asymmetry with `Annex III ¶3`, which makes grading,
+admission, level-assignment and exam monitoring *high-risk but permitted* — so the same product can
+hold one feature that needs conformity assessment and another that cannot exist.
+
+### 🆕 `T34` — The integration standard is LANGUAGE-PARTITIONED, and the partition is maintenance
+
+🟢 LTI 1.3 is the surface every agent must cross to live inside Moodle, Canvas, Blackboard or D2L, and
+all 13 known addresses were dated this pass in one sitting. 🔴 **The permissive supply is live in
+PHP, Node and Python (1–9 days) and dead in Go and Java (679, 1,193, 1,918 days).** 🔵 The standard is
+not thinly supported — it is supported *in some runtimes only*, which no amount of spec-reading
+reveals and only dating shows. 🟢 Consequence: the language of the client's platform team now decides
+an architecture, not a preference — a JVM or Go shop gets an **HTTP edge**, not a library.
+
+### 🆕 `T35` — Supply arrives through the leg you choose, and the prescribed English legs are spent
+
+🔴 **Sixth consecutive pass** in which the four prescribed English global legs returned **zero granted
+education-native addresses** — only general-purpose agent frameworks, learning-resource lists and
+market-research blogspam (`Gap 387-D`). 🟢 **The same pass found four granted addresses on two legs
+nobody had prescribed:** one in **Spanish** (`agente educativo código abierto … tutor IA`), which
+surfaced the 1.3k ★ agent, and one naming a **standard** rather than a category (`"LTI 1.3" OR "Open
+Badges" … MIT Apache`), which surfaced the Go and Java tier. 🔵 **The dry spell was a property of the
+query, not of the ecosystem** — and this base spent five passes attributing it to the ecosystem.
+
+### 🆕 `T36` — The grant on the code and the grant on the curriculum keep coming apart
+
+🔴 Third instance on these shelves, and this time on the pass's best address.
+[`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) is **MIT**; its companion skill-library and
+workspace-preset hub is **ungranted on every arm**. The pattern already appears in
+`withmarbleapp/os-taxonomy` (permissive code absent, `ODbL-1.0 AND CC-BY-SA-4.0` over the data) and in
+`h5p/h5p-php-library` (GPL content routinely mistaken for MIT). 🔵 **In an agent-era project the
+reusable asset is increasingly the skills, prompts and presets — exactly the half that carries no
+grant.** 🟢 So the licence column on these shelves needs to stop describing "the repository" and start
+naming *which artefact* is granted; `Gap 549` said this about one repo, and it is now a trend.
+
 **Pass `p383` · 2026-10-22 · FULL REWRITE.** Prior version archived at
 [`archive/2026-10-22-p383-pre-rewrite/intel-trends.md`](../archive/2026-10-22-p383-pre-rewrite/intel-trends.md).
 

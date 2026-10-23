@@ -6,6 +6,55 @@ updated: 2026-10-23
 
 # Foundational repos for education
 
+**🆕 Pass `p395` · reads and commit both 2026-10-23.** 🟢 **The LTI layer is now dated end to end — all
+13 addresses, one channel, one sitting — and the result is an architecture constraint this base has
+never stated: there is NO maintained permissive LTI 1.3 implementation in Go or in Java.** Evidence:
+[`lti-layer-dating`](../evidence/lti-layer-dating.2026-10-23-p395.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p395.tsv).
+
+🟢 **Three new permissive addresses, two new languages**, none of them previously on any shelf here:
+
+| Repo | Lang | Licence | HEAD | Age | Read |
+|---|---|---|---|---|---|
+| [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti) | **Go** | 🟢 **Apache-2.0** | `a442a55` | 🟡 **679 d** | 11,357 B, `sha256`₁₆ `c71d239df917` |
+| [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) | **Java** | 🟢 **MIT** | `6db9889` | 🔴 **1,193 d** | 1,060 B, `b6b29f11f74e` |
+| [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | **Go** | 🟢 **MIT** | `9ab95e5` | 🔴 **1,918 d** | 1,108 B, `6e58273960b0` |
+
+🔴 **What this means, and it is a budget line rather than a shelf note.** `p391` and `p392` settled
+the maintained set as **PHP, Node and Python** — `packbackbooks` (6 d), `ltijs` (9 d), `lti-tool`
+(1 d), `django-lti` (2 d), `ltiauthenticator` (113 d), all re-confirmed blind this pass through the
+git dating channel rather than inherited. 🔴 **The JVM and Go shelves have nothing live.** The only
+permissive Java LTI 1.3 core found anywhere is **1,193 days dead**; the freshest permissive Go one is
+**679 days** and pre-1.0. 🔵 So for a client whose platform team is Java or Go — which is most
+enterprise and much of European public sector — the honest recommendation is **not** an in-process
+library: front the agent with `ltijs` or `lti-tool` over HTTP and keep the JVM service behind it.
+That is the same shape `p391` recommended for Python and `p392` then withdrew when `django-lti`
+turned up live. 🟡 **It stands for Java and Go, and the dating is why it stands rather than a guess.**
+
+🟡 **`peregrine-lti` is the one of the three worth piloting.** Its own README: *"Technically the launch
+flow is feature complete"* and *"this library is in active use so it has been tested and is not just a
+proof of concept"* — but *"the public API of the library could still change before the `v1.0.0`
+release"*. 🔴 **`macewan-cs/lti` should be read and not installed**: *"the functionality is not stable
+and we will almost certainly introduce breaking changes"*, it *partially* implements 1.3, and **deep
+linking is unimplemented**. It is MacEwan University (Canada) work, funded by its Faculty of Arts and
+Science — 🔵 institutional provenance in **North America**, which is where the LMS integration budget
+is, and it has still been untouched for 5 years.
+
+🟢 **Two addresses already cited in patterns are dated here for the first time:**
+[`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) **707 d** and
+[`Harvard-University-iCommons/django-lti-dynamic-registration`](https://github.com/Harvard-University-iCommons/django-lti-dynamic-registration)
+**402 d** — both 🟡 **stale**, neither dead. They were carried without dates while the rows beside
+them had them.
+
+🟢 **And `394-B` is discharged, so six R rows stop reading as unlicensed.** `cran/exams`
+(`GPL-2 | GPL-3`), `philchalmers/mirt` (`GPL (>= 3)`), `patriciamar/ShinyItemAnalysis` (`GPL-3`),
+`cran/catR` (`GPL (>= 3)`), `cran/TAM` (`GPL (>= 2)`) and `cran/learnr` (`Apache License (>= 2.0)`)
+now carry a **`MANIFEST-ONLY`** grant read verbatim from the `License:` field in `DESCRIPTION`,
+which CRAN itself enforces. 🔴 **GitHub's sidebar still shows no licence for any of them**, so the
+caveat `394-B` asked for stays on every row: *a reviewer checking the UI will report five granted GPL
+packages as unlicensed.* Instrument and controls:
+[`compose/code/p395-grant-ladder-fallthrough/`](../compose/code/p395-grant-ladder-fallthrough/README.md).
+
 **🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** **Tier 3 gains the R half of the
 CS-teaching stack**, and the surprise is in the licence column rather than the tier: the three
 components that run the teaching loop are **permissive** (`gradethis` 🟢 MIT **164 ★**, `learnr`

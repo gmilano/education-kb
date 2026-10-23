@@ -6,6 +6,31 @@ updated: 2026-10-23
 
 # Education market intelligence
 
+**🆕 Pass `p395` · reads and commit both 2026-10-23.** 🔴 **The headline is a correction to this
+base's own method, not a new market fact: FIVE carried gaps that each pre-register "go and read the
+primary source" share ONE cause, and it is an egress allowlist.** `393-C` (US state rules),
+`393-D` (TED/BOAMP tenders), `394-D` (the Official Journal and the Vietnamese statute), `394-E`
+(UNESCO IESALC) and the CRAN half of `393-G`/`394-C` have been carried, re-stated and re-ranked for
+several passes each. 🟢 **This pass measured the hosts instead of the questions**, on both tools:
+`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu`, `unu.edu`,
+`iesalc.unesco.org`, `www.unesco.org`, `repositorio.cepal.org`, `2023.indicelatam.cl` and
+`cran.r-project.org` **all return `connect_rejected`** — the proxy's own wording is *"the host is not
+allowed for this session"*. 🔵 **Not DNS, not a CRAN quirk, not "github-api-proxy-blocked", and not
+retry-able.** Full table: [`channel-state`](../evidence/channel-state.2026-10-23-p395.tsv).
+
+🔴 **The consequence for how this base should be read.** Every regulatory and market claim on these
+shelves comes from **search-engine summaries and secondary trackers**, because the primary-text hosts
+are unreachable from here — and that is a property of the environment, not a research failure. 🟢 It
+is also *fixable by the operator rather than by a successor pass*: these are allowlist entries. Until
+they change, a pass should stop spending its ranked item on a remedy it cannot execute. See
+`Gap 395-B` in [`open-gaps`](./open-gaps.md).
+
+🟢 **What the four prescribed regional legs did return this pass:** facts in all four, **one granted
+address** (APAC), and the clause-level EU scope that makes `p394`'s assessment tier the regulated half
+of this base. 🔴 **And one prohibition that no pass here had recorded: emotion inference in
+educational settings is banned outright under the EU AI Act, not high-risk** — see *EMEA* below. It is
+the only finding in this base that makes a feature unshippable rather than expensive.
+
 **🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** 🟢 **All four prescribed regional legs
 returned facts and zero addresses, and the cross-regional finding is a convergence worth building
 once:** **two jurisdictions now place education AI in a statutory high-risk tier** — the **EU AI Act**
@@ -128,6 +153,19 @@ consolidation of what is already in use.**
 
 ### Global
 
+**🆕 `p395` · 2026-10-23.** 🟡 **Use the range and name the spread, because the sources disagree by an
+order of magnitude.** Readings taken this pass: **$6.4 B (2025) → $79.6 B by 2034** (IMARC);
+**$8.3 B (2025) → $11.4 B (2026)**; **$7.52 B (2025) → $10.6 B (2026)**. 🔴 The 2025 base alone spans
+**$6.4 B to $8.3 B**, so any single figure quoted from this base would be a choice disguised as a
+fact. 🔵 All are vendor or market-research estimates with commercial interests; none is primary.
+
+🟢 **The adoption figures are directionally consistent and more useful than the sizing:** student AI
+use reported at **66 % (2024) → 92 % (2025)**, with roughly **86 % of higher-education students**
+using AI as a research and brainstorming partner entering 2026. 🔵 Paired with North America's **10 %
+of institutions having formal AI guidelines**, the global picture is near-universal student adoption
+against near-absent institutional governance — which is the gap every engagement in this base is
+ultimately selling into.
+
 Opportunities that do not belong to one region, because the evidence for them is global:
 
 🔴 🆕 `p387` **What this pass's prescribed regional legs actually returned, stated because silence
@@ -193,6 +231,26 @@ returns market research.*
   pipeline-inflated stars — that correction stands.
 
 ### North America
+
+**🆕 `p395` · 2026-10-23.** 🟡 **A richer sizing picture, and `Gap 393-C` explicitly still open.**
+North America is sized at **~$951 M (2024) → ~$2.3 B by 2029, 15.9 % CAGR** (MarketsandMarkets), and
+a 2026 statistics roundup puts the region at a **36 % share** of the global market with APAC growing
+fastest. 🔴 **The governance gap is the sellable finding, not the market size:** the same roundup
+reports **only 10 % of institutions have formal AI guidelines** and **71 % of U.S. teachers lack AI
+training**. A studio that arrives with a governance artefact — an acceptable-use policy, a
+human-in-the-loop design, an audit trail — is selling into a 90 % vacancy.
+
+🔴 **`Gap 393-C` is NOT closed and this pass did not even attempt it**, because the channel for it is
+refused: `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and every other primary-text host tested
+this pass returned `connect_rejected` from the egress proxy. U.S. state rules remain carried **from
+trackers and committee reporting only**. 🔵 Canada's proposed **AIDA** is recorded the same way, from
+secondary description.
+
+🟢 **New North American supply, and its condition is the point.**
+[`macewan-cs/lti`](https://github.com/macewan-cs/lti) is MIT LTI 1.3 work from **MacEwan University**
+(Canada), funded by its Faculty of Arts and Science — institutional provenance in exactly the region
+that buys the most LMS integration work, and 🔴 **untouched for 1,918 days**, self-declared unstable,
+deep linking unimplemented. Institutional authorship is not maintenance.
 
 **Market.** Largest single region for AI-in-education spend. Canvas dominates higher-ed LMS.
 
@@ -488,6 +546,46 @@ primary US state education-AI rule.**
 
 ### EMEA
 
+**🆕 `p395` · 2026-10-23.** 🔴 **The single hardest product constraint in this base, and it is a
+prohibition rather than an obligation: emotion-inference systems in educational settings are banned
+outright under the EU AI Act** — unacceptable risk, alongside social scoring and predictive policing,
+**not** a high-risk tier you can conformity-assess your way into. 🔵 Any "engagement detection",
+"attention scoring" or "frustration sensing" feature in an EU classroom deliverable is not a
+compliance cost; it is **unshippable**. This belongs in the first design review, not the legal review.
+
+🟢 **And the high-risk scope is now quotable at clause level.** **Annex III ¶3** makes education AI
+high-risk where it: determines **access or admission** to an institution; **evaluates learning
+outcomes**; **assesses the appropriate level of education** for a person; or **monitors and detects
+prohibited behaviour by students during tests**. 🔵 Those four verbs, not the word "education", are
+what pull a system in — which is why `p394`'s assessment-heavy component tier is the regulated half of
+this base and its content-generation tier largely is not.
+
+🟡 **`394-D` narrows but does not close.** A second independent source now dates the **Digital
+Omnibus** with a procedural chain: **European Parliament endorsed 2026-06-16, Council of the EU final
+approval 2026-06-29**, moving stand-alone **Annex III** high-risk obligations from **2026-08-02** to
+🆕 **2027-12-02**. That **corroborates `p394`'s December 2027** figure and supplies the missing
+procedure. 🔴 **It is still not the Official Journal**, and `eur-lex.europa.eu` is refused on this
+environment's egress — so the date stays **contested-but-converging**, and no conformity deadline
+should be quoted to a client off this base alone.
+
+🔴 **Stale advice is live in the wild**, which is itself worth telling a client: an EdTech compliance
+guide read this pass **still counts down to 2026-08-02** as the enforcement deadline. Anyone who
+budgeted against that guide has the wrong date in their plan.
+
+🟢 **Article 4 AI-literacy duties have been enforceable since 2025-02-02** — already in force, cheap
+to satisfy, and routinely missed.
+🟡 **Provider vs deployer decides the obligation set:** a university that *builds and makes available*
+a tool takes provider obligations; one that merely *deploys* takes deployer obligations. An
+institution forking an open-source tutor and running it for its own students is a **deployer**; the
+moment it offers that fork to other institutions it becomes a **provider**.
+
+🔵 **Context for adoption, flagged as non-education data:** Eurostat-based figures put enterprise AI
+adoption across the EU from **5.21 % (Romania) to 42.03 % (Denmark)** in 2025. That is businesses, not
+schools, and is carried as background only.
+🟢 **New EMEA supply:** [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core), MIT, from
+**Universitat Oberta de Catalunya** (Spain) — 🔴 **1,193 days dead**, and the only permissive Java LTI
+1.3 core this base has found in any region.
+
 🆕 `p393` 🔴 **This pass's EMEA research leg returned NO education-sector content, and that is written
 down rather than left silent.** The prescribed leg (*"AI education EMEA 2026 adoption regulation
 players"*) returned **enterprise** AI adoption only — CompTIA's 2026 IT outlook, a Workday study whose
@@ -766,6 +864,33 @@ shelf already records for EMEA.
 
 ### APAC
 
+**🆕 `p395` · 2026-10-23.** 🟢 **APAC supplies the best new address in this pass, which reverses the
+direction this base usually records.** [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) —
+MIT, **1.3k ★**, HEAD **2026-10-13 — 10 d** — is an education-native personal learning agent with
+layered memory and a Practice Lab, and it is placed in APAC on a **functional** signal: its shipped IM
+channels are **Feishu and WeChat**, and its post-training runs on **Qwen3.6 35B**. 🔵 `p394` added the
+EMEA-authored *platform* layer (LAMB, UPC Barcelona); `p395` adds the APAC-authored *agent* layer. The
+non-US supply this base kept declaring missing is arriving — it is just not arriving through English
+search legs.
+
+🟡 **Sizing:** APAC AI-in-education **$591.6 M (2024) → $1,848.1 M by 2029, 20.9 % CAGR**
+(MarketsandMarkets), and it is consistently named the **fastest-growing** region. A competing forecast
+of a 46.12 % global CAGR is carried only to show the spread; the two cannot both be right.
+
+🔴 **Regulation is fragmented by design, and that is the engagement risk.** Forrester describes a
+landscape unlike the EU's single instrument: **Singapore** with mature guidelines, **China** with rules
+against algorithmic misconduct, **India** applying existing criminal law, and the **ASEAN Guide on AI
+Governance and Ethics** still early-stage. Its 2026 outlook puts regional priorities at
+**sovereignty, security and responsible deployment**. 🔵 For a multi-country APAC rollout the
+governance layer is **per-jurisdiction**, which is a build cost the EU's single conformity path does
+not impose — the opposite of the usual assumption that Europe is the hard one.
+
+🔴 **Vietnam's Law on AI** names **education** in its high-risk tier (`p394`); its commencement
+remains **contested** and this pass could not read the statute — the primary-text channel is refused.
+🔴 **No education-sector adoption figure for APAC was found on any leg.** Enterprise proxies exist
+(56 % of APAC businesses running assistants; 48 % of governance leaders ranking AI top-priority for
+2026) and are **not** education data. Written down as a gap rather than substituted.
+
 🆕 `p393` **What this pass's APAC leg added — commercial motion, and a declared regulatory nil.**
 - 🟢 **TCS and Pearson** announced a **multi-year AI learning alliance** aimed at employer skills gaps
   and at proving return on technology investment — the clearest signal that **corporate reskilling**,
@@ -986,6 +1111,36 @@ to a figure here. 🔵 So APAC on this shelf is now **well mapped on regulation 
 on adoption**, and that asymmetry is the opposite of LATAM's below.
 
 ### LATAM
+
+**🆕 `p395` · 2026-10-23.** 🔴 **`394-E` cannot be closed from this environment, and the reason is a
+measured channel refusal rather than an absence of evidence.** `p394` predicted the *why* behind
+LATAM's low assessment adoption would already be written down in **UNESCO IESALC's** instrument. 🟢
+**The document was located:** a **UNESCO IESALC / UNU-IAS** working paper, *AI implementation in higher
+education in Latin America and the Caribbean*, surveying **200 institutions across 19 countries**,
+fielded **August–October 2025**, listed September 2026. 🔴 **And it is unreachable:** `unu.edu`,
+`iesalc.unesco.org` and `www.unesco.org` all return `connect_rejected` from the egress proxy — checked
+on **both** tools before this absence was written down, so this is a real block, not a tool artefact.
+🔵 `repositorio.cepal.org` (ILIA 2025, whose governance section carries a regulation subdimension) and
+`2023.indicelatam.cl` are refused the same way. **Every LATAM primary source this pass tried is off
+the allowlist.**
+
+🔴 **So `394-E`'s question — greenfield, or faculty declining assessment AI for good reasons — is still
+unanswered, and a successor in this environment should not pre-register "read the IESALC instrument"
+again.** It will fail identically. See `Gap 395-B`.
+
+🔴 **The one sizing figure available is unusable and should not be quoted.** MarketsandMarkets sizes
+*"Rest of Latin America"* at **$18.2 M (2024) → $36 M by 2029, 12.1 % CAGR** — but that bucket
+**excludes Brazil and Mexico**, which is most of the regional market. 🔵 A figure that omits the two
+largest economies is not a regional figure; this base should keep using the per-country framing it
+already has.
+
+🟡 **Two qualitative findings that survive the channel problem**, both from secondary sources and
+labelled as such: **Chile** is named the regional leader in AI readiness, with an AI roadmap that
+**survived a change of administration** — the durability point, not the ranking, is what matters to a
+multi-year engagement; and the regional pattern is described as enthusiastic users with hesitant
+institutions, producing *"a patchwork of pilot policies, vulnerable to being tossed out with each new
+administration."* 🔵 That is a direct argument for scoping LATAM work so a deliverable outlives the
+sponsor who bought it.
 
 🆕 `p393` 🟢 **The LATAM leg was the ONLY prescribed regional leg this pass that returned
 primary-institutional research**, and it is the most structurally useful adoption data on this shelf.

@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🟢 🆕 2026-10-23 · `p395` — **THE DRY SPELL BREAKS, AND IT BREAKS ON A SPANISH-LANGUAGE LEG: A 1.3k ★ MIT EDUCATION-NATIVE AGENT, 10 DAYS OLD, THAT SIX PASSES OF ENGLISH LEGS NEVER SAW. 🔴 AND SEARCH HANDED OVER ITS 0 ★ FORK FIRST.**
+
+🔵 **Dating note.** Reads and commit are **both 2026-10-23** this pass — no straddle to declare.
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-23-p395.tsv) — 22 rows ·
+[`lti-layer-dating`](../evidence/lti-layer-dating.2026-10-23-p395.tsv) — 13 addresses ·
+[`channel-state`](../evidence/channel-state.2026-10-23-p395.tsv) — 16 channels ·
+instrument and its controls at
+[`compose/code/p395-grant-ladder-fallthrough/`](../compose/code/p395-grant-ladder-fallthrough/README.md).
+
+### 1. 🟢 `hhyqhh/inno-agent` — MIT, 1.3k ★, 231 forks, HEAD 2026-10-13 (10 d)
+
+*"An open-source personal learning agent with three-layer memory."* **L1** learner profile, **L2**
+native wiki knowledge base, **L3** session records with cross-conversation retrieval, plus a cron
+scheduler, personal IM channels and a workspace-scoped **Practice Lab** with an in-browser terminal.
+Technical report *"Inno Agent: An Open-Source Personal Learning Agent with Layered Memory, Educational
+Post-Training, and Local Deployment"* (arXiv, June 2026) — **Hao Hao, Ye Lu, Ruotong Yang, Yongheng
+Guo, Aimin Zhou** — with preliminary post-training on **Qwen3.6 35B**. Licence read first-hand: 1,080 B
+at `main/LICENSE`, `sha256`₁₆ `f92c6c6a1cc8`.
+
+🟢 **Placed in APAC on a functional signal** — the shipped channels are **Feishu and WeChat** — rather
+than on author names. 🔴 **Its skill-library hub
+[`Chloris-Blaxk/inno-agent-hub`](https://github.com/Chloris-Blaxk/inno-agent-hub) is UNGRANTED on all
+three arms**, so the agent is reusable and its curriculum is not. 🟡 Single-learner by design: no
+roster, cohort or teacher dashboard.
+
+### 2. 🔴 The fork trap, with three named instances in one pass
+
+`Poki-cbq/inno-agent` (**0 ★**), `astiusa/lti` (**0 ★**) and
+`drop-project-edu/java-lti-1.3-core-for-dp` (**0 ★**) are all **forks**, all returned by search ahead
+of their canonical upstreams (**1.3k ★**, **8 ★**, —). 🔴 **The licence payloads are byte-identical to
+upstream**, so the grant channel cannot distinguish them, and `gate-alias-canonical` keys on an
+identical **HEAD sha** — which an org rename produces and a fork does not. 🔵 **Only the HTML channel
+carries `forked from`.** `Gap 395-A`.
+
+### 3. 🟢 Two new LTI 1.3 languages on the agent-integration surface — and both are stale
+
+[`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti) (Go, Apache-2.0,
+7 ★, **679 d**, *"in active use … not just a proof of concept"*, pre-1.0 API) and
+[`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) (Java, MIT, **1,193 d**), with
+[`macewan-cs/lti`](https://github.com/macewan-cs/lti) (Go, MIT, **1,918 d**) dead behind them. 🔴 **No
+maintained permissive LTI 1.3 exists in Go or Java** — the live set is PHP, Node and Python only. See
+`Pattern AC`.
+
+### 4. 🟡 Found and declined, with reasons
+
+`naorpeled/aitutor` (MIT, 47 d) — a Go terminal **course about AI tooling**, not an agent.
+`Priyamakeshwari/TeachGPT` (MIT) — **1,057 d dead**. `x-cookie/agent` — a 14-lesson course, and
+**ungranted**. 🔵 Recorded so the same legs are not spent twice.
+
+### 5. 🔴 `Gap 387-D`, sixth confirmation — and now with a remedy instead of a restatement
+
+The four prescribed English global legs returned **zero granted education-native addresses** again:
+general-purpose frameworks (`Hermes`, `aider`, `Cline`, `CrewAI`, `LangGraph`), learning-resource lists
+(`500 AI Agents Projects`, `AI-Roadmaps`, `agents-from-scratch`) and market-research blogspam. 🟢
+**Everything granted this pass came from two unprescribed legs** — one in **Spanish**, one naming a
+**standard** (`"LTI 1.3" OR "Open Badges"`). 🔵 The constraint was the query, not the ecosystem.
+
 ## 🟢 🆕 2026-10-23 · `p394` — **`Gap 393-F`'s AUDIT RUNS AND COMES BACK 11-FOR-11 CLEAN ON THE DEFECT IT PREDICTED — THEN REFUTES TWO OF THE SAME ELEVEN ROWS THROUGH A CHANNEL THIS BASE MADE STANDING ~100 PASSES EARLIER. 🔴 AND THE LICENCE GATE IS CAUGHT STRIPPING THE GRANT OFF VERBATIM BSD-3 BECAUSE "ALL RIGHTS RESERVED" IS LINE 2 OF THE BSD TEMPLATE. 🟢 A WHOLE NEW R TIER, THREE ROWS OF IT PERMISSIVE.**
 
 🔵 **Dating note.** Every clone, tree enumeration, licence payload read, star read, archived-banner

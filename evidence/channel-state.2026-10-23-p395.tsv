@@ -1,0 +1,16 @@
+host	channel	curl_result	webfetch_result	verdict	bears_on
+raw.githubusercontent.com	licence + manifest + README payloads	200 / 404	-	ALLOWED	the only grant-verification channel; carried every row this pass
+github.com (git smart-HTTP)	clone --filter=blob:none --depth 1	OK ~1-3 s	-	ALLOWED	dating; 13 LTI addresses dated this pass (p389's channel, re-confirmed)
+github.com (HTML)	stars, forks, forked-from, archived banner	-	200	ALLOWED	the ONLY channel that shows fork provenance; see Gap 395-A
+api.github.com	REST	403	-	REFUSED	394-C: session repository scoping
+GitHub MCP server	get_file_contents on an ATTACHED repo	-	200 + blob SHA	ALLOWED, SCOPE-BOUND	394-C: an API channel does exist, but only for repositories attached to the session
+cran.r-project.org	package index	000 connect_rejected	ENOTFOUND	REFUSED	393-G / 394-C
+unu.edu	UNU-IAS publication (394-E's prescribed source)	000 connect_rejected	ENOTFOUND	REFUSED	394-E cannot be closed from this environment
+iesalc.unesco.org	UNESCO IESALC	000 connect_rejected	-	REFUSED	394-E
+www.unesco.org	UNESCO	000 connect_rejected	-	REFUSED	394-E
+repositorio.cepal.org	CEPAL/ECLAC repository	000 connect_rejected	-	REFUSED	LATAM primary sources
+2023.indicelatam.cl	ILIA index	000 connect_rejected	-	REFUSED	LATAM primary sources
+eur-lex.europa.eu	Official Journal (394-D's prescribed source)	000 connect_rejected	-	REFUSED	394-D cannot be closed from this environment
+digital-strategy.ec.europa.eu	European Commission AI Act timeline	000 connect_rejected	-	REFUSED	394-D
+artificialintelligenceact.eu	AI Act text mirror	000 connect_rejected	-	REFUSED	394-D
+WebSearch	search engine	-	OK	ALLOWED	the only DISCOVERY channel available; returns editorial lists and forks

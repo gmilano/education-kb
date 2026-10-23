@@ -6,6 +6,84 @@ updated: 2026-10-23
 
 # Compose patterns — education
 
+**🆕 Pass `p395` · reads and commit both 2026-10-23.** Two patterns, both built on grants and **dates**
+read first-hand this pass: [`verified-repos`](../evidence/verified-repos.2026-10-23-p395.tsv) ·
+[`lti-layer-dating`](../evidence/lti-layer-dating.2026-10-23-p395.tsv).
+
+## 🆕 `Pattern AC` — the JVM-or-Go client's LTI edge (the one this base could not quote before)
+
+**When.** The client's platform team owns **Java** or **Go**, and an agent has to launch from their
+Moodle, Canvas, Blackboard or D2L. This is most enterprise work and much of European public sector.
+
+🔴 **Why the obvious route is closed.** The only permissive **Java** LTI 1.3 core is
+[`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) (MIT) — **1,193 days dead**. The
+Go options are [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti)
+(Apache-2.0, **679 d**, pre-1.0 API) and [`macewan-cs/lti`](https://github.com/macewan-cs/lti) (MIT,
+**1,918 d**, self-declared unstable, **deep linking unimplemented**). 🔴 An unmaintained library doing
+**OAuth 2 / JWT signing and key rotation** is a *security* dependency — the same argument that
+demoted `1EdTech/lti-1-3-php-library`. Do not put a client's identity flow on any of the three.
+
+**Wire it like this.**
+
+1. **LTI edge — [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool)** (🟢 MIT, HEAD **1 d**,
+   `@lti-tool/core` v1.3.2). Serverless-native: Lambda, Workers, Hono, with OIDC, **Assignment and
+   Grade Services**, Names and Role Provisioning, Deep Linking and Dynamic Registration all
+   implemented, and the session store chosen at deploy time. 🟡 Prefer
+   [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (🟢 Apache-2.0, **9 d**, 207 npm releases)
+   instead when the client wants a long-running Node process and already runs Mongo.
+2. **The hop.** The edge validates the launch, then forwards a **signed, short-lived internal token**
+   carrying only `sub`, context, roles and the resource link to the JVM/Go service. 🔵 The agent never
+   parses an LTI message, which is the whole point: the standards surface stays in the runtime where
+   it is maintained.
+3. **The agent** stays in Java or Go — the client's own service, unchanged.
+4. **Grades back** through the edge's AGS client, never direct from the agent. One component holds the
+   platform credentials.
+
+🟢 **Why this beats forking a dead library:** `lti-tool` is 1 day old and `ltijs` 9, so key rotation
+and spec drift are somebody's job. 🔴 **Cost to state in the proposal:** one extra deployable and one
+extra network hop — *and* `lti-tool` is **8 ★ with no production claim** (its README's
+*"Production-ready security features"* heading is about the security section, not the project), so
+pilot it; `ltijs` is the safer default for a ministry. 🔵 Note this is the architecture `p391`
+recommended for Python and `p392` correctly withdrew when `django-lti` turned up live at 2 days. **It
+stands for Java and Go because the dating says so, not because it is the usual advice.**
+
+## 🆕 `Pattern AD` — a learner-facing agent shell with a curriculum you are actually allowed to ship
+
+**When.** The client wants a personal tutor that remembers a learner across months, and the
+deliverable must survive a legal review.
+
+1. **Shell — [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent)** (🟢 MIT, **1.3k ★**, HEAD
+   **10 d**). You get the parts that are expensive to build: **L1** learner profile, **L2** a native
+   wiki knowledge base, **L3** session records with cross-conversation retrieval, a **cron scheduler**
+   for proactive check-ins, and a workspace-scoped **Practice Lab** with an in-browser terminal.
+   🔵 It sits on the Pi coding-agent SDK (MIT) *without modifying its kernel*, so the upgrade path is
+   npm, not a fork.
+2. 🔴 **Do NOT ship its skill library.** The companion
+   [`Chloris-Blaxk/inno-agent-hub`](https://github.com/Chloris-Blaxk/inno-agent-hub) — skills and
+   workspace presets — is **ungranted on every arm** (no licence file, no manifest field, no README
+   grant, all three enumerated). Read it for shape; author your own.
+3. **Curriculum — granted sources only.** [`oppia/oppia`](https://github.com/oppia/oppia)
+   (🟢 Apache-2.0) for misconception-aware lesson structure, and
+   [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (🟢 MIT) when the
+   deployment is offline-first. 🔴 **Avoid grounding the tutor on
+   [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) without legal sign-off**
+   — `ODbL-1.0 AND CC-BY-SA-4.0`, and the **CC-BY-SA half reaches generated content**, so a curriculum
+   document produced from it can inherit share-alike. That is `Pattern H`'s warning, and it is the
+   trap this pattern is most likely to fall into.
+4. **Launch from the LMS** with `Pattern AC`'s edge, so the tutor is reachable where students already
+   are.
+5. 🔴 **Regulatory stop, before any design work.** The moment this agent **grades**, **assigns a
+   learner to a programme**, **assesses their appropriate level**, or **monitors behaviour during a
+   test**, it is **Annex III ¶3 high-risk** in the EU and needs the human-in-the-loop and
+   documentation posture. 🔴 And **no emotion inference, ever, in an EU educational setting** — that is
+   prohibited outright, not assessable. Keep the memory layers descriptive (what was practised, what
+   was missed) and never affective.
+
+🟡 **Honest limits.** `inno-agent` is a **single-learner companion** — there is no cohort, roster or
+teacher dashboard in it, so an institutional pilot needs that built. Its IM channels ship as **Feishu
+and WeChat**, so a non-APAC deployment replaces the messaging layer. And at **10 days old with a June
+2026 technical report**, it is a strong pilot base, **not** a ministry platform this quarter.
+
 **🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** Two new patterns, both built on grants
 read at the payload this pass. 🟢 **`Pattern AB`** — the **R statistics course graded automatically**,
 closing the hole `p393` named when it pointed out that this base's most-adopted autograder grades R

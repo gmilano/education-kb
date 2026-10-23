@@ -6,6 +6,72 @@ updated: 2026-10-23
 
 # Top education AI agents
 
+**🆕 Pass `p395` · reads and commit both 2026-10-23.** 🟢 **The first education-native agent this
+base has added in six passes, and `Gap 387-D` is finally specific about why the dry spell happened.**
+[`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) — 🟢 **MIT** (1,080 B, `sha256`₁₆
+`f92c6c6a1cc8`, read first-hand), **1.3k ★**, 231 forks, HEAD **2026-10-13 — 10 d** — is an
+*"open-source personal learning agent"* with three explicit memory layers (**L1** learner profile,
+**L2** a native wiki knowledge base, **L3** session records with cross-conversation retrieval), a cron
+scheduler, personal IM channels and a workspace-scoped **Practice Lab** with an in-browser terminal.
+Technical report *"Inno Agent: An Open-Source Personal Learning Agent with Layered Memory, Educational
+Post-Training, and Local Deployment"* (arXiv, June 2026), authors **Hao Hao, Ye Lu, Ruotong Yang,
+Yongheng Guo, Aimin Zhou**, with preliminary post-training results on **Qwen3.6 35B**.
+
+🟢 **Its region is placed on a functional signal, not on author names.** The shipped IM channels are
+**Feishu and WeChat** — the two China-market messengers — so this is **APAC** supply by what it
+integrates with, which is the kind of evidence this base can defend at a client meeting. No institution
+is stated anywhere in the README or on the repository page, so the *holder* stays **unplaced**.
+
+🔴 **And the caveat is the part that changes a proposal.** The agent is MIT; its companion
+[`Chloris-Blaxk/inno-agent-hub`](https://github.com/Chloris-Blaxk/inno-agent-hub) — the **skill library
+and workspace presets**, which is the content a studio would actually want to reuse — is
+**UNGRANTED on every arm**: no licence-shaped file, no manifest field, no README grant, all three
+enumerated this pass. 🔵 This is `Gap 549`'s shape again (a code grant and a content grant in one
+project), and it means *"inno-agent is MIT"* is true and misleading at the same time: the kernel is
+granted, the curriculum around it is not.
+
+🟡 **Architecture note worth a line in any pitch:** it is built on the **Pi coding-agent SDK**
+(`@earendil-works/pi-coding-agent`, MIT) *"without modifying its kernel"* — a coding agent repurposed
+into a learning agent. That is a reusable move, and it is cheaper than the tutoring frameworks on this
+shelf that own their whole runtime.
+
+### 🔴 `Gap 395-A` — WebSearch returns FORKS, and a licence read cannot tell
+
+**Three of the four addresses this pass's search legs handed over were forks, and the licence payloads
+were byte-identical to their upstreams, so nothing in the grant channel could reveal it.**
+
+| Address returned by search | Stars | Canonical | Stars |
+|---|---|---|---|
+| [`Poki-cbq/inno-agent`](https://github.com/Poki-cbq/inno-agent) | **0** | [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) | **1.3k** |
+| [`astiusa/lti`](https://github.com/astiusa/lti) | **0** | [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | **8** |
+| [`drop-project-edu/java-lti-1.3-core-for-dp`](https://github.com/drop-project-edu/java-lti-1.3-core-for-dp) | **0** | [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) | — |
+
+🔴 **The existing alias gate does not catch this.** `gate-alias-canonical` keys on an **identical HEAD
+sha**, which is what an *org rename* produces. A fork has a **different** HEAD sha, an **identical**
+licence payload and a **different** star count — so it passes the alias check and fails the
+provenance question. 🔵 **Only the HTML channel shows it**, in a `forked from` line that neither
+`raw.githubusercontent.com` nor the git dating channel carries. Had this pass shelved what search
+returned, it would have published a **0 ★ row for a 1.3k ★ project** — and `drop-project-edu`'s own
+README says the plainest version of it: *"a fork of the LTI 1.3 shared library, with no source code
+modification, just for convenience"*.
+
+🟢 **Cheap remedy, and it is one read per new address:** before shelving, fetch the repository page and
+reject any address carrying `forked from`, then re-probe the upstream. This pass did that by hand for
+four addresses; it should be an arm, because every address this base acquires now arrives through the
+one channel that returns forks preferentially.
+
+### 🟡 Found and declined this pass, with the reason
+
+Stated rather than dropped, so a successor does not spend the same legs again:
+
+- [`naorpeled/aitutor`](https://github.com/naorpeled/aitutor) — 🟢 MIT, HEAD **2026-09-05 — 47 d**, Go.
+  🔴 **A course, not an agent**: a terminal tutorial *about* AI tooling (context windows, MCP,
+  subagents). Declined under `p394`'s own rule that a course is not supply.
+- [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) — 🟢 MIT, 🔴 HEAD
+  **2023-11-30 — 1,057 d dead**.
+- [`x-cookie/agent`](https://github.com/x-cookie/agent) — 🔴 a 14-lesson agent-building course, and
+  **ungranted** on every arm.
+
 🔵 **Dating note — this pass straddles midnight UTC, and the two dates are not interchangeable.**
 Every clone, tree enumeration, licence payload read, star read, archived-banner read, registry probe
 and search leg below was run on **2026-10-22**; the commit lands **2026-10-23**. Evidence filenames

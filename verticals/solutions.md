@@ -6,6 +6,24 @@ updated: 2026-10-23
 
 # Education vertical platforms — real systems to customise with AI on top
 
+**🆕 Pass `p395` · reads and commit both 2026-10-23.** 🔴 **A constraint that lands directly on this
+shelf's headline pattern.** `p394` shelved **LAMB** on the strength of its publishing into **Moodle as
+an LTI external tool** — so the LTI layer is load-bearing for the platform story here, and this pass
+dated all 13 known LTI 1.3 addresses: [`lti-layer-dating`](../evidence/lti-layer-dating.2026-10-23-p395.tsv).
+🟢 The maintained permissive set is **PHP, Node and Python** (`packbackbooks` 6 d, `ltijs` 9 d,
+`lti-tool` 1 d, `django-lti` 2 d, `ltiauthenticator` 113 d). 🔴 **There is nothing live in Go or
+Java** — `StevenWeathers/peregrine-lti` 679 d, `UOC/java-lti-1.3-core` 1,193 d, `macewan-cs/lti`
+1,918 d. 🔵 **At procurement this is the question to ask before the licence question:** *what runtime
+does the client's platform team own?* A Java shop cannot take an in-process LTI dependency from this
+base at all, and should be quoted an HTTP edge instead (see `Pattern AC`).
+
+🟢 **Re-confirmed independently, not inherited:**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)'s grant was re-read at the
+payload this pass — **8,241 B at `master/LICENSE`**, *"OpenEduCat is published under the GNU LESSER
+GENERAL PUBLIC…"* — which **agrees with this shelf's existing LGPL-3.0 row**. 🔵 Recorded because a
+re-read that agrees is the only thing that makes a re-read that disagrees meaningful, and this shelf
+has had several of the latter.
+
 **🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** 🟢 **One addition, and it is the
 EMEA-authored platform layer this shelf has been short of.** [`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb)
 — **LAMB, Learning Assistants Manager and Builder** — 🟡 **GPL-3.0** (35,349 B, `sha256`₁₆

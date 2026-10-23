@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🟡 🆕 2026-10-23 · `p395` — **GITHUB TRENDING IS 403 FOR A FOURTEENTH PASS, MEASURED AGAIN NOT INHERITED. 🟢 BUT THE DATING CHANNEL CARRIED A WHOLE LAYER THIS WEEK: 13 LTI 1.3 ADDRESSES, ONE SITTING, AND TWO LANGUAGES TURN OUT TO HAVE NO MAINTAINED PERMISSIVE OPTION AT ALL.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23**. **Evidence:**
+[`lti-layer-dating`](../evidence/lti-layer-dating.2026-10-23-p395.tsv) ·
+[`verified-repos`](../evidence/verified-repos.2026-10-23-p395.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-23-p395.tsv).
+
+### 🔴 Channel state, re-measured this pass
+
+`https://github.com/trending` → **HTTP 403**. `https://github.com/trending/python?since=weekly` →
+**HTTP 403**. Fourteenth consecutive pass. 🔴 `api.github.com` → **403**, and the body names the cause:
+*"GitHub access to this repository is not enabled for this session. Use add_repo to request access."*
+— **session repository scoping**, exactly as `394-C` localised it, not a proxy block.
+
+🟢 **`394-C` is CONFIRMED CORRECT and a new channel is recorded.** An **API channel does exist** — the
+GitHub MCP server returned a file **with its blob SHA** on an attached repository this pass. 🔴 **It is
+scope-bound**: it reads repositories attached to the session, so it cannot enumerate the `cran` org or
+anything else. 🔵 **Net position, stated plainly because it explains five passes of thin supply: this
+environment can VERIFY any GitHub address it is handed, and cannot ENUMERATE GitHub at all.** The only
+discovery channel is WebSearch — which returns editorial lists and, as `Gap 395-A` shows, **forks**.
+
+### 🟢 What the dating channel delivered instead (p389's blobless clone, ~1–3 s per address)
+
+| Age | Addresses |
+|---|---|
+| **LIVE** 0–9 d | `openedx/xblock-lti-consumer` 0 d · `lti-tool/lti-tool` 1 d · `academic-innovation/django-lti` 2 d · `packbackbooks/lti-1-3-php-library` 6 d · `Cvmcosta/ltijs` 9 d |
+| **STABLE** 113 d | `jupyterhub/ltiauthenticator` |
+| **STALE** 402–707 d | `Harvard-University-iCommons/django-lti-dynamic-registration` 402 d · 🆕 `StevenWeathers/peregrine-lti` 679 d · `openfun/django-lti-toolbox` 707 d |
+| **DEAD** 1,193–2,332 d | 🆕 `UOC/java-lti-1.3-core` 1,193 d · `dmitry-viskov/pylti1.3` 1,432 d · 🆕 `macewan-cs/lti` 1,918 d · `1EdTech/lti-1-3-php-library` 2,332 d |
+
+🟢 **Eight of these are blind re-confirmations** of dates `p390`–`p392` published through a different
+reading — they agree within a day. 🔵 That is what makes the three new rows trustworthy rather than
+merely new.
+
+### 🔴 A channel regression worth recording
+
+The HTML channel returned **stars, forks, `forked from` and archived banners** reliably this pass, but
+**no last-commit date for any of the four repositories read** — the date column came back empty every
+time. `p394` relied on that same channel for dating. 🟢 Dating fell back to the git channel and
+succeeded; 🔵 but a pass that trusted HTML alone would have published undated rows. `Gap 395-E`.
+
 ## 🟢 🆕 2026-10-23 · `p394` — **GITHUB TRENDING IS 403 FOR A THIRTEENTH PASS, AND THIS WEEK THE REGISTRY WAS NO HELP EITHER: CRAN IS REFUSED ON BOTH TOOLS. 🟢 THE SUBSTITUTE IS `github.com/cran/<pkg>` — IT VERIFIES EVERY CRAN GRANT AND CANNOT DISCOVER A SINGLE ONE. 🔵 AND THE PACKAGE THAT MATTERED MOST THIS WEEK IS NOT ON CRAN AT ALL.**
 
 🔵 **Dating note.** Every read below was taken on **2026-10-22**; this section commits on

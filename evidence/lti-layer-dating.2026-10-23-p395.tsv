@@ -1,0 +1,14 @@
+repo	language	licence	head_date	age_days	verdict	on_shelf_before_p395	note
+openedx/xblock-lti-consumer	Python	AGPL-3.0	2026-10-22	0	LIVE	yes	Platform side, copyleft. Boundary not a pick (p392).
+academic-innovation/django-lti	Python	MIT	2026-10-20	2	LIVE	yes	In-process Python LTI 1.3. Univ. of Michigan Center for Academic Innovation. Blind re-confirmation of p392's date.
+lti-tool/lti-tool	Node	MIT	2026-10-20	1	LIVE	yes	Serverless-native. Blind re-confirmation of p392's date.
+packbackbooks/lti-1-3-php-library	PHP	Apache-2.0	2026-10-16	6	LIVE	yes	Blind re-confirmation of p391's date.
+Cvmcosta/ltijs	Node	Apache-2.0	2026-10-13	9	LIVE	yes	Blind re-confirmation of p391's date.
+jupyterhub/ltiauthenticator	Python	BSD-3-Clause	2026-07-01	113	STABLE	yes	Blind re-confirmation of p392's date.
+Harvard-University-iCommons/django-lti-dynamic-registration	Python	-	2025-09-15	402	STALE	yes (patterns)	Dated here for the first time on this shelf.
+StevenWeathers/peregrine-lti	Go	Apache-2.0	2024-12-11	679	STALE	NO - NEW p395	Freshest permissive Go LTI 1.3. Pre-1.0 API, but "in active use".
+openfun/django-lti-toolbox	Python	-	2024-11-14	707	STALE	yes (patterns)	Dated here for the first time on this shelf.
+UOC/java-lti-1.3-core	Java	MIT	2023-07-17	1193	DEAD	NO - NEW p395	The ONLY permissive Java LTI 1.3 core found. Universitat Oberta de Catalunya.
+dmitry-viskov/pylti1.3	Python	MIT	2022-11-21	1432	DEAD	yes	Blind re-confirmation of p391's 1,431 d.
+macewan-cs/lti	Go	MIT	2021-07-22	1918	DEAD	NO - NEW p395	MacEwan University. Self-declared unstable; deep linking unimplemented.
+1EdTech/lti-1-3-php-library	PHP	Apache-2.0	2020-06-03	2332	DEAD	yes	Blind re-confirmation of p390's 2,332 d. Demoted to a spec citation.

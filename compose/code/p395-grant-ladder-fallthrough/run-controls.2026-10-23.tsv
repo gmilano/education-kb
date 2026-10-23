@@ -1,0 +1,11 @@
+repo	state	family	path	bytes	sha256_12	note
+rstudio/gradethis	LICENSED	MIT	main/LICENSE.md	1078	48c18e68ffed	grant read from payload
+ucbds-infra/ottr	LICENSED	BSD	master/LICENSE.md	1555	1677c5307530	grant read from payload
+pykt-team/pykt-toolkit	LICENSED	MIT	main/LICENSE	1066	f5f955194636	grant read from payload
+cran/exams	MANIFEST-ONLY	GPL-2 | GPL-3	master/DESCRIPTION	3462	1e173fe9ab29	MANIFEST-ONLY: DESCRIPTION declares 'GPL-2 | GPL-3'
+philchalmers/mirt	MANIFEST-ONLY	GPL (>= 3)	main/DESCRIPTION	2670	4e59e27f76c5	MANIFEST-ONLY: DESCRIPTION declares 'GPL (>= 3)'
+patriciamar/ShinyItemAnalysis	MANIFEST-ONLY	GPL-3	master/DESCRIPTION	1746	2672876af4eb	MANIFEST-ONLY: DESCRIPTION declares 'GPL-3'
+cran/catR	MANIFEST-ONLY	GPL (>= 3)	master/DESCRIPTION	961	753a98d5740b	MANIFEST-ONLY: DESCRIPTION declares 'GPL (>= 3)'
+cran/TAM	MANIFEST-ONLY	GPL (>= 2)	master/DESCRIPTION	2179	bf60af8e6e84	MANIFEST-ONLY: DESCRIPTION declares 'GPL (>= 2)'
+cran/learnr	MANIFEST-ONLY	Apache License (>= 2.0)	master/DESCRIPTION	3201	f2285217481a	MANIFEST-ONLY: DESCRIPTION declares 'Apache License (>= 2.0)'
+gmilano/definitely-not-a-real-repo-p395	ABSENT	-	-	0	-	no licence, no manifest, no README
