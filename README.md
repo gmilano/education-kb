@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 413 — reads and commit both 2026-10-23 — **AGPL-3.0 IS A REVISION FAMILY, AND `Pattern AI`'s AGPL REFERENCE IS A SUBTRACTION. 🟢 `openedx/edx-platform`'s GRANT IS NARROWED AND THIS BASE CARRIED THE BYTES WITHOUT THE CONSEQUENCE. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — EVERY "PROXY-REFUSED" NOTE ON THESE SHELVES IS A FACT ABOUT THE CHANNEL, NOT THE HOST.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates ran FIRST, and the inheritance was clean.** `make hooks` was the first act of this pass,
+per `p412`'s successor item 1: **50 of 51 gates green on the FIRST run** under `p300`'s no-masking
+runner — against **47** for both `p409` and `p412`, and **the best first-run state this base has
+recorded.** 🟢 Both currency gates were **green on arrival**: the first time a pass has inherited a
+current census rather than a stale one. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, deliberately red since `p398`; `p387-G` forbids closing it by weakening a control
+and this pass did not try.
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`Gap 412-B` CLOSED: AGPL-3.0 is a revision family of two, measured first-hand on TEN addresses.** **`34 523` B** / 661 lines / 3 × `https://` / sha256 `0d96a4ff68ad`, and **`34 501` B** / 662 lines / 3 × `http://` / sha256 `884b434957ba`. 🔴 **`p412`'s GPL-3.0 arithmetic does NOT transfer**: the 22 B spread closes on **three** mechanisms — **+20** title-line indent, **+3** URL scheme, **−1** trailing blank line — of which the scheme is the smallest. 🟢 **What does transfer is the discriminator**: `grep -c 'https://'` returns 3 or 0, so Amendment 5's in-tree selection works unchanged, recorded as `Pattern AJ` **Amendment 6** |
+| 2 | 🔴 **`Pattern AI` step 4's `~34 522 B` AGPL reference is a SUBTRACTION, and the provenance is on this base's own shelves.** `repos/trending.md:14872` carries `openedx/edx-platform` at `35 136` B with a `614` B appended block, and **`35 136 − 614 = 34 522`**. 🔴 It matches neither measured form — 1 B below `https`, 21 B above `http` — and **it could not have**, because `edx-platform`'s base text pairs `http://` URLs with an **indented** title, a presentation neither form has. 🟢 Amendment 6 forbids deriving a denominator by subtracting an addendum from a narrowed payload |
+| 3 | 🔴 **`openedx/edx-platform`'s grant is NARROWED, and twelve passes recorded the byte count without one word of what the block SAYS.** The nine appended lines are an **EdX Inc. clarification** that a public, independently available web service communicating with the work **over RPC is not a work based on it**, and that **"Corresponding Source" excludes** source for programs used solely to provide such services. 🟢 **Read against AGPL §13 that is permission to build the AI service BESIDE Open edX rather than inside it** — the copyleft exposure is in forking `edx-platform`, not in composing with it. 🔵 `gate-subtree-grant`'s `NARROWED-OPERATIVE` class, on the most-recommended address in the industry, and **zero** shelf rows had ever used that class. Shipped as `Pattern AM` |
+| 4 | 🔴 **`p312` sees SIX templates where `p378` sees THREE texts, over the same ten payloads — and `identify()` returns `UNKNOWN-TEMPLATE` on all ten.** 🟢 `p378`'s fold is the **only** working identity instrument on this family: it collapses **eight** payloads spanning **`34 230` / `34 523` / `34 524` B** to one text — **a 294-byte spread on ONE text**, which ends any byte-band reading of AGPL-3.0 — and **correctly refuses** to fold `edx-platform`, because nine operative lines are not presentation |
+| 5 | 🔴 **A byte band and a digest give OPPOSITE answers on the same pair, and both answer the wrong question.** `chipmates/agoracosmica` and `sourcegrade/jagr`: **identical `34 523` B, identical 661 lines, different sha256**, differing on **exactly one hunk of two lines** — the *How to Apply* appendix re-wrap, which moves three bytes across a line break and so cannot move the byte count. 🔵 `p196` recorded this symptom and left identity at `(FILE, digest)`; the **mechanism** is now measured. 🟢 And `idurar/idurar-erp-crm` is the same class at ten times the amplitude: **293 B short at the same 661 lines, 318 changed lines, every one a stripped indent or a collapsed double space** |
+| 6 | 🟢 **`p412`'s successor item 4 delivered, with a denominator.** Seven education PyPI packages read first-hand: PEP 639's `license_expression` answers **3 of 7**, the legacy `license` field **3 of 7**, OSI classifiers **2 of 7** — **no single rung above 3 of 7**, while `P846`'s full ladder answers **7 of 7**. 🔴 **`django-lti 0.10.1` declares NEITHER `license` NOR `license_expression`**: its sole channel is the OSI classifier, the first measured instance of that shape here and the exact inverse of `jwcrypto`, which motivated `P846`. 🔴 **And the answering rung is not predictable from upload date** — `django-lti` is a 2026 package and is classifier-only, refuting the tidy reading its own population suggests |
+| 7 | 🔴 **`Gap 297-R` hardens on a second distribution and will not close by waiting.** `tutor-contrib-openedxmcp` is **`v0.2.2`, 9 releases, `2026-10-22`**, `AGPL-3.0`, **no `project_urls` and no `home_page`** — pairing exactly with `p412`'s `openedx-mcp` at `v0.1.9` / 9 releases / `2026-10-22`. 🔵 **Library and Tutor plugin: same release count, same upload day, both AGPL**, and both unattributable from the registry alone — `p280`'s class, third instance, second on PyPI, **second from the same publisher**, so the cause is a house habit rather than a registry defect |
+| 8 | 🔴 **THE LARGEST FINDING: the egress channel is an ALLOWLIST, and this base has been recording its refusals as facts about hosts.** Control pair first, per `p293`: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of 10** other hosts at `http=000` — *connection never established* — including **`moodle.org`** and **`openeducat.org`**, `.org` project domains, alongside `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`, `kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de` and `diariodarepublica.pt`. 🔴 **So it is not geography — it is an allowlist**, a conclusion no single-host observation could reach. 🔴 These shelves carry **11** `proxy-refused` and **85** `connect_rejected` notes, every one written as a fact about the host it names; **`Gap 488` is misframed and should not be re-tried** |
+| 9 | 🟢 **The in-language legs paid for the third time in four passes, and the English legs are nil for a FIFTH.** German and Portuguese returned **seven** unshelved items. 🟢 The one that survives verification is supply: **KIMADU** (Universität Siegen with NRW's Ministerium für Schule und Bildung, **above €1 M** state funding, **2025-02-01 → 2027-07-31**, **25** schools) publishes **eleven** didactic agents as OER under **`CC BY-SA 4.0`**. 🔴 **No repository, no package, no version, no digest** — distributed as HTML and PDF — and the grant is **scoped** to *"ausschließlich den Prompt und unsere Informationen zur Nutzung"*, leaving the **three knowledge-base libraries** outside it. 🔵 Shipped as `Pattern AN` |
+| 10 | 🔴 **`Gap 411-A`'s class recurs, and this time the mechanism is readable rather than inferred.** The leg asserted KIMADU had released *"a fully functional platform as open-source software for all universities."* It has not. The claim fuses **two items from one newsletter issue** whose own URL slug names both. 🔵 `p411`'s instance was an invented **fork**; this is an invented **release**, and it sat **directly beside a real fact**, which is why it reads as credible. 🔴 **`Pattern AK` cannot test it: KIMADU's agents are published as HTML and PDF documents, and no repository was found for them at any of the four addresses probed** — which is itself the finding |
+| 11 | 🔴 **This pass re-asked the English regional legs against `p412`'s explicit advice, and the advice was right.** **17** named regional facts, **15 already carried**; the 2 unshelved are a governance ranking whose publisher does not source its own figures and a Microsoft-attributed LATAM figure this base holds at finer grain under UNESCO IESALC and TALIS. 🟢 **The cost is recorded so a sixth pass does not pay it again** |
+
+🔵 **Gate score: 50 of 51 on the first run, before any write.** The one red and its disposition:
+
+| gate | defect | state |
+|---|---|---|
+| `gate-census-union` | 🔵 Control 24, **`Gap 400-B`** — `p382` duplicated `p375`'s rule upstream and made the audited arm unreachable, so `NAME-DOT-RUN` cannot fire | 🔴 **deliberately red**, not forced green (`p387-G`) |
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 741** harvested shapes → **35** are not addresses →
+**2 706 addresses**. 🔵 **2 706** channel-U addresses and **3 170** channel-B survivors give
+**3 541 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🟢 **And the measured delta is the saturation finding, stated by the instrument rather than argued.**
+Against `p412`'s published triple (**2 740 / 35 / 2 705**, union **3 541**) this pass moved the
+address count by **+1** — and **the union did not move at all, holding at 3 541**. 🔵 That means the
+one new channel-U address was **already a channel-B survivor**, so it was visible to the second
+channel before this pass named it. 🔴 **This pass read sixteen addresses first-hand and shelved one**:
+ten AGPL payloads and seven PyPI packages, and nearly every one was already carried. 🟢 `p411`
+predicted a figure by adding up what it shelved and `p412` refuted the method; **this pass makes the
+same point from the other side** — a pass can do its most load-bearing work, as findings 1–8 are,
+and move the denominator by one. 🔵 **The census counts addresses, not understanding.**
+
+🟢 **`p412`'s figures are left standing in their own section — history is not edited to match.**
+
 ## Pass 412 — reads and commit both 2026-10-23 — **`make hooks` RUNS, AND THE TWO PASSES THAT SAID OTHERWISE LEFT A GATE RED BEHIND THEM. 🔴 “5 AUTHORS” IS `%an`; BY `%ae` IT IS 3, AND `Gap 298` REVERSES. 🟢 THE GPL-3.0 DENOMINATOR SPREAD IS TWO FSF REVISIONS, NOT NOISE.**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

@@ -3,6 +3,88 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🔴 The standing rule this pass establishes: the egress channel is an ALLOWLIST, and this base has been recording its refusals as facts about hosts
+
+🔵 **The probe, with its control pair run FIRST** per `p293` — because a channel that answered
+nothing would report every host dead, and a failed control pair yields no verdict at all:
+
+| host | result | role |
+|---|---|---|
+| `pypi.org` | 🟢 **`200`**, 16 461 B | positive control |
+| `raw.githubusercontent.com` | 🟢 **`200`**, 34 523 B | positive control |
+| `moodle.org` · `openeducat.org` | 🔴 **`http=000`** | this industry's own flagship project domains |
+| `education.ec.europa.eu` · `gov.uk` | 🔴 **`http=000`** | EMEA statutory authority |
+| `tum.de` · `uni-siegen.de` · `bildungsserver.de` · `lernen-digital.nrw` · `kimadu.de` | 🔴 **`http=000`** | EMEA institutional authority |
+| `diariodarepublica.pt` | 🔴 **`http=000`** | **`Gap 488`'s own host** |
+
+🟢 **Ten of ten non-allowlisted hosts refused at the transport layer** — not `403`, not `404`,
+*connection never established*. 🔴 **And the refusal is not geographic**: `moodle.org` and
+`openeducat.org` are `.org` project domains, and they fail exactly like the `.de` and `.pt`
+government hosts. 🟢 **So it is an allowlist**, and that is a conclusion no single-host observation
+could have reached. 🔵 **And the scale of the misreading is countable**: these shelves carry
+**11** `proxy-refused` notes and **85** `connect_rejected` ones, every one of them written as a
+fact about the host it names.
+
+🔴 **Three consequences, and they change method rather than content.**
+
+| # | consequence |
+|---|---|
+| 1 | 🔴 **`Gap 488` is MISFRAMED, not open.** It records *"`diariodarepublica.pt` is proxy-refused on both transports"* and implies a successor should re-try the host. 🟢 **No successor should.** The host is not the variable; the channel is, and re-trying it is a probe this base can now predict the result of |
+| 2 | 🔴 **`gate-restatement`'s "verified first-hand" is UNATTAINABLE here for any fact whose authority is a non-allowlisted host.** 🔵 That is not a defect in the gate — the gate is right that a restatement is not a verification. 🟢 But it means EMEA and LATAM **statute and institutional** facts can only ever be **search-channel** on this environment, and the correct register entry is *"unverifiable on this channel"* rather than an open gap that asks for work no pass can do |
+| 3 | 🟢 **The search tool is a RELAY, not a channel.** It returns text from hosts the transport refuses — but relayed prose cannot be byte-counted, digested, or pinned to a ref, so it can never satisfy the instruments this base grades grants with. 🔴 **And a relay can fuse two sources into one claim**, which is exactly what it did to KIMADU this pass. 🔵 Two surfaces remain that *are* channels: **PyPI JSON** and **`raw.githubusercontent.com`** |
+
+🟢 **What this buys: the verification budget has a shape now.** Licence, payload, digest, tree,
+manifest, version and upload-date facts are **first-hand-verifiable** here, because they live on the
+two allowlisted surfaces. 🔴 Statute, funding, enrolment, procurement and vendor-roadmap facts are
+**not**, and no amount of probing will change that. 🔵 A pass that spends its budget on the first
+class compounds; one that spends it on the second produces gaps that look like work and cannot close.
+
+### 🔵 Trend reading — two shifts this pass measured rather than read about
+
+🟢 **T1 · The Python licence channel is MIGRATING, and it is migrating unevenly enough that a
+heuristic fails.** Across seven education packages read first-hand, PEP 639's `license_expression`
+answers **3 of 7**, the legacy `license` field **3 of 7**, OSI classifiers **2 of 7**, and the full
+ladder **7 of 7** — **no single rung above 3 of 7.** 🔴 **And the answering rung is not predictable
+from the upload date**: `django-lti` (**2026-08-07**) is classifier-only with no expression, which
+refutes the tidy *"2026 packages use the expression"* reading its own population suggested. 🟢 The
+trend is real; the shortcut it invites is wrong, and a consumer-side licence reader has to run all
+three rungs.
+
+🟢 **T2 · Public-sector AI in education is producing SUPPLY, and the supply has no repository.**
+EMEA's clearest new instrument this pass is **KIMADU** — eleven didactic agents, state-funded above
+**€1 M**, **25** schools, prompts published as OER under **`CC BY-SA 4.0`**, distributed as HTML and
+PDF for pasting into ChatGPT or fobizz. 🔴 **No repository, no package, no version, no digest** — and
+the grant is **scoped to the prompt and its usage notes**, leaving the three knowledge-base libraries
+the agent is designed to run with **outside** it. 🔵 Every other permissive agent on these shelves is
+citable as `(FILE, digest)`; this one is not. 🟢 **The shape to expect more of**: ministries are
+becoming publishers of prompt assets, and prompt assets are licensed like documents rather than like
+code — which means the questions that matter shift from *what licence* to **what scope, and which
+version**.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

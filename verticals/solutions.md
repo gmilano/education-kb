@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🔴 The most consequential licence fact on this shelf was sitting in a byte count
+
+🔵 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) is carried here as `AGPL-3.0`,
+`35 136` B, digest `e12d78569742` — read and re-read without drift since `p140`. 🔴 **What no pass
+recorded is that those bytes include a nine-line clarification from EdX Inc. that NARROWS the
+grant**, and the narrowing is the one every AI engagement on Open edX turns on:
+
+> …any public, independently available web service offered over the network and communicating with
+> edX's copyrighted works by any form of inter-service communication, including but not limited to
+> Remote Procedure Call (RPC) interfaces, **is not a work based on our copyrighted work** within the
+> meaning of the license. "Corresponding Source" … **do not include source code files for programs
+> used solely to provide those public, independently available web services.**
+
+🟢 **Read against AGPL §13, that is permission to put an AI service BESIDE Open edX rather than
+inside it.** A tutor, a grading assistant or an MCP side-car that talks to the platform over RPC is
+**not** a derivative work under this grant, and its own source is **not** Corresponding Source. 🔴 **The
+architectural consequence is the opposite of what a bare `AGPL-3.0` cell implies**: the copyleft
+risk is not in building alongside Open edX, it is in **modifying `edx-platform` itself** — and that
+is a boundary a client can be held to in design review.
+
+🔴 **The caveat, stated with the fact.** The clarification is **EdX Inc.'s statement of intent
+appended to the licence file**, not a term of AGPL-3.0, and this base measured it in the payload
+`openedx/edx-platform` serves at `master` on **2026-10-23**. 🟡 It is strong enough to design
+against and **not** a substitute for counsel on a specific deployment; a client engagement cites the
+payload, the ref and the date, which is why all three are recorded.
+
+🟢 **And it is measurable, which is why it belongs on a shelf rather than in a memo.** `p378`'s
+presentation fold collapses eight of ten AGPL-3.0 payloads this pass read to one text and **refuses
+to fold `edx-platform`** — nine operative lines are not presentation. 🔵 So the base's own instrument
+separates *the stock grant* from *the narrowed grant* without being told to, and the vertical layer
+now carries the distinction rather than the byte count alone.
+
+### 🔵 The vertical supply question, re-asked and unmoved
+
+🔴 **The ERP/CRM/SIS leg returned eight platforms and not one unshelved**: `OpenEduCat` (LGPL-3.0),
+`OpenSIS` (GPL-2.0), `Fedena` (Apache-2.0), `RosarioSIS` (GPL), `Gibbon` (GPL-3.0), `SchoolTool`
+(GPL-2.0), `OpenOlat` (Apache-2.0, Java, higher-ed and corporate training rather than SIS), and
+[`coderzaman/Student-Information-System`](https://github.com/coderzaman/Student-Information-System),
+which `p409` already measured as a **726-day-stale teaching demo**. 🟢 **The leg's own conclusion
+matches this base's**: *no major open-source SIS is MIT-licensed; the mature options are GPL, LGPL or
+Apache*. 🔴 **`Gap 405-A` and `Gap 298` therefore stand, now corroborated from an independent
+channel** — and the recommendation they imply is unchanged: **integrate against the system of
+record, do not fork it.**
+
+🔴 **A channel limit that bears directly on this shelf, and it is new.** `moodle.org` and
+`openeducat.org` both answer **`http=000`** from this environment — *connection never established* —
+against a control pair (`pypi.org`, `raw.githubusercontent.com`) that returned `200` in the same
+loop. 🟢 **The two flagship vertical platforms on this shelf cannot be read at their own
+domains here.** 🔵 Their *code* remains readable on the allowlisted code channel, so licence and
+payload claims stay verifiable; **release notes, roadmaps and pricing do not.** A successor should
+plan vertical-layer verification around the code channel and label anything sourced from a vendor
+domain as search-channel — see the trends shelf for the standing rule.
+
+🟡 **EMEA, with its boundary stated.** Portugal's **IAedu** (FCT/FCCN) offers institution-grounded
+virtual agents with API access, and Portugal's higher-education diagnostic (**CNIPES**, April 2026)
+proposes a shared *Plataforma de Práticas Pedagógicas de IA*. 🔴 **IAedu is restricted to RCTS-network
+institutions**, which makes it a national service rather than deployable supply — the useful read is
+that **the demand signal is institutional and the delivery vehicle is already chosen**, so an EMEA
+engagement there sells integration and practice design, not a platform. 🟡 Both rows are
+**search-channel only**: every Portuguese government and university host probed is `http=000`.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

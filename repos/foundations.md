@@ -3,6 +3,131 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🟢 `Gap 412-B` CLOSED — AGPL-3.0 measured first-hand on TEN addresses, and the answer is sharper than the question
+
+🔵 **Every row below is a `GET` of `<branch>/LICENSE` on `raw.githubusercontent.com`, the one
+allowlisted code channel, with a `404`-shaped negative control run in the same loop** (a
+non-existent path returns a **14-byte** `404: Not Found` body, so a short read is never mistaken for
+a grant).
+
+| address | grant path | bytes | lines | `https://` | `http://` | sha256 (12) | `p378` text |
+|---|---|---|---|---|---|---|---|
+| [`sourcegrade/jagr`](https://github.com/sourcegrade/jagr) | `master/LICENSE` | **34 523** | 661 | 3 | 0 | `0d96a4ff68ad` | `2097961c7782` |
+| [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | `master/LICENSE` | **34 523** | 661 | 3 | 0 | `0d96a4ff68ad` | `2097961c7782` |
+| [`wwyw4842-dot/OpenMAIC`](https://github.com/wwyw4842-dot/OpenMAIC) | `main/LICENSE` | **34 523** | 661 | 3 | 0 | `0d96a4ff68ad` | `2097961c7782` |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | `main/LICENSE` | **34 523** | 661 | 3 | 0 | `0d96a4ff68ad` | `2097961c7782` |
+| [`chipmates/agoracosmica`](https://github.com/chipmates/agoracosmica) | `main/LICENSE` | **34 523** | 661 | 3 | 0 | 🔴 `8486a10c4393` | `2097961c7782` |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | `master/LICENSE` | **34 524** | 662 | 3 | 0 | `8d56b405468a` | `2097961c7782` |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | `master/LICENSE` | **34 524** | 662 | 3 | 0 | `8d56b405468a` | `2097961c7782` |
+| [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) | `master/LICENSE` | 🔴 **34 230** | 661 | 3 | 0 | `7800536d5087` | `2097961c7782` |
+| [`acanas/swad-core`](https://github.com/acanas/swad-core) | `master/LICENSE` | **34 501** | 662 | 0 | 3 | `884b434957ba` | 🟡 `d3d83b9336df` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master/LICENSE` | 🔴 **35 136** | 671 | 0 | 3 | `e12d78569742` | 🔴 `0563ef8a5f99` |
+
+🟢 **The headline, in one sentence, derived with this base's own instruments:** **`p312` sees SIX
+templates over these ten payloads; `p378`'s presentation fold collapses them to THREE texts** — and
+only **two** of the three are the FSF text at all.
+
+🔵 **The two FSF forms, and the arithmetic closes EXACTLY.**
+
+| form | bytes | lines | scheme | instances |
+|---|---|---|---|---|
+| `https` | **34 523** | 661 | 3 × `https://` | 5 of 10, byte-identical |
+| `http` | **34 501** | 662 | 3 × `http://` | 1 of 10 (`acanas/swad-core`) |
+
+🔴 **And `p412`'s GPL-3.0 arithmetic does NOT transfer.** The GPL-3.0 spread closed on the URL
+scheme alone; the AGPL-3.0 spread of **22 B** closes on **three** mechanisms, of which the scheme is
+the smallest:
+
+> **+20** the title line's leading indentation · **+3** the three `http:`→`https:` upgrades ·
+> **−1** a trailing blank line present in the `http` form and absent in the `https` one.
+> **34 501 + 20 + 3 − 1 = 34 523** ✔
+
+🟢 **What DOES transfer is `p412`'s discriminator, unchanged**: `grep -c 'https://'` returns **3** on
+one form and **0** on the other, so **Amendment 5's in-tree selection works on AGPL-3.0 as written** —
+`Pattern AJ` **Amendment 6** below records it. 🔵 **The `http` form has `n = 1` here**, so its
+unindented title is a property of the one instance measured, not an established FSF property; the
+discriminator does not depend on that and the arithmetic is stated per-instance.
+
+### 🔴 `Pattern AI` step 4's AGPL reference is a SUBTRACTION, and its provenance is now identified
+
+🔵 `Gap 412-B` predicted that the `~34 522 B` AGPL constant carried the same unrecorded-provenance
+defect as the GPL-3.0 one. 🟢 **It does, and the source is on this base's own shelves.**
+`repos/trending.md:14872` records `openedx/edx-platform`'s `35 136 B` with a **`614 B`** appended
+edX block — and **`35 136 − 614 = 34 522`**. 🔴 **So the AGPL reference was never a measured FSF
+payload: it is edx-platform's LICENSE minus a block.** It lands **1 B below** the `https` form and
+**21 B above** the `http` one, matching neither.
+
+🔴 **And the subtraction could not have been right**, because `edx-platform`'s base text combines
+`http://` URLs with an **indented** title — a combination **neither** measured form has. 🟢 Subtracting
+a block from a payload that is itself a fourth presentation cannot recover a canonical value. 🔵 The
+repair is Amendment 6: **select the AGPL denominator in-tree by the same grep, never by subtraction.**
+
+### 🔴 A byte band says "same", a digest says "different", and both answer the wrong question
+
+🔵 `p196` recorded that *"three AGPL-3.0 texts here are `34 523` B exactly with different digests"*
+and left identity at `(FILE, digest)`. 🟢 **The mechanism is now measured.**
+[`chipmates/agoracosmica`](https://github.com/chipmates/agoracosmica) against
+[`sourcegrade/jagr`](https://github.com/sourcegrade/jagr): **identical `34 523` B, identical 661
+lines, different sha256** — and `diff` returns **exactly one hunk of two lines**, the hard-wrap of
+the *How to Apply* appendix (`as published` / `by the Free Software Foundation` versus `as published
+by` / `the Free Software Foundation`). 🔵 The wrap moves three bytes from one line to the next, so
+the byte count cannot move. **Zero operative words differ.** 🟢 `p378` folds them to one text, which
+is the correct answer and the reason that gate exists.
+
+🟢 **`idurar/idurar-erp-crm` is the same class at ten times the amplitude.** `34 230` B is **293 B
+short** of canonical at the **same 661 lines**, and `diff` returns **318 changed lines** — every one
+of them a stripped leading indent or a collapsed double space after a full stop. 🔴 **A digest check
+calls it not-AGPL; a byte band calls it not-AGPL; the header read calls it AGPL-3.0 — and the header
+read is right.** 🟢 `p378` folds it onto the canonical text, so **the fold now spans `34 230` /
+`34 523` / `34 524` B: a 294-byte spread on ONE text**, which ends any byte-band reading of this
+family outright.
+
+### 🔴 `openedx/edx-platform`'s grant is NARROWED, and this base carried the bytes without the consequence
+
+🔵 `repos/trending.md:14851` already records *"`35 136 B` with `10` APPENDED lines from EdX Inc."* —
+the bytes, the line count and the block size. 🔴 **What was never recorded is what the block SAYS**,
+and it is the most commercially consequential licence sentence on this industry's vertical layer:
+
+> EdX Inc. wishes to state, in clarification of the above license terms, that any public,
+> independently available web service offered over the network and communicating with edX's
+> copyrighted works by any form of inter-service communication, including but not limited to Remote
+> Procedure Call (RPC) interfaces, is not a work based on our copyrighted work within the meaning of
+> the license. "Corresponding Source" of this work, or works based on this work, as defined by the
+> terms of this license do not include source code files for programs used solely to provide those
+> public, independently available web services.
+
+🟢 **That is `gate-subtree-grant`'s `NARROWED-OPERATIVE` class on the Open edX flagship**, and it is
+the clause that makes a **separate** AI service beside Open edX, speaking to it over RPC, safe from
+AGPL §13's network copyleft **on that service**. 🔴 A reader who grades this address `AGPL-3.0` by
+header, by digest or by byte band never sees it — and that reader then refuses an engagement shape
+the licence actually permits. 🟢 **`p378` correctly declines to fold `edx-platform` onto the stock
+text**: nine operative lines are not presentation, and the gate's *"must never do"* control holds on
+a family it was never built for.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

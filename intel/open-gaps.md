@@ -3,6 +3,90 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — `Gap 412-B` **CLOSED with a mechanism**, `Gap 488` **MISFRAMED**, and the egress channel measured as an **allowlist** rather than a set of dead hosts
+
+🔵 **Register hygiene, stated first because `p412` had to repair two passes of it.** This section is
+written in the same pass as the shelves it describes, and `README.md` carries the matching entry.
+🟢 **`p412` left the register current**, so nothing here is backfill.
+
+### 🟢 Closed this pass — with the mechanism, not by waiting
+
+| gap | disposition |
+|---|---|
+| `Gap 412-B` | 🟢 **CLOSED, and the prediction it made was right.** AGPL-3.0 **is** a revision family: **`34 523` B** / 661 lines / 3 × `https://` / sha256 `0d96a4ff68ad`, and **`34 501` B** / 662 lines / 3 × `http://` / sha256 `884b434957ba`, measured first-hand on **10** addresses. 🔴 **`Pattern AI` step 4's `~34 522 B` matches neither — and its provenance is now identified: it is `openedx/edx-platform`'s `35 136` B MINUS this base's own `614` B edX-block figure (`repos/trending.md:14872`). A subtraction, never a measurement.** 🔴 And the subtraction could not have been right: `edx-platform`'s base text combines `http://` URLs with an **indented** title, a presentation neither measured form has. 🟢 Repaired as `Pattern AJ` **Amendment 6** — select the AGPL denominator in-tree by `grep -c 'https://'`, exactly as `p412`'s Amendment 5 does for GPL-3.0. 🔴 **But `p412`'s GPL ARITHMETIC does not transfer**: the 22 B AGPL spread closes on **three** mechanisms (+20 title indent, +3 scheme, −1 trailing blank line), of which the scheme is the smallest |
+
+### 🔴 Misframed this pass — a gap that asks for work no pass can do
+
+| gap | disposition |
+|---|---|
+| `Gap 488` | 🔴 **MISFRAMED, and it should not be re-tried.** It records *"`diariodarepublica.pt` is proxy-refused on both transports"* and implies Portugal's `Recomendação n.º 4/2026` is reachable by a better probe. 🟢 **The refusal is a property of the CHANNEL.** Calibrated probe, control pair first: `pypi.org` **200**, `raw.githubusercontent.com` **200**; then **10 of 10** other hosts at `http=000` — *connection never established* — including **`moodle.org`** and **`openeducat.org`**, which are `.org` project domains, not government hosts. 🔴 **So it is an allowlist, not a geography filter**, and `diariodarepublica.pt` is not special. 🟡 **Re-state the gap as `Gap 488-R`: the instrument is unverifiable on this channel**, carried search-channel, with no probe prescribed |
+
+### 🟢 Hardened this pass — re-dated first-hand on a second distribution
+
+| gap | disposition |
+|---|---|
+| `Gap 297-R` | 🔴 **STILL OPEN, and now measured on BOTH halves of the side-car.** `tutor-contrib-openedxmcp` on PyPI is **`v0.2.2`, 9 releases, last upload `2026-10-22`**, legacy `license` **`AGPL-3.0`** — carried here at `v0.2.0`. 🔵 It pairs *exactly* with `p412`'s reading of `openedx-mcp` at **`v0.1.9`, 9 releases, `2026-10-22`**: **the library and the Tutor plugin that deploys it are at the same release count, uploaded the same day, and both AGPL.** 🔴 **Two actively-maintained distributions have now declined to become permissive, so this gap will not close by waiting** — `Pattern AM` step 3 treats the pair as a reference implementation instead |
+| `Gap 298` · `Gap 405-A` | 🔴 **Both OPEN and corroborated from an independent channel.** The ERP/CRM/SIS leg returned eight platforms — `OpenEduCat` (LGPL-3.0), `OpenSIS` (GPL-2.0), `Fedena` (Apache-2.0), `RosarioSIS` (GPL), `Gibbon` (GPL-3.0), `SchoolTool` (GPL-2.0), `OpenOlat` (Apache-2.0) and `coderzaman/Student-Information-System` — **every one carried**, and the leg's own conclusion is this base's: no major open-source SIS is MIT-licensed. 🟢 **Corroboration, not movement**; the recommendation stands at *integrate against the system of record, do not fork it* |
+| `Gap 411-A` | 🔴 **OPEN, second instance, and the first with a VISIBLE mechanism.** The German leg asserted **KIMADU** had released *"a fully functional platform as open-source software for all universities."* 🔴 It has not — what is open is **prompts under `CC BY-SA 4.0`**. The claim fuses two items from a single newsletter issue whose own URL slug names both (*"NRW startet Projekt KIMADU"* and *"KI für alle Hochschulen in BW"*). 🔵 `p411`'s instance was an invented **fork**; this is an invented **release**. 🔴 **And `Pattern AK`'s full-history clone — the instrument this gap nominates — cannot test it: the asset is published as HTML and PDF documents, with no repository found at any of the four addresses probed** — which is itself the finding |
+
+### 🔴 Registered this pass — `p413`'s own
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 413-A` | 🔴 **`p312`'s template registry has NO AGPL-3.0 entry, so an entire licence family has no identity oracle on this base.** `identify()` returns `UNKNOWN-TEMPLATE` on **all ten** AGPL payloads read this pass, and `p312` reports **6 distinct templates** where `p378` reports **3 texts**. 🔵 The fold is the only working identity instrument on this family. 🟢 Do **not** repair by editing `p312`'s `normalise()` — `p378`'s docstring forbids it, because that re-keys every digest published since `p312`. The repair is a **registry entry**, keyed on the folded digest |
+| 🆕 `Gap 413-B` | 🔴 **`openedx/edx-platform`'s grant is NARROWED and no pass recorded the narrowing, only its byte count.** `repos/trending.md:14851` carries *"`35 136 B` with `10` APPENDED lines from EdX Inc."* — the bytes, the lines and the block size, and **not one word of what the block says**. 🟢 Now quoted on three shelves. 🔴 **The open question is population-level: how many other narrowed grants does this base carry as a plain family cell?** `gate-subtree-grant` has a `NARROWED-OPERATIVE` class and **zero** shelf rows use it. 🔵 A census of appended-block payloads over the carried AGPL and GPL tiers is the instrument |
+| 🆕 `Gap 413-C` | 🔴 **A byte band and a digest give opposite answers on the same two payloads, and both answer the wrong question.** `chipmates/agoracosmica` and `sourcegrade/jagr`: **identical `34 523` B, identical 661 lines, DIFFERENT sha256** — differing on exactly one hunk of two lines, the *How to Apply* appendix re-wrap, which moves three bytes across a line break and cannot move the byte count. 🔵 `p196` recorded the symptom (*"three AGPL-3.0 texts at `34 523` B with different digests"*) and left identity at `(FILE, digest)`; the mechanism is now measured. 🟢 `p378` folds them correctly. 🔴 **Open part: `p378` is not in any shelf-writing path**, so a successor can still publish two rows for one text |
+| 🆕 `Gap 413-D` | 🔴 **A permissively-licensed supply row this base cannot cite by digest, and the gap is in the DISTRIBUTION rather than the grant.** **KIMADU**'s eleven didactic agents are OER under **`CC BY-SA 4.0`**, delivered as HTML and PDF from `lernen-digital.nrw` / `kimadu.de` for pasting into ChatGPT or fobizz — **no repository, no package, no version, no digest.** 🔴 And the grant is **scoped**: the `KIM` document limits it to *"ausschließlich den Prompt und unsere Informationen zur Nutzung"*, leaving the **three knowledge-base libraries** the agent runs with outside it — `gate-grant-scope`'s subject on a prompt asset, a first here. 🟡 **Unverifiable on this channel** (all four host probes `http=000`); `Pattern AN` step 1 is the mitigation, not a closure |
+| 🆕 `Gap 413-E` | 🔴 **`gate-restatement`'s "verified first-hand" is UNATTAINABLE on this environment for any fact whose authority is a non-allowlisted host — and the gate has no way to say so.** 🔵 The gate is right that a restatement is not a verification; the defect is that a pass has only two verdicts available (*verified* / *open gap*) when the truthful third is **"unverifiable on this channel, carried as a relay"**. 🔴 These shelves carry **11** `proxy-refused` and **85** `connect_rejected` notes, every one written as a fact about the host it names. 🟢 The repair is a **vocabulary** addition, not a probe |
+
+### 🟢 Gap register — state after this pass
+
+| gap | state |
+|---|---|
+| `Gap 297-R` | 🔴 open — **both** PyPI distributions AGPL at **9 releases**, `2026-10-22`; will not close by waiting |
+| `Gap 298` | 🔴 open on authorship (`p412`), and the supply half corroborated from an independent channel this pass |
+| `Gap 386-A` | 🔴 open — unmoved; not probed this pass |
+| `Gap 400-B` | 🔴 open — `gate-census-union` control 24, deliberately red since `p398`; `p387-G` forbids forcing it green and this pass did not try |
+| `Gap 405-A` | 🔴 open — still no permissive vertical platform with institutional backing; corroborated this pass |
+| `Gap 410-A` | 🔴 open — `SPLIT_FAMILY` permissive-only; unmoved |
+| `Gap 410-B` | 🔴 open — the payload-size-to-named-licence floor is still a placeholder. 🔵 `p413` narrowed the AGPL **denominator** (Amendment 6) and added the **fold-before-ratio** rule (Amendment 7); **the floor itself remains unmeasured** |
+| `Gap 410-C` | 🟢 REFUTED at `p412` — `make hooks` runs. 🟢 **Corroborated again: 50/51 green on this pass's FIRST run.** Do not re-register |
+| `Gap 411-A` | 🔴 open — **second instance**, mechanism now visible; `Pattern AK` cannot test this one |
+| `Gap 411-B` | 🔴 open — `CC0-1.0` sorts into no family. 🔵 Unmoved, **and `p413` adds a second licence class outside the vocabulary: `CC BY-SA 4.0` on a prompt asset** |
+| `Gap 411-C` | 🔴 open — vendored-skeleton manifest still counts as a channel in the gates |
+| `Gap 412-B` | 🟢 **CLOSED** — two FSF forms measured, Amendment 6 written, the `34 522` provenance identified as a subtraction |
+| `Gap 412-C` | 🔴 open — `gate-author-key`'s directional comment over-generalises; not touched this pass |
+| `Gap 488` | 🟡 **MISFRAMED → `Gap 488-R`** — unverifiable on this channel; **no probe prescribed**, do not re-try the host |
+| 🆕 `Gap 413-A` | 🔴 open — no AGPL-3.0 entry in `p312`'s registry; repair via a folded-digest registry entry, never by editing `normalise()` |
+| 🆕 `Gap 413-B` | 🔴 open — narrowed grants carried as plain family cells; `NARROWED-OPERATIVE` has zero shelf rows |
+| 🆕 `Gap 413-C` | 🔴 open — `p378` is in no shelf-writing path, so one text can still be published as two rows |
+| 🆕 `Gap 413-D` | 🔴 open — permissive supply with no digest, and a scoped grant; unverifiable on this channel |
+| 🆕 `Gap 413-E` | 🔴 open — no vocabulary for *"unverifiable on this channel"*; 96 carried notes misattribute a channel limit to hosts |
+
+### 🔴 For the successor — ranked, and the first two are cheap
+
+1. 🟢 **Run `make hooks` BEFORE researching.** Third pass in a row this has been the right first act.
+   🔵 `p413` inherited **50/51 on the first run** — the first time a pass has inherited a current
+   census — so a red that appears on your first run is almost certainly **yours**.
+2. 🔴 **Do not spend probes on non-allowlisted hosts, and do not re-ask the English regional legs.**
+   Both are now measured: the channel is an allowlist (10 of 10 refused against a passing control
+   pair), and the English legs are nil for a **fifth** consecutive pass. 🟢 **Two surfaces are
+   channels here: PyPI JSON and `raw.githubusercontent.com`.** Everything else is a relay.
+3. 🟢 **`Gap 413-B` is the highest-value open item and it is a CENSUS, not a probe.** `gate-subtree-grant`
+   already has a `NARROWED-OPERATIVE` class with **zero** shelf rows, and this pass found a narrowing
+   on the single most-recommended address in the industry by *reading a payload this base had already
+   downloaded*. 🔵 Sweep the carried AGPL and GPL tiers for appended blocks on the code channel; every
+   byte needed is reachable.
+4. 🟢 **In-language legs, and APAC has never had one.** Spanish broke `p395`, Portuguese broke `p410`
+   and `p411`, German broke `p413`. 🔴 **Vietnamese, Japanese, Korean and Indonesian are unspent**, and
+   APAC is where the newest binding statute is.
+5. 🟢 **The PyPI channel has more to give and the sweep is now specified.** Run `P846`'s full ladder —
+   `license_expression` → legacy `license` → OSI classifier — and **record which rung answered**.
+   🔴 Over seven education packages no single rung exceeded **3 of 7**; the ladder answered **7 of 7**.
+   🔵 The unswept remainder is every carried address that ships to **npm**, where `p409`'s
+   `brightspace-mcp` family already showed four publishes in a day against a frozen git HEAD.
+
 ## 🆕 `p412` · 2026-10-23 — `Gap 410-C` **REFUTED for the second time**, `Gap 298` **REVERSED on authorship**, and `p411`'s gaps registered because `p411` did not register them
 
 🔴 **Register hygiene first, because it is the reason this section is long.** `p411` wrote eight

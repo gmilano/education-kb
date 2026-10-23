@@ -3,6 +3,52 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🟢 What this pass did on the agent layer
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`Gap 412-B` is CLOSED, and the AGPL side of the agent layer is byte-identical across the Open edX MCP pair.** [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) `master/LICENSE` and [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) `master/LICENSE` both read **`34 524` B, `662` lines, sha256 `8d56b405468a`** — the same payload to the byte. 🔵 That is the canonical `https` AGPL form (`34 523` B) **plus one trailing newline**, so the pair's shared `34 524` is a presentation, not a third licence |
+| 2 | 🔴 **`Gap 297-R` HARDENS on a second distribution, and it will not close by waiting.** `tutor-contrib-openedxmcp` on PyPI is **`v0.2.2`, 9 releases, last upload `2026-10-22`**, `license` field **`AGPL-3.0`** — carried here at `v0.2.0`. 🔵 It pairs *exactly* with `p412`'s reading of `openedx-mcp` at **`v0.1.9`, 9 releases, `2026-10-22`**: **both halves of the Open edX MCP side-car — the library and the Tutor plugin that deploys it — are AGPL, at the same release count, shipped the same day.** 🔴 The absence `Gap 297-R` names is a *permissive* side-car, and two actively-maintained distributions have now declined to become one |
+| 3 | 🔴 **`tutor-contrib-openedxmcp` publishes NO `project_urls` and NO `home_page` on PyPI** — `p280`'s unattributable class, **third instance, second on PyPI**. 🟢 **And the attribution sharpens: both PyPI instances are the same publisher's packages** (`blend-ed`'s library and its Tutor plugin), so the cause is the **publisher's metadata habit**, not a registry defect. 🔵 This base already carries the `0.1.7` reading as *"ninguno declarado"*; what is new is that it is a **house pattern across the family**, which is a predictor for the next package they ship |
+| 4 | 🔴 **`p312`'s template registry has no AGPL-3.0 entry at all.** `identify()` returns **`UNKNOWN-TEMPLATE`** on **all ten** AGPL payloads this pass read first-hand, including both agent-layer addresses above. 🟢 So on this family the only instruments that answer identity are **`p378`'s presentation fold** and the header read — and `gate-bespoke-title`'s rule that *`UNKNOWN-TEMPLATE` must never be read as bespoke* is doing more work here than its own docstring claims, because it is covering an **entire licence family**, not an edge case |
+| 5 | 🟢 **A new EMEA agent instrument, and it is a SHAPE this base has not carried: permissively-licensed supply with no repository.** **KIMADU** (Universität Siegen with NRW's Ministerium für Schule und Bildung, state-funded **above €1 M**, running **2025-02-01 → 2027-07-31** across **25** schools) publishes **eleven didactic German-subject agents** whose system prompts / megaprompts are **OER under `CC BY-SA 4.0`** — downloadable, adaptable, and explicitly transferable into one's own environment. 🔴 **But it is distributed as HTML and PDF from `lernen-digital.nrw` and `kimadu.de` for pasting into ChatGPT or fobizz: no repository, no package, no version, no digest.** 🔵 Every other permissive agent on these shelves is citable by `(FILE, digest)`; this one is not, and the gap is in the *distribution*, not the grant |
+| 6 | 🔴 **The KIMADU grant is SCOPED, and the scope excludes the part that carries the pedagogy.** The `KIM — Lehrpartner für Schreibaufgaben` document states the licence covers *"ausschließlich den Prompt und unsere Informationen zur Nutzung des KI-Agenten"* — **only the prompt and the usage notes.** 🔴 The agent is designed to run with **three knowledge-base libraries supplied as Wissensdateien**, and those sit **outside** the `CC BY-SA 4.0` grant. 🟢 `gate-grant-scope`'s subject exactly — *a grant has a SCOPE and a PROVENANCE* — on a prompt asset rather than a source tree, which is a first here |
+| 7 | 🔴 **`Gap 411-A`'s class recurs, and this time the MECHANISM is readable in the source URL.** The German leg returned *"KIMADU has released a fully functional, data-protection-compliant platform, available as open-source software for all universities."* 🔴 **It has not.** The sentence comes from a newsletter issue whose own title concatenates **"NRW startet Projekt KIMADU"** and **"KI für alle Hochschulen in BW"** — **two separate items in one issue, fused by the summariser.** 🔵 `p411`'s instance was an invented *fork*; this is an invented *release*. 🟢 What is actually open is prompts under `CC BY-SA 4.0`, which is finding 5 — the real fact was adjacent to the invented one, which is why the invention is hard to see |
+| 8 | 🔴 **And this base cannot verify finding 5 or 6 first-hand, now or ever on this environment.** `kimadu.de`, `lernen-digital.nrw`, `uni-siegen.de` and `bildungsserver.de` are all `http=000` against a control pair that returned `200` twice. 🟡 **So both rows are published SEARCH-CHANNEL ONLY and labelled so** per `gate-restatement`, and the honest register entry is *"unverifiable on this channel"* rather than *"re-try the host"* — see the trends shelf for why that distinction is now a standing rule |
+
+🔵 **What the English regional legs returned on the agent layer: nothing.** `p412`'s successor item 3
+said not to re-ask them; this pass re-asked them anyway and **the advice was right** — **17** named
+regional facts checked against these shelves, **15 already carried**, and the 2 unshelved are a
+vendor ranking whose own figures its publisher does not source and a Microsoft-attributed adoption
+figure this base already holds under UNESCO IESALC and TALIS attribution. 🟢 **The cost is recorded
+here so a sixth pass does not pay it again.** 🟢 **The in-language legs paid for the third time in
+four passes** — German and Portuguese returned seven unshelved items, and findings 5–7 are what
+survived verification.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

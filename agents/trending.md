@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🟢 Signals this pass — what moved, dated, with the channel that read it
+
+| signal | reading | channel |
+|---|---|---|
+| 🟢 **Open edX MCP side-car ships on both halves, same day** | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) at `v0.1.9` / 9 releases (`p412`) and [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) at **`v0.2.2` / 9 releases / `2026-10-22`** — library and deployment plugin **at the same release count, uploaded the same day**. 🔴 **Both AGPL-3.0** | PyPI JSON |
+| 🟢 **Open edX distribution layer active today** | [`openedx-core`](https://pypi.org/project/openedx-core/) **`v1.15.1` uploaded `2026-10-23`**, 41 releases, `AGPL-3.0-only` carried in `license_expression` | PyPI JSON |
+| 🟢 **A state-funded OER agent set in EMEA** | **KIMADU** — Universität Siegen with NRW's Ministerium für Schule und Bildung, **above €1 M** state funding, **2025-02-01 → 2027-07-31**, **25** schools: **eleven** didactic German-subject agents, system prompts published as OER under **`CC BY-SA 4.0`** | 🟡 **search channel only** — `kimadu.de`, `lernen-digital.nrw`, `uni-siegen.de` and `bildungsserver.de` are all `http=000` here |
+| 🟡 **A national AI-assistant that is *not* open source, stated so it is not mis-shelved** | Germany's cross-state school chatbot **`telli` was renamed `AIS.chat` in May 2026 for trademark reasons** — carried on these shelves; the German leg adds that it is **connected to several LLMs and is nowhere described as an open-source project** | search channel |
+| 🟡 **A Portuguese sector platform with a closed membership boundary** | **IAedu** (FCT/FCCN) offers *criação de agentes virtuais personalizados* over institutional content plus API access — 🔴 **restricted to institutions in the RCTS network**, so it is a *national service*, not supply Globant can deploy for a client | 🟡 search channel only |
+| 🔴 **A provenance invention, caught** | The leg asserted KIMADU had released *"a fully functional platform as open source software for all universities"*. **It has not** — the claim fuses two items from one newsletter issue (*"NRW startet Projekt KIMADU"* and *"KI für alle Hochschulen in BW"*) | search channel; refuted by reading the source's own title |
+
+### 🔴 `Gap 411-A`'s class, second instance — and the first time its mechanism is visible
+
+🔵 `Gap 411-A` says *the search layer asserts provenance the repository does not declare.* `p411`'s
+instance was an invented **fork**; this pass's is an invented **release**, and the two have the same
+shape: a specific, confident, checkable claim about how a project is published.
+
+🟢 **What makes this instance worth registering is that the cause is readable rather than inferred.**
+The source is a newsletter issue whose own URL slug concatenates **four** separate items; the
+summariser took the project named in item one and the open-source release named in item two and
+produced one sentence about the wrong subject. 🔴 **The invented fact sat directly beside a real
+one** — KIMADU *does* publish openly, but prompts under `CC BY-SA 4.0`, not platform source — which
+is precisely why it reads as credible. 🔵 `Pattern AK`'s full-history clone, the instrument
+`Gap 411-A` nominates, **cannot** test this one: KIMADU's agents are published as HTML and PDF
+documents, and no repository was found for them at any of the four addresses probed — which is
+itself the finding.
+
+### 🔵 The regional legs — what each returned, stated so silence cannot read as coverage
+
+| region | legs run | returned |
+|---|---|---|
+| **North America** | English | 🔴 **Nil unshelved.** Ohio's policy duty, Oklahoma and Maryland's human-oversight bars, California AB 1159, NYC's grade-8 moratorium, H.R. 8747, Canada's *AI for All*, the 134-bill session count — **all carried** |
+| **EMEA** | English **+ German** | 🟢 **Three unshelved, one survives verification** — KIMADU's `CC BY-SA 4.0` agents (and its scoped grant), `telli`→`AIS.chat`'s non-open status, Baden-Württemberg's **F13** assistant on open-weight models in a **BITBW** environment. 🔴 The English leg alone returned nil: the AI Act dates, the Digital Omnibus and the 10 %-guidelines figure are carried |
+| **APAC** | English | 🔴 **Nil unshelved.** Vietnam's 2026-03-01 law with education among six high-risk sectors, Korea's AI Basic Act, China's mandatory frameworks, Singapore and Japan's toolkits, ANZ's light-touch posture, the Ipsos Education Monitor split — **all carried** |
+| **LATAM** | **Spanish + Portuguese** | 🟢 **Four unshelved, none yet verifiable** — Brazil's CNE **marco regulatório** for AI in education (approved May, consultation to 17 June), MEC's **AVAMEC** teacher course, the **Toolzz** no-code agent platform, Portugal's **CNIPES** April 2026 diagnostic. 🔴 The Spanish leg alone returned nil: Latam-GPT, Costa Rica's adoption lead and the governance-lag figures are carried or come from a publisher that does not source them |
+
+🟢 **Every nil above names its jurisdictions and every region was asked in at least one language of
+its own**, per `gate-regional-leg`'s J2. 🔴 **And the English legs are now nil for a FIFTH
+consecutive pass** — `p412`'s successor item 3 told this pass not to spend them; it spent them, the
+advice held, and the measurement is recorded here so a sixth pass can stop paying for it.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

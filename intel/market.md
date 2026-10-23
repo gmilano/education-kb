@@ -3,6 +3,65 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🔴 The regional layer — FIFTH consecutive nil on the English legs, and the cost is recorded
+
+🔵 `p412`'s successor item 3 said: *"Do not re-ask the English regional legs. Four consecutive
+passes, one hit, and that hit was a correction to this base's own row."* 🔴 **This pass re-asked them
+anyway, and the advice was right.** 🟢 The measurement, so a sixth pass does not pay for it:
+
+> **17** named regional facts returned across North America, EMEA and APAC in English.
+> **15 already carried on these shelves.** The **2** unshelved are a governance ranking whose
+> publisher does not source its own figures, and a Microsoft-attributed LATAM adoption statistic
+> this base already holds at finer grain under **UNESCO IESALC** and **TALIS** attribution.
+
+🟢 **The in-language legs paid, for the third time in four passes.** German and Portuguese returned
+**seven** unshelved items between them; **one survives verification** as supply (KIMADU's
+`CC BY-SA 4.0` agent prompts, with a scoped grant and no repository), and the rest are named below
+with their channel state rather than quietly dropped.
+
+| region | legs | unshelved returns | disposition |
+|---|---|---|---|
+| **North America** | English | **none** | 🔴 Ohio's `district_ai_policy` duty, Oklahoma and Maryland's human-oversight bars, California **AB 1159**, NYC's grade-8 moratorium, **H.R. 8747**, Canada's *AI for All*, the 134-bill session count — all carried |
+| **EMEA** | English + **German** | **three** | 🟢 **KIMADU** (shelved — see `agents/top.md`); 🟡 Baden-Württemberg's **F13** assistant on open-weight models in a **BITBW**-operated environment; 🟡 `telli` → **`AIS.chat`** confirmed **not** an open-source project. 🔴 All three **search-channel only** — every German institutional host probed is `http=000` |
+| **APAC** | English | **none** | 🔴 Vietnam's **2026-03-01** law with education among six high-risk sectors, Korea's **AI Basic Act**, China's mandatory frameworks, Singapore and Japan's toolkits, ANZ's light-touch posture, the **Ipsos Education Monitor 2026** ban-support split — all carried |
+| **LATAM** | **Spanish + Portuguese** | **four** | 🟡 Brazil's **CNE** *marco regulatório* for AI in education (approved May, public consultation to **17 June**, current status unconfirmed); 🟡 MEC's **AVAMEC** teacher course; 🟡 the **Toolzz** no-code agent platform; 🟡 Portugal's **CNIPES** diagnostic (**April 2026**) proposing a shared *Plataforma de Práticas Pedagógicas de IA*. 🔴 **None verifiable** — `diariodarepublica.pt`, `dges.gov.pt` and every other Lusophone authority host is `http=000` |
+
+🔵 **Why none of this changes a recommendation.** The four unshelved LATAM items are **demand-side
+and unverifiable**; the three EMEA items are **one supply row and two negative facts**. 🟢 The
+opportunity block below therefore takes **four marked additions** and no restructuring — and the
+honest statement is that **this pass moved the EMEA supply row, not the market map.**
+
+### 🔵 Opportunity updates — folded into this file's single canonical block, not duplicated
+
+🟢 Added to `## Opportunities by region` below as **`🆕 p413`** paragraphs under the existing
+**North America**, **EMEA**, **APAC** and **LATAM** subsections. 🔴 **No new region heading was
+opened** — `p409` was caught by `p383`'s gate opening a second `## Opportunities by region` block,
+and this pass did not repeat it.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was
@@ -514,6 +573,25 @@ shelves), Idaho **SB 1227** (11) and the ~100-bill session count are all carried
 number remains the policy gap — **86 % of education organisations using gen-AI, most without a
 policy** — which is the governance engagement, not a tooling one.
 
+
+**🆕 `p413` · 2026-10-23 — this pass's addition to North America.**
+🟢 **A licence reading opens an engagement shape this base had been implicitly closing.**
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform)'s `master/LICENSE` (`35 136` B,
+sha256 `e12d78569742`, read **2026-10-23**) appends an **EdX Inc. clarification** that a public,
+independently available web service communicating with the platform **over RPC is not a work based
+on it**, and that **"Corresponding Source" excludes** source for programs used solely to provide
+such services. 🟢 **So the AI service beside Open edX is outside AGPL §13's network copyleft — the
+copyleft exposure is in modifying `edx-platform`, not in building next to it.** 🔵 That is
+`Pattern AM`, and it matters most here because the read-only, audit-trail architecture `p409`
+prescribed for Oklahoma, Maryland and California AB 1159 is **exactly** a side-car. 🟡 The
+clarification is EdX Inc.'s appended statement of intent, not an AGPL term — cite the payload, the
+ref and the date, and take counsel per deployment.
+🔴 **One procurement trap, measured.** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+(the MIT LTI 1.3 library this shape needs) declares its licence on PyPI **only in its OSI
+classifier** — no `license` field, no `license_expression`. 🔴 A scan that reads one field reports it
+**unlicensed** and a procurement office stops there, so put the classifier read in the licence
+register before review, not after.
+
 ### EMEA
 
 🟢 **Annex III conformity for education, as a reusable asset.** Education sits in the AI Act's
@@ -548,6 +626,27 @@ successor should stop re-buying it and spend the leg elsewhere.** 🟡 The sella
 unchanged and sharpened by repetition: the deferral moved the **deadline**, not the **work** —
 Article 50 and Article 4 bite now, and an institution that waits for December 2027 has two live
 duties and no evidence for either.
+
+
+**🆕 `p413` · 2026-10-23 — this pass's addition to EMEA.**
+🟢 **A ministry has become a supplier, and the asset is reusable.** **KIMADU** — Universität Siegen
+with NRW's Ministerium für Schule und Bildung, **above €1 M** of state funding, **2025-02-01 →
+2027-07-31**, **25** schools — publishes **eleven** didactic German-subject agents whose system
+prompts are **OER under `CC BY-SA 4.0`**, explicitly downloadable, adaptable and transferable into
+one's own environment. 🟢 **That is pedagogy a client does not have to pay to invent, already
+validated in a state programme**, and it is the first permissively-licensed public-sector agent
+supply this base has shelved in EMEA.
+🔴 **Two boundaries decide whether it is sellable.** First, the grant is **scoped**: the `KIM`
+document limits it to *"ausschließlich den Prompt und unsere Informationen zur Nutzung"* — the
+**three knowledge-base libraries** the agent runs with sit **outside** it. 🟢 That is the engagement:
+the ministry supplies the prompt, the client supplies the corpus, Globant supplies the pinning and
+retrieval. Second, `CC BY-SA 4.0` is **share-alike**, so client-specific pedagogy belongs in the
+supplied libraries, never in a forked prompt. 🔵 `Pattern AN` is the recipe.
+🔴 **And a standing limit on EMEA diligence, now measured rather than assumed.** Every German,
+Portuguese and EU institutional host this pass probed answered `http=000` — connection never
+established — against control hosts that returned `200` in the same loop. 🟡 **EMEA statute and
+institutional facts are search-channel on this environment and will stay so**, so an EMEA proposal
+should cite the relayed source openly and price first-hand legal verification as client-side work.
 
 ### APAC
 
@@ -610,6 +709,21 @@ instruction per student per year — which is the kind of number a procurement d
 against. 🔴 **All four are secondary-source**, and the compulsory-curriculum framing is contested
 inside this very leg, so none supersedes `p406`'s statute-level detail: cite them as `reported`.
 
+
+**🆕 `p413` · 2026-10-23 — this pass's addition to APAC.**
+🔴 **Nil on facts, and stated as nil: the English APAC leg returned nothing unshelved for a fifth
+consecutive pass.** Vietnam's **2026-03-01** law with education among six high-risk sectors, Korea's
+**AI Basic Act**, China's mandatory registration frameworks, Singapore's and Japan's voluntary
+toolkits, Australia and New Zealand's light-touch posture and the **Ipsos Education Monitor 2026**
+ban-support split are **all carried**. 🔵 No in-language APAC leg was run this pass; that is the
+unspent budget a successor should take first, because Spanish, Portuguese and German have each
+broken saturation while English has not.
+🟢 **What does carry into APAC is the architecture, not a new fact.** `Pattern AM`'s Open edX RPC
+side-car is **licence-portable**: the EdX Inc. clarification sits in the payload, not in a
+jurisdiction, so the same side-car design that answers EMEA's Annex III readiness answers a
+high-risk classification under Vietnam's regime — **one architecture, three regulatory stories**,
+which is the same portability argument the EMEA block already makes for conformity work.
+
 ### LATAM
 
 🟢 **The curriculum wave arrived and the capacity did not.** ILIA 2026: **11 of 20** countries now
@@ -652,6 +766,23 @@ reformed its education law in **April 2026** for graduated AI use in *media supe
 324/2025 Cámara** in progress alongside `Ley 2626 de 2026`, which these shelves already hold at a
 firmer band. 🔴 Unchanged and still the engagement: **92 % of students and 79 % of faculty using AI
 against 19 % of institutions with an approved internal policy.**
+
+
+**🆕 `p413` · 2026-10-23 — this pass's addition to LATAM.**
+🟢 **The curriculum-grounding instrument for Brazil is permissive, maintained and splits code from
+data — which is exactly the shape a client engagement needs.** [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)
+ships as `bncc` **`0.5.1`** on PyPI (**7** releases, last upload **2026-10-15**), declaring **`MIT`**
+in PEP 639's `license_expression`, and its metadata names **four** repository URLs — including
+[`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) as a **separate data repository**.
+🟢 **So the BNCC curriculum can be grounded under MIT for the code and versioned separately for the
+data**, which is step 6 of `Pattern AM` and the cheapest regional differentiator on this shelf.
+🔴 **The regulatory half is moving and this base cannot yet verify it.** Brazil's **CNE** approved a
+proposed *marco regulatório* for AI in education with public consultation to **17 June**; its
+current status is **unconfirmed here**, and MEC's **AVAMEC** teacher course and the **Toolzz**
+no-code agent platform are likewise search-channel only. 🔴 Every Lusophone authority host probed —
+`diariodarepublica.pt` among them — answered `http=000`. 🟡 **So sell against the demand signal, not
+against a statute**: the teacher-training and curriculum-grounding work is fundable today, while the
+compliance deliverable waits on a framework whose text this base cannot read.
 
 ### Global
 

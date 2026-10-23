@@ -3,6 +3,81 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🟢 `p412`'s successor item 4, delivered — the PyPI licence channel has THREE sub-fields, and no education package populates more than two
+
+🔵 **Seven education packages on these shelves that ship to PyPI, read first-hand on
+`pypi.org/pypi/{name}/json` — the one allowlisted registry channel this pass had.** 🔵 `P846`'s
+ladder is **`license_expression` → legacy `license` → OSI classifier**; the three right-hand columns
+record **which rung actually answered**.
+
+| package | version · releases · last upload | `license_expression` | legacy `license` | OSI classifier |
+|---|---|---|---|---|
+| [`bncc`](https://pypi.org/project/bncc/) | `0.5.1` · 7 · **2026-10-15** | 🟢 **`MIT`** | — | — |
+| [`PyLTI1p3`](https://pypi.org/project/PyLTI1p3/) | `2.0.0` · 29 · 2022-11-20 | — | 🟢 **`MIT`** | 🟢 **MIT License** |
+| [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) | `0.1.0` · 1 · 2026-06-26 | 🟢 **`MIT`** | — | — |
+| [`django-lti`](https://pypi.org/project/django-lti/) | `0.10.1` · 17 · 2026-08-07 | 🔴 — | 🔴 — | 🟢 **MIT License** |
+| [`tutor-contrib-openedxmcp`](https://pypi.org/project/tutor-contrib-openedxmcp/) | `0.2.2` · 9 · **2026-10-22** | — | 🔴 **`AGPL-3.0`** | — |
+| [`tincan`](https://pypi.org/project/tincan/) | `1.0.0` · 5 · 2020-09-03 | — | 🔴 **`Apache License 2.0`** | — |
+| [`openedx-core`](https://pypi.org/project/openedx-core/) | `1.15.1` · 41 · 🟢 **2026-10-23** | 🟢 **`AGPL-3.0-only`** | — | — |
+
+🟢 **The denominator, which is the point of running this as a sweep rather than a lookup:**
+`license_expression` answers **3 of 7**, the legacy `license` field answers **3 of 7**, the OSI
+classifier answers **2 of 7**. 🟢 **The full `P846` ladder answers 7 of 7. No single rung exceeds 3
+of 7**, and **exactly one package** (`PyLTI1p3`) answers on two rungs at once. 🔴 **So a reader who
+checks one field is wrong about at least four of these seven, and a reader who checks two can still
+be wrong about one.**
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **`django-lti` declares NEITHER `license` NOR `license_expression` — its only licence channel on PyPI is the OSI classifier.** 🟢 **First measured instance on this base where the classifier is the sole channel**, and the exact inverse of `jwcrypto`, the package that motivated `P846` by declaring *only* the expression. 🔵 `P846`'s third rung has been carried as defensive; it is now **load-bearing on a real education package** |
+| 2 | 🔴 **The answering channel is NOT predictable from the upload date, and this pass expected it to be.** Three 2026 packages answer on the expression and carry no classifier; but `django-lti`, uploaded **2026-08-07**, is classifier-only with no expression at all. 🟢 The clean story — *"PEP 639 is where 2026 packages put it"* — **is refuted by its own population**, so the ladder has to be run in full rather than short-circuited on a date heuristic |
+| 3 | 🔴 **2 of the 6 licence strings are not valid SPDX identifiers, and both err in FORM while being right in substance.** `tincan` says `Apache License 2.0` (prose, not `Apache-2.0`); `tutor-contrib-openedxmcp` says `AGPL-3.0`, which carries neither `-only` nor `-or-later` — against `openedx-core`'s correctly-formed **`AGPL-3.0-only`** in the same sweep. 🔵 **Distinguish this from `p409`'s `"Fair-code License"`**, which was wrong in form *and* in substance: an unparseable string that names the right licence is a **parsing** problem; one that names a non-OSI licence is a **grant** problem, and conflating them sends a reader to the wrong remedy |
+| 4 | 🟢 **`openedx-core` `v1.15.1` was uploaded 2026-10-23 — today** — at **41 releases**, `AGPL-3.0-only`. 🔵 Recorded as a liveness reading on the Open edX distribution layer, not as a new address: `openedx/openedx-core` is carried |
+| 5 | 🟢 **`bncc` resolves a code/data SPLIT across two repositories, which is why its grant is readable at all.** Its `project_urls` name [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) as `Codigo` and [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) as `Dados`, plus a changelog and an issues URL — **four** repository-bearing URLs. 🔵 Set beside finding 6 in the same sweep, it is the control that shows metadata completeness is a **publisher** choice |
+| 6 | 🔴 **`tutor-contrib-openedxmcp` publishes no `project_urls` and no `home_page`** — `p280`'s unattributable class, **third instance and second on PyPI**, and the second from the **same publisher** as the first. 🟢 The cause is a house habit, not a registry defect |
+
+### 🔵 What the trending legs returned — stated so silence cannot read as coverage
+
+🔴 **The four global supply legs returned nothing unshelved.** The `github trending education AI 2026`
+leg's one education-specific repository is [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy),
+**carried here since `p384`** — and this pass re-read its grant as a spot check: `main/LICENSE`
+**25 289 B**, **ODbL**, which is *exactly* what `agents/top.md:2029` already says. 🟢 **A re-read that
+finds nothing is what licenses the shelf to stand.** 🔵 The other returns were general-purpose agent
+frameworks (`OpenHands`, `CrewAI`, `LangGraph`, `500-AI-Agents-Projects`) and AI-development
+courseware, all carried, none education supply.
+
+🔴 **The ERP/CRM/SIS leg reproduced `Gap 298`'s shape and added nothing.** It returned
+`OpenEduCat` (LGPL-3.0), `OpenSIS` (GPL-2.0), `Fedena` (Apache-2.0), `RosarioSIS` (GPL),
+`Gibbon` (GPL-3.0), `SchoolTool` (GPL-2.0), `OpenOlat` (Apache-2.0) and
+[`coderzaman/Student-Information-System`](https://github.com/coderzaman/Student-Information-System) —
+**every one carried**, and the leg's own conclusion is this base's: *no major open-source SIS is
+MIT-licensed*. 🟢 Which is `Gap 405-A` and `Gap 298`, unmoved and now corroborated from an
+independent channel.
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was

@@ -3,6 +3,110 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+
+## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the nineteenth pass
+dated today**, after `p395`–`p412`.
+
+🟢 **Gates FIRST, per `p412`'s successor item 1.** `make hooks` ran **before** any research:
+**50 of 51 gates green on the FIRST run** under `p300`'s no-masking runner — **the best first-run
+state this base has recorded**, against `47` for both `p409` and `p412`. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, carried deliberately red since `p398`; `p387-G`
+forbids closing it by weakening a control and this pass did not try. 🟢 **`p412` left the base
+clean** — `gate-census-currency` and `gate-union-currency` were **green on arrival**, the first time
+a pass has inherited a current census rather than a stale one.
+
+🔵 **Channel note, and it is this pass's largest finding.** The egress channel was probed with
+`p293`'s control pair FIRST: `pypi.org` **200**, `raw.githubusercontent.com` **200**. Then **10 of
+10** other hosts answered `http=000` — *connection never established*, not a `403`, not a `404`:
+`moodle.org`, `openeducat.org`, `education.ec.europa.eu`, `gov.uk`, `tum.de`, `uni-siegen.de`,
+`kimadu.de`, `lernen-digital.nrw`, `bildungsserver.de`, `diariodarepublica.pt`. 🔴 **Two of those
+are this industry's own flagship project domains.** 🟢 So the refusal is a property of the
+**channel**, not of any host, and it is an **allowlist** rather than a geography filter — a
+conclusion no single-host observation could reach.
+
+### 🟢 `Pattern AJ` — **Amendment 6**: the AGPL-3.0 denominator is selected in-tree, never by subtraction
+
+🔵 `p412`'s **Amendment 5** made the GPL-3.0 denominator selectable in-tree by `grep -c 'https://'`
+because the FSF ships two revisions. 🟢 **The same instrument works on AGPL-3.0 unchanged, and this
+pass measured it on ten payloads**:
+
+```
+# Step 4a (AGPL-3.0) — pick the denominator from the payload, not from a constant.
+n=$(grep -c 'https://' LICENSE)
+case "$n" in
+  3) ref=34523 ;;   # https form: 661 lines, sha256 0d96a4ff68ad
+  0) ref=34501 ;;   # http  form: 662 lines, sha256 884b434957ba  (n=1 instance measured)
+  *) echo "UNRESOLVED-AGPL-DENOMINATOR: $n https:// occurrences" ; exit 2 ;;
+esac
+```
+
+🔴 **And Amendment 6 FORBIDS the figure `Pattern AI` step 4 carried.** Its `~34 522 B` AGPL
+reference is **`openedx/edx-platform`'s `35 136` B minus this base's own `614` B edX-block figure** —
+a subtraction, not a measurement. 🔴 It matches **neither** form (1 B below `https`, 21 B above
+`http`), and it could not have matched, because `edx-platform`'s base text combines `http://` URLs
+with an **indented** title, a presentation neither measured form has. 🟢 **Rule: never derive a
+licence denominator by subtracting an addendum from a narrowed payload.**
+
+🟢 **Amendment 7 — the ratio floor is computed on the FOLD, not on the bytes.**
+`idurar/idurar-erp-crm` serves the AGPL at **34 230 B**, **293 B** short of canonical at the **same
+661 lines**, and `diff` shows **318 changed lines, every one a stripped indent or a collapsed double
+space**. 🔴 A byte-ratio test reads it at **99.15 %** — harmless against a 50 % floor, and **wrong at
+three significant figures**, which is the defect `p411`'s Amendment 3 exists to prevent. 🟢 So: fold
+with `p378`'s `presentation_digest()` first, then compare; `p312`'s `template_digest()` **must not**
+be used as an AGPL identity oracle, because it reports **6 templates where `p378` reports 3 texts**
+over the same ten payloads, and `identify()` returns `UNKNOWN-TEMPLATE` on **all ten**.
+
+### 🟢 `Pattern AM` — the Open edX RPC side-car, built on a grant that was read but never quoted
+
+🔵 **Built because this base carried `openedx/edx-platform` as `AGPL-3.0`, `35 136` B, for a dozen
+passes without recording what its last nine lines SAY.** 🔴 The usual reading — *"the LMS of record
+is AGPL, so anything we build near it is at network-copyleft risk"* — is **wrong on this payload**,
+and it has been closing off the cheapest Open edX engagement shape there is.
+
+🟢 **The licence fact, measured at `master` on 2026-10-23** (`master/LICENSE`, `35 136` B, sha256
+`e12d78569742`): EdX Inc. appends a clarification that a **public, independently available web
+service** communicating with the work **by any inter-service mechanism including RPC** is **not a
+work based on** it, and that **"Corresponding Source" excludes** source for programs used solely to
+provide such services.
+
+**The recipe.**
+
+| step | what | why this component |
+|---|---|---|
+| 1 | Stand up **Open edX** unmodified, via **`tutor`** | 🟢 The clarification protects a service *beside* the platform. It says nothing about a fork — so **the one thing this pattern forbids is patching `edx-platform`** |
+| 2 | Put the AI service in **its own process, reached only over HTTP/RPC** | 🔴 This is the load-bearing step. An in-process XBlock or a monkey-patched module is **inside** the work; a network service is explicitly outside it |
+| 3 | For the read path, take [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (`master/LICENSE`, **AGPL-3.0**, `34 524` B) as the **reference implementation, not the dependency** | 🔴 It is **AGPL and so is its Tutor plugin** ([`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp), byte-identical licence) — `Gap 297-R`'s absence is exactly this: **no permissive Open edX side-car exists**. 🟢 Read the tool surface — **33** tool definitions were read first-hand at `p189`, on the **Tutor plugin** half of the pair — then write your own against the same Open edX REST endpoints, and the clarification covers *your* service |
+| 4 | Authenticate through **LTI 1.3**, with [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) (**MIT**) or [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (**MIT**) | 🟢 Both read **MIT** on PyPI this pass. 🔴 **`django-lti` declares its licence ONLY in its OSI classifier** — no `license`, no `license_expression` — so a procurement scan that reads one field will report it **unlicensed**. Record the classifier read in the engagement's licence register |
+| 5 | Emit learning telemetry as **xAPI**, keeping the statement store outside the platform too | 🟡 [`tincan`](https://pypi.org/project/tincan/) is Apache-2.0 **in substance** but declares it as the prose string `Apache License 2.0` — **not an SPDX identifier** — and was last uploaded **2020-09-03**. Use it as a format reference; do not take it as a maintained dependency |
+| 6 | Ground the agent in curriculum, by region | 🟢 **North America**: [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) (MIT). **LATAM**: [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) — `bncc` `0.5.1` declares **`MIT`** in `license_expression` and names **four** repository URLs, splitting code from data (`bncc-dev/bncc-dados`). 🟢 **Global/K-6**: [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — 🔴 **ODbL** (`main/LICENSE`, `25 289` B, re-read this pass with **zero drift**), a share-alike **database** licence with **no code grant**, so it constrains the data you redistribute, not the service |
+| 7 | Audit the result with **`Pattern AJ` as amended** before shipping | 🔴 Steps 3 and 6 put an AGPL payload and an ODbL payload in the same engagement. Amendment 6 selects each denominator in-tree; Amendment 7 folds before comparing |
+
+🔵 **Scope boundary, stated because it is the whole value of the pattern.** The clarification is
+**EdX Inc.'s appended statement of intent**, measured in the payload served at `master` on
+**2026-10-23** — strong enough to design against, and not a substitute for counsel on a specific
+deployment. 🟢 **Cite the payload, the ref and the date**, which is why all three are in this
+pattern rather than a footnote. 🔴 And it protects **your** service only: it does not make
+`openedx-mcp` redistributable under other terms, and it does not survive a fork of the platform.
+
+### 🟡 `Pattern AN` — adopting a ministry's prompt assets, where the upstream publishes documents rather than a repository
+
+🔵 **Built because EMEA's clearest new supply this pass has no version control.** **KIMADU**
+(Universität Siegen with NRW's Ministerium für Schule und Bildung) publishes **eleven** didactic
+German-subject agents as OER under **`CC BY-SA 4.0`** — downloadable, adaptable, explicitly
+transferable into one's own environment, and delivered as **HTML and PDF** for pasting into ChatGPT
+or fobizz.
+
+| step | what | the trap it avoids |
+|---|---|---|
+| 1 | **Vendor the prompt into your own repository on day one**, with the retrieval date and source URL in the commit | 🔴 There is **no repository, no package, no version and no digest** upstream. A pass that cites "the KIMADU prompt" without pinning bytes is citing something that can change silently |
+| 2 | **Read the per-file licence notice, not the project's**, before reusing anything | 🔴 The `KIM` document scopes the grant to *"ausschließlich den Prompt und unsere Informationen zur Nutzung"* — **only the prompt and the usage notes.** The **three knowledge-base libraries** the agent runs with are **outside** it. `gate-grant-scope`'s subject, on a prompt asset |
+| 3 | Treat `CC BY-SA 4.0` as **share-alike on the prompt text** | 🟡 Adaptations of the prompt carry the same licence. That is workable for a delivery asset and **wrong for a product differentiator** — so put client-specific pedagogy in the libraries you supply, not in the forked prompt |
+| 4 | Supply the knowledge files yourself, from sources you hold | 🟢 Turns step 2's gap into the engagement: the ministry supplies the pedagogy, the client supplies the corpus, Globant supplies the pinning and the retrieval layer |
+| 5 | Label every claim about this asset **search-channel** in the client's register | 🔴 `kimadu.de`, `lernen-digital.nrw`, `uni-siegen.de` and `bildungsserver.de` all answer **`http=000`** here against a control pair that returned `200`. 🔴 The same leg that found this asset also asserted KIMADU had open-sourced *a platform* — it has not; that claim fused two items from one newsletter issue |
+
 ## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
 
 🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was
