@@ -3,6 +3,93 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+## 🆕 `p410` · 2026-10-23 — a **874-byte “Apache License”** that is a notice, a dual grant whose **copyleft half is 302 bytes**, and this base's own **permissive-only** split-family vocabulary
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the sixteenth pass dated today**,
+after `p395`–`p409`.
+
+🔴 **Channel note, and it is this pass's first finding.** `make hooks` **COULD NOT BE RUN.** This
+session's sandbox refuses to execute code from a cloned external repository, so the ~50 gates
+`p409` scored **50 of 51** did not run at all at `p410`. Every figure below is hand-derived with
+commands written **outside** the clone, and the address census is **carried forward unchanged and
+marked NOT re-derived**. 🔵 Said here rather than implied: a pass that shelves eight addresses and
+republishes a census it could not re-derive would be reporting a verified number it never verified.
+
+🔵 **`api.github.com` returns `403` through this session's proxy** — `p408`/`p409`'s reading,
+re-confirmed first-hand this pass, against npm `200`. Every licence, ref and date below is read from
+**git itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`ls-tree -r` / `cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second
+channel. 🔴 **`gnu.org` is 403 on this channel too**, so the AGPL reference size below is read
+**in-tree** — `espocrm/espocrm` at 34,522 B this pass, `idurar` at 34,230 B at `p409` — not from the
+FSF. 🟢 The Apache reference *was* fetchable and **was byte-counted: 11,358 B.**
+
+🟢 **This is a RESEARCH pass, and the saturation broke.** `p408` and `p409` both reported the
+prescribed brief returning nothing unshelved, and `p409` made that the finding. 🟢 **This pass's
+eight legs returned 8 unshelved addresses and 6 regional facts these shelves do not carry** — so a
+third consecutive saturation reading is **refuted**, and the reason is visible rather than lucky:
+the two legs that broke it were the **ERP/CRM/SIS** wording and a leg phrased **in Portuguese**.
+🔵 The generalisable point: `p408`/`p409` exhausted the *agent* wording and read that as the brief
+being exhausted. **Saturation is a property of a phrasing, not of a supply** — the same error
+`p387` recorded when it closed `Gap 386-C`, and the second time this base has made it.
+
+**Evidence:** [`licence-payload-ratio`](../evidence/licence-payload-ratio.2026-10-23-p410.tsv)
+(10 rows) · [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p410.tsv) (6 rows) ·
+[`pt-supply-probe`](../evidence/pt-supply-probe.2026-10-23-p410.tsv) (4 rows) ·
+[`gap-retest`](../evidence/gap-retest.2026-10-23-p410.tsv) (4 rows).
+
+### 🟢 What this pass found
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A licence path whose payload is a NOTICE, caught by byte size.** [`addex12/School-CRM`](https://github.com/addex12/School-CRM) — default ref **`develop`**, HEAD `011a98c` **2025-05-10 · 531 d**. Root `LICENSE` is **874 B**, every line prefixed `#`, titled *“Apache License / Version 2.0”* and carrying `SPDX-License-Identifier: Apache-2.0`. 🔴 **Apache-2.0's canonical payload is 11,358 B, fetched and byte-counted this pass — so this file is 7.7 % of the licence it names.** It is the ~175-word per-file appendix, pasted at the grant path. 🔴 **And `composer.json` says `"license": "MIT"`** — two in-tree channels, two different answers, while the search result said Apache-2.0 |
+| 2 | 🔴 **The byte-size tell cuts both ways, and here it cuts the wrong way.** 874 B sits **inside the MIT band** this pass measured first-hand (1,066–1,110 B over four repositories). 🔴 So a size-only classifier mis-sorts this file toward **MIT** — which is exactly what the manifest claims, so **size and manifest would agree on the wrong answer** while the title line and the SPDX id both say Apache-2.0. 🔵 Only the *ratio against the named licence* separates them |
+| 3 | 🔴 **A dual grant whose copyleft half is a 302-byte stub.** [`ivan-my-wong/flowclass`](https://github.com/ivan-my-wong/flowclass) — `main`, HEAD `bdbc79b` **2026-09-20 · 33 d**. Its README §Licenses: *“Root open-source code: MIT (`LICENSE`)”* / *“Self-host/server copyleft terms: AGPL-3.0 (`LICENSE-AGPL`)”*. 🟢 `LICENSE` is a real MIT payload, **1,066 B**. 🔴 **`LICENSE-AGPL` is 302 B — 0.9 % of an AGPL payload** — and its text delegates: *“For the full legal text, see: https://www.gnu.org/licenses/agpl-3.0.txt”*. 🔴 **`package.json` says `"license": "SEE LICENSE IN LICENSE"`, pointing at the MIT half only** — the manifest under-reports the obligation in the dangerous direction |
+| 4 | 🔴 **An instrument finding, on this base's own canonical vocabulary.** [`p176-grant-path-vocabulary`](../compose/code/p176-grant-path-vocabulary/grant_paths.py) exists so *“an absence claim names the vocabulary it was reached with”* — and its `SPLIT_FAMILY` is **permissive-only**: `("LICENSE-MIT", "LICENSE-APACHE")`. **`is_grant_path("LICENSE-AGPL")` is `False`.** 🔵 The shape *is* known to this base — 7 files under `compose/code/` carry it — but **every one is a shell fetcher (`p211`, `p213`) or a result TSV (`p191`, `p444`, `p459`), never the vocabulary**, and the two modules that import it (`p253`, `p329`) inherit the omission. 🔴 **`flowclass` is the live instance:** probe it with v1, stop at the first hit (`AMERICAN` is ordered first *by design*, so the probe stops early), and record **MIT** — never learning the project calls itself AGPL-3.0 when self-hosted. 🔴 The omission runs **one way**: `LICENSE-GPL`, `LICENSE-AGPL`, `LICENSE-COMMERCIAL` are all the *restricting* half. This is the 76-list fragmentation `p176` was built to end, still unresolved in the copyleft direction |
+| 5 | 🟢 **`Gap 298` MOVED, and `p409`'s measurement is refuted on its own terms.** `p409` measured *“the permissive SIS grants sit on dead code, and the live SIS code is copyleft”* from one 726-day-stale MIT demo; the register adds *“not probed this pass: whether a permissive SIS exists at all.”* 🟢 It does: [`shrikrishna-lab/StudentManagement`](https://github.com/shrikrishna-lab/StudentManagement) (“EduTrack ERP”) — **MIT, 1,077 B, HEAD `e75afa5` 2026-10-04 · 19 d**, 156 tracked paths, three tiers (`frontend/` React 18/19 + Vite 6 · `server/` Express 4.21 + WebSocket · `backend/` Java 21 DAO layer), `database/student_management.sql`, `.env.example`, `DESIGN.md`, `CONTRIBUTING.md`. 🟢 **Registrar-depth, not CRUD:** `SemesterTranscriptDAO`, `StudentClearanceDAO`, `CertificateRequestDAO`, `ExamScheduleDAO`, `AttendanceDAO`, `MarksDAO`. 🟡 **Not closed — restated:** single author (`com.krrish`), a vendored `mysql-connector-j-8.4.0.jar` built from a hand-written `backend/sources.txt` with **no `pom.xml` or `build.gradle`**, `data/students.txt` as a flat file, and a README trading in superlatives. **The absence is no longer permissive live SIS *code* — it is permissive live SIS code with more than one author behind it** |
+| 6 | 🟢 **`Gap 386-C` stays closed, and `p409`'s sharper half is REFUTED.** `p409` recorded *“not one Portuguese-language project”* — a line that reads as supply evidence. 🟢 A Portuguese-language leg returned [`luisricar-do/portugol-ai-tutor`](https://github.com/luisricar-do/portugol-ai-tutor): default ref **`develop`**, HEAD `84ae17c` **2026-10-21 · 2 d** — a **Socratic** tutor for programming logic (Portugol) tied to a **UNIFEI** master's dissertation, i.e. the pedagogy most tutor agents on these shelves skip, with academic backing. 🔴 **Licence `GPL-3.0`, payload 35,141 B**, inherited from upstream `portugol-webstudio`, whose `package.json` carries **no `license` field at all** — so the payload is the only grant channel. 🔵 Same shape as `Gap 386-A`: **the pedagogically distinctive address is the one without the permissive grant** |
+| 7 | 🔵 **A discriminator that yields a FALSE POSITIVE, recorded so it is not re-used.** Grepping a ~35 KB payload for `Affero` to separate AGPL-3.0 from GPL-3.0 **does not work**: `portugol-ai-tutor`'s **GPL-3.0** payload contains *“Affero”* **3 times**, because GPL-3.0 **§13** is titled *“Use with the GNU Affero General Public License”*. 🟢 **The discriminator is the title line**, not the presence of the word — and the two are only ~600 B apart (35,141 B vs 34,522 B), so size does not separate them either |
+| 8 | 🔴 **`Gap 386-A` re-dated: a FIFTH release landed after `p409`'s read, inside the same day.** `p409` read npm `brightspace-mcp-server` at **5.0.12** earlier on 2026-10-23. An independent read this pass: **`5.0.13`, published 2026-10-23**, `license: MIT`, `repository: git+https://github.com/RohanMuppa/brightspace-mcp-server.git`. 🔴 **5.0.8 → 5.0.13 inside one day.** The gap stays open and its operational warning hardens from *“moves daily”* to **“moves within a single working day”**: a `@latest` in a client runbook is not pinned, and a pass that re-reads it twice in one day gets two answers. 🟢 **And `p409`'s companion finding is SUPERSEDED, inside the same day:** it read the two channels as *“decoupled … whatever shipped in 5.0.9–5.0.12 is not visible at the default ref”* and advised *“read the tags, not `main`.”* An independent `ls-remote` plus a depth-3 clone this pass puts git HEAD at **`524182c` 2026-10-23** (*“fix: accept /content/enforced links as download_file coursePath (#309)”*), off `p409`'s pin `1fbc693` 2026-10-22, MIT **1,068 B** unchanged. 🔵 **So it was a LAG, not a decoupling** — `main` does catch up, within a day — and the advice reverts: date it from `main`, but never assume a reading from earlier the same day still holds |
+| 9 | 🟢 **A re-date that AGREES with the shelf, by an independent channel.** `p393` enumerated [`henriquebotelhogomes/educacao`](https://github.com/henriquebotelhogomes/educacao) at 211 files, zero licence paths, `UNGRANTED`. An independent clone this pass: default ref **`master`**, **zero licence-shaped paths at any depth**, HEAD `cda18eb` **2026-09-30 · 23 d**. 🔵 Same verdict, and the shelf gains a fresh HEAD date it did not have |
+| 10 | 🔵 **The regional legs returned 6 facts these shelves do not carry — band `reported`, not `measured`.** Singapore's **National AI Impact Programme** (40,000 technology professionals over three years) and baseline AI training mandated for **all higher-education students from 2027**; **AI Verify** functioning as a de-facto vendor requirement; **Beijing's ≥8 hours** of AI instruction per student per year; India's **₹500 crore** centre of excellence and **₹10,372 crore** IndiaAI mission behind mandatory AI from **Class 3 in 2026–27**; Mexico's **Estado de México** education-law reform (April 2026) on graduated AI use in *media superior* and *superior*; Colombia's **PL 043/2025 Senado · 324/2025 Cámara**. 🔴 **Every one is from a secondary source** — vendor blogs, trackers and aggregators — so all six enter at band `reported` and none supersedes `p406`'s statute-level detail |
+| 11 | 🔴 **Negative and adjacent rows, published with their reasons.** [`asadbekme/education-crm`](https://github.com/asadbekme/education-crm) — **zero licence-shaped paths at any depth**, HEAD `4202d7e` 2025-08-08 · **441 d**: ungranted *and* stale. [`willianangelomn-spec/curupiracode`](https://github.com/willianangelomn-spec/curupiracode) — MIT 1,110 B, HEAD `e17b37b` 2026-09-01 · 52 d, Brazilian and live, but a **general-purpose** local-agent harness, **not education**. [`ishandutta2007/Awesome-Higher-Education-CRM`](https://github.com/ishandutta2007/Awesome-Higher-Education-CRM) — MIT 1,068 B, HEAD `e74cee2` 2026-10-13 · 10 d: an **index**, not software. 🔵 All three shelved so the same legs do not re-return them as supply |
+
+### 🔵 The regional legs — what each returned, stated so silence cannot read as coverage
+
+🟢 **All four regional legs ran, and for the first time in four passes two of them returned
+something unshelved.** 🔴 Every regional fact below is **band `reported`** — secondary sources — and
+**none supersedes `p406`'s statute-level block.** Opportunity copy is folded into this file's
+**single canonical `## Opportunities by region`** block, not duplicated into a second one.
+
+| leg | returned | unshelved? |
+|---|---|---|
+| **North America** | ~100 state bills touching student AI use in K-12 this session, within 1,500+ AI bills; Maryland **SB 720** (effective 2026-06-01), Idaho **SB 1227**, **Arizona HB 4040**; RAND 54 % of students / 53 % of teachers; 86 % of education organisations using gen-AI without a policy | 🔴 **Nothing material.** The shelves carry Maryland (17 mentions), Idaho (11) and Arizona. 🟢 One refinement: **HB 4040 reaches public universities**, not only K-12 |
+| **EMEA** | The **Digital Omnibus, Regulation (EU) 2026/1744**, deferring Annex III education obligations from 2026-08-02 to **2027-12-02**; Article 50 transparency unchanged from 2026-08-02; the emotion-inference ban in education live since 2025-02-02; Article 4 AI-literacy duty in force | 🔴 **Nothing.** The shelves carry the Omnibus at **21 mentions** and `2027-12-02` at **13**. 🟢 This is the third independent channel to confirm it — the EMEA regulatory layer of this base is **settled**, and a successor can stop re-buying it |
+| **APAC** | Singapore's **National AI Impact Programme** (40,000 professionals / 3 years), higher-education baseline AI training **from 2027**, **AI Verify** as de-facto vendor gate; **Beijing ≥8 h/student/year**; India's **₹500 crore** CoE and **₹10,372 crore** IndiaAI mission; Ipsos 2026 ban-support 23 % (Indonesia) – 31 % (South Korea) | 🟢 **Four facts unshelved** — `National AI Impact`, `AI Verify`, the Beijing hours figure and both India funding figures all return **zero** matches on these shelves. 🔴 All band `reported` |
+| **LATAM** | **Estado de México** education-law reform (April 2026); Colombia **PL 043/2025 Senado · 324/2025 Cámara**; Brazil **PL 2338/2023** still pending in the Chamber; Argentina on **Disposición 2/2023** only; UNESCO: region's highest student gen-AI use, **19 %** of institutions with an approved internal policy | 🟢 **Two facts unshelved** (`Estado de México`, `PL 043`). 🔴 Both sub-national or procedural, and both secondary |
+
+### 🔴 And the supply-side finding that changes a regional recommendation
+
+🔴 **`p409`'s LATAM paragraph says, in this file: *“Do not plan on LATAM-native agent supply … the
+two addresses an in-language leg returned this pass are both ungranted, so neither can be built
+on.”*** 🟢 **That is now too strong, and the correction is folded into the LATAM subsection below:**
+a Portuguese-language leg this pass returned [`luisricar-do/portugol-ai-tutor`](https://github.com/luisricar-do/portugol-ai-tutor)
+— **live by 2 days, academically backed, and GRANTED** (GPL-3.0, 35,141 B). 🔵 It is copyleft, not
+permissive, so the advice becomes **conditional rather than negative**: it can be *hosted* (GPL-3.0
+is not AGPL — network use is not distribution) but not embedded in proprietary client deliverables
+without compliance. **A conditional yes and a flat no are different proposals.**
+
+### 🔴 The census, carried forward and marked NOT re-derived
+
+🔴 **`p409` published 2 730 harvested shapes → 35 not addresses → 2 695 addresses**, and
+**3 529 addresses over both channels**. 🔴 **This pass shelves 8 new addresses, so by this base's own
+`gate-census-currency` rule those figures are `STALE` — and `p410` cannot re-derive them**, because
+`make address-shape-census` is code in this clone and this session will not execute it.
+
+🟢 **So they are left standing as `p409`'s figures, labelled stale, rather than re-stated as
+`p410`'s.** 🔵 `p409`'s own note applies unchanged: *history is not edited to match.* A successor
+with an executable `make` should run `make address-shape-census` and `make union-currency` as the
+**last act before its commit**, and should expect **+8** on the address count from this pass alone.
 
 ## 🆕 `p409` · 2026-10-23 — a search result that says **MIT** over AGPL, the repository behind this base's own *unattributable* npm row, and four declared absences re-tested rather than re-asserted
 
@@ -202,6 +289,17 @@ two LMS footholds; the **binding constraint is that the distinctive read-only D2
 own read-only server. 🟡 NYC's grade-8 moratorium is being copied — assume student-facing K-8 is
 closed and sell **teacher-facing** workflow instead.
 
+
+**🆕 `p410` · 2026-10-23 — this pass's addition to North America.**
+🟢 **One refinement, and it widens the buyer.** **Arizona HB 4040** would require student-AI-use
+policies of K-12 districts **and public universities** — most state instruments on these shelves stop
+at K-12, so this is the rarer shape: a single statute that makes the **same** policy-and-audit
+deliverable sellable to two different procurement offices. 🔴 **Still a bill**, so sell readiness and
+say which it is. 🔵 Nothing else in this leg was unshelved: Maryland **SB 720** (17 mentions on these
+shelves), Idaho **SB 1227** (11) and the ~100-bill session count are all carried. 🟡 The durable
+number remains the policy gap — **86 % of education organisations using gen-AI, most without a
+policy** — which is the governance engagement, not a tooling one.
+
 ### EMEA
 
 🟢 **Annex III conformity for education, as a reusable asset.** Education sits in the AI Act's
@@ -223,6 +321,19 @@ named provider. 🔵 `OpenMAIC`'s central model governance (`openmaic.yml` — e
 user-supplied keys forbiddable) is the one shelf asset that maps directly onto an AI Act technical
 file. 🟡 Germany's €20 bn commitment and the UK's principles-based divergence mean **two different
 sales motions inside one region** — do not quote a single EMEA playbook.
+
+
+**🆕 `p410` · 2026-10-23 — this pass's addition to EMEA.**
+🔴 **Nothing unshelved, and that is now worth money rather than worth noting.** The EMEA leg returned
+the **Digital Omnibus, Regulation (EU) 2026/1744** deferral of Annex III education obligations to
+**2027-12-02**, Article 50 transparency unchanged from **2026-08-02**, the education emotion-inference
+ban live since **2025-02-02**, and the Article 4 AI-literacy duty in force. 🟢 **This base already
+carries every one** — the Omnibus at 21 mentions, `2027-12-02` at 13. 🔵 **This is the third
+independent channel to confirm the same timeline, so the EMEA regulatory layer is SETTLED: a
+successor should stop re-buying it and spend the leg elsewhere.** 🟡 The sellable consequence is
+unchanged and sharpened by repetition: the deferral moved the **deadline**, not the **work** —
+Article 50 and Article 4 bite now, and an institution that waits for December 2027 has two live
+duties and no evidence for either.
 
 ### APAC
 
@@ -269,6 +380,22 @@ permissive and under-maintained, so a studio can contribute upstream and own the
 🟡 Korea's grace period ends **2027-01-22**; work booked in 2026 should be written to the Framework
 Act as if penalties already applied.
 
+
+**🆕 `p410` · 2026-10-23 — this pass's addition to APAC, and it is where this pass's legs actually
+paid.**
+🟢 **Four facts these shelves did not carry, all band `reported`.** **Singapore** is the clearest
+engagement: a **National AI Impact Programme** training **40,000 technology professionals over three
+years**, baseline AI training mandated for **all higher-education students from 2027**, and **AI
+Verify** functioning as a de-facto gate for vendors selling into regulated sectors. 🔵 Read together
+those are one shape — **a workforce-scale curriculum mandate with a vendor-assurance regime attached**
+— which is a capability-building and conformance engagement, not a tutor deployment. 🟢 **India**
+pairs a mandate with money: AI and computational thinking compulsory **from Class 3 in 2026–27**,
+behind a **₹500 crore** centre of excellence and the **₹10,372 crore** IndiaAI mission; the shelves
+held the mandate, not the funding. 🟡 **Beijing** adds a measurable floor — **≥8 hours** of AI
+instruction per student per year — which is the kind of number a procurement document can be written
+against. 🔴 **All four are secondary-source**, and the compulsory-curriculum framing is contested
+inside this very leg, so none supersedes `p406`'s statute-level detail: cite them as `reported`.
+
 ### LATAM
 
 🟢 **The curriculum wave arrived and the capacity did not.** ILIA 2026: **11 of 20** countries now
@@ -292,6 +419,26 @@ both. 🔴 **Do not plan on LATAM-native agent supply**: `Gap 386-C` holds for a
 two addresses an in-language leg returned this pass are both **ungranted**, so neither can be built
 on. 🔵 Build on the Global shelf and localise.
 
+
+**🆕 `p410` · 2026-10-23 — this pass's addition to LATAM, and it CORRECTS `p409`'s copy above.**
+🔴 **`p409` wrote, in this block: *“Do not plan on LATAM-native agent supply … the two addresses an
+in-language leg returned this pass are both ungranted, so neither can be built on.”* That is now too
+strong.** 🟢 A leg phrased **in Portuguese** returned
+[`luisricar-do/portugol-ai-tutor`](https://github.com/luisricar-do/portugol-ai-tutor) — **live by 2
+days** (HEAD `84ae17c` 2026-10-21), a **Socratic** Portugol tutor out of a **UNIFEI** master's
+dissertation, and **granted**: GPL-3.0, payload 35,141 B. 🔵 **The advice becomes conditional rather
+than negative, and the two are different proposals:** GPL-3.0 is **not** AGPL, so hosting it as a
+service is not distribution and is fine — embedding modified code in a proprietary client deliverable
+is not. 🟡 **The deeper correction is methodological:** `p409`'s *“not one Portuguese-language
+project”* was a property of its **leg's language**, which is the same error `p387` recorded when it
+closed `Gap 386-C`. **Run the leg in the region's language before writing a supply claim about the
+region.** 🔵 Two policy facts added, both band `reported` and both narrow: **Estado de México**
+reformed its education law in **April 2026** for graduated AI use in *media superior* and *superior*
+(sub-national — it does not generalise to Mexico), and **Colombia** has **PL 043/2025 Senado ·
+324/2025 Cámara** in progress alongside `Ley 2626 de 2026`, which these shelves already hold at a
+firmer band. 🔴 Unchanged and still the engagement: **92 % of students and 79 % of faculty using AI
+against 19 % of institutions with an approved internal policy.**
+
 ### Global
 
 🟢 **The cross-region asset is the conformity pack, and it is the one thing that compounds.** The
@@ -307,6 +454,23 @@ platform tier decayed **0 %** over 104 addresses and the agent tier **5.0 %** ov
 **integration contract** at the centre of a design, not the agent — in every region.
 
 ---
+
+
+**🆕 `p410` · 2026-10-23 — this pass's addition to Global.**
+🔴 **A due-diligence finding that prices into every region's SOW.** Of eight addresses read
+first-hand this pass, **three** carry a grant path whose content does not support the grant its
+metadata claims — an 874 B *“Apache License”* notice (**7.7 %** of Apache-2.0's 11,358 B) whose
+manifest says `MIT`; a dual grant whose **AGPL half is 302 B** (**0.9 %** of an AGPL payload) while
+its manifest names the permissive half only; and a fork whose manifest carries **no `license` field
+at all**. 🔵 **The trend is not more unlicensed code — it is more *plausibly* licensed code**, and
+plausibility is exactly what an automated check reads. 🟢 **Sellable as a service, in any region:** a
+grant-resolution pass over a client's existing open-source estate, delivered as a per-address verdict
+with its channels (`Pattern AI`). 🔴 **And one operational term belongs in every contract now:**
+npm `brightspace-mcp-server` moved **5.0.8 → 5.0.13 inside a single day**, read twice on the same
+date with two answers — so **pin exact versions and never write `@latest` into a runbook.** 🟡 The
+scarcity has also shifted: the two addresses that moved gaps this pass are both essentially
+**single-maintainer** projects, so the diligence question is no longer *“is there a grant?”* but
+**“who answers when it breaks?”** — and that question has no SPDX identifier.
 
 ## 🆕 `p405` · 2026-10-23 — the four regional legs returned ZERO new facts for a THIRD consecutive pass, and TWO of the four returned no education instrument at all
 

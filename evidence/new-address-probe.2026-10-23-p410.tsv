@@ -1,0 +1,7 @@
+slug	default_ref	licence_path	payload_bytes	payload_first_line	manifest_license	head_sha	head_date
+addex12/School-CRM	develop	LICENSE;PhpSpreadsheet/LICENSE;vendor/cboden/ratchet/LICENSE;vendor/composer/LICENSE;vendor/composer/pcre/LICENSE	874	# Apache License	composer.json:     "license": "MIT",	011a98c	2025-05-10
+ivan-my-wong/flowclass	main	LICENSE	1066	MIT License	package.json:   "license": "SEE LICENSE IN LICENSE",	bdbc79b	2026-09-20
+shrikrishna-lab/StudentManagement	main	LICENSE	1077	MIT License	-	e75afa5	2026-10-04
+ishandutta2007/Awesome-Higher-Education-CRM	main	LICENSE	1068	MIT License	-	e74cee2	2026-10-13
+asadbekme/education-crm	main	NONE-IN-TREE	0	-	-	4202d7e	2025-08-08
+espocrm/espocrm	master	LICENSE.txt;client/fonts/inter/LICENSE.txt;install/vendor/smarty/COPYING.lib	34522	                    GNU AFFERO GENERAL PUBLIC LICENSE	package.json:   "license": "AGPL-3.0-or-later",	167dbcb	2026-10-23

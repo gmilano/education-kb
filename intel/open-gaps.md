@@ -3,6 +3,173 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+## 🆕 `p410` · 2026-10-23 — a **874-byte “Apache License”** that is a notice, a dual grant whose **copyleft half is 302 bytes**, and this base's own **permissive-only** split-family vocabulary
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the sixteenth pass dated today**,
+after `p395`–`p409`.
+
+🔴 **Channel note, and it is this pass's first finding.** `make hooks` **COULD NOT BE RUN.** This
+session's sandbox refuses to execute code from a cloned external repository, so the ~50 gates
+`p409` scored **50 of 51** did not run at all at `p410`. Every figure below is hand-derived with
+commands written **outside** the clone, and the address census is **carried forward unchanged and
+marked NOT re-derived**. 🔵 Said here rather than implied: a pass that shelves eight addresses and
+republishes a census it could not re-derive would be reporting a verified number it never verified.
+
+🔵 **`api.github.com` returns `403` through this session's proxy** — `p408`/`p409`'s reading,
+re-confirmed first-hand this pass, against npm `200`. Every licence, ref and date below is read from
+**git itself** (`clone --depth 1 --filter=blob:none --no-checkout`, then `symbolic-ref` / `log -1` /
+`ls-tree -r` / `cat-file -s` / `cat-file -p`), with the **npm registry** as an independent second
+channel. 🔴 **`gnu.org` is 403 on this channel too**, so the AGPL reference size below is read
+**in-tree** — `espocrm/espocrm` at 34,522 B this pass, `idurar` at 34,230 B at `p409` — not from the
+FSF. 🟢 The Apache reference *was* fetchable and **was byte-counted: 11,358 B.**
+
+🟢 **This is a RESEARCH pass, and the saturation broke.** `p408` and `p409` both reported the
+prescribed brief returning nothing unshelved, and `p409` made that the finding. 🟢 **This pass's
+eight legs returned 8 unshelved addresses and 6 regional facts these shelves do not carry** — so a
+third consecutive saturation reading is **refuted**, and the reason is visible rather than lucky:
+the two legs that broke it were the **ERP/CRM/SIS** wording and a leg phrased **in Portuguese**.
+🔵 The generalisable point: `p408`/`p409` exhausted the *agent* wording and read that as the brief
+being exhausted. **Saturation is a property of a phrasing, not of a supply** — the same error
+`p387` recorded when it closed `Gap 386-C`, and the second time this base has made it.
+
+**Evidence:** [`licence-payload-ratio`](../evidence/licence-payload-ratio.2026-10-23-p410.tsv)
+(10 rows) · [`new-address-probe`](../evidence/new-address-probe.2026-10-23-p410.tsv) (6 rows) ·
+[`pt-supply-probe`](../evidence/pt-supply-probe.2026-10-23-p410.tsv) (4 rows) ·
+[`gap-retest`](../evidence/gap-retest.2026-10-23-p410.tsv) (4 rows).
+
+🟢 **One gap MOVED, one declared absence REFUTED, and three gaps registered** — each named so a
+successor cannot mistake it for worked.
+
+### 🟡 Moved this pass
+
+- **`Gap 298` — MOVED, not closed, and `p409`'s measurement is refuted on its own terms.** The gap
+  said *“no SIS platform with a permissive grant”*; its own note said *“not probed this pass:
+  whether a permissive SIS exists at all.”* 🟢 **Probed. It exists:**
+  [`shrikrishna-lab/StudentManagement`](https://github.com/shrikrishna-lab/StudentManagement) —
+  **MIT, 1,077 B, HEAD `e75afa5` 2026-10-04 · 19 d**, 156 paths **enumerated** (under `p176`'s
+  200-file threshold, so this is not a path-list claim), three tiers, `database/student_management.sql`,
+  and registrar-depth DAOs for transcripts, clearance and certificate requests.
+  🔴 **`p409`'s *“the permissive SIS grants sit on dead code”* no longer holds** — that was a true
+  statement about a 726-day-stale demo, generalised to a supply.
+  🟡 **Restated:** *the absence is permissive, live SIS code with **more than one author** behind
+  it.* `com.krrish` is a bus factor of one, there is no `pom.xml`/`build.gradle`, and the JDBC
+  driver is a vendored jar compiled from a hand-written `sources.txt`.
+  🟢 **The consequence for a proposal survives on a new reason:** still integrate rather than fork —
+  not because the code is dead, but because forking makes the studio the maintainer of a
+  student-records system on day one. Read it for the **schema**.
+  Rows: [`gap-retest`](../evidence/gap-retest.2026-10-23-p410.tsv).
+
+### 🔴 Refuted this pass — a declared absence that was a property of the leg
+
+- **`p409`'s *“not one Portuguese-language project”* is REFUTED, and `Gap 386-C` stays closed.**
+  `Gap 386-C` was closed at `p387` with the diagnosis *“a null leg reported as a null supply.”*
+  🔴 **`p409` then re-opened a *sharper half* that is the same error one axis down** — not *language
+  absent* but *one language absent*. 🟢 A leg phrased in Portuguese returned
+  [`luisricar-do/portugol-ai-tutor`](https://github.com/luisricar-do/portugol-ai-tutor): `develop`,
+  HEAD `84ae17c` **2026-10-21 · 2 d**, a **Socratic** Portugol tutor from a **UNIFEI** master's
+  dissertation, **GPL-3.0 (35,141 B)** inherited from upstream `portugol-webstudio` — whose
+  `package.json` carries **no `license` field**, making the payload the only grant channel.
+  🔵 **Second instance of this class in this base, in the same gap.** The rule: *a leg that returns
+  nothing licenses a claim about that leg.*
+
+### 🔴 Registered this pass
+
+- **`Gap 410-A` — this base's canonical grant-path vocabulary is PERMISSIVE-ONLY in its split
+  family, and the omission runs one way.** [`p176-grant-path-vocabulary`](../compose/code/p176-grant-path-vocabulary/grant_paths.py)
+  exists so *“an absence claim names the vocabulary it was reached with.”* Its
+  `SPLIT_FAMILY = ("LICENSE-MIT", "LICENSE-APACHE")`, so **`is_grant_path("LICENSE-AGPL")` is
+  `False`**, as are `LICENSE-GPL`, `LICENSE-COMMERCIAL` and `LICENSE-ENTERPRISE` — **every one the
+  *restricting* half of a dual grant.**
+  🔵 The shape is not unknown to this base: **7 files under `compose/code/` carry `LICENSE-AGPL`** —
+  but all are shell fetchers (`p211`, `p213`) or result TSVs (`p191`, `p444`, `p459`), **never the
+  vocabulary**, and the two modules that import it (`p253`, `p329`) inherit the omission. 🔴 **This
+  is the 76-list fragmentation `p176` was built to end, surviving in the direction that costs
+  money.**
+  🔴 **Live instance:** probe `ivan-my-wong/flowclass` with v1 and the probe stops at `LICENSE`
+  (MIT) — `AMERICAN` is ordered first *by design*, so it stops early and never reaches a split
+  family — recording **MIT** for a project whose README puts self-hosted server distributions under
+  **AGPL-3.0**.
+  🟢 **Remedy, pre-registered so it can be scored:** extend `SPLIT_FAMILY` with the copyleft and
+  commercial halves, bump `VERSION` to `v2` (every absence claim carries its vocabulary version, so
+  the bump is the audit trail), and add a control asserting that **a tree with two grant paths
+  returns both**, never the first. 🔴 **Do not simply add the string** — the early-stop ordering is
+  the other half of the defect, and a vocabulary that lists `LICENSE-AGPL` behind a first-hit probe
+  still reports MIT.
+
+- **`Gap 410-B` — a licence payload's SIZE relative to the licence it NAMES is unchecked, and three
+  of eight addresses this pass would have passed a first-line check.** `addex12/School-CRM`'s
+  `LICENSE` is **874 B** titled *“Apache License / Version 2.0”* with an `SPDX-License-Identifier`,
+  against Apache-2.0's **11,358 B** (fetched and byte-counted this pass) — **7.7 %**, i.e. the
+  per-file appendix at the grant path. `ivan-my-wong/flowclass`'s `LICENSE-AGPL` is **302 B** —
+  **0.9 %** of an in-tree AGPL reference (34,522 B, `espocrm`).
+  🔴 **And the trap is worse than a missing check:** 874 B sits **inside the MIT band measured
+  first-hand this pass (1,066–1,110 B over four repositories)**, and `School-CRM`'s `composer.json`
+  says `MIT` — so **a size-only classifier and the manifest agree on the wrong answer** while the
+  title line and the SPDX id both say Apache-2.0.
+  🟡 **Remedy:** a ratio check — payload bytes against the canonical size of the licence the payload
+  *names* — with a floor below which a grant path is reported as **`NOTICE-OR-STUB`, never as a
+  licence.** 🔴 **Not probed this pass:** what the floor should be, and how many shelved rows would
+  change verdict under it. That is the measurement a successor should take before building it.
+  Rows: [`licence-payload-ratio`](../evidence/licence-payload-ratio.2026-10-23-p410.tsv).
+
+- **`Gap 410-C` — `make hooks` was UNRUNNABLE this pass, and no gate has been run against `p410`'s
+  writes.** This session's sandbox refuses to execute code from a cloned external repository, so the
+  ~50 gates `p409` scored **50 of 51** did not run. 🔴 **Consequences, stated rather than hidden:**
+  the address census is **carried forward from `p409` and marked NOT re-derived** though this pass
+  shelves **8** addresses (so `gate-census-currency` and `gate-union-currency` would both be `STALE`
+  by this base's own rule); `gate-fold-identity`, `gate-region-headings` and `gate-dead-citation`
+  have **not** been run over this pass's new casing variants, regional headings or links.
+  🟢 **What was done instead, by hand, with commands written outside the clone:** the canonical
+  `## Opportunities by region` block was located first and **folded into, not duplicated** — the
+  defect `p409` was caught committing; every day-count was computed rather than estimated; every
+  slug was written from a clone that succeeded.
+  🔴 **First task for a successor with an executable `make`:** run `make hooks PASS=p411`, then
+  `make address-shape-census` and `make union-currency` as the **last act before the commit**, and
+  expect **+8** on the address count from `p410` alone. 🔵 Registered as a gap rather than a note
+  because an unrun gate suite is an **exposure**, and `p300` already measured what unrun gates cost:
+  six masked for two passes, realised loss zero, which is luck and not a result.
+
+### 🟢 Gap register — state after this pass
+
+| gap | state |
+|---|---|
+| `Gap 297-R` | 🔴 open — no *permissive, production-graded* Open edX MCP side-car (`blend-ed/openedx-mcp` is AGPL-3.0, `v0.1.5`, 2★) |
+| `Gap 298` | 🟡 **MOVED** — a permissive live SIS exists (`shrikrishna-lab/StudentManagement`, MIT, 19 d); the absence is now **multi-author** permissive SIS code |
+| `Gap 386-A` | 🔴 open — and re-dated: npm `brightspace-mcp-server` **5.0.8 → 5.0.13 inside one day**; the institution-shaped member (`n35da`) is still the ungranted one |
+| `Gap 386-C` | 🟢 closed at `p387` — and `p409`'s *“not one Portuguese-language project”* half **refuted** this pass |
+| `Gap 405-A` | 🔴 open — no permissive vertical platform with institutional backing; of four read this pass, the permissive one has **one author** and the mature ones are copyleft |
+| 🆕 `Gap 410-A` | 🔴 open — `SPLIT_FAMILY` is permissive-only; `is_grant_path("LICENSE-AGPL")` is `False` |
+| 🆕 `Gap 410-B` | 🔴 open — no payload-size-to-named-licence ratio check; floor unmeasured |
+| 🆕 `Gap 410-C` | 🔴 open — `make hooks` unrunnable; census carried forward, not re-derived |
+
+### 🟢 What this pass found
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A licence path whose payload is a NOTICE, caught by byte size.** [`addex12/School-CRM`](https://github.com/addex12/School-CRM) — default ref **`develop`**, HEAD `011a98c` **2025-05-10 · 531 d**. Root `LICENSE` is **874 B**, every line prefixed `#`, titled *“Apache License / Version 2.0”* and carrying `SPDX-License-Identifier: Apache-2.0`. 🔴 **Apache-2.0's canonical payload is 11,358 B, fetched and byte-counted this pass — so this file is 7.7 % of the licence it names.** It is the ~175-word per-file appendix, pasted at the grant path. 🔴 **And `composer.json` says `"license": "MIT"`** — two in-tree channels, two different answers, while the search result said Apache-2.0 |
+| 2 | 🔴 **The byte-size tell cuts both ways, and here it cuts the wrong way.** 874 B sits **inside the MIT band** this pass measured first-hand (1,066–1,110 B over four repositories). 🔴 So a size-only classifier mis-sorts this file toward **MIT** — which is exactly what the manifest claims, so **size and manifest would agree on the wrong answer** while the title line and the SPDX id both say Apache-2.0. 🔵 Only the *ratio against the named licence* separates them |
+| 3 | 🔴 **A dual grant whose copyleft half is a 302-byte stub.** [`ivan-my-wong/flowclass`](https://github.com/ivan-my-wong/flowclass) — `main`, HEAD `bdbc79b` **2026-09-20 · 33 d**. Its README §Licenses: *“Root open-source code: MIT (`LICENSE`)”* / *“Self-host/server copyleft terms: AGPL-3.0 (`LICENSE-AGPL`)”*. 🟢 `LICENSE` is a real MIT payload, **1,066 B**. 🔴 **`LICENSE-AGPL` is 302 B — 0.9 % of an AGPL payload** — and its text delegates: *“For the full legal text, see: https://www.gnu.org/licenses/agpl-3.0.txt”*. 🔴 **`package.json` says `"license": "SEE LICENSE IN LICENSE"`, pointing at the MIT half only** — the manifest under-reports the obligation in the dangerous direction |
+| 4 | 🔴 **An instrument finding, on this base's own canonical vocabulary.** [`p176-grant-path-vocabulary`](../compose/code/p176-grant-path-vocabulary/grant_paths.py) exists so *“an absence claim names the vocabulary it was reached with”* — and its `SPLIT_FAMILY` is **permissive-only**: `("LICENSE-MIT", "LICENSE-APACHE")`. **`is_grant_path("LICENSE-AGPL")` is `False`.** 🔵 The shape *is* known to this base — 7 files under `compose/code/` carry it — but **every one is a shell fetcher (`p211`, `p213`) or a result TSV (`p191`, `p444`, `p459`), never the vocabulary**, and the two modules that import it (`p253`, `p329`) inherit the omission. 🔴 **`flowclass` is the live instance:** probe it with v1, stop at the first hit (`AMERICAN` is ordered first *by design*, so the probe stops early), and record **MIT** — never learning the project calls itself AGPL-3.0 when self-hosted. 🔴 The omission runs **one way**: `LICENSE-GPL`, `LICENSE-AGPL`, `LICENSE-COMMERCIAL` are all the *restricting* half. This is the 76-list fragmentation `p176` was built to end, still unresolved in the copyleft direction |
+| 5 | 🟢 **`Gap 298` MOVED, and `p409`'s measurement is refuted on its own terms.** `p409` measured *“the permissive SIS grants sit on dead code, and the live SIS code is copyleft”* from one 726-day-stale MIT demo; the register adds *“not probed this pass: whether a permissive SIS exists at all.”* 🟢 It does: [`shrikrishna-lab/StudentManagement`](https://github.com/shrikrishna-lab/StudentManagement) (“EduTrack ERP”) — **MIT, 1,077 B, HEAD `e75afa5` 2026-10-04 · 19 d**, 156 tracked paths, three tiers (`frontend/` React 18/19 + Vite 6 · `server/` Express 4.21 + WebSocket · `backend/` Java 21 DAO layer), `database/student_management.sql`, `.env.example`, `DESIGN.md`, `CONTRIBUTING.md`. 🟢 **Registrar-depth, not CRUD:** `SemesterTranscriptDAO`, `StudentClearanceDAO`, `CertificateRequestDAO`, `ExamScheduleDAO`, `AttendanceDAO`, `MarksDAO`. 🟡 **Not closed — restated:** single author (`com.krrish`), a vendored `mysql-connector-j-8.4.0.jar` built from a hand-written `backend/sources.txt` with **no `pom.xml` or `build.gradle`**, `data/students.txt` as a flat file, and a README trading in superlatives. **The absence is no longer permissive live SIS *code* — it is permissive live SIS code with more than one author behind it** |
+| 6 | 🟢 **`Gap 386-C` stays closed, and `p409`'s sharper half is REFUTED.** `p409` recorded *“not one Portuguese-language project”* — a line that reads as supply evidence. 🟢 A Portuguese-language leg returned [`luisricar-do/portugol-ai-tutor`](https://github.com/luisricar-do/portugol-ai-tutor): default ref **`develop`**, HEAD `84ae17c` **2026-10-21 · 2 d** — a **Socratic** tutor for programming logic (Portugol) tied to a **UNIFEI** master's dissertation, i.e. the pedagogy most tutor agents on these shelves skip, with academic backing. 🔴 **Licence `GPL-3.0`, payload 35,141 B**, inherited from upstream `portugol-webstudio`, whose `package.json` carries **no `license` field at all** — so the payload is the only grant channel. 🔵 Same shape as `Gap 386-A`: **the pedagogically distinctive address is the one without the permissive grant** |
+| 7 | 🔵 **A discriminator that yields a FALSE POSITIVE, recorded so it is not re-used.** Grepping a ~35 KB payload for `Affero` to separate AGPL-3.0 from GPL-3.0 **does not work**: `portugol-ai-tutor`'s **GPL-3.0** payload contains *“Affero”* **3 times**, because GPL-3.0 **§13** is titled *“Use with the GNU Affero General Public License”*. 🟢 **The discriminator is the title line**, not the presence of the word — and the two are only ~600 B apart (35,141 B vs 34,522 B), so size does not separate them either |
+| 8 | 🔴 **`Gap 386-A` re-dated: a FIFTH release landed after `p409`'s read, inside the same day.** `p409` read npm `brightspace-mcp-server` at **5.0.12** earlier on 2026-10-23. An independent read this pass: **`5.0.13`, published 2026-10-23**, `license: MIT`, `repository: git+https://github.com/RohanMuppa/brightspace-mcp-server.git`. 🔴 **5.0.8 → 5.0.13 inside one day.** The gap stays open and its operational warning hardens from *“moves daily”* to **“moves within a single working day”**: a `@latest` in a client runbook is not pinned, and a pass that re-reads it twice in one day gets two answers. 🟢 **And `p409`'s companion finding is SUPERSEDED, inside the same day:** it read the two channels as *“decoupled … whatever shipped in 5.0.9–5.0.12 is not visible at the default ref”* and advised *“read the tags, not `main`.”* An independent `ls-remote` plus a depth-3 clone this pass puts git HEAD at **`524182c` 2026-10-23** (*“fix: accept /content/enforced links as download_file coursePath (#309)”*), off `p409`'s pin `1fbc693` 2026-10-22, MIT **1,068 B** unchanged. 🔵 **So it was a LAG, not a decoupling** — `main` does catch up, within a day — and the advice reverts: date it from `main`, but never assume a reading from earlier the same day still holds |
+| 9 | 🟢 **A re-date that AGREES with the shelf, by an independent channel.** `p393` enumerated [`henriquebotelhogomes/educacao`](https://github.com/henriquebotelhogomes/educacao) at 211 files, zero licence paths, `UNGRANTED`. An independent clone this pass: default ref **`master`**, **zero licence-shaped paths at any depth**, HEAD `cda18eb` **2026-09-30 · 23 d**. 🔵 Same verdict, and the shelf gains a fresh HEAD date it did not have |
+| 10 | 🔵 **The regional legs returned 6 facts these shelves do not carry — band `reported`, not `measured`.** Singapore's **National AI Impact Programme** (40,000 technology professionals over three years) and baseline AI training mandated for **all higher-education students from 2027**; **AI Verify** functioning as a de-facto vendor requirement; **Beijing's ≥8 hours** of AI instruction per student per year; India's **₹500 crore** centre of excellence and **₹10,372 crore** IndiaAI mission behind mandatory AI from **Class 3 in 2026–27**; Mexico's **Estado de México** education-law reform (April 2026) on graduated AI use in *media superior* and *superior*; Colombia's **PL 043/2025 Senado · 324/2025 Cámara**. 🔴 **Every one is from a secondary source** — vendor blogs, trackers and aggregators — so all six enter at band `reported` and none supersedes `p406`'s statute-level detail |
+| 11 | 🔴 **Negative and adjacent rows, published with their reasons.** [`asadbekme/education-crm`](https://github.com/asadbekme/education-crm) — **zero licence-shaped paths at any depth**, HEAD `4202d7e` 2025-08-08 · **441 d**: ungranted *and* stale. [`willianangelomn-spec/curupiracode`](https://github.com/willianangelomn-spec/curupiracode) — MIT 1,110 B, HEAD `e17b37b` 2026-09-01 · 52 d, Brazilian and live, but a **general-purpose** local-agent harness, **not education**. [`ishandutta2007/Awesome-Higher-Education-CRM`](https://github.com/ishandutta2007/Awesome-Higher-Education-CRM) — MIT 1,068 B, HEAD `e74cee2` 2026-10-13 · 10 d: an **index**, not software. 🔵 All three shelved so the same legs do not re-return them as supply |
+
+### 🔴 The census, carried forward and marked NOT re-derived
+
+🔴 **`p409` published 2 730 harvested shapes → 35 not addresses → 2 695 addresses**, and
+**3 529 addresses over both channels**. 🔴 **This pass shelves 8 new addresses, so by this base's own
+`gate-census-currency` rule those figures are `STALE` — and `p410` cannot re-derive them**, because
+`make address-shape-census` is code in this clone and this session will not execute it.
+
+🟢 **So they are left standing as `p409`'s figures, labelled stale, rather than re-stated as
+`p410`'s.** 🔵 `p409`'s own note applies unchanged: *history is not edited to match.* A successor
+with an executable `make` should run `make address-shape-census` and `make union-currency` as the
+**last act before its commit**, and should expect **+8** on the address count from this pass alone.
 
 ## 🆕 `p407` · 2026-10-23 — gaps closed and gaps opened
 

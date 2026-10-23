@@ -1,0 +1,11 @@
+slug	licence_path	named_licence_in_payload	payload_bytes	reference_bytes	ratio_pct	verdict	second_channel
+addex12/School-CRM	LICENSE	Apache-2.0 (title line + SPDX-License-Identifier)	874	11358	7.7	NOTICE-NOT-GRANT — the ~175-word per-file appendix, every line prefixed '#'	composer.json: "license": "MIT" — DISAGREES with the payload
+ivan-my-wong/flowclass	LICENSE-AGPL	AGPL-3.0 (title line)	302	34522	0.9	STUB — delegates to gnu.org URL for "the full legal text"	README: "Self-host/server copyleft terms: AGPL-3.0 (LICENSE-AGPL)"
+ivan-my-wong/flowclass	LICENSE	MIT (title line)	1066	1066	100.0	REAL-PAYLOAD — and the only half vocabulary v1 can see	package.json: "license": "SEE LICENSE IN LICENSE" — points at the MIT half only
+shrikrishna-lab/StudentManagement	LICENSE	MIT (title line)	1077	1066	101.0	REAL-PAYLOAD	no manifest license field at repo root
+luisricar-do/portugol-ai-tutor	LICENSE	GPL-3.0 (title: GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007)	35141	35141	100.0	REAL-PAYLOAD — inherited from upstream portugol-webstudio	package.json: name=portugol-webstudio, NO license field at all
+espocrm/espocrm	LICENSE.txt	AGPL-3.0 (title line)	34522	34522	100.0	REAL-PAYLOAD — this pass's in-tree AGPL reference	package.json carries a license field; payload is authoritative
+ishandutta2007/Awesome-Higher-Education-CRM	LICENSE	MIT (title line)	1068	1066	100.2	REAL-PAYLOAD — but an index, not software	none
+willianangelomn-spec/curupiracode	LICENSE	MIT (title line)	1110	1066	104.1	REAL-PAYLOAD — plus NOTICE.md and 3 vendored subtree grants	package.json carries a license field
+asadbekme/education-crm	NONE-IN-TREE	none	0	-	-	UNGRANTED — zero licence-shaped paths at any depth	none; 441 d stale
+henriquebotelhogomes/educacao	NONE-IN-TREE	none	0	-	-	UNGRANTED — corroborates p393's 211-file enumeration	none

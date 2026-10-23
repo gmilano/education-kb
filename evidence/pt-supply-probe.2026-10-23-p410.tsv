@@ -1,0 +1,5 @@
+slug	default_ref	licence_path	payload_bytes	payload_first_line	manifest_license	head_sha	head_date
+luisricar-do/portugol-ai-tutor	develop	LICENSE	35141	                    GNU GENERAL PUBLIC LICENSE	package.json:   "license": "GPL-3.0",	84ae17c	2026-10-21
+henriquebotelhogomes/educacao	master	NONE-IN-TREE	0	-	-	cda18eb	2026-09-30
+lbhubedu/lbedu.me	main	LICENSE	2118	MIT License	-	13a4bd4	2026-10-18
+willianangelomn-spec/curupiracode	main	LICENSE;NOTICE.md;native/landlock-run/LICENSE;native/landlock-run/packages/linux-arm64/LICENSE;native/landlock-run/packages/linux-x64/LICENSE	1110	MIT License	package.json:   "license": "MIT",	e17b37b	2026-09-01
