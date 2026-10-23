@@ -1,0 +1,6 @@
+slug	root_commit	first_commit	commits	shared_with_pair	licence_blob_sha	copyright_line	head	verdict
+ArnaudGuiovanna/tutor-mcp	baea09f77545	2026-05-01	469	452	7f7f7a24de575434332db029eb380c6d1448cfc1	Copyright (c) 2026 Arnaud Guiovanna	ca0af1a 2026-10-23	UPSTREAM - commit set is a strict SUPERSET
+kvnloo/tutor-mcp	baea09f77545	2026-05-01	452	452	7f7f7a24de575434332db029eb380c6d1448cfc1	Copyright (c) 2026 Arnaud Guiovanna	3d11705 2026-10-02	FORK - every commit is in upstream; 17 behind; attribution RETAINED
+caramaschiHG/awesome-ai-agents-2026	082f155251	2026-03-07	69	0	-	-	781b695 2026-04-02	INDEPENDENT - name collision only, no shared ancestry
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	95b1e4e5cd	2026-02-26	770	0	-	-	2028545 2026-10-23	INDEPENDENT - name collision only, no shared ancestry
+perazzogringa-coder/plataforma-agentes-ia	8d56396f4415	2026-08-01	6	n/a	-	-	e5a42a7 2026-10-17	UNRESOLVED - search layer asserted a fork; README and history both silent

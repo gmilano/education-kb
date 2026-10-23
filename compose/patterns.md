@@ -3,6 +3,205 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+## 🆕 `p411` · 2026-10-23 — a **19-byte “GNU GPL V3”**, a manifest that **agrees with the grant and proves nothing**, and a fork pair separated by **commit-subset** where byte-identical licences could not
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry probe below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the seventeenth pass dated today**,
+after `p395`–`p410`.
+
+🔴 **Channel note, re-derived first-hand rather than inherited — and the channel has MOVED since
+`p410`.** `make hooks` **COULD NOT BE RUN** again: this session will not execute code from the
+cloned repository, so the ~50 gates are unscored for a second consecutive pass and the address
+census is **carried forward unchanged and marked NOT re-derived**. Measured this pass:
+
+| channel | `p410` reading | `p411` reading | note |
+|---|---|---|---|
+| `api.github.com` | `403` | 🔴 `403` | unchanged |
+| `github.com` HTML | *not recorded* | 🔴 `403` | 🆕 **`p410` recorded only the API.** The HTML surface is refused too, so "read it on the repo page" is not a fallback on this channel |
+| `git` smart-HTTP | works | 🟢 works | every grant below is read this way |
+| npm registry | `200` | 🟢 `200` | second channel |
+| **PyPI** | *not recorded* | 🟢 **`200`** | 🆕 a **third** registry channel this base has not been using |
+| `gnu.org` | `403` | 🔴 **`000` — `connect_rejected`** | 🆕 **degraded**: `p410` got a refusal *from* the host, this pass the proxy will not open the connection at all |
+| `oecd.org`, `eur-lex.europa.eu` | ENOTFOUND | 🔴 `000` — `connect_rejected` | primary policy hosts still unreadable; every policy figure stays band `reported` |
+| `apache.org` LICENSE-2.0.txt | `11 358 B` | 🟢 **`11 358 B`** | 🟢 re-fetched and byte-counted — **independently reproduces `p410`'s reference** |
+
+🔴 **Because `gnu.org` is now unreachable, the GPL-3.0 denominator is read IN-TREE** — and reading it
+in three places is what produced finding 5.
+
+🟢 **This is a RESEARCH pass. Supply saturation broke for a second consecutive pass; the REGIONAL
+layer is saturated for a third.** Nine legs ran — four global, four regional, one phrased in
+Portuguese. 🟢 **The supply legs returned 15 addresses this base does not carry.** 🔴 **The four
+regional legs returned ZERO unshelved facts** — every instrument, figure and date came back already
+on these shelves. 🔵 That is `p409`'s and `p410`'s reading re-confirmed on the regional half and
+refuted on the supply half, and the split is now stable enough to act on: **the regional brief is
+exhausted; the supply brief is exhausted only in the wording `p408` used.** The two legs that paid
+this pass were the **ERP/CRM/SIS** wording (again, as at `p410`) and the **Portuguese** phrasing
+(again, as at `p410`) — a phrasing effect that has now replicated.
+
+**Evidence:** [`licence-payload-ratio`](../evidence/licence-payload-ratio.2026-10-23-p411.tsv)
+(15 rows) · [`fork-subset-resolution`](../evidence/fork-subset-resolution.2026-10-23-p411.tsv)
+(5 rows) · [`gpl3-reference-spread`](../evidence/gpl3-reference-spread.2026-10-23-p411.tsv)
+(4 rows) · [`regional-leg-yield`](../evidence/regional-leg-yield.2026-10-23-p411.tsv) (5 rows).
+
+### 🟢 What this pass found
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A 19-byte grant — the thinnest on these shelves by two orders of magnitude.** [`frappe/education`](https://github.com/frappe/education), default ref **`develop`**, HEAD `73ce33e` **2026-10-13 · 10 d** — live code. Its **entire** grant is a one-line `license.txt` reading `License: GNU GPL V3`, **19 B** against GPL-3.0's **35 147 B** read in-tree this pass = **0.054 %**. It is the **only** licence-shaped path at any depth, and there is **no `license` field in any manifest**. 🔵 `p410`'s thinnest specimen was 874 B at 7.7 %; this is **142× thinner** |
+| 2 | 🔴 **A manifest that AGREES with the grant and is worth nothing — a channel defect `Pattern AI` does not cover.** [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) carries root `LICENSE` **MIT, 1 150 B**, and `composer.json` `"license": "MIT"`. 🔴 **But that manifest's `"name"` is `laravel/laravel` and its `"description"` is *“The skeleton application for the Laravel framework.”*** — it is the **unedited Laravel skeleton**, and its MIT is *Laravel's*, not GegoK12's. 🔴 **`Pattern AI` step 5 handles a manifest that DISAGREES in either direction; it has no rule for one that agrees because nobody edited it.** A gate counting channels scores this address **“MIT resolved on 2 channels”** — its strongest verdict — on **one** real channel |
+| 3 | 🟢 **`Gap 298` moves again, and the axis `p410` moved it to is the one that now closes.** `Gego-K12/gegok12`: **MIT**, Laravel 12 / PHP 8.4, **7 623 tracked paths**, **123 commits across 5 distinct authors**, and a complete build-and-deploy chain (`composer.json`, `package.json`, `Dockerfile`, `docker-compose.yml`, `.env.example`, `artisan`, `phpunit.xml` — all present and byte-counted). 🔵 `p410` closed `Gap 298` on `shrikrishna-lab/StudentManagement` and restated the absence as **authorship** — 156 paths, one author, no build file. 🟢 **This address beats it on every axis `p410` named.** 🔴 **Except currency: HEAD is 120 d stale**, and the free core is **open-core** — the vendor withholds premium modules |
+| 4 | 🟢 **A fork pair resolved by COMMIT-SUBSET where byte-identical licences could not — `Gap 395-A`'s discriminator, demonstrated working.** [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) and [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) share root `baea09f77545`, first commit **2026-05-01**, an **identical `LICENSE` blob `7f7f7a2…`** and an identical copyright line. 🟢 **`kvnloo`'s 452 commits are a strict SUBSET of upstream's 469** — so the fork direction is decided, and the fork is **17 commits / 21 days behind**. 🟢 **The forker retained attribution** (`Copyright (c) 2026 Arnaud Guiovanna`), which is the opposite of `p408`'s specimen |
+| 5 | 🔴 **The ratio test's DENOMINATOR is not a constant, and this base quotes it as one.** GPL-3.0 measured in three places this pass: **35 141 B** (the figure `Pattern AI` step 4 itself carries), **35 147 B** (`moodle/moodle` `COPYING.txt`), **35 149 B** (`frappe/erpnext` `license.txt`). 🔵 An **8-byte spread**, 0.023 % — harmless against a 50 % floor, **fatal to any ratio quoted to three significant figures**. 🔴 And `gnu.org` being `connect_rejected` this pass means there is **no authoritative denominator available on this channel at all** |
+| 6 | 🟡 **`CC0-1.0` is a FOURTH licence class on these shelves, and it splits deed-vs-legalcode exactly as the payload instrument predicts.** Two repositories, **the same name**, both declaring CC0-1.0: [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) at **5 875 B / 98 lines / 4 statutory sections** (the legalcode) and [`caramaschiHG/awesome-ai-agents-2026`](https://github.com/caramaschiHG/awesome-ai-agents-2026) at **2 207 B / 46 lines / 3 statutory sections** — **37.6 %**, with section 4 (*Limitations and Disclaimers*) **absent**. 🔵 This base's licence vocabulary is permissive/copyleft/ECL-2.0; **a public-domain dedication sorts into none of them** |
+| 7 | 🔴 **The search layer asserted a FORK the repository does not declare — the inverse of `Gap 395-A`.** The Portuguese leg returned [`perazzogringa-coder/plataforma-agentes-ia`](https://github.com/perazzogringa-coder/plataforma-agentes-ia) (**MIT, 1 073 B**, HEAD `e5a42a7` **6 d**) and stated *“trata-se de um fork de outro repositório.”* 🔴 **Neither channel supports it:** the README says only that the public distribution ships neutral branding to be replaced, and the history is a clean root at **2026-08-01, 6 commits, one author**. 🔵 `Gap 395-A` says a licence read cannot tell a fork from an original. **This is the other failure mode: the search layer inventing provenance**, and a 6-commit squashed-looking tree cannot refute it either |
+| 8 | 🔴 **This base carries the AILit publication date twice-right and once-wrong, and this pass's EMEA leg settles which is which.** `p386` enters the OECD/EC *Empowering Learners for the Age of AI* framework at **18 Jun 2026**, twice, with its full substance (4 domains, 19 competences, 3 levels). 🔴 **`p405`'s regional-leg table at `intel/market.md:524` carries it as `2026-06-17`.** 🟢 This pass's EMEA leg returned **18 June 2026** independently. **`2026-06-17` is the outlier and is corrected below** — a one-day drift introduced by a later pass's leg summary, into a date this base sells an EMEA compliance deliverable against |
+
+### 🟢 `Pattern AJ` — `Pattern AI` amended: three defects found by running it against 15 addresses
+
+🔵 **`Pattern AI` (`p410`) is the grant-resolved adoption gate. This pass ran it against 15 new
+addresses and it mis-scored three of them.** `Pattern AJ` is not a replacement — it is the three
+steps that change, stated so a successor patches rather than re-derives.
+
+#### 🔴 Amendment 1 — step 2's vendored-path list misses BUILD OUTPUT and project-local vendor dirs
+
+🔴 **Defect found on `Gego-K12/gegok12`:** 17 licence-shaped paths, **16 vendored**, and
+`Pattern AI` step 2's prefix list (`vendor/`, `node_modules/`, `third_party/`,
+`native/*/packages/`) catches **none** of them. The real paths are
+`custompackages/brozot/laravel-fcm/LICENSE` and **fifteen `public/js/<chunk>.js.LICENSE.txt`**
+webpack banners sitting in the **public web root**.
+
+🟢 **Replace the prefix list with a prefix list PLUS a suffix rule:**
+
+```
+# subtree grants - discard
+  (^|/)(vendor|node_modules|third_party|bower_components|custompackages|packages)/
+  (^|/)native/[^/]+/packages/
+# BUILD OUTPUT grants - discard (new)
+  \.(js|css|mjs|cjs)\.LICENSE\.txt$
+  (^|/)(dist|build|public/(js|css)|static/(js|css)|out)/
+```
+
+🔵 A compiled PHP/JS platform ships its dependency notices inside its own served directory. **Any
+platform-tier audit hits this; `gegok12` is simply the first one measured.**
+
+#### 🔴 Amendment 2 — step 5 must check that the manifest IDENTIFIES THE PROJECT before counting it
+
+🔴 **Defect found on `Gego-K12/gegok12`:** payload MIT, `composer.json` `"license": "MIT"` — and
+that manifest is the **unedited `laravel/laravel` skeleton**, `"description": "The skeleton
+application for the Laravel framework."` 🔴 **`Pattern AI` step 5 anticipates a manifest that is
+wrong; it has no rule for one that is RIGHT ABOUT SOMETHING ELSE.** The gate scores its strongest
+verdict — *resolved on 2 channels* — on one channel.
+
+🟢 **Insert step 5a, two commands, before the manifest counts:**
+
+```bash
+git cat-file -p HEAD:composer.json | grep -m1 '"name"'      # or package.json / pyproject.toml
+git cat-file -p HEAD:composer.json | grep -m1 '"description"'
+```
+
+🔴 **If `name` is a framework scaffold slug — `laravel/laravel`, `symfony/skeleton`, `my-app`,
+`create-react-app`, the cookiecutter default — the `license` field is the SCAFFOLD's and is NOT a
+channel.** Report `resolved on 1 channel`, not 2.
+
+🔵 **Why this matters more each year:** scaffolds ship a populated `license` field. Every
+unedited generated project is a false second channel, and **it fails in the direction that produces
+confidence** rather than doubt.
+
+#### 🟡 Amendment 3 — step 4's denominator needs a source, and the ratio needs two significant figures
+
+🔴 GPL-3.0 measured at **35 141 / 35 147 / 35 149 B** in three places this pass; `gnu.org` is
+`connect_rejected`, so no authoritative value exists on this channel. 🟢 **Quote every ratio to
+two significant figures and name where the denominator was read.** `0.054 % (vs moodle/moodle
+COPYING.txt, 35 147 B)` is a re-testable claim; `0.0541 %` is a false precision.
+
+#### 🟢 Amendment 4 — a failed ratio triggers a SIBLING read before it is reported as a defect
+
+🔴 `frappe/education`'s 19 B fails step 4 and has no manifest, so the gate reports a two-channel
+failure on a live, maintained repository. 🟢 **One extra command resolves it:**
+
+```bash
+# for org/repo, read the grant shape of the org's other repositories
+for sib in frappe/frappe frappe/erpnext frappe/lms; do
+  git clone --depth 1 --filter=blob:none --no-checkout -q https://github.com/$sib /tmp/$RANDOM
+  # ls-tree -r | grep -iE '^(licen[cs]e|copying)' ; cat-file -s
+done
+# -> 1 118 B MIT / 35 149 B GPL-3.0 / 33 893 B AGPL-3.0, all with agreeing manifests
+```
+
+🟢 **Three siblings shipping full payloads mean the org knows how; the thin file is a shortcut, not
+a concealment.** 🔵 **Verdict vocabulary gains one value:**
+`UNDER-DOCUMENTED (corroborated by N siblings)` — distinct from `NOTICE-OR-STUB`, which should be
+reserved for a thin payload **that disagrees with another channel**.
+
+#### 🟢 Amendment 5 — fork direction is settled by commit SETS, not by HEADs or dates
+
+🔴 The `tutor-mcp` pair defeats every channel the gate currently has: identical licence **blob**,
+identical copyright line, same root, and the fork's HEAD is *older* — which on its own says nothing.
+
+🟢 **Add this as step 8, and it is two commands:**
+
+```bash
+git -C A rev-list HEAD | sort > /tmp/a   # after: git fetch --depth=2000
+git -C B rev-list HEAD | sort > /tmp/b
+comm -12 /tmp/a /tmp/b | wc -l
+```
+
+| reading | meaning |
+|---|---|
+| shared == count(B) < count(A) | 🟢 **B is a fork of A**, `count(A) - count(B)` commits behind |
+| shared == 0 | 🟢 **Independent projects** — a name collision only |
+| shared > 0, neither is a subset | 🟡 **Diverged fork** — both have unique commits; neither is canonical |
+
+🔵 Verified both directions this pass: `kvnloo/tutor-mcp` ⊂ `ArnaudGuiovanna/tutor-mcp` (452 of
+452), and the two `awesome-ai-agents-2026` repositories at **zero** shared commits.
+
+### 🟢 `Pattern AK` — the SIS engagement, now that the permissive-or-copyleft choice is REAL
+
+🔵 **Why this is new.** Every prior pass recorded that education's SIS layer was copyleft-only, so
+there was no choice to pattern. 🟢 **`p411` shelves a maintained MIT occupant**, so the decision
+exists — and it is **not** decided by the licence.
+
+**Step 0 — establish the deployment mode, because it decides everything after it.**
+
+| client intent | base | why |
+|---|---|---|
+| Client self-hosts their own estate | 🟢 [`frappe/education`](https://github.com/frappe/education) **GPL-3.0** | 🟢 Copyleft costs a self-hosting institution **nothing**, and this is the complete, 10-day-current option. 🔵 `p401`'s plugin-boundary rule governs studio code on top |
+| Studio ships a closed multi-tenant product | 🟢 [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) **MIT** | 🟢 The only permissive rung with a real build chain. 🔴 Then **step 1 is mandatory** |
+| Client needs registrar depth and will own the schema | 🟡 [`shrikrishna-lab/StudentManagement`](https://github.com/shrikrishna-lab/StudentManagement) **MIT** | 🔵 `p410`: read it **for the schema** — transcripts, clearance, certificate requests. 🔴 Bus factor of one; do not inherit it as a dependency |
+
+**Step 1 — price the open-core gap BEFORE the licence discussion (only for `gegok12`).**
+🔴 The vendor states the public repository is the **free core** and that premium modules (online
+quiz, private chat, bus management) are outside it; vendor pages also disagree with each other on
+module counts (**38 total / 26 free** on one page, **23+** on another). 🟢 **Enumerate the client's
+required modules against `app/` and `custompackages/` in the tree — `git ls-tree`, not the
+marketing page — and put the unmet ones in the SOW as build items.** The gap between the demo and
+the repository is the vendor's revenue, and it is a **scope** risk, not a licence risk.
+
+**Step 2 — run `Pattern AJ`, not `Pattern AI`, on whichever base is chosen.**
+🔴 Both candidates trip an amendment: `gegok12` trips **1** (16 vendored grants, 15 of them build
+output) and **2** (the Laravel skeleton manifest); `frappe/education` trips **4** (19 B payload,
+no manifest, resolved only by sibling read).
+
+**Step 3 — the assistant layer goes on MCP, and it is MIT on both routes.**
+🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**, HEAD
+today) supplies the learner-state machine — mastery, review scheduling, misconceptions — **outside**
+the SIS, so the copyleft question never reaches the studio's own code. 🔴 **Pin the upstream, not
+[`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp)**, which is 17 commits behind. 🔴 It is
+**alpha v0.5.0** — pin a commit in the SOW, and say "alpha" in the proposal.
+
+🔵 **This composes with `Pattern AH` (`p409`, the LMS-of-record assistant) and changes its premise
+a second time.** `Pattern AH` was written *“where there is no permissive SIS to fork.”* `p410`
+found one and kept the pattern on an **authorship** reason. 🟢 **`p411` refutes the authorship
+reason too** — `gegok12` has five authors and a company. 🔴 **`Pattern AH` still holds, and the
+reason has moved a third time: to open-core SCOPE.** A pattern that has survived three different
+justifications should be re-read for whether the conclusion is actually load-bearing, and a
+successor is asked to do exactly that rather than inherit it a fourth time.
+
+### 🔴 The census, carried forward and marked NOT re-derived
+
+🔴 `p409`'s **2 695 addresses / 3 529 over both channels**, `STALE` for a third consecutive pass.
+**`p411` shelves 15, `p410` shelved 8 — a successor with an executable `make` should expect +23.**
+
 ## 🆕 `p410` · 2026-10-23 — a **874-byte “Apache License”** that is a notice, a dual grant whose **copyleft half is 302 bytes**, and this base's own **permissive-only** split-family vocabulary
 
 🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on

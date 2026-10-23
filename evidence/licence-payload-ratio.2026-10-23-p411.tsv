@@ -1,0 +1,16 @@
+slug	default_ref	grant_path	payload_bytes	named_licence	reference_bytes	ratio_pct	manifest_channel	head	age_days	verdict
+Gego-K12/gegok12	main	LICENSE	1150	MIT	1066-1110	~105	composer.json "MIT" (UNEDITED laravel/laravel skeleton - NOT a channel)	99da145 2026-06-25	120	MIT resolved on 1 channel only
+frappe/education	develop	license.txt	19	GPL-3.0	35147	0.054	none	73ce33e 2026-10-13	10	NOTICE-OR-STUB by ratio; GPL-3.0 by sibling corroboration
+frappe/erpnext	develop	license.txt	35149	GPL-3.0	35147	100.006	package.json "GPL-3.0"	-	-	GPL-3.0 resolved on 2 channels
+frappe/lms	develop	license.txt	33893	AGPL-3.0	34522	98.2	package.json "AGPL-3.0-or-later"	-	-	AGPL-3.0 resolved on 2 channels (matches p209 read exactly)
+frappe/frappe	develop	LICENSE	1118	MIT	1066-1110	~103	package.json "MIT"	-	-	MIT resolved on 2 channels
+ArnaudGuiovanna/tutor-mcp	main	LICENSE	1073	MIT	1066-1110	~99	not read	ca0af1a 2026-10-23	0	MIT resolved; UPSTREAM of the pair
+kvnloo/tutor-mcp	main	LICENSE	1073	MIT	1066-1110	~99	not read	3d11705 2026-10-02	21	MIT resolved; FORK, blob-identical, attribution retained
+wenflow-org/wenflow	main	LICENSE	1067	MIT	1066-1110	~99	not read	1c86890 2026-10-20	3	MIT resolved on 1 channel
+shigella520/MindTrain	main	LICENSE	1067	MIT	1066-1110	~99	not read	7115c48 2026-10-15	8	MIT resolved on 1 channel
+Li-Evan/Bloom	main	LICENSE	1069	MIT	1066-1110	~99	not read	68788b5 2026-10-20	3	MIT resolved on 1 channel
+perazzogringa-coder/plataforma-agentes-ia	main	LICENSE	1073	MIT	1066-1110	~99	not read	e5a42a7 2026-10-17	6	MIT resolved; provenance NOT resolved (see fork-claim row)
+Naresh1401/education-tutor-agent	main	NONE	0	none	-	-	none	2cb9dcf 2026-10-11	12	UNGRANTED - 0 grant paths at any depth
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	main	LICENSE	5875	CC0-1.0	5875 (legalcode)	100	none	2028545 2026-10-23	0	CC0-1.0 legalcode, 4 statutory sections
+caramaschiHG/awesome-ai-agents-2026	main	LICENSE	2207	CC0-1.0	5875 (legalcode)	37.6	none	781b695 2026-04-02	204	CC0-1.0 DEED-form, 3 statutory sections - section 4 absent
+luongnv89/claude-howto	main	LICENSE	1066	MIT	1066-1110	100	not read	188f468 2026-10-20	3	MIT resolved on 1 channel

@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+## 🆕 `p411` · 2026-10-23 — a **19-byte “GNU GPL V3”**, a manifest that **agrees with the grant and proves nothing**, and a fork pair separated by **commit-subset** where byte-identical licences could not
+
+🔵 **Dating note.** Every search leg, clone, licence read and registry probe below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the seventeenth pass dated today**,
+after `p395`–`p410`.
+
+🔴 **Channel note, re-derived first-hand rather than inherited — and the channel has MOVED since
+`p410`.** `make hooks` **COULD NOT BE RUN** again: this session will not execute code from the
+cloned repository, so the ~50 gates are unscored for a second consecutive pass and the address
+census is **carried forward unchanged and marked NOT re-derived**. Measured this pass:
+
+| channel | `p410` reading | `p411` reading | note |
+|---|---|---|---|
+| `api.github.com` | `403` | 🔴 `403` | unchanged |
+| `github.com` HTML | *not recorded* | 🔴 `403` | 🆕 **`p410` recorded only the API.** The HTML surface is refused too, so "read it on the repo page" is not a fallback on this channel |
+| `git` smart-HTTP | works | 🟢 works | every grant below is read this way |
+| npm registry | `200` | 🟢 `200` | second channel |
+| **PyPI** | *not recorded* | 🟢 **`200`** | 🆕 a **third** registry channel this base has not been using |
+| `gnu.org` | `403` | 🔴 **`000` — `connect_rejected`** | 🆕 **degraded**: `p410` got a refusal *from* the host, this pass the proxy will not open the connection at all |
+| `oecd.org`, `eur-lex.europa.eu` | ENOTFOUND | 🔴 `000` — `connect_rejected` | primary policy hosts still unreadable; every policy figure stays band `reported` |
+| `apache.org` LICENSE-2.0.txt | `11 358 B` | 🟢 **`11 358 B`** | 🟢 re-fetched and byte-counted — **independently reproduces `p410`'s reference** |
+
+🔴 **Because `gnu.org` is now unreachable, the GPL-3.0 denominator is read IN-TREE** — and reading it
+in three places is what produced finding 5.
+
+🟢 **This is a RESEARCH pass. Supply saturation broke for a second consecutive pass; the REGIONAL
+layer is saturated for a third.** Nine legs ran — four global, four regional, one phrased in
+Portuguese. 🟢 **The supply legs returned 15 addresses this base does not carry.** 🔴 **The four
+regional legs returned ZERO unshelved facts** — every instrument, figure and date came back already
+on these shelves. 🔵 That is `p409`'s and `p410`'s reading re-confirmed on the regional half and
+refuted on the supply half, and the split is now stable enough to act on: **the regional brief is
+exhausted; the supply brief is exhausted only in the wording `p408` used.** The two legs that paid
+this pass were the **ERP/CRM/SIS** wording (again, as at `p410`) and the **Portuguese** phrasing
+(again, as at `p410`) — a phrasing effect that has now replicated.
+
+**Evidence:** [`licence-payload-ratio`](../evidence/licence-payload-ratio.2026-10-23-p411.tsv)
+(15 rows) · [`fork-subset-resolution`](../evidence/fork-subset-resolution.2026-10-23-p411.tsv)
+(5 rows) · [`gpl3-reference-spread`](../evidence/gpl3-reference-spread.2026-10-23-p411.tsv)
+(4 rows) · [`regional-leg-yield`](../evidence/regional-leg-yield.2026-10-23-p411.tsv) (5 rows).
+
+### 🟢 What this pass found
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A 19-byte grant — the thinnest on these shelves by two orders of magnitude.** [`frappe/education`](https://github.com/frappe/education), default ref **`develop`**, HEAD `73ce33e` **2026-10-13 · 10 d** — live code. Its **entire** grant is a one-line `license.txt` reading `License: GNU GPL V3`, **19 B** against GPL-3.0's **35 147 B** read in-tree this pass = **0.054 %**. It is the **only** licence-shaped path at any depth, and there is **no `license` field in any manifest**. 🔵 `p410`'s thinnest specimen was 874 B at 7.7 %; this is **142× thinner** |
+| 2 | 🔴 **A manifest that AGREES with the grant and is worth nothing — a channel defect `Pattern AI` does not cover.** [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) carries root `LICENSE` **MIT, 1 150 B**, and `composer.json` `"license": "MIT"`. 🔴 **But that manifest's `"name"` is `laravel/laravel` and its `"description"` is *“The skeleton application for the Laravel framework.”*** — it is the **unedited Laravel skeleton**, and its MIT is *Laravel's*, not GegoK12's. 🔴 **`Pattern AI` step 5 handles a manifest that DISAGREES in either direction; it has no rule for one that agrees because nobody edited it.** A gate counting channels scores this address **“MIT resolved on 2 channels”** — its strongest verdict — on **one** real channel |
+| 3 | 🟢 **`Gap 298` moves again, and the axis `p410` moved it to is the one that now closes.** `Gego-K12/gegok12`: **MIT**, Laravel 12 / PHP 8.4, **7 623 tracked paths**, **123 commits across 5 distinct authors**, and a complete build-and-deploy chain (`composer.json`, `package.json`, `Dockerfile`, `docker-compose.yml`, `.env.example`, `artisan`, `phpunit.xml` — all present and byte-counted). 🔵 `p410` closed `Gap 298` on `shrikrishna-lab/StudentManagement` and restated the absence as **authorship** — 156 paths, one author, no build file. 🟢 **This address beats it on every axis `p410` named.** 🔴 **Except currency: HEAD is 120 d stale**, and the free core is **open-core** — the vendor withholds premium modules |
+| 4 | 🟢 **A fork pair resolved by COMMIT-SUBSET where byte-identical licences could not — `Gap 395-A`'s discriminator, demonstrated working.** [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) and [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) share root `baea09f77545`, first commit **2026-05-01**, an **identical `LICENSE` blob `7f7f7a2…`** and an identical copyright line. 🟢 **`kvnloo`'s 452 commits are a strict SUBSET of upstream's 469** — so the fork direction is decided, and the fork is **17 commits / 21 days behind**. 🟢 **The forker retained attribution** (`Copyright (c) 2026 Arnaud Guiovanna`), which is the opposite of `p408`'s specimen |
+| 5 | 🔴 **The ratio test's DENOMINATOR is not a constant, and this base quotes it as one.** GPL-3.0 measured in three places this pass: **35 141 B** (the figure `Pattern AI` step 4 itself carries), **35 147 B** (`moodle/moodle` `COPYING.txt`), **35 149 B** (`frappe/erpnext` `license.txt`). 🔵 An **8-byte spread**, 0.023 % — harmless against a 50 % floor, **fatal to any ratio quoted to three significant figures**. 🔴 And `gnu.org` being `connect_rejected` this pass means there is **no authoritative denominator available on this channel at all** |
+| 6 | 🟡 **`CC0-1.0` is a FOURTH licence class on these shelves, and it splits deed-vs-legalcode exactly as the payload instrument predicts.** Two repositories, **the same name**, both declaring CC0-1.0: [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) at **5 875 B / 98 lines / 4 statutory sections** (the legalcode) and [`caramaschiHG/awesome-ai-agents-2026`](https://github.com/caramaschiHG/awesome-ai-agents-2026) at **2 207 B / 46 lines / 3 statutory sections** — **37.6 %**, with section 4 (*Limitations and Disclaimers*) **absent**. 🔵 This base's licence vocabulary is permissive/copyleft/ECL-2.0; **a public-domain dedication sorts into none of them** |
+| 7 | 🔴 **The search layer asserted a FORK the repository does not declare — the inverse of `Gap 395-A`.** The Portuguese leg returned [`perazzogringa-coder/plataforma-agentes-ia`](https://github.com/perazzogringa-coder/plataforma-agentes-ia) (**MIT, 1 073 B**, HEAD `e5a42a7` **6 d**) and stated *“trata-se de um fork de outro repositório.”* 🔴 **Neither channel supports it:** the README says only that the public distribution ships neutral branding to be replaced, and the history is a clean root at **2026-08-01, 6 commits, one author**. 🔵 `Gap 395-A` says a licence read cannot tell a fork from an original. **This is the other failure mode: the search layer inventing provenance**, and a 6-commit squashed-looking tree cannot refute it either |
+| 8 | 🔴 **This base carries the AILit publication date twice-right and once-wrong, and this pass's EMEA leg settles which is which.** `p386` enters the OECD/EC *Empowering Learners for the Age of AI* framework at **18 Jun 2026**, twice, with its full substance (4 domains, 19 competences, 3 levels). 🔴 **`p405`'s regional-leg table on this file carries it as `2026-06-17`.** 🟢 This pass's EMEA leg returned **18 June 2026** independently. **`2026-06-17` is the outlier and is corrected below** — a one-day drift introduced by a later pass's leg summary, into a date this base sells an EMEA compliance deliverable against |
+
+### 🔵 The four regional legs — what each returned, stated so silence cannot read as coverage
+
+🔴 **Zero unshelved regional facts, for a third consecutive pass.** Each leg ran as prescribed, in
+English, on **2026-10-23**. 🔵 This is stated as a table rather than as an absence, because an
+empty regional section and a saturated one look identical to a reader.
+
+| region | what the leg returned | disposition |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states; **EO 14277** (Apr 2025, K-12 AI literacy, no statute); Alabama's AI-inclusive CS graduation requirement; Oklahoma's pre-2027-28 district AI policy duty and its bar on AI as the main basis for grading or discipline; Maryland's AI Education Collaborative and district coordinators; NYC's March-2026 traffic-light guidance banning AI from grading, discipline and IEPs; **33–35 state DoEs plus Puerto Rico** publishing guidance | 🔴 **All carried** — Maryland (17 mentions), Idaho, Arizona, Oklahoma `S.B. 1734`, NYC traffic-light, the `134 / 31` MultiState count. 🟢 **One dated movement worth recording:** the leg quotes **FutureEd at 87 bills / 28 states**, where this base carries FutureEd's **June** reading of **68 / 27** (`ACTION ET`). **Same tracker, four months on, +19 bills / +1 state** — not a sixth tracker, a *clock* on one this base already names |
+| **EMEA** | AI Act enforcement from **2026-08-02**; the **AI omnibus adopted June 2026**, published OJ **2026-07-24** as **Regulation (EU) 2026/1744**; Annex III education obligations deferred **2026-08-02 → 2027-12-02**; Article 50 transparency live from 2026-08-02; Article 4 AI-literacy duty since 2025-02-02; schools as deployers under Art. 29; the **EC/OECD AI literacy framework presented 18 June 2026**; Commission ethical guidelines June 2026 | 🔴 **All carried** — the Omnibus at 21 mentions, `2027-12-02` at 13. 🟢 **But the AILit date is a HIT, in the other direction:** see the correction below. 🔵 `ACTION NU-EU` already says **STOP re-verifying** this set; this is now the **fifth** consecutive pass to re-buy it |
+| **APAC** | **Vietnam**'s high-risk list naming education (automated assessment, behavioural monitoring), *“compliance deadlines in 1 March 2027, plus a grace period for education systems already running before 15 August 2026”*; Korea, Taiwan, Japan, Singapore, Australia tiering; Ipsos Education Monitor 2026; the **UAE** mandatory AI subject from 2025–26 | 🔴 **All carried** — and 🔴 **the leg re-surfaced a date this base has already REFUTED.** `p406` resolved exactly this contradiction: Decision `33/2026/QĐ-TTg` is in force **2026-08-15**, and pre-existing education systems have to **2027-09-01**, *not* 2027-03-01. 🔵 **A second independent sighting of the wrong Vietnamese date**, four passes after the correction — the same shape as `p407`'s sixth sighting of the wrong EMEA date |
+| **LATAM** | **UNESCO IESALC** — 200 institutions, 19 countries, **87 %** using AI in ≥1 area, **26 %** with a formal framework; private non-profit **84 %** vs public **68 %** vs private for-profit **52 %**; **TALIS** teacher use **52–56 %** in Brazil, Chile, Colombia and Costa Rica against an OECD mean of **36 %**, Uruguay at **75 %** of public-school teachers; the **Observatory on AI in Education for LAC** (Apr 2026); **ILIA** third edition; **CENIA** on absent regional coordination | 🔴 **All carried** — `intel/market.md` lines ~129, ~178, ~526, ~562, ~714. 🔵 The institution-type split (84/68/52) and Uruguay's 75 % are the *finest-grained* restatement yet of figures this base already holds at the 87 %/26 % level; **neither changes a recommendation** |
+
+🔵 **The honest reading, and it should be acted on rather than repeated.** The prescribed regional
+brief has returned **nothing unshelved for three consecutive passes**, in four regions, with five
+different trackers already adjudicated under `ACTION ET` and `ACTION NU-EU`. 🟢 **The supply brief
+broke saturation twice in a row on re-phrasing** (ERP/CRM/SIS wording, Portuguese). 🔴 **A
+successor should stop re-running the four English policy legs as written and spend them on
+in-language legs instead** — the phrasing effect has now replicated, and the regional legs have
+not paid since `p402`.
+
+### 🔴 The correction this pass owes: the AILit date, carried twice-right and once-wrong
+
+🔴 **The defect.** This base publishes the OECD/EC *Empowering Learners for the Age of AI* (AILit)
+framework at **two different dates**:
+
+| where | date | form |
+|---|---|---|
+| `intel/market.md` ~1795 (`p386`) | 🟢 **18 Jun 2026** | the substantive entry — final report, after a May 2025 draft, 2 000+ consultees, 4 domains / 19 competences / 3 levels |
+| `intel/market.md` ~1859 (`p386`) | 🟢 **18 Jun 2026** | the EMEA opportunity that **sells against it** |
+| 🔴 `p405`'s regional-leg table (this file) | 🔴 **2026-06-17** | a regional-leg summary row — 🟢 **corrected in place this pass** |
+
+🟢 **Settled by this pass's EMEA leg, which returned `18 June 2026` independently** — a third
+witness agreeing with the two substantive entries. 🔴 **`2026-06-17` in `p405`'s leg table is a one-day
+drift introduced by a later pass's leg summary, and it is WITHDRAWN.** 🔵 Primary confirmation is
+still unavailable — `oecd.org` and `eur-lex.europa.eu` are both `connect_rejected` on this channel
+— so the figure stays band `reported`, now at **one date instead of two**.
+
+🔵 **The generalisable point, and it is about this base's own mechanics.** The wrong date did not
+enter through a bad source. It entered through a **leg-summary table**, where a date is written
+as a compressed token rather than as a claim with substance attached. 🔴 **`p405`'s own table is
+the kind of artefact this base produces every pass** — including the four-row table above. **A date
+in a leg-summary row should cite the line it is being matched against, not restate the date**, or
+the summary becomes a second, unversioned source for a fact the base already holds.
+
+🟢 **No new opportunity rows this pass.** The single canonical `## Opportunities by region` block
+is unchanged; the AILit-keyed EMEA opportunity at ~1859 already carries the correct date and
+needs no edit.
+
 ## 🆕 `p410` · 2026-10-23 — a **874-byte “Apache License”** that is a notice, a dual grant whose **copyleft half is 302 bytes**, and this base's own **permissive-only** split-family vocabulary
 
 🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on
@@ -521,7 +623,7 @@ result is checkable rather than asserted:
 | leg | what it returned | state on these shelves |
 |---|---|---|
 | **North America** | 28+ states / 34+ states + DC + PR with K-12 AI guidance *(sources disagree)* · **Ohio** framework required of every public, community and STEM school by **2026-07-01** · MD **`S.B. 720`** · ID **`SB 1227`** *(data privacy; AI may not replace a human teacher)* · AZ **`HB 4040`** *(introduced only)* · **`H.R. 8747`** K-12 AI Literacy and Readiness Act advanced · **Boston Public Schools** AI fluency as a graduation requirement from **2026-09** · **NSF $11 M** to CSTA · *Claude for Teachers* free for verified US K-12 educators through **2027-06-30** · adoption 54% K-12 / 92% university / 86% of education orgs | 🔴 **All carried.** `S.B. 720`, `SB 1227`, `H.R. 8747`, Ohio, Boston, CSTA and *Claude for Teachers* each already appear on two or more shelves here. 🟡 The only unheld string was the literal *"July 1, 2026"*, and this base already carries that deadline in its own date form — a formatting miss, not a fact |
-| **EMEA** | **Regulation (EU) 2026/1744** (Digital Omnibus) rewrote **Art. 4**: *"ensure a sufficient level"* → *"support the development"* of AI literacy, in force **2026-07-27** · Art. 4 binding on every deployer since **2025-02-02** · Annex III high-risk **2027-12-02** · Commission + OECD **AILit** framework **2026-06-17** · a Lombardy school-office reading that Art. 4 binds only teachers acting as *deployers* | 🔴 **All carried**, including the Omnibus identifiers, the softened Art. 4 wording and `AILit`. 🔵 `ACTION NU-EU` already says **STOP re-verifying** this set; the leg is a corroboration from a secondary house and nothing more |
+| **EMEA** | **Regulation (EU) 2026/1744** (Digital Omnibus) rewrote **Art. 4**: *"ensure a sufficient level"* → *"support the development"* of AI literacy, in force **2026-07-27** · Art. 4 binding on every deployer since **2025-02-02** · Annex III high-risk **2027-12-02** · Commission + OECD **AILit** framework **18 Jun 2026** 🔴 *(`p411`: this row read `2026-06-17`, a one-day drift against `p386`'s two substantive entries; corrected in place, history not edited elsewhere)* · a Lombardy school-office reading that Art. 4 binds only teachers acting as *deployers* | 🔴 **All carried**, including the Omnibus identifiers, the softened Art. 4 wording and `AILit`. 🔵 `ACTION NU-EU` already says **STOP re-verifying** this set; the leg is a corroboration from a secondary house and nothing more |
 | **APAC** | **Vietnam** national framework, foundational AI in every mainstream school, **12 periods per class per year, from 2026–27**, foldable into existing subjects · Vietnam's AI law in force **2026-03-01**, education high-risk, compliance to **2027-09** · **Korea** AI textbooks stripped of official status by the National Assembly, adoption had been **<30%**; `AI Basic Act` in force **2026-01-22** · **Japan** digital textbooks as official texts *"as early as 2030"* · **Indonesia** — nothing on a curriculum mandate | 🔴 **All carried** (Vietnam's framework and Decision `33/2026/QĐ-TTg`, Korea's walk-back, Japan's promotion-first posture). 🟡 One contradiction the leg itself flagged — a ranking claiming **China and the UAE** are the *only* nations with compulsory national AI curricula — is already **refuted on jurisdiction** by `p400` on this file |
 | **LATAM** | UNESCO: **>50%** of teachers in Chile and Brazil already using AI tools, **<10%** of regional institutions with formal guidance · **Observatory on AI in Education for LAC** launched **2026-04** · UNESCO + **CONALEP** + **DGETI** centres-of-excellence pilot in Mexico · Colombia's **Política Nacional de IA** (2025-02) and a MinEducación generative-AI roadmap presented **2026-06-04**, phased to **2028** · Mexico: widest university network, **no unified national regulation** · AI Week LATAM 2026 training 4,000+ across CO/MX/CL | 🔴 **All carried** — Observatory, CONALEP/DGETI, MinEducación's **2026-06-04** roadmap and the governance-gap figures are each already on this file or in [`intel/open-gaps.md`](open-gaps.md). 🟡 The UNESCO **>50% / <10%** pairing is a *looser* restatement of the **87% use / 26% formal strategy** figure this base already holds from UNESCO IESALC + UNU-IAS |
 

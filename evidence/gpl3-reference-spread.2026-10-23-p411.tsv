@@ -1,0 +1,5 @@
+source	path	bytes	note
+Pattern AI step 4 (p410, carried)	quoted constant	35141	the figure this base's own gate uses as denominator
+moodle/moodle	COPYING.txt	35147	read in-tree this pass; gnu.org is unreachable on this channel
+frappe/erpnext	license.txt	35149	read in-tree this pass
+spread	-	8	0.023 pct of the denominator - harmless at a 50 pct floor, fatal to any 3-significant-figure ratio
