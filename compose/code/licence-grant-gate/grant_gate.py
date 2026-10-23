@@ -55,10 +55,40 @@ NON_GRANT_MARKERS = (
     "has not declared a project-wide reuse license",
     "does not grant additional rights",
     "is not itself a declaration of an open-source",
-    "all rights reserved",
     "no licence has been chosen",
     "no license has been chosen",
     "a future project-wide license must be chosen",
+)
+
+# ---------------------------------------------------------------- P459
+# "All rights reserved." is LINE 2 OF THE CANONICAL BSD-3-CLAUSE AND
+# BSD-2-CLAUSE TEMPLATES. Carried unconditionally in NON_GRANT_MARKERS since
+# P455, it INVERTED the verdict on verbatim BSD: the vendored
+# open-webui/LICENSE inside Lamb-Project/lamb (1,510 B, stock BSD-3, sha256
+# 6c4b8d8034b9) read `granted: False`, and so would every untitled BSD
+# payload on these shelves - 297 published BSD-3-Clause cells and 201
+# BSD-UNVERSIONED. Title made no difference; the phrase alone decided it.
+#
+# P455's OWN specimen does not contain the phrase at all. murderszn/open-tutor
+# main/LICENSE (869 B, sha256 c341a936e405b61d, re-read 200 on 2026-10-22)
+# carries its refusal on four other markers, so this marker was never
+# load-bearing for the defect it was added for - it was pure false-positive
+# surface.
+#
+# The phrase withholds a grant only where the payload makes NO affirmative
+# grant. A bare "All rights reserved." notice is still a non-grant.
+CONDITIONAL_NON_GRANT_MARKERS = ("all rights reserved",)
+
+# The operative sentence of each family this base publishes. The presence of
+# one of these is what makes "all rights reserved" vestigial, not operative.
+GRANT_SENTENCES = (
+    "redistribution and use in source and binary forms",
+    "permission is hereby granted",
+    "licensed under the apache license",
+    "you may obtain a copy of the license",
+    "this program is free software",
+    "permission to use, copy, modify",
+    "permission is granted to copy, distribute",
 )
 
 
@@ -74,12 +104,28 @@ def family_of(text):
     return None
 
 
-def is_non_grant(text):
-    """True when a licence-shaped payload explicitly withholds a grant (P455)."""
+def grants_affirmatively(text):
+    """True when the payload carries an operative grant sentence (P459)."""
     if not text:
         return False
     low = " ".join(text.lower().split())
-    return any(m in low for m in NON_GRANT_MARKERS)
+    return any(sent in low for sent in GRANT_SENTENCES)
+
+
+def is_non_grant(text):
+    """True when a licence-shaped payload explicitly withholds a grant (P455).
+
+    P459: a CONDITIONAL marker withholds a grant only where no operative grant
+    sentence is present, because "all rights reserved" is stock BSD text.
+    """
+    if not text:
+        return False
+    low = " ".join(text.lower().split())
+    if any(m in low for m in NON_GRANT_MARKERS):
+        return True
+    if any(m in low for m in CONDITIONAL_NON_GRANT_MARKERS):
+        return not grants_affirmatively(text)
+    return False
 
 
 def reads_as_grant(text):

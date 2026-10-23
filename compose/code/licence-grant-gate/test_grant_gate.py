@@ -12,7 +12,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from grant_gate import (LICENCE_PATHS, EXISTENCE_PATHS, family_of, holder_of,
+from grant_gate import (LICENCE_PATHS, EXISTENCE_PATHS, NON_GRANT_MARKERS,
+                        family_of, grants_affirmatively, holder_of,
                         is_non_grant, reads_as_grant, readme_licence_role,
                         same_project, verdict, probe_repo)
 
@@ -93,6 +94,65 @@ existence_only = lambda text: text is not None and bool(text.strip())
 check("P455 control: existence-only gate is fooled",
       existence_only(NONGRANT_MURDERSZN) and not verdict(NONGRANT_MURDERSZN)["granted"],
       True)
+
+# ---- P459: "all rights reserved" is STOCK BSD, not a refusal -------------
+# Read first-hand on 2026-10-22 from open-webui/LICENSE vendored inside
+# Lamb-Project/lamb: 1,510 B, sha256 6c4b8d8034b9, verbatim BSD-3-Clause and
+# UNTITLED (its first line is the copyright, not "BSD 3-Clause License").
+BSD3_OPENWEBUI_VENDORED = (
+    "Copyright (c) 2023-2025 Timothy Jaeryang Baek\n"
+    "All rights reserved.\n\n"
+    "Redistribution and use in source and binary forms, with or without\n"
+    "modification, are permitted provided that the following conditions are "
+    "met:\n\n"
+    "1. Redistributions of source code must retain the above copyright "
+    "notice, this\n   list of conditions and the following disclaimer.\n")
+# The same family, TITLED, from ucbds-infra/ottr LICENSE.md (1,555 B,
+# sha256 1677c5307530). Title made no difference to the defect: both read
+# `granted: False` before this fix.
+BSD3_OTTR_TITLED = (
+    "BSD 3-Clause License\n\n"
+    "Copyright (c) 2020-2022, UC Berkeley Data Science Education Program\n"
+    "All rights reserved.\n\n"
+    "Redistribution and use in source and binary forms, with or without\n"
+    "modification, are permitted provided that the following conditions are "
+    "met:\n")
+# A bare reservation with no operative grant: still a non-grant, which is the
+# reading the P455 marker was reaching for.
+BARE_RESERVATION = "Copyright (c) 2026 Acme Corp.\nAll rights reserved.\n"
+
+check("P459 verbatim BSD-3 untitled -> granted",
+      verdict(BSD3_OPENWEBUI_VENDORED)["granted"], True)
+check("P459 verbatim BSD-3 untitled -> family BSD",
+      verdict(BSD3_OPENWEBUI_VENDORED)["family"], "BSD")
+check("P459 verbatim BSD-3 untitled -> LICENSED",
+      verdict(BSD3_OPENWEBUI_VENDORED)["state"], "LICENSED")
+check("P459 titled BSD-3 -> granted", verdict(BSD3_OTTR_TITLED)["granted"], True)
+check("P459 bare reservation is still a non-grant",
+      is_non_grant(BARE_RESERVATION), True)
+check("P459 bare reservation -> granted False",
+      verdict(BARE_RESERVATION)["granted"], False)
+check("P459 affirmative grant detected in BSD body",
+      grants_affirmatively(BSD3_OPENWEBUI_VENDORED), True)
+check("P459 no affirmative grant in a bare reservation",
+      grants_affirmatively(BARE_RESERVATION), False)
+# P455 MUST STILL HOLD. Its own specimen never contained the phrase this fix
+# made conditional - its refusal rests on four other markers - so the fix
+# cannot weaken it. These two controls prove that rather than asserting it.
+check("P459 does not weaken P455 (real specimen still non-grant)",
+      is_non_grant(NONGRANT_MURDERSZN), True)
+check("P459 P455 specimen carries no 'all rights reserved'",
+      "all rights reserved" in NONGRANT_MURDERSZN.lower(), False)
+# NEGATIVE CONTROL: the pre-fix predicate condemned verbatim BSD. If this ever
+# reads False the defect has stopped being reproducible, and this suite is
+# recording today's behaviour instead of guarding against the regression.
+PRE_FIX_MARKERS = NON_GRANT_MARKERS + ("all rights reserved",)
+pre_fix_is_non_grant = lambda t: any(
+    m in " ".join(t.lower().split()) for m in PRE_FIX_MARKERS)
+check("P459 control: pre-fix predicate condemned verbatim BSD-3",
+      pre_fix_is_non_grant(BSD3_OPENWEBUI_VENDORED), True)
+check("P459 control: pre-fix predicate condemned titled BSD-3 too",
+      pre_fix_is_non_grant(BSD3_OTTR_TITLED), True)
 
 # ---- P452 regression: GNU family resolved title-first --------------------
 check("P452 AGPL by title", family_of(AGPL_EDXPLATFORM), "AGPL-3.0")
@@ -214,7 +274,7 @@ check("probe_repo non-grant state", nv["state"], "NON-GRANT")
 check("probe_repo non-grant not granted", nv["granted"], False)
 
 # ---- report --------------------------------------------------------------
-TOTAL = 47
+TOTAL = 59
 if FAIL:
     print("FAIL (%d):" % len(FAIL))
     for f in FAIL:

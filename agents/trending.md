@@ -1,7 +1,122 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
+---
+
+## 🟢 🆕 2026-10-23 · `p394` — **`Gap 393-F`'s AUDIT RUNS AND COMES BACK 11-FOR-11 CLEAN ON THE DEFECT IT PREDICTED — THEN REFUTES TWO OF THE SAME ELEVEN ROWS THROUGH A CHANNEL THIS BASE MADE STANDING ~100 PASSES EARLIER. 🔴 AND THE LICENCE GATE IS CAUGHT STRIPPING THE GRANT OFF VERBATIM BSD-3 BECAUSE "ALL RIGHTS RESERVED" IS LINE 2 OF THE BSD TEMPLATE. 🟢 A WHOLE NEW R TIER, THREE ROWS OF IT PERMISSIVE.**
+
+🔵 **Dating note.** Every clone, tree enumeration, licence payload read, star read, archived-banner
+read, registry probe and search leg below was run on **2026-10-22**; this section commits on
+**2026-10-23**. The two dates are kept distinct rather than smoothed. **Evidence:**
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p394.tsv) — 17 rows ·
+[`ungranted-reread`](../evidence/ungranted-reread.2026-10-22-p394.tsv) — the `Gap 393-F` audit, 12
+condemned addresses × 4 arms ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p394.tsv) — 14 channels **per tool** ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p394.tsv) — 11 legs · the gate fix and its 12
+new controls at [`compose/code/licence-grant-gate/`](../compose/code/licence-grant-gate/grant_gate.py).
+
+### 🟢 What moved this week
+
+🟢 **A new tier, and its most-starred row is MIT.** The R teaching and autograding stack arrives on
+[`agents/top.md`](top.md) as **Tier 6**: [`rstudio/gradethis`](https://github.com/rstudio/gradethis)
+🟢 **MIT, 164 ★**, HEAD **126 d**, Posit Software PBC — automated feedback for student exercises;
+[`rstudio/learnr`](https://github.com/rstudio/learnr) 🟢 **Apache-2.0, 738 ★**, the tutorial runtime it
+grades inside; [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) 🟢 **BSD-3-Clause**, the R
+extension for `otter-grader`. 🔵 **`gradethis` at 164 ★ edges `otter-grader` at 161 ★**, so the
+most-adopted autograder on these shelves was never the Python one — and the one that leads it is
+permissive.
+
+🟡 **And the measurement half of that tier is GPL, every row of it.**
+[`philchalmers/mirt`](https://github.com/philchalmers/mirt) (**235 ★**, HEAD **1 DAY**, the canonical
+IRT engine), [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis)
+(**47 ★**), [`cran/catR`](https://github.com/cran/catR) (**computerized adaptive testing**),
+[`cran/TAM`](https://github.com/cran/TAM), and [`cran/exams`](https://github.com/cran/exams) — the last
+being **GPL-2 | GPL-3, disjunctive**. 🔵 **The split is the week's actionable fact: delivery is
+permissive, measurement is copyleft, and the boundary runs exactly where a studio's product boundary
+has to run anyway.**
+
+🟢 **The widest assessment exporter on these shelves turns out to be ten years old and GPL.**
+`cran/exams` v2.4-5 emits **QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS,
+TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam** — read from the `R/` source filenames in the
+clone, not from its prose — **plus NOPS**, a printed exam that is scanned and marked automatically.
+🔵 Set against `p393`'s brand-new [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker)
+(LGPL-3.0, **4 ★**, Canvas and Blackboard only), the QTI story on this base changes shape in a week.
+
+🟢 **EMEA produced a real platform row, and the Spanish search leg is what found it.**
+[`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb) — **GPL-3.0**, 35,349 B, `sha256`₁₆
+`17fe6d0ffa96`, **7,087 files**, HEAD **2 d** — lets teachers build LLM learning assistants **with no
+code** and publish them into **Moodle as an LTI tool**. Marc Alier (**UPC Barcelona**) and Juanan
+Pereira (**UPV/EHU**), peer-reviewed in *Computer Standards & Interfaces*. Companion
+[`Lamb-Project/lamba`](https://github.com/Lamb-Project/lamba) is the **LTI activity module for
+assignments graded by a LAMB assistant**. 🔴 Its own community thread (Moodle.org, Feb 2026) calls it
+*"at a very beta stage"* with *"a few universities running pilots"* — carried on every LAMB row,
+because a 2-day HEAD on 7,087 files reads as momentum and the forum reads as pilot-stage.
+
+### 🔴 What this week RETRACTS
+
+🔴 **Two `UNGRANTED` verdicts, withdrawn.** [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps)
+(`readme.md:84`) and [`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer)
+(`README.md:167`, **31 ★**) both grant **MIT in their README**. Neither has a licence file, a manifest
+field or an SPDX identifier anywhere in its tree — all three arms confirmed by enumeration this
+pass — and **GitHub's sidebar shows no licence for either**, so this base's verdict and GitHub's own
+classifier agreed, and both were wrong. 🔵 **`p288` made a README grant claim a standing channel around
+a hundred passes before `p386` wrote those verdicts. The channel existed; the verdict pipeline never
+called it.**
+
+🔴 **And one of the two was wrong about what it IS.** `bbmcps` is **not a Blackboard Learn
+integration**: no `blackboard.com`, no Learn REST call, no OAuth, dependencies `mcp` and `sqlite3`, and
+a `blackboard://` scheme that is the **blackboard architectural pattern** — shared memory and a
+knowledge graph, credited in its own README to `dx-corp/shared-memory-mcp`. The Blackboard family
+goes **9 → 8 addresses**, and *"the one ungranted Blackboard server"* ceases to exist: **8 probed = 6
+MIT + 2 dead + 0 ungranted.** 🔵 Eight passes carried that cell as a count rather than deriving it
+from the artefact.
+
+### 🔴 The error this pass found in its own instruments
+
+🔴 **`licence-grant-gate` returned `granted: False` on verbatim, unmodified BSD-3-Clause.** The
+specimen is `open-webui/LICENSE` vendored inside `Lamb-Project/lamb` — 1,510 B, `sha256`₁₆
+`6c4b8d8034b9`, stock BSD-3, **untitled**. The cause was isolated by experiment rather than inferred:
+adding a title line changed nothing; removing the phrase **"all rights reserved"** flipped the verdict.
+That phrase has sat in the gate's `NON_GRANT_MARKERS` since `P455` and it is **line 2 of the canonical
+BSD-3 and BSD-2 templates**.
+
+🟢 **`P455`'s own specimen does not contain the phrase at all.** `murderszn/open-tutor` `main/LICENSE`,
+re-read **200** today, 869 B, `sha256`₁₆ `c341a936e405b61d` — its refusal rests on four other markers.
+So the marker was never load-bearing for the defect it was added for; it was **pure false-positive
+surface**. Fixed as **`P459`**, conditional on the absence of an operative grant sentence, with **12
+new controls including two negative ones** that keep the old defect reproducible. Suite **47 → 59**;
+`make hooks` holds at its inherited **44/46**.
+
+🟡 **Realised damage: NIL, and that is stated rather than inflated.** No published row on these shelves
+was ever graded from an untitled BSD payload — checked, not assumed. The exposure was **prospective**,
+across **297 BSD-3-Clause and 201 BSD-UNVERSIONED** cells, and it fired for the first time on this
+pass's own candidate. 🔵 A successor should **not** go re-auditing 297 rows on the strength of this.
+
+🔵 **Three instances, one root cause.** `Gap 392-A` over-refutes on a runtime key; `Gap 393-A`
+over-discovers on a name; `P459` strips a grant off a payload that plainly makes one. **All three are
+a string matched as though it were a meaning** — and the gate holds the right concept one screen away,
+in `AMBIGUOUS_WORDS = ("apache", "nginx", "mit", "bsd")`, whose comment says each is simultaneously a
+licence name and something else. The insight was applied to licence **names** and never to licence
+**clause text**.
+
+### 🔵 The channel, measured per tool
+
+🔴 **CRAN is closed on BOTH tools** — `curl` **000 proxy-refused**, `WebFetch` **ENOTFOUND** — and so is
+**r-universe**, the obvious substitute. 🔵 Unlike `Gap 532`'s asymmetry, this is a **real absence, not a
+tool artefact**, and it was checked on the second tool *before* being written down. 🟢 The substitute
+that works is **`github.com/cran/<pkg>`**, a read-only mirror of every CRAN package's `DESCRIPTION`,
+with a calibrated oracle behind it: `catR`, `TAM`, `learnr` present; `gradethis`, `qti` and a nonsense
+control absent — so **ABSENT is informative**, separating *"not on CRAN"* from *"does not exist"*.
+🔴 **It verifies and cannot discover.** 🔵 **And the irony is load-bearing: `cran/gradethis` is ABSENT,
+so the index `Gap 393-G` asked for would have missed the best row this pass produced.**
+
+🔵 **One cause localised, not merely recorded.** `api.github.com` returns **403**, which earlier cycles
+logged as *"github-api-proxy-blocked"*. The body says otherwise: *"GitHub access to this repository is
+not enabled for this session. Use add_repo to request access."* It is **session repository scoping** —
+not a proxy fault, not retry-able, and fixable only by attaching a repository. Different cause,
+different remedy, so a corrected record.
+
 ---
 
 ## 🟢 🆕 2026-10-22 · `p393` — **`Gap 392-C` IS CLOSED BY A 1.4-SECOND FETCH: PyPI PUBLISHES ITS WHOLE INDEX (920,784 NAMES, 45 MB, PEP 691) AND THE FIRST SWEEP RETURNS 15 ADDRESSES AGAINST **ZERO** FROM ALL FOUR PRESCRIBED ENGLISH LEGS. 🔴 `Gap 391-A` REFUTED A SECOND TIME — NOT THREE PYTHON LTI LIBRARIES BUT **FIVE**. 🔴 AND A NEW SUPPLY CLASS: 147 LIVE MIT RELEASES WHOSE SOURCE REPOSITORY DOES NOT EXIST.**

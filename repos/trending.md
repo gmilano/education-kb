@@ -1,7 +1,94 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
+---
+
+## 🟢 🆕 2026-10-23 · `p394` — **GITHUB TRENDING IS 403 FOR A THIRTEENTH PASS, AND THIS WEEK THE REGISTRY WAS NO HELP EITHER: CRAN IS REFUSED ON BOTH TOOLS. 🟢 THE SUBSTITUTE IS `github.com/cran/<pkg>` — IT VERIFIES EVERY CRAN GRANT AND CANNOT DISCOVER A SINGLE ONE. 🔵 AND THE PACKAGE THAT MATTERED MOST THIS WEEK IS NOT ON CRAN AT ALL.**
+
+🔵 **Dating note.** Every read below was taken on **2026-10-22**; this section commits on
+**2026-10-23**. **Evidence:**
+[`verified-repos`](../evidence/verified-repos.2026-10-22-p394.tsv) ·
+[`ungranted-reread`](../evidence/ungranted-reread.2026-10-22-p394.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p394.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p394.tsv).
+
+### 🔴 The trending signal this week is a channel refusal, so it is reported as one
+
+| channel | tool | result |
+|---|---|---|
+| `cran.r-project.org/src/contrib/PACKAGES` | `curl` | 🔴 **000 proxy-refused** |
+| `cran.r-project.org/web/views/Psychometrics.html` | `WebFetch` | 🔴 **ENOTFOUND** |
+| `crandb.r-pkg.org/-/desc` | `curl` | 🔴 **000 proxy-refused** |
+| `rstudio.r-universe.dev/{pkg}/DESCRIPTION` | `curl` | 🔴 **000 proxy-refused** |
+| `r-universe.dev/api/search` | `curl` | 🔴 **000 proxy-refused** |
+| `github.com/cran/{pkg}` | `git` | 🟢 **OPEN — lookup only** |
+| `github.com/trending` | `curl` | 🔴 **403**, thirteenth pass |
+
+🔵 **The per-tool check was run BEFORE the absence was written down**, because `Gap 532` has caught this
+base once already: the same URL can answer differently per tool. Here it does not — CRAN is closed on
+**both**, so this is a real absence rather than a tool artefact.
+
+🟢 **The substitute, with its limit stated in the same breath.** The `cran` GitHub org read-only-mirrors
+every CRAN package, `DESCRIPTION` and all, so a CRAN grant is verifiable first-hand **without CRAN**.
+Calibration controls run this pass: `catR` 🟢 exists · `TAM` 🟢 exists · `learnr` 🟢 exists ·
+`gradethis` 🔴 absent · `qti` 🔴 absent · `zzzznotarealpackage` 🔴 absent. 🟢 So **ABSENT is
+informative**: it separates *"not on CRAN"* from *"does not exist"*. 🔴 **But it answers name →
+package, never capability → names.** It verifies; it cannot discover. 🔵 **`Gap 394-C`** names the one
+missing piece — an org listing for `cran` (~22,000 packages) would convert this lookup mirror into a
+real index — and notes that the blocker is `api.github.com`'s **session repository scoping**, not a
+proxy fault.
+
+🔵 **And the week's sharpest lesson about registries is an absence inside the substitute.**
+`cran/gradethis` is **ABSENT**, because [`rstudio/gradethis`](https://github.com/rstudio/gradethis) —
+🟢 **MIT, 164 ★**, the most-starred autograder now on these shelves — **is not a CRAN package**. The
+index `Gap 393-G` asked for would not have returned the best row this pass produced. 🔵 Last week an
+index beat the search legs; this week the ecosystem beat the index. **The transferable rule is that no
+single channel is the supply, and a channel's shape decides which supply it can see at all.**
+
+### 🟢 New foundation rows this week
+
+🟢 [`cran/exams`](https://github.com/cran/exams) — 🟡 **GPL-2 | GPL-3** *(disjunctive)*, v2.4-5, Achim
+Zeileis (R-project), HEAD **14 d**. **The broadest assessment exporter on these shelves**: QTI 1.2,
+QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!,
+Grasple, TCExam — verified from the `R/` source filenames in the clone — **plus NOPS**, a printed exam
+that is scanned and marked automatically. 🔵 It lands directly on `p393`'s week-old **Tier 8** (the
+1EdTech standards layer) and reshapes it: the widest-reaching QTI generator is a decade-old GPL
+package, not the new LGPL one.
+
+🟢 [`philchalmers/mirt`](https://github.com/philchalmers/mirt) — 🟡 **GPL (>= 3)**, **235 ★**, 88 forks,
+v1.48.2, HEAD **1 DAY**. Canonical multidimensional IRT. 🟢
+[`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) — 🟡 **GPL-3**,
+**47 ★**, v1.6.0. 🟢 [`cran/catR`](https://github.com/cran/catR) — 🟡 **GPL (>= 3)**, v3.17,
+**computerized adaptive testing**. 🟢 [`cran/TAM`](https://github.com/cran/TAM) — 🟡 **GPL (>= 2)**,
+v4.3-25.
+
+🔴 **All four, plus `cran/exams`, carry NO licence file at any tree path** — the grant lives only in
+`DESCRIPTION`, and **GitHub's sidebar shows no licence for any of them**. A reviewer checking the
+sidebar would report five granted GPL packages as unlicensed. 🔵 **`Gap 394-B`**: this base already
+knows the rule (`p1052` holds `DESCRIPTION` in its manifest list with a test asserting *"CRAN: the
+grant lives in DESCRIPTION and must be read verbatim"*; `p122` has a `STUB-SEE-DESCRIPTION` verdict),
+but `licence-grant-gate` — the instrument that actually produces verdicts — does not.
+
+🟢 [`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb) — 🟡 **GPL-3.0** *(35,349 B, `sha256`₁₆
+`17fe6d0ffa96`)*, **7,087 files**, HEAD **2 d**, UPC Barcelona + UPV/EHU, peer-reviewed. No-code LLM
+learning assistants published into Moodle **over LTI**. 🔴 **Three grants in one tree** — root GPL-3,
+`lamb-kb-server-stable/` stock GPL, vendored `open-webui/` BSD-3 — which is `p382`'s subtree axis, and
+the vendored BSD payload is the specimen that exposed **`P459`** below. 🔴 Fold recorded:
+`Lamb-Project/LAMBA` is the **same repository** as `lamba` (identical head `87e203a`, identical payload
+`sha256`), published once per `p348`.
+
+### 🔴 An instrument correction that touches the whole BSD column
+
+🔴 **`licence-grant-gate` read `granted: False` on verbatim BSD-3-Clause**, because **"all rights
+reserved"** — line 2 of the canonical BSD-3/BSD-2 template — sat in its non-grant marker list since
+`P455`. Mechanism isolated by experiment: a title line changed nothing, removing the phrase flipped the
+verdict. 🟢 `P455`'s own specimen (`murderszn/open-tutor`, 869 B, `c341a936e405b61d`, re-read **200**
+today) **contains the phrase nowhere**, so the marker was never load-bearing. Fixed as **`P459`**, 12
+new controls, suite **47 → 59**, `make hooks` steady at **44/46**. 🟡 **Realised damage NIL** — no
+published row was graded from an untitled BSD payload; the **297 BSD-3-Clause / 201 BSD-UNVERSIONED**
+cells were exposure, not error. A successor should not re-audit them on this basis.
+
 ---
 
 ## 🟢 🆕 2026-10-22 · `p393` — **GITHUB TRENDING IS 403 FOR A TWELFTH PASS AND IT NO LONGER MATTERS: THE REGISTRY'S OWN INDEX IS A BETTER TRENDING SIGNAL THAN THE TRENDING PAGE. 🟢 A NEW **TIER 8** ON `repos/foundations.md` — THE 1EdTech STANDARDS LAYER — AND THE FIRST PERMISSIVE LMS ON TIER 1, FROM NICARAGUA.**

@@ -1,0 +1,29 @@
+# p394 · 2026-10-22 · Gap 393-F, DISCHARGED. p393 ranked this first: "Re-read every UNGRANTED row
+# with `git ls-files`. This pass proved the standing licence probe can manufacture a false absence,
+# and it has never been run against the rows that absence already condemned."
+#
+# METHOD, for each condemned address: blobless shallow clone, `git ls-tree -r HEAD --name-only`
+# matched against /licen[cs]|copying|copyright|notice|unlicen|legal|terms/ — i.e. the WHOLE TREE,
+# not a path list. Then a full shallow clone and three further arms that no prior pass ran on
+# these rows: (a) SPDX-License-Identifier anywhere in the tree, (b) manifest licence fields,
+# (c) the README licence section — p288's standing channel.
+#
+# RESULT ON THE PREDICTED CLASS: 11 of 11 clean. Zero licence-shaped files at any path in any tree.
+# p393's false UNGRANTED (vosslab/qti_package_maker at LICENSE.LGPL-3.0) was a SINGLETON, not a
+# symptom. 🟢 The audit was worth running and its answer is that the filename space is not the leak.
+#
+# RESULT ON THE UNPREDICTED CLASS: 2 of 11 condemned rows are REFUTED by the README channel.
+# 🔴 The gap predicted the wrong defect in the right rows.
+slug	tree_files	licence_shaped_paths	spdx_in_tree	manifest_licence	readme_licence_section	p386_p383_verdict	p394_verdict
+loyaniu/moodle-mcp	13	🟢 NONE	none	pyproject.toml, no licence field	none	UNGRANTED	🟢 UNGRANTED — UPHELD on all four arms
+Seechange-edu/act-ai-tutor-backend	3	🟢 NONE	none	no manifest	none	UNGRANTED	🟢 UNGRANTED — UPHELD on all four arms
+Nutlope/llamatutor	46	🟢 NONE	none	no licence field	none	UNGRANTED	🟢 UNGRANTED — UPHELD. Still circulating as "an open-source AI personal tutor"; still not reusable.
+Daniel-ux1026/Tutor-Inteligente	145	🟢 NONE	none	no licence field	none	UNGRANTED	🟢 UNGRANTED — UPHELD. Peru, offline-first PWA. Still the one that hurts: Pattern D wants exactly this.
+FXArth/Tutor-Programacao	12	🟢 NONE	none	no licence field	none	UNGRANTED	🟢 UNGRANTED — UPHELD. Brazil.
+henriquebotelhogomes/educacao	211	🟢 NONE	none	no licence field	none	UNGRANTED (ref master)	🟢 UNGRANTED — UPHELD. Brazil, RAG tutor, default ref master.
+anastasasenov/bbmcps	9	🟢 NONE	none	no manifest	🔴 readme.md:84 "available under the MIT License"	UNGRANTED	🔴 REFUTED — README-ONLY MIT. And a second, independent error in the same row: it is not a Blackboard Learn integration at all.
+jarodise/Language-Transfer	42	🟢 NONE	none	no manifest	🔴 README.md:167 "## License / MIT"	UNGRANTED	🔴 REFUTED — README-ONLY MIT.
+DMontgomery40/mcp-canvas-lms	36	🟢 NONE	none	package.json: "license": "MIT"	README.md:483 "MIT License - see LICENSE file"	MANIFEST-ONLY MIT	🟢 UPHELD and STRENGTHENED — now MANIFEST + README, and a SECOND pointer to an absent file (the README link joins the `files` array entry p383 found). p307's POINTER class, twice over.
+general-mudkip/d2l-mcp-server	54	🟢 NONE	none	package.json: "license": "MIT"	README.md:129 "## License / MIT"	MANIFEST-ONLY MIT	🟢 UPHELD and STRENGTHENED — manifest and README agree.
+onbirdev/moodle-webservice_mcp	20	🟢 NONE	none	no licence field	none	GPL-3.0-or-later in source headers	🟢 UPHELD — the GPL-3-or-later header is present in 5 source files (lib.php, classes/local/{tool_provider,request,server}.php, classes/privacy/provider.php). Moodle plugin practice, as p383 read it.
+santillana-ai/tutor-sdk	—	🔴 UNREADABLE — ls-remote prompts for credentials	—	—	—	UNGRANTED (closed repo, p388)	🟡 NOT RE-READABLE. Excluded from the 11. p388's "closed, not dead" reading stands; a tree that cannot be obtained cannot be enumerated.

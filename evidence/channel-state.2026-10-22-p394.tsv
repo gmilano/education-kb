@@ -1,0 +1,21 @@
+# p394 · 2026-10-22 · channels probed BEFORE anything was reasoned about (Gap 511's standing rule),
+# with p381's `tool` column, because Gap 532 is tool-scoped: the same URL answers differently per tool.
+#
+# This pass's channel question was Gap 393-G: "Open a CRAN discovery channel." The answer is that
+# the R REGISTRY is closed on both tools, and the R ECOSYSTEM is open through git. Those are
+# different things, and p393's gap conflated them — reasonably, because for PyPI they were the same.
+channel	tool	code	bytes	state	note
+cran.r-project.org/src/contrib/PACKAGES	curl	000	0	🔴 PROXY-REFUSED	the DCF index Gap 393-G asked for. connect_rejected at the egress proxy — host not allowed for this session.
+cran.r-project.org/web/packages/* (HTML)	curl	000	0	🔴 PROXY-REFUSED	same host, same refusal.
+cran.r-project.org/web/views/Psychometrics.html	WebFetch	—	0	🔴 ENOTFOUND	🔵 THE PER-TOOL CHECK, RUN BEFORE RECORDING THE ABSENCE. Unlike Gap 532's asymmetry (curl 403 / WebFetch 200 on github.com), CRAN is closed on BOTH tools. So this is a real absence, not a tool artefact.
+crandb.r-pkg.org/-/desc	curl	000	0	🔴 PROXY-REFUSED	the CRAN metadata API — would have carried License and URL per package.
+rstudio.r-universe.dev/{pkg}/DESCRIPTION	curl	000	0	🔴 PROXY-REFUSED	r-universe, the obvious substitute registry. Also refused.
+r-universe.dev/api/search	curl	000	0	🔴 PROXY-REFUSED	r-universe search API. Refused.
+github.com/cran/{pkg} (clone)	git	200	varies	🟢 OPEN — LOOKUP ONLY	🟢 THE SUBSTITUTE THAT WORKS. The `cran` org read-only-mirrors every CRAN package, DESCRIPTION and all, so a CRAN grant is verifiable first-hand without CRAN. 🔴 But it answers name → package; it cannot answer capability → names. Verifies; cannot discover.
+github.com/cran/{pkg} — calibration	git	—	—	🟢 CALIBRATED ORACLE	controls run this pass: catR 🟢 EXISTS · TAM 🟢 EXISTS · learnr 🟢 EXISTS · gradethis 🔴 ABSENT (genuinely not on CRAN) · qti 🔴 ABSENT (no such CRAN package) · zzzznotarealpackage 🔴 ABSENT (negative control). So ABSENT is informative, not merely uninformative: it separates "not on CRAN" from "does not exist".
+api.github.com/repos/{slug}	curl	403	378	🔴 SCOPE-GATED — *not* a proxy block	🔵 p394 LOCALISES A CAUSE EARLIER CYCLES RECORDED AS "github-api-proxy-blocked". The body is explicit: *"GitHub access to this repository is not enabled for this session. Use add_repo to request access."* It is SESSION REPOSITORY SCOPING. That matters: it is not fixable by a retry, a header or another proxy route, and it WOULD be fixable by attaching a repo. Different remedy, so a different record.
+raw.githubusercontent.com/{slug}/{ref}/{path}	curl	200	varies	🟢 OPEN	payload reads, incl. P455's specimen re-read this pass. Unaffected by the API scoping above.
+github.com/{slug} (HTML)	WebFetch	200	varies	🟢 OPEN	the only channel here that returns STARS and the ARCHIVED BANNER in one read — which is why Gap 393-E costs a column and not an instrument.
+github.com/{org} repo listing	curl / git	—	—	🔴 NO CHANNEL	needed to enumerate the `cran` org (≈22,000 packages) and so turn the lookup mirror into a discovery index. Blocked by the API scoping above. 🔵 This is the single missing piece between p394's half-closure of Gap 393-G and a full one.
+github.com/trending	curl	403	—	🔴 CLOSED	thirteenth consecutive pass.
+pypi.org/simple/ (PEP 691 JSON)	curl	—	—	🟢 OPEN (p393)	not re-run this pass; p393 measured it at 200 / 45,189,043 B / 920,784 names / 1.4 s. Recorded here so the contrast is legible: Python has an index, R does not.

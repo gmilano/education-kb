@@ -1,10 +1,34 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Education vertical platforms — real systems to customise with AI on top
+
+**🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** 🟢 **One addition, and it is the
+EMEA-authored platform layer this shelf has been short of.** [`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb)
+— **LAMB, Learning Assistants Manager and Builder** — 🟡 **GPL-3.0** (35,349 B, `sha256`₁₆
+`17fe6d0ffa96`, read first-hand), **7,087 files**, HEAD **2026-10-20 — 2 d**. Teachers build LLM
+learning assistants **with no code** and publish each one into **Moodle as an LTI external tool**; its
+companion [`Lamb-Project/lamba`](https://github.com/Lamb-Project/lamba) is the **LTI activity module
+for assignments graded by a LAMB assistant**. Authored by **Marc Alier (UPC Barcelona)** and **Juanan
+Pereira (UPV/EHU)** and published in *Computer Standards & Interfaces*. 🔴 **Maturity caveat carried on
+every LAMB row:** its own Moodle.org thread (Feb 2026) calls it *"at a very beta stage"* with *"a few
+universities running pilots"*, so this is a **pilot base, not a ministry platform** — said here and in
+the pattern, not only in the evidence file.
+
+🔴 **Three grants in one tree, which is `p382`'s subtree axis and it matters at procurement.** Root
+**GPL-3.0**; `lamb-kb-server-stable/` carries its own stock **GPL** payload; and `open-webui/` is a
+**vendored third party** under verbatim **BSD-3-Clause** (1,510 B, `6c4b8d8034b9`). A root-only licence
+read is wrong about this repository in both directions. 🔵 That vendored BSD payload is also the
+specimen that exposed **`P459`**: this base's own grant gate was reading verbatim BSD-3 as
+`granted: False`, because *"All rights reserved."* is line 2 of the BSD template.
+
+🔴 **Also corrected on this shelf's neighbours:** `anastasasenov/bbmcps`, carried across these shelves
+as one of nine Blackboard servers, is **not a Blackboard Learn integration at all** (deps `mcp` +
+`sqlite3`, no Learn API surface; `blackboard://` is the *architectural pattern*). Blackboard goes
+**9 → 8 addresses, 6 MIT + 2 dead + 0 ungranted**. See [`agents/top.md`](../agents/top.md).
 
 **🆕 Pass `p393` · 2026-10-22.** Three additions, all from the new `pypi.org/simple/` index-dump
 channel ([`compose/code/p393-pypi-index-channel/`](../compose/code/p393-pypi-index-channel/README.md)):

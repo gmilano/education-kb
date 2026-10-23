@@ -1,10 +1,70 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Top education AI agents
+
+🔵 **Dating note — this pass straddles midnight UTC, and the two dates are not interchangeable.**
+Every clone, tree enumeration, licence payload read, star read, archived-banner read, registry probe
+and search leg below was run on **2026-10-22**; the commit lands **2026-10-23**. Evidence filenames
+carry **2026-10-22** because that is the measurement date, and the frontmatter carries **2026-10-23**
+because that is when the shelf was written. Stated rather than smoothed, because `gate-dates` exists
+to stop this base asserting a date it has already refuted, and a silent redating of 15 first-hand
+reads is exactly that.
+
+**Pass `p394` · reads 2026-10-22, committed 2026-10-23.** 🟢 **`Gap 393-F` is discharged, and its
+answer is the opposite of its prediction.** `p393` ranked one audit first: re-read every `UNGRANTED` row with `git ls-files`,
+because `p393` had just manufactured a false absence from a closed filename list. That audit ran here
+over **all 11 re-readable condemned addresses**, with the whole tree enumerated, plus three arms no
+prior pass ran on those rows — SPDX identifiers, manifest fields, and the README. 🟢 **On the predicted
+class it is 11 for 11 clean: not one licence-shaped file at any path in any of the eleven trees**, so
+`p393`'s `LICENSE.LGPL-3.0` miss was a **singleton, not a symptom**, and a successor need not go
+hunting the filename space again. 🔴 **But two of the eleven are refuted anyway, by the README** —
+[`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) and
+[`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer) both carry a plain MIT
+grant in their README, and `p288` made the README a standing grant channel **roughly a hundred passes
+before `p386` condemned them**. 🔵 **The gap named the right rows and the wrong defect.**
+
+🔴 **And `bbmcps` is wrong twice.** It is **not a Blackboard Learn integration at all**: zero
+occurrences of `blackboard.com`, no Learn REST call, no OAuth, dependencies `mcp` and `sqlite3`, and
+a `blackboard://` scheme that is the **blackboard architectural pattern** — shared memory and a
+knowledge graph, credited in its own README to `dx-corp/shared-memory-mcp`. The Blackboard family on
+this shelf drops from **nine addresses to eight**, and the one "ungranted Blackboard server" leaves
+the family entirely. 🔵 **This is `Gap 393-A` found on this base's own shelf rather than in a new
+channel: a token was read as a capability, and it has been sitting in the census for eight passes.**
+
+🟢 **`Gap 393-G` is half closed, and the half that failed is worth more than the half that worked.**
+`p393` asked for a CRAN channel. **CRAN is refused on BOTH tools** (`curl` 000, `WebFetch` ENOTFOUND),
+and so is r-universe — so unlike `Gap 532`'s asymmetry this is a real absence, not a tool artefact.
+🟢 **But `github.com/cran/<pkg>` read-only-mirrors every CRAN package including its `DESCRIPTION`**, so
+an R grant is verifiable first-hand without CRAN, with a calibrated oracle behind it (`catR`, `TAM`,
+`learnr` present; `gradethis`, `qti` and a nonsense control absent). 🔴 **It verifies and cannot
+discover** — name to package, never capability to names. 🔵 **And the irony is load-bearing:
+`cran/gradethis` is ABSENT, because the one permissive autograder this pass found is not on CRAN. The
+index `Gap 393-G` asked for would have missed the best row it produced.**
+
+🔴 **The pass's most expensive finding is in this base's own licence gate, and it produces false
+absences of GRANTS.** `licence-grant-gate` returned **`granted: False` on verbatim, unmodified
+BSD-3-Clause**. The trigger is the literal phrase **"all rights reserved"** — carried in the gate's
+non-grant marker list since `P455`, and **line 2 of the canonical BSD-3 and BSD-2 templates**. The
+mechanism was isolated by experiment, not inferred: adding a title line changed nothing, removing the
+phrase flipped the verdict. 🟢 **`P455`'s own specimen does not contain the phrase at all** — re-read
+200 today, 869 B, `sha256`₁₆ `c341a936e405b61d`, its refusal resting on four other markers — so the
+marker was never load-bearing for the defect it was added for. It was pure false-positive surface.
+🟢 **Fixed, with twelve controls including two negative ones that keep the old defect reproducible**
+(`P459`; the gate's suite went 47 → 59, and `make hooks` holds at its inherited **44/46**). 🟡 **The
+realised damage on these shelves is NIL and that is stated rather than inflated**: no published row
+was ever graded from an untitled BSD payload. The exposure was prospective, over **297 BSD-3-Clause
+and 201 BSD-UNVERSIONED cells**, and it fired for the first time on this pass's own candidate.
+
+🔵 **Three instances, one root cause, and `p393`'s ranked item 5 should now be read as ranked item 1.**
+`Gap 392-A` over-refutes on a runtime key. `Gap 393-A` over-discovers on a name. `P459` strips a grant
+from a payload that plainly makes one. **All three are a string matched as though it were a meaning**,
+and the gate already holds the right concept one screen away — `AMBIGUOUS_WORDS = ("apache", "nginx",
+"mit", "bsd")`, with a comment saying each is simultaneously a licence name and something else. The
+base applied that insight to licence **names** and never to licence **clause text**.
 
 **Pass `p393` · 2026-10-22.** 🟢 **`Gap 392-C` is closed by an artefact that costs 1.4 seconds.** `p392`
 registered *"there is no Python package DISCOVERY channel, and that is why `Gap 391-A` was invisible"*,
@@ -29,6 +89,29 @@ licence read from the payload at the **real default ref** ·
 [`capability-absence-census`](../evidence/capability-absence-census.2026-10-22-p392.txt) — 364 absence
 sentences adjudicated · the instrument and its 11 controls at
 [`compose/code/p392-capability-absence/`](../compose/code/p392-capability-absence/README.md).
+
+## What `p394` changes
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p394.tsv) — 17 rows ·
+[`ungranted-reread`](../evidence/ungranted-reread.2026-10-22-p394.tsv) — `Gap 393-F`'s audit, all 12
+condemned addresses with four arms each ·
+[`channel-state`](../evidence/channel-state.2026-10-22-p394.tsv) — 14 channels **per tool** ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p394.tsv) — 11 legs · the gate fix and its 12
+new controls in [`compose/code/licence-grant-gate/`](../compose/code/licence-grant-gate/grant_gate.py).
+
+| # | finding | where it bites |
+|---|---|---|
+| 1 | 🟢 **`Gap 393-F` DISCHARGED — 11 of 11 clean on the predicted class.** Every re-readable `UNGRANTED` address re-read by **tree enumeration**, not by a path list: `loyaniu/moodle-mcp` (13 files), `Seechange-edu/act-ai-tutor-backend` (3), `Nutlope/llamatutor` (46), `Daniel-ux1026/Tutor-Inteligente` (145), `FXArth/Tutor-Programacao` (12), `henriquebotelhogomes/educacao` (211), `anastasasenov/bbmcps` (9), `jarodise/Language-Transfer` (42), `DMontgomery40/mcp-canvas-lms` (36), `general-mudkip/d2l-mcp-server` (54), `onbirdev/moodle-webservice_mcp` (20). **Zero licence-shaped files at any path in any tree**, and **zero SPDX identifiers** — an arm no prior pass ran. 🟢 So `p393`'s false absence was a singleton. | 🟢 **A negative result that buys something: the filename space is NOT the leak**, and the next pass can stop widening path ladders. `santillana-ai/tutor-sdk` is excluded and said so — a tree that cannot be cloned cannot be enumerated. |
+| 2 | 🔴 **Two condemned rows REFUTED — by the README, which `p288` made a standing channel ~100 passes before `p386` condemned them.** [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps): *"This project is open-source and available under the MIT License."* (`readme.md:84`). [`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer): `## License` → `MIT` (`README.md:167`, **31 ★**). Both carry **no** licence file and **no** manifest, and 🔴 **GitHub's own sidebar shows no licence for either**, so the base's verdict and GitHub's agree — and both are wrong. | Rows corrected below and in the provenance table. New class: **README-ONLY** — one rung weaker than `p383`'s MANIFEST-ONLY, because nothing machine-readable asserts it. 🔵 **The lesson is not "add the README to the probe": the gate for it already existed. The verdict pipeline did not call it.** |
+| 3 | 🔴 **`bbmcps` is not a Blackboard integration, and the census has carried it as one for eight passes.** No `blackboard.com`, no Learn REST, no OAuth; dependencies `mcp` + `sqlite3`; `blackboard://` is the **blackboard architectural pattern** (shared memory, knowledge graph), credited in its own README to `dx-corp/shared-memory-mcp`. **Blackboard: 9 → 8 addresses**, and the family's only ungranted row leaves it: **8 probed = 6 MIT + 2 dead, 0 ungranted.** | Census and the measured-supply table corrected below. 🔵 **This is `Gap 393-A` on this base's own shelf**, not in a new channel — and it is the strongest argument for `p393`'s ranked item 5, because it shows the defect does not only mis-discover, it mis-*files* what it already owns. |
+| 4 | 🔴 **`licence-grant-gate` read `granted: False` on verbatim BSD-3-Clause — a false absence of a GRANT, the most expensive error class this base has.** Specimen: `open-webui/LICENSE` vendored inside `Lamb-Project/lamb`, 1,510 B, `sha256`₁₆ `6c4b8d8034b9`, stock BSD-3 and **untitled**. Cause isolated by experiment: the phrase **"all rights reserved"**, in the gate's `NON_GRANT_MARKERS` since `P455` and **line 2 of the canonical BSD-3/BSD-2 templates**. Title made no difference; removing the phrase flipped the verdict. 🟢 `P455`'s own specimen (`murderszn/open-tutor`, 869 B, `c341a936e405b61d`, re-read **200** today) **contains the phrase nowhere** — four other markers carry its refusal. | 🟢 **Fixed as `P459`**, the marker made conditional on the absence of an operative grant sentence; **12 new controls, 2 of them negative** so the old defect stays reproducible; suite **47 → 59**; `make hooks` unchanged at its inherited **44/46**. 🟡 **Realised damage: NIL** — no published row was graded from an untitled BSD payload. Exposure was prospective across **297 BSD-3-Clause + 201 BSD-UNVERSIONED** cells. |
+| 5 | 🟢 **`Gap 393-G` half closed: an R supply tier exists, and three of its rows are PERMISSIVE.** 🟢 [`rstudio/gradethis`](https://github.com/rstudio/gradethis) — **MIT**, `sha256`₁₆ `48c18e68ffed`, **164 ★**, 41 forks, HEAD **126 d**, Posit Software PBC. 🟢 [`rstudio/learnr`](https://github.com/rstudio/learnr) — **Apache-2.0**, `60a581bccd57`, **738 ★**, 241 forks. 🟢 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) — **BSD-3-Clause**, `1677c5307530`, the R extension **for `otter-grader`**, this base's most-adopted autograder. Plus GPL psychometrics: [`philchalmers/mirt`](https://github.com/philchalmers/mirt) (**235 ★**, HEAD **1 DAY**), [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) (**47 ★**), `cran/catR` (**computerized adaptive testing**), `cran/TAM`. | New **Tier 6** below; rows on [`repos/foundations.md`](../repos/foundations.md); **`Trend 24`**; new **`Pattern AB`**. 🔵 **`gradethis` at 164 ★ edges `otter-grader` at 161 ★** — so the most-starred autograder on these shelves was never the Python one, and it is MIT. |
+| 6 | 🟢 **`cran/exams` is the broadest assessment exporter on these shelves, and it lands directly on `p393`'s new Tier 8.** R/exams v2.4-5 (Achim Zeileis, R-project) emits **QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam** — read from the `R/` source filenames in the clone, not from prose — plus **NOPS**: printed, scanned, automatically marked PDF. 🟡 **GPL-2 \| GPL-3, disjunctive** — the licensee picks the rung. | 🔵 Compare `p393`'s [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker): LGPL-3.0, **4 ★**, Canvas and Blackboard only. **The QTI story on this shelf changes shape**: the generator with the widest reach is GPL and ten years old, not the new LGPL one. 🟢 **NOPS is the paper-assessment path** — the one thing in this whole base that works where connectivity does not. |
+| 7 | 🟢 **A no-code LLM-assistant builder that publishes into Moodle over LTI, and it is EMEA-authored and peer-reviewed.** [`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb) — **GPL-3.0** (35,349 B, `17fe6d0ffa96`, stock GPL-3 under a four-line project header), Marc Alier (**UPC Barcelona**) and Juanan Pereira (**UPV/EHU**), 7,087 files, HEAD **2 d**, published in *Computer Standards & Interfaces*. Companion [`Lamb-Project/lamba`](https://github.com/Lamb-Project/lamba) is the **LTI activity module for assignments graded by a LAMB assistant**. 🔴 A Moodle.org thread (Feb 2026) calls it *"at a very beta stage"* with *"a few universities running pilots"* — carried on every LAMB row, because a 2-day HEAD reads as momentum and the forum reads as pilot-stage. | New row below and on [`verticals/solutions.md`](../verticals/solutions.md); **`Pattern AC`**. 🔴 **Three grants in one tree** (`p382`'s subtree axis): root GPL-3, `lamb-kb-server-stable/` stock GPL, and the vendored `open-webui/` BSD-3 — the last being the specimen that exposed `P459`. 🔴 **Fold recorded:** `Lamb-Project/LAMBA` is the same repository as `lamba` (identical head `87e203a`, identical payload `sha256`), published once per `p348`. |
+| 8 | 🔴 **`Gap 393-G`'s channel question answered precisely, and the answer is a per-tool absence.** CRAN: **`curl` 000 proxy-refused, `WebFetch` ENOTFOUND** — closed on **both** tools, so unlike `Gap 532` this is a real absence rather than a tool artefact. r-universe, the obvious substitute: **also refused**. 🟢 The substitute that works is **`github.com/cran/<pkg>`**, a read-only mirror of every CRAN package's `DESCRIPTION`, with a calibrated oracle: `catR`/`TAM`/`learnr` present, `gradethis`/`qti`/nonsense-control absent. 🔴 **It verifies; it cannot discover.** | [`channel-state`](../evidence/channel-state.2026-10-22-p394.tsv). **`Gap 394-C`** asks for the one missing piece: an org listing for `cran` (≈22,000 packages) would turn the lookup mirror into an index. 🔵 **Also localised: `api.github.com` 403 is SESSION REPOSITORY SCOPING, not a proxy block** — earlier cycles recorded it as "github-api-proxy-blocked", which pointed at the wrong remedy. |
+| 9 | 🔴 **Three R grants live ONLY in `DESCRIPTION`, and GitHub's sidebar shows no licence for any of them.** `cran/exams`, `mirt` and `ShinyItemAnalysis` carry **no licence-shaped file at any path**. 🟢 **This base already knew the rule** — `p1052` holds `DESCRIPTION` in its manifest list with a test asserting *"CRAN: the grant lives in DESCRIPTION and must be read verbatim"*, and `p122` has a `STUB-SEE-DESCRIPTION` verdict — so this pass does **not** publish it as a discovery. 🔴 **But `licence-grant-gate` does not know it**: `DESCRIPTION` is in neither its path ladder nor its `EXISTENCE_PATHS`. | **`Gap 394-B`**: the knowledge is in the base and not in the instrument that produces the verdicts. 🔵 **And a second ordering defect beside it:** the ladder is **first-hit-wins** with `LICENSE` at position 0 and `LICENSE.md` at position 1, and R's convention puts a **49-byte year/holder stub** at `LICENSE` with the real text at `LICENSE.md`. On `rstudio/gradethis` the gate therefore returns `NON-GRANT` from the stub while extracting the holder correctly — **`Gap 394-A`**. 🔴 Neither a wider path list nor tree enumeration can fix that one, so `Gap 393-F`'s remedy would never have caught it. |
+| 10 | 🔵 **`Gap 387-D`, fifth confirmation — with the failure mode newly specific.** Four English global legs: **0 granted addresses**, and every education-adjacent name they returned is already carried here as a course or a list. 🟢 **The EMEA leg reversed `p393`'s nil** and returned the EU AI Act's education trigger directly. 🟢 **The one leg that returned an address was the SPANISH one** — LAMB. | [`regional-legs`](../evidence/regional-legs.2026-10-22-p394.tsv). 🔵 `p393` showed an index beats the legs. **`p394` adds the other half: when the legs do return supply, it is the non-English leg that returns it.** Two passes, two distinct ways the prescribed English legs under-return. |
+| 11 | 🟢 **`Gap 393-E`'s archived column, delivered rather than deferred.** [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit): *"This repository was archived by the owner on Mar 10, 2025. It is now read-only."* — **591 days**, 11 ★, Apache-2.0. Seven further addresses read this pass carry a verified **not-archived**. | 🟢 `p393` was right that the cost is near zero: the `WebFetch` star read returns the banner in the **same** read. Column added to [`verified-repos`](../evidence/verified-repos.2026-10-22-p394.tsv) and to the dated tables below. |
 
 ## What `p393` changes
 
@@ -193,6 +276,57 @@ own child. **The moment a studio hosts one on behalf of a district, the credenti
 institutional and the read becomes a FERPA-governed disclosure of an education record.** The persona
 is new; the obligation is not. `Pattern P` is built around that boundary.
 
+## Tier 6 — 🆕 `p394` The R teaching, autograding and psychometrics stack
+
+🔵 **Why this tier did not exist until now.** `p393` ranked a CRAN channel second and gave the reason:
+`otter-grader`, the most-adopted autograder on these shelves, **grades R**, and the statistics-teaching
+stack is R-shaped — so one whole teaching discipline sat in a blind spot. The channel it asked for is
+**closed on both tools** (CRAN `curl` 000 / `WebFetch` ENOTFOUND; r-universe refused), but the supply
+is reachable by clone, and `github.com/cran/<pkg>` mirrors every CRAN `DESCRIPTION`. Every row below
+was read from a cloned tree on 2026-10-22.
+
+🔴 **Read the licence column carefully: this tier splits cleanly, and the split is commercial.** The
+three **delivery** components are permissive and the four **measurement** components are GPL.
+
+| repo | ref · HEAD | licence | ★ | what it is |
+|---|---|---|---|---|
+| [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · **126 d** | 🟢 **MIT** *(1,078 B, `sha256`₁₆ `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **164** | 🆕 `p394`. **Automated feedback for student exercises**, from **Posit Software, PBC**. Two grading modes: compare against a model solution (`grade_this_code()`), or write the predicate yourself (`grade_this()`). 41 forks. 🟢 **The most-starred autograder on these shelves and the most permissive** — it edges `otter-grader` (161 ★). 🔴 **Not on CRAN** (`cran/gradethis` ABSENT), so a CRAN index would have missed it. |
+| [rstudio/learnr](https://github.com/rstudio/learnr) | `main` · **343 d** | 🟢 **Apache-2.0** *(10,472 B, `60a581bccd57`; `DESCRIPTION`: `Apache License (>= 2.0)`)* | **738** | 🆕 `p394`. **Interactive tutorials in R Markdown** — the runtime `gradethis` grades inside. 241 forks. 🟡 HEAD is 343 days: this is a **stable substrate**, not an abandoned one; the movement is in `gradethis`. |
+| [ucbds-infra/ottr](https://github.com/ucbds-infra/ottr) | `master` · **108 d** | 🟢 **BSD-3-Clause** *(1,555 B, `1677c5307530`; `DESCRIPTION`: `BSD_3_clause + file LICENSE`)* | 3 | 🆕 `p394`. **The R autograding extension for `otter-grader`** — UC Berkeley Data Science Education Program. Grades R scripts, Rmd documents and Jupyter notebooks with R kernels. 🟢 So `otter-grader`'s R half is permissive. 🔴 **3 ★: the adoption is on the Python parent**, and this is the component you would actually deploy for an R course. |
+| [philchalmers/mirt](https://github.com/philchalmers/mirt) | `main` · **1 DAY** | 🟡 **GPL (>= 3)** — 🔴 **grant lives only in `DESCRIPTION`; no licence file at any tree path** | **235** | 🆕 `p394`. **Multidimensional item response theory** — the canonical IRT engine, v1.48.2, 88 forks, committed **yesterday**. 🔵 This base has carried `adaptive-knowledge-graph` (IRT + BKT, ~350 ★) and `OATutor` (BKT) as its adaptive layer; `mirt` is the thing those are approximating. |
+| [patriciamar/ShinyItemAnalysis](https://github.com/patriciamar/ShinyItemAnalysis) | `master` · **136 d** | 🟡 **GPL-3** — 🔴 **`DESCRIPTION` only** | 47 | 🆕 `p394`. **Test and item analysis via Shiny**, v1.6.0, 27 forks. The psychometric-review front end a ministry or exam board would hand to a non-programmer. |
+| [`cran/exams`](https://github.com/cran/exams) | `master` · **14 d** | 🟡 **GPL-2 \| GPL-3** *(disjunctive — the licensee picks)* — 🔴 **`DESCRIPTION` only** | n/a *(mirror)* | 🆕 `p394`. **R/exams v2.4-5**, Achim Zeileis (R-project). 🟢 **The broadest assessment exporter on these shelves**: QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam — verified from the `R/` source filenames in the clone (`exams2qti12.R`, `exams2qti21.R`, `exams2moodle.R`, `exams2canvas.R`, `exams2blackboard.R`, `exams2ilias.R`, `exams2openolat.R`, …). 🟢 **Plus NOPS**: a standardised PDF that is printed, scanned and marked automatically. |
+| [`cran/catR`](https://github.com/cran/catR) | `master` | 🟡 **GPL (>= 3)** — 🔴 **`DESCRIPTION` only** | n/a *(mirror)* | 🆕 `p394`. v3.17. Response-pattern generation under **computerized adaptive testing** — the CAT engine behind every "adaptive tutor" claim on this shelf. Sibling [`cran/TAM`](https://github.com/cran/TAM) (GPL >= 2, v4.3-25) carries the test-analysis modules. |
+
+🟢 **The NOPS path deserves naming separately, because nothing else in this base does what it does.**
+R/exams can emit a printed exam, take a **scan** of the completed paper, and mark it automatically. Every
+other assessment component on these shelves assumes a browser, a session and a network. 🔵 **For the
+LATAM and APAC engagements this base keeps describing as connectivity-constrained, an offline
+assessment loop with an auditable paper trail is not a downgrade — it is the requirement**, and the
+LATAM survey fact on [`intel/market.md`](../intel/market.md) sharpens it: **assessment is the
+*lowest*-adoption AI use case among LATAM faculty**, which is precisely where this supply sits.
+
+🔴 **Two licence boundaries a studio will hit in week one, stated now rather than discovered later.**
+**(1)** The **delivery** layer is permissive (`gradethis` MIT, `learnr` Apache-2.0, `ottr` BSD-3) and the
+**measurement** layer is GPL (`exams`, `mirt`, `ShinyItemAnalysis`, `catR`, `TAM`). So a closed-source
+product can embed the tutoring and grading loop and must reach the psychometrics **over a process
+boundary** — the same discipline `Pattern A` and `Pattern O` already apply to copyleft LMSs. **(2)**
+`cran/exams` is **GPL-2 or GPL-3 at the licensee's choice**; a disjunctive grant is a decision the
+studio must record once, not a footnote, because the downstream compatibility differs.
+
+🔴 **And a provenance warning specific to this tier.** `mirt`, `ShinyItemAnalysis`, `cran/exams`,
+`cran/catR` and `cran/TAM` all have **no licence file at any path**: GitHub's sidebar shows **no
+licence** for them, and a reviewer who checks the sidebar will report five granted GPL packages as
+unlicensed. The authoritative grant is the `License:` field in `DESCRIPTION`, which is what CRAN
+itself enforces. 🔵 **That is `Gap 394-B`**, and it is the reason this tier is published with its
+grant-location column visible.
+
+🔴 **One name collision, recorded as a fixture rather than offered as a component.**
+[`jhudsl/ottrpal`](https://github.com/jhudsl/ottrpal) (GPL-3, v2.0.0, HEAD **569 d**) is **not** related
+to `ottr`: "OTTR" there is **Open-source Tools for Training Resources** (Johns Hopkins / Fred Hutch), a
+course-publishing toolchain. 🔵 Two unrelated projects, one token, found in the same hour in a brand-new
+channel — `Gap 393-A` reproducing itself on first contact.
+
 ## Courseware, not agents — but the fastest way to staff a team
 
 | repo | default ref | licence | note |
@@ -223,8 +357,8 @@ three classes that call for three different decisions:
 | repo | result | why it is recorded |
 |---|---|---|
 | [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | 🔴 **UNGRANTED** — nothing at 9 paths, no manifest licence field | 🔴 **It circulates widely as "an open-source AI personal tutor"** and is still returned by the prescribed global search leg. It is not reusable as it stands. The most-cited tutor on the open web and the most-cited *granted* tutor are not the same repository. |
-| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | 🔴 **UNGRANTED** | Surfaced by the LATAM search leg. 🔵 Also a category error worth naming: it teaches **Spanish to non-speakers** inside an agent CLI — it is not a Spanish-language tutor for Spanish-speaking learners, which is the thing the LATAM supply gap is actually about. |
-| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | 🔴 **UNGRANTED** | The one ungranted server of the nine Blackboard addresses probed. |
+| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** *(corrected `p394`)* | 🔴 **`p386`'s verdict is withdrawn.** `README.md:167` carries `## License` → `MIT`. No licence file at any of 42 tree paths, no manifest, no SPDX, and GitHub's sidebar shows nothing — but `p288` made a README grant claim a standing channel, and this row never consulted it. **31 ★**, 4 forks, HEAD 2026-02-28 (**236 d**), single commit, markdown-only. 🟢 `p386`'s *other* reading survives intact: it teaches **Spanish to non-speakers** inside an agent CLI, so it is still not the Spanish-language tutor for Spanish-speaking learners that the LATAM supply gap is about. |
+| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** *(corrected `p394`)* | 🔴 **Wrong twice, and the second error is worse.** `readme.md:84`: *"This project is open-source and available under the MIT License."* **And it is not a Blackboard Learn integration**: no `blackboard.com`, no Learn REST, no OAuth, dependencies `mcp` + `sqlite3`, and `blackboard://` is the **blackboard architectural pattern** — shared memory and a knowledge graph, credited in its own README to `dx-corp/shared-memory-mcp`. **0 ★**, HEAD 2026-10-16 (**6 d**), single commit, 9 files. 🔵 It therefore **leaves the Blackboard family**, which this shelf has counted at nine for eight passes. |
 
 🔵 **The lesson is now `Pattern L` step 8** in [`compose/patterns.md`](../compose/patterns.md):
 *a missing `LICENSE` file is a reason to read the manifest and the source headers, not a verdict.*
@@ -383,7 +517,7 @@ row count in the same sentence, because a reader wants rows and the gate wants s
 | **Blackboard** | [lukecarroll15/blackboard-mcp](https://github.com/lukecarroll15/blackboard-mcp) | 🔴 **`tcd`** | 🟢 **MIT** *(1,065 B)* | 🆕 `p386`. 🔵 **Two lessons in one row.** The default ref is **`tcd`**, not `main` — a `main`-assuming read returns "no licence". And the payload is **byte-identical to upstream with the holder still `alanwtom`**, so the fork lineage is readable from the grant alone. |
 | **Blackboard** | [felipedias-ie/blackboard-mcp](https://github.com/felipedias-ie/blackboard-mcp) | `main` | 🟢 **MIT** *(1,084 B, © "blackboard-mcp contributors")* | 🆕 `p386`. Ultra: courses, content, files, grades, deadlines over the user's own browser session. Collective copyright holder rather than a named individual. |
 | **Blackboard** | [Loganxgreaves/blackboard-mcp](https://github.com/Loganxgreaves/blackboard-mcp) | 🔴 **`master`** | 🟢 **MIT** *(1,070 B)* | 🆕 `p386`. Read-only, defaulted to one university (Sheffield Hallam) — re-point via config. Non-`main` default ref. |
-| **Blackboard** | [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | `main` | 🔴 **UNGRANTED** | 🆕 `p386`. No licence file at **any of 9 probe paths** and **no licence field in any manifest**. Do not ship. |
+| 🔴 ~~**Blackboard**~~ **NOT A BLACKBOARD SERVER** | [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | `main` | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** | 🔴 **`p394` strikes this row from the Blackboard family.** Tree enumerated (9 files): no licence file, no manifest, no SPDX — but `readme.md:84` grants MIT, so the `UNGRANTED` verdict falls. **And it was never a Blackboard integration**: deps `mcp` + `sqlite3`, zero Learn API surface, `blackboard://` = the blackboard *architectural pattern*. Kept here, struck, so the correction is visible where the error was. |
 | **Brightspace / D2L** | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p386`. 🟢 **The most substantial D2L server found.** Multi-strategy auth (TOTP, OAuth, browser), retry / circuit-breaker / cache tiers, and **opt-in write operations**. The closest available base for an institution-grade D2L server. |
 | **Brightspace / D2L** | [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | `main` | 🟢 **MIT** *(1,068 B)* | 🆕 `p386`. 🔵 **Upstream of a fork family — count it once.** [`lmgveerhoek`](https://github.com/lmgveerhoek/brightspace-mcp-server) and [`matthewliu10`](https://github.com/matthewliu10/brightspace-mcp-server) publish **byte-identical** payloads still holding `© 2026 Rohan Muppa`; several more forks share the npm name. Grades, due dates, assignments, announcements, rosters, syllabus. Automated login is wired per school. |
 | **Brightspace / D2L** | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main` | 🟢 **MIT** *(🔵 **1,200 B** — non-stock)* | 🆕 `p386`. The extra bytes are **attribution, not restriction**: an inline notice *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."* See **Pattern L step 11**. |
@@ -440,13 +574,14 @@ the twelve rows above are the verified subset):
 | Canvas | 35 |
 | Moodle | 20 |
 | Google Classroom / Workspace for Education | 12 |
-| Blackboard | 9 |
+| Blackboard | 🔴 ~~9~~ **8** *(`p394`: `anastasasenov/bbmcps` is not a Blackboard integration — see the correction above)* |
 | Brightspace / D2L | 6 |
 | Open edX | 2 |
 | Anki | 1 |
 
-🆕 `p386` — **and the two rows that were only counts are now measured.** Of the nine Blackboard
-slugs harvested, nine were probed first-hand this pass: **6 MIT, 1 ungranted, 2 dead**. Of the six
+🆕 `p386` — **and the two rows that were only counts are now measured.** 🔴 **Re-stated by `p394`:** of
+the **eight** Blackboard slugs harvested — `bbmcps` was never one, and is struck above — eight were
+probed first-hand: **6 MIT, 0 ungranted, 2 dead**. Of the six
 D2L slugs, **6 MIT** — three of them one upstream and two byte-identical forks. The census column
 above counts *addresses*; it never counted *grants*, and for four passes the difference read as an
 absence of supply.
@@ -462,9 +597,17 @@ D2L has six and the only one checked is ungranted"**, and concluded that both we
 *"a permissively-licensed server would be a genuine contribution."* 🔴 **That conclusion was wrong,
 and it was wrong because nobody had read the grants — not because the grants were absent.**
 
+🔴 **`p394` corrects the sentence a second time, in the other direction.** The nine was never nine:
+`anastasasenov/bbmcps` is a shared-memory MCP server that happens to use the word *blackboard* as an
+architectural metaphor, so **eight addresses, 6 MIT and 2 dead, and not one ungranted Blackboard
+server exists.** 🔵 The original claim was wrong because nobody read the grants; the correction was
+wrong because nobody read the *repository*. Both errors are the same error — **a cell inherited as a
+count rather than derived from an artefact** — and the second survived four passes of scrutiny that
+were all looking at the licence column.
+
 | platform | probed this pass | 🟢 MIT, payload read | 🔴 ungranted | 🔴 address dead |
 |---|---|---|---|---|
-| **Blackboard** | 9 | **6** | 1 (`anastasasenov/bbmcps`) | 2 (`e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp`) |
+| **Blackboard** | 🔴 ~~9~~ **8** *(`p394`)* | **6** | 🔴 ~~1 (`anastasasenov/bbmcps`)~~ → **0** | 2 (`e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp`) |
 | **Brightspace / D2L** | 6 | **6** | 0 | 0 |
 
 🔵 **The gap moved, it did not close — and the new shape is the actionable part.** Eleven of the
@@ -682,13 +825,13 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | [lukecarroll15/blackboard-mcp](https://github.com/lukecarroll15/blackboard-mcp) | 🔴 **`tcd`**`/LICENSE` | MIT — 1,065 B, holder still `alanwtom` *(`p386`)* |
 | [felipedias-ie/blackboard-mcp](https://github.com/felipedias-ie/blackboard-mcp) | `main/LICENSE` | MIT — 1,084 B, © "blackboard-mcp contributors" *(`p386`)* |
 | [Loganxgreaves/blackboard-mcp](https://github.com/Loganxgreaves/blackboard-mcp) | 🔴 **`master`**`/LICENSE` | MIT — 1,070 B *(`p386`)* |
-| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
+| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | 🟢 **whole tree enumerated** (9 files): no licence file, no SPDX, no manifest — grant at **`readme.md:84`** | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** *(`p394`)* |
 | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | `main/LICENSE` | MIT — 1,070 B *(`p386`)* |
 | [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | `main/LICENSE` | MIT — 1,068 B; `lmgveerhoek` and `matthewliu10` byte-identical *(`p386`)* |
 | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main/LICENSE` | MIT — 1,200 B, inline derivation notice *(`p386`)* |
 | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main/LICENSE` | MIT — 2,181 B, **two stacked MIT grants** (own + `d2l-cli`) *(`p386`)* |
 | [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
-| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
+| [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | 🟢 **whole tree enumerated** (42 files): no licence file, no SPDX, no manifest — grant at **`README.md:167`** | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** *(`p394`)* |
 | [e9x/blackboard-mcp](https://github.com/e9x/blackboard-mcp) · [parkseokjune/unist-blackboard-mcp](https://github.com/parkseokjune/unist-blackboard-mcp) | — `ls-remote` returns nothing | **DEAD / private** — both listed by search results as live MIT servers *(`p386`)* |
 **13 of the 58 live addresses are not on `main`** (`master`, `develop`, `dev`, `release`,
 `development`, `release_11`, `19.0`) — 🆕 `p386` adds **four more refs** to that list from 22 new

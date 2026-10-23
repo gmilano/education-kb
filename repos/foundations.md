@@ -1,10 +1,27 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Foundational repos for education
+
+**🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** **Tier 3 gains the R half of the
+CS-teaching stack**, and the surprise is in the licence column rather than the tier: the three
+components that run the teaching loop are **permissive** (`gradethis` 🟢 MIT **164 ★**, `learnr`
+🟢 Apache-2.0 **738 ★**, `ottr` 🟢 BSD-3-Clause), and every component that **measures the learner** is
+GPL (`exams`, `mirt`, `catR`, `TAM`, `ShinyItemAnalysis`). 🟢 **`gradethis` at 164 ★ edges
+`otter-grader` at 161 ★**, so the most-adopted autograder on this shelf was never the Python one.
+🟢 **And `cran/exams` is the broadest assessment exporter this base carries** — QTI 1.2 and 2.1,
+Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS and six more, **plus NOPS**, a printed exam that is
+scanned and marked automatically, which is the only offline assessment loop here. 🔴 Five of those
+rows have **no licence file at any tree path**: the grant lives only in `DESCRIPTION`, GitHub's sidebar
+shows nothing, and that is **`Gap 394-B`**.
+
+🔴 **`Gap 393-G` is only half closed and the open half is named.** CRAN is refused on **both** tools
+(`curl` 000, `WebFetch` ENOTFOUND) and so is r-universe; `github.com/cran/<pkg>` mirrors every CRAN
+`DESCRIPTION` and **verifies without discovering**. 🔵 **`cran/gradethis` is ABSENT** — the best row
+this pass produced is not a CRAN package at all, so the index `p393` asked for would have missed it.
 
 **🆕 Pass `p393` · 2026-10-22.** This shelf gains **a new Tier 8**, because the thing the new PyPI
 index-dump channel found is a *layer* rather than a repository: the **1EdTech standards clients and the
@@ -131,6 +148,30 @@ rather than forking the platform. Recipes in [`compose/patterns.md`](../compose/
 | [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🔴 `master` | 🟢 **BSD-3-Clause** | Autograding at Berkeley cohort scale; container-isolated execution. |
 | 🆕 `p393` [edulinq/autograder-py](https://github.com/edulinq/autograder-py) | `main` · `7984bd2` | 🟢 **MIT** *(1,071 B, `7eb48830c022`)* | The **submission and feedback** client for the edulinq autograding server — the half `nbgrader` and `otter-grader` leave to the institution. **49 releases**, 494 commits, HEAD **2026-10-02 — 20 d**, **16 ★**. 🔵 Pairs with `otter-grader` (grading) rather than competing with it. |
 | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Pedagogical assessment of *how* code was written. The missing half of autograding. 🔴 🆕 `p387`: **PyPI `pybryt` has had no release since v0.7.0 on 2022-04-28.** Keep it as the design it states, vendor the code, and do not sell a client a dependency that has not shipped in four and a half years. The maintained halves of this tier (`nbgrader`, `otter-grader`) are where the running infrastructure should sit. |
+| 🆕 `p394` [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · `48aaf89` | 🟢 **MIT** *(1,078 B, `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **Automated feedback for student exercises**, from **Posit Software, PBC**. `grade_this_code()` compares against a model solution; `grade_this()` takes a predicate you write. HEAD **2026-06-18 — 126 d**, **164 ★**, 41 forks. 🟢 **The most-starred autograder on this shelf and the most permissively licensed** — it edges `otter-grader` at 161 ★. 🔴 **Not a CRAN package** (`cran/gradethis` ABSENT), so install from GitHub or r-universe, not from CRAN. |
+| 🆕 `p394` [rstudio/learnr](https://github.com/rstudio/learnr) | `main` · `e7164a8` | 🟢 **Apache-2.0** *(10,472 B, `60a581bccd57`)* | **Interactive tutorials in R Markdown** — the runtime `gradethis` grades inside; the two are a pair, not alternatives. **738 ★**, 241 forks. 🟡 HEAD **2025-11-13 — 343 d**: a stable substrate rather than an abandoned one, and the movement is in `gradethis`. |
+| 🆕 `p394` [ucbds-infra/ottr](https://github.com/ucbds-infra/ottr) | 🔴 `master` · `693b3df` | 🟢 **BSD-3-Clause** *(1,555 B, `1677c5307530`; `DESCRIPTION`: `BSD_3_clause + file LICENSE`)* | **The R autograding extension for `otter-grader`** (row above), UC Berkeley Data Science Education Program — grades R scripts, Rmd documents and Jupyter notebooks with R kernels. HEAD **2026-07-06 — 108 d**. 🟢 So this tier's flagship autograder is permissive in **both** languages. 🔴 **3 ★**: the adoption sits on the Python parent, but this is the component an R course actually deploys. |
+| 🆕 `p394` [cran/exams](https://github.com/cran/exams) | `master` · `baa3e28` | 🟡 **GPL-2 \| GPL-3** — 🔴 **disjunctive**, and 🔴 **no licence file at any tree path**: the grant is the `License:` field in `DESCRIPTION` | **R/exams v2.4-5**, Achim Zeileis (R-project). HEAD **2026-10-08 — 14 d**. 🟢 **The broadest assessment exporter on these shelves**: QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam — read from the `R/` source filenames in the clone (`exams2qti21.R`, `exams2moodle.R`, `exams2canvas.R`, …), not from its prose. 🟢 **Plus NOPS**: a standardised PDF printed, scanned and marked automatically — the only offline assessment loop in this base. 🔵 Belongs with **Tier 8** as much as here; it is the generator the standards layer consumes. |
+| 🆕 `p394` [philchalmers/mirt](https://github.com/philchalmers/mirt) | `main` · `e37f14c` | 🟡 **GPL (>= 3)** — 🔴 **`DESCRIPTION` only; GitHub's sidebar shows no licence** | **Multidimensional item response theory** — the canonical IRT engine, v1.48.2. HEAD **2026-10-21 — 1 DAY**, **235 ★**, 88 forks. 🔵 This shelf's Tier 4 carries `adaptive-knowledge-graph` (IRT + BKT, ~350 ★) and `OATutor` (BKT) as the adaptive layer; **`mirt` is the thing those approximate**, and it is committed daily. Sibling [`cran/catR`](https://github.com/cran/catR) (🟡 GPL >= 3, v3.17) is the **computerized adaptive testing** engine, [`cran/TAM`](https://github.com/cran/TAM) (🟡 GPL >= 2, v4.3-25) the test-analysis modules, and [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) (🟡 GPL-3, **47 ★**) the non-programmer front end. |
+
+🔴 **The licence line through this tier runs between DELIVERY and MEASUREMENT, and `p394` found it by
+accident.** The three components that *run the teaching loop* are permissive — `gradethis` MIT,
+`learnr` Apache-2.0, `ottr` BSD-3-Clause — and every component that *measures the learner* is GPL:
+`exams`, `mirt`, `catR`, `TAM`, `ShinyItemAnalysis`. 🟢 **That is a workable boundary rather than a
+blocker**, because it falls exactly where a studio's product boundary falls anyway: embed the tutoring
+and grading loop, reach the psychometrics **over a process boundary**, the same discipline `Pattern A`
+and `Pattern O` already apply to copyleft LMSs. 🔴 **But `cran/exams`'s grant is disjunctive — GPL-2
+*or* GPL-3 at the licensee's choice — and that choice must be recorded once, deliberately**, because
+downstream compatibility differs between the two rungs.
+
+🔴 **A provenance warning this tier needs and the others do not.** `cran/exams`, `mirt`,
+`ShinyItemAnalysis`, `cran/catR` and `cran/TAM` have **no licence-shaped file at any path in their
+trees** — enumerated, not guessed. GitHub's sidebar therefore shows **no licence** for all five, and a
+reviewer who checks the sidebar will report five granted GPL packages as unlicensed. The authoritative
+grant is the `License:` field in `DESCRIPTION`, which is what CRAN itself enforces. 🔵 Registered as
+**`Gap 394-B`**, because this base already knows the rule — `p1052` carries `DESCRIPTION` in its
+manifest list with a test asserting *"CRAN: the grant lives in DESCRIPTION and must be read
+verbatim"* — and `licence-grant-gate`, the instrument that produces the verdicts, does not.
 
 ## Tier 4 — Measurement, memory and retrieval (what makes the agents honest)
 

@@ -1,7 +1,104 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
+---
+
+## Pass 394 · reads 2026-10-22, committed 2026-10-23 — **`Gap 393-F`'s AUDIT IS CLEAN 11-FOR-11 ON THE DEFECT IT PREDICTED, AND REFUTES TWO OF THE SAME ROWS THROUGH A CHANNEL THIS BASE MADE STANDING ~100 PASSES EARLIER. 🔴 AND THE GRANT GATE IS CAUGHT STRIPPING THE GRANT OFF VERBATIM BSD-3.**
+
+**Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-22-p394.tsv) — 17 rows ·
+[`ungranted-reread`](../evidence/ungranted-reread.2026-10-22-p394.tsv) — 12 condemned addresses × 4
+arms · [`channel-state`](../evidence/channel-state.2026-10-22-p394.tsv) — 14 channels per tool ·
+[`regional-legs`](../evidence/regional-legs.2026-10-22-p394.tsv) — 11 legs · the gate fix and its 12
+new controls at [`compose/code/licence-grant-gate/`](../compose/code/licence-grant-gate/grant_gate.py).
+
+### 🟢 Closed
+
+| Gap | Was | Now |
+|---|---|---|
+| 🟢 **`Gap 393-F`** — *"The licence read was a CLOSED FILENAME LIST, and it published a false absence… no pass has ever re-read the UNGRANTED rows with `ls-files`. That re-read is the highest-value audit available to the next pass."* | `p393` graded [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker) ungranted from a six-name probe; the grant was LGPL-3.0 at `LICENSE.LGPL-3.0`. | 🟢 **DISCHARGED, and the answer is the opposite of the prediction.** All **11** re-readable condemned addresses re-read by **whole-tree enumeration**, plus three arms no prior pass ran on them (SPDX, manifest, README): **zero licence-shaped files at any path in any tree, zero SPDX identifiers anywhere.** So `p393`'s miss was a **singleton, not a symptom**, and the filename space is **not** the leak — a successor should stop widening path ladders. 🔴 **But two rows are refuted anyway, by the README** (see `394-F`). The gap named the right rows and the wrong defect. |
+| 🟡 **`Gap 393-E`** — *"ARCHIVED is a repository state these shelves cannot express, and one row needs it today."* | `Ed-Fi-Exchange-OSS/LMS-Toolkit` read fine on licence, date and stars and will never take a security patch. | 🟢 **DELIVERED, not deferred.** An `archived` column now exists on [`verified-repos`](../evidence/verified-repos.2026-10-22-p394.tsv) with its first verified cell read verbatim from the HTML channel: *"This repository was archived by the owner on Mar 10, 2025. It is now read-only."* — **591 days**, 11 ★, Apache-2.0. Seven further addresses carry a verified **not-archived**. 🟢 `p393` was right that the cost is near zero: the `WebFetch` star read returns the banner in the **same** read. |
+| 🟡 **`Gap 393-G`** — *"Open a CRAN discovery channel… the exact blind spot that produced `Gap 391-A` is still fully in place for one whole teaching discipline."* | `otter-grader`, the most-adopted autograder here, grades **R**, and no R component sat on any shelf. | 🟡 **HALF CLOSED, and the half that failed is worth more than the half that worked.** 🔴 **CRAN is refused on BOTH tools** (`curl` 000, `WebFetch` ENOTFOUND) and so is r-universe — checked on the second tool *before* the absence was written down, so unlike `Gap 532` this is a real absence rather than a tool artefact. 🟢 **The substitute works:** `github.com/cran/<pkg>` mirrors every CRAN `DESCRIPTION`, with a calibrated oracle behind it (`catR`/`TAM`/`learnr` present; `gradethis`/`qti`/nonsense-control absent, so ABSENT is informative). 🔴 **It verifies and cannot discover.** 🟢 **The discipline is no longer a blind spot**: a 7-row R tier is published, three rows of it permissive. 🔵 **And the irony is load-bearing — `cran/gradethis` is ABSENT, so the index this gap asked for would have missed the best row the pass produced.** Remainder carried as `394-C`. |
+
+### 🔴 New gaps
+
+| Gap | Statement |
+|---|---|
+| **`394-A`** | **The licence path ladder is FIRST-HIT-WINS, and a stub-shaped payload at position 0 beats a real grant at position 1 — a false absence that neither a wider path list nor tree enumeration can prevent.** `licence-grant-gate`'s `LICENCE_PATHS` begins `("LICENSE", "LICENSE.md", …)` and `probe_repo` returns on the **first** 200 with a non-empty body. R's standard convention for templated licences puts a **year/holder stub** at `LICENSE` and the licence **text** at `LICENSE.md`. On [`rstudio/gradethis`](https://github.com/rstudio/gradethis) the gate therefore grades the **49-byte** stub (`YEAR: 2021`) and returns `NON-GRANT — payload present but no known licence family in title region`, while correctly extracting the holder *"Posit Software, PBC"* — and never reads the clean **MIT** one position later. Same shape on [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) (108-byte stub, BSD-3 text in `LICENSE.md`). 🔴 **This is not `Gap 393-F`'s class, and `393-F`'s remedy cannot catch it**: the path is present and it is *first*. The fix is to keep reading past a payload that yields no family instead of returning on the first 200 — a change to control flow, not to a vocabulary. 🔵 Cheap, bounded, and it can only turn absences into grants. |
+| **`394-B`** | **The R grant lives in `DESCRIPTION`, this base already knows that, and the instrument that produces verdicts does not.** Five rows published this pass — `cran/exams`, `philchalmers/mirt`, `patriciamar/ShinyItemAnalysis`, `cran/catR`, `cran/TAM` — have **no licence-shaped file at any tree path**, enumerated not guessed; their grant is the `License:` field in `DESCRIPTION`, which is what CRAN itself enforces. 🔴 **GitHub's own sidebar shows no licence for any of the five**, so a reviewer checking the UI reports five granted GPL packages as unlicensed. 🟢 **The knowledge IS in this tree:** `compose/code/p1052-stale-absence/stale_absence.py` carries `DESCRIPTION` at the head of its `MANIFESTS` list, special-cases it, and its suite asserts *"CRAN: the grant lives in DESCRIPTION and must be read verbatim"*; `p122-prose-licence-census` has a `STUB-SEE-DESCRIPTION` verdict. 🔴 **But `licence-grant-gate` has `DESCRIPTION` in neither `LICENCE_PATHS` nor `EXISTENCE_PATHS`**, so an R repository with no licence file falls through to `EXISTS-NOLICENCE — all rights reserved until shown otherwise`. 🔵 **The gap is not missing knowledge; it is knowledge that never reached the instrument needing it** — a different and more worrying failure than ignorance. |
+| **`394-C`** | **`github.com/cran` is a lookup mirror and one API call short of a real index.** The `cran` org read-only-mirrors ~22,000 CRAN packages with their `DESCRIPTION` files, which makes every CRAN grant verifiable first-hand without CRAN. 🔴 **Turning it into a discovery channel needs an org repository listing, and `api.github.com` returns 403.** 🔵 **The cause is localised this pass and it is not what earlier cycles recorded:** the body reads *"GitHub access to this repository is not enabled for this session. Use add_repo to request access."* It is **session repository scoping**, not a proxy block — so it is not retry-able, not fixable by another route, and **is** fixable by attaching a repository. Earlier cycles logged this as "github-api-proxy-blocked", which pointed at the wrong remedy for several passes. 🟢 A successor with an org listing closes `Gap 393-G` outright; without one, R supply must keep arriving by name. |
+| **`394-D`** | **Two statutory commencement dates are CONTESTED and this base holds neither primary text — in the two jurisdictions that now make education AI high-risk.** **(1)** The **EU Digital Omnibus**: one source dates it in force **2026-07-27**, with high-risk obligations deferred to **Dec 2027** (stand-alone) and **Aug 2028** (embedded); 🔴 **that disagrees with the European Commission's own published timeline**. **(2)** **Vietnam's Law on AI**: sources disagree on whether it commenced **2026-03-01**. 🔴 Both recorded as contested and neither promoted, because a conformity-assessment deadline is exactly the figure a client plans spend against. 🟢 The *substance* is firm and is published: the EU Act makes systems that **grade learners, assign them to programmes or influence access to qualifications** high-risk, and Vietnam's high-risk tier **names education**. 🔵 A successor should read the Official Journal text and the Vietnamese statute rather than re-asking a search engine — the same remedy `393-D` asked for on tenders, for the same reason. |
+| **`394-E`** | **The richest component tier on these shelves points at the thinnest regional demand, and this base cannot tell whether that is a greenfield or a warning.** The Digital Education Council's LATAM survey 2026 (**30,000+ responses, 29 institutions**) finds **92% of students** and **79% of faculty** actively engaging with AI — and that **assessment uses have the LOWEST adoption of any category**. 🔴 This base's deepest supply is precisely assessment: `otter-grader`, `gradethis`, `ottr`, `nbgrader`, `cran/exams`, `qti_package_maker`, `mirt`, `catR`. 🔵 **Either LATAM assessment is the clearest greenfield on this shelf, or faculty are declining assessment AI for reasons a vendor should understand before pitching it** — and whether to lead an engagement with assessment or with content generation turns entirely on which. 🔴 **The survey reports the what and not the why, and nothing else on these shelves does either.** A successor should look for reasons, not more adoption percentages: UNESCO IESALC's instrument, which surveyed 200 HEIs across 19 countries, is the likeliest place a *why* has already been written down. |
+| **`394-F`** | **A grant channel this base made STANDING was never called by the pipeline that writes grant verdicts — and it cost two published false absences.** `p288` wired `gate-readme-channel` on the rule that *"a README-only grant claim or reservation is not 'no channel'"*. 🔴 Roughly a hundred passes later `p386` published **UNGRANTED** against [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) and [`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer), **both of which grant MIT in their README** (`readme.md:84`, `README.md:167`). Neither has a licence file, a manifest field or an SPDX identifier — all three arms enumerated this pass — and 🔴 **GitHub's own classifier shows no licence for either**, so the base's verdict and GitHub's agreed and both were wrong. 🟢 Corrected to a new class, **README-ONLY**, one rung weaker than `p383`'s MANIFEST-ONLY because nothing machine-readable asserts it. 🔵 **The lesson is NOT "add the README to the probe" — the gate for it already exists and passes in `make hooks` every run.** The lesson is that this base has gates whose rules are not enforced where the verdict is written, which is also exactly `394-B`'s shape. **Two instances in one pass makes it a class: enumerate every standing gate and check whether the writing path actually consults it.** |
+| **`394-G`** | **`bespoke_census` grades stock BSD-3 as `stock=no` and `needs-a-human`, and this pass did NOT localise whether that is a misgrade or a short template set.** Run on [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr)'s `LICENSE.md` — verbatim, titled BSD 3-Clause — `p341`'s census returns `titled_family=BSD`, `scan_verdict=FAMILY-PLUS-RESTRICTION:needs-a-human`, `effective_hits=all rights reserved`, **`stock=no`**. 🟡 `make family-coverage` shows **BSD-3-Clause is covered**, with a pinned fixture at `p314-untitled-payload-arm/bsd-3-clause-freecodecamp` and **297 cells**, so it is not a coverage hole in the sense that target measures. 🔴 **But these are different instruments** — `p341`'s census, `p312`'s template identity and `p314`'s arm each hold their own template set — and this pass did not establish which is short. Recorded as a gap rather than asserted as a defect, because `P459` has just shown how easily a BSD false positive becomes a published absence. 🟢 **Bounded and cheap**: grade the pinned `bsd-3-clause-freecodecamp` fixture with `bespoke_census` and the answer falls out in one command. 🔵 Note the adjacency — the `effective_hit` is the **same phrase** `P459` just removed from the grant gate, so this may be a fourth instance of `Trend 25` rather than a new thing. |
+
+### 🟡 Carried, unchanged
+
+- **`Gap 392-A`** (a `{runtime}`-only capability key over-refutes) and **`Gap 393-A`** (a name-keyed
+  channel over-discovers) — both carried, and 🔴 **`p394` promotes their unification from `p393`'s
+  ranked item 5 to ranked item 1**, on the strength of a third instance (`P459`: *"all rights
+  reserved"* read as a refusal when it is line 2 of the BSD template) and a fourth that is not in an
+  instrument at all (`anastasasenov/bbmcps` filed under Blackboard for eight passes because of a URL
+  scheme). `Trend 25` states the class. **One lexicon separating a string from a capability closes all
+  of them; four separate patches do not.**
+- **`Gap 393-B`** (live releases, dead source) — carried, untouched this pass.
+- **`Gap 393-C`** (no primary-source US state education-AI rule) — 🔴 **carried and explicitly NOT
+  closed.** `p394`'s North America leg was the richest of the four — 134 bills across 31 states, named
+  statutes, a federal bill with a committee date — but **every figure came from a tracker or from
+  committee reporting, not from a statute read first-hand.** Stated so a volume of new facts cannot
+  read as closure.
+- **`Gap 393-D`** (probe TED and BOAMP directly rather than re-asking a search engine) — carried, not
+  attempted. 🔵 `394-D` is the same remedy applied to statutes rather than tenders.
+- **`Gap 393-H`** (class 3b: a quoted absence after a colon *and* across a newline reads as a fresh
+  claim) and **`Gap 393-I`** (the adjudication ledger is pinned by line number and `make hooks` cannot
+  see it drift) — 🔴 **both carried, both untouched, and `393-I` is now overdue.** This pass inserted
+  text above every shelf it wrote, which is precisely the condition that silently broke `p392`'s
+  ledger rows. 🔵 A content anchor — a `sha256` of the absence sentence, as `gate-payload-pin` already
+  does for payloads — remains the fix.
+- **`Gap 387-D`** (the prescribed English legs do not return supply) — 🟡 **fifth confirmation, with
+  the failure mode newly specific.** Four English global legs: **0 granted addresses**, and every
+  education-adjacent name they returned is already carried here as a course or a list. 🟢 **The EMEA
+  leg reversed `p393`'s recorded nil** and returned the EU AI Act's education trigger directly — so a
+  single nil is evidence about a *run*, not about a region, and that is worth recording on its own.
+  🟢 **The one leg that returned an address was the SPANISH one** (LAMB). 🔵 `p393` showed an index
+  beats the legs; `p394` adds that **when the legs do return supply, it is the non-English leg that
+  returns it.**
+- **`Gap 391-F`** (`gate-fold-identity` and `gate-census-union` inherited red) — 🔴 carried.
+  `make hooks` ran **44/46 at the baseline before this pass wrote a byte** and **44/46 after**, with
+  the same two reds and no new ones. Published rather than masked, per `p300`.
+
+### 🟢 Ranked for the successor
+
+1. 🟢 **Fix `394-A` — the first-hit-wins ladder.** One change to control flow in `probe_repo`: keep
+   reading past a payload that yields no licence family instead of returning on the first 200. It can
+   only turn false absences into grants, it is bounded, and **R's standard licence convention
+   guarantees the defect recurs** on every `MIT + file LICENSE` package this base meets.
+2. 🟢 **Then `394-B`, and audit the class rather than the instance.** Add `DESCRIPTION` to
+   `licence-grant-gate`'s vocabularies — but the real work is `394-F`'s question: **enumerate every
+   standing gate and check whether the writing path consults it.** Two instances in one pass
+   (`gate-readme-channel` uncalled, `p1052`'s manifest knowledge unreached) make it a class, and a
+   gate that passes while the pipeline ignores its rule is worse than no gate, because `make hooks`
+   reports it green.
+3. 🟢 **Unify `Gap 392-A`, `Gap 393-A` and `P459` with ONE lexicon** (`Trend 25`). Promoted from
+   `p393`'s item 5. Four instances now, in three instruments and one census cell, all of them a string
+   matched as a meaning. 🔵 The gate already holds the right concept in `AMBIGUOUS_WORDS`; extend it
+   from licence *names* to licence *clause text*, package names and URL schemes.
+4. 🟡 **Settle `394-G` in one command** before it becomes another published absence: grade the pinned
+   `bsd-3-clause-freecodecamp` fixture with `bespoke_census`. If it also returns `stock=no`, the
+   template set is short and that is a one-line fix; if it returns `stock=YES`, `ottr`'s payload
+   differs from the fixture and *that* is the finding.
+5. 🔴 **`Gap 393-I` is overdue and this pass made it worse.** Re-anchor the adjudication ledger on
+   content (`sha256` of the absence sentence) rather than line numbers, and put the live fatal arm in
+   `make hooks` behind the existing offline guard. Every shelf this pass wrote had text inserted above
+   it. An audit trail that drifts silently is worse than none, because it reads as current.
+6. 🟡 **Answer `394-E`'s *why*, not more of its *what*.** UNESCO IESALC surveyed 200 HEIs across 19
+   LAC countries; if anyone has written down **why LATAM faculty decline assessment AI**, it is there.
+   The engagement shape for the whole region turns on it.
+7. 🔵 **Read the two contested statutes first-hand** (`394-D`): the EU Digital Omnibus in the Official
+   Journal, and Vietnam's Law on AI. Two jurisdictions now make education AI high-risk, this base's
+   newest tier does exactly what they name, and the commencement dates are the figures a client plans
+   spend against.
+
 ---
 
 ## Pass 393 · 2026-10-22 — **`Gap 392-C` IS CLOSED BY AN ARTEFACT THAT COSTS 1.4 SECONDS, AND IT REFUTES `Gap 391-A` A SECOND TIME. 🔴 THE CHANNEL'S PRECISION COST AND THIS PASS'S OWN FALSE "UNGRANTED" ARE BOTH PUBLISHED AS GAPS RATHER THAN PATCHED AWAY.**

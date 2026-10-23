@@ -1,10 +1,29 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Education market intelligence
+
+**🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** 🟢 **All four prescribed regional legs
+returned facts and zero addresses, and the cross-regional finding is a convergence worth building
+once:** **two jurisdictions now place education AI in a statutory high-risk tier** — the **EU AI Act**
+(systems that grade learners, assign them to programmes, or influence access to qualifications) and
+🆕 **Vietnam's Law on AI, in force 2026-03-01**, whose high-risk tier **names education**. 🟢 Meanwhile
+**Oklahoma and Maryland** require a human in the loop for high-stakes AI decisions about students.
+🔵 **Three jurisdictions, one engineering obligation: a reviewable decision with an override path.**
+🔴 **And it lands directly on the tier this pass just added** — autograding and psychometrics do
+exactly what the EU Act names, so an EU autograding engagement is a **high-risk AI deployment** needing
+a conformity assessment, not an integration project.
+
+🟢 **`p393`'s recorded EMEA nil REVERSES.** The same leg that returned *"no education content at all"*
+24 hours earlier returned the Act's education trigger directly — so a single nil is evidence about a
+run, not about a region. 🔴 **Two dates are recorded as CONTESTED rather than promoted**: the EU
+Digital Omnibus commencement (`Gap 394-D`) and Vietnam's. 🔴 **And one informed gap is stated so
+silence cannot read as coverage: APAC returned no education-specific adoption figures at all** — the
+mirror image of LATAM, which has two independent surveys and, per UNESCO IESALC, no governance
+frameworks to match them.
 
 **Pass `p383` · 2026-10-22 · FULL REWRITE.** Prior version archived at
 [`archive/2026-10-22-p383-pre-rewrite/intel-market.md`](../archive/2026-10-22-p383-pre-rewrite/intel-market.md).
@@ -436,6 +455,37 @@ running it against a named client list.
 🟢 **Where the margin is:** high child-poverty rate **plus** low per-pupil spend identifies districts
 with federal money and no incumbent vendor — the cheapest pilot to land and the hardest to displace.
 
+#### 🆕 `p394` — North America: the legislative surface is countable now, and it is state-level
+
+🟢 **The prescribed North America leg was the richest of the four this pass**, and what it returned is
+a *buying-cycle* map rather than a market size.
+
+| fact | figure | provenance |
+|---|---|---|
+| State bills on AI in education, 2026 session | **134 bills across 31 states** | MultiState tracker |
+| Privacy-led examples | **California AB 1159**, **Idaho SB 1227** | same |
+| States requiring **human oversight** of high-stakes AI decisions about students | **Oklahoma, Maryland** | same |
+| States adding AI instruction to **CS graduation requirements** | **Georgia, Mississippi** | same |
+| Federal | **H.R. 8747**, K-12 AI Literacy and Readiness Act of 2026 — advanced out of House Education & Workforce **2026-07-21**, largely along party lines | committee reporting |
+| Canada | **"AI for All"** national strategy launched **2026-06-04**, including AI literacy | 🔴 a strategy, **not** a statute |
+| New York City | proposed **one-year moratorium** on student-facing AI through grade 8; feedback window to 2026-05-08 | district proposal |
+| Regional share | NA = **36%** of the AI-in-education market; **$3.68B (2026) → $32B (2030)** | 🔴 **vendor statistics compilation, single source — flagged, not to be quoted as a range** |
+
+🔵 **The actionable reading is the oversight clause, not the bill count.** Oklahoma and Maryland
+requiring a human in the loop for high-stakes decisions about students means a **placement, grading or
+progression** agent sold into those states must expose a reviewable decision and an override path as a
+*product feature*, not as a policy promise. 🟢 **That is the same obligation the EU AI Act imposes
+under *EMEA* below**, so the two largest regulated markets are converging on one engineering
+requirement and a studio can build it once. 🔴 **And the same clause disqualifies the
+autonomous-grading pitch** in those states — which is exactly the pitch the autograding supply on
+these shelves most readily supports.
+
+🔴 **`Gap 393-C` is NOT closed, and is restated rather than quietly dropped.** `p393` caught a
+widely-repeated Boston graduation-requirement claim that conflated a district programme with a state
+proposal. This pass added **no** primary-source state rule either: every figure above comes from a
+tracker or from committee reporting, not from a statute read first-hand. **This base still holds no
+primary US state education-AI rule.**
+
 ### EMEA
 
 🆕 `p393` 🔴 **This pass's EMEA research leg returned NO education-sector content, and that is written
@@ -681,6 +731,39 @@ leg returned nothing this base does not already hold more precisely. 🔴 And `e
 secondary corroboration rather than the primary text — stated so no one mistakes repetition for
 verification.
 
+#### 🆕 `p394` — EMEA: `p393`'s nil REVERSES, and the EU AI Act's education trigger is now explicit
+
+🟢 **This is a correction to a recorded absence, which is why it leads.** `p393` wrote that this exact
+leg *"returned no education content at all — enterprise AI only, one source dated 2023"*. Re-run on
+2026-10-22, **it does not repeat**: the leg returned the EU AI Act's education provisions directly.
+🔵 **So a single nil from a prescribed leg is not evidence of a dry region** — it is evidence about
+that run. This base has now seen the same leg return nothing and then something within 24 hours, and
+that is worth more than either result alone.
+
+🔴 **The trigger, stated precisely, because the precision is the whole value.** Under the EU AI Act,
+education systems that **grade learners**, **assign them to programmes**, or **influence access to
+qualifications** are **high-risk**, and require a **conformity assessment before deployment**.
+
+🔵 **Map that onto this base's own supply and the consequence is immediate.** The autograding and
+psychometrics tier added this pass — `gradethis`, `ottr`, `cran/exams`, `mirt`, `catR` — does *exactly*
+the three things the Act names. 🔴 **An autograding engagement in the EU is a high-risk AI deployment,
+not an integration project**, and it has to be sized with a conformity assessment in the plan. 🟢 The
+same human-override design that Oklahoma and Maryland now require under *North America* is the
+mitigation here too.
+
+🔴 **A timing claim recorded as CONTESTED, not as fact.** One source dates the **Digital Omnibus** in
+force **2026-07-27**, with high-risk obligations deferred to **December 2027** (stand-alone systems)
+and **August 2028** (embedded systems). 🔴 **That disagrees with the European Commission's own
+published timeline.** Both readings are recorded and neither is promoted: a studio sizing a
+compliance deadline must read the Official Journal text, not this shelf and not the secondary
+summaries. 🔵 Registered as **`Gap 394-D`**.
+
+🟡 **And one market-condition signal, dated the day before this pass.** Reuters, **2026-10-21**: an AWS
+EMEA executive says regulation, funding and skills gaps are pushing some European startups to consider
+relocating. 🔵 Weigh it as what it is — a cloud vendor's public argument against the regulation its
+customers are subject to — but the *skills* half corroborates the delivery-capacity constraint this
+shelf already records for EMEA.
+
 ### APAC
 
 🆕 `p393` **What this pass's APAC leg added — commercial motion, and a declared regulatory nil.**
@@ -871,6 +954,36 @@ the application.
 
 🔴 **The constraint to price in:** a harness extension is not deployable without its harness, so an
 engagement that cannot adopt DeepSeek Harness buys the *structure*, not the package.
+
+#### 🆕 `p394` — APAC: a SECOND jurisdiction now makes education AI high-risk by statute, and it is Vietnam
+
+🟢 **This leg's find of the pass is one clause in one statute.** **Vietnam's Law on Artificial
+Intelligence, in force 2026-03-01**, uses a risk-based structure, and its **high-risk tier names
+education** alongside healthcare and finance. 🔵 **That makes Vietnam the second jurisdiction after the
+EU to put education AI in a statutory high-risk tier** — and the first in APAC. An edtech AI
+deployment there is a compliance target by default, not by interpretation.
+
+| jurisdiction | instrument | status | education-specific? |
+|---|---|---|---|
+| **Vietnam** | Law on Artificial Intelligence | 🔴 **in force 2026-03-01** | 🔴 **YES — education named in the high-risk tier** |
+| **South Korea** | AI Basic Act | 🔴 **in force 2026-01-22**; also carries SME/startup adoption support | not education-specific |
+| **Taiwan** | AI Basic Act | passed **Dec 2025** | not education-specific |
+| **China** | registration + content-labelling regime | 🔴 **the most binding in the region**: mandatory registration, strict content labelling | not education-specific |
+| **Singapore** | agentic-AI framework | 🟡 best-practice **guidance, not law** | no |
+| **Japan** | AI Promotion Act | 🟡 **no penalties** | no |
+| **ASEAN** | Responsible AI Roadmap (2025) | governance track **through 2030** | no |
+
+🔴 **Sources disagree on Vietnam's commencement date**, so it is recorded as a contested date and the
+law should be read first-hand before an engagement is sized on it. 🔵 Same discipline as the Digital
+Omnibus dispute under *EMEA*.
+
+🔴 **An informed gap, stated so the silence cannot read as coverage: this leg returned NO
+education-specific adoption figures for APAC at all.** No enrolment numbers, no institutional
+penetration, no ministry spend. The only adoption-shaped claim on offer was a single vendor report
+naming Google, Microsoft, IBM, Pearson and Byju's as "key players" and asserting that China, India and
+Japan dominate — which is a vendor's player list, not an adoption measurement, and is **not** promoted
+to a figure here. 🔵 So APAC on this shelf is now **well mapped on regulation and effectively unmapped
+on adoption**, and that asymmetry is the opposite of LATAM's below.
 
 ### LATAM
 
@@ -1220,6 +1333,39 @@ portal (COMPR.AR, ChileCompra, PNCP) is reachable from this sandbox to read the 
 remains LATAM opportunity 7 above. 🟡 `GuoMonth/dsh-multi-tenant` (MIT) supplies a **generic**
 multi-tenant hosting substrate that a LATAM integrator could use for the hosting half of that gap —
 it has no LMS surface, so it narrows the problem rather than solving it.
+
+#### 🆕 `p394` — LATAM: the lowest-adoption use case is ASSESSMENT, which is where this base's supply sits
+
+🟢 **A second independent survey corroborates near-universal adoption**, and one of its breakdowns is
+worth more to a studio than the headline.
+
+| source | scope | finding |
+|---|---|---|
+| **Digital Education Council**, AI in Higher Education LATAM Survey **2026** | **30,000+ responses, 29 institutions** | **92% of students** and **79% of faculty** actively engaging with AI |
+| same | by use case | faculty use concentrates on **creating teaching materials, multimedia content and administrative support**; 🔴 **assessment uses — feedback generation, integrity checking — have the LOWEST adoption of all** |
+| **UNESCO IESALC** | **200 HEIs across 19 LAC countries** | governance frameworks and institutional strategies **are not keeping pace with adoption** |
+| **ILIA** (Latin American AI Index), 3rd edition | regional | country tiering — Pioneers, Adopters and below; 🔴 no education-specific cut |
+
+🔵 **The assessment finding is the engagement, and it cuts both ways.** This base's deepest supply is
+exactly assessment: `otter-grader`, `gradethis`, `ottr`, `nbgrader`, `cran/exams`, `qti_package_maker`,
+`mirt`, `catR`. 🟢 **So the richest component tier here points at the thinnest regional demand** —
+which is either the clearest greenfield on this shelf or a signal that LATAM faculty are *declining*
+assessment AI for reasons a vendor should understand before pitching it. 🔴 **This base cannot tell
+which from the data it holds**, and that distinction decides whether the correct move is to lead with
+assessment or to lead with content generation. Registered as **`Gap 394-E`** rather than guessed.
+
+🟢 **And one component now addresses the obvious objection.** If the reluctance is about
+connectivity, invigilation or auditability rather than about AI, then **`cran/exams`'s NOPS mode** —
+a printed exam, scanned, marked automatically, with the paper retained as the audit trail — is the
+only thing in this whole base that puts automated assessment where there is no reliable network and
+leaves a physical record behind. 🔵 It is GPL-2 | GPL-3, so it is delivered as a service behind a
+process boundary; `Pattern AB` on [`compose/patterns.md`](../compose/patterns.md) wires it.
+
+🔵 **The governance lag is the same shape as EMEA's compliance burden, inverted.** EMEA has a statutory
+trigger and institutions that must meet it; LATAM has near-total adoption and, per IESALC,
+**institutions without the frameworks to govern it**. 🟢 **The deliverable differs accordingly:** in
+EMEA a studio sells conformity; in LATAM it sells the governance scaffold the institution has not
+built — and that is advisory work attached to a platform engagement, not a licence sale.
 
 ## Sources
 

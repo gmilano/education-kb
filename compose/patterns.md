@@ -1,10 +1,24 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Compose patterns — education
+
+**🆕 Pass `p394` · reads 2026-10-22, committed 2026-10-23.** Two new patterns, both built on grants
+read at the payload this pass. 🟢 **`Pattern AB`** — the **R statistics course graded automatically**,
+closing the hole `p393` named when it pointed out that this base's most-adopted autograder grades R
+while the shelves held no R components; its delivery layer is permissive (`gradethis` MIT, `learnr`
+Apache-2.0, `ottr` BSD-3) and its measurement layer is GPL behind a process boundary, and its last
+step is **the only offline assessment loop in this base** (`cran/exams` NOPS: printed, scanned, marked
+automatically, paper audit trail). 🟢 **`Pattern AC`** — **give teachers an assistant builder instead
+of building their assistants**, on **LAMB** (GPL-3, UPC Barcelona + UPV/EHU, peer-reviewed), which
+publishes each teacher-authored assistant into Moodle as an **LTI external tool** so the LMS is never
+forked. 🔴 Both patterns carry a hard stop at grading: under the EU AI Act, systems that grade
+learners or influence access to qualifications are **high-risk and require conformity assessment
+before deployment**, so the grading step is scoped as a separate assessed workstream rather than sold
+in the same phase.
 
 **Pass `p383` · 2026-10-22 · FULL REWRITE.** Prior version archived at
 [`archive/2026-10-22-p383-pre-rewrite/compose-patterns.md`](../archive/2026-10-22-p383-pre-rewrite/compose-patterns.md).
@@ -1235,3 +1249,116 @@ in the box.
 🟢 **What the client gets that they cannot buy:** a Spanish-language delivery platform they own
 outright, with billing, autograding and an AI tutor — assembled from **four permissive grants read at
 the payload**, on a base whose entire source a studio can audit in an afternoon.
+
+## Pattern AB — 🆕 `p394` The statistics and data-science course, graded automatically, including where the network is not
+
+**When to reach for this.** The client teaches **R** — statistics, biostatistics, econometrics,
+data science, any quantitative methods course — and wants automated feedback at cohort scale.
+🔵 `p393` flagged that this base's most-adopted autograder **grades R** while the shelves held no R
+components at all; this pattern is the hole closed. 🟢 **And its last step is the only offline
+assessment loop in this entire base**, which is what makes it worth reaching for in LATAM and APAC
+rather than only in a well-connected university.
+
+**The components, and the licence boundary runs between steps 3 and 5.**
+
+| # | step | component | grant |
+|---|---|---|---|
+| 1 | Serve identical compute to the cohort | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause |
+| 2 | Author the tutorial the student works inside | [`rstudio/learnr`](https://github.com/rstudio/learnr) | 🟢 **Apache-2.0** *(10,472 B, `60a581bccd57`)* |
+| 3 | Grade the exercise and answer back | [`rstudio/gradethis`](https://github.com/rstudio/gradethis) | 🟢 **MIT** *(1,078 B, `48c18e68ffed`)* |
+| 4 | Batch-autograde submitted scripts and notebooks | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) + [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🟢 BSD-3-Clause both |
+| 5 | **Generate the exam** in the LMS's own format | [`cran/exams`](https://github.com/cran/exams) | 🔴 **GPL-2 \| GPL-3 — service boundary** |
+| 6 | Calibrate the items after the fact | [`philchalmers/mirt`](https://github.com/philchalmers/mirt) · [`cran/catR`](https://github.com/cran/catR) · [`ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) | 🔴 **GPL — service boundary** |
+| 7 | Carry the generated exam into the LMS | QTI 2.1 / Moodle XML, per `p393`'s **Tier 8** standards layer | per that tier |
+
+**Wiring it.**
+
+1. **Steps 1–4 are your product and they are permissive.** `learnr` renders the tutorial, `gradethis`
+   supplies the per-exercise predicate (`grade_this_code()` against a model solution for mechanical
+   exercises; `grade_this()` where you must inspect the student's actual object), `ottr` handles
+   batch submission. 🟢 A closed-source product may embed all four.
+2. **Steps 5–6 run as a separate service, invoked over a process boundary.** 🔴 `cran/exams`, `mirt`,
+   `catR` and `ShinyItemAnalysis` are **GPL**; call them as a job — stdin/stdout, a queue, an HTTP
+   worker — and never link them into the product. 🔵 Same discipline `Pattern A` and `Pattern O` apply
+   to Moodle and Open edX, applied here for the same reason.
+3. **Record the disjunctive choice once, in writing.** `cran/exams` is **GPL-2 *or* GPL-3 at the
+   licensee's election**. Pick a rung, write down which and why, and keep it with the engagement's
+   licence register — downstream compatibility differs between the two, and "GPL" alone is not an
+   answer a client's counsel will accept.
+4. **Step 5's output is the integration point, and it is wide.** `exams2qti21()`, `exams2moodle()`,
+   `exams2canvas()`, `exams2blackboard()`, `exams2ilias()`, `exams2openolat()` — verified from the
+   `R/` source filenames in the clone. 🟢 So one authored item bank feeds **whichever** LMS the client
+   already runs, which is the opposite of the usual per-platform rewrite.
+5. 🟢 **Then NOPS, which is the step nothing else here can do.** `cran/exams` emits a standardised PDF
+   that is **printed, sat on paper, scanned, and marked automatically**. 🔵 Use it where the network
+   is unreliable, where invigilation must be physical, or where the institution needs a **paper audit
+   trail** it can produce years later. 🔴 It is also the honest answer to the finding on
+   [`intel/market.md`](../intel/market.md) that **assessment is the lowest-adoption AI use case among
+   LATAM faculty**: if the reluctance is about connectivity, invigilation and auditability rather than
+   about AI, NOPS addresses the actual objection instead of arguing with it.
+
+🔴 **Two things this pattern does not claim.** **(1)** `ottr` has **3 ★** — the adoption sits on the
+Python parent, so you are deploying a lightly-used component and should budget to read its source.
+**(2)** `learnr`'s HEAD is **343 days** old. That reads as stable rather than abandoned — the movement
+is in `gradethis` (**126 d**) — but it is a dependency whose maintenance a studio should check before
+year three, not a vendor commitment.
+
+🔴 **And a provenance warning that will bite at review.** `cran/exams`, `mirt`, `catR`, `TAM` and
+`ShinyItemAnalysis` carry **no licence file at any path** — their grant is the `License:` field in
+`DESCRIPTION`, which is what CRAN enforces. 🔵 **GitHub's sidebar therefore shows no licence for any of
+them**, so a reviewer checking the UI will report five granted GPL packages as unlicensed. Put the
+`DESCRIPTION` line in the licence register, not a screenshot of the repository page (`Gap 394-B`).
+
+## Pattern AC — 🆕 `p394` Give teachers an assistant builder instead of building their assistants (EMEA, Moodle)
+
+**When to reach for this.** The client is a **university or school group already running Moodle**,
+their teachers keep asking for subject-specific AI assistants, and a studio cannot profitably build
+one assistant per course. 🟢 **LAMB inverts the unit of delivery**: the studio delivers the *builder*
+and governs it; teachers author the assistants themselves, with no code.
+
+**The components.**
+
+| # | step | component | grant |
+|---|---|---|---|
+| 1 | The assistant builder and manager | [`Lamb-Project/lamb`](https://github.com/Lamb-Project/lamb) | 🔴 **GPL-3.0** *(35,349 B, `17fe6d0ffa96`)* |
+| 2 | Publish each assistant into the LMS | **LTI external tool** — LAMB's own publishing path | 1EdTech LTI |
+| 3 | Graded assignments against an assistant | [`Lamb-Project/lamba`](https://github.com/Lamb-Project/lamba) | 🔴 **GPL** |
+| 4 | The LMS itself | Moodle | 🔴 GPL-3 |
+| 5 | Models, where sovereignty is required | open-weights served locally — LAMB states it shares no user information with model providers and can run on *"open source and open weights models running on your compute"* | per model |
+
+**Wiring it.**
+
+1. **The whole stack is copyleft and that is fine here**, because nothing in it is a product a studio
+   resells. 🟢 Moodle is GPL-3, LAMB is GPL-3, LAMBA is GPL — the engagement is **deployment,
+   integration, governance and training**, not licensing. 🔵 This is the one shape where the copyleft
+   frontier on [`repos/foundations.md`](../repos/foundations.md) costs nothing.
+2. **Step 2 is why this is a pattern and not a tool.** Assistants arrive in Moodle as **LTI external
+   tools**, so the LMS stays untouched: no plugin to maintain against Moodle's upgrade cycle, no
+   fork, and the assistant can be withdrawn without a migration. 🟢 Same architecture `Pattern A`
+   prescribes for every agent going into a copyleft LMS, except here the upstream project already
+   did it.
+3. **Read the tree before you read the badge.** 🔴 LAMB carries **three grants**: root GPL-3,
+   `lamb-kb-server-stable/` with its own stock GPL payload, and a **vendored `open-webui/` under
+   verbatim BSD-3-Clause** (1,510 B, `6c4b8d8034b9`). `Pattern L` is the procedure; this repository is
+   why `Pattern L` exists. 🔵 Check the vendored Open WebUI copy's licence **at the pin you deploy** —
+   upstream Open WebUI added branding restrictions in later releases, and the copy vendored here is
+   the plain BSD-3 one.
+4. **Sovereignty is a configuration, not a port.** Step 5 is the reason to shortlist LAMB for an
+   EMEA engagement at all: it is designed to run against locally-served open-weights models and
+   states that no user information reaches a model provider. 🟢 That answers the EU AI Act data
+   questions in the architecture rather than in a DPA annex.
+5. 🔴 **Size it as a high-risk deployment the moment it touches grading.** `lamba` grades assignments.
+   Under the EU AI Act, systems that **grade learners, assign them to programmes or influence access
+   to qualifications** are **high-risk and need a conformity assessment before deployment** (see
+   *EMEA* on [`intel/market.md`](../intel/market.md)). 🟢 So: ship step 2 (assistants that tutor and
+   explain) first and get it in front of teachers; treat step 3 (assistants that grade) as a
+   **separate, later, assessed workstream**. Selling them as one phase is how an integration project
+   becomes a compliance project mid-delivery.
+
+🔴 **The maturity caveat, stated here and not only in the evidence file.** LAMB's own Moodle.org thread
+(Feb 2026) describes it as *"at a very beta stage"* with *"a few universities running pilots"*, and the
+repository is **one squashed commit** with HEAD **2 d**. 🟢 It is university-authored, peer-reviewed in
+*Computer Standards & Interfaces*, and visibly active — **a strong pilot base**. 🔴 It is **not** a
+ministry-scale platform, there is no multi-tenancy claim this base has verified, and an engagement
+that needs one should read `Pattern O`'s tenancy discussion first. 🔵 Propose it as a pilot with a
+named exit, and say so to the client in the first meeting rather than the third.

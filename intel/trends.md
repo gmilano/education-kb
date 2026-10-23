@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Education industry trends
@@ -741,3 +741,70 @@ client deliverable**; ask the publisher to open the repository, which is a cheap
 one. 🔵 And record the class, because the economics favour its growth: publishing to a registry is
 free and keeping a public repository is a maintenance commitment, so **more supply will arrive this
 shape**, not less.
+
+## Trend 24 — 🆕 `p394` In the teaching stack the **delivery** layer is permissive and the **measurement** layer is copyleft, and a language boundary rides along with it
+
+🟢 **The observation.** `p394` opened the R half of the CS-teaching stack and the licence column split
+cleanly down the middle of the pedagogy:
+
+| what it does | components | licence |
+|---|---|---|
+| **Deliver** the teaching loop — present, accept, grade, respond | `rstudio/gradethis` (**MIT**, 164 ★), `rstudio/learnr` (**Apache-2.0**, 738 ★), `ucbds-infra/ottr` (**BSD-3-Clause**) | 🟢 **permissive, all three** |
+| **Measure** the learner — item response theory, adaptive item selection, exam generation, item analysis | `cran/exams` (**GPL-2 \| GPL-3**), `philchalmers/mirt` (**GPL >= 3**), `cran/catR` (**GPL >= 3**), `cran/TAM` (**GPL >= 2**), `ShinyItemAnalysis` (**GPL-3**) | 🔴 **copyleft, all five** |
+
+🔵 **Why it is not a coincidence.** The delivery components are **vendor-authored** — Posit, a company
+selling an R platform, and a university programme that needed its autograder to be adoptable. The
+measurement components are **academic instruments**, written by psychometricians inside a GPL research
+culture and in some cases decades old. **The licence tracks who paid for the code and why**, and it has
+produced a split running exactly along the boundary between *product* and *science*.
+
+🟢 **Why that is good news rather than a blocker.** The boundary falls where a studio's product
+boundary has to fall anyway: own the teaching loop, reach the psychometrics **over a process
+boundary** — the same discipline `Pattern A` and `Pattern O` already apply to copyleft LMSs. 🔴 **The
+trap is reading it as a licence problem and swapping in a permissive psychometrics library instead.**
+There is no credible permissive equivalent of `mirt` or `catR`; building one is a multi-year research
+project and approximating one is how a studio ends up shipping an adaptive engine whose claims it
+cannot defend. 🔵 This base already carries the symptom: `adaptive-knowledge-graph` (~350 ★) and
+`OATutor` implement IRT and BKT from scratch, and `mirt` — **235 ★, committed daily** — is the thing
+they are approximating.
+
+🔵 **And the language boundary rides along with it.** `Trend 22` recorded that the agent layer is
+npm/TypeScript while the standards layer is PyPI/Python. `p394` adds that the **measurement** layer is
+**CRAN/R**. Three layers, three registries — and a supply claim is still only as wide as the registry
+it was swept from. 🔴 **R is the worst case of the three**, because its registry is unreachable here on
+**both** tools and its grants are invisible to GitHub's licence sidebar (`Gap 394-B`): five granted GPL
+packages in this tier show **no licence** in the GitHub UI, because the grant lives only in
+`DESCRIPTION`. **So a GitHub-UI-driven sweep does not merely under-count R supply — it reports it as
+unlicensed.**
+
+## Trend 25 — 🆕 `p394` A string matched as though it were a meaning is this base's most productive error class, and it runs in three directions
+
+🟢 **The observation, as a count rather than an impression.** Three independently-found defects, three
+different instruments, one mechanism:
+
+| gap | instrument | direction | what the string was |
+|---|---|---|---|
+| `Gap 392-A` | capability-absence gate | 🔴 **over-refutes** — denies a real absence | a runtime key read as a capability |
+| `Gap 393-A` | PyPI index channel | 🔴 **over-discovers** — invents supply | a package *name* read as a capability (`proctor-ai`, `xapi-python`, `canvas`, `d2l`) |
+| **`P459`** 🆕 | `licence-grant-gate` | 🔴 **strips a grant** — denies a real permission | **"all rights reserved"**, line 2 of the canonical BSD template, read as a refusal |
+
+🔵 **`P459` is the most expensive of the three and it was the last to be found**, because the other two
+produce *visible* nonsense — a claim you can check, a candidate you can reject — whereas this one
+produces a **false absence of a grant**, which looks exactly like diligence. A usable component is
+quietly marked unshippable and nobody re-opens the question. 🟢 On these shelves its realised damage
+was **nil** — no published row was graded from an untitled BSD payload, checked rather than assumed —
+and its exposure was **297 BSD-3-Clause + 201 BSD-UNVERSIONED** cells.
+
+🔴 **And the fourth instance is on this base's own shelf rather than in an instrument.**
+`anastasasenov/bbmcps` sat in the Blackboard census for eight passes because its URL scheme reads
+`blackboard://`. It is a shared-memory MCP server; the word is an **architectural metaphor**. So the
+class does not only mis-discover and mis-refute — **it mis-files what the base already owns**, and a
+census cell inherited as a count is exactly where it hides.
+
+🟢 **The transferable rule, and it is cheap.** Before a token decides a verdict, ask what else that
+token means. The gate that got this wrong already holds the right idea one screen away:
+`AMBIGUOUS_WORDS = ("apache", "nginx", "mit", "bsd")`, with a comment noting each is simultaneously a
+licence name and something else. 🔵 **The insight was applied to licence names and never to licence
+clause text, nor to package names, nor to URL schemes.** One lexicon separating a **string** from a
+**capability** would close `Gap 392-A`, `Gap 393-A` and the `bbmcps` class together — which is why
+`p393` ranked that unification fifth and why `p394` ranks it **first**.
