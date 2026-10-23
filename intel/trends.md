@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p403` — what changed on this shelf
+
+🟢 **`p401-T1` gets a THIRD independent instance, and this one was PREDICTED before it was found.**
+🟡 **`T36` gets a fourth instance, and its first commercially-usable one** — which changes what the
+trend costs a client. 🔴 **No new trend number is opened**: both findings are instances of trends this
+base already carries, and recording them as new would be re-selling.
+
+### 🟢 `p401-T1`, third instance — and the first *predictive* one (India)
+
+🔵 **The trend, as this base already states it:** national-language supply appears roughly a year
+behind national mandates, and an English-language leg reports the pre-lag state indefinitely.
+Evidenced on the **Gulf** (`p401`), and proved from the other direction on **LATAM** (`p387`).
+
+🟢 **`p403` used it as a prediction rather than a description.**
+[`intel/market.md`](market.md) already carried India's mandate — **AI and computational thinking
+compulsory from Class 3 from the 2026–27 academic year**, with the IndiaAI Mission behind it. A trend
+that holds implies **Indic-language education supply appearing around now**. 🟢 **A Hindi-language leg
+returned three previously unshelved addresses on its first page**, where the English legs have returned
+zero granted education-native addresses for six-plus consecutive passes:
+[`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) (MIT code, 14 Indic languages,
+HEAD 2026-09-16), [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) (MIT,
+HEAD 2026-09-01) and
+[`matsuolab/lecture-ai-engineering-2026-hi`](https://github.com/matsuolab/lecture-ai-engineering-2026-hi)
+(🔴 ungranted, HEAD **2026-10-19 — 4 d**).
+
+🔴 **And the control that stops this becoming "run more languages".** A **Japanese**-language leg was
+run in the same pass and returned **nothing education-native** — only general-purpose agent frameworks
+and licence-comparison blogspam. 🟢 **Japan is the APAC jurisdiction this base records as having a
+promotion-first framework with no penalties and no mandate.** So the dividend tracks **the mandate, not
+the language** — which is `p401-T1`'s actual claim, and it now has a negative control supporting it
+rather than three positives alone.
+
+🔵 **The predictive form, for a successor:** the next legs worth spending are the languages of
+jurisdictions whose mandates have **just** commenced. 🔴 **Not** Japanese.
+
+### 🟡 `T36`, fourth instance — and the first where both grants are commercially usable
+
+🔴 [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) carries **MIT** in its root
+`LICENSE` (1,074 B, payload-read) and **`CC-BY-4.0`** over the dataset, in its own §License section.
+🟢 The three earlier instances (`inno-agent`'s ungranted skill hub, `os-taxonomy`'s
+`ODbL-1.0 AND CC-BY-SA-4.0` data, `h5p`'s GPL content) all had one half a studio **could not use**.
+🟢 **Here both halves are usable** — so the consequence is not exclusion but **attribution obligations
+attaching to the data**, which is a documentation task rather than an architectural one.
+
+🔵 **What that adds to `T36`:** the trend's cost is not constant. Reading it as *"the curriculum half is
+unusable"* would have mis-priced this repository. The licence column must name **which artefact** is
+granted **and under what** — not merely flag that two grants exist.
+
 ## 🆕 `p402` — what changed on this shelf
 
 🔵 **No trend is added or retired this pass.** The pass was an **instrument and backlog** pass, and

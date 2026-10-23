@@ -4,6 +4,23 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p403` — Indic-language foundations, and a Japanese leg that paid nothing
+
+🟢 **Two new permissive foundation-layer addresses**, both AI4Bhārat, both payload-read on
+2026-10-23 through `git ls-remote --symref` + `--depth 1` clone (🔴 `github.com` HTML is `403` on this
+session; control: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) also `403`).
+
+| Project | Repo | Licence *(payload)* | HEAD · refs | Layer | What it does |
+|---|---|---|---|---|---|
+| **IndicIFEval** | [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) | 🟡 **MIT** code *(1,074 B · `1bff713bf26a`)* · **`CC-BY-4.0`** dataset | 2026-09-16 · 6 refs | **Measurement** | Rule-based verifiable instruction-following eval, **14 Indic languages + English**; bundles `lm-evaluation-harness`. arXiv `2602.22125` |
+| **Anudesh (backend)** | [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) | 🟢 **MIT** *(1,067 B · `e2cd4cec54f7`)* | 2026-09-01 · 754 refs · 🔴 **0 tags** | **Integration / workflow** | Django multi-annotator `projects → tasks → review` backend (Elasticsearch, Celery, Docker Compose) |
+
+🔴 **Negative results from this window, recorded because they are cheap to re-spend.** The
+vertical-platform leg returned **six** candidates and **all six were already shelved**
+(`frappe/education`, `openeducat`, `ERPNext`, `openSIS`, `Fedena`, `GegoK12`). A **Japanese-language**
+leg returned **no** education-native address. 🟢 The **Hindi** leg paid — see
+[`intel/trends.md`](../intel/trends.md) `p401-T1` for why the difference is a mandate and not a language.
+
 
 ## 🆕 2026-10-23 · `p402` — 28 addresses of the fork backlog adjudicated, and the sweep that was refused
 
@@ -9609,11 +9626,11 @@ Every slug this pass went through `git ls-remote --symref` first. 🟢 All five 
 
 | verdict | pairs | reading |
 |---|---|---|
-`WARN` | `145` | a `-`/`_`/alnum continuation — ordinarily two real repositories *(`moodle/moodle` vs `moodle/moodle-docker`)* |
-`DOCUMENTED` | `47` | the stump always shares a line with a longer form |
-`IGNORED-PATH-FRAGMENT` | `37` | a **branch** in the owner slot — `main/LICENSE` vs `main/LICENSE.md` is a raw-URL path, not a slug |
-🟡 `REFUSE-ANNOTATED` | `6` | a bare stump on a line that says so in words |
-🟢 `REFUSE` | **`0`** | an unannotated live stump |
+| `WARN` | `145` | a `-`/`_`/alnum continuation — ordinarily two real repositories *(`moodle/moodle` vs `moodle/moodle-docker`)* |
+| `DOCUMENTED` | `47` | the stump always shares a line with a longer form |
+| `IGNORED-PATH-FRAGMENT` | `37` | a **branch** in the owner slot — `main/LICENSE` vs `main/LICENSE.md` is a raw-URL path, not a slug |
+| 🟡 `REFUSE-ANNOTATED` | `6` | a bare stump on a line that says so in words |
+| 🟢 `REFUSE` | **`0`** | an unannotated live stump |
 
 🟢 **`0` live truncations.** 🔵 **And this shelf carries the heaviest share of the population by far — `111` of the `235` pairs** *(`67` `WARN`, `28` `DOCUMENTED`, `15` path fragments, `1` annotated refusal)* — which is what a shelf that records one address per probe row should look like.
 

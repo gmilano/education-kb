@@ -4,6 +4,23 @@ region: Global
 updated: 2026-10-23
 ---
 
+### 🆕 `p403` — two Indic-language foundation rows, and the licence frontier inside one repository
+
+🟢 **Both grants read from the payload on 2026-10-23**, via `git ls-remote --symref` for the real
+default ref and a `--depth 1` clone for the root tree. 🔴 **`github.com` HTML is `403` on this
+session**, proved against a known-good control ([`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+also `403`), so the channel is blocked and the addresses are not in doubt.
+
+| repo | layer | licence *(payload, first-hand)* | HEAD · refs | why it earns a row |
+|---|---|---|---|---|
+| [AI4Bharat/IndicIFEval](https://github.com/AI4Bharat/IndicIFEval) | **Tier 4 — Measurement** | 🟡 **MIT** on the code *(1,074 B, `sha256`₁₆ `1bff713bf26a`, © 2026 Thanmay Jayakumar)* · 🟡 **`CC-BY-4.0`** on the dataset *(its own §License)* | **2026-09-16** · 6 refs | 🟢 **The only Indic-language evaluation asset on these shelves, and the first eval here that can run as a deterministic CI gate.** Verifiable, **rule-based** instruction-following constraints across **14 Indic languages + English** (Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Odia, Punjabi, Sanskrit, Tamil, Telugu, Urdu — all 14 enumerated first-hand from the README), with `indicifeval-ground`, `indicifeval-trans` and a bundled `lm-evaluation-harness`. arXiv `2602.22125`; dataset mirrored on Hugging Face. 🔵 Rule-based scoring means **no LLM judge in the loop** — the property that lets it gate a build rather than advise one. |
+| [AI4Bharat/Anudesh-Backend](https://github.com/AI4Bharat/Anudesh-Backend) | **Tier 7 — Integration / workflow** | 🟢 **MIT** *(1,067 B, `sha256`₁₆ `e2cd4cec54f7`, © 2023 AI4Bhārat)* | **2026-09-01** · 754 refs · 🔴 **0 tags** | 🟡 **Not education software; a workflow substrate education software keeps needing.** Django, apps `projects` / `tasks` / `users` / `organizations` / `workspaces` / `notifications` / `dataset` / `filters`, composed with Elasticsearch and Celery. 🟢 That is the **assign → attempt → review → report** shape an assessment or marking pipeline needs, plus the collection harness for the Indic instruction data a curriculum-grounded tutor would train or evaluate against. 🔴 **Default ref is `master`** and there are **0 tags** — vendor a pinned commit; there is no published artefact to install. |
+
+🔴 **The licence frontier now runs *inside* a repository, not just between them.** `IndicIFEval` is the
+**fourth** `T36` instance on these shelves and the first where **both** halves are commercially usable:
+the consequence is **attribution obligations attaching to the data**, not exclusion. 🟢 A SOW that says
+*"IndicIFEval is MIT"* is true about the harness and wrong about the benchmark it exists to carry.
+
 
 **🆕 Pass `p401` · reads and commit both 2026-10-23.** 🔴 **The licence ladder this shelf grades
 every candidate with is structurally blind to the largest family on this base — and the family it

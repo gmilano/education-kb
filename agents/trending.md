@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p403` — the Hindi leg, and the first Indic-language supply on these shelves
+
+🟢 **New this window: three addresses, none previously shelved, every grant read from the payload.**
+🔴 **None is promoted to a build-on tier** — one is ungranted and two are not agents. Full
+adjudication, provenance and the `403` channel control on
+[`agents/top.md`](top.md); the trend reading on [`intel/trends.md`](../intel/trends.md).
+
+| Agent / address | Repo | Grant *(payload, first-hand)* | HEAD | Region | Why it is here this window |
+|---|---|---|---|---|---|
+| **Anudesh** *(backend)* | [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) | 🟢 **MIT** *(1,067 B · `e2cd4cec54f7`)* | 2026-09-01 | APAC — India | 🔴 Default ref is **`master`** — a `main`-assuming licence read fails silently, the [`learnhouse`](https://github.com/learnhouse/learnhouse) trap again. Multi-annotator `projects → tasks → review` workflow backend; 🔴 **0 tags** |
+| **IndicIFEval** | [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) | 🟡 **MIT code · `CC-BY-4.0` dataset** *(1,074 B · `1bff713bf26a`)* | 2026-09-16 | APAC — India | 🟢 Verifiable rule-based instruction-following across **14 Indic languages**; usable as a deterministic **CI gate** for a tutor. 🔴 **Fourth `T36` instance** — two grants, one repository |
+| **AIE2026 exercises (Hindi)** | [`matsuolab/lecture-ai-engineering-2026-hi`](https://github.com/matsuolab/lecture-ai-engineering-2026-hi) | 🔴 **NO GRANT** *(root tree enumerated; `README.md` present as the branch control)* | 2026-10-19 — 4 d | APAC — JP lab, **localised for India** | 🟢 U Tokyo **Matsuo Lab** course, **Hindi-first**, in which students progressively build a learning agent. MCP in Lecture 05. 🔴 Courseware, ungranted — a reference, not an asset |
+
+🔴 **Saturation, stated rather than left silent.** The four prescribed English global legs and the
+vertical-platform leg returned **zero** unshelved granted education-native addresses this window;
+every vertical candidate (`frappe/education`, `openeducat`, `ERPNext`, `openSIS`, `Fedena`, `GegoK12`)
+was already on these shelves. 🔴 A **Japanese-language** leg was also run and returned **nothing
+education-native** — only general agent frameworks — so the language-leg dividend is **not** automatic:
+it tracks a *mandate*, which is `p401-T1`'s actual claim.
+
 
 ## 🆕 2026-10-23 · `p402` — the alias register's DIRECTION half gets a channel, and `ease`'s canonical owner is a third address
 
@@ -9101,8 +9121,9 @@ four education uses (`p291`, ATTRIBUTED), the **Article 5(1)(f)** emotion-recogn
 educational institutions live since **2025-02-02**, the **2027-12-02** deferral (held since `p233`),
 the **Omnibus political agreement of 2026-05-07**.
 
-| 🟢 the one genuinely new citation | **Article 6(3)** — the derogation by which a listed system escapes high-risk status where it poses no significant risk of harm. **0 prior occurrences** across these shelves |
+| finding | citation |
 |---|---|
+| 🟢 the one genuinely new citation | **Article 6(3)** — the derogation by which a listed system escapes high-risk status where it poses no significant risk of harm. **0 prior occurrences** across these shelves |
 
 🔴 **And the superseded date was served again** — one source still gives **August 2026** for the
 Annex III obligations. That is the **EIGHTH** recorded re-service of a date this base corrected at

@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `Pattern I` — 🆕 `p403` The India engagement: an in-language tutor you can actually *prove*, with a deterministic eval gate
+
+🔵 **The engagement this answers.** India's mandate makes **AI and computational thinking compulsory
+from Class 3 from the 2026–27 academic year** (see [`intel/market.md`](../intel/market.md) → APAC). A
+ministry or large-group client will ask for a tutor in Hindi and at least one other state language. 🔴
+**The thing that sinks these pitches is not the tutor — it is being unable to demonstrate that the
+tutor is correct in a language the buyer's own reviewers read.** An English benchmark plus
+*"the model is multilingual"* is not evidence, and an LLM-judge score is not evidence a reviewer can
+re-run.
+
+🟢 **What `p403` makes newly possible:** the eval half is now available, permissive, in-language and
+**rule-based**, so it runs in CI and returns the same number to the client as it does to you.
+
+### The stack, with the grant on every piece
+
+| role | component | grant | why this one |
+|---|---|---|---|
+| **Tutor runtime** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | Lifelong learner memory + RAG grounded in the learner's own uploaded materials; the largest education-native permissive base on these shelves. Apache-2.0 keeps the patent grant a government buyer's counsel will look for. 🔵 Swap in [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (🟢 **MIT**) instead **if** the client wants generated whole-classroom delivery and central model governance — see `Pattern Q`. |
+| **🆕 Eval gate (the new piece)** | [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) | 🟡 **MIT** code · **`CC-BY-4.0`** dataset | **14 Indic languages + English**, verifiable **rule-based** constraints, bundled `lm-evaluation-harness`. 🟢 **Deterministic — no LLM judge** — so it belongs in CI, and the client can re-run it themselves. |
+| **🆕 In-language ground truth** | [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) | 🟢 **MIT** | `projects → tasks → users/review` workflow with organizations and workspaces: the machinery for getting teachers to author and review in-language rubrics and answer keys, with an audit trail. 🔴 Default ref **`master`**, **0 tags** — vendor a pinned commit. |
+| **Mastery model** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) + [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | Bayesian Knowledge Tracing the client can inspect and **re-estimate on their own logs** — "adaptive" as a parameterised model, not a prompt. |
+| **Retention** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | FSRS spaced repetition + knowledge graph, and runs on local open-weight models with no key — the data-residency path. |
+| **LMS surface** | client's **Moodle** | 🔴 **GPL-3.0** | Reach it through the plugin API, **do not fork** — `Pattern A` and the GPL-adapter sandwich in `Pattern Q`. |
+| **Teacher AI-literacy material** | [`matsuolab/lecture-ai-engineering-2026-hi`](https://github.com/matsuolab/lecture-ai-engineering-2026-hi) | 🔴 **NO GRANT** | 🔴 **Reference only — do not vendor, do not redistribute, do not quote into deliverables.** Read it for *sequencing*: it is U Tokyo Matsuo Lab's `AIE2026` localised Hindi-first, and students build a learning agent progressively across the course. 🟢 That progression is the useful artefact; re-author it yourself. |
+
+### How it wires together
+
+1. **Ingest and ground.** Client curriculum (NCERT / state board) → DeepTutor's RAG store. 🔵 There is
+   no permissive **Indian** curriculum graph on these shelves — `os-taxonomy` is NGSS/Common Core and
+   its data is `ODbL-1.0 AND CC-BY-SA-4.0`. 🔴 **State that as a build item in the SOW**; `Pattern H`'s
+   *"ground on a curriculum graph you must not fork"* rule applies, and `p388`'s BC and BNCC servers are
+   the shape to copy, not reuse.
+2. **Author ground truth in Anudesh.** One `project` per subject-grade; `tasks` are prompt +
+   expected-constraint sets written **by the client's own teachers**; reviewers approve. 🟢 Output is a
+   constraint set in `IndicIFEval`'s verifiable form, not free-text opinions.
+3. **Gate the build in CI.** Run `IndicIFEval` (`indicifeval-ground` for native items,
+   `indicifeval-trans` for translated) per target language on every model or prompt change. 🔴 **Fail
+   the build on per-language regression, not on an aggregate** — an aggregate hides Odia collapsing
+   while Hindi improves, which is precisely the failure a state buyer will find first.
+4. **Adapt and retain.** OATutor/pyBKT fit mastery on the client's real logs; OpenTutor's FSRS
+   schedules review. Both MIT, both inspectable.
+5. **Deliver through Moodle's plugin API.** No fork, so no GPL obligation on the client's own IP.
+
+### 🔴 The three things that will bite, named up front
+
+- **`CC-BY-4.0` on the benchmark data.** Commercial use is fine; **attribution is not optional**. 🟢
+  Put the AI4Bhārat attribution in the eval report and in any published score — the deliverable is the
+  report, so the obligation travels with it. The MIT grant on the harness does **not** cover the data
+  (`T36`, fourth instance).
+- **These are research assets, not products.** `IndicIFEval` has **6 refs**; `Anudesh-Backend` has **0
+  tags** and a `master` default ref. 🟢 Pin commits, vendor, and own the maintenance — that *is* the
+  billable value, and it should be priced as such rather than discovered in month three.
+- **14 languages is the benchmark's reach, not the tutor's.** 🔴 Scoring in Marathi does not mean
+  teaching in Marathi. 🟢 Use the gate to **decide which languages to promise** — ship the three that
+  pass and name the rest as phase two, rather than promising fourteen and failing in public.
+
 
 **🆕 Pass `p401` · reads and commit both 2026-10-23.** 🟢 **One new pattern, and it exists because
 the licence census forced its shape.**

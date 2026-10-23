@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p403` · reads and commit both 2026-10-23 — the NINTH pass dated today.** 🟢 **A
+**Hindi-language** leg returns the first **Indic-language** education addresses this base has ever
+held, and it is the THIRD independent confirmation of `p401-T1` — this time *predictively*.** 🔴 **No
+row is promoted to a build-on tier: of three addresses, one is UNGRANTED and two are not agents.**
+
+🔵 **Why this pass ran a Hindi leg at all.** `T35` records the four prescribed English global legs as
+spent, and `p401-T1` states that national-language supply appears roughly a year behind national
+mandates — evidenced on the Gulf, and already proved once from the other direction when `p387` broke a
+four-pass LATAM null with Spanish and Portuguese. 🟢 [`intel/market.md`](../intel/market.md) already
+carries India's mandate: **AI and computational thinking compulsory from Class 3 from the 2026–27
+academic year**. `p401-T1` therefore *predicts* Indic-language supply appearing around now — and a
+Hindi leg was the cheapest available test of this base's own trend.
+
+🟢 **The prediction holds. Every grant below was read from the payload on 2026-10-23**, via
+`git ls-remote --symref` for the real default ref and a `--depth 1` clone for the tree, because
+🔴 **`github.com` HTML is `403` on this session** — established against a known-good control
+([`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) returns `403` too), so the block is the
+channel and not the addresses.
+
+| address | ref | grant *(payload, first-hand)* | HEAD · refs | what it actually is | region |
+|---|---|---|---|---|---|
+| [AI4Bharat/Anudesh-Backend](https://github.com/AI4Bharat/Anudesh-Backend) | 🔴 **`master`** | 🟢 **MIT** *(1,067 B, `sha256`₁₆ `e2cd4cec54f7`, "Copyright (c) 2023 AI4Bhārat")* | **2026-09-01** · 754 refs · 🔴 **0 tags** | 🟡 **NOT an agent — a multi-annotator task-and-review workflow backend.** Django, with `projects` → `tasks` → `users` / `organizations` / `workspaces` / `notifications` / `dataset` / `filters` apps, Docker-composed with Elasticsearch and Celery. 🟢 Its education value is the **workflow substrate**: the projects-to-reviewers machinery an assessment or marking pipeline needs, and the collection harness for Indic-language instruction data a curriculum-grounded tutor would train or evaluate on. 🔴 **0 tags means no published artefact** — vendor a commit, do not "install" it. | APAC — AI4Bhārat, India |
+| [AI4Bharat/IndicIFEval](https://github.com/AI4Bharat/IndicIFEval) | `main` | 🟡 **MIT on the CODE** *(1,074 B, `sha256`₁₆ `1bff713bf26a`, "Copyright (c) 2026 Thanmay Jayakumar")* **· `CC-BY-4.0` on the DATASET** | **2026-09-16** · 6 refs | 🟢 **The evaluation gate for any Indic-language tutor — verifiable, rule-based instruction-following across 14 Indic languages plus English** (Assamese, Bengali, Gujarati, Hindi, Nepali, Odia, Punjabi … ), with `indicifeval-ground`, `indicifeval-trans` and a bundled `lm-evaluation-harness`. arXiv `2602.22125`; dataset also on Hugging Face. 🔵 Rule-based and verifiable is the point: it scores constraint compliance deterministically, so it is usable as a **CI gate** rather than an LLM-judge. | APAC — AI4Bhārat, India |
+| [matsuolab/lecture-ai-engineering-2026-hi](https://github.com/matsuolab/lecture-ai-engineering-2026-hi) | `main` | 🔴 **NO GRANT** — no licence-shaped file in the root tree, no licence field in `pyproject.toml` | **2026-10-19 — 4 d** · 2 refs | 🟡 **Courseware, and the single most interesting *shape* this pass.** The **Hindi localisation** of the University of Tokyo **Matsuo Lab**'s *AI Engineering Pilot Course* (`AIE2026`): across the course students **progressively build an agent that helps them learn AI engineering**. README, and even the `pyproject.toml` comments, are **Hindi-first**. Browser-only via Codespaces; deps pinned (`google-genai==2.31.0`, `pydantic-ai-slim[google,mcp]==2.57.0`), with **MCP server and client in Lecture 05**. 🔴 Ungranted, so it is a **reference, not a reusable asset**. | APAC — Matsuo Lab (JP) **localised for India** |
+
+🟢 **The `NO GRANT` verdict on the third row is MEASURED, not inferred from a blank sidebar** — in
+`p293`'s shape: `README.md` is present at the same ref, so the tree read demonstrably works and the
+absence of `LICENSE` is real.
+
+🔴 **`IndicIFEval` is the FOURTH instance of `T36` on these shelves, and the cleanest.** The repository
+is MIT and the dataset is `CC-BY-4.0`, stated in its own §License — so *"IndicIFEval is MIT"* is true
+and misleading at once. 🟢 Both grants are commercially usable, which the earlier `T36` instances were
+not, so the consequence here is **attribution obligations attaching to the data**, not exclusion.
+Recorded on [`intel/trends.md`](../intel/trends.md).
+
+🔴 **All five prescribed legs are SATURATED for a fifth-plus consecutive pass, named so silence cannot
+read as coverage.** The global agent, GitHub-trending, vertical-platform and industry-news legs
+returned **zero** unshelved granted education-native addresses; every vertical candidate they produced
+(`frappe/education`, `openeducat`, `ERPNext`, `openSIS`, `Fedena`, `GegoK12`) is **already shelved**,
+and the four regional legs returned **zero new facts** — see
+[`intel/market.md`](../intel/market.md) for that result, which is itself the pass's second finding.
+
+🟢 **Two table defects of the class this base keeps warning about were found and FIXED, in the append-only files where they had been invisible.** 🔴 `repos/trending.md`'s `ACTION XN` verdict table had **five data rows missing their leading `|`** — real content (`WARN 145`, `DOCUMENTED 47`, `IGNORED-PATH-FRAGMENT 37`, `REFUSE-ANNOTATED 6`, `REFUSE 0`) that markdown rendered as prose, so a row-reading compiler saw **zero rows**. 🔴 `agents/trending.md`'s Article 6(3) citation sat **in the header row** with an empty body — same outcome, opposite cause. 🔵 **Neither was a placeholder**, which is why no placeholder sweep had caught them: the defect is a table that *parses to nothing while reading correctly to a human*. 🟢 Both now carry a real header and real rows; a whole-file check across all eight shelves is otherwise clean.
+
+🔴 **Also carried, so it cannot look worked:** `p402`'s **296 of 324** backlog addresses remain
+unadjudicated; `p370`'s **1,152**-slug promotion backlog is untouched for a **seventh** pass; and
+`p401`'s `moodle-aiprovider_openaicompatible` pair is still **narrowed, not closed**.
+
 **🆕 Pass `p402` · reads and commit both 2026-10-23 — the EIGHTH pass dated today.** 🟢 **`p397`'s
 fork backlog is worked for the first time in five passes — the item `p400` ranked and `p401`
 recorded itself as declining.** 🔴 **No row on this shelf gains or loses a grant.** What changed is

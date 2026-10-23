@@ -4,6 +4,25 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p403` — the vertical-platform leg is SATURATED, and the candidates are named
+
+🔴 **The prescribed vertical leg (`open source platform education ERP CRM MIT Apache`) returned
+`0` unshelved platforms on 2026-10-23.** 🟢 **Named rather than summarised, so a successor does not
+re-spend the leg:** `frappe/education` + **ERPNext**, **OpenEduCat**, **openSIS**, **Fedena** and
+**GegoK12** were all returned, and **every one is already carried on these shelves** — most of them on
+this file. 🔵 **An informed gap, not a silence:** the open-source education platform layer (LMS, SIS and
+ERP) is the **most mature** layer in this industry's supply, and a leg phrased as a platform search now
+reliably returns this base's own contents.
+
+🟡 **One quality note on the leg's own sources.** Every licence claim it produced came from **vendor
+pages or vendor-written comparisons** — including the Apache-2.0 claim for **Fedena** and the MIT claim
+for **GegoK12**. 🔴 This base grades those as **POINTERS, never grants** (`p288`): a licence belongs to
+the payload at a ref, and a vendor comparison table is neither.
+
+🔵 **Where new platform-layer supply has actually come from** is the record and standards layers
+(`p393`'s 1EdTech tier, `p388`'s integration tier) and from **national-language legs** — not from the
+platform-category search. See [`intel/trends.md`](../intel/trends.md) `T35` and `p401-T1`.
+
 
 **🆕 Pass `p401` · reads and commit both 2026-10-23.** 🔴 **The Moodle plugin layer — the most
 active AI integration surface in education — is uniformly `GPL-3.0-or-later`, and half of those

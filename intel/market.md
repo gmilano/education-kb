@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p403` · 2026-10-23 — the four regional legs returned ZERO new facts, and that is the finding
+
+🔴 **All four prescribed regional legs were run, and every fact they produced is already on these
+shelves — most of it carried more precisely here than the leg stated it.** 🟢 Named, with what this
+base already holds, so the result is checkable rather than asserted:
+
+| leg | what it returned | state on these shelves |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states · `H.R. 8747` advanced 2026-07-21 · CA `AB 1159` · OK / MD human-oversight duties · Canada *"AI for All"* (Jun 2026) · 36% regional share, $3.68B | 🔴 **all carried** (`H.R. 8747` at lines ~99, ~904, ~1026, ~1085) |
+| **EMEA** | Digital Omnibus → Annex III high-risk **2027-12-02**, Annex I **2028-08-02**, Art. 50 live **2026-08-02**, marking grace **2026-12-02**, Art. 4 literacy since **2025-02-02** | 🔴 **all carried, and `ACTION NU-EU` already says STOP re-verifying these** — `p204` re-derived them and found 0 new facts; the open work is **citation**, not verification (`Gap 241`) |
+| **APAC** | Korea `AI Basic Act` in force 2026-01-22 · Vietnam's AI law naming education high-risk · China labelling · Japan promotion-only · Ipsos attitudinal reading | 🔴 **all carried** (lines ~133, ~338, ~520, ~596, ~1472) |
+| **LATAM** | UNESCO IESALC + UNU-IAS **87% use / 26% formal strategy**, 200 institutions / 19 countries · Observatory launched **2026-04-14** · `CONPES 4144` · Uruguay Framework Convention · ILIA | 🔴 **all carried** (lines ~19, ~143, ~147, ~307, ~339) |
+
+🟢 **One thing the EMEA leg did do, and it is worth recording:** it **corroborated** this base's pinned
+Omnibus identifiers from independent houses — **Regulation (EU) 2026/1744**, OJ **2026-07-24**, in force
+**2026-07-27**, Council final approval **2026-06-29** — and it did **not** re-serve the superseded
+`2026-08-02` high-risk date, which `ACTION SH` has caught seven times. 🔴 **But it is still
+`CORROBORATED-SECONDARY`.** `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` both fail **DNS**
+on this session (`ENOTFOUND`), so `ACTION TX` / `Gap 241` stay open: **no pass has read the Official
+Journal.**
+
+🔵 **The actionable conclusion, stated as a change to method rather than a fact.** The regional legs as
+prescribed have converted from a **discovery** channel into a **regression test** — they now mostly
+confirm this base against drift, which has value but should not be scored as research. 🟢 **The channel
+that paid this pass was a national-language SUPPLY leg** (Hindi), chosen from this base's own
+`p401-T1`. See [`trends.md`](trends.md).
+
 ### 🔴 `402-E` — the five prescribed legs, placed by region, and three of four regions returned no instrument
 
 🔵 Every leg below was run on **2026-10-23**. Full table:
@@ -524,6 +551,30 @@ and remains at proposal stage.
 🔴 **Supply gap, measured:** of 28 record-layer addresses dated this pass, **not one is APAC-held**.
 The LRS layer is North American (Yet Analytics, ADL, pelotech) and European (France Université
 Numérique). An APAC engagement adopts foreign infrastructure on this layer or builds.
+
+🟢 **🆕 `p403` · 2026-10-23 — that supply gap is now PARTIALLY closed, and by the region's own
+institutions.** A **Hindi-language** leg returned the first **Indic-language** education addresses this
+base has held, all payload-verified:
+[`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) — 🟡 **MIT** code / **`CC-BY-4.0`**
+dataset, rule-based verifiable instruction-following across **14 Indic languages + English**, HEAD
+**2026-09-16** — and [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) — 🟢
+**MIT**, a multi-annotator `projects → tasks → review` workflow backend, HEAD **2026-09-01**. 🔴 Plus
+one **ungranted** address that is the most interesting shape of the three:
+[`matsuolab/lecture-ai-engineering-2026-hi`](https://github.com/matsuolab/lecture-ai-engineering-2026-hi),
+the **Hindi localisation** of U Tokyo **Matsuo Lab**'s `AIE2026` course, HEAD **2026-10-19 — 4 d**.
+
+🔵 **What this changes for an APAC engagement, concretely.** The record layer remains foreign-held, so
+that half of the gap stands. 🟢 But **India now has domestic, permissive assets on the two layers that
+decide whether a vertical tutor can be *evaluated* in-language**: a rule-based eval that runs as a CI
+gate without an LLM judge, and an annotation/review workflow to produce in-language ground truth. 🟢
+**That is the first APAC-held supply on these shelves outside China**, and it lands exactly against
+India's mandate — **AI and computational thinking compulsory from Class 3 from the 2026–27 academic
+year** — which this file already carries above.
+
+🔴 **The opportunity is bounded, and the bound is adoption, not licence.** `IndicIFEval` has **6 refs**
+and `Anudesh-Backend` has **0 tags** — these are institutional research assets, not products. 🟢 A
+studio's value-add is precisely that: wrap them into a supported pipeline, which is
+[`compose/patterns.md`](../compose/patterns.md) `Pattern I`.
 
 ### LATAM
 
