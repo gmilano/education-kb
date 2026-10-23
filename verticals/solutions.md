@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🟢 The platform layer — what a client already runs, and where AI attaches
+
+| Platform | Licence | Verified | What it is | Where AI attaches |
+|---|---|---|---|---|
+| [Open edX](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | 🟢 sidebar, today, **8.2k★** | MOOC-scale LMS + Studio authoring | **`XBlock`** components and the course/enrolment APIs. 🔴 AGPL reaches a hosted modification |
+| [Moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 🟢 sidebar, today, **7.5k★** | The most-deployed LMS in education | Out-of-tree **AI provider plugins** (the `aiprovider_*` family) and the web-services API |
+| [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 🟢 sidebar, today, **448★** | Full LMS: teaching, assessment, communication. Swiss lineage (OLAT / University of Zurich, maintained by frentix) | 🟢 **Anywhere — the grant does not constrain you.** This is the LMS to pick when the client needs modification rather than configuration |
+| [Kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 🟢 sidebar, today, **1.2k★** | Offline-first learning platform; content packs sync when a link appears | 🟢 Local inference beside it. The pairing that makes AI tutoring work without bandwidth |
+| [Oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | 🟢 sidebar, today, **6.9k★** | Interactive *explorations* with feedback — closer to a tutoring engine than to an LMS | 🟢 Generate and grade explorations; keep Oppia's feedback loop as the pedagogy spine |
+| [Sunbird](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🟢 **MIT** | 🟢 sidebar, today, **41★** | India's education digital public infrastructure | 🟢 National-scale reference for a public-sector engagement in APAC |
+| [Mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🟢 sidebar, today, **96★** | Self-hosted LMS **with an AI role-play mentor built in**, aimed at corporate L&D and compliance | 🟢 Already there — this is the one platform on the shelf that is AI-native rather than AI-extended |
+| Canvas LMS | 🔴 AGPL-3.0 *(carried, not re-read this pass)* | 🟡 carried | Dominant LMS in North American higher education | An MCP server over the Canvas HTTP API — the AI side stays permissive even though the platform is not. 🔵 The server and its grant are named in the paragraph below this table, deliberately kept out of this row so the platform's copyleft cell cannot be read as the connector's |
+| Sakai | 🟡 **ECL-2.0 or Apache-2.0 — sources disagree, NOT resolved** | 🔴 **unresolved** | Apereo Foundation LMS, higher education | 🔴 **Do not cite the licence until someone reads it.** Two secondary sources give two answers |
+
+🟢 **The Canvas connector, named outside the table above.** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **MIT**, **307★**, licence read from the sidebar on **2026-10-23** — exposes Canvas courses, assignments and submissions to an assistant over the Canvas HTTP API.
+
+🔵 **The architectural point this table is really making.** Every dominant LMS in education is
+copyleft, and almost every useful AI component is permissive. **The MCP server is what keeps the two
+apart**: `canvas-mcp` talks to Canvas over its HTTP API and carries MIT, so a client gets AI
+capability over an AGPL platform without any licence question reaching their code. Build the agent
+layer as a separate permissive service that speaks the platform's API. Never as a fork of the
+platform.
+
+### 🔴 The MCP layer over LMSs is where the licence risk actually is
+
+Previous passes read this layer first-hand and the results do not improve: `openedx-mcp` is
+**AGPL-3.0**; `moodle-mcp` (PyPI) ships an **empty `license` field and zero licence classifiers**;
+`n35da/brightspace-mcp` has **no licence-shaped file anywhere in its tree**, on four independent
+channels. 🟢 `vishalsachdev/canvas-mcp` (MIT, re-read today at 307★) remains the one well-formed
+member of this family. **If an engagement needs Moodle or Brightspace through MCP, that connector is
+something to write, not something to adopt.**
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

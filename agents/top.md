@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🔴 Three carried figures REFUTED by a first-hand read — and the direction is not uniform
+
+| Address | carried as | read today (sidebar) | Verdict |
+|---|---|---|---|
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | `~12k★` (`education_cycle3`) | 🔴 **387★**, MIT | **Refuted — carried figure is ~31× the real one.** Never sourced first-hand; it entered from a secondary list |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `~24k★` (`education_cycle3`) | 🟢 **42.3k★**, Apache-2.0, `v1.6.15` **2026-10-19** | **Refuted upward.** The project nearly doubled; the stale figure under-sold the one address on these shelves with real scale |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `Apache-2.0`, `~200★` | 🟢 **MIT**, **488★** | **Licence cell refuted.** MIT is *more* permissive than the shelf claimed — the error was conservative, but it was still an error |
+
+🔵 **Why this matters more than the numbers.** All three carried values came from secondary lists, and
+all three were wrong in different directions. A star count is cheap to re-read and worthless when
+guessed; an inherited one should be treated as unmeasured until a sidebar says otherwise.
+
+### 🟢 The agent tier — fifteen addresses, every licence read from the repository sidebar on 2026-10-23
+
+| Repo | Licence (sidebar, read today) | Stars | What it is | Region |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | **42.3k** | Agent-native learning workspace: tutoring, problem solving, quizzes, research, visualisation and mastery practice in one extensible system. `v1.6.15`, **2026-10-19** | **APAC** — HKU Data Intelligence Lab |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** | **1.2k** | AI study partner for maths and CS: plans a learning route, explains concepts, walks projects. Updated **2026-10-21** | **APAC** — Simplified-Chinese README, English version linked |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | **530** | MCP server over Anki — read, create and manage cards and decks from an assistant. Updated **2026-10-22** | Global |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 **MIT** | **488** | Multi-agent system on the **ADDIE** instructional-design model: syllabi, slides, scripts, assessments, plus evaluation tooling | Global |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **451** | PyTorch library for training and benchmarking deep **knowledge-tracing** models with standardised preprocessing | **APAC** — China |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT** | **387** | Python package that generates educational content — MCQs, lesson plans — with generative models | **APAC** — India |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | **307** | MCP server for **Canvas LMS**: student- and educator-side tools exposed to Claude, Cursor and similar clients | **North America** |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** | **292** | Socratic tutor built on Bloom's 2-sigma framing. Ships **both** as a Claude Code skill and as a self-hostable web app. Updated **2026-10-20** | **APAC** — Chinese-first |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | **269** | Open-source adaptive tutoring system; skill mastery estimated with **Bayesian Knowledge Tracing**. React, optional Firebase logging | **North America** — CAHLR, UC Berkeley |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** | **203** | Self-hosted language-learning platform: CEFR study plans, AI tutor, voice conversation, flashcards, spaced repetition, local or cloud LLMs. Updated **2026-10-21** | **EMEA** — author Arturo Carretero Calvo |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | **149** | Local-first learning workspace: uploaded course material becomes notes, quizzes, flashcards and an adaptive tutor. Updated **2026-10-22** | Global — English original, Chinese translation |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** | **112** | Community Edition of a personalised-tutoring platform. 🟡 **CE/EE split** — the Enterprise Edition is proprietary, so read the boundary before building on it | **EMEA** — founded by Mohamed El Hajji; page states no country |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **96** | Self-hosted LMS with an **AI mentor for role-play training**, aimed at corporate L&D and compliance. Updated **2026-10-23** | 🔵 **not placed** — maintained by Selleo, a product-engineering company; the page states no country |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** | **53** | MCP server that gives any assistant adaptive tutoring: **BKT + FSRS** sequencing, durable learner state. 🟡 Self-declared **alpha**; profiles need `v0.6.0+`, `v0.6.1` is the recommended patch | 🔵 not placed |
+| [`papayaykware/agente-educativo-psicocognitivo`](https://github.com/papayaykware/agente-educativo-psicocognitivo) | 🟢 **MIT** | **0** | Adaptive tutor: **Deep Knowledge Tracing**, emergent psycho-cognitive profile, affect detection, dynamic planning. Spanish README. 🔴 **Roadmap-stage, zero stars** — publish only as a reference design | **LATAM** — Spanish-language |
+
+🟢 **Twelve of the fifteen are MIT, one BSD-3-Clause, one Apache-2.0 — thirteen are build-on grants.**
+🔴 **One, `freelingo`, is AGPL-3.0:** hosting it unmodified is fine; shipping modified code to a client
+is the trigger. It is on the shelf because its CEFR + FSRS design is the most complete
+language-learning reference here, not because it can be forked into client work.
+
+### 🔴 Searched and NOT found — recorded so a successor does not re-spend the leg
+
+- 🔴 **No mature LATAM-origin open-source education agent.** Two Spanish-language legs
+  (`proyecto código abierto agente IA educativo github 2026 tutor español universidad latinoamérica`
+  and the regional LATAM leg) returned exactly one on-brief address,
+  `papayaykware/agente-educativo-psicocognitivo` — **MIT, 0 stars, roadmap-stage**. This is the fourth
+  consecutive pass to find no LATAM-origin agent with traction. **The gap is structural, not a miss.**
+- 🔴 **No EMEA-origin education agent with scale.** `freelingo` (AGPL-3.0, 203★) and
+  `open-tutor-ai-CE` (BSD-3, 112★) are the whole EMEA agent supply on these shelves. Europe's public
+  money is going into *models* (OpenEuroLLM, Teuken, Apertus) and *regulation*, not into agents.
+- 🔴 **No authoritative 2026 ranking of education-specific agents exists.** The global leg
+  (`top open source AI agents education 2026 github MIT`) returns general-purpose agent lists —
+  OpenClaw, OpenHands, CrewAI, SWE-agent — with education appearing only as a use-case column.
+  Any "top education agents 2026" list a successor finds is almost certainly a general list re-tagged.
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

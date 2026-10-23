@@ -4,6 +4,164 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🔴 The market number is a RANGE, and the range is the finding
+
+| Source | 2026 base | Forecast | CAGR |
+|---|---|---|---|
+| IMARC Group | **~$9.0B** | $79.6B by **2034** | 31.35% |
+| The Business Research Company | **~$10.6B** | $42.48B by **2030** | 41.5% |
+| Technavio | *(no base published)* | **+$3.37B incremental**, 2025–2030 | 45% |
+| Azumo (compilation) | North America **$3.68B** (2026) | $136.79B by 2035 | 34.52% |
+
+🔴 **The 2026 base ranges from ~$3B to ~$10.6B across these four — a 3.5× spread on the same year.**
+They are vendor research estimates measuring different scopes (tools only vs. tools + services vs.
+institutional spend). 🔵 **How to use this in a proposal:** cite the spread and the scope question,
+never a single headline figure. A client who has read two of these reports already knows they
+disagree, and a deck that picks the biggest number tells them which one you read.
+
+### 🟢 The adoption numbers that are worth more than the market size
+
+- **RAND**, 2025: **54% of students** and **53% of teachers** used AI for school work. 🟢 The most
+  defensible adoption figure found across every leg this pass — a named research institution with a
+  published method.
+- 🔴 **Treat with suspicion:** "83% of K-12 teachers", "student AI usage from 66% to 92%". Both come
+  from vendor compilations, both are attributed to surveys the compilation does not link, and the
+  second is a 26-point jump in a single year. **Do not put either in a client deck.**
+- **HolonIQ**, 2026 snapshot: buyers increasingly demand *evidence* that a product improves learning
+  quality, persistence, well-being or job-relevant skills. 🟢 This is the procurement reality that
+  actually governs an engagement, and it is a stronger argument than any market-size slide.
+
+### 🟢 The players, by layer
+
+- **Platform incumbents:** Moodle, Open edX / 2U, Instructure (Canvas), D2L (Brightspace), Anthology.
+  All copyleft or proprietary; none of them is where a studio adds value.
+- **Open model suppliers relevant to education:** OpenEuroLLM consortium (EMEA), Teuken-7B / OpenGPT-X
+  (Germany), Apertus (Switzerland), plus open-weight general models served locally.
+- **Open agent supply:** one hub (DeepTutor, Apache-2.0, 42.3k★) and a long tail — see
+  [`agents/top.md`](../agents/top.md) for the measured distribution.
+- **Public-sector stacks:** Sunbird (India, MIT), Kolibri (MIT, global south deployments).
+
+## Opportunities by region
+
+### North America
+
+🟢 **Policy, measured.** 35 states plus Puerto Rico now publish official guidance on AI use in K-12;
+binding statute is far rarer than guidance. Named instruments this pass: **Idaho SB 1227** (statewide
+K-12 AI framework; prohibits AI *replacing* a human teacher), **Arizona HB 4040** (K-12 *and* public
+universities must adopt student-AI-use policies), **Maryland** (designated AI coordinators;
+university-supported certification of compliant tools), **Florida** (a rule reaching kindergarten
+through graduate level), and a **California** bill barring student data from training AI models
+unless the school directly benefits. Federally, the **K-12 AI Literacy and Readiness Act of 2026
+(H.R. 8747)** was advanced by a House committee on **2026-07-21**; if enacted it lets schools spend
+federal funds on AI literacy.
+
+🟢 **The opportunity.** Not the tutor — the **compliance envelope around the tutor**. Every instrument
+above asks an institution to prove *which tool, approved by whom, doing what to which data, with a
+human where*. Build: Canvas-side agents on [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+(MIT), learner state in [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT), BKT
+mastery from [`OATutor`](https://github.com/CAHLR/OATutor) (MIT, UC Berkeley — a provenance that
+survives a procurement review), and ship the audit log as a **deliverable, not a feature**.
+🔴 **Do not propose anything that reads as replacing a teacher** — in Idaho it is prohibited by name,
+and elsewhere it is the fastest way to lose a board vote.
+
+### EMEA
+
+🟢 **Policy, measured — and the timing changed.** Secondary sources consistently report that
+**Regulation (EU) 2026/1744 moved the AI Act's stand-alone high-risk education deadline from
+2026-08-02 to 2027-12-02**. 🔴 **Not verified against the Official Journal this pass — verify before
+it reaches a client document.** What is *already* live is not deferred: **Article 50 transparency**
+applies from **2026-08-02** (a student-facing chatbot must disclose that it is AI), and **emotion
+recognition in education institutions has been prohibited since February 2025**, subject to the
+medical/safety exception. Annex III education uses are admission, assessing learning outcomes where
+that steers the learning process, and monitoring behaviour during tests. The **Schola Europaea**
+guidelines go further than the Act for European Schools: pupils **cannot be required** to use genAI,
+and tools must be approved first.
+
+🟢 **Sovereignty is the other half.** **OpenEuroLLM** (~20 partners, ~€20M of a €37.4M budget from
+the Digital Europe Programme; open weights, open data, EU-resident training and inference),
+**Teuken-7B** (OpenGPT-X), **Apertus**, and **SOOFI** (Fraunhofer/DFKI, 100B, first public version
+targeted Q3 2026 per a secondary source). 🔴 **Licence trap:** Aleph Alpha's public Pharia releases
+are research/education non-commercial — read the terms before a school deployment.
+On the programme side, **AI-ENTR4YOUTH** (JA Europe, with Intel and the European Commission) piloted
+in Italy, Portugal and Spain and has expanded to Albania, Bulgaria, Czechia, France, Greece, Romania
+and Ukraine; teacher training is reported as the binding constraint on scale.
+
+🟢 **The opportunity.** The only permissive full LMS on these shelves is **European**:
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0). Pair it with EU-resident
+open-weight inference, Article 50 disclosure built into the UI rather than bolted on, and a
+documented *absence* of emotion recognition. 🔵 **Sell the conformity dossier as part of the build** —
+in EMEA it is the deliverable that closes the deal, and the deferral to 2027-12-02 is exactly the
+window in which a client can get ahead of it rather than scramble.
+
+### APAC
+
+🟢 **Policy, measured.** Four different regimes, not one: **South Korea** has a general AI law in
+force; **China** has no general AI law but binding sectoral rules, including **mandatory labelling of
+AI-generated content since 2025-09-01**; **Japan**'s AI Promotion Act carries **no fines or
+prohibitions** (a second AI Basic Plan is reported as approved 2026-07-14 — 🔴 flagged unverified by
+the source itself); **India** has no AI-specific law, applies its data-protection law, and requires
+**prominent labels and provenance markers on AI-generated content from 2026-02-20**.
+
+🟢 **Curriculum mandates are the demand driver.** China has made AI teaching compulsory from **age
+six**; India plans AI and computational thinking **compulsory from Class 3 in AY 2026-27**. Ipsos
+Education Monitor 2026 finds *lower* support for banning AI in schools across the Asian markets
+surveyed, with Australia and New Zealand notably *more* pro-ban — 🔵 a real split inside the region
+that a single APAC go-to-market will get wrong.
+
+🟢 **The opportunity, and it is a supply advantage.** **Most of the verified permissive education
+agent supply on these shelves is APAC-origin**: DeepTutor (Apache-2.0, HKU), Study-Mate (MIT),
+Bloom (MIT), pyKT (MIT), educhain (MIT, India), Sunbird (MIT, India). An APAC engagement can compose
+almost entirely from in-region, permissively-licensed code. Build content-provenance labelling in
+from the first sprint — it is required in both China and India, and it is far cheaper as a design
+constraint than as a retrofit.
+
+### LATAM
+
+🟢 **Policy, measured.** **Mexico closed its legislative period with no general AI law**; the pattern
+is sectoral patches. The one education-specific instrument found: the **Estado de México reformed
+article 61 of its state education law in April 2026** to promote responsible AI use in upper-secondary
+and higher education. **Brazil's PL 2338/2023 has been approved by the Senate** — 🔴 status in the
+Câmara dos Deputados **not confirmed this pass**.
+
+🔴 **Adoption figures diverge by an order of magnitude because they measure different things.**
+EFE, August 2026: **Brazil ~76%, Mexico ~70%** — of *digital users*. Enterprise adoption, Q1 2026:
+**Brazil 41%, Chile 34%, Argentina 29%, Colombia 24.5%, Mexico 20.1%**. 🔵 Both are real; quoting the
+first as institutional readiness is the error, and it is a very easy one to make in a deck.
+
+🔴 **The supply gap, stated plainly and for the fourth pass running.** There is **no mature
+LATAM-origin open-source education agent**. Two Spanish-language legs this pass returned exactly one
+on-brief address — [`papayaykware/agente-educativo-psicocognitivo`](https://github.com/papayaykware/agente-educativo-psicocognitivo)
+(MIT, **0 stars**, roadmap-stage, DKT + affect detection). It is a reference design, not a dependency.
+
+🟢 **The opportunity follows from the gap, not despite it.** LATAM engagements compose
+**global permissive components with regional delivery constraints**:
+[`Kolibri`](https://github.com/learningequality/kolibri) (MIT, offline-first) for connectivity,
+[`educhain`](https://github.com/satvik314/educhain) (MIT) for Spanish/Portuguese item generation,
+[`fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3) for review scheduling, local
+open-weight inference for cost and data residency. 🔵 And the gap itself is the pitch: **being the
+team that publishes the first credible Spanish/Portuguese education agent is available**, and it
+costs a fraction of what the equivalent position in NA or APAC would.
+
+### Global
+
+🟢 **What holds everywhere.** Buyers have moved from "can it generate" to "can you evidence it"
+(HolonIQ) and from tool sprawl to governance (1EdTech). The composition rule is constant across all
+four regions: **permissive agent layer, copyleft platform underneath, MCP as the boundary between
+them.** That single architectural choice is what makes one codebase sellable in all four regulatory
+regimes — Article 50 disclosure in EMEA, provenance labelling in APAC, audit logs in North America
+and offline operation in LATAM are then four configurations of one system, not four products.
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
@@ -597,7 +755,7 @@ official gazette.
 🟢 **So the regional-leg saturation `p405` measured is real and now has a fourth datapoint — with one
 exception that was worth all four legs**, because it did not add a fact, it **repaired** one.
 
-## Opportunities by region
+## Opportunities by region — `p406`–`p414`, SUPERSEDED by `p415`'s block above
 
 ### North America
 

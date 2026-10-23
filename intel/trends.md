@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🟢 Eight trends, each with the evidence that produced it
+
+**T1 — From pilots to infrastructure, and the gate is governance.** 1EdTech frames 2026 as the year
+AI in education shifts from experimentation to *governance* — data boundaries and oversight.
+Campus Technology's panel expects AI embedded across admissions, advising and administration.
+🔵 The practical read: the buying question has moved from "what can it do" to "who approved it, what
+does it touch, and where is the human". A proposal that leads with capability is answering last
+year's question.
+
+**T2 — Generic chatbots are losing to education-shaped tools.** Reported frustration with
+general-purpose assistants is pushing vendors toward systems that already model learning objectives,
+grade-level expectations, assessment logic and instructional flow. 🟢 Visible in the supply:
+`OATutor` (BKT), `pyKT` (knowledge tracing), `tutor-mcp` (BKT + FSRS) all encode a *pedagogical state
+model* rather than a prompt.
+
+**T3 — MCP is becoming the LMS integration layer, and its licensing is the weak point.** Education
+MCP servers now exist for Canvas, Moodle, Open edX, Brightspace and Anki. 🟢 `canvas-mcp` (MIT) and
+`anki-mcp-server` (MIT, 530★) are clean. 🔴 `openedx-mcp` is AGPL-3.0, `moodle-mcp` publishes an
+empty licence field, `brightspace-mcp` has no licence file at any depth. **The integration layer is
+less legally sound than either the platforms or the agents it joins.**
+
+**T4 — Evidence is becoming a procurement gate.** HolonIQ's 2026 snapshot: systems increasingly
+require evidence of improvement in learning quality, persistence, well-being or job-relevant skills.
+🔵 Consequence for a studio: instrument the pilot for an efficacy claim from day one. Retrofitting
+measurement after a successful pilot is how a renewal gets lost.
+
+**T5 — Pedagogy is shipping as an agent SKILL.** Five of the twenty most-starred `ai-tutor`
+repositories are skill bundles, not systems. 🟢 Fastest possible pilot. 🔴 No tenancy, no learner
+state, no data boundary, no audit trail — unshippable into an institution as-is. See
+[`agents/trending.md`](../agents/trending.md).
+
+**T6 — Spaced repetition has consolidated on FSRS.** `fsrs-rs` (BSD-3, 451★) is the scheduler inside
+`tutor-mcp`, reachable through `anki-mcp-server`, and reimplemented in `freelingo` and `OpenTutor`.
+🟢 **This is the one component question in education AI that is settled** — adopt, never rebuild.
+
+**T7 — EMEA is buying sovereignty, not agents.** European public money is going into open *models*
+(OpenEuroLLM ~€20M of €37.4M, Teuken-7B, Apertus, SOOFI) and into *regulation*, while the entire
+EMEA-origin education agent supply on these shelves is two repositories. 🔵 For a studio this is an
+opening, not a warning: Europe will have sovereign models and no sovereign application layer.
+
+**T8 — Secondary star counts are systematically unreliable, and the error is not random.** Three
+figures this base carried were refuted by a first-hand sidebar read today, one of them by **31×**
+(`educhain`: carried `~12k★`, actual **387★**). 🔴 Every one entered through a secondary list.
+**The rule this pass would hand a successor: a figure that no sidebar produced is not a measurement,
+and in this field the secondary sources inflate.**
+
+### 🔴 The structural fact underneath all eight
+
+The education agent field has **one hub and a long tail with nothing in between** — 42.3k★ at
+position one and 1.2k★ at position two on the `ai-tutor` topic page. There is no population of
+mid-size, well-maintained education agents to assemble a solution from. 🟢 **Therefore: compose from
+the mature *foundation* tier (Kolibri, Oppia, OpenOLAT, nbgrader, FSRS — all permissive, all a decade
+old) and treat the agent tier as patterns to reimplement, not dependencies to adopt.** That is the
+single most load-bearing conclusion these shelves support, and it has survived every pass that
+tested it.
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

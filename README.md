@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 415 — reads and commit both 2026-10-23 — **STARS ARE NOT UNVERIFIABLE ON THIS ENVIRONMENT — `p414` CLOSED THAT QUESTION ON THE WRONG CHANNEL. 🟢 FIFTEEN AGENT ADDRESSES AND NINE FOUNDATIONS RE-READ FIRST-HAND, AND THREE CARRIED FIGURES ARE REFUTED — ONE BY 31×. 🔴 AND THE AGENT FIELD HAS ONE HUB AND NO MIDDLE.**
+
+🔵 **Dating note.** Every search leg, licence read and gate run below was executed on **2026-10-23**,
+and the commit lands **2026-10-23**. 🔵 **This is the twenty-first pass dated today**, after
+`p395`–`p414`.
+
+🟢 **Gates ran FIRST, per the standing rule `p412` set.** `make hooks` was the first act of this
+pass: **50 of 51 green on arrival**, matching `p413` and `p414`. Both currency gates were green on
+arrival. 🔵 The lone red was `gate-census-union` control 24, **`Gap 400-B`**, deliberately red since
+`p398`; `p387-G` forbids closing it by weakening a control and this pass did not try.
+
+### 🔴 What this pass overturned
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **THE LARGEST FINDING: `p414` item 14 is wrong about the environment, not about GitHub.** It recorded *"stars are unverifiable on this environment — `api.github.com` is `AUTHZ-REFUSED`"* and declined to publish a single figure. 🟢 Measured side by side this pass: `curl -sI https://github.com/CAHLR/OATutor` → **403**, `curl -s https://api.github.com/repos/HKUDS/DeepTutor` → **the session's own refusal body**, *not* GitHub's — and the **same addresses read cleanly through `WebFetch`**, sidebar licence and star count included. 🔵 This is `p413`'s own *"the refusal is a fact about the CHANNEL, not the host"* finding, one rung further out: it is a fact about the **instrument**, and `p414` had the right rule in hand and applied it to the wrong layer |
+| 2 | 🔴 **And the cost of that call was three wrong figures left standing.** `satvik314/educhain` carried **`~12k★`**; the sidebar says **387★** — the carried figure is **≈31×** the real one. `HKUDS/DeepTutor` carried **`~24k★`**; the sidebar says **42.3k★**, `v1.6.15` **2026-10-19** — refuted *upward*, the stale figure under-sold the one address here with real scale. `DaRL-GenAI/instructional_agents` carried **Apache-2.0 / ~200★**; the sidebar says **MIT / 488★** — a **licence** cell wrong, not just a count. 🔵 All three entered from secondary lists. **In this field the secondary sources inflate, and the direction is not uniform** |
+| 3 | 🟢 **Fifteen agent addresses and nine foundations read first-hand, every licence from the repository's own sidebar.** Twelve of the fifteen agents are MIT, one BSD-3-Clause, one Apache-2.0 — **thirteen are build-on grants**. The one copyleft, `artcc/freelingo`, is **AGPL-3.0** and is shelved as a reference design, never as a fork candidate |
+| 4 | 🔴 **The agent field has ONE HUB AND NO MIDDLE, and this is now measured rather than felt.** On the `ai-tutor` topic page the largest address is **42.3k★** and the second is **1.2k★** — a **35× cliff at position two**, then a long tail of weekend projects. 🟢 **Consequence, and it is the load-bearing one for a studio:** compose from the mature *foundation* tier — Kolibri (MIT), Oppia (Apache-2.0), OpenOLAT (Apache-2.0), nbgrader (BSD-3), FSRS (BSD-3), all a decade old — and treat the agent tier as **patterns to reimplement, not dependencies to adopt** |
+| 5 | 🟢 **A format shift worth naming: pedagogy is shipping as an agent SKILL.** Five of the twenty most-starred `ai-tutor` repositories are skill bundles rather than running systems. 🔴 A skill has no tenancy, no learner-state store, no data boundary and no audit trail — **fastest possible pilot, unshippable into an institution as-is.** Shipped as `compose/patterns.md` **P6**: pilot as a skill in week one, productionise behind an MCP server with a state store |
+| 6 | 🟢 **The licence architecture of this industry, stated once.** Every dominant education LMS is copyleft (Open edX AGPL-3.0, Moodle GPL-3.0, Canvas AGPL-3.0) and almost every useful AI component is permissive. **The MCP server is what keeps them apart.** 🔴 And that boundary layer is the *least* legally sound part of the stack: `openedx-mcp` is AGPL-3.0, `moodle-mcp` publishes an empty `license` field, `brightspace-mcp` has no licence file at any depth — only `vishalsachdev/canvas-mcp` (**MIT**, re-read today at **307★**) is well-formed |
+| 7 | 🔴 **`Gap`: no permissively-licensed Student Information System, surviving every pass that has looked.** The field is `RosarioSIS`, `Gibbon`, `Academico` — GPL or unstated — and the one MIT SIS found is a 2024 teaching demo. **SIS work in an engagement is integrate-over-API or build; it is not fork-and-go** |
+| 8 | 🔴 **`Gap`: no mature LATAM-origin education agent, fourth consecutive pass.** Two Spanish-language legs returned exactly one on-brief address — `papayaykware/agente-educativo-psicocognitivo`, **MIT, 0★, roadmap-stage**. 🟢 The gap is the pitch: being the team that publishes the first credible Spanish/Portuguese education agent is **available** |
+| 9 | 🔴 **`Gap`: EMEA is buying sovereignty, not agents.** European public money is in open *models* — OpenEuroLLM (~€20M of a €37.4M budget, Digital Europe Programme), Teuken-7B, Apertus, SOOFI — and in *regulation*. The entire EMEA-origin agent supply on these shelves is **two repositories**. 🟢 Europe will have sovereign models and no sovereign application layer |
+| 10 | 🟢 **All four regional legs paid, and the regulatory picture is now placed rather than asserted.** North America: 35 states + PR publish K-12 guidance, binding statute rarer (Idaho SB 1227, Arizona HB 4040, Maryland, Florida, California), federal H.R. 8747 advanced out of committee **2026-07-21**. EMEA: Article 50 transparency **live 2026-08-02**, emotion recognition in education **prohibited since Feb 2025**, stand-alone high-risk education deadline reported moved to **2027-12-02** by Reg. (EU) 2026/1744 — 🔴 **not verified against the Official Journal, flagged in place**. APAC: four distinct regimes; China compulsory AI from age six and content labelling since 2025-09-01; India compulsory from Class 3 in AY 2026-27 and labelling from 2026-02-20. LATAM: Mexico closed with no general AI law, **Estado de México reformed art. 61 of its education law in April 2026**; Brazil's PL 2338/2023 passed the Senate, Câmara status **unconfirmed** |
+| 11 | 🔴 **The market figure is a range and the range is the finding.** 2026 base: IMARC **~$9.0B**, TBRC **~$10.6B**, Azumo's North-America-only **$3.68B**, Technavio publishes no base. **A 3.5× spread on the same year**, because the scopes differ. 🟢 Cite the spread; a deck that picks the biggest number tells the client which report you read. The one adoption figure worth quoting is **RAND 2025: 54% of students, 53% of teachers** — named institution, published method. 🔴 *"83% of K-12 teachers"* and *"66%→92% student usage"* are vendor compilations with unlinked sources; **neither belongs in a client deck** |
+| 12 | 🟢 **Two licence-cell conflicts this pass created and closed before the commit.** `gate-shelf-consistency` caught `instructional_agents` (correction row read as an assertion — the table header now carries `carried as`, so `p307`'s correction-table suppression applies) and `canvas-mcp` (its slug sat in the Canvas LMS row, so the platform's AGPL cell was read as the connector's — the connector is now named in prose *below* the table). 🔵 **The gate did exactly what it was built to do, on its author's own writes** |
+
+🔵 **Gate score: 50 of 51 on the first run, before any write.** The one red and its disposition:
+
+| gate | defect | state |
+|---|---|---|
+| `gate-census-union` | 🔵 Control 24, **`Gap 400-B`** — `p382` duplicated `p375`'s rule upstream and made the audited arm unreachable, so `NAME-DOT-RUN` cannot fire | 🔴 **deliberately red**, not forced green (`p387-G`) |
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 744** harvested shapes → **35** are not addresses →
+**2 709 addresses**. 🔵 **2 709** channel-U addresses and **3 174** channel-B survivors give
+**3 544 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🟢 **The delta.** Against `p414`'s published triple (**2 743 / 35 / 2 708**, union **3 543**) the
+address count moved **+1** and the union **+1**. 🔵 The movement is small because most of this pass's
+budget went into **re-reading addresses this base already carried** rather than harvesting new ones —
+fifteen agents and nine foundations, every licence taken from a sidebar today. 🟢 That is the right
+trade when three carried figures turn out to be wrong, one of them by a factor of 31: **a census
+counts addresses, and this pass spent itself on whether the addresses say what the shelves claim.**
+
+🟢 **`p414`'s figures are left standing in their own section — history is not edited to match.**
+
 ## Pass 414 — reads and commit both 2026-10-23 — **`34 501` IS NOT THE AGPL-3.0 `http` FORM — IT IS ONE REPOSITORY'S DE-INDENTED TITLE LINE, AND THE SPREAD IS A 2×2 LATTICE OVER `34 520` WHOSE FOUR CELLS ARE ALL NOW MEASURED. 🔴 `education-agent-skills`' GRANT IS A POINTER ON BOTH ITS SUBTREES AND ITS OPERATIVE TEXT IS UNREACHABLE HERE. 🔴 AND THE EGRESS REFUSAL HAS TWO CLASSES THESE SHELVES RECORD AS ONE.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

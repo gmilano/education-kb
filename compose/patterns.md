@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🟢 Six recipes, each naming its components, its licences and its boundary
+
+Every component below was licence-verified first-hand on **2026-10-23**. 🔵 The rule all six follow:
+**permissive agent layer, copyleft platform underneath, MCP as the boundary between them.**
+
+#### P1 — Canvas-native tutoring copilot · **North America** · 8–10 weeks
+
+- [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (**MIT**, 307★) — the tool
+  layer: courses, assignments, submissions over the Canvas API.
+- [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**, 53★, alpha
+  `v0.6.1`) — durable learner state: BKT mastery, FSRS review scheduling, misconception tracking.
+- [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (**MIT**, 269★, UC Berkeley) — the BKT reference
+  to calibrate against, and a provenance that survives procurement review.
+
+**Wiring:** one MCP client holds both servers. `canvas-mcp` answers *what is assigned*; `tutor-mcp`
+answers *what this learner knows and what comes next*; the model only composes. Canvas stays stock
+(AGPL never reaches client code). 🔴 **Ship the audit log as a deliverable** — state policy asks who
+approved the tool and where the human is. 🔴 **Never frame it as replacing an instructor:** Idaho
+SB 1227 prohibits that by name.
+
+#### P2 — AI Act-conforming tutor on a permissive LMS · **EMEA** · 10–12 weeks
+
+- [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (**Apache-2.0**, 448★) — the LMS you are
+  allowed to modify.
+- [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) (**BSD-3**,
+  112★) — the tutoring surface. 🟡 Read the CE/EE boundary before depending on anything.
+- EU-resident open-weight inference (Teuken-7B today; OpenEuroLLM when it ships).
+
+**Wiring:** inference inside the client's EU tenancy, OpenOLAT as system of record, the tutor as a
+separate service over OpenOLAT's API. **Article 50 disclosure rendered in the chat surface itself,
+not in a policy page.** 🔴 **No emotion recognition anywhere in the design** — prohibited in education
+institutions since February 2025 — and say so explicitly in the dossier. 🔵 The deferral of the
+stand-alone high-risk deadline to **2027-12-02** is the window: deliver the conformity dossier with
+the build.
+
+#### P3 — Offline-first tutoring for connectivity-constrained deployments · **LATAM** · 6–8 weeks
+
+- [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**, 1.2k★) —
+  offline-first delivery and content sync.
+- [`satvik314/educhain`](https://github.com/satvik314/educhain) (**MIT**, 387★) — Spanish/Portuguese
+  item and lesson-plan generation, run **ahead of time**, not at request time.
+- [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) (**BSD-3**,
+  451★) — review scheduling, which needs no network at all.
+- Local open-weight inference on school hardware.
+
+**Wiring:** generation happens centrally and in batch; the school receives *content packs plus a
+scheduler*, and the only thing that runs on-site is Kolibri and a small local model.
+🔴 **Do not reach for [`freelingo`](https://github.com/artcc/freelingo) here** — its CEFR + FSRS
+design is the best reference on these shelves and it is **AGPL-3.0**, so shipping a modified copy to
+a client is the trigger. Read it; do not fork it.
+
+#### P4 — Instructional-design factory · **Global** · 4–6 weeks
+
+- [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) (**MIT**,
+  488★ — 🔴 *this base previously recorded Apache-2.0; corrected today*) — ADDIE multi-agent: syllabus
+  → slides → script → assessment.
+- [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) (**BSD-3**, 1.4k★) — autograded notebook
+  assignments for anything CS or data.
+- [`oppia/oppia`](https://github.com/oppia/oppia) (**Apache-2.0**, 6.9k★) — interactive explorations
+  with feedback, as the delivery target for generated material.
+
+**Wiring:** `instructional_agents` produces the course skeleton; a human instructional designer
+reviews at the syllabus gate (not at the end); `nbgrader` and Oppia receive the artefacts. 🔵 The
+review gate is the pattern — generation is cheap, and a syllabus error propagates into every
+downstream artefact.
+
+#### P5 — Knowledge-tracing service behind any tutor · **APAC / Global** · 4 weeks
+
+- [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (**MIT**, 451★) — train deep
+  knowledge-tracing models on the institution's own interaction logs.
+- [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (**MIT**) — the classical BKT baseline you must
+  beat before claiming the deep model is worth its cost.
+- [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**) — serve the
+  resulting mastery estimates to any agent through MCP.
+
+**Wiring:** mastery estimation is a *service*, not a feature of one tutor. 🟢 Benchmark DKT against
+BKT on the client's own data first; on small cohorts the classical model frequently wins, and finding
+that out in week two is worth more than the model.
+
+#### P6 — Pilot as a skill, productionise as a server · **Global** · 1 week + 6 weeks
+
+- [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (**MIT**, 292★) — the pattern: one repository
+  shipping the same pedagogy as a Claude Code skill *and* a self-hostable web app.
+- [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (**MIT**, 149★) — local-first
+  workspace shape for the productionised half.
+- [`Selleo/mentingo`](https://github.com/Selleo/mentingo) (**MIT**, 96★) — reference for an LMS where
+  the AI mentor is a first-class feature rather than a bolt-on.
+
+**Wiring:** week one is a skill in the stakeholders' own client — zero infrastructure, real
+pedagogy, a decision made on evidence instead of a deck. 🔴 **The skill is never the deliverable:**
+no tenancy, no learner-state store, no data boundary, no audit trail. The moment it is approved, the
+same pedagogy moves behind an MCP server with a state store, and that is the thing that ships.
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

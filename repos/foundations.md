@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🟢 The foundation tier — nine addresses, every licence read from the sidebar on 2026-10-23
+
+| Repo | Licence (sidebar, read today) | Stars | What it is | Build-on? |
+|---|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | **8.2k** | The Open edX LMS + Studio: MOOC-scale delivery, cohorts, certificates, `XBlock` extension model | 🔴 **Integrate, do not fork.** AGPL reaches hosted services; extend through `XBlock` and the APIs |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | **7.5k** | The most-deployed LMS in education worldwide; plugin architecture, AI-provider plugins live out of tree | 🔴 **Plugin boundary only.** GPL triggers on distribution, not on hosting |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6.9k** | Interactive tutor-style *explorations* that give learners feedback as they work — the pedagogy engine, not a gradebook | 🟢 **Yes — the largest permissive education platform on these shelves** |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** | **1.4k** | Assigning, collecting, autograding and returning Jupyter notebooks | 🟢 Yes — the default autograding substrate for anything CS/data |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | **1.2k** | **Offline-first** teaching and learning platform: full delivery with no internet requirement | 🟢 **Yes — and it is the single most important address for connectivity-constrained deployments** |
+| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **BSD-3-Clause** | **451** | Rust implementation of **FSRS** — scheduler plus optimiser — the modern spaced-repetition algorithm | 🟢 Yes. Already the de-facto review scheduler across this field |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **448** | Web-based LMS for teaching, assessment and communication; descends from OLAT at the University of Zurich, maintained by frentix | 🟢 **Yes — the only permissively-licensed full LMS here, and it is European** |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** | **152** | Framework-independent PHP library for H5P interactive content; plugs into LMS and CMS hosts | 🔴 Integrate through the host's plugin interface |
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🟢 **MIT** | **41** | Web portal for the **Sunbird** education stack — India's digital public infrastructure for learning | 🟢 Yes. 🔵 **Do not read 41★ as insignificance** — it is one module of a DPI stack deployed at national scale, and stars measure developer attention, not deployment |
+
+### 🟢 The build-on set, stated plainly
+
+**Permissive and therefore safe to fork into client work:** `oppia` (Apache-2.0), `kolibri` (MIT),
+`OpenOLAT` (Apache-2.0), `nbgrader` (BSD-3), `fsrs-rs` (BSD-3), `SunbirdEd-portal` (MIT).
+
+**Copyleft and therefore integration-only:** `edx-platform` (AGPL-3.0), `moodle` (GPL-3.0),
+`h5p-php-library` (GPL-3.0). 🔵 The distinction that keeps getting lost: **GPL triggers on
+distribution, AGPL triggers on network use.** Hosting a stock Moodle for a client is not a
+distribution; shipping them a modified Moodle is. Hosting a *modified* Open edX is already the
+trigger.
+
+### 🔴 The gap this tier still has
+
+🔴 **There is no permissively-licensed Student Information System.** The SIS field is
+`RosarioSIS`, `Gibbon` and `Academico` — GPL or unstated — and the one MIT-licensed SIS a previous
+pass found (`coderzaman/Student-Information-System`) is a teaching demo last touched in 2024.
+**Any SIS work in an engagement is build-from-scratch or integrate-over-API; it is not fork-and-go.**
+This gap has now survived every pass that looked for it.
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

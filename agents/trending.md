@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🟢 What moved on the agent tier in the week to 2026-10-23
+
+Harvest legs: the GitHub topic pages [`ai-tutor`](https://github.com/topics/ai-tutor) and
+[`education-ai`](https://github.com/topics/education-ai), both read today, plus four regional search
+legs. 🔴 **The topic pages do NOT show licences** — every grant below was resolved by opening the
+repository itself.
+
+| Address | Licence (resolved first-hand) | Stars | Updated | Why it is here |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 96 | **2026-10-23 · 0 d** | 🟢 **New supply.** An LMS that ships an AI role-play mentor as a first-class feature rather than a bolt-on — the clearest "AI-native LMS" address these shelves carry |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | 149 | **2026-10-22 · 1 d** | 🟢 **New supply.** Local-first: course material in, notes/quizzes/flashcards/adaptive tutor out, no cloud dependency required |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | 530 | **2026-10-22 · 1 d** | 🟢 Spaced repetition reached through MCP rather than reimplemented — see trend **T6** |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** | 1.2k | **2026-10-21 · 2 d** | 🟢 **The second-largest education agent on these shelves after DeepTutor**, and it did not exist on them before this pass |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** | 203 | **2026-10-21 · 2 d** | 🟡 Watch, do not fork. Copyleft, EMEA-origin |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** | 292 | **2026-10-20 · 3 d** | 🟢 Already carried; **+0★ movement is not the story** — the story is that it ships as a *skill* and a *web app* from one repo |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | 42.3k | **2026-10-19 · 4 d** | 🟢 `v1.6.15`. Still the only education agent here with mass adoption |
+| [`ASEpochs/ai-digital-teacher`](https://github.com/ASEpochs/ai-digital-teacher) | 🔵 **not resolved this pass** | 13 | **2026-10-23 · 0 d** | 🟡 Live today and tiny. Recorded as an address, **not** as supply — nobody should cite it until its grant is read |
+| [`brahm-ai-official/brahm-ai`](https://github.com/brahm-ai-official/brahm-ai) | 🔵 **not resolved this pass** | 6 | **2026-10-22 · 1 d** | 🟡 Same class. Recorded so the next harvest does not treat it as a discovery |
+
+### 🟢 The format shift worth naming: pedagogy is shipping as a SKILL, not as a service
+
+Five of the twenty addresses on the `ai-tutor` topic page are **agent skills** rather than running
+systems — `Li-Evan/Bloom`, `ZeKaiNie/universal-examprep-skill` (314★),
+`SenmuuuuW/universal-diagnostic-tutor-skill` (250★), `KeWang0622/kaogong-skill` (200★),
+`flysheep-ai/education-skills` (116★). A skill has no server, no tenancy and no data boundary: it is a
+prompt-and-procedure bundle that runs inside whatever client the learner already has.
+
+🔵 **Consequence for a studio engagement.** A skill is the cheapest way to pilot a pedagogy and the
+worst way to ship one into an institution — there is no audit trail, no learner-state store and no
+place to put a data-protection boundary. Pilot as a skill; productionise behind an MCP server with a
+state store (`tutor-mcp`'s shape) when the institution needs records.
+
+### 🔴 Declared absence, this week
+
+No new **North America**-origin and no new **LATAM**-origin agent appeared in either topic page or in
+any of the four regional legs this week. The week's new supply is APAC (`Study-Mate`, `OpenTutor`
+bilingual) and EMEA (`freelingo`, `mentingo`). **Recorded as a measurement, not as silence.**
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

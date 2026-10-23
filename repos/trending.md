@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
+
+🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
+commit lands **2026-10-23**. This is the twenty-first pass dated today, after `p395`–`p414`.
+
+🔵 **Channel note, measured this pass.** `curl -sI https://github.com/CAHLR/OATutor` → **403**, and
+`curl -s https://api.github.com/repos/HKUDS/DeepTutor` returns the session's own refusal body
+(*"GitHub access to this repository is not enabled for this session"*), **not** GitHub's. The same
+addresses read cleanly through `WebFetch`. Both instruments were run side by side before any address
+below was written down. Every licence, star count and date in this pass came through `WebFetch`.
+
+### 🟢 GitHub trending for education + AI, week to 2026-10-23 — what the legs actually returned
+
+🔴 **First, the honest finding: there is no education-specific GitHub-trending signal.** The leg
+`github trending education AI 2026 repository` returns general AI-infrastructure rankings
+(nanochat, agent-skills catalogues, knowledge-graph repos) in which education appears only as
+learning *material*. The usable signal comes from the **topic pages**, not from trending.
+
+#### Topic page [`ai-tutor`](https://github.com/topics/ai-tutor) — the top 20 as read today
+
+| Address | Stars | Updated | Grant resolved this pass? |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 42.3k | 2026-10-19 | 🟢 Apache-2.0 |
+| `Miaotofu01/Study-Mate` | 1.2k | 2026-10-21 | 🟢 MIT |
+| `24kchengYe/human-skill-tree` | 580 | 2026-03-25 | 🔵 no — 7 months stale |
+| `ankimcp/anki-mcp-server` | 530 | 2026-10-22 | 🟢 MIT |
+| `ZeKaiNie/universal-examprep-skill` | 314 | 2026-10-19 | 🔵 no — skill, not a component |
+| `karanb192/algo-sensei` | 297 | 2026-10-02 | 🔵 no |
+| `Li-Evan/Bloom` | 292 | 2026-10-20 | 🟢 MIT |
+| `SenmuuuuW/universal-diagnostic-tutor-skill` | 250 | 2026-09-24 | 🔵 no — skill |
+| `artcc/freelingo` | 203 | 2026-10-21 | 🔴 AGPL-3.0 |
+| `nichochar/ari` | 198 | 2026-10-21 | 🔵 no |
+| `KeWang0622/kaogong-skill` | 200 | 2026-10-12 | 🔵 no — skill |
+| `zijinz456/OpenTutor` | 149 | 2026-10-22 | 🟢 MIT |
+| `flysheep-ai/education-skills` | 116 | 2026-01-30 | 🔵 no — 9 months stale |
+| `PrepLabsAI/InterviewMentor` | 113 | 2026-10-19 | 🔵 no |
+| `SimonsTang/feifei-companion` | 109 | 2026-04-19 | 🔵 no |
+| `Selleo/mentingo` | 96 | 2026-10-23 | 🟢 MIT |
+| `mahseema/aibooks` | 92 | 2025-08-03 | 🔵 no — 15 months stale |
+| `ahmedEid1/lumen` | 90 | 2026-06-07 | 🔵 no |
+| `codeXsidd/Studivexa` | 72 | 2026-08-31 | 🔵 no |
+| `yh2072/edgameclaw` | 72 | 2026-03-26 | 🔵 no |
+
+🔵 **Read the denominator, not the rows.** Twenty addresses, and the **largest is 42.3k while the
+second is 1.2k** — a 35× cliff at position two. Education agents have one hub and a long tail of
+weekend projects; there is no middle. Any roadmap that assumes a healthy field of mid-size,
+maintainable education agents is assuming something this page refutes.
+
+#### Topic page [`education-ai`](https://github.com/topics/education-ai) — the top entry is 462★
+
+`JuneYaooo/lineage-skill` (462★, 2026-07-23), `SirhanMacx/Claw-ED` (63★), `DaoyuanLi2816/labelbank`
+(21★), `ASEpochs/ai-digital-teacher` (13★, live today) and then a tail of single-digit repositories.
+🔴 **This topic is not a supply channel** — it is a tag with almost nothing behind it, and a pass that
+harvests it expecting foundations will come back empty. Recorded so the leg is not re-spent.
+
+### 🟢 Where the durable repos actually live
+
+Not in trending. The education foundations that matter are a decade old and move slowly —
+`openedx/edx-platform` (8.2k), `moodle/moodle` (7.5k), `oppia/oppia` (6.9k),
+`jupyter/nbgrader` (1.4k), `learningequality/kolibri` (1.2k). All re-read today; see
+[`repos/foundations.md`](../repos/foundations.md).
+
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
