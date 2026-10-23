@@ -5,6 +5,41 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No industry
+trend was added: the brief's eight legs returned nothing this base did not hold, for the second
+consecutive pass.** 🟢 **One new trend about this base's own structure is added, and it is
+measured rather than observed.**
+
+### 🆕 `T80` — the defect has moved from the sentence to the LAYER BOUNDARY
+
+🔵 **`T29` was "a statement about the file disagreed with the file." `397-A` was "a superlative
+derived over the rows in view rather than over the shelf." 🔴 `T80` is the same family one level
+out: two shelves that are both correct, that disagree with each other, and only one of which an
+instrument can read.**
+
+Evidence this pass: `README.md` has carried **Colombia's `Ley 2626 de 2026`** — a binding
+education-AI statute — since the `p277` regional battery, while
+[`policy-matrix.tsv`](policy-matrix.tsv), the layer built **because** *"prose is not readable by an
+instrument"*, carried **11 teaching-mandate rows and not one LATAM**. 🔴 **Neither shelf was lying;
+the fact simply never crossed between them**, and the typed side is the side that answers queries.
+
+🟢 **Why this is a trend and not an incident:** the same crossing failed for **six** jurisdictions
+at once (CO, AR, CL, MX, BR, PE) plus two the base had lost entirely (PY, UY) — so the mechanism is
+structural, not a slip on one row. 🟢 **The cheap standing check it implies:** for any claim of the
+form *"no jurisdiction in region R does X"*, grep the prose shelves for R before publishing the
+blank. That check, run once this pass, is what produced the finding.
+
+### 🔵 `T42`, held still rather than advanced — and the gate score deliberately NOT restated
+
+🔴 **`make hooks` was REFUSED on this session's classifier** (`Code from External`), where `p398`
+ran it twice in full. 🟢 **So `p399` does not restate the gate score** — `398-B`'s whole lesson is
+that a score is a derived quantity that goes stale exactly like a census sentence, and a pass that
+could not re-derive it must say so rather than carry `p398`'s **46/47** forward as if re-measured.
+🔵 **What this adds to `T42`:** the refusal is **not stable across sessions**. Same repository, same
+command, same month — `p397` and `p398` ran it, `p399` cannot. 🔴 **Any gate claim in this base is
+therefore conditional on the session that made it**, which is a property no shelf here had recorded.
+`Gap 399-B`.
+
 **🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No industry trend
 was added: the four regional legs returned nothing this base did not hold** (`Gap 398-C`). 🟢 **Two
 trends about this base's own instruments are refined instead, and both are measured.**

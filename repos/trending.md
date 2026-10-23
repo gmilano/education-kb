@@ -5,6 +5,35 @@ updated: 2026-10-23
 ---
 
 
+## 🟢 🆕 2026-10-23 · `p399` — **THE TYPED POLICY LAYER HAD 11 TEACHING-MANDATE ROWS AND NOT ONE LATAM, WHILE THIS BASE'S README HELD THE REFUTING STATUTE SINCE `p277`. 🟢 59 → 67 ROWS.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23**, the fifth pass today. 🔵 No new
+instrument; the repo read is first-hand `WebFetch` against `github.com`, and the policy reads are
+search-channel (band `reported`, re-measured: policy hosts still **000** to `curl`).
+
+### 1. 🔴 Census address, archived — `arthtyagi/judge`
+
+🟢 **MIT**, **32 ★**, 3 forks, Python/Django, 56 commits, 🔴 **archived 2022-08-11, read-only.**
+🟢 `Gap 398-D` closed — grant established first-hand, artefact still excluded from
+[`foundations.md`](foundations.md) under the `Continue` rule. 🔵 Note the ordering: it was excluded
+on the archive banner **before** the licence was known, so the read confirms the call rather than
+justifying it. An exclusion is not a licence check.
+
+### 2. 🔴 Supply saturation, second consecutive pass
+
+Fourteen returned addresses, 🔴 **fourteen already shelved**, one unshelved and declined
+(`the-open-agent/openagent`, general personal assistant, not education-native). 🟢 `398-C`'s
+dated-delta remedy was tested this pass: 🟢 it clearly improves the **policy** axis and
+🔴 does **not** break saturation on the **supply** axis. `Gap 399-A`.
+
+### 3. 🟢 What actually moved: [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv)
+
+**59 → 67 rows** · LATAM **12 → 20** · teaching-mandate LATAM rows **0 → 6**. Headed by
+🔴 **Colombia's `Ley 2626 de 2026`** (sanctioned **2026-08-24**; binds official schools; curricular
+guidelines due **Feb 2027**). 🔵 Two of the eight new rows rest on a thinner base and are flagged as
+such: **PY/`SOPAIA`** was *recovered* from `archive/2026-10-06-pre-reset/` plus one independent
+sighting, and **UY/Ceibal** carries `effective = date NOT established`. `Gap 399-D` · `Gap 399-E`.
+
 ## 🟢 🆕 2026-10-23 · `p398` — **`p397`'s `topic:autograder` LEAD, EXPLOITED: THE ENTIRE FIRST PAGE WAS ALREADY ON THESE SHELVES. 🟢 AND SORTING IT BY STARS REPRODUCES `p397`'s `okpy/ok` CORRECTION BLIND, THROUGH A DIFFERENT CHANNEL.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23**, the fourth pass today. 🔵 No new instrument;

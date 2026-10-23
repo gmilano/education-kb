@@ -5,6 +5,26 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p399` · reads and commit both 2026-10-23 — the FIFTH pass dated today.** 🔴 **No row
+was added to this shelf, for the second consecutive pass, and the candidate list was measured before
+being declined.** Four global supply legs plus one extended supply leg returned
+`agents-from-scratch`, `ai-engineering-from-scratch`, `AI-Roadmaps`, `ai-agents-for-beginners`,
+`500-AI-Agents`, `awesome-llm-apps`, Hermes, OpenClaw, `BlackyDrum/ai-tutor`, `Gchism94/ai-tutor`,
+`zijinz456/OpenTutor`, `artcc/freelingo`, `KeWang0622/kaogong-skill` and `Zenglian990/AI_Tutor_Release`
+— 🔴 **every one already carried on these shelves**, each checked by grep rather than by memory.
+
+🔴 **One address was genuinely unshelved and is still not promoted:**
+[`the-open-agent/openagent`](https://github.com/the-open-agent/openagent) — a general personal
+assistant with computer-use and browser-use loops. 🔵 **It is not education-native**, and this shelf
+does not carry general agents that merely *could* be pointed at a classroom; that rule is what keeps
+the tier readable. Recorded here as a declined candidate so the next pass does not re-litigate it.
+
+🟢 **The autograder tier gains a first-hand grant read rather than a row.**
+[`arthtyagi/judge`](https://github.com/arthtyagi/judge) — 🟢 **MIT**, **32 ★**, 3 forks — is
+🔴 **archived since 2022-08-11**, so `Gap 398-D` closes with the licence established and the
+artefact still excluded. 🔵 The `okpy/ok` correction from `397-A` stands unchanged and was not
+re-derived this pass. `Gap 399-A`.
+
 **🆕 Pass `p398` · reads and commit both 2026-10-23 — the FOURTH pass dated today.** 🔴 **No row was
 added to this shelf, and that is the finding rather than a shortfall.** Four global supply legs
 returned `Ebimsv/AITutorAgent`, `maxew6/ai-tutor-project`, `Zenglian990/AI_Tutor_Release`,

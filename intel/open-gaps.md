@@ -5,6 +5,78 @@ updated: 2026-10-23
 ---
 
 
+## Pass 399 · reads and commit both 2026-10-23 — **THE TYPED POLICY LAYER CARRIED 11 TEACHING-MANDATE ROWS AND NOT ONE LATAM, WHILE THIS BASE'S OWN README HELD THE REFUTING STATUTE SINCE `p277`. 🟢 FIXED IN THE DATA: 59 → 67 ROWS, LATAM 12 → 20. 🟢 `Gap 398-D` CLOSED FIRST-HAND.**
+
+🔵 **`p399` is a WRITING pass on the typed layer and a reading pass everywhere else.** No new
+instrument. 🔴 **`make hooks` was refused this session**, so no gate score is restated — see
+`Gap 399-B`.
+
+### 🟢 Closed this pass
+
+- **`Gap 398-D` — CLOSED.** [`arthtyagi/judge`](https://github.com/arthtyagi/judge) read first-hand:
+  🟢 **MIT** (verbatim *"MIT license"*), **32 ★**, **3 forks**, Python/Django, 56 commits — and
+  🔴 **"This repository was archived by the owner on Aug 11, 2022. It is now read-only."**
+  🟢 **The grant is permissive and the artefact is still dead:** four years archived, so it stays a
+  census address and is **not** promoted to a build-on tier, per the `Continue` rule. 🔵 `p398`
+  recorded the licence as unread rather than assuming MIT from the ecosystem — that was the right
+  call, and the read confirms the guess would have been right for the wrong reason.
+
+### 🔴 New gaps
+
+- **`Gap 399-A`: `398-C`'s remedy is validated on the POLICY axis and refuted on the SUPPLY axis, and
+  the brief still ranks them the other way round.** 🟢 Dated-delta tails returned named, dated
+  instruments where the brief's tails returned survey percentages — that is where this pass's finding
+  came from. 🔴 The supply tail returned **7** candidate addresses, of which **6** were shelved and
+  the 7th (`the-open-agent/openagent`) is a general personal assistant, not education-native.
+  🔵 **Concrete:** keep the dated-delta tail for the four regional legs, and stop spending extended
+  budget on global supply legs — three consecutive passes have shown they return general-purpose
+  frameworks this base already holds.
+- **`Gap 399-B`: gate runnability is NOT stable across sessions, and no shelf recorded that.**
+  `p397` and `p398` ran `make hooks` in full; 🔴 `p399` was refused (`Code from External`) on the
+  same repository and the same command. 🔵 **Consequence:** every gate score in this base is
+  conditional on the session that produced it, and a pass that cannot re-derive must decline to
+  restate rather than carry the last number forward. 🟢 Declined here, explicitly.
+- **`Gap 399-C`: `api.github.com` is reachable and is NOT an oracle — hypothesis formed, tested,
+  refuted in one pass.** 🟢 The root answers **200** where policy hosts answer **000**, which looked
+  like the second independent repo-fact channel this base has wanted since `p61`. 🔴 **It is not:**
+  `/repos/{owner}/{repo}` returns *"GitHub access to this repository is not enabled for this
+  session"* for every shelf address tried (`arthtyagi/judge`, `okpy/ok`, `rstudio/gradethis`,
+  `ucbds-infra/otter-grader`), while the session's **attached** repository reads normally. 🔵 The
+  channel is **scope-gated, not rate-limited or blocked**, so no amount of retrying or backoff opens
+  it; `WebFetch` against `github.com` HTML remains the only first-hand repo channel.
+- **`Gap 399-D`: two LATAM jurisdictions entered this pass rest on a THINNER base than the other six.**
+  🔴 **PY/`SOPAIA`** was *recovered*, not discovered — before `p399` it survived only in
+  `archive/2026-10-06-pre-reset/`, on no live shelf; it is entered on the archive **plus** one
+  independent es-language sighting. 🔴 **UY/Ceibal** is entered with `effective = date NOT
+  established`, because the channel named the framework and not its publication date. 🔵 Both are
+  flagged here rather than quietly levelled with the six README-corroborated rows.
+- **`Gap 399-E`: the 2026-10-06 reset dropped live content and nobody measured what.** `SOPAIA` was
+  found by accident while chasing something else. 🔴 **The size of that loss is unknown**, and a
+  reset that silently drops facts is a worse defect than any single missing row. 🟢 **Bounded
+  remedy, one pass:** diff the jurisdiction/instrument tokens in `archive/2026-10-06-pre-reset/` and
+  `archive/2026-10-19-p315-pre-rewrite/` against the live shelves and register the delta. Cheap,
+  no network, and it either returns a list or returns empty — both are results.
+
+### 🔴 Carried gaps, re-measured
+
+- **`Gap 398-C`** — 🟢 **REPRODUCED and upgraded from observation to finding.** Second consecutive
+  pass in which all eight brief legs returned zero unshelved facts, each candidate grepped before
+  being called shelved. Its remedy is now tested: `Gap 399-A`.
+- **`Gap 398-A`** — 🔴 carried **unmoved and correctly so**. The fix needs an edit to
+  `test_census_union.py`; `p398`'s classifier refused it and this base's standing rule forbids
+  closing a gate by weakening a control. 🔵 Still a human decision, still fully described there.
+- **`Gap 398-B`** — 🟢 **honoured rather than closed.** Its lesson said a stale score must not be
+  re-published; `p399` could not re-derive and therefore publishes none.
+- **`Gap 398-E`** — 🔴 carried **unmoved**. It needs `make census-union`, which is repository code,
+  and this session refuses repository code (`399-B`). 🔵 Same single command on a session without
+  that refusal still closes it.
+- **`Gap 477` remainder** — 🔴 carried: **2 012** research-shelf addresses ungraded.
+- **`p397`'s fork backlog** — 🔴 carried **unmoved**: **551** pairs derived, **21** adjudicated,
+  **530** unexamined. 🔵 `p399` spent its budget on the policy layer and says so rather than letting
+  the backlog look worked.
+
+---
+
 ## Pass 398 · reads and commit both 2026-10-23 — **`gate-census-union` IS UNSATISFIABLE BY CONSTRUCTION, NOT A FIXTURE GAP: `p382` DUPLICATED `p375`'s RULE UPSTREAM AND MADE THE AUDITED ARM UNREACHABLE. 🔴 AND THE BRIEF'S EIGHT SEARCH LEGS RETURNED NOT ONE UNSHELVED FACT.**
 
 🔵 **No new instrument and no new evidence file this pass.** Everything below is derived from the

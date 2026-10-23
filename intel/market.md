@@ -5,6 +5,81 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p399` · reads and commit both 2026-10-23 — the FIFTH pass dated today.** 🔴 **The
+typed policy layer answered "no LATAM teaching mandate" for 11 rows running, and this base's own
+README has carried the refuting statute since `p277`.** 🟢 **Fixed in the data, not just
+described:** [`policy-matrix.tsv`](policy-matrix.tsv) goes **59 → 67 rows**, LATAM **12 → 20**, and
+the two teaching-mandate functions go from **0 LATAM rows to 6**.
+
+### 🔴 The finding: a layer boundary, not a missing fact
+
+The question *"which jurisdictions mandate AI instruction?"* is answered by two functions in the
+typed file — `ai_literacy_instruction` (**7 rows**) and `curriculum_mandate` (**4 rows**). 🔴 **Of
+those 11 rows, not one was LATAM.** A studio filtering the machine-readable layer by either function
+saw EMEA × 5, North America × 3, APAC × 1 — and a **blank** where LATAM should be.
+
+🔴 **The blank was false, and the correction was already in the building.** `README.md`'s `p277`
+regional battery names six LATAM jurisdictions with dated, education-specific instruments, headed by
+**Colombia's `Ley 2626 de 2026`** — which that same battery calls *"LATAM yields its first binding
+statute."* 🔵 **This is `397-A`'s error class at the layer boundary rather than inside a sentence:**
+the prose shelf and the typed shelf disagreed, and the typed shelf is the one an instrument reads.
+The header of `policy-matrix.tsv` states its own purpose exactly — *"prose is not readable by an
+instrument, so this is the data"* — so a fact that lives only in prose is, by this file's own
+design rule, **not yet in the knowledge base**.
+
+### 🟢 `Ley 2626 de 2026`, corroborated this pass and entered with its planning date
+
+| field | value |
+|---|---|
+| sanctioned | 🟢 **2026-08-24** |
+| binds | 🟢 **official (public) schools**; private may adopt voluntarily |
+| content | computational thinking, programming, **AI**, data science, digital citizenship, into `Tecnología e Informática` across *básica* + *media* |
+| machinery | National Commission · Observatory · teacher-training programme |
+| 🔴 **the date to plan against** | 🔴 **Feb 2027** — curricular guidelines due; reviewed at least every **3 years** |
+| not law | 🔴 bill **418/2026C** (Art. 3A, responsible AI / social media) is *en trámite* |
+
+🔵 **Band stays `reported`, per this file's header, and the header's reason was re-measured rather
+than inherited:** `funcionpublica.gov.co` and `unesco.org` both answer **000** to `curl` this pass,
+while `api.github.com` answers **200**. 🔴 **That 200 is not a new oracle** — see `Gap 399-C`.
+🟢 Entered on **two independent search-channel sightings**, not one.
+
+🔵 **`CO assessment_grading` stays `UNREGULATED` and is NOT contradicted.** `Ley 2626` binds
+**instruction**, not grading. 🔴 **This paragraph's own first draft called the CO row a "false
+green" and that was wrong** — derived from the jurisdiction rather than from the (function,
+jurisdiction) pair this file is keyed on, which is the very error being reported one screen above.
+🟢 The `AR` row's **note** did over-reach — *"No AI-specific framework"* read as a blank for the
+whole jurisdiction when AR has **Paideia** and a standing observatory — so the note is **narrowed
+and the verdict left alone**, because the verdict was never wrong.
+
+### 🔴 The brief's eight legs, saturated for a SECOND consecutive pass
+
+| leg | returned | status |
+|---|---|---|
+| 4 × global supply | `agents-from-scratch`, `ai-engineering-from-scratch`, `AI-Roadmaps`, `ai-agents-for-beginners`, `500-AI-Agents`, `awesome-llm-apps`, Hermes, OpenClaw | 🔴 **12/12 already shelved** |
+| North America | 33–35 states' guidance · Ohio 2026-07-01 · MD `SB 720` · OK `SB 1734` · ID `SB 1227` · AL `HB 329` · CA `AB 2876` · SC `H.B. 5253` | 🔴 all shelved |
+| EMEA | Digital Omnibus `(EU) 2026/1744` · high-risk slip to **2027-12-02** · Art. 4 literacy duty · Annex III pt 3 | 🔴 all shelved |
+| APAC | Ipsos ban-support spread · KR textbooks destatused + $960M · IN Class 3 mandate · SG literacy drive | 🔴 all shelved |
+| LATAM | UNESCO IESALC **87% / 26%** · DEC **92% / 79%** · ILIA · SEP/ANUIES · CONPES | 🔴 all shelved |
+
+🟢 **Measured, not assumed:** every candidate above was grepped against the tree before being
+called shelved. 🔵 `Gap 398-C` therefore **reproduces**, and is no longer a one-pass observation.
+
+### 🟢 `398-C`'s own remedy, TESTED — it improves yield and does not break saturation
+
+`398-C` proposed replacing the regional legs' *"adoption regulation players"* tail with a
+**dated-delta** or **supply** tail. 🟢 **Run this pass in extended mode, five legs.** 🟢 **The
+remedy works on its own terms:** the dated-delta tails returned *named, dated instruments*
+(`Ley 2626`, Ohio's deadline, `(EU) 2026/1744`, Paideia, PotencIA, SOPAIA, Ceibal) where the brief's
+tails returned *survey percentages* — and the supply tail returned **seven candidate repository
+addresses** where the brief's supply legs returned general-purpose frameworks. 🔴 **But it does not
+break saturation on supply:** of those seven, six were shelved and the seventh
+(`the-open-agent/openagent`) is a general personal assistant, **not education-native**, so it is not
+promoted. 🟢 **Its real yield was on the POLICY axis, which is where this pass's finding came
+from** — recorded so the next pass ranks it correctly instead of re-deriving it. `Gap 399-A`.
+
+🔵 **An es-language leg is not the novelty here and was checked before being claimed as one:** this
+base has run Spanish and Portuguese legs since `p387` and says so in eight places on this file.
+
 **🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🟢 **All four regional
 legs RETURNED FACTS — and every fact was already on this file or on
 [`policy-matrix.tsv`](policy-matrix.tsv).** 🔵 **This is a saturation result, not a nil:** each leg

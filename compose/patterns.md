@@ -5,6 +5,30 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No pattern
+was added, because no new supply arrived to compose with** — the supply legs returned seven
+candidate addresses of which six were shelved and the seventh is not education-native.
+
+🟢 **The two-axis pre-flight gets materially better without a single pattern changing.** Every
+recipe here is gated on *(licence × jurisdiction)*, and the jurisdiction axis reads
+[`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv). 🔴 **Until this pass that file answered
+every LATAM teaching-mandate query with a blank** — 11 rows across `ai_literacy_instruction` and
+`curriculum_mandate`, none of them LATAM — 🔴 **and a blank in a pre-flight reads as "no rule",
+which is the dangerous direction to be wrong in.**
+
+🟢 **It now answers with six rows.** The one that changes a build:
+
+- 🔴 **`CO` · `Ley 2626 de 2026` · MANDATED · binding on official schools.** Any pattern here
+  delivering curriculum or AI-literacy content into Colombian **public** education now has a named
+  statute to conform to, and 🔴 **a `Feb 2027` deadline for the curricular guidelines** — which is
+  the date an engagement plans against, not the **2026-08-24** sanction date.
+- 🔵 **`AR`, `CL`, `MX`, `BR`, `UY` · ADVISORY_NONBINDING · `PE` · ADOPTED.** These bind nothing and
+  must not be pitched as compliance drivers; they are **adoption** signals, and the honest use is
+  scoping a pilot's ministry alignment, not selling a compliance deliverable.
+
+🔵 **Recorded here as a change to how the existing recipes are gated, not as a new recipe** — the
+same judgement `p398` made for the `OpenMAIC` commit-pinning rule. `Gap 399-A`.
+
 **🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No pattern was
 added or amended, because no new supply arrived to compose with.** Eight search legs returned one
 address this base did not hold, and 🔴 **it is archived** — which disqualifies it as a pattern

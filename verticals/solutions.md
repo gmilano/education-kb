@@ -5,6 +5,23 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No platform
+was added.** The vertical-platform leg returned **OpenEduCat**, **ERPNext** (GPL-3.0), **Twenty CRM**
+(BSL-1.1, not OSI-permissive) and **Odoo** — 🔴 all already carried or already excluded here, and the
+leg's own summary again volunteered this shelf's standing result: *"no education-specific MIT or
+Apache platform"*, the capable ones being AGPL, GPL or source-available.
+
+🟢 **What changed for this shelf is upstream of it.** Every platform here is deployed into a
+jurisdiction, and [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv) — the file a deployment
+pre-flight actually reads — 🔴 **carried no LATAM teaching-mandate row at all** until this pass.
+🟢 It now carries **six**, headed by **Colombia's `Ley 2626 de 2026`** (binding, official schools,
+curricular guidelines due **Feb 2027**).
+
+🔵 **Concretely for this shelf:** a Moodle, Open edX or Chamilo engagement in **CO** is no longer a
+greenfield curriculum question — there is a statute naming the competencies the deliverable must
+carry, and a **Feb 2027** date it must land before. 🔵 That is a scoping input, not a licence one,
+which is why it is recorded here as a pointer rather than as a new row. `Gap 398-C`.
+
 **🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No platform was
 added.** The open-source-LMS leg returned **Open edX, Chamilo, ILIAS, Frappe LMS and Sakai** — 🔴 **all
 already carried here**, and the leg's own summary volunteered what this shelf has recorded for many

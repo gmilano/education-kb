@@ -5,6 +5,25 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No
+foundational repo was added.** 🟢 **`Gap 398-D` is closed, and it closes in the direction that keeps
+the shelf as it is.**
+
+[`arthtyagi/judge`](https://github.com/arthtyagi/judge), which `p398` declined while recording
+🔴 *"its grant was not read first-hand — stated, not assumed"*, has now been read:
+🟢 **MIT** — verbatim *"MIT license"* — **32 ★**, **3 forks**, Python/Django, **56 commits**, and
+🔴 **"This repository was archived by the owner on Aug 11, 2022. It is now read-only."**
+
+🔵 **So the grant is permissive and the decision is unchanged.** Four years archived is not a base a
+studio starts on, and `p398` declined it on the archive banner alone — 🟢 **the licence read
+confirms the call without having driven it**, which is the right order. It stays a census address on
+[`trending.md`](trending.md) and off this shelf, per the `Continue` rule.
+
+🔵 **Worth naming plainly:** had the read returned a non-commercial grant, `p398`'s guess would
+have been wrong in a way nobody would have caught, because the row was already excluded for a
+different reason. 🟢 **An exclusion is not a licence check**, and this base should not let one stand
+in for the other.
+
 **🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No foundational
 repo was added, and one candidate was deliberately declined.**
 [`arthtyagi/judge`](https://github.com/arthtyagi/judge) (**32 ★**, Python) is the single address from

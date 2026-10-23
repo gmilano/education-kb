@@ -5,6 +5,46 @@ updated: 2026-10-23
 ---
 
 
+## 🔴 🆕 2026-10-23 · `p399` — **SECOND CONSECUTIVE PASS IN WHICH THE BRIEF'S EIGHT LEGS RETURN ZERO UNSHELVED AGENTS. 🟢 `Gap 398-D` CLOSED FIRST-HAND: `arthtyagi/judge` IS MIT AND HAS BEEN ARCHIVED SINCE 2022.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23** — the **fifth** pass dated today, after
+`p395`–`p398`. 🔵 No new instrument. 🔴 **`make hooks` was refused on this session**
+(`Code from External`), so no gate score is restated here.
+
+### 1. 🔴 The supply legs, measured candidate by candidate
+
+Fourteen addresses returned across four standard global legs and one extended supply leg. 🔴 **All
+fourteen were already on these shelves**, each confirmed by grep against the tree rather than from
+memory: `agents-from-scratch`, `ai-engineering-from-scratch`, `AI-Roadmaps`, `ai-agents-for-beginners`,
+`500-AI-Agents`, `awesome-llm-apps`, Hermes, OpenClaw, `BlackyDrum/ai-tutor`, `Gchism94/ai-tutor`,
+`zijinz456/OpenTutor`, `artcc/freelingo`, `KeWang0622/kaogong-skill`, `Zenglian990/AI_Tutor_Release`.
+
+🔴 **One unshelved address, declined:**
+[`the-open-agent/openagent`](https://github.com/the-open-agent/openagent) — LLM/RAG personal
+assistant with computer-use and browser-use loops. 🔵 Not education-native; recorded as declined so
+it is not re-litigated next pass.
+
+### 2. 🟢 `arthtyagi/judge` — the grant, read at last
+
+| field | value |
+|---|---|
+| licence | 🟢 **MIT** (verbatim *"MIT license"*) |
+| stars / forks | **32** / **3** |
+| commits | 56 |
+| language | Python · Django (Languages panel empty) |
+| status | 🔴 **Public archive — archived by the owner 2022-08-11, read-only** |
+
+🟢 Closes `Gap 398-D`. 🔴 Stays a census address, not a build-on base: the `Continue` rule.
+
+### 3. 🔴 A channel hypothesis, formed and refuted inside one pass
+
+🟢 `api.github.com` answers **200** where every policy host answers **000** — which looked like the
+second independent repo-fact oracle this base has lacked since `p61`. 🔴 **It is not one.**
+`/repos/{owner}/{repo}` returns *"GitHub access to this repository is not enabled for this session"*
+for all four shelf addresses tried, while this session's **attached** repository reads normally.
+🔵 **Scope-gated, not blocked or throttled** — so retries and backoff do nothing, and `WebFetch`
+against `github.com` HTML stays the only first-hand repo channel. `Gap 399-C`.
+
 ## 🔴 🆕 2026-10-23 · `p398` — **`gate-census-union`, CARRIED RED SINCE `p391` AS "A FIXTURE-COVERAGE CLAIM", IS UNSATISFIABLE BY CONSTRUCTION: `p382` MADE THE ARM IT AUDITS UNREACHABLE, AND THE ARM IS NOT DEAD CODE. 🔴 AND THE BRIEF HAS SATURATED — EIGHT EXTENDED SEARCH LEGS RETURNED NOT ONE UNSHELVED FACT.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23** — the **fourth** pass dated today, after
