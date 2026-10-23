@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p407` · 2026-10-23 — a cross-check, two gate repairs, and one new verified plugin
+
+🔵 **APPEND-ONLY: this section is added above the history, which is left intact.**
+
+### 🟢 New supply, read first-hand
+| repo | licence | release | note |
+|---|---|---|---|
+| [microsoft/moodle-local_copilot](https://github.com/microsoft/moodle-local_copilot) | 🟡 **GPL-3.0** | **5.1.0** (`MATURITY_STABLE`, Moodle **5.1 only**) | Two **declarative M365 Copilot agents** (teacher + student) driving Moodle from inside Word/PowerPoint/BizChat. `HEAD` `404ab2b6`; `version.php` and `LICENSE` both HTTP 200 and read. 🔴 Re-confirms `p401`'s §13 trap: the GPL-3.0 text says *"GNU Affero"* **3** times |
+
+### 🔴 `Gap 406-A` closed — and `I2` was right wherever it could see
+**45 of 59 agree; 14 disagree in three mechanisms.** `DISAGREE-I2-POPULATION-FROZEN` **9** ·
+`NOT-DECAY-P372-REFUTES` **5** · `AGREE-NOT-A-LIVE-CLAIM` **4** · `AGREE-OFF-LIVE-SHELVES` **41**.
+🔴 `p406`'s decay rate corrected **2.20 % → 1.94 %** (7 of the 59 were never repositories:
+5 planted negative controls, `jushbjj/mr` a truncation of a **live** repo, `en/get-started` the
+`ZZ-bt` locale path). 🔴 **The obvious repair is a trap:** `I2`'s detector is case-sensitive and
+`p406` publishes folded addresses — `AI-Matrix-Engine/aidream` and `Mckaroff/GraphLMS` go silent.
+Evidence: [`i2-sweep-crosscheck`](../evidence/i2-sweep-crosscheck.2026-10-23-p407.tsv).
+
+### 🔴 `gate-dates` had two defects and was green through both
+1. `FULL_EFFECT` anchored on the literal word `august` → **the ISO spelling was invisible**.
+2. `QUOTE_SPAN` admitted `'` as an opening quote (`QUOTE_CHARS` never did) → **`the AI Act's`
+   laundered the date** inside a 400-char span. 🔵 The paragraph the gate's own docstring names as
+   its founding specimen was being cleared by the gate written for it.
+🟢 Both fixed, **33 controls** (was 26) + 5 unit controls, corpus now **0 ASSERTED**.
+🔴 Data defect fixed on `intel/market.md`'s **EMEA opportunity row**: Annex III education is
+**2027-12-02**, not 2026-08-02.
+
+### 🔵 Regional legs — what each returned, including the nils
+- 🟢 **North America:** the Ohio instrument NAMED (`P955`) — **ORC § 3301.24**, via **House
+  Bill 96**; model policy due 2025-12-31, published early 2026-01; **deadline 2026-07-01 has
+  passed**. 🔴 It mandates that a policy EXIST — not teaching, not use.
+- 🔴 **EMEA:** a **sixth** sighting of the wrong `2026-08-02` high-risk date in a current
+  source. 🔴 `media-and-learning.eu` (a Commission AI-Office deck) is **`ENOTFOUND`** through
+  this proxy, so the near-primary read was **not** obtained; the date stands on this base's prior
+  record, not on a new read.
+- 🔵 **APAC:** Korean leg run **in language** (`I4`). **Informed nil at ministry level**; what
+  returned is provincial — **Daejeon**, six AI/digital tools at **≈₩300 M**, open-source status
+  **not established**.
+- 🔵 **LATAM:** the leg **confirmed** rather than extended — UNESCO IESALC's 19-country figures
+  and the 92 %/79 % Digital Education Council pair are already carried here. 🟢 New cells found:
+  **18.5 %** have institutional AI policies, **8.0 %** a dedicated budget, **34.1 %** administrative
+  use, **20.0 %** community outreach.
+- 🔴 **GitHub Trending: zero industry repos for a SIXTH consecutive pass.** The query stays
+  retired to a register role (`p93`).
+
+### 🔴 Blocked hosts this pass
+`media-and-learning.eu` and `moodle.org` both `ENOTFOUND`. 🔵 Per `P950` they were **not**
+retried host by host. The ledger is now **ten**.
+
+
 ## 🆕 2026-10-23 · `p406` — three new MIT/Apache addresses, and the carried shelf measured for decay
 
 🟢 **Gap `405-C` closed over the whole population: 59 of 2 681 carried addresses do not resolve =
@@ -26096,7 +26146,7 @@ summary of a regional channel on its eighth consecutive pass over the same four 
 
 | | What |
 |---|---|
-| 🔴 **What the mandated sweep returned** | That high-risk obligations for education AI apply **from 2026-08-02** |
+| 🔴 **What the mandated sweep returned** | That high-risk obligations for education AI apply **from 2026-08-02** — 🔴 *which is **wrong**: Annex III education is **2027-12-02**; 2026-08-02 is Article 50. (`p407`: the adjudication was already in the row BELOW, which is one row outside `gate-dates`' unit — see `Gap 407-C`.)* |
 | 🔴 **Could the asserting page be read first-hand?** | **No.** `planbe.eco` is **`EGRESS_BLOCKED`** by the session proxy. 🔵 **So the stale claim is attributable only to the *search-summary layer*, and this pass does not quote a page it could not open** |
 | 🟢 **What independent corroboration says** | The **Digital Omnibus** deferred **Annex III stand-alone** high-risk — **education and assessment named explicitly** — from **2026-08-02** to **2027-12-02**, a **16-month** deferral. Rationale: **harmonised standards were not ready**. 🟢 **Multiple independent secondary sources this pass, incl. one assessment-sector read** (*"December 2027 is not a snooze button"*) |
 | 🟢 **What did NOT move** | **Article 50 transparency obligations** — still **2026-08-02**. 🔵 **This is why the stale claim is dangerous rather than merely wrong: a date that is right for Article 50 is being reported as the date for Annex III** |

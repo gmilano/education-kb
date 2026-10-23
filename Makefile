@@ -111,6 +111,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
              gate-dead-citation gate-regional-leg gate-census-union \
+             gate-i2-sweep-crosscheck \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
              gate-capability-absence gate-fork-direction gate-group-lineage
@@ -464,6 +465,16 @@ gate-evidence-store: ## ACTION p292 — the decision record's own controls, and 
 # it belongs in `hooks`.  The ONLINE half stays out, and calibrates before it reports.
 gate-slug-oracle: ## ACTION p293 — a credential prompt is a MEASUREMENT, not an inconclusive result
 	@cd compose/code/p293-slug-existence-oracle && { $(PY) test_slug_oracle.py > $(ORACLE_LOG) 2>&1 || { echo "🔴 p293-slug-existence-oracle FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ORACLE_LOG) ; false ; } ; } && echo "── p293-slug-existence-oracle (45 controls: p292's four discarded probes re-adjudicated, the ABSENT-OR-PRIVATE bound as C9-C11, transport-before-refusal, and the two defective controls this suite's own first draft shipped)" && echo "   PASS" || exit 1
+
+# 🟢 p407 — `Gap 406-A`: do `gate-dead-citation`'s I2 and `p406`'s sweep AGREE on the 59?
+# They agree on 45 and disagree on 14, in three mechanisms, and the gap's framing ("a finding
+# on one of them") is the wrong shape: I2 is right on all 4 addresses it can SEE; its
+# population is frozen at p372's 46, and p406's numerator counts 7 non-repositories as decay.
+# 🔴 The suite pins the published partition to the rows (C19-C20) because this instrument's
+# own first draft imported the classifier, checked it in isolation, and then never made it
+# load-bearing — a mutation blanking `grade()`'s call reddened NOTHING. No network.
+gate-i2-sweep-crosscheck: ## p407 — Gap 406-A: the two instruments cross-checked, disagreements graded by MECHANISM
+	@cd compose/code/p407-i2-sweep-crosscheck && $(PY) -I test_crosscheck.py ../../.. || exit 1
 
 gate-carried-existence: ## Gap 405-C — the EXISTENCE of a CARRIED address, swept (offline controls; the sweep itself is ONLINE and stays out of hooks)
 	@cd compose/code/p406-carried-existence && { $(PY) test_carried_existence.py > $(CARRIEDEX_LOG) 2>&1 || { echo "🔴 p406-carried-existence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CARRIEDEX_LOG) ; false ; } ; } && echo "── p406-carried-existence (29 controls: the decay rate's two sides with CHANNEL-ERROR on NEITHER, C12's constructed population where the three readings differ, p293's C9' re-asserted plus the MOVED bound this pass measured, the retry arm, and p351's rejection arm as the population guard)" && echo "   PASS" || exit 1

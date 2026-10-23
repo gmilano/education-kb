@@ -4,10 +4,49 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p407` — Microsoft ships a GPL-3.0 Moodle plugin that puts Moodle INSIDE Copilot
+
+🟢 **New to this shelf, read first-hand at a pinned SHA.** The vertical-platform leg has been
+`SATURATED` since `p403`, and this is the first addition in four passes — found not by a repo search
+but by following a **plugin directory** entry to its source.
+
+| plugin | repo | licence | release | Moodle | what it does |
+|---|---|---|---|---|---|
+| `local_copilot` | [microsoft/moodle-local_copilot](https://github.com/microsoft/moodle-local_copilot) | 🟡 **GPL-3.0** | **5.1.0**, `MATURITY_STABLE` | **5.1 only** (`supported = [501, 501]`) | Ships **two declarative M365 Copilot agents** — teacher and student — so Moodle is driven from **inside Word, PowerPoint and BizChat**. Teacher agent lists courses, creates assignments and forums, posts announcements; student agent self-enrols and reads grades and overdue work |
+
+🔵 **Read, not inferred.** `HEAD` = `404ab2b6296c61f9d246605afe98d91b4f12d56c`;
+`version.php` (1 342 B, HTTP 200) gives the release ladder; `LICENSE` (35 148 B, HTTP 200) is the
+canonical GPL-3.0 text. 🔴 **And it re-confirms `p401`'s §13 trap on a fresh payload:** that file
+says **"GNU Affero"** three times, so a naive grep publishes `AGPL-3.0` — the exact mechanism that
+produced seven false verdicts at `p401`. The **title block** is what decides, and it reads
+*"GNU GENERAL PUBLIC LICENSE Version 3"*.
+
+### 🔴 Why it matters commercially, and why it is NOT a sovereign option
+
+🟢 **The direction is new on this shelf.** Every Moodle AI row here so far puts a model *behind*
+Moodle (the `aiprovider_*` family, `p404`). This one puts **Moodle behind Microsoft's agent surface**:
+the teacher never opens the LMS. 🔵 For a client already on M365 that is the shortest path to
+"agentic LMS" in existence, and it is **first-party**, not a studio integration to maintain.
+
+🔴 **Two hard limits, stated so a proposal does not overreach.**
+- 🔴 **GPL-3.0 and Moodle-5.1-only.** `supported = [501, 501]` is a *single* release — a client on
+  4.5 LTS **cannot install it**, and `p401`'s plugin-boundary rule governs what studio code may sit
+  beside it.
+- 🔴 **It requires M365 Copilot licensing and an Entra app registration.** There is **no
+  sovereign or local-model path** through this plugin, so it is the opposite of the Ollama-provider
+  route this shelf recommends for EMEA sovereignty and LATAM cost. 🔵 **Both can be true on one
+  estate, and a proposal should say which surface it is buying.**
+
+🔴 **An informed gap, not a silence.** The plugin directory lists **5.0.0** and **4.5.2** as its
+published versions while `HEAD` is **5.1.0** — `p977`'s lesson exactly (*a version ladder read from
+the wrong channel reports a stale release without failing*). 🔵 `moodle.org` is
+**`EGRESS_BLOCKED`** through this proxy, so which of the three a client's directory actually offers
+could **not** be read first-hand; the repository ladder is what is pinned above.
+
 ## 🆕 `p406` — the vertical platforms are the ONE tier with zero decay, and the licence ladder is why
 
 🟢 **`verticals/solutions.md` carries 104 addresses and NOT ONE of them failed to resolve** — **0 %
-decay**, against a base rate of 2.20 % and against `agents/top.md`'s 12 dead addresses. 🔵 Measured
+decay**, against a base rate of ~~2.20 %~~ **1.94 %** 🔴 *(`p407` — `p406`'s figure counted 7 non-repositories as decay)* and against `agents/top.md`'s 12 dead addresses. 🔵 Measured
 per shelf, two of the nine are clean: this one at **0 / 104** and `intel/market.md` at **0 / 74**.
 The other seven run `agents/trending.md` **53** · `repos/trending.md` **46** ·
 `intel/open-gaps.md` **28** · `agents/top.md` **12** · `repos/foundations.md` **5** ·

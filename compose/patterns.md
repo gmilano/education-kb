@@ -8,7 +8,7 @@ updated: 2026-10-23
 
 ### 🟢 `Pattern Z` — the pre-engagement address audit, now a command rather than a habit
 
-🔴 **Every pattern on this shelf names repositories, and 2.20 % of the addresses this base carries do
+🔴 **Every pattern on this shelf names repositories, and 1.94 % 🔵 *(`p407`; `p406` published 2.20 %, counting 7 non-repositories as decay)* of the addresses this base carries do
 not resolve.** Two of them are **inside a recipe on this very file**. 🟢 The check is now one command
 and it needs no clone budget:
 

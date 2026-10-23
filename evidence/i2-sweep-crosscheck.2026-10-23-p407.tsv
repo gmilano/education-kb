@@ -1,0 +1,67 @@
+# p407-i2-sweep-crosscheck — Gap 406-A: do gate-dead-citation I2 and
+# p406-carried-existence AGREE on the 59 ABSENT-OR-PRIVATE addresses?
+# Join key is FOLDED (p406 publishes folded, p372 publishes shelf casing).
+# i2_fires_* = occurrences of I2's detector on the three LIVE shelves:
+#   folded = detector fed p406's folded address (the repair this gap invites)
+#   original = detector fed p372's own casing (what ships today)
+#   caseless = detector made case-insensitive (the ceiling of a link test)
+address	shape	on_live_shelf	in_i2_population	i2_fires_folded	i2_fires_original	i2_fires_caseless	mechanism	first_hit
+1edtech/caliper-java	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+1edtech/caliper-js	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+1edtech/caliper-php	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+a-ariff/canvas-instant-mcp	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+ahmed-html/unlimited-ai-platform	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+ai-matrix-engine/aidream	ADDRESS	agents/top.md	no	0	0	1	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1144
+ale-alejandro/beadkit	ADDRESS	agents/top.md;repos/foundations.md	no	2	0	2	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1142
+aleksis/aleksis-core	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+apereo/opencast	ADDRESS	agents/top.md;repos/foundations.md	yes	0	0	0	AGREE-NOT-A-LIVE-CLAIM	-
+aule-org/aimauta	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+batlez/cloakbox	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+belentani7/aprende-brasil	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+cleison-morais/koba	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+concentricsky/badgr-server	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+creaditor/frontend	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+dondo0936/vietnamese-ai-for-beginner	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+e9x/blackboard-mcp	ADDRESS	agents/top.md	no	1	0	1	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1570
+eastarctica/canvas-mcp	ADDRESS	agents/top.md	yes	0	0	0	AGREE-NOT-A-LIVE-CLAIM	-
+eduware-inc/eduware-oneroster	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+en/get-started	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+epesi-team/epesi	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+fh-yarbouh/oak-curriculum-ontology	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+gegok12/gegok12	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+gegok12/school-erp	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+hanchein/elimuai	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+huaxx-lab/leetlens	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+imsglobal/caliper-python	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+incruiter-newproducts/proctoring-sdk	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+invincible-summer/next-tutor-agent	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+jakerains/scormplayer	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+jmolpea/moodle-block_openaiagent	ADDRESS	repos/foundations.md	yes	0	0	0	AGREE-NOT-A-LIVE-CLAIM	-
+joojdev/academic-tracker-mcp	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+jushbjj/mr	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+longsightgroup/qti3-core	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+marsley01/edyfra	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+mckaroff/graphlms	ADDRESS	agents/top.md	no	0	0	1	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1141
+moodle/moodle-definitely-not-a-real-repo-p152	NEG-CONTROL	-	no	0	0	0	NOT-DECAY-P372-REFUTES	-
+niccolosalvini/mcp-moodle-staff	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+niccolosalvini/mcp-moodle-teacher	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+nmaaalhawary/mcp-moodle	ADDRESS	agents/top.md	no	0	0	0	DISAGREE-I2-POPULATION-FROZEN	-
+openedx/fake-repo-zzz999	NEG-CONTROL	-	no	0	0	0	NOT-DECAY-P372-REFUTES	-
+parkseokjune/unist-blackboard-mcp	ADDRESS	agents/top.md	no	1	0	1	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1570
+plastic-labs/bloom	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+projectremedy-ai/remedy-canvas-lti	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+radhepa/teacher-mcp	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+sabuhi-huseynli-grc/high-risk-deployer-fria-governance-toolkit	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+santillana-ai/tutor-sdk	ADDRESS	agents/top.md	no	1	0	1	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1115
+superbuilders/timeback-dev-python	ADDRESS	agents/top.md;repos/foundations.md	yes	0	0	0	AGREE-NOT-A-LIVE-CLAIM	-
+thanh01pmt/curriculum-kit	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+thanh01pmt/interactive-quiz-kit	ADDRESS	agents/top.md;repos/foundations.md	no	2	0	2	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1137
+this-definitely-does-not-exist-xyz123/nope	NEG-CONTROL	-	no	0	0	0	NOT-DECAY-P372-REFUTES	-
+this-org-does-not-exist-zzz9/nope	NEG-CONTROL	-	no	0	0	0	NOT-DECAY-P372-REFUTES	-
+tipsedu2019/tips_dashboard	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+tuanha/vgu-mcp	ADDRESS	-	no	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+unitime/this-repo-does-not-exist-xyz123	NEG-CONTROL	-	no	0	0	0	NOT-DECAY-P372-REFUTES	-
+uoc/java-lti-1.3-provider	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+xmike04/canvas-student-mcp	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+yetanalytics/lrspipe	ADDRESS	-	yes	0	0	0	AGREE-OFF-LIVE-SHELVES	-
+yokowasis/autograder	ADDRESS	agents/top.md	no	1	0	1	DISAGREE-I2-POPULATION-FROZEN	agents/top.md:1145

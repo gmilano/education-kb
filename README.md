@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 407 — reads and commit both 2026-10-23 — **`Gap 406-A` IS CLOSED AND THE GAP ASKED THE WRONG QUESTION. 🔴 `I2` IS CORRECT ON EVERY ADDRESS IT CAN SEE — THE DEFECT IS ITS SCOPE AND `p406`'s NUMERATOR. 🔴 AND `gate-dates` WAS GREEN WHILE A POSSESSIVE APOSTROPHE LAUNDERED THE ONE CLAIM IT EXISTS TO CATCH.**
+
+🔵 **Dating note.** Every probe, clone, payload read and search leg below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the thirteenth pass dated
+today**, after `p395`–`p406`.
+
+🟢 **This is a BACKLOG pass, and it takes the item `p406` named in writing:** *"The honest
+question is whether `I2`'s live-shelf test and this sweep AGREE on all 59 … and a disagreement would
+be a finding on one of them. That is one pass's work and it is the item to take next."*
+
+**Evidence:** [`i2-sweep-crosscheck`](evidence/i2-sweep-crosscheck.2026-10-23-p407.tsv) — 59 address
+rows · 9 columns · instrument, **37 controls / 0 failures**, six mutations each reddening a named
+control, in `make hooks`, at
+[`compose/code/p407-i2-sweep-crosscheck/`](compose/code/p407-i2-sweep-crosscheck/README.md).
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`Gap 406-A` CLOSED over all 59:** **45 AGREE · 14 DISAGREE** — `DISAGREE-I2-POPULATION-FROZEN` **9**, `NOT-DECAY-P372-REFUTES` **5**, `AGREE-NOT-A-LIVE-CLAIM` **4**, `AGREE-OFF-LIVE-SHELVES` **41** |
+| 2 | 🔴 **The gap's framing is refuted.** It expected a finding *"on one of them"*. 🟢 `I2` is **right on all 4 addresses it can see**; its population is frozen at `TOTAL = 46`, so **9** addresses on a live shelf are never asked about — and **6 of the 9 carry a live link its own detector fires on** |
+| 3 | 🔴 **`p406`'s decay rate is wrong in the OTHER direction: 2.20 % → 1.94 %.** 7 of the 59 were never repositories — **5 planted negative controls**, **`jushbjj/mr`** (a truncation of a **live** repo, and `p251-prefix-collision`'s own specimen), **`en/get-started`** (`ZZ-bt`'s locale path). 🔵 All seven were already known, by instruments already committed |
+| 4 | 🔴 **The obvious repair is a trap, pinned before anyone ships it.** `I2`'s detector is **case-sensitive**; `p406` publishes **folded** addresses. Fed the folded form it goes silent on `AI-Matrix-Engine/aidream` and `Mckaroff/GraphLMS` |
+| 5 | 🔴 **`gate-dates` had TWO defects and was green through both.** `FULL_EFFECT` anchored on the literal word `august` (the **ISO spelling** invisible); and `QUOTE_SPAN` admitted `'` as an **opening quote** while `QUOTE_CHARS` did not, so **`the AI Act's`** opened a 400-char span that returned `QUOTED`. 🔵 **The gate cleared the very paragraph its own docstring names as its founding specimen.** Controls **26 → 33**; corpus **0 ASSERTED** |
+| 6 | 🔴 **A wrong date was on the EMEA OPPORTUNITY row** — *"enforcement began 2026-08-02"* for the education high-risk tier. 🟢 Fixed: Annex III education is **2027-12-02** (Omnibus in force **2026-07-27**); **2026-08-02** is **Article 50** only. 🔵 **The sale inverts** — readiness on a ~14-month clock, not compliance against a passed date |
+| 7 | 🟢 **One new verified plugin**, the vertical leg's first addition in four passes: [`microsoft/moodle-local_copilot`](https://github.com/microsoft/moodle-local_copilot), **GPL-3.0**, release **5.1.0**, Moodle **5.1 only** — it puts **Moodle behind Copilot**, not a model behind Moodle. 🔴 Re-confirms `p401`'s §13 trap: its GPL-3.0 text says *"GNU Affero"* **3** times |
+| 8 | 🔴 **`P970` RETIRED.** *"The sandbox cannot execute repository code"*, carried since `p93`, **does not hold** — `make hooks` completes. 🔵 This pass's draft built a second copy of `p372`'s classifier on the strength of the stale limit; removed in favour of an import per `P237` |
+
+### 🔴 The honest failure of this pass's own instrument
+
+🔴 **The first draft's imported classifier was not load-bearing on a single published figure.**
+With `C3`–`C6` and `C11` checking `classify_string` in isolation, a mutation blanking `grade()`'s
+call to it (`shape = "ADDRESS"`) reddened **nothing**. 🔵 That is `p400`'s *"an emptiness guard
+does not fire"* in a new costume, and the **second** time this base has shipped a check that could
+not fail. 🟢 Repaired as `C19`–`C21`, which pin the published partition **to the rows**
+(`T37`/`recount` discipline); the mutation now reddens two controls.
+
+### 🔵 Regional legs — including the nils, which are the point
+
+- 🟢 **North America:** the Ohio instrument **NAMED** per `P955` — **Ohio Revised Code § 3301.24**,
+  added by **House Bill 96** (2025 budget); state model policy due **2025-12-31**, published early
+  **2026-01**; the **2026-07-01** deadline has **passed**. 🔴 It requires a policy to **EXIST** —
+  not teaching, not use — so it is a `district_ai_policy` duty and the policy matrix now says so.
+- 🔴 **EMEA:** a **sixth** sighting of the wrong `2026-08-02` high-risk date in an otherwise
+  current source — which is what a **majority misreading** looks like, so a client's installed
+  adviser has probably given them the wrong deadline. 🔴 The near-primary read (a Commission
+  AI-Office deck) is **`ENOTFOUND`**: **not obtained**.
+- 🔵 **APAC:** Korean leg run **IN LANGUAGE** per invariant `I4`. **Informed nil at ministry
+  level** — no Korean Ministry of Education 2026 AI instrument, no open-source guidance. 🟢 What
+  returned is **provincial and budgeted**: **Daejeon**, six AI/digital tools at **≈₩300 M**.
+  🔴 Open-source status **not established**. 🔵 Mexico's and Canada's shape a third time.
+- 🔵 **LATAM:** the leg **confirmed** rather than extended — UNESCO IESALC's 19-country figures
+  and the **92 % / 79 %** pair are already carried. 🟢 New cells: **18.5 %** institutional AI
+  policies · **8.0 %** dedicated budget · **34.1 %** administrative · **20.0 %** outreach.
+- 🔴 **GitHub Trending: ZERO industry repos for a SIXTH consecutive pass.** Query stays retired
+  to a register role (`p93`), and the budget went to the backlog instead — which paid.
+
+🔵 **Gate score: 50 of 51 green.** `gate-i2-sweep-crosscheck` is new and green; `gate-dates` was
+strengthened twice and is green; the lone red is `gate-census-union` control 24, `Gap 400-B`'s
+unsatisfiable-by-construction control, deliberately red for a **fifth** pass.
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 722** harvested shapes → **35** are not addresses →
+**2 687 addresses**. 🔵 **2 687** channel-U addresses and **3 148** channel-B survivors give
+**3 520 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🔴 **And both currency gates CAUGHT this pass mid-write**, which is the point of them: `p406`'s
+triple (**2 720 / 35 / 2 685**, union **3 518**) went `STALE` the moment this pass shelved
+`microsoft/moodle-local_copilot`, and the gates refused the commit until the figures were
+re-derived rather than edited to match. 🔵 `p406`'s own sentence is **left standing in its own
+section** — history is not rewritten to agree with a later count.
+
+### 🔴 The most consequential gap this pass opened
+
+🔴 **`Gap 407-D`: `compose/patterns.md` — the RECIPE shelf — is classified by neither of `p372`'s
+tuples**, so no rule says a dead address there is a defect, and `p406` found **two**. 🔵 A recipe is
+what a studio actually builds from, which makes it the shelf where a dead address costs the most and
+the only live shelf no gate watches.
+
+
 ## Pass 406 — reads and commit both 2026-10-23 — **`Gap 405-C` IS CLOSED OVER THE WHOLE POPULATION, AND THE CLOSURE REFUTES THE GAP'S OWN PREMISE. 🔴 `p405`'s 10.6 % DECAY WAS A SAMPLE ARTEFACT — THE REAL RATE IS 2.20 %. 🟢 AND THE APAC LEG SETTLED THIS BASE'S THREE-WAY SELF-CONTRADICTION ABOUT VIETNAM, REFUTING A LIVE OPPORTUNITY ROW.**
 
 🔵 **Dating note.** Every probe, clone, payload read and search leg below was run on **2026-10-23**,
@@ -3525,7 +3607,9 @@ dialogue at research cost.
 ### 🟢 Regional intelligence: the 2026 clock now has dates on it
 
 🔴 **EMEA** — EU AI Act enforced **from 2026-08-02**; education **access and assessment**
-is **high-risk**. 🔴 **APAC** — South Korea's AI Basic Act (**2026-01-22**), Vietnam's Law
+is **high-risk**. 🔴 *(`p407`: **refuted** by this base's own canonical reading — the Annex III
+education obligations apply **2027-12-02**, and 2026-08-02 is **Article 50** only. The line stays as
+the record of what that pass asserted; the annotation stops it being an uncorrected claim.)* 🔴 **APAC** — South Korea's AI Basic Act (**2026-01-22**), Vietnam's Law
 on AI (**2026-03-01**, reaching **foreign** vendors), China's Cybersecurity Law AI clause
 (**2026-01-01**) plus **AI-content labelling**. 🔵 **North America** — no national law;
 **134 bills across 31 states**, CA **AB 1159**, OK/MD barring AI from high-stakes student

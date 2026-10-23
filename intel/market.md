@@ -71,7 +71,13 @@ exception that was worth all four legs**, because it did not add a fact, it **re
 ### North America
 
 🟢 **Sell the district AI-use policy as a deliverable, not as advice.** Ohio requires **every** K-12
-district to adopt a formal AI policy by **2026-07-01**, and 33–35 states plus Puerto Rico publish
+district to adopt a formal AI policy by **2026-07-01** — 🆕 `p407` names the **instrument**, per
+`P955`: **Ohio Revised Code § 3301.24**, added by **House Bill 96** (the 2025 budget bill), with the
+state's own model policy due **2025-12-31** and published early **2026-01**. 🔴 **The statute
+requires a policy to EXIST; it does not mandate teaching AI or using it** — so this is a
+`district_ai_policy` duty, never a teaching mandate, and the policy-matrix row says so. 🔵 **The
+deadline has now PASSED** (today is 2026-10-23), which changes the sale from "help us comply" to
+"your policy exists and nobody has measured against it" — and 33–35 states plus Puerto Rico publish
 guidance with no implementation capacity attached. 🟡 The constraint is procurement: the federal Dear
 Colleague letter pushes **outcomes-based contracting**, and named Arkansas, Indiana, Louisiana,
 Michigan and Texas for it. 🔵 So the saleable asset is a **policy-plus-evidence pack** — the policy
@@ -80,8 +86,11 @@ document, plus the measurement design that lets a district show the outcome it c
 ### EMEA
 
 🟢 **Annex III conformity for education, as a reusable asset.** Education sits in the AI Act's
-high-risk tier for admission, evaluation and exam scoring; enforcement began **2026-08-02**; only
-**10 %** of 450+ surveyed institutions have formal guidelines. 🟢 **And the asset is PORTABLE** — the
+high-risk tier for admission, evaluation and exam scoring; 🔴 **but enforcement has NOT begun** —
+the Digital Omnibus (in force **2026-07-27**) defers the **Annex III** education obligations to
+**2027-12-02**, and **2026-08-02** is the **Article 50** transparency date only, never the high-risk
+one. 🟢 So the honest pitch is **readiness on a ~14-month clock**, not compliance against a date that
+has passed; only **10 %** of 450+ surveyed institutions have formal guidelines. 🟢 **And the asset is PORTABLE** — the
 same conformity work adapts to Vietnam's risk model and to Mexico's far more cheaply than it
 rebuilds. 🔵 One asset, three markets.
 
@@ -96,7 +105,14 @@ being already deployed**: a system live before the cutoff buys 12.5 months, and 
 buys six. 🔵 **That makes "deploy before the cutoff" a real, dated procurement argument** — and the
 cutoff has already passed, so for any *new* engagement the six-month clause is the one that governs.
 🔵 Korea's `AI Basic Act` (in force **2026-01-22**) remains the regime a Korean engagement is actually
-governed by.
+governed by. 🆕 **`p407` ran the Korean leg IN LANGUAGE** (invariant `I4`) and reports an
+**informed nil at ministry level**: no Korean **Ministry of Education** 2026 AI instrument and no
+open-source guidance surfaced. 🟢 What it did return is **provincial and budgeted** — the
+**Daejeon** Metropolitan Office of Education's 2026 policy funds **six** AI/digital tool
+subscriptions at **≈₩300 million**, with teacher research groups building lesson-design and
+formative-assessment use. 🔴 **Whether those six are open source is NOT established** and the
+source does not say. 🔵 **This is Mexico's and Canada's shape a third time** (`P955`): in a
+devolved system the instrument is provincial, and a national query reports an empty world.
 
 ### LATAM
 
@@ -558,7 +574,7 @@ unrecorded saturation is indistinguishable from a thin pass:
 | leg (`AI education {region} 2026 adoption regulation players`) | returned | already held at |
 |---|---|---|
 | **North America** | 134 bills / 31 states · CA `AB 1159` · `COPPA` 2026-04-22 · Katy ISD · NYC traffic-light | lines 524, 555, 574, 585, 682, 740 |
-| **EMEA** | AI Act enforcement 2026-08-02 · high-risk phase-in · Digital Omnibus · Denmark €200M | lines 114, 834, 963, 987 |
+| **EMEA** | AI Act Art. 50 transparency 2026-08-02 · Annex III high-risk deferred to 2027-12-02 · Digital Omnibus · Denmark €200M | lines 114, 834, 963, 987 |
 | **APAC** | Korea `AI Basic Act` 2026-01-22 · Vietnam's education high-risk decree · China labelling | lines 179, 229, 1105–1236 · `policy-matrix.tsv:128,150` |
 | **LATAM** | UNESCO IESALC **87% / 26%** · Observatory 2026-04-14 · `CONPES 4144` · ILIA · CONALEP | lines 45, 52, 192, 196 · `policy-matrix.tsv:138,142,149` |
 

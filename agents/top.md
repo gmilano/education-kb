@@ -4,8 +4,92 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p407` · reads and commit both 2026-10-23 — the THIRTEENTH pass dated today.**
+🟢 **`Gap 406-A` is CLOSED, and the gap asked the wrong question.** It expected *"a disagreement
+would be a finding on one of them."* 🔴 **The two instruments disagree on 14 of 59 — and `I2` is
+correct on every address it can SEE. The defect is its SCOPE and `p406`'s NUMERATOR, not either one's
+logic.** 🔴 **And the corrected decay rate is 1.94 %, not 2.20 %: 7 of the 59 were never
+repositories, and three instruments in this repository already said so.**
+
+**Evidence:** [`i2-sweep-crosscheck`](../evidence/i2-sweep-crosscheck.2026-10-23-p407.tsv) — 59 rows
+· 9 columns · instrument, **37 controls / 0 failures**, six mutations each reddening a named control,
+at [`compose/code/p407-i2-sweep-crosscheck/`](../compose/code/p407-i2-sweep-crosscheck/README.md).
+Gate score this pass: **50 of 51 green** — `gate-i2-sweep-crosscheck` is new and green,
+`gate-dates` was **strengthened twice and is green**, and the lone red is still
+`gate-census-union` control 24, `Gap 400-B`'s unsatisfiable-by-construction control, deliberately
+red for a **fifth** pass.
+
+### 🟢 `Gap 406-A`: the agreement matrix
+
+| mechanism | n | whose defect |
+|---|---:|---|
+| `AGREE-OFF-LIVE-SHELVES` | **41** | — both silent, correctly |
+| 🔴 `DISAGREE-I2-POPULATION-FROZEN` | **9** | `I2` — its population is `p372`'s re-probe with `TOTAL = 46` **hardcoded** |
+| 🔴 `NOT-DECAY-P372-REFUTES` | **5** | `p406` — the sweep counted this base's own **fabricated negative controls** as decay |
+| 🟢 `AGREE-NOT-A-LIVE-CLAIM` | **4** | — `I2` right where it can see: in population, on a live shelf, detector correctly silent |
+
+🔴 **`I2` is never asked about 9 addresses this shelf carries, and 6 of them hold a live
+markdown link its own detector fires on** — `ale-alejandro/beadkit` (2 hits),
+`thanh01pmt/interactive-quiz-kit` (2), `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp`,
+`santillana-ai/tutor-sdk`, `yokowasis/autograder`. 🔵 Nothing is wrong with the predicate. It is
+simply never run against them, because `p372` froze the population at 46 rows in 2026-10-21.
+
+### 🔴 The repair trap, pinned BEFORE anyone ships it
+
+🔴 **Wiring `p406`'s population into `I2` — the obvious fix, and the one this gap invites — breaks
+the detector.** `I2` tests a **case-sensitive** substring (`f"github.com/{slug})" in line`); `p406`
+publishes **folded** addresses. Fed the folded form, the shipped detector goes **silent** on the two
+addresses whose live-shelf link is written in mixed case:
+
+| address as `p406` publishes it | as **this shelf** writes it | `i2_fires_folded` | `i2_fires_caseless` |
+|---|---|---:|---:|
+| `ai-matrix-engine/aidream` | [`AI-Matrix-Engine/aidream`](https://github.com/AI-Matrix-Engine/aidream) (line ~1144) | **0** | **1** |
+| `mckaroff/graphlms` | [`Mckaroff/GraphLMS`](https://github.com/Mckaroff/GraphLMS) (line ~1141) | **0** | **1** |
+
+🟢 Controls `C10b`/`C10c` assert the trap on a fixture, so it cannot be re-entered silently.
+
+### 🔴 `p406`'s decay rate counts non-repositories as decay
+
+| denominator | numerator | rate |
+|---|---|---|
+| `p406` as published | 59 / 2 681 | **2.2007 %** |
+| `p372`'s classifier applied (5 planted negative controls) | 54 / 2 676 | **2.0179 %** |
+| plus `p251`'s and `ZZ-bt`'s own specimens | 52 / 2 674 | **1.9447 %** |
+
+🔴 **All seven were already known not to be repositories, by instruments already committed here:**
+- **5 fabricated negative controls** — `p372` classifies them `NOT-AN-ADDRESS/NEG-CONTROL` and says in
+  writing that *"a negative control that fails to resolve is the control PASSING. It is never a
+  defect."*
+- **`jushbjj/mr`** — a truncation of the **live** `JushBJJ/Mr.-Ranedeer-AI-Tutor`, whose only
+  standalone occurrences on these shelves are as the specimen of
+  [`p251-prefix-collision`](../compose/code/p251-prefix-collision/README.md), the instrument built
+  for exactly this defect.
+- **`en/get-started`** — the locale-path hole `ACTION ZZ-bt` registered and deliberately left open;
+  `repos/trending.md:2611` already records it as `frappe/erpnext`'s docs path.
+
+🔵 **The direction matters more than the size:** a decay rate that counts planted failures as decay
+**overstates rot**, and the instruments to exclude them were already written. `p371`'s *"committed
+knowledge not wired in"*, third instance.
+
+### 🔴 Two defects in `gate-dates`, and a wrong date on the EMEA opportunity row
+
+🔴 **`intel/market.md`'s EMEA opportunity asserted *"enforcement began 2026-08-02"* for the
+education high-risk tier — the one claim `gate-dates` exists to catch — and the gate was GREEN.** Two
+independent defects, both now fixed with controls:
+1. 🔴 **`FULL_EFFECT` was anchored on the literal word `august`**, so the **ISO spelling** of the
+   same date was invisible.
+2. 🔴 **A possessive apostrophe laundered it.** `QUOTE_SPAN` admitted `'` as an **opening quote**
+   with a 400-character window while `QUOTE_CHARS` did not — so `the AI Act's` opened a span that
+   swallowed the date and returned `QUOTED`. 🔵 **The paragraph this gate's own docstring names as
+   its founding specimen was being cleared by the gate written for it.**
+
+🟢 Corrected on the shelf: Annex III education applies **2027-12-02** (Digital Omnibus in force
+**2026-07-27**); **2026-08-02** is **Article 50** transparency only. 🔵 **The opportunity changes
+shape** — EMEA is a **readiness** sale on a ~14-month clock, not compliance against a passed date.
+
+
 **🆕 Pass `p406` · reads and commit both 2026-10-23 — the TWELFTH pass dated today.** 🟢 **`Gap 405-C`
-is CLOSED over the WHOLE population, and the number it asked for is 2.20 %, not 10.6 %.** 🔴 **`p405`'s
+is CLOSED over the WHOLE population, and the number it asked for is 2.20 %, not 10.6 %.** 🔴 *(`p407`: **1.94 %** once this base's own instruments are applied — see the block above.)* 🔴 **`p405`'s
 rate was a SAMPLE ARTEFACT — 4.8× the population rate, from the one group it had cloned.** 🟢 **59 of
 2 681 carried addresses do not resolve, 12 of them on THIS shelf — and all 12 are already documented
 dead here, so the realised loss is ZERO.** 🔴 **Which refutes `Gap 405-C`'s own premise.**
@@ -28,7 +112,7 @@ control, left red deliberately for a fourth pass.
 | 🔴 `ABSENT-OR-PRIVATE` | **59** |
 | 🔵 `CHANNEL-ERROR`, after one serial retry | **1** |
 | graded | **2 681** |
-| **decay rate, over the graded half only** | **2.20 %** |
+| **decay rate, over the graded half only** | ~~**2.20 %**~~ → **1.94 %** 🔴 *(`p407`: 7 of the 59 were never repositories)* |
 
 🔵 **Why this is a composition and not a new channel.** `p293-slug-existence-oracle` already
 calibrated this proxy's refusal signature and fixed the vocabulary; `p351-address-shape` already

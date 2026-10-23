@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p407` · 2026-10-23 — the instruments are now the thing most likely to be wrong
+
+🔴 **Trend: this base's measurement layer has overtaken its subject as the source of error.**
+Three of this pass's four findings are defects in **instruments**, not in the market — a frozen
+population, a spelling-bound date pattern, and a possessive apostrophe — and each one had a
+committed instrument that already knew the right answer. 🔵 **The lesson generalises past this
+KB:** an agentic pipeline that grades its own corpus accumulates *checks that cannot fail*, and
+nothing in a green run distinguishes those from checks that pass. 🟢 **The cheap counter-measure
+is mutation**: five of six mutations against `p407`'s own suite reddened a named control, and the
+sixth revealed that the suite's imported classifier was not load-bearing on any published figure.
+
+🔵 **For an engagement this is a sellable practice, not an internal note.** A client running
+LLM evaluation or compliance checks has exactly this failure mode, and *"show me a mutation that
+makes your green test red"* is a one-day audit that finds it.
+
+## 🆕 `p407` · 2026-10-23 — EMEA's education clock has 14 months on it, not zero
+
+🔴 **The market's majority reading is wrong, and this base was repeating it on its own
+opportunity row.** Annex III education obligations apply from **2027-12-02** — the Digital Omnibus
+(in force **2026-07-27**) deferred them — while **2026-08-02** is the **Article 50** transparency
+date only. 🔵 **A sixth independent sighting of the wrong date arrived this pass**, in an
+otherwise current source, which is what a majority misreading looks like: the client's installed
+adviser has probably given them the wrong deadline.
+
+🟢 **So the EMEA pitch inverts.** It is **not** "you are already non-compliant"; it is
+"you have ~14 months, and conformity work ports to Vietnam's Decision 33 and Brazil's PL 2338/2023
+because all three are risk-tiered." 🔴 **And `2026-08-02` still binds for transparency**, so a
+chatbot-facing deployment has a live obligation today even though the high-risk tier does not.
+
+## 🆕 `p407` · 2026-10-23 — the agent surface is moving OUT of the LMS
+
+🟢 **New direction, first specimen read this pass.**
+[`microsoft/moodle-local_copilot`](https://github.com/microsoft/moodle-local_copilot) (**GPL-3.0**,
+release **5.1.0**) does not put a model behind Moodle; it puts **Moodle behind Copilot**, as two
+declarative agents a teacher drives from Word, PowerPoint and BizChat. 🔵 Every other Moodle AI
+row this base carries runs the other way (the `aiprovider_*` family). 🔴 **The strategic read:
+the LMS is becoming a tool-provider to someone else's assistant**, and whoever owns the assistant
+surface owns the teacher's attention. 🔴 **It is also the anti-sovereign option** — M365 Copilot
+licensing, Entra registration, no local-model path — so it sits directly opposite the Ollama-provider
+route for EMEA sovereignty and LATAM cost. **Both can be true on one estate; a proposal must say
+which surface it is buying.**
+
+
 ## 🆕 `p406` — what changed on this shelf
 
 🟢 **One trend is newly measurable on this base rather than asserted from a source, and it is about

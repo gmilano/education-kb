@@ -75,7 +75,14 @@ FULL_EFFECT = re.compile(
     # number between the month and the year.  `2026-08-02` is the date the whole table is
     # about, so the one spelling a reader would actually meet was the one not matched.
     r"|(?:obligation|deadline|date)\s+remains[^.\n]{0,20}august[^.\n]{0,8}2026"
-    r"|remains\s+(?:at\s+)?august[^.\n]{0,8}2026",
+    r"|remains\s+(?:at\s+)?august[^.\n]{0,8}2026"
+    # 🔴 p407: every arm above is anchored on the WORD "august", so the ISO spelling of
+    # the same date was invisible — and the ISO spelling is what the live defect used.
+    r"|(?:enforcement|obligation|obligations|deadline|phase-?in|high-risk|annex\s*iii)"
+    r"[^.\n]{0,40}(?:beg(?:a|i|u)n|begins|applie[sd]|apply|in force|effective|enforced|live)"
+    r"[^.\n]{0,25}2026[-/]0?8[-/]0?2"
+    r"|(?:beg(?:a|i|u)n|begins|applie[sd]|apply|in force|effective|enforced)"
+    r"[^.\n]{0,25}2026[-/]0?8[-/]0?2[^.\n]{0,40}(?:high-risk|annex\s*iii|education)",
     re.I)
 
 CORRECTED = re.compile(
@@ -99,7 +106,13 @@ ATTRIBUTION = re.compile(
 # an assertion.  That is exactly the defect `p279` repaired in `p279-absence-claims`
 # (*"a line-local predicate over a hard-wrapped corpus is the same defect one layer out"*),
 # live in a SIBLING instrument that was never re-read for it.
-QUOTE_SPAN = re.compile(r"[\"“‘«'][^\"”’»']{0,400}[\"”’»']")
+# 🔴 `p407`: an opening `'` may NOT be a possessive apostrophe. `intel/market.md`'s EMEA
+# opportunity read *"the AI Act's high-risk tier … enforcement began **2026-08-02**"*, and the
+# `'` in `Act's` opened a 400-character span that swallowed the date and returned `QUOTED` —
+# laundering the one assertion this gate's own docstring names as its founding specimen.
+# 🔵 `QUOTE_CHARS` never admitted `'`; only `QUOTE_SPAN` did, so the two disagreed about
+# what a quote even is. An opening `'` now has to not follow a word character.
+QUOTE_SPAN = re.compile(r"(?:[\"“‘«]|(?<![A-Za-z0-9])')[^\"”’»']{0,400}[\"”’»']")
 QUOTE_CHARS = re.compile(r"[\"\u201c\u201d\u2018\u2019\u00ab\u00bb]")
 SENT_SPLIT = re.compile(r"(?<=[.!?])\s")
 
@@ -213,6 +226,30 @@ CONTROLS = [
     ("Boston Public Schools makes AI fluency a graduation requirement from September 2026", None),
     ("13% of Italian universities had operational AI governance approaching the August 2026 deadline", None),
     ("EU AI Act classifies education AI as high-risk, with full effect in August 2026.\u201d The source", "QUOTED-MULTILINE"),
+    # --- p407: the ISO spelling, and the possessive apostrophe that laundered it --------
+    # 🔴 The live specimen, verbatim from `intel/market.md`'s EMEA opportunity row. BOTH
+    # defects fire on this one string: the word "august" never appears, and `Act's` opened a
+    # 400-char quote span over the date. This gate returned nothing on it for 184 passes.
+    ("Education sits in the AI Act's high-risk tier for admission, evaluation and exam "
+     "scoring; enforcement began **2026-08-02**; only **10 %** of institutions have guidelines",
+     "ASSERTED"),
+    # \U0001f7e2 the ISO arm alone, no apostrophe anywhere
+    ("Annex III high-risk obligations for education became effective 2026-08-02", "ASSERTED"),
+    # \U0001f7e2 the possessive must not launder the WORD spelling either
+    ("the AI Act's education high-risk tier takes effect August 2026", "ASSERTED"),
+    # \U0001f535 a REAL quotation stays exonerated
+    ("a vendor FAQ still says \u201chigh-risk applies from 2026-08-02 for education\u201d", "QUOTED"),
+    # \U0001f535 the deferral sentence must not fail the build. \U0001f534 It is not even a
+    # candidate: "moved \u2026 from \u2026 to" is not a full-APPLICATION verb, so no arm matches.
+    # Recorded with want=None rather than CORRECTED because that is what the gate does, and a
+    # control written to the behaviour one WISHED for is how p400's guard came to never fire.
+    ("the Digital Omnibus moved Annex III education high-risk from 2026-08-02 to 2027-12-02",
+     None),
+    # \U0001f7e2 so the CORRECTED path is exercised on an ISO line that DOES match
+    ("Annex III high-risk for education became effective 2026-08-02 \u2014 wrong; the Omnibus "
+     "moved it to 2027-12-02", "CORRECTED"),
+    # \U0001f535 Article 50 in ISO form really IS this date and carries no high-risk subject
+    ("Article 50 transparency obligations apply from 2026-08-02", None),
     # --- p279: the shapes ACTION SH's first inbound run exposed -------------------------
     ("until a formal legislative extension is enacted, the AI Act legal obligation remains August 2, 2026", "ASSERTED"),
     ("the Digital Omnibus is not adopted, so the deadline remains August 2026", "ASSERTED"),

@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p407` · 2026-10-23 — gaps closed and gaps opened
+
+🟢 **`Gap 406-A` is CLOSED**, and the closure **refutes the gap's own framing**. 🔴 **Four new
+gaps are registered**, each named so a successor cannot mistake it for worked.
+
+### 🟢 Closed this pass
+
+- **`Gap 406-A` — CLOSED. The disagreement is real but it is not "a finding on one of them."** The
+  gap asked whether `I2`'s live-shelf test and `p406`'s sweep agree on all 59. 🟢 Built as
+  [`p407-i2-sweep-crosscheck`](../compose/code/p407-i2-sweep-crosscheck/README.md) — **37 offline
+  controls**, six mutations each reddening a named control, wired into `make hooks` — and run over
+  all 59: **45 AGREE, 14 DISAGREE**, in three mechanisms.
+  🔴 **`I2` is correct on all 4 addresses it can SEE** (in its population, on a live shelf,
+  detector correctly silent — the rows are records and unlinked ones at that). The defect is its
+  **SCOPE**: `TOTAL = 46` is hardcoded, so 9 addresses this base carries on a live shelf are never
+  asked about, and **6 of the 9 carry a live markdown link its own detector would fire on**.
+  🔴 **And `p406`'s numerator is wrong in the other direction:** 5 of the 59 are this base's own
+  **fabricated negative controls**, which `p372` states in writing are *"the control PASSING … never
+  a defect."* With `p251`'s truncation specimen (`jushbjj/mr`, a truncation of a **live** repo) and
+  `ZZ-bt`'s locale path (`en/get-started`), **7 of the 59 were never repositories** and the decay
+  rate is **1.94 %**, not 2.20 %. 🔵 Corrected on all four shelves that asserted it.
+  🔵 **Three instruments already held every one of those seven verdicts.** `p371`'s *"committed
+  knowledge not wired in"*, third instance.
+  Rows: [`i2-sweep-crosscheck`](../evidence/i2-sweep-crosscheck.2026-10-23-p407.tsv).
+
+- **`gate-dates` — TWO defects found and FIXED, and it was green through both.** Not a registered
+  gap, so recorded here as closed. 🔴 (1) `FULL_EFFECT` was anchored on the literal word
+  `august`, so the **ISO spelling** of the same date was invisible. 🔴 (2) `QUOTE_SPAN` admitted
+  `'` as an **opening quotation mark** — which `QUOTE_CHARS` never did, so the two disagreed about
+  what a quote is — and the possessive in **`the AI Act's`** opened a 400-character span that
+  swallowed the date and returned `QUOTED`. 🔵 **The paragraph this gate's own docstring names as
+  its founding specimen was being cleared by the gate written for it.** 🟢 Controls 26 → **33**;
+  corpus now **0 ASSERTED**; and the live data defect on `intel/market.md`'s **EMEA opportunity row**
+  is fixed (Annex III education is **2027-12-02**; 2026-08-02 is **Article 50** only).
+
+- **`P970` — RETIRED as a standing limit.** Carried since `p93` as *"the sandbox cannot execute
+  repository code."* 🔴 **It does not hold in this session.** `make hooks` was refused once at the
+  start of the pass, but every individual gate runs, `make hooks` completes (**50 of 51 green**), and
+  repository modules import normally. 🔵 This pass's own draft reimplemented `p372`'s classifier on
+  the strength of the stale limit, and that copy was **removed in favour of an import** per `P237`.
+  🔴 **A limit nobody re-tests becomes a licence to build a second copy of something.**
+
+### 🔴 New gaps
+
+| 🆕 | gap | why it is registered rather than fixed here |
+|---|---|---|
+| 🔴 **`Gap 407-A` — un-freezing `I2`'s population requires folding its detector FIRST, and the order is not obvious** | 🟢 The population fix looks like one line: feed `I2` the sweep's addresses instead of `p372`'s 46. 🔴 **Do that alone and the detector silently loses two true positives**, because `p406` publishes **folded** addresses and `I2` tests a **case-sensitive** substring: `AI-Matrix-Engine/aidream` and `Mckaroff/GraphLMS` are linked on `agents/top.md` in mixed case and go to `i2_fires_folded = 0`. 🔵 `C10b`/`C10c` pin the trap but do **not** fix `I2`. 🔴 **And folding is not sufficient either:** a *deeper* link (`github.com/a/b/tree/main`) is a live recommendation the detector cannot see at all (`C10a`), so the ceiling of a link test is itself unmeasured. 🔵 The adjacent open item is `Gap 405-A`'s **capability-key census** (Canvas 38 · Moodle 23 · Blackboard 14 · Brightspace/D2L 10 · Google Classroom 12 · Open edX 2), still not done |
+| 🔴 **`Gap 407-B` — `p406`'s shelf ATTRIBUTION is a bare substring match, and it is the evidence `Gap 406-A` rests on** | `population()` decides which shelves name an address with `if a in body` over the **lowercased whole file** — `p400`'s defect class, the one `p402`'s draft reproduced. 🔴 **65** swept addresses are a **proper substring** of another swept address, so each inherits every shelf the longer one appears on. 🔴 Two land inside the 59: **`jushbjj/mr`** (inside the live `jushbjj/mr.-ranedeer-ai-tutor`, **identical** shelf list — a pure phantom) and **`uoc/java-lti-1.3-provider`** (inside `…-provider-example`, but independently attested on a third shelf, so **not** resolvable as inflation either way). 🔵 `C18` detects containment; **nothing adjudicates it**. 🔴 Every per-shelf decay figure `p406` published inherits this, including the `0 / 104` and `0 / 74` clean shelves |
+| 🔴 **`Gap 407-C` — `gate-dates`' unit is ONE table row, and a claim/adjudication PAIR spans two** | `agents/trending.md:26099` asserts *"high-risk … apply from 2026-08-02"* and **line 26100 adjudicates it** (*"attributable only to the search-summary layer … does not quote a page it could not open"*). 🔴 **The verdict is one row outside the gate's scope**, so a correctly-handled record grades `ASSERTED`. 🔵 **This is the THIRD time `p223` has moved its unit** — line → span → row — and each move was prompted by a false grade, so the unit model is the recurring defect, not any one pattern. 🔴 Annotated in place this pass rather than re-scoped, because changing the unit re-grades a 4 MB corpus and that is a pass's work |
+| 🔴 **`Gap 407-D` — three swept shelves are classified by NEITHER of `p372`'s tuples** | `LIVE_SHELVES` holds 3 names and `RECORD_FILES` 4; `p406` sweeps **9**. 🔴 **`compose/patterns.md`, `intel/market.md` and `intel/trends.md` are in neither**, so no rule says a dead address on them is a defect and `I2` never reads them. 🔴 **`compose/patterns.md` is the RECIPE shelf** — where a dead address is at its most actionable, since a recipe tells a studio what to build on — and `p406` found **two** unresolvable addresses there. 🔵 `C13` asserts the three names so the hole cannot close by accident. 🔴 It is not obvious that all three belong in `LIVE_SHELVES`: a market shelf cites a repo as *evidence* as often as as a *recommendation*, which is `Gap 406-A`'s distinction arriving on a second shelf |
+
+🔵 **One near-miss checked and rejected, so it is not re-found as a fix.** Adding `'` to
+`QUOTE_CHARS` to match `QUOTE_SPAN` looks like the tidy way to settle their disagreement. 🔴 **It
+is the wrong direction:** `QUOTE_CHARS` drives the `QUOTED-MULTILINE` parity test, and admitting the
+apostrophe there would make **every possessive** an unpaired quote character, laundering far more
+than it caught. 🟢 The fix went the other way — `QUOTE_SPAN` now refuses an opening `'` that
+follows a word character — and all 15 must-not-fail controls still pass.
+
+### 🟡 Unmoved, and named so neither can look worked
+
+🔴 **`Gap 400-F`'s two backlogs are UNMOVED for a seventh pass:** `p397`'s fork backlog (**551**
+pairs derived, **21** adjudicated, **530** unexamined) and `p370`'s promotion backlog (**1 152**
+measured-but-never-shelved slugs, **390** permissive or mixed). 🔵 `p407`'s budget went to
+`406-A` and the two gate repairs. 🔴 **`Gap 400-B` / `gate-census-union` control 24 is red for a
+FIFTH pass** — still unsatisfiable by construction, still a human decision, still not forced green
+per `p387-G`. 🔴 **`Gap 406-B`'s sweep is UNMOVED** (the `os.path.exists`-beside-a-shelf-list grep
+across every instrument); this pass applied its lesson to its **own** module (completeness, not
+existence — `C12`) and swept nothing else. 🔴 **`Gap 406-C` is UNMOVED and got worse-shaped:** the
+Vietnam dates still stand on concurrence, and the near-primary EMEA read this pass tried for
+(`media-and-learning.eu`, a Commission AI-Office deck) is **`ENOTFOUND`** — so the EU date now stands
+on this base's prior record too, not on a new read. 🔵 Blocked-host ledger: **ten**, with
+`moodle.org` added this pass.
+
+---
+
 ## 🆕 `p406` · 2026-10-23 — gaps closed and gaps opened
 
 🟢 **`Gap 405-C` is CLOSED over the whole population — and the closure REFUTES the gap's own
