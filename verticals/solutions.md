@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🟢 A new attach point, and it is the cheapest one on this file: the package format
+
+🔵 Every row already on this file attaches AI to a platform through an **extension mechanism** —
+`XBlock` for Open edX, a plugin for Moodle, LTI for anything Apereo, MCP for the agent layer. Each
+of those is an integration project: code the client has to review, install, host and keep working
+across upgrades. 🟢 **There is a cheaper boundary, and as of today these shelves hold a permissive
+tool that emits it.**
+
+| Platform | Licence | SCORM ingest | What that means for a `Papermorph`-produced course |
+|---|---|---|---|
+| [Moodle](https://moodle.org) | 🔴 GPL-3.0 | 🟢 **core SCORM activity** | Upload the package, add the activity, done — no plugin review |
+| [Canvas LMS](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 | 🟢 **imports SCORM packages** | Course-level import; grade passback through the standard |
+| [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 🟢 **SCORM supported** | 🟢 The permissive-platform path: no copyleft anywhere in the stack |
+| [Open edX](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | 🟡 **via a community `scormxblock`** | Needs the XBlock installed first — so this one *is* an integration project |
+| [Kolibri](https://github.com/learningequality/kolibri) | 🟢 MIT | 🔴 **not claimed** | Kolibri uses its own channel/content pipeline; 🔴 **do not assume SCORM** |
+
+🟡 **Verification status, stated rather than implied.** The `Papermorph` side was read first-hand
+today — MIT, `scripts/scorm.py`, SCORM 1.2 and 2004, `849★`. 🟡 **The ingest column was NOT re-read
+first-hand this pass**; it is carried from platform documentation knowledge and should be confirmed
+against the client's *actual version* before it reaches a statement of work. SCORM support is
+notoriously version-sensitive, and "supports SCORM" has meant three different things on Moodle alone.
+
+🟢 **Why this belongs on `verticals/solutions.md` and not only on `repos/`.** The question this file
+exists to answer is *"the client already runs X — where does AI attach?"*. For content generation,
+the answer has just changed from *"write an XBlock / a Moodle plugin / an LTI tool"* to **"emit a
+SCORM package"** — which attaches to four of the five platforms above through a door that is already
+open, already reviewed, and already in the LMS administrator's muscle memory.
+
+### 🔴 The ERP question, re-run and re-answered: there is no permissive education ERP
+
+The literal `open source platform education ERP CRM MIT Apache` leg returned **one** education ERP —
+**[OpenEduCat](https://github.com/openeducat/openeducat_erp)** — and both the project's own site and
+its Odoo app listing give the licence as **LGPL-3.0**, not MIT and not Apache. Everything else the
+leg returned was the same vendor's comparison pages in eight languages.
+
+| Claim on the vendor's pages | Status |
+|---|---|
+| Built on Odoo; students, courses, attendance, fees, timetables, exams, parent portal, plus native CRM/HR/payroll/accounting | 🟢 consistent across the listing and the site |
+| "30,000+ institutions in 130+ countries" / "3 million users across 1,000+ institutions in 90+ countries" | 🔴 **the vendor's own pages contradict each other**; quote neither |
+| Founded 2012 / founded 2014 | 🔴 contradictory on the same vendor's pages |
+| Modules from $69/yr, user packs $299/yr, unlimited $4,369/yr | 🟡 vendor pricing, uncontested but unverified |
+
+🔵 **The consequence for a build.** An education ERP engagement inherits **LGPL-3.0 plus Odoo's own
+licensing**, which is a materially different conversation from the MIT/Apache agent layer above it.
+🟢 The composition rule still works — **the LGPL stays in the platform, the permissive code stays in
+the agents, and the boundary is a process boundary (MCP or a REST call), not a link.**
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the

@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🟢 T9 (new) — the useful new work is PACKAGING into standards the institution already runs, not new platforms
+
+🔵 **The evidence is the shape of today's yield, not an opinion.** Sixty-eight addresses across four
+discovery legs; sixty-three already shelved; **one** new in-domain repository. It was not found on a
+tutor topic page — both of those returned a perfect nil — it was found on `edtech`, and what makes
+it worth shelving is **its output format**:
+
+| Address | what it emits | the door it walks through |
+|---|---|---|
+| 🆕 [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) (MIT, 849★) | **SCORM 1.2 / 2004 package** | the LMS's existing content-import screen |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) (AGPL-3.0, 1.7k★) | an **MCP server** over the platform | any MCP-speaking assistant or coding agent |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) · [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (MIT) · [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT) | **MCP tool surfaces** over Canvas, Anki, and BKT+FSRS learner state | the assistant the user already has open |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (Apache-2.0, 376★) | **LTI tools** and an IMS ContentItem store | the LMS's existing external-tool configuration |
+
+🟢 **The pattern:** the 2026 education repositories that matter commercially are not trying to become
+the system of record. They emit into one — SCORM, LTI, MCP — and let the institution keep Moodle,
+Canvas, Open edX or Anki. 🔵 **Why now:** the buyer has moved from "can it generate" to "can you
+evidence it and will it survive procurement" (the governance turn this file records in **T1**), and
+a standards-conformant package survives procurement in a way a new platform does not.
+
+🔵 **What it means for a studio engagement.** The deliverable boundary moves earlier and the
+integration bill falls. 🔴 **The risk it creates:** a standard is also a ceiling — SCORM carries
+completion, score and time, and **nothing** about mastery, affect or trajectory. A client who wants
+per-skill mastery reporting cannot get it from a SCORM package alone, and that is the honest limit to
+state in the first conversation, not the third. See `compose/patterns.md` **P7** this pass, which
+wires the mastery layer alongside the package rather than inside it.
+
+### 🔴 T10 (new) — the discovery surface is saturating, and that is itself the trend
+
+Three consecutive passes of measured yield on the public GitHub education surface:
+
+| pass | legs | addresses | unshelved in-domain |
+|---|---|---|---|
+| `p414`–`p415` | topic `ai-tutor`, topic `education-ai`, 4 regional | — | 0 new agents; three carried figures refuted |
+| **`p416`** | topic `intelligent-tutoring-system`, topic `knowledge-tracing`, topic `edtech`, 1 GitHub search, 4 regional, 1 ERP | **68** | **1** |
+
+🟢 **The field is not dead; the discoverable-by-topic-page part of it is held.** The open-source
+education agent population above ~50★ appears to be a few hundred repositories, heavily
+APAC-origin, with a single hub ([`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), 42.3k★) and
+a thin long tail — 🔵 though note `agents/top.md` this pass: the "no middle" reading of that tail was
+an artefact of a hand-picked table, and the middle exists.
+
+🔵 **Where a successor should spend instead:** packaging formats and non-GitHub registries, and
+**re-measurement of what is already shelved** — which in the last two passes produced seven corrected
+star figures and one corrected licence, against one new address. 🟢 **Re-measurement is currently
+the higher-yield activity, and it is cheaper.**
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the

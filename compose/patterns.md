@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🟢 P7 (new) — "Textbook in, SCORM course out, into the LMS the client already runs"
+
+🔵 **The brief this answers.** A ministry, publisher or university has book-shaped source material
+and an LMS already in production. They want AI-assisted courseware, and they will not install a new
+platform, and their procurement cycle for a new plugin is measured in months.
+
+🟢 **Every component is MIT or Apache-2.0 and every grant below was read first-hand on 2026-10-23.**
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Content build | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT** (`1 069` B, `sha256:41857092247a`) | Textbook → narrated, interactive lesson on a static shared player; `scripts/scorm.py` packages it as **SCORM 1.2 / 2004** |
+| Maths rendering | MathJax, vendored at `engine/vendor/mathjax` | 🟢 **Apache-2.0** | 🔵 declared in `Papermorph`'s README — a second grant on a subtree, named with its path |
+| Package QA | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | Run the package **outside** any LMS in CI and assert the SCORM API calls before it is ever uploaded |
+| Mastery, alongside | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** (🟡 self-declared alpha; `v0.6.1`) | **BKT + FSRS** sequencing and durable learner state, over **MCP** — the layer SCORM cannot carry |
+| Scheduling parameters | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** (**4.1k★**) | Fit FSRS parameters to the cohort's real review history instead of shipping defaults |
+| Item generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT** | MCQs and lesson plans, including Spanish/Portuguese, feeding the question banks |
+| Platform | Moodle · Canvas · OpenOLAT | 🔴 GPL / 🔴 AGPL / 🟢 Apache-2.0 | 🟢 **Unchanged.** The client keeps their LMS; nothing is forked |
+
+**Wiring, in order:**
+
+1. **Ingest** the source book through `Papermorph`; pin the engine tag (`engine-v2.1`) in the build,
+   because a new major engine number can require a book-level change.
+2. **Build twice** from the same source: a static web bundle for preview and review, and a SCORM
+   package for delivery. Same content, two artefacts, one pipeline.
+3. **Gate the package in CI with `scorm-again`** — load it headless, assert `cmi.completion_status`
+   and score reporting, fail the build on a bad manifest. 🔵 This is the step most SCORM projects skip
+   and most SCORM projects then debug inside the client's LMS, which is the expensive place to do it.
+4. **Upload** the package. Moodle takes it as a core SCORM activity; Canvas and OpenOLAT import it.
+   🔴 **Open edX is the exception** — it needs a community `scormxblock` installed first, so on Open
+   edX this is an integration project again and should be priced as one.
+5. **Run the mastery layer beside it, not inside it.** `tutor-mcp` holds per-skill BKT state and FSRS
+   review scheduling and speaks MCP to whatever assistant the learner uses; `fsrs4anki`'s optimiser
+   fits the parameters from the cohort's own history.
+6. **Report from both.** SCORM gives the LMS completion, score and time. Per-skill mastery and review
+   trajectory come from the MCP side. 🟢 Two sources, one dashboard, and the division stated to the
+   client up front.
+
+🔴 **The boundary, stated plainly.** **SCORM carries completion, score and time — and nothing about
+mastery, affect or trajectory.** Anyone who promises per-skill mastery reporting "through SCORM" is
+promising something the standard does not define. 🟢 That is precisely why the mastery layer in this
+recipe is a sibling of the package rather than a payload inside it.
+
+🔴 **Two procurement notes before this pattern reaches a proposal.**
+- `Papermorph`'s MIT copyright line reads **`Copyright (c) 2026 TedKaczynski`** — a handle, not a
+  legal entity. The grant text is stock MIT and clean; the **assignor is unattributable**, and a
+  conservative legal review will raise it. Budget the conversation, or vendor the generator and ship
+  only its output.
+- `tutor-mcp` is **self-declared alpha**. Pin `v0.6.1`, and treat the mastery layer as the part of
+  this pattern that carries engineering risk.
+
+🔵 **Why P7 is distinct from P1–P6.** All six existing recipes put **MCP** at the boundary between a
+permissive agent layer and a copyleft platform. P7 adds the **second** boundary this base can now
+compose across: **the package format**. It is the only pattern here whose primary deliverable
+installs into the client's existing system with no code review on their side.
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the

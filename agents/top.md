@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🔴 `p415`'s headline is refuted by `p415`'s own file — four middle-tier addresses it omitted are recorded in `agents/top.md`
+
+`p415` concluded, in its title line, that **"the agent field has one hub and no middle."** Four
+addresses read first-hand today sit in exactly that middle, and **every one of them was already on
+these shelves before `p415` wrote** — three of the four on `agents/top.md`, the file carrying the
+claim.
+
+| Address | stars, read today | Grant | already recorded at | in `p415`'s fifteen-row table? |
+|---|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2.0k** | 🔴 **dual**: stock MIT at `LICENSE.md` **plus** a non-OSI "Community License" (`8 563` B, non-commercial, §4 revenue-share) | `agents/top.md:1289`, `agents/trending.md:4463`, `:5592`, `:5632` | 🔴 **no** |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **1.7k** | 🔴 **AGPL-3.0** | 266 hits across these shelves | 🔴 **no** |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | **326** | 🟢 **Apache-2.0** *(grant at `LICENSE.txt`, not `LICENSE`)* | `agents/top.md:1597`, `:1845`, `:2187` | 🔴 **no** |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | **133** | 🟡 **CC0-1.0** | `agents/trending.md:3907`, `:8129`, `:8639`, and the gate fixture `cc0-1.0-gen-mentor` | 🔴 **no** |
+
+🔴 **And no threshold explains the omission.** `p415`'s table includes `mentingo` at **96★**,
+`tutor-mcp` at **53★** and `papayaykware/agente-educativo-psicocognitivo` at **0★**, so it was not
+filtering by scale. Nor by copyleft: it included `freelingo` at **AGPL-3.0**. 🟢 **The strongest
+single case is `ai-shifu`** — permissive, squarely in-domain (agent-led course delivery, Research
+Center of Intelligent Software Engineering, Harbin Institute of Technology), **326★**, and written
+onto `agents/top.md` three times before `p415` ran.
+
+🔵 **The lesson is about the instrument, not the author.** "No middle" was a property of a
+fifteen-row hand-picked table, and it was published as a property of the field. A shelf that
+re-measures addresses but not its own *selection* will keep producing confident claims about
+absences it created. 🟢 **Standing suggestion for a successor:** before any pass asserts a shape of
+the field — a hub, a gap, a missing tier — `grep -rF` the band it claims is empty.
+
+### 🟢 The one unshelved in-domain address of sixty-eight read today
+
+| Repo | Grant, read byte-level | Stars | What it is | Region |
+|---|---|---|---|---|
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT** — `main/LICENSE`, **`1 069` B**, `sha256:41857092247a`, served `http=200` from `raw.githubusercontent.com` | **849** | Claude Code skill: a textbook becomes narrated, interactive web lessons; a story becomes a paper-puppet film. Static pages on a shared player, video export, and **SCORM 1.2 / 2004 packaging via `scripts/scorm.py`**. Engine versioned by tag, latest `engine-v2.1` | 🔵 **not placed** — English README, owner `DozenTwelve`, no country stated |
+
+🟢 **Why this one matters, and it is not the star count.** `agents/top.md:1815` already records that
+SCORM support **"is genuinely scarce in permissive open source"** — and the address it records there,
+[`thanh01pmt/interactive-quiz-kit`](https://github.com/thanh01pmt/interactive-quiz-kit), is
+**manifest-MIT with the source closed**. `agents/trending.md:5080` records **"No SCORM result at
+all, from a leg that named SCORM explicitly."** These shelves therefore hold SCORM *consumers* —
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, **357★**, SCORM 1.2 + 2004
+with IMS Simple Sequencing), [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper)
+(MIT), `scormflow/scorm-engine-client` (MIT) — and, until today, **no readable permissive
+producer**. 🟢 **`Papermorph` is one.** The declared scarcity is closed, not re-declared.
+
+🔵 **Second grant, declared rather than discovered.** The README's own licence section reads:
+*"[MIT](LICENSE). The bundled MathJax (`engine/vendor/mathjax`) is under the Apache License 2.0."*
+🟢 That is `p414`'s *second-grant-on-a-subtree* shape — and unlike `education-agent-skills`, this one
+is **announced in the README with its path and its family**, which is the behaviour this base should
+be rewarding. `LICENSE.md`, `LICENCE` and `COPYING` all return `404`: one grant file, one vendored
+exception, no pointer.
+
+🔴 **Provenance caveat, and it is the reason to read a holder line and not just a family.** The MIT
+payload's copyright line reads **`Copyright (c) 2026 TedKaczynski`** — a handle, not a legal entity,
+and not the repository owner's name either. `p129-transcription-audit` exists because the **holder**
+is a different question from the **family**. The grant is stock MIT and the text is clean; **the
+assignor is unattributable**, and that is a procurement question, not a licence question. Flag it
+before this address reaches a client document.
+
+### 🔴 Four carried star figures re-measured — and one of them went DOWN
+
+| Address | carried on these shelves | read today | delta |
+|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `1 704` (`agents/trending.md:5630`), `780` (`:7865`) | **2.8k** | 🔴 **+64%** on the newer figure; the older has more than **tripled** |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | `338` (`:5597`), `317` (`:7838`), `127` (`:14591`) | **403** | +19% on the newest carried figure |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | `356` (`:5595`), `342` (`:6051`) | **391** | +10% |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `135` (`:3907`, `:8129`) | **133** | 🔵 **−2 — it went down** |
+
+🔵 **The `gen-mentor` row is the useful one.** Stars are **not monotonic**, and a base that only ever
+revises a count upward is not measuring, it is extrapolating. `p415` refuted three figures and all
+three moves were large; this pass records a two-star decrease because the alternative is a shelf that
+can only detect growth.
+
+🔴 **`cn-math-taxonomy` is the row to watch and the row NOT to build on.** It is the best Chinese K-12
+curriculum knowledge graph these shelves know, it is growing fastest of anything measured today — and
+it is **CC BY-NC 4.0**, barred from paid work, and its own README states the content is an
+**unreviewed AI-generated draft**. Both facts travel together or neither should be quoted.
+
+### 🟢 Confirmations — recorded because a confirmation is a measurement too
+
+- [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) — **498★**, and the sidebar
+  has **no licence entry at all**. Confirms `agents/trending.md:7876` and `repos/trending.md:7302`
+  (carried `499`/`501`). A 498-star nonprofit education repository with **no grant** is
+  all-rights-reserved by default; the 501(c)(3) framing does not change that.
+- [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) — **Apache-2.0, 582★, Portuguese
+  README, archived by the owner on `2024-12-12`, read-only.** Confirms `agents/trending.md:14606`.
+- [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — **Elastic License 2.0**,
+  **340★**, source-available, built by Canyon GBS with Gates Foundation support. Confirms
+  `agents/trending.md:5629`.
+- 🔵 **One increment on `PageLM`:** the non-OSI document is named **two different ways on the same
+  page** — the README body calls it the **"CaviraOSS Community License"**, the badge immediately
+  above it the **"PageLM Community License"**. `agents/trending.md:4463` records only the second
+  name. A grant that cannot name itself consistently is a grant to read in full before relying on it.
+- Permissive rows re-read clean and unchanged: `pykt-toolkit` MIT **451**, `tsugi` Apache-2.0 **376**
+  (Apereo, LTI), `scorm-again` MIT **357**, `pyedmine` MIT **82**, `EduStudio` MIT **79**,
+  `fsrs4anki` MIT **4.1k**.
+
+### 🔴 Searched and NOT found — recorded so a successor does not re-spend the leg
+
+- 🔴 **There is still no permissive education ERP.** The literal ERP/CRM leg returns exactly one
+  education ERP, **OpenEduCat**, and it is **LGPL-3.0** — not MIT, not Apache. Every other result on
+  that leg was the same vendor's own comparison pages in eight languages.
+- 🔴 **Fifth consecutive nil on the LATAM leg — but the gap has changed shape.** The Spanish leg
+  naming Brazilian, Mexican and Chilean universities returned no repository: a Panamanian LinkedIn
+  announcement with no licence and no code, and `1111philo/learn` whose licence reads *"other"*.
+  🟢 **What is new is that the nearest thing to a LATAM-origin platform already exists and is
+  frozen** — `menthorlabs/menthor`, Apache-2.0, 582★, Portuguese, archived since `2024-12-12`.
+  The gap is **not** "none was built"; it is "the one that was built is unowned".
+- 🔴 **EMEA still has no education agent at scale.** The only EMEA-origin agent the legs surfaced is
+  [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) — **Apache-2.0, 24★**,
+  Technische Hochschule Mittelhessen, automatic checking of student submissions with immediate
+  corrective feedback and aggregation of common errors for the lecturer. 🔵 Already shelved (92 hits).
+  Good provenance, real pedagogy, **no scale** — the EMEA finding of `p415` stands.
+- 🔴 **No authoritative 2026 ranking of education-specific agents exists**, for the second pass
+  running. The global leg returns general-purpose agent lists in which education is a use-case
+  column, plus self-published blog rankings.
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the

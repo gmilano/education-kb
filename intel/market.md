@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🔵 The four regional legs — what each returned, stated so silence cannot read as coverage
+
+| Region | leg | returned | unshelved |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | market sizing, a regional-share figure, two readiness figures, a US/Canada regulatory commentary | 🟡 **three figures new to this base**, all secondary |
+| **EMEA** | `AI education EMEA Europe 2026 adoption regulation players` | general EMEA AI adoption; the EU AI Act; a Eurostat adoption spread; barrier percentages | 🟡 **the Eurostat spread is new**; the Act material is 🔴 **all already held** |
+| **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players` | market sizing; the fragmentation point; a chatbot-deployment figure | 🔴 **nothing unshelved** |
+| **LATAM** | `AI education LATAM Latin America 2026 adoption regulation players` | a UNESCO IESALC/UNU-IAS working paper, the ILIA index, equity commentary, a sub-market size | 🔴 **nothing unshelved** |
+
+🟢 **The EMEA regulatory leg is the one worth reporting as a non-finding.** It returned the Digital
+Omnibus deferral of Annex III education to **2027-12-02** — which this base already carries at
+`agents/top.md:677` and in this file's own EMEA block, naming `Regulation (EU) 2026/1744`. 🔵 An
+independent leg reproducing a figure this base reached first is **corroboration**, and it is cheaper
+to record than to re-derive. The Official-Journal verification this file flags as outstanding is
+**still outstanding** — today's leg was secondary too, and two secondary sources do not make a
+primary one.
+
+### 🟡 Figures new to this base — every one secondary, and marked as such
+
+| Figure | Region | Source class | Use |
+|---|---|---|---|
+| **5.21% (Romania) – 42.03% (Denmark)** enterprise AI adoption, Eurostat 2025 via the EESC | EMEA | 🟡 EU institution citing Eurostat — the strongest of the five | 🟢 **usable**: an eight-fold spread inside one regulatory regime |
+| Barriers for non-adopters: expertise **70.89%**, legal uncertainty **52.52%**, data protection **48.83%** | EMEA | 🟡 same EESC note | 🟢 usable as the shape of the objection, not as a forecast |
+| North America **36–37.5%** of the global AI-in-education market | North America | 🔴 two vendor round-ups that disagree by 1.5 points | 🟡 directional only |
+| **10%** of institutions publish formal AI guidelines; **71%** of US teachers report no AI training | North America | 🔴 single vendor statistics round-up | 🔴 **do not quote unattributed** — use as a hypothesis to test in discovery |
+| APAC **~$592M (2024) → ~$1.85B (2029), 20.9% CAGR**; NA **~$951M (2024) → ~$2.30B (2029), 15.9% CAGR** | APAC / NA | 🔴 one vendor research house, both figures | 🟡 consistent with the range this file already carries; adds nothing to the dispute |
+
+🔴 **And the range problem this file opens with got worse, not better.** Today's legs surfaced 2025
+base figures of **$6.4B**, **$7.52B** and **$8.3B** and 2026 figures of **~$10.6B** and **~$11.4B**,
+with CAGRs spanning **roughly 26% to 46%**. 🟢 The honest position is unchanged and now better
+evidenced: **there is no single AI-in-education market number**, the definitions differ, and any deck
+that states one without its source and its scope is making it up.
+
+### 🔵 Opportunity updates — folded into this file's single canonical block below, not duplicated
+
+`p416` edits four of the five regional subsections of `## Opportunities by region` in place and adds
+nothing outside it. 🔵 The region vocabulary stays closed — **North America, EMEA, APAC, LATAM,
+Global** — and country names stay in the prose, per the rule this base has carried since `p-early`.
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
@@ -75,6 +140,15 @@ survives a procurement review), and ship the audit log as a **deliverable, not a
 🔴 **Do not propose anything that reads as replacing a teacher** — in Idaho it is prohibited by name,
 and elsewhere it is the fastest way to lose a board vote.
 
+🔵 **`p416` adds the readiness denominator, and it sharpens this pitch rather than changing it.** A
+2026 statistics round-up puts North America at a **36%** regional share (a second vendor source says
+**37.5%** — 🔴 they disagree, use neither as a point estimate) while only **10% of institutions
+publish formal AI guidelines** and **71% of US teachers report no AI training**. 🔴 Single vendor
+round-up, secondary, uncorroborated — a hypothesis to test in discovery, not a figure for a deck.
+🟢 Read against the 35-states-plus-Puerto-Rico guidance count above, the implication is that the
+binding constraint is **not policy but institutional capacity to comply with it**: the compliance
+envelope is the product, and teacher enablement is the line item most buyers have not yet budgeted.
+
 ### EMEA
 
 🟢 **Policy, measured — and the timing changed.** Secondary sources consistently report that
@@ -104,6 +178,18 @@ documented *absence* of emotion recognition. 🔵 **Sell the conformity dossier 
 in EMEA it is the deliverable that closes the deal, and the deferral to 2027-12-02 is exactly the
 window in which a client can get ahead of it rather than scramble.
 
+🔵 **`p416` adds the dispersion, and it is the reason a single EMEA go-to-market is wrong.** Eurostat
+2025 figures cited by the EESC put enterprise AI adoption between **5.21% (Romania)** and
+**42.03% (Denmark)** — an eight-fold spread inside one regulatory regime — with the top barriers for
+firms that considered AI and did not adopt being lack of expertise (**70.89%**), uncertainty about
+legal consequences (**52.52%**) and data-protection concern (**48.83%**). 🟡 EU-institution note
+citing Eurostat: the strongest secondary source on this file's regional figures, still secondary.
+🟢 **The AI Act makes the obligations uniform; it does not make the readiness uniform.** Price,
+stage and staff an EMEA engagement off the member state, not off the region. 🔵 `p416` re-ran the
+EMEA regulatory leg and it returned the **2027-12-02** Annex III deferral independently —
+corroboration of a figure this base reached first, and the Official-Journal check flagged above
+remains outstanding, because two secondary sources do not make a primary one.
+
 ### APAC
 
 🟢 **Policy, measured.** Four different regimes, not one: **South Korea** has a general AI law in
@@ -125,6 +211,14 @@ Bloom (MIT), pyKT (MIT), educhain (MIT, India), Sunbird (MIT, India). An APAC en
 almost entirely from in-region, permissively-licensed code. Build content-provenance labelling in
 from the first sprint — it is required in both China and India, and it is far cheaper as a design
 constraint than as a retrofit.
+
+🔵 **`p416`: nothing unshelved on the APAC leg.** It returned vendor sizing (**~$592M in 2024 →
+~$1.85B by 2029, 20.9% CAGR**) and the fragmentation point this block already carries. 🟢 The supply
+advantage above was re-confirmed first-hand today instead: `ai-shifu` (**Apache-2.0, 326★**, Research
+Center of Intelligent Software Engineering, Harbin Institute of Technology) and `pykt-toolkit`
+(**MIT, 451★**) both read clean, as did `pyedmine` (MIT, 82★) and `EduStudio` (MIT, 79★). 🔴 Note the
+concentration while you sell it: the whole knowledge-tracing research tier on these shelves is
+China-origin, and a client will find that in the dependency tree whether or not you say it first.
 
 ### LATAM
 
@@ -153,6 +247,16 @@ open-weight inference for cost and data residency. 🔵 And the gap itself is th
 team that publishes the first credible Spanish/Portuguese education agent is available**, and it
 costs a fraction of what the equivalent position in NA or APAC would.
 
+🔵 **`p416` reframes the gap: it is not "none was built", it is "the one that was built is frozen".**
+[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) — **Apache-2.0, 582★, Portuguese
+README**, a programming-teaching platform — was re-read first-hand today and is **archived by its
+owner since `2024-12-12`, read-only**. 🔴 So the fifth consecutive nil on the Spanish/Portuguese legs
+sits next to a real, permissively-licensed, 582-star LATAM artefact that nobody maintains. 🟢 That
+changes the pitch from *build the first* to **the first already exists and is unowned**: an
+Apache-2.0 fork with a public maintenance commitment is cheaper, faster and more defensible as a
+regional position than a greenfield agent, and it inherits the stars, the history and the Portuguese
+content rather than starting at zero the way `agente-educativo-psicocognitivo` does.
+
 ### Global
 
 🟢 **What holds everywhere.** Buyers have moved from "can it generate" to "can you evidence it"
@@ -161,6 +265,17 @@ four regions: **permissive agent layer, copyleft platform underneath, MCP as the
 them.** That single architectural choice is what makes one codebase sellable in all four regulatory
 regimes — Article 50 disclosure in EMEA, provenance labelling in APAC, audit logs in North America
 and offline operation in LATAM are then four configurations of one system, not four products.
+
+🔵 **`p416`: the composition rule gains a SECOND boundary.** MCP is the boundary between the agent
+layer and the platform. **The package format is the boundary between the content layer and the
+platform** — and as of today these shelves hold a readable permissive emitter for it,
+[`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) (**MIT**, 849★, SCORM 1.2 /
+2004). 🟢 An artefact that leaves the build as a SCORM package installs through a door the client's
+LMS already has open: Moodle takes it as a core activity, Canvas and OpenOLAT import it. 🟡 Open edX
+needs a community `scormxblock` first, and Kolibri's pipeline is its own — 🟡 the ingest side was not
+re-read first-hand this pass, so confirm against the client's actual version before it reaches a
+statement of work. 🔴 And state the ceiling in the first conversation, not the third: **SCORM carries
+completion, score and time and nothing about mastery, affect or trajectory.**
 
 ## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
 

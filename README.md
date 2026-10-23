@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 416 — reads and commit both 2026-10-23 — **SIXTY-EIGHT ADDRESSES ACROSS FOUR DISCOVERY LEGS RETURNED EXACTLY ONE UNSHELVED IN-DOMAIN REPOSITORY — AND IT CLOSES A SCARCITY THIS BASE DECLARED BY NAME. 🟢 `DozenTwelve/Papermorph` IS MIT, READABLE, AND EMITS SCORM 1.2/2004, WHERE THE SHELF'S ONLY PRIOR SCORM EMITTER IS SOURCE-CLOSED. 🔴 AND `p415`'s "ONE HUB AND NO MIDDLE" IS REFUTED BY FOUR MIDDLE-TIER ADDRESSES ALREADY ON `agents/top.md` ITSELF.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates: 50 / 51 → 48 / 51 → 50 / 51.** Green on arrival, equal to `p413`–`p415`; 🔴 this
+pass's own shelf writes then turned `gate-census-currency` and `gate-union-currency` red, because the
+published triple no longer matched the live shelves; 🟢 re-derived and **restated rather than
+back-dated**, back to 50 / 51. The lone remaining red is `gate-census-union` control 24,
+**`Gap 400-B`**, deliberately red since `p398`. 🔴 **Honest deviation:** the first run was started in
+parallel with the first research leg, not strictly before it as `p412`'s standing rule requires.
+
+### 🔴 What this pass overturned
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **`p415`'s headline is refuted by `p415`'s own file.** It concluded *"the agent field has one hub and no middle."* Four addresses read first-hand today sit in that middle and **all four were already shelved before `p415` wrote** — `CaviraOSS/PageLM` (**2.0k★**), `classroomio/classroomio` (**1.7k★**, AGPL-3.0), `ai-shifu/ai-shifu` (**326★**, Apache-2.0, recorded at `agents/top.md:1597`, `:1845`, `:2187`) and `GeminiLight/gen-mentor` (**133★**, CC0-1.0). 🔴 No threshold explains the omission: the table included rows at **96★**, **53★** and **0★**, and included an AGPL-3.0 row. 🟢 "No middle" was a property of a hand-picked table published as a property of the field |
+| 2 | 🟢 **A declared scarcity is CLOSED rather than re-declared.** `agents/top.md:1815` records SCORM support as *"genuinely scarce in permissive open source"* while pointing at a **source-closed** package; `agents/trending.md:5080` records *"No SCORM result at all"* from a leg that named SCORM explicitly. [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) — 🟢 **MIT**, `main/LICENSE` **`1 069` B** `sha256:41857092247a`, **849★** — packages to **SCORM 1.2 / 2004** via `scripts/scorm.py`. These shelves now hold the tier in both directions under MIT at both ends |
+| 3 | 🔴 **Four carried star figures re-measured, and ONE WENT DOWN.** `cn-math-taxonomy` `1 704` → **2.8k**; `claudemy` `338` → **403**; `frametell` `356` → **391**; 🔵 `gen-mentor` `135` → **133**. A base that only ever revises a count upward is extrapolating, not measuring |
+| 4 | 🔵 **The LATAM gap changes shape.** Fifth consecutive nil on the Spanish/Portuguese legs — but `menthorlabs/menthor` (**Apache-2.0, 582★, Portuguese**) was re-read today and is **archived by its owner since `2024-12-12`**. The gap is not *"none was built"*; it is *"the one that was built is unowned"*, which is a cheaper regional position to take than greenfield |
+| 5 | 🔴 **The GitHub topic surface is saturated, and rotating the query does not rotate the supply.** `p415` harvested `ai-tutor` and `education-ai`; `p416` used `intelligent-tutoring-system` and `knowledge-tracing` instead — **40 addresses, 40 already shelved, zero new.** The one new address came from `edtech`, found by **output format** rather than by topic |
+| 6 | 🔵 **A well-behaved second grant, for once.** `Papermorph`'s README names its vendored exception with its path and family — *"bundled MathJax (`engine/vendor/mathjax`) is under the Apache License 2.0"* — the opposite of `education-agent-skills`, whose second grant `p414` had to dig out. 🔴 Its MIT holder line, however, reads `Copyright (c) 2026 TedKaczynski`: a handle, not a legal entity. Family clean, **assignor unattributable** |
+
+### 🟢 Confirmations, recorded because a confirmation is a measurement
+
+`aaryansamanta/ai-ethos` **498★ and still NO LICENCE** · `canyongbs/advisingapp` **Elastic-2.0, 340★**
+· `menthorlabs/menthor` **archived `2024-12-12`** · `pykt-toolkit` MIT **451** · `tsugi` Apache-2.0
+**376** · `scorm-again` MIT **357** · `pyedmine` MIT **82** · `EduStudio` MIT **79** · `fsrs4anki`
+MIT **4.1k**. 🔵 One increment on `PageLM`: its non-OSI document is named **two different ways on
+the same page** — "CaviraOSS Community License" in the body, "PageLM Community License" on the badge.
+
+### 🔴 Declared gaps, re-tested rather than re-asserted
+
+**No permissive education ERP** — the literal ERP/CRM leg returns one address, **OpenEduCat**, and it
+is **LGPL-3.0**. **No LATAM-origin agent with traction** (fifth pass). **No EMEA education agent at
+scale** — the only EMEA-origin address the legs surfaced is `thm-mni-ii/feedbacksystem`
+(**Apache-2.0, 24★**, Technische Hochschule Mittelhessen): good provenance, real pedagogy, no scale.
+**No authoritative 2026 ranking of education-specific agents.** 🔵 The EU AI Act deferral of Annex
+III education to **2027-12-02** came back on today's EMEA leg too — **corroboration of a figure this
+base already holds**, still secondary, still unverified against the Official Journal.
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 752** harvested shapes → **38** are not addresses →
+**2 714 addresses**. 🔵 **2 714** channel-U addresses and **3 179** channel-B survivors give
+**3 549 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🟢 **The delta.** Against `p415`'s published triple (**2 744 / 35 / 2 709**, union **3 544**) the
+address count moved **+5** and the union **+5**; harvested shapes moved **+8** and rejections **+3**.
+🔵 **The three new rejections are this pass's own URLs**, correctly refused:
+`topics/intelligent-tutoring-system`, `topics/knowledge-tracing` and `search/repositories` are
+GitHub **navigation namespaces**, not repositories, and `p351`'s `NAV-NAMESPACE` class caught all
+three without being asked. 🟢 That is the shape gate doing the job it was built for — a pass that
+harvests topic pages inflates the denominator unless something rejects them, and something did.
+
+🔵 **Five addresses for sixty-eight read is the honest ratio, and it is the finding, not a
+shortfall.** One (`DozenTwelve/Papermorph`) is a new in-domain repository; four
+(`natolambert/colloquium`, `Sri-Krishna-V/awesome-adk-agents`, `ystemsrx/sql-to-ER`,
+`opena2a-org/damn-vulnerable-ai-agent`) entered as **licence-read, named, and deliberately NOT
+shelved as education** — recorded so the next pass recognises them as already-judged.
+🔴 `Gap 400-B` stays red: `NAME-DOT-RUN` still cannot fire, and `p387-G` forbids closing it by
+weakening a control.
+
+
 ## Pass 415 — reads and commit both 2026-10-23 — **STARS ARE NOT UNVERIFIABLE ON THIS ENVIRONMENT — `p414` CLOSED THAT QUESTION ON THE WRONG CHANNEL. 🟢 FIFTEEN AGENT ADDRESSES AND NINE FOUNDATIONS RE-READ FIRST-HAND, AND THREE CARRIED FIGURES ARE REFUTED — ONE BY 31×. 🔴 AND THE AGENT FIELD HAS ONE HUB AND NO MIDDLE.**
 
 🔵 **Dating note.** Every search leg, licence read and gate run below was executed on **2026-10-23**,

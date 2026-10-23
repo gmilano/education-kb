@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🔴 Four discovery legs, 68 addresses, 63 already here — the trending surface is saturated for this base
+
+🔵 Every address below was checked against the shelves with a literal `grep -rF`, not from memory.
+The denominators are stated because a yield without one is a boast.
+
+| Leg | returned | shelved | unshelved | in-domain new |
+|---|---|---|---|---|
+| topic `intelligent-tutoring-system` *(top 20 of 41)* | 20 | **20** | 0 | 0 |
+| topic `knowledge-tracing` *(top 20 of 100)* | 20 | **20** | 0 | 0 |
+| topic `edtech` *(top 20)* | 20 | 19 | 1 | 🟢 **1** |
+| search `education agent pushed:>2026-09-01 stars:>80` *(10 of 15)* | 10 | 6 | 4 | 🔴 0 |
+| **total** | **68** | **63 (92.6%)** | **5** | **1 (1.5%)** |
+
+🟢 **`p416` deliberately rotated the topic pages.** `p415` harvested `ai-tutor` and `education-ai`;
+this pass used `intelligent-tutoring-system` and `knowledge-tracing` instead, to test whether the nil
+yield was a property of the *topics* or of the *base*. 🔴 **It is the base.** Two fresh topic pages,
+forty addresses, zero unshelved. Rotating the query does not rotate the supply.
+
+🔵 **Consequence for a successor: stop paying for breadth on GitHub topic pages.** Three passes of
+evidence now say the in-domain GitHub surface above ~50★ is held. The remaining yield is in
+(a) **packaging formats** — which is how `Papermorph` was found, on `edtech` rather than on any
+tutor topic, (b) **registries other than GitHub** (`p393`'s PyPI work, npm), and (c) **re-measuring
+what is already here**, which produced four star corrections this pass and three last pass.
+
+### 🟢 The single new repository
+
+[`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) — 🟢 **MIT**
+(`main/LICENSE`, **`1 069` B**, `sha256:41857092247a`, `http=200` via `raw.githubusercontent.com`),
+**849★**, 204 commits, engine tag `engine-v2.1`, English README, 🔵 **region not placed**.
+
+Textbooks become narrated interactive web lessons on a shared static player; stories become
+paper-puppet films; output can be exported as video **or packaged for an LMS as SCORM 1.2 or 2004**
+(`scripts/scorm.py`). 🟢 Declared second grant: bundled MathJax at `engine/vendor/mathjax` under
+**Apache-2.0**, named in the README with its path — the well-behaved version of the subtree-grant
+shape `p414` had to dig out of `education-agent-skills`.
+
+🔴 **Holder caveat:** the MIT payload's copyright line reads `Copyright (c) 2026 TedKaczynski`, a
+handle rather than a legal entity and not the owner's name. Family clean, assignor unattributable.
+
+### 🔴 Off-brief, licence-read, and deliberately NOT shelved as education
+
+`natolambert/colloquium` (🟢 MIT, **354★**, Markdown → academic slide decks — the closest of the
+four), `Sri-Krishna-V/awesome-adk-agents` (🟢 Apache-2.0, **350★**, a curated list),
+`ystemsrx/sql-to-ER` (🔴 AGPL-3.0, **193★**, SQL → ER diagrams), `opena2a-org/damn-vulnerable-ai-agent`
+(🟢 Apache-2.0, **144★**, red-team practice range). 🔵 Named here so the next pass recognises them as
+already-judged rather than as new.
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the

@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🟢 What moved on the agent tier in the week to 2026-10-23 — four legs, sixty-eight addresses, measured yield
+
+🔵 **The yield table is the finding.** Every address each leg returned was checked against these
+shelves with a literal `grep -rF` over `agents/`, `repos/`, `verticals/`, `intel/`, `compose/` and
+`README.md` — not by recollection.
+
+| Leg (all read 2026-10-23) | returned | already shelved | unshelved | unshelved **and in-domain** |
+|---|---|---|---|---|
+| [`github.com/topics/intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) *(top 20 of 41)* | 20 | **20** | 0 | 0 |
+| [`github.com/topics/knowledge-tracing`](https://github.com/topics/knowledge-tracing) *(top 20 of 100)* | 20 | **20** | 0 | 0 |
+| [`github.com/topics/edtech`](https://github.com/topics/edtech) *(top 20)* | 20 | 19 | **1** | 🟢 **1 — `DozenTwelve/Papermorph`** |
+| `github.com/search` · `education agent pushed:>2026-09-01 stars:>80` *(10 of 15)* | 10 | 6 | **4** | 🔴 **0 — all four off-brief** |
+| **Total** | **68** | **63** | **5** | **1** |
+
+🟢 **Two topic pages returned a perfect nil, and that is a result, not a failure.** Forty addresses
+across `intelligent-tutoring-system` and `knowledge-tracing` — every one already on these shelves.
+🔵 `p416` chose those two topics specifically **because `p415` used `ai-tutor` and `education-ai`**;
+rotating the topic did not rotate the supply. The ITS and KT surfaces are saturated for this base.
+
+🔴 **The four unshelved-but-off-brief addresses, named so a successor does not re-spend the leg.**
+Each was licence-read today; none is an education agent, and none should be shelved as one:
+
+| Address | Licence | Stars | Why it is off-brief |
+|---|---|---|---|
+| [`natolambert/colloquium`](https://github.com/natolambert/colloquium) | 🟢 MIT | **354** | Markdown → self-contained HTML slide decks for academic talks. Authoring tooling for *academics*, not a learner-facing system. 🔵 Closest of the four — a legitimate pick if a brief is "lecture material pipeline" |
+| [`Sri-Krishna-V/awesome-adk-agents`](https://github.com/Sri-Krishna-V/awesome-adk-agents) | 🟢 Apache-2.0 | **350** | Curated list of Google ADK agents. A list, not a system |
+| [`ystemsrx/sql-to-ER`](https://github.com/ystemsrx/sql-to-ER) | 🔴 AGPL-3.0 | **193** | SQL/DBML → Chen-model ER diagrams. A developer utility that happens to be teachable |
+| [`opena2a-org/damn-vulnerable-ai-agent`](https://github.com/opena2a-org/damn-vulnerable-ai-agent) | 🟢 Apache-2.0 | **144** | Deliberately insecure agent platform for red-team practice. **Security** training, not education technology |
+
+### 🔴 Star deltas measured this week — and one is negative
+
+| Address | carried | today | delta |
+|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `1 704` → `780` on two different shelf lines | **2.8k** | 🔴 fastest mover measured today; 🔴 **CC BY-NC 4.0**, and its README calls its own content an unreviewed AI-generated draft |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | `338` | **403** | +19% |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | `356` | **391** | +10% |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `135` | **133** | 🔵 **−2** |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `499`/`501` | **498** | 🔵 −1, and **still no licence** |
+
+### 🟢 The new arrival, and the class it belongs to
+
+[`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) — 🟢 **MIT** (`main/LICENSE`,
+**`1 069` B**, `sha256:41857092247a`), **849★**, 204 commits, engine tagged to `engine-v2.1`.
+Textbook → narrated interactive web lesson; story → paper-puppet film; **SCORM 1.2 / 2004 export via
+`scripts/scorm.py`**.
+
+🔵 **It is a *skill*, not a standalone agent** — the same packaging class as `assafkip/claudemy`
+(MIT, 403★), `GarethManning/education-agent-skills` (CC-BY-SA-4.0 pointer), `virgiliojr94/book-to-skill`
+and `KeWang0622/kaogong-skill`, all already shelved. 🟢 **What separates it from every one of them is
+the output format**: the others emit chat, audio or a web page; `Papermorph` emits a **package an
+LMS already knows how to install**. That is the trend worth recording — see `intel/trends.md` this
+pass.
+
+🔴 **Unplaced by region**, honestly: English README, owner handle `DozenTwelve`, no country named,
+and the MIT holder line reads `TedKaczynski` — a handle, not an entity. No region may be inferred
+from any of that.
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the

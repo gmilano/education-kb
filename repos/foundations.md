@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
+
+🔵 **Dating note.** Every search leg, licence read, payload read and gate run below was executed on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twenty-second pass dated
+today**, after `p395`–`p415`.
+
+🟢 **Gates ran three times, and the middle run is the one worth recording: 50 / 51 → 48 / 51 →
+50 / 51.** Green on arrival, equal to `p413`–`p415`. 🔴 **Then this pass's own shelf writes turned
+`gate-census-currency` and `gate-union-currency` red** — the published census triple no longer
+matched the live shelves. 🟢 Re-derived with `make address-shape-census` / `make union-currency` as
+the last act before the commit and **restated rather than back-dated**, per `p352` and `p376`; back
+to 50 / 51. 🔵 The lone remaining red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`; `p387-G` forbids closing it by weakening a control and this pass did
+not try. 🔴 **Honest deviation from `p412`'s standing rule:** the first gate run was started *in
+parallel with* the first research leg, not strictly before it. Nothing below depends on a gate
+result — but the rule says *first*, and this pass did not obey it to the letter.
+
+🔵 **Channel note, re-measured and in agreement with `p414`–`p415`.**
+`curl -sS https://github.com/GeminiLight/gen-mentor` → **`http=403`, 378 B**, and the body is the
+*session's own* refusal (*"GitHub access to this repository is not enabled for this session. Use
+`add_repo`…"*), **not** GitHub's; `https://api.github.com/repos/CaviraOSS/PageLM` returns the
+**identical 378-byte body**. The same addresses read cleanly through `WebFetch`, and
+`raw.githubusercontent.com` serves **`200`** — which is how the byte-level grant read below was
+taken. 🟢 `p414`'s `AUTHZ-REFUSED` class, confirmed a third consecutive pass, on a third pair of
+addresses.
+
+### 🟢 The interoperability layer finally has a PRODUCER, not only consumers
+
+🔵 These shelves have carried the SCORM/LTI interoperability tier for many passes as a **read-side**
+tier: libraries that *play* standards-conformant content inside or outside an LMS. Re-read
+first-hand today, that tier is intact and permissive:
+
+| Repo | Licence (sidebar, read today) | Stars | Role | Direction |
+|---|---|---|---|---|
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | **357** | JavaScript SCORM runtime: SCORM 1.2 and 2004, including Simple-Sequencing-based 2004 sequencing. Runs with any LMS or none | 🔵 **consumes** |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** | **376** | Multi-tenant LTI tool-hosting environment and developer console; implements the IMS ContentItem app store. Apereo Incubating | 🔵 **hosts** |
+| [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT** | *(carried)* | Wraps H5P content so a SCORM-only LMS can run it | 🔵 **adapts** |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** | **4.1k** | FSRS scheduler for Anki plus an optimiser that fits parameters to a real review history | 🔵 **schedules** |
+| 🆕 [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT** — `1 069` B, `sha256:41857092247a` | **849** | Textbook → narrated interactive lesson; **packages as SCORM 1.2 / 2004** (`scripts/scorm.py`); also exports video | 🟢 **PRODUCES** |
+
+🟢 **The asymmetry this closes was declared on these shelves, not invented here.**
+`agents/top.md:1815` records SCORM support as *"genuinely scarce in permissive open source"* while
+pointing at a **source-closed** package; `agents/trending.md:5080` records a leg that named SCORM
+explicitly and returned **"No SCORM result at all."** As of today the tier is complete in both
+directions, under MIT at both ends.
+
+🔵 **Why a producer is worth more than another runtime to a studio.** A runtime is something you ship
+*to* the client's LMS and then support. A producer is something that leaves your build as a **file
+the client's existing LMS already installs** — no integration project, no plugin review, no
+procurement of a new system. That is the difference between an engagement that ends at a handover
+and one that ends at an upload.
+
+### 🟢 The research tier, re-read and unchanged
+
+| Repo | Licence (sidebar, read today) | Stars | What it is |
+|---|---|---|---|
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **451** | PyTorch library for training and benchmarking deep knowledge-tracing models on standardised preprocessing |
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | 🟢 **MIT** | **82** | Unified experimental pipeline across knowledge tracing, cognitive diagnosis, exercise recommendation and learning-path recommendation; `v1.0.0` in its own release table |
+| [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) | 🟢 **MIT** | **79** | PyTorch library for student cognitive modelling (cognitive diagnosis + knowledge tracing), tied to a *Frontiers of Computer Science* 2025 paper. 🔵 Hefei University of Technology by organisation name; the page does not spell it out |
+| [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData) | *(carried)* | **314** | Education datasets with download and preprocessing tooling. 🔴 Last updated **2023-09-26** |
+
+🔴 **One honest note on this tier: it is APAC-concentrated and ageing at the edges.** `pykt-toolkit`,
+`pyedmine` and `EduStudio` are all China-origin and all live; `EduData` has not moved in three years.
+A knowledge-tracing engagement composes entirely from in-region Chinese academic code — which is
+fine under MIT, and worth saying out loud before a client discovers it in a dependency tree.
+
 ## 🆕 `p415` · 2026-10-23 — **The agent tier re-measured FIRST-HAND against the live GitHub sidebars, and three figures this base carried are refuted — one of them by a factor of 31.** 🟢 Fifteen agent addresses and nine foundations read today, every licence taken from the repository's own sidebar. 🔴 AND the read channel matters: `curl` and `api.github.com` are REFUSED for every repository not attached to this session, so a pass that reports "unreachable" from `curl` alone is reporting a fact about the CHANNEL.
 
 🔵 **Dating note.** Every search leg and every licence read below was executed on **2026-10-23**, and the
