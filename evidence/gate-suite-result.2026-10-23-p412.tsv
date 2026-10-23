@@ -1,0 +1,6 @@
+gate	verdict	detail
+(whole suite)	47 of 51 GREEN	make hooks ran to completion under p300's no-masking runner; exit 1 on 4 reds
+gate-author-key	RED	repos/trending.md P349-UNKEYED-AUTHORS "5 authors" - no key named on the line (%ae / %an / identities); the row was written by p411
+gate-census-currency	RED	2 of 3 cells STALE: harvested_folded 2730 published vs 2740 derived; addresses_corrected 2695 vs 2705; rejected_non_addresses 35 MATCH
+gate-census-union	RED	control 24: both new rejection arms must fire on the live shelves; got ['NAME-REF-OR-PATH'], want ['NAME-DOT-RUN','NAME-REF-OR-PATH'] - NAME-DOT-RUN is now dead code carried for a fixture
+gate-union-currency	RED	3 of 3 union cells STALE: channel_u 2695 vs 2705; channel_b_survivors 3157 vs 3169; union_addresses 3529 vs 3540

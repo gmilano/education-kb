@@ -1,0 +1,9 @@
+package	http	version	releases	last_upload	license_field	license_classifier	project_urls	disposition
+openedx-mcp	200	0.1.9	9	2026-10-22	AGPL-3.0	OSI Approved :: GNU Affero General Public License v3	NONE (no Source, no Homepage, no home_page)	Gap 297-R RE-DATED: base carries v0.1.5 / 5 releases from p190 (2026-10-14); still AGPL-3.0 on BOTH PyPI sub-channels so the gap STAYS OPEN; ACTION NL's scope (0.1.1-0.1.5) is stale by 4 releases
+moodle-mcp	200	0.2.1	3	2026-06-29	(empty)	(none)	Homepage github.com/loyaniu/moodle-mcp	CORROBORATION not discovery: base already carries loyaniu/moodle-mcp UNGRANTED by tree enumeration (13 files) and absent pyproject.toml license field; PyPI is a THIRD silent channel agreeing
+canvas-mcp	200	1.14.0	23	2026-10-08	MIT License	OSI Approved :: MIT License	Homepage + Repository + Issues + Documentation	already carried; MIT agrees on both PyPI sub-channels AND names its repository on four URLs - the well-formed control for the two rows above
+brightspace-mcp	404	-	-	-	-	-	-	not a PyPI package; the brightspace family publishes to npm (Gap 386-A), not PyPI
+tutor-mcp	404	-	-	-	-	-	-	p411's new MIT upstream publishes NO PyPI package
+education-mcp	404	-	-	-	-	-	-	absent
+lti-mcp	404	-	-	-	-	-	-	absent
+gradescope-mcp	404	-	-	-	-	-	-	absent

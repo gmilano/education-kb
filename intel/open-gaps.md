@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+## 🆕 `p412` · 2026-10-23 — `Gap 410-C` **REFUTED for the second time**, `Gap 298` **REVERSED on authorship**, and `p411`'s gaps registered because `p411` did not register them
+
+🔴 **Register hygiene first, because it is the reason this section is long.** `p411` wrote eight
+shelves and **left no entry in this file** — the newest pass section was `p410`'s — so the register
+has been one pass stale all day while **three** of this base's own gates sat red. 🟢 This section
+registers **`p411`'s gaps and `p412`'s**, and marks which is which. 🔵 **`Gap 412-A` was drafted and withdrawn:** it restated `Gap 400-B`, which `p398` already diagnosed and this base carries deliberately red.
+
+### 🟢 Refuted this pass — not closed, refuted, and for the second time
+
+| gap | disposition |
+|---|---|
+| `Gap 410-C` — *“`make hooks` unrunnable; census carried forward, not re-derived”* | 🔴 **REFUTED by running it: 47 of 51 gates green.** 🔴 **This base had already refuted the identical claim once**, as `Gap 396-C` at `p397` (*“the repository's python runs here, `make hooks` runs here, and three gates had drifted red with nobody looking”*). `p410` and `p411` re-acquired it and registered it as new. 🔵 **Do not re-register this gap.** If a successor believes `make` cannot run, the first act is to **run it** and publish the transcript — a negative capability claim is self-sealing and this base has now paid for it twice |
+
+### 🔴 Reversed this pass
+
+| gap | disposition |
+|---|---|
+| `Gap 298` | 🔴 **REVERSED on the authorship axis.** `p410` moved the absence to *multi-author* permissive SIS code; `p411` declared it *“answered too — a company, five authors, a container.”* 🔴 Re-derived over full history: `Gego-K12/gegok12` has **3 distinct `%ae`**, not 5 (`5` is the `%an` count), and `devteam@gegok12.com` is a **shared role account with 83 of 123 commits — 67.5 %**. 🟢 Grant, 7 623 paths, container chain and company all hold. 🔴 **State: OPEN on authorship** — one role account plus one human with more than a single commit is not the multi-author evidence the gap asks for. 🔵 The collapse was derivable from `p411`'s own published name list; no new probe was required |
+
+### 🟢 Re-dated first-hand this pass
+
+| gap | disposition |
+|---|---|
+| `Gap 297-R` | 🔴 **STILL OPEN, and re-dated through PyPI** — `blend-ed/openedx-mcp` is now **`v0.1.9`, 9 releases, last upload 2026-10-22 · 1 d**, and still **AGPL-3.0** on both PyPI sub-channels. This base read it at `v0.1.5` / 5 releases from `p190` (**2026-10-14**). 🔴 **Four releases of active maintenance did not change the grant**, so this gap will not close by waiting. 🔴 **Knock-on: `ACTION NL` is under-scoped** — it reads `admin.py` across `0.1.1`–`0.1.5`; there are nine releases |
+
+### 🔴 Registered this pass — `p412`'s own
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 412-B` | 🔴 **`Pattern AI` step 4's AGPL-3.0 reference (`~34 522 B`) is unverified and may carry the same unrecorded-provenance defect as its GPL-3.0 constant.** The GPL-3.0 reference (`~35 141 B`) matches **neither** measured FSF revision (35 147 / 35 149 B). 🔵 Measure AGPL-3.0 in-tree on two addresses and establish whether it, too, is a revision family |
+| 🆕 `Gap 412-C` | 🔴 **`gate-author-key`'s documented directional claim is refuted on a real row.** Its header records that `%an` *“runs BELOW `%ae` on every row measured”*; on `Gego-K12/gegok12` it runs **above** (5 `%an` vs 3 `%ae`), because one email ships three display names including a case variant. 🔵 The claim is a property of the rows it was measured on, not of the keys. The gate itself is sound — only its explanatory comment over-generalises |
+
+### 🔴 Registered this pass — `p411`'s, which `p411` did not register
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 411-A` | 🔴 **The search layer asserts provenance the repository does not declare.** `p411`'s Portuguese leg returned `perazzogringa-coder/plataforma-agentes-ia` stating *“trata-se de um fork de outro repositório”*; neither the README nor the history supports it (clean root 2026-08-01, 6 commits, one author). 🔵 `Gap 395-A` says a licence read cannot tell a fork from an original; **this is the inverse failure** — the search layer inventing lineage — and a 6-commit tree cannot refute it either. 🟢 `Pattern AK`'s full-history clone is the instrument that could |
+| 🆕 `Gap 411-B` | 🔴 **`CC0-1.0` is a fourth licence class this base's vocabulary cannot sort.** `p411` measured two same-named repositories declaring CC0-1.0 at **5 875 B / 4 statutory sections** and **2 207 B / 3 sections** (37.6 %, *Limitations and Disclaimers* absent). 🔵 This base's vocabulary is permissive / copyleft / ECL-2.0; **a public-domain dedication sorts into none of them**, and `SPLIT_FAMILY` is permissive-only (`Gap 410-A`) |
+| 🆕 `Gap 411-C` | 🔴 **A manifest that AGREES with the grant because nobody edited it scores as a second channel.** `Gego-K12/gegok12`'s `composer.json` says `"license": "MIT"` and its `"name"` is `laravel/laravel` — the unedited Laravel skeleton, whose MIT is *Laravel's*. 🟢 `p411` wrote the repair (`Pattern AJ` Amendment 2, step 5a); **the gate that counts channels has not been taught it**, so a channel-counting gate still scores this address at its strongest verdict on one real channel |
+
+### 🟢 Gap register — state after this pass
+
+| gap | state |
+|---|---|
+| `Gap 297-R` | 🔴 open — and re-dated: `blend-ed/openedx-mcp` **AGPL-3.0 at `v0.1.9`**, 9 releases, 1 d old; four releases, no licence change |
+| `Gap 298` | 🔴 **open on AUTHORSHIP** — reversed this pass; `gegok12` is **3 `%ae`** with a 67.5 % role account, not 5 authors |
+| `Gap 386-A` | 🔴 open — unmoved this pass; **PyPI cannot re-date it** (`brightspace-mcp` is `404`; the family publishes to npm) |
+| `Gap 386-C` | 🟢 closed at `p387` |
+| `Gap 405-A` | 🔴 open — unmoved, and named so it cannot look worked: still no permissive vertical platform with institutional backing |
+| `Gap 410-A` | 🔴 open — `SPLIT_FAMILY` is permissive-only; `is_grant_path("LICENSE-AGPL")` is `False` |
+| `Gap 410-B` | 🔴 open — payload-size-to-named-licence floor still unmeasured; **50 % remains a placeholder**. 🔵 `p412` narrowed the *denominator* question (Amendment 5) but **not** the floor |
+| `Gap 410-C` | 🟢 **REFUTED** — `make hooks` runs; 47/51 green. Do not re-register |
+| 🆕 `Gap 411-A` | 🔴 open — search layer invents provenance (inverse of `Gap 395-A`) |
+| 🆕 `Gap 411-B` | 🔴 open — `CC0-1.0` sorts into no family in this base's vocabulary |
+| 🆕 `Gap 411-C` | 🔴 open — vendored-skeleton manifest still counts as a channel in the gates |
+| `Gap 400-B` | 🔴 open — `gate-census-union` control 24, carried deliberately red since `p398`; **not re-registered by `p412`**, which nearly did |
+| 🆕 `Gap 412-B` | 🔴 open — AGPL-3.0 reference size unverified |
+| 🆕 `Gap 412-C` | 🔴 open — `gate-author-key`'s directional comment over-generalises |
+
+### 🔴 For the successor — ranked, and the first item is one command
+
+1. 🟢 **Run `make hooks` BEFORE you research, not after.** It takes minutes and it is the only
+   thing that tells you what the previous pass broke. `p412` found a red gate that `p411` created
+   and could not see. 🔴 **If you are about to write that `make` cannot run here, run it first.**
+2. 🔴 **Three reds remain and they are all in the census family** — `gate-census-currency`,
+   `gate-census-union`, `gate-union-currency`. 🟢 Two go green by re-deriving as the last act
+   before the commit (`make address-shape-census`, `make union-currency`), which `p412` did;
+   **`gate-census-union` is `Gap 400-B`** — diagnosed at `p398`, carried deliberately red, and it will **not** go green by re-derivation. 🔵 `p387-G` forbids closing it by weakening a control, so do not try.
+3. 🔴 **Do not re-ask the English regional legs.** Four consecutive passes, one hit, and that hit
+   was a correction to this base's own row. 🟢 Spend the regional budget on **in-language** legs
+   (Spanish broke `p395`, Portuguese broke `p410` and `p411`) or on **registry channels**
+   (PyPI broke `p412`).
+4. 🟢 **PyPI is now a worked channel, and it has more to give.** `p412` spent 8 probes. The
+   obvious next sweep: every education address on these shelves that ships a Python package,
+   cross-read `license` field × OSI classifier × in-tree payload — three channels where this base
+   usually has two.
+5. 🔴 **`Pattern AK` needs a full clone and the shelves have ~2 705 addresses.** Do not sweep it
+   blindly; run it on the addresses this base *recommends*, where a wrong bus-factor claim reaches
+   a client.
+
 ## 🆕 `p410` · 2026-10-23 — a **874-byte “Apache License”** that is a notice, a dual grant whose **copyleft half is 302 bytes**, and this base's own **permissive-only** split-family vocabulary
 
 🔵 **Dating note.** Every search leg, clone, licence read and registry query below was run on

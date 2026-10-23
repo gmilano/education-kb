@@ -1,0 +1,4 @@
+slug	commits	distinct_ae	distinct_an	ae_identity	ae_commits	an_names_on_that_ae	note
+Gego-K12/gegok12	123	3	5	devteam@gegok12.com	83	Devteam	shared ROLE account - 67.5 pct of all commits
+Gego-K12/gegok12	123	3	5	karthick@gegosoft.com	39	Karthick (34); GegoSoft (4); karthick (1)	ONE email under THREE display names, one of them a case variant
+Gego-K12/gegok12	123	3	5	abinaya@gegosoft.com	1	AbinayaVelaMothilal	single-commit contributor

@@ -3,6 +3,115 @@ industry: education
 region: Global
 updated: 2026-10-23
 ---
+## 🆕 `p412` · 2026-10-23 — **`make hooks` RUNS**, the pass that declared it unrunnable is the pass that **broke a gate**, **“5 authors” is `%an` and collapses to 3**, and the GPL-3.0 denominator spread is **two FSF revisions, not noise**
+
+🔵 **Dating note.** Every search leg, clone, licence read, registry probe and gate run below was
+executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the eighteenth pass
+dated today**, after `p395`–`p411`.
+
+🟢 **Channel note — and the headline is a channel REFUTATION.** `make hooks` **RAN TO COMPLETION
+this pass: 47 of 51 gates green** under `p300`'s no-masking runner. 🔴 **`Gap 410-C` (“`make hooks`
+unrunnable”) is therefore REFUTED, not closed** — and this is the **second** time this base has had
+to refute it: `p397` already disposed of the identical belief as `Gap 396-C`, recording that *“the
+repository's python runs here, `make hooks` runs here, and three gates had drifted red with nobody
+looking.”* 🔴 **`p410` and `p411` re-acquired a belief this base had already disproved**, and the
+cost was **three consecutive passes of gate blindness**. Measured this pass:
+
+| channel | `p411` reading | `p412` reading | note |
+|---|---|---|---|
+| `make hooks` | 🔴 declared unrunnable | 🟢 **47/51 green on the first run, 50/51 after repair** | 🔴 **the central claim of the last two passes, refuted by running it.** The lone remaining red is `gate-census-union` control 24 = **`Gap 400-B`**, carried deliberately red since `p398` |
+| `api.github.com` | `403` | 🔴 `403` | unchanged for a third pass |
+| `github.com` HTML | `403` | 🔴 `403` | reproduces `p411` |
+| `git` smart-HTTP | works | 🟢 works | `ls-remote moodle/moodle HEAD` = `46c042e7da65f8cb2ec7dc19f46566ce61a393e1`; every grant below is read this way |
+| npm registry | `200` | 🟢 `200` | second registry channel |
+| **PyPI** | `200`, recorded as **unused** | 🟢 **`200`, and USED this pass** | 🆕 `p411` noted the channel and did not spend it; this pass does — see the PyPI rows |
+| `gnu.org` | `000` — `connect_rejected` | 🔴 `000` | 🆕 **mechanism refined:** `curl (56) CONNECT tunnel failed, response 403` — the **proxy** refuses the tunnel; the host never answers |
+| `oecd.org`, `eur-lex.europa.eu` | `000` | 🔴 `000` | same proxy mechanism; every policy figure stays band `reported` |
+| `apache.org` LICENSE-2.0.txt | `11 358 B` | 🟢 **`11 358 B`** | **third** consecutive pass reproducing the exact byte count |
+
+🔴 **This is a GATE-AND-CORRECTION pass, and the supply brief is exhausted on BOTH halves.** Eight
+legs ran — four global, four regional. 🔴 **The four global supply legs returned seven addresses and
+this base already carries every one of them** (`withmarbleapp/os-taxonomy`, `karpathy/nanochat`,
+`frappe/education`, `Gego-K12/gegok12`, `ashishpatel26/500-AI-Agents-Projects`,
+`luongnv89/claude-howto`, Nous Research's `hermes-agent`); the only unshelved shape was
+`HuggerHustle/ai-radar`, a general AI-trend issue tracker and **not education supply**. 🔴 **The four
+regional legs returned ZERO unshelved facts for a FOURTH consecutive pass.** 🔵 So `p409`–`p411`'s
+regional reading now holds four passes deep, and `p411`'s *“supply is exhausted only in the wording
+`p408` used”* does **not** reproduce: the ERP/CRM/SIS wording that paid at `p410` and `p411` returned
+nothing new this pass.
+
+**Evidence:** [`gate-suite-result`](../evidence/gate-suite-result.2026-10-23-p412.tsv) (5 rows) ·
+[`author-key-rederivation`](../evidence/author-key-rederivation.2026-10-23-p412.tsv) (3 rows) ·
+[`gpl3-revision-pair`](../evidence/gpl3-revision-pair.2026-10-23-p412.tsv) (4 rows) ·
+[`pypi-channel-probe`](../evidence/pypi-channel-probe.2026-10-23-p412.tsv) (8 rows) ·
+[`channel-reachability`](../evidence/channel-reachability.2026-10-23-p412.tsv) (10 rows) ·
+[`regional-leg-yield`](../evidence/regional-leg-yield.2026-10-23-p412.tsv) (4 rows).
+
+### 🟢 What this pass found
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **`make hooks` runs, and the two passes that said otherwise left a gate RED behind them.** 47/51 green. The four reds: `gate-author-key`, `gate-census-currency`, `gate-census-union`, `gate-union-currency`. 🔴 **`gate-author-key` was broken by `p411` itself** — the row it wrote at `repos/trending.md` published *“123 commits, 5 authors”* naming **neither `%ae` nor `%an`**, which is precisely what `ACTION ZZ-ac` exists to forbid. 🔵 A pass that declines to run the gates cannot see the gate it breaks; that is the whole mechanism, and it is now measured rather than argued |
+| 2 | 🔴 **“5 authors” is the `%an` count. By `%ae` it is 3 — and `p411` published the list that refutes it.** `Gego-K12/gegok12`, full history re-derived this pass: **123 commits, 3 distinct `%ae`, 5 distinct `%an`**. `karthick@gegosoft.com` ships under **three** display names (`Karthick` 34, `GegoSoft` 4, `karthick` 1 = **39**, exact). 🔴 `devteam@gegok12.com` is a **shared ROLE account carrying 83 of 123 commits (67.5 %)**. 🔵 **No new probe was needed:** `repos/foundations.md` already carried all five names *and their counts*, so the collapse was derivable from this base's own published cell |
+| 3 | 🔴 **`Gap 298` does NOT close on authorship, and the `p410`→`p411` narrowing is reversed.** `p410` moved the absence to *multi-author* permissive SIS code; `p411` declared that *“answered too — a company, five authors, a container.”* 🔴 On the keyed figure it is **one role account plus one human with more than a single commit**. 🔵 The MIT grant, the 7 623 paths, the container chain and the company are all real and unaffected — **what fails is the authorship inference alone**, and with it `Pattern AH`'s second justification |
+| 4 | 🟢 **The GPL-3.0 “denominator spread” is NOT noise, needs NO authoritative remote channel, and resolves to a two-value lookup.** `p411` measured 35 141 / 35 147 / 35 149 B and concluded that with `gnu.org` unreachable *“no authoritative denominator exists on this channel at all.”* 🟢 **Measured in-tree this pass: `moodle/moodle` `COPYING.txt` = 35 147 B and `frappe/erpnext` `license.txt` = 35 149 B differ on EXACTLY FOUR LINES, every one a URL-scheme modernisation**, and the arithmetic closes exactly: three lines gain **+1 B** (`http:`→`https:`), the fourth gains +1 and loses 2 (`philosophy/why-not-lgpl.html` → `licenses/why-not-lgpl.html`) ⇒ **35 147 + 2 = 35 149** ✔. Both are **674 lines** with **zero CR bytes**, so neither line count nor line endings discriminate — **the URL scheme does, and one grep reads it** |
+| 5 | 🔴 **`Pattern AI` step 4's own `~35 141 B` reference matches NEITHER measured revision.** It sits **6 B below** the `http` revision, and its provenance is unrecorded. 🔵 So the gate's denominator was never the FSF text at either revision; it is a third value this base has been quoting as canonical. 🟢 Repaired as **`Pattern AJ` Amendment 5** — which *sharpens* `p411`'s Amendment 3 rather than replacing it: two significant figures is the right floor, but the denominator is now **selectable in-tree** instead of unsourced |
+| 6 | 🟢 **PyPI worked, and it re-dates `Gap 297-R` through a channel that answers while GitHub is `403`.** `blend-ed/openedx-mcp` on PyPI: **v0.1.9, 9 releases, last upload 2026-10-22 · 1 d**, **AGPL-3.0** on *both* PyPI sub-channels (`license` field and OSI classifier). 🔴 This base reads it at **v0.1.5, 5 releases**, from `p190` evidence dated **2026-10-14**. 🟢 **`Gap 297-R` STAYS OPEN — the licence has not moved** — but **`ACTION NL`'s scope (`0.1.1`–`0.1.5`) is stale by four releases** |
+| 7 | 🔴 **A PyPI record that names NO repository at all — `p280`'s unattributable class, second instance, now on a second registry.** `openedx-mcp` publishes **no `project_urls` and no `home_page`**, so PyPI alone cannot link the package to `blend-ed/openedx-mcp`; that linkage comes entirely from another channel. 🔵 `p411` recorded the same class on npm (`repos/trending.md` — *“no `repository` field … live, recent and unauditable”*). 🟢 `canvas-mcp` is the well-formed control in the same probe: MIT on both sub-channels **and four URLs naming its repository** |
+| 8 | 🔵 **A third channel agreeing with an absence — recorded as a corroboration, not a discovery.** `loyaniu/moodle-mcp` on PyPI (**v0.2.1, 3 releases, last upload 2026-06-29**) has an **empty `license` field and zero License classifiers**. 🟢 This base already carries it `UNGRANTED` by full-tree enumeration (13 files) *and* by an absent `pyproject.toml` licence field; PyPI is now the **third** independent silent channel. 🔵 Marked as corroboration because `gate-absence` exists to stop exactly this being re-published as a find |
+| 9 | 🔵 **`gate-census-union` control 24 is red, and it is NOT a new gap — this pass’s first draft nearly re-registered it.** The control wants both rejection arms to fire on the live shelves; `NAME-REF-OR-PATH` fires and `NAME-DOT-RUN` does not. 🟢 **That is `Gap 400-B`, diagnosed at `p398`** (`p382` duplicated `p375`’s rule upstream and made the audited arm unreachable) and **carried deliberately red ever since** — `p409` recorded it as *“a sixth pass”*. 🔴 Writing it up as `Gap 412-A` would have been exactly the restated-absence defect `gate-absence` exists to catch; caught here before the commit, and recorded because the near-miss is the useful part |
+| 10 | 🔴 **`p411` left NO entry in the gap register.** `intel/open-gaps.md`'s newest pass section is **`p410`**, so the register has been one pass stale all day while three of this base's own gates were red. 🟢 Repaired below: `p412` registers its own gaps **and** `p411`'s |
+
+### 🔴 Trending this pass — nothing new, and one row CORRECTED where the gate caught it
+
+🔴 **Nil new repository supply.** The four global legs returned seven addresses and this base
+carries all seven; the only unshelved shape, `HuggerHustle/ai-radar`, is a general AI-trend issue
+tracker and **not education supply**, so it is recorded here and not shelved as one.
+
+🔴 **The correction that matters is on a row THIS FILE published last pass.** `gate-author-key`
+(`ACTION ZZ-ac`) went **RED** on the `Gego-K12/gegok12` row above, which read *“123 commits,
+5 authors”* naming neither `%ae` nor `%an`. 🔵 The gate exists because *“the figure was never wrong, it was
+UNNAMED, and an unnamed figure is indistinguishable from a wrong one to anybody holding a different
+key.”* 🔴 **Here it was both:** re-derived over full history, the repository has **3 distinct
+`%ae`** and 5 distinct `%an`, because `karthick@gegosoft.com` ships under three display names
+(`Karthick` 34, `GegoSoft` 4, `karthick` 1 = 39, exact).
+
+🔴 **And the gate's own documented hazard runs the OTHER WAY on this row.** `gate-author-key`'s
+header records that `%an` *“runs BELOW `%ae` on every row measured,”* so a successor pushed toward
+`%an` by `p346`'s PII refusal would publish cells that read as **inflated**. 🟢 **On `gegok12`,
+`%an` (5) runs ABOVE `%ae` (3)** — the opposite direction — because the mechanism here is not
+privacy, it is **one identity fragmenting across display names, including a case variant**. 🔵 That
+is `p283`/`p348`'s case-fold class reappearing on the **author** axis, and it means the instrument's
+directional claim is a property of the rows it was measured on, not of the keys. Registered as
+`Gap 412-C`.
+
+🟢 **Gate state after the correction:** `gate-author-key` re-run and **GREEN**, `0` findings over
+the live shelves. 🔵 The inherited backlog is unchanged and still named: **71 unkeyed author lines
+of 83 total** across the shelves (`make author-key-census`), which the gate deliberately does not
+police outside the newest pass section.
+
+### 🟢 The census, RE-DERIVED — and `p411`'s predicted delta is refuted
+
+🟢 **For the first time in three passes the census is derived rather than carried**, because
+`make` runs. 🔴 **`p411` told its successor to “expect **+23** on the address count from `p410` and
+`p411` together.” The measured delta is less than half that:**
+
+| cifra | published (`p409`, carried by `p410`–`p411`) | derived `p412` | delta | verdict |
+|---|---|---|---|---|
+| `harvested_folded` | 2 730 | **2 740** | **+10** | 🔴 was STALE |
+| `rejected_non_addresses` | 35 | **35** | 0 | 🟢 MATCH |
+| `addresses_corrected` | 2 695 | **2 705** | **+10** | 🔴 was STALE |
+| `channel_u` | 2 695 | **2 705** | **+10** | 🔴 was STALE |
+| `channel_b_survivors` | 3 157 | **3 170** | **+13** | 🔴 was STALE |
+| `union_addresses` | 3 529 | **3 541** | **+12** | 🔴 was STALE |
+
+🔴 **So `p411`'s `+23` prediction is refuted by measurement: the address count moved `+10` and the
+union `+12`.** 🔵 The prediction was formed by **counting what the two passes shelved** (8 + 15);
+the census counts **addresses the instrument can resolve**, and the two are not the same quantity.
+That gap — shelved rows versus resolvable addresses — is the thing a successor should not re-predict
+by addition. 🟢 The figures above are restated from a re-derivation run as the **last act before
+the commit**, per `p352`'s and `p376`'s own instruction, and **history is not edited to match**.
+
 ## 🆕 `p411` · 2026-10-23 — a **19-byte “GNU GPL V3”**, a manifest that **agrees with the grant and proves nothing**, and a fork pair separated by **commit-subset** where byte-identical licences could not
 
 🔵 **Dating note.** Every search leg, clone, licence read and registry probe below was run on
@@ -62,7 +171,7 @@ this pass were the **ERP/CRM/SIS** wording (again, as at `p410`) and the **Portu
 
 | what moved | measured | why it matters |
 |---|---|---|
-| 🟢 **A maintained, company-backed MIT school ERP/SIS** — [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12), `LICENSE` **1 150 B**, HEAD `99da145` **2026-06-25 · 🔴 120 d** | **7 623 tracked paths** · Laravel 12 / PHP 8.4 · **123 commits, 5 authors** · full chain: `composer.json` 4 644 B, `Dockerfile` 1 108 B, `docker-compose.yml` 1 609 B, `artisan`, `phpunit.xml`, `.env.example` | 🟢 **`Gap 298` moves a third time.** `p409`: permissive SIS grants sit on dead code. `p410`: one exists, the absence is **authorship**. 🟢 **`p411`: authorship is answered too** — a company, five authors, a container. 🔴 **What is left is currency (120 d) and OPEN-CORE scope**, which is an SOW item, not a risk-register item |
+| 🟢 **A maintained, company-backed MIT school ERP/SIS** — [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12), `LICENSE` **1 150 B**, HEAD `99da145` **2026-06-25 · 🔴 120 d** | **7 623 tracked paths** · Laravel 12 / PHP 8.4 · **123 commits · 3 authors by `%ae`** 🔴 *(`p412`: this cell read "5 authors" unkeyed; 5 is the `%an` count and it COLLAPSES to 3 distinct `%ae` — corrected in place, history not edited elsewhere)* · full chain: `composer.json` 4 644 B, `Dockerfile` 1 108 B, `docker-compose.yml` 1 609 B, `artisan`, `phpunit.xml`, `.env.example` | 🟢 **`Gap 298` moves a third time.** `p409`: permissive SIS grants sit on dead code. `p410`: one exists, the absence is **authorship**. 🔴 **`p411`: authorship is NOT answered — refuted by `p412`.** A company, a container, and **3 `%ae` identities, not 5**: `devteam@gegok12.com` is a shared ROLE account carrying **83 of 123 commits (67.5 %)**. 🔴 **What is left is currency (120 d) and OPEN-CORE scope**, which is an SOW item, not a risk-register item |
 | 🔴 **The thinnest grant on these shelves, by two orders of magnitude** — [`frappe/education`](https://github.com/frappe/education), ref **`develop`**, HEAD `73ce33e` **2026-10-13 · 10 d** | `license.txt` = `License: GNU GPL V3`, **19 B** against GPL-3.0's **35 147 B** = **0.054 %**; the **only** licence-shaped path at any depth; **no `license` field in any manifest** | 🔴 `p410`'s thinnest was 874 B at 7.7 % — **this is 142× thinner**. 🟢 **And it resolves rather than alarms:** three sibling repos in the same org ship full payloads with agreeing manifests, so the 19 bytes are a **shortcut, not a concealment** |
 | 🟢 **The Frappe family read end to end — four repos, four grant shapes** | [`frappe/frappe`](https://github.com/frappe/frappe) MIT **1 118 B** · [`frappe/erpnext`](https://github.com/frappe/erpnext) GPL-3.0 **35 149 B** · [`frappe/lms`](https://github.com/frappe/lms) AGPL-3.0 **33 893 B** · [`frappe/education`](https://github.com/frappe/education) **19 B** | 🟢 **`frappe/lms` at 33 893 B reproduces this base's `p209` read TO THE BYTE**, 202 passes later — and the *MIT* claim `p209` killed stays killed. 🔵 **The sibling read is the cheapest licence instrument this base has**, and it was never written down |
 | 🔴 **The vendored-grant trap, one order of magnitude up** — `gegok12` | **17 licence-shaped paths, 16 vendored**: `custompackages/brozot/laravel-fcm/LICENSE` + **15 `public/js/<chunk>.js.LICENSE.txt`** webpack banners | 🔴 **`Pattern AI` step 2's prefix list catches NONE of them** — `public/js/` is build output in the served web root, `custompackages/` is a project-local vendor dir. A first-hit reader attributes a **minified bundle's banner** to the platform. 🟢 Fixed in `Pattern AJ` amendment 1 |

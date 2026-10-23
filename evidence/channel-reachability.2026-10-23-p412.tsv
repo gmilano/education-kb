@@ -1,0 +1,10 @@
+channel	p411_reading	p412_reading	mechanism	note
+api.github.com	403	403	HTTP 403, 378 B body	unchanged for a third pass
+github.com HTML	403	403	HTTP 403, 378 B body	reproduces p411's 403 on the HTML surface
+git smart-HTTP	works	works	ls-remote moodle/moodle HEAD = 46c042e7da65f8cb2ec7dc19f46566ce61a393e1	every grant this pass is read this way
+npm registry	200	200	570226 B for brightspace-mcp-server	second registry channel
+PyPI	200 (noted, UNUSED)	200 AND WORKED	17699 B for openedx-mcp	p411 recorded PyPI as a channel it was not using; this pass uses it - see pypi-channel-probe
+gnu.org	000 connect_rejected	000	curl (56) CONNECT tunnel failed, response 403	REFINEMENT: the refusal is the PROXY declining to open the tunnel, not the host answering - p411 recorded only "connect_rejected"
+apache.org LICENSE-2.0.txt	11358 B	11358 B	200	third consecutive pass reproducing the exact byte count
+oecd.org	000 connect_rejected	000	curl (56) CONNECT tunnel failed, response 403	policy hosts still unreadable; every policy figure stays band "reported"
+eur-lex.europa.eu	000 connect_rejected	000	curl (56) CONNECT tunnel failed, response 403	as above

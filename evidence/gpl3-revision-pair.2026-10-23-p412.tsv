@@ -1,0 +1,5 @@
+source	path	bytes	lines	cr_bytes	http_urls	https_urls	why_not_lgpl_path	revision
+Pattern AI step 4 (p410, carried)	quoted constant ~35141	35141	unrecorded	unrecorded	unrecorded	unrecorded	unrecorded	MATCHES NEITHER measured revision - 6 B below the http one, provenance unrecorded
+moodle/moodle	COPYING.txt	35147	674	0	4	0	philosophy/why-not-lgpl.html	FSF text, http scheme
+frappe/erpnext	license.txt	35149	674	0	0	4	licenses/why-not-lgpl.html	FSF text, https scheme
+(arithmetic)	moodle -> erpnext	+2	0	0	-4	+4	philosophy->licenses	3 lines x (+1 for https) + 1 line (+1 https, -2 philosophy->licenses) = +2; 35147+2=35149 EXACT
