@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p396` · reads and commit both 2026-10-23.** Two patterns, both built on grants and dates
+read first-hand this pass:
+[`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv).
+
+## 🆕 `Pattern AD` — the agent that writes to the institution's record, not just its own memory
+
+**When.** The client needs to show *someone else* — an accreditor, a regulator, a district board, a
+parent — what the AI did and what the learner actually demonstrated. This is every North America K-12
+engagement under Oklahoma-style teacher-review and opt-out rules, every EU deployer under Article 26
+logging, and the governance sale that `intel/market.md` identifies as the LATAM entry point.
+
+🔴 **Why you cannot just use the agent's memory.** `DeepTutor`, `inno-agent` and every other tutoring
+agent on this shelf keep private, vendor-shaped memory designed for conversational continuity. It is
+not an evidence record, it does not survive replacing the agent, and no registrar will read it
+(`T37`).
+
+**Components, all dated this pass.**
+
+| Role | Component | Licence | Age | Note |
+|---|---|---|---|---|
+| Record store (Python shop) | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT | 🟢 10 d | France Université Numérique; Open edX Aspects' own LRS |
+| Record store (JVM shop) | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | 🟢 21 d | 144 ★; SQLite/Postgres/MariaDB/MySQL |
+| Record store (.NET shop) | [`nurullahturkoglu/xapi-dotnet`](https://github.com/nurullahturkoglu/xapi-dotnet) | 🟢 Apache-2.0 | 🟢 1 d | 🔴 0.x, 1 ★ — gate on a conformance run |
+| Platform emitter (Moodle) | [`davidpesce/moodle-logstore_xapi`](https://github.com/davidpesce/moodle-logstore_xapi) | 🔴 GPL-3.0 | 🟢 2 d | 82 ★; GPL because every Moodle plugin is |
+| Agent ↔ LRS bridge | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 MIT | 🔴 **419 d** | **the weak link — see below** |
+| Launch into the LMS | `packbackbooks/lti-1-3-php-library` / `ltijs` / `lti-tool` (`p395`) | 🟢 permissive | 🟢 1–9 d | pick by runtime |
+
+**Wiring.** Agent → MCP (`learnmcp-xapi`) → LRS (`ralph` or `lrsql`); LMS → emitter
+(`moodle-logstore_xapi`) → *the same* LRS; agent launched from the LMS over LTI 1.3 so the learner
+identity on both paths is the same subject. 🔵 **The single design decision that makes this worth
+building:** the agent's statements and the platform's statements land in **one** store against **one**
+identity, so "what did the AI do for this student" and "what did this student do" are one query.
+
+🔴 **Scope this honestly at estimate time.** `learnmcp-xapi` is 15 ★ and has not moved in fourteen
+months. 🟢 It is MIT, it is small, and the xAPI statement shapes it needs are specified — so treat it
+as **a reference to fork and own, budgeted as build, not as a dependency**. Anyone quoting it as
+maintained third-party infrastructure will be wrong by about a year.
+
+**Effort.** 6–8 weeks for a single-LMS, single-agent deployment on an existing Moodle or Open edX;
+add 3–4 weeks to own the MCP bridge properly rather than vendoring it.
+
+## 🆕 `Pattern AE` — choosing an xAPI 2.0 LRS when every candidate has zero stars
+
+**When.** The client specified xAPI 2.0 / IEEE 9274.1.1 — increasingly common in defence, aviation,
+regulated corporate training and any procurement written against the current standard.
+
+🔴 **The situation, measured.** No adopted open-source LRS implements 2.0. `lrsql` (144 ★) and Ralph
+(51 ★) are both 1.0.3. The three claimants hold **one star between them**: `pelotech/xapi-lrs` (0 ★,
+TypeScript/Hono/Postgres), `codetakt/kiva` (0 ★, Rust, F* proofs) and `nurullahturkoglu/xapi-dotnet`
+(1 ★, ASP.NET Core). 🔴 **Reputation cannot decide this**, and each project's own conformance claim
+is self-reported — `kiva`'s README goes so far as to withdraw its own repository blurb, saying
+equivalence with the 2025 edition *"has not been established"* and that source traceability *"does
+not establish implementation conformance."*
+
+🟢 **So adjudicate it yourself, with permissive tooling that already exists.**
+
+1. Stand up each candidate against a **throwaway** Postgres — the suite persists data and its README
+   warns it *"should not run against a production LRS endpoint."*
+2. Run [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+   (🟢 MIT, 78 ★, Node) with `--xapiVersion 2.0.0`, then again with `1.0.3` — a conformant 2.0 LRS
+   must still accept 1.0.x statements.
+3. On the JVM, drive the same suite from CI with
+   [`yetanalytics/lrs-test-runner`](https://github.com/yetanalytics/lrs-test-runner) (🟢 Apache-2.0,
+   6 d) so the result is a build artefact rather than a screenshot.
+4. 🟡 Read failures with judgement: a .NET implementer reports the suite *"sometimes expects more
+   than the standard requires"* *(secondary)*, and the suite is **413 days old** while all three
+   candidates are under 75 days. A failure is a conversation, not a disqualification.
+
+🟢 **Hedge the choice structurally.** `pelotech/xapi-lrs` states its schema matches `lrsql` v0.9.5's
+Postgres shape, so an `lrsql` database can be taken over. 🔵 This pass's fork arm confirms the two are
+**independent codebases, not a fork** (distinct root commits `b1bfc0f67292` vs `f9e81c891b9a`) — so
+this is genuine schema compatibility between rivals, which is the rare case where a client can start
+on the 144 ★ 1.0.3 store and migrate to the 0 ★ 2.0 store without a data conversion.
+
+**Effort.** 2–3 weeks for the bake-off and a reproducible CI conformance job; the result is reusable
+across every later engagement on this layer, which is the main reason to do it once properly.
+
+
 # Compose patterns — education
 
 **🆕 Pass `p395` · reads and commit both 2026-10-23.** Two patterns, both built on grants and **dates**

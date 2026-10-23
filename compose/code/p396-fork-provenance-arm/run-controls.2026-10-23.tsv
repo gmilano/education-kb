@@ -1,0 +1,5 @@
+candidate	suspected_upstream	cand_root	ups_root	verdict	control_role
+ashleycribb/learnmcp-xapi	DavidLMS/learnmcp-xapi	95ba79652b92	95ba79652b92	SHARED-ROOT -> FORK LINEAGE	POSITIVE - this pass's own live catch
+Poki-cbq/inno-agent	hhyqhh/inno-agent	2fb166886ed8	2fb166886ed8	SHARED-ROOT -> FORK LINEAGE	POSITIVE - p395's catch, reproduced blind
+yetanalytics/lrsql	openfun/ralph	f9e81c891b9a	3d03d85a121a	DISTINCT-ROOT -> INDEPENDENT	NEGATIVE - two unrelated LRSs must not match
+pelotech/xapi-lrs	yetanalytics/lrsql	b1bfc0f67292	f9e81c891b9a	DISTINCT-ROOT -> INDEPENDENT	NEGATIVE - schema-COMPATIBLE must not read as DERIVED

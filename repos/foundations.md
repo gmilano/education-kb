@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p396` · reads and commit both 2026-10-23 — second pass of the day, after `p395`.**
+🟢 **`p395` dated the LAUNCH layer (LTI 1.3) end to end. This pass does the matching RECORD layer
+(xAPI / Learning Record Store) — 28 addresses, one sitting — and the two tables together answer a
+question neither could answer alone: *which runtime can a client actually build both halves in?***
+Evidence: [`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) ·
+[`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv).
+
+### 🔴 The cross-layer result, and it is a procurement answer rather than a shelf note
+
+| Runtime | Launch layer (LTI 1.3, `p395`) | Record layer (xAPI LRS, `p396`) | Verdict |
+|---|---|---|---|
+| **Python** | 🟢 `lti-tool` 1 d · `django-lti` 2 d · `ltiauthenticator` 113 d | 🟢 [`openfun/ralph`](https://github.com/openfun/ralph) **MIT**, 10 d, 51 ★ | 🟢 **BOTH LIVE AND PERMISSIVE — the only one** |
+| **Node / TS** | 🟢 `ltijs` 9 d | 🟡 [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) Apache-2.0, 75 d, **0 ★** | 🟡 both permissive, record side **unproven** |
+| **PHP** | 🟢 `packbackbooks/lti-1-3-php-library` 6 d | 🔴 nothing — `TinCanPHP` is a *client*, 1,450 d | 🔴 launch only |
+| **JVM** | 🔴 `UOC/java-lti-1.3-core` 1,193 d | 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) Apache-2.0, 21 d, 144 ★ | 🔴 record only — **the mirror image of PHP** |
+| **Go** | 🔴 679 d / 1,918 d | 🔴 `GO_LRS` **4,676 d**, self-described *not production ready* | 🔴 **neither layer** |
+
+🔵 **Read it as the second question to ask at procurement, after `p395`'s.** `Pattern AC` already
+tells a Java shop it cannot take an in-process LTI dependency from this base. This table says the
+same shop *can* take its LRS in-process — `lrsql` is the best-adopted permissive LRS found, on the
+JVM — and that a **PHP** shop is in the exactly opposite position. 🔴 **A Go shop should be quoted an
+HTTP edge on both layers**, which is a materially different estimate from a Python shop, where both
+halves are live, permissive and in-process.
+
+### 🟢 The record layer, dated first-hand — new permissive addresses
+
+| Repo | Runtime | Licence | Bytes / `sha256`₁₆ | HEAD | Age | ★ |
+|---|---|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Clojure/JVM | 🟢 **Apache-2.0** | 11,357 B · `c71d239df917` | `cb794e4` | 🟢 **21 d** | **144** |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | Python | 🟢 **MIT** | 1,094 B · `08ea77291de9` | `91fef11` | 🟢 **10 d** | 51 |
+| [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) | Clojure | 🟢 **Apache-2.0** | 11,357 B · `c71d239df917` | `d75e2de` | 🟢 **6 d** | 7 |
+| [`yetanalytics/lrs-test-runner`](https://github.com/yetanalytics/lrs-test-runner) | Clojure/JVM | 🟢 **Apache-2.0** | 11,357 B · `c71d239df917` | `830a4b2` | 🟢 **6 d** | 0 |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | Node | 🟢 **MIT** | 1,046 B · `c0fc02a86ae2` | `5bc232d` | 🔴 **413 d** | 78 |
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | TypeScript | 🟢 **Apache-2.0** | 11,357 B · `c71d239df917` | `4d18e0c` | 🟡 **75 d** | **0** |
+| [`nurullahturkoglu/xapi-dotnet`](https://github.com/nurullahturkoglu/xapi-dotnet) | C#/.NET | 🟢 **Apache-2.0** | 11,358 B · `c95bae1d1ce0` | `0d47d65` | 🟢 **1 d** | 1 |
+| [`codetakt/kiva`](https://github.com/codetakt/kiva) | Rust | 🟢 **Apache-2.0** | 11,357 B · `c71d239df917` | `addf100` | 🟢 **2 d** | **0** |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | TypeScript | 🟢 **MIT** | 1,080 B · `df57b343c1a3` | `3596bb5` | 🟢 **37 d** | 2 |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | Python/Django | 🟢 **Apache-2.0** | 11,357 B · `58d1e17ffe51` | `efa045e` | 🔴 **496 d** | 334 |
+| [`davidpesce/moodle-logstore_xapi`](https://github.com/davidpesce/moodle-logstore_xapi) | PHP | 🔴 **GPL-3.0** | 35,121 B · `e1c0ad728983` | `df5c665` | 🟢 **2 d** | 82 |
+
+🔴 **Three corrections to what this base would otherwise have published**, each from the search
+channel and each caught by a first-hand read:
+
+- **`LearningLocker/learninglocker` is dead, and it is still the first result for every LRS query.**
+  Search reported it *"updated May 2024"*; the git channel puts HEAD at **`5fec948`, 2021-11-16 —
+  1,801 days**. It is **GPL-3.0** (35,141 B, `589ed823e9a8`), 585 ★, and carries **no archived banner
+  and no deprecation notice**, so nothing on the page warns a reader. 🔵 Anyone who names "the open
+  source LRS" from memory names this one. It has not moved in five years.
+- **`openfun/ralph` is MIT, not Apache-2.0** — read at the payload, 1,094 B, *"Copyright (c)
+  2020-present France Université Numérique"*. The Apache attribution came from a search summary.
+- **`adlnet/ADL_LRS` is not a product.** Its own README: *"This version is stable, but only intended
+  to support a small amount of users as a proof of concept."* 334 ★ and 155 forks make it look like
+  one; it is 496 days old and self-disclaimed.
+
+### 🔴 `xAPI 2.0` has no adopted implementation, and the three claimants total **1 star**
+
+🟢 xAPI 2.0 is **IEEE 9274.1.1-2023**. Three permissive LRSs claim it, all found and dated this pass:
+`pelotech/xapi-lrs` (**0 ★**, claims CI against the ADL suite), `nurullahturkoglu/xapi-dotnet`
+(**1 ★**, 0.x, claims a passing run on SQLite and Postgres), `codetakt/kiva` (**0 ★**, Rust + F*
+proofs). 🔴 **The two best-adopted LRSs do not implement it**: `lrsql` is 1.0.3-era, and Ralph's own
+docs say 2.0 *"is not currently supported."*
+
+🟢 **And there is exactly one way to tell these apart, which is the useful half of this finding.**
+[`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) — 🟢
+**MIT**, 78 ★, Node, `--xapiVersion` selects 1.0.3 or 2.0 — is the referee, and
+[`yetanalytics/lrs-test-runner`](https://github.com/yetanalytics/lrs-test-runner) (Apache-2.0, 6 d)
+drives it from the JVM. 🔴 **Caveat that belongs on the same line:** the referee is **413 days old**
+while all three claimants were written in the last 75, and its README warns it *"should not run
+against a production LRS endpoint"* because it persists data. 🔵 So the honest instruction is *stand
+up a throwaway endpoint and run the suite yourself* — not *trust the badge*, and not *trust this
+table*.
+
+### 🟡 One new licence family this base's own instrument cannot name
+
+[`yetanalytics/xapi-schema`](https://github.com/yetanalytics/xapi-schema) (6 d) is **Eclipse Public
+License** — 11,218 B, `a5cb01efb664`, title region *"THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE
+TERMS OF THIS ECLIPSE PUBLIC LICENSE."* 🔴 **`EPL` is not in `grant_gate.py`'s `FAMILIES` tuple**, so
+the instrument reads a real, permissive, weak-copyleft grant and returns *no family*. See `396-E`.
+🔵 Procurement note on the same vendor: `lrsql` the deployable is **Apache-2.0**; `xapi-schema`, the
+library underneath it, is **EPL**. One vendor, two grants, different obligations.
+
+
 # Foundational repos for education
 
 **🆕 Pass `p395` · reads and commit both 2026-10-23.** 🟢 **The LTI layer is now dated end to end — all

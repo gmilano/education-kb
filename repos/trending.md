@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🟢 🆕 2026-10-23 · `p396` — **GITHUB TRENDING IS BACK: 200 AFTER FOURTEEN PASSES OF 403, AND `github.com/search` ENUMERATES 150 RESULTS. 🔴 THE "WE CANNOT ENUMERATE GITHUB" FINDING THAT EXPLAINED FIVE THIN PASSES WAS A TOOL CHOICE, NOT A NETWORK FACT. 🔴 AND THE REOPENED CHANNEL'S DATES ARE WRONG BY UP TO 702 DAYS.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23**, the second pass today. **Evidence:**
+[`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv) — 25 channels ·
+[`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) — 28 addresses.
+
+### 🟢 Channel state, re-measured — and it moved
+
+| Channel | `p395` | `p396` |
+|---|---|---|
+| `github.com/trending` | 🔴 403 (14th pass) | 🟢 **200 via WebFetch** — 9 repos today, 15 weekly |
+| `github.com/search?q=…&s=updated` | 🔴 never recorded as working | 🟢 **200 — "Page 1 of 150 results"** |
+| `github.com` repo HTML | 🟢 WebFetch 200 | 🟢 WebFetch 200 · 🔴 **`curl` now refused by the environment classifier** |
+| `api.github.com` | 🔴 403 | 🔴 403, unchanged |
+| blobless clone | 🟢 allowed | 🟢 allowed — **35 addresses dated this pass** |
+
+🔴 **`394-C` said this environment *"can VERIFY any GitHub address it is handed and cannot ENUMERATE
+GitHub at all,"* and five passes of thin supply were attributed to it. That is now refuted.**
+Enumeration works through the HTML endpoints on WebFetch; what is refused is `api.github.com` and
+`curl`. 🔵 The gap was real, the diagnosis was over-general, and the cost was five passes that
+stopped looking.
+
+### 🔴 But the reopened channel cannot date, and it will poison this base if trusted
+
+`github.com/search` prints an **Updated** column. It disagrees with the git channel:
+
+| Repo | search says | git channel says | error |
+|---|---|---|---|
+| [`openfun/warren`](https://github.com/openfun/warren) | "3 days ago" | `839fcbb` · **2024-11-19** | 🔴 **702 days** |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | "2 hours ago" | `91fef11` · **2026-10-12** | 🔴 10 days |
+
+🟢 **`395-E` already made the git channel the dating authority; this is the second channel in two
+passes that *looks* like it dates and does not.** The rule generalises: **enumerate with HTML, date
+with git, grant with `raw`, and never let one channel do another's job.** `396-G`.
+
+### 🔴 Trending carries no education repository — measured, not assumed
+
+9 repositories today, 15 weekly, read in full. All are agent infrastructure, coding agents, media
+tooling or reverse-engineering: `php/php-src`, `anthropics/knowledge-work-plugins`,
+`cloudflare/security-audit-skill`, `supabase/supabase`, `fastapi/fastapi`, `Comfy-Org/ComfyUI`,
+`stablyai/orca`, `NationalSecurityAgency/ghidra` and the rest. 🟡 The single education-adjacent entry
+is `luongnv89/claude-howto`, a Claude Code guide — **instructional content, not an education system**.
+
+🟢 **Five of the trending addresses were re-verified through the independent clone channel** before
+any of this was written (`Graphify-Labs/graphify` HEAD today, `DietrichGebert/ponytail` 4 d,
+`anthropics/knowledge-work-plugins` 1 d, `cloudflare/security-audit-skill` 38 d,
+`luongnv89/claude-howto` 2 d) — because a channel returning 200 after fourteen 403s is exactly the
+kind of result that should not be published on one channel's word.
+
+### 🟢 What the reopened search channel actually yielded — the record layer
+
+One query, `xapi lrs` sorted by recency, produced **eight addresses this base had never seen**, of
+which six are permissive and live. Full table and the cross-layer verdict in
+[`repos/foundations.md`](./foundations.md); the short version is
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (Apache-2.0, 21 d, 144 ★),
+[`openfun/ralph`](https://github.com/openfun/ralph) (MIT, 10 d, 51 ★),
+[`yetanalytics/lrs-test-runner`](https://github.com/yetanalytics/lrs-test-runner) (Apache-2.0, 6 d),
+[`nurullahturkoglu/xapi-dotnet`](https://github.com/nurullahturkoglu/xapi-dotnet) (Apache-2.0, 1 d),
+[`codetakt/kiva`](https://github.com/codetakt/kiva) (Apache-2.0, 2 d) and
+[`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) (Apache-2.0, 75 d).
+
+---
+
+
 ## 🟡 🆕 2026-10-23 · `p395` — **GITHUB TRENDING IS 403 FOR A FOURTEENTH PASS, MEASURED AGAIN NOT INHERITED. 🟢 BUT THE DATING CHANNEL CARRIED A WHOLE LAYER THIS WEEK: 13 LTI 1.3 ADDRESSES, ONE SITTING, AND TWO LANGUAGES TURN OUT TO HAVE NO MAINTAINED PERMISSIVE OPTION AT ALL.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23**. **Evidence:**

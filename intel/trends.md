@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p396` · reads and commit both 2026-10-23.** Four trends, each tied to a measurement in
+[`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) or
+[`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv).
+
+### 🆕 `T37` — Agents have memory; institutions have records; nothing joins them
+
+🔴 Every tutoring agent on these shelves keeps **its own** memory — `DeepTutor`'s lifelong memory,
+`inno-agent`'s L1/L2/L3 layers, `OATutor`'s Bayesian knowledge tracing. 🔴 **None of them writes to
+the institution's Learning Record Store**, which is where a registrar, an accreditor, a regulator or
+a credential actually looks. The entire open-source supply joining the two is
+[`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi): **MIT, 15 ★, 419 days
+without a commit.**
+🔵 **Why this is a trend and not a gap note.** Agent memory is designed for *continuity of
+conversation*; an LRS is designed for *evidence that survives the vendor*. They are different
+artefacts with different owners, and the market has built the first and not the second. 🟢 Every
+regulatory pressure in `intel/market.md` — Oklahoma's teacher-review requirement, the EU's Article 26
+logging duty, LATAM's missing governance — lands on the **second**. 🟢 This is the clearest unserved
+build in this base.
+
+### 🆕 `T38` — The standard moved and the implementations did not: xAPI 2.0 has zero adoption
+
+🟢 xAPI 2.0 is **IEEE 9274.1.1-2023**, reportedly also an ISO/IEC/IEEE edition in 2025 *(secondary;
+unconfirmed — `arxiv.org` and the standards hosts are refused)*. 🔴 **The two best-adopted permissive
+LRSs do not implement it**: `lrsql` (144 ★) is 1.0.3-era and Ralph's docs say 2.0 *"is not currently
+supported."* 🔴 **The three that claim it hold 1 star between them** — `pelotech/xapi-lrs` (0 ★),
+`codetakt/kiva` (0 ★), `nurullahturkoglu/xapi-dotnet` (1 ★).
+🔵 **The asymmetry to notice:** all three were written in the last 75 days, while the referee —
+[`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite), MIT,
+78 ★ — is **413 days old**. 🟢 A standard whose conformance suite ages faster than its implementations
+is a standard where **claims cannot be checked from the outside**, which is precisely why the
+pattern for this layer is *run the suite yourself*, not *read the badge*.
+
+### 🆕 `T39` — "Open source" is splitting from "permissively licensed" in education, in a new way
+
+🔴 `395-D` recorded the split *inside* a project: MIT kernel, ungranted skills. This pass found it
+*across a language community*. The most active new education agent found by a non-English leg —
+`Aula y Comunidad Educativa Aumentada`, 1 day old — publishes under a **bespoke "Licencia
+Comunitaria de Uso Profesional."** Public repository, visible source, 🔴 **no open-source grant.**
+🔵 Combined with `h5p/h5p-php-library` (GPL content reported as MIT) and `withmarbleapp/os-taxonomy`
+(ODbL + CC-BY-SA over the data), this base has now seen three distinct shapes of the same thing:
+ungranted companions, mislabelled grants, and bespoke licences. 🟢 **The operative habit is unchanged
+and keeps paying: read the payload, never the badge.** Four of this pass's reads contradicted what
+the search channel said about the same repository.
+
+### 🆕 `T40` — A measured absence is only as good as the channel that measured it
+
+🔴 `394-C` concluded this environment *"cannot ENUMERATE GitHub at all,"* and five passes of thin
+supply were explained by it. 🟢 **This pass enumerated GitHub twice** — `github.com/trending` at 200
+after fourteen passes recorded as 403, and `github.com/search` returning 150 results — and one query
+on the reopened channel produced **eight unseen addresses, six of them live and permissive.**
+🔴 The refusal was real but narrower than recorded: it is on `api.github.com` and on `curl`, not on
+the HTML endpoints through WebFetch.
+🔵 **The generalisable lesson, and it is uncomfortable for a base built on declared absences:** an
+absence recorded against *one* channel hardens into a fact about *the world* within two or three
+passes, and then stops being retested. 🟢 The fix is cheap — **carry the channel in the claim**
+("not found via WebSearch" ≠ "does not exist") — and this base should now re-measure a refused
+channel on a fixed cadence rather than inheriting it. `396-A`, `396-G`.
+
+
 # Education industry trends
 
 **🆕 Pass `p395` · reads and commit both 2026-10-23.** Four trends, each tied to a measurement in

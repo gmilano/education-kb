@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p396` · reads and commit both 2026-10-23.** 🟢 **`Gap 394-E` is substantively ANSWERED, and
+the way it was answered corrects `395-B`'s remedy.** `394-E` asked for the reason behind LATAM's
+thin assessment demand, named the UNESCO IESALC instrument as the likeliest place a *why* was written
+down, and `395-B` declared the read impossible and told successors not to pre-register it again.
+🔴 **`395-B` was right about the hosts and wrong about the question.** Evidence:
+[`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv) — 25 channels.
+
+### 🔴 The channel correction first, because every figure below depends on it
+
+🔴 Every host is still refused, and this pass measured **seven more** than `p395` did —
+`universoabierto.org`, `anahuaclandscape.com`, `universidadeshoy.com.ar`, `vozuniversitaria.org.mx`,
+`www.timeshighereducation.com`, `dig.watch`, `completeaitraining.com` — all `000 connect_rejected`,
+on **both** tools, alongside `iesalc.unesco.org`, `unu.edu` and `www.unesco.org`. 🔴 **So the
+allowlist blocks the secondaries too, not just the primaries**, which is worse than `395-B` recorded.
+🔴 `arxiv.org` and `huggingface.co` are also refused — worth stating plainly, because this base cites
+arXiv routinely and **every such citation here is secondary**. 🟢 `pypi.org` returns **200** — the
+first package index found reachable, where `cran.r-project.org` is not.
+
+🟢 **And yet the report's numbers are below.** They came from the **search channel**, which returns
+summaries of documents whose hosts are unreachable. 🔵 **The remedy `395-B` should have prescribed is
+not an allowlist request: it is to ask the search channel for the FINDINGS instead of asking the
+fetch channel for the DOCUMENT.** `396-D`. Labelled secondary, as `p394` established.
+
+### 🟢 LATAM — the governance gap, quantified at last
+
+**UNESCO IESALC with UNU-IAS**, *AI implementation in higher education in Latin America and the
+Caribbean*, launched at Digital Learning Week, September 2026. **200 institutions, 19 countries**,
+fielded Aug–Oct 2025. 🔵 *Secondary throughout — the host is refused; figures are consistent across
+four independent summaries.*
+
+| Finding | Value |
+|---|---|
+| Institutions using AI in ≥ 1 area | 🟢 **87%** |
+| …in teaching and learning | 74% |
+| …in research | 57% |
+| 🔴 **Institutions with a formal AI strategy** | 🔴 **26%** |
+| Private non-profit / public / private for-profit uptake | 84% / 68% / 52% |
+
+🔴 **That 87-vs-26 split is the answer `394-E` predicted existed.** LATAM's institutions are not
+behind on *use*; they are behind on *governance*, and this base's own observation — thin assessment
+demand against deep assessment supply — follows directly. An institution without a formal strategy
+does not procure an assessment system; it tolerates one teacher's chatbot. 🔵 **The commercial
+reading for a studio: in LATAM the sale is the strategy and the guardrails, and the tooling comes
+second.** That inverts the North America and EMEA order.
+
+🟡 **One figure deliberately not merged in:** a separate IESALC paper reports **45%** of institutions
+with formal AI *guidance*. Different instrument, different word. Do not quote 26% and 45% together.
+
+### 🔴 Market size — a range, and the range is the honest answer
+
+2026 estimates cluster **$8–11B** and the definitions differ more than the numbers: Research and
+Markets **$10.6B** (2025: $7.52B, CAGR 40.9%) → $42.48B by 2030; Grand View **$11.4B** → $57.2B by
+2033 at 25.9%; Precedence **$9.58B** → $136.79B by 2035 at 34.52%; Technavio reports *incremental*
+growth of **+$3.37B** 2025–2030, which is not a market size and is routinely quoted as one. 🔵 **All
+vendor research, all secondary, none reachable at the primary.** Quote the range, name the firm,
+never quote a single point.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Regulation is K-12 and it is binding.** A tracker counts **35 states plus Puerto Rico** with
+official K-12 AI guidance (August 2026); **134+ bills across 31 states** were introduced this
+session. Enacted and specific: **Maryland S.B. 720** (state AI guidance, professional development,
+tool-evaluation help), **Idaho S.B. 1227** (generative AI provisions, district policies, AI literacy
+standards), **Oklahoma S.B. 1734** — 🔴 **teacher review of AI output and parent opt-out, district
+policies due before the 2027–28 school year.** Several states prohibit AI replacing licensed
+educators in core instruction or grading.
+🟢 **The opportunity is the audit trail, and it is why this pass matters here.** "Teacher reviewed
+this output" and "a parent opted out" are *records*, and the record layer above is how you prove
+them. An LRS plus `moodle-logstore_xapi` or Ralph is the cheapest compliance evidence a district can
+hold. 🔴 **Higher ed is near-empty** — Arizona HB 4040 and the New Jersey bills are *introduced*, not
+enacted. 🟡 And demand is cooling at the faculty level: the Digital Education Council survey has US
+and Canada faculty intent to use AI **down 9 points, 76% → 67%**.
+🔴 `393-C` stays open: no state rule was read at its primary source. `www.multistate.us` and
+`crpe.org` are both `connect_rejected` (`396-D`).
+
+### EMEA
+
+🔴 **The prohibition is the thing to design around, not the obligations.** Emotion-inference in
+education is **banned outright** under the AI Act (in force since 2 February 2025, alongside the AI
+literacy duty) — `T33`. Annex III ¶3 makes admissions, grading, placement and exam proctoring
+**high-risk but permitted**. Deployers carry Article 26 duties (use per instructions, human
+oversight, logging, transparency, staff AI literacy) and public institutions an Article 27
+fundamental-rights impact assessment.
+🟡 **A date this base cannot settle and should stop implying it can.** Sources give **2 August 2026**
+and **2 December 2027** for high-risk obligations. Today is 2026-10-23, so the difference decides
+whether a client is already late. 🔴 `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and
+`artificialintelligenceact.eu` are all refused (`394-D`, `395-B`, re-measured `396-D`). **Quote both
+dates to a client and tell them to have counsel confirm; do not pick one.**
+🟢 **Scope relief worth knowing:** the Commission's draft guidelines treat apps a learner chooses for
+informal learning as outside ¶3 — **unless they lead to a credential recognised by public
+authorities.** 🔵 That single clause is the difference between a consumer tutor and a high-risk
+system, and it is a product-design decision, not a legal one.
+🟢 **Supply is here too**, which is new: [`openfun/ralph`](https://github.com/openfun/ralph) is
+maintained by **France Université Numérique**, MIT, 10 days fresh — a European public-sector LRS for
+a European sovereignty conversation.
+
+### APAC
+
+🔴 **The region's lesson this year is a failure, and it is the most useful thing in it.** **South
+Korea** rolled AI digital textbooks back to optional *"educational material"* within a year —
+adoption below **30%** by March, official status removed by the National Assembly — then committed
+**$960M** to AI talent centres and vocational high schools through 2030. 🔵 **Mandate without teacher
+buy-in failed in the one country best equipped to execute it.** Quote it when a ministry client wants
+a top-down rollout.
+🟢 **China** is the opposite pole: AI instruction **compulsory from age six** since September 2025,
+with binding rules on algorithms, deep synthesis and generative AI, filings, synthetic-content
+labelling and security review for public models. **Korea's AI Basic Act** has been in force since
+**22 January 2026**, with 2026 treated as a pilot period and a one-year grace on penalties — 🟢 a real
+window. **Japan** stays voluntary; **India** signalled dedicated, risk-based legislation in July 2026
+and remains at proposal stage.
+🔴 **Supply gap, measured:** of 28 record-layer addresses dated this pass, **not one is APAC-held**.
+The LRS layer is North American (Yet Analytics, ADL, pelotech) and European (France Université
+Numérique). An APAC engagement adopts foreign infrastructure on this layer or builds.
+
+### LATAM
+
+🟢 Figures above: **87% adopting, 26% with a strategy**, private non-profits leading at 84%, public
+institutions at 68%.
+🟢 **The sale is governance.** A studio arriving with a tutor loses to a studio arriving with an AI
+strategy, an acceptable-use policy, a teacher-training track and the telemetry to show the board what
+is happening — and the telemetry is Ralph plus the Moodle emitter, both maintained, one MIT.
+🔴 **Supply remains the thinnest of any region.** The only LATAM-origin education agent found in two
+passes of Spanish and Portuguese legs — `Aula y Comunidad Educativa Aumentada`, Spain-authored, 1 day
+old and genuinely good — is published under a **bespoke non-OSI licence** and cannot be built on.
+🔵 Faculty-development demand is live and visible: UNESCO Santiago, REDECANEDU and CONFAUCE convened
+deans of education faculties on **14 October 2026** on exactly the capability gap above. *Secondary.*
+
+### Global
+
+🔴 **The cross-cutting finding of this pass is a runtime constraint, not a market one**, and it
+prices engagements in every region: **Python is the only runtime where both the launch layer (LTI
+1.3) and the record layer (xAPI LRS) are live and permissively licensed.** Go has neither. JVM has
+the record layer only; PHP has the launch layer only. See
+[`repos/foundations.md`](../repos/foundations.md).
+
+
 # Education market intelligence
 
 **🆕 Pass `p395` · reads and commit both 2026-10-23.** 🔴 **The headline is a correction to this

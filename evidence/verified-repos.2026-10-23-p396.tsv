@@ -1,0 +1,22 @@
+repo	grant	licence_path	bytes	sha256_16	title_region_quote	head	head_date	age_days	stars	fork_arm	shelf
+yetanalytics/lrsql	Apache-2.0	main/LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004	cb794e4	2026-10-01	21	144	INDEPENDENT	repos/foundations.md
+openfun/ralph	MIT	main/LICENSE.md	1094	08ea77291de9	MIT License Copyright (c) 2020-present France Universite Numerique	91fef11	2026-10-12	10	51	INDEPENDENT	repos/foundations.md + verticals
+yetanalytics/lrs	Apache-2.0	master/LICENSE	11357	c71d239df917	Apache License Version 2.0	d75e2de	2026-10-16	6	7	not-run	repos/foundations.md
+yetanalytics/lrs-test-runner	Apache-2.0	main/LICENSE	11357	c71d239df917	Apache License Version 2.0	830a4b2	2026-10-16	6	0	INDEPENDENT	repos/foundations.md + Pattern AE
+yetanalytics/xapi-schema	EPL	master/LICENSE	11218	a5cb01efb664	THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE	671753d	2026-10-16	6	-	not-run	396-E (family unrecognised)
+adlnet/lrs-conformance-test-suite	MIT	master/LICENSE	1046	c0fc02a86ae2	The MIT License (MIT)	5bc232d	2025-09-04	413	78	INDEPENDENT	repos/foundations.md + Pattern AE
+adlnet/ADL_LRS	Apache-2.0	master/LICENSE	11357	58d1e17ffe51	Apache License Version 2.0	efa045e	2025-06-13	496	334	INDEPENDENT	repos/foundations.md (proof-of-concept, self-disclaimed)
+pelotech/xapi-lrs	Apache-2.0	main/LICENSE	11357	c71d239df917	Apache License Version 2.0	4d18e0c	2026-08-08	75	0	INDEPENDENT (vs lrsql)	repos/foundations.md + Pattern AE
+codetakt/kiva	Apache-2.0	main/LICENSE	11357	c71d239df917	Apache License	addf100	2026-10-21	2	0	not-run	repos/foundations.md + Pattern AE
+nurullahturkoglu/xapi-dotnet	Apache-2.0	main/LICENSE	11358	c95bae1d1ce0	Apache License Version 2.0	0d47d65	2026-10-21	1	1	INDEPENDENT	repos/foundations.md + Pattern AD/AE
+conform-ed/conform-ed	MIT	main/LICENSE	1080	df57b343c1a3	MIT License Copyright (c) 2026 conform-ed contributors	3596bb5	2026-09-15	37	2	INDEPENDENT	verticals/solutions.md
+davidpesce/moodle-logstore_xapi	GPL-3.0	master/LICENSE	35121	e1c0ad728983	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007	df5c665	2026-10-20	2	82	INDEPENDENT	verticals/solutions.md + Pattern AD
+DavidLMS/learnmcp-xapi	MIT	main/LICENSE	1069	4aa758cb51b2	MIT License Copyright (c) 2025 David Romero	fbf6091	2025-08-29	419	15	UPSTREAM	agents/top.md + Pattern AD
+LearningLocker/learninglocker	GPL-3.0	master/LICENSE	35141	589ed823e9a8	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007	5fec948	2021-11-16	1801	585	not-run	verticals (NEGATIVE: do not adopt)
+openfun/warren	MIT	main/LICENSE.md	1094	0cc59ddb463e	MIT License Copyright (c) 2023-present France Universite Numerique	839fcbb	2024-11-19	702	17	not-run	396-G (search said "3 days ago")
+RusticiSoftware/TinCanPHP	Apache-2.0	master/LICENSE	11358	cfc7749b96f6	Apache License Version 2.0	19acfc8	2022-11-02	1450	-	not-run	cross-layer table (PHP: client only)
+scormflow/scorm-engine	MIT	main/LICENSE	1079	7cdfc153e7f1	MIT License Copyright (c) 2026 ScormFlow contributors	1f2242d	2026-10-12	10	1	not-run	not shelved - zero adoption, re-date next pass
+Praxity/praxity-proof	MIT	main/LICENSE	1069	d817c04f10ef	MIT License Copyright (c) 2026 Ariel Harlap	0d984ea	2026-10-10	11	0	not-run	not shelved - zero adoption, re-date next pass
+ashleycribb/learnmcp-xapi	MIT (byte-identical to upstream)	main/LICENSE	-	-	-	816d8b8	2026-09-17	35	0	FORK of DavidLMS/learnmcp-xapi (root 95ba79652b92)	REJECTED
+jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada	BESPOKE NON-OSI	main/LICENSE.md	1262	33a3bb8713ec	Licencia Comunitaria de Uso Profesional	70d84fe	2026-10-21	1	-	not-run	REJECTED (agents/top.md rejection table)
+lbhubedu/lbedu.me	MIT	main/LICENSE	2118	18272c548223	MIT License Copyright (c) 2026 Felipe Leone Venceslau	13a4bd4	2026-10-18	4	-	not-run	OUT-OF-CLASS (recipes, not an agent)

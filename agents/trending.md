@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🟡 🆕 2026-10-23 · `p396` — **THE RECORD LAYER IS MAPPED AND THE AGENTS ARE NOT ON IT: ONE 15 ★ MIT MCP BRIDGE, 419 DAYS DEAD, IS THE WHOLE OF THE AGENT↔LRS SUPPLY. 🟢 AND THE FORK ARM `395-A` ASKED FOR NOW EXISTS, RUNS, AND CAUGHT ONE ON ITS FIRST OUTING.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23** — the *second* pass dated today, after
+`p395`. **Evidence:**
+[`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) — 28 addresses ·
+[`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv) — 25 channels ·
+arm and controls at
+[`compose/code/p396-fork-provenance-arm/`](../compose/code/p396-fork-provenance-arm/README.md).
+
+### 1. 🟡 `DavidLMS/learnmcp-xapi` — MIT, 15 ★, HEAD 2025-08-29 (🔴 419 d)
+
+An **MCP server that lets agents record and retrieve learning activity through an xAPI Learning
+Record Store** (`lrsql`, Ralph, Veracity). Licence read first-hand: 1,069 B at `main/LICENSE`,
+`sha256`₁₆ `4aa758cb51b2`. 🔴 **Fourteen months without a commit, and it is the only thing of its kind
+found in 28 dated addresses.** Shelved for what it marks, not for what it is ready to do.
+
+### 2. 🔴 What search handed over first — and the arm that stopped it
+
+`ashleycribb/learnmcp-xapi`, **0 ★**, is a **fork**. Its licence payload is byte-identical to
+upstream's, so the grant channel is blind by construction, and its HEAD sha differs from upstream's,
+so `gate-alias-canonical` passes it. 🟢 **The new arm asks git instead of HTML: a fork shares the
+upstream's root commit.** Both share `95ba79652b92`. The same test reproduces `p395`'s catch
+(`Poki-cbq/inno-agent` ↔ `hhyqhh/inno-agent`, root `2fb166886ed8`) **blind**, and correctly declines
+to call `pelotech/xapi-lrs` a derivative of `lrsql` despite its README claiming schema compatibility.
+
+### 3. 🔴 `Aula y Comunidad Educativa Aumentada` — active, Spanish, and NOT open source
+
+HEAD `70d84fe`, **1 day old**; a genuine teacher-facing agent/skills/workflow environment. 🔴 Grant
+read at the payload: 1,262 B, `33a3bb8713ec`, **"Licencia Comunitaria de Uso Profesional"** — a
+bespoke licence. 🔵 The third `bespoke` instance this base has recorded, and the first found by a
+non-English leg.
+
+### 4. 🟢 Channel news that changes what a successor can do — `396-A`
+
+`github.com/trending` returned **200** this pass, after fourteen consecutive passes recorded as 403,
+and `github.com/search` **enumerated 150 results** sorted by recency. 🔴 **Neither is a contradiction
+of `394-C` so much as a correction of its scope**: the refusal is on `curl` and `api.github.com`, not
+on the HTML endpoints via WebFetch. 🔴 **Today's trending carries no education repository at all** —
+9 today, 15 weekly, all agent infrastructure, coding tools and media. Recorded as a measured absence,
+not a thin pass.
+
+---
+
+
 ## 🟢 🆕 2026-10-23 · `p395` — **THE DRY SPELL BREAKS, AND IT BREAKS ON A SPANISH-LANGUAGE LEG: A 1.3k ★ MIT EDUCATION-NATIVE AGENT, 10 DAYS OLD, THAT SIX PASSES OF ENGLISH LEGS NEVER SAW. 🔴 AND SEARCH HANDED OVER ITS 0 ★ FORK FIRST.**
 
 🔵 **Dating note.** Reads and commit are **both 2026-10-23** this pass — no straddle to declare.

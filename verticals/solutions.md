@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p396` · reads and commit both 2026-10-23.** 🟢 **The platform question this shelf could not
+answer until now: once a platform is customised, where does the learning data go, and can the client
+own it?** `p395` settled how an agent *launches* from Moodle, Canvas, Blackboard or D2L (LTI 1.3).
+This pass settles how it *records*. Evidence:
+[`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv).
+
+### 🟢 The emitter shelf — getting data out of the platform
+
+| Platform | Emitter | Licence | HEAD | Age | Note |
+|---|---|---|---|---|---|
+| **Moodle** | [`davidpesce/moodle-logstore_xapi`](https://github.com/davidpesce/moodle-logstore_xapi) | 🔴 **GPL-3.0** | `df5c665` | 🟢 **2 d** | 82 ★, 95 forks — the live, maintained route out of Moodle |
+| **Open edX** | Aspects → [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** | `91fef11` | 🟢 **10 d** | Open edX's own analytics stack **already ships Ralph as its LRS** |
+
+🔵 **The Moodle row is a licence note, not a licence problem.** `moodle-logstore_xapi` is GPL-3.0
+because every Moodle plugin is — Moodle itself is GPL, and a plugin inherits the obligation. A studio
+deploying it into a client's Moodle is *using* it, not redistributing a derived product, which is the
+ordinary posture for the whole Moodle plugin estate already on this shelf. 🔴 It is a problem only if
+a client wants the emitter embedded in a proprietary product they ship.
+
+🟢 **The Open edX row is the strongest platform+AI story on this shelf**, and it needs no
+integration work invented here: Open edX Aspects already selected Ralph as its LRS with ClickHouse
+underneath. A studio customising Open edX gets an **MIT, 10-day-fresh, French-public-sector-maintained
+LRS** in the architecture by default.
+
+### 🔴 What is NOT on this shelf, stated because the absence is the finding
+
+🔴 **No permissive LRS ships inside any of the big platforms.** Moodle, Canvas, Blackboard and D2L
+all expect you to bring one. 🔴 **And `LearningLocker` — the LRS almost everyone names — has not had
+a commit since 2021-11-16 (1,801 days), is GPL-3.0, and carries no archived banner or deprecation
+notice on its page.** 585 ★ and 294 forks make it look maintained. 🔵 **This is the single most
+likely wrong decision a studio could make on this layer**, and nothing on GitHub warns against it.
+
+🟢 **The replacement depends on the client's runtime**, which is the cross-layer table in
+[`repos/foundations.md`](../repos/foundations.md): Python → Ralph, JVM → `lrsql`, .NET →
+`xapi-dotnet`, Node/TS → `pelotech/xapi-lrs` **only after you run the conformance suite yourself**.
+
+### 🟡 A conformance toolkit worth watching, not yet worth quoting
+
+[`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) — 🟢 **MIT** (1,080 B,
+`df57b343c1a3`), HEAD `3596bb5`, **37 d**, 🔴 **2 ★** — is a TypeScript monorepo offering typed
+contracts, a headless QTI runtime and conformance runners across **xAPI, cmi5, LTI 1.3, QTI 2.x/3.0,
+Caliper, Common Cartridge, CLR 2.0, Open Badges 3.0, OneRoster 1.2, CASE, h5p and W3C VC 2.0**. Its
+`package.json` wires `lrsql` as its xAPI backend through podman-compose, so the pairing is real code
+rather than a claim.
+
+🔴 **Two stars.** 🔵 Recorded here because it is the only address found that covers the standards
+surface this shelf cares about in one place, and because its own README is unusually honest — it
+states plainly that it is *"not affiliated with, endorsed by, or certified by 1EdTech, ADL/ADLNet,
+W3C"* and that it produces *"conformance assessments, not official certification."* 🟡 **Do not quote
+it to a client as a conformance guarantee.** Watch it; re-date it next pass.
+
+
 # Education vertical platforms — real systems to customise with AI on top
 
 **🆕 Pass `p395` · reads and commit both 2026-10-23.** 🔴 **A constraint that lands directly on this

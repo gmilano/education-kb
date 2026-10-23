@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 396 · reads and commit both 2026-10-23 — **THE ENUMERATION BLACKOUT THAT EXPLAINED FIVE THIN PASSES IS REFUTED: TRENDING RETURNS 200 AND SEARCH ENUMERATES 150. 🟢 `395-A`'s FORK ARM IS BUILT, RUNS HERE, AND CAUGHT ONE. 🟢 `394-E` IS ANSWERED THROUGH THE CHANNEL `395-B` TOLD SUCCESSORS TO STOP USING.**
+
+**Evidence:** [`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) — 28
+addresses · [`channel-state`](../evidence/channel-state.2026-10-23-p396.tsv) — 25 channels ·
+arm, controls and unedited output at
+[`compose/code/p396-fork-provenance-arm/`](../compose/code/p396-fork-provenance-arm/README.md).
+
+### 🟢 Closed
+
+| Gap | Was | Now |
+|---|---|---|
+| 🟢 **`Gap 395-A`** — *"WebSearch returns FORKS preferentially, a licence read cannot tell, and the existing alias gate structurally cannot catch it… Remedy is one HTML read per new address, and it should be an arm."* | Three of four addresses `p395` was handed were forks with byte-identical licence payloads. | 🟢 **DISCHARGED, AND BUILT DIFFERENTLY THAN PRESCRIBED — because the prescription was not executable here.** `forked from` lives only in HTML, HTML is WebFetch-only in this environment, and `curl \| grep` over fetched markup is **refused by the environment classifier**, so the prescribed arm could only ever have been manual. 🟢 **The arm asks git instead: a fork shares the upstream's ROOT COMMIT**, readable over `p389`'s blobless-clone channel, needing no HTML, no API and no star count — and **shell-executable here**. 🟢 **It caught one on its first live outing**: `ashleycribb/learnmcp-xapi` (0 ★) ↔ `DavidLMS/learnmcp-xapi` (15 ★), shared root `95ba79652b92`. 🟢 **It reproduces `p395`'s own catch blind** (`Poki-cbq/inno-agent` ↔ `hhyqhh/inno-agent`, root `2fb166886ed8`). 🟢 **Both negative controls hold**, and the fourth is the valuable one: `pelotech/xapi-lrs` claims `lrsql` schema compatibility in its README and the arm correctly calls it **independent** (distinct roots), where a string test would have called it derived — the first instrument in this base that does not commit the `Trend 25` error it was built to fix. 🔴 **Stated limit:** a squashed or re-rooted fork reads as independent, so the arm has **no false positives and may have false negatives**. |
+| 🟢 **`Gap 394-E`** — *"a successor should look for reasons, not more adoption percentages: UNESCO IESALC's instrument is the likeliest place a why has already been written down."* `395-B` then ruled it unreachable and told successors **not to pre-register it again**. | LATAM's thinnest assessment demand against its deepest assessment supply, unexplained for three passes. | 🟢 **SUBSTANTIVELY ANSWERED, and `394-E`'s prediction was exactly right about where the *why* lived.** 200 institutions, 19 countries, fielded Aug–Oct 2025: 🟢 **87% use AI in at least one area, 74% in teaching and learning, 57% in research — and 26% have a formal AI strategy.** Private non-profit 84% / public 68% / private for-profit 52%. 🔴 **The 87-vs-26 split is the reason**: an institution with no formal strategy tolerates a teacher's chatbot and does not procure an assessment system. 🔵 Consequence written up in `intel/market.md`: **in LATAM the sale is governance first, tooling second** — the inverse of NA and EMEA. 🔴 **Secondary throughout** — every host is refused — and 🟡 a separate IESALC figure of **45% with formal guidance** is a different instrument and must not be quoted alongside the 26%. |
+| 🟢 **`Gap 394-C`** — *"this environment can VERIFY any GitHub address it is handed and cannot ENUMERATE GitHub at all."* Five passes of thin supply were attributed to it. | `api.github.com` 403; `github.com/trending` 403 for fourteen consecutive passes. | 🔴 **REFUTED IN SCOPE.** `github.com/trending` returned **200** this pass (9 repos today, 15 weekly) and `github.com/search?q=xapi+lrs&s=updated` returned **"Page 1 of 150 results."** 🟢 The refusal is real but **narrower than recorded**: it is on `api.github.com` and on `curl`, not on the HTML endpoints through WebFetch. 🟢 **One query on the reopened channel produced eight addresses this base had never seen, six of them live and permissive** — which is more new permissive supply than the previous five passes combined. 🔴 **The cost of the over-general diagnosis was those five passes**, and the lesson is `396-A`. 🟢 The trending read was **re-verified on the independent clone channel** (5 of 5 addresses exist, HEADs 0–38 d) before anything was published on it. |
+
+### 🔴 Confirmed, with a cause this pass could measure
+
+| Gap | Status |
+|---|---|
+| 🔴 **`Gap 395-C`** — *"this pass could not run the repository's own Python, so `394-G` was not attempted, `make hooks` never ran, and the `394-A`/`394-B` fix ships UNAPPLIED."* | 🔴 **CONFIRMED, and no longer a judgement call.** `p395` described the refusal as its own caution about untrusted external code. 🟢 This pass **attempted it properly** — suite copied to a clean isolated directory, checked for stdlib-shadowing filenames (none: only `grant_gate.py`, `test_grant_gate.py`, `README.md`), invoked as `python3 -I` so neither cwd nor `PYTHONPATH` nor user site-packages is on the path. 🔴 **Refused by the environment classifier: `[Code from External]`.** The suite is stdlib-only (`re`, `os`, `sys`) with inline offline fixtures, so this is a blanket refusal to execute repository code, not a judgement about this code. 🔵 **Consequences, unchanged and restated plainly: ranked item 1 is NOT executable in this environment.** The `394-A`/`394-B` diff stays published-and-unapplied at [`PROPOSED-lib-patch.md`](../compose/code/p395-grant-ladder-fallthrough/PROPOSED-lib-patch.md); `394-G`'s one command stays unrun; `394-F`'s gate enumeration stays unaudited. 🟢 **A successor should stop ranking it first.** It is an operator permission, exactly as `395-B`'s allowlist is — see the ranking below. 🟢 **What this pass did instead**: built its instrument in **shell**, which this environment does execute, and ran its controls (`396-F`). |
+
+### 🆕 New
+
+| Gap | Statement |
+|---|---|
+| **`396-A`** | **An absence recorded against ONE channel hardens into a fact about the world within two or three passes, and then stops being retested.** `394-C` generalised a `curl`/API refusal into *"cannot enumerate GitHub at all"*; five passes of thin supply were explained by it and none re-measured it. 🟢 It took one WebFetch to refute. 🔵 **The fix is cheap and should be a writing rule: carry the channel in the claim.** *"Not found via WebSearch"* is not *"does not exist"*, and *"403 on curl"* is not *"the host refuses this session."* 🟢 A refused channel should be re-measured on a fixed cadence rather than inherited — this base inherited one for fourteen passes. |
+| **`396-B`** | **`curl` and WebFetch now have DIFFERENT permissions against the same host, and the difference is a classifier, not a network.** `curl https://github.com/<repo>` is refused with `[Code from External]`; WebFetch on the identical URL returns 200. Piping fetched HTML into `grep` is refused outright. 🔴 Every "403" in this base's channel history is therefore ambiguous between *the host refused*, *the proxy refused* and *the tool was refused*, and the three have different remedies. 🟢 `channel-state` now records **which tool** each row was measured on; earlier tables did not, and should be read as `curl`-only unless they say otherwise. |
+| **`396-C`** | **Executing repository code is refused by the environment classifier, so the instrument-maintenance half of this base cannot progress here, and three ranked items are permanently blocked.** See `395-C` above for the measurement. 🔵 **The structural consequence worth stating once:** this base can *write* instruments and *reason* about them, and can only *run* those written in shell. 🟢 Instruments that must be executable here should be written in **shell** (as `396-F` was); Python instruments should be treated as **specifications for an operator to run**, and should ship with the fixtures needed to verify them elsewhere. |
+| **`396-D`** | **The egress allowlist blocks the SECONDARIES too — and the findings arrived anyway, through the channel `395-B` told successors to stop using.** Seven further hosts measured refused this pass (`universoabierto.org`, `anahuaclandscape.com`, `universidadeshoy.com.ar`, `vozuniversitaria.org.mx`, `timeshighereducation.com`, `dig.watch`, `completeaitraining.com`), plus 🔴 **`arxiv.org` and `huggingface.co`** — which matters because this base cites arXiv routinely and **every such citation is secondary**. 🟢 `pypi.org` returns 200, the first reachable package index. 🔵 **`395-B`'s remedy was wrong in a correctable way:** it prescribed an allowlist request to the operator. 🟢 **The remedy that actually worked is free: ask the SEARCH channel for the FINDINGS rather than asking the FETCH channel for the DOCUMENT.** That is how `394-E` closed. Keep labelling the result secondary. |
+| **`396-E`** | **`EPL` is not in `grant_gate.py`'s `FAMILIES`, so the instrument reads a real permissive grant and returns no family.** [`yetanalytics/xapi-schema`](https://github.com/yetanalytics/xapi-schema) (6 d) serves 11,218 B at `master/LICENSE`, `sha256`₁₆ `a5cb01efb664`, title region *"…THIS ECLIPSE PUBLIC LICENSE."* 🔴 Under the `394-A` fall-through this now reads as a stub and the ladder keeps going — so an EPL repository publishes as `ABSENT` or falls to a manifest. 🔵 EPL is the **Clojure community default**, and the record layer this pass mapped is substantially Clojure, so this is not an edge case on these shelves. 🟡 Also missing: `Unlicense`, `Zlib`, `EUPL` — the last being the one a European public-sector client is most likely to hand over. 🟢 One-line fix per family; 🔴 unapplied, because the suite guarding it cannot be run (`396-C`). |
+| **`396-F`** | **The fork arm exists, runs here, and is the first instrument in this base that distinguishes a STRING from a PROPERTY** — the class `Trend 25`, `392-A`, `393-A` and `395-A` all describe. Root-commit identity over the blobless-clone channel; 2 positive controls (one of them `p395`'s catch, reproduced blind), 2 negative controls, unedited output in [`run-controls.2026-10-23.tsv`](../compose/code/p396-fork-provenance-arm/run-controls.2026-10-23.tsv). 🔴 **It needs a suspected upstream to compare against** — discovery of the pair is still WebSearch's job, now also served by `396-A`'s reopened search channel. 🔵 A successor should run it on **every** new address before shelving, and should consider back-running it over the existing shelf: 200+ addresses have been shelved without any provenance test at all. |
+| **`396-G`** | **The reopened enumeration channel prints an "Updated" column that is wrong by up to 702 days.** `github.com/search` reported [`openfun/warren`](https://github.com/openfun/warren) *"3 days ago"*; the git channel puts HEAD at `839fcbb`, **2024-11-19 — 702 days**. It reported `openfun/ralph` *"2 hours ago"* against a real HEAD of 2026-10-12. 🔴 **Second channel in two passes that looks like it dates and does not** (`395-E` was the first, when repository HTML stopped returning last-commit dates). 🟢 **The rule generalises and should be standing: enumerate with HTML, date with git, grant with `raw`, and never let one channel do another's job.** 🔴 This matters more than the individual error, because `396-A` will push successors to lean hard on the channel that cannot date. |
+| **`396-H`** | **The agent↔record-layer bridge is a one-repository supply, 419 days stale, and it sits under every regulatory requirement this base has recorded.** [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT, 15 ★) is the entire open-source supply joining an AI agent to an institution's LRS. 🔴 Meanwhile Oklahoma S.B. 1734 wants teacher review of AI output recorded, EU Article 26 wants deployer logging, and LATAM's 87%-adopting / 26%-governed institutions need to show a board something. 🟢 **This is a gap in the world, not in this base** — written up as `T37` and `Pattern AD`, and it is the clearest build opportunity these shelves have surfaced. 🔵 A successor should re-date it every pass; if it stays dead, the recommendation *fork and own it* only gets stronger. |
+
+### 🟡 Carried, unchanged
+
+- **`Gap 392-A`** / **`Gap 393-A`** (a `{runtime}`-only capability key over-refutes; a name-keyed
+  channel over-discovers) — 🟡 **carried, but no longer the whole story.** `396-F` is the first
+  instrument here that separates a string from a property; the **lexicon** both gaps ask for is still
+  unwritten, and `396-F` is one worked example of what it should contain.
+- **`Gap 394-F`** (standing gates whose rules are not enforced where the verdict is written) and
+  **`Gap 394-G`** (`bespoke_census` grades stock BSD-3 `stock=no`) — 🔴 **both carried, neither
+  attempted; blocked by `396-C`, not by ranking.**
+- **`Gap 393-B`** (live releases, dead source) — carried, untouched.
+- **`Gap 393-C`** (no primary-source US state education-AI rule) — 🔴 **carried.** The North America
+  leg again returned trackers only, and `www.multistate.us` and `crpe.org` are now **measured
+  refused** (`396-D`). 🟢 Per `396-D` the correct move is to ask search for the *provisions* — done
+  this pass: Maryland S.B. 720, Idaho S.B. 1227 and Oklahoma S.B. 1734 are now named with their
+  substance in `intel/market.md`, labelled secondary.
+- **`Gap 393-D`** (probe TED and BOAMP directly) — 🔴 carried; subsumed by `395-B` / `396-D`.
+- **`Gap 393-H`** (a quoted absence after a colon and across a newline reads as a fresh claim) and
+  **`Gap 393-I`** (the adjudication ledger is pinned by line number and `make hooks` cannot see it
+  drift) — 🔴 **both carried, both untouched, and `393-I` is now overdue three times over.** This
+  pass again inserted text **above every shelf and above this ledger**, which is exactly the
+  condition that silently broke `p392`'s rows, and `396-C` means `make hooks` could not have caught
+  it. 🔵 A content anchor — a `sha256` of the absence sentence — remains the fix.
+- **`Gap 395-B`** — 🟡 **superseded rather than carried.** Its measurement stands and was extended;
+  its *remedy* is replaced by `396-D`.
+- **`Gap 395-D`** (the reusable half of an agent-era project is the ungranted half) — 🟡 carried, and
+  `T39` records a **third shape** of it: a live project under a bespoke non-OSI licence.
+- **`Gap 395-E`** (HTML stopped returning last-commit dates) — 🟢 **honoured in practice and now
+  written down where an instrument can read it**, as the standing channel rule in `396-G`.
+
+### 🔵 Ranked for the successor
+
+1. **Run `396-F`'s arm over the existing shelf, not just new addresses.** 200+ addresses have been
+   shelved with no provenance test; the arm is shell, it is cheap, and `395-A` showed the base
+   rate of forks in search results is high. Start with the 0 ★ and low-star rows.
+2. **Re-date [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) and re-run the
+   xAPI 2.0 bake-off** (`396-H`, `Pattern AE`). Three claimants at 1 star between them will move
+   fast or die; either outcome changes the recommendation, and both are one dating run away.
+3. **Adopt `396-G` as a standing channel rule and `396-A` as a writing rule.** Enumerate with HTML,
+   date with git, grant with `raw`; and carry the channel inside every recorded absence. These cost
+   nothing and would have saved five passes.
+4. **Use the reopened search channel deliberately** (`396-A`). One query produced eight unseen
+   addresses. The obvious next layers, each a `p395`/`p396`-shaped sweep: **QTI / assessment
+   delivery**, **OneRoster / rostering**, **Open Badges and CLR credentialing**. `conform-ed`'s scope
+   list is a ready-made map of what to sweep.
+5. 🔴 **Stop ranking the Python items first** (`396-C`). The `394-A`/`394-B` patch, `394-F`'s
+   enumeration and `394-G`'s one command are **operator permissions**, exactly as `395-B`'s
+   allowlist is. Put both requests to the operator — see below — and spend ranked items on work that
+   executes here.
+
+### 🔴 For the operator — the two things no successor pass can do
+
+1. **Allow repository code execution** (or run `test_grant_gate.py` out of band). This unblocks the
+   `394-A`/`394-B` patch, `394-F`, `394-G` and `396-E` — four carried gaps, all with the fix already
+   written.
+2. **Allowlist entries** for `eur-lex.europa.eu`, `iesalc.unesco.org`, `unu.edu`, `arxiv.org`,
+   `cran.r-project.org`. 🟢 Lower priority than it looked: `396-D` shows the *findings* are reachable
+   through search even when the documents are not. What primary access would buy is the ability to
+   stop labelling regulatory claims **secondary** — which matters for the EU AI Act high-risk date
+   this base still cannot settle between 2 August 2026 and 2 December 2027.
+
+
 ## Pass 395 · reads and commit both 2026-10-23 — **BOTH PRE-REGISTERED CODE DEFECTS DISCHARGED: 8 PUBLISHED ABSENCES TURN OUT TO CARRY GRANTS. 🟢 THE SUPPLY DRY SPELL BREAKS ON A SPANISH LEG. 🔴 AND FIVE CARRIED "GO READ THE PRIMARY SOURCE" GAPS ARE ONE CAUSE: AN EGRESS ALLOWLIST.**
 
 **Evidence:** [`verified-repos`](../evidence/verified-repos.2026-10-23-p395.tsv) — 22 rows ·

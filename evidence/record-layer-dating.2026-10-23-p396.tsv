@@ -1,0 +1,29 @@
+repo	runtime	licence	licence_path	bytes	sha256_16	head	head_date	age_days	stars	forks	role	verdict
+yetanalytics/lrsql	Clojure/JVM	Apache-2.0	main/LICENSE	11357	c71d239df917	cb794e4	2026-10-01	21	144	39	LRS server (SQLite/Postgres/MariaDB/MySQL)	LIVE-PERMISSIVE
+openfun/ralph	Python	MIT	main/LICENSE.md	1094	08ea77291de9	91fef11	2026-10-12	10	51	19	LRS server + CLI + library; Open edX Aspects' LRS	LIVE-PERMISSIVE
+yetanalytics/lrs	Clojure	Apache-2.0	master/LICENSE	11357	c71d239df917	d75e2de	2026-10-16	6	7	-	LRS protocols/logic library	LIVE-PERMISSIVE
+yetanalytics/lrs-test-runner	Clojure/JVM	Apache-2.0	main/LICENSE	11357	c71d239df917	830a4b2	2026-10-16	6	0	0	runs the ADL conformance suite from Clojure	LIVE-PERMISSIVE
+yetanalytics/xapi-schema	Clojure	EPL	master/LICENSE	11218	a5cb01efb664	671753d	2026-10-16	6	-	-	xAPI schema library	LIVE-PERMISSIVE-BUT-UNRECOGNISED-FAMILY
+pelotech/xapi-lrs	TypeScript/Node	Apache-2.0	main/LICENSE	11357	c71d239df917	4d18e0c	2026-08-08	75	0	0	LRS server; claims xAPI 1.0.3 AND 2.0	LIVE-PERMISSIVE-ZERO-ADOPTION
+codetakt/kiva	Rust	Apache-2.0	main/LICENSE	11357	c71d239df917	addf100	2026-10-21	2	0	0	LRS; IEEE 9274.1.1-2023 baseline	LIVE-PERMISSIVE-ZERO-ADOPTION
+nurullahturkoglu/xapi-dotnet	C#/.NET	Apache-2.0	main/LICENSE	11358	c95bae1d1ce0	0d47d65	2026-10-21	1	1	0	library + embeddable LRS; xAPI 2.0 + 1.0.3	LIVE-PERMISSIVE-ZERO-ADOPTION
+conform-ed/conform-ed	TypeScript	MIT	main/LICENSE	1080	df57b343c1a3	3596bb5	2026-09-15	37	2	1	conformance runners across 13 ed standards; wires lrsql	LIVE-PERMISSIVE-ZERO-ADOPTION
+adlnet/lrs-conformance-test-suite	Node	MIT	master/LICENSE	1046	c0fc02a86ae2	5bc232d	2025-09-04	413	78	52	THE referee: ADL LRS conformance suite, 1.0.3 and 2.0	STALE-BUT-CANONICAL
+adlnet/ADL_LRS	Python/Django	Apache-2.0	master/LICENSE	11357	58d1e17ffe51	efa045e	2025-06-13	496	334	155	ADL reference LRS; README: "proof of concept"	STALE-NOT-PRODUCTION
+DavidLMS/learnmcp-xapi	Python	MIT	main/LICENSE	1069	4aa758cb51b2	fbf6091	2025-08-29	419	15	4	MCP server: agents read/write xAPI to an LRS	STALE
+davidpesce/moodle-logstore_xapi	PHP	GPL-3.0	master/LICENSE	35121	e1c0ad728983	df5c665	2026-10-20	2	82	95	Moodle -> LRS emitter	LIVE-COPYLEFT
+LearningLocker/learninglocker	Node	GPL-3.0	master/LICENSE	35141	589ed823e9a8	5fec948	2021-11-16	1801	585	294	the famous OSS LRS	DEAD-COPYLEFT
+openfun/warren	Python	MIT	main/LICENSE.md	1094	0cc59ddb463e	839fcbb	2024-11-19	702	17	-	learning-analytics visualisation on top of an LRS	DEAD
+RusticiSoftware/TinCanPHP	PHP	Apache-2.0	master/LICENSE	11358	cfc7749b96f6	19acfc8	2022-11-02	1450	-	-	xAPI CLIENT library, not a store	DEAD
+scormflow/scorm-engine	TypeScript	MIT	main/LICENSE	1079	7cdfc153e7f1	1f2242d	2026-10-12	10	1	-	SCORM/xAPI/cmi5 infra with built-in LRS	LIVE-PERMISSIVE-ZERO-ADOPTION
+Praxity/praxity-proof	TypeScript	MIT	main/LICENSE	1069	d817c04f10ef	0d984ea	2026-10-10	11	0	-	Cloudflare-hosted learning analytics, xAPI-compatible	LIVE-PERMISSIVE-ZERO-ADOPTION
+Apereo-Learning-Analytics-Initiative/OpenLRW	Java	-	-	-	-	a243920	2020-02-06	2450	-	-	Apereo learning analytics warehouse	DEAD
+u2035/unti-lrs	Node	-	-	-	-	77b3512	2018-04-11	3116	-	-	fork-lineage of Learning Locker	DEAD
+webtech-uos/nodejs-lrs	Node	-	-	-	-	14e13f9	2014-02-13	4634	-	-	Node LRS	DEAD
+dtarnawczyk/modernlrs	-	-	-	-	-	e534a52	2017-05-16	3446	-	-	LRS	DEAD
+ZanichelliEditore/LearningRecordStore-xapi	-	-	-	-	-	0221b61	2020-03-18	2409	-	-	validate xAPI -> S3	DEAD
+MonkoftheFunk/GO_LRS	Go	-	-	-	-	2b11725	2014-01-02	4676	-	-	only Go LRS found; README: not production ready	DEAD
+burakkaraceylan/xapi-go	Go	-	-	-	-	64ae7c0	2022-08-15	1529	-	-	Go xAPI CLIENT, not a store	DEAD
+ashleycribb/learnmcp-xapi	Python	MIT(byte-identical upstream)	main/LICENSE	-	-	816d8b8	2026-09-17	35	0	0	FORK of DavidLMS/learnmcp-xapi	REJECTED-BY-FORK-ARM
+jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada	-	BESPOKE "Licencia Comunitaria de Uso Profesional"	main/LICENSE.md	1262	33a3bb8713ec	70d84fe	2026-10-21	1	-	-	teacher agent/skills environment (ES)	REJECTED-NON-OSI
+lbhubedu/lbedu.me	-	MIT	main/LICENSE	2118	18272c548223	13a4bd4	2026-10-18	4	-	-	pt-BR prompt/agent/MCP recipes, not an agent	OUT-OF-CLASS

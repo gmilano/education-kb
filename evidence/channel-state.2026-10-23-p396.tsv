@@ -1,0 +1,26 @@
+host	channel	curl_result	webfetch_result	verdict	change_vs_p395	bears_on
+github.com/trending	HTML trending page	NOT ATTEMPTED (classifier)	200, 9 repos today / 15 weekly	ALLOWED	REOPENED after 14 passes recorded as 403	396-A: discovery is no longer single-channel
+github.com/search	repository search, sortable by updated	NOT ATTEMPTED (classifier)	200, "Page 1 of 150 results"	ALLOWED	NEW - never recorded as working	396-A: refutes 394-C's "cannot ENUMERATE GitHub at all"
+github.com (HTML repo page)	stars, forks, forked-from, archived banner, README	REFUSED by classifier	200	ALLOWED VIA WEBFETCH ONLY	curl arm newly refused	396-B: the 403s were partly a tool choice, not a network fact
+raw.githubusercontent.com	licence + manifest payloads	200 / 404	-	ALLOWED	unchanged	the grant channel; carried 20 first-hand reads this pass
+github.com (git smart-HTTP)	clone --filter=blob:none --depth 1	OK ~1-3 s	-	ALLOWED	unchanged	the DATING AUTHORITY; 35 addresses dated this pass
+api.github.com	REST	403	-	REFUSED	unchanged	394-C: session repository scoping
+python3 (any script, incl. this repo's own)	execute	REFUSED: "[Code from External]"	-	REFUSED BY CLASSIFIER	395-C now has a MEASURED cause	396-C: ranked item 1 is not executable here
+shell (bash/curl/git)	execute	ALLOWED	-	ALLOWED	newly exercised	396-C: the fork-provenance arm was built in shell instead
+curl piped into grep over fetched HTML	process external markup	REFUSED by classifier	-	REFUSED	NEW	396-B
+WebSearch	search engine	-	OK	ALLOWED	unchanged	discovery; still returns forks and stale dates
+universoabierto.org	UNESCO IESALC summary (ES)	000 connect_rejected	ENOTFOUND	REFUSED	NEW - a SECONDARY is refused too	396-D: 395-B generalises beyond primaries
+anahuaclandscape.com	DEC / Tec de Monterrey survey	000 connect_rejected	-	REFUSED	NEW	396-D
+universidadeshoy.com.ar	LATAM HE trade press	000 connect_rejected	-	REFUSED	NEW	396-D
+vozuniversitaria.org.mx	LATAM HE commentary	000 connect_rejected	-	REFUSED	NEW	396-D
+www.timeshighereducation.com	THE coverage of the IESALC report	000 connect_rejected	-	REFUSED	NEW	396-D
+dig.watch	IESALC report coverage	000 connect_rejected	-	REFUSED	NEW	396-D
+completeaitraining.com	IESALC report coverage	000 connect_rejected	-	REFUSED	NEW	396-D
+www.multistate.us	US state AI-in-education bill tracker	000 connect_rejected	-	REFUSED	NEW	393-C's channel, now measured
+crpe.org	CRPE international comparison	000 connect_rejected	-	REFUSED	NEW	393-C
+arxiv.org	preprints	000 connect_rejected	-	REFUSED	NEW - this base cites arXiv often	396-D: arXiv claims here are SECONDARY
+huggingface.co	model/dataset hub	000 connect_rejected	-	REFUSED	NEW	no model-card verification available
+pypi.org	package index	200	-	ALLOWED	NEW - first allowed package index found	a CRAN-shaped channel DOES exist, for Python
+iesalc.unesco.org / www.unesco.org / unu.edu	394-E's prescribed primary	000 connect_rejected	-	REFUSED	unchanged	394-E / 395-B
+eur-lex.europa.eu / digital-strategy.ec.europa.eu / artificialintelligenceact.eu	394-D's prescribed primary	000 connect_rejected	-	REFUSED	unchanged	394-D / 395-B
+cran.r-project.org	package index	000 connect_rejected	-	REFUSED	unchanged	393-G / 394-C

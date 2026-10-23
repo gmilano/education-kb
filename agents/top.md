@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p396` · reads and commit both 2026-10-23.** 🔴 **No new education-native agent cleared
+this pass, and the honest headline is that the one the search channel offered was a fork of a dead
+project.** The supply finding is stated here rather than padded over:
+[`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv) — 28 addresses.
+
+### 🟡 The one agent address worth shelving, with its defect on the same line
+
+[`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) — 🟢 **MIT** (1,069 B,
+`sha256`₁₆ `4aa758cb51b2`, read first-hand), **15 ★**, 4 forks, HEAD `fbf6091` — 🔴 **2025-08-29,
+419 days** — is an **MCP server that lets an agent read and write a learner's xAPI record** in a
+conformant Learning Record Store. Backends named in its README: `lrsql`, Ralph LRS and Veracity.
+
+🔵 **Why a 15 ★ repo is worth a row at all.** It is the *only* address found in this pass that joins
+an agent to the record layer. Every tutoring agent on this shelf keeps its own memory — `DeepTutor`'s
+lifelong memory, `inno-agent`'s L1/L2/L3 layers — and **none of them writes to the institution's
+LRS**, which is where a registrar, a regulator or a credential actually looks. 🔴 **So the integration
+every enterprise engagement needs is served by one MIT repo that has not moved in fourteen months.**
+That is a gap in the open-source supply, and it is also the clearest build opportunity this base has
+surfaced for Globant — see `Pattern AD`.
+
+🔴 **Do not take the address search returns for it.** The first result is
+[`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) — **0 ★**, a fork — whose
+licence payload is byte-identical to upstream's, so the grant channel cannot tell. It was caught by
+this pass's new arm (`396-F`), which reproduces `p395`'s catch blind:
+[`p396-fork-provenance-arm`](../compose/code/p396-fork-provenance-arm/README.md).
+
+### 🔴 Rejected this pass, and why — so a successor does not re-spend a leg on them
+
+| Address | Found by | Rejected because |
+|---|---|---|
+| [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | WebSearch, first result | 🔴 **fork** of `DavidLMS/learnmcp-xapi`; shared root commit `95ba79652b92` |
+| [`jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada`](https://github.com/jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada) | Spanish leg | 🔴 **not open source.** Grant read first-hand: 1,262 B, `33a3bb8713ec`, *"Licencia Comunitaria de Uso Profesional"* — a bespoke licence. 1 d old, active, genuinely a teacher-agent environment — and **unusable by a studio** |
+| [`lbhubedu/lbedu.me`](https://github.com/lbhubedu/lbedu.me) | Portuguese leg | 🟡 MIT (2,118 B, `18272c548223`), 4 d — but it is a **recipe collection** (prompts, MCPs) in pt-BR, not an agent. Out of class, recorded so it is not re-found |
+| `DannyAvilaL/agente_clases`, `BrayanG877/ia-educativa-reto` | Spanish leg | 🟡 personal course projects; no grant surfaced, no adoption |
+
+🔵 **The Spanish and Portuguese legs are still the right change** — `p395` broke a six-pass dry spell
+on one, and this pass's only *active* education-native agent (`Aula`) came from the same leg. 🔴 **But
+`387-D` should now be amended rather than simply repeated: the non-English legs find live projects
+with non-OSI licences.** Two passes, two Spanish-language finds, and the licence was the blocker
+once. Add *the grant read* to the leg, not just the search.
+
+
 # Top education AI agents
 
 **🆕 Pass `p395` · reads and commit both 2026-10-23.** 🟢 **The first education-native agent this
