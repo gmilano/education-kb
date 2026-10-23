@@ -5,6 +5,53 @@ updated: 2026-10-23
 ---
 
 
+## 🆕 2026-10-23 · `p402` — the alias register's DIRECTION half gets a channel, and `ease`'s canonical owner is a third address
+
+🔵 **Append-only: this section is added above `p401`'s and nothing below it is rewritten.**
+
+### What is new this week
+
+- 🔴 **`ACTION ZZ-al` is CLOSED after ~52 passes, and the answer is neither candidate.**
+  The register asked which of `edx/ease` or `openedx/ease` is canonical. **Both are STALE.** The
+  canonical address is [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease),
+  which had **zero** prior mentions anywhere in this base. Established from the **HTML header after
+  the redirect** — the channel `p351` correctly said the clone arm *"does not have"* — and
+  corroborated by a ref-set fingerprint identical across all three addresses (**173 refs**, fp
+  `e3793cd329e4`, HEAD `056da0adc6f3`).
+- 🔴 **A live recommendation on `verticals/solutions.md` pointed at a stale address.** It read
+  *"prefer the `openedx` path … on the stewardship argument."* Corrected: the stewardship argument
+  **inverts** — Open edX moved this code to an owner named `unsupported` and archived it read-only
+  on **2024-02-28**. 🟢 Commercially nothing moves: `ease` is **AGPL-3.0** and was never on the
+  permissive shelf. The *address* and the *reason* were both wrong.
+- 🟢 **The two register-absent pairs `p397` flagged "YES" are now adjudicated, with direction.**
+  `1EdTech/lti-1-3-php-library` **CANONICAL** ↔ `IMSGlobal/...` **STALE** (61 refs both, fp
+  `08d380600a05`, Apache-2.0, 124 ★) — the standards-body rename, the same shape as `caliper-spec`
+  and `openbadges-specification`. `meta-pytorch/opacus` **CANONICAL** ↔ `pytorch/opacus` **STALE**
+  (562 refs both, fp `aeb05358835f`, Apache-2.0, 2.0k ★).
+- 🟢 **`packbackbooks/lti-1-3-php-library`: the fork parent is now named FIRST-HAND.** The HTML
+  `forked from` line reads `1EdTech/lti-1-3-php-library`; 224 refs, HEAD `66d8e4e4b9bd`. 🔵 The
+  divergence was already known (`p397`) and `p391` recommends it **deliberately** — so this is a
+  provenance confirmation, **not** a shelf defect, and it is not sold as one.
+- 🔴 **This pass's own draft reproduced `p400`'s substring defect.** The draft claimed *"stale
+  aliases in live use on the build-on tiers"*, counting **2** citations of `pytorch/opacus`. 🔴 **One
+  of the two is the substring inside `meta-pytorch/opacus`** — `p400`'s `NAME-SUBSTRING-ONLY` class
+  exactly — and the other is the register row discussing the alias. 🟢 **True independent
+  citations: 0.** The claim was withdrawn before publication. `p400`'s guard earns its keep against
+  the pass that came two later.
+- 🔴 **All five prescribed global legs are SATURATED, including the supply tail that paid for
+  `p401`.** Every address the supply tail returned is **exact-shelved**:
+  `Naresh1401/education-tutor-agent`, `Ebimsv/AITutorAgent`, `braiinz94/braiinz-education`,
+  `ed-donner/agents`, `Open-TutorAi/open-tutor-ai-CE`. 🔵 Two useful first-hand reads came out of it
+  anyway: `Ebimsv/AITutorAgent` is **MIT** by payload (`LICENSE`, 1 072 B, title `MIT License`, on
+  **both** `main` and `master`), and `Naresh1401/education-tutor-agent` has **no grant at either
+  branch** with `README.md` → 200 as the branch control on both — 🟢 **independently reproducing
+  this base's `NO GRANT` verdict and refuting the search engine's "MIT-licensed" claim.**
+
+**Evidence:** [`alias-direction`](../evidence/alias-direction.2026-10-23-p402.tsv) — 28 addresses ·
+[`regional-legs`](../evidence/regional-legs.2026-10-23-p402.tsv) — 9 legs · instrument and 4
+reproduced controls at [`compose/code/p402-alias-direction/`](../compose/code/p402-alias-direction/README.md).
+
+
 ## 🆕 2026-10-23 · `p401` — the Arabic seedbed appears, and the Moodle plugin layer is confirmed copyleft end to end
 
 🔵 **Append-only: this section is added above `p400`'s and nothing below it is rewritten.**

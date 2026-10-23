@@ -4,6 +4,25 @@ region: Global
 updated: 2026-10-23
 ---
 
+### 🔴 `402-E` — the five prescribed legs, placed by region, and three of four regions returned no instrument
+
+🔵 Every leg below was run on **2026-10-23**. Full table:
+[`regional-legs`](../evidence/regional-legs.2026-10-23-p402.tsv) — 9 legs.
+🔵 **Placed rather than global:** a finding with no region attached is worth less than one that is
+placed, and a region that returned nothing is written down so silence cannot read as coverage.
+
+| region | leg result | what it returned |
+|---|---|---|
+| **North America** | 🟡 **no education-specific instrument** | Market-research pages only. 🔴 **Reported, UNCONFIRMED here:** NA ≈36 % share, **10 %** of institutions with formal AI guidelines, **71 %** of US teachers untrained. Colorado and Texas named as piecemeal state action; Canada's **AIDA** named as *proposed*. 🔵 One analysis calls education AI *"a relative regulatory vacuum"* where schools and districts decide with minimal oversight — consistent with this base's `NOT_ESTABLISHED` NA rows. |
+| **EMEA** | 🔴 **no education-specific instrument at all** | 🔴 **Reproduces `p400`'s finding 11 for the THIRD consecutive pass.** The leg returns enterprise-AI material with the **EU AI Act** as backdrop and **nothing** education-specific. 🟢 This is an **informed gap**, measured three times, not an absence of a market. |
+| **APAC** | 🔴 **no ministry instrument surfaced** | Returned enterprise and corporate-training items (TCS–Pearson learning alliance, LearnUpon's Sydney HQ). 🔴 **No ministry-level K-12 or HE AI policy for SG, AU, CN, KR or JP appeared on this leg** — in the region holding the largest mandated deployment on earth (`CN-BJ`, `p400`). 🔵 The typed `policy-matrix.tsv` rows remain the only APAC instrument record; the search leg adds nothing. |
+| **LATAM** | 🟢 **two authoritative sources NAMED — best regional yield of the five** | 🟢 **UNESCO IESALC + UNU-IAS working paper** on AI in higher education across Latin America and the Caribbean — a regional survey of **200 institutions in 19 countries**, fielded **Aug–Oct 2025**, covering teaching, research, administration and governance. 🟢 **ILIA 2025** (CEPAL-linked *Índice Latinoamericano de IA*) carries a **governance dimension with a regulation sub-dimension**. 🔵 **Chile** is named as the one national AI roadmap that survived a change of administration — the rest of the region is described as *"a patchwork of pilot policies"* discarded administration by administration. 🔴 **Neither source was read first-hand: primary-host egress is unavailable on this session**, so both are recorded at band `reported` with the source *named* for whichever pass gets egress. |
+
+🔴 **The honest summary: 0 of 5 legs produced a new unshelved education-native address**, and the
+four global/supply legs are **saturated**. 🟢 The LATAM leg is the only one that moved anything, and
+what it moved is a **pair of named primary sources**, not a repository.
+
+
 
 **🆕 Pass `p401` · reads and commit both 2026-10-23.** 🟢 **The Gulf enters the TYPED layer after
 twelve passes as prose only — three rows. 🟢 And the Arabic-language supply leg this file

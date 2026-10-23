@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p402` · reads and commit both 2026-10-23 — the EIGHTH pass dated today.** 🟢 **`p397`'s
+fork backlog is worked for the first time in five passes — the item `p400` ranked and `p401`
+recorded itself as declining.** 🔴 **No row on this shelf gains or loses a grant.** What changed is
+**which address** three groups are cited by, and one of them had been open since `p350`.
+
+| | |
+|---|---|
+| 🟢 **`ACTION ZZ-al` CLOSED after ~52 passes** | The register asked which of `edx/ease` or `openedx/ease` is canonical. 🔴 **Both are STALE.** The canonical address is [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) — **zero** prior mentions in this base — on the **HTML header after the redirect**, the channel `p351` correctly said the clone arm *"does not have"*, corroborated by a ref-set fingerprint identical across all **three** addresses (**173 refs**, fp `e3793cd329e4`). 🔵 **AGPL-3.0 and archived since 2024-02-28**, so nothing moves commercially — but a live recommendation on [`verticals/solutions.md`](../verticals/solutions.md) pointed at an alias, and is corrected. |
+| 🟢 **Both register-absent pairs `p397` flagged "YES" adjudicated, with direction** | `1EdTech/lti-1-3-php-library` **CANONICAL** ↔ `IMSGlobal/…` **STALE** (61 refs both, fp `08d380600a05`); `meta-pytorch/opacus` **CANONICAL** ↔ `pytorch/opacus` **STALE** (562 refs both, fp `aeb05358835f`). 🔵 `packbackbooks`' parent is now named **first-hand** by the HTML `forked from` line — a provenance confirmation, **not** a shelf defect: `p391` recommends that fork deliberately. |
+| 🔴 **This pass's own draft reproduced `p400`'s substring defect** | The draft claimed *"stale aliases in live use on the build-on tiers"* off **2** `pytorch/opacus` citations. 🔴 **One is the substring inside `meta-pytorch/opacus`**, the other is the register row discussing the alias — 🟢 **true independent citations: 0**, and the claim was withdrawn before publication. `p400`'s guard earns its keep against the pass two later. |
+| 🔴 **The 324-address sweep was REFUSED** | `Exfil Scouting`, in a parallel **and** a plain sequential form. Individually named addresses are permitted, so the backlog is worked in **bounded, named batches — 28 addresses**. 🔵 `T82`: a refusal licenses exactly one conclusion, *this invocation was refused*. 🟢 It improved the scoping — batches were chosen by whether a build-on tier actually **cites** the group. |
+| 🔴 **Carried, and named so it cannot look worked** | **296 of 324** backlog addresses unadjudicated; `p370`'s **1 152**-slug promotion backlog untouched for a **sixth** pass; `p401`'s `moodle-aiprovider_openaicompatible` pair **narrowed, not closed** (HEADs differ → two repositories, direction still unestablished). |
+
+🔴 **All five prescribed global legs are SATURATED, including the supply tail that paid for `p401`** —
+every address it returned is **exact-shelved**. 🟢 Two first-hand reads came out of it anyway:
+`Ebimsv/AITutorAgent` is **MIT** by payload (`LICENSE`, 1 072 B, title `MIT License`, on **both**
+`main` and `master`), and `Naresh1401/education-tutor-agent` carries **no grant at either branch**
+with `README.md` → 200 as the branch control — 🟢 **independently reproducing this base's `NO GRANT`
+verdict and refuting the search engine's "MIT-licensed" claim.**
+
+**Evidence:** [`alias-direction`](../evidence/alias-direction.2026-10-23-p402.tsv) — 28 addresses ·
+[`regional-legs`](../evidence/regional-legs.2026-10-23-p402.tsv) — 9 legs · instrument and **4
+reproduced `p370` controls** at [`compose/code/p402-alias-direction/`](../compose/code/p402-alias-direction/README.md).
+
+
 
 **🆕 Pass `p401` · reads and commit both 2026-10-23 — the SEVENTH pass dated today.** 🟢 **The
 Arabic-language leg that `p389` named as *"the next step"* and that five passes did not run has
@@ -194,7 +219,7 @@ to fix `Trend 25`**, which is worth stating plainly rather than quietly patching
 
 | verdict | n | what it means | examples |
 |---|---|---|---|
-| 🔴 `SAME-REPO-ALIAS` (shared root, **same HEAD**) | **8** | **ONE artefact, TWO shelf addresses** — a census duplicate, not a fork | `1EdTech`↔`IMSGlobal` ×3 (the standards-body rename), `edx`↔`openedx` `ease`, `pytorch`↔`meta-pytorch` `opacus`, `kantord`↔`LibreLingo`, `digitalcredentials`↔`openwallet-foundation-labs` |
+| 🔴 `SAME-REPO-ALIAS` (shared root, **same HEAD**) — 🔵 **`p402`: `ease`'s canonical is a THIRD address, `openedx-unsupported/ease`; `ACTION ZZ-al` CLOSED** | **8** | **ONE artefact, TWO shelf addresses** — a census duplicate, not a fork | `1EdTech`↔`IMSGlobal` ×3 (the standards-body rename), `edx`↔`openedx` `ease`, `pytorch`↔`meta-pytorch` `opacus`, `kantord`↔`LibreLingo`, `digitalcredentials`↔`openwallet-foundation-labs` |
 | 🟢 `DIVERGENT-FORK` (shared root, **different HEAD**) | **7** | two artefacts, one ancestry — a real choice to adjudicate | `DavidLMS`↔`ashleycribb` `learnmcp-xapi` (`p396`'s catch, reproduced blind), `dmitry-viskov`↔`ucfopen` `pylti1.3`, `EleutherAI`↔`latam-gpt` `lm-evaluation-harness` |
 | 🟢 `INDEPENDENT` (distinct roots) | **4** | same name, unrelated code | `OpenLRS`, `qti-convert`, `ims-lti`, `lrs` |
 | 🔵 `INCONCLUSIVE-UNRESOLVABLE` | **2** | 🔵 never called INDEPENDENT from a failed read | `apereo/opencast` (404 — 🔵 **already known dead since `p230`**, see below), and the base's own dead-address control |

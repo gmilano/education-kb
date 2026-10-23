@@ -301,10 +301,26 @@ census delta **+1** address.
    not just from the search index** (`397-F`). 🟢 **Two pairs are ready to add now**
    (`lti-1-3-php-library`, `opacus`), and the arm resolves the **identity** half of `ACTION ZZ-al`
    that the index has been blind to since `p350`. 🔵 Then re-derive both censuses.
+   🟢 **`p402` DONE on the adjudication, NOT on the re-derivation.** Both pairs are adjudicated
+   **with direction** — `1EdTech` CANONICAL ↔ `IMSGlobal` STALE (61 refs both, fp `08d380600a05`);
+   `meta-pytorch` CANONICAL ↔ `pytorch` STALE (562 refs both, fp `aeb05358835f`) — and
+   🟢 **`ACTION ZZ-al` is CLOSED**, including the direction half, by a channel the arm lacked: the
+   **HTML header after the redirect**. 🔴 The answer is a **third** address,
+   [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease).
+   🔴 **The census re-derivation is NOT done** — `p402` measured ref sets, not the census, and
+   writing a differently-measured number into a cell governed by another instrument is `Gap 400-A`.
 3. 🟡 **Work the 530-pair backlog**, highest-consequence groups first (`moodle-mcp` 10 owners,
    `canvas-mcp` 21, `blackboard-mcp` 10, `brightspace-mcp-server` 4). 🔵 **`lineage.sh` is shell and
    cheap**; the question is whether that crowded supply is many projects or a few forked many times,
    and nothing on these shelves currently answers it.
+   🟢 **`p402` PARTIALLY ANSWERED, for the largest group.** `canvas-mcp`: **21** addresses probed on
+   the ref-set channel, **20 resolve, 20 distinct HEADs, 20 distinct fingerprints, 0 aliases**
+   (`eastarctica/canvas-mcp` UNRESOLVED) —
+   [`canvas-mcp-crowding`](../evidence/canvas-mcp-crowding.2026-10-23-p402.tsv).
+   🔴 **So the crowding is real supply, not census noise.** 🔴 **Still open:** a distinct HEAD rules
+   out an alias and a non-divergent fork but **not a divergent fork** — the **lineage** half needs
+   the root commit (`Pattern AF` steps 1–2), and `moodle-mcp`, `blackboard-mcp` and
+   `brightspace-mcp-server` are **untouched**.
 4. 🟢 **Make a `hooks` score a required line in the write-up** (`397-B`) — a one-line convention that
    would have surfaced three red gates two passes earlier.
 5. 🟡 **Add a superlative gate** (`397-A`): any sentence containing *most-starred*, *most-adopted*,

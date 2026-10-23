@@ -201,6 +201,40 @@ independent — no false positives, possible false negatives.
 
 🔵 **Cost: two blobless clones per pair, a few seconds each.** `p397` ran 21 pairs inside one pass.
 
+### 🆕 `p402` AMENDMENT — a cheaper front door, and the missing step 3b
+
+🟢 **Front door: `git ls-remote` needs NO clone.** Comparing the **full ref set** of two addresses
+answers the identity question for the price of one network round-trip each:
+
+```sh
+git ls-remote https://github.com/OWNER/REPO | sort | sha256sum   # ref-set fingerprint
+```
+
+Identical ref set → **one repository**. 🔴 **Identical HEAD alone is NOT identity** — `p370` demoted
+five pairs from `STALE` to `DISTINCT` on exactly that, because *a redirect serves ONE repository, so
+a different ref set is a different repository*. `sharziki`↔`rohanmuppa` `purdue-mcp` share HEAD
+`6922f1f301dd` and have **5 vs 3** refs; `Halleck45`↔`chinobv` `openpronounce` share HEAD
+`74bc17ea406e` and have **10 vs 4**. 🔵 Use the clone arm (steps 1–2) when you need the **root**, to
+separate a rename from an unrelated repo that merely shares a name.
+
+🔴 **Step 3b, which this pattern was missing.** Step 3 says *"fold them, cite the current path"* and
+gives **no way to find that path**. The ref set proves *one repository*; it never says *which
+address is canonical*. 🟢 **The channel that does: fetch EITHER address over HTTPS and read the
+header/breadcrumb of the page you LAND ON.** GitHub serves a rename or transfer as a redirect, the
+fetcher follows it, and the page names the canonical owner — plus the archive banner, the licence
+and any `forked from` parent in the same read.
+
+🔴 **The trap, stated because it cost this base ~52 passes.** The redirect is followed **silently**,
+so two stale addresses both report *"not a fork"* with **identical star counts** — indistinguishable
+from two independent repositories. *Same stars · no fork line · two owners* is the signature.
+🟢 It is how `p402` found that `ease`'s canonical address is **neither** candidate in the register
+but a third owner, [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease), and
+closed `ACTION ZZ-al`.
+
+🔵 **Engagement rule.** Warrant the **canonical** address, not the one in the search result — and
+when the canonical owner is named `*-unsupported` or carries an archive banner, that **is** the
+stewardship finding. Read it before promising a client a maintained dependency.
+
 **🆕 Pass `p396` · reads and commit both 2026-10-23.** Two patterns, both built on grants and dates
 read first-hand this pass:
 [`record-layer-dating`](../evidence/record-layer-dating.2026-10-23-p396.tsv).

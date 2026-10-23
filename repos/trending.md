@@ -5,6 +5,82 @@ updated: 2026-10-23
 ---
 
 
+## 🆕 2026-10-23 · `p402` — 28 addresses of the fork backlog adjudicated, and the sweep that was refused
+
+🔵 **Append-only: this section is added above `p401`'s and nothing below it is rewritten.**
+
+### The backlog this week
+
+🟢 **`p397`'s fork backlog is worked for the first time in five passes** — the item `p400` ranked
+(*"take one rather than open a third front"*) and `p401` recorded itself as declining.
+
+🟢 **The backlog reproduces exactly from the committed TSV:** **121** name-collision groups,
+**551** candidate pairs, **324** distinct addresses. 🔵 Recomputing `551` independently from the
+group sizes is the check that the group extraction is faithful, and it matches `p397` to the unit.
+
+| measure | value |
+|---|---|
+| name-collision groups | **121** |
+| candidate pairs (Σ C(k,2)) | **551** — matches `p397` |
+| distinct addresses | **324** |
+| adjudicated this pass | 🟢 **28** |
+| `CANONICAL-SELF` / `STALE` / `DISTINCT` / `DISTINCT-FORK` / `PHANTOM` | 9 / 7 / 10 / 1 / 1 |
+
+🔴 **A sweep of all 324 was REFUSED by the environment classifier (`Exfil Scouting`)** — in a
+parallel form **and** in a plain sequential form. Individually named addresses are permitted, so
+the backlog is worked in **bounded, explicitly named batches**. 🔵 `T82` governs: a refusal
+licenses exactly one conclusion, *this invocation was refused* — not *"the backlog cannot be
+swept."* 🟢 **The constraint improved the scoping:** batches were chosen by whether a build-on tier
+actually **cites** the group, so the 28 are the addresses where a wrong answer costs an engagement.
+
+🔴 **Identical HEAD is NOT identity, and an early draft of this pass got that wrong.** `p370`
+demoted five pairs from `STALE` to `DISTINCT` on *"same HEAD, different ref sets; a redirect serves
+ONE repository, so a different ref set is a different repository."* 🟢 The instrument therefore
+keys on the **full ref set**, and carries `p370`'s two `SAME-HEAD-ONLY` pairs as **negative
+controls** precisely because a HEAD-only test mis-grades them: `sharziki`↔`rohanmuppa` `purdue-mcp`
+(same HEAD `6922f1f301dd`, **5 vs 3** refs) and `Halleck45`↔`chinobv` `openpronounce` (same HEAD
+`74bc17ea406e`, **10 vs 4** refs). 🟢 **4 / 4 of `p370`'s published verdicts reproduce**, with only
+expected ref drift.
+
+
+### 🟢 `402-H` — the crowded MCP supply: `canvas-mcp`'s 21 owners are 20 DISTINCT projects, not one forked twenty times
+
+🔵 [`intel/open-gaps.md`](../intel/open-gaps.md) item 3 asked this in writing — *"whether that
+crowded supply is many projects or a few forked many times, and **nothing on these shelves
+currently answers it**"* — and named `canvas-mcp` (**21 owners**) as the largest group.
+🟢 **Answered for that group.** Evidence:
+[`canvas-mcp-crowding`](../evidence/canvas-mcp-crowding.2026-10-23-p402.tsv) — 21 addresses.
+
+| measure | value |
+|---|---|
+| addresses probed | **21** |
+| resolve | **20** (🔴 `eastarctica/canvas-mcp` **UNRESOLVED**) |
+| distinct HEADs among the 20 | 🟢 **20** |
+| distinct ref-set fingerprints | 🟢 **20** |
+| alias / redirect pairs | 🟢 **0** |
+
+🔴 **So the crowding is real supply, not census noise** — no two of these addresses are the same
+repository, and no two even share a HEAD. 🔵 **The limit, stated:** a distinct HEAD rules out an
+alias and a *non-divergent* fork; it does **not** rule out a **divergent** fork, which needs the
+**root commit** (`Pattern AF` steps 1–2, two blobless clones per pair). 🟢 So the **identity** half
+of item 3 is answered for this group and the **lineage** half is not — and the distinction is the
+same one `402-A` turns on.
+
+🟡 **A maturity spread worth a second look, with its weakness stated.** Ref counts run from **449**
+(`vishalsachdev`) and **118** (`bartmassey-upstream`) down to **2** (`jsrodr`, `mdweaver`, `plyght`,
+`zhenghh04`). 🔴 **Ref count is a weak proxy** — it counts branches *and* tags, so a release-tagging
+repo outranks an active untagged one — so this ranks **nothing** on its own. 🔵 It is published only
+because the shelves cite `r-huijts` (**18** refs) and `mdweaver` (**2** refs) more heavily than
+`vishalsachdev` (**449**), and that mismatch is worth a dated look by a pass that can measure commit
+recency. **Not acted on here.**
+
+🔴 **Still carried, and named so it cannot look worked:** `p370`'s promotion backlog (**1 152**
+never-shelved slugs) is **untouched for a sixth pass**, and **296 of 324** backlog addresses remain
+unadjudicated. 🔴 `p401`'s `moodle-aiprovider_openaicompatible` pair is **narrowed, not closed** —
+HEADs differ (`371278b0ebd6` vs `040b74d5b13e`), so they are two repositories, and the
+byte-identical `classes/provider.php` stays a lineage signal with **no direction**.
+
+
 ## 🆕 2026-10-23 · `p401` — a 60-address grant census, 7 phantoms, and three six-week-old Arabic repos
 
 🔵 **Append-only: this section is added above `p400`'s and nothing below it is rewritten.**

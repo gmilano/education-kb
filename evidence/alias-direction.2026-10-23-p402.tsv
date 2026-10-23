@@ -1,0 +1,29 @@
+group	address	refs	head12	refset_fp12	verdict	canonical	direction_channel	note
+ease	openedx-unsupported/ease	173	056da0adc6f3	e3793cd329e4	CANONICAL-SELF	openedx-unsupported/ease	html-header-after-redirect	NEW ADDRESS - zero prior mentions in this base; ARCHIVED 2024-02-28; AGPL-3.0 (licence already known p372)
+ease	openedx/ease	173	056da0adc6f3	e3793cd329e4	STALE	openedx-unsupported/ease	html-header-after-redirect	ACTION ZZ-al direction half CLOSED; shelf advice "prefer the openedx path" REFUTED - this address is itself stale
+ease	edx/ease	173	056da0adc6f3	e3793cd329e4	STALE	openedx-unsupported/ease	html-header-after-redirect	identity half already proven p351; direction open since p350 until this pass
+opacus	meta-pytorch/opacus	562	df040e4a1594	aeb05358835f	CANONICAL-SELF	meta-pytorch/opacus	html-header-after-redirect	Apache-2.0, 2.0k stars, not archived; register-absent pair flagged YES by p397
+opacus	pytorch/opacus	562	df040e4a1594	aeb05358835f	STALE	meta-pytorch/opacus	html-header-after-redirect	STALE alias in LIVE USE on build-on tiers (2 citations)
+lti-1-3-php-library	1EdTech/lti-1-3-php-library	61	3a192de99f37	08d380600a05	CANONICAL-SELF	1EdTech/lti-1-3-php-library	html-header+no-forked-from	Apache-2.0, 124 stars; standards-body rename, same shape as caliper-spec and openbadges-specification
+lti-1-3-php-library	IMSGlobal/lti-1-3-php-library	61	3a192de99f37	08d380600a05	STALE	1EdTech/lti-1-3-php-library	html-header-after-redirect	STALE alias in LIVE USE on build-on tiers (5 citations); register-absent pair flagged YES by p397
+lti-1-3-php-library	packbackbooks/lti-1-3-php-library	224	66d8e4e4b9bd	d5c8ad3484c7	DISTINCT-FORK	1EdTech/lti-1-3-php-library	html-forked-from-line	parent named FIRST-HAND by the HTML fork line; divergent fork already known p397; deliberately recommended by p391 - NOT a shelf defect
+agent-zero	agent0ai/agent-zero	1245	ff2a5b9c9c4e	78d4b79a443c	CANONICAL-SELF	agent0ai/agent-zero	CONTROL-p370	POSITIVE CONTROL - reproduces p370 SAME-REF-SET; refs drift 1238 to 1245
+agent-zero	frdel/agent-zero	1245	ff2a5b9c9c4e	78d4b79a443c	STALE	agent0ai/agent-zero	CONTROL-p370	POSITIVE CONTROL - reproduces p370 SAME-REF-SET
+learner-credential-wallet	openwallet-foundation-labs/learner-credential-wallet	585	1c46a82ba384	cf72d2e33a11	CANONICAL-SELF	openwallet-foundation-labs/learner-credential-wallet	CONTROL-p370	POSITIVE CONTROL - reproduces p370 SAME-REF-SET; refs drift 584 to 585
+learner-credential-wallet	digitalcredentials/learner-credential-wallet	585	1c46a82ba384	cf72d2e33a11	STALE	openwallet-foundation-labs/learner-credential-wallet	CONTROL-p370	POSITIVE CONTROL - reproduces p370 SAME-REF-SET
+purdue-mcp	sharziki/purdue-mcp	5	6922f1f301dd	856a2a6bdba2	CANONICAL-SELF	sharziki/purdue-mcp	CONTROL-p370	NEGATIVE CONTROL - same HEAD, ref sets DIFFER; reproduces p370 SAME-HEAD-ONLY/DISTINCT
+purdue-mcp	rohanmuppa/purdue-mcp	3	6922f1f301dd	fd60e26cc86b	DISTINCT	-	CONTROL-p370	NEGATIVE CONTROL - same HEAD as sharziki, different ref set; p370 demoted STALE to DISTINCT and this reproduces
+openpronounce	Halleck45/OpenPronounce	10	74bc17ea406e	cc7ca252cda1	CANONICAL-SELF	Halleck45/OpenPronounce	CONTROL-p370	NEGATIVE CONTROL - reproduces p370 SAME-HEAD-ONLY
+openpronounce	chinobv/openpronounce	4	74bc17ea406e	29dfdb1f293b	DISTINCT	-	CONTROL-p370	NEGATIVE CONTROL - reproduces p370 SAME-HEAD-ONLY
+moodle-local_ai_manager	bycs-lp/moodle-local_ai_manager	-	4ff5a87e0245	-	CANONICAL-SELF	bycs-lp/moodle-local_ai_manager	head-only+search-index	already p370 CANONICAL; HEAD advanced from af9aff540169 to 4ff5a87e0245 since p370
+moodle-local_ai_manager	mebis-lp/moodle-local_ai_manager	-	4ff5a87e0245	-	STALE	bycs-lp/moodle-local_ai_manager	head-only+search-index-absent	search index returns 25 rows for this name and mebis-lp is absent from all of them
+moodle-mcp-server	lmscloud-io/moodle-mcp-server	-	4b11494d6522	-	DISTINCT	-	head-differs	HEADs differ, so not an alias pair; fork direction NOT established
+moodle-mcp-server	peancor/moodle-mcp-server	-	666f12222ed6	-	DISTINCT	-	head-differs	HEADs differ, so not an alias pair
+lti	astiusa/lti	-	6f980746162b	-	DISTINCT	-	head-differs	HEADs differ; two unrelated repositories sharing a very short name
+lti	macewan-cs/lti	-	9ab95e5f3eb8	-	DISTINCT	-	head-differs	HEADs differ
+pylti1.3	dmitry-viskov/pylti1.3	-	d8fa43e1ace2	-	DISTINCT	dmitry-viskov/pylti1.3	head-differs+T40	HEADs differ, confirming two repositories; direction ALREADY KNOWN - T40 records ucfopen as a genuine institutional fork of this upstream, both over 1370 days dead. Re-measured only
+pylti1.3	ucfopen/pylti1.3	-	6a47f0fe0a21	-	DISTINCT-FORK	dmitry-viskov/pylti1.3	head-differs+T40	direction ALREADY KNOWN via T40; claimed as nothing new
+moodle-aiprovider_openaicompatible	ADORSYS-GIS/moodle-aiprovider_openaicompatible	-	371278b0ebd6	-	DISTINCT	-	head-differs	p401 carried pair NARROWED not closed - byte-identical classes/provider.php but HEADs differ, so NOT one repository; direction still unestablished
+moodle-aiprovider_openaicompatible	lmscloud-io/moodle-aiprovider_openaicompatible	-	040b74d5b13e	-	DISTINCT	-	head-differs	p401 carried pair NARROWED not closed
+opencast	opencast/opencast	-	153d1b15c93a	-	CANONICAL-SELF	opencast/opencast	head-only	ALREADY KNOWN since p230; default ref develop, already flagged on two shelves
+opencast	apereo/opencast	-	UNRESOLVED	-	PHANTOM	opencast/opencast	ls-remote-fails	ALREADY KNOWN DEAD since p230 - re-measured only, claimed as nothing new

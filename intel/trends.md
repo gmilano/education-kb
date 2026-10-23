@@ -4,6 +4,28 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p402` — what changed on this shelf
+
+🔵 **No trend is added or retired this pass.** The pass was an **instrument and backlog** pass, and
+saying so keeps the trend list from drifting on passes that did not measure a trend.
+
+🟡 **One amendment, to `Trend 6` (the permissive-licence frontier).** The frontier is not only *which
+licence* a component carries but **which address carries it**. `p402` closed `ACTION ZZ-al` and found
+that `ease`'s canonical address is **neither** of the two the register tracked, but a third owner —
+[`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease), **archived read-only since
+2024-02-28**. 🔵 The grant (**AGPL-3.0**) never changed, so the *frontier* does not move; what moves is
+the confidence a reader should place in an address that a search result hands them.
+
+🟢 **The durable rule, now wired into `Pattern AF`:** warrant the **canonical** address, and treat an
+owner named `*-unsupported` or an archive banner as a **stewardship finding in its own right** — the
+thing to establish *before* promising a client a maintained dependency.
+
+🔴 **And a measured regional gap, repeated rather than new:** the EMEA leg returned **no
+education-specific instrument** for the **third consecutive pass**, and the APAC leg surfaced **no
+ministry-level instrument** at all. 🔵 Both are written down as informed gaps on
+[`intel/market.md`](market.md), because silence looks exactly like coverage.
+
+
 
 **🆕 Pass `p401` · reads and commit both 2026-10-23.** 🟢 **Three trends this pass can evidence
 rather than quote, and one it can date.**

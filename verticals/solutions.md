@@ -142,8 +142,17 @@ been unresolved since `p350`. 🟢 The clone arm proves [`openedx/ease`](https:/
 and `edx/ease`, its **STALE** sibling, are **one repository** (shared root `79dd16652a23`, identical
 HEAD `056da0adc6f3`) without the index at all. 🔴 **It cannot say which address is canonical**, which
 is `ZZ-al`'s real question — so the identity half is proven and the direction half is still open.
-🔵 Prefer the `openedx` path for anything written today, on the stewardship argument rather than on
-the register.
+
+> 🔴 **`p402` CORRECTION — the advice that stood here is REFUTED.** This paragraph used to end
+> 🔵 *"Prefer the `openedx` path for anything written today, on the stewardship argument rather than
+> on the register."* 🔴 **`openedx/ease` is itself STALE.** The canonical address is
+> [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) — a third owner with
+> **zero** prior mentions in this base — established from the **HTML header after the redirect** and
+> corroborated by a ref-set fingerprint identical across all three addresses (**173 refs**, fp
+> `e3793cd329e4`). 🟢 **`ACTION ZZ-al` is CLOSED**, ~52 passes after `p350` opened it.
+> 🔵 **And the stewardship argument inverts:** Open edX moved this code to an owner named
+> `unsupported` and archived it read-only on **2024-02-28**. It is **AGPL-3.0** either way, so it was
+> never on the permissive shelf — but **cite the canonical address, and cite it as archived.**
 
 ### 🔵 The standards layer, de-duplicated
 

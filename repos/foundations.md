@@ -155,10 +155,10 @@ arm. Against [`alias-register`](../evidence/alias-register.2026-10-21-p370.tsv):
 | `1EdTech/openbadges-specification` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
 | `kantord/LibreLingo` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
 | `agent0ai/agent-zero` + its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` | 🔴 **no — `p349`** |
-| [`openedx/ease`](https://github.com/openedx/ease) + `edx/ease`, its STALE sibling | 🟡 `NO-CANONICAL` ×2 — **`ACTION ZZ-al`, unresolved since `p350`** | 🔴 **no** |
+| [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) + `openedx/ease` **and** `edx/ease`, **both STALE** | 🟢 **`CANONICAL-SELF` / `SAME-REF-SET` ×3 — `ACTION ZZ-al` CLOSED by `p402`** | 🟢 **YES — the canonical address is NEW to this base** |
 | [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) + `digitalcredentials/learner-credential-wallet`, its STALE sibling | 🟢 `CANONICAL-SELF` / `SAME-REF-SET` — 🔵 **`p350` already applied the canonical to this shelf and `verticals/solutions.md`** | 🔴 **no** |
-| `1EdTech/lti-1-3-php-library` + `IMSGlobal/lti-1-3-php-library` | 🆕 **absent** | 🟢 **YES** |
-| `pytorch/opacus` + `meta-pytorch/opacus` | 🆕 **absent** | 🟢 **YES** |
+| `1EdTech/lti-1-3-php-library` + `IMSGlobal/lti-1-3-php-library` | 🆕 absent → 🟢 **adjudicated `p402`: `1EdTech` CANONICAL, `IMSGlobal` STALE** — 61 refs both, fp `08d380600a05` | 🟢 **YES** |
+| `pytorch/opacus` + `meta-pytorch/opacus` | 🆕 absent → 🟢 **adjudicated `p402`: `meta-pytorch` CANONICAL, `pytorch` STALE** — 562 refs both, fp `aeb05358835f` | 🟢 **YES** |
 
 🔴 **So the honest arithmetic is 2 new alias pairs, not 8** — and the draft's *"a census-integrity
 defect this base has no gate for"* was describing a gate that has been standing for ~48 passes.
@@ -170,8 +170,40 @@ defect this base has no gate for"* was describing a gate that has been standing 
 unresolved since `p350`. 🟢 **The clone arm answers from git alone: shared root `79dd16652a23`,
 identical HEAD `056da0adc6f3`, so the two addresses are provably ONE repository** even though the
 index cannot see either. 🔴 **It still cannot say WHICH is canonical** — that is `p349`'s rule and
-`ZZ-al`'s actual question — so `ZZ-al` is **narrowed, not closed**: the *identity* half is now
-proven, the *direction* half still needs a channel the arm does not have.
+`ZZ-al`'s actual question — so `ZZ-al` was **narrowed, not closed**: the *identity* half proven,
+the *direction* half still needing a channel the arm does not have.
+
+### 🟢 `p402` — `ACTION ZZ-al` CLOSED, and the canonical address is one NEITHER candidate named
+
+🟢 **The channel the arm did not have is the HTML header *after* the redirect.** GitHub serves a
+rename or transfer as a redirect; the fetcher follows it silently, so reading the
+header/breadcrumb of the page you **land on** names the canonical address first-hand.
+
+🔴 **The answer is `openedx-unsupported/ease` — a THIRD address, with zero prior mentions anywhere
+in this base.** `ZZ-al` had been framed for ~52 passes as *"which of `edx` or `openedx`?"*, and the
+answer is **neither**: both are STALE aliases of an address in an owner literally named
+`unsupported`. Confirmed on two channels — the HTML header, and a ref-set fingerprint **identical
+across all three addresses** (**173 refs**, fp `e3793cd329e4`, HEAD `056da0adc6f3`, matching the
+HEAD this base already published).
+
+🔴 **And it refutes this base's own standing recommendation.** `verticals/solutions.md` advised
+🔵 *"Prefer the `openedx` path for anything written today, on the stewardship argument rather than
+on the register."* 🔴 **`openedx/ease` is itself stale**, so the advice pointed at an alias — and
+the stewardship argument, read correctly, says the opposite of what it was used for: Open edX moved
+this code to an **explicitly unsupported** org and **archived** it (read-only since **2024-02-28**,
+a status this base already held for `edx/ease`). 🟢 Its **AGPL-3.0** grant was already read at
+`master/LICENSE.txt`, 35 136 B. 🔵 So nothing changes commercially — `ease` was already off the
+permissive shelf — but the *address* a reader is sent to, and the *reason*, were both wrong.
+
+🔵 **The signature worth keeping**, because it is how this was found: two stale addresses both
+report *"NOT A FORK"* with **identical star counts**, which reads exactly like two independent
+repositories. *Same stars · no fork line · two owners* is the thing to key on.
+
+🔴 **What the same instrument did NOT settle.** A distinct ref set says *"two repositories"*, never
+*"who forked whom"*. `p401`'s carried `moodle-aiprovider_openaicompatible` pair is **narrowed, not
+closed**: `ADORSYS-GIS` `371278b0ebd6` and `lmscloud-io` `040b74d5b13e` — **HEADs differ**, so they
+are genuinely two repositories and the byte-identical `classes/provider.php` at 3 963 B stays a
+lineage signal with **no direction**. Same for `pylti1.3`, `lti` and `moodle-mcp-server`.
 
 ### 🟢 One new permissive row, grant read by enumerating the tree
 
