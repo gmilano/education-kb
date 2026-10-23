@@ -5,6 +5,38 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🔴 **No platform
+was added**, and the vertical-platform leg returned the standing result again: **no
+education-specific MIT or Apache platform exists**; the capable systems are GPL, AGPL or
+LGPL — **Moodle** (GPL-3.0, ~1 800 plugins, still the most-deployed LMS), **Open edX** (AGPL-3.0,
+stewarded by Axim Collaborative), **OpenEduCat** (LGPL-3.0 ERP on PostgreSQL), with Sakai, ILIAS,
+Chamilo and Canvas (open core) behind them — 🔴 all already carried or already excluded here.
+
+🟢 **What changed for this shelf is upstream of it, and it changes an APAC pre-flight.** Every
+platform here is deployed into a jurisdiction, and
+[`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv) — the file a deployment pre-flight
+actually reads — 🔴 **carried exactly ONE APAC teaching-mandate row, and it said
+`NOT_ESTABLISHED`.** 🟢 It now carries **seven**.
+
+🔵 **Concretely for this shelf:**
+
+- 🟢 **A Moodle or Open edX engagement in Beijing** now reads a binding curricular floor —
+  **no fewer than 8 class-hours per academic year, all primary and secondary schools, from the
+  autumn 2025 semester** (`CN-BJ`, `MANDATED`). That is a **reporting and timetabling
+  requirement on the platform**, not a content nice-to-have.
+- 🟡 **The same engagement elsewhere in the PRC reads `ADVISORY_NONBINDING`** — a *guide* with
+  two sanctioned delivery modes (standalone course **or** cross-disciplinary integration), which
+  is a **configuration** decision the platform must support both ways rather than a mandate to
+  implement once.
+- 🟡 **An India engagement reads `IN-CBSE | MANDATED` but `IN | NOT_ESTABLISHED`** — so a
+  CBSE-affiliated deployment has a dated curriculum to build to (Classes III–VIII from 2026-27,
+  **integrated into Mathematics/EVS at Classes 3–5**, no board exam), and a non-CBSE deployment
+  has no national instrument behind it. 🔴 **Pitching the two as one addressable market is the
+  error `400-F` corrected.**
+- 🔴 **A Korea engagement reads `NONE_IN_FORCE`** — ministry-mandated AI courseware **existed and
+  was withdrawn to optional status within a year**. Lead with platform optionality there, not
+  with mandated content.
+
 **🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No platform
 was added.** The vertical-platform leg returned **OpenEduCat**, **ERPNext** (GPL-3.0), **Twenty CRM**
 (BSL-1.1, not OSI-permissive) and **Odoo** — 🔴 all already carried or already excluded here, and the

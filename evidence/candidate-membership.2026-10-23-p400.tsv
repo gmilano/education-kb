@@ -1,0 +1,29 @@
+candidate	verdict	evidence
+littlecookie0722/AI-Teaching-Agent	SHELVED-EXACT	littlecookie0722/ai-teaching-agent
+dymchenkko/claude-study-agent	SHELVED-EXACT	dymchenkko/claude-study-agent
+Gchism94/ai-tutor	SHELVED-EXACT	gchism94/ai-tutor
+i-ninte/grad-agent	SHELVED-EXACT	i-ninte/grad-agent
+KamoliddinS/AI-Assignment-Grader	SHELVED-EXACT	kamoliddins/ai-assignment-grader
+andres-tovar-purdue/ai-grader	NAME-SUBSTRING-ONLY	lti-ai-grader
+GradeAI/gradeai	SHELVED-EXACT	gradeai/gradeai
+laurauguc/grading_assistant	SHELVED-EXACT	laurauguc/grading_assistant
+pguso/agents-from-scratch	SHELVED-EXACT	pguso/agents-from-scratch
+rohitg00/ai-engineering-from-scratch	SHELVED-EXACT	rohitg00/ai-engineering-from-scratch
+h9-tect/AI-Roadmaps	SHELVED-EXACT	h9-tect/ai-roadmaps
+microsoft/ai-agents-for-beginners	SHELVED-EXACT	microsoft/ai-agents-for-beginners
+ashishpatel26/500-AI-Agents-Projects	SHELVED-EXACT	ashishpatel26/500-ai-agents-projects
+Shubhamsaboo/awesome-llm-apps	SHELVED-EXACT	shubhamsaboo/awesome-llm-apps
+BlackyDrum/ai-tutor	SHELVED-EXACT	blackydrum/ai-tutor
+zijinz456/OpenTutor	SHELVED-EXACT	zijinz456/opentutor
+artcc/freelingo	SHELVED-EXACT	artcc/freelingo
+KeWang0622/kaogong-skill	SHELVED-EXACT	kewang0622/kaogong-skill
+Zenglian990/AI_Tutor_Release	SHELVED-EXACT	zenglian990/ai_tutor_release
+the-open-agent/openagent	SHELVED-EXACT	the-open-agent/openagent
+arthtyagi/judge	SHELVED-EXACT	arthtyagi/judge
+okpy/ok	SHELVED-EXACT	okpy/ok
+eecs-autograder/autograder.io	SHELVED-EXACT	eecs-autograder/autograder.io
+moocupv/lti-ai-grader	SHELVED-EXACT	moocupv/lti-ai-grader
+#
+# NAME-SUBSTRING-ONLY	1
+# SHELVED-EXACT	23
+# shelf addresses (channel U union B)	3526

@@ -5,6 +5,106 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p400` · reads and commit both 2026-10-23 — the SIXTH pass dated today.** 🔴 **This
+file contradicted itself about the two largest education-AI mandates in the world, and one side
+of the contradiction was green.** 🟢 **Settled in the direction the file's own warning pointed,
+and the typed layer goes from 1 APAC teaching-mandate row to 7.**
+
+### 🔴 `400-F` — the finding: one file, two bands, same two facts
+
+`p397` published, on this page and marked 🟢:
+
+> 🟢 **China**: … **AI instruction compulsory in schools from age six** — the largest mandated
+> deployment anywhere. 🟢 **India**: … **AI and computational thinking compulsory from Class 3
+> beginning in the 2026–27 academic year**
+
+🔴 **About a thousand lines below, this same file has carried the opposite band since `p385`:**
+
+> 🔴 **UNCONFIRMED, both widely repeated:** that AI became a **compulsory subject in China from
+> age six** … and that **India** will make AI and computational thinking **compulsory from Class
+> 3 in 2026-27**. Neither was found in a government source this pass — check the PRC Ministry of
+> Education and India's Ministry of Education before citing.
+
+🔵 **This is `T29`'s family at its most expensive.** `T29` was *"a statement about the file
+disagreed with the file"*; `T80` was *"two shelves that disagree and only one is machine-readable."*
+🔴 **`400-F` is one file disagreeing with itself about the evidentiary band of the same two
+sentences — and the green copy is the one a reader reaches first.** The 🔴 copy even names the
+remedy (*"check the PRC Ministry of Education"*), so the warning was not merely present, it was
+actionable and went unread for three passes.
+
+### 🟢 Settled — and it refutes the green copy on JURISDICTION, which is the sellable part
+
+🔵 **Both the PRC and Indian ministry hosts answer `000`/`ENOTFOUND` from this session**, so no
+row below is payload-read, and per this file's standing band rule a `verified` band would itself
+be a defect. 🟢 **But refuting an over-broad claim costs less evidence than establishing one**,
+and the documents the channel returned are named, numbered and dated:
+
+| claim as published 🟢 | what the instruments actually say | correction |
+|---|---|---|
+| *"China: AI instruction compulsory from age six"* | The **national** instrument is a **GUIDE** (*zhinan*) — the MoE Basic Education Teaching Guidance Committee's **Guide on AI General Education in Primary and Secondary Schools (2025 ed.)**, May 2025, stage-layered and prescribing **both** standalone courses **and** cross-disciplinary integration as delivery modes. Its predecessor, **doc. no. *jiaojiting han* (2024) 32** (Dec 2024), directs **resource development, a platform channel, education bases and teacher training** — not a subject. And the **"AI + Education" Action Plan** (MoE + five departments, **2026-04-10**) sets up a mechanism to **jointly develop** AI curricula — 🔴 **as of April 2026 the national curriculum was still being written**, which is itself evidence against a 2025 national mandate. | 🔴 **Not national and not compulsory.** `CN` → `ADVISORY_NONBINDING` |
+| *"…from age six, ≥8 hours/year"* | The **8-class-hour** floor is **Beijing municipal**: the city's **work plan for advancing AI education in primary and secondary schools (2025–2027)** requires, from the **autumn 2025 semester**, that **all Beijing primary and secondary schools** deliver AI general education at **no fewer than 8 class-hours per academic year**. | 🟢 **Real, binding, and MUNICIPAL.** New row `CN-BJ` → `MANDATED`, `2025-09-01` |
+| *"India: compulsory from Class 3"* | **CBSE Circular `Acad-15/2026`, 2026-04-01**, signed by the Director (Academics), launches a Computational Thinking **and** AI curriculum for **Classes III–VIII** from the **2026-27** session; **`Acad-18/2026`** (2026-04-09) released the resource books. 🔴 **CBSE is a BOARD** — it binds **affiliated** schools, not all Indian schools. 🔴 For **Classes 3–5 it is INTEGRATED into existing Mathematics and "The World Around Us"/EVS**, not a standalone subject. 🔴 **AI proper begins at Class 6**, and there is **no board exam**. | 🟡 **Real but three times narrower.** New row `IN-CBSE` → `MANDATED`; `IN` → `NOT_ESTABLISHED` |
+
+🔴 **What a studio would have got wrong from the green copy:** a Class-3 India deliverable is a
+**maths/EVS module inside a board curriculum**, not an AI course, and a "China is mandated"
+pitch is **a Beijing pitch**. 🔵 Both errors are jurisdiction/scope errors, which are exactly the
+errors a *(licence × jurisdiction)* pre-flight exists to prevent — so the defect sat in the axis
+the pre-flight reads.
+
+### 🟢 `400-G` — and the reason the typed layer was blank is now visible: `p399` fixed an INSTANCE, not a CLASS
+
+🟢 `p399`'s finding was right and its fix was right: *"the typed policy layer answered 'no LATAM
+teaching mandate' for 11 rows running"*, and it took LATAM from **0 → 6** rows. 🔴 **It did not
+then ask the same question of the other three regions.** Measured this pass over
+[`policy-matrix.tsv`](policy-matrix.tsv) at `HEAD`:
+
+| region | `ai_literacy_instruction` + `curriculum_mandate` rows, before | after `p400` |
+|---|---|---|
+| EMEA | 7 | 7 |
+| LATAM | 6 (all `p399`'s) | 6 |
+| North America | 3 | 3 |
+| **APAC** | 🔴 **1** — and that one row is `regional \| NOT_ESTABLISHED` | 🟢 **7** |
+
+🔴 **So the region holding the single largest mandated deployment on earth answered a
+teaching-mandate query with "we could not establish this."** 🔵 And `400-F` explains why it
+stayed blank rather than being an oversight: the two facts that would have filled it were
+carried in prose under an explicit *"do not cite without a government source"* warning, so a
+careful pass correctly declined to type them — and an incorrect pass published them green
+instead of resolving them. 🟢 **The lesson is the generalisable one: a defect found in one
+member of a closed vocabulary should be re-asked of every member before the pass closes.**
+Registered as `400-G`.
+
+🟢 **Six rows added**, each naming its instrument and its scope: `CN` (guide,
+`ADVISORY_NONBINDING`), `CN` action plan (`ADOPTED`), `CN-BJ` (`MANDATED`, the 8-hour floor),
+`IN-CBSE` (`MANDATED`, board scope), `IN` (`NOT_ESTABLISHED`, so the board row cannot be read as
+all-India), and `KR` (`NONE_IN_FORCE` — the digital-textbook retreat, typed at last, because a
+withdrawn instrument is not a greenfield). **67 → 73 rows.**
+
+### 🟡 LATAM — a dating refinement and a distribution, both band `reported`
+
+This page carries *"an **August 2026** study counts **716 AI regulatory instruments across 23
+countries**"*. 🟡 The registry's own stated cut-off is **2026-07-03**, and its distribution is
+concentrated in a way the aggregate hides: **Brazil 212 · Mexico 126 · Colombia 101 · Argentina
+95 · Peru 73 — about 85% of all records in five countries.** 🔴 **Not verified and explicitly
+not promoted:** the primary host (`algoritmos.uniandes.edu.co`) answered **`ENOTFOUND`** this
+pass, so this is a search-channel figure and the per-country split is **not** typed into
+`policy-matrix.tsv`. 🔵 It is recorded because the *shape* is decision-relevant even unverified —
+an instrument count is not an education rule, and five countries holding 85% of the records says
+where a LATAM compliance budget goes, not that any of it touches schools.
+
+### 🔴 EMEA — an informed gap, measured twice and stated so silence cannot read as coverage
+
+🔴 **The EMEA regional leg returned no education-specific regulation at all** — only general
+enterprise AI-adoption material (a Workday readiness study with pre-2026 data, a CompTIA 2026 IT
+outlook, an AWS interview on Europe's skills gap). 🔴 **A second, deliberately
+education-specific leg naming ministries and curricula returned India (APAC), a UAE 2026–27
+teaching plan whose AI content the coverage does not substantiate, and an uncorroborated blog
+claim about a Spanish recommendation.** 🟡 One widely-repeated figure — *"education ministries in
+at least 14 countries rolled out national school AI strategies between January and May 2026,
+per an OECD tracker"* — 🔴 **could not be traced to the tracker and is NOT entered anywhere.**
+🔵 So EMEA's seven typed rows remain the base's EMEA position, and the gap is in the *channel*,
+not in EMEA: this is the second consecutive pass to measure it.
+
 **🆕 Pass `p399` · reads and commit both 2026-10-23 — the FIFTH pass dated today.** 🔴 **The
 typed policy layer answered "no LATAM teaching mandate" for 11 rows running, and this base's own
 README has carried the refuting statute since `p277`.** 🟢 **Fixed in the data, not just

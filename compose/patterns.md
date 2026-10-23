@@ -5,6 +5,50 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🔴 **No pattern
+was added: the one unshelved address this pass found is unlicensed, and there is nothing to
+compose with an unlicensed repository.** 🟢 **Both axes of the two-axis pre-flight got sharper
+anyway, and one of them got sharper in the dangerous direction.**
+
+🟢 **The jurisdiction axis — APAC is no longer a blank.** Every recipe here is gated on
+*(licence × jurisdiction)*, and the jurisdiction axis reads
+[`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv). 🔴 **Until this pass that file answered
+every APAC teaching-mandate query with a single `NOT_ESTABLISHED` row** — and in a pre-flight a
+blank reads as *"no rule"*, which is the dangerous direction to be wrong in. 🟢 It now answers
+with **seven** rows. The two that change a build:
+
+- 🟢 **`CN-BJ | curriculum_mandate | MANDATED | 2025-09-01`** — **≥ 8 class-hours per academic
+  year across all Beijing primary and secondary schools.** 🔵 Any recipe here that ships a
+  tutoring or courseware surface into Beijing acquires a **contact-hour accounting**
+  obligation: the deliverable must be able to *evidence* hours delivered per learner per year,
+  which is an LRS/record-layer requirement, not a model requirement. 🔵 This base already holds
+  the record-layer supply problem (`p396`: one 15 ★ MIT MCP bridge, 419 days dead, is the whole
+  agent↔LRS supply) — 🔴 **so the obligation now has a named instrument and the stack to satisfy
+  it is still the thinnest tier on these shelves.** That pairing is the pattern-relevant fact.
+- 🟡 **`IN-CBSE | curriculum_mandate | MANDATED | 2026-27`, with `IN | NOT_ESTABLISHED`** — a
+  recipe aimed at Indian Classes 3–5 must deliver **into Mathematics and "The World Around
+  Us"/EVS**, because that is where the curriculum puts it; a standalone "AI for Class 3" surface
+  is **mis-shaped for the only instrument that binds**, and AI proper does not begin until
+  Class 6. 🔴 There is **no board exam**, so no assessment-integration pressure — which removes
+  a requirement most recipes here would have assumed.
+
+🟢 **The licence axis — the gate that admits candidates to a recipe now exists as code.**
+Patterns here compose named repositories, so a pattern is only as good as the claim that its
+parts are real and carried. 🔴 **That claim was being made with a bare-name grep**, which is a
+substring match (`400-C`). 🟢 [`p400-candidate-membership`](code/p400-candidate-membership/README.md)
+answers it by exact address over **both** of this base's address channels, and reports
+`NAME-SUBSTRING-ONLY` as its own class so a candidate can no longer be dropped silently.
+🔵 **Use it before adding a repository to any recipe below:**
+
+    python3 -I compose/code/p400-candidate-membership/membership.py classify owner/name
+
+🔴 **And the honest limit, stated so the pre-flight is not oversold:** the licence axis can be
+settled first-hand from this session (`raw.githubusercontent.com` → **301**, payloads served);
+the jurisdiction axis **cannot** (every policy host → **000**). 🔵 So every row in
+`policy-matrix.tsv` is band `reported` by construction, and a recipe gated on jurisdiction is
+gated on a single-channel claim. **Say so in the engagement, and re-read the instrument from a
+session with egress before a deliverable depends on it.**
+
 **🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No pattern
 was added, because no new supply arrived to compose with** — the supply legs returned seven
 candidate addresses of which six were shelved and the seventh is not education-native.

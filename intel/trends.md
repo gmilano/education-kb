@@ -5,6 +5,51 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🟢 **Two new
+trends, both measured, and the first one is about this base's own repair habit rather than about
+the industry.**
+
+### 🆕 `T81` — a defect is fixed where it was FOUND, not where it LIVES
+
+🔵 **`T29` → `T80` → `T81` is one line of descent.** `T29`: a statement about a file disagreed
+with the file. `T80`: two shelves disagreed and only one was machine-readable. 🔴 **`T81`: a
+defect found in one member of a closed vocabulary is repaired in that member and left standing
+in the others.**
+
+🟢 **Evidence, and it is this base's own last pass.** `p399` found that the typed policy layer
+answered *"no LATAM teaching mandate"* across 11 rows while the README held the refuting
+statute, and fixed it properly — LATAM **0 → 6** rows. 🔴 **It did not re-ask the question of
+EMEA, North America or APAC.** Re-asked this pass: **EMEA 7 · LATAM 6 · North America 3 ·
+APAC 1** — and APAC's single row was `regional | NOT_ESTABLISHED`, in the region holding the
+largest mandated AI-education deployment on earth. 🟢 Now **7**. See `400-G` on
+[`market.md`](market.md).
+
+🔵 **Why this is a trend and not one pass's slip:** `region` is a **closed five-value
+vocabulary** in this KB by brief. A closed vocabulary makes the generalisation step *cheap and
+mechanical* — four greps — which is exactly why skipping it is easy to miss in review. 🟢 **The
+operational rule it yields:** when a finding is of the form *"this axis is blank for X"*, the
+pass closes only after the same query has been run for every other value of X, and the result
+published even when it is "no change". 🔴 The failure mode is not laziness; it is that a
+correct, well-evidenced, properly-fixed finding *feels finished* at the moment the instance is
+repaired.
+
+### 🆕 `T82` — a refusal names the command it refused, and the OUTER command is not the capability
+
+🔴 **Three passes have now mis-scoped a refusal, each one layer further out.** `395-C`/`396-C`
+concluded *"executing repository code is refused"* and told successors to stop ranking
+instrument work — refuted by `p397`, which found the refusal was a **clause** of a compound
+command, and one clause was a genuine HTTP 403. 🔴 **`p399` then published *"`make hooks` was
+refused on this session (`Code from External`), so no gate score is restated here"* — and
+`p400` reproduces the `make` refusal exactly, then runs **31 of the 32 gate control suites** at `HEAD` (and 32 of 33 in this commit)
+directly with `python3 -I`.**
+
+🟢 **So the gate suite was never unreachable; the *build tool* was.** The measured cost of the
+mis-scoping is on the record: two currency gates sat **red and unseen** at `HEAD` (`400-B`),
+which is the same price `397-B` paid for the same class of error one generation earlier.
+🔵 **The rule:** a refusal licenses exactly one conclusion — *this invocation was refused*. Any
+claim about a **capability** needs a second, differently-shaped attempt before it may be
+written down, and *"I could not run it"* may never be published as *"it cannot be run."*
+
 **🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No industry
 trend was added: the brief's eight legs returned nothing this base did not hold, for the second
 consecutive pass.** 🟢 **One new trend about this base's own structure is added, and it is

@@ -5,6 +5,170 @@ updated: 2026-10-23
 ---
 
 
+## 🟢 🆕 2026-10-23 · `p400` — **THE "ALREADY SHELVED" CHECK THAT GUARDS EVERY SHELF IS A SUBSTRING MATCH, AND IT DROPPED A REAL ADDRESS ON THIS PASS. 🟢 IT NOW HAS AN INSTRUMENT, 14 CONTROLS AND A MUTATION-VERIFIED SUITE. 🔴 AND `make hooks` WAS NEVER THE GATE SUITE: 31 OF 32 CONTROL SUITES RUN.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23** — the **sixth** pass dated today, after
+`p395`–`p399`. 🟢 **`p400` is an INSTRUMENT pass:** one new module, one evidence file, six typed
+policy rows, and **no row added to any build-on tier**.
+
+**Evidence:** [`candidate-membership`](../evidence/candidate-membership.2026-10-23-p400.tsv) —
+24 candidates · instrument, controls and the mutation run at
+[`compose/code/p400-candidate-membership/`](../compose/code/p400-candidate-membership/README.md).
+
+### 1. 🔴 `400-C` — the acceptance test had no instrument, and that is a hole in the shelf's door
+
+Every census on this tree asks *"which addresses does the shelf hold?"* — `p351`, `p367`, `p375`,
+`p371`, `p332`. 🔴 **Not one asks the opposite question**: *"is THIS candidate on the shelf?"*
+That question is answered by hand, every pass, with a grep — `p398` and `p399` both certified
+their declines with *"each checked by **grep** rather than by memory"* — 🔴 **and a grep for a
+bare repository NAME is a substring match over the shelf text.**
+
+🟢 **The specimen is live and it is this pass's own.** The supply leg returned
+`andres-tovar-purdue/ai-grader`. A bare `grep ai-grader` over the tree returns hits — **every one
+of them from [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader)**, a different
+owner and a **different name that merely contains the candidate's**. 🔴 **`p400`'s own first
+check read that as "already shelved" and nearly discarded the address.**
+
+🔵 **Nearest owner, named rather than re-discovered:** `p332-delivery-audit`'s `PREFIX PAIRS` arm
+finds this exact shape (`eecs-autograder/autograder` vs `eecs-autograder/autograder.io`) — 🔴 but
+**inside the harvested corpus**, and an incoming candidate is not in the corpus yet. `T80`'s
+family, one layer out.
+
+### 2. 🟢 The instrument, and it reuses three others rather than re-spelling them
+
+[`p400-candidate-membership`](../compose/code/p400-candidate-membership/README.md) takes its
+address set from **`p375.union_harvest`** (channel U ∪ channel B, both shape filters applied),
+its shelf list from **`p235`'s committed index**, and its shape rules from **`p351`** and
+**`p375`** — 🟢 imported, never restated, per `p286`'s ratchet and `p371`'s remedy. Four verdicts:
+
+| verdict | meaning |
+|---|---|
+| `SHELVED-EXACT` | the folded address is carried on a shelf, in **either** channel |
+| `NAME-OTHER-OWNER` | the **same name** under an owner this base does not carry — a true collision |
+| 🔴 `NAME-SUBSTRING-ONLY` | **the defect's own class**: the text says yes, every address channel says no |
+| `UNSHELVED` | neither, and not in the prose either |
+
+🟢 **`NAME-OTHER-OWNER` and `NAME-SUBSTRING-ONLY` are kept apart deliberately.** Both mean
+*"unshelved as an address"*, but one is a real same-name collision (this base carries **nine**
+distinct `*/ai-tutor` owners) and the other is an artefact of the *measuring instrument*.
+🔵 **That count is itself a channel-B datum**, derived rather than eyeballed: a URL-only
+extractor sees **eight**, and `krishna16-origin/ai-tutor` appears only once channel B is read.
+🔴 Collapsing them would hide the defect inside a legitimate class, which is how it survived.
+
+### 3. 🟢 **The controls were made to FIRE on their author** — and one mutation proves two defects COMPOSE
+
+🟢 **16 controls, 0 failures.** 🔴 But a suite that has never failed on its author has not been
+tested, so the channel-B half was **deliberately mutated** to key membership on the
+`github.com/` harvester alone — `p374`'s defect, re-committed on purpose:
+
+    4 of 16 controls FAILED
+    🔴 4. dymchenkko/claude-study-agent  got: NAME-SUBSTRING-ONLY (prose-only)  want: SHELVED-EXACT
+    🔴 5. i-ninte/grad-agent             got: NAME-SUBSTRING-ONLY (prose-only)  want: SHELVED-EXACT
+    🔴 9. mattpocock/skills              got: NAME-OTHER-OWNER                  want: SHELVED-EXACT
+
+🔴 **Read control 4 carefully — the two defects compose into a third.** `dymchenkko/claude-study-agent`
+is **fully carried on this shelf with its MIT grant read**, and it is written as backticked
+`owner/repo` with **no URL**. 🔴 **Under a URL-only membership test a fully-shelved,
+grant-read address grades as a *substring artefact*** — the two independent defects (substring
+matching, single-channel harvesting) combine to produce a verdict that is wrong in a direction
+neither produces alone. 🟢 Both addresses are pinned as controls so no successor can narrow this
+back to one channel.
+
+### 3b. 🔴 `400-H` — this instrument's FIRST suite pinned a verdict over the live tree, and its author's own pass falsified it inside the hour
+
+🟢 **Published because it is the most useful thing that happened to this module.** The first
+suite graded its specimen against the **live shelves** and asserted
+`andres-tovar-purdue/ai-grader → NAME-SUBSTRING-ONLY`. 🔴 **`p400` then wrote that address onto
+this very page as a census address — and three controls went red**, correctly, because over the
+live tree the verdict is now `SHELVED-EXACT`:
+
+    3 of 14 controls FAILED
+    🔴 1. andres-tovar-purdue/ai-grader  got: SHELVED-EXACT  want: NAME-SUBSTRING-ONLY
+
+🔵 **That is `gate-census-currency`'s defect, reproduced inside a test fixture.** `p352`'s
+standing lesson is *"a census whose input is the shelves, published in the pass that then writes
+to the shelves, is stale the moment it is written."* 🔴 **A CONTROL whose input is the shelves
+is stale in exactly the same way**, and `p376`'s group-5 rule — *no fixture may pin a live
+derived total* — turns out to be a special case of a wider rule this base had not written down:
+**no control may pin a live derived VERDICT either.**
+
+🟢 **Fixed structurally, not by updating the expected value.** The rule controls now read a
+committed synthetic population,
+[`fixture/shelf-a.md`](../compose/code/p400-candidate-membership/fixture/shelf-a.md), which
+carries the **containing** name and not the contained one — the only relationship the substring
+class is about. 🟢 Two live-tree controls remain, asserting only what a pass **cannot**
+invalidate by writing: that the containing address is carried, and that shape is
+tree-independent. 🔴 **The specimen's own live verdict is deliberately NOT asserted anywhere**,
+because `p400` shelved it and a control saying otherwise would fail for a correct reason.
+**14 → 16 controls.**
+
+🔵 **Worth a successor's minute:** every instrument on this tree whose fixtures read
+`SHELF_FILES` is exposed to this, and `p400` only found it because its specimen was an address
+the same pass went on to shelve. Registered as `400-H`.
+
+### 4. 🟢 The re-grade — and `p398`/`p399` are VINDICATED, 14-for-14
+
+**24 candidates across `p400`'s legs plus `p398`'s and `p399`'s declined sets: 23
+`SHELVED-EXACT`, 1 `NAME-SUBSTRING-ONLY`.** 🟢 **Every one of `p399`'s fourteen is exact-shelved**,
+so those declines were correct and the defect had not yet cost this base an address. 🔵 It cost
+`p400` one, and the address was recovered **only because the instrument existed by then** — which
+is the honest way to value a guard: not by the losses it reverses, but by the first one it
+catches.
+
+### 5. 🆕 The one unshelved address, with its grant read FIRST and its promotion refused
+
+🆕 [`andres-tovar-purdue/ai-grader`](https://github.com/andres-tovar-purdue/ai-grader) —
+*"Modular AI grading agent for engineering programming projects"*; README opens *"Human-supervised
+AI grading assistant for projects, exams, homework, lab reports, programming assignments and
+spreadsheets"*. **2 ★ · 0 forks · 39 commits · no archive banner.** 🔴 **NO GRANT, by payload:**
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` → **404 on both `main` and `master`** (eight
+probes), with `main/README.md` → **200** as the branch control and `moocupv/lti-ai-grader`
+`main/LICENSE` → verbatim **Apache-2.0** as the channel control. 🟢 **A calibrated pair in
+`p293`'s shape: the absence is measured, not inferred from a blank sidebar.**
+🔴 **Census address only — not promoted to [`top.md`](top.md).** An unlicensed repository is not
+a base a studio builds on, and this shelf's own rule is that **fewer real rows beat padding**.
+
+### 6. 🟢 `398-C`'s remedy, TESTED — it works, and the regional half of the brief is still saturated
+
+🟢 `p398` prescribed swapping the saturated tails for a **supply** (`…github repository license`)
+or **dated-delta** tail. Measured:
+
+| leg | tail | unshelved returns |
+|---|---|---|
+| global agents / trending / platform / trends | the brief's original tails | 🔴 **0** — third consecutive pass |
+| **supply tail** | `…github repository license since October 2026` | 🟢 **8 education-native addresses, 1 unshelved** |
+| NA regional | `…adoption regulation players` | 🔴 **0** — Idaho `SB 1227`, Oklahoma `SB 1734`, Ohio, the 134-bills/31-states count: all shelved |
+| EMEA regional | both the original tail **and** a ministry/curriculum-specific retry | 🔴 **0 education-specific instruments** — an informed gap, measured twice |
+| APAC / LATAM regional | `…adoption regulation players` | 🟡 facts shelved, but they exposed `400-F` |
+
+🟢 **So the remedy is validated on the supply legs and does NOT rescue the regional legs** — and
+the regional legs' value this pass was not a new fact but the **contradiction** they surfaced in
+what this base already held. 🔵 That is a different kind of yield and worth naming: a saturated
+leg can still be diagnostic.
+
+### 7. 🔴 `400-A`/`400-B` — `make hooks` was refused, the GATES were not, and two were red unseen
+
+🔴 **`p399` published *"`make hooks` was refused on this session (`Code from External`), so no
+gate score is restated here."*** `p400` reproduces the `make` refusal exactly — and then runs the
+suites directly:
+
+    31 of 32 gate control suites PASS under `python3 -I`   (at HEAD)
+    32 of 33 gate control suites PASS under `python3 -I`   (this commit; p400 adds one)
+    🔴 sole failure: p375-census-union control 24 — got ['NAME-REF-OR-PATH'], want ['NAME-DOT-RUN','NAME-REF-OR-PATH']
+
+🟢 **That single red is precisely `p398`'s diagnosis, now confirmed by EXECUTION rather than by
+reading** — `p382` made the `NAME-DOT-RUN` arm unreachable in the union path, so control 24 is
+unsatisfiable by construction. 🔴 **Not forced green**, for `p398`'s two standing reasons (the
+narrowing edit is refused by the environment classifier, and this base's own `p387-G` rule says a
+gate may not be closed by weakening a control).
+
+🔴 **And the price of the mis-scoped refusal, measured:** `gate-census-currency` and
+`gate-union-currency` were **both red at `HEAD`** — published `2 698 / 34 / 2 664` against a
+derived `2 699 / 34 / 2 665`, and the union sentence stale in all three cells. 🔵 Pure ordering
+defect: `p399` restated the census **before** its own last write, which is exactly the failure
+`p352` built the gate to catch and `397-B` already paid for once. 🟢 **Both re-derived as the
+last act of this pass and restated in [`README.md`](../README.md).** See `T82`.
+
 ## 🔴 🆕 2026-10-23 · `p399` — **SECOND CONSECUTIVE PASS IN WHICH THE BRIEF'S EIGHT LEGS RETURN ZERO UNSHELVED AGENTS. 🟢 `Gap 398-D` CLOSED FIRST-HAND: `arthtyagi/judge` IS MIT AND HAS BEEN ARCHIVED SINCE 2022.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23** — the **fifth** pass dated today, after

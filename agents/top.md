@@ -5,6 +5,43 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p400` · reads and commit both 2026-10-23 — the SIXTH pass dated today.** 🔴 **No row
+added, for the third consecutive pass — but this time the reason is a measured property of the
+ADMISSION TEST, not of the supply.** 🟢 **The test that decides what reaches this shelf now has
+an instrument, 16 controls and a live specimen.**
+
+🔴 **`400-C`: the acceptance check this shelf has relied on is a SUBSTRING match.** `p398` and
+`p399` each certified their declines with *"every one already carried on these shelves, **each
+checked by grep** rather than by memory"* — and a grep for a bare repository **name** matches any
+shelf text that *contains* it. 🔴 **`p400`'s own first check produced a false *"already
+shelved"* on a real address**: a bare `grep ai-grader` returns hits, every one of them from
+[`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) — a different owner, a
+different repository and a **different name** that merely contains the candidate's.
+
+🔵 **The nearest owner, named so this is not re-sold as new:** `p332-delivery-audit` already
+reports this *shape* as `PREFIX PAIRS` (`eecs-autograder/autograder` against
+`eecs-autograder/autograder.io`). 🔴 **But it looks INSIDE the harvested corpus**, and an
+incoming candidate is not in the corpus yet — which is why the shape survived there and was
+never caught at the door. Same family as `T80`, one layer out.
+
+🟢 **Re-graded by exact address, and the prior passes are VINDICATED rather than impugned.**
+[`candidate-membership`](../evidence/candidate-membership.2026-10-23-p400.tsv) — **24 candidates:
+23 `SHELVED-EXACT`, 1 `NAME-SUBSTRING-ONLY`.** 🟢 **`p398`'s and `p399`'s declines survive the
+re-grade 14-for-14**, so the defect is a real mechanism that had not yet cost this base an
+address — it cost `p400` one, and was caught because the instrument existed by then.
+
+🔴 **The one genuinely unshelved address is NOT promoted to this shelf, and the reason is the
+grant.** [`andres-tovar-purdue/ai-grader`](https://github.com/andres-tovar-purdue/ai-grader) —
+*"Modular AI grading agent for engineering programming projects"*, **2 ★**, **0 forks**, **39
+commits**, no archive banner. 🔴 **No grant, established by PAYLOAD and not by a missing sidebar
+entry:** `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all **404** on **both** `main` and
+`master` — **eight probes** — while `main/README.md` answers **200** (so the branch exists and
+the channel works for this repository), and `moocupv/lti-ai-grader`'s `main/LICENSE` returns a
+real **Apache-2.0** payload through the same channel in the same minute. 🟢 **A calibrated pair,
+`p293`'s shape: the absence is measured, not inferred.** It is a census address on
+[`trending.md`](trending.md) only — an unlicensed repository is not something a studio builds on,
+and **fewer real rows beat padding**.
+
 **🆕 Pass `p399` · reads and commit both 2026-10-23 — the FIFTH pass dated today.** 🔴 **No row
 was added to this shelf, for the second consecutive pass, and the candidate list was measured before
 being declined.** Four global supply legs plus one extended supply leg returned

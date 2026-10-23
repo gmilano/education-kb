@@ -5,6 +5,81 @@ updated: 2026-10-23
 ---
 
 
+## Pass 400 · reads and commit both 2026-10-23 — **THE "ALREADY SHELVED" CHECK EVERY PASS RUNS BY HAND IS A SUBSTRING MATCH, AND IT DROPPED A REAL ADDRESS. 🟢 IT NOW HAS AN INSTRUMENT. 🔴 AND `market.md` CONTRADICTED ITSELF ABOUT CHINA'S AND INDIA'S MANDATES WITH THE GREEN COPY ON TOP.**
+
+🔵 **`p400` is an INSTRUMENT pass:** one new module
+([`p400-candidate-membership`](../compose/code/p400-candidate-membership/README.md), 16 controls,
+mutation-verified twice), one evidence file, six typed policy rows, and **no row added to any
+build-on tier**. 🟢 **`make hooks` is refused on this session and the GATES ARE NOT** — see
+`Gap 400-A`.
+
+### 🟢 Closed this pass
+
+- **`Gap 399-B` — CLOSED, and in the opposite direction to the one it assumed.** `p399` recorded
+  *"`make hooks` was refused on this session (`Code from External`), so no gate score is
+  restated."* 🟢 `p400` reproduces the `make` refusal exactly, then runs the suites directly:
+  **31 of 32 gate control suites PASS under `python3 -I`** at `HEAD`, and **32 of 33** in this commit. 🔴 The sole failure is
+  `p375-census-union` control 24 — *precisely* `p398`'s unsatisfiable-by-construction diagnosis,
+  now confirmed by **execution** rather than by reading. 🔵 The gate suite was never unreachable;
+  the **build tool** was. See `T82`.
+- **`Gap 398-C`'s remedy — TESTED and partially validated.** 🟢 The supply tail
+  (`…github repository license`) returned **8** education-native addresses against **0** from the
+  four original global tails (third consecutive pass at zero). 🔴 **It does not rescue the
+  regional legs:** NA returned only shelved statutes, and EMEA returned **no education-specific
+  instrument at all**, twice.
+
+### 🔴 New gaps
+
+- **`Gap 400-A`: two currency gates were RED at `HEAD` and nothing was reading them.**
+  `gate-census-currency` published `2 698 / 34 / 2 664` against a derived `2 699 / 34 / 2 665`;
+  `gate-union-currency` was stale in **all three** cells. 🔴 **Mechanism, named exactly:
+  `p399` wrote to every shelf and never added a `README.md` section — the anchor file mentions
+  `p399` zero times**, so the governed sentences were never restated. 🔵 This is `p352`'s
+  ordering defect and `397-B` paid for it one generation earlier. 🟢 **Both re-derived and
+  restated as the last act of this commit.**
+- **`Gap 400-B`: `gate-census-union` control 24 remains red and is NOT forced green.** `p398`'s
+  three-control replacement is still the correct remedy and still a human decision: the narrowing
+  edit is refused by the environment classifier, and this base's `p387-G` rule forbids closing a
+  gate by weakening a control. 🔵 Carried deliberately, with the diagnosis now execution-confirmed.
+- **`Gap 400-C`: the ACCEPTANCE test had no instrument, and it cost this pass an address.**
+  Every census here asks *"which addresses does the shelf hold?"*; none asked *"is THIS candidate
+  on the shelf?"* — answered by hand with a grep, which is a **substring** match. 🔴 A bare
+  `grep ai-grader` hits only `moocupv/lti-ai-grader`, so `andres-tovar-purdue/ai-grader` read as
+  *"already shelved."* 🟢 Instrument built; **24 candidates re-graded: 23 `SHELVED-EXACT`, 1
+  `NAME-SUBSTRING-ONLY`.** 🟢 **`p398`/`p399` are vindicated 14-for-14** — the defect is a real
+  mechanism that had not yet cost the base anything. 🔵 **Still open:** the module is deliberately
+  **not wired into `make hooks`** (it judges candidates, not committed state), so nothing enforces
+  its use. A successor that re-answers membership by grep reopens this.
+- **`Gap 400-D`: `market.md` disagreed with itself about the two largest education-AI mandates,
+  and the GREEN copy was the one a reader reached first.** 🔴 `p397` published China's *"compulsory
+  from age six"* and India's *"compulsory from Class 3"* as 🟢; ~1 000 lines below, the same file
+  carried both as 🔴 *"UNCONFIRMED … neither was found in a government source — check the PRC
+  Ministry of Education and India's Ministry of Education before citing."* 🟢 **Settled against
+  the instruments, and both green claims are refuted on JURISDICTION:** China's national
+  instrument is a **guide** (*zhinan*, May 2025) and the **≥8 class-hours/year** floor is
+  **Beijing municipal** (autumn 2025); India's is **CBSE Circular `Acad-15/2026`** — a **board**
+  curriculum for Classes III–VIII, **integrated into Mathematics/EVS at Classes 3–5**, AI proper
+  from Class 6, no board exam. 🔴 **Still open:** no row is payload-read, because every policy
+  host answers `000` and `moe.gov.cn`, `beijing.gov.cn`, `cbseacademic.nic.in` all returned
+  `ENOTFOUND`. The reads that would close it are the MoE/DoSEL notification registers.
+- **`Gap 400-E` (= `400-G` on `market.md`): `p399` fixed an INSTANCE of a defect and left the
+  CLASS standing.** 🟢 `p399` correctly took LATAM from 0 → 6 teaching-mandate rows. 🔴 It did not
+  re-ask the question of the other three regions: measured at `HEAD`, **EMEA 7 · LATAM 6 · North
+  America 3 · APAC 1**, and APAC's one row was `regional | NOT_ESTABLISHED`. 🟢 APAC now **7**;
+  **67 → 73 rows.** 🔵 `region` is a closed five-value vocabulary, so the generalisation step is
+  four greps — which is why skipping it is easy to miss. Published as `T81`.
+- **`Gap 400-F`: the two largest backlogs on this tree are UNMOVED for a fourth pass.**
+  🔴 `p397`'s fork backlog: **551** pairs derived, **21** adjudicated, **530** unexamined.
+  🔴 `p370`'s promotion backlog: **1 152** measured-but-never-shelved slugs, **390** permissive or
+  mixed. 🔵 Named here so neither can look worked. `p400`'s budget went to `400-C` and `400-D`;
+  the next pass should take **one** of these rather than open a third front.
+- **`Gap 400-G` (`400-H` on the shelves): no control may pin a live derived VERDICT.** 🔴 This
+  pass's own first suite graded its specimen against the live shelves, and `p400`'s own write
+  falsified three controls inside the hour. 🟢 `p376`'s group-5 rule (*no fixture may pin a live
+  derived total*) turns out to be a special case. 🔵 **Open as a question about the other
+  instruments:** every suite here whose fixtures read `SHELF_FILES` is exposed to the same thing,
+  and nobody has swept them.
+
 ## Pass 399 · reads and commit both 2026-10-23 — **THE TYPED POLICY LAYER CARRIED 11 TEACHING-MANDATE ROWS AND NOT ONE LATAM, WHILE THIS BASE'S OWN README HELD THE REFUTING STATUTE SINCE `p277`. 🟢 FIXED IN THE DATA: 59 → 67 ROWS, LATAM 12 → 20. 🟢 `Gap 398-D` CLOSED FIRST-HAND.**
 
 🔵 **`p399` is a WRITING pass on the typed layer and a reading pass everywhere else.** No new

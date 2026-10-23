@@ -5,6 +5,62 @@ updated: 2026-10-23
 ---
 
 
+## 🟢 🆕 2026-10-23 · `p400` — **THE SHELF'S OWN ADDRESS SET, RE-ASKED FROM THE OUTSIDE: 24 CANDIDATES GRADED BY EXACT ADDRESS OVER BOTH CHANNELS, 23 CARRIED, 1 LOST TO A SUBSTRING. 🟢 AND THE GRANT CHANNEL IS OPEN WHILE EVERY POLICY HOST IS `000`.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23**, the sixth pass today. 🟢 The repository
+reads below are first-hand `WebFetch`/`raw.githubusercontent.com` against `github.com`; the policy
+reads are search-channel (band `reported`, **re-measured this pass**: every policy host still
+`000`, and four named hosts returned `ENOTFOUND`).
+
+### 1. 🆕 Census address, unlicensed — `andres-tovar-purdue/ai-grader`
+
+🆕 [`andres-tovar-purdue/ai-grader`](https://github.com/andres-tovar-purdue/ai-grader) —
+*"Modular AI grading agent for engineering programming projects"*, **2 ★**, **0 forks**, **39
+commits**, Python by file evidence (`pyproject.toml`, `install.py`; the Languages panel is empty),
+**no archive banner**. 🔴 **No grant:** four grant filenames × two branches = **eight 404s**,
+`main/README.md` **200** as the branch control. 🟢 Excluded from
+[`foundations.md`](foundations.md) on the grant, and the exclusion is **payload-measured**.
+
+🔵 **It is on this page at all because of HOW it was nearly lost.** A bare `grep ai-grader` over
+this tree hits only [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) —
+**Apache-2.0, re-read verbatim this pass** and still correct on these shelves. 🔴 The candidate's
+name is a **strict substring** of the carried one, so the hand-run membership check answered
+*"already shelved."* That is `400-C`; the instrument that now answers it properly is
+[`p400-candidate-membership`](../compose/code/p400-candidate-membership/README.md).
+
+### 2. 🟢 The channel state, re-measured — and the two axes diverge
+
+| channel | state this pass | consequence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **301**, serves real payloads | the **licence** axis is first-hand today |
+| `github.com` via `WebFetch` | 🟢 serves repository pages | stars, forks, commits, banners readable |
+| `github.com` via `curl -sI` | 🔴 **403/400** | `p397`'s genuine HTTP 403 **reproduces** — it is not a classifier refusal |
+| `moe.gov.cn`, `beijing.gov.cn`, `cbseacademic.nic.in`, `algoritmos.uniandes.edu.co` | 🔴 **`000` / `ENOTFOUND`** | the **jurisdiction** axis has exactly one channel, a search backend's own fetch |
+
+🔵 **Worth stating plainly on a repos page:** this base can settle a licence first-hand and
+cannot settle a statute at all, so the two axes of its pre-flight are **not** of equal evidentiary
+grade — and `policy-matrix.tsv`'s standing `reported` band is a measured property of the session,
+not caution.
+
+### 3. 🟢 `p332`'s `PREFIX PAIRS` arm re-read, and it is the nearest owner of `400-C`
+
+🟢 Run this pass: **2 710** slugs on the shelves, **5 464** measured into `evidence/`, **4 312
+delivered (78.9%)**, **1 152 never on a shelf**; **27** prefix pairs after `.git` normalisation,
+**2** of them also present on a shelf as a dead link. 🔵 Specimens include
+`eecs-autograder/autograder → autograder.io`, `dkavargy/escoplus2 → escoplus2.0`,
+`eclipse/paho → paho.mqtt.java`. 🔴 **Same shape as `400-C`, different population** — `p332`
+pairs slugs already harvested, so it cannot see a candidate that has not yet been written down.
+🟢 Recorded here so the two instruments' scopes are legible side by side rather than one looking
+redundant.
+
+### 4. 🟡 Backlogs carried UNMOVED, and named so they cannot look worked
+
+🔴 **`p397`'s fork backlog: 551 pairs derived, 21 adjudicated, 530 unexamined — unmoved for the
+fourth consecutive pass.** 🔴 **`p370`'s promotion backlog: 1 152 measured-but-never-shelved
+slugs, 390 of them permissive or mixed — unmoved.** 🔵 `p400`'s budget went to the acceptance
+instrument and to `400-F`'s correction; these are the two largest standing pieces of work on the
+tree and the next pass should take one rather than open a third front.
+
 ## 🟢 🆕 2026-10-23 · `p399` — **THE TYPED POLICY LAYER HAD 11 TEACHING-MANDATE ROWS AND NOT ONE LATAM, WHILE THIS BASE'S README HELD THE REFUTING STATUTE SINCE `p277`. 🟢 59 → 67 ROWS.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23**, the fifth pass today. 🔵 No new

@@ -5,6 +5,26 @@ updated: 2026-10-23
 ---
 
 
+**🆕 Pass `p400` · reads and commit both 2026-10-23 — sixth pass of the day.** 🔴 **No
+foundational repo added.** 🟢 **What changed for this shelf is that its GRANT CHANNEL was
+re-measured and is OPEN, which is the opposite of what a reader would infer from the policy
+channel's state.**
+
+🟢 **Measured this pass, not assumed:** `raw.githubusercontent.com` answers **301** and serves
+real licence payloads (`moocupv/lti-ai-grader` `main/LICENSE` → verbatim *"Apache License /
+Version 2.0, January 2004"*, corroborating this shelf's recorded Apache-2.0). 🔴 **Every primary
+policy host answers `000`**, and `moe.gov.cn`, `beijing.gov.cn`, `cbseacademic.nic.in` and
+`algoritmos.uniandes.edu.co` all returned `ENOTFOUND`/`000` to `WebFetch` and `curl` alike.
+🔵 **So this session has a first-hand channel for the LICENCE axis and none for the JURISDICTION
+axis** — which is worth stating on this page precisely because both axes gate every row here,
+and only one of them can be settled first-hand today.
+
+🔴 **The one candidate address of this pass is excluded on the grant, by payload:**
+[`andres-tovar-purdue/ai-grader`](https://github.com/andres-tovar-purdue/ai-grader) — four grant
+filenames × two branches = **eight 404s**, against a **200** on `main/README.md` as the branch
+control. 🟢 No grant, so no promotion, and the exclusion is measured rather than read off an
+absent sidebar entry.
+
 **🆕 Pass `p399` · reads and commit both 2026-10-23 — fifth pass of the day.** 🔴 **No
 foundational repo was added.** 🟢 **`Gap 398-D` is closed, and it closes in the direction that keeps
 the shelf as it is.**
