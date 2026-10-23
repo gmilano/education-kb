@@ -5,7 +5,65 @@ updated: 2026-10-23
 ---
 
 
-## 🔴 🆕 2026-10-23 · `p397` — **"0 RESULTS" FROM A MALFORMED QUERY IS INDISTINGUISHABLE FROM AN ABSENCE, AND THIS BASE WAS ONE SENTENCE AWAY FROM SHELVING ONE. 🟢 THE CURATED-TOPIC CHANNEL IS THE PRECISE HALF OF `396-A`, AND IT PAYS: `topic:autograder` → 124 RESULTS.**
+## 🟢 🆕 2026-10-23 · `p398` — **`p397`'s `topic:autograder` LEAD, EXPLOITED: THE ENTIRE FIRST PAGE WAS ALREADY ON THESE SHELVES. 🟢 AND SORTING IT BY STARS REPRODUCES `p397`'s `okpy/ok` CORRECTION BLIND, THROUGH A DIFFERENT CHANNEL.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23**, the fourth pass today. 🔵 No new instrument;
+the channel read is first-hand `WebFetch` against `github.com/search`.
+
+### 1. 🟢 The lead `p397` named and did not spend — and what spending it bought
+
+`p397` closed on *"`topic:autograder` → **124 results** · the supply was there all along"* and left it
+unharvested. 🟢 **Harvested this pass, sorted by stars, read first-hand.** The page states **124
+results** — `p397`'s figure, confirmed — and renders **10** rows, not 20:
+
+| # | repository | ★ | lang | on these shelves before `p398`? |
+|---|---|---|---|---|
+| 1 | [`okpy/ok`](https://github.com/okpy/ok) | **370** | Python | 🟢 since `pass 85` |
+| 2 | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 161 | Python | 🟢 yes |
+| 3 | [`gradescope/autograder_samples`](https://github.com/gradescope/autograder_samples) | 91 | Java | 🟢 `p397` |
+| 4 | [`TricksterGuy/complx`](https://github.com/TricksterGuy/complx) | 68 | C++ | 🟢 yes |
+| 5 | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 62 | Python | 🟢 yes — **Apache-2.0**, line 2776 |
+| 6 | [`okpy/ok-client`](https://github.com/okpy/ok-client) | 57 | Python | 🟢 yes — line 55 |
+| 7 | [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) | 38 | Python | 🟢 `p397` |
+| 8 | [`infomark-org/infomark`](https://github.com/infomark-org/infomark) | 35 | Go | 🟢 yes — line 57 |
+| 9 | [`arthtyagi/judge`](https://github.com/arthtyagi/judge) | 32 | Python | 🆕 **NO — the one new address** · 🔴 **Public archive** |
+| 10 | [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 32 | Python | 🟢 yes — line 57 |
+
+🔴 **Nine of ten already shelved, and the tenth is archived.** 🔵 So `p397`'s *"the supply was there
+all along"* is right about the **channel** and wrong about the **base**: the channel was blind, the
+shelf was not. 🟢 **The useful conclusion is the opposite of the one the lead implied** — this channel
+is now a **corroboration** instrument for the autograder tier, not a discovery one, and the tier
+should be treated as **covered** rather than under-harvested.
+
+### 2. 🟢 `p397`'s `okpy/ok` correction, reproduced blind
+
+🟢 **`p397` corrected a superlative four passes old by re-reading `okpy/ok` at 370 ★.** This pass did
+not re-read the repository at all — it asked a **different channel** (`github.com/search`,
+`topic:autograder`, `s=stars&o=desc`) which ranks by the field in question. 🟢 **`okpy/ok` returns
+`#1` at 370 ★, and `gradethis` (164 ★) and `otter-grader` (161 ★) are both below it.** 🔵 **Two
+channels, one answer** — the `p397` correction stands on an independent footing, which is worth more
+than a second reading of the same page.
+
+### 3. 🆕 The one new address, and it is recorded with its defect
+
+🆕 [`arthtyagi/judge`](https://github.com/arthtyagi/judge) — **32 ★**, Python, 🔴 **labelled "Public
+archive" on the search page itself**. 🔵 Recorded because an archived address is still a census
+address and still a thing a studio lead will find; 🔴 **not promoted to `agents/top.md` or
+`repos/foundations.md`**, because this base does not shelve an archived tree as a starting point
+(the `Continue` rule). 🔵 **Licence not read first-hand this pass** — stated rather than assumed, and
+left as the one open thread: `Gap 398-D`.
+
+### 4. 🔵 Channel state — one line, because nothing moved
+
+🟢 `github.com/search` **200** via `WebFetch`, precise on `topic:` (`p397`'s finding, re-confirmed) ·
+🟢 `github.com` repo HTML **200** via `WebFetch` · 🔴 repository-code execution from a **hand-written**
+script refused (`Code from External`) where the repo's **own** suites under `make` run 🟢 — which
+**narrows `396-C`/`p397` one notch further: the classifier gates the *authorship* of the code, not the
+host or the tool.** `T42` refined.
+
+---
+
+## 🔴 2026-10-23 · `p397` — **"0 RESULTS" FROM A MALFORMED QUERY IS INDISTINGUISHABLE FROM AN ABSENCE, AND THIS BASE WAS ONE SENTENCE AWAY FROM SHELVING ONE. 🟢 THE CURATED-TOPIC CHANNEL IS THE PRECISE HALF OF `396-A`, AND IT PAYS: `topic:autograder` → 124 RESULTS.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23**, the third pass today. **Evidence:**
 [`channel-state`](../evidence/channel-state.2026-10-23-p397.tsv) — 11 channels **per tool** ·

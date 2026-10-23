@@ -5,7 +5,111 @@ updated: 2026-10-23
 ---
 
 
-## 🟢 🆕 2026-10-23 · `p397` — **`396-F`'s ARM RUN OVER THE WHOLE SHELF: 551 PAIRS DERIVED WITH NO NETWORK, AND ITS OWN VERDICT LABEL IS WRONG — 8 OF 15 "FORKS" ARE RENAMES. 🔴 AND A SUPERLATIVE THREE PASSES RE-PUBLISHED IS REFUTED BY A ROW THIS BASE ALREADY HELD.**
+## 🔴 🆕 2026-10-23 · `p398` — **`gate-census-union`, CARRIED RED SINCE `p391` AS "A FIXTURE-COVERAGE CLAIM", IS UNSATISFIABLE BY CONSTRUCTION: `p382` MADE THE ARM IT AUDITS UNREACHABLE, AND THE ARM IS NOT DEAD CODE. 🔴 AND THE BRIEF HAS SATURATED — EIGHT EXTENDED SEARCH LEGS RETURNED NOT ONE UNSHELVED FACT.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23** — the **fourth** pass dated today, after
+`p395`, `p396` and `p397`. 🔵 **This pass added no instrument and ran no new gate**; its evidence is
+the committed tree and `make hooks` at `HEAD`.
+
+### 1. 🟢 `Gap 391-F`'s census-union half — the mechanism, derived at last
+
+`p387-G` characterised it, and `p391` through `p397` carried it, as *"a fixture-coverage claim, not a
+shelf defect"* that *"needs the instruments' author"*. 🟢 **True, and it never named why the control
+could not go green. The reason is a two-line read:**
+
+| where | predicate | class |
+|---|---|---|
+| [`p375`](../compose/code/p375-census-union/census_union.py) `DOT_RUN` | `^\.{3,}$` | `NAME-DOT-RUN` |
+| [`p351`](../compose/code/p351-address-shape/address_shape.py) `degenerate_name` 🆕 `p382` | `set(name) == {"."}` | `NAME-DEGENERATE` |
+
+🔴 **They are the same predicate.** `p351.classify` consumes `{".", ".."}` as `NAME-ILLEGAL` one
+branch *above* `degenerate_name`, so `NAME-DEGENERATE` means **exactly** a name of three or more
+dots. 🔴 **And `union_harvest` runs `p351.partition` FIRST** (`census_union.py:157`), applying
+`name_reject` only to its survivors (`:163-168`). **So after `p382`, no 3+-dot name can reach the
+`NAME-DOT-RUN` branch by any shelf content at all.** 🔵 **Control 24 was not waiting for a specimen.
+It was waiting for an impossibility**, and seven passes read "fixture-coverage" and moved on.
+
+🟢 **The other half, which matters more: the arm is NOT dead code.** It grades **4** of the committed
+756 — `emaanrana012/...`, `genai-gurus/...`, `manahil2731/...`, `mebis-lp/...` — through `grade()`,
+one function away, recorded in
+[`census-union-grade`](../evidence/census-union-grade.2026-10-22-p375.tsv). 🔴 **Deleting the arm
+would falsify the committed derivation**, so the correct change is to the *control*, not the code:
+narrow 24 to the class that is reachable in the union path, and add controls pinning (a) that
+`NAME-DOT-RUN` still fires on the committed 756 and (b) that `p351` now owns the shape upstream, so
+coverage cannot silently vanish. 🟢 **That strengthens the suite** — three true controls replacing
+one false one — rather than weakening it.
+
+🔵 **A smaller correction falls out.** [`README.md`](../README.md)'s `Arm 6` write-up says the four
+phantoms were *"passed by **every** arm of **both** filters"*. That is true of `p351` and `p367` and
+**false of the union layer**, where `p375`'s arm had been rejecting exactly those four since `p375` —
+seven passes before `p382` re-fixed it upstream. 🔵 **The duplication is what turned the gate red**,
+and the write-up's "an arm nobody was looking for" reads differently once the third filter is counted.
+
+🔴 **NOT APPLIED, and the refusal is on the record twice.** The environment classifier declined the
+edit to `test_census_union.py` (`Security Test Removal`) — a correct call on a diff that narrows an
+assertion — and **this base's own standing rule agrees with it**: `p387-G` says the gate *"may not be
+closed by weakening a control"* and needs *"the instruments' author, not a shelf edit"*. 🟢 So the
+diagnosis is published and the edit is left to a human who can see it is three controls for one.
+`Gap 398-A`.
+
+### 2. 🔴 The standing gate score was never restated after `p397` fixed its own finding
+
+`p397` published **41/46** and *"three gates drifted red unseen"* — `gate-region-headings`,
+`gate-census-currency`, `gate-union-currency`. 🟢 **All three are GREEN at `HEAD`.** Re-run this pass:
+
+| | |
+|---|---|
+| `make hooks` at `HEAD` | 🟢 **46/47 gates green** |
+| the only red | 🔴 `gate-census-union` (control 24 of 27) |
+
+🔵 **`p397` reported the state it *found*, before its own fixes landed, and no pass restated the
+score afterwards** — so the published figure understated the base by five gates and named two gates
+red that were already repaired. 🔵 The count also moved 46 → 47 because `p397` added
+`p397-shelf-fork-audit`. `Gap 398-B`.
+
+### 3. 🔴 The brief has saturated, and this is the measurement
+
+🔵 **Eight extended legs were run — four regional, four global supply — and not one returned a fact
+or an address this base did not already hold.** Recorded per leg, because an unrecorded saturation
+looks exactly like a thin pass:
+
+| leg | returned | already shelved |
+|---|---|---|
+| `AI education North America 2026` | 134 bills / 31 states, CA `AB 1159`, `COPPA` 2026-04-22, Katy ISD, NYC traffic-light | 🔴 **all** — `market.md:524,555,574,585,682,740` |
+| `AI education EMEA 2026` | AI Act enforcement 2026-08-02, high-risk phase-in, Digital Omnibus, Denmark €200M | 🔴 **all** — `market.md:114,834,963,987` |
+| `AI education APAC 2026` | Korea `AI Basic Act` 2026-01-22, **Vietnam** education high-risk decree, China labelling | 🔴 **all** — `market.md:179,229,1105-1236`, `policy-matrix.tsv:128,150` |
+| `AI education LATAM 2026` | UNESCO IESALC **87% / 26%**, Observatory 2026-04-14, `CONPES 4144`, ILIA, CONALEP | 🔴 **all** — `market.md:45,52,192,196`, `policy-matrix.tsv:138,142,149` |
+| `top open source AI agents education` | general-purpose agents, no education supply | 🔴 n/a |
+| `github trending education AI` | `os-taxonomy`, `ai-engineering-from-scratch` | 🔴 both — `top.md:937,1049` |
+| `open source AI tutor agent MIT` | `Ebimsv/AITutorAgent`, `maxew6/ai-tutor-project`, `Zenglian990/AI_Tutor_Release` | 🔴 **all three** |
+| `open source LMS MIT/Apache` | Open edX, Chamilo, ILIAS, Frappe, Sakai | 🔴 all — `top.md:941-943` |
+
+🔵 **The sharpest instance is `maxew6/ai-tutor-project`.** The search channel offered it as a new
+MIT tutor repo; this base already holds it under **`P150-B`/`T79`** with a far deeper reading —
+*"a self-described 'extension' is a DELETION of its upstream's safeguards: 1 002 lines vs the trunk's
+1 006, and the removed text is the answer-position randomisation instruction."* 🔵 **The channel
+returned the address; the base already owned the defect.**
+
+🟢 **So the remedy is not another pass of the same eight queries.** They now cost eight extended
+searches to re-deliver shelved content. `Gap 398-C` registers the concrete change: replace the
+regional legs' *"adoption regulation players"* tail — which returns policy this base has tracked to
+the line — with a **dated-delta** tail (*"since 2026-10-01"*) or a **supply** tail
+(*"github repository license"*), and drop the two global legs that have never once returned an
+education-native address.
+
+### 4. 🟢 The one genuinely new fact, and it is small — stated as such
+
+🟢 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — re-read first-hand: **MIT**,
+**41.3k ★**, which **corroborates** the shelf's `41 208` to the rounding and the `p389`
+AGPL-review-is-wrong finding. 🆕 **What is new: `v1.3.0-rc.1` is dated 2026-10-22.**
+`repos/trending.md:11337` tracked `v1.2.0-rc.1` (2026-10-04) as *"still a pre-release, 11 days on"*.
+🔴 **So a second release-candidate series opened without the first reaching stable** — two RC series,
+no stable release between them. 🔵 That strengthens the shelf's existing RC-latency signal rather
+than starting a new one, and it is the only fact this pass adds to a live shelf.
+
+---
+
+## 🟢 2026-10-23 · `p397` — **`396-F`'s ARM RUN OVER THE WHOLE SHELF: 551 PAIRS DERIVED WITH NO NETWORK, AND ITS OWN VERDICT LABEL IS WRONG — 8 OF 15 "FORKS" ARE RENAMES. 🔴 AND A SUPERLATIVE THREE PASSES RE-PUBLISHED IS REFUTED BY A ROW THIS BASE ALREADY HELD.**
 
 🔵 **Dating note.** Reads and commit both **2026-10-23** — the **third** pass dated today, after
 `p395` and `p396`. **Evidence:**

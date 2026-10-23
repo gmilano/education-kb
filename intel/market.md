@@ -5,7 +5,28 @@ updated: 2026-10-23
 ---
 
 
-**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **All four regional
+**🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🟢 **All four regional
+legs RETURNED FACTS — and every fact was already on this file or on
+[`policy-matrix.tsv`](policy-matrix.tsv).** 🔵 **This is a saturation result, not a nil:** each leg
+answered, each answer checked out, and none of it was new to this base. Recorded per leg, because an
+unrecorded saturation is indistinguishable from a thin pass:
+
+| leg (`AI education {region} 2026 adoption regulation players`) | returned | already held at |
+|---|---|---|
+| **North America** | 134 bills / 31 states · CA `AB 1159` · `COPPA` 2026-04-22 · Katy ISD · NYC traffic-light | lines 524, 555, 574, 585, 682, 740 |
+| **EMEA** | AI Act enforcement 2026-08-02 · high-risk phase-in · Digital Omnibus · Denmark €200M | lines 114, 834, 963, 987 |
+| **APAC** | Korea `AI Basic Act` 2026-01-22 · Vietnam's education high-risk decree · China labelling | lines 179, 229, 1105–1236 · `policy-matrix.tsv:128,150` |
+| **LATAM** | UNESCO IESALC **87% / 26%** · Observatory 2026-04-14 · `CONPES 4144` · ILIA · CONALEP | lines 45, 52, 192, 196 · `policy-matrix.tsv:138,142,149` |
+
+🔵 **What this means for a pitch, which is the only reason it is worth writing down:** the regional
+policy layer of this base is **current to the line on all four regions** and can be quoted without a
+re-check this week. 🟢 That is a genuine asset — 🔴 **but it also means the brief's regional legs now
+cost four extended searches to re-deliver shelved content**, so `Gap 398-C` registers the query change
+(a dated-delta tail, *"since 2026-10-01"*, or a supply tail) rather than a fifth identical re-run.
+🔵 **No opportunity, figure or regional section is amended this pass**, and the single
+`## Opportunities by region` block `p397` repaired is left exactly as it stands.
+
+**Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **All four regional
 legs returned facts and none returned an address, which is this instrument working as designed
 (`393-A`): the brief's legs are market intelligence, not supply.** Every region below carries a dated
 `p397` entry, and the two that returned least say so explicitly. 🔴 **A structural fix shipped here

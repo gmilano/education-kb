@@ -5,6 +5,84 @@ updated: 2026-10-23
 ---
 
 
+## Pass 398 · reads and commit both 2026-10-23 — **`gate-census-union` IS UNSATISFIABLE BY CONSTRUCTION, NOT A FIXTURE GAP: `p382` DUPLICATED `p375`'s RULE UPSTREAM AND MADE THE AUDITED ARM UNREACHABLE. 🔴 AND THE BRIEF'S EIGHT SEARCH LEGS RETURNED NOT ONE UNSHELVED FACT.**
+
+🔵 **No new instrument and no new evidence file this pass.** Everything below is derived from the
+committed tree and from `make hooks` at `HEAD`, which is why `p398` is recorded as a **reading pass**:
+census delta **+1** address.
+
+### 🔴 New gaps
+
+- **`Gap 398-A`: `Gap 391-F`'s census-union half has a ROOT CAUSE, and the fix is blocked — by two
+  independent refusals that agree.** `p387-G` characterised control 24 as *"a fixture-coverage claim,
+  not a shelf defect"* needing *"the instruments' author"*, and `p391`–`p397` carried that. 🟢 **The
+  mechanism, never before derived:** `p375`'s `DOT_RUN` is `^\.{3,}$`; `p382` added
+  `degenerate_name(name) = set(name) == {"."}` to `p351`; and `p351.classify` already consumes
+  `{".", ".."}` as `NAME-ILLEGAL` **one branch above it**, so `NAME-DEGENERATE` means exactly *three
+  or more dots* — **the same predicate**. 🔴 **`union_harvest` runs `p351.partition` FIRST
+  (`census_union.py:157`) and applies `name_reject` only to its survivors (`:163-168`), so after
+  `p382` no 3+-dot name can reach the `NAME-DOT-RUN` branch for ANY shelf content.** 🔵 The control is
+  not waiting for a specimen; it is waiting for an impossibility, and no pass can turn it green by
+  harvesting.
+  🟢 **The other half matters more: the arm is NOT dead code.** It grades **4** of the committed 756
+  through `grade()` — the four all-dots rows in
+  [`census-union-grade`](../evidence/census-union-grade.2026-10-22-p375.tsv) — so **deleting it
+  falsifies the committed derivation**. 🟢 **Therefore the correct change is to the control, not the
+  code:** narrow 24 to the one class reachable in the union path, then add controls pinning (a) that
+  `NAME-DOT-RUN` still fires on the committed 756 and (b) that `p351` owns the shape upstream, so
+  coverage cannot silently vanish. **Three true controls replacing one false one — a strengthening.**
+  🔴 **Not applied.** The environment classifier refused the edit to `test_census_union.py`
+  (`Security Test Removal`) — a correct call on a diff whose visible effect is a narrowed assertion —
+  and **this base's own standing rule says the same thing**: the gate *"may not be closed by weakening
+  a control."* 🔵 **Recorded as a human decision rather than forced**, with the full diff described so
+  the decision takes a minute rather than a pass.
+- **`Gap 398-B`: the standing gate score was never restated after `p397` repaired its own finding.**
+  `p397` published **41/46** and named `gate-region-headings`, `gate-census-currency` and
+  `gate-union-currency` red. 🟢 **All three were green at `HEAD` this pass** (`make hooks` → **46/47**,
+  sole red `gate-census-union`). 🔵 `p397` reported the state it *found*, before its own fixes landed,
+  and the count also moved 46 → 47 because `p397` added `p397-shelf-fork-audit`. 🔵 **The lesson is
+  `p397`'s own, one layer up:** a score is a derived quantity and goes stale exactly like a census
+  sentence, so it belongs in the re-derive-before-commit step rather than in the narrative.
+- **`Gap 398-C`: the brief's eight search legs have SATURATED against this base, measured leg by
+  leg.** Four regional legs (`North America`, `EMEA`, `APAC`, `LATAM` × *"adoption regulation
+  players"*) returned **134 bills / 31 states**, `AB 1159`, `COPPA` 2026-04-22, Katy ISD, the AI Act
+  enforcement date, the Digital Omnibus, Korea's `AI Basic Act`, Vietnam's education high-risk decree,
+  UNESCO IESALC's **87% / 26%**, the Observatory, `CONPES 4144`, ILIA and CONALEP — 🔴 **every one
+  already on `intel/market.md` or `intel/policy-matrix.tsv`.** The four global supply legs returned
+  general-purpose agents plus `Ebimsv/AITutorAgent`, `maxew6/ai-tutor-project`,
+  `Zenglian990/AI_Tutor_Release`, `os-taxonomy` and the usual LMS set — 🔴 **all shelved**, and
+  `maxew6/ai-tutor-project` is held here under **`P150-B`/`T79`** with a far deeper reading than the
+  channel offered. 🟢 **Concrete remedy, so this is a gap and not a complaint:** replace the regional
+  legs' *"adoption regulation players"* tail with a **dated-delta** tail (*"since 2026-10-01"*) or a
+  **supply** tail (*"github repository license"*), and drop the two global legs that have never once
+  returned an education-native address. 🔵 Until the brief changes, a pass should **budget for
+  instrument work and expect the legs to corroborate**, which is the opposite of how they are ranked.
+- **`Gap 398-D`: [`arthtyagi/judge`](https://github.com/arthtyagi/judge) is shelved without a
+  first-hand licence read.** **32 ★**, Python, 🔴 **"Public archive"** on the search page itself — the
+  one member of `topic:autograder`'s first page this base did not hold. 🔵 Recorded as an address
+  because an archived tree is still a census address and still something a studio lead will find; 🔴
+  **not promoted to a build-on tier**, per the `Continue` rule. 🔵 **Its grant is unread**, stated
+  rather than assumed.
+- **`Gap 398-E`: the channel-B delta has one address this pass could not name.** Channel B gained
+  **2** while the union gained **1**, which *forces* the second arrival to be an address already in
+  the union — one only ever **linked** before and **backticked** here for the first time. 🟢 The
+  inference is sound from the three cells; 🔴 **the row itself was not identified**, because
+  `make census-union` was refused on this session's classifier in the same window `make hooks` ran
+  twice. 🔵 One command on a session without that refusal closes it.
+
+### 🟢 Carried gaps, re-measured
+
+- **`Gap 391-F`** — 🟢 **HALF-CLOSED as a diagnosis, still red as a gate.** The `gate-census-union`
+  half now has its mechanism (`398-A`); 🔵 `gate-fold-identity` was **green** this pass, so the
+  "two red gates" framing is itself stale.
+- **`Gap 477` remainder** — 🔴 carried: **2 012** research-shelf addresses ungraded (was 2 011; +1 is
+  `arthtyagi/judge`).
+- **`p397`'s fork backlog** — 🔴 carried **unmoved**: **551** pairs derived, **21** adjudicated,
+  **530** unexamined. 🔵 `p398` spent its budget on the gate diagnosis and the saturation measurement
+  instead, and says so rather than letting the backlog look worked.
+
+---
+
 ## Pass 397 · reads and commit both 2026-10-23 — **`396-C` IS REFUTED AND IT HAD COST TWO PASSES OF GATE BLINDNESS: THE REPOSITORY'S PYTHON RUNS HERE, `make hooks` RUNS HERE, AND THREE GATES HAD DRIFTED RED WITH NOBODY LOOKING. 🟢 `396-F`'s RANKED-FIRST SHELF RUN IS DONE — 551 PAIRS, AND THE ARM'S OWN VERDICT LABEL WAS WRONG. 🔴 AND A SUPERLATIVE THREE PASSES RE-PUBLISHED IS REFUTED BY A ROW THIS BASE ALREADY HELD.**
 
 **Evidence:** [`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv) — 21 pairs ·

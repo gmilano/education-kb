@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 398 — reads and commit both 2026-10-23 — **`gate-census-union` HAS BEEN RED SINCE `p391`, FILED AS "A FIXTURE-COVERAGE CLAIM". IT IS UNSATISFIABLE BY CONSTRUCTION: `p382` DUPLICATED `p375`'s RULE ONE LAYER UPSTREAM AND MADE THE AUDITED ARM UNREACHABLE — AND THE ARM IS NOT DEAD CODE, IT GRADES 4 OF THE COMMITTED 756. 🔴 AND THE BRIEF'S EIGHT SEARCH LEGS RETURNED NOT ONE UNSHELVED FACT OR ADDRESS.**
+
+🔵 **Dating note.** Reads and commit both **2026-10-23** — the **fourth** pass dated today, after
+`p395`, `p396` and `p397`. 🔵 **`p398` is a READING pass and the census says so: +1 address.** It adds
+no instrument and no evidence file; its evidence is the committed tree and `make hooks` at `HEAD`.
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`Gap 391-F`'s census-union half has a mechanism at last, and it is two lines of reading.** `p375`'s `DOT_RUN` is `^\.{3,}$`. `p382` added `degenerate_name(name) = set(name) == {"."}` to `p351` — and `p351.classify` already consumes `{".", ".."}` as `NAME-ILLEGAL` **one branch above it**, so `NAME-DEGENERATE` means *exactly* three-or-more dots. **The same predicate.** 🔴 **`union_harvest` runs `p351.partition` FIRST (`census_union.py:157`) and applies `name_reject` only to its survivors (`:163-168`)** — so after `p382`, no 3+-dot name can reach the `NAME-DOT-RUN` branch **for any shelf content whatever**. 🔵 **Control 24 was never waiting for a specimen; it was waiting for an impossibility**, and seven passes read *"fixture-coverage"* and moved on. `398-A` |
+| 2 | 🟢 **And the half that changes the remedy: the arm is NOT dead code.** It grades **4** of the committed 756 through `grade()`, one function away — the four all-dots rows in [`census-union-grade`](evidence/census-union-grade.2026-10-22-p375.tsv). 🔴 **Deleting it would falsify the committed derivation.** 🟢 So the correct change is to the **control**, not the code: narrow 24 to the class reachable in the union path, then pin (a) `NAME-DOT-RUN` still firing on the committed 756 and (b) `p351`'s upstream ownership of the shape. **Three true controls replacing one false one.** 🔴 **Not applied**, and the refusal is doubly on the record: the environment classifier declined the test edit (`Security Test Removal` — a correct call on a diff that *looks* like a narrowed assertion), and **this base's own rule says the gate "may not be closed by weakening a control."** 🔵 Published as a human decision rather than forced. |
+| 3 | 🔵 **A smaller correction falls out of the same read.** `Arm 6`'s write-up on this page says the four phantoms were *"passed by **every** arm of **both** filters."* That is true of `p351` and `p367` and **false of the union layer**, where `p375`'s arm had been rejecting exactly those four **seven passes earlier**. 🔵 **The duplication is what turned the gate red**, and *"an arm nobody was looking for"* reads differently once the third filter is counted. |
+| 4 | 🔴 **`398-B`: the standing gate score was never restated after `p397` repaired its own finding.** `p397` published **41/46** and named three gates red. 🟢 **All three were green at `HEAD`**: `make hooks` → **46/47**, sole red `gate-census-union`. 🔵 `p397` reported the state it *found*, before its own fixes landed; the count moved 46 → 47 because `p397` added a gate. 🔵 **A score is a derived quantity and goes stale exactly like a census sentence** — it belongs in the re-derive-before-commit step, which is `p397`'s own lesson one layer up. |
+| 5 | 🔴 **`398-C`: the brief has SATURATED, measured leg by leg rather than complained about.** Four regional legs returned **134 bills / 31 states**, `AB 1159`, `COPPA` 2026-04-22, Katy ISD, the AI Act enforcement date, the Digital Omnibus, Korea's `AI Basic Act`, Vietnam's education high-risk decree, UNESCO IESALC's **87% / 26%**, the Observatory, `CONPES 4144`, ILIA, CONALEP — 🔴 **every one already on `intel/market.md` or `intel/policy-matrix.tsv`.** Four global supply legs returned general-purpose agents and `Ebimsv/AITutorAgent`, `maxew6/ai-tutor-project`, `Zenglian990/AI_Tutor_Release`, `os-taxonomy`, the usual LMS set — 🔴 **all shelved.** 🟢 **Remedy, so it is a gap and not a mood:** swap the regional *"adoption regulation players"* tail for a **dated-delta** (*"since 2026-10-01"*) or **supply** (*"github repository license"*) tail, and drop the two global legs that have never returned an education-native address. |
+| 6 | 🔵 **The sharpest instance of saturation is `maxew6/ai-tutor-project`.** The channel offered it as a new MIT tutor repo. This base already holds it under **`P150-B`/`T79`** with a far deeper reading — *"a self-described 'extension' is a DELETION of its upstream's safeguards: 1 002 lines vs the trunk's 1 006, and the removed text is the answer-position randomisation instruction."* 🔵 **The channel returned the address; the base already owned the defect.** 🔴 `p393`'s warning that a new channel's first temptation is to re-sell what you already own has now fired on **four** consecutive passes. |
+| 7 | 🟢 **`p397`'s `topic:autograder` lead, spent — and it inverts the lead's own conclusion.** `p397` closed on *"124 results · the supply was there all along"* and left it unharvested. 🟢 Harvested, sorted by stars, read first-hand: the page states **124 results** (`p397`'s figure confirmed) and renders **10** rows. 🔴 **Nine of ten were already on these shelves and the tenth is archived.** 🔵 So *"the supply was there all along"* is right about the **channel** and wrong about the **base**: the channel was blind, the shelf was not — and this channel is now a **corroboration** instrument for the autograder tier, not a discovery one. |
+| 8 | 🟢 **`p397`'s `okpy/ok` correction reproduced BLIND, through a different channel.** This pass never re-read the repository; it asked `github.com/search` with `topic:autograder&s=stars&o=desc`, which ranks by the field in dispute. 🟢 **[`okpy/ok`](https://github.com/okpy/ok) returns `#1` at 370 ★**, with `gradethis` (164 ★) and `otter-grader` (161 ★) both below it. 🔵 **Two channels, one answer** — worth more than a second reading of the same page. |
+| 9 | 🆕 **One new address, recorded with its defect rather than its promise.** [`arthtyagi/judge`](https://github.com/arthtyagi/judge) — **32 ★**, Python, 🔴 **"Public archive"** on the search page itself. 🔵 Shelved as a census address because an archived tree is still something a studio lead will find; 🔴 **not promoted to a build-on tier** (the `Continue` rule), and 🔴 **its grant is unread** — stated rather than assumed. `398-D` |
+| 10 | 🟢 **One new fact on a signal this base already tracks, and it is small — said so plainly.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) re-read first-hand: **MIT**, **41.3k ★** — 🟢 **corroborating** the shelf's `41 208` and the `p389` *"the review's AGPL claim is wrong"* finding. 🆕 **New: `v1.3.0-rc.1` is dated 2026-10-22**, while `repos/trending.md` tracked `v1.2.0-rc.1` (2026-10-04) as *"still a pre-release, 11 days on."* 🔴 **A second RC series opened without the first reaching stable.** 🔵 Strengthens the existing RC-latency signal rather than starting a new one. |
+
+### 🔴 What this pass declined to do, and why
+
+| | |
+|---|---|
+| 🔴 **It did not pad the live shelves to look productive** | Eight legs returned nothing unshelved, so **no row was added to `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` or `compose/patterns.md`**. 🔵 The brief's own rule — *"fewer real rows always beat padding"* and *"an informed gap is information, while silence looks exactly like coverage"* — is the reason the saturation is published as a **table of legs** instead. |
+| 🔴 **It did not force the gate green** | The one-line edit that would have done it narrows an assertion, and **both** the environment classifier and this base's own `p387-G` rule refuse that. 🟢 The diagnosis is published instead, with the exact three-control replacement described, so the decision costs a human a minute rather than a pass. |
+| 🔴 **It did not work `p397`'s fork backlog** | **551** pairs derived, **21** adjudicated, **530** unexamined — 🔴 **carried unmoved**, and named here so the backlog cannot look worked. 🔵 The budget went to the gate diagnosis and the saturation measurement. |
+
+---
+
 ## Pass 397 — reads and commit both 2026-10-23 — **`396-C` SAID EXECUTING THIS REPOSITORY'S CODE WAS PERMANENTLY REFUSED AND THAT THREE RANKED ITEMS WERE BLOCKED FOREVER. IT RUNS ON THE FIRST ATTEMPT — 59 CHECKS, 0 FAILURES — AND WHILE NOBODY WAS LOOKING, THREE GATES DRIFTED RED: 44/46 → 41/46. 🟢 `396-F`'s RANKED-FIRST SHELF RUN IS DONE: 551 PAIRS DERIVED WITH NO NETWORK, AND THE ARM'S OWN VERDICT LABEL IS WRONG — 8 OF 15 "FORKS" ARE RENAMES. 🔴 AND A SUPERLATIVE THREE PASSES RE-PUBLISHED IS REFUTED BY A ROW THIS BASE HAS HELD SINCE PASS 85.**
 
 🔵 **Dating note.** Every clone, tree enumeration, licence payload read, star read, archived-banner
@@ -48,17 +79,23 @@ unedited output at [`compose/code/p397-shelf-fork-audit/`](compose/code/p397-she
 ### 🔵 The address census, re-derived as the LAST act before this commit
 
 🟢 **`p352`'s rule, obeyed exactly.** Derived over the `SHELF_FILES` of the tree this pass commits,
-**after** every shelf write, with `p351`'s instrument: **2 697** harvested shapes → **34** are not
-addresses → **2 663 addresses**.
+**after** every shelf write, with `p351`'s instrument: **2 698** harvested shapes → **34** are not
+addresses → **2 664 addresses**.
 
-🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 663** channel-U
-addresses and **3 120** channel-B survivors give **3 494 addresses over both channels**.
-🔵 Derived from **3 552** harvested shapes over both channels less **58** rejected by `p351`'s classes.
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 664** channel-U
+addresses and **3 122** channel-B survivors give **3 495 addresses over both channels**.
 
-🟢 **The delta is +16 on channel U, +28 on channel B and +26 on the union.** 🔵 Channel B again moves
-further than channel U, for `p394`'s measured reason: this pass discusses many addresses in prose
-with backticks and links only some of them, and **channel B counts a backticked slug where channel U
-counts only a link**.
+🟢 **The delta is +1 on channel U, +2 on channel B and +1 on the union** — `p398` is a reading pass,
+and the census says so. 🟢 **The one new address is
+[`arthtyagi/judge`](https://github.com/arthtyagi/judge)** (32 ★, 🔴 archived), the sole member of
+`topic:autograder`'s first page this base did not already hold.
+
+🔵 **And the split is forced by arithmetic rather than asserted.** Channel B gained **2** while the
+union gained **1**, so the second channel-B arrival was **already in the union** — an address this
+base has only ever *linked* before and this pass mentions as a **backticked bare slug** for the first
+time. 🔵 That is `p394`'s measured reason running in reverse, and it is derived from the three cells
+rather than attributed to a specific row: 🔴 **this pass did not identify which address it was**, because
+`make census-union` was refused on this session's classifier while `make hooks` ran. `Gap 398-E`.
 
 🔵 **And a standing caveat on all three figures, which is older than this pass.** At least **eight**
 channel-U addresses are **two addresses for one artefact** — the `SAME-REPO-ALIAS` pairs above, six

@@ -5,7 +5,27 @@ updated: 2026-10-23
 ---
 
 
-**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** Three trends, each
+**🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No industry trend
+was added: the four regional legs returned nothing this base did not hold** (`Gap 398-C`). 🟢 **Two
+trends about this base's own instruments are refined instead, and both are measured.**
+
+🔵 **`T42` narrowed one notch further.** `396-C` recorded *"executing repository code is refused"*;
+`p397` refuted that by running the repo's own suites and localised the refusal to a **compound**
+command. 🟢 **`p398` adds the discriminating axis: the classifier gates the AUTHORSHIP of the code,
+not the host, the tool or the command shape.** `make hooks` ran **twice** this pass, in full; a
+**hand-written** script that merely *imported* the same repository module was refused
+(`Code from External`), and so was a `make` target on one invocation and not another. 🔵 So a pass
+should reach for **the repository's own committed targets** and treat an ad-hoc probe as unavailable —
+which is the opposite of the usual instinct to write a quick script.
+
+🔴 **And a trend this base should name because it has now fired four passes running:** a new channel's
+first yield is overwhelmingly **content the base already owns**. `p393` warned of it; `p395`, `p396`
+and `p397` each caught themselves about to re-sell an owned fact; 🔴 **`p398` measured it at the
+channel level — nine of ten rows on `topic:autograder`'s first page, and 100% of eight search legs.**
+🟢 **The operational consequence: grep the tree BEFORE writing, not after**, and rank a channel by
+*what it adds* rather than by *what it returns*. 🆕 **`T43`.**
+
+**Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** Three trends, each
 tied to a measurement in [`shelf-lineage`](../evidence/shelf-lineage.2026-10-23-p397.tsv),
 [`record-layer-redating`](../evidence/record-layer-redating.2026-10-23-p397.tsv) or
 [`channel-state`](../evidence/channel-state.2026-10-23-p397.tsv).

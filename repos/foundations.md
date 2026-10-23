@@ -5,7 +5,17 @@ updated: 2026-10-23
 ---
 
 
-**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🔴 **Eight addresses on
+**🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No foundational
+repo was added, and one candidate was deliberately declined.**
+[`arthtyagi/judge`](https://github.com/arthtyagi/judge) (**32 ★**, Python) is the single address from
+`topic:autograder`'s first page this base did not already hold — 🔴 **and it is labelled "Public
+archive"**, so it is recorded as a census address on [`repos/trending.md`](trending.md) and **kept off
+this shelf**, because this base does not offer an archived tree as a starting point (the `Continue`
+rule). 🔴 **Its grant was not read first-hand** — stated, not assumed: `Gap 398-D`. 🔵 The other nine
+rows on that page were already here, which makes the curated-topic channel a corroboration
+instrument for this tier rather than a discovery one.
+
+**Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🔴 **Eight addresses on
 these shelves are not eight repositories.** `396-F`'s arm, run over the whole shelf for the first
 time, found **eight pairs that share a root commit AND a HEAD** — one artefact answering at two
 addresses — and three of those pairs sit on the **standards tier this shelf added at `p393`.**

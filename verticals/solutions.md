@@ -5,7 +5,20 @@ updated: 2026-10-23
 ---
 
 
-**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **A platform's
+**🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No platform was
+added.** The open-source-LMS leg returned **Open edX, Chamilo, ILIAS, Frappe LMS and Sakai** — 🔴 **all
+already carried here**, and the leg's own summary volunteered what this shelf has recorded for many
+passes: *"no strong option under MIT or Apache"*, the capable ones being AGPL or GPL. 🟢 **One tracked
+signal did move.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) re-read first-hand —
+**MIT**, **41.3k ★**, corroborating this base's `41 208` and the `p389` finding that a third-party
+review's *"AGPL-3.0 with commercial licensing"* claim is simply wrong. 🆕 **`v1.3.0-rc.1` is dated
+2026-10-22**, while [`repos/trending.md`](../repos/trending.md) tracked `v1.2.0-rc.1` (2026-10-04) as
+*"still a pre-release, 11 days on"* — 🔴 **a second RC series opened without the first reaching
+stable.** 🔵 For a platform recommendation that matters: the grant is clean and the adoption is real,
+but **this project has not shipped a stable release in two RC cycles**, so pin a commit rather than a
+tag. `Gap 398-C`.
+
+**Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **A platform's
 address and a platform's *project* are not the same thing, and this pass can finally tell the
 difference without reading prose.** `396-F`'s root-commit arm, extended with a HEAD comparison and
 run over the shelf, folded **eight** address pairs into single artefacts — and one of those folds is

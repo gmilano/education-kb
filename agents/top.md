@@ -5,7 +5,19 @@ updated: 2026-10-23
 ---
 
 
-**🆕 Pass `p397` · reads and commit both 2026-10-23 — the THIRD pass dated today, after `p395` and
+**🆕 Pass `p398` · reads and commit both 2026-10-23 — the FOURTH pass dated today.** 🔴 **No row was
+added to this shelf, and that is the finding rather than a shortfall.** Four global supply legs
+returned `Ebimsv/AITutorAgent`, `maxew6/ai-tutor-project`, `Zenglian990/AI_Tutor_Release`,
+`os-taxonomy` and the standard LMS set — 🔴 **every one already carried here**, and
+`maxew6/ai-tutor-project` is held under `P150-B`/`T79` with a sharper reading than the channel gave.
+🟢 **The autograder tier is now positively CORROBORATED rather than merely unrefuted:** `p397`'s
+`topic:autograder` lead was spent this pass, and sorting those 124 results by stars returns
+[`okpy/ok`](https://github.com/okpy/ok) at **#1, 370 ★** — 🟢 **`397-A`'s correction reproduced blind
+through a channel that ranks by the disputed field, without re-reading the repository.** 🔴 Nine of
+that page's ten rows were already shelved and the tenth is archived, so this tier should be treated
+as **covered**, not under-harvested. `Gap 398-C` · `Gap 398-D`.
+
+**Pass `p397` · reads and commit both 2026-10-23 — the THIRD pass dated today, after `p395` and
 `p396`.** 🟢 **`p396` ranked running its fork arm over the existing shelf FIRST. It is done: 551
 candidate pairs derived with no network, 21 adjudicated — and the arm's own verdict label turned out
 to be wrong.** 🔴 **And a superlative this base has published in five places across three passes is

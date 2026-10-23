@@ -5,7 +5,17 @@ updated: 2026-10-23
 ---
 
 
-**🆕 Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **`p396` ranked
+**🆕 Pass `p398` · reads and commit both 2026-10-23 — fourth pass of the day.** 🔴 **No pattern was
+added or amended, because no new supply arrived to compose with.** Eight search legs returned one
+address this base did not hold, and 🔴 **it is archived** — which disqualifies it as a pattern
+component outright. 🔵 **The one recommendation change is a pinning rule, not a new recipe:** every
+pattern here that names [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) should pin a
+**commit**, not a tag — `v1.3.0-rc.1` (2026-10-22) opened while `v1.2.0-rc.1` (2026-10-04) had still
+not reached stable, so a tag-based dependency on this project has nothing stable to point at. 🔵
+Recorded here rather than as a new pattern because it changes **how** the existing ones are built,
+not **what** they are. `Gap 398-C`.
+
+**Pass `p397` · reads and commit both 2026-10-23 — third pass of the day.** 🟢 **`p396` ranked
 re-running the xAPI 2.0 bake-off second, on the grounds that *"three claimants at 1 star between them
 will move fast or die; either outcome changes the recommendation."* They moved — and they did not
 move together.** One new pattern, and `Pattern AE` amended rather than restated. Evidence:
