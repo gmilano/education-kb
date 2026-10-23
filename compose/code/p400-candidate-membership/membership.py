@@ -68,6 +68,17 @@ def _p351():
 
 # 🟢 The shelf list is IMPORTED from `p235`'s committed index, never restated here — `p286`'s
 # ratchet, and `p371`'s own remedy for this exact temptation.
+def _shelves_wanted():
+    """The shelf list ITSELF, unfiltered by existence — `p406`'s guard needs the denominator."""
+    p235_dir = os.path.join(_HERE, os.pardir, "p235-carried-index")
+    sys.path.insert(0, p235_dir)
+    try:
+        from carried_index import SHELVES  # noqa: E402
+    finally:
+        sys.path.pop(0)
+    return list(SHELVES)
+
+
 def shelf_paths(root="."):
     p235_dir = os.path.join(_HERE, os.pardir, "p235-carried-index")
     sys.path.insert(0, p235_dir)
@@ -160,7 +171,29 @@ def main(argv):
     else:
         cands, root = argv, "."
 
-    shelf = Shelf(explicit or shelf_paths(root))
+    # 🔴 `p406` PAID FOR THIS GUARD, AND ITS FIRST DRAFT WAS THE WRONG GUARD.
+    # Run from this module's OWN directory, `root` is `.` and `shelf_paths` filters by
+    # existence — so of the nine `SHELVES` the only one that resolves is `./README.md`,
+    # this module's own.  The population is then **6 addresses**, not zero, so a guard on
+    # EMPTINESS does not fire: `p406`'s first run graded nine already-shelved addresses as
+    # `UNSHELVED`, `HKUDS/DeepTutor` among them, and the instrument built to stop false
+    # "new finds" MANUFACTURED nine.  🟢 The right guard is on COMPLETENESS of the shelf
+    # set, not on the population being non-empty — a misresolved root is detectable at the
+    # file layer and invisible at the address layer.
+    resolved = explicit or shelf_paths(root)
+    if not explicit:
+        want = _shelves_wanted()
+        missing = [s for s in want if not os.path.exists(os.path.join(root, s))]
+        if missing:
+            sys.stderr.write(
+                "p400-candidate-membership: %d of %d shelves do not resolve from root %r "
+                "(%s) — refusing to grade membership against a PARTIAL population, because "
+                "every unreachable shelf turns a shelved address into a false UNSHELVED.  "
+                "Run from the repository root, or pass the shelf files explicitly in "
+                "`audit` mode.\n"
+                % (len(missing), len(want), root, ", ".join(missing[:4])))
+            return 2
+    shelf = Shelf(resolved)
     print("candidate\tverdict\tevidence")
     counts = {}
     for c in cands:

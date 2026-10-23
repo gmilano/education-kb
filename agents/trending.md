@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p406` — three new MIT/Apache addresses, and the carried shelf measured for decay
+
+🟢 **Gap `405-C` closed over the whole population: 59 of 2 681 carried addresses do not resolve =
+2.20 %.** 🔴 **`p405`'s 10.6 % was a sample artefact** — its 47 were the addresses it had cloned for a
+lineage question, the crowded hobby end of this base, so the rate was **4.8× the population figure**.
+
+### 🟢 What the supply legs returned
+
+| leg | candidates | new | verdict |
+|---|---:|---:|---|
+| `top open source AI agents education 2026 github MIT` | 10 | **0** | 🔴 all `SHELVED-EXACT` — DeepTutor, Open TutorAI CE, LearnHouse, Frappe LMS, Tutor, OpenTutor, both `moodle-mcp` servers |
+| `github trending education AI 2026 open source tutor LMS` | 6 | **0** | 🔴 all `SHELVED-EXACT`; the leg returned **topic listings, not the trending ranking** — GitHub's trending page itself did not surface |
+| 🟢 `education AI agent github repository license MIT grading rubric curriculum 2026` *(`p400`'s supply tail)* | 9 | **3** | 🟢 the tail works for a **second** consecutive pass where the four global head legs return zero |
+
+🔵 **So the supply tail is now the only productive supply channel on this base**, and it has produced
+on both passes it has been run. The four original global tails are at **zero for a fourth** pass.
+
+### 🟢 The three, each licence read from a payload at a pinned HEAD
+
+| repo | licence | pin · recency | shape |
+|---|---|---|---|
+| [StudentTraineeCenter/edu-agent](https://github.com/StudentTraineeCenter/edu-agent) | **MIT** — title line, `Copyright (c) 2025 Student Trainee Center` | `77c9ee5` · **2025-12-30** · 511 files | LangGraph + RAG over course documents → active-recall study plans, quizzes, flashcards, semantic mind maps. `pyproject`+`uv.lock`, `alembic`, `docker-compose`, `deploy/`, `docs/`, `README.cs.md` (Czech). 🔴 **Ten months dormant** |
+| [R0HITHRAO/Syllabus-RAG-AI-Agent](https://github.com/R0HITHRAO/Syllabus-RAG-AI-Agent) | **MIT** — title line, `Copyright (c) 2026 Rohith Rao` | `9eceb19` · **2026-09-24** · 44 files | Syllabus RAG with verifiable citations, auto-graded quizzes, flashcards. Flask `app.py` + `core/`, `Dockerfile`, compose, `Procfile`, `gunicorn.conf.py`, `sample_data/` |
+| [5th-legionnaire/ai4education](https://github.com/5th-legionnaire/ai4education) | **Apache-2.0** — title line | `70e8726` · **2026-10-16** · 9 files | 🟡 **A skills collection, not a platform**: `skills/` + `LICENSE` + `README.md`. Freshest of the three; the one a *"top agents"* row would misrepresent |
+
+🔴 **`StudentTraineeCenter/edu-agent` graded `NAME-SUBSTRING-ONLY`** against `edu-agent-lab` — a
+different repository. 🟢 **`p400`'s defect class, caught live for the FOURTH time:** a bare grep reads
+"already shelved" and a real MIT address is dropped.
+
+### 🔴 Two instruments found defective this pass, both fixed with controls
+
+- 🔴 **`p400-candidate-membership` itself.** Run from its own directory it grades every candidate
+  `UNSHELVED` — nine shelved addresses, `HKUDS/DeepTutor` among them. `shelf_paths` filters by
+  existence, so the only resolving `SHELVES` entry is the module's **own `README.md`**: the
+  population is **6 addresses**, not zero, so an **emptiness** guard does not fire. 🟢 Guard moved to
+  **completeness of the shelf set**; suite **16 → 18**, mutation-verified. `Gap 406-B`.
+- 🔴 **This pass's own suite shipped an untested collision arm.** The first fixture wrote
+  `refs/heads/main`, but the real channel is `git ls-remote --symref … HEAD`, whose sha line is named
+  `HEAD`. 🟢 Every verdict control passed against that fixture while `head_sha` was never exercised —
+  caught by `C8c` and the fixture rewritten to the channel's real shape.
+
+### 🟡 The MOVED state, which `ABSENT-OR-PRIVATE` cannot express
+
+`apereo/opencast` → `ABSENT-OR-PRIVATE`; **`opencast/opencast` → `EXISTS-PUBLIC`** at `153d1b1`,
+commit **2026-10-22**, title line **`Educational Community License, Version 2.0 (ECL-2.0)`**. 🟢 The
+repository **moved**. Control `C7c` forbids inventing a `MOVED` token from a sweep, because a move is
+only establishable by probing a guessed successor — evidence about the guess, not the address. 🔵 The
+other 11 dead top-shelf addresses had guessed successors probed: **11 of 11 returned the refusal.**
+
+---
+
 ## 🆕 2026-10-23 · `p405` — the LMS-MCP agent supply is 42 addresses and 27 projects
 
 🔴 **The crowding is 1.56× inflated, and not evenly.** Every address in the four name-collision groups

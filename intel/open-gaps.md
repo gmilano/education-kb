@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p406` · 2026-10-23 — gaps closed and gaps opened
+
+🟢 **`Gap 405-C` is CLOSED over the whole population — and the closure REFUTES the gap's own
+premise.** 🔴 **Three new gaps are registered**, each named so a successor cannot mistake it for
+worked.
+
+### 🟢 Closed this pass
+
+- **`Gap 405-C` — CLOSED, with a denominator 57× larger than the one it proposed.** The gap asked for
+  a standing existence check and sized it against *"5 of 47 addresses, 10.6 %, which is the number a
+  standing gate would be sized against."* 🟢 Built as
+  [`p406-carried-existence`](../compose/code/p406-carried-existence/README.md) — **29 offline
+  controls, mutation-verified twice, in `make hooks`** — and run over **2 682** carried addresses:
+  **2 620 `EXISTS-PUBLIC` · 2 `EXISTS-NO-REFS` · 59 `ABSENT-OR-PRIVATE` · 1 `CHANNEL-ERROR`**, giving
+  **2.20 %** over the graded half.
+  🔴 **`p405`'s 10.6 % was a SAMPLE ARTEFACT — 4.8× the population rate.** Its 47 were the addresses
+  it had cloned for a *lineage* question, i.e. the `canvas-mcp`/`moodle-mcp` collision groups: the
+  crowded single-maintainer end of this base, where decay concentrates. 🔵 **Second time a figure
+  from that group has been read as a statement about the shelves as a whole** — `p405`'s own *27
+  projects* is the first, and `Gap 405-A` says so in writing.
+  🔴 **AND THE GAP'S PREMISE IS REFUTED.** It said the decay was noticed *"only by a pass that
+  happened to clone them."* 🟢 All **12** unresolvable addresses on `agents/top.md`, all **5** on
+  `repos/foundations.md` and both on `compose/patterns.md` are **already documented as dead or
+  unreadable on the very shelf that carries them** — `apereo/opencast` since `p230`, with a redirect
+  row; two as *"DEAD / private"* in writing; two deliberately unlinked per `gate-dead-citation` I2;
+  five as the *published-but-unreadable* specimens, cited **as** the finding. 🟢 **Realised loss:
+  ZERO.** What was missing was never the noticing — it was the **standing**.
+- **`Gap 405-A`'s liveness half — answered in passing.** The two MIT Moodle MCP servers the gap named
+  as unreachable from the wrong slug, [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp)
+  and [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp), both probe **`EXISTS-PUBLIC`**.
+  🔵 The **capability-key census** the gap actually asks for (Canvas 38 · Moodle 23 · Blackboard 14 ·
+  Brightspace/D2L 10 · Google Classroom 12 · Open edX 2) is **NOT** done here and stays open.
+- **`p388`'s Vietnam instruction — PARTIALLY discharged, and it settles a three-way
+  self-contradiction.** `p388` wrote *"sources disagree on Vietnam's dates … read the instrument
+  before quoting any Vietnamese date."* 🟢 **They do not disagree: there are two obligations.**
+  Education/healthcare/finance systems live before **2026-08-15** → **2027-09-01**; all other sectors
+  → **2027-03-01**; new systems inside six months of Decision 33 → **2027-03-01**. 🔴 **So
+  `intel/market.md`'s opportunity 5 and `compose/patterns.md`'s `Pattern C` both priced education
+  against the wrong date**, and line ~1733's *"six-month grace period"* understated education's
+  transition by ~6.5 months. Fixed on both shelves. 🟡 **Still open as a READ** — see `Gap 406-C`.
+
+### 🔴 New gaps
+
+| 🆕 | gap | why it is registered rather than fixed here |
+|---|---|---|
+| 🟡 **`Gap 406-A` — a sweep reads ADDRESSES, and "is this a recommendation?" lives in the PROSE** | 🔴 **This pass's own draft published *"12 broken live recommendations on the build-on tier"* and every one of the 12 refuted it.** An address recorded *as dead* and an address recommended *while dead* are **the same row** to `p406`. 🟢 That is why `gate-carried-existence` ships only the **offline controls** as standing, and the sweep stays **out of `hooks`**: a red sweep is a pass's work to adjudicate, never a gate's verdict. 🔵 **The fix is not obvious and should not be guessed at:** the nearest instruments are `gate-dead-citation` I2, which already knows *"absent addresses, none on a live shelf"*, and `p372-dead-citation`. 🔴 **The honest question is whether I2's live-shelf test and this sweep AGREE on all 59** — they were not cross-checked, and a disagreement would be a finding on one of them. That is one pass's work and it is the item to take next |
+| 🟡 **`Gap 406-B` — `p400`'s guard was on the wrong property, and the right one generalises** | 🔴 Run from its own directory, `membership.py` graded **nine already-shelved addresses `UNSHELVED`**, `HKUDS/DeepTutor` among them. Mechanism: `shelf_paths` filters by **existence**, so the only resolving `SHELVES` entry is the module's **own `README.md`** → population **6 addresses**, not zero. 🔴 **An emptiness guard does not fire** — this pass wrote exactly that guard first and it changed nothing. 🟢 Fixed on **completeness of the shelf set** (controls `15`/`16`, suite **16 → 18**, mutation-verified). 🔵 **Open as a SWEEP:** every instrument here that resolves `SHELF_FILES`/`SHELVES` against a `root` and filters by existence has the same shape, and `p400-G` already asked the adjacent question (*"every suite whose fixtures read `SHELF_FILES` is exposed … nobody has swept them"*). **Nobody has swept them for this either.** The grep is `os.path.exists` next to a shelf list |
+| 🔴 **`Gap 406-C` — the Vietnam dates are settled on CONCURRENCE, not on a read, and this session cannot close it** | 🟢 Five independent law-firm/practice readings concur row for row **and** supply the mechanism that explains the apparent disagreement, which is strictly better than the contradiction it replaces. 🔴 **It is strictly weaker than a primary read, and `p388` asked for a read.** Every policy host answers `ENOTFOUND` through this proxy: `tilleke.com`, `vietnam-briefing.com`, `aipolicydesk.com` this pass, as `moe.gov.cn`, `beijing.gov.cn`, `cbseacademic.nic.in` at `p400`. 🔵 The reads that close it are **Decision 33/2026/QD-TTg** and **Decree 142/2026/ND-CP** in the Vietnamese official gazette. 🟡 Logged to `p798-proxy-refusal-ledger`'s class. **Until then no Vietnamese date goes in a client proposal without counsel**, and both shelves say so |
+
+🔵 **One near-miss checked and rejected, so it is not re-found as a fix.** A `MOVED` verdict token
+looks like the obvious addition after `apereo/opencast` → `opencast/opencast` resolved. 🔴 **It is
+refused, and `C7c` asserts the refusal.** A move is establishable only by probing a **guessed
+successor**, which is evidence about the **guess**, not about the original address — and guessed
+successors for the other 11 dead build-on addresses returned **11 of 11 refusals**, which is exactly
+what a channel that cannot see moves looks like when there is nothing to see. 🟢 `p293`'s
+`ABSENT-OR-PRIVATE` bound therefore widens in the DOCS to three inseparable cases and **not** in the
+vocabulary.
+
+### 🟡 Unmoved, and named so neither can look worked
+
+🔴 **`Gap 400-F`'s two backlogs are UNMOVED for a sixth pass:** `p397`'s fork backlog (**551** pairs
+derived, **21** adjudicated, **530** unexamined) and `p370`'s promotion backlog (**1 152**
+measured-but-never-shelved slugs, **390** permissive or mixed). 🔵 `p406`'s budget went to `405-C` and
+the regional legs. 🔴 **`Gap 400-B` / `gate-census-union` control 24 is red for a FOURTH pass** —
+still unsatisfiable by construction, still a human decision, still not forced green per `p387-G`.
+Gate score this pass: **49 of 50 green**, that control the only remaining red — reached after
+`gate-region-headings` and `gate-alias-canonical` both went red on **this pass's own draft** and
+were fixed here (a second canonical `## Opportunities by region` block with four of five
+vocabulary regions; and a stale address published beside its canonical one, with all 40 HEAD
+collisions claimed as findings when the register already held 20). 🔵 Both are recorded on
+[`README.md`](../README.md) rather than registered as gaps, because both are closed.
+
+---
+
 ## 🆕 `p405` · 2026-10-23 — gaps opened and gaps moved
 
 🟢 **`item 3`'s lineage half is CLOSED below** for all four groups, with the non-uniform result that no

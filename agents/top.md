@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p406` · reads and commit both 2026-10-23 — the TWELFTH pass dated today.** 🟢 **`Gap 405-C`
+is CLOSED over the WHOLE population, and the number it asked for is 2.20 %, not 10.6 %.** 🔴 **`p405`'s
+rate was a SAMPLE ARTEFACT — 4.8× the population rate, from the one group it had cloned.** 🟢 **59 of
+2 681 carried addresses do not resolve, 12 of them on THIS shelf — and all 12 are already documented
+dead here, so the realised loss is ZERO.** 🔴 **Which refutes `Gap 405-C`'s own premise.**
+
+**Evidence:** [`carried-existence`](../evidence/carried-existence.2026-10-23-p406.tsv) — 2 682 address
+rows · 5 columns · instrument, **29 controls / 0 failures**, mutation-verified twice, at
+[`compose/code/p406-carried-existence/`](../compose/code/p406-carried-existence/README.md). Gate score
+this pass: **49 of 50 green** after two reds this pass's own draft caused and fixed
+(`gate-region-headings` — a second canonical region block, four regions where the vocabulary has
+five; `gate-alias-canonical` — a stale address published beside its canonical one). 🔴 The one
+remaining red is `gate-census-union` control 24, `Gap 400-B`'s unsatisfiable-by-construction
+control, left red deliberately for a fourth pass.
+
+### 🟢 The existence sweep, over every address these nine shelves carry
+
+| verdict | n |
+|---|---:|
+| `EXISTS-PUBLIC` | **2 620** |
+| `EXISTS-NO-REFS` *(an empty repository, which EXISTS)* | **2** |
+| 🔴 `ABSENT-OR-PRIVATE` | **59** |
+| 🔵 `CHANNEL-ERROR`, after one serial retry | **1** |
+| graded | **2 681** |
+| **decay rate, over the graded half only** | **2.20 %** |
+
+🔵 **Why this is a composition and not a new channel.** `p293-slug-existence-oracle` already
+calibrated this proxy's refusal signature and fixed the vocabulary; `p351-address-shape` already
+decides what *is* an address, and its own docstring hands the question on by name — *"whether an
+address answers is `p293`'s question."* 🔴 **The gap was never a missing channel; it was a missing
+SWEEP.** `p293` judges slugs a pass *guesses*, `p400` judges candidates a pass is *about to shelve*,
+and nobody asked over the rows this base **already carries**.
+
+### 🔴 The 12 unresolvable addresses on this shelf, adjudicated — and the draft that got them wrong
+
+🔴 **This pass's own draft published "12 broken live recommendations on the build-on tier." Every one
+of the 12 refutes it.**
+
+| the 12 | what this shelf already says about them |
+|---|---|
+| `apereo/opencast` | 🟢 **DEAD since `p230`**, with the live successor `opencast/opencast` and a redirect row at `repos/foundations.md:747` |
+| `e9x/blackboard-mcp` · `parkseokjune/unist-blackboard-mcp` | 🟢 already **"DEAD / private"** in writing, line ~1469 |
+| `eastarctica/canvas-mcp` | 🟢 `UNRESOLVED` at `p402`, restated by `p405` |
+| `nmaaalhawary/mcp-moodle` · `superbuilders/timeback-dev-python` | 🟢 **deliberately unlinked** as absent addresses, per `gate-dead-citation` I2 |
+| `santillana-ai/tutor-sdk` | 🟢 carried 🔴 inside a licence-unauditable row |
+| `thanh01pmt/interactive-quiz-kit` · `mckaroff/graphlms` · `ale-alejandro/beadkit` · `ai-matrix-engine/aidream` · `yokowasis/autograder` | 🟢 the **five "published-but-unreadable"** specimens — cited *as* the finding (package ships, source prompts for credentials), never as a recommendation |
+
+🟡 **The bound that produced that error, registered as `Gap 406-A`:** a sweep over addresses
+**cannot distinguish a recommendation from a warning**, because the distinction lives in the prose
+around the address and this instrument reads neither. 🟢 So `gate-carried-existence` ships the
+**offline controls** as the standing check and the **sweep stays out of `hooks`** — a red sweep is a
+pass's work to adjudicate, never a gate's verdict.
+
+### 🟡 A THIRD state the token conflates, measured first-hand
+
+`p293`'s bound names two inseparable cases, **absent** and **private**. 🔴 This sweep found a third.
+`apereo/opencast` answers `ABSENT-OR-PRIVATE`; **`opencast/opencast` is `EXISTS-PUBLIC`** at
+`153d1b1`, commit dated **2026-10-22**, licence title line **`Educational Community License, Version
+2.0 (ECL-2.0)`** read first-hand from a shallow clone. 🟢 **The repository did not die — it MOVED**,
+and nothing in this channel says so. Control `C7c` therefore **forbids inventing a `MOVED` token from
+a sweep**: a move is only establishable by probing a *guessed successor*, which is evidence about the
+guess. 🔵 Guessed successors were probed for the other 11 and **all 11 returned the refusal** — weak
+evidence, recorded as weak.
+
+### 🟢 Three NEW addresses, licences payload-read at a pin
+
+🟢 The supply tail `…github repository license` — `p400`'s remedy — returned **9 candidates, 3 of them
+unshelved**, graded by instrument rather than by grep.
+
+| agent | repo | licence | read at | description |
+|---|---|---|---|---|
+| EduAgent | [StudentTraineeCenter/edu-agent](https://github.com/StudentTraineeCenter/edu-agent) | **MIT** *(title line, `(c) 2025 Student Trainee Center`)* | `77c9ee5` · last commit **2025-12-30** · 511 files | LangGraph agents + RAG turning static course documents into tutoring environments: active-recall study plans, quizzes, flashcards, semantic mind maps. Python, `pyproject` + `uv.lock` + `alembic` + `docker-compose`, `deploy/` and `docs/` — 🟢 the most substantial of the three, and 🔴 **ten months without a commit**, so a census address, not a build-on row |
+| Syllabus-RAG-AI-Agent | [R0HITHRAO/Syllabus-RAG-AI-Agent](https://github.com/R0HITHRAO/Syllabus-RAG-AI-Agent) | **MIT** *(title line, `(c) 2026 Rohith Rao`)* | `9eceb19` · last commit **2026-09-24** · 44 files | Zero-hallucination syllabus RAG with verifiable citations, auto-graded quizzes, revision flashcards. Flask (`app.py`, `core/`, `gunicorn.conf.py`), `Dockerfile` + compose + `Procfile`, `sample_data/` |
+| ai4education | [5th-legionnaire/ai4education](https://github.com/5th-legionnaire/ai4education) | **Apache-2.0** *(title line)* | `70e8726` · last commit **2026-10-16** · 9 files | 🟡 **Not a platform — a SKILLS collection** for educators (`skills/` + README only). Freshest of the three, and the one whose shape a *"top agents"* table would misrepresent |
+
+🔴 **`StudentTraineeCenter/edu-agent` graded `NAME-SUBSTRING-ONLY`, not `UNSHELVED`** — the hit is
+`edu-agent-lab`, a different repository. 🟢 **That is `p400`'s defect class caught live for the FOURTH
+time:** a bare `grep edu-agent` would have read it as already shelved and dropped a real MIT address.
+
+### 🔴 `p400`'s own instrument had the same defect one layer down, and this pass paid for it
+
+🔴 **Run from its own directory, `membership.py` graded nine already-shelved addresses `UNSHELVED` —
+`HKUDS/DeepTutor` among them.** The mechanism: `shelf_paths` filters by existence, so from the module
+directory the only `SHELVES` entry that resolves is **its own `README.md`**, and the population is
+**6 addresses**. 🔴 **So a guard on EMPTINESS does not fire** — this pass's first draft wrote exactly
+that guard and it changed nothing. 🟢 **The right guard is on COMPLETENESS of the shelf set**: a
+misresolved root is detectable at the file layer and invisible at the address layer. Fixed, with two
+controls (`15`, `16`) and mutation-verified; `p400`'s suite is **16 → 18 controls**. Registered as
+`Gap 406-B`.
+
+### 🟢 By-product: 40 HEAD collisions, `p283`'s question answered at scale
+
+`--symref` carries the HEAD sha, so a sweep adjudicates *"two names, one tree"* for free. **40
+collision groups**, among them `1edtech/*` ↔ `imsglobal/*` (**six** pairs — the standards body's
+rename), `edx/ease` ↔ `openedx-unsupported/ease` ↔ `openedx/ease` (a three-name group),
+`kantord/librelingo` ↔ `librelingo/librelingo`, `iterative/dvc` ↔ `treeverse/dvc`. 🔵 Not adjudicated
+here — a collision is a **finding** and `p283` owns the verdict. Every group is recoverable from the
+evidence TSV's `head_sha` column.
+
+---
+
 **🆕 Pass `p405` · reads and commit both 2026-10-23 — the ELEVENTH pass dated today.** 🔴 **The LMS-MCP
 crowding this base has been citing as "real supply" is 42 addresses and only 27 PROJECTS — and the
 inflation is NOT uniform: `canvas-mcp` absorbs 11 addresses into one family while `moodle-mcp` absorbs

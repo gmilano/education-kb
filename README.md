@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 406 — reads and commit both 2026-10-23 — **`Gap 405-C` IS CLOSED OVER THE WHOLE POPULATION, AND THE CLOSURE REFUTES THE GAP'S OWN PREMISE. 🔴 `p405`'s 10.6 % DECAY WAS A SAMPLE ARTEFACT — THE REAL RATE IS 2.20 %. 🟢 AND THE APAC LEG SETTLED THIS BASE'S THREE-WAY SELF-CONTRADICTION ABOUT VIETNAM, REFUTING A LIVE OPPORTUNITY ROW.**
+
+🔵 **Dating note.** Every probe, clone, payload read and search leg below was run on **2026-10-23**,
+and the commit lands **2026-10-23**. 🔵 **This is the twelfth pass dated today**, after `p395`–`p405`.
+
+🟢 **This is a BACKLOG pass, and it takes `intel/open-gaps.md`'s `Gap 405-C`** — *"no instrument
+re-checks a carried address's EXISTENCE … this is the THIRD measurement of the same decay."*
+
+**Evidence:** [`carried-existence`](evidence/carried-existence.2026-10-23-p406.tsv) — 2 682 address
+rows · 5 columns · instrument, **29 controls / 0 failures**, mutation-verified twice, with a
+resumable cache, at
+[`compose/code/p406-carried-existence/`](compose/code/p406-carried-existence/README.md).
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **`Gap 405-C` CLOSED over 2 682 carried addresses:** **2 620** `EXISTS-PUBLIC` · **2** `EXISTS-NO-REFS` · **59** `ABSENT-OR-PRIVATE` · **1** `CHANNEL-ERROR` → **2.20 %** decay over the graded half |
+| 2 | 🔴 **`p405`'s 10.6 % was a SAMPLE ARTEFACT, 4.8× the population rate** — its 47 were the addresses it had cloned for a *lineage* question, the crowded single-maintainer end of this base |
+| 3 | 🔴 **The gap's PREMISE is refuted.** All 12 unresolvable addresses on `agents/top.md` are **already documented as dead or unreadable on that same shelf**. 🟢 **Realised loss: ZERO.** What was missing was the *standing*, never the *noticing* |
+| 4 | 🟡 **A THIRD state the token conflates, measured:** `apereo/opencast` refuses while **`opencast/opencast` is `EXISTS-PUBLIC`** at `153d1b1`, commit **2026-10-22**, **ECL-2.0** title line read first-hand. It **MOVED**. `C7c` forbids inventing a `MOVED` token from a sweep |
+| 5 | 🟢 **The APAC leg settled a three-way self-contradiction.** Vietnam's education deadline is **2027-09-01** for a system live before **2026-08-15**, not the **2027-03-01** that `intel/market.md`'s opportunity 5 and `Pattern C` both priced against. 🔴 Two of this base's three green claims were wrong |
+| 6 | 🟢 **Three new addresses, licences payload-read at a pin:** `StudentTraineeCenter/edu-agent` **MIT** `77c9ee5`, `R0HITHRAO/Syllabus-RAG-AI-Agent` **MIT** `9eceb19`, `5th-legionnaire/ai4education` **Apache-2.0** `70e8726` |
+| 7 | 🔴 **`p400`'s own instrument was defective and this pass paid for it:** run from its own directory it grades every candidate `UNSHELVED` — nine shelved addresses, `HKUDS/DeepTutor` among them. Guard was on **emptiness**; the population is **6**, not 0. 🟢 Re-guarded on **completeness**; suite **16 → 18** |
+| 8 | 🟢 **By-product: 40 HEAD collisions**, `p283`'s question answered at scale — `1edtech/*` ↔ `imsglobal/*` is six pairs |
+
+### 🟢 The governed sentences, re-derived AFTER every shelf write
+
+🔵 **`p352`'s rule and `Gap 400-A`'s mechanism, paid in the right order.** `Gap 400-A` recorded that
+*"`p399` wrote to every shelf and never added a `README.md` section — the anchor file mentions `p399`
+zero times, so the governed sentences were never restated."* 🟢 Both derivations below were run as the
+**last act before this commit**, and both gates were **red before it** on all three cells.
+
+🟢 **The shape census:** **2 720** harvested shapes → **35** are not addresses → **2 685 addresses**.
+
+🟢 **And the union census, restated as `ACTION p375-A`'s standing sentence requires:**
+**2 685** channel-U addresses and **3 147** channel-B survivors give **3 518 addresses over both
+channels**.
+
+🔵 **Why `rejected_non_addresses` moved 34 → 35**, stated so it is not read as drift: this pass wrote
+`github.com/topics/…` paths into `repos/trending.md` **as the finding** — the trending leg returned
+topic listings instead of a velocity ranking — and `p351`'s nav-namespace arm rejects them, exactly
+as it was built to.
+
+🟡 **The sweep's population and the base's population differ by 3, and the difference is this pass.**
+The probe ran against the **2 682** addresses carried *before* these writes; the base now carries
+**2 685**. 🟢 The three new ones were each verified **more** strongly than the sweep verifies — by
+successful shallow clone with a licence title line read at a pinned HEAD — so the coverage is
+**2 685 of 2 685**, by two channels rather than one.
+
+### 🔴 Gate score
+
+🔴 **THIS PASS'S OWN DRAFT TRIPPED TWO GATES, AND BOTH WERE RIGHT.** Measured after the shelf
+writes: **47 of 50 green**, red on `gate-region-headings`, `gate-alias-canonical` and
+`gate-census-union`. 🟢 **Both of the new reds were defects in this pass's writing, fixed here, and
+each is worth naming because neither was visible from the draft:**
+
+| gate | what this pass did wrong | fix |
+|---|---|---|
+| `gate-region-headings` | 🔴 Added a **second** canonical `## Opportunities by region` block, and gave it **four** `###` regions. 🔴 `p383`'s vocabulary is **five** — `Global` is in it — so the block was also incomplete | 🟢 Historical block **retitled, not deleted**, so exactly one canonical heading remains; `### Global` added, carrying `T83`'s build-vs-compose rule and `T84`'s licence-sorting constraint |
+| `gate-alias-canonical` | 🔴 Published a **stale** address beside its canonical one (`learner-credential-wallet`), re-opening a double-count `p349` had closed. 🔴 And it published all **40** HEAD collisions as findings when the register **already holds 20 of them** | 🟢 Canonical addresses only; the 40 graded against the register as **20 held / 1 partial / 19 new**, and only the 19 published as open |
+
+🟢 **Final: 49 of 50 gates green**, including the new `gate-carried-existence` (**29 controls**) and
+`p400-candidate-membership`'s re-guarded suite (**18 controls**). 🔴 **The sole remaining red is
+`gate-census-union` control 24** — `Gap 400-B`'s unsatisfiable-by-construction control, **red for a
+fourth pass**, deliberately not forced green per `p387-G`'s rule that a gate may not be closed by
+weakening a control.
+
+🔵 **The generalisable lesson, and it is the third time this pass learned it:** every over-claim in
+this commit was caught by an instrument rather than by re-reading — the *"12 broken
+recommendations"* by hand-adjudication, the *"40 findings"* by `gate-alias-canonical`, the
+*"only shelf at 0 % decay"* by re-reading the per-shelf split. 🟢 **A draft is not evidence**, and the
+gates are the cheapest reader this base has.
+
+---
+
 
 ## Pass 405 — reads and commit both 2026-10-23 — **`intel/open-gaps.md` ITEM 3's LINEAGE HALF IS CLOSED FOR ALL FOUR GROUPS IT NAMES, AND IT REFUTES THIS BASE'S OWN "REAL SUPPLY" READING: 42 ADDRESSES ARE 27 PROJECTS. 🔴 THE INFLATION IS NOT UNIFORM — `canvas-mcp` 2.22×, `moodle-mcp` 1.00× — SO NO CORRECTION FACTOR APPLIES. 🔴 AND A LIVE LAYER-2 RECOMMENDATION WAS WRONG BECAUSE IT WAS KEYED ON A SLUG.**
 

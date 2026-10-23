@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p406` — the trending channel returned a topic listing, not a ranking
+
+🔴 **The `github trending {industry} AI {year}` leg did not reach GitHub's trending page at all.** It
+returned **topic listings** (`github.com/topics/lms`, `/topics/education-ai`, `/topics/ai-tutor`,
+`/topics/adaptive-learning`, `/topics/intelligent-tutoring-system`) plus project pages. 🟡 **A topic
+listing is ordered by stars, not by velocity**, so it cannot answer *"what is new this week"* — and
+`p351`'s rejection arm exists precisely because those five paths are **not addresses** and were once
+harvested as if they were.
+
+🔵 **Stated as an informed gap, not as coverage:** this base has **no velocity channel**. Star totals
+are unavailable (`api.github.com` answers `403` on this session — *"GitHub access to this repository
+is not enabled for this session"*), so a *rising-fast* claim is unverifiable here on any shelf. What
+IS first-hand available through the git proxy is **ref state and commit dates**, which is a recency
+channel, not a velocity one.
+
+### 🟢 What the channel DID establish, first-hand, at pinned HEADs
+
+| repo | licence | pin | last commit | tracked files |
+|---|---|---|---|---:|
+| [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** *(title line)* | `153d1b1` | **2026-10-22** | — |
+| [5th-legionnaire/ai4education](https://github.com/5th-legionnaire/ai4education) | **Apache-2.0** | `70e8726` | **2026-10-16** | 9 |
+| [R0HITHRAO/Syllabus-RAG-AI-Agent](https://github.com/R0HITHRAO/Syllabus-RAG-AI-Agent) | **MIT** | `9eceb19` | **2026-09-24** | 44 |
+| [StudentTraineeCenter/edu-agent](https://github.com/StudentTraineeCenter/edu-agent) | **MIT** | `77c9ee5` | 🔴 **2025-12-30** | 511 |
+
+🟢 **`opencast/opencast` committed yesterday** — the live successor to this base's longest-carried
+dead address, and the one row that a decay sweep turned into a **repair** rather than a deletion.
+
+### 🟢 2 682 carried addresses probed — the standing decay channel
+
+| cifra | valor |
+|---|---:|
+| addresses carried over the nine shelves | **2 682** |
+| resolve | **2 622** *(2 620 public + 2 excluded-as-empty)* |
+| 🔴 do not resolve | **59** |
+| inconclusive, excluded from both sides | **1** |
+| **decay rate** | **2.20 %** |
+
+🔵 Per-shelf, the 59 fall: `agents/trending.md` **53** · `repos/trending.md` **46** ·
+`intel/open-gaps.md` **28** · `agents/top.md` **12** · `repos/foundations.md` **5** ·
+`intel/trends.md` **4** · `compose/patterns.md` **2**. 🟢 **The concentration is in the APPEND-ONLY
+history shelves, which is where it belongs** — a trending entry is a dated record of what was true
+that week, and a dead address in last month's section is **history, not a broken recommendation**.
+
+🟡 **Two addresses answer but hold nothing** (`EXISTS-NO-REFS`):
+[`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) and
+[`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback)
+— empty repositories, which **EXIST** and so are counted as resolved. 🔵 A recommendation keyed on
+either would survive a 404 check and still deliver no code: a decay channel and a payload channel
+answer different questions, and this is the specimen.
+
+### 🟢 40 HEAD collisions, free from `--symref` — and HALF of them are already adjudicated
+
+🔴 **This pass's draft published all 40 as findings. Graded against the alias register it is
+20 / 19 / 1**, and publishing the already-adjudicated half as open would have un-done `p349`'s work:
+
+| graded against [`alias-register`](../evidence/alias-register.2026-10-21-p370.tsv) *(45 addresses, three files)* | n |
+|---|---:|
+| 🟢 **fully held already** — both addresses registered, canonical and stale assigned | **20** |
+| 🟡 partially held — one address registered, one not | **1** |
+| 🆕 **not in the register at all** | **19** |
+
+🔴 **And the draft tripped `gate-alias-canonical` by naming a STALE address beside its canonical
+one** — the `learner-credential-wallet` group, whose canonical the register fixes as
+[`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet).
+🟢 **The gate was right and the draft was wrong:** publishing both addresses of a resolved group
+re-opens a double-count `p349` closed. Canonical addresses only, below.
+
+🆕 **The 19 the register does not hold.** Several are plainly organisational renames and the rest
+need `p283`'s verdict:
+
+| group | the two names at one HEAD | shape |
+|---|---|---|
+| Sunbird | `project-sunbird/sunbird-portal` · `sunbird-ed/sunbirded-portal` | 🟡 India's national stack — an **org move** |
+| ENT Core | `edificeio/entcore` · `opendigitaleducation/entcore` | 🟡 French ENT platform — an **org rename** |
+| Open edX platform | `openedx/edx-platform` · `openedx/openedx-platform` | 🟡 same org, two names |
+| LRS | `ki-campus/lrs` · `openhpi/openlrs` | 🟡 German xAPI learning-record store |
+| Opacus | `meta-pytorch/opacus` · `pytorch/opacus` | 🟡 differential privacy — an **org move** |
+| 1EdTech *(2 more)* | `1edtech/openbadges-validator-core` · `1edtech/lti-1-3-php-library` and their `imsglobal/*` twins | 🟢 the standards body's rename, **two pairs beyond the six the register holds** |
+| Ed-Fi *(2)* | `ed-fi-alliance-oss/ed-fi-data-standard` ↔ `…/ed-fi-standard` · `…/ed-fi-api-specifications` ↔ `…/ed-fi-api-standards` | 🟡 same org, renamed artefacts |
+| Iris | `ls1intum/iris` · `ls1intum/pyris` | 🔴 **not obviously an alias** — same org, two names, one tree |
+| openSIS | `os4ed/opensis-classic` · `os4ed/opensis-responsive-design` | 🔴 **not obviously an alias** |
+| OpenStax | `openstax/osbooks-college-physics` · `…-bundle` | 🔴 **not obviously an alias** |
+| Open edX core | `openedx/openedx-core` · `openedx/openedx-learning` | 🔴 **not obviously an alias** |
+| SEA-LION | `aisingapore/sea-lion` · `aisingapore/sealion` | 🟡 a spelling pair |
+| DVC | `iterative/dvc` · `treeverse/dvc` | 🟡 a fork at the same HEAD |
+| Exam Guard | `aswanth9495/exam-guard` · `scaler-opensource/exam-guard` | 🟡 personal → org |
+| IBL *(2)* | `iblai/claws` ↔ `iblai/iblai-claw-agents` · `iblai/claw-setup` ↔ `iblai/iblai-claw-setup` | 🟡 same org, prefixed twins |
+| Horus | `tokenaii/horus-taleeq-0.2b` · `…-0.2b-base` | 🟡 `p292`/`p293`'s own subject |
+
+🔴 **The four marked *"not obviously an alias"* are the ones worth a verdict**, because a shared HEAD
+means an **identical tree**, and names like `openedx-core` / `openedx-learning` and
+`osbooks-college-physics` / `…-bundle` read like *different artefacts*. 🔵 Either they are mirrors, or
+one was forked from the other **today** — `p293`'s own note on this signal — and the two cases carry
+opposite consequences for a dependency. 🟢 `p283` owns the verdicts; these are findings, and they are
+recoverable from the evidence TSV's `head_sha` column.
+
+---
+
 ## 🆕 2026-10-23 · `p405` — what the trending channel returned, and what a full clone said instead
 
 🔴 **The trending leg is saturated for a THIRD consecutive pass.** `github trending education AI 2026`

@@ -130,6 +130,27 @@ _r2 = subprocess.run([sys.executable, "-I", os.path.join(HERE, "membership.py"),
 if M.NAME_SUBSTRING_ONLY not in _r2.stdout:
     fails.append("🔴 14. the CLI does not report the defect's class: " + _r2.stdout[:300])
 
+# ── Group 7 — `p406`'s guard: a PARTIAL shelf set, which is NOT an empty one.
+# 🔴 Run from this module's own directory, the only `SHELVES` entry that exists is its own
+# `README.md`, so the population is 6 addresses and group 6's emptiness control does NOT
+# fire.  `p406` graded nine shelved addresses `UNSHELVED` that way.  Both halves are
+# asserted: the partial root must REFUSE, and the real root must still answer.
+checks += 1
+_r3 = subprocess.run([sys.executable, "-I", os.path.join(HERE, "membership.py"),
+                      "classify", "HKUDS/DeepTutor"],
+                     capture_output=True, text=True, cwd=HERE)
+if _r3.returncode != 2 or "PARTIAL population" not in _r3.stderr:
+    fails.append("🔴 15. a partial shelf set must exit 2 and say so, got rc=%d %r"
+                 % (_r3.returncode, _r3.stderr[:200]))
+
+checks += 1
+_r4 = subprocess.run([sys.executable, os.path.join(HERE, "membership.py"),
+                      "classify", "HKUDS/DeepTutor"],
+                     capture_output=True, text=True, cwd=ROOT)
+if _r4.returncode != 0 or "SHELVED-EXACT" not in _r4.stdout:
+    fails.append("🔴 16. the guard must not break the real root, got rc=%d %r"
+                 % (_r4.returncode, _r4.stdout[:200]))
+
 if fails:
     print(f"🔴 p400-candidate-membership: {len(fails)} of {checks} controls FAILED")
     for f in fails:

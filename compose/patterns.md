@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p406` — a standing existence check becomes a step in every pattern, and `Pattern C` gets a dated APAC variant
+
+### 🟢 `Pattern Z` — the pre-engagement address audit, now a command rather than a habit
+
+🔴 **Every pattern on this shelf names repositories, and 2.20 % of the addresses this base carries do
+not resolve.** Two of them are **inside a recipe on this very file**. 🟢 The check is now one command
+and it needs no clone budget:
+
+```bash
+# offline: what the shelves name (no network)
+make carried-existence-census                 # -> 2 682 addresses over nine shelves
+
+# online: does each one still answer?  p293's control pair gates every verdict
+make carried-existence-sweep                  # ~2.5 min at 12 workers, ~17 probes/s
+WORKERS=6 make carried-existence-sweep        # throttling is retried serially, never
+                                              # counted as decay
+```
+
+🔵 **Wire it as the first step of an engagement, before a single repo is cloned.** The channel is
+`git ls-remote --symref`, so it costs **no object transfer** — which is why this is affordable where
+`api.github.com` answers `403` on a scoped session and a clone-per-address does not fit any budget.
+
+| what it returns | what to do with it |
+|---|---|
+| `EXISTS-PUBLIC` | 🟡 the address answers **today**; maintenance is a separate question (`p173`) |
+| `EXISTS-NO-REFS` | 🔴 **an EMPTY repository.** It EXISTS and ships nothing — a 404 check passes and the dependency is still vapour |
+| `ABSENT-OR-PRIVATE` | 🟡 absent, private **or MOVED** — probe a guessed successor before deleting a row |
+| `CHANNEL-ERROR` | 🔵 says nothing about the slug. Retry serially; never read as decay |
+
+🔴 **And the step this pattern must NOT skip: adjudicate by reading the sentence, not the verdict.**
+All 12 unresolvable addresses on `agents/top.md` turned out to be **already documented as dead** —
+cited as warnings and as specimens, not as recommendations. A sweep reads addresses, not prose
+(`Gap 406-A`). 🟢 The realised loss on this base was **zero**; the instrument's value is that the
+**next** one is caught the same hour rather than whenever a pass happens to clone it.
+
+### 🟢 `Pattern AA` — repair a dead address instead of deleting the row
+
+**Worked example, verified this pass end to end.**
+
+```bash
+# 1. the sweep flags it
+grep -P '\tABSENT-OR-PRIVATE\t' evidence/carried-existence.2026-10-23-p406.tsv
+#    apereo/opencast   ABSENT-OR-PRIVATE   -   agents/top.md;repos/foundations.md;...
+
+# 2. probe guessed successors — the ORG move is the common shape
+python3 -I compose/code/p293-slug-existence-oracle/slug_oracle.py --online \
+        opencast/opencast apereo-opencast/opencast
+#    EXISTS-PUBLIC   opencast/opencast        153d1b15c93afa5bf915ee31cdfec75ecfc5284e
+
+# 3. read the grant at the pin — a successor's licence is NOT inherited from the row
+git clone --depth 1 https://github.com/opencast/opencast /tmp/oc && head -3 /tmp/oc/LICENSE
+#    Educational Community License, Version 2.0 (ECL-2.0)
+```
+
+🟢 **Result: a dead foundation row became a live one with its grant re-read**, and `repos/foundations.md`
+already carried both the successor and a redirect row — so the repair was a **confirmation**, which is
+the cheapest possible outcome. 🔴 **Step 3 is not optional:** `apereo/opencast` and `opencast/opencast`
+are different licensors as far as this base is concerned, and ECL-2.0 is **not** on the MIT/Apache
+shortlist a proposal usually prices against.
+
+### 🟡 `Pattern C` variant — the APAC education compliance pack, priced to the RIGHT date
+
+🔴 **This file's `Pattern C` and `intel/market.md`'s opportunity 5 both priced an education
+engagement against Vietnam's `2027-03-01`. That is the all-other-sectors date.** 🟢 Education's is
+**`2027-09-01`** for a system live before **2026-08-15**, and **`2027-03-01`** only for one deployed
+inside the six months after Decision 33 took effect.
+
+**The recipe, unchanged in parts and re-dated in one:**
+
+| layer | what | why |
+|---|---|---|
+| **1 — system of record** | **Moodle** (GPL-3.0) or **Open edX** (AGPL-3.0); **OpenOlat** (Apache-2.0) or **Kolibri** (MIT) where copyleft is refused | 🟢 the **0 %-decay** tier — see `T83` |
+| **2 — integration** | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) *(MIT, npm)* or [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(MIT, crates.io)* — 🟢 **both re-probed `EXISTS-PUBLIC` this pass** | 🔴 the **5 %-decay** tier: pin a version and vendor the client, per `Pattern Z` |
+| **3 — agent** | compose, don't adopt: LangGraph/CrewAI over the layer-2 tools | the volatile layer stays replaceable |
+| **4 — conformity** | the **Annex III** pack from the EMEA engagement, re-mapped | 🟢 **portable** — EU → Vietnam → Mexico, adapts far cheaper than it rebuilds |
+
+🔵 **The dated argument to a client, stated correctly:** a system **already live before 2026-08-15**
+has until **2027-09-01**; a **new** one has **six months** from go-live under the post-Decision-33
+clause. 🔴 **The cutoff has already passed**, so for any engagement starting now the six-month clause
+governs — which is a *tighter* deadline than the one the old row quoted, reached by getting the law
+right rather than by rounding toward urgency. 🟡 **Bound:** no primary text was read — every policy
+host answers `ENOTFOUND` on this session — so this rests on five concurring law-firm readings.
+Counsel confirms before it goes in a proposal.
+
+### 🔵 One recipe step retired
+
+🔴 `compose/patterns.md`'s step *"8. Re-check dead addresses. Four in common circulation do not
+resolve…"* named **four** addresses and asked the reader to re-check them **by hand**. 🟢 Superseded
+by `Pattern Z`: the population is **2 682**, not four, and the check is a make target.
+
+---
+
 ## 🆕 `p405` — the layer-2 Moodle MCP choice was a GPL-or-vendor-a-commit decision, and it is not any more
 
 🔴 **`p404` wrote this file's layer-2 decision tree and closed it with:** *"`peancor` is the only

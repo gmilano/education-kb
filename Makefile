@@ -40,6 +40,7 @@ COMPANION_LOG ?= /tmp/education-kb-gate-companion-closure.log
 SLUGCHAN_LOG ?= /tmp/education-kb-gate-bare-slug-channel.log
 REGION_LOG ?= /tmp/education-kb-gate-region-headings.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
+CARRIEDEX_LOG ?= /tmp/education-kb-gate-carried-existence.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
@@ -77,7 +78,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -105,6 +106,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
+             gate-carried-existence \
              gate-companion-closure gate-bare-slug-channel \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
@@ -462,6 +464,15 @@ gate-evidence-store: ## ACTION p292 — the decision record's own controls, and 
 # it belongs in `hooks`.  The ONLINE half stays out, and calibrates before it reports.
 gate-slug-oracle: ## ACTION p293 — a credential prompt is a MEASUREMENT, not an inconclusive result
 	@cd compose/code/p293-slug-existence-oracle && { $(PY) test_slug_oracle.py > $(ORACLE_LOG) 2>&1 || { echo "🔴 p293-slug-existence-oracle FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ORACLE_LOG) ; false ; } ; } && echo "── p293-slug-existence-oracle (45 controls: p292's four discarded probes re-adjudicated, the ABSENT-OR-PRIVATE bound as C9-C11, transport-before-refusal, and the two defective controls this suite's own first draft shipped)" && echo "   PASS" || exit 1
+
+gate-carried-existence: ## Gap 405-C — the EXISTENCE of a CARRIED address, swept (offline controls; the sweep itself is ONLINE and stays out of hooks)
+	@cd compose/code/p406-carried-existence && { $(PY) test_carried_existence.py > $(CARRIEDEX_LOG) 2>&1 || { echo "🔴 p406-carried-existence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CARRIEDEX_LOG) ; false ; } ; } && echo "── p406-carried-existence (29 controls: the decay rate's two sides with CHANNEL-ERROR on NEITHER, C12's constructed population where the three readings differ, p293's C9' re-asserted plus the MOVED bound this pass measured, the retry arm, and p351's rejection arm as the population guard)" && echo "   PASS" || exit 1
+
+carried-existence-census: ## p406 — the carried-address population, offline (no probe)
+	@cd compose/code/p406-carried-existence && $(PY) -I carried_existence.py census
+
+carried-existence-sweep: ## p406 — ONLINE: probe every carried address (p293's control pair gates every verdict)
+	@cd compose/code/p406-carried-existence && $(PY) -I carried_existence.py sweep --online --workers $${WORKERS:-12} --cache $${CACHE:-/tmp/p406-cache.json} --out $${OUT:-../../../evidence/carried-existence.$$(date +%F)-p406.tsv}
 
 # 🟢 p307 — `ACTION p305-R` item 1, outstanding for two passes because `make` could not be
 # run, is DISCHARGED here: the permission-clause test is now a STANDING control rather than

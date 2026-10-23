@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-23
 ---
 
+### 🆕 `p406` — the foundation tier swept for decay, and one carried row is a REPAIR not a deletion
+
+🟢 **Five of this shelf's addresses do not resolve** (`ale-alejandro/beadkit`, `apereo/opencast`,
+`superbuilders/timeback-dev-python`, `thanh01pmt/interactive-quiz-kit`, and the base's own
+dead-address control). 🟢 **All five are already carried AS dead or AS unreadable on this shelf** —
+`apereo/opencast` has had its live successor and a redirect row since `p230` — so **no foundation row
+recommends an address that answers nothing.**
+
+🟢 **`opencast/opencast` re-verified first-hand this pass**, and it is the strongest state any carried
+row is in: `EXISTS-PUBLIC` at **`153d1b1`**, last commit **2026-10-22**, licence title line
+**`Educational Community License, Version 2.0 (ECL-2.0)`** read from a shallow clone. 🟡 ECL-2.0 is an
+Apache-2.0 derivative with a **patent-grant clause narrowed to the licensor's own contributions** —
+permissive enough to build on, and it is **not** on the MIT/Apache shortlist a Globant engagement
+usually prices against, so it is named here rather than silently folded in.
+
+| foundation row | address | licence | state, 2026-10-23 |
+|---|---|---|---|
+| Lecture capture + video pipeline | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 **ECL-2.0** | 🟢 `EXISTS-PUBLIC` `153d1b1`, commit **2026-10-22** |
+| 🔴 *(superseded)* | `apereo/opencast` | — | 🔴 `ABSENT-OR-PRIVATE` — **MOVED**, not dead; redirect row at line ~747 |
+
+🔵 **The MOVED state is not a verdict this channel can return.** `p293`'s bound names two inseparable
+cases — absent and private — and this is a **third**: the address refuses, the artefact is alive at
+another address. Control `C7c` forbids inventing a `MOVED` token from a sweep, because a move is only
+establishable by probing a **guessed successor**, which is evidence about the guess. 🟢 Guessed
+successors were probed for the other 11 dead build-on-tier addresses: **11 of 11 refused.**
+
+### 🟢 One new foundation-adjacent address, licence read at a pin
+
+| repo | licence | pin · recency | why it is a CENSUS row and not a foundation row |
+|---|---|---|---|
+| [StudentTraineeCenter/edu-agent](https://github.com/StudentTraineeCenter/edu-agent) | **MIT** *(title line, `(c) 2025 Student Trainee Center`)* | `77c9ee5` · **2025-12-30** · 511 tracked files | 🟢 The most substantial new address this pass — LangGraph + RAG over course documents, with `alembic`, `uv.lock`, `docker-compose`, `deploy/` and `docs/`, i.e. a **deployable** shape rather than a demo. 🔴 **Ten months without a commit.** Per the `Continue` rule a dormant artefact stays a census address and is **not** promoted to a build-on tier |
+
+🔵 **The `Continue` rule is doing real work here**, and it is worth restating because the temptation
+runs the other way: 511 tracked files and a lockfile look like production, and dormancy is the signal
+that survives a demo's polish. A foundation row is a thing an engagement **depends** on.
+
+🟡 **And a decay channel is not a payload channel.** Two carried addresses answer `EXISTS-NO-REFS` —
+[`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) and
+[`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback)
+— **empty repositories, which EXIST**. A row keyed on either passes a 404 check and still ships no
+code. 🔵 Named so a successor does not read `EXISTS-PUBLIC` as *"there is something to build on."*
+
+---
+
 ### 🆕 `p405` — two MIT Moodle MCP rows with PUBLISHED artefacts, and they refute a live recommendation
 
 🟢 **Both read first-hand on 2026-10-23 from FULL clones** — grant from the payload at `HEAD`, tag list

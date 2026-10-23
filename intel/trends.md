@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p406` — what changed on this shelf
+
+🟢 **One trend is newly measurable on this base rather than asserted from a source, and it is about
+the base itself.**
+
+### 🆕 `T83` — open-source education supply DECAYS at ~2.2 % of carried addresses, and the decay is not uniform across tiers
+
+🟢 **Measured, not estimated: 59 of 2 681 carried addresses do not resolve.** 🔴 **And the per-tier
+split is the finding, not the rate:**
+
+| tier | addresses | 🔴 unresolvable | rate |
+|---|---:|---:|---:|
+| **institutional platforms** *(`verticals/solutions.md`)* | 104 | **0** | **0 %** |
+| market intelligence *(`intel/market.md`)* | 74 | **0** | **0 %** |
+| foundation repos | 152 | 5 | 3.3 % |
+| 🔴 **agent tier** *(`agents/top.md`)* | 238 | **12** | **5.0 %** |
+
+🔵 **The mechanism, and it is a procurement argument rather than an observation.** Platforms carry a
+foundation, consortium or company behind the namespace — Moodle, Open edX, Canvas, Sakai, Kolibri,
+OpenOlat, BigBlueButton, H5P, Opencast. The agent tier is **single-maintainer MCP servers and
+npm-published demos**. 🟢 **So the layer a client's system of record sits on is the layer least likely
+to vanish, and the layer Globant composes on top is the volatile one** — which is an argument for
+putting the integration contract, not the agent, at the centre of a design.
+
+🟡 **A caveat that cuts against reading this as a maintenance signal.** `EXISTS-PUBLIC` says the
+address **answers today**, not that anything is maintained: `StudentTraineeCenter/edu-agent` resolves
+and has **511 tracked files** and has not been committed to since **2025-12-30**. 🔵 Dormancy is
+`p173-dormancy-bands`'s question and it is a different axis from existence. Two addresses go further
+and answer `EXISTS-NO-REFS` — **empty repositories, which EXIST** — so a row keyed on either survives
+a 404 check and still ships no code.
+
+### 🟡 `T84` — ECL-2.0 is a THIRD licence class on the platform tier, and a MIT/Apache shortlist mis-sorts it
+
+🟢 **Opencast's licence title line, read first-hand this pass** at `153d1b1`:
+**`Educational Community License, Version 2.0 (ECL-2.0)`**. Sakai carries the same grant. 🟡 ECL-2.0
+is an **Apache-2.0 derivative whose patent grant is narrowed to the licensor's own contributions** —
+neither MIT/Apache nor copyleft. 🔴 **A `"MIT / Apache 2.0 / BSD only"` filter drops both Apereo
+platforms, and the error runs toward OVER-caution:** both are permissive and redistributable. 🔵
+Named as a trend because this is the second Apereo platform to land on the tier, so the class is not
+a one-off row any more.
+
+### 🔵 Regional: the leg saturation is real, and one exception repaired a live row
+
+🔴 **Fourth consecutive pass in which the four prescribed regional legs returned no unshelved fact.**
+🟢 **The exception did something better than add one:** the APAC leg resolved this base's own
+three-way contradiction about Vietnam's education deadline, and in doing so **refuted a published
+opportunity row** that priced an education engagement against **2027-03-01** when education's
+deadline is **2027-09-01**. 🔵 Full derivation and the no-primary-read bound on
+[`intel/market.md`](market.md).
+
+🟢 **The generalisable lesson for a saturated channel:** a leg that returns only carried facts is not
+a wasted leg if it is read against what the base already says. The value here came from the
+**collision** between a returned fact and a shelved one, not from novelty.
+
+---
+
 ## 🆕 `p405` — what changed on this shelf
 
 🟢 **One new trend, `p405-T1`, opened because it is a *measurement defect* this base has been

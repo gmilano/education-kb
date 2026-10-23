@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p406` — the vertical platforms are the ONE tier with zero decay, and the licence ladder is why
+
+🟢 **`verticals/solutions.md` carries 104 addresses and NOT ONE of them failed to resolve** — **0 %
+decay**, against a base rate of 2.20 % and against `agents/top.md`'s 12 dead addresses. 🔵 Measured
+per shelf, two of the nine are clean: this one at **0 / 104** and `intel/market.md` at **0 / 74**.
+The other seven run `agents/trending.md` **53** · `repos/trending.md` **46** ·
+`intel/open-gaps.md` **28** · `agents/top.md` **12** · `repos/foundations.md` **5** ·
+`intel/trends.md` **4** · `compose/patterns.md` **2**.
+
+🔵 **That is not luck, and the mechanism is worth naming because it is a procurement argument.** This
+shelf's rows are **institutional platforms** — Moodle, Open edX, Canvas, Sakai, Kolibri, OpenOlat,
+BigBlueButton, H5P, OpenEduCat, Frappe LMS, Opencast — each with a foundation, a consortium or a
+company behind the namespace. The decay on this base concentrates in **single-maintainer MCP servers
+and npm-published demos**, which is exactly the population `agents/top.md` is made of. 🟢 **So the
+layer a client's system of record sits on is the layer least likely to vanish**, and the layer
+Globant composes *on top* is the volatile one. Pattern consequence in
+[`compose/patterns.md`](../compose/patterns.md).
+
+### 🟡 The licence shape of this tier, restated against this pass's reads
+
+| platform | licence | 🟢 permissive enough to build on and redistribute? |
+|---|---|---|
+| **Moodle** | GPL-3.0 | 🔴 copyleft — a plugin inherits it |
+| **Open edX** | AGPL-3.0 | 🔴 copyleft, **network clause** |
+| **Canvas LMS** *(community edition)* | AGPL-3.0 | 🔴 copyleft, network clause |
+| **Sakai** | 🟡 **ECL-2.0** | 🟡 permissive, Apache-derived, **narrowed patent grant** |
+| **Opencast** | 🟡 **ECL-2.0** — 🟢 title line read first-hand this pass at `153d1b1` | 🟡 same |
+| **Kolibri** | MIT | 🟢 yes |
+| **OpenOlat** | Apache-2.0 | 🟢 yes |
+| **H5P** | MIT *(core libraries)* | 🟢 yes |
+| **OpenEduCat** | LGPL-3.0 | 🟡 weak copyleft |
+
+🟡 **ECL-2.0 now appears TWICE on this tier** (Sakai, Opencast) and it is **neither MIT/Apache nor
+copyleft** — an Apache-2.0 derivative whose patent grant is narrowed to the licensor's own
+contributions. 🔵 A Globant engagement that prices *"MIT / Apache 2.0 / BSD only"* will mis-sort both,
+and the error runs **toward over-caution** on this tier: ECL-2.0 is permissive and both platforms are
+redistributable. 🟢 Stated here so the shortlist is not applied as a filter that silently drops the
+two Apereo platforms.
+
+### 🔴 The LMS-MCP layer's supply is the volatile half, per platform
+
+🔴 Of the carried MCP addresses that **do not resolve**, every one is on the agent tier and none on
+this one: `eastarctica/canvas-mcp`, `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp`,
+`nmaaalhawary/mcp-moodle`, `owen-x-tech/canvas-mcp`, `owentaylor/canvas-mcp`,
+`nahuelalbornoz/moodle-mcp`. 🟢 **Blackboard's permissive MCP supply is now 0 of 2 resolvable** — both
+addresses this base carries for it are dead, which `agents/top.md` already recorded and this sweep
+confirms independently through a different channel.
+
+🟢 **Moodle is the exception and the two MIT servers `Gap 405-A` named both resolve:**
+[`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) and
+[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) — 🟢 `EXISTS-PUBLIC`, probed this pass.
+🔵 So the layer-2 recommendation `p405` corrected is also **alive**, which is the half a lineage
+question cannot answer.
+
+---
+
 ## 🆕 `p405` — the LMS-MCP layer, per platform: how much supply each LMS actually has
 
 🔴 **This file, and `agents/top.md`, have cited LMS MCP servers by bare slug while this base's own

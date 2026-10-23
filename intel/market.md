@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p406` · 2026-10-23 — the APAC leg RESOLVED this file's own Vietnam contradiction, and it refutes a live opportunity row
+
+🔴 **For a THIRD consecutive pass the four regional legs returned almost no unshelved fact — and the
+exception is the one that matters most, because this file has been contradicting ITSELF about
+Vietnam's education deadline since `p388` and a published opportunity is keyed on the wrong date.**
+
+### 🔴 The contradiction, as this file carried it into today
+
+| where | what it said |
+|---|---|
+| line ~57 *(green)* | Vietnam's AI law *"education high-risk, compliance to **2027-09**"* |
+| line ~1733 *(green)* | systems live *"before **15 August 2026** get a **six-month** grace period"* |
+| opportunity 5 *(green, a LIVE recommendation)* | *"a dated Vietnam roadmap … compliance **1 Mar 2027**"* |
+| `p388` *(amber, deliberately not promoted)* | *"sources disagree on Vietnam's dates … read the instrument before quoting any Vietnamese date"* |
+
+🟢 **They do not disagree. There are TWO obligations and this file folded them into one.** Measured
+across five independent law-firm and practice readings that **concur row for row**:
+
+| instrument | |
+|---|---|
+| **Law No. 134/2025/QH15** *(Law on Artificial Intelligence)* | in force **2026-03-01** |
+| **Decree 142/2026/ND-CP** | implementing |
+| **Decision 33/2026/QD-TTg** | issued **2026-06-30**, lists **46 high-risk AI systems** across **six sectors**, education among them; effective **2026-08-15** *(most sources; one does not state it)* |
+
+| which systems | deadline |
+|---|---|
+| 🟢 existing systems in **healthcare, EDUCATION and finance**, live before **2026-08-15** | **2027-09-01** |
+| existing systems in **all other sectors** | **2027-03-01** |
+| systems put into operation **within six months after** Decision 33 takes effect | **2027-03-01** |
+| during the transition | existing systems may keep running **unless a competent state agency finds serious risk** and orders suspension |
+
+### 🟢 Settled, and two of this file's three green claims were wrong
+
+- 🟢 **Line ~57's `2027-09` is CORRECT** — it is education's date, and it is the one cell that had it right.
+- 🔴 **Opportunity 5's `1 Mar 2027` is WRONG for education.** That is the **all-other-sectors** date.
+  🔴 **A live opportunity row therefore prices an education engagement against a deadline six months
+  earlier than the one that governs it** — the error runs toward *urgency*, which is the direction a
+  client notices.
+- 🔴 **Line ~1733's "six-month grace period" is WRONG for education.** `2026-08-15` → `2027-09-01` is
+  **~12.5 months**. The six-month figure is the *"within six months after Decision 33 takes effect"*
+  clause, which is a different provision about **new** systems.
+
+🟡 **THE BOUND, and it is `p388`'s request left UNMET.** 🔴 **No primary text was read.** Every policy
+host this session can name answers `ENOTFOUND` through the proxy — `tilleke.com`,
+`vietnam-briefing.com`, `aipolicydesk.com` all refused, as `moe.gov.cn`, `beijing.gov.cn` and
+`cbseacademic.nic.in` did at `p400`. 🟢 So this is settled on **five-source concurrence plus a
+mechanism that explains the disagreement**, which is strictly better than the contradiction it
+replaces and strictly weaker than a read. 🔵 `p388`'s instruction stands for the next pass with
+egress: the reads that would close it are the Decision 33 text and Decree 142 in the Vietnamese
+official gazette.
+
+### 🔵 What the other three legs returned: nothing unshelved
+
+| region | leg returned | verdict |
+|---|---|---|
+| **North America** | Ohio's July-1-2026 district-policy mandate · California **AB 1159** · Alabama **HB 329** · Maryland **SB 720** · Oregon **SB 1546** · DC's grading/discipline/IEP prohibition · 134 bills in 31 states · NYC's Sept-2026 student-facing moratorium · the Dear Colleague letter | 🔴 **all carried** |
+| **EMEA** | AI Act enforcement from **2026-08-02** · Digital Omnibus in force **2026-07-27** · education as Annex III high-risk · the €2.64B/31.9% market figure · *"only 10 % of 450+ institutions have formal AI guidelines"* | 🔴 **all carried.** 🟡 One date conflict the leg raised — standalone Annex III at **2027-12-02** and embedded at **2028-08-02** against *"high-risk lands August 2026"* — is `p385`'s Art. 50 transitional distinction, already settled on this file |
+| **LATAM** | **ILIA 2026**: 11 of 20 countries now carry AI content in school programmes, against **2 in 2024**; Chile first at **72.5** preparedness · Brazil **PL 2338/2023** passed the Senate Dec 2024, still pending in the Chamber · 92 % of students / 79 % of teachers using AI (Digital Education Council / Tec de Monterrey) · 85 % of countries with a national AI strategy, **only Brazil and Colombia funding it** | 🔴 **all carried** |
+
+🟢 **So the regional-leg saturation `p405` measured is real and now has a fourth datapoint — with one
+exception that was worth all four legs**, because it did not add a fact, it **repaired** one.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Sell the district AI-use policy as a deliverable, not as advice.** Ohio requires **every** K-12
+district to adopt a formal AI policy by **2026-07-01**, and 33–35 states plus Puerto Rico publish
+guidance with no implementation capacity attached. 🟡 The constraint is procurement: the federal Dear
+Colleague letter pushes **outcomes-based contracting**, and named Arkansas, Indiana, Louisiana,
+Michigan and Texas for it. 🔵 So the saleable asset is a **policy-plus-evidence pack** — the policy
+document, plus the measurement design that lets a district show the outcome it contracted for.
+
+### EMEA
+
+🟢 **Annex III conformity for education, as a reusable asset.** Education sits in the AI Act's
+high-risk tier for admission, evaluation and exam scoring; enforcement began **2026-08-02**; only
+**10 %** of 450+ surveyed institutions have formal guidelines. 🟢 **And the asset is PORTABLE** — the
+same conformity work adapts to Vietnam's risk model and to Mexico's far more cheaply than it
+rebuilds. 🔵 One asset, three markets.
+
+### APAC
+
+🟢 **The clearest dated roadmap on earth, and almost nobody is selling against it — but price it to
+the RIGHT date.** Education is one of six high-risk sectors under Decision 33, and an education
+system **already live before 2026-08-15 has until 2027-09-01**, not 2027-03-01. 🟡 **Two consequences
+that run opposite ways.** The deadline is **~11 months out**, not five, so an urgency pitch keyed on
+March is both wrong and checkable by the client's own counsel. 🟢 But the grace period **rewards
+being already deployed**: a system live before the cutoff buys 12.5 months, and one deployed after it
+buys six. 🔵 **That makes "deploy before the cutoff" a real, dated procurement argument** — and the
+cutoff has already passed, so for any *new* engagement the six-month clause is the one that governs.
+🔵 Korea's `AI Basic Act` (in force **2026-01-22**) remains the regime a Korean engagement is actually
+governed by.
+
+### LATAM
+
+🟢 **The curriculum wave arrived and the capacity did not.** ILIA 2026: **11 of 20** countries now
+carry AI content in school programmes against **2 in 2024** — a 5.5× expansion in two years — while
+**only Brazil and Colombia** fund their national AI strategy, and universities operate in what the
+region's own literature calls a *vacío normativo*. 🟡 With **92 % of students and 79 % of teachers**
+already using AI, the gap is not adoption, it is **governance and teacher capability**. 🔵 And the
+regulatory asset is the same one EMEA pays for: Brazil's **PL 2338/2023** is risk-tiered on the EU
+model, so an Annex III pack ports. 🔴 It is still pending in the Chamber of Deputies — so sell
+**readiness**, not compliance, and say which it is.
+
+### Global
+
+🟢 **The cross-region asset is the conformity pack, and it is the one thing that compounds.** The
+same Annex III work prices against the EU's high-risk tier, Vietnam's Decision 33 risk model and
+Brazil's `PL 2338/2023` — all three are risk-tiered, so the artefact ports rather than rebuilds.
+🟡 **And the cross-region constraint is licence sorting, not technology:** `T84` — ECL-2.0 now sits
+under **two** platforms a client may already run (Sakai, Opencast), and a `"MIT / Apache 2.0 / BSD
+only"` filter drops both toward **over**-caution. 🔵 Globally applicable, so recorded here rather
+than four times.
+
+🟢 **The build-vs-compose rule, from this pass's own measurement (`T83`):** the institutional
+platform tier decayed **0 %** over 104 addresses and the agent tier **5.0 %** over 238. Put the
+**integration contract** at the centre of a design, not the agent — in every region.
+
+---
+
 ## 🆕 `p405` · 2026-10-23 — the four regional legs returned ZERO new facts for a THIRD consecutive pass, and TWO of the four returned no education instrument at all
 
 🔴 **All four prescribed regional legs were run, plus all four global legs. Across the eight, SIX
@@ -518,7 +639,12 @@ growth of **+$3.37B** 2025–2030, which is not a market size and is routinely q
 vendor research, all secondary, none reachable at the primary.** Quote the range, name the firm,
 never quote a single point.
 
-## Opportunities by region
+## Opportunities by region — `p397`–`p405`, SUPERSEDED by `p406`'s block above
+
+🔵 **Retitled by `p406`, not deleted.** `p383`'s gate requires exactly ONE canonical
+`## Opportunities by region` heading per file, and the brief's contract is the same: one
+block, one `###` per region. 🟢 The newest block is the canonical one and it sits at the top
+of this file; this heading keeps its history reachable without claiming the contract.
 
 ### North America
 
