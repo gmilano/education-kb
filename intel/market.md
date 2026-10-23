@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p404` · 2026-10-23 — the four regional legs returned ZERO new facts for a SECOND consecutive pass, and the one regional *correction* came from a repository, not a leg
+
+🔴 **All four prescribed regional legs were run. Every fact they produced is already on these shelves,
+and in most cases carried here more precisely than the leg stated it.** 🟢 Named with its state, so the
+result is checkable rather than asserted:
+
+| leg | what it returned | state on these shelves |
+|---|---|---|
+| **North America** | 28+ states / 34+ states + DC + PR with K-12 AI guidance *(sources disagree)* · **Ohio** framework required of every public, community and STEM school by **2026-07-01** · MD **`S.B. 720`** · ID **`SB 1227`** *(data privacy; AI may not replace a human teacher)* · AZ **`HB 4040`** *(introduced only)* · **`H.R. 8747`** K-12 AI Literacy and Readiness Act advanced · **Boston Public Schools** AI fluency as a graduation requirement from **2026-09** · **NSF $11 M** to CSTA · *Claude for Teachers* free for verified US K-12 educators through **2027-06-30** · adoption 54% K-12 / 92% university / 86% of education orgs | 🔴 **All carried.** `S.B. 720`, `SB 1227`, `H.R. 8747`, Ohio, Boston, CSTA and *Claude for Teachers* each already appear on two or more shelves here. 🟡 The only unheld string was the literal *"July 1, 2026"*, and this base already carries that deadline in its own date form — a formatting miss, not a fact |
+| **EMEA** | **Regulation (EU) 2026/1744** (Digital Omnibus) rewrote **Art. 4**: *"ensure a sufficient level"* → *"support the development"* of AI literacy, in force **2026-07-27** · Art. 4 binding on every deployer since **2025-02-02** · Annex III high-risk **2027-12-02** · Commission + OECD **AILit** framework **2026-06-17** · a Lombardy school-office reading that Art. 4 binds only teachers acting as *deployers* | 🔴 **All carried**, including the Omnibus identifiers, the softened Art. 4 wording and `AILit`. 🔵 `ACTION NU-EU` already says **STOP re-verifying** this set; the leg is a corroboration from a secondary house and nothing more |
+| **APAC** | **Vietnam** national framework, foundational AI in every mainstream school, **12 periods per class per year, from 2026–27**, foldable into existing subjects · Vietnam's AI law in force **2026-03-01**, education high-risk, compliance to **2027-09** · **Korea** AI textbooks stripped of official status by the National Assembly, adoption had been **<30%**; `AI Basic Act` in force **2026-01-22** · **Japan** digital textbooks as official texts *"as early as 2030"* · **Indonesia** — nothing on a curriculum mandate | 🔴 **All carried** (Vietnam's framework and Decision `33/2026/QĐ-TTg`, Korea's walk-back, Japan's promotion-first posture). 🟡 One contradiction the leg itself flagged — a ranking claiming **China and the UAE** are the *only* nations with compulsory national AI curricula — is already **refuted on jurisdiction** by `p400` on this file |
+| **LATAM** | UNESCO: **>50%** of teachers in Chile and Brazil already using AI tools, **<10%** of regional institutions with formal guidance · **Observatory on AI in Education for LAC** launched **2026-04** · UNESCO + **CONALEP** + **DGETI** centres-of-excellence pilot in Mexico · Colombia's **Política Nacional de IA** (2025-02) and a MinEducación generative-AI roadmap presented **2026-06-04**, phased to **2028** · Mexico: widest university network, **no unified national regulation** · AI Week LATAM 2026 training 4,000+ across CO/MX/CL | 🔴 **All carried** — Observatory, CONALEP/DGETI, MinEducación's **2026-06-04** roadmap and the governance-gap figures are each already on this file or in [`intel/open-gaps.md`](open-gaps.md). 🟡 The UNESCO **>50% / <10%** pairing is a *looser* restatement of the **87% use / 26% formal strategy** figure this base already holds from UNESCO IESALC + UNU-IAS |
+
+🟢 **Two consecutive passes of four-for-four nulls is itself the regional finding**, and it is the
+second-order result `p403` predicted in writing: **an English-language leg reports the pre-lag state
+indefinitely** (`p401-T1`). 🔵 The successor move is therefore **not** a fifth English regional leg.
+
+🔴 **The `## Opportunities by region` block below is UNCHANGED by this pass, and that is deliberate.**
+Zero new regional facts means zero new regional opportunities; editing the block to look worked would
+put a pass's activity where a region's evidence belongs. 🔵 The one regional *delta* this pass does
+carry is placed where it belongs instead:
+
+| region | 🆕 `p404` delta | where |
+|---|---|---|
+| **North America** | 🟡 The LTI 1.3 Go option under **MIT** moves from **1,919 d** to **794 d** — [`astiusa/lti`](https://github.com/astiusa/lti), a strict superset of MacEwan University's (Edmonton, Canada) library, with the two extra commits authored from `asti-usa.com`. 🔵 Institutional NA provenance is intact: the MIT file still reads **© 2021 MacEwan University** byte-for-byte | [`repos/foundations.md`](../repos/foundations.md) |
+| **EMEA** | 🟢 The live Moodle `core_ai` OpenAI-compatible provider is [`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) at **8 d**, not the `lmscloud-io` address this base pinned first (**93 d**). 🔴 And the pair is **one author's lineage, not two independent vendors** — so the EMEA Moodle-AI supply this base recorded is **narrower by one vendor** than it read | [`verticals/solutions.md`](../verticals/solutions.md) |
+| **APAC** | 🔴 **No delta.** The APAC leg returned no address and no unheld fact | — |
+| **LATAM** | 🔴 **No delta, and `Gap 343` stands**: still no LATAM *repository* row placed. 🟡 This base's LATAM intelligence remains strong on this file and empty in [`repos/`](../repos/foundations.md), and that asymmetry is named rather than left to look like coverage | [`intel/open-gaps.md`](open-gaps.md) |
+
+🔵 **A vendor-count correction is a market fact, not only a repository fact** — which is why the EMEA
+row above belongs on this file at all. 🔴 One fewer independent EMEA vendor in the `aiprovider_*`
+family means the *"ecosystem is heading this way"* reading is supported by **one** maintainer's two
+addresses, and a client pitch should say so.
+
+---
+
 ## 🆕 `p403` · 2026-10-23 — the four regional legs returned ZERO new facts, and that is the finding
 
 🔴 **All four prescribed regional legs were run, and every fact they produced is already on these

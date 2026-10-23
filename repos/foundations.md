@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-23
 ---
 
+### 🆕 `p404` — the Go LTI 1.3 row is 1,125 days out of date, and a new foundation row replaces it
+
+🟢 **Read first-hand on 2026-10-23 from a FULL-history clone**, not from a rendered page
+(🔴 `github.com` HTML is `403` on this session, reproduced against `HKUDS/DeepTutor`) and not from
+`--depth 1`, which discards the objects this finding rests on.
+
+| repo | layer | licence *(payload, first-hand)* | HEAD · age | tags | why it earns a row |
+|---|---|---|---|---|---|
+| [`astiusa/lti`](https://github.com/astiusa/lti) | **Tier 7 — Integration / LTI 1.3** | 🟢 **MIT** *(1,108 B, `sha256`₁₆ `6e58273960b0`, © 2021 MacEwan University — Dept. of Computer Science)* | `6f980746162b` · 🔴 **794 d** | 🔴 **0** | 🟢 **A strict superset of [`macewan-cs/lti`](https://github.com/macewan-cs/lti), which this file already recommends at 1,919 d** — **89 / 89** of `macewan-cs`'s commits are reachable from this HEAD, confirmed by `git merge-base --is-ancestor`. It adds **PKCS8 key support** (2024-08-20) and takes `target_link_uri` from the **login request** rather than from registration, plus a `TargetLinkURI` connector helper (2023-05-22): **11 files, +49 / −26** |
+
+🔴 **`p402` had this pair recorded as *"two unrelated repositories sharing a very short name"*. It is
+refuted.** Both share the root commit `228556c`, **2021-05-07**, *"Create LICENSE"*, by Nicholas Boers
+— one lineage, not a name collision. 🟢 Direction `macewan-cs` → `astiusa`, verdict `SUPERSET`;
+instrument and controls at
+[`compose/code/p404-fork-direction/`](../compose/code/p404-fork-direction/README.md), rows in
+[`fork-direction.2026-10-23-p404.tsv`](../evidence/fork-direction.2026-10-23-p404.tsv).
+
+🟡 **What this changes, and what it does not.** 🟢 **Changed:** the freshest **permissive Go** LTI 1.3
+code on these shelves moves from **1,919 d** to **794 d** — a **1,125-day** correction — and the Go
+option is no longer the single worst-dated row in the LTI family. 🔴 **Unchanged:** `p391`/`p392`'s
+recommendation stands. 794 d is still dead, **both addresses carry 0 tags** so there is no published
+artefact either way, and `macewan-cs`'s own warning (*"the functionality is not stable and we will
+almost certainly introduce breaking changes"*, deep linking unimplemented) travels **into** the
+superset — `astiusa`'s two commits do not touch it. 🔵 For a Go or JVM platform team the answer is
+still **front the agent with `ltijs` or `lti-tool` over HTTP** and keep the Go service behind it.
+
+🔴 **The switching cost that identical licence bytes hide.** The 2023-05-22 commit **changes the Go
+module path**. So `astiusa/lti` is a superset by *history* and **not** a drop-in replacement by
+*import path*: moving costs an import edit in every consumer. 🟡 **Same grant, same code, different
+package identity** — amended onto [`intel/trends.md`](../intel/trends.md), because this base's licence
+and alias reasoning had no cell for it.
+
+🟡 **Region, for the filter.** Both addresses are **North America**: `macewan-cs` is MacEwan University
+(Edmonton, Canada), and the two superset commits are authored from `asti-usa.com`. 🔵 The institutional
+provenance this file already recorded for `macewan-cs` is intact in the fork — the MIT file still reads
+**© MacEwan University** byte-for-byte.
+
+---
+
 ### 🆕 `p403` — two Indic-language foundation rows, and the licence frontier inside one repository
 
 🟢 **Both grants read from the payload on 2026-10-23**, via `git ls-remote --symref` for the real
@@ -331,7 +370,7 @@ never stated: there is NO maintained permissive LTI 1.3 implementation in Go or 
 |---|---|---|---|---|---|
 | [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti) | **Go** | 🟢 **Apache-2.0** | `a442a55` | 🟡 **679 d** | 11,357 B, `sha256`₁₆ `c71d239df917` |
 | [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) | **Java** | 🟢 **MIT** | `6db9889` | 🔴 **1,193 d** | 1,060 B, `b6b29f11f74e` |
-| [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | **Go** | 🟢 **MIT** | `9ab95e5` | 🔴 **1,918 d** | 1,108 B, `6e58273960b0` |
+| [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | **Go** | 🟢 **MIT** | `9ab95e5` | 🔴 **1,918 d** | 1,108 B, `6e58273960b0`  🆕 🔴 **`p404`: SUPERSEDED — [`astiusa/lti`](https://github.com/astiusa/lti) is a strict superset of this address at 794 d (89/89 commits reachable, same MIT bytes). Read the row at the top of this file before citing this one.** |
 
 🔴 **What this means, and it is a budget line rather than a shelf note.** `p391` and `p392` settled
 the maintained set as **PHP, Node and Python** — `packbackbooks` (6 d), `ltijs` (9 d), `lti-tool`

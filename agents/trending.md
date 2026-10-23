@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p404` — what moved: a canonical owner changed hands, and the week's agent legs are 20-for-20 already-shelved
+
+🔵 **Append-only, as this file requires. Every read below was taken first-hand on 2026-10-23**, via
+**full-history clones** — the channel this pass introduces, because `--depth 1` and
+`git ls-remote` both discard the objects that carry lineage. 🔴 **`github.com` HTML remains `403` on
+this session**, reproduced against `HKUDS/DeepTutor` as a known-good control, so nothing below rests on
+a rendered page.
+
+### 🟢 The movement: `aiprovider_openaicompatible`'s live owner is not the address this base pinned first
+
+| what moved | from | to | measured |
+|---|---|---|---|
+| **The live Moodle `core_ai` provider plugin** | [`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) — root **2025-12-08**, HEAD **2026-07-22**, 🟡 **93 d** | 🟢 [`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) — root **2026-07-27**, HEAD **2026-10-15**, 🟢 **8 d** | `CONTENT-COPY`: the single shared tree `85d9a99e3c96` is `ADORSYS-GIS`'s **root** tree and `lmscloud-io`'s tree at `c8b6f9fe` (**2026-06-09**); same author identity both roots; version counter `2026060200` inherited then bumped to `2026101500` |
+| **The freshest permissive Go LTI 1.3 code** | [`macewan-cs/lti`](https://github.com/macewan-cs/lti) — HEAD **2021-07-22**, 🔴 **1,919 d** | 🟡 [`astiusa/lti`](https://github.com/astiusa/lti) — HEAD **2024-08-20**, 🔴 **794 d** | `SUPERSET`: **89 / 89** of `macewan-cs` reachable from `astiusa`; `+2` commits, **11 files +49 / −26**; MIT grant file byte-identical, 1,108 B `6e58273960b0` |
+
+🔴 **Neither movement is a new address and both are a correction** — which is why they are recorded as
+movement and not as supply. 🟢 Full reasoning and the third pair on
+[`agents/top.md`](top.md); row-level evidence in
+[`fork-direction.2026-10-23-p404.tsv`](../evidence/fork-direction.2026-10-23-p404.tsv).
+
+### 🔴 The agent legs, run and named, so silence cannot read as coverage
+
+| leg | query shape | returned | state |
+|---|---|---|---|
+| **Open-source AI agents, education, global** | `top open source AI agents education 2026 github MIT` | General-purpose frameworks (OpenClaw, Hermes Agent, OpenHands, CrewAI, LangGraph) + `ashishpatel26/500-AI-Agents-Projects` | 🔴 **Zero unshelved education-native granted addresses.** The roundups answer "agents", not "education agents" — the eighth-plus consecutive pass with this result |
+| **GitHub trending, education AI** | `github trending education AI 2026 … tutoring agent` | `HKUDS/DeepTutor` *(≈41.6 k ★, v1.6.15, 2026-10-19)*, `Miaotofu01/Study-Mate`, `SenmuuuuW/universal-diagnostic-tutor-skill`, `lowwwbank/anything-to-course`, `SirhanMacx/Claw-ED`, `A-R007/Multi-Agent-Study-Assistant`, `HugeCatLab/ChatTutor` | 🔴 **7 / 7 already shelved.** 🟡 The only *new* datum is a star figure from an aggregator, which this base does not publish as currency |
+| **University / LMS MCP servers** *(extra probe)* | `new open source MCP server Moodle Canvas LMS university 2026 github release` | `vishalsachdev/canvas-mcp` *(v1.14.0, Oct 2026)*, `DMontgomery40/mcp-canvas-lms`, `JohannsenLum/canvas-api-mcp`, `AnonymousOnyx22/canvas-lms-student-mcp`, `Mattlo0546/canvas-mcp`, `peancor/moodle-mcp-server`, `loyaniu/moodle-mcp` | 🔴 **7 / 7 already shelved.** 🟡 Probed *because* this base records the university-MCP class as its most reliably-growing one — the class is still growing, and this base is ahead of the English-language leg that reports it |
+| **Non-GitHub forges** *(extra probe)* | `GitLab Codeberg open source education AI tutor LMS plugin 2026 university` | `saylordotorg/moodle-local_ai_course_assistant` (SOLA), `Open-TutorAi/open-tutor-ai-CE`, `098765d/AI_Tutor`, `Selleo/mentingo`, `OpenOLAT/OpenOLAT` | 🔴 **5 / 5 already shelved, and 5 / 5 on GitHub.** 🟢 **The probe's own question is answered in the negative**: a leg aimed at GitLab and Codeberg returned **no** GitLab- or Codeberg-hosted education AI project at all |
+
+🟢 **20 distinct candidate addresses, 20 already shelved**, matched by **exact slug** per `p400`'s rule
+against **3,479** harvested `owner/repo` slugs. 🔵 **That ratio is the finding.** A pass that reports
+"nothing new" without a denominator is indistinguishable from a pass that searched badly; 20 / 20 says
+the legs are working and the shelf is in front of them.
+
+🔴 **The non-GitHub-forge null is an informed gap and is entered as one.** This base holds
+`gitlab.com` and `codeberg.org` references already, so the forges are not unknown here — what is now
+measured is that an **English-language, forge-named leg surfaces nothing** from them. 🔵 It does **not**
+license *"there is no education AI on GitLab"*; `T82` governs. The cheaper successor is a
+**host-specific API probe** rather than a web leg, and this base already carries a
+[`gitlab-api-channel`](../compose/code/gitlab-api-channel/README.md) instrument to do it with.
+
+### 🟡 Two `moodle-mcp-server` rows, disambiguated — because the pair spans an MIT / GPL-3.0 boundary
+
+🔴 **This file has cited `moodle-mcp-server` by bare plugin name.** The two owners are independent
+implementations — **0 shared commits, 0 shared trees** — in different languages under different grants:
+🟢 [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) is **MIT** (1,064 B,
+`845ac6ac9e57`), TypeScript/Node, HEAD 2026-02-22, **0 tags**; 🔴
+[`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) is **`GPL-3.0`**
+(35,148 B, `8b1ba204bb69`), Python/`fastmcp`, HEAD 2026-05-08, 🟢 **3 tags** `v1.0.0`–`v1.0.2`, root
+commit by **Marina Glancy**. 🟡 **The fresher and the only versioned one is the copyleft one** — so the
+bare name is not usable in a recommendation.
+
+---
+
 ## 🆕 2026-10-23 · `p403` — the Hindi leg, and the first Indic-language supply on these shelves
 
 🟢 **New this window: three addresses, none previously shelved, every grant read from the payload.**

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p404` — what changed on this shelf
+
+🟢 **One new trend is opened, `p404-T1`, and it is opened because it is a *class* this base has been
+grading one-at-a-time with the wrong instrument** — not because a pass needed a finding. 🟡 **One
+amendment** to the licence/alias reasoning: a cell that did not exist. 🔴 **No trend is retired.**
+
+### 🟢 `p404-T1` — "same name, different HEADs" is THREE mechanisms, and only full history separates them
+
+🔵 **The shape.** This base keeps meeting pairs of addresses that share a plugin or module name and
+differ at HEAD. It has graded them with ref sets (`p402`) and with HEAD equality (`p370`, `p349`), and
+both channels answer only *"one repository or two"*. 🔴 **Neither can say which mechanism produced the
+pair** — and the three mechanisms have **different consequences for a build**:
+
+| mechanism | measurement | consequence |
+|---|---|---|
+| **Content copy / squash-republish** | 🔴 **0 shared commits** · 🟢 **>0 shared trees**, and the shared tree is one side's **root** tree | 🟢 **Direction is knowable.** One address is the product and the other is provenance — and the live one may be the *younger* address, which currency alone reads backwards |
+| **Continuation / hand-off** *(a true fork)* | 🟢 **Shared commits**, and one HEAD is an **ancestor** of the other | 🟢 One address is a **strict superset**; citing the other is citing a prefix. 🔴 Its warnings travel into the superset unless a commit removed them |
+| **Independent reimplementation** | 🔴 **0 shared commits AND 0 shared trees** | 🔴 **Two different products.** Language, grant and release discipline may all differ, so the bare name cannot carry a recommendation |
+
+🔴 **Why the old channel could not see it.** A **squash-republish shares ZERO commit SHAs with its
+origin.** So on a ref-set or HEAD test a *copy* and two *unrelated namesakes* are indistinguishable —
+the signal is **absent** from the channel, not faint in it. 🔵 This is why `p402` was right to refuse a
+direction and wrong to record the question as unestablishable: the refusal was about the instrument.
+
+🟢 **Three instances, measured in one pass, one of each mechanism** —
+`moodle-aiprovider_openaicompatible` (copy, `lmscloud-io` → `ADORSYS-GIS`), `lti` (continuation,
+`macewan-cs` → `astiusa`), `moodle-mcp-server` (independent). 🟢 **Tree SHAs are the load-bearing
+addition**: git content-addresses directory state, so a byte-identical tree is **one SHA** however the
+history around it was rewritten, and *where* that tree sits in history is the direction.
+🔵 `p401` had already found the `classes/provider.php` **blob** identical at 3,963 B and correctly
+declined to call it a direction — the **tree** carries the same bytes **plus their position**.
+
+🔴 **What the trend predicts, in a form a successor can refute.** Of `p397`'s **551** candidate pairs,
+the ones a ref-set test labels `DISTINCT` are **not** mostly name collisions: this pass's 3-for-3 says
+the label hides copies and continuations. 🟡 `p397`'s own arm already found **8 of 15 "forks" are
+renames** — same defect, the other direction. 🔵 **The cheap test is now wired**
+([`compose/code/p404-fork-direction/`](../compose/code/p404-fork-direction/README.md), 9 controls),
+and 🔴 it costs a **full clone per address**, so it is run on **named pairs in bounded batches**. `T82`
+governs the sweep; `p402`'s refusal is not re-tested.
+
+### 🟡 Amendment to the licence frontier — identical grant bytes do NOT make a substitutable dependency
+
+🔴 **This base's licence reasoning has had no cell for *package identity*.** It records the grant, its
+bytes, its channel and its scope — and a reader takes "same licence, same code, superset history" to
+mean "swap the import". 🟢 [`astiusa/lti`](https://github.com/astiusa/lti) refutes that: the MIT file
+is **byte-identical** to [`macewan-cs/lti`](https://github.com/macewan-cs/lti) (1,108 B,
+`sha256`₁₆ `6e58273960b0`, still **© 2021 MacEwan University**), the history is a **strict superset**
+— and the 2023-05-22 commit **changed the Go module path**. 🔴 **So moving costs an import edit in
+every consumer**, which is a migration, not a version bump.
+
+🔵 **What to add to a licence cell from now on:** when two addresses share a grant and a lineage, say
+whether the **package identity** (Go module path, npm name, PyPI distribution, Moodle `$plugin->component`)
+is the same. 🟢 For the `aiprovider_openaicompatible` pair it **is** — both declare
+`$plugin->component = 'aiprovider_openaicompatible'`, so there a studio really can swap addresses. 🔴 For
+the `lti` pair it is not. 🟡 **Same question, opposite answers, in one pass** — which is why this is an
+amendment and not a note.
+
+### 🔵 A null worth recording, because it was predicted and is cheap to re-test wrongly
+
+🔴 **The non-GitHub-forge leg returned nothing.** A leg aimed explicitly at **GitLab and Codeberg**
+returned five education-AI addresses and **all five are hosted on GitHub**. 🟢 This base already holds
+`gitlab.com` and `codeberg.org` references, so the forges are not unknown here — what is measured is
+that **an English-language, forge-named web leg does not reach them**. 🔵 `T82` governs: that licenses
+*"this leg does not reach those forges"*, never *"there is no education AI on GitLab"*. 🟢 The cheaper
+successor is a **host API probe** with this base's existing
+[`gitlab-api-channel`](../compose/code/gitlab-api-channel/README.md), not another web leg.
+
+---
+
 ## 🆕 `p403` — what changed on this shelf
 
 🟢 **`p401-T1` gets a THIRD independent instance, and this one was PREDICTED before it was found.**

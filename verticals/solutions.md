@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p404` — the `aiprovider_openaicompatible` pair is NOT two independent vendors, and this file said it was
+
+🟢 **Measured first-hand on 2026-10-23 from full-history clones.** 🔴 **This file's own text read
+*"two independent vendors … ship an OpenAI-compatible provider under the same plugin name"*. That is
+refuted**: it is **one author's content copy**, and the copy is the live address.
+
+| | measured |
+|---|---|
+| 🟢 **Verdict** | **`CONTENT-COPY`**, direction [`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) → [`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) |
+| 🔵 **Why a ref-set test could not see it** | **0 shared commit SHAs.** A squash-republish shares none, so `p402`'s ref-set instrument grades a copy exactly like two unrelated namesakes |
+| 🟢 **What proves the direction** | The **single** shared tree `85d9a99e3c96` is `ADORSYS-GIS`'s **root** tree, and is `lmscloud-io`'s working tree at `c8b6f9fe`, **2026-06-09** — seven weeks before the copy's root commit of 2026-07-27. A root commit cannot hold content that did not already exist |
+| 🟢 **Corroboration ×2** | Both root commits carry the **same author identity** `Leghadjeu-Christian <legochristianarthur@gmail.com>` — a hand-off, not a lift · the copy **inherits** `$plugin->version = 2026060200` and only then bumps to `2026101500` |
+| 🟢 **Which to deploy** | 🟢 **`ADORSYS-GIS` — 8 d** (HEAD `371278b0ebd6`, 2026-10-15), `moodle-plugin-ci` with a **Moodle 5.0+ matrix**, a commit linking the **Moodle Plugins directory listing**. 🟡 `lmscloud-io` is **93 d** (`040b74d5b13e`, branch `moodle405`) — the provenance, not the product |
+| 🟡 **One regression in the copy** | `lmscloud-io` declares `$plugin->supported = [500, 502]`; **`ADORSYS-GIS` dropped it** while keeping `$plugin->requires = 2025041400`, so the live plugin ships **no declared Moodle upper bound**. Pin the Moodle version in the engagement's own config |
+| 🟡 **Grant** | **Unchanged and `LADDER_BLIND` reproduced** — no licence-shaped file in either root tree; `GPL-3.0-or-later` lives only in the PHP headers |
+
+🟢 **The seam itself is unaffected.** *Implement the provider interface, point it at your own gateway,
+keep the IP behind the gateway* stands exactly as this file states it — what changes is **which address
+a studio clones** and that the "two vendors" framing overstated the ecosystem's breadth: there is **one**
+OpenAI-compatible `core_ai` provider lineage here, maintained by one author, now at its second address.
+
+🔴 **Also corrected on this file:** the LTI row at **`macewan-cs/lti`**. It has a strict superset at
+[`astiusa/lti`](https://github.com/astiusa/lti) — **89 / 89** commits reachable, same MIT bytes
+(1,108 B, `6e58273960b0`), **794 d** against **1,919 d**. 🟡 The *recommendation* is unchanged (both
+are dead, both carry **0 tags**); the **dating** was 1,125 days out.
+
+🔵 Instrument, 9 controls and three end-to-end reproductions:
+[`compose/code/p404-fork-direction/`](../compose/code/p404-fork-direction/README.md) · rows:
+[`fork-direction.2026-10-23-p404.tsv`](../evidence/fork-direction.2026-10-23-p404.tsv).
+
+---
+
 ## 🆕 `p403` — the vertical-platform leg is SATURATED, and the candidates are named
 
 🔴 **The prescribed vertical leg (`open source platform education ERP CRM MIT Apache`) returned
@@ -53,14 +85,17 @@ dangerous direction for 53% of this family.**
 | Inside a plugin, but linked to an **AGPL** component | AGPL's §13 reaches users interacting **over a network** — a hosted LMS is exactly that. | 🔴 **Check before hosting.** 🟢 This census found **zero** AGPL in the plugin family, so the risk here is theoretical for Moodle today — but `bycs-lp/moodle-tiny_ai`, `limekiller/moodle-block_openai_chat`, `cgrevisse/moodle-qbank_genai`, `danielcregg/moodle-local_aitutor`, `adamjenkins/moodle-local_nomoreai`, `yedidiaklein/moodle-local_aiquestions` and `saylordotorg/moodle-local_ai_course_assistant` all ship a **full 35,149 B GPL-3.0 text whose §13 names the AGPL**, and a substring check reads that as AGPL. 🔵 Do not let a tool tell you these are AGPL. They are not. |
 
 🔵 **The `aiprovider_*` shim is the tell, and it is where the ecosystem is heading.** Moodle's
-`core_ai` subsystem now has provider plugins, and two independent vendors —
-[`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) and
-[`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) — ship an
-OpenAI-compatible provider under the **same plugin name** with a **byte-identical
-`classes/provider.php` at 3,963 B**. 🟢 **Both are `LADDER_BLIND` `GPL-3.0-or-later`.** 🔵 For a
+`core_ai` subsystem now has provider plugins, and 🆕 🔴 **ONE author's lineage at two
+addresses** — 🟢 [`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible)
+*(live, 8 d)* and [`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible)
+*(origin, 93 d)* — ship an OpenAI-compatible provider under the **same plugin name** with a
+**byte-identical `classes/provider.php` at 3,963 B**. 🆕 🔴 **`p404` refutes the
+"two independent vendors" reading that stood here**: `CONTENT-COPY`, direction `lmscloud-io` →
+`ADORSYS-GIS`, measured from full history — see the top of this file. 🟢 **Both are `LADDER_BLIND` `GPL-3.0-or-later`.** 🔵 For a
 studio this is the cheapest supported seam in the whole platform: implement the provider
-interface, point it at your own gateway, and keep everything behind the gateway. 🔴 Fork direction
-between the two is **not established** — equal bytes do not say who forked whom.
+interface, point it at your own gateway, and keep everything behind the gateway. 🆕 🟢 **Direction
+IS established as of `p404`** — `lmscloud-io` → `ADORSYS-GIS`, from the root-tree position in full
+history, not from the equal bytes. **Clone `ADORSYS-GIS`.**
 
 🟡 **The permissive exception, named so the table above is not read as "Moodle is closed to
 permissive work".** [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant)

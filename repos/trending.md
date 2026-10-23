@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 2026-10-23 · `p404` — the trending legs are 20-for-20 already-shelved, and the week's real movement is a canonical owner
+
+🔵 **Append-only. Every repository fact below was read first-hand on 2026-10-23 from a FULL-history
+clone** — the channel `p404` introduces. 🔴 `github.com` HTML stays `403` on this session (control:
+`HKUDS/DeepTutor`, also `403`), so no claim here rests on a rendered page, and `--depth 1` would have
+been blind to all of it.
+
+### 🔴 The legs, with their denominator
+
+| leg | returned | shelved already |
+|---|---|---|
+| `github trending education AI 2026` | `HKUDS/DeepTutor` *(≈41.6 k ★ per aggregator, `v1.6.15` 2026-10-19)* · `Miaotofu01/Study-Mate` · `SenmuuuuW/universal-diagnostic-tutor-skill` · `lowwwbank/anything-to-course` · `SirhanMacx/Claw-ED` · `A-R007/Multi-Agent-Study-Assistant` · `HugeCatLab/ChatTutor` | 🔴 **7 / 7** |
+| `open source platform education LMS MIT Apache 2026` | `Moodle` *(GPL-3)* · `Open edX` *(AGPL-3)* · `Canvas` *(AGPL-3 core)* · `Chamilo` · `ILIAS` · `Sakai` · `Frappe LMS` · `Opigno` · `Forma LMS` · `OpenOLAT` · `Selleo/mentingo` | 🔴 **all shelved**; the leg produced **no licence evidence at all**, only vendor-blog assertions |
+| `MCP server Moodle / Canvas / university 2026` | `vishalsachdev/canvas-mcp` *(v1.14.0)* · `DMontgomery40/mcp-canvas-lms` · `JohannsenLum/canvas-api-mcp` · `AnonymousOnyx22/canvas-lms-student-mcp` · `Mattlo0546/canvas-mcp` · `peancor/moodle-mcp-server` · `loyaniu/moodle-mcp` | 🔴 **7 / 7** |
+| `GitLab / Codeberg education AI tutor LMS plugin 2026` | `saylordotorg/moodle-local_ai_course_assistant` · `Open-TutorAi/open-tutor-ai-CE` · `098765d/AI_Tutor` · `Selleo/mentingo` · `OpenOLAT/OpenOLAT` | 🔴 **5 / 5 — and 5 / 5 hosted on GitHub.** The forge-named leg returned **nothing** from either named forge |
+
+🟢 **20 distinct candidates, 20 already shelved**, matched **exact-slug** per `p400`'s rule against
+**3,479** harvested `owner/repo` slugs. 🔵 The denominator is the point: without it, "nothing new" and
+"searched badly" look the same from outside.
+
+### 🟢 The movement a trending leg could not have found
+
+🔴 **Both items below are invisible to every leg above**, because neither is a new address — each is a
+**correction to which of two known addresses is live**:
+
+| | measured 2026-10-23 |
+|---|---|
+| 🟢 [`ADORSYS-GIS/moodle-aiprovider_openaicompatible`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) | HEAD `371278b0ebd6` · **2026-10-15 — 8 d** · 35 commits / 7 refs · `moodle-plugin-ci` **Moodle 5.0+ matrix** · 🔴 **0 tags** · 🟢 **the LIVE address of the pair** |
+| 🟡 [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | HEAD `040b74d5b13e` · **2026-07-22 — 93 d** · 17 commits / 4 refs · branch `moodle405` · 🔴 **0 tags** · 🟢 **the ORIGIN**, root **2025-12-08** |
+| 🟡 [`astiusa/lti`](https://github.com/astiusa/lti) | HEAD `6f980746162b` · **2024-08-20 — 794 d** · 91 commits · 🔴 **0 tags** · 🟢 **strict superset of `macewan-cs/lti`** (89/89 reachable), MIT `6e58273960b0` |
+| 🔴 [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | HEAD `9ab95e5f3eb8` · **2021-07-22 — 1,919 d** · 89 commits · 🔴 **0 tags** · the origin, and the address this base recommends on four tiers |
+
+🟢 **`moodle-mcp-server`, disambiguated — the pair spans a licence boundary.**
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server): **MIT** (1,064 B,
+`845ac6ac9e57`), TypeScript/Node, HEAD `666f12222ed6` **2026-02-22 — 243 d**, 🔴 **0 tags**.
+[`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server): 🔴 **`GPL-3.0`**
+(35,148 B, `8b1ba204bb69`), Python/`fastmcp`, HEAD `4b11494d6522` **2026-05-08 — 168 d**, 🟢 **3 tags
+`v1.0.0`–`v1.0.2`** — the **only published artefact** among all six addresses this pass read — root
+commit by **Marina Glancy**. 🟢 **0 shared commits and 0 shared trees**: independent, measured.
+
+🔵 Instrument, 9 controls, three end-to-end reproductions:
+[`compose/code/p404-fork-direction/`](../compose/code/p404-fork-direction/README.md) · rows:
+[`fork-direction.2026-10-23-p404.tsv`](../evidence/fork-direction.2026-10-23-p404.tsv).
+
+### 🔴 Carried, and named so it cannot look worked
+
+🔴 `p402`'s **296 of 324** backlog addresses remain unadjudicated — this pass worked **6** of them and
+closed **3 pairs**, which moves the count and does not clear it. 🔴 `p370`'s **1,152**-slug promotion
+backlog is untouched for an **eighth** pass. 🔴 The `pylti1.3` pair was **not** re-measured: its
+direction is already known via `T40`, and re-reading it would be re-selling.
+
+---
+
 ## 🆕 2026-10-23 · `p403` — Indic-language foundations, and a Japanese leg that paid nothing
 
 🟢 **Two new permissive foundation-layer addresses**, both AI4Bhārat, both payload-read on

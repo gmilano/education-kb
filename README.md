@@ -5,6 +5,74 @@ updated: 2026-10-23
 ---
 
 
+## Pass 404 — reads and commit both 2026-10-23 — **`p402` RECORDED FORK DIRECTION AS UNESTABLISHED FOR FOUR PAIRS. THREE ARE CLOSED HERE IN ONE CHANNEL NOBODY HAD USED — A FULL-HISTORY CLONE — AND THEY COME OUT AS THREE DIFFERENT MECHANISMS. 🔴 ONE VERDICT REFUTES `p402`'s OWN NOTE, AND THE REFUTED ADDRESS IS RECOMMENDED ON ALL FOUR BUILD-ON TIERS WHILE ITS 1,125-DAY-FRESHER SUPERSET IS CITED ONCE. 🔴 THE FIVE PRESCRIBED LEGS ARE 20-FOR-20 ALREADY-SHELVED.**
+
+🔵 **Dating note.** Every repository read, clone, history probe and search leg below was run on
+**2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the tenth pass dated today**, after
+`p395`–`p403`.
+
+🟢 **This is a BACKLOG pass, and it takes the item `p403` left most nearly closable.** `p403` carried
+three items *"named so it cannot look worked"*; the `aiprovider_openaicompatible` pair was the one
+narrowed to a single measurable question. 🟢 **The measurement generalised, so the pass closed the
+other two open pairs in the same run.**
+
+**Evidence:** [`fork-direction`](evidence/fork-direction.2026-10-23-p404.tsv) — 6 addresses · 21
+columns · instrument, **9 controls / 0 failures** and **three pairs reproduced end-to-end from clean
+clones**, at [`compose/code/p404-fork-direction/`](compose/code/p404-fork-direction/README.md).
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 🟢 **`404-A` — `p401`'s pair is CLOSED, and the direction is the reverse of what age suggests** | **`CONTENT-COPY`, `lmscloud-io` → `ADORSYS-GIS`.** Three agreeing measurements: the **only** shared tree `85d9a99e3c96` is `ADORSYS-GIS`'s **root** tree and is `lmscloud-io`'s tree at `c8b6f9fe` (**2026-06-09**), seven weeks before the copy's root commit; both roots carry the **same author identity** `legochristianarthur@gmail.com`; and the copy **inherits** `$plugin->version = 2026060200` before bumping to `2026101500`. 🟢 **The origin is the stale one** — `lmscloud-io` **93 d**, `ADORSYS-GIS` **8 d** with a Moodle 5.0+ CI matrix and a Plugins-directory listing. **Clone the copy.** |
+| 🔴 **`404-B` — `p402`'s `lti` note is REFUTED** | `p402` recorded `astiusa/lti` ↔ `macewan-cs/lti` as *"two unrelated repositories sharing a very short name"*. 🟢 They share the **root commit `228556c`** (2021-05-07, Nicholas Boers) and **89 of 89** of `macewan-cs`'s commits are reachable from `astiusa`'s HEAD. **`SUPERSET`, `macewan-cs` → `astiusa`**: **794 d** against **1,919 d**, a **1,125-day** correction on this base's freshest permissive **Go** LTI 1.3 option. 🔴 `macewan-cs` is cited on **all four** build-on tiers; `astiusa` appeared **once**, in a star-count table |
+| 🟢 **`404-C` — independence MEASURED, not inferred** | `lmscloud-io/moodle-mcp-server` ↔ `peancor/moodle-mcp-server`: **0 shared commits AND 0 shared trees**. 🔴 And they differ in exactly the two cells a build turns on — **MIT / TypeScript** (`peancor`, 1,064 B `845ac6ac9e57`, 0 tags) against **`GPL-3.0` / Python** (`lmscloud-io`, 35,148 B `8b1ba204bb69`, 🟢 **3 tags `v1.0.0`–`v1.0.2`**, root commit by **Marina Glancy**). 🔴 **A shelf saying "use `moodle-mcp-server`" spans an MIT/GPL boundary, and the fresher address is the copyleft one** |
+| 🟢 **`404-D` — a new trend, `p404-T1`, and it is a class not an instance** | *"Same name, different HEADs"* is **three** mechanisms — copy, continuation, independent reimplementation — with three different build consequences, and **only full history separates them**. 🔴 A **squash-republish shares ZERO commit SHAs**, so a ref-set or HEAD test grades a copy exactly like two unrelated namesakes: the signal is **absent** from that channel. 🟢 Three instances, one of each mechanism, in one pass. Recorded on [`intel/trends.md`](intel/trends.md) |
+| 🟡 **`404-E` — an amendment with no prior cell: identical grant bytes ≠ substitutable dependency** | `astiusa/lti` carries MacEwan's MIT file **byte-for-byte** (1,108 B, `6e58273960b0`, still © MacEwan University) and is a **strict superset** — and its 2023-05-22 commit **changed the Go module path**, so moving is an import edit in every consumer. 🟢 The *same* question answers the *other* way for `aiprovider_openaicompatible`, where both addresses declare `$plugin->component = 'aiprovider_openaicompatible'`. 🔵 A licence cell must now state whether **package identity** matches |
+| 🔴 **`404-F` — saturation with a denominator: 20 candidates, 20 already shelved** | All five prescribed legs plus **two** extra probes (university/LMS-MCP, and non-GitHub forges). **20 distinct addresses, 20 already on these shelves**, matched **exact-slug** per `p400`'s rule against **3,479** harvested slugs. 🔵 The ratio is the finding: *"nothing new"* without a denominator is indistinguishable from a bad search |
+| 🔴 **`404-G` — the four regional legs returned ZERO new facts, for a SECOND consecutive pass** | Named leg by leg on [`intel/market.md`](intel/market.md) with what this base already holds: Ohio's **2026-07-01** framework deadline, MD `S.B. 720`, ID `SB 1227`, `H.R. 8747`, Boston's AI-fluency graduation requirement, Reg. **(EU) 2026/1744** and `AILit`, Vietnam's **12 periods/class/year from 2026–27**, Korea's textbook walk-back, UNESCO's LAC Observatory and Colombia's **2026-06-04** MinEducación roadmap — **every one carried**. 🟢 Second-order: this is what `p401-T1` predicts an English leg to report **indefinitely** |
+| 🔴 **`404-H` — the non-GitHub-forge probe is an informed gap, stated so silence cannot read as coverage** | A leg aimed explicitly at **GitLab and Codeberg** returned five education-AI addresses, **all five hosted on GitHub**. 🔵 `T82`: that licenses *"this leg does not reach those forges"*, never *"there is no education AI on GitLab"*. 🟢 Successor: a host **API** probe with this base's existing [`gitlab-api-channel`](compose/code/gitlab-api-channel/README.md) |
+| 🟢 **`404-J` — the gate suite went 42/47 → 47/48, and THREE of the reds were pre-existing, not this pass's** | 🔴 `make hooks` was **42/47** on the tree this pass inherited. 🟢 Fixed here: **`gate-tables`** — `p402`'s own *"What this pass did"* table had a **blank line between row 8 and row 9**, so row 9 (`402-H`, the MCP-supply finding) rendered outside the table and a row-reading compiler saw it as prose. 🔴 **`p403`'s sweep could not have caught it: `README.md` is not one of the eight shelves it checked.** 🟢 Fixed here: **`gate-offline`**, red at **two** suites — `p251-prefix-collision` flagged an **unannotated stump** (`eecs-autograder/autograder` against `…/autograder.io`) that a pass had written into prose *about* the stump shape, and `p252-ungated-floors` carried a census literal **two behind** its population |
+| 🟡 **`404-K` — the new instrument arrives GATED, which is `p261`'s remedy and the thing fifteen passes failed to do first** | [`gate-fork-direction`](Makefile) is wired into `HOOK_GATES` **in the same change** as the suite, and the suite exits **explicitly** (`sys.exit(1)`), so it never joins `p252`'s silent-zero population. 🟢 **`HOOK_GATES` 47 → 48**, the XR backlog stays at **71**, and `--verify` is clean on all **72** pinned rows. 🔵 This census has gone red before the prose for fifteen consecutive passes; this pass is the first in a while where it did **not**, because the wiring landed with the instrument |
+| 🔴 **`404-L` — `gate-census-union` is the one remaining red, and it is left red deliberately** | Its control 24 wants **both** rejection classes to fire on the live shelves and only `NAME-REF-OR-PATH` does. 🟢 `p398` already diagnosed it: **unsatisfiable by construction** — `p382` duplicated `p375`'s rule one layer upstream and made the audited arm unreachable. 🔴 **The only way to turn it green from here is to put an address with a dot-run on a live shelf**, i.e. to manufacture the data a gate is looking for. 🔵 Not done, and named instead |
+| 🟡 **`404-I` — `p403` wrote no section on this file** | Pass 403 updated all eight shelves and left **no `## Pass 403`** here, so this README jumped **402 → 404**. 🔵 Named rather than silently filled: the pass is fully recorded on the eight shelves, and this file is a **summary channel with a gap**, not a missing pass |
+
+### 🟢 The census, re-derived AFTER every shelf write — as `p352` and `p376` require
+
+🔵 **Derived last, not first.** `p352`'s whole point is that a census whose input is the shelves and
+whose statement is published in the same pass is stale the moment it is written. 🟢 Both triples below
+were re-derived with `p351`'s instrument **after** this pass's nine shelf writes, and
+[`README.md`](README.md) is not a `SHELF_FILE`, so stating them cannot move them.
+
+🟢 **The shape census:** **2 716** harvested shapes → **34** are not addresses → **2 682 addresses**.
+
+🟢 **And the union census, as `ACTION p375-A`'s standing sentence requires:** **2 682** channel-U
+addresses and **3 142** channel-B survivors give **3 513 addresses over both channels**.
+
+🔵 **The deltas are this pass's own writes**, and they are small because this pass **added no new
+address**: `+16` harvested shapes and `+16` addresses against `p402`'s **2 700 / 34 / 2 666**, all of
+them re-citations of already-shelved slugs in the nine sections written here.
+
+### 🔴 What this pass did NOT do
+
+| | |
+|---|---|
+| 🔴 **It did not touch `pylti1.3`** | The fourth of `p402`'s open-direction pairs. Its direction is **already known via `T40`** (`ucfopen` a genuine institutional fork of `dmitry-viskov`, both >1,370 d dead); re-measuring it would be re-selling a held fact |
+| 🔴 **It did not clear the backlog it drew from** | `p402`'s **296 of 324** addresses: this pass adjudicated **6** and closed **3 pairs**. That moves the count; it does not clear it. 🔴 `p370`'s **1,152**-slug promotion backlog is untouched for an **eighth** pass |
+| 🔴 **It did not sweep the 551 candidate pairs** | A full clone per address is affordable on **named** pairs, not across **324** addresses in one pass. `T82` still governs, and `p402`'s `Exfil Scouting` refusal is **not** re-tested here |
+| 🔴 **It did not change the Go/JVM LTI recommendation** | 794 d is still dead, **both `lti` addresses carry 0 tags**, and `macewan-cs`'s *"functionality is not stable … deep linking unimplemented"* warning travels **into** the superset untouched. 🟢 *Front a Go or JVM platform with `ltijs` or `lti-tool` over HTTP* stands — only the **dating** was wrong |
+| 🔴 **It added no new address to any shelf** | Every address this pass reads was already shelved. 🟢 What it adds is **which of two known addresses is live**, three times — and that is a correction, not supply |
+
+### 🟢 Ranked for a successor
+
+| rank | item | why it is ranked here |
+|---|---|---|
+| **1** | 🟢 **Run `forkdir.sh` over the `DISTINCT`-labelled subset of `p397`'s 551 pairs, in named batches of ~10** | This pass's **3-for-3** says the `DISTINCT` label hides copies and continuations. The instrument exists and is controlled; the only cost is clone budget |
+| **2** | 🟡 **A package-identity column on the licence shelves** | `404-E` has no cell to live in. Go module path / npm name / PyPI distribution / `$plugin->component`, stated wherever two addresses share a grant and a lineage |
+| **3** | 🔵 **A GitLab/Codeberg API probe, not another web leg** | `404-H` measured that the web leg does not reach them, and [`gitlab-api-channel`](compose/code/gitlab-api-channel/README.md) already exists |
+| **4** | 🔴 **The language leg of a jurisdiction whose mandate has JUST commenced** | `p403`'s predictive form, unspent. **Not** Japanese, and not English. Vietnam's **2026–27** commencement is the nearest candidate, and this base has already searched Vietnamese once — so the honest read is that this leg is **cheap but not fresh** |
+
+
 ## Pass 402 — reads and commit both 2026-10-23 — **THE ALIAS REGISTER'S *DIRECTION* HALF FINALLY HAS A CHANNEL, AND THE FIRST THING IT PROVES IS THAT `ease`'s CANONICAL OWNER IS NEITHER ADDRESS THE REGISTER TRACKED. 🟢 `ACTION ZZ-al` CLOSED AFTER ~52 PASSES. 🔴 A LIVE RECOMMENDATION POINTED AT A STALE ALIAS. 🔴 AND THIS PASS'S OWN DRAFT REPRODUCED `p400`'s SUBSTRING DEFECT.**
 
 🔵 **Dating note.** Every repository read, ref-set probe, payload probe and search leg below was run
@@ -32,7 +100,6 @@ open a third front"*; `p401` took neither and recorded that as a choice rather t
 | 6 | 🟢 **The backlog reproduces exactly from `p397`'s committed TSV, which is the check that the extraction is faithful.** **121** name-collision groups · **551** candidate pairs, recomputed independently as Σ C(k,2) over the group sizes and matching `p397` **to the unit** · **324** distinct addresses. Verdicts over the 28 adjudicated: **9** `CANONICAL-SELF`, **7** `STALE`, **10** `DISTINCT`, **1** `DISTINCT-FORK`, **1** `PHANTOM`. |
 | 7 | 🔴 **`402-F`: all FIVE prescribed global legs are saturated — including the supply tail that paid for `p401`.** Every address the supply tail returned is **exact-shelved** by exact-address check: `Naresh1401/education-tutor-agent`, `Ebimsv/AITutorAgent`, `braiinz94/braiinz-education`, `ed-donner/agents`, `Open-TutorAi/open-tutor-ai-CE`. 🟢 **Two first-hand reads came out of it regardless:** `Ebimsv/AITutorAgent` is **MIT** by payload (`LICENSE`, 1 072 B, title line `MIT License`, on **both** `main` and `master`), and `Naresh1401/education-tutor-agent` has **no grant at either branch** (`LICENSE`, `LICENSE.md`, `LICENSE.txt` absent) with `README.md` → **200** as the branch control on both — 🟢 **independently reproducing this base's `NO GRANT` verdict and refuting the search engine's "MIT-licensed" claim.** 🔵 A calibrated absence in `p293`'s shape, not an inference from a blank sidebar. |
 | 8 | 🟡 **`402-G`: the regional legs, placed — and three of four regions returned no instrument.** 🔴 **EMEA returned no education-specific instrument at all, reproducing `p400`'s finding 11 for the THIRD consecutive pass.** 🔴 **APAC surfaced no ministry-level instrument** for SG, AU, CN, KR or JP — in the region holding the largest mandated deployment on earth. 🟡 **North America** returned market-research only, with NA ≈36 % share, **10 %** of institutions holding formal AI guidelines and **71 %** of US teachers untrained, all band `reported`. 🟢 **LATAM was the only leg that moved anything**, and it moved **two named primary sources**: the **UNESCO IESALC + UNU-IAS** working paper on AI in higher education across LAC (**200 institutions, 19 countries, fielded Aug–Oct 2025**) and **ILIA 2025** (CEPAL-linked) with a governance/regulation sub-dimension; **Chile** named as the one national AI roadmap that survived a change of administration. 🔴 **Neither read first-hand — primary-host egress is unavailable on this session** — so both are recorded at band `reported` with the source *named*, which reproduces `p400`'s finding 13 and `p401`'s `401-G`: this session settles **licences** first-hand and **cannot settle a statute at all**. |
-
 | 9 | 🟢 **`402-H`: the crowded MCP supply is REAL supply — `canvas-mcp`'s 21 owners are 20 distinct projects, not one forked twenty times.** [`intel/open-gaps.md`](intel/open-gaps.md) item 3 asked exactly this in writing — *"whether that crowded supply is many projects or a few forked many times, and **nothing on these shelves currently answers it**"* — and named `canvas-mcp` (**21 owners**) as the largest group. 🟢 **Answered for that group:** **20 of 21 resolve**, with 🟢 **20 distinct HEADs, 20 distinct ref-set fingerprints and 0 alias pairs** (🔴 `eastarctica/canvas-mcp` **UNRESOLVED**). 🔵 **The limit, stated:** a distinct HEAD rules out an alias and a *non-divergent* fork, and does **not** rule out a **divergent** fork — that needs the **root commit** (`Pattern AF` steps 1–2). 🟢 So the **identity** half of item 3 is answered for this group and the **lineage** half is not. 🟡 Ref counts spread from **449** (`vishalsachdev`) to **2** (four addresses); 🔴 **ref count is a weak proxy** — it counts branches *and* tags — so it ranks nothing on its own, and is published only because the shelves cite `r-huijts` (18 refs) and `mdweaver` (2) more heavily than `vishalsachdev` (449). **A mismatch flagged for a pass that can measure commit recency, not acted on here.** |
 
 ### 🔴 What this pass declined to do, and why

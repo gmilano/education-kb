@@ -77,7 +77,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -111,7 +111,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-dead-citation gate-regional-leg gate-census-union \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
-             gate-capability-absence
+             gate-capability-absence gate-fork-direction
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -234,6 +234,16 @@ gate-subtree-grant: ## p382 — ACTION ZZ-ap: a grant has SUBTREES, and a root-o
 # candidates OUT, so `intellectif/learning-kit` (months 05 08 09 10) now reads AMBIGUOUS
 # WITH US EASTERN EXCLUDED rather than `NOT RESOLVED`.  p376's precedent governs a limb
 # discharged not-as-specified.
+# 🟢 p404 — `p402` recorded fork DIRECTION as unestablished for four same-name pairs and
+# built a ref-set instrument that provably cannot establish it: a squash-republish shares ZERO
+# commit SHAs with its origin, so a copy and two unrelated namesakes grade identically.  The
+# rule here reads FULL history — commit-SHA and TREE-SHA intersection plus ancestry — and
+# splits the three mechanisms that all present as "same name, different HEADs".  The three pairs
+# `p402` left open are pinned as controls.  No network: the grading function is pure, and the
+# collector (`forkdir.sh`) is the only part that clones.
+gate-fork-direction: ## p404 — a same-name pair is graded by FULL history; a ref-set test cannot establish direction
+	@cd compose/code/p404-fork-direction && { $(PY) test_verdict.py > $(FORKDIR_LOG) 2>&1 || { echo "🔴 p404-fork-direction FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FORKDIR_LOG) ; false ; } ; } && echo "── p404-fork-direction (11 controls: the three measured pairs, one of each mechanism, and the commit-only test's own mistake as the load-bearing negative)" && echo "   PASS" || exit 1
+
 gate-capability-absence: ## p392 — Gap 391-D with p391's CORRECTED predicate: an absence keyed on CAPABILITY, not on string identity.  `gate-absence` catches a RESTATED absence; this catches one whose refutation is in the base's own harvest log under different words — which is every instance this base has published.
 	@cd compose/code/p392-capability-absence && { $(PY) -I test_capability_absence.py > $(CAPABS_LOG) 2>&1 || { echo "🔴 p392-capability-absence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CAPABS_LOG) ; false ; } ; } && echo "── p392-capability-absence (15 controls: the capability meeting, five false-positive classes — two of them found by this gate failing on its own author — evidence completeness, the hand-adjudication ledger, the fatal arm)" && echo "   PASS" || exit 1
 
@@ -241,6 +251,7 @@ capability-absence-census: ## p392 — the whole-shelf arm: a measurement, never
 	@$(PY) -I compose/code/p392-capability-absence/capability_absence.py --root . --census
 
 CAPABS_LOG ?= /tmp/education-kb-gate-capability-absence.log
+FORKDIR_LOG ?= /tmp/education-kb-gate-fork-direction.log
 
 gate-offset-region: ## p382 — Gap 541: a timezone offset census is placed with its DST span, or refused with the reason
 	@cd compose/code/p382-offset-region && { $(PY) -I test_offset_region.py > $(OFFSET_LOG) 2>&1 || { echo "🔴 p382-offset-region FAILED — the suite's own report follows:" ; sed "s/^/   /" $(OFFSET_LOG) ; false ; } ; } && echo "── p382-offset-region (10 controls: p381's two specimens, the L1 DST-degeneracy specimen, positive LATAM resolution, negative controls)" && echo "   PASS" || exit 1

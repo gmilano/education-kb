@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p404` — two recipes on this file named the wrong address, and the fix is one line each
+
+🟢 **Both corrections come from full-history clones read on 2026-10-23**, with the instrument and its
+9 controls at [`code/p404-fork-direction/`](code/p404-fork-direction/README.md).
+
+| recipe cell | was | 🟢 **is** | why it matters to a build |
+|---|---|---|---|
+| **`Pattern I` layer 1** — the `core_ai` provider plugin | *"cloned from `ADORSYS-GIS/…` **or** `lmscloud-io/…`"*, described as two independent vendors | 🟢 **Clone [`ADORSYS-GIS/moodle-aiprovider_openaicompatible`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible)** — **8 d**, Moodle 5.0+ CI matrix, listed in the Moodle Plugins directory. `lmscloud-io` is its **origin** and is **93 d** | 🔴 *"Either"* sends half of engagements to a dormant address. The two are **one lineage** — `CONTENT-COPY`, direction `lmscloud-io` → `ADORSYS-GIS` — not a choice between vendors |
+| **`Pattern` LTI/Go-JVM** — the Go options | `peregrine-lti` **679 d** and `macewan-cs/lti` **1,918 d** | 🟡 Add [`astiusa/lti`](https://github.com/astiusa/lti) — **794 d**, MIT, a **strict superset** of `macewan-cs` (89/89 commits reachable) | 🟢 The *conclusion* is unchanged — **do not put a client's identity flow on any of them** — but the file was 1,125 days out on the freshest permissive Go option, and that number is what a client challenges |
+
+🟡 **A config line `Pattern I` now needs.** `ADORSYS-GIS` **dropped** `$plugin->supported = [500, 502]`
+when it republished, keeping only `$plugin->requires = 2025041400`. 🔴 So the live plugin declares **no
+Moodle upper bound** and Moodle will not warn on an untested major. 🟢 **Pin the Moodle version in the
+engagement's own config** and treat the plugin's compatibility as unstated rather than open.
+
+### 🟢 New, concrete: choosing a Moodle MCP server, which is an MIT / GPL-3.0 decision, not a name
+
+🔴 **`moodle-mcp-server` is two independent implementations** — **0 shared commits AND 0 shared trees**
+— and this base has cited the bare plugin name. The two differ in **language and in grant**, so the
+name alone cannot carry a recommendation:
+
+```
+layer 2 of Pattern I (the network boundary), Moodle side — pick by grant, not by name:
+
+  proprietary or MIT/Apache deliverable
+      -> peancor/moodle-mcp-server          MIT  1,064 B 845ac6ac9e57   TypeScript/Node
+         + same runtime as ltijs / lti-tool, so one Node service carries LTI *and* MCP
+         - 0 tags: vendor a commit, do not "install" it; 243 d, so budget maintenance
+
+  GPL-3.0 acceptable (internal tooling, or the client owns the deployment)
+      -> lmscloud-io/moodle-mcp-server      GPL-3.0 35,148 B 8b1ba204bb69  Python/fastmcp
+         + 3 tags v1.0.0..v1.0.2 - the ONLY published artefact of the two
+         + root commit by Marina Glancy (Moodle core provenance) - read it either way
+         - copyleft: it cannot sit inside a proprietary layer-3
+
+  wire-up, both cases:
+      Moodle core_ai provider  ->  HTTP/MCP  ->  your layer-3 (retrieval, grounding, eval)
+      ADORSYS-GIS/moodle-aiprovider_openaicompatible  is layer 1 (GPL, thin, contributed back)
+```
+
+🟢 **The boundary is what makes this a free choice**: GPL-3.0 is not network copyleft, so a GPL layer-2
+MCP server still leaves layer 3 ownable — 🔴 but only if the client accepts shipping a GPL component at
+all. 🔵 Where they will not, `peancor` is the only permissive option measured here, and its **0 tags**
+means the pattern vendors a pinned commit rather than tracking a release.
+
+---
+
 ## 🆕 `Pattern I` — 🆕 `p403` The India engagement: an in-language tutor you can actually *prove*, with a deterministic eval gate
 
 🔵 **The engagement this answers.** India's mandate makes **AI and computational thinking compulsory
@@ -76,7 +123,7 @@ plugin — gives the clever part away. 🟢 The pattern puts the GPL boundary wh
 
 | layer | component | licence | why it is here |
 |---|---|---|---|
-| **1 · in-platform adapter** *(GPL, thin, contributed back)* | A `core_ai` provider plugin, cloned from [`ADORSYS-GIS/moodle-aiprovider_openaicompatible`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) or [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟡 **GPL-3.0-or-later** *(read from `version.php`; **no licence file** at any ladder path)* | Moodle's own supported extension point, so no core patching and no upgrade debt. 🟢 Both vendors' `classes/provider.php` is **byte-identical at 3,963 B** — a de-facto standard shim. 🔵 Keep it thin: auth, request shaping, error mapping. Nothing proprietary crosses into it. |
+| **1 · in-platform adapter** *(GPL, thin, contributed back)* | A `core_ai` provider plugin, 🆕 🟢 **cloned from [`ADORSYS-GIS/moodle-aiprovider_openaicompatible`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible)** *(`p404`: the live address, **8 d**; [`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) is its origin and is **93 d** — `CONTENT-COPY`, direction established)* | 🟡 **GPL-3.0-or-later** *(read from `version.php`; **no licence file** at any ladder path)* | Moodle's own supported extension point, so no core patching and no upgrade debt. 🟢 Both vendors' `classes/provider.php` is **byte-identical at 3,963 B** — a de-facto standard shim. 🔵 Keep it thin: auth, request shaping, error mapping. Nothing proprietary crosses into it. |
 | **2 · the boundary** | An **MCP server** the plugin calls over the network | 🟢 **Yours — MIT/Apache or closed** | 🔵 GPL-3.0 is **not** network copyleft. Code the plugin merely *calls* across a process boundary is not a derivative work of it, which is what makes layer 3 ownable. 🔴 This boundary is the entire point of the pattern; collapse it and layer 3 becomes GPL. |
 | **3 · the grounding and the IP** | Arabic curriculum corpus + retrieval + evaluation | 🟢 **Yours**, seeded from **MIT** sources | Seed content from [`openaziz00-sudo/Arab-Artificial-Intelligence`](https://github.com/openaziz00-sudo/Arab-Artificial-Intelligence) (**MIT**, 1,650 Arabic prompts / 17 categories) and teacher-facing scaffolds from [`kazoya/build-your-own-agent-ar`](https://github.com/kazoya/build-your-own-agent-ar) (**MIT**). 🔴 **Do NOT seed from** [`sartaj1995/arabic-tutor`](https://github.com/sartaj1995/arabic-tutor) (100 levels, 1,367 exercises — **no grant at the ladder**) or [`michaelsboost/ArabEngo`](https://github.com/michaelsboost/ArabEngo) (**CC-BY-NC-4.0**, NonCommercial). |
 
@@ -383,8 +430,10 @@ Moodle, Canvas, Blackboard or D2L. This is most enterprise work and much of Euro
 🔴 **Why the obvious route is closed.** The only permissive **Java** LTI 1.3 core is
 [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) (MIT) — **1,193 days dead**. The
 Go options are [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti)
-(Apache-2.0, **679 d**, pre-1.0 API) and [`macewan-cs/lti`](https://github.com/macewan-cs/lti) (MIT,
-**1,918 d**, self-declared unstable, **deep linking unimplemented**). 🔴 An unmaintained library doing
+(Apache-2.0, **679 d**, pre-1.0 API), [`macewan-cs/lti`](https://github.com/macewan-cs/lti) (MIT,
+**1,919 d**, self-declared unstable, **deep linking unimplemented**) and 🆕
+[`astiusa/lti`](https://github.com/astiusa/lti) (MIT, **794 d**, a `p404`-measured **strict superset**
+of `macewan-cs` — which inherits the same instability warning, untouched by its two extra commits). 🔴 An unmaintained library doing
 **OAuth 2 / JWT signing and key rotation** is a *security* dependency — the same argument that
 demoted `1EdTech/lti-1-3-php-library`. Do not put a client's identity flow on any of the three.
 

@@ -254,8 +254,24 @@ chk("p280 a DIRECTORY alone still does not gate (p251, preserved)",
 # this one is the shape p294 called the direction a coverage census must never miss, run
 # forwards: a suite leaving the backlog BY BEING GATED reads as progress, and here it is.
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
+# 🔴 p404: explicit-exit 109 -> 111, AND THIS MOVEMENT IS A PRE-EXISTING DRIFT, not this
+# pass's work.  `p404` added ONE suite (`p404-fork-direction/test_verdict.py`) and wired it into
+# `HOOK_GATES` as `gate-fork-direction` in the SAME change, with an explicit `sys.exit(1)` —
+# p261's remedy and p277's shape — so it arrives GATED and never enters either ungated half.
+# 🟢 Measured: no `p404` file appears in the ungated+explicit set at all, and the derived
+# count is 111 against this literal's 109.  So TWO suites entered the immune half between `p338`
+# and now with the literal left behind, which is the drift `p397` found three gates in
+# ("while nobody was looking, three gates drifted red: 44/46 -> 41/46") pointed at a census.
+# 🔴 WHICH two is NOT established, and is not guessed: this session's clone is `--depth 1`,
+# so every file reads as added in one commit and per-file attribution is unavailable here.
+# 🔵 Why updating it is p294's door and not the error the README forbids: the 109 is a
+# CENSUS of the immune-by-construction half, not a quality floor. Nothing broke — the XR
+# silent-zero population stays at **71** and `--verify` is clean on all 72 pinned rows. A census
+# literal must track its population or it reports the population it had.
+# 🟢 Registered for a successor: DERIVE this literal, as `p284` already did for the other
+# three, and attribute the two entrants from a deepened clone.
 chk("ungated AND explicit-exit (immune by construction)",
-    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 109)
+    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 111)
 chk("the partition closes: silent-zero + explicit == ungated",
     len(POP) + sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]),
     sum(1 for r in ROWS if not r["gated"]))

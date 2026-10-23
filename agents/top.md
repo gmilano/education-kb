@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-23
 ---
 
+**🆕 Pass `p404` · reads and commit both 2026-10-23 — the TENTH pass dated today.** 🟢 **`p402`'s
+three open-direction pairs are CLOSED, in one channel nobody here had used: a FULL-history clone.
+Three pairs, three different verdicts.** 🔴 **One of the three REFUTES `p402`'s own note, and the
+refuted pair is cited on all four build-on tiers while its 1,125-day-fresher superset is cited once.**
+
+🔵 **Why this pass did not run a sixth language leg.** `p403` spent the Hindi leg and recorded the
+prescribed legs as saturated; `p403` also left three items *"named so it cannot look worked"*. 🟢 This
+pass takes the one that was **narrowed to a single measurable question** — `p401`'s
+`aiprovider_openaicompatible` pair — and finds the measurement generalises, so it closes the other two
+open pairs in the same run.
+
+🔴 **`p402` wrote, in its own instrument's *"What it did NOT establish"*: for
+`moodle-aiprovider_openaicompatible`, `pylti1.3`, `lti` and `moodle-mcp-server` "the HEADs differ …
+and the fork direction stays unestablished."** 🟢 **It is establishable — but not by a better ref-set
+test.** A ref set is derived from *current* refs, and direction is a fact about *history*: a
+**squash-republish shares ZERO commit SHAs with its origin**, so a ref-set test grades a copy and two
+unrelated namesakes **identically**. The signal is absent from the channel, not faint in it.
+
+| pair | commits *(all refs)* | shared commits | shared trees | ancestry | 🟢 **verdict, first-hand 2026-10-23** |
+|---|---|---|---|---|---|
+| [`ADORSYS-GIS`](https://github.com/ADORSYS-GIS/moodle-aiprovider_openaicompatible) ↔ [`lmscloud-io`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) `moodle-aiprovider_openaicompatible` | **35** ↔ **17** | 🔴 **0** | 🟢 **1** | none | 🟢 **`CONTENT-COPY` · direction `lmscloud-io` → `ADORSYS-GIS`** |
+| [`astiusa/lti`](https://github.com/astiusa/lti) ↔ [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | **91** ↔ **89** | 🟢 **89** | 🟢 **89** | 🟢 **`macewan-cs` HEAD IS an ancestor of `astiusa` HEAD** | 🟢 **`SUPERSET` · `macewan-cs` → `astiusa`** |
+| [`lmscloud-io`](https://github.com/lmscloud-io/moodle-mcp-server) ↔ [`peancor`](https://github.com/peancor/moodle-mcp-server) `moodle-mcp-server` | **10** ↔ **11** | 🔴 **0** | 🔴 **0** | none | 🟢 **`INDEPENDENT` — measured, not assumed** |
+
+🟢 **Evidence:** [`fork-direction`](../evidence/fork-direction.2026-10-23-p404.tsv) — 6 addresses · 21
+columns · instrument, **9 controls / 0 failures** and all three pairs **reproduced end-to-end from
+clean clones**, at [`compose/code/p404-fork-direction/`](../compose/code/p404-fork-direction/README.md).
+
+### 🟢 `p401`'s pair, CLOSED — and the direction is the opposite of what currency suggests
+
+🟢 **Three independent measurements agree.** (1) The **only** shared tree, `85d9a99e3c96`, is
+`ADORSYS-GIS`'s **root** tree — and it is `lmscloud-io`'s working tree at commit `c8b6f9fe`,
+**2026-06-09**, seven weeks before `ADORSYS-GIS`'s root commit of **2026-07-27**. A root commit cannot
+hold content that did not already exist. (2) Both root commits carry the **same author identity**,
+`Leghadjeu-Christian <legochristianarthur@gmail.com>` — so this is a hand-off, not an unattributed
+lift. (3) 🟢 **The version counter is inherited.** `lmscloud-io` sets `$plugin->version = 2026060200`
+on **2026-06-02**; `ADORSYS-GIS`'s root commit **starts at that same `2026060200`** and only later
+bumps to `2026101500`. A counter cannot be inherited backwards.
+
+🔴 **And the useful half, which no shelf here said.** The **origin is the stale one.**
+`lmscloud-io` is **93 d** (HEAD `040b74d5b13e`, 2026-07-22, branch `moodle405`); `ADORSYS-GIS` is
+🟢 **8 d** (HEAD `371278b0ebd6`, 2026-10-15), carries a `moodle-plugin-ci` pipeline with a **Moodle
+5.0+ matrix**, an open `chore/bump-plugin-version` branch, and a commit whose message links the
+**Moodle Plugins directory listing**. 🟢 **So `ADORSYS-GIS` is the one to build on and `lmscloud-io` is
+the provenance** — the reverse of the reading "the older address is upstream, therefore canonical".
+🟡 **One regression in the copy, worth a config note:** `lmscloud-io` declares
+`$plugin->supported = [500, 502]`; `ADORSYS-GIS` **dropped** that line while keeping
+`$plugin->requires = 2025041400`, so the copy ships **no declared Moodle upper bound**.
+
+🟡 **Grant unchanged, and `LADDER_BLIND` reproduced.** Neither repository has a licence-shaped file in
+its root tree — `ADORSYS-GIS` is `[.github .gitignore README.md UPGRADING.md amd classes db lang tests
+version.php]`, `lmscloud-io` the same without `.gitignore` — and the grant exists only in **PHP file
+headers** (*"version 3 of the License, or (at your option) any later version"*), i.e.
+**`GPL-3.0-or-later`**. 🔵 That is `p401`'s pattern again, measured rather than inherited.
+
+### 🔴 The `lti` pair — `p402`'s note is REFUTED, and a live recommendation is 1,125 days stale
+
+🔴 **`p402` recorded `astiusa/lti` ↔ `macewan-cs/lti` as *"two unrelated repositories sharing a very
+short name"*.** 🟢 **They share a root commit** — `228556c`, **2021-05-07**, *"Create LICENSE"*, by
+Nicholas Boers — and **89 of `macewan-cs`'s 89 commits are reachable from `astiusa`'s HEAD**, which
+`git merge-base --is-ancestor` confirms. They are not a name collision; they are one lineage.
+
+🟢 **`astiusa/lti` is a strict superset at 794 d against `macewan-cs`'s 1,919 d** — a **1,125-day**
+correction on this shelf's freshest permissive **Go** LTI 1.3 option. The two extra commits are both
+by `hussein.vastani@asti-usa.com`: **2023-05-22** (import paths, plus `target_link_uri` taken from the
+**login request** instead of from registration, plus a `TargetLinkURI` helper on the connector) and
+**2024-08-20** (*"Added support for PKCS8 files"*) — **11 files, +49 / −26**. 🟢 The MIT grant file is
+**byte-identical** across both, 1,108 B, `sha256`₁₆ `6e58273960b0`, still **© 2021 MacEwan University —
+Department of Computer Science**, so the fork kept the attribution.
+
+🔴 **The shelf defect this exposes.** `macewan-cs/lti` is cited on **all four build-on tiers**
+([`repos/foundations.md`](../repos/foundations.md) ×2, [`verticals/solutions.md`](../verticals/solutions.md),
+[`compose/patterns.md`](../compose/patterns.md)); `astiusa/lti` appears **once**, in a star-count table
+on this file. 🟡 **The recommendation itself survives** — `p391`/`p392`'s *"front a Go or JVM platform
+with `ltijs` or `lti-tool` over HTTP"* stands, because 794 d is still dead and **both repositories
+carry 0 tags**, so there is no published artefact either way. 🔴 **What does not survive is the
+dating**, and [`repos/foundations.md`](../repos/foundations.md) now carries the corrected row.
+
+🔴 **The switching cost, which identical licence bytes hide.** The 2023-05-22 commit **changed the Go
+module path**. So a strict superset by history is **not** a drop-in dependency by import path: a
+consumer must edit its imports to move. 🔵 Recorded as an amendment on
+[`intel/trends.md`](../intel/trends.md) — *same grant, same code, different package identity*.
+
+### 🟢 The `moodle-mcp-server` pair — independence MEASURED, and the two are not interchangeable
+
+🟢 **0 shared commits AND 0 shared trees**, no ancestry either way: two genuinely independent
+implementations that share a plugin name. 🔵 `p402` had graded them `DISTINCT` from differing HEADs,
+which is the right verdict from the wrong evidence — a differing HEAD is also what a copy looks like.
+
+🔴 **And they differ in exactly the two cells a build decision turns on**, which is itself positive
+evidence of independence:
+
+| address | language | 🟢 **grant *(root `LICENSE`, payload-read)*** | HEAD · age | tags | what it means for a build |
+|---|---|---|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **TypeScript / Node** *(`package.json`, `tsconfig.json`)* | 🟢 **MIT** *(1,064 B, `845ac6ac9e57`, © 2025 peancor)* | `666f12222ed6` · 🟡 **243 d** | 🔴 **0** | 🟢 **The build-on one.** Permissive, and it sits in the same runtime as `ltijs` / `lti-tool` |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | **Python** *(`pyproject.toml`, `src/`, `fastmcp`)* | 🔴 **`GPL-3.0`** *(35,148 B full text, `8b1ba204bb69`)* | `4b11494d6522` · 🟡 **168 d** | 🟢 **3** — `v1.0.0`…`v1.0.2` | 🟡 **Fresher, versioned, and copyleft.** Root commit authored by **Marina Glancy** — Moodle core provenance — so read it even where the grant rules it out of a proprietary path |
+
+🔴 **A shelf that says "use `moodle-mcp-server`" without naming the owner spans an MIT/GPL-3.0
+boundary**, and the fresher of the two is the copyleft one. 🟢 Both rows are now disambiguated here and
+on [`repos/trending.md`](../repos/trending.md).
+
+### 🔴 Saturation, measured rather than asserted — 20 candidate addresses, 20 already shelved
+
+🟢 **All five prescribed legs were run, plus two extra probes** (a university-/LMS-MCP-server probe,
+because this base records that class as its most reliably-growing one, and a non-GitHub-forge probe for
+GitLab and Codeberg). 🔴 **They produced 20 distinct candidate addresses and every one of them is
+already on these shelves** — `vishalsachdev/canvas-mcp`, `DMontgomery40/mcp-canvas-lms`,
+`JohannsenLum/canvas-api-mcp`, `AnonymousOnyx22/canvas-lms-student-mcp`, `Mattlo0546/canvas-mcp`,
+`peancor/moodle-mcp-server`, `loyaniu/moodle-mcp`, `saylordotorg/moodle-local_ai_course_assistant`,
+`Open-TutorAi/open-tutor-ai-CE`, `098765d/AI_Tutor`, `Selleo/mentingo`, `OpenOLAT/OpenOLAT`,
+`Miaotofu01/Study-Mate`, `SenmuuuuW/universal-diagnostic-tutor-skill`, `lowwwbank/anything-to-course`,
+`SirhanMacx/Claw-ED`, `A-R007/Multi-Agent-Study-Assistant`, `HugeCatLab/ChatTutor` and both
+`lti` addresses above.
+
+🟢 **Matched by `p400`'s rule — exact slug, never substring** — against an index of **3,479** distinct
+`owner/repo` slugs harvested from every `.md`, `.tsv` and `.py` on these shelves. 🔵 **20 / 20 is a
+denominator**, which is what separates this from a pass that searched and found nothing: the legs are
+not failing, the shelf is ahead of them.
+
+---
+
 **🆕 Pass `p403` · reads and commit both 2026-10-23 — the NINTH pass dated today.** 🟢 **A
 **Hindi-language** leg returns the first **Indic-language** education addresses this base has ever
 held, and it is the THIRD independent confirmation of `p401-T1` — this time *predictively*.** 🔴 **No
@@ -153,8 +274,9 @@ shelved"* on a real address**: a bare `grep ai-grader` returns hits, every one o
 different repository and a **different name** that merely contains the candidate's.
 
 🔵 **The nearest owner, named so this is not re-sold as new:** `p332-delivery-audit` already
-reports this *shape* as `PREFIX PAIRS` (`eecs-autograder/autograder` against
-`eecs-autograder/autograder.io`). 🔴 **But it looks INSIDE the harvested corpus**, and an
+reports this *shape* as `PREFIX PAIRS` — the **stump**
+`eecs-autograder/autograder`, a **truncated** form of
+`eecs-autograder/autograder.io`. 🔴 **But it looks INSIDE the harvested corpus**, and an
 incoming candidate is not in the corpus yet — which is why the shape survived there and was
 never caught at the door. Same family as `T80`, one layer out.
 
