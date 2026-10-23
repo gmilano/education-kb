@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🟢 `Pattern AJ` — **Amendment 7**: the AGPL-3.0 denominator is selected on TWO axes, and `34 501` is not one of them
+
+🔴 `p413`'s **Amendment 6** maps `grep -c 'https://'` to a reference byte count and sets
+**`n=0 → ref=34501`**. 🟢 It reproduces `p412`'s instrument faithfully and it is **wrong on this
+family**, because `34 501` is `acanas/swad-core`'s **de-indented title line**, not the `http` form.
+🔴 **Cost of leaving it in place:** on `mastodon/mastodon` it under-reads by **19** B and on
+`openedx/edx-platform` by **20** B, so a pass grading the Open edX flagship would compute a `635`-byte
+rider where the rider is `615` — and then look for 20 bytes of narrowing that are not there.
+
+🟢 **Amendment 7 selects on both measured axes and refuses rather than guesses:**
+
+```sh
+# Step 4a (AGPL-3.0) — pick the denominator from the payload on BOTH axes.
+# Lattice (p414, four cells measured first-hand):
+#   bytes = 34520 + 3*(scheme == https) + 1*(line 662 present)
+n=$(grep -c 'https://' LICENSE)          # 3 = https revision, 0 = http revision
+l=$(wc -l < LICENSE)                     # 661 or 662 — INDEPENDENT of the scheme
+i=$(head -1 LICENSE | sed 's/[^ ].*//' | wc -c); i=$((i-1))   # title indent, canonically 20
+
+if [ "$i" -ne 20 ]; then
+  echo "DE-INDENTED-TITLE: ${i}sp (canonically 20) — subtract $((20-i)) B before comparing"
+fi
+
+case "$n:$l" in
+  0:661) ref=34520 ;;   # http  + 661   sha256 57c8ff33c9c0  (mastodon/mastodon)
+  0:662) ref=34521 ;;   # http  + 662   sha256 432d251a78db  (the Open edX flagship, rider stripped)
+  3:661) ref=34523 ;;   # https + 661   sha256 0d96a4ff68ad  (grafana/grafana + 5 carried)
+  3:662) ref=34524 ;;   # https + 662   sha256 8d56b405468a  (blend-ed pair, byte-identical)
+  *) echo "UNRESOLVED-AGPL-DENOMINATOR: n=$n lines=$l" ; exit 2 ;;
+esac
+ref=$((ref - (20 - i)))                  # fold a de-indented title into the denominator
+rider=$(( $(wc -c < LICENSE) - ref ))
+echo "ref=$ref rider=$rider B"
+```
+
+🔵 **Checked against the one address that has a rider:** `edx-platform` gives `n=0`, `l=671`. 🔴 `671`
+is in no cell — **correctly**, because the rider moved it — so step 4a exits `2` and the operator
+strips the append first (`head -n 662`), which yields `n=0 l=662 → ref=34521` and `rider=615`,
+matching the first-hand read to the byte. 🟢 **That is the right failure mode**: the selector refuses
+an unknown shape rather than silently picking the nearest constant, which is what Amendment 6 did.
+
+🟢 **And `swad-core` exercises the de-indent limb:** `n=0 l=662 → ref=34521`, `i=0`, so
+`ref = 34521 − 20 = 34501` and `rider=0`. 🔵 One payload, one correct answer, no special case.
+
+### 🔴 A compliance step every recipe on these shelves now needs: is the grant even IN the tree?
+
+🔵 Recipes here cite components by `(FILE, digest)` and that has been enough. 🔴
+`GarethManning/education-agent-skills` breaks it: **both** its in-tree payloads are `POINTER`s — a
+*"human-readable notice"* at the root and a scope-less variant under `mcp-server/` — and the operative
+CC BY-SA 4.0 legalcode is on `creativecommons.org`, which is **`TUNNEL-REFUSED`** here. 🟢 So a recipe
+that vendors or references this component cites a file that **is not the licence**.
+
+🟢 **The step, inserted before any component is composed:**
+
+```sh
+# Step 0c — classify the grant's LOCATION before trusting its family (p307 / p254 / p414).
+for p in LICENSE LICENSE.md LICENCE COPYING; do
+  [ -f "$p" ] || continue
+  if grep -qiE 'full (legal )?(licence|license)( text)? (is )?(are )?(available )?at|human-readable notice|legalcode' "$p"; then
+    echo "POINTER: $p names an EXTERNAL operative text — resolve it before composing"
+    grep -ohE 'https?://[^ )]+' "$p" | sort -u | while read -r u; do
+      code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 12 "$u" 2>/dev/null)
+      [ -z "$code" ] && code=000
+      [ "$code" = "000" ] && echo "  UNRESOLVABLE-HERE: $u (TUNNEL-REFUSED)" || echo "  $code $u"
+    done
+  else
+    echo "GRANT: $p carries operative terms in-tree"
+  fi
+done
+# And never read the root alone — p382. Enumerate every LICENSE in the tree:
+#   the root and mcp-server/ payloads of education-agent-skills differ by 252 B,
+#   and the deleted 4 lines are the SCOPE sentence, absent from the SOFTWARE subtree.
+```
+
+🔴 **What a studio does with a `POINTER` + `UNRESOLVABLE-HERE` result:** keep the component at
+*reference, do not vendor* — which is where these shelves already put this one on ShareAlike grounds
+— and record that the terms a deliverable would be held to were **not read**. 🟢 The posture is
+unchanged; what changes is that the recipe now says so instead of implying a payload was verified.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

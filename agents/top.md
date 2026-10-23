@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🔴 `education-agent-skills`' grant is a POINTER on BOTH subtrees, and the subtree that holds the CODE is the one with no scope
+
+🔵 This base carries [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+across every shelf — **`CC-BY-SA-4.0`**, `1 230` B, `f952182df4eb`, `main` `6bbbce4`, `165` `SKILL.md`
+— and `agents/trending.md` grades it *"**cesión**, no identificador"*: a **grant**, not a mere
+identifier. 🔴 **First-hand, it is a `POINTER` on `p307`'s three-valued classifier, and so is its
+second grant.** `repos/trending.md:13531` already notes *"second grant at `mcp-server/LICENSE`"* —
+🔴 **and no pass has read it.** It is a **different payload**:
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **Neither in-tree payload contains CC BY-SA 4.0's operative legalcode, and each says so of itself.** The root `LICENSE` closes *"**This is a human-readable notice.** The full legal terms are available at: `creativecommons.org/licenses/by-sa/4.0/legalcode`"*; `mcp-server/LICENSE` closes *"Full licence text: `…/legalcode`"*. 🟢 That is `p307`'s `POINTER` class and `p254-scoped-grant-reference`'s subject verbatim — *a POINTER to a licence is not a GRANT* — and the gate exists for exactly this shape |
+| 2 | 🔴 **The two payloads are not the same text.** Root **`1 230` B / 33 lines / `f952182df4eb`**; `mcp-server/LICENSE` **`978` B / 28 lines / `f8366f5391f4`**. Delta **252 B**, and `diff` shows the four deleted lines **are the scope sentence** |
+| 3 | 🔴 **And the scope is deleted from the half that is software.** The root grant names its subject — *"the educational skills, documentation, examples, and curriculum materials in this repository"*. `mcp-server/` names **nothing at all**, and `mcp-server/` is the **MCP server**: the one subtree that is code rather than curriculum is the one whose content licence declines to limit itself. 🟢 `gate-grant-scope`'s subject — *a grant has a SCOPE and a PROVENANCE* — and the direction is **against** the consumer, not for them |
+| 4 | 🔵 **A provenance signal in the spelling.** The root is en-GB throughout (*"licence"*); `mcp-server/LICENSE` is en-US in its body (*"license"*) and en-GB in its final line. 🟢 Two authoring events, not one template copied twice — which is why a successor should expect a **third** payload if a third subtree appears |
+| 5 | 🔴 **The operative text is `TUNNEL-REFUSED` on this environment.** `creativecommons.org/.../legalcode` answers `http=000`, `CONNECT` 403, against a control pair that served `200` twice. 🟢 **So 100 % of this address's operative licence is by reference and 0 % of it is readable here** — the first address on these shelves in that state, and a sharper thing to record than "CC BY-SA 4.0" |
+
+🟢 **What does NOT change:** the ShareAlike reading these shelves already publish, and the
+*reference-don't-vendor* posture, both stand — `p85`'s cost analysis is untouched. 🔴 **What changes
+is the class and the compliance step**: a reviewer who grades this address from the in-tree file is
+grading a notice, and the terms they would be held to are on a host this environment cannot open.
+🔵 Both payloads, digested, in
+[`evidence/pointer-grant-subtrees.2026-10-23-p414.tsv`](../evidence/pointer-grant-subtrees.2026-10-23-p414.tsv).
+
+### 🟢 The agent tier — nil new supply for a sixth pass, and five currency re-reads that all held
+
+🔴 **The English legs returned five agent-layer addresses and every one was already shelved.** 🟢 The
+budget was spent re-reading their grants first-hand at a ref rather than re-asserting carried cells:
+
+| slug | `LICENSE` read at a ref | bytes · sha256 | shelf |
+|---|---|---|---|
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `main/LICENSE` | `1 069` · `7d574cf3632e` | 🟢 **MIT**, agrees |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | `main/LICENSE` | `1 078` · `4d5d987f4f89` | 🟢 **MIT**, agrees |
+| [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | `master/LICENSE` | `1 064` · `092d389ac156` | 🟢 **MIT**, agrees |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main/LICENSE` | `11 408` · `cd2f54e1e506` | 🟢 **Apache-2.0**, agrees |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `main/LICENSE` | `1 230` · `f952182df4eb` | 🟡 bytes and digest agree; **class does not** — above |
+
+🔴 **No star figure is recorded this pass, and that is deliberate.** The relay offered `DeepTutor` at
+*"~41.6k"* and *"~41k"* from two sources against the `22`–`24k` these shelves carry from August.
+🟢 **Stars are unverifiable on this environment**: `api.github.com` is `AUTHZ-REFUSED`, and a relayed
+figure cannot be pinned to a ref or digested. 🔵 Recording the movement as fact would put an
+unverifiable number in a cell that currently holds a dated one — see
+[`evidence/agent-licence-reread.2026-10-23-p414.tsv`](../evidence/agent-licence-reread.2026-10-23-p414.tsv).
+
+### 🔵 One channel claim this pass nearly published, and did not
+
+🟡 **`registry.npmjs.org` is not a new channel.** It answered `200` on a real package and a semantic
+`404` on an invented one, which looked like a third surface beside `p413`'s two. 🔴 **This base opened
+it at pass 49** — [`compose/code/npm-surface-probe`](../compose/code/npm-surface-probe/README.md) —
+and `intel/trends.md` already calls it *"an independent second channel"*. 🟢 Checked before writing,
+and recorded here so a successor does not spend a leg rediscovering it. 🔵 `p413`'s *"two surfaces
+remain"* should read **three**: PyPI JSON, `raw.githubusercontent.com`, and the npm registry.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

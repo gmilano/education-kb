@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🔴 The standing rule this pass establishes: a refusal has a CLASS, and the class decides whether a fact is obtainable
+
+🔵 `p413` made the channel an **allowlist** and set the register rule *"unverifiable on this channel"*
+over *"re-try the host"*. 🟢 **That rule survives and gets a discriminator.** The two refusals these
+shelves have recorded as one are distinguishable by a single observable — **does a body come back** —
+and the consequence differs:
+
+| if the probe shows | the class is | and the correct register entry is |
+|---|---|---|
+| `http=000`, no body, `CONNECT tunnel failed, response 403` | 🔴 **TUNNEL-REFUSED** | *"unverifiable on this channel"* — 🔴 **no pass can obtain it**, so an open gap asking for it is work nobody can do |
+| `http=403` **with** a readable body naming a scope | 🔴 **AUTHZ-REFUSED** | *"reachable but unauthorised"* — 🟢 obtainable **in principle**, so it may be recorded as a blocked request rather than an impossibility |
+
+🔴 **Why the conflation cost something real.** `Gap 488` was already misframed per `p413`. The same
+shape reaches further: every `github.com`-family figure on these shelves — star counts above all —
+has been recorded as *proxy-blocked*, which reads like the permanent class. 🟢 **It is the
+`AUTHZ-REFUSED` class**: the host answers, the tunnel opens, and the refusal names its own remedy. 🔵
+That does not make the figures obtainable *here*, and this pass still declines to carry a star count;
+what changes is that the ledger should say **which** wall it hit.
+
+### 🔵 Trend reading — two shifts this pass measured rather than read about
+
+🟢 **T1 · The licence a repository *shows* is drifting away from the licence it *grants*, and the
+drift is toward REFERENCE.** Two instruments converge on it this pass. `GarethManning/education-agent-skills`
+publishes **two** CC BY-SA notices, **neither** containing the operative legalcode and both pointing
+at `creativecommons.org` — a host this environment cannot open. 🔴 And the AGPL-3.0 lattice shows the
+opposite failure on the same axis: **four** byte-distinct presentations of **one** text, where a
+consumer grading by digest or byte band sees four licences and a consumer grading by reference sees
+none. 🟢 **The reading for a studio:** an in-tree `LICENSE` is now **two** questions, not one — *which
+text is this* (the lattice answers it in-tree) and *is the text even here* (`p307`'s `POINTER` class
+answers it, and increasingly the answer is no). 🔴 Skill-packs and prompt assets fail the second
+question far more often than source trees do, and this industry's newest supply is skill-packs.
+
+🟢 **T2 · Public-sector AI in education keeps producing supply that has no address — and Japan is a
+step EARLIER than Germany.** `p413` found **KIMADU**: permissively-granted agents (`CC BY-SA 4.0`
+prompts) with **no repository**. 🟡 This pass finds **MEXT** intending to build its own
+education-specific AI application for **FY2027** demonstration research, with costs in the **FY2027
+概算要求** — **no licence stated and no repository stated**. 🔵 So the shape now has two rungs: *grant
+without address* (Germany) and *neither grant nor address* (Japan), and both are state-funded. 🔴
+**Neither is a build-on address and neither should be shelved as one.** 🟢 **What it predicts:** the
+procurement question a studio will be asked in both regions is *"can you take over something the
+ministry built"*, and the answer depends on a grant that does not exist yet — which is an argument for
+being in the room before FY2027, not after. 🟡 Both rows are **search-channel only**: `mext.go.jp`,
+`asahi.com` and all five French ministry hosts are `TUNNEL-REFUSED`.
+
+🔵 **T3 · And a counter-current worth naming, because it points the other way.** 🟡 France's *cadre
+d'usage* instructs its readers to **prefer libre solutions** *"qui permettent un contrôle des corpus
+utilisés ainsi que des procédures de traitement"* — a ministry stating a preference for open source
+in writing, on sovereignty-of-corpus grounds rather than cost. 🟢 That is the clearest EMEA demand
+signal on these shelves for exactly what this base is built to supply. 🔴 **It is search-channel only
+and must stay labelled so**: `education.gouv.fr` and `eduscol.education.fr` are both
+`TUNNEL-REFUSED`, so the sentence is relayed, not read.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

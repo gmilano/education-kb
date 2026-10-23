@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🔴 `34 501` is not a revision — it is `acanas/swad-core`'s de-indented title line, and this base put its only `http` instance in the reference slot
+
+🔵 `p413` closed `Gap 412-B` with a two-form model and this file still carries it: *"`https` **34 523**
+B / 661 lines / 5 of 10"* against *"`http` **34 501** B / 662 lines / **1 of 10** (`acanas/swad-core`)"*.
+🔴 **A reference derived from a single instance is a sample, and this one is the outlier.** 🟢 Seven
+AGPL-3.0 payloads were read first-hand at a ref this pass, and the measurement that settles it is the
+**leading indentation of line 1**:
+
+| slug | bytes | lines | `https://` | title indent | sha256 |
+|---|---|---|---|---|---|
+| [`acanas/swad-core`](https://github.com/acanas/swad-core) | **34 501** | 662 | 0 | 🔴 **0 sp** | `884b434957ba` |
+| [`mastodon/mastodon`](https://github.com/mastodon/mastodon) | **34 520** | 661 | 0 | 🟢 **20 sp** | `57c8ff33c9c0` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(rider stripped)* | **34 521** | 662 | 0 | 🟢 **20 sp** | `432d251a78db` |
+| [`grafana/grafana`](https://github.com/grafana/grafana) | **34 523** | 661 | 3 | 🟢 **20 sp** | `0d96a4ff68ad` |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | **34 524** | 662 | 3 | 🟢 **20 sp** | `8d56b405468a` |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | **34 524** | 662 | 3 | 🟢 **20 sp** | `8d56b405468a` |
+
+🔴 **`swad-core` is the only de-indented payload — 1 of 7.** Its `diff` against `edx-platform`'s base
+is **two hunks and 20 bytes**: line 1 loses its 20 leading spaces, and the §"How to Apply" reflow at
+lines 636–637 moves a word across a line break at **zero** byte cost. 🟢 So the `http` revision
+**does** carry the canonical 20-space title indentation — `mastodon` and `edx-platform` both prove it
+— and `34 501` is a **transcription artifact of one repository**, not a form of the licence.
+
+🔴 **And this file's own closing arithmetic is numerically right and causally wrong.** It reads
+**`34 501 + 20 + 3 − 1 = 34 523`** ✔ and attributes the `+20` to *"the title line's leading
+indentation"* — correct as a mechanism — but then books it as a property of the **`http` form**.
+🟢 It is a property of **`swad-core`**. 🔴 The `−1` fails the same way: this file calls it *"a trailing
+blank line present in the `http` form and absent in the `https` one"*, yet `grafana` is `https` at
+**661** lines and `blend-ed` is `https` at **662**. **The line count varies inside both schemes**, so
+it is an independent axis, not a scheme property. 🟢 The identity balanced because two unrelated
+terms happened to cancel.
+
+🟢 **What replaces it: two independent axes over one base, and all four cells are measured.**
+
+| cell | scheme | lines | bytes | instance read this pass |
+|---|---|---|---|---|
+| 1 | `http://` | 661 | **34 520** | `mastodon/mastodon` |
+| 2 | `http://` | 662 | **34 521** | `openedx/edx-platform` *(under its rider)* |
+| 3 | `https://` | 661 | **34 523** | `grafana/grafana` + the 5 this file already carries |
+| 4 | `https://` | 662 | **34 524** | `blend-ed/openedx-mcp`, `blend-ed/tutor-contrib-openedxmcp` |
+
+> **`bytes = 34 520 + 3·(scheme == https) + 1·(line 662 present)`**, and `swad-core` is that minus
+> **20** for its de-indented title.
+
+🔵 **`Pattern AI`'s `~34 522 B` still matches no cell, and this pass does not rehabilitate it.**
+`intel/open-gaps.md` records it as matching neither form; against the lattice it matches none of the
+**four**. 🟢 What changes is the bracket: it sits **inside** the span `34 520`–`34 524`, between cells
+2 and 3. 🔴 The gap stays **OPEN** — a figure one byte from a real cell is still unprovenanced, and
+`p413` was right that it reads as a subtraction.
+
+🔵 **`openedx/edx-platform`'s rider, re-measured so the lattice can be checked against it.** Total
+**35 136** B / **671** lines; strip the appended block and the base is **34 521** / **662** /
+`432d251a78db` — **lattice cell 2, exactly**. 🟢 The rider is therefore a **pure append** of
+**615 B / 9 lines**, which confirms `p413`'s own count of *"nine operative lines"* and refutes this
+base's older cell at `repos/trending.md` reading *"`10` APPENDED lines"* — corrected on that shelf
+this pass. 🔵 What the rider **says**, and the `NARROWED-OPERATIVE` consequence for a separate
+RPC-speaking service beside Open edX, is `p413`'s finding and is **not** restated here.
+
+🟢 Full table, with the off-lattice arithmetic, in
+[`evidence/agpl-presentation-lattice.2026-10-23-p414.tsv`](../evidence/agpl-presentation-lattice.2026-10-23-p414.tsv).
+🔵 The runnable selector that replaces Amendment 6 is **Amendment 7** on the patterns shelf.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

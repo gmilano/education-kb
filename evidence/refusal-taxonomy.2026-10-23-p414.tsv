@@ -1,0 +1,21 @@
+# p414 · 2026-10-23 · the egress refusal has FOUR measured classes, not one. Control pair run FIRST per p293.
+# p413 recorded "http=000 - connection never established, not a 403". There IS a 403: at the CONNECT layer.
+# Reproduce: compose/code/p414-refusal-taxonomy/refusal.sh <url>...
+url	http	bytes	body_returned	class	diagnosis	remedy_on_this_environment
+https://pypi.org/pypi/openedx-core/json	200	73176	yes	SERVED	positive control	-
+https://raw.githubusercontent.com/openedx/edx-platform/master/LICENSE	200	35136	yes	SERVED	positive control	-
+https://registry.npmjs.org/moodle-mcp-server	200	10312	yes	SERVED	channel open since pass 49	-
+https://registry.npmjs.org/this-package-does-not-exist-p414	404	21	yes	SEMANTIC-404	the registry ANSWERED; absence is a fact	-
+https://api.github.com/repos/openedx/edx-platform	403	378	yes	AUTHZ-REFUSED	tunnel OK; body names the session repository scope	a scope grant; NOT a host problem
+https://codeload.github.com/openedx/edx-platform/tar.gz/refs/heads/master	403	378	yes	AUTHZ-REFUSED	same gate as api.github.com, same 378 B body	a scope grant
+https://www.mext.go.jp/	000	0	no	TUNNEL-REFUSED	CONNECT tunnel failed, response 403; connect_rejected	NONE. host not on the session allowlist
+https://www.asahi.com/	000	0	no	TUNNEL-REFUSED	CONNECT tunnel failed, response 403	NONE
+https://moodle.org/	000	0	no	TUNNEL-REFUSED	this industry's flagship project domain	NONE
+https://forge.apps.education.fr/	000	0	no	TUNNEL-REFUSED	France's state education forge	NONE
+https://www.education.gouv.fr/	000	0	no	TUNNEL-REFUSED	EMEA statutory authority	NONE
+https://eduscol.education.fr/	000	0	no	TUNNEL-REFUSED	EMEA institutional authority	NONE
+https://conseil-ia-numerique.fr/	000	0	no	TUNNEL-REFUSED	EMEA advisory authority	NONE
+https://pix.fr/	000	0	no	TUNNEL-REFUSED	EMEA state operator	NONE
+https://creativecommons.org/licenses/by-sa/4.0/legalcode	000	0	no	TUNNEL-REFUSED	the OPERATIVE text of a carried address's grant	NONE
+# CONSEQUENCE: TUNNEL-REFUSED and AUTHZ-REFUSED are different facts with different remedies.
+# p798-proxy-refusal-ledger records refusals without this class split. Successor item 1.

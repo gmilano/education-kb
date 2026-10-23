@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🟢 Signals this pass — what moved, dated, with the channel that read it
+
+| signal | reading | channel |
+|---|---|---|
+| 🔴 **A carried agent address's grant is a POINTER on both subtrees** | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) root `LICENSE` **`1 230` B / `f952182df4eb`** and `mcp-server/LICENSE` **`978` B / `f8366f5391f4`** — two different CC BY-SA notices, neither carrying the operative legalcode, and the scope sentence deleted from the **code** subtree | 🟢 `raw.githubusercontent.com` |
+| 🔴 **Its operative licence text is unreachable here** | `creativecommons.org/licenses/by-sa/4.0/legalcode` → `http=000`, `CONNECT` 403 | 🟢 probe, control pair first |
+| 🟢 **Four MIT/Apache agent grants re-read and all held** | `Li-Evan/Bloom` `1 069` B · `SirhanMacx/Claw-ED` `1 078` B · `TovTechOrg/Tov-learn` `1 064` B · `HKUDS/DeepTutor` `11 408` B | 🟢 `raw.githubusercontent.com` |
+| 🟡 **A state-built education AI with neither a grant nor an address** | **Japan / MEXT** is to build its **own** education-specific AI application, aiming at **FY2027** demonstration research, with development and school information-security costs placed in the **FY2027 概算要求** — a **budget request**, not an appropriation. 🔴 **No licence and no repository are stated anywhere in the leg** | 🟡 **search channel only** — `mext.go.jp` and `asahi.com` are both `TUNNEL-REFUSED` |
+| 🟡 **An EMEA ministry that prefers libre by written policy** | **France**'s *cadre d'usage de l'IA en éducation* instructs readers to *"privilégiez les solutions libres qui permettent un contrôle des corpus utilisés ainsi que des procédures de traitement"*, alongside a **feuille de route IA 2026–2027** and **La Forge des communs numériques éducatifs** for libre educational resources | 🟡 **search channel only** — `education.gouv.fr`, `eduscol.education.fr`, `forge.apps.education.fr`, `conseil-ia-numerique.fr`, `pix.fr` are **all five** `TUNNEL-REFUSED` |
+| 🟡 **A French AI-tutor pilot with a stated window** | an AI tutor to be trialled in pilot classes from **Q3 2026** with a review in **2027**; a **Pix IA** pathway made compulsory for some pupils per the *Bulletin officiel* of **5 February 2026** | 🟡 search channel only |
+
+🔴 **Two figures the legs offered and this pass declines to carry.** A **€230 M over three years**
+French education-AI budget appears on one general-news site and in no official source in the leg; and
+a *"70 % completion-rate uplift from AI personalisation"* figure has no visible primary source. 🟢
+`gate-restatement`'s posture: neither enters, not even at band `reported`.
+
+### 🔴 Searched and NOT found — recorded so a successor does not re-spend the leg
+
+🔵 **Eight legs ran: the brief's four global queries and its four regional ones, the last two in
+German-adjacent and in-language form after `p413` showed that is where the yield is.**
+
+| leg | yield |
+|---|---|
+| 🔴 `top open source AI agents education 2026 github MIT` | **0 unshelved.** Returns general agent listicles — `OpenHands`, `MetaGPT`, `CrewAI`, `LangGraph`, `OpenClaw` — none education-native. 🔵 One result flags `AgentGPT` as **GPL-3.0 and archived 2026-01-28**, which this base does not shelve and does not need |
+| 🔴 `github trending education AI 2026` *(brief's literal)* | **0 unshelved** — `DeepTutor`, `Li-Evan/Bloom`, `SirhanMacx/Claw-ED`, `TovTechOrg/Tov-learn`, `GarethManning/education-agent-skills`. 🔵 **Seventh consecutive pass** in which this literal query yields no new address |
+| 🔴 `open source platform education LMS SIS MIT Apache` | **0 unshelved** — Moodle, Open edX, OpenEduCat, Chamilo, ILIAS, Canvas, all carried on the verticals shelf |
+| 🔴 `AI education industry trends 2026` | **0 admissible.** Market sizes spread **$2.7 B** (AI-tutors segment) to **$10.6 B** (whole market) across three vendor reports on three different definitions; 🔵 the spread is the finding, and this base already holds it |
+| 🔴 North America leg | **0 unshelved.** US state K-12 AI legislation — Idaho `SB 1227`, Ohio `HB 96`, Arizona `HB 4040`, California `AB 1159`, `H.R. 8747` — is the axis these shelves already hold |
+| 🟡 EMEA leg *(French)* | 🟢 **the only leg that paid.** `La Forge`, `communs numériques`, `solutions libres` and `feuille de route` are all at **0 hits** on the live shelves; `Pix` at 4. Rows above, all search-channel |
+| 🟡 APAC leg *(Japanese + English)* | 🟢 **the MEXT own-build row above is unshelved** (`実証研究`, `FY2027`, `2027年度`, `概算要求` all **0 hits**). 🔴 Everything else was carried: Korea's `AI Basic Act` (**72** hits), Vietnam's `Decision 33/2026` (**35**), automated assessment as high-risk (**18**), `Squirrel AI` (**4**) |
+| 🔴 LATAM leg *(Spanish)* | **0 unshelved.** `Estado de México`'s April 2026 education-law reform is carried **with its `media superior`/`superior` scope**; `PL 2338/2023` at **35** hits; Perú and El Salvador carried. 🔵 The only new token is the article number — **`artículo 61`** — which is a label on a carried fact, not a fact |
+
+🟢 **The saturation reading, now sixth-consecutive and measured rather than asserted**: every hit
+count above was taken with `grep -ri` against the eight live shelves before the row was written.
+🔴 **And `p412`'s successor item 3 holds for a fifth pass** — the English regional legs are the ones
+that return nothing, and the in-language legs are the ones that pay. 🟢 This pass re-confirms it at
+the cost of two legs and says so, rather than letting a seventh pass rediscover it.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

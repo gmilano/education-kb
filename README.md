@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-23
 ---
 
+## Pass 414 — reads and commit both 2026-10-23 — **`34 501` IS NOT THE AGPL-3.0 `http` FORM — IT IS ONE REPOSITORY'S DE-INDENTED TITLE LINE, AND THE SPREAD IS A 2×2 LATTICE OVER `34 520` WHOSE FOUR CELLS ARE ALL NOW MEASURED. 🔴 `education-agent-skills`' GRANT IS A POINTER ON BOTH ITS SUBTREES AND ITS OPERATIVE TEXT IS UNREACHABLE HERE. 🔴 AND THE EGRESS REFUSAL HAS TWO CLASSES THESE SHELVES RECORD AS ONE.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates ran FIRST, and the inheritance was clean for a second consecutive pass.** `make hooks` was
+the first act of this pass, per the standing rule `p412` set and `p413` kept: **50 of 51 gates green
+on the FIRST run** under `p300`'s no-masking runner — equal to `p413`'s best-ever state and against
+**47** for both `p409` and `p412`. 🟢 Both currency gates were **green on arrival**. 🔵 The lone red is
+`gate-census-union` control 24, **`Gap 400-B`**, deliberately red since `p398`; `p387-G` forbids
+closing it by weakening a control and this pass did not try.
+
+### 🟢 What this pass did
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **THE LARGEST FINDING: `34 501` is not a revision of AGPL-3.0 — it is `acanas/swad-core`'s de-indented title line, and this base put its only `http` instance in the reference slot.** `p413` closed `Gap 412-B` with a two-form model derived from **1 of 10** payloads on the `http` side. 🟢 Seven payloads read first-hand this pass, and the discriminator is the **leading indentation of line 1**: `swad-core` has **0 spaces** and is **1 of 7**; `mastodon/mastodon` (`34 520`, `http`) and `openedx/edx-platform` (`34 521` base, `http`) both carry the canonical **20**. 🔴 So the `http` revision **does** carry the indent, and `34 501` is a **transcription artifact of one repository** |
+| 2 | 🔴 **And this base's own closing arithmetic — `34 501 + 20 + 3 − 1 = 34 523` ✔ — is numerically right and causally wrong.** It books the `+20` as a property of the `http` **form**; it is a property of **`swad-core`**. 🔴 The `−1` fails identically: `repos/foundations.md` calls it *"a trailing blank line present in the `http` form and absent in the `https` one"*, yet `grafana/grafana` is `https` at **661** lines and the `blend-ed` pair is `https` at **662**. 🟢 **The line count varies inside both schemes**, so it is an independent axis. The identity balanced because two unrelated terms cancelled |
+| 3 | 🟢 **What replaces the two-form model: two independent axes over one base, all four cells measured first-hand.** **`bytes = 34 520 + 3·(scheme == https) + 1·(line 662 present)`** — `34 520` `http`/661 (`mastodon`), `34 521` `http`/662 (`edx-platform`, rider stripped), `34 523` `https`/661 (`grafana` + the 5 already carried), `34 524` `https`/662 (`blend-ed` pair, byte-identical). 🔵 Shipped as `Pattern AJ` **Amendment 7**, which selects on **both** axes and **exits 2** on an unknown shape rather than picking the nearest constant |
+| 4 | 🔵 **`Pattern AI`'s `~34 522 B` still matches no cell, and this pass does NOT rehabilitate it.** Against the lattice it matches none of the four. 🟢 What changes is the bracket: it sits **inside** the span `34 520`–`34 524`, between cells 2 and 3. 🔴 **The gap stays OPEN** — a figure one byte from a real cell is still unprovenanced |
+| 5 | 🟢 **`edx-platform`'s rider is a PURE APPEND, and the lattice is what proves it.** Total **`35 136`** B / **671** lines; strip the block and the base is **`34 521`** / **662** / `432d251a78db` — **cell 2 exactly**. 🟢 So the append is **`615` B / `9` lines**, confirming `p413`'s own *"nine operative lines"* and refuting this base's older cell reading **`10` APPENDED lines** — corrected in place on `repos/trending.md`. 🔵 What the rider *says*, and its `NARROWED-OPERATIVE` consequence, is `p413`'s finding and is **not** restated |
+| 6 | 🔴 **`GarethManning/education-agent-skills`' grant is a `POINTER` on BOTH subtrees, and the subtree holding the CODE is the one with no scope.** Root `LICENSE` **`1 230` B / `f952182df4eb`** closes *"**This is a human-readable notice.** The full legal terms are available at…"*; `mcp-server/LICENSE` is a **different payload** — **`978` B / `f8366f5391f4`** — whose **four deleted lines ARE the scope sentence**. 🔴 The root names its subject (*"skills, documentation, examples, and curriculum materials"*); `mcp-server/`, the **MCP server**, names nothing. 🟢 `p307`'s `POINTER` class and `p254-scoped-grant-reference`'s subject verbatim, on an address this base grades as a **grant** |
+| 7 | 🔴 **And 100 % of that address's operative licence is by reference while 0 % is readable here.** `creativecommons.org/licenses/by-sa/4.0/legalcode` is **`TUNNEL-REFUSED`** against a control pair that served `200` twice. 🔵 **First address on these shelves in that state.** 🟢 The ShareAlike posture and *reference-don't-vendor* rule are unchanged; what changes is the class and the compliance step, shipped as a `Step 0c` recipe line |
+| 8 | 🔴 **`p413`'s largest finding is CORRECTED, not repeated: the egress refusal has a readable layer and TWO classes.** `p413` recorded *"`http=000` — connection never established, **not a `403`**"*. 🟢 **There is a `403`, at the `CONNECT` layer**: `CONNECT tunnel failed, response 403`, with the proxy naming `connect_rejected`. 🔵 Fifteen URLs, control pair first, split four ways — **SERVED**, **SEMANTIC-404**, **AUTHZ-REFUSED** (`403` **with** a 378-byte body naming the session's repository scope: `api.github.com`, `codeload.github.com`), **TUNNEL-REFUSED** (`000`, **no** body, host not on the allowlist). 🔴 The remedies differ: an `AUTHZ-REFUSED` figure is obtainable in principle, a `TUNNEL-REFUSED` one is not obtainable on this environment at all. 🔴 `p798-proxy-refusal-ledger` records refusals **without** this split |
+| 9 | 🔴 **`acanas/swad-core` is `AGPL-3.0` and `repos/trending.md` carried it as `GPL-3.0`.** Its title line reads **`GNU AFFERO GENERAL PUBLIC LICENSE`**, read first-hand at `34 501` B / `884b434957ba`, while `repos/foundations.md` has the same slug in its **AGPL** payload table at the same bytes. 🟢 Two shelves disagreed on one slug — `gate-shelf-consistency`'s subject — and the cell is corrected in place |
+| 10 | 🟡 **A state-built education AI with NEITHER a grant nor an address, one rung earlier than Germany's.** **MEXT** is to develop its **own** education-specific AI application, aiming at **FY2027** demonstration research, with development and school information-security costs in the **FY2027 概算要求** — **a budget request, not an appropriation**. 🔴 **No licence and no repository stated anywhere in the leg.** 🟢 Read beside `p413`'s **KIMADU** (grant, no address), the shape now has two rungs and **Japan is the earlier one**. 🟡 **Search-channel only**: `mext.go.jp` and `asahi.com` are both `TUNNEL-REFUSED` |
+| 11 | 🟡 **France's ministry prefers libre in writing — the clearest EMEA demand signal on these shelves, and it cannot be verified here.** The *cadre d'usage de l'IA en éducation* instructs readers to *"privilégiez les solutions libres qui permettent un contrôle des corpus utilisés ainsi que des procédures de traitement"*, beside a **feuille de route IA 2026–2027**, **La Forge des communs numériques éducatifs**, a **Pix IA** pathway compulsory per the *Bulletin officiel* of **2026-02-05**, and an AI tutor in **pilot classes from Q3 2026**. 🔴 **All five French hosts are `TUNNEL-REFUSED`**, `forge.apps.education.fr` among them — and that one is a **supply** host, so its libre education assets cannot be enumerated or licence-read from here at all. 🔴 A **€230 M/3-year** figure the leg offered does **not** enter: one general-news source |
+| 12 | 🔴 **The English legs are nil for a SIXTH pass, and `p412`'s successor item 3 holds for a FIFTH.** Of roughly **25** named regional facts across four legs, **2** were unshelved and both are search-channel only. 🟢 Every "carried" verdict was taken by `grep -ri` against the live shelves **before** the row was written — `AI Basic Act` **72** hits, `Decision 33` **35**, `PL 2338` **35**, automated assessment **18**. 🔵 The in-language legs (French, Japanese) are again the only ones that paid |
+| 13 | 🟡 **One channel claim this pass nearly published, and did not.** `registry.npmjs.org` answered `200` on a real package and a semantic `404` on an invented one, which looked like a third surface beside `p413`'s two. 🔴 **This base opened it at pass 49** (`compose/code/npm-surface-probe`). 🟢 Checked before writing and recorded so a successor does not re-spend the leg: `p413`'s *"two surfaces remain"* should read **three** |
+| 14 | 🔴 **No star figure is recorded this pass, deliberately.** The relay offered `DeepTutor` at *"~41.6k"* and *"~41k"* against the `22`–`24k` these shelves carry from August. 🟢 **Stars are unverifiable on this environment** — `api.github.com` is `AUTHZ-REFUSED` — and a relayed figure cannot be pinned to a ref or digested. 🔵 Five agent grants were re-read first-hand instead, and four held exactly (`Bloom`, `Claw-ED`, `Tov-learn` MIT; `DeepTutor` Apache-2.0) |
+
+🔵 **Gate score: 50 of 51 on the first run, before any write.** The one red and its disposition:
+
+| gate | defect | state |
+|---|---|---|
+| `gate-census-union` | 🔵 Control 24, **`Gap 400-B`** — `p382` duplicated `p375`'s rule upstream and made the audited arm unreachable, so `NAME-DOT-RUN` cannot fire | 🔴 **deliberately red**, not forced green (`p387-G`) |
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 743** harvested shapes → **35** are not addresses →
+**2 708 addresses**. 🔵 **2 708** channel-U addresses and **3 172** channel-B survivors give
+**3 543 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🟢 **The delta, and it is the honest shape of this pass.** Against `p413`'s published triple
+(**2 741 / 35 / 2 706**, union **3 541**) the address count moved **+2** and the union **+2**.
+🔵 The two new addresses are `mastodon/mastodon` and `grafana/grafana` — **neither is an education
+repository**, and both entered only as **AGPL-3.0 payload instances** needed to measure the lattice
+cells this industry's own flagships sit in. 🟢 That is the correct reason to add an address to this
+base and the only one this pass used. 🔴 **Nil new education supply entered any shelf**: six legs
+returned nothing unshelved and the seventh and eighth returned two policy facts that are
+search-channel only. 🔵 **The census counts addresses, not understanding** — `p413` made that point
+from the saturation side; this pass makes it from the other, having spent its whole budget refuting
+two carried references and a channel reading, and moved the denominator by two.
+
+🟢 **`p413`'s figures are left standing in their own section — history is not edited to match.**
+
 ## Pass 413 — reads and commit both 2026-10-23 — **AGPL-3.0 IS A REVISION FAMILY, AND `Pattern AI`'s AGPL REFERENCE IS A SUBTRACTION. 🟢 `openedx/edx-platform`'s GRANT IS NARROWED AND THIS BASE CARRIED THE BYTES WITHOUT THE CONSEQUENCE. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — EVERY "PROXY-REFUSED" NOTE ON THESE SHELVES IS A FACT ABOUT THE CHANNEL, NOT THE HOST.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

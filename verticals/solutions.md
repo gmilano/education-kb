@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🟢 What the lattice changes for a vertical licence read, and the one row it corrects
+
+🔵 This shelf's job is to say whether a platform can be **built on**, and on the copyleft verticals
+that turns on reading one payload correctly. 🟢 **Two readings on this shelf's own flagships are
+re-derived first-hand this pass:**
+
+| platform | grant, read at a ref | what the lattice adds |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0**, `35 136` B / `671` lines / `e12d78569742` | 🟢 base is **`34 521`** = **lattice cell 2** (`http`, 662) + a **pure append** of `615` B / `9` lines. 🔵 The append's `NARROWED-OPERATIVE` consequence for a separate RPC service is `p413`'s finding and stands unchanged |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) · [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | **AGPL-3.0**, `34 524` B / `662` / `8d56b405468a`, byte-identical | 🟢 **lattice cell 4** (`https`, 662). 🔴 `Gap 297-R` is untouched: both halves of the Open edX MCP side-car remain copyleft, and a **permissive** side-car still does not exist |
+
+🔴 **The practical consequence, stated plainly:** a vertical licence read that grades by **byte band**
+will see `34 520`, `34 521`, `34 523` and `34 524` as four different instruments and `34 501` as a
+fifth. 🟢 They are **one licence in four presentations plus one de-indented transcription**, and the
+in-tree discriminator that resolves them — Amendment 7 — is on the patterns shelf. 🔵 On this shelf
+nothing is reclassified: every AGPL vertical row keeps its family, its posture and its gate.
+
+### 🟡 An EMEA procurement signal this shelf should hold, labelled for what it is
+
+🟡 **France's ministry prefers libre, in writing.** The *cadre d'usage de l'IA en éducation* instructs
+readers to *"privilégiez les solutions libres qui permettent un contrôle des corpus utilisés ainsi
+que des procédures de traitement"*, and the surrounding **feuille de route IA 2026–2027** names **La
+Forge des communs numériques éducatifs** as the state's channel for libre educational resources, plus
+an **AI tutor in pilot classes from Q3 2026** reviewed in **2027**. 🟢 For a shelf whose whole thesis
+is *customise an open platform rather than buy a closed one*, that is demand stated in the
+customer's own policy language. 🔴 **And it cannot be verified here**: `education.gouv.fr`,
+`eduscol.education.fr`, **`forge.apps.education.fr`**, `conseil-ia-numerique.fr` and `pix.fr` are
+**all five** `TUNNEL-REFUSED`, so this row is **search-channel only** per `gate-restatement`. 🔵 The
+forge being unreachable is the expensive part: it is a **supply** host, not a policy one, so whatever
+libre education assets it carries cannot be enumerated, licence-read or shelved from this
+environment at all. 🔴 Declared as a channel gap, not as an absence of supply.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below

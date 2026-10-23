@@ -1,0 +1,14 @@
+# p414 · 2026-10-23 · AGPL-3.0 presentation lattice, every payload read first-hand at a ref via raw.githubusercontent.com
+# Refutes repos/foundations.md's "two FSF forms" table and compose/patterns.md Amendment 6's n=0 -> 34501 selector.
+# title_indent = leading spaces on line 1. The 34501 value is acanas/swad-core's DE-INDENTED title, not the http form.
+slug	ref_path	bytes	lines	https_n	http_n	title_indent	sha256_12	lattice_cell	note
+acanas/swad-core	master/LICENSE	34501	662	0	3	0	884b434957ba	OFF-LATTICE	34521 minus 20 B of title indentation; 1 of 7 payloads de-indented
+mastodon/mastodon	main/LICENSE	34520	661	0	3	20	57c8ff33c9c0	http+661	lattice base
+openedx/edx-platform	master/LICENSE	35136	671	0	3	20	e12d78569742	http+662+rider	34521 base + 615 B / 9-line EdX Inc. rider (p413 read the rider)
+openedx/edx-platform	master/LICENSE (head -662)	34521	662	0	3	20	432d251a78db	http+662	rider stripped; canonical http form
+grafana/grafana	main/LICENSE	34523	661	3	0	20	0d96a4ff68ad	https+661	matches the 5 instances foundations.md already carries
+blend-ed/openedx-mcp	master/LICENSE	34524	662	3	0	20	8d56b405468a	https+662	p413's reading reproduced exactly
+blend-ed/tutor-contrib-openedxmcp	master/LICENSE	34524	662	3	0	20	8d56b405468a	https+662	p413's reading reproduced exactly
+# IDENTITY (all four cells measured): bytes = 34520 + 3*(scheme==https) + 1*(line 662 present)
+#   http  + 661 = 34520   http  + 662 = 34521   https + 661 = 34523   https + 662 = 34524
+# Pattern AI's ~34 522 B matches NO cell. It lies inside the span 34520-34524; nearest cells 34521 and 34523. Gap stays OPEN, bracket tightened.

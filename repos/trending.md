@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🔴 Two corrections this pass owes its own shelves, both found by reading a payload rather than a cell
+
+| # | correction |
+|---|---|
+| 1 | 🔴 **[`acanas/swad-core`](https://github.com/acanas/swad-core) is `AGPL-3.0`, and this shelf carried it as `GPL-3.0`.** Its `master/LICENSE` title line reads **`GNU AFFERO GENERAL PUBLIC LICENSE` / `Version 3, 19 November 2007`**, read first-hand at `34 501` B / `884b434957ba`. 🟢 `repos/foundations.md` has it right — it sits in that file's AGPL-3.0 payload table at the same bytes and digest — so the two shelves **disagreed on one slug**, which is `gate-shelf-consistency`'s subject exactly. 🟢 **The cell is corrected below in place** |
+| 2 | 🔴 **`edx-platform`'s rider is `9` appended lines, not `10`.** This shelf reads *"`35 136` B with `10` APPENDED lines from EdX Inc."*; `p413`'s own prose says *"nine operative lines"*. 🟢 First-hand: total **671** lines, base **662**, so the append is **9 lines / 615 B** — and stripping exactly those 9 yields `34 521` / `432d251a78db`, lattice cell 2. 🟢 **`p413`'s prose was right and this shelf's older cell was off by one; corrected below in place** |
+
+🔵 **Why a one-byte-class correction is worth a row:** both cells were *carried*, both looked
+settled, and both were refuted by reading the payload at a ref — which is the only instrument that
+can refute a cell. 🔴 Neither was found by a gate: `gate-shelf-consistency` grades disagreement
+between shelves and would have caught #1 had the AGPL table and this shelf been compared on the
+**family** rather than the bytes.
+
+### 🔴 The trending legs — nil new repositories, seventh consecutive pass on the literal query
+
+🔵 `github.com/trending` itself remains **unreachable** on this environment (and is now classed:
+`github.com` answers `400`, `api.github.com` and `codeload.github.com` are **`AUTHZ-REFUSED`** with a
+readable 378-byte body naming the session's repository scope). 🟢 So every "trending" claim on this
+shelf is, as before, **relayed** — and the relay returned `DeepTutor`, `Li-Evan/Bloom`,
+`SirhanMacx/Claw-ED`, `TovTechOrg/Tov-learn` and `GarethManning/education-agent-skills`, **all five
+already shelved**. 🔴 **No new repository enters this shelf this pass**, and padding it would be the
+failure the brief names.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
@@ -13855,7 +13915,7 @@ pages returned the most noise. That is the opposite of how this KB has been allo
 | 🆕 🟢 [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) | 🟡 `GPL-3.0` *(`34 903` B)* | `192` | LATAM |
 | 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(already shelved; re-seen)* | — | `94` | EMEA |
 | 🆕 🟢 [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir) | 🟡 `GPL` *(`34 917` B)* | `85` | Global |
-| 🆕 🟢 [`acanas/swad-core`](https://github.com/acanas/swad-core) | 🟡 `GPL-3.0` *(`34 501` B)* | `76` | EMEA |
+| 🆕 🟢 [`acanas/swad-core`](https://github.com/acanas/swad-core) | 🟡 **`AGPL-3.0`** *(`34 501` B)* 🔧 **corrected `p414`** — the payload's title line reads `GNU AFFERO GENERAL PUBLIC LICENSE`, read first-hand at `884b434957ba`; this cell said `GPL-3.0` | `76` | EMEA |
 | 🆕 🟢 [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🟡 `GPL-3.0` *(`33 820` B)* | `62` | EMEA |
 | 🆕 🟢 [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 `Apache-2.0` *(`11 323` B)* | `21` | North America |
 
@@ -14923,7 +14983,7 @@ withdrawn, because users AND enrolments are both served.**
 ### 🆕 🔴 A licence body that changes what you may build — `openedx/edx-platform`
 
 🔴 **`ACTION IW` read all `14` licence bodies on disk. `openedx/edx-platform` is `AGPL-3.0`
-(`35 136 B`) with `10` APPENDED lines from EdX Inc.:**
+(`35 136 B`) with `9` APPENDED lines from EdX Inc. 🔧 **corrected `p414`** — this cell said `10`; `671` total − `662` base = **`9`** lines / `615` B, matching `p413`'s own prose:**
 
 > 🟢 *"any public, independently available web service offered over the network and communicating
 > with edX's copyrighted works by any form of inter-service communication, including but not limited

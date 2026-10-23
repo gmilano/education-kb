@@ -1,0 +1,10 @@
+# p414 · 2026-10-23 · GarethManning/education-agent-skills — BOTH in-tree grants are POINTERS, and they are DIFFERENT payloads.
+# repos/trending.md:13531 notes "second grant at mcp-server/LICENSE" but never read it. This is gate-subtree-grant's subject (p382).
+path	bytes	lines	sha256_12	self_description	scope_sentence	spelling	p307_class
+main/LICENSE	1230	33	f952182df4eb	"This is a human-readable notice. The full legal terms are available at: <url>"	PRESENT - "skills, documentation, examples, and curriculum materials in this repository"	en-GB ("licence")	POINTER
+main/mcp-server/LICENSE	978	28	f8366f5391f4	"Full licence text: <url>"	ABSENT - names no subject matter at all	en-US ("license") + en-GB in the last line	POINTER
+# DELTA: 252 B. The 4 deleted lines ARE the scope sentence. mcp-server/ is the SOFTWARE half of the repo
+# and it is the half whose CC grant does NOT limit itself to curriculum content.
+# Neither payload contains CC BY-SA 4.0's operative legalcode; creativecommons.org is TUNNEL-REFUSED here.
+# So 100% of this address's operative licence text is by reference and 0% is readable on this channel. First such instance on these shelves.
+# The base carries this address as a GRANT (agents/trending.md:39563 "cesion, no identificador"). First-hand: POINTER on both subtrees.

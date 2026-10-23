@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-23
 ---
 
+## 🆕 `p414` · 2026-10-23 — **`34 501` is NOT the AGPL-3.0 `http` form — it is ONE repository's de-indented title line, and the spread is a 2×2 lattice over `34 520` whose four cells are all now measured. 🔴 `education-agent-skills`' grant is a POINTER on BOTH its subtrees and its operative text is unreachable here. 🔴 AND the egress refusal has TWO classes these shelves record as one.**
+
+🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
+was executed on **2026-10-23**, and the commit lands **2026-10-23**. 🔵 **This is the twentieth pass
+dated today**, after `p395`–`p413`.
+
+🟢 **Gates FIRST, per the standing rule `p412` set and `p413` kept.** `make hooks` ran **before** any
+research: **50 of 51 gates green on the FIRST run** — equal to `p413`'s best-ever first-run state and
+again against `47` for both `p409` and `p412`. 🔵 The lone red is `gate-census-union` control 24,
+**`Gap 400-B`**, carried deliberately red since `p398`; `p387-G` forbids closing it by weakening a
+control and this pass did not try. 🟢 **`p413` left the base clean** — the currency gates were green
+on arrival for the second consecutive pass.
+
+🔵 **Channel note, and it CORRECTS `p413`'s largest finding rather than repeating it.** `p413`
+concluded the egress channel is an **allowlist** and recorded its evidence as *"`http=000` —
+connection never established, **not a `403`**, not a `404`"*. 🔴 **There is a `403`, and it is at the
+`CONNECT` layer**: `curl` prints `CONNECT tunnel failed, response 403` and the proxy names
+`connect_rejected` — *"the host is not allowed for this session"*. 🟢 **`p413`'s conclusion was right
+and its evidence was under-read**, and reading it properly splits what these shelves record as one
+refusal into **two classes with different remedies**:
+
+| class | http | body | what it means | remedy here |
+|---|---|---|---|---|
+| 🟢 **SERVED** | `200` | yes | `pypi.org`, `raw.githubusercontent.com`, `registry.npmjs.org` | — |
+| 🟢 **SEMANTIC-404** | `404` | yes (21 B) | the registry **answered**; the absence is a fact | — |
+| 🔴 **AUTHZ-REFUSED** | `403` | **yes, 378 B** | tunnel opens; the body names the **session's repository scope** (`api.github.com`, `codeload.github.com`) | a scope grant — **not** a host problem |
+| 🔴 **TUNNEL-REFUSED** | `000` | **no** | `CONNECT` 403 + `connect_rejected`; host **not on the session allowlist** | 🔴 **none on this environment** |
+
+🔵 Fifteen URLs, control pair first, in
+[`evidence/refusal-taxonomy.2026-10-23-p414.tsv`](../evidence/refusal-taxonomy.2026-10-23-p414.tsv);
+the probe is [`compose/code/p414-refusal-taxonomy/refusal.sh`](../compose/code/p414-refusal-taxonomy/refusal.sh).
+🟢 **Why the split pays:** an `AUTHZ-REFUSED` host is reachable and merely unauthorised, so a figure
+behind it is *obtainable in principle*; a `TUNNEL-REFUSED` host is not, so a figure behind it is
+**unverifiable on this channel, permanently**, and `p413`'s standing register rule applies. 🔴 This
+base's own [`p798-proxy-refusal-ledger`](../compose/code/p798-proxy-refusal-ledger/README.md) records
+refusals **without** this class split — successor item 1.
+
+### 🔴 The regional layer — SIXTH consecutive nil on the English legs, with the gaps declared per region
+
+🔵 **All four regional legs ran, two of them in-language.** Every verdict below was taken by
+`grep -ri` against the eight live shelves **before** the row was written, so a "carried" claim is a
+measurement rather than a recollection:
+
+| region | what the leg returned | verdict |
+|---|---|---|
+| **North America** | US state K-12 AI legislation — Idaho `SB 1227` (enacted, bars AI replacing teachers), Ohio `HB 96` (district AI policy mandated), Arizona `HB 4040` (introduced, K-12 **and** public universities), California `AB 1159` (proposed, student-data training ban), federal `H.R. 8747` (advanced, not enacted); Anthropic's *Claude for Teachers* free for verified US K-12 educators through **2027-06-30** | 🔴 **0 unshelved.** This is the axis these shelves already hold. 🔵 **Declared gap: Canada and Mexico returned no federal education-AI instrument in this leg** — stated so the silence does not read as coverage |
+| **EMEA** | 🟢 **the only leg that paid.** France's *cadre d'usage* preferring **libre** solutions; **feuille de route IA 2026–2027**; **La Forge des communs numériques éducatifs**; **Pix IA** compulsory per *Bulletin officiel* **2026-02-05**; AI tutor in pilot classes from **Q3 2026**, review **2027** | 🟡 **4 of 5 tokens unshelved** (`La Forge`, `communs numériques`, `solutions libres`, `feuille de route` at **0** hits; `Pix` at 4). 🔴 **All search-channel only** — five French hosts `TUNNEL-REFUSED`. 🔵 **Declared gap: the leg returned nothing on Germany's Länder rules or on the AI Act applied to education**, and `p413`'s German leg is the last reading this base has |
+| **APAC** | 🟡 **MEXT to build its own education AI application**, FY2027 demonstration research, costs in the **FY2027 概算要求**; Korea's `AI Basic Act` in force **2026-01-22**, fines capped `KRW 30 M`, grace period ≥1 yr; Vietnam's AI law effective **2026-03-01** and a July 2026 decision naming education incl. automated assessment among six high-risk sectors; China's compulsory AI from age six; Korea's AI-textbook rollout losing official status after union objection, and a **$960 M** plan to 2030 | 🟡 **1 unshelved** — the MEXT own-build, with **no licence and no repository stated**, search-channel only. 🔴 Everything else carried: `AI Basic Act` **72** hits, `Decision 33` **35**, automated assessment **18**, `Squirrel AI` **4**. 🔵 **Declared gap: `KRW 30 M` and the `$960 M` figure are at 0 hits but both are single-relay and neither is carried** |
+| **LATAM** | `Estado de México`'s education-law reform (**April 2026**, graduated AI use in *media superior* and *superior*); `PL 2338/2023` still pending in Brazil's Câmara on one source and "expected 2026" on another; Perú and El Salvador with AI laws in force; Colombia, Brazil, Chile in progress; a 73 %-of-Mexican-undergraduates figure from a low-traceability blog | 🔴 **0 unshelved.** The Estado de México row is carried **with its scope**; the only new token is **`artículo 61`**, a label on a carried fact. 🔴 The 73 % figure does **not** enter. 🔵 **Declared gap: no LATAM leg has yet returned a state-published education-AI *repository*** — the region's supply side remains policy-only on these shelves |
+
+🔴 **The cost, recorded so a seventh pass does not pay it again.** Of roughly **25** named regional
+facts across the four legs, **two** were unshelved and both are **search-channel only**. 🟢
+`p412`'s successor item 3 — *do not re-ask the English regional legs* — now holds for a **fifth**
+consecutive pass, and `p413`'s corollary holds too: **the in-language legs are where the yield is.**
+🔵 This pass ran French and Japanese and both returned something; the English global and North
+America legs returned nothing, as predicted.
+
+### 🔵 Opportunity updates — folded into this file's single canonical block, not duplicated
+
+🟢 Added to the existing `## Opportunities by region` block below as **`🆕 p414`** paragraphs under
+the **existing** `### North America`, `### EMEA`, `### APAC`, `### LATAM` and `### Global`
+subsections. 🔴 **No second block is opened** — `p409` was caught by `p383`'s gate doing exactly that,
+and `gate-region-headings` has judged this file on every pass since `p338` wired it.
+
 ## 🆕 `p413` · 2026-10-23 — **AGPL-3.0 IS a revision family, and `Pattern AI`'s AGPL reference is a SUBTRACTION rather than a measurement. 🟢 `openedx/edx-platform`'s grant is NARROWED and this base carried the bytes without the consequence. 🔴 AND THE EGRESS CHANNEL IS AN ALLOWLIST — every "proxy-refused" note on these shelves is a fact about the CHANNEL, not the host.**
 
 🔵 **Dating note.** Every search leg, licence read, registry probe, channel probe and gate run below
@@ -537,6 +601,15 @@ exception that was worth all four legs**, because it did not add a fact, it **re
 
 ### North America
 
+🆕 `p414` 🔴 **Nothing new, and the gap is Canada and Mexico.** The North America leg returned only
+US state K-12 instruments this base already holds (Idaho `SB 1227`, Ohio `HB 96`, Arizona `HB 4040`,
+California `AB 1159`, federal `H.R. 8747`), plus *Claude for Teachers* free to verified US K-12
+educators through **2027-06-30**. 🔵 **Declared gap, stated so silence does not read as coverage:**
+the leg returned **no** federal education-AI instrument for **Canada** or **Mexico**, so the
+opportunity rows above remain US-only in their evidence base — a North America engagement outside
+the US is not yet served by this shelf.
+
+
 🟢 **Sell the district AI-use policy as a deliverable, not as advice.** Ohio requires **every** K-12
 district to adopt a formal AI policy by **2026-07-01** — 🆕 `p407` names the **instrument**, per
 `P955`: **Ohio Revised Code § 3301.24**, added by **House Bill 96** (the 2025 budget bill), with the
@@ -594,6 +667,24 @@ register before review, not after.
 
 ### EMEA
 
+🆕 `p414` 🟡 **France states a preference for libre in its own policy language — the clearest demand
+signal on this shelf, and it cannot be verified here.** The *cadre d'usage de l'IA en éducation*
+instructs readers to *"privilégiez les solutions libres qui permettent un contrôle des corpus
+utilisés ainsi que des procédures de traitement"*, set beside a **feuille de route IA 2026–2027**,
+**La Forge des communs numériques éducatifs** as the state channel for libre educational resources,
+a **Pix IA** pathway compulsory per the *Bulletin officiel* of **2026-02-05**, and an AI tutor in
+**pilot classes from Q3 2026** with a **2027** review. 🟢 **The sale this implies is not "consider
+open source" but "you have already mandated it — here is the integration capacity"**, and the
+sovereignty-of-corpus justification means the argument is about control, not licence cost. 🔴 **Band
+`reported`, search-channel only:** `education.gouv.fr`, `eduscol.education.fr`,
+`forge.apps.education.fr`, `conseil-ia-numerique.fr` and `pix.fr` are **all five** `TUNNEL-REFUSED`
+on this environment. 🔴 **A €230 M/3-year figure the leg offered is NOT carried** — one general-news
+source, no official confirmation. 🔵 **Declared gap:** nothing on Germany's Länder rules or the AI
+Act applied to education; `p413`'s German leg remains the last reading here. 🔴 And the expensive
+part is that **La Forge is a SUPPLY host**: whatever libre education assets it carries cannot be
+enumerated or licence-read from this environment at all.
+
+
 🟢 **Annex III conformity for education, as a reusable asset.** Education sits in the AI Act's
 high-risk tier for admission, evaluation and exam scoring; 🔴 **but enforcement has NOT begun** —
 the Digital Omnibus (in force **2026-07-27**) defers the **Annex III** education obligations to
@@ -649,6 +740,21 @@ institutional facts are search-channel on this environment and will stay so**, s
 should cite the relayed source openly and price first-hand legal verification as client-side work.
 
 ### APAC
+
+🆕 `p414` 🟡 **Japan is building education AI itself, and it has neither a licence nor a repository
+yet — which is the moment to be in the room.** **MEXT** is to develop its **own** education-specific
+AI application, aiming at **FY2027** demonstration research, with development and school
+information-security costs placed in the **FY2027 概算要求** — 🔴 **a budget request, not an
+appropriation**, so the programme is not yet funded. 🔴 **No licence and no repository are stated
+anywhere in the leg.** 🟢 Read beside `p413`'s **KIMADU** (Germany: `CC BY-SA 4.0` prompts, **no**
+repository), the shape now has two rungs — *grant without address*, and *neither grant nor address* —
+and **Japan is the earlier one**. 🔵 **The opportunity is the grant decision itself**: a ministry that
+has not chosen a licence can still be advised toward one, and the procurement question a studio will
+face in **FY2027** is *"can you take over what the ministry built"* — answerable only if the grant
+permits it. 🟡 **Search-channel only**: `mext.go.jp` and `asahi.com` are both `TUNNEL-REFUSED`. 🔵
+Everything else the leg returned is carried (Korea's `AI Basic Act`, Vietnam's `Decision 33/2026`,
+China's age-six mandate); `KRW 30 M` and a `$960 M` Korean plan are single-relay and **not** carried.
+
 
 🟢 **The clearest dated roadmap on earth, and almost nobody is selling against it — but price it to
 the RIGHT date.** Education is one of six high-risk sectors under Decision 33, and an education
@@ -726,6 +832,19 @@ which is the same portability argument the EMEA block already makes for conformi
 
 ### LATAM
 
+🆕 `p414` 🔴 **Zero unshelved, and the structural gap is now worth naming as a gap rather than a
+finding.** The Spanish leg returned `Estado de México`'s April 2026 education-law reform — carried
+here **with** its *media superior* / *superior* scope — plus `PL 2338/2023`, Perú and El Salvador,
+all carried. 🔵 The only new token is the article number, **`artículo 61`**, which is a label on a
+carried fact. 🔴 A *73 % of Mexican undergraduates* figure does **not** enter: low-traceability blog,
+single source. 🔴 **Declared gap, and it is the region's real asymmetry: no LATAM leg across six
+passes has returned a state-published education-AI REPOSITORY.** EMEA produces assessment and
+compliance layers, APAC produces policy and now state builds; LATAM's presence on these shelves is
+**policy-only on the supply axis**. 🟢 For a studio that is an opening, not a deficit — the region's
+open-source education supply is being built by nobody in particular, so a LATAM engagement starts
+from the global permissive shelf plus local integration, and the integration is the billable part.
+
+
 🟢 **The curriculum wave arrived and the capacity did not.** ILIA 2026: **11 of 20** countries now
 carry AI content in school programmes against **2 in 2024** — a 5.5× expansion in two years — while
 **only Brazil and Colombia** fund their national AI strategy, and universities operate in what the
@@ -785,6 +904,18 @@ against a statute**: the teacher-training and curriculum-grounding work is funda
 compliance deliverable waits on a framework whose text this base cannot read.
 
 ### Global
+
+🆕 `p414` 🔴 **One cross-region constraint hardened this pass, and it changes what a licence review
+can promise.** An in-tree `LICENSE` is now **two** questions, not one: *which text is this* — the
+AGPL-3.0 lattice answers it in-tree, four byte-distinct presentations of one licence — and *is the
+text even here*, where `GarethManning/education-agent-skills` answers **no** on **both** its
+subtrees, with the operative CC BY-SA 4.0 legalcode on a host that is `TUNNEL-REFUSED` from this
+environment. 🟢 **The commercial consequence is concrete:** a deliverable's licence review can be
+completed in-tree for source platforms (Open edX, Moodle, the AGPL verticals) and **cannot** be
+completed in-tree for the skill-packs and prompt assets that are this industry's newest supply. 🔵
+So a studio pricing a compliance review should price those two classes differently, and should say
+which of the two a component falls into before quoting it.
+
 
 🟢 **The cross-region asset is the conformity pack, and it is the one thing that compounds.** The
 same Annex III work prices against the EU's high-risk tier, Vietnam's Decision 33 risk model and
