@@ -1,0 +1,33 @@
+slug	ref	verdict	path	manifest
+AI4Bharat/Anudesh-Backend	Change-workers-count	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+CaviraOSS/PageLM	develop	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+EscolaLMS/LRS	gh-pages	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+GeminiLight/gen-mentor	gh-pages	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+Sunbird-Ed/SunbirdEd-mobile-app	release-2.6.0	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+Sunbird-Ed/SunbirdEd-mobile-app	release-2.7.0	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+arthtyagi/judge	gh-pages	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+assafkip/claudemy	assets	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+bmosoluciones/now-lms	gh-pages	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+chamilo/chamilo-lms	1.10.x	GRANTED-PATH	path=license.txt	manifest=composer.json: "license": "GPL-3.0",
+chamilo/chamilo-lms	1.9.x	GRANTED-PATH	path=license.txt	manifest=NONE
+huggingface/agents-course	UpdateDocTree	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+inducer/relate	add-read-timeout-nuisance	MANIFEST-ONLY	path=NONE	manifest=setup.py: license="MIT",
+inducer/relate	add-round-to-mock	MANIFEST-ONLY	path=NONE	manifest=setup.py: license="MIT",
+inducer/relate	add-saml-uri-attr-mapping	MANIFEST-ONLY	path=NONE	manifest=setup.py: license="MIT",
+inducer/relate	allow_user_defined_csv_codec	MANIFEST-ONLY	path=NONE	manifest=setup.py: license="MIT",
+jhudsl/ottrpal	gh-pages	GRANTED-PATH	path=LICENSE.html	manifest=NONE
+marmelab/atomic-crm	gh-pages	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+moodle/moodle	MOODLE_13_STABLE	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+moodle/moodle	MOODLE_14_STABLE	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+moodle/moodle	MOODLE_15_STABLE	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+naorpeled/aitutor	npm-distribution	MANIFEST-ONLY	path=NONE	manifest=package.json: "license": "MIT",
+netless-io/flat	gh-pages	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+peancor/moodle-mcp-server	dev	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+piyushdhoka/GradeU	admin	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+piyushdhoka/GradeU	teacher	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+rstudio/gradethis	garrett	MANIFEST-ONLY	path=NONE	manifest=DESCRIPTION: License: GPL-3
+rstudio/gradethis	grade_learnr_error	MANIFEST-ONLY	path=NONE	manifest=DESCRIPTION: License: GPL-3
+rstudio/learnr	gh-pages	GRANTED-PATH	path=LICENSE.html	manifest=NONE
+tutors-sdk/tutors	ai-chat-2	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+tutors-sdk/tutors	tailwind-4	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+tutors-sdk/tutors	ui-ux-improvement	NO-GRANT-CHANNEL	path=NONE	manifest=NONE

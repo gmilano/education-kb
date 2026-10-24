@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **The three Frappe platforms this base recommends were one lowercase filename away from being graded ungranted. 🟢 All three grant at `license.txt`: ERPNext GPL-3.0, Frappe LMS AGPL-3.0-or-later, Frappe Education. 🔴 And five Moodle AI plugins carry their GPL grant ONLY in source headers — one of them on no other channel at all.**
+
+🔵 Every read below is first-hand on **2026-10-24**, at a SHA or a ref resolved by `git ls-remote`.
+
+### 🟢 The grant-channel audit over the recommendation shelves — four channels, and the root path is the weakest
+
+🔴 **19 addresses on these shelves return no grant at any of 15 root paths.** Run through the deep
+ladder (25 paths), the manifest channel (7 manifests), the README channel (`p288`) and the
+file-header channel, **13 of the 19 are granted and the root path was simply the wrong place to look.**
+
+| address | where the grant actually is | licence, as measured |
+|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **`license.txt`** — lowercase, root; `LICENSE` → `404` | 🟢 **GPL-3.0** (`package.json` agrees: `"license": "GPL-3.0"`) |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`license.txt`** | 🟢 **AGPL-3.0-or-later** (`package.json` agrees) |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **`license.txt`** | 🟢 **GPL-family payload present**; no manifest field |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 **README + `index.php` header** — no root licence file | 🟡 **GPL** — *"openSIS is an Open Source Project licensed under the GNU General Public License"*, and `index.php` carries *"This program is released under the terms of the GNU General Public License"* |
+| [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | 🟡 README + `version.php` | 🟡 **GPL-3.0-or-later** |
+| [`marcusgreen/moodle-tool_aiconnect`](https://github.com/marcusgreen/moodle-tool_aiconnect) | 🔴 **`version.php` ONLY** — its `readme.md` contains no licence word | 🟡 **GPL-3.0-or-later**, on a single channel |
+| [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟡 README (*"GNU GPL v3 or later"*) + `version.php` | 🟡 **GPL-3.0-or-later** |
+| [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟡 `version.php` | 🟡 **GPL-3.0-or-later** |
+| [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🟡 `version.php`; 🔴 its README's `## License` section is **empty** | 🟡 **GPL-3.0-or-later** — 🟢 **this shelf already says exactly this**, and the audit confirms it |
+| [`TecFancy/dsh-deeptutor`](https://github.com/TecFancy/dsh-deeptutor) | 🟡 `package.json` only | 🟡 **MIT, manifest-only** — carried verdict confirmed |
+| [`nanobpm/nano-ide`](https://github.com/nanobpm/nano-ide) | 🟡 `package.json` only | 🟡 **Apache-2.0, manifest-only** — carried verdict confirmed |
+| [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) | 🟡 **`DESCRIPTION`** — the R convention, no root licence file | 🟡 **GPL-3** |
+| [`philchalmers/mirt`](https://github.com/philchalmers/mirt) | 🟡 **`DESCRIPTION`** | 🟡 **GPL (>= 3)** |
+
+🔴 **The Moodle plugin ecosystem is the load-bearing case, and it is systematic rather than sloppy.**
+Moodle plugins **never** ship a root licence file; the grant lives in the GPL boilerplate at the top
+of `version.php`. 🔴 **A root-path auditor marks the entire Moodle plugin ecosystem ungranted** — and
+the correct verdict, **GPL-3.0-or-later**, is a *copyleft* obligation, so the error is not merely a
+false negative: it would also let a studio mistake a plugin for permissive-ready if it ever flipped
+to a badge read. 🟢 **`Gap 298` / `Gap 405-A` are untouched by all of this**: nothing here is
+permissive, and the scarcity of a permissively-licensed SIS or LMS is confirmed on a **seventh**
+independent channel this pass.
+
+### 🔴 Six that survive all four channels — and the base already graded every one of them
+
+`1EdTech/openbadges-specification` (`develop`) · `Daniel-ux1026/Tutor-Inteligente` ·
+`Nutlope/llamatutor` · `gradescope/autograder_samples` · `savinoo/ai-grading-system` ·
+`x-cookie/agent`.
+
+🟢 **Not one is a new finding.** `agents/top.md` already carries `gradescope/autograder_samples` as
+*"UNGRANTED AT ROOT"* with its two **vendored** `jh61b/LICENSE.txt` copies named; `llamatutor` (46
+files) and `Tutor-Inteligente` (145) as ungranted **by full tree enumeration** — a stronger channel
+than this pass's ladder; `x-cookie/agent` as *"ungranted on every arm"*; and `savinoo/ai-grading-system`
+as `p417`'s `T98` specimen, badge over no payload. 🔴 **`gate-absence` exists precisely to stop an absence being republished as a discovery**, and it fired
+on `p419`'s prose while `p419` was live (`Gap 420-A`), and this table is the honest
+version: a **confirmation sweep**, not supply.
+
+🟢 **One methodological upgrade worth adopting here.** Every grant above was re-read **at the commit
+SHA**, not at a ref — a bogus 40-hex SHA returns `404`, so no alias can satisfy the channel
+(`T106`). 🔵 That is strictly stronger than `ACTION p419-B`'s prescribed `ls-remote` remedy and needs
+no second request.
+
 ## 🆕 `p419` · 2026-10-24 — **`p418` answered "what is this repository's licence?" with *a SET over subtrees*. 🔴 `p419` widens the question again: the set is over `(ref × path)`, because a repository can ship licensed and unlicensed applications on different BRANCHES. 🟢 And the ref layer of this file was swept against an authoritative channel — every claim holds.**
 
 🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's

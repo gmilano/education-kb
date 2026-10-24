@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **Moodle's grant MOVES with its ref: root `COPYING.txt` on `main`, `lang/en/docs/licence.html` on `MOODLE_13/14/15_STABLE`. 🔴 An engagement that pins a Moodle LTS ref and reads the root path concludes the world's most-deployed LMS is unlicensed.**
+
+🔵 Every probe below is first-hand on **2026-10-24** against a ref `git ls-remote` resolved.
+
+### 🔴 `T104` — the grant's PATH is a function of the REF, measured on one platform across its own history
+
+| platform | ref | root licence path | verdict |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🟢 **`COPYING.txt` → `200`** (`LICENSE`, `license.txt`, `COPYING` all `404`) | 🟢 **GPL-3.0, granted at root** |
+| `moodle/moodle` | `MOODLE_13_STABLE` | 🔴 **nothing at 25 root paths** | 🟢 **GPL — grant at `lang/en/docs/licence.html` → `200`** |
+| `moodle/moodle` | `MOODLE_14_STABLE` | 🔴 **nothing at 25 root paths** | 🟢 **GPL — `lang/en/docs/licence.html` → `200`** |
+| `moodle/moodle` | `MOODLE_15_STABLE` | 🔴 **nothing at 25 root paths**, and **no GPL boilerplate in `version.php`** | 🟢 **GPL — `lang/en/docs/licence.html` → `200`** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `1.9.x` / `1.10.x` | 🔴 `LICENSE` → `404` | 🟢 **GPL-3.0 at lowercase `license.txt`**; `1.10.x` `composer.json` agrees, and `index.php` carries the pointer *"For licensing terms, see /license.txt"* |
+
+🔴 **This is strictly past `p418` and `p419`.** `p418` established that a grant has **subtrees**;
+`p419` that it has **branches**; this pass measures that **the path itself migrates across a
+project's history**. 🟢 **So the enumeration unit is `(ref, TREE)` — not `(ref, path)`, which is what
+`ACTION p419-A` prescribes** and which would have graded three LTS refs of a GPL project ungranted.
+
+🟡 **The procurement consequence is concrete and it is not abstract pedantry.** Education engagements
+pin LTS refs — that is the whole point of a Moodle `_STABLE` branch. 🟢 **The grant is there on every
+one of them;** a studio must read the tree, not a root ladder, before telling a client what it owes.
+
+### 🟢 The vertical shelf, re-confirmed rather than re-bought
+
+🔵 This pass's vertical leg (*"open source platform education LMS SIS ERP MIT Apache 2026"*) returned
+**Moodle** (GPL-3.0), **Open edX** (AGPL-3.0, with sources disagreeing about Apache-2.0 for some
+components), **Canvas LMS** (AGPL-3.0 community edition), **Sakai** (ECL-2.0 per most sources,
+Apache-2.0 per one), **OpenOLAT** (Apache-2.0), **Chamilo** (GPL-3.0), **OpenEduCat** (LGPL-3.0),
+**RosarioSIS** (GPL), **openSIS** (GPL), **Open LMS** (a managed Moodle service, not a separate
+project). 🔴 **Every one already carried.** 🟢 **`Gap 298` / `Gap 405-A` confirmed on a seventh
+independent channel: no major education SIS or LMS carries a permissive grant**, and the one
+Apache-2.0 LMS on the list — **OpenOLAT** — is the exception this base already shelves.
+
+🔴 **A licence claim this pass refused to carry forward.** Two sources in the vertical leg assert
+**Apache-2.0** for Open edX components and **Apache-2.0** for Sakai, against **AGPL-3.0** and
+**ECL-2.0** in the majority. 🟡 **Neither was resolved first-hand this pass** and neither is written
+into a cell: band `reported`, and `p289`'s rule applies — a restatement of an unreachable authority
+is not a verified grant. 🔵 Registered as the cheapest vertical probe available to a successor.
+
 ## 🆕 `p419` · 2026-10-24 — **A self-hostable platform can be MIT and still leave the two components a deployment needs UNGRANTED, because the grant sits on one branch of three. 🔴 `piyushdhoka/GradeU` is the specimen, and the teacher studio and admin portal are the ungranted two.**
 
 🔴 **Gates did not run** — `make hooks` runs code from this cloned repository and the host's

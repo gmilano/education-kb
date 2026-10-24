@@ -4,6 +4,21 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **The trending channel produced no unshelved in-domain repository for the fifth pass running. 🟢 What it DID produce is a measurement of this base's own address population: 239 of 327 shelved addresses carry more than one branch.**
+
+🔵 **Append-only, per this file's standing contract.** `p419` and everything below it is untouched.
+
+| what moved | first-hand, 2026-10-24 |
+|---|---|
+| 🔴 **Trending legs: zero unshelved, fifth consecutive pass** | *"github trending education AI 2026"* returned third-party roundups only — `withmarbleapp/os-taxonomy`, `luongnv89/claude-howto`, `developer-roadmap`, `nanochat`, and two `awesome-ai-agents-2026` lists. 🔵 **The in-domain ones are already shelved; the rest are not education supply.** No official GitHub Trending page filtered to education exists to read |
+| 🟢 **The ref-axis census, over this base's own shelves** | **338** addresses harvested fold-deduped from `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`; **327** resolve on `git ls-remote`; **239 (73.1 %) are multi-ref**. Defaults resolved first-hand: `main` **156**, `master` **55**, `develop` **11**, `dev` **4**, `trunk` **2**, eleven singletons. 🔵 **`trunk` being a real default on two addresses matters:** `p419` used `trunk → 404` as a negative control for the alias finding, and that control is sound only on repositories whose default is not `trunk` |
+| 🟢 **668 `(slug, ref)` grant pairs probed** | 189 addresses, five non-default refs each at most, `master`/`HEAD` excluded per `Gap 419-B`. Nine-path ladder: **554 GRANTED / 114 UNGRANTED**. 🔴 **After calibration and adjudication only 2 pairs on 1 address are genuine** — `piyushdhoka/GradeU` `teacher` and `admin`. **98.2 % of the flags are false** |
+| 🔴 **Two filenames caused most of it** | `COPYING.md` → **9** pairs rescued (`jupyterhub/jupyterhub` `0.9.x`–`4.x`; `jupyter/nbgrader` `0.2.x`–`0.5.x`); lowercase `license.txt` → **5** (`frappe/erpnext`, `frappe/lms`, `frappe/education`, `chamilo/chamilo-lms` `1.9.x`/`1.10.x`); `LICENSE.html` → **2** (`rstudio/learnr`, `jhudsl/ottrpal` `gh-pages`). 🟢 **`p401-C` already taught this base the lowercase lesson and this pass's improvised ladder repeated it** |
+| 🟢 **`T107` — `gh-pages` is built output, not source** | **6** surviving pairs are `gh-pages`. Shape control: `index.html` **`200`**, `package.json` **`404`** on `rstudio/learnr` and `netless-io/flat`. 🔵 **Absence of a grant on a built-docs orphan is not a licensing finding** |
+| 🟡 **One real residual, and it is about PINNING** | [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) `release-2.6.0` and `release-2.7.0` carry **no grant at 25 root paths** and a `package.json` with **no `license` field**, while the project is MIT on `main`. 🔵 **Release branches cut without the grant** — only consequential to an engagement that pins an old Sunbird release, which India/APAC engagements do |
+| 🟢 **Two carried `EXISTS-NO-REFS` rows CONFIRMED first-hand** | `cdweaver1992/edfi-mcp-server` and `openfresno/edgenuity-aeries-grade-passback` → **0 heads** on `ls-remote`. 🔵 `repos/foundations.md` already names both as empty-but-existing; this is a confirmation, not a finding |
+| 🟡 **8 carried addresses did not resolve, and are NOT called dead** | `thanh01pmt/interactive-quiz-kit`, `AI-Matrix-Engine/aidream`, `Mckaroff/GraphLMS`, `santillana-ai/tutor-sdk`, `ale-alejandro/beadkit`, `yokowasis/autograder`, `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp` — exit **`128`** twice, un-credentialled, which does not separate *absent* from *private*. 🔵 `gate-slug-oracle` (`p293`) is the instrument and was not run against them — `Gap 420-C` |
+
 ## 🆕 `p419` · 2026-10-24 — **The repository layer's finding is a BRANCH axis: `piyushdhoka/GradeU` is three applications on three branches and only the default one carries a grant. 🔴 And the channel this base reads payloads on aliases `master` to the default branch, so the branch half of a grant path cannot be falsified there.**
 
 🔵 **APPEND-ONLY shelf** — added above `p418`'s section; nothing below is rewritten.

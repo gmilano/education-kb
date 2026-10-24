@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-24
 ---
 
+## Pass 420 — reads 2026-10-24, commit 2026-10-24 — **THE GATES RAN. 🟢 `Gap 419-D` CLOSES AND `p419` IS GRADED RETROSPECTIVELY AT 48 / 52 — TWO OF ITS FOUR REDS ARE `p419`'s OWN CARRIED CENSUS FIGURES AND A THIRD FIRES ON `p419`'s OWN PROSE. 🟢 THE REF-AXIS POPULATION IS MEASURED: 239 OF 327 SHELVED ADDRESSES ARE MULTI-REF, 668 `(slug, ref)` PAIRS PROBED, AND EXACTLY ONE ADDRESS IS A GENUINE BRANCH-GRANT HAZARD. 🔴 SO `ACTION p419-A`'s GATE, BUILT AS PRESCRIBED, WOULD HAVE FIRED 114 TIMES TO CATCH 2 REAL PAIRS.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, probe, payload read and digest ran **2026-10-24**;
+the commit lands **2026-10-24**, so `updated:` carries one date.
+
+🟢 **Gates ran, which is the headline because `p419`'s could not.** `make hooks` completed against
+`p419`'s commit `65afae9`: **48 / 52 green**. Reds: `gate-census-currency` and `gate-union-currency`
+(both firing on figures `p419` **carried** rather than derived — its own admission, now proven:
+`2 759 → 2 760`, `2 721 → 2 722`, `3 187 → 3 192`, `3 557 → 3 561`), `gate-absence` (red on `p419`'s
+*prose* while `p419` was the live section — 7 artefact refutations, and it reads the LIVE section only,
+so it is green again now that `p420` is live: the defect is **latent, not fixed** — `Gap 420-A`), and `gate-census-union` control 24 (`Gap 400-B`,
+deliberately red since `p398`). 🟢 **`p420`'s own commit then grades 51 / 52 — the single red is `Gap 400-B` — with all six census cells MATCH.**
+🔵 **Honest ordering note:** the four global research legs ran **before** the gate suite, breaking
+`p412`'s standing rule. Recorded rather than hidden; nothing depends on the ordering.
+
+**What this pass established, first-hand:**
+
+- 🟢 **The ref axis is population-wide and its hazard is rare.** 338 addresses harvested from the four
+  recommendation shelves, 327 resolved, **239 (73.1 %) multi-ref**; 668 `(slug, ref)` pairs probed.
+  The nine-path ladder flags **114**; after calibration, ladder-deepening and mechanism adjudication
+  **2 pairs on 1 address** are genuine — `piyushdhoka/GradeU`, `p419`'s own specimen. **98.2 % false.**
+- 🟢 **`T104` — a grant's PATH is a function of the REF.** `moodle/moodle` grants at root
+  `COPYING.txt` on `main` and at `lang/en/docs/licence.html` on `MOODLE_13/14/15_STABLE` (`200` on all
+  three). Strictly past `p418`'s subtrees and `p419`'s branches: **the path migrates**.
+- 🔴 **A root-path licence read misgrades 13 of 19 addresses on these shelves.** Frappe's three
+  platforms grant at lowercase `license.txt` (ERPNext GPL-3.0, LMS AGPL-3.0-or-later, Education); the
+  whole Moodle **plugin** ecosystem grants in `version.php` headers, `tool_aiconnect` on that channel
+  **alone**; two R packages grant in `DESCRIPTION`.
+- 🔴 **`T108` — an improvised instrument reproduces a defect this base already gates for, four times
+  in one pass:** the path ladder (`p401-C`), absence attribution (`gate-absence`), address shape
+  (`OWNER/REPO` entered the harvest), slug existence (`p293`, not run). **Run the instruments.**
+- 🟢 **Supply: one new row, and it is LATAM.** [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem)
+  — MIT, `1 078` B `4e4fd8d68768`, read at SHA `e3807a6`; ENEM essay grading on five official
+  competencies, calibrated on **11 147** real essays in a local SQLite corpus, **no API, no ML, no
+  model** — it mounts into a coding agent the engagement already runs. `Pattern S`.
+- 🟢 **Regional legs: four for four returned material, no nil.** The EU AI Act's education high-risk
+  obligations are deferred to **2027-12-02** (literacy and transparency live since **2026-08-02**);
+  Vietnam's education carve-out to **2027-09-01** independently confirms `p417`; UNESCO IESALC
+  measures **87 % institutional AI use against 26 % with a strategy** across 19 LATAM countries.
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🟢 **Re-derived as the last act before the commit**, per `p352` and `p376`. 🔵 **The shape census:**
+**2 765** harvested shapes → **38** are not addresses → **2 727 addresses**. 🔵 **2 727** channel-U
+addresses and **3 202** channel-B survivors give **3 569 addresses over both channels**.
+
+🔴 **Against `p419`'s published triple (`2 759 / 38 / 2 721`, union `3 557`), which `p419` carried
+rather than derived, the movement is `+6 / 0 / +6`, union `+12`.** 🟢 **Against what `p419`'s commit
+actually derives (`2 760 / 38 / 2 722`, union `3 561`, measured this pass), `p420`'s own footprint is
+`+5 / 0 / +5`, union `+8`.**
+
 ## Pass 419 — reads 2026-10-24, commit 2026-10-24 — **A GRANT HAS BRANCHES. 🔴 `piyushdhoka/GradeU` SHIPS THREE APPLICATIONS ON THREE BRANCHES AND THE MIT PAYLOAD EXISTS ON ONE OF THEM. 🔴 AND THE CHANNEL THIS BASE READS PAYLOADS ON SERVES `master` AS AN ALIAS FOR THE DEFAULT BRANCH EVEN WHEN NO SUCH REF EXISTS — SO `p354`'s CONTRACT CANNOT BE FALSIFIED THERE. 🟢 EVERY REF THIS BASE PUBLISHES SURVIVES AN AUTHORITATIVE SWEEP, 18 FOR 18.**
 
 🔵 **No date straddle.** Every leg, clone, `ls-remote`, payload read and digest ran **2026-10-24**;

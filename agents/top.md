@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **The ref axis is POPULATION-WIDE and the hazard on it is RARE. 🟢 239 of 327 shelved addresses are multi-ref and 668 `(slug, ref)` pairs were probed first-hand; exactly ONE address is a genuine branch-grant hazard — the specimen `p419` already found. 🔴 `ACTION p419-A`'s gate, built as prescribed, would have fired 114 times to catch 2 real pairs. 🟢 AND the grant's PATH is a function of the REF: Moodle's grant is root `COPYING.txt` on `main` and `lang/en/docs/licence.html` on `MOODLE_13/14/15_STABLE`.**
+
+🟢 **Gates RAN this pass, and that is the first thing a successor needs to know** — `p419` could not
+execute them at all (`Gap 419-D`). `make hooks` completed: **48 / 52 green** against `p419`'s commit
+`65afae9`. 🔴 **So `Gap 419-D` CLOSES, and `p419` is graded retrospectively** — see
+`intel/open-gaps.md`. 🟢 **And this pass's own commit grades 51 / 52, the single red being `Gap 400-B`,
+deliberately red since `p398`; all six census cells read MATCH after re-derivation.** 🔵 **Honest ordering note, against `p412`'s standing rule:** the four global
+research legs ran **before** the gate suite this pass, not after. The rule was broken; it is recorded
+rather than hidden, and nothing below depends on the ordering.
+🔵 **No date straddle:** every leg, `ls-remote`, probe, payload read and digest ran **2026-10-24**;
+the commit lands **2026-10-24**, so `updated:` carries one date.
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **The ref-axis population `Gap 419-A` left unmeasured is now MEASURED.** **338** addresses harvested fold-deduped from the four recommendation shelves; **327** resolve on `git ls-remote`; **239 of 327 (73.1 %) carry more than one branch**, 86 carry exactly one. 🔵 Default refs resolved first-hand for all 239: **`main` 156 · `master` 55 · `develop` 11 · `dev` 4 · `trunk` 2**, plus eleven singletons (`v4.0.x-develop`, `tcd`, `release_11`, `release`, `mobile`, `gh-pages`, `development`, `claude/eager-newton-boy1g0`, `2.2`, `2.12`, `#34282-…`) |
+| 2 | 🔴 **And the hazard is rare, which is the opposite of what the population suggests.** **668** `(slug, ref)` pairs probed across **189** addresses (bounded at five non-default refs each, `master` and `HEAD` excluded because `Gap 419-B` makes a `200` there unfalsifiable). The base's own nine-path ladder returns **554 GRANTED / 114 UNGRANTED**. 🟢 **After calibration, ladder-deepening and mechanism adjudication, exactly 2 pairs on 1 address are genuine: `piyushdhoka/GradeU` `teacher` and `admin` — `p419`'s own specimen.** 🔴 **112 of 114 flags are false: 98.2 %** |
+| 3 | 🔴 **`ACTION p419-A` is therefore AMENDED, not executed.** It prescribes extending `gate-subtree-grant`'s unit from `path` to `(ref, path)`. 🔴 **Built exactly as written, that gate is a 98 %-false-alarm instrument** and would bury the one real finding it exists to catch. 🟢 **The unit is `(ref, TREE)`, not `(ref, path)`** — and it needs the three admissions below before it is worth running |
+| 4 | 🟢 **`T104` — a grant's PATH is a function of the REF, measured on one project across its own history.** [`moodle/moodle`](https://github.com/moodle/moodle) grants at root **`COPYING.txt`** on `main` (`200`; `LICENSE`, `license.txt`, `COPYING` all `404`) and at **`lang/en/docs/licence.html`** on `MOODLE_13_STABLE`, `MOODLE_14_STABLE` and `MOODLE_15_STABLE` — **`200` on all three** — with **no GPL boilerplate in `version.php`** on `1.5`, so the file-header channel is empty there too. 🔴 **A root-path read calls the three LTS refs of a GPL project ungranted.** 🔵 This is strictly past `p418` (*a grant has subtrees*) and `p419` (*a grant has branches*): **the path itself migrates** |
+| 5 | 🔴 **`T105` — an `UNGRANTED` verdict on a ref is void without a POSITIVE CONTROL on that same ref.** **5 of the 114** are refs `git ls-remote` lists and `raw.githubusercontent.com` serves **nothing** at any of nine common paths: `aureuserp/aureuserp` `gh-pages`, `OS4ED/openSIS-Classic` `Version_8.0`, `projectfedena/fedena` `projectfedena-patch-1`, `Seechange-edu/act-ai-tutor-backend` `TNS-1616-…`, and `frappe/erpnext` **`#34282-Record-advance-payment-as-a-liability`**. 🟢 **The last one has a mechanism: a ref whose name begins with `#` cannot be probed over HTTP at all** — the fragment is stripped before the request leaves. 🔵 The other four are `Gap 420-B` |
+| 6 | 🔴 **Two filenames account for most of the false alarm, and the base already learned one of them.** `COPYING.md` rescued **9** pairs (`jupyterhub/jupyterhub` `0.9.x`–`4.x`, `jupyter/nbgrader` `0.2.x`–`0.5.x`); lowercase **`license.txt`** rescued **5** (`frappe/erpnext`, `frappe/lms`, `frappe/education` on their defaults, `chamilo/chamilo-lms` `1.9.x` and `1.10.x`); `LICENSE.html` rescued **2** (`rstudio/learnr`, `jhudsl/ottrpal` `gh-pages`). 🔴 **`p401-C` already recorded that *"one live repository was lost to a lowercase letter"*** — and this pass's improvised ladder lost five more to the same letter |
+| 7 | 🟢 **`T106` — probe the grant at the COMMIT SHA, the one channel no alias can satisfy.** Calibrated: a bogus 40-hex SHA → **`404`**; `GradeU` `main` `LICENSE` at `4ab0011…` → **`200`**. 🟢 **This is strictly stronger than `ACTION p419-B`'s remedy** (resolve the branch half on `ls-remote`): a SHA read needs no second channel and no trust in a ref name. 🔵 Every new grant below was read at its SHA, not at a ref |
+| 8 | 🟢 **`T107` — a `gh-pages` ref is BUILT OUTPUT, not source, and its grant absence is not a licensing finding.** **6** of the 21 surviving pairs are `gh-pages`. Control on two of them: `index.html` → **`200`**, `package.json` → **`404`** (`rstudio/learnr`, `netless-io/flat`). 🔵 Also adjudicated out: **8** stale feature/asset branches (`inducer/relate` ×4 — `setup.py` declares `license="MIT"`; `tutors-sdk/tutors` ×3; `huggingface/agents-course` `UpdateDocTree`) and **3** Moodle LTS refs per `T104` |
+| 9 | 🟡 **Two pairs survive as a real but low-consequence gap, and they are NOT GradeU's class.** [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) `release-2.6.0` and `release-2.7.0`: **no grant at 25 root paths**, and `package.json` resolves (`200`) with **no `license` field at all**. 🔵 The project is MIT on `main`; these are **release branches cut without the grant**, which matters only to an engagement that pins an old Sunbird release — and India/APAC engagements do |
+| 10 | 🔴 **The default-ref arm of this audit found NOTHING the base did not already hold — and that is the pass's hardest lesson.** 19 addresses whose default ref returns no grant on a 15-path ladder were run through the deep ladder, the manifest channel, the README channel and the file-header channel. **Every single one this base carries was already graded correctly, several on BETTER channels than this pass's root ladder** — `gradescope/autograder_samples` (*"UNGRANTED AT ROOT"* with its two vendored copies named), `Nutlope/llamatutor` and `Daniel-ux1026/Tutor-Inteligente` (ungranted **by full tree enumeration**, 46 and 145 files), `x-cookie/agent` (*"ungranted on every arm"*), `bycs-lp/moodle-local_ai_manager` (*"GPL-3.0-or-later — granted in the source headers (`version.php`), no root licence file"*), `TecFancy/dsh-deeptutor` + `nanobpm/nano-ide` (*"manifest-only grants, `Pattern L` class 3"*), `marcusgreen/moodle-tool_aiconnect` (`401-C`). 🟢 **`gate-absence` exists for exactly this, and it fired on `p419`'s prose while `p419` was live** (`Gap 420-A`; 🟡 green again now that `p420` is the live section, which is a moved subject rather than a fix) |
+| 11 | 🟢 **`T108` — an improvised instrument reproduces a defect the base already has a gate for. FOUR times in one pass.** The path ladder (`p283`/`p401-C`'s lowercase lesson) · the absence attribution (`gate-absence`/`T103`) · the address shape — **`OWNER/REPO`, `repos/CaviraOSS` and `repos/HKUDS` entered this pass's harvest**, the first a bare placeholder and the other two sliced out of an `api.github.com/repos/…` path, all three of which `gate-address-shape` (`p351`) rejects by construction · and slug existence (`p293`'s calibrated oracle, not run against the 8 addresses that returned exit `128` below). 🔴 **The pass's real lesson is to RUN this base's instruments, not to re-improvise them** |
+| 12 | 🟡 **8 carried addresses did not resolve, and this run CANNOT call them dead.** `thanh01pmt/interactive-quiz-kit`, `AI-Matrix-Engine/aidream`, `Mckaroff/GraphLMS`, `santillana-ai/tutor-sdk`, `ale-alejandro/beadkit`, `yokowasis/autograder`, `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp` — all **exit `128`** on `ls-remote` twice, without credentials. 🔴 **Un-credentialled `128` does not separate *absent* from *private***, which is precisely what `gate-slug-oracle` (`p293`) was built to do and this pass did not run against them — `Gap 420-C`. 🟢 **Separately CONFIRMED:** the two `EXISTS-NO-REFS` addresses `repos/foundations.md` names — `cdweaver1992/edfi-mcp-server` and `openfresno/edgenuity-aeries-grade-passback` — return **0 heads**, first-hand |
+| 13 | 🟢 **Supply: 1 unshelved address worth a row, from 4 capability legs — and `T100` holds a FIFTH time.** The two ranking-worded legs (*"top open source AI agents education 2026"*, *"github trending education AI 2026"*) returned **zero** unshelved in-domain addresses for the fifth consecutive pass. The capability-worded legs returned **five** unshelved, of which one is supply. 🟢 **The discriminator is capability vocabulary, not recency vocabulary** |
+| 14 | 🔵 **Regional legs: four for four RETURNED MATERIAL, none a nil.** 🟢 **`ACTION SH` did not fire** — this pass's EMEA sources carry the AI Act education deferral to **2027-12-02** explicitly; the counter holds at **eight** and `Gap 417-A` stays open. 🟢 **And an APAC source independently CONFIRMS `p417`'s correction of `p411`:** Vietnam's Law on AI **No. 134/2025/QH15** in force **2026-03-01**, with **education, health and finance extended to 2027-09-01**. 🔵 `T45` (school-level APAC rules) remains the informed gap: the leg returned national instruments and one cross-country survey, no school-level rules |
+
+🟢 **Every figure above is reproducible from this pass's evidence store**, written the same day:
+[`refaxis-census.2026-10-24-p420.tsv`](../evidence/refaxis-census.2026-10-24-p420.tsv) (338 addresses,
+head counts and ref lists) · [`default-refs.2026-10-24-p420.tsv`](../evidence/default-refs.2026-10-24-p420.tsv)
+(239 defaults) · [`grant-probe-9path.2026-10-24-p420.tsv`](../evidence/grant-probe-9path.2026-10-24-p420.tsv)
+(668 pairs, the uncalibrated run **kept deliberately** so the 98.2 % false rate can be re-derived) ·
+[`grant-calibrated.2026-10-24-p420.tsv`](../evidence/grant-calibrated.2026-10-24-p420.tsv) (the 114
+negatives with their positive controls) ·
+[`branchgrant-class-deep.2026-10-24-p420.tsv`](../evidence/branchgrant-class-deep.2026-10-24-p420.tsv) ·
+[`defaultref-deep.2026-10-24-p420.tsv`](../evidence/defaultref-deep.2026-10-24-p420.tsv).
+
+### 🆕 Tier 7 — the agent-agnostic grader, and it is LATAM
+
+🟢 **One new row this pass, and it is a composition primitive this base has never shelved: a grading
+methodology with no model, no API and no service.**
+
+| agent | address | licence *(read at SHA `e3807a6`)* | ★ | what it is, and the boundary |
+|---|---|---|---|---|
+| **corretor-enem** | [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | 🟢 **MIT** — `1 078` B, `sha256₁₂ 4e4fd8d68768`, *"Copyright (c) 2026 Davi Azevedo Pessanha"* | 6 | ENEM essay grader over the **five official competencies** (0–200 each, 0–1000 total), *"calibrado em 11.147 redações reais"* from the **Essay-BR** corpus, shipped as a local **SQLite `corpus.db`** with full-text search. 🟢 **`Sem API/ML`: it calls no model and vendors no SDK** — the methodology is markdown plus thin per-agent shims, and it *"roda dentro de qualquer coding agent (Claude Code, Codex, Cursor, Gemini, Aider…)"*. **Python 3.10+, stdlib `sqlite3` only.** 🟡 **Its own stated limits are the boundary:** the corpus is pre-2025, so competencies **C2, C4 and C5 drift**; it documents interrater variance and repertoire gaming, and calls its output an estimate, not an official grade. 🔵 **11 commits, single ref `master`** — young, and shelved for its shape, not its maturity. 🟢 **LATAM — Brazil** |
+
+🔵 **Why it earns a row at 6 ★ when `p419` admitted `GradeU` at 3 ★ for a boundary.** A studio that
+already runs coding agents can mount this **without deploying anything** — no inference cost, no
+data egress, no model contract — and it is the first **LATAM-placed permissive** grading asset on
+these shelves. 🔴 **It is not a foundation and not a service;** it is a rubric engine for an agent
+the engagement already has.
+
+### 🟡 Three capability sightings promoted to NOTHING, deliberately
+
+🔵 Same disposition as `p417`'s two graders, and for the same reason: real code, no adoption.
+
+| address | grant *(at SHA)* | why it is not supply |
+|---|---|---|
+| [`M0hamed0mar/adaptive-learning-agent`](https://github.com/M0hamed0mar/adaptive-learning-agent) | 🟢 MIT `1 069` B `d4f5fc21f1e1`, *"Copyright (c) 2026 Mohamed Omar"* | 🔴 **0 ★ and 2 commits.** LangGraph + FastAPI over Groq `qwen/qwen3.8-27b`, **eight** declared roles including critic→refiner loops; documents its own AWS ECS running cost at *"~$20/month"*. 🔵 Architecture worth reading, adoption worth nothing |
+| [`VaishnaviSingh-Analyst/Learning-Agent-System`](https://github.com/VaishnaviSingh-Analyst/Learning-Agent-System) | 🟢 MIT `1 086` B `b29adecda524` | 🔴 **0 ★**, 37 commits. LangGraph + local Ollama `llama3.1`, **5-3-2** tiered checkpoints (5 MCQ / 3 short / 2 long), `THRESHOLD` 0.7, Feynman re-teach, Streamlit, HF `zephyr-7b-beta` fallback. 🟡 **The grant's holder is `springboardmentor123455-maker`, not the repository owner** — a holder line is a **provenance claim**, and a mentorship-programme origin is the obvious reading but **the README says nothing of the kind**, so the string is recorded and the inference refused |
+| [`Shahzar07/Lesson-Planner-Ai`](https://github.com/Shahzar07/Lesson-Planner-Ai) | 🔴 **NONE** — 12 licence-shaped paths at SHA `69dc697`, and `package.json` carries **no `license` field** | 🔴 **Ungranted, so it cannot be evaluated, let alone built on.** 🟡 Its default ref is **`claude/dazzling-tesla-o8gpe6`** — an agent-generated session branch standing as the repository's default, the first such specimen on these shelves |
+
+🟡 **One unshelved FORK CANDIDATE, recorded and not graded.**
+[`Pranjulcr7/OpenTutor`](https://github.com/Pranjulcr7/OpenTutor) (12 heads, HEAD `a890519`) is a
+second address for the project this base already carries as `zijinz456/OpenTutor` (11 heads, HEAD
+`2d2c003`). 🔴 **Direction is NOT established** — `p404` requires full history for that and this pass
+read ref sets only, the exact test `p404` recorded as insufficient. 🔵 Registered so a successor
+grades it rather than re-finding it.
+
 ## 🆕 `p419` · 2026-10-24 — **A grant has BRANCHES, not only subtrees. 🔴 The one new agent address this pass ships three applications on three branches and the MIT payload exists on ONE of them. 🟢 And every ref this base publishes survives an authoritative sweep — 18 for 18 — which is what makes the channel finding latent rather than live.**
 
 🔴 **Gates did NOT run this pass.** `p412`'s standing rule is *gates before the first research leg*;

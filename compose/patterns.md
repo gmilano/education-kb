@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **Amendment 10 replaces `ACTION p419-A`'s prescription: the grant-enumeration unit is `(ref, TREE)`, with a positive control per ref and a SHA-pinned read. 🟢 Plus one new recipe that deploys nothing — `Pattern S`, an ENEM-calibrated grader mounted into an agent the engagement already runs.**
+
+🔵 Every component below was resolved first-hand on **2026-10-24**.
+
+### 🔴 Amendment 10 — supersedes Amendment 9, and it is a NARROWING
+
+🟡 **Amendment 9** (`p419`) prescribed `git ls-remote --heads` before the path enumeration, then
+Amendment 8 per ref. 🔴 **Measured over 668 `(slug, ref)` pairs on 189 shelved addresses, that
+procedure is a 98.2 %-false-alarm instrument** — 114 flags, **2** of them genuine. Amendment 10
+keeps the ref enumeration and fixes the three reasons it over-fires:
+
+| step | what it adds, and the measurement that forces it |
+|---|---|
+| **10.1 — positive control per ref, before any verdict** | 🔴 **5 of 114** flags were refs `ls-remote` lists and `raw` serves **nothing** on, at any path. Probe a known-common file on the same ref first; no control, **no verdict** (`T105`). 🟢 One has a hard mechanism: a ref whose name starts with `#` (`frappe/erpnext` `#34282-…`) **cannot be probed over HTTP at all** |
+| **10.2 — the unit is `(ref, TREE)`, never `(ref, root-path-ladder)`** | 🔴 `moodle/moodle` grants at root `COPYING.txt` on `main` and at **`lang/en/docs/licence.html`** on `MOODLE_13/14/15_STABLE` — **`200` on all three** (`T104`). A ladder cannot see a grant that migrated into `lang/en/docs/`. 🟢 Enumerate the tree per ref, as `p275` already does per repository |
+| **10.3 — read the grant at the COMMIT SHA** | 🟢 A bogus 40-hex SHA → **`404`**, so **no alias can satisfy the channel** (`T106`). 🔵 Strictly stronger than `ACTION p419-B`'s `ls-remote` branch-half remedy, and one request instead of two |
+| **10.4 — four channels, ranked, before `UNGRANTED` is written** | 🔴 Root path → manifest → README (`p288`) → **file header**. Measured: **13 of 19** addresses with no root grant are granted on a later channel, and `marcusgreen/moodle-tool_aiconnect` is granted on the **fourth channel only** |
+| **10.5 — adjudicate by mechanism, and exclude built output** | 🟢 `gh-pages` is **built documentation, not source** (`index.html` `200` / `package.json` `404`) — `T107`. Also excluded: stale feature branches whose manifest still declares a licence (`inducer/relate` ×4, `setup.py` `license="MIT"`), and historical release refs covered by **10.2** |
+| **10.6 — reject non-addresses by shape FIRST** | 🔴 `OWNER/REPO`, `repos/CaviraOSS` and `repos/HKUDS` entered this pass's harvest — a bare placeholder and two slices of an `api.github.com/repos/…` path. 🟢 `gate-address-shape` (`p351`) already rejects all three; **run it instead of re-improvising a regex** (`T108`) |
+
+🔴 **What survives Amendment 10 on these shelves: one address.** `piyushdhoka/GradeU` — `teacher` and
+`admin` ship real applications with no grant on any channel or ref. 🟡 Plus one residual worth a
+sentence rather than a gate: `Sunbird-Ed/SunbirdEd-mobile-app` `release-2.6.0`/`release-2.7.0`, MIT on
+`main`, **release branches cut without the grant**.
+
+### 🆕 `Pattern S` — ENEM-calibrated essay grading with nothing deployed
+
+🟢 **The point of this recipe is what it does NOT contain:** no inference endpoint, no vector store,
+no service to run, no student data leaving the institution.
+
+| step | component, as resolved | why this one |
+|---|---|---|
+| 1 | [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) — 🟢 **MIT**, `1 078` B `4e4fd8d68768`, SHA `e3807a6` | The rubric engine: five official ENEM competencies (0–200 each), methodology in markdown, **`Sem API/ML`** |
+| 2 | Its own `corpus.db` — SQLite + FTS, **11 147** real essays (Essay-BR) | 🟢 Calibration lives **on disk, locally**. No corpus call leaves the machine |
+| 3 | The coding agent the engagement already runs — *"Claude Code, Codex, Cursor, Gemini, Aider…"* | 🟢 **The agent IS the runtime.** Nothing new is provisioned; the shim is thin and per-agent |
+| 4 | Python **3.10+**, stdlib `sqlite3` only | 🔵 No dependency tree to audit, which is most of why this is cheap to pilot |
+| 5 | **A human marker in the loop, non-negotiable** | 🔴 The project calls its own output an estimate, not an official grade; and EU Annex III makes *"assessing learning outcomes"* high-risk from **2027-12-02** |
+| 6 | **A drift check on C2, C4, C5 before any pilot** | 🔴 **The project states its corpus is pre-2025**, so those three competencies drift. 🟢 Measure them against recent marked scripts first; do not take the calibration on trust |
+
+🟡 **Where it fits and where it does not.** 🟢 **Fits:** a Brazilian secondary or pre-vestibular
+engagement that wants formative essay feedback at volume, under a permissive grant, with **zero data
+egress** — and it is the first LATAM-placed permissive grading asset these shelves carry. 🔴 **Does
+not fit:** any summative or high-stakes decision; any non-ENEM rubric without recalibration; and any
+engagement that needs a vendor SLA, because there is no vendor and no service — **6 ★ and 11 commits
+is a pilot, not a dependency.**
+
 ## 🆕 `p419` · 2026-10-24 — **`Pattern AJ` Amendment 8 enumerates paths in ONE tree, and this pass found a repository whose ungranted code is on another BRANCH. 🟢 Amendment 9 makes the audit enumerate refs first. 🟢 Plus `Pattern AR`: the proctored-assessment build, with the branch boundary priced at step 2 instead of found at legal review.**
 
 🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's

@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **The capability legs returned five unshelved addresses and the ranking legs returned zero for the FIFTH consecutive pass. 🟢 One is supply, and it is a grader with no model: `dsvi-b/corretor-enem`, MIT, Brazil.**
+
+🔵 **Append-only, per this file's standing contract.** `p419` and everything below it is untouched.
+
+| what moved | first-hand, 2026-10-24 |
+|---|---|
+| 🟢 **`T100` holds a fifth time, and the discriminator sharpens** | The two ranking-worded legs — *"top open source AI agents education 2026 github MIT"* and *"github trending education AI 2026"* — returned **zero** unshelved in-domain addresses. The four capability-worded legs (*AI tutor agent*, *automated grading / essay assessment*, *lesson planning / curriculum generation*, *Moodle / Open edX AI plugin*) returned **five**. 🔵 **Ranking vocabulary retrieves this base's own back catalogue**; capability vocabulary retrieves supply |
+| 🟢 **The one new address worth shelving** | [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) — 🟢 **MIT**, `1 078` B, `sha256₁₂ 4e4fd8d68768`, read at SHA `e3807a6`; 6 ★, 11 commits, single ref `master`. ENEM essay grading over five official competencies, calibrated on **11 147** real essays (Essay-BR) in a local SQLite `corpus.db`. 🔴 **No API, no ML, no model** — it mounts into a coding agent the engagement already runs. 🟢 **LATAM — Brazil.** Full row and boundary on `agents/top.md` |
+| 🟡 **Three sightings that are NOT supply** | [`M0hamed0mar/adaptive-learning-agent`](https://github.com/M0hamed0mar/adaptive-learning-agent) (🟢 MIT `1 069` B `d4f5fc21f1e1`, **0 ★ / 2 commits**, LangGraph + Groq `qwen/qwen3.8-27b`, eight roles) · [`VaishnaviSingh-Analyst/Learning-Agent-System`](https://github.com/VaishnaviSingh-Analyst/Learning-Agent-System) (🟢 MIT `1 086` B `b29adecda524`, **0 ★**, LangGraph + Ollama `llama3.1`, 5-3-2 checkpoints at a 0.7 bar; 🟡 holder `springboardmentor123455-maker` ≠ owner) · [`Shahzar07/Lesson-Planner-Ai`](https://github.com/Shahzar07/Lesson-Planner-Ai) (🔴 **ungranted** on 12 paths + manifest; default ref **`claude/dazzling-tesla-o8gpe6`**) |
+| 🟡 **One fork candidate, not graded** | [`Pranjulcr7/OpenTutor`](https://github.com/Pranjulcr7/OpenTutor) (12 heads, `a890519`) against carried `zijinz456/OpenTutor` (11 heads, `2d2c003`). 🔴 `p404` forbids grading direction from ref sets; registered for a successor |
+| 🔵 **Named and NOT promoted** | `supe-log/writing-engine`, `BaijayantaRoy/bandup`, `saniales/ai-lesson-planner` (GPL-3.0), `Robyn-Collie/QuizWeaver`, `SirhanMacx/Claw-ED` + `eduagent`, `GarethManning/education-agent-skills`, `rumi-platform`, `Naresh1401/education-tutor-agent`, `abhijeetgupta23/…`, `Gchism94/ai-tutor`, `zijinz456/OpenTutor`, `withmarbleapp/os-taxonomy`, Aulasneo's **Owly** for Open edX — **every one already on these shelves**, with hit counts taken before any verification spend |
+| 🔴 **A vertical leg that returned nothing citable** | *"Moodle Open edX AI plugin agentic 2026 release"* produced **no official Moodle HQ or Open edX announcement** of an agentic release — only vendor marketing and one 2025 Aulasneo post. 🟡 Wikipedia reports Moodle stable **5.3 / 2026-10-05** but says nothing about agentic features, and `en.wikipedia.org` is **off this environment's egress allowlist** (`p413`, holding a fifth pass), so it was not read. 🔵 **An informed gap, stated rather than left silent** |
+| 🟢 **A digest band gets a second member** | `corretor-enem`'s MIT payload is **`1 078` B** — the same length as `krayin/laravel-crm`'s (`p418`, `a76aa4a4405c`) and a **different digest** (`4e4fd8d68768`). 🔵 `p418` recorded four distinct digests at `1 077` B; `1 078` now has two. 🟢 **`T101` holds: a byte length cannot identify a payload on this base, demonstrably** |
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🟢 **Re-derived with `make address-shape-census` and `make union-currency` as the last act before the
+commit**, per `p352` and `p376` — which `p419` could not do at all. 🔵 **The shape census:**
+**2 765** harvested shapes → **38** are not addresses → **2 727 addresses** (inflation **1.37 %**).
+🔵 **2 727** channel-U addresses and **3 202** channel-B survivors give **3 569 addresses over both
+channels**.
+
+🟢 **Two deltas, and they must not be collapsed.** 🔴 **Against `p419`'s *published* triple
+(`2 759 / 38 / 2 721`, union `3 557`) — which `p419` CARRIED from `p418` rather than derived — the
+movement is `+6 / 0 / +6`, union `+12`.** 🟢 **Against what `p419`'s commit actually derives when the
+suite is run against it (`2 760 / 38 / 2 722`, union `3 561`, measured this pass), `p420`'s own
+contribution is `+5 / 0 / +5`, union `+8`.** 🔵 The first delta is inflated by `p419`'s carry error;
+the second is this pass's real footprint. 🟢 **`p419`'s true triple is therefore recorded here rather
+than back-edited into its own section** — `p352` forbids editing history to match.
+
+🔵 **Rejection classes this derivation reports:** `NAV-NAMESPACE` 30 · `OWNER-ELLIDED` 3 ·
+`EMPTY-NAME` 2 · `OWNER-TEMPLATE-VAR` 1 · `PLACEHOLDER-NAME` 1 · `PLACEHOLDER-OWNER` 1
+(`your-username/SafeTutors`). 🟢 **That last class is `T108`'s receipt:** this pass's own improvised
+harvest admitted `OWNER/REPO`, and the base's standing instrument rejects exactly that shape.
+
 ## 🆕 `p419` · 2026-10-24 — **A grant has BRANCHES. 🔴 `piyushdhoka/GradeU` ships three applications on three branches, the MIT payload exists on ONE of them, and the other two carry no grant at any path. 🔴 Plus the channel finding behind it: `raw.githubusercontent.com` serves `master` and `HEAD` as ALIASES for the default branch even when no such ref exists — so a `200` cannot verify the BRANCH half of `p354`'s own contract.**
 
 🔵 **APPEND-ONLY shelf** — this section is added above `p418`'s and nothing below it is rewritten.

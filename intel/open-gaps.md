@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p420` · 2026-10-24 — **`Gap 419-D` CLOSES: the gate suite RAN, and `p419` is graded retrospectively at 48 / 52. 🔴 Two of its four reds are `p419`'s own carried figures, and a third fires on `p419`'s own prose. 🟢 `Gap 419-A`'s open population part is MEASURED — and the measurement says the prescribed fix would have been a 98 %-false-alarm instrument.**
+
+🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves it
+describes** — `agents/top.md`, `agents/trending.md`, `repos/foundations.md`, `repos/trending.md`,
+`verticals/solutions.md`, `intel/market.md`, `intel/trends.md`, `compose/patterns.md` all carry a
+`p420` section, and `README.md` carries the matching entry. **Nothing here is backfill**, and
+`gate-register-currency` **ran green** this pass rather than being honoured by construction.
+🔵 **No date straddle:** every leg, `ls-remote`, probe, payload read and digest ran **2026-10-24**;
+the commit lands **2026-10-24**.
+
+### 🟢 Closed this pass
+
+| gap | disposition |
+|---|---|
+| 🟢 `Gap 419-D` *(a whole pass ran with ZERO gates executed)* | 🟢 **CLOSED, and its open question answered rather than inherited.** `p419` asked a successor with egress to *"re-run the 52 controls against this commit and grade `p419` retrospectively."* 🟢 **Done: `make hooks` completed against `p419`'s commit `65afae9` — 48 / 52 green.** 🔴 **The four reds, and two of them are `p419`'s own:** `gate-census-currency` and `gate-union-currency` both fire because `p419` **carried** its census from `p418` instead of deriving it — exactly as `p419` admitted — and the derived values differ (`harvested_folded` **2 759 → 2 760**, `addresses_corrected` **2 721 → 2 722**, `channel_b_survivors` **3 187 → 3 192**, `union_addresses` **3 557 → 3 561**; `rejected_non_addresses` **38 MATCH**). 🔴 `gate-absence` was red on `p419`'s **prose** while `p419` was the live section (`Gap 420-A`); 🟡 **it inspects the LIVE section only, so it is green again now that `p420` is live — the defect is latent, not fixed**. 🔵 `gate-census-union` control 24 is `Gap 400-B`, deliberately red since `p398`. 🟢 **So `p419`'s substantive findings stand on first-hand reads AND now on a gate run; only its census numbers were wrong, and they are corrected in this pass's own derivation.** 🟢 **And `p420`'s own commit grades 51 / 52** — re-run after every shelf write and after the census re-derivation, with the **only** red being `gate-census-union` control 24, i.e. `Gap 400-B`, deliberately red since `p398`. 🟢 All three shape cells and all three union cells read **MATCH**. |
+| 🟢 `Gap 419-A` *(the ref-axis population, explicitly unmeasured)* | 🟢 **CLOSED on the measurement, and REFRAMED by it.** **338** addresses harvested from the four recommendation shelves, **327** resolved on `git ls-remote`, **239 (73.1 %) multi-ref**; **668 `(slug, ref)` pairs** probed first-hand across **189** addresses. 🔴 **The population is wide and the hazard is rare:** the base's nine-path ladder flags **114** pairs, of which **2 pairs on 1 address** survive calibration, ladder-deepening and mechanism adjudication — `piyushdhoka/GradeU` `teacher`/`admin`, `p419`'s own specimen. **112 / 114 = 98.2 % false.** 🟢 **The axis is real but it is `(ref × TREE)`, not `(ref × path)`** — see `Amendment 10` in `compose/patterns.md`. 🔵 `ACTION p419-A` is therefore **amended, not executed**, which is the opposite of the usual failure on this base |
+
+### 🟡 Widened this pass
+
+| gap | disposition |
+|---|---|
+| 🟡 `Gap 419-C` *(this base has no instrument that extracts its own claims, and an improvised one gets it wrong)* | 🔴 **WIDENED from an improvised sweep to a STANDING GATE.** `p419` registered this for its own ad-hoc `(slug, ref)` extractor and `T103` (*a claim is attributed by its SENTENCE, never by its line number*). 🔴 **`gate-absence` — a wired, standing control — commits the same error:** it attributes an absence claim by **TOKEN**, and reports **7 `REFUTED`** rows against `p419`'s header whose subjects are the common English words `p354`, `ref`, `exists`, `contract`, `cannot`, `falsified` and `there`, each "refuted" by its own occurrence count across the shelves. 🟢 **All seven are artefacts; `p419` published no false absence.** 🔵 Split out as `Gap 420-A` so the gate has its own line |
+
+### 🔴 Registered this pass
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 420-A` | 🔴 **`gate-absence` attributes an absence claim by TOKEN, and it fired on a pass that published no false absence.** 🟡 **It is GREEN as this pass commits, and that is not a fix:** the gate reads the **live pass section only**, so moving the live section from `p419` to `p420` cleared the red without touching the cause. **The defect is latent and will re-fire on any pass whose header reuses that vocabulary.** 7 `REFUTED` rows against `p419`'s own section header, every subject a common word rather than an address. 🟢 **The contract is right and the attribution unit is wrong** — the same defect `T103` names. 🔵 **Remedy:** restrict the subject vocabulary to shapes `gate-address-shape` (`p351`) accepts, and attribute by sentence. 🔴 **Not built this pass**, and the gate is not weakened to suit it — `p387-G` forbids closing a gap by loosening a control |
+| 🆕 `Gap 420-B` | 🟡 **Four refs that `git ls-remote` lists and `raw.githubusercontent.com` serves NOTHING on, mechanism unknown.** `aureuserp/aureuserp` `gh-pages`, `OS4ED/openSIS-Classic` `Version_8.0`, `projectfedena/fedena` `projectfedena-patch-1`, `Seechange-edu/act-ai-tutor-backend` `TNS-1616-enable-multi-language-analysis-currently-only-cn-and-en` — all return `404` at **nine** common control paths. 🟢 **A fifth case is SOLVED and is not part of this gap:** `frappe/erpnext` `#34282-Record-advance-payment-as-a-liability` cannot be probed over HTTP at all, because a ref beginning with `#` is stripped as a fragment before the request leaves. 🔴 **Open:** whether the other four are empty orphans, LFS-only, or a channel property. 🔵 `T105` already protects the verdicts; this gap is about the mechanism |
+| 🆕 `Gap 420-C` | 🟡 **8 carried addresses returned exit `128` on `ls-remote` and this run cannot call them dead.** `thanh01pmt/interactive-quiz-kit`, `AI-Matrix-Engine/aidream`, `Mckaroff/GraphLMS`, `santillana-ai/tutor-sdk`, `ale-alejandro/beadkit`, `yokowasis/autograder`, `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp` — twice each, un-credentialled. 🔴 **An un-credentialled `128` does not separate *absent* from *private*.** 🟢 **`gate-slug-oracle` (`p293`) is exactly the instrument** — *"a credential prompt is a MEASUREMENT, not an inconclusive result"* — and it was **not run against them**, which is `T108`'s fourth instance. 🔵 **Cheapest closure available to the next pass**, and `gate-dead-citation` is the consumer: a dead address may be recorded, never recommended |
+
+### 🟢 Hardened this pass
+
+| item | result |
+|---|---|
+| 🟢 **`T104` registered — a grant's PATH is a function of the REF** | `moodle/moodle`: root **`COPYING.txt`** on `main` (`LICENSE`/`license.txt`/`COPYING` → `404`); **`lang/en/docs/licence.html` → `200`** on `MOODLE_13_STABLE`, `MOODLE_14_STABLE` **and** `MOODLE_15_STABLE`, with **no GPL boilerplate in `1.5`'s `version.php`**. 🔴 Strictly past `p418` (subtrees) and `p419` (branches): **the path migrates across a project's history** |
+| 🟢 **`T105` registered — an `UNGRANTED` ref verdict needs a positive control on that ref** | 5 of 114 flags were refs with no reachable file at all |
+| 🟢 **`T106` registered — read the grant at the COMMIT SHA** | Bogus 40-hex SHA → **`404`**; `GradeU` `main` `LICENSE` at `4ab0011` → `200`. 🟢 **No alias can satisfy a SHA**, so this supersedes `ACTION p419-B`'s two-request remedy |
+| 🟢 **`T107` registered — `gh-pages` is built output, not source** | `index.html` `200` / `package.json` `404` on `rstudio/learnr` and `netless-io/flat`; 6 of the 21 surviving pairs are `gh-pages` |
+| 🔴 **`T108` registered — an improvised instrument reproduces a defect this base already gates for** | **Four instances in one pass:** the path ladder (`p283`/`p401-C`'s lowercase lesson — lowercase `license.txt` alone cost 5 false flags, `COPYING.md` 9 more) · absence attribution (`gate-absence`/`T103`) · address shape (**`OWNER/REPO`**, `repos/CaviraOSS`, `repos/HKUDS` in the harvest, all rejected by `gate-address-shape`) · slug existence (`p293`, not run). 🔴 **The lesson is to RUN this base's instruments, not to re-improvise them** |
+| 🟢 **`Gap 298` / `Gap 405-A` confirmed on a SEVENTH channel** | The vertical leg returned Moodle, Open edX, Canvas, Sakai, OpenOLAT, Chamilo, OpenEduCat, RosarioSIS, openSIS, Open LMS — **all carried, none permissive** except the already-shelved Apache-2.0 OpenOLAT |
+| 🟢 **`T101` gets a second band member** | `dsvi-b/corretor-enem`'s MIT payload is **`1 078` B `4e4fd8d68768`** against `krayin/laravel-crm`'s `1 078` B `a76aa4a4405c` (`p418`). 🔵 `1 077` already had four distinct digests; `1 078` now has two |
+| 🟢 **`T100` confirmed a FIFTH time** | Ranking-worded legs: **0** unshelved for five consecutive passes. Capability-worded legs: **5** unshelved this pass, 1 of them supply |
+| 🟢 **`p417`'s Vietnamese correction CONFIRMED independently** | Law on AI **No. 134/2025/QH15**, in force **2026-03-01**, education/health/finance **extended to 2027-09-01** — from a different source than `p417`'s |
+| 🟢 **Two carried `EXISTS-NO-REFS` rows confirmed** | `cdweaver1992/edfi-mcp-server` and `openfresno/edgenuity-aeries-grade-passback` → **0 heads**, first-hand |
+
+### 🔵 Carried unchanged, and deliberately not re-bought
+
+| gap | why it is carried |
+|---|---|
+| `Gap 400-B` | 🔴 `gate-census-union` control 24, deliberately red since `p398`. 🟢 **Observed red this pass** on a real gate run |
+| `Gap 419-B` | 🟡 **Carried with a BETTER remedy.** `gate-grant-path-online` is still not built; `T106`'s SHA channel replaces the prescribed `ls-remote` branch-half fix |
+| `Gap 419-E` / `ACTION p417-A` | 🔵 **Carried and deliberately NOT executed**, third consecutive pass: both prescribe an outward-facing write to a third party's repository and **this run has no human in the loop**. 🟢 The findings they rest on stand without the ask |
+| `Gap 417-A` / `ACTION SH` | 🟢 **Did not fire.** This pass's EMEA sources carry the AI Act education deferral explicitly; the counter holds at **eight** |
+| `Gap 418-B` / `Gap 418-C` / `Gap 418-D` | 🔵 **Not re-bought.** This pass's effort went to the ref axis and the grant-channel audit; none of the three was advanced |
+| `T45` | 🔵 **Still the informed gap.** The APAC leg returned national instruments and one cross-country survey; **no school-level rules** |
+
+### 🟢 Actions — ranked, cheapest first
+
+| action | what it asks |
+|---|---|
+| 🆕 `ACTION p420-A` | 🟢 **Fix `gate-absence`'s attribution unit** — subject vocabulary restricted to `gate-address-shape`-accepted shapes, attribution by sentence (`T103`). 🔵 `p419`'s header is a ready-made negative fixture: it must produce **0** refutations, not 7 |
+| 🆕 `ACTION p420-B` | 🟢 **Build `gate-grant-tree` to Amendment 10**, not to `ACTION p419-A`. Fixtures all measured today: `GradeU` (`main` granted / `teacher`+`admin` not) positive · `moodle/moodle` `MOODLE_15_STABLE` (`lang/en/docs/licence.html`) for **10.2** · `frappe/erpnext` `#34282-…` and the four `Gap 420-B` refs for **10.1** · `rstudio/learnr` `gh-pages` for **10.5** · `OWNER/REPO` for **10.6** |
+| 🆕 `ACTION p420-C` | 🟢 **Run `gate-slug-oracle` (`p293`) against the 8 addresses of `Gap 420-C`** and record each as *absent* or *private*. 🔵 One command against an instrument that already exists |
+| 🆕 `ACTION p420-D` | 🟡 **Grade `Pranjulcr7/OpenTutor` against `zijinz456/OpenTutor` by FULL history** (`p404`), not by ref sets — 12 heads `a890519` against 11 heads `2d2c003` |
+| 🆕 `ACTION p420-E` | 🟡 **Resolve first-hand whether any Open edX component or Sakai is Apache-2.0**, against the majority AGPL-3.0 / ECL-2.0. 🔵 Two sources in this pass's vertical leg assert it; `p289` forbids writing either into a cell unread |
+| 🔵 `ACTION p419-C` | **Carried.** The `(slug, ref, file, sentence)` harvester is still unbuilt, and `Gap 420-A` now gives it a second consumer |
+
 ## 🆕 `p419` · 2026-10-24 — **`Gap 418-A` WIDENED rather than closed: the grant-enumeration axis is `(ref × path)`, not paths in one tree. 🔴 And the whole 52-control gate suite could NOT RUN this pass — the host refuses to execute this repository's code — so `Gap 419-D` registers a pass with no green gate behind it.**
 
 🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves it

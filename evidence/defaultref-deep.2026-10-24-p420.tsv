@@ -1,0 +1,20 @@
+slug	ref	verdict	path	manifest
+1EdTech/openbadges-specification	develop	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+Daniel-ux1026/Tutor-Inteligente	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+Nutlope/llamatutor	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+OS4ED/openSIS-Classic	master	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+TecFancy/dsh-deeptutor	main	MANIFEST-ONLY	path=NONE	manifest=package.json: "license": "MIT",
+bycs-lp/moodle-block_ai_chat	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+bycs-lp/moodle-local_ai_manager	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+frappe/education	develop	GRANTED-PATH	path=license.txt	manifest=NONE
+frappe/erpnext	develop	GRANTED-PATH	path=license.txt	manifest=package.json: "license": "GPL-3.0",
+frappe/lms	develop	GRANTED-PATH	path=license.txt	manifest=package.json: "license": "AGPL-3.0-or-later",
+gradescope/autograder_samples	master	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+lmscloud-io/moodle-aiprovider_openaicompatible	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+marcusgreen/moodle-qtype_aitext	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+marcusgreen/moodle-tool_aiconnect	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+nanobpm/nano-ide	main	MANIFEST-ONLY	path=NONE	manifest=package.json: "license": "Apache-2.0",
+patriciamar/ShinyItemAnalysis	master	MANIFEST-ONLY	path=NONE	manifest=DESCRIPTION: License: GPL-3
+philchalmers/mirt	main	MANIFEST-ONLY	path=NONE	manifest=DESCRIPTION: License: GPL (>= 3)
+savinoo/ai-grading-system	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
+x-cookie/agent	main	NO-GRANT-CHANNEL	path=NONE	manifest=NONE
