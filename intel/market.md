@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **Four regional legs, four CARRIED — and the one procurement fact that moved this pass is a licence, not a market number: the flagship permissive agent ships an `LGPL-3.0-or-later` subtree under its Office-export path.**
+
+🔵 **No new market sizing this pass, and that is a measurement rather than an omission.** Every
+figure the four legs returned is already on this file, and the two genuinely unshelved items are
+both **secondary single-source policy facts**, marked as such below and **not** priced into any
+opportunity row.
+
+### 🔵 The four regional legs — stated per region so silence cannot read as coverage
+
+| region | leg returned | new to this base |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states in 2026; **H.R. 8747** K-12 AI Literacy and Readiness Act advanced **2026-07-21**; Oklahoma and Maryland human-oversight rules; Canada **"AI for All"** (2026-06-04, no legislative date); NA = **36 %** of the global market at **$3.68B** in 2026; 60 % of US K-12 teachers used AI in 2024-25 | 🟡 **1, secondary:** Maryland's **Artificial Intelligence Ready Schools Act** — all **24** districts must adopt AI policies, state guidance spans eight areas. **0 hits** on these shelves |
+| **EMEA** | Annex III education **2027-12-02**; Art. 50 transparency live **2026-08-02**; **Regulation (EU) 2026/1744** (OJ **2026-07-24**, applies **2026-07-27**); embedded **2028-08-02**; Commission ethical guidelines for educators; UNESCO GenAI guidance; EU enterprise adoption 19.95 % *(general business, NOT education)* | 🔴 **0** — every instrument and date carried, **and this base's are the corrected ones**. 🔴 **Africa and the Middle East returned nothing again** |
+| **APAC** | Korea's **AI Basic Act in force 2026-01-22**; Vietnam's law in force **2026-03-01**, education among Annex high-risk, comply **2027-03-01**, **+6 months** where the system ran before **2026-08-15**; Japan and Singapore voluntary; Australia's mandatory guardrails **paused**; Ipsos ban-support 23 % (Indonesia) → 31 % (South Korea), higher in AU/NZ; APAC the fastest-growing region | 🔴 **0** — 🟢 **and the Vietnam two-tier structure is corroborated from a third independent source**, this time with the grace period explicit as *"an additional six months"* — this base's **`2027-09-01`** |
+| **LATAM** | **UNESCO IESALC**: **87 %** of 200 HEIs across 19 countries use AI in ≥1 area, only **26 %** have a formal AI strategy; Brazil **56 %** of secondary teachers used AI vs **36 %** OECD average; UNESCO regional **Observatory** launched **April 2026**; Google.org **$4.6M** with the Raspberry Pi Foundation across **9** countries; World Bank Peru tutoring pilot; IDB's 193-solution catalogue; HolonIQ LATAM EdTech 100 | 🟡 **1, secondary:** **Muyu Education (Ecuador)** — AI applied to teacher development. **0 hits**. Everything else carried |
+
+🟢 **`ACTION SH` not fired this pass.** No source in these four legs omitted the EU deferral — the
+EMEA leg returned the Omnibus deferral **and** flagged its own timing conflict, which is the channel
+behaving correctly. 🔵 The counter stays at **eight**, and `Gap 417-A` (a sighting counter with no
+audit) stays open and untouched.
+
+🔴 **The standing informed gaps are unchanged, and both are gaps in the CHANNEL, not in the world:**
+(a) **Africa and the Middle East** — nil for the Nth consecutive pass on English-language legs;
+(b) **APAC school-level** rules as distinct from national AI statutes (`T45`).
+
+### 🔴 The procurement fact that actually moved: a licence, not a number
+
+🟢 This base's flagship permissive agent — [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC),
+**41.3k★**, carried as `🟢 MIT` — ships **nine** grants. Eight are MIT (`1 065` B,
+`sha256₁₂ ba2525637432`); the ninth, `packages/mathml2omml/LICENSE`, is **LGPL-3.0**
+(`7 652` B, `sha256₁₂ e3a994d82e64`, manifest `"license": "LGPL-3.0-or-later"`).
+
+🔴 **It is a direct root dependency** (`"mathml2omml": "workspace:*"`), built **first** in
+`build:packages`, **35** paths, with **no root `THIRD-PARTY-NOTICES`** — and it is what makes the
+**PPTX / Office-math export** work, which is the capability the shelf recommends the project for.
+
+🟢 **Why this belongs on the market shelf.** Under the EU AI Act an education deployment lands in
+Annex III from **2027-12-02** and has to produce a **technical file**, and a technical file states
+the licence of every component. 🔴 A proposal that prices *"OpenMAIC, MIT, PPTX export"* has
+mis-stated a copyleft component in a document a conformity assessment will read. 🟢 **The remedy is
+cheap if it is early**: keep the subtree unmodified and record it, or excise the PPTX path — and say
+which, in the SoW, not after the audit.
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
@@ -258,6 +301,8 @@ disagree, and a deck that picks the biggest number tells them which one you read
 
 ### North America
 
+🆕 `p418` 🟡 **One secondary addition, not priced.** **Maryland's Artificial Intelligence Ready Schools Act** requires all **24** districts to adopt AI policies, with state guidance across eight areas — the district-mandate shape, which is a procurement trigger rather than a market size. 🔵 Single-source and **0 hits** on these shelves before today. 🟢 **The opportunity is unchanged in kind:** a state that mandates a policy per district creates demand for *policy-to-control* work — mapping a written AI policy onto the human-oversight and logging surface a deployment actually has. 🔴 And from this pass: **a component licence belongs in that mapping** — a district policy that says "open source only" is not satisfied by a repository whose root says MIT and whose export path is LGPL-3.0.
+
 🟢 **Policy, measured.** 35 states plus Puerto Rico now publish official guidance on AI use in K-12;
 binding statute is far rarer than guidance. Named instruments this pass: **Idaho SB 1227** (statewide
 K-12 AI framework; prohibits AI *replacing* a human teacher), **Arizona HB 4040** (K-12 *and* public
@@ -287,6 +332,8 @@ binding constraint is **not policy but institutional capacity to comply with it*
 envelope is the product, and teacher enablement is the line item most buyers have not yet budgeted.
 
 ### EMEA
+
+🆕 `p418` 🔴 **Nil new, and the leg is now worth less than the re-read it displaces.** The EMEA leg returned the AI Act dates, the Digital Omnibus (`Regulation (EU) 2026/1744`) and the Commission guidelines — **all carried, all at this base's corrected values** (Annex III education **`2027-12-02`**, Art. 50 live **`2026-08-02`**, embedded **`2028-08-02`**). 🟢 **The source even flagged its own timing conflict**, so `ACTION SH` did **not** fire. 🔴 **Africa and the Middle East returned nothing again.** 🟢 **The live EMEA opportunity sharpened by this pass is the technical file**: Annex III bites 2027-12-02, a technical file names every component's licence, and this pass found a copyleft subtree inside a repository the market calls MIT. **Component-licence attestation is billable conformity work, and it is work that must happen before the build, not after.**
 
 🟢 **Policy, measured — and the timing changed.** Secondary sources consistently report that
 **Regulation (EU) 2026/1744 moved the AI Act's stand-alone high-risk education deadline from
@@ -329,6 +376,8 @@ remains outstanding, because two secondary sources do not make a primary one.
 
 ### APAC
 
+🆕 `p418` 🟢 **Third independent corroboration of the Vietnam two-tier structure, and the grace period is explicit this time.** The leg returned *"comply by 1 March 2027, except for those in healthcare, education and finance already in operation before 15 August 2026, in which case an additional six-month grace period applies"* — i.e. this base's **`2027-09-01`** for pre-existing education systems, stated as a duration rather than a date. 🔵 **Korea's instrument was served as the "AI Basic Act"** where these shelves carry *"Framework Act"* — **naming variance on one instrument**, same in-force date **`2026-01-22`**; recorded so a successor does not shelve it twice. 🟢 **The opportunity:** an installed-base deployment in Vietnam has until `2027-09-01` and a greenfield one until `2027-03-01` — **six months of arbitrage that favours retrofitting an existing system over replacing it**, which is the opposite of the usual modernisation pitch. 🔴 **School-level rules remain the informed gap** (`T45`).
+
 🟢 **Policy, measured.** Four different regimes, not one: **South Korea** has a general AI law in
 force; **China** has no general AI law but binding sectoral rules, including **mandatory labelling of
 AI-generated content since 2025-09-01**; **Japan**'s AI Promotion Act carries **no fines or
@@ -358,6 +407,8 @@ concentration while you sell it: the whole knowledge-tracing research tier on th
 China-origin, and a client will find that in the dependency tree whether or not you say it first.
 
 ### LATAM
+
+🆕 `p418` 🟡 **One secondary addition: Muyu Education (Ecuador)**, applying AI to **teacher development** — **0 hits** here before today, from HolonIQ's 2026 LATAM EdTech 100. 🟢 **The governance gap is re-confirmed and it is the regional thesis:** UNESCO IESALC finds **87 %** of 200 HEIs across 19 countries using AI in at least one area against only **26 %** with a formal AI strategy, and adoption is highest at private non-profit universities while public institutions are resource-constrained. 🟢 **That 87/26 split is a demand signal for governance delivery, not for more tooling** — the institutions have the tools and lack the policy, oversight and evidence layer. 🔵 Brazil's **56 %** of secondary teachers against the OECD's **36 %** says the same at school level. 🔴 **And LATAM is where this pass's licence finding lands hardest**: public-sector procurement here leans on "open source" as a *category*, and a category check does not catch a copyleft subtree under an MIT root.
 
 🟢 **Policy, measured.** **Mexico closed its legislative period with no general AI law**; the pattern
 is sectoral patches. The one education-specific instrument found: the **Estado de México reformed
@@ -395,6 +446,8 @@ regional position than a greenfield agent, and it inherits the stars, the histor
 content rather than starting at zero the way `agente-educativo-psicocognitivo` does.
 
 ### Global
+
+🆕 `p418` 🟢 **One rule to add, from this pass's only movement.** A repository's licence is a **set, not a value** — enumerate every licence-shaped path before a single cell is written, because a workspace monorepo makes a vendored third-party package (`workspace:*`) look like first-party code. 🔵 Measured on `OpenMAIC`: **9** grants, **8 × MIT** and **1 × LGPL-3.0-or-later**, the copyleft one under the export path the project is recommended for. 🟢 **The check costs one `git clone --filter=blob:none` and one `ls-tree | grep`** — put it in the diligence step of every engagement, in every region, because it is the cheapest finding on this page and the most expensive one to discover late.
 
 🟢 **What holds everywhere.** Buyers have moved from "can it generate" to "can you evidence it"
 (HolonIQ) and from tool sprawl to governance (1EdTech). The composition rule is constant across all

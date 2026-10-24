@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **The foundational question this pass answers is "what is this repository's licence?" — and for a workspace monorepo the honest answer is a SET. 🔴 `OpenMAIC`: eight MIT grants and one `LGPL-3.0-or-later`.**
+
+🟢 **Gates on arrival: 50 / 51**, the lone red `gate-census-union` control 24 (`Gap 400-B`,
+deliberately red since `p398`). 🔵 One gate **added** this pass, so the standing check is now
+**52 controls wide**: `gate-register-currency`.
+
+### 🔴 A foundational repository can carry more than one grant, and the probe must enumerate
+
+🟢 **The rule, stated for the foundations layer because this is where it costs the most:** a
+repository's licence is **one cell per licence-shaped path**, never one cell per repository. Measured
+this pass on [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC):
+
+| grant | bytes | `sha256₁₂` | family |
+|---|---|---|---|
+| root + 7 × `packages/@openmaic/*` | `1 065` | `ba2525637432` | 🟢 **MIT** (identical in all eight) |
+| `packages/mathml2omml/` | `7 652` | `e3a994d82e64` | 🔴 **LGPL-3.0** (manifest: `LGPL-3.0-or-later`) |
+
+🔵 **Why the foundations shelf and not only the agents shelf:** the LGPL package is **vendored
+third-party** (`mathml2omml` `0.5.0`, Johannes Wilm, upstream `fiduswriter/mathml2omml`), and
+vendoring is a *foundation* decision. A consumer who forks `OpenMAIC` inherits the vendoring, the
+build order (`build:packages` builds `mathml2omml` **first**) and the obligation — **35** tracked
+paths of it. 🔴 **No root `THIRD-PARTY-NOTICES`**, so nothing in the repository announces it.
+
+🟢 **The one-command enumeration, which is cheaper than being wrong:**
+
+```sh
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/<slug> /tmp/x
+git -C /tmp/x ls-tree -r --name-only HEAD | grep -E '(^|/)(LICEN[CS]E|COPYING)'
+for p in <each path>; do git -C /tmp/x cat-file -p "HEAD:$p" | sha256sum; done
+```
+
+🔵 Then re-read each path on `raw.githubusercontent.com` with a calibrated control pair — this pass
+did, and both channels agreed on every one of the nine payloads (controls: `package.json` → `200`,
+`NO_SUCH_FILE_p418` → `404`).
+
+### 🔴 A shared byte LENGTH is not identity — demonstrated on this base's own cells
+
+🟢 `p312` settled that a byte length does not identify a **template**. This pass settles the adjacent
+case: it does not identify a **payload** either. The `1 077` B MIT band on these shelves now holds
+**four distinct digests**:
+
+| address | bytes | `sha256₁₂` |
+|---|---|---|
+| [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | `1 077` | `0eeb9d32caed` |
+| [`jarmolkowicz/knowledge-base-modrn-mind`](https://github.com/jarmolkowicz/knowledge-base-modrn-mind) | `1 077` | `5e2f8f0fa782` |
+| [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | `1 077` | `d150aadcccd2` |
+| 🆕 [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `1 077` | `c6dca3b0db5b` |
+
+🔴 **And `P564` asserted byte-identity across the band from a length alone**, pairing `aureuserp`
+with [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) — which is **`1 078`** B,
+`a76aa4a4405c`. `cmp` separates them; the delta is `aureuserp`'s **missing terminal newline**.
+🟢 **`T101`: a `cmp`-identity claim carries BOTH digests or it is not recorded.**
+
+### 🟢 `Gap 417-E` closed, and `Gap 298` confirmed from a fifth channel
+
+🟢 [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) **resolves** — ref `master`
+*(not `main`, which is what `p417` probed)*, HEAD `8f6e107` **2026-10-23**, `LICENSE` **MIT**
+`1 077` B. 🔴 `p417` recorded the address as unresolvable under the slug `aureus-erp/aureus`;
+**the correct slug was already on `agents/top.md:2330`** and `agents/trending.md:26550`.
+🟢 **It is admitted as real permissive ERP supply** — with the standing caveat that it is a
+*generic* ERP (`verticals/`), carries **no academic data model**, and is the same vendor as Krayin.
+
+🔴 **`Gap 298` / `Gap 405-A` confirmed again, from the ERP/CRM leg:** OpenEduCat **LGPL-3.0**,
+openSIS **GPL-2.0**, RosarioSIS **GPL-2.0**, Fedena **Apache-2.0**, Gibbon **GPL-3.0**, SchoolTool
+**GPL-2.0**, OpenOlat **Apache-2.0**, GegoK12 **MIT but open-core and 120 d stale**. 🟢 **Five
+independent channels now agree: no major education SIS is MIT.** The standing answer is unchanged —
+**graft a permissive general CRM onto admissions rather than fork a copyleft SIS**.
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,

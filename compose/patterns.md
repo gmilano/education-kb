@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **`Pattern AJ` audits a grant at ONE path and this pass found a repository with nine. 🟢 Amendment 8 makes the audit enumerate subtrees. 🟢 Plus `Pattern AQ`: the generated-classroom deployment, with the LGPL boundary priced instead of discovered.**
+
+### 🟢 `Pattern AJ` — **Amendment 8**: a repository's grant is a SET, enumerated, never a value read at one path
+
+🔴 **Why it is forced.** `Pattern AI`/`AJ` resolve a grant by reading `LICENSE` *(or the ladder of
+root-ish paths `p384` extended to eight)* and cross-checking the manifest. Run against
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) that procedure returns **`MIT`, resolved
+on two channels** — its strongest verdict — and it is **wrong about the repository**. The repository
+carries **nine** licence-shaped paths and one of them is **LGPL-3.0**.
+
+🟢 **Amendment 8, as a step that replaces step 1 of `Pattern AJ`:**
+
+```sh
+# 1a. enumerate — never guess a path, and never stop at the first hit
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/<slug> /tmp/probe
+git -C /tmp/probe ls-tree -r --name-only HEAD \
+  | grep -E '(^|/)(LICEN[CS]E(\.(md|txt))?|COPYING(\.(txt|LESSER))?)$' > paths.txt
+
+# 1b. digest EVERY path — a length is not an identity (T101)
+while read -r p; do
+  git -C /tmp/probe cat-file -p "HEAD:$p" > b
+  printf '%s\t%s\t%s\t%s\n' "$p" "$(wc -c <b)" "$(sha256sum <b | cut -c1-12)" "$(head -1 b)"
+done < paths.txt
+
+# 1c. cross-check EVERY manifest beside its own subtree, not just the root one
+for m in $(git -C /tmp/probe ls-tree -r --name-only HEAD | grep -E 'package.json$|composer.json$'); do
+  echo "$m -> $(git -C /tmp/probe cat-file -p "HEAD:$m" | grep -oE '"license"[^,]*')"
+done
+```
+
+🔴 **The verdict rule changes with it.** If `paths.txt` has more than one entry, the repository's
+licence cell is **a set**, and the audit's answer is the **most restrictive member plus the subtree
+it governs** — not the root value. 🔵 Worked on `OpenMAIC`: `{MIT × 8 @ 1 065 B ba2525637432,
+LGPL-3.0 × 1 @ 7 652 B e3a994d82e64}` → **"MIT, except `packages/mathml2omml` which is
+LGPL-3.0-or-later and is a direct root dependency."**
+
+🟢 **Amendment 8 also subsumes a trap `Pattern AJ` could not see.** A `pnpm`/`npm` workspace declares
+vendored third-party code as `"<pkg>": "workspace:*"`, which is **visually identical** to a
+first-party package in the dependency list. 🔴 On `OpenMAIC`, `package.json:118` is
+`"mathml2omml": "workspace:*"` beside `@openmaic/renderer` — the only distinguishing evidence is a
+`LICENSE` two directories down and an `"author"` that is not the project's. 🔵 **So step 1c reads the
+subtree manifests, and a manifest whose `"name"`/`"author"`/`"repository"` points off-project marks a
+vendored component regardless of what its licence says.**
+
+### 🟢 `Pattern AQ` (new) — the generated-classroom deployment, with the copyleft boundary priced up front
+
+🔵 **For:** a university, ministry or corporate L&D buyer who wants course material turned into
+taught, assessed lessons, and who will be asked for a technical file (EU Annex III from
+**`2027-12-02`**) or a district AI policy attestation (Maryland's **AI Ready Schools Act**, 24
+districts).
+
+| step | component | grant, measured | why this one |
+|---|---|---|---|
+| 1 | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — generation + delivery | 🟢 **MIT** `1 065` B `ba2525637432` (root + 7 subtrees) | 41.3k★; **named model slots** in `openmaic.yml`, **forbid-user-supplied-keys**, `video: null` to switch a capability off — the only governance surface of its kind on these shelves. Pin **`v1.2.1`** (2026-10-18): the head is `v1.3.0-rc.1` with breaking upgrade conditions and **no rollback below it** |
+| 2 | 🔴 **the boundary** — `packages/mathml2omml` | 🔴 **LGPL-3.0-or-later** `7 652` B `e3a994d82e64` | **Decide here, in writing, before the build.** It is a **direct root dependency** built **first** by `build:packages`, and it is what makes Office-math / PPTX export work |
+| 3 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — lifelong tutoring beside it | 🟢 **Apache-2.0** | 42.3k★, `v1.6.15` (2026-10-19) — **larger and more permissive**; use it for the persistent-learner-memory half rather than extending OpenMAIC's |
+| 4 | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) or [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) — mastery estimation | 🟢 **MIT** / 🟢 **MIT** | BKT (OATutor) or deep knowledge tracing (pyKT). 🔴 OpenMAIC auto-grades quizzes and does **not** model mastery — this is the gap, not an upgrade |
+| 5 | delivery into the client's LMS | [`exelearning/exelearning`](https://github.com/exelearning/exelearning) 🔴 **AGPL-3.0**, or [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) 🟢 **MIT** `1 069` B `41857092247a` | **SCORM 1.2 / 2004 packaging.** `exelearning` is verified in-tree this pass (**774** of **9 756** paths, `ImsManifest.ts`, `imscp_rootv1p1p2.xsd` fixtures) and is state-backed; 🔴 **but §13 network copyleft applies to a hosted service**, so `Papermorph` is the permissive route. 🔴 **Neither offers xAPI** — `exelearning` retired it (`ADR-2302-02-xapi-retirement.md`) |
+| 6 | admissions / records substrate | [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) 🟢 **MIT** `1 077` B `c6dca3b0db5b` | 🔴 **No permissive education SIS exists** (`Gap 298`, five channels) — graft a generic MIT ERP/CRM onto the academic model. 🔴 Same vendor as `krayin/laravel-crm`, so picking both is not diversification |
+| 7 | the attestation | — | 🟢 Emit the step-1a/1b table **as a build artefact**, per component. This is the document the conformity assessment and the district policy both ask for, and it costs one command per repository |
+
+🔴 **The two honest options at step 2, stated because a proposal must choose one:**
+
+1. 🟢 **Keep `packages/mathml2omml` unmodified** and record it as an unmodified LGPL-3.0-or-later
+   dependency with its digest. LGPL is library-scoped; consuming it unchanged is satisfiable, and
+   §4's relink/replacement obligation is met by the fact that it is a separate workspace package the
+   client can swap.
+2. 🟢 **Excise the PPTX / Office-math export path** and ship HTML-only export, which is MIT
+   end-to-end.
+
+🔴 **What is NOT an option:** writing *"OpenMAIC, MIT, PPTX export"* in a statement of work. That
+prices a copyleft component as permissive in the one document an audit will read.
+
+🔵 **Regional note that changes step 5's economics.** Vietnam's clock gives an **installed-base**
+education system until **`2027-09-01`** and a greenfield one until **`2027-03-01`** — so for an APAC
+engagement this stack is cheaper to **retrofit beside** an existing LMS than to stand up as a
+replacement. 🟢 That is six months of arbitrage, and it points the opposite way from the usual
+modernisation pitch.
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,

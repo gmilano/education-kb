@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-24
 ---
 
+## Pass 418 — reads 2026-10-24, commit 2026-10-24 — **THIS BASE'S MOST-DETAILED AGENT ROW SAYS `🟢 MIT`, AND THE REPOSITORY SHIPS AN `LGPL-3.0-or-later` SUBTREE UNDER EXACTLY THE CAPABILITY THE ROW RECOMMENDS. 🟢 `THU-MAIC/OpenMAIC` HAS NINE GRANTS, NOT ONE. 🔴 AND `P564`'s BYTE-IDENTITY CLAIM IS REFUTED BY A FIGURE `p417` ITSELF PUBLISHED.**
+
+🔵 **No date straddle.** Every leg, probe, payload read, digest and gate run below was executed on
+**2026-10-24** and the commit lands **2026-10-24**, so `updated:` carries one date — unlike `p417`,
+which was the run's first midnight-UTC split.
+
+🟢 **Gates ran BEFORE the first research leg** — `p412`'s standing rule. **50 / 51 green on arrival**,
+equal to `p413`–`p417`; the lone red is `gate-census-union` control 24, **`Gap 400-B`**, carried
+deliberately red since `p398`. 🟢 **One gate added this pass**, so the standing check is now
+**52 wide**.
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **A root-only licence read is wrong about [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — 41.3k★, the repository this base cites most.** It carries **nine** licence-shaped paths. **Eight** are byte-identical stock MIT (`1 065` B, `sha256₁₂ ba2525637432`, *"Copyright (c) 2026 THU-MAIC"*) at the root and in seven `packages/@openmaic/*` subtrees. 🔴 **The ninth, `packages/mathml2omml/LICENSE`, is `7 652` B, `sha256₁₂ e3a994d82e64`, *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007"*** |
+| 2 | 🟢 **Three channels agree, which is what makes it a fact and not a stray file.** The payload is LGPL-3.0's text; `packages/mathml2omml/package.json` declares `"license": "LGPL-3.0-or-later"`; and the package is third-party by its own manifest — `"name": "mathml2omml"`, `"version": "0.5.0"`, `"author": "Johannes Wilm"`, upstream `fiduswriter/mathml2omml`. 🔵 `-or-later` is the **wider** grant |
+| 3 | 🔴 **It is in the build graph of the shipped application.** Root `package.json:118` — `"mathml2omml": "workspace:*"`; root `build:packages` builds it **first in the chain**; **35** tracked paths. 🔴 **And no root `THIRD-PARTY-NOTICES`** — the only root path matching `third\|notice\|attribu` is `.gitattributes` |
+| 4 | 🔴 **The copyleft subtree sits under the capability this base recommends the project FOR.** `mathml2omml` is MathML→OMML (Office math) and it is what makes *"a PPTX that keeps every scene"* work — one of the three properties the row names as the reason to choose OpenMAIC over the larger `DeepTutor`. 🟢 **The recommendation survives; the licence cell behind it does not** |
+| 5 | 🟢 **`p382`'s gate is the one that names this, and this address was never fed to it.** `gate-subtree-grant`'s subject is *"a grant has SUBTREES, and a root-only read is wrong about the repository"*. `p414` applied it to `education-agent-skills`; nothing applied it to the flagship row. 🔵 **The instrument existed and its most important input was missing** |
+| 6 | 🔴 **The carried root figure is one byte over, on two independent channels.** The row read `1,066 B`; the payload is **`1 065`** B by blobless clone and by `raw.githubusercontent.com`, both `sha256₁₂ ba2525637432`, against a calibrated control pair (`package.json` → `200`, `NO_SUCH_FILE_p418` → `404`) |
+| 7 | 🔴 **`P564` REFUTED — and the refuting figure was published by `p417`, on this base, unconnected.** `P564` asserts `krayin/laravel-crm` and `aureuserp/aureuserp` ship a *"byte-identical 1 077 B MIT payload"*. Measured today: krayin **`1 078`** B `a76aa4a4405c` (ref `2.2`, HEAD `5eecae0`) vs aureuserp **`1 077`** B `c6dca3b0db5b` (ref `master`, HEAD `8f6e107`). `cmp` → **they differ**, by exactly aureuserp's **missing terminal newline** |
+| 8 | 🟢 **`P564`'s CONCLUSION survives and its EVIDENCE does not — that distinction is the finding.** *"One vendor, not two options"* is right, on the holder line (*"Copyright 2010-2025, Webkul Software"*, identical). 🔴 But `p417` recorded krayin at the correct `1 078` B / `a76aa4a4405c` **in the same pass that declared `aureuserp` unresolvable**, so this base held the number that breaks `P564` and never made the comparison. 🟢 **`T101`: a `cmp`-identity claim carries BOTH digests or it is not recorded** |
+| 9 | 🔵 **The one-byte class fired TWICE in one pass**, which is why it earns a rule. 🟢 **And the `1 077` B MIT band is demonstrably crowded** — four *different* digests already sit at that exact length on these shelves (`0eeb9d32caed`, `5e2f8f0fa782`, `d150aadcccd2`, `c6dca3b0db5b`). `p312` settled that a length is not a **template**; this settles that it is not an **identity** |
+| 10 | 🟢 **`Gap 417-E` CLOSED — from `agents/top.md` itself, 1 880 lines below the section that opened it.** `p417` prescribed `ACTION p417-C` to resolve `aureus-erp/aureus` (`main/LICENSE` → `404`). 🔴 The resolvable slug was already at `agents/top.md:2330` and `agents/trending.md:26550`, and `p417`'s cell was wrong **twice** — wrong slug **and** wrong ref (`main`; the real default is **`master`**). 🔵 `p416`'s standing *"`grep -rF` the band a pass claims is empty"* would have closed it without a network probe |
+| 11 | 🟢 **`Gap 417-D` CLOSED, and the two halves of the claim have OPPOSITE answers.** `exelearning/exelearning` at HEAD `c848eca`: **9 756** paths, **774** matching `/scorm/i` — SCORM 1.2 runtime, a **SCORM 2004** contract suite, the generator `src/shared/export/generators/ImsManifest.ts`, export fixtures carrying `imscp_rootv1p1p2.xsd` beside `imscp_v1p1.xsd`. 🟢 **The secondary source was RIGHT and the repository PAGE was incomplete** — the inverse of this base's usual failure. 🔴 **xAPI is RETIRED by decision record** (`ADR-2302-02-xapi-retirement.md`) |
+| 12 | 🔵 **And `exelearning` is NOT a second permissive SCORM emitter** — it is **AGPL-3.0**, so `p416`'s closure of that scarcity still rests on `Papermorph` alone. 🔴 §13 network copyleft is what decides the commercial model for a hosted build |
+| 13 | 🟢 **`ACTION p417-D` BUILT this pass rather than deferred** — [`compose/code/p418-register-currency-gate`](compose/code/p418-register-currency-gate/), **16 controls**, wired into `make hooks` as `gate-register-currency`. 🟢 **Validated on the real commits**: red at `4a53447` (`p414`, *stale by 1*), `1d3f173` (`p415`, *by 2*), `ea583bf` (`p416`, *by 3*), green at `20aa033` (`p417`). 🟢 **It would have fired on `p414`, the pass the drift began** — three passes before anyone noticed. `p412` answered the same failure with a warning; the warning did not hold (`P237`) |
+| 14 | 🟢 **`Pattern AJ` Amendment 8 + `Pattern AQ`.** Amendment 8 replaces step 1: **enumerate** every licence-shaped path, **digest each**, and cross-check **every subtree manifest** — a repository's grant is a **set**, and the verdict is the most restrictive member plus the subtree it governs. `Pattern AQ` is the generated-classroom deployment with the LGPL boundary **priced at step 2** instead of discovered at audit |
+| 15 | 🔵 **Nine legs, ZERO unshelved in-domain addresses** — `OpenMAIC`, `os-taxonomy`, `frappe/education`, `gegok12`, `AITutorAgent`, `Gchism94/ai-tutor`, `mitodl/open-learning-ai-tutor`, `nanochat`, `developer-roadmap`, `500-AI-Agents-Projects`, OpenEduCat, openSIS, RosarioSIS, Fedena, ERPNext — all carried, with hit counts. 🟢 **Third consecutive pass of declining novelty** (`p416`: 1 of 68; `p417`: 2 of 13; `p418`: **0 of 9**), and all four findings came from **re-reading verdicts**. `T100` confirmed twice |
+| 16 | 🔵 **Regional legs: four for four CARRIED**, each stated as a placed nil. 🟡 Two genuinely new secondary facts, neither priced: **Maryland's Artificial Intelligence Ready Schools Act** (24 districts must adopt AI policies) and **Muyu Education, Ecuador** (AI for teacher development). 🟢 **Vietnam's two-tier structure corroborated from a third source**, grace period explicit at *"an additional six months"* = this base's `2027-09-01`. 🔵 Korea served as *"AI Basic Act"* where these shelves say *"Framework Act"* — **one instrument, two names**, same `2026-01-22`. 🔴 **Africa and the Middle East returned nothing again** |
+| 17 | 🟢 **`ACTION SH` did NOT fire** — no source in the four regional legs omitted the EU deferral, and the EMEA leg flagged its own timing conflict. Counter holds at **eight**, and `Gap 417-A` stays open |
+| 18 | 🔵 **`ACTION p417-A` carried and deliberately NOT executed.** It prescribes opening an issue on a third party's repository; **this run has no human in the loop**, so an outward-facing write is left for one that does. 🟢 The finding it rests on is fully recorded and stays true without the issue |
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 759** harvested shapes → **38** are not addresses → **2 721 addresses**.
+🔵 **2 721** channel-U addresses and **3 187** channel-B survivors give
+**3 557 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🟢 **The delta.** Against `p417`'s published triple (**2 758 / 38 / 2 720**, union **3 556**) the
+address count moved **+1** and the union **+1**; harvested shapes moved **+1** and rejections held
+at **38**. 🔵 **A +1 pass is the right shape for a nil-supply pass** — this pass added **no new
+in-domain address**, and the single increment is the one new internal path
+(`compose/code/p418-register-currency-gate`), not a discovery. 🟢 **That the census and the supply
+layer agree is itself a check**: a pass claiming nine legs and zero new addresses should move this
+number by about zero, and it did.
+
 ## Pass 417 — reads 2026-10-23, commit 2026-10-24 (the run's first midnight-UTC straddle) — **`p411` GRADED A CORRECT SOURCE AS CARRYING "THE WRONG VIETNAMESE DATE", AND THE ROW'S OWN QUOTED TEXT CONTAINS THE CLAUSE THAT MAKES IT RIGHT. 🟢 PLUS THE FIRST NEW STATE-BACKED EMEA SUPPLY IN SEVERAL PASSES — `exelearning/exelearning`, AGPL-3.0 AT `p413`'s CANONICAL DIGEST, LED BY SPAIN'S MINISTRY OF EDUCATION. 🔴 AND THE GAP REGISTER WAS THREE PASSES STALE.**
 
 🔵 **Dating note — the first SPLIT in this run.** Every search leg, licence read, payload read,

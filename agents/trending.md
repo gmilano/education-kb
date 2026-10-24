@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **Nine grants in the flagship MIT repository, one of them `LGPL-3.0-or-later`; `P564`'s byte-identity refuted by a number this base already held; and `ACTION p417-D` built as a gate that reproduces the real failure on the real commits.**
+
+🔵 **APPEND-ONLY shelf** — this section is added above `p417`'s and nothing below it is rewritten.
+🔵 **Single date:** every leg and probe below ran **2026-10-24**; the commit lands **2026-10-24**.
+
+### 🟢 The new supply, first-hand — and the honest total is NIL unshelved
+
+🔴 **Zero new in-domain addresses across eight prescribed legs plus one targeted discovery leg.**
+Every candidate returned was already on these shelves. 🟢 **Recorded with hit counts so a successor
+can distinguish saturation from channel decay**, which is `T100`'s whole point:
+
+| candidate returned | already shelved at | verdict |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `agents/top.md:1810`, `:1771`, `:2264` | 🔴 carried — **but its grant was wrong, see below** |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | `agents/top.md:56`, `:62`, `:77`, `:449` | 🔴 carried (ODbL-1.0 + CC BY-SA 4.0, `p417` byte-confirmed) |
+| [`frappe/education`](https://github.com/frappe/education) | `agents/top.md:575` (19-B grant), `:1232` | 🔴 carried |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `agents/top.md:470`, `:576`, `:577`, `:605` | 🔴 carried (MIT, Laravel-skeleton manifest) |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | `agents/top.md:1257`, `:1389` | 🔴 carried (MIT, `1 072` B) |
+| [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | `agents/trending.md:3297` | 🔴 carried (MIT, `1 070` B `3d5a24e51479`) |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | `agents/trending.md:20845`, `:20858`, `:20882` | 🔴 carried — and already graded a **fork**, 1★ |
+| `karpathy/nanochat`, `developer-roadmap`, `500-AI-Agents-Projects` | `agents/top.md:449`, `:1321` | 🔴 carried, and none is in-domain supply |
+| `OpenEduCat`, `openSIS`, `Fedena`, `RosarioSIS`, `ERPNext`, `Gibbon`, `SchoolTool`, `OpenOlat` | `intel/open-gaps.md` (`Gap 298` / `Gap 405-A`) | 🔴 carried — **fifth channel to confirm no major education SIS is MIT** |
+
+### 🔴 `THU-MAIC/OpenMAIC` — nine grants, and the ninth is copyleft
+
+🟢 Probed with `p389`'s channel (`git clone --depth 1 --filter=blob:none --no-checkout`), HEAD
+`dff201b` **2026-10-23T20:16+08:00**, ref `main`; every payload then re-read on
+`raw.githubusercontent.com` against a calibrated control pair (`package.json` → `200`,
+`NO_SUCH_FILE_p418` → `404`). **Both channels returned identical bytes and digests.**
+
+| path | bytes | `sha256₁₂` | title | holder |
+|---|---|---|---|---|
+| `LICENSE` | `1 065` | `ba2525637432` | MIT License | Copyright (c) 2026 THU-MAIC |
+| `packages/@openmaic/dsl/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| `packages/@openmaic/editor/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| `packages/@openmaic/generation/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| `packages/@openmaic/geometry/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| `packages/@openmaic/importer/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| `packages/@openmaic/renderer/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| `packages/@openmaic/storage/LICENSE` | `1 065` | `ba2525637432` | MIT License | *(identical)* |
+| 🔴 **`packages/mathml2omml/LICENSE`** | **`7 652`** | **`e3a994d82e64`** | **GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007** | **Copyright (C) 2007 Free Software Foundation, Inc.** |
+
+🟢 **Three channels agree on the exception**, which is why it is a fact and not a stray file:
+the payload is LGPL-3.0's text; `packages/mathml2omml/package.json` declares
+`"license": "LGPL-3.0-or-later"`; and the package is third-party by its own manifest —
+`"name": "mathml2omml"`, `"version": "0.5.0"`, `"author": "Johannes Wilm"`,
+`"repository": "git+https://github.com/fiduswriter/mathml2omml.git"`.
+
+🔴 **It is in the build graph of the shipped application.** Root `package.json:118` —
+`"mathml2omml": "workspace:*"`; root `build:packages` builds `packages/mathml2omml` **first**.
+**35** tracked paths under the subtree. 🔴 **And there is no `THIRD-PARTY-NOTICES` file at the
+root** — the only root path matching `third|notice|attribu` is `.gitattributes`.
+
+🔵 **The manifest sweep, so the claim has a denominator:** of the three `packages/*/package.json`
+files, `pptxgenjs` → `"MIT"`, `docs` → **no `license` field**, `mathml2omml` → `"LGPL-3.0-or-later"`.
+
+🟢 **What it changes for a studio.** The row's recommendation stands — OpenMAIC's governance surface
+(named model slots, forbid-user-keys, offline HTML export) is still the reason to choose it over the
+larger `DeepTutor`. 🔴 **What changes is the price of the export path.** `mathml2omml` is
+MathML→OMML, i.e. Office math, and it is what makes *"a PPTX that keeps every scene"* work. LGPL-3.0
+is library-scoped, so consuming it **unmodified** is satisfiable; **modifying** it obliges
+publication of the modifications under LGPL, and §4 obliges a relink/replacement path for the
+combined work. 🔵 **Either keep the subtree unmodified and say so in the technical file, or excise
+the PPTX path.** Those are the two options, and a proposal that says *"OpenMAIC, MIT"* has chosen
+neither.
+
+### 🔴 `P564` refuted — and the refuting figure was already on this base
+
+| address | ref · HEAD | bytes | `sha256₁₂` | holder |
+|---|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `2.2` · `5eecae0` (2026-10-21) | **`1 078`** | `a76aa4a4405c` | Copyright 2010-2025, Webkul Software |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `master` · `8f6e107` (2026-10-23) | **`1 077`** | **`c6dca3b0db5b`** 🆕 | Copyright 2010-2025, Webkul Software |
+
+🔴 **`cmp` → they differ.** The whole delta is the terminal newline: `aureuserp`'s payload ends
+`…DEALINGS IN THE SOFTWARE.` with **no newline at end of file**; krayin's has one.
+🔴 `P564` (`agents/trending.md:26534`) asserts a *"**byte-identical** 1 077 B MIT payload"*.
+🟢 **Its conclusion — *"one vendor, not two options"* — SURVIVES**, on the holder line, which really
+is identical. 🔴 **Its evidence does not**, and the number that breaks it was published **by `p417`**:
+`README.md` finding 11 records krayin at `1 078` B / `a76aa4a4405c` — correct — **in the same pass
+that declared `aureuserp` unresolvable**, so the comparison was never made.
+🟡 `agents/trending.md:26543` still carries krayin at `1 077` B, so this base holds **two different
+lengths for one address on two shelves** — `gate-shelf-consistency`'s subject (`p308`).
+
+🟢 **`T101` registered: a `cmp`-identity claim is recorded with BOTH digests, or it is not recorded.**
+🔵 The band is demonstrably crowded — four **different** digests at exactly `1 077` B already on
+these shelves (`0eeb9d32caed` `oak-curriculum-api`, `5e2f8f0fa782` `knowledge-base-modrn-mind`,
+`d150aadcccd2` `oak-ai-lesson-assistant`, `c6dca3b0db5b` `aureuserp`). `p312` settled that a length
+is not a **template**; this is the adjacent case — a length is not an **identity**.
+
+### 🟢 `exelearning/exelearning` — `ACTION p417-B` discharged, and the claim splits in two
+
+🟢 HEAD `c848eca` **2026-10-23T07:40+02:00**, ref `main`, **9 756** tracked paths.
+**774** match `/scorm/i`.
+
+| evidence | path |
+|---|---|
+| SCORM 1.2 runtime adapter | `public/app/common/scorm/scorm12/exe-scorm12-adapter.js` |
+| SCORM API wrapper + SCO functions | `public/app/common/scorm/SCORM_API_wrapper.js`, `SCOFunctions.js` |
+| 🟢 **SCORM 2004** contract suite | `public/app/common/scorm/contract/scorm2004-contract.test.js` |
+| manifest generator (code, not fixture) | `src/shared/export/generators/ImsManifest.ts` + `.spec.ts` |
+| export fixtures, **two packaging profiles** | `…_scorm/imscp_rootv1p1p2.xsd` (SCORM 1.2 CP) beside `…_ims/imscp_v1p1.xsd` (plain IMS CP) |
+| architecture decisions | `ADR-2209-01-scorm12-runtime-rewrite`, `ADR-2222-01-scorm-manifest-root-cluster-item` |
+
+🟢 **So the secondary source was RIGHT and the repository page was INCOMPLETE** — the page names
+Moodle export and *"various formats"*. 🔵 **That is the inverse of this base's usual failure**, and
+worth recording as such: `Gap 417-D` was opened on the assumption the source had over-claimed.
+🔴 **The xAPI half is false, and false by decision:** `doc/architecture/adr/ADR-2302-02-xapi-retirement.md`.
+🔵 **And it is not a second permissive SCORM emitter** — `exelearning` is **AGPL-3.0**, so `p416`'s
+closure of that scarcity still rests on `Papermorph` alone.
+
+### 🔵 The nine legs, stated per region so silence cannot read as coverage
+
+| # | leg | returned | new to this base |
+|---|---|---|---|
+| 1 | `top open source AI agents education 2026 github MIT` | general-purpose agent rankings; `500-AI-Agents-Projects`, HF Agents Course, MS AI Agents for Beginners | 🔴 **0** — all carried, and none education-native supply |
+| 2 | `github trending education AI 2026` | `os-taxonomy`, `claude-howto`, `developer-roadmap`, `nanochat`, MS GenAI for Beginners | 🔴 **0** — all carried |
+| 3 | `open source platform education ERP CRM MIT Apache student information system` | OpenEduCat (LGPL-3.0), RosarioSIS (GPL-2.0), GegoK12 (MIT), ERPNext, Frappe Education, openSIS, Fedena, SchoolTool, AlekSIS | 🔴 **0** — and a **fifth** independent confirmation of `Gap 298`: **no major education SIS is MIT** |
+| 4 | `AI education industry trends 2026` | experiment→operations, governance, embedded infrastructure, education-specific tooling, agentic, credentials, evidence-of-outcomes | 🔴 **0 instruments** — see `intel/trends.md` |
+| 5 | **North America** | 134 bills / 31 states; H.R. 8747 (advanced 2026-07-21); Canada *"AI for All"* 2026-06-04; NA 36 % share / **$3.68B** 2026 | 🟡 **1 secondary** — Maryland's **Artificial Intelligence Ready Schools Act** (24 districts must adopt AI policies), **0 hits** on these shelves |
+| 6 | **EMEA** | AI Act Annex III education **2027-12-02**, Art. 50 live **2026-08-02**, Digital Omnibus **Reg (EU) 2026/1744** (OJ 2026-07-24, applies 2026-07-27), embedded **2028-08-02**; Commission ethical guidelines; UNESCO GenAI guidance | 🔴 **0** — every instrument carried **and this base's dates are the corrected ones**. 🔴 **Africa and the Middle East returned NOTHING AGAIN** — the standing informed gap, not coverage |
+| 7 | **APAC** | Korea's **AI Basic Act in force 2026-01-22**; Vietnam's law in force **2026-03-01**, education high-risk, comply **2027-03-01**, **+6 months** for systems running before **2026-08-15**; Japan/Singapore voluntary; Australia guardrails paused; Ipsos ban-support 23 % ID → 31 % KR; regional models SEA-LION, Sarvam, ILMU, Sahabat AI, HyperCLOVA X, TAIDE | 🔴 **0** — all carried. 🟢 **And the Vietnam two-tier structure is CORROBORATED from a third independent source**, grace period explicit at *"an additional six months"*, which is this base's `2027-09-01`. 🔵 Korea's instrument is carried as *"Framework Act"* and served here as *"AI Basic Act"* — **naming variance on one instrument, same 2026-01-22 date** |
+| 8 | **LATAM** | UNESCO IESALC: **87 %** of 200 HEIs across 19 countries use AI in ≥1 area, **26 %** have a formal strategy; Brazil **56 %** of secondary teachers vs OECD 36 %; UNESCO regional Observatory (Apr 2026); Google.org **$4.6M** with the Raspberry Pi Foundation across 9 countries; World Bank Peru pilot; HolonIQ LATAM EdTech 100 | 🟡 **1 secondary** — **Muyu Education (Ecuador)**, AI for teacher development, **0 hits**. Everything else carried |
+| 9 | 🆕 targeted: `new open source AI tutor agent github October 2026 release MIT license education` | `OpenMAIC` v1.3.0-rc.1 (2026-10-22), `AITutorAgent`, `Gchism94/ai-tutor`, `mitodl/open-learning-ai-tutor` | 🔴 **0 new addresses** — 🟢 **but this is the leg that produced the pass**: re-probing the carried `OpenMAIC` row is what surfaced the nine grants |
+
+🟢 **`T100` confirmed a second time.** Nine legs, zero new addresses, and the pass's four findings all
+came from **re-reading verdicts this base already published**. 🔵 On a saturated shelf the marginal
+leg is worth less than the marginal re-read, and this pass is the cleanest instance of it so far.
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,

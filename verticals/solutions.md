@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **The permissive ERP row `p417` refused is REAL — it was the slug and the ref that were wrong, and the right ones were already on this base. 🔴 Plus: the Webkul pair is one vendor, but it is NOT one payload.**
+
+### 🟢 `aureuserp/aureuserp` admitted — `Gap 417-E` closed, `ACTION p417-C` discharged
+
+| field | measured 2026-10-24 |
+|---|---|
+| address | [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) 🔴 **not** `aureus-erp/aureus` |
+| default ref | **`master`** 🔴 `p417` probed `main` → `404` |
+| HEAD | `8f6e107`, **2026-10-23T18:06+05:30** — live, one day old |
+| grant | 🟢 **MIT**, `LICENSE`, `1 077` B, `sha256₁₂ c6dca3b0db5b`, *"Copyright 2010-2025, Webkul Software"* |
+| shape | Laravel: `composer.json`, `package.json`, `artisan`, `phpunit.xml`, `Dockerfile`/`docker-compose.yml`, `plugins/`, `database/`, `lang/`, `.scribe` (API docs) |
+
+🔴 **`p417` registered `Gap 417-E` and prescribed a probe for a question this base had already
+answered** — `agents/top.md:2330` carries the correct slug with its MIT grant, and
+`agents/trending.md:26550` carries it again. 🔵 `p416`'s standing suggestion is *"`grep -rF` the band
+a pass claims is empty"*; two `grep` calls would have closed this without a network probe.
+
+### 🔴 One vendor, two payloads — the Webkul pair re-measured
+
+| address | ref · HEAD | bytes | `sha256₁₂` |
+|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `2.2` · `5eecae0` (2026-10-21) | `1 078` | `a76aa4a4405c` |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `master` · `8f6e107` (2026-10-23) | `1 077` | `c6dca3b0db5b` |
+
+🟢 **Same holder, same text, different bytes** — `aureuserp` has no terminal newline.
+🟢 **The procurement conclusion is unchanged and still load-bearing:** these are **one vendor**
+(Webkul Software), so choosing both is not diversification. 🔴 **`P564`'s stated basis —
+*"byte-identical 1 077 B"* — is refuted**, and `p417` itself published krayin's correct `1 078` B.
+
+### 🟢 `exelearning` placed on this shelf properly: a SCORM-emitting authoring tool, AGPL-3.0
+
+🟢 `ACTION p417-B` discharged in-tree (HEAD `c848eca`, **9 756** paths, **774** matching `/scorm/i`):
+**SCORM 1.2 runtime** (`exe-scorm12-adapter.js`, `SCORM_API_wrapper.js`), a **SCORM 2004** contract
+suite, the generator `src/shared/export/generators/ImsManifest.ts`, and export fixtures in **two**
+packaging profiles — `imscp_rootv1p1p2.xsd` (SCORM 1.2 CP) and `imscp_v1p1.xsd` (plain IMS CP).
+🔴 **xAPI is retired by decision record** (`ADR-2302-02-xapi-retirement.md`), so a proposal must not
+offer xAPI from this component.
+🔴 **AGPL-3.0 decides the commercial model**, and that is the whole caveat: a *hosted* service built
+on `exelearning` triggers §13 network copyleft. 🟢 For a **desktop/offline authoring** deployment, or
+one where the studio publishes its modifications, it is the strongest state-backed authoring tool on
+this shelf (Spain's MEFPD via Cedec-INTEF).
+
+### 🔵 The vertical platform table, re-stated with what each one is for
+
+| platform | grant | layer | AI-on-top verdict |
+|---|---|---|---|
+| [Moodle](https://github.com/moodle/moodle) | GPL-3.0 | LMS | 🟢 the default LMS target; MCP servers carried on `agents/top.md` |
+| [Open edX](https://github.com/openedx/edx-platform) | AGPL-3.0 🔴 **narrowed grant** (`p413`) | LMS / MOOC | 🟡 read the narrowing before a hosted build |
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | AGPL-3.0 | **authoring → SCORM** | 🟢 strongest OER authoring; 🔴 §13 on hosting |
+| [Kolibri](https://github.com/learningequality/kolibri) | MIT | offline-first learning | 🟢 the permissive choice for low-connectivity LATAM / Africa deployments |
+| [OpenEduCat](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | education ERP | 🟡 copyleft, Odoo-based |
+| [RosarioSIS](https://gitlab.com/francoisjacquet/rosariosis) | GPL-2.0 | K-12 SIS | 🟡 copyleft |
+| [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 *(grant at `docs/License.txt`)* | K-12 SIS | 🟡 copyleft; 🔵 the path that broke a root-only probe at `p384` |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | MIT | school management | 🔴 **open-core** (premium modules withheld), HEAD 120 d stale, manifest is the unedited Laravel skeleton |
+| 🆕 [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** | generic ERP | 🟢 permissive admissions/finance substrate; 🔴 **no academic model**, same vendor as Krayin |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 **MIT** | generic CRM | 🟢 permissive admissions CRM; 🔴 0 education terms in its README |
+| [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | virtual classroom | 🟡 copyleft, library-scoped |
+| [H5P](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** | interactive content | 🔴 **SCORM export runs through the separate `Lumi` DESKTOP app** (`p417`) — not a server-side pipeline. 🔴 🆕 `p418` **This row said MIT in its first draft and `gate-shelf-consistency` refused it** — four cells on these shelves said GPL-3.0 and they are right: `LICENSE.txt` read first-hand today = **`35 146` B, `sha256₁₂ c53a65c2fd56`, *"GNU GENERAL PUBLIC LICENSE, Version 3"***. 🔵 **And it carries a SECOND grant** — `fonts/inter/LICENSE.txt` (`4 380` B, `262481e84452`, Inter Project Authors), a third live instance of `Pattern AJ` Amendment 8 |
+
+🟢 **The standing recommendation for an admissions build is unchanged**: no major education SIS is
+permissive (`Gap 298`, now confirmed from a **fifth** channel), so graft **`aureuserp` or `krayin`
+(MIT)** onto the academic model rather than forking a GPL/AGPL SIS — and remember they are the
+**same vendor**.
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,

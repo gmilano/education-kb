@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **A monorepo's licence is a SET, not a value: `OpenMAIC` ships `1 065`-byte MIT in eight places and `7 652`-byte LGPL-3.0 in the ninth. 🟢 And `ACTION p417-D` is now a gate that fires on the pass a drift STARTS.**
+
+🔵 **APPEND-ONLY shelf** — added above `p417`'s section; nothing below is rewritten.
+
+### 🔴 The trending-repo lesson of this pass: the repository-level licence cell is a type error
+
+🟢 Every live GitHub "trending"-style surface, every third-party roundup, and this base's own tables
+carry **one licence per repository**. 🔴 **For a workspace monorepo that is the wrong shape.**
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **41.3k★**, the second-largest
+education-native repository on these shelves — resolves to **nine** grants:
+
+- **8 × MIT**, byte-identical: `1 065` B, `sha256₁₂ ba2525637432` (root + seven `packages/@openmaic/*`)
+- **1 × LGPL-3.0**: `packages/mathml2omml/LICENSE`, `7 652` B, `sha256₁₂ e3a994d82e64`,
+  manifest `"license": "LGPL-3.0-or-later"`, vendored from `fiduswriter/mathml2omml` v`0.5.0`
+
+🔴 **A `pnpm` workspace is exactly where this hides**, because `workspace:*` makes a vendored package
+look like first-party code in the dependency list. Root `package.json:118` is
+`"mathml2omml": "workspace:*"` — indistinguishable at a glance from `@openmaic/renderer`, and the
+only thing that separates them is a `LICENSE` file two directories down.
+
+🟢 **The generalisable probe, which costs one command:**
+
+```sh
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/<slug> /tmp/x
+git -C /tmp/x ls-tree -r --name-only HEAD | grep -E '(^|/)(LICEN[CS]E|COPYING)'
+```
+
+🔵 If that returns more than one path, the repository's licence is a **set**, and every member needs
+its own digest before a single cell is written. 🟢 This base already has the gate for it —
+`gate-subtree-grant` (`p382`) — and this pass is the second address to prove it earns its place.
+
+### 🟢 `ACTION p417-D` built: [`compose/code/p418-register-currency-gate`](../compose/code/p418-register-currency-gate/)
+
+🔴 **The failure it closes has recurred four times**: `p411` (one pass), then `p414`, `p415`, `p416`
+consecutively — the register sat at `p413` **for a full day** while three passes shipped.
+🔴 `p412` answered the first instance with a **standing warning**, and the warning did not hold.
+🟢 `P237`: **a usage contract you have to remember is not a control.**
+
+🟢 **16 controls, and the load-bearing ones are historical rather than synthetic.** Run against the
+real commits in this repository's history:
+
+| commit | pass | gate | detail |
+|---|---|---|---|
+| `4a53447` | `p414` | 🔴 `exit=1` | `register newest=p413; agents/top.md newest=p414; stale by 1 pass(es)` |
+| `1d3f173` | `p415` | 🔴 `exit=1` | `stale by 2 pass(es)` |
+| `ea583bf` | `p416` | 🔴 `exit=1` | `stale by 3 pass(es)` |
+| `20aa033` | `p417` | 🟢 `exit=0` | green — `p417` repaired it |
+
+🟢 **It would have fired on `p414`** — the pass the drift began, three passes before a human noticed.
+🔵 Three parser negatives are pinned in the suite because each is a way a naïve `grep -c` gets this
+wrong: a header **quoted inside a table cell** is not a section; an `###` is not an `##`
+(heading level is a type contract, `p383`); and a `## ` header **without** the 🆕 marker is a
+superseded block. The answer is a **maximum**, not a first match, so section order cannot change it.
+🔵 Wired into `make hooks` as `gate-register-currency`, and it measures the register against **six**
+live shelves rather than only `agents/top.md`, because a register owes currency to all of them.
+
+### 🔵 Trending-repo legs: what the channel returned, and what it was worth
+
+| leg | returned | new addresses |
+|---|---|---|
+| `github trending education AI 2026` | `withmarbleapp/os-taxonomy` (~5.9k★, curriculum graph, ~1 590 micro-topics / ~3 221 prerequisite edges, NGSS + Common Core), `luongnv89/claude-howto` (~42k★), `developer-roadmap`, `karpathy/nanochat`, MS GenAI for Beginners | 🔴 **0** — every one carried; `os-taxonomy`'s ODbL grant was byte-confirmed by `p417` at `25 289` B / `sha256:77d2692c3d64` |
+| `open source platform education ERP CRM MIT Apache …` | OpenEduCat **LGPL-3.0**, RosarioSIS **GPL-2.0**, GegoK12 **MIT**, ERPNext, Frappe Education, openSIS, Fedena, SchoolTool, AlekSIS | 🔴 **0** — 🟢 **and a fifth channel confirming `Gap 298` / `Gap 405-A`: no major education SIS carries a permissive grant** |
+| 🆕 `new open source AI tutor agent github October 2026 release MIT` | `OpenMAIC` v1.3.0-rc.1 (2026-10-22), `Ebimsv/AITutorAgent`, `Gchism94/ai-tutor`, `mitodl/open-learning-ai-tutor` | 🔴 **0** — 🟢 but this leg is what sent the pass back to `OpenMAIC`'s tree |
+
+🔴 **Two secondary-source cautions worth carrying forward.** One roundup in leg 1 states
+*"AIHawk's MIT licence applies only to current releases"* and that *"AgentGPT is archived"* — neither
+is in-domain, both unverified here, recorded only so a successor does not treat the roundup as clean.
+🔵 Two October-2026 blog posts in the same leg **give different ages for the same repository**, which
+is the ordinary condition of this channel and the reason every figure on these shelves is re-read.
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,

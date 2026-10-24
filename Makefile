@@ -39,6 +39,7 @@ SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 COMPANION_LOG ?= /tmp/education-kb-gate-companion-closure.log
 SLUGCHAN_LOG ?= /tmp/education-kb-gate-bare-slug-channel.log
 REGION_LOG ?= /tmp/education-kb-gate-region-headings.log
+REGCUR_LOG ?= /tmp/education-kb-gate-register-currency.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 CARRIEDEX_LOG ?= /tmp/education-kb-gate-carried-existence.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
@@ -78,7 +79,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade
+.PHONY: gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -103,6 +104,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
              gate-template-identity gate-presentation-fold \
              gate-untitled-payload gate-region-headings \
+             gate-register-currency \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
@@ -349,6 +351,16 @@ absence-census: ## ACTION p279 — the whole-corpus arm: a measurement, never a 
 # they are bound now.  Annex III point 3 applies `2027-12-02`; `2026-08-02` is Article 50
 # transparency and IS live.  No network.
 DATES_LOG ?= /tmp/education-kb-gate-dates.log
+
+gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG the shelves it registers gaps for.  Four real failures (p411, p414-p416); red at p414 on the real commits, where nothing was looking.
+	@cd compose/code/p418-register-currency-gate && $(PY) -I test_gate.py > $(REGCUR_LOG) 2>&1 || { \
+	  echo "── p418-register-currency (16 controls) "; cat $(REGCUR_LOG); exit 1; }
+	@echo "── p418-register-currency (16 controls: the four historical shapes, the lead-is-fine case, three parser negatives, p541 refusal)"
+	@$(PY) -I compose/code/p418-register-currency-gate/gate_register.py \
+	  intel/open-gaps.md agents/top.md intel/market.md intel/trends.md \
+	  repos/foundations.md verticals/solutions.md compose/patterns.md > $(REGCUR_LOG) 2>&1 \
+	  && echo "   PASS — the register is current against every live shelf" \
+	  || { echo "   🔴 THE GAP REGISTER IS STALE:"; cat $(REGCUR_LOG); exit 1; }
 
 gate-region-headings: ## p338 — ACTION ZP: p383's region-heading contract, WIRED.  The gate existed with a passing suite from p383 to p337 and was in no target, so `make hooks` never judged this file's region structure at all.
 	@cd compose/code/p383-region-heading-gate && { $(PY) test_check_headings.py > $(REGION_LOG) 2>&1 || { echo "🔴 p383-region-heading-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(REGION_LOG) ; false ; } ; } && echo "── p383-region-heading-gate (11 controls: MULTIPLE-BLOCKS, OUT-OF-VOCAB, MISSING-REGION, LATAM-ONLY, P541 no-input refusal)" && echo "   PASS" || exit 1

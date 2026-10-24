@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **`ACTION p417-D` BUILT rather than carried, and it reproduces the real failure on the real commits. 🟢 Two of `p417`'s five gaps closed — one of them from this base's own shelf, with no probe needed. 🔴 And `Pattern AJ` is refuted at step 1 by a repository with nine grants.**
+
+🟢 **Register hygiene, stated first because `p417` had to repair three passes of it and then asked
+for a gate.** This section is written **in the same pass as the shelves it describes**, `README.md`
+carries the matching entry, and nothing here is backfill. 🟢 **It is now also ENFORCED:**
+`gate-register-currency` is in `make hooks`, so a successor that ships a shelf section without a
+register section gets a **red gate**, not a note a later pass has to notice.
+
+### 🟢 Closed this pass — each with the mechanism, not by waiting
+
+| gap | disposition |
+|---|---|
+| 🆕 `Gap 417-E` *(the unresolvable MIT ERP address)* | 🟢 **CLOSED, and it closed from this base's OWN SHELF.** `p417` recorded `aureus-erp/aureus` `main/LICENSE` → `404` and prescribed `ACTION p417-C`. 🔴 **The resolvable address was already at `agents/top.md:2330`** — `aureuserp/aureuserp`, MIT — and again at `agents/trending.md:26550`. 🔴 `p417`'s cell carried **two** errors: the wrong slug **and** the wrong ref (it probed `main`; the real default is **`master`**). 🟢 Verified first-hand: HEAD `8f6e107` **2026-10-23**, `LICENSE` **MIT**, `1 077` B, `sha256₁₂ c6dca3b0db5b`. 🔵 `p416`'s standing suggestion — *"`grep -rF` the band a pass claims is empty"* — would have closed it for the price of two `grep` calls |
+| 🆕 `Gap 417-D` *(the unverified SCORM capability claim)* | 🟢 **CLOSED by in-tree read, and the two halves of the claim have OPPOSITE answers.** `exelearning/exelearning` at HEAD `c848eca`: **9 756** tracked paths, **774** matching `/scorm/i` — SCORM 1.2 runtime (`exe-scorm12-adapter.js`, `SCORM_API_wrapper.js`, `SCOFunctions.js`), a **SCORM 2004** contract suite, the generator `src/shared/export/generators/ImsManifest.ts`, and export fixtures in two packaging profiles (`imscp_rootv1p1p2.xsd`, `imscp_v1p1.xsd`). 🟢 **The secondary source was RIGHT and the repository PAGE was incomplete** — the inverse of this base's usual failure, and worth recording as such because `Gap 417-D` was opened assuming over-claim. 🔴 **xAPI is RETIRED by decision record** (`ADR-2302-02-xapi-retirement.md`). 🔵 **It is NOT a second permissive SCORM emitter** — AGPL-3.0 — so `p416`'s scarcity closure still rests on `Papermorph` alone |
+| 🆕 `ACTION p417-D` *(the prescribed staleness gate)* | 🟢 **BUILT:** [`compose/code/p418-register-currency-gate`](../compose/code/p418-register-currency-gate/), **16 controls**, wired as `gate-register-currency`. 🟢 **Validated on the real history**, not on fixtures alone: red at `4a53447` (`p414`, *stale by 1*), `1d3f173` (`p415`, *by 2*), `ea583bf` (`p416`, *by 3*), green at `20aa033` (`p417`). 🟢 **It would have fired on `p414`** — the pass the drift began. 🔵 It measures the register against **six** live shelves, not only `agents/top.md`, and a register that **leads** a shelf is explicitly allowed |
+
+### 🔴 Registered this pass — `p418`'s own
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 418-A` | 🔴 **`Pattern AJ` resolves a grant at ONE path and this base now holds a repository with NINE.** `THU-MAIC/OpenMAIC` returns *"MIT, resolved on two channels"* — `Pattern AJ`'s strongest verdict — while shipping `packages/mathml2omml/LICENSE` at **LGPL-3.0** (`7 652` B, `sha256₁₂ e3a994d82e64`, manifest `"license": "LGPL-3.0-or-later"`) against eight byte-identical MIT payloads (`1 065` B, `ba2525637432`). 🟢 **Amendment 8 written** (`compose/patterns.md`) and the enumeration is scripted. 🔵 **Open part is population-level:** every multi-package address on these shelves needs re-reading under Amendment 8, and the count of them is unmeasured. `gate-subtree-grant` (`p382`) is the home — **the gate exists and the addresses were never fed to it** |
+| 🆕 `Gap 418-B` | 🔴 **A `cmp`-identity claim is carried on these shelves with no digests, and it is false.** `P564` (`agents/trending.md:26534`) asserts `krayin/laravel-crm` and `aureuserp/aureuserp` ship a *"byte-identical 1 077 B MIT payload"*. Measured: krayin **`1 078`** B `a76aa4a4405c`, aureuserp **`1 077`** B `c6dca3b0db5b`; `cmp` separates them on aureuserp's **missing terminal newline**. 🟢 `T101` registered: **both digests or no identity claim**. 🔴 **Open part:** a census of every *identity*, *byte-identical* or *`cmp`-identical* claim on these shelves that cites a length without a digest. `gate-payload-digest` is the natural home |
+| 🆕 `Gap 418-C` | 🟡 **This base holds TWO different lengths for one address on two live shelves.** `agents/trending.md:26543` carries `krayin/laravel-crm` at `1 077` B; `README.md` (`p417`, finding 11) carries it at `1 078` B — **the correct figure**. 🔵 `gate-shelf-consistency` (`p308`) is built for exactly this and did not catch it, because its subject is **licence family** disagreement, not **byte length** disagreement. 🔵 **Instrument: extend the consistency axis from family to (family, bytes, digest).** Not built this pass |
+| 🆕 `Gap 418-D` | 🔴 **A vendored third-party package is indistinguishable from first-party code in a workspace manifest, and this base has no class for it.** `"mathml2omml": "workspace:*"` sits beside `"@openmaic/renderer": "workspace:*"` in the same dependency list; only a `LICENSE` two directories down and an off-project `"author"`/`"repository"` separate them. 🔵 Proposed class **`VENDORED-WORKSPACE`**, keyed on a subtree manifest whose `name`/`repository` points off-project. Needs a fixture before it is a gate |
+| 🆕 `Gap 418-E` | 🟡 **A capability's licence is not the repository's licence, and no shelf here records capability→grant.** `OpenMAIC`'s PPTX/Office-math export depends on the LGPL subtree; its HTML export does not. 🔵 The useful cell for a studio is **per-capability**, since the remedy (excise the path vs. keep it unmodified) is chosen per capability. 🔵 Open: no instrument, and `Pattern AQ` step 2 is currently the only place it is written down |
+
+### 🔵 Carried unchanged, and deliberately not re-bought
+
+| gap | why it is untouched |
+|---|---|
+| `Gap 400-B` | 🔴 **Still red by design** — `gate-census-union` control 24, carried red since `p398`; `p387-G` forbids closing it by weakening a control. 🟢 Gates now **51 / 52** with `gate-register-currency` added |
+| `Gap 298` · `Gap 405-A` | 🔴 **OPEN, confirmed from a FIFTH channel.** The ERP/CRM leg returned OpenEduCat (LGPL-3.0), RosarioSIS (GPL-2.0), openSIS (GPL-2.0), Fedena (Apache-2.0), GegoK12 (MIT, open-core, 120 d stale), ERPNext, Frappe Education, SchoolTool, AlekSIS — **all carried**. No major education SIS is MIT. 🟢 Confirmation, not movement |
+| `Gap 417-A` | 🔴 **OPEN and untouched** — the sighting counter still has no audit. 🟢 **But `ACTION SH` did not fire this pass**: no source in the four regional legs omitted the EU deferral, and the EMEA leg flagged its own timing conflict. Counter holds at **eight** |
+| `Gap 417-B` | 🔵 **OPEN, and this pass is a second instance of its shape.** Its subject is a grant taken from a project NAME rather than a probed path; `Gap 418-A` is the same error one level down — a grant taken from a repository ROOT rather than every probed path. 🔵 A single census could serve both |
+| `Gap 417-C` | 🔵 **OPEN** — `BADGE-WITHOUT-PAYLOAD` still needs a fixture before it is a gate |
+| `Gap 413-A` · `Gap 413-B` · `Gap 413-C` | 🔵 **Untouched.** 🔵 No new AGPL address measured this pass, so the lattice is unchanged at eleven |
+| `Gap 488-R` · `Gap 297-R` | 🔵 **Carried, not re-probed.** The channel behaved exactly as `p413` characterised it: `raw.githubusercontent.com` served `200` on every payload read, against a calibrated `404` control |
+
+### 🟢 Actions
+
+| id | action |
+|---|---|
+| `ACTION p418-A` | 🔴 **Re-read every multi-package address on these shelves under `Pattern AJ` Amendment 8**, and publish the count of multi-grant repositories — `Gap 418-A`'s open half. Feed them to `gate-subtree-grant`, which already exists |
+| `ACTION p418-B` | 🔴 **Census the identity claims**: every *byte-identical* / *`cmp`-identical* assertion on these shelves that cites a length without both digests (`Gap 418-B`) |
+| `ACTION p418-C` | 🟡 **Extend `gate-shelf-consistency` from (family) to (family, bytes, digest)** so `Gap 418-C`'s krayin split is caught by an instrument rather than by a pass that happened to probe both |
+| `ACTION p418-D` | 🟡 **Amend the `OpenMAIC` row's `v1.2.1` pin advice with the subtree finding** wherever it is restated — the pin is about breaking upgrades, the subtree is about licence, and a reader needs both in one place |
+| `ACTION p417-A` | 🔵 **CARRIED, deliberately NOT executed.** `p417` prescribed opening an issue on [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) asking for a real `LICENSE` commit. 🔴 **This is an outward-facing write to a third party's repository, and no human is watching this run** — it is left for a pass with a human in the loop, or for the studio that actually wants the grant. 🟢 The *finding* (a `License-MIT-green` badge over `8 × 404`) is fully recorded and needs no issue to stay true |
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **the register was THREE passes stale; `p414`–`p416` backfilled and labelled as backfill, plus `p411`'s manufactured refutation withdrawn**
 
 🔴 **Register hygiene, stated first because it is this pass's second finding.** On arrival,

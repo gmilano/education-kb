@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p418` · 2026-10-24 — **The trend the channel reports is "agentic + governance". The trend this base can MEASURE is that the open-source education supply has stopped growing and started consolidating into monorepos — which is why a repository's licence is now a SET rather than a value.**
+
+### 🔵 What the channel said, and how much of it was new
+
+🟢 The `AI education industry trends 2026` leg returned seven themes, **every one already on this
+shelf**: experimentation → operations; governance and data boundaries (1EdTech); AI as embedded
+infrastructure in higher education (Campus Technology); the move from generic tools to
+**education-specific** platforms (Teachbetter); **agentic** multi-step systems; interoperable
+**digital credentials**; and buyers demanding **evidence of outcomes** — learning quality,
+persistence, well-being, job-relevant skills (HolonIQ).
+
+🔴 **Nil new instruments and nil new figures.** 🟡 The leg also returned a **$12.3B 2026 market** and
+an **83 % institutional AI-teaching-assistant** figure attributed to HolonIQ and EDUCAUSE *without
+checkable links*, plus a vendor-sourced *"42 % outcome improvement"*. 🔴 **None is recorded** —
+`p406`'s rule is that an unsourced figure on this base is worse than a declared gap, and these are
+exactly the shape `p406` caught in this base's own pricing rows.
+
+### 🟢 The trend this base can measure first-hand: consolidation, and a licence that is a SET
+
+🔴 **Nine legs this pass returned ZERO unshelved in-domain addresses.** `p416` read 68 addresses for
+one; `p417` got two from thirteen candidates across ten legs; `p418` got **nil from nine**. 🟢 Read
+together, three consecutive passes say the same thing: **the discoverable open-source education
+supply is saturated on the English-language channel.** 🔵 `T100` follows and is now confirmed twice —
+on a saturated shelf, **budget the pass toward re-reading verdicts, not toward more legs.** Every one
+of this pass's four findings came from a re-read.
+
+🟢 **And the structural trend underneath it is consolidation into workspace monorepos**, which
+changes how a licence must be recorded:
+
+- [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **9** licence-shaped paths: 8 × MIT
+  (`1 065` B, `ba2525637432`) + **1 × LGPL-3.0** (`7 652` B, `e3a994d82e64`), the copyleft one a
+  **vendored third-party** package wired in as `workspace:*`
+- [`exelearning/exelearning`](https://github.com/exelearning/exelearning) — **9 756** paths, a
+  `packages`-free but equally layered tree where the SCORM capability lives in **774** of them
+- `Open-TutorAi/open-tutor-ai-CE` — the **CE/EE** split this shelf already flags
+- `Gego-K12/gegok12` — MIT root whose manifest is the **unedited Laravel skeleton** (`p411`)
+
+🔵 **The pattern across all four:** the interesting licence fact is never at the root. 🟢 **So the
+2026 trend for a studio is not "find the agent" — the agents are found. It is "resolve the boundary
+inside the agent you already picked."**
+
+### 🔴 A trend worth naming because it cuts against the channel's own narrative
+
+🟢 The channel reports *education-specific* platforms displacing generic tooling. 🔴 **The supply
+measured here says the opposite at the data layer.** `Gap 298` / `Gap 405-A` is now confirmed from a
+**fifth** independent channel: **no major education SIS carries a permissive grant** — OpenEduCat
+LGPL-3.0, openSIS GPL-2.0, RosarioSIS GPL-2.0, Gibbon GPL-3.0, SchoolTool GPL-2.0, Fedena and
+OpenOlat Apache-2.0 but not education-native in the way the others are. 🟢 **The permissive options
+on the admissions path are GENERIC** — `aureuserp/aureuserp` and `krayin/laravel-crm`, both MIT, both
+Webkul, neither carrying an academic data model. 🔵 **So "education-specific" is true of the agent
+layer and false of the record layer**, and a studio that reads the trend report literally will plan
+to buy a vertical SIS that does not exist on permissive terms.
+
+### 🔵 Regulatory trend, carried not re-bought
+
+🟢 **Three regimes, three clocks, all already settled here and all re-confirmed this pass:**
+**EU** — Annex III education **`2027-12-02`**, Art. 50 live **`2026-08-02`**, Omnibus
+`Reg (EU) 2026/1744`; **Korea** — in force **`2026-01-22`** *(served this pass as the "AI Basic Act",
+carried here as the "Framework Act" — one instrument, two names)*; **Vietnam** — in force
+**`2026-03-01`**, comply **`2027-03-01`**, **`2027-09-01`** for systems already running before
+**`2026-08-15`**, corroborated this pass from a third source.
+🔴 **The informed gaps are the same two and are channel gaps, not world gaps:** Africa and the
+Middle East return nothing on English legs; APAC **school-level** rules are unmeasured (`T45`).
+
 ## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
 
 🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
