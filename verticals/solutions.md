@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **A self-hostable platform can be MIT and still leave the two components a deployment needs UNGRANTED, because the grant sits on one branch of three. 🔴 `piyushdhoka/GradeU` is the specimen, and the teacher studio and admin portal are the ungranted two.**
+
+🔴 **Gates did not run** — `make hooks` runs code from this cloned repository and the host's
+auto-mode classifier refused it (`[Code from External]`). Contracts honoured by hand;
+`Gap 419-D` registers the un-run suite.
+
+### 🔴 `piyushdhoka/GradeU` — admitted with its boundary priced, not with its badge
+
+| field | measured 2026-10-24 |
+|---|---|
+| address | [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) |
+| default ref | **`main`** — 🔴 **there is no `master` branch**, and `raw…/master/LICENSE` nonetheless returns `200` (see below) |
+| HEAD | `4ab0011` **2026-10-23T19:34:19+05:30 · 1 d** |
+| licence | 🟢 **MIT on `main`** — `1 065` B, `sha256₁₂ 10e6b9c80b1b`, *"Copyright (c) 2026 GradeU"*. 🔴 **`teacher` and `admin`: no licence-shaped path at any depth, no manifest `license` field** |
+| stack | Next.js 16 · React 19 · Supabase (Postgres / Auth / Storage) · Upstash Redis · MongoDB via `mongoose` *(mid-migration)* · `@tensorflow-models/blazeface` |
+| inference | Groq, model `openai/gpt-oss-120b`, raw `fetch` to `https://api.groq.com/openai/v1/chat/completions`, key `GROQ_API_KEY` — 🔴 **no AI SDK in `package.json`** |
+| scale signals | 3 ★ · 1 fork · 86 commits · root `d7b19e6` 2026-02-02 · **four humans + one bot** (`p412` identity rule) · `"version": "0.0.0"` |
+
+🔴 **What a deployment actually gets, per branch.** The project ships **one application per branch**,
+stated in its own `README.md:50-54`:
+
+| branch | app | who it serves | tracked paths | grant |
+|---|---|---|---|---|
+| `main` | Student site — Next.js 16 / React 19 | learners | 199 | 🟢 **MIT** |
+| `teacher` | Teacher studio — Next.js 16 + BullMQ worker | teachers | 55 | 🔴 **UNGRANTED** |
+| `admin` | Admin portal — Vite + React 18 | platform admins | 43 | 🔴 **UNGRANTED** |
+
+🟢 **All three heads were committed within eight minutes** on 2026-10-23, so none is dormant, and
+the three manifests carry **different project names** (`grade-u`, `course-app-next`,
+`vois-admin-portal`) with `"private": true` and no `license` field on any of them. 🔴 **So the MIT
+payload on `main` is the only grant channel in the repository, and it reaches one app of three.**
+
+🔴 **The practical consequence for a studio engagement.** A platform is chosen for the *tenant-admin
+and author-side* workflows at least as often as for the learner view. Here those two are the
+ungranted ones: **a teacher-studio or admin-portal deployment has no licence at all**, while the
+badge, the sidebar and a default-branch licence read all say MIT. 🟢 **The remedy is a question, not
+a workaround:** ask the maintainers to extend `LICENSE` to `teacher` and `admin` — four humans, an
+active week, and a repository that already chose MIT once.
+
+🔵 **Where it sits against this file's existing rows.** It is **not** a Moodle / Open edX / Kolibri
+substitute and is not offered as one: 3 ★, `"version": "0.0.0"`, one semester of history. 🟢 **What
+it genuinely supplies that the copyleft platforms do not** is a *permissively granted, readable*
+reference for in-browser proctoring and syllabus-to-course generation — on `main`, which is the
+licensed branch.
+
+### 🔴 The channel note this file needs, because it publishes `(ref, path)` grant cells
+
+🟢 **`raw.githubusercontent.com` serves `master` and `HEAD` as ALIASES for the default branch even
+when no such ref exists.** Measured on three repositories today, with negative controls: `trunk`
+and `develop` → `404`, a bogus ref → `404`. 🔴 **A `200` at `…/master/LICENSE` therefore proves the
+file and says NOTHING about the branch** — `p354`'s `gate-grant-path` contract is unfalsifiable
+there for the two most-assumed ref names.
+
+🟢 **This file's own ref claims were swept against `git ls-remote` and they hold:**
+[`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) ``master`` ✓ (HEAD `e935dec`),
+[`Loganxgreaves/blackboard-mcp`](https://github.com/Loganxgreaves/blackboard-mcp) ``master`` ✓
+(`c2629ae`), [`lukecarroll15/blackboard-mcp`](https://github.com/lukecarroll15/blackboard-mcp)
+``tcd`` ✓ (`1aeb80b`), [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)
+``master`` ✓ (`5d546f2`), [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+``develop`` ✓ (`44a4e68` — and 🟢 **it has neither `master` nor `main`**, so this file's `develop`
+cell is the only correct way to cite it). 🔵 **18 of 18 across all six shelves.**
+
+### 🔴 The vertical-platform leg — a SIXTH channel on the same scarcity
+
+🟢 Returned Forma LMS (Apache-2.0), OpenOLAT (Apache-2.0), Open edX (AGPL-3.0), Sakai (ECL-2.0),
+Moodle (GPL), Canvas (AGPL), RosarioSIS (GPL), OpenEduCat, openSIS, SchoolTool — **every one
+carried**. 🔴 **Sixth independent confirmation that no major education system of record is
+permissively granted** (`Gap 298` / `Gap 405-A`). 🔵 The honest shape of this file is unchanged:
+**the system of record is copyleft, the permissive layer is what you bolt onto it.**
+
 ## 🆕 `p418` · 2026-10-24 — **The permissive ERP row `p417` refused is REAL — it was the slug and the ref that were wrong, and the right ones were already on this base. 🔴 Plus: the Webkul pair is one vendor, but it is NOT one payload.**
 
 ### 🟢 `aureuserp/aureuserp` admitted — `Gap 417-E` closed, `ACTION p417-C` discharged

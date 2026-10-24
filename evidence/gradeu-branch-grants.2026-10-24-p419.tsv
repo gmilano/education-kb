@@ -1,0 +1,8 @@
+# p419 · 2026-10-24 · piyushdhoka/GradeU - a grant has BRANCHES. One application per ref, per the project's own README.md:50-54.
+# Enumerated on the authoritative git channel: git ls-remote + `git clone --filter=blob:none --no-checkout` (p389), then `git ls-tree -r --name-only <ref>`.
+# Licence-shaped = (^|/)(licen[cs]e|copying|notice) case-insensitive, at ANY depth. Payload bytes by `wc -c` on raw bytes (T102), never a line pipeline.
+# Gap 419-A: p382's gate-subtree-grant has the right subject and the wrong unit - a path inside ONE tree cannot express this.
+ref	app	head	committed	tracked_paths	licence_shaped_paths	payload_bytes	sha256_12	manifest_name	manifest_license	manifest_private	grant_verdict
+main	Student site (Next.js 16 / React 19)	4ab0011	2026-10-23T19:34:19+05:30	199	LICENSE	1065	10e6b9c80b1b	grade-u	absent	true	MIT
+teacher	Teacher studio (Next.js 16 + BullMQ worker)	17b7a34	2026-10-23T19:33:20+05:30	55	NONE	-	-	course-app-next	absent	true	UNGRANTED
+admin	Admin portal (Vite + React 18)	34771b5	2026-10-23T19:27:02+05:30	43	NONE	-	-	vois-admin-portal	absent	true	UNGRANTED

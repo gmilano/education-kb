@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **Four regional legs, four CARRIED — and `p418`'s *"Africa and the Middle East returned nothing again"* MOVES. 🔴 South Africa's draft National AI Policy was withdrawn because at least 10 % of its own academic references were fabricated. The procurement fact of this pass is that a government AI policy died of unverified AI output.**
+
+🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's
+auto-mode classifier refused it (`[Code from External]`). 🟢 **`gate-region-headings`' contract was
+honoured by hand:** this file's canonical `## Opportunities by region` block is untouched in
+structure, the closed vocabulary is unchanged, and the per-region headings inside this dated section
+are `####`. `Gap 419-D` registers the un-run suite.
+
+### 🔵 The four regional legs — stated per region so silence cannot read as coverage
+
+#### 🔴 North America
+
+Returned: **134 bills across 31 states** in the 2026 session; `H.R. 8747`, the *K-12 AI Literacy
+and Readiness Act of 2026*, advanced out of House Education and Workforce on **2026-07-21**;
+California `AB 1159` (barring student data for model training); Idaho `SB 1227`; Oklahoma and
+Maryland human-oversight requirements; **Maryland's Artificial Intelligence Ready Schools Act** (all
+24 districts, 120 days from state guidance); Georgia and Mississippi folding AI into CS credit;
+Canada's **AI for All** strategy (June 2026) as direction rather than law; Mexico with bills and no
+regulator. 🔴 **Nothing unshelved** — every item grep-confirmed on this file or
+`intel/policy-matrix.tsv`. 🔵 One market figure returned (NA at **36 %** of the global market,
+**$3.68 B** in 2026) from a vendor statistics page; this file already carries the market number as a
+**range** per `p415`, and a single vendor point does not narrow it.
+
+#### 🔴 EMEA — the leg that moved, and the move is in Africa
+
+Returned on Europe: **Regulation (EU) 2026/1744** deferring stand-alone high-risk education systems
+from **2026-08-02** to **2027-12-02**; the Digital Omnibus published in the OJ **2026-07-24** and
+applying from **2026-07-27**; Article 50 transparency live since **2026-08-02**; Article 4 AI
+literacy and the emotion-inference prohibition since **2025-02-02**; Annex III admission and
+outcome-evaluation. 🔴 **All carried, at this base's corrected values.** 🟢 **`ACTION SH` did not
+fire** — no source omitted the deferral — so the counter holds at **eight** and `Gap 417-A` stays
+open. 🔴 **The Official-Journal check this file has flagged since `p416` remains outstanding:**
+`en.wikipedia.org` is **off this environment's egress allowlist** (`getaddrinfo ENOTFOUND`) and no
+OJ text was reachable, which is `p413`'s allowlist finding holding a fourth time.
+
+🟢 **Africa and the Middle East returned material this pass, where `p418` recorded a nil.** The
+substantive item is a **withdrawal**:
+
+| field | measured / reported 2026-10-24 |
+|---|---|
+| instrument | Draft South Africa National Artificial Intelligence Policy, 2026 |
+| issuer | Department of Communications and Digital Technologies |
+| published | **2026-04-10**, public comment open to **2026-06-10** |
+| withdrawn | announced **2026-04-26** by Minister **Solly Malatsi**; gazetted **2026-06-12**, in its entirety, effective from the date of publication |
+| stated reason | 🔴 **at least 10 % of the academic references in the reference list were fictitious** — the Minister's stated ground is that this *"compromised the integrity and credibility"* of the draft |
+| replacement | targeted for FY **2026/27**; none published |
+| band | 🟡 **`reported`.** Strongest channel reached is **`sanews.gov.za`**, the South African Government News Agency, corroborated by DLA Piper, ITWeb and CNBC Africa. 🔴 **Gazette text not read** — egress allowlist |
+
+🔵 **Also returned and already carried:** the Linux Foundation case for open-source AI across
+Africa / the Middle East / Türkiye; **Masakhane**'s open language models for local-language
+teaching; Egypt's curriculum tools and the January 2026 renaming of its AI council; South Africa's
+**STEPS**; the EdTech Hub MENA scan (Saudi Arabia, the UAE and Qatar advanced; Egypt, Morocco and
+Jordan building capacity); **Rwanda**'s February 2026 three-year MoU covering education; OECD 2026
+on African AI governance. 🔴 **Still no binding AI statute anywhere in the region.**
+
+#### 🔴 APAC
+
+Returned: Korea's **AI Basic Act** in force **2026-01-22**; Vietnam's **Law 134/2025/QH15** in force
+**2026-03-01** with education-sector transition in September 2027; Japan on voluntary guidelines;
+Singapore on **AI Verify** as a de-facto vendor requirement; Australia's **National AI Plan**
+(December 2025) with mandatory guardrails paused; China's output-specific rules; India's labelling
+approach within sector frameworks; the **Ipsos Education Monitor 2026** finding higher support for
+banning AI in schools in Australia and New Zealand than in the Asian markets surveyed. 🔴 **Nothing
+unshelved.** 🔵 **Korea was again served as *"AI Basic Act"*** where these shelves carry *"Framework
+Act"* — `p418`'s *one instrument, two names* note holding a second time. 🔴 One returned claim of a
+South Korean *"AI Data Protection Act"* for edtech **does not match any instrument this base
+carries** and the serving source flagged it as unreliable; **not shelved**.
+
+#### 🔴 LATAM
+
+Returned: **UNESCO-IESALC** across **200 institutions in 19 countries** — teaching and learning
+**73.5 %**, research **57.0 %**, administration **34.1 %**, community service **20.0 %**; governance
+lagging at **26.0 %** with a formal AI strategy, **18.5 %** with broad institutional policies,
+**8.0 %** with a dedicated budget; **ILIA 2026** (CEPAL + CENIA) with **85 %** of countries holding
+a national AI strategy in force or in preparation, **75 %** with a designated lead institution and
+**only Brazil and Colombia** funding it explicitly; **11 of 20** countries now carrying AI content in
+school curricula against **2 in 2024**; Chile, Brazil and Uruguay as pioneers with Colombia, Costa
+Rica and Argentina leading the adopters; Chile's National AI Policy since 2021 and Mexico's
+non-binding SEP/ANUIES proposals; Digital Education Council with Tec de Monterrey at **92 %** of
+students and **79 %** of faculty. 🔴 **Nothing unshelved** — `intel/market.md:1058` carries the ILIA
+quadruple verbatim and the IESALC split is carried at finer grain than this leg served it.
+
+### 🔴 The procurement fact that actually moved: a policy destroyed by unverified AI output
+
+🟢 **This is worth more to a studio engagement than any market number this pass returned**, and it
+is why it is recorded here rather than in a policy tracker. `intel/market.md:2883` carries *"South
+Africa — no national AI-in-education strategy, no regulator."* 🟢 **That absence now has a
+mechanism:** the attempt reached public comment and was withdrawn in its entirety because its
+citations were fabricated.
+
+🔴 **What it changes about how AI work is bought in the public sector.** A ministry that has
+publicly withdrawn a policy over hallucinated references will not accept an AI deliverable on the
+strength of its fluency again. 🟢 **The billable consequence is provenance infrastructure:**
+citation-level traceability, a verification record per claim, and a named human accountable for
+each. 🔵 **This base is itself the argument** — every figure above carries its channel and its band,
+and the one figure that could not be verified is labelled unverified rather than dropped. 🟢 **That
+discipline is the deliverable, and this is the first engagement-grade evidence that a government
+will pay for it.**
+
+### 🔵 Opportunity updates — folded into this file's single canonical block below, not duplicated
+
+🟢 Per `p416`–`p418`: the per-region opportunities live once, under `## Opportunities by region`.
+This pass adds one dated line to **EMEA** (the South Africa withdrawal and the provenance work it
+implies) and one to **Global** (the branch-grant boundary as a diligence step). **No LATAM-only
+section, and no region's bucket renamed.**
+
 ## 🆕 `p418` · 2026-10-24 — **Four regional legs, four CARRIED — and the one procurement fact that moved this pass is a licence, not a market number: the flagship permissive agent ships an `LGPL-3.0-or-later` subtree under its Office-export path.**
 
 🔵 **No new market sizing this pass, and that is a measurement rather than an omission.** Every
@@ -333,6 +439,8 @@ envelope is the product, and teacher enablement is the line item most buyers hav
 
 ### EMEA
 
+🆕 `p419` 🟢 **Africa re-enters this bucket with a procurement lesson rather than a market number, and `p418`'s nil is withdrawn.** South Africa's draft National AI Policy (DCDT, **2026-04-10**, comment to **2026-06-10**) was **withdrawn 2026-04-26** by Minister Solly Malatsi and **gazetted 2026-06-12** in its entirety, because **at least 10 % of its academic references were fictitious**; a replacement is targeted for FY **2026/27** and none is published. 🟡 Band `reported` — `sanews.gov.za` plus DLA Piper, ITWeb and CNBC Africa; the gazette text is unreachable from this environment's egress allowlist. 🟢 **The opportunity is provenance infrastructure, and it is now evidenced rather than argued:** a ministry that withdrew a policy over hallucinated citations will not buy an AI deliverable on fluency again, so citation-level traceability, a per-claim verification record and a named accountable human are **billable conformity work** — and they are the same artefacts Annex III's technical file will demand from **2027-12-02**. 🔵 Region is **EMEA** per this file's closed vocabulary; the country belongs in the prose, which is where it is. 🔴 **Still no binding AI statute anywhere in Africa or the Middle East** — strategies only (Saudi Arabia, the UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco, South Africa).
+
 🆕 `p418` 🔴 **Nil new, and the leg is now worth less than the re-read it displaces.** The EMEA leg returned the AI Act dates, the Digital Omnibus (`Regulation (EU) 2026/1744`) and the Commission guidelines — **all carried, all at this base's corrected values** (Annex III education **`2027-12-02`**, Art. 50 live **`2026-08-02`**, embedded **`2028-08-02`**). 🟢 **The source even flagged its own timing conflict**, so `ACTION SH` did **not** fire. 🔴 **Africa and the Middle East returned nothing again.** 🟢 **The live EMEA opportunity sharpened by this pass is the technical file**: Annex III bites 2027-12-02, a technical file names every component's licence, and this pass found a copyleft subtree inside a repository the market calls MIT. **Component-licence attestation is billable conformity work, and it is work that must happen before the build, not after.**
 
 🟢 **Policy, measured — and the timing changed.** Secondary sources consistently report that
@@ -446,6 +554,8 @@ regional position than a greenfield agent, and it inherits the stars, the histor
 content rather than starting at zero the way `agente-educativo-psicocognitivo` does.
 
 ### Global
+
+🆕 `p419` 🔴 **A diligence step this base can now name, because it cost a wrong answer this pass: a repository's grant is resolved per `(ref, path)`, not per repository.** [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) ships three applications on three branches — student site on `main` (🟢 **MIT**), teacher studio on `teacher` and admin portal on `admin` (🔴 **both UNGRANTED**: no licence-shaped path at any depth, no manifest `license` field) — and its badge, its sidebar and any default-branch licence read all say MIT. 🔴 **If the component an engagement needs is the author-side or tenant-admin app, the MIT grant covers none of the code that would ship.** 🟢 **The check is one command before the path enumeration — `git ls-remote --heads`, then enumerate per ref** — and it needs no API, no HTML and no new channel. 🔴 **It cannot be done on `raw.githubusercontent.com`**, which serves `master` and `HEAD` as aliases for the default branch even when no such ref exists (measured on three repositories, with `trunk`/`develop`/bogus-ref negative controls at `404`), so a `200` there proves a file and says nothing about a branch. 🟢 **Priced at step 2 of a licence audit, this is minutes; discovered at a client's legal review, it is a re-platform.**
 
 🆕 `p418` 🟢 **One rule to add, from this pass's only movement.** A repository's licence is a **set, not a value** — enumerate every licence-shaped path before a single cell is written, because a workspace monorepo makes a vendored third-party package (`workspace:*`) look like first-party code. 🔵 Measured on `OpenMAIC`: **9** grants, **8 × MIT** and **1 × LGPL-3.0-or-later**, the copyleft one under the export path the project is recommended for. 🟢 **The check costs one `git clone --filter=blob:none` and one `ls-tree | grep`** — put it in the diligence step of every engagement, in every region, because it is the cheapest finding on this page and the most expensive one to discover late.
 

@@ -1,0 +1,22 @@
+# p419 · 2026-10-24 · every (slug, ref) claim published on the six live shelves, verified against `git ls-remote` (authoritative; no alias satisfies it).
+# Claims extracted by pairing each "ref `X`" with the nearest preceding slug ON ITS OWN LINE, then re-attributed BY SENTENCE (T103).
+# RESULT: 18 claims, 18 correct. Every claimed ref is a real branch standing at HEAD. So Gap 419-B is LATENT on this base, not live.
+# T103: a first extractor using a +/-6 LINE window produced six FALSE refutations - these rows are single lines thousands of chars wide carrying many addresses, so a line window crosses repositories.
+slug	claimed_ref	ref_exists_as_head	ref_sha_at_claim	equals_repo_HEAD	verdict
+henriquebotelhogomes/educacao	master	yes	cda18eb	yes	CORRECT
+aureuserp/aureuserp	master	yes	8f6e107	yes	CORRECT
+idurar/idurar-erp-crm	master	yes	e935dec	yes	CORRECT
+Loganxgreaves/blackboard-mcp	master	yes	c2629ae	yes	CORRECT
+AI4Bharat/Anudesh-Backend	master	yes	4e64608	yes	CORRECT
+CAHLR/pyBKT	master	yes	9bfeb31	yes	CORRECT
+OpenOLAT/OpenOLAT	master	yes	d073ad4	yes	CORRECT
+openfun/richie	master	yes	7cf513c	yes	CORRECT
+OS4ED/openSIS-Classic	master	yes	5d546f2	yes	CORRECT
+frappe/education	develop	yes	73ce33e	yes	CORRECT
+addex12/School-CRM	develop	yes	011a98c	yes	CORRECT
+luisricar-do/portugol-ai-tutor	develop	yes	84ae17c	yes	CORRECT
+oppia/oppia	develop	yes	87e5883	yes	CORRECT
+learningequality/kolibri	develop	yes	44a4e68	yes	CORRECT - and it has NEITHER master NOR main
+lukecarroll15/blackboard-mcp	tcd	yes	1aeb80b	yes	CORRECT
+krayin/laravel-crm	2.2	yes	5eecae0	yes	CORRECT
+portabilis/i-educar	2.12	yes	435649b	yes	CORRECT

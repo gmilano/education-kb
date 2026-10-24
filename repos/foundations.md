@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **`p418` answered "what is this repository's licence?" with *a SET over subtrees*. 🔴 `p419` widens the question again: the set is over `(ref × path)`, because a repository can ship licensed and unlicensed applications on different BRANCHES. 🟢 And the ref layer of this file was swept against an authoritative channel — every claim holds.**
+
+🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's
+auto-mode classifier refused it (`[Code from External]`). Contracts honoured by hand;
+`Gap 419-D` registers the un-run suite. **No claim below rests on a green gate.**
+
+### 🔴 A foundational grant is resolved at a `(ref, path)` pair — and the default ref is not the repository
+
+🟢 **`p418`'s Amendment 8 made the probe enumerate every licence-shaped path in one tree.** That is
+necessary and it is **not sufficient**. [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU)
+is one product in three applications, **one per branch**, published as such in its own
+`README.md:50-54`:
+
+| ref | app | tracked paths | licence-shaped paths | manifest `license` |
+|---|---|---|---|---|
+| `main` *(default)* | Student site | 199 | 🟢 `LICENSE` — MIT `1 065` B `10e6b9c80b1b` | 🔴 absent (`"private": true`) |
+| `teacher` | Teacher studio | 55 | 🔴 **NONE at any depth** | 🔴 absent (`"private": true`) |
+| `admin` | Admin portal | 43 | 🔴 **NONE at any depth** | 🔴 absent (`"private": true`) |
+
+🔴 **Amendment 8 run perfectly on `main` returns *"MIT, one grant, enumerated"* — and it is wrong
+about two thirds of the product.** 🟢 **The correction is cheap and it is a one-line addition to
+every probe this base runs:** `git ls-remote --heads` before the path enumeration, then enumerate
+**per ref**. It needs no new channel, no API and no HTML.
+
+🔵 **Why this is a foundations question and not a trivia question.** A foundation is chosen to be
+built on. If the component a client engagement needs is the **teacher studio** or the **admin
+portal**, the project's MIT badge — accurate on `main`, accurate on GitHub's sidebar — **grants
+nothing for the code that would actually be used.**
+
+### 🔴 The channel that keeps this invisible, measured with its controls
+
+🟢 **`raw.githubusercontent.com` serves `master` and `HEAD` as ALIASES for the default branch even
+when no such ref exists.** Three repositories, each with an authoritative `git ls-remote` beside it,
+all read **2026-10-24**:
+
+| repository | real `refs/heads` | `main/LICENSE` | `master/LICENSE` | `trunk/` · `develop/` · bogus ref |
+|---|---|---|---|---|
+| `piyushdhoka/GradeU` | `main`, `admin`, `teacher` — 🔴 no `master` | `200` `1 065` B `10e6b9c80b1b` | 🔴 **`200`, byte-identical** | `404` · `404` · `404` |
+| `THU-MAIC/OpenMAIC` | `main` + 280 others — 🔴 no `master` | `200` `1 065` B `ba2525637432` | 🔴 **`200`, byte-identical** | `404` · `404` · `404` |
+| `Gchism94/ai-tutor` | `main` only — 🔴 no `master` | `200` `1 070` B `3d5a24e51479` | 🔴 **`200`, byte-identical** | `404` · `404` · `404` |
+
+🔴 **`p354`'s `gate-grant-path` asserts *"a BRANCH and a FILE, and both must resolve"* — and on this
+channel the branch half cannot be falsified for `master` or `HEAD`.** 🟢 The authoritative channel
+is `git ls-remote`, which this base already uses for identity (`gate-identity-online`) and which no
+alias satisfies.
+
+### 🟢 This file's own ref claims — swept, and they hold
+
+🟢 **`repos/foundations.md` publishes ``ref `master` `` for [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp)
+(lines 62 and 1786) and ``ref `develop` `` for [`luisricar-do/portugol-ai-tutor`](https://github.com/luisricar-do/portugol-ai-tutor).
+Both verified on `git ls-remote` 2026-10-24: `aureuserp` has a real `refs/heads/master` at HEAD
+`8f6e107`; `portugol-ai-tutor` has a real `refs/heads/develop` at HEAD `84ae17c`.** 🔵 Across all
+six live shelves the sweep is **18 claims, 18 correct** — so the alias hazard is **latent on this
+base, not live**, which is itself the result worth publishing: only an authoritative channel could
+establish it, and no amount of `200`s could.
+
+### 🟢 Two foundational MIT payloads at exactly `1 065` B — and the identity test that separates them
+
+🟢 `GradeU`'s `10e6b9c80b1b` and `OpenMAIC`'s `ba2525637432` are **both exactly `1 065` B**; `cmp`
+separates them at char 1, line 1. Four deltas sum to zero: **+3** B extra blank lines, **−1** B
+missing terminal newline, **−2** B shorter holder name. 🔴 **`T101` therefore holds for a nameable
+reason** — whitespace presentation and holder-name length trade byte for byte — and `p312`'s *a
+length is not a template* with it.
+
+🔴 **`T102`:** a line-based read of `GradeU`'s payload returns **`1 066`** B, because line-oriented
+tools re-add the terminal newline the file lacks — the same off-by-one `p418` corrected on
+`OpenMAIC`'s root. **Byte counts come from `wc -c` on raw bytes.**
+
+### 🔴 The foundations scarcity, confirmed on a SIXTH channel
+
+🟢 The `open source platform education SIS LMS … MIT Apache 2026` leg returned Forma LMS
+(Apache-2.0), OpenOLAT (Apache-2.0), Open edX (AGPL-3.0), Sakai (ECL-2.0), Moodle (GPL), Canvas
+(AGPL), RosarioSIS (GPL), OpenEduCat, openSIS and SchoolTool — **every one already carried**.
+🔴 **Sixth independent channel to confirm that no major education SIS or LMS carries a permissive
+grant** (`Gap 298` / `Gap 405-A`). 🔵 The permissive layer remains what these shelves already say it
+is: integration clients, emitters and tutors, never the system of record.
+
 ## 🆕 `p418` · 2026-10-24 — **The foundational question this pass answers is "what is this repository's licence?" — and for a workspace monorepo the honest answer is a SET. 🔴 `OpenMAIC`: eight MIT grants and one `LGPL-3.0-or-later`.**
 
 🟢 **Gates on arrival: 50 / 51**, the lone red `gate-census-union` control 24 (`Gap 400-B`,

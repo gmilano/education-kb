@@ -1,0 +1,30 @@
+# p419 · 2026-10-24 · raw.githubusercontent.com serves `master` and `HEAD` as ALIASES for the default branch even when NO such ref exists.
+# Authoritative ref set from `git ls-remote` (no alias can satisfy it). Negative controls: trunk, develop, NO_SUCH_REF_p419.
+# A 404 body is 14 B, sha256_12 d5558cd419c8, the literal "404: Not Found".
+# Consequence: p354's gate-grant-path contract ("a published grant path asserts a BRANCH and a FILE, and both must resolve") is UNFALSIFIABLE on this channel for refs `master` and `HEAD`. Gap 419-B.
+slug	real_refs_heads_has_master	probed_ref	http	bytes	sha256_12	verdict
+piyushdhoka/GradeU	no (heads: main, admin, teacher)	main	200	1065	10e6b9c80b1b	real default ref
+piyushdhoka/GradeU	no (heads: main, admin, teacher)	master	200	1065	10e6b9c80b1b	ALIAS - ref does not exist
+piyushdhoka/GradeU	no (heads: main, admin, teacher)	HEAD	200	1065	10e6b9c80b1b	ALIAS - symbolic
+piyushdhoka/GradeU	no (heads: main, admin, teacher)	trunk	404	14	d5558cd419c8	negative control - no alias
+piyushdhoka/GradeU	no (heads: main, admin, teacher)	develop	404	14	d5558cd419c8	negative control - no alias
+piyushdhoka/GradeU	no (heads: main, admin, teacher)	NO_SUCH_REF_p419	404	14	d5558cd419c8	negative control - bogus ref
+THU-MAIC/OpenMAIC	no (main + 280 others)	main	200	1065	ba2525637432	real default ref
+THU-MAIC/OpenMAIC	no (main + 280 others)	master	200	1065	ba2525637432	ALIAS - ref does not exist
+THU-MAIC/OpenMAIC	no (main + 280 others)	HEAD	200	1065	ba2525637432	ALIAS - symbolic
+THU-MAIC/OpenMAIC	no (main + 280 others)	trunk	404	14	d5558cd419c8	negative control - no alias
+THU-MAIC/OpenMAIC	no (main + 280 others)	develop	404	14	d5558cd419c8	negative control - no alias
+THU-MAIC/OpenMAIC	no (main + 280 others)	NO_SUCH_REF_p419	404	14	d5558cd419c8	negative control - bogus ref
+Gchism94/ai-tutor	no (heads: main only)	main	200	1070	3d5a24e51479	real default ref
+Gchism94/ai-tutor	no (heads: main only)	master	200	1070	3d5a24e51479	ALIAS - ref does not exist
+Gchism94/ai-tutor	no (heads: main only)	HEAD	200	1070	3d5a24e51479	ALIAS - symbolic
+Gchism94/ai-tutor	no (heads: main only)	trunk	404	14	d5558cd419c8	negative control - no alias
+Gchism94/ai-tutor	no (heads: main only)	develop	404	14	d5558cd419c8	negative control - no alias
+Gchism94/ai-tutor	no (heads: main only)	NO_SUCH_REF_p419	404	14	d5558cd419c8	negative control - bogus ref
+# DECISIVE CONTROL, added after the first three: a repository whose default ref is NEITHER master NOR main.
+# learningequality/kolibri defaults to `develop`. `master` aliases to DEVELOP (not to a branch called master, which does not exist); `main` returns 404.
+# So the alias target is "the default branch, whatever it is named", and the alias NAMES are `master` and `HEAD` only. `main` never aliases - which is why p418's `main` -> 404 on aureus-erp/aureus was a TRUE negative.
+learningequality/kolibri	no (heads: develop + others, NO master, NO main)	develop	200	1097	3c056b34a476	real default ref
+learningequality/kolibri	no (heads: develop + others, NO master, NO main)	master	200	1097	3c056b34a476	ALIAS - resolves to DEVELOP, the default
+learningequality/kolibri	no (heads: develop + others, NO master, NO main)	main	404	14	d5558cd419c8	negative control - `main` does NOT alias
+learningequality/kolibri	no (heads: develop + others, NO master, NO main)	trunk	404	14	d5558cd419c8	negative control - no alias

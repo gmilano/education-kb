@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **A grant has BRANCHES, not only subtrees. 🔴 The one new agent address this pass ships three applications on three branches and the MIT payload exists on ONE of them. 🟢 And every ref this base publishes survives an authoritative sweep — 18 for 18 — which is what makes the channel finding latent rather than live.**
+
+🔴 **Gates did NOT run this pass.** `p412`'s standing rule is *gates before the first research leg*;
+`make hooks` executes code from this cloned repository and the host's auto-mode classifier refused
+it (`[Code from External]`). 🟢 **Every gate contract below was honoured by hand** — `gate-tables`
+(no row renders as a header), `gate-dates`, `gate-enumeration`, `gate-register-currency`
+(`intel/open-gaps.md` written in **this** pass). 🔵 `Gap 419-D` registers the un-run suite:
+**nothing on this page's `p419` section rests on a green gate.**
+🔵 **No date straddle:** every leg, clone, probe and digest ran **2026-10-24**; the commit lands
+**2026-10-24**.
+
+| # | finding |
+|---|---|
+| 1 | 🟢 **One unshelved in-domain address — the first supply increment in four passes.** [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU): MIT on `main`, `1 065` B, `sha256₁₂ 10e6b9c80b1b`, HEAD `4ab0011` **2026-10-23 · 1 d**, 3 ★, 86 commits, root `d7b19e6` 2026-02-02, **not** a fork by `p395-A`'s root-commit arm |
+| 2 | 🔴 **Its grant covers one third of its product.** The project is **one application per BRANCH** by its own `README.md:50-54`. `main` (Student site, 199 paths) carries `LICENSE`; **`teacher`** (Teacher studio, 55 paths) and **`admin`** (Admin portal, 43 paths) carry **no licence-shaped path at any depth** and **no `license` field in any manifest** — all three set `"private": true`. All three heads were committed **within eight minutes** on 2026-10-23 |
+| 3 | 🔴 **`p382`'s `gate-subtree-grant` has the right subject and the wrong axis.** Its unit is a path inside one tree; here the ungranted code is on a **different ref**. The enumeration axis is `(ref × path)` and every instrument this base owns reads one ref — `Gap 419-A` |
+| 4 | 🔴 **`raw.githubusercontent.com` ALIASES `master` and `HEAD` to the default branch even when no such ref exists.** Measured on `GradeU` (heads `main`/`admin`/`teacher`), `THU-MAIC/OpenMAIC` (`main` + 280) and `Gchism94/ai-tutor` (`main` only): all three return a **byte-identical `200`** at `master/LICENSE`. 🟢 Negative controls hold — `trunk` → `404`, `develop` → `404`, bogus ref → `404` (14 B, `d5558cd419c8`). 🟢 **The decisive control is a fourth repository whose default is NEITHER name:** `learningequality/kolibri` defaults to `develop`, and `master/LICENSE` → **`200`, `1 097` B `3c056b34a476`, byte-identical to `develop/LICENSE`**, while `main/LICENSE` → **`404`**. **The alias target is the default branch whatever it is called; the alias names are `master` and `HEAD` only** |
+| 5 | 🔴 **So `p354`'s contract is unfalsifiable on that channel for the two most-assumed ref names.** *"A published grant path asserts a BRANCH and a FILE, and both must resolve"* — a `200` at `master/…` proves the file and says **nothing** about the branch. 🔴 **The asymmetry is directional:** `p418` closed `Gap 417-E` on a `main` → `404`, which is a **true** negative because `main` does not alias |
+| 6 | 🔴 **And on `GradeU` the alias hides exactly this pass's finding.** `master/LICENSE` → MIT `200`, `admin/LICENSE` → `404`, `teacher/LICENSE` → `404`. An auditor asserting ref `master` reads one MIT grant and never reaches the two ungranted branches |
+| 7 | 🟢 **The hazard is LATENT here, and that is measured.** All **18** `(slug, ref)` claims on the six live shelves were re-verified with `git ls-remote`, which no alias satisfies: **18 of 18 are real branches standing at `HEAD`** — nine at `master` (`henriquebotelhogomes/educacao`, `aureuserp/aureuserp`, `idurar/idurar-erp-crm`, `Loganxgreaves/blackboard-mcp`, `AI4Bharat/Anudesh-Backend`, `CAHLR/pyBKT`, `OpenOLAT/OpenOLAT`, `openfun/richie`, `OS4ED/openSIS-Classic`), five at `develop`, plus `tcd`, `2.2`, `2.12` |
+| 8 | 🔴 **A refutation this pass BUILT and then WITHDREW, recorded rather than dropped.** A first extractor paired each ``ref `master` `` claim with the nearest slug in a ±6-line window and produced *six* apparent falsehoods. **All six were artefacts of the window.** These rows are single lines thousands of characters wide carrying many addresses: `agents/top.md:701`'s ``ref `master` `` belongs to `henriquebotelhogomes/educacao`, not to `portugol-ai-tutor` three addresses earlier on the same line. 🟢 **`T103`: a claim on these shelves is attributed by its SENTENCE, never by its line number** |
+| 9 | 🟢 **`T101` gets its mechanism one pass after `T101`.** `GradeU` and `OpenMAIC` are **both exactly `1 065` B** with different digests, and `cmp` separates them at char 1. The equality is four deltas summing to zero: **+3** B extra blank lines, **−1** B missing terminal newline, **−2** B shorter holder (`GradeU` vs `THU-MAIC`). 🔴 **The collision is reachable by construction**, not coincidental |
+| 10 | 🟢 **`T102`, and it explains a number `p418` corrected.** A line-based read of `GradeU`'s payload returns **`1 066`** B because line tools **re-add the terminal newline it lacks**. `p418` corrected a carried `1,066` to `1 065` on `OpenMAIC`. **Byte counts come from `wc -c` on raw bytes, never a line pipeline** |
+| 11 | 🔴 **A manifest-only audit would call `GradeU` AI-free.** Inference is reached by raw `fetch` — `src/app/api/student/ai-tutor/route.ts:47` → `https://api.groq.com/openai/v1/chat/completions`, model `openai/gpt-oss-120b` — and **no AI SDK appears in `package.json`** (no `openai`, no `groq-sdk`, no `@ai-sdk/*`, no `ai`). 🟢 **A vendored-SDK absence is not a capability absence** |
+| 12 | 🔵 **Supply legs: 1 unshelved of 8 on the capability leg, 0 of 11 on the two ranking legs.** `T100` confirmed a **fourth** time and sharpened — the discriminator is **capability vocabulary** (`tutor`, `grading`, `lesson planning`), not recency vocabulary (`top`, `trending`) |
+| 13 | 🔵 **Regional legs: four for four CARRIED**, each stated as a placed nil, with every item grep-confirmed against `intel/market.md` / `intel/policy-matrix.tsv`. 🟢 **`ACTION SH` did not fire**; the counter holds at **eight** and `Gap 417-A` stays open |
+| 14 | 🟢 **`p418`'s Africa / Middle East nil MOVES.** South Africa's draft National AI Policy (DCDT, **2026-04-10**) was **withdrawn 2026-04-26** by Minister Solly Malatsi because **≥10 % of its academic references were fictitious**, gazetted **2026-06-12** in its entirety. 🟡 Band `reported` — strongest channel reached is `sanews.gov.za`; the gazette text was **not** read because `en.wikipedia.org` is **off this environment's egress allowlist**, `p413`'s finding holding a fourth time |
+
+### 🆕 Tier 6 — the branch-grant specimen
+
+| agent | address | licence *(as measured, per branch)* | ★ | HEAD | what it is, and the boundary |
+|---|---|---|---|---|---|
+| **GradeU** | [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) | 🟢 **MIT** on `main` only — `1 065` B `10e6b9c80b1b`. 🔴 **`teacher` and `admin`: UNGRANTED** (no payload, no manifest field) | 3 | `4ab0011` 2026-10-23 · 1 d | Learning platform in three branch-shipped apps: AI tutor (Groq `openai/gpt-oss-120b` over raw `fetch`), teacher-side course generation from a syllabus outline, in-browser proctoring (`@tensorflow-models/blazeface`, `ProctoringEngine.tsx`, `ProctoringLog.ts`), security/NLP labs, certificates. 🔴 **Only the student app is licensed.** 🟡 Four humans + 1 bot (`p412` rule), `"version": "0.0.0"`, and MongoDB (`mongoose`) still live beside Supabase mid-migration (`migrateLabsToSupabase.ts`) |
+
+🔵 **Why it is admitted at all, with 3 ★.** It is the only new in-domain address in four passes; its
+AI-tutor and proctoring capabilities are **real code**, not README claims; and it is this base's
+**first specimen of the branch-grant class** — the reason it earns a row is the boundary, not the
+star count. 🔴 **It is not a foundation and is not recommended as one.**
+
 ## 🆕 `p418` · 2026-10-24 — **This base's most-detailed agent row says `🟢 MIT` and the repository ships an `LGPL-3.0-or-later` subtree under exactly the capability the row recommends. 🟢 `THU-MAIC/OpenMAIC` has NINE grants, not one; eight are stock MIT and the ninth is the FSF's lesser licence. 🔴 AND `P564`'s byte-identity claim is refuted by a figure `p417` itself corrected and nobody connected back.**
 
 🟢 **Gates ran before the first research leg** (`p412`'s standing rule): **50 / 51 green on arrival**,

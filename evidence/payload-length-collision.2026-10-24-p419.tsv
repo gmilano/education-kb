@@ -1,0 +1,8 @@
+# p419 · 2026-10-24 · T101's MECHANISM, one pass after p418 registered T101 ("a length is not an identity").
+# Two different projects' MIT payloads are both EXACTLY 1065 B with different digests; cmp separates them at char 1, line 1.
+# The equality is four deltas summing to zero: +3 B extra blank lines, -1 B missing terminal newline, -2 B shorter holder name.
+# So the collision is reachable BY CONSTRUCTION: whitespace presentation and holder-name length trade byte for byte.
+# T102: a LINE-BASED read of GradeU's payload returns 1066 B, because line tools re-add the terminal newline it lacks. This is the same off-by-one p418 corrected from a carried 1,066 to 1065 on OpenMAIC.
+payload	bytes_wc_c	sha256_12	leading_byte	blank_lines	terminal_newline	holder_line_bytes	holder_text	line_based_total
+piyushdhoka/GradeU main/LICENSE	1065	10e6b9c80b1b	\n	7	absent	26	Copyright (c) 2026 GradeU	1066 (WRONG - T102)
+THU-MAIC/OpenMAIC main/LICENSE	1065	ba2525637432	M	4	present	28	Copyright (c) 2026 THU-MAIC	1065 (agrees)

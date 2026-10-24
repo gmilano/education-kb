@@ -4,6 +4,239 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **A grant has BRANCHES. 🔴 `piyushdhoka/GradeU` ships three applications on three branches, the MIT payload exists on ONE of them, and the other two carry no grant at any path. 🔴 Plus the channel finding behind it: `raw.githubusercontent.com` serves `master` and `HEAD` as ALIASES for the default branch even when no such ref exists — so a `200` cannot verify the BRANCH half of `p354`'s own contract.**
+
+🔵 **APPEND-ONLY shelf** — this section is added above `p418`'s and nothing below it is rewritten.
+🔵 **Single date:** every leg, probe, clone, payload read and digest below ran **2026-10-24**; the
+commit lands **2026-10-24**.
+
+🔴 **Gates did NOT run this pass, and that is a fact about the environment, not a skipped step.**
+`p412`'s standing rule is *gates before the first research leg*. `make hooks` executes code from
+this cloned repository and the host's **auto-mode classifier refused it** (`[Code from External]`).
+🟢 **So every gate contract below was honoured by hand and stated as such** — `gate-tables` (no row
+renders as a header), `gate-dates`, `gate-region-headings` (`intel/market.md`'s canonical block
+untouched, per-region `####` inside the dated section), `gate-register-currency` (`intel/open-gaps.md`
+is written **in this pass**, not backfilled). 🔵 **Recorded as `Gap 419-D`**: the standing check is
+52 controls wide and this pass could run **none** of them, so nothing below rests on a green gate.
+
+### 🔴 Finding 1 — the new in-domain address, and its grant covers one third of its product
+
+🟢 **One unshelved in-domain address this pass**, and it is the first supply increment in four
+passes (`p416`: 1 of 68 · `p417`: 2 of 13 · `p418`: **0** of 9 · `p419`: **1**).
+
+[`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) — a hyper-personalised learning
+platform: AI tutor, teacher-side course generation from a syllabus outline, browser-proctored
+assessment, hands-on security/NLP labs, verified certificates.
+
+🔴 **It is laid out as one application per BRANCH**, which its own `README.md` states as a table
+(`README.md:50-54`, *"| App | Who it's for | Branch | Built with |"*). Enumerated on the
+authoritative `git` channel — `git ls-remote` plus a `--filter=blob:none` clone, per `p389` — at
+**2026-10-24**:
+
+| branch | the app it ships | HEAD | committed | tracked paths | licence-shaped paths | manifest `name` | manifest `license` |
+|---|---|---|---|---|---|---|---|
+| `main` *(default)* | Student site · Next.js 16 / React 19 | `4ab0011` | 2026-10-23T19:34:19+05:30 | **199** | 🟢 `LICENSE` | `grade-u` | 🔴 absent, `"private": true` |
+| `teacher` | Teacher studio · Next.js 16 + BullMQ worker | `17b7a34` | 2026-10-23T19:33:20+05:30 | **55** | 🔴 **NONE at any depth** | `course-app-next` | 🔴 absent, `"private": true` |
+| `admin` | Admin portal · Vite + React 18 | `34771b5` | 2026-10-23T19:27:02+05:30 | **43** | 🔴 **NONE at any depth** | `vois-admin-portal` | 🔴 absent, `"private": true` |
+
+🔴 **All three branches were committed inside eight minutes of each other**, so these are live
+components of one shipped product, not abandoned heads. 🔴 **No manifest on any branch declares a
+`license` field and all three set `"private": true`**, so the payload on `main` is the *only* grant
+channel in the whole repository — and it is reachable from one branch of three.
+
+🟢 **The payload, two channels, one calibrated control pair.** `main/LICENSE` =
+**`1 065` B**, `sha256₁₂ 10e6b9c80b1b`, title *"MIT License"*, holder
+*"Copyright (c) 2026 GradeU"*. Read on `raw.githubusercontent.com` and again as
+`git cat-file -p HEAD:LICENSE` — **identical length on both**. Control pair per `p293`:
+`main/package.json` → `200`, `main/NO_SUCH_FILE_p419` → `404`.
+
+🟢 **Provenance, by `p395-A`'s root-commit arm — it is NOT a fork.** Full blobless clone: root
+`d7b19e6` **2026-02-02T23:55:49+05:30**, **86** commits, HEAD `4ab0011`. HTML channel (`WebFetch`,
+`p392`'s star channel): **3 ★**, **1 fork**, 1 watching, **no `forked from` line**, **no archived
+banner**, *"86 Commits"* — agreeing with git exactly.
+
+🟢 **Authorship, graded under `p412`'s rule rather than by `%an`.** Seven distinct `(%an, %ae)`
+pairs collapse to **four humans and one bot**: `piyushdhoka007@gmail.com` and
+`162919496+piyushdhoka@users.noreply.github.com` are one person under two identities;
+`31241693@vupune.ac.in` appears under **two different names** (`AadarshCanCode`, `Aadarsh Pathre`);
+plus `vedant11734@gmail.com`, `vninamdar03@gmail.com`; and `copilot-swe-agent[bot]` with 4 commits.
+🔵 **`p412` settled that *"5 authors" is `%an`*; this address would have read as *seven*.**
+
+🟢 **The capability claims hold where this base can test them, and one does not.** `ai-tutor` is a
+real route (`src/app/api/student/ai-tutor/route.ts`) and proctoring is real code
+(`ProctoringEngine.tsx`, `ProctoringVideoFeed.tsx`, `useProctoring.ts`, `models/ProctoringLog.ts`,
+`api/student/track/proctor/ingest/route.ts`, with `@tensorflow-models/blazeface` for in-browser face
+detection). 🔴 **The advertised admin portal is absent from `main` entirely** — it is the `admin`
+branch, the ungranted one.
+
+🔴 **A manifest-only audit would call this project AI-free.** The inference provider is reached by
+raw `fetch` — `route.ts:47` `https://api.groq.com/openai/v1/chat/completions`, model
+`openai/gpt-oss-120b`, key `process.env.GROQ_API_KEY` — and **no AI SDK appears in
+`package.json` at all** (no `openai`, no `groq-sdk`, no `@ai-sdk/*`, no `ai`). 🔵 Both tokens
+`openai` and `groq` occur in the source and in **zero** dependency entries. 🟢 Recorded because this
+base audits manifests: *a vendored-SDK absence is not a capability absence.*
+
+🟡 **Stated limits.** 3 ★, four humans, `"version": "0.0.0"`, and two datastores live in the same
+tree (`src/lib/mongodb.ts` with `mongoose` beside `src/shared/lib/supabase.ts` and
+`src/shared/utils/migrateLabsToSupabase.ts`) — a migration in progress, not a settled architecture.
+**It is admitted as a readable reference and a branch-grant specimen, not as a foundation.**
+
+### 🔴 Finding 2 — `raw.githubusercontent.com` ALIASES `master` and `HEAD`, so a `200` cannot falsify a branch
+
+🟢 **`p354` built `gate-grant-path` on the contract *"a published grant path asserts a BRANCH and a
+FILE, and both must resolve."*** 🔴 **On the raw channel the branch half is unfalsifiable when the
+asserted ref is `master` or `HEAD`.** Measured on three repositories today, each with an
+authoritative `git ls-remote` beside it:
+
+| repository | real `refs/heads` | `raw…/main/LICENSE` | `raw…/master/LICENSE` | `raw…/HEAD/LICENSE` | `raw…/trunk/` | `raw…/develop/` | `raw…/NO_SUCH_REF_p419/` |
+|---|---|---|---|---|---|---|---|
+| `piyushdhoka/GradeU` | `main`, `admin`, `teacher` — 🔴 **no `master`** | `200` `1 065` B `10e6b9c80b1b` | 🔴 **`200`, byte-identical** | `200`, identical | `404` | `404` | `404` |
+| `THU-MAIC/OpenMAIC` | `main` + 280 others — 🔴 **no `master`** | `200` `1 065` B `ba2525637432` | 🔴 **`200`, byte-identical** | `200`, identical | `404` | `404` | `404` |
+| `Gchism94/ai-tutor` | `main` **only** — 🔴 **no `master`** | `200` `1 070` B `3d5a24e51479` | 🔴 **`200`, byte-identical** | `200`, identical | `404` | `404` | `404` |
+| `learningequality/kolibri` | `develop` + others — 🔴 **no `master` AND no `main`** | 🔴 **`404`** | 🔴 **`200` `1 097` B `3c056b34a476` — identical to `develop/LICENSE`** | `200`, identical | `404` | `200` *(the real default)* | `404` |
+
+🟢 **The negative controls are what make it a mechanism and not a quirk:** `trunk` and `develop` —
+equally plausible default names — return `404`, and a bogus ref returns `404` with a 14-byte body
+(`sha256₁₂ d5558cd419c8`, the literal `404: Not Found`). 🔴 **So the alias is specific to `master`
+and `HEAD`**, the two names a reader is most likely to assume.
+
+🟢 **The fourth repository is the decisive control, because its default ref is NEITHER `master` nor
+`main`.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) defaults to
+**`develop`** and has no `master` and no `main` branch. `raw…/master/LICENSE` returns
+**`200`, `1 097` B, `sha256₁₂ 3c056b34a476` — byte-identical to `develop/LICENSE`** — while
+`raw…/main/LICENSE` returns **`404`**. 🟢 **So the alias target is *the default branch, whatever it
+is named*, and the alias NAMES are `master` and `HEAD` only.** 🟢 **This is also the direct proof
+that `main` never aliases**, which is what makes `p418`'s `main` → `404` on `aureus-erp/aureus` a
+**true** negative and a `master` → `200` worthless as a positive.
+
+🔴 **The asymmetry is the operationally dangerous part, and `p417` already paid for it in the other
+direction.** `p418` closed `Gap 417-E` on the note that `p417`'s cell was *"wrong slug **and** wrong
+ref (`main`; the real default is **`master`**)"* — `main` → `404` is a **true** negative, because
+`main` does **not** alias. 🔴 **`master` → `200` is not a true positive.** A pass that probes
+`master` and gets bytes learns nothing about whether `master` exists.
+
+🔴 **And on `GradeU` the alias hides exactly the finding.** `raw…/master/LICENSE` → MIT `200`;
+`raw…/admin/LICENSE` → `404`; `raw…/teacher/LICENSE` → `404`. An auditor who asserted ref `master`
+would read one MIT grant and never reach the two branches that have none.
+
+### 🟢 Finding 3 — every published ref claim on these shelves SURVIVES an authoritative sweep
+
+🟢 **The hazard above is latent here, not live — and that is a measurement, not an assumption.**
+All `(slug, ref)` pairs asserted on the six live shelves were extracted by pairing each
+``ref `X` `` claim with the nearest preceding slug **on its own line**, then verified against
+`git ls-remote` (which no alias can satisfy). **18 claims, 18 correct, every one a real branch
+standing at `HEAD`:**
+
+| claimed ref | slugs verified at that ref |
+|---|---|
+| `master` | `henriquebotelhogomes/educacao` · `aureuserp/aureuserp` · `idurar/idurar-erp-crm` · `Loganxgreaves/blackboard-mcp` · `AI4Bharat/Anudesh-Backend` · `CAHLR/pyBKT` · `OpenOLAT/OpenOLAT` · `openfun/richie` · `OS4ED/openSIS-Classic` |
+| `develop` | `frappe/education` · `addex12/School-CRM` · `luisricar-do/portugol-ai-tutor` · `oppia/oppia` · `learningequality/kolibri` |
+| `tcd` | `lukecarroll15/blackboard-mcp` |
+| `2.2` | `krayin/laravel-crm` |
+| `2.12` | `portabilis/i-educar` |
+
+🔴 **One hypothesis of this pass's own was REFUTED by this sweep and is recorded rather than
+quietly dropped.** A first cut paired each ``ref `master` `` claim with the nearest slug **within a
+±6-line window** and produced *six* apparent falsehoods — `luisricar-do/portugol-ai-tutor`,
+`FXArth/Tutor-Programacao`, `serlo/serlo.org`, `r-huijts/canvas-mcp`, `alanwtom/blackboard-mcp`,
+`learningequality/kolibri`. 🟢 **All six were artefacts of the window, not errors on the shelves.**
+These rows are single lines thousands of characters wide carrying many addresses, so a line-window
+crosses repositories: `agents/top.md:701`'s ``ref `master` `` belongs to
+`henriquebotelhogomes/educacao` (correct), and `verticals/solutions.md:1374`'s belongs to
+`OS4ED/openSIS-Classic` on the following line (correct), while the shelf states
+`portugol-ai-tutor` and `kolibri` at **`develop`** — which `ls-remote` confirms. 🔵 **The rule:
+on these shelves a claim is attributed by its SENTENCE, never by its line number** — and a
+refutation built on proximity is a measurement of the extractor.
+
+### 🟢 Finding 4 — two MIT payloads at exactly `1 065` B, and the cancellation is EXACT arithmetic
+
+🟢 **`p418` registered `T101` — *a length is not an identity* — and showed `1 077` B carrying four
+digests.** `p419` supplies the mechanism one pass later, in the band `p418` itself measured:
+
+| payload | bytes | `sha256₁₂` | leading byte | blank lines | terminal newline | holder line (incl. `\n`) |
+|---|---|---|---|---|---|---|
+| `GradeU` `main/LICENSE` | **`1 065`** | `10e6b9c80b1b` | 🔴 `\n` | **7** | 🔴 **absent** | `26` B — *"Copyright (c) 2026 GradeU"* |
+| `OpenMAIC` `main/LICENSE` | **`1 065`** | `ba2525637432` | `M` | **4** | 🟢 present | `28` B — *"Copyright (c) 2026 THU-MAIC"* |
+
+🟢 **`cmp` separates them at char 1, line 1** — and the lengths are equal because four independent
+deltas sum to zero: **+3** B of extra blank lines, **−1** B for the missing terminal newline,
+**−2** B for the shorter holder name (`GradeU` 6 chars vs `THU-MAIC` 8). 🔴 **The collision is not
+rare — it is reachable by construction**, because whitespace presentation and holder-name length
+trade against each other byte for byte. 🟢 **This strengthens `T101` from *lengths collide* to
+*lengths collide for a nameable reason*, and `p312`'s *a length is not a template* with it.**
+
+🔴 **A second, cheaper trap in the same payload, and it explains a number `p418` had to correct.**
+`p418` corrected a carried `1,066` B for `OpenMAIC`'s root to the measured **`1 065`**. On `GradeU`,
+a *line-based* accounting of the same file returns **`1 066`** — `grep -v '^Copyright (c)'` yields
+`1 040` B and the holder line `26` B — because every line-oriented tool **re-adds the terminal
+newline the payload does not have**. 🟢 **`T102`: a payload's byte count comes from `wc -c` on the
+raw bytes, never from a line-based pipeline, and the `1 065`/`1 066` confusion has exactly this
+mechanical cause.**
+
+### 🔵 The supply legs — what each returned
+
+| leg | returned | verdict |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | OpenClaw, Hermes Agent, OpenHands, CrewAI, MetaGPT, HF Agents Course, `microsoft/ai-agents-for-beginners`, `ashishpatel26/500-AI-Agents-Projects` | 🔴 **nil in-domain** — general agent infrastructure and courseware; `500-AI-Agents-Projects` carried (`agents/top.md:449`) |
+| `github trending education AI 2026 open source repository` | `microsoft/generative-ai-for-beginners`, `rasbt/LLMs-from-scratch`, `mlabonne/llm-course`, `karpathy/nanochat`, `developer-roadmap` | 🔴 **nil in-domain** — *learning-to-build-AI*, not *AI-for-education*; `nanochat` and `developer-roadmap` carried (`agents/top.md:449`, `:1321`) |
+| `open source platform education SIS LMS … MIT Apache 2026` | Forma LMS, OpenOLAT, Open edX, Sakai, Moodle, Canvas, RosarioSIS, OpenEduCat, openSIS, SchoolTool | 🔴 **all carried** — and a **sixth** independent channel confirming no major education SIS is MIT (`Gap 298` / `Gap 405-A`) |
+| `new open source AI tutor agent … MIT license github` *(targeted discovery)* | `THU-MAIC/OpenMAIC`, `littlecookie0722/AI-Teaching-Agent`, **`piyushdhoka/GradeU`**, `maxew6/ai-tutor-project`, `Gchism94/ai-tutor`, `tutornew/OpenTutor`, `BlackyDrum/ai-tutor`, `eduagent` | 🟢 **1 of 8 unshelved — `GradeU`.** The other seven carried, with hit counts |
+
+🔵 **The one leg that paid is the one with capability words in it** (`tutor`, `grading`,
+`lesson planning`) rather than ranking words (`top`, `trending`). 🟢 **Fourth consecutive
+confirmation of `T100`**, and a sharpening: the two *ranking* legs returned **zero** in-domain
+addresses for the fourth pass running, while the *capability* leg returned the only new one.
+
+### 🔵 The regional legs — four for four CARRIED, each stated as a placed nil
+
+| region | leg | returned | verdict |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | 134 bills / 31 states; `H.R. 8747` advanced 2026-07-21; CA `AB 1159`; ID `SB 1227`; Maryland AI Ready Schools Act (24 districts); Canada *AI for All* (June 2026); Georgia and Mississippi CS credit | 🔴 **nothing unshelved** — every item grep-confirmed on `intel/market.md` / `intel/policy-matrix.tsv` |
+| **EMEA** | `AI education EMEA Europe 2026 … AI Act schools players` | Reg. **(EU) 2026/1744** deferring stand-alone high-risk education systems `2026-08-02` → **`2027-12-02`**; Digital Omnibus OJ `2026-07-24`, applying `2026-07-27`; Art. 50 transparency since `2026-08-02`; Art. 4 literacy and the emotion-inference ban since `2025-02-02`; Annex III admission / outcome-evaluation | 🔴 **nothing unshelved** |
+| **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players` | Korea AI Basic Act `2026-01-22`; Vietnam Law `134/2025/QH15` in force `2026-03-01`, education transition Sept 2027; Japan voluntary; Singapore AI Verify; Australia National AI Plan (Dec 2025), guardrails paused; Ipsos Education Monitor 2026 | 🔴 **nothing unshelved** — and `p418`'s *"one instrument, two names"* note on Korea holds; this leg again served *"AI Basic Act"* |
+| **LATAM** | `AI educación LATAM América Latina 2026 adopción regulación actores` | UNESCO-IESALC 200 institutions / 19 countries; 73.5 % teaching · 57.0 % research · 34.1 % admin · 20.0 % community; 26.0 % formal strategy · 18.5 % policies · 8.0 % budget; ILIA 2026 85 % strategies / 75 % lead institution / Brazil + Colombia the only funded; 11 of 20 countries with AI in school curricula vs 2 in 2024; DEC + Tec de Monterrey 92 % / 79 % | 🔴 **nothing unshelved** — `intel/market.md:1058` carries the ILIA quadruple verbatim |
+
+🟢 **`ACTION SH` did NOT fire** — no EMEA source in these legs omitted the deferral; the counter
+holds at **eight** and `Gap 417-A` stays open.
+
+### 🟢 Finding 5 — the Africa / Middle East leg returned content, and `p418`'s nil MOVES
+
+🔴 **`p418` recorded *"Africa and the Middle East returned nothing again."*** 🟢 **This pass's leg
+returned material, and the headline item moves a carried ABSENCE rather than restating it.**
+
+🔴 **South Africa's draft National AI Policy was WITHDRAWN because its own citations were
+fabricated.** Published by the Department of Communications and Digital Technologies on
+**2026-04-10**, comment open to **2026-06-10**; Minister **Solly Malatsi** announced withdrawal on
+**2026-04-26** — **at least 10 % of the academic references in the reference list were
+fictitious** — and the withdrawal was **gazetted 2026-06-12**, in its entirety, effective from the
+date of publication. A replacement is still targeted for FY **2026/27** and none is published.
+
+🟡 **Band `reported`, with the channel stated.** The strongest source reached is
+**`sanews.gov.za`**, the South African Government News Agency, corroborated by DLA Piper, ITWeb and
+CNBC Africa. 🔴 **The primary gazette text was NOT read:** `en.wikipedia.org` is **not on this
+environment's egress allowlist** (`getaddrinfo ENOTFOUND`), which is `p413`'s allowlist finding
+holding a fourth time, and no gazette PDF was reachable. 🔵 **Nothing education-specific in the
+draft was confirmed** — the STEAM-curriculum objective is a secondary claim only.
+
+🟢 **Why it belongs on these shelves and not just in a policy tracker.** `intel/market.md:2883`
+carries *"South Africa — no national AI-in-education strategy, no regulator."* 🟢 **That absence
+now has a mechanism:** the attempt existed, reached public comment, and was destroyed by
+**unverified AI-generated citations** — the exact failure this base's whole verification discipline
+is built against, occurring in a national AI policy. 🔵 The rest of the leg is **carried**: Linux
+Foundation on open-source AI for Africa / the Middle East / Türkiye, Masakhane, Egypt's curriculum
+tools, South Africa's STEPS, the EdTech Hub MENA scan, Rwanda's Feb 2026 MoU, OECD 2026 on African
+AI governance.
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🟢 Per `p352` and `p376`, re-derived as the last act before the commit. 🔴 **`make address-shape-census`
+and `make union-currency` could not be RUN** — same classifier refusal as `make hooks` — so this
+pass publishes the delta it **caused** rather than a re-derived total, and says so: `p418`'s
+published triple stands at **2 759 / 38 / 2 721**, union **3 557**. 🟢 **This pass adds one
+in-domain address (`piyushdhoka/GradeU`)** plus its evidence file. 🔵 **The totals are therefore
+CARRIED, not re-measured, and `Gap 419-D` registers the un-run census as part of the un-run gate
+suite** — a figure this base did not derive is not one it may publish as derived.
+
 ## 🆕 `p418` · 2026-10-24 — **Nine grants in the flagship MIT repository, one of them `LGPL-3.0-or-later`; `P564`'s byte-identity refuted by a number this base already held; and `ACTION p417-D` built as a gate that reproduces the real failure on the real commits.**
 
 🔵 **APPEND-ONLY shelf** — this section is added above `p417`'s and nothing below it is rewritten.

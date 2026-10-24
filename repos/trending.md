@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **The repository layer's finding is a BRANCH axis: `piyushdhoka/GradeU` is three applications on three branches and only the default one carries a grant. 🔴 And the channel this base reads payloads on aliases `master` to the default branch, so the branch half of a grant path cannot be falsified there.**
+
+🔵 **APPEND-ONLY shelf** — added above `p418`'s section; nothing below is rewritten.
+🔵 **Single date:** every clone, `ls-remote`, payload read and digest below ran **2026-10-24**.
+
+🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's
+auto-mode classifier refused it (`[Code from External]`). Every gate contract was honoured by hand
+and `Gap 419-D` registers the un-run suite. **Nothing below rests on a green gate.**
+
+### 🔴 The trending repository this pass admits, and the reason it is a specimen
+
+[`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) — **MIT on `main`, `1 065` B,
+`sha256₁₂ 10e6b9c80b1b`**, HEAD `4ab0011` **2026-10-23 · 1 d**, root `d7b19e6` **2026-02-02**,
+**86** commits, **3 ★ / 1 fork**, not archived, not a fork (`p395-A` root-commit arm), **four
+humans and one bot** under `p412`'s identity rule.
+
+🔴 **The grant does not cover the product.** One application per branch, enumerated on the git
+channel:
+
+| branch | app | HEAD | tracked paths | licence-shaped paths | manifest |
+|---|---|---|---|---|---|
+| `main` *(default)* | Student site · Next.js 16 / React 19 | `4ab0011` | 199 | 🟢 `LICENSE` — MIT `1 065` B | `grade-u`, 🔴 no `license` field, `"private": true` |
+| `teacher` | Teacher studio · Next.js 16 + BullMQ | `17b7a34` | 55 | 🔴 **NONE at any depth** | `course-app-next`, 🔴 no `license` field, `"private": true` |
+| `admin` | Admin portal · Vite + React 18 | `34771b5` | 43 | 🔴 **NONE at any depth** | `vois-admin-portal`, 🔴 no `license` field, `"private": true` |
+
+🔴 **Two of three shipped applications carry no grant on any channel** — no payload, no manifest
+field — and all three heads were committed within **eight minutes** of each other on 2026-10-23, so
+none of them is dormant. 🟢 **The repository's own `README.md:50-54` publishes the branch→app
+mapping**, so this is the project's intended layout, not an accident of history.
+
+### 🔴 The instrument consequence — `p382`'s gate has the right subject and the wrong axis
+
+🟢 `gate-subtree-grant` (`p382`) exists for *"a grant has SUBTREES, and a root-only read is wrong
+about the repository."* `p418` applied it to `THU-MAIC/OpenMAIC` and found nine grants across
+`packages/@openmaic/*`. 🔴 **It cannot express `GradeU`**, because the gate's unit is a **path
+inside one tree** and here the ungranted code is on a **different ref**. 🔵 **Registered as
+`Gap 419-A`:** the grant-enumeration axis is `(ref × path)`, and every instrument this base owns
+reads one ref.
+
+### 🔴 The channel finding that keeps the branch axis invisible
+
+🟢 Measured on three repositories today, each against an authoritative `git ls-remote`:
+**`raw.githubusercontent.com` serves `master` and `HEAD` as ALIASES for the default branch even
+when no `master` ref exists** — no branch, no tag. `GradeU` (heads: `main`, `admin`, `teacher`),
+`THU-MAIC/OpenMAIC` (`main` + 280 others) and `Gchism94/ai-tutor` (`main` only) all return a
+**byte-identical `200`** at `master/LICENSE` as at `main/LICENSE`. 🟢 **Negative controls make it a
+mechanism:** `trunk` and `develop` → `404`, a bogus ref → `404` with the 14-byte
+`404: Not Found` body (`sha256₁₂ d5558cd419c8`).
+
+🔴 **`p354`'s `gate-grant-path` contract — *"a published grant path asserts a BRANCH and a FILE, and
+both must resolve"* — is therefore unfalsifiable on this channel for the two most-assumed ref
+names.** 🔴 **On `GradeU` the alias hides this pass's own finding:** `master/LICENSE` → MIT `200`,
+while `admin/LICENSE` and `teacher/LICENSE` → `404`.
+
+🟢 **And the hazard is latent on these shelves, measured not assumed:** all **18** `(slug, ref)`
+claims published across the six live shelves were re-verified on `git ls-remote` and **all 18 are
+real branches standing at `HEAD`** — nine at `master`, five at `develop`, plus `tcd`, `2.2` and
+`2.12`. 🔵 Full table on `agents/trending.md`, `p419` Finding 3, including the six **false**
+refutations this pass's first extractor produced and withdrew.
+
+### 🟢 Two MIT payloads at exactly `1 065` B — `T101`'s mechanism, one pass after `T101`
+
+🟢 `GradeU` `10e6b9c80b1b` and `OpenMAIC` `ba2525637432` are **both exactly `1 065` B** and `cmp`
+separates them at char 1. The equality is four deltas summing to zero: **+3** B extra blank lines,
+**−1** B missing terminal newline, **−2** B shorter holder (`GradeU` vs `THU-MAIC`). 🔴 **So the
+`1 065` band now holds two digests in the band `p418` measured**, and the collision is reachable by
+construction rather than coincidental.
+
+🔴 **`T102`, and it explains a figure `p418` had to correct.** A *line-based* read of `GradeU`'s
+payload returns **`1 066`** B — `grep -v '^Copyright (c)'` gives `1 040` plus a `26` B holder line —
+because line-oriented tools **re-add the terminal newline this payload lacks**. `p418` corrected a
+carried `1,066` to `1 065` for `OpenMAIC`'s root. 🟢 **A payload's byte count comes from `wc -c` on
+raw bytes, never from a line pipeline.**
+
+### 🔵 The repository legs, and the nil that is informative
+
+| leg | returned | verdict |
+|---|---|---|
+| `github trending education AI 2026 open source repository` | `microsoft/generative-ai-for-beginners` (~108k ★), `rasbt/LLMs-from-scratch` (~87.7k ★), `mlabonne/llm-course`, `karpathy/nanochat`, `developer-roadmap`, *AI Engineering From Scratch* | 🔴 **nil in-domain.** Every one teaches people to build AI; none is AI applied to education. `nanochat` and `developer-roadmap` already carried |
+| `open source platform education SIS LMS … MIT Apache 2026` | Forma LMS (Apache-2.0), OpenOLAT (Apache-2.0), Open edX (AGPL-3.0), Sakai (ECL-2.0), Moodle (GPL), Canvas (AGPL), RosarioSIS (GPL), OpenEduCat, openSIS, SchoolTool | 🔴 **all carried.** 🟢 **Sixth independent channel** confirming no major education SIS carries a permissive grant — `Gap 298` / `Gap 405-A` |
+| `new open source AI tutor agent … MIT license github` | 8 addresses | 🟢 **1 unshelved: `GradeU`**; 7 carried |
+
+🔵 **The ranking legs (`top …`, `github trending …`) have now returned zero in-domain addresses for
+four consecutive passes**, while the capability-worded leg returned the only new address in each of
+the last two. 🟢 **`T100` confirmed a fourth time, and sharpened: the discriminator is capability
+vocabulary, not recency vocabulary.**
+
+🔵 **A secondary-source hazard worth one line.** One trend report served
+`nilbuild/developer-roadmap` as the slug for a repository these shelves carry under a different
+owner, and another named *"ponytail"* as a trending educational platform. 🔴 **Neither was probed
+and neither is shelved** — recorded so a successor does not treat an unprobed slug from an
+aggregator as an address.
+
 ## 🆕 `p418` · 2026-10-24 — **A monorepo's licence is a SET, not a value: `OpenMAIC` ships `1 065`-byte MIT in eight places and `7 652`-byte LGPL-3.0 in the ninth. 🟢 And `ACTION p417-D` is now a gate that fires on the pass a drift STARTS.**
 
 🔵 **APPEND-ONLY shelf** — added above `p417`'s section; nothing below is rewritten.

@@ -1,0 +1,22 @@
+# p419 · 2026-10-24 · novelty rate over 9 discovery legs (4 prescribed global, 4 prescribed regional, 1 targeted capability leg) plus 1 Africa/Middle East leg.
+# Shelf hits counted with grep -rFl across the 8 live shelves + intel/open-gaps.md + intel/policy-matrix.tsv, excluding ./archive.
+# 1 new in-domain address out of 8 candidates on the capability leg; 0 of 11 on the two RANKING legs. T100 confirmed a fourth time and sharpened: the discriminator is CAPABILITY vocabulary, not recency vocabulary.
+leg	candidate	shelf_hit	verdict
+capability (new open source AI tutor agent 2026 grading lesson planning MIT)	piyushdhoka/GradeU	no	NEW - in-domain, admitted
+capability	THU-MAIC/OpenMAIC	yes	already-shelved
+capability	littlecookie0722/AI-Teaching-Agent	yes	already-shelved
+capability	maxew6/ai-tutor-project	yes	already-shelved
+capability	Gchism94/ai-tutor	yes	already-shelved
+capability	tutornew/OpenTutor	yes	already-shelved
+capability	BlackyDrum/ai-tutor	yes	already-shelved
+capability	eduagent	yes	already-shelved
+ranking (top open source AI agents education 2026 github MIT)	ashishpatel26/500-AI-Agents-Projects	yes	already-shelved, and not in-domain supply
+ranking	OpenClaw / Hermes Agent / OpenHands / CrewAI / MetaGPT	n/a	nil in-domain - general agent infrastructure
+ranking	Hugging Face Agents Course / microsoft ai-agents-for-beginners	n/a	nil in-domain - courseware
+ranking (github trending education AI 2026)	microsoft/generative-ai-for-beginners	n/a	nil in-domain - teaches building AI, not AI for education
+ranking	rasbt/LLMs-from-scratch	n/a	nil in-domain - same class
+ranking	mlabonne/llm-course	n/a	nil in-domain - same class
+ranking	karpathy/nanochat	yes	already-shelved, and not in-domain supply
+ranking	developer-roadmap	yes	already-shelved; one aggregator served the slug under a DIFFERENT owner (nilbuild/) - unprobed, not shelved
+ranking	"ponytail"	no	unprobed aggregator claim - NOT an address, not shelved
+vertical (open source platform education SIS LMS MIT Apache 2026)	Forma LMS / OpenOLAT / Open edX / Sakai / Moodle / Canvas / RosarioSIS / OpenEduCat / openSIS / SchoolTool	yes	all carried - SIXTH channel confirming no major education SIS/LMS is permissive (Gap 298 / Gap 405-A)

@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **`Pattern AJ` Amendment 8 enumerates paths in ONE tree, and this pass found a repository whose ungranted code is on another BRANCH. 🟢 Amendment 9 makes the audit enumerate refs first. 🟢 Plus `Pattern AR`: the proctored-assessment build, with the branch boundary priced at step 2 instead of found at legal review.**
+
+🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's
+auto-mode classifier refused it (`[Code from External]`). Contracts honoured by hand;
+`Gap 419-D` registers the un-run suite. **No recipe below was validated by a gate this pass.**
+
+### 🟢 `Pattern AJ` — **Amendment 9**: enumerate REFS before paths; a grant is resolved at `(ref, path)`
+
+🔴 **Why it is forced.** Amendment 8 (`p418`) replaced step 1 with *enumerate every licence-shaped
+path, digest each, cross-check every subtree manifest* — correct, and still single-ref. Run that
+procedure perfectly against [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) and it
+returns **"MIT, one grant, enumerated, two channels agreeing"** — and it is **wrong about two
+thirds of the shipped product**:
+
+| ref | app *(per the project's own `README.md:50-54`)* | tracked paths | licence-shaped paths | manifest `license` |
+|---|---|---|---|---|
+| `main` *(default)* | Student site — Next.js 16 / React 19 | 199 | 🟢 `LICENSE` — MIT `1 065` B `10e6b9c80b1b` | 🔴 absent, `"private": true` |
+| `teacher` | Teacher studio — Next.js 16 + BullMQ worker | 55 | 🔴 **NONE at any depth** | 🔴 absent, `"private": true` |
+| `admin` | Admin portal — Vite + React 18 | 43 | 🔴 **NONE at any depth** | 🔴 absent, `"private": true` |
+
+🟢 **Amendment 9, as executable steps:**
+
+1. **`git ls-remote --heads <url>`** — the authoritative ref set. 🔴 **Not a `raw.githubusercontent.com`
+   probe:** that channel serves `master` and `HEAD` as **aliases** for the default branch even when no
+   such ref exists, so a `200` proves a file and says nothing about a branch. Measured on three
+   repositories today with `trunk`/`develop`/bogus-ref controls at `404`.
+2. **For each ref that ships a shipped component** — identified from the project's own docs, its
+   manifest `name`, or a distinct tree — run Amendment 8's enumeration **on that ref**:
+   `git ls-tree -r --name-only <ref> | grep -iE '(^|/)(licen[cs]e|copying|notice)'`.
+3. **Digest every payload with `wc -c` on raw bytes.** 🔴 **Never a line-based pipeline** — `T102`:
+   `grep -v`-style accounting re-adds a terminal newline the payload may lack, which is exactly the
+   `1 065`/`1 066` confusion `p418` had to correct.
+4. **The verdict is the set, and the operative cell is the most restrictive member paired with the
+   refs and subtrees it governs.** 🔴 **An unlicensed ref is not "MIT by inheritance"** — absence of a
+   grant is absence of permission, and it is the strictest member there is.
+5. **Record the per-ref table, not a single licence value.** A one-value cell cannot express this
+   repository and will be wrong about it.
+
+🔵 **Cost: one `ls-remote` plus one `ls-tree` per shipped ref** — seconds, no API, no HTML, no new
+channel. 🔴 **`gate-subtree-grant` (`p382`) is the natural home and cannot express it today**: its
+unit is a path inside one tree. `Gap 419-A`.
+
+### 🟢 `Pattern AR` — proctored assessment with the branch boundary priced at step 2
+
+**Problem.** A client wants browser-proctored assessment and syllabus-to-course generation on a
+self-hosted stack, permissively licensed, on a system of record they already run.
+
+**Why the obvious answer fails.** `GradeU` is the only readable permissive reference these shelves
+carry for *both* capabilities — and its teacher studio and admin portal are **ungranted**. 🔴
+Building on the student app and assuming the other two come with it is the failure this pattern
+exists to prevent.
+
+**The wiring, with what is granted at each step.**
+
+1. **System of record — copyleft, and that is settled.** [`Moodle`](https://github.com/moodle/moodle)
+   (GPL-3.0) or [`openedx/edx-platform`](https://github.com/openedx/edx-platform) (AGPL-3.0, and
+   🔴 **NARROWED** per `p413` — read the grant, not the badge). 🔴 **Sixth channel this pass
+   confirmed no major education SIS or LMS is permissive** (`Gap 298` / `Gap 405-A`), so stop
+   shopping for one.
+2. **Proctoring reference — `GradeU` `main` ONLY.** 🟢 MIT, `1 065` B `10e6b9c80b1b`.
+   Read `src/features/student/components/Proctoring/ProctoringEngine.tsx`,
+   `ProctoringVideoFeed.tsx`, `src/shared/hooks/useProctoring.ts`,
+   `src/lib/models/ProctoringLog.ts` and `src/app/api/student/track/proctor/ingest/route.ts`;
+   in-browser face detection is `@tensorflow-models/blazeface`, so **no video leaves the client** —
+   which is the property that makes it viable under GDPR and under the US state student-data bills
+   (CA `AB 1159`, ID `SB 1227`). 🔴 **Do not take the teacher studio or admin portal:** `teacher`
+   and `admin` carry no grant. 🟢 **Either ask the maintainers to extend `LICENSE` to those refs**
+   (four humans, active this week, already chose MIT once) **or build those two surfaces yourself.**
+3. **Course generation.** 🟢 `GradeU` `main`'s approach is a raw `fetch` to an OpenAI-compatible
+   endpoint — `src/app/api/student/ai-tutor/route.ts:47` → `https://api.groq.com/openai/v1/chat/completions`,
+   model `openai/gpt-oss-120b`, key `GROQ_API_KEY` — and **no AI SDK in `package.json`**. 🟢 **That
+   is the portable choice, not a shortcut:** an OpenAI-compatible URL swaps for a self-hosted
+   endpoint (vLLM, Ollama) by changing a base URL, which is what an EMEA data-residency requirement
+   needs. 🔵 It also means a manifest-only licence audit sees no AI dependency at all — record the
+   provider from the **source**, not the manifest.
+4. **Packaging to the system of record.** [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph)
+   for **SCORM 1.2 / 2004** emission — still the only permissive emitter these shelves carry
+   (`p416`, and `p418` confirmed `exelearning` is AGPL-3.0, so it is not a second one).
+5. **Conformity artefacts, built with the product and not after it.** A technical file naming
+   **every component's licence with its `(ref, path)`**; an Article 50 disclosure on the student-facing
+   tutor (**live since 2026-08-02**); and 🔴 **no emotion inference anywhere in the proctoring
+   pipeline** — prohibited in education institutions since **2025-02-02**. Annex III bites
+   **2027-12-02**.
+
+**What this costs and what it buys.** Steps 1–4 are integration work on granted code. 🔴 **Step 2's
+boundary is the whole point:** found at step 2 it is a licence request or two surfaces to build;
+found at a client's legal review it is a re-platform. 🟢 **And step 5's artefacts are the same ones
+`Trend 41` says the public sector will now insist on** — the South African withdrawal is the worked
+example of what their absence costs.
+
+🟡 **Stated limits.** `GradeU` is **3 ★**, `"version": "0.0.0"`, four humans and one bot, with
+MongoDB (`mongoose`) still live beside Supabase mid-migration
+(`src/shared/utils/migrateLabsToSupabase.ts`). 🔴 **It is a readable reference and a licence
+specimen, not a platform to adopt** — this pattern reads it and does not deploy it.
+
 ## 🆕 `p418` · 2026-10-24 — **`Pattern AJ` audits a grant at ONE path and this pass found a repository with nine. 🟢 Amendment 8 makes the audit enumerate subtrees. 🟢 Plus `Pattern AQ`: the generated-classroom deployment, with the LGPL boundary priced instead of discovered.**
 
 ### 🟢 `Pattern AJ` — **Amendment 8**: a repository's grant is a SET, enumerated, never a value read at one path

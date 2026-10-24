@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p419` · 2026-10-24 — **The channel's trend is still "agentic + governance". 🔴 The trend this base can MEASURE is that a government AI policy was withdrawn because its citations were fabricated — provenance has stopped being a methodology preference and become a procurement requirement. 🟢 And the supply trend sharpens: the open-source education layer is consolidating into repositories whose grant varies by BRANCH.**
+
+🔴 **Gates did not run** — `make hooks` executes code from this cloned repository and the host's
+auto-mode classifier refused it (`[Code from External]`). Contracts honoured by hand;
+`Gap 419-D` registers the un-run suite.
+
+### 🔴 `Trend 41` — provenance became a procurement requirement, with a named casualty
+
+🟢 **The evidence is a withdrawal, not a survey.** South Africa's draft National AI Policy —
+Department of Communications and Digital Technologies, published **2026-04-10** with comment open to
+**2026-06-10** — was withdrawn by Minister **Solly Malatsi** on **2026-04-26** and gazetted
+**2026-06-12** in its entirety, because **at least 10 % of the academic references in its reference
+list were fictitious**. A replacement is targeted for FY **2026/27**; none is published. 🟡 Band
+`reported`: `sanews.gov.za` plus DLA Piper, ITWeb and CNBC Africa; 🔴 **the gazette text was not
+read** — `en.wikipedia.org` is off this environment's egress allowlist, `p413`'s finding holding a
+fourth time.
+
+🟢 **Why it is a trend and not an anecdote.** Every other governance item these shelves carry is
+**prospective** — the EU AI Act's Annex III deadline at `2027-12-02`, Article 50 transparency live
+since `2026-08-02`, Korea's Framework Act, Vietnam's two-tier transition, 134 US state bills. 🔴
+**This one is retrospective: a real instrument, from a real ministry, already dead, for a reason
+that names unverified AI output.** 🟢 **So the market now has a worked example of the cost of
+shipping AI prose without provenance — in the public sector, where the buyer writes the rules.**
+
+🟢 **What it implies for how work is bought.** The deliverable that clears this bar is not a better
+model; it is **citation-level traceability, a verification record per claim, and a named accountable
+human**. 🔵 These are the same artefacts Annex III's technical file will require from
+**2027-12-02** — so an EMEA engagement can sell one set of artefacts against two drivers, one
+regulatory and one reputational. 🟢 **`Trend 41` is the first governance trend on these shelves
+whose evidence is a failure that already happened.**
+
+### 🔴 `Trend 42` — the grant varies by BRANCH, and no instrument here reads more than one ref
+
+🟢 **`p418` measured the consolidation one step: a repository's licence is a SET over subtrees**
+(`THU-MAIC/OpenMAIC`, eight MIT payloads plus one `LGPL-3.0-or-later`). 🔴 **`p419` finds the next
+axis one pass later.** [`piyushdhoka/GradeU`](https://github.com/piyushdhoka/GradeU) ships three
+applications on **three branches** — stated in its own `README.md:50-54` — and the grant does not
+follow them:
+
+| ref | app | tracked paths | licence-shaped paths | manifest `license` |
+|---|---|---|---|---|
+| `main` *(default)* | Student site | 199 | 🟢 `LICENSE` — MIT `1 065` B `10e6b9c80b1b` | 🔴 absent, `"private": true` |
+| `teacher` | Teacher studio | 55 | 🔴 **NONE at any depth** | 🔴 absent, `"private": true` |
+| `admin` | Admin portal | 43 | 🔴 **NONE at any depth** | 🔴 absent, `"private": true` |
+
+🟢 **All three heads committed within eight minutes** on 2026-10-23, so this is a live layout, not
+history. 🔴 **The direction of the trend is the dangerous part:** monorepo-by-subtree and
+monorepo-by-branch both concentrate more product behind one badge, and a badge is resolved at one
+`(ref, path)` pair. 🟢 **The counter-measure is a single command — `git ls-remote --heads` before
+the path enumeration** — and `Gap 419-A` registers that none of this base's instruments does it.
+
+### 🔴 `Trend 43` — the discovery channel's ranking vocabulary has stopped producing supply
+
+🟢 **Measured across four passes, not asserted.** The two *ranking* legs
+(`top open source AI agents education {year} github MIT`,
+`github trending {industry} AI {year}`) have returned **zero** unshelved in-domain addresses for
+**four consecutive passes**; the *capability*-worded leg returned the only new address in each of
+the last two, including this pass's `GradeU` (1 unshelved of 8).
+
+🔴 **The mechanism is visible in what the ranking legs return:**
+`microsoft/generative-ai-for-beginners`, `rasbt/LLMs-from-scratch`, `mlabonne/llm-course`,
+`karpathy/nanochat`, `developer-roadmap`, the Hugging Face Agents Course. 🟢 **Every one teaches
+people to build AI. None is AI applied to education.** The ranking vocabulary cannot separate
+*education as subject matter* from *education as the audience of a tutorial* — and the second
+category is vastly larger and better-starred, so it wins every ranking. 🟢 **`T100` confirmed a
+fourth time and sharpened: the discriminator is capability vocabulary, not recency vocabulary.**
+
+🔵 **Two secondary-source hazards from this pass's legs, recorded unprobed.** One aggregator served
+`nilbuild/developer-roadmap` as the slug for a repository these shelves carry under a different
+owner; another named *"ponytail"* as a trending educational platform. 🔴 **Neither was probed and
+neither is shelved** — an unprobed slug from an aggregator is not an address.
+
+### 🔵 What the channel said this pass, and how much of it was new
+
+🟢 The `AI education industry trends 2026` leg returned: experimentation → **operational** use;
+**governance** over tool sprawl (1EdTech); AI as **embedded infrastructure** in higher education
+(Campus Technology); **education-specific** platforms displacing generic tools (Teachbetter);
+**agents** plus real-time adaptive difficulty (Educativa); **digital credentials** as workforce
+currency; and **evidence demands** — systems expecting proof that a product improves learning
+quality, persistence, well-being or job-relevant skills (HolonIQ). 🔴 **Every one already on this
+shelf.**
+
+🔴 **And the market numbers conflict again, which is itself the standing finding.** One source cites
+**$12.3 B** for 2026 attributed to HolonIQ while another puts the market near **$6 B** in 2024;
+a third puts North America alone at **$3.68 B**, 36 % of the global total. 🟢 **`p415` settled that
+this file carries the market size as a RANGE** — these three points fall inside it and none narrows
+it. 🔵 The serving channel flagged its own headline percentages as weakly sourced; **not shelved.**
+
 ## 🆕 `p418` · 2026-10-24 — **The trend the channel reports is "agentic + governance". The trend this base can MEASURE is that the open-source education supply has stopped growing and started consolidating into monorepos — which is why a repository's licence is now a SET rather than a value.**
 
 ### 🔵 What the channel said, and how much of it was new
