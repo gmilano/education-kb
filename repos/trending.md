@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **Four unshelved addresses, one promoted to a foundation — and it came from a CARRIED ACTION, not a trending leg. 🟢 `OpenOLAT/OpenOLAT` is Apache-2.0 at its SHA and refutes `Gap 298`, which these shelves had re-published on nine channels.**
+
+🟢 Gates first against `3009a89`: **54 / 55**, one declared red; `commit-gates` → `0`. 🔵 All reads
+**2026-10-24**. 🟡 `Gap 424-A`.
+
+### 🟢 Promoted to [`repos/foundations.md`](foundations.md) this pass
+
+| address | grant, read at the SHA | why |
+|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** `LICENSE` `10 982` B `6dbc5b605ed0` @ `d073ad444fe5`; `NOTICE.TXT` `14 712` B `572140fc1b71` agrees | 🟢 **The first permissive education PLATFORM on these shelves.** Canonical Apache body (`APPENDIX` absent — the whole `376` B delta against `11 358` B) plus two attribution statements adding no condition. 31 heads, tags through `OpenOlat_20.0.pre2` |
+
+### 🔴 Measured and NOT promoted, with the reason in each row
+
+| address | grant, read at the SHA | why not |
+|---|---|---|
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **GPL-2.0** — `html/license.txt` `18 346` B `4e63feff285d` @ `446a77a9b9cb` | 🔴 Copyleft, so not the permissive foundation the circulating "Apache-2.0" claim promised. 🔵 `T123`: this pass first wrote it up as having NO grant on a **root-only** ladder (14 × `404`); `gate-enumeration` refuted that by naming the subtree path (`p382`, `Gap 424-C`) |
+| [`KKazuhaK/canvas-mcp`](https://github.com/KKazuhaK/canvas-mcp) | 🟢 MIT `1 071` B `5385a26e2fac` @ `e5bd45d66f35` | 🔴 **283 ahead / 96 behind** upstream, **257** own non-merge commits under **one** author key — a maintenance liability as a dependency |
+| [`Harikeshav-R/canvas-mcp`](https://github.com/Harikeshav-R/canvas-mcp) | 🟢 MIT `1 071` B `5385a26e2fac` @ `db979a5ab5d7` | 🔴 **0 ahead / 63 behind** — a mirror of a shelved address |
+| [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) | 🟢 MIT `1 072` B `64dc9680d3bb` @ `dd9682ca97e3` | 🟡 Clean grant, genuinely new — but **17 commits over two days**. A reference architecture, not an import |
+| [`ArbaazAli1209/eduadapt-aiml-project`](https://github.com/ArbaazAli1209/eduadapt-aiml-project) | 🟢 MIT `1 074` B `53264a4cc83f` @ `b5b9eb626ad7` | 🔴 **4 commits**, 2026-10-11 → 2026-10-15 — below this file's dependency bar |
+
+### 🔴 The finding about the trending channel itself
+
+🟢 **Five addresses measured from discovery legs; one promotion.** 🔴 **And the promotion did not
+come from a discovery leg at all** — `OpenOLAT` arrived by spending `ACTION p422-A`, a carried
+action naming a payload read. 🔵 Of the four addresses the legs *did* serve: two were forks of one
+already-shelved repository, one was four days old, one was a student project. 🟢 **`T100`, eighth
+confirmation** — and the practical consequence is that this base's reading backlog is now a
+better supply channel than GitHub's trending vocabulary.
+
+---
+
 ## 🆕 `p423` · 2026-10-24 — **Two unshelved addresses, zero added to any recommendation shelf. 🔴 The SIS tier's first MCP address is BSL-1.1 under an MIT manifest — and the contradiction is inside the published npm tarball, not just in a directory listing.**
 
 🟢 `make hooks` first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red (`Gap 400-B`),

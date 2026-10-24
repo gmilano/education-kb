@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **The trend with procurement consequences this pass is NOT in the market: it is that an open-source absence this base published nine times was an artefact of its own reading queue. 🟢 And the regulatory trend sharpened into a date a studio can plan against — EMEA's education high-risk obligations are now firmly 2027-12-02, and APAC has its first education-named high-risk decree.**
+
+🟢 Gates first against `3009a89`: **54 / 55**, one declared red; `commit-gates` → `0`. 🔵 All reads
+**2026-10-24**. 🟡 `Gap 424-A`.
+
+### 🔴 `Trend 44` — a published absence can be an artefact of the reader, not the supply
+
+🟢 **Measured, not argued.** `Gap 298` — *"no permissive education platform anywhere on these
+shelves"* — stood across nine confirmations and was **refuted by a single payload read** this
+pass: `OpenOLAT/OpenOLAT`, Apache-2.0, `10 982` B `6dbc5b605ed0`. 🔴 The address was already cited
+in this repository as a **mention**; `p422` had registered `ACTION p422-A` naming the exact read;
+the action was carried for two passes while the absence was re-published.
+
+🔴 **Why this is a trend and not an anecdote.** This base has instruments for an absence its index
+refutes (`gate-absence`, `p279`) and for an absence restated under new words
+(`gate-capability-absence`, `p392`). 🔴 **It has none for an absence that a one-request read would
+refute** — and that is the class with the worst cost asymmetry, because the refutation is cheap
+and the claim is load-bearing: a studio told *"there is no permissive education platform"* plans a
+copyleft-constrained engagement it did not need. 🟡 `Gap 424-B`; `ACTION p424-B` proposes the
+instrument (every `Gap` asserting a supply absence carries the ladder read that would refute it,
+or is downgraded to *unmeasured*).
+
+🔵 **The generalisation for a client engagement:** a vendor's "there is no open-source option for
+X" is a statement about their search, not about the supply, until someone reads a payload.
+
+### 🔴 `Trend 45` — a licence claim can be manufactured from a dependency list
+
+🟡 **Stated at the strength the evidence actually supports, after this pass overstated it once.**
+The circulating claim *"forma LMS is Apache-2.0"* is **false**: the repository is **GPL-2.0**,
+payload at `html/license.txt`, `18 346` B `4e63feff285d` @ `446a77a9b9cb`. 🔵 The **only** `Apache`
+string in its `README.md` is `- Apache (recommended) with mod_rewrite enabled`, a **web-server
+requirement**, which remains the most plausible transmission path for the false claim — but that
+is an inference, not a measurement (`Gap 424-C`).
+
+🔴 **The measured half is about the reader, not the project.** `p424` ran a **root-only** licence
+ladder, got `404` on all 14 paths, and wrote *"no grant payload"* into four shelves.
+`gate-enumeration` refuted it before the commit by naming the subtree path. 🟢 `p382` had already
+written the rule — *a grant has subtrees; a root-only read is wrong about the repository* — and
+`gate-subtree-grant` is in the suite. 🔵 **So `Trend 45` is really this:** a licence **claim** and
+a licence **absence** fail the same way. `p423` found a package declaring MIT while shipping
+BSL-1.1; `p424` found itself declaring an absence while a GPL-2.0 payload sat one directory down.
+🟢 **Consequence for a client:** neither a reported licence nor a reported *lack* of one is
+evidence — only a payload read at a pinned SHA, over the whole tree.
+
+### 🟢 `Trend 46` — the compliance runway is now a firm date in EMEA and a named sector in APAC
+
+- 🟢 **EMEA — the date is settled enough to plan against.** The **Digital Omnibus**, Regulation
+  (EU) **2026/1744**, moved the Annex III **education** high-risk obligations from August 2026 to
+  **2 December 2027**, with AI embedded in regulated products at **2 August 2028**. 🔵 Live
+  **now**, not deferred: the **emotion-recognition ban** in education settings (since
+  **2025-02-02**) and the Article 4 **AI-literacy** duty.
+- 🟢 **APAC — education is now a NAMED high-risk sector in a national decree.** Vietnam's
+  **Decision 33/2026/QD-TTg** lists education among six high-risk sectors, naming **automated
+  assessment** and **behavioural monitoring**; systems already running before **15 August 2026**
+  receive a six-month grace period. 🔵 This is the same **tutoring-vs-assessment** split `p421`
+  identified on two continents, now on a third.
+- 🔵 **The deliverable is unchanged and now has three jurisdictions behind it:** a reviewable
+  human-in-the-loop evidence trail on anything that grades, admits or monitors.
+
+### 🟡 `Trend 47` — the market number is not a number, and the spread is now the finding
+
+🔴 Five houses put the **2026** AI-in-education market at **$1.94 B**, **$7.30 B**, **$9.58 B**,
+**$10.6 B** and **$11.4 B** — a **~6×** spread on the *current* year, before any forecast
+compounds it. 🔵 At least one of these (**$9.58 B**) explicitly includes **corporate training**.
+🟢 **The usable reading is directional only:** every house agrees on rapid growth and none agrees
+on the base. See [`intel/market.md`](market.md) for the table and the sourcing.
+
 ## 🆕 `p423` · 2026-10-24 — **The trend with procurement consequences: in the education agent layer, licence METADATA is diverging from licence PAYLOAD, and the metadata is what directories, registries and scanners republish. 🔴 One address this pass says MIT on three channels and ships Business Source License 1.1.**
 
 🟢 Gates first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red, 5 new, all fixed here.

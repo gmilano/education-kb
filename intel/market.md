@@ -4,6 +4,180 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **Four regional legs, four returned material, no nil. 🟢 The procurement fact that moved is a LICENCE one and it is the largest this base has recorded: the education platform tier has a permissive member, so a forkable-platform engagement is available where it was previously a licence event. 🔴 And the market NUMBER degraded — five houses now disagree about the CURRENT year by ~6×.**
+
+🟢 Gates first against `p423`'s `3009a89`: **54 / 55** green, one declared red; `commit-gates`
+exits **`0`**. 🔵 Every leg and read **2026-10-24**. 🟡 `Gap 424-A` declares two pre-suite
+orientation legs, neither of which produced a graded cell.
+
+### 🔵 The four prescribed regional legs — stated per region so silence cannot read as coverage
+
+| region | leg run | returned |
+|---|---|---|
+| North America | `AI education North America 2026 adoption regulation players state law` | 🟢 **Material.** State-level statutes, conflicting counts, one federal framework |
+| EMEA | `AI education EMEA Europe 2026 adoption regulation AI Act schools universities` | 🟢 **Material.** Digital Omnibus date shift, live bans and duties |
+| APAC | `AI education APAC Asia Pacific 2026 adoption regulation India China Japan Singapore` | 🟢 **Material.** Vietnam's education-named high-risk decree, four national postures, Ipsos attitude series |
+| LATAM | `AI educación América Latina 2026 adopción regulación universidades política` *(run in Spanish)* | 🟢 **Material.** UNESCO IESALC governance figure, two usage surveys, four national postures |
+
+🟢 **No nil this pass**, so `p374`'s nil rule was not exercised. 🔵 The LATAM leg was run **in
+Spanish**, which is `p423`'s lesson from the German leg applied forward.
+
+### 🟢 The procurement fact that actually moved: a forkable platform, not a number
+
+🔴 For nine passes this base told any reader that **every** open-source education platform was
+copyleft, so the only commercially safe shape was *"do not fork the LMS — talk to it"*
+(`Pattern AT`). 🟢 **`OpenOLAT/OpenOLAT` is Apache-2.0** — `10 982` B `6dbc5b605ed0` @
+`d073ad444fe5`, corroborated by `NOTICE.TXT` and the README badge — which makes a **forkable
+platform engagement** available for the first time (`Pattern AV`). 🔵 Swiss-origin, **EMEA**,
+which is also where the strictest near-term deadline sits.
+
+🔴 **The correction matters as much as the fact:** the absence was never measured, only
+re-published, and `ACTION p422-A` had named the read that refutes it two passes earlier
+(`Gap 424-B`).
+
+### 🟡 The market number degraded this pass, and the spread is the honest finding
+
+🔵 Five houses, the **same** year (**2026**), the **same** nominal market:
+
+| source | 2026 figure | forecast | stated CAGR |
+|---|---|---|---|
+| Grand View Research | **$11.4 B** | $57.2 B by 2033 | 25.9 % |
+| Research and Markets | **$10.6 B** | $42.48 B by 2030 | 41.5 % |
+| Precedence Research | **$9.58 B** | $136.79 B by 2035 | 34.52 % |
+| Trend X Insights | **$7.30 B** | $61.26 B by 2034 | not stated in the serving channel |
+| Market Reports World | **$1.94 B** | not stated in the serving channel | not stated in the serving channel |
+
+🔴 **A ~6× spread on the current year.** At least one figure (**$9.58 B**) explicitly includes
+**corporate training**, so the definitions are not the same market. 🔵 The K-12 segment alone is
+put at **$0.70 B** in 2026 rising to **$18.47 B** by 2036 (Future Market Insights).
+🟢 **How to use these in a client conversation:** as direction, never as a denominator. This base
+has carried **$10.6 B → $42.48 B (2030)** since `p54`; it stays carried, now with its peers
+visible beside it so the uncertainty is not hidden by a single confident number.
+
+## Opportunities by region
+
+### North America
+
+🔵 **The regulatory picture is state-level, fast, and the trackers disagree.** One counts **134
+bills across 31 states** (March 2026); another **68 bills across 27 states with 10 enacted**.
+🔴 The disagreement is itself the sales fact: **a multi-state client cannot hand-track this**.
+
+🟢 **Named statutes** (per trackers, which conflict on some details): **Maryland SB 720** (state
+AI guidance plus a statewide collaborative); **Idaho SB 1227** (statewide generative-AI framework
+covering privacy, procurement and AI literacy); **Oklahoma SB 1734** (every district to adopt a
+written AI policy before the **2027-28** school year); **Ohio** (district AI policies by
+**1 July 2026**); **Utah** (supervised AI "sandbox" courses). 🟡 Pending: **South Carolina H.B.
+5253** — written parental **opt-in**, annual public disclosure of AI tools and data practices, and
+a prohibition on AI replacing a licensed teacher in core instruction **or grading**. **Florida**
+has a proposed parent opt-in rule. 🔵 Federal: a **National AI Legislative Framework** (March
+2026) following a December 2025 order aimed at limiting state AI laws — the serving channel gave
+no education-specific detail.
+
+🟢 **The opportunity:** a **policy-compliance layer**, not a tutor. District AI policy
+generation, tool-inventory disclosure, parental consent capture, and the grading
+human-in-the-loop evidence trail the statutes keep converging on. 🔴 Sell it as *multi-state
+survivability* — the mandate dates (Ohio 2026, Oklahoma 2027-28) are already in the client's
+calendar.
+
+### EMEA
+
+🟢 **The date is now firm enough to plan a programme against.** The **Digital Omnibus**,
+Regulation (EU) **2026/1744**, moved Annex III **education** high-risk obligations from August
+2026 to **2 December 2027** (**+16 months**), with AI embedded in regulated products at
+**2 August 2028**. 🔴 **Already in force, not deferred:** the **emotion-recognition ban** in
+education settings (since **2025-02-02**) and the Article 4 **AI-literacy** duty for staff, in
+relaxed scope. 🔵 Also in the window: the European Commission's updated ethical-AI-for-education
+guidance (**May 2026**) and Council conclusions of **11 May** on a human-centred approach.
+
+🟢 **High-risk by use, which is what scopes an engagement:** admissions decisions, assessment of
+learning outcomes, allocation to education levels, and **proctoring / behavioural monitoring
+during tests**. 🔵 A tutor that does none of these is generally outside Annex III (`p421`).
+
+🟢 **The opportunity, and it is now double-barrelled.** (1) Annex III conformity programmes with
+a **2027-12-02** deadline — risk management, logging, human oversight, technical documentation.
+(2) 🆕 **The forkable-platform play**: `OpenOLAT` is Apache-2.0 **and** Swiss-origin (frentix
+GmbH, from the University of Zurich), which lands exactly on the **data-sovereignty** requirement
+EMEA public-sector buyers raise first. 🟢 **A sovereign, self-hosted, deeply-customised LMS with
+no copyleft obligation on the client's own modifications is a proposition this base could not
+make before today.**
+
+### APAC
+
+🟢 **Education is now a NAMED high-risk sector in a national decree.** Vietnam's **Decision
+33/2026/QD-TTg** identifies high-risk AI in six sectors including **education**, naming
+**automated assessment** and **behavioural monitoring**; systems already operating before
+**15 August 2026** get a **six-month** grace period.
+
+🔵 **The other national postures differ sharply, which is the regional fact:** **China** —
+targeted rules rather than one statute (model filing; content labelling from **1 Sep 2025**; a
+Cybersecurity Law AI clause from **1 Jan 2026**), with a State Council **"AI+"** plan (Aug 2025)
+whose adoption goals are reported as **>70 % by 2027** and **>90 % by 2030**. **Japan** —
+promotion-first, a promotion-focused AI law backed by voluntary guidelines. **Singapore** —
+practical governance tooling, with the **National AI Impact Program (NAIIP)** launched **March
+2026**. **India** — no comprehensive statute, but amended IT Rules require prominent labels and
+provenance markers on AI-generated content from **20 Feb 2026**.
+
+🔵 **Public attitude, measured** (Ipsos Education Monitor 2026, support for **banning** AI in
+schools): Indonesia **23 %**, Thailand **25 %**, India **26 %**, Singapore **28 %**, Japan and
+Malaysia **29 %**, South Korea **31 %**. 🟢 A ~**8-point** band — materially narrower than the
+regulatory divergence above it.
+
+🟢 **The opportunity:** **multi-jurisdiction policy configuration** as a product feature. A single
+deployment serving a regional client must satisfy Vietnamese high-risk classification, Chinese
+labelling, and Indian provenance marking at once — argues for policy-as-configuration (`p421`'s
+LangGraph policy-node shape) rather than per-country forks. 🔴 Vietnam's grace period expires
+**six months** after 2026-08-15, which is the nearest hard date in the region.
+
+### LATAM
+
+🟢 **Adoption is near-universal and governance is not, and this pass has a sharper number for the
+gap than the last.** **UNESCO IESALC**, across **200** higher-education institutions in **19**
+countries: only **26 %** have a **formal AI strategy**. 🔵 That corroborates `p423`'s carried
+figure (*~70 % of LATAM universities have no published AI-use policy*) from an independent
+direction and tightens it — **~74 %** without a formal strategy.
+
+🔵 **Usage, from two separate surveys:** the Digital Education Council with **Tec de Monterrey**
+puts **92 %** of LATAM students using AI tools regularly; **UNAM** reports **92 %** of students
+and **79 %** of faculty. 🔴 And only **30 %** of students and faculty surveyed think their
+university integrates AI **effectively** — 🟢 **the gap between use and institutional capability
+is the engagement**.
+
+🔵 **National posture:** **Chile** leads with a Política Nacional de IA (2021) and a bill in
+discussion; **Brazil** and **Colombia** have national strategies with no education-sector
+regulation; **Mexico**'s SEP and ANUIES proposals are **non-binding**.
+
+🟢 **The opportunity:** institutional AI governance as a **packaged, repeatable** engagement —
+policy framework, acceptable-use rules, assessment redesign, staff literacy, and a tool inventory.
+🔴 **The buyer is the rectorate, not the IT department**, and the pitch is the **74 %** figure:
+the institution is already running AI at 92 % student adoption without a policy covering it.
+🟡 With no binding national regulation in most of the region, the driver is **institutional risk
+and reputation**, not a compliance deadline — which changes the sale, not the deliverable.
+
+### Global
+
+🟢 **One licence fact now applies everywhere and it is this pass's headline:** the education
+platform tier has a **permissive member**. `OpenOLAT/OpenOLAT`, **Apache-2.0**, read at
+`d073ad444fe5`. Any engagement that needs deep platform modification shipped under the client's
+own terms has an open-source base for the first time on these shelves (`Pattern AV`).
+🔵 **8 of 9** graded platforms remain copyleft, so `Pattern AT` stays the default.
+
+🔴 **One methodological fact, also global:** two consecutive passes have found a licence
+**claim** diverging from a licence **payload** — `p423`'s package declaring MIT on three metadata
+channels while shipping BSL-1.1, and `p424`'s *"forma LMS is Apache-2.0"*, which the payload
+settles as **GPL-2.0** (`html/license.txt`, `18 346` B `4e63feff285d`). 🔴 **And this pass added a
+third failure mode by committing it:** `p424` ran a **root-only** licence ladder, got `404`
+fourteen times, and wrote *"no grant payload"* — which `gate-enumeration` refuted before the
+commit by naming a path one directory down. 🟢 **Procurement rule, stated for a client, now in
+both directions:** accept no licence value — and no claim that a project *has* no licence — that
+was not read from a payload at a pinned SHA, **over the whole tree rather than its root**.
+
+🟡 **Carried gaps, so silence does not read as coverage.** **Canada** remains an open market gap
+(`Gap 422-B`) — no Canada-specific material in this pass's North America leg. `Gap 421-E`'s
+**Vietnam** and **Brazil** date conflicts: the Vietnam leg returned **Decision 33/2026/QD-TTg**
+with dates (**15 Aug 2026** + six months) that do **not** bear on the carried conflict, so it
+stays **unresolved**; the Brazil conflict likewise saw nothing. 🔵 **Africa** returned nothing in
+the EMEA leg, which ran on a Europe-weighted query — an **informed gap**, not coverage.
+
 ## 🆕 `p423` · 2026-10-24 — **The prescribed EMEA leg returned nothing education-specific — and publishing that nil would have been FALSE. 🟢 This base's own rule caught it: a nil must name a jurisdiction, so `p423` ran Germany in English and in German instead, and the English leg returned a KMK framework update announced EIGHT DAYS AGO. 🔴 The procurement fact of this pass is that the licence METADATA channel a client reads first can be wrong about a non-open-source grant.**
 
 🟢 **Gates ran first** against `p422`'s commit `82235af`: **47 / 53 green**, one deliberate red
@@ -52,7 +226,7 @@ SHA is the authority, and a manifest is corroboration only after that read**. Th
 one-paragraph clause in a diligence checklist and it is the difference between shipping MIT code
 and shipping source-available code with a 2029 change date.
 
-## Opportunities by region
+## Opportunities by region — `p423`, SUPERSEDED by `p424`'s block above
 
 ### North America
 

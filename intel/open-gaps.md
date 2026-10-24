@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **`Gap 298` IS REFUTED AFTER NINE CONFIRMATIONS, AND IT WAS NEVER A SUPPLY FACT. 🔴 `OpenOLAT/OpenOLAT` is Apache-2.0 in its own payload; the gap stood on an UNREAD payload, and `ACTION p422-A` had named the exact read two passes earlier. 🟢 AND THE POST-WRITE SUITE CAUGHT THIS PASS PUBLISHING A FALSE ABSENCE OF ITS OWN — a root-only licence ladder, refuted by `gate-enumeration` naming a path one directory down.**
+
+🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves it
+describes** — all eight shelves carry a `p424` section — so `gate-register-currency` is satisfied
+by construction. 🔵 It went red once on this pass's second run, which is the gate doing its job:
+the shelves were written before the register, and the suite said so before the commit.
+
+🟢 **Gates ran FIRST** (`p412`) against `p423`'s commit `3009a89`, **before** this pass's first
+capability leg: **`make hooks` 54 / 55 green**, the single red being the declared
+`gate-census-union` (`Gap 400-B`), and **`make commit-gates` exits `0`** over its 54 blocking
+gates. 🔵 `p423`'s closing claim therefore reproduces exactly on this host.
+
+🔴 **And they ran LAST, which is again the half that paid — this time on a FACTUAL error, not a
+formatting one.** The first full run after this pass's eight shelf writes was red on
+`gate-enumeration` with `REFUTED=2`: `p424` had written *"`formalms/formalms` has no grant payload
+at any ladder path"* into four files, on the strength of a **root-only** 14-path ladder that
+returned `404` fourteen times. 🟢 **The gate named the refutation: `html/license.txt`** — the
+project is **GPL-2.0**, `18 346` B `4e63feff285d`. 🔴 **`p382` had already written that rule**
+(*a grant has SUBTREES; a root-only read is wrong about the repository*) and `gate-subtree-grant`
+is in the suite. 🔵 **No gates-first run could have caught it**, because the claim did not exist
+until this pass wrote it.
+🟢 **Final state at the commit: `make commit-gates` exits `0`** over its 54 blocking gates.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read, digest and gate run happened
+**2026-10-24**; the commit lands **2026-10-24**.
+
+### 🟢 Closed this pass
+
+| gap | disposition |
+|---|---|
+| 🟢 **`Gap 298`** *(no permissive education platform anywhere on these shelves — opened long before `p421`, re-confirmed on a NINTH channel by `p423`)* | 🟢 **REFUTED on a first-hand payload.** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is **Apache-2.0**: `LICENSE` **`10 982` B `6dbc5b605ed0`** @ `d073ad444fe5`, the canonical Apache body (diffed against `apache.org`'s `11 358` B text; the `APPENDIX` boilerplate is absent, which is the entire `376` B delta) plus two **attribution** statements that add no condition. Corroborated in `p289`'s order — payload first — by `NOTICE.TXT` (`14 712` B `572140fc1b71`) and the README's Apache-2.0 badge. 🔵 **Narrowed, not erased:** the *universal* claim is false; the *distributional* one holds at **9 of 10** graded platforms still copyleft |
+| 🟢 **`ACTION p422-A`** *(resolve `OpenOLAT/OpenOLAT`'s grant first-hand at its SHA; grade `formalms/formalms` or record it unreachable)* | 🟢 **DISCHARGED, both halves.** `OpenOLAT` → **Apache-2.0** (above). `formalms/formalms` @ `446a77a9b9cb` → 🔴 **GPL-2.0**, `html/license.txt`, `18 346` B `4e63feff285d`. 🔵 The serving channel's own hedge in `p422` — *"other sources grade it `GPL` or `LGPL`"* — resolves to **GPL**, so `p422`'s refusal to pick a side unread was correct on the facts as well as on procedure |
+
+### 🔴 Registered this pass
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 424-A` | 🟡 **`p412`'s gates-first rule was kept for the legs that mattered and broken for two that did not, and "mostly first" is not what the rule says.** Two orientation legs — the generic ranking leg and the trending leg — ran **before** the gate suite finished. 🟢 **Neither produced a graded cell**: every address written this pass was read after the suite was green, so no measurement rests on the violation. 🔴 **Open:** the rule has no instrument. Nothing in the suite can tell whether a leg preceded it, so compliance is a self-report, and this is the first pass to self-report a partial one. 🔵 A gate here would need leg timestamps the base does not currently record |
+| 🆕 `Gap 424-B` | 🔴 **THIS BASE HAS NO INSTRUMENT FOR AN ABSENCE THAT A CHEAP READ WOULD REFUTE, AND THAT IS THE CLASS WITH THE WORST COST ASYMMETRY.** `gate-absence` (`p279`) catches an absence the **index** refutes; `gate-capability-absence` (`p392`) catches one **restated** under new words. 🔴 Neither catches `Gap 298`: a supply absence, published nine times, refutable by **one** `raw.githubusercontent.com` request — and `ACTION p422-A` had already named that request. 🔴 **The cost runs the wrong way:** the refutation is nearly free and the claim is load-bearing, because a studio told *"there is no permissive education platform"* scopes a copyleft-constrained engagement it did not need. 🟡 **Open:** `ACTION p424-B` proposes the control — every `Gap` asserting a **supply** absence must carry either the ladder read that would refute it, or an explicit `unmeasured` marking — but it is **not built this pass**, and a proposal is not a gate |
+| 🆕 `Gap 424-C` | 🔴 **A ROOT-ONLY LICENCE LADDER PRODUCED A FALSE ABSENCE, IN A PASS WHOSE OWN HEADLINE IS ABOUT FALSE ABSENCES.** `p424` probed 14 **root** paths on `formalms/formalms`, got `404` on all 14, and wrote *"no grant payload at any ladder path"* into four shelves. The grant is at **`html/license.txt`**. 🟢 Caught by `gate-enumeration` before the commit and corrected everywhere. 🔴 **The instrument already existed:** `p382`'s `gate-subtree-grant` says a root-only read is wrong about the repository — `T120`'s shape turned on this pass, for the second consecutive pass. 🟡 **Also open, as a downgrade:** this pass's claim that the circulating *"forma LMS is Apache-2.0"* traces to `- Apache (recommended) with mod_rewrite enabled` in the project's own requirements list is now an **inference about how a false claim spread**, not a finding about an absent grant. It is written at that strength on every shelf; it is **not** evidence |
+
+### 🟢 Hardened this pass
+
+| item | result |
+|---|---|
+| 🟢 **`T121` — one root commit, one licence digest, OPPOSITE statuses** | Three `canvas-mcp` slugs carry the byte-identical payload `1 071` B `5385a26e2fac` and the same root commit `afe32c3e1721` (2025-02-27). Measured against upstream `main`: `Harikeshav-R/canvas-mcp` is **0 ahead / 63 behind** (a mirror, no original commit); `KKazuhaK/canvas-mcp` is **283 ahead / 96 behind**, **257** own non-merge commits under **one** author key (`%ae`). 🔴 **A digest match and a shared root establish a FAMILY and say nothing about citability** — the first time two members of one family have landed on opposite verdicts on these shelves. Neither shelved; the upstream keeps the row |
+| 🟢 **`T114` extended from the Canvas family to the Moodle family** | [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp), 🟢 **MIT**, `LICENSE` `1 072` B `64dc9680d3bb` @ `dd9682ca97e3` — a **distinct** payload from the Canvas line's `5385a26e2fac`, so not that family renamed. 🟡 **17** commits over two days, **2** author keys: a reference architecture, explicitly not a dependency |
+| 🟢 **`T100`, eighth confirmation — and the sharpest form of it yet** | Ten legs → **4** unshelved addresses → **1** worth a row. Of the four the discovery legs served: two forks of one already-shelved repository, one four-day-old project, one 4-commit student project (`ArbaazAli1209/eduadapt-aiml-project`, MIT `1 074` B `53264a4cc83f`, below bar). 🔴 **The pass's only significant find came from spending a CARRIED ACTION on a payload read, not from a discovery leg** — which is the argument for `ACTION p424-B` stated as a measurement |
+| 🟢 **The regional picture gained a third jurisdiction naming education high-risk** | Vietnam's **Decision 33/2026/QD-TTg** names education among six high-risk sectors (**automated assessment**, **behavioural monitoring**), six-month grace for systems running before **2026-08-15**. 🔵 Joins EMEA's Annex III (**2027-12-02**, per the Digital Omnibus, Regulation (EU) **2026/1744**) and US state statutes prohibiting AI replacing a licensed educator in grading. 🟢 **One deliverable serves all three:** a reviewable human-in-the-loop evidence trail |
+| 🟡 **The market figure degraded into a spread, and it is published as one** | Five houses put the **2026** market at **$1.94 B**, **$7.30 B**, **$9.58 B**, **$10.6 B** and **$11.4 B** — a **~6×** spread on the current year, with at least one (**$9.58 B**) explicitly including corporate training. 🟢 This base's carried **$10.6 B → $42.48 B (2030)** stays carried, now with its peers beside it so a single confident number cannot hide the uncertainty |
+
+### 🔵 Carried, unresolved — so silence does not read as coverage
+
+| item | state |
+|---|---|
+| 🟡 `Gap 422-B` — **Canada** | 🔵 **Still open.** This pass's North America leg returned US state and federal material only; no Canada-specific finding |
+| 🟡 `Gap 421-E` — **Vietnam** and **Brazil** date conflicts | 🔵 **Both still unresolved.** The APAC leg returned Decision 33/2026/QD-TTg with dates that do **not** bear on the carried Vietnam conflict; the LATAM leg returned nothing bearing on Brazil |
+| 🟡 **Africa** | 🔵 **An informed gap, not coverage.** The prescribed EMEA leg ran on a Europe-weighted query and returned nothing African. Recorded so the EMEA cell is not read as continental |
+| 🟡 `Gap 400-B` — `gate-census-union` carried red | 🔵 **Declared, and cited by name**, so `P423-UNREGISTERED-RED` does not fire. Non-blocking; `make commit-gates` exits `0` over the other 54 |
+| 🟡 `Gap 423-A` · `Gap 423-B` · `Gap 423-C` · `Gap 423-D` · `Gap 423-E` · `Gap 423-F` · `Gap 423-G` | 🔵 **All carried open.** 🟢 `Gap 423-A` gains a second, independent instance this pass in the **opposite** direction: `p423` found a manifest wrong about its own tree, `p424` found *itself* wrong about a tree it had only read at the root (`Gap 424-C`). The common rule is `p289`'s, and it now cuts both ways |
+
+### 🔵 Actions registered for a successor
+
+| action | statement |
+|---|---|
+| 🆕 `ACTION p424-A` | 🟡 **Grade `OpenOLAT/OpenOLAT` as a DEPENDENCY, not just as a grant.** This pass read its licence and promoted it on that basis; it did **not** measure commit cadence, author spread or release currency beyond observing **31** heads and tags through `OpenOlat_20.0.pre2`. 🔴 `Pattern AV` ships with that caveat attached and should not lose it until the measurement is spent |
+| 🆕 `ACTION p424-B` | 🔴 **Build the control `Gap 424-B` describes:** every `Gap` asserting a **supply** absence carries either the ladder read that would refute it, or an explicit `unmeasured` marking. 🔵 Start from `gate-absence`'s loader, which already parses gap statements, and from `gate-subtree-grant`'s ladder, which already knows how to probe a tree rather than a root |
+
 ## 🆕 `p423` · 2026-10-24 — **`p422` declared its gate suite un-run and honoured every file contract BY HAND; the suite ran on this host and the hand-honouring failed on FIVE of 53 gates. 🔴 Three of the five are post-write gates `p412`'s own standing rule cannot reach, and `make hooks` has been red on purpose since `p398`, so no commit hook could ever have asked it a yes-or-no question. 🟢 `DECLARED_RED`/`make commit-gates`/`pre-commit` built and wired. 🔴 AND this pass built a casing arm the corpus already held in an instrument it has kept in no `make` target since `p439`.**
 
 🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves

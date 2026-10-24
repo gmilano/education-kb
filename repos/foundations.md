@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **The platform tier finally has a permissive foundation, and it took a payload read rather than a discovery leg to find it: `OpenOLAT/OpenOLAT` is Apache-2.0 at its own SHA. 🔴 `Gap 298` did not describe the supply; it described this base's reading backlog.**
+
+🟢 **Gates ran first** against `p423`'s `3009a89`: **`make hooks` 54 / 55**, the one red declared
+(`Gap 400-B`), **`make commit-gates` → `0`**. 🔵 All reads **2026-10-24**. 🟡 Two orientation legs
+preceded the suite and produced no graded cell — declared as `Gap 424-A`.
+
+### 🟢 One foundation row promoted, and it changes the tier's shape
+
+| address | grant, read at the SHA | why it is a FOUNDATION |
+|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0**, `LICENSE` `10 982` B `6dbc5b605ed0` @ `d073ad444fe5` — canonical Apache body (`APPENDIX` boilerplate absent, the whole `376` B delta against `11 358` B), plus two **attribution** statements that add no condition | 🟢 **The only education PLATFORM an engagement may fork, modify and ship commercially without a distribution trigger.** Everything else on this tier is `GPL-3.0` / `AGPL-3.0` / `ECL-2.0` / `LGPL-3.0`. 🔵 Corroborated by `NOTICE.TXT` (`14 712` B `572140fc1b71`) and the README's Apache-2.0 badge — in `p289`'s order, payload first |
+
+🔴 **Why this row did not exist before, stated plainly because it is this pass's real finding.**
+`OpenOLAT` is cited across this repository already — it has been carried as a **mention** since
+`p422` explicitly declined to grade it unread, which was the correct call under `p289`. 🔴 **But
+the grade it was waiting for was one `curl` to `raw.githubusercontent.com`**, `ACTION p422-A`
+named exactly that read, and the action was carried for two passes while `Gap 298` was
+re-confirmed as a supply absence on a ninth channel. 🟢 **A mention is not a grade — and a
+carried action is not an absence.** `Gap 424-B`.
+
+### 🔴 The dependency fact that did NOT change, and why `Gap 298`'s refutation is narrower than it looks
+
+🟢 **One permissive platform is not a permissive tier.** Moodle, Open edX, Canvas LMS, Sakai,
+OpenEduCat, `frappe/lms`, Chamilo and ILIAS are all unchanged and all copyleft. 🔵 What `p424`
+refutes is the **universal** claim (*"no permissive education platform anywhere"*), not the
+**distributional** one (*"this tier is overwhelmingly copyleft"*), which still holds at **8 of 9**
+graded platforms. 🟢 `p421`'s qualification — `openedx/XBlock` + `openedx/xblock-sdk`, Apache-2.0,
+the copyleft tier's permissive **extension point** — is untouched and remains the right boundary
+for a client already on Open edX.
+
+### 🔴 Three addresses measured and refused, so the shortfall is visible rather than padded
+
+- 🔴 **`formalms/formalms`** @ `446a77a9b9cb` — 🔴 **GPL-2.0**, payload at **`html/license.txt`**,
+  **`18 346` B `4e63feff285d`**. Copyleft, so it is not the permissive foundation the circulating
+  Apache-2.0 claim promised. 🔴 **This pass first wrote it up as having NO grant**, on a
+  **root-only** 14-path ladder that returned `404` fourteen times; `gate-enumeration` refuted that
+  on the post-write run by naming `html/license.txt`. 🟢 `p382`'s subtree rule, which this base
+  already held and this pass did not apply (`T123`, `Gap 424-C`).
+- 🔴 **`Harikeshav-R/canvas-mcp`** — **0 commits ahead** of `vishalsachdev/canvas-mcp`, **63
+  behind**. A mirror is not a dependency; it is the same dependency, later.
+- 🔴 **`KKazuhaK/canvas-mcp`** — **283 ahead / 96 behind**, **257** own non-merge commits under
+  **one** author key. 🔵 Not refused for being a fork — refused because a single-author
+  divergence of that size from a live upstream is precisely the dependency hazard `p422` named
+  for this tier.
+
+🟡 **`duck-5/moodle-mcp` (MIT, `1 072` B `64dc9680d3bb`) is NOT promoted here**, though its grant is
+clean: **17 commits across two days** is a reference architecture, not an import. It is recorded
+on the trending shelf, which is where a four-day-old address belongs.
+
 ## 🆕 `p423` · 2026-10-24 — **No foundation row this pass, stated rather than padded: the only new foundation-shaped address the legs returned is BSL-1.1 under an MIT manifest, and a foundation an engagement IMPORTS is the last place a licence conflict belongs.**
 
 🟢 **Gates ran first** against `p422`'s commit `82235af`: **47 / 53 green**, 1 deliberate red,

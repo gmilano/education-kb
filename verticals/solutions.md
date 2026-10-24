@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **The platform tier's "no permissive grant anywhere" row is WRONG as of this pass, and this file has carried it longest. 🟢 `OpenOLAT` is Apache-2.0 at its own SHA — a full LMS a studio may fork and ship. 🔴 And the Apache-2.0 claim about `forma LMS` turns out to have been read off a WEB-SERVER REQUIREMENT.**
+
+🟢 Gates first against `p423`'s `3009a89`: **54 / 55**, one declared red, `commit-gates` → `0`.
+🔵 Every read **2026-10-24**. 🟡 `Gap 424-A` declares two pre-suite orientation legs.
+
+### 🟢 The tier picture, with the row that has been wrong since `Gap 298` was opened
+
+| tier | what these shelves graded it | `p424` |
+|---|---|---|
+| education **platforms** (LMS / SIS / MIS) | 🔴 *"no permissive grant anywhere"* — `Gap 298`, re-confirmed on a ninth channel by `p423` | 🟢 **REFUTED.** `OpenOLAT/OpenOLAT` is **Apache-2.0**, `10 982` B `6dbc5b605ed0` @ `d073ad444fe5`. 🔵 The distributional claim survives: **8 of 9** graded platforms remain copyleft |
+| platform **extension points** | 🟢 permissive — `openedx/XBlock` + `openedx/xblock-sdk`, Apache-2.0, `11 358` B `cfc7749b96f6` | 🔵 unchanged — and no longer the *only* permissive thing on this file |
+| **LMS** agent layer (MCP over the LMS) | 🟢 9 of 10 MIT at their own SHAs (`p422`, `T114`) | 🟢 extended off the Canvas family: `duck-5/moodle-mcp`, MIT, `1 072` B `64dc9680d3bb` |
+| **SIS / MIS** agent layer | 🔴 first address read at a SHA is `BSL-1.1` (`p423`, `T118`) | 🔵 unchanged — no new SIS address this pass |
+
+### 🟢 `OpenOLAT`, graded — what a studio may actually do with it
+
+🔵 **What it is:** a full university LMS — course management, assessment, portfolio, video — that
+began as **OLAT** at the **University of Zurich** and is maintained by **frentix GmbH**
+(Switzerland, 🟢 **EMEA**). **31** heads, tags through `OpenOlat_20.0.pre2`.
+
+🟢 **What the grant permits that no other platform on this file permits:** fork it, modify it,
+host it, and ship the result commercially **with no distribution obligation and no network-use
+trigger**. 🔴 On Moodle or Open edX the same work is a release trigger — which is the entire
+reason `Pattern AT` exists (*do not fork the LMS — talk to it*). 🟢 **`OpenOLAT` is the one
+platform where forking is an available strategy rather than a licence event**, and
+[`compose/patterns.md`](../compose/patterns.md) carries that as `Pattern AV` this pass.
+
+🟡 **The honest caveat.** This pass graded the **grant** and did not re-measure release cadence or
+community size, so nothing here says `OpenOLAT` is the *best* platform for a given client — only
+that it is the one whose licence does not constrain the commercial shape of the engagement.
+`ACTION p424-A`.
+
+### 🔴 `forma LMS` — the claim `p422` refused, now explained rather than merely refused
+
+🟢 `p422` declined to write *"forma LMS is Apache-2.0"* because the serving channel disclosed its
+own conflict. 🟢 **Resolved first-hand this pass: it is `GPL-2.0`**, payload at
+**`html/license.txt`**, **`18 346` B `4e63feff285d`** @ `446a77a9b9cb`. The channel's own
+hedge — *"other sources grade it `GPL` or `LGPL`"* — lands on `GPL`.
+
+🔴 **And this pass got there the wrong way first, which is worth more than the grade.** `p424`
+ran a **root-only** ladder (14 paths, 14 × `404`) and wrote *"no grant payload"* into four files.
+`gate-enumeration` refuted it on the post-write run by naming `html/license.txt`. 🟢 That is
+`p382`'s `gate-subtree-grant` rule — *a root-only read is wrong about the repository* — which
+this base **already held**. 🔵 `T123`; `Gap 424-C`.
+
+🟡 **The Apache string in that README is still only this:**
+
+> `- Apache (recommended) with mod_rewrite enabled`
+
+🔵 A web-server requirement, and the most plausible origin of the circulating claim — but an
+**inference about transmission**, not a finding about the grant. 🟢 The operational rule stands
+either way: a licence claim supported only by a string match on a licence *name* is worth
+nothing, because `Apache`, `MIT` and `BSD` are also the names of servers, universities and
+operating systems. **Grade the payload — at every path, not just the root.**
+
 ## 🆕 `p423` · 2026-10-24 — **The SIS tier gets its first MCP address and it is NOT permissive: `tixuz/openemis-mcp` over UNESCO's OpenEMIS is Business Source License 1.1 at its own SHA, under an MIT manifest and an MIT npm entry. 🔵 So `p422`'s "the agent layer is the permissive arm" holds for LMS and is UNTESTED-TO-FALSE for SIS, on one address.**
 
 🟢 Gates first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red, 5 new, all five fixed

@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-24
 ---
 
+## Pass 424 — reads 2026-10-24, commit 2026-10-24 — **`Gap 298` IS REFUTED AFTER NINE CONFIRMATIONS, AND IT WAS NEVER A SUPPLY FACT: `OpenOLAT/OpenOLAT` is Apache-2.0 in its own payload, and `ACTION p422-A` had named the exact read two passes earlier. 🔴 THE POST-WRITE SUITE THEN CAUGHT THIS PASS PUBLISHING A FALSE ABSENCE OF ITS OWN — a root-only licence ladder, refuted by `gate-enumeration` naming a grant one directory down. 🟢 AND `T121`: three slugs, one root commit, one byte-identical licence digest, OPPOSITE verdicts.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, SHA read, payload digest and gate run happened
+**2026-10-24**; the commit lands **2026-10-24**, so `updated:` carries one date.
+
+🟢 **Gates ran FIRST** (`p412`'s standing rule) against `p423`'s commit `3009a89`, **before** this
+pass's first capability leg: **`make hooks` 54 / 55 green** — the single red the declared
+`gate-census-union` (`Gap 400-B`) — and **`make commit-gates` exits `0`** over its 54 blocking
+gates. 🔵 So `p423`'s closing claim reproduces exactly on this host.
+
+🟢 **And they ran LAST, which is again the half that paid — this time on a FACT, not a format.**
+The first full run after this pass's eight shelf writes was red on `gate-enumeration`
+(`REFUTED=2`), then in turn on `gate-register-currency`, `gate-author-key` and
+`gate-census-currency` — **four gates, of which the first caught a false claim about the world**
+and the other three caught this pass's own bookkeeping. **Final state at the commit:
+`make commit-gates` exits `0`.**
+
+**What this pass established, first-hand:**
+
+- 🟢 **`T122` — `Gap 298` IS REFUTED, and the refutation cost one HTTP request.**
+  [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) carries **Apache-2.0** at `LICENSE`
+  @ `d073ad444fe5`, **`10 982` B `6dbc5b605ed0`**: the canonical Apache body, diffed against
+  `apache.org`'s `11 358` B text and agreeing on every term, with the `APPENDIX` boilerplate
+  absent (the whole `376` B delta) and two **attribution** statements appended that add no
+  condition. Corroborated in `p289`'s order — payload first — by `NOTICE.TXT` (`14 712` B
+  `572140fc1b71`) and the README's Apache-2.0 badge. **31** heads, tags through
+  `OpenOlat_20.0.pre2`.
+- 🔴 **The finding is not the licence — it is that the absence was never measured.** `Gap 298`
+  was published as a supply fact (*"no permissive education platform anywhere"*) and re-confirmed
+  on a **ninth** channel as recently as `p423`. 🔴 **Every confirmation was a restatement.**
+  `p422` saw the question exactly, refused a blog's Apache-2.0 claim under `p289` (correctly), and
+  registered **`ACTION p422-A`** to read the payload — which was then carried, unspent, for two
+  passes while the absence was re-published. 🟡 `Gap 424-B`: this base has instruments for an
+  absence its **index** refutes and for one **restated** under new words, and none for an absence
+  **a cheap read would refute** — the class with the worst cost asymmetry, because a studio told
+  there is no permissive platform scopes a copyleft-constrained engagement it did not need.
+- 🔴 **`T123` / `Gap 424-C` — AND THIS PASS COMMITTED THE SAME ERROR CLASS WHILE WRITING ABOUT
+  IT.** Discharging `ACTION p422-A`'s second half, `p424` probed **14 root paths** on
+  `formalms/formalms`, got `404` on all 14, and wrote *"no grant payload at any ladder path"*
+  into four shelves. 🟢 `gate-enumeration` reddened on the post-write run and **named the
+  refutation: `html/license.txt`** — the project is **GPL-2.0**, `18 346` B `4e63feff285d`.
+  🔴 `p382` had already written the rule (*a grant has SUBTREES; a root-only read is wrong about
+  the repository*) and `gate-subtree-grant` is in the suite. 🔵 **`T120`'s shape for the second
+  consecutive pass:** the corpus held the rule, the pass did not apply it, and only a gate stopped
+  it reaching the shelves. 🟡 Downgraded with it: the claim that the circulating
+  *"forma LMS is Apache-2.0"* traces to `- Apache (recommended) with mod_rewrite enabled` in the
+  project's own requirements list is now an **inference about transmission**, not a finding about
+  an absent grant, and is written at that strength on every shelf.
+- 🟢 **`T121` — one root commit, one licence digest, OPPOSITE statuses.** Three `canvas-mcp`
+  slugs carry the byte-identical payload `1 071` B `5385a26e2fac` and the same root commit
+  `afe32c3e1721` (2025-02-27). Against upstream `main`: `Harikeshav-R/canvas-mcp` is
+  **0 ahead / 63 behind** — a mirror with no original commit — while `KKazuhaK/canvas-mcp` is
+  **283 ahead / 96 behind**, **257** of them its own non-merge commits under a **single** author
+  key (`%ae`). 🔴 **A shared digest and a shared root establish a FAMILY and say nothing about
+  citability.** First time two members of one family have landed on opposite verdicts here.
+  Neither shelved; the upstream keeps the row.
+- 🟢 **`T114` extended off the Canvas family.** [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp)
+  is **MIT**, `LICENSE` `1 072` B `64dc9680d3bb` @ `dd9682ca97e3` — a **distinct** payload from
+  the Canvas line's, so not that family renamed. 🟡 **17** commits over two days, **2** author
+  keys (`%ae`): a reference architecture, explicitly not a dependency.
+- 🔵 **`T100`, eighth confirmation, in its sharpest form.** Ten legs → **4** unshelved addresses →
+  **1** worth a row. Of the four the discovery legs served: two forks of one already-shelved
+  repository, one four-day-old project, and one 4-commit student project
+  (`ArbaazAli1209/eduadapt-aiml-project`, MIT `1 074` B `53264a4cc83f`, refused as below bar).
+  🔴 **The pass's only significant find came from spending a carried ACTION on a payload read,
+  not from a discovery leg.**
+- 🟢 **Three jurisdictions now name education high-risk, and one deliverable serves all three.**
+  Vietnam's **Decision 33/2026/QD-TTg** lists education among six high-risk sectors (automated
+  assessment, behavioural monitoring; six-month grace for systems running before **2026-08-15**),
+  joining EMEA's Annex III at **2027-12-02** (Digital Omnibus, Regulation (EU) **2026/1744**) and
+  US state statutes prohibiting AI from replacing a licensed educator in grading. 🟢 The
+  deliverable is a reviewable human-in-the-loop evidence trail.
+- 🟡 **The market figure degraded into a spread, and is published as one.** Five houses put the
+  **2026** market at **$1.94 B**, **$7.30 B**, **$9.58 B**, **$10.6 B** and **$11.4 B** — **~6×**
+  on the current year, with at least one explicitly including corporate training. 🟢 This base's
+  carried **$10.6 B → $42.48 B (2030)** stays carried, now with its peers beside it.
+- 🔵 **Declared, so silence does not read as coverage.** 🟡 `Gap 424-A`: two orientation legs ran
+  **before** the gate suite finished — neither produced a graded cell, but `p412` says *first*.
+  **Canada** remains an open market gap (`Gap 422-B`); `Gap 421-E`'s **Vietnam** and **Brazil**
+  date conflicts are **both carried unresolved**; **Africa** returned nothing from a
+  Europe-weighted EMEA leg, which is an informed gap rather than coverage.
+
+### 🟢 The census, derived LAST — after every shelf write
+
+🟢 **Re-derived as the last act before the commit**, per `p352` and `p376`, and it went **red
+first**: the figures this pass initially carried were derived before its eight shelf writes, and
+`gate-census-currency` said so. 🔵 **The shape census:**
+**2 778** harvested shapes → **38** are not addresses → **2 740 addresses**.
+🔵 **2 740** channel-U addresses and **3 216** channel-B survivors give
+**3 582 addresses over both channels**.
+
+🔵 **Against `p423`'s published triple (`2 774 / 38 / 2 736`, union `2 736 / 3 212 / 3 578`):**
+the movement is **+4 harvested, +4 addresses, +4 channel-B survivors,
++4 union** — consistent with a pass that graded five addresses and cited a handful of
+carried ones. 🟢 `p352`'s rule holds: the figures `p423` published stay published, because a
+census is not repaired by editing history.
+
 ## Pass 423 — reads 2026-10-24, commit 2026-10-24 — **`p422` DECLARED ITS GATE SUITE UN-RUN AND HONOURED EVERY FILE CONTRACT BY HAND. THE SUITE RAN ON THIS HOST AND THE HAND-HONOURING FAILED ON FIVE OF 53 GATES. 🔴 THREE OF THE FIVE ARE POST-WRITE GATES `p412`'s OWN RULE CANNOT REACH, AND `make hooks` HAS BEEN RED ON PURPOSE SINCE `p398`, SO NO COMMIT HOOK COULD EVER HAVE ASKED IT A YES-OR-NO QUESTION. 🟢 `DECLARED_RED` / `make commit-gates` / `pre-commit` BUILT AND WIRED. 🔴 AND THIS PASS BUILT A CASING ARM THE CORPUS ALREADY HELD, IN AN INSTRUMENT IT HAS KEPT IN NO `make` TARGET SINCE `p439` — WHICH, ON BEING WIRED, IMMEDIATELY FOUND ONE REPOSITORY CITED UNDER TWO SPELLINGS ON THE RECOMMENDATION SHELVES.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, SHA read, payload digest and gate run happened

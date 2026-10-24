@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **`Pattern AV` is new and it is the one `Gap 298` made unwriteable for nine passes: the engagement where forking the LMS is a legitimate strategy, because the platform is Apache-2.0. 🟢 Wired on `OpenOLAT/OpenOLAT`, graded at its SHA today.**
+
+🟢 Gates first against `3009a89`: **54 / 55**, one declared red; `commit-gates` → `0`.
+🔵 All reads **2026-10-24**. 🟡 `Gap 424-A`.
+
+### 🆕 `Pattern AV` — the forkable-platform engagement (EMEA first, public sector anywhere)
+
+🔴 **Why this pattern could not be written before.** Every pattern on this file routes around the
+platform licence: `Pattern AT` puts an MIT agent layer over the client's copyleft LMS precisely
+because *forking Moodle or Open edX is a distribution event*. 🟢 **`OpenOLAT` removes that
+constraint**, and it is the only platform on these shelves that does.
+
+**When to reach for it:** the client needs **deep changes to the platform itself** — a bespoke
+assessment engine, a regulator-specific audit model, a data residency architecture — and the
+delivered system must ship **commercially, closed, or under the client's own terms**.
+🔴 **Do not reach for it when the client already runs Moodle, Open edX or Canvas** — migration
+cost dwarfs the licence benefit, and `Pattern AT` is the right answer there.
+
+**The components, each graded at a SHA on these shelves:**
+
+| component | address | grant, read at the SHA | role in the recipe |
+|---|---|---|---|
+| platform | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** `10 982` B `6dbc5b605ed0` @ `d073ad444fe5` | 🟢 The fork base. Modify in-tree; **no distribution trigger, no network-use trigger** |
+| agent surface | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** `1 071` B `5385a26e2fac` @ `f4f0780` | 🔵 **Architecture to copy, not code to import** — its role-based tool filtering and anonymisation tiers are the reference for the one you build over OpenOLAT's REST API |
+| assessment seam | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** `11 358` B `cfc7749b96f6` | 🔵 Where the graded-component contract is already modelled; borrow the interface shape |
+
+**How to wire it, in order:**
+
+1. 🟢 **Fork `OpenOLAT` at a tag, not at `main`** — the tag set runs through `OpenOlat_20.0.pre2`;
+   pin one and record the SHA. Keep the fork rebaseable: changes go in new modules, not in edits
+   to core files, or the next upstream release becomes a merge project.
+2. 🟢 **Keep the Apache-2.0 `NOTICE` obligations.** `NOTICE.TXT` (`14 712` B `572140fc1b71`) must
+   travel with the distribution and the two attribution statements in `LICENSE` must survive.
+   🔴 This is the **one** compliance step teams skip on Apache-2.0 because the grant feels free —
+   it is the only one with teeth.
+3. 🟢 **Put the agent surface over the platform's HTTP API, not inside the fork.** Even with no
+   licence pressure, the seam keeps the agent independently deployable and independently
+   auditable — which is what the regulator asks about (step 5).
+4. 🟢 **Build the agent layer from `Pattern AT`'s shape**, with role-based tool filtering and
+   anonymisation tiers present from the first commit, not retrofitted.
+5. 🔴 **Put the human-in-the-loop evidence trail on anything that grades, admits or monitors** —
+   EMEA Annex III at **2027-12-02**, US state statutes prohibiting AI replacing a licensed
+   educator in grading, Vietnam's **Decision 33/2026/QD-TTg** naming automated assessment. 🟢 One
+   build, three jurisdictions.
+
+🟡 **The honest cost line.** `OpenOLAT` is Java/Tomcat, and a fork is a **maintenance commitment
+for the life of the client relationship** — the licence makes the fork *legal*, not *cheap*.
+🔴 Quote the upstream-merge burden explicitly; a pattern that hides it is how a 10-week engagement
+becomes a 3-year one.
+
+### 🟢 `Amendment 13` — a grade is not a recommendation, and a mention is not a grade
+
+🔵 Two rules this pass earned the hard way, both standing from here:
+
+- 🔴 **A mention is not a grade.** `OpenOLAT` was cited across this repository for nine passes
+  while `Gap 298` declared its own licence class absent. A citation in prose creates **no**
+  licence knowledge. 🟢 Only a payload read at a SHA does.
+- 🔴 **A grade is not a recommendation.** `p424` graded `OpenOLAT`'s grant and did **not** measure
+  its release cadence or community health, so `Pattern AV` is scoped to *what the licence
+  permits* and says nothing about platform fit. 🟡 `ACTION p424-A` carries the missing
+  measurement, and until it is spent this pattern ships with the caveat above attached.
+
 ## 🆕 `p423` · 2026-10-24 — **`Pattern AU` is new: the SIS-tier agent an engagement must BUILD, because the only one that exists is BSL-1.1 under an MIT manifest. 🟢 It copies the LMS tier's MIT architecture rather than its code, and keeps the GPL-2.0 platform behind a process boundary.**
 
 🟢 Gates first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red, 5 new, all fixed here.

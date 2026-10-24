@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **Ten legs. 🟢 The find of the pass is not an agent at all — it is a PLATFORM licence that refutes `Gap 298`. 🔵 On the agent tier: four unshelved addresses, one graded clean and shelf-worthy (`duck-5/moodle-mcp`, MIT, four days old), two forks of an address already shelved, one below bar.**
+
+🟢 Gates first against `3009a89`: **54 / 55**, one declared red; `commit-gates` → `0`. 🔵 All reads
+**2026-10-24**. 🟡 `Gap 424-A`: two orientation legs ran before the suite finished; no graded cell
+came from either.
+
+### 🟢 New this week — graded at SHAs today
+
+| address | grant, read at the SHA | history | verdict |
+|---|---|---|---|
+| [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) | 🟢 **MIT** `LICENSE` `1 072` B `64dc9680d3bb` @ `dd9682ca97e3` | **17** commits, **2026-10-20 → 2026-10-21**, **2** author keys (`%ae`), 2 heads | 🟢 **Shelf-worthy as a reference architecture.** First graded **Moodle**-line MCP address; extends `T114` off the Canvas family. 🔴 Four days old — not a dependency |
+| [`Harikeshav-R/canvas-mcp`](https://github.com/Harikeshav-R/canvas-mcp) | 🟢 MIT `1 071` B `5385a26e2fac` @ `db979a5ab5d7` | **1 034** commits, root `afe32c3e1721` (2025-02-27), **0 ahead / 63 behind** upstream | 🔴 **Refused — stale mirror.** Zero original commits against `vishalsachdev/canvas-mcp` |
+| [`KKazuhaK/canvas-mcp`](https://github.com/KKazuhaK/canvas-mcp) | 🟢 MIT `1 071` B `5385a26e2fac` @ `e5bd45d66f35` | **1 284** commits, same root, **283 ahead / 96 behind**, **257** own non-merge commits, **1** author key, 42 heads | 🔴 **Refused — single-author divergence.** Not refused for being a fork: refused because 257 unreviewed commits diverging from a live upstream is a maintenance liability |
+| [`ArbaazAli1209/eduadapt-aiml-project`](https://github.com/ArbaazAli1209/eduadapt-aiml-project) | 🟢 MIT `1 074` B `53264a4cc83f` @ `b5b9eb626ad7` | **4** commits, **2026-10-11 → 2026-10-15**, 2 author keys (`%ae`) resolving to one person | 🔴 **Below bar.** On-topic (BKT in NumPy, open-weights quiz generation); `p423`'s `ckz/edu_data_mcp_server` class |
+
+### 🟢 `T121` — one root commit, one licence digest, opposite statuses
+
+🔵 All three `canvas-mcp` slugs carry the **byte-identical** payload `1 071` B `5385a26e2fac` and
+the **same root commit** `afe32c3e1721`. 🔴 **Those two facts establish a family and say nothing
+about citability**: measured against upstream `main`, one is **0 ahead** and one is **283 ahead**.
+🟢 A digest match is an identity test, not a quality test — `gate-fork-direction` grades direction
+by full history, and this pass is the first to show two members of one family landing on opposite
+verdicts.
+
+### 🔴 The address that matters this pass is on the platform tier, not here
+
+🟢 `OpenOLAT/OpenOLAT` — **Apache-2.0**, `10 982` B `6dbc5b605ed0` @ `d073ad444fe5` — refutes
+`Gap 298`. 🔵 Recorded in full on [`verticals/solutions.md`](../verticals/solutions.md) and
+[`repos/foundations.md`](../repos/foundations.md); noted here because a trending shelf that only
+watches the agent tier would have missed the week's largest finding entirely.
+
+### 🔵 `T100`, eighth confirmation
+
+🟢 Ten legs → **4** unshelved addresses → **1** worth a row, and **0** new supply this base did
+not already hold on the agent tier. 🔴 The ranking and trending vocabularies continue to return
+forks, mirrors and week-old student projects. 🟢 **The one genuinely new thing this pass found
+came from spending a carried ACTION on a payload read, not from a discovery leg** — which is the
+strongest argument yet for `ACTION p424-B`.
+
+---
+
 ## 🆕 `p423` · 2026-10-24 — **Ten legs, two unshelved addresses, ZERO supply — and the one new address worth a paragraph is a licence conflict that ships inside its own npm tarball. 🔴 `tixuz/openemis-mcp`: MIT on three metadata channels, Business Source License 1.1 in the only payload that exists.**
 
 🟢 **Gates ran first** against `p422`'s commit `82235af`: **47 / 53**, one deliberate red

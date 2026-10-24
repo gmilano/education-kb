@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p424` · 2026-10-24 — **`Gap 298` IS REFUTED, AND IT WAS NEVER A SUPPLY FACT. 🟢 `OpenOLAT/OpenOLAT` — a university-grade LMS these shelves have carried as a MENTION for nine passes — is **Apache-2.0** in its own payload at its own SHA. 🔴 The gap stood on an UNREAD PAYLOAD, not on an absent one, and `ACTION p422-A` had already named the exact read that would close it. 🟢 Plus `T121`: three slugs, one root commit, one byte-identical licence digest — and OPPOSITE statuses.**
+
+🟢 **Gates ran FIRST** (`p412`'s standing rule), against `p423`'s commit `3009a89`, **before** this
+pass's first capability leg: **`make hooks` 54 / 55 green**, the single red being the declared
+`gate-census-union` (`Gap 400-B`), and **`make commit-gates` exits `0`** over its 54 blocking
+gates. 🔵 So `p423`'s closing claim reproduces exactly on this host, and this pass started from a
+measured baseline rather than an assumed one.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read, payload digest and gate run happened
+**2026-10-24**; the commit lands **2026-10-24**.
+🟡 **Declared, because the rule is worth more than the appearance of keeping it:** two orientation
+legs (the generic ranking leg and the trending leg) ran **before** the gate suite finished. They
+produced **no graded cell** — every address written below was read after the gates were green —
+but `p412`'s rule says *first*, and "first for the legs that matter" is not what it says.
+`Gap 424-A`.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`T122` — `Gap 298` IS REFUTED. There IS a permissive education platform, and it is a
+  serious one.** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) carries **Apache-2.0**
+  at `LICENSE` @ `d073ad444fe5`, **`10 982` B `6dbc5b605ed0`**. The body is the canonical Apache
+  2.0 text — diffed against `apache.org/licenses/LICENSE-2.0.txt` (`11 358` B) and agreeing on
+  every term — with the **`APPENDIX: How to apply` boilerplate absent** (`grep -c APPENDIX` → `0`,
+  which is the whole `376`-byte difference) and two **attribution** statements appended for the
+  `olat.org` and `openolat.org` code bases. 🔵 Attribution, not restriction: neither statement
+  adds a condition, and the grant is unmodified.
+- 🟢 **Corroborated on two further channels, in the order `p289` requires — payload first, then
+  corroboration.** `NOTICE.TXT` @ the same SHA (**`14 712` B `572140fc1b71`**) opens
+  *"Licensed under the Apache License, Version 2.0"*; the `README.md` carries an Apache-2.0 badge
+  and a `## Licensing` section pointing at both files. 🔵 **31** heads, tags through
+  `OpenOlat_20.0.pre2`.
+- 🔴 **And THAT is the finding, not the licence.** `Gap 298` has been published as a supply
+  absence — *"no permissive education platform anywhere on these shelves"* — and was confirmed on
+  a **ninth** channel as recently as `p423`. 🔴 **Every one of those confirmations was a
+  restatement, and the refutation was one `curl` away the whole time.** `p422` saw it exactly:
+  it refused the blog's Apache-2.0 claim under `p289` (correctly — a blog is not a grade) and
+  registered **`ACTION p422-A`** to read the payload. The action was carried, not spent, and the
+  gap outlived it by two passes. 🟡 `Gap 424-B`: this base has an instrument for an absence its
+  own index refutes (`gate-absence`) and none for an absence **an unread payload would refute**.
+- 🟢 **`ACTION p422-A` is discharged, both halves.** [`formalms/formalms`](https://github.com/formalms/formalms)
+  @ `446a77a9b9cb` is 🔴 **GPL-2.0**, payload at **`html/license.txt`**, **`18 346` B
+  `4e63feff285d`**. 🟢 So `p422` was right to refuse the Apache-2.0 claim, and the serving
+  channel's own disclosure — *"other sources grade it `GPL` or `LGPL`"* — resolves to **GPL-2.0**
+  on the payload.
+- 🔴 **`T123` — AND THIS PASS GOT IT WRONG FIRST, which is the half worth publishing.** `p424`
+  ran the **root** ladder — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `COPYING`,
+  `COPYING.txt`, `LICENSE.GPL`, `license.txt`, `LICENSE.rst`, `docs/LICENSE`, `lib/LICENSE`,
+  `gpl.txt`, `GPL.txt`, `COPYRIGHT`, **14 paths, 14 × `404`** — and wrote *"no grant payload at
+  any ladder path"* into four files. 🔴 **`gate-enumeration` reddened on the post-write run and
+  named the refutation: `html/license.txt`.** 🟢 This is `p382`'s `gate-subtree-grant` class
+  exactly — *a grant has SUBTREES, and a root-only read is wrong about the repository* — and this
+  base **already had the instrument**. 🔵 `T120`'s shape, turned on this pass: the corpus held
+  the rule, the pass did not apply it, and only a gate stopped it reaching the shelves.
+- 🟡 **The Apache string in that README is still only a web-server requirement**, and still the
+  most plausible origin of the circulating claim: the **only** occurrence of `Apache` in
+  `README.md` is line 21, **`- Apache (recommended) with mod_rewrite enabled`**. 🔴 But that is
+  now an **inference about how a false claim spread**, not a finding about an absent grant — the
+  grant exists and is GPL-2.0. `Gap 424-C` records the downgrade.
+- 🔴 **`Gap 298` is NOT weakened by this.** `formalms` joins the copyleft side of the tier, which
+  makes the permissive count **1 of 10**, not 1 of 9.
+- 🟢 **`T121` — one root commit, one licence digest, OPPOSITE statuses.** Three `canvas-mcp`
+  slugs all carry `LICENSE` **`1 071` B `5385a26e2fac`** — byte-identical to the digest `p422`
+  recorded for `vishalsachdev/canvas-mcp` — and all three share the **same root commit**
+  `afe32c3e1721` (2025-02-27). 🔴 **A shared digest and a shared root say "one family"; they say
+  nothing about whether an address is worth citing**, and measured against upstream `main` the two
+  new slugs are opposites: `Harikeshav-R/canvas-mcp` is **0 ahead / 63 behind** — a stale mirror
+  with no original commit — while `KKazuhaK/canvas-mcp` is **283 ahead / 96 behind**, of which
+  **257** are its own non-merge commits under a **single** author key (`%ae`). 🔵 Neither is
+  shelved: a mirror adds nothing, and a 257-commit single-author divergence from a live upstream
+  is a **maintenance liability**, not a foundation. The upstream keeps the row.
+- 🟢 **The Moodle tier gets its first graded address, and it is four days old.**
+  [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) is 🟢 **MIT**, `LICENSE` **`1 072` B
+  `64dc9680d3bb`** @ `dd9682ca97e3` — a **distinct** payload from the Canvas line's
+  `5385a26e2fac`, so this is not that family under another name. **17** commits, **2026-10-20 →
+  2026-10-21**, **2** author keys (`%ae`), 2 heads.
+- 🔵 **`T114` extends from Canvas to Moodle on first evidence.** `p422` measured the MCP-over-LMS
+  agent layer at **9 of 10 MIT** across the **Canvas** line; the first **Moodle**-line address
+  read at a SHA here is also MIT. 🟡 One address is not a tier — this is a **second data point on
+  `T114`**, exactly as `p423`'s single BSL-1.1 SIS address was a boundary rather than a
+  refutation.
+- 🔴 **One refusal, stated rather than padded.** `ArbaazAli1209/eduadapt-aiml-project` is 🟢
+  genuinely **MIT** (`1 074` B `53264a4cc83f` @ `b5b9eb626ad7`) and on-topic — BKT in NumPy with
+  an open-weights quiz generator — but it is **4 commits, 2026-10-11 → 2026-10-15, 2 author keys (`%ae`)
+  resolving to one person**. 🔴 `p423`'s `ckz/edu_data_mcp_server` class exactly. Below this
+  shelf's bar; recorded so the refusal is visible.
+- 🔵 **Tier 8 is unchanged in membership.** Ten legs returned **4** unshelved addresses and
+  **1** shelf-worthy grant (`duck-5/moodle-mcp`, recorded on the trending shelf rather than
+  promoted here on four days of history) — `T100`'s **eighth** confirmation that the ranking and
+  trending vocabularies have stopped producing supply this base does not already hold.
+
+### 🟢 The two addresses this pass promotes to the platform tier's permissive row
+
+🔵 Read first-hand at their own SHAs on **2026-10-24**. The second row is the one that moves
+`Gap 298`; the first is recorded because an engagement that can use one can usually use both.
+
+| address | grant, read at the SHA | why it is citable |
+|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** — `LICENSE` `10 982` B `6dbc5b605ed0` @ `d073ad444fe5`; `NOTICE.TXT` `14 712` B `572140fc1b71` agrees | 🟢 **The first permissive education PLATFORM on these shelves.** A full LMS — assessment, course management, portfolio, video — under a grant that permits a commercial fork with no distribution trigger. 🔵 Swiss-origin (frentix GmbH, from the University of Zurich's OLAT), **EMEA**, 31 heads, tags through `OpenOlat_20.0.pre2` |
+| [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) | 🟢 **MIT** — `LICENSE` `1 072` B `64dc9680d3bb` @ `dd9682ca97e3` | 🟢 **The Moodle line's first graded MCP address**, extending `T114` off the Canvas family. 🔴 **17 commits over two days** — cite as a reference architecture, never as a dependency |
+
+🔴 **What this table is not.** `OpenOLAT` is promoted on its **grant**, read today. Its *depth* is
+long-established and its *currency* is visible in its tag set, but this pass did not re-measure
+its commit history, so no claim is made here about release cadence. 🟡 `ACTION p424-A` carries
+that measurement.
+
 ## 🆕 `p423` · 2026-10-24 — **This pass adds NO row to this shelf, and that is the finding: the single new SIS-tier agent the capability leg returned is published as MIT by its npm registry entry, by a third-party MCP directory AND by its own in-repo manifest, and its only grant payload is Business Source License 1.1. 🔴 The conflict ships INSIDE the npm tarball, byte-identical to the repo payload. 🟢 And `p422`'s correct casing is vindicated against the gate that reddened it — then the fix turned out to exist already, in an instrument this base has kept in no `make` target since `p439`, which on being wired immediately found one repository cited under two spellings on THIS shelf.**
 
 🟢 **Gates ran FIRST, and this time against a commit nobody had measured.** `make hooks`
