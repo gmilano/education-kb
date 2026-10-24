@@ -4,6 +4,19 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p421` · 2026-10-24 — **The capability leg returned five unshelved addresses and ALL FIVE ARE UNGRANTED, so supply is a measured zero. 🟢 `T100` holds a SIXTH time: the two ranking legs returned zero unshelved. 🔴 And the five are `INDEPENDENT` of one another by full history — a convergent template class no history instrument can see.**
+
+🔵 **Append-only, per this file's standing contract.** `p420` and everything below it is untouched.
+
+| what moved | first-hand, 2026-10-24 |
+|---|---|
+| 🔴 **Supply: 0 rows from 5 unshelved addresses** | `ShanmukaAlapati/Lesson-Writer-Agent` (`600f257`) · `Avinashhmavi/Self-Evaluating-Lesson-Content-Generator` (`4a43490`) · `Subhradyuti/Lesson-Content-Generator` (`ef4bf9e`) · `Shaik-Sam/rag-lesson-agent` (`149c513`) · `rohan-9506/lesson-agent` (`fc0db44`). 🔴 **All UNGRANTED** on a 15-path ladder read **at the commit SHA** (`T106`), and **no manifest declares a `license`** — `requirements.txt` ×4, `pyproject.toml` ×1. 🟢 `T113` registered: **an unshelved count is not a supply count** |
+| 🔴 **…and they are not one artefact, which refutes this pass's own hypothesis** | All five ship the same worked example (*"Intro to RAG"*), so a fork or content-copy class was predicted and graded with `p404`'s `forkdir.sh` over full clones. **Three pairs, all `INDEPENDENT`: 0 shared commits AND 0 shared trees.** 🔴 The duplication is **convergent, at the level of prose and topic**; 2–5 commits each. 🟢 Recorded in [`fork-lineage.2026-10-24-p421.tsv`](../evidence/fork-lineage.2026-10-24-p421.tsv) |
+| 🟢 **`T100`, sixth consecutive confirmation** | The two **ranking**-worded legs (*"top open source AI agents education 2026 github MIT"*, *"github trending education AI 2026"*) produced **seven** in-domain addresses and **zero unshelved**: `HKUDS/DeepTutor`, `Open-TutorAi/open-tutor-ai-CE`, `samrathreddy/Tutor-multi-ai-agent`, `TovTechOrg/Tov-learn`, `HugeCatLab/ChatTutor`, `ashishpatel26/500-AI-Agents-Projects`, `GarethManning/education-agent-skills`. 🟢 **The discriminator remains capability vocabulary, not recency vocabulary** |
+| 🟢 **DeepTutor `v1.6.15`, 2026-10-19 — already carried** | The ranking leg surfaced it as news; `p415` recorded it first-hand at **`42.3k★`, Apache-2.0, `v1.6.15`** while refuting the carried `~24k★`. 🔵 A leg confirming a figure this base already derived is a **control passing**, not a finding |
+| 🟢 **`ACTION p420-D` discharged — `zijinz456/OpenTutor` CONTINUES `Pranjulcr7/OpenTutor`** | `SUPERSET`, direction `b`; **210 / 206** commits, **193** shared commits, **189** shared trees, `b_contains_a_head` **True**. 🔴 **`T112`: the continuation holds four FEWER commits than the side it continues**, so a commit count names the wrong side. One family, one citable unit (`p405`) |
+| 🔴 **`ACTION p420-C` answered by REFUSAL** | `gate-slug-oracle` run against the 8 `Gap 420-C` addresses with its calibration pair green. All 8 → **`ABSENT-OR-PRIVATE`**. 🔴 The instrument's own header refuses the distinction the action asked for: *"this channel cannot separate a missing repository from a private one."* 🟢 All 8 are carried **as unreadable or dead** and none is recommended, so `gate-dead-citation` holds |
+
 ## 🆕 `p420` · 2026-10-24 — **The capability legs returned five unshelved addresses and the ranking legs returned zero for the FIFTH consecutive pass. 🟢 One is supply, and it is a grader with no model: `dsvi-b/corretor-enem`, MIT, Brazil.**
 
 🔵 **Append-only, per this file's standing contract.** `p419` and everything below it is untouched.

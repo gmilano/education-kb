@@ -1,0 +1,3 @@
+pass	action	arm	subject	evidence	clause
+420	p420-E	ANSWERED-BY-PLATFORM	open edx	shelf grades it AGPL-3.0	🟡 **Resolve first-hand whether any Open edX component or Sakai is Apache-2.0**, against the majority AGPL-3.0 / ECL-2.0. 🔵 Two sources in this pass's vertical leg assert it; `p289` forbids writing either into a cell unread
+420	p420-E	ANSWERED-BY-PLATFORM	sakai	shelf grades it ECL-2.0	🟡 **Resolve first-hand whether any Open edX component or Sakai is Apache-2.0**, against the majority AGPL-3.0 / ECL-2.0. 🔵 Two sources in this pass's vertical leg assert it; `p289` forbids writing either into a cell unread

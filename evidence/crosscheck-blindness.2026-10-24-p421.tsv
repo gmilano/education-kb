@@ -1,0 +1,7 @@
+# p421, 2026-10-24 — why `action-gap-crosscheck` (pase 59) reads nothing, measured.
+# Its suite passes 16/16 and `grep -n action-gap-crosscheck Makefile` returns nothing.
+channel	what the instrument expects	what the register writes now	live_count
+action block heading	^## ... acciones que el pase N deja escritas	### 🟢 Actions — ranked, cheapest first	0
+gap citation	gaps? (\d+)  e.g. `gap 51`	Gap 420-C	0
+closure vocabulary	CERRADO / al cierre del pase N	### 🟢 Closed this pass	0
+report	gap citations inside action blocks	—	0

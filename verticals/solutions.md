@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p421` · 2026-10-24 — **`ACTION p420-E` resolved first-hand: Sakai is `ECL-2.0` and NOT Apache-2.0, and the Apache-2.0 Open edX component is real — `openedx/XBlock`. 🔴 Both answers were already on these shelves when the action was written. 🟡 And this file grades Sakai on a row that carries no address, which refuted the obvious fix for `p421`'s new gate.**
+
+🔵 **No date straddle:** every payload read, SHA resolution and digest ran **2026-10-24**; the
+commit lands **2026-10-24**. 🟢 **Gates ran FIRST** (`p412`): **51 / 52**, single red `Gap 400-B`.
+
+### 🟢 The platform licence question, resolved at the commit SHA
+
+| platform | address | licence *(read at SHA `T106`, 2026-10-24)* | what changes for an engagement |
+|---|---|---|---|
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** — `LICENSE`, `11 120` B, `sha256₁₂ 0688f62d04f1`, SHA `c35e7a2`, ref `master` | 🔴 **Not Apache-2.0.** ECL-2.0 is an Apache-2.0 **derivative** drafted for academic redistribution; the text names *"Apache 2.0 license"* in lower case and contains **zero** occurrences of `Apache License`, which is why `compose/code/p1040-ecl-corpus-census` exists at all. 🟢 Permissive in practice, **its own licence** in a compliance review |
+| **Open edX** *(platform)* | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0**, narrowed — as `p413` established | Unchanged |
+| **Open edX** *(component API)* | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** — `LICENSE.TXT`, `11 358` B, `cfc7749b96f6`, SHA `c73c4bb` | 🟢 **This is the answer `ACTION p420-E` wanted.** The API a plugin imports is permissive even though the host is not |
+| **Open edX** *(dev harness)* | [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 **Apache-2.0** — `LICENSE.TXT`, `11 358` B, **`cfc7749b96f6`**, SHA `e61f9d2` | 🟢 Build and run an XBlock **without** standing up `edx-platform`. Byte-identical grant |
+| **Open edX** *(deployment)* | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** — `LICENSE.txt`, `34 523` B, `0d96a4ff68ad`, SHA `279f774`, ref **`release`** | 🔵 The official installer is **copyleft**, and its default ref is `release` — neither `main` nor `master`, which a root-and-default read gets wrong |
+| **Open edX** *(MFE)* | [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) | 🔴 **AGPL-3.0** — `LICENSE`, `34 523` B, `8486a10c4393`, SHA `50faa45` | 🔵 Same byte count as Tutor's grant, **different digest** — a new `T101` band |
+
+🔴 **The consequence for a studio, stated plainly and bounded.** The permissive cell is the
+**component API**, not the platform, not the installer and not the front end. 🟢 A plugin built
+against `XBlock` + `xblock-sdk` imports Apache-2.0 code. 🔴 **What a deployment alongside an
+AGPL-3.0 host obliges is a question for counsel, not for this base** — `p421` measured grants, and
+says so rather than implying more.
+
+### 🟡 This shelf grades Sakai with no address, and that refuted a fix
+
+🔵 Measured while closing a hole in `p421`'s new `gate-action-answered`: the platform vocabulary it
+derives from **this file** was going to be closed on *"a platform this base recommends has an
+address."* 🔴 **That closure drops `sakai` — the specimen's own subject** — because the row grading
+it `ECL-2.0` carries **no `github.com/…` slug at all**; the address lives on
+`repos/foundations.md` instead. 🟢 **A cross-shelf split, not a missing address**, and a closure
+that deletes the specimen is worse than the hole it closes, so the hole is pinned OPEN as a fixture
+(`p364`'s disposition) rather than guessed at.
+
+### 🟢 `Gap 298` / `Gap 405-A` confirmed on an EIGHTH channel — and qualified
+
+🔵 This pass's vertical leg returned Moodle, Open edX, Canvas, Sakai, OpenOLAT, Chamilo, ILIAS,
+Forma LMS, OpenEduCat, RosarioSIS, Gibbon and Open LMS. 🟢 **No permissive platform that was not
+already carried** — OpenOLAT (Apache-2.0) is the only one, shelved since earlier passes, and the
+leg's own sources disagree about Open edX's licence (one lists Apache-2.0 against the AGPL
+majority, which is what produced `ACTION p420-E`). 🔴 **RosarioSIS and Gibbon are GPL; the leg found
+no MIT or Apache SIS**, an eighth independent confirmation.
+
+🟢 **The qualification this gap has been missing:** *the platform* is copyleft and *the extension
+point* is permissive, and reading only the platform cell gives an engagement the opposite answer.
+
 ## 🆕 `p420` · 2026-10-24 — **Moodle's grant MOVES with its ref: root `COPYING.txt` on `main`, `lang/en/docs/licence.html` on `MOODLE_13/14/15_STABLE`. 🔴 An engagement that pins a Moodle LTS ref and reads the root path concludes the world's most-deployed LMS is unlicensed.**
 
 🔵 Every probe below is first-hand on **2026-10-24** against a ref `git ls-remote` resolved.

@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p421` · 2026-10-24 — **`Amendment 11` adds the CASE axis to the grant ladder and makes the SHA the read channel. 🟢 And `Pattern AS` is new: the statute-shaped grading pipeline, where the human-in-the-loop step exists because US state law requires it, not because the model is weak — wired on `openedx/XBlock` (Apache-2.0) inside an AGPL-3.0 host.**
+
+🔵 **No date straddle:** every grant read, SHA resolution and digest below ran **2026-10-24**.
+🟢 **Gates ran FIRST** (`p412`): **51 / 52**, single red `Gap 400-B`.
+
+### 🔴 Amendment 11 — supersedes Amendment 10 on the READ, and adds the axis Amendment 10 missed
+
+🟢 **Amendment 10 got the UNIT right — `(ref, TREE)`, not `(ref, path)`.** `p421` leaves that
+intact and amends two other things, both measured on real repositories today.
+
+| # | rule | measured on |
+|---|---|---|
+| **11.1** | 🟢 **Read the grant AT THE COMMIT SHA, never at a ref.** Resolve the ref with `git ls-remote`, then request `raw.githubusercontent.com/<slug>/<40-hex>/<path>`. 🔵 **Calibrated both ways:** a bogus 40-hex SHA → **`404`**; `moodle/moodle` `COPYING.txt` at its real HEAD SHA → **`200`**. 🟢 **No alias can satisfy a SHA**, which is what makes this strictly stronger than `Gap 419-B`'s prescribed two-request fix | `moodle/moodle`, and all 10 addresses in [`grant-at-sha.2026-10-24-p421.tsv`](../evidence/grant-at-sha.2026-10-24-p421.tsv) |
+| **11.2** | 🔴 **The ladder has a CASE axis, and a lowercase-only ladder is wrong in BOTH directions.** `p401-C` lost a repository to a lowercase letter; `p421` lost two to an **uppercase extension**. The ladder must carry `LICENSE.TXT`, `COPYING.TXT` and `LICENCE.TXT` alongside their lowercase forms | `openedx/XBlock` + `openedx/xblock-sdk`: grant at **`LICENSE.TXT`**, while `LICENSE.txt`, `LICENSE.Txt`, `license.TXT` and `LICENSE` **all `404` at the same SHA** |
+| **11.3** | 🟡 **A README's own link to its licence is NOT a channel — it can be dead.** `openedx/XBlock`'s README links **`LICENSE.txt`** by name and that path `404`s. 🟢 **The manifest was the only channel naming the real path:** `pyproject.toml` → `license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]` | `openedx/XBlock` at SHA `c73c4bb` |
+| **11.4** | 🔵 **The default ref is not `main` or `master` often enough to assume either.** Measured this pass: `overhangio/tutor` defaults to **`release`**; `learningequality/kolibri` to **`develop`** (`p419`), with no `master` and no `main` | `overhangio/tutor` SHA `279f774` |
+
+🔴 **`T108`, fifth instance, recorded against this pass itself.** `p421`'s improvised 12-path
+ladder reproduced `11.2`'s defect — and **this base's own ladder vocabulary has carried
+`LICENSE.TXT` since `p211`/`p256`**, while `gate-ladder-case` (`p283`) exists to ask *"which path
+ladders can find an uppercase extension?"*. **Run the instruments; do not re-improvise them.**
+
+### 🆕 `Pattern AS` — the statute-shaped grading pipeline (North America first, EMEA on a deadline)
+
+🟢 **The premise is legal, not technical.** Multiple US state instruments prohibit AI from
+**replacing a licensed educator in grading**, and the EU puts *evaluation of learning outcomes*
+inside Annex III while leaving tutoring outside. 🔴 **So the deliverable is not an autograder.
+It is a reviewable evidence trail with a human decision at the end** — and that is a different
+system, priced differently.
+
+**The wiring, component by component, every licence read at its SHA this pass:**
+
+| step | component | licence *(verified)* | what it does here |
+|---|---|---|---|
+| 1 — rubric | [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | 🟢 **MIT** (`1 078` B `4e4fd8d68768`, `p420`) | The methodology, as markdown + a local **SQLite `corpus.db`**. 🟢 **`Sem API/ML`: calls no model, vendors no SDK**, so there is no inference cost and **nothing to disclose on a district's AI-tool register**. Port the competency structure; the ENEM corpus itself is Brazil-specific |
+| 2 — host surface | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** (`11 358` B `cfc7749b96f6`, SHA `c73c4bb`, at **`LICENSE.TXT`**) | The component API. 🟢 **The plugin runs INSIDE the platform** — full access to course state, no MCP hop, no LTI round-trip |
+| 3 — dev harness | [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 **Apache-2.0** (byte-identical grant, SHA `e61f9d2`) | Build and test the XBlock **without** standing up `edx-platform`. 🔵 This is what keeps step 2 cheap |
+| 4 — the host | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0**, narrowed (`p413`) | 🟡 **Priced, not hidden:** the host is copyleft. What shipping alongside it obliges is **counsel's call** — this base records grants |
+| 5 — deployment | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** (`34 523` B `0d96a4ff68ad`, SHA `279f774`, ref **`release`**) | The official installer, and **also copyleft**. 🔵 Note the ref: a `main`/`master` read of this repository is a read of nothing |
+| 6 — the human step | — | — | 🔴 **Non-optional and statutory.** Per-criterion score + rubric version + reviewer identity + timestamp, persisted. **This is the artefact a district discloses** |
+
+**Alternative host, same pattern:** where the LMS is **Moodle** (GPL-3.0, grant at root
+`COPYING.txt` on `main` — `p420`'s `T104`), step 2 becomes a Moodle local plugin and step 4's
+boundary changes from AGPL to GPL. 🟡 **The grading logic in step 1 stays MIT either way**, which
+is the whole reason to keep it model-free and outside the host.
+
+**Sequencing, 6–8 weeks:** step 3 first (the SDK harness runs on a laptop) → step 1 ported as a
+rubric module with no model → step 2 as a thin XBlock → step 6 → only then steps 4/5. 🟢 **Steps
+1–3 and 6 are all permissive or neutral**, so the copyleft decision is deferred to the last
+possible moment and can still be reversed.
+
+🔴 **What this pattern is NOT for.** Autonomous K-12 grading in a US state that prohibits it; and
+affect/emotion detection in an EU classroom, which has been banned since **2025-02-02** and is not
+covered by the **2027-12-02** deferral.
+
+### 🟡 `Pattern S` — one limit confirmed, no change
+
+🔵 `p420` shelved `dsvi-b/corretor-enem` with its own stated boundary (corpus pre-2025, so
+competencies **C2, C4 and C5 drift**). 🟢 **`p421` adds nothing and removes nothing** — the pattern
+is re-used as step 1 of `Pattern AS` above, which is the first time this base has composed it with
+a host surface rather than offered it standalone.
+
 ## 🆕 `p420` · 2026-10-24 — **Amendment 10 replaces `ACTION p419-A`'s prescription: the grant-enumeration unit is `(ref, TREE)`, with a positive control per ref and a SHA-pinned read. 🟢 Plus one new recipe that deploys nothing — `Pattern S`, an ENEM-calibrated grader mounted into an agent the engagement already runs.**
 
 🔵 Every component below was resolved first-hand on **2026-10-24**.

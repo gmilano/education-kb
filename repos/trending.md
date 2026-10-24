@@ -4,6 +4,19 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p421` · 2026-10-24 — **`openedx/XBlock`'s Apache-2.0 grant lives at `LICENSE.TXT` and its own README links `LICENSE.txt`, which 404s. 🔴 `T110`: `p401-C`'s lowercase lesson, inverted — and this pass's improvised ladder reproduced it, `T108`'s fifth instance. 🟢 Plus a new `34 523` B AGPL band with TWO distinct digests.**
+
+🔵 **Append-only, per this file's standing contract.** `p420` and everything below it is untouched.
+
+| what moved | first-hand, 2026-10-24, every payload read at its commit SHA (`T106`) |
+|---|---|
+| 🟢 **`openedx/XBlock` — Apache-2.0, and the path is the finding** | [`openedx/XBlock`](https://github.com/openedx/XBlock) at SHA `c73c4bb`, ref `master`: grant at **`LICENSE.TXT`**, `11 358` B, `sha256₁₂ cfc7749b96f6`. 🔴 **`LICENSE.txt`, `LICENSE.Txt`, `license.TXT` and `LICENSE` all `404` at the same SHA**, and the README links `LICENSE.txt` **by name** — a dead citation inside the authority's own README. 🟢 **Only `pyproject.toml` names the real path:** `license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]` |
+| 🟢 **`openedx/xblock-sdk` — the same bytes** | At SHA `e61f9d2`, ref `master`: **`LICENSE.TXT`**, `11 358` B, **`cfc7749b96f6` — byte-identical to XBlock's**. 🔵 Length AND digest agree, so this is a **digest identity**, not a `T101` length collision |
+| 🔴 **`T110` registered — the grant path's CASE is a channel, and this base already knew** | `p401-C` recorded *"one live repository was lost to a lowercase letter."* 🔴 This is that defect **inverted**: a grant lost to an **uppercase extension**. 🟢 **The base's own ladder vocabulary has carried `LICENSE.TXT` since `p211`/`p256`** and `gate-ladder-case` (`p283`) exists to ask *"which path ladders can find an uppercase extension?"* — and `p421`'s improvised 12-path ladder could not. **`T108`, fifth instance** |
+| 🟢 **`sakaiproject/sakai` — ECL-2.0, not Apache-2.0** | At SHA `c35e7a2`, ref `master`: `LICENSE`, `11 120` B, `sha256₁₂ 0688f62d04f1`, opening *"Educational Community License, Version 2.0 (ECL-2.0)"*. 🔴 **The sources calling Sakai *"Apache-derived"* describe LINEAGE, not the grant.** 🟢 The digest was already carried on this shelf and in `agents/trending.md`, and `compose/code/p1040-ecl-corpus-census` exists precisely because ECL text names *"Apache 2.0 license"* in lower case and contains **zero** occurrences of `Apache License` |
+| 🟢 **A new `T101` band: `34 523` B with two distinct digests** | [`overhangio/tutor`](https://github.com/overhangio/tutor) — **AGPL-3.0**, `LICENSE.txt`, `34 523` B, `0d96a4ff68ad`, at `279f774` on default ref **`release`** (neither `main` nor `master`). [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) — **AGPL-3.0**, `LICENSE`, `34 523` B, `8486a10c4393`, at `50faa45`. 🔴 **Same byte count, different digests**, which is `T101` (*a length is not an identity*) on a third band after `1 065` and `1 078`. 🔵 Strictly past `p414`'s `34 501` / `34 520` lattice: **`34 523` is a new cell and it already holds two** |
+| 🟡 **A shelf split worth naming** | `verticals/solutions.md` grades Sakai `ECL-2.0` on a row carrying **no address**; the address `sakaiproject/sakai` lives on **this** shelf instead. 🔵 A cross-shelf split rather than a missing address — and it **refuted** `p421`'s first closure for `gate-action-answered`'s platform vocabulary, which would have dropped `sakai` and with it the specimen |
+
 ## 🆕 `p420` · 2026-10-24 — **The trending channel produced no unshelved in-domain repository for the fifth pass running. 🟢 What it DID produce is a measurement of this base's own address population: 239 of 327 shelved addresses carry more than one branch.**
 
 🔵 **Append-only, per this file's standing contract.** `p419` and everything below it is untouched.

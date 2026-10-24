@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p421` · 2026-10-24 — **Two permissive foundation rows this shelf never carried, and they are the extension point of an AGPL platform: `openedx/XBlock` and `openedx/xblock-sdk`, Apache-2.0, byte-identical payloads, read at their SHAs. 🔴 Their grant is at `LICENSE.TXT` and the README links `LICENSE.txt`, which 404s. 🟢 `Gap 298` stands in its stated form — and gets the sharpest qualification it has had.**
+
+🟢 **Gates ran FIRST** (`p412`'s rule): `make hooks` **51 / 52** against `p420`'s commit `d93ad76`
+before any leg, single red `Gap 400-B`. 🔵 **No date straddle:** every read, SHA resolution and
+digest ran **2026-10-24**.
+
+### 🟢 Two new foundation rows — the permissive API inside a copyleft platform
+
+🔵 **Both were already in `compose/patterns.md` (`p390`) and on NEITHER recommendation shelf.**
+`p421` re-read both first-hand at their commit SHAs (`T106`) and promotes them here, because a
+component API an engagement *imports* is a foundation, not a pattern footnote.
+
+| repo | address | licence *(read at SHA)* | what it is, and the boundary |
+|---|---|---|---|
+| **XBlock** | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** — `LICENSE.TXT`, `11 358` B, `sha256₁₂ cfc7749b96f6`, SHA `c73c4bb`, ref `master`. 🟢 `pyproject.toml`: `license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]` | The **component API** an Open edX plugin imports. 🟢 **The platform is AGPL-3.0 and this is not**, so the component an engagement writes against it is not forced copyleft by the import. 🔴 **Boundary, stated rather than implied: this is a measurement of the GRANT, not legal advice about a deployment** — what a studio ships alongside an AGPL host is a question for counsel, and this base records bytes |
+| **xblock-sdk** | [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 **Apache-2.0** — `LICENSE.TXT`, `11 358` B, **`cfc7749b96f6`**, SHA `e61f9d2`, ref `master` | The **development harness** for the above: a standalone workbench, so an XBlock is built and run **without** standing up `edx-platform`. 🟢 **Byte-identical grant to XBlock's** — length *and* digest, so a digest identity rather than a `T101` collision |
+
+🔴 **And the grant is reachable only at an UPPERCASE extension.** At the same SHA, `LICENSE.txt`,
+`LICENSE.Txt`, `license.TXT` and bare `LICENSE` **all return `404`** — while the repository's own
+README links **`LICENSE.txt`** by name. 🟢 **`T110` registered:** `p401-C` recorded *"one live
+repository was lost to a lowercase letter"*; this is the same defect inverted, and `p421`'s
+improvised 12-path ladder reproduced it — **`T108`'s fifth instance**, against a base whose own
+ladder vocabulary has carried `LICENSE.TXT` since `p211`/`p256`.
+
+### 🟡 `Gap 298` / `Gap 405-A` — stands, with the qualification it was missing
+
+🔵 The gap reads *"no major education SIS or LMS carries a permissive grant."* 🟢 **It stands:**
+this pass's vertical leg returned Moodle (GPL-3.0), Open edX (AGPL-3.0), Canvas (AGPL-3.0 CE),
+Chamilo / ILIAS / Forma LMS (GPL), OpenOLAT (Apache-2.0, already shelved), Sakai (**ECL-2.0**),
+RosarioSIS and Gibbon (GPL) — **no permissive platform that was not already carried.**
+
+🟢 **The qualification, measured this pass:** the **extension point** of the largest AGPL platform
+*is* permissive, and that is a different fact from the platform's grade. 🔴 **An engagement that
+reads only the platform cell concludes the opposite of what the component grant says.**
+
+### 🔴 The Apache-2.0 claim this pass was sent to resolve, resolved — and already held
+
+🔵 `ACTION p420-E` asked for *"whether any Open edX component or Sakai is Apache-2.0"*, citing
+`p289`. 🟢 **Answer: an Open edX component yes, Sakai no.** 🔴 **Both halves were on these shelves
+when the action was written** — `verticals/solutions.md` graded Sakai `ECL-2.0`, and
+`compose/patterns.md` had carried the Apache-2.0 component since `p390`. 🟢 That is `T109`, and
+`gate-action-answered` now fails `make hooks` on its shape.
+
+| address | verdict at SHA | against the claim |
+|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · `LICENSE` · `11 120` B · `0688f62d04f1` · `c35e7a2` · `master` | 🔴 **Refuted.** *"Apache-derived"* is lineage, not the grant |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** · `LICENSE.TXT` · `11 358` B · `cfc7749b96f6` · `c73c4bb` | 🟢 **Confirmed**, and promoted to a row above |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 **AGPL-3.0** · `LICENSE.txt` · `34 523` B · `0d96a4ff68ad` · `279f774` · ref **`release`** | 🔴 Not Apache. 🔵 Default ref is **`release`** — neither `main` nor `master` |
+| [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) | 🟢 **AGPL-3.0** · `LICENSE` · `34 523` B · `8486a10c4393` · `50faa45` | 🔴 Not Apache. 🟢 **Same byte count as Tutor's, different digest** — a new `T101` band |
+
+### 🟡 `T111` — this base's own shelf paths pass `p351`'s address shape
+
+🔵 Found by `p421`'s new gate being **wrong** before it was right. `classify()` returns `None`
+(*may be an address*) for `agents/top.md`, `intel/open-gaps.md`, `compose/patterns.md` and
+`verticals/solutions.md`. 🔴 **`repos/foundations.md` — this file — is rejected only because GitHub
+happens to use `repos` as one of its own namespaces.** 🟢 **Latent on both live channels, measured:**
+`p348`'s `slugs_in` anchors on `github.com/` (so `make address-shape-census` sees no shelf path) and
+`p367`'s channel B admits **zero** of them. 🟢 **The census denominators are therefore untouched**,
+which is why this is a `T`, not a correction.
+
 ## 🆕 `p420` · 2026-10-24 — **The three Frappe platforms this base recommends were one lowercase filename away from being graded ungranted. 🟢 All three grant at `license.txt`: ERPNext GPL-3.0, Frappe LMS AGPL-3.0-or-later, Frappe Education. 🔴 And five Moodle AI plugins carry their GPL grant ONLY in source headers — one of them on no other channel at all.**
 
 🔵 Every read below is first-hand on **2026-10-24**, at a SHA or a ref resolved by `git ls-remote`.

@@ -1,0 +1,12 @@
+# p293 slug-existence oracle — calibrated against the control pair above.
+# ABSENT-OR-PRIVATE does NOT mean absent: this channel cannot separate
+# a missing repository from a private one.
+slug	url	verdict	head_sha	detail
+thanh01pmt/interactive-quiz-kit	https://github.com/thanh01pmt/interactive-quiz-kit	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+AI-Matrix-Engine/aidream	https://github.com/AI-Matrix-Engine/aidream	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+Mckaroff/GraphLMS	https://github.com/Mckaroff/GraphLMS	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+santillana-ai/tutor-sdk	https://github.com/santillana-ai/tutor-sdk	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+ale-alejandro/beadkit	https://github.com/ale-alejandro/beadkit	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+yokowasis/autograder	https://github.com/yokowasis/autograder	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+e9x/blackboard-mcp	https://github.com/e9x/blackboard-mcp	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+parkseokjune/unist-blackboard-mcp	https://github.com/parkseokjune/unist-blackboard-mcp	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)

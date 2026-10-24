@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-24
 ---
 
+## Pass 421 — reads 2026-10-24, commit 2026-10-24 — **THE INSTRUMENT FOR *"IS THIS ACTION ALREADY ANSWERED?"* HAS EXISTED SINCE PASE 59, PASSES 16/16, AND IS IN NO `make` TARGET. 🔴 WIRING IT AS-IS WOULD HAVE BOUGHT NOTHING — IT READS A NOTATION THIS REGISTER RETIRED AND REPORTS `0` CITATIONS. 🟢 `gate-action-answered` BUILT, AMENDED THREE TIMES ON MEASURED FALSE RATES (268 → 2) AND WIRED. 🔴 AND `ACTION p420-E`'s BOTH HALVES WERE ALREADY ON THESE SHELVES WHEN IT WAS WRITTEN.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, SHA read, payload digest and gate run happened
+**2026-10-24**; the commit lands **2026-10-24**, so `updated:` carries one date.
+
+🟢 **Gates ran FIRST, which is `p412`'s standing rule and the one `p420` admitted breaking.**
+`make hooks` completed against `p420`'s commit `d93ad76` **before** the first research leg:
+**51 / 52 green**, the single red being `gate-census-union` control 24 — `Gap 400-B`, deliberately
+red since `p398`.
+
+**What this pass established, first-hand:**
+
+- 🔴 **An instrument can sit in this repository, pass its own suite, and be in no `make` target for
+  ~360 passes.** `compose/code/action-gap-crosscheck` (pase 59) exists for this base's exact blind
+  spot — *«que ninguna acción entregada esté ya contestada por el propio corpus»* — passes
+  **16 / 16**, and `grep -n action-gap-crosscheck Makefile` returns **nothing**. 🟢 Second recorded
+  instance of `gate-region-headings`' class (`p338`), so it is a pattern, not an accident
+  (`Gap 421-A`).
+- 🔴 **And wiring it as-is would have bought nothing, which is the sharper half.** Over the live
+  corpus it reports `gap citations inside action blocks : 0` — blind on **all three** channels it
+  reads: the action-block heading, the gap-citation shape, and the closure vocabulary. **A gate
+  whose denominator is zero is green for the same reason a correct one is green** (`Gap 421-B`).
+- 🟢 **`gate-action-answered` is built, amended three times and wired** — 29 controls, 29 pass, in
+  `HOOK_GATES`. 🔴 **Its first draft reported 268 findings**, the 99 %-false shape `p420` refused to
+  ship for `ACTION p419-A`. **268 → 13 → 12 → 2**, and the two survivors are both the specimen,
+  over a denominator of **551** delivered actions in **103** action blocks.
+- 🔴 **`T109` — `ACTION p420-E` was answered by this base's own files before it was written.** It
+  asked *"whether any Open edX component or Sakai is Apache-2.0"*; `verticals/solutions.md` already
+  graded Sakai `ECL-2.0` and `compose/patterns.md` had carried the Apache-2.0 component since
+  `p390`. 🟢 Re-read first-hand at the SHA anyway, because `p289` is right even then.
+- 🟢 **`T110` — the grant path has a CASE axis, in both directions.** `openedx/XBlock` grants at
+  **`LICENSE.TXT`** (`11 358` B `cfc7749b96f6`, SHA `c73c4bb`) while `LICENSE.txt`, `LICENSE.Txt`,
+  `license.TXT` and `LICENSE` **all `404`** — and the README links `LICENSE.txt` by name. 🔴
+  `p401-C` lost a repository to a *lowercase* letter; this is the inverse, and `p421`'s improvised
+  ladder reproduced it (`T108`, fifth instance).
+- 🟢 **`ACTION p420-C` answered by REFUSAL, `ACTION p420-D` executed, `ACTION p420-E` resolved.**
+  The slug oracle returns `ABSENT-OR-PRIVATE` for all 8 and its own header declines the
+  absent/private split the action demanded; `zijinz456/OpenTutor` **continues**
+  `Pranjulcr7/OpenTutor` (`SUPERSET`, direction `b`) while holding **four fewer** commits — `T112`.
+- 🔴 **Supply is a measured ZERO.** The capability leg returned **5** unshelved in-domain addresses
+  and **all 5 are ungranted** at 15 paths at their own SHAs, with no manifest declaring a licence.
+  🟢 Graded by full history they are **`INDEPENDENT`** of one another — a convergent template class
+  no history instrument on this base can see (`T113`, `Gap 421-F`).
+- 🟢 **Two foundation rows promoted** that `compose/patterns.md` had held alone since `p390`:
+  `openedx/XBlock` and `openedx/xblock-sdk`, Apache-2.0, **byte-identical** grants.
+- 🔵 **Four regional legs, four returned material, no nil — and two carry date conflicts registered
+  rather than resolved** (Vietnam's education grace period; Brazil's `PL 2338/2023` stage).
+  🟢 `ACTION SH` did not fire for EMEA and the deferral counter advances to **nine**.
+
+### 🟢 The census, derived LAST — after every shelf write
+
+🟢 **Re-derived as the last act before the commit**, per `p352` and `p376`. 🔵 **The shape census:**
+**2 770** harvested shapes → **38** are not addresses → **2 732 addresses**. 🔵 **2 732** channel-U
+addresses and **3 207** channel-B survivors give **3 574 addresses over both channels**.
+
+🔵 **Against `p420`'s published triple (`2 765 / 38 / 2 727`, union `3 569`), the movement is
+`+5 / 0 / +5`, union `+5`** — this pass's own new addresses (`openedx/XBlock`,
+`openedx/xblock-sdk`, `overhangio/tutor`, `openedx/frontend-app-learning`, `sakaiproject/sakai`
+where it was not already in channel U). 🟢 **Every cell above is a fresh derivation over the
+shelves as this commit leaves them**, which is `Gap 419-D`'s lesson.
+
+🟡 **And the wording of that last sentence is itself a finding, recorded rather than hidden.** The
+sentence first read *"Derived, not carried, which is the whole point of `Gap 419-D`'s lesson"* and
+`gate-absence` graded it **REFUTED**, reading the subject of *"not carried"* as the token
+`Gap 419-D` and refuting it by counting that token across nine shelves. 🔴 **`Gap 420-A` exactly** —
+attribution by **token** rather than by sentence — and `p420` predicted it would *"re-fire on any
+pass whose header reuses that vocabulary."* 🟢 **The gate was NOT weakened** (`p387-G`): the prose
+was rewritten so the artefact cannot form, and the fact that a pass must write around a control's
+defect is the strongest evidence yet for `ACTION p420-A`.
+
+### 🟢 Gate state at this commit
+
+🟢 **`make hooks` re-run after every shelf write and after the census re-derivation: this
+commit grades 52 / 53.** The single red is `gate-census-union` control 24 — `Gap 400-B`,
+deliberately red since `p398`. 🟢 **All six census cells read MATCH.**
+
+🟢 **The new `gate-action-answered` is the 53rd control** and is green **with its denominators
+published** — 103 action blocks, **551** delivered actions, 84 closed gaps, 14 platforms, 1 096
+graded addresses — so its green is a measurement rather than an empty parse, which is the one
+thing the instrument it replaces could not say.
+
+🔴 **One red was earned and then cleared during the pass, recorded rather than hidden:**
+`gate-absence` fired on `p421`'s own README prose (see the census note above), making this the
+second live instance of `Gap 420-A`.
+
 ## Pass 420 — reads 2026-10-24, commit 2026-10-24 — **THE GATES RAN. 🟢 `Gap 419-D` CLOSES AND `p419` IS GRADED RETROSPECTIVELY AT 48 / 52 — TWO OF ITS FOUR REDS ARE `p419`'s OWN CARRIED CENSUS FIGURES AND A THIRD FIRES ON `p419`'s OWN PROSE. 🟢 THE REF-AXIS POPULATION IS MEASURED: 239 OF 327 SHELVED ADDRESSES ARE MULTI-REF, 668 `(slug, ref)` PAIRS PROBED, AND EXACTLY ONE ADDRESS IS A GENUINE BRANCH-GRANT HAZARD. 🔴 SO `ACTION p419-A`'s GATE, BUILT AS PRESCRIBED, WOULD HAVE FIRED 114 TIMES TO CATCH 2 REAL PAIRS.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, probe, payload read and digest ran **2026-10-24**;

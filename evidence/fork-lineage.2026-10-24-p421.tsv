@@ -1,0 +1,8 @@
+# p421, 2026-10-24 — graded by FULL history with compose/code/p404-fork-direction/forkdir.sh.
+# Row 1 is ACTION p420-D. Rows 2-4 test whether p421's five capability-leg addresses
+# are one artefact: they are NOT — zero shared commits AND zero shared trees each.
+a	b	commits_a	commits_b	shared_commits	shared_trees	a_contains_b_head	b_contains_a_head	verdict	direction
+Pranjulcr7/OpenTutor	zijinz456/OpenTutor	210	206	193	189	False	True	SUPERSET	b
+Subhradyuti/Lesson-Content-Generator	Avinashhmavi/Self-Evaluating-Lesson-Content-Generator	5	3	0	0	False	False	INDEPENDENT	None
+ShanmukaAlapati/Lesson-Writer-Agent	Avinashhmavi/Self-Evaluating-Lesson-Content-Generator	5	3	0	0	False	False	INDEPENDENT	None
+rohan-9506/lesson-agent	Shaik-Sam/rag-lesson-agent	2	3	0	0	False	False	INDEPENDENT	None

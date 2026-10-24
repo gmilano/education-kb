@@ -34,6 +34,7 @@ BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
 DEADCITE_LOG ?= /tmp/education-kb-gate-dead-citation.log
 REGIONLEG_LOG ?= /tmp/education-kb-gate-regional-leg.log
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
+ACTIONANS_LOG ?= /tmp/education-kb-gate-action-answered.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 COMPANION_LOG ?= /tmp/education-kb-gate-companion-closure.log
@@ -79,7 +80,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
+.PHONY: gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -116,7 +117,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-i2-sweep-crosscheck \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
-             gate-capability-absence gate-fork-direction gate-group-lineage
+             gate-capability-absence gate-fork-direction gate-group-lineage \
+             gate-action-answered
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -487,6 +489,10 @@ gate-slug-oracle: ## ACTION p293 — a credential prompt is a MEASUREMENT, not a
 # load-bearing — a mutation blanking `grade()`'s call reddened NOTHING. No network.
 gate-i2-sweep-crosscheck: ## p407 — Gap 406-A: the two instruments cross-checked, disagreements graded by MECHANISM
 	@cd compose/code/p407-i2-sweep-crosscheck && $(PY) -I test_crosscheck.py ../../.. || exit 1
+
+gate-action-answered: ## p421 — no pass may DELIVER an action the corpus already answers.  `action-gap-crosscheck` (pase 59) is this question's first instrument and has been in NO make target for ~360 passes; run over the live corpus it reports 0 citations, because it reads the retired `pase N`/`gap N`/`CERRADO` notation.  This is that question re-notated, with the RATCHET pinned at p420's specimen.
+	@cd compose/code/p421-action-answered && { $(PY) test_action_answered.py > $(ACTIONANS_LOG) 2>&1 || { echo "🔴 p421-action-answered FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ACTIONANS_LOG) ; false ; } ; } && echo "── p421-action-answered (29 controls: the zero-denominator guard \`action-gap-crosscheck\` lacked, the real \`ACTION p420-E\` specimen on both halves, the three amendments that cut a 268-finding first draft to 2, both section notations, T103 attribution by row-then-cell, the STALE arm's forward-reference control, and the prose-first-cell hole pinned OPEN rather than closed by a refuted fix)" && echo "   PASS" || exit 1
+	@cd compose/code/p421-action-answered && $(PY) -I action_answered.py ../../.. | head -6
 
 gate-carried-existence: ## Gap 405-C — the EXISTENCE of a CARRIED address, swept (offline controls; the sweep itself is ONLINE and stays out of hooks)
 	@cd compose/code/p406-carried-existence && { $(PY) test_carried_existence.py > $(CARRIEDEX_LOG) 2>&1 || { echo "🔴 p406-carried-existence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CARRIEDEX_LOG) ; false ; } ; } && echo "── p406-carried-existence (29 controls: the decay rate's two sides with CHANNEL-ERROR on NEITHER, C12's constructed population where the three readings differ, p293's C9' re-asserted plus the MOVED bound this pass measured, the retry arm, and p351's rejection arm as the population guard)" && echo "   PASS" || exit 1
