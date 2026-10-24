@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p422` · 2026-10-24 — **The vertical leg returned ZERO unshelved platforms for a second consecutive pass — and it also returned two Apache-2.0 claims this file must NOT accept, because both conflict with grades already on these shelves. 🟢 The real vertical movement is one layer up: the agent-facing tier over these platforms is MIT, 9 of 9.**
+
+🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
+host's auto-mode classifier refused it (`[Code from External]`), the same refusal `p419` recorded.
+🟢 `p412`'s standing rule is therefore **unmet and declared**, not skipped silently; every file
+contract below was honoured by hand. `Gap 422-A` registers the un-run suite, second instance.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and digest ran **2026-10-24**; the commit
+lands **2026-10-24**, so `updated:` carries one date.
+
+### 🔴 Two licence claims from the vertical leg, REFUSED rather than written
+
+🟢 **`p289`'s rule is the operative one: a licence claim from a comparison blog is not a grade.**
+The leg `open source platform education LMS SIS MIT Apache self-hosted 2026` served two
+permissive claims, and **neither is written into a cell this pass:**
+
+| claim served | why it is refused | what this file already holds |
+|---|---|---|
+| 🟡 **OpenOlat is Apache-2.0** | 🔵 Plausible and **consistent with a mention this base already carries** in `compose/patterns.md` — but **no payload was read at a SHA this pass**, and `p289` forbids promoting an unread grade into a graded cell | Carried as a mention, not as a graded row. 🟢 Left exactly as it was |
+| 🔴 **forma LMS is Apache-2.0** | 🔴 **The serving channel itself reported that other sources grade it `GPL` or `LGPL`** — a conflict disclosed at the point of service. Writing either value would be picking a side unread | No graded row. 🟢 Registered as conflicted, resolved by neither |
+
+🔵 **`ACTION p422-A`** — resolve `OpenOLAT/OpenOLAT`'s grant first-hand at its SHA with `p230`'s
+ladder, and grade `formalms/formalms` or record it as unreachable. 🟢 Both are one `ls-remote` and
+one `raw.githubusercontent.com` read away on the channel `p422` used all pass; neither was spent
+here because the pass's measurement budget went to the MCP tier.
+
+### 🟢 The platform tier, re-stated — because the contrast with the new tier is the finding
+
+🔵 Carried from these shelves, each graded at a SHA by an earlier pass. **Nothing below is new**,
+and it is restated only so the two-tier contrast reads in one place:
+
+| platform | grant | note |
+|---|---|---|
+| **Moodle** | 🔴 `GPL-3.0` | 🔵 Grant path varies by ref — root `COPYING.txt` on `main`, `lang/en/docs/licence.html` on the `MOODLE_*_STABLE` refs (`p420`) |
+| **Open edX** (`openedx/edx-platform`) | 🔴 `AGPL-3.0`, narrowed (`p413`) | 🟢 But its component `openedx/XBlock` is **Apache-2.0**, `11 358` B `cfc7749b96f6` @ `c73c4bb` (`p421`) — **the extension point is permissive even though the host is not** |
+| **Canvas LMS** | 🔴 `AGPL-3.0` | 🟢 The platform with the deepest MCP tier above it, by a wide margin |
+| **Sakai** | 🔴 `ECL-2.0`, `11 120` B `0688f62d04f1` @ `c35e7a2` (`p421`) | 🔵 Apache-derived but **not** Apache-2.0 |
+| **OpenEduCat** | 🔴 `LGPL-3.0` | 🔵 The Odoo-based education ERP; the closest thing in this sector to the "Odoo for ERP" shape |
+| **`frappe/lms`** | 🔴 `AGPL-3.0-or-later`, grant at lowercase `license.txt` | 🔵 `package.json` agrees (`p420`) |
+| **RosarioSIS · Gibbon · Chamilo · ILIAS** | 🔴 `GPL` family | 🔵 All carried; none moved this pass |
+
+🔴 **Not one permissive grant in the platform tier.** 🟢 **Nine of nine in the tier directly above
+it.** That is the whole commercial shape of this sector's licensing, and `p422` is the first pass
+that can state both halves from measurement.
+
+### 🟢 What this changes about how a vertical engagement is scoped
+
+- 🟢 **The customisation surface a client buys is the MCP/agent layer, and it is MIT.** Scope it as
+  deliverable IP; it is not a derivative work of the AGPL host it talks to.
+- 🔴 **The platform itself stays the client's.** Fork it and the engagement acquires a
+  distribution obligation — network use included, under AGPL. 🔵 Open edX is the one place where a
+  permissive *extension point* exists inside a copyleft host (`openedx/XBlock`, Apache-2.0).
+- 🟡 **The SIS tier is GPL across the board and has no measured agent layer at all.** 🔵 Stated as
+  an informed gap, not as coverage: this pass found **no** MCP or agent surface over RosarioSIS,
+  Gibbon or openSIS, where Canvas alone has at least seven.
+
 ## 🆕 `p421` · 2026-10-24 — **`ACTION p420-E` resolved first-hand: Sakai is `ECL-2.0` and NOT Apache-2.0, and the Apache-2.0 Open edX component is real — `openedx/XBlock`. 🔴 Both answers were already on these shelves when the action was written. 🟡 And this file grades Sakai on a row that carries no address, which refuted the obvious fix for `p421`'s new gate.**
 
 🔵 **No date straddle:** every payload read, SHA resolution and digest ran **2026-10-24**; the

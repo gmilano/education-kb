@@ -1,0 +1,12 @@
+# p422, 2026-10-24 — a ONE-BYTE divergence between two read channels, on the SAME payload.
+# Subject: https://raw.githubusercontent.com/javohir73/mcp-server-canvas-lms/2472593/LICENSE
+# Command substitution $(curl ...) strips the trailing newline; curl -o file does not.
+# Because this register grades a grant by (bytes, sha256_12), the two channels DISAGREE on both.
+channel	how the payload was captured	bytes	sha256_12	verdict
+file	curl -sS -L -o "$tmp" <url> ; wc -c < "$tmp" ; sha256sum "$tmp"	1069	72380798af61	CANONICAL — matches compose/code/p230-prose-path-ladder/probe.sh:27-31 and p211-full-column-grant-audit/fetch_one.sh:13-16
+substitution	body=$(curl -sS <url>) ; printf '%s' "$body" | wc -c	1068	453575e61c43	DIVERGENT — p422's own improvised ladder used this and was wrong by one byte
+# Contamination audit of this base's own instruments, by reading them (they were NOT executed):
+instrument	line	channel	measures bytes/digest?	contaminated
+compose/code/p230-prose-path-ladder/probe.sh	27-31	file	yes	no
+compose/code/p211-full-column-grant-audit/fetch_one.sh	13-16	file	yes	no
+compose/code/p280-manifest-ownership/sweep.sh	26-30	substitution	no — greps manifest fields only	no

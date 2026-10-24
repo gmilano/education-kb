@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p422` · 2026-10-24 — **The permissive arm of education open source EXISTS — and it is not the platform, it is the AGENT-FACING LAYER ON TOP of the platform. 🟢 Ten LMS MCP servers read at their own commit SHAs: NINE are MIT, one is ungranted. 🔴 And the discovery leg served a 683-commit-stale FORK as the canonical address, with the upstream's copyright line intact so a licence-only check cannot see it.**
+
+🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
+host's auto-mode classifier refused it (`[Code from External]`), the same refusal `p419` recorded.
+🟢 `p412`'s standing rule is therefore **unmet and declared**, not skipped silently; every file
+contract below was honoured by hand. `Gap 422-A` registers the un-run suite, second instance.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and digest ran **2026-10-24**; the commit
+lands **2026-10-24**, so `updated:` carries one date.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`T114` — a whole capability class whose grant profile is uniformly permissive, which this
+  base has never recorded.** Ten MCP-over-LMS addresses, every grant read at its own commit SHA:
+  **9 GRANTED, all MIT**, 1 ungranted. 🔴 **`Gap 298` is not refuted — it is QUALIFIED, and the
+  qualification is the commercially useful part** (below).
+- 🔴 **`T115` — the leg served a FORK as the canonical address.** `NelsonSpencer/canvas-mcp` and
+  `vishalsachdev/canvas-mcp` share root commit `afe32c3e1721` and **414** commits; the served one
+  holds **2** own commits against the upstream's **683**, and is a week staler. 🟢 Their `LICENSE`
+  payloads are **byte-identical** (`1 071` B `5385a26e2fac`) **with the upstream's copyright line
+  retained** — correct MIT behaviour, and exactly what makes the substitution invisible to a
+  grant-only check.
+- 🟢 **`T116` — `p419`'s branch-grant hazard tested on a new class and it does NOT fire.** **32**
+  `(slug, ref)` pairs across the three multi-head repositories (10 + 16 + 6 heads); **every head
+  carries `LICENSE`, byte-identical within each repository**. The hazard stays rare.
+- 🔴 **`T117` — this pass's improvised ladder was wrong by ONE BYTE, and caught itself.**
+  `$(curl …)` strips the trailing newline: the same payload reads **1 068** B `453575e61c43`
+  through command substitution and **1 069** B `72380798af61` through `curl -o file`. 🟢 **The
+  canonical instruments are clean** — `p230`'s and `p211`'s ladders use the file channel, so no
+  shelved digest is contaminated. `T108`'s class, sixth instance.
+- 🟢 **`T100` holds a SEVENTH time and SHARPENS.** Both ranking legs and the two capability legs
+  worded at capabilities this register has already exhausted (tutoring, essay grading) returned
+  **zero** unshelved of ~40 addresses. The only productive leg was worded at a capability class
+  the register had never enumerated: **3 unshelved of 15**. 🔵 **The discriminator is not
+  "capability vocabulary" — it is an UN-ENUMERATED capability class.**
+
+### 🆕 Tier 8 — the MCP-over-LMS class, every grant read at its own commit SHA on 2026-10-24
+
+🔵 **Channel:** `git ls-remote --heads` for refs, `raw.githubusercontent.com/<slug>/<sha>/<path>`
+for payloads. `api.github.com` and `github.com` HTML are **403** on this egress allowlist, so
+**no star count was readable this pass** and none is written below — `p415`'s channel finding
+holding a fifth time. 🟢 Bytes and digests are file-channel, per `T117`.
+
+| address | grant, read at the SHA | heads | history | capability — band stated per cell |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** `LICENSE` `1 071` B `5385a26e2fac` @ `f4f0780` | 4 | **1 097** commits, 2025-02-27 → **2026-10-23** | 🟢 **The canonical upstream of the Canvas MCP line.** Student + educator tools with anonymisation tiers. 🔵 Already on these shelves (197 mentions) — `p422` establishes its position, not its existence |
+| [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) | 🟢 **MIT** `LICENSE` `1 071` B `5385a26e2fac` @ `92b7fbc` — 🔴 **byte-identical to the row above, copyright line `2025 Vishal Sachdev` retained** | 16 | **416** commits, same root, **2 own / 683 behind**, last **2026-10-16** | 🔴 **A lagging fork the discovery leg served as the canonical address.** Do not pin it: the upstream carries 683 commits it does not have |
+| [`javohir73/mcp-server-canvas-lms`](https://github.com/javohir73/mcp-server-canvas-lms) | 🟢 **MIT** `LICENSE` `1 069` B `72380798af61` @ `2472593` | 10 | **23** commits, 2026-08-14 → **2026-10-21** | 🆕 **Unshelved before this pass.** 🟢 **Strictly read-only** — stated in its own `README.md` read at the SHA, not from a snippet. Courses, grades, submissions, files |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | 🟢 **MIT** `LICENSE` `1 072` B `ed912ca72d9e` @ `29c6baa` | 1 | **41** commits, 2026-10-14 → **2026-10-23** | 🟡 Read-only Canvas: due dates, grades, missing work, announcements. Band `reported` — the read-only claim is the repository's own description, not read from code |
+| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 **MIT** `LICENSE` `1 072` B `ed912ca72d9e` @ `23cdf92` — 🔵 **byte-identical to the row above; same author, two repositories** | 1 | **49** commits, 2026-10-14 → **2026-10-23** | 🟡 Read-only Moodle through the **mobile web service**, which is the deployment precondition. Band `reported` |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 **MIT** `LICENSE` `1 070` B `f01d2f81a436` @ `bd7ec03` | 1 | **79** commits, 2026-08-07 → **2026-08-15** | 🟡 16 curated student tools plus a gateway over the wider Canvas API. 🔴 **No commit in ~10 weeks** — the widest surface in the tier is also among the stalest |
+| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | 🟢 **MIT** `LICENSE` `1 067` B `13c8ad755224` @ `b6c26ba` | 1 | **5** commits, 2026-10-19 → **2026-10-20** | 🟢 **The only one that avoids API tokens entirely — university SSO sign-in.** 🔴 **5 commits over two days**: an architecture to copy, not a dependency to take |
+| [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | 🟢 **MIT** `LICENSE` `1 064` B `6923a6b4bf1c` @ `9b7efdc` | 6 | **70** commits, 2026-01-13 → **2026-02-13** | 🟡 Grades, assignments, academic data. 🔴 **Dormant ~8 months** |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟢 **MIT** `LICENSE` `1 063` B `2cf91ec5272f` @ `a65aefa` | 1 | **13** commits, 2026-03-16 → **2026-04-04** | 🔴 **NOT read-only** — its `README.md` at the SHA names `submit_assignment`, read first-hand. 🟢 Go, not Python, which is the only non-Python runtime in the tier. 🔴 Dormant ~6 months |
+| [`DA0806/canvas-student-mcp`](https://github.com/DA0806/canvas-student-mcp) | 🔴 **UNGRANTED** @ `5d8ace9` — no payload at **10** licence paths, and **neither `package.json` nor `pyproject.toml` declares a licence** | 1 | **12** commits, 2026-09-15 → **2026-10-03** | 🆕 Unshelved before this pass, and 🔴 **unusable as-is**: FastMCP Canvas student server with no grant on any channel checked |
+
+🔴 **Ten rows, ten real addresses, every one probed.** No row below is carried from a snippet
+without a first-hand read of its grant.
+
+### 🟢 What `Gap 298` actually says after this pass
+
+🔴 **`Gap 298` — "education open source is overwhelmingly copyleft" — was measured on the PLATFORM
+tier and is true there**: Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas `AGPL-3.0`, Sakai
+`ECL-2.0`, OpenEduCat `LGPL-3.0`, `frappe/lms` `AGPL-3.0-or-later`. 🟢 **The INTEGRATION tier over
+those same platforms is uniformly MIT — 9 of 9 granted addresses.**
+
+🟢 **The studio consequence is concrete and it is a sell:** *you cannot ship a permissive fork of
+the LMS, but you can ship the agent layer over it permissively, and that is the layer the client
+is actually buying.* 🔵 The copyleft obligation attaches to the platform the client already runs;
+the new code sits beside it, over a network API, under MIT.
+
+### 🔴 Searched and NOT found — recorded so a successor does not re-spend the leg
+
+🟢 **Five legs returned zero unshelved addresses**, which is why this is written down rather than
+omitted: `top open source AI agents education 2026 github MIT`; `github trending education AI 2026
+repositories`; `open source AI tutor agent github 2026 adaptive learning LLM`; `open source essay
+grading agent rubric LLM github 2026 MIT license classroom`; `open source platform education LMS
+SIS MIT Apache self-hosted 2026`. 🔵 Between them they served `OpenOLAT`, `formalms`, `frappe/lms`,
+`OpenEduCat`, `RosarioSIS`, `Gibbon`, `autorubric`, `researchrubrics`, `inside-the-scorer`,
+`essay-grader-llm`, `AssessmentAI`, `bandup`, `freelingo`, `OpenTutor`, `Learning-Agent-System`,
+`adaptive-knowledge-graph` and `ai-agent-to-learn-faster-and-better` — **every one already on these
+shelves.**
+
 ## 🆕 `p421` · 2026-10-24 — **The instrument for *"is this action already answered?"* has existed since pase 59, passes 16/16, and is in NO `make` target — and wiring it as-is would have bought NOTHING, because it reads a notation this register retired. 🔴 `ACTION p420-E` is the live specimen: both halves were already on these shelves. 🟢 `gate-action-answered` is BUILT, AMENDED THREE TIMES on measured false rates, and WIRED — 268 findings cut to 2, both of them the specimen.**
 
 🟢 **Gates ran FIRST this pass, which `p412`'s standing rule asks and `p420` admitted breaking.**

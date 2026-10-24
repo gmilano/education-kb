@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p422` · 2026-10-24 — **The foundation layer of an education engagement is now TWO layers with opposite licences, and this file has only ever graded one of them. 🟢 Platform tier: `GPL-3.0` / `AGPL-3.0` / `ECL-2.0` / `LGPL-3.0`, no exceptions. 🟢 Integration tier over the same platforms: MIT, 9 of 9 granted. 🔴 `Gap 298` is QUALIFIED, and the qualification is what a studio actually bills against.**
+
+🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
+host's auto-mode classifier refused it (`[Code from External]`), the same refusal `p419` recorded.
+🟢 `p412`'s standing rule is therefore **unmet and declared**, not skipped silently; every file
+contract below was honoured by hand. `Gap 422-A` registers the un-run suite, second instance.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and digest ran **2026-10-24**; the commit
+lands **2026-10-24**, so `updated:` carries one date.
+
+### 🟢 The two-tier picture, stated as one table because the contrast IS the finding
+
+🔵 Platform rows are carried from these shelves (each previously read at a SHA by an earlier
+pass); integration rows were all read **first-hand at their own commit SHAs on 2026-10-24**.
+
+| tier | representative addresses | grant | what the grant means for a client engagement |
+|---|---|---|---|
+| **Platform / LMS** | Moodle · Open edX · Canvas LMS · Sakai · OpenEduCat · `frappe/lms` · Chamilo · ILIAS | 🔴 `GPL-3.0`, `AGPL-3.0`, `ECL-2.0`, `LGPL-3.0` — **not one permissive grant across the tier** | 🔴 **A fork is a distribution obligation.** AGPL reaches network use, so a hosted modification is a release trigger. 🟡 The client almost always already runs one of these |
+| **Integration / agent-facing** | the ten MCP-over-LMS addresses in `agents/top.md` Tier 8 | 🟢 **MIT, 9 of 9 granted** | 🟢 **New code sits beside the platform, over its network API, and ships under MIT.** No copyleft reach, because nothing is linked or derived |
+
+🟢 **So the architectural rule that falls out of the licence data is the same one good engineering
+would pick anyway:** *do not fork the LMS — talk to it.* 🔵 This base has recommended that shape
+before on engineering grounds (`Pattern AI` and successors); `p422` is the first pass that can
+show the **licence** data pointing the same way.
+
+### 🟢 Two foundation rows promoted this pass
+
+🔵 Promoted because they are infrastructure for the whole tier rather than one application of it,
+and because `p421` set the precedent of promoting rows that a pattern file had been carrying alone.
+
+| address | grant, read at the SHA | why it is a FOUNDATION and not an agent row |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** `LICENSE` `1 071` B `5385a26e2fac` @ `f4f0780`, 4 heads | 🟢 **The canonical upstream of the Canvas MCP line** — **1 097** commits since 2025-02-27, active **2026-10-23**, with role-based tool filtering and anonymisation tiers already in its branch set. 🔵 Every other Canvas MCP address this pass measured is smaller, staler, or descended from it |
+| [`javohir73/mcp-server-canvas-lms`](https://github.com/javohir73/mcp-server-canvas-lms) | 🟢 **MIT** `LICENSE` `1 069` B `72380798af61` @ `2472593`, 10 heads | 🟢 **The minimal, strictly read-only reference** — read-only stated in its own `README.md` at the SHA. 🔵 Where `vishalsachdev` is the full surface, this is the one to audit line-by-line before a student-data engagement, because there is little to audit |
+
+🔴 **Two rows, not five, and the shortfall is stated rather than padded.** The remaining eight
+addresses this pass measured are recorded in `agents/top.md` Tier 8 with their grants and their
+dormancy; 🟡 **three of them have not committed in six to ten months**, which disqualifies them as
+foundations while leaving them perfectly good as reference architectures.
+
+### 🔴 The dependency hazard this tier carries, named now rather than after an engagement
+
+🟢 **Measured:** of nine granted addresses, **one** combines depth and currency
+(`vishalsachdev/canvas-mcp`), **two** are nine days old, **three** are dormant six to ten months,
+**one** is a 683-commit-stale fork of another, and **one more** (`DA0806/canvas-student-mcp`) has
+no grant at all. 🔴 **A tier this young cannot be taken as a dependency on its licence alone** —
+the licence is the easy part and it is already clean.
+
+🟢 **The usable posture is therefore: vendor the pattern, not the package.** Read
+`vishalsachdev/canvas-mcp` for the tool surface and `javohir73/mcp-server-canvas-lms` for the
+read-only boundary, then build to the client's own auth and data-residency constraints — which
+`Mattlo0546/canvas-mcp`'s SSO-instead-of-API-token design shows is achievable in five commits.
+
 ## 🆕 `p421` · 2026-10-24 — **Two permissive foundation rows this shelf never carried, and they are the extension point of an AGPL platform: `openedx/XBlock` and `openedx/xblock-sdk`, Apache-2.0, byte-identical payloads, read at their SHAs. 🔴 Their grant is at `LICENSE.TXT` and the README links `LICENSE.txt`, which 404s. 🟢 `Gap 298` stands in its stated form — and gets the sharpest qualification it has had.**
 
 🟢 **Gates ran FIRST** (`p412`'s rule): `make hooks` **51 / 52** against `p420`'s commit `d93ad76`

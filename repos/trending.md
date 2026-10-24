@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p422` · 2026-10-24 — **A capability class with NINE MIT grants sitting on top of a platform tier with none. 🟢 Thirty-two `(slug, ref)` pairs swept for `p419`'s branch hazard and it does not fire once. 🔴 And a one-byte channel divergence that would have mis-digested every grant this pass published, caught by cross-reading this base's own instruments.**
+
+🔵 **Append-only, per this file's standing contract.** `p421` and everything below it is untouched.
+
+🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
+host's auto-mode classifier refused it (`[Code from External]`), the same refusal `p419` recorded.
+🟢 `p412`'s standing rule is therefore **unmet and declared**, not skipped silently; every file
+contract below was honoured by hand. `Gap 422-A` registers the un-run suite, second instance.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and digest ran **2026-10-24**; the commit
+lands **2026-10-24**, so `updated:` carries one date.
+
+### 🟢 The trending shape this pass can actually evidence
+
+🔴 **The GitHub-trending leg returned nothing in-domain, for a fifth consecutive pass.** It served
+`rohitg00/ai-engineering-from-scratch`, `mlabonne/llm-course`, `karpathy/nanochat`,
+`freeCodeCamp` and `developer-roadmap` — 🟢 **every one teaches people to build AI; none is AI
+applied to education.** `T100`'s mechanism, reproduced unchanged.
+
+🟢 **What IS moving is not visible to a trending ranking at all**, because every address in it is
+small: the whole MCP-over-LMS tier has **five** repositories under 80 commits and **two** under
+15. 🔵 **A tier that matters commercially can be entirely invisible to a star-ranked channel** —
+which is the standing argument for this register's capability-worded discovery.
+
+| repository | grant at the SHA | movement, measured 2026-10-24 |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT `1 071` B `5385a26e2fac` @ `f4f0780` | **1 097** commits, still active — last commit **2026-10-23**, i.e. yesterday. 🟢 The tier's only deep-and-current address |
+| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 MIT `1 072` B `ed912ca72d9e` @ `23cdf92` | **49** commits in **nine days** (2026-10-14 → 2026-10-23). 🟢 The fastest-moving address in the tier |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | 🟢 MIT `1 072` B `ed912ca72d9e` @ `29c6baa` | **41** commits in the same nine days, same author, 🔵 **byte-identical grant** to its Moodle sibling |
+| [`javohir73/mcp-server-canvas-lms`](https://github.com/javohir73/mcp-server-canvas-lms) | 🟢 MIT `1 069` B `72380798af61` @ `2472593` | 🆕 **New to this register.** 23 commits, **10 heads** — nine of them Dependabot, which is a maintenance signal, not activity |
+| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | 🟢 MIT `1 067` B `13c8ad755224` @ `b6c26ba` | **5** commits across **two days** (2026-10-19 → 2026-10-20). 🔴 Too new to depend on; 🟢 its SSO-instead-of-token design is the idea worth taking |
+| [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) | 🟢 MIT `1 071` B `5385a26e2fac` @ `92b7fbc` | 🔴 **416 commits, of which 414 are the upstream's.** Moving only because the upstream moved |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 MIT `1 070` B `f01d2f81a436` @ `bd7ec03` | 🔴 **Stopped 2026-08-15** after 79 commits in nine days |
+| [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | 🟢 MIT `1 064` B `6923a6b4bf1c` @ `9b7efdc` | 🔴 **Stopped 2026-02-13** after 70 commits. 6 heads, all granted |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟢 MIT `1 063` B `2cf91ec5272f` @ `a65aefa` | 🔴 **Stopped 2026-04-04** after 13 commits. 🔴 Write-capable (`submit_assignment`) |
+| [`DA0806/canvas-student-mcp`](https://github.com/DA0806/canvas-student-mcp) | 🔴 **UNGRANTED** @ `5d8ace9` | 🔴 **Stopped 2026-10-03** after 12 commits, with no grant on any of 12 channels checked |
+
+### 🔴 The channel finding — one byte, and it changes the digest completely
+
+🟢 **Measured, not reasoned.** The same payload, read two ways on 2026-10-24:
+
+| channel | bytes | `sha256_12` |
+|---|---|---|
+| `curl -sS -L -o file` then `wc -c < file` | **1 069** | `72380798af61` |
+| `body=$(curl -sS …)` then `printf '%s' "$body" \| wc -c` | **1 068** | `453575e61c43` |
+
+🔴 **Command substitution strips the trailing newline.** Because this register grades a grant by
+`(bytes, sha256_12)`, the two channels disagree on **both** columns, and a digest comparison
+across them would report a difference that does not exist.
+
+🟢 **The audit came out clean, and that is the point of running it.** This base's canonical
+instruments read to a file — `compose/code/p230-prose-path-ladder/probe.sh:27-31` and
+`compose/code/p211-full-column-grant-audit/fetch_one.sh:13-16` — so **no shelved digest is
+contaminated**. 🔵 `compose/code/p280-manifest-ownership/sweep.sh:26-30` does use substitution, but
+only to `grep` manifest fields; it never measures bytes or digests.
+
+🔴 **The one contaminated instrument this pass found was its own.** `p422`'s improvised ladder used
+substitution, published `1 068` B internally, and was corrected by re-reading against the
+canonical channel before anything reached a shelf. 🟢 **`T108`'s class, sixth instance: the
+improvised ladder reproduces a hazard the canonical one does not have.** The standing lesson —
+*use `p230`'s ladder, do not re-write it* — now has a measured cost attached.
+
 ## 🆕 `p421` · 2026-10-24 — **`openedx/XBlock`'s Apache-2.0 grant lives at `LICENSE.TXT` and its own README links `LICENSE.txt`, which 404s. 🔴 `T110`: `p401-C`'s lowercase lesson, inverted — and this pass's improvised ladder reproduced it, `T108`'s fifth instance. 🟢 Plus a new `34 523` B AGPL band with TWO distinct digests.**
 
 🔵 **Append-only, per this file's standing contract.** `p420` and everything below it is untouched.

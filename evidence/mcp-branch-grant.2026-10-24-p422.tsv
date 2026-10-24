@@ -1,0 +1,35 @@
+# p422, 2026-10-24 — p419's branch-grant hazard tested on a NEW class: every head of every
+# multi-head repository in the MCP-over-LMS tier. File channel. 32 (slug, ref) pairs, 0 hazards.
+slug	ref	head_sha7	path	bytes	sha256_12
+javohir73/mcp-server-canvas-lms	codex/student-document-reading	3c7099d	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/github_actions/actions/download-artifact-8.0.2	5f328b2	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/github_actions/actions/setup-node-7.1.0	9f1e17a	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/github_actions/actions/upload-artifact-7.0.2	d74f135	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/npm_and_yarn/html-to-text-10.0.1	dfe4a2e	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/npm_and_yarn/types/node-26.3.0	64a457d	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/npm_and_yarn/typescript-7.0.2	cecfdcf	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/npm_and_yarn/vitest-4.1.11	b1f3fbd	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	dependabot/npm_and_yarn/vitest/coverage-v8-4.1.11	7402f07	LICENSE	1069	72380798af61
+javohir73/mcp-server-canvas-lms	main	2472593	LICENSE	1069	72380798af61
+NelsonSpencer/canvas-mcp	copilot/create-rubric-feature-csv-import	eea6873	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	copilot/create-rubric-from-csv-verify-imported-rubrics	1ba432b	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	copilot/feature-add-tools-for-canvas-quizzes	8a7e393	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	copilot/fix-arbitrary-file-write-vulnerability	3521a9a	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	copilot/fix-lack-of-annotations	eb1b856	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	copilot/weekly-maintenance-report-2026-05-24	9ff4439	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	feat/review-persona-security	c84a100	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	feat/x-api-key-canvas-token	79bee47	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	feature/role-based-tool-filtering	564c2ed	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	fix/166-anonymizer-recursive-scrub	643bb45	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	fix/179-anonymization-tiers	556375a	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	main	92b7fbc	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	reland/130-clean	f88de50	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	staging	ec4f6be	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	tests/code-execution-coverage	9acb21c	LICENSE	1071	5385a26e2fac
+NelsonSpencer/canvas-mcp	triage/2026-08-01	2acf21b	LICENSE	1071	5385a26e2fac
+mtgibbs/canvas-lms-mcp	feat/expanded-tools	bf6e4be	LICENSE	1064	6923a6b4bf1c
+mtgibbs/canvas-lms-mcp	fix/ci-release-please-dispatch	5ce6545	LICENSE	1064	6923a6b4bf1c
+mtgibbs/canvas-lms-mcp	fix/ci-release-please-trigger	8df6a1d	LICENSE	1064	6923a6b4bf1c
+mtgibbs/canvas-lms-mcp	improve-mcp-tool-definitions	fb885ba	LICENSE	1064	6923a6b4bf1c
+mtgibbs/canvas-lms-mcp	main	9b7efdc	LICENSE	1064	6923a6b4bf1c
+mtgibbs/canvas-lms-mcp	release-please--branches--main--components--canvas-lms-mcp	fc186ae	LICENSE	1064	6923a6b4bf1c

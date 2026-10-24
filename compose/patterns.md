@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p422` · 2026-10-24 — **`Pattern AT` is new and it is the licence-boundary pattern: the agent layer is MIT deliverable IP, the platform under it stays the client's copyleft install, and the seam between them is a network API. 🟢 Wired on addresses read at their own commit SHAs today. 🔴 Plus `Amendment 12`: the grant READ has a CHANNEL axis, and a one-byte divergence changes the digest entirely.**
+
+🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
+host's auto-mode classifier refused it (`[Code from External]`), the same refusal `p419` recorded.
+🟢 `p412`'s standing rule is therefore **unmet and declared**, not skipped silently; every file
+contract below was honoured by hand. `Gap 422-A` registers the un-run suite, second instance.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and digest ran **2026-10-24**; the commit
+lands **2026-10-24**, so `updated:` carries one date.
+
+### 🔴 Amendment 12 — the grant read has a CHANNEL axis, and it is worth exactly one byte
+
+🟢 **Measured this pass on one payload, read two ways:**
+
+| capture | bytes | `sha256_12` |
+|---|---|---|
+| `curl -sS -L -o "$tmp" <url>` then `wc -c < "$tmp"` | **1 069** | `72380798af61` |
+| `body=$(curl -sS <url>)` then `printf '%s' "$body" \| wc -c` | **1 068** | `453575e61c43` |
+
+🔴 **Command substitution strips the trailing newline.** Since this register grades a grant by
+`(bytes, sha256_12)`, the two channels disagree on **both columns for an identical payload**, and
+a digest comparison across channels reports a difference that is not there.
+
+🟢 **`Amendment 12`, binding on every later pass:** *a grant payload is measured by writing it to a
+file and reading the file — `curl -o`, then `wc -c < file` and `sha256sum file`. A byte count or
+digest taken through `$( )` is not comparable to anything on these shelves and must not be
+written into a cell.*
+
+🟢 **The audit of this base's own instruments came out CLEAN**, which is why the amendment is a
+guard-rail rather than a correction: `compose/code/p230-prose-path-ladder/probe.sh:27-31` and
+`compose/code/p211-full-column-grant-audit/fetch_one.sh:13-16` both use the file channel;
+`compose/code/p280-manifest-ownership/sweep.sh:26-30` uses substitution but only to `grep`
+manifest fields and never measures. 🔴 **The one contaminated instrument this pass found was
+`p422`'s own improvised ladder**, caught by cross-reading before anything reached a shelf —
+`T108`'s class, **sixth instance**, and the standing lesson now has a measured cost: *use `p230`'s
+ladder, do not re-write it.*
+
+### 🟢 `Pattern AT` — the MIT agent layer over the client's copyleft LMS
+
+🔵 **The job:** give an institution a working AI layer over the LMS it already runs, without
+acquiring a copyleft distribution obligation and without forking a platform the client depends on.
+
+🔴 **Why it is a pattern and not a preference.** Every education platform this base has graded is
+copyleft — Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas `AGPL-3.0`, Sakai `ECL-2.0`, OpenEduCat
+`LGPL-3.0`, `frappe/lms` `AGPL-3.0-or-later`. 🟢 **Every granted address in the tier above them is
+MIT — 9 of 9.** Under AGPL, network use is itself a distribution trigger, so the fork/talk-to
+decision is a licensing decision before it is an architectural one.
+
+**Wiring, with every grant read at its SHA on 2026-10-24:**
+
+1. 🟢 **Integration layer — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)**
+   (**MIT**, `LICENSE` `1 071` B `5385a26e2fac` @ `f4f0780`, 4 heads, **1 097** commits, active
+   **2026-10-23**) where the host is **Canvas**. 🔵 Take its **role-based tool filtering** and
+   **anonymisation tiers** — both already in its branch set — rather than building access control
+   from scratch.
+   🔴 **Do NOT pin [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp)**:
+   same root `afe32c3e1721`, **414** shared commits, **683 behind**, byte-identical `LICENSE`.
+   The grant check passes and the dependency is still wrong.
+2. 🟢 **Read-only boundary — [`javohir73/mcp-server-canvas-lms`](https://github.com/javohir73/mcp-server-canvas-lms)**
+   (**MIT**, `1 069` B `72380798af61` @ `2472593`) as the reference when the engagement must prove
+   a system **cannot** write. 🔵 **A server with no write tools cannot make an automated decision**,
+   which is the cheapest EU Article-50 and US "no replacing a licensed educator" story available.
+   🔴 **Audit the tool list yourself** — `Jawadh-Salih/moodle-mcp-server` exposes
+   `submit_assignment` while listings describe the whole class as read-only.
+3. 🟢 **Moodle hosts — [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp)**
+   (**MIT**, `1 072` B `ed912ca72d9e` @ `23cdf92`). 🔴 **Deployment precondition:** the Moodle
+   **mobile web service must be enabled**, which is an institutional change-request, not a code
+   change — raise it in week one or the integration stalls.
+4. 🟢 **Auth — copy [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp)'s design**
+   (**MIT**, `1 067` B `13c8ad755224` @ `b6c26ba`): **university SSO sign-in instead of a
+   per-student API token**. 🔵 It reached that in **five commits**, so rebuild it rather than
+   depending on a two-day-old repository.
+5. 🟢 **Open edX hosts — extend through [`openedx/XBlock`](https://github.com/openedx/XBlock)**
+   (**Apache-2.0**, `11 358` B `cfc7749b96f6` @ `c73c4bb`, `p421`): the one permissive extension
+   point inside a copyleft host on these shelves. 🔴 Its grant is at **`LICENSE.TXT`** and the
+   README links `LICENSE.txt`, which **404s** (`T110`) — read the uppercase path.
+6. 🟢 **Grading, where the engagement needs it — [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem)**
+   (**MIT**, `p420`): a rubric engine with **no model, no API and no service**, so it adds no
+   inference cost and no data egress to disclose. 🔵 Keep the human sign-off step: in the US it is
+   required by statute, in the EU it is what keeps an Annex III system defensible.
+7. 🔴 **Model boundary behind a gateway from day one.** APAC procurement increasingly expects a
+   domestic model (Sarvam AI, SEA-LION, NTT Sarashina) and Korea's AI Basic Act carries labelling
+   duties. 🟢 **An MCP server is already that boundary** — which is a second, independent reason
+   this pattern survives a regional re-plumb.
+
+**🟢 What the client owns at the end, stated as the contract clause this pattern exists to
+produce:** the MCP/agent layer is **new code under MIT**, delivered as studio-built IP; the LMS
+remains the client's own copyleft installation, unmodified and unforked; the two communicate over
+the platform's existing network API. 🔵 **No copyleft reach attaches, because nothing is linked
+or derived.**
+
+**🔴 Effort and what will actually bite.** 6–8 weeks for a single-platform read-only layer with
+SSO and an audit trail; 10–12 where a grading path and its evidence trail are in scope. 🔴 The
+schedule risk is **not** the agent code — it is enabling the platform web service, getting student
+data cleared, and the institution's own policy, which in LATAM **81 %** of institutions do not yet
+have.
+
+**🔴 The one thing this pattern does not solve.** There is **no measured agent layer over the SIS
+tier** — RosarioSIS, Gibbon and openSIS are `GPL` with nothing above them, where Canvas alone has
+at least seven MIT servers. 🔵 Stated as an informed gap: an engagement whose scope is enrolment
+or records rather than coursework **has no open-source starting point on these shelves**, and
+`Pattern AT` does not reach it.
+
 ## 🆕 `p421` · 2026-10-24 — **`Amendment 11` adds the CASE axis to the grant ladder and makes the SHA the read channel. 🟢 And `Pattern AS` is new: the statute-shaped grading pipeline, where the human-in-the-loop step exists because US state law requires it, not because the model is weak — wired on `openedx/XBlock` (Apache-2.0) inside an AGPL-3.0 host.**
 
 🔵 **No date straddle:** every grant read, SHA resolution and digest below ran **2026-10-24**.

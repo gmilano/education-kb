@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p422` · 2026-10-24 — **Three unshelved addresses this pass, and all three are the SAME capability class: an MCP server over a copyleft LMS. 🟢 Nine of ten in that class are MIT, which is the first uniformly permissive class this register has measured. 🔴 And one of the three is ungranted, so the class's supply is 9, not 10.**
+
+🔵 **Append-only, per this file's standing contract.** `p421` and everything below it is untouched.
+
+🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
+host's auto-mode classifier refused it (`[Code from External]`), the same refusal `p419` recorded.
+🟢 `p412`'s standing rule is therefore **unmet and declared**, not skipped silently; every file
+contract below was honoured by hand. `Gap 422-A` registers the un-run suite, second instance.
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and digest ran **2026-10-24**; the commit
+lands **2026-10-24**, so `updated:` carries one date.
+
+| what moved | first-hand, 2026-10-24, every payload read at its commit SHA |
+|---|---|
+| 🆕 **`javohir73/mcp-server-canvas-lms` enters the register** | 🟢 **MIT** `1 069` B `72380798af61` at `2472593`, 10 heads, 23 commits, last **2026-10-21**. 🟢 **Read-only stated in its own `README.md` at the SHA**, not inferred from a listing |
+| 🆕 **`DA0806/canvas-student-mcp` enters as UNGRANTED** | 🔴 No payload at **10** licence paths at `5d8ace9`; **no `license` field in `package.json` or `pyproject.toml`**. 12 commits, dead since **2026-10-03**. 🔵 Recorded so nobody probes it again |
+| 🔴 **`NelsonSpencer/canvas-mcp` is a FORK and the leg served it as canonical** | Same root `afe32c3e1721` as [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), **414** shared commits, **2 own against 683 upstream**, a week staler. 🟢 `LICENSE` byte-identical (`1 071` B `5385a26e2fac`) **with the upstream's copyright line retained** — correct MIT, and the reason a grant-only check sees nothing |
+| 🟢 **The class's grant profile, measured** | **9 of 10 GRANTED, every one MIT.** 🔴 Against a platform tier that is `GPL-3.0` / `AGPL-3.0` / `ECL-2.0` / `LGPL-3.0` without exception. `Gap 298` **qualified, not refuted** |
+| 🟢 **`p419`'s branch-grant hazard: 0 of 32**  | Every head of the three multi-head repositories (10 + 16 + 6) carries `LICENSE`, byte-identical within each repository. The hazard is real and stays **rare** |
+| 🔴 **This pass's own ladder was wrong by one byte** | `$(curl …)` strips the trailing newline — **1 068** B `453575e61c43` vs the file channel's **1 069** B `72380798af61` **for the same payload**. 🟢 The canonical instruments (`p230`, `p211`) use the file channel; **no shelved digest is contaminated** |
+| 🟢 **`T100`, seventh confirmation and sharpened** | Ranking legs ×2 and already-exhausted capability legs ×2: **0 unshelved of ~40**. The un-enumerated capability leg: **3 unshelved of 15**. 🔵 The discriminator is an **un-enumerated class**, not "capability wording" |
+| 🟡 **Dormancy is the tier's real weakness, not licensing** | Three of nine granted addresses have not committed in **6–10 months** (`JohannsenLum` 2026-08-15, `Jawadh-Salih` 2026-04-04, `mtgibbs` 2026-02-13). 🟢 Only `vishalsachdev` combines depth (**1 097** commits) with currency (**2026-10-23**) |
+| 🔴 **One address in the tier is write-capable and reads as read-only in listings** | `Jawadh-Salih/moodle-mcp-server`'s `README.md` at `a65aefa` names **`submit_assignment`**, read first-hand. 🔵 A student-credentialled MCP server that can submit work is a different risk class from one that cannot |
+
+🔵 **Evidence written this pass:** `evidence/mcp-lms-grants.2026-10-24-p422.tsv`,
+`evidence/mcp-branch-grant.2026-10-24-p422.tsv`, `evidence/fork-lineage.2026-10-24-p422.tsv`,
+`evidence/channel-newline.2026-10-24-p422.tsv`.
+
 ## 🆕 `p421` · 2026-10-24 — **The capability leg returned five unshelved addresses and ALL FIVE ARE UNGRANTED, so supply is a measured zero. 🟢 `T100` holds a SIXTH time: the two ranking legs returned zero unshelved. 🔴 And the five are `INDEPENDENT` of one another by full history — a convergent template class no history instrument can see.**
 
 🔵 **Append-only, per this file's standing contract.** `p420` and everything below it is untouched.

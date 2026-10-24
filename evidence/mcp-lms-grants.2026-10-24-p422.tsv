@@ -1,0 +1,17 @@
+# p422, 2026-10-24 — the MCP-over-LMS capability class, graded first-hand.
+# Channel: `git ls-remote --heads` for refs + raw.githubusercontent.com/<slug>/<sha>/<path> for payloads.
+# api.github.com and github.com HTML both return 403 on this environment's egress allowlist (p413, p415).
+# Measurement channel is the FILE channel (curl -o file; wc -c < file), matching the canonical
+# instruments compose/code/p230-prose-path-ladder/probe.sh:27-31 and p211-.../fetch_one.sh:13-16.
+# Paths probed, in order: LICENSE LICENSE.md LICENSE.txt LICENSE.TXT license license.txt license.md LICENCE COPYING COPYING.txt
+slug	verdict	ref	sha7	heads	path	bytes	sha256_12	spdx_first_line	commits	first_commit	last_commit	shelved_before_p422
+vishalsachdev/canvas-mcp	GRANTED	main	f4f0780	4	LICENSE	1071	5385a26e2fac	MIT License	1097	2025-02-27	2026-10-23	yes
+NelsonSpencer/canvas-mcp	GRANTED	main	92b7fbc	16	LICENSE	1071	5385a26e2fac	MIT License	416	2025-02-27	2026-10-16	yes
+javohir73/mcp-server-canvas-lms	GRANTED	main	2472593	10	LICENSE	1069	72380798af61	MIT License	23	2026-08-14	2026-10-21	NO
+JohannsenLum/canvas-api-mcp	GRANTED	main	bd7ec03	1	LICENSE	1070	f01d2f81a436	MIT License	79	2026-08-07	2026-08-15	yes
+AnonymousOnyx22/canvas-lms-student-mcp	GRANTED	main	29c6baa	1	LICENSE	1072	ed912ca72d9e	MIT License	41	2026-10-14	2026-10-23	yes
+AnonymousOnyx22/moodle-student-mcp	GRANTED	main	23cdf92	1	LICENSE	1072	ed912ca72d9e	MIT License	49	2026-10-14	2026-10-23	yes
+Mattlo0546/canvas-mcp	GRANTED	main	b6c26ba	1	LICENSE	1067	13c8ad755224	MIT License	5	2026-10-19	2026-10-20	yes
+Jawadh-Salih/moodle-mcp-server	GRANTED	main	a65aefa	1	LICENSE	1063	2cf91ec5272f	MIT License	13	2026-03-16	2026-04-04	yes
+mtgibbs/canvas-lms-mcp	GRANTED	main	9b7efdc	6	LICENSE	1064	6923a6b4bf1c	MIT License	70	2026-01-13	2026-02-13	yes
+DA0806/canvas-student-mcp	UNGRANTED	main	5d8ace9	1	-	-	-	no payload at 10 paths; no license field in package.json or pyproject.toml	12	2026-09-15	2026-10-03	NO

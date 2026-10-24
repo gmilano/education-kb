@@ -1,0 +1,13 @@
+# p422, 2026-10-24 — the discovery leg served a FORK as the canonical address.
+# Graded by FULL commit history from bare blobless clones (git clone --bare --filter=blob:none),
+# not by a fork badge: github.com HTML is 403 here, so no badge was readable.
+measurement	NelsonSpencer/canvas-mcp	vishalsachdev/canvas-mcp
+root commit	afe32c3e172119281be23a2b2f9bed64d838d197	afe32c3e172119281be23a2b2f9bed64d838d197
+root commits identical	YES	YES
+commits reachable from HEAD	416	1097
+shared commits	414	414
+commits unique to this side	2	683
+last commit	2026-10-16	2026-10-23
+LICENSE bytes / sha256_12 at HEAD	1071 / 5385a26e2fac	1071 / 5385a26e2fac
+LICENSE copyright line	Copyright (c) 2025 Vishal Sachdev	Copyright (c) 2025 Vishal Sachdev
+verdict	SUBSET — lagging fork, 683 commits behind, 2 own commits	SUPERSET — canonical upstream, still active
