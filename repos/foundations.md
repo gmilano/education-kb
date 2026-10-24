@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **No foundation row this pass, stated rather than padded: the only new foundation-shaped address the legs returned is BSL-1.1 under an MIT manifest, and a foundation an engagement IMPORTS is the last place a licence conflict belongs.**
+
+🟢 **Gates ran first** against `p422`'s commit `82235af`: **47 / 53 green**, 1 deliberate red,
+5 new — all five fixed this pass. 🔵 All reads **2026-10-24**.
+
+**Why this file does not grow this pass:**
+
+- 🔴 **`tixuz/openemis-mcp` would have been the SIS-tier foundation row** — an MCP server over
+  **OpenEMIS**, the UNESCO/KORDIT school MIS this base already carries as `OpenEMIS/core`,
+  **GPL-2.0**. Its grant payload at `f88a80fc1d5b` is **BSL-1.1** (`647` B `4dead97d8aaf`) while
+  its `package.json` and its npm entry both say MIT. 🔴 A row here is an address a studio
+  **imports**; an import is exactly the use BSL-1.1's Additional Use Grant forbids
+  (*non-production evaluation and internal testing only*, until `2029-01-01`). Refused.
+- 🟡 `ckz/edu_data_mcp_server` is 🟢 **MIT** (`1 060` B `a21e3d63806c`) and genuinely permissive,
+  but it is **4 commits from March 2025** over a statistics API. 🔴 Below this file's bar, which
+  is a dependency bar, not a reading bar.
+- 🔵 **The platform tier did not move.** `Gap 298` stands: no permissive education **platform**
+  anywhere on these shelves. `p421`'s qualification — that the largest AGPL platform's
+  *extension point* is permissive (`openedx/XBlock`, `openedx/xblock-sdk`, Apache-2.0, promoted
+  to this file in `p421`) — is unchanged and remains the useful boundary.
+
+🔴 **What DID move is this file's reliance on a channel that can lie.** Several rows here carry a
+manifest agreement as corroboration (*"`package.json` agrees"*). `p423` measured an address where
+the manifest agrees with **nothing in its own tree**: `gate-provenance` (`p280`) identifies a
+manifest by what it **declares**, and obeyed literally it grades this BSL-1.1 repository MIT.
+🟢 **The rule that survives:** a manifest is corroboration only *after* the payload has been read
+at the SHA, never instead of it (`p289`). `Gap 423-A`.
+
 ## 🆕 `p422` · 2026-10-24 — **The foundation layer of an education engagement is now TWO layers with opposite licences, and this file has only ever graded one of them. 🟢 Platform tier: `GPL-3.0` / `AGPL-3.0` / `ECL-2.0` / `LGPL-3.0`, no exceptions. 🟢 Integration tier over the same platforms: MIT, 9 of 9 granted. 🔴 `Gap 298` is QUALIFIED, and the qualification is what a studio actually bills against.**
 
 🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the

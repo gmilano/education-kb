@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **`Pattern AU` is new: the SIS-tier agent an engagement must BUILD, because the only one that exists is BSL-1.1 under an MIT manifest. 🟢 It copies the LMS tier's MIT architecture rather than its code, and keeps the GPL-2.0 platform behind a process boundary.**
+
+🟢 Gates first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red, 5 new, all fixed here.
+🔵 All reads **2026-10-24**.
+
+### 🆕 `Pattern AU` — an SIS/MIS agent surface for a ministry deployment, with no BSL exposure
+
+**When to reach for it.** The client runs **OpenEMIS** (UNESCO/KORDIT; ministries), or any SIS
+whose agent tier is unlicensed or source-available, and wants conversational access to student
+records. 🔴 **Do not start from
+[`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp)**: npm, the MCP directory and its own
+`package.json` all say MIT, and the only payload in the tree is **BSL-1.1** (`647` B
+`4dead97d8aaf` at `LICENSE.md` @ `f88a80fc1d5b`), use limited to non-production evaluation until
+`2029-01-01`.
+
+**The wiring, component by component.**
+
+1. 🟢 **The platform stays behind a process boundary.**
+   [`OpenEMIS/core`](https://github.com/OpenEMIS/core) is **GPL-2.0** (the payload that proved
+   `P572`). Run it **as a deployed service** and speak to it over its HTTP API only. 🔵 No linking,
+   no vendoring, no in-process extension — which keeps the studio's agent code outside GPL-2.0's
+   derivative boundary. Any patch to the platform itself goes back upstream as GPL-2.0.
+2. 🟢 **Copy the ARCHITECTURE of the MIT LMS tier, not its code.** The two design decisions worth
+   taking, both measured on these shelves:
+   - 🟢 **SSO instead of API tokens** — [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp)
+     (**MIT**, `1 067` B `13c8ad755224` @ `b6c26ba`) signs in through the user's own university
+     SSO/MFA in a real browser and holds **no** long-lived credential. 🔵 In an SIS that is the
+     difference between an agent that can read one student's record and a service account that can
+     read every record in the ministry.
+   - 🟢 **Role-scoped read-only tool surfaces** —
+     [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (**MIT**, `1 071` B
+     `5385a26e2fac` @ `f4f0780`) already carries role-based tool filtering and anonymisation tiers,
+     and [`chrischall/canvas-parent-mcp`](https://github.com/chrischall/canvas-parent-mcp)
+     (**MIT**, `1 067` B @ `428b78b`) holds 18 tools to a **read-only observer** surface. 🔵 Both
+     are MIT, so this is code you may actually lift — unlike step 1's platform and unlike the BSL
+     address above.
+3. 🟢 **Write-paths are redirect stubs on day one.** The BSL address's own design does this (its
+   write operations are stubs), and it is the right call for a reason that has nothing to do with
+   licensing: a student record mutated by an agent is an audit problem before it is a product.
+4. 🟢 **The evidence trail is the deliverable, not a by-product.** Every tool call logged with the
+   authenticated human, the record touched and the rendered justification. 🔵 This is the same
+   artefact North American state statutes require for grading (`p421`), the one Lower Saxony's
+   **April-2026** motion asks for on AI-assisted grading liability, and the one ~70 % of LATAM
+   universities have no policy for. **One build, three regional sales.**
+5. 🔴 **A licence gate in the pipeline, because this pass is the argument for it.** Before any
+   dependency enters the build, read its grant **payload at the pinned commit SHA** — not its
+   manifest, not its registry entry. 🟢 This base ships the instrument:
+   [`compose/code/licence-grant-gate/grant_gate.py`](code/licence-grant-gate/grant_gate.py), whose
+   16-path ladder includes `LICENSE.TXT` (`T110`). 🔵 Run it in CI against the dependency set and
+   fail the build on `UNKNOWN-TEMPLATE` or on any family outside the engagement's allow-list.
+   **On `tixuz/openemis-mcp` that gate is the only channel of four that gets the answer right.**
+
+**Effort.** 🔵 8–10 weeks for a read-only, SSO-authenticated, role-scoped agent surface over an
+existing OpenEMIS deployment with the audit trail in place; the ladder gate in CI is under a day.
+
+**What makes this pattern falsifiable.** 🟢 If a permissive MCP-over-SIS address appears, step 2
+collapses into *"take it"* and the pattern loses most of its cost. `T118` is registered as a
+boundary on **one** address precisely so that a second reading can overturn it.
+
 ## 🆕 `p422` · 2026-10-24 — **`Pattern AT` is new and it is the licence-boundary pattern: the agent layer is MIT deliverable IP, the platform under it stays the client's copyleft install, and the seam between them is a network API. 🟢 Wired on addresses read at their own commit SHAs today. 🔴 Plus `Amendment 12`: the grant READ has a CHANNEL axis, and a one-byte divergence changes the digest entirely.**
 
 🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the

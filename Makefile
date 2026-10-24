@@ -57,6 +57,8 @@ SUBTREE_LOG ?= /tmp/education-kb-gate-subtree-grant.log
 OFFSET_LOG ?= /tmp/education-kb-gate-offset-region.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
+COMMIT_GATE_LOG ?= /tmp/education-kb-gate-commit-gate.log
+CASEGATE_LOG ?= /tmp/education-kb-gate-case-collision.log
 FORKAUDIT_LOG ?= /tmp/education-kb-gate-shelf-fork.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
 ALIAS_LOG ?= /tmp/education-kb-gate-alias-canonical.log
@@ -118,7 +120,18 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
              gate-capability-absence gate-fork-direction gate-group-lineage \
-             gate-action-answered
+             gate-action-answered gate-commit-gate gate-case-collision
+
+# ---------------------------------------------------------------- p423
+# 🔴 `make hooks` HAS BEEN RED ON PURPOSE SINCE p398, so its exit status has carried no
+# information for twenty-five passes and no commit hook could ever have asked it a
+# yes-or-no question.  A gate may be carried red only if it is DECLARED here AND a
+# `Gap N-X` in `intel/open-gaps.md` cites it by name — `gate-commit-gate` enforces both,
+# so quieting a gate costs a registered gap in the open rather than a silent habit.
+DECLARED_RED = gate-census-union
+
+# The set a commit may be blocked on: every gate the suite runs, minus the declared reds.
+COMMIT_GATES = $(filter-out $(DECLARED_RED),$(HOOK_GATES))
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -889,11 +902,17 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 # and would teach nothing; the inherited groups are a CENSUS instead — the p308
 # `shelf-census` / `gate-shelf-consistency` split, on the identity axis.  No network.
 gate-fold-identity: ## p348 — ACTION ZZ-x: no pass may publish a SECOND CASING of an address these shelves already carry
-	@cd compose/code/p348-fold-identity && { $(PY) -I test_fold_identity.py > $(FOLD_LOG) 2>&1 || { echo "🔴 p348-fold-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FOLD_LOG) ; false ; } ; } && echo "── p348-fold-identity (21 controls: the blob-URL decision, the backticked label, the OWNER/REPO template, the three-variant group, the org transfer folding CANNOT see, P541 no-input refusal)" && echo "   PASS" || exit 1
+	@cd compose/code/p348-fold-identity && { $(PY) -I test_fold_identity.py > $(FOLD_LOG) 2>&1 || { echo "🔴 p348-fold-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FOLD_LOG) ; false ; } ; } && echo "── p348-fold-identity (33 controls: the blob-URL decision, the backticked label, the OWNER/REPO template, the three-variant group, the org transfer folding CANNOT see, P541 no-input refusal, plus p423's AUTHORITY arm and its non-empty-register control)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p348-fold-identity/fold_identity.py gate $(SHELF_FILES) || exit 1
 
 fold-census: ## p348 — the inherited collision backlog with a denominator.  A measurement, never a failure.
 	@$(PY) -I compose/code/p348-fold-identity/fold_identity.py census $(SHELF_FILES)
+
+# 🟢 p423 — the historical arm of the authority register, IN A TARGET.  `Gap 421-A` is the
+# lesson: an instrument that sits in this repository, passes its own suite and is in no
+# `make` target is invisible for hundreds of passes.
+casing-census: ## p423 — historical rows deviating from a REGISTERED canonical casing.  A measurement, never a failure.
+	@$(PY) -I compose/code/p348-fold-identity/fold_identity.py casing-census $(SHELF_FILES)
 
 # 🟢 p348 — ACTIONs ZZ-z, ZZ-u, ZZ-y, ZZ-ab and ZZ-w in one instrument.  ZZ-z asked for
 # the root ladder to be replaced by pin + tree enumeration + SCOPE GRADING.  `p441`
@@ -1170,5 +1189,40 @@ gate-dead-citation: ## ACTION ZZ-cj — a dead address may be RECORDED, never RE
 # 🟢 The negative control is in group C: un-withdrawing p373's cell 1 turns J2 red, and the
 # same group shows I4 passing that identical cell.  OFFLINE -- it reads a committed table.
 gate-regional-leg: ## ACTION p373-A — a regional NIL names a jurisdiction AND has an in-language sibling, and "redundant" needs a fact-class test
-	@cd compose/code/p374-regional-leg && { $(PY) -I test_regional_leg.py > $(REGIONLEG_LOG) 2>&1 || { echo "🔴 p374-regional-leg FAILED — its own report follows:" ; sed "s/^/   /" $(REGIONLEG_LOG) ; false ; } ; } && echo "── p374-regional-leg (51 controls over 9 groups: p373's cell 1 un-withdrawn turns J2 red, I4 passing that same cell recorded beside it, Japan refusing the redundancy claim p373 generalised, and the disposition limb refused symmetrically so a sound nil cannot be hidden)" && echo "   PASS" || exit 1
+	@cd compose/code/p374-regional-leg && { $(PY) -I test_regional_leg.py > $(REGIONLEG_LOG) 2>&1 || { echo "🔴 p374-regional-leg FAILED — its own report follows:" ; sed "s/^/   /" $(REGIONLEG_LOG) ; false ; } ; } && echo "── p374-regional-leg (53 controls over 9 groups: p373's cell 1 un-withdrawn turns J2 red, I4 passing that same cell recorded beside it, Japan refusing the redundancy claim p373 generalised, and the disposition limb refused symmetrically so a sound nil cannot be hidden)" && echo "   PASS" || exit 1
 	@cd compose/code/p374-regional-leg && $(PY) -I regional_leg_gate.py || exit 1
+
+# ---------------------------------------------------------------- p423
+# 🟢 The declaration contract, and the commit gate it makes possible.  `p422` declared its
+# suite un-run and honoured the file contracts by hand; `p423` ran the suite against
+# `p422`'s commit and measured the cost — five NEW reds on top of the one deliberate one.
+# The remedy is a suite a commit can be blocked on, which required separating the
+# deliberate red from the real ones first.  No network.
+gate-commit-gate: ## p423 — a gate carried red must be DECLARED and REGISTERED, and the blocking set is what remains
+	@cd compose/code/p423-commit-gate && { $(PY) -I test_commit_gate.py > $(COMMIT_GATE_LOG) 2>&1 || { echo "🔴 p423-commit-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(COMMIT_GATE_LOG) ; false ; } ; } && echo "── p423-commit-gate (16 controls: the declaration contract, the UNREGISTERED-RED arm, the Makefile list parser across continuations, the clone-survival census)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p423-commit-gate/commit_gate.py gate || exit 1
+
+commit-gate-census: ## p423 — the declaration state and whether THIS working copy has the hook.  A measurement, never a failure.
+	@$(PY) -I compose/code/p423-commit-gate/commit_gate.py census
+
+commit-gates: ## p423 — the BLOCKING suite: every hook gate except the declared reds.  This is what `pre-commit` runs.
+	@$(MAKE) --no-print-directory $(COMMIT_GATES)
+	@echo "🟢 commit-gates — $(words $(COMMIT_GATES)) blocking gates green (declared red, not blocking: $(DECLARED_RED))"
+
+install-hooks: ## p423 — install `ingest/pre-commit` into .git/hooks.  Per working copy: git clone does NOT carry it (Gap 423-B).
+	@install -m 0755 ingest/pre-commit .git/hooks/pre-commit && echo "🟢 .git/hooks/pre-commit installed — a red blocking gate now refuses the commit"
+
+# ---------------------------------------------------------------- p423
+# 🔴 `p439` BUILT THIS AND IT HAS BEEN IN NO TARGET SINCE.  `ACTION p421-A`'s enumeration found
+# it among 15 directories that carry a suite nothing runs AND describe themselves as a gate, and
+# `p423` then went and built a casing-authority arm for `gate-fold-identity` without knowing it
+# existed — so the invisibility `Gap 421-A` describes CAUSED a duplication, which is `T109`'s
+# class turned on this pass itself.  Wired on the pass that found it, and on its first run inside
+# a target it found a LIVE collision on the recommendation shelves:
+# `RohanMuppa/brightspace-mcp-server` cited both ways across `agents/top.md`,
+# `repos/foundations.md` and `verticals/solutions.md`.  Resolved by p439's OWN channel 2 (the
+# repository's self-link, read at SHA `4b3bc9bf3838`: README ×3 and `package.json` both say
+# `RohanMuppa`) and normalised.  No network.
+gate-case-collision: ## p439 — two spellings of one repository compile to two entities.  WIRED by p423.
+	@cd compose/code/p439-case-collision-gate && { $(PY) -I test_case_gate.py > $(CASEGATE_LOG) 2>&1 || { echo "🔴 p439-case-collision-gate FAILED — its own report follows:" ; sed "s/^/   /" $(CASEGATE_LOG) ; false ; } ; } && echo "── p439-case-collision-gate (9 assertions: the registry/self-link/majority channel order, the site-path and .git negatives)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p439-case-collision-gate/case_gate.py || exit 1

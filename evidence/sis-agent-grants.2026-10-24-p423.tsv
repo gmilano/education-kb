@@ -1,0 +1,41 @@
+# p423, 2026-10-24 — the MCP-over-SIS capability leg, graded first-hand.
+#
+# Channel: `git ls-remote` for refs + raw.githubusercontent.com/<slug>/<SHA>/<path> for
+# payloads (Amendment 11.1: read the grant at the SHA, never at a ref).  Bytes by the FILE
+# channel (`curl -o file; wc -c < file`); digest = first 12 hex of sha256, this base's
+# canonical pair.  Calibration: `Mattlo0546/canvas-mcp` LICENSE at SHA b6c26ba reproduced
+# `1 067` B / `13c8ad755224` exactly, so the instrument is re-calibrated on this host (T106).
+# api.github.com and github.com HTML: 403 on this egress allowlist (p413/p415/p422), so star
+# counts are NOT in this table — p415 settled that they are derivable, not readable here.
+#
+# Ladder: this base's canonical 16-path list including `LICENSE.TXT` (T110 / Amendment 11.2).
+#
+# 🔴 THE FINDING: `tixuz/openemis-mcp` is published as MIT by its npm registry metadata AND
+# by its own in-repo manifest, and its only grant payload is Business Source License 1.1 —
+# a source-available licence that is not open source.  The conflict is not a stale directory
+# entry: it ships INSIDE the published tarball, byte-identical to the repo payload.
+#
+slug	tier	head_sha	refs_heads	grant_path	family	bytes	digest	manifest_declares	npm_declares	verdict
+tixuz/openemis-mcp	SIS/MIS agent	f88a80fc1d5b	3	LICENSE.md	BSL-1.1	647	4dead97d8aaf	MIT	MIT	🔴 CONFLICT — NOT RECOMMENDABLE
+ckz/edu_data_mcp_server	open-data agent	a3eb7e8f2e70	1	LICENSE	MIT	1060	a21e3d63806c	(no licence field)	(not published to npm)	🟡 GRANTED-MIT, REFUSED-BELOW-BAR
+#
+# tixuz/openemis-mcp, the detail that makes the conflict worse rather than clerical:
+#   Licensor:            Khindol Madraimov (github.com/tixuz)
+#   Licensed Work:       openemis-mcp-pro          <- NOT the name of this repo or package
+#   Additional Use Grant: non-production evaluation and internal testing only
+#   Change Date:         2029-01-01   Change License: MIT
+#   LICENSE.md entered in the FIRST commit (148c0bc, 2026-04-19, "Initial release:
+#   openemis-mcp v1.0.0 — free read-only MCP for OpenEMIS") and has never been modified,
+#   so this is not a late re-licensing: the package was born inconsistent.
+#   32 commits / 4 authors / 2026-04-19 -> 2026-06-16, every commit at +0300 (EMEA).
+#   Ladder at the SHA: LICENSE, LICENSE.txt, LICENSE.TXT, LICENSE-MIT, LICENSE-APACHE,
+#   COPYING -> all 404.  There is no MIT payload anywhere in the tree.
+#   p419 branch-grant hazard: ref `openemis-core-5.10.0-update` (e14c514598d4) carries the
+#   SAME 647 B / 4dead97d8aaf payload -> hazard does NOT fire.  Counter 32 -> 34 pairs, 0 hits.
+#   npm openemis-mcp@1.2.0 tarball: package/LICENSE.md = 647 B 4dead97d8aaf (byte-identical),
+#   package/package.json = "license": "MIT".  7 versions, created 2026-04-19, latest 2026-06-16.
+#
+# ckz/edu_data_mcp_server: 4 commits / 1 author / 2025-03-21 -> 2025-03-22.  A wrapper over
+# the Urban Institute education-data API — enrollment STATISTICS, not student records, so it
+# is not an SIS agent despite answering an SIS-worded leg.  Real and permissive; below this
+# base's recommendation bar on age and surface, and recorded so the refusal is explicit.

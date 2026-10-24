@@ -270,8 +270,21 @@ chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 # literal must track its population or it reports the population it had.
 # 🟢 Registered for a successor: DERIVE this literal, as `p284` already did for the other
 # three, and attribute the two entrants from a deepened clone.
-chk("ungated AND explicit-exit (immune by construction)",
-    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 111)
+# 🟢 p423 — p404's REGISTERED REMEDY, DISCHARGED.  `p404` wrote: *"Registered for a successor:
+# DERIVE this literal, as `p284` already did for the other three"*, and nothing did.  The literal
+# bit again on `p423`, and this time for a GOOD act: wiring `p439-case-collision-gate` into
+# `HOOK_GATES` moved it out of the ungated half, so the census fell 111 -> 110 and the pin went
+# red because the base IMPROVED.  🔴 That is the third pinned-cardinality instance `p423` met —
+# after `p421`'s `len(vocab) == 14` and `p374`'s `len(LEGS) == 10` — and the only one that
+# penalises remediation rather than growth (`Gap 423-E`).
+# 🟢 Derived, exactly as `p404` prescribed: the immune half IS the ungated population minus the
+# silent-zero one, which is a statement about the partition rather than a remembered number, and
+# the floor below keeps it from passing on an empty parse.
+chk("ungated AND explicit-exit (immune by construction) — DERIVED, p404's remedy",
+    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]),
+    sum(1 for r in ROWS if not r["gated"]) - len(POP))
+chk("and the immune half is not empty, so the derivation is not vacuous",
+    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]) > 0, True)
 chk("the partition closes: silent-zero + explicit == ungated",
     len(POP) + sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]),
     sum(1 for r in ROWS if not r["gated"]))

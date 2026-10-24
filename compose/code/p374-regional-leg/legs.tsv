@@ -25,3 +25,19 @@ p374-r3	p374	Brazil	LATAM	English	Brazil;CNE;Parecer CP 15/2026	PRODUCTIVE	7	pol
 p374-o5	p374	Japan	APAC	English	Japan;MEXT	PRODUCTIVE	4	policy-milestones	-
 p374-o5b	p374	Japan	APAC	Japanese	Japan;文部科学省	PRODUCTIVE	4	operational-detail	-
 p374-o6	p374	India	APAC	English	India;MoE;CBSE;NCERT	PRODUCTIVE	6	policy-milestones	-
+# ── p423, 2026-10-24 ────────────────────────────────────────────────────────────────────────
+# The four PRESCRIBED regional legs are region-LABEL legs ("AI education EMEA 2026 adoption
+# regulation players").  All four returned prose and zero addresses, and the EMEA one returned
+# nothing education-specific at all.  🔴 Under `J2` limb 1 that nil is INADMISSIBLE: it names a
+# region label, not a jurisdiction.  So instead of publishing it, p423 ran the jurisdiction pair
+# the rule asks for — Germany in English and in German — and the nil DISSOLVED: the English leg
+# returned a KMK framework update announced eight days earlier.  🟢 `p374`'s rule did not merely
+# judge a nil here, it PREVENTED a false one, which is the first time it has paid that way.
+# 🔵 And it inverts `p374`'s Japan cell: there the in-language leg carried the operational detail;
+# here the in-language leg was the weak one and English carried the policy milestone.
+p423-l1	p423	-	EMEA	English	EMEA	NIL	0	policy-milestones	WITHDRAWN-p423-superseded-by-p423-e1
+p423-e1	p423	Germany	EMEA	English	Germany;KMK;Bildung in der digitalen Welt;Niedersachsen	PRODUCTIVE	5	policy-milestones	-
+p423-e2	p423	Germany	EMEA	German	Germany;KMK;BDA;LMU	PARTIAL	2	operational-detail	-
+p423-n1	p423	United States	North America	English	United States;NSF;AFT;Colorado;Texas	PRODUCTIVE	4	policy-milestones	-
+p423-a1	p423	Australia	APAC	English	Australia;Canberra;OpenAI ANZ	PARTIAL	2	policy-milestones	-
+p423-s1	p423	Mexico	LATAM	English	Mexico;SEP;ANUIES;Chile;Brazil;Colombia	PRODUCTIVE	6	survey-figures	-

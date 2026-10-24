@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-24
 ---
 
+## Pass 423 — reads 2026-10-24, commit 2026-10-24 — **`p422` DECLARED ITS GATE SUITE UN-RUN AND HONOURED EVERY FILE CONTRACT BY HAND. THE SUITE RAN ON THIS HOST AND THE HAND-HONOURING FAILED ON FIVE OF 53 GATES. 🔴 THREE OF THE FIVE ARE POST-WRITE GATES `p412`'s OWN RULE CANNOT REACH, AND `make hooks` HAS BEEN RED ON PURPOSE SINCE `p398`, SO NO COMMIT HOOK COULD EVER HAVE ASKED IT A YES-OR-NO QUESTION. 🟢 `DECLARED_RED` / `make commit-gates` / `pre-commit` BUILT AND WIRED. 🔴 AND THIS PASS BUILT A CASING ARM THE CORPUS ALREADY HELD, IN AN INSTRUMENT IT HAS KEPT IN NO `make` TARGET SINCE `p439` — WHICH, ON BEING WIRED, IMMEDIATELY FOUND ONE REPOSITORY CITED UNDER TWO SPELLINGS ON THE RECOMMENDATION SHELVES.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, SHA read, payload digest and gate run happened
+**2026-10-24**; the commit lands **2026-10-24**, so `updated:` carries one date.
+
+🟢 **Gates ran FIRST** (`p412`'s standing rule) against `p422`'s commit `82235af`, **before** the
+first research leg: **47 / 53 green, 6 red** — one deliberate (`Gap 400-B`) and **five new**.
+
+🟢 **And they ran LAST, which is the half that paid.** The first full run after this pass's eight
+shelf writes was **51 / 55**, red on three gates **this pass's own writing broke** — two author
+counts stated without naming the `%ae` key, one sentence of this pass's prose parsed as an absence
+the index refutes, and `Gap 423-E`(c). 🔴 **No gates-first run could have seen any of them**, which
+is the argument for `make commit-gates` as a measurement rather than a theory.
+🟢 **Final state at the commit: 54 / 55 green**, the only red being the declared
+`gate-census-union`, and `make commit-gates` exits **0** over its 54 blocking gates — so this is
+the first pass whose commit was gated by a suite that could say no.
+
+**What this pass established, first-hand:**
+
+- 🔴 **A hand-honoured file contract is not a run suite, and now there is a number for it.**
+  `p422` recorded the host's auto-mode classifier refusing to execute code from the clone and
+  honoured every contract by hand. 🟢 **On this host the suite ran with no refusal at all**, so a
+  declared-un-run suite must never be read as un-runnable. 🔴 The five it missed:
+  `gate-register-currency` (the register lagged a whole pass), `gate-census-currency` (2 of 3
+  cells stale), `gate-union-currency` (3 of 3 stale), `gate-fold-identity` (a casing finding) and
+  `gate-action-answered` (a pinned cardinality).
+- 🔴 **`make hooks` cannot block a commit, and nothing in this base said so.** It has exited
+  non-zero since `p398` by design (`Gap 400-B`), so its exit status has carried no information for
+  twenty-five passes. 🟢 **`DECLARED_RED` separates the deliberate red from the real ones**, the
+  blocking set is **54 of 55** gates, and a declaration **costs a registered gap**:
+  `P423-UNREGISTERED-RED` fires on any gate carried red that no `Gap N-X` cites by name.
+  `gate-commit-gate` is itself in the blocking set, so the declaration cannot be widened quietly
+  by the commit it protects. 🟡 `Gap 423-B`: `git clone` does not copy `.git/hooks`, so the
+  guarantee is per-working-copy — recorded, not papered over.
+- 🔴 **`T117` — a package can declare MIT on every metadata channel and ship a non-open-source
+  grant.** `tixuz/openemis-mcp`, an MCP server over **OpenEMIS** (UNESCO/KORDIT's
+  ministry-deployed school MIS), is MIT per npm, per the MCP directory that surfaced it **and per
+  its own `package.json`**. Its only payload is **BSL-1.1**, `647` B `4dead97d8aaf` at
+  `LICENSE.md` @ `f88a80fc1d5b`; the ladder's six other paths are `404`. 🔴 `npm
+  openemis-mcp@1.2.0` ships that **byte-identical** BSL file beside the MIT manifest, so the
+  conflict is in the artifact a client installs. 🔵 `Licensed Work: openemis-mcp-pro` — a name
+  that is neither the repo nor the package — use limited to non-production evaluation until
+  `Change Date: 2029-01-01`. **Not recommendable, and not shelved as supply.**
+- 🔴 **`T120` — this pass built what the corpus already held.** `p439-case-collision-gate` had
+  already written the canonical-casing channel order down — registry homepage, then the
+  repository's own self-link, then a recorded majority decision — and has been in **no `make`
+  target since `p439`**. `p423` built its authority arm without it and found it only afterwards,
+  while discharging `ACTION p421-A`. 🔴 **`Gap 421-A` is therefore not untidiness: invisibility
+  caused a duplication.** 🟢 `p421`'s `gate-action-answered` stops a pass *delivering* an answered
+  action; it does not grade a pass *building* one (`Gap 423-G`).
+- 🟢 **`p439` wired, and it paid on its first run inside a target.**
+  `RohanMuppa/brightspace-mcp-server` was cited **both ways** across `agents/top.md`,
+  `repos/foundations.md` and `verticals/solutions.md` — **one repository, two spellings, on the
+  recommendation shelves**, which `gate-identity` exists to prevent and does not catch on casing.
+  Resolved by that gate's own channel 2 at SHA `4b3bc9bf3838` (README self-links `RohanMuppa` ×3;
+  `package.json` agrees) and normalised. **0 findings over 365** distinct slugs now.
+- 🔴 **`T119` / `Gap 423-C` — precedence is not authority.** `gate-fold-identity` reddened on
+  `Mattlo0546/canvas-mcp` as a "new casing" against `p370`'s lower-case row. The canonical form is
+  `Mattlo0546`, so **`p422` was right and the gate was pointing at the wrong row** — and a
+  precedence-only gate does not merely miss that, it **demands every later pass reproduce the
+  error**. 🟢 Authority arm built (33 controls); `p370`'s row carried as a census measurement,
+  because an append-only shelf is not repaired backwards (`p347`).
+- 🔴 **`Gap 423-E` — a control may not pin a cardinality over a table meant to grow, and this
+  pass found it TWICE.** `p421`'s `len(vocab) == 14` broke on `p422`'s two legitimate platform
+  rows; `p374`'s `len(LEGS) == 10` broke on `p423` recording six legs in the table its own header
+  calls *"every regional leg this base has run first-hand"*. 🟢 Both restated as the properties
+  they proxied for, over non-zero floors — and `p374`'s `J2` control is now **strictly stronger**,
+  saying the gate visits every nil in the table, which `== 2` never said. 🔵 Two instruments makes
+  it a pattern.
+- 🔴 **`Gap 423-D` — `gate-action-answered`'s platform vocabulary conflates tiers, in the
+  load-bearing direction.** `canvas` → **MIT** (an MCP-census row) sits beside `canvas lms` →
+  **AGPL-3.0** (the platform), and the shorter key is the one a platform-worded action matches
+  first: a studio told *"Canvas is MIT"* would ship AGPL-3.0. 🟡 Pinned **open**, not closed by a
+  filter — a tier arm needs the shelf to mark its platform rows, and `p387-G` forbids closing a
+  gap by loosening a control.
+- 🟢 **`p374`'s nil rule prevented a FALSE nil, for the first time.** The prescribed EMEA
+  region-label leg returned nothing education-specific; `J2` limb 1 makes that nil inadmissible
+  because it names a label, not a jurisdiction. 🟢 So Germany was run in English and in German
+  instead and **the nil dissolved** — the **KMK**'s October-2026 update to *Bildung in der
+  digitalen Welt*, one source dating the announcement **2026-10-16**, eight days before this pass,
+  with **KI-Kompetenz as a cross-curricular task**. 🔵 And it **inverts `p374`'s Japan cell**:
+  there the in-language leg carried the operational detail, here German was the weak leg and
+  English carried the milestone.
+- 🟢 **The regional sale converges on one artefact.** Lower Saxony's **April-2026** motion asks
+  for clear rules citing legal uncertainty **specifically around AI-assisted grading**; US state
+  statutes prohibit AI replacing a licensed educator in grading (`p421`); **~70 %** of LATAM
+  universities have no published AI-use policy, over **UNESCO IESALC**'s administration-tier
+  adoption of **34.1 %** across 200 institutions in 19 countries. 🟢 Two legal mechanisms —
+  statute and liability — and one deliverable: a reviewable human-in-the-loop evidence trail.
+- 🔴 **`T100` seventh confirmation, `T113` again.** Eight ranking/trend/regional legs → **0
+  unshelved**; two capability legs → **2 unshelved, 0 supply**. 🔵 First pass where the entire
+  unshelved set is disposed of by refusal on two distinct grounds — a licence conflict and a
+  below-bar grade (`ckz/edu_data_mcp_server`, MIT `1 060` B `a21e3d63806c`, 4 commits, March 2025).
+- 🟢 **`ACTION p421-A` discharged with a sharper number than it asked for.** `compose/code/` holds
+  **431** directories, **328** named nowhere in the `Makefile`, **175** of those carrying a
+  `test_*.py` nothing runs, and 🔴 **15 of those describing themselves as a gate** — the first
+  time `gate-region-headings`' shape has a population rather than instances. 🟡 Candidates, not
+  verdicts: the match is textual, and `ACTION p423-A` carries the adjudication.
+- 🟢 **`T116` counter to 34 pairs, 0 hits** (`openemis-mcp`'s second head carries the identical
+  payload) and 🟢 **`T106` re-calibrated** on this host before anything was graded
+  (`Mattlo0546/canvas-mcp` `LICENSE` @ `b6c26ba` → `1 067` B `13c8ad755224`, reproducing `p422`).
+- 🔵 **Declared gaps, so silence does not read as coverage.** `Gap 421-E`'s Vietnam and Brazil
+  date conflicts are **both carried unresolved** — this pass's APAC and LATAM legs produced
+  nothing bearing on either. **Canada** remains an open market gap (`Gap 422-B`). `Gap 298` holds
+  on a ninth channel: no permissive education platform anywhere on these shelves.
+
+### 🟢 The census, derived LAST — after every shelf write
+
+🟢 **Re-derived as the last act before the commit**, per `p352` and `p376`, which is the ordering
+`p412`'s gates-first rule cannot supply on its own and the reason three of this pass's five
+inherited reds were currency gates. 🔵 **The shape census:**
+**2 774** harvested shapes → **38** are not addresses → **2 736 addresses**. 🔵 **2 736** channel-U
+addresses and **3 212** channel-B survivors give **3 578 addresses over both channels**.
+
+🔴 **Against `p422`'s published triple (`2 770 / 38 / 2 732`, union `2 732 / 3 207 / 3 574`): that
+triple was already stale against `p422`'s OWN tree by 2 addresses** — the suite it did not run
+would have said so, and `gate-union-currency` did say so on this pass's first run
+(`2 732` published against `2 734` derived). 🟢 `p423`'s figures above are derived **after** this
+pass's eight shelf writes, so they are current by construction rather than by luck.
+🔵 **The movement is +4 harvested, +4 addresses, +5 channel-B survivors, +4 union** — consistent
+with a pass that added two graded addresses and cited a handful of carried ones, and
+`p352`'s rule holds: the stale figures `p422` published stay published, because a census is not
+repaired by editing history.
+
 ## Pass 421 — reads 2026-10-24, commit 2026-10-24 — **THE INSTRUMENT FOR *"IS THIS ACTION ALREADY ANSWERED?"* HAS EXISTED SINCE PASE 59, PASSES 16/16, AND IS IN NO `make` TARGET. 🔴 WIRING IT AS-IS WOULD HAVE BOUGHT NOTHING — IT READS A NOTATION THIS REGISTER RETIRED AND REPORTS `0` CITATIONS. 🟢 `gate-action-answered` BUILT, AMENDED THREE TIMES ON MEASURED FALSE RATES (268 → 2) AND WIRED. 🔴 AND `ACTION p420-E`'s BOTH HALVES WERE ALREADY ON THESE SHELVES WHEN IT WAS WRITTEN.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, SHA read, payload digest and gate run happened

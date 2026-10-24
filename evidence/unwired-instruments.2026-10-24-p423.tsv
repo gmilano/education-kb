@@ -1,0 +1,48 @@
+# p423, 2026-10-24 — ACTION p421-A DISCHARGED: compose/code/* enumerated against HOOK_GATES.
+#
+# p421 asked for 'one listing against one variable' and expected 'a large, mostly-legitimate
+# difference'.  It is large.  The legitimate part is real: most of these directories are
+# single-pass instruments that answered one question and were never meant to stand.
+#
+# 🔴 The part that is NOT legitimate is the last row: 15 directories carry a suite nothing
+# runs AND describe themselves as a gate.  `gate-region-headings` (p338) and
+# `action-gap-crosscheck` (p421) were instances 1 and 2 of exactly that shape; this is a
+# measured candidate POPULATION where p421 had no number at all.
+#
+# 🟡 'Self-describes as a gate' is a TEXT match, deliberately crude and stated as such: it
+# names candidates, not defects.  Each of the 15 needs its own adjudication, which is what
+# ACTION p423-A asks for.  This pass claims the denominator, not the verdicts.
+#
+# 🔵 Channel: directory name matched as a substring anywhere in the Makefile, so a target
+# invoking `compose/code/<dir>/x.py` counts as named.  HOOK_GATES read with p423's own
+# parser (commit_gate.read_sets), not a fresh regex — a fresh one over-read to 137 by
+# swallowing the DECLARED_RED block, and the instrument was right.
+#
+measure	count
+compose_code_directories	431
+named_somewhere_in_Makefile	103
+not_named_in_Makefile	328
+unnamed_and_carrying_a_test_suite	175
+unnamed_with_suite_AND_self_describing_as_a_gate	16
+HOOK_GATES_entries	54
+DECLARED_RED_entries	1
+blocking_gates	53
+#
+# The 15 candidates, with the token that matched and the file it matched in:
+directory	matched_token	in_file
+mcp-allowlist-gateway	(prose: 'this gate')	README.md
+p143-surface-gate-repair	gate-repair	surface_gate2.py
+p145-surface-payload-repair	gate-repair	surface_gate3.py
+p147-guard-harness	gate-repair	guard_harness.py
+p148-guard-preserving	gate-repair	guard_preserving.py
+p151-approval-field-closure	(prose: 'this gate')	README.md
+p151-identifier-spaces	(prose: 'this gate')	test_identifier_spaces.py
+p170-newest-block-gate	(prose: 'this gate')	README.md
+p175-dated-evidence-gate	(prose: 'this gate')	dated_write.py
+p202-topic-relevance-gate	(prose: 'this gate')	gate.py
+p400-candidate-membership	gate-census-currency	test_membership.py
+p401-plugin-grant-channel	gate-ladder-case	plugin_grant_channel.py
+p439-case-collision-gate	(prose: 'this gate')	case_gate.py
+p449-prose-tsv-reconciliation	(prose: 'this gate')	reconcile.py
+p471-gap-gate-language	gate-language	gap_language.py
+unitime-mcp-gate	(prose: 'this gate')	extract_surface.py

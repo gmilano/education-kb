@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **The SIS tier gets its first MCP address and it is NOT permissive: `tixuz/openemis-mcp` over UNESCO's OpenEMIS is Business Source License 1.1 at its own SHA, under an MIT manifest and an MIT npm entry. 🔵 So `p422`'s "the agent layer is the permissive arm" holds for LMS and is UNTESTED-TO-FALSE for SIS, on one address.**
+
+🟢 Gates first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red, 5 new, all five fixed
+this pass. 🔵 Every read **2026-10-24**. 🔵 **No platform row is added or changed** — the vertical
+leg returned **8 platforms, 8 already shelved, 0 unshelved**, a third consecutive pass of zero
+unshelved platforms.
+
+### 🔴 The tier picture, corrected where this pass could correct it
+
+| tier | what these shelves grade it | p423 |
+|---|---|---|
+| education **platforms** (LMS / SIS / MIS) | 🔴 **no permissive grant anywhere** — `Gap 298`, confirmed on an eighth channel by `p421` | 🔵 unchanged; the leg returned Moodle, Open edX, Canvas LMS, Sakai, OpenEduCat, Chamilo, ILIAS and OpenEduCat again, all carried |
+| platform **extension points** | 🟢 **permissive** — `openedx/XBlock` + `openedx/xblock-sdk`, Apache-2.0, `11 358` B `cfc7749b96f6` | 🔵 unchanged, and still the most useful boundary this base has on `Gap 298` |
+| **LMS** agent layer (MCP over the LMS) | 🟢 **9 of 10 MIT** at their own SHAs (`p422`, `T114`) | 🔵 unchanged |
+| **SIS / MIS** agent layer | 🆕 **first address read at a SHA, and it is `BSL-1.1`** | 🔴 `T118` — one address, so a **boundary on `T114`**, not a refutation of it |
+
+🔴 **`OpenEMIS` is now graded on both tiers and neither is permissive.** The platform,
+[`OpenEMIS/core`](https://github.com/OpenEMIS/core), these shelves already carry as
+**GPL-2.0** — the payload that proved `P572`. The agent above it,
+[`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp), is **BSL-1.1** (`647` B
+`4dead97d8aaf` at `LICENSE.md` @ `f88a80fc1d5b`), with `Licensed Work: openemis-mcp-pro`, an
+Additional Use Grant of *non-production evaluation and internal testing only*, and
+`Change Date: 2029-01-01`. 🔵 OpenEMIS is UNESCO/KORDIT's school MIS and is deployed by
+ministries, which makes it exactly the platform a public-sector education engagement meets — and
+the only agent surface over it that this base can find is unusable commercially for three years.
+
+🔴 **What a studio must not do with it:** take the MIT badge from the npm page or the MCP
+directory. Both say MIT. So does `package.json`, in the same tree at the same SHA. The only
+licence payload in the repository is the BSL, the rest of the ladder is `404`, and the **published
+npm tarball ships that same 647-byte BSL file** beside the MIT manifest. `Gap 423-A`.
+
+🟢 **What a studio CAN do:** build the SIS agent surface itself, against `OpenEMIS/core`'s
+GPL-2.0 boundary, copying the **architecture** rather than the code — see `Pattern AU` in
+[`compose/patterns.md`](../compose/patterns.md), which uses the LMS tier's MIT exemplars as the
+design to clone and keeps the copyleft platform behind a process boundary.
+
+🟢 **One repair on this file this pass, unrelated to the SIS tier.** `RohanMuppa/brightspace-mcp-server`
+was cited here in lower case while `agents/top.md` and `repos/foundations.md` carried it in upper
+case — one repository, two spellings, three shelves. Found by `p439-case-collision-gate` on the
+pass that **wired** it (it had been in no `make` target since `p439`), resolved by that gate's own
+channel 2 at SHA `4b3bc9bf3838`, and normalised. `T120`.
+
 ## 🆕 `p422` · 2026-10-24 — **The vertical leg returned ZERO unshelved platforms for a second consecutive pass — and it also returned two Apache-2.0 claims this file must NOT accept, because both conflict with grades already on these shelves. 🟢 The real vertical movement is one layer up: the agent-facing tier over these platforms is MIT, 9 of 9.**
 
 🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
@@ -1718,7 +1760,7 @@ This did not exist a year ago and it changes the integration story:
 - 🆕 `p386` **Brightspace / D2L — six addresses, six MIT grants.**
   [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) is the fullest
   (TOTP/OAuth/browser auth strategies, retry + circuit-breaker + cache, **opt-in writes**);
-  [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) is the
+  [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) is the
   upstream of a fork family whose copies publish **byte-identical** licence payloads, so count it
   once. 🔵 **All six are student-side** — an institution-grade D2L server is the one genuine
   greenfield contribution left on this platform.

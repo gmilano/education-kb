@@ -1,0 +1,40 @@
+# p423, 2026-10-24 — the discovery legs, with what each one RETURNED and what was NEW.
+#
+# T100 asked whether ranking-worded legs still return unshelved supply.  Seventh consecutive
+# confirmation that they do not.  The two unshelved addresses this pass found both came from
+# a CAPABILITY-worded leg, which is the pattern T100 names.
+#
+leg	wording	addresses_returned	already_shelved	unshelved	supply_added
+open source AI agents education 2026 github MIT	ranking	4	4	0	0
+github trending education AI 2026	ranking	4	4	0	0
+open source platform education LMS SIS MIT Apache 2026	vertical/ranking	8	8	0	0
+AI education industry trends 2026	trend	0 addresses (market-research prose only)	-	0	0
+AI education North America 2026 adoption regulation players	regional	0 addresses	-	0	0
+AI education EMEA 2026 adoption regulation players	regional	0 addresses	-	0	0
+AI education APAC 2026 adoption regulation players	regional	0 addresses	-	0	0
+AI education LATAM 2026 adoption regulation players	regional	0 addresses	-	0	0
+agent grades student work rubric autograder MCP 2026	capability	3	3	0	0
+MCP server student information system SIS enrollment 2026 MIT	capability	5	3	2	0
+#	ranking_legs_unshelved	0	T100, seventh consecutive confirmation
+#	capability_legs_unshelved	2	tixuz/openemis-mcp, ckz/edu_data_mcp_server
+#	supply_added	0	T113 again: an unshelved count is NOT a supply count
+#
+# Already-shelved addresses the ranking legs returned, for the denominator: pguso/agents-from-scratch,
+# rohitg00/ai-engineering-from-scratch, h9-tect/AI-Roadmaps, microsoft/AI-Agents-For-Beginners,
+# Shubhamsaboo/awesome-llm-apps, 500-AI-Agents-Projects, NousResearch Hermes, moodle, open edX,
+# OpenEduCat, Sakai, ILIAS, Canvas LMS, Chamilo.
+#
+# 🔴 T113 CONFIRMED AGAIN AND HARDER: 2 unshelved, 0 supply.  One is a licence CONFLICT that
+# must not be recommended (`tixuz/openemis-mcp`), the other is real and permissive but below
+# bar (`ckz/edu_data_mcp_server`, 4 commits, March 2025).  An unshelved count still is not a
+# supply count, and this pass is the first where the whole unshelved set is disposed of by
+# REFUSAL on two different grounds.
+#
+# 🟡 The SIS-worded capability leg also returned `openemis-mcp` (the package) via a third-party
+# MCP directory describing it as "MIT-licensed".  That description is what p423 refuted; the
+# directory is the channel, the payload at the SHA is the authority (p289).
+#
+# 🔵 Regional legs: the four prescribed regional legs returned POLICY AND ADOPTION PROSE and
+# zero repository addresses.  That is not a nil — see `intel/market.md`, where each region is
+# stated separately — but it is a nil on the SUPPLY axis for all four, which no earlier pass
+# has recorded for the regional legs as a set.

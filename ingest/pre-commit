@@ -1,0 +1,28 @@
+#!/bin/sh
+# p423 — the blocking suite, as a commit gate.
+#
+# `make hooks` has exited non-zero since p398 by design (`Gap 400-B`), so its status could
+# never block anything.  `make commit-gates` runs HOOK_GATES minus the DECLARED_RED set,
+# which is a suite that means yes or no.  A gate may only be in DECLARED_RED if a
+# registered `Gap N-X` cites it — `gate-commit-gate` enforces that, and it is itself in the
+# blocking set, so the declaration cannot be widened quietly by the same commit it protects.
+#
+# 🟡 Gap 423-B: `git clone` does not copy `.git/hooks`, so this file protects only the
+# working copy it was installed into (`make install-hooks`).  Per-copy, not per-repo.
+#
+# Override, for a commit that deliberately lands a red gate:  SKIP_COMMIT_GATES=1 git commit
+# It is loud on purpose — a skip should be visible in the terminal of whoever typed it.
+if [ -n "$SKIP_COMMIT_GATES" ]; then
+    echo "🔴 pre-commit: blocking gates SKIPPED by SKIP_COMMIT_GATES — say so in the pass write-up"
+    exit 0
+fi
+
+echo "── pre-commit: running the blocking gate suite (p423)"
+if ! make --no-print-directory commit-gates; then
+    echo ""
+    echo "🔴 pre-commit REFUSED THE COMMIT — a blocking gate is red."
+    echo "   Fix it, or declare it in DECLARED_RED with a registered \`Gap N-X\` that cites"
+    echo "   it by name, or override once with SKIP_COMMIT_GATES=1."
+    exit 1
+fi
+exit 0

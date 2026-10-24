@@ -54,6 +54,52 @@ Writing `cahlr/OATutor` in a new section when the shelves say `CAHLR/OATutor` is
 failure.  Citing the casing already published is not.  The 65 inherited groups are a
 CENSUS -- a backlog with a denominator, never a failure -- which is the `p308`
 `shelf-census` / `gate-shelf-consistency` split applied to the identity axis.
+
+## p423 -- PRECEDENCE IS NOT AUTHORITY, and this gate had only precedence
+
+The contract above reads *"writing `cahlr/OATutor` in a new section when the shelves say
+`CAHLR/OATutor` is the failure.  Citing the casing already published is not."*  That is
+right exactly when the first publication was right, and `p423` measured a case where it
+was not.  `p370` published `mattlo0546/canvas-mcp` in lower case.  GitHub's own canonical
+display form is `Mattlo0546` -- page title and breadcrumb, the lower-case form appearing
+only inside URLs, which are case-insensitive.  So `p422` wrote the CORRECT casing, this
+gate reddened against the correct row, and the stale one sat in history serving as the
+oracle.  A precedence-only gate does not merely miss that: it DEMANDS every later pass
+reproduce the error, and reddens the pass that repairs it.
+
+So this gate now adjudicates by AUTHORITY where authority is known:
+
+    P348-NON-CANONICAL-CASING   a LIVE address deviates from a REGISTERED canonical
+                                casing.  Fatal -- strictly stronger than the precedence
+                                arm, because the canonical is a first-hand read and not
+                                a guess at which published row came first.
+    P423-HISTORICAL-NON-CANONICAL   a HISTORICAL address deviates from a registered
+                                canonical.  A CENSUS row with a denominator, never a
+                                failure: an append-only shelf cannot be repaired
+                                backwards (`p347`), which is the same disposition the
+                                65 inherited folds already have.
+
+🔴 AND THE CHANNEL ORDER WAS ALREADY IN THIS REPOSITORY.  `p439-case-collision-gate` wrote
+it down -- registry homepage, then the repository's own self-link, then a recorded
+majority decision -- and has been in NO `make` target since `p439`.  `p423` built this arm
+without knowing that, and found it only afterwards while discharging `ACTION p421-A`.  So
+`Gap 421-A` is not merely untidy: an instrument in no target is invisible, and the
+invisibility CAUSED a duplication, which is `T109`'s class turned on the pass itself.
+`p439` is wired as of `p423` and the register row below is re-grounded on ITS channel 2,
+read at the SHA, rather than on the novel channel this arm first reached for.
+
+🟢 The two instruments cover different axes, measured rather than assumed.  `p439` scans
+only the six non-append-only shelves and keys on collisions WITHIN them.  `p422`'s failure
+was a LIVE row against an APPEND-ONLY history row, which `p439` by design never sees -- and
+on the very corpus where this gate was red, `p439` reports 0 findings.  So: `p439`
+live-vs-live with the channel order; this arm live-vs-unrepairable-history.
+
+A fold with NO register entry keeps the precedence arm unchanged, so nothing is loosened
+where authority is absent -- which is most of the corpus.  The register is
+`evidence/p423-canonical-casing.tsv`, one first-hand read per row, with the channel named,
+because the channel here is NOT this base's usual raw-at-SHA read and must not be blended
+into it.  `git ls-remote` cannot serve this question at all: it answers case-insensitively
+and never echoes the owner's stored casing.
 """
 import collections
 import os
@@ -120,9 +166,58 @@ def census(paths):
     return len(idx), groups
 
 
-def gate(paths):
-    """P348-NEW-CASING over each file's live pass section."""
+# ---------------------------------------------------------------- p423
+# The authority register.  Resolved against this file's location so the gate reads the
+# same register whether it is run from the repo root or from its own directory.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+# 🔴 p423: the first draft climbed THREE levels and landed on `compose/`, so the register
+# loaded as {} and the gate fell back to pure precedence — green for the same reason a
+# correct run is green, which is `gate-backlog-denominator`'s class.  Caught by asserting
+# the known row loads, not by reading the path.  Four levels:
+#   compose/code/p348-fold-identity -> compose/code -> compose -> <repo root>
+_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(_HERE)))
+CASING_REGISTER = os.path.join(_ROOT, "evidence", "p423-canonical-casing.tsv")
+
+
+def canonical_casings(register=None):
+    """folded slug -> the canonical casing, from the p423 authority register.
+
+    Comment and blank lines are skipped, and so is the header row: a header compiled as
+    data is a defect this base has published more than once.  A malformed or absent
+    register yields {}, which returns the gate to pure precedence rather than silently
+    passing everything.
+    """
+    path = register or CASING_REGISTER
+    out = {}
+    if not os.path.exists(path):
+        return out
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.rstrip("\n")
+            if not line or line.lstrip().startswith("#"):
+                continue
+            cells = line.split("\t")
+            if len(cells) < 2:
+                continue
+            folded, canonical = cells[0].strip(), cells[1].strip()
+            if folded == "folded_slug":          # the header row is not a register entry
+                continue
+            if folded.count("/") != 1 or canonical.lower() != folded.lower():
+                continue                          # a row that does not agree with itself
+            out[folded.lower()] = canonical
+    return out
+
+
+def gate(paths, register=None):
+    """The LIVE-section casing contract, adjudicated by authority where it is known.
+
+    P348-NEW-CASING             precedence arm, for folds with no register entry.
+    P348-NON-CANONICAL-CASING   authority arm: a live address against a registered
+                                canonical.  Fatal, and it fires on the WRONG row rather
+                                than on whichever row happened to be published first.
+    """
     findings = []
+    canon = canonical_casings(register)
     prior = collections.defaultdict(set)
     live = {}
     for p in paths:
@@ -135,18 +230,46 @@ def gate(paths):
     # an address published in ANOTHER file's history counts as published
     for p in paths:
         for s in live[p]:
-            prior_variants = prior.get(s.lower(), set())
+            fold = s.lower()
+            if fold in canon:
+                # 🟢 Authority beats precedence.  The register is a first-hand read; the
+                # history is only whichever pass wrote first.
+                if s != canon[fold]:
+                    findings.append((p, "P348-NON-CANONICAL-CASING", s,
+                                     "canonical is " + canon[fold]))
+                continue
+            prior_variants = prior.get(fold, set())
             if prior_variants and s not in prior_variants:
                 findings.append((p, "P348-NEW-CASING", s,
                                  "published as " + "/".join(sorted(prior_variants))))
     return findings
 
 
+def historical_casing_census(paths, register=None):
+    """P423-HISTORICAL-NON-CANONICAL -- a backlog with a denominator, never a failure.
+
+    Returns (registered_folds, rows).  An append-only shelf cannot be repaired backwards
+    (`p347`), so a deviation already published is a measurement; only the live section is
+    gated.
+    """
+    canon = canonical_casings(register)
+    rows = []
+    for p in paths:
+        with open(p, encoding="utf-8") as fh:
+            _, old = split_live_section(fh.read())
+        for s in slugs_in(old):
+            fold = s.lower()
+            if fold in canon and s != canon[fold]:
+                rows.append((p, "P423-HISTORICAL-NON-CANONICAL", s,
+                             "canonical is " + canon[fold]))
+    return len(canon), rows
+
+
 def main(argv):
     # P541: a gate that measures the files it is GIVEN must refuse an empty argument
     # list, because `total 0` without files is indistinguishable from a clean tree.
     mode = "gate"
-    if argv and argv[0] in ("gate", "census"):
+    if argv and argv[0] in ("gate", "census", "casing-census"):
         mode, argv = argv[0], argv[1:]
     paths = [a for a in argv if os.path.exists(a)]
     if not paths:
@@ -155,6 +278,22 @@ def main(argv):
               "tree.  Usage: fold_identity.py [gate|census] <shelf.md> ...",
               file=sys.stderr)
         return 2
+    if mode == "casing-census":
+        # p423 — the HISTORICAL arm of the authority register.  A backlog with a
+        # denominator: an append-only shelf cannot be repaired backwards (`p347`), so a
+        # deviation already published is a measurement and only the live section is gated.
+        registered, rows = historical_casing_census(paths)
+        print("# p423 historical casing census -- a backlog with a denominator, never a failure")
+        print("archivo\thallazgo\tslug\tdetalle")
+        for r in rows:
+            print("\t".join(str(x) for x in r))
+        print("#\tregistered_canonical_folds\t%d" % registered)
+        print("#\thistorical_deviations\t%d" % len(rows))
+        if not registered:
+            print("#\tREFUSED\tthe p423 register loaded ZERO canonical folds -- a zero "
+                  "denominator is not a clean corpus")
+            return 2
+        return 0
     if mode == "census":
         total, groups = census(paths)
         print("# p348 fold census -- a backlog with a denominator, never a failure")

@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **This pass adds NO row to this shelf, and that is the finding: the single new SIS-tier agent the capability leg returned is published as MIT by its npm registry entry, by a third-party MCP directory AND by its own in-repo manifest, and its only grant payload is Business Source License 1.1. 🔴 The conflict ships INSIDE the npm tarball, byte-identical to the repo payload. 🟢 And `p422`'s correct casing is vindicated against the gate that reddened it — then the fix turned out to exist already, in an instrument this base has kept in no `make` target since `p439`, which on being wired immediately found one repository cited under two spellings on THIS shelf.**
+
+🟢 **Gates ran FIRST, and this time against a commit nobody had measured.** `make hooks`
+completed against `p422`'s commit `82235af` **before** this pass's first research leg, which is
+`p412`'s standing rule: **47 / 53 green, 6 red.** 🔵 `p422` declared its own suite un-run — the
+host's auto-mode classifier refused to execute code from the clone — and honoured every file
+contract **by hand**. 🟢 **On this host the suite ran with no refusal at all**, so "declared
+un-run" must never be read as "un-runnable": that refusal is a property of a session, not of this
+repository. 🔴 **The hand-honoured contract held on 47 gates and failed on five.** Evidence:
+[`p423-gate-cost.2026-10-24-p423.tsv`](../evidence/p423-gate-cost.2026-10-24-p423.tsv).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read, digest and gate run happened
+**2026-10-24**; the commit lands **2026-10-24**.
+
+**What this pass established, first-hand:**
+
+- 🔴 **`T117` — a package can declare MIT on every metadata channel and ship a non-open-source
+  grant, and the conflict travels in the artifact.** `tixuz/openemis-mcp` — an MCP server over
+  **OpenEMIS**, UNESCO/KORDIT's school MIS — is listed as MIT by its npm registry metadata, by the
+  MCP directory that surfaced it, and by **its own `package.json` in the same tree at the same
+  SHA**. Its only grant payload is **Business Source License 1.1**, `647` B `4dead97d8aaf`, at
+  `LICENSE.md` @ `f88a80fc1d5b`. The whole ladder — `LICENSE`, `LICENSE.txt`, `LICENSE.TXT`,
+  `LICENSE-MIT`, `LICENSE-APACHE`, `COPYING` — is `404` at that SHA. **There is no MIT payload in
+  the tree.** 🔴 And `npm openemis-mcp@1.2.0` ships `package/LICENSE.md` at the **same 647 B /
+  `4dead97d8aaf`** beside a `package.json` reading `"license": "MIT"`, so `npm i` installs the
+  contradiction. **Not recommendable, and not on this shelf.**
+- 🔴 **The BSL names a DIFFERENT WORK than the repository it sits in.** `Licensed Work:
+  openemis-mcp-pro`, where the repo and the package are both `openemis-mcp`. Additional Use Grant:
+  *non-production evaluation and internal testing only*. `Change Date: 2029-01-01`,
+  `Change License: MIT`. 🔵 So even read charitably — a "pro" edition's licence left at the root of
+  the free edition — the address cannot be graded permissive by any channel this base trusts, and
+  read literally it forbids exactly the commercial embedding an engagement would do.
+- 🟢 **It is not a late re-licensing.** `LICENSE.md` entered in the **first commit**
+  (`148c0bc`, 2026-04-19, *"Initial release: openemis-mcp v1.0.0 — free read-only MCP for
+  OpenEMIS"*) and has never been modified. **32** commits, **4** authors (`%ae`), 2026-04-19 →
+  2026-06-16, every commit at **`+0300`** (🟢 EMEA; `+0300` carries no DST in the Moscow/Istanbul
+  band, so the placement does not rest on a DST assumption — `gate-offset-region`).
+- 🟢 **`T118` — `p422`'s permissive-agent-layer thesis does NOT extend to the SIS tier on this
+  evidence, and the one address that tested it is the counter-example.** `p422` measured 9 of 10
+  MCP-over-**LMS** addresses MIT. The first MCP-over-**SIS** address read at its SHA is BSL-1.1.
+  🔵 One address is not a tier, which is why this is registered as a boundary on `T114` rather
+  than a refutation of it.
+- 🟢 **`T116` re-tested: `p419`'s branch-grant hazard still does not fire.** `openemis-mcp` ref
+  `openemis-core-5.10.0-update` (`e14c514598d4`) carries the **same** `647` B `4dead97d8aaf`
+  payload as `main`. Counter advances **32 → 34** `(slug, ref)` pairs, **0** hits.
+- 🟢 **`T106` re-calibrated on this host before anything was graded.**
+  `Mattlo0546/canvas-mcp` `LICENSE` at SHA `b6c26ba` reproduced **`1 067` B `13c8ad755224`**
+  exactly — the figure `p422` published — so the measurement channel is sound and the gradings
+  below are not resting on an unverified instrument.
+- 🔴 **`T119` — PRECEDENCE IS NOT AUTHORITY, and `gate-fold-identity` had only precedence.** The
+  gate reddened on `Mattlo0546/canvas-mcp` across three shelves as a "new casing" against
+  `p370`'s lower-case row. 🟢 **Resolved first-hand: GitHub's canonical display form is
+  `Mattlo0546`** — title and breadcrumb — the lower-case form appearing only inside URLs, which
+  are case-insensitive. **So `p422` wrote the correct casing and the gate was pointing at the
+  wrong row.** A precedence-only gate does not merely miss that: it **demands every later pass
+  reproduce the error**. 🟢 Fixed by an authority register, not by reverting the correct row
+  (`Gap 423-C`, and the register is
+  [`p423-canonical-casing.tsv`](../evidence/p423-canonical-casing.tsv)).
+- 🔴 **`T120` — AND THIS PASS BUILT SOMETHING THE CORPUS ALREADY HELD, which is `T109`'s class
+  turned on the pass itself.** `p439-case-collision-gate` had already written the
+  canonical-resolution channel order down — **registry homepage, then the repository's own
+  self-link, then a recorded majority decision** — and has been in **no `make` target since
+  `p439`**. `p423` built its casing arm without it and found it only afterwards, while
+  discharging `ACTION p421-A`. 🔴 **So `Gap 421-A` is not untidiness: an instrument in no target
+  is invisible, and the invisibility CAUSED the duplication.** 🟢 `p421`'s
+  `gate-action-answered` was built to stop a pass *delivering an action* the corpus answers; it
+  does not grade a pass *building* what the corpus holds, and that is the hole this instance
+  exposes.
+- 🟢 **`p439` is WIRED as of this pass — and on its first run inside a target it found a live
+  defect on this very shelf.** `RohanMuppa/brightspace-mcp-server` was cited **both ways**:
+  upper case at `agents/top.md` ×3 and `repos/foundations.md`, lower case at `agents/top.md` ×3
+  and `verticals/solutions.md` — **one repository under two spellings on the recommendation
+  shelves**, which `gate-identity` exists to prevent and does not catch on casing. 🟢 Resolved by
+  `p439`'s **own channel 2** at SHA `4b3bc9bf3838` — the README self-links
+  `github.com/RohanMuppa/brightspace-mcp-server` **×3** and `package.json` agrees — and the four
+  lower-case citations are normalised. `p439` now reports **0 findings over 365** distinct
+  case-insensitive slugs.
+- 🟢 **`ACTION p421-A` DISCHARGED, with a sharper number than it asked for.** `compose/code/`
+  holds **431** directories; **328** are named nowhere in the `Makefile`; **175** of those carry
+  a `test_*.py` nothing runs; and 🔴 **15 of those describe themselves as a gate.**
+  `gate-region-headings` (`p338`) and `action-gap-crosscheck` (`p421`) were instances 1 and 2 of
+  that shape — this is the first time it has a **population**. 🟡 "Self-describes as a gate" is a
+  text match, so those 15 are **candidates, not verdicts**; this pass claims the denominator and
+  `ACTION p423-A` asks for the adjudication. Evidence:
+  [`unwired-instruments.2026-10-24-p423.tsv`](../evidence/unwired-instruments.2026-10-24-p423.tsv).
+- 🟡 **The leg's other unshelved address is real, permissive and below bar.**
+  [`ckz/edu_data_mcp_server`](https://github.com/ckz/edu_data_mcp_server) — 🟢 **MIT** `LICENSE`
+  `1 060` B `a21e3d63806c` @ `a3eb7e8f2e70`, 1 ref, **4** commits, 1 author (`%ae`), 2025-03-21 →
+  2025-03-22. It wraps the Urban Institute education-data API: enrollment **statistics**, not
+  student records, so it answers an SIS-worded leg without being an SIS agent.
+  🔴 **REFUSED-BELOW-BAR** on age and surface, recorded so the refusal is explicit.
+- 🔴 **`T100` confirmed a SEVENTH time, and `T113` again.** All four ranking- and trend-worded
+  legs plus all four regional legs returned **0 unshelved**; the capability-worded legs returned
+  **2 unshelved, 0 supply**. 🔵 This is the first pass where the entire unshelved set is disposed
+  of by refusal on **two different grounds** — a licence conflict and a below-bar grade. Evidence:
+  [`discovery-legs.2026-10-24-p423.tsv`](../evidence/discovery-legs.2026-10-24-p423.tsv).
+
+### 🔴 The three channels that disagree about one address, stated as a table
+
+| channel | what it says about `tixuz/openemis-mcp` | authority |
+|---|---|---|
+| grant payload at the SHA (`LICENSE.md` @ `f88a80fc1d5b`) | 🔴 **BSL-1.1**, `647` B `4dead97d8aaf`, `Licensed Work: openemis-mcp-pro` | 🟢 **this base's authority** (`p289`) |
+| in-repo manifest at the same SHA (`package.json`) | 🟢 `"license": "MIT"` | 🔴 wrong, and it is the channel `gate-provenance` reads |
+| npm registry metadata + the MCP directory that surfaced it | 🟢 MIT | 🔴 wrong, and it is the channel a client reads first |
+
+🔴 **The ordering is the lesson.** This base already knew a *search result* can say MIT over a
+copyleft payload (`p409`). `p423`'s instance is worse in the direction that matters: the
+**manifest inside the repository** is the thing that is wrong, and `gate-provenance` (`p280`)
+identifies a manifest by what it **declares**. On this address, obeyed literally, it would grade
+BSL-1.1 code as MIT. `Gap 423-A`.
+
 ## 🆕 `p422` · 2026-10-24 — **The permissive arm of education open source EXISTS — and it is not the platform, it is the AGENT-FACING LAYER ON TOP of the platform. 🟢 Ten LMS MCP servers read at their own commit SHAs: NINE are MIT, one is ungranted. 🔴 And the discovery leg served a 683-commit-stale FORK as the canonical address, with the upstream's copyright line intact so a licence-only check cannot see it.**
 
 🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
@@ -2418,7 +2528,7 @@ row count in the same sentence, because a reader wants rows and the gate wants s
 | **Blackboard** | [Loganxgreaves/blackboard-mcp](https://github.com/Loganxgreaves/blackboard-mcp) | 🔴 **`master`** | 🟢 **MIT** *(1,070 B)* | 🆕 `p386`. Read-only, defaulted to one university (Sheffield Hallam) — re-point via config. Non-`main` default ref. |
 | 🔴 ~~**Blackboard**~~ **NOT A BLACKBOARD SERVER** | [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | `main` | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** | 🔴 **`p394` strikes this row from the Blackboard family.** Tree enumerated (9 files): no licence file, no manifest, no SPDX — but `readme.md:84` grants MIT, so the `UNGRANTED` verdict falls. **And it was never a Blackboard integration**: deps `mcp` + `sqlite3`, zero Learn API surface, `blackboard://` = the blackboard *architectural pattern*. Kept here, struck, so the correction is visible where the error was. |
 | **Brightspace / D2L** | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | `main` | 🟢 **MIT** *(1,070 B)* | 🆕 `p386`. 🟢 **The most substantial D2L server found.** Multi-strategy auth (TOTP, OAuth, browser), retry / circuit-breaker / cache tiers, and **opt-in write operations**. The closest available base for an institution-grade D2L server. |
-| **Brightspace / D2L** | [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | `main` | 🟢 **MIT** *(1,068 B)* | 🆕 `p386`. 🔵 **Upstream of a fork family — count it once.** [`lmgveerhoek`](https://github.com/lmgveerhoek/brightspace-mcp-server) and [`matthewliu10`](https://github.com/matthewliu10/brightspace-mcp-server) publish **byte-identical** payloads still holding `© 2026 Rohan Muppa`; several more forks share the npm name. Grades, due dates, assignments, announcements, rosters, syllabus. Automated login is wired per school. |
+| **Brightspace / D2L** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | `main` | 🟢 **MIT** *(1,068 B)* | 🆕 `p386`. 🔵 **Upstream of a fork family — count it once.** [`lmgveerhoek`](https://github.com/lmgveerhoek/brightspace-mcp-server) and [`matthewliu10`](https://github.com/matthewliu10/brightspace-mcp-server) publish **byte-identical** payloads still holding `© 2026 Rohan Muppa`; several more forks share the npm name. Grades, due dates, assignments, announcements, rosters, syllabus. Automated login is wired per school. |
 | **Brightspace / D2L** | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main` | 🟢 **MIT** *(🔵 **1,200 B** — non-stock)* | 🆕 `p386`. The extra bytes are **attribution, not restriction**: an inline notice *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."* See **Pattern L step 11**. |
 | **Brightspace / D2L** | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main` | 🟢 **MIT** *(🔵 **2,181 B** — **two stacked grants**)* | 🆕 `p386`. The payload is **two complete MIT licences**: its own (© 2026 Robert McCrary) **plus** *"Portions of this project are derived from d2l-cli: Copyright (c) 2026 Aaryan Kapoor."* 🟡 Shipping it means carrying **both** notices. Go, read-only, pre-1.0. |
 | **Anki** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | `main` | 🟢 **MIT** | Not an LMS — the spaced-repetition loop, which pairs with FSRS above. |
@@ -2431,7 +2541,7 @@ act on**: it dates the artefact the client would install. Method and every raw r
 
 | server | package | latest | last published | read it as |
 |---|---|---|---|---|
-| [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | npm `brightspace-mcp-server` | **5.0.8** | **2026-10-22** (today) | 🟢 the most actively published LMS MCP server on this shelf — and a **v5** line, not a weekend project |
+| [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | npm `brightspace-mcp-server` | **5.0.8** | **2026-10-22** (today) | 🟢 the most actively published LMS MCP server on this shelf — and a **v5** line, not a weekend project |
 | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | npm `brightspace-d2l-mcp` | 1.4.3 | 2026-10-21 | 🟢 active |
 | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | npm `brightspace-mcp` | 1.3.1 | 2026-09-28 | 🟢 active — corroborates `p386`'s pick as the most substantial D2L base |
 | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | npm `@r-huijts/canvas-mcp` | 1.5.1 | 2026-09-21 | 🟢 active — the Canvas default, now dated |
@@ -2732,7 +2842,7 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | [Loganxgreaves/blackboard-mcp](https://github.com/Loganxgreaves/blackboard-mcp) | 🔴 **`master`**`/LICENSE` | MIT — 1,070 B *(`p386`)* |
 | [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) | 🟢 **whole tree enumerated** (9 files): no licence file, no SPDX, no manifest — grant at **`readme.md:84`** | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** *(`p394`)* |
 | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | `main/LICENSE` | MIT — 1,070 B *(`p386`)* |
-| [rohanmuppa/brightspace-mcp-server](https://github.com/rohanmuppa/brightspace-mcp-server) | `main/LICENSE` | MIT — 1,068 B; `lmgveerhoek` and `matthewliu10` byte-identical *(`p386`)* |
+| [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | `main/LICENSE` | MIT — 1,068 B; `lmgveerhoek` and `matthewliu10` byte-identical *(`p386`)* |
 | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `main/LICENSE` | MIT — 1,200 B, inline derivation notice *(`p386`)* |
 | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main/LICENSE` | MIT — 2,181 B, **two stacked MIT grants** (own + `d2l-cli`) *(`p386`)* |
 | [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |

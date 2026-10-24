@@ -1,0 +1,46 @@
+# p423, 2026-10-24 — THE AUTHORITY REGISTER for slug casing.
+#
+# WHY IT EXISTS.  p348's `gate-fold-identity` anchors on PRECEDENCE: the casing these shelves
+# published first wins, and a later pass writing a different casing is the failure.  That is right
+# whenever the first publication was right.  p423 measured a case where it was not: `p370`
+# published `mattlo0546/canvas-mcp` in lower case, GitHub's canonical form is `Mattlo0546`, so
+# `p422` wrote the RIGHT casing and the gate reddened against the correct row while the stale one
+# sat in history serving as the oracle.  A precedence-only gate does not merely miss that — it
+# DEMANDS every later pass reproduce the error.
+#
+# 🔴 THE CHANNEL ORDER IS NOT NEW, AND p423 SHOULD HAVE KNOWN THAT.  `p439-case-collision-gate`
+# already established it, and has been in NO `make` target since `p439`:
+#     1. the package registry's declared homepage for a package the repo publishes;
+#     2. the repository's OWN self-link in `README.md` or `package.json`;
+#     3. failing both, the spelling the KB already uses most — recorded as a majority
+#        DECISION, never as evidence.
+# p423 found it only while discharging `ACTION p421-A`, after building a casing arm without it.
+# That is `T109`'s class against this pass itself, and `Gap 421-A` is why: an instrument in no
+# target is invisible, and invisibility causes duplication.  `p439` is WIRED as of this pass.
+#
+# CHANNEL USED FOR THE ROW BELOW: p439's channel 2, read at the commit SHA, which is this base's
+# normal channel (`p289`, Amendment 11.1) and NOT the novel one p423 first reached for.
+#   `Mattlo0546/canvas-mcp` README at SHA b6c26ba52c14: self-links `github.com/Mattlo0546/canvas-mcp`
+#   twice, and the same README links the author's sibling repos as `Mattlo0546/slidemate`,
+#   `Mattlo0546/moodle-mcp`, `Mattlo0546/blackboard-mcp`.  Channel 1 does not apply: this repo
+#   publishes no package (p422 recorded it as clone-and-run, not installable).
+#   🔵 Corroborated independently by the rendered github.com page title and breadcrumb, which both
+#   read `Mattlo0546/canvas-mcp`, the lower-case form appearing only inside URLs.  Recorded as
+#   corroboration, not as the authority, because it is a different channel from the SHA read.
+#   🔴 `git ls-remote` CANNOT serve this question at all: it answers case-insensitively and never
+#   echoes the owner's stored casing.
+#
+# DIVISION OF LABOUR between the two instruments, measured rather than asserted.  `p439` scans
+# only the six non-append-only shelves and keys on collisions WITHIN them; it does not scan the
+# append-only shelves, by design, because history records what was published.  `p422`'s failure
+# was a LIVE row (`agents/top.md`, upper case) against an APPEND-ONLY history row
+# (`agents/trending.md`, lower case), so p439 could never have fired on it — and on the very
+# corpus where `gate-fold-identity` was red, `p439` reports 0 findings.  The two cover different
+# axes: p439 live-vs-live with the channel order, p348+p423 live-vs-unrepairable-history.
+#
+# NOT registered, deliberately: `mattlo0546/blackboard-mcp`.  Its owner's casing is implied by the
+# row below, but this base reads a grant at its OWN address (`p289`) and the same discipline binds
+# an authority read.  That fold keeps p348's precedence arm.
+#
+folded_slug	canonical_as_published	channel	read_on	note
+mattlo0546/canvas-mcp	Mattlo0546/canvas-mcp	p439-channel-2-self-link-at-SHA-b6c26ba52c14	2026-10-24	README self-links `github.com/Mattlo0546/canvas-mcp` x2 at the SHA; corroborated by the github.com page title. Published lower-case by `p370`, correctly by `p386`/`p422`.

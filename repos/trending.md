@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **Two unshelved addresses, zero added to any recommendation shelf. 🔴 The SIS tier's first MCP address is BSL-1.1 under an MIT manifest — and the contradiction is inside the published npm tarball, not just in a directory listing.**
+
+🟢 `make hooks` first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red (`Gap 400-B`),
+**5 new**, all fixed here. 🔵 Every read **2026-10-24**.
+
+| address | grant, read at the SHA | history | verdict |
+|---|---|---|---|
+| [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) | 🔴 **BSL-1.1** `LICENSE.md` `647` B `4dead97d8aaf` @ `f88a80fc1d5b` · 🔴 `package.json` and npm both say **MIT** · ladder's 6 other paths all `404` | **32** commits, **4** authors (`%ae`), 2026-04-19 → 2026-06-16, all `+0300` (🟢 EMEA) | 🔴 **CONFLICT — NOT RECOMMENDABLE.** `Licensed Work: openemis-mcp-pro`, use grant limited to non-production evaluation until `2029-01-01` |
+| [`ckz/edu_data_mcp_server`](https://github.com/ckz/edu_data_mcp_server) | 🟢 **MIT** `LICENSE` `1 060` B `a21e3d63806c` @ `a3eb7e8f2e70` · 🔵 `package.json` declares no licence field | **4** commits, 1 author (`%ae`), 2025-03-21 → 2025-03-22 | 🟡 **GRANTED-MIT, REFUSED-BELOW-BAR** — Urban Institute statistics API, not student records |
+
+🔴 **The npm tarball is the part that makes this a finding rather than a bad listing.**
+`openemis-mcp@1.2.0` ships `package/LICENSE.md` at **`647` B `4dead97d8aaf`** — byte-identical to
+the repository payload — next to a `package.json` reading `"license": "MIT"`. So the conflict is
+not a stale registry field over a corrected repo: **it is the artifact a client installs.**
+
+🟢 **`T116` again — the branch-grant hazard stays rare.** `openemis-mcp`'s second head
+(`e14c514598d4`) carries the identical payload. **32 → 34** `(slug, ref)` pairs probed, **0** hits.
+
+🟢 **`T106` re-calibrated first:** `Mattlo0546/canvas-mcp` `LICENSE` @ `b6c26ba` →
+`1 067` B `13c8ad755224`, matching `p422`'s published figure on a fresh host.
+
+🔴 **`T100`, seventh confirmation; `T113` again.** Eight ranking/trend/regional legs → **0
+unshelved**; two capability legs → **2 unshelved, 0 supply**. Evidence:
+[`discovery-legs.2026-10-24-p423.tsv`](../evidence/discovery-legs.2026-10-24-p423.tsv) ·
+[`sis-agent-grants.2026-10-24-p423.tsv`](../evidence/sis-agent-grants.2026-10-24-p423.tsv).
+
 ## 🆕 `p422` · 2026-10-24 — **A capability class with NINE MIT grants sitting on top of a platform tier with none. 🟢 Thirty-two `(slug, ref)` pairs swept for `p419`'s branch hazard and it does not fire once. 🔴 And a one-byte channel divergence that would have mis-digested every grant this pass published, caught by cross-reading this base's own instruments.**
 
 🔵 **Append-only, per this file's standing contract.** `p421` and everything below it is untouched.

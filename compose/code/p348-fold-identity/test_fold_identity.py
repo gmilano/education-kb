@@ -244,5 +244,100 @@ class DatedHeadingForm(unittest.TestCase):
         self.assertIn("still live", live)
 
 
+class P423Authority(unittest.TestCase):
+    """p423 — PRECEDENCE IS NOT AUTHORITY.
+
+    `p370` published `mattlo0546/canvas-mcp` lower case; GitHub's canonical display form
+    is `Mattlo0546`.  So `p422` wrote the correct casing and the precedence-only gate
+    reddened against the correct row, with the stale one serving as the oracle.  These
+    controls pin the authority arm, and the FIRST of them is the one that caught this
+    pass's own defect.
+    """
+
+    REG = ("# comment\n"
+           "folded_slug\tcanonical_as_published\tchannel\tread_on\tnote\n"
+           "owner/thing\tOwner/thing\tgithub.com-page-title\t2026-10-24\tfixture\n")
+
+    def _register(self, body):
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "reg.tsv")
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(body)
+        return path
+
+    def test_the_live_register_is_not_empty(self):
+        """🔴 THE control that caught p423's own bug.
+
+        The first draft of the loader climbed three directory levels instead of four,
+        landed on `compose/`, and returned `{}` — so the gate fell back to pure
+        precedence and went GREEN.  A register that fails to load is indistinguishable
+        from a corpus with no authority rows, which is `gate-backlog-denominator`'s
+        class.  Asserted here as a non-zero denominator.
+        """
+        live = fi.canonical_casings()
+        self.assertGreaterEqual(len(live), 1,
+                                "the p423 authority register did not load — the gate is "
+                                "silently back to precedence")
+        self.assertEqual(live.get("mattlo0546/canvas-mcp"), "Mattlo0546/canvas-mcp")
+
+    def test_the_header_row_is_not_a_register_entry(self):
+        reg = self._register(self.REG)
+        self.assertNotIn("folded_slug", fi.canonical_casings(reg))
+
+    def test_a_row_that_disagrees_with_itself_is_rejected(self):
+        # The canonical must be the SAME address under a different casing, never a
+        # different address: a register is an authority on casing, not on identity.
+        reg = self._register(self.REG + "owner/thing\tother/thing\tx\t2026-10-24\tbad\n")
+        self.assertEqual(fi.canonical_casings(reg)["owner/thing"], "Owner/thing")
+
+    def test_an_absent_register_returns_to_precedence_rather_than_passing(self):
+        self.assertEqual(fi.canonical_casings("/nonexistent/reg.tsv"), {})
+
+    def test_the_authority_arm_fires_on_a_live_non_canonical_address(self):
+        d = tempfile.mkdtemp()
+        f = write(d, "a.md", LIVE % ("github.com/owner/thing", "github.com/Owner/thing"))
+        found = fi.gate([f], self._register(self.REG))
+        self.assertEqual([x[1] for x in found], ["P348-NON-CANONICAL-CASING"])
+        self.assertEqual(found[0][2], "owner/thing")
+        self.assertIn("Owner/thing", found[0][3])
+
+    def test_the_authority_arm_clears_the_canonical_row_even_against_history(self):
+        """🟢 The p422 case, as a fixture: history holds the WRONG casing and the live
+        section holds the right one.  The precedence arm fires here; the authority arm
+        must not."""
+        d = tempfile.mkdtemp()
+        f = write(d, "a.md", LIVE % ("github.com/Owner/thing", "github.com/owner/thing"))
+        self.assertEqual(fi.gate([f], self._register(self.REG)), [])
+        # and without the register it is exactly the finding p423 inherited
+        self.assertEqual([x[1] for x in fi.gate([f], "/nonexistent/reg.tsv")],
+                         ["P348-NEW-CASING"])
+
+    def test_an_unregistered_fold_keeps_the_precedence_arm(self):
+        """🟢 Nothing is loosened where authority is absent, which is most of the corpus."""
+        d = tempfile.mkdtemp()
+        f = write(d, "a.md", LIVE % ("github.com/cahlr/OATutor", "github.com/CAHLR/OATutor"))
+        found = fi.gate([f], self._register(self.REG))
+        self.assertEqual([x[1] for x in found], ["P348-NEW-CASING"])
+
+    def test_the_historical_deviation_is_a_census_not_a_failure(self):
+        """🟡 p347's rule: an append-only shelf cannot be repaired backwards.  p370's
+        lower-case row is therefore a MEASUREMENT with a denominator, and the gate above
+        stays clean."""
+        root = os.path.dirname(os.path.dirname(os.path.dirname(
+            os.path.dirname(os.path.abspath(__file__)))))
+        all9 = [os.path.join(root, x) for x in (
+            "agents/top.md", "agents/trending.md", "repos/foundations.md",
+            "repos/trending.md", "verticals/solutions.md", "intel/market.md",
+            "intel/trends.md", "intel/open-gaps.md", "compose/patterns.md")]
+        if not all(os.path.exists(x) for x in all9):
+            self.skipTest("run from inside the KB")
+        n, rows = fi.historical_casing_census(all9)
+        self.assertEqual(n, 1)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0][1], "P423-HISTORICAL-NON-CANONICAL")
+        self.assertEqual(rows[0][2], "mattlo0546/canvas-mcp")
+        self.assertTrue(rows[0][0].endswith("agents/trending.md"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

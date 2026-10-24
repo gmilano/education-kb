@@ -1,0 +1,37 @@
+# p423, 2026-10-24 — WHAT p422's UN-RUN SUITE COST, measured.
+#
+# `p422` recorded: "Gates did NOT run this pass — `make hooks` executes code from this
+# cloned repository and the host's auto-mode classifier refused it (`[Code from External]`),
+# the same refusal `p419` recorded.  `p412`'s standing rule is therefore unmet and declared,
+# not skipped silently; every file contract below was honoured by hand."
+#
+# 🟢 On THIS host the suite ran without any refusal, so the refusal is a property of a
+# session, not of this repository — which means "declared un-run" must never be read as
+# "un-runnable".  `make hooks` against p422's commit 82235af, BEFORE p423's first research
+# leg (p412's rule, met): 47 / 53 green, 6 red.
+#
+# Of the six, ONE is the deliberate carried red and FIVE are new.  A hand-honoured file
+# contract held on 47 gates and failed on 5.
+#
+gate	status	class	what it caught	disposition in p423
+gate-census-union	🔵 red	DELIBERATE	control 24, red since p398 (`Gap 400-B`)	carried; now the sole member of DECLARED_RED
+gate-register-currency	🔴 red	NEW	register newest=p421 against six shelves at p422 — the register lagged a whole pass	🟢 FIXED: p423 writes its register section in the same pass as its shelves
+gate-census-currency	🔴 red	NEW	2 of 3 published census cells stale — derived before p422 wrote	🟢 FIXED: re-derived as the LAST act and restated
+gate-union-currency	🔴 red	NEW	3 of 3 union cells stale: published 2732/3207/3574 against derived 2734/3209/3576	🟢 FIXED: re-derived as the LAST act and restated
+gate-fold-identity	🔴 red	NEW	`Mattlo0546/canvas-mcp` on three shelves, "new casing" against p370's lower-case row	🟢 FIXED by AUTHORITY, not by reverting: GitHub's canonical form is `Mattlo0546`, so p422 was right and the gate was pointing at the wrong row
+gate-action-answered	🔴 red	NEW	`len(vocab) == 14` against a live 16 — p422 added two legitimate platform rows	🟢 FIXED: the pinned cardinality replaced by the latency PROPERTY it was proxying for, over a published non-zero floor
+#	green	47	of 53 gates
+#	red_deliberate	1	Gap 400-B
+#	red_new	5	all five fixed in p423
+#
+# 🔴 The structural half, which is why `p423` built an instrument rather than just fixing six
+# files: THREE of the five new reds (register-currency, census-currency, union-currency) are
+# POST-WRITE gates by construction.  Their own headers say to run them as the last act before
+# the commit.  `p412`'s standing rule says to run the suite FIRST, before the research legs.
+# Both rules are right and nothing enforced the second, so a pass that obeys p412 perfectly
+# still cannot catch what it is itself about to write.
+#
+# 🔴 And the enforcement was not available: `make hooks` has exited non-zero since `p398` by
+# design, so no commit hook could ever have asked it a yes-or-no question.  A permanently red
+# suite is a colour, not a control.  `DECLARED_RED` / `make commit-gates` / `ingest/pre-commit`
+# separate the deliberate red from the real ones so the suite can mean yes or no again.

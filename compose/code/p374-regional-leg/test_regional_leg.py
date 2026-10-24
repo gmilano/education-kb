@@ -35,12 +35,31 @@ def check(group, name, got, want):
         FAILURES.append("%s / %s: got %r, want %r" % (group, name, got, want))
 
 
-# ── A. the real corpus.  The gate is green on this base's own ten recorded legs.
+# ── A. the real corpus.  The gate is green on every leg this base has committed.
+#
+# 🔴 p423 — THE SECOND PINNED-CARDINALITY DEFECT FOUND IN ONE PASS.  `p374` wrote
+# `len(LEGS) == 10` and `counts["J2"] == 2` against a table whose own header calls it *"every
+# regional leg this base has run FIRST-HAND"* — an APPEND-ONLY table.  So recording a new leg,
+# which is the instrument's whole purpose, turned its own suite red; `p423` hit exactly that on
+# adding six.  The sibling instance is `p421`'s `len(vocab) == 14` on the platform vocabulary,
+# broken by `p422` adding two legitimate platform rows.  🔵 Two instances in two different
+# instruments makes it a PATTERN, which is the standard `p338`/`gate-region-headings` was held
+# to: a control may pin a PROPERTY, and a count only when the count is DERIVED from the data.
+#
+# Both are restated below as the properties they were proxying for, over published non-zero
+# floors so neither can pass on an empty parse (`gate-backlog-denominator`'s class).  🟢
+# `p387-G`-clean: the J2 control is strictly STRONGER than the constant it replaces — it now
+# says the gate visits EVERY nil in the table, which `== 2` never said.
 LEGS = load_legs()
 failures, counts = run(LEGS)
-check("A", "the ten committed legs pass every invariant", failures, [])
-check("A", "ten legs loaded", len(LEGS), 10)
-check("A", "J2 fires on exactly the two NIL legs", counts["J2"], 2)
+NILS = [l for l in LEGS if l["verdict"] == "NIL"]
+check("A", "every committed leg passes every invariant", failures, [])
+check("A", "the legs table loaded and did not shrink below p374's ten", len(LEGS) >= 10, True)
+check("A", "J1 visited every leg in the table", counts["J1"], len(LEGS))
+check("A", "J2 fires on exactly the NIL legs, derived from the table not pinned",
+      counts["J2"], len(NILS))
+check("A", "there is at least one NIL to judge, so J2's denominator is not zero",
+      len(NILS) >= 1, True)
 check("A", "J3 checks the one published redundancy claim", counts["J3"], 1)
 
 # ── B. J2 limb 1 — a region label is not a jurisdiction.

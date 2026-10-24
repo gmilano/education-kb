@@ -243,10 +243,66 @@ class Vocabulary(unittest.TestCase):
                          {"inside": "MIT"})
 
     def test_the_hole_is_latent_on_the_live_shelf(self):
+        """🔴 p423 — `p421` PINNED A CARDINALITY WHERE IT MEANT A PROPERTY.
+
+        This control's own name is about LATENCY: that no prose first cell reaches the
+        vocabulary.  `p421` asserted `len(vocab) == 14` as a proxy for it, and the proxy
+        made a correct shelf write fatal: `p422` added two platform rows
+        (`canvas lms`, `` `frappe/lms` ``), the live vocabulary became 16, and this gate
+        went red over a shelf growing the way it is supposed to.  A constant that
+        forbids a platform row is not a control.
+
+        So the assertion is now the property, over a published NON-ZERO denominator —
+        the floor is what keeps this from passing on an empty parse, which is
+        `gate-backlog-denominator`'s class and `p421`'s own first control elsewhere in
+        this suite.  🟢 This is `p387-G`-clean: the subject the control names is
+        asserted more directly than before, not more weakly.
+        """
         vocab = platform_vocabulary(_verticals())
-        self.assertEqual(len(vocab), 14)
+        self.assertGreaterEqual(len(vocab), 14,
+                                "the platform vocabulary lost entries — a shelf row was "
+                                "dropped or the parser regressed")
         for prose in ("inside", "outside"):
             self.assertNotIn(prose, vocab)
+
+    def test_p422s_two_added_rows_are_the_measured_delta(self):
+        """🟢 p423 — the growth that reddened `p421`'s constant, pinned as a regression.
+
+        Named rather than counted, so a later pass can tell a legitimate addition from a
+        parser change.  Both entered from real `p422` rows on `verticals/solutions.md`.
+        """
+        vocab = platform_vocabulary(_verticals())
+        for added in ("canvas lms", "`frappe/lms`"):
+            self.assertIn(added, vocab)
+
+    def test_the_vocabulary_CONFLATES_TIERS_and_it_is_open(self):
+        """🔴 p423 — `Gap 423-D`, pinned OPEN rather than closed by a filter.
+
+        This vocabulary is documented as *"derived from the base's own PLATFORM shelf"*,
+        and it is not: `verticals/solutions.md` also carries MCP-census rows, so the
+        keys mix the platform tier with the agent tier above it.  Two consequences, both
+        measured on the live shelf:
+
+        * `canvas` -> MIT comes from an MCP-census row, while `canvas lms` -> AGPL-3.0 is
+          the platform itself.  The two keys differ by a suffix and carry OPPOSITE
+          verdicts, and the shorter one — the one a platform-worded action is likeliest
+          to match — answers with the AGENT's licence.  🔴 In the load-bearing
+          direction: a studio told *"Canvas is MIT"* would ship AGPL-3.0.
+        * `` `frappe/lms` `` and `frappe lms` are ONE project under two keys, so the
+          denominator over-counts platforms.
+
+        🟡 Not closed here.  `p421` established the discipline for exactly this shape:
+        its own closure (requiring a `github.com/` slug on the row) was refused because
+        it dropped `sakai`, the specimen's own subject.  A tier arm needs the shelf to
+        mark which rows are platform rows, which is a SHELF change, not a parser change,
+        and `p387-G` forbids closing a gap by loosening a control.  Asserted here so it
+        cannot be forgotten.
+        """
+        vocab = platform_vocabulary(_verticals())
+        self.assertEqual(vocab.get("canvas"), "MIT")          # an AGENT row
+        self.assertEqual(vocab.get("canvas lms"), "AGPL-3.0")  # the PLATFORM
+        self.assertEqual(vocab.get("frappe lms"), vocab.get("`frappe/lms`"))
+        self.assertIsNotNone(vocab.get("frappe lms"))
 
     def test_a_row_with_no_licence_token_never_enters(self):
         self.assertEqual(platform_vocabulary("| **Moodle** | an LMS |\n"), {})

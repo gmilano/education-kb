@@ -4,6 +4,171 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **The prescribed EMEA leg returned nothing education-specific — and publishing that nil would have been FALSE. 🟢 This base's own rule caught it: a nil must name a jurisdiction, so `p423` ran Germany in English and in German instead, and the English leg returned a KMK framework update announced EIGHT DAYS AGO. 🔴 The procurement fact of this pass is that the licence METADATA channel a client reads first can be wrong about a non-open-source grant.**
+
+🟢 **Gates ran first** against `p422`'s commit `82235af`: **47 / 53 green**, one deliberate red
+(`Gap 400-B`), **five new** — all five fixed in this pass. 🔵 Every leg, read and digest
+**2026-10-24**; the commit lands **2026-10-24**.
+
+### 🔵 The four prescribed regional legs — stated per region so silence cannot read as coverage
+
+| region | the prescribed region-label leg returned | addresses |
+|---|---|---|
+| **North America** | 🟢 **material** — policy and adoption figures, no repositories | **0** |
+| **EMEA** | 🔴 **nothing education-specific.** Enterprise-AI adoption prose, one 2023 study, one 2026 enterprise-barriers study; **no schools, universities or ministries, and no education-specific rule** | **0** |
+| **APAC** | 🟡 **thin** — enterprise-AI prose with three corporate education items | **0** |
+| **LATAM** | 🟢 **the richest of the four** — two institution-level surveys and a regional regulatory map | **0** |
+
+🔴 **And the EMEA nil was NOT published, because this base's own instrument forbade it.**
+`p374`'s `J2` limb 1: a published regional nil must **name a jurisdiction**, not a region label.
+*"AI education EMEA 2026 adoption regulation players"* names a label. 🟢 **So `p423` ran the pair
+the rule asks for — Germany in English and in German — and the nil dissolved**: the English leg
+returned the **KMK**'s October-2026 update to *Bildung in der digitalen Welt*, one source dating
+the announcement **2026-10-16**, eight days before this pass.
+🔵 **First time `p374`'s rule has prevented a false nil rather than graded one after the fact**,
+and it **inverts `p374`'s Japan cell**: there the in-language leg carried the operational detail
+and English the policy; here the **German** leg was the weak one (an employers' award, a
+university panel) and **English** carried the milestone. Legs recorded in
+[`legs.tsv`](../compose/code/p374-regional-leg/legs.tsv) — the table is now 16 legs, and adding
+them turned `p374`'s own suite red on a pinned `len(LEGS) == 10`, which is the **second**
+pinned-cardinality defect this pass found (see `Gap 423-E`).
+
+### 🔴 The procurement fact that actually moved: the metadata channel, not a number
+
+🔴 **A client's first read of a licence is the one that can be wrong.** `tixuz/openemis-mcp` — an
+MCP server over **OpenEMIS**, UNESCO/KORDIT's school MIS, deployed by ministries — is published as
+**MIT** by its npm registry entry, by the MCP directory that surfaced it, **and by its own
+`package.json`**. Its only grant payload is **Business Source License 1.1**: `647` B
+`4dead97d8aaf` at `LICENSE.md` @ `f88a80fc1d5b`, `Licensed Work: openemis-mcp-pro`, use limited to
+*non-production evaluation and internal testing* until `Change Date: 2029-01-01`.
+🔴 **The conflict ships in the artifact**: `npm openemis-mcp@1.2.0` contains that identical
+647-byte BSL file beside the MIT manifest.
+
+🟢 **What that is worth to an engagement, concretely.** A procurement question of the form *"is
+this component MIT?"* is answered **wrongly by three channels at once** here, and two of them —
+the registry and the in-repo manifest — are the channels automated SBOM and licence-scanning
+tooling reads. 🔵 The defensible rule is this base's own `p289`: **the grant payload at the commit
+SHA is the authority, and a manifest is corroboration only after that read**. That is a
+one-paragraph clause in a diligence checklist and it is the difference between shipping MIT code
+and shipping source-available code with a 2029 change date.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Unchanged in shape from `p422`: the engagement is compliance-shaped and the statute writes
+the architecture.** `p423` adds the diligence clause above and two federal-level signals.
+
+- 🟢 **Build on** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+  (**MIT**, `1 071` B `5385a26e2fac` @ `f4f0780`) — Canvas is the dominant North American LMS and
+  this is the deepest MIT agent surface over it. 🟢 **Pair with**
+  [`openedx/XBlock`](https://github.com/openedx/XBlock) (**Apache-2.0**, `11 358` B
+  `cfc7749b96f6` @ `c73c4bb`) where the host is Open edX.
+- 🟢 **The state dates are still the pipeline** (`p422`): Ohio **2026-07-01**, Oklahoma
+  **2027-28**, North Carolina staged **2026-12-31 → 2027-06-30 → 2028-06-30**.
+- 🟡 **Two federal-level signals this pass, both directional.** A bipartisan **NSF AI Education
+  Act of 2026** was introduced, and the **AFT** has partnered with AI developers to train
+  **400 000** teachers. 🔵 Sources are secondary roundups; the *direction* (federal money and
+  union-scale teacher training) is the usable part, not the figures.
+- 🔴 **The gap that sells the work:** one roundup puts institutions with formal AI guidelines at
+  **10 %** and US teachers lacking AI training at **71 %**. 🟡 Vendor-adjacent statistics, so
+  quote them as order-of-magnitude, not as findings — but the shape agrees with the state
+  mandates above, which are primary.
+- 🔵 **Canada remains an open gap** (`Gap 422-B`). AIDA is described as *proposed* with no status
+  confirmed on this pass. Do not extrapolate US state law across the border.
+
+### EMEA
+
+🟢 **The region is NOT a nil, and this pass is where that got established properly.** The
+region-label leg returned nothing education-specific; the jurisdiction-named pair returned a
+milestone eight days old.
+
+- 🟢 **Germany — the KMK moved in October 2026.** An update to *Bildung in der digitalen Welt*
+  adds AI competences for students, with **KI-Kompetenz framed as a cross-curricular task**
+  (*"fachübergreifende Aufgabe"*) rather than a single subject; the six existing competence areas
+  are retained and expanded for generative AI. 🔵 One source dates the announcement
+  **2026-10-16**.
+- 🔴 **A date conflict, registered rather than resolved** (`Gap 423-F`): the earlier KMK
+  *Handlungsempfehlung* on AI in school education processes is dated **October 2024** by Eurydice
+  and reported as *"approved October 10"* with **no year** by another source. `p289` forbids
+  writing either into a cell unread, so neither is asserted.
+- 🟢 **The sellable detail is the grading question, and it matches North America.** Lower Saxony's
+  CDU parliamentary group filed a motion in **April 2026** for *klare Regeln für KI an Schulen*,
+  citing legal uncertainty **specifically around AI-assisted grading**. 🔵 So the
+  human-in-the-loop evidence trail `p421`/`p422` priced for US state law is the **same
+  deliverable** in a German state — and it is wanted there for a liability reason rather than a
+  statutory prohibition.
+- 🟡 **Teacher posture is split and both halves are useful:** a Bitkom survey has **39 %** of
+  teachers saying AI *has no place* in school and **80 %** saying every student should learn to
+  use it. 🔵 That is a training-and-governance engagement, not a tooling one.
+- 🔵 **Primary schools are the contested edge:** the KMK is reported to allow text-generating AI
+  in *Grundschulen* over its own expert advisers' objections. A studio should not lead with
+  primary-school deployment here.
+- 🟢 **The EU AI Act runway is unchanged and still the anchor:** Annex III education obligations
+  deferred to **2027-12-02**, with the Commission's May-2026 draft guidelines putting **tutoring
+  and feedback chatbots OUTSIDE** Annex III while admissions and outcome evaluation are inside
+  (`p421`). 🔵 `Gap 417-A` / `ACTION SH` did **not** fire again — counter advances to **ELEVEN**.
+
+### APAC
+
+🟡 **Thin on education again, and the three items that did land are corporate rather than
+governmental.**
+
+- 🟡 **TCS and Pearson** announced a multi-year AI learning alliance aimed at employer skills
+  gaps; **LearnUpon** is expanding into APAC with a Sydney HQ and AI course-authoring; **Alteryx**
+  relaunched its academy with AI learning paths. 🔵 All three are *corporate* L&D, which is a real
+  Globant buyer but not the education-ministry buyer the leg was asking about.
+- 🟡 **Australia is the one jurisdiction with a governance signal:** OpenAI appointed an ANZ
+  policy lead as Canberra tightens **AI governance and copyright** rules. 🔵 Copyright is the
+  live axis there, which matters for any corpus-ingesting tutor.
+- 🟡 **The governance gap is the opening:** a 2026 OneTrust survey reports **87 %** of
+  organisations encouraging AI agents against **47 %** with governance and controls for them.
+  🔵 Directional, vendor-run, and consistent with everything else this base has measured.
+- 🔴 **`Gap 421-E(a)` is NOT resolved by this pass.** The Vietnam date conflict stands —
+  education/health/finance extended to **2027-09-01** (`p417`/`p420`) against a compliance date of
+  **2027-03-01** with a grace period for systems running before **2026-08-15**. This pass's APAC
+  leg produced nothing bearing on it, and neither reading was picked.
+
+### LATAM
+
+🟢 **The richest leg of the four, and the figures are institution-level rather than market-size.**
+
+- 🟢 **Adoption is high and institutions trail it.** A **Digital Education Council** survey of
+  **29** LATAM higher-education institutions — run with **Tecnológico de Monterrey**'s Institute
+  for the Future of Education — reports **92 %** of students and **79 %** of faculty actively
+  engaging with AI, and states plainly that students are adopting faster than institutions.
+- 🟢 **UNESCO IESALC mapped 200 institutions across 19 countries**: teaching and learning leads at
+  **73.5 %**, then research **57.0 %**, administration **34.1 %**, community engagement
+  **20.0 %**. 🔵 **Administration at 34 %** is the number to sell against — it is the SIS/MIS tier,
+  and it is where this pass found the agent layer unusable (above).
+- 🔴 **Only ~30 % of LATAM universities have published a policy on AI use.** 🟢 That is the
+  engagement: a policy-and-evidence deliverable for the other 70 %, and it is the same artefact
+  the North American statutes and the German liability question both ask for.
+- 🔵 **The regulatory map is heterogeneous and mostly non-binding.** **Chile** leads with a
+  National AI Policy since **2021** and a bill under discussion; **Brazil** and **Colombia** have
+  national strategies but **no education-sector regulation**; **Mexico**'s SEP and ANUIES issue
+  **non-binding** guidance. **IDB** and **CEPAL/ECLAC**'s **ILIA** index cover readiness across 19
+  countries.
+- 🔴 **`Gap 421-E(b)` is NOT resolved.** This leg has Brazil with *"advanced national strategies
+  but no sector-specific education regulation"*, which bears on neither side of the registered
+  conflict (`PL 2338/2023` approved by the Senate, against ministries still in consultation).
+  Carried unresolved.
+
+### Global
+
+- 🔴 **The licence-metadata rule is the region-independent fact of this pass**, and it belongs in
+  every engagement's diligence step regardless of geography: **read the grant payload at the
+  commit SHA; treat the registry entry and the in-repo manifest as corroboration only.**
+  `tixuz/openemis-mcp` is the specimen — MIT on three channels, BSL-1.1 in the only payload that
+  exists, and the contradiction inside the published tarball.
+- 🔵 **Market-size figures remain unusable as evidence and are recorded as such.** This pass saw
+  **$6.4 B (2025) → $79.6 B (2034)**, **$7.52 B (2025) → $10.6 B (2026)** and a **36 % CAGR** from
+  three vendor sources that do not agree within an order of magnitude on 2026 alone. 🟢 The
+  credible items are **Stanford**'s *The Evidence Base on AI in K-12: A 2026 Review* (~800 papers
+  screened to 20 high-quality causal studies) and the **AI Index Report 2026**'s finding of a
+  persistent gap between policy recommendation and implementation — which is the same gap the
+  LATAM 30 % and the North American 10 % both measure.
+
 ## 🆕 `p422` · 2026-10-24 — **Four regional legs, four returned material, no nil — and the two date conflicts `p421` refused to resolve BOTH REPRODUCE, which converts them from open questions into registered contradictions. 🟢 The procurement fact of this pass is a LICENCE one: the layer a client buys in an education engagement is MIT even when the platform under it is AGPL. 🔴 And the EMEA deferral counter advances to TEN without `ACTION SH` firing.**
 
 🔴 **Gates did NOT run this pass** — `make hooks` executes code from this cloned repository and the
@@ -77,7 +242,7 @@ reach attaches, because nothing is linked or derived** — and under AGPL, where
 itself a distribution trigger, that distinction is worth stating in the contract rather than
 assuming.
 
-## Opportunities by region
+## Opportunities by region — `p422`, SUPERSEDED by `p423`'s block above
 
 ### North America
 

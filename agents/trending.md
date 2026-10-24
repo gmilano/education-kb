@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **Ten legs, two unshelved addresses, ZERO supply — and the one new address worth a paragraph is a licence conflict that ships inside its own npm tarball. 🔴 `tixuz/openemis-mcp`: MIT on three metadata channels, Business Source License 1.1 in the only payload that exists.**
+
+🟢 **Gates ran first** against `p422`'s commit `82235af`: **47 / 53**, one deliberate red
+(`Gap 400-B`) and **five new**, all five attributable to `p422`'s declared un-run suite and all
+five fixed in this pass. 🔵 Every leg, read and digest ran **2026-10-24**.
+
+### 🔵 The legs, with what each returned
+
+| leg | wording | returned | already shelved | unshelved |
+|---|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | ranking | 4 addresses | **4** | **0** |
+| `github trending education AI 2026` | ranking | 4 addresses | **4** | **0** |
+| `open source platform education LMS SIS MIT Apache 2026` | vertical | 8 platforms | **8** | **0** |
+| `AI education industry trends 2026` | trend | market-research prose, 0 addresses | — | **0** |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | regional ×4 | policy and adoption prose, **0 addresses on all four** | — | **0** |
+| `agent grades student work rubric autograder MCP 2026 github release` | capability | 3 addresses | **3** | **0** |
+| `MCP server student information system SIS enrollment 2026 MIT` | capability | 5 addresses | **3** | 🟢 **2** |
+
+🔴 **`T100`, seventh consecutive confirmation.** Ranking-worded legs: **0 unshelved**. The two
+unshelved addresses came from the capability-worded SIS leg, which is exactly the asymmetry `T100`
+names. 🔴 **`T113` again, and harder: 2 unshelved, 0 supply** — one refused as a licence conflict,
+one refused below bar. First pass where the whole unshelved set is disposed of on two distinct
+grounds. Evidence:
+[`discovery-legs.2026-10-24-p423.tsv`](../evidence/discovery-legs.2026-10-24-p423.tsv).
+
+### 🔴 `tixuz/openemis-mcp` — graded, and refused
+
+| field | value |
+|---|---|
+| address | [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) |
+| tier | MCP agent over **OpenEMIS**, UNESCO/KORDIT's school MIS — the **SIS** tier, new to this axis |
+| HEAD | `f88a80fc1d5b`, **3** `refs/heads` (`main`, `openemis-core-5.10.0-update`, `versioning-policy`; the third is an alias of `main`) |
+| grant payload | 🔴 **BSL-1.1** at `LICENSE.md`, `647` B `4dead97d8aaf`, read at the SHA |
+| ladder at the SHA | `LICENSE`, `LICENSE.txt`, `LICENSE.TXT`, `LICENSE-MIT`, `LICENSE-APACHE`, `COPYING` → **all `404`**. No MIT payload exists in the tree |
+| BSL parameters | `Licensor:` Khindol Madraimov · `Licensed Work:` **`openemis-mcp-pro`** · `Additional Use Grant:` non-production evaluation and internal testing only · `Change Date:` **2029-01-01** · `Change License:` MIT |
+| in-repo manifest | 🔴 `package.json` → `"license": "MIT"`, same tree, same SHA |
+| npm registry | 🔴 `openemis-mcp@1.2.0` → `"license": "MIT"`, 7 versions, created 2026-04-19, latest 2026-06-16 |
+| npm **tarball** | 🔴 `package/LICENSE.md` = **`647` B `4dead97d8aaf`**, byte-identical to the repo payload, beside the MIT manifest |
+| history | **32** commits, **4** authors (`%ae`), 2026-04-19 → 2026-06-16; `LICENSE.md` entered in the **first** commit `148c0bc` and never changed |
+| offsets | **32 / 32 at `+0300`** → 🟢 EMEA (no DST in that band, so the placement needs no DST assumption) |
+| `p419` hazard | 🟢 **does not fire** — ref `openemis-core-5.10.0-update` (`e14c514598d4`) carries the same `647` B `4dead97d8aaf`. Counter **32 → 34** pairs, **0** hits |
+| verdict | 🔴 **CONFLICT — NOT RECOMMENDABLE.** Either BSL-1.1 binds it, in which case commercial embedding is forbidden until 2029-01-01, or its licensing is incoherent. Both fail the permissive bar |
+
+🟡 **`ckz/edu_data_mcp_server`** — 🟢 **MIT** `LICENSE` `1 060` B `a21e3d63806c` @ `a3eb7e8f2e70`,
+1 ref, **4** commits, 1 author (`%ae`), 2025-03-21 → 2025-03-22. Wraps the Urban Institute education-data
+API: enrollment **statistics**, not student records. 🔴 **REFUSED-BELOW-BAR** on age and surface;
+real and permissive, and recorded so the refusal is explicit rather than a silence.
+
+🟢 **Calibration before grading** (`T106`): `Mattlo0546/canvas-mcp` `LICENSE` @ `b6c26ba`
+reproduced `1 067` B `13c8ad755224` — `p422`'s published figure — on this host.
+
+🟢 **This file's own `p370` row is now the registered casing deviation.** Line ~4418 carries
+`mattlo0546/canvas-mcp` in lower case; GitHub's canonical form is `Mattlo0546`. 🟡 Append-only
+shelves are not repaired backwards (`p347`), so the row stays and is carried as a **census** row
+by `make casing-census` — **1 registered fold, 1 historical deviation** — while
+`gate-fold-identity`'s new authority arm gates the live sections. `Gap 423-C`.
+
+🔴 **And the channel order that register uses was already in this repository, unwired.**
+`p439-case-collision-gate` wrote it down — registry homepage, then the repository's own
+self-link, then a recorded majority decision — and has been in **no `make` target since `p439`**.
+`p423` built a casing arm without it. 🟢 **Wired now, and on its first run inside a target it
+found `RohanMuppa/brightspace-mcp-server` cited both ways across the three live shelves**;
+resolved by that gate's own channel 2 at SHA `4b3bc9bf3838` (README ×3 and `package.json` both
+say `RohanMuppa`) and normalised. `T120`, and the register row is re-grounded on `p439`'s channel
+rather than on the novel one.
+
 ## 🆕 `p422` · 2026-10-24 — **Three unshelved addresses this pass, and all three are the SAME capability class: an MCP server over a copyleft LMS. 🟢 Nine of ten in that class are MIT, which is the first uniformly permissive class this register has measured. 🔴 And one of the three is ungranted, so the class's supply is 9, not 10.**
 
 🔵 **Append-only, per this file's standing contract.** `p421` and everything below it is untouched.

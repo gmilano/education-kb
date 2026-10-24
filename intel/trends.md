@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-24
 ---
 
+## 🆕 `p423` · 2026-10-24 — **The trend with procurement consequences: in the education agent layer, licence METADATA is diverging from licence PAYLOAD, and the metadata is what directories, registries and scanners republish. 🔴 One address this pass says MIT on three channels and ships Business Source License 1.1.**
+
+🟢 Gates first against `p422`'s `82235af`: **47 / 53**, 1 deliberate red, 5 new, all fixed here.
+🔵 All reads **2026-10-24**.
+
+- 🔴 **Metadata-vs-payload divergence is now a measured trend, not an anecdote.** `p409` found a
+  *search result* saying MIT over a 34 230-byte AGPL payload. `p410` found an 874-byte
+  "Apache License" that was a notice. `p411` found a 19-byte *"GNU GPL V3"*. `p423` adds the
+  sharpest form: **the in-repo manifest itself is wrong**, and it agrees with the registry, so the
+  two channels most likely to be machine-read corroborate each other into a false answer.
+  `tixuz/openemis-mcp`: `package.json` **MIT**, npm **MIT**, MCP directory **MIT**, payload
+  **BSL-1.1** `647` B `4dead97d8aaf`.
+- 🔴 **And the licence it misdeclares is not another open-source licence — it is source-available.**
+  BSL-1.1 with `Change Date: 2029-01-01` and an Additional Use Grant of *non-production evaluation
+  and internal testing only*. 🟢 **This is the first non-open-source grant these shelves have
+  graded in the education agent layer**, which makes the direction of the error the whole point:
+  every prior divergence this base measured was permissive-claimed-over-copyleft, and copyleft is
+  at least still open source.
+- 🟡 **BSL in an adjacent form: a "pro" edition's licence at the root of a free one.**
+  `Licensed Work: openemis-mcp-pro` names a work that is neither the repository nor the package.
+  🔵 Watch for this shape — an open-core project whose root `LICENSE` governs the commercial
+  edition — because it reads as a repository-wide grant to every tool that looks at one file.
+- 🟢 **The permissive agent layer is still real, and still tier-bounded.** `p422` measured 9 of 10
+  MCP-over-**LMS** addresses MIT. `p423`'s first MCP-over-**SIS** address is the BSL one. 🔵 One
+  address is not a tier (`T118`), but the asymmetry is worth watching: the LMS tier is built by
+  students and staff scratching their own itch, and the SIS tier is where commercial incentive
+  sits, because that is where the money and the ministry contracts are.
+- 🔴 **Discovery by ranking is still dead, seventh pass running** (`T100`). Eight
+  ranking/trend/regional legs → **0 unshelved**. The only productive wording is **capability**,
+  and this pass it returned 2 unshelved and **0 supply** (`T113`).
+- 🟢 **A regional trend this pass established by instrument rather than by search:** an
+  education-AI nil for **EMEA** is a *wording* artefact, not a regional fact. The region-label leg
+  returned nothing education-specific; the jurisdiction-named leg returned a **KMK** framework
+  update from eight days earlier. 🔵 Any future EMEA nil on these shelves should be read as a
+  defect in the leg until a jurisdiction-named pair confirms it.
+- 🟡 **The grading question has gone cross-jurisdictional.** US state statutes prohibit AI
+  replacing a licensed educator in grading (`p421`); Lower Saxony's April-2026 motion asks for
+  clear rules citing legal uncertainty **specifically around AI-assisted grading**. 🟢 Two
+  jurisdictions, two legal mechanisms — statute and liability — **one deliverable**: a reviewable
+  human-in-the-loop evidence trail.
+
 ## 🆕 `p422` · 2026-10-24 — **The trend that changes what a studio can SELL is a licence boundary, and it is new to these shelves: the education platform tier is copyleft without exception while the agent tier directly above it is MIT without exception. 🟢 Measured over ten addresses at their own commit SHAs, not reported. 🔴 And a second trend with a casualty: the discovery channel now routinely serves FORKS as canonical addresses.**
 
 🔵 **Band:** regional and market trends below are `reported` from secondary sources read
