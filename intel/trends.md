@@ -1,8 +1,88 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🟢 The trend this pass can actually evidence: the grant is lagging the capability
+
+🟢 Both genuinely new in-domain agents found today implement **the same capability** — LLM-graded
+discursive assessment with human-in-the-loop — **independently, on the same framework (LangGraph),
+in different countries**, and **neither shipped a licence**.
+
+| | [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) |
+|---|---|---|
+| orchestration | LangGraph + LangChain | LangGraph, 7-node workflow |
+| retrieval | ChromaDB | FAISS + sentence-transformers |
+| human loop | 🟢 conditional **divergence arbitration** | 🟢 AI-only vs **AI-against-human-marks** |
+| origin | Instituto Federal Fluminense, **Brazil** | not stated |
+| 🔴 grant | 🔴 **none** — MIT badge, no payload | 🔴 **none** — *"academic research purposes"* |
+
+🔵 **Read as a trend rather than as two repositories:** the assessment-agent pattern has reached the
+stage where it is a **capstone project**, not a research contribution — which is how a technique
+becomes ordinary. 🔴 **And the licensing has not kept up.** The capability is commodity; the
+**legal availability is not**, and a studio that assumes "open source" from a GitHub URL will be
+wrong on both of this pass's new addresses.
+
+🟢 **This is the supply-side counterpart to the governance trend below**: adoption is being limited
+less by what can be built than by what can be *lawfully reused*.
+
+### 🔵 Carried trends, re-confirmed and NOT re-bought
+
+🔵 The prescribed trends leg returned a consistent and **entirely carried** picture for 2026. Recorded
+as confirmation, with the vendor figures refused:
+
+- 🟢 **From pilots to infrastructure** — AI embedded across admissions, advising, learning and
+  administration in higher education rather than piloted beside it.
+- 🟢 **Governance and oversight as the gating factor** — 1EdTech's framing: explicit policies, data
+  boundaries and oversight as preconditions for trusted adoption, not afterthoughts.
+- 🟢 **Agentic, not conversational** — multi-step agents that plan a teaching sequence and draft an
+  assessment; this base's two new addresses are instances of exactly that.
+- 🟢 **Teacher-first adoption** — education-specific tooling displacing generic chatbots, with
+  take-up driven by hours returned to teachers.
+- 🟢 **Evidence demands** — HolonIQ's reading: systems increasingly require proof of effect on
+  learning, persistence, well-being or job-relevant skills.
+- 🟢 **Skills and credentials** — digital credentials and competency frameworks tracking
+  skills-based hiring.
+
+🔴 **Figures refused on sourcing, per `P541` and `Gap 546`.** A *$12.3 B* market figure and an *83%
+AI-teaching-assistant deployment rate* trace to a single vendor blog citing unverifiable sources; a
+*$9.58 B (2026) → $136.79 B (2035) at 34.52% CAGR* forecast is vendor-style. 🔴 **None is written to a
+cell.** 🔵 A *60% / 32% weekly* US teacher-use pair and *87% / 26%* UNESCO IESALC pair are already
+carried with better provenance and are the figures to quote.
+
+### 🟡 A measurement about this base's own instruments, which is a trend too
+
+🔴 **Three of this pass's findings are defects in how this base grades evidence, not in the
+evidence:** a refutation counter that fired on a correct source (`intel/market.md`), a gap register
+three passes stale, and a licence family attached to a project name instead of an address
+(`T99`). 🟢 **At 417 passes the marginal external fact is cheap and the marginal instrument check is
+expensive** — this pass's novelty rate was **2 new addresses in 13 candidates**, while its instrument
+audit changed a published verdict. 🔵 `T100` (new): **on a saturated shelf, budget the pass toward
+re-reading verdicts rather than toward more legs** — and record the novelty rate so a successor can
+tell saturation from channel decay.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 

@@ -1,0 +1,8 @@
+# p417 · 2026-10-23 · gap-register staleness measured on arrival. grep -cF '`pN`' intel/open-gaps.md, and count of '^## .*`pN`' section headers.
+# Newest section in intel/open-gaps.md on arrival was p413, while agents/top.md carried p416 => register 3 passes stale.
+pass	mentions_in_open_gaps_on_arrival	section_headers	registered_by
+p413	present	1	p413 (own pass)
+p414	0	0	BACKFILLED BY p417
+p415	0	0	BACKFILLED BY p417
+p416	0	0	BACKFILLED BY p417
+p417	n/a	1	p417 (own pass)

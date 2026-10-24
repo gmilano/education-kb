@@ -1,0 +1,12 @@
+# p417 · 2026-10-23 · byte-level grant probe over every address p417 touched. Read via raw.githubusercontent.com (http=200); github.com HTML via WebFetch; api.github.com is AUTHZ-REFUSED (p414 class, 4th consecutive pass).
+# 8-path probe = {LICENSE, LICENSE.md, LICENSE.txt, COPYING} x {main, master}. "none_8x404" = all eight returned 404, i.e. UNGRANTED.
+slug	ref_path	http	bytes	lines	sha256_12	family_from_title	shelf_status
+exelearning/exelearning	main/LICENSE	200	34523	661	0d96a4ff68ad	GNU AFFERO GENERAL PUBLIC LICENSE	NEW-unshelved
+exelearning/iteexe	master/COPYING	200	17992	340	32b1062f7da8	GNU GENERAL PUBLIC LICENSE Version 2 June 1991	NEW-unshelved
+savinoo/ai-grading-system	none_8x404	404	0	0	-	NONE-badge-claims-MIT	NEW-unshelved-UNGRANTED
+Fatima0923/AssessmentAI	none_8x404	404	0	0	-	NONE-readme-says-academic-research-only	NEW-unshelved-UNGRANTED
+withmarbleapp/os-taxonomy	main/LICENSE	200	25289	540	77d2692c3d64	Open Data Commons Open Database License (ODbL)	CARRIED-confirmed-byte-identical
+krayin/laravel-crm	master/LICENSE	200	1078	-	a76aa4a4405c	MIT License	CARRIED
+marmelab/atomic-crm	main/LICENSE.md	200	1105	-	1774c14a7b97	The MIT License (MIT)	near-unshelved-added
+apache/ofbiz-framework	trunk/LICENSE	200	11906	-	-	Apache License 2.0	CARRIED
+aureus-erp/aureus	main/LICENSE	404	0	0	-	-	REFUSED-address-unresolved

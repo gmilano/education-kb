@@ -1,0 +1,10 @@
+# p417 · 2026-10-23 · audit of this base's wrong-date sighting counters. TEST: does the quoted source carry the qualifying clause the counter asserts is absent?
+# Verdict SOUND = counter can name an absent clause. UNSOUND = the clause is present inside the counter's own quotation.
+counter	pass	region	quoted_source_text_carries_qualifier	counter_verdict	disposition
+ACTION SH (EU high-risk 2026-08-02)	p407 and earlier, 7 firings	EMEA	no - deferral clause absent from source	SOUND	fired 8th time by p417, upheld
+ACTION SH (EU high-risk 2026-08-02)	p417	EMEA	no - source says "enter into force Aug 2026" with no deferral	SOUND	sighting 8 recorded
+wrong-Vietnamese-date	p411 (intel/market.md:577)	APAC	YES - "plus a grace period for education systems already running before 15 August 2026"	UNSOUND	WITHDRAWN by p417
+wrong-Vietnamese-date	p281 (agents/trending.md:11066)	APAC	YES - same structure, graded "correct"	n/a - graded correct	consistent with p417
+wrong-Vietnamese-date	p417 own APAC leg	APAC	YES - "six-month extension for education ... before 15 August 2026"	n/a	graded CARRIED-CORRECT
+# Addendum: p417's OWN drafted absence, caught by gate-absence before publication.
+drafted-absence-latam-binding-rule	p417 (draft)	LATAM	n/a - claim was an ABSENCE, refuted by shelf cells	UNSOUND	REFUSED by gate-absence; corrected to a CHANNEL finding (Peru Law 31814 / DS 115-2025-PCM education obligations live 2026-09-10; Colombia Ley 2626 de 2026)

@@ -1,0 +1,4 @@
+# p417 · 2026-10-23 · independent cross-check of p413's AGPL-3.0 revision lattice against an 11th address.
+# p413 canonical forms: 34523 B / 661 lines / 3 x https:// / sha256 0d96a4ff68ad  AND  34501 B / 662 lines / 3 x http:// / sha256 884b434957ba (measured over 10 addresses).
+slug	bytes	lines	https_count	sha256_12	matches_p413_form	amendment_needed
+exelearning/exelearning	34523	661	3	0d96a4ff68ad	canonical-https-form	no

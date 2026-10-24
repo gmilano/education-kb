@@ -1,8 +1,145 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🔴 This file's own `p411` row manufactured a refutation — the source was right, and the row proves it
+
+🔴 [`intel/market.md:577`](../intel/market.md), written by **`p411`**, grades its APAC leg like this:
+
+> *"🔴 **the leg re-surfaced a date this base has already REFUTED.** `p406` resolved exactly this
+> contradiction: Decision `33/2026/QĐ-TTg` is in force **2026-08-15**, and pre-existing education
+> systems have to **2027-09-01**, *not* 2027-03-01. 🔵 **A second independent sighting of the wrong
+> Vietnamese date.**"*
+
+🔴 **But the source it is grading is quoted on that same line, and it carries the qualifier:**
+*"compliance deadlines in 1 March 2027, **plus a grace period for education systems already running
+before 15 August 2026**."* 🟢 **That is this base's own settled structure**, and the row refutes
+itself on its own line.
+
+| instrument | verdict on the SAME two-tier structure |
+|---|---|
+| [`compose/patterns.md:1128`](../compose/patterns.md) | 🟢 *"**`2027-03-01`. That is the all-other-sectors date.** Education's is **`2027-09-01`** for a system live before **2026-08-15**, and **`2027-03-01`** only for one deployed inside the six months after Decision 33 took effect"* |
+| `agents/trending.md:11066` (`p281`) | 🟢 *"Compliance `2027-03-01`; **+6 months** if the system was live before `2026-08-15`"* — graded **"correct"** in those words |
+| `agents/trending.md:33591` | 🟢 education, health and banking to **`2027-09-01`**; *"all other existing high-risk systems until **2027-03-01**"* |
+| 🔴 `intel/market.md:577` (`p411`) | 🔴 the identical structure graded **"the wrong Vietnamese date"** |
+
+🔴 **And the mislabel inverts `p406`'s actual finding.** [`README.md:483`](../README.md) records what
+`p406` caught: *"Vietnam's education deadline is **2027-09-01** … not the **2027-03-01** that
+`intel/market.md`'s opportunity 5 and `Pattern C` both priced against. **Two of this base's three
+green claims were wrong.**"* 🟢 `p406` caught **this base's own pricing rows**. 🔴 `p411` re-read that
+as *external publishers keep printing a wrong date* — a category error that converts an
+**internal-defect** finding into a **source-refutation** counter.
+
+🟢 **This pass is the test case, because its own APAC leg returned the same structure**: *"a
+compliance deadline of 1 March 2027 for the listed systems, with a six-month extension for education
+and other sectors already operating before 15 August 2026."* 🔴 Graded by `p411`'s rule that is a
+**third sighting of a wrong date**. 🟢 Graded by `compose/patterns.md:1128` it is **correct and
+complete**. The second grading is the right one, and this pass records it as `CARRIED-CORRECT`.
+
+#### 🟢 The discriminating test, and why the EMEA counter is NOT affected
+
+🔵 A sighting counter over external sources is a good instrument — this base runs one, `ACTION SH`,
+and it has *"caught seven times"* (`intel/market.md:1316`) the claim that EU high-risk duties land
+**2026-08-02**. 🟢 **That counter is sound, and this pass fires it an eighth time**: one EMEA source
+today states *"EU AI Act high-risk provisions enter into force Aug 2026"* **with no deferral
+clause at all**.
+
+🟢 **So the test is not which date the source leads with — it is whether the source carries the
+qualifier.**
+
+| leg today | what the source said | verdict |
+|---|---|---|
+| EMEA | *"high-risk provisions enter into force Aug 2026"* — **no** deferral mentioned | 🔴 **WRONG** — `ACTION SH` sighting **eight** |
+| EMEA | Digital Omnibus moved Annex III stand-alone to **2027-12-02**, embedded to **2028-08-02** | 🟢 **CORRECT** — matches `Regulation (EU) 2026/1744` as carried |
+| APAC | *"1 March 2027 … six-month extension for education … operating before 15 August 2026"* | 🟢 **CORRECT** — the qualifier is present; `p411`'s grading of this shape is withdrawn |
+
+🟢 **`T97` (new): a refutation counter must quote the clause it says is missing.** `ACTION SH` can
+name the absent deferral; `p411`'s Vietnam grading could not name an absent clause, because the
+clause was in the quotation. 🔵 **Restated, not back-dated**, per `p352` / `p376`: `p411`'s row keeps
+its text and gains a correction pointer to this section.
+
+### 🔵 Opportunities by region — re-read, and the APAC row re-priced to the RIGHT rule
+
+🔵 No opportunity row is added this pass. One is **corrected**, one is **confirmed from a new
+channel**, and the rest are carried.
+
+#### 🟢 North America
+
+🔴 **All carried.** The leg returned **134** AI-in-education bills across **31** states, California
+`AB 1159`, Idaho `SB 1227`, `H.R. 8747` *(K-12 AI Literacy and Readiness Act of 2026)* advanced
+**2026-07-21**, NYC's one-year student-facing moratorium through grade 8, NA at **36%** of the global
+market, **60%** of US K-12 teachers using AI in 2024–25 and **32%** weekly. 🟢 Every item is on these
+shelves. 🔵 One item is **new to this base but not an opportunity**: Canada's *"AI for All"* strategy
+launched **2026-06-04**, AI-literacy commitment, **no legislative date set** — recorded as a policy
+fact, not a market.
+
+#### 🟡 EMEA
+
+🟢 **Confirmed, and the supply side gained a real address.** The regulatory layer is settled and
+`ACTION NU-EU` says **stop re-verifying it** — this is the sixth consecutive pass to re-buy it, and
+this pass stops. 🟢 **What is new is supply, not policy:**
+[`exelearning/exelearning`](https://github.com/exelearning/exelearning) is **AGPL-3.0, 150★**, and
+**led by Spain's Ministry of Education, Vocational Training and Sports (MEFPD) through
+Cedec-INTEF**, with regional administrations participating. 🟢 That is a **fourth institutional EMEA
+address**, after `oak`, `DFE-Digital` and `SafeExamBrowser` (`README.md:4988`) — and it strengthens
+the reversal that file records from **THIN** to **PRESENT AND INSTITUTIONAL**.
+
+#### 🟢 APAC — the row that is corrected
+
+🟢 **The engagement date stands at `2027-09-01` for a system live before `2026-08-15`, and
+`2027-03-01` for one deployed after.** 🔴 What changes is **not the date but the grading rule**: a
+publisher that states `2027-03-01` *with* the education grace clause is **correct** and must stop
+being counted as a wrong-date sighting. 🔵 Carried and unmoved: Korea's `AI Basic Act` in force
+**2026-01-22** with MSIT running 2026 as a pilot year and a one-year penalty grace; Vietnam's
+`Decision 33/2026/QĐ-TTg`, 46 systems / 6 sectors, education = 3; China's registration and labelling
+regime; Japan's penalty-free `AI Promotion Act`; Singapore's agentic framework as guidance.
+🔴 **Still unretrieved, and still a different statement from "policy-empty"** (`T45`): school-level
+APAC rules.
+
+#### 🟢 LATAM
+
+🔴 **All carried** — UNESCO IESALC / UNU-IAS over **200** institutions in **19** countries, **87%**
+using AI in at least one area against **26%** holding a formal strategy, **74%** in teaching and
+learning; the UNESCO regional observatory launched **2026-04-14** at ECLAC Santiago; Microsoft
+ConectAI toward **5 million** Brazilians by end-2027; Uruguay as the first regional signatory of the
+Council of Europe AI convention; Peru's sandbox; Colombia's `CONPES 4144`; Brazil's ANPD pilot
+sandbox running to **December 2026**. 🟢 **One genuinely new LATAM supply address, and it is not
+buildable** — see `agents/top.md`: a Brazilian federal-institute grading agent that is
+**ungranted**. 🔴 **An absence this pass DRAFTED and `gate-absence` refused before publication.** The LATAM leg's
+own caveat read *"I found no binding, education-specific AI rules for schools in this search"*, and
+this section was drafted carrying it. 🟢 **It is false against this base's own shelves, twice over:**
+**Peru**'s Law **31814** + *reglamento* **DS 115-2025-PCM** activated **sector obligations naming
+education on 2026-09-10** — a date that has already bitten — and **Colombia's `Ley 2626 de 2026`** is
+recorded here as *"LATAM yields its first binding statute"*. 🔴 **Brazil still has none** (`PL
+2338/2023` awaiting a Chamber vote after the October elections). 🟢 **So the finding is about the
+CHANNEL, not the region:** a general-purpose LATAM leg does not retrieve the two binding instruments
+this base already holds, and a pass that trusts its own leg's caveat will publish a false blank.
+🔵 `intel/market.md:1710` records the same error class — *"the blank was false, and the correction was
+already in the building"* — and `p277` **published** it where `gate-absence` stopped this pass.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 
@@ -574,7 +711,7 @@ empty regional section and a saturated one look identical to a reader.
 |---|---|---|
 | **North America** | 134 AI-in-education bills across 31 states; **EO 14277** (Apr 2025, K-12 AI literacy, no statute); Alabama's AI-inclusive CS graduation requirement; Oklahoma's pre-2027-28 district AI policy duty and its bar on AI as the main basis for grading or discipline; Maryland's AI Education Collaborative and district coordinators; NYC's March-2026 traffic-light guidance banning AI from grading, discipline and IEPs; **33–35 state DoEs plus Puerto Rico** publishing guidance | 🔴 **All carried** — Maryland (17 mentions), Idaho, Arizona, Oklahoma `S.B. 1734`, NYC traffic-light, the `134 / 31` MultiState count. 🟢 **One dated movement worth recording:** the leg quotes **FutureEd at 87 bills / 28 states**, where this base carries FutureEd's **June** reading of **68 / 27** (`ACTION ET`). **Same tracker, four months on, +19 bills / +1 state** — not a sixth tracker, a *clock* on one this base already names |
 | **EMEA** | AI Act enforcement from **2026-08-02**; the **AI omnibus adopted June 2026**, published OJ **2026-07-24** as **Regulation (EU) 2026/1744**; Annex III education obligations deferred **2026-08-02 → 2027-12-02**; Article 50 transparency live from 2026-08-02; Article 4 AI-literacy duty since 2025-02-02; schools as deployers under Art. 29; the **EC/OECD AI literacy framework presented 18 June 2026**; Commission ethical guidelines June 2026 | 🔴 **All carried** — the Omnibus at 21 mentions, `2027-12-02` at 13. 🟢 **But the AILit date is a HIT, in the other direction:** see the correction below. 🔵 `ACTION NU-EU` already says **STOP re-verifying** this set; this is now the **fifth** consecutive pass to re-buy it |
-| **APAC** | **Vietnam**'s high-risk list naming education (automated assessment, behavioural monitoring), *“compliance deadlines in 1 March 2027, plus a grace period for education systems already running before 15 August 2026”*; Korea, Taiwan, Japan, Singapore, Australia tiering; Ipsos Education Monitor 2026; the **UAE** mandatory AI subject from 2025–26 | 🔴 **All carried** — and 🔴 **the leg re-surfaced a date this base has already REFUTED.** `p406` resolved exactly this contradiction: Decision `33/2026/QĐ-TTg` is in force **2026-08-15**, and pre-existing education systems have to **2027-09-01**, *not* 2027-03-01. 🔵 **A second independent sighting of the wrong Vietnamese date**, four passes after the correction — the same shape as `p407`'s sixth sighting of the wrong EMEA date |
+| **APAC** | **Vietnam**'s high-risk list naming education (automated assessment, behavioural monitoring), *“compliance deadlines in 1 March 2027, plus a grace period for education systems already running before 15 August 2026”*; Korea, Taiwan, Japan, Singapore, Australia tiering; Ipsos Education Monitor 2026; the **UAE** mandatory AI subject from 2025–26 | 🔴 **All carried** — and 🔴 **the leg re-surfaced a date this base has already REFUTED.** `p406` resolved exactly this contradiction: Decision `33/2026/QĐ-TTg` is in force **2026-08-15**, and pre-existing education systems have to **2027-09-01**, *not* 2027-03-01. 🔵 **A second independent sighting of the wrong Vietnamese date**, four passes after the correction — the same shape as `p407`'s sixth sighting of the wrong EMEA date 🔴 **[CORRECTION — `p417`: this grading is WITHDRAWN. The source quoted on this very line carries the education grace clause, so it is CORRECT, not a wrong-date sighting. See `p417`'s section at the head of this file and `compose/patterns.md:1128`.]** |
 | **LATAM** | **UNESCO IESALC** — 200 institutions, 19 countries, **87 %** using AI in ≥1 area, **26 %** with a formal framework; private non-profit **84 %** vs public **68 %** vs private for-profit **52 %**; **TALIS** teacher use **52–56 %** in Brazil, Chile, Colombia and Costa Rica against an OECD mean of **36 %**, Uruguay at **75 %** of public-school teachers; the **Observatory on AI in Education for LAC** (Apr 2026); **ILIA** third edition; **CENIA** on absent regional coordination | 🔴 **All carried** — `intel/market.md` lines ~129, ~178, ~526, ~562, ~714. 🔵 The institution-type split (84/68/52) and Uruguay's 75 % are the *finest-grained* restatement yet of figures this base already holds at the 87 %/26 % level; **neither changes a recommendation** |
 
 🔵 **The honest reading, and it should be acted on rather than repeated.** The prescribed regional

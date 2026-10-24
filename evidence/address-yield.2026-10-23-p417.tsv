@@ -1,0 +1,17 @@
+# p417 · 2026-10-23 · novelty rate over 10 discovery legs (4 prescribed global, 4 prescribed regional, 2 opportunistic). Shelf hits counted with grep -rF across all 8 shelves + every .tsv, excluding ./archive.
+# 2 new in-domain addresses out of 13 candidates. Recorded so a successor can distinguish shelf saturation from channel decay.
+candidate	shelf_hits_on_arrival	verdict
+withmarbleapp/os-taxonomy	142	already-shelved
+biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent	90	already-shelved
+Karpathy nanochat	103	already-shelved
+adlnet/SCORM-to-xAPI-Wrapper	100	already-shelved (archived by owner 2026-03-04)
+H5P	192	already-shelved
+Lumi	95	already-shelved
+scormflow/scorm-engine	53	already-shelved
+BaijayantaRoy/bandup	50	already-shelved
+Adapt Learning	123	already-shelved
+luongnv89/claude-howto	14	already-shelved
+DozenTwelve/Papermorph	28	already-shelved (p416)
+exelearning/exelearning	0	NEW - AGPL-3.0, state-backed, EMEA
+savinoo/ai-grading-system	0	NEW - UNGRANTED, LATAM (Brazil)
+Fatima0923/AssessmentAI	0	NEW - UNGRANTED, unplaced

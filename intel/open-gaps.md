@@ -1,8 +1,62 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **the register was THREE passes stale; `p414`–`p416` backfilled and labelled as backfill, plus `p411`'s manufactured refutation withdrawn**
+
+🔴 **Register hygiene, stated first because it is this pass's second finding.** On arrival,
+`p414`, `p415` and `p416` appeared **nowhere** in this file — `grep -cF` returned **0** for each,
+and the newest section was **`p413`**. 🔴 **The register has been three passes stale for a full day**,
+which is worse than the one-pass staleness `p412` had to repair for `p411` and recorded as a
+standing warning. 🟢 Repaired below. 🔵 **The backfilled entries are labelled `BACKFILLED BY p417`
+rather than presented as contemporaneous** — `p352` / `p376` forbid back-dating, and a register entry
+written four passes late is a different artefact from one written in its own pass.
+
+### 🟢 Closed this pass
+
+| gap | disposition |
+|---|---|
+| 🆕 `Gap 417-W` *(`p411`'s grading, withdrawn)* | 🟢 **CLOSED by withdrawal, with the mechanism on the line itself.** `intel/market.md:577` graded its APAC source *"a second independent sighting of the wrong Vietnamese date"* — 🔴 **but the row's own quoted text reads *"compliance deadlines in 1 March 2027, plus a grace period for education systems already running before 15 August 2026"***, which is this base's settled two-tier structure. 🟢 `compose/patterns.md:1128` states it correctly; `p281` graded the identical phrasing **"correct"** at `agents/trending.md:11066`. 🔴 **And the mislabel inverts `p406`:** `README.md:483` records `p406` catching *this base's own* pricing rows, not external publishers. 🟢 `T97`: **a refutation counter must quote the clause it says is missing** — `ACTION SH` can (the absent deferral); `p411`'s Vietnam grading could not |
+
+### 🔴 Registered this pass — `p417`'s own
+
+| gap | statement |
+|---|---|
+| 🆕 `Gap 417-A` | 🔴 **A sighting counter has no audit, so a false firing is indistinguishable from a true one at read time.** `ACTION SH` is at *"seven times"* (`intel/market.md:1316`) and fires an **eighth** this pass on a genuinely-deferral-free EMEA source — 🟢 sound. 🔴 But `p411`'s Vietnam firing was **unsound and sat unchallenged for six passes**. 🔵 **The instrument is a gate that, for every counter increment, requires the quoted source text AND the clause asserted absent.** Not built this pass |
+| 🆕 `Gap 417-B` | 🔴 **A licence family is attached to a PROJECT NAME somewhere on these shelves, and the `exelearning` pair proves the shape is live.** `exelearning/exelearning` is **AGPL-3.0** (`34 523` B, `sha256:0d96a4ff68ad`); its legacy `exelearning/iteexe` is **GPL-2.0** (`17 992` B, 340 lines, `sha256:32b1062f7da8`). 🔴 A secondary source reported the project as *"GPL v2"* — true of one address, false of the other, and **copyleft ESCALATED across the move**. 🟢 `T99`: family is a property of the address. 🔵 **Open part is population-level:** a census of carried cells whose grant was taken from a project name rather than a probed path. `gate-grant-path` is the natural home |
+| 🆕 `Gap 417-C` | 🔴 **A README badge can contradict the ABSENCE of a grant, and this base has no class for it.** `savinoo/ai-grading-system` shows `License-MIT-green` and *"MIT — ver arquivo `LICENSE`"* over **8 × `404`** on four filenames × two branches, with no sidebar entry. 🔵 `p411`'s class covers a manifest that *agrees* with a grant; this is the **inverse**. 🟢 Proposed class **`BADGE-WITHOUT-PAYLOAD`**, distinct from `p416`'s un-badged `aaryansamanta/ai-ethos` (498★, no entry). Needs a fixture before it is a gate |
+| 🆕 `Gap 417-D` | 🟡 **A capability claim about a state-backed address is carried UNVERIFIED and must not be cited.** A secondary source reports `exelearning` exporting **SCORM 1.2 + 2004**; the repository page names Moodle export and *"various formats"* and does **not** mention SCORM. 🔴 `p416` closed the permissive-SCORM-**producer** scarcity with `Papermorph`, and this address is **not** offered as a second instance. 🟢 Instrument: read the export modules in-tree (`ACTION p417-B`) |
+| 🆕 `Gap 417-E` | 🔴 **An address reported as MIT supply does not resolve at the probed path.** `aureus-erp/aureus` `main/LICENSE` → **`404`**. 🟡 Reported MIT by the ERP/CRM leg. 🔵 Either the owner/branch is wrong or the repository is elsewhere; **not recorded as supply** until an address resolves (`ACTION p417-C`) |
+
+### 🟡 Backfilled by `p417` — `p414`, `p415`, `p416`, labelled as backfill
+
+| pass | gaps as its shelf sections state them |
+|---|---|
+| 🟡 `p414` *(BACKFILLED BY p417)* | 🔴 **`34 501` is not the AGPL-3.0 `http://` form but one repository's de-indented title**, and the spread is a **2×2 lattice** over `34 520`. 🔴 `education-agent-skills`' grant is a **POINTER on both subtrees**. 🟢 The egress refusal has **two classes**, and `AUTHZ-REFUSED` is named here — the 378-byte body is the *session's own* refusal, not GitHub's |
+| 🟡 `p415` *(BACKFILLED BY p417)* | 🟢 **Stars are NOT unverifiable on this base** — `p414` closed that question on the wrong channel; 15 agents + 9 foundations re-read first-hand, **three carried figures refuted, one by 31×**. 🔴 **Its headline — *"the agent field has one hub and no middle"* — was REFUTED by `p416`** using four middle-tier addresses already on `agents/top.md`, three of them on the very file carrying the claim |
+| 🟡 `p416` *(BACKFILLED BY p417)* | 🟢 **68 addresses / four legs → ONE unshelved in-domain repository**, `DozenTwelve/Papermorph` (MIT, `1 069` B, `sha256:41857092247a`, **849★**), closing the SCORM-emitter scarcity this base declared by name. 🔴 Its MIT holder line reads `Copyright (c) 2026 TedKaczynski` — **unattributable assignor**, a procurement question. 🔴 `cn-math-taxonomy` **CC BY-NC 4.0** + self-declared unreviewed AI draft = the row not to build on. 🟢 Standing suggestion: **`grep -rF` the band a pass claims is empty** |
+
+### 🔵 Carried unchanged, and deliberately not re-bought
+
+| gap | why it is untouched |
+|---|---|
+| `Gap 400-B` | 🔴 **Still red by design** — `gate-census-union` control 24, carried red since `p398`; `p387-G` forbids closing it by weakening a control. Gates: **50 / 51** |
+| `Gap 298` · `Gap 405-A` | 🔴 **OPEN, confirmed from a fourth channel.** The ERP/CRM leg returned `OpenEduCat` (LGPL-3.0), `OpenSIS` (GPL-2.0), `Fedena` (Apache-2.0), `RosarioSIS`, `Gibbon` (GPL-3.0), `SchoolTool` (GPL-2.0), `OpenOlat` (Apache-2.0) — **all carried**; no major education SIS is MIT. 🟢 Confirmation, not movement |
+| `Gap 488-R` | 🔵 **Carried search-channel, no probe prescribed** — and re-evidenced: policy hosts answer `http=000` while `raw.githubusercontent.com` answers `200`. An allowlist, per `p413` |
+| `Gap 413-A` · `Gap 413-B` · `Gap 413-C` | 🔵 **Untouched.** 🟢 `Gap 413-C`'s AGPL lattice gained an **eleventh independent address** this pass — `exelearning` at `34 523` B / 661 lines / `3 × https://` / `sha256:0d96a4ff68ad`, byte- and digest-identical to `p413`'s canonical form. **No amendment needed** |
+| `Gap 297-R` | 🔴 **OPEN, not re-probed this pass** — `p413` established two actively-maintained AGPL distributions will not become permissive by waiting |
+
+### 🟢 Actions
+
+| id | action |
+|---|---|
+| `ACTION p417-A` | 🟢 Open an issue on [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) asking for a real `LICENSE` commit (MIT, as its badge already claims). Worth the ask because the address is **LATAM** supply and this base is thin there |
+| `ACTION p417-B` | 🟡 Read `exelearning/exelearning`'s export modules in-tree before any SCORM/xAPI claim is attached to it |
+| `ACTION p417-C` | 🔵 Resolve the real address for `Aureus ERP` or drop the reported-MIT row |
+| `ACTION p417-D` | 🔴 **Register hygiene is now a recurring failure — `p411` once, `p414`–`p416` three times.** Prescribe a gate: if the newest `## 🆕 \`pN\`` header in `intel/open-gaps.md` is older than the newest on `agents/top.md`, the register is stale and the gate is red |
+
 
 ## 🆕 `p413` · 2026-10-23 — `Gap 412-B` **CLOSED with a mechanism**, `Gap 488` **MISFRAMED**, and the egress channel measured as an **allowlist** rather than a set of dead hosts
 

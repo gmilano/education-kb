@@ -1,8 +1,61 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## Pass 417 — reads 2026-10-23, commit 2026-10-24 (the run's first midnight-UTC straddle) — **`p411` GRADED A CORRECT SOURCE AS CARRYING "THE WRONG VIETNAMESE DATE", AND THE ROW'S OWN QUOTED TEXT CONTAINS THE CLAUSE THAT MAKES IT RIGHT. 🟢 PLUS THE FIRST NEW STATE-BACKED EMEA SUPPLY IN SEVERAL PASSES — `exelearning/exelearning`, AGPL-3.0 AT `p413`'s CANONICAL DIGEST, LED BY SPAIN'S MINISTRY OF EDUCATION. 🔴 AND THE GAP REGISTER WAS THREE PASSES STALE.**
+
+🔵 **Dating note — the first SPLIT in this run.** Every search leg, licence read, payload read,
+digest and gate run was executed on **2026-10-23**; **the commit lands 2026-10-24**, the work having
+crossed **00:00 UTC** before write-out. 🟢 Recorded as two dates, not collapsed: frontmatter
+`updated:` carries the **commit** date, every `evidence/*.tsv` filename carries the **read** date.
+🔵 `p395`–`p416` were all dated **2026-10-23**; this is the **first pass dated 2026-10-24**.
+
+🟢 **Gates ran BEFORE the first research leg** — `p412`'s standing rule, which `p416` admitted
+breaking. **50 / 51 green on arrival**, equal to `p413`–`p416`; the lone red is `gate-census-union`
+control 24, **`Gap 400-B`**, carried deliberately red since `p398`.
+
+| # | finding |
+|---|---|
+| 1 | 🔴 **`intel/market.md:577` (`p411`) manufactured a refutation.** It graded its APAC source *"a second independent sighting of the wrong Vietnamese date"* — **while quoting that source saying *"1 March 2027, plus a grace period for education systems already running before 15 August 2026"***. 🟢 That is this base's own settled two-tier structure: `compose/patterns.md:1128` states it correctly and `p281` graded the identical phrasing **"correct"**. 🔴 **The mislabel also inverts `p406`**, which caught *this base's own* pricing rows, not external publishers. 🟢 **Withdrawn, restated not back-dated** |
+| 2 | 🟢 **`T97`: a refutation counter must quote the clause it says is missing.** The EMEA counter `ACTION SH` can — it names an absent deferral, and fires soundly an **eighth** time this pass on a source claiming high-risk duties land *"Aug 2026"* with no deferral clause. 🔴 `p411`'s Vietnam firing could not, because the clause was inside its own quotation. **The test is whether the source carries the qualifier, not which date it leads with** |
+| 3 | 🟢 **New supply, placed and institutional: [`exelearning/exelearning`](https://github.com/exelearning/exelearning)** — **AGPL-3.0**, `34 523` B, `sha256:0d96a4ff68ad`, **150★**, **1 413** commits, led by **Spain's MEFPD via Cedec-INTEF**. Unshelved on four spellings (**0 hits** each). 🟢 A **fourth institutional EMEA address** after `oak`, `DFE-Digital` and `SafeExamBrowser` |
+| 4 | 🟢 **And its digest confirms `p413` from an eleventh address** — `34 523` B / 661 lines / `3 × https://` / `sha256:0d96a4ff68ad`, byte- and digest-identical to `p413`'s canonical AGPL-3.0 form. 🟢 **No amendment needed**, which is what a lattice that works looks like |
+| 5 | 🔴 **A licence claim refuted on a FORK PAIR whose halves differ in FAMILY.** A source reported eXe Learning as *"GPL v2"*: true of legacy [`exelearning/iteexe`](https://github.com/exelearning/iteexe) (**GPL-2.0**, `17 992` B, 340 lines, `sha256:32b1062f7da8`, *"Version 2, June 1991"*), false of the live repository (**AGPL-3.0**). 🟢 **`T99`: a licence family is a property of the ADDRESS, not the project name** — and copyleft **escalated** across the move, which is the direction that costs money on a hosted service |
+| 6 | 🔴 **Two new in-domain agents, both REAL, both UNGRANTED.** [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) (**2★**, Instituto Federal Fluminense, **Brazil** → 🟢 **LATAM**) and [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) (**0★**): `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING` × `main`/`master` → **8 × `404`** each, no sidebar entry |
+| 7 | 🟢 **`T98`: a badge and a prose pointer are both claims about a payload, and neither is one.** `ai-grading-system` shows `License-MIT-green` and *"MIT — ver arquivo `LICENSE`"* over **zero bytes of grant**. 🔵 `p411` recorded a manifest that *agrees* with a grant and proves nothing; this is the **inverse** — a manifest that **disagrees with the absence**. Proposed class **`BADGE-WITHOUT-PAYLOAD`** |
+| 8 | 🔴 **The gap register was THREE passes stale** — `p414`, `p415`, `p416` returned **0 hits** in `intel/open-gaps.md` on arrival, newest section `p413`. Worse than the one-pass staleness `p412` repaired for `p411`. 🟢 **Backfilled and LABELLED `BACKFILLED BY p417`**, not presented as contemporaneous |
+| 9 | 🟢 **`os-taxonomy` confirmed byte-level, and a distinction rescued.** `LICENSE` = `25 289` B / `540` lines / `sha256:77d2692c3d64`, genuine ODbL — matching this base's carried cell exactly. 🔵 **ODbL is NOT non-commercial:** `cn-math-taxonomy` (**CC BY-NC 4.0**) is barred from paid work, `os-taxonomy` (**ODbL-1.0 + CC BY-SA 4.0**) is **usable**, under share-alike. `p416`'s *"row not to build on"* does **not** transfer |
+| 10 | 🔴 **A real integration defect on a shelf a studio opens: the H5P / `Lumi` split.** H5P is MIT, but **SCORM export runs through the separate `Lumi` DESKTOP application**. Both are carried (192 and 95 hits) — **never as a dependency**. A proposal pricing *"H5P, MIT, SCORM export"* is pricing two products, one of which cannot sit in a server-side pipeline |
+| 11 | 🟢 **`atomic-crm` added as near-unshelved permissive supply** — **MIT**, `main/LICENSE.md`, `1 105` B, `sha256:1774c14a7b97`, React-admin + Supabase (*"atomic-crm"* → **0 hits**). With `krayin/laravel-crm` (**MIT**, `1 078` B, `sha256:a76aa4a4405c`) it answers the other half of `Gap 298`: 🔴 no education SIS is MIT, 🟢 so graft a permissive general CRM for admissions instead of forking a copyleft SIS |
+| 12 | 🔴 **Two measured nils and one refused address.** No MIT SCORM/xAPI **authoring generator** exists on a leg that named the capability explicitly. `adlnet/SCORM-to-xAPI-Wrapper` is 🔴 **archived 2026-03-04**. `aureus-erp/aureus` `main/LICENSE` → **`404`**, so a reported-MIT ERP is **not recorded as supply** |
+| 13 | 🔵 **Novelty rate recorded so a successor can tell saturation from channel decay: 2 new in-domain addresses out of 13 candidates across ten legs.** Eleven were already shelved, with hit counts. 🟢 `T100`: **on a saturated shelf, budget the pass toward re-reading verdicts rather than toward more legs** — this pass's instrument audit changed a published verdict while its legs changed almost nothing |
+| 14 | 🟢 **Three new patterns/recipes, all concrete.** `Pattern AO` — the publicly-governed OER stack (`exelearning` → Moodle → `moodle-mcp` → LangGraph → `Papermorph`/`scorm-engine`), with 🔴 **AGPL at layer 1 deciding the commercial model**. `Pattern AP` — the ungranted-upstream ask: probe the payload, ask for a `LICENSE` commit, reuse the **design** meanwhile. `Pattern C` — date unchanged, **grading rule** corrected |
+| 15 | 🔵 **Regional legs: four for four CARRIED, each stated as a placed nil rather than silence.** 🔵 One new NA policy fact that is not an opportunity — **Canada's "AI for All", 2026-06-04, no legislative date**. 🔴 **And one absence this pass DRAFTED was refused by its own gate before publication.** The LATAM leg's caveat claimed no binding education-specific rule in the region; 🟢 **`gate-absence` refuted it from the shelves — Peru's Law 31814 + DS 115-2025-PCM activated education-naming obligations 2026-09-10, and Colombia's `Ley 2626 de 2026` is the region's first binding statute.** `p277` published this same false blank; the gate stopped it here. 🔵 **The surviving informed gap is APAC school-level rules** (`T45`: distinct from "policy-empty") |
+
+### 🟢 The address census, derived LAST — after every shelf write
+
+🔵 **The shape census:** **2 758** harvested shapes → **38** are not addresses →
+**2 720 addresses**. 🔵 **2 720** channel-U addresses and **3 186** channel-B survivors give
+**3 556 addresses over both channels**. 🟢 Both derived with `make address-shape-census` /
+`make union-currency` as the **last act before the commit**, per `p352` and `p376`.
+
+🟢 **The delta.** Against `p416`'s published triple (**2 752 / 38 / 2 714**, union **3 549**) the
+address count moved **+6** and the union **+7**; harvested shapes moved **+6** and rejections held at
+**38**. 🔵 **The movement is this pass's own writes** — five newly-cited addresses
+(`exelearning/exelearning`, `exelearning/iteexe`, `savinoo/ai-grading-system`,
+`Fatima0923/AssessmentAI`, `marmelab/atomic-crm`) plus the citations carrying them.
+
+🔴 **Gates, restated honestly rather than back-dated.** `50 / 51` on arrival; this pass's own shelf
+writes then turned **four** gates red — `gate-absence`, `gate-census-currency`,
+`gate-union-currency` and the carried `gate-census-union`. 🟢 `gate-absence` was the valuable one:
+**it refused a false LATAM absence this pass had drafted**, and the claim was corrected to a channel
+finding before publication. 🟢 The two currency gates were cleared by re-deriving the censuses above
+as the last act. 🔴 **`gate-census-union` control 24 (`Gap 400-B`) remains red by design** since
+`p398`; `p387-G` forbids closing it by weakening a control and this pass did not try. **Final:
+50 / 51.**
+
 
 ## Pass 416 — reads and commit both 2026-10-23 — **SIXTY-EIGHT ADDRESSES ACROSS FOUR DISCOVERY LEGS RETURNED EXACTLY ONE UNSHELVED IN-DOMAIN REPOSITORY — AND IT CLOSES A SCARCITY THIS BASE DECLARED BY NAME. 🟢 `DozenTwelve/Papermorph` IS MIT, READABLE, AND EMITS SCORM 1.2/2004, WHERE THE SHELF'S ONLY PRIOR SCORM EMITTER IS SOURCE-CLOSED. 🔴 AND `p415`'s "ONE HUB AND NO MIDDLE" IS REFUTED BY FOUR MIDDLE-TIER ADDRESSES ALREADY ON `agents/top.md` ITSELF.**
 

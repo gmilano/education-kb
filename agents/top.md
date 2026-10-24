@@ -1,8 +1,83 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🔴 Two unshelved education grading agents, both REAL, both UNGRANTED — and one carries an MIT badge over no payload
+
+🟢 Ten discovery legs today returned **two** in-domain addresses this base had never recorded
+(`savinoo`, `ai-grading-system`, `AssessmentAI`, `Fatima0923` — **0 hits each** across all eight
+shelves and every `.tsv`). 🔴 **Neither can be built on.** Both exist; neither has a grant.
+
+| Address | Grant, probed byte-level | Stars | What it is | Region |
+|---|---|---|---|---|
+| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` on **both** `main` and `master` → **8 × `404`**. No sidebar licence entry. 🔴 **README badge claims `License-MIT-green`; README text says *"MIT — ver arquivo `LICENSE`"* — pointing at a file that does not exist** | **2** | Multi-agent grader for discursive exams: LangGraph + LangChain, FastAPI, PostgreSQL, ChromaDB, RAG, **conditional divergence arbitration**, Alembic, Docker Compose, Python 3.12+ | 🟢 **LATAM** — Instituto Federal Fluminense, Campos dos Goytacazes-RJ, **Brazil**; TCC capstone, April 2026 |
+| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE.** Same 8 paths → **8 × `404`**, no sidebar entry. 🔴 README's License section says only *"This project is for academic research purposes"* — **not an OSI grant and not a licence at all** | **0** | 7-node LangGraph essay-evaluation pipeline, configurable assessor persona, FAISS RAG, human-in-the-loop, AI-only vs AI-against-human-marks modes; Gradio, PyMuPDF, DeepSeek API | 🔵 **not placed** — no country stated |
+
+🔴 **The `ai-grading-system` row is the one worth a lesson, and it is the inverse of `p411`'s.**
+`p411` recorded *"a manifest that **agrees** with the grant and proves nothing."* 🔴 **Here the
+manifest DISAGREES with the absence**: a green MIT badge and a prose pointer, over **zero** bytes of
+grant on eight paths. 🟢 **`T98` (new): a badge and a prose pointer are both claims about a payload,
+and neither is one.** The base already holds the un-badged version of this —
+`aaryansamanta/ai-ethos` at **498★** with no sidebar entry (`p416`) — and the badged version is
+*more* dangerous, because it survives a casual look.
+
+🟡 **Both are promoted to NOTHING, deliberately.** They are a **capability** sighting, not supply:
+they demonstrate that the discursive-grading pattern is being built independently in at least two
+places on LangGraph, which is a market signal. 🔴 **Neither belongs in a client document** — an
+ungranted repository is all-rights-reserved by default, and the Brazilian one would have to be asked
+for a real `LICENSE` commit before it could even be evaluated. 🟢 That ask is cheap and is recorded as
+`ACTION p417-A`.
+
+### 🟢 Confirmations — a confirmation is a measurement, and one of these is a digest match
+
+- [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — 🟢 **`LICENSE` read
+  first-hand: `25 289` B, `540` lines, `sha256:77d2692c3d64`, title line *"Open Data Commons Open
+  Database License (ODbL)"*, served `200`.** This **confirms this base's own carried cell** —
+  *"ODbL-1.0 + CC BY-SA 4.0 (`LICENSE` read first-hand, 25,289 bytes of genuine ODbL text)"* — to the
+  byte. 🔴 **And it matters for the reason `p416` gave about `cn-math-taxonomy`:** the two best
+  curriculum knowledge graphs this base knows are **both** outside the permissive shortlist — one
+  `CC BY-NC 4.0`, one `ODbL-1.0 + CC BY-SA 4.0`. 🟢 ODbL is *not* non-commercial, so `os-taxonomy`
+  **is** usable in paid work, under share-alike on the database. That distinction is the whole
+  difference between the two rows and it should never be collapsed to "both non-permissive".
+- 🔵 **A search claim refuted on the payload, in this file's own idiom:** one leg reported `H5P` as
+  *"MIT-licensed"* and SCORM export as going through a separate desktop tool. The licence family is
+  carried here already; **the split-tool structure is the part a proposal gets wrong**, and it is
+  recorded on `verticals/solutions.md` this pass rather than here.
+
+### 🔵 The agent field, measured against `p416`'s standing suggestion
+
+🟢 `p416` closed with a rule for successors: *"before any pass asserts a shape of the field — a hub,
+a gap, a missing tier — `grep -rF` the band it claims is empty."* 🟢 **This pass followed it and
+therefore asserts no shape.** What it can say is bounded and checked: of **13** candidate addresses
+named across ten legs, **11** were already shelved (`scorm-engine` 53 hits, `bandup` 50,
+`BaijayantaRoy` 28, `Autonomous-Exam-Proctoring` 84, `biswal-prem` 90, `SCORM-to-xAPI-Wrapper` 100,
+`Adapt` 123, `H5P` 192, `Lumi` 95, `os-taxonomy` 142, `Papermorph` 28) and **2** were new, both
+ungranted. 🔵 **A 2-in-13 novelty rate on a 417-pass shelf is the expected number**, and recording it
+is how a successor can tell whether the channel is drying up or the shelf is saturated.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 

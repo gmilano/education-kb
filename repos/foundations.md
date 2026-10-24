@@ -1,8 +1,88 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🟢 One genuinely new foundational address — state-backed, AGPL-3.0, and at `p413`'s canonical digest
+
+🟢 [`exelearning/exelearning`](https://github.com/exelearning/exelearning) is **unshelved**: *"eXe
+Learning"*, *"exelearning"*, *"eXeLearning"* and *"iteexe"* each return **0 hits** across all eight
+shelves and every `.tsv`. (*"eXe"* returns 340, all substring noise.)
+
+| field | measured today |
+|---|---|
+| grant | 🟢 **AGPL-3.0** — `main/LICENSE`, **`34 523` B**, **`661`** lines, **`3` × `https://`**, `sha256:0d96a4ff68ad`, served `200` from `raw.githubusercontent.com` |
+| stars | **150** |
+| scale | **1 413** commits |
+| what | Free/libre authoring tool for open educational resources: iDevice-composed interactive content, hierarchical index, **real-time collaborative editing**, export for Moodle and other platforms, offline installers for Linux/Windows/macOS |
+| stack | Bun, Elysia, Kysely |
+| governance | 🟢 **Spain's Ministry of Education, Vocational Training and Sports (MEFPD)**, through **Cedec-INTEF**, with regional administrations participating; originated in the eXeLearning.org project in **New Zealand**, state-led since **2010** |
+| region | 🟢 **EMEA** |
+
+🟢 **The digest is the load-bearing part, and it is a confirmation of `p413` from an eleventh
+address.** `p413` measured the AGPL-3.0 revision family as two forms: **`34 523` B / 661 lines /
+`3 × https://` / `sha256:0d96a4ff68ad`** and **`34 501` B / 662 lines / `3 × http://` /
+`sha256:884b434957ba`**, over **10** addresses. 🟢 `exelearning` lands on the **first** form,
+byte-identical and digest-identical, measured independently. 🔵 `p413`'s lattice now stands on
+**11** addresses and has not needed an amendment.
+
+### 🔴 A licence claim refuted — and the refutation is a FORK PAIR, with both payloads read
+
+🔴 The authoring leg reported eXe Learning as **"GPL v2"**. 🟢 **That is right about the legacy
+repository and wrong about the live one**, and both halves were read byte-level:
+
+| address | grant payload, measured | verdict |
+|---|---|---|
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) *(live)* | `main/LICENSE` — **`34 523` B**, 661 lines, `sha256:0d96a4ff68ad`, title *"GNU AFFERO GENERAL PUBLIC LICENSE"* | 🟢 **AGPL-3.0** |
+| [`exelearning/iteexe`](https://github.com/exelearning/iteexe) *(legacy)* | `master/COPYING` — **`17 992` B**, **340** lines, `sha256:32b1062f7da8`, title *"GNU GENERAL PUBLIC LICENSE"*, **`Version 2, June 1991`** | 🟢 **GPL-2.0** |
+
+🔵 **So the source was not wrong, it was stale by one repository** — the same shape `p404`'s
+fork-direction work exists for, except that here the two halves carry **different licence families**,
+not byte-identical ones. 🟢 **`T99` (new): on a project with a legacy and a live repository, a
+licence family is a property of the ADDRESS, not the project name.** A proposal citing *"eXe
+Learning, GPL-2.0"* is citing a repository that has been superseded, and copyleft **escalated**
+GPL-2.0 → AGPL-3.0 across the move — which is the direction that matters, because AGPL's network
+clause reaches a hosted authoring service where GPL-2.0 does not.
+
+🔴 **Bound, stated plainly:** the GitHub page for `exelearning/exelearning` says content exports *"to
+various formats"* and names Moodle; **it does not mention SCORM or xAPI.** One secondary source
+claimed SCORM 1.2 + 2004 export. 🔴 **Unverified, and therefore not recorded as a SCORM emitter** —
+`p416` closed the permissive-SCORM-producer scarcity with `Papermorph`, and this address is **not**
+offered as a second instance. 🟡 `ACTION p417-B`: read `exelearning`'s export modules in-tree before
+any SCORM claim is made for it.
+
+### 🔵 The five-repo floor, and why it is not re-padded this pass
+
+🟢 This file carries well above the five-repo minimum and `p417` adds **one** verified address rather
+than padding. 🔴 **The prescribed ERP/CRM leg returned nothing new in-domain** and independently
+confirmed `Gap 298` / `Gap 405-A`: it surfaced `OpenEduCat` (LGPL-3.0), `OpenSIS` (GPL-2.0),
+`Fedena` (Apache-2.0), `RosarioSIS` (GPL), `Gibbon` (GPL-3.0), `SchoolTool` (GPL-2.0) and
+`OpenOlat` (Apache-2.0) — **every one already carried**, and the leg's own conclusion is this base's:
+**no major open-source education SIS is MIT-licensed.** 🟢 Fourth independent channel to agree; the
+recommendation is unchanged — *integrate against the system of record, do not fork it*.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 

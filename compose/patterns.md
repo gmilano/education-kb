@@ -1,8 +1,101 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🟢 `Pattern AO` (new) — the publicly-governed OER authoring stack, for a ministry or a public university
+
+🔵 **When to reach for it:** a public-sector education client that must own its content pipeline, is
+comfortable with copyleft, and wants authoring plus delivery without a proprietary authoring licence.
+🟢 **The point of the pattern is the governance, not the code:** every layer is either state-led or
+has a state-led reference deployment, which is the argument that survives a procurement review.
+
+| layer | what | grant, measured | why |
+|---|---|---|---|
+| **1 — authoring** | [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** — `34 523` B, `sha256:0d96a4ff68ad` | 🟢 **Spain's MEFPD via Cedec-INTEF**; real-time collaborative editing, Moodle export, offline installers. The reference deployment *is* a ministry |
+| **2 — system of record** | **Moodle** (GPL-3.0), or **OpenOlat** (Apache-2.0) / **Kolibri** (MIT) where copyleft is refused | 🟢 carried, 0%-decay tier (`T83`) | `exelearning` exports to Moodle natively, so layer 1 → 2 needs no adapter |
+| **3 — integration** | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) *(MIT, npm)* or [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(MIT, crates.io)* | 🟢 MIT | 🔴 the 5%-decay tier — **pin a version and vendor the client**, per `Pattern Z` |
+| **4 — agent** | compose over layer 3: LangGraph or CrewAI | 🟢 MIT | the volatile layer stays replaceable |
+| **5 — packaging** | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) *(MIT)* for SCORM 1.2/2004, [`scormflow/scorm-engine`](https://github.com/scormflow/scorm-engine) *(MIT)* for the runtime/LRS | 🟢 MIT | 🔴 **do NOT use `exelearning` for SCORM** — unverified (`ACTION p417-B`) |
+
+🔴 **The one hard constraint, and it decides the commercial model.** Layer 1 is **AGPL-3.0**, and
+its network clause reaches a **hosted** authoring service. 🟢 **Deploy it on the client's
+infrastructure and the pattern is clean.** 🔴 **Wrap it into a studio-hosted multi-tenant product and
+the obligation attaches to the studio's service** — counsel before, not after. 🔵 Where that is
+refused outright, drop layer 1 to **H5P (MIT)** — 🔴 **but see the split:** H5P's SCORM export runs
+through the separate **`Lumi` desktop** application, so H5P is in-LMS interactive content, *not* a
+server-side packaging step. Layer 5 stays as it is either way.
+
+🟡 **Bound:** `exelearning`'s export modules were **not** read in-tree this pass. The Moodle export is
+stated on the repository page; SCORM is **not**. Read the modules before step 1 is priced.
+
+### 🟢 `Pattern C` — APAC education compliance pack: the date is unchanged, the GRADING RULE is corrected
+
+🟢 **No re-pricing this pass.** `p406` already moved this pattern onto the right date and
+`compose/patterns.md:1128` states it correctly: **`2027-09-01`** for an education system live before
+**2026-08-15**; **`2027-03-01`** for one deployed after; the cutoff has passed, so a new engagement
+runs under the six-month-from-go-live clause.
+
+🔴 **What is corrected is how to grade a source that states `2027-03-01`.** `intel/market.md:577`
+(`p411`) counted such a source as *"the wrong Vietnamese date"*. 🟢 **It is not wrong if it carries the
+education grace clause** — and the source `p411` quoted did carry it, on the same line. 🔵 **For
+delivery this matters in one concrete way:** when counsel or a client cites `2027-03-01`, the right
+response is *"that is the all-other-sectors date; education's is `2027-09-01` if the system was live
+before 2026-08-15"* — **not** *"your date is wrong"*. The second answer is false and costs
+credibility in the room.
+
+🟡 **Bound, carried from `p281` and unchanged:** no primary Vietnamese text has been read on this
+channel — every policy host answers `ENOTFOUND` / `http=000`, which `Gap 488-R` records as a property
+of the **channel**. This rests on concurring law-firm readings. **Counsel confirms before it goes in a
+proposal.**
+
+### 🟡 `Pattern AP` (new, and deliberately small) — the ungranted-upstream ask
+
+🔵 **The situation:** a capability you want exists at an address with **no licence** — this pass found
+two, including a Brazilian federal-institute grading agent whose README carries an **MIT badge over a
+nonexistent `LICENSE` file**.
+
+🔴 **What not to do:** treat a badge, a README sentence, or a package manifest as a grant. `p411`
+recorded a manifest that *agrees* with the grant and proves nothing; `savinoo/ai-grading-system`
+is the inverse — a manifest that **disagrees with the absence**.
+
+🟢 **The recipe, three steps and cheap:**
+1. **Probe the payload, not the page** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` on every
+   default branch. Eight `404`s is a finding; a green badge is not.
+2. **Open an issue asking for a `LICENSE` commit**, naming the licence you need (MIT or Apache-2.0)
+   and why. An academic author who already *believes* the project is MIT will usually commit it —
+   the badge is evidence of intent, just not of grant.
+3. **Until that commit lands, reuse the DESIGN, not the code.** Both addresses found this pass
+   document their architecture well enough to reimplement: a 7-node LangGraph workflow, conditional
+   divergence arbitration, AI-against-human-marks calibration. 🟢 **An architecture is not
+   copyrightable the way an implementation is**, and reimplementing on `LangGraph` + `FAISS`/`Chroma`
+   is days, not weeks.
+
+🔵 Recorded as `ACTION p417-A` for the Brazilian address specifically, because its region makes it
+worth the ask.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 

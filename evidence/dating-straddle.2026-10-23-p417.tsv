@@ -1,0 +1,7 @@
+# p417 · reads 2026-10-23, commit 2026-10-24 · the first pass in the p395-p417 run whose reads and commit fall on different days.
+# Recorded because p223's date gate is satisfied by SPLITTING the two dates, not by rounding either toward the other.
+artefact	date_carried	which_date	rationale
+evidence/*.2026-10-23-p417.tsv filenames	2026-10-23	READ date	every leg, licence read, payload read, digest and gate run executed on 2026-10-23
+frontmatter updated: field (9 files)	2026-10-24	COMMIT date	the shelf was written out and committed after 00:00 UTC
+pass section headers	2026-10-24 (reads 2026-10-23)	BOTH, explicitly	header carries commit date and names the read date in parentheses
+p395-p416	2026-10-23	both identical	twenty-two consecutive passes; none straddled midnight

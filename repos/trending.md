@@ -1,8 +1,84 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🟢 Trending this week — what the GitHub-facing legs actually returned
+
+🔵 **Append-only, per this file's standing rule.** The history below this section is untouched.
+
+🟢 **One new repository, and it is not an AI repository at all** —
+[`exelearning/exelearning`](https://github.com/exelearning/exelearning), **AGPL-3.0**, **150★**,
+**1 413 commits**, state-led by **Spain's MEFPD via Cedec-INTEF**. 🔵 It trends in this base's sense
+(unshelved, live, in-domain, institutionally held), not in GitHub's.
+
+| Address | Grant, byte-level | Stars | Region |
+|---|---|---|---|
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** — `34 523` B / 661 lines / `3 × https://` / `sha256:0d96a4ff68ad` | **150** | 🟢 **EMEA** |
+| [`exelearning/iteexe`](https://github.com/exelearning/iteexe) *(legacy half of the pair)* | 🟡 **GPL-2.0** — `17 992` B / **340** lines / `sha256:32b1062f7da8` / *"Version 2, June 1991"* | — | 🟢 **EMEA** |
+| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE** — 8 probed paths, 8 × `404`; MIT badge over no payload | **2** | 🟢 **LATAM** (Brazil) |
+| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE** — *"academic research purposes"* | **0** | 🔵 unplaced |
+
+### 🔴 The GitHub-trending leg returned nothing in-domain, and that is the honest report
+
+🔴 The prescribed `github trending education AI 2026` leg surfaced
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy),
+`luongnv89/claude-howto` and Karpathy's `nanochat` — **142, 14 and 103 hits** on these shelves
+respectively. 🟢 **All three already carried.** 🔵 The leg also produced no official GitHub Trending
+page for education, which is the same channel limitation `p408` recorded.
+
+🟢 **One of the three was re-measured rather than waved through**, because a carried cell is still a
+claim: `os-taxonomy`'s `LICENSE` reads **`25 289` B / `540` lines / `sha256:77d2692c3d64`**, title
+*"Open Data Commons Open Database License (ODbL)"*. 🟢 **Byte-identical to the cell this base already
+carries**, which recorded *"25,289 bytes of genuine ODbL text"* — a clean confirmation of a
+first-hand read by an independent one.
+
+🔵 **And the distinction `os-taxonomy` carries must not be collapsed.** This base's two best
+curriculum knowledge graphs are both off the permissive shortlist, but for **different** reasons:
+`cn-math-taxonomy` is **CC BY-NC 4.0** — 🔴 barred from paid work — while `os-taxonomy` is
+**ODbL-1.0 + CC BY-SA 4.0** — 🟢 **usable commercially**, under share-alike on the database.
+`p416` flagged the first as *"the row NOT to build on"*; that judgement does **not** transfer to the
+second.
+
+### 🟡 Authoring-tool layer, measured for the first time on this shelf
+
+🔵 The SCORM/xAPI leg returned a tier this base had under-recorded, and the licences split against it:
+
+| tool | grant as reported by the leg | status here |
+|---|---|---|
+| `H5P` | MIT, self-hosted free | 🟢 carried (192 hits) — 🔴 **but SCORM export runs through the separate `Lumi` desktop tool, not H5P itself**; the split is on `verticals/solutions.md` |
+| `Adapt` | GPL-3.0, emits SCORM 1.2 + 2004 | 🟢 carried (123 hits) |
+| `eXe Learning` | **"GPL v2"** | 🔴 **REFUTED on the payload** — live repo is **AGPL-3.0**; GPL-2.0 is the *legacy* `iteexe`. Both read |
+| `scormflow/scorm-engine` | MIT, SCORM + xAPI + cmi5 with built-in LRS | 🟢 carried (53 hits) — runtime infrastructure, **not** an authoring tool |
+| `adlnet/SCORM-to-xAPI-Wrapper` | JS wrapper | 🟢 carried (100 hits) — 🔴 **archived by owner 2026-03-04** |
+
+🔴 **No MIT-licensed SCORM/xAPI authoring generator was found**, which is a measured nil on a leg
+that named the capability explicitly. 🟢 `p416`'s `Papermorph` remains the only readable permissive
+SCORM **producer** on these shelves, and this pass does **not** offer a second — `exelearning`'s
+SCORM capability is **unverified** and deliberately unrecorded (`ACTION p417-B`).
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 

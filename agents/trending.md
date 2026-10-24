@@ -1,8 +1,67 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🟢 New this week — three addresses, one buildable
+
+🔵 **Append-only, per this file's standing rule.** The history below this section is untouched.
+
+| Address | Grant | Stars | Why it is here | Region |
+|---|---|---|---|---|
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** (`34 523` B, `sha256:0d96a4ff68ad`) | **150** | 🟢 **State-backed OER authoring tool** — Spain's MEFPD via Cedec-INTEF. Real-time collaborative editing, Moodle export, Bun/Elysia/Kysely, 1 413 commits | 🟢 **EMEA** |
+| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE** — 8 paths × `404`, MIT **badge** over no payload | **2** | 🔴 Capability sighting only: LangGraph discursive-exam grader with **conditional divergence arbitration** | 🟢 **LATAM** (Brazil) |
+| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE** — *"for academic research purposes"* | **0** | 🔴 Capability sighting only: 7-node LangGraph essay evaluation, AI-vs-human-marks mode | 🔵 unplaced |
+
+🔴 **Two of the three cannot be built on.** That ratio is the finding, not a disappointment: the
+discursive-grading pattern is being reimplemented independently on LangGraph by at least two
+academic teams, and **neither shipped a grant**. 🟢 The movement is in **capability**, not in supply.
+
+### 🟡 Movement on a carried address — a fork pair whose halves disagree on licence FAMILY
+
+🔵 `exelearning` arrives with its own legacy repository, and the pair is worth recording as movement
+because the direction is the part a proposal gets wrong:
+**[`exelearning/iteexe`](https://github.com/exelearning/iteexe) is GPL-2.0** (`17 992` B, 340 lines,
+`sha256:32b1062f7da8`, *"Version 2, June 1991"*) while the live repository is **AGPL-3.0**.
+🟢 **Copyleft escalated across the move.** AGPL's network clause reaches a hosted authoring service;
+GPL-2.0 does not. 🔴 A citation of *"eXe Learning, GPL-2.0"* is therefore not merely stale, it is
+**wrong in the direction that costs money**.
+
+### 🔵 The weekly nil, stated per region rather than as silence
+
+| region | what the regional leg returned this week | status |
+|---|---|---|
+| **North America** | 134 bills / 31 states; `AB 1159`; `SB 1227`; `H.R. 8747` advanced 2026-07-21; NYC grade-8 moratorium; 60% teacher use, 32% weekly; NA at 36% of market | 🔴 all **CARRIED**. 🔵 One new policy fact, not an opportunity: **Canada's "AI for All", launched 2026-06-04, no legislative date** |
+| **EMEA** | AI Act / Digital Omnibus `Reg (EU) 2026/1744`; Annex III **2027-12-02**, embedded **2028-08-02**; Art. 50 live 2026-08-02 | 🔴 **CARRIED** — and `ACTION NU-EU` says stop re-buying it; this pass stops. 🔴 **One source omitted the deferral entirely → `ACTION SH` sighting EIGHT** |
+| **APAC** | Korea `AI Basic Act` 2026-01-22 + MSIT pilot year with one-year penalty grace; Vietnam `Decision 33/2026/QĐ-TTg`; China registration + labelling; Japan penalty-free; Singapore guidance | 🔴 **CARRIED**. 🟢 **And the leg's Vietnam phrasing is graded CORRECT here, reversing `p411`** — see `intel/market.md` |
+| **LATAM** | UNESCO IESALC 87% / 26% over 200 HEIs in 19 countries, 74% in teaching; observatory 2026-04-14; ConectAI 5 M by 2027; Uruguay CoE convention; Peru sandbox; Colombia `CONPES 4144`; ANPD sandbox to Dec 2026 | 🔴 all **CARRIED**. 🟢 **One new supply address (Brazil), ungranted.** 🔴 **A false blank this pass drafted and `gate-absence` REFUSED:** the leg's caveat claimed no binding education-specific LATAM rule. 🟢 **Peru's Law 31814 + DS 115-2025-PCM activated education-naming obligations 2026-09-10, and Colombia's `Ley 2626 de 2026` is this base's first binding LATAM statute.** The nil was a property of the leg, not the region |
+
+🟢 **Novelty rate, recorded so a successor can tell saturation from channel decay: 2 new in-domain
+addresses out of 13 candidates across ten legs.** 🔵 Eleven were already shelved, with hit counts in
+`agents/top.md`.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 

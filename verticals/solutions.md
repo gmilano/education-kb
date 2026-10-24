@@ -1,8 +1,91 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-23
+updated: 2026-10-24
 ---
+
+## 🆕 `p417` · 2026-10-24 (reads 2026-10-23) — **`p411` graded a CORRECT source as carrying "the wrong Vietnamese date" — and the row's OWN QUOTED TEXT contains the clause that makes the source right. 🟢 Plus the first genuinely new state-backed EMEA supply in several passes: `exelearning/exelearning`, AGPL-3.0 at `p413`'s canonical digest, led by Spain's Ministry of Education. 🔴 AND the gap register is THREE passes stale.**
+
+🔵 **Dating note, and this pass is the first in the run that has to SPLIT it.** Every search leg,
+licence read, payload read, digest and gate run below was executed on **2026-10-23**; **the commit
+lands 2026-10-24**, because the work crossed **00:00 UTC** before it was written out. 🟢 **The two
+dates are therefore recorded separately rather than collapsed to one**, and the frontmatter
+`updated:` field carries the **commit** date while every `evidence/*.tsv` filename carries the
+**read** date — which is why they disagree by one day, deliberately. 🔵 `p395`–`p416` were all
+dated **2026-10-23**, twenty-two passes; **this is the first pass dated 2026-10-24**, and the first
+whose reads and commit fall on different days. 🔴 `p223`'s date gate is satisfied by the split, not
+by rounding either date toward the other.
+
+🟢 **Gates ran BEFORE the first research leg — `p412`'s standing rule, which `p416` admitted
+breaking: 50 / 51 green on arrival**, equal to `p413`–`p416`. 🔵 The lone red is
+`gate-census-union` control 24 — **`Gap 400-B`**, carried deliberately red since `p398`. `p387-G`
+forbids closing it by weakening a control and this pass did not try.
+
+🔵 **Channel note, in agreement with `p414`–`p416`.** `raw.githubusercontent.com` serves **`200`**
+and is how every byte-level grant read below was taken; `github.com` HTML reads cleanly through
+`WebFetch`. `p414`'s `AUTHZ-REFUSED` class holds a fourth consecutive pass.
+
+### 🟢 A state-backed authoring platform joins the vertical stack — and it is AGPL, which changes where it sits
+
+🟢 [`exelearning/exelearning`](https://github.com/exelearning/exelearning) is the first **publicly
+governed** authoring platform on this shelf: **AGPL-3.0**, **150★**, **1 413 commits**, maintained by
+**Spain's Ministry of Education, Vocational Training and Sports (MEFPD)** through **Cedec-INTEF** with
+regional administrations participating, after originating in New Zealand and going state-led in
+**2010**.
+
+| layer | platform | grant | where it sits |
+|---|---|---|---|
+| **LMS / system of record** | Moodle | GPL-3.0 | 🟢 carried — the 0%-decay tier (`T83`) |
+| | Open edX | AGPL-3.0 | 🟢 carried — grant **NARROWED**, see `Gap 413-B` |
+| | OpenOlat | Apache-2.0 | 🟢 carried — the permissive LMS option |
+| | Kolibri | MIT | 🟢 carried — permissive, offline-first |
+| **SIS / ERP** | OpenEduCat · OpenSIS · Fedena · RosarioSIS · Gibbon · SchoolTool | LGPL-3.0 · GPL-2.0 · Apache-2.0 · GPL · GPL-3.0 · GPL-2.0 | 🔴 `Gap 298` — **no major education SIS is MIT**; integrate, do not fork |
+| 🆕 **authoring / OER** | **`exelearning/exelearning`** | 🟡 **AGPL-3.0** | 🟢 **new** — state-backed, collaborative editing, Moodle export |
+| | Adapt | GPL-3.0 | 🟢 carried — emits SCORM 1.2 + 2004 |
+| | H5P | MIT | 🟢 carried — 🔴 **but see the split below** |
+| **SCORM runtime** | `scormflow/scorm-engine` | MIT | 🟢 carried — LRS, xAPI, cmi5; **runtime, not authoring** |
+
+🔴 **Why the AGPL cell is a placement decision, not a footnote.** An authoring tool is normally
+offered to a client **as a hosted service**, and that is exactly the deployment AGPL's network clause
+reaches. 🟢 **`exelearning` is therefore fine to deploy for a client on the client's own
+infrastructure, and a trap to wrap into a studio-hosted multi-tenant product** without counsel.
+🔵 Where a client refuses copyleft at this layer, the permissive answer on this shelf is still
+**H5P (MIT)** plus a separate emitter — with the caveat below.
+
+### 🔴 The H5P / Lumi split — a real integration defect this shelf had not stated
+
+🔴 The authoring leg reported `H5P` as *"MIT, fully free for self-hosted use"* and, in the same
+breath, that **SCORM export goes through a separate desktop tool, `Lumi` Desktop**. 🟢 Both halves are
+carried on these shelves (192 and 95 hits) — 🔴 **but never as a dependency.** A proposal that prices
+"H5P, MIT, SCORM export" is pricing **two** products, one of which is a **desktop application** and
+therefore not part of a server-side pipeline at all.
+
+🟢 **The correction for a studio:** H5P is an **in-LMS interactive content** layer, not a SCORM
+packaging step. For SCORM packaging, the readable permissive producer on these shelves is `Papermorph`
+(MIT, `p416`), and the runtime is `scorm-engine` (MIT). 🔵 `exelearning`'s own SCORM capability is
+**unverified** — the repository page names Moodle export and *"various formats"* and does **not**
+mention SCORM (`ACTION p417-B`).
+
+### 🟢 Permissive general ERP/CRM as the admissions-and-enrolment path, with payloads read
+
+🔵 `Gap 298` says no education SIS is MIT. 🟢 **The prescribed ERP/CRM leg returned the other half of
+that answer** — permissive *general* platforms that can carry admissions, enrolment and student-CRM
+workflows without forking a copyleft SIS. Grants read byte-level this pass:
+
+| platform | grant, measured | note |
+|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 **MIT** — `master/LICENSE`, **`1 078` B**, `sha256:a76aa4a4405c`, *"Copyright 2010-2025, Webkul Software"* | 🟢 carried (65 files). Laravel; a candidate admissions CRM. 🔵 One leg calls its UI *"clunky"* |
+| [`marmelab/atomic-crm`](https://github.com/marmelab/atomic-crm) | 🟢 **MIT** — `main/LICENSE.md`, **`1 105` B**, `sha256:1774c14a7b97`, *"Copyright (c) 2024-present, Francois Zaninotto, Marmelab"* | 🟡 **near-unshelved** — *"Atomic CRM"* 2 files, *"atomic-crm"* **0**. React-admin + Supabase |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** — `trunk/LICENSE`, **`11 906` B** | 🟢 carried (124 files). Accounting → CRM → MRP; 🔴 Java, heavy implementation cost |
+| `Corteza` | Apache-2.0 *(as reported)* | 🟢 carried (82 files) |
+| `Huly` | Apache-2.0 *(as reported)* | 🟢 carried (24 files) |
+| 🔴 `Aureus ERP` | 🔴 **not verified** — `aureus-erp/aureus` `main/LICENSE` → **`404`** | 🔴 Reported MIT by one leg. **Address unconfirmed; do not cite** (`ACTION p417-C`) |
+| 🔴 `ERPNext` | GPL-3.0-only | 🔴 **lists Education as a module** but fails the permissive shortlist |
+
+🟢 **`atomic-crm` is the one worth adding**: stock-shape MIT at 1 105 B, React-admin + Supabase, which
+is a far cheaper graft onto an existing student data store than OFBiz. 🔴 **`Aureus ERP` is explicitly
+NOT recorded as supply** — a reported licence with a 404 at the probed path is not a finding.
+
 
 ## 🆕 `p416` · 2026-10-23 — **Sixty-eight addresses read across four discovery legs returned exactly ONE unshelved in-domain repository — and it closes a scarcity this base declared BY NAME. `DozenTwelve/Papermorph` is MIT, readable and emits SCORM 1.2/2004, where the shelf's only prior SCORM emitter is source-CLOSED. 🔴 AND `p415`'s headline — "the agent field has one hub and no middle" — is refuted by four middle-tier addresses already recorded in `agents/top.md` itself.**
 
