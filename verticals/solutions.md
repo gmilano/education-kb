@@ -56,6 +56,37 @@ not the platform. A studio told *"Canvas is MIT"* would ship AGPL-3.0.
 | **Blackboard Learn** | 🟢 **MIT** | MCP servers over Blackboard Learn's REST API. |
 | **SCORM Runtime** | 🟢 **MIT** | SCORM 1.2/2004 packaging and playback. |
 
+## 🆕 `p432` — Special education is a **platform gap**, not a product gap
+
+Every platform row on this file treats the IEP/§504 learner as an ordinary enrolment. None of
+them — Moodle, Open edX, Canvas, Sakai, OpenOLAT, Kolibri, OpenEduCat, OpenSIS — ships an
+individualised-education-program workflow: goal authoring, progress monitoring against those
+goals, accommodation records, or the team-review-and-sign step US law requires. The commercial
+market is served here (PowerSchool Special Programs, Frontline, SEIS); **open source is not.**
+
+That makes special education the clearest *platform-adjacent* build on these shelves: there is no
+incumbent open platform to displace, and the integration surface is the SIS, not the LMS.
+
+### The deployable pieces that do exist, graded by grant (read at HEAD 2026-10-25)
+
+| Component | Licence | HEAD | Payload | Where it sits |
+|---|---|---|---|---|
+| [**AlloFlow**](https://github.com/Apomera/AlloFlow) | 🔴 **AGPL-3.0-or-later** | `6194e51e8f1f` | `LICENSE` 35 441 B · `d8d2ea7ef0a1` | …**beside, over an interface.** The only maintained accessibility-first differentiation engine found: UDL levels/layers/outputs, WCAG, AAC, text-to-speech, offline-first, i18n, Electron + React. Network copyleft over a hosted engine — reach it over HTTP, never vendor it. |
+| [**California IEP AI project kit**](https://github.com/robotros/California-IEP-AI-project-kit) | 🟢 **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 064 B · `2524a8e74f10` | …**as the knowledge and boundary layer** on whatever drafting surface the district already has. Carries its own "not the system of record" discipline. |
+| [**iep-builder**](https://github.com/67tallchris/iep-builder) | 🟢 **MIT** | `b39df0e9a4a1` | `LICENSE` 1 068 B · `523f156051cf` | …**as a standalone per-district app** (Cloudflare Pages + D1, bring-your-own-key). The deployment shape when a district will not accept a central student store. |
+| [**access-to-education**](https://github.com/dougdevitre/access-to-education) | 🟢 **MIT** | `f8abd70707ba` | `LICENSE` 1 068 B · `68657618a157` | …**in the parent portal** (`p388`'s surface). ~120 k words of IEP navigation and advocacy content, MIT-granted. |
+| [**rubric-desk**](https://github.com/rwrife/rubric-desk) | 🟢 **MIT** | `010a44006014` | `LICENSE` 1 062 B · `ec0b7dad19a4` | …**as the offline marking surface** (Flutter, no accounts). Pairs with Kolibri where connectivity cannot be assumed. 🟡 Created 2026-10-25. |
+
+🔴 **Not available, and it is the load-bearing piece:** an open-source special-education **system
+of record**. `OpenSIS Classic` (GPL-2.0) and `Academico` (MIT) are general SIS products with no
+IEP module. So the architecture is forced: the drafting assistant writes a *draft*, and the
+authorised commercial system records the entry. That constraint is not a limitation to work
+around — in North America it is the compliance requirement (see `intel/market.md`, North America),
+and `robotros`' kit states it in its own README.
+
+🔴 **Non-US equivalents: nil result.** No open-source tooling was found for England's EHCP
+process or for the inclusive-education mandates of Brazil, Chile or Colombia. Searched; absent.
+
 ## 🆕 `p431` — Evaluation is a platform-adjacent procurement surface, and it is the one tier with no copyleft problem
 
 This file grades **platforms**, and its standing finding is that the platform tier is copyleft while

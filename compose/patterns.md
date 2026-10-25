@@ -9,6 +9,86 @@ updated: 2026-10-25
 > Concrete recipes: named repos, named licences, and how they wire together.
 > Every component below was licence-verified at a commit SHA on 2026-10-25.
 
+## 🆕 Pattern AL — `p432` The IEP drafting assistant that is **not** a system of record (the one NA special-education engagement that is legal by construction)
+
+**Why this pattern exists.** `Pattern AH` establishes draft-and-sign as the architecture that
+satisfies US state law, the EU AI Act and Vietnam's decree at once. Special education in North
+America is where that architecture stops being good practice and becomes the **statutory
+requirement**: IDEA and §504 make the IEP a legal instrument, Oklahoma and Maryland bar AI as the
+sole basis for a high-stakes student decision, and Charleston County names special-education
+determination explicitly. `Trend 28` shows this is simultaneously the thinnest-supplied surface in
+the whole industry — so this is a build with no incumbent, not an integration.
+
+### The stack, with the grant on every piece — all read at HEAD on 2026-10-25
+
+| Layer | Component | Grant (payload, read at HEAD) | Why this one |
+|---|---|---|---|
+| Knowledge + boundary | [`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit) | **MIT** · `LICENSE` 1 064 B · `2524a8e74f10` @ `ff1ae0ce30e7` | Two pinned roles (CA Essential Standards analyst; IEP goal generator), Light (3 md) / Full (8 md) editions, CDE-sourced, with the "no autonomous student-record action" boundary written into its own README. |
+| Deployment shell | [`67tallchris/iep-builder`](https://github.com/67tallchris/iep-builder) | **MIT** · `LICENSE` 1 068 B · `523f156051cf` @ `b39df0e9a4a1` | Svelte + Cloudflare Pages Functions + D1, **bring-your-own-key**. A per-district instance that holds no vendor key and no central student store. |
+| Draft-and-sign engine | [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | **MIT** · `LICENSE` 1 076 B · `2bcdae923d26` | Already produces a draft-for-review **by default**. Reuse its review-state machine; retarget the artefact from a grade to an IEP goal set. |
+| Review-state audit trail | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** · `LICENSE` 1 069 B · `297c4cba7b33` @ `b90bd88a2899` | Raises each artefact as a `WAITING_REVIEW` task and **records the approve/reject decision**. This is the enforcement `robotros`' kit declares in prose but does not implement. |
+| Progress monitoring | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) + [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** / **MIT** | An IEP goal needs *measurable* progress. BKT/DKT gives a non-LLM, auditable model of mastery — defensible to a district in a way an LLM's opinion is not. |
+| Parent-facing layer | [`dougdevitre/access-to-education`](https://github.com/dougdevitre/access-to-education) | **MIT** · `LICENSE` 1 068 B · `68657618a157` @ `f8abd70707ba` | ~120 k words of IEP navigation, family–school communication and advocacy content, MIT-granted. Serves `Trend 10`'s unserved parent persona from the same deployment. |
+| Offline marking | [`rwrife/rubric-desk`](https://github.com/rwrife/rubric-desk) | **MIT** · `LICENSE` 1 062 B · `ec0b7dad19a4` @ `010a44006014` | Optional. Where staff mark away from connectivity. 🟡 Created 2026-10-25 — fork it. |
+| Differentiated delivery | [`Apomera/AlloFlow`](https://github.com/Apomera/AlloFlow) | 🔴 **AGPL-3.0-or-later** · `LICENSE` 35 441 B · `d8d2ea7ef0a1` @ `6194e51e8f1f` | Optional, and **over HTTP only**. UDL/WCAG/AAC/TTS differentiation. Network copyleft over a hosted engine: never vendor, never link, never fork into the deliverable. |
+
+**Seven MIT pieces and one deliberately quarantined AGPL one.** No component in the required path
+carries a copyleft obligation.
+
+### How it wires together
+
+1. **Pin the jurisdiction first.** Load the `robotros` Full edition (8 knowledge files) for
+   California, or re-author it against the state's own standards authority for anything else. The
+   kit is a *template for jurisdiction pinning*, not a national answer — Arizona's `iep-builder`
+   exists separately for the same reason.
+2. **Stand up the shell per district.** `iep-builder`'s Cloudflare + D1 + BYOK shape, so the key
+   belongs to the district and the data never transits a studio tenant.
+3. **Take an authorised, de-identified baseline.** The kit requires this and warns that typed
+   redaction is *not* de-identification — so de-identify in the pipeline, not in the prompt.
+4. **Generate a draft goal set, never an entry.** Reuse `canvas-grader-mcp`'s draft default.
+5. **Enforce the boundary in code.** Wrap every artefact in `AI-Teaching-Agent`'s
+   `WAITING_REVIEW` task with a recorded approve/reject and reviewer identity. 🔵 **This step is
+   the pattern.** Without it you have shipped `robotros`' disclaimer, not its discipline.
+6. **Write nowhere.** The authorised commercial system of record (PowerSchool Special Programs,
+   Frontline, SEIS) receives the signed output by human action. There is no open-source
+   special-education system of record — `verticals/solutions.md` — so the constraint is forced, and
+   it happens to be the compliant design.
+7. **Monitor progress with a model you can show.** OATutor + pyKT for mastery estimates against
+   each goal; an LLM narrative *on top of* those numbers, never instead of them.
+8. **Serve the parent from the same instance** with the `access-to-education` corpus.
+
+### 🔴 The five things that will bite, named up front
+
+1. **No evaluation exists for this category.** `p431`'s tutor-evaluation tier (`tutor_gym`,
+   `tutorbench`) does not score IEP goal quality, and no IEP benchmark surfaced. **Budget to build
+   the eval**, and say so in the proposal — a quality claim here is currently unprovable with open
+   tooling.
+2. **Every component is a seed.** 0, 0 and 1 star; two created within eleven days of this pass; no
+   second contributor anywhere. Fork and own, pin to the SHAs above, and price maintenance in.
+3. **`robotros`' kit is prose, not a runtime.** No model is named and nothing enforces its
+   boundary. Step 5 is the billable core; a client who thinks they are buying the kit is mistaken.
+4. **FERPA is not certifiable by any component here**, and the kit says so explicitly. The
+   authorisation path is a client-side legal workstream running in parallel — surface it in week 1,
+   not at UAT.
+5. **AGPL contamination risk is concentrated in one optional step.** If `AlloFlow` is adopted,
+   hold it behind a network interface and write the boundary into the architecture document. The
+   temptation to fork "just the differentiation bit" is how AGPL enters a deliverable.
+
+### Shape and duration
+
+**10–14 weeks** to a district pilot: 2 weeks jurisdiction pinning and authorisation path, 3 weeks
+shell + draft-and-sign enforcement, 3 weeks progress monitoring, 2 weeks parent layer, 2–4 weeks
+evaluation build and review cycles. 🔵 Longer than `Pattern AJ` (evidence-gated tutor pilot)
+because there is no incumbent base to start from — which is also why there is no incumbent vendor
+to displace.
+
+🔴 **Where this pattern does NOT apply.** It is US-shaped. England's EHCP process and the
+inclusive-education mandates of Brazil, Chile and Colombia have **no open-source tooling at all**
+(searched this pass; nil result). Outside North America this is a from-scratch build with the
+`robotros` kit as a structural reference only.
+
+---
+
 ## 🆕 Pattern AJ — `p431` The evidence-gated tutor pilot (the deliverable that survives a board review in NA, EMEA and APAC)
 
 **The problem it solves.** Every tutoring pilot this base can already build stalls at the same

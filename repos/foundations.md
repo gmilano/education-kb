@@ -40,6 +40,47 @@ further **4** in **Tier 9 — the evaluation layer** below, for **11** permissiv
 > Moodle and Chamilo ship a **byte-identical** GPL-3.0 payload (`8ceb4b9ee5ad`) — the stock
 > FSF text. Recorded so a digest sweep does not misread the collision as a fork.
 
+
+## 🆕 `p432` — Tier 10: the special-education / IEP layer, and why it is a tier of seeds
+
+The surface North American law regulates hardest has the thinnest open-source supply measured
+anywhere in this repository. These are the bases that exist, with grants read from each
+repository's own payload at the HEAD shown (2026-10-25).
+
+| Repo | Licence | HEAD | Payload | Role in a build |
+|---|---|---|---|---|
+| [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 064 B · `2524a8e74f10` | The **knowledge and boundary layer**. Two CA special-education roles as pinned knowledge packs with a declared draft-only / authorised-system-of-record boundary. Start an NA special-education engagement from this, not from a blank prompt. 🔴 Prose discipline, no runtime enforcement — adding that is the work. |
+| [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | **MIT** | `b39df0e9a4a1` | `LICENSE` 1 068 B · `523f156051cf` | The **deployment reference**: Svelte + Cloudflare Pages Functions + D1 with bring-your-own-key AI. Shows a per-district deployment that holds no vendor key and no central student store. Jurisdiction-pinned to Arizona K-8. |
+| [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | **MIT** | `f8abd70707ba` | `LICENSE` 1 068 B · `68657618a157` | The **parent-facing corpus**: 69 files / ~120 k words on IEP navigation, family–school communication and advocacy, under a code licence. The only MIT answer to the unserved-parent persona of `Trend 10`. |
+| [ezixen/PlannedEducation](https://github.com/ezixen/PlannedEducation) | **MIT** | `06fb12159f5e` | `LICENSE` 1 085 B · `4ec3cc564448` | Adjacent, not special-ed specific: grading companion + secure test-taking, privacy-first self-host. Default branch `dev`. |
+| [rwrife/rubric-desk](https://github.com/rwrife/rubric-desk) | **MIT** | `010a44006014` | `LICENSE` 1 062 B · `ec0b7dad19a4` | The **offline marking surface** (Flutter; phone/tablet/Windows, no accounts, no cloud LMS). Pairs with `kolibri` wherever connectivity cannot be assumed. 🟡 Created 2026-10-25. |
+
+**5 permissive additions**, taking this file to **16 permissive foundations** in all.
+
+🟡 **Adjacent but copyleft — integrate, do not vendor:**
+[`Apomera/AlloFlow`](https://github.com/Apomera/AlloFlow) is **AGPL-3.0-or-later**
+(`LICENSE` 35 441 B · `d8d2ea7ef0a1` @ `6194e51e8f1f`, standard AGPLv3 body, SPDX header, no added
+clauses) and is the only maintained accessibility-first differentiation engine found — UDL, WCAG,
+AAC, text-to-speech, offline-first, i18n, commit on 2026-10-25. Network copyleft over a hosted
+engine is the worst-case shape; reach it over an interface.
+
+🔴 **Two addresses are excluded for cause, both proved by `git ls-tree -r` over the whole tree:**
+[`grasped-dev/staircase`](https://github.com/grasped-dev/staircase) (@ `9236fce606c2`, 0 of 33 files)
+and [`eakarsu/ai-special-education-iep-compliance`](https://github.com/eakarsu/ai-special-education-iep-compliance)
+(@ `ec2516b76699`, 0 of 29 files) carry **no licence at all**. Between them they hold the tier's best
+technique (a standards graph for goal reasoning) and its most complete-sounding product. Neither is
+a base.
+
+🔴 **The honest health warning on this entire tier.** Star counts are 0, 0, 1, 0 and 0. Two of the
+five were created inside the eleven days before this pass. None has a second contributor. These are
+**seeds to fork and own**, not dependencies to track — and that is a different commercial
+conversation from the one `kolibri` or `OpenOLAT` supports. Said plainly to a client, it is also an
+argument *for* the engagement rather than against it: there is no incumbent to displace.
+
+🔴 **Declared gap:** the tier is entirely US. The sweep found **no** open-source tooling for
+England's EHCP process or for the inclusive-education mandates of Brazil, Chile or Colombia — a nil
+result, not a thin one.
+
 ---
 
 ## 🔴 Read this before choosing a base: the licence frontier in education runs the wrong way

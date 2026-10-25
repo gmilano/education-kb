@@ -16,6 +16,8 @@ updated: 2026-10-25
 lives in `intel/trends.md` and the append-only trending shelves. This file leads with the
 market map, which is what an engagement reads.
 
+## 🆕 `p432` · 2026-10-25 — **All four regional legs returned material again, no nil. 🟢 EMEA's high-risk scope carve-out and India's Class-3 mandate are the two commercially decisive updates. 🔴 One figure on this file is corrected: the NA bill count is one tracker's, not the count. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
+
 ## Market size — use the range, never a single figure
 
 | Segment | 2026 | Horizon | CAGR | Source class |
@@ -72,6 +74,44 @@ district wants an auditable, non-LLM knowledge model behind the tutoring claim.
 non-US; the NA opportunity is in **integration and governance**, not in sourcing NA-built
 components.
 
+#### 🆕 `p432` · 2026-10-25 — three amendments, one of them a correction
+
+🔴 **The "134 bills across 31 states" figure is one tracker's count, not the count.** MultiState
+reports 134 bills / 31 states; **FutureEd, re-read this pass, tracks 68 bills across 27 states
+with 10 already enacted in 2026.** Both are current. They differ because they scope "AI in
+education" differently. **Quote the range and name the tracker** — a single figure in a deck is
+the thing a well-prepared buyer will challenge.
+
+🟢 **New, dated, and more useful than a bill count: the mandates with deadlines.** Ohio,
+Tennessee, Utah, Idaho, Oklahoma, Maryland and Virginia all **require local districts to adopt an
+AI policy**; Ohio's deadline was **1 July 2026** and has passed. Alabama **HB 329** makes an
+approved CS course including AI instruction a graduation requirement; Utah **HB 273** writes AI
+into state CS standards; Idaho **SB 1227** requires privacy protections for school AI tools.
+Federal: the US Department of Education finalised its **AI grant-priority rule on 13 April 2026**,
+and 35–40 state education departments now publish official AI guidance (35+ per one tracker,
+40 states plus Puerto Rico per another, September 2026).
+
+🔵 **Why the mandates matter more than the prohibitions.** A district under a *policy* mandate with
+a passed deadline has a procurement trigger and a named owner. That is a warmer entry than a
+district merely permitted to buy.
+
+🟢 **The new opportunity, and it is the pass's main finding: special education.** IDEA and §504
+make the IEP a statutory instrument with a mandated human decision — and
+[`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit)
+(MIT) is a practitioner's draft-and-sign kit for exactly that, sourced from CDE material, with
+"only an authorized system records the final entry" in its own README. Pair with
+[`67tallchris/iep-builder`](https://github.com/67tallchris/iep-builder) (MIT, Arizona K-8,
+bring-your-own-key) for a per-district deployment holding no vendor key, and
+[`dougdevitre/access-to-education`](https://github.com/dougdevitre/access-to-education) (MIT) for
+the parent-facing layer. See `compose/patterns.md`, **`Pattern AL`**.
+🔴 **State it plainly in any pitch:** this tier has 0–1 stars per address, no second contributor
+and no evaluation harness. There is no incumbent open base — which is the opportunity *and* the
+risk. `Trend 28` has the full argument.
+
+🔴 **Still missing, third pass running:** no grounded account of **Canada** or **Mexico** federal
+education-AI policy. Canada's *AI for All* (4 June 2026) remains the only Canadian item on this
+shelf and is still direction-setting, not law.
+
 ### EMEA
 
 **Regulatory posture — the most specific in the world, and the deadline just moved.**
@@ -102,6 +142,40 @@ first-class requirement: [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Op
 [`huggingface/smolagents`](https://github.com/huggingface/smolagents) (Apache-2.0) is the
 EU-domiciled agent base.
 
+#### 🆕 `p432` · 2026-10-25 — the scope carve-out is the commercially decisive update
+
+🟢 **The Commission's May 2026 draft guidelines place tutoring, practice feedback and information
+chatbots OUTSIDE the high-risk category.** High-risk remains admissions, grading, placement and
+exam proctoring. This is the single most useful EMEA fact on this shelf for scoping a deal: a
+tutoring pilot is **not** a high-risk system, so it does not carry conformity assessment, EU
+database registration or post-market monitoring — while the grading engine beside it does. Read
+as draft guidance, not settled law, and re-check before contracting.
+
+🔴 **The deployer→provider flip, which catches integrators specifically.** A school that merely
+buys a tool is a **deployer**. A school — or a studio acting for it — that **adapts** a tool for a
+high-risk use can become its **provider**, inheriting the full provider obligation set: human
+oversight, registration in the EU's public AI database before market, and post-market monitoring.
+🔵 For Globant this is the central contractual question on every EMEA grading or admissions
+engagement: *who is the provider of the adapted system?* Settle it in the statement of work.
+
+🔵 **The deadline, re-confirmed with its publication date.** Regulation (EU) **2026/1744** moved
+stand-alone high-risk education systems from 2 August 2026 to **2 December 2027**; it was
+published in the Official Journal on **24 July 2026**. 🔴 Several compliance-vendor guides still
+print 2 August 2026 — if a client's counsel is working from one of those, they are eighteen months
+out on their own runway. Article 50 transparency (from 2 August 2026) and the emotion-recognition
+prohibition in educational institutions (since 2 February 2025) are **unchanged**.
+
+🟢 **Supply note.** The highest-traction new education address this window is EMEA-built:
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+(UK, 907 ★ / 128 forks) — 165 teacher and school-leader skills. 🔴 It is **CC BY-SA 4.0**, read
+from the payload: commercial use permitted, **ShareAlike obligation on derivatives**. A derived
+pack is publishable, not proprietary. `Trend 29`.
+
+🔵 **Demand note, lightly sourced:** Spain, Portugal and Italy are aligning national AI-education
+frameworks with existing digital-education strategies, and teacher training is named as the
+bottleneck rather than tooling. Source is a sponsored article — directional only, not a basis for
+sizing.
+
 ### APAC
 
 **Regulatory posture — the widest divergence of any region; there is no "APAC approach".**
@@ -126,6 +200,43 @@ configuration, not forks. [`pykt-team/pykt-toolkit`](https://github.com/pykt-tea
 [`satvik314/educhain`](https://github.com/satvik314/educhain) (MIT) covers content
 generation. Pair with a sovereign model where procurement demands it. Low ban-sentiment in
 SE Asia plus Vietnam's dated deadline makes **Vietnam the clearest near-term APAC entry**.
+
+#### 🆕 `p432` · 2026-10-25 — the largest curriculum mandate in the world, and the clearest cautionary tale
+
+🟢 **India is now the region's biggest single opportunity, with a date.** From the **2026-27
+academic year, AI and computational thinking become mandatory from Class 3** across government and
+private schools, backed by the IndiaAI Mission. That is a curriculum mandate at national scale
+with an immediate need for teacher capability, in-language content and assessment — not a pilot.
+🔵 Regulatory posture remains light: AI-generated content sits inside the existing intermediary
+framework, and in **July 2026** the government signalled it may pursue dedicated AI legislation.
+The permissive, APAC-built bases on these shelves are the natural starting point —
+[`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (MIT),
+[`satvik314/educhain`](https://github.com/satvik314/educhain) (MIT),
+[`panaversity/learn-agentic-ai`](https://github.com/panaversity/learn-agentic-ai) (MIT) — and
+`compose/patterns.md` `Pattern AG` already prices the India engagement.
+
+🔴 **South Korea is the cautionary tale, and it is now a fact rather than a sentiment.** The
+planned **AI textbooks saw adoption below 30% by March, and the National Assembly subsequently
+stripped them of official textbook status** after unions argued the rollout had outrun teacher
+preparation. This is `Trend 4` (restriction as a real countertrend) with a government-scale
+example: the mandate was not defeated by capability or by law, but by **teacher readiness**. Any
+APAC deck that leads with capability and treats enablement as a footnote is arguing the losing
+side of a case already decided in Korea.
+
+🔵 **Amendment to this shelf's Korea reading.** This base recorded the AI Basic Act (in force
+**22 January 2026**) as "the region's most binding framework". Still true on paper — but **MSIT has
+indicated 2026 will effectively be a pilot year with limited enforcement**. The obligation is real
+and the enforcement is deferred: build to it, do not panic-price it.
+
+🟢 **Supply shift worth noting.** Both high-traction new learner-facing agents this window are
+APAC-built and Chinese-first: [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate)
+(MIT, 1 183 ★) and [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (MIT, 292 ★, self-hostable
+*and* a harness skill). `Trend 14` — APAC as net exporter of permissive education AI — holds for
+another window.
+
+🔴 **Declared gap:** no education-specific AI rules found for **China** or **Japan** this pass.
+China's regime (mandatory, service-type-based, with content labelling) and Japan's
+(voluntary, promotion-without-penalties) are general-purpose. Absent, not unexamined.
 
 ### LATAM
 
@@ -157,6 +268,42 @@ is the answer to the equity gap and the only MIT platform on the shelf.
 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (GPL-3.0) has deep regional
 footprint — integrate over its API, do not vendor it.
 
+#### 🆕 `p432` · 2026-10-25 — the market has a shape now, and it is Brazil plus instructional support
+
+🟢 **Where the companies are.** HolonIQ's **2026 Latin America EdTech 100**: **Brazil is nearly
+half the cohort** and the clear majority of deal and award activity; **Mexico is 17%**, strongest
+in post-secondary and financing. 🔵 The most useful line in it for positioning: **AI-native
+positioning in product descriptions has quadrupled since 2020, and most of these companies build
+instructional support rather than consumer tutoring.** That is the same teacher-facing tilt
+`Trend 5` records globally — in the region where Globant's delivery presence is strongest. Named
+players: **Teachy** (Brazil, AI lesson preparation), **Ginia** (Mexico, employability matching),
+with **Educbank** (Brazil) and **Mattilda** (Mexico) on the finance side rather than AI.
+
+🟢 **Demand, re-measured.** Digital Education Council's 2026 higher-education survey across 29
+Latin American institutions: **92% of students and 79% of faculty actively engaging with AI.**
+Set beside the UNESCO IESALC figures already on this shelf (87% of HEIs using AI, **26% with a
+formal strategy**), the governance gap is confirmed from two independent instruments. 🔵 That gap
+remains the strongest single number in this file and the basis of the governed-adoption offer.
+
+🟢 **Public money is moving, and it is a partnership surface.** **Google.org committed $4.6M with
+the Raspberry Pi Foundation** to scale Experience AI across Argentina, Brazil, Chile, Colombia,
+the Dominican Republic, El Salvador, Mexico, Peru and Uruguay, targeting **1.25M students by
+2028**. UNESCO's regional Observatory on AI in Education for LAC (April 2026) has a **Mexico pilot
+with CONALEP and DGETI**. 🟡 The pilot's stated date (18 August 2026) conflicts with the page's
+apparent age — verify before citing it to a client.
+
+🔴 **The regulatory gap is now confirmed rather than merely declared.** A second pass found **no
+education-specific AI rules in Brazil or Mexico.** Brazil has no comprehensive AI law; MCTI was
+revising the National AI Strategy, which names education as a priority area. Mexico's 2024
+risk-based federal bill still has no regulator behind it. 🔵 Also still missing and worth a future
+leg: how **LGPD** and Mexico's data-protection law bear on student data specifically, and how
+AI tools are actually **procured** by public school systems (`Trend 21` — LATAM public buyers
+procure AI education platforms as subscriptions, and no tender asks for open source).
+
+🔴 **Nil result, recorded:** no open-source tooling found for the inclusive-education mandates of
+Brazil, Chile or Colombia — the LATAM counterpart to this pass's special-education finding. The
+category that is `Pattern AL` in North America has **no regional supply at all**.
+
 
 ### Global
 
@@ -185,6 +332,35 @@ addresses for the fourth consecutive pass. The agent supply in this industry is 
 as **MCP servers over existing LMS platforms**, not as standalone education agents — so
 future discovery legs should be keyed on the platform name (Canvas, Moodle, Classroom,
 Blackboard), not on the word "education".
+
+
+#### 🆕 `p432` · 2026-10-25 — two amendments to the global read
+
+🟢 **The "adoption happened, governance did not" thesis now rests on two independent instruments
+in one region** (UNESCO IESALC 87%/26% and Digital Education Council 92%/79% across 29 LATAM
+institutions), and on the NA policy-mandate wave with passed deadlines. It is the most
+corroborated claim on this file.
+
+🔴 **Add a third structural fact to the two already here: regulatory intensity and open-source
+supply are inversely correlated.** The surface the law constrains hardest — special education in
+North America, a statutory instrument with a mandated human decision — has the thinnest supply
+measured anywhere in this repository: 584 addresses, a 1-star ceiling, and the two most
+purpose-built tools carrying no licence at all. `Trend 28` sets out why that is structural and what
+it means for where a services studio is advantaged. 🔵 The corollary for every region: the
+*governed-adoption* offer and the *no-incumbent build* are two different sales, and the second one
+only exists where open source could not reach.
+
+🔴 **Method, promoted from a footnote because it changed two verdicts this pass.** GitHub's
+`license` field is a detector, not a verdict. Two of eleven addresses returned `NOASSERTION`;
+reading the payload resolved them to **AGPL-3.0-or-later** and **CC BY-SA 4.0** — opposite ends of
+the commercial spectrum. And "no licence" is established only by `git ls-tree -r` over the whole
+tree. `Trend 29`.
+
+🔵 **Market size — no change this pass, and the range holds.** Re-read at source on 2026-10-25:
+Precedence $9.58B (2026) → ~$136.8B (2035) at 34.5% CAGR; Grand View $11.4B (2026); Research and
+Markets $10.6B (2026) → $42.48B (2030) at 41.5% CAGR; AI in **higher education** specifically
+$4.09B (2026) → $13.46B (2030) at 34.7%. The spread is scope, not disagreement. Use the range.
+
 ---
 
 ## Regional evidence base — detail carried from earlier passes

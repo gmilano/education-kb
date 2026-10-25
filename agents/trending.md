@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p432` · 2026-10-25 — **Special education: the most heavily regulated surface in education AI, and a measured supply desert. 🟢 Three MIT addresses exist and all three are jurisdiction-pinned. 🔴 The two most purpose-built tools in the category carry no licence at all. 🔵 And GitHub's own licence field was wrong in BOTH directions in this sample.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### Why this tier, and why now
+
+`intel/market.md` has recorded since `p430` that the binding constraint in North America is
+**decision autonomy**, not capability: Oklahoma, Maryland and Charleston County all forbid AI as
+the sole basis for a high-stakes decision about a student, and Charleston names
+**special-education determination** explicitly. That is a statute pointing at a product category.
+Yet `IEP`, `special education` and `individualized education program` returned **zero** hits
+across `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` before this pass.
+
+So this pass went at that category directly, rather than at the word "education".
+
+### The measurement, and it is a number
+
+A registry sweep for `IEP OR "special education" OR "individualized education program"` with an
+AI qualifier returns **584 addresses**. Sorted by most-recently-pushed, the entire **top 30 sit
+at ≤ 5 stars**, and 22 of the 30 at zero. There is no established project in this category —
+no OATutor, no DeepTutor, no Moodle. The supply is a field of seedlings.
+
+🔴 **The same sweep sorted by stars is worthless, and that is itself a finding.** The
+`OR`-joined query ranks `sindresorhus/awesome` (524 k ★), `public-apis` and
+`awesome-selfhosted` above every real result — the registry matched the tokens, not the meaning.
+This is `Trend 25` reproducing exactly: in this base, a string matched as though it were a
+meaning remains the most productive error class. **For a seedling category, sort by `updated`;
+a star sort returns the generic index instead.**
+
+### Eleven addresses read at HEAD today
+
+Existence and HEAD via `git ls-remote`; licence payload fetched **at that SHA** and its byte
+size and `sha256` prefix computed locally; absence proved with `git ls-tree -r` over the whole
+tree, not by a missing-file guess.
+
+| Address | Grant, read at HEAD | HEAD | Payload | Verdict |
+|---|---|---|---|---|
+| [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 064 B · `2524a8e74f10` | 🟢 **Build on.** The strongest find of the pass — see below. |
+| [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | **MIT** | `b39df0e9a4a1` | `LICENSE` 1 068 B · `523f156051cf` | 🟢 Build on. Arizona K-8, Svelte + Cloudflare D1, BYOK AI. 0 ★, pushed 2026-10-23. |
+| [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | **MIT** | `f8abd70707ba` | `LICENSE` 1 068 B · `68657618a157` | 🟢 Build on. 69 files / ~120 k words of **parent-facing** IEP navigation and advocacy content. 0 ★, pushed 2026-10-24. |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | **MIT** | `d8114f383632` | `LICENSE` 1 063 B · `09a5d7187aab` | 🟢 Build on. 1 183 ★ / 56 forks, APAC, Chinese-first self-study agent. |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | **MIT** | `68788b5e7d34` | `LICENSE` 1 068 B · `315be3d6cf4a` | 🟢 Build on. 292 ★, self-hostable Socratic tutor **and** a harness skill. |
+| [ezixen/PlannedEducation](https://github.com/ezixen/PlannedEducation) | **MIT** | `06fb12159f5e` | `LICENSE` 1 085 B · `4ec3cc564448` | 🟢 Build on, with care. Grading + secure test-taking, privacy-first. Default branch `dev`; 0 ★. |
+| [rwrife/rubric-desk](https://github.com/rwrife/rubric-desk) | **MIT** | `010a44006014` | `LICENSE` 1 062 B · `ec0b7dad19a4` | 🟢 Build on, as a seed. Offline Flutter rubric scoring. **Created today**, 0 ★. |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 **CC BY-SA 4.0** | `135d6275e7db` | `LICENSE` 1 229 B · `40db9b472090` | 🟡 Usable commercially — **but ShareAlike**. 907 ★ / 128 forks: the highest-traction new education address this window. See `Trend 29`. |
+| [Apomera/AlloFlow](https://github.com/Apomera/AlloFlow) | 🔴 **AGPL-3.0-or-later** | `6194e51e8f1f` | `LICENSE` 35 441 B · `d8d2ea7ef0a1` | 🔴 Do not vendor. Hosted differentiation engine — the exact shape AGPL reaches. Integrate over an interface only. |
+| [grasped-dev/staircase](https://github.com/grasped-dev/staircase) | 🔴 **none** | `9236fce606c2` | `git ls-tree -r`: 0 of 33 files | 🔴 Ungranted. Best *technique* in the tier; cannot be used. |
+| [eakarsu/ai-special-education-iep-compliance](https://github.com/eakarsu/ai-special-education-iep-compliance) | 🔴 **none** | `ec2516b76699` | `git ls-tree -r`: 0 of 29 files | 🔴 Ungranted. The most complete-sounding IEP product on GitHub, unusable as a base. |
+
+**Seven build-on, one share-alike, three unusable.**
+
+### 🟢 The find of the pass, and why it matters more than its one star
+
+[`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit)
+(MIT, 1 ★, created 2026-10-14) is not a model, a framework or an app. It is a pinned knowledge
+pack — two specialist roles, each in a 3-file Light and an 8-file Full edition, plus
+`PROJECT_INSTRUCTIONS.txt`, platform install guides and a support matrix — and its **declared
+boundary is the architecture this base has been recommending for three passes**:
+
+> "Educational draft assistance only… No assistant is the IEP team, LEA, legal counsel,
+> licensed evaluator, or system of record… only an authorized system records the final entry."
+
+It sources from official CDE material, requires an authorised **de-identified** baseline, routes
+through IEP-team review, and explicitly declines to certify FERPA compliance or district/SELPA
+authorisation. It also warns that typed redaction is not de-identification. 🔵 It is
+`Pattern AH` — draft, then human sign-off — written down by a practitioner who had to satisfy
+California law, and released under MIT. **One star is a distribution fact, not a quality
+judgement.** See the new `Pattern AL` in `compose/patterns.md`.
+
+🔴 **What it is not:** there is no runtime here. No model is named, no evaluation is shipped, and
+nothing enforces the boundary it declares — the discipline is in prose, not in code. Anything
+built from it needs the enforcement added, which is precisely the billable part.
+
+### 🔴 The method finding: GitHub's `license` field was wrong in both directions
+
+Two addresses in this sample came back from the API as `NOASSERTION` / "Other". Reading the
+payload resolved them to **two materially different real licences**:
+
+- `Apomera/AlloFlow` → **AGPL-3.0-or-later** (strong network copyleft). The API could not
+  classify it because the grant sits behind an SPDX header rather than the stock title line.
+- `GarethManning/education-agent-skills` → **CC BY-SA 4.0** (permissive-with-ShareAlike).
+
+So `NOASSERTION` does not mean "no licence", and in this pass it never did. It means *GitHub's
+detector abstained*. The two directions of error have opposite commercial consequences — one
+forbids vendoring, the other permits it with an obligation — and nothing short of reading the
+file distinguishes them. 🔵 One roundup we read asserted the CC BY-SA value without citing the
+file and happened to be right; the same roundup would have been equally confident if it were wrong.
+
+### 🔴 Declared gaps for this pass, stated rather than papered over
+
+1. **No non-US special-education supply found at all.** The IEP category is a US statutory
+   artefact (IDEA / §504) and the addresses reflect it: Arizona, California, generic US. EMEA,
+   APAC and LATAM returned **nothing** education-specific on this axis — not a thin result, a nil
+   one. The equivalent instruments elsewhere (EHCP in England, *educación inclusiva* mandates in
+   Brazil, Chile and Colombia) have **no open-source tooling** this sweep could find.
+2. **Nothing in this tier is maintained in the sense an engagement needs.** The newest two rows
+   were created within 11 days of this pass; none has a second contributor. Fork-and-own is the
+   only honest adoption posture.
+3. **No evaluation exists for this tier.** `p431` added tutor evaluation (`tutor_gym`,
+   `tutorbench`); neither scores an IEP drafting assistant, and no IEP benchmark surfaced. A
+   claim about goal quality in this category is currently unprovable with open tooling.
+
+---
+
 ## 🆕 `p431` · 2026-10-25 — **A tier this base has never carried: tutor EVALUATION. Eleven addresses measured first-hand. 🟢 Seven are build-on, 🔴 three are not — and each of the three fails for a *different* reason, one of them a failure shape this base has not seen before.**
 
 🔵 **Append-only. Nothing below this block was edited.**

@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p432`
+
+### 🔴 `Gap 432-A` — THE ROTATION STILL HAS NOT ROTATED. `Gap 430-A` IS UNCHANGED.
+
+Re-checked in `gmilano/globant-kb` this pass. `rotation.json` on `main` still reads
+`next: 8` (education) with `last_updated: 2026-08-02` and `last_industry: technology`.
+This pass is **p432** on education; `gaming`, `legal`, `financial`, `healthcare`, `media`,
+`retail`, `travel`, `technology`, `automotive`, `energy` and `enterprise` still have **zero**.
+
+The mechanism established at `p430` is confirmed, not superseded: each scheduled run is required
+to develop on its own `claude/*` branch, advances `rotation.json`, pushes it **to that branch**,
+and the branch is never merged to `main`. The next run clones `main` and reads `next: 8` again.
+
+This pass advanced `rotation.json` to `{"next": 9, "last_industry": "education"}` and pushed it to
+its assigned branch, as instructed — which is to say it reproduced the failure one more time, by
+design. 🔴 **It still cannot be fixed from inside a scheduled run.** It needs one of: a merge of a
+rotation branch to `main`; a rotation state stored somewhere a run is permitted to write durably;
+or a scheduler that passes the industry in as a parameter rather than reading it from a repo the
+runs cannot update. Recorded here because the fix is an owner action, and the record is the only
+part a run can contribute.
+
+### 🔴 `Gap 432-B` — NO NON-US SPECIAL-EDUCATION SUPPLY EXISTS, AND THAT IS A MEASURED NIL
+
+This pass opened the special-education / IEP tier (`Trend 28`, `Pattern AL`). Every address found
+is US-shaped: Arizona, California, generic US. Searches for open-source tooling against England's
+**EHCP** process and against the inclusive-education mandates of **Brazil, Chile and Colombia**
+returned **nothing education-specific** — a nil result, not a thin one.
+
+Consequence for the shelves: `Pattern AL` is explicitly scoped to North America, and EMEA / APAC /
+LATAM special-education engagements are from-scratch builds. 🔵 Next pass worth keying on the
+**instrument name** rather than the category — `EHCP`, `PEI` (Brazil/Chile), `PIAR` (Colombia) —
+since `Trend 25` says this base's most productive error is matching a string as though it were a
+meaning, and "special education" is an American string.
+
+### 🔴 `Gap 432-C` — NO EVALUATION HARNESS REACHES THE IEP TIER
+
+`p431` closed the long-standing `Trend 8` measurement gap for *tutoring* (`tutor_gym`,
+`tutorbench`, both permissive). Neither scores an IEP drafting assistant, and no IEP benchmark
+surfaced in this pass's sweep. So a goal-quality claim in the industry's most heavily regulated
+category is **currently unprovable with open tooling** — the one gap in `Pattern AL` that a client
+will ask about first.
+
+### 🟡 `Gap 432-D` — THE LMS-MCP CHANNEL WENT QUIET FOR ONE WINDOW
+
+No new education MCP server surfaced this pass — the first such pass since `p404`. `Trend 7`
+(MCP reached the LMS) is not withdrawn on one window's silence. Recorded so the next pass can
+distinguish a pause from a reversal, rather than re-deriving the question.
+
+---
+
 ## 🆕 `p430`
 
 ### 🔴 `Gap 430-A` — THE ROTATION HAS NOT ROTATED SINCE 2026-08-02, AND THIS REPOSITORY IS THE SYMPTOM

@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p432` · 2026-10-25 — **The trending read found a whole category rather than a repo: special education / IEP. 584 addresses, top-30-by-recency all ≤ 5 ★ — and the one address with real momentum this window is a *content* licence, not a code one.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### Trending, placed by region and graded by grant
+
+| Repo | Region | Grant (read at HEAD) | Last push | ★ | Why it trends |
+|---|---|---|---|---|---|
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | EMEA (UK) | 🟡 **CC BY-SA 4.0** | 2026-10-22 | **907** (128 forks) | The only education address with real momentum this window. 165 teacher/leader skills across pedagogy, learning science, curriculum and assessment. 🔴 ShareAlike: a derived pack ships under CC BY-SA 4.0. |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | APAC (zh) | **MIT** | 2026-10-21 | **1 183** (56 forks) | Highest-starred *new* learner-facing agent found. Plans a route, teaches, builds projects. Chinese-first. |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | APAC (zh) | **MIT** | 2026-10-20 | 292 | Socratic tutor on Bloom's 2-sigma framing. Self-hostable *and* a harness skill — `Trend 18` continuing. |
+| [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | North America | **MIT** | 2026-10-21 | 1 | Created 2026-10-14. Draft-and-sign IEP drafting as a pinned knowledge pack, sourced from CDE material. **The pass's find.** |
+| [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | North America | **MIT** | 2026-10-23 | 0 | Arizona K-8 IEP drafting on Cloudflare Pages + D1, BYOK AI. A no-vendor-key reference deployment. |
+| [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | North America | **MIT** | 2026-10-24 | 0 | Parent-facing IEP navigation + advocacy, 69 files / ~120 k words. The `Trend 10` parent persona, finally with an MIT address. |
+| [rwrife/rubric-desk](https://github.com/rwrife/rubric-desk) | Global | **MIT** | **2026-10-25** | 0 | Created *today*. Offline Flutter rubric scoring, no accounts, no cloud LMS. |
+| [ezixen/PlannedEducation](https://github.com/ezixen/PlannedEducation) | Global | **MIT** | 2026-10-24 | 0 | Grading companion + secure test-taking, privacy-first self-host. Default branch `dev`. |
+| [Apomera/AlloFlow](https://github.com/Apomera/AlloFlow) | Global | 🔴 **AGPL-3.0-or-later** | **2026-10-25** | 3 | Accessibility-first differentiation engine: UDL, WCAG, AAC, TTS, offline-first, i18n. Most capable thing in the tier and the least usable terms. |
+| [grasped-dev/staircase](https://github.com/grasped-dev/staircase) | North America | 🔴 **no licence in tree** | 2026-10-22 | 0 | IEP goals reasoned over a FalkorDB graph of ELA/math standards (Graph Hacks 2026). Best technique, no grant. |
+| [eakarsu/ai-special-education-iep-compliance](https://github.com/eakarsu/ai-special-education-iep-compliance) | North America | 🔴 **no licence in tree** | 2026-10-23 | 0 | Eight AI workflows over React/Node/Postgres for IEP compliance. Ungranted. |
+
+🟢 **DeepTutor re-measured, not re-assumed.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+reads **42 610 ★ / 5 403 forks** today at HEAD `a31d82624c27` — the *same* HEAD this base recorded
+at `p431`, so the star growth is distribution, not development. Earlier cycles of this rotation
+recorded it at ~22 k and ~24 k; those figures are now ~18 k and ~20 k stale and should not be quoted.
+
+### 🔴 What the channel did NOT return
+
+- **No non-US special-education repo of any kind.** See the declared gap in `agents/trending.md`.
+- **No new platform-tier address.** Eleventh consecutive pass. The platform tier is static; all
+  movement is in the agent and content layers (`Trend 10`).
+- **No education MCP server this window** — the first pass since `p404` with none. The MCP-over-LMS
+  channel that `Trend 7` identified has gone quiet for one window; one window is not a reversal, and
+  it is recorded here so the next pass can tell a pause from a trend.
+
+---
+
 ## 🆕 `p431` · 2026-10-25 — **The trending read turned up an *evaluation* tier rather than more tutors — and the two usable addresses split cleanly on maintenance: one commit today, one silent for 13.5 months.**
 
 🔵 **Append-only. Nothing below this block was edited.**

@@ -42,7 +42,15 @@ licence payload at the commit shown. These are safe starting points for an engag
 | [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | Apache-2.0 (code) | `f9d69c7ce3e1` | `LICENSE` 11 358 B · `cfc7749b96f6` | “Teachometry TutorBench” — scenario-based evaluation **and regression** engine for tutoring systems. Actively maintained (commit 2026-10-25). 🟡 Benchmark **content** is CC-BY-4.0 and the **name** is under a brand policy: three scopes, not one. | Global |
 | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT | `b90bd88a2899` | `LICENSE` 1 069 B · `297c4cba7b33` | Markdown teaching material → Lab / Exam / Grading artefacts, each raised as a `WAITING_REVIEW` task with the human approve/reject decision recorded. The draft-and-sign shape `Pattern AH` asks for, already implemented. | Global |
 
-**17 verified permissive rows.** Every slug resolved under `git ls-remote` and every
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | `d8114f383632` | `LICENSE` 1 063 B · `09a5d7187aab` | Self-study agent that plans a route through a subject, teaches it and builds projects alongside. 1 183 ★ / 56 forks. Chinese-first UI — the strongest **zh** learner-facing agent on this shelf. | APAC |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | `68788b5e7d34` | `LICENSE` 1 068 B · `315be3d6cf4a` | Socratic tutor built on Bloom's 2-sigma framing; self-hostable FastAPI + React **and** packaged as a harness skill. 292 ★. Chinese-first, English supported. | APAC |
+| [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | MIT | `ff1ae0ce30e7` | `LICENSE` 1 064 B · `2524a8e74f10` | Two special-education roles (CA Essential Standards analyst, IEP goal generator) as pinned knowledge packs, sourced from CDE material, with an explicit "no autonomous student-record action, authorised system of record only" boundary. **The draft-and-sign architecture shipped as a kit.** | North America |
+| [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | MIT | `b39df0e9a4a1` | `LICENSE` 1 068 B · `523f156051cf` | Arizona K-8 IEP drafting tool — Svelte + Cloudflare Pages Functions + D1, **bring-your-own-key** AI. A working reference for a jurisdiction-pinned, no-vendor-key deployment. | North America |
+| [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | MIT | `f8abd70707ba` | `LICENSE` 1 068 B · `68657618a157` | 69 files / ~120 k words of special-needs **parent-facing** material: IEP navigation, family–school communication, advocacy. Content under a code licence — rare, and the only MIT answer to the unserved-parent persona of `Trend 10`. | North America |
+| [ezixen/PlannedEducation](https://github.com/ezixen/PlannedEducation) | MIT | `06fb12159f5e` | `LICENSE` 1 085 B · `4ec3cc564448` | Teacher's aid + AI-assisted grading companion + secure test-taking, privacy-first, self-hosted. Default branch is `dev`. 🟡 Zero stars, single author — read as a reference implementation, not a dependency. | Global |
+| [rwrife/rubric-desk](https://github.com/rwrife/rubric-desk) | MIT | `010a44006014` | `LICENSE` 1 062 B · `ec0b7dad19a4` | Offline rubric scoring (Flutter; phone/tablet/Windows), no accounts and no cloud LMS. The marking surface for a deployment that cannot assume connectivity. 🟡 Created **today**; treat as a seed. | Global |
+
+**24 verified permissive rows.** Every slug resolved under `git ls-remote` and every
 licence was read from the repository's own payload — none was taken from a GitHub badge,
 a package manifest, or a directory listing.
 
@@ -51,6 +59,23 @@ a package manifest, or a directory listing.
 on this shelf — under a compatible MIT grant and with no adapter work, which is the cheapest
 capability added here in weeks. 🟡 Note its MIT payload carries **no `MIT License` title line**;
 a sweep keyed on that string reports UNKNOWN for a verbatim MIT grant.
+
+
+### 🆕 `p432` — seven rows added, and they open the **special-education** tier
+
+`p431` opened tutor evaluation. This pass went at the surface that NA law regulates hardest
+and that no shelf in this repository had ever named: **special education / IEP**. Three of the
+seven new rows are IEP-specific, and all three are MIT. 🔴 The honest reading is below in
+`agents/trending.md`: that tier exists, but it is a **supply desert** — the three MIT addresses
+carry 0, 0 and 1 star between them and the two most purpose-built tools in the category carry
+**no licence at all**.
+
+🔵 Two of the new rows (`Study-Mate`, `Bloom`) are APAC-built and Chinese-first, which continues
+the `Trend 14` direction: APAC remains the net exporter of permissive education AI.
+
+🔴 **Method correction that applies to every row on this file.** GitHub's own `license` field
+was wrong in **both** directions in this pass's sample — see the corrections table below. It is a
+detection heuristic, not a verdict. Read the payload.
 
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 
@@ -66,6 +91,11 @@ These are the findings that change a build decision. All re-measured 2026-10-25.
 | [sdrangan/llmgrader](https://github.com/sdrangan/llmgrader) | “Open autograding engine” per search results and roundups | 🔴 **“PySilicon Research License”**, `LICENSE` 1 224 B · `4c8368a01cb6` @ `c5efaea7e9aa` | **Do not build on this.** Clause 1 grants *“non-commercial research, academic, and educational purposes”* only; clause 2 forbids commercial use without written permission. A studio engagement is commercial. 🔵 The trap: the file is named `LICENSE` and **opens with the verbatim MIT sentence** — only clause 2 reveals it. |
 | [eth-lre/MathTutorBench](https://github.com/eth-lre/MathTutorBench) | “Open-source benchmark” (EMNLP 2025) | 🔴 **No licence file anywhere in the tree** (`git ls-tree -r` @ `6faed173ec2b` returns none), and the README cites **two different** licences: a CC-BY-4.0 badge on line 3, CC-BY-**SA**-4.0 in the licence section at lines 199–203 | Ungranted **code** (`main.py`, `models/`, `reward_model/`) offered under a *content* licence, or under none. Cite it; do not vendor or ship it. BY vs BY-SA is the difference between no obligation and a share-alike one. |
 | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | Often listed simply as an open-source AI tutor | 🟡 **GPL-3.0**, `LICENSE` 35 149 B · `3972dc9744f6` @ `5c2f92416c04` | Integrate over an interface; do not fork into a deliverable. 🔵 Its payload is **not** the stock FSF digest this base records for Moodle/Chamilo (35 147 B · `8ceb4b9ee5ad`) — recorded so a digest sweep does not treat the near-miss as a match. |
+
+| [Apomera/AlloFlow](https://github.com/Apomera/AlloFlow) | GitHub `license` field: **`NOASSERTION`** ("Other"); repo topics advertise `agpl` | 🔴 **AGPL-3.0-or-later**, `LICENSE` 35 441 B · `d8d2ea7ef0a1` @ `6194e51e8f1f` — standard AGPLv3 body, SPDX header `AGPL-3.0-or-later`, no added clauses | Network copyleft, and this is a *hosted* differentiation engine — the exact shape AGPL reaches. Genuinely valuable (UDL, WCAG, AAC, text-to-speech, offline-first, i18n) and the only maintained accessibility-first differentiation tool found. **Integrate over an interface; never vendor.** |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | GitHub `license` field: **`NOASSERTION`**; one roundup reported "CC BY-SA 4.0" without citing the file | 🟡 **CC BY-SA 4.0** confirmed, `LICENSE` 1 229 B · `40db9b472090` @ `135d6275e7db` — commercial use **and** adaptation both expressly permitted | 907 ★ / 128 forks — the highest-traction *new* education address this window. Usable commercially, but **ShareAlike**: a derived skill pack must ship under CC BY-SA 4.0. That is a content-copyleft obligation on a deliverable, and it is the first of its kind on these shelves. See `Trend 29`. |
+| [grasped-dev/staircase](https://github.com/grasped-dev/staircase) | "IEP goals reasoned over a FalkorDB graph of ELA and math standards" (Graph Hacks 2026) | 🔴 **No licence file anywhere in the tree** — `git ls-tree -r` @ `9236fce606c2` over all 33 files returns none | Ungranted. The most interesting *technique* in the IEP tier (standards graph + goal reasoning) and it cannot be used. Cite the approach; rebuild it. |
+| [eakarsu/ai-special-education-iep-compliance](https://github.com/eakarsu/ai-special-education-iep-compliance) | README presents a full IEP-compliance product: eight AI workflows over React / Node / Postgres | 🔴 **No licence file anywhere in the tree** — `git ls-tree -r` @ `ec2516b76699` over all 29 files returns none | Ungranted, 0 ★, no description field. The single most complete-sounding IEP tool on GitHub is unusable as a base. |
 
 ### The MIT Google Classroom lane survives — at a different address
 

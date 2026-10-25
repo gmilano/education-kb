@@ -9,6 +9,105 @@ updated: 2026-10-25
 > Current trends, re-measured each pass. Trends 1–8 are the standing set; 9–11 were added
 > or amended on 2026-10-25 from first-hand measurement.
 
+## 🆕 Trend 28 — `p432` Regulatory intensity and open-source supply are **inversely** correlated in education, and special education is the proof
+
+Every other trend on this file reads the market from the demand side. This one reads it from the
+supply side and finds the opposite of what a market should do.
+
+Rank education's surfaces by how hard the law constrains them, and special education is first in
+North America by a wide margin: IDEA and §504 make the individualised education program a
+**statutory instrument** with mandated timelines, mandated team composition and a mandated human
+decision. Oklahoma and Maryland bar AI as the sole basis for a high-stakes student decision;
+Charleston County names special-education determination explicitly. There is no surface in this
+industry where "an agent drafts, a human signs" is more clearly *required* rather than merely
+advisable.
+
+Now rank the same surfaces by open-source supply. Measured this pass:
+
+| surface | established open-source bases | ceiling |
+|---|---|---|
+| tutoring | DeepTutor, OATutor, OpenTutor, Bloom, Study-Mate, tutor-gpt, … | **42 610 ★** |
+| LMS / platform | Moodle, Open edX, Canvas, Sakai, OpenOLAT, Kolibri, Chamilo, … | institutional scale |
+| LMS agents (MCP) | ~40 addresses across Canvas, Moodle, Classroom, Blackboard, D2L | hundreds of ★ |
+| evaluation (`p431`) | tutorbench, tutor_gym, MathTutorBench | low hundreds |
+| **special education / IEP** | **none** | **1 ★** |
+
+584 addresses match the category and the top 30 by recency are all ≤ 5 ★. Three MIT tools exist;
+they were created on 2026-10-14, 2026-10-23 and (the parent corpus) maintained to 2026-10-24.
+
+**Why the inversion happens, and it is not mysterious.** Open source in education is built by the
+people who can ship it — researchers, platform engineers, teachers automating their own marking.
+A statutory workflow cannot be shipped by any of them alone: it needs district authorisation, a
+system of record, a privacy review and professional liability. So the hardest-regulated surface is
+the one hobbyist supply cannot reach, and the commercial market (PowerSchool Special Programs,
+Frontline, SEIS) owns it uncontested.
+
+**What it means commercially — and this is the actionable half.** The inverse correlation is a map
+of where a services studio is *structurally* advantaged. Globant can supply exactly the things the
+open-source channel cannot: the district relationship, the authorisation path, the audit trail and
+the liability posture. On tutoring, Globant competes with a 42 k-star project; on IEP workflow,
+there is no incumbent open base at all, and the three MIT seeds that exist are fork-and-own by
+construction.
+
+🔴 **The honest counterweight, stated so no deck overstates this.** No incumbent also means no
+validation: no benchmark, no reference deployment, no second contributor on any of the three
+addresses, and no evaluation harness that scores IEP goal quality (`p431`'s evaluation tier does
+not reach this category). A first engagement here is a build, not an integration, and it must be
+priced and sold as one.
+
+🔵 **Prediction this base can be held to:** if the inversion is structural rather than a sampling
+artefact, the special-education tier will still have no address above ~50 ★ in six months, while
+tutoring adds another order of magnitude. Re-measure and record either way.
+
+---
+
+## 🆕 Trend 29 — `p432` GitHub's `license` field is a detector, not a verdict — and it failed in **both** directions in one eleven-repo sample
+
+This base already carries three licence-trap trends: `Trend 6` (the permissive frontier runs
+across the stack), `Trend 9` (a permissive licence has a shelf life) and `Trend 27` (a grant with
+no title, a title with no grant). `Trend 29` is narrower and more mechanical, and it invalidates a
+shortcut that is tempting precisely because it is cheap.
+
+Two of eleven addresses measured this pass returned `license: NOASSERTION` ("Other") from the
+GitHub API. **Neither was unlicensed.** Reading the payload at the pinned SHA resolved them to two
+real licences at opposite ends of the commercial spectrum:
+
+| Address | API said | Payload says, at HEAD | Commercial consequence |
+|---|---|---|---|
+| [`Apomera/AlloFlow`](https://github.com/Apomera/AlloFlow) | `NOASSERTION` | **AGPL-3.0-or-later** · `LICENSE` 35 441 B · `d8d2ea7ef0a1` @ `6194e51e8f1f` | 🔴 Strong network copyleft. Cannot be vendored into a client deliverable. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `NOASSERTION` | **CC BY-SA 4.0** · `LICENSE` 1 229 B · `40db9b472090` @ `135d6275e7db` | 🟡 Commercial use **and** adaptation expressly permitted — with a ShareAlike obligation on derivatives. |
+
+**Why the detector abstained, in both cases for a formatting reason rather than a legal one.**
+AlloFlow's grant sits behind a project title line and an SPDX header (`AGPL-3.0-or-later`) instead
+of the stock licence title; the skills repo ships a short CC BY-SA notice-and-summary rather than
+the full legal code. Both are perfectly valid grants. Neither matches the templates
+`licensee` scores against.
+
+**The three failure modes this produces, all of which cost money:**
+1. **`NOASSERTION` read as "no licence"** → a usable base (CC BY-SA, commercially permitted) is
+   discarded. A cost of omission, invisible in any audit.
+2. **`NOASSERTION` read as "probably fine, it's on GitHub"** → AGPL-3.0 enters a hosted
+   deliverable. This is the expensive one.
+3. **A roundup's unsourced claim substituted for the file** → one article we read asserted
+   "CC BY-SA 4.0" without citing the payload and happened to be right. The same article would have
+   read identically if it were wrong.
+
+**The rule, and it costs seconds.** `NOASSERTION` is not a value — it is a *flag to read the file*.
+`git ls-remote` for the SHA, fetch the payload at that SHA, size + `sha256` it, read the first
+twenty lines. And "no licence" is only ever established by `git ls-tree -r` over the whole tree:
+that is how `grasped-dev/staircase` (0 of 33 files) and
+`eakarsu/ai-special-education-iep-compliance` (0 of 29 files) were confirmed ungranted this pass,
+rather than by a missing-file guess at one candidate path.
+
+🔵 **New obligation family on these shelves.** CC BY-SA 4.0 is the first *content* ShareAlike grant
+to land on a build-relevant row. `Trend 11` recorded data licences (ODbL on `os-taxonomy`);
+ShareAlike-on-prompts is a third category again, and it bites a studio hardest where the
+deliverable *is* text: a skill pack, a prompt library, a curriculum corpus. A pack derived from
+those 165 skills must ship under CC BY-SA 4.0 — publishable, not proprietary. Decide that before
+the statement of work, not after.
+
+---
+
 ## 🆕 Trend 26 — `p431` The evaluation layer arrived, and it is permissive — which moves the sellable unit from *adoption* to *evidence*
 
 For many passes this file carried `Trend 8` as a standing, unclosed **measurement gap**: this base
