@@ -51,8 +51,10 @@ licence payload at the commit shown. These are safe starting points for an engag
 | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | MIT | `f8849746d85c` | `LICENSE.md` 1 122 B · `15ce43afa44a` | Material → **traceable** knowledge base → interactive learning page, from PDFs, books, slides, Word files and web pages. Built to the Agent Skills standard, so it composes into an existing harness instead of demanding a platform. **1 118 ★ / 104 forks — the highest-traction new education address on these shelves.** 🟡 The payload names `Copyright (c) 2025 virgiliojr94` while the owner is `dmoshehun-prog`: the MIT grant stands, the named holder is a third party. Provenance question, not a licence one — see `agents/trending.md` `p433`. | APAC |
 | [122-syf-wcy/PhysicsOS](https://github.com/122-syf-wcy/PhysicsOS) | Apache-2.0 | `a25c6ee26583` | `LICENSE` 11 356 B · `f1a2e5fccede` | K-12 physics tutor that drives a **real physics engine**: the AI reads the problem, the engine renders it as an interactive scene and the result is computable and *checkable* rather than asserted. The grounding move applied to a subject where a wrong answer can be caught. 255 ★ / 17 forks; public-benefit (公益) project, TypeScript, DeepSeek-backed. | APAC |
 | [cabbage2000-lab/textbook-writer-skills](https://github.com/cabbage2000-lab/textbook-writer-skills) | MIT | `e2b825072ba5` | `LICENSE` 1 064 B · `0d5a33d13ca9` | Courseware authoring as a **gated** UbD backward-design chain: teaching positioning → five-part gate → chapter-tree gate → four-stage chapter writing → review. Recomputes STEM claims, checks humanities citations against the source, and writes *"needs author confirmation"* where it cannot verify — the one authoring tool found that refuses to assert. Subject-agnostic core, pluggable subject profiles. 37 ★ / 12 forks. | APAC |
+| [wenflow-org/wenflow](https://github.com/wenflow-org/wenflow) | MIT | `1c86890946a3` | `LICENSE` 1 067 B · `b6fac57d4710` | 问流 WenFlow — learning-path agent that starts from the learner's **stated problem** rather than a syllabus: dialogue clarifies the goal, then it emits an executable path, teaches in rounds, schedules forgetting-curve review and tracks learning load on four named measures (LSS / KTL / LF / LSB). Ships an 18-page admin back-office **and a virtual-learner simulator**, which is the rarest part — it can be regression-tested without a cohort. Vue3 + Node.js + SQLite, self-hostable. 59 ★ / 19 forks. 🟡 Author calls it an early experimental prototype; read as a reference architecture, not a dependency. | APAC |
+| [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | MIT | `37ba5e28532d` | `LICENSE` 1 067 B · `5731a2d3ccea` | Local-first **adaptive-tutoring agent foundation** — a reference implementation of the runtime seam (agent runtime + SQLite learning-evidence store) with a civil-service-exam app built on it, for iOS and web via Capacitor. The one row on this shelf that separates *tutoring substrate* from *subject application*, so the substrate is reusable. 41 ★ / 7 forks. 🟡 Single author, early; the value is the `learning-evidence` schema, not the exam content. | APAC |
 
-**24 verified permissive rows.** Every slug resolved under `git ls-remote` and every
+**26 verified permissive rows.** Every slug resolved under `git ls-remote` and every
 licence was read from the repository's own payload — none was taken from a GitHub badge,
 a package manifest, or a directory listing.
 
@@ -106,6 +108,46 @@ table and another inside the corrections table below, each making the row after 
 new table's header. Both sides of each break carried identical column counts, so the breaks were
 accidental; deleting the two blank lines restores one continuous table each, and the suite now
 reports `10 shelves, no row is published as a header`. The defect was committed by `p432`.
+
+### 🆕 `p434` — two rows promoted **by a gate**, not by hand, and `p433`'s saturation denominator corrected
+
+`p433` promoted three backlog rows by hand and registered `Gap 433-A` for the missing
+instrument. 🟢 **`p434` built it** (`compose/code/p434-promotion-gate`, 28 offline controls,
+wired into `make hooks` as `gate-promotion`), and **the gate was RED on its first run** — it
+found exactly these two MIT addresses stranded in the trend record, in no curated shelf. They
+are the first two rows on this file promoted by an instrument rather than by a pass noticing.
+
+🔴 **And it refutes the predicate `Gap 433-A` prescribed.** The gap asked for a gate keyed on a
+**150 ★ threshold**. All five unpromoted addresses above that threshold were graded on
+first-hand payloads this pass and **every one is non-permissive** — `Auto-Empirical-Research-Skills`
+(**4 771 ★**, CC-BY-SA-4.0), `frametell` (400 ★, AGPL-3.0), `ai-agent-camp` (346 ★, **no licence
+file at all**), `deep-student` (290 ★, AGPL-3.0), `sql-to-ER` (192 ★, AGPL-3.0) — while both
+permissive rows sit **below** it at 59 ★ and 41 ★. 🔵 **Traction and permissiveness are
+anti-correlated in this domain's new supply**, so a star threshold is a filter against the
+findings: as prescribed it fires **0** times, star-free it fires **2**. The refuted form stays
+runnable as `--predicate p433` so the refutation is reproducible.
+
+🔴 **A second reason the prescription could not have worked: the star channel does not exist
+from inside a run.** `api.github.com`, `github.com` HTML and `codeload.github.com` were each
+re-measured at **HTTP 403** through this environment's proxy on 2026-10-25; only
+`raw.githubusercontent.com` and the git smart-HTTP transport answer. The star figures quoted
+above came from the agent session's own GitHub tool and are labelled as such in the gate's
+grade table — 🔵 **they are not reproducible from `make`, which is precisely why the gate does
+not depend on them.**
+
+🟢 **`p433`'s promotion decision was substantively right and its denominator was wrong.** It
+reported *"26 of 30 already named on a shelf; 4 absent, all ≤ 8 ★"*; re-running `p433`'s own
+query returns a **4 771 ★** address as the top hit. Both are true at once, because "named on a
+shelf" counted the **trending** shelves — the same shelves that pass declared write-only. The
+backlog could not appear in a denominator that contains it. 🔵 Nothing permissive above the
+threshold was missed, because there was nothing permissive above the threshold.
+
+🔵 **Provenance note, in contrast to `p433`'s highest-traction row.** Both payloads name their
+own owner (`Copyright (c) 2026 wenflow-org`, `Copyright (c) 2026 zhangl1001`), so neither
+carries the third-party-holder question that `learn-from-materials` does.
+
+🔵 Both rows are **APAC-built**, the fifth consecutive pass on which new permissive education
+supply is APAC-origin. `Trend 14` is unchanged.
 
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 

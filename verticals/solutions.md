@@ -56,6 +56,40 @@ not the platform. A studio told *"Canvas is MIT"* would ship AGPL-3.0.
 | **Blackboard Learn** | 🟢 **MIT** | MCP servers over Blackboard Learn's REST API. |
 | **SCORM Runtime** | 🟢 **MIT** | SCORM 1.2/2004 packaging and playback. |
 
+## 🆕 `p434` — The education-ERP nil is now a **standing** nil, confirmed a third consecutive pass, and one carried row is corrected
+
+🔴 **The sweep was run again verbatim** (`open source platform education ERP CRM MIT Apache`) and
+returned **nil for a permissive education vertical for the third consecutive pass**. What came
+back, and why each is not the answer:
+
+| Returned | Grant | Why it is not a permissive education vertical |
+|---|---|---|
+| **OpenEduCat** | 🔴 **LGPL-3.0** (carried on this file) | The closest thing to an education ERP, built on Odoo. Weak copyleft — integrate, do not vendor. Not permissive. |
+| **Apache OFBiz** | 🟢 Apache-2.0 | Genuinely permissive and genuinely **not education** — a general ERP framework. Already this file's `p386` answer for the permissive ERP *base*, and it remains a build, not a product. |
+| **ERPNext** | 🔴 GPL-3.0 | General ERP. Strong copyleft. |
+| General MIT CRMs | 🟢 MIT | Not education. |
+| **CK-ERP** | — | Has education modules (`ck-teacher`, `ck-student`, `ck-registrar`…) but the announcement found dates from **2010**; stale, not a candidate. |
+
+🟢 **So the standing sentence holds and should be quoted rather than re-derived:** *there is no
+MIT/Apache education ERP.* It is why this file leads with **OpenOLAT** (Apache-2.0) and
+**Kolibri** (MIT), and why `p386`'s permissive-ERP-base answer below is a *base* and not a
+product. 🔵 Three independent passes have now spent a leg on this question; a fourth should quote
+this row instead.
+
+🔵 **No new platform supply this pass.** The two addresses promoted to `agents/top.md`
+(`wenflow-org/wenflow`, `zhangl1001/civil-ai` — both MIT) are agent-layer, not platforms, and the
+five high-traction unpromoted addresses graded in `repos/trending.md` are all copyleft,
+content-licensed or ungranted. `Trend 10`'s split is unchanged: **the agent layer is permissive,
+the platform layer is not.**
+
+🔴 **One correction that matters for a special-education engagement.** This file records that
+there is **no open-source special-education system of record** — unchanged, and `p434` adds the
+regulatory reason it is unlikely to matter in NYCPS: that district's guidance **prohibits AI
+development of IEP and 504 plans outright** (`Gap 433-B`, closed; `intel/market.md`). 🔵 So the
+missing system of record is not the binding constraint there — the drafting prohibition is, and
+the sellable surface is progress monitoring and accommodation *delivery* against plans a
+qualified professional wrote. `compose/patterns.md` `Pattern AL` carries the split.
+
 ## 🆕 `p433` — The "education ERP" sweep returns a **standing nil**, and it is the reason this file leads with OpenOLAT and Kolibri
 
 The brief for every pass asks for platforms *"like Odoo for ERP"*. `p433` ran that leg directly —

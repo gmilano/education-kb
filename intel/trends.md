@@ -9,6 +9,60 @@ updated: 2026-10-25
 > Current trends, re-measured each pass. Trends 1–8 are the standing set; 9–11 were added
 > or amended on 2026-10-25 from first-hand measurement.
 
+## 🆕 Trend 31 — `p434` Four jurisdictions on three continents have converged on the **same predicate**, and it is a software-architecture requirement rather than a compliance checkbox
+
+🟢 **The finding.** This pass's four regional legs were run for adoption and players, and what
+came back from three of them was one sentence in four different legal traditions. The regulated
+object is not *AI in education*. It is **AI as the operative basis of a decision about a learner,
+without a human who can intervene**:
+
+| Jurisdiction | Instrument | The operative predicate |
+|---|---|---|
+| **Vietnam** (APAC) | Decision **33/2026/QĐ-TTg**, under AI Law **134/2025/QH15** + Decree 142/2026/NĐ-CP | Automated testing/assessment is high-risk where the output is used **as the official result** of learner evaluation; requires human supervision, control **and the ability to intervene while the system operates** |
+| **Oklahoma, Maryland** (NA, state) | 2026 session statutes | Human oversight required; AI barred as the **sole basis** for a high-stakes student decision |
+| **Charleston County, NYCPS** (NA, district) | District policy | AI not the **sole basis**; NYCPS goes further — special-education documents **must be developed by qualified professionals** |
+| **EU** (EMEA) | AI Act Annex III + Regulation (EU) 2026/1744 | Education access and assessment are high-risk: risk management, data governance, **human oversight**, conformity assessment |
+
+🔵 **Why this is a trend and not a list.** Four bodies with no coordination, no shared legal
+tradition and opposite political economies wrote the same operative test. That is convergence, and
+convergence is what makes an architecture *portable* — the rarest property in a market whose
+standing description on this file (`Trend 3`) is **regulatory divergence**.
+
+🟢 **So `Trend 3` is now half wrong, and the half that is wrong is the commercially useful half.**
+Divergence is real in **scope** — who is covered, which grades, which subjects, what the penalties
+are — and a single global *configuration* remains non-viable. But at the level of **mechanism**
+the rules agree, which means one architecture satisfies all four:
+
+1. the model **proposes**; it never commits;
+2. a qualified human **approves**, and the identity and timestamp of that approval are **recorded**;
+3. the operative record is written by **human action** into the authorised system of record;
+4. the human can **intervene while the system runs**, not only after it finishes (Vietnam's clause
+   is the strictest and therefore the one to build to).
+
+🔴 **The trap, and it is the reason this is worth a trend rather than a line.** Draft-and-sign
+satisfies predicates 1–4 **only where the regulated act is the DECISION.** Where a rule is
+addressed instead to **who may develop the document**, human sign-off cures nothing — the drafting
+itself is the prohibited act. 🔴 **That case is now measured and it is in the largest US school
+district**: NYCPS's red tier bars **IEP and 504 plan development** outright (`Gap 433-B`, closed
+this pass). 🔵 **So the architectural question to ask of every jurisdiction is not "do we have a
+human in the loop?" but "is the regulated act the decision, or the drafting?"** — those need
+different products, and `compose/patterns.md` `Pattern AL` now carries the split.
+
+🟢 **What this is worth in a pitch.** The four-point architecture above is a **reusable compliance
+asset**: built once, it is defensible in Hanoi, Brussels, Oklahoma City and Charleston on the same
+evidence. 🔵 Two rows already on `agents/top.md` implement it today —
+[`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp)
+(draft for human sign-off **by default**) and
+[`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent)
+(`WAITING_REVIEW` with a **recorded** approve/reject) — both MIT. The compliance story is not a
+document to write; it is two MIT repositories to wire together.
+
+🔴 **The grade on the evidence, stated so nobody over-cites it.** Every regulatory cell in the
+table is **corroborated across independent secondaries and not read in the official text**:
+`Gap 433-C`'s egress ceiling is unchanged and was re-measured this pass. Vietnam's sectoral
+compliance deadline of **1 September 2027** (education, healthcare, finance) is 🆕 new to this
+file and carries the same grade.
+
 ## 🆕 Trend 30 — `p433` In North America the **district**, not the state, is now the layer that decides whether a build is legal
 
 Every regulatory read on these shelves has been organised by **state**: 134 bills across 31
@@ -28,7 +82,7 @@ unevenly:
 
 | District | Instrument | What it bars |
 |---|---|---|
-| **New York City** | 2026-27 guidance, enacted **2026-09-02** | Student-facing generative AI, **grades 2K-8** (~600,000 students); **companion chatbots in every grade**, high school included. Preliminary (March 2026) red tier was reported to bar grading, discipline, counselling, placement **and special-education / 504 plan development** (🟡 survival into the enacted text unresolved — `Gap 433-B`) |
+| **New York City** | 2026-27 guidance, enacted **2026-09-02** | Student-facing generative AI, **grades 2K-8** (~600,000 students); **companion chatbots in every grade**, high school included. Preliminary (March 2026) red tier was reported to bar grading, discipline, counselling, placement **and special-education / 504 plan development**. 🆕 `p434`: **CONFIRMED in the current guidance** — the *"Red: Do Not Proceed"* tier names **IEP and 504 plan development** (*"All special education documents are developed by qualified professionals"*, citing IDEA and **Chancellor's Regulation A-710**). `Gap 433-B` **CLOSED, restrictively.** The IEP/504 *exemption* in the moratorium is a different subject — student-facing assistive tech under an existing plan — not a permission to draft one |
 | **Charleston County** | district policy | Discipline, placement, **special-education determination** |
 | **Katy ISD** | district policy | Generative chatbots K-6, scaffolded access to grade 12 |
 

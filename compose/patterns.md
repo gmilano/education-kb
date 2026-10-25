@@ -91,6 +91,45 @@ carries a copyleft obligation.
    are now two independent NA districts naming special education explicitly** — treat
    district-level prohibition as the base case to disprove, not the edge case.
 
+   🔴 🆕 `p434` **ANSWERED, AND THE ANSWER IS THE RESTRICTIVE ONE: IN NYCPS THIS PATTERN'S CORE
+   STEP IS PROHIBITED.** `Gap 433-B` is **closed**. The current NYCPS *Guidance on Artificial
+   Intelligence and Screen Time* carries a **"Red: Do Not Proceed"** tier in its Traffic Light
+   Approach, and that tier names **IEP and 504 plan development** with the operative sentence
+   *"All special education documents are developed by qualified professionals"*, citing **IDEA**
+   and **Chancellor's Regulation A-710**. A second independent outlet states that educators may
+   not use AI in grading, care and counselling, behavioural monitoring, **or crafting IEPs or 504
+   accommodations**. 🔵 **Two secondaries, consistent; no primary read — `Gap 433-C`'s ceiling
+   applies** (`schools.nyc.gov` is 403 at this host's egress).
+
+   🟢 **And the apparent contradiction `p433` could not resolve was never a contradiction — it is
+   a SCOPE distinction, which is the part to carry into a client conversation.** The two clauses
+   govern different subjects:
+
+   | Instrument | Subject | Effect on an IEP |
+   |---|---|---|
+   | Red tier, Traffic Light Approach | **Staff** use of AI to *develop* the document | 🔴 **Prohibited** — a qualified professional develops it |
+   | 2K-8 moratorium **exemption** | **Student-facing** assistive technology delivered *under* an existing IEP/504 | 🟢 **Exempt** from the ban — it may continue |
+
+   🔵 So the exemption permits *delivering* accommodations a plan already grants; it says nothing
+   about *writing* the plan, and the red tier forbids that. `p433` read an exemption for one
+   subject as evidence about the other.
+
+   🔴 **The consequence for this pattern, stated without softening.** In NYCPS, `Pattern AL`'s
+   step 4 — *"generate a draft goal set"* — is **the prohibited act**, not a safe-harbour version
+   of it. Draft-and-sign does **not** cure it, because the rule is addressed to who may *develop*
+   the document rather than to who may *approve* it. 🟢 **What remains sellable in NYCPS** is the
+   non-drafting surface of this same stack, and it is not small: progress monitoring (OATutor +
+   pyKT against existing goals), the parent-facing `access-to-education` layer, and
+   accommodation *delivery* under an already-signed plan — all three sit outside the red tier and
+   the third is explicitly exempted. 🔵 **Sell the stack minus step 4**, and say why in the
+   proposal rather than letting a district's counsel find it.
+
+   🔴 **Second NA procurement fact from the same leg, and it gates timing rather than scope.** The
+   NYCPS chancellor directed principals to **pause all educational-software purchases** pending
+   updated AI guidance. For the largest US district the near-term motion is therefore a
+   **no-cost pilot or a standards conversation**, not a purchase order — price the engagement
+   accordingly instead of forecasting a close.
+
 ### Shape and duration
 
 **10–14 weeks** to a district pilot: 2 weeks jurisdiction pinning and authorisation path, 3 weeks

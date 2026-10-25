@@ -41,6 +41,45 @@ further **4** in **Tier 9 — the evaluation layer** below, for **11** permissiv
 > FSF text. Recorded so a digest sweep does not misread the collision as a fork.
 
 
+## 🆕 `p434` — The permissive foundation tier is unchanged for a **fifth** pass, and this time the sweep says *why* with a number
+
+`p434` promoted two permissive addresses to `agents/top.md`
+([`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow), MIT, `LICENSE` 1 067 B ·
+`b6fac57d4710`; [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai), MIT,
+`LICENSE` 1 067 B · `5731a2d3ccea`). 🔵 **Neither belongs on this file, for `p433`'s reason:**
+both are agent-layer — a learning-path agent and an adaptive-tutoring *runtime seam*. They
+compose onto a base; they are not one.
+
+🔴 **The permissive foundation tier above is unchanged:** OpenOLAT (Apache-2.0), Kolibri (MIT),
+XBlock (Apache-2.0), pykt-toolkit (MIT), smolagents (Apache-2.0). **Five rows, five passes, no
+movement** — and `verticals/solutions.md` records the education-ERP sweep returning a **standing
+nil for the third consecutive pass**.
+
+🟢 **What is new is that the asymmetry `p433` described in prose now has a measured number.**
+This pass graded the seven highest-traction addresses sitting unpromoted in the trending shelves
+and **not one is a foundation, nor is one promotable**:
+
+| ★ band | Addresses | Grants found | Foundations among them |
+|---|---|---|---|
+| ≥ 190 ★ | 5 | 🔴 3 × AGPL-3.0 · 1 × CC-BY-SA-4.0 · 1 × **no licence file** | **0** |
+| < 100 ★ | 2 | 🟢 2 × MIT | **0** |
+
+🔴 **So the asymmetry is sharper than "foundations move slowly".** In education's new supply,
+**traction and permissiveness are anti-correlated** (`repos/trending.md`, `p434`): the biggest new
+addresses are copyleft, content-licensed or ungranted, and the permissive ones are an order of
+magnitude smaller — *and none of either kind is platform-shaped*. 🔵 **Pricing consequence,
+unchanged in direction but now defensible with a count:** a proposal may assume it can adopt a
+fresh permissive **agent**; it may not assume it can adopt a fresh permissive **platform**, and
+it may not use stars as a proxy for adoptability at all. The highest-traction education address
+this base has ever recorded is **4 771 ★ and CC-BY-SA-4.0**.
+
+🟢 **Instrument added this pass**, and it is the reason this file can state the above as a
+standing property rather than a pass observation: `compose/code/p434-promotion-gate`
+(`make gate-promotion`, 28 offline controls, wired into `hooks`) fails whenever a **permissive**
+address recorded in the trending shelves appears in **no** curated shelf. It was **red on its
+first run** and is green after the two promotions, so this tier's completeness is now checked by
+a gate instead of by a pass remembering to look.
+
 ## 🆕 `p433` — The permissive foundation tier did **not** grow, and that is the finding
 
 `p433` promoted three permissive addresses into `agents/top.md` after first-hand payload reads —

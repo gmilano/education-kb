@@ -4,6 +4,171 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p434`
+
+### 🟢 `Gap 433-A` — **CLOSED with a wired instrument, and its prescribed predicate REFUTED**
+
+`p433` declared the trending shelves write-only and said plainly it *"did not build"* the gate.
+🟢 **Built: `compose/code/p434-promotion-gate`** — 28 offline controls, wired as `gate-promotion`
+in `HOOK_GATES` (so it is in `make hooks` *and* `make commit-gates`), **red on its first run**,
+green after the two promotions it forced. The diagnosis is confirmed and quantified: **2 708**
+trending addresses against **276** curated, **2 457** unpromoted.
+
+🔴 **The remedy as prescribed is refuted, on two independent measurements.** The gap asked for a
+gate keyed on *"an address above a threshold (say 150 ★) carries a permissive grade and appears in
+no curated shelf."*
+
+1. **The threshold suppresses every true positive.** All five unpromoted addresses above 150 ★ are
+   non-permissive on first-hand payload reads — `Auto-Empirical-Research-Skills` (**4 771 ★**,
+   CC-BY-SA-4.0), `frametell` (400 ★, AGPL-3.0), `ai-agent-camp` (346 ★, **no licence file**),
+   `deep-student` (290 ★, AGPL-3.0), `sql-to-ER` (192 ★, AGPL-3.0) — while both permissive rows
+   sit **below** it (59 ★, 41 ★). Prescribed predicate: **0** findings. Star-free: **2**.
+2. **The star channel does not exist from inside a run** — see `Gap 434-B`.
+
+🟢 **The corrected predicate is PERMISSIVE + absent-from-every-curated-shelf**, which needs no
+star count, is therefore offline, and is therefore admissible in `hooks` — which the prescribed
+version never could have been. `--predicate p433` keeps the refuted form runnable (controls
+`C8`–`C11`), so the refutation is reproducible rather than a claim in prose.
+
+🔵 **The fair reading of `p433`, recorded so a successor does not over-correct:** its *promotion
+decision* was substantively right — nothing permissive above the threshold was missed, because
+there is nothing permissive above the threshold. What was wrong was the **denominator** behind its
+*saturation* claim: *"26 of 30 already named on a shelf"* counted the **trending** shelves, the
+very shelves the same pass declared write-only. A backlog cannot appear in a denominator that
+contains it.
+
+### 🟢 `Gap 433-B` — **CLOSED, and the answer is the RESTRICTIVE one**
+
+`p433` called this *"the single most consequential open question on these shelves for a North
+America engagement."* **Answered: NYCPS prohibits AI development of IEP and 504 plans.**
+
+The current NYCPS *Guidance on Artificial Intelligence and Screen Time* carries a **"Red: Do Not
+Proceed"** tier naming **IEP and 504 Plan Development** — *"All special education documents are
+developed by qualified professionals"* — citing **IDEA** and **Chancellor's Regulation A-710**. A
+second independent outlet reports educators may not use AI for grading, care and counselling,
+behavioural monitoring **or crafting IEPs or 504 accommodations**.
+
+🟢 **The "contradiction" was a SCOPE distinction, not a conflict.** The red tier addresses *staff*
+use of AI to **develop** the document (🔴 prohibited). The moratorium exemption addresses
+*student-facing* assistive technology delivered under an **already-signed** plan (🟢 exempt from
+the 2K-8 ban). An exemption permitting the *delivery* of granted accommodations says nothing about
+*writing* the plan. 🔵 `p433` read evidence about one subject as evidence about the other — which
+is why it could not reconcile two sources that were never in conflict.
+
+🔴 **Consequence:** `Pattern AL`'s drafting step is **the prohibited act** in NYCPS and
+draft-and-sign does not cure it, because the rule is addressed to who may *develop* rather than
+who may *approve*. `compose/patterns.md` re-scoped: progress monitoring, the parent layer and
+accommodation delivery remain sellable. 🟡 **Grade: two consistent secondaries, no primary** —
+`schools.nyc.gov` is 403 here (`Gap 433-C`). Not to be quoted as read-in-the-official-text.
+
+### 🟡 `Gap 433-C` — **AMENDED, not closed: `p433`'s own description of the egress is imprecise in a load-bearing way**
+
+`p433` wrote that the policy is a forge-and-registry allowlist and that *"`github.com` ... work[s]"*.
+🔴 **Re-measured 2026-10-25: `github.com` HTML is 403, `api.github.com` is 403, and
+`codeload.github.com` is 403.** What answers is **`raw.githubusercontent.com` (200)** and the
+**git smart-HTTP transport** (`ls-remote`, `clone`). 🟢 The *conclusion* `p433` drew is unaffected
+— licence verdicts here are genuinely first-hand, because the raw host is what serves payloads.
+🔴 **But the distinction is load-bearing**, and `Gap 434-B` is why: "github.com works" implies a
+star count is obtainable, and it is not. 🔵 `p228-shelf-gate/fetch_grants.sh` has carried the
+correct statement in a comment for 200+ passes; this register now agrees with it.
+
+### 🔴 `Gap 433-D` — THE ROTATION STILL HAS NOT ROTATED (fifth consecutive pass) — and `p434` measures *why*
+
+`rotation.json` in `gmilano/globant-kb` still reads **`next: 8`** with `last_updated:
+2026-08-02`, `last_industry: technology`. This is **p434** on education. Eleven industries still
+have **zero** passes from this rotation.
+
+🟢 **`p434` adds the mechanism, which four passes carried as an unexplained failure.** The
+scheduled run is constrained to a **designated development branch**
+(`claude/ecstatic-mccarthy-4vyja7`) and is instructed never to push elsewhere without explicit
+permission. 🔵 **So `rotation.json` on `main` cannot be advanced by this run by construction** —
+not a transient error, and not something a further pass can fix by retrying. `p434` writes the
+advance to its designated branch, where it is correct and inert until someone merges it.
+🔴 **What would close it:** an owner merging the rotation branch, or the scheduler being pointed
+at `main` for this one file. Until then every pass lands on education and the brief's stated
+priority order is not being executed. **Cost: one merge.**
+
+### 🔴 `Gap 434-A` — 2 450 UNPROMOTED ADDRESSES ARE UNGRADED, AND THAT IS THE GATE'S REACH BOUND
+
+`gate-promotion` judges the addresses carrying a pinned grade in `grades.2026-10-25.tsv`; this
+pass graded **7**. The remaining **2 450** unpromoted addresses are reported as `UNGRADED` — a
+**REACH bound, not a defect count** (`p228`'s vocabulary and its distinction). 🔵 **Why it is not
+alarming and should not be read as 2 450 missed rows:** the trending shelves are 86 k lines of
+history, and most of those addresses were *graded in prose at the time* as non-permissive,
+rejected or out-of-domain; the census counts citations, not candidates.
+🔵 **Remedy and cost:** an online sweep running `p228-shelf-gate`'s ladder over the unpromoted set
+and committing the result as the gate's grade table — one pass, ~2 450 raw requests at ~1 request
+per address, resumable, and it belongs **outside** `hooks` like the other online arms.
+🟢 **It is also the only way to know whether any permissive address is still stranded**, since the
+gate can only be as complete as its grade table. **Priority: this is the highest-value single leg
+available to `p435`.**
+
+### 🔴 `Gap 434-B` — NO STAR COUNT ON THESE SHELVES IS REPRODUCIBLE FROM `make`
+
+Every ★ figure this base publishes — including `p433`'s *"1 118 ★, the highest-traction new
+education address"* and `p434`'s *"4 771 ★"* — comes from a channel a `make` target **cannot**
+reach. `api.github.com`, `github.com` HTML and `codeload.github.com` are all **403** here; the
+figures come from the agent session's GitHub tool, labelled `stars_channel=mcp-github-search` in
+the gate's grade table.
+
+🔵 **Why it matters rather than being provenance pedantry:** `Gap 433-A` prescribed a gate keyed
+on stars, and this is the reason that gate is unbuildable here — a whole remedy was specified
+against a dead channel. 🔴 **And any gate, census or trend keyed on traction inherits the same
+hole**, silently, because a star figure *looks* like the other first-hand measurements on these
+shelves and is not one. 🟢 **Mitigation already applied:** `gate-promotion` does not depend on
+stars, and the grade table labels the channel per column so the distinction survives into the
+data. 🔵 **Remedy and cost:** either an egress allowlist entry for `api.github.com` (owner fix,
+outside this environment) or a standing rule that star counts are **advisory colour, never a gate
+predicate** — the second is free and is what this pass applies. 🟡 **What must not happen:** a
+successor reading a ★ column as a first-hand measurement of the same grade as a licence payload.
+
+### 🟡 `Gap 434-D` — `gate-dates` CANNOT TELL THE EU AI ACT'S STALE AUGUST-2026 CLAIM FROM VIETNAM'S GENUINE ONE, AND IT FIRED ON THIS PASS
+
+🔵 **Found by being caught.** `gate-dates` (`p223-selfclaim-date-gate`) exists to stop this base
+asserting *"EU AI Act high-risk for education, full effect August 2026"* — a claim it has
+refuted four times. It fired **ASSERTED** on this pass's own APAC amendment, at
+`intel/market.md`, and the gate was **right about its tokens and wrong about the question**: the
+sentence said Vietnam's **Decision 33/2026/QĐ-TTg** is *effective 15 August 2026* and lists *46
+high-risk categories* — both true, neither about the EU.
+
+🔴 **The mechanism, stated precisely so it is fixable.** `SUBJECT` matches a bare `high-risk`,
+with no jurisdiction term required, while `FULL_EFFECT` matches `effective` within 40 characters
+of an August-2026 date. **Any non-EU high-risk regime that genuinely commences in August 2026
+therefore trips a gate written about the EU** — and Vietnam's does, which is why this is a
+collision and not a hypothetical.
+
+🟢 **What this pass did, and what it deliberately did NOT do.** The prose was rephrased (*"took
+effect on 15 August 2026"*, which forms no candidate) and the gate was **left alone**. 🔵
+Weakening an instrument to admit a pass's own sentence is the error this register exists to
+prevent, and `gate-dates` has four real catches to its name. 🔴 **But the hole is real and
+asymmetric**: a *false positive* costs a rephrase, while the same jurisdiction-blindness means a
+future true EU assertion sitting beside a Vietnamese date could be read by a human as "the gate
+already knows about that one."
+
+🔵 **Remedy and cost, measured rather than guessed.** Add an EU-anchor requirement to the
+candidate test — `SUBJECT` must co-occur with `ai act | annex iii | regulation (eu) | digital
+omnibus | 2024/1689`, so a bare `high-risk` beside a non-EU instrument is not a candidate — and
+pin **both** directions with controls: this pass's Vietnamese sentence as the negative, and a
+genuine EU assertion carrying a Vietnamese date in the same paragraph as the positive. 🟢 **Cost:
+one pass, one regex arm, two controls**, and the fixture is already written down above.
+🟡 **Priority: below `Gap 434-A`** — this one costs a rephrase today, that one bounds how much of
+the promotion surface is actually checked.
+
+### 🔵 `Gap 434-C` — THE EMEA SUB-REGIONAL ADOPTION NIL IS NOW THREE PASSES OLD
+
+The EMEA leg returned EU-level regulation (already carried) and 🔴 **nothing at all** on UK, DACH,
+Nordic, Gulf or African *education* adoption — no institutional figures, no national ministry
+guidance beyond the Commission's ethics guidelines. 🔵 This is recorded as a nil because silence
+reads like coverage, and it is now the **third** consecutive pass returning it on the prescribed
+query shape. 🟢 **`p427` already measured the mechanism**: the drought was a query-shape artefact
+and one two-word leg broke it. **Remedy:** stop running `AI education EMEA {year} adoption
+regulation players` and run per-country ministry legs instead (`UK DfE`, `Bundesministerium`,
+`Nordic`), which is the shape that paid for `p427`. **Cost: one pass, four legs.** 🔴 Until then
+an EMEA engagement is served by regulation and by no adoption evidence, while LATAM and APAC both
+have institutional survey numbers — the inverse of what the brief asks for.
+
+---
+
 ## 🆕 `p433`
 
 ### 🔴 `Gap 433-A` — THE TRENDING SHELVES ARE WRITE-ONLY: NOTHING PROMOTES A ROW, AND NOTHING AGES ONE OUT

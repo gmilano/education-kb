@@ -50,6 +50,60 @@ state, is now the layer that decides whether a US build is legal — NYC, Charle
 ISD draw three mutually inconsistent lines, and Ohio and Tennessee *require* per-district policy by
 statute. That changes who the compliance conversation is with.
 
+## 🆕 `p434` · 2026-10-25 — **All four regional legs returned material; no nil. 🟢 `Gap 433-B` is CLOSED and the answer is the RESTRICTIVE one: NYCPS prohibits AI **development** of IEP and 504 plans outright, and the "contradiction" `p433` could not resolve was a scope distinction. 🔴 A second NA fact gates timing rather than scope — NYCPS has PAUSED all educational-software purchases. 🔵 Three of four legs confirmed rather than discovered, and are graded that way.**
+
+🟢 **The decisive regulatory fact, and it closes a gap `p433` called "the single most
+consequential open question on these shelves for a North America engagement".** The current NYCPS
+*Guidance on Artificial Intelligence and Screen Time* carries a **"Red: Do Not Proceed"** tier
+naming **IEP and 504 plan development**, with the operative sentence *"All special education
+documents are developed by qualified professionals"*, citing **IDEA** and 🆕 **Chancellor's
+Regulation A-710** (new to this file). An independent outlet states educators may not use AI for
+grading, care and counselling, behavioural monitoring **or crafting IEPs or 504 accommodations**.
+
+🟢 **The apparent contradiction was never one — it is a SCOPE distinction, and this is the part to
+carry into a client conversation.** `p433` set the red tier against an enacted-policy quote
+exempting IEP/504 from the moratorium and could not reconcile them. They govern different
+subjects: the **red tier** addresses *staff* use of AI to **develop** the document (🔴
+prohibited); the **exemption** addresses *student-facing* assistive technology delivered **under an
+already-signed** plan (🟢 exempt from the 2K-8 ban). An exemption permitting *delivery* of granted
+accommodations says nothing about *writing* the plan. 🔵 `compose/patterns.md` `Pattern AL` is
+re-scoped accordingly: its drafting step is the prohibited act in NYCPS and human sign-off does
+not cure it, while progress monitoring, the parent layer and accommodation delivery remain
+sellable.
+
+🔴 **The second NA fact, and it is a procurement one.** The NYCPS chancellor directed principals
+to **pause all educational-software purchases** pending updated AI guidance. For the largest US
+district the near-term motion is a no-cost pilot or a standards conversation, **not a purchase
+order** — a forecasting fact, not a scope one.
+
+🔵 **Three legs confirmed; they did not discover — recorded as such rather than re-presented as
+findings.** EMEA returned the Digital Omnibus split this base resolved at `p380` (Annex III to
+2 December 2027, Article 50 live since 2026-08-02) and returned 🔴 **nothing** on UK, DACH, Nordic,
+Gulf or African education adoption — a **standing nil**, written down because silence reads like
+coverage. APAC returned Korea's AI Basic Act (22 January 2026, MSIT treating 2026 as a pilot
+period with limited enforcement), Taiwan's AI Basic Act (December 2025) and Vietnam's Decision
+33/2026, all carried; 🆕 **new detail**: 46 high-risk categories across six sectors, three of them
+education, and a sectoral compliance deadline of **1 September 2027** for education, healthcare
+and finance. LATAM returned the Digital Education Council survey at **30 000+ responses across 29
+institutions — 92% of students and 79% of faculty engaging with AI** — and UNESCO IESALC's
+~200-institution, 19-country study, both carried; 🆕 **new detail**: **88% of LATAM faculty report
+only "minimal" to "moderate" engagement**, and faculty adoption is **lowest in assessment uses**
+(cheating detection, feedback generation).
+
+🟢 **`Trend 31` is the synthesis of this pass's legs**: four jurisdictions on three continents have
+converged on the same operative predicate — AI as the **operative basis of a learner decision
+without a human able to intervene** — which makes one architecture portable across all four, and
+makes NYCPS's drafting prohibition the one shape that architecture does *not* cure.
+
+🔴 **The ceiling is unchanged and was re-measured.** `api.github.com`, `github.com` HTML and
+`codeload.github.com` are **403** through this host's proxy; only `raw.githubusercontent.com` and
+git smart-HTTP answer, and no government or news primary is reachable at all. Every regulatory 🟢
+on this file means *"corroborated across independent secondaries"*. `Gap 433-C` is **amended, not
+closed** — `p433` wrote that "`github.com` works", which is true only of the git transport and the
+raw host, and the distinction is load-bearing because it is why no star count on these shelves is
+reproducible from `make` (`Gap 434-B`).
+
+
 ## Market size — use the range, never a single figure
 
 | Segment | 2026 | Horizon | CAGR | Source class |
@@ -88,6 +142,21 @@ high-stakes decisions** about a student. Charleston County extends that to disci
 placement and special-education determination. The federal **K-12 AI Literacy and Readiness
 Act of 2026 (H.R. 8747)** advanced out of committee on 21 July 2026. Districts add their own
 layer: Katy ISD bans generative chatbots for K-6 with scaffolded access to grade 12.
+
+🔴 **🆕 `p434` — AND IN NEW YORK CITY THE IEP DRAFTING ENGAGEMENT IS PROHIBITED, NOT MERELY
+CONSTRAINED.** The current NYCPS guidance's **"Red: Do Not Proceed"** tier names **IEP and 504
+plan development** — *"All special education documents are developed by qualified professionals"* —
+citing **IDEA** and **Chancellor's Regulation A-710**. 🔵 The IEP/504 clause in the moratorium runs
+the other way but addresses a **different subject**: student-facing assistive technology under an
+already-signed plan is *exempt from the ban*, which is not a permission to draft the plan. 🟢 **So
+the NA special-education opportunity splits in two**: *drafting* is closed in NYCPS (and must be
+treated as the base case to disprove elsewhere), while **progress monitoring against existing
+goals, the parent-facing layer, and accommodation delivery** are open — and the third is
+explicitly exempted. `Gap 433-B` closed; `Pattern AL` re-scoped.
+
+🔴 **Timing, not scope: NYCPS has paused all educational-software purchases** pending updated AI
+guidance (chancellor's direction to principals). In the largest US district the sellable motion
+near-term is a no-cost pilot or a standards conversation. Do not forecast a close.
 
 🟢 **`p433` — NEW YORK CITY IS NO LONGER UNCONFIRMED, AND IT IS THE LARGEST SINGLE DISTRICT
 RESTRICTION IN THE COUNTRY.** This shelf carried a 🔴 **UNCONFIRMED** NYC moratorium from `p386`
@@ -250,6 +319,16 @@ sizing.
 - **Vietnam:** the most education-specific rules anywhere. A decree names **automated
   assessment and behavioural monitoring** as high-risk; compliance due **March 2027**, with
   six extra months for systems already running before August 2026.
+  🆕 `p434` **resolved to the instrument and the date.** The decree is **Decision
+  33/2026/QĐ-TTg**, which took effect on **15 August 2026**, issued under **AI Law
+  134/2025/QH15** (itself in force since 1 March 2026) and **Decree 142/2026/NĐ-CP**. It lists
+  **46 high-risk categories across six sectors, three of them education**. 🟢 **The "six extra months" resolves to a stated
+  sectoral deadline: 1 September 2027 for education, healthcare and finance** — so this file's
+  earlier arithmetic was right and now carries the date in the regulation's own terms.
+  🔵 **The predicate matters more than the date for a build:** the designation bites where the
+  output is used **as the official result** of learner evaluation, and it requires human
+  supervision, control **and the ability to intervene while the system operates** — the
+  strictest of the four jurisdictions in `Trend 31`, and therefore the one to build to.
 - **China:** mandatory model. **Japan, Singapore:** voluntary guidance. **Australia:** still
   developing.
 
@@ -311,7 +390,20 @@ Uruguay became the first Latin American country to sign the Council of Europe Fr
 Convention on AI and Human Rights (2025). Colombia set national AI policy via **CONPES 4144**
 (February 2025). Mexico has a 2024 federal bill proposing an oversight authority **and no
 regulator to enforce it**. UNESCO launched a regional **Observatory on AI in Education for
-LAC** in April 2026. 🔴 **Declared gap:** no source found in this pass gives a grounded
+LAC** in April 2026. 🟢 **🆕 `p434` — the adoption number is confirmed and its DEPTH is now measured, which changes
+what to sell.** The Digital Education Council's LATAM survey (**30 000+ responses, 29
+institutions**) reports **92% of students and 79% of faculty** engaging with AI. 🔴 **But 88% of
+faculty report only "minimal" to "moderate" engagement, and faculty adoption is LOWEST in
+assessment uses** — cheating detection and feedback generation. UNESCO IESALC's ~200-institution,
+19-country study reads the same way: adoption is spreading while governance frameworks and
+institutional strategies lag.
+🔵 **So the LATAM opportunity is not "introduce AI" — adoption already happened, broad and
+shallow.** The unserved surfaces are exactly the two the faculty numbers name as weakest:
+**assessment** (the regulated surface, hence `Trend 31`'s draft-and-sign architecture) and
+**governance** (the 26% formal-strategy figure already on this file). Both are advisory and
+platform work rather than tool rollout, and both are billable where a licence purchase is not.
+
+🔴 **Declared gap:** no source found in this pass gives a grounded
 account of *education-specific* AI rules in these countries — the regional instruments are
 general-purpose AI law, not education law.
 

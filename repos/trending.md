@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p434` · 2026-10-25 — **`p433` called the frontier saturated on a denominator that contained the backlog. 🔴 Re-running `p433`'s own query returns a 4 771 ★ education address as the TOP hit, absent from every curated shelf. 🟢 The promotion gate `Gap 433-A` asked for is built and wired — and it refutes the predicate the gap prescribed. 🔵 The trending shelf is no longer write-only.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### The sweep, and the denominator that was wrong
+
+| Channel | Query | Result |
+|---|---|---|
+| GitHub API (via session tool), topic-pinned | `topic:education topic:ai-agent pushed:>2026-09-01`, by stars, top 30 of **204** | 🔴 **`p433`'s exact query, and its top hit is `brycewang-stanford/Auto-Empirical-Research-Skills` at 4 771 ★ / 557 forks** — on no curated shelf. Five addresses ≥ 190 ★ are in the trending shelves and in **no** curated shelf. |
+| GitHub API, narrow | `AI tutor education agent in:name,description stars:>150 pushed:>2026-08-01` | 🔴 **0 results.** A measured nil: the high-traction education-agent supply is not discoverable by name/description, only by topic. Recorded so a successor does not re-spend a leg on this shape. |
+| WebSearch, global | `top open source AI agents education 2026 github MIT` | 🔴 **nil in-domain**, for the second consecutive pass. Returned general-purpose agents only (OpenClaw, opencode, OpenHands, CrewAI, LangGraph) plus two courseware lists. |
+| WebSearch, trending | `github trending education AI 2026` | 🔴 **nil in-domain.** Returned `rohitg00/ai-engineering-from-scratch` (already shelved) and trend-tracker pages. |
+| WebSearch, verticals | `open source platform education ERP CRM MIT Apache` | 🔴 **nil for a permissive education vertical, third consecutive pass.** Returned OpenEduCat (Odoo-based, **LGPL-3.0**), Apache OFBiz (general ERP), general MIT CRMs, and CK-ERP (2010, stale). **There is still no MIT/Apache education ERP** — a standing nil, and why `verticals/solutions.md` leads with OpenOLAT and Kolibri. |
+| WebSearch, 4 regional legs | NA / EMEA / APAC / LATAM | 🟢 One discovery (NA), three confirmations, one standing nil (EMEA sub-regions). Graded in `agents/trending.md`. |
+
+🔴 **`p433` reported *"26 of 30 already named on a shelf; 4 absent, all ≤ 8 ★"* and concluded
+saturation.** Both halves of that are literally true and the conclusion does not follow:
+**"named on a shelf" counted the trending shelves** — the shelves the same pass declared
+write-only in `Gap 433-A`. 🔵 **A backlog cannot show up in a denominator that includes it.** The
+census now publishes the shape instead of a verdict:
+
+| cifra | valor |
+|---|---|
+| addresses on the curated shelves | **276** |
+| addresses on the trending shelves | **2 708** |
+| **unpromoted** (trending, in no curated shelf) | **2 457** |
+| graded first-hand this pass | 7 |
+| ungraded — **REACH bound, not a defect count** | 2 450 |
+
+### The five high-traction unpromoted addresses, graded — and none is promotable
+
+Every grant below was read first-hand off `raw.githubusercontent.com` with
+`p228-shelf-gate`'s own ladder and classifier (not a new one — `T108`), at the HEAD
+`git ls-remote` returned on 2026-10-25.
+
+| Address | ★ | Family | Payload | Why not promoted |
+|---|---|---|---|---|
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | **4 771** | 🔴 **CC-BY-SA-4.0** | `LICENSE` 620 B · `22401c14e67f` @ `7a2437b8fc97` | A **content** licence with ShareAlike, not a software grant. 23 000+ research agent skills across 8 social-science disciplines (Stanford REAP / CoPaper.AI) — genuinely valuable, and **not build-on supply**. The error direction that puts unusable supply into a deliverable, so it is control `C6` of the new gate. |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 400 | 🔴 **AGPL-3.0** | `LICENSE` 34 523 B · `0d96a4ff68ad` @ `b9bcbc2312f8` | Explainer-video director agent, local-first. Network copyleft — `Trend 16`'s packaging boundary applies. |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | 346 | 🔴 **NO-GRANT** | 404 on **every** path of the ladder, both `main` and `master` | Agent-training curriculum for non-engineers. **No licence file at all** — all rights reserved; unusable even as courseware. `Trend 12`'s "published but unreadable" class. |
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) | 290 | 🔴 **AGPL-3.0** | `LICENSE` 34 532 B · `894342980454` @ `c565f0c3043a` | Local-first learning workbench (Anki/FSRS/RAG/Tauri). The closest thing to a permissive spaced-repetition workbench, and it is not one. |
+| [`ystemsrx/sql-to-ER`](https://github.com/ystemsrx/sql-to-ER) | 192 | 🔴 **AGPL-3.0** | `LICENSE` 34 523 B · `8486a10c4393` @ `b9c98048af2a` | SQL/DBML → ER diagram, education-tagged. Teaching-adjacent tooling, copyleft. |
+
+🟢 **Promoted instead — both below `Gap 433-A`'s threshold, which is the refutation:**
+[`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (**MIT**, `LICENSE` 1 067 B ·
+`b6fac57d4710` @ `1c86890946a3`, 59 ★) and
+[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) (**MIT**, `LICENSE` 1 067 B ·
+`5731a2d3ccea` @ `37ba5e28532d`, 41 ★). Rows on `agents/top.md`.
+
+### 🔵 The structural result, stated as a finding about the industry
+
+🟢 **Traction and permissiveness are anti-correlated in education's new open-source supply.** The
+five biggest new addresses are copyleft, content-licensed or ungranted; the two permissive ones
+are an order of magnitude smaller. This is `Trend 10`'s shape one level sharper: the permissive
+supply is not merely in the agent layer, it is in the **small** agent layer, and an engagement
+that filters candidates by stars will systematically select what it cannot use. 🔵 That is also
+why the new gate is keyed on the grant and not on traction.
+
+### 🟢 `Gap 433-A` closed with an instrument, not by hand
+
+`compose/code/p434-promotion-gate` — 28 offline controls, wired as `gate-promotion` in
+`make hooks`/`commit-gates`, **red on its first run**, green after the two promotions. It reuses
+`p351-address-shape` for the population, imports `PERMISSIVE` from `p444-root-vs-tree-family`
+rather than restating it, folds case per `p439`, and refuses an empty argument list per
+`P541`/`Gap 243`. 🔴 It does **not** implement the star threshold the gap prescribed, for two
+measured reasons — the threshold suppresses every true positive, and no channel reachable from a
+`make` target serves a star count (`api.github.com`, `github.com` HTML and
+`codeload.github.com` all **403**; only `raw.githubusercontent.com` and git smart-HTTP answer).
+`Gap 434-A` carries the 2 450 ungraded addresses; `Gap 434-B` carries the star-channel hole.
+
+---
+
 ## 🆕 `p433` · 2026-10-25 — **A measured saturation result: the frontier returned almost nothing new, and the value was sitting unpromoted in this base's own backlog. 🟢 2 of 5 high-traction trending addresses are permissive and move to the foundations/curated tier. 🔴 The other 3 are AGPL-3.0 or flagged. 🔵 The trending shelf had become a write-only log.**
 
 🔵 **Append-only. Nothing below this block was edited.**

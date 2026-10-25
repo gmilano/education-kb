@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 434 — reads 2026-10-25, commit 2026-10-25 — **`Gap 433-A` is CLOSED by the instrument `p433` declined to build — and that instrument REFUTES the predicate the gap prescribed, on two independent measurements. 🟢 `Gap 433-B`, called "the single most consequential open question for a North America engagement", is CLOSED restrictively. 🔴 And `p433`'s "saturated frontier" rested on a denominator that contained the backlog: re-running its own query returns a 4 771 ★ address as the top hit.**
+
+🔵 **No date straddle.** Every leg — four regional WebSearch legs, four global legs, two GitHub
+API sweeps, seven `git ls-remote` probes, seven licence-payload reads and four egress
+measurements — happened **2026-10-25**, and the commit lands **2026-10-25**, so `updated:`
+carries one date on every file.
+
+🟢 **The inherited commit was GREEN, and that is reported first because `p433`'s was not.** A
+baseline `make commit-gates` against `bb5eb78`, run **before this pass wrote a line**, exited
+**0** — **56 blocking gates green**. After this pass's writes the suite runs **57**, the new one
+being `gate-promotion`.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 433-A` CLOSED with a wired, tested, blocking instrument.**
+  `compose/code/p434-promotion-gate` — **28 offline controls**, added to `HOOK_GATES` so it runs
+  in both `make hooks` and `make commit-gates`. **It was RED on its first run**, finding two MIT
+  addresses stranded in the append-only trend record and absent from every curated shelf:
+  [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (**MIT**, `LICENSE` 1 067 B ·
+  `b6fac57d4710`, HEAD `1c86890946a3`) and
+  [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) (**MIT**, `LICENSE` 1 067 B ·
+  `5731a2d3ccea`, HEAD `37ba5e28532d`). Both are now rows on `agents/top.md` — **the first two
+  promoted by an instrument rather than by a pass noticing** — and the gate is green.
+
+- 🔴 **The gap's prescribed predicate is REFUTED, and the refutation is kept runnable rather than
+  asserted.** `Gap 433-A` asked for a gate keyed on a **150 ★ threshold**. All seven unpromoted
+  high-traction addresses were graded on payloads read first-hand, and **every one above the
+  threshold is non-permissive**: `Auto-Empirical-Research-Skills` (**4 771 ★**, CC-BY-SA-4.0),
+  `frametell` (400 ★, AGPL-3.0), `ai-agent-camp` (346 ★, **no licence file at all**),
+  `deep-student` (290 ★, AGPL-3.0), `sql-to-ER` (192 ★, AGPL-3.0) — while **both** permissive
+  rows sit below it, at 59 ★ and 41 ★. As prescribed the predicate fires **0** times; star-free it
+  fires **2**. 🔵 **Traction and permissiveness are anti-correlated in education's new supply**,
+  so a star threshold is a filter against the findings. `--predicate p433` keeps the refuted form
+  runnable (controls `C8`–`C11`).
+
+- 🔴 **Second, independent reason that remedy could never have been built here: the star channel
+  does not exist from inside a run.** `api.github.com`, `github.com` HTML and
+  `codeload.github.com` were each measured at **HTTP 403** through this host's proxy; only
+  `raw.githubusercontent.com` (200) and the git smart-HTTP transport answer. `Gap 433-C` is
+  **amended** accordingly — `p433` wrote that *"`github.com` works"*, which is true only of the
+  git transport and the raw host, and the distinction is load-bearing. Every ★ figure these
+  shelves publish comes from the agent session's GitHub tool, is labelled
+  `stars_channel=mcp-github-search` in the gate's grade table, and is **not reproducible from
+  `make`** → **`Gap 434-B`**, with the standing rule that star counts are advisory colour and
+  never a gate predicate.
+
+- 🔴 **`p433`'s saturation claim rested on the wrong denominator, and the reconciliation is the
+  lesson.** It reported *"26 of 30 already named on a shelf; 4 absent, all ≤ 8 ★"*; re-running
+  `p433`'s own query returns the same **204** total with `Auto-Empirical-Research-Skills` at
+  **4 771 ★** as the **top hit**. Both statements are true at once, because *"named on a shelf"*
+  counted the **trending** shelves — the very shelves that pass declared write-only. 🔵 **A
+  backlog cannot appear in a denominator that contains it.** 🟢 `p433`'s *promotion decision* was
+  substantively correct: nothing permissive above the threshold was missed, because there is
+  nothing permissive above the threshold. The census now publishes the shape instead of a verdict
+  — **2 708** trending addresses against **276** curated, **2 457** unpromoted, **2 450** of them
+  ungraded (a **REACH bound, not a defect count** → `Gap 434-A`).
+
+- 🟢 **`Gap 433-B` CLOSED — and the answer is the restrictive one.** The current NYCPS *Guidance
+  on Artificial Intelligence and Screen Time* carries a **"Red: Do Not Proceed"** tier naming
+  **IEP and 504 Plan Development** — *"All special education documents are developed by qualified
+  professionals"* — citing **IDEA** and **Chancellor's Regulation A-710**. 🟢 **The
+  "contradiction" `p433` could not resolve was never one: it is a SCOPE distinction.** The red
+  tier governs *staff* use of AI to **develop** the document (🔴 prohibited); the moratorium
+  exemption governs *student-facing* assistive technology under an **already-signed** plan (🟢
+  exempt from the ban). An exemption permitting the *delivery* of granted accommodations says
+  nothing about *writing* the plan. 🔴 **So `Pattern AL`'s drafting step is the prohibited act in
+  NYCPS and draft-and-sign does not cure it**, because the rule addresses who may *develop*
+  rather than who may *approve*. 🟢 The same stack minus drafting — progress monitoring, the
+  parent layer, accommodation delivery — remains sellable, and `compose/patterns.md` carries the
+  split. 🟡 **Grade: two consistent secondaries, no primary** (`schools.nyc.gov` is 403 here).
+
+- 🟢 **`Trend 31` added — the one genuinely new piece of market thinking this pass produced.**
+  Vietnam (Decision **33/2026/QĐ-TTg**, under Law **134/2025/QH15** and Decree
+  **142/2026/NĐ-CP**), two US states, two US districts and the EU have converged on the **same
+  operative predicate**: AI as the operative basis of a learner decision **without a human able
+  to intervene**. 🔵 That makes `Trend 3`'s "regulatory divergence" half wrong in the
+  commercially useful half — divergence is real in **scope**, but at the level of **mechanism**
+  one architecture satisfies all four, and two MIT rows already on `agents/top.md` implement it.
+  🔴 **The trap**: draft-and-sign satisfies it only where the regulated act is the **decision**;
+  where the rule addresses **who may develop the document**, sign-off cures nothing — which is
+  exactly NYCPS.
+
+- 🔵 **Four regional legs, graded honestly: one discovery, three confirmations, one standing nil.**
+  **NA** discovered (the NYCPS red tier, plus a 🔴 **purchase pause** — the chancellor directed
+  principals to halt *all* educational-software buying pending new guidance, a timing fact that
+  changes the forecast, not the scope). **APAC** confirmed Korea/Taiwan/Vietnam and added the
+  sectoral compliance deadline of **1 September 2027**, which resolves this base's own "March 2027
+  + six months" arithmetic to the regulation's own date. **LATAM** confirmed the DEC survey
+  (30 000+ responses, 29 institutions; 92% students / 79% faculty) and added its **depth**: 🔴
+  **88% of faculty report only "minimal" to "moderate" engagement and assessment uses are the
+  lowest-adopted**, so the regional opportunity is depth and governance, not introduction.
+  **EMEA** returned 🔴 **nil on UK, DACH, Nordic, Gulf and African education adoption** for the
+  third consecutive pass → **`Gap 434-C`**, with `p427`'s measured remedy named (per-country
+  ministry legs, not the prescribed query shape).
+
+- 🟡 **This pass was caught by one of its own gates and did not weaken it.** `gate-dates` fired
+  **ASSERTED** on the APAC amendment, because `SUBJECT` matches a bare `high-risk` with no
+  jurisdiction term while Vietnam's decree genuinely commences in **August 2026** — the exact
+  month the gate exists to police for the EU. The gate was **right about its tokens and wrong
+  about the question**. 🟢 The prose was rephrased and **the instrument was left alone**;
+  the jurisdiction-blindness is registered as **`Gap 434-D`** with its remedy, its cost and its
+  fixture in both directions.
+
+- 🔴 **`Gap 433-D` — the rotation still has not rotated, fifth consecutive pass, and `p434`
+  measures WHY rather than re-reporting it.** `rotation.json` in `gmilano/globant-kb` still reads
+  `next: 8` with `last_updated: 2026-08-02`. 🟢 **The mechanism:** this scheduled run is
+  constrained to a designated development branch and instructed never to push elsewhere without
+  explicit permission, **so `main` cannot be advanced by this run by construction** — not a
+  transient error, and not fixable by a further pass retrying. The advance is written to the
+  designated branch, where it is correct and inert. **Cost to close: one merge.**
+
+🔵 **Supply note for an engagement:** both promoted rows are **APAC-built**, the fifth consecutive
+pass on which new permissive education supply is APAC-origin. The permissive **foundation** tier
+is unchanged for a fifth pass (OpenOLAT, Kolibri, XBlock, pykt-toolkit, smolagents), and the
+education-ERP sweep returned a **standing nil for the third consecutive pass** — there is still no
+MIT/Apache education ERP.
+
+---
+
+🔵 **The union census, re-derived as the last act before the commit — restated, not back-fitted.**
+`gate-union-currency` fired on this pass's drafts, exactly as `p352` and `p376` are designed to,
+because the two promoted rows and this pass's write-ups changed the harvested denominator.
+
+**2 794** harvested shapes on channel U → **38** are not addresses → **2 756 addresses**.
+
+🔵 **2 756** channel-U addresses and **3 288** channel-B survivors give
+**3 657 addresses over both channels**.
+
+🔵 Channel U is **unchanged** this pass (2 756, `MATCH`): both promoted addresses were already in
+the trending shelves, which is the whole point of a *promotion* pass. Channel B grew by **one**.
+Rejection classes unchanged in kind — `NAV-NAMESPACE` 30, `NAME-REF-OR-PATH` 25, `OWNER-ELLIDED`
+3, `EMPTY-NAME` 2, `OWNER-TEMPLATE-VAR` 1, `PLACEHOLDER-NAME` 1, `PLACEHOLDER-OWNER` 1.
+🔵 Earlier passes' figures below are left exactly as they derived them; this is a restatement, not
+an edit of history.
+
+🔵 **One defect this pass committed and this base's own gate caught before the commit.**
+`p253-gate-propagation` failed on the first wiring of `gate-promotion`: its final
+`echo "   PASS"` step carried no `|| exit 1`, which is precisely the propagation hole `p253`
+exists to pin — a failing step would not have reached the banner, but an unguarded banner step
+can print `PASS` regardless. 🟢 Fixed, suite back to 7/7. 🔵 Recorded because a gate caught the
+pass that was writing a gate, which is the system working.
+
+---
+
 ## Pass 433 — reads 2026-10-25, commit 2026-10-25 — **The frontier is saturated and the value was in this base's own backlog: a 1 118 ★ permissive address had been sitting unpromoted in the trending shelf. 🟢 The `p386` NYC moratorium is CONFIRMED AND ENACTED after forty-seven passes carried it UNCONFIRMED. 🔴 And `make commit-gates` was RED on the inherited commit — `agents/top.md` was publishing two data rows as table headers.**
 
 🔵 **No date straddle.** Every leg — four regional WebSearch legs, two GitHub API sweeps, five

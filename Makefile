@@ -28,6 +28,7 @@ LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
+PROMO_LOG ?= /tmp/education-kb-gate-promotion.log
 DOMAIN_LOG ?= /tmp/education-kb-gate-domain-check.log
 REGIONPLACE_LOG ?= /tmp/education-kb-gate-region-place.log
 BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
@@ -123,7 +124,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
              gate-capability-absence gate-fork-direction gate-group-lineage \
              gate-action-answered gate-commit-gate gate-case-collision \
-             gate-conjunctive-grant gate-branch-alias
+             gate-conjunctive-grant gate-branch-alias \
+             gate-promotion
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -1292,3 +1294,33 @@ install-hooks: ## p423 — install `ingest/pre-commit` into .git/hooks.  Per wor
 gate-case-collision: ## p439 — two spellings of one repository compile to two entities.  WIRED by p423.
 	@cd compose/code/p439-case-collision-gate && { $(PY) -I test_case_gate.py > $(CASEGATE_LOG) 2>&1 || { echo "🔴 p439-case-collision-gate FAILED — its own report follows:" ; sed "s/^/   /" $(CASEGATE_LOG) ; false ; } ; } && echo "── p439-case-collision-gate (9 assertions: the registry/self-link/majority channel order, the site-path and .git negatives)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p439-case-collision-gate/case_gate.py || exit 1
+
+# ---------------------------------------------------------------- p434
+# 🟢 `Gap 433-A` CLOSED — and its prescribed predicate REFUTED by the gate that closes it.
+#
+# `p433` declared the trending shelves write-only (append-only by contract, no promotion
+# path) and prescribed a gate keyed on a STAR THRESHOLD: fail when an address above ~150 ★
+# is permissive and sits in no curated shelf.  `p434` built it and measured two reasons that
+# predicate cannot work here:
+#
+# 🔴 1. The star channel does not exist from inside a run.  `api.github.com`, `github.com`
+#    HTML and `codeload.github.com` are all HTTP 403 through this proxy (re-measured
+#    2026-10-25); only `raw.githubusercontent.com` and git smart-HTTP answer.  That is the
+#    same finding `p228-shelf-gate/fetch_grants.sh` has carried in a comment for 200+ passes,
+#    so the gap prescribed a gate on the one quantity no reachable channel serves.
+# 🔴 2. The threshold suppresses exactly the findings.  All five unpromoted addresses above
+#    150 ★ are non-permissive (3 × AGPL-3.0, 1 × CC-BY-SA-4.0 at 4 771 ★, 1 × NO-GRANT) and
+#    both permissive ones are BELOW it (59 ★, 41 ★).  Prescribed predicate: 0 findings.
+#    Star-free predicate: 2.  Traction and permissiveness are anti-correlated here.
+#
+# 🟢 So the gate is keyed on PERMISSIVE + absent-from-every-curated-shelf, which needs no
+# star count, is therefore fully offline, and is therefore admissible in `make hooks` — which
+# the prescribed version could never have been.  `--predicate p433` keeps the refuted form
+# runnable so the refutation stays reproducible instead of becoming a claim in prose.
+gate-promotion: ## p434 — Gap 433-A: a curated shelf may not be MISSING what the trending shelf already holds
+	@cd compose/code/p434-promotion-gate && { $(PY) test_promotion_gate.py > $(PROMO_LOG) 2>&1 || { echo "🔴 p434-promotion-gate FAILED — its own report follows:" ; sed "s/^/   /" $(PROMO_LOG) ; false ; } ; } && echo "── p434-promotion-gate (28 controls: the 4 771 star CC-BY-SA-4.0 load-bearing negative, Gap 433-A's own predicate refuted at C8-C11, the starless population, the reach bound, p439 case folding, and the P541 empty-input refusals)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p434-promotion-gate/promotion_gate.py findings . || { echo "🔴 p434-promotion-gate/live — a PERMISSIVE address on the trending shelves is in NO curated shelf (rows above)" ; exit 1 ; }
+	@echo "── p434-promotion-gate (the live shelves: no permissive address is stranded in the trend record)" && echo "   PASS" || exit 1
+
+promotion-census: ## p434 — the unpromoted population with its family split.  A backlog, never a failure.
+	@$(PY) -I compose/code/p434-promotion-gate/promotion_gate.py census . || true
