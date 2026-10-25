@@ -1,0 +1,22 @@
+# --- Mexico, SIASE (UANL) — the leg that PAID
+GDSC-UANL/siase-api
+ramomar/siase-schedule-scraper
+Fmaldonado6/SiasePocket
+Julian-ops-vital/Extension-Siase
+iksaku/siase-wrapper
+ramomar/uniswag-chrome
+AdriCabSan/MicroSIASE
+# --- Chile, UCampus (U. de Chile) — thin
+Nyveon/tUcampus
+gaboflowers/mallador_v4
+molguin92/UCampusViz
+Josefrancasrod/ucampus
+# --- Peru, SIAGIE (MINEDU) — thin
+pakazzz/ConsolidacionSIAGIE
+jeanhrm/siagie-analytics
+JoseHz/siagie-scrap
+escalantepoma/tablero-siagie
+# --- Colombia, SIMAT — the single address the disambiguated leg returned
+NiniRodriguez/ProyectoSIMAT
+# --- NEGATIVE CONTROL: the top-starred "UCampus" hit, which is NOT the Chilean platform
+dummerchen/Ucampus

@@ -1,0 +1,13 @@
+country	platform	operator_tier	results_reported	real_education_addresses	verdict	note
+Mexico	SIASE	UNIVERSITY (UANL)	81	6	PAYS	top address 38 stars; richest single-name yield of the pass
+Brazil	SUAP	UNIVERSITY (Instituto Federal network)	732	7	PAYS	homonym present (SUAVE/SUAPP blockchain) but real tier dominates by stars
+Chile	U-Cursos	UNIVERSITY (U. de Chile)	179	6	PAYS	the platform the UCampus leg did NOT reach; 10x the UCampus yield
+Colombia	SIA (UNAL)	UNIVERSITY (U. Nacional)	14	8	PAYS	recorded a NIL by Gap 443-B on the ministry leg; the nil was a wrong-question artefact
+Chile	UCampus	UNIVERSITY (U. de Chile)	76	4	THIN	top-starred hit (dummerchen/Ucampus, 34 stars) is a CHINESE product, u-xiaoyuan
+Peru	SIAGIE	MINISTRY K-12 (MINEDU)	24	4	THIN	all ~0-1 stars; NOT ONE carries a grant file
+Colombia	SIMAT	MINISTRY K-12 (MEN)	906	0	NIL-BY-HOMONYM	drowned by Siemens SIMATIC (PLC); disambiguated leg returned 1 address, 0 stars, 2021, no grant
+Mexico	SAES	MINISTRY/IPN	6600	0	NIL-BY-HOMONYM	drowned by sparse autoencoders (SAE) and SAE J1939
+Uruguay	GURI	MINISTRY K-12 (ANEP)	2700	0	NIL-BY-HOMONYM	drowned by an oh-my-zsh theme, guri-vr and surnames
+Uruguay	Ceibal	MINISTRY K-12 (Plan Ceibal)	238	0	NIL-BY-RELEVANCE	every hit is Jovenes a Programar bootcamp coursework, not integration surface
+Chile	SIGE	MINISTRY K-12 (Mineduc)	21	0	NIL	all 0-1 stars, no platform integration
+Peru	UNMSM (institution name)	UNIVERSITY name NOT platform	884	0	NIL-BY-WRONG-NOUN	the UNIVERSITY name returns coursework; only the SYSTEM-OF-RECORD name returns integrations

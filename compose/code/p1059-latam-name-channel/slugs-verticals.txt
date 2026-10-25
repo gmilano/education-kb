@@ -1,0 +1,3 @@
+suap-ava-suite/moodle-local_suap
+django-by-kelsoncm/django-auth-suap
+luizpicolo/suap_api

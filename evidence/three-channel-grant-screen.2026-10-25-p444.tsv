@@ -1,0 +1,24 @@
+slug	license_path	package_manifest	file_headers	verdict
+cran/TAM	none	DESCRIPTION: GPL (>= 2)	-	GRANTED-VIA-MANIFEST
+cran/catR	none	DESCRIPTION: GPL (>= 3)	-	GRANTED-VIA-MANIFEST
+cran/exams	none	DESCRIPTION: GPL-2 | GPL-3	-	GRANTED-VIA-MANIFEST
+patriciamar/ShinyItemAnalysis	none	DESCRIPTION: GPL-3	-	GRANTED-VIA-MANIFEST
+philchalmers/mirt	none	DESCRIPTION: GPL (>= 3)	-	GRANTED-VIA-MANIFEST
+DMontgomery40/mcp-canvas-lms	none	package.json: MIT	-	GRANTED-VIA-MANIFEST
+general-mudkip/d2l-mcp-server	none	package.json: MIT	-	GRANTED-VIA-MANIFEST
+bycs-lp/moodle-local_ai_manager	none	none	262 of 264 src: GNU GPL v3 or later	GRANTED-VIA-HEADERS
+bycs-lp/moodle-block_ai_chat	none	none	67 of 87 src: GNU GPL v3 or later	GRANTED-VIA-HEADERS
+marcusgreen/moodle-qtype_aitext	none	none	43 of 44 src: GNU GPL v3 or later	GRANTED-VIA-HEADERS
+onbirdev/moodle-webservice_mcp	none	none	14 of 14 src: GNU GPL v3 or later	GRANTED-VIA-HEADERS
+Cristianojr9/sigaa-new-design	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+G3-Devs/siu-auto-asistencia	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+GeminiLight/awesome-ai-llm4education	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+Nutlope/llamatutor	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+Seechange-edu/act-ai-tutor-backend	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+anastasasenov/bbmcps	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+eakarsu/ai-special-education-iep-compliance	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+ernestosrf/sigaa-horarios-extension	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+eth-lre/MathTutorBench	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+grasped-dev/staircase	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+jarodise/Language-Transfer	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL
+loyaniu/moodle-mcp	none	none	0 src	NO-GRANT-IN-ANY-CHANNEL

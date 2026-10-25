@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p444` — **The LATAM academic-portal tier triples, and two things the licence column alone would never have shown: 🔴 across the 37 addresses the PLATFORM-NAME legs returned, the permissive-and-maintained intersection is EXACTLY ONE — and 🟢 the best address of the pass came from a DIFFERENT leg shape entirely, which is the more useful finding**
+
+🟢 **What was added and why it is small.** `p443` opened this tier with six Brazilian and
+Argentine SIGAA/SIU-Guaraní addresses. `p444` ran the same channel at Mexico (SIASE), Brazil
+(SUAP), Chile (U-Cursos, UCampus) and Colombia (SIA UNAL) and verified **37** addresses
+first-hand. Eight carry a permissive grant. **Seven of those eight have not been touched since
+2021.**
+
+🔴 **The cross-tab is the finding, and no single column shows it.** Licence and recency,
+measured over all 37 (`git log -1 --format=%cs` at the probed HEAD):
+
+| grant | 🟢 live (HEAD 2026) | 🟡 2023–2025 | 🔴 dead (≤ 2022) | total |
+|---|---|---|---|---|
+| 🟢 **MIT / BSD** | 🟢 **1** | 1 | 🔴 **6** | 8 |
+| GPL-3.0 | 2 | 3 | 4 | 9 |
+| AGPL-3.0 | 0 | 0 | 2 | 2 |
+| 🔴 **no grant at all** | 5 | 4 | 9 | 🔴 **18** |
+| **total** | **8** | **8** | **21** | **37** |
+
+🔵 **Read the top-left cell.** A screen on licence alone returns eight "build-on" addresses and
+feels like a tier. A screen on licence **and** last commit returns **one**. This base has
+screened on licence and stars for many passes; `p415` already measured stars as a weak positive
+class, and this is the same lesson arriving through the recency axis. **Shelved below with the
+true HEAD date in every row**, because a 2019 MIT scraper against a portal that has since
+changed its HTML is not a starting point — it is a worked example.
+
+### 🟢 The rows that are both permissive and current
+
+🔵 **The second one is the methodological finding of this file.** `sia-unal-bridge` came from
+the platform-name leg that `p443` prescribed. `django-auth-suap` came from a leg this pass ran
+almost as an afterthought — the platform's **expanded name** (*"suap sistema unificado
+administracao"*), asked to find whether the SUAP **platform itself** was open source. It is not;
+but that leg returned **12 results of which 3 are production-grade**, and its best address is
+better engineered than anything the bare-acronym leg found in four countries. **An ecosystem leg
+and a name leg are not the same channel** (`Gap 444-E`).
+
+| Repo | Licence | HEAD | Payload | Role in a build |
+|---|---|---|---|---|
+| 🟢 [django-by-kelsoncm/django-auth-suap](https://github.com/django-by-kelsoncm/django-auth-suap) | 🟢 **MIT** | `1f0b4e1a` · **2026-09-05** | `LICENSE.md` 1 065 B · `113d1a85e628` | 🟢 **LATAM — Brazil. The strongest LATAM address on these shelves, and the direct answer to this pass's IFRN finding.** Django **OAuth2 authentication backend for SUAP**, the Instituto Federal academic-management system — i.e. *the same job as `ifrn-oficial/cliente_suap_django`, which carries no grant at all*. 245 files: **98 `.py`, 92 `.rst` of Sphinx documentation**, published to **PyPI as `django-suap-auth`**, GitHub Actions CI + Codecov + pre-commit, `SECURITY.md`, bilingual PT-BR/EN README, declared support for **Django 5.2 and 6.0**, and an `audit/` submodule with middleware, migrations and an `audit_archive` management command. 🔵 This is the one row in the tranche that looks like a maintained library rather than a student utility, and it is the row an IFRN-network engagement should start from. |
+| 🟢 [gabotachak/sia-unal-bridge](https://github.com/gabotachak/sia-unal-bridge) | 🟢 **MIT** | `c8c25ddaac12` · **2026-10-16** | `LICENSE` 1 085 B · `7521387e0869` | 🟢 **LATAM — Colombia.** JSON API over the SIA (Sistema de Información Académica) subject catalogue of the Universidad Nacional de Colombia. **301 files, Go (76) + TypeScript (42) + TSX (37)** — a deployed service with a front end, not a scraper script, and **the only address of the 37 platform-name hits that is simultaneously permissive and maintained**. Read first-hand 2026-10-25. |
+| 🟢 [luizpicolo/suap_api](https://github.com/luizpicolo/suap_api) | 🟢 **MIT** | `718183f6` · 🟡 **2023-03-02** | `LICENSE.txt` 1 078 B · `798df9e7634a` | **LATAM — Brazil.** Ruby wrapper for the SUAP API, written against **IFMS** rather than IFRN — 🔵 the one address in the tranche that evidences the SUAP API is **shared across more than one Instituto Federal**, which is what makes a SUAP integration reusable beyond a single institution. 24 files. |
+
+### 🟡 Permissive but stale — shelved as reference implementations, dated so nobody mistakes them
+
+Each is a *worked example of the integration shape* for its platform, not a dependency to take.
+🔴 **Every HEAD below predates 2025**; the portals they read have had five or more years to
+change.
+
+| Repo | Licence | HEAD | Payload | Role in a build |
+|---|---|---|---|---|
+| [Open-Source-eUdeC/UdeCursos-bot](https://github.com/Open-Source-eUdeC/UdeCursos-bot) | 🟢 **MIT** | `cab987ccd1a5` · 🟡 **2024-03-17** | `LICENSE` 1 074 B · `198619b5e4a3` | **LATAM — Chile.** Telegram bot over **UdeCursos**, Universidad de Concepción's course platform. 29 files, Python (18). The freshest permissive *agent-shaped* LATAM address: a working model of the notify-the-student pattern, 8 ★. |
+| [ivmelo/suap-api-php](https://github.com/ivmelo/suap-api-php) | 🟢 **MIT** | `fc2a679fe78a` · 🔴 **2021-04-13** | `LICENSE` 1 071 B · `8dd4b842ad4d` | **LATAM — Brazil.** PHP wrapper for the **SUAP** API (Instituto Federal network). 34 ★ — the most-starred *licensed* SUAP address, and the licensed counterpart to IFRN's own unlicensed clients (see the publisher split in `agents/trending.md`). 7 files. |
+| [Projeto-SIAC/suap-wrapper](https://github.com/Projeto-SIAC/suap-wrapper) | 🟢 **MIT** | `bfe75f6147c3` · 🔴 **2019-03-12** | `LICENSE` 1 061 B · `7d6794d36990` | **LATAM — Brazil.** JS wrapper for the SUAP API, 12 ★, 8 files. Second licensed SUAP read seam; useful as the Node-side shape where `suap-api-php` gives the PHP one. |
+| [juan-c-cardenas/sia-scraper](https://github.com/juan-c-cardenas/sia-scraper) | 🟢 **MIT** | `e557dac6c26d` · 🔴 **2020-08-18** | `LICENSE` 1 085 B · `ca571ae2faa5` | **LATAM — Colombia.** SIA UNAL course-documentation scraper, 7 files, JS. The scrape-path counterpart to `sia-unal-bridge`'s API path, and the cheaper read when only the catalogue is needed. |
+| [ramomar/siase-schedule-scraper](https://github.com/ramomar/siase-schedule-scraper) | 🟢 **MIT** | `d5713cf636d2` · 🔴 **2019-12-07** | `LICENSE` 1 077 B · `09c43d110fc7` | **LATAM — Mexico.** Timetable scraper for **SIASE** (UANL), JavaScript, 10 ★, 5 files. Smallest complete worked example of the SIASE read in the tranche. |
+| [ramomar/uniswag-chrome](https://github.com/ramomar/uniswag-chrome) | 🟢 **MIT** | `c62306458f04` · 🔴 **2019-07-06** | `LICENSE` 1 070 B · `b36468e555d3` | **LATAM — Mexico.** SIASE integrated with Todoist and Google Drive as a Chrome extension, 21 files. 🔵 The only address in the tranche that pushes portal data **outward into a third-party productivity tool** — the shape an engagement is usually asked for, implemented once, in 2019. |
+| [molguin92/UCampusViz](https://github.com/molguin92/UCampusViz) | 🟢 **BSD** · 1 514 B | `eabef308b7d8` · 🔴 **2019-01-16** | `LICENSE` 1 514 B · `3510752bf472` | **LATAM — Chile.** Course-prerequisite dependency graph for FCFM, Universidad de Chile. ⚠️ **Shelved with a caveat read from its own tree: 289 of its 297 files are `.html`** — it is a *generated artefact dump* with one `.py`, so it is evidence that the UCampus prerequisite graph is extractable, not a library to import. |
+
+🔵 **Not promoted, and named so the absence is informed:** the 18 ungranted addresses
+(`Gap 444-C`), among them an **MCP server** (`sebassg/sia-unal-mcp`, TypeScript, HEAD
+2026-03-12) and **three official IFRN OAuth2 clients totalling 81 ★**. They are live, they are
+relevant, and there is no right to use them. Every one is listed with its HEAD and grant state
+in [`evidence/verified-repos.2026-10-25-p444.tsv`](../evidence/verified-repos.2026-10-25-p444.tsv).
+
+---
+
+
 # 🏗️ Foundational repos — Education
 
 ## 🆕 `p443` — **The tier grows by FIVE after six passes of zero, and not one of them came from a search this base had not already run. 🔴 They were in its own append-only record, unshelved, and invisible to the promotion ledger**

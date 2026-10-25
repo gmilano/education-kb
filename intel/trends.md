@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 43 — `p444` **The LATAM education integration layer is not permissive and not copyleft: it is UNLICENSED. 18 of 37 addresses carry no grant at all, and `Trend 42` — published one pass ago — does not survive the larger denominator**
+
+🔴 **The correction first, because this base published the claim it is correcting.**
+[`Trend 42`](#) (`p443`) states that the open-source education supply is *permissive on the
+student's side of the glass and copyleft on the institution's*, measured over **one tranche of 8
+Brazilian and Argentine addresses**: 6 permissive (5 MIT, 1 Apache-2.0), 2 GPL-3.0.
+
+`p444` measured the **same side of the same glass** in four more countries — Mexico, Brazil,
+Chile, Colombia — over **37 addresses**, every one read first-hand this hour:
+
+| grant | n | share | `Trend 42` predicted |
+|---|---|---|---|
+| 🔴 **no grant file at all** | 🔴 **18** | 🔴 **49 %** | not a category it had |
+| GPL-3.0 | 9 | 24 % | — |
+| 🟢 MIT | 7 | 19 % | 🟢 the majority |
+| AGPL-3.0 | 2 | 5 % | — |
+| 🟢 BSD | 1 | 3 % | 🟢 the majority |
+
+🔵 **Permissive is 22 %, not 75 %, and the modal outcome is no licence at all.** `Trend 42` was
+not wrong about its eight rows — re-read, all eight reproduce. It was **too small to carry the
+claim it was used for**, and the claim it was used for was a composition decision: *"connectors
+are safe to vendor, platforms are not."* On the larger denominator that is false for half the
+connectors, and the failure mode is worse than copyleft, because copyleft at least grants.
+
+🔴 **A missing LICENSE is not a permissive default and it is not an oversight to work around.**
+Absent an express grant, the default is exclusive copyright: no right to copy, modify or
+redistribute. A GPL-3.0 connector can be integrated under known obligations. An unlicensed one
+**cannot be used at all**, however public the repository is, and however obviously the author
+meant it to be shared.
+
+### 🔴 And the unlicensed half is not the junk half, which is what makes it expensive
+
+The intuition is that ungranted repositories are abandoned student scratch work. Measured
+against last-commit dates, that intuition is **wrong**:
+
+| | 🟢 live (HEAD 2026) | 🟡 2023–25 | 🔴 dead (≤ 2022) |
+|---|---|---|---|
+| 🟢 MIT / BSD | 🟢 1 | 1 | 6 |
+| GPL-3.0 | 2 | 3 | 4 |
+| 🔴 **no grant** | 🔴 **5** | 🔴 **4** | 9 |
+
+🔴 **Five of the eight most recently maintained addresses in the whole tranche carry no
+licence**, against **one** permissive one. Among them: `sebassg/sia-unal-mcp`, an **MCP server**
+for a Colombian national university's system of record (TypeScript, HEAD 2026-03-12), and
+`jeanhrm/siagie-analytics` (Laravel, 146 files, HEAD 2026-08-22). 🔵 **The licence frontier does
+not track quality or activity — it tracks nothing at all**, which means a licence screen cannot
+be deferred to a late diligence step: the best-maintained candidate is as likely to be unusable
+as the worst.
+
+---
+
+## 🆕 Trend 44 — `p444` **Where the institution publishes the integration code itself, it publishes it WITHOUT a grant — and the third-party copy is the licensed one**
+
+🟢 **Measured on the one tranche where both publisher classes exist at once.** Brazil's SUAP
+ecosystem (Instituto Federal network) contains both institutional and individual publishers, at
+comparable star counts:
+
+| publisher class | addresses | combined ★ | grants |
+|---|---|---|---|
+| 🏛️ **the institution** (`IFRN/`, `ifrn-oficial/`) | 3 | **81** | 🔴 **0 of 3** |
+| 👤 **individuals / student projects** | 4 | 71 | 🟢 **3 of 4** (2 MIT, 1 AGPL-3.0) |
+
+🔴 **So the *sanctioned* integration path — official OAuth2 clients for Django and JavaScript,
+and an API client suite, maintained under the institution's own GitHub organisations — is the
+one with no right of use.** The engagement that reaches for the official client *because* it is
+official reaches for the only one it cannot ship.
+
+🟢 **The resolution exists and is on the shelf**, which is why this is a trend and not just a
+complaint: [`django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap) — **MIT,
+HEAD 2026-09-05**, 98 Python files, 92 `.rst` of Sphinx docs, on PyPI, with CI, Codecov and a
+`SECURITY.md` — does the *same job* as the unlicensed `ifrn-oficial/cliente_suap_django`, and
+does it better. 🔵 **The individual's package is more professionally maintained than the
+institution's**, which inverts the usual assumption about which to prefer.
+
+🔵 **Why it probably generalises.** An institution publishes code as a *service to its own
+users*, not as a product for redistribution, so nobody in the chain has a reason to pick a
+licence. An individual publishes to a package registry — PyPI, Packagist, npm — and **a registry
+asks for a licence field**. The forcing function is distribution, not governance.
+
+🔴 **What is NOT established:** this is one network in one country. `Gap 444-A` prescribes the
+test — probe the institutional GitHub organisations behind the paying platforms (UANL,
+U. de Chile, UNAL, the SIGAA operators) and count grant presence **by publisher class**, not by
+stars. Until then this is a one-tranche trend with a mechanism, not a measured law.
+
+### 🟢 The engagement rule, usable today
+
+1. 🔴 **Never start from an institution's own client.** Check its grant first; expect none.
+2. 🟢 **Prefer the registry-distributed third-party package** — PyPI/Packagist/npm presence is a
+   weak but real proxy for a licence actually having been chosen.
+3. 🟡 **For a Moodle-side component, expect GPL-3.0 and treat it as coherent**, not as a problem:
+   the host platform already imposes it (`moodle-local_suap`, HEAD 2026-10-19).
+4. 🔵 **Ask.** 18 addresses here are one polite issue away from being usable, and no pass on this
+   base has ever tested whether asking works (`Gap 444-C`).
+
+---
+
+
 ## 🆕 Trend 42 — `p443` **In every region, the open-source education supply is permissive on the student's side of the glass and copyleft on the institution's — and the boundary is the system of record**
 
 🟢 **The claim, with the first LATAM denominator behind it.** This base has recorded a "licence

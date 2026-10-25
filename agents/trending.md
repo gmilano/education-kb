@@ -4,6 +4,174 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p444` · 2026-10-25 — **`Gap 443-B` is paid, and four of its five "nils" were the wrong question, not an absence. 🟢 The variable is not the country and not the string: it is WHO OPERATES THE PLATFORM — 6 of 8 university-system legs pay, 0 of 5 ministry legs do. 🔴 And across 37 addresses verified first-hand, the modal grant is NO GRANT AT ALL (18, 49 %), which refutes `Trend 42` one pass after this base published it.**
+
+🔵 **What `p443` handed this pass.** `Gap 443-B` listed five countries where the
+platform-name channel was "entered and unpaid or unentered": **SIAGIE** (Peru), **SIMAT**
+(Colombia), **SIGE**/**UCampus** (Chile), **SAES**/**SIASE** (Mexico), **GURI**/**CREA-Ceibal**
+(Uruguay) — and said plainly that Peru, Colombia, Chile and Uruguay *"returned nothing on the
+name leg, and that is an unverified nil rather than an absence"*. It was right to hedge. Run
+again, in the shape below, **three of those four countries have supply.**
+
+### 🟢 The twelve legs, every one run this hour
+
+Platform proper noun alone, sorted by stars, no capability words — `p443`'s shape, unchanged.
+Full table: [`evidence/latam-name-channel.2026-10-25-p444.tsv`](../evidence/latam-name-channel.2026-10-25-p444.tsv).
+
+| country | platform | who operates it | hits | real education addresses | verdict |
+|---|---|---|---|---|---|
+| 🇲🇽 Mexico | **SIASE** | 🟢 UNIVERSITY (UANL) | 81 | **6** | 🟢 **PAYS** — top address **38 ★** |
+| 🇧🇷 Brazil | **SUAP** | 🟢 UNIVERSITY (Instituto Federal network) | 732 | **7** | 🟢 **PAYS** — 34/29/29/23 ★ |
+| 🇨🇱 Chile | **U-Cursos** | 🟢 UNIVERSITY (U. de Chile) | 179 | **6** | 🟢 **PAYS** — top **24 ★** |
+| 🇨🇴 Colombia | **SIA** | 🟢 UNIVERSITY (U. Nacional) | 14 | **8** | 🟢 **PAYS** — incl. an **MCP server** |
+| 🇨🇱 Chile | UCampus | 🟢 UNIVERSITY (U. de Chile) | 76 | 4 | 🟡 THIN — and see the homonym below |
+| 🇵🇪 Peru | SIAGIE | 🔴 MINISTRY K-12 (MINEDU) | 24 | 4 | 🟡 THIN — all ~0–1 ★, **not one carries a grant** |
+| 🇨🇴 Colombia | SIMAT | 🔴 MINISTRY K-12 (MEN) | 906 | **0** | 🔴 NIL — drowned by **Siemens SIMATIC** |
+| 🇲🇽 Mexico | SAES | 🔴 MINISTRY / IPN | 6 600 | **0** | 🔴 NIL — drowned by **sparse autoencoders**, SAE J1939 |
+| 🇺🇾 Uruguay | GURI | 🔴 MINISTRY K-12 (ANEP) | 2 700 | **0** | 🔴 NIL — drowned by an **oh-my-zsh theme** |
+| 🇺🇾 Uruguay | Ceibal | 🔴 MINISTRY K-12 | 238 | **0** | 🔴 NIL — every hit is bootcamp **coursework** |
+| 🇨🇱 Chile | SIGE | 🔴 MINISTRY K-12 (Mineduc) | 21 | **0** | 🔴 NIL |
+| 🇵🇪 Peru | *UNMSM* | ⚠️ the INSTITUTION's name, not its platform's | 884 | **0** | 🔴 NIL — **and this one is my own error, below** |
+
+### 🟢 H1, registered before the leg that tested it
+
+The split above is **6 of 8 university-operated legs paying** (counting `p443`'s SIGAA and SIU
+Guaraní, both university, both paid) against **0 of 5 ministry-operated legs**. The hypothesis
+was written down *before* the test leg ran —
+[`scratchpad/p444/predictions.txt`](../scratchpad/p444/predictions.txt) — because H1 was derived
+from legs already run, and testing it on those same legs would have been post-hoc:
+
+> **H1** — the variable is not the COUNTRY and not the string's rarity. It is **who operates
+> the platform.** University platforms accumulate third-party integration supply because the
+> students blocked by them can code and have the itch; ministry-run K-12 systems do not,
+> because the blocked parties are teachers and administrators, who are not the developer
+> population.
+
+🟢 **P1 (named Colombia and Peru before the leg): CONFIRMED by Colombia.** The country whose
+ministry leg returned **literally nothing** returns **8 real SIA UNAL integration addresses** —
+a scraper tier, a JSON bridge, and `sebassg/sia-unal-mcp`, **the second agent-addressable LATAM
+address this base has ever found**. The nil `Gap 443-B` recorded for Colombia was an artefact
+of asking about the *ministry's* K-12 enrolment system instead of the *university's* system of
+record.
+
+🔴 **P2 (the falsifiable half): CONFIRMED, and it is the unwelcome half.** P2 predicted that
+what P1 returned would be *majority without a grant file*. Measured: **5 of Colombia's 8 carry
+no grant at all.** A confirmed prediction here is bad news, not good — see the census below.
+
+### 🔴 My own error, recorded rather than quietly dropped
+
+The first attempt at P1 searched **`UNMSM`** — Peru's *university's name*. It returned **884
+results of coursework**: course repos, lab exercises, competitive-programming material. That is
+the identical failure mode as the Ceibal leg, and I walked into it one leg after writing the
+Ceibal row down.
+
+🔵 **So H1's statement needed correcting on its first test:** the channel is not *"name the
+university"*. It is **name the SYSTEM OF RECORD the university runs** — SIGAA, SIU Guaraní,
+SIASE, SUAP, U-Cursos, SIA. The institution's own name returns the institution's *teaching
+output*; only the platform's name returns the platform's *integration surface*. Peru therefore
+remains **unpaid, not absent**: the ministry leg (SIAGIE) is thin-and-ungranted, and the
+university-platform leg has never been run under the right noun (`Gap 444-B`).
+
+### 🔴 The homonym, which is the channel's real failure mode and is the majority case
+
+`p443` bought this channel on **SIGAA** and **SIU Guaraní** — two rare strings. Of the five
+ministry nils above, **three are not absences at all**: the acronym collides with a larger
+non-education namespace and stars rank the collision first.
+
+| platform | what actually owns the string | hits returned |
+|---|---|---|
+| SIMAT | **Siemens SIMATIC** — S7 PLC tooling | 906 |
+| SAES | **sparse autoencoders** (interpretability) + SAE J1939 | 6 600 |
+| GURI | an **oh-my-zsh theme**, `guri-vr`, personal surnames | 2 700 |
+
+🔴 **And the collision reaches the legs that "paid", not just the nils.** The top-starred hit on
+the **UCampus** leg is [`dummerchen/Ucampus`](https://github.com/dummerchen/Ucampus) at **34 ★** —
+*解放双手，u校园的题再也不用写啦* — a **Chinese** automation tool for **u校园**, an unrelated
+English-learning platform, verified first-hand this hour at `21190df0`, **GPL-2.0 ·
+18 092 B · `8177f9751321`**. It outranks every genuine Chilean address on its own leg by an
+order of magnitude. It is carried on these shelves as a **negative control** and on no sell row.
+
+🔵 **The rule that follows, and it is cheap to apply:** a 4–6 letter government acronym is
+*likely* to be owned by an industrial or ML namespace, and a stars-sorted first page will then
+show a different continent's product. **Sort order cannot disambiguate a proper noun; only the
+operator can.** Check who runs the platform before trusting the leg, and read the top hit's
+language before trusting the rank.
+
+### 🔴 The census that refutes `Trend 42`, one pass after this base published it
+
+All **37** education addresses from the three legs, each read first-hand this hour — existence
+and default branch by `git ls-remote`, **every** grant path by `git ls-tree -r` over a blobless
+clone (`p442`), every payload measured from the file by `lib/measure` so `P834`'s
+trailing-newline run survives into the cell. Full table:
+[`evidence/verified-repos.2026-10-25-p444.tsv`](../evidence/verified-repos.2026-10-25-p444.tsv).
+
+| grant | n | share |
+|---|---|---|
+| 🔴 **NO GRANT FILE AT ALL** | 🔴 **18** | 🔴 **49 %** |
+| GPL-3.0 | 9 | 24 % |
+| 🟢 MIT | 🟢 7 | 19 % |
+| AGPL-3.0 | 2 | 5 % |
+| 🟢 BSD | 🟢 1 | 3 % |
+
+🔴 **`Trend 42`, published by `p443` on this base one pass ago, says the student/teacher side of
+the glass is permissive — 6 of 8 addresses, 5 MIT and 1 Apache-2.0.** Measured over **37**
+addresses instead of 8, on the same side of the same glass, in four more countries: **permissive
+is 22 %, and the modal outcome is no licence at all.** `p443`'s tranche was not wrong about its
+own eight rows; it was **too small to carry the claim it was used for**, and the claim has been
+corrected on the shelf rather than left standing (see `intel/trends.md`, `Trend 43`).
+
+### 🔴 The sharpest commercial fact of the pass: the institution publishes, and does not licence
+
+Brazil's SUAP tier splits by **who published it**, and the split runs exactly the wrong way for
+a buyer:
+
+| address | ★ | published by | grant, read first-hand |
+|---|---|---|---|
+| [`IFRN/suapi`](https://github.com/IFRN/suapi) | 29 | 🏛️ **the institution** | 🔴 **NONE** · `e0691d9cf65c` |
+| [`ifrn-oficial/cliente_suap_django`](https://github.com/ifrn-oficial/cliente_suap_django) | 29 | 🏛️ **the institution** | 🔴 **NONE** · `07542cd45391` |
+| [`ifrn-oficial/cliente_suap_javascript`](https://github.com/ifrn-oficial/cliente_suap_javascript) | 23 | 🏛️ **the institution** | 🔴 **NONE** · `d928104faea6` |
+| [`ivmelo/suap-api-php`](https://github.com/ivmelo/suap-api-php) | 34 | 👤 a student | 🟢 **MIT** · 1 071 B · `8dd4b842ad4d` |
+| [`Projeto-SIAC/suap-wrapper`](https://github.com/Projeto-SIAC/suap-wrapper) | 12 | 👤 a student project | 🟢 **MIT** · 1 061 B · `7d6794d36990` |
+
+🔴 **81 ★ of officially-published, institutionally-maintained OAuth2 client — the *sanctioned*
+integration path into the Instituto Federal network — carries no grant, so there is no right to
+use it.** The addresses that *are* licensed are the third-party ones. An engagement that reaches
+for the official client because it is official reaches for the one it cannot legally vendor;
+the correct move is `suap-api-php` **plus** a written request to IFRN to put a licence on
+`suapi` (`Pattern AW`, `compose/patterns.md`).
+
+🔵 **This generalises `p443`'s "the licence frontier runs the wrong way" into something
+sharper and testable:** the frontier is not *institution-copyleft vs student-permissive*. In
+this tranche the institutions **did not licence at all**, and it is the students who attached
+MIT. `Gap 444-A` registers the obvious next measurement — whether that holds outside Brazil.
+
+### 🟢 What is shelved, and what is deliberately not
+
+**Promoted to `repos/foundations.md`** — the 8 permissive rows, every cell built by
+`lib/measure` this hour. **Promoted to `agents/top.md`** — only the agent-addressable rows, and
+`sia-unal-mcp` is shelved **as a flagged row, not a build-on row**, because an MCP server with
+no grant is not something Globant can ship.
+
+🔴 **Not shelved, and the reason is the point:** the 18 ungranted addresses are **not** sell
+rows. They are recorded in the evidence TSV and named in the census, because an informed
+"cannot use this" is worth more than silence — and because `Gap 444-C` asks whether a polite
+issue asking for a licence would move any of them.
+
+### 🆕 Gaps this pass hands forward
+
+| gap | what it says |
+|---|---|
+| 🆕 `Gap 444-A` | 🔴 **Does "the institution publishes and does not licence" hold outside Brazil?** Measured on IFRN's three official clients (81 ★, zero grants) against two MIT student wrappers. 🟢 **Prescription:** probe the *institutional* GitHub orgs behind the paying platforms — UANL, U. de Chile, UNAL, the federal-university SIGAA operators — and count grant presence by publisher class, not by star count |
+| 🆕 `Gap 444-B` | 🟡 **Peru is unpaid, not absent, and the leg to run is now named.** The ministry leg (SIAGIE) returned 24 thin, ungranted addresses; the leg that would test H1 for Peru — the SYSTEM-OF-RECORD name of a large Peruvian university, not `UNMSM` — has never been run. The same hole stands for Uruguay (a UdelaR platform noun) and for Mexico beyond UANL |
+| 🆕 `Gap 444-C` | 🟡 **49 % of the tranche is unusable for the cheapest possible reason.** 18 of 37 addresses carry no grant; several are active, and two are an MCP server and an official OAuth2 client. No instrument here has ever tested whether *asking* works. 🔵 One issue per address, on the five most engagement-relevant, is a one-hour experiment with a measurable outcome |
+| 🆕 `Gap 444-D` | 🔴 **The homonym is unmeasured on the shelves themselves.** This pass found a 34 ★ Chinese product topping a Chilean platform's leg. Nothing has ever checked whether an existing *sell* row was shelved off a colliding proper noun, and `agents/top.md`'s regional placement is the field that would be wrong |
+| 🔴 `Gap 443-A` | 🔴 **Untouched this pass.** The promotion ledger's population is still not derived from the record; `PROMO_RATCHET = 148` still measures claims, not findings |
+| 🟢 `Gap 443-C` | 🟢 **CLOSED.** Instrument built, 27/27 offline, run over this tranche and the shelf — see `repos/trending.md` |
+| 🟢 `Gap 436-D` | 🟢 **CLOSED.** LATAM adoption no longer quoted through a newspaper column — see `intel/market.md` |
+
+---
+
+
 ## 🆕 `p443` · 2026-10-25 — **The LATAM arm, bought at last — and what bought it was the PLATFORM NAME, a variable this base had not tried. 🔴 Six of the addresses were already in this record and on no shelf, and the promotion ledger cannot see them: **2 361** record addresses are absent from the only instrument that tracks promotion. 🔴 And one active Brazilian municipal platform states **BSD-3-Clause** in its README while its payload is **GPL-2.0**.**
 
 🔵 **Why this pass went at the region and not at the shelf.** The census is one line and it has

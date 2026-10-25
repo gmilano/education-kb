@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p444` · 2026-10-25 — **`Gap 443-C` CLOSED: the README-vs-payload comparator exists, 43/43 offline, and its first run over all 321 sell rows found ONE genuine divergence — the one `p443` had already caught by hand. 🔴 The other four "findings" were defects in the instrument. 🔴 And the sweep found something it was not looking for: a grant lives in at least THREE channels, and every instrument on this base reads ONE.**
+
+### 🟢 The instrument `Gap 443-C` asked for
+
+`Gap 443-C`: *"this base has no instrument that compares the README's stated grant against the
+payload's. `ipti/br.tag` was caught by hand… which is the direction that costs money when the
+README is the permissive one."*
+
+Built as [`compose/code/p1060-readme-vs-payload/`](../compose/code/p1060-readme-vs-payload/):
+`readme_claim.py` (the README side — the only half that did not exist), `compare.py` (the join),
+`test_readme_claim.py` (**43/43, offline, real fixtures**). 🔵 The payload side is
+`lib/license_family.sh`'s `family_of` and is **not reimplemented** — `P237`/`P197`: a sweep
+written from scratch re-imports every defect already paid for.
+
+**The whole instrument is one idea: a licence NAME is not a licence CLAIM.** A README saying
+*"unlike the GPL-3.0 projects in this space"* names GPL-3.0 and claims nothing. So every match
+must sit in a claim context — `BADGE`, `PROSE` (*"licensed under X"*), or `SECTION` (under a
+`## License` heading) — and HTML comments are stripped first, because **`ipti/br.tag`'s
+BSD-3-Clause shield is commented out** (`p443` recorded this): a badge-only comparator either
+reads a dead shield or sees nothing. The live claim is its `## Licença` section. **`SECTION` is
+load-bearing, and the suite asserts that this case grades `SECTION` and never `BADGE`.**
+
+### 🔴 The first run over the shelf: 5 candidate findings, 4 of them mine
+
+Every one of the **321** addresses on `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md` was probed first-hand — **999 grant paths**, 6 parallel shards, **0
+shard failures**, `321 asked / 321 reported`. Verdicts:
+
+| verdict | n |
+|---|---|
+| `README-SILENT` | 152 |
+| 🟢 `AGREE` | 🟢 **151** |
+| `NO-PAYLOAD` (a claim, no grant file) | 9 |
+| `NO-README` | 6 |
+| `DUAL-GRANT-DECLARED` | 2 |
+| 🔴 `README-MORE-PERMISSIVE` | 🔴 **1** |
+
+🟢 **The one survivor is `ipti/br.tag`** — README `## Licença` states *"The BSD-3-Clause"*,
+payload is **GPL-2.0 · 18 027 B · `111e1f411730`** — which `p443` had already caught by hand.
+🔵 **So the shelves' licence cells are sound: across 321 rows there is no undetected
+README/payload divergence.** That is a dull headline and a good result, and it is the first time
+this base can say it from a measurement instead of an absence of complaints.
+
+🔴 **The four that did not survive were defects in the instrument, each caught by verifying a
+finding BEFORE publishing it.** Written down because a false accusation against a real project
+is the expensive failure here, and the near-misses are the instrument's only honest résumé:
+
+| # | the "finding" | what verification showed | the fix |
+|---|---|---|---|
+| 1 | `jeanhrm/siagie-analytics` *claims MIT, no grant* | 🔴 An **unmodified Laravel skeleton README**. The claim is *"The **Laravel framework** is open-sourced software licensed under the MIT license"* — **Laravel's** claim, not the repository's | **subject gate**: a claim whose subject is a named third party grades `FOREIGN:<subject>` |
+| 2 | `OS4ED/openSIS-Classic` + `withmarbleapp/os-taxonomy` *README more permissive* | 🔴 `TIER.get(fam, 9)` made every **unmapped** payload family maximally restrictive, so any claim at all became a finding | unmapped → `PAYLOAD-FAMILY-UNMAPPED`, which **accuses the map, not the repository** |
+| 3 | `pengusto/google-classroom-mcp` *MIT badge over a non-OSI payload* | 🟢 Its README is **scrupulously honest**: *"Commercial extensions / MIT upstream"*, with a section stating the two licences cover different parts and *"are not alternative licenses for the whole project"*. Tree carries `LICENSE` **and** `LICENSES/MIT-upstream.txt` | claims are matched against **every grant in the tree** (`p442`), not the root alone → `DUAL-GRANT-DECLARED` |
+| 4 | `OS4ED/openSIS-Classic` + `francoisjacquet/rosariosis` | 🔴 Two causes at once: the anchor picked **`assets/notice.png`** (a PNG, matched by `is_licence_path`'s legitimate `notice.*` glob) over `docs/License.txt`; and *"GPL"* in prose was compared **as a string** to a `GPL-2.0` payload | unreadable payloads sort **last** when anchoring; a **bare family root matches any version of that root** — but `GPL` must never swallow `AGPL`/`LGPL` |
+
+🔵 **The pattern across all four: a DEFAULT standing in for a measurement.** Tier 9 for unknown,
+the root grant for the whole tree, the most-permissive claim for a scoped one, a string compare
+for a family question. 🔴 **That is `p443`'s own lesson about nil results, arriving one level
+down** — *silence reads exactly like coverage*, and so does a default.
+
+### 🔴 What the sweep found that nobody asked it for: the grant has THREE channels
+
+**23 of the 321 sell rows carry no licence-shaped path anywhere in their tree.** The obvious
+headline — *"23 shelf rows grant nothing"* — is **false**, and checking it is the whole finding:
+
+| where the grant actually is | n | evidence |
+|---|---|---|
+| 🟢 **a package manifest** | 🟢 **7** | 5 × R `DESCRIPTION` (`cran/TAM` *GPL (>= 2)*, `cran/catR`, `cran/exams` *GPL-2 \| GPL-3*, `patriciamar/ShinyItemAnalysis` *GPL-3*, `philchalmers/mirt`); 2 × `package.json` *"license": "MIT"* (`DMontgomery40/mcp-canvas-lms`, `general-mudkip/d2l-mcp-server`) |
+| 🟢 **per-file source headers** | 🟢 **4** | Moodle's mandatory `@license` convention: `bycs-lp/moodle-local_ai_manager` **262 of 264** source files, `bycs-lp/moodle-block_ai_chat` 67/87, `marcusgreen/moodle-qtype_aitext` 43/44, `onbirdev/moodle-webservice_mcp` 14/14 — all *"GNU GPL v3 or later"* |
+| 🔴 **nowhere, in any of the three** | 🔴 **12** | screened for a LICENSE path, a manifest licence field **and** a header grant; zero on all three |
+
+🔴 **Reported as an averted error, not as a win:** had the sweep published its raw output, it
+would have told Globant that a **German state education agency's** Moodle AI plugins
+(`bycs-lp/*` — ByCS, Bayerische Cloud Schule) are unlicensed, when **262 of 264 of one
+plugin's files carry GPL-3.0-or-later**. The three-channel screen is now the standard before
+any "no grant" claim: 🔵 **`is_licence_path` answers "is this path a grant file", which is not
+the same question as "does this repository grant anything".**
+
+🔴 **The 12 that genuinely grant nothing**, and 2 of them say otherwise in their own README:
+`Cristianojr9/sigaa-new-design`, `G3-Devs/siu-auto-asistencia`,
+`GeminiLight/awesome-ai-llm4education`, `Nutlope/llamatutor`,
+`Seechange-edu/act-ai-tutor-backend`, 🔴 `anastasasenov/bbmcps` *(README claims **MIT** in
+prose)*, `eakarsu/ai-special-education-iep-compliance`, `ernestosrf/sigaa-horarios-extension`,
+`eth-lre/MathTutorBench`, `grasped-dev/staircase`, 🔴 `jarodise/Language-Transfer` *(README
+claims **MIT** in its licence section)*, `loyaniu/moodle-mcp`. Full screen:
+[`evidence/three-channel-grant-screen.2026-10-25-p444.tsv`](../evidence/three-channel-grant-screen.2026-10-25-p444.tsv).
+
+🔵 **And it confirms `Trend 44` outside Brazil, which is what `Gap 444-A` asked for** — in the
+opposite direction from expected. The institution-published rows here (`bycs-lp/*`, EMEA) **do**
+grant, just not where an instrument looks; it is the individually-published MCP servers
+(`loyaniu/moodle-mcp`, `anastasasenov/bbmcps`) that grant nothing. 🟡 So `Gap 444-A` is
+**advanced and narrowed, not closed**: the Brazilian IFRN result stands (three official clients,
+81 ★, screened on all three channels this pass by hand — nothing), but *"institutions do not
+licence"* does **not** generalise to EMEA. What generalises is that **MCP servers do not**.
+
+### 🔴 The channel measurements, for the record
+
+| channel | denominator | new | note |
+|---|---|---|---|
+| platform-name legs, 12 countries/platforms | 11 777 hits | **37 verified addresses** | 🔴 3 of 5 ministry nils are **homonym collisions**, not absences (SIMAT→Siemens SIMATIC, SAES→sparse autoencoders, GURI→an oh-my-zsh theme) |
+| 🟢 platform **ecosystem** leg (expanded name) | 12 hits | 🟢 **3, all production-grade** | 🟢 **The highest-yield leg of the pass.** `django-auth-suap` (MIT, PyPI, 92 `.rst` of docs), `moodle-local_suap` (GPL-3.0, HEAD 2026-10-19), `luizpicolo/suap_api` (MIT). `Gap 444-E`: an ecosystem leg and a name leg are **not the same channel**, and this base has only ever run the name one |
+| 🔴 global English agent/trending legs | 4 legs | 🔴 **0** | *"top open source AI agents education 2026 github MIT"* and *"github trending education AI 2026"* returned general-purpose agents and SEO aggregator pages — **no education-specific address**. Written down as a measured nil: this channel is **saturated** for this base at 2 800+ known slugs, and it was saturated for `p443` too |
+
+### 🆕 Gaps
+
+| gap | what it says |
+|---|---|
+| 🟢 `Gap 443-C` | 🟢 **CLOSED.** Instrument built, 43/43, run over 321/321 rows, 1 genuine finding (already known), 4 self-defects recorded and fixed |
+| 🆕 `Gap 444-E` | 🟡 **The ecosystem leg is an unentered channel with a better hit rate than the one this base uses.** 3 production-grade addresses from 12 hits, against 37 from 11 777. Run the expanded-name leg for SIGAA, SIU Guaraní, SIASE, U-Cursos and SIA before declaring any of them exhausted |
+| 🆕 `Gap 444-H` | 🔴 **No instrument here reads the manifest or header grant channels**, and 11 of 23 grants live there. `lib/licence_path.sh` answers a PATH question and is documented as a floor; the two missing channels should be primitives in `lib/`, not a hand-check in one pass |
+
 ## 🆕 `p443` · 2026-10-25 — **A channel this base had never entered: the NAME OF THE PLATFORM THE SCHOOLS RUN. 🟢 It returned a whole LATAM academic-portal tier — SIGAA (Brazil) and SIU Guaraní (Argentina) — against a shelf that placed **5 of 116** rows in LATAM. 🔴 The topic channel reproduces `p442`'s saturation at a 29-address denominator: **28 of 29 already known**. 🔴 And the query shape matters more than the query: the same platform names ORed with `mcp OR api OR agent` returned ten addresses, none of them education.**
 
 ### 🔴 The topic channel, re-priced and now closed for discovery

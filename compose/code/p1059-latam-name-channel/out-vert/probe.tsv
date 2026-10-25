@@ -1,0 +1,4 @@
+slug	head_sha	default_branch	grant_paths	path	bytes	sha12	family
+suap-ava-suite/moodle-local_suap	1eb3ebf0c35867c9d9d8f7279f57d1631f68c277	main	1	LICENSE	35161	54b00c9ffd02	GPL-3.0
+django-by-kelsoncm/django-auth-suap	1f0b4e1ab05b584e05b8c507d95a0f7485943ec1	main	1	LICENSE.md	1065	113d1a85e628	MIT
+luizpicolo/suap_api	718183f6c65322f09231d02967baab21f58f3cfb	master	1	LICENSE.txt	1078	798df9e7634a	MIT

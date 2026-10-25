@@ -1,0 +1,36 @@
+p444 — REGISTERED BEFORE THE TEST LEG WAS RUN, 2026-10-25
+=========================================================
+
+OBSERVATION (from this pass's completed legs, all verified first-hand):
+
+  platform named            tier         real education addresses?
+  SIGAA        (p443)       UNIVERSITY   YES (5 shelved by p443)
+  SIU Guarani  (p443)       UNIVERSITY   YES (1 shelved by p443)
+  SIASE        (p444)       UNIVERSITY   YES (6 found, 38* top)
+  UCampus      (p444)       UNIVERSITY   YES (3 found, 1-2*)
+  ---------------------------------------------------------------
+  SIAGIE       (p444)       MINISTRY/K12 thin: 24 hits, all ~0*, no grant
+  SIMAT        (p444)       MINISTRY/K12 NO (1 hit, 0*, 2021, no grant)
+  SIGE         (p444)       MINISTRY/K12 NO
+  GURI/Ceibal  (p444)       MINISTRY/K12 NO (238 hits, all coursework)
+
+HYPOTHESIS H1: the variable is not the COUNTRY and not the string's rarity.  It is
+WHO OPERATES THE PLATFORM.  University platforms accumulate third-party integration
+supply because the students who are blocked by them can code and have the itch;
+ministry-run K-12 systems do not, because the blocked parties are teachers and
+administrators who are not the developer population.
+
+PREDICTION P1: a leg naming a LATAM UNIVERSITY's academic portal in a country whose
+MINISTRY leg returned nothing will return real integration addresses anyway.
+  Test cases chosen before running: Colombia (UNAL's "SIA") and Peru (UNMSM).
+  P1 is CONFIRMED if >=1 country returns >=2 real university-portal addresses.
+  P1 is REFUTED if both return what the ministry legs returned: nothing.
+
+PREDICTION P2 (the sharper, falsifiable half): the addresses P1 returns will be
+MAJORITY WITHOUT A GRANT FILE, like this pass's other thin-country rows (8 of 17
+carried no grant), rather than majority permissive.
+  P2 is REFUTED if a majority of what P1 returns carries a real OSI payload.
+
+WHY REGISTERED: H1 was derived from legs already run, so testing it on those same
+legs would be post-hoc.  P1/P2 name the countries and the pass/fail line BEFORE the
+leg, which is the only way this base can tell a rule from a story.

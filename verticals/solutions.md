@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p444` — **SUAP: a platform running across Brazil's federal institute network, with a real API ecosystem and 🔴 NO PUBLIC SOURCE — the first entry on this map that is open-ecosystem without being open-source**
+
+🟢 **What SUAP is.** **SUAP** (*Sistema Unificado de Administração Pública*) is the academic and
+administrative system of record of the **Instituto Federal** network — Brazil's federal
+vocational and technical education system. It holds enrolment, grades, attendance, class
+materials and meals. `p444` reached it through the platform-name channel and found an
+integration ecosystem larger than any single LATAM platform this base has mapped.
+
+🔴 **And the platform itself is not published.** Two legs were run — the acronym alone (732
+hits) and the expanded name (*"suap sistema unificado administracao"*, 12 hits) — and **neither
+returns the production Django application.** Every one of the 12 expanded-name results wraps,
+extends, authenticates against, load-tests or *simulates* SUAP. The closest, `Thiago-FJ/SUAP`,
+describes itself as an academic simulation for a coursework exercise. **Recorded as a measured
+absence, not an assumption:** SUAP is reachable through a documented OAuth2 API and is not
+forkable.
+
+🔵 **Why that distinction earns a row on this map.** Every other platform here — Moodle,
+Open edX, Canvas, Sakai, Kolibri, OpenEduCat, `ipti/br.tag` — is something an engagement can
+**fork, read and self-host**. SUAP is something an engagement can only **integrate against**.
+That is a different commercial shape: no vendor lock-in analysis, no hosting story, no licence
+compatibility question for the platform — and *total* dependency on an API whose owner publishes
+no grant for its own clients.
+
+| platform | region | grant | what it is, and the engagement shape |
+|---|---|---|---|
+| **SUAP** · `suap.ifrn.edu.br` | **LATAM** (Brazil) | 🔴 **source not published** | Academic/administrative system of record for the **Instituto Federal** network. 🟢 Documented **OAuth2** API, confirmed reusable across institutions (`luizpicolo/suap_api` targets **IFMS**, not IFRN). 🔴 Integrate-only: cannot be forked or self-hosted. **Start from [`django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap) (MIT, HEAD 2026-09-05), not from IFRN's own unlicensed clients.** |
+| [`suap-ava-suite/moodle-local_suap`](https://github.com/suap-ava-suite/moodle-local_suap) | **LATAM** (Brazil) | 🟡 **GPL-3.0** · `LICENSE` 35 161 B · `54b00c9ffd02` | 🟢 **The bridge between the two anchors of this map.** A Moodle `local` plugin wiring Moodle (the *AVA*, ambiente virtual de aprendizagem) to SUAP's system of record. **HEAD 2026-10-19** — live, 94 files. 🔵 GPL-3.0 here is *coherent, not a problem*: Moodle is GPL-3.0, so a Moodle plugin is expected to be, and the obligation is one the host platform already imposes. This is the first LATAM row on this map that connects an LMS to a SIS. |
+
+🟢 **How this changes the composition story.** This base's LATAM verticals row has been
+`ipti/br.tag` — one municipal K-12 platform, GPL-2.0. SUAP adds the **federal, post-secondary,
+integrate-only** shape, and `moodle-local_suap` supplies the **LMS↔SIS seam** that
+`compose/patterns.md` has previously only been able to describe for EMEA. 🔵 The pairing
+*Moodle + `moodle-local_suap` + SUAP OAuth2 via `django-auth-suap`* is a complete, licence-clean
+stack for a Brazilian federal-institute engagement, and it is wired up as `Pattern AW`.
+
+🔴 **The gap this leaves, stated as a gap:** this map still has **no row for a LATAM
+system of record that is BOTH forkable and permissive.** `ipti/br.tag` is GPL-2.0 (and its
+README says BSD-3-Clause — `p443`), SIGAA and SIU Guaraní are institution-internal, SUAP is
+unpublished. Every LATAM SIS address on this map is copyleft, closed, or both.
+
+---
+
+
 ## 🆕 `p443` — **A live municipal platform joins the map, and it is the first row on this file whose README names a DIFFERENT, MORE PERMISSIVE grant than its own payload**
 
 🟢 **The row.** `ipti/br.tag` — **T.A.G.** (*Tecnologia de Apoio à Gestão*) — is a Brazilian

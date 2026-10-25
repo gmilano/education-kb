@@ -4,6 +4,30 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p444` — **Two agent-addressable LATAM rows, and the better one cannot be shipped: an MCP server for a Colombian national university's system of record, live, TypeScript — and carrying NO GRANT**
+
+🔵 **Why only two rows from 37 addresses.** `Gap 443-D` warned that the LATAM arm is
+*integration surface, not agents*, and that `agents/top.md`'s LATAM count must not be read as
+if every row were an AI system. `p444` probed 37 more LATAM addresses and that warning holds:
+**35 are scrapers, wrappers, browser extensions and timetable viewers.** Only the two below are
+agent-addressable, and they are shelved here with their grant state **in the first column**,
+because for one of them the grant is the whole story.
+
+| Agent / repo | Grant, read first-hand 2026-10-25 | Region | What it is, and whether Globant can build on it |
+|---|---|---|---|
+| 🔴 [`sebassg/sia-unal-mcp`](https://github.com/sebassg/sia-unal-mcp) | 🔴 **NO GRANT FILE** · `529e017f264c` · 0 of 35 paths is a licence path | **LATAM** (Colombia) | **MCP server for SIA UNAL** — Sistema de Información Académica, Universidad Nacional de Colombia, Sede Medellín. TypeScript (26 files), HEAD **2026-03-12**. 🔵 The **second** agent-addressable LATAM address this base has found, after `p443`'s `siu-guarani-mcp`, and the first for Colombia. 🔴 **NOT a build-on row: with no licence there is no grant of use, and an MCP server is exactly the component an engagement would want to vendor.** Shelved as *the proof the shape exists in Colombia* and as `Gap 444-C`'s highest-value ask. |
+| 🟡 [`ivmelo/suapbot`](https://github.com/ivmelo/suapbot) | 🟡 **AGPL-3.0** · `LICENSE` 34 520 B · `76a97c878c9c` | **LATAM** (Brazil) | Telegram bot over **SUAP** (Instituto Federal network) serving grades, classes, absences, materials and virtual classrooms, 14 ★, 121 files. 🔴 HEAD **2017-08-24** — nine years stale, shelved as the *reference shape* for the notify-the-student agent, not as a dependency. 🟡 AGPL-3.0 reaches a hosted deployment, so it is a read-and-reimplement row, never a vendor row. |
+
+🟢 **The build-on agent-shaped row for this tranche is on `repos/foundations.md`, not here:**
+[`Open-Source-eUdeC/UdeCursos-bot`](https://github.com/Open-Source-eUdeC/UdeCursos-bot) — MIT,
+HEAD 2024-03-17, Python — is the only LATAM portal-notifier with a permissive grant. It is a
+bot rather than an LLM agent, which is why it is shelved as a foundation and not as an agent.
+🔵 **That is the honest state of the LATAM agent column: one unlicensed MCP server, one
+nine-year-old AGPL bot, and one MIT bot that is not an agent.**
+
+---
+
+
 # Agentes y repos AI — Education
 
 > Curated open-source supply for education engagements. Every row below was read

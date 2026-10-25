@@ -1,0 +1,14 @@
+slug	head_sha	default_branch	grant_paths	path	bytes	sha12	family
+ivmelo/suap-api-php	fc2a679fe78a36cd5c39d109289fead2bf67f0ff	master	1	LICENSE	1071	8dd4b842ad4d	MIT
+ifrn-oficial/cliente_suap_django	07542cd45391ecdb57fe89fd5808b295136f18d8	master	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+IFRN/suapi	e0691d9cf65c9fb2b7ae2b8e41edd224cb48af10	master	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+ifrn-oficial/cliente_suap_javascript	d928104faea6d9b37301be0e5f9c7d00dfd11a04	master	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+ivmelo/suapbot	d1f90f18ecf521103dfe06d7445aeae58d70c4ac	master	1	LICENSE	34520	76a97c878c9c	AGPL-3.0
+Projeto-SIAC/suap-wrapper	bfe75f6147c3ee1fd27ffb7de1226ed7a93d97aa	master	1	LICENSE	1061	7d6794d36990	MIT
+RafaelDSS/ifbamobile	ac3c4c4e0cd3b8c2a560d44b8776f2310aa580d5	main	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+Nyveon/tU-Cursos	89d7421f66e2e60a3dc460b551f4978d17a55be1	main	1	LICENSE	35149	3972dc9744f6	GPL-3.0
+Open-Source-eUdeC/UdeCursos-bot	cab987ccd1a54f9675b242ec5dfc5e67227097ff	main	1	LICENSE	1074	198619b5e4a3	MIT
+matias-saavedra-g/ucursednt	1ad38d8c89d14ff17edfcc032b3b76e3962a60a1	main	1	LICENSE	35821	81cbae84a29c	GPL-3.0
+molguin92/U-Cursos-Plus	55af8577836a6dca41a04a4f0d31f421539d9206	master	1	LICENSE	35121	e1c0ad728983	GPL-3.0
+gabrielrojasc/ucursos-downloader	12a01f6d87c51a7e3091a8ad21b071f08f36280d	master	1	LICENSE	35149	3972dc9744f6	GPL-3.0
+joromero/novedADblock	47ec496b234e13f8572251efa7f4468d17310c2c	master	0	NO-GRANT-PATH	-	-	NO-PAYLOAD

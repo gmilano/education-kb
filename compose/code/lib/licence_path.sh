@@ -56,7 +56,14 @@ is_bundled() {
 }
 
 is_licence_path() {
-  local b d; b="$(basename "$1" | tr 'A-Z' 'a-z')"; d="$(dirname "$1" | tr 'A-Z' 'a-z')"
+  # 🔴 `--` IS NOT OPTIONAL HERE, and a real repository is why.  `p444`'s shelf sweep hit a
+  # tree containing a directory literally named `--quiet` (somebody committed a mistyped
+  # command's output), so `basename --quiet/browser-results.json` was parsed as an OPTION:
+  # `basename: unrecognized option`.  `b` and `d` then came back EMPTY, and an empty
+  # basename takes the `*) return 1` branch -- so every path under that directory was
+  # silently graded NOT-A-GRANT.  A grant file under a dash-leading directory would have
+  # been invisible to this predicate, and the only symptom was stderr noise in a log.
+  local b d; b="$(basename -- "$1" | tr 'A-Z' 'a-z')"; d="$(dirname -- "$1" | tr 'A-Z' 'a-z')"
   # REUSE / SPDX convention: LICENSES/<SPDX-ID>.txt -- the basename is the SPDX id, not
   # "license", so a basename-only probe cannot see it.  My own suite refuted v1 on this.
   # v2: inside LICENSES/, everything is a grant EXCEPT the directory's own prose.

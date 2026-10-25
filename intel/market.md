@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p444` · 2026-10-25 — **Four regional legs in `p427`'s prescribed shape, and all four paid. 🟢 `Gap 436-D` is CLOSED: LATAM adoption is no longer quoted through a newspaper column but through a UNESCO/CEPAL observatory and a named regional index. 🔴 And the EMEA leg independently re-confirms `p437`'s correction — the deadline this base once published as passed is 2 December 2027.**
+
+🔵 **Shape, not volume.** `p427` diagnosed this file's regional legs as **over-ANDed**
+(*regulation, adoption and players, four countries, one query*) and prescribed **one country,
+one question**. `p443` ran it twice and both paid; `p444` ran it **four times, once per region**,
+and all four paid. The single `## Opportunities by region` block below is amended **in place** —
+it is still one block, with one `###` per region.
+
+### 🟢 `Gap 436-D` — CLOSED, and the replacement is institutional
+
+`Gap 436-D` has stood as *"the LATAM adoption figures are still quoted through a newspaper
+column"*, flagged **untouched** by `p443` and unreachable by `Gap 425-A`. The leg that closed it
+asked one question in Spanish about one institution pair:
+
+🟢 **UNESCO and CEPAL launched the _Observatorio de Inteligencia Artificial en Educación para
+América Latina y el Caribe_ on 14 April 2026**, at CEPAL headquarters in Santiago, inside the
+*Foro de los Países de América Latina y el Caribe sobre el Desarrollo Sostenible 2026*. It is a
+standing regional instrument for AI-in-education integration — which is precisely the
+institutional source this file has lacked.
+
+| figure | source, as attributed at the launch | what it is good for |
+|---|---|---|
+| 🟢 **> 50 %** of teachers in **Chile** and **Brazil** already use AI tools | UNESCO, relayed via EFE | the first per-country teacher rate on this file for LATAM |
+| 🔴 **< 10 %** of institutions in the region have formal guidelines and sufficient capacity | UNESCO, relayed via EFE | 🔴 **the governance gap, and it is the sellable one** |
+| **92 %** of LATAM higher-education students use the tools regularly | Tecnológico de Monterrey, cited at launch | demand-side saturation |
+| **34 %** of Colombians use AI tools daily; only **22 %** of Colombian teachers have formal pedagogical/ethical AI training | 🟢 **ILIA** — Índice Latinoamericano de IA (CENIA + CEPAL) | a **named, repeatable index**, not a press figure |
+| 6 of 10 LATAM sixth-graders below minimum in reading and mathematics | LLECE | the baseline the tooling is supposed to move |
+
+⚠️ **Graded honestly: this is a partial closure, and the residue is named.** The teacher and
+institution rates are still **relayed through EFE press reporting** of the launch rather than
+read out of a UNESCO document; the 92 % is attributed to Tec de Monterrey without a public
+method. 🟢 What has genuinely changed is that **ILIA (CENIA + CEPAL) is a named index with a
+2026 edition carrying an AI-training chapter**, and **UNESCO IESALC + UNU-IAS published a
+regional higher-education study dated 8 September 2026** — two primary instruments this file can
+re-query every pass instead of re-quoting a column. `Gap 444-F` carries the residue.
+
+### 🔴 The EMEA leg re-confirms this base's own correction, independently
+
+`p437` found that `ark-forge/mcp-eu-ai-act` — then wired into `Pattern AO` — hardcoded
+`enforcement_deadline 2026-08-02` and told an education client its conformity deadline had
+already passed. The leg run this hour, with no reference to that finding, returns the same
+corrected picture:
+
+- 🟢 **Regulation (EU) 2026/1744** (the *Digital Omnibus on AI*) was published in the Official
+  Journal on **24 July 2026** and entered into force on **27 July 2026**.
+- 🟢 It moves the **Annex III stand-alone high-risk deadline — which is the one covering
+  education** — from **2 August 2026** to **2 December 2027**.
+- 🔴 **The deferral covers the high-risk rules only.** Transparency duties, GPAI provider
+  obligations, the **AI-literacy requirement** and the prohibited-practices ban **stay on their
+  original schedule**.
+- The substantive requirements are unchanged; only the date moved.
+
+🔵 **The commercial reading, and it is not "relax":** an education client has **~14 months** of
+runway on Annex III conformity and **zero** runway on AI literacy and transparency. The
+obligation that is *not* deferred is the one nobody is scoping, which is where the work is this
+quarter.
+
+---
+
+
 # 🗺️ Market map — Education
 
 > Key players, market size and opportunities **placed by region**. Regional legs are run
@@ -624,6 +684,29 @@ Primary statute text was not read this pass.
 
 🔵 **The read for a North America engagement:** the statute tier is saturated (see the leg grade above) and the **authorised-use policy** is the artefact being bought. Deliver it as a signed-off document plus the evidence trail that produces it, not as a feature.
 
+
+#### 🆕 `p444` · 2026-10-25 — the federal lever is now a GRANT PRIORITY, and it has a hole in it
+
+🟢 The U.S. Department of Education **finalised a priority on advancing AI in education**,
+published in the Federal Register in **April 2026** and **effective 13 May 2026**. It
+prioritises applications that expand understanding of AI or of its appropriate and ethical use.
+Its K-12 companion priorities name **age-appropriate AI and computer-science offerings** and
+**embedding AI and CS into teacher-preparation programmes**.
+
+🔵 **Where the money actually is:** teacher-preparation curriculum. The priority names it
+explicitly, and it is the one deliverable a studio can build at scale without touching student
+data.
+
+🔴 **And the hole is the opportunity.** The federal rule, unlike California's state guidance,
+**contains no plan to evaluate student-data privacy or equitable access**. Meanwhile **31 states
+had issued K-12 AI guidance as of January 2026, most of it voluntary.** So a district buying
+against the federal priority gets no privacy-evaluation framework with it, and its state
+guidance probably does not mandate one — 🟢 **a privacy-and-equity evaluation layer is
+unbundled, unmandated and needed**, which is the cleanest NA service shape on this file.
+
+⚠️ Sources are secondary (trade press, compliance summaries); the Federal Register notice is the
+authoritative text and has not been read first-hand.
+
 ### EMEA
 
 **🆕 `p442` — 🟢 one multilateral instrument added, 🔴 one refused.**
@@ -900,6 +983,23 @@ with "we will build you a platform." It can open with the client's **own ministr
 - 🔵 **Cross-country comparator:** the **CIDREE / NCCA curriculum audit** (2nd edition, 2025, led by Ireland's NCCA) compares national AI curriculum responses across member organisations — a single document that places a bid against its neighbours.
 
 🔵 **The read for an EMEA engagement:** the EU AI Act gives the *deadline* (Annex III education to **2 December 2027**) and the national programme gives the *buyer*. Ask which programme funds the pilot before pricing the conformity work.
+
+
+#### 🆕 `p444` · 2026-10-25 — the date is settled, and the UNDEFERRED obligations are the live work
+
+🟢 **Regulation (EU) 2026/1744** (*Digital Omnibus on AI*), in the Official Journal **24 July
+2026**, in force **27 July 2026**, moves the **Annex III high-risk deadline covering education
+from 2 August 2026 to 2 December 2027**. Requirements unchanged; date moved.
+
+🔴 **Not deferred, and therefore the live engagement:** transparency duties, GPAI provider
+obligations, the **AI-literacy requirement**, and the prohibited-practices ban. An institution
+running admissions, assessment or proctoring has ~14 months on conformity and **no runway at all**
+on literacy and transparency.
+
+🔵 This independently re-confirms `p437`'s correction of `ark-forge/mcp-eu-ai-act`, which
+hardcoded `2026-08-02` and told education clients their deadline had passed. The scoping gate
+remains `Pattern AP`, and `Article 6(3)`'s profiling override still lands knowledge-tracing
+architectures (`pykt-toolkit`, `OATutor`) in high-risk **by construction**.
 
 ### APAC
 
@@ -1194,6 +1294,32 @@ public-sector work, and it pairs with the **Grade-3 AI curriculum mandate from 2
 NISHTHA teacher training already recorded in this section. 🔵 Cell band: `reported`
 (`Gap 425-A`).
 
+
+#### 🆕 `p444` · 2026-10-25 — India writes AI into the compulsory curriculum, and the delivery constraint is the opportunity
+
+🟢 **India's Ministry of Education has made AI and Computational Thinking a mandatory curriculum
+component for Classes 3–8 from the 2026–27 session, extending to Classes 9–10 in 2027–28.** A
+CBSE expert committee chaired by **Prof. Karthik Raman (IIT Madras)** is designing it, with
+**NCERT** reviewing the draft. CBSE's published structure recommends **50 hours annually for
+Classes III–V and 100 hours for Classes VI–VIII**, with teacher handbooks and assessment
+frameworks.
+
+🔴 **Two constraints, both of them billable.** (1) **Scale of teacher training:** the Education
+Secretary has put the task at orienting **over one crore teachers**. (2) **Connectivity:**
+roughly **one third of Indian schools lack internet**, and the framework was built around CBSE's
+urban, English-medium, well-equipped context.
+
+🟢 **The matching shelf row already exists:** `Kolibri` (MIT, offline-first) is on
+`verticals/solutions.md` precisely for the no-internet case. 🔵 **Offline-first AI-literacy
+delivery plus crore-scale teacher training is the single largest education engagement shape on
+this file in any region.**
+
+⚠️ **One figure does not reconcile and is published as a conflict, not averaged:** the
+CBSE-affiliated school count is reported as **32 900** by one outlet and **~26 000** by an
+independent analysis — the latter noting CBSE is **under 2 % of India's 14.71 lakh schools**.
+Either way the mandate's direct reach is a small fraction of Indian schooling, and the state
+boards are the real denominator (`Gap 444-G`).
+
 ### LATAM
 
 **🆕 `p442` — 🟢 one new instrument, 🔴 one measurement conflict carried as a conflict.**
@@ -1444,6 +1570,34 @@ prices an obligation that does not exist; 🟡 designing for it is still right, 
 bill's risk tiers place education in the high-risk band whenever it does pass. 🔵 Cell band:
 `reported` (`Gap 425-A`) — `camara.leg.br` is unreachable from this host, so this is a tracker
 reading.
+
+
+#### 🆕 `p444` · 2026-10-25 — `Gap 436-D` closed: an observatory and a named index replace the newspaper column
+
+🟢 **UNESCO and CEPAL launched the _Observatorio de IA en Educación para América Latina y el
+Caribe_ on 14 April 2026** at CEPAL headquarters, Santiago. Figures carried at the launch:
+**> 50 %** of teachers in **Chile** and **Brazil** already use AI tools, against **< 10 %** of
+regional institutions holding formal guidelines and sufficient capacity; **92 %** of LATAM
+higher-education students use the tools regularly (Tec de Monterrey). Per **ILIA**, the Índice
+Latinoamericano de IA (**CENIA + CEPAL**): **34 %** of Colombians use AI daily while only
+**22 %** of Colombian teachers have formal pedagogical/ethical AI training. **LLECE**: 6 of 10
+sixth-graders below minimum in reading and mathematics.
+
+🔴 **The opportunity is the scissors between two of those numbers:** demand is saturated
+(> 50 % of teachers, 92 % of students) and governance is absent (< 10 % of institutions). **The
+sellable unit in LATAM is not a tutor — it is an institutional AI-use policy with the capacity
+to enforce it**, and the 22 % Colombian teacher-training figure sizes the training attached to it.
+
+🟢 **And the supply side is now mapped to go with it.** `p444`'s platform-name legs shelved the
+first Colombian, Mexican and Chilean academic-portal integration tiers (`repos/foundations.md`),
+with `django-auth-suap` (MIT) for Brazil's Instituto Federal network and
+`moodle-local_suap` (GPL-3.0) as the LMS↔SIS seam. 🔴 **But 18 of 37 addresses probed carry no
+licence at all**, so a LATAM engagement's integration layer is mostly *unusable as found* — read
+`Pattern AW` before quoting one.
+
+⚠️ Partial closure, honestly: teacher/institution rates are relayed via EFE press reporting of
+the launch, not read from a UNESCO document (`Gap 444-F`). ILIA and the UNESCO IESALC/UNU-IAS
+study of **8 September 2026** are the two re-queryable primaries.
 
 ### Global
 

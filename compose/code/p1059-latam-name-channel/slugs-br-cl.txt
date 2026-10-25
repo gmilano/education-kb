@@ -1,0 +1,15 @@
+# Brazil — SUAP (Sistema Unificado de Administracao Publica, Instituto Federal network)
+ivmelo/suap-api-php
+ifrn-oficial/cliente_suap_django
+IFRN/suapi
+ifrn-oficial/cliente_suap_javascript
+ivmelo/suapbot
+Projeto-SIAC/suap-wrapper
+RafaelDSS/ifbamobile
+# Chile — U-Cursos (U. de Chile), the platform the UCampus leg did NOT reach
+Nyveon/tU-Cursos
+Open-Source-eUdeC/UdeCursos-bot
+matias-saavedra-g/ucursednt
+molguin92/U-Cursos-Plus
+gabrielrojasc/ucursos-downloader
+joromero/novedADblock

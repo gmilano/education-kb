@@ -1,0 +1,9 @@
+slug	head_sha	default_branch	grant_paths	path	bytes	sha12	family
+sebassg/sia-unal-mcp	529e017f264cda92640a2add27bce9dfb6ed610f	main	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+imlargo/sia-extractor	aab4ec4f002664b74ebf5ad0afe5f64ab1ddd621	main	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+juan-c-cardenas/sia-scraper	e557dac6c26de46f3ed50ea2d2b37e3d214143aa	master	1	LICENSE	1085	ca571ae2faa5	MIT
+AlejandroFeriaGonzalez/MiHorario-GUI	6216bc46de257e07feefe161a973e88a27d53f55	master	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+gabotachak/sia-unal-bridge	c8c25ddaac122ef89ce1e214322a643ff05f2780	main	1	LICENSE	1085	7521387e0869	MIT
+vmoras/SIAScrapping	e4ff33a3e134de9bca2ce1cf8289906ba6883567	main	0	NO-GRANT-PATH	-	-	NO-PAYLOAD
+vis97c/cuna	65a7d08192d0fef3f4b67e58b21d44a68bf4f0ea	dev	1	LICENSE	35149	3972dc9744f6	GPL-3.0
+AdoringStarling/UNAL_STUDENTS_HELP	bf03617eeb21773b92e8438e5309ea33c5547386	main	0	NO-GRANT-PATH	-	-	NO-PAYLOAD

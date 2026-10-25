@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AW — `p444` **A licence-clean Brazilian Instituto Federal engagement: Moodle + SUAP + an AI layer, wired from rows verified 2026-10-25 — and the gate that stops you shipping the 49 % you cannot use**
+
+🔵 **Why this pattern and not another tutor recipe.** `p443`'s `Pattern AV` answers *"how do you
+find the repositories in a country whose supply this base has never shelved"*. `p444` ran that
+move at four more countries and found the next problem: **the addresses exist and half of them
+carry no licence**, including the officially-published ones. So `Pattern AW` is the step after
+discovery — **turn a found tier into a stack you can actually quote** — and it is built on the
+one LATAM ecosystem where every layer now has a verified row.
+
+**Target:** an Instituto Federal (Brazil's federal vocational/technical network — SUAP is its
+system of record, confirmed reusable across institutions). **Duration: 8–10 weeks.**
+
+### 🔴 Step 0 — the licence gate, BEFORE the estimate
+
+Run this before a single component is named in a proposal. It is not diligence hygiene; on this
+tranche it eliminates **49 %** of candidates, so it changes the estimate.
+
+```bash
+# 1. every grant path at the probed HEAD, not just the root row  (p442)
+compose/code/p1059-latam-name-channel/probe.sh slugs.txt out/
+#    -> NO-GRANT-PATH in the `path` column means NO RIGHT OF USE.  Not "permissive by default".
+
+# 2. does the README claim a DIFFERENT grant from the payload?    (p444, Gap 443-C)
+python3 compose/code/p1060-readme-vs-payload/compare.py out/
+#    -> README-MORE-PERMISSIVE is the expensive verdict: ipti/br.tag says BSD-3-Clause
+#       in its `## Licença` section and ships GNU GPL v2.
+```
+
+🔴 **Two gate outputs are disqualifying, not negotiable:** `NO-GRANT-PATH` (no grant exists) and
+`README-MORE-PERMISSIVE` (the grant you were told about is not the grant you get). 🟡 A third,
+`NO-PAYLOAD` with a live claim, means *a licence was stated and never made* — treat as
+disqualifying until the author fixes it, and see Step 4.
+
+### 🟢 Step 1 — the system of record: integrate, do not fork
+
+| layer | row | grant, read first-hand | why this one |
+|---|---|---|---|
+| system of record | **SUAP** · `suap.ifrn.edu.br` | 🔴 **source not published** | Holds enrolment, grades, attendance, materials. 🔴 **Not forkable** — the only access is its documented **OAuth2** API. Budget zero hosting and zero platform-licence risk; budget *total* API dependency. |
+| 🟢 **authentication** | [`django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap) | 🟢 **MIT** · `LICENSE.md` 1 065 B · `113d1a85e628` · HEAD **2026-09-05** | 🟢 **The keystone row.** Django OAuth2 backend for SUAP: 98 `.py`, 92 `.rst` of Sphinx docs, on **PyPI** as `django-suap-auth`, CI + Codecov + pre-commit + `SECURITY.md`, Django **5.2/6.0**, with an `audit/` submodule (middleware, migrations, `audit_archive` command). |
+| read seam (PHP) | [`ivmelo/suap-api-php`](https://github.com/ivmelo/suap-api-php) | 🟢 **MIT** · 1 071 B · `8dd4b842ad4d` | 34 ★, the most-starred *licensed* SUAP address. 🔴 HEAD 2021-04-13 — read it as the worked example of the API shape, re-implement against current endpoints. |
+| read seam (Ruby) | [`luizpicolo/suap_api`](https://github.com/luizpicolo/suap_api) | 🟢 **MIT** · 1 078 B · `798df9e7634a` | 🔵 Written against **IFMS**, not IFRN — **this row is the evidence that a SUAP integration is reusable across institutes**, which is what makes the engagement repeatable rather than bespoke. |
+
+🔴 **Do NOT use, and say so in the proposal:** [`IFRN/suapi`](https://github.com/IFRN/suapi)
+(29 ★), [`ifrn-oficial/cliente_suap_django`](https://github.com/ifrn-oficial/cliente_suap_django)
+(29 ★), [`ifrn-oficial/cliente_suap_javascript`](https://github.com/ifrn-oficial/cliente_suap_javascript)
+(23 ★). **81 ★ of official, institutionally-maintained OAuth2 client, and not one carries a
+grant file** — verified path-by-path this hour. They are the obvious choice and they are the
+unusable one (`Trend 44`).
+
+### 🟢 Step 2 — the LMS seam, where GPL-3.0 is the right answer
+
+| layer | row | grant | why |
+|---|---|---|---|
+| LMS | **Moodle** | GPL-3.0 | Already this base's anchor LMS row; the *AVA* in Instituto Federal usage. |
+| 🟢 **LMS↔SIS bridge** | [`moodle-local_suap`](https://github.com/suap-ava-suite/moodle-local_suap) | 🟡 **GPL-3.0** · `LICENSE` 35 161 B · `54b00c9ffd02` · HEAD **2026-10-19** | 🟢 **Live, 94 files, and it is the seam this base could previously only describe for EMEA.** GPL-3.0 here is **coherent, not a cost**: it is a Moodle `local` plugin and Moodle is already GPL-3.0, so the obligation is one the host platform imposes anyway. |
+
+🔵 **The licence boundary of the whole stack, stated plainly:** everything *inside* Moodle is
+GPL-3.0 and that is unavoidable and fine; everything on the **service side** (auth, API clients,
+the AI layer) is MIT and stays separable. Keep the Moodle plugin a plugin — do not let
+GPL-3.0 code cross into the service, and the boundary holds.
+
+### 🟢 Step 3 — the AI layer, from rows already on these shelves
+
+| role | row | grant | wiring |
+|---|---|---|---|
+| teacher-facing generation | [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** | 🟢 **Brazilian curriculum-native**: lesson plans and assessments anchored to **BNCC** codes with a hallucination gate in the product. Feed it the class/subject identifiers that `django-auth-suap` + the SUAP API already resolve. |
+| student-facing tutoring | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `LICENSE` 11 408 B · `cd2f54e1e506` | Agent-native tutoring with persistent learner memory; scope it to the enrolled-subject list from SUAP so it never answers outside the student's actual courses. |
+| offline / low-connectivity delivery | **Kolibri** | 🟢 **MIT** · 1 097 B · `3c056b34a476` | Offline-first with local models via Ollama — the row for *campi* and rural extension sites without reliable connectivity. |
+
+🔴 **The EU AI Act scoping gate (`Pattern AP`) still applies even though this is Brazil**, the
+moment the institution has European partners or EU-resident students: anything that profiles a
+learner — and knowledge tracing does so by construction — cannot use the **Article 6(3)**
+exception, and the Annex III deadline is **2 December 2027** (`Regulation (EU) 2026/1744`), while
+the **AI-literacy and transparency duties are not deferred at all**.
+
+### 🟢 Step 4 — the one-hour move nobody on this base has tried
+
+🔴 18 of 37 addresses in this tranche are unusable only because nobody chose a licence — among
+them an **MCP server** for a Colombian national university (`sebassg/sia-unal-mcp`, live,
+TypeScript) and the three IFRN clients above. 🟢 **Open one issue per address asking the author
+to add a licence.** It costs an hour, it is the cheapest possible supply expansion, and
+`Gap 444-C` exists because no pass here has ever measured whether it works. 🔵 For an
+institution-published repository, route it through the institution's open-source or IT
+governance contact rather than the GitHub issue tracker — nobody *owns* the licence decision on
+`IFRN/suapi`, which is exactly why it has none.
+
+### 🔵 Weeks
+
+| weeks | work |
+|---|---|
+| 1 | 🔴 **Step 0 gate** over every candidate; disqualify on `NO-GRANT-PATH` / `README-MORE-PERMISSIVE`; open the Step 4 issues immediately so answers arrive while you build |
+| 2–3 | SUAP OAuth2 via `django-auth-suap`; the `audit/` submodule wired from day one (an education SIS integration is audited by default, not later) |
+| 4–5 | `moodle-local_suap` deployed against the institution's Moodle; LMS↔SIS identity and enrolment reconciliation |
+| 6–8 | AI layer: `agente-bncc-professores` for teachers, `DeepTutor` scoped to enrolled subjects; `Pattern AP` scoping gate recorded in writing |
+| 9–10 | Kolibri offline delivery for low-connectivity sites; handover with the grant state of **every** component listed in the deliverable |
+
+🔵 **The deliverable includes the licence table.** On this tranche the licence state is not
+background paperwork — it decided which half of the ecosystem exists for the client, and the
+official components lost.
+
+---
+
+
 ## 🆕 Pattern AV — `p443` **Open a national education market in one day: name the platform, not the capability** — and the four-step engagement that follows, wired from rows verified 2026-10-25
 
 🔵 `Pattern AU` (`p442`) clears **one repository** whose grant nobody here has read.
