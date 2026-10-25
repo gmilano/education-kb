@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AV — `p443` **Open a national education market in one day: name the platform, not the capability** — and the four-step engagement that follows, wired from rows verified 2026-10-25
+
+🔵 `Pattern AU` (`p442`) clears **one repository** whose grant nobody here has read.
+`Pattern AV` is the step before *that*: how you find the repositories at all in a country whose
+supply this base has never shelved — and then what you build from them. It was derived by doing
+it: LATAM went from **5 of 116** placed rows on [`agents/top.md`](../agents/top.md) to a shelved
+tier in one pass.
+
+### Step 0 — the discovery move, and it is one line
+
+🔴 **Do not search for the capability.** Measured this pass as a controlled pair, same index,
+same minute, same platform names, only the query shape differing:
+
+| query | result |
+|---|---|
+| 🔴 `SIU-Guarani OR SIAGIE OR SIMAT OR SIGAA mcp OR api OR agent`, sort `updated` | 🔴 **10 addresses, zero education.** A proxy list, a TikTok uploader, a WoW raid analyst — the capability words dominated the match and the proper nouns contributed nothing |
+| 🟢 `sigaa OR "siu guarani" OR siagie`, sort `stars` | 🟢 **792 matches; 7 of the first 10 were real academic-portal tooling** |
+
+```
+# the move, stated so it transfers to any country
+#   1. ask the client (or a local) WHAT SYSTEM THE INSTITUTIONS ACTUALLY RUN
+#   2. search that proper noun ALONE, sorted by stars
+#   3. add NO capability words — they are what a general index is densest in, so they
+#      drown a proper noun
+#   4. then run `Pattern AU` on every address that comes back
+```
+
+🟢 **Why it works, and why this base missed it for 440 passes.** Its EMEA line exists because
+somebody searched *Librus*, *IServ*, *Smartschool*, *EduPage*, *Skola24*, *DTU Learn*. Nobody
+had typed *SIGAA* or *SIU Guaraní*. 🔴 Earlier passes ran **Spanish and Portuguese** legs and
+concluded *"the language was the wrong variable"* — that conclusion was right, and it hid the
+correct one for another forty passes. The variable is **the proper noun of the system of
+record**, and it is language-independent.
+
+🔴 **Before searching outward, `grep` inward.** Five of the six LATAM addresses this pass
+shelved were **already in this base's own append-only record**, found by earlier passes and
+promoted by none, and all six are absent from the promotion ledger (`Gap 443-A`). The first
+query of any new-market pass is against `agents/trending.md` and `repos/trending.md`.
+
+### Steps 1–4 — the engagement, wired from rows verified first-hand this pass
+
+🔴 **The constraint that shapes everything below**, measured in this tranche: of the four LATAM
+platforms that hold student records, **0 of 4 carry a permissive grant**; of the 8 student-side
+portal addresses, **6 do** (`Trend 42`). So the AI goes **beside** the system of record, never
+inside it.
+
+```
+┌─ 1 · READ SEAM (MIT — the part you own) ──────────────────────────────────────┐
+│  Argentina  jpmanson/siu-guarani-mcp      MIT  1 074 B · 53d0fa710f43        │
+│             17 stdio tools over perfil Docente; READ-ONLY by construction;   │
+│             PII behind include_pii=True; GUARANI_BASE_URL per institution    │
+│  Brazil     PucaVaz/sigaa-tools           MIT  1 065 B · 75d9af3e2e90        │
+│             the most recently maintained SIGAA reader (HEAD 2026-10-20)      │
+│             reference model: GeovaneSchmitz/sigaa-api (MIT, 🔴 ARCHIVED)      │
+└───────────────────────────────┬──────────────────────────────────────────────┘
+                               │  MCP / HTTP — an interface, never a fork
+┌──────────────────────────────▼───────────────────────────────────────────────┐
+│  2 · SYSTEM OF RECORD (copyleft — integrate, NEVER vendor)                   │
+│     ipti/br.tag  🔴 GPL-2.0  18 027 B · 111e1f411730                         │
+│     🔴 its README says BSD-3-Clause. THE PAYLOAD GOVERNS.                     │
+│     Moodle (GPL-3.0) · Open edX (AGPL-3.0) · Chamilo (GPL-3.0, deep LATAM)   │
+└──────────────────────────────┬───────────────────────────────────────────────┘
+                               │
+┌──────────────────────────────▼───────────────────────────────────────────────┐
+│  3 · AGENT + EVIDENCE (permissive, yours to ship)                            │
+│     huggingface/smolagents  Apache-2.0  11 357 B · c71d239df917              │
+│     pykt-team/pykt-toolkit  MIT         1 066 B · f5f955194636               │
+│       -> the knowledge-tracing layer that makes "adaptive" defensible        │
+│     learningequality/kolibri MIT        1 097 B · 3c056b34a476               │
+│       -> offline-first; REQUIRED where connectivity is ~50% (India: 53.9%)   │
+└──────────────────────────────┬───────────────────────────────────────────────┘
+                               │
+┌──────────────────────────────▼───────────────────────────────────────────────┐
+│  4 · HUMAN SIGN-OFF (not optional, and already implemented upstream)         │
+│     littlecookie0722/AI-Teaching-Agent  MIT — WAITING_REVIEW task per        │
+│       artefact, approve/reject recorded  (Pattern AH's shape, shipped)       │
+│     kaushikgunasekaren/canvas-grader-mcp MIT — draft for human sign-off      │
+│       BY DEFAULT                                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Why step 4 is load-bearing rather than decorative
+
+🟢 `siu-guarani-mcp` is already read-only **by construction** — its author inspected the
+attendance, topic and grade-loading forms and **deliberately does not submit them**, leaving
+writes on the roadmap. 🟢 That is not a limitation to engineer around; **it is the compliance
+posture, free.** Keep it: let the agent draft and let a human commit, which is what EU Annex
+III (education, applying **2 Dec 2027**), Vietnam's **Decision 33/2026/QĐ-TTg** high-risk
+register and the US state policies on this base's `intel/policy-matrix.tsv` each ask for in
+their own words.
+
+### Sizing, and what it is based on
+
+| phase | weeks | what it produces |
+|---|---|---|
+| 0 · name-the-platform discovery + inward `grep` | **<1** | the country's address list; this pass did Brazil + Argentina in one hour |
+| 1 · read seam hardened (auth, rate limits, per-institution base URL, PII gate) | 2–3 | an MCP server a tutoring or advising agent can call |
+| 2 · agent + knowledge-tracing evidence layer | 3–4 | an adaptive claim with `pykt` numbers behind it |
+| 3 · sign-off workflow + offline tolerance | 2–3 | the artefact a regulator or a ministry asks for |
+| **total** | **8–11** | |
+
+🟡 **Bounds, stated rather than implied.** (a) Every connector row here is **unofficial** and
+scrapes a portal, so an institutional agreement is a prerequisite — the copyright question is
+answered by `Pattern AU`, the **access** question is `P26` and lives in the institution's terms,
+not in any payload. (b) `siu-guarani-mcp` is **1 ★ / 6 commits / single author**: read it as the
+reference implementation of the seam, not as a dependency — exactly as EMEA's connectors began.
+(c) `GeovaneSchmitz/sigaa-api` is **archived and read-only**: it is the best SIGAA *model* in the
+open and must not be a build dependency. (d) Step 0 is bought for **Brazil and Argentina only**;
+Peru, Colombia, Chile, Mexico and Uruguay are an **unverified nil** (`Gap 443-B`).
+
+---
+
 ## 🆕 Pattern AU — `p442` **Clear a repository's licence in four steps that cannot be done in the wrong order**, and the three repositories that each break a different one
 
 🔵 `Pattern AT` (`p441`) clears a **stack** whose grants are already known. `Pattern AU` is the

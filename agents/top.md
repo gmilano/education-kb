@@ -22,6 +22,42 @@ which is the append-only record; nothing was lost, and `git log` holds every pri
 Permissive grants (MIT / Apache-2.0 / BSD-3), each confirmed from the repository's own
 licence payload at the commit shown. These are safe starting points for an engagement.
 
+### 🆕 `p443` · 2026-10-25 — this shelf placed **5 of its 116 rows in LATAM**, and the supply that fixes it was **already inside this base**, unshelved. 🟢 The variable that found it is the **platform name**, not the language. 🟢 One row added here; five more on `repos/foundations.md`
+
+🔴 **The census that should have been run passes ago**, over this file's own placed rows:
+**APAC 41 · EMEA 35 · North America 19 · Global 16 · LATAM 5.** A base whose stated purpose is
+that a LATAM engagement is served as well as an EMEA one was serving it at **one eighth** of
+EMEA's rate.
+
+🟢 **What bought it.** Not a Spanish or Portuguese leg — earlier passes ran those and concluded
+*the language was the wrong variable*, and that conclusion stands. The variable that built this
+file's EMEA national-platform line is **the name of the system the institutions actually run**:
+Librus, IServ, Smartschool, EduPage, Skola24, DTU Learn are here because someone searched for
+*those words*. LATAM's equivalents — **SIGAA** (Brazilian federal universities) and **SIU
+Guaraní** (Argentine universities) — had never been entered. Entered once, sorted by stars, with
+**no capability words added**, they returned a whole tier.
+
+🔴 **And five of the six addresses were already in this base's own append-only record, on no
+shelf.** The record is working; nothing was reading it. 🔴 **The promotion ledger cannot see
+them either** — all six are `grep`-absent from it, and the measurement behind that
+(**2 361** record addresses absent from the ledger, **69** of its 219 rows already shelved) is
+`Gap 443-A`. Mechanism, the full 14-row measurement table, the three refused-ungranted
+addresses and the `ipti/br.tag` README-vs-payload conflict:
+[`agents/trending.md`](trending.md) `p443`. Recipe: `Pattern AV`.
+
+🟢 **Why only ONE row lands here and five land on `repos/foundations.md`.** Of the tranche, only
+`siu-guarani-mcp` is **agent-addressable** — it is an MCP server, so a tutoring or
+administrative agent can call it today. The rest are APIs, scrapers and browser extensions:
+integration surface, which is the foundations tier. 🟡 That distinction is registered as
+`Gap 443-D` so this file's LATAM count is not read as five AI systems.
+
+🔴 **The licence frontier, measured for LATAM for the first time:** the student-side tooling is
+permissive (**6 of 8** academic-portal addresses) and **every** institutional platform that
+holds student records is copyleft — GPL-2.0, GPL-3.0, GPL-3.0, AGPL-3.0, **0 of 4 permissive**.
+🟢 So the sellable LATAM shape is *integrate over an interface, never vendor the platform*,
+which is exactly what the one row below is for.
+
+
 ### 🆕 `p442` · 2026-10-25 — the ladder returns **one** row, and on **12 of 134** repositories that is not the whole grant. 🔴 One row sold here as MIT ships a complete **GPL-3.0** below its root. 🔴 And **19 of the 162 payload cells this base publishes did not reproduce** — repaired below, with a standing gate so they cannot come back
 
 🔵 `Gap 441-A` bought. The tree channel now lives **in** the library every pass sources
@@ -150,6 +186,7 @@ grader. 🔵 Mechanism, the 87 controls and the mutation results:
 | [Kretiandpleti/skola-24-haos-integration](https://github.com/Kretiandpleti/skola-24-haos-integration) | MIT | `fdbc9349b20f` | `LICENSE` 1 070 B · `8b34b498bb1f` | Home Assistant custom component for **Skola24**, the timetable system Swedish municipalities run: domain selection, per-student `SchemaID` as the stable identifier, signature regeneration to defeat stale cached selections, configurable week rollover. 🟡 **Not an MCP server** — it is the Nordic timetable channel, read first-hand, and the integration surface is Home Assistant. | EMEA — Sweden |
 | [jibberswrld/fcps-school-mcp](https://github.com/jibberswrld/fcps-school-mcp) | MIT | `7d9dfbfc32bb` | `LICENSE` 1 073 B · `cd9e736254f8` | MCP server over **Schoology, StudentVUE and TJHSST Ion** at once — the three systems a single large US district (Fairfax County Public Schools) actually exposes to students. 🟢 The district-level analogue of the national connectors above, and the only StudentVUE reader on these shelves. | North America — United States |
 | [zaikaman/SGU-Academic-MCP](https://github.com/zaikaman/SGU-Academic-MCP) | MIT | `d5209305d13e` | `LICENSE` 1 068 B · `0b02f0945515` | MCP server over a Vietnamese university's academic portal (Saigon University): schedule, grades, exam registration. CI pipeline, Ruff-checked. 🔵 Arrives in the jurisdiction whose **Decision 33/2026/QĐ-TTg** puts education AI in a 46-category high-risk register — the connector is the easy half, the oversight artefact is the engagement. | APAC — Vietnam |
+| [jpmanson/siu-guarani-mcp](https://github.com/jpmanson/siu-guarani-mcp) | MIT | `248366400624` | `LICENSE` 1 074 B · `53d0fa710f43` | MCP server **and** CLI over **SIU Guaraní Autogestión**, the self-management portal Argentine universities run — the first LATAM national-platform connector on these shelves, against a region this file placed **5 of 116** rows in before this pass. Seventeen stdio tools over the **teaching-staff profile** (`perfil Docente`): terms, course sections, exam tables and schedules, enrolled students, grades, actas, and CSV/XLSX/JSON export, each with a CLI equivalent. 🟢 **Read-only by construction** — the attendance, topic and grade-loading forms are inspected and deliberately not submitted, with writes left on the roadmap, so it is the draft-and-sign boundary `Pattern AH` asks for rather than a system that can act on a student record. 🟢 **PII is gated behind an explicit `include_pii=True`** on the two roster tools, and credentials come from `GUARANI_USER`/`GUARANI_PASSWORD` in a git-ignored `.env`, with none embedded; `GUARANI_BASE_URL` defaults to the UNR instance and is per-institution configurable. Ships an Agent Plugin v1.0.0 manifest. Scrapes with plain HTTP + BeautifulSoup, no Selenium. 🟡 **1 ★, 6 commits, HEAD 2026-08-10, single author, and unofficial** — read it as the reference implementation of the LATAM connector seam, not as a dependency; the EMEA connectors above started at the same size. | LATAM — Argentina |
 | [oaknational/oak-ai-lesson-assistant](https://github.com/oaknational/oak-ai-lesson-assistant) | MIT | `c6871efa8f08` | `LICENSE` 1 077 B · `d150aadcccd2` | **Oak National Academy's** own AI lesson-planning application, MIT, in the open. Built against England's national curriculum. 🟡 The README states it is intended primarily for Oak's internal use and the docs are not written for outside operators — read it as the reference implementation of a state-curriculum lesson assistant, not as a drop-in dependency. | EMEA — United Kingdom |
 | [ls1intum/edutelligence](https://github.com/ls1intum/edutelligence) | MIT | `a7584174bd3d` | `LICENSE` 1 091 B · `6b9b9eda00d6` | TUM's suite of AI microservices for an LMS — automated assessment, exercise creation, competency modelling and intelligent tutoring — with a published **version-compatibility matrix** against the Artemis LMS it integrates with. 🟢 The one row on this shelf that ships an LMS-version contract instead of leaving integration risk to the buyer. | EMEA — Germany |
 | [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | MIT | `6f35f0b7a88d` | `LICENSE.md` 1 068 B · `30a0bc0d48b4` | KIT's static **and** dynamic analysis autograder for student Java code (Java 17+, Docker for the dynamic arm), with the implemented checks enumerated in-repo. 🟢 The grading-evidence layer for a CS-teaching engagement where a mark has to be explainable check by check. | EMEA — Germany |

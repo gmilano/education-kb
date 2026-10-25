@@ -36,6 +36,7 @@ Only the three SELL shelves are read -- `agents/top.md`, `repos/foundations.md`,
 history: their cells were true when written and are not re-measurable at today's HEAD, so
 charging them here would make the gate permanently red for a reason that is not a defect.
 """
+import glob
 import os
 import sys
 
@@ -43,7 +44,15 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from extract_published_cells import rows as published_cells  # noqa: E402  (one parser, not two)
 
 SHELVES = ("agents/top.md", "repos/foundations.md", "verticals/solutions.md")
-RECORD = "evidence/published-cell-reproduction.2026-10-25-p442.tsv"
+# 🟢 p443 — this was the pinned literal
+# `evidence/published-cell-reproduction.2026-10-25-p442.tsv`, and it went RED the moment a
+# pass added a shelf row and recorded the sweep in a file of its own.  That is `Gap 423-E`'s
+# class exactly — a control pinned to a population that MOVES — and `p404`'s standing remedy
+# is to DERIVE the literal rather than bump it.  The record is a SET now: every sweep output
+# in `evidence/`, read in sorted-filename order so a later pass's re-measurement of the same
+# cell supersedes an earlier one.  Publishing a row therefore means APPENDING a record, and
+# never editing another pass's evidence.
+RECORD_GLOB = "evidence/published-cell-reproduction.*.tsv"
 GREEN = "REPRODUCES"
 
 
@@ -75,17 +84,20 @@ def main():
     if argv and argv[0] == "--root":
         root = argv[1] if len(argv) > 1 else "."
         argv = argv[2:]
-    record_path = os.path.join(root, RECORD)
-    if argv:
-        record_path = argv[0]
-    if not os.path.exists(record_path):
-        sys.stderr.write("🔴 p442: no reproduction record at %s — a published cell with no "
-                         "record is CELL-UNMEASURED, and so is all of them (P355)\n"
-                         % record_path)
+    paths = [argv[0]] if argv else sorted(glob.glob(os.path.join(root, RECORD_GLOB)))
+    if not paths:
+        sys.stderr.write("🔴 p442: no reproduction record matching %s — a published cell with "
+                         "no record is CELL-UNMEASURED, and so is all of them (P355)\n"
+                         % RECORD_GLOB)
         return 2
-    rec = load_record(record_path)
-    if rec is None:
-        return 2
+    rec = {}
+    for p in paths:
+        part = load_record(p)
+        if part is None:
+            return 2
+        rec.update(part)   # sorted order: a later sweep supersedes an earlier verdict
+    print("# p443: reproduction record read from %d sweep(s): %s"
+          % (len(paths), ", ".join(os.path.basename(p) for p in paths)))
     cells = []
     for shelf in SHELVES:
         p = os.path.join(root, shelf)

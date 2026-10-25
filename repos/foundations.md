@@ -6,6 +6,72 @@ updated: 2026-10-25
 
 # 🏗️ Foundational repos — Education
 
+## 🆕 `p443` — **The tier grows by FIVE after six passes of zero, and not one of them came from a search this base had not already run. 🔴 They were in its own append-only record, unshelved, and invisible to the promotion ledger**
+
+🟢 **The LATAM academic-portal integration tier.** Six consecutive passes wrote *"zero rows
+added"* on this file while the shelf stood at **1 LATAM row of 8**. The addresses below close
+that, and the discovery cost was one query: **the name of the platform the institutions
+actually run**, sorted by stars, with no capability words added.
+
+🔴 **Where they came from is the finding.** Five of the six were already written into
+[`agents/trending.md`](../agents/trending.md) and [`trending.md`](trending.md) by earlier
+passes and promoted by none; all six are `grep`-absent from
+`evidence/promotion-ledger.2026-10-25-p436.tsv`. The measurement — **2 361** record addresses
+absent from the ledger, **69** of its 219 rows already landed, so `PROMO_RATCHET = 148` counts
+claims rather than findings — is `Gap 443-A`.
+
+🔵 **Why these are foundations and not agents.** None of the five is an AI system. Each is the
+**read seam** onto a national academic portal — the thing an agent has to call before it can
+tutor, advise or chase a deadline. That is this file's job, and it is precisely how this base's
+EMEA line began: `librus-python-api` sits here and `librus-mcp` sits on the agents shelf. The
+agent-addressable half of this tranche (`jpmanson/siu-guarani-mcp`, MIT) is on
+[`agents/top.md`](../agents/top.md) for the same reason.
+
+🔴 **The licence frontier in LATAM, measured here for the first time, and it runs the wrong way
+exactly as it does in EMEA:** of 8 academic-portal addresses **6 are permissive**; of the 4
+institutional platforms that actually hold student records, **0 are** — GPL-2.0, GPL-3.0,
+GPL-3.0, AGPL-3.0. 🟢 **So the foundation layer is buildable and the platform layer must be
+integrated, never vendored.**
+
+### 🟢 The five rows, read first-hand — tree-enumerated, file-measured
+
+Grant paths from `git ls-tree -r` over a blobless clone (`p442`/`Pattern AU`), not a root
+ladder; every payload fetched at the pinned SHA and measured from the file, so the
+trailing-newline run is intact (`P834`). 🟢 **14 of 14** granted repositories in this tranche
+carry **exactly one** own-grant path — no `librus-mcp`-style second grant anywhere in the arm.
+
+| Repo | Licence | HEAD | Payload | Role in a build |
+|---|---|---|---|---|
+| [aquario-ufpb/aquario](https://github.com/aquario-ufpb/aquario) | **MIT** | `662a345962d2` | `LICENSE` 1 070 B · `ca675f365799` | **LATAM — Brazil.** UFPB's Computing Centre information hub: the largest and most active address in the tranche (86 ★, 948 files, HEAD **2026-10-21**). The one row here that is a *deployed institutional product* rather than a utility, so it is the reference for what a Brazilian federal-university front end is expected to contain. |
+| [PucaVaz/sigaa-tools](https://github.com/PucaVaz/sigaa-tools) | **MIT** | `a5a86e0a9b28` | `LICENSE` 1 065 B · `75d9af3e2e90` | **LATAM — Brazil.** Python SIGAA tooling, 209 files, HEAD **2026-10-20** — 🟢 the **most recently maintained SIGAA read seam in existence**, which is what makes it the default starting point over the better-known archived API below. |
+| [trindadetiago/sigaa-caiu](https://github.com/trindadetiago/sigaa-caiu) | **MIT** | `7373c6abac62` | `LICENSE` 1 071 B · `e69df76328c3` | **LATAM — Brazil.** SIGAA-derived study tooling, 48 files, HEAD **2026-09-02**. Live, small and readable — the cheapest row to fork when an engagement needs a bespoke SIGAA reader rather than a library. |
+| [juliancasaburi/siu-guarani-promedio-extension](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | **MIT** | `6962638adbdd` | `LICENSE` 1 073 B · `652d46c067d4` | **LATAM — Argentina.** Computes grade averages from a SIU Guaraní academic record (Chromium/Firefox). 🟢 Documents the **student-side** record layout, where `siu-guarani-mcp` covers the teaching-staff profile — together they span both SIU Guaraní personas. 🟡 HEAD **2025-07-08**: read the parsing, do not depend on the extension. |
+| [GeovaneSchmitz/sigaa-api](https://github.com/GeovaneSchmitz/sigaa-api) | **MIT** | `a7aab3d605d7` | `LICENSE` 1 108 B · `ecb193695a94` | **LATAM — Brazil.** 🔴 **ARCHIVED by its owner on 2024-04-10 and read-only — shelved as a REFERENCE, never as a dependency**, and the README's own `ARQUIVAMENTO` section says so. Why it earns a row anyway: at 61 ★ / 23 forks / 247 commits / 232 files it is **the most complete SIGAA model that exists in the open** — classes, grades, absences, news, teacher search, class members, file downloads — and it is the only address here that states which instances it was tested against (**IFSC, IFFar, UFPB**). Read it to learn the portal; build on `sigaa-tools`. |
+
+🔴 **One row in this tranche is deliberately NOT here.** `ipti/br.tag` — Brazil's live municipal
+school-management platform — is on [`verticals/solutions.md`](../verticals/solutions.md)
+instead, because its grant is **GPL-2.0** and because its **README states BSD-3-Clause**, a
+two-channel conflict established first-hand at one commit and written up in
+[`agents/trending.md`](../agents/trending.md) `p443`. 🔵 It is the sharpest argument on this
+file for why a promotion test reads the payload and not the README: the README is the *more
+permissive* of the two, which is the direction that costs a client money.
+
+### 🔴 Refused in the same tranche, and the reason is recency, not licence
+
+| repository | grant | HEAD | verdict |
+|---|---|---|---|
+| [luizpicolo/code](https://github.com/luizpicolo/code) | 🟢 MIT `1 074 B · a2874113b3b5` | 🔴 **2016-10-31** | Ten years cold |
+| [rodrigmatrix/sigaa_ufc_android](https://github.com/rodrigmatrix/sigaa_ufc_android) | 🟢 Apache-2.0 `11 357 B · c71d239df917` | 🔴 **2021-03-19** | Permissive and dead |
+| [ernestosrf/sigaa-horarios-extension](https://github.com/ernestosrf/sigaa-horarios-extension) | 🔴 **none in tree** (9 files) | 2025-07-23 | `REFUSED-UNGRANTED` |
+| [Cristianojr9/sigaa-new-design](https://github.com/Cristianojr9/sigaa-new-design) | 🔴 **none in tree** (30 files) | 2020-08-20 | `REFUSED-UNGRANTED` |
+| [G3-Devs/siu-auto-asistencia](https://github.com/G3-Devs/siu-auto-asistencia) | 🔴 **none in tree** (11 files) | 2026-04-18 | `REFUSED-UNGRANTED` |
+
+🔵 **Two of the five were refused with a clean permissive grant in hand** — the
+`davemckain/qtiworks` precedent on this file, and the right call both times. A licence-only
+promotion test would have shelved them. 🟢 The three ungranted verdicts are from a **tree
+enumeration**, not a root ladder, so they are absences of a grant *anywhere in the repository*.
+
+
 ## 🆕 `p442` — **Zero rows added, sixth pass running — and the tier's own cells were the finding: 5 of them did not reproduce, and one platform ships a 1 614 B POINTER beside its 35 147 B grant**
 
 🔴 `p442` adds **no** foundation row. Its six new permissive addresses are **Agent Skills and

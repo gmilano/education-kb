@@ -4,6 +4,227 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p443` · 2026-10-25 — **The LATAM arm, bought at last — and what bought it was the PLATFORM NAME, a variable this base had not tried. 🔴 Six of the addresses were already in this record and on no shelf, and the promotion ledger cannot see them: **2 361** record addresses are absent from the only instrument that tracks promotion. 🔴 And one active Brazilian municipal platform states **BSD-3-Clause** in its README while its payload is **GPL-2.0**.**
+
+🔵 **Why this pass went at the region and not at the shelf.** The census is one line and it has
+been true for several passes without being stated as a number:
+
+| placed rows on `agents/top.md` | n | share |
+|---|---|---|
+| APAC | 41 | 35 % |
+| EMEA | 35 | 30 % |
+| North America | 19 | 16 % |
+| Global | 16 | 14 % |
+| 🔴 **LATAM** | 🔴 **5** | 🔴 **4 %** |
+
+🔴 The stated purpose of this base is that *"a North America or EMEA engagement is as well
+served as a LATAM one"*. On the agents shelf it is served at one eighth of EMEA's rate, and
+`repos/foundations.md` (1 of 8) and `verticals/solutions.md` (1 of 6) are no better.
+
+### 🔴 First, the channel that did NOT pay — measured, so no successor re-buys it
+
+The two canonical topic listings (`ai-tutor`, `education-ai`) plus three English web legs
+returned **29 candidate addresses**. Checked against this base's 2 829 known slugs:
+
+| | n |
+|---|---|
+| already known to this base | 🔴 **28** |
+| 🟢 new | 🟢 **1** (`upstream1119/Traceable-Ideological-Education-RAG`) |
+
+🔴 **96.6 % already-known.** `p442` measured this same channel at **18 of 18** and called it
+saturated; this pass reproduces that at a 29-address denominator. 🟢 **The topic channel is
+closed for discovery and should be run only as a liveness check from here.**
+
+### 🟢 The channel that DID pay, and why it is not the language leg
+
+🔵 Earlier passes ran Spanish and Portuguese legs and **"concluded the language was the wrong
+variable"** — that conclusion stands and is not being re-litigated. The variable that worked
+is the one that built this base's EMEA line: **the name of the platform the schools actually
+run.** EMEA has Librus, IServ, Smartschool, EduPage, Skola24 and DTU Learn on these shelves
+because someone searched for *those words*. LATAM's equivalents were never entered:
+
+| jurisdiction | the system schools/universities actually run | on these shelves before `p443` |
+|---|---|---|
+| Brazil (federal universities) | **SIGAA** | 🔴 in this record only, unshelved |
+| Argentina (universities) | **SIU Guaraní** | 🔴 in this record only, unshelved |
+| Brazil (municipal basic education) | **T.A.G.** (`ipti/br.tag`) | 🔴 in this record only, unshelved |
+
+🔴 **And that is the second finding: five of the six were already here.** They were written
+into this append-only record by earlier passes and never promoted. The record is doing its
+job; nothing is reading it.
+
+### 🔴 The promotion ledger's population is not this base's own record — measured
+
+| population | distinct addresses |
+|---|---|
+| this append-only record (`agents/trending.md` + `repos/trending.md`) | **2 773** |
+| the three sell shelves | **337** |
+| `evidence/promotion-ledger.2026-10-25-p436.tsv` | **219** |
+| in the record, on **no** sell shelf | **2 487** |
+| 🔴 of those, **absent from the ledger entirely** | 🔴 **2 361** |
+| of those, tracked by the ledger | 126 |
+| 🔴 ledger rows whose slug is **already** on a sell shelf | 🔴 **69** |
+
+🟡 **The honest reading, stated before anyone quotes the big number.** 2 361 is an **upper
+bound on an unaudited population, not a backlog**: this record also holds refused and
+ungranted addresses, negative controls, upstream dependencies and this base's own tooling
+citations, and none of those should ever be promoted. What the table does establish is
+structural and does not depend on the figure: 🔴 **the ledger is keyed on promotion CLAIMS
+that cite a shelf line, so an address a pass merely found is invisible to it.** The
+`PROMO_RATCHET` of **148** therefore measures what passes happened to claim — not what this
+base has found. All six LATAM addresses below are `grep`-absent from the ledger, and the
+ledger carries **69** rows for addresses that already landed.
+
+### 🟢 The LATAM arm, every row read first-hand this hour
+
+Existence and default branch via `git ls-remote --symref`; **every grant path from a TREE
+ENUMERATION** (`git ls-tree -r` over a blobless clone), per `p442`/`Pattern AU`, not a root
+ladder; every payload fetched at the pinned SHA and **measured from the file** (`wc -c <
+file`, `sha256sum file`), never through a capture — the `P834` defect.
+
+🟢 **The instrument is calibrated against this base's own published cells.** Three of its
+measurements reproduce cells already on these shelves, to the digit, with no reference to
+them: Apache-2.0 **11 357 B · `c71d239df917`** (matches `smolagents`), GPL-3.0 **35 149 B ·
+`3972dc9744f6`** (matches the `librus-mcp` `legacy_reference/` grant `p442` found), and
+Apache-2.0 **11 408 B · `cd2f54e1e506`** (matches `HKUDS/DeepTutor`).
+
+| repository | grant (verified) | HEAD | payload · `sha256₁₂` | last commit | place |
+|---|---|---|---|---|---|
+| [`jpmanson/siu-guarani-mcp`](https://github.com/jpmanson/siu-guarani-mcp) | 🟢 **MIT** | `248366400624` | `LICENSE` 1 074 B · `53d0fa710f43` | 2026-08-10 | LATAM — Argentina |
+| [`aquario-ufpb/aquario`](https://github.com/aquario-ufpb/aquario) | 🟢 **MIT** | `662a345962d2` | `LICENSE` 1 070 B · `ca675f365799` | 🟢 2026-10-21 | LATAM — Brazil |
+| [`PucaVaz/sigaa-tools`](https://github.com/PucaVaz/sigaa-tools) | 🟢 **MIT** | `a5a86e0a9b28` | `LICENSE` 1 065 B · `75d9af3e2e90` | 🟢 2026-10-20 | LATAM — Brazil |
+| [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) | 🟢 **MIT** | `7373c6abac62` | `LICENSE` 1 071 B · `e69df76328c3` | 2026-09-02 | LATAM — Brazil |
+| [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | 🟢 **MIT** | `6962638adbdd` | `LICENSE` 1 073 B · `652d46c067d4` | 🟡 2025-07-08 | LATAM — Argentina |
+| [`GeovaneSchmitz/sigaa-api`](https://github.com/GeovaneSchmitz/sigaa-api) | 🟢 **MIT** | `a7aab3d605d7` | `LICENSE` 1 108 B · `ecb193695a94` | 🔴 2024-04-10 **ARCHIVED** | LATAM — Brazil |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🔴 **GPL-2.0** — README says BSD-3 | `3e6d315ef881` | `LICENSE` 18 027 B · `111e1f411730` | 🟢 2026-10-18 | LATAM — Brazil |
+| [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | 🔴 **GPL-3.0** | `d5dac190bf30` | `LICENSE` 35 149 B · `3972dc9744f6` | 🟢 2026-10-09 | LATAM — Brazil |
+| [`LibreClass/libreclass`](https://github.com/LibreClass/libreclass) | 🔴 **GPL-3.0** | `15aa357e4cfe` | `LICENSE` 35 141 B · `589ed823e9a8` | 🔴 2021-11-06 | LATAM — Brazil |
+| [`despedite/siu-guarani`](https://github.com/despedite/siu-guarani) | 🔴 **GPL-3.0** | `e944ff8480eb` | `LICENSE` 35 149 B · `3972dc9744f6` | 🔴 2021-03-11 | LATAM — Argentina |
+| [`regexPattern/fiuba-reviews-backend`](https://github.com/regexPattern/fiuba-reviews-backend) | 🔴 **GPL-3.0** | `e70c3ccc8c96` | `LICENSE` 35 149 B · `3972dc9744f6` | 🟡 2025-02-15 | LATAM — Argentina (FIUBA) |
+| [`carmonabernaldiego/sistema-escolar`](https://github.com/carmonabernaldiego/sistema-escolar) | 🔴 **AGPL-3.0** | `d0d6019e3ae7` | `LICENSE` 34 523 B · `8486a10c4393` | 🔴 2023-09-09 | LATAM — Mexico |
+| [`luizpicolo/code`](https://github.com/luizpicolo/code) | 🟢 **MIT** | `9a08401be15c` | `LICENSE.txt` 1 074 B · `a2874113b3b5` | 🔴 2016-10-31 | LATAM — Brazil |
+| [`rodrigmatrix/sigaa_ufc_android`](https://github.com/rodrigmatrix/sigaa_ufc_android) | 🟢 **Apache-2.0** | `fd86cb14766f` | `LICENSE` 11 357 B · `c71d239df917` | 🔴 2021-03-19 | LATAM — Brazil (UFC) |
+
+🟢 **Tree result, stated because an absence has to be:** **14 of 14** granted repositories in
+this arm carry **exactly one** own-grant path. `p442` found 12 of 134 with more than one; this
+arm has **zero**, so none of its rows needs the integrate-don't-vendor treatment that
+`librus-mcp` needs.
+
+### 🔴 Refused in the same tranche — three addresses with NO grant anywhere in the tree
+
+Not "no `LICENSE` file": no path matching a grant name **anywhere in the enumerated tree**.
+Unusable in a deliverable at any price, and recorded so the next pass does not re-cost them.
+
+| repository | HEAD | files in tree | verdict |
+|---|---|---|---|
+| [`ernestosrf/sigaa-horarios-extension`](https://github.com/ernestosrf/sigaa-horarios-extension) | `acd839df7a3c` | 9 | 🔴 `REFUSED-UNGRANTED` |
+| [`Cristianojr9/sigaa-new-design`](https://github.com/Cristianojr9/sigaa-new-design) | `955637ff7d47` | 30 | 🔴 `REFUSED-UNGRANTED` |
+| [`G3-Devs/siu-auto-asistencia`](https://github.com/G3-Devs/siu-auto-asistencia) | `403997a0f420` | 11 | 🔴 `REFUSED-UNGRANTED` |
+
+### 🔴 `ipti/br.tag` — the README and the payload state DIFFERENT GRANTS at the same commit
+
+The one row in this arm that a licence-only read gets **backwards**, established from both
+channels at `3e6d315ef881`:
+
+| channel | what it says, read first-hand |
+|---|---|
+| `LICENSE` **18 027 B · `111e1f411730`** | 🔴 `GNU GENERAL PUBLIC LICENSE` / **`Version 2, June 1991`**. No §13 Affero clause (so not GPL-3/AGPL — `P171`), and **no BSD operative clause anywhere in the payload** |
+| `README.md` **3 065 B · `e9695ee53743`** | 🔴 § `Licença` line 19: **"The BSD-3-Clause"**, and line 23 reproduces the **BSD operative text** *"Redistribution and use in source and binary forms…"* (© 2011 IPTI). Line 1 carries a **commented-out** BSD-3-Clause badge |
+| GitHub's own sidebar | **GPL-2.0** — agreeing with the payload, against the README |
+
+🔴 **Why this one matters more than a tidiness complaint.** `br.tag` is not a toy: **3 959
+commits**, **2 304 files**, last commit **2026-10-18**, built by **IPTI** with the
+municipality of **Santa Luzia do Itanhy/SE** for rural basic education **with offline
+synchronisation** — the single most engagement-relevant LATAM platform address on these
+shelves. 🔴 **And the two channels disagree in the expensive direction:** a reader who trusts
+the README treats it as permissive and vendors it into a proprietary deliverable, when the
+payload is **GPL-2.0 copyleft**. 🟢 **Shelved on `verticals/solutions.md` as GPL-2.0, the
+payload's answer, with the conflict named in the row** — never as BSD-3. 🔵 This is `p278`'s
+channel-conflict class and `p288`'s README-third-channel class meeting on one repository, and
+it is the first time on this base that the README has been the **more permissive** of the two.
+
+### 🔴 `Gap 425-A` REPRODUCES — and now on a SECOND, INDEPENDENT channel
+
+Prior passes measured this host's egress with `curl` and recorded every non-GitHub host at
+`HTTP 000`. This pass re-measured it with `curl` **and** with the tool-side fetcher, which has
+its own DNS resolution and is not this container's network stack:
+
+| host | `curl` | tool-side fetcher |
+|---|---|---|
+| `eur-lex.europa.eu` | 🔴 `000` | 🔴 `ENOTFOUND` |
+| `www.unesco.org` | 🔴 `000` | 🔴 `ENOTFOUND` |
+| `www.camara.leg.br` | 🔴 `000` | — |
+| `www.oecd.org`, `iesalc.unesco.org`, `www.multistate.us`, `en.wikipedia.org` | 🔴 `000` | — |
+| `github.com`, `raw.githubusercontent.com` | 🟢 `400` / `400` | 🟢 reachable |
+
+🟢 **This is strictly more than any prior pass established.** The refusal is **host-shaped,
+not tool-shaped** — it fails at name resolution on two independent stacks, so it is not a
+proxy quirk of one client and no successor should spend a leg looking for a client that gets
+through. 🔴 **The consequence, carried forward unchanged:** every licence cell this pass
+publishes is `authoritative` (GitHub answers), and **every policy and market cell is
+`reported`** (no government or IGO primary is reachable at all). That band is structural on
+this host, not a shortfall of effort.
+
+### 🟢 `Gap 425-B` does NOT reproduce — the suite RAN here, and it caught this pass's own defect
+
+🔴 **A correction to this pass's own first draft**, which claimed `make hooks` was denied and
+listed the contract as hand-honoured. **That was wrong.** What was refused is narrower: *sourcing
+`compose/code/lib/*` into an interactive shell* (`[Code from External]`). 🟢 **`make hooks` ran —
+62 gates — and so did `sweep_published.sh`.** 🔵 So `Gap 425-B` means *a shell cannot source the
+library*, not *the suite cannot run*, and three passes have been honouring the contract by hand
+on the wider reading.
+
+🔴 **The first run was 58/62, and the red was this pass's own work:**
+`gate-cell-reproduction` typed **all six** new payload cells `CELL-UNMEASURED` — `p442`'s
+ratchet, built one pass earlier, catching its successor. 🟢 Swept through the base's own
+instrument, **all six returned `REPRODUCES`**: the hand measurements above were right to the
+digit, and the record is committed as
+`evidence/published-cell-reproduction.2026-10-25-p443.tsv`. The gate now reads **186 cells, 186
+green, 0 red** with its 29 controls passing **29/29**.
+
+🟢 **Final: 61 of 62 gates green on this commit.** The one red is `gate-census-union`, this
+base's declared non-blocking red (`Gap 400-B`), and it was **verified as inherited** rather than
+assumed — all three suspect gates were re-run against `f240c21` with this pass's writes stashed:
+`gate-census-union` RED on arrival, `gate-census-currency` and `gate-union-currency` GREEN, so
+their staleness is this pass's own and was re-derived and restated in `README.md` as `p352` and
+`p376` require (union **3 693 → 3 704**, +11).
+
+🟢 **And one defect in the gate itself, fixed rather than worked around** (`Gap 443-E`): it pinned
+`RECORD` to a single evidence **filename**, so a pass that published a row and recorded its own
+sweep went red *for following the rule*. The record is a **set** now
+(`evidence/published-cell-reproduction.*.tsv`, sorted so a later sweep supersedes). 🔵 That is
+`Gap 423-E`'s pinned-literal class for the **fourth** time on this base, and `p404`'s remedy —
+*derive the literal* — had sat registered for nineteen passes.
+
+### 🟢 `Gap 427-E`'s PRESCRIBED REMEDY WAS FINALLY TRIED, AND IT PAID ON BOTH LEGS
+
+The gap has been open since `p427`, which diagnosed the regional legs as **over-ANDed**
+(*regulation, adoption and players, across four countries, in one query*) and prescribed
+**one country, one question**. Four passes registered it; none ran it. This pass ran it twice.
+
+| leg | result |
+|---|---|
+| 🟢 **APAC — India, adoption only** | 🟢 **The first education-specific APAC adoption rate this base has obtained.** JanAI, released **September 2026**, **797 government-school teachers across four states**: 🔴 **82 % have tried an AI tool at least once but only 26 % use one regularly**, 72 % positive. Corroborating series: CSF **BaSE 2025**, 2 500 government/aided/private teachers, **51 %** already using generative AI for teaching or school work. 🟡 CENTA 2025's **>70 %** is reachable only through secondary citation and is **not** carried as a cell. 🔵 The binding constraint is physical, not attitudinal: **57.2 %** of Indian schools had computers and **53.9 %** internet in 2023-24 |
+| 🟢 **LATAM — Brazil, legislative status only** | 🟢 **`Gap 421-E(b)` is CLOSED, and the carried "conflict" was never a conflict.** Both sides were true of **one process in two houses**: Senate **approved 10 Dec 2024** → received by the Chamber **17 Mar 2025** (Ofício nº 235/2025, revision under art. 65 CF) → special committee installed **20 May 2025**, relator **Dep. Aguinaldo Ribeiro (PP-PB)** → 🔴 **no parecer filed**, five voting dates set and missed since Nov 2025 → **24 Aug 2026** the rapporteur postponed the vote past the October elections → latest entry **2 Sep 2026**, situação **"Aguardando Parecer"**. 🔴 **`PL 2338/2023` is NOT law and no article of it is in force** |
+
+🔵 **The methodological result is worth more than either fact:** the nil that `p427`–`p438`
+recorded on these legs was an artefact of **query shape**, not of the regions. A leg that asks
+one country one question pays; the same leg asking four countries three questions returns
+regulation and nothing else. 🟢 Both legs' cells are `reported` — `Gap 425-A` forbids any
+other band on this host.
+
+### 🔵 Registered for a successor
+
+| gap | what it says |
+|---|---|
+| 🆕 `Gap 443-A` | 🔴 **The promotion ledger's population is not derived from this base's own record.** 2 361 record addresses are absent from it, and 69 of its 219 rows are for addresses already shelved. 🟢 **Prescription, concrete:** derive the ledger's candidate set from the record by `grep`, partition it by `REFUSED` / `negative-control` / `tooling-citation` / `upstream-dependency` / **promotable**, and ratchet on the last partition. Until then `PROMO_RATCHET = 148` measures claims, not findings |
+| 🆕 `Gap 443-B` | 🟡 **The platform-name channel is bought for Brazil and Argentina ONLY.** Entered and unpaid or unentered this pass: **SIAGIE** (Peru), **SIMAT** (Colombia), **SIGE**/**UCampus** (Chile), **SAES**/**SIASE** (Mexico), **GURI**/**CREA/Ceibal** (Uruguay). 🔵 The one Mexican address found (`carmonabernaldiego/sistema-escolar`) is AGPL-3.0 and 2023; Peru, Colombia, Chile and Uruguay returned **nothing** on the name leg, and that is an unverified nil rather than an absence — the leg was run once, in one shape |
+| 🆕 `Gap 443-C` | 🔴 **This base has no instrument that compares the README's stated grant against the payload's.** `ipti/br.tag` was caught by hand. `p288` built a README channel and `p278` a channel-conflict gate, and neither answers *"does the README name a DIFFERENT licence from the one in the file"* — which is the direction that costs money when the README is the permissive one |
+| 🆕 `Gap 443-D` | 🟡 **The LATAM arm is integration surface, not agents.** Only `siu-guarani-mcp` is agent-addressable; the rest are scrapers, APIs and browser extensions. That is exactly how this base's EMEA national-platform line began, so it is a stage rather than a defect — but no row here is itself an AI system, and `agents/top.md`'s LATAM count should not be read as if it were |
+| 🔴 `Gap 436-D` | 🔴 **Untouched.** The LATAM adoption figures are still quoted through a newspaper column, and `Gap 425-A` means this host cannot upgrade them at any leg count |
+
+---
+
 ## 🆕 `p442` · 2026-10-25 — **`Gap 441-A` bought, and the tree answers a question the clause grader cannot even be asked: on **12 of 134** repositories this base sells, the ladder's single row is not the whole grant, and one row sold as **MIT** ships a complete **GPL-3.0** below its root. 🔴 Then the sweep turned on this base's own cells: **19 of 162 did not reproduce**, all 19 carrying the `P834` capture signature, from three passes that had the fix available. Repaired, with a ratchet. 🟢 Seven new rows, every cell built by the primitive.**
 
 🔵 **Append-only. Nothing below this block was edited.**

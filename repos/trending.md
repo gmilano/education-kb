@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p443` · 2026-10-25 — **A channel this base had never entered: the NAME OF THE PLATFORM THE SCHOOLS RUN. 🟢 It returned a whole LATAM academic-portal tier — SIGAA (Brazil) and SIU Guaraní (Argentina) — against a shelf that placed **5 of 116** rows in LATAM. 🔴 The topic channel reproduces `p442`'s saturation at a 29-address denominator: **28 of 29 already known**. 🔴 And the query shape matters more than the query: the same platform names ORed with `mcp OR api OR agent` returned ten addresses, none of them education.**
+
+### 🔴 The topic channel, re-priced and now closed for discovery
+
+`github.com/topics/ai-tutor` and `github.com/topics/education-ai` (first page each, 780 and 70
+matches) plus three English web legs → **29 candidates**, checked against 2 829 known slugs:
+
+| | n |
+|---|---|
+| 🔴 already known to this base | 🔴 **28** |
+| 🟢 new | 🟢 **1** |
+
+The one new address is [`upstream1119/Traceable-Ideological-Education-RAG`](https://github.com/upstream1119/Traceable-Ideological-Education-RAG)
+(2 ★, knowledge-graph RAG with citation grounding and multi-agent review, APAC — China). 🟡
+Not shelved: 2 stars, and its subject scope is ideological-education content, which is not a
+tier any engagement on these shelves sells into. Recorded so it is not re-found as if new.
+
+🔵 `p442` priced this channel at **18 of 18 already-known** and called it saturated. This pass
+reproduces that at **96.6 %** over a 61 %-larger denominator. 🟢 **Treat both topic listings as
+a liveness channel from here, not a discovery one** — and note that this is the *measured*
+basis for that instruction, not a prior.
+
+### 🔴 The query-shape result, which is the transferable part
+
+Two queries were run **against the same platform names, in the same minute, on the same
+index**. Only the sort and the extra OR-group differed:
+
+| query shape | what came back |
+|---|---|
+| 🔴 `SIU-Guarani OR SIAGIE OR SIMAT OR SIGAA mcp OR api OR agent`, sorted `updated` | 🔴 **Ten addresses, not one of them education.** A self-healing agent fleet, a proxy list, a TikTok uploader, a Kotlin HTTP library, a World-of-Warcraft raid analyst — the `mcp OR api OR agent` group dominated the match and the platform names contributed nothing |
+| 🟢 `sigaa OR "siu guarani" OR siagie`, sorted `stars` | 🟢 **792 matches, ten read, SEVEN of them real academic-portal tooling** for the named systems |
+
+🔵 This is `Gap 427-A`'s over-ANDing defect on the **supply** side rather than the policy side,
+and it is now measured as a controlled pair rather than asserted. 🟢 **The rule a successor
+should take from it: name the platform, sort by stars, and add NO capability words.** The
+capability words are what a general-purpose index is densest in, so they drown a proper noun.
+
+### 🟢 What the name channel returned — read first-hand, tree-enumerated
+
+Full measurement table, grants, refusals, the `ipti/br.tag` README-vs-payload conflict and the
+promotion-ledger finding are in [`agents/trending.md`](../agents/trending.md) `p443` and are
+not duplicated here. The **repository-tier** summary:
+
+| tier | addresses | grant outcome |
+|---|---|---|
+| 🟢 **academic-portal integration surface** (SIGAA, SIU Guaraní) | 8 | 🟢 **6 permissive** (5 MIT, 1 Apache-2.0), 2 GPL-3.0 |
+| 🔴 **municipal / school-management platforms** | 4 | 🔴 **0 permissive** — GPL-2.0, GPL-3.0, GPL-3.0, AGPL-3.0 |
+| 🔴 **ungranted** | 3 | 🔴 no grant path anywhere in the enumerated tree |
+
+🔴 **The licence frontier in LATAM runs the same way it runs in EMEA, and this is the first
+time this base can say so with numbers:** the *student-side tooling* is permissive and the
+*institutional platform* is copyleft. Every one of the four systems that actually holds student
+records here — `ipti/br.tag` (GPL-2.0), `LibreClass/libreclass` (GPL-3.0),
+`carmonabernaldiego/sistema-escolar` (AGPL-3.0), plus Brazil's `sete` lineage already shelved —
+is copyleft or worse for a vendored deliverable. 🟢 **Consequence for an engagement: integrate
+over an interface, never vendor the platform** — which is what makes `jpmanson/siu-guarani-mcp`
+the load-bearing row of the pass rather than the highest-starred one.
+
+### 🟢 Newly shelved from this tranche
+
+| → shelf | rows |
+|---|---|
+| [`agents/top.md`](../agents/top.md) | `jpmanson/siu-guarani-mcp` — MIT, the first LATAM national-platform **MCP** connector on these shelves |
+| [`repos/foundations.md`](foundations.md) | `aquario-ufpb/aquario`, `PucaVaz/sigaa-tools`, `trindadetiago/sigaa-caiu`, `juliancasaburi/siu-guarani-promedio-extension`, `GeovaneSchmitz/sigaa-api` (🔴 archived, shelved as a reference) |
+| [`verticals/solutions.md`](../verticals/solutions.md) | `ipti/br.tag` — GPL-2.0, with the README conflict named in the row |
+
+### 🔴 Not shelved, and why — so the cost is not paid twice
+
+| repository | grant | why it stays off the shelves |
+|---|---|---|
+| [`LibreClass/libreclass`](https://github.com/LibreClass/libreclass) | GPL-3.0 | 🔴 HEAD **2021-11-06**. Copyleft **and** five years cold; `br.tag` covers the same tier and is live |
+| [`despedite/siu-guarani`](https://github.com/despedite/siu-guarani) | GPL-3.0 | 🔴 HEAD **2021-03-11**, 10 files, a seat-availability scraper. Superseded by `siu-guarani-mcp` |
+| [`carmonabernaldiego/sistema-escolar`](https://github.com/carmonabernaldiego/sistema-escolar) | AGPL-3.0 | 🟡 158 ★ — the highest-starred address in the tranche — but AGPL-3.0, HEAD **2023-09-09**, and a generic school-management app with no Mexican national-platform binding. 🔵 Carried **only** as `Gap 443-B`'s single Mexican data point |
+| [`regexPattern/fiuba-reviews-backend`](https://github.com/regexPattern/fiuba-reviews-backend) | GPL-3.0 | 🟡 A FIUBA course-review backend whose SIU Guaraní scraper is a component, not the product |
+| [`luizpicolo/code`](https://github.com/luizpicolo/code) | MIT | 🔴 HEAD **2016-10-31**. The grant was never the problem — ten years cold is |
+| [`rodrigmatrix/sigaa_ufc_android`](https://github.com/rodrigmatrix/sigaa_ufc_android) | Apache-2.0 | 🔴 HEAD **2021-03-19**. Permissive and dead; kept as evidence that UFC's SIGAA instance was addressable |
+| [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | GPL-3.0 | 🟢 Live (**2026-10-09**) and genuinely useful — SIGAA deadlines into Google Calendar — but 🔴 GPL-3.0, so integrate, never vendor |
+
+🔵 **Four of these seven were refused on RECENCY with a clean permissive grant.** That is the
+`davemckain/qtiworks` precedent on this file, and it is the right call each time: a licence-only
+promotion test would have shelved all four.
+
+---
+
 ## 🆕 `p442` · 2026-10-25 — **The two canonical topic listings ARE reachable, and they returned **18 of 18 already known** — a saturated channel, measured on 40 slugs rather than 4. 🟢 But *known* is not *shelved*: nine were tree-probed and **seven became rows**, including one that had sat verified in this base's own backlog since `p381`. 🔴 And `T125` lands a fifth time, on Frappe LMS again.**
 
 🔵 **Append-only. Nothing below this block was edited.**

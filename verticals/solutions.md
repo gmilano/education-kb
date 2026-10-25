@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p443` — **A live municipal platform joins the map, and it is the first row on this file whose README names a DIFFERENT, MORE PERMISSIVE grant than its own payload**
+
+🟢 **The row.** `ipti/br.tag` — **T.A.G.** (*Tecnologia de Apoio à Gestão*) — is a Brazilian
+basic-education school-management system built by **IPTI** with the municipality of **Santa
+Luzia do Itanhy/SE**, explicitly for rural schools, **with offline synchronisation for schools
+with no internet**. **3 959 commits**, **2 304 files**, HEAD **2026-10-18**. 🟢 It is the most
+engagement-relevant LATAM platform address on these shelves and this file had **1 LATAM row of
+6** before this pass.
+
+🔴 **And it is sold here as GPL-2.0, because that is what the file says — against its own
+README.** Established first-hand, both channels at the same commit `3e6d315ef881`:
+
+| channel | what it states, read first-hand |
+|---|---|
+| `LICENSE` **18 027 B · `111e1f411730`** | 🔴 `GNU GENERAL PUBLIC LICENSE`, **`Version 2, June 1991`** — GPL-2.0. No §13 Affero clause, so not GPL-3/AGPL (`P171`); **no BSD operative clause anywhere in the payload** |
+| `README.md` **3 065 B · `e9695ee53743`** | 🔴 § `Licença` states **"The BSD-3-Clause"** and reproduces the **BSD operative text** *"Redistribution and use in source and binary forms…"*, © 2011 IPTI. A BSD-3-Clause badge sits **commented out** on line 1 |
+| GitHub's sidebar | **GPL-2.0** — with the payload, against the README |
+
+🔴 **Why this is a procurement finding and not a tidiness one.** Every other conflict this file
+has recorded ran the safe way — a badge or a roundup claiming **MIT** where the payload was
+**AGPL**, so a careful reader was *over*-cautious. This one runs the **expensive** way: the
+README is the **more permissive** channel, so a reader who trusts it concludes BSD-3-Clause,
+vendors a copyleft school-records platform into a proprietary deliverable, and distributes it.
+🟢 **The rule this file already applies survives the test: the payload decides.** 🔵 No
+instrument on this base compares the two channels — `p288` built a README channel and `p278` a
+channel-conflict gate, and neither asks *"does the README name a different licence from the
+file"*. That is `Gap 443-C`.
+
+🔵 **The wider LATAM result, measured in the same tranche:** of the four LATAM institutional
+platforms that actually hold student records, **0 of 4 are permissive** — `ipti/br.tag`
+(GPL-2.0), `LibreClass/libreclass` (GPL-3.0), `carmonabernaldiego/sistema-escolar` (AGPL-3.0),
+and the already-shelved `sete` lineage — while **6 of 8** student-side academic-portal
+addresses are. 🟢 **The copyleft frontier in LATAM therefore sits exactly where it sits in
+EMEA: around the system of record.** That is the argument for this file's standing advice, now
+with a LATAM denominator behind it: *integrate over an interface, never vendor the platform*.
+Full tranche, refusals and ledger measurement: [`agents/trending.md`](../agents/trending.md)
+`p443`. Recipe: `Pattern AV`.
+
+| Platform | Licence (verified) | HEAD @ 2026-10-25 | Payload | AI layer goes… |
+|---|---|---|---|---|
+| **T.A.G. (`br.tag`)** | 🔴 **GPL-2.0** — 🔴 **README says BSD-3-Clause; the payload governs** | `3e6d315ef881` | `LICENSE` 18 027 B · `111e1f411730` | …**beside**, never vendored. Municipal basic education, Brazil, **offline-sync by design** — the one platform on this map built for schools with no connectivity *and* a live commit history. [repo](https://github.com/ipti/br.tag) |
+
+
 ## 🆕 `p442` — The platform tier is **enumerated**, not just read: four of these platforms carry a second licence text, and one of this file's own cells did not reproduce
 
 🟢 `p440` and `p441` read the platform grants clause by clause. `p442` asks the prior

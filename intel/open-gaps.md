@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p443`
+
+🟢 **THE SUITE RAN, AND IT CAUGHT THIS PASS'S OWN DEFECT — reported first.** 🔴 An earlier
+draft of this register claimed `make hooks` was denied on this host, reproducing `Gap 425-B`.
+**That claim was wrong and is corrected here:** only the *direct sourcing* of
+`compose/code/lib/*` into an interactive shell was refused (`[Code from External]`); `make hooks`
+itself ran, 62 gates, and so did `sweep_published.sh`. 🔵 **The distinction is worth more than
+the correction** — `Gap 425-B` should be read as *"a shell cannot source the library"*, which is
+narrow, and **not** as *"the suite cannot run"*, which is what three passes have recorded and
+what made them honour the contract by hand.
+
+🔴 **What the suite found, and it was `p442`'s ratchet working exactly as designed.** The first
+run came back **58/62**, with `gate-cell-reproduction` typing **all six** of this pass's new
+payload cells `CELL-UNMEASURED`. 🟢 They were then swept through the base's own instrument
+(`sweep_published.sh` → `lib/payload_measure.sh`) and **all six returned `REPRODUCES`** — the
+hand measurements were right to the digit — recorded in
+`evidence/published-cell-reproduction.2026-10-25-p443.tsv`. 🟢 The gate now reads **186 published
+cells, 186 green, 0 red**, and its own 29 controls still pass **29/29**.
+
+🟢 **Final state of this commit: 61 of 62 gates green**, red only on `gate-census-union` — this
+base's declared, non-blocking red (`Gap 400-B`), **verified as inherited** by re-running all
+three suspect gates against `f240c21` with this pass's writes stashed: `gate-census-union` RED on
+arrival, `gate-census-currency` and `gate-union-currency` **GREEN** on arrival and therefore
+this pass's own staleness, re-derived and restated in `README.md` as `p352`/`p376` require.
+
+### 🆕 `Gap 443-E` — **A gate pinned to one evidence FILENAME goes red when a pass adds a row, and that is the pinned-literal class again — now fixed**
+
+🔴 `gate-cell-reproduction` hardcoded
+`RECORD = "evidence/published-cell-reproduction.2026-10-25-p442.tsv"`. A pass that publishes a
+row and records its own sweep in its own file is then **red for having followed the rule**, and
+the only ways out are to edit another pass's evidence or to bump the literal — both wrong.
+🔵 **This is `Gap 423-E`'s class, which this base has now met for the FOURTH time** (`p421`'s
+`len(vocab) == 14`, `p374`'s `len(LEGS) == 10`, `p252`'s floor of `111`, and this), and
+`p404`'s standing remedy — *DERIVE the literal* — had been registered for nineteen passes.
+🟢 **Discharged here:** the record is a **set** (`evidence/published-cell-reproduction.*.tsv`,
+read in sorted-filename order so a later sweep supersedes an earlier verdict), the gate prints
+which sweeps it read, publishing a row now means **appending** a record rather than editing
+another pass's evidence, and the gate's 29 controls pass unchanged. 🔴 **Still open:** nothing
+on this base enumerates its own suites for pinned evidence paths, so a fifth instance is as
+undetectable as the first four were — the same open limb `Gap 421-A` carries for `make` targets.
+
+### 🆕 `Gap 443-A` — **The promotion ledger's population is not derived from this base's own record**
+
+🔴 **Measured, not inferred:**
+
+| population | distinct addresses |
+|---|---|
+| append-only record (`agents/trending.md` + `repos/trending.md`) | **2 773** |
+| the three sell shelves | **337** |
+| `evidence/promotion-ledger.2026-10-25-p436.tsv` | **219** |
+| in the record, on no sell shelf | **2 487** |
+| 🔴 of those, **absent from the ledger entirely** | 🔴 **2 361** |
+| 🔴 ledger rows whose slug is **already** shelved | 🔴 **69** |
+
+🟡 **The honest reading, stated before the big number is quoted anywhere:** 2 361 is an **upper
+bound on an unaudited population, not a backlog** — the record also holds refused and ungranted
+addresses, negative controls, upstream dependencies and this base's own tooling citations, none
+of which should ever be promoted. 🔴 **What it does establish, and this does not depend on the
+figure:** the ledger is keyed on promotion **claims that cite a shelf line**, so an address a
+pass merely *found* is invisible to it. `PROMO_RATCHET = 148` therefore measures what passes
+happened to claim, not what this base has found. 🔵 **Demonstrated, not hypothetical:** all six
+LATAM addresses `p443` shelved were in the record, on no shelf, and `grep`-absent from the
+ledger. 🟢 **Prescription, concrete:** derive the ledger's candidate set from the record by
+`grep`, partition it (`REFUSED` / `negative-control` / `tooling-citation` /
+`upstream-dependency` / **promotable**), and ratchet on the last partition only.
+
+### 🆕 `Gap 443-B` — **The platform-name channel is bought for Brazil and Argentina ONLY**
+
+🟢 The channel that opened LATAM (`Pattern AV` step 0 — the proper noun of the system of
+record, searched alone, sorted by stars) was run on **SIGAA** and **SIU Guaraní**. 🔴 **Entered
+once and unpaid, or not entered at all:** **SIAGIE** (Peru), **SIMAT** (Colombia),
+**SIGE** / **UCampus** (Chile), **SAES** / **SIASE** (Mexico), **GURI** / **CREA / Ceibal**
+(Uruguay). 🔵 The single Mexican address found (`carmonabernaldiego/sistema-escolar`, 158 ★) is
+**AGPL-3.0** with HEAD 2023-09-09 and has no national-platform binding. 🔴 **This is an
+unverified nil, not an absence** — one leg, one shape — and `p443`'s own result is the reason to
+believe a per-country leg pays: the same leg that looked saturated in English paid immediately
+on a proper noun.
+
+### 🆕 `Gap 443-C` — **Nothing here compares the README's stated grant against the payload's**
+
+🔴 `ipti/br.tag` carries **GPL-2.0** in `LICENSE` (18 027 B · `111e1f411730`, *Version 2, June
+1991*) and **"The BSD-3-Clause"** plus its full operative text in `README.md` (3 065 B ·
+`e9695ee53743`), at one commit. **It was caught by hand.** 🔵 `p288` built a README channel and
+`p278` a channel-conflict gate; neither answers *"does the README name a DIFFERENT licence from
+the file"*. 🔴 **The direction is what makes it urgent:** every prior conflict on this base ran
+the safe way (a badge claiming MIT over an AGPL payload, so the careless reader was
+over-cautious). This one runs the **expensive** way — the README is the permissive channel, so
+the careless reader vendors copyleft. 🟢 The grader is cheap: the README already contains the
+operative clause text, so the same family classifier this base hardened for payloads grades it
+unchanged.
+
+### 🆕 `Gap 443-D` — **The LATAM arm is integration surface, not agents**
+
+🟡 Of the tranche, only `jpmanson/siu-guarani-mcp` is agent-addressable; the rest are APIs,
+scrapers and browser extensions. 🟢 That is a **stage, not a defect** — it is exactly how this
+base's EMEA national-platform line began, with `librus-python-api` on the foundations shelf
+before `librus-mcp` reached the agents shelf. 🔴 **But no row in the arm is itself an AI
+system**, and `agents/top.md`'s LATAM count must not be read as if it were.
+
+### 🔴 `Gap 425-A` — **REPRODUCES, and now measured on a SECOND INDEPENDENT CHANNEL**
+
+Prior passes measured this host's egress with `curl`. This pass re-measured with `curl`
+**and** with the tool-side fetcher, which resolves names on its own stack:
+`eur-lex.europa.eu`, `www.unesco.org`, `www.camara.leg.br`, `www.oecd.org`,
+`iesalc.unesco.org`, `www.multistate.us`, `en.wikipedia.org` — 🔴 **all refused on both**
+(`000` / `ENOTFOUND`). 🟢 `github.com` and `raw.githubusercontent.com` answer on both.
+🟢 **Strictly more than any prior pass established: the refusal is host-shaped, not
+tool-shaped** — it fails at name resolution on two independent stacks, so no successor should
+spend a leg looking for a client that gets through. 🔴 **Consequence, unchanged:** every licence
+cell this pass published is `authoritative`; **every policy and market cell is `reported`**, and
+no leg count can raise that band here.
+
+### 🟢 `Gap 427-E` — **CLOSED on the shape it prescribed, after four passes of registration**
+
+🟢 The gap diagnosed the regional legs as **over-ANDed** and prescribed **one country, one
+question**. `p427`–`p438` registered it; none ran it; `p440` then recorded a four-nil. 🟢 **Run
+twice this pass, paid twice:** APAC/India returned the **first education-specific adoption rate
+this base holds for the region** (JanAI Sept 2026, 797 government-school teachers, **82 % tried
+/ 26 % regular**; CSF BaSE 2025 **51 %** at a 2 500 base), and LATAM/Brazil closed
+`Gap 421-E(b)`. 🔴 **A successor must not read `p440`'s four-nil as regional saturation — it was
+a measurement of the old query shape.** 🔵 The same defect was confirmed on the **supply** side
+as a controlled pair: platform names ORed with `mcp OR api OR agent` returned ten addresses and
+zero education; the names alone returned seven in ten.
+
+### 🟢 `Gap 421-E(b)` — **CLOSED. The carried Brazil conflict was one process in two houses**
+
+🟢 This base carried *approved by the Senate* against *still in consultation* as an unresolved
+conflict for three passes and correctly refused to pick. **Both were true:** Senate approved
+**10 Dec 2024** → received by the Câmara **17 Mar 2025** (Ofício nº 235/2025, art. 65 CF) →
+special committee installed **20 May 2025**, relator **Dep. Aguinaldo Ribeiro (PP-PB)** → 🔴 no
+parecer, five missed voting dates since Nov 2025 → **24 Aug 2026** postponed past the October
+elections → **2 Sep 2026**, situação **"Aguardando Parecer"**. 🔴 **`PL 2338/2023` is not law and
+no article is in force.** 🔵 Cell band `reported` — `camara.leg.br` is one of the seven hosts
+measured unreachable above, so this is a tracker reading, not the primary.
+
+### 🔴 `Gap 436-D` — **UNTOUCHED, and now known to be unclosable from this host**
+
+🔴 The LATAM adoption figures are still quoted through a newspaper column. 🔵 The primary that
+would fix them (`iesalc.unesco.org`) is among the hosts measured unreachable on **both**
+channels this pass. It cannot be closed from here at any leg count, and recording that is worth
+more than another attempt.
+
+### 🔴 The topic channel — saturation CONFIRMED at a larger denominator
+
+`github.com/topics/ai-tutor` + `github.com/topics/education-ai` + three English web legs →
+**29 candidates**, 🔴 **28 already among this base's 2 829 known slugs (96.6 %)**. 🔵 `p442`
+measured **18 of 18**; this reproduces it over a 61 % larger denominator. 🟢 **Both listings are
+a liveness channel now, not a discovery one** — and that instruction finally rests on a
+measurement rather than a prior.
+
+---
+
 ## 🆕 `p442`
 
 🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**

@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 42 — `p443` **In every region, the open-source education supply is permissive on the student's side of the glass and copyleft on the institution's — and the boundary is the system of record**
+
+🟢 **The claim, with the first LATAM denominator behind it.** This base has recorded a "licence
+frontier runs the wrong way" observation for EMEA for many passes. `p443` measured the same
+boundary in LATAM, first-hand, over one tranche:
+
+| layer | what it is | permissive | copyleft |
+|---|---|---|---|
+| 🟢 **student / teacher side of the glass** — readers, extensions, exporters, MCP connectors onto an academic portal | 8 addresses | 🟢 **6** (5 MIT, 1 Apache-2.0) | 2 GPL-3.0 |
+| 🔴 **the institution's system of record** — platforms that hold enrolment, grades and attendance | 4 addresses | 🔴 **0** | GPL-2.0, GPL-3.0, GPL-3.0, AGPL-3.0 |
+
+🔵 **And it is the same shape in the other three regions**, from rows already on these shelves:
+EMEA's connectors (`librus-mcp`, `iserv-mcp`, `Smartschool-MCP`, `edupage-mcp`,
+`dtu-learn-mcp`) are **MIT** while the platforms behind them are vendor-closed or copyleft;
+North America's `canvas-mcp` and `fcps-school-mcp` are **MIT** against a closed Canvas and
+Schoology; APAC's `SGU-Academic-MCP` is **MIT** against a closed university portal; and the
+platform map on [`verticals/solutions.md`](../verticals/solutions.md) is **GPL-3.0, AGPL-3.0,
+AGPL-3.0, LGPL-3.0, LGPL-3.0, GPL-3.0** with **Apache-2.0 OpenOLAT and MIT Kolibri as the only
+two exceptions in the tier.**
+
+🟢 **Why this is one trend and not two coincidences.** The asymmetry is structural, not
+licensing fashion. A system of record is written by the institution that is accountable for the
+records — a ministry, a municipality, a university consortium — and public money plus
+public-good framing produces copyleft, which is exactly what `ipti/br.tag` (IPTI with Santa
+Luzia do Itanhy/SE, *Tecnologia Social*), `eXeLearning` (Spain's education ministry) and Open
+edX all are. The glass-side tooling is written by **students, lecturers and single authors who
+want it adopted**, and that produces MIT. 🔵 The licence tells you **who wrote it and why**,
+and in this industry that correlates with **which side of the record boundary it sits on**.
+
+🔴 **What it costs a team that does not know this.** The platform is the part a client points at
+and says *"start from that"*, and it is the part that cannot be vendored into a proprietary
+deliverable. Two failure modes follow, and both are live on this base's evidence:
+
+1. 🔴 **Vendoring the platform.** `ipti/br.tag` is the sharpest case ever recorded here, because
+   its **README states BSD-3-Clause while its payload is GPL-2.0** — the conflict runs in the
+   *permissive* direction, so the careless read is the expensive one, not the cautious one.
+2. 🔴 **Reading the root and stopping.** `p442` found **12 of 134** repositories carrying more
+   than one grant, and one row sold as MIT shipping a complete GPL-3.0 below its root. The
+   copyleft in this industry hides **below** the root as well as behind the README.
+
+🟢 **The design rule it yields, and it is the same rule in all four regions:** put the AI
+**beside** the system of record and talk to it over an interface — an MCP server, a REST or
+Web-Services client, an XBlock — and keep every line you intend to own on the glass side of the
+boundary, where the grants are permissive. 🟢 **That is what makes a connector, not a platform
+fork, the sellable unit of an education engagement** — and it is why `p443`'s one-row addition
+to [`agents/top.md`](../agents/top.md) (`jpmanson/siu-guarani-mcp`, MIT, read-only, PII-gated)
+carries more commercial weight than the 158-★ AGPL-3.0 school-management app it was found
+beside. Recipe: `Pattern AV`.
+
+🟡 **The bound on this trend, stated as one.** The LATAM half rests on **12 granted
+repositories in one tranche** keyed on two platform names (SIGAA, SIU Guaraní) in two
+countries. Peru, Colombia, Chile and Uruguay returned nothing on the name leg and that is an
+**unverified nil, not an absence** — the leg ran once, in one shape (`Gap 443-B`). The
+four-region claim above is **consistent across every row this base holds** but has a measured
+denominator in LATAM only.
+
+---
+
 ## 🆕 Trend 40 — `p442` **The second grant lives below the root, and in this industry that is where the copyleft is**
 
 🔵 `Trend 37`: a licence **name** without a licence **text**. `Trend 38`: a tool that declines

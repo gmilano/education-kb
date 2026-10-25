@@ -10,6 +10,89 @@ updated: 2026-10-25
 > every pass and a nil result is written down as a nil, because silence reads exactly like
 > coverage.
 
+## 🆕 `p443` · 2026-10-25 — **Two legs only, and both in the shape `Gap 427-E` prescribed four passes ago and no pass had tried: ONE COUNTRY, ONE QUESTION. 🟢 Both paid. The APAC leg returns the first education-specific adoption rate this file has ever carried for the region, and the LATAM leg CLOSES `Gap 421-E(b)` by showing the carried "conflict" was one process in two houses. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
+
+🔵 **Why two legs and not eight.** `p427` diagnosed this file's regional legs as **over-ANDed**
+— *regulation, adoption and players, across four countries, in one query* — and prescribed
+**one country, one question**. `p427` through `p438` registered that remedy and never ran it;
+`p440` then recorded a **four-nil** on discovery. This pass ran the prescribed shape twice
+instead of the old shape eight times.
+
+| leg | shape | result |
+|---|---|---|
+| 🟢 **APAC — India** | adoption rate only | 🟢 **PAID — and with a fact class this file has never held for APAC** |
+| 🟢 **LATAM — Brazil** | legislative status only | 🟢 **PAID — closes a gap carried three passes** |
+
+🟢 **The methodological result is worth more than either fact, and it is now evidenced rather
+than argued:** the nil `p427`–`p438` recorded on these legs was an artefact of **query shape**,
+not of the regions. 🔴 A successor must not read `p440`'s four-nil as regional saturation — it
+was a measurement of the old query.
+
+### 🟢 APAC — India: the first education-specific adoption rate on this file for the region
+
+| source | population | finding |
+|---|---|---|
+| 🟢 **JanAI, released September 2026** | **797 government-school teachers, four states** | 🔴 **82 % have tried an AI tool at least once; only 26 % use one regularly.** 72 % hold a positive view |
+| 🟢 **CSF — BaSE 2025** | 2 500 government, aided and private teachers | **51 %** already using generative AI for teaching or school-related work |
+| 🟡 CENTA 2025 | not stated in reachable material | **>70 %** using AI for lesson planning — 🟡 **reachable only through secondary citation, so NOT carried as a cell** |
+| 🔵 Government data, 2023-24 | all Indian schools | **57.2 %** have computers; **53.9 %** have internet |
+| 🔵 Digital Empowerment Foundation, 2025 | educators nationally | **15 %** are AI-fluent |
+
+🔴 **The commercially decisive number is the 82/26 gap, not the 82.** Trial is nearly universal
+and routine use is a quarter of it — so in India the sellable unit is **not** awareness or
+access, it is **making one workflow stick**. 🔵 And the binding constraint under it is
+**physical**: with 53.9 % of schools on the internet, an offline-tolerant design is a
+requirement for roughly half the market, not a differentiator. 🟢 That is the clearest
+commercial read this file has had for India, and it is only visible because the leg asked one
+country one question.
+
+### 🟢 LATAM — Brazil: `Gap 421-E(b)` is CLOSED, and the "conflict" was never a conflict
+
+This file carried two readings of `PL 2338/2023` — *approved by the Senate* against *still in
+consultation* — as an unresolved conflict for three passes, correctly refusing to pick one.
+🟢 **Both were true, of one process in two houses:**
+
+| date | step |
+|---|---|
+| **10 Dec 2024** | 🟢 Senate **approves** the bill |
+| **17 Mar 2025** | Received by the Câmara dos Deputados (Ofício nº 235/2025, revision under **art. 65 CF**) |
+| **20 May 2025** | Special committee installed; relator **Dep. Aguinaldo Ribeiro (PP-PB)** |
+| Nov 2025 → | 🔴 **No parecer filed. Five voting dates set and missed** |
+| **24 Aug 2026** | 🔴 Rapporteur postpones the vote until **after the October 2026 elections** |
+| **2 Sep 2026** | Latest movement: attachment of related bills. Situação **"Aguardando Parecer"** |
+
+🔴 **`PL 2338/2023` is NOT law and no article of it is in force.** 🟢 **What that means for a
+pitch, stated plainly because this is the question clients ask:** Brazil has **no binding
+horizontal AI statute** and will not have one in this legislative window. The compliance
+surface for a Brazilian education engagement today is **LGPD plus sector rules**, not the AI
+bill — and a proposal that prices AI-Act-style conformity work into a Brazilian deal is pricing
+an obligation that does not exist yet. 🟡 The risk runs the other way: the bill's risk-tier
+model puts education in the high-risk band, so a 2027-28 deal should be designed to meet it
+while today's deal is not required to.
+
+### 🔴 The band on every cell above, re-measured and unchanged
+
+`Gap 425-A` was re-measured this pass on **two independent channels** — this container's `curl`
+**and** the tool-side fetcher, which resolves names on its own stack. `eur-lex.europa.eu`,
+`www.unesco.org`, `www.camara.leg.br`, `www.oecd.org`, `iesalc.unesco.org`, `www.multistate.us`
+and `en.wikipedia.org` all fail; only `github.com` and `raw.githubusercontent.com` answer.
+🔴 **The refusal is host-shaped, not tool-shaped** — it fails at name resolution on both stacks,
+so no successor should spend a leg hunting for a client that gets through. 🔴 **Consequence,
+carried unchanged: every policy and market cell on this file is `reported`, and no leg count
+can raise it on this host.** The Brazilian tramitação above is a tracker reading, not
+`camara.leg.br`; the India figures are survey reports, not the surveys. 🟢 Every *licence* cell
+this pass published is `authoritative`, because the only reachable host is the one that serves
+payloads.
+
+### 🟡 And one number this pass did NOT buy
+
+🔴 `Gap 436-D` is **untouched**: this file's strongest single LATAM pitch figure is still quoted
+through a newspaper column. 🔵 Given the paragraph above, that is not a shortfall of effort —
+the primary that would fix it (`iesalc.unesco.org`) is one of the seven hosts measured
+unreachable. It cannot be closed from this host at any leg count, and recording that is worth
+more than another attempt.
+
+
 ## 🆕 `p442` · 2026-10-25 — **Eight legs: 🟢 three new instruments, 🔴 one measurement CONFLICT carried as a conflict, 🔴 one single-source item REFUSED, and 🔴 two candidate "new facts" killed by grading them against this file instead of against memory. 🟢 `Gap 440-C`'s refinement holds for a second pass: the PROGRAMME tier pays, the STATUTE tier does not. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
 
 | Leg | Verdict | What came back |
@@ -1091,6 +1174,26 @@ reconciled, so records are *as reported*, not *as current*.
 - 🔴 **India's mandate meets its own infrastructure.** The Class 3–8 AI requirement from the **2026–27** session (extending to Classes 9–10 in **2027–28**) is already carried here; what is new is the ground state reported alongside it: **64.7 % of schools have computers and 63.5 % have internet connectivity**. 🟢 That gap is the engagement. An offline-first or low-bandwidth delivery path is not a nice-to-have in this market — and this base already shelves the component for it (`jupyterlite/jupyterlite`, BSD-3-Clause, kernel in the browser, verified `GRANT-PRESENT` 2026-10-25).
 - 🟡 **China's timing remains contradictory across sources** (compulsory from September 2025 in one, Beijing's ≥8 hours per year in another). The five-ministry action plan already on this file is the primary-adjacent anchor; the contradiction is recorded, not resolved.
 
+
+#### 🆕 `p443` amendment — India: trial is near-universal, routine use is a quarter of it
+
+🟢 **The first education-specific adoption rate this file carries for APAC** (JanAI, September
+2026, **797 government-school teachers across four states**): 🔴 **82 % have tried an AI tool,
+only 26 % use one regularly**, 72 % positive. Corroborated at a wider base by CSF **BaSE 2025**
+(2 500 teachers, **51 %** already using generative AI for school work). 🟡 CENTA's **>70 %** is
+secondary-cited only and is not carried as a cell.
+
+🟢 **The opportunity this reframes.** India's gap is **not** awareness, access or attitude — it
+is **habit**. The sellable engagement is making *one* teacher workflow stick (lesson prep,
+differentiation, marking), instrumented so the 26 % can be moved, rather than another pilot
+that raises the 82 %. 🔵 **And the binding constraint is physical, not pedagogical:** **53.9 %**
+of Indian schools had internet and **57.2 %** had computers in 2023-24, so offline tolerance is
+a requirement for about half the market. 🟢 That makes **Kolibri** (MIT, offline-first, on
+[`repos/foundations.md`](../repos/foundations.md)) the structurally correct base for Indian
+public-sector work, and it pairs with the **Grade-3 AI curriculum mandate from 2026-27** and
+NISHTHA teacher training already recorded in this section. 🔵 Cell band: `reported`
+(`Gap 425-A`).
+
 ### LATAM
 
 **🆕 `p442` — 🟢 one new instrument, 🔴 one measurement conflict carried as a conflict.**
@@ -1307,6 +1410,40 @@ is the cheap next step. → `Gap 436-D`.
 **🆕 `p441` · 2026-10-25 — the regulatory leg re-confirmed and NOTHING new, which is now a four-pass pattern rather than a single nil.** 🔵 Peru `31814`, Brazil `PL 2338/2023`, Chile `21.719` and Mexico's non-binding SEP / ANUIES recommendations all re-returned with no change in status. The **CENIA** finding already on this file (**13 of 19** LAC countries do not teach early AI adoption in schools) and the **Digital Education Council 2026 LATAM survey** (92 % of students and 79 % of faculty actively using AI, 30 000+ responses, 29 institutions) were both re-returned by independent queries this hour — 🟢 **two independent re-confirmations of the governance gap that is this file's strongest single number**, not new facts.
 
 🔵 **The read is unchanged and now better evidenced:** demand is near-universal, teaching of it is not, and binding regulation is one statute across the region. The buyable artefact is the **institutional policy plus the permissive stack to implement it** — and after `p441` every BSD-3 component in that stack is verified clause-by-clause rather than badge-deep (`agents/top.md`, `repos/foundations.md`).
+
+
+#### 🆕 `p443` amendment — the LATAM **supply** answer, and Brazil's regulatory surface as it actually stands
+
+🟢 **The supply gap this section has recorded for many passes is now partly bought, and it was
+never an absence — it was an unentered query.** The variable was **the name of the platform the
+institutions actually run**: **SIGAA** (Brazilian federal universities) and **SIU Guaraní**
+(Argentine universities). Entered once, they returned a tier that is now shelved —
+`jpmanson/siu-guarani-mcp` (MIT, the first LATAM national-platform **MCP** connector) on
+[`agents/top.md`](../agents/top.md), five MIT integration-surface rows on
+[`repos/foundations.md`](../repos/foundations.md), and Brazil's live municipal platform
+**T.A.G.** (`ipti/br.tag`) on [`verticals/solutions.md`](../verticals/solutions.md).
+
+🔴 **The commercially decisive measurement, and it is new:** of the four LATAM institutional
+platforms that hold student records, **0 of 4 carry a permissive grant** (GPL-2.0, GPL-3.0,
+AGPL-3.0, plus the shelved `sete` lineage), while **6 of 8** student-side academic-portal
+addresses do. 🟢 **The copyleft frontier in LATAM sits around the system of record, exactly as
+it does in EMEA** — so a LATAM engagement is priced as *integrate over an interface*, never as
+*fork the platform*, and the MCP/API seam above is the deliverable that makes that possible.
+🔴 One caution that belongs in a proposal: `ipti/br.tag`'s **README states BSD-3-Clause while
+its payload is GPL-2.0**, so a team that reads the README will misprice the licence in the
+permissive direction.
+
+🟢 **Brazil's regulatory surface, settled this pass (`Gap 421-E(b)` CLOSED).** `PL 2338/2023`
+passed the **Senate on 10 Dec 2024**, reached the Câmara **17 Mar 2025**, and has sat in
+special committee since **20 May 2025** with **no parecer**, five missed voting dates, the
+rapporteur's **24 Aug 2026** postponement past the October elections, and a situação of
+**"Aguardando Parecer"** as of **2 Sep 2026**. 🔴 **It is not law; no article is in force.**
+🟢 **So the compliance surface for a Brazilian education deal today is LGPD plus sector rules
+— not an AI statute.** Pricing AI-Act-style conformity work into a Brazilian engagement today
+prices an obligation that does not exist; 🟡 designing for it is still right, because the
+bill's risk tiers place education in the high-risk band whenever it does pass. 🔵 Cell band:
+`reported` (`Gap 425-A`) — `camara.leg.br` is unreachable from this host, so this is a tracker
+reading.
 
 ### Global
 

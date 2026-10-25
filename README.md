@@ -203,17 +203,32 @@ the longest run this base has recorded.
 ---
 
 🔵 **The address census, re-derived as the last act before the commit — restated, not
-back-fitted.** 🟢 All three currency gates were **GREEN on the inherited commit** again, so
-the staleness below is entirely this pass's own writes — the arrangement `p352` and `p376`
-are designed to produce, now holding for a third consecutive pass.
+back-fitted.** 🟡 **`p443`: two of the three currency gates were GREEN on the inherited commit
+and `gate-census-union` was RED on arrival** — this base's declared, non-blocking red
+(`Gap 400-B`), attributed by re-running all three against `f240c21` with this pass's writes
+stashed. 🟢 So the staleness restated below is entirely this pass's own writes, which is the
+arrangement `p352` and `p376` are designed to produce, now holding for a fourth consecutive
+pass.
 
-**2 847** harvested shapes on channel U → **39** are not addresses →
-**2 808 addresses**.
+**2 859** harvested shapes on channel U → **39** are not addresses →
+**2 820 addresses**.
 
-🔵 **2 808** channel-U addresses and **3 321** channel-B survivors give
-**3 693 addresses over both channels**.
+🔵 **2 820** channel-U addresses and **3 332** channel-B survivors give
+**3 704 addresses over both channels**.
 
-🔵 **`p442`: the delta, and it is small for a reason worth stating.** Channel U rose **2 807 →
+🟢 **`p443`: the delta, and it is TWELVE TIMES `p442`'s for a reason worth stating.** Channel U
+rose **2 808 → 2 820** (+12), channel-B survivors **3 321 → 3 332** (+11) and the union
+**3 693 → 3 704** (+11). 🔵 `p442` shelved seven rows and moved the union by **one**, because
+every address it shelved was already inside this base. 🟢 `p443` shelved **six** rows and moved
+it by **eleven** — the opposite shape, and it is the measurement behind this pass's claim that
+the **platform-name channel** reaches supply the English topic channel does not: the SIGAA and
+SIU Guaraní tranche is genuinely new to the census, while the 29 candidates from the two
+canonical topic listings were **28/29 already known**. 🔴 The caveat that keeps the two
+consistent: five of the six rows *shelved* were already in this base's own append-only record
+and unpromoted (`Gap 443-A`) — it is the wider tranche around them, including the refused and
+copyleft addresses, that is new to the census.
+
+🔵 **`p442`'s delta, carried as history.** Channel U rose **2 807 →
 2 808** (+1), channel-B survivors **3 318 → 3 321** (+3) and the union **3 692 → 3 693** (+1).
 🔴 **Seven rows were shelved and the union moved by one**, which is the measurement behind this
 pass's discovery nil: every one of the seven addresses was **already in this base** — in
