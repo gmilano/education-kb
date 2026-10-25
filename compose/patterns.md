@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AT — `p441` The **autograded course stack that is entirely BSD-3, verified clause-by-clause**, and the three screening rules that stop it being badge-deep
+
+🔵 `Pattern AS` (`p440`) maps the **copyleft** obligations a hosting choice triggers.
+`Pattern AT` is its permissive counterpart and it is narrower on purpose: one stack, named
+repositories, verified payloads, and a CI step a client's counsel can read. 🟢 Every
+component below was probed first-hand on **2026-10-25** and graded `GRANT-PRESENT`
+clause-by-clause — not from a badge, a README, or a package manifest.
+
+### The stack
+
+| layer | repository | licence, verified 2026-10-25 | why this one |
+|---|---|---|---|
+| LMS entry | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 BSD-3 · `LICENSE` 1 528 B · `08eebd9662cb` | LTI 1.1/1.3 launch from Moodle, Canvas or Open edX — the client keeps its LMS |
+| compute | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3 · 1 475 B · `7069c7e8d60e` 🔴 **untitled payload** | identical environment per cohort member |
+| assignment lifecycle | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3 · 1 512 B · `3a83d5b8e22c` 🔴 **untitled payload** | release → collect → autograde → return, already solved |
+| autograding (Python) | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3 · `master/LICENSE` 1 560 B · `6af203d41a01` | container-isolated execution at Berkeley cohort scale |
+| autograding (R) | [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🟢 BSD-3 · 🔴 **`LICENSE.md` 1 555 B · `1677c5307530`**, *not* the 108 B `LICENSE` | R scripts, R Markdown and R notebooks |
+| tutor surface | [`QuantStack/jupyter-ai-tutor`](https://github.com/QuantStack/jupyter-ai-tutor) | 🟢 BSD-3 · 1 532 B · `ccaa70decf0d` | version-controlled `TUTOR.md` persona — the pedagogy stays a reviewable artefact (`Pattern X`) |
+| model access | [`jupyterlab/jupyter-ai`](https://github.com/jupyterlab/jupyter-ai) | 🟢 BSD-3 · 1 516 B · `a0be5735cdce` | provider-agnostic LLM plumbing inside JupyterLab |
+| offline arm | [`jupyterlite/jupyterlite`](https://github.com/jupyterlite/jupyterlite) | 🟢 BSD-3 · 1 525 B · `574f8a9cab1e` | kernel in the browser, no server — **the APAC answer**: India's Class 3–8 mandate lands on schools at 63.5 % connectivity |
+
+🟢 **One licence family across eight components.** A single obligation set (retain the notice
+in source, reproduce it in binaries, no endorsement) applies to the whole stack, and nothing
+in it is network-triggered — so the hosting model is **not** constrained the way an AGPL
+platform constrains it (`Pattern AS`).
+
+### The wiring
+
+1. **Entry.** `ltiauthenticator` as JupyterHub's authenticator; the LMS stays the roster and
+   the gradebook of record. No student identity is minted in the new stack.
+2. **Course build.** `nbgrader` owns the assignment source; `otter-grader` (Python) and
+   `ottr` (R) own execution. 🔵 Pick one per language and let `nbgrader` call it — running
+   both over one assignment doubles the container surface for nothing.
+3. **Tutor.** `jupyter-ai` supplies model access; `jupyter-ai-tutor` supplies the persona as
+   a committed `TUTOR.md`. 🟢 The persona is reviewed like code, which is what `Pattern X`
+   and Arkansas `H.B. 1958`'s *named authorised human* both require.
+4. **Offline.** Build the same notebooks into `jupyterlite` for low-bandwidth deployment.
+   The autograder stays server-side; only delivery goes to the browser.
+
+### 🔴 The three screening rules — each one a defect measured on this exact stack
+
+1. **Pass the family in; do not read it off the title.** 🔴 Three of the eight payloads
+   above carry **no title line at all**, so a title-keyed classifier answers `UNKNOWN` for
+   `jupyterhub`, `nbgrader` and `open-tutor-ai-CE`. Take the family from a hardened
+   classifier (`compose/code/lib/license_family.sh`) and hand it to the grant check:
+
+   ```sh
+   # the family from its hardened owner, the grant from the clauses
+   python3 -I compose/code/p439-grant-presence/grant_presence.py \
+       --family BSD path/to/LICENSE
+   ```
+
+2. **Enumerate the tree; never take the first filename-ladder hit.** 🔴 `ottr` is an R
+   package: `DESCRIPTION` says `License: BSD_3_clause + file LICENSE`, so `LICENSE` holds
+   **108 B** of `YEAR:` / `COPYRIGHT HOLDER:` and the licence **text** is at `LICENSE.md`.
+   A ladder that stops at the first hit reports the most adopted R autograder in this
+   industry as **ungranted**. `Gap 441-A`.
+
+3. **`GRANT-PRESENT` is not `GRANT-UNMODIFIED`.** 🔴
+   [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — a tempting drop-in
+   for the chat surface — is stock BSD-3 **plus a branding restriction plus a Contributor
+   Licence Agreement** (2 819 B against ~1 515 B). Every clause is present, so it grades
+   `GRANT-PRESENT` and is still **not** an OSI-standard BSD grant. Use `jupyter-ai` for this
+   layer, or take `open-webui` with the restriction written into the SOW.
+
+### The deliverable
+
+Run the screen in the client's CI and **commit its output**, exactly as `Pattern AR` does for
+the copyleft arm:
+
+```sh
+make bsd-variant-census > evidence/licence-verdicts.$(date +%F).tsv
+```
+
+🟢 That TSV is the artefact: one row per payload, with bytes, `sha256₁₂`, the variant profile
+that judged it and the verdict. 🔵 It answers *"every third-party licence was READ, not
+scanned"* with a reproducible measurement rather than an assurance — and for the three
+untitled payloads it is the only thing that can.
+
 ## 🆕 Pattern AS — `p440` The **copyleft obligation map**: turn "which licence" into "which obligation, triggered by which deployment choice", before the hosting model is fixed
 
 🔵 `Pattern AR` (`p439`) makes *"every third-party licence was READ, not scanned"* a CI

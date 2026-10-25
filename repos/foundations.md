@@ -43,11 +43,24 @@ source this hour: **10 of 10 `GRANT-PRESENT`** (table on `verticals/solutions.md
    incorporates GPL-3.0 by reference *by design*, so it needs a fourth verdict rather
    than a profile (`Gap 440-B`). **BigBlueButton** and **OpenEduCat** are
    `GRANT-UNCALIBRATED` and must not be read as cleared.
-4. 🔴 **`BSD`, `MPL` and `EPL` remain unprofiled — 32 payloads** (BSD 14, MPL 9, EPL 9).
-   BSD is the one that matters most to this file, because BSD-0/2/3 are three different
-   licences under one family name spanning 164 B → 1 620 B, and
-   [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) is
-   shelved BSD-3-Clause on `agents/top.md`. `Gap 440-A`.
+4. 🟢 **`BSD` is PROFILED as of `p441`, variant-aware — `GRANT-UNCALIBRATED` on the BSD
+   slice falls 14 → 3, and the remaining three are KB markdown tables, not licence
+   payloads.** `MPL` (9) and `EPL` (9) are still unprofiled and are the remainder of
+   `Gap 440-A`. 🔴 **Two corrections to that gap's own text, both measured:**
+   - Its denominator was **27 % high**: of the 14 BSD-titled fixtures, three are markdown
+     tables naming a licence in a cell. The real payload count was **11**.
+   - Its prescribed method — *resolve the variant from the clause structure* — is
+     **unsound**. BSD-2 and BSD-3 differ in exactly one clause, and it is a clause the
+     instrument grades, so a **BSD-3 truncated at that clause** resolves as a complete
+     BSD-2 and returns `GRANT-PRESENT`. 🟢 The variant is now resolved from the payload's
+     own **declaration** (the title line, the only BSD signal independent of the graded
+     clauses), with the structural arm permitted to answer **only** in the direction that
+     cannot be wrong — presence of the discriminator, never its absence.
+   - 🔴 And the row the gap named,
+     [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE),
+     carries **no title line**, so no BSD profile could have screened it: the blocker was
+     the family answer, not the variant. It is now verified `GRANT-PRESENT` with the family
+     supplied by `lib/license_family.sh` (`grant_presence.py --family BSD`).
 
 ---
 
@@ -73,7 +86,9 @@ URL. This base's census returned `titled_family = Apache-2.0`, `scan_verdict = P
 `stock = True`, `needs_a_human = False`. 🔵 **A scan cannot answer this question and a byte
 count should not**: the same measurement over this base's corpus shows BSD stock payloads
 spanning **221 B → 1 514 B** (n=8), so any single BSD floor either misses a truncated BSD-3
-or condemns every valid BSD-0.
+or condemns every valid BSD-0. 🟢 **`p441` re-measured that span on 11 fixture payloads and
+12 live ones and widened it to 164 B → 2 819 B** — the conclusion is unchanged and the
+clause-based profile it argued for is now built.
 
 🔴 **And the question was already settled here, one directory away.** `P1065` (pass 254):
 *a pointer to a licence is not a grant* — implemented in
@@ -526,7 +541,7 @@ rather than forking the platform. Recipes in [`compose/patterns.md`](../compose/
 | [microsoft/pybryt](https://github.com/microsoft/pybryt) | `main` | 🟢 **MIT** | Pedagogical assessment of *how* code was written. The missing half of autograding. 🔴 🆕 `p387`: **PyPI `pybryt` has had no release since v0.7.0 on 2022-04-28.** Keep it as the design it states, vendor the code, and do not sell a client a dependency that has not shipped in four and a half years. The maintained halves of this tier (`nbgrader`, `otter-grader`) are where the running infrastructure should sit. |
 | 🆕 `p394` [rstudio/gradethis](https://github.com/rstudio/gradethis) | `main` · `48aaf89` | 🟢 **MIT** *(1,078 B, `48c18e68ffed`; `DESCRIPTION`: `MIT + file LICENSE`)* | **Automated feedback for student exercises**, from **Posit Software, PBC**. `grade_this_code()` compares against a model solution; `grade_this()` takes a predicate you write. HEAD **2026-06-18 — 126 d**, **164 ★**, 41 forks. 🟢 **The most-starred *maintained* autograder on this shelf and the most permissively licensed** — it edges `otter-grader` at 161 ★. 🔴 `okpy/ok` leads outright at **370 ★**, 532 d stale (`Gap 397-A`). 🔴 **Not a CRAN package** (`cran/gradethis` ABSENT), so install from GitHub or r-universe, not from CRAN. |
 | 🆕 `p394` [rstudio/learnr](https://github.com/rstudio/learnr) | `main` · `e7164a8` | 🟢 **Apache-2.0** *(10,472 B, `60a581bccd57`)* | **Interactive tutorials in R Markdown** — the runtime `gradethis` grades inside; the two are a pair, not alternatives. **738 ★**, 241 forks. 🟡 HEAD **2025-11-13 — 343 d**: a stable substrate rather than an abandoned one, and the movement is in `gradethis`. |
-| 🆕 `p394` [ucbds-infra/ottr](https://github.com/ucbds-infra/ottr) | 🔴 `master` · `693b3df` | 🟢 **BSD-3-Clause** *(1,555 B, `1677c5307530`; `DESCRIPTION`: `BSD_3_clause + file LICENSE`)* | **The R autograding extension for `otter-grader`** (row above), UC Berkeley Data Science Education Program — grades R scripts, Rmd documents and Jupyter notebooks with R kernels. HEAD **2026-07-06 — 108 d**. 🟢 So this tier's flagship autograder is permissive in **both** languages. 🔴 **3 ★**: the adoption sits on the Python parent, but this is the component an R course actually deploys. |
+| 🆕 `p394` [ucbds-infra/ottr](https://github.com/ucbds-infra/ottr) | 🔴 `master` · `693b3df` | 🟢 **BSD-3-Clause** *(🔴 the grant is at `LICENSE.md`, **1,555 B · `1677c5307530`**, re-read at this commit on 2026-10-25 and `GRANT-PRESENT` clause-by-clause; `LICENSE` itself is a **108 B** `YEAR:` / `COPYRIGHT HOLDER:` stub — `DESCRIPTION`: `BSD_3_clause + file LICENSE`. A probe that takes the first filename-ladder hit reads this repository as ungranted: `Gap 441-A`)* | **The R autograding extension for `otter-grader`** (row above), UC Berkeley Data Science Education Program — grades R scripts, Rmd documents and Jupyter notebooks with R kernels. HEAD **2026-07-06 — 108 d**. 🟢 So this tier's flagship autograder is permissive in **both** languages. 🔴 **3 ★**: the adoption sits on the Python parent, but this is the component an R course actually deploys. |
 | 🆕 `p394` [cran/exams](https://github.com/cran/exams) | `master` · `baa3e28` | 🟡 **GPL-2 \| GPL-3** — 🔴 **disjunctive**, and 🔴 **no licence file at any tree path**: the grant is the `License:` field in `DESCRIPTION` | **R/exams v2.4-5**, Achim Zeileis (R-project). HEAD **2026-10-08 — 14 d**. 🟢 **The broadest assessment exporter on these shelves**: QTI 1.2, QTI 2.1, Moodle XML, Blackboard, Canvas, OpenOlat, ILIAS, TestVision, Particify, ARSnova, Kahoot!, Grasple, TCExam — read from the `R/` source filenames in the clone (`exams2qti21.R`, `exams2moodle.R`, `exams2canvas.R`, …), not from its prose. 🟢 **Plus NOPS**: a standardised PDF printed, scanned and marked automatically — the only offline assessment loop in this base. 🔵 Belongs with **Tier 8** as much as here; it is the generator the standards layer consumes. |
 | 🆕 `p394` [philchalmers/mirt](https://github.com/philchalmers/mirt) | `main` · `e37f14c` | 🟡 **GPL (>= 3)** — 🔴 **`DESCRIPTION` only; GitHub's sidebar shows no licence** | **Multidimensional item response theory** — the canonical IRT engine, v1.48.2. HEAD **2026-10-21 — 1 DAY**, **235 ★**, 88 forks. 🔵 This shelf's Tier 4 carries `adaptive-knowledge-graph` (IRT + BKT, ~350 ★) and `OATutor` (BKT) as the adaptive layer; **`mirt` is the thing those approximate**, and it is committed daily. Sibling [`cran/catR`](https://github.com/cran/catR) (🟡 GPL >= 3, v3.17) is the **computerized adaptive testing** engine, [`cran/TAM`](https://github.com/cran/TAM) (🟡 GPL >= 2, v4.3-25) the test-analysis modules, and [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) (🟡 GPL-3, **47 ★**) the non-programmer front end. |
 

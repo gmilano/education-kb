@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p441` · 2026-10-25 — **The discovery channel was tested and returned a HARD ZERO: four candidate addresses probed first-hand, 🔴 three already shelved and the fourth carrying no licence payload at all. 🟢 The legs went to the BSD payload tier instead — 12 payloads across 11 published repositories, read clause-by-clause, **11/12 `GRANT-PRESENT`**. 🔴 And the shared probe loop was caught guessing a filename on an R-convention repository, which is `Gap 393-F`'s own rule missing from the library that enforces it.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🔴 The discovery leg, graded as a zero rather than described as a search
+
+Two global legs ran (`github trending education AI 2026`, `open source LMS platform 2026
+Apache MIT`). 🔴 **Both returned aggregator and vendor-blog pages, no primary trending
+list** — `github.com/trending` itself is not reachable from this host, a ceiling `p433`
+measured and `p438` re-measured on three fresh hosts. The four addresses the pages named
+were probed anyway, because an address is cheap to verify and a claim is not:
+
+| candidate | probed 2026-10-25 | already on this base? |
+|---|---|---|
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 `LICENSE` 1 091 B · `f78cc6bf1d57` · MIT · `GRANT-PRESENT` | 🔴 yes — `agents/top.md` |
+| [`naorpeled/aitutor`](https://github.com/naorpeled/aitutor) | 🟢 `LICENSE` 1 067 B · `5425f7125406` · MIT · `GRANT-PRESENT` | 🔴 yes — `agents/top.md` |
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | 🟢 `LICENSE` 1 141 B · `c2cfccb812fe` · MIT · `GRANT-PRESENT` | 🔴 yes — `agents/trending.md` |
+| [`ArturoNereu/AI-Study-Group`](https://github.com/ArturoNereu/AI-Study-Group) | 🔴 **`NO-PAYLOAD`** — no licence file at any spelling the ladder reads | 🟢 new, and unusable |
+
+🟢 **So the leg's yield is zero build-on rows, and that is the result**, not a reason to
+widen the query. 🔵 It is also `Gap 438-C`'s stopping rule holding for a second pass: *"the
+next page buys mostly ungranted supply — buy depth for payloads, not for rows."* The one
+new address is the one with no grant.
+
+### 🟢 The BSD payload tier, read clause-by-clause for the first time
+
+`Gap 440-A` named BSD as the family with *"the only row on a build-on shelf"* left
+unscreened. Every BSD row this base publishes was probed through
+`compose/code/lib/probe_payload.sh` **sourced, not re-implemented**, and graded by the new
+variant-aware profile:
+
+| repository | payload | bytes · `sha256₁₂` | profile | verdict |
+|---|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main/LICENSE` | 1 531 · `57c341d09920` | BSD-3 | 🟢 `GRANT-PRESENT` 🔴 untitled |
+| [`jupyterlab/jupyter-ai`](https://github.com/jupyterlab/jupyter-ai) | `main/LICENSE` | 1 516 · `a0be5735cdce` | BSD-3 | 🟢 `GRANT-PRESENT` |
+| [`QuantStack/jupyter-ai-tutor`](https://github.com/QuantStack/jupyter-ai-tutor) | `main/LICENSE` | 1 532 · `ccaa70decf0d` | BSD-3 | 🟢 `GRANT-PRESENT` |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `master/LICENSE` | 1 560 · `6af203d41a01` | BSD-3 | 🟢 `GRANT-PRESENT` |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | `master/LICENSE` | 🔴 108 · `de5d9459d263` | — | 🔴 `GRANT-UNCALIBRATED` — the R stub |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | `693b3df/LICENSE.md` | 🟢 1 555 · `1677c5307530` | BSD-3 | 🟢 `GRANT-PRESENT` — the real grant |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main/LICENSE` | 1 528 · `08eebd9662cb` | BSD-3 | 🟢 `GRANT-PRESENT` |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `main/LICENSE` | 1 475 · `7069c7e8d60e` | BSD-3 | 🟢 `GRANT-PRESENT` 🔴 untitled |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `main/LICENSE` | 1 512 · `3a83d5b8e22c` | BSD-3 | 🟢 `GRANT-PRESENT` 🔴 untitled |
+| [`jupyterlite/jupyterlite`](https://github.com/jupyterlite/jupyterlite) | `main/LICENSE` | 1 525 · `574f8a9cab1e` | BSD-3 | 🟢 `GRANT-PRESENT` |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `master/LICENSE.txt` | 2 058 · `a5c692f12090` | BSD-3 | 🟢 `GRANT-PRESENT` — digest unchanged since `p390` |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | `main/LICENSE` | 2 819 · `5f1bd74c48bf` | BSD-3 | 🟡 `GRANT-PRESENT` **+ branding clause + CLA** |
+
+🔵 **`qtiworks` declares its variant in the reverse word order** — *"distributed under the
+3-clause BSD license"*, variant before family, and that is the **only** variant declaration
+in its 2 058 B. Both orders are now read. 🟡 Mutation testing narrowed what that buys: on a
+*complete* payload the structural arm answers BSD-3 anyway, so the reversed pattern is
+load-bearing only for a **truncated** reverse-declared payload. The control was rewritten to
+test that case instead of the one that could not fail.
+
+### 🔴 `Gap 441-A` — the shared probe loop guesses a filename, and `Gap 393-F` already forbade it
+
+`ucbds-infra/ottr` is an R package. Its `DESCRIPTION` reads
+`License: BSD_3_clause + file LICENSE`, so `LICENSE` holds **108 B** of `YEAR:` /
+`COPYRIGHT HOLDER:` and the licence **text** lives at `LICENSE.md`. 🔴 The shared probe
+takes the **first** ladder hit, returns the stub, and the repository reads as ungranted —
+a false absence of a grant on a shelved build-on row.
+
+🟢 **The published row is right**: `evidence/verified-repos.2026-10-22-p394.tsv:13` records
+the three-file shape, tree-enumerated, and `LICENSE.md` at the pinned commit `693b3df`
+re-reads this hour at **1 555 B · `1677c5307530`** — the recorded digest to the byte. 🔵 The
+defect is that `Gap 393-F`'s rule — **enumerate the tree, never guess filenames** — lives in
+`p394`'s evidence run and not in `lib/probe_payload.sh`, which every pass sources. Third
+recorded instance of this base's signature failure mode: a correction that never travelled
+to the instrument that needed it.
+
+🟡 **Realised damage: NIL.** No published row was graded from the stub; `p394` read the tree.
+The exposure is prospective and it is in the library, which is why it is registered rather
+than patched in one caller.
+
 ## 🆕 `p440` · 2026-10-25 — **The discovery channel was NOT bought this pass, deliberately, and `Gap 438-C`'s own stopping rule is why. 🟢 The legs went to PAYLOADS instead: 11 live grants read clause-by-clause, **11/11 GRANT-PRESENT**, including the ten platform repositories this base actually sells. 🔴 One new address, stated as one.**
 
 🔵 **Append-only. Nothing below this block was edited.**

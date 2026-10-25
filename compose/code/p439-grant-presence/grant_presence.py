@@ -75,7 +75,9 @@ Findings (exit 1 if any, exit 2 on refusal):
   P439-NO-INPUT        called with no payload (`P541`: measuring nothing is not a
                        clean tree)
 
-Usage: grant_presence.py PAYLOAD [PAYLOAD ...]     TSV on stdout.
+Usage: grant_presence.py [--family FAM] PAYLOAD [PAYLOAD ...]     TSV on stdout.
+       `--family` supplies the titled family from its hardened owner, for the payloads
+       that carry no title line at all (`p441`: 4 of this base's 11 published BSD rows).
 """
 import pathlib
 import re
@@ -177,6 +179,66 @@ CLAUSE_PROFILE = {
         ("no-warranty", r"no\s+warranty"),
         ("liability-cap", r"in\s+no\s+event"),
     ],
+    # ---------------------------------------------------------------- p441
+    # 🟢 `Gap 440-A`'s family, BOUGHT — and its PRESCRIPTION REFUTED in the buying.  The
+    # gap asked for BSD "the variant resolved from the clause structure, not from the
+    # length".  The length half is right and is kept.  🔴 The structure half is UNSOUND
+    # and `C26` keeps the proof reproducible: the ONLY text that separates BSD-2 from
+    # BSD-3 is the non-endorsement clause, which is also a clause this instrument GRADES.
+    # Resolve the variant from it and a BSD-3 payload TRUNCATED AT THAT CLAUSE resolves
+    # as a BSD-2, is graded against BSD-2's profile, and comes back 🔴 `GRANT-PRESENT` —
+    # a false pass on exactly the truncation shape the instrument exists to catch.
+    #
+    # 🟢 WHAT IS SOUND IS THE ASYMMETRY, and it is the whole design here.  PRESENCE of the
+    # discriminating clause is proof (no BSD-2 contains it); ABSENCE is ambiguous between
+    # "a complete BSD-2" and "a BSD-3 cut short".  So the variant is resolved from the
+    # payload's own DECLARATION first — the title line, which is the only signal BSD has
+    # that is independent of the clauses being graded, and the analogue of GPL's
+    # `version 3` — and the structural arm is allowed to answer ONLY in the direction that
+    # cannot be wrong.  Everything else DECLINES (`P250`).
+    #
+    # Calibrated BEFORE it was written, on 11 BSD licence payloads under
+    # `compose/code/**/fixtures/**` (164 B → 1 620 B) and 11 probed live from this base's
+    # own shelves the same hour (108 B → 2 819 B).  The clause set below is present in
+    # 🟢 10 of the 10 complete payloads of both populations and absent from every excerpt.
+    #
+    # 🔵 THE DISCLAIMER CLAUSES CARRY NO QUOTE CHARACTER, ON PURPOSE.  `C6` is this file's
+    # record of a COMPLETE MIT grant condemned by U+201C, and `_QUOTES` folds the
+    # typographic forms — but not BSD's other live spelling, ``AS IS'' with a backtick and
+    # two apostrophes, which exists on this tree (`apache1.1-real-sakai-manifest.LICENSE`).
+    # `express or implied warranties` + `are disclaimed` carries the same obligation and
+    # cannot be broken by punctuation at all.  `C31` holds the line.
+    "BSD-2": [
+        ("source-binary-grant",
+         r"redistribution\s+and\s+use\s+in\s+source\s+and\s+binary\s+forms"),
+        ("conditions-met", r"provided\s+that\s+the\s+following\s+conditions\s+are\s+met"),
+        ("source-notice", r"redistributions\s+of\s+source\s+code\s+must\s+retain"),
+        ("binary-notice", r"redistributions\s+in\s+binary\s+form\s+must\s+reproduce"),
+        ("warranties-express-implied", r"express\s+or\s+implied\s+warranties"),
+        ("warranties-disclaimed", r"are\s+disclaimed"),
+        ("liability-cap", r"in\s+no\s+event\s+shall"),
+    ],
+    # BSD-3 is BSD-2 plus the non-endorsement clause.  🔵 It is listed LAST so a report
+    # reads the discriminator in the place a reader looks for it.
+    "BSD-3": [
+        ("source-binary-grant",
+         r"redistribution\s+and\s+use\s+in\s+source\s+and\s+binary\s+forms"),
+        ("conditions-met", r"provided\s+that\s+the\s+following\s+conditions\s+are\s+met"),
+        ("source-notice", r"redistributions\s+of\s+source\s+code\s+must\s+retain"),
+        ("binary-notice", r"redistributions\s+in\s+binary\s+form\s+must\s+reproduce"),
+        ("warranties-express-implied", r"express\s+or\s+implied\s+warranties"),
+        ("warranties-disclaimed", r"are\s+disclaimed"),
+        ("liability-cap", r"in\s+no\s+event\s+shall"),
+        ("no-endorsement", r"may\s+be\s+used\s+to\s+endorse\s+or\s+promote"),
+    ],
+    # 🔴 BSD-0 AND BSD-4 ARE DECLARED-AND-UNPROFILED ON PURPOSE.  Both are RECOGNISED by
+    # `resolve_bsd_variant` and neither has a profile, so a payload declaring either
+    # grades UNCALIBRATED rather than against a neighbour's clauses.  The reason is this
+    # base's own rule and not caution for its own sake: there are 🔴 ZERO 0BSD and ZERO
+    # BSD-4 payloads on this tree, so any profile written for them would be taken from a
+    # licence's reputation instead of a measured corpus — the one thing `p440`'s GPL group
+    # was careful not to do.  0BSD grants with no retention condition at all and BSD-4
+    # adds the advertising clause, so neither is approximated by BSD-2.  `Gap 441-B`.
     # 🔴 LGPL IS DELIBERATELY ABSENT AND THAT IS A FINDING, NOT AN OMISSION.  LGPL-3.0
     # is not a standalone grant: its own text says it "incorporates the terms and
     # conditions of version 3 of the GNU General Public License, supplemented by the
@@ -216,12 +278,73 @@ def resolve_version(text):
     return hits[0] if len(hits) == 1 else None
 
 
+# 🆕 `p441` — the BSD variant DECLARATIONS.  Two word orders per variant, because the
+# second one is on live supply and not a precaution: `OpenOLAT/qtiworks`
+# (`LICENSE.txt`, 2 058 B · `a5c692f12090`, re-read 2026-10-25) opens *"distributed under
+# the 3-clause BSD license"* — the variant named BEFORE the family — and that is the ONLY
+# variant declaration anywhere in its 2 058 B.
+#
+# 🟡 The claim is narrowed to what mutation testing actually showed, rather than left as
+# written.  Deleting the reversed patterns does NOT change that payload's verdict, because
+# it is COMPLETE and the structural arm then answers `BSD-3` from the endorsement clause.
+# What the reversed order buys is the TRUNCATED case: strip that payload's endorsement
+# clause and only the declaration can still say it was a BSD-3 and is short of one clause.
+# `C29d` is that control, and it is the one that fails when these four patterns go.
+BSD_VARIANT_DECLARATIONS = [
+    ("BSD-0", r"bsd\s+zero[\s-]clause"), ("BSD-0", r"zero[\s-]clause\s+bsd"),
+    ("BSD-2", r"bsd\s+2[\s-]clause"), ("BSD-2", r"2[\s-]clause\s+bsd"),
+    ("BSD-3", r"bsd\s+3[\s-]clause"), ("BSD-3", r"3[\s-]clause\s+bsd"),
+    ("BSD-4", r"bsd\s+4[\s-]clause"), ("BSD-4", r"4[\s-]clause\s+bsd"),
+]
+_BSD_DECLS = [(v, re.compile(rx)) for v, rx in BSD_VARIANT_DECLARATIONS]
+
+# The clause that exists in BSD-3 and in no lesser variant.  Named once and used by both
+# the profile and the resolver, so the two can never drift apart.
+BSD_DISCRIMINATOR = r"may\s+be\s+used\s+to\s+endorse\s+or\s+promote"
+_BSD_DISC = re.compile(BSD_DISCRIMINATOR)
+
+
+def resolve_bsd_variant(text):
+    """The BSD variant a payload can be SOUNDLY held to, or None.
+
+    Three arms, in this order, and the order is the whole argument:
+
+      1. 🟢 ONE declaration -> that variant.  Independent of every clause graded.
+      2. 🔴 TWO OR MORE declarations -> None.  `P250` again: `GRANT-PRESENT` under BSD-2
+         and under BSD-3 are different claims about what a client may do with a name.
+      3. 🟢 NO declaration, discriminator PRESENT -> `BSD-3`.  Sound in this direction
+         only: the non-endorsement clause appears in no lesser variant, so its presence
+         cannot be explained by truncation.  🔴 Its ABSENCE can — a complete BSD-2 and a
+         BSD-3 cut short are the same bytes — so that case returns None and the
+         instrument declines.  `C26` is the refutation of the alternative.
+    """
+    flat = _norm(text)
+    decl = sorted({v for v, rx in _BSD_DECLS if rx.search(flat)})
+    if len(decl) == 1:
+        return decl[0]
+    if decl:
+        return None
+    return "BSD-3" if _BSD_DISC.search(flat) else None
+
+
+# 🔵 Families whose profile key is a VARIANT resolved from the payload, where the variants
+# are not versions of one instrument but separate licences under one family name.  Kept
+# apart from `VERSIONED_FAMILIES` because the resolution METHOD differs: GPL declares
+# `version 3` in its operative text, BSD declares its variant in a title line or not at
+# all.  `C32` asserts the GPL path is untouched by this.
+VARIANT_FAMILIES = {"BSD": resolve_bsd_variant}
+
+
 def profile_key(text, family):
     """The CLAUSE_PROFILE key for this payload, or None when there is no profile.
 
     🔵 Unversioned families pass straight through, so MIT / Apache-2.0 / ISC behave
     exactly as they did at `p439` -- `C4`, `C3` and `C8` are unchanged and still pass.
     """
+    if family in VARIANT_FAMILIES:
+        # 🔵 `p441`: the resolver answers a WHOLE key (`BSD-3`), not a suffix, because a
+        # variant is not a version of one instrument.
+        return VARIANT_FAMILIES[family](text)
     if family in VERSIONED_FAMILIES:
         v = resolve_version(text)
         return None if v is None else "%s-%s" % (family, v)
@@ -331,6 +454,25 @@ FINDING = {
 
 
 def main(argv):
+    # 🆕 `p441` — `--family FAM` lets the CALLER supply the titled family, and it exists
+    # because of a measurement on this base's own shelves rather than for convenience.
+    # 🔴 Of the 11 BSD rows published here, FOUR carry no title line at all
+    # (`Open-TutorAi/open-tutor-ai-CE` 1 531 B, `jupyter/nbgrader` 1 512 B,
+    # `jupyterhub/jupyterhub` 1 475 B, `open-webui/open-webui` 2 819 B — all four open on
+    # `Copyright (c) …`), so `bespoke_census.titled_family()`, which answers from the
+    # TITLE by construction, answers None and this instrument never reaches a clause.
+    # 🔴 That includes the exact row `Gap 440-A` named as unscreened: a BSD profile alone
+    # could not have screened it, which is a correction to the gap's own diagnosis.
+    # 🟢 The remedy is NOT to re-answer the family question here — `P171` gives it a
+    # hardened owner (`lib/license_family.sh`), which answered `BSD` for all four the same
+    # hour — it is to let that owner's answer be PASSED IN.  Default behaviour is
+    # unchanged, so every earlier control still holds.
+    family_override = None
+    if argv and argv[0] == "--family":
+        if len(argv) < 2:
+            sys.stderr.write("🔴 p439-grant-presence: --family needs a value\n")
+            return 2
+        family_override, argv = argv[1], argv[2:]
     if not argv:
         sys.stderr.write(
             "🔴 p439-grant-presence: P439-NO-INPUT — called with no payload. "
@@ -350,7 +492,7 @@ def main(argv):
             sys.stderr.write("🔴 p439-grant-presence: not a file: %s\n" % p)
             return 2
         raw = path.read_text(errors="replace")
-        fam = bc.titled_family(raw)
+        fam = family_override or bc.titled_family(raw)
         r = classify(raw, fam)
         f = FINDING.get(r["verdict"], "")
         if f:

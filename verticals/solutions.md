@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p441` — The **permissive** half of the platform tier is now read clause by clause too, and one platform-adjacent row is sold with a restriction attached
+
+🟢 `p440` read the ten **copyleft** platforms' grants clause by clause. `p441` does the same
+for the **BSD** tier — the assessment and teaching-compute layer this file sells beside the
+LMS — and the result is **11 of 12 payloads `GRANT-PRESENT`**, verified against a
+variant-aware profile (BSD-2 and BSD-3 are different licences under one family name).
+
+| repository | shelved on | payload · `sha256₁₂` | grant check 2026-10-25 |
+|---|---|---|---|
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **this file** (assessment delivery) | `LICENSE.txt` 2 058 B · `a5c692f12090` | 🟢 `GRANT-PRESENT` — digest unchanged since `p390` |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `repos/foundations.md` | `LICENSE` 1 475 B · `7069c7e8d60e` | 🟢 `GRANT-PRESENT` 🔴 **untitled payload** |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `repos/foundations.md` | `LICENSE` 1 512 B · `3a83d5b8e22c` | 🟢 `GRANT-PRESENT` 🔴 **untitled payload** |
+| [`jupyterlite/jupyterlite`](https://github.com/jupyterlite/jupyterlite) | `repos/foundations.md` | `LICENSE` 1 525 B · `574f8a9cab1e` | 🟢 `GRANT-PRESENT` |
+
+🔵 **Only `qtiworks` is a row on this file**; the other three are the teaching-compute tier
+on `repos/foundations.md` and are listed here because they are what sits *beside* the LMS in
+a delivery. No row is added to this shelf by this pass.
+
+🔴 **Two warnings that belong on a platform shelf specifically.**
+
+1. [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — a common drop-in
+   chat surface in front of an LMS, carried on `agents/top.md` as a warning row rather than
+   a build-on row — grades `GRANT-PRESENT` and is **not** a stock BSD-3
+   grant: 2 819 B against ~1 515 B, carrying a **branding restriction** and a **Contributor
+   Licence Agreement**. `GRANT-PRESENT` answers *is the grant here*, never *is it
+   unmodified*. Sell it with the restriction in the SOW, or use `jupyter-ai` instead.
+2. 🟡 **`BigBlueButton` and `OpenEduCat` are still `GRANT-UNCALIBRATED`** (LGPL-3.0,
+   `Gap 440-B`) and must not be read as cleared. `p441` did not touch that gap: LGPL
+   incorporates GPL-3.0 **by design**, so it needs a fifth verdict rather than a profile.
+
+🔵 Recipe for putting this tier in front of a client's counsel: `Pattern AT`. Instrument,
+87 controls and mutation results: `compose/code/p441-bsd-variant/README.md`.
+
 ## 🆕 `p440` — The platform tier's grants are read **clause by clause** for the first time, and all ten hold
 
 🟢 Every pass before this one verified the platform tier by reading its payload and
@@ -241,7 +274,7 @@ client already runs?"** Every row below was re-read first-hand on 2026-10-25.
 |---|---|---|---|---|
 | [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** `10 173` B · `a6cba85bc92e` | roster / SIS interop | Serves a **OneRoster 1.2 API over an Ed-Fi ODS** (DS 4.0, 5.x, 6.1). Lets an agent read enrolment and class structure **without integrating against the SIS**. The US district-data seam. | North America |
 | [Kennisnet/php-qti3](https://github.com/Kennisnet/php-qti3) | **MIT** `1 066` B · `27fb6d463569` | assessment interop (PHP) | QTI 3 in PHP from the **Dutch national education-ICT body** — the route into a PHP estate, which is most of the Moodle world. | EMEA |
-| [OpenOLAT/qtiworks](https://github.com/OpenOLAT/qtiworks) | **BSD-3-Clause** `2 058` B · `a5c692f12090` | assessment delivery | QTI 2.1 delivery with **JQTI+** and **MathAssess**. Maintained to **2026-06-30**. | EMEA |
+| [OpenOLAT/qtiworks](https://github.com/OpenOLAT/qtiworks) | **BSD-3-Clause** `2 058` B · `a5c692f12090` — 🟢 `GRANT-PRESENT` clause-by-clause (`p441`) | assessment delivery | QTI 2.1 delivery with **JQTI+** and **MathAssess**. Maintained to **2026-06-30**. | EMEA |
 | [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** `1 072` B · `00ed05b90bf8` | assessment authoring | QTI 3 toolkit; `packages/core` implements the **parametric-item mechanism** end to end. | North America |
 | [amp-up-io/qti3-item-player](https://github.com/amp-up-io/qti3-item-player) | **MIT** `1 076` B · `7faa621251d7` | assessment rendering | QTI 3 item player — the rendering half of the boundary. | North America |
 | [marcosroriz/sete](https://github.com/marcosroriz/sete) | **MIT** `1 069` B · `0bbd32e7e09a` | public-sector operations | **SETE** (CECATE/UFG): school-transport e-governance with a **desktop build for municipalities with restricted internet**. 🔴 HEAD 2023-03-20 — a reference design, not a live dependency. | LATAM |

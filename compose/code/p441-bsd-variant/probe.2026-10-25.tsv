@@ -1,0 +1,16 @@
+slug	branch	file	bytes	family	sha256_12	local
+Open-TutorAi/open-tutor-ai-CE	main	LICENSE	1531	BSD	57c341d09920	payloads/Open-TutorAi_open-tutor-ai-CE.payload
+jupyterlab/jupyter-ai	main	LICENSE	1516	BSD	a0be5735cdce	payloads/jupyterlab_jupyter-ai.payload
+QuantStack/jupyter-ai-tutor	main	LICENSE	1532	BSD	ccaa70decf0d	payloads/QuantStack_jupyter-ai-tutor.payload
+ucbds-infra/otter-grader	master	LICENSE	1560	BSD	6af203d41a01	payloads/ucbds-infra_otter-grader.payload
+ucbds-infra/ottr	master	LICENSE	108	UNCLASSIFIED	de5d9459d263	payloads/ucbds-infra_ottr.payload
+jupyterhub/ltiauthenticator	main	LICENSE	1528	BSD	08eebd9662cb	payloads/jupyterhub_ltiauthenticator.payload
+jupyterhub/jupyterhub	main	LICENSE	1475	BSD	7069c7e8d60e	payloads/jupyterhub_jupyterhub.payload
+jupyter/nbgrader	main	LICENSE	1512	BSD	3a83d5b8e22c	payloads/jupyter_nbgrader.payload
+jupyterlite/jupyterlite	main	LICENSE	1525	BSD	574f8a9cab1e	payloads/jupyterlite_jupyterlite.payload
+OpenOLAT/qtiworks	master	LICENSE.txt	2058	BSD	a5c692f12090	payloads/OpenOLAT_qtiworks.payload
+open-webui/open-webui	main	LICENSE	2819	BSD	5f1bd74c48bf	payloads/open-webui_open-webui.payload
+# the row below was NOT produced by the ladder: `probe_repo` stops at the 108 B
+# `LICENSE` stub. It was fetched directly at the commit `agents/top.md` pins, to
+# check the published digest. That the ladder cannot reach it IS `Gap 441-A`.
+ucbds-infra/ottr	693b3df	LICENSE.md	1555	BSD	1677c5307530	payloads/ucbds-infra_ottr-AT-LICENSE.md-693b3df.payload

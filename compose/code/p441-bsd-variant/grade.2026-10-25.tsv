@@ -1,0 +1,43 @@
+population	name	titled	profile	bytes	verdict	missing
+FIXTURE-payload	bsd3-control.txt	BSD	BSD-3	1514	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-control.txt	BSD	BSD-3	1514	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-control.txt	BSD	BSD-3	1514	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-control.txt	BSD	BSD-3	1514	GRANT-PRESENT	-
+FIXTURE-prose	md-form4-italic.md	BSD	-	221	GRANT-UNCALIBRATED	-
+FIXTURE-prose	md-page-said-header.md	BSD	-	822	GRANT-UNCALIBRATED	-
+FIXTURE-prose	md-shortname-binding.md	BSD	-	295	GRANT-UNCALIBRATED	-
+FIXTURE-payload	licence-bsd-link-holder.txt	BSD	BSD-3	164	GRANT-TRUNCATED	conditions-met,source-notice,binary-notice,warranties-express-implied,warranties-disclaimed,liability-cap,no-endorsement
+FIXTURE-payload	crafted-bsd3-plus-asf-acknowledgment.LICENSE	BSD	BSD-3	1620	GRANT-PRESENT	-
+FIXTURE-payload	bsd3.txt	BSD	BSD-3	320	GRANT-TRUNCATED	source-notice,binary-notice,warranties-express-implied,warranties-disclaimed,liability-cap
+FIXTURE-payload	bsd3-Submitty-Submitty.LICENSE-md.txt	BSD	BSD-3	1542	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-YuanGongND-gopt.LICENSE	BSD	BSD-3	1517	GRANT-PRESENT	-
+FIXTURE-payload	bsd-2-clause-github2pandas-1340.LICENSE	BSD	BSD-2	1340	GRANT-PRESENT	-
+FIXTURE-payload	bsd-3-clause-freecodecamp-1513.LICENSE	BSD	BSD-3	1513	GRANT-PRESENT	-
+FIXTURE-payload	bsd2-full-1340.LICENSE	BSD	BSD-2	1340	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-full-1514.LICENSE	BSD	BSD-3	1514	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-reverse-declaration-qtiworks-2058.LICENSE.txt	BSD	BSD-3	2058	GRANT-PRESENT	-
+FIXTURE-payload	bsd3-stub-164.txt	BSD	BSD-3	164	GRANT-TRUNCATED	conditions-met,source-notice,binary-notice,warranties-express-implied,warranties-disclaimed,liability-cap,no-endorsement
+LIVE	Open-TutorAi_open-tutor-ai-CE	None	BSD-3	1531	GRANT-PRESENT	-
+LIVE	OpenOLAT_qtiworks	BSD	BSD-3	2058	GRANT-PRESENT	-
+LIVE	QuantStack_jupyter-ai-tutor	BSD	BSD-3	1532	GRANT-PRESENT	-
+LIVE	jupyter_nbgrader	None	BSD-3	1512	GRANT-PRESENT	-
+LIVE	jupyterhub_jupyterhub	None	BSD-3	1475	GRANT-PRESENT	-
+LIVE	jupyterhub_ltiauthenticator	BSD	BSD-3	1528	GRANT-PRESENT	-
+LIVE	jupyterlab_jupyter-ai	BSD	BSD-3	1516	GRANT-PRESENT	-
+LIVE	jupyterlite_jupyterlite	BSD	BSD-3	1525	GRANT-PRESENT	-
+LIVE	open-webui_open-webui	None	BSD-3	2819	GRANT-PRESENT	-
+LIVE	ucbds-infra_otter-grader	BSD	BSD-3	1560	GRANT-PRESENT	-
+LIVE	ucbds-infra_ottr-AT-LICENSE.md-693b3df	BSD	BSD-3	1555	GRANT-PRESENT	-
+LIVE	ucbds-infra_ottr	None	-	108	GRANT-UNCALIBRATED	-
+#	cifra	value
+#	fixture_bsd_titled	18
+#	fixture_bsd_real_payloads	15
+#	fixture_bsd_prose_not_payloads	3
+#	fixture_grant_present	12
+#	fixture_grant_truncated	3
+#	fixture_grant_uncalibrated	3
+#	live_rows_probed	12
+#	live_untitled_payloads	5
+#	live_grant_present	11
+#	live_grant_uncalibrated	1
+#	Gap 440-A: a MEASUREMENT, not a gate.  The controls are in p439-grant-presence/test_grant_presence.py.

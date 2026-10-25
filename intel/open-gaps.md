@@ -4,6 +4,165 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p441`
+
+🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**
+`make hooks` against `1486ed6`, run **before `p441` wrote a line**, exited 2 with
+**60 of 61 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Gap 400-B`, mechanism in `Gap 438-B`). 🔵 All three currency gates were
+green on arrival, so `p440` left no drift either. 🟢 **Third clean inheritance in a row**,
+the longest run this base has recorded.
+
+### 🟢 `Gap 440-A` — **CLOSED for BSD**, and the gap was wrong twice. MPL and EPL re-registered below
+
+🟢 **Bought to the gap's own stopping rule** — *"BSD first — it is the only one of the three
+with a row on a build-on shelf."* Profiles `BSD-2` and `BSD-3` added to
+`compose/code/p439-grant-presence/grant_presence.py`, with `resolve_bsd_variant()` and a
+`VARIANT_FAMILIES` hook kept apart from `VERSIONED_FAMILIES` because the resolution **method**
+differs. `GRANT-UNCALIBRATED` on the BSD slice falls 🟢 **14 → 3**; whole corpus
+**39/218 → 29/228** (MPL 9 · LGPL 8 · EPL 9 · BSD 3). The suite is **87 controls**, up from 46.
+
+🔴 **Correction 1 — the gap's prescribed METHOD was unsound.** It asked for the variant
+*"resolved from the clause structure, not from the length"*. BSD-2 and BSD-3 are separated by
+exactly one piece of text — the non-endorsement clause — which is **also a clause the
+instrument grades**. Resolve the variant from it and a **BSD-3 truncated at that clause**
+resolves as a BSD-2, is graded against BSD-2's seven clauses and returns `GRANT-PRESENT`:
+a false pass on the precise shape the instrument exists to catch. 🟢 **What is sound is the
+asymmetry** — presence of the discriminator is proof, absence is ambiguous — so the variant
+is resolved from the payload's own **declaration** (the title line, the only BSD signal
+independent of the graded clauses), the structural arm may answer only in the direction that
+cannot be wrong, and everything else declines. `C26` keeps the refuted alternative
+reproducible; mutating the resolver back to the prescription turns **8** controls red.
+
+🔴 **Correction 2 — the gap's DENOMINATOR was 27 % high.** It enumerated *"BSD 14"*. Three of
+those fourteen are **KB markdown tables** naming a licence in a cell (`md-form4-italic.md`,
+`md-shortname-binding.md`, `md-page-said-header.md`), not licence payloads. The real count was
+**11**. `p310`'s rule again, and they are named in `grade_bsd.py` rather than filtered by a
+byte floor.
+
+🔴 **Correction 3 — the row the gap named could not have been screened by a BSD profile at
+all.** [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+carries **no title line**, so `bespoke_census.titled_family()` — which answers from the title
+by construction — returns `None` and no clause profile is reached. **5 of the 12 live BSD
+payloads this base publishes are shaped that way, 4 of them complete BSD-3 grants.** 🟢 The
+remedy is `--family`, which lets the hardened owner's answer (`lib/license_family.sh`,
+which said `BSD` for all five) be passed in; `P171` forbids re-answering the family here.
+All 12 are now graded: 🟢 **11 `GRANT-PRESENT`**.
+
+🟡 **The remainder of `Gap 440-A` stands: MPL (9) and EPL (9), to be bought together.** 🔵 And
+`p441` adds a stopping rule the gap did not have: **ask what each family DECLARES that is
+independent of the clauses being graded, before writing the profile.** MPL-2.0 declares its
+version in its own text (like GPL); EPL-1.0 and EPL-2.0 differ materially and EPL has a
+standing registration against a different instrument (`Gap 396-E`), so whichever pass buys it
+should close both.
+
+### 🔴 `Gap 441-A` — **OPEN, and it is in the shared library rather than in one caller.** `lib/probe_payload.sh` takes the FIRST filename-ladder hit, and `Gap 393-F` already forbade guessing filenames
+
+🔴 **Measured on a published row.** [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr)
+is an R package: `DESCRIPTION` reads `License: BSD_3_clause + file LICENSE`, so `LICENSE`
+holds **108 B** of `YEAR:` / `COPYRIGHT HOLDER:` and the licence **text** is at `LICENSE.md`.
+The shared probe returns the stub, family `UNCLASSIFIED`, and the repository reads as
+**ungranted** — a false absence of a grant on a build-on row in this industry's most adopted
+R autograding tier.
+
+🟢 **The shelf is right and the library is wrong.**
+`evidence/verified-repos.2026-10-22-p394.tsv:13` records the three-file shape,
+**tree-enumerated per `Gap 393-F`**, and `LICENSE.md` re-read at the pinned commit `693b3df`
+this hour is **1 555 B · `1677c5307530`** — the recorded digest to the byte. 🔴 So the rule
+*"enumerate the tree, never guess filenames"* is implemented in `p394`'s evidence run and
+**not in the library every pass sources**. Third recorded instance of this base's signature
+failure mode: a correction that never travelled to the instrument that needed it.
+
+🟡 **Realised damage NIL** — no published row was graded from a stub, because `p394` read the
+tree. The exposure is prospective and it is in the library.
+
+🔵 **Priced**: one pass. `lib/probe_payload.sh` already resolves the default branch with
+`ls-remote --symref`; a blobless shallow clone plus `git ls-files` is measured elsewhere on
+this base at **~0.5 s and ~270 KB** (`Gap 434-B`), so the enumeration is affordable inside the
+shared loop. 🔴 **Stopping rule: do not fix it in a caller.** `p441`'s own probe was left
+using the ladder deliberately, so the defect stays visible until the library is fixed.
+🔵 Controls to carry over: `C28`, which pins the 108 B stub's behaviour, and the three-file
+evidence row as the positive.
+
+### 🔵 `Gap 441-B` — **OPEN and deliberately unbought.** BSD-0 and BSD-4 are RECOGNISED and UNPROFILED, because this tree has zero payloads of either
+
+🟢 `resolve_bsd_variant()` answers `BSD-0` and `BSD-4` from their declarations, and neither
+has a clause profile, so such a payload grades `GRANT-UNCALIBRATED` instead of being measured
+against a neighbour's clauses. 🔴 **Writing the profiles would mean taking the clauses from a
+licence's reputation rather than from a measured corpus** — exactly what `p440`'s GPL group
+was careful not to do. 0BSD grants with **no retention condition at all** (its operative
+sentence is ISC-shaped) and BSD-4 adds the advertising clause; neither is approximated by
+BSD-2. `C33` pins the decision.
+
+🔵 **Priced**: cheap, but only once supply exists. **Stopping rule: do not buy it until a
+0BSD or BSD-4 payload is on this tree** — and then calibrate on that payload, not on the
+canonical text.
+
+### 🔴 `Gap 441-C` — **OPEN.** A payload carrying ZERO clauses of ANY BSD variant is unambiguous, and the instrument still declines on it
+
+🔴 **The measurement.** `ucbds-infra/ottr`'s 108 B stub carries **none** of BSD-2's seven
+clauses and no variant declaration, so `resolve_bsd_variant()` returns `None` and the verdict
+is `GRANT-UNCALIBRATED` — *"not judged"* for a payload that plainly grants nothing. The
+correct answer is `GRANT-TRUNCATED`.
+
+🟡 **The sound-looking tightening is not sound.** *"If the payload satisfies NO candidate BSD
+profile then no variant is complete, so TRUNCATED"* holds for BSD-2 and BSD-3 — and 🔴 **fails
+for 0BSD**, whose complete text contains none of those seven clauses. An **untitled 0BSD**
+payload would be condemned. 🔵 So the tightening requires asserting that untitled 0BSD
+payloads do not occur, which is a claim about future supply and not a property of any text.
+
+🟢 **The buildable version**: ask first whether 0BSD's own operative sentence
+(`permission to use, copy, modify, and/or distribute … with or without fee`) is present, and
+only then apply the intersection test. 🔵 That sentence is also **ISC's**, so the question
+touches the family classifier's boundary and belongs in a pass of its own, with
+`lib/licence_identity.py` as the owner. **Priced: one pass. Stopping rule: only after
+`Gap 441-A`** — a probe that reads the wrong file produces far more wrong verdicts than a
+decline on the right one.
+
+### 🟡 `Gap 440-C` — **REFINED rather than closed: the regulatory channel is saturated at the STATUTE tier and still paying at the PROGRAMME tier**
+
+🔵 **Nine legs ran** (four regional, one per-country retry, four global). 🟢 **Four facts had
+zero prior mentions on this base, and all four are sub-statutory**: Arkansas **`H.B. 1958`**
+(authorised-use policies for districts, charters and postsecondary, with a named human
+decision-maker), Illinois **`S.B. 1920`** (state-board K-12 guidance due **1 July 2026**),
+Austria's **Schoolpackage AI** pilot programme, Singapore's **AI for Fun** elective modules.
+🔴 **Zero new facts at statute level** — EU `2026/1744`, Korea's AI Basic Act, Peru `31814`,
+Brazil `PL 2338/2023`, Chile `21.719`, `AB 1159`, `SB 720`, India's Class-3 mandate and the
+CENIA / Digital Education Council figures all re-returned already-carried citations.
+
+🟢 **So the instruction for successors is a tier, not a frequency: a statute names a
+DEADLINE, a programme names a BUYER.** Ask which programme funds the pilot. 🔵 The generic
+regional EMEA leg returned **nil for the fifth consecutive pass** and the per-country retry
+paid in one request — `Gap 434-C`'s shape holding twice.
+
+🔴 **One channel is declared UNUSABLE rather than re-bought.** The agentic-AI-in-education
+market-size leg returned **$2.1 B (2026) → $3 B by 2034 at 4.5 % CAGR** and **$1.72 B (2025) →
+$27.23 B by 2034 at 35.92 %** *in the same search*: a 9× divergence on one horizon.
+🔵 Neither figure is carried onto `intel/market.md`. **Stopping rule: do not re-buy the
+agentic-market-size leg** — the segment bands already on the file (Precedence $9.58 B base,
+Grand View $2.7 B tutors sub-segment) are the carried numbers.
+
+### 🔴 Three defects in `p441`'s own instruments, recorded rather than quietly fixed — the third found by mutating the suite that was supposed to catch it
+
+1. 🔴 **The probe reported `NO-PAYLOAD` for all eleven repositories on its first run**, while
+   a bare `curl` returned `200` and 1 516 B in the same shell. Cause: the script restored
+   `set -u` after sourcing `lib/probe_payload.sh`, which uses unset variables by design and
+   says so in its own header. 🔵 **A nil reads exactly like coverage** — eleven rows of
+   *"this base sells licences it cannot reach"* is a publishable-looking finding, and nothing
+   in the output pointed at the shell option. The measurement is now written into the file,
+   and `set -u` stays off for the **calls**, not only the source.
+2. 🔴 **I over-accused this base's own shelf before reading its evidence store** — see
+   `Gap 441-A`. The first reading of the 108 B `ottr` stub was *"the published row does not
+   reproduce"*. The row reproduces exactly; the probe was reading the wrong file. 🔵 The
+   lesson is procedural and this base has written it before: **check `evidence/` before
+   accusing a row**, because a precise prior measurement looks identical to a wrong one until
+   it is read.
+3. 🔴 **And a third, in the control suite itself, found by mutating it.** Deleting the entire
+   `--family` limb left **82 of 82 controls green**: `C27c` calls `classify()` with the family
+   already in hand, so the code path `Gap 440-A`'s remedy depends on had **no control at
+   all**. `C27e`/`C27f` now run the file through `subprocess`. 🔵 `P237`'s rule, re-earned: a
+   control that cannot fail is not a control, and only mutation testing says which is which.
+
 ## 🆕 `p440`
 
 🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**

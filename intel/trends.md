@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 39 — `p441` **Five of the twelve BSD payloads in this industry's teaching tier carry no title line, so every title-keyed licence tool reports them as UNKNOWN — and the tier they sit in is the one a university actually runs**
+
+🔵 `Trend 37` found the supply chain shipping a licence **name** without a licence **text**.
+`Trend 38` found that a tool which *declines* and a tool which *clears* produce the same
+green. 🟢 `Trend 39` is the third member of that family and the most mechanical: **a
+complete, unambiguous grant that no title-keyed tool can classify at all.**
+
+🔴 **The measurement, first-hand, 2026-10-25.** Every BSD row this base publishes was probed
+and graded clause-by-clause — **12 payloads across 11 repositories**. Five carry **no title
+line**: they open on `Copyright (c) …` and go straight into `Redistribution and use in source
+and binary forms`. Four of the five are **complete BSD-3 grants**:
+
+| repository | payload | what a title-keyed tool sees |
+|---|---|---|
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 1 475 B, complete BSD-3 | 🔴 no family |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 1 512 B, complete BSD-3 | 🔴 no family |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 1 531 B, complete BSD-3 | 🔴 no family |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 2 819 B, BSD-3 **+ branding + CLA** | 🔴 no family |
+
+🔴 **That is 1 in 3 of the tier, and the tier is not peripheral.** `jupyterhub` and `nbgrader`
+are how a cohort gets identical compute and how assignments are released, collected, graded
+and returned. A procurement review that runs a title-keyed scanner over this stack gets
+`UNKNOWN` on the two most load-bearing components and a clean `BSD-3-Clause` on the
+peripheral ones — **the opposite of the ranking a buyer needs.**
+
+🟢 **The structural reason is worth more than the four rows.** GitHub's licence picker emits
+a title; a maintainer pasting the OSI text does not. So the title is a property of **how the
+file was created**, not of the grant — and any instrument keyed on it is measuring
+authoring history. The grant itself is in the clauses, and the clauses were uniform across
+all 11 complete payloads measured here (164 B → 2 819 B).
+
+🔴 **And one family cannot be resolved from its body at all.** BSD-2 and BSD-3 differ in
+exactly one clause, and it is a clause a grant-checker grades. Resolve the variant from it
+and a **BSD-3 truncated at that clause** grades as a complete BSD-2 — a false clearance on
+the precise shape the check exists to catch. 🔵 The generalisable rule, for every family and
+every tool: **ask what the payload DECLARES that is independent of the clauses you are
+grading.** GPL declares `version 3` in its operative text; BSD declares its variant in a
+title line or not at all; and when there is no independent declaration, declining is the only
+correct answer. Mechanism, controls and mutation results: `compose/code/p441-bsd-variant/README.md`.
+
+### 🟡 The second half of this trend is about the research channel, not the code
+
+🔵 `p440` recorded the regulatory channel as **saturated** after four regional legs returned
+zero new facts. 🟡 `p441` ran nine legs and the refinement is sharp: **saturation is at the
+STATUTE tier.** Four facts had zero prior mentions on this base and all four are
+sub-statutory — Arkansas `H.B. 1958` (authorised-use policies, named human decision-maker),
+Illinois `S.B. 1920` (state-board guidance due 1 July 2026), Austria's **Schoolpackage AI**
+pilot programme, Singapore's **AI for Fun** elective modules.
+
+🟢 **The instruction that follows, for successors and for engagement teams:** a statute names
+a *deadline*; a programme names a *buyer*. Ask **which programme funds the pilot**, not what
+the law requires — the law is already on `intel/market.md` and has been for nine passes.
+
+🔴 **One channel is now declared unusable rather than re-bought.** The agentic-AI-in-education
+market-size leg returned **$2.1 B (2026) → $3 B by 2034 at 4.5 % CAGR** and **$1.72 B (2025) →
+$27.23 B by 2034 at 35.92 %** in the same search: a 9× divergence on one horizon. 🔵 Neither
+figure is carried. A number that arrives with a 9× sibling is not evidence, and the next pass
+should spend the leg elsewhere.
+
 ## 🆕 Trend 38 — `p440` **"Unknown" and "fine" render identically in every licence report in this industry, and the copyleft tier is where the difference is worth the most**
 
 🔵 `Trend 37` (`p439`) established that the supply chain ships a licence **name** without

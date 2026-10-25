@@ -22,6 +22,32 @@ which is the append-only record; nothing was lost, and `git log` holds every pri
 Permissive grants (MIT / Apache-2.0 / BSD-3), each confirmed from the repository's own
 licence payload at the commit shown. These are safe starting points for an engagement.
 
+### 🆕 `p441` · 2026-10-25 — every **BSD-3** row above and below is now verified CLAUSE-BY-CLAUSE, and three of them are invisible to a title-keyed scanner
+
+🟢 `Gap 440-A` closed for BSD. All 12 BSD payloads this file and its siblings publish were
+probed first-hand and graded against a **variant-aware** profile (BSD-2 and BSD-3 are
+different licences under one family name): **11 of 12 `GRANT-PRESENT`.**
+
+| repository | payload · `sha256₁₂` | verdict |
+|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `LICENSE` 1 531 B · `57c341d09920` | 🟢 `GRANT-PRESENT` 🔴 untitled |
+| [`jupyterlab/jupyter-ai`](https://github.com/jupyterlab/jupyter-ai) | `LICENSE` 1 516 B · `a0be5735cdce` | 🟢 `GRANT-PRESENT` |
+| [`QuantStack/jupyter-ai-tutor`](https://github.com/QuantStack/jupyter-ai-tutor) | `LICENSE` 1 532 B · `ccaa70decf0d` | 🟢 `GRANT-PRESENT` |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `master/LICENSE` 1 560 B · `6af203d41a01` | 🟢 `GRANT-PRESENT` |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🔴 `LICENSE.md` 1 555 B · `1677c5307530` — **not** the 108 B `LICENSE` stub | 🟢 `GRANT-PRESENT` |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `LICENSE` 1 528 B · `08eebd9662cb` | 🟢 `GRANT-PRESENT` |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `LICENSE` 1 475 B · `7069c7e8d60e` | 🟢 `GRANT-PRESENT` 🔴 untitled |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `LICENSE` 1 512 B · `3a83d5b8e22c` | 🟢 `GRANT-PRESENT` 🔴 untitled |
+| [`jupyterlite/jupyterlite`](https://github.com/jupyterlite/jupyterlite) | `LICENSE` 1 525 B · `574f8a9cab1e` | 🟢 `GRANT-PRESENT` |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `LICENSE.txt` 2 058 B · `a5c692f12090` | 🟢 `GRANT-PRESENT` |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | `LICENSE` 2 819 B · `5f1bd74c48bf` | 🟡 `GRANT-PRESENT` **+ branding clause + CLA — not a stock BSD-3 grant** |
+
+🔴 **Three rows carry no title line**, so `titled_family()` — and every other title-keyed
+tool — answers `UNKNOWN` for them. The family must come from a hardened classifier and be
+**passed in** (`grant_presence.py --family BSD`); `P171` forbids re-answering it in the
+grader. 🔵 Mechanism, the 87 controls and the mutation results:
+`compose/code/p441-bsd-variant/README.md`. Recipe: `Pattern AT`.
+
 | Agent / repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | What it does | Region |
 |---|---|---|---|---|---|
 | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | `a31d82624c27` | `LICENSE` 11 408 B · `cd2f54e1e506` | Agent-native personalised tutoring: multi-mode learning, persistent learner memory, multi-agent orchestration. The reference tutoring agent. | Global |
@@ -36,7 +62,7 @@ licence payload at the commit shown. These are safe starting points for an engag
 | [semyonfox/canvas-mcp](https://github.com/semyonfox/canvas-mcp) | MIT | `e317c4b7bf10` | `LICENSE` 1 881 B · `fea4cd7cb04d` | MCP server over Canvas LMS. Licence file additionally names twelve upstream addresses with their grants. | North America |
 | [kaushikgunasekaren/canvas-grader-mcp](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | MIT | `c47e8b3ac2ae` | `LICENSE` 1 076 B · `2bcdae923d26` | Canvas grading agent that **produces a draft for human sign-off by default** — the staged human-in-the-loop artefact EU, Vietnamese and US-state oversight rules all ask for. | North America |
 | [vTanco/google-classroom-mcp](https://github.com/vTanco/google-classroom-mcp) | MIT | `9ba0070eff2f` | `LICENSE` 1 145 B · `a01639b20880` | Teacher-side Google Classroom authoring: bulk coursework, per-student Drive copies, due dates — **created as draft**. See the licence note below: this address now carries the MIT lane. | EMEA |
-| [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | BSD-3-Clause | `196c547291da` | `LICENSE` 1 531 B · `57c341d09920` | Tutoring platform with voice, video and 3D avatars; Docker-first, runs local LLMs via Ollama. | EMEA |
+| [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | BSD-3-Clause 🟢 `GRANT-PRESENT` (`p441`, clause-by-clause) 🔴 payload is **untitled** | `196c547291da` | `LICENSE` 1 531 B · `57c341d09920` | Tutoring platform with voice, video and 3D avatars; Docker-first, runs local LLMs via Ollama. | EMEA |
 | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | MIT | `dd7426f65b24` | `LICENSE` 1 068 B · `8ea022e30a9b` | Agentic-AI curriculum used at national teaching scale. Courseware, not a runtime — the fastest way to staff a team. | APAC |
 | [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | MIT | `772f5cdca5dd` | `LICENSE` 1 099 B · `8a0a4ba421a0` | Evaluation testbed that runs an LLM as **tutor** *and* as **student** inside existing ITSs — backends `ctat`, `apprentice`, **`oatutor`**. The scorer for the OATutor row above. 🟡 Last commit 2025-09-10; fork, do not depend. | North America |
 | [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | Apache-2.0 (code) | `f9d69c7ce3e1` | `LICENSE` 11 358 B · `cfc7749b96f6` | “Teachometry TutorBench” — scenario-based evaluation **and regression** engine for tutoring systems. Actively maintained (commit 2026-10-25). 🟡 Benchmark **content** is CC-BY-4.0 and the **name** is under a brand policy: three scopes, not one. | Global |
