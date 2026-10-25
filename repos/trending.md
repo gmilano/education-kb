@@ -1,8 +1,37 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **Zero promotions from a trending leg, and one promotion from a GREP: the Canadian provincial foundation this base has carried since `p388` while its register called Canada an open gap. 🔴 `os-taxonomy` re-read byte-exact: ODbL, not MIT.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🟢 Promoted to [`repos/foundations.md`](foundations.md) this pass
+
+| repository | grant, first-hand | why |
+|---|---|---|
+| [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) | 🟢 **MIT** — `LICENSE` **`1 070` B `e14de82d46bf`** @ `687c55b7ed3c`; `package.json` `"license": "MIT"` **agrees**; v`1.1.1`; **4** refs | 🟢 **The Canadian provincial curriculum foundation.** Entire BC Ministry of Education K–12 curriculum incl. the **First Peoples Principles of Learning**. 🔴 **Not found by a trending leg** — found by grepping this base's own shelves while testing `Gap 422-B`, which claimed no such asset existed here |
+
+### 🔵 The trending leg itself
+
+| repository | this pass | verdict |
+|---|---|---|
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🟢 **ODbL**, `LICENSE` **`25 289` B `77d2692c3d64`** @ HEAD `7bd8b6794cb7`. **102** refs; active branch `curriculum/australia-cleanup-ontario-2026-10-23` *(two days old)*. 1 590-topic curriculum graph, 3 221 prerequisite edges; **6 262 ★** per one roundup | 🟢 **CARRIED, byte-exact** against the cell carried since `p384`. 🔴 **Not MIT, and not a code licence at all** — ODbL is a **share-alike database** licence, so a derived curriculum database carries obligations even where the surrounding code does not. 🟡 The star count is a roundup's, not measured here |
+| `luongnv89/claude-howto` | 🟡 Reported 0 → 42K ★ in months | 🔴 **Learning MATERIAL, not education software.** Out of tier, as `karpathy/nanochat` and `developer-roadmap` already are |
+| `karpathy/nanochat`, `developer-roadmap`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`, `ashishpatel26/500-AI-Agents-Projects` | — | 🔴 **All carried.** The two `awesome-ai-agents-2026` twins remain this base's `CC0-1.0` deed-vs-legalcode specimen |
+
+🔴 **Zero unshelved from leg 2, which is `T100`'s tenth consecutive confirmation on the trending
+axis specifically.** 🔵 Worth stating because the trending channel is the one a studio most expects
+to produce novelty, and on these shelves it has produced none for ten passes while **payload
+re-reads and shelf greps** have produced a refuted gap in each of the last three.
 
 ## 🆕 `p424` · 2026-10-24 — **Four unshelved addresses, one promoted to a foundation — and it came from a CARRIED ACTION, not a trending leg. 🟢 `OpenOLAT/OpenOLAT` is Apache-2.0 at its SHA and refutes `Gap 298`, which these shelves had re-published on nine channels.**
 

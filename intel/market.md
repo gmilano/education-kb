@@ -1,8 +1,221 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **`Gap 422-B` IS REFUTED, AND THIS FILE IS WHERE THE FALSE ABSENCE WAS PUBLISHED. 🔴 This file has carried *"no Canadian federal or provincial education-AI instrument is on these shelves"* while `agents/trending.md` held the federal instrument with a date and `agents/top.md` held a Canadian PROVINCIAL curriculum asset, MIT, since `p388`. 🟢 Canada gets a real market cell this pass — and the band is `reported`, because this host cannot reach a single Canadian primary source.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🔴 `T124` — the refutation, with the mechanism measured
+
+🔴 **What this file published** (`p422`, re-published unchanged by `p423` and `p424`):
+*"`Gap 422-B`: **no Canadian federal or provincial education-AI instrument is on these shelves**,
+and the gap is now explicit rather than assumed"*, plus *"Canada remains an open gap … **Do not
+extrapolate US state law across the border**."*
+
+🟢 **What the shelves actually held, before this pass wrote a word:**
+
+| the claim's own terms | what was on the shelves | where |
+|---|---|---|
+| *no Canadian **federal** instrument* | 🔴 **Canada's *AI for All* national AI strategy, launched `2026-06-04`** — recorded **four** times, with the date | `agents/trending.md` ×4, one of which asserts the item was *"grep-confirmed on `intel/market.md` / `intel/policy-matrix.tsv`"* |
+| *no Canadian **provincial** instrument* | 🔴 [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) — **MIT**, the entire **British Columbia** Ministry of Education K–12 curriculum, incl. the **First Peoples Principles of Learning** | `agents/top.md`, a full row since **`p388`** |
+| *…on these shelves* | 🔴 **`canad*` had 113 hits across six shelf files** | measured before this pass's writes |
+
+🔵 **The mechanism, and it is not carelessness.** The slug `bc-curriculum-mcp-server` appeared
+**15** times across these shelves and **none** of those lines contained `canad` in any inflection;
+*"British Columbia"* appeared **4** times, **3** naming Canada, never on a line with the slug; and
+`agents/top.md` — the file holding the row — contained `canad` **zero** times. 🔴 **The absence was
+keyed on a country STRING while the refutation sat under a PROVINCE one level down.** That is
+`gate-capability-absence`'s predicate verbatim, and it is the **third consecutive pass** where the
+corpus held the answer and the pass republished the absence (`p423` formalms → `p424` `Gap 298` →
+`p425` here).
+
+🔴 **The cost asymmetry is the same one `Gap 298` had.** A studio told *"Canada is an open gap, do
+not extrapolate across the border"* scopes a Canadian engagement as greenfield discovery — while
+this base already holds the federal funding instrument **and** an MIT server over a Canadian
+province's statutory curriculum. 🟢 That is not a tidiness defect; it is a mis-scoped engagement.
+
+### 🟡 The Canada instrument, banded honestly
+
+🟢 **Canada — *AI for All*, launched `2026-06-04`** (Prime Minister Carney; ISED). Education content
+as reported across four independent summaries this pass:
+
+- A **National AI Literacy Initiative**: entry-level AI training aimed at **1 million** entry-level
+  post-secondary students, and **K-12 teacher training doubled to more than 3 000 educators**.
+- **Every post-secondary student** to get access to *trusted AI agents*.
+- **$30 M** into **CanCode**, funding not-for-profits delivering free digital-skills training to
+  K–12 youth and their educators.
+- Libraries and community groups as literacy partners, targeted at **rural, remote and northern**
+  communities.
+- Training scoped to **misinformation, bias, privacy risk and unsafe use** — not tool proficiency
+  alone.
+
+🔴 **Band: `reported`, and it CANNOT be upgraded on this host.** `ised-isde.canada.ca`,
+`pm.gc.ca` and `canada.ca` are all refused by the gateway (**403 to CONNECT**), so the primary text
+was not read. 🟢 Per `p289` a restatement is not an authority, and four agreeing law-firm and
+university summaries are still four restatements. 🔵 `Gap 425-A` records the channel limit.
+
+🟢 **The commercially load-bearing fact, and it inverts the US pattern.** **Education is provincial
+jurisdiction in Canada.** The federal instrument is therefore **funding and curriculum influence,
+not a binding school rule** — the exact opposite of the US, where the binding instruments are
+**state statutes** (Oklahoma, Maryland: AI may not replace a licensed educator in grading) and the
+federal posture is outcomes-based guidance. 🔴 **So `p422`'s *"do not extrapolate US state law
+across the border"* was right for the wrong reason:** not because Canada is unmapped, but because
+the two federations put the binding layer at opposite levels. 🟢 **Sales consequence:** in Canada
+the buyer of an AI-literacy programme is federal/not-for-profit, and the buyer of a
+curriculum-aligned deployment is **provincial** — two different procurements, and this base holds a
+BC-specific MIT asset for the second.
+
+### 🟡 The market number: `p424`'s spread WIDENS rather than resolving
+
+🔵 `p424` published a **~6×** spread on the current year (**$1.94 B / $7.30 B / $9.58 B / $10.6 B /
+$11.4 B**). This pass's legs add **$12.3 B** for 2026 (attributed to HolonIQ) and a **$6 B (2024) →
+$32 B (2030)** series. 🔴 **Six-to-seven houses, no convergence**; at least one explicitly folds in
+corporate training. 🟢 This base's carried **$10.6 B → $42.48 B (2030)** stays carried, as a
+carried figure among peers rather than a finding. 🟡 Regional decomposition this pass, all
+`reported`: **NA $3.68 B (36 % share) → $32 B by 2030**; **Europe $2.64 B → $8.0 B (2030) @ 31.9 %
+CAGR**; **APAC fastest at ~44.2 % CAGR**. 🔴 The regional parts do not reconcile with any single
+global figure, which is itself the honest statement.
+
+## Opportunities by region
+
+### North America
+
+- 🟢 **The binding layer is STATE statute, and it names the deliverable.** 134 AI-in-education bills
+  across **31** states in the 2026 session; Oklahoma and Maryland require human oversight and bar
+  AI from high-stakes student decisions; California **AB 1159** would bar student data from
+  training AI models unless the school directly benefits; `H.R. 8747` (K-12 AI Literacy and
+  Readiness Act) advanced at a **2026-07-21** markup. 🟢 **Sell the reviewable human-in-the-loop
+  evidence trail** — statute and liability both ask for the same artefact.
+- 🟢 **Dated procurement triggers:** Ohio — every district, community and STEM school to adopt an
+  AI-use policy by **2026-07-01**; Oklahoma **SB 1734** — written district AI policies before the
+  **2027-28** school year; Florida **H.B. 1361** — K-12 guidance due **2026-07-01**.
+- 🟢 **CANADA — now a mapped market, not a gap** (`Gap 422-B` refuted). *AI for All*
+  (**2026-06-04**): 1 M post-secondary students, >3 000 K-12 educators, `$30 M` CanCode, trusted AI
+  agents for every post-secondary student. 🔴 **Education is provincial**, so the federal money
+  buys literacy programmes while **curriculum-aligned deployment is a provincial sale**. 🟢 This
+  base holds [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server)
+  (**MIT**, `1 070` B `e14de82d46bf`) — a working British Columbia K-12 curriculum grounding layer
+  **including the First Peoples Principles of Learning**, which no generic tutor carries and which
+  is a jurisdictional requirement rather than a nicety.
+- 🔵 Adoption: **60 %** of US K-12 teachers used AI tools in 2024-25, **32 %** at least weekly; NA
+  is **36 %** of the global market at **$3.68 B** (2026). District-level divergence is real — Katy
+  ISD bans generative chatbots for K-6 while NYC, Chicago, Denver and Charlotte-Mecklenburg issue
+  permissive-with-guardrails guidance. 🟡 All `reported`.
+
+### EMEA
+
+- 🟢 **The deadline that shapes the engagement plan:** education is **Annex III high-risk** under
+  the EU AI Act; the Digital Omnibus (**Regulation (EU) 2026/1744**) moves stand-alone high-risk
+  obligations to **2027-12-02** and AI embedded in regulated products to **2028-08-02**. 🟢 **In
+  force now regardless:** the AI-literacy duty (since **2025-02-02**), transparency, and
+  deepfake/AI-content disclosure, with the marking-and-labelling Code of Practice published
+  **2026-06-10**.
+- 🟢 **The scope line that decides whether a product is high-risk at all:** Annex III education
+  covers **admission/assignment decisions and evaluation of learning outcomes**; per the
+  Commission's **May 2026** draft guidelines, **tutoring and feedback chatbots are generally
+  OUTSIDE**. 🔵 **A tutor is not high-risk; a grader is.** Price and architect accordingly.
+- 🟢 **The governance vacuum is the opening:** only **10 %** of 450+ surveyed institutions have
+  formal AI guidelines, while Utrecht classifies AI systems by AI-Act risk tier and Edinburgh has
+  published Act-aligned governance — two reference implementations to sell against.
+- 🔵 Market: Europe **$2.64 B** (2026) → **$8.0 B** (2030) @ **31.9 %** CAGR; Finland, Estonia and
+  the Netherlands lead K-12 integration; the UK has a **£4 M** lesson-planning and marking
+  programme; Germany's **KMK** updated *Bildung in der digitalen Welt* in **October 2026** with
+  **KI-Kompetenz as a cross-curricular task**. 🟡 All `reported`.
+- 🟢 **Gulf and Africa, carried from jurisdiction-shaped legs:** Saudi Arabia's national K-12 AI
+  curriculum (MoE + National Centre for Curriculum + MCIT + SDAIA, ~6 M pupils); the **UAE** Cabinet
+  decision (**2026-09-02**) extending AI to all public *and private* schools with **22 000**
+  teachers trained; Egypt's expanded National Council for AI (**Jan 2026**); **Rwanda**'s National AI
+  Policy incl. education, with a three-year **Anthropic MoU** (**Feb 2026**); Kuwait **CITRA**
+  (**2026-02-08**).
+- 🔴 **Africa returned NOTHING on this pass's Europe-weighted EMEA leg** — an **informed gap**, not
+  coverage, and identical in shape to `p424`'s. 🟢 The carried African material above came from
+  **jurisdiction-named** legs, which is `p423`'s lesson: a region label is not a query.
+
+### APAC
+
+- 🟢 **Korea is still the only binding comprehensive regime:** the **AI Basic Act** in force
+  **2026-01-22**, risk classification plus generative-AI labelling duties, with a pilot year and a
+  one-year penalty grace. 🔴 **And its flagship education programme is failing measurably** —
+  digital-textbook adoption below **30 %** by March, official status removed by the National
+  Assembly, answered with a **$960 M** plan for AI talent centres through 2030.
+- 🟢 **Vietnam is the first jurisdiction to name education high-risk by decree:** **Decision
+  33/2026/QĐ-TTg**, issued **2026-06-30**, in force **2026-08-15**, 46 systems across 6 sectors with
+  education among them — **automated assessment and behavioural monitoring** named — and
+  pre-existing education systems carried to **2027-09-01**. 🔵 This pass's leg reported a **2027-03-01**
+  general compliance date with a longer education grace; **the two are different instruments**
+  (the Decision vs. the AI Law), so `Gap 421-E(a)`'s carried conflict is **neither resolved nor
+  worsened** — recorded, not picked.
+- 🟢 **China is furthest into curriculum by instrument rather than pilot:** AI compulsory from **age
+  six** since September 2025, plus the region's most restrictive registration and labelling regime.
+  🔵 Japan remains promotion-first and penalty-free; Singapore runs a testing toolkit and voluntary
+  frameworks; Australia is still drafting. **India: AI and computational thinking mandatory from
+  Class 3 in AY 2026-27**, against a carried conflict on whether synthetic-content labelling is
+  binding in 2026.
+- 🔵 Market and sentiment: APAC is the **fastest-growing** region (**~44.2 %** CAGR, `reported`);
+  Ipsos *Education Monitor 2026* puts support for banning AI in schools at **23 %** (Indonesia) to
+  **31 %** (South Korea), with Australia and New Zealand higher — 🟢 **the permission to deploy is
+  strongest in South-East Asia and weakest in Oceania**, which is a sequencing fact.
+- 🔴 **`T45` still open:** no **school-level** binding rule for any APAC jurisdiction is on these
+  shelves — national acts and curriculum mandates only. Sixth consecutive pass.
+
+### LATAM
+
+- 🟢 **The defining number is the adoption/governance gap, and it has not closed in five passes.**
+  UNESCO IESALC, **200** institutions across **19** countries: **87 %** use AI in at least one area
+  and **74 %** in teaching and learning, against **26 %** with a formal AI strategy. 🔵 Beside this
+  base's carried **19 %** approved-internal-policy figure — **different instruments, both
+  published, neither picked**.
+- 🟢 **Teachers are ahead of their institutions:** TALIS 2024 — Brazil **56 %**, Chile **55 %** of
+  secondary teachers used AI in the prior year, against an OECD average of **36 %**; Uruguay's
+  **Ceibal** reports **75 %** of public-school teachers using AI tools; **nine in ten** 15-year-olds
+  across 13 PISA 2025 countries in the region have used AI chatbots for schoolwork. 🔴 In Brazil
+  **53 %** of school administrators use AI and only **22 %** say their school has guidelines.
+- 🟢 **Curriculum moved faster here than anywhere:** **11 of 20** countries now include AI content in
+  school programmes, against **2 in 2024** — a 5.5× shift in two years.
+- 🔴 **Equity is the risk to name in a proposal, not to omit:** Argentina's usage runs **75 %** in
+  higher socio-economic groups against **42 %** in lower; private institutions plan and govern where
+  public ones cannot. 🟢 Offline-capable delivery (**Kolibri**, MIT) is a region-specific
+  requirement, not a downgrade.
+- 🔵 Regulation is national-policy and bill stage: Uruguay first in the region to sign the Council
+  of Europe AI Framework Convention (2025); Colombia **CONPES 4144** (Feb 2025); México's federal
+  bill (*"Ley Nahui"*) still in discussion; Chile's **Ley 21.719** data protection in force
+  **2026-12-01**. 🔴 **`PL 2338/2023`'s status conflict reproduces for a third pass and is refused
+  again** (`Gap 421-E(b)`). 🔴 **No AI-in-education-specific regulation anywhere in the region**,
+  and **~70 %** of LATAM universities have no published AI-use policy — 🟢 **which is exactly why
+  the governance deliverable sells here before the model does.**
+
+### Global
+
+- 🟢 **The licence facts a client can act on, all read first-hand at SHAs this pass or last:** the
+  education platform tier has **two** permissive members and **no MIT one** — `OpenOLAT`
+  (**Apache-2.0**, `10 982` B `6dbc5b605ed0`) and `Sakai` (**ECL-2.0**, `11 120` B `0688f62d04f1`,
+  confirmed at HEAD `4debc947` today). 🔴 `frappe/lms` is **AGPL-3.0** (`33 893` B `db1a87ba81e8`)
+  despite circulating this week as *"100 % MIT"* — the MIT grant belongs to `frappe/frappe`, the
+  **framework** (`1 118` B `bc6001a54ffc`).
+- 🟢 **Procurement rule, in three parts, each one paid for on these shelves:** a grant belongs to a
+  **repository at a SHA** (not a vendor, product family or underlying framework); it is read from a
+  **payload over the whole enumerated tree** (not a root ladder — `p424` published a false absence
+  on 14 root `404`s); and **metadata is a claim, not a grant** (`p423`'s `openemis-mcp`: MIT on npm,
+  in the MCP directory *and* in its own `package.json`, shipping **BSL-1.1**).
+- 🟢 **One deliverable now serves three jurisdictional mechanisms:** EMEA's Annex III
+  (**2027-12-02**), Vietnam's Decision 33 (**in force 2026-08-15**), and US state statutes barring
+  AI from replacing a licensed educator in grading. 🔵 **A reviewable human-in-the-loop evidence
+  trail** satisfies all three, and the EMEA scope line says a **tutor** is outside high-risk while a
+  **grader** is inside.
+- 🟡 **The market figure is a spread, not a number** — six to seven houses on the current year, no
+  convergence, at least one including corporate training. Quote the range or quote nothing.
+- 🔴 **This host could not reach a single non-GitHub source** (`Gap 425-A`), so **every** policy and
+  market cell above is `reported` and the licence cells are `authoritative`. 🔵 Stated so the band
+  is read as a channel property rather than as diligence.
 
 ## 🆕 `p424` · 2026-10-24 — **Four regional legs, four returned material, no nil. 🟢 The procurement fact that moved is a LICENCE one and it is the largest this base has recorded: the education platform tier has a permissive member, so a forkable-platform engagement is available where it was previously a licence event. 🔴 And the market NUMBER degraded — five houses now disagree about the CURRENT year by ~6×.**
 
@@ -54,7 +267,7 @@ put at **$0.70 B** in 2026 rising to **$18.47 B** by 2036 (Future Market Insight
 has carried **$10.6 B → $42.48 B (2030)** since `p54`; it stays carried, now with its peers
 visible beside it so the uncertainty is not hidden by a single confident number.
 
-## Opportunities by region
+## Opportunities by region — `p424`, SUPERSEDED by `p425`'s block above
 
 ### North America
 

@@ -1,8 +1,90 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **`Pattern AW` — the Canadian engagement, which `Gap 422-B` made unwriteable for three passes. 🟢 Wired on components this base already holds and re-read at their SHAs today, with the federal/provincial split as its load-bearing structure.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🆕 `Pattern AW` — the Canadian engagement: federal literacy money, provincial curriculum delivery
+
+🔵 **Why this pattern could not be written before.** `intel/market.md` published *"no Canadian
+federal or provincial education-AI instrument is on these shelves"* (`Gap 422-B`) through `p424`,
+and a pattern cannot be wired to components a shelf says do not exist. 🟢 Both halves were present
+the whole time (`T124`), so the pattern is written now.
+
+🔴 **The structural fact that decides the whole engagement: education is PROVINCIAL jurisdiction in
+Canada.** The federal *AI for All* strategy (**2026-06-04**) therefore buys **literacy and
+training**, while anything **curriculum-aligned is a provincial sale**. 🔵 This is the inverse of
+the US, where the binding instruments are state statutes and the federal layer is guidance — so a
+US playbook ported north targets the wrong buyer with the wrong artefact.
+
+**Two procurements, not one:**
+
+| | buyer | instrument | what you deliver |
+|---|---|---|---|
+| **A — literacy** | Federal / not-for-profit delivery partners, libraries, post-secondary | *AI for All*: **1 M** entry-level post-secondary students; K-12 teacher training doubled to **>3 000** educators; **$30 M** CanCode; trusted AI agents for every post-secondary student | Teacher and student AI-literacy programmes scoped to **misinformation, bias, privacy risk and unsafe use** — explicitly not tool proficiency alone — with **rural, remote and northern** delivery as a named requirement |
+| **B — curriculum** | A **province** (ministry, school authority, district) | Provincial curriculum and assessment policy | A curriculum-grounded deployment that cites the province's **own** statutory curriculum, with a human-in-the-loop evidence trail for anything touching assessment |
+
+#### 🟢 Wiring for B, on components read first-hand
+
+1. 🟢 **Curriculum grounding — the component that makes this credible.**
+   [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) — **MIT**,
+   `LICENSE` **`1 070` B `e14de82d46bf`** @ `687c55b7ed3c`, `package.json` `"license": "MIT"`
+   agreeing, **v1.1.1**. 12 MCP tools over the **entire British Columbia Ministry of Education K-12
+   curriculum** in its real three-column **KDU** structure (Big Ideas / Curricular Competencies /
+   Content) with elaborations, Core Competencies, grade progressions, cross-subject connections and
+   full-text search — **plus the First Peoples Principles of Learning**, which is a jurisdictional
+   requirement in BC and which no generic tutor carries. Hosted HTTP endpoint or local stdio via
+   `npx`. 🔴 **The data is a crawl, so currency is the risk, not the licence** — pin a crawl date
+   and re-crawl on curriculum revision.
+2. 🟢 **The platform under it, if the client wants to own the stack.**
+   [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — **Apache-2.0**, `10 982` B
+   `6dbc5b605ed0` — the one **forkable** full LMS on these shelves. 🟡 Or
+   [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai), **ECL-2.0**, `11 120` B
+   `0688f62d04f1`, confirmed at HEAD **`4debc94780cc`** today. 🔴 **Not `frappe/lms`** — it is
+   **AGPL-3.0** (`33 893` B `db1a87ba81e8`), whatever this week's roundups say.
+3. 🟢 **If the client already runs Moodle or Canvas** (the common case), integrate rather than
+   replace: [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) — **MIT**, `1 072` B
+   `64dc9680d3bb` — as a **reference architecture, explicitly not a dependency** (17 commits, two
+   author keys). 🔵 The integration tier is where the MIT grants actually are; the platform tier is
+   not MIT and will not become MIT.
+4. 🟢 **Academic-integrity surface, since literacy programmes create assessment pressure.**
+   [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) — **MIT**, `LICENSE` **`1 084` B
+   `sha256₁₂ 881163366572`** @ HEAD `2b82821c29d7` (Ghent University, *"© 2019 Team Dolos
+   <dolos@ugent.be>"*) — source-code plagiarism detection, the permissive flagship of that tier.
+   🔴 **This row was first written here as `1 083` B `44925b867ce7`, copied from a carried cell, and
+   corrected by reading the payload before the commit — see `T126`.**
+5. 🔴 **The compliance artefact, and it is the same one three jurisdictions ask for.** A
+   **reviewable human-in-the-loop evidence trail** on anything touching assessment. In Canada this
+   is driven by **liability and provincial policy** rather than by a federal statute — but the
+   artefact is identical to the one EMEA's Annex III (**2027-12-02**) and US state statutes
+   (AI may not replace a licensed educator in grading) require. 🟢 **Build it once, sell it in
+   three regions.** 🔵 The EMEA scope line also applies as design guidance: a **tutor** is outside
+   high-risk, a **grader** is inside — so keep the grading path reviewable and the tutoring path
+   light.
+
+#### 🟡 What this pattern does NOT claim
+
+- 🔴 **No Canadian primary source was read on this host.** `ised-isde.canada.ca`, `pm.gc.ca` and
+  `canada.ca` are all refused by the gateway (**403 to CONNECT**), so every *AI for All* figure
+  above is `reported` from four agreeing secondary summaries and **must be confirmed against the
+  ISED strategy text before it goes in a proposal** (`Gap 425-A`).
+- 🔴 **Only British Columbia is covered.** The other **twelve** provinces and territories have **no
+  curriculum-grounding component on these shelves** — an informed gap, registered as `Gap 425-D`,
+  and the obvious next build (Ontario and Alberta first, by enrolment). 🔵 `os-taxonomy`'s active
+  `curriculum/australia-cleanup-ontario-2026-10-23` branch suggests Ontario curriculum data is
+  being worked on upstream under **ODbL** — 🔴 a **share-alike database** licence, so a derived
+  curriculum database inherits obligations even where surrounding code does not. Check it before
+  depending on it.
 
 ## 🆕 `p424` · 2026-10-24 — **`Pattern AV` is new and it is the one `Gap 298` made unwriteable for nine passes: the engagement where forking the LMS is a legitimate strategy, because the platform is Apache-2.0. 🟢 Wired on `OpenOLAT/OpenOLAT`, graded at its SHA today.**
 

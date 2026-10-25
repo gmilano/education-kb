@@ -1,8 +1,136 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **`T100`'s TENTH confirmation, and the cleanest one: three addresses the discovery channel presented as NEW, three payload reads, three carried cells reproduced EXACTLY — zero unshelved. 🔴 And the pass's real find is on this shelf itself: `agents/top.md` carries Canada's only provincial education-AI asset and, before this pass wrote into it, contained the string `canad` ZERO times — which is the mechanism by which `Gap 422-B` published an absence this base refutes.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🔴 `T124` — this shelf refutes `Gap 422-B`, and it does so without ever using the word
+
+🔴 `intel/market.md` publishes, as an informed gap: *"`Gap 422-B`: **no Canadian federal or
+provincial education-AI instrument is on these shelves**, and the gap is now explicit rather than
+assumed"* — re-published unchanged by `p424`.
+
+🟢 **This shelf has carried a provincial one since `p388`.**
+[`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) is an MCP
+server over the **entire British Columbia Ministry of Education K–12 curriculum** — a Canadian
+province's statutory curriculum, including the **First Peoples Principles of Learning**. Re-read
+first-hand this pass: **MIT**, `LICENSE` **`1 070` B `sha256₁₂ e14de82d46bf`** @ `687c55b7ed3c`,
+holder *"Copyright (c) 2026 Paul de Groot"*, `package.json` declaring `"license": "MIT"` — the two
+channels **agree**, so this is not a `T117` metadata conflict. **4** refs; `package.json` version
+**`1.1.1`**, which also updates `p388`'s *"2 releases, both 2026-03-27"*.
+
+🔴 **The mechanism, measured.** The slug appears **15** times across these shelves and **0** of
+those lines contain `canad` in any case or inflection. *"British Columbia"* appears **4** times,
+**3** of which do name Canada — but never on a line with the slug. 🔴 **And `agents/top.md`, the
+file holding the full row, contained `canad` ZERO times** — measured **before this section was
+written**, which is the only state in which the figure is true, since this very paragraph changes
+it. `canad*` had **113** hits across the shelves, in six files, of which this file and
+`verticals/solutions.md` were not two. 🔵 Pinned to its measurement time on purpose: `p424`'s
+`gate-census-currency` red was exactly a figure derived before that pass's own writes and then
+published as current.
+
+🔵 So the absence was keyed on a **string** while the refutation sits under a **jurisdiction name
+one level down**. That is `gate-capability-absence`'s predicate verbatim — *an absence whose
+refutation is in the base's own harvest log under different words* — and it is the **third
+consecutive pass** in which the corpus held the answer and the pass republished the absence
+(`p423` formalms, `p424` `Gap 298`, `p425` here). 🟢 `T120`'s shape, now with a measured blind
+spot rather than an anecdote.
+
+### 🟢 `T100`, tenth confirmation — and every candidate died on a payload read, not on a grade
+
+🔵 Eight legs (four global, four regional). The discovery channel offered **three** addresses as
+new supply. **All three reproduce cells this base already carries, to the byte.**
+
+| address | this pass, read first-hand | carried | verdict |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0**, `LICENSE` **`11 120` B `0688f62d04f1`** @ HEAD `4debc94780cc`, title line *"Educational Community License, Version 2.0 (ECL-2.0)"*; **15 512** refs | `11 120` B `0688f62d04f1`, read at SHA `c35e7a2` | 🟢 **CARRIED — and a currency confirmation at a NEW SHA.** The grant holds at today's HEAD, not merely at the SHA the row was written against |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🟢 **ODbL** *(Open Data Commons Open Database License)*, `LICENSE` **`25 289` B `77d2692c3d64`** @ HEAD `7bd8b6794cb7`; **102** refs, one branch `curriculum/australia-cleanup-ontario-2026-10-23` — **two days old** | *"ODbL-1.0 + CC BY-SA 4.0 … 25,289 bytes"* | 🟢 **CARRIED, byte-exact.** 🔴 **Not MIT**, against a trending roundup that lists it among education repos without a grant |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0**, `license.txt` **`33 893` B `db1a87ba81e8`** @ HEAD `5d6df8e3ed8e`; **2 472** refs | `AGPL-3.0-or-later` | 🟢 **CARRIED** — and the *claim* against it is new, below |
+
+🟢 **The disposal is the finding.** `p424` closed on *"the pass's only significant find came from
+spending a carried ACTION on a payload read, not from a discovery leg"*. 🔵 This pass has **no**
+carried ACTION to spend and **no** significant supply find — and the three reads it did spend all
+came back `CARRIED`. **Tenth consecutive pass in which the supply layer returns nothing unshelved.**
+
+### 🔴 `T125` — the "MIT LMS" claim is a FRAMEWORK/APP CONFLATION, and the claim's own sentence carries the mechanism
+
+🔴 The vertical-platform leg returned, as its single permissive-platform hit: *"**Frappe LMS** is a
+100% MIT-licensed LMS by Frappe Technologies (India), **built on the Frappe/ERPNext framework**."*
+
+🟢 **Measured first-hand, both repositories, this pass:**
+
+| repository | role | grant, read at SHA |
+|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | the **framework** | 🟢 **MIT** — `LICENSE` **`1 118` B `bc6001a54ffc`** @ `360bcc23bc81`, *"Copyright (c) 2016-2021 Frappe Technologies Pvt. Ltd."* |
+| [`frappe/lms`](https://github.com/frappe/lms) | the **application** | 🔴 **AGPL-3.0** — `license.txt` **`33 893` B `db1a87ba81e8`** @ `5d6df8e3ed8e` |
+
+🟢 **And the app's tree was ENUMERATED, not laddered** (`gate-subtree-grant`, `p382`): `git
+ls-tree -r` over `frappe/lms` HEAD returns **exactly ONE** licence-shaped path — `license.txt`.
+🔴 **There is therefore no MIT component anywhere in the LMS repository**, at any depth, so the
+claim cannot be rescued as a statement about a subtree.
+
+🔵 **The claim is true of the framework and false of the application, and its own subordinate
+clause is the transmission path.** 🟢 **Sharper than `p424`'s `forma LMS` specimen**, where the
+circulating *"Apache-2.0"* traced to an unrelated web-server line in a requirements list: here the
+false sentence contains a **correct** statement about a **different repository** and inherits its
+licence across a dependency boundary. 🔴 **Procurement rule, extended:** a grant is a property of
+**a repository at a SHA**, never of a vendor, a product family, or the framework underneath. Two
+addresses from one house, one permissive and one copyleft, is the normal case.
+
+### 🔴 `T126` — A COMMIT SHA IS PUBLISHED IN A PAYLOAD-DIGEST COLUMN, AND THIS PASS REPRODUCED THE ERROR BEFORE CATCHING IT
+
+🔴 **Found by this pass's own hand-check**, re-reading the three carried digests it had cited
+rather than read (`p289`: a restatement is not an authority). Two of three matched
+(`OpenOLAT/OpenOLAT` `10 982` B `6dbc5b605ed0` @ `d073ad444fe5`; `duck-5/moodle-mcp` `1 072` B
+`64dc9680d3bb` @ `dd9682ca97e3`). **The third did not.**
+
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos), read first-hand at **two** refs:
+
+| ref | `LICENSE` | `sha256₁₂` |
+|---|---|---|
+| HEAD `2b82821c29d7` *(today)* | **`1 084` B** | **`881163366572`** |
+| `44925b867ce7` *(the value the shelves carry)* | **`1 084` B** | **`881163366572`** |
+
+🟢 **Byte-identical at both refs, so this is NOT drift** — the payload has not changed, and two
+carried cells were simply wrong when written.
+
+🔴 **Two distinct defects in the carried rows:**
+
+1. **`44925b867ce7` is a COMMIT SHA, published in a payload-digest column.** `agents/trending.md`
+   and `repos/trending.md` both render it as the digest beside a byte count. 🟢 **The base's own
+   files prove it is a commit:** `intel/open-gaps.md` cites *"`HEAD` `44925b867ce7`"* and
+   *"at `44925b867ce7`"*, and `repos/trending.md`'s third row correctly renders it as
+   **`main` · `44925b8`**. 🔴 A commit SHA and a payload digest are **not interchangeable**: the
+   digest identifies the grant text, the commit identifies the tree. Publishing one as the other
+   makes a licence cell unverifiable while *looking* verified.
+2. **An off-by-one byte count.** Two rows carry **`1 083`** B; one carries **`1 084`**; the payload
+   is **`1 084`**. 🟢 **The correct row existed on the same shelf as a wrong one** — so
+   `gate-shelf-consistency`'s question (*no slug may carry disagreeing licence cells across the
+   live shelves*) had a standing answer here and nothing asked it.
+
+🔴 **And this pass published the wrong pair first.** `Pattern AW` was drafted citing
+*"`1 083` B `44925b867ce7`"*, copied straight from the carried cell — **the precise error class
+`T125` and `T124` are about, committed while writing them up**, and caught only because the
+hand-check re-read a payload it had already cited. 🟢 Corrected before the commit. 🔵 **Fourth
+consecutive pass in which the corpus held what the pass got wrong** (`p423`, `p424`, `T124`, now
+`T126`) — and the first in which the pass caught *itself* rather than being caught by a gate, which
+is the only reason it is in this section rather than in a successor's.
+
+🟢 **The rule this earns:** a licence cell needs **byte count + digest + the SHA the payload was
+read at**, in three separate columns, and a bare hex string in a digest column must be
+**re-read, never copied**. 🔴 `Gap 425-E` registers the remaining exposure: these shelves hold
+**unknown** numbers of hex values in digest columns that are commit SHAs, and this one was found by
+accident while checking something else.
 
 ## 🆕 `p424` · 2026-10-24 — **`Gap 298` IS REFUTED, AND IT WAS NEVER A SUPPLY FACT. 🟢 `OpenOLAT/OpenOLAT` — a university-grade LMS these shelves have carried as a MENTION for nine passes — is **Apache-2.0** in its own payload at its own SHA. 🔴 The gap stood on an UNREAD PAYLOAD, not on an absent one, and `ACTION p422-A` had already named the exact read that would close it. 🟢 Plus `T121`: three slugs, one root commit, one byte-identical licence digest — and OPPOSITE statuses.**
 

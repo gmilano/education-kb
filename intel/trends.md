@@ -1,8 +1,90 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **Two trends with procurement consequences, and neither is about a model. 🔴 `Trend 45`: a false licence claim now travels by VENDOR INHERITANCE — a permissive framework lending its grant to a copyleft application. 🔴 `Trend 46`: this base's own typed layer cannot see a jurisdiction its prose holds, which is how a mapped market gets sold as a gap.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🔴 `Trend 45` — the false-licence-claim channel has a third mode: vendor inheritance
+
+🔵 Three passes, three *distinct* mechanisms by which a client-facing licence claim is wrong — and
+they are not variants of one error:
+
+| pass | specimen | mechanism | what a client would have done |
+|---|---|---|---|
+| `p423` | `tixuz/openemis-mcp` | 🔴 **Lying metadata.** MIT on npm, in the MCP directory **and** in its own `package.json`; the only payload is **BSL-1.1** (`647` B `4dead97d8aaf`), byte-identical inside the installed tarball | Installed a non-open-source package whose evaluation-only limit runs to **2029-01-01** |
+| `p424` | `formalms/formalms` | 🔴 **Incomplete enumeration.** A root-only 14-path ladder returned `404` ×14 and *"no grant"* was published; the grant is **GPL-2.0** at `html/license.txt` (`18 346` B `4e63feff285d`) | Treated a GPL-2.0 platform as unlicensed — or refused a usable platform outright |
+| 🆕 `p425` | `frappe/lms` | 🔴 **Vendor inheritance.** The *framework* `frappe/frappe` is **MIT** (`1 118` B `bc6001a54ffc`); the *application* `frappe/lms` is **AGPL-3.0** (`33 893` B `db1a87ba81e8`), with **exactly one** licence path in its whole enumerated tree | Shipped a hosted AI layer over **network copyleft** believing it was MIT |
+
+🟢 **Why this one is the most dangerous of the three.** The metadata case is caught by reading a
+payload; the enumeration case is caught by reading the whole tree. 🔴 **This case survives both** —
+the claim is *verifiably true* about a real repository from the same vendor, so a careful reader
+who checks `frappe/frappe` and finds genuine MIT is **confirmed in the wrong conclusion**. 🔵 And
+the claim's own sentence supplies the error: *"built on the Frappe/ERPNext framework"* is the
+inheritance step, stated out loud and read as provenance rather than as a boundary.
+
+🟢 **The rule, generalised:** a grant is a property of **one repository at one SHA**. A vendor with
+a permissive framework and a copyleft application is the **normal** case in this industry, not an
+anomaly — `openedx` is the same shape (platform **AGPL-3.0**, `XBlock`/`xblock-sdk`
+**Apache-2.0**), and so is Frappe. 🔴 **Any claim of the form *"X is MIT"* where X is a product
+rather than a repository should be treated as unverified by construction.**
+
+### 🔴 `Trend 46` — a typed layer that cannot see a jurisdiction its own prose holds
+
+🔴 `Gap 422-B` published *"no Canadian federal or provincial education-AI instrument is on these
+shelves"* for three consecutive passes, over a corpus that held: Canada's *AI for All*
+(**2026-06-04**) in `agents/trending.md` four times with its date, and an **MIT** server over the
+entire **British Columbia** K-12 curriculum in `agents/top.md` since `p388`.
+
+🔵 **The measured mechanism:** the slug appeared **15** times, **0** of those lines containing
+`canad`; *"British Columbia"* appeared **4** times, **3** naming Canada, never on a line with the
+slug; `agents/top.md` contained `canad` **zero** times; and `intel/policy-matrix.tsv` — the typed
+`(function, jurisdiction) → verdict` table the compiler reads — has **no Canada row at all** among
+its **190** rows.
+
+🟢 **So the honest diagnosis is not "the base missed Canada".** The base *held* Canada in prose and
+**had no typed cell for it**, and the absence check ran on the country string rather than on the
+jurisdiction the asset actually names. 🔴 **This is the third consecutive pass in which the corpus
+held the answer and the pass republished the absence** (`p423` → `p424` → `p425`), which makes it a
+property of the method rather than a run of bad luck.
+
+🟢 **The generalisable trend, for a client as much as for this base:** an entity recorded only in
+prose is **invisible to every filter**, and a filter's silence is indistinguishable from real
+absence. 🔵 It is the same failure this base already paid for twice in its own tooling —
+`p439`'s casing instrument sat in no `make` target and its invisibility *caused* a duplication
+(`Gap 421-A`), and `gate-region-headings` existed with a passing suite for ~50 passes while
+judging nothing. 🔴 **Three instances, two layers (data and tooling), one shape: unindexed is
+unseen.** For an education client this lands directly on curriculum and SIS metadata — a
+competency recorded in a course description but absent from the taxonomy is not discoverable, and
+no amount of model quality recovers it.
+
+### 🟡 Carried trends, re-measured rather than restated
+
+- 🟢 **Governance over experimentation** holds on a fourth independent channel this pass (1EdTech,
+  OECD *Digital Education Outlook*, HolonIQ, Campus Technology): the demand is **policy, data
+  boundaries and oversight**, and the artefact is an evidence trail. 🔵 Converges exactly with the
+  three-jurisdiction regulatory finding — the trend and the statute now ask for the same thing.
+- 🟢 **Purpose-built over general-purpose** sharpens: the OECD recommends moving *beyond
+  general-purpose AI tools toward purpose-built educational AI designed to produce durable learning
+  gains*, and the vendor-side rationale is that generic chatbots push prompt-crafting, fact-checking
+  and curriculum alignment onto teachers. 🔵 **This is the commercial argument for the
+  curriculum-grounding tier** this base keeps finding (BC, BNCC, `os-taxonomy`) rather than for
+  another tutor.
+- 🟡 **Evidence of learning gain is becoming a procurement gate**, with adoption reported to follow
+  teacher time saved (5–10 h/week). 🔵 Both `reported`; the *direction* is the usable part.
+- 🔴 **`T100` holds for a tenth pass:** the supply layer returned **zero** unshelved addresses, and
+  the pass's findings came from **payload re-reads and shelf greps**. 🔵 For eleven passes the
+  trending channel has produced no new education supply, which is now better described as a
+  property of the supply than of the legs.
 
 ## 🆕 `p424` · 2026-10-24 — **The trend with procurement consequences this pass is NOT in the market: it is that an open-source absence this base published nine times was an artefact of its own reading queue. 🟢 And the regulatory trend sharpened into a date a studio can plan against — EMEA's education high-risk obligations are now firmly 2027-12-02, and APAC has its first education-named high-risk decree.**
 

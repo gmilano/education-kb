@@ -1,8 +1,107 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## Pass 425 — reads 2026-10-25, commit 2026-10-25 — **`Gap 422-B` IS REFUTED, AND THE REFUTATION COST ONE `grep`: Canada's federal instrument was on `agents/trending.md` with its date, and a Canadian PROVINCIAL asset was a full MIT row on `agents/top.md` since `p388`. 🔴 THIRD CONSECUTIVE PASS WHERE THE CORPUS HELD THE ANSWER AND THE PASS REPUBLISHED THE ABSENCE. 🟢 AND `T125`: a false "MIT" claim that survives both of this base's existing licence instruments, because it is TRUE about a different repository from the same vendor.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+🔴 **Gates could NOT run on this host, and that is declared rather than worked around.**
+`make commit-gates` and `make hooks` were both refused by this host's auto-mode classifier
+(`[Code from External]`), reproducing `p422`'s condition exactly and **not** `p423`'s. 🟢 Per
+`p423`'s own rule — *a declared-un-run suite must never be read as un-runnable* — this is recorded
+as a property of **this host** (`Gap 425-B`), and the file contracts were honoured **by hand**.
+🔴 **So this pass's eight shelf writes carry no post-write verdict**, and `p423`'s measurement of
+hand-honouring (**five of 53** gates missed) is the right prior for them.
+
+**What this pass established, first-hand:**
+
+- 🔴 **`T124` — `Gap 422-B` is REFUTED on both of its own terms, and the mechanism is measured.**
+  The gap published *"no Canadian federal **or provincial** education-AI instrument is on these
+  shelves"* for three passes. **Federal:** Canada's *AI for All*, launched **2026-06-04**, was on
+  `agents/trending.md` **four** times with its date. **Provincial:**
+  [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) — **MIT**,
+  `LICENSE` **`1 070` B `e14de82d46bf`** @ `687c55b7ed3c`, `package.json` agreeing, **v1.1.1** — an
+  MCP server over the **entire British Columbia K-12 curriculum** including the **First Peoples
+  Principles of Learning**, a full row since `p388`.
+- 🔵 **The mechanism is reusable, which is why it is the finding and not the fix.** Measured before
+  this pass's writes: the slug appears **15** times across the shelves and **0** of those lines
+  contain `canad`; *"British Columbia"* appears **4** times, **3** naming Canada, never beside the
+  slug; `agents/top.md` — the file holding the row — contained `canad` **zero** times; and
+  `intel/policy-matrix.tsv`, the typed table the compiler reads, has **0** Canada rows in **190**.
+  🔴 **The absence was keyed on a country STRING while the refutation sat under a PROVINCE one level
+  down.** `gate-capability-absence`'s predicate verbatim.
+- 🔴 **At three instances, `T120`'s shape is a property of the method.** `p423` (the corpus held the
+  subtree rule, the pass didn't apply it), `p424` (`Gap 298`: a carried ACTION had named the exact
+  read two passes earlier), `p425` (here). 🟢 **And the refutations are getting cheaper:** `Gap
+  298` cost one HTTP request; `Gap 422-B` cost one `grep -i canad` over this base's own files.
+  `Gap 424-B`'s cost asymmetry, second instance.
+- 🔴 **`T125` — a false licence claim that defeats both existing instruments.** The week's one new
+  supply claim was *"Frappe LMS is a 100% MIT-licensed LMS … built on the Frappe/ERPNext
+  framework"*. Measured: [`frappe/frappe`](https://github.com/frappe/frappe), the **framework**, is
+  genuinely **MIT** (`LICENSE` **`1 118` B `bc6001a54ffc`** @ `360bcc23bc81`);
+  [`frappe/lms`](https://github.com/frappe/lms), the **application**, is **AGPL-3.0** (`license.txt`
+  **`33 893` B `db1a87ba81e8`** @ `5d6df8e3ed8e`), and its **whole enumerated tree holds exactly
+  ONE** licence-shaped path, so no MIT subtree can rescue it. 🔴 **Reading the payload catches
+  `p423`'s lying-metadata case and enumerating the tree catches `p424`'s root-only case — this one
+  survives both**, because a careful reader who checks the framework finds real MIT and is confirmed
+  in the wrong conclusion. 🟢 Became `Trend 45`'s third mechanism: **vendor inheritance**.
+- 🟢 **`Gap 298`'s refutation is QUALIFIED, not widened.** `p424` refuted *"no permissive education
+  platform"* with `OpenOLAT` (Apache-2.0). This pass tested the only other candidate the discovery
+  channel offers and it is a **false positive**, so the tier has **exactly two** permissive members
+  — `OpenOLAT` **Apache-2.0** and `Sakai` **ECL-2.0** — and **none is MIT**. 🔵 The *MIT* form of
+  the gap survives on a **seventh** independent channel and is the form worth carrying, because MIT
+  is what a procurement team asks for by name.
+- 🟢 **`T100`, tenth confirmation, and the disposal is the finding.** Eight legs → **three**
+  addresses the discovery channel presented as new → **zero unshelved**. All three reproduce carried
+  cells to the byte: `sakaiproject/sakai` **ECL-2.0** `11 120` B `0688f62d04f1` (carried from SHA
+  `c35e7a2`, re-read at HEAD `4debc94780cc` — **a currency confirmation at a new SHA**),
+  `withmarbleapp/os-taxonomy` **ODbL** `25 289` B `77d2692c3d64`, `frappe/lms` **AGPL-3.0**.
+  🔵 Eleven passes in which the trending channel has produced no new education supply.
+- 🟢 **Canada gets a real market cell, banded `reported` and stated why.** *AI for All*: **1 M**
+  entry-level post-secondary students, K-12 teacher training doubled to **>3 000** educators, **$30
+  M** CanCode, trusted AI agents for every post-secondary student, rural/remote/northern delivery.
+  🔴 **Education is PROVINCIAL jurisdiction in Canada**, so the federal instrument buys literacy
+  while curriculum-aligned deployment is a provincial sale — **the inverse of the US**, where state
+  statutes bind and the federal layer guides. 🟢 `Pattern AW` is wired on that split.
+- 🔴 **`T126` — a COMMIT SHA is published in a payload-digest column, and this pass reproduced the
+  error before catching it.** The hand-check re-read the three carried digests this pass had cited
+  rather than read. Two matched; [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) did not:
+  the shelves carry **`1 083` B `44925b867ce7`**, but `44925b867ce7` is a **commit SHA** — the base's
+  own register cites it as *"`HEAD` `44925b867ce7`"* — and the real payload is **`1 084` B
+  `881163366572`**, byte-identical at that ref and at today's HEAD `2b82821c29d7`, so it is an error
+  of record and not drift. 🔴 **`Pattern AW` was drafted citing the wrong pair**, copied from the
+  carried cell — the exact error class `T124` and `T125` are about, committed while writing them up
+  — and corrected before the commit. 🟢 **First time this base has caught itself rather than been
+  caught by a gate**, which matters because no gate could run here (`Gap 425-B`). 🔵 `Gap 425-E`
+  registers the unmeasured exposure: a 12-hex digest and a 12-hex commit SHA are indistinguishable
+  by shape, and the first cell anyone looked at was wrong.
+- 🔴 **`Gap 425-A` — this host cannot reach a single non-GitHub source**, so no policy or market cell
+  can be upgraded past `reported` here at **any** leg count. Eleven hosts tried
+  (`ised-isde.canada.ca`, `pm.gc.ca`, `canada.ca`, `dlapiper.com`, `ubyssey.ca`, `kpmg.com`,
+  `bakermckenzie.com`, `oecd.org`, `unesco.org`, `en.wikipedia.org`, `www.pm.gc.ca`) — all
+  `connect_rejected` **403** at the gateway; `raw.githubusercontent.com` and `github.com` answer,
+  which is why **every licence cell here is `authoritative`**. 🔵 Recorded so a successor does not
+  read extra legs as diligence.
+- 🔵 **Declared, so silence does not read as coverage.** **Africa** returned nothing from a
+  Europe-weighted EMEA leg — an informed gap. `Gap 421-E`'s **Vietnam** and **Brazil** conflicts are
+  both carried unresolved (the Vietnam leg returned a **different instrument**, so it does not bear
+  on the conflict). `Gap 425-D` replaces `Gap 422-B` with its correctly-scoped form: **twelve** of
+  Canada's thirteen provinces and territories have no curriculum component here.
+
+### 🔴 The census was NOT re-derived, and `p424`'s triple is not restated as current
+
+🔴 `p352`/`gate-census-currency` require the census to be derived **after** the pass's writes. The
+instruments are `make` targets refused on this host (`Gap 425-B`), so **no figure was derived**.
+🟢 **Declared rather than carried forward:** `p424`'s published triple (**2 778 / 38 / 2 740**,
+union **2 740 / 3 216 / 3 582**) stays **attributed to `p424`** and is **not** reprinted as this
+pass's state. 🔵 This pass graded five addresses and cited several carried ones, so the true figures
+have moved by a small positive amount — **stating which would be invention.** 🟢 `p352`'s rule in
+the direction that matters: a census is not repaired by editing history, and it is not *created* by
+restating another pass's.
 
 ## Pass 424 — reads 2026-10-24, commit 2026-10-24 — **`Gap 298` IS REFUTED AFTER NINE CONFIRMATIONS, AND IT WAS NEVER A SUPPLY FACT: `OpenOLAT/OpenOLAT` is Apache-2.0 in its own payload, and `ACTION p422-A` had named the exact read two passes earlier. 🔴 THE POST-WRITE SUITE THEN CAUGHT THIS PASS PUBLISHING A FALSE ABSENCE OF ITS OWN — a root-only licence ladder, refuted by `gate-enumeration` naming a grant one directory down. 🟢 AND `T121`: three slugs, one root commit, one byte-identical licence digest, OPPOSITE verdicts.**
 

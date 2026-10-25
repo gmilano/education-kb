@@ -1,8 +1,53 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **`Gap 298`'s refutation is QUALIFIED, not widened: the only other permissive platform the discovery channel offers is a FALSE POSITIVE. 🟢 `OpenOLAT` stands alone as the Apache-2.0 foundation, with Sakai's ECL-2.0 beside it — and no education platform anywhere on these shelves is MIT.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🟢 The permissive platform tier, after this pass's reads
+
+🟢 `p424` refuted `Gap 298` (*"no permissive education platform anywhere"*) on
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — **Apache-2.0**, `LICENSE` `10 982` B
+`6dbc5b605ed0`. 🔵 **The obvious successor question is whether that was the first of several or the
+only one.** This pass tested the one remaining candidate the discovery channel offers and it is a
+**false positive**, so the answer is: **the only one**, and the tier has exactly two permissive
+members, neither MIT.
+
+| platform | grant | read first-hand | standing |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | `LICENSE` `10 982` B `6dbc5b605ed0` @ `d073ad444fe5` *(`p424`)* | 🟢 **The forkable foundation.** University-grade LMS, `frentix GmbH` / University of Zurich lineage |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** | `LICENSE` **`11 120` B `0688f62d04f1`** @ HEAD **`4debc94780cc`** *(re-read this pass; carried read was at `c35e7a2`)* | 🟢 **Permissive, Apache-derived, OSI-approved, written for education** — with a narrowed `§3` patent scope. 🔴 **Not Apache-2.0**; the sources saying so describe lineage |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** | `license.txt` **`33 893` B `db1a87ba81e8`** @ `5d6df8e3ed8e` | 🔴 **REFUSED as a permissive foundation.** Circulated this week as *"100% MIT"*; the grant is AGPL and the tree holds **exactly one** licence path |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | 🟢 **MIT** | `LICENSE` **`1 118` B `bc6001a54ffc`** @ `360bcc23bc81` | 🟡 **A framework, not an education platform.** This is the address the *"MIT LMS"* claim is actually about, and it ships no LMS |
+
+🔴 **So `Gap 298` is best restated rather than deleted.** The *universal* form (*no permissive
+education platform exists*) is **refuted**. The *MIT* form — **no major education platform is
+MIT-licensed** — survives this pass's leg as a **seventh** independent confirmation, and is the
+form worth carrying, because MIT is the grant a client's procurement team asks for by name.
+
+### 🟢 And the foundation this base already had, under a name its register could not see
+
+🟢 [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) — **MIT**,
+`LICENSE` **`1 070` B `e14de82d46bf`** @ `687c55b7ed3c`, `package.json` `"license": "MIT"`
+agreeing, version **`1.1.1`**, **4** refs. 🔵 Carried on `agents/top.md` since `p388` as *"the North
+American curriculum-grounding instance"*.
+
+🔴 **It is a CANADIAN PROVINCIAL asset** — the full British Columbia Ministry of Education K–12
+curriculum, Big Ideas / Curricular Competencies / Content in the real three-column KDU structure,
+plus the **First Peoples Principles of Learning** — and `intel/market.md` has been publishing *"no
+Canadian federal or provincial education-AI instrument is on these shelves"* over the top of it
+(`Gap 422-B`, refuted this pass as `T124`). 🟢 **Promoted to this file** as the jurisdiction-grounding
+foundation for any Canadian engagement.
 
 ## 🆕 `p424` · 2026-10-24 — **The platform tier finally has a permissive foundation, and it took a payload read rather than a discovery leg to find it: `OpenOLAT/OpenOLAT` is Apache-2.0 at its own SHA. 🔴 `Gap 298` did not describe the supply; it described this base's reading backlog.**
 

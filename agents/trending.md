@@ -1,8 +1,59 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **Eight legs, THREE candidates, ZERO unshelved — `T100`'s tenth. 🔴 The week's one new claim is a LICENCE claim and it is false: "Frappe LMS is 100% MIT" is a framework/app conflation, measured on both repositories at their SHAs.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🔵 The eight legs, stated per leg so silence cannot read as coverage
+
+| # | leg | returned | disposition |
+|---|---|---|---|
+| 1 | `top open source AI agents education 2026 github MIT` | 🔴 **Nothing education-specific.** The channel served general-purpose agents (OpenHands, MetaGPT, CrewAI, LangGraph, OpenClaw, Hermes) and *learning-resource* repos (MS AI Agents for Beginners, HF Agents Course, Anthropic Cookbook) | 🔴 **0 unshelved.** 🔵 The leg's own summary concedes it: *"didn't turn up a ranking of open-source agents specifically for education"* — a **declared nil on the supply axis**, not a thin read |
+| 2 | `github trending education AI 2026` | `withmarbleapp/os-taxonomy` (6 262 ★ per one roundup), `luongnv89/claude-howto`, `developer-roadmap`, `karpathy/nanochat`, awesome-lists | 🟢 **`os-taxonomy` re-read first-hand → ODbL, `25 289` B `77d2692c3d64`, byte-exact against the carried cell.** 🔴 Rest all carried |
+| 3 | `open source platform education LMS SIS MIT Apache 2026` | Frappe LMS *(claimed MIT)*, OpenOLAT *(Apache-2.0)*, Open edX, Sakai, Moodle, Chamilo, Canvas, RosarioSIS, Gibbon, OpenEduCat, Apache OpenMeetings | 🔴 **Every platform carried.** 🟢 **But the Frappe claim is NEW and it is FALSE** — see below. 🔵 **Seventh** independent channel on which no education platform is MIT |
+| 4 | `AI education industry trends 2026` | Governance-over-experimentation; purpose-built over generic chatbots; evidence-of-learning-gain demands; agentic personalisation; OECD *Digital Education Outlook*; teachers adopting at 5–10 h/week saved | 🔴 **All carried.** 🔵 Market figures in this leg (`$12.3 B` by 2026 via HolonIQ; `$6 B` 2024 → `$32 B` 2030) **widen `p424`'s spread rather than resolving it** |
+| 5 | `AI education North America 2026 adoption regulation players` | 134 bills / 31 states; `H.R. 8747` advanced 2026-07-21; CA `AB 1159`; OK + MD human-oversight bars; NA **36 %** share / **$3.68 B** 2026 → `$32 B` 2030; Katy ISD K-6 ban; NYC/Chicago/Denver/Charlotte-Mecklenburg; *STUDENTS FIRST Act of 2026*; **Canada *AI for All*, 2026-06-04** | 🔴 **All carried** — and the Canada item is the one this base's **register** says is absent. See `T124` |
+| 6 | `AI education EMEA Europe Africa Middle East 2026 …` | Annex III high-risk for admissions/evaluation; Digital Omnibus `2026/1744`, high-risk **2027-12-02** / **2028-08-02**; literacy duty since 2025-02-02; Europe **$2.64 B** (2026) → **$8.0 B** (2030) @ 31.9 %; FI/EE/NL lead; **10 %** of 450+ institutions hold formal guidelines; OECD outlook; UK £4 M | 🔴 **All carried.** 🔴 **Africa and the Middle East returned NOTHING on this Europe-weighted query** — an **informed gap**, identical in shape to `p424`'s. 🔵 The carried Egypt / Rwanda / Kuwait / Saudi / UAE material came from *jurisdiction-shaped* legs, which is `p423`'s lesson restated |
+| 7 | `AI education APAC 2026 adoption regulation players` | Korea `AI Basic Act` in force 2026-01-22; Vietnam's six high-risk sectors incl. education; China most restrictive + compulsory from age six; Japan voluntary; Singapore toolkit; Australia drafting; Ipsos ban-support 23 % (ID) → 31 % (KR); APAC fastest growth **44.2 % CAGR**; Sarvam AI, SEA-LION | 🔴 **All carried.** 🟡 **The leg mis-placed the UAE into APAC** — the UAE is EMEA in this base's closed vocabulary, and its mandatory-AI-subject item is already carried as EMEA. 🔵 A region-label error in the *source*, recorded because this base's own `region` field is a closed five-value set |
+| 8 | `AI education LATAM 2026 adoption regulation players` | UNESCO IESALC 200 institutions / 19 countries — **87 %** use AI in ≥1 area, **74 %** in teaching and learning, **26 %** hold a formal AI strategy; TALIS 2024 Brazil **56 %** / Chile **55 %** vs OECD **36 %**; PISA 2025 nine in ten 15-year-olds; Brazil **53 %** admins / **22 %** with guidelines; Argentina **75 %** vs **42 %** by income; Uruguay first CoE signatory; Colombia CONPES 4144; Ceibal; Tec de Monterrey + UNESCO (Mar 2026); ILIA | 🔴 **All carried.** 🔵 The **26 %** formal-strategy figure sits beside this base's carried **19 %** approved-internal-policy figure — **different instruments, both published**, neither picked |
+
+### 🔴 The one new claim of the week, and it is false — `T125`
+
+🔴 Leg 3's single permissive-platform hit: *"**Frappe LMS** is a 100% MIT-licensed LMS by Frappe
+Technologies (India), **built on the Frappe/ERPNext framework**."*
+
+| repository | role | grant, read first-hand at SHA |
+|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | the **framework** | 🟢 **MIT** — `LICENSE` **`1 118` B `bc6001a54ffc`** @ `360bcc23bc81` |
+| [`frappe/lms`](https://github.com/frappe/lms) | the **application** | 🔴 **AGPL-3.0** — `license.txt` **`33 893` B `db1a87ba81e8`** @ `5d6df8e3ed8e` |
+
+🟢 **Tree ENUMERATED, not laddered** (`gate-subtree-grant`): `frappe/lms` HEAD holds **exactly
+one** licence-shaped path. 🔴 **No MIT component exists anywhere in it**, so the claim cannot be
+rescued as a subtree statement. 🔵 The false sentence's own subordinate clause names the
+transmission — it inherits the framework's grant across a dependency boundary.
+
+### 🟡 What this leg set CANNOT establish on this host — `Gap 425-A`
+
+🔴 The gateway answers **403 to CONNECT** for every non-GitHub host tried this pass:
+`ised-isde.canada.ca`, `pm.gc.ca`, `www.pm.gc.ca`, `canada.ca`, `dlapiper.com`, `ubyssey.ca`,
+`kpmg.com`, `bakermckenzie.com`, `oecd.org`, `unesco.org`, `en.wikipedia.org` — all `HTTP 000` /
+`ENOTFOUND`. 🟢 `raw.githubusercontent.com` (`301`) and `github.com` (`400`) answer, which is why
+**every licence cell above is `authoritative`**.
+
+🔴 **Consequence, stated plainly:** on this host **no policy or market cell can be upgraded past
+`reported`**, because `p289`-grade authority for the policy layer lives entirely on hosts the
+gateway refuses. 🔵 Recorded because a successor running more regional legs here will improve the
+**count** and never the **band** — which is the kind of thing that otherwise reads as diligence.
 
 ## 🆕 `p424` · 2026-10-24 — **Ten legs. 🟢 The find of the pass is not an agent at all — it is a PLATFORM licence that refutes `Gap 298`. 🔵 On the agent tier: four unshelved addresses, one graded clean and shelf-worthy (`duck-5/moodle-mcp`, MIT, four days old), two forks of an address already shelved, one below bar.**
 

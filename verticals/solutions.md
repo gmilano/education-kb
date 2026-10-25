@@ -1,8 +1,57 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-24
+updated: 2026-10-25
 ---
+
+## 🆕 `p425` · 2026-10-25 — **The platform tier gains a row and loses a candidate: `frappe/lms` circulated this week as "100% MIT" and is AGPL-3.0 at its own SHA. 🟢 The procurement rule this forces is a boundary rule — a grant belongs to a REPOSITORY, never to a vendor or to the framework underneath it.**
+
+🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
+this host's auto-mode classifier (`[Code from External]`) — reproducing `p422`'s condition exactly
+and **not** `p423`'s. 🟢 Per `p423`'s own rule — *a declared-un-run suite must never be read as
+un-runnable* — this is recorded as a property of **this host**, not of the suite. The file
+contracts below are honoured **by hand**, and that is stated rather than implied (`Gap 425-B`).
+🔵 **No date straddle:** every leg, `ls-remote`, SHA read and payload digest happened
+**2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🟢 The platform tier, re-graded where this pass read a payload
+
+| platform | grant | payload read at SHA | customisable with AI on top? |
+|---|---|---|---|
+| **OpenOLAT** | 🟢 **Apache-2.0** | `LICENSE` `10 982` B `6dbc5b605ed0` @ `d073ad444fe5` *(`p424`)* | 🟢 **Fork and ship.** The one permissive full LMS on these shelves |
+| **Sakai** | 🟡 **ECL-2.0** | `LICENSE` **`11 120` B `0688f62d04f1`** @ **`4debc94780cc`** 🆕 re-read this pass | 🟢 Yes — permissive, Apache-derived, education-specific, narrowed `§3` patent scope. 🔴 **Not Apache-2.0** |
+| **Frappe LMS** | 🔴 **AGPL-3.0** | `license.txt` **`33 893` B `db1a87ba81e8`** @ **`5d6df8e3ed8e`** 🆕 this pass | 🔴 **Network copyleft.** A hosted AI layer over it is a *conveyance* — price the obligation before the engagement, do not discover it after |
+| **Moodle** | 🔴 GPL-3.0 | `COPYING.txt` `35 147` B *(in-tree, `p411`/`p418`)* | 🟡 Plugin-tier work is normal; a forked distribution is a licence event |
+| **Open edX** | 🔴 AGPL-3.0 *(platform)* | carried | 🟡 **But `openedx/XBlock` and `openedx/xblock-sdk` are Apache-2.0** (`11 358` B `cfc7749b96f6`) — the **component** boundary is the permissive one |
+| **Canvas LMS** | 🔴 AGPL-3.0 | carried | 🟡 As Open edX. 🔴 **`Gap 423-D` still open:** an MCP-census row keyed `canvas` reads **MIT** beside the platform's `canvas lms` → **AGPL-3.0**, and the shorter key matches a platform-worded question first |
+| **OpenEduCat** | 🔴 LGPL-3.0 | carried | 🟢 The only one integrating LMS + SIS + fees on one database |
+| **forma LMS** | 🔴 GPL-2.0 | `html/license.txt` `18 346` B `4e63feff285d` *(`p424`, after a root-only read published a false absence)* | 🔴 — |
+| **RosarioSIS / Gibbon / openSIS / Fedena** | 🔴 GPL family | carried | 🔵 **Seventh channel confirming no education SIS is MIT** |
+
+### 🔴 The boundary rule, written for a client
+
+🔴 This week's claim — *"Frappe LMS is a 100% MIT-licensed LMS by Frappe Technologies, **built on
+the Frappe/ERPNext framework**"* — is **true of the framework and false of the product**:
+
+- [`frappe/frappe`](https://github.com/frappe/frappe), the framework → 🟢 **MIT**, `LICENSE`
+  **`1 118` B `bc6001a54ffc`** @ `360bcc23bc81`.
+- [`frappe/lms`](https://github.com/frappe/lms), the application → 🔴 **AGPL-3.0**, `license.txt`
+  **`33 893` B `db1a87ba81e8`** @ `5d6df8e3ed8e`.
+- 🟢 **Tree enumerated, not laddered** (`gate-subtree-grant`): **exactly one** licence-shaped path
+  in the whole LMS repository, so no MIT subtree exists to rescue the claim.
+
+🟢 **Three rules, and each one has now been paid for on these shelves:**
+
+1. **A grant belongs to a repository at a SHA** — not to a vendor, a product family, or the
+   framework underneath. *(This pass: Frappe.)*
+2. **Read the payload, over the whole tree.** A root-only ladder is wrong about the repository
+   (`p382`); `p424` published a false absence on 14 root `404`s that a path one directory down
+   refuted. *(forma LMS.)*
+3. **Metadata is a claim, not a grant.** `p423`'s `openemis-mcp` declared MIT on npm, in the MCP
+   directory **and in its own `package.json`** while shipping **BSL-1.1** in the installed tarball.
+
+🔵 Taken together these are three *distinct* failure modes — vendor inheritance, incomplete
+enumeration, and a lying manifest — and a client's procurement check has to survive all three.
 
 ## 🆕 `p424` · 2026-10-24 — **The platform tier's "no permissive grant anywhere" row is WRONG as of this pass, and this file has carried it longest. 🟢 `OpenOLAT` is Apache-2.0 at its own SHA — a full LMS a studio may fork and ship. 🔴 And the Apache-2.0 claim about `forma LMS` turns out to have been read off a WEB-SERVER REQUIREMENT.**
 
