@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **`Pattern BA` — the CREDENTIAL-GATED platform engagement, which is the shape every LMS engagement takes except Canvas. 🟢 Its first step is a procurement question, not a build decision, because `Trend 54` shows cohort size is not supply. 🟢 Plus `Amendment 17`: a recipe must carry a grant's AS-OF DATE and its digest, because this pass watched a component's MIT licence expire two days before it was read.**
+
+🟢 **Gates RAN on this host**, against `79362ca`: 🟢 **56** blocking gates green at baseline,
+🟢 **56** after these writes. 🔵 **All component reads 2026-10-25, at the SHAs named below** —
+seven read first-hand by this pass; the two carried components are marked as carried in their own
+cells, with the pass that read them.
+
+### 🟢 `Pattern BA` — the credential-gated platform engagement: ask who issues the token BEFORE choosing a component
+
+🔵 **When this pattern applies.** The client runs **Google Classroom, Moodle or Blackboard Learn**
+— i.e. any LMS where the end user **cannot** issue their own API credential. 🔴 **If the client
+runs Canvas, use `Pattern AZ` instead** (p428): Canvas users self-issue Personal Access Tokens, a
+real hub exists, and the engagement is a selection, not a build.
+
+🔴 **The mistake this pattern exists to prevent.** Google Classroom's connector cohort has **37**
+addresses and Moodle's **242**, which reads like abundant supply. It is not: the largest Google
+Classroom connector carries **6** refs and the largest Moodle one **22**, against **308** for
+Canvas's hub. 🟢 **`Trend 54` explains why, and the explanation is actionable** — where the
+credential is gated behind a developer console, a site admin or an institutional REST
+registration, a published connector does not hand the next operator a working one, so nothing
+concentrates and **there is nothing to depend on regardless of cohort size.**
+
+**Step 1 — answer the credential question, in week one, in writing.**
+
+| who issues the credential? | platform | consequence for the estimate |
+|---|---|---|
+| 🟢 the end user, alone | Canvas | 🟢 Select and pin. Go to `Pattern AZ` |
+| 🔴 a developer console, per operator | Google Classroom | 🔴 Own the connector. **Each deployment needs its own Google Cloud OAuth client** — make that a client deliverable with a named owner, not an install note |
+| 🔴 a site administrator | Moodle | 🔴 Own it, plus an **admin-enablement step per site** in the rollout plan |
+| 🔴 the institution, by registering a REST application | Blackboard Learn | 🔴 Own it, and **price the registration as a dependency on the client's own IT**. 🟡 7 of 10 published connectors skip it entirely and drive a browser, which is a signal about how often it is granted |
+
+**Step 2 — take the lane that matches the side of the platform you are on.** All grants below were
+read from the payload at the SHA on **2026-10-25**.
+
+| role in the build | component, pinned | grant @ SHA | why this one |
+|---|---|---|---|
+| **Google Classroom — teacher authoring (writes)** | [`vTanco/google-classroom-mcp`](https://github.com/vTanco/google-classroom-mcp) @ **`9ba0070eff2f`** | 🟢 **MIT**, `LICENSE` **`1 145` B `sha256₁₂ a01639b20880`** | 🟢 Bulk coursework creation from one instruction, Drive file **as a copy per student**, points and per-session due dates — **and it creates as `En borrador`, DRAFT by default**, so the oversight step is inherited. 🔴 **Use this, NOT `pengusto`**, whose grant went proprietary on **2026-10-23** |
+| **Google Classroom — assessment (high-risk)** | [`supachai-j/google-classroom-mcp-project`](https://github.com/supachai-j/google-classroom-mcp-project) @ **`9490c0fc068b`** | 🟢 **MIT**, `LICENSE` **`1 090` B `sha256₁₂ 125a8bf7ce31`** | 🟢 Rosters, submissions **and their Drive attachments**, **weighted final grades**, CSV export. 🔴 **Weighted grade computation is an Annex III high-risk function** — it must be wired behind Step 3, never shipped bare into an EMEA engagement |
+| **Google Classroom — student lane (read-only)** | [`AnonymousOnyx22/google-classroom-student-mcp`](https://github.com/AnonymousOnyx22/google-classroom-student-mcp) @ **`f3c1bd8e6a11`** | 🟢 **MIT**, `LICENSE` **`1 072` B `sha256₁₂ ed912ca72d9e`** | 🟢 Classes, due dates, **missing work**, grades on returned work — read-only, so it carries no write-side risk. 🔵 The same owner publishes the identical architecture for **Canvas, Moodle and Brightspace**, so a multi-LMS student lane is four pins of one shape |
+| **Blackboard — multi-campus** | [`UKplus8HRS/bb-mcp`](https://github.com/UKplus8HRS/bb-mcp) @ **`d639765bc267`** | 🟢 **MIT**, `LICENSE` **`1 067` B `sha256₁₂ 02049138f239`** | 🟢 **The only institution-AGNOSTIC Blackboard address in the cohort** — the institution's site is configuration, not a hard-coded host. 🔴 Playwright-driven, so Step 4 applies |
+| **Blackboard + separate grading product** | [`BxnIceLemon/minerva-mcp`](https://github.com/BxnIceLemon/minerva-mcp) @ **`534b7dc7b78e`** | 🟢 **ISC**, `LICENSE` **`741` B `sha256₁₂ 5d3787deebf3`** | 🟢 **Blackboard Learn Ultra AND Gradescope in one server** — the only address on these shelves spanning an LMS and a separate grading product, which is the real surface at a UK or US university |
+| **the human-confirmation gate (Step 3)** | `psychquant/che-ntucool-mcp` — 🔵 **carried, read first-hand by p340 (2026-10-20)**, not re-read this pass | 🟢 **MIT** | 🟢 **Gates grade and announcement WRITES behind an explicit human confirmation while leaving reads unguarded.** 🔵 Lift the control, not the codebase: it is the EU AI Act's human-oversight requirement, and Korea's and Vietnam's, **already implemented permissively** — cheaper to adopt than to specify |
+| **Canvas comparison lane** | `vishalsachdev/canvas-mcp` — 🔵 **carried, read first-hand by p428 (2026-10-25)** | 🟢 **MIT** | 🟢 **308** refs, **99** forks, a published PyPI distribution. 🔵 Present here only as the contrast that justifies Step 1: this is what a cohort with portable credentials produces, and no gated platform has one |
+
+**Step 3 — wire the oversight gate around every write, not around the agent.** Reads stay
+unguarded; **grade writes, announcement writes and coursework publication each require an explicit
+human confirmation**. 🟢 Two components here give it to you for free and they compose: take
+`che-ntucool-mcp`'s confirmation gate for grade writes, and rely on `vTanco`'s **draft-by-default**
+authoring so published coursework cannot appear without a human action. 🔴 **Do not implement this
+as a prompt instruction** — it is a code path, and an auditor will ask to see it.
+
+**Step 4 — decide the credential architecture explicitly, and write down which one you chose.**
+
+| architecture | what it costs | when it is acceptable |
+|---|---|---|
+| 🟢 **API credential, properly provisioned** | A client-side deliverable: a Google Cloud OAuth client per deployment, or a Blackboard REST application the institution registers | 🟢 **The default. Always try this first** — it is the only one that survives a data-protection review |
+| 🔴 **Browser automation / SSO session reuse** | Rides a human's live session; breaks on any UI change; no service account | 🔴 **Prototypes and internal demos only.** 🟡 **7 of 10** Blackboard connectors do this, so expect to inherit it — and expect to replace it. **It will not pass procurement** |
+
+🔴 **Say the quiet part to the client.** If the honest answer to Step 1 is *"nobody at this
+institution can issue the credential"*, then the shadow-IT architectures in the published supply
+are not a shortcut — they are the reason the supply looks larger than it is. 🟢 **Fixing the
+credential path is the engagement**; the connector is the easy half.
+
+**Step 5 — before writing a line, re-read every pinned grant's digest.** See `Amendment 17`.
+🔵 **In this pass that step was not hypothetical: it is what caught a recommended component going
+proprietary.**
+
+🔵 **Scope, stated honestly.** Ten of the twelve addresses promoted this pass carry **zero or one
+ref**. 🟢 This pattern is therefore *"fork a named exemplar at a SHA and own it"* — not *"take a
+dependency"*. The two exceptions are `vTanco`, which is load-bearing for its **grant** rather than
+its popularity, and the carried Canvas hub, which is not part of this pattern's build.
+
+### 🟢 `Amendment 17` — a recipe carries each grant's AS-OF DATE and digest, and re-reads the digest before the engagement starts
+
+🔴 **The failure this closes, measured rather than imagined.**
+`pengusto/google-classroom-mcp` was read as **MIT** by this base on **2026-10-03**, **2026-10-20**
+and **2026-10-21**, and p340's platform table recommends it by name as one of two Google Classroom
+lanes, *"both MIT"*. On **2026-10-23** its payload became the **`3 053` B "Pengusto Commercial
+License 1.0"** — source inspection only, **§3 requiring a paid agreement from "an educational
+institution or training provider, whether nonprofit or commercial"**. 🔵 **Every reading was
+correct on its date.** 🔴 **The recipe was still wrong by the time anyone could act on it,
+because a cell reading `🟢 MIT` carries no date and so cannot be stale.**
+
+🟢 **The amendment, and it is three fields, not a process.** Every component cell in a pattern
+states:
+
+1. 🟢 **the address and the SHA** it is pinned at — `Amendment 16` (p428) already requires the
+   repository rather than a package name;
+2. 🟢 **the grant family AND the licence payload's `sha256₁₂`** — this base already publishes the
+   digest for most rows, so this is mostly a discipline, not new work;
+3. 🟢 **the date that grant was read.** 🔴 Without it, a three-week-old permissive grade and a
+   fresh one are the same cell.
+
+🟢 **And one step at engagement start: re-read the digest, not the licence.** `curl` the licence
+path at the pinned SHA, `sha256sum` it, compare. 🔵 **Unchanged digest ⇒ unchanged grant, with no
+classifier in the loop and no judgement call** — which is strictly stronger than re-reading the
+family, because a family can be restated while the terms change underneath it (`gate-restatement`,
+p289). 🔴 **A changed digest is not automatically a problem** — a copyright year or a holder line
+moves it too — **but it is always a re-read**, and that is the whole cost: one `curl` and one
+`sha256sum` per component.
+
+🟢 **It also pays forward.** The digest comparison is what found this pass's replacement lane:
+scanning the cohort for pengusto's abandoned `a01639b20880` surfaced `vTanco` carrying the
+**byte-identical** payload at a live HEAD (`Trend 56`). 🔵 **The instrument that detects the
+expiry is the same one that finds the successor.**
+
+🟡 **What this amendment does NOT do.** It will not tell you a grant is *about* to change, and it
+does not establish a re-read *interval* — one regression is not a rate (`Gap 429-A`). 🔵 It makes
+the check cheap enough that the interval can be *"every engagement"*, which is the only interval
+that needs no evidence to justify.
+
 ## 🆕 `p428` · 2026-10-25 — **`Pattern AZ` — the Canvas engagement, which is a DIFFERENT pattern from the Moodle one because the reusable work already exists. 🟢 Plus `Amendment 16`: a component is pinned by its REPOSITORY at a SHA, never by its package name — measured at a 3-in-7 mis-resolution rate on bare names this pass.**
 
 🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **55** blocking gates green at baseline,

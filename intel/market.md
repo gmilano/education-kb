@@ -4,6 +4,227 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **Four regional legs, four returned material, no nil — and the LATAM leg returned the two fact classes `Gap 427-E` recorded as missing for two passes, so that half of the gap is REFUTED rather than carried. 🟢 On the supply side this pass placed four addresses on payload evidence across EMEA, APAC and LATAM. 🔴 North America produced no new address, and that is written down.**
+
+🟢 **Gates RAN on this host**, against `79362ca`: 🟢 **56** blocking gates green at baseline —
+before this pass wrote a line — and 🟢 **56** after these writes. 🔵 **No date straddle:** every
+leg, `ls-remote`, clone, tree enumeration and digest happened **2026-10-25**; the commit lands
+**2026-10-25**.
+
+🔴 **`Gap 428-A` holds unchanged, so the band on every cell below is stated once here.** Re-probed
+on this host this pass: `developers.google.com` **`000`**, `help.blackboard.com` **`000`** —
+while `api.github.com` **`200`**, `registry.npmjs.org` **`200`**, `pypi.org` **`200`**.
+🔵 **The egress is still a forge-and-package-registry allowlist.** 🟢 Therefore **every supply
+cell in this section is `authoritative`** — read from a payload at a SHA — and 🔴 **every policy,
+market-size and adoption cell is `reported`**, sourced from server-side search summaries that
+cannot be digested or pinned. **No market figure below should be quoted to a client without a
+primary source the client can reach.**
+
+🔴 **And one vendor-documentation consequence worth stating plainly:** this pass's central
+mechanism — who can issue a platform credential — **could not be verified from Google's or
+Blackboard's own documentation**, because neither domain resolves. 🟢 It was established instead
+from **46 README payloads read at their SHAs**, which is a stronger instrument for this question
+anyway: it records what builders actually had to do, not what a vendor says is possible.
+
+### 🔵 The regional legs — stated per region so silence cannot read as coverage
+
+| region | leg | what it returned | class |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | 🟢 **Material.** State-level legislative volume, two named bills, a federal bill in committee, Canada's strategy, teacher-adoption rates, a regional market share | 🔴 `reported` |
+| **EMEA** | `AI education EMEA Europe 2026 adoption regulation players` | 🟢 **Material on regulation, thin on adoption.** AI Act high-risk classification for education, enforcement and deferral dates, a standing literacy duty, an EC/OECD framework. 🔴 **No EMEA-wide adoption statistic and no vendor market map** | 🔴 `reported` |
+| **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players` | 🟡 **Material on regulation, and for the first time an education-specific SENTIMENT series.** Korea's and Vietnam's binding regimes, the voluntary group, plus per-country ban-support figures. 🔴 **Still no education-specific ADOPTION rate** | 🔴 `reported` |
+| **LATAM** | `AI education LATAM Latin America 2026 adoption regulation players` | 🟢 **Material on BOTH classes the gap said were missing** — institution-level adoption rates, a teacher-level cross-country series, named regional institutions, plus four jurisdictions' instruments | 🔴 `reported` |
+
+🟢 **`Gap 427-E`'s LATAM clause is REFUTED.** p428 recorded *"The same nil now also holds for
+LATAM: regulation for four countries, no adoption rate and no named player."* This pass's LATAM
+leg returned **an institution-level adoption rate** (UNESCO IESALC: **200 institutions across 19
+countries, 87 % using AI in at least one area, 74 % in teaching and learning, and only 26 % with
+a formal AI strategy**), **a teacher-level series across four countries** (TALIS 2024: Brazil
+**56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %**, against an OECD average of
+**36 %**), **a national administrator series** (Cetic.br 2026: **53 %** of Brazilian school
+administrators using AI, **22 %** whose school has guidelines) and **named regional institutions**
+(UNESCO IESALC, the **Observatory on AI in Education for Latin America and the Caribbean**
+launched in Santiago in April 2026, Ceibal in Uruguay, Cetic.br in Brazil). 🔵 **The APAC clause
+only ADVANCES**: the Ipsos Education Monitor 2026 ban-support range (**23 % Indonesia → 31 %
+South Korea**, higher in Australia and New Zealand) is education-specific but is sentiment, not
+adoption. 🔴 All of it `reported`.
+
+### 🟢 The supply-side movement, placed on payload evidence rather than on names
+
+🟢 **Four addresses placed this pass, each on an institution or a named standard IN the payload**
+(`gate-region-place`'s rule — never a filename, never an author's name, never a language):
+
+| address | region | the placing evidence, quoted from the payload |
+|---|---|---|
+| [`BxnIceLemon/minerva-mcp`](https://github.com/BxnIceLemon/minerva-mcp) **ISC** | **EMEA** | *"the **University of Leeds'** Minerva (Blackboard Learn Ultra) and Gradescope"* |
+| [`vTanco/google-classroom-mcp`](https://github.com/vTanco/google-classroom-mcp) **MIT** | **EMEA** | 🟢 **A curriculum standard, not a language:** the worked example is *"**ESO** 2º Tecnología"*, and ESO — *Educación Secundaria Obligatoria* — is the statutory secondary stage of the **Spanish** system. 🔵 A Spanish-language README alone would NOT have placed it, since Spanish spans Spain and most of LATAM |
+| [`Mugen-Ibi/Classroom-MCP`](https://github.com/Mugen-Ibi/Classroom-MCP) **MIT** | **APAC** | Japanese-language README and `docs/` design record; deploys to the operator's own Cloudflare account |
+| [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) **MIT** | **EMEA** | *"**Università Cattolica del Sacro Cuore**"*, and the operative sentence *"Cattolica added its **Application ID** under Admin → REST API"* |
+
+🔴 **Three further regionally-placed addresses were read and DECLINED for having no grant at
+all** — and they are the three a studio would most want: **Universidad de Navarra** (EMEA),
+**University of Queensland** with Okta SSO (APAC), and a **Classroom-to-SIEWeb** bridge carrying
+*matrícula* and *registro de notas* flows for a Peruvian school (LATAM). 🟢 **One `LICENSE` file
+each would move all three.**
+
+### 🔴 What this base still cannot see, stated so the gap is legible
+
+- 🔴 **North America produced NO new address this pass.** Both cohorts were read in full and
+  **not one of the 47** names a North American institution. 🔵 p428 found the only North American
+  institutional address on these shelves (`sweeden-ttu/canvas-lms-mcp`, Texas Tech) by asking
+  about **Canvas** — which is the LMS with the largest North American install base. 🟡 **So the
+  absence here is consistent with a platform-selection effect, not evidence of a US supply
+  drought**, and it is recorded as the former.
+- 🔴 **No EMEA-wide adoption statistic and no vendor market map** came back from the EMEA leg, for
+  the second consecutive pass.
+- 🔴 **No education-specific APAC adoption rate**, only sentiment.
+- 🔴 **Every market-size figure this base holds is `reported` and cannot be made otherwise on this
+  host** (`Gap 428-A`). The sources that would settle them — UNESCO, OECD, the EC — are at
+  `HTTP 000`.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Band: `reported` for every policy and market cell in this subsection.**
+
+🟢 **The regulatory shape is state-level and it is the opportunity.** A 2026 tracker counts
+**134 AI-in-education bills across 31 states** — so a national K-12 vendor faces *dozens* of
+divergent regimes rather than one. **Oklahoma and Maryland require human oversight and bar AI
+from high-stakes decisions about students**; **California AB 1159** would bar using student data
+to train models; **Idaho SB 1227** would require privacy protections for school AI tools. At
+federal level the **K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747)** advanced in
+committee in July. **Canada** has no federal AI statute and launched its **"AI for All"** strategy
+on **4 June 2026** with a national AI-literacy commitment.
+
+🟢 **The engagement this implies: a policy-configurable deployment, not a product.** The
+differentiator is a connector whose oversight behaviour is **per-jurisdiction configuration** —
+which districts can turn on and auditors can read. 🟢 Globant can build it on the Canvas lane,
+where p428 established a real hub (`vishalsachdev/canvas-mcp`, 308 refs) and `Trend 54` says an
+implementation can be **bought rather than built** because Canvas users self-issue their own
+tokens.
+
+🔵 **Adoption context, `reported`:** 60 % of US K-12 teachers used AI tools in 2024-25 and 32 %
+weekly; North America is cited as the largest regional share of the AI-in-education market at
+~36 %. **New York City's** one-year moratorium on student-facing AI through eighth grade is the
+restrictive pole; at least 12 US law schools have split between laptop bans and mandatory AI
+courses.
+
+🔴 **The supply gap, measured:** zero North American institutional addresses in either cohort read
+this pass. 🟢 **For a US engagement, the reusable artefact is the Canvas hub, not a Google
+Classroom or Blackboard connector** — despite Google Classroom's K-12 install base, because its
+37-address cohort has nothing dependable in it (`Trend 54`).
+
+### EMEA
+
+🔴 **Band: `reported` for every policy cell in this subsection.**
+
+🟢 **The binding instrument is the EU AI Act, and education sits in its high-risk annex.** AI used
+for **access, assessment and educational pathways** falls under **Annex III**. From **2 August
+2026** the AI Office and national authorities began enforcing; **Regulation (EU) 2026/1744** is
+reported to have deferred the high-risk deadline for stand-alone education systems to
+**2 December 2027** — 🔴 **sources differ on these dates and this base cannot reach the Official
+Journal to settle them** (`Gap 428-A`); verify before quoting. 🟢 **One duty already applies
+regardless:** the **Article 4 AI-literacy obligation, in force since 2 February 2025**, reaches
+every organisation that uses an AI system, which means every school. The **EC and OECD** published
+*Empowering Learners for the Age of AI: An AI Literacy Framework for Primary and Secondary
+Education* in **June 2026**.
+
+🟢 **The opportunity is the oversight layer, and the supply now reaches it.** 🔴 The most capable
+Google Classroom address read this pass, `supachai-j/google-classroom-mcp-project`, **computes
+weighted final grades** — an Annex III function that cannot ship into an EMEA engagement without
+an oversight step. 🟢 `vTanco/google-classroom-mcp` **creates coursework as `En borrador` —
+draft by default** — so the human-in-the-loop step is **inherited from an MIT component rather
+than specified**, which is the cheapest route to the Act's human-oversight requirement.
+
+🟢 **EMEA is now the best-supplied region on these shelves**, and on payload evidence: Leeds
+(ISC), Università Cattolica (MIT), Spain via the ESO curriculum token (MIT), with Universidad de
+Navarra one `LICENSE` file from joining them. 🔵 **An EMEA engagement should start from an
+existing institutional connector and retarget it** — `ruud0`'s README states the Blackboard REST
+surface is standard enough for exactly that.
+
+### APAC
+
+🔴 **Band: `reported` for every policy and adoption cell in this subsection.**
+
+🟢 **Two binding regimes, and both name education.** **South Korea's AI Basic Act took effect
+22 January 2026** — reported as the world's second comprehensive AI law after the EU's.
+**Vietnam's** law makes **education one of six high-risk sectors**, specifically for **automated
+assessment and behavioural monitoring**; systems already operating before **15 August 2026** get
+a six-month grace period **except** in healthcare, education and finance — 🔴 **so education is
+carved out of the very grace period it would most need**. **Japan, Singapore and Australia**
+remain voluntary or light-touch, with Australia considering mandatory guardrails. **China**
+operates layered rules with mandatory registration.
+
+🟢 **The opportunity is one connector that proves its oversight behaviour across jurisdictions.**
+🔵 p428 already identified the architectural control worth lifting: `psychquant/che-ntucool-mcp`
+(National Taiwan University, MIT) **gates grade and announcement writes behind explicit human
+confirmation while leaving reads unguarded** — the exact shape Korea's and Vietnam's provisions
+ask for, already implemented permissively.
+
+🟢 **New APAC supply this pass:** `Mugen-Ibi/Classroom-MCP` (**MIT**, Japanese, Cloudflare
+Workers). 🔴 **And the most instructive APAC payload is unshelvable:**
+`tirbofish/google-classroom-mcp` exists *because* students under the **New South Wales Department
+of Education** cannot be granted OAuth access to the Classroom API — 🟢 **a direct statement that
+in this region the credential is withheld at the system level**, which is `Trend 54`'s mechanism
+and a procurement fact for any ANZ schools engagement. It carries no grant.
+
+🔵 **Sentiment, `reported`:** support for banning AI in schools runs **23 % in Indonesia to 31 %
+in South Korea**, higher in Australia and New Zealand. 🔴 Named players in market reports
+(Google, Microsoft, IBM, Pearson, Byju's) come from low-rigour sources and are indicative only.
+
+### LATAM
+
+🔴 **Band: `reported` for every policy and adoption cell in this subsection.**
+
+🟢 **This is the region whose demand side moved this pass.** **UNESCO IESALC**, surveying **200
+higher-education institutions across 19 countries**, found **87 % using AI in at least one area**
+and **74 % in teaching and learning** — against **only 26 % with a formal AI strategy**. 🟢 **That
+61-point gap between use and governance is the clearest single opportunity figure on these
+shelves.** In Brazil, **53 % of school administrators use AI and 22 % have guidelines**
+(Cetic.br, 2026) — the same gap at school level. Teacher use already exceeds the OECD average of
+**36 %**: Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** (TALIS 2024).
+
+🟢 **Instruments are converging on risk-based regimes without a binding education rule yet:**
+**Uruguay** was the first LATAM state to sign the **Council of Europe Framework Convention on AI**
+(2025); **Colombia** adopted **CONPES 4144** (February 2025); **Perú** has a regulatory-sandbox
+law; **Mexico** has a federal AI bill in the Senate. **UNESCO** launched the **Observatory on AI
+in Education for Latin America and the Caribbean** in Santiago in **April 2026**.
+
+🟢 **The engagement: governance-first, not capability-first.** 🔵 UNESCO's finding that **private
+institutions have greater strategic-planning and governance capacity than public ones** names the
+buyer — and the 87 %/26 % split means the sellable artefact is **an AI-use policy, an audit trail
+and an oversight layer over tools already in use**, not a new tutor.
+
+🟢 **And this pass reframes LATAM's supply position.** These shelves have recorded LATAM as a
+supply gap for several passes. 🔴 It remains short of *shelvable grants* — the
+**Classroom-to-SIEWeb** bridge carrying Peruvian *matrícula* and *registro de notas* flows has no
+licence payload. 🟢 **But it is not short of reusable architecture: `BxnIceLemon/minerva-mcp`, a
+University of Leeds connector, states that it "follows the approach of `campus-cli`" — the ISC,
+UPC, Perú address already on these shelves.** A Peruvian CLI is the cited template for a British
+one. 🔵 **For a LATAM engagement that inverts the default advice:** the regional reference
+implementation already exists and is already being copied northward.
+
+### Global
+
+🔴 **Band: supply cells `authoritative`; every market and policy cell `reported`.**
+
+🟢 **The one cross-regional finding a studio should take from this pass is a question to ask in
+week one, and it is not about a model.** `Trend 54`: **ask who can issue the platform credential.**
+If the end user can do it alone (Canvas), an implementation can be **bought** — a hub exists.
+If a developer console, a site admin or the institution's REST registration stands in the way
+(Google Classroom, Moodle, Blackboard), **budget to own the connector** no matter how many
+addresses the cohort appears to contain. 🔴 Google Classroom has **37** and Moodle **242**;
+neither has anything dependable in it.
+
+🔴 **And a standing risk this pass measured for the first time: a permissive grade expires.**
+A row these shelves published as MIT three times became **proprietary on 2026-10-23**, two days
+before this pass read it, with a clause naming **educational institutions** as paying customers
+(`Trend 55`). 🟢 **The mitigation is cheap and is the practical global recommendation: pin a SHA
+and record the payload digest, then re-read the digest before each engagement** — one `curl` and
+one `sha256sum` per component, no classifier in the loop. 🟢 It is also how the replacement lane
+in this pass was found at all (`Trend 56`).
+
 ## 🆕 `p428` · 2026-10-25 — **Four regional legs, four returned material, no nil. 🟢 The fact that moved is a SUPPLY one and it corrects this base's own reading: `p427` measured zero North American institutions and inferred a non-US supply — this pass found the North American institutional address, AND the cohort hub, by asking about a different LMS. 🔴 `Gap 425-A` is narrowed again: the registry channel is open, and every policy cell below is still `reported`.**
 
 🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **55** blocking gates green at baseline —
@@ -67,7 +288,7 @@ work that matters cannot be shared. 🔵 Developed as `Trend 53` in
 | Who are the named edtech players in APAC and LATAM? | 🔴 **Nil, two passes running.** Both legs returned regulation and no vendor |
 | What is the market size? | 🔴 **Unresolved and widening.** One source projects ~**$32 B by 2030**, another cites **$12.3 B by 2026** attributed to HolonIQ. `p424`'s five-house ~6× spread is not narrowing, and no primary source is reachable to settle it |
 
-## Opportunities by region
+## Opportunities by region — `p428`, SUPERSEDED by `p429`'s block above
 
 ### North America
 

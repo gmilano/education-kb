@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 429 — reads 2026-10-25, commit 2026-10-25 — **A row this base recommended has gone PROPRIETARY, and the instrument that caught it also found the replacement. 🔴 p428's `Trend 53` is refuted one pass after publication by the cohort it never read. 🟢 `Gap 428-E` moves from two anecdotes to a measured rate over 46 payloads.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, shallow clone, tree enumeration,
+licence-history walk and payload digest happened **2026-10-25**; the commit lands
+**2026-10-25**, so `updated:` carries one date.
+
+🟢 **Gates RAN on this host**, against `79362ca`: a baseline run **before this pass wrote a line**
+exited `0` over 🟢 **56 blocking gates green**, and after the shelf writes `make commit-gates`
+exits `0` over the same 🟢 **56**. 🔵 **This pass built no new gate, and says so rather than
+implying one** — its findings are closed by instruments already here (`gate-subtree-grant`) or
+registered as open (`Gap 429-A`–`D`).
+
+**What this pass established, first-hand:**
+
+- 🔴 **A permissive grade EXPIRED on a row these shelves recommend.**
+  `pengusto/google-classroom-mcp` was read **MIT** on 2026-10-03 (`LICENSE` **`1 145` B**),
+  2026-10-20 and 2026-10-21; **p340's platform table names it as one of two Google Classroom
+  lanes, *"both MIT"***. Commit `3609bf6` (**2026-10-23**, *"chore: commercially license
+  maintainer extensions"*) replaced that payload with the **`3 053` B "Pengusto Commercial
+  License 1.0"** — source inspection only, **§3 requiring a paid agreement from "an educational
+  institution or training provider, whether nonprofit or commercial"**. 🟢 **Every prior reading
+  was correct on its date; the grant moved.** The structural defect is that a cell reading
+  `🟢 MIT` carries no as-of date (`Gap 429-A`, `Trend 55`).
+- 🟢 **The MIT lane is not lost — it changed address, and a DIGEST found it.** Scanning the
+  cohort for pengusto's abandoned `sha256₁₂ a01639b20880` surfaced
+  `vTanco/google-classroom-mcp` carrying the **byte-identical** `1 145` B payload at a live HEAD
+  pushed **2026-10-22**. 🔵 Nobody searched for a replacement; the hashes collided (`Trend 56`).
+- 🔴 **p428's `Trend 53` is REFUTED as stated.** It explained the Canvas hub (308 refs) against
+  Moodle's absence of one (22 refs) by the **deployment model**. **Google Classroom is the most
+  hosted and uniform LMS API there is**, so that predicts a stronger hub than Canvas's. Measured:
+  `total_count` **37**, all 37 read, **largest connector 6 refs**. 🟢 **Replaced by `Trend 54`:
+  concentration follows CREDENTIAL PORTABILITY** — whether the *end user* can issue their own
+  credential — which separates the one hub from the three non-hubs **4/4**.
+- 🟢 **`Gap 428-E` advanced from an anecdote to a rate.** 46 README payloads, read at the SHA:
+  **Google Classroom 26 of 36 (72 %) require the operator to create their own Google Cloud OAuth
+  client**, zero portable; **Blackboard: not one of 10 uses a plain API token — 9/10 ride an SSO
+  session, 7/10 drive a real browser, 1 names an institution-registered key.** 🟡 Open on its
+  other half: this measures what builders did, not what an institution would grant.
+- 🟢 **Blackboard, the platform p340 called "worst-served", has materially improved** — permissive
+  share **3/7 (43 %) → 7/10 (70 %)**, with two new permissive addresses
+  (`BxnIceLemon/minerva-mcp` **ISC**, `UKplus8HRS/bb-mcp` **MIT**).
+- 🟢 **A LATAM address is the cited template for a British one.** `minerva-mcp` (University of
+  Leeds) states it *"follows the approach of `campus-cli`"* — the ISC, UPC, **Perú** address
+  already on these shelves. 🔵 LATAM is short of shelvable **grants**, not of reusable
+  architecture.
+- 🔴 **`Gap 427-E`'s LATAM clause is REFUTED** — the leg returned institution-level, teacher-level
+  and administrator-level adoption series plus named regional institutions. 🟡 The APAC clause only
+  advances: sentiment, still no adoption rate.
+- 🔴 **21 of 47 addresses read (45 %) carry no grant payload at all**, and the four that cost most
+  are the four **regionally placed** ones (DETNSW, Universidad de Navarra, University of
+  Queensland, a Peruvian Classroom-to-SIEWeb bridge). **One `LICENSE` file each would shelve all
+  four.**
+- 🔴 **A correction this pass owes its own record:** its first probe for
+  `LICENSES/MIT-upstream.txt` returned **404** and it nearly published that absence. The URL was
+  malformed; `git ls-tree -r HEAD` caught it. 🟢 **The absence that is real** — `adriasantacreu`,
+  **zero** licence-shaped paths across all 15 — **is the one established from a whole tree.**
+
+**Twelve addresses promoted**, every grant read first-hand at the SHA; **one row withdrawn** for
+having become proprietary. **47 of 47 addresses resolved** — the first clean sweep over two
+complete cohorts here. 🔴 **The four prescribed capability web legs returned zero addresses for
+the third consecutive pass** (`Gap 426-C`).
+
+### 🟢 The censuses, re-derived AFTER this pass wrote — restated, never back-fitted
+
+🔵 `p352` and `p376` both require the triple to be derived from the tree this pass commits, as
+the last act before the commit. 🔴 **Both gates fired on this pass's drafts — exactly as `p352`
+says is structural, and for the same reason: this pass derived them before it had finished
+writing.** These are the re-derived figures, taken after the last shelf write:
+
+**2 826** harvested shapes → **38** are not addresses → **2 788 addresses**.
+
+🔵 **2 788** channel-U addresses and **3 288** channel-B survivors give
+**3 649 addresses over both channels**.
+
+🔵 The rejection classes are unchanged in kind — `NAV-NAMESPACE` 30, `OWNER-ELLIDED` 3,
+`EMPTY-NAME` 2, `OWNER-TEMPLATE-VAR` 1, `PLACEHOLDER-NAME` 1, `PLACEHOLDER-OWNER` 1 — and the
+inflation this pass's writes added to the harvested denominator is **1.34 %**.
+
 ## Pass 428 — reads 2026-10-25, commit 2026-10-25 — **Two new channels, one refuted gap, and this base correcting its own inference one pass after making it. 🟢 A licence file turns out to be an ADDRESS channel. 🟢 The package registries are reachable, so a non-GitHub cell can be `authoritative` for the first time. 🔴 And an HTTP 200 cannot tell you whether a branch exists.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, shallow clone, tree enumeration, registry query

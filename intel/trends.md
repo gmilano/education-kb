@@ -4,6 +4,140 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **Three trends. 🔴 `Trend 54` REFUTES p428's `Trend 53` one pass after it was published, using the cohort `Trend 53` never read: a hosted uniform API does NOT produce a hub, and what does is whether the END USER can issue their own credential. 🔴 `Trend 55`: a permissive grade has a SHELF LIFE, and this base just watched one expire. 🟢 `Trend 56`: a licence digest identifies a payload ACROSS addresses, which is how a lost MIT lane was found again.**
+
+🟢 **Gates RAN on this host**, against `79362ca`: 🟢 **56** blocking gates green at baseline,
+before this pass wrote a line, and 🟢 **56** after these writes. 🔵 All supply reads
+**2026-10-25** and `authoritative`; every policy cell `reported` (`Gap 428-A`).
+
+🔵 **Numbering.** The trends in this file run `Trend 41`–`Trend 53`, so these three continue the
+sequence.
+
+### 🔴 `Trend 54` — concentration follows CREDENTIAL PORTABILITY, not the deployment model
+
+🔵 **What `Trend 53` claimed, one pass ago.** p428 measured the Canvas cohort against the Moodle
+one and found a hub in Canvas (`vishalsachdev/canvas-mcp`, **308** refs, **99** forks) and none in
+Moodle (largest **22** refs). It published the mechanism as the **deployment model**: *"Canvas is
+a hosted uniform API so one implementation serves everyone; Moodle is self-hosted per institution
+so the work that matters cannot be shared."*
+
+🔴 **That mechanism makes a prediction, and this pass ran it against the obvious test case.**
+**Google Classroom is the most hosted, most uniform LMS API in existence** — one vendor, one
+global endpoint, no per-institution deployment at all. `Trend 53` predicts a hub, and should
+predict a *stronger* one than Canvas. **Measured: there is no hub.**
+
+| cohort | API shape | can the END USER issue their own credential? | `total_count` | largest connector | forks | hub? |
+|---|---|---|---|---|---|---|
+| **Canvas LMS** (p428) | hosted, uniform | 🟢 **YES** — a per-user Personal Access Token the user self-issues | 133 | 🟢 **308** refs | 🟢 **99** | 🟢 **YES** |
+| **Google Classroom** (p429) | 🟢 hosted, uniform — **more so than Canvas** | 🔴 **NO** — the *operator* must create their own Google Cloud OAuth client | 37 | 🔴 **6** refs | 9 | 🔴 **NO** |
+| **Moodle** (p428) | self-hosted per institution | 🔴 **NO** — a per-site token an admin must enable | 242 | 🔴 **22** refs | 0 | 🔴 **NO** |
+| **Blackboard Learn** (p429) | hosted | 🔴 **NO** — a REST developer key the **institution** registers | 10 | 🔴 **11** refs | 1 | 🔴 **NO** |
+
+🔴 **`Trend 53` is refuted as stated.** Hosting and uniformity are held *maximal* in the Google
+Classroom row and the hub does not appear. The deployment model cannot be the mechanism, because
+the one cohort where it is most favourable has the second-smallest concentration here.
+
+🟢 **`Trend 54`, the replacement, and it is 4/4 on the same four cohorts.** A connector becomes
+*shareable* only when the person who installs it can obtain its credential **by themselves**.
+Canvas is the only one of the four where that is true, and Canvas is the only one with a hub.
+Everywhere else, publishing a working connector does not hand anyone a working connector — the
+next operator still has to go and get a credential that only a developer console, a site admin,
+or an institution's REST registration can grant. **So the work that gets shared is small, and
+nobody's implementation becomes everyone's.**
+
+🟢 **This is measured from payloads, not asserted.** 46 README payloads across both cohorts, read
+at the SHA, classified by **what the README requires of the operator**
+([`evidence/p429-credential-provisioning.2026-10-25-p429.tsv`](../evidence/p429-credential-provisioning.2026-10-25-p429.tsv)):
+
+- **Google Classroom — 26 of the 36 READMEs (72 %) require the operator to create their OWN
+  Google Cloud OAuth client** (`credentials.json`, `console.cloud.google.com`, `client_secret`).
+  10 are **unstated** — recorded as unstated, not as absent. 🔴 **Zero** offer a portable token.
+- **Blackboard — not one of the 10 uses a plain API token.** 🔴 **9 of 10 ride an SSO session the
+  human already holds**, **7 of 10 drive a real browser** (Playwright/Puppeteer/Selenium), and
+  **exactly 1** names an institution-registered developer key.
+
+🟢 **Three authors state the mechanism themselves, which is the strongest form this evidence
+takes** — none of them was looking for a trend:
+
+- `tirbofish/google-classroom-mcp`: a browser-driving server built *"for Google Classroom accounts
+  that **cannot grant OAuth access** to the official Classroom API … specifically students under
+  **DETNSW**"* (New South Wales Department of Education).
+- `Mugen-Ibi/Classroom-MCP`: 「…自分のGoogleアカウントで使うためのプロジェクトです。**共有サービスの接続先は提供しません**」
+  — *deploy it to your own account; **no shared endpoint is offered***.
+- `charlie2233/coursebinder-…-exporter`: *"a browser-visible-content exporter, **not a Google API
+  downloader**"*.
+- 🔵 And from p428's own Canvas leg, the same force seen from the other side:
+  `Jacob-Met/canvaspilot` ships an SSO session broker *because many schools disable token issuance*.
+
+🔴 **Why `Trend 54` is worth more than `Trend 53` to an engagement.** The deployment model is
+fixed — a studio cannot change whether a platform is hosted. **Credential provisioning is a
+procurement question**, and it is the question to ask in week one: *who can issue the credential,
+and can the end user do it alone?* 🟢 **If the answer is the end user, buy an implementation.
+If it is an admin, a console or an institution, budget to own the code** — because no hub will
+exist to buy from, and the cohort size will not tell you that. Google Classroom has 37 addresses
+and nothing to depend on; Moodle has 242 and nothing to depend on.
+
+🟡 **What would refute `Trend 54`.** A platform whose end users self-issue credentials and whose
+cohort has no hub, or a platform gated behind an admin that grows one. 🔵 **Brightspace/D2L and
+Open edX are both untested here** and are the cheapest next tests; Brightspace is already on these
+shelves with 7 connectors read.
+
+### 🔴 `Trend 55` — a permissive grade has a SHELF LIFE, and nothing on these shelves records one
+
+🟢 **Measured, not feared.** `pengusto/google-classroom-mcp` was read as **MIT** by this base on
+**2026-10-03** (`1 145` B), **2026-10-20** and **2026-10-21**. On **2026-10-23** commit `3609bf6`
+— *"chore: commercially license maintainer extensions"* — replaced that payload with the
+**`3 053` B "Pengusto Commercial License 1.0"**, source-inspection only, **§3 requiring a paid
+agreement from "an educational institution or training provider, whether nonprofit or
+commercial"**. 🔵 p340's platform table recommends this exact address as one of two Google
+Classroom lanes, *"both MIT"*.
+
+🟢 **No instrument here was wrong.** Every reading was correct on its date; the grant moved.
+🔴 **The defect is structural: these shelves publish a family with no AS-OF DATE attached to it.**
+A cell reads `🟢 MIT` whether it was verified this morning or three weeks ago, so a stale
+permissive grade is indistinguishable from a fresh one — and a permissive grade is exactly the
+cell an engagement acts on without re-checking.
+
+🔴 **The rate is unknown and this pass will not guess it.** One regression in one cohort is not a
+frequency. 🔵 What *is* established is that the interval can be **two days**: the relicensing
+commit predates this pass by two days and postdates this base's last reading of the row by two.
+🟡 Registered as **`Gap 429-A`**.
+
+🟢 **The cheap mitigation, available today and used in this pass:** a payload digest makes a
+re-read a byte comparison rather than a judgement. These shelves already publish
+`sha256₁₂` for most grants — **re-reading a digest is one `curl` and one `sha256sum` per row**,
+and it answers "has this grant changed?" with no classifier in the loop. 🔵 `Amendment 17` in
+`compose/patterns.md` turns that into a step a recipe owes.
+
+### 🟢 `Trend 56` — a licence digest identifies a payload ACROSS addresses, not just within one
+
+🔵 **What digests have been used for here.** To pin a grant to a SHA, and to catch a restated or
+swapped payload at one address. 🟢 **This pass used them for a different question — "who else
+holds this exact payload?" — and it answered two things no other instrument on this base could.**
+
+🟢 **It recovered a lane presumed lost.** Scanning the 26 licence payloads in this pass's cohorts
+for pengusto's abandoned digest found `vTanco/google-classroom-mcp` carrying `LICENSE`
+**`1 145` B `sha256₁₂ a01639b20880`** — **byte-identical**, same dual copyright, live HEAD pushed
+**2026-10-22**. 🔵 Nobody searched for a replacement; the hash collided and the replacement
+appeared. **The MIT teacher-side Google Classroom lane did not disappear; it changed address.**
+
+🟢 **It exposed same-owner families across different platforms**, which no platform-keyed census
+can see:
+
+| digest | bytes | addresses sharing it | what it reveals |
+|---|---|---|---|
+| `13c8ad755224` | `1 067` | `Mattlo0546/classroom-mcp` · `Mattlo0546/blackboard-mcp` | 🟢 One author shipping **Google Classroom and Blackboard** as one product line — invisible to any per-platform search |
+| `c35e96e7d382` | `1 064` | `praisethefacts/google-classroom-mcp` · `praisethefacts/dsh-plugin-google-classroom` | 🟢 A **server and its packaging-for-a-host** as two addresses — the shape a studio uses to ship one connector to several clients |
+| `a01639b20880` | `1 145` | `vTanco/google-classroom-mcp` · `pengusto/google-classroom-mcp` **@ `8a548eb` only** | 🔴 A **lineage across a relicensing boundary**: the same bytes, live at one address, abandoned at the other |
+
+🔵 **The caveat, stated rather than left for a successor to find.** A stock MIT payload differs
+between repositories only by its copyright line, so a shared digest proves **a shared holder
+string**, not a fork. 🟢 That is precisely why it is useful: **it groups by HOLDER**, which is
+the axis `gate-author-key` and `Amendment 13`'s holder comparison already care about, and it does
+so without reading a single commit. 🔴 **It is also why it cannot stand alone** — two unrelated
+authors with identical names and years would collide, and `1 067` B occurs twice in this cohort
+for exactly one owner, so the instrument is unproven at scale. 🟡 Registered as **`Gap 429-C`**.
+
 ## 🆕 `p428` · 2026-10-25 — **Three trends, and all three are about CHANNELS. 🔴 `Trend 51`: a package name is not an address, and in this cohort it mis-resolves 3 times in 7. 🔴 `Trend 52`: a published path naming `master` is not evidence that `master` exists. 🟢 `Trend 53`: the Canvas cohort has a hub and the Moodle cohort does not, which makes `Trend 49` a property of one platform rather than of the field.**
 
 🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **56** blocking gates green after these

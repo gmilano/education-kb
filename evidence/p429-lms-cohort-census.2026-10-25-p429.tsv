@@ -1,0 +1,54 @@
+# p429 · 2026-10-25 · THE TWO COHORTS THIS PASS MEASURED, every address read FIRST-HAND at the SHA on 2026-10-25.
+# Legs: GitHub repository search `google classroom mcp` sorted by `updated` desc (total_count=37, all 37 read) and
+# `blackboard learn mcp` (total_count=10, all 10 read).  Both cohorts resolve 47/47 under `git ls-remote` — no credential prompt, no gone address.
+# family is read FROM THE PAYLOAD at that SHA, never from GitHub's licence field; api_license is GitHub's own field, recorded only so the two can be compared.
+# sha256_12 is the first 12 hex of sha256 over the licence payload AS COMMITTED at that SHA.  bytes is that payload's length.
+# 🔴 Where family and api_license disagree, the PAYLOAD governs: see pengusto/google-classroom-mcp, whose api_license is NOASSERTION and whose payload is a commercial licence.
+cohort	address	head_sha12	family_from_payload	api_license	licence_path	bytes	sha256_12	refs	forks	pushed	default_branch	branch_count
+blackboard	alejooroncoy/campus-cli	8b86e38f3ab6	ISC	ISC	LICENSE	748	4ca1bd2e969c	11	1	2026-10-25	main	144
+blackboard	felipedias-ie/blackboard-mcp	fb057928ae20	MIT	MIT	LICENSE	1084	d65abf96e389	2	2	2026-10-14	main	1
+blackboard	nitsuah/bb-mcp	8867c874d9be	MIT	MIT	LICENSE	1063	e024d09e682a	2	0	2026-10-24	main	3
+blackboard	Mattlo0546/blackboard-mcp	9ad0878fbbeb	MIT	MIT	LICENSE	1067	13c8ad755224	1	0	2026-10-20	main	1
+blackboard	BxnIceLemon/minerva-mcp	534b7dc7b78e	ISC	ISC	LICENSE	741	5d3787deebf3	0	0	2026-10-21	main	1
+blackboard	NiccoloSalvini/mcp-blackboard-ucsc	6c51e1eaa2a9	MIT	MIT	LICENSE	1073	f3bdd2ed068a	0	0	2026-10-23	main	1
+blackboard	P1ckle3/blackboard-mcp	32af42d9742d	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-07-28	main	1
+blackboard	UKplus8HRS/bb-mcp	d639765bc267	MIT	MIT	LICENSE	1067	02049138f239	0	0	2026-10-21	main	1
+blackboard	karkarkins/BlackboardAssistantMCP	d5250cd577b8	NO-PAYLOAD	NONE	NONE	0	-	0	0	2025-09-09	main	1
+blackboard	ruud0/aula-virtual-mcp	4a845521d47d	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-10-14	master	1
+gclassroom	kaorii-ako/Shiori-v1	ccf7f3b7a1bf	MIT	MIT	LICENSE	1073	3c78be9388fa	46	5	2026-07-25	master	1
+gclassroom	faizan45640/google-classroom-mcp-server	e8be6cce49c4	MIT	MIT	LICENSE	1063	c60c95242947	6	9	2025-07-28	main	1
+gclassroom	zainf2327/mcp-classroom	5b2fbf479767	NO-PAYLOAD	NONE	NONE	0	-	6	0	2026-05-28	main	1
+gclassroom	adriasantacreu/google-classroom-mcp	29c2c2a07670	NO-PAYLOAD	NONE	NONE	0	-	2	1	2026-03-21	master	1
+gclassroom	Kimmahone/edu-workspace-mcp	17207b943ae6	MIT	MIT	LICENSE	1087	be6d245fea38	1	0	2026-10-23	main	16
+gclassroom	SalShah20/classroom_mcp	f51f0c14ea52	NO-PAYLOAD	NONE	NONE	0	-	1	0	2026-03-11	main	1
+gclassroom	Shiv-D-Coder/google-mcp-agent	206bff862a0e	MIT	MIT	LICENSE	1069	2deff4ab7dff	1	0	2025-07-27	main	1
+gclassroom	keenglomerate/classroom-scribe	684449079736	NO-PAYLOAD	NONE	NONE	0	-	1	0	2026-07-15	main	1
+gclassroom	pengusto/google-classroom-mcp	3609bf6c5372	PROPRIETARY-Pengusto-Commercial-1.0	NOASSERTION	LICENSE	3053	d84e558a5033	1	0	2026-10-23	master	5
+gclassroom	vTanco/google-classroom-mcp	9ba0070eff2f	MIT	MIT	LICENSE	1145	a01639b20880	1	0	2026-10-22	main	1
+gclassroom	AStheTECH/mewcp-google-classroom	dfb0366ba3ea	PROPRIETARY-ACL	NOASSERTION	LICENSE.md	6489	df6edfe0375d	0	0	2026-09-18	main	3
+gclassroom	Aaradhya-Dev-Tamrakar/google-classroom-mcp	b53c2c81ae13	MIT	MIT	LICENSE	1078	c6a980f3b89a	0	0	2026-10-15	main	1
+gclassroom	AnonymousOnyx22/google-classroom-student-mcp	f3c1bd8e6a11	MIT	MIT	LICENSE	1072	ed912ca72d9e	0	0	2026-10-24	main	1
+gclassroom	Dooc-Nuken/google-workspace-mcp	e826514232db	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-05-29	main	1
+gclassroom	FW1201/classroom-mcp	5e3cd612525d	NO-PAYLOAD	NONE	NONE	0	-	0	1	2026-08-21	main	1
+gclassroom	JuancitoCozzeti24/santa-rita-escolar	96dd96db57f9	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-10-18	main	198
+gclassroom	Mattlo0546/classroom-mcp	46e4ff4195b6	MIT	MIT	LICENSE	1067	13c8ad755224	0	0	2026-10-20	main	1
+gclassroom	Mugen-Ibi/Classroom-MCP	5f746bdae197	MIT	MIT	LICENSE	1081	b77185922cd4	0	1	2026-10-14	main	1
+gclassroom	OmarNiazi/classroom-mcp	ff4a2406608f	MIT	MIT	LICENSE	1067	49845e8fc005	0	0	2026-10-06	main	1
+gclassroom	PrahanG/Google-Classroom-MCP	5c675c96b901	MIT	MIT	LICENSE	1060	f06ff8fa5a6c	0	0	2025-11-25	main	1
+gclassroom	Ve-Jo/classroom_mcp	74ee15618884	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-04-20	main	1
+gclassroom	ag2-mcp-servers/google-classroom-api	53c861bd170e	NO-PAYLOAD	NONE	NONE	0	-	0	0	2025-07-16	main	1
+gclassroom	alanmagno1/google-classroom-mcp	aa6e3532befc	MIT	MIT	LICENSE	1067	06cef6b039cd	0	0	2026-09-22	main	1
+gclassroom	ayaz-oss/classroom-mcp-showcase	23f904ba375b	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-09-28	main	1
+gclassroom	charlie2233/coursebinder-ai-ready-google-classroom-exporter	54e1eccaf943	MIT	MIT	LICENSE	1068	7f208bdb3cc4	0	0	2026-06-21	main	1
+gclassroom	dipteeghusse/smart-classroom	337087943715	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-06-28	main	1
+gclassroom	ekrown-dev/google-classroom-electron-client	0079ad982d78	NO-PAYLOAD	NONE	NONE	0	-	0	0	2025-06-15	main	1
+gclassroom	elijah629/classroom-mcp	cf0f92fbbe11	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-10-12	main	1
+gclassroom	ishikabhoyar/gmail-mcp-server	d3eef3188dbe	NO-PAYLOAD	NONE	NONE	0	-	0	0	2025-07-20	main	1
+gclassroom	praisethefacts/dsh-plugin-google-classroom	4115d38621e4	MIT	MIT	LICENSE	1064	c35e96e7d382	0	0	2026-10-06	main	1
+gclassroom	praisethefacts/google-classroom-mcp	eaa92306d908	MIT	MIT	LICENSE	1064	c35e96e7d382	0	0	2026-10-06	main	1
+gclassroom	prokhorind/google-classroom-mcp	11ce8847df6e	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-07-14	main	1
+gclassroom	prokhorind/google-classroom-mcp-steering	3589612a1266	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-06-05	main	1
+gclassroom	shimahikojin/google-classroom-mcp	2671965f7fa2	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-04-11	main	1
+gclassroom	sinh-x/personal-google-mcp	6e6a98d957e0	MIT	MIT	LICENSE	1068	5ed26262319d	0	0	2026-04-26	main	4
+gclassroom	supachai-j/google-classroom-mcp-project	9490c0fc068b	MIT	MIT	LICENSE	1090	125a8bf7ce31	0	0	2026-05-24	main	1
+gclassroom	tirbofish/google-classroom-mcp	d6674ec7efe5	NO-PAYLOAD	NONE	NONE	0	-	0	0	2026-07-26	main	1

@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **The platform tier gains no row, and this pass refutes the cause p428 published for the split it found one pass ago. 🔴 Hosted-vs-self-hosted does NOT explain which platforms grow an agent-layer hub: Google Classroom is the most hosted LMS API there is and has no hub. 🟢 What explains it is who can issue the credential — which is a procurement fact a studio can act on.**
+
+🟢 **Gates RAN on this host**, against `79362ca`: 🟢 **56** blocking gates green at baseline,
+🟢 **56** after these writes. 🔵 All reads **2026-10-25**.
+
+### 🔴 The platform tier — no row moves
+
+🔵 **The settled grade stays the first column after the name**, so a shelf-derived parser reads
+the family before the prose.
+
+🔴 **Neither platform this pass measured can appear on this tier at all.** **Google Classroom**
+and **Blackboard Learn** are proprietary products with no source distribution; there is no grant
+to read and no fork to take. 🟢 **That is not a gap — it is the structural reason their
+connector cohorts matter**: the integration layer is the only surface a studio can own on either
+platform, which is the opposite of the Moodle and Open edX situation, where the platform itself
+is forkable and the connector is the smaller decision.
+
+### 🔴 p428's `hosted-vs-self-hosted` explanation is refuted on this shelf's own terms
+
+🔵 **What this shelf published one pass ago.** p428's section *"A second platform split: hosted
+platforms concentrate their agent layer, self-hosted ones do not"* explained the Canvas hub
+(**308** refs) against Moodle's absence of one (**22** refs) by the **deployment model**.
+
+🔴 **Tested against the extreme case, it fails.** **Google Classroom is more hosted and more
+uniform than Canvas** — a single vendor endpoint, no per-institution installation whatsoever.
+The explanation predicts a stronger hub than Canvas's. Measured: `total_count` **37**, and the
+largest connector in the cohort carries **6** refs.
+
+| platform | hosted? | uniform API? | end user can self-issue a credential? | agent-layer hub |
+|---|---|---|---|---|
+| **Canvas** | 🟢 yes | 🟢 yes | 🟢 **yes — per-user Personal Access Token** | 🟢 **308 refs / 99 forks** |
+| **Google Classroom** | 🟢 yes | 🟢 yes | 🔴 **no — operator must create a Google Cloud OAuth client** | 🔴 **6 refs** |
+| **Moodle** | 🔴 no | 🔴 no | 🔴 **no — per-site token an admin enables** | 🔴 **22 refs** |
+| **Blackboard Learn** | 🟢 yes | 🟡 partly | 🔴 **no — REST key the institution registers** | 🔴 **11 refs** |
+
+🟢 **The credential column is the only one that separates the hub from the three non-hubs**, and
+it does so 4/4. Published as **`Trend 54`** in `intel/trends.md`, with the 46-payload census that
+measures it.
+
+### 🟢 What this changes for a platform decision, concretely
+
+🔵 **The old reading sent a studio to ask "is this platform hosted?" — a question whose answer
+changes nothing it can act on.** 🟢 **The new reading sends it to ask "who issues the
+credential?", which is answerable in week one and determines the shape of the estimate:**
+
+| answer to "who issues the credential?" | platform here | what to budget |
+|---|---|---|
+| 🟢 **the end user, alone** | Canvas | 🟢 **Choose an implementation, do not build one.** A hub exists; pin it at a SHA. `Pattern AZ` (p428) |
+| 🔴 **a developer console, per operator** | Google Classroom | 🔴 **Budget to own the connector.** 37 addresses and nothing to depend on — the cohort size is not supply |
+| 🔴 **a site administrator** | Moodle | 🔴 **Budget to own it, plus an admin-enablement step per site.** 242 addresses and nothing to depend on |
+| 🔴 **the institution, by registering a REST application** | Blackboard Learn | 🔴 **Budget to own it, and price the registration as a dependency on the client's own IT.** 🟡 7 of 10 published connectors skip it and drive a browser instead — which is a signal about how often that registration actually happens |
+
+🔴 **The browser-driving workaround is not a recommendation.** **7 of 10** Blackboard connectors
+and at least two Google Classroom ones reach the platform by automating a logged-in browser
+session rather than calling the API. 🟢 It works, and it is why those cohorts exist at all.
+🔴 **It is also shadow IT**: it rides a human's live session, it breaks on any UI change, and it
+will not pass a data-protection review. 🔵 This is `Gap 428-E`'s subject, and this pass moved it
+from two anecdotes to a measured rate — see `intel/open-gaps.md`.
+
+### 🟢 The agent-facing tier over these platforms — what the cohorts now reach
+
+| platform | connectors read first-hand (cumulative) | permissive lanes | the seam to take |
+|---|---|---|---|
+| **Google Classroom** | 🟢 **37** this pass, the whole cohort | 🟢 **13 permissive payloads read**, MIT ×12 + the carried set | 🟢 **MCP, and pin `vTanco` for the teacher-side lane** — 🔴 **not `pengusto`**, whose grant became proprietary on **2026-10-23** |
+| **Blackboard Learn** | 🟢 **10** this pass, the whole cohort | 🟢 **7** (MIT ×5, ISC ×2), up from 3/7 at p340 | 🟢 **MCP via `UKplus8HRS/bb-mcp`** for a multi-campus build; `BxnIceLemon/minerva-mcp` where Gradescope is also in scope |
+
 ## 🆕 `p428` · 2026-10-25 — **The platform tier gains no row, and for the first time the reason it has no permissive member is backed by a CONTROLLED case rather than a tally: one owner published both halves of one product the same week, and the in-LMS half is GPL-3.0 while the external half is MIT. 🟢 A second platform split also surfaced: Canvas has a cohort HUB and Moodle does not, and the cause is hosted-vs-self-hosted.**
 
 🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **56** blocking gates green after these

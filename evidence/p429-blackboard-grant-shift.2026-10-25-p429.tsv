@@ -1,0 +1,24 @@
+# p429 · 2026-10-25 · BLACKBOARD RE-MEASURED — the platform p340 called "the worst-served platform here".
+# p340 (2026-10-20) probed 7 Blackboard connectors: 3 permissive, 0 copyleft, 4 ungranted, and recorded "more than half its connectors are ungranted".
+# p429 ran `blackboard learn mcp` sorted by `updated` desc: total_count=10, all 10 resolved under ls-remote and all 10 read first-hand at the SHA.
+# Every family below is read FROM THE PAYLOAD at that SHA.  Permissive share moves 3/7 (43%) -> 7/10 (70%).
+address	head_sha12	family_from_payload	bytes	sha256_12	refs	pushed	region_evidence_IN_THE_PAYLOAD	region
+alejooroncoy/campus-cli	(carried)	ISC	748	4ca1bd2e969c	11	2026-10-25	README names UPC and Peru — "estudiantes de UPC"	LATAM
+nitsuah/bb-mcp	(carried)	MIT	1063	e024d09e682a	2	2026-10-24	none — generic Blackboard Learn REST client	Global
+felipedias-ie/blackboard-mcp	(carried)	MIT	1084	d65abf96e389	2	2026-10-14	none stated	Global
+Mattlo0546/blackboard-mcp	(carried)	MIT	1067	13c8ad755224	1	2026-10-20	README names University of Leeds (Minerva)	EMEA
+NiccoloSalvini/mcp-blackboard-ucsc	(carried)	MIT	1073	f3bdd2ed068a	0	2026-10-23	README names Universita Cattolica del Sacro Cuore, and states "Cattolica added its Application ID under Admin -> REST API"	EMEA
+BxnIceLemon/minerva-mcp	534b7dc7b78e	ISC	741	5d3787deebf3	0	2026-10-21	README names "the University of Leeds' Minerva (Blackboard Learn Ultra) and Gradescope"	EMEA
+UKplus8HRS/bb-mcp	d639765bc267	MIT	1067	02049138f239	0	2026-10-21	none — explicitly "your own institution's Blackboard site", configurable	Global
+ruud0/aula-virtual-mcp	(read, declined)	NO-PAYLOAD — zero licence-shaped paths	0	-	0	2026-10-14	README names Universidad de Navarra, San Sebastian, Spain	EMEA
+P1ckle3/blackboard-mcp	(read, declined)	NO-PAYLOAD — zero licence-shaped paths	0	-	0	2026-07-28	README names UQ (University of Queensland) and Okta SSO	APAC
+karkarkins/BlackboardAssistantMCP	(read, declined)	NO-PAYLOAD — zero licence-shaped paths	0	-	0	2025-09-09	none stated	Global
+#
+# 🟢 TWO NEW PERMISSIVE ADDRESSES, both EMEA-placed or institution-configurable, both pushed 2026-10-21:
+#    BxnIceLemon/minerva-mcp (ISC) and UKplus8HRS/bb-mcp (MIT).  Neither appears anywhere in this base's 5,674 previously-cited slugs.
+# 🟢 A CROSS-REGION LINEAGE, stated by the payload rather than inferred: `BxnIceLemon/minerva-mcp`'s README says it
+#    "follows the approach of campus-cli" — and campus-cli is the LATAM address (UPC, Peru) already on these shelves.
+#    So a LATAM connector is the cited architectural TEMPLATE for a UK one.  This base has recorded LATAM as a supply gap; here it is a supply SOURCE.
+# 🔴 THE GRANT-ABSENCE RATE IS UNCHANGED IN KIND: 3 of 10 still carry no licence payload anywhere in their tree, and the two most
+#    regionally useful of those three (Universidad de Navarra, University of Queensland) are exactly the EMEA and APAC institutional
+#    shapes this base is short of.  One LICENSE file each would move them.  That is the cheapest supply-side intervention on these shelves.

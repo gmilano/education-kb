@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **The platform p340 called "the worst-served platform here" has materially improved, and this pass measured the move rather than re-asserting the old grade. 🟢 Blackboard's permissive share goes 3/7 → 7/10, with two new permissive addresses. 🔴 And the foundation layer gains its first row that must be pinned because a SIBLING row's grant expired.**
+
+🟢 **Gates RAN on this host**, against `79362ca`: 🟢 **56** blocking gates green at baseline,
+🟢 **56** after these writes. 🔵 All reads **2026-10-25**.
+
+### 🟢 Added to the integration layer — two rows, and both are reusable rather than institution-pinned
+
+🔵 **The bar for this shelf is reusability, not capability.** An institution-pinned connector is a
+specimen; a configurable one is a foundation.
+
+| address | grant, read at the SHA | why it is a foundation and not a mention |
+|---|---|---|
+| [`UKplus8HRS/bb-mcp`](https://github.com/UKplus8HRS/bb-mcp) | 🟢 **MIT** — `LICENSE` **`1 067` B `sha256₁₂ 02049138f239`** @ HEAD `d639765bc267`. 🟢 Tree **ENUMERATED**: one licence-shaped path 🟢 **`authoritative`** | 🟢 **It is the only Blackboard address in this cohort that is institution-AGNOSTIC by design** — its README offers *"your own institution's Blackboard site"* as configuration, where the other nine are either generic REST clients or hard-pinned to one campus. 🔵 **That makes it the fork point for a multi-campus Blackboard engagement**, which `Pattern AY` (p427) needed and had no Blackboard member for. 🔴 It drives a browser via Playwright, so it inherits `Trend 54`'s constraint rather than solving it |
+| [`vTanco/google-classroom-mcp`](https://github.com/vTanco/google-classroom-mcp) | 🟢 **MIT** — `LICENSE` **`1 145` B `sha256₁₂ a01639b20880`** @ HEAD `9ba0070eff2f` 🟢 **`authoritative`** | 🔴 **It is a foundation because the row this base previously recommended for this job is no longer permissive.** p340 named `pengusto` as the teacher-side Google Classroom lane; that payload is proprietary as of `3609bf6` (2026-10-23). 🟢 `vTanco` carries the **byte-identical MIT payload** pengusto abandoned, at a live HEAD. 🟢 **And it writes coursework as `En borrador` — DRAFT by default**, so the oversight step is inherited, not built |
+
+### 🟢 Blackboard, re-measured — the move is real and it is in the grant layer
+
+🔵 **What p340 recorded on 2026-10-20**, from 7 connectors probed first-hand: **3 permissive, 0
+copyleft, 4 ungranted**, and the verdict *"the worst-served platform here: more than half its
+connectors are ungranted, and the most capable lane rides an undocumented internal API."*
+
+🟢 **What this pass read on 2026-10-25**, from `blackboard learn mcp` → `total_count` **10**, all
+ten resolved and all ten read at the SHA:
+
+| | p340 · 2026-10-20 | p429 · 2026-10-25 |
+|---|---|---|
+| connectors read first-hand | 7 | 🟢 **10** |
+| permissive payloads | 3 (43 %) | 🟢 **7 (70 %)** — MIT ×5, ISC ×2 |
+| copyleft payloads | 0 | 0 |
+| 🔴 no grant payload anywhere in the tree | 4 (57 %) | 🔴 **3 (30 %)** |
+
+🟢 **Two of the seven permissive rows are new to this base** — `BxnIceLemon/minerva-mcp`
+(**ISC**, `741` B `5d3787deebf3`) and `UKplus8HRS/bb-mcp` (**MIT**, `1 067` B `02049138f239`),
+both pushed **2026-10-21**, neither among this base's **5 674** previously-cited slugs.
+
+🔴 **The absence is still the binding constraint, and it is now concentrated in the rows that
+would be worth the most.** The three ungranted addresses include **Universidad de Navarra**
+(EMEA) and the **University of Queensland** with Okta SSO (APAC) — the two institutional shapes
+these shelves have repeatedly recorded as missing. 🟢 **One `LICENSE` file each would shelve
+them**, which is the cheapest supply-side intervention available in this sector. Full table:
+[`evidence/p429-blackboard-grant-shift.2026-10-25-p429.tsv`](../evidence/p429-blackboard-grant-shift.2026-10-25-p429.tsv).
+
+### 🟢 A cross-region lineage, stated by a payload rather than inferred
+
+🔵 This base has recorded LATAM as a **supply gap** for several passes — *"no published LATAM
+connector survived probing"* (p340). 🟢 **This pass found a LATAM address acting as a supply
+SOURCE.** `BxnIceLemon/minerva-mcp` (University of Leeds, **EMEA**) states in its own README that
+it *"follows the approach of [`campus-cli`](https://github.com/alejooroncoy/campus-cli)"* — and
+`campus-cli` is the **ISC, UPC, Perú** address already on these shelves.
+
+🟢 **Both are ISC and both are ~`740` B**, yet their digests differ (`5d3787deebf3` vs
+`4ca1bd2e969c`) — so this is an **architectural** lineage the payload declares, **not** a copied
+licence file. 🔵 **The reframing matters for how this base reads LATAM:** the region is short of
+*shelvable grants*, not of reusable architecture. A Peruvian CLI is the cited template for a
+British one.
+
+### 🔵 What did NOT move in the foundation layer
+
+🔴 **No platform row moves, and that is now a tenth independent channel agreeing: no education
+platform on these shelves is MIT.** Both of this pass's cohorts are integration-tier; neither
+`google classroom mcp` nor `blackboard learn mcp` returned a platform. 🔴 Google Classroom and
+Blackboard Learn are both **proprietary products**, so the question cannot even be asked of them
+— which is itself the reason their connector cohorts are the only surface a studio can own.
+
+🟡 **`Gap 427-D`'s open half is untouched.** The architecture-decides-the-grant rule still has
+**no Open edX test**, and neither cohort this pass read has an in-process plugin surface to test
+it against: Google Classroom and Blackboard Learn admit no third-party in-process code at all.
+🔵 Stated rather than silently carried.
+
 ## 🆕 `p428` · 2026-10-25 — **`p427`'s architecture rule, re-run with the OWNER HELD CONSTANT. 🟢 One owner, one product, two repositories published the same week: the external REST client is MIT, the in-LMS plugin is GPL-3.0, and the plugin carries the same stock digest as the other two server-side payloads on these shelves. Preference is no longer a candidate explanation.**
 
 🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **55** blocking gates green at baseline,

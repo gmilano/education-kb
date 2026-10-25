@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **The repo log: the FOUR LMS cohorts measured on one instrument for the first time — and the mechanism p428 published one pass ago does not survive the comparison.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 Four cohorts, one instrument, and the prediction that fails
+
+🔵 p428 measured Canvas against Moodle and attributed the concentration difference to the
+**deployment model**. 🟢 **This pass added the two cohorts that test it**, read in full on the
+same instrument — GitHub repository search, `sort=updated` desc, every returned address resolved
+with `git ls-remote` and read at its SHA.
+
+| cohort | `total_count` | read | largest connector | refs | forks | shape |
+|---|---|---|---|---|---|---|
+| **Moodle MCP** (p428) | **242** | 30 | [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | 22 | 0 | 🔴 no centre — self-hosted per institution |
+| **Canvas LMS MCP** (p428) | **133** | 25 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **308** | 🟢 **99** | 🟢 **a hub** — one implementation serves everyone |
+| **Google Classroom MCP** (p429) | **37** | 🟢 **37 — all** | [`faizan45640/google-classroom-mcp-server`](https://github.com/faizan45640/google-classroom-mcp-server) | 🔴 **6** | 9 | 🔴 **no centre, and this is the surprise** |
+| **Blackboard Learn MCP** (p429) | **10** | 🟢 **10 — all** | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 11 | 1 | 🔴 no centre, smallest cohort, and institution-pinned at the top |
+
+🔴 **Google Classroom breaks the deployment-model explanation.** It is the **most hosted and most
+uniform** LMS API in existence — one vendor, one global endpoint, no per-institution installation
+at all. The explanation predicts a **stronger** hub than Canvas's. Measured: the largest connector
+in the cohort carries **6** refs, and its HEAD is **2025-07-28** — fifteen months stale. 🟢 The
+cohort's single largest repository by refs is `kaorii-ako/Shiori-v1` at **46** refs, and it is a
+**study companion that syncs Classroom**, not a connector — so it is not the cohort's hub either.
+
+🟢 **What separates the one hub from the three non-hubs is the credential**, 4/4, developed as
+`Trend 54` in `intel/trends.md` and measured over **46 README payloads**:
+
+| cohort | can the END USER issue their own credential? | hub |
+|---|---|---|
+| Canvas | 🟢 **yes** — per-user Personal Access Token | 🟢 **yes** |
+| Google Classroom | 🔴 no — the operator creates their own Google Cloud OAuth client (**26 of 36 READMEs say so**) | 🔴 no |
+| Moodle | 🔴 no — per-site token an admin enables | 🔴 no |
+| Blackboard Learn | 🔴 no — REST key the institution registers (**9 of 10 ride an SSO session instead**) | 🔴 no |
+
+### 🟢 Blackboard — the platform p340 called "worst-served" has improved, and the move is measured
+
+| | p340 · 2026-10-20 | p429 · 2026-10-25 |
+|---|---|---|
+| connectors read first-hand | 7 | 🟢 **10 — the whole cohort** |
+| permissive payloads | 3 (43 %) | 🟢 **7 (70 %)** — MIT ×5, ISC ×2 |
+| 🔴 no grant payload in the tree | 4 (57 %) | 🔴 **3 (30 %)** |
+
+🟢 **Two new permissive addresses, both pushed 2026-10-21:**
+[`BxnIceLemon/minerva-mcp`](https://github.com/BxnIceLemon/minerva-mcp) (**ISC**, `741` B
+`5d3787deebf3`) and [`UKplus8HRS/bb-mcp`](https://github.com/UKplus8HRS/bb-mcp) (**MIT**,
+`1 067` B `02049138f239`). 🔵 Neither appears among this base's **5 674** previously-cited slugs.
+
+🟢 **And a cross-region lineage the payload states outright:** `minerva-mcp`'s README says it
+*"follows the approach of `campus-cli`"* — the **ISC, UPC, Perú** address already on these
+shelves. 🔵 Both are ISC and both ~`740` B, **but their digests differ**, so the lineage is
+architectural rather than a copied licence file. 🟢 **These shelves have recorded LATAM as a
+supply gap; here a LATAM address is the cited template for a British one.**
+
+### 🟢 A digest is a GROUPING instrument, not only a pin
+
+| digest | bytes | addresses | what it reveals |
+|---|---|---|---|
+| `a01639b20880` | `1 145` | `vTanco/google-classroom-mcp` · `pengusto/…` **@ `8a548eb` only** | 🔴 a lineage **across a relicensing boundary** — the same bytes live at one address and abandoned at the other |
+| `13c8ad755224` | `1 067` | `Mattlo0546/classroom-mcp` · `Mattlo0546/blackboard-mcp` | 🟢 one author shipping **Classroom and Blackboard** as one product line |
+| `c35e96e7d382` | `1 064` | `praisethefacts/google-classroom-mcp` · `praisethefacts/dsh-plugin-google-classroom` | 🟢 **a server and its packaging-for-a-host** as two addresses |
+
+🔵 **The caveat, recorded with the finding:** a stock MIT payload differs between repositories only
+by its copyright line, so a shared digest proves a shared **holder string**, not a fork. 🟢 That
+is what makes it useful — it groups by holder without reading a commit — 🔴 and why it cannot
+stand alone (`Gap 429-C`).
+
+### 🔵 Resolution hygiene, recorded because it is the first clean sweep here
+
+🟢 **47 of 47 addresses resolved** under `git ls-remote` — **no credential prompt, no gone
+address, no unresolvable slug** across two complete cohorts. 🔵 Earlier passes have had to grade
+addresses `UNVERIFIABLE` on a credential prompt (p293's oracle); this pass had no occasion to.
+🔵 Default branches: **46 `main`, 1 multi-branch** (`sinh-x/personal-google-mcp`, 4 heads, one of
+them named `fix/oauth-token-refresh-hang`) — so `gate-branch-alias`'s subject did not arise in
+either cohort.
+
 ## 🆕 `p428` · 2026-10-25 — **The repo log: the Canvas cohort, measured beside the Moodle one for the first time — and it has a HUB.**
 
 🔵 **Append-only. Nothing below this block was edited.**

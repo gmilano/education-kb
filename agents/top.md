@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **A row this base published as MIT three times is now PROPRIETARY, and the change is dated to a single commit two days old. 🟢 The MIT lane is not lost — it survives at a different address, and this pass found that address by DIGEST EQUALITY rather than by looking for it. 🔴 And p428's `Trend 53` is refuted by the cohort it did not read.**
+
+🟢 **Gates RAN on this host**, against `79362ca`: a baseline run **before this pass wrote a
+line** exited `0` over 🟢 **56 blocking gates green**, and after these writes `make commit-gates`
+exits `0` over the same 🟢 **56** — this pass built no new gate, and says so rather than
+implying one. 🔵 **No date straddle:** every leg, `ls-remote`, clone, `ls-tree`, payload fetch
+and digest happened **2026-10-25**; the commit lands **2026-10-25**.
+
+🔵 **The legs.** Two GitHub repository searches, sorted by `updated` desc:
+`google classroom mcp` → `total_count` **37**, **all 37 read**; `blackboard learn mcp` →
+`total_count` **10**, **all 10 read**. 🟢 **47 of 47 resolve** under `git ls-remote` — no
+credential prompt, no gone address, which is the first clean resolution sweep on these shelves.
+🔴 **The four prescribed web legs returned ZERO addresses again — the third consecutive pass**
+(`Gap 426-C`); they are recorded in `agents/trending.md` with what each actually returned.
+
+### 🔴 A LICENCE REGRESSION on a row this base published three times — the first one here measured on both sides
+
+🔵 **What this base said.** `pengusto/google-classroom-mcp` was read as **MIT** by **pase 74**
+(2026-10-03, `LICENSE` recorded at **`1 145` B**, "concurring with `package.json`"), by **p340**
+(2026-10-20, *"MIT"*, listed among nine permissive Google Classroom lanes), and by **p353**
+(2026-10-21). p340's platform table names it as one of the two recommended Google Classroom
+lanes: *"Teacher-side (`pengusto`) and student-side (`OmarNiazi`) lanes both MIT"*.
+
+🟢 **Those readings were CORRECT WHEN TAKEN. The grant changed underneath them.** Read from the
+file's own history this pass, with `git log --follow -- LICENSE`:
+
+| commit | date | `LICENSE` payload | family |
+|---|---|---|---|
+| `8a548eb` | **2026-09-08** | **`1 145` B `sha256₁₂ a01639b20880`** | 🟢 **MIT**, dual copyright — *"Adrià Santacreu i Giménez and contributors"* **and** *"Pengusto (modifications)"*. 🔵 **`1 145` B is pase 74's figure exactly**, and the dual copyright is p268's note on this row exactly. Two passes' readings reproduced from history |
+| `3609bf6` | **2026-10-23** — *"chore: commercially license maintainer extensions (#5)"* | **`3 053` B `sha256₁₂ d84e558a5033`** | 🔴 **PROPRIETARY — "Pengusto Commercial License 1.0"**, *"Effective for distributions carrying this notice from 2026-10-24"* |
+
+🔴 **The clauses that decide an engagement, quoted from the payload at `3609bf6`:** §2 grants
+**source inspection only**; §3 is titled **"Paid commercial agreement required"** and reaches
+*"an educational institution or training provider, **whether nonprofit or commercial**"* **by
+name** — which is precisely the buyer these shelves exist to serve. `package.json`'s `license`
+field moved from **`"MIT"`** to **`"SEE LICENSE IN LICENSE"`**, and GitHub's own licence field
+now reads **`NOASSERTION`**, so the API agrees the family changed.
+
+🟢 **This is a regression, not an error by a predecessor, and the distinction is the point.**
+No instrument on this base was wrong; the world moved. 🔵 What it demonstrates is that **a
+permissive grade has a shelf life**, and that nothing here measures it: the shelves carry
+a family read once and no re-read date. See `Gap 429-A`.
+
+### 🟢 The MIT lane SURVIVES at another address, and a digest found it
+
+🔴 **The obvious conclusion — "the teacher-side MIT Google Classroom lane is gone" — is wrong.**
+🟢 One address in this pass's cohort carries `LICENSE` at **`1 145` B `sha256₁₂ a01639b20880`**:
+**the same bytes pengusto abandoned**, confirmed with `cmp` and carrying the same dual copyright.
+
+| address | grant, read at the SHA | heads | capability — band stated per cell | region |
+|---|---|---|---|---|
+| [`vTanco/google-classroom-mcp`](https://github.com/vTanco/google-classroom-mcp) | 🟢 **MIT** — `LICENSE` **`1 145` B `sha256₁₂ a01639b20880`** @ HEAD `9ba0070eff2f`, **byte-identical** to pengusto's pre-relicensing payload. 🟢 Tree **ENUMERATED**: one licence-shaped path 🟢 **`authoritative`** | **1** ref; pushed **2026-10-22**; ref set exactly `refs/heads/main` | 🟢 **The teacher-side authoring lane**, and it writes: creates coursework in bulk from one instruction, attaching a Drive file as **a copy per student**, with points, per-session due dates, and **`En borrador`** — created as DRAFT. 🔵 That draft-by-default behaviour is the human-in-the-loop step three jurisdictions ask for, already in the code | **EMEA** |
+
+🟢 **Why that row is placed in EMEA on PAYLOAD evidence and not on its language.** A Spanish
+README is evidence of a language, not of a country — Spanish is the language of both Spain and
+most of LATAM, and this base has a standing rule against turning an anthroponym or a language
+into a region (`gate-region-place`). 🟢 The placing evidence is a **curriculum token**: the
+README's worked example is *"ESO 2º Tecnología"*, and **ESO — Educación Secundaria Obligatoria —
+is the statutory secondary stage of the SPANISH school system**, not of any LATAM system.
+🔵 **That is a named standard in the payload, which is exactly what `gate-region-place` accepts.**
+
+🟢 **The practical rule, and it is one line.** An engagement needing the MIT teacher-side Google
+Classroom lane should pin **`vTanco` at `9ba0070eff2f`**, not pengusto. Full chain, both sides of
+the regression and the upstream check:
+[`evidence/p429-licence-regression.2026-10-25-p429.tsv`](../evidence/p429-licence-regression.2026-10-25-p429.tsv).
+
+### 🔴 And the grant pengusto left behind is readable ONLY inside pengusto
+
+🟢 pengusto preserves the upstream notice at `LICENSES/MIT-upstream.txt` — **`1 101` B
+`sha256₁₂ dd5ae846ce41`**, the **single-copyright** MIT, correctly stripped of its own
+modification line. 🔵 **That is correct attribution hygiene and is recorded as such.**
+
+🔴 **The upstream it names grants nothing at source.**
+[`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp)
+at HEAD `29c2c2a07670` has **ZERO licence-shaped paths across its whole tree** — established by
+`git ls-tree -r HEAD` over all **15** paths, not by probing a filename — and **no `license`
+field** in `package.json`. So pengusto's commercial licence asserts *"It remains available under
+MIT"* about a repository whose own payload says nothing at all, and **the only extant copy of
+that MIT grant is held by the party that relicensed away from it.**
+
+🔵 **This is `Gap 428-B`'s shape, arriving through a different door.** p428 found a licence file
+asserting twelve third parties' families inside an **attribution block**; here a **commercial**
+licence asserts one third party's family, and it is equally unconfirmable. 🟢 `Gap 428-B` wanted
+a second specimen before it could be a rate — it now has one, from a different channel.
+
+🔴 **A correction this pass owes its own record:** the first probe for `LICENSES/MIT-upstream.txt`
+returned **404** and this pass nearly published that absence. It was a **malformed URL** — the
+SHA field had been read from the wrong column — and the tree enumeration caught it. 🔵 The
+absence that *is* real (adriasantacreu) is the one established from a whole tree. **That is the
+whole argument for `gate-subtree-grant`'s instrument over a path probe**, demonstrated at this
+base's own expense.
+
+### 🟢 Promoted to this shelf — eleven further new addresses, every grant read first-hand at the SHA
+
+🔵 All eleven are absent from this base's **5 674** previously-cited slugs, checked against every
+`.md` in the repository including both append-only logs.
+
+| address | grant, read at the SHA | heads | capability — band stated per cell | region |
+|---|---|---|---|---|
+| [`BxnIceLemon/minerva-mcp`](https://github.com/BxnIceLemon/minerva-mcp) | 🟢 **ISC** — `LICENSE` **`741` B `sha256₁₂ 5d3787deebf3`** @ HEAD `534b7dc7b78e`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **0** refs; pushed **2026-10-21** | 🟢 **Blackboard Learn Ultra *and* Gradescope** in one server — the only address on these shelves spanning an LMS and a separate grading product. 🟢 Rides **the session the human already signed in with**, in a real browser window. 🔵 **Its README names its template:** *"follows the approach of [`campus-cli`](https://github.com/alejooroncoy/campus-cli)"* — a **LATAM** address already on these shelves | **EMEA** |
+| [`UKplus8HRS/bb-mcp`](https://github.com/UKplus8HRS/bb-mcp) | 🟢 **MIT** — `LICENSE` **`1 067` B `sha256₁₂ 02049138f239`** @ HEAD `d639765bc267`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **0** refs; pushed **2026-10-21** | 🟢 Blackboard Learn via **Playwright** against *"your own institution's Blackboard site"* — **configurable, not institution-pinned**, which is the reusable shape of the cohort. 🔵 It drives a browser **because the REST path needs a key the institution must register**; see `Trend 54` | Global |
+| [`AnonymousOnyx22/google-classroom-student-mcp`](https://github.com/AnonymousOnyx22/google-classroom-student-mcp) | 🟢 **MIT** — `LICENSE` **`1 072` B `sha256₁₂ ed912ca72d9e`** @ HEAD `f3c1bd8e6a11`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **0** refs; pushed **2026-10-24** — the freshest in this leg | 🟢 Read-only student lane: classes, due dates, **missing work**, grades on returned work. 🔵 **The fourth LMS from one owner** — this base already shelves the same owner's Canvas, Moodle and Brightspace student servers. One architecture, four platforms, by the only author here doing it deliberately | Global |
+| [`Mattlo0546/classroom-mcp`](https://github.com/Mattlo0546/classroom-mcp) | 🟢 **MIT** — `LICENSE` **`1 067` B `sha256₁₂ 13c8ad755224`** @ HEAD `46e4ff4195b6` 🟢 **`authoritative`** | **0** refs; pushed **2026-10-20** | 🟢 Courses, assignments, announcements, materials — **and it downloads class slides**, saving Google Slides and Docs as PDF, one folder per course. 🔵 **Its licence digest is byte-identical to the same owner's `blackboard-mcp`** — see `Trend 56` | Global |
+| [`Mugen-Ibi/Classroom-MCP`](https://github.com/Mugen-Ibi/Classroom-MCP) | 🟢 **MIT** — `LICENSE` **`1 081` B `sha256₁₂ b77185922cd4`** @ HEAD `5f746bdae197`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **0** refs, **1** fork; pushed **2026-10-14** | 🟢 Google Classroom over **Cloudflare Workers**, with a Japanese-language design and verification record under `docs/`. 🔴 **Its README states the cohort's governing constraint outright** — 「このリポジトリを自分のCloudflareアカウントへデプロイし、自分のGoogleアカウントで使うためのプロジェクトです。**共有サービスの接続先は提供しません**」: *deploy this to your own account; no shared endpoint is offered.* 🔵 That is `Trend 54` in an author's own words | **APAC** |
+| [`supachai-j/google-classroom-mcp-project`](https://github.com/supachai-j/google-classroom-mcp-project) | 🟢 **MIT** — `LICENSE` **`1 090` B `sha256₁₂ 125a8bf7ce31`** @ HEAD `9490c0fc068b` 🟢 **`authoritative`** | **0** refs; pushed **2026-05-24** | 🟢 The most complete **assessment** surface in this cohort: rosters, student submissions **and their Drive attachments**, **computes weighted final grades**, exports CSV. 🔴 **Weighted grade computation is an Annex III high-risk function under the EU AI Act** — capable, and the one row here that cannot be dropped into an EMEA engagement without an oversight step around it | Global |
+| [`charlie2233/coursebinder-ai-ready-google-classroom-exporter`](https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter) | 🟢 **MIT** — `LICENSE` **`1 068` B `sha256₁₂ 7f208bdb3cc4`** @ HEAD `54e1eccaf943` 🟢 **`authoritative`** | **0** refs; pushed **2026-06-21** | 🟢 Exports the Classroom content **a logged-in Chromium tab can already see** into a local AI-readable archive. 🔵 Its README draws the distinction this pass measures: *"a browser-visible-content exporter, **not a Google API downloader**"* — built to avoid the credential gate, not to hold a credential | Global |
+| [`sinh-x/personal-google-mcp`](https://github.com/sinh-x/personal-google-mcp) | 🟢 **MIT** — `LICENSE` **`1 068` B `sha256₁₂ 5ed26262319d`** @ HEAD `6e6a98d957e0` 🟢 **`authoritative`** | **0** refs; pushed **2026-04-26**; 🟢 **4 branches** — the widest ref set in this cohort | 🟢 **Rust** — the only non-TypeScript, non-Python server in either cohort, and the only one with a memory-safe compiled runtime to offer an institution. 🔴 **Its ref set is itself evidence:** one branch is named `fix/oauth-token-refresh-hang` | Global |
+| [`praisethefacts/dsh-plugin-google-classroom`](https://github.com/praisethefacts/dsh-plugin-google-classroom) | 🟢 **MIT** — `LICENSE` **`1 064` B `sha256₁₂ c35e96e7d382`** @ HEAD `4115d38621e4` 🟢 **`authoritative`** | **0** refs; pushed **2026-10-06** | 🟢 A **packaged bundle** of the owner's own Google Classroom server for a third-party agent harness — read-only course and assignment tools. 🔵 Shelved for the **distribution shape**: the server and its packaging-for-a-host are separate addresses, which is how a studio ships one connector to several clients | Global |
+| [`PrahanG/Google-Classroom-MCP`](https://github.com/PrahanG/Google-Classroom-MCP) | 🟢 **MIT** — `LICENSE` **`1 060` B `sha256₁₂ f06ff8fa5a6c`** @ HEAD `5c675c96b901` 🟢 **`authoritative`** | **0** refs; pushed **2025-11-25** — 🔴 the oldest HEAD in this leg, eleven months stale | 🟢 Ships **both a JavaScript and a Python implementation** of the same server surface. 🔵 Shelved as a **parity reference** for a studio choosing a runtime, not as a dependency | Global |
+| [`Shiv-D-Coder/google-mcp-agent`](https://github.com/Shiv-D-Coder/google-mcp-agent) | 🟢 **MIT** — `LICENSE` **`1 069` B `sha256₁₂ 2deff4ab7dff`** @ HEAD `206bff862a0e` 🟢 **`authoritative`** | **1** ref; pushed **2025-07-27** — 🔴 fifteen months stale | 🟢 **FastMCP** agent spanning Gmail, Drive **and** Classroom in one tool surface. 🔵 Shelved because the **multi-surface** shape is the one an institutional assistant actually needs; the code is a pattern, not a pin | Global |
+
+🔴 **Graded honestly: ten of these twelve have ZERO or ONE ref.** They are pattern exemplars, not
+dependencies — pin a SHA and expect to own the code. 🟢 **The exception is the one that matters:**
+`vTanco` is load-bearing not because it is popular but because it holds a **specific grant** that
+a row this base recommended no longer holds.
+
+### 🔴 Declined this pass — read first-hand, no grant to read
+
+| address | what was read at the SHA | why it is not on the shelf |
+|---|---|---|
+| [`tirbofish/google-classroom-mcp`](https://github.com/tirbofish/google-classroom-mcp) | HEAD read 2026-10-25. 🔴 **Zero licence-shaped paths**, no manifest field, no README claim | 🔴 **All rights reserved by default.** 🔵 **A real loss, and the most instructive payload in either cohort:** it is a browser-driving read-only server *"for Google Classroom accounts that **cannot grant OAuth access** to the official Classroom API … specifically students under **DETNSW**"* — the New South Wales Department of Education. **APAC**, institutionally placed, and `Trend 54`'s mechanism stated by an author who hit it |
+| [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | HEAD read 2026-10-25, **2026-10-14**. 🔴 Zero licence-shaped paths | 🔴 **All rights reserved by default.** 🔵 README names **Universidad de Navarra, San Sebastián, Spain** and notes the Blackboard API is standard enough to retarget — an **EMEA** institutional address one `LICENSE` file away from being shelvable |
+| [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) | HEAD read 2026-10-25, **2026-07-28**. 🔴 Zero licence-shaped paths | 🔴 **All rights reserved by default.** 🔵 README names the **University of Queensland** and **Okta SSO** — the **APAC** institutional shape, and the clearest SSO-brokered Blackboard lane found |
+| [`JuancitoCozzeti24/santa-rita-escolar`](https://github.com/JuancitoCozzeti24/santa-rita-escolar) | HEAD read 2026-10-25, **2026-10-18**. 🔴 Zero licence-shaped paths | 🔴 **All rights reserved by default.** 🔵 Bridges Classroom **and SIEWeb**, a school-administration system used in Perú, with *matrícula* and *registro de notas* flows — the **LATAM** administrative shape this base has repeatedly recorded as missing |
+| [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) | HEAD `3609bf6`, **2026-10-23**. 🟢 Grant payload present and read in full | 🔴 **Proprietary — "Pengusto Commercial License 1.0".** Source inspection only; §3 requires a paid agreement **naming educational institutions**. 🔵 **Not a defect in the repository and not hidden** — the relicensing commit says what it does, and the upstream notice is preserved. It is simply no longer a lane Globant can build on |
+
+🔵 **Declared so the silence does not read as coverage: 21 of the 47 addresses read this pass
+(45 %) carry NO grant payload at all** — and the four most useful of them are the four regionally
+placed ones above. 🔴 **Grant absence, not copyleft, is still the binding constraint in this
+sector**, now measured on two further cohorts. Full census:
+[`evidence/p429-lms-cohort-census.2026-10-25-p429.tsv`](../evidence/p429-lms-cohort-census.2026-10-25-p429.tsv).
+
 ## 🆕 `p428` · 2026-10-25 — **A THIRD address channel, and it was sitting inside a licence file. 🟢 `semyonfox/canvas-mcp`'s MIT `LICENSE` names TWELVE upstream addresses with their families; six were unshelved, and the channel carries the OBLIGATION along with the address — which no other channel does. 🔴 Two of the twelve asserted grants do not hold up when read at source.**
 
 🟢 **Gates RAN on this host**, against `b46290a`: the baseline run was 🟢 **55 blocking gates

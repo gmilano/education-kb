@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p429` · 2026-10-25 — **The discovery log: a row this base recommended has gone PROPRIETARY, and the instrument that caught it also found its replacement. 🔴 The four prescribed web legs returned zero addresses for the THIRD consecutive pass.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 The legs this pass ran, and what each returned
+
+| leg | channel | returned | unshelved |
+|---|---|---|---|
+| `google classroom mcp`, `sort=updated` | GitHub repository search | `total_count` **37**, 🟢 **all 37 read** | 🟢 **24 new addresses** |
+| `blackboard learn mcp`, `sort=updated` | GitHub repository search | `total_count` **10**, 🟢 **all 10 read** | 🟢 **2 new addresses** |
+| `git log --follow -- LICENSE` on a shelved row | 🟢 **NEW — a component's own licence HISTORY as a channel** | two commits, two families, one dated transition | 🔴 0 addresses, 🟢 **1 recommended row withdrawn** |
+| licence-payload digest equality across the cohort | 🟢 **NEW — a digest as a GROUPING instrument, not just a pin** | 3 digest groups spanning 6 addresses | 🟢 **1 replacement lane recovered**, 2 owner families exposed |
+| `top open source AI agents education 2026 github MIT` | prescribed web leg | 🔴 general-purpose agent frameworks and two courses with unconfirmed licences | 🔴 **0** |
+| `github trending education AI 2026` | prescribed web leg | 🔴 third-party trackers with self-reported and mutually contradictory star counts | 🔴 **0** |
+| `open source platform education LMS SIS MIT Apache 2026` | prescribed web leg | 🔴 vendor comparison blogs; one names Frappe LMS as MIT and OpenOLAT as Apache-2.0, both unverified here, and explicitly reports **no MIT/Apache SIS found** | 🔴 **0** |
+| `AI education industry trends 2026` | prescribed web leg | 🟡 four recurring themes and conflicting market sizes; the summary itself flags its own headline figures as vendor-sourced | 🔴 **0** |
+| the four regional legs | prescribed web legs | 🟢 **all four returned material** — see `intel/market.md`. 🟢 LATAM returned the two fact classes `Gap 427-E` recorded as missing | 🔴 **0 addresses** |
+
+🔴 **Recorded plainly: all 26 promotions came from GitHub repository search. The four prescribed
+capability legs produced zero addresses for the THIRD consecutive pass** — `Gap 426-C` reproducing
+unchanged. 🟢 **The regional legs are a different matter and should not be lumped in with them:**
+they produce no addresses by design and all four returned usable policy and adoption material this
+pass.
+
+### 🔴 The finding that changes a recommendation — read the licence HISTORY, not just the licence
+
+🟢 **`pengusto/google-classroom-mcp` is no longer a lane Globant can build on.**
+
+| commit | date | payload | family |
+|---|---|---|---|
+| `8a548eb` | **2026-09-08** | `LICENSE` **`1 145` B `sha256₁₂ a01639b20880`** | 🟢 **MIT**, dual copyright — *"Adrià Santacreu i Giménez and contributors"* and *"Pengusto (modifications)"* |
+| `3609bf6` | **2026-10-23** · *"chore: commercially license maintainer extensions (#5)"* | `LICENSE` **`3 053` B `sha256₁₂ d84e558a5033`** | 🔴 **PROPRIETARY — "Pengusto Commercial License 1.0"**, effective **2026-10-24** |
+
+🔵 **`1 145` B is pase 74's recorded figure exactly, and the dual copyright is p268's note on this
+row exactly** — so two of this base's own prior readings are reproduced from history, and both
+were right on their dates. 🔴 **p340's platform table recommends this address by name** as one of
+two Google Classroom lanes, *"both MIT"*. 🟢 **Withdrawn here**, in the append-only log, since the
+rows that carry it cannot be edited — which is what append-only is for.
+
+🟢 **And the replacement was found by hashing, not by searching.** `vTanco/google-classroom-mcp`
+carries `LICENSE` at **`1 145` B `sha256₁₂ a01639b20880`** — **byte-identical** to the payload
+pengusto abandoned, `cmp`-verified, same dual copyright, HEAD `9ba0070eff2f` pushed **2026-10-22**.
+🔵 Nobody looked for a replacement; the digests collided. Published as `Trend 56`.
+
+### 🔴 A correction this pass owes its own record
+
+🔴 **This pass's first probe for `LICENSES/MIT-upstream.txt` returned 404 and it nearly published
+that absence as a finding.** The cause was a **malformed URL** — the SHA had been read from the
+wrong TSV column, so the request went to `…/LICENSE/LICENSES/MIT-upstream.txt`. 🟢 **The tree
+enumeration caught it**: `git ls-tree -r HEAD` shows the file present. 🔵 **The absence that IS
+real is the one established the same way** — `adriasantacreu/google-classroom-mcp` has **zero**
+licence-shaped paths across all **15** paths in its tree. 🟢 **That is the argument for
+`gate-subtree-grant`'s instrument over a path probe, demonstrated at this base's own expense.**
+
+### 🟢 Promoted — twelve new addresses, every grant read first-hand at the SHA
+
+🔵 Full rows, capabilities and regional placement are on `agents/top.md`; the grant column is
+repeated here so this log stands alone.
+
+| address | cohort | grant @ SHA | region |
+|---|---|---|---|
+| `vTanco/google-classroom-mcp` | Classroom | 🟢 **MIT** `1 145` B `a01639b20880` @ `9ba0070eff2f` | **EMEA** |
+| `BxnIceLemon/minerva-mcp` | Blackboard | 🟢 **ISC** `741` B `5d3787deebf3` @ `534b7dc7b78e` | **EMEA** |
+| `UKplus8HRS/bb-mcp` | Blackboard | 🟢 **MIT** `1 067` B `02049138f239` @ `d639765bc267` | Global |
+| `AnonymousOnyx22/google-classroom-student-mcp` | Classroom | 🟢 **MIT** `1 072` B `ed912ca72d9e` @ `f3c1bd8e6a11` | Global |
+| `Mugen-Ibi/Classroom-MCP` | Classroom | 🟢 **MIT** `1 081` B `b77185922cd4` @ `5f746bdae197` | **APAC** |
+| `Mattlo0546/classroom-mcp` | Classroom | 🟢 **MIT** `1 067` B `13c8ad755224` @ `46e4ff4195b6` | Global |
+| `supachai-j/google-classroom-mcp-project` | Classroom | 🟢 **MIT** `1 090` B `125a8bf7ce31` @ `9490c0fc068b` | Global |
+| `charlie2233/coursebinder-ai-ready-google-classroom-exporter` | Classroom | 🟢 **MIT** `1 068` B `7f208bdb3cc4` @ `54e1eccaf943` | Global |
+| `sinh-x/personal-google-mcp` | Classroom | 🟢 **MIT** `1 068` B `5ed26262319d` @ `6e6a98d957e0` | Global |
+| `praisethefacts/dsh-plugin-google-classroom` | Classroom | 🟢 **MIT** `1 064` B `c35e96e7d382` @ `4115d38621e4` | Global |
+| `PrahanG/Google-Classroom-MCP` | Classroom | 🟢 **MIT** `1 060` B `f06ff8fa5a6c` @ `5c675c96b901` | Global |
+| `Shiv-D-Coder/google-mcp-agent` | Classroom | 🟢 **MIT** `1 069` B `2deff4ab7dff` @ `206bff862a0e` | Global |
+
+### 🔴 Declined — read first-hand, no grant to read
+
+🔴 **21 of the 47 addresses read this pass (45 %) carry NO licence payload anywhere in their
+tree.** The four that cost the most, because each is regionally placed on payload evidence:
+
+- `tirbofish/google-classroom-mcp` — **APAC**, and the most instructive payload in either cohort:
+  a browser-driving server for Classroom accounts *"that **cannot grant OAuth access** to the
+  official Classroom API … specifically students under **DETNSW**"*.
+- `ruud0/aula-virtual-mcp` — **EMEA**, **Universidad de Navarra**, San Sebastián.
+- `P1ckle3/blackboard-mcp` — **APAC**, **University of Queensland**, Okta SSO.
+- `JuancitoCozzeti24/santa-rita-escolar` — **LATAM**, Classroom **and SIEWeb**, with *matrícula*
+  and *registro de notas* flows for a Peruvian school.
+
+🟢 **One `LICENSE` file each would shelve all four.** 🔵 And one address is declined for the
+opposite reason: `pengusto/google-classroom-mcp` has a grant payload, read in full, and it is
+proprietary.
+
+### 🟢 Independently re-derived this pass
+
+🟢 **`AStheTECH/mewcp-google-classroom`'s bespoke proprietary ACL measures exactly `6 489` B** on
+a fresh fetch at HEAD — **the figure this base has published for thirteen passes**, reproduced by
+an instrument that had not seen it. 🔵 Recorded because a re-derivation that agrees is worth as
+much as one that disagrees, and it is cheaper to record than to re-litigate.
+
 ## 🆕 `p428` · 2026-10-25 — **The discovery log: a THIRD address channel, opened inside a licence file, and a FOURTH that was never reachable before.**
 
 🔵 **Append-only. Nothing below this block was edited.**

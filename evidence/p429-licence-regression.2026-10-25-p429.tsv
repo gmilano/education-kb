@@ -1,0 +1,24 @@
+# p429 · 2026-10-25 · A DATED LICENCE REGRESSION, measured on BOTH SIDES from the file's own history.
+# This base read `pengusto/google-classroom-mcp` as MIT three times — pase 74 (2026-10-03), p340 (2026-10-20), p353 (2026-10-21).
+# Those readings were CORRECT WHEN TAKEN.  The grant changed under them, in commit 3609bf6 titled "chore: commercially license maintainer extensions (#5)".
+# The payload at HEAD is not MIT and GitHub's own licence field has moved to NOASSERTION, so the API field agrees that the family changed.
+# Instrument: `git clone --filter=blob:none --no-checkout` then `git log --follow -- LICENSE` and `git show <sha>:<path>`, all 2026-10-25.
+# 🔵 Read the `vTanco` row last: it is the one that matters commercially, and it was found by DIGEST EQUALITY, not by searching for it.
+what	address	commit	commit_date	path	bytes	sha256_12	family_read_from_payload	package_json_license_field
+grant BEFORE	pengusto/google-classroom-mcp	8a548eb	2026-09-08	LICENSE	1145	a01639b20880	MIT — dual copyright: "Adria Santacreu i Gimenez and contributors" AND "Pengusto (modifications)"	"MIT"
+grant AFTER	pengusto/google-classroom-mcp	3609bf6	2026-10-23	LICENSE	3053	d84e558a5033	PROPRIETARY — "Pengusto Commercial License 1.0", effective for distributions carrying the notice from 2026-10-24	"SEE LICENSE IN LICENSE"
+upstream notice preserved by the downstream	pengusto/google-classroom-mcp	3609bf6	2026-10-23	LICENSES/MIT-upstream.txt	1101	dd5ae846ce41	MIT — SINGLE copyright, "Adria Santacreu i Gimenez and contributors" only, correctly stripped of the Pengusto modification line	n/a
+the asserted upstream itself	adriasantacreu/google-classroom-mcp	29c2c2a07670	HEAD at 2026-10-25	ZERO licence-shaped paths in the WHOLE tree (15 paths, `git ls-tree -r HEAD`)	0	-	NO GRANT READABLE AT SOURCE — and no `license` field in package.json either	(absent)
+the MIT lane that SURVIVES	vTanco/google-classroom-mcp	9ba0070eff2f	HEAD, pushed 2026-10-22	LICENSE	1145	a01639b20880	MIT — BYTE-IDENTICAL to pengusto's abandoned payload, same dual copyright, verified with `cmp`	(no field)
+#
+# THE THREE FINDINGS, stated so a successor does not have to re-derive them:
+# 1. The regression is real and dated.  1145 B MIT -> 3053 B proprietary.  Clause 3 of the new licence is "Paid commercial agreement required" and it reaches
+#    "an educational institution or training provider, whether nonprofit or commercial" BY NAME — which is precisely the buyer this knowledge base exists to serve.
+#    Clause 2 grants source inspection only.  An engagement that pinned this address on the strength of this base's own MIT row would now be out of compliance.
+# 2. The upstream's grant is readable ONLY inside the repository that relicensed away from it.  `adriasantacreu/google-classroom-mcp` carries no licence payload
+#    anywhere in its tree, so pengusto's `LICENSES/MIT-upstream.txt` is the only extant copy of the grant pengusto itself no longer offers.
+#    🟢 Credit where it is due: that preservation is correct attribution hygiene, not a defect.  The defect is upstream's silence.
+#    🔴 But it makes the MIT claim UNVERIFIABLE AT SOURCE — the same shape as `Gap 428-B`, arriving through a commercial licence instead of an attribution block.
+# 3. 🟢 THE ACTIONABLE ONE.  `vTanco/google-classroom-mcp` carries the identical 1145 B / a01639b20880 payload at a live HEAD pushed 2026-10-22.
+#    The MIT teacher-side Google Classroom lane is NOT lost — it moved address.  A studio needing it should pin vTanco at 9ba0070eff2f, not pengusto.
+#    🔵 This was found because two payloads hashed the same, which is why this base digests payloads instead of trusting licence names.
