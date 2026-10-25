@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p435` · 2026-10-25 — **The trend record was never the problem: it held **1 449** permissive addresses nobody had graded. 🟢 All 2 450 unpromoted addresses are now graded first-hand and the backlog has a shape — 59.1 % permissive, 20.4 % with no licence file at all. 🔴 Six consecutive passes reported the permissive foundation tier "unchanged" while this sat underneath it.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 The census this file existed to make possible
+
+`repos/trending.md` and `agents/trending.md` are append-only by contract — that is what
+makes them a trend record. `p433` called them **write-only**; `p434` built a promotion gate
+and could only feed it **7** graded rows. 🟢 **`p435` graded the rest**: 2 450 addresses,
+one grant payload read per address off `raw.githubusercontent.com`, `p228-shelf-gate`'s
+ladder unchanged, ~3 minutes at `parallelism=20`, resumable.
+
+| family | n | | family | n |
+|---|---|---|---|---|
+| MIT | **1 022** | | CC-BY-NC-SA-4.0 | 21 |
+| `NO-GRANT` (404 on 8 paths × 2 refs) | **500** | | PolyForm | 19 |
+| Apache-2.0 | **330** | | CC0-1.0 | 19 |
+| GPL-3.0 | 145 | | CC-BY-4.0 | 19 |
+| AGPL-3.0 | 135 | | ECL-2.0 | 14 |
+| UNRECOGNISED | 83 | | MPL-2.0 | 13 |
+| BSD-3-Clause | 43 | | GPL-? (bound unsettled) | 10 |
+| GPL-2.0 | 24 | | LGPL-3.0 · ISC · BSD-2-Clause | 9 each |
+| CC-BY-SA-4.0 | 7 | | LGPL-2.1 | 4 |
+| Unlicense · EPL-2.0 · BUSL-1.1 | 3 each | | LGPL-? · EUPL-1.2 | 2 each |
+| SSPL-1.0 · `MIT OR GPL-2.0` | 1 each | | **total** | **2 450** |
+
+🔴 **`NO-GRANT` at 500 addresses — 20.4 % — is the number to carry into a client
+conversation.** One address in five on this base's trend record has **no licence file on
+any path of the ladder, on either ref**. That is not a build-on supply; it is all rights
+reserved, and it is the second-largest arm after MIT.
+
+🟡 **`UNRECOGNISED` at 83** is this base's own reach bound: a payload served 200 whose
+earliest title line matched no family in `p228`'s table. Each is a real file that a human
+has to read; none is an absence.
+
+### 🟢 A second channel, new to this base: HEAD recency at ~0.5 s per address
+
+    git clone --depth 1 --bare --filter=tree:0 https://github.com/<slug>
+
+🟢 **~270 KB and ~0.5 s**, against ~20 MB for a plain `--depth 1`. Run over the whole
+permissive arm: **1 449 dated, 0 failures**, each row carrying its HEAD committer date and
+its timezone offset — the same offset channel `gate-offset-region` places regions with.
+
+| HEAD age | n | reading |
+|---|---|---|
+| 🟢 0–30 d | **627** | alive this month |
+| 31–90 d | 233 | |
+| 91–180 d | 141 | |
+| 181–365 d | 137 | |
+| 1–2 y | 116 | |
+| 🔴 > 2 y | **195** | 13.5 % of the permissive arm is effectively archived |
+
+🔵 **This is `Trend 9`'s missing instrument** — a permissive licence has a shelf life, and
+until now nothing here measured it. It is also the answer to `Gap 434-B` that a star count
+could never be: `api.github.com` refuses a third-party repository with a **per-repository
+authorization** 403 (*"GitHub access to this repository is not enabled for this session"*),
+so no allowlist entry can serve 1 449 addresses — while this channel runs from `make`.
+
+### 🔴 What the census found that six passes of "unchanged" had missed
+
+A whole tier: **connectors for the platform a national school system actually runs** —
+IServ (Germany), Librus Synergia (Poland), Smartschool (Flanders), EduPage (Slovakia/CEE),
+Skola24 (Sweden), DTU Learn (Denmark), NEIS (Korea), Schoology + StudentVUE + Ion (one
+large US district) — plus **state education bodies publishing their own production code**:
+Norway's **Udir** exam-administration services (Apache-2.0), three **DFE-Digital** services,
+**Oak National Academy's** curriculum API. Sixteen rows to `agents/top.md`, eight to
+`repos/foundations.md`. 🔴 **Twelve of them EMEA, against a declared EMEA nil three passes
+old.** Full first-hand table in `agents/trending.md` `p435`.
+
+🔵 One ladder detail: `DFE-Digital/get-information-about-schools` carries its grant at
+**`LICENCE`**, the British spelling. A ladder stopping at `LICENSE`/`LICENSE.md`/
+`LICENSE.txt` would report a UK government repository as ungranted. `p228`'s eighth path
+earns its place here on a real row for the first time.
+
+### 🟡 Reach bounds, stated as bounds
+
+🟡 The recency sweep covered the **permissive arm only** — the 1 001 non-permissive rows
+carry `head_committed = -` in the evidence file, deliberately. 🟡 The census grades
+**addresses**, not projects: a fork and its upstream are two rows, and `gate-fork-direction`
+is the instrument for that question, not this one. 🟡 And the census counts the trend
+record's **citations**, so an address named in prose for the purpose of rejecting it is in
+the denominator too.
+
+Evidence: `evidence/promotion-backlog-grants.2026-10-25-p435.tsv` (2 450 rows) ·
+`evidence/promotion-backlog-families.2026-10-25-p435.tsv` ·
+`compose/code/p435-promotion-sweep/` (`sweep.sh`, `head_dates.sh`, `recency.py`,
+18 offline controls).
+
+---
+
 ## 🆕 `p434` · 2026-10-25 — **`p433` called the frontier saturated on a denominator that contained the backlog. 🔴 Re-running `p433`'s own query returns a 4 771 ★ education address as the TOP hit, absent from every curated shelf. 🟢 The promotion gate `Gap 433-A` asked for is built and wired — and it refutes the predicate the gap prescribed. 🔵 The trending shelf is no longer write-only.**
 
 🔵 **Append-only. Nothing below this block was edited.**

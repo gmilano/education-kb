@@ -29,6 +29,11 @@ STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
 PROMO_LOG ?= /tmp/education-kb-gate-promotion.log
+RECENCY_LOG ?= /tmp/education-kb-gate-recency.log
+BACKLOG_GRADES ?= evidence/promotion-backlog-grants.2026-10-25-p435.tsv
+SWEEP_SLUGS ?= /tmp/education-kb-unpromoted.txt
+SWEEP_WORK ?= /tmp/education-kb-sweep
+SWEEP_PAR ?= 20
 DOMAIN_LOG ?= /tmp/education-kb-gate-domain-check.log
 REGIONPLACE_LOG ?= /tmp/education-kb-gate-region-place.log
 BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
@@ -125,7 +130,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-capability-absence gate-fork-direction gate-group-lineage \
              gate-action-answered gate-commit-gate gate-case-collision \
              gate-conjunctive-grant gate-branch-alias \
-             gate-promotion
+             gate-promotion gate-recency
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -1321,6 +1326,20 @@ gate-promotion: ## p434 — Gap 433-A: a curated shelf may not be MISSING what t
 	@cd compose/code/p434-promotion-gate && { $(PY) test_promotion_gate.py > $(PROMO_LOG) 2>&1 || { echo "🔴 p434-promotion-gate FAILED — its own report follows:" ; sed "s/^/   /" $(PROMO_LOG) ; false ; } ; } && echo "── p434-promotion-gate (28 controls: the 4 771 star CC-BY-SA-4.0 load-bearing negative, Gap 433-A's own predicate refuted at C8-C11, the starless population, the reach bound, p439 case folding, and the P541 empty-input refusals)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p434-promotion-gate/promotion_gate.py findings . || { echo "🔴 p434-promotion-gate/live — a PERMISSIVE address on the trending shelves is in NO curated shelf (rows above)" ; exit 1 ; }
 	@echo "── p434-promotion-gate (the live shelves: no permissive address is stranded in the trend record)" && echo "   PASS" || exit 1
+
+gate-recency: ## p435 — Gap 434-A/434-B: the promotion predicate that survives its OWN population, and a recency channel a `make` target can actually reach
+	@cd compose/code/p435-promotion-sweep && { $(PY) test_recency.py > $(RECENCY_LOG) 2>&1 || { echo "🔴 p435-promotion-sweep FAILED — its own report follows:" ; sed "s/^/   /" $(RECENCY_LOG) ; false ; } ; } && echo "── p435-promotion-sweep (18 controls: the inclusive window edge, the fresh-but-AGPL and fresh-but-CC-BY-SA negatives, the 59.1% majority refutation at C9, recency orthogonal to licence at C10, no star column read at C11, the offset channel carried at C12, PERMISSIVE imported not restated at C13, and the P541 empty-input refusals)" && echo "   PASS" || exit 1
+
+promotion-recency: ## p435 — the COMPLETED grade table's recency split and this window's slate.  A measurement, never a failure.
+	@$(PY) -I compose/code/p435-promotion-sweep/recency.py buckets $(BACKLOG_GRADES) --today $$(date +%F) || true
+	@$(PY) -I compose/code/p435-promotion-sweep/recency.py classify $(BACKLOG_GRADES) --today $$(date +%F) || true
+
+promotion-sweep: ## p435 — ONLINE: read the grant of every UNPROMOTED address first-hand (p228's ladder, resumable).  NEEDS NETWORK; never in `hooks`.
+	@sh compose/code/p435-promotion-sweep/sweep.sh $(SWEEP_SLUGS) $(SWEEP_WORK) $(SWEEP_PAR)
+	@$(PY) -I compose/code/p228-shelf-gate/classify_grant.py $(SWEEP_WORK)/raw-results.tsv $(SWEEP_WORK)/bodies
+
+promotion-heads: ## p435 — ONLINE: the recency channel itself — HEAD commit date per address at ~0.5 s and ~270 KB.  NEEDS NETWORK; never in `hooks`.
+	@sh compose/code/p435-promotion-sweep/head_dates.sh $(SWEEP_SLUGS) $(SWEEP_WORK)/heads.tsv $(SWEEP_PAR)
 
 promotion-census: ## p434 — the unpromoted population with its family split.  A backlog, never a failure.
 	@$(PY) -I compose/code/p434-promotion-gate/promotion_gate.py census . || true

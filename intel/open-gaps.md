@@ -4,6 +4,222 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p435`
+
+### 🟢 `Gap 434-A` — **CLOSED. All 2 450 ungraded addresses graded first-hand — and the result refutes `gate-promotion`'s predicate**
+
+`p434` priced this leg at *"one pass, ~2 450 raw requests at ~1 request per address,
+resumable"* and called it *"the highest-value single leg available to `p435`."* 🟢 **Run at
+that price**: `compose/code/p435-promotion-sweep/sweep.sh` over `p228-shelf-gate`'s
+unchanged ladder, ~3 min at `parallelism=20`, **0 ungraded remaining**. Evidence:
+`evidence/promotion-backlog-grants.2026-10-25-p435.tsv` (2 450 rows, each with the ref,
+path, byte count and payload digest behind its verdict).
+
+| arm | n | share |
+|---|---|---|
+| 🟢 **PERMISSIVE** (MIT 1 022 · Apache-2.0 330 · BSD/ISC/CC0/ECL/Unlicense 97) | **1 449** | **59.1 %** |
+| 🔴 `NO-GRANT` | 500 | 20.4 % |
+| 🔴 GPL / AGPL / LGPL | 329 | 13.4 % |
+| 🟡 other / unrecognised | 172 | 7.0 % |
+
+🔴 **And the gate it was built for does not survive its own population.** `gate-promotion`'s
+predicate is **PERMISSIVE and absent from every curated shelf**; on the 7-row table it fired
+twice (29 %), on the complete table it fires **1 449** times (59.1 %). **A predicate that
+selects the majority of its population is a classifier of that population, not a detector of
+defects in it** — and the gate's own README had already conceded it in words: the verdict
+*"is not an instruction to shelve it."*
+
+🟢 **What this pass deliberately did NOT do:** hand the complete table to the blocking arm.
+That converts 1 449 measurements into 1 449 blocking findings and leaves the suite
+unfixable, which is the mirror image of the error this register exists to prevent.
+`gate-promotion` keeps its pinned table; the census is **evidence** with a non-blocking
+`promotion-recency` target. 🔵 `p434`'s substantive conclusion is untouched — nothing
+permissive was being hidden by a star threshold. What is refuted is **licence alone as a
+promotion test**, which is now `Gap 435-A`.
+
+🟢 **The leg paid beyond its own terms.** It surfaced a tier no pass had shelved —
+connectors for the platform a national school system actually runs (IServ, Librus,
+Smartschool, EduPage, Skola24, DTU Learn, NEIS, Schoology+StudentVUE+Ion) and state
+education bodies publishing their own production code (Udir, three DfE services, Oak
+National Academy). **Sixteen rows to `agents/top.md`, eight to `repos/foundations.md`,
+twelve of them EMEA** — against an EMEA nil this register had carried for three passes.
+
+### 🟢 `Gap 434-B` — **CLOSED, with the DIAGNOSIS corrected and the prescribed remedy refuted**
+
+`p434` recorded `api.github.com` as **403** and prescribed *"either an egress allowlist entry
+for `api.github.com` (owner fix, outside this environment) or a standing rule that star
+counts are advisory colour."* 🔴 **Re-measured 2026-10-25, the premise is wrong in the way
+that decides the remedy.**
+
+| host / endpoint | code | reading |
+|---|---|---|
+| `api.github.com/rate_limit` | 🟢 **200** | reachable **and authenticated** — reports a 15 000/h core limit |
+| `api.github.com/repos/gmilano/education-kb` | 🟢 **200** | full JSON for a repository **attached to this session** |
+| `api.github.com/repos/<third-party>` | 🔴 **403** | body: *"GitHub access to this repository is not enabled for this session. Use add_repo to request access."* |
+| `api.github.com/search/repositories` | 🔴 403 | account-wide search, out of scope |
+| `github.com` HTML · `codeload.github.com` | 🔴 403 | genuinely refused |
+| `raw.githubusercontent.com` · `pypi.org` · git smart-HTTP | 🟢 200 | the channels every verdict here rests on |
+
+🔴 **The 403 is a per-repository AUTHORIZATION refusal, not a dead transport**, and the body
+says so. 🔴 **No allowlist entry can fix it**, because the boundary is per repository and
+these are 1 449 third-party repositories — the prescribed owner fix would not have worked.
+🟢 **The standing rule therefore holds harder than `p434` could show, and `p435` publishes
+no star column at all.**
+
+🟢 **And the remedy that does exist is better than the one prescribed.**
+
+    git clone --depth 1 --bare --filter=tree:0 https://github.com/<slug>    # ~0.5 s, ~270 KB
+
+returns the HEAD commit object — hence its committer date **and** its timezone offset, the
+same channel `gate-offset-region` places regions with. Over the whole permissive arm:
+**1 449 dated, 0 failures.** 627 within 30 days, 195 older than two years. 🔵 **Recency is
+also the better discriminator on this base's own stated grounds** — `Trend 9` (a permissive
+licence has a shelf life) and `Trend 13` (the supply has a currency problem) — and unlike a
+star count it runs from `make` (`make promotion-heads`, `make gate-recency`, 18 offline
+controls).
+
+### 🟢 `Gap 434-C` — **CLOSED on the shape it prescribed, and the supply half was inside this base**
+
+`Gap 434-C` recorded a third consecutive EMEA sub-regional nil and prescribed *"stop running
+`AI education EMEA {year} adoption regulation players` and run per-country ministry legs
+instead (`UK DfE`, `Bundesministerium`, `Nordic`). Cost: one pass, four legs."* 🟢 **Four
+legs run, four paid, plus a fifth (Africa) that paid partially and returned an explicit
+nil.** Full detail on `intel/market.md` under EMEA; the load-bearing items:
+
+- 🟢 **UK:** DfE support materials refreshed **19 May 2026**; product safety standards
+  updated **19 January 2026**; **44 %** of teachers using generative AI in 2024–25; **43 %**
+  self-rating confidence at 3/10; ~**half of schools with no AI policy**.
+- 🟢 **DACH:** 🔴 **no federal school AI strategy exists** — education is *Länder*
+  competence, which is the finding. KMK recommendations October 2024; Digitalpakt ~**€1.6 bn**
+  for 2025; Telekom-Stiftung 2026: **57 % of teachers feel unsure**; AI4Teachers
+  (Rhineland-Palatinate, Nov 2025, multiplier model) and 15 Bavarian model schools.
+- 🟢 **Nordic:** 🆕 **Norway's near-total prohibition of generative AI for grades 1–7**,
+  announced **19 June 2026** by PM Støre, grades 8–10 under direct supervision only, in
+  force from the start of the 2026–27 school year. Plus 39 AI-guidance documents across 12
+  Nordic universities, short on worked examples; Iceland least prescriptive. 🔴 **Nil for
+  Finland, Sweden and Denmark** on national school guidance and on adoption rates.
+- 🟢 **Gulf:** 🆕 **UAE Cabinet AI curriculum for all public and private schools**,
+  announced **2 September 2026**, ~**22 000** educators to be trained, AI merged with
+  Design/Innovation/Computer Science into one subject across three cycles. Saudi Arabia's
+  national AI curriculum from 2025–26 with AI outcomes in the national assessment system.
+- 🟡 **Africa:** `AI Research Foundations` at **30 universities** in Nigeria, Ghana, Kenya
+  and South Africa, **2026–2028**; Experience AI reaching **1 142** Nigerian secondary
+  educators in year one. 🔴 **Nil on ministry-level curriculum for Kenya and South Africa.**
+
+🔵 **The lesson, recorded because it is the third time:** `p425`, `p427` and now `p435` all
+found that the corpus or a narrower query held what a prescribed leg reported as absent.
+**Nothing about EMEA was unmeasurable; the query shape and the denominator were wrong.**
+
+### 🟡 `Gap 434-D` — **CARRIED, unchanged, and deliberately not touched**
+
+`gate-dates` cannot distinguish the stale EU August-2026 claim from a genuine non-EU
+August-2026 commencement, because `SUBJECT` matches a bare `high-risk` with no jurisdiction
+term required. The prescribed fix is an EU-anchor arm plus two controls, priced at *"one
+pass, one regex arm, two controls."* 🔴 **`p435` did not spend that pass**, because
+`Gap 434-A` was priced as the higher-value leg and was. 🟢 **No new sentence on these shelves
+trips it** — this pass's UAE and Norway dates are commencements phrased as *"in force from"*
+and *"announced"*, which form no candidate. 🟡 **Priority unchanged: below a measurement leg,
+above a prose fix**, and the fixture is already written down in `p434`'s entry above.
+
+### 🔴 `Gap 435-A` — THE PROMOTION PREDICATE IS NOT A LICENCE TEST, AND THIS BASE HAS NO INSTRUMENT FOR WHAT IT ACTUALLY IS
+
+`gate-promotion` asks *is this permissive and unshelved?* — and the complete grade table says
+**1 449 addresses** answer yes. 🔴 **So the predicate is not the question.** The real question
+is *does this belong on a recommendation shelf?*, and this pass answered it **by hand**:
+licence (census), liveness (recency channel), then a human read of the README, which rejected
+two of its own fresh permissive candidates (`arvoreeducacao/seedling`, a coding-interview
+sandbox; `CENIA-DEV/multilingual-translator-app`, a translator) as not education components
+at all.
+
+🔵 **Why `p400-candidate-membership` is not the answer**, so a successor does not re-spend the
+leg: that instrument answers *is this address already shelved* — it ran over this pass's
+24-row slate and returned `SHELVED-EXACT` for all 24, correctly, because they are all on the
+trend record. **Membership and fitness-to-recommend are different questions.**
+
+🟢 **Remedy and cost, measured not guessed.** The one conjunct that is both discriminating
+and offline is **in-domain-ness**, and a slug-vocabulary filter over the 627-row fresh
+permissive slate cuts it to **228** — still too many to shelve, and it is a *string* test,
+which is `Trend 25`'s error class waiting to happen. 🔴 **There is no cheap instrument for
+this**, and that should be said rather than half-built: the honest shape is a gate that
+**reports the fresh-permissive-unshelved slate as a backlog with a denominator** and requires
+a pass to record a verdict per row — promote, decline-with-reason, or defer — so the backlog
+shrinks monotonically and a decline is never re-litigated. **Cost: one pass for the verdict
+ledger plus its notation, then ~200 rows per pass of human reads.** 🟡 **Priority: high, but
+it is a process instrument, not a detector** — and the reason to build it is that `p433`,
+`p434` and `p435` each rediscovered part of the same backlog independently.
+
+### 🔴 `Gap 435-B` — THREE CLAIMED PROMOTIONS NEVER LANDED, AND A FULL-FILE REWRITE IS THE MECHANISM
+
+`agents/trending.md` records **`Promoted:` `CogitoNTNU/TutorAI` … → `agents/top.md`** with a
+first-hand grant (MIT, 1 140 B) and a placement (EMEA, Norway). 🔴 **It is not on
+`agents/top.md`.** 🟢 **It is on `archive/2026-10-21-p351-pre-rewrite/agents-top.md` and
+`archive/2026-10-21-p355-pre-rewrite/agents-top.md`** — so the row landed and a later
+full-file rewrite dropped it. Two further addresses from the same block,
+`Haozhe-Xing/agent_learning` and `kaveheng/GenAi-in-education`, were declared promoted to
+`repos/foundations.md`, are absent from it, and are in the unpromoted set.
+
+🔴 **And the deletion was load-bearing.** The archived `intel/market.md` cites
+`CogitoNTNU/TutorAI` by name in *"the EMEA supply side is now seven placed permissive rows
+and is no longer regulation-only."* **The claim survived the rewrite; the evidence under it
+did not** — and this register then carried an EMEA nil for three passes on shelves that had
+been silently thinned. 🟢 `CogitoNTNU/TutorAI` is restored to `agents/top.md` this pass,
+marked as restored rather than discovered.
+
+🔵 **Why a gate was not built here.** There are **19** `Promoted` claims across the two trend
+shelves in at least **four different notations** (a table cell reading `**Promoted**`, a cell
+reading `**Promoted** to \`agents/top.md\` — …`, a prose `**Promoted:** <slug> … → <file>`,
+and `**Promoted to foundations this pass**`). 🔴 **A regex over that prose would under-report
+and call it green**, which is worse than no gate. **Remedy and cost: a notation first — one
+line per promotion in a committed ledger with the slug and the target file — then a gate that
+joins the ledger against the live shelves. One pass for the notation plus the gate; the
+19 historical claims are adjudicated by hand in the same pass.** 🔴 **There are 12 `archive/`
+rewrite snapshots on this tree, so the population of silently-dropped rows is bounded but
+unmeasured**, and that measurement is the first thing the ledger pass should do.
+
+### 🔴 `Gap 435-C` — CHINA'S MoE AND JAPAN'S MEXT RETURNED NOTHING, ON A SHAPE `p427` ALREADY MEASURED AS WRONG
+
+The APAC leg queried China's Ministry of Education and Japan's MEXT by **ministry name in
+English alongside the country name** and both returned **nothing** — no education AI
+instrument, no guidance date, no adoption figure. 🔵 `p427` measured why: the leg that pays
+is the **instrument's own name in the jurisdiction's own language**, and `p407` has the
+working specimens on this tree (`MEXT 文部科学省 生成AI ガイドライン`, `人工智能+教育 MOE`).
+🔴 **This pass ran the wrong shape anyway**, which is a process defect and is recorded as one.
+**Remedy: two legs in-language, using `p407`'s exact query strings. Cost: one pass, two
+legs.** 🟡 Priority: below `Gap 435-A`; the two jurisdictions are the largest unmeasured
+education systems on these shelves and India, Korea, Taiwan and Vietnam are all placed.
+
+### 🟡 `Gap 435-D` — THE NON-PERMISSIVE ARM OF THE CENSUS IS UNDATED, AND 83 PAYLOADS HAVE NO FAMILY
+
+Two stated reach bounds on this pass's own census, so neither is mistaken for data:
+
+🟡 **1 001 non-permissive rows carry `head_committed = -`.** The recency sweep was run over
+the permissive arm only, deliberately — a stale AGPL row is not more shelvable for being
+fresh. **Cost to close: ~1 001 treeless clones, ~9 min at `parallelism=20`.** 🔵 Worth doing
+only if a pass needs the copyleft tier's currency, e.g. to date the platform layer.
+
+🟡 **83 addresses classify as `UNRECOGNISED`** — a payload served 200 whose earliest title
+line matched no family in `p228`'s table. 🔴 **Each is a real licence file that a human has
+to read; none is an absence**, and conflating the two would put `NO-GRANT` at 583 instead of
+500. **Cost to close: 83 human reads, or one pass extending `p228`'s title table with the
+families they turn out to be** — and the second is the better buy, because an unrecognised
+family recurs.
+
+### 🔴 `Gap 433-D` — THE ROTATION, sixth consecutive pass — and `p435` writes the advance anyway
+
+`rotation.json` in `gmilano/globant-kb` reads **`next: 8`**, `last_updated: 2026-08-02`,
+`last_industry: technology`. This is **p435** on education; eleven industries still have
+**zero** passes from this rotation. 🟢 `p434` established the mechanism and it is unchanged:
+the scheduled run is constrained to a **designated development branch** and instructed never
+to push elsewhere without explicit permission, **so `main` cannot be advanced by this run by
+construction.** 🟢 **`p435` writes the advance (`next: 9`, `last_industry: education`) to its
+own designated branch**, where it is correct and inert until someone merges it. 🔴 **What
+would close it: one merge, or pointing the scheduler at `main` for this one file.** 🔵 Each
+successive pass on education is still productive — this one closed three registered gaps —
+but the brief's stated priority order is not being executed, and that is a cost of exactly
+one merge.
+
+---
+
 ## 🆕 `p434`
 
 ### 🟢 `Gap 433-A` — **CLOSED with a wired instrument, and its prescribed predicate REFUTED**

@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 435 — reads 2026-10-25, commit 2026-10-25 — **`Gap 434-A` is CLOSED: all 2 450 unpromoted addresses graded first-hand, and the result REFUTES `gate-promotion`'s own predicate — permissiveness is 59.1 % of this backlog, so it classifies rather than detects. 🟢 `Gap 434-C`'s three-pass EMEA nil is CLOSED on the per-country shape it prescribed, and the supply half of the answer was inside this base all along: twelve permissive EMEA addresses, ungraded on its own trend record. 🔴 And one row was promoted to `agents/top.md` once already — a full-file rewrite deleted it, while the market claim that rested on it survived.**
+
+🔵 **No date straddle.** Every leg — eight WebSearch legs (four regional, one added for
+Africa, three narrow), 2 450 licence-payload reads, 1 449 `git clone --filter=tree:0` HEAD
+reads, two `git ls-remote` identity probes and seven egress measurements — happened
+**2026-10-25**, and the commit lands **2026-10-25**, so `updated:` carries one date on every
+file.
+
+🟢 **The inherited commit was GREEN, and it is reported first.** A baseline
+`make commit-gates` against `dc02b83`, run **before this pass wrote a line**, exited **0** —
+**57 blocking gates green**. After this pass's writes the suite runs **58**, the new one
+being `gate-recency` (18 offline controls).
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 434-A` CLOSED at the price it was quoted.** `compose/code/p435-promotion-sweep`
+  ran `p228-shelf-gate`'s unchanged ladder over every unpromoted address: **2 450 probed,
+  1 950 grants read off `raw.githubusercontent.com`, 500 `NO-GRANT`, 27 families, ~3 min at
+  `parallelism=20`, 0 ungraded remaining.** Evidence:
+  `evidence/promotion-backlog-grants.2026-10-25-p435.tsv`.
+- 🔴 **The gate it was built for does not survive its own population.** `PERMISSIVE and
+  unshelved` fired **twice** on a 7-row table and fires **1 449 times — 59.1 %** on the
+  complete one. A predicate that selects the majority of its population is a classifier, not
+  a detector. 🟢 The complete table was deliberately **not** handed to the blocking arm;
+  `gate-promotion` keeps its pinned table and the census is evidence with a non-blocking
+  census target. Registered as `Gap 435-A`.
+- 🟢 **`Gap 434-B` CLOSED, with its diagnosis corrected and its prescribed remedy refuted.**
+  `api.github.com` is **not** dead here: **200** on `/rate_limit` (authenticated,
+  15 000/h) and **200** on an attached repository. The third-party **403** is a
+  *per-repository authorization* refusal whose body says so — **so no egress allowlist entry
+  could ever have fixed it** for 1 449 repositories. 🟢 The replacement channel is better:
+  `git clone --depth 1 --bare --filter=tree:0` costs **~0.5 s and ~270 KB** and returns the
+  HEAD commit date **and** timezone offset. **1 449 dated, 0 failures.** This pass publishes
+  **no star column at all.**
+- 🟢 **A tier no pass had shelved.** Connectors for the platform a national school system
+  actually runs — **IServ** (Germany), **Librus Synergia** (Poland), **Smartschool**
+  (Flanders), **EduPage** (Slovakia/CEE), **Skola24** (Sweden), **DTU Learn** (Denmark),
+  **NEIS** (Korea), **Schoology + StudentVUE + Ion** (one large US district) — and state
+  bodies publishing their own production code: Norway's **Udir** exam administration
+  (Apache-2.0), three **DFE-Digital** services, **Oak National Academy's** curriculum API and
+  lesson assistant. **16 rows to `agents/top.md`, 8 to `repos/foundations.md`, 12 of them
+  EMEA.**
+- 🟢 **`Gap 434-C` CLOSED on the shape it prescribed** — per-country ministry legs, four run,
+  four paid: UK DfE (materials refreshed 19 May 2026; **44 %** of teachers using generative
+  AI, **43 %** rating confidence 3/10, ~half of schools with no policy); DACH (🔴 **no federal
+  school AI strategy — education is *Länder* competence**; KMK Oct 2024; **57 %** of teachers
+  unsure); Nordic (🆕 **Norway's near-total ban on generative AI for grades 1–7**, announced
+  **19 June 2026**, grades 8–10 supervised only, in force from the 2026–27 school year); Gulf
+  (🆕 **UAE Cabinet AI curriculum for all public and private schools**, 2 September 2026,
+  ~**22 000** educators trained). A fifth leg on Africa paid partially and returned an
+  explicit nil on Kenyan and South African ministry curricula.
+- 🔴 **`CogitoNTNU/TutorAI` was promoted to `agents/top.md` once already and a rewrite deleted
+  it.** It survives in two `archive/*-pre-rewrite/agents-top.md` snapshots, and the archived
+  `intel/market.md` cites it by name in *"the EMEA supply side is now seven placed permissive
+  rows."* **The claim survived; the evidence under it did not.** Two further claimed
+  promotions from the same block never landed either. Restored this pass; registered as
+  `Gap 435-B` with the notation-first remedy, because 19 `Promoted` claims exist in at least
+  four notations and a regex over them would under-report and call itself green.
+- 🟡 **Declined on inspection, both permissive and both fresh:**
+  `arvoreeducacao/seedling` (a coding-interview sandbox from an education company) and
+  `CENIA-DEV/multilingual-translator-app` (a translator). 🔵 This pass's own candidates are
+  the proof that `permissive + alive` is a filter, not a verdict.
+- 🔵 **One identity collapse caught before it became two rows:**
+  `oaknational/oak-curriculum-api` and `oaknational/oak-openapi` return the same HEAD under
+  `git ls-remote` (`0561df5aac12`). One row shelved.
+- 🔴 **`Gap 433-D`, sixth consecutive pass: the rotation has still not rotated.**
+  `rotation.json` in `gmilano/globant-kb` reads `next: 8`, `last_updated: 2026-08-02`. The
+  advance (`next: 9`, `last_industry: education`) is written to this run's designated branch,
+  where it is correct and inert. **Cost to close: one merge.**
+
+🔵 **Supply note for an engagement:** for the first time in six passes the permissive
+**foundation** tier grew — by **eight** rows, all of them published by a public authority —
+and the new supply is **EMEA-origin**, breaking five consecutive passes of APAC-only
+permissive additions. 🔴 The education-ERP sweep's **standing nil is unchanged**: a
+school-platform connector is not an ERP, Udir's exam administration is not an SIS, and FBIT
+is finance analytics over DfE data rather than a finance system.
+
+---
+
+🔵 **The address census, re-derived as the last act before the commit — restated, not
+back-fitted.** `gate-census-currency` and `gate-union-currency` both fired on this pass's
+drafts, exactly as `p352` and `p376` are designed to, because 24 promoted rows and this
+pass's write-ups changed the harvested denominator.
+
+**2 795** harvested shapes on channel U → **39** are not addresses → **2 756 addresses**.
+
+🔵 **2 756** channel-U addresses and **3 291** channel-B survivors give
+**3 658 addresses over both channels**.
+
+🔵 Channel U is **unchanged** at 2 756 (`MATCH`): every one of the 24 promoted addresses was
+already in the harvested corpus — which is the whole point of this pass. What moved is the
+**shape** count (2 794 → 2 795) and the rejection count (38 → 39), from one new
+`NAV-NAMESPACE` shape in this pass's prose. 🔵 The inflation this pass's writes added to the
+harvested denominator is **1.40 %**.
+
+---
+
 ## Pass 434 — reads 2026-10-25, commit 2026-10-25 — **`Gap 433-A` is CLOSED by the instrument `p433` declined to build — and that instrument REFUTES the predicate the gap prescribed, on two independent measurements. 🟢 `Gap 433-B`, called "the single most consequential open question for a North America engagement", is CLOSED restrictively. 🔴 And `p433`'s "saturated frontier" rested on a denominator that contained the backlog: re-running its own query returns a 4 771 ★ address as the top hit.**
 
 🔵 **No date straddle.** Every leg — four regional WebSearch legs, four global legs, two GitHub

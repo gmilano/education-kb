@@ -9,6 +9,111 @@ updated: 2026-10-25
 > Concrete recipes: named repos, named licences, and how they wire together.
 > Every component below was licence-verified at a commit SHA on 2026-10-25.
 
+## 🆕 Pattern AN — `p435` The **national school-platform connector** engagement: the EMEA build that does not ask the client to replace anything
+
+🔵 **The engagement this base could not describe until now.** Every platform pattern here
+starts by choosing a base — OpenOLAT or Kolibri if the client cannot take copyleft, Moodle
+or Open edX if it can. 🔴 **A national school system is not going to migrate.** IServ runs
+German state schools, Librus Synergia runs Polish gradebooks, Smartschool runs Flanders,
+EduPage runs Slovakia, Skola24 runs Swedish timetables. The buyable engagement is a
+**permissive agent layer over the incumbent**, and `p435`'s grade census of this base's own
+backlog finally produced the addresses for it.
+
+### The stack, with the grant on every piece — all read first-hand at HEAD on 2026-10-25
+
+| Layer | Component | Grant (payload read first-hand) |
+|---|---|---|
+| **Platform connector** (pick the client's) | [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) 🇩🇪 · [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) 🇵🇱 · [`MauroDruwel/Smartschool-MCP`](https://github.com/MauroDruwel/Smartschool-MCP) 🇧🇪 · [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) 🇸🇰 · [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) 🇩🇰 · [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) 🇸🇪 | 🟢 **MIT** · 1 069–1 090 B · digests in `agents/top.md` |
+| **Registry / reference data** | [`DFE-Digital/get-information-about-schools`](https://github.com/DFE-Digital/get-information-about-schools) 🇬🇧 · [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) 🇰🇷 | 🟢 **MIT** · `LICENCE` 1 116 B · `e18299fd1942` / 1 068 B · `e82e1769aaaf` |
+| **Curriculum authority** | [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) 🇬🇧 | 🟢 **MIT** · 1 077 B · `0eeb9d32caed` |
+| **Agent runtime** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** · 11 357 B · `c71d239df917` |
+| **Teacher-facing capability** | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (ships its own evals) · [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | 🟢 **Apache-2.0** 11 357 B · `58d1e17ffe51` / 🟢 **MIT** 1 077 B · `d150aadcccd2` |
+| **Assessment evidence** | [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) (explainable, check by check) · [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (academic integrity) | 🟢 **MIT** · 1 068 B · `30a0bc0d48b4` / 1 084 B · `881163366572` |
+| **Eval gate** | [`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym) · [`shuangyan123/tutorbench`](https://github.com/shuangyan123/tutorbench) | 🟢 MIT / Apache-2.0 (code) — see `repos/foundations.md` Tier 9 |
+| **Obligation check** | [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | 🟡 **MIT** 1 065 B · `002af8f9b59c` — commercial funnel, verify coverage |
+
+### How it wires together
+
+1. **Pick the connector by the client's platform, not by preference.** One of the six rows
+   above, or Moodle/Canvas from `verticals/solutions.md` if that is what they run. The
+   connector is read-only on first delivery — `iserv-mcp`'s single write tool
+   (`mark_parentletter_read`) stays disabled until step 6.
+2. **Pin the connector.** Every one of these is an *unofficial* client; fork it and pin the
+   commit named in `agents/top.md`. 🔴 Do not depend on the upstream default branch for a
+   system of record.
+3. **Resolve the institution against the registry.** GIAS in England, NEIS in Korea; the
+   school's URN or code becomes the tenancy key for everything downstream. Without this the
+   deployment has no stable identifier for "which school".
+4. **Anchor content to the curriculum authority** where one publishes — Oak's API for
+   England. 🟢 `Trend 11` says jurisdictional curriculum content is the defensible layer;
+   this is how you get it without licensing it.
+5. **Run the teacher-facing capability only.** Lesson planning, differentiation, marking
+   support, administration. 🔴 **No student-facing generative surface in phase 1** — see the
+   age gate below.
+6. **Gate every write behind the staged artefact.** Draft → named human → recorded
+   approval → write. This is `Pattern AH`'s draft-and-sign, unchanged, and it is what makes
+   the connector's write tools safe to enable.
+7. **Ship the evidence pack with the build**, not after it: `tutor_gym` / `tutorbench` for
+   the capability, `autograder`'s per-check output for the marking claim, `dolos` for the
+   integrity question the buyer will ask.
+
+### 🔴 The six things that will bite, named up front
+
+1. 🔴 **Every connector is unofficial, and the READMEs say so.** `iserv-mcp` warns that
+   instances differ and to test against the school's own installation; `dtu-learn-mcp` is a
+   student project and tells you to use it with your own account only. **No API stability
+   promise, no vendor escalation path.** Price a connector-maintenance line into the
+   engagement; it is not a one-off integration.
+2. 🔴 **An age gate is a hard requirement in two jurisdictions and a design requirement in
+   all of them.** Norway prohibits generative AI for grades 1–7 from the start of the
+   2026–27 school year and permits grades 8–10 only under direct teacher supervision;
+   NYCPS has a 2K-8 moratorium. 🟢 `Trend 32` has the requirement table — a per-learner
+   grade band enforced at the model boundary, plus **supervision mode as a distinct runtime
+   state**, not a UI toggle.
+3. 🔴 **The age gate needs the learner's age, which is new PII exposure.** Take the band
+   from the roster system of record, never infer it, never persist it past the session, and
+   never send it to the model provider. A compliance feature that creates a data-protection
+   breach is the most common way this build fails its own audit.
+4. 🔴 **Student credentials are the connector's authentication model.** Most of these clients
+   authenticate as the *user* — a student's or parent's own login. 🔴 **An institutional
+   deployment cannot hold those**, so phase 1 is teacher-account scoped and any
+   student-scoped feature needs the platform vendor at the table, which returns you to
+   point 1.
+5. 🟡 **Germany has no federal buyer.** Education is *Länder* competence and there is no
+   federal school AI strategy; sixteen Länder are sixteen procurements. 🟢 Name the Länder
+   programme in the pitch — **AI4Teachers** (Rhineland-Palatinate, multiplier model) or
+   Bavaria's 15 model schools — because that is the budget line that already exists.
+6. 🟡 **The EU obligation clock is not the delivery clock.** Annex III for stand-alone
+   education AI runs to **2 December 2027**; Article 50 transparency has applied since
+   **2 August 2026**. 🔴 A teacher-facing build in scope of Article 50 has a *live*
+   obligation today, which is the half that gets forgotten.
+
+### 🟢 Why the proposal is stronger than a platform build, in one line each
+
+- **The client's own ministry already published the code.** Udir's exam administration
+  (Apache-2.0), three DfE services (MIT), Oak's curriculum API and lesson assistant (MIT) —
+  a proposal can cite the buyer's own repositories rather than a vendor's case study.
+- **Nothing is replaced**, so there is no migration risk line to argue away.
+- **Every component is permissive**, so the derivative ships without a copyleft conversation
+  — which is not true of any Moodle-based alternative.
+- **The teacher-facing scope clears an age restriction by construction**, so Norway's
+  prohibition and NYCPS's moratorium are not objections to be managed.
+
+### Shape and duration
+
+| phase | weeks | output |
+|---|---|---|
+| 0 — address audit (`Pattern Z`) + connector selection | 1 | the six-row table narrowed to one, pinned at a commit |
+| 1 — registry + curriculum anchoring | 2 | institution resolved, curriculum reachable, tenancy key fixed |
+| 2 — teacher-facing capability + eval gate | 3–4 | the capability and the evidence pack that scores it |
+| 3 — age gate + supervision mode + PII review | 2 | `Trend 32`'s requirement table satisfied and reviewed |
+| 4 — write path behind draft-and-sign | 2 | connector write tools enabled, approvals recorded |
+| **total** | **10–11 weeks** | a permissive agent layer over the platform the client already runs |
+
+🟡 **What this pattern does not claim.** It is a *teacher-facing* build. A student-facing
+tutor over a national platform is a different engagement with a different legal surface, and
+in Norwegian primary education from late August 2026 it is **not available at all**.
+
 ## 🆕 Pattern AL — `p432` The IEP drafting assistant that is **not** a system of record (the one NA special-education engagement that is legal by construction)
 
 **Why this pattern exists.** `Pattern AH` establishes draft-and-sign as the architecture that

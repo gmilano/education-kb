@@ -20,10 +20,22 @@ updated: 2026-10-25
 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | **Apache-2.0** | `96f33faaf028` | `LICENSE` 11 357 B · `c71d239df917` | Minimal agent framework, EU-domiciled. The base for a bespoke tutor/grader when a full tutoring platform is too much. |
 | [openfun/richie](https://github.com/openfun/richie) | **MIT** | `7cf513c235ee` | `LICENSE` 1 079 B · `e4b2a3148135` | Django/React course-portal CMS (France Université Numérique). The public-sector MOOC front-end. |
 | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL** (Apache-derived) | `4debc94780cc` | `LICENSE` 11 120 B · `0688f62d04f1` | Higher-ed consortium LMS. Permissive in practice — but record it as ECL-2.0, **not** Apache-2.0. |
+| [Utdanningsdirektoratet/PAS2-Public](https://github.com/Utdanningsdirektoratet/PAS2-Public) | **Apache-2.0** | `489129c42c9d` | `LICENSE` 11 325 B · `cb5e8e7e5f4a` | 🆕 `p435`. **Norway's Directorate for Education (Udir) publishing the public code of its new exam and test administration services (PAS2)**, issue tracker and wiki open to the public. 🟢 A national assessment authority's own administration stack under a permissive grant — the single strongest EMEA public-sector row on this file, and the counterpart to Norway's own age-tiered AI restriction. Default branch is `master`. |
+| [DFE-Digital/get-information-about-schools](https://github.com/DFE-Digital/get-information-about-schools) | **MIT** | `ad46faf42690` | `LICENCE` 1 116 B · `e18299fd1942` | 🆕 `p435`. England's **school registry** service (GIAS) — the authoritative establishment dataset behind every DfE service. 🔵 Note the grant is at `LICENCE`, the British spelling: a ladder that only tries `LICENSE` reports this UK government repository as ungranted. |
+| [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** | `a2d4f5fdec58` | `LICENSE` 1 092 B · `c561ea849ed6` | 🆕 `p435`. The DfE's national teaching job service (Rails + PostgreSQL + Redis), source **and** infrastructure definitions. The reference for a public-sector education service a client can read end to end. |
+| [DFE-Digital/education-benchmarking-and-insights](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** | `3cdbf2cbf47b` | `LICENSE` 1 091 B · `5a22fb5576a5` | 🆕 `p435`. **FBIT** — the DfE's school financial benchmarking and insights tool: compare resource use against similar schools, interrogate the financial data, support governor oversight. 🟢 The one row on this file that is a *finance* analytics surface over school data, which is where a UK trust-level engagement starts. |
+| [oaknational/oak-curriculum-api](https://github.com/oaknational/oak-curriculum-api) | **MIT** | `0561df5aac12` | `LICENSE` 1 077 B · `0eeb9d32caed` | 🆕 `p435`. **Oak National Academy's** curriculum API — England's national-curriculum content as a documented, versioned OpenAPI surface. 🟡 `oaknational/oak-openapi` is the **same repository** (identical HEAD under `git ls-remote`, and the repo's own badges use that name); one row, two spellings, shelved once. |
+| [instructure/ims-lti](https://github.com/instructure/ims-lti) | **MIT** | `724f1ae45315` | `LICENSE.txt` 1 068 B · `f7e95fbe6fa9` | 🆕 `p435`. **Instructure's own** Ruby IMS-LTI implementation — the Canvas vendor publishing the integration library under MIT. 🟢 The vendor-maintained half of the LTI layer that `Trend 19` says goes stale at the standards body and is carried by the vendor fork. |
+| [hyunbinseo/neis-school-info](https://github.com/hyunbinseo/neis-school-info) | **MIT** | `5c9ecede5208` | `LICENSE` 1 068 B · `e82e1769aaaf` | 🆕 `p435`. TypeScript client for **NEIS**, Korea's national education information open-data portal (`open.neis.go.kr`) — school basic information. 🟢 The APAC analogue of GIAS above: a national school registry reachable from code. 🟡 The README warns the upstream dataset is not routinely reconciled, so treat records as reported, not current. |
+| [krzysztofbury/librus-python-api](https://github.com/krzysztofbury/librus-python-api) | **MIT** | `fba65fe807eb` | `LICENSE` 1 071 B · `22e7ab2dbddc` | 🆕 `p435`. The independent Python client for **Librus Synergia** that `librus-mcp` (on `agents/top.md`) is built on — the library layer under the Polish gradebook connector. 🔵 Byte-identical MIT payload to the server, same copyright holder: one author, two addresses, no third-party-holder question. |
 
-**7 verified permissive foundations** in the platform/agent tiers above. Each resolved under
-`git ls-remote` and each licence was read from the repository's own payload. 🆕 `p431` adds a
-further **4** in **Tier 9 — the evaluation layer** below, for **11** permissive foundations in all.
+**15 verified permissive foundations** in the platform/agent tiers above. Each resolved under
+`git ls-remote` and each licence was read from the repository's own payload. 🆕 `p435` adds the
+**eight** above — the **public-authority** tier: a national assessment authority (Udir), three
+UK Department for Education services, England's national-curriculum API, Korea's national school
+registry client, the Canvas vendor's own LTI library and the client library under the Polish
+gradebook connector. 🆕 `p431` adds a further **4** in **Tier 9 — the evaluation layer** below,
+for **19** permissive foundations in all.
 
 ## 🔴 Copyleft foundations — usable, but integrate, do not vendor
 
@@ -40,6 +52,53 @@ further **4** in **Tier 9 — the evaluation layer** below, for **11** permissiv
 > Moodle and Chamilo ship a **byte-identical** GPL-3.0 payload (`8ceb4b9ee5ad`) — the stock
 > FSF text. Recorded so a digest sweep does not misread the collision as a fork.
 
+
+## 🆕 `p435` — The permissive foundation tier grew for the first time in six passes, and what grew it was a **census**, not a search
+
+`p434`, `p433`, `p432` and the three before them all reported this tier unchanged. 🟢
+**This pass added eight rows, and none came from a web search.** They came from grading the
+2 450 unpromoted addresses this base already held (`Gap 434-A`, closed:
+`compose/code/p435-promotion-sweep`, evidence in
+`evidence/promotion-backlog-grants.2026-10-25-p435.tsv`).
+
+### 🔴 The number that explains six passes of "unchanged"
+
+| arm of the unpromoted backlog | n | share |
+|---|---|---|
+| **PERMISSIVE** (MIT 1 022 · Apache-2.0 330 · BSD/ISC/CC0/ECL/Unlicense 97) | **1 449** | **59.1 %** |
+| `NO-GRANT` — 404 on all eight paths × two refs | 500 | 20.4 % |
+| GPL / AGPL / LGPL family | 329 | 13.4 % |
+| other / unrecognised | 172 | 7.0 % |
+| **total probed** | **2 450** | 100 % |
+
+🔴 **The permissive supply was never scarce — it was unexamined.** Six passes reported "no
+growth" while 1 449 permissive addresses sat on the trend record ungraded. This also
+sharpens `Trend 10` rather than refuting it: the permissive supply really is in the agent
+and integration layers, and the **platform** tier is still almost entirely copyleft — what
+changes is that the agent/integration layer turns out to be an order of magnitude larger
+than this file's seven rows suggested.
+
+### 🟢 What the eight rows have in common: a public authority wrote them
+
+Udir's exam-administration services, three DfE services, Oak National Academy's curriculum
+API, Korea's NEIS registry client — **state education bodies publishing their own
+production code under MIT or Apache-2.0.** 🔵 That is a different kind of foundation from a
+framework: it is the *schema and the service contract a national system already runs*, so a
+build on top of it inherits the jurisdiction's own data model instead of inventing one.
+
+### 🔵 And one ladder detail worth more than it looks
+
+`DFE-Digital/get-information-about-schools` carries its grant at **`LICENCE`** — the
+British spelling. `p228-shelf-gate`'s ladder tries it; a ladder that stops at `LICENSE`,
+`LICENSE.md` and `LICENSE.txt` reports a UK government repository as **ungranted**. 🟢 The
+ladder earns its eighth path here, on a real row, for the first time on these shelves.
+
+### 🟡 The reach bound, stated as one
+
+The recency channel (`head_dates.sh`) was run over the **permissive arm only**: 1 449
+addresses dated, 0 failures. The 1 001 non-permissive rows carry `head_committed = -` in
+the evidence file. 🔵 That is a deliberate bound, not a gap in the data — a stale AGPL row
+is not more shelvable for being fresh.
 
 ## 🆕 `p434` — The permissive foundation tier is unchanged for a **fifth** pass, and this time the sweep says *why* with a number
 

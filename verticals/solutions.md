@@ -56,6 +56,70 @@ not the platform. A studio told *"Canvas is MIT"* would ship AGPL-3.0.
 | **Blackboard Learn** | 🟢 **MIT** | MCP servers over Blackboard Learn's REST API. |
 | **SCORM Runtime** | 🟢 **MIT** | SCORM 1.2/2004 packaging and playback. |
 
+## 🆕 `p435` — The platform question has a **third** answer, and it is the platform the client is already running
+
+This file has framed the platform decision as *which open-source LMS do we base on* —
+OpenOLAT or Kolibri for a permissive base, Moodle or Open edX if copyleft is acceptable.
+🟢 **`p435` adds a third option the shelf did not carry: do not replace the platform at
+all — speak to it.** The grade census of this base's own backlog
+(`compose/code/p435-promotion-sweep`, 2 450 addresses graded first-hand) surfaced a tier of
+**MIT connectors for the platform a national school system actually runs**.
+
+### 🟢 The national school-platform tier — every grant read first-hand on 2026-10-25
+
+| Platform | Where it is the default | Connector | Grant | HEAD |
+|---|---|---|---|---|
+| **IServ** | German state schools | [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | 🟢 **MIT** · 1 090 B · `5dc99bd5061f` | `8afdea14fbcd` @ 2026-10-25 |
+| **Librus Synergia** | Polish schools | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) + [`librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | 🟢 **MIT** · 1 071 B · `22e7ab2dbddc` | `e12e36f24224` @ 2026-10-25 |
+| **Smartschool** | Flanders (Belgium) | [`MauroDruwel/Smartschool-MCP`](https://github.com/MauroDruwel/Smartschool-MCP) | 🟢 **MIT** · 1 069 B · `b414ff32815f` | `ab3fa81f857f` @ 2026-10-14 |
+| **EduPage** | Slovakia and CEE | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | 🟢 **MIT** · 1 070 B · `e99290e1540b` | `b35ce653d2c9` @ 2026-10-23 |
+| **Skola24** | Swedish municipal timetables | [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) | 🟢 **MIT** · 1 070 B · `8b34b498bb1f` | `fdbc9349b20f` @ 2026-10-25 |
+| **DTU Learn** (Brightspace / D2L) | Denmark's technical university | [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | 🟢 **MIT** · 1 079 B · `4f21e3f0f9fc` | `9444a1fd5199` @ 2026-10-07 |
+| **NEIS** | Korea's national education data portal | [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) | 🟢 **MIT** · 1 068 B · `e82e1769aaaf` | `5c9ecede5208` @ 2026-09-27 |
+| **Schoology + StudentVUE + Ion** | Fairfax County Public Schools (US) | [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) | 🟢 **MIT** · 1 073 B · `cd9e736254f8` | `7d9dfbfc32bb` @ 2026-09-28 |
+| **Artemis** | TUM and its partner universities | [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | 🟢 **MIT** · 1 091 B · `6b9b9eda00d6` | `a7584174bd3d` @ 2026-10-25 |
+| Saigon University portal | Vietnam | [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | 🟢 **MIT** · 1 068 B · `0b02f0945515` | `d5209305d13e` @ 2026-10-16 |
+
+🔴 **Why this changes the shape of a proposal, not just its parts list.** `Trend 10` and
+this file's own lead both say the platform tier is closed to permissive building — which is
+true and is why `verticals/solutions.md` leads with OpenOLAT and Kolibri. 🟢 **But a
+national school system is not going to migrate off IServ or Librus.** The engagement that
+is actually available is a permissive **agent layer over the incumbent platform**, and
+until this pass this file had no addresses for it outside Moodle and Canvas.
+
+🟡 **Each connector is unofficial.** Every README says so: `iserv-mcp` warns that instances
+differ and asks you to test against the school's own installation; `dtu-learn-mcp` is a
+student project and says to use it only with your own account. 🔴 **That is a contract
+risk, not a licence risk**, and it is the first question to settle in a deployment: an
+unofficial client against a system of record has no API stability promise and no vendor
+escalation path.
+
+### 🟢 The public-authority tier — the platform's *owner* publishing its own code
+
+| Authority | What is published | Grant | HEAD |
+|---|---|---|---|
+| **Utdanningsdirektoratet** (Udir, Norway) | [`PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) — the new exam and test administration services, with public issues and wiki | 🟢 **Apache-2.0** · 11 325 B · `cb5e8e7e5f4a` | `489129c42c9d` @ 2026-09-25 |
+| **Department for Education** (England) | [`get-information-about-schools`](https://github.com/DFE-Digital/get-information-about-schools) — the national school registry | 🟢 **MIT** · `LICENCE` 1 116 B · `e18299fd1942` | `ad46faf42690` @ 2026-10-21 |
+| **Department for Education** (England) | [`education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) — FBIT school finance benchmarking | 🟢 **MIT** · 1 091 B · `5a22fb5576a5` | `3cdbf2cbf47b` @ 2026-10-22 |
+| **Department for Education** (England) | [`teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) — the national teaching job service, source **and** infrastructure | 🟢 **MIT** · 1 092 B · `c561ea849ed6` | `a2d4f5fdec58` @ 2026-10-22 |
+| **Oak National Academy** (England) | [`oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) — the national curriculum as a documented API · [`oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) — its own AI lesson planner | 🟢 **MIT** · 1 077 B | `0561df5aac12` · `c6871efa8f08` |
+
+🟢 **This is the strongest procurement argument on this file for an EMEA public-sector
+engagement**, and it is a different argument from "open source is cheaper": the buyer's own
+ministry has already published the data model, the service contract and in Oak's case the
+reference AI application. A proposal can cite the client's own code.
+
+🟡 `oak-curriculum-api` and `oaknational/oak-openapi` are the **same repository** — identical
+HEAD under `git ls-remote` — so this file carries one row, not two.
+
+### 🔴 The education-ERP nil is unchanged, and this does not touch it
+
+`p433` and `p434` recorded a **standing nil** on a permissive education ERP, confirmed
+three passes running. 🔴 **Nothing above changes that.** A school-platform *connector* is
+not an ERP, Udir's exam administration is not a student information system, and FBIT is a
+finance analytics surface over DfE data rather than a finance system. The nil stands; what
+has changed is that the **integration** layer over a national incumbent now has addresses.
+
 ## 🆕 `p434` — The education-ERP nil is now a **standing** nil, confirmed a third consecutive pass, and one carried row is corrected
 
 🔴 **The sweep was run again verbatim** (`open source platform education ERP CRM MIT Apache`) and

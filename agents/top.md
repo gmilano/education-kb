@@ -53,8 +53,24 @@ licence payload at the commit shown. These are safe starting points for an engag
 | [cabbage2000-lab/textbook-writer-skills](https://github.com/cabbage2000-lab/textbook-writer-skills) | MIT | `e2b825072ba5` | `LICENSE` 1 064 B · `0d5a33d13ca9` | Courseware authoring as a **gated** UbD backward-design chain: teaching positioning → five-part gate → chapter-tree gate → four-stage chapter writing → review. Recomputes STEM claims, checks humanities citations against the source, and writes *"needs author confirmation"* where it cannot verify — the one authoring tool found that refuses to assert. Subject-agnostic core, pluggable subject profiles. 37 ★ / 12 forks. | APAC |
 | [wenflow-org/wenflow](https://github.com/wenflow-org/wenflow) | MIT | `1c86890946a3` | `LICENSE` 1 067 B · `b6fac57d4710` | 问流 WenFlow — learning-path agent that starts from the learner's **stated problem** rather than a syllabus: dialogue clarifies the goal, then it emits an executable path, teaches in rounds, schedules forgetting-curve review and tracks learning load on four named measures (LSS / KTL / LF / LSB). Ships an 18-page admin back-office **and a virtual-learner simulator**, which is the rarest part — it can be regression-tested without a cohort. Vue3 + Node.js + SQLite, self-hostable. 59 ★ / 19 forks. 🟡 Author calls it an early experimental prototype; read as a reference architecture, not a dependency. | APAC |
 | [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | MIT | `37ba5e28532d` | `LICENSE` 1 067 B · `5731a2d3ccea` | Local-first **adaptive-tutoring agent foundation** — a reference implementation of the runtime seam (agent runtime + SQLite learning-evidence store) with a civil-service-exam app built on it, for iOS and web via Capacitor. The one row on this shelf that separates *tutoring substrate* from *subject application*, so the substrate is reusable. 41 ★ / 7 forks. 🟡 Single author, early; the value is the `learning-evidence` schema, not the exam content. | APAC |
+| [chenning42/iserv-mcp](https://github.com/chenning42/iserv-mcp) | MIT | `8afdea14fbcd` | `LICENSE` 1 090 B · `5dc99bd5061f` | MCP server over **IServ** school portals — the platform German state schools actually run. Parent letters with full text and attachments, sick-notes and timetable; the one write tool (`mark_parentletter_read`) is gated behind `confirmed=true`. Unofficial, and the README says instances differ. 🟢 The parent-facing surface of `Trend 10` with a national platform behind it. | EMEA — Germany |
+| [krzysztofbury/librus-mcp](https://github.com/krzysztofbury/librus-mcp) | MIT | `e12e36f24224` | `LICENSE` 1 071 B · `22e7ab2dbddc` | MCP server over **Librus Synergia**, the gradebook most Polish schools use: grades, attendance, timetable, homework, calendar, announcements, messages, formative assessments and school-year history, multi-login. v2.0 replaced the `librus-apix` backend with the native API; published to PyPI as `librus-mcp`. Pairs with `librus-python-api` on `repos/foundations.md` — 🔵 byte-identical MIT payload, same holder. | EMEA — Poland |
+| [MauroDruwel/Smartschool-MCP](https://github.com/MauroDruwel/Smartschool-MCP) | MIT | `ab3fa81f857f` | `LICENSE` 1 069 B · `b414ff32815f` | MCP server over **Smartschool**, the platform Flemish schools run. CI, coverage and a PyPI release (`smartschool-mcp`) — the most packaged of the national-platform connectors on this shelf. | EMEA — Belgium |
+| [oliverhruby/edupage-mcp](https://github.com/oliverhruby/edupage-mcp) | MIT | `b35ce653d2c9` | `LICENSE` 1 070 B · `e99290e1540b` | MCP server over **EduPage**, the school system used across Slovakia and Central Europe. Tagged releases, quality-gate and security workflows, container scanning — the only CEE national-platform connector here with a security pipeline of its own. 🟡 A second address, `mhlavac/edupage-mcp`, is also carried on the trend record; this is the maintained one. | EMEA — Slovakia / CEE |
+| [CarlSvejstrup/dtu-learn-mcp](https://github.com/CarlSvejstrup/dtu-learn-mcp) | MIT | `9444a1fd5199` | `LICENSE` 1 079 B · `4f21e3f0f9fc` | MCP server **and** CLI for **DTU Learn** (Brightspace / D2L): downloads a student's own courses, slides, files, announcements, assignments, deadlines, grades and Panopto lecture transcripts to the local machine — no server, no shared login. 🟢 The first Brightspace-side connector on this shelf that is MIT, against a platform tier that is otherwise vendor-only. | EMEA — Denmark |
+| [Kretiandpleti/skola-24-haos-integration](https://github.com/Kretiandpleti/skola-24-haos-integration) | MIT | `fdbc9349b20f` | `LICENSE` 1 070 B · `8b34b498bb1f` | Home Assistant custom component for **Skola24**, the timetable system Swedish municipalities run: domain selection, per-student `SchemaID` as the stable identifier, signature regeneration to defeat stale cached selections, configurable week rollover. 🟡 **Not an MCP server** — it is the Nordic timetable channel, read first-hand, and the integration surface is Home Assistant. | EMEA — Sweden |
+| [jibberswrld/fcps-school-mcp](https://github.com/jibberswrld/fcps-school-mcp) | MIT | `7d9dfbfc32bb` | `LICENSE` 1 073 B · `cd9e736254f8` | MCP server over **Schoology, StudentVUE and TJHSST Ion** at once — the three systems a single large US district (Fairfax County Public Schools) actually exposes to students. 🟢 The district-level analogue of the national connectors above, and the only StudentVUE reader on these shelves. | North America — United States |
+| [zaikaman/SGU-Academic-MCP](https://github.com/zaikaman/SGU-Academic-MCP) | MIT | `d5209305d13e` | `LICENSE` 1 068 B · `0b02f0945515` | MCP server over a Vietnamese university's academic portal (Saigon University): schedule, grades, exam registration. CI pipeline, Ruff-checked. 🔵 Arrives in the jurisdiction whose **Decision 33/2026/QĐ-TTg** puts education AI in a 46-category high-risk register — the connector is the easy half, the oversight artefact is the engagement. | APAC — Vietnam |
+| [oaknational/oak-ai-lesson-assistant](https://github.com/oaknational/oak-ai-lesson-assistant) | MIT | `c6871efa8f08` | `LICENSE` 1 077 B · `d150aadcccd2` | **Oak National Academy's** own AI lesson-planning application, MIT, in the open. Built against England's national curriculum. 🟡 The README states it is intended primarily for Oak's internal use and the docs are not written for outside operators — read it as the reference implementation of a state-curriculum lesson assistant, not as a drop-in dependency. | EMEA — United Kingdom |
+| [ls1intum/edutelligence](https://github.com/ls1intum/edutelligence) | MIT | `a7584174bd3d` | `LICENSE` 1 091 B · `6b9b9eda00d6` | TUM's suite of AI microservices for an LMS — automated assessment, exercise creation, competency modelling and intelligent tutoring — with a published **version-compatibility matrix** against the Artemis LMS it integrates with. 🟢 The one row on this shelf that ships an LMS-version contract instead of leaving integration risk to the buyer. | EMEA — Germany |
+| [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | MIT | `6f35f0b7a88d` | `LICENSE.md` 1 068 B · `30a0bc0d48b4` | KIT's static **and** dynamic analysis autograder for student Java code (Java 17+, Docker for the dynamic arm), with the implemented checks enumerated in-repo. 🟢 The grading-evidence layer for a CS-teaching engagement where a mark has to be explainable check by check. | EMEA — Germany |
+| [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | `2b82821c29d7` | `LICENSE` 1 084 B · `881163366572` | Ghent University's source-code plagiarism detector — CLI, web app and library, published to npm as `@dodona/dolos`. 🟢 The academic-integrity surface that every AI-in-assessment proposal gets asked about, under a grant that allows it to ship inside a deliverable. | EMEA — Belgium |
+| [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) | MIT | `6a8028528afc` | `LICENSE` 1 069 B · `77a612c534cf` | The backend of **MIT Open Learning's** tutoring chatbot, running in production at `learn-ai.ol.mit.edu`, with the pedagogical engine described in a published paper (arXiv:2410.03781). 🟢 A tutor whose teaching strategy is documented and citable, from an institution a client has heard of — the strongest single credibility row added this pass. | North America — United States |
+| [CogitoNTNU/TutorAI](https://github.com/CogitoNTNU/TutorAI) | MIT | `b9c990e14b22` | `LICENSE` 1 140 B · `c56df8d19cd5` | NTNU student-organisation tutoring agent (Django). 🔴 **Restored, not discovered**: an earlier pass promoted this row to this file and a later full-file rewrite dropped it — it survives in `archive/2026-10-21-p351-pre-rewrite/agents-top.md` and the EMEA supply claim in the archived `intel/market.md` rests on it. See `p435` below. | EMEA — Norway |
+| [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | `31fd6dbb0c07` | `LICENSE` 11 357 B · `58d1e17ffe51` | Four K-12 teacher agent skills — lesson-plan creation, lesson differentiation and two more — **with the evaluation framework they were scored against** in the same repository. 🟢 Rare shape: a teacher-facing capability shipped together with its own evals, which is what `Trend 26` says moves the sellable unit from adoption to evidence. | North America |
+| [ark-forge/mcp-eu-ai-act](https://github.com/ark-forge/mcp-eu-ai-act) | MIT | `933e56da71e7` | `LICENSE` 1 065 B · `002af8f9b59c` | EU AI Act compliance scanner as a CLI **and** an MCP server (`eu-ai-act-scanner` on PyPI) — the obligation-side tool for the Article 50 / Annex III education exposure this base tracks. 🔴 **Commercial coupling, named:** the README is a funnel to a €29/month hosted plan, so verify which checks the MIT code actually performs before quoting it to a client. Same error class as this base's `ai-shifu` commerce-coupling finding; the grant is MIT and read first-hand, the *feature surface* is the open question. | EMEA |
 
-**26 verified permissive rows.** Every slug resolved under `git ls-remote` and every
+**42 verified permissive rows.** 🆕 `p435` added the sixteen above: fifteen newly shelved and one **restored** after a full-file rewrite had dropped it. They open the **national and institutional school-platform connector** tier, which no pass had shelved, and **twelve of the sixteen are EMEA** — the region this base had been carrying a sub-regional adoption nil for. Every slug resolved under `git ls-remote` and every
 licence was read from the repository's own payload — none was taken from a GitHub badge,
 a package manifest, or a directory listing.
 
@@ -148,6 +164,67 @@ carries the third-party-holder question that `learn-from-materials` does.
 
 🔵 Both rows are **APAC-built**, the fifth consecutive pass on which new permissive education
 supply is APAC-origin. `Trend 14` is unchanged.
+
+### 🆕 `p435` — sixteen rows added by a **completed census**, and one row restored that a rewrite had deleted
+
+`Gap 434-A` asked for one thing: grade the unpromoted backlog, because `gate-promotion`
+was judging a 2 457-address surface from a **7-row** grade table. 🟢 **All 2 450 ungraded
+addresses are now graded, every grant read first-hand off the repository's own payload**
+(`compose/code/p435-promotion-sweep`, evidence in
+`evidence/promotion-backlog-grants.2026-10-25-p435.tsv`). 🔴 **What it found was not a
+handful of stranded rows — it was a whole tier this shelf did not carry.**
+
+**The tier: connectors for the platform a national school system actually runs.** Not
+Moodle and not Canvas — `IServ` in Germany, `Librus Synergia` in Poland, `Smartschool` in
+Flanders, `EduPage` across Slovakia and CEE, `Skola24` in Sweden, `DTU Learn` in Denmark,
+`NEIS` in Korea, `Schoology + StudentVUE + Ion` in one large US district. Every one MIT,
+every one with a HEAD commit inside the last month, and **every one already on this base's
+trend record** — carried, dated, and never promoted.
+
+🔴 **The honest reading: these were not discoveries.** The corpus held them. `p425` was
+caught republishing an absence its own corpus refuted, and this is the same error at
+population scale — the EMEA sub-regional nil that `Gap 434-C` has carried for three passes
+was being measured against the curated shelves while twelve EMEA addresses sat in the
+backlog. **An informed gap is information; an uninformed one looks exactly like coverage.**
+
+### 🔴 `CogitoNTNU/TutorAI` was promoted to this file once already, and a rewrite deleted it
+
+The row above marked *restored* is a defect, not a find. `agents/trending.md` records
+**`Promoted:` `CogitoNTNU/TutorAI` … → `agents/top.md`** with a first-hand grant read
+(MIT, 1 140 B) and a placement (EMEA, Norway, `stud.ntnu.no`). It is not on this file.
+🟢 **It is on `archive/2026-10-21-p351-pre-rewrite/agents-top.md` and on
+`archive/2026-10-21-p355-pre-rewrite/agents-top.md`** — so the row landed and a later
+full-file rewrite dropped it.
+
+🔴 **And it was load-bearing.** The archived `intel/market.md` cites it by name in the
+sentence *"the EMEA supply side is now seven placed permissive rows and is no longer
+regulation-only."* The claim stayed; the evidence under it was deleted.
+
+🔴 **Two more claimed promotions from the same block never landed either** —
+`Haozhe-Xing/agent_learning` and `kaveheng/GenAi-in-education`, both declared promoted to
+`repos/foundations.md`, both absent from it, both in the unpromoted set. 🔵 Nineteen
+`Promoted` claims exist across the two trend shelves in at least four different notations,
+so a gate over them needs a **notation** first — registered as `Gap 435-B` with that cost
+stated, rather than half-built here.
+
+### 🟡 Declined this pass, with the reason — both permissive, both fresh, neither education
+
+| Address | Grant (read first-hand) | Why it is not on this shelf |
+|---|---|---|
+| [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | Apache-2.0 · `LICENSE` 11 358 B · `cfc7749b96f6` | A **coding-interview sandbox** (per-candidate Claude Code workspace, metered keys, live interviewer view). The owner is a Brazilian education company; the repository is a hiring tool. `Trend 25`'s error class — the owner's domain read as the artefact's purpose. |
+| [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | Apache-2.0 · `LICENSE` 11 357 B · `c71d239df917` | A translator served with PyTriton, from Chile's national AI centre. Nothing in the payload or the README makes it an education component. 🔵 Kept on the watch list because CENIA is a LATAM public-research supplier and the next artefact may be in scope. |
+
+🔵 **Both were in the recency slate.** That is the point: `permissive + alive` is a filter,
+not a verdict, and this pass's own candidates are the proof.
+
+### 🔵 One identity collapse, caught before it became two rows
+
+[`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) and
+`oaknational/oak-openapi` return the **same** HEAD under `git ls-remote`
+(`0561df5aac12`), and the repository's own badges point at `oak-openapi`. Per this base's
+`gate-identity` rule — equal HEAD means one repository — **one row is shelved**, on
+`repos/foundations.md`, and the second spelling is recorded here rather than published as a
+separate address.
 
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 

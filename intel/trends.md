@@ -9,6 +9,135 @@ updated: 2026-10-25
 > Current trends, re-measured each pass. Trends 1–8 are the standing set; 9–11 were added
 > or amended on 2026-10-25 from first-hand measurement.
 
+## 🆕 Trend 32 — `p435` Restriction in education has a **second axis**, and it is the learner's AGE, not the decision's autonomy
+
+`Trend 31` (`p434`) found four jurisdictions on three continents converged on one operative
+predicate: **AI as the operative basis of a learner decision with no human able to
+intervene**. That is an *autonomy* test, and one architecture — human-in-the-loop, staged
+artefacts, a recorded approval — serves all four. 🆕 **`p435` adds a fifth jurisdiction that
+does not fit that shape at all.**
+
+### The measurement
+
+| Jurisdiction | Instrument | Axis | Effect |
+|---|---|---|---|
+| 🆕 **Norway** | PM Støre's announcement, **19 June 2026**, in force at the start of the **2026–27 school year** (late August) | 🔴 **AGE** | Near-total prohibition of generative AI for **grades 1–7 (ages 6–13)**; **grades 8–10 only under direct teacher supervision** |
+| **NYCPS** (largest US district) | 2K-8 moratorium, with an exemption for assistive tech under an already-signed plan | 🔴 **AGE** | Student-facing generative AI barred below a grade floor |
+| **Vietnam** | Decision **33/2026/QĐ-TTg**, sectoral compliance **1 Sep 2027** | 🟡 AUTONOMY | 46 high-risk categories, three in education |
+| **EU** | Annex III via Regulation (EU) 2026/1744 → **2 Dec 2027**; Article 50 live since 2026-08-02 | 🟡 AUTONOMY | Grading, admissions, proctoring as high-risk |
+| **Oklahoma / Maryland** | state statutes | 🟡 AUTONOMY | Human oversight; AI may not be the sole basis of a decision |
+
+### 🔴 Why the two axes are not interchangeable, and what it costs to confuse them
+
+An **autonomy** rule is satisfied by *architecture*: insert a human, stage the artefact,
+record the approval, and the same build ships in Hanoi, Brussels and Oklahoma City. 🔴 **An
+age rule cannot be satisfied by architecture at all.** No amount of human-in-the-loop makes
+a generative tutor lawful for a Norwegian eight-year-old, because the rule is addressed to
+**who the user is**, not to **how the output is used**.
+
+🔵 **This is the same category error `p434` untangled inside NYCPS**, one level up. There,
+*developing* an IEP and *delivering* an accommodation were read as one subject and they are
+two. Here, *restricting the decision* and *restricting the audience* are being read as one
+regulatory trend and they are two, with different remedies and different costs.
+
+### 🟢 The engineering consequence: an age gate is a first-class requirement
+
+| Requirement | Autonomy axis | Age axis |
+|---|---|---|
+| Human-in-the-loop on every learner-affecting output | 🟢 required | 🔵 insufficient on its own |
+| Staged draft → human approval → record | 🟢 required | 🔵 insufficient on its own |
+| **Per-learner age or grade band, enforced at the model boundary** | 🔵 optional | 🔴 **required** |
+| **Teacher-supervision mode as a distinct runtime state** | 🔵 optional | 🔴 **required** (Norway's grades 8–10, exactly) |
+| Roster-sourced age data, with its own retention rule | 🔵 optional | 🔴 required — and it is student PII |
+
+🔴 **The trap, named:** an age gate needs the learner's age, which means the build now
+processes a protected attribute it previously did not — in the EU under GDPR, in the US
+under FERPA and COPPA, and in California under AB 1159's bar on training against student
+data. **A compliance feature that creates a new data-protection exposure is the most common
+way this goes wrong**, and the mitigation is that the age band must come from the roster
+system of record and never be inferred, stored longer than the session, or sent to the
+model provider.
+
+### 🟢 Why this is commercially *good* news, stated without softening
+
+🔵 **Both Norway and NYCPS exempt the same thing**: supervised use for older learners, and
+delivery of accommodations under an existing plan. 🟢 **And both leave the entire
+teacher-facing surface untouched** — lesson planning, differentiation, drafting, marking
+support, administration. `Pattern AM` (the teacher-facing courseware factory, legal in NYC
+*because* no student touches the model) is the architecture that clears an age restriction
+by construction, and it now clears two instruments rather than one.
+
+🔴 **What it closes:** any student-facing tutor pitch into Norwegian primary education, from
+late August 2026. That is not a configuration change — it is a market that is shut, and a
+proposal that does not say so is wrong rather than optimistic.
+
+🟡 **Grade:** multiple consistent secondaries on Norway (AACRAO among them), **no primary
+read** — `regjeringen.no` and `udir.no` are unreachable from this host, which is the same
+ceiling `Gap 433-C` records for every government primary on these shelves. 🔵 Norway's own
+directorate publishes code here under Apache-2.0
+([`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public)),
+so the **supply** side of this jurisdiction is first-hand even where the **policy** side is
+not.
+
+## 🆕 Trend 33 — `p435` A permissive licence has a measurable shelf life now, and in education **59 % of the supply is permissive while 20 % has no licence at all**
+
+`Trend 9` asserted that a permissive licence has a shelf life and that nothing in this
+industry measures it. `Trend 13` asserted that the supply has a currency problem. 🟢 **Both
+are now measured, on this base's own corpus, from two channels that need no API access.**
+
+### The licence distribution of education's visible open-source supply
+
+All **2 450** addresses this base had recorded and never promoted, each grant read
+first-hand off the repository's own payload on 2026-10-25:
+
+| arm | n | share | what it means for a build |
+|---|---|---|---|
+| 🟢 **MIT** | 1 022 | 41.7 % | build on, ship, relicense the derivative |
+| 🟢 **Apache-2.0** | 330 | 13.5 % | build on, with a patent grant and a NOTICE duty |
+| 🟢 BSD / ISC / CC0 / ECL-2.0 / Unlicense | 97 | 4.0 % | build on |
+| 🔴 **`NO-GRANT`** | **500** | **20.4 %** | **all rights reserved — not usable, and no badge says so** |
+| 🔴 GPL / AGPL / LGPL | 329 | 13.4 % | integrate across a process boundary; never vendor |
+| 🟡 CC-BY-NC-SA, CC-BY, PolyForm, BUSL, SSPL, MPL, EPL, EUPL | 89 | 3.6 % | read the specific terms; several bar commercial use |
+| 🟡 UNRECOGNISED | 83 | 3.4 % | a real payload no classifier here names — a human must read it |
+
+🔴 **The `NO-GRANT` arm is the finding.** One address in five in education's visible supply
+has **no licence file on any of eight paths, on either `main` or `master`**. 🔵 This is not
+the same as "unclear licensing": it is the absence of a grant, which defaults to all rights
+reserved. 🔴 **And it is invisible to the channel most teams use** — a GitHub licence badge,
+a package manifest, or a directory listing. `Trend 29` already showed GitHub's `license`
+field failing in both directions; this puts a denominator under it.
+
+### The currency distribution, from a channel `make` can reach
+
+    git clone --depth 1 --bare --filter=tree:0 https://github.com/<slug>   # ~0.5 s, ~270 KB
+
+| HEAD commit age (the 1 449 permissive addresses) | n | share |
+|---|---|---|
+| 🟢 0–30 d | **627** | 43.3 % |
+| 31–90 d | 233 | 16.1 % |
+| 91–180 d | 141 | 9.7 % |
+| 181–365 d | 137 | 9.5 % |
+| 1–2 y | 116 | 8.0 % |
+| 🔴 > 2 y | **195** | **13.5 %** |
+
+🟢 **43 % of the permissive supply committed this month.** 🔴 **13.5 % has not been touched
+in two years** and is, for procurement purposes, archived — while carrying exactly the same
+MIT badge as the 43 %.
+
+### 🔵 Why the channel matters as much as the number
+
+A star count is the usual proxy for "is this alive", and on this host it is **unobtainable
+for a third-party repository**: `api.github.com` answers 200 and is authenticated, but
+returns **403 per repository** with the body *"GitHub access to this repository is not
+enabled for this session"*. 🔴 **No egress allowlist can fix a per-repository authorization
+boundary across 1 449 repositories.** 🟢 The HEAD-date channel has none of that problem, is
+reproducible from a `make` target, and measures the thing that actually matters — **whether
+anyone is still maintaining it** — rather than how many people once bookmarked it.
+
+🔵 **The practical rule this yields:** when qualifying an open-source base in education,
+read the **payload** for the grant and the **HEAD date** for the life. Both are one request.
+Neither is a badge.
+
 ## 🆕 Trend 31 — `p434` Four jurisdictions on three continents have converged on the **same predicate**, and it is a software-architecture requirement rather than a compliance checkbox
 
 🟢 **The finding.** This pass's four regional legs were run for adoption and players, and what

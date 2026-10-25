@@ -4,6 +4,206 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p435` · 2026-10-25 — **`Gap 434-A` is CLOSED: all 2 450 unpromoted addresses graded first-hand, and the result refutes `gate-promotion`'s own predicate — permissiveness is **59.1 %** of this backlog, so it classifies rather than detects. 🟢 Sixteen rows promoted, opening the **national school-platform connector** tier, twelve of them EMEA — the region this base had declared a sub-regional nil in for three passes. 🔴 And one row was promoted to `agents/top.md` once already: a full-file rewrite deleted it.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 `Gap 434-A` CLOSED — the reach bound is gone, and the number it returned is the finding
+
+`p434` registered this as *"the highest-value single leg available to `p435`"*: an online
+sweep over the unpromoted set so `gate-promotion` would stop judging a 2 457-address
+surface from a **7-row** grade table. 🟢 **Done, with the cost it was priced at.**
+
+| quantity | value |
+|---|---|
+| addresses probed (`p228-shelf-gate`'s ladder, unchanged) | **2 450** |
+| grant payloads read first-hand off `raw.githubusercontent.com` | **1 950** |
+| `NO-GRANT` — 404 on all 8 paths × 2 refs | **500** |
+| distinct licence families | **27** |
+| HEAD commit objects read (permissive arm) | **1 449**, 0 failures |
+| wall clock at `parallelism=20` | **~3 min** + ~2 min |
+| ungraded after this pass | **0** |
+
+**The family split, which is the part that matters:**
+
+| arm | n | share |
+|---|---|---|
+| MIT | 1 022 | 41.7 % |
+| Apache-2.0 | 330 | 13.5 % |
+| BSD-3 / BSD-2 / ISC / CC0-1.0 / ECL-2.0 / Unlicense | 97 | 4.0 % |
+| 🟢 **PERMISSIVE total** | **1 449** | **59.1 %** |
+| 🔴 `NO-GRANT` | 500 | 20.4 % |
+| 🔴 GPL / AGPL / LGPL | 329 | 13.4 % |
+| 🟡 other / unrecognised | 172 | 7.0 % |
+
+### 🔴 The refutation: `gate-promotion`'s predicate selects the MAJORITY of its own population
+
+`p434` built the gate on **PERMISSIVE and absent from every curated shelf**, and on a 7-row
+table it fired twice — 29 % — which looks like a defect detector. On the complete table it
+fires **1 449** times. 🔴 **A predicate that selects 59.1 % of its population is a
+classifier of that population, not a detector of defects in it**, and the gate's own README
+already conceded the point in words: the verdict *"is not an instruction to shelve it."*
+
+🟢 **What this pass did NOT do: hand the complete table to the blocking arm.** That would
+convert 1 449 measurements into 1 449 blocking findings and make the suite unfixable in one
+pass — the error this register exists to prevent, in the opposite direction from weakening
+a gate. `gate-promotion` keeps its pinned table; the census is committed as **evidence**
+with a non-blocking `promotion-recency` target, per this base's standing distinction
+between a backlog and a failure.
+
+🔵 **`p434`'s substantive conclusion survives.** Nothing permissive was being hidden by a
+star threshold. What does not survive is the idea that **licence alone** decides a
+promotion. Registered as `Gap 435-A`.
+
+### 🟢 `Gap 434-B` — the diagnosis is CORRECTED, the conclusion holds HARDER, and the prescribed remedy is refuted
+
+`p434` recorded that `api.github.com` is **403** here and prescribed *"either an egress
+allowlist entry for `api.github.com` (owner fix, outside this environment) or a standing
+rule that star counts are advisory colour."* 🔴 **Re-measured on 2026-10-25, the premise is
+wrong in a way that changes the remedy.**
+
+| host | code | what it means |
+|---|---|---|
+| `api.github.com/rate_limit` | 🟢 **200** | reachable, and **authenticated** — reports a 15 000/h core limit |
+| `api.github.com/repos/gmilano/education-kb` | 🟢 **200** | full JSON for a repository **attached to this session** |
+| `api.github.com/repos/<third-party>` | 🔴 **403** | *"GitHub access to this repository is not enabled for this session. Use add_repo to request access."* |
+| `api.github.com/search/repositories` | 🔴 403 | account-wide search, out of scope |
+| `github.com` HTML · `codeload.github.com` | 🔴 403 | genuinely refused |
+| `raw.githubusercontent.com` · `pypi.org` · git smart-HTTP | 🟢 200 | the channels every verdict here rests on |
+
+🔴 **The 403 is a per-repository AUTHORIZATION refusal, not a dead transport** — and the
+body says so in words. 🔴 **So no allowlist entry can fix it**, because the boundary is per
+repository and these are 1 449 third-party repositories. 🟢 **The standing rule therefore
+holds more firmly than `p434` could show, and this pass publishes no star column at all** —
+not one figure on any row added today is a star count.
+
+### 🟢 And the channel that *does* work is better than stars for this base's own reasons
+
+    git clone --depth 1 --bare --filter=tree:0 https://github.com/<slug>
+
+**~0.5 s, ~270 KB** per address — against ~20 MB for a plain `--depth 1` — returning the
+HEAD commit object, hence its committer date **and** its timezone offset, the same channel
+`gate-offset-region` places regions with. 🟢 **Reproducible from `make`** (`make
+promotion-heads`), which a star count is not.
+
+| HEAD commit age, permissive arm | n |
+|---|---|
+| 🟢 0–30 d | **627** |
+| 31–90 d | 233 |
+| 91–180 d | 141 |
+| 181–365 d | 137 |
+| 1–2 y | 116 |
+| 🔴 > 2 y | 195 |
+
+🔵 `Trend 9` says a permissive licence has a shelf life and nothing in this industry
+measures it; `Trend 13` says the supply has a currency problem. **This is the instrument
+for both**, and it is 18 offline controls (`make gate-recency`, blocking).
+
+### 🟢 `Gap 434-C` CLOSED — the EMEA nil was a BOOKKEEPING artefact, and the corpus held the answer
+
+`Gap 434-C` recorded a third consecutive pass returning **nothing** on UK, DACH, Nordic,
+Gulf or African education adoption, and prescribed per-country ministry legs instead of the
+regional query shape. 🟢 **All four legs paid. And then the census paid more.**
+
+**The four prescribed legs:**
+
+| leg | returned |
+|---|---|
+| 🟢 **UK — DfE** | **Discovery.** `Using AI in education settings` support materials refreshed **19 May 2026** for 2026–27 (four modules + a leaders' pack, Chartered College assessment, SEND material); `Generative AI: product safety standards` renamed and updated **19 January 2026**, launched at the UK AI for Education Summit. **44 %** of teachers used generative AI in 2024–25, mainly planning and preparation; **43 %** rate their AI confidence at **3/10**; about **half of schools still have no AI policy** and two-thirds no rule for pupil use. |
+| 🟢 **DACH** | **Discovery, and a structural one.** There is **no federal school AI strategy** — education is *Länder* competence, and that is the finding, not an absence. KMK adopted handlungsempfehlungen on AI in **October 2024** (AI in teacher training, data-protection requirements); `Digitalpakt Schule` carried ~**€1.6 bn** to the Länder for 2025. Telekom-Stiftung's 2026 Trendmonitor: regular classroom AI use rising but **57 % of teachers feel unsure**. Länder programmes named: **AI4Teachers** in Rhineland-Palatinate (from November 2025, two years, multiplier model, up to 100 further teachers each) and **15 model schools over five years** in Bavaria. |
+| 🟢 **Nordic** | **Discovery, and it is the strongest regulatory find of the pass.** 🆕 **Norway: a near-total ban on generative AI for grades 1–7 (ages 6–13)**, announced by PM **Jonas Gahr Støre on 19 June 2026**, with grades 8–10 permitted only under **direct teacher supervision**, in force from the start of the **2026–27 school year in late August**; the stated rationale is foundational reading, writing and arithmetic being consolidated before AI enters, and the government is also funding **physical books**. Separately, a peer-reviewed analysis of **39 documents from 12 Nordic universities** finds AI guidance split between classroom use and ethical principles, short on worked examples, and silent on societal and environmental wellbeing; **Iceland** is the least prescriptive case. |
+| 🟢 **Gulf** | **Discovery.** 🆕 **UAE: the Cabinet approved an AI curriculum for all public *and private* schools**, announced **2 September 2026**, covering data, algorithms, applications, risks and ethics, with **~22 000 teachers and educators** to be trained for teaching, assessment, curriculum analysis and lesson planning; Design, Innovation and Computer Science were **merged with AI into a single subject** — *Artificial Intelligence and Technology* — across the first three educational cycles, delivered play-first in the early years. **Saudi Arabia**: the National Curriculum Center with MoE, MCIT and **SDAIA** rolled a national AI curriculum from **2025–26**, with AI learning outcomes written into the **national student performance assessment** system, after an "Introduction to AI" pilot for third-year secondary. |
+| 🟡 **Africa (fifth leg, added)** | **Partial, with an explicit nil inside it.** 🟢 `AI Research Foundations` (Google.org-funded, with AIMS) trains lecturers at **30 universities across Nigeria, Ghana, Kenya and South Africa**, running **2026–2028**, teaching an adapted Google DeepMind curriculum; a FATE Foundation **AI Upskilling Programme 2026** targets the same four countries. In Nigerian secondary schools, **Experience AI** (Raspberry Pi Foundation + Google DeepMind) continues into 2026 after equipping **1 142 public-secondary educators across five south-western states** in year one — 🟡 sourced from a sponsored post, so read the figure as the programme's own. 🔴 **Nil: no ministry-level AI curriculum returned for Kenya or South Africa**, and no national K-12→tertiary AI policy for the group. Written down because silence reads like coverage. |
+
+### 🟢 And then the EMEA answer turned out to be INSIDE this base
+
+🔴 **The nil was being measured against the curated shelves while twelve EMEA addresses sat
+in the backlog.** The census surfaced a tier no pass had shelved: **connectors for the
+platform a national school system actually runs** — not Moodle, not Canvas.
+
+| Address | Grant (read first-hand) | HEAD | Platform it speaks to | Placed |
+|---|---|---|---|---|
+| [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | **MIT** · `LICENSE` 1 090 B · `5dc99bd5061f` | `8afdea14fbcd` @ 2026-10-25 | **IServ** — German state schools | 🟢 EMEA, `+01:00` |
+| [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | **MIT** · `LICENSE` 1 071 B · `22e7ab2dbddc` | `e12e36f24224` @ 2026-10-25 | **Librus Synergia** — Polish gradebook | 🟢 EMEA, `+01:00` |
+| [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | **MIT** · same payload digest | `fba65fe807eb` @ 2026-10-25 | the library under it | 🟢 EMEA, `+01:00` |
+| [`MauroDruwel/Smartschool-MCP`](https://github.com/MauroDruwel/Smartschool-MCP) | **MIT** · `LICENSE` 1 069 B · `b414ff32815f` | `ab3fa81f857f` @ 2026-10-14 | **Smartschool** — Flanders | 🟢 EMEA, `+00:00` |
+| [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** · `LICENSE` 1 070 B · `e99290e1540b` | `b35ce653d2c9` @ 2026-10-23 | **EduPage** — Slovakia / CEE | 🟢 EMEA, `+02:00` |
+| [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) | **MIT** · `LICENSE` 1 070 B · `8b34b498bb1f` | `fdbc9349b20f` @ 2026-10-25 | **Skola24** — Swedish timetables | 🟢 EMEA, `+02:00` |
+| [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | **MIT** · `LICENSE` 1 079 B · `4f21e3f0f9fc` | `9444a1fd5199` @ 2026-10-07 | **DTU Learn** (Brightspace / D2L) | 🟢 EMEA, `+02:00` |
+| [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | **Apache-2.0** · `LICENSE` 11 325 B · `cb5e8e7e5f4a` | `489129c42c9d` @ 2026-09-25 | **Udir** — Norway's exam administration | 🟢 EMEA, `+02:00` |
+| [`DFE-Digital/get-information-about-schools`](https://github.com/DFE-Digital/get-information-about-schools) | **MIT** · `LICENCE` 1 116 B · `e18299fd1942` | `ad46faf42690` @ 2026-10-21 | England's school registry | 🟢 EMEA, `+01:00` |
+| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** · `LICENSE` 1 092 B · `c561ea849ed6` | `a2d4f5fdec58` @ 2026-10-22 | DfE national job service | 🟢 EMEA, `+01:00` |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** · `LICENSE` 1 091 B · `5a22fb5576a5` | `3cdbf2cbf47b` @ 2026-10-22 | **FBIT** school finance benchmarking | 🟢 EMEA, `+01:00` |
+| [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | **MIT** · `LICENSE` 1 077 B · `d150aadcccd2` | `c6871efa8f08` @ 2026-10-22 | Oak National Academy | 🟢 EMEA, `+00:00` |
+| [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | **MIT** · `LICENSE` 1 077 B · `0eeb9d32caed` | `0561df5aac12` @ 2026-10-20 | England's curriculum as an API | 🟢 EMEA, `+01:00` |
+| [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | **MIT** · `LICENSE` 1 091 B · `6b9b9eda00d6` | `a7584174bd3d` @ 2026-10-25 | TUM / Artemis LMS | 🟢 EMEA, `+01:00` |
+| [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | **MIT** · `LICENSE.md` 1 068 B · `30a0bc0d48b4` | `6f35f0b7a88d` @ 2026-10-24 | KIT Java autograding | 🟢 EMEA, `+00:00` |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | **MIT** · `LICENSE` 1 084 B · `881163366572` | `2b82821c29d7` @ 2026-10-24 | Ghent plagiarism detection | 🟢 EMEA, `+00:00` |
+| [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | **MIT** · `LICENSE` 1 065 B · `002af8f9b59c` | `933e56da71e7` @ 2026-09-25 | EU AI Act scanner (CLI + MCP) | 🟡 EMEA, `+02:00` — commercial funnel, see below |
+| [`CogitoNTNU/TutorAI`](https://github.com/CogitoNTNU/TutorAI) | **MIT** · `LICENSE` 1 140 B · `c56df8d19cd5` | `b9c990e14b22` @ 2026-10-07 | NTNU tutoring agent | 🔴 EMEA, `+02:00` — **restored**, see below |
+| [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) | **MIT** · `LICENSE` 1 073 B · `cd9e736254f8` | `7d9dfbfc32bb` @ 2026-09-28 | Schoology + StudentVUE + Ion | 🟢 North America, `-04:00` |
+| [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) | **MIT** · `LICENSE` 1 068 B · `e82e1769aaaf` | `5c9ecede5208` @ 2026-09-27 | **NEIS** — Korea's national registry | 🟢 APAC, `+09:00` |
+| [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | **MIT** · `LICENSE` 1 068 B · `0b02f0945515` | `d5209305d13e` @ 2026-10-16 | Saigon University portal | 🟢 APAC, `+07:00` |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | **MIT** · `LICENSE` 1 069 B · `77a612c534cf` | `6a8028528afc` @ 2026-10-24 | MIT Open Learning, in production | 🟢 North America, `+00:00` |
+| [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | **MIT** · `LICENSE.txt` 1 068 B · `f7e95fbe6fa9` | `724f1ae45315` @ 2026-10-02 | Canvas vendor's LTI library | 🟢 North America, `-06:00` |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** · `LICENSE` 11 357 B · `58d1e17ffe51` | `31fd6dbb0c07` @ 2026-10-13 | four K-12 teacher skills **+ their evals** | 🟢 North America, `-04:00` |
+
+🔵 **Every region column above comes from the HEAD commit's own timezone offset**, which is
+the `gate-offset-region` channel, carried through the new recency table rather than
+inferred from prose.
+
+### 🔴 `CogitoNTNU/TutorAI` was promoted to `agents/top.md` once already, and a rewrite deleted it
+
+This file records **`Promoted:` `CogitoNTNU/TutorAI` … → `agents/top.md`** with a
+first-hand grant (MIT, 1 140 B) and a placement (EMEA, Norway, `stud.ntnu.no`). 🔴 **It is
+not on `agents/top.md`.** 🟢 It *is* on `archive/2026-10-21-p351-pre-rewrite/agents-top.md`
+and `archive/2026-10-21-p355-pre-rewrite/agents-top.md` — so the row landed and a later
+full-file rewrite dropped it.
+
+🔴 **And it was load-bearing.** The archived `intel/market.md` cites it by name in *"the
+EMEA supply side is now seven placed permissive rows and is no longer regulation-only."*
+**The claim survived the rewrite; the evidence under it did not.** 🔴 Two further claimed
+promotions from the same block never landed either — `Haozhe-Xing/agent_learning` and
+`kaveheng/GenAi-in-education`, both declared promoted to `repos/foundations.md`, both
+absent from it, both in the unpromoted set. 🔵 There are **19** `Promoted` claims across
+the two trend shelves in at least four notations, so a gate needs a notation first —
+`Gap 435-B`, with that cost stated rather than half-built here.
+
+### 🟡 Declined this pass — both permissive, both fresh, neither an education component
+
+| Address | Grant | Why not |
+|---|---|---|
+| [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | Apache-2.0 · 11 358 B · `cfc7749b96f6` | A **coding-interview sandbox**: per-candidate Claude Code workspace, metered keys, live interviewer view. The owner is a Brazilian education company; the repository is a hiring tool. `Trend 25`'s error class, caught on this pass's own candidate. |
+| [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | Apache-2.0 · 11 357 B · `c71d239df917` | A translator served with PyTriton, from Chile's national AI centre. Nothing in the payload or README makes it education. 🔵 Kept on watch — CENIA is a LATAM public-research supplier. |
+
+🟡 `ark-forge/mcp-eu-ai-act` is shelved **with its coupling named**: the grant is MIT and
+read first-hand, and the README is a funnel to a €29/month hosted plan, so which checks the
+MIT code performs is an open question before it is quoted to a client. Same error class as
+this base's own `ai-shifu` commerce-coupling finding.
+
+### 🔵 One identity collapse, caught before it became two rows
+
+`oaknational/oak-curriculum-api` and `oaknational/oak-openapi` return the **same** HEAD
+under `git ls-remote` (`0561df5aac12`), and the repository's own badges use `oak-openapi`.
+Per `gate-identity` — equal HEAD means one repository — **one row is shelved** and the
+second spelling is recorded here instead of being published as an address.
+
+### 🔵 The other three regional legs, graded
+
+| Leg | Result |
+|---|---|
+| **North America** | 🟢 **Confirmation with four new quantities.** District-level AI guidelines **79 %** in 2026 against **57 %** in 2025 — the single fastest-moving governance number on these shelves. **35+ states** carry department-of-education AI guidance as of June 2026. FutureEd tracks **68 bills across 27 states** this session with **10 enacted in 2026** — 🔵 **a different tracker from the 134-bills/31-states series this base already carries, not a correction of it**; `p432` already recorded that a bill count is one tracker's, never *the* count. The **US Department of Education finalised a rule on 13 April 2026** prioritising federal education grants for projects advancing understanding or ethical use of AI. 🟡 Teacher readiness still lags: a Gallup poll in May 2026 put formal school guidance at **18 %** of teachers. |
+| **APAC** | 🟢 **Discovery.** 🆕 **India, CBSE**: a computational-thinking and AI curriculum for **Classes 3–8**, presented by the Education Minister on **1 April 2026** (PIB), prepared with **IIT Madras, IIT Gandhinagar and Azim Premji University** and approved by **NCERT**, for the **2026–27** session; AI + CT becomes **compulsory from Class 9 in 2027–28**, first board examinations **2029**. 🔴 **Nil on China's MoE and Japan's MEXT** on the prescribed query shape — neither returned an education AI instrument, and the `p427` lesson applies: the next attempt should be a ministry-named leg, not a country-named one. |
+| **LATAM** | 🔵 **Confirmation plus the governance detail that makes it sellable.** The DEC survey this base carries (92 % students / 79 % faculty, 30 000+ responses, 29 institutions) is now **named**: Tecnológico de Monterrey, UNAM and Pontificia Universidad Católica de Chile among them. 🆕 Faculty use for **assignment feedback is 19 %** against **50 %** of students who want it — the sharpest expectation gap on these shelves. 🆕 **The regulatory shape**: no unified LATAM framework; **Chile** is furthest along (National AI Policy since 2021, a bill in discussion); **Brazil and Colombia** have national AI strategies with **no education-sector regulation**; **Mexico** has none, and the SEP and ANUIES proposals are **non-binding**. |
+
+### 🔵 Baseline gate state, reported before anything else
+
+🟢 `make commit-gates` exited **0** on the commit this pass inherited (`dc02b83`) — **57
+blocking gates green**. After this pass's writes the suite runs **58**, the new one being
+`gate-recency` (18 offline controls).
+
+---
+
 ## 🆕 `p434` · 2026-10-25 — **The promotion instrument `p433` declined to build is BUILT, WIRED and was RED on its first run. 🔴 It also refutes the predicate `Gap 433-A` prescribed: every unpromoted address above the gap's own 150 ★ threshold is non-permissive, including a 4 771 ★ one, while both permissive rows sit below it. 🟢 And `Gap 433-B` — "the single most consequential open question for a North America engagement" — is CLOSED, restrictively.**
 
 🔵 **Append-only. Nothing below this block was edited.**

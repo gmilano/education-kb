@@ -50,6 +50,8 @@ state, is now the layer that decides whether a US build is legal — NYC, Charle
 ISD draw three mutually inconsistent lines, and Ohio and Tennessee *require* per-district policy by
 statute. That changes who the compliance conversation is with.
 
+## 🆕 `p435` · 2026-10-25 — **All four regional legs returned material, and the fifth (Africa) returned material plus an explicit nil. 🟢 `Gap 434-C`'s EMEA sub-regional drought is CLOSED on the per-country shape it prescribed — UK, DACH, Nordic and Gulf all paid, and Norway is the strongest regulatory find of the pass. 🔴 But the EMEA *supply* answer was inside this base all along: twelve permissive EMEA addresses sat ungraded in its own backlog while this file carried the nil. 🔵 One NA figure is explicitly NOT a correction of a figure already here, and is labelled as a second tracker.**
+
 ## 🆕 `p434` · 2026-10-25 — **All four regional legs returned material; no nil. 🟢 `Gap 433-B` is CLOSED and the answer is the RESTRICTIVE one: NYCPS prohibits AI **development** of IEP and 504 plans outright, and the "contradiction" `p433` could not resolve was a scope distinction. 🔴 A second NA fact gates timing rather than scope — NYCPS has PAUSED all educational-software purchases. 🔵 Three of four legs confirmed rather than discovered, and are graded that way.**
 
 🟢 **The decisive regulatory fact, and it closes a gap `p433` called "the single most
@@ -247,6 +249,43 @@ risk. `Trend 28` has the full argument.
 education-AI policy. Canada's *AI for All* (4 June 2026) remains the only Canadian item on this
 shelf and is still direction-setting, not law.
 
+#### 🆕 `p435` · 2026-10-25 — four new quantities, one of them the fastest-moving governance number on these shelves
+
+🟢 **District-level AI guidelines: 79 % in 2026, against 57 % in 2025** (2026 edtech-leaders
+report). 🔵 **This is the number to lead a US pitch with**, because it says the governance
+question has already been answered inside the buyer — the sale is no longer *whether* to
+have a policy but whether the build satisfies the one they wrote last year.
+
+🟢 **35+ state departments of education carry official AI guidance** as of June 2026
+(advocacy tracker — treat the count as approximate, the direction as solid).
+
+🟡 **A second legislative tracker, not a correction.** FutureEd tracks **68 bills across 27
+states** in this session with **10 enacted in 2026**. 🔴 This file already carries **134
+bills / 31 states** from a different tracker, and `p432` already recorded that a bill count
+is *one tracker's*, never *the* count. **Both figures stand, from different denominators;
+neither supersedes the other, and a proposal should cite whichever it names.**
+
+🟢 **Federal procurement signal, dated:** the **US Department of Education finalised a rule
+on 13 April 2026** prioritising federal education grants for projects that expand
+understanding of AI or its appropriate and ethical use. 🔵 That is a funding lever a
+proposal can be written against, and it is the first federal *money* instrument on this
+shelf rather than a direction-setting one.
+
+🟡 **Readiness still lags adoption, and the gap is the engagement.** Gallup, May 2026:
+**18 %** of teachers report having received any formal guidance from their school. A House
+subcommittee statement cites **70 %** of teachers not feeling prepared to use AI
+effectively. RAND, December 2025: **62 %** of middle-school and college students already use
+AI for homework help. 🔴 **Students are ahead of their institutions' rules**, which is
+exactly the exposure the 79 % figure above is a response to.
+
+🟢 **New supply placed here this pass:** [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
+(MIT, in production at MIT Open Learning, pedagogical engine published as arXiv:2410.03781),
+[`instructure/ims-lti`](https://github.com/instructure/ims-lti) (MIT, the **Canvas vendor's
+own** LTI library), [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp)
+(MIT, Schoology + StudentVUE + Ion for one large district) and
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)
+(Apache-2.0, four teacher skills **shipped with their evaluation framework**).
+
 ### EMEA
 
 **Regulatory posture — the most specific in the world, and the deadline just moved.**
@@ -310,6 +349,113 @@ pack is publishable, not proprietary. `Trend 29`.
 frameworks with existing digital-education strategies, and teacher training is named as the
 bottleneck rather than tooling. Source is a sponsored article — directional only, not a basis for
 sizing.
+
+#### 🆕 `p435` · 2026-10-25 — `Gap 434-C` CLOSED on the per-country shape, and the region finally has adoption evidence instead of only regulation
+
+🔴 **The standing complaint, restated so the fix is legible:** for three passes this region
+was served by regulation and by **no adoption evidence**, while LATAM and APAC both had
+institutional survey numbers. `p427` had already measured the mechanism — the drought was a
+**query-shape artefact** — and `Gap 434-C` prescribed per-country ministry legs. 🟢 **Four
+legs run, four paid.**
+
+**🇬🇧 United Kingdom — the most quantified EMEA jurisdiction on this shelf now.**
+DfE's `Using AI in education settings` support materials were **refreshed 19 May 2026** for
+the 2026–27 year: four modules, a leaders' support pack, Chartered College of Teaching
+assessment and webinars, **including SEND-specific material**. The product-safety document
+was renamed and expanded to **`Generative AI: product safety standards`, updated 19 January
+2026**, launched at the UK AI for Education Summit. Adoption and readiness: **44 %** of
+teachers used generative AI in 2024–25 (mainly planning and preparation); **43 %** rate
+their own AI confidence at **3 out of 10**; roughly **half of schools have no AI policy at
+all** and about two-thirds no rule specific to pupil use. 🟢 **The commercial read: the
+guidance exists, the training does not.** A DfE-aligned enablement engagement has an
+official curriculum to teach to and a measured 43 %/50 % gap to close.
+
+**🇩🇪🇦🇹🇨🇭 DACH — the structural finding is that there is no federal lever.**
+🔴 **Education is *Länder* competence and there is no federal school AI strategy** — that is
+the finding, not an absence, and it determines who a proposal is addressed to. What exists:
+**KMK** adopted recommendations on handling AI in October 2024 (AI in teacher training,
+clear data-protection requirements); **Digitalpakt Schule** carried roughly **€1.6 bn** to
+the Länder for digital school infrastructure in 2025. Telekom-Stiftung's 2026 Trendmonitor:
+regular classroom AI use is rising while **57 % of teachers feel unsure** doing it, and
+teaching associations are asking the Länder for a binding legal framework. Länder
+programmes to name in a pitch: **AI4Teachers** in Rhineland-Palatinate (from November 2025,
+two years, Fraunhofer IAIS, a multiplier model reaching up to 100 further teachers per
+trained multiplier) and **15 model schools over five years** in Bavaria. 🟢 **Sixteen
+Länder, each a separate buyer, each with the same unsolved teacher-confidence problem.**
+
+**🇳🇴🇸🇪🇩🇰🇫🇮🇮🇸 Nordic — the strongest regulatory find of the pass.**
+🆕 **Norway has imposed a near-total ban on generative AI for grades 1–7 (ages 6–13)**,
+announced by Prime Minister **Jonas Gahr Støre on 19 June 2026**; **grades 8–10 may use it
+only under direct teacher supervision**; in force from the start of the **2026–27 school
+year in late August 2026**. The stated rationale is that foundational reading, writing and
+arithmetic must consolidate before AI enters, and the government is also funding **physical
+books**, reversing a long shift to tablets. 🔴 **Grade: multiple consistent secondaries
+(AACRAO among them), no primary read** — `regjeringen.no` and `udir.no` are unreachable
+from this host, the same ceiling `Gap 433-C` records. Higher education: a peer-reviewed
+content analysis of **39 documents from 12 Nordic universities** finds guidance organised
+around classroom use and ethical principles, **short on worked examples for teachers and
+students**, and silent on societal and environmental wellbeing; **Iceland** is the least
+prescriptive case. 🔴 **Nil: no 2026 national school guidance returned for Finland, Sweden
+or Denmark**, and no adoption rates for any of the three.
+
+**🇦🇪🇸🇦 Gulf — the most aggressive jurisdiction in the world, re-dated.**
+🆕 **UAE: the Cabinet approved an AI curriculum for all public *and private* schools**,
+announced **2 September 2026** — data, algorithms, applications, risks and ethical use —
+with **~22 000 teachers and educators** to be trained to use AI for teaching, assessment,
+curriculum analysis and lesson planning. Design, Innovation and Computer Science were
+**merged with AI into one subject, `Artificial Intelligence and Technology`**, across the
+first three educational cycles, delivered play-first in the early years. 🟡 Sources differ
+on the start year (earlier coverage says 2025–26, the September 2026 announcement describes
+the full rollout) — **quote the announcement date, not the academic year.**
+**Saudi Arabia:** the National Curriculum Center with the Ministry of Education, MCIT and
+**SDAIA** rolled a national AI curriculum from **2025–26**, with **AI learning outcomes
+written into the national student performance assessment system**, after an "Introduction to
+Artificial Intelligence" pilot for third-year secondary students. 🟡 No 2026 implementation
+update returned for Saudi Arabia.
+
+**🌍 Africa (fifth leg, added beyond the prescription).**
+🟢 `AI Research Foundations` — Google.org-funded, delivered with **AIMS** — trains lecturers
+at **30 universities across Nigeria, Ghana, Kenya and South Africa**, running **2026–2028**,
+teaching an adapted Google DeepMind curriculum; the **FATE Foundation AI Upskilling
+Programme 2026** targets lecturers, teaching assistants and students in the same four
+countries. In Nigerian secondary schools **Experience AI** (Raspberry Pi Foundation +
+Google DeepMind) continues into 2026 after equipping **1 142 public-secondary educators
+across five south-western states** in year one — 🟡 sourced from a sponsored post, so read
+the figure as the programme's own claim. 🔴 **Explicit nil: no ministry-level AI curriculum
+returned for Kenya or South Africa**, and no national kindergarten-to-tertiary AI policy for
+the group. 🔵 **The shape of the African opportunity is therefore *university lecturer
+enablement*, which is who the funded programmes are already reaching** — not ministry
+curriculum work, which has no instrument to attach to yet.
+
+#### 🔴 `p435` — and the EMEA *supply* answer was inside this base the whole time
+
+The adoption nil above was real. 🔴 **The supply nil was not.** Grading this base's own
+2 450 unpromoted addresses (`Gap 434-A`) surfaced **twelve permissive EMEA addresses** that
+had been on the trend record, dated, and never promoted:
+
+| Address | Grant | Speaks to |
+|---|---|---|
+| [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | MIT | **IServ** — German state schools |
+| [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) + [`librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | MIT | **Librus Synergia** — Polish gradebook |
+| [`MauroDruwel/Smartschool-MCP`](https://github.com/MauroDruwel/Smartschool-MCP) | MIT | **Smartschool** — Flanders |
+| [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | MIT | **EduPage** — Slovakia / CEE |
+| [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) | MIT | **Skola24** — Swedish timetables |
+| [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | MIT | **DTU Learn** (Brightspace) |
+| [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | **Apache-2.0** | **Udir** — Norway's exam administration |
+| [`DFE-Digital/get-information-about-schools`](https://github.com/DFE-Digital/get-information-about-schools) · [`teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) · [`education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | MIT | England's **DfE** services |
+| [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) · [`oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | MIT | **Oak National Academy** |
+| [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) · [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) · [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT | TUM / KIT / Ghent teaching stack |
+| [`CogitoNTNU/TutorAI`](https://github.com/CogitoNTNU/TutorAI) | MIT | NTNU — 🔴 **restored**: a rewrite had deleted this row |
+
+🔴 **And the row that was deleted was load-bearing on this very file.** The archived
+`intel/market.md` cites `CogitoNTNU/TutorAI` by name in *"the EMEA supply side is now seven
+placed permissive rows and is no longer regulation-only."* **The claim survived a full-file
+rewrite; the evidence under it did not.** 🟢 Both are restored, and the EMEA supply side is
+now the **largest** regional supply block on these shelves rather than the thinnest.
+
+🟢 **The commercial consequence, stated plainly:** an EMEA engagement no longer has to open
+with "we will build you a platform." It can open with the client's **own ministry's code**
+(Udir, DfE, Oak) and a **permissive connector to the platform they already run**.
 
 ### APAC
 
@@ -382,6 +528,43 @@ another window.
 🔴 **Declared gap:** no education-specific AI rules found for **China** or **Japan** this pass.
 China's regime (mandatory, service-type-based, with content labelling) and Japan's
 (voluntary, promotion-without-penalties) are general-purpose. Absent, not unexamined.
+
+#### 🆕 `p435` · 2026-10-25 — India's mandate now has a floor *and* a ceiling, and two ministries returned nothing
+
+🟢 **India, CBSE — the largest curriculum mandate in the world, dated to its own release.**
+A **computational-thinking and AI curriculum for Classes 3–8** was presented by the
+Education Minister on **1 April 2026** (PIB release), prepared with **IIT Madras, IIT
+Gandhinagar and Azim Premji University** and approved by **NCERT**, for the **2026–27**
+session. 🆕 **And the ceiling:** AI + computational thinking becomes **compulsory from Class
+9 in the 2027–28 session, with first board examinations in 2029.** 🔵 **That pair of dates
+is the planning window** — content and teacher enablement for Classes 3–8 are buyable now;
+the assessment-grade work has a fixed 2029 deadline attached to a board exam, which is the
+hardest commitment date on any of these shelves.
+
+🔵 India's own School Education Secretary places the country alongside **China, South Korea,
+Finland, Estonia and Singapore** as having introduced AI in schools — useful framing in a
+pitch, and 🟡 a passing comparison rather than evidence about those systems.
+
+🔴 **Explicit nil, on the prescribed shape: nothing returned for China's Ministry of
+Education or Japan's MEXT.** Both were queried by ministry name alongside India and neither
+produced an education AI instrument this pass. 🔵 `p427`'s lesson applies and is recorded
+here for the successor: the leg that pays is the **instrument's own name** in the
+jurisdiction's own language, not the country's name in English. Carried as part of
+`Gap 435-C`.
+
+🟢 **Vietnam, unchanged and still the sharpest APAC compliance story:** **Decision
+33/2026/QĐ-TTg** under Law 134/2025/QH15 and Decree 142/2026/NĐ-CP — 46 high-risk
+categories across six sectors, three of them education, with sectoral compliance due
+**1 September 2027**. 🆕 **New supply placed in that jurisdiction this pass:**
+[`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) (MIT), a
+connector to a Vietnamese university portal — 🔵 the connector is the easy half; the staged
+human-oversight artefact the Decision implies is the engagement.
+
+🟢 **Korea:** [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info)
+(MIT) reads **NEIS**, the national education information open-data portal — the APAC
+analogue of England's school registry, and the first national-registry client on these
+shelves for the region. 🟡 Its README warns the upstream dataset is not routinely
+reconciled, so records are *as reported*, not *as current*.
 
 ### LATAM
 
@@ -463,6 +646,43 @@ Brazil, Chile or Colombia — the LATAM counterpart to this pass's special-educa
 category that is `Pattern AL` in North America has **no regional supply at all**.
 
 
+#### 🆕 `p435` · 2026-10-25 — the adoption number is confirmed and *named*, and the governance map is now country-by-country
+
+🟢 **The survey this file carries is now attributable.** The Digital Education Council's
+LATAM higher-education survey — **92 % of students and 79 % of faculty actively engaging
+with AI**, 30 000+ responses across 29 institutions — names **Tecnológico de Monterrey,
+UNAM and Pontificia Universidad Católica de Chile** among the participants. 🔵 Those are
+three institutions a regional pitch can reference by name.
+
+🆕 **The sharpest expectation gap on these shelves:** faculty use of AI for **assignment
+feedback is 19 %**, against **50 % of students who want it**. 🔵 Read with `p434`'s finding
+that 88 % of faculty report only minimal-to-moderate engagement and that assessment uses are
+the least adopted, the regional thesis is unchanged and now has a specific wedge:
+**feedback-at-scale is the one use students are asking for and faculty have not adopted.**
+
+🆕 **The governance map, country by country** — and it is the opposite of EMEA's shape:
+- 🔴 **No unified LATAM framework** for AI in higher education exists.
+- 🟢 **Chile** is furthest along: a **National AI Policy since 2021** and a bill in
+  discussion. 🔵 The jurisdiction to pilot a governance-led engagement in.
+- 🟡 **Brazil and Colombia** have national AI strategies but **no education-sector
+  regulation** — strategy without a sectoral instrument to comply with.
+- 🔴 **Mexico** has no national law or regulation guiding university AI use, and the **SEP
+  and ANUIES proposals are non-binding.**
+
+🔵 **Why this is an opportunity and not a warning.** An institution in Brazil, Colombia or
+Mexico has adoption at 92 % and **no instrument telling it what good looks like**. The
+sellable artefact is the institution's **own** policy plus the evidence pack that shows it
+is being met — which is `Pattern AJ`'s shape, and it does not wait on a legislature.
+
+🔴 **Supply: still the thinnest region, and this pass adds nothing to it.** The census
+surfaced two fresh permissive LATAM-placed addresses and **both were declined on
+inspection** — [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling)
+(Apache-2.0) is a coding-interview sandbox from an education company, and
+[`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app)
+(Apache-2.0) is a translator from Chile's national AI centre with nothing
+education-specific in it. 🔵 **An honest nil beats a padded row**: the LATAM supply side
+remains regulation-and-demand, not supply, for the fifth consecutive measurement.
+
 ### Global
 
 **The cross-region opportunity is the thing every regional section above has in common:
@@ -520,6 +740,31 @@ Markets $10.6B (2026) → $42.48B (2030) at 41.5% CAGR; AI in **higher education
 $4.09B (2026) → $13.46B (2030) at 34.7%. The spread is scope, not disagreement. Use the range.
 
 ---
+
+#### 🆕 `p435` · 2026-10-25 — two amendments to the global read, both about what is *measurable*
+
+🟢 **The open-source supply in education is ~59 % permissive, measured rather than
+estimated.** All 2 450 addresses on this base's trend record that no curated shelf carried
+were graded first-hand on 2026-10-25: **1 449 permissive** (MIT 1 022, Apache-2.0 330, the
+rest BSD/ISC/CC0/ECL/Unlicense), **500 with no licence file at all**, **329 GPL-family**,
+172 other or unrecognised. 🔴 **The 20.4 % `NO-GRANT` arm is the number to carry into a due
+diligence conversation**: one address in five in this domain's visible supply is all rights
+reserved, and a GitHub badge will not tell you which.
+
+🟢 **And supply currency is now measurable too.** Over the permissive arm: **627 addresses
+with a HEAD commit inside 30 days**, 195 older than two years. 🔵 `Trend 9` asserted that a
+permissive licence has a shelf life and that nothing in this industry measures it; that is
+no longer true on these shelves, and the channel costs ~0.5 s per address with no API
+access (`compose/code/p435-promotion-sweep`).
+
+🔵 **The convergence `Trend 31` named now has a fifth jurisdiction, and it is an age
+floor.** Vietnam, two US states, two US districts and the EU converged on *AI as the
+operative basis of a learner decision with no human able to intervene*. 🆕 **Norway's
+grades 1–7 prohibition is a different axis — the learner's age, not the decision's
+autonomy** — and it lands beside NYCPS's 2K-8 moratorium as the second instrument of that
+shape. 🟢 **One architecture still serves both** (human-in-the-loop, staged artefacts), but
+an **age gate** is now a first-class requirement rather than a configuration detail. See
+`intel/trends.md` `Trend 32`.
 
 ## Regional evidence base — detail carried from earlier passes
 
