@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AP — `p437` The **Article 6(3) scoping gate**: decide whether the client's adaptive-learning product is high-risk *before* writing the architecture
+
+🔵 **The engagement this answers.** A client wants adaptive learning, knowledge tracing or
+automated grading in the EU. The pitch everyone makes is *"Annex III moved to December 2027,
+you have fourteen months"*. 🔴 **That framing loses the engagement**, because it answers the
+wrong question. Two things are already true today, and one of them decides the entire
+architecture:
+
+| question | answer | when it bites |
+|---|---|---|
+| Is the product **prohibited**? | Emotion recognition in educational institutions is banned outright, Art. 5(1)(f), narrow medical/safety exception | 🔴 **Since 2 February 2025 — live now** |
+| Does it owe **transparency**? | Art. 50: disclose AI interaction, machine-readable marking of synthetic output | 🔴 **Since 2 August 2026 — live now** |
+| Is it **high-risk**? | Annex III point 3 — admission, evaluating learning outcomes, level determination, proctoring | 🟡 2 December 2027 |
+| 🔵 Can it **escape** high-risk via Art. 6(3)? | Only if it meets one of (a)–(d), poses no significant risk, **and does not profile natural persons** | Decided at design time |
+
+### 🔴 The gate, and why most education AI fails it
+
+Article 6(3) is the only exit from Annex III classification, and the profiling condition
+closes it for the architectures this base recommends most. **Knowledge tracing is profiling.**
+`pykt-team/pykt-toolkit` (DKT/SAKT/BKT) and `CAHLR/OATutor` (Bayesian Knowledge Tracing), both
+on the `agents/top.md` build-on tier, construct a per-learner model of a natural person in
+order to work. So:
+
+> 🔴 **If the product adapts to the individual learner, it profiles, the Art. 6(3) exception is
+> unavailable, and it is high-risk — full Art. 9–15 obligations.** There is no architecture
+> that keeps the adaptivity and sheds the classification.
+
+🟢 **This is good news for the engagement, not bad.** It converts a vague compliance worry
+into a fixed, quotable scope of work with a statutory deadline, and it disqualifies competitors
+pitching "lightweight" adaptive learning that quietly assumes the exception applies.
+
+### The stack, every grant read first-hand at HEAD on 2026-10-25
+
+| Layer | Component | Grant (payload read first-hand) |
+|---|---|---|
+| **Scoping decision** | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) — `engine.js:170-186` implements (a)–(d) + the profiling override | 🟢 **MIT** · 1 073 B · `b7b08f330649` @ `41da87feb238` |
+| **Annex IV technical documentation** | [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) — report generator + CrowS-Pairs bias evaluation | 🟢 **MIT** · 1 073 B · `65335056589f` @ `011a5ad9bea2` |
+| **Annex III checklist / agent controls** | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · 1 074 B · `7df20dcdf919` @ `70a4ab8e8a04` |
+| **Codebase scan** (not dates) | [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | 🔴 **MIT** · 1 065 B · `002af8f9b59c` — dates superseded, scanning only |
+| **The modelling layer being classified** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) · [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** · 1 066 B · `f5f955194636` / 1 105 B · `5baaaf977a28` |
+| **Bias / fairness evidence for Art. 10** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) standard datasets + EuConform bias eval | 🟢 **MIT** |
+
+### How it wires together
+
+1. **Run the scoping decision first, before any model choice.** Open `index.html` from
+   `eu-ai-act-risk-checker` (no build step, no backend). Answer as the *provider*. Record the
+   tier, the article list and the per-obligation dates it returns, with its citations — this
+   becomes the engagement's scoping memo.
+2. **Force the profiling question explicitly.** If the product adapts per learner, set
+   `profiling = true`. 🔴 Expect `profilingOverride` to fire and the Art. 6(3) exception to
+   close. Do not let an optimistic reading of (a)–(d) survive this step; `engine.js:172`
+   is the executable version of the rule.
+3. **Gate the tool before you trust it** — three greps, because two of the five permissive
+   EU-AI-Act tools on these shelves encode the superseded deadline:
+   ```bash
+   grep -rn '1744'                         # must match
+   grep -rn '2027-12-02\|2 December 2027'  # must match
+   grep -rn '2026-08-02\|2 August 2026'    # must NOT be a high-risk deadline
+   ```
+4. **Generate Annex IV documentation from the start.** EuConform's report generator produces
+   the technical-documentation shape Art. 11/Annex IV expects. Building it at design time is
+   the whole value of the December 2027 runway; retrofitting it is the thing clients pay
+   double for later.
+5. **Attach Art. 10 data-governance evidence to the modelling layer.** Run the bias
+   evaluation over the knowledge-tracing datasets *as a CI artefact*, not a one-off report,
+   so the evidence regenerates with every model change.
+6. **Settle the two live obligations before go-live, not before the deadline.** Strip or
+   never build emotion/affect inference (Art. 5(1)(f), prohibited since February 2025), and
+   wire Art. 50 disclosure and synthetic-output marking now — both already apply.
+
+🔵 **What this pattern deliberately does not claim.** None of these tools is legal advice, and
+`eu-ai-act-risk-checker`'s own README says several conditions turn on judgements it cannot
+make — significant harm, significant risk, whether AI use is obvious. The gate produces a
+**defensible, cited scoping position** for counsel to sign off, which is the deliverable;
+it does not replace the sign-off.
+
 ## 🆕 Pattern AO — `p436` The **assessment-interoperability** engagement: parametric items a client can author, deliver and prove, with no copyleft anywhere in the chain
 
 🔵 **The engagement this answers.** A client with a real examination obligation — a ministry, a
@@ -93,7 +169,8 @@ backlog finally produced the addresses for it.
 | **Teacher-facing capability** | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (ships its own evals) · [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | 🟢 **Apache-2.0** 11 357 B · `58d1e17ffe51` / 🟢 **MIT** 1 077 B · `d150aadcccd2` |
 | **Assessment evidence** | [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) (explainable, check by check) · [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (academic integrity) | 🟢 **MIT** · 1 068 B · `30a0bc0d48b4` / 1 084 B · `881163366572` |
 | **Eval gate** | [`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym) · [`shuangyan123/tutorbench`](https://github.com/shuangyan123/tutorbench) | 🟢 MIT / Apache-2.0 (code) — see `repos/foundations.md` Tier 9 |
-| **Obligation check** | [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | 🟡 **MIT** 1 065 B · `002af8f9b59c` — commercial funnel, verify coverage |
+| **Obligation check** (dates) | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 **MIT** 1 073 B · `b7b08f330649` @ `41da87feb238` — `engine.js:32` encodes Annex III = **2027-12-02** citing Reg. (EU) 2026/1744 |
+| **Obligation check** (codebase scan) | [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | 🔴 **MIT** 1 065 B · `002af8f9b59c` — scanning only. **`p437`: its encoded deadline is the superseded `2026-08-02` and is test-pinned — do NOT take dates from it** |
 
 ### How it wires together
 

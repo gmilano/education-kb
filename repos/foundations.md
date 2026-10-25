@@ -6,6 +6,35 @@ updated: 2026-10-25
 
 # 🏗️ Foundational repos — Education
 
+## 🆕 `p437` — The permissive foundation tier grows by one, and the qualifying test is **not** the licence
+
+🟢 Five MIT-licensed EU-AI-Act compliance repositories were graded first-hand this pass
+(payloads and HEADs in `agents/top.md` `p437`). On licence alone, all five qualify as
+foundations. 🔴 **On fitness, one does.**
+
+| repo | grant · payload | foundation? |
+|---|---|---|
+| [tomdxb0004/eu-ai-act-risk-checker](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 **MIT** · `LICENSE` 1 073 B · `b7b08f330649` @ `41da87feb238` | 🟢 **Yes.** Zero dependencies, no build step, no backend, no telemetry; `engine.js` is a pure function with no DOM access, so the classifier is directly embeddable in a Globant deliverable. Encodes Annex III = `2027-12-02` **with its citation inline**, carries education as Annex III point 3, and implements the Art. 6(3) profiling override |
+| [Hiepler/EuConform](https://github.com/Hiepler/EuConform) | 🟢 **MIT** · 1 073 B · `65335056589f` @ `011a5ad9bea2` | 🟡 **Component, not foundation.** Take the Annex IV report generator and the bias-evaluation harness; its date handling is too vague to anchor a compliance gate |
+| [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · 1 074 B · `7df20dcdf919` @ `70a4ab8e8a04` | 🟡 **Component.** Annex III checklist naming education, plus agent controls; carries no dates, so it must be paired with a dated classifier |
+| [sjgant80-hub/fall-euaiact](https://github.com/sjgant80-hub/fall-euaiact) | 🟢 **MIT** · 1 067 B · `0ddf3b67a14a` @ `5d8d27b65f68` | 🟡 Dates correct; 🔴 **no education scope**. A cross-check, not a base |
+| [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) | 🟢 **MIT** · 1 056 B · `1126322e2cc8` @ `fff58f6e8906` | 🔴 **No.** Encodes the superseded `2026-08-02` at `packages/cli/src/commands/gaps.ts:199` and pins it in tests. 🟢 Its `data/annexes.json` Annex III cat. 3 education block (all four statutory use cases) **is** worth vendoring as reference data — take the data, leave the logic |
+
+### 🔴 Why this belongs on the *foundations* shelf and not only on the agents shelf
+
+A foundation is something an engagement's architecture **rests on**, so a wrong constant in it
+propagates into every deliverable built above. 🔵 This pass found that four of five
+candidates would have passed this base's normal foundation screen — permissive grant, payload
+read, active, recent — while carrying either a superseded statutory date or no date at all.
+🟢 **The screen has been extended accordingly**: a repository whose output includes a
+regulatory date is only a foundation if that date **cites the instrument that set it**. The
+three-grep version of that test is in `repos/trending.md` `p437`.
+
+🟡 **And the reach bound, stated as one:** this test was applied to EU instruments only. The
+NA state-guidance trackers and the APAC instruments this base cites on `intel/market.md` have
+**not** been screened the same way, and `intel/trends.md` Trend 35 names that as the next
+measurement — including against this KB's own shelves.
+
 > The bases worth starting from, with licences read from each repository's own payload at
 > the HEAD SHA shown (2026-10-25). Permissive first — those are the ones Globant can build on.
 

@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p437` · 2026-10-25 — **The obligation-check step this base recommends tells an education client its Annex III deadline **has already passed**. 🔴 `ark-forge/mcp-eu-ai-act` — shelved on `agents/top.md` and wired as the `Obligation check` layer of Pattern AO — hardcodes `enforcement_deadline: "2026-08-02"`, **asserts it in its own test suite**, and contains **zero** references to Regulation (EU) 2026/1744. 🟢 Five new MIT repos graded; one of them is the correct, education-aware, post-Omnibus replacement and is drop-in.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🔴 The defect, with the evidence on the line
+
+This base's `intel/market.md` EMEA section leads with the right law: the Digital Omnibus,
+**Regulation (EU) 2026/1744**, moved stand-alone education high-risk from 2 August 2026 to
+**2 December 2027**. It resolved that at `p380`. 🔴 **The tool the base recommends to check
+obligations never got the memo**, and the two facts have been sitting in the same repository
+contradicting each other ever since.
+
+Read first-hand at `933e56da71e7` (shallow clone, this pass):
+
+| evidence | file:line | what it says |
+|---|---|---|
+| the encoded deadline | `data/eu_ai_act_articles.json:5` | `"enforcement_deadline": "2026-08-02"` |
+| 🔴 a test that **pins** the wrong value | `tests/test_articles_db.py:297-299` | `enforcement_deadline must equal '2026-08-02'` |
+| the paywall interaction | `tests/test_compliance_roadmap.py:252` | *"It was 2026-08-02. Once that date passed, `generate_compliance_roadmap` — a Pro …"* |
+| 🟢 education **is** in scope | `data/eu_ai_act_articles.json:390` | *"Category 3 — Education and vocational training: systems for access, admission and assessment…"* |
+| 🔴 awareness of the amending regulation | `grep -rn '1744\|2027-12-02'` | **no matches anywhere in the repository** |
+
+🔴 **So the failure is not "out of date", it is out of date in the alarming direction and
+locked.** An education client scanned with this tool is told a conformity deadline passed
+~12 weeks ago, when it is in fact ~14 months away. The test suite guarantees it will not
+drift back on its own. And per `test_compliance_roadmap.py:252`, the passing of that date is
+what moves roadmap generation behind the €29/month plan — so the stale date is load-bearing
+for the funnel this base already flagged at `p436`.
+
+🔵 **This is the `p436` coupling finding paying off.** `p436` shelved the row with
+*"verify which checks the MIT code actually performs before quoting it to a client"* and left
+it open. 🟢 Verified, and the answer is that the checks are education-aware and the **dates
+are wrong** — which is the one failure mode a licence-and-stars screen can never catch.
+
+### 🟢 The five new rows, every payload read first-hand (trailing newline preserved)
+
+| repo | grant · payload | HEAD @ 2026-10-25 | post-Omnibus? | note |
+|---|---|---|---|---|
+| [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 **MIT** · `LICENSE` 1 073 B · `b7b08f330649` | `41da87feb238` | 🟢 **CORRECT** | `engine.js:32` → `highRiskAnnexIII: '2027-12-02'`, citing Art. 113 as amended by Reg. 2026/1744 |
+| [`sjgant80-hub/fall-euaiact`](https://github.com/sjgant80-hub/fall-euaiact) | 🟢 **MIT** · `LICENSE` 1 067 B · `0ddf3b67a14a` | `5d8d27b65f68` | 🟢 **CORRECT** | Single-file browser tool; Annex III 2 Dec 2027, Annex I 2 Aug 2028. 🟡 No education mention |
+| [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 **MIT** · `LICENSE` 1 073 B · `65335056589f` | `011a5ad9bea2` | 🟡 **vague** | Annex III/Art. 6 quiz + Annex IV report generator; says only *"high-risk obligations apply from 2027"* |
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · `LICENSE` 1 074 B · `7df20dcdf919` | `70a4ab8e8a04` | 🟡 **undated** | Carries an Annex III checklist naming education; no dates in the payload, so it cannot be wrong — or right |
+| [`AbdelStark/eu-ai-act-toolkit`](https://github.com/AbdelStark/eu-ai-act-toolkit) | 🟢 **MIT** · `LICENSE` 1 056 B · `1126322e2cc8` | `fff58f6e8906` | 🔴 **WRONG** | `packages/cli/src/commands/gaps.ts:199` → `'high-risk': '2026-08-02'`; **same defect as the shelved scanner**, also test-pinned, also zero `1744` hits. 🟢 Its `data/annexes.json` does carry Annex III cat. 3 education with all four statutory use cases |
+
+🔴 **Two of the three date-bearing tools found this pass carry the identical pre-Omnibus
+value.** That is the generalisation worth more than either row: **the stale date is baked
+across the EU-AI-Act open-source tool ecosystem**, independently, in projects that do not
+share code. Screening these by licence, stars or freshness selects for the defect as readily
+as against it. The only test that separates them is reading the date out of the payload —
+three greps, which is now written down in `compose/patterns.md` as a gate.
+
+### 🟡 Graded and NOT shelved as build-on tier, with the reason
+
+| repo | grant (read first-hand) | why not |
+|---|---|---|
+| [`jagmarques/awesome-eu-ai-act`](https://github.com/jagmarques/awesome-eu-ai-act) | 🟡 **CC**, `LICENSE` 7 047 B | A link list, not code. Useful as a source, not a dependency |
+| [`Git-Kaushal/AI-Teacher-Training`](https://github.com/Git-Kaushal/AI-Teacher-Training) | 🟡 **CC**, `LICENSE` 2 099 B | Courseware (CBSE classes VII–X), not a code grant — same class as this base's existing courseware tier |
+| [`joonaschuk/eu-compliance-toolkit`](https://github.com/joonaschuk/eu-compliance-toolkit) | 🔴 **no licence file in the payload** | Exists at `00758180ccb3`; ungranted, so not build-on. Same class as this base's "no licence file" tier |
+| [`Tessangelika/ai-literacy-curriculum`](https://github.com/Tessangelika/ai-literacy-curriculum) | 🔴 **no licence file in the payload** | Exists at `d75b6f3685d0`; ungranted |
+| [`ishandutta2007/Awesome-AI-Education-Training`](https://github.com/ishandutta2007/Awesome-AI-Education-Training) | 🟢 MIT, 1 067 B | Real grant, but an awesome-list; no artefact to build on |
+| [`luongnv89/claude-howto`](https://github.com/luongnv89/claude-howto) · [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | 🟢 MIT | Both real and permissive, 🔴 **neither is education** — declined on the same test `p435` used |
+
+### 🔵 A method correction on this pass's own instrument, before it reached a shelf
+
+My first verification script measured licence payloads with `printf '%s'`, which **strips the
+trailing newline**. It reported `ark-forge/mcp-eu-ai-act` as `1 064 B · a3e5f15a81f8` where
+this base has recorded `1 065 B · 002af8f9b59c` for ten passes. 🔴 That looked like a payload
+discrepancy at an unchanged HEAD — a real finding, had it been real. 🟢 It was my script.
+Re-measured preserving the newline, the shelf's value reproduces **exactly**, which is also
+the strongest available check that the digests in the table above are comparable with every
+other row on these shelves. The byte-and-digest convention on this KB therefore **includes
+the trailing newline** — written down here because it was not, and one pass already nearly
+published a phantom defect because of it.
+
+### 🟡 What the search legs actually returned — graded honestly
+
+🔵 **Global supply is saturated.** The agent and trending legs returned `HKUDS/DeepTutor`
+(42.6k★) and `withmarbleapp/os-taxonomy` as the top education hits; 🔴 **both already on
+`agents/top.md`** (rows 27 and 291), the latter already carrying this base's ODbL flag. The
+general-agent hits (OpenHands, CrewAI, LangGraph) are all carried. Against 334 distinct
+addresses on the live shelves, the global legs are now a **duplicate detector**, not a
+discovery channel — consistent with `p433`–`p435`.
+
 ## 🆕 `p436` · 2026-10-25 — **`Gap 435-B` is CLOSED and it was **fifty-nine times** bigger than the register knew: not 3 dropped rows but **176** addresses claimed promoted and sitting on no live shelf. 🟢 The notation and the join `Gap 435-B` asked for are built, wired and green, with the backlog on a ratchet. 🟢 28 rows restored, every payload re-read first-hand. 🔴 And the deletion reached the gap register itself — `LongsightGroup/qti3`, the repository `Gap 238` was closed against and `Gap 240` is still open on, was on no shelf at all.**
 
 🔵 **Append-only. Nothing below this block was edited.**

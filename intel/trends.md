@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 35 — `p437` Regulatory change now outpaces the open-source tooling built to track it, and the tools **fail confidently**
+
+🟢 **The datum**: of five permissive EU-AI-Act compliance repositories graded first-hand this
+pass, **two independently hardcode `2026-08-02`** as the high-risk enforcement deadline —
+the date superseded by Regulation (EU) 2026/1744, which moved Annex III (education among them)
+to **2 December 2027**. Neither repository contains a single reference to the amending
+regulation. Both **assert the stale value in their own test suites**.
+
+🔴 One of the two is `ark-forge/mcp-eu-ai-act`, which this base shelved at `p436` and wired
+into `compose/patterns.md` as its `Obligation check` step. **The KB was shipping a recipe whose
+compliance oracle contradicted the KB's own market intelligence.**
+
+🔵 **Why this is a trend and not a one-off bug.** Three properties make it structural:
+
+| axis | an ordinary stale dependency | a stale **regulatory** dependency |
+|---|---|---|
+| how it fails | throws, or drifts visibly | 🔴 returns a confident, well-formatted, **wrong** answer |
+| what the test suite does | catches the regression | 🔴 **pins the error in place** — the wrong date is the expected value |
+| who notices | CI | 🔴 nobody, until a client acts on the deadline |
+| what screening catches it | version pinning, dependabot | 🔴 **none of licence, stars, recency or activity** |
+
+🟢 **The two repositories share no code and no authors.** That is what makes it convergent
+rather than coincidental: the ecosystem absorbed the original AI Act timeline, encoded it as a
+constant, wrote tests around the constant, and then the law moved. Every project that did its
+job carefully in 2025 is now carefully wrong.
+
+### 🔴 The second-order effect, which is the commercially dangerous one
+
+A stale deadline is not symmetric. `2026-08-02` is **in the past**, so these tools report that
+a conformity deadline **has already been missed**:
+
+- `ark-forge/mcp-eu-ai-act` `tests/test_compliance_roadmap.py:252` records that once that date
+  passed, roadmap generation moved behind the paid plan — 🔴 **the stale date is load-bearing
+  for a commercial funnel**, which is a reason it is unlikely to be fixed quickly.
+- An education client told its Annex III obligations lapsed in August 2026 will either buy
+  remediation it does not need, or conclude the regime is unenforced and disengage. Both
+  outcomes are worse than no tool.
+
+🟢 **The defensible position, and it is a sellable one.** Globant should treat
+regulatory constants as **versioned data with a provenance claim**, never as code constants:
+a date in a compliance artefact cites the instrument that set it (`Art. 113 as amended by
+Reg. (EU) 2026/1744`), the way `tomdxb0004/eu-ai-act-risk-checker` does at `engine.js:32`.
+🔵 That is the single discriminator between the correct and incorrect tools found this pass —
+not architecture, not licence, not maturity. **Citation-carrying constants are the control.**
+
+🟡 **The bound on this trend, stated.** Five repositories is a small sample, and all five are
+EU-AI-Act tools; this pass did not test whether the same staleness affects education-specific
+instruments (state guidance trackers, UNESCO frameworks). 🔴 That is the obvious next
+measurement, and it is worth taking — this base's own regional shelves are themselves
+collections of dated regulatory constants, which makes the KB a candidate for exactly the
+defect it just found in someone else's code.
+
 ## 🆕 Trend 34 — `p436` In the two largest APAC school systems, AI in education has become a **teacher-licensing** question, not a curriculum question
 
 🟢 **The datum**: China's 《"人工智能+教育"行动计划》 (`教科信〔2026〕1号`, 2026-04-02) states

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p437` · 2026-10-25 — **A new permissive tier the shelves did not have: **EU AI Act obligation tooling**, five MIT repos, graded by whether their encoded deadline survives the Digital Omnibus. 🔴 Two of three date-bearing tools hardcode the superseded `2026-08-02`. 🟢 One is correct, education-aware, and implements the Article 6(3) profiling carve-out in code.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 The tier, ordered by whether you can trust its dates
+
+| repo | grant · payload (newline preserved) | HEAD | verdict |
+|---|---|---|---|
+| [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | **MIT** · 1 073 B · `b7b08f330649` | `41da87feb238` | 🟢 **Build on this one** |
+| [`sjgant80-hub/fall-euaiact`](https://github.com/sjgant80-hub/fall-euaiact) | **MIT** · 1 067 B · `0ddf3b67a14a` | `5d8d27b65f68` | 🟢 Dates correct, 🟡 no education scope |
+| [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | **MIT** · 1 073 B · `65335056589f` | `011a5ad9bea2` | 🟡 Annex IV report generator; dates vague |
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | **MIT** · 1 074 B · `7df20dcdf919` | `70a4ab8e8a04` | 🟡 Annex III checklist, undated |
+| [`AbdelStark/eu-ai-act-toolkit`](https://github.com/AbdelStark/eu-ai-act-toolkit) | **MIT** · 1 056 B · `1126322e2cc8` | `fff58f6e8906` | 🔴 Encodes `2026-08-02`; do not quote its deadlines |
+
+### 🟢 Why `eu-ai-act-risk-checker` is the row that matters
+
+It is the only repository found on these shelves — new or carried — that encodes the
+**post-Omnibus** education position correctly *and* implements the part of Article 6 that
+decides whether an adaptive-learning product is high-risk at all:
+
+| what | `engine.js` | why it matters for an education engagement |
+|---|---|---|
+| `highRiskAnnexIII: '2027-12-02'` | line 32 | The only correct Annex III date in a date-bearing tool on these shelves |
+| `'education'` as Annex III point 3 | line 44 | Education is a first-class category, not an inferred one |
+| Art. 5(1)(f) covers education | line 94 | The emotion-recognition prohibition, which is live **today** |
+| 🔵 `profilingOverride` on the Art. 6(3) exception | lines 170–186 | **The commercially decisive line** — see below |
+
+🔵 **The Article 6(3) carve-out, which no file on this base carried before this pass.**
+An Annex III system escapes high-risk classification if it meets one of conditions (a)–(d)
+and poses no significant risk — **unless it profiles natural persons**, in which case the
+exception is unavailable. 🔴 An adaptive-learning or knowledge-tracing product *is*
+profiling learners by construction: that is what `pykt-team/pykt-toolkit` and
+`CAHLR/OATutor` on this base's own build-on tier **do**. So the most common education AI
+architecture this KB recommends **cannot use the Art. 6(3) escape hatch** and lands in
+high-risk with the full Art. 9–15 obligations. That is a scoping fact worth more than any
+deadline, and `engine.js:172` is the only place on these shelves where it is executable
+rather than prose.
+
+### 🟡 The gate this adds, in three greps
+
+Any EU-AI-Act tool proposed for a client engagement, before it is quoted:
+
+```bash
+git clone --depth 1 https://github.com/<owner>/<repo> /tmp/t && cd /tmp/t
+grep -rn '1744'                      # must match — awareness of the amending regulation
+grep -rn '2027-12-02\|2 December 2027'   # must match — the Annex III date
+grep -rn '2026-08-02\|2 August 2026'     # must NOT appear as a high-risk deadline
+```
+
+🔴 Two of the five repos above fail grep 1 and 2 and pass grep 3 with the wrong sign. The
+screen costs about fifteen seconds and is the only one that catches this class.
+
 ## 🆕 `p436` · 2026-10-25 — **The deletion reached the gap register: `LongsightGroup/qti3` — the repository `Gap 238` was CLOSED against with a tested artefact, and `Gap 240` is still OPEN on — was on **no live shelf**. 🔴 And **110 of 464** register citations (23.7 %) name a finding ID no live shelf defines. 🟢 The QTI assessment layer is restored whole, four rows, two of them EMEA including the Dutch national education-ICT body.**
 
 🔵 **Append-only. Nothing below this block was edited.**

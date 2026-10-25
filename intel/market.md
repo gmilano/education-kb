@@ -142,6 +142,14 @@ supply and a permissive agent layer can.
 
 ### North America
 
+**🆕 `p437` — confirmation, not discovery.** The NA leg re-returned the figures this file
+already carries: the ~134-bill / 31-state count (already labelled here as *one tracker's*,
+not *the* count), H.R. 8747, and Canada's `AI for All`. 🔵 Nothing on this subsection changes.
+The one NA item worth adding is a **market-share frame**, not a regulation: one industry
+roundup puts North America at **36 % of the global AI-in-education market, ~$3.68 B in 2026**.
+🔴 Treat as vendor-sourced and unverified — it is consistent with the range this file already
+publishes, which is exactly why it should not be quoted as independent corroboration.
+
 **Regulatory posture — restrictive on autonomy, permissive on assistance.** 134 AI-in-education
 bills across 31 states in the 2026 session, concentrated on student-data privacy, classroom
 use limits and curriculum. California **AB 1159** bars using student data to train AI models.
@@ -322,6 +330,39 @@ Primary statute text was not read this pass.
 
 ### EMEA
 
+**🆕 `p437` — two new African instruments, and the supply-side gate that decides EU scope.**
+
+🟢 **New to this file (both were at zero mentions before this pass):**
+- 🇪🇬 **Egypt** — AI and programming become **mandatory subjects for first-year secondary
+  students** from the current academic year. This is a second Arab-world mandate alongside
+  the UAE's K-12 core subject, and it lands in the lane this base already built the
+  🆕 `p401` Arabic-first watch tier for.
+- 🇷🇼 **Rwanda** — AI concepts introduced into school technology curricula, reported
+  alongside several other African systems. 🟡 Single-source and thin; recorded as a watch
+  item, not a finding.
+
+🔵 **The UK picture is a training gap, not a mandate gap.** No single mandated AI subject;
+the existing computing curriculum (compulsory since 2014) is being updated incrementally.
+The commercially relevant number is workforce capacity: **only ~21 % of state-school
+teachers report formal AI training**, against private schools far more likely to hold a
+whole-school AI strategy. 🟡 Sector-body sourced (Computing at School, May 2026).
+
+🔴 **The scope gate that matters more than the deadline.** This subsection already carries
+the Digital Omnibus dates correctly. What it did **not** carry, until `p437`, is
+**Article 6(3)** — the only exit from Annex III classification. The exception requires one of
+conditions (a)–(d) *and* no significant risk, **and it is unavailable where the system
+profiles natural persons**. Knowledge tracing and adaptive learning profile learners by
+construction, so:
+
+> 🔴 **Every adaptive-learning or automated-grading product this base recommends building in
+> the EU is high-risk. The Art. 6(3) escape hatch is closed for it by design.**
+
+🟢 **Sell that, do not hide it.** It converts a vague compliance worry into a fixed,
+statutory scope of work with a 2 December 2027 date, and it disqualifies competitors pitching
+"lightweight" adaptive learning on an assumed exception. The executable version of this rule
+is `tomdxb0004/eu-ai-act-risk-checker` `engine.js:170-186`; the engagement shape is
+`compose/patterns.md` **Pattern AP**.
+
 **Regulatory posture — the most specific in the world, and the deadline just moved.**
 The 2026 Digital Omnibus, **Regulation (EU) 2026/1744**, pushed the high-risk obligation for
 stand-alone education AI — **grading, admissions, exam proctoring** — from 2 August 2026 to
@@ -493,6 +534,15 @@ with "we will build you a platform." It can open with the client's **own ministr
 
 ### APAC
 
+**🆕 `p437` — confirmation across the board.** The APAC leg returned Korea's AI Framework Act
+(in force 22 January 2026, with 2026 operating as a pilot year under a one-year penalty grace
+period), Vietnam's binding AI law naming **education** among its high-risk sectors for
+automated assessment and behavioural monitoring, and Taiwan's AI Basic Act of December 2025 —
+🔵 **all already carried on this file** (Vietnam at 32 mentions, Taiwan at 5). The named
+commercial players returned by the leg (Google, Microsoft, IBM, Pearson, Byju's) are a single
+vendor report's list and add nothing to this base's market map. 🟡 Recorded as a third
+consecutive confirming APAC pass.
+
 **Regulatory posture — the widest divergence of any region; there is no "APAC approach".**
 - **South Korea:** AI Basic Act in force **January 2026** — the region's most binding
   framework, with explicit high-impact-system obligations.
@@ -652,6 +702,29 @@ reconciled, so records are *as reported*, not *as current*.
 
 ### LATAM
 
+**🆕 `p437` — two new governance instruments, and they are the mechanism the 26 % gap was missing.**
+
+This file's strongest number is the LATAM governance gap — widespread adoption against
+**26 % of institutions holding a formal AI strategy** (UNESCO IESALC). 🔵 Re-confirmed this
+pass. 🟢 **What is new is the regulatory machinery now appearing underneath it**, both at zero
+mentions on this file before `p437`:
+
+| 🇧🇷 / 🇨🇴 | instrument | why it is commercially relevant |
+|---|---|---|
+| 🇧🇷 **Brazil** | **ANPD Pilot Regulatory Sandbox** for AI and data protection, called in June, **running to December 2026** | A data-protection authority supervising live AI pilots is the closest thing in the region to a conformity route. 🟢 A sandbox cohort is a reference-able engagement with a regulator in the room — and the window closes this December |
+| 🇨🇴 **Colombia** | Proposed comprehensive AI law creating the **National Council for AI (`CON-IA`)**, attached to the Office of the President | 🟡 Still a proposal, but it names the counterparty a national AI-in-education programme would be sold *through*. Colombia, Peru and Paraguay are all drafting instruments that explicitly reach ethical use **in education** |
+
+🟡 **Mexico, stated precisely so it is not over-read:** reforms approved in April 2026 remain
+**pending publication**, and they target AI-generated sexual content and digital manipulation.
+🔴 They impose **no direct obligations on AI developers or platforms** — so they do not create
+an education compliance market, and should not be pitched as if they did.
+
+🔵 **The structural read.** LATAM's gap is no longer purely a capability gap. Brazil has a
+supervised sandbox with a deadline and Colombia is building a central council, while 74 % of
+institutions still lack a strategy. 🟢 **The sellable artefact is the institutional AI
+strategy itself** — governance scaffolding, not a model — and it is now the one region where
+a regulator is actively inviting participation rather than only publishing guidance.
+
 **Regulatory posture — fragmented and mostly non-binding, converging on a risk taxonomy.**
 Uruguay became the first Latin American country to sign the Council of Europe Framework
 Convention on AI and Human Rights (2025). Colombia set national AI policy via **CONPES 4144**
@@ -795,6 +868,16 @@ read from the Index itself**. 🔴 **Do not put them in a deck on this basis** �
 is the cheap next step. → `Gap 436-D`.
 
 ### Global
+
+**🆕 `p437` — the supply-side finding belongs here, because it is not regional.** Of five
+permissive EU-AI-Act compliance tools graded this pass, **two independently hardcode the
+superseded 2 August 2026 high-risk deadline** and pin it in their own test suites, with no
+reference to the amending Regulation (EU) 2026/1744. 🔴 The projects share no code and no
+authors, so the stale date is **convergent error across the open-source compliance
+ecosystem** — and licence, star count and recency all fail to separate the correct tools from
+the wrong ones. 🟢 The only screen that works reads the date out of the payload
+(`repos/trending.md` `p437`, three greps). This bears on every region that sells EU exposure,
+which is why it is recorded under Global and not EMEA.
 
 **The cross-region opportunity is the thing every regional section above has in common:
 adoption has already happened and governance has not.** It is the same sale in four

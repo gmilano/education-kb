@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p437` — Conformity is a **procurement surface** on the platform decision, and it reverses the usual copyleft calculus
+
+🔵 **The connection this file was missing.** This shelf's standing finding is that the
+education platform tier is almost entirely copyleft — Moodle, Open edX, Chamilo, Canvas-adjacent
+estates — with `OpenOLAT` (Apache-2.0) and `learningequality/kolibri` (MIT) the permissive
+exceptions. 🆕 `p437` adds the regulatory half of that decision, and it changes which platform
+wins.
+
+Under the EU AI Act, the duties attach to the **AI system** and its provider/deployer role,
+not to the LMS it is bolted onto. So the platform choice determines *who carries the
+obligation*:
+
+| configuration | who is the provider of the high-risk system | consequence |
+|---|---|---|
+| AI built **into** the LMS core (vendored fork) | 🔴 The client, for the whole platform | Annex IV documentation must cover the LMS; a copyleft fork makes that documentation a distribution artefact too |
+| AI as a **separate component over a seam** (XBlock, MCP, LTI) | 🟢 The component, scoped narrowly | Annex IV covers the component only. **The conformity surface is as small as the seam** |
+
+🟢 **This is the strongest argument yet for the seam-based integration this file already
+recommends** — `openedx/XBlock` (Apache-2.0) for Open edX, the MIT connector tier for national
+platforms, LTI for the rest. It was previously a licence-hygiene argument. 🔵 **It is now also
+a compliance-scoping argument, and that is the one a client's counsel will act on:** keeping
+the AI outside the copyleft core keeps the Annex IV technical documentation bounded to code
+Globant actually wrote.
+
+🔴 **The corollary, stated plainly.** A client already running a copyleft LMS who asks for AI
+"inside the platform" is asking for the maximum conformity surface and a copyleft distribution
+obligation on the documentation at the same time. 🟢 The answer is not to refuse the
+engagement — it is to price the seam, and `compose/patterns.md` **Pattern AP** is the scoping
+gate that produces that price.
+
+🟡 **The education-ERP nil is untouched by this.** Nothing found this pass is an education ERP
+or SIS platform; the EU-AI-Act tooling tier is governance instrumentation, not a vertical
+system. The standing nil recorded at `p433`/`p434` and reconfirmed at `p435` **stands a fourth
+consecutive pass** — this pass did not re-run that sweep and does not claim to.
+
 ## 🆕 `p436` — The interoperability layer is a vertical in its own right, and a **national** education body is shipping it permissively
 
 🔵 **The platform map on this file answers "which LMS do we build on?".** `p436` restores a tier

@@ -68,7 +68,7 @@ licence payload at the commit shown. These are safe starting points for an engag
 | [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) | MIT | `6a8028528afc` | `LICENSE` 1 069 B · `77a612c534cf` | The backend of **MIT Open Learning's** tutoring chatbot, running in production at `learn-ai.ol.mit.edu`, with the pedagogical engine described in a published paper (arXiv:2410.03781). 🟢 A tutor whose teaching strategy is documented and citable, from an institution a client has heard of — the strongest single credibility row added this pass. | North America — United States |
 | [CogitoNTNU/TutorAI](https://github.com/CogitoNTNU/TutorAI) | MIT | `b9c990e14b22` | `LICENSE` 1 140 B · `c56df8d19cd5` | NTNU student-organisation tutoring agent (Django). 🔴 **Restored, not discovered**: an earlier pass promoted this row to this file and a later full-file rewrite dropped it — it survives in `archive/2026-10-21-p351-pre-rewrite/agents-top.md` and the EMEA supply claim in the archived `intel/market.md` rests on it. See `p435` below. | EMEA — Norway |
 | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | `31fd6dbb0c07` | `LICENSE` 11 357 B · `58d1e17ffe51` | Four K-12 teacher agent skills — lesson-plan creation, lesson differentiation and two more — **with the evaluation framework they were scored against** in the same repository. 🟢 Rare shape: a teacher-facing capability shipped together with its own evals, which is what `Trend 26` says moves the sellable unit from adoption to evidence. | North America |
-| [ark-forge/mcp-eu-ai-act](https://github.com/ark-forge/mcp-eu-ai-act) | MIT | `933e56da71e7` | `LICENSE` 1 065 B · `002af8f9b59c` | EU AI Act compliance scanner as a CLI **and** an MCP server (`eu-ai-act-scanner` on PyPI) — the obligation-side tool for the Article 50 / Annex III education exposure this base tracks. 🔴 **Commercial coupling, named:** the README is a funnel to a €29/month hosted plan, so verify which checks the MIT code actually performs before quoting it to a client. Same error class as this base's `ai-shifu` commerce-coupling finding; the grant is MIT and read first-hand, the *feature surface* is the open question. | EMEA |
+| [ark-forge/mcp-eu-ai-act](https://github.com/ark-forge/mcp-eu-ai-act) | MIT | `933e56da71e7` | `LICENSE` 1 065 B · `002af8f9b59c` | EU AI Act compliance scanner as a CLI **and** an MCP server (`eu-ai-act-scanner` on PyPI) — the obligation-side tool for the Article 50 / Annex III education exposure this base tracks. 🔴 **Commercial coupling, named:** the README is a funnel to a €29/month hosted plan, so verify which checks the MIT code actually performs before quoting it to a client. Same error class as this base's `ai-shifu` commerce-coupling finding; the grant is MIT and read first-hand, the *feature surface* is the open question. 🔴 **`p437` CLOSED that open question, and the answer disqualifies it as an obligation oracle:** at `933e56da71e7` it hardcodes `"enforcement_deadline": "2026-08-02"` (`data/eu_ai_act_articles.json:5`), **asserts that value in its own test suite** (`tests/test_articles_db.py:297-299`), and contains **no reference to Regulation (EU) 2026/1744** anywhere in the tree. Its education scope is real (`data/eu_ai_act_articles.json:390`, Annex III cat. 3), which makes it worse: it will confidently tell an education client a conformity deadline passed in August 2026, when Annex III applies from **2 December 2027**. 🟢 Use [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) for dates; keep this one only for codebase scanning. | EMEA |
 
 **42 verified permissive rows.** 🆕 `p435` added the sixteen above: fifteen newly shelved and one **restored** after a full-file rewrite had dropped it. They open the **national and institutional school-platform connector** tier, which no pass had shelved, and **twelve of the sixteen are EMEA** — the region this base had been carrying a sub-regional adoption nil for. Every slug resolved under `git ls-remote` and every
 licence was read from the repository's own payload — none was taken from a GitHub badge,
@@ -279,6 +279,35 @@ classifier: **19 MIT, 1 ISC**. Regions placed on the commit-offset channel
 (2025-10-08). 🔵 **Regional spread: 8 APAC, 6 EMEA, 6 North America, 1 LATAM** — and the
 LATAM row (`arthurcuri/mcp-instructure-canvas`, PUC Minas) is the only one shipping
 Portuguese-language documentation.
+
+## 🆕 `p437` — The **EU AI Act obligation-tooling tier**, graded by whether its encoded deadline survives the Digital Omnibus
+
+🔵 **Why this is a tier and not a footnote.** This base's `intel/market.md` names the
+December 2027 Annex III deadline as *"the highest-value and most defensible education
+engagement available anywhere right now"*. An engagement sold on a deadline needs a tool that
+knows the deadline. 🔴 **Most of them do not** — and the failure is invisible to a licence
+read, a star count or a freshness check.
+
+Every payload below read first-hand on 2026-10-25, trailing newline included (see the method
+note in `agents/trending.md` `p437`).
+
+| Agent / repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | What it does | Region |
+|---|---|---|---|---|---|
+| [tomdxb0004/eu-ai-act-risk-checker](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | MIT | `41da87feb238` | `LICENSE` 1 073 B · `b7b08f330649` | 🟢 **The one to build on.** Browser triage of risk tier, obligations, duty-holder and per-obligation date, every result citing its article. `engine.js:32` encodes `highRiskAnnexIII: '2027-12-02'` **citing Reg. (EU) 2026/1744**; `engine.js:44` carries education as Annex III point 3; `engine.js:170-186` implements the Art. 6(3) exception **including the profiling override**. No build step, no backend, no telemetry. | EMEA |
+| [sjgant80-hub/fall-euaiact](https://github.com/sjgant80-hub/fall-euaiact) | MIT | `5d8d27b65f68` | `LICENSE` 1 067 B · `0ddf3b67a14a` | Single-file browser compliance tool; dates correct post-Omnibus (Annex III 2 Dec 2027, Annex I 2 Aug 2028, Art. 50(2) marking 2 Dec 2026). 🟡 **No education-specific scope** — a general instrument, correct but not vertical. | EMEA |
+| [Hiepler/EuConform](https://github.com/Hiepler/EuConform) | MIT | `011a5ad9bea2` | `LICENSE` 1 073 B · `65335056589f` | Offline evidence toolkit: Art. 5 / Art. 6 / Annex III classification quiz, **Annex IV-style report generation**, CrowS-Pairs bias evaluation. 🟡 Dates stated only as *"high-risk obligations apply from 2027"* — not wrong, not actionable. The Annex IV report generator is the part worth taking. | EMEA |
+| [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | MIT | `70a4ab8e8a04` | `LICENSE` 1 074 B · `7df20dcdf919` | Agent-governance controls with an EU AI Act checklist that enumerates Annex III including education, and notes the domain set can shift by delegated act. 🟡 **Carries no dates at all**, so it can be neither stale nor current — pair it with the risk-checker for timing. | Global |
+| [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) | MIT | `fff58f6e8906` | `LICENSE` 1 056 B · `1126322e2cc8` | TypeScript SDK + CLI + web app; `data/annexes.json` carries Annex III **category 3 education** with all four statutory use cases. 🔴 **But do not quote its deadlines:** `packages/cli/src/commands/gaps.ts:199` hardcodes `'high-risk': '2026-08-02'`, its test suite pins that value, and `grep -rn '1744'` returns **nothing**. Take its annex data, not its dates. | EMEA |
+
+### 🔴 The pattern across this tier, which is the actual finding
+
+Three of these five tools encode a high-risk date. **Two encode the superseded one.** The
+projects share no code and no authors, so this is convergent error: the pre-Omnibus
+`2 August 2026` is baked across the EU-AI-Act open-source ecosystem, and every one of these
+repositories is MIT, actively maintained and recently updated. 🔴 **Licence, stars and
+freshness all fail to separate the correct tools from the wrong ones.** The only screen that
+works is reading the date out of the payload — three greps, written down in
+`repos/trending.md` `p437` and wired as a gate in `compose/patterns.md` Pattern AO.
 
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 
