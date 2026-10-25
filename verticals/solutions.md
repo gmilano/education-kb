@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446` — **The Moodle/Canvas connector tier re-priced by project count rather than address count: 🔴 the Canvas side is ONE maintained permissive project plus a second small arm, and the Moodle side is AGPL-3.0 or a 13-commit MIT alternative**
+
+🔵 **Why this belongs on this file.** This file's job is the platform tier an engagement
+customises. `p446`'s lineage audit (`agents/top.md`) changes the *supply* read under two of the
+platforms carried here, and the change is in the direction that matters: **fewer, better-known
+options**, not more.
+
+| platform | connector supply, graded by PROJECT | licence cost | engagement read |
+|---|---|---|---|
+| **Canvas LMS** (Instructure) | 🟢 **4 projects** across 7 addresses — `vishalsachdev` (1 128 commits, 503 files, HEAD today), `bruchris` (430 / 501), `r-huijts`→`mdweaver` arm (64 / 35), and two < 12-commit singletons | 🟢 **MIT throughout** | 🟢 Take `vishalsachdev/canvas-mcp`. It is the only address here with a four-figure commit count **and** a HEAD that moved during this pass |
+| **Moodle** | 🔴 **2 projects**, and they are not comparable — `csmediapro/moodle-mcp-server` (58 commits, 107 files) and `Jawadh-Salih/moodle-mcp-server` (13 commits, 37 files) | 🔴 **AGPL-3.0** / 🟢 MIT | 🔴 **The maintained Moodle connector costs AGPL-3.0.** The MIT alternative is 13 commits and stopped in **April 2026** |
+
+🔴 **The Moodle asymmetry is the procurement fact on this file.** Moodle is the LMS with the
+largest installed base in this base's region set, and its only actively-maintained MCP connector
+is **network-copyleft**: AGPL-3.0 reaches a hosted service, which is exactly how a studio would
+deploy it. 🟢 **Three dispositions, in cost order:** run `csmediapro` as a separate service and
+publish its source; build on the 13-commit MIT base and own the maintenance; or integrate
+Moodle through its own Web Services API directly and skip the connector tier. 🔵 The Canvas side
+has no such tension — every address is MIT.
+
+🟡 **Cell note.** `csmediapro`'s AGPL-3.0 payload re-measures **34 523 B · `0d96a4ff68ad`** from
+an independent clone this hour, agreeing with this base's own published byte count. 🔵 Both the
+figure and the family are confirmed; no disposition on this file changes on the Moodle grant
+itself, only on the **count** of alternatives to it.
+
+
 ## 🆕 `p445` — **Two more systems of record mapped, and they are the two OPPOSITE ends of this map: 🟡 SIGAA has a real documented integration layer that is uniformly GPL-3.0, and 🔴 SIIAU has NOTHING — its only SDK's repository has been deleted**
 
 🔵 **Why these two.** `p444` added **SUAP** as the first entry on this map that is

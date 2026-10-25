@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446` · reads 2026-10-25, commit 2026-10-25 — **The lineage measurement, as a repository record: 10 Canvas/Moodle MCP addresses resolve to 6 root commits, and 2 of the 10 carry nothing their upstream does not already have**
+
+🔵 **Instrument:** `git ls-remote` for HEAD, `git clone --filter=blob:none` for full history
+without blobs, `git rev-list --max-parents=0` for root commits, `git ls-tree -r` for file sets,
+`git cat-file blob | sha256sum` for payload cells, and `git merge-base --is-ancestor` across
+added remotes for direction. 🟢 **No GitHub API** — `api.github.com` remains 403 from this host
+(`Gap 445-A`), and none of this needs it. **~1 s per repository.**
+
+| address | HEAD | root | commits | files | file-set digest | first..last commit |
+|---|---|---|---|---|---|---|
+| `vishalsachdev/canvas-mcp` | `c47a611cfbed` | `afe32c3e1721` | 1 128 | 503 | `64a6a98744c0` | 2025-02-27..2026-10-25 |
+| `Harikeshav-R/canvas-mcp` | `db979a5ab5d7` | `afe32c3e1721` | 1 034 | 472 | `f7074578e114` | 2025-02-27..2026-10-18 |
+| `NelsonSpencer/canvas-mcp` | `92b7fbc9cd33` | `afe32c3e1721` | 416 | 218 | `4abf745dbb53` | 2025-02-27..2026-10-16 |
+| `r-huijts/canvas-mcp` | `711549f163ef` | `731aa116052b` | 60 | 31 | `c78ff9bcbecf` | 2024-12-12..2026-09-21 |
+| `mdweaver/canvas-mcp` | `739f07f6bb18` | `731aa116052b` | 64 | 35 | `dbd6ba95983a` | 2024-12-12..2026-10-01 |
+| `bruchris/canvas-lms-mcp` | `c740624be2ef` | `6d2e39a1cf7f` | 430 | 501 | `6ecbdc850d28` | 2026-04-12..2026-10-23 |
+| `csmediapro/moodle-mcp-server` | `9d7e300dfc8f` | `c5209fe71c06` | 58 | 107 | `f4d0328101cf` | 2026-05-15..2026-10-22 |
+| `Jawadh-Salih/moodle-mcp-server` | `a65aefa6d26e` | `93ecc95525bf` | 13 | 37 | `d9f8576f9853` | 2026-03-16..2026-04-04 |
+| `caleb-media-studio/canvas-mcp` | `c40b5a3b0317` | `96daa3fa20a3` | 11 | 35 | `10be9ab986f8` | 2026-10-04..2026-10-05 |
+| `Mattlo0546/canvas-mcp` | `b6c26ba52c14` | `36161a6e38c8` | 5 | 13 | `5a13776d7fc6` | 2026-10-19..2026-10-20 |
+
+🔵 **Read the `root` column, not the names.** Three `canvas-mcp` addresses under three different
+owners share root `afe32c3e1721` and a **2025-02-27** first commit; two more share
+`731aa116052b` and **2024-12-12**. 🟢 **File-set digests differ inside each arm** — which is why
+a file-set comparison alone would have called them distinct projects, and the **root commit** is
+the field that settles it.
+
+### 🟢 Direction, with the ancestry test that produced it
+
+| test | result |
+|---|---|
+| `Harikeshav-R@db979a5ab5d7` ancestor of `vishalsachdev@c47a611cfbed`? | 🟢 **YES** → 0 unique commits, 94 behind. A pure duplicate address |
+| `NelsonSpencer@92b7fbc9cd33` ancestor of `vishalsachdev@c47a611cfbed`? | 🔴 **NO** → 2 unique commits, **714 behind** |
+| `r-huijts@711549f163ef` ancestor of `mdweaver@739f07f6bb18`? | 🟢 **YES** → `mdweaver` is **4 ahead**; the fork is the maintained side |
+| `884d48cd0873` ancestor of `vishalsachdev@c47a611cfbed`? | 🟢 **YES** → the HEAD this pass read first **advanced mid-leg** |
+
+### 🟢 `krzysztofbury/librus-mcp` re-enumerated — three licence paths where `p442` recorded two
+
+| path | bytes | cell | family | state |
+|---|---|---|---|---|
+| `LICENSE` | 1 071 | `22e7ab2dbddc` | MIT | 🟢 reproduces `p442` |
+| `legacy_reference/LICENSE` | 35 149 | `3972dc9744f6` | GPL-3.0-only | 🟢 reproduces `p442` |
+| `LICENSE_REVIEW.md` | 9 662 | `6905cca1f0b4` | — | 🆕 **new since `p442`**, first appears at `e12e36f24224` |
+
+🔵 Live HEAD `56515efee01b`, **1 commit past** the pin this base publishes; `e12e36f24224`
+confirmed an ancestor. Treatment: [`repos/foundations.md`](../repos/foundations.md) `p446`.
+
+### 🔴 Nothing new was discoverable this hour, and that is the fifth consecutive such record
+
+🔵 The four mandated global legs returned **general-purpose** agent material (OpenClaw, LangGraph,
+CrewAI, OpenHands, browser-use, Agent Zero, Hermes) with **no education-sector repository** among
+them, and the vertical-platform leg returned general ERP/CRM (Apache OFBiz, Aureus ERP, Huly,
+Krayin, Atomic CRM, ERPNext) with 🔴 **no education-specific MIT/Apache platform** — the same
+shape `p440`–`p445` recorded. 🟡 The one education repository any global leg surfaced,
+`withmarbleapp/os-taxonomy`, is **already shelved on this base** (`agents/top.md`,
+`repos/foundations.md`) — grepped before it was written down.
+
+
 ## 🆕 `p445` · 2026-10-25 — **The platform-noun channel pays for a third pass and this time it pays COPYLEFT: three new SIGAA addresses, all GPL-3.0, all stale. 🔴 The mandated English discovery legs returned 0 new addresses from 14 candidates, which upgrades `p443`'s one-query finding into a result about the CHANNEL. 🔴 And the Mexico leg's single address is DEAD — probed, does not resolve.**
 
 ### 🟢 The three new repos, every cell read first-hand this hour

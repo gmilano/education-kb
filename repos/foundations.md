@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446` — **🟢 An upstream this base has audited twice has now published its OWN provenance review, and it is first-hand readable: `krzysztofbury/librus-mcp` ships a 9 662 B `LICENSE_REVIEW.md` that confirms `p442`'s GPL-3.0 subtree finding from the other side — and names a THIRD lane this base did not have, in which the MIT grant does NOT hold**
+
+🔵 **How this was found.** Not by a search leg. `p446` re-measured a published payload cell to
+validate its own hashing method (`agents/top.md` `p446`), and the licence-path enumeration over
+the live tree returned **three** paths where `p442` recorded two:
+
+```
+LICENSE                     1 071 B · 22e7ab2dbddc   MIT          (reproduces p442)
+legacy_reference/LICENSE   35 149 B · 3972dc9744f6   GPL-3.0-only (reproduces p442)
+LICENSE_REVIEW.md           9 662 B · 6905cca1f0b4   🆕 NEW — a provenance review
+```
+
+🟢 **`p442`'s two cells reproduce to the digit** from an independent blobless clone this hour,
+which is the strongest confirmation this base has of its own subtree instrument.
+
+### 🟢 What the upstream says, in its own words, and why it matters commercially
+
+| what the review states | first-hand quote | consequence for an engagement |
+|---|---|---|
+| the GPL subtree is deliberate and quarantined | *"Original 1.x source … preserved under the original GPL-3.0-only license. **Excluded from every 2.0 build inventory.** No relicensing or runtime fallback."* | 🟢 **Installing the published wheel/sdist does not pull GPL-3.0.** `p442` could only say *"a tree copy carries it"*; this says the **distributed artefact is clean** |
+| the licence HISTORY is non-monotone | *"The root originally used MIT, then switched to GPL-3.0-only in `1a59c56` because apix's distributed license contradicted its MIT package metadata."* | 🔴 **MIT → GPL-3.0 → MIT on one root path.** A single-cell read at any one commit is right about that commit and wrong about the project |
+| 🔴 **a flattened bundle is NOT approved** | *"This review approves the independent MCP distributions and ordinary separate dependency installation, **not an all-MIT standalone bundle**. Anyone bundling the whole installed environment … must review their additional notices, LGPL source/relinking obligations and resource terms separately."* | 🔴 **This is the lane an engagement actually ships** — one container image, one PyInstaller binary, one vendored wheelhouse |
+| the named hazard in that lane is `lxml` | *"Its binary wheels can bundle zlib (zlib license), **iconv (LGPL-2.1)**, libxml2, libxslt and libexslt (MIT) … Some schema-transformation resources are described as **unlicensed** in the upstream notice."* | 🔴 **LGPL-2.1 relinking obligations and an unlicensed resource set** arrive inside a wheel nobody reads |
+
+### 🔴 The third lane, stated plainly, because this base has been publishing two
+
+| lane | grant status | who does this |
+|---|---|---|
+| integrate over the MCP interface, process boundary | 🟢 MIT holds | the disposition `p442` published |
+| `git clone` and vendor the tree | 🔴 GPL-3.0-only arrives at `legacy_reference/` | the hazard `p442` named |
+| 🆕 **`pip install`, then flatten the environment into one shipped artefact** | 🔴 **outside the upstream's own approval**; LGPL-2.1 + unlicensed resources via `lxml` | 🔴 **the default delivery shape of a studio engagement** |
+
+🟢 **Prescription, and it is cheap:** the MIT lane survives a container **if** the dependency
+distributions keep their own licence files inside the image and are not relinked or
+repackaged — which is the ordinary `pip install` layout, and breaks the moment anyone runs a
+single-binary packer. 🔵 Put that sentence in the engagement's build review, not in its legal
+review, because the thing that violates it is a `Dockerfile` optimisation.
+
+### 🟢 Why this is a foundations finding and not an agents one
+
+🔵 `librus-python-api` (MIT, on this file) is the dependency the review is *about*: the pin moved
+`1.0.2 → 1.6.2 → 1.6.3` across **2026-10-09 / -19 / -22**, each step with its PyPI licence
+expression re-inspected by the upstream and recorded with a date. 🟢 **That is a maintained
+licence-provenance trail on a foundational dependency — the artefact this base asks engagements
+to produce, published by a single-maintainer project.** It is the reference implementation of
+`Pattern AX`'s per-platform licence probe, done by the supplier instead of the consumer, and it
+is worth citing as such.
+
+🔴 **One limit, stated:** the review is the upstream's own engineering inventory and says so
+(*"not legal advice"*). It is **evidence of diligence**, not a warranty, and the 35 149 B
+GPL-3.0 payload is still physically in the tree.
+
+
 ## 🆕 `p445` — **Three new SIGAA addresses, and all three land in the COPYLEFT tier — so the Brazilian system-of-record integration layer is now known to be real supply that cannot be vendored. 🔴 Zero permissive rows added, and the reason is measured: the mandated discovery legs returned 0 new addresses from 14 candidates**
 
 🔵 **Where these came from.** `Gap 444-B` named three unrun legs — a Peruvian university's

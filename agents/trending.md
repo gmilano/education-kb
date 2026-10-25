@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446` · reads 2026-10-25, commit 2026-10-25 — **The LMS-MCP tier was audited by LINEAGE instead of by prose, and the supply is 40 % smaller than this base has been counting: 🔴 ten addresses, SIX projects. 🔴 And `make hooks` would not run on this host, which re-opens `Gap 425-B` wider than `p443`'s correction allowed.**
+
+🔵 **Legs run, all 2026-10-25:** the four mandated global legs (agents / GitHub trending /
+vertical platforms / industry trends) and the four mandated regional legs (North America, EMEA,
+APAC, LATAM), plus one prescribed extra — `Gap 445-B`'s **third Peruvian channel**. Then the
+audit: **11 blobless clones**, **13 `git ls-remote` HEAD resolutions**, **11 licence payloads
+fetched and digested**, **4 cross-remote ancestry tests**, **1 licence-path tree enumeration**,
+and **1 hash-method validation against a cell this base already published**.
+
+### 🔴 Reported first: `make hooks` was DENIED on this host, twice
+
+| attempt | shape | result |
+|---|---|---|
+| 1 | `make hooks`, backgrounded | 🔴 **denied** — `[Code from External]` |
+| 2 | `make hooks`, foreground, 60 s cap | 🔴 **denied** — `[Code from External]` |
+
+🔴 **So this pass has NO gate baseline and NO post-write gate run**, and that is stated before
+anything it found. 🔵 **This matters because `p443` narrowed `Gap 425-B`** to *"a shell cannot
+source the library, which is narrow, and NOT that the suite cannot run."* 🔴 **On this host, in
+this hour, the suite itself could not run** — the denial lands on the `make` target, not on
+sourcing `compose/code/lib/*`. Registered as `Gap 446-A`. 🟡 **Consequence for every claim
+below:** each is a first-hand measurement with its command and its cell recorded, but **none is
+gate-checked**, and a successor should re-run `make hooks` against this commit before trusting
+the shelf edits.
+
+### 🟢 The audit `Gap 445-C` asked for — and the count it corrects
+
+Ten addresses `p445` measured, graded by **root commit** and **licence payload cell**:
+
+| group | root commit | addresses | verdict |
+|---|---|---|---|
+| ARM-1 | `afe32c3e1721` | `vishalsachdev/canvas-mcp`, `Harikeshav-R/canvas-mcp`, `NelsonSpencer/canvas-mcp` | 🔴 **one project, three addresses** — identical MIT cell `5385a26e2fac` |
+| ARM-2 | `731aa116052b` | `r-huijts/canvas-mcp`, `mdweaver/canvas-mcp` | 🔴 **one project, two addresses** — identical MIT cell `ab5109aafdb8` |
+| singleton | `6d2e39a1cf7f` | `bruchris/canvas-lms-mcp` | 🟢 independent · MIT `c29329c5ef3b` |
+| singleton | `c5209fe71c06` | `csmediapro/moodle-mcp-server` | 🟢 independent · 🔴 **AGPL-3.0** `0d96a4ff68ad` |
+| singleton | `93ecc95525bf` | `Jawadh-Salih/moodle-mcp-server` | 🟢 independent · MIT `2cf91ec5272f` |
+| singleton | `96daa3fa20a3` | `caleb-media-studio/canvas-mcp` | 🟢 independent · MIT `e7b1808c2ef8` |
+| singleton | `36161a6e38c8` | `Mattlo0546/canvas-mcp` | 🟢 independent · MIT `13c8ad755224` |
+
+🟢 **10 → 6.** Direction by full history: `Harikeshav-R` is an **ancestor** of ARM-1's upstream
+(0 unique commits, 94 behind); `NelsonSpencer` holds 2 unique while 714 behind; and in ARM-2 the
+**fork is the maintained side** — `r-huijts`'s HEAD is an ancestor of `mdweaver`'s, 4 behind.
+Full table and disposition: [`agents/top.md`](../agents/top.md) `p446`.
+
+🔴 **And the gap's stated evidence was false.** Measured README tool-counts: 187 / 128 / 126 /
+99 / 89 / 69 and four with none — **no "102 tools" anywhere, and the description channel
+mis-groups every arm member.** The arms are real; prose similarity did not find them. → `Gap 446-C`.
+
+### 🟢 `Gap 445-B` — CLOSED. Peru's THIRD independent channel nils, so it is a supply absence
+
+| channel | pass | result |
+|---|---|---|
+| ministry noun (**SIAGIE**) | `p444` | 🔴 24 thin, ungranted addresses |
+| university's own name (**UNMSM**) | `p444` | 🔴 884 coursework repositories |
+| system-of-record noun (PUCP *Campus Virtual*, UNI *SIGA*, UNSA) | `p445` | 🔴 nil |
+| 🆕 **private universities** (UPC, UTP, Universidad Continental) | 🆕 `p446` | 🔴 **nil** — portals enumerated (`estudiantes.ucontinental.edu.pe`, `estudiantespc.continental.edu.pe`), **no public API, no integration code, nothing for UPC or UTP**; the one GitHub hit is a generic unaffiliated student-portal API |
+
+🟢 **Four channels, four nils, three of them independently shaped.** Per `Gap 445-B`'s own
+prescription this is now recorded as a **genuine supply absence for Peru**, and the channel is
+**retired** — no successor should re-buy it. 🔵 The contrast is the useful part: Argentina
+(`siu-guarani-mcp`), Colombia (`sia-unal-mcp`) and Brazil (SIGAA) all paid on the
+system-of-record noun. Peru runs the same class of platform and has no public integration
+supply at all.
+
+### 🔴 The four mandated regional legs: saturated, with the one new cut flagged as relayed
+
+| leg | result |
+|---|---|
+| **North America** | 🔴 **nil on discovery.** Every instrument returned is already on `intel/market.md`: the 134-bills/31-states tracker, `AB 1159`, Idaho `SB 1227`, `H.R. 8747`, the four-state mandatory-policy cluster, Katy ISD, Charleston County, Canada's *AI for All*. Grepped before being written down |
+| **EMEA** | 🔴 **nil, second pass running.** Returned the EU AI Act high-risk education classification and the `2026/1744` Digital Omnibus dates (**2 Dec 2027** Annex III / **2 Aug 2028** embedded) — both already on this base, which is why `ark-forge/mcp-eu-ai-act` is already disqualified as a date oracle. 🟢 `Gap 445-F`'s prescription stands: retire the region-level EMEA leg for a country leg |
+| **APAC** | 🔴 **nil on discovery.** Vietnam's education high-risk register (**1 Mar 2027** compliance), Korea's AI Basic Act (**22 Jan 2026**, one-year penalty grace) and Taiwan's (Dec 2025) all already carried |
+| **LATAM** | 🟡 **one new cut, and it is relayed.** UNESCO IESALC's **institution-type split** — private non-profit **84 %**, public **68 %**, private for-profit **52 %** — is new to this base; the 87 % / 26 % / 73.5 % headline figures re-returned verbatim |
+
+🔴 **`Gap 445-E` is UNPAID and the reason is re-measured, not restated.** Both primaries were
+probed again this hour and the proxy's own relay log records the refusals:
+`www.iesalc.unesco.org:443` → **403 CONNECT**, `unu.edu:443` → **403 CONNECT**, timestamped
+`2026-10-25T23:40:39Z`. 🔵 `eur-lex.europa.eu` was probed too and is **also 403**, so the EU
+primary is unreachable from here as well — which is new information about the *host*, not about
+the sources.
+
+### 🟡 A pinned HEAD drifts within the hour; a payload cell does not
+
+🔴 `vishalsachdev/canvas-mcp` HEAD moved **mid-leg**: `884d48cd0873` → `c47a611cfbed`, ancestry
+confirmed, commit dated 2026-10-25. 🔴 `krzysztofbury/librus-mcp` is **1 commit past** this
+base's published pin `e12e36f24224` (live `56515efee01b`, ancestor confirmed) 🟢 **while its
+payload cell is byte-identical** at `1 071 B · 22e7ab2dbddc`. → `Gap 446-B`: grade grants on the
+cell, read the HEAD pin as a date.
+
+### 🟢 Method validation, run BEFORE eleven new cells were published
+
+sha256-first-12 over raw file bytes reproduces this base's published cell exactly
+(`1 071 B · 22e7ab2dbddc`); `sha1` → `c9abf450e4ea`, `md5` → `31aebbb6abd5`, git blob id →
+`90838b0fab0b` all disagree. 🟢 The convention is confirmed and this pass's cells are in it.
+
+### 🟢 Carried onto [`repos/foundations.md`](../repos/foundations.md) — the one genuinely new artefact this hour
+
+A **9 662 B `LICENSE_REVIEW.md`** (`6905cca1f0b4`, review dated 2026-10-05) published by
+`krzysztofbury/librus-mcp`, which confirms `p442`'s GPL-3.0 subtree from the upstream side and
+names a **third lane** where the MIT grant does not hold: a flattened single-artefact build.
+Treatment on [`repos/foundations.md`](../repos/foundations.md) `p446`.
+
+
 ## 🆕 `p445` · 2026-10-25 — **`Gap 444-A` is ANSWERED, and the answer refutes `Trend 44`, which this base published one pass ago. 🔴 "The institution publishes and does not licence" is IFRN-specific, not institution-generic: measured over **3 932** first-hand addresses instead of 5, institutional publishers grant at **72.2 %** against a **76.3 %** baseline, Fisher **p = 0.558**. 🔴 And the discovery channel this pass was told to run returned **0 new addresses from 14 candidates**.**
 
 🔵 **Why this pass went at the base's own freshest claim instead of at a region.** `p444`

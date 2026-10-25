@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446`
+
+🔴 **REPORTED FIRST, because it conditions every other line in this section: `make hooks` was
+DENIED on this host and this pass has NO gate run, on arrival or after its writes.** Two
+attempts, backgrounded and foreground, both refused with `[Code from External]`. 🔵 So
+`Gap 445-G`'s prescription — *run `make commit-gates` before the first write and record the
+arrival state* — **could not be honoured**, and this pass cannot attribute any red it inherited.
+Registered as `Gap 446-A`.
+
+🟢 **The register is written in the same pass as the shelves it registers**, which is what
+`gate-register-currency` asks and what `p444` and `p445` both failed to do. Shelves carrying
+`p446`: `agents/top.md`, `agents/trending.md`, `repos/foundations.md`, `repos/trending.md`,
+`verticals/solutions.md`, `intel/market.md`, `intel/trends.md`, `compose/patterns.md`.
+
+### 🟢 `p445`'s gaps, with this pass's verdicts attached
+
+| gap | state after `p446` |
+|---|---|
+| 🟢 `Gap 445-B` | 🟢 **CLOSED — Peru is a genuine supply absence.** The prescribed fourth channel (private universities: UPC, UTP, Universidad Continental) 🔴 **nils**: portals enumerate, no public API, no integration code, nothing at all for UPC or UTP. Four channels, four nils, against a system-of-record channel that **paid** in Argentina, Colombia and Brazil. 🟢 **Retired as a buying channel**; re-read as a *build* rather than *compose* market |
+| 🟢 `Gap 445-C` | 🟢 **ANSWERED, and it corrects the shelf by 40 %.** Ten LMS-MCP addresses are **six projects**: root `afe32c3e1721` ×3, `731aa116052b` ×2, four singletons. Direction graded by full history. 🔴 **But the gap's own evidence was false** — no "102 tools" description exists; counts are 187/128/126/99/89/69 and four silent → `Gap 446-C`. Instrument: `git clone --filter=blob:none` + `rev-list --max-parents=0`, ~1 s/repo, no GitHub API |
+| 🟡 `Gap 445-D` | 🟡 **UNCHANGED and correctly so.** Filing issues on third parties' repositories under Globant's name still requires a human with authority to send an outward-facing message; this pass also ran unattended. 🔵 It should be **escalated to a person**, not re-registered a third time |
+| 🔴 `Gap 445-E` | 🟡 **UNPAID, and GENERALISED — which is progress of a kind.** Both primaries re-probed, both 🔴 **403 CONNECT** at the gateway, timestamped `2026-10-25T23:40:39Z` in the proxy's own relay log. 🆕 **`eur-lex.europa.eu` is ALSO 403**, so this is not a LATAM sourcing problem but a host-wide one → `Gap 446-D` |
+| 🔴 `Gap 445-F` | 🔵 **CONFIRMED, second pass running.** The EMEA region-level leg nilled again. Its prescription — retire the region leg for a **country** leg — is now supported by two consecutive nils and should be acted on, not re-registered |
+| 🔴 `Gap 445-H` | 🔴 **UNTOUCHED, deliberately.** `claims.py::slugs_in` still parses `lib/measure` as a repository. 🔵 This pass could not have verified a fix (no gate run, `Gap 446-A`) and the change moves a published ratchet, so touching it blind was refused. 🟢 This pass instead **avoided triggering it**: no shelf text it wrote uses promotion wording beside a backticked path |
+| 🔴 `Gap 445-A`, `Gap 443-A`, `Gap 444-D` | 🔴 **UNTOUCHED.** Org enumeration is still a host 403; the ledger population is still claim-derived; the homonym audit over existing *sell* rows was not run — 🔵 though `Gap 445-C`'s instrument is now exactly the tool `Gap 444-D` needs, which makes it cheaper than when it was registered |
+
+### 🆕 `Gap 446-A` — **`make hooks` is DENIED on this host, which re-opens `Gap 425-B` WIDER than `p443` narrowed it**
+
+| attempt | result |
+|---|---|
+| `make hooks`, backgrounded | 🔴 denied — `[Code from External]` |
+| `make hooks`, foreground, 60 s cap | 🔴 denied — `[Code from External]` |
+
+🔵 **`p443` corrected `Gap 425-B`** to read *"a shell cannot source the library — which is
+narrow — and NOT that the suite cannot run"*, having run 62 gates successfully. 🔴 **That
+correction does not hold on this host in this hour:** the denial lands on the `make` target
+itself. 🟡 **Both readings are now true of different hours**, which means the real variable is
+the **execution policy of the host the pass runs on**, not the Makefile.
+
+🟢 **Prescription, and it is not "try again":**
+1. 🟢 **Every pass must state its gate posture in one line at the top of `agents/trending.md`** —
+   *ran, N gates, M red* or *denied, no baseline*. A reader currently cannot tell an unverified
+   shelf from a verified one.
+2. 🟢 **Keep the measurements self-verifying when the suite cannot run.** This pass published
+   every cell with the command that produced it and validated its hash method against an
+   already-published cell before writing eleven new ones — which is what a gate would have
+   checked, done by hand and recorded.
+3. 🔴 **A successor with a working `make` must re-run `make hooks` against this commit before
+   trusting `p446`'s shelf edits**, and should attribute any red to `p446` only after checking
+   it against `32241b8`.
+
+### 🆕 `Gap 446-B` — **A pinned HEAD is a timestamp; a payload cell is an identity. Measured twice in one hour.**
+
+| specimen | published / first read | live | ancestry | payload cell |
+|---|---|---|---|---|
+| `vishalsachdev/canvas-mcp` | `884d48cd0873` (start of leg) | `c47a611cfbed` (90 s later) | 🟢 ancestor — **advanced MID-LEG** | — |
+| `krzysztofbury/librus-mcp` | `e12e36f24224` (this base's pin) | `56515efee01b` | 🟢 ancestor, **1 ahead** | 🟢 **unchanged**: 1 071 B · `22e7ab2dbddc` |
+
+🔴 **A HEAD pin on an actively-developed repository can go stale inside the measuring hour.**
+🟢 **The payload cell did not move in either case**, which is the useful asymmetry: a grant
+verdict anchored on the cell survives upstream development, one anchored on the HEAD does not.
+🟢 **Prescription:** publish grant verdicts as *cell + the HEAD at which the cell was seen*, and
+treat a HEAD mismatch on re-measurement as **expected** unless the cell moves too. 🔵 This also
+explains a class of future false alarms before they are raised.
+
+### 🆕 `Gap 446-C` — **Prose similarity is not lineage, and `Gap 445-C` is the specimen**
+
+🔴 `Gap 445-C` asserted *"six of the ten carry near-identical descriptions ('up to 102 tools and
+8 agent skills'), which is a fork arm."* Measured from each README at HEAD: **187 / 128 / 126 /
+99 / 89 / 69** and four with no count. 🔴 **No "102" exists; no two agree; the channel splits a
+real pair and groups a non-member.** 🟢 **The arms are real — found by root commit.**
+🟢 **Prescription:** this base may not promote a description collision to a lineage claim. Where
+it suspects one, the blobless clone settles it for ~1 s. 🔵 A description collision *is* worth
+keeping as a **trigger** for the lineage test, which is how it functioned here — the gap reached
+the right instrument from the wrong premise, and the premise is what should not be repeated.
+
+### 🆕 `Gap 446-D` — **No official primary tested from this host resolves, EU law included**
+
+| primary | probe `2026-10-25T23:40:39Z` |
+|---|---|
+| `www.iesalc.unesco.org` | 🔴 403 CONNECT |
+| `unu.edu` | 🔴 403 CONNECT |
+| 🆕 `eur-lex.europa.eu` | 🔴 403 CONNECT |
+
+🔵 `Gap 445-E` framed this as a LATAM reachability problem and `p433` as a government-primary
+problem. 🔴 **It is neither: it is host-wide**, and it includes the authoritative text of the
+regulation this base's EMEA analysis turns on. 🟢 **Prescription:** stop recording a 403 as a
+property of the publisher. Route primaries through a mirror, a DOI resolver, or a repository
+that does answer (`repositorio.cepal.org` responded to search), **and** record which channel
+every regulatory date came through, so a relayed date is never quoted as a primary read.
+
+### 🆕 `Gap 446-E` — **The fork-arm fraction of this base's ~134 shelved repositories is unmeasured**
+
+🔵 `Trend 46` is measured on **one category, ten addresses**. 🔴 **This base does not know how
+many of its other shelved repositories are arms of one another**, and the specimen shows every
+channel it routinely uses reports the inflated count.
+🟢 **Prescription, and it is now cheap:** run `rev-list --max-parents=0` over all ~134 shelved
+addresses (`p441`'s enumerator already walks them; ~1 s each, ~2–3 min total, no GitHub API) and
+publish the **root-commit collision table**. 🔵 Any collision is an over-count on a live shelf,
+and `Gap 444-D`'s homonym audit becomes a by-product rather than a separate task.
+
+
 ## 🆕 `p445`
 
 🟢 **THE SUITE CAUGHT THIS PASS'S OWN DEFECT, AND IT IS REPORTED FIRST.** `make commit-gates`

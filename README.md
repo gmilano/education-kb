@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 446 — reads 2026-10-25, commit 2026-10-25 — **`Gap 445-C` ANSWERED AND THE SHELF IS OVER-COUNTING ITS DENSEST CATEGORY BY 40 %: ten Canvas/Moodle MCP addresses are SIX projects, graded by root commit and confirmed by byte-identical licence payload. 🔴 The gap's own evidence was false — the "102 tools" descriptions it cited do not exist. 🟢 `Gap 445-B` CLOSED: Peru's fourth channel nils, so a country is recorded as a genuine supply absence. 🔴 AND THIS PASS HAS NO GATE RUN AT ALL — `make hooks` was DENIED on this host, twice, which re-opens `Gap 425-B` wider than `p443` narrowed it.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` did not run.** Two attempts —
+backgrounded and foreground — both refused with `[Code from External]`. So there is **no arrival
+baseline and no post-write gate run**, `Gap 445-G`'s prescription could not be honoured, and this
+pass cannot attribute any inherited red. 🔵 `p443` had narrowed `Gap 425-B` to *"a shell cannot
+source the library, NOT that the suite cannot run."* 🔴 On this host, in this hour, the suite
+itself could not run. Registered as `Gap 446-A`. 🟡 **Every claim below is first-hand and carries
+the command that produced it; none is gate-checked.**
+
+🔵 **No date straddle.** Eight WebSearch legs (four global, four regional) plus one prescribed
+extra channel, **11 blobless clones**, **13 `git ls-remote` HEAD resolutions**, **11 licence
+payloads fetched and digested**, **4 cross-remote ancestry tests**, **1 whole-tree licence-path
+enumeration**, **1 hash-method validation against an already-published cell**, and **6 primary
+reachability probes** — all **2026-10-25**, commit **2026-10-25**, so `updated:` carries one date
+on every file.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 445-C` CLOSED: 10 addresses, 6 projects.** Root commit `afe32c3e1721` carries
+  `vishalsachdev/canvas-mcp`, `Harikeshav-R/canvas-mcp` and `NelsonSpencer/canvas-mcp`; root
+  `731aa116052b` carries `r-huijts/canvas-mcp` and `mdweaver/canvas-mcp`; four addresses are
+  singletons. 🟢 **Two independent axes agree** — shared root *and* byte-identical licence cell
+  (`5385a26e2fac` ×3, `ab5109aafdb8` ×2). Instrument: `git clone --filter=blob:none` +
+  `rev-list --max-parents=0`, **~1 s per repository, no GitHub API** (403 here).
+- 🟢 **Direction graded by full history, and it does not follow ownership.**
+  `Harikeshav-R`'s HEAD is an **ancestor** of its upstream — **0 unique commits**, 94 behind, a
+  pure duplicate address. `NelsonSpencer` holds **2** unique while **714 behind**. 🔵 And in the
+  second arm the **fork is the maintained side**: `r-huijts`'s HEAD is an ancestor of
+  `mdweaver`'s, which is 4 ahead.
+- 🔴 **`Gap 445-C`'s stated evidence was false, and that is recorded rather than quietly dropped.**
+  It claimed six near-identical *"up to 102 tools and 8 agent skills"* descriptions. Measured
+  from each README at HEAD: **187 / 128 / 126 / 99 / 89 / 69** and four with no count. **No
+  "102" exists**; the channel splits a real pair (128 vs 126) and groups a non-member (187).
+  🟢 The arms are real; prose similarity did not find them → `Gap 446-C`, and `Trend 46`.
+- 🟢 **`Gap 445-B` CLOSED — Peru is a genuine supply absence, not an unpaid query.** The
+  prescribed fourth channel (private universities UPC, UTP, Universidad Continental) **nils**:
+  portals enumerate, no public API, no integration code, nothing at all for UPC or UTP. Four
+  channels, four nils — against a system-of-record channel that **paid** in Argentina, Colombia
+  and Brazil. 🔵 Re-read as a **build** market where its neighbours are **compose** markets, and
+  retired as a buying channel.
+- 🟢 **A new first-hand artefact, and it is the best thing this hour returned.**
+  `krzysztofbury/librus-mcp` now ships **`LICENSE_REVIEW.md`** (9 662 B · `6905cca1f0b4`, review
+  dated **2026-10-05**), which confirms `p442`'s GPL-3.0 subtree **from the upstream side**
+  (*"Excluded from every 2.0 build inventory. No relicensing or runtime fallback"*), records a
+  **non-monotone licence history** (MIT → GPL-3.0-only at `1a59c56` → MIT), carries a locked
+  runtime dependency licence inventory, and 🔴 **names a third lane in which the MIT grant does
+  not hold**: *"not an all-MIT standalone bundle."* That lane — one flattened container or
+  single-file binary — **is the default delivery shape of a studio engagement**, and `lxml`'s
+  binary wheels can carry **LGPL-2.1 iconv** plus resources the upstream calls unlicensed.
+- 🟢 **`p442`'s two cells reproduce to the digit** from an independent clone: root MIT
+  **1 071 B · `22e7ab2dbddc`**, `legacy_reference/LICENSE` **35 149 B · `3972dc9744f6`**. The
+  strongest confirmation this base has of its own subtree instrument.
+- 🟡 **`Gap 446-B`: a pinned HEAD is a timestamp, not an identity — measured twice in one hour.**
+  `vishalsachdev/canvas-mcp` advanced **mid-leg** (`884d48cd0873` → `c47a611cfbed`, ancestry
+  proven, commit dated today); `librus-mcp` is **1 commit past** this base's published pin
+  (`e12e36f24224` → `56515efee01b`) 🟢 **while its payload cell did not move at all.** Anchor
+  grant verdicts on the cell; read the HEAD pin as the date the tree was seen.
+- 🟢 **The cell method was validated before eleven new cells were published.** sha256-first-12
+  over raw bytes reproduces the published `1 071 B · 22e7ab2dbddc` exactly; `sha1`
+  (`c9abf450e4ea`), `md5` (`31aebbb6abd5`) and the git blob id (`90838b0fab0b`) all disagree.
+- 🔴 **Three of four regional legs NIL on discovery, each grepped before being written down.**
+  North America (five consecutive nils now), EMEA (second consecutive — `Gap 445-F`'s
+  country-leg prescription should be acted on), APAC (three jurisdictions re-confirmed).
+  🟡 LATAM returned **one** new cut: UNESCO IESALC's institution-type split — private non-profit
+  **84 %**, public **68 %**, private for-profit **52 %** — carried as **relayed**, because the
+  primaries are unreachable.
+- 🔴 **`Gap 446-D`: no official primary tested from this host resolves, EU law included.**
+  `www.iesalc.unesco.org`, `unu.edu` **and** `eur-lex.europa.eu` all return **403 CONNECT**,
+  timestamped in the proxy's own relay log. 🔵 `Gap 445-E` framed this as LATAM reachability and
+  `p433` as a government-primary problem; it is **host-wide**, and it means the authoritative
+  text of the regulation this base's EMEA analysis turns on has never been read first-hand here.
+
+🔵 **Declared gaps carried forward unpaid:** `Gap 445-A` (org enumeration is a host 403),
+`Gap 443-A` (ledger population still claim-derived), `Gap 444-D` (homonym audit over existing
+rows — 🟢 now cheaper, since `p446`'s instrument is exactly the tool it needs), `Gap 445-D`
+(needs a human with authority to send an outward-facing message; refused again by an unattended
+pass), `Gap 445-H` (`claims.py::slugs_in` still parses `lib/measure` as a repository — not
+touched blind with no gate run available, and this pass instead avoided triggering it).
+🆕 `Gap 446-E`: the fork-arm fraction of this base's ~134 shelved repositories is **unmeasured**,
+and `Trend 46` shows every channel this base routinely uses reports the inflated count.
+
+🟡 **One housekeeping note:** this README's newest prior entry is **Pass 442**, so passes
+**443–445** published shelves and the gap register without adding a README pass entry. Recorded,
+not retro-fixed — `dated-by-measurement` forbids back-writing their prose, and
+[`intel/open-gaps.md`](intel/open-gaps.md) carries all three.
+
+
 ## Pass 442 — reads 2026-10-25, commit 2026-10-25 — **`Gap 441-A` BOUGHT: the tree channel is now IN the library every pass sources, and on 12 of the 134 repositories these shelves sell, the ladder's single row is not the whole grant — one of them, sold as MIT, ships a complete GPL-3.0 below its root. 🔴 THEN THE SAME QUESTION WAS ASKED OF THIS BASE'S OWN CELLS: 19 of 162 did not reproduce, every one of them carrying the `P834` capture signature, from three passes that had the fix available. Repaired, with a gate. 🟢 Seven new rows, every cell built by the primitive**
 
 🔵 **No date straddle.** Eight WebSearch legs (four regional, four global), two GitHub

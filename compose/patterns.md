@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AY — `p446` **The lineage pre-flight: a 10-minute gate that runs BEFORE you tell a client how many options they have, because `Trend 46` says the shelf over-counts and `Gap 446-B` says the pin you quoted may already be stale**
+
+🔵 **Why this pattern exists.** Two failures this base measured in one hour, both on the question
+an engagement asks first:
+
+- 🔴 **Over-count.** Ten Canvas/Moodle MCP addresses are **six** projects. Quoting ten is a
+  credibility loss on the second call, when the client's own engineer runs one `git log`.
+- 🔴 **Stale pin.** `vishalsachdev/canvas-mcp`'s HEAD advanced **while this base was measuring
+  it**, and `krzysztofbury/librus-mcp` is a commit past the pin this base publishes.
+
+🟢 **The pattern is the cheap check that prevents both**, and it needs no GitHub API — which
+matters, because `api.github.com`, `github.com/search` and `codeload.github.com` are all **403**
+from this base's host.
+
+### 🟢 The recipe — concrete, with the repos and the commands
+
+**Input:** the candidate address list off `agents/top.md` for the client's platform. Worked here
+on the real Canvas/Moodle set.
+
+**Step 1 — resolve, don't trust (≈1 s each).**
+```
+git ls-remote https://github.com/<owner>/<repo> HEAD
+```
+🔴 A failure here is a finding, not an error: `Gap 444-B`'s `dev-cucei-itrans/siiau-api-client`
+is how a deleted repository presents. Record the sha **with the clock time**, because
+`Gap 446-B` is a live hazard on an active repository.
+
+**Step 2 — clone blobless and take the root commit (≈1 s each).**
+```
+git clone --filter=blob:none <url> ./<owner>~<repo>
+git -C ./<owner>~<repo> rev-list --max-parents=0 HEAD    # the project identity
+git -C ./<owner>~<repo> rev-list --count HEAD            # the maintenance signal
+```
+🟢 **Group by root commit. That is the option count.** Here: `afe32c3e1721` ×3,
+`731aa116052b` ×2, four singletons → **6 projects, 10 addresses**.
+
+**Step 3 — grade direction inside each group, by full history.**
+```
+git -C <A> remote add other <url-of-B> && git -C <A> fetch --filter=blob:none other
+git -C <A> merge-base --is-ancestor <B-head> <A-head>   # 0 = B adds nothing
+git -C <A> rev-list --count <B-head>..<A-head>          # how far behind B is
+```
+🟢 Take the descendant, **whoever owns it**: in ARM-2 the fork `mdweaver/canvas-mcp` is 4 ahead
+of the root `r-huijts/canvas-mcp`.
+
+**Step 4 — grade the grant on the payload cell, not the HEAD.**
+```
+git -C <d> ls-tree -r --name-only HEAD | grep -iE 'licen|copying'   # the WHOLE tree
+git -C <d> cat-file -s HEAD:<path>                                   # bytes
+git -C <d> cat-file blob HEAD:<path> | sha256sum | cut -c1-12        # the cell
+```
+🔴 **Enumerate the tree, never just the root** — `krzysztofbury/librus-mcp` is MIT at the root
+and ships a complete **GPL-3.0** at `legacy_reference/LICENSE` (35 149 B · `3972dc9744f6`).
+🟢 **sha256-first-12 over raw bytes** is this base's cell convention, validated this pass against
+a published cell (`1 071 B · 22e7ab2dbddc`).
+
+**Step 5 — read the upstream's own provenance file if it has one.**
+🟢 `krzysztofbury/librus-mcp` ships `LICENSE_REVIEW.md` (9 662 B · `6905cca1f0b4`) with a locked
+dependency licence inventory and an explicit scope limit: *"not an all-MIT standalone bundle."*
+🔴 **That sentence disqualifies the delivery shape a studio defaults to** — one flattened
+container or single-file binary — because `lxml`'s binary wheels can carry **LGPL-2.1 iconv**
+and resources the upstream describes as unlicensed. Check it **before** the build review.
+
+### 🟢 What it costs, and what it buys
+
+| | |
+|---|---|
+| **cost** | ~1 s per repository for steps 1–2, a few minutes for a 10-address list; **no API keys, no GitHub API, no rate limit** |
+| **buys** | the option count a client can verify; the address to actually take; a grant verdict over the whole tree; and the one sentence that stops a GPL subtree or an LGPL relink arriving in the shipped artefact |
+| **when to run** | 🟢 **before the first scoping call**, and again before the build review — `Gap 446-B` means a pin older than an hour is a date, not an identity |
+
+🔵 **Composes with `Pattern AX`** (the per-platform licence probe): `AX` answers *what does this
+platform's supply cost*, `AY` answers *how many suppliers are there really, and which one do I
+take*. Run `AY` first — it shrinks `AX`'s input set, here from ten addresses to six.
+
+
 ## 🆕 Pattern AX — `p445` **The per-platform licence probe: a two-hour gate that runs BEFORE you quote a system-of-record integration, because `Trend 45` says you cannot carry the last platform's answer to this one**
 
 🔵 **Why this pattern exists.** This base has now published **three incompatible answers** to

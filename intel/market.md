@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446` · 2026-10-25 — **Four regional legs, 🔴 three of them NIL on discovery and written down as nils, and the fourth returns one new cut that is honestly labelled relayed. 🟢 The pass's real regional result is a CLOSURE: Peru's fourth channel nils, so a country moves from "unpaid" to "genuine supply absence".**
+
+🔵 **Shape.** `p427`'s *one country, one question* ran for a fourth consecutive pass. The single
+`## Opportunities by region` block below is amended **in place** — still one block, one `###`
+per region, closed vocabulary intact. 🔴 **Three of the four legs returned nothing this file did
+not already carry**, and each nil was established by grepping the instrument against this file
+**before** it was written down, because `p442` recorded two near-misses that read like
+discoveries until they were grepped.
+
+| leg | verdict | what it returned |
+|---|---|---|
+| **North America** | 🔴 **NIL on discovery** | the 134-bills/31-states tracker, California `AB 1159`, Idaho `SB 1227`, `H.R. 8747` (K-12 AI Literacy and Readiness Act, July 2026 markup), the four-state mandatory-district-policy cluster, Katy ISD, Charleston County, Canada's *AI for All* — 🟢 **all eight already on this file** |
+| **EMEA** | 🔴 **NIL, second consecutive pass** | the EU AI Act's high-risk classification of education access and assessment, and the Digital Omnibus — Regulation **(EU) 2026/1744**, OJ **24 July 2026** — moving Annex III stand-alone systems to **2 December 2027** and embedded AI to **2 August 2028**. 🟢 Already carried, and already the basis for disqualifying `ark-forge/mcp-eu-ai-act` as a date oracle |
+| **APAC** | 🔴 **NIL on discovery** | Vietnam's education high-risk register (sole-basis-without-human-review test; pre-15 Aug 2026 systems comply by **1 March 2027**), Korea's **AI Basic Act** in force **22 January 2026** with a one-year penalty grace, Taiwan's AI Basic Act (**December 2025**) |
+| **LATAM** | 🟡 **one new cut, labelled relayed** | UNESCO IESALC's **institution-type split**: private non-profit **84 %**, public **68 %**, private for-profit **52 %**. The 87 % / 26 % / 73.5 % headlines re-returned verbatim |
+
+### 🟡 The one new LATAM number, and the reason it is not promoted to a headline
+
+🟢 **Why it is worth carrying at all:** every adoption figure on this file is an *average over
+institutions*, and this is the first cut that says **which institutions**. A **32-point spread**
+between private non-profit (84 %) and private for-profit (52 %) is a targeting instruction, not
+a statistic — it says the qualified buyer in LATAM higher education is the **private non-profit
+university**, which is also the segment with the budget autonomy to sign.
+
+🔴 **Why it is capped at `🟡`:** it is **search-relayed**, from the same instrument whose primary
+document this base still cannot read. `Gap 445-E`'s probes were re-run this hour and the proxy's
+own relay log records the refusals:
+
+| primary | probe, 2026-10-25T23:40:39Z | state |
+|---|---|---|
+| `www.iesalc.unesco.org` | 🔴 **403 CONNECT** (policy denial at the gateway) | unreachable |
+| `unu.edu` | 🔴 **403 CONNECT** | unreachable |
+| 🆕 `eur-lex.europa.eu` | 🔴 **403 CONNECT** | 🆕 **unreachable — the EU primary too** |
+
+🔵 **That third row is new information about the HOST, not about the sources.** `Gap 445-E` was
+written as a LATAM reachability problem; it is in fact general — **no official primary tested
+from this host resolves**, EU law included. 🟢 So the prescription generalises: this base should
+stop treating a 403 on a publisher's own domain as a fact about that publisher, and should route
+every primary through a mirror or DOI. Carried as `Gap 446-D`.
+
+### 🟢 Peru — `Gap 445-B` CLOSED, and a country is recorded as a genuine supply absence
+
+🔴 The fourth independent channel, the one `Gap 445-B` prescribed as decisive — **private
+universities** (UPC, UTP, Universidad Continental) — **nils**. Portals enumerate
+(`estudiantes.ucontinental.edu.pe`, `estudiantespc.continental.edu.pe`); there is **no public
+API, no integration documentation and no repository** for any of the three, and nothing at all
+returned for UPC or UTP.
+
+| channel | pass | result |
+|---|---|---|
+| ministry noun (SIAGIE) | `p444` | 🔴 24 thin, ungranted addresses |
+| university's own name (UNMSM) | `p444` | 🔴 884 coursework repositories |
+| system-of-record noun (PUCP, UNI, UNSA) | `p445` | 🔴 nil |
+| private universities (UPC, UTP, Continental) | 🆕 `p446` | 🔴 **nil** |
+
+🟢 **Four channels, four nils** — and the same system-of-record channel **paid** in Argentina,
+Colombia and Brazil. 🔵 **So this is a statement about Peru's supply, not about this base's
+queries**, and it is the first time the base can say that about a country with this much
+evidence. 🟢 **Retired as a buying channel.** The engagement consequence is the opposite of
+discouraging: Peru runs the same platform class as its neighbours with **no public integration
+supply at all**, which makes it a **build** market rather than a **compose** market — and that
+is a positioning statement, not a gap.
+
+
 ## 🆕 `p445` · 2026-10-25 — **Four regional legs. 🟢 `Gap 444-F` is PAID: the LATAM 92 % finally has a named instrument, a population and a date instead of a press attribution. 🟢 The APAC leg returns the sharpest procurement fact this file has ever carried — a national AI-education programme was REVERSED by statute. 🔴 And the EMEA leg is written down as a NIL, with the reason, because one of its two "findings" surveyed the wrong continent.**
 
 🔵 **Shape.** `p427`'s prescription — *one country, one question* — ran for a third consecutive
@@ -572,6 +636,17 @@ supply and a permissive agent layer can.
 
 ### North America
 
+**🆕 `p446` — NIL on discovery, and the nil is the record.** 🔴 Every instrument the leg
+returned is already on this file — the 134-bills/31-states tracker, `AB 1159`, Idaho `SB 1227`,
+`H.R. 8747`, the four-state mandatory-district-policy cluster, Katy ISD, Charleston County,
+Canada's *AI for All* — and each was grepped against this file **before** being written down,
+per `p442`'s near-miss rule. 🔵 **Five consecutive passes have now nilled on NA discovery**,
+which is a statement about this region's instrument coverage here being complete at the
+policy layer, not about the leg being badly shaped. 🟢 **The sellable position is unchanged and
+now better supported:** guidance exists almost everywhere, so the question is *who operates it*,
+and `p446`'s `Pattern AY` adds the supply-side half — a district or system asking *how many
+connector options exist for our LMS* should be told **six, not ten**.
+
 **🆕 `p445` — the state K-12 AI guidance count, carried with its instrument and its date, because the figure moves faster than this base refreshes.**
 🟢 **37 states plus Puerto Rico have official AI guidance or a policy framework as of June 2026**
 (Playlab policy directory) — against **more than 35** on **27 May 2026** (New Mexico Legislative
@@ -842,6 +917,21 @@ unbundled, unmandated and needed**, which is the cleanest NA service shape on th
 authoritative text and has not been read first-hand.
 
 ### EMEA
+
+**🆕 `p446` — NIL, second consecutive pass, and `Gap 445-F`'s prescription should now be acted
+on rather than re-registered.** 🔴 The region-level leg returned only material this base already
+carries: the EU AI Act's high-risk classification of education access and assessment, and the
+Digital Omnibus — Regulation **(EU) 2026/1744**, OJ **24 July 2026** — moving Annex III
+stand-alone systems to **2 December 2027** and embedded AI to **2 August 2028**.
+🔴 **New and uncomfortable:** `eur-lex.europa.eu` was probed directly this hour and returns
+**403 CONNECT** from this host, so **the authoritative text of the regulation this region's
+analysis turns on has never been read first-hand here** — every date above is relayed
+(`Gap 446-D`). 🟢 That does not weaken the dates, which three independent channels agree on and
+which this base already used to disqualify `ark-forge/mcp-eu-ai-act` as an obligation oracle;
+it does mean they must be **quoted as relayed**. 🟢 **Supply-side, EMEA is this base's densest
+connector region** (IServ, Librus, Smartschool, EduPage, DTU Learn, Minerva) — and `p446`'s
+`librus-mcp` provenance finding is the one an EMEA engagement must read before packaging:
+a flattened single-artefact build is **outside** that project's MIT grant.
 
 **🆕 `p445` — 🔴 the region leg returned a NIL, and one apparent finding is REFUSED for a region error.**
 The mandated leg (`AI education EMEA 2026 adoption regulation players`) returned **enterprise**
@@ -1155,6 +1245,19 @@ remains `Pattern AP`, and `Article 6(3)`'s profiling override still lands knowle
 architectures (`pykt-toolkit`, `OATutor`) in high-risk **by construction**.
 
 ### APAC
+
+**🆕 `p446` — NIL on discovery; the regulatory picture re-confirmed on three jurisdictions.**
+🔴 Already carried, all of it: Vietnam's education high-risk register (high-risk only where the
+AI output is the **sole basis** for a decision without meaningful human review; systems running
+before **15 Aug 2026** comply by **1 March 2027**), Korea's **AI Basic Act** in force
+**22 January 2026** with a one-year penalty grace treating 2026 as a pilot, and Taiwan's AI
+Basic Act (**December 2025**). 🔵 **The sole-basis test is the recurring commercial hinge across
+this region** — it is satisfied by the draft-and-sign boundary this base shelves
+(`kaushikgunasekaren/canvas-grader-mcp` produces a draft for human sign-off by default;
+`jpmanson/siu-guarani-mcp` is read-only by construction), so the oversight artefact, not the
+connector, is the deliverable. 🔴 **Named market-report player lists for the region (Google,
+Microsoft, IBM, Pearson, Byju's) were returned and are NOT carried** — a commercial vendor list
+with no method behind it is not a market map.
 
 **🆕 `p445` — 🔴 Korea: a national AI-education programme was reversed BY STATUTE, and this is a procurement fact, not a technology one.**
 
@@ -1496,6 +1599,22 @@ Either way the mandate's direct reach is a small fraction of Indian schooling, a
 boards are the real denominator (`Gap 444-G`).
 
 ### LATAM
+
+**🆕 `p446` — one new cut, labelled relayed; and `Gap 445-B` CLOSES with Peru recorded as a
+genuine supply absence.** 🟡 **New:** UNESCO IESALC's **institution-type split** — private
+non-profit **84 %**, public **68 %**, private for-profit **52 %**. 🟢 **Why it is worth
+carrying:** every other adoption figure on this file averages over institutions, and this is the
+first cut that says *which* institutions. The **32-point spread** is a targeting instruction —
+the qualified LATAM higher-education buyer is the **private non-profit university**, which is
+also the segment with the budget autonomy to sign. 🔴 **Capped as relayed:** the IESALC and
+UNU-IAS primaries were re-probed this hour and both return **403 CONNECT** (`Gap 446-D`).
+🟢 **Peru, closed:** the prescribed fourth channel — private universities UPC, UTP and
+Universidad Continental — **nils**, giving four nils on four channels against a
+system-of-record channel that **paid** in Argentina (`siu-guarani-mcp`), Colombia
+(`sia-unal-mcp`) and Brazil (SIGAA). 🔵 **Read it as positioning, not absence:** Peru runs the
+same platform class as its neighbours with **no public integration supply at all**, which makes
+it a **build** market where the others are **compose** markets. 🟢 The channel is retired; no
+successor should re-buy it.
 
 **🆕 `p445` — 🟢 `Gap 444-F` PAID: the adoption figures now have named instruments with stated populations, and the two institutional-readiness numbers are RECONCILED rather than carried as a conflict.**
 

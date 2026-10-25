@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 46 — `p446` **An address count is not an option count. In the one education category where this base has the densest supply, 10 addresses are 6 projects — and the inflation is invisible to every channel this base routinely uses: stars, descriptions, file sets and directory listings all report ten.**
+
+🔵 **Why this is a trend and not a one-off correction.** The LMS-MCP tier is where this base has
+its **largest cluster of same-shaped addresses**, and it is also the tier an engagement reads
+first, because the question a studio is asked on day one is *how many options do we have*.
+`p446` measured it and the answer was **40 % smaller** than the shelf implied.
+
+### 🔴 What each channel reports, against what lineage reports
+
+| channel | what it says about the ten | correct? |
+|---|---|---|
+| **name** | ten addresses, seven of them literally `canvas-mcp` under seven owners | 🔴 no — says nothing either way |
+| **description / README** | tool counts 187, 128, 126, 99, 89, 69 and four silent — **all different** | 🔴 **no, and actively misleading**: it splits `vishalsachdev` (128) from `Harikeshav-R` (126), which are the same project, and groups `bruchris` (187) with them, which is not |
+| **file set** | ten distinct file-set digests | 🔴 **no** — a fork that adds or deletes files diverges immediately |
+| **licence payload cell** | 🟢 **three collisions**: `5385a26e2fac` ×3, `ab5109aafdb8` ×2 | 🟡 **a strong hint** — a fork inherits the payload byte-identically |
+| 🟢 **root commit** | 🟢 **six distinct roots across ten addresses** | 🟢 **yes, and it is decisive** |
+
+### 🟢 The mechanism, stated so it generalises past this tier
+
+🔵 A fork **cannot change its root commit** without rewriting history, and a project that was
+genuinely written twice **cannot share one**. Every other signal is downstream of authorship
+choices — a fork's owner renames the repo, rewrites the README, adds files, bumps the tool
+count — and so every other signal decays toward *looks independent* over time. 🔴 **Which means
+the inflation is systematically biased upward and grows with fork age**: the stalest forks look
+the most distinct.
+
+🔴 **`NelsonSpencer/canvas-mcp` is the specimen.** 416 commits, 218 files, a file set unlike any
+other address, a README claiming 99 tools — and **714 commits behind** an upstream it shares a
+2025-02-27 root with, carrying **2** commits of its own. 🟡 By every channel except lineage it
+is a project. It is a stale fork with a local patch.
+
+### 🟢 What this trend asks of the shelves
+
+1. 🟢 **Count projects, cite addresses.** `p405` already fixed the citable unit as the
+   **family**; this trend supplies the cheap instrument — `git clone --filter=blob:none` plus
+   `git rev-list --max-parents=0`, **~1 s per repository, no GitHub API** (which is 403 here
+   anyway).
+2. 🔴 **Never infer lineage from prose similarity.** `Gap 445-C` did, and was right about the
+   arms for a reason that does not hold — see `Gap 446-C`.
+3. 🟡 **Treat a payload-cell collision as a lineage alarm, not a curiosity.** Two cells
+   repeating across five addresses was visible in this base's own published cells before any
+   clone was made, and nothing was looking for it.
+4. 🟢 **Where a fork is the maintained side, say so.** In ARM-2 the root (`r-huijts`) is an
+   **ancestor** of the fork (`mdweaver`, 4 ahead). Publication order and ownership do not
+   predict direction; only history does.
+
+🔵 **Scope, stated honestly.** This is measured on **one category, ten addresses, one pass**. It
+is a method result, not a population estimate: this base does **not** yet know what fraction of
+its ~134 shelved repositories are fork arms of one another. 🟢 **That is the obvious next
+measurement and it is now cheap** — the instrument exists, and the root-commit column is the
+whole test. Registered as `Gap 446-E`.
+
+
 ## 🆕 Trend 45 — `p445` **Publisher class does NOT predict grant presence in education open source. 🔴 `Trend 44`, published on this file one pass ago, was an n=5 artefact: measured over 3 932 first-hand addresses the institutional grant rate is 72.2 % against a 76.3 % baseline, Fisher p = 0.558. 🟢 What DOES predict the licence is the PLATFORM's developer community**
 
 ### 🔴 The claim this trend replaces, and why it was published

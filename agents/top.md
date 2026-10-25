@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p446` — **`Gap 445-C` ANSWERED, and this shelf has been over-counting the LMS-MCP tier by 40 %: 🔴 the ten Canvas/Moodle addresses are SIX distinct projects. 🔵 And the hypothesis that found them was right for the wrong reason — the "six near-identical descriptions" do not exist; LINEAGE does.**
+
+🔵 **Shape.** No WebSearch leg added a row to this shelf. The pass instead bought the audit
+`Gap 445-C` prescribed, over the ten addresses `p445` measured, using **full history** rather
+than a ref-set test — the instrument `gate-fork-direction` (`p404`) and `gate-group-lineage`
+(`p405`) already require. **Ten blobless clones, ten HEADs resolved, ten licence payloads
+fetched and digested, three cross-remote ancestry tests** — all first-hand, all **2026-10-25**.
+
+### 🔴 The count an engagement reads first was wrong: six projects, not ten
+
+Graded by **root commit** (a fork shares it) and confirmed by **licence payload cell** (a fork
+inherits it byte-identically). Both columns are measured, not inferred:
+
+| address | root commit | licence cell | commits | files | project |
+|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `afe32c3e1721` | MIT · 1 071 B · `5385a26e2fac` | **1 128** | 503 | 🟢 **ARM-1 upstream** |
+| [`Harikeshav-R/canvas-mcp`](https://github.com/Harikeshav-R/canvas-mcp) | `afe32c3e1721` | MIT · 1 071 B · `5385a26e2fac` | 1 034 | 472 | 🔴 ARM-1 fork — **0 unique commits** |
+| [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) | `afe32c3e1721` | MIT · 1 071 B · `5385a26e2fac` | 416 | 218 | 🔴 ARM-1 fork — **2 unique, 714 behind** |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | `731aa116052b` | MIT · 1 065 B · `ab5109aafdb8` | 60 | 31 | 🟡 **ARM-2 root** |
+| [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | `731aa116052b` | MIT · 1 065 B · `ab5109aafdb8` | 64 | 35 | 🟢 ARM-2 **descendant, 4 ahead** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `6d2e39a1cf7f` | MIT · 1 070 B · `c29329c5ef3b` | 430 | 501 | 🟢 independent |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | `c5209fe71c06` | 🔴 **AGPL-3.0** · 34 523 B · `0d96a4ff68ad` | 58 | 107 | 🟢 independent |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | `93ecc95525bf` | MIT · 1 063 B · `2cf91ec5272f` | 13 | 37 | 🟢 independent |
+| [`caleb-media-studio/canvas-mcp`](https://github.com/caleb-media-studio/canvas-mcp) | `96daa3fa20a3` | MIT · 1 066 B · `e7b1808c2ef8` | 11 | 35 | 🟢 independent |
+| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | `36161a6e38c8` | MIT · 1 067 B · `13c8ad755224` | 5 | 13 | 🟢 independent |
+
+🟢 **Four distinct root commits carry one address each; two carry three and two.** So the tier
+is **6 projects across 10 addresses**, and the two arms are established on **two independent
+axes that agree** — shared root *and* byte-identical payload. 🔵 **`csmediapro`'s AGPL-3.0 cell
+reproduces this base's own published figure** (34 523 B, `agents/trending.md` `p437`) from an
+independent clone this hour, which is a reproduction result, not a new row.
+
+### 🟢 Direction, graded by full history — which address an engagement should actually take
+
+- **ARM-1 → take [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp).**
+  `Harikeshav-R`'s HEAD `db979a5ab5d7` is an **ancestor** of upstream HEAD — it contributes
+  **nothing** that upstream does not already have, and is 94 commits behind.
+  `NelsonSpencer`'s HEAD `92b7fbc9cd33` holds **2** commits upstream lacks while sitting **714
+  behind**: a stale fork with a local patch, not an option.
+- **ARM-2 → take [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp), not the root.**
+  `r-huijts`'s HEAD `711549f163ef` **is an ancestor** of `mdweaver`'s `739f07f6bb18`, which is
+  **4 ahead** (HEAD 2026-10-01 against 2026-09-21). 🔵 This is the one case where the
+  **fork is the maintained side**, which is why direction has to be measured and not read off
+  star counts or publication order.
+
+### 🔴 `Gap 445-C`'s own evidence was wrong, and that is worth more than the conclusion
+
+The gap asserted *"six of the ten carry near-identical descriptions ('up to 102 tools and 8
+agent skills'), which is a fork arm."* Measured first-hand from each README at HEAD, the
+tool-count claims are **all different and none is 102**:
+
+| `bruchris` | `vishalsachdev` | `Harikeshav-R` | `NelsonSpencer` | `mdweaver` | `r-huijts` | other four |
+|---|---|---|---|---|---|---|
+| 187 tools | 128 tools | 126 tools | 99 tools | 89 tools | 69 tools | no count |
+
+🔴 **The description channel did not identify a single one of the five arm members** — it groups
+`bruchris` (independent, 187) with the arm, and splits `vishalsachdev` (128) from
+`Harikeshav-R` (126), which **are** the same project. 🟢 **The arms are real and the reason
+given for them was not.** Recorded as `Gap 446-C`: a near-identical *description* is not
+evidence of a fork, and this base should stop treating prose similarity as lineage — the
+blobless clone costs ~1 s per repository and answers it outright.
+
+### 🟡 Disposition for this shelf — the rows stay, the COUNT does not
+
+🔵 **No row is deleted.** A fork with a local patch is still an address an engagement may be
+handed, and `p405` already fixed the citable unit as the **family**. What changes is what this
+file may claim: 🔴 **never "ten Canvas/Moodle MCP options"**. The honest sentence is **"six
+projects, of which two are permissive single-maintainer arms; take `vishalsachdev` for Canvas,
+and the Moodle side costs AGPL-3.0 or a 13-commit MIT alternative."**
+
+### 🟡 A pinned HEAD is a timestamp, not an identity — measured twice this hour
+
+🔴 **`vishalsachdev/canvas-mcp`'s HEAD moved DURING this pass.** `git ls-remote` returned
+`884d48cd0873` at the start of the leg; the clone 90 seconds later checked out `c47a611cfbed`.
+🟢 **Not a misread — proven by ancestry:** `884d48cd0873` is an **ancestor** of `c47a611cfbed`,
+and its commit is dated **2026-10-25**. The repository took a push mid-leg.
+🔵 **Second instance, against this base's own published pin:**
+[`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) is shelved below at
+HEAD `e12e36f24224`; the live HEAD is **`56515efee01b`**, **1 commit ahead**, `e12e36f24224`
+confirmed an ancestor. 🟢 **And its payload cell did not move at all** — root MIT re-measures
+**1 071 B · `22e7ab2dbddc`**, identical to the published cell.
+🟢 **So: verify a grant on the PAYLOAD CELL, which is stable, and read a HEAD pin as the date
+the tree was seen.** Registered as `Gap 446-B`.
+
+### 🟢 This pass's cell method was validated against a cell this base already published
+
+🔵 Before publishing ten new cells, the method was checked against a known answer:
+`krzysztofbury/librus-mcp`'s root payload re-measured **1 071 B** with **sha256-first-12 =
+`22e7ab2dbddc`** — the published cell, to the digit. 🟢 `sha1` (`c9abf450e4ea`), `md5`
+(`31aebbb6abd5`) and the git blob id (`90838b0fab0b`) all disagree, so the convention is
+confirmed as **sha256-12 over raw file bytes** and this pass's ten cells are in it.
+
+### 🟢 One shelf disposition below CHANGES, and the upstream itself supplied the reason
+
+🔵 The `librus-mcp` row below carries `p442`'s disposition *"integrate over MCP, never vendor
+the repository."* That is still right and is now **incomplete**: the upstream has published a
+**9 662 B provenance review** (`LICENSE_REVIEW.md` · `6905cca1f0b4`, review dated **2026-10-05**)
+which confirms the GPL-3.0 subtree from the other side *and* names a **third lane this base did
+not have** — a flattened single-artefact build is **not** covered by its MIT grant. Full
+first-hand read, with the dependency closure, on
+[`repos/foundations.md`](../repos/foundations.md) `p446`.
+
+
 ## 🆕 `p445` — **ZERO rows added to this shelf, and the two things that makes it worth reading: 🔴 the agent-addressable discovery channel returned 0 new addresses from 10 candidates, and 🔴 this file's own LATAM rows must now be read differently, because the trend they were shelved under has been REFUTED**
 
 🔵 **Why no rows.** The leg aimed at exactly this shelf's category — **LMS MCP servers**, the
