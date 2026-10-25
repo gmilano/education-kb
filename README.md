@@ -73,10 +73,10 @@ the last act before the commit. 🔴 **Both gates fired on this pass's drafts �
 says is structural, and for the same reason: this pass derived them before it had finished
 writing.** These are the re-derived figures, taken after the last shelf write:
 
-**2 826** harvested shapes → **38** are not addresses → **2 788 addresses**.
+**2 783** harvested shapes → **38** are not addresses → **2 745 addresses**.
 
-🔵 **2 788** channel-U addresses and **3 288** channel-B survivors give
-**3 649 addresses over both channels**.
+🔵 **2 745** channel-U addresses and **3 271** channel-B survivors give
+**3 640 addresses over both channels**.
 
 🔵 The rejection classes are unchanged in kind — `NAV-NAMESPACE` 30, `OWNER-ELLIDED` 3,
 `EMPTY-NAME` 2, `OWNER-TEMPLATE-VAR` 1, `PLACEHOLDER-NAME` 1, `PLACEHOLDER-OWNER` 1 — and the

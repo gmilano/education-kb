@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p430` · 2026-10-25 — **Independent re-measurement: `p429`'s licence regression REPRODUCES byte-for-byte. 🟢 Three licence claims circulating in 2026 listicles are refuted at source. 🔴 And the prescribed `curl -sI` verification step cannot run on this host at all — every `github.com` HEAD returns 403 from the egress proxy.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🔴 The prescribed verification channel is unavailable on this host — and silence would have hidden it
+
+The task prescribes `curl -sI` to verify every URL. On this host **every** `github.com`
+request returns **403** from the agent egress proxy — not 404, not a network error. A pass
+that treated 403 as "dead address" would mark the entire corpus gone; a pass that skipped
+verification silently would publish unverified rows.
+
+**Working channels, established this pass and recommended for successors:**
+
+| Channel | Works? | What it proves |
+|---|---|---|
+| `curl -sI https://github.com/...` | 🔴 **403, always** | Nothing. A fact about the proxy allowlist, not the repo. |
+| `git ls-remote https://github.com/<slug> HEAD` | 🟢 **Yes** | Existence + HEAD SHA. |
+| `git clone --depth 1 --filter=blob:none --sparse` | 🟢 **Yes** | The **licence payload itself**, at a named SHA. |
+| GitHub MCP (`get_file_contents`, `search_repositories`) | 🔴 **Scoped** | Session is restricted to `gmilano/globant-kb`; `search_repositories` returns `total_count: 0` for every query. |
+
+This confirms `p413`'s finding that the egress channel is an allowlist, and extends it: the
+**403 class is distinct from a gone address**, and the prescribed instrument is the one that
+cannot tell them apart.
+
+### 🟢 `p429`'s licence regression — reproduced independently, byte-for-byte
+
+Re-read today from the repositories' own payloads, with no reference to `p429`'s figures
+until after measurement:
+
+| Address | HEAD | `LICENSE` | `sha256₁₂` | Family |
+|---|---|---|---|---|
+| `pengusto/google-classroom-mcp` | `3609bf6c5372` | **3 053 B** | `d84e558a5033` | 🔴 Pengusto Commercial License 1.0 |
+| `vTanco/google-classroom-mcp` | `9ba0070eff2f` | **1 145 B** | `a01639b20880` | 🟢 MIT |
+
+Both figures match `p429` exactly. The §3 clause was read in the payload and reaches
+*"an educational institution or training provider, whether nonprofit or commercial"* **by
+name**. 🟢 **`p429`'s headline stands on independent measurement.**
+
+### 🔴 Three licence claims in circulation, refuted at source
+
+The vertical-platform web leg returned 2026 roundups that disagree with each other on
+licensing. Read at source rather than arbitrated:
+
+- **`frappe/lms`** — listicles split between MIT and AGPL-3.0. Payload: **AGPL-3.0**,
+  `license.txt` 33 893 B `db1a87ba81e8`. The MIT claim is **wrong**.
+- **`sakaiproject/sakai`** — listed as Apache-2.0 by one roundup, ECL-2.0 by another.
+  Payload: **Educational Community License**, 11 120 B `0688f62d04f1`. Apache-derived and
+  permissive in practice, but **not** Apache-2.0.
+- **`GeminiLight/awesome-ai-llm4education`** — carried as **MIT** on the Globant-side
+  education shelf. `git ls-tree -r HEAD` @ `48f2d16ca617`: **no licence file anywhere in
+  the tree**. Ungranted.
+
+### 🟡 `withmarbleapp/os-taxonomy` — the one genuinely new trending address, and it is a DATA licence
+
+The GitHub-trending leg returned one unshelved in-domain address: a curriculum knowledge
+graph (reported ~5.9k★, 1 590 topics, 3 221 prerequisite edges, mapped to NGSS and Common
+Core). Grant read at source @ `7bd8b6794cb7`: **ODbL**, `LICENSE` 25 289 B `77d2692c3d64`.
+
+🔴 **ODbL is share-alike for databases.** A curriculum graph derived from it inherits the
+obligation — a copyleft condition landing on *client data*, which is a different
+conversation from a code licence. Shelved as **watch, with obligation**, not build-on.
+
+### 🔵 The web legs, and what each actually returned
+
+| Leg | Returned |
+|---|---|
+| `top open source AI agents education {year} github MIT` | 🔴 Zero education-specific MIT agents. All results were general-purpose agent frameworks. **Fourth consecutive pass of zero on this leg** (`Gap 426-C` continues). |
+| `github trending education AI {year}` | 🟢 One unshelved address (`os-taxonomy`, above); otherwise general agent tooling. |
+| `open source platform education ... MIT Apache` | 🟡 Nine roundups, mutually inconsistent on licensing; value was in **refuting** them, not sourcing from them. |
+| `AI education industry trends {year}` + 4 regional legs | 🟢 Substantive — see `intel/market.md` and `intel/trends.md`. Regional legs were the highest-yield of the pass. |
+
+### 🔴 `Gap 430-A` — the rotation that has not rotated
+
+Not an education finding, but it governs whether this file is ever written again.
+`rotation.json` in `gmilano/globant-kb` has read `next: 8` (education) since
+**2026-08-02**. This repository has taken **429 passes** at ~23–26/day since. The other
+eleven industries have had **zero** in that window. Mechanism and remedy are recorded in
+the pass report and in `intel/trends.md`. **This file does not need another education pass
+nearly as much as `gaming` needs its first in three months.**
+
+---
+
+
 ## 🆕 `p429` · 2026-10-25 — **The discovery log: a row this base recommended has gone PROPRIETARY, and the instrument that caught it also found its replacement. 🔴 The four prescribed web legs returned zero addresses for the THIRD consecutive pass.**
 
 🔵 **Append-only. Nothing below this block was edited.**

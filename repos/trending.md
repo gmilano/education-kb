@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p430` · 2026-10-25 — **One unshelved in-domain trending address, and its licence is a DATA licence. 🟢 The permissive/copyleft split across the whole platform tier re-measured at source: 3 permissive, 7 copyleft.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟡 The one new address: `withmarbleapp/os-taxonomy`
+
+| Field | Value, read at source |
+|---|---|
+| Address | [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) |
+| HEAD @ 2026-10-25 | `7bd8b6794cb7` |
+| Grant | 🟡 **ODbL** (Open Data Commons Open Database License) — `LICENSE` **25 289 B**, `sha256₁₂ 77d2692c3d64` |
+| What it is | Curriculum knowledge graph — reported ~5.9k★, 1 590 topics, 3 221 prerequisite edges, mapped to NGSS and Common Core |
+| Verdict | **Watch, with obligation.** Not a build-on. Share-alike attaches to derived *databases*, so a client curriculum graph built on it inherits ODbL. |
+
+🔴 A code-licence audit passes this repository and misses the only obligation it carries.
+
+### 🟢 Platform tier re-measured in full at source
+
+Ten platforms, each licence read from its own payload at the HEAD shown. Full table in
+`repos/foundations.md`.
+
+| Permissive (3) | Copyleft (7) |
+|---|---|
+| OpenOLAT **Apache-2.0**, Kolibri **MIT**, Sakai **ECL** | Moodle GPL-3.0 · Open edX AGPL-3.0 · Chamilo GPL-3.0 · eXeLearning AGPL-3.0 · Frappe LMS AGPL-3.0 · BigBlueButton LGPL-3.0 · OpenEduCat LGPL-3.0 |
+
+🔴 **Two corrections to claims in circulation:** `frappe/lms` is **AGPL-3.0**, not MIT
+(`license.txt` 33 893 B `db1a87ba81e8`); `sakaiproject/sakai` is **ECL**, not Apache-2.0
+(`LICENSE` 11 120 B `0688f62d04f1`).
+
+🟢 **`OpenOLAT/OpenOLAT` is the finding worth repeating** — a university-grade LMS under
+**Apache-2.0** (`LICENSE` 10 982 B `6dbc5b605ed0` @ `d073ad444fe5`), and the only permissive
+full LMS. Teams default to Moodle and inherit GPL-3.0 for no reason.
+
+### 🔵 Channel note for successors
+
+`curl -sI https://github.com/...` returns **403 for every address** on this host — the
+egress proxy's allowlist, not a dead repo. Use `git ls-remote` for existence and
+`git clone --depth 1 --filter=blob:none --sparse` for the licence payload. The GitHub MCP
+is session-scoped to `gmilano/globant-kb` and returns `total_count: 0` for all searches.
+
+---
+
+
 ## 🆕 `p429` · 2026-10-25 — **The repo log: the FOUR LMS cohorts measured on one instrument for the first time — and the mechanism p428 published one pass ago does not survive the comparison.**
 
 🔵 **Append-only. Nothing below this block was edited.**

@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p430`
+
+### 🔴 `Gap 430-A` — THE ROTATION HAS NOT ROTATED SINCE 2026-08-02, AND THIS REPOSITORY IS THE SYMPTOM
+
+**Severity: higher than any licence finding on these shelves**, because it governs whether
+the other eleven industries are researched at all.
+
+`rotation.json` in `gmilano/globant-kb` has read `next: 8` (education) since
+**2026-08-02**, with `last_industry: technology`. This repository has taken **429 passes**
+at ~23–26 per day in that window. `gaming`, `legal`, `financial`, `healthcare`, `media`,
+`retail`, `travel`, `technology`, `automotive`, `energy` and `enterprise` have had **zero**.
+
+**Mechanism, established by inspection of `globant-kb` this pass:**
+1. Each scheduled run is required to develop on its own `claude/*` branch and is forbidden
+   from pushing to `main`.
+2. The run advances `rotation.json` and pushes it — to that throwaway branch.
+3. The branch is never merged. `gmilano/globant-kb` currently carries **1 928** such
+   branches.
+4. The next run clones `main`, reads `next: 8`, and does education again.
+
+The rotation write has therefore succeeded on every run and taken effect on none.
+
+🔴 **This cannot be fixed from inside a scheduled run** — the fix is precisely the action
+the runs are forbidden to take. It needs one of: a merge of a rotation branch to `main`;
+a scheduled prompt that derives the industry from the date (e.g. `floor(hours since epoch)
+mod 12`) so no shared write is needed; or rotation state held somewhere a run may write.
+
+### 🟡 `Gap 430-B` — a permissive grade has no re-read date anywhere on these shelves
+
+`Trend 9` names the mechanism: three passes read `pengusto/google-classroom-mcp` as MIT,
+all three correctly, and the grant changed underneath them on 2026-10-23. The shelves
+record a family and a SHA but no *as-of* date that an engagement can age out. Until a row
+carries one, "MIT" on this base means "MIT when somebody last looked", and nothing says
+when that was.
+
+### 🔵 `Gap 430-C` — `curl -sI` is prescribed and cannot run here
+
+The task prescribes `curl -sI` for URL verification. Every `github.com` request from this
+host returns **403** from the egress proxy. A successor that follows the instruction
+literally and believes the output will mark the entire corpus dead. Working channels are
+recorded in `agents/trending.md` under `p430`.
+
+### 🔵 `Gap 426-C` — CONTINUES (fourth consecutive pass)
+
+The prescribed leg `top open source AI agents education {year} github MIT` returned **zero**
+education-specific MIT agents again. `p427` named the mechanism and this pass confirms it:
+the supply is built as **MCP servers named after the platform** (Canvas, Moodle, Classroom,
+Blackboard), so a leg keyed on the word "education" cannot see it. The leg should be
+retired or re-keyed rather than run a fifth time.
+
 ## 🆕 `p429` · 2026-10-25 — **`Gap 428-E` moves from two anecdotes to a measured rate over 46 payloads, and the measurement REFUTES p428's `Trend 53` one pass after publication. 🟢 `Gap 427-E`'s LATAM clause is REFUTED. 🔴 And this base watched a permissive grade EXPIRE on a row it recommended — which no instrument here was looking for.**
 
 🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves
