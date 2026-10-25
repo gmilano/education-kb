@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **The repo log: the Canvas cohort, measured beside the Moodle one for the first time — and it has a HUB.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 Two cohorts, one instrument, one hour
+
+| cohort | GitHub `total_count` | largest address | refs | forks | shape |
+|---|---|---|---|---|---|
+| **Canvas LMS MCP** | **133** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **308** | 🟢 **99** | 🟢 a reference implementation — 102 tools, 8 agent skills, a PyPI distribution, HEAD today |
+| **Moodle MCP** | **242** | [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | 22 | 0 | 🔴 no centre — 13 of 16 built for one named institution (`Trend 49`) |
+
+🟢 **More repositories, far less concentration.** Moodle has nearly twice the address count and
+one-fourteenth the leading project. 🔵 The cause is the deployment model, not the community:
+Canvas is a hosted uniform API so one implementation serves everyone; Moodle is self-hosted per
+institution so the work that matters cannot be shared. Developed as `Trend 53`.
+
+### 🟢 The Canvas cohort as read this pass — 25 addresses, 13 unshelved
+
+🟢 **Promoted with grants read first-hand at the SHA:** `semyonfox/canvas-mcp` (MIT, `1 881` B
+`fea4cd7cb04d` — **129 tested tools**, MCP `2026-07-28` core revision, documented permission
+boundaries) · `The-Morrow-Project/Morrow-Bridge` (MIT, `f37f80963047`, **31 refs** — cross-LMS:
+Canvas, Moodle in progress, Blackboard named; Chrome extension **and** Electron app) ·
+`Jacob-Met/canvaspilot` (MIT, `85144488dcaf`, **23 refs, 63 open issues** — MCP + CLI with a
+stay-open **SSO session broker**) · `arthurcuri/mcp-instructure-canvas` (MIT, `161c1c8666c3` —
+read **and write**, Telegram reminders, GitHub Actions; **LATAM** on a payload timezone constant)
+· `angelonrevelo/bettercanvasmcp` (MIT, `fe401a64566c` — the **edges other servers skip**:
+due-date overrides, New Quizzes, group work, file text).
+
+🔵 **Read and not promoted this pass** (shelved already, or no new evidence):
+`AnonymousOnyx22/canvas-lms-student-mcp`, `Ryfter/canvas-toolchain`, `vkumar04/canvas-mcp-lite`,
+`bruchris/canvas-lms-mcp`, `Fireiscoolsolo/canvas-lms-mcp-server` and `-local`,
+`javohir73/mcp-server-canvas-lms`, `kaushikgunasekaren/canvas-grader-mcp`, `Mattlo0546/canvas-mcp`,
+`PsychQuant/che-ntucool-mcp`, `CharlieCardenasToledo/mcp-canvas-server`, plus
+`RishikaSinghal/quercus-genius`, `alrawi10/studie-os`, `lennyitb/canvas-viewer-mcp`,
+`lcrzhang/canvas-mcp`, `ZxZxZ143/canvas_mcp`, `NandhiniNatarajan1/coursepilot-mcp`,
+`elliott-leow/canvas-downloader`, `vishalsachdev/learning-design-pillars`.
+
+### 🟢 The licence file as a repo-discovery channel — six addresses no search leg returned
+
+`semyonfox/canvas-mcp`'s `LICENSE` names twelve upstreams. Six were unshelved:
+`a-ariff/canvas-mcp` (MIT, `040d00e3cf79`) · `sweeden-ttu/canvas-lms-mcp` (MIT, `06dcddbb6908`,
+**Texas Tech University** — the first North American institutional address on these shelves) ·
+`Kuria-Mbatia/Canvas-MCP-server` (MIT, `fd34175ea8f9`) · `Shashwatpog/poke-canvas-mcp` (MIT,
+`b60d2cd596b7`) · 🔴 `enkhbold470/mcp-server-canvas` (**no licence payload** — README-only claim)
+· 🔴 `Jon-Vii/canvas-student-mcp` (**address does not resolve**).
+
+🔵 **50 % novelty from a channel this base had never read**, and it is the only channel that
+delivers the address together with the obligation.
+
+### 🔴 The Moodle cohort is still producing — ten unshelved from the same leg
+
+`Teci-AI/moodle-mcp-connector` and `Teci-AI/moodle-local_mcpconnector` (the controlled
+architecture pair) · `bunizao/cli-kit-docs` · `Flimu1/university-portal-mcp` ·
+`jtuttas/moodle-agent-mcp` and `jtuttas/MoodleMcp` · `almabay/moodle-local_placecom_mcp` and
+`RohanParmar22/moodle-local_placecom_mcp` (a same-name pair across two owners —
+`gate-group-lineage`'s subject, not graded this pass) · `DeepLearningHarness-Team/Moodle-MCP` ·
+`CarvalhoJeo/moodle-unisinos-mcp` · `CloudDown/student-mcp`. 🔵 Eleven passes of zero, then two
+consecutive passes in double digits: the drought was the query, exactly as `p427` concluded.
+
+### 🔴 A repository-level hazard this log should carry: the package name is not the repo
+
+Three of thirteen npm names declared in these cohorts' own manifests resolve to **someone else's
+project** — `miyagi` (a name held and empty since 2020), `merlin-mcp` (a codebase-intelligence
+server registered nine months earlier, whose own back-link `anthropics/merlin` does not resolve),
+`moodle-mcp` (a third party's Moodle server). 🟢 Six more are unpublished. 🔵 Pin the repository
+at a SHA; `Trend 51` and `Amendment 16` carry the measurement and the rule.
+
+---
 ## 🆕 `p427` · 2026-10-25 — **The prescribed trending leg is still zero — and this pass shows that is a property of the QUERY, not the supply: a two-word leg on the same platform returned 242 candidates and 16 unshelved addresses.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **55** blocking gates green after these

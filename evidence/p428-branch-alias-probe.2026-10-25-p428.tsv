@@ -1,0 +1,89 @@
+# p428 · 2026-10-25 · THE BRANCH-ALIAS PROBE.  `gate-grant-path-online` answers "does this path resolve?" with an HTTP 200.
+# This probe shows the 200 cannot answer the BRANCH half of the contract: GitHub serves the default branch under the legacy name `master`.
+# Population: every distinct address carrying a `/(blob|tree|raw)/master` path anywhere under agents/ repos/ verticals/ intel/ compose/ README.md.
+# 🔴 SCOPE NOTE, because p428's own first measurement got this wrong: that sweep is RECURSIVE and most of these citations live in
+# `compose/code/**` — VENDORED COPIES OF OTHER PROJECTS' READMEs.  They are what UPSTREAM publishes, not what this base publishes.
+# This base's own live shelves carry only 8 ref-asserting citations and ZERO alias-only defects (see `make branch-alias-census`).
+# verdict: HAS-MASTER = the branch really exists.  NO-MASTER = it does not, and `raw.../master/` returns 200 anyway.
+address	verdict	raw_master_readme	raw_main_readme
+1EdTech/spec-central	NO-REFS/GONE
+AnubisLMS/Anubis	NO-MASTER(main)
+Azure/Moodle	HAS-MASTER
+Azure/azure-quickstart-templates	HAS-MASTER
+Coursemology/coursemology2	HAS-MASTER
+Cvmcosta/ltijs	HAS-MASTER
+Dungeon-CampusMinden/Dungeon	HAS-MASTER
+JuliaLang/julia	HAS-MASTER
+JuliaWeb/HTTP.jl	HAS-MASTER
+OS4ED/openSIS-Classic	HAS-MASTER
+Open-Attestation/open-attestation	HAS-MASTER
+PragatiVerma18/Fantastic-Falcons-1.0	HAS-MASTER
+SYSTRAN/faster-whisper	HAS-MASTER
+SaidBySolo/neispy	HAS-MASTER
+SethClydesdale/genki-study-resources	HAS-MASTER
+Simon-Initiative/lti_1p3	HAS-MASTER
+Simon-Initiative/oli-torus	HAS-MASTER
+adlnet/xAPI-Spec	HAS-MASTER
+asterics/Asterics-AAC	HAS-MASTER
+autolab/Tango	HAS-MASTER
+chrispiech/DeepKnowledgeTracing	HAS-MASTER
+codemirror/codemirror.next	NO-MASTER(main)
+commonstandardsproject/api	HAS-MASTER
+developit/htm	HAS-MASTER
+digitalbazaar/bedrock	NO-MASTER(main)
+dini-ag-kim/schulfaecher	NO-MASTER(main)
+espnet/notebook	HAS-MASTER
+european-commission-empl/European-Learning-Model	HAS-MASTER
+google/codeworld	HAS-MASTER
+google/python-fire	HAS-MASTER
+haxtheweb/issues	HAS-MASTER
+kawanet/msgpack-lite	NO-MASTER(main)
+learningequality/le-utils	NO-MASTER(main)
+learningequality/ricecooker	NO-MASTER(main)
+m-bain/whisperX	NO-MASTER(main)
+marcusgreen/moodle-qtype_gapfill	NO-MASTER(main)
+mathjax/MathJax-src	HAS-MASTER
+microsoft/ML-For-Beginners	NO-MASTER(main)
+microsoft/Web-Dev-For-Beginners	NO-MASTER(main)
+mozilla/openbadges-specification	HAS-MASTER
+nucleogenesis/le-utils	HAS-MASTER
+observablehq/stdlib	NO-MASTER(main)
+openedx/.github	HAS-MASTER
+openedx/XBlock	HAS-MASTER
+openedx/credentials	HAS-MASTER
+openedx/openedx-platform	HAS-MASTER
+openfun/richie	HAS-MASTER
+overhangio/tutor	NO-MASTER(main)
+peterszombati/xapi-node	HAS-MASTER
+preactjs/preact	NO-MASTER(main)
+project-sunbird/sunbird-lms-mw	HAS-MASTER
+ruby-concurrency/concurrent-ruby	HAS-MASTER
+sagefy/sagefy	HAS-MASTER
+selfteaching/the-craft-of-selfteaching	HAS-MASTER
+spatialaudio/digital-signal-processing-lecture	HAS-MASTER
+sveltejs/kit	NO-MASTER(main)
+teamdigitale/licenses	HAS-MASTER
+wingkwong/react-quiz-component	HAS-MASTER
+yuanjiusheng/cloud-learning-ce	HAS-MASTER
+#
+# ── THE 200-CHECK, RUN AGAINST THE 15 NO-MASTER ADDRESSES (README.md, 2026-10-25):
+# AnubisLMS/Anubis master=200 main=200 | codemirror/codemirror.next 200/200 | digitalbazaar/bedrock 200/200 | dini-ag-kim/schulfaecher 200/200
+# kawanet/msgpack-lite 200/200 | learningequality/le-utils 200/200 | learningequality/ricecooker 200/200 | m-bain/whisperX 200/200
+# marcusgreen/moodle-qtype_gapfill 200/200 | microsoft/ML-For-Beginners 200/200 | microsoft/Web-Dev-For-Beginners 200/200
+# observablehq/stdlib 200/200 | preactjs/preact 200/200 | sveltejs/kit 200/200 | overhangio/tutor 404/404 (no README.md at all — a missing FILE, not a branch result)
+# → 14 of the 14 testable `master`-less addresses return 200 under a branch that does not exist.
+#
+# ── THE MECHANISM, ISOLATED BY MEASUREMENT RATHER THAN ASSUMED.  On two independent main-only repositories
+# (falkenslab/miyagi, microsoft/ML-For-Beginners) the probe asked for six other plausible branch names:
+# trunk=404  develop=404  dev=404  default=404  release=404  stable=404  — while master=200 and HEAD=200.
+# So `master` is specifically aliased; it is not a general "serve the default branch" fallback.
+#
+# ── AND THE ALIAS IS ONE-DIRECTIONAL.  HyNuwa/UniMCP's live branch is `master`; `raw.../UniMCP/main/LICENSE` returns 404.
+# openeducat/openeducat_erp has 18 branches (`master` plus 2.0 … 20.0) and no `main`; `/main/LICENSE` 404s, `/master/LICENSE` 200s.
+# The error is therefore silent in exactly one direction — the direction a path written from habit takes.
+#
+# ── BYTE-LEVEL CONFIRMATION that the alias serves the default branch rather than some other tree:
+# falkenslab/miyagi `/master/package.json` and `/main/package.json` are both 1 123 B with sha256_12 4350dcad89c6.
+#
+# ── 1EdTech/spec-central answered `ls-remote` with a CREDENTIAL PROMPT while the control `moodle/moodle` resolved anonymously.
+# Under p293 that is a MEASUREMENT (private or gone), and the branch question for it is UNDEFINED — the grader refuses a verdict rather than guessing.

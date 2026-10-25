@@ -1,0 +1,30 @@
+# p428 · 2026-10-25 · THE PACKAGE-REGISTRY CHANNEL, opened on this host for the first time.
+# Gap 425-A was recorded by p425/p426/p427 as "DNS is GitHub-only; server-side search summaries are the one non-GitHub channel".
+# That is REFUTED in its general form.  Measured on this host 2026-10-25: registry.npmjs.org 200, pypi.org 200, files.pythonhosted.org reached (404 at /),
+# crates.io reached (403), gitlab.com reached (301) — while unesco.org, oecd.org, moodle.org, openedx.org, huggingface.co, europa.eu and wikipedia.org are all HTTP 000.
+# The egress is a FORGE-AND-PACKAGE-REGISTRY ALLOWLIST, not a GitHub-only DNS.  A registry payload CAN be digested and pinned, so a registry cell CAN be `authoritative`.
+# Method: read the declared package name from the repo's own manifest at HEAD, then ask the registry for that name.  back_link is the registry's self-declared repository field.
+repo_address	manifest	declared_name	manifest_licence	registry	registry_status	registry_licence	registry_back_link	back_link_agrees	integrity_or_version	verdict
+nialvape/utn-mcp	package.json	utn-mcp	ISC	npm	200	ISC	github.com/nialvape/utn-mcp	YES	0.8.1	CORROBORATED
+jamestesting0/tum-mcp	package.json	@jamestesting888/tum-mcp	MIT	npm	200	MIT	github.com/jamestesting0/tum-mcp	YES	0.5.0 sha512-S7tdwCOODoifybzWDI2vh	CORROBORATED — closes p427's open scope-mismatch question
+av-leschinskiy/moodle-mcp	package.json	@av-leschinskiy/moodle-mcp	MIT	npm	200	MIT	github.com/av-leschinskiy/moodle-mcp	YES	0.1.4	CORROBORATED
+falkenslab/moodle-mcp	package.json	@falkenslab/moodle-mcp	MIT	npm	200	MIT	github.com/falkenslab/moodle-mcp	YES	0.5.0	CORROBORATED
+bruchris/canvas-lms-mcp	package.json	canvas-lms-mcp	MIT	npm	200	MIT	github.com/bruchris/canvas-lms-mcp	YES	2.9.1	CORROBORATED
+AnonymousOnyx22/moodle-student-mcp	package.json	moodle-student-mcp	MIT	npm	200	MIT	github.com/AnonymousOnyx22/moodle-student-mcp	YES	0.1.6	CORROBORATED
+AnonymousOnyx22/canvas-lms-student-mcp	package.json	canvas-lms-student-mcp	MIT	npm	200	MIT	github.com/AnonymousOnyx22/canvas-lms-student-mcp	YES	0.1.6	CORROBORATED
+vishalsachdev/canvas-mcp	pyproject.toml	canvas-mcp	MIT (file)	pypi	200	MIT (full text inline)	github.com/vishalsachdev/canvas-mcp	YES	1.16.0	CORROBORATED
+# ── MIS-RESOLVED: the manifest name resolves to a package that is NOT this repository.  `npm i <name>` installs someone else's code.
+falkenslab/miyagi	package.json	miyagi	MIT	npm	200	-	(none)	NO	0 versions; name created 2020-02-20, no maintainers	NAME-UNAVAILABLE — the bare name is held and empty; this project CANNOT publish under it
+simonseifert/merlin-mcp	package.json	merlin-mcp	MIT	npm	200	MIT	github.com/anthropics/merlin	NO	1.3.1; maintainer sandman66666; name created 2026-01-24	NAME-TAKEN — a different project ("AI-powered codebase intelligence"), created 9 months before this repo.  🔴 And its own back-link `anthropics/merlin` does NOT resolve.
+Nasus20202/MoodleMCP	package.json	moodle-mcp	(none)	npm	200	MIT	github.com/1alexandrer/moodle-mcp	NO	0.2.0; maintainer 1alexandre; name created 2026-04-18	NAME-TAKEN — by a third party's Moodle MCP, created 6 months before this repo
+# ── ABSENT: the manifest name is an INTENTION, not a distribution.  Nothing is published under it.
+gafapa/moodlia-portable	package.json	moodlia-portable	GPL-3.0-or-later	npm	404	-	-	-	-	ABSENT
+angelonrevelo/bettercanvasmcp	package.json	better-canvas-mcp	MIT	npm	404	-	-	-	-	ABSENT
+vishalsachdev/canvas-mcp	package.json	canvas-mcp-code-api	(none)	npm	404	-	-	-	-	ABSENT
+Jacob-Met/canvaspilot	pyproject.toml	canvaspilot	MIT	pypi	404	-	-	-	-	ABSENT
+sonstellar969/open-moodle	pyproject.toml	open-moodle	MIT	pypi	404	-	-	-	-	ABSENT
+jamestesting0/tum-mcp	pyproject.toml	tum-moodle-integration	MIT	pypi	404	-	-	-	-	ABSENT — the same repo's npm name IS published; one repo, two manifests, one distribution
+# ── THE MECHANISM, and it is a naming rule, not a quality signal:
+# SCOPED names (@owner/name) corroborate 3/3.  A scope is owner-namespaced, so it cannot be taken by a stranger.
+# BARE names corroborate 4/7 and mis-resolve 3/7.  A bare name is first-come-first-served, and three of this cohort's repos lost the race.
+# 🔴 Every one of the 8 corroborated rows agrees with the repository's own LICENSE family.  The registry NEVER disagreed about a licence — it disagreed about WHOSE CODE IT IS.

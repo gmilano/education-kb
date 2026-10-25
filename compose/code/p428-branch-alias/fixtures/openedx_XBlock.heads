@@ -1,0 +1,16 @@
+88732d07f3ec72f26ab8425961ed075b887d78fd	refs/heads/farhan/test-video-block
+6ec06983521bd8e4764f4ebb717ba2b2848f5a45	refs/heads/farhan/test-xmodule-mixin-drop
+e4417ae500be4e00252a1f407b61dbd37a849ec3	refs/heads/jenkins/upgrade-python-requirements-2ae4557
+45f0dbf0df4e35c3c0b2902f9578d48bef20e21a	refs/heads/kdmccormick/upgrade-with-repo-tools
+c73c4bb42aa7afb2797b8b5b922d2d1b4ba853e3	refs/heads/master
+9c634481dfc85a17dcb3351ca232d7098a38e10e	refs/heads/named-release/birch/rc
+017b46b80e712b1318379912257cf1cc1b68eb0e	refs/heads/named-release/cypress.rc
+b455c27b288d1536bb9f5069a8a40b8b7b413599	refs/heads/named-release/dogwood.rc
+55a2d8b0dcf8b0b6ab55dee47d1eb8e228a20550	refs/heads/open-release/eucalyptus.master
+6e88504b2f489c5560d6f589530b378cab59994a	refs/heads/open-release/redwood.master
+93ff6dc385ab53e415265bab0d3e9dd5cdcaf736	refs/heads/open-release/sumac.master
+9c634481dfc85a17dcb3351ca232d7098a38e10e	refs/heads/openedx/rc/birch
+e1e7ef6c23b7ead203381dbd6c0db02fea92286c	refs/heads/release/ulmo-docs
+45acff226f22b93ef72387fe25c337ec3ee89034	refs/heads/repo-tools/upgrade-python-requirements-4b7e99a
+23408486daae9abf86d447f7b903b0bfde292102	refs/heads/repo-tools/upgrade-python-requirements-c73c4bb
+a56d8db1ac2892256d64a434537317a37c78f307	refs/heads/xblock-v2

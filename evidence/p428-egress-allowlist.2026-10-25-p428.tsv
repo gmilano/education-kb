@@ -1,0 +1,29 @@
+# p428 · 2026-10-25 · THE EGRESS MEASUREMENT that narrows `Gap 425-A`.
+# p425/p426/p427 recorded the gap as: curl HTTP 000 for every non-GitHub domain, and the tool-side fetcher failing DNS (ENOTFOUND) on the same,
+# concluding "DNS is GitHub-only, and server-side search summaries are the one non-GitHub channel — so no non-GitHub cell can EVER be authoritative".
+# 🔴 The general form is REFUTED on this host.  `curl -sS -o /dev/null -w '%{http_code}' https://<domain>/` run 2026-10-25:
+domain	http_code	reached	class
+github.com	400	YES	forge (400 is the proxy's answer to a bare GET; git and the API work)
+api.github.com	200	YES	forge API
+raw.githubusercontent.com	301	YES	forge raw content
+codeload.github.com	400	YES	forge archive
+objects.githubusercontent.com	404	YES	forge object store
+gitlab.com	301	YES	forge — a NON-GITHUB forge, reachable
+registry.npmjs.org	200	YES	package registry
+pypi.org	200	YES	package registry
+files.pythonhosted.org	404	YES	package registry CDN
+crates.io	403	YES	package registry (403 is policy, not unreachability)
+unesco.org	000	NO	policy / standards body
+unesdoc.unesco.org	000	NO	policy / standards body
+oecd.org	000	NO	policy / standards body
+education.ec.europa.eu	000	NO	policy / standards body
+en.wikipedia.org	000	NO	general web
+huggingface.co	000	NO	model hub
+moodle.org	000	NO	vendor
+openedx.org	000	NO	vendor
+# ── WHAT THIS CHANGES, PRECISELY:
+# 1. The channel is a FORGE-AND-PACKAGE-REGISTRY ALLOWLIST, not a GitHub-only DNS.  "This host cannot reach the web" was too wide by five domains.
+# 2. A registry response is a PAYLOAD: it can be digested, pinned (npm `dist.integrity` carries a sha512) and re-read.  A search summary cannot.
+#    So the claim "no cell sourced outside GitHub can ever be `authoritative`" is now FALSE for registry cells, and still TRUE for policy and market cells.
+# 3. `gitlab.com` is reachable, so a non-GitHub forge address is verifiable for the first time.  No education address on these shelves is hosted there yet.
+# 4. 🔴 What did NOT change: every policy and market cell on this base remains `reported`.  Not one standards-body or vendor domain resolves.

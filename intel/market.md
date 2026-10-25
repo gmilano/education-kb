@@ -4,6 +4,194 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **Four regional legs, four returned material, no nil. 🟢 The fact that moved is a SUPPLY one and it corrects this base's own reading: `p427` measured zero North American institutions and inferred a non-US supply — this pass found the North American institutional address, AND the cohort hub, by asking about a different LMS. 🔴 `Gap 425-A` is narrowed again: the registry channel is open, and every policy cell below is still `reported`.**
+
+🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **55** blocking gates green at baseline —
+before this pass wrote a line — and 🟢 **56** after these writes, the new one being
+`gate-branch-alias`. 🔵 **No date straddle:** every leg, `ls-remote`, clone, tree enumeration,
+registry query and digest happened **2026-10-25**; the commit lands **2026-10-25**.
+
+🔴 **`Gap 425-A`, narrowed and its strongest clause WITHDRAWN.** `p427` wrote that no cell sourced
+outside GitHub could ever be `authoritative` *"not by working harder, but by construction."* 🟢
+That is refuted for one class: `registry.npmjs.org` and `pypi.org` answer **`200`** on this host,
+and a registry response is a **digestible, pinnable payload** rather than a summary. 🔴 **It stands
+for this file.** `unesco.org`, `unesdoc.unesco.org`, `oecd.org`, `education.ec.europa.eu`,
+`en.wikipedia.org`, `moodle.org` and `openedx.org` are all **`000`**, so **every cell below is
+`reported`** and not one could be read at source.
+
+### 🔵 The regional legs — stated per region so silence cannot read as coverage
+
+| region | leg | returned |
+|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players state law districts` | 🟢 material — named statutes with dates, and 🔴 **three trackers disagreeing on the bill count** (134 bills / 31 states vs 68 bills / 27 states vs "around 100") |
+| **EMEA** | `AI education EMEA Europe 2026 adoption regulation AI Act high-risk education players` | 🟢 material — a **named amending regulation** moving the Annex III date, which is more specific than `p427`'s reading of the same deferral |
+| **APAC** | `AI education APAC 2026 India China Japan Korea adoption regulation players` | 🟡 **partial, with the nil declared inside it** — regulation for four countries plus Taiwan and Vietnam, and 🔴 **again no education-specific adoption figure and no named edtech player for any of them**. This is the second consecutive pass that leg has returned no education-sector demand evidence |
+| **LATAM** | `AI education LATAM Latin America 2026 adoption regulation Brazil Mexico Chile players` | 🟢 material on regulation, 🔴 **nil on education demand** — one source states that education systems are integrating AI *"often without oversight or guidelines"*, and no adoption rate, deployment or named edtech player was returned for Brazil or Chile |
+
+🔵 **Four global legs also ran** — `top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education ERP CRM MIT Apache student
+information system 2026`, `AI education industry trends 2026`. 🔴 **Three of the four returned
+nothing usable for this base**: the agents leg surfaced general-purpose frameworks and two
+learning courses with unconfirmed licences; the trending leg returned third-party trackers and
+self-reported star counts; the platform leg returned **ten pages from a single vendor**
+(OpenEduCat) and no licence information at all. 🟢 **All nine addresses promoted this pass came
+from GitHub search and from a licence file** — not from one of the eight prescribed legs. 🔵 That
+is the same shape `Gap 426-C` named, recorded again rather than re-discovered.
+
+### 🟢 The supply-side correction, and it is this base correcting itself
+
+🔴 **What `p427` published.** *"Sixteen institutional-agent addresses, zero North American
+institutions"* — checked, not inferred, and offered as evidence the institutional-agent supply is
+entirely non-US.
+
+🟢 **What one additional leg found.** The sixteen were all **Moodle**. Asking the same question of
+**Canvas** returns `total_count` **133**, and inside it:
+
+| finding | evidence, read first-hand 2026-10-25 |
+|---|---|
+| 🟢 **A North American institutional address exists** | `sweeden-ttu/canvas-lms-mcp` — README names **Texas Tech University** explicitly. MIT, `1 056` B `sha256₁₂ 06dcddbb6908` @ `13f357361fe8` |
+| 🟢 **And the cohort hub is North American-authored** | `vishalsachdev/canvas-mcp` — **308** refs, **99** forks, 102 tools, published to PyPI as `canvas-mcp` `1.16.0`. ~**14×** the refs of the largest Moodle address |
+
+🔴 **So `p427`'s measurement was correct and the inference from it was too wide** — the same
+failure mode `p427` itself diagnosed in `p426`, one pass later, on the other side. 🟢 **The
+mechanism is self-hosting, not geography**: Canvas is a hosted uniform API, so one implementation
+serves every institution and forks concentrate; Moodle is self-hosted per institution, so the
+work that matters cannot be shared. 🔵 Developed as `Trend 53` in
+[`intel/trends.md`](trends.md).
+
+### 🔴 What this base still cannot see, stated so the gap is legible
+
+| question an engagement will ask | status |
+|---|---|
+| What share of institutions in region X have deployed an AI assistant? | 🔴 **No figure from any region this pass.** The only adoption numbers returned were vendor-blog claims about *students* (92 % of university students; 54 % of K-12) with the underlying survey unreachable |
+| Who are the named edtech players in APAC and LATAM? | 🔴 **Nil, two passes running.** Both legs returned regulation and no vendor |
+| What is the market size? | 🔴 **Unresolved and widening.** One source projects ~**$32 B by 2030**, another cites **$12.3 B by 2026** attributed to HolonIQ. `p424`'s five-house ~6× spread is not narrowing, and no primary source is reachable to settle it |
+
+## Opportunities by region
+
+### North America
+
+🟢 **The one region where both halves of an engagement are now evidenced on these shelves** —
+demand (state statutes with deadlines) and supply (an institutional address and the cohort hub).
+
+🔵 **Demand, `reported`.** The 2026 state sessions produced binding duties with dates:
+**Oklahoma SB 1734** requires every district to adopt a written AI policy before the **2027–28**
+school year and **bars AI as the primary basis for grading, discipline or placement**;
+**Maryland SB 720** requires aligned district policies and a **designated AI coordinator**;
+**Ohio** set a **2026-07-01** district-policy deadline and published a model policy;
+**Alabama HB 329** makes an AI-inclusive computer-science course a **graduation requirement**;
+**California AB 1159** would bar using student data to train AI models; **Idaho SB 1227** requires
+privacy protections for school AI tools; **New York** is reported to be pursuing a ban below
+ninth grade while **Utah** created a **regulatory sandbox** for the same tools. Roughly **33–35
+states plus Puerto Rico** have official K-12 guidance. 🔴 **Bill counts disagree across three
+trackers** and most are vendor or advocacy sources; treat the named statutes as the reliable part
+and the totals as indicative.
+
+🟢 **The opportunity.** *"AI may not be the primary basis for a high-stakes decision"* and *"a
+designated coordinator must sign the policy"* are the same deliverable in two statutes: a
+**staged-grading pipeline with a human decision point and an audit record**, not a chatbot. 🟢
+`vishalsachdev/canvas-mcp` (MIT, 308 refs) is a credible base for the Canvas half, and
+`sweeden-ttu/canvas-lms-mcp` shows the single-institution scoping. 🔴 **Price the token question
+up front**: `Jacob-Met/canvaspilot` exists because *many schools disable Personal Access Token
+issuance*, and a browser-session broker will not survive a district procurement review.
+
+### EMEA
+
+🔵 **Demand, `reported`, and more precisely dated than `p427` could state it.** The EU AI Act's
+high-risk obligations for **stand-alone** education systems are reported moved from
+**2026-08-02** to **2027-12-02** by **Regulation (EU) 2026/1744**, with high-risk systems embedded
+in regulated products reported at **2028-08-02**. 🔴 **Sources still disagree and the Official
+Journal text is unreachable from this host** — several guides retain the superseded August 2026
+date, so a client's own counsel must confirm. 🟢 **What is in force now is not deferred**:
+**Article 4** (AI literacy) and **Article 5** (prohibitions) already apply, and Article 5 bars
+**emotion inference in education institutions** outright. Annex III still covers admission,
+evaluation of learning outcomes, placement decisions and **exam proctoring**, and deployers owe
+human oversight, logging, notification of affected individuals and a **Fundamental Rights Impact
+Assessment** before use.
+
+🟢 **The opportunity.** The deferral moves the deadline, not the design: **logging, oversight and
+the FRIA are the deliverable** and they are needed before any assessment feature ships. 🟢 The
+oversight artefact exists in open source — `simonseifert/merlin-mcp` is **read-only by
+construction with writes gated on an out-of-band approval** — and `Teci-AI`'s pair shows the
+licence consequence of the architecture choice: an agent *inside* Moodle is **GPL-3.0**, an
+external client is **MIT**. 🔴 **Settle that before licence review, not at it.**
+
+### APAC
+
+🔴 **Declared nil, for the second consecutive pass: no education-specific adoption figure and no
+named edtech player was returned for any APAC country.** That is a real gap in this base, not a
+quiet one.
+
+🔵 **What the leg did return, all `reported`.** **South Korea** has the most binding regime: the
+**AI Basic Act** applies from **2026-01-22** with an amendment phased in by **2026-07-21**, and it
+names **education** among its high-impact domains — with a fines grace period of at least a year
+from January 2026. **China** regulates by service type rather than by a general law — recommendation
+algorithms (2022), deep synthesis (2022), generative AI measures (2023), labelling rules from
+**2025-09-01**. **Japan**'s AI Promotion Act is light-touch with no fines; a new **AI Basic Plan**
+was adopted **2026-07-14**. **India** still has no dedicated AI law and signalled in **July 2026**
+that it may pursue one. **Taiwan** passed an AI Basic Act in **December 2025**; **Vietnam**'s Law
+on Artificial Intelligence took effect **2026-03-01**.
+
+🟢 **The opportunity.** 🔴 **Korea is the only jurisdiction worldwide where an education
+high-impact duty is already IN FORCE** — so it is where a compliance-shaped engagement can be sold
+today rather than against a 2027 deadline. 🟢 The supply side has one APAC-adjacent exemplar on
+these shelves, `JaipuriaAILabs/Moodle-MCP` (India). 🔴 With no named regional player and no
+adoption figure, **an APAC engagement is currently sold on regulation alone** — qualify the demand
+with the client before scoping.
+
+### LATAM
+
+🔵 **Demand, `reported`.** **Brazil** is furthest along: **PL 2338/2023** passed the Senate
+**2024-12-10**, sits in the Chamber of Deputies, and is reported to resume after the **October
+2026** elections; it lists **education among its high-risk areas**, which would carry impact
+assessments and human oversight. **Peru** remains the only country with an enacted AI law —
+**Ley N° 31814**, published **2023-07-05**. **Mexico** has no comprehensive law; amendments on AI
+use of performers' voices and images passed both chambers in **April 2026** and await publication
+in the DOF, and a **February 2026** bill would create a risk-classifying regulator — while
+**INFOTEC/TecNM**'s public AI Training Center aims to graduate **10 000 specialists in 2026**.
+**Chile**'s bill (bulletin **16821-19**, introduced **2024-05-07**) is in committee, and the
+government has proposed moving the data-protection law's effective date from **2026-12-01** to
+**2027-12-01**.
+
+🔴 **Demand nil, declared.** No adoption rate, no deployment count and no named edtech player was
+returned for any LATAM country. One source states that education systems are integrating AI
+*"often without oversight or guidelines"* — which is a description of the gap, not a measurement of
+the market.
+
+🟢 **Supply, and it is the strongest regional supply this base holds.** `arthurcuri/mcp-instructure-canvas`
+(MIT, `161c1c8666c3`) joins `HyNuwa/UniMCP` and `nialvape/utn-mcp` — and the region is placed on
+**payload evidence**: `timezone: str = "America/Sao_Paulo"` is a default **in code**, not an
+inference from a name. 🔴 **`CarvalhoJeo/moodle-unisinos-mcp` — a Brazilian-university Moodle
+connector, HEAD 2026-10-23 — carries NO licence file**, so it is all-rights-reserved and
+unusable. 🔵 That is the regional supply's characteristic failure: the code exists, the grant does
+not.
+
+🟢 **The opportunity.** Brazil's bill makes education high-risk on a timeline that starts **after
+October 2026**, so the window to build the oversight artefact is now and the deliverable is
+the same one EMEA needs. 🟢 Reuse the EMEA artefact rather than rebuilding it, and reuse
+`UniMCP`'s **multi-institution host table** for the ministry-scale shape (`Pattern AY`).
+
+### Global
+
+🟢 **What is true in every region.** The licence question is settled by the **architecture
+decision**, weeks before anyone reads a `LICENSE` file: an agent running inside Moodle is
+**GPL-3.0** by inheritance (now **3/3**, all three payloads carrying the identical digest
+`sha256₁₂ 3972dc9744f6`), an external REST client is permissive (**11/11**). `Teci-AI` publishes
+both halves of one product and the grants differ — same owner, same week, so preference cannot
+explain it.
+
+🔴 **What is true in every region and costs money.** Of the fourteen addresses read first-hand
+this pass, **three carry no grant payload at all** (21 %) and one asserted grant belongs to an
+address that **no longer resolves**. 🔴 And a **package name is not an address**: of thirteen npm
+names declared in these repositories' own manifests, **three resolve to a different project** and
+**six are unpublished**. 🟢 **The rule that follows is one line in a procurement checklist** — pin
+the repository at a SHA, and verify the grant in the payload rather than in a manifest, a README
+or a downstream project's attribution block.
+
+🔵 **The market number, unresolved.** One source projects ~**$32 B by 2030**; another cites
+**$12.3 B by 2026** attributed to HolonIQ. 🔴 `p424`'s ~6× spread across five houses has not
+narrowed, no primary source is reachable from this host, and **this base should not be used to
+quote a market size.**
 ## 🆕 `p427` · 2026-10-25 — **Four regional legs, four returned material, no nil. 🟢 The fact that moved is a SUPPLY-SIDE one and this base measured it itself: the institutional-agent supply in this cohort is ENTIRELY NON-US — sixteen addresses, zero North American institutions, checked rather than assumed. 🔴 And `Gap 425-A` reproduces on a SECOND channel, so every policy cell below is `reported` and none can ever be `authoritative` on a host of this class.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54** blocking gates green at baseline —
@@ -53,7 +241,7 @@ nothing has measured whether that is a discovery artefact or a real asymmetry, a
 directly testable by running this pass's two-term leg against `canvas`, `powerschool` and
 `blackboard`. 🔵 Where it is real, it is a **build** opportunity rather than a compose one.
 
-## Opportunities by region
+## Opportunities by region — `p427`, SUPERSEDED by `p428`'s block above
 
 ### North America
 

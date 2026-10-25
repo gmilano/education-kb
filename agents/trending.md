@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **The discovery log: a THIRD address channel, opened inside a licence file, and a FOURTH that was never reachable before.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 The legs this pass ran, and what each returned
+
+| leg | channel | returned | unshelved |
+|---|---|---|---|
+| `canvas lms mcp`, `sort=updated` | GitHub repository search | `total_count` **133**, 25 read | 🟢 **13** |
+| `moodle mcp`, `sort=updated` | GitHub repository search | `total_count` **242**, 30 read | 🟢 **10** (the cohort `p427` opened, still producing) |
+| the attribution block in `semyonfox/canvas-mcp`'s `LICENSE` | 🟢 **NEW — a licence file as an address channel** | **12** addresses named with their asserted families | 🟢 **6** |
+| manifest name → package registry | 🟢 **NEW — reachable on this host for the first time** | 13 npm + 4 PyPI lookups | 🔵 0 new addresses, but **3 name collisions** and **1 non-resolving back-link** found |
+| `top open source AI agents education 2026 github MIT` | prescribed web leg | 🔴 general-purpose frameworks and two courses with unconfirmed licences | 🔴 **0** |
+| `github trending education AI 2026` | prescribed web leg | 🔴 third-party trackers, self-reported star counts, nothing education-specific | 🔴 **0** |
+| `open source platform education ERP CRM MIT Apache student information system 2026` | prescribed web leg | 🔴 **ten pages from one vendor** (OpenEduCat), no licence information | 🔴 **0** |
+| `AI education industry trends 2026` | prescribed web leg | 🟡 four recurring themes, vendor-leaning adoption figures, conflicting market sizes | 🔴 **0** |
+
+🔴 **Recorded plainly: all nine promotions came from GitHub search and from a licence file. The
+four prescribed web legs produced zero addresses, for the second consecutive pass.** That is
+`Gap 426-C`'s shape again — the legs are not wrong, they are aimed at a layer where this supply
+does not appear.
+
+### 🟢 Promoted — nine new addresses, every grant read first-hand at the SHA
+
+`semyonfox/canvas-mcp` (MIT, `fea4cd7cb04d`) · `Teci-AI/moodle-mcp-connector` (MIT,
+`c8bcb50d415c`) · `The-Morrow-Project/Morrow-Bridge` (MIT, `f37f80963047`, **two licence paths,
+same digest**) · `Jacob-Met/canvaspilot` (MIT, `85144488dcaf`) ·
+`arthurcuri/mcp-instructure-canvas` (MIT, `161c1c8666c3`, **LATAM**) ·
+`angelonrevelo/bettercanvasmcp` (MIT, `fe401a64566c`) · `sweeden-ttu/canvas-lms-mcp` (MIT,
+`06dcddbb6908`, **North America**) · `a-ariff/canvas-mcp` (MIT, `040d00e3cf79`) ·
+`Kuria-Mbatia/Canvas-MCP-server` (MIT, `fd34175ea8f9`) · `Shashwatpog/poke-canvas-mcp` (MIT,
+`b60d2cd596b7`). Plus `Teci-AI/moodle-local_mcpconnector` (GPL-3.0, `3972dc9744f6`) to the
+foundation layer, and `vishalsachdev/canvas-mcp` re-graded on a second channel.
+
+### 🔴 Declined — read first-hand, no grant payload
+
+`CarvalhoJeo/moodle-unisinos-mcp` · `jtuttas/moodle-agent-mcp` · `enkhbold470/mcp-server-canvas`
+(README-only claim). 🔵 **Three of fourteen addresses read this pass, 21 %, carry no grant** —
+the commonest single reason a usable-looking address is unusable.
+
+### 🔴 `Jon-Vii/canvas-student-mcp` — asserted MIT by a live licence file, and the address does not resolve
+
+`ls-remote` answers with a **credential prompt** while the control `moodle/moodle` resolves
+anonymously. 🔵 Under `p293` that is a measurement — private or gone — and the asserted grant
+cannot be checked at all. Recorded here so the attribution is not quietly dropped.
+
+### 🔵 The near-miss worth logging: a region nearly placed on a quiz fixture
+
+🔴 `Teci-AI/moodle-mcp-connector` contains the string **"Spain"** three times. It is an **example
+in a quiz fixture** — `{"question": "Spain", "answer": "Madrid"}`. 🟢 Placed **Global**, not EMEA.
+🔵 Logged because the next pass to grep for a country name will find the same three hits, and an
+unexplained `Global` looks exactly like an unexamined one.
+
+---
 ## 🆕 `p427` · 2026-10-25 — **The eleven-pass drought was a QUERY-SHAPE artefact, and this pass has the number: ONE two-word leg returned 16 unshelved addresses. 🟢 `Gap 426-C` CONFIRMED, with the mechanism named — this cohort is named after the INSTITUTION, not the platform.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54 blocking gates green** at baseline,

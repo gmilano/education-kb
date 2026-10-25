@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 428 — reads 2026-10-25, commit 2026-10-25 — **Two new channels, one refuted gap, and this base correcting its own inference one pass after making it. 🟢 A licence file turns out to be an ADDRESS channel. 🟢 The package registries are reachable, so a non-GitHub cell can be `authoritative` for the first time. 🔴 And an HTTP 200 cannot tell you whether a branch exists.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, shallow clone, tree enumeration, registry query
+and payload digest happened **2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries
+one date.
+
+🟢 **Gates RAN on this host**, against `b46290a`: a baseline run **before this pass wrote a line**
+exited `0` over 🟢 **55 blocking gates green**, and after the shelf writes `make commit-gates`
+exits `0` over 🟢 **56 blocking gates green** — the new one is `gate-branch-alias`, built and
+wired here.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 425-A` is REFUTED in its general form.** `p425`–`p427` recorded *"DNS is GitHub-only"*
+  and concluded no cell sourced outside GitHub could ever be `authoritative` *"not by working
+  harder, but by construction."* On this host `registry.npmjs.org` **`200`**, `pypi.org`
+  **`200`**, `files.pythonhosted.org` and `crates.io` reached, `gitlab.com` **`301`** — while
+  `unesco.org`, `oecd.org`, `moodle.org`, `openedx.org`, `huggingface.co`, `europa.eu` and
+  `wikipedia.org` are all **`000`**. 🔵 The egress is a **forge-and-package-registry allowlist**.
+  🟢 A registry response is a digestible, pinnable payload, so **eight registry cells are graded
+  `authoritative` this pass**. 🔴 **Every policy and market cell stays `reported`** — not one
+  standards-body or vendor domain resolves.
+- 🟢 **A THIRD address channel, and it was inside a licence file.** `semyonfox/canvas-mcp`'s MIT
+  `LICENSE` (**`1 881` B `sha256₁₂ fea4cd7cb04d`** @ `e317c4b7bf10`) carries an attribution block
+  naming **twelve** upstream addresses **with their asserted families**. Six were unshelved; four
+  are promoted. 🔵 It is the only channel this base reads that delivers the address **and the
+  obligation** in the same sentence. 🔴 And it is an **unverified third-party claim**: of the
+  twelve, `enkhbold470/mcp-server-canvas` has **no licence payload at all** (a README line only),
+  and `Jon-Vii/canvas-student-mcp` **does not resolve**. The notice obligation is **thirteen**
+  copyright lines, two of which name a grant nobody can confirm.
+- 🔴 **`T429` — a published path naming `master` is not evidence that `master` exists.** GitHub
+  serves the default branch under the legacy name, so `.../master/package.json` returns **200** on
+  `falkenslab/miyagi`, whose ref set is exactly `refs/heads/main` — byte-identical to
+  `.../main/package.json`, both `1 123` B `sha256₁₂ 4350dcad89c6`. 🟢 **Isolated by measurement**:
+  `trunk`, `develop`, `dev`, `default`, `release` and `stable` all **404** on the same repos, and
+  the alias is **one-directional** (`UniMCP`, master-only, 404s under `main`). 🔴 So
+  `gate-grant-path-online`'s 200-check cannot answer the branch half of its own contract.
+  🟢 **Closed by `gate-branch-alias`** — 36 assertions over 26 controls, offline.
+- 🔴 **`p428` got its own first measurement of that wrong, and the correction is recorded rather
+  than quietly fixed.** A recursive sweep of `compose/` pulls in **vendored copies of other
+  projects' READMEs**; counting those inflated the figure tenfold. Corrected: **the live shelves
+  carry 8 ref-asserting citations and ZERO alias-only defects** — clean by accident of how few
+  such paths this base publishes, not by an instrument. The population the mechanism bites is
+  next door: of **59** distinct addresses cited with a `/master/` path in vendored upstream
+  READMEs, **15 (25.4 %)** have no `master` branch, and **14 of the 14 testable return 200
+  anyway**.
+- 🔴 **`T430` — a package name is not an address.** Thirteen npm names and four PyPI names, each
+  read from the repository's own manifest at HEAD: **8 CORROBORATED**, **3 MIS-RESOLVED**, **6
+  ABSENT**. `falkenslab/miyagi`'s name `miyagi` is **held and empty since 2020-02-20**;
+  `simonseifert/merlin-mcp`'s name belongs to a codebase-intelligence server registered **nine
+  months earlier**, whose own back-link `github.com/anthropics/merlin` **does not resolve**;
+  `Nasus20202/MoodleMCP`'s name belongs to `1alexandrer/moodle-mcp`. 🟢 The mechanism is a naming
+  rule: **scoped** names corroborate **3/3**, **bare** names **4/7**. 🟢 This also **closes
+  `p427`'s open `tum-mcp` question** — `@jamestesting888/tum-mcp` `0.5.0` declares MIT and
+  back-links to `jamestesting0/tum-mcp`; the advice was right and the stated reason was wrong.
+- 🟢 **`p427`'s architecture rule re-run with the OWNER HELD CONSTANT.** `Teci-AI` published both
+  halves of one product on **2026-10-21**: the external REST client is **MIT** (`1 103` B
+  `c8bcb50d415c`), the in-LMS plugin is **GPL-3.0** (`35 149` B `3972dc9744f6` — the **third**
+  payload on these shelves with that identical stock digest). Same owner, same product, same
+  week, opposite grants, split exactly at the architecture boundary. Preference is no longer a
+  candidate explanation. Running tally: **3/3 in-LMS copyleft, 11/11 external permissive**, and
+  the entirely-external Canvas cohort is **9/9 MIT**, as the rule predicted.
+- 🔴 **`p427`'s supply inference was too wide, and this pass corrected it one pass later.**
+  `p427` measured *"sixteen institutional-agent addresses, zero North American institutions"* and
+  read it as a non-US supply. The sixteen were all **Moodle**. Asking **Canvas** the same question
+  returns `total_count` **133**, a North American institutional address
+  (`sweeden-ttu/canvas-lms-mcp`, **Texas Tech University**, named in its README) and the cohort
+  hub `vishalsachdev/canvas-mcp` — **308 refs, 99 forks**, ~**14×** the largest Moodle address.
+  🟢 So `Trend 49`'s institution-local supply is a property of **self-hosting**, not of education:
+  Canvas is one hosted API and concentrates; Moodle is per-institution and cannot.
+- 🟢 **Eleven addresses promoted**, every grant read first-hand at the SHA, plus
+  `Teci-AI/moodle-local_mcpconnector` to the foundation layer and `vishalsachdev/canvas-mcp`
+  re-graded on a second digestible channel. 🔴 **Three declined for carrying no grant payload at
+  all** — `CarvalhoJeo/moodle-unisinos-mcp`, `jtuttas/moodle-agent-mcp`,
+  `enkhbold470/mcp-server-canvas` — which is **21 %** of what one day's legs returned.
+- 🔵 **A near-miss logged rather than buried:** `Teci-AI/moodle-mcp-connector` contains "Spain"
+  three times, in a **quiz fixture** (`{"question": "Spain", "answer": "Madrid"}`). Placed
+  **Global**, not EMEA. Region is placed on payload evidence only — which is also why
+  `arthurcuri/mcp-instructure-canvas` is **LATAM**: `timezone: str = "America/Sao_Paulo"` is a
+  default in code, not an inference from a name.
+- 🔴 **Declared gaps, unchanged or widened:** no education-specific adoption figure and no named
+  edtech player for any APAC or LATAM country, **two passes running**; the market number still
+  spans ~6× across five houses with no reachable primary source. 🔴 **All four prescribed web legs
+  returned zero addresses** for the second consecutive pass — every promotion came from GitHub
+  search or from a licence file.
+
+### 🟢 The censuses, re-derived AFTER this pass wrote — restated, never back-fitted
+
+🔵 `p352` and `p376` both require the triple to be derived from the tree this pass commits, as
+the last act before the commit. Both gates fired on this pass's drafts — exactly as `p352` says
+is structural — and these are the re-derived figures:
+
+**2 812** harvested shapes → **38** are not addresses → **2 774 addresses**.
+
+🔵 **2 774** channel-U addresses and **3 272** channel-B survivors give
+**3 635 addresses over both channels**.
+
+🔵 The rejection classes are unchanged in kind — `NAV-NAMESPACE` 30, `OWNER-ELLIDED` 3,
+`EMPTY-NAME` 2, `OWNER-TEMPLATE-VAR` 1, `PLACEHOLDER-NAME` 1, `PLACEHOLDER-OWNER` 1 — and the
+inflation this pass's writes added to the harvested denominator is **1.35 %**.
+
+Evidence: [`evidence/p428-address-verification.2026-10-25-p428.tsv`](evidence/p428-address-verification.2026-10-25-p428.tsv)
+· [`evidence/p428-registry-channel.2026-10-25-p428.tsv`](evidence/p428-registry-channel.2026-10-25-p428.tsv)
+· [`evidence/p428-branch-alias-probe.2026-10-25-p428.tsv`](evidence/p428-branch-alias-probe.2026-10-25-p428.tsv)
+· [`evidence/p428-egress-allowlist.2026-10-25-p428.tsv`](evidence/p428-egress-allowlist.2026-10-25-p428.tsv).
+Instruments: `make gate-branch-alias` · `make branch-alias-census` · `make branch-alias-vendored`.
 ## Pass 427 — reads 2026-10-25, commit 2026-10-25 — **The eleven-pass drought was a QUERY, not the field: one two-word leg returned 16 unshelved addresses. 🟢 `Gap 426-C` CONFIRMED and mechanised — this cohort is named after the INSTITUTION, not the platform. 🟢 A new grant SHAPE found, gated and wired. 🔴 And `Amendment 13` measured at a 92 % fire rate with zero true positives.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, shallow clone, tree enumeration and payload

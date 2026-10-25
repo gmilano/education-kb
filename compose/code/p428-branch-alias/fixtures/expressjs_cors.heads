@@ -1,0 +1,7 @@
+6b2422c94a29305cb626220f18761fd0112115a1	refs/heads/ci-workflows
+9fa0bf55691a103aaabf91433b5af845064c0035	refs/heads/dependabot/github_actions/actions/checkout-6.0.3
+ea3ad74744c7088ec2b1051d360734aa1a672ca2	refs/heads/dependabot/github_actions/actions/upload-artifact-7.0.1
+095f018251bfc8443ef684f47b55790c9277423e	refs/heads/dependabot/github_actions/github/codeql-action-4.36.1
+f3192bddfaa5c5391c4883d01e1312d8e24b1de5	refs/heads/dependabot/github_actions/ossf/scorecard-action-2.4.3
+0695953109609505ab50b1b6c7045ce98c26a672	refs/heads/dependabot/npm_and_yarn/express-4.22.2
+5317ebe670db2aaebc1d496eb5d33493deefb3ed	refs/heads/master

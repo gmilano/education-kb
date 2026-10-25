@@ -1,0 +1,23 @@
+# p428 · 2026-10-25 · every grant below was read FIRST-HAND from a shallow clone at the SHA on 2026-10-25.
+# Legs: GitHub repository search `canvas lms mcp` sorted by `updated` desc (total_count=133) and `moodle mcp` (total_count=242),
+# plus a THIRD address channel this pass opened: the attribution block inside `semyonfox/canvas-mcp`'s own LICENSE, which names 12 upstream addresses.
+# sha256_12 is the first 12 hex of sha256 over the licence payload AS COMMITTED at that SHA.  licence_paths is `git ls-tree -r HEAD` filtered to licence-shaped names (gate-subtree-grant).
+# region is placed ONLY on evidence IN THE PAYLOAD.  "Global" means no region evidence was found, not that the project is global.
+address	head_sha	last_commit	refs	licence_family	licence_path	bytes	sha256_12	licence_paths	region	region_evidence	channel
+Teci-AI/moodle-mcp-connector	2318b9927da56cd1edd7a0e511f0ded18bacaffd	2026-10-23	1	MIT	LICENSE	1103	c8bcb50d415c	1	Global	none — "Spain" in this repo is a QUIZ FIXTURE ("question": "Spain", "answer": "Madrid"), not a locale	github-search:moodle mcp
+Teci-AI/moodle-local_mcpconnector	2534638df045d8abeb474feaaab189d0c661d45d	2026-10-23	1	GPL-3.0	LICENSE	35149	3972dc9744f6	1	Global	none	github-search:moodle mcp
+semyonfox/canvas-mcp	e317c4b7bf10de3325bc0b57b08dd6ed598fcfdf	2026-10-24	6	MIT + 12 named attributions IN THE LICENCE BODY	LICENSE	1881	fea4cd7cb04d	1	Global	none	github-search:canvas lms mcp
+The-Morrow-Project/Morrow-Bridge	b5e9993c5d53ec77461b655fb283b08aa479846f	2026-10-20	31	MIT	LICENSE + desktop/LICENSE (SAME digest)	1071	f37f80963047	2	Global	none	github-search:canvas lms mcp
+Jacob-Met/canvaspilot	e75196e94c6c68bdc738d87d4b522429156d4a93	2026-10-22	23	MIT	LICENSE	1075	85144488dcaf	1	Global	none	github-search:canvas lms mcp
+angelonrevelo/bettercanvasmcp	1f5a5969e50271e0b462bff34fbfa0aef8042930	2026-10-12	1	MIT	LICENSE	1070	fe401a64566c	1	Global	none	github-search:canvas lms mcp
+arthurcuri/mcp-instructure-canvas	fc3c813e76d028c2cfb4ae8df7303349f51129f2	2026-10-23	1	MIT	LICENSE	1074	161c1c8666c3	1	LATAM	`timezone: str = "America/Sao_Paulo"` as a DEFAULT IN CODE (17 occurrences); pt-BR README	github-search:canvas lms mcp
+a-ariff/canvas-mcp	28496f9ca41462c7dc1a1ad8a9c163f6f9d13896	2026-02-16	2	MIT	LICENSE	1064	040d00e3cf79	1	Global	none	licence-attribution-block:semyonfox/canvas-mcp
+sweeden-ttu/canvas-lms-mcp	13f357361fe84ee86e68656a3c331e43e0f1a29c	2026-03-09	4	MIT	LICENSE	1056	06dcddbb6908	1	North America	README names Texas Tech University explicitly	licence-attribution-block:semyonfox/canvas-mcp
+Kuria-Mbatia/Canvas-MCP-server	c2fee6cb2fc00b1445af48c680350062020ec057	2025-10-08	4	MIT	LICENSE	1063	fd34175ea8f9	1	Global	none	licence-attribution-block:semyonfox/canvas-mcp
+Shashwatpog/poke-canvas-mcp	4917cf253ef75bfc1f833ae224945fe8893ba8dc	2026-02-02	1	MIT	LICENSE	1072	b60d2cd596b7	1	Global	none	licence-attribution-block:semyonfox/canvas-mcp
+# ── DECLINED: read first-hand, no grant payload.  Absent a licence, the default is all-rights-reserved and none of these is usable by a client.
+enkhbold470/mcp-server-canvas	386f198241ee051c6ba0a2634b0149c536103495	2025-03-26	1	NONE IN PAYLOAD — README says "## License / MIT"; package.json has NO license field	(none)	0	(none)	0	Global	none	licence-attribution-block:semyonfox/canvas-mcp
+CarvalhoJeo/moodle-unisinos-mcp	05799bc9ee99648684a479f90c542d58b6cf76bc	2026-10-23	1	NONE IN PAYLOAD — no licence file, no manifest field, no README claim	(none)	0	(none)	0	Global	Unisinos is a Brazilian university, but no locale constant is in the payload	github-search:moodle mcp
+jtuttas/moodle-agent-mcp	f96bbe8cd7c9425dc78a48440d5e4cf788b500b0	2026-10-23	3	NONE IN PAYLOAD — no licence file, no manifest field, no README claim	(none)	0	(none)	0	Global	German-language README	github-search:moodle mcp
+# ── UNREADABLE: `git ls-remote` answered with a CREDENTIAL PROMPT while the control `moodle/moodle` resolved anonymously.  Under p293 that is a MEASUREMENT: private or gone.
+Jon-Vii/canvas-student-mcp	(credential prompt)	-	-	ASSERTED MIT by semyonfox/canvas-mcp's LICENSE — UNVERIFIABLE, the address does not resolve	-	-	-	-	Global	none	licence-attribution-block:semyonfox/canvas-mcp

@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **A THIRD address channel, and it was sitting inside a licence file. 🟢 `semyonfox/canvas-mcp`'s MIT `LICENSE` names TWELVE upstream addresses with their families; six were unshelved, and the channel carries the OBLIGATION along with the address — which no other channel does. 🔴 Two of the twelve asserted grants do not hold up when read at source.**
+
+🟢 **Gates RAN on this host**, against `b46290a`: the baseline run was 🟢 **55 blocking gates
+green** before this pass wrote a line, and after these writes `make commit-gates` exits `0` over
+🟢 **56 blocking gates green** — the new one is `gate-branch-alias`, built and wired on this
+pass. 🔵 **No date straddle:** every leg, `ls-remote`, shallow clone, tree enumeration, registry
+query and payload digest happened **2026-10-25**; the commit lands **2026-10-25**.
+
+🟢 **`Gap 425-A` is REFUTED in its general form, and this pass measured the replacement.**
+`p425`–`p427` recorded *"DNS is GitHub-only"* and concluded that **no** cell sourced outside
+GitHub could ever be `authoritative`. On this host `registry.npmjs.org` and `pypi.org` both
+return **`200`** with full JSON, `files.pythonhosted.org` and `crates.io` are reached, and
+**`gitlab.com`** resolves — while `unesco.org`, `oecd.org`, `moodle.org`, `openedx.org`,
+`huggingface.co`, `europa.eu` and `wikipedia.org` are all **`000`**. 🔵 The egress is a
+**forge-and-package-registry allowlist**, not a GitHub-only DNS. 🟢 **A registry response is a
+payload** — it can be digested and pinned (npm ships a `sha512` in `dist.integrity`) — so a
+**registry cell CAN be `authoritative`**. 🔴 **Every policy and market cell on this base stays
+`reported`:** not one standards-body or vendor domain resolves. Full probe:
+[`evidence/p428-egress-allowlist.2026-10-25-p428.tsv`](../evidence/p428-egress-allowlist.2026-10-25-p428.tsv).
+
+### 🟢 Promoted to this shelf — ten new addresses, plus one carried row re-graded on a second channel. Every grant read first-hand at the SHA
+
+| address | grant, read at the SHA | heads | capability — band stated per cell | region |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(carried, re-graded)* | 🟢 **MIT** — and for the first time on this base the grant is confirmed on a **second, digestible channel**: PyPI `canvas-mcp` **`1.16.0`** declares the full MIT text and back-links to this exact repository 🟢 **`authoritative`** | 🟢 **308** refs, **99** forks; HEAD `c9274b74325f` **2026-10-25** | 🟢 Canvas LMS, **102 tools and 8 agent skills**, for students *and* educators; states compatibility with Claude, Cursor, Codex "and 40+ agents". 🔵 **This is the hub the Moodle cohort does not have** — ~14× the refs of the largest Moodle address on these shelves (`kad-xyz/spbstu-mcp`, 22) | Global |
+| [`semyonfox/canvas-mcp`](https://github.com/semyonfox/canvas-mcp) | 🟢 **MIT** — `LICENSE` **`1 881` B `sha256₁₂ fea4cd7cb04d`** @ HEAD `e317c4b7bf10`. 🔴 **The size is the finding:** stock MIT runs ~`1 070` B; the extra `811` B is an **attribution block naming twelve upstream projects and their families inside the licence body**. 🟢 Tree **ENUMERATED**: one licence-shaped path 🟢 **`authoritative`** | **6** refs; last **2026-10-24** | 🟢 TypeScript Canvas server, **129 tested tools**, built against the **MCP `2026-07-28`** core revision, with **documented permission boundaries** | Global |
+| [`Teci-AI/moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) | 🟢 **MIT** — `LICENSE` **`1 103` B `sha256₁₂ c8bcb50d415c`** @ HEAD `2318b9927da5`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **1** ref; last **2026-10-23** | 🟢 External REST client for Moodle — reads *and authors* course content. 🔵 Its value here is as **half of a natural experiment**: the same owner publishes the in-LMS half separately, and the two grants differ. See `repos/foundations.md` | Global |
+| [`The-Morrow-Project/Morrow-Bridge`](https://github.com/The-Morrow-Project/Morrow-Bridge) | 🟢 **MIT** — `LICENSE` **`1 071` B `sha256₁₂ f37f80963047`** @ HEAD `b5e9993c5d53`. 🟢 Tree **ENUMERATED**: **two** licence-shaped paths (`LICENSE`, `desktop/LICENSE`) carrying the **same digest**, so `gate-subtree-grant` is satisfied on both 🟢 **`authoritative`** | **31** refs — the highest in this leg; last **2026-10-20** | 🟢 **Cross-LMS**: Canvas first, Moodle in progress, Blackboard named. Ships as a Chrome extension **and** an Electron desktop app. 🔵 Its README states the thesis plainly — *"you should not have to wait for your institution to buy and roll out a separate course assistant"* — which is the **shadow-IT** procurement shape, not a campus rollout | Global |
+| [`Jacob-Met/canvaspilot`](https://github.com/Jacob-Met/canvaspilot) | 🟢 **MIT** — `LICENSE` **`1 075` B `sha256₁₂ 85144488dcaf`** @ HEAD `e75196e94c6c`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **23** refs; last **2026-10-22**; 🔴 **63 open issues** | 🟢 MCP **+ CLI** with a **stay-open SSO session broker**: it uses the browser session the user already has rather than a Personal Access Token. 🔵 **That is a procurement fact, not a feature**: its README's reason is that *many schools disable* token issuance — so the token-holding architecture every other row here assumes is **unavailable at some institutions** | Global |
+| [`arthurcuri/mcp-instructure-canvas`](https://github.com/arthurcuri/mcp-instructure-canvas) | 🟢 **MIT** — `LICENSE` **`1 074` B `sha256₁₂ 161c1c8666c3`** @ HEAD `fc3c813e76d0`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **1** ref; last **2026-10-23** | 🟢 Canvas read **and write**, Telegram reminders, a local Codex/Claude agent, and GitHub Actions automation. 🟢 **Region is placed on evidence in the payload, not on the author's name**: `timezone: str = "America/Sao_Paulo"` is the **default in code** (17 occurrences) and the README is pt-BR | **LATAM** |
+| [`angelonrevelo/bettercanvasmcp`](https://github.com/angelonrevelo/bettercanvasmcp) | 🟢 **MIT** — `LICENSE` **`1 070` B `sha256₁₂ fe401a64566c`** @ HEAD `1f5a5969e502`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | 🔴 **1** ref; last **2026-10-12** | 🟢 Read-only, and its stated purpose is **the edges the popular Canvas servers skip**: due-date *overrides*, New Quizzes, group work and file text. 🔵 Useful as a **conformance checklist** against any Canvas server a studio picks, whatever it ends up shipping | Global |
+| [`sweeden-ttu/canvas-lms-mcp`](https://github.com/sweeden-ttu/canvas-lms-mcp) | 🟢 **MIT** — `LICENSE` **`1 056` B `sha256₁₂ 06dcddbb6908`** @ HEAD `13f357361fe8`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **4** refs; last **2026-03-09** | 🟢 Canvas server scoped to one institution. 🟢 **The only North American institutional address on these shelves** — README names **Texas Tech University** explicitly, which is payload evidence, not a name inference | **North America** |
+| [`a-ariff/canvas-mcp`](https://github.com/a-ariff/canvas-mcp) | 🟢 **MIT** — `LICENSE` **`1 064` B `sha256₁₂ 040d00e3cf79`** @ HEAD `28496f9ca414`. 🟢 Tree **ENUMERATED**: one path 🟢 **`authoritative`** | **2** refs; last **2026-02-16** | 🟢 TypeScript Canvas server with **CI wired** (a build badge against its own `ci.yml`) — one of the few in this cohort with a test gate of its own | Global |
+| [`Kuria-Mbatia/Canvas-MCP-server`](https://github.com/Kuria-Mbatia/Canvas-MCP-server) | 🟢 **MIT** — `LICENSE` **`1 063` B `sha256₁₂ fd34175ea8f9`** @ HEAD `c2fee6cb2fc0` 🟢 **`authoritative`** | **4** refs; last **2025-10-08** — 🔴 the oldest HEAD in this leg, over a year stale | 🟢 "Notioc" Canvas server with **composite-intelligence tools** layered over the raw API. 🔵 Shelved for the **layering pattern**, not as a dependency | Global |
+| [`Shashwatpog/poke-canvas-mcp`](https://github.com/Shashwatpog/poke-canvas-mcp) | 🟢 **MIT** — `LICENSE` **`1 072` B `sha256₁₂ b60d2cd596b7`** @ HEAD `4917cf253ef7` 🟢 **`authoritative`** | 🔴 **1** ref; last **2026-02-02** | 🟢 Canvas context for **Poke**, a third-party personal assistant. 🔵 The only row here whose consumer is **neither an IDE nor a chat client** — evidence the LMS-MCP surface is being consumed by general assistants too | Global |
+
+🔴 **Graded honestly, and the honesty cuts two ways.** Nine of these eleven have **6 refs or
+fewer**; they are pattern exemplars, not dependencies, and an engagement should pin a SHA and
+expect to own the code. 🟢 **But `vishalsachdev/canvas-mcp` is not in that class** — 308 refs, 99
+forks, a published PyPI distribution and a HEAD from today. It is the first address on these
+shelves that a studio could plausibly **depend on** rather than read.
+
+### 🔴 The twelve attributions, read at source — and two of them do not hold
+
+🔵 **What the channel is.** `semyonfox/canvas-mcp`'s `LICENSE` does not merely say MIT. Below the
+copyright line it lists twelve upstream projects *with their licence families*:
+`vishalsachdev/canvas-mcp` (MIT), `DMontgomery40/mcp-canvas-lms` (MIT), `r-huijts/canvas-mcp`
+(MIT), `mtgibbs/canvas-lms-mcp` (MIT), `ahnopologetic/canvas-lms-mcp` (MIT),
+`aryankeluskar/canvas-mcp` (**ISC**), `a-ariff/canvas-mcp` (MIT), `sweeden-ttu/canvas-lms-mcp`
+(MIT), `Jon-Vii/canvas-student-mcp` (MIT), `Kuria-Mbatia/Canvas-MCP-server` (MIT),
+`enkhbold470/mcp-server-canvas` (MIT), `Shashwatpog/poke-canvas-mcp` (MIT).
+
+🟢 **Why that is a channel and not a curiosity.** Every other address channel this base reads —
+the name search, the bare backticked slug (`gate-bare-slug-channel`), the census union
+(`gate-census-union`) — yields an address and nothing else. **This one yields the address, the
+asserted family and the reason the obligation exists, in the same sentence.** Six of the twelve
+were unshelved; four are promoted above.
+
+🔴 **And it is an UNVERIFIED third-party claim, which this pass established by reading all
+twelve at source:**
+
+| the assertion | what the payload says | grade |
+|---|---|---|
+| `enkhbold470/mcp-server-canvas` is **MIT** | 🔴 **No licence file at all.** `git ls-tree -r` at HEAD `386f198241ee` returns **zero** licence-shaped paths, and `package.json` has **no `license` field**. The only claim anywhere is a README heading reading *"## License / MIT"* | 🔴 **README-only** (`gate-readme-channel`, p288) — not a payload, and absent one the default is all-rights-reserved |
+| `Jon-Vii/canvas-student-mcp` is **MIT** | 🔴 **The address does not resolve.** `ls-remote` answers with a **credential prompt** while the control `moodle/moodle` resolves anonymously | 🔴 **UNVERIFIABLE** (p293: a credential prompt is a measurement — private or gone) |
+| the other ten | 🟢 Each resolves, and the four read first-hand this pass carry a licence payload whose family matches the assertion | 🟢 `authoritative` for the four read; `reported` for the six not read this pass |
+
+🔴 **So the notice obligation on `semyonfox/canvas-mcp` is THIRTEEN copyright lines, not one** —
+and two of the thirteen name a project whose grant cannot be confirmed from its own payload.
+🔵 **This is `gate-restatement`'s subject (p289) arriving through a door it does not watch**: that
+gate grades a restatement of an unreachable authority in a **README**. Here the restatement is
+**inside the licence file**, where every instrument on this base reads the family and stops.
+
+🟢 **The practical rule, and it is cheap.** When a licence file names upstreams, resolve each one
+before shipping: the obligation you owe is to the project as it is, not as the file you inherited
+says it was. Full table:
+[`evidence/p428-address-verification.2026-10-25-p428.tsv`](../evidence/p428-address-verification.2026-10-25-p428.tsv).
+
+### 🔴 Declined this pass — read first-hand, no grant to read
+
+| address | what was read at the SHA | why it is not on the shelf |
+|---|---|---|
+| [`CarvalhoJeo/moodle-unisinos-mcp`](https://github.com/CarvalhoJeo/moodle-unisinos-mcp) | HEAD `05799bc9ee99`, **2026-10-23**. 🔴 Zero licence-shaped paths; no `license` field in `package.json`; no README claim | 🔴 **All rights reserved by default.** 🔵 A pity: a Brazilian-university Moodle connector is exactly the LATAM shape this base is short of, and one `LICENSE` file would change that |
+| [`jtuttas/moodle-agent-mcp`](https://github.com/jtuttas/moodle-agent-mcp) | HEAD `f96bbe8cd7c9`, **2026-10-23**, **3** refs. 🔴 Zero licence-shaped paths, no manifest field, no README claim | 🔴 **All rights reserved by default** — despite reading submissions and **writing grades**, which is the highest-consequence surface in this cohort |
+| [`enkhbold470/mcp-server-canvas`](https://github.com/enkhbold470/mcp-server-canvas) | HEAD `386f198241ee`, **2025-03-26**. 🔴 README says MIT; nothing in the payload does | 🔴 **README-only claim.** Asserted MIT by a third party's licence file, which is where it was found |
+
+🔵 **Stated so the absence cannot read as an oversight:** three of the fourteen addresses read
+first-hand this pass carry **no grant payload**. That is **21 %** of what one day's legs returned,
+and it is the single commonest reason a usable-looking address is unusable.
 ## 🆕 `p427` · 2026-10-25 — **SIXTEEN unshelved addresses from ONE two-word leg, after `p426` recorded eleven consecutive passes of zero. 🟢 `Gap 426-C` is CONFIRMED and its MECHANISM is named: this cohort is named after the INSTITUTION, not the platform, so `p426`'s name-keyed census catches exactly 1 of the 16. 🔴 And one of the sixteen carries a grant shape nine instruments on this base read wrong.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: the baseline run was 🟢 **54 blocking gates

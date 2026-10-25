@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **The platform tier gains no row, and for the first time the reason it has no permissive member is backed by a CONTROLLED case rather than a tally: one owner published both halves of one product the same week, and the in-LMS half is GPL-3.0 while the external half is MIT. 🟢 A second platform split also surfaced: Canvas has a cohort HUB and Moodle does not, and the cause is hosted-vs-self-hosted.**
+
+🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **56** blocking gates green after these
+writes. 🔵 All reads **2026-10-25**.
+
+### 🔴 The platform tier — no row moves
+
+🔵 **The settled grade stays the first column after the name**, so a shelf-derived parser reads
+the grant before the prose.
+
+| platform | settled grade | what moved this pass |
+|---|---|---|
+| **Moodle** (`moodle/moodle`) | 🔴 **GPL-3.0** | 🟢 Nothing in the platform — but the propagation of its grant into the agent layer is now shown with **owner held constant**, which is the finding below |
+| **Open edX** (`openedx/edx-platform`) | 🔴 **AGPL-3.0** | — |
+| **Canvas** (`instructure/canvas-lms`) | 🔴 **AGPL-3.0** | 🟢 Nothing in the platform — but its **agent layer** behaves differently from Moodle's, and the second finding below says why |
+| **ILIAS**, **OpenOLAT**, **Chamilo**, **Sakai**, **Kolibri**, **OpenEduCat** | as carried | — |
+
+🔴 **A tenth channel on the permissive-SIS question, and it is a NIL.** The prescribed vertical
+leg ran as `open source platform education ERP CRM MIT Apache student information system 2026`
+and returned **ten pages from one vendor** — OpenEduCat's own site, in six languages — with **no
+licence information at all** and no independent comparison. 🔵 `reported`, and weaker than
+`p427`'s ninth channel rather than stronger: a single-vendor result set is not evidence about the
+field. 🔴 **The question "is there an Apache- or MIT-licensed SIS?" remains answered only in the
+negative, by absence.**
+
+### 🟢 The architecture rule, now with the confound removed
+
+🔵 **`p427` proposed it from 2/2 plugins and 10/10 clients across DIFFERENT owners** — which
+cannot distinguish *architecture* from *the preferences of people who build plugins*.
+
+🟢 **`Teci-AI` publishes both halves of one product**, two repositories, both created
+**2026-10-21**:
+
+| half | repository | couples to the platform by | grant, read first-hand at the SHA |
+|---|---|---|---|
+| 🟢 **external client** | `Teci-AI/moodle-mcp-connector` | the web-services REST API + a token | 🟢 **MIT** — `1 103` B `sha256₁₂ c8bcb50d415c` @ `2318b9927da5` |
+| 🔴 **in-LMS plugin** | `Teci-AI/moodle-local_mcpconnector` | linking against Moodle's PHP plugin API, in-process | 🔴 **GPL-3.0** — `35 149` B `sha256₁₂ 3972dc9744f6` @ `2534638df045` |
+
+🟢 **Owner, product and week are held constant; only the architecture differs; the grants
+differ.** The tally is now **3/3 in-LMS GPL-3.0** — all three payloads carrying the **identical**
+stock digest `3972dc9744f6` — against **11/11 external clients permissive**.
+
+🟢 **And the Canvas cohort is the rule's natural control.** Canvas exposes no in-process plugin
+surface of this kind, so its agent layer is **entirely external-client** — and **every Canvas
+address read first-hand this pass is MIT**, nine of nine. 🔵 The rule predicted that before the
+clones ran.
+
+🔴 **The procurement sentence is unchanged and now stands on better evidence:** a client who wants
+the agent *inside* their Moodle is choosing **copyleft**; a client who accepts a token-holding
+external service is choosing **MIT**. That decision is made at architecture review, weeks before
+anyone opens a `LICENSE` file.
+
+### 🟢 A second platform split: hosted platforms concentrate their agent layer, self-hosted ones do not
+
+🔵 **Measured in the same hour, same instrument, two platforms:**
+
+| platform | agent cohort `total_count` | largest address | its refs | shape |
+|---|---|---|---|---|
+| **Moodle** (self-hosted, per institution) | 242 | `kad-xyz/spbstu-mcp` | 22 | 🔴 **no centre** — 13 of 16 built for one named institution |
+| **Canvas** (hosted, uniform API) | 133 | `vishalsachdev/canvas-mcp` | 🟢 **308** (99 forks) | 🟢 **a hub** — 102 tools, a PyPI distribution, named first among twelve upstreams in a downstream's licence file |
+
+🟢 **The mechanism is the deployment model, not the community.** Canvas's REST surface is the same
+at every institution, so one implementation serves everyone and effort concentrates. Moodle is
+self-hosted — different versions, plugins, auth forms and web-service tokens — so the work that
+matters is the per-institution part and **cannot be shared**, which is why `Trend 49`'s
+institution-local supply appears on one platform and not the other.
+
+🔴 **What this means when choosing a platform for a client.** A **Canvas** engagement is choosing
+between implementations and can depend on one; a **Moodle** engagement is building one and should
+be priced that way. 🔵 Neither statement is about which LMS is better — it is about where the
+reusable work already exists.
+
+### 🔴 The token assumption, and two platforms' worth of evidence against it
+
+🟢 Two independent READMEs read this pass give the same reason for an unusual architecture:
+`Jacob-Met/canvaspilot` ships a **stay-open SSO session broker** because *many schools disable*
+Personal Access Token issuance, and `The-Morrow-Project/Morrow-Bridge` ships a **Chrome
+extension** because *"you should not have to wait for your institution to buy and roll out a
+separate course assistant"*.
+
+🔴 **Both are shadow-IT architectures.** They are useful as evidence that the institutional token
+every other row assumes is **not always obtainable** — and useless as a deliverable, because
+neither a browser-session broker nor an extension that drives a logged-in session survives a
+procurement or data-protection review. 🟢 **The honest engagement answer is to get the token
+question settled in week one**, and to treat these two as the measurement of what happens when it
+is not.
 ## 🆕 `p427` · 2026-10-25 — **The platform tier gains nothing, loses nothing, and for the first time its licence shape is explained by a RULE rather than a tally: the grant follows the ARCHITECTURE. 🟢 A Moodle agent installed INSIDE Moodle is GPL-3.0 by inheritance; one talking to it over REST is MIT by choice — 2/2 and 10/10 in this pass's own first-hand reads.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **55** blocking gates green after these

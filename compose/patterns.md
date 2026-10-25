@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **`Pattern AZ` — the Canvas engagement, which is a DIFFERENT pattern from the Moodle one because the reusable work already exists. 🟢 Plus `Amendment 16`: a component is pinned by its REPOSITORY at a SHA, never by its package name — measured at a 3-in-7 mis-resolution rate on bare names this pass.**
+
+🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **55** blocking gates green at baseline,
+🟢 **56** after these writes — the new one is `gate-branch-alias`, built this pass.
+🔵 All component reads **2026-10-25**, at the SHAs named — six read first-hand by this pass, one (`merlin-mcp`) carried from `p427`'s read on the same date and marked as carried in its own cell.
+
+### 🟢 `Pattern AZ` — the Canvas engagement: choose an implementation, do not build one
+
+🔵 **When to reach for it.** The client runs **Canvas** (Instructure), hosted. 🔴 **Do not reuse
+`Pattern AY`** — that pattern is built for ministries running many self-hosted Moodle instances,
+where the per-institution integration is the work. On Canvas the REST surface is identical at
+every institution, so the integration is **already written** and the engagement's value is
+selection, hardening and the oversight layer.
+
+🟢 **Why these components.** Every grant below was read first-hand from a shallow clone at the SHA
+on **2026-10-25**.
+
+| role | component | grant, read at the SHA | what it contributes |
+|---|---|---|---|
+| 🟢 **the base** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT**, confirmed on **two digestible channels**: the repository payload, and PyPI `canvas-mcp` **`1.16.0`** carrying the full MIT text and back-linking to this repository | 🟢 **102 tools, 8 agent skills, 308 refs, 99 forks**, HEAD today. The only education address on these shelves with the mass to be a **dependency** rather than a reference |
+| 🟢 **the conformance checklist** | [`angelonrevelo/bettercanvasmcp`](https://github.com/angelonrevelo/bettercanvasmcp) | 🟢 **MIT** — `1 070` B `sha256₁₂ fe401a64566c` @ `1f5a5969e502` | 🟢 Its stated purpose is **the edges popular Canvas servers skip**: due-date **overrides**, **New Quizzes**, group work, file text. 🔵 Run its list against whatever base you pick — these are the four places a demo passes and a pilot fails |
+| 🟢 **the breadth reference** | [`semyonfox/canvas-mcp`](https://github.com/semyonfox/canvas-mcp) | 🟢 **MIT + 12 named attributions in the licence body** — `1 881` B `sha256₁₂ fea4cd7cb04d` @ `e317c4b7bf10` | 🟢 **129 tested tools** against the **MCP `2026-07-28`** core revision, with **documented permission boundaries** — the permission table is the reusable part |
+| 🟢 **the oversight limb** | [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) | 🟢 **MIT** — `1 070` B `sha256₁₂ c458af6b099b` @ `a2633e3e1cda`, **carried from `p427`'s first-hand read**; this pass re-read only its npm name | 🟢 **Read-only by construction, writes gated on an out-of-band approval.** Lift the approval boundary, not the Moodle specifics. 🔴 **Pin the repository: its manifest name `merlin-mcp` on npm is a DIFFERENT project** |
+| 🟡 **the token fallback** | [`Jacob-Met/canvaspilot`](https://github.com/Jacob-Met/canvaspilot) | 🟢 **MIT** — `1 075` B `sha256₁₂ 85144488dcaf` @ `e75196e94c6c` | 🔴 Read it for **why it exists** — *many schools disable Personal Access Token issuance* — not to ship it. A browser-session broker will not pass procurement |
+| 🟢 **the single-institution scoping** | [`sweeden-ttu/canvas-lms-mcp`](https://github.com/sweeden-ttu/canvas-lms-mcp) | 🟢 **MIT** — `1 056` B `sha256₁₂ 06dcddbb6908` @ `13f357361fe8` | 🟢 One institution (**Texas Tech**), named in the README. Shows what the per-campus surface actually narrows to |
+
+🟢 **How to wire it.**
+
+1. 🟢 **Settle the token in week one, before any build.** Ask the client's LMS administrator
+   whether a Personal Access Token (or a service account) will be issued. 🔴 If the answer is no,
+   **stop and escalate** — `canvaspilot` and `Morrow-Bridge` are what the field does when the
+   answer is no, and neither survives a procurement review. This question has sunk more Canvas
+   pilots than any technical one on these shelves.
+2. 🟢 **Take `vishalsachdev/canvas-mcp` as the base and pin it at a SHA** (`c9274b74325f` is
+   today's HEAD). 🔴 **Not by package name** — see `Amendment 16`.
+3. 🟢 **Run `bettercanvasmcp`'s edge list against it as acceptance criteria** before writing any
+   feature: due-date overrides, New Quizzes, group work, file-text extraction. A base that misses
+   those will pass a demo and fail a real course.
+4. 🟢 **Lift `semyonfox`'s permission boundaries** into the deployment as the authorisation model,
+   rather than inventing one. 🔴 And carry its **thirteen** copyright notices if you vendor any of
+   it: its licence names twelve upstreams, and **two of those twelve cannot be verified at source**
+   (one address does not resolve; one asserts MIT in a README with no payload).
+5. 🟢 **Put `merlin-mcp`'s approval boundary in front of every write** — grade posting, comments,
+   announcements. 🔵 In EMEA this is not a nicety: the AI Act's Annex III duties cover evaluation
+   of learning outcomes, and in North America **Oklahoma SB 1734** forbids AI as the primary basis
+   for a grading decision. The same artefact answers both.
+6. 🟢 **Scope to one institution first**, the way `sweeden-ttu` does, and widen afterwards.
+
+🔴 **What this pattern does NOT need.** A multi-tenant host table (`Pattern AY`), a per-institution
+auth form, or a student-records limb — Canvas is one API and SIS integration is a separate
+decision. 🔵 Reaching for `AY` on a Canvas engagement prices work that does not exist.
+
+### 🟢 `Amendment 16` — a component is pinned by its REPOSITORY at a SHA, never by its package name
+
+🔵 **Why this is an amendment and not advice.** Every recipe on these shelves names components by
+repository, and until this pass that was a convention nobody had tested. 🟢 `p428` tested it: the
+package-registry channel is reachable from this host for the first time
+([`intel/trends.md`](../intel/trends.md), `Trend 51`), so the question *"what does `npm i <this
+project>` install?"* could finally be asked of thirteen npm names and four PyPI names read from
+these repositories' own manifests.
+
+| outcome | n | consequence for a recipe |
+|---|---|---|
+| 🟢 **CORROBORATED** — registry back-links to the exact repository, family agrees | **8** | 🟢 installable by name; npm's `dist.integrity` `sha512` gives a pinnable artefact digest |
+| 🔴 **MIS-RESOLVED** — the name belongs to a different project | **3** | 🔴 **a recipe naming the package would install someone else's code** |
+| 🔴 **ABSENT** — nothing published under the name | **6** | 🔵 the manifest name is an intention; the recipe must name the repository |
+
+🔴 **Two of the three mis-resolutions are components on these shelves.**
+`simonseifert/merlin-mcp` — used as the oversight limb in `Pattern AY` **and** `Pattern AZ` above
+— declares the npm name `merlin-mcp`, which belongs to *"Merlin MCP Server — AI-powered codebase
+intelligence for coding agents"*, registered **nine months earlier** by a different maintainer,
+whose own `repository` field points at `github.com/anthropics/merlin` — **an address that does not
+resolve**. And `falkenslab/miyagi` declares `miyagi`, a name **held and empty since 2020-02-20**,
+so that project cannot publish under it at all.
+
+🟢 **The rule, and it is cheap to follow:**
+
+1. 🟢 Name the **repository** and a **SHA**. Both are in every component row above.
+2. 🟢 If you must install from a registry, prefer a **scoped** name (`@owner/name`) — scoped names
+   corroborated **3/3** this pass, bare names **4/7**.
+3. 🟢 Check the registry's `repository` field points back at the repository you read. 🔴 It is
+   **self-declared**, so treat agreement as corroboration and disagreement as disqualifying.
+4. 🟢 Record the `dist.integrity` digest alongside the SHA. It is the one artefact-level pin
+   available from outside the forge.
+
+🔵 **And one more pin that looked safe and is not.** A component cited as
+`…/blob/master/LICENSE` does **not** establish that a `master` branch exists: GitHub serves the
+default branch under that legacy name, so the path returns **200** on a repository whose only
+branch is `main` (`Trend 52`). 🟢 **Cite a 40-hex SHA in a recipe path** — it is the only ref shape
+that is both verifiable and immutable, and `gate-branch-alias` now grades the rest.
 ## 🆕 `p427` · 2026-10-25 — **`Pattern AY` — the multi-institution connector, wired on two addresses that are a DECLARED parent-and-derivative pair this pass verified in one leg. 🟢 Plus `Amendment 15`: the grant ladder gains a NOTICE COUNT, because a permissive cell can be right about the tier and wrong about what you owe.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54** blocking gates green at baseline,

@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **`p427`'s architecture rule, re-run with the OWNER HELD CONSTANT. 🟢 One owner, one product, two repositories published the same week: the external REST client is MIT, the in-LMS plugin is GPL-3.0, and the plugin carries the same stock digest as the other two server-side payloads on these shelves. Preference is no longer a candidate explanation.**
+
+🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **55** blocking gates green at baseline,
+🟢 **56** after these writes. 🔵 All reads **2026-10-25**.
+
+### 🟢 Added to the foundation layer — one row, and it closes an inference
+
+| address | grant, read at the SHA | why it is a foundation and not a mention |
+|---|---|---|
+| [`Teci-AI/moodle-local_mcpconnector`](https://github.com/Teci-AI/moodle-local_mcpconnector) | 🟡 **GPL-3.0** — `LICENSE` **`35 149` B `sha256₁₂ 3972dc9744f6`** @ HEAD `2534638df045`. 🟢 Tree **ENUMERATED** (`gate-subtree-grant`): exactly one licence-shaped path. 🔴 **Copyleft — outside the permissive set, flagged not hidden.** 🔵 `Amendment 13` fires **structurally**: the holder is the Free Software Foundation, because a stock GPL-3.0 text never names the project's holder | 🟢 **It is the THIRD payload on these shelves carrying this exact digest, and the first whose permissive twin has the SAME OWNER.** A Moodle `local` plugin adding course-authoring web-service functions, published **2026-10-21** alongside `Teci-AI/moodle-mcp-connector` — the external client that calls it. 🟢 One owner, one product, two repositories, **two different licences** |
+
+### 🟢 The architecture rule, with the confound removed
+
+🔵 **What `p427` could and could not say.** `p427` observed GPL-3.0 on **2/2** in-process Moodle
+plugins and MIT/ISC on **10/10** external REST clients, and proposed the rule *the grant follows
+the architecture*. 🔴 **That evidence could not rule out preference**: the two populations were
+**different owners**, and owners who build plugins might simply prefer copyleft.
+
+🟢 **`p428` found the controlled case.** `Teci-AI` publishes **both halves of one product**:
+
+| half | repository | where the code runs | grant, read first-hand at the SHA |
+|---|---|---|---|
+| 🟢 **external client** | `Teci-AI/moodle-mcp-connector` (Python) | its own process, over Moodle's web-services REST API | 🟢 **MIT** — `1 103` B `sha256₁₂ c8bcb50d415c` @ `2318b9927da5` |
+| 🔴 **in-LMS plugin** | `Teci-AI/moodle-local_mcpconnector` (PHP) | inside Moodle's PHP process, against Moodle's plugin API | 🔴 **GPL-3.0** — `35 149` B `sha256₁₂ 3972dc9744f6` @ `2534638df045` |
+
+🟢 **Same owner, same product, same week, opposite grants — split exactly at the architecture
+boundary.** Owner preference is held constant and cannot explain the difference. 🔵 The running
+tally is now **3/3 server-side GPL-3.0** (`EduardoKrausME/moodle-local_mcp`,
+`gafapa/moodlia-portable`, `Teci-AI/moodle-local_mcpconnector`, **all three carrying the identical
+stock digest `3972dc9744f6`**) against **11/11 external clients permissive**.
+
+🔴 **And it is still Moodle's licence doing the work, not a culture.** The Canvas cohort this pass
+read is **entirely external-client** — Canvas exposes no in-process plugin surface of this kind —
+and **every Canvas address read first-hand is MIT**. The rule predicts that, and it held.
+
+### 🟢 The foundation layer gains a second verification channel
+
+🔵 **Until this pass, a foundation row's grant had one digestible source: the payload in the
+repository.** The egress measurement in [`agents/top.md`](../agents/top.md) opens a second one.
+
+🟢 **Worked on a foundation-tier row.** `vishalsachdev/canvas-mcp` — 308 refs, the largest
+education-agent address these shelves carry — declares `canvas-mcp` in `pyproject.toml`. PyPI
+answers **`200`** for `canvas-mcp` at **`1.16.0`**, carrying **the full MIT text inline** and
+`project_urls.Repository = https://github.com/vishalsachdev/canvas-mcp`. 🟢 **Two independent,
+digestible channels agree on both the family and the identity**, which is a grade this base could
+not previously award to anything.
+
+🔴 **With the limit stated in the same breath.** The registry's `repository` field is **declared by
+the publisher**, so it evidences the publisher's claim, not the forge's endorsement. Read on its
+own it is a **one-way** link — and `p428` found three cases where following it lands somewhere
+else entirely (see [`intel/trends.md`](../intel/trends.md), `Trend 51`). 🟢 The channel is
+`authoritative` about the **payload**; it is `reported` about **whose code it is**, unless the
+repository names the package back.
+
+### 🔵 What did NOT move in the foundation layer
+
+🔴 **No new MIT platform.** The platform tier still has no permissive member, for the reason the
+rule above now makes mechanical rather than anecdotal. 🔴 **No new non-GitHub-hosted foundation**
+either: `gitlab.com` is reachable from this host for the first time, and **no education address on
+these shelves is hosted there** — so the newly-opened forge channel found nothing to verify. 🔵
+Stated rather than left silent, because an unused channel looks exactly like an absent one.
 ## 🆕 `p427` · 2026-10-25 — **The platform tier still has no MIT member — and this pass can finally say WHY in mechanical terms rather than as a tally. 🟢 The grant follows the ARCHITECTURE: a Moodle agent that runs INSIDE Moodle is GPL-3.0 by inheritance, and one that talks to it over REST is MIT by choice. Both shapes were read first-hand in the same leg.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54** blocking gates green at baseline,

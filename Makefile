@@ -34,6 +34,7 @@ BACKLOG_LOG ?= /tmp/education-kb-gate-backlog-denominator.log
 DEADCITE_LOG ?= /tmp/education-kb-gate-dead-citation.log
 REGIONLEG_LOG ?= /tmp/education-kb-gate-regional-leg.log
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
+BRANCHALIAS_LOG ?= /tmp/education-kb-gate-branch-alias.log
 ACTIONANS_LOG ?= /tmp/education-kb-gate-action-answered.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
@@ -83,7 +84,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
+.PHONY: gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -122,7 +123,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
              gate-capability-absence gate-fork-direction gate-group-lineage \
              gate-action-answered gate-commit-gate gate-case-collision \
-             gate-conjunctive-grant
+             gate-conjunctive-grant gate-branch-alias
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -154,6 +155,33 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
 # so a naive detector of EITHER shape fires on it.  Guard 1: a family counts only as a
 # STANDALONE TITLE LINE.  Guard 2: a conjunctive verdict also needs a SCOPE SENTENCE above
 # the second title.  Stock GPL-3.0 has none, and C7-C10 hold it out.  No network.
+# ---------------------------------------------------------------- p428
+# 🔴 `gate-grant-path` (p354) states the contract: a published grant path asserts a
+# BRANCH and a FILE, and BOTH must resolve.  Its online arm answers that with an HTTP
+# 200 — and p428 measured that the 200 CANNOT answer the branch half.  GitHub serves
+# the default branch under the legacy name `master`, so `.../master/LICENSE` returns 200
+# on a repository whose only branch is `main`.  Read first-hand 2026-10-25 on
+# `falkenslab/miyagi` (ref set is exactly `refs/heads/main`): `/master/package.json`
+# returns 200 and the body is BYTE-IDENTICAL to `/main/package.json`.
+#
+# 🟢 Both halves of the mechanism were ISOLATED by measurement, not assumed.  On the same
+# main-only repositories `trunk`, `develop`, `dev`, `default`, `release` and `stable` all
+# 404 — only `master` and the documented `HEAD` resolve.  And the alias is ASYMMETRIC: on
+# `HyNuwa/UniMCP`, whose live branch is `master`, `/main/LICENSE` returns 404.  So the
+# error is silent in exactly the direction a path written from habit takes.
+#
+# 🟢 The live shelves are CLEAN — 8 ref-asserting citations, 5 verified, 1 a correctly
+# reported 404, 2 unresolved — but they are clean by accident of how few such paths this
+# base publishes, and the instrument that would hold that line did not exist.  Offline.
+gate-branch-alias: ## p428 — a 200 is not a BRANCH: the legacy `master` alias, graded from ref sets
+	@cd compose/code/p428-branch-alias && { $(PY) -I test_branch_alias.py > $(BRANCHALIAS_LOG) 2>&1 || { echo "🔴 p428-branch-alias FAILED — its own report follows:" ; sed "s/^/   /" $(BRANCHALIAS_LOG) ; false ; } ; } && echo "── p428-branch-alias (36 assertions over 26 controls: the main-only specimen, the master-only asymmetry, the six non-aliased names, PINNED/TAG/HEAD, the refused verdict on an unreadable ref set, and the empty-ref-set guard)" && echo "   PASS" || exit 1
+
+branch-alias-census: ## p428 — the population arm. `--vendored` grades the upstream READMEs separately.  A measurement, never a failure.
+	@cd compose/code/p428-branch-alias && $(PY) -I sweep.py ../../..
+
+branch-alias-vendored: ## p428 — the SEPARATE population: what other projects publish, never charged to this base
+	@cd compose/code/p428-branch-alias && $(PY) -I sweep.py ../../.. --vendored
+
 gate-conjunctive-grant: ## p427 — one payload, two LIVE families, and a notice obligation of two
 	@cd compose/code/p427-conjunctive-grant && { $(PY) -I test_conjunctive_grant.py > $(CONJGRANT_LOG) 2>&1 || { echo "🔴 p427-conjunctive-grant FAILED — its own report follows:" ; sed "s/^/   /" $(CONJGRANT_LOG) ; false ; } ; } && echo "── p427-conjunctive-grant (24 controls: the MIT+ISC positive, stock GPL-3.0 and Apache-2.0 negatives, the disjunctive shape left to p228, and both guards in isolation)" && echo "   PASS" || exit 1
 

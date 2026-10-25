@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p428` · 2026-10-25 — **Three trends, and all three are about CHANNELS. 🔴 `Trend 51`: a package name is not an address, and in this cohort it mis-resolves 3 times in 7. 🔴 `Trend 52`: a published path naming `master` is not evidence that `master` exists. 🟢 `Trend 53`: the Canvas cohort has a hub and the Moodle cohort does not, which makes `Trend 49` a property of one platform rather than of the field.**
+
+🟢 **Gates RAN on this host**, against `b46290a`: 🟢 **56** blocking gates green after these
+writes — the new one is `gate-branch-alias`, built this pass. 🔵 All supply reads **2026-10-25**
+and `authoritative`; every policy cell `reported` (`Gap 425-A`, narrowed below).
+
+🔵 **Numbering.** The trends defined in this file run `Trend 41`–`Trend 50`, so these three
+continue the sequence. `p427`'s note about a stray *"Trend 50"* reference in the append-only
+discovery logs still stands and is still left untouched.
+
+### 🔴 `Trend 51` — the package name is not the address, and the registry says so out loud
+
+🔵 **What opened the question.** `Gap 425-A` had this base believing no non-GitHub channel was
+reachable. It is: `registry.npmjs.org` and `pypi.org` both answer `200` on this host
+([`evidence/p428-egress-allowlist.2026-10-25-p428.tsv`](../evidence/p428-egress-allowlist.2026-10-25-p428.tsv)).
+So for the first time the question *"what does `npm i <this project>` actually install?"* can be
+asked.
+
+🟢 **The sweep.** Thirteen npm names and four PyPI names, each read from the repository's **own
+manifest at HEAD**, then looked up:
+
+| outcome | n | what it means for a reader |
+|---|---|---|
+| 🟢 **CORROBORATED** — the registry back-links to the exact repository and the family agrees | **8** | 🟢 safe to install by name; npm ships a `sha512` in `dist.integrity`, so the artefact is pinnable |
+| 🔴 **MIS-RESOLVED** — the name belongs to someone else | **3** | 🔴 `npm i <name>` installs a different project |
+| 🔴 **ABSENT** — nothing is published under the name | **6** | 🔵 the manifest name is an *intention*, not a distribution |
+
+🔴 **The three mis-resolutions, each a different shape:**
+
+| repository | its manifest name | what the registry actually has |
+|---|---|---|
+| `falkenslab/miyagi` | `miyagi` | 🔴 **The name is held and EMPTY** — created **2020-02-20**, **zero** versions, no maintainers, no repository. This project **cannot publish under its own manifest name** |
+| `simonseifert/merlin-mcp` | `merlin-mcp` | 🔴 **A different project**: *"Merlin MCP Server — AI-powered codebase intelligence for coding agents"*, maintainer `sandman66666`, name created **2026-01-24** — **nine months before** the shelved repository existed. 🔴 **And its own `repository` field points at `github.com/anthropics/merlin`, which does not resolve** |
+| `Nasus20202/MoodleMCP` | `moodle-mcp` | 🔴 **A third party's Moodle server** at `github.com/1alexandrer/moodle-mcp`, name created **2026-04-18**, six months earlier |
+
+🟢 **The mechanism, and it is a naming rule rather than a quality signal.** **Scoped** names
+(`@owner/name`) corroborated **3 / 3**: a scope is owner-namespaced and a stranger cannot take it.
+**Bare** names corroborated **4 / 7** and mis-resolved **3 / 7**: a bare name is
+first-come-first-served, and in a cohort this young the race is usually already lost.
+
+🟢 **This also CLOSES an open question `p427` left.** `p427` flagged that `jamestesting0/tum-mcp`
+publishes to npm under the scope `@jamestesting888`, and advised *"pin the repository, not the
+package name."* 🟢 The registry resolves it: `@jamestesting888/tum-mcp` **`0.5.0`** declares
+`"license": "MIT"` and `repository.url = git+https://github.com/jamestesting0/tum-mcp.git`. 🔵
+**The advice was right and the reason was wrong** — a differing scope is not the hazard; an
+**unscoped** name is.
+
+🔴 **And the channel's own limit, measured rather than assumed.** The `repository` field is
+declared by the publisher. `merlin-mcp` declares one that **does not exist**. So the registry is
+`authoritative` about the **payload it serves** and only `reported` about **whose code that is**,
+unless the repository names the package back.
+
+### 🔴 `Trend 52` — an HTTP 200 cannot answer "does this branch exist?"
+
+🔵 **The contract this base publishes under.** `gate-grant-path` (p354): *a published grant path
+asserts a BRANCH and a FILE, and both must resolve.* Its online arm answers with an HTTP 200
+against `raw.githubusercontent.com`.
+
+🔴 **The 200 cannot answer the branch half.** GitHub serves the default branch under the legacy
+name `master`. Read first-hand on `falkenslab/miyagi`, whose ref set is **exactly
+`refs/heads/main`**: `.../master/package.json` returns **`200`**, and the body is
+**byte-identical** to `.../main/package.json` — both `1 123` B, `sha256₁₂ 4350dcad89c6`.
+
+🟢 **Both halves of the mechanism were ISOLATED by measurement, not assumed:**
+
+| probe, run on two independent main-only repositories | result |
+|---|---|
+| `master` | 🔴 **200** — serves the default branch |
+| `HEAD` | 🟢 200 — documented, not legacy |
+| `trunk`, `develop`, `dev`, `default`, `release`, `stable` | 🟢 **404** each — so this is **not** a general "serve the default branch" fallback |
+
+🔴 **And the alias runs one way only, which is what makes the error silent.** On `HyNuwa/UniMCP`,
+whose live branch is `master`, `.../main/LICENSE` returns **404**. On
+`openeducat/openeducat_erp` — 18 branches, `master` plus `2.0` … `20.0`, no `main` — `/main/`
+404s and `/master/` 200s. 🔵 **The direction that fails silently is the direction a path written
+from habit takes.**
+
+🟢 **Measured on this corpus, with the scope stated — and `p428`'s own first measurement had the
+scope wrong.** A recursive sweep pulls in `compose/code/**`, which holds **vendored copies of
+other projects' READMEs**; counting those inflated the first figure tenfold. Corrected:
+
+| population | ref-asserting citations | alias-only defects |
+|---|---|---|
+| 🟢 **this base's live shelves** | **8** — 5 verified, 1 a correctly *reported* 404, 2 unresolved | 🟢 **0** |
+| 🔵 **vendored upstream READMEs** (what other projects publish) | **384** | 🔴 of **59** distinct addresses cited with a `/master/` path, **15 (25.4 %)** have no `master` branch; **14 of the 14 testable return 200 anyway** |
+
+🟢 **So this base is clean — by accident of how few ref-asserting paths it publishes, not by an
+instrument.** `gate-branch-alias` (36 assertions over 26 controls, offline) now holds that line as
+the shelves grow. 🔴 **Its declared limitation, stated rather than hidden:** the census grades
+*paths*, not the prose around them, so a shelf that publishes a path in order to **report** that it
+404s is graded `ABSENT-REF` — right about the path, wrong about the sentence. Exactly one such line
+exists today.
+
+### 🟢 `Trend 53` — the Canvas cohort has a hub; the Moodle cohort does not
+
+🔵 **`Trend 49` (p427) read the supply as having gone INSTITUTION-LOCAL** — 13 of 16 addresses
+built for one named institution, nothing above 22 refs, invisible to a platform-keyed census.
+🟢 **That is true of the Moodle cohort and false of the Canvas one**, which this pass measured in
+the same hour:
+
+| cohort | `total_count` | largest address | its refs |
+|---|---|---|---|
+| **Moodle MCP** | 242 | `kad-xyz/spbstu-mcp` | **22** |
+| **Canvas LMS MCP** | 133 | `vishalsachdev/canvas-mcp` | 🟢 **308**, with **99 forks** |
+
+🟢 **One address with ~14× the refs of an entire other cohort's leader is a different market
+shape, not a bigger number.** Canvas has a reference implementation — 102 tools, 8 agent skills, a
+published PyPI distribution, a HEAD from today, and a **licence file in a downstream project
+naming it first among twelve upstreams**. Moodle has 242 repositories and no centre.
+
+🔵 **Why the difference is structural rather than cultural.** Canvas is a **hosted, uniform**
+API: one Instructure REST surface, the same at every institution, so one server serves everyone
+and forks concentrate. Moodle is **self-hosted and per-institution** — different versions,
+different plugins, different auth forms, different web-service tokens — so the work that matters
+is the *institution-specific* part and it cannot be shared. 🟢 **`Trend 49` is therefore a
+property of self-hosting, not of education**, and the correction matters for engagement planning:
+a Canvas client is choosing between implementations, a Moodle client is building one.
+
+🔴 **The procurement fact underneath both, found in two independent READMEs this pass.**
+`Jacob-Met/canvaspilot` exists because *many schools disable* Personal Access Token issuance, and
+`The-Morrow-Project/Morrow-Bridge` exists because *"you should not have to wait for your
+institution to buy and roll out a separate course assistant"*. 🔵 **Both are shadow-IT
+architectures** — browser-session brokers and Chrome extensions rather than token-holding
+services. 🔴 A studio that assumes an institutional token will be issued should price the
+possibility that it will not be, and should note that neither workaround survives a
+procurement review.
+
+### 🟢 `Gap 425-A` — narrowed again, and its strongest clause withdrawn
+
+🔵 **What the gap said.** `p427`: *"DNS is GitHub-only, and server-side search summaries are the
+one non-GitHub channel — so no policy or market cell on a host of this class can ever be
+`authoritative`, not by working harder but by construction."*
+
+🟢 **The first half is refuted.** Five non-GitHub domains answer on this host —
+`registry.npmjs.org` `200`, `pypi.org` `200`, `files.pythonhosted.org`, `crates.io` (403, i.e.
+policy) and `gitlab.com` `301`. The egress is a **forge-and-package-registry allowlist**, and the
+registry channel is a **digestible payload**, so a registry cell **can** be `authoritative` — as
+eight of them are this pass.
+
+🔴 **The second half stands, unchanged.** `unesco.org`, `unesdoc.unesco.org`, `oecd.org`,
+`education.ec.europa.eu`, `en.wikipedia.org`, `huggingface.co`, `moodle.org` and `openedx.org` are
+all **`000`**. 🔴 **Every policy and market cell on this base remains `reported`**, and no amount
+of work on this host changes that.
 ## 🆕 `p427` · 2026-10-25 — **Two trends, and both are about MEASUREMENT rather than models. 🔴 `Trend 49`: the open-source education-agent supply has gone INSTITUTION-LOCAL, which makes it invisible to every platform-keyed census — including this base's own. 🟢 `Trend 50`: four jurisdictions on three continents now ask for one artefact, and Korea's demand is the only one already IN FORCE.**
 
 🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **55** blocking gates green after these
