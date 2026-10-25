@@ -6,6 +6,54 @@ updated: 2026-10-25
 
 # 🏗️ Foundational repos — Education
 
+## 🆕 `p438` — **This pass adds ZERO foundation rows, and that is the finding** — plus the screening amendment that applies to every row already here
+
+🔴 **Stated rather than padded.** `p438` graded **nine** new addresses first-hand (eight
+permissive: 7 MIT, 1 Apache-2.0) and shelved all eight on `agents/top.md`. 🔴 **None of them
+belongs on this file.** A foundation on this shelf is a component other work is built *on* —
+`learningequality/kolibri`, `openedx/XBlock`, `pykt-team/pykt-toolkit`, `OpenOLAT/OpenOLAT`.
+The eight new rows are single-purpose agent skills topping out at **18 ★** on their listing
+page: real grants, real code, and **nothing downstream can depend on them**. 🟢 Promoting
+them here to reach a count is the failure mode this base has a standing rule against, so the
+count stays where the evidence puts it: **zero**.
+
+🔵 **What was searched, so a successor does not re-spend the leg.** Four channels at measured
+depth — GitHub topic `ai-tutor` pages 1–3 (ranks 1–60), topic `education-ai` page 1, topic
+`intelligent-tutoring-system` page 1 — **89 slugs dup-checked, 80 already shelved**. The
+foundation-shaped candidates the legs returned were `open-spaced-repetition/fsrs4anki`,
+`GarethManning/education-agent-skills`, `GeminiLight/gen-mentor`, `Selleo/mentingo`,
+`luffycodes/Tutorbot-Spock` and `thm-mni-ii/feedbacksystem` — 🟢 **every one already carried
+on these shelves**. The platform legs re-returned `OpenOLAT` (Apache-2.0), `Sakai` (ECL-2.0,
+Apache-derived), `formalms`, `francoisjacquet/rosariosis` and `GibbonEdu/core`, all carried,
+with the licence-source conflict on `formalms` (Apache-2.0 in one comparison, GPL-2.0 in
+another) 🔵 **already resolved on this base from the payload rather than the comparison**.
+
+### 🔴 The amendment: a foundation is cleared on **three** columns now, not one
+
+`p438`'s specimen `fangyuan-3149/book-learning-tutor` grades `titled_family = MIT`,
+`scan_verdict = PERMISSIVE`, `stock = YES` — and, from the **same** `bespoke_census.grade()`
+call, `p1054_verdict = MIT-BODY-PLUS:unclassified-addition` with `needs_a_human = no`. 🔴 Over
+the **238** licence payloads committed under `compose/code/**/fixtures/`, **7 of the 9**
+addition-bearing payloads are routed `needs_a_human = no` — **`p427`'s own two-family
+specimen among them**, the payload this base wrote a 24-control gate about because it carries
+a notice obligation of two.
+
+🟢 **Why that matters more on this file than on `agents/top.md`.** A foundation is the row a
+client's product *inherits* from, so an unread clause in a foundation payload propagates into
+everything built on it and surfaces years later in a diligence review. The qualifying test on
+this shelf is therefore:
+
+1. 🟢 `titled_family` ∈ {MIT, Apache-2.0, BSD-*, ISC} — necessary, **not** sufficient;
+2. 🟢 `p1054_verdict` carries **no** unclassified addition — the column `needs_a_human`
+   currently ignores;
+3. 🟢 payload bytes inside the family's stock band, or the surplus **read by a person** —
+   and read in whatever language it is written in, which `p427`'s English `SCOPE_MARKERS`
+   cannot do.
+
+🔵 Every row currently on this file passes 1 and 3 on first-hand reads already recorded here.
+🟡 **Column 2 has never been applied to this shelf as a screen** — it is registered as
+`Gap 438-A` with its price, not back-fitted into the rows this pass did not re-grade.
+
 ## 🆕 `p437` — The permissive foundation tier grows by one, and the qualifying test is **not** the licence
 
 🟢 Five MIT-licensed EU-AI-Act compliance repositories were graded first-hand this pass

@@ -1,0 +1,10 @@
+repo	branch	file	bytes	family	sha256_12	head	verdict	region
+pruettlazaro143-a11y/smc-ai-tutor	main	LICENSE	19018	CC-BY-NC-SA-4.0	600ca4e25fe1	0787a0e29bd2	EXCLUDED-NON-COMMERCIAL	Global
+smashburger-dev/socratic-workshop	main	LICENSE	1072	MIT	7f3dec641d9f	e23164c4aa50	SHELVED	Global
+eugeniughelbur/doceo	master	LICENSE	1072	MIT	94b7323d4984	4c99d933127b	SHELVED	EMEA
+briannajzhang/personal-tutor	main	LICENSE	11357	Apache-2.0	c71d239df917	d6c39db08574	SHELVED	Global
+yarikleto/claude-teacher-plugin	main	LICENSE	1065	MIT	b6519647c247	bc6abdd00eda	SHELVED	EMEA
+canyrtcn/PractiSQL	main	LICENSE	1079	MIT	c03af9304b8b	4ca8e479ab0c	SHELVED	Global
+abdulrdeveloper/klar-AI	main	LICENSE	1073	MIT	2351980f79fd	c6deeeeb2626	SHELVED	Global
+fangyuan-3149/book-learning-tutor	main	LICENSE	1503	MIT	54ceeac19921	f0ef6fc3acd7	SHELVED	APAC
+liunor/nlp-agent	main	LICENSE	1073	MIT	ef01967408a8	09b3caab56cd	SHELVED	APAC

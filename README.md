@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 438 — reads 2026-10-25, commit 2026-10-25 — **THE ADDITION IS DETECTED AND THEN NOT ESCALATED: `bespoke_census.grade()` writes `MIT-BODY-PLUS:unclassified-addition` and `needs_a_human = no` IN THE SAME ROW, and over this base's own 238 committed payloads **7 of the 9** addition-bearing ones are routed as needing no human read — `p427`'s own two-family specimen among them. 🔴 THE INHERITED COMMIT WAS RED, 56/60, AND `p437` IS THE PASS THAT BROKE IT. 🟢 Three of the four reds closed; discovery coverage measured by rank depth instead of declared saturated: 0/20 new at ranks 1–20, **7/20 at 41–60**.**
+
+🔵 **No date straddle.** Every leg — nine WebSearch legs (four regional, four global, one
+narrow confirmation), four GitHub topic-listing reads, 89 dup checks, 9 payload probes through
+`lib/probe_payload.sh`, 9 `git ls-remote` HEAD reads, 9 independent `sha256` re-measurements,
+238 offline payload gradings and three egress measurements — happened **2026-10-25**, and the
+commit lands **2026-10-25**, so `updated:` carries one date on every file.
+
+🔴 **The inherited commit was RED, and it is reported before anything this pass did.** A
+baseline `make hooks` against `edca837`, run **before `p438` wrote a line**, exited **2** —
+**56 of 60 gates green**, red on `gate-register-currency`, `gate-census-currency`,
+`gate-union-currency` and `gate-census-union` — the last of which is this base's long-standing
+**declared, non-blocking** red (`Makefile:208`, `Gap 400-B`), so the three `p438` closed are
+the three that were not supposed to be red at all. 🟢 **After this pass's writes:
+`make hooks` 59/60 and `make commit-gates` 59 blocking gates green.** 🔴 **`p437` is the pass that broke it**: it
+wrote six shelves, left the register at `p436` and left both census sentences un-restated.
+🟢 `gate-register-currency` is `p418`'s instrument for exactly this drift and it worked — one
+pass late, with nothing else looking.
+
+**What this pass established, first-hand:**
+
+- 🔴 **The escalation column is wired to the wrong inputs.** `needs_a_human()`
+  (`bespoke_census.py:260`) returns `True` on an English restriction hit, a bespoke title or
+  an unreadable payload — and consults `p1054_verdict` on **none** of them. Measured over the
+  **238** licence payloads committed under `compose/code/**/fixtures/`: **9** carry an
+  addition verdict, 🔴 **7 (77.8 %) are routed `needs_a_human = no`**, and one of the seven is
+  `mit+isc-unimcp-1980.LICENSE` — **`p427`'s own specimen**, a payload with two live families
+  and a notice obligation of two. Registered as **`Gap 438-A`** with a one-disjunct remedy and
+  its price; **deliberately not applied in this pass**, per `Gap 435-A`'s sizing lesson.
+- 🟢 **The specimen that exposed it is new education supply, and its clause is the kind a
+  client pays for.** [`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor)
+  `LICENSE` **1 503 B · `54ceeac19921`**, HEAD `f0ef6fc3acd7`: stock MIT plus a
+  **Chinese-language** clause stating the repository ships no book content and **the operator
+  carries the copyright liability** for the material it is pointed at. 🔴 `p427`'s
+  `classify()` returns `scope: None` because every `SCOPE_MARKERS` entry is English.
+  🟡 **A new class on these shelves**: this base's existing non-English restrictive payload
+  (`sira313/rapkumer`) was caught **because its title is bespoke** — the exact disjunct this
+  one lacks.
+- 🟢 **Nine new addresses graded first-hand; 8 shelvable, 1 excluded.** 7 MIT, 1 Apache-2.0,
+  1 🔴 CC-BY-NC-SA-4.0 (`pruettlazaro143-a11y/smc-ai-tutor`, excluded, not shelved). Probed
+  through the shared library **sourced, not re-implemented**, with `set +u` per `p436`.
+  One default branch resolved as **`master`** (`eugeniughelbur/doceo`), which a hardcoded
+  `main` would have written down as ungranted.
+- 🟢 **"The channel is saturated" was right about the head and wrong as a generalisation, and
+  the shape is now measured.** `ai-tutor` page 1 → **0/20** new, page 2 → **2/20**, page 3 →
+  **7/20**; `education-ai` page 1 → **0/20**; `intelligent-tutoring-system` page 1 → **0/9**
+  graded. **89 slugs, 80 duplicates, 9 new.** New supply exists **below ~40 ★**, one click
+  below where five passes stopped. `Gap 438-C` carries the next depth with its price and its
+  stopping rule.
+- 🔴 **Zero foundation rows added, stated rather than padded.** All nine new addresses are
+  single-purpose agent skills; nothing downstream can depend on them, so
+  `repos/foundations.md` gains a screening amendment and **no rows**.
+- 🟢 **APAC was the only regional leg that discovered**: Singapore's IMDA / AI Verify
+  **Model AI Governance Framework for Agentic AI** (`v1.0` **22 January 2026**, revised
+  🟡 20 May *or* 5 June 2026 — the source conflict is carried, not resolved; voluntary, no
+  penalty, no registration), the **64.3 % Singapore vs 24.7 % Japan** AI-user spread, and
+  NAIS 2.0's **15 000**-talent target with **70+** corporate AI CoEs. All three at **zero**
+  prior mentions. NA, EMEA and LATAM re-returned carried material and are graded as
+  **confirmation**.
+- 🟢 **The market-size leg paid four new analyst anchors**, and the finding is that the band
+  **widened**: $6.4B–$11.4B for 2026 (was $6.9B–$11.4B), with Precedence's $136.79B-by-2035
+  against Grand View's $57.2B-by-2033 — a disagreement about *what counts as the market*, not
+  about growth. 🔵 Against that, EdTech VC funding of **$512M across 63 deals in Q1 2026,
+  −24 % y/y**: a market sized in tens of billions and funded at half a billion a quarter is
+  one whose buyer is an operating budget.
+- 🔴 **Two nils written down as nils.** The EMEA leg returned **nothing** on the Middle East
+  or Africa (`Gap 438-D`), and `gate-census-union` stays **RED** — 🔵 **which it already was by
+  declaration** (`DECLARED_RED`, `Makefile:208`, registered as `Gap 400-B` and excluded from
+  the blocking suite), so what `p438` adds is the **mechanism** that pass never had
+  (`Gap 438-B`): its control 24 asserts a *population* fact — that a `NAME-DOT-RUN` specimen
+  exists on the live shelves — and the only way to make it green by hand is to put a malformed
+  address back on a shelf. 🟢 **Not done.** The remedy is to split the control: classifier
+  liveness against the fixtures, population into a census target that measures and never
+  fails — `Gap 435-A`'s prescription, applied to a gate that fires at zero instead of at
+  59 %.
+- 🔵 **`p433`'s egress ceiling re-measured, not restated**: the IMDA primary PDF,
+  `eur-lex.europa.eu` and `unesco.org` all returned **`000`**, so every regulatory date on
+  `intel/market.md` is labelled a secondary reading.
+- 🟢 **New this pass**: `Pattern AQ` (the component-clearance gate — the three-column read
+  wired as a CI job plus a committed ledger) and `Trend 36` (detection capability grows,
+  escalation surface does not).
+
+---
+
+🔵 **The address census, re-derived as the last act before the commit — restated, not
+back-fitted.** `gate-census-currency` and `gate-union-currency` were **both RED on the
+inherited commit**, exactly as `p352` and `p376` are designed to be when a pass writes shelves
+and leaves the sentence alone, and `p438`'s own nine new addresses moved the denominator
+again.
+
+**2 831** harvested shapes on channel U → **39** are not addresses → **2 792 addresses**.
+
+🔵 **2 792** channel-U addresses and **3 308** channel-B survivors give
+**3 675 addresses over both channels**.
+
+🔵 **`p438`: all three cells moved, and the arithmetic is exactly this pass's nine rows.**
+Channel U rose **2 783 → 2 792** (+9) and the union **3 666 → 3 675** (+9) — the nine
+addresses graded this pass, each entering both channels once. 🟢 The rejection count is
+**unchanged at 39**: every new address is well-formed. 🔵 The inflation this pass's writes
+added to the harvested denominator is **1.38 %**. 🔵 The published figures `p438` inherited
+(**2 813 / 2 774 / 3 292 / 3 659**) were `p436`'s and were already stale by `p437`'s writes
+before this pass added a line — which is the drift `gate-census-currency` exists to refuse.
+
+---
+
+
 ## Pass 435 — reads 2026-10-25, commit 2026-10-25 — **`Gap 434-A` is CLOSED: all 2 450 unpromoted addresses graded first-hand, and the result REFUTES `gate-promotion`'s own predicate — permissiveness is 59.1 % of this backlog, so it classifies rather than detects. 🟢 `Gap 434-C`'s three-pass EMEA nil is CLOSED on the per-country shape it prescribed, and the supply half of the answer was inside this base all along: twelve permissive EMEA addresses, ungraded on its own trend record. 🔴 And one row was promoted to `agents/top.md` once already — a full-file rewrite deleted it, while the market claim that rested on it survived.**
 
 🔵 **No date straddle.** Every leg — eight WebSearch legs (four regional, one added for

@@ -309,6 +309,58 @@ freshness all fail to separate the correct tools from the wrong ones.** The only
 works is reading the date out of the payload — three greps, written down in
 `repos/trending.md` `p437` and wired as a gate in `compose/patterns.md` Pattern AO.
 
+## 🆕 `p438` — The **tail tier**: eight permissive agent skills reached by buying one extra page of topic depth, and one of them carries a clause two of this base's instruments cannot read
+
+🔵 **Why these eight are a tier and not a list.** `p433`–`p437` each recorded the global
+discovery leg returning only duplicates. 🟢 `p438` measured that claim by rank depth instead
+of restating it — **0/20 new at ranks 1–20, 2/20 at 21–40, 7/20 at 41–60** — so the head is
+held completely and the only unshelved education supply sits below roughly 40 ★. These are
+those rows. 🟡 Individually they are single-purpose skills, not foundations, and **this pass
+adds nothing to `repos/foundations.md`** rather than promoting them there to make a count.
+
+Every payload below read first-hand on **2026-10-25** through `compose/code/lib/probe_payload.sh`
+(sourced, not re-implemented), bytes including the trailing newline per `p437`'s convention,
+and every `sha256₁₂` independently re-measured off `raw.githubusercontent.com`.
+
+| Agent / repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | What it does | Region |
+|---|---|---|---|---|---|
+| [briannajzhang/personal-tutor](https://github.com/briannajzhang/personal-tutor) | Apache-2.0 | `d6c39db08574` | `LICENSE` 11 357 B · `c71d239df917` | Long-lived personal-tutor skill for agent CLIs: persistent learner model across sessions. The only patent-granting licence in this tier. | Global |
+| [canyrtcn/PractiSQL](https://github.com/canyrtcn/PractiSQL) | MIT | `4ca8e479ab0c` | `LICENSE` 1 079 B · `c03af9304b8b` | Desktop SQL-learning workspace: local SQLite, visual schema rendering, hands-on practice with a tutor loop. No hosted dependency. | Global |
+| [eugeniughelbur/doceo](https://github.com/eugeniughelbur/doceo) | MIT | `4c99d933127b` | `LICENSE` 1 072 B · `94b7323d4984` | One-screen visual lessons with learner memory and a feedback loop. ⚠️ Default branch is **`master`** — resolved by `ls-remote --symref`, never assumed. | EMEA |
+| [yarikleto/claude-teacher-plugin](https://github.com/yarikleto/claude-teacher-plugin) | MIT | `bc6abdd00eda` | `LICENSE` 1 065 B · `b6519647c247` | Agent-CLI plugin that teaches, quizzes and tracks a per-learner knowledge model across sessions. | EMEA |
+| [liunor/nlp-agent](https://github.com/liunor/nlp-agent) | MIT | `09b3caab56cd` | `LICENSE` 1 073 B · `ef01967408a8` | NLP-course platform: dialogue practice, knowledge content, service observability on the teaching path. | APAC |
+| [abdulrdeveloper/klar-AI](https://github.com/abdulrdeveloper/klar-AI) | MIT | `c6deeeeb2626` | `LICENSE` 1 073 B · `2351980f79fd` | Multi-model student chat tutor. ⚠️ **`P26` applies**: the code grant is permissive, the hosted models it calls are not the grant's to give. | Global |
+| [smashburger-dev/socratic-workshop](https://github.com/smashburger-dev/socratic-workshop) | MIT | `e23164c4aa50` | `LICENSE` 1 072 B · `7f3dec641d9f` | Socratic questioning tutor, portable across two agent CLIs. The cheapest pedagogy layer on these shelves. | Global |
+| [fangyuan-3149/book-learning-tutor](https://github.com/fangyuan-3149/book-learning-tutor) | MIT **+ scope addendum — read it** | `f0ef6fc3acd7` | `LICENSE` 1 503 B · `54ceeac19921` | Turns a local book into a course with per-lesson teaching. 🔴 The payload appends a Chinese-language clause: the repository ships **no** book content, the operator supplies the material and **carries the copyright liability for it** — which on an education engagement means the client. Build-on with that clause in the statement of work, not without it. | APAC |
+
+### 🔴 Declined this pass, with the reason on the row
+
+| repo | grant (read first-hand) | why not |
+|---|---|---|
+| [pruettlazaro143-a11y/smc-ai-tutor](https://github.com/pruettlazaro143-a11y/smc-ai-tutor) | 🔴 **CC-BY-NC-SA-4.0** · `LICENSE` 19 018 B · `600ca4e25fe1`, HEAD `0787a0e29bd2` | Non-commercial. `PROHIBITED` for any Globant delivery, and the figure on the listing page does not change that. |
+
+### 🔵 A payload-digest coincidence that is NOT an identity claim
+
+`briannajzhang/personal-tutor`'s Apache-2.0 payload is **`11 357 B · c71d239df917`** —
+**byte-identical** to the payload already published on this file for
+[huggingface/smolagents](https://github.com/huggingface/smolagents). 🟢 That is the expected
+behaviour of a stock licence text and is recorded here explicitly because `p349`'s
+payload-digest instrument exists to say exactly this: **a shared digest across slugs is a
+shared TEXT, never a shared repository.** Two unrelated projects both shipping the canonical
+Apache-2.0 file is a corroboration of the measurement, not a collision.
+
+### 🔴 The screening amendment this tier forces, which applies to every row above it
+
+`fangyuan-3149/book-learning-tutor` grades `stock = YES`, `scan_verdict = PERMISSIVE`,
+`titled_family = MIT` — and `p1054_verdict = MIT-BODY-PLUS:unclassified-addition` with
+`needs_a_human = no`, from the same `bespoke_census.grade()` call. 🔴 Over this base's **238**
+committed licence payloads, **7 of the 9** addition-bearing payloads are routed as needing no
+human read, including `p427`'s own two-family specimen. 🟢 **So the standing instruction for
+this file is now three columns, not one**: a row is cleared on `titled_family` **and**
+`p1054_verdict` **and** a read of any bytes above the family's stock band. Full evidence,
+line numbers and the remedy's price are on `agents/trending.md` `p438` and registered as
+`Gap 438-A`.
+
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 
 These are the findings that change a build decision. All re-measured 2026-10-25.

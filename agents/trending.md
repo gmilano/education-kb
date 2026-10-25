@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p438` · 2026-10-25 — **The addition is **detected and then not escalated**. `bespoke_census.grade()` writes `MIT-BODY-PLUS:unclassified-addition` and `needs_a_human = no` **in the same row**, because the escalation predicate never reads the column the grader just computed. 🔴 Measured over this base's own 238 committed payloads: **7 of the 9** addition-bearing payloads are routed as needing no human read — **`p427`'s own two-family specimen among them**. 🟢 Found by a new education specimen whose stock-MIT payload carries a liability-shifting scope clause **in Chinese**, which `p427`'s English `SCOPE_MARKERS` cannot see.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+🔴 **The inherited commit was RED, and it is reported first.** A baseline `make hooks`
+against `edca837`, run **before this pass wrote a line**, exited **2** — **56 of 60 gates
+green**, red on `gate-register-currency`, `gate-census-currency`, `gate-census-union` and
+`gate-union-currency`. 🔴 `p437` wrote six shelves and left the register at `p436` and both
+census sentences un-restated, which is **exactly** the drift `p418` built `gate-register-currency`
+to catch — and it caught it, one pass after the fact, with nothing else looking. Three of the
+four are closed by this pass; the fourth is adjudicated rather than silenced (`Gap 438-B`).
+
+### 🔴 The defect, with both columns on one line
+
+`make bespoke-census PAYLOADS=…` on the new specimen
+[`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor)
+(`LICENSE` **1 503 B** · `sha256₁₂ 54ceeac19921`, HEAD `f0ef6fc3acd7`, read **2026-10-25**):
+
+| column | value |
+|---|---|
+| `titled_family` | `MIT` |
+| `scan_verdict` | `PERMISSIVE` |
+| `stock` | `YES` |
+| `p1054_verdict` | 🔴 **`MIT-BODY-PLUS:unclassified-addition`** |
+| `needs_a_human` | 🔴 **`no`** |
+
+🔴 **Those last two cells contradict each other and are produced by the same function call.**
+`bespoke_census.needs_a_human()` (`bespoke_census.py:260`) returns `True` on three disjuncts —
+a `p257` restriction hit, a `BESPOKE_TITLED` title form, or an `UNREADABLE` verdict — and on
+**none** of them does it consult `p1054_verdict`. A stock SPDX title plus an addition in a
+language the restriction scanner does not read therefore scores zero on all three, and the
+row the census exists to produce — *"the payloads a consultancy must not clear from a
+scanner's output alone"*, in its own docstring — **omits it**.
+
+🟢 **The population, measured rather than argued.** `bespoke_census.grade()` run over every
+licence-shaped payload committed under `compose/code/**/fixtures/` — **238 graded**:
+
+| quantity | count |
+|---|---|
+| payloads carrying an addition verdict | 9 |
+| └─ of those, `needs_a_human = no` | 🔴 **7 (77.8 %)** |
+| └─ of those, correctly escalated | 🟢 2 |
+
+🔴 **One of the seven is `mit+isc-unimcp-1980.LICENSE` — `p427`'s own flagship specimen**, the
+payload that pass wrote a 24-control gate around because it carries **two live families and a
+notice obligation of two**. The instrument that grades "must a human read this?" says **no**
+about the one payload this base has published a whole gate to explain. 🔵 That is not a
+scoring near-miss; it is the escalation column being wired to the wrong inputs.
+
+### 🟡 What the second instrument says, and why it is not a backstop
+
+`p427`'s `conjunctive_grant.classify()` on the same payload returns
+`{'mode': 'SINGLE', 'families': ['MIT'], 'scope': None, 'derived_from': None}` —
+🔴 **`scope: None`**, because every entry in `SCOPE_MARKERS` (`conjunctive_grant.py:73`) is an
+English phrase: `portions of`, `derived from`, `remain under`, `original license`,
+`third-party`. The specimen's clause is `书籍内容说明（重要）` — *"notice on book content
+(important)"* — and states, in the payload itself, that **the repository ships no book or
+copyrighted content, that the user must supply the material, and that the user carries the
+legal and copyright liability for it**. 🔵 That is the single most engagement-relevant
+sentence in the payload and **both** instruments are blind to it: one by vocabulary, the other
+by wiring.
+
+🟡 **This is a new class on these shelves, and the distinction matters.** This base already
+carries a non-English restrictive payload — `sira313/rapkumer`, a bespoke
+🇮🇩 `RAPKUMER LICENSE` whose §3 prohibits commercial use (`agents/trending.md:12448`). 🟢 **That
+one was caught, and the reason it was caught is that its title is bespoke**, which trips
+`needs_a_human`'s second disjunct. The new class is the opposite shape: **a stock family text
+with a non-English addendum**, which trips nothing. The thing that made the earlier specimen
+visible is precisely what this one lacks.
+
+🟢 **The remedy is one disjunct, and it is deliberately NOT applied in this pass.** Adding
+`p1054_verdict` carrying an addition to `needs_a_human` would move rows across a boundary that
+six committed suites assert against, so it is registered as **`Gap 438-A`** with its price
+(one pass: the disjunct, the regression over all 238 payloads, and the escalation list
+re-published) rather than slipped in beside a research pass. 🔵 `Gap 435-A`'s lesson applies:
+a predicate change is sized against its population before it is wired, not after.
+
+### 🟢 The nine new addresses, every payload read first-hand
+
+Probed through `compose/code/lib/probe_payload.sh` (sourced, not re-implemented — `p436`'s
+fourth defect), with `set +u` per that pass's finding. Bytes include the trailing newline per
+`p437`'s convention; `sha256₁₂` independently re-measured off `raw.githubusercontent.com`.
+
+| repo | grant · payload | HEAD @ 2026-10-25 | note |
+|---|---|---|---|
+| [`briannajzhang/personal-tutor`](https://github.com/briannajzhang/personal-tutor) | 🟢 **Apache-2.0** · `LICENSE` 11 357 B · `c71d239df917` | `d6c39db08574` | Long-lived personal-tutor skill for agent CLIs. 🟢 The only Apache-2.0 grant in the nine, and the only one carrying a patent clause |
+| [`canyrtcn/PractiSQL`](https://github.com/canyrtcn/PractiSQL) | 🟢 **MIT** · `LICENSE` 1 079 B · `c03af9304b8b` | `4ca8e479ab0c` | Desktop SQL-learning workspace: local SQLite, visual schemas, tutor loop. 🟢 Runs with no hosted dependency — the shape `Pattern AK`'s offline leg asks for |
+| [`eugeniughelbur/doceo`](https://github.com/eugeniughelbur/doceo) | 🟢 **MIT** · `LICENSE` 1 072 B · `94b7323d4984` | `4c99d933127b` | One-screen visual lessons with memory and a feedback loop. ⚠️ Default branch **`master`**, not `main` — resolved by `--symref`, never assumed |
+| [`yarikleto/claude-teacher-plugin`](https://github.com/yarikleto/claude-teacher-plugin) | 🟢 **MIT** · `LICENSE` 1 065 B · `b6519647c247` | `bc6abdd00eda` | Agent-CLI plugin that teaches, quizzes and tracks a knowledge model across sessions |
+| [`liunor/nlp-agent`](https://github.com/liunor/nlp-agent) | 🟢 **MIT** · `LICENSE` 1 073 B · `ef01967408a8` | `09b3caab56cd` | NLP-course platform: dialogue practice, knowledge content, service observability |
+| [`abdulrdeveloper/klar-AI`](https://github.com/abdulrdeveloper/klar-AI) | 🟢 **MIT** · `LICENSE` 1 073 B · `2351980f79fd` | `c6deeeeb2626` | Multi-model student chat tutor. 🟡 **`P26` applies**: the grant is permissive, the hosted models behind it are not the grant's to give |
+| [`smashburger-dev/socratic-workshop`](https://github.com/smashburger-dev/socratic-workshop) | 🟢 **MIT** · `LICENSE` 1 072 B · `7f3dec641d9f` | `e23164c4aa50` | Socratic tutor skill, portable across two agent CLIs |
+| [`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor) | 🟡 **MIT + non-English scope addendum** · `LICENSE` 1 503 B · `54ceeac19921` | `f0ef6fc3acd7` | The specimen above. 🟡 Build-on tier **with the clause read**: the code grant is clean, the content liability is pushed to the operator — which on an education engagement is the client |
+| [`pruettlazaro143-a11y/smc-ai-tutor`](https://github.com/pruettlazaro143-a11y/smc-ai-tutor) | 🔴 **CC-BY-NC-SA-4.0** · `LICENSE` 19 018 B · `600ca4e25fe1` | `0787a0e29bd2` | 🔴 **Excluded, not shelved.** Non-commercial, so `PROHIBITED` for any Globant delivery whatever its stars say |
+
+🟢 **Eight shelvable, one excluded; 7 MIT, 1 Apache-2.0, 1 CC-BY-NC-SA-4.0.** 🔵 The byte
+values cluster tightly on the stock MIT band this base keeps measuring — `1 065`, `1 072` ×2,
+`1 073` ×2, `1 079` — which is exactly why the `1 503` outlier is worth a paragraph: **the band
+is a good detector of a modified payload and no detector at all of what the modification
+says.**
+
+### 🟡 The discovery channel is not saturated — its coverage **decays with rank**
+
+`p433`–`p437` each recorded the global legs returning duplicates and concluded the channel
+is *"a duplicate detector, not a discovery channel"*. 🟢 **That is true at the head and false
+in the tail, and the shape is now measured.** Every slug on four GitHub topic listings was
+`grep -rilF`'d against the live shelves:
+
+| channel · depth | ranks | new | duplicate |
+|---|---|---|---|
+| topic `ai-tutor` page 1 | 1–20 | 🔴 **0** | 20 |
+| topic `ai-tutor` page 2 | 21–40 | 🟡 **2** | 18 |
+| topic `ai-tutor` page 3 | 41–60 | 🟢 **7** | 13 |
+| topic `education-ai` page 1 | 1–20 | 🔴 **0** | 20 |
+| topic `intelligent-tutoring-system` page 1 | 1–9 graded | 🔴 **0** | 9 |
+
+🟢 **The head is held completely** — `HKUDS/DeepTutor`, `GarethManning/education-agent-skills`,
+`open-spaced-repetition/fsrs4anki`, `Selleo/mentingo`, `zijinz456/OpenTutor`,
+`ahmedEid1/lumen`, `Li-Evan/Bloom`, `TovTechOrg/Tov-learn`, `SirhanMacx/Claw-ED` and 14 others
+were all already on these shelves. 🔵 **So "saturated" was the wrong word for the right
+observation**: the first page is a duplicate detector because this base has read the first
+page every pass. New supply exists, it sits **below roughly 40 ★**, and the cost of reaching
+it is one extra page per topic. 🟡 Priced honestly: page 3 paid **7 rows, none above 18 ★** —
+individually marginal, collectively the only genuinely new education supply this pass found.
+Registered as **`Gap 438-C`** with the next depth to buy.
+
+### 🔵 The four regional legs, graded
+
+| region | verdict |
+|---|---|
+| **North America** | 🔵 **Confirmation, no discovery.** Idaho `S.B. 1227`, Maryland `S.B. 720`, North Carolina `Session Law 2026-41`, California `A.B. 1159`, Arizona `HB 4040` and the Katy ISD K-6 prohibition all re-returned and all are already on `intel/policy-matrix.tsv` or this file. 🟢 Graded as confirmation, which is what `p433`–`p435` established the NA leg now mostly buys |
+| **EMEA** | 🔵 **Confirmation on the instrument that matters.** The Article 4 literacy duty, the Article 5(1)(f) emotion-recognition prohibition in education, and `Regulation (EU) 2026/1744` moving Annex III to **2 December 2027** all re-returned and all are carried — `2026/1744` now appears on **seven** files. 🟡 **`ACTION SH` did not fire**: no source in this leg stated the high-risk duties as current without the deferral |
+| **APAC** | 🟢 **The only leg that discovered.** Three quantities with **zero** prior mentions anywhere in this base, all placed on `intel/market.md` |
+| **LATAM** | 🔵 **Confirmation, with one figure sharpened.** The UNESCO-IESALC 87 % / 26 % pair and the DEC · Tec de Monterrey 92 % re-returned verbatim. 🆕 The UNAM reading places the student series at **86 % (2024) → 92 % (2026)**, which this base carries as two endpoints and now carries as a trend with its channel named |
+
+🔴 **A nil written down as a nil**, per this base's standing rule: the EMEA leg returned
+**nothing** on the Middle East or Africa — the search surfaced EU-only material and the one
+Africa-shaped result was a vendor page. 🔵 `p435` closed the EMEA sub-regional gap on UK,
+DACH, Nordic and Gulf; **MEA proper went unanswered this pass**, and that is an informed gap,
+not coverage.
+
 ## 🆕 `p437` · 2026-10-25 — **The obligation-check step this base recommends tells an education client its Annex III deadline **has already passed**. 🔴 `ark-forge/mcp-eu-ai-act` — shelved on `agents/top.md` and wired as the `Obligation check` layer of Pattern AO — hardcodes `enforcement_deadline: "2026-08-02"`, **asserts it in its own test suite**, and contains **zero** references to Regulation (EU) 2026/1744. 🟢 Five new MIT repos graded; one of them is the correct, education-aware, post-Omnibus replacement and is drop-in.**
 
 🔵 **Append-only. Nothing below this block was edited.**

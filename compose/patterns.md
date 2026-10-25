@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AQ — `p438` The **component-clearance gate**: make "every third-party part of this stack was read, not scanned" a build artefact the client can audit
+
+🔵 **The engagement this answers.** Any education build that assembles AI components — which
+is all of them now. The client's procurement function will ask *"is this open-source stack
+clean?"*, their counsel will ask it again at renewal, and the honest answer today is a
+scanner report that prints one SPDX identifier per file. 🔴 `p438` measured what that report
+misses on this base's own corpus: **9 of 238** committed licence payloads carry an addition
+the family column does not describe, and **7 of those 9** are routed by
+`bespoke_census.needs_a_human()` as needing **no** human read — `p427`'s own two-family
+specimen among them. 🔴 One of the nine addresses this pass graded (**11 %**) carried a
+clause, in Chinese, pushing content-copyright liability onto the operator. **On an education
+engagement the operator is the school and the content is textbooks.**
+
+🟢 **What makes this sellable rather than hygiene**: the output is not a policy document, it
+is a **CI job that fails the build**, plus a signed per-component ledger. The client is buying
+the evidence, and the evidence is cheap because the instruments already exist.
+
+### 🟢 Step 1 — resolve each component's real address and grant (do not trust a badge)
+
+Use this base's own probe, **sourced, never re-implemented** — the rule is in
+`compose/code/lib/README.md` and has been broken twice on this base:
+
+```bash
+set +u                                     # the library needs it; p436 measured why
+. compose/code/lib/probe_payload.sh
+probe_repo <owner/repo>                    # -> repo, branch, file, bytes, family, holder
+```
+
+🔴 Three traps it closes, each measured on real education repositories, not hypothesised:
+the default branch is often **not** `main` (`GibbonEdu/core` → `v31.0.00`,
+`francoisjacquet/rosariosis` → `mobile`, and this pass's own `eugeniughelbur/doceo` →
+`master`); the payload can live in a **subdirectory**; and British `LICENCE` exists in the
+wild.
+
+### 🟢 Step 2 — grade the payload on **three** columns, not one
+
+```bash
+make bespoke-census PAYLOADS="/path/to/LICENSE"
+```
+
+Fail the component into human review when **any** of these holds:
+
+| column | fail condition | why |
+|---|---|---|
+| `titled_family` | not in {MIT, Apache-2.0, BSD-2/3-Clause, ISC} | the ordinary licence screen |
+| `p1054_verdict` | contains an **addition** (e.g. `MIT-BODY-PLUS:unclassified-addition`) | 🔴 **the column `needs_a_human` ignores** — this is the step that is new |
+| payload bytes | outside the family's stock band (MIT clusters at **1 055–1 079 B** on these shelves) | the band detects *that* a payload was modified; only a person learns *what* the modification says |
+
+🔴 **Do not substitute `needs_a_human` for this table until `Gap 438-A` is discharged.** On
+`p438`'s specimen it returns `no` while the row beside it says `unclassified-addition`.
+
+### 🟢 Step 3 — read the surplus bytes **in their own language**
+
+`p427`'s `conjunctive_grant.classify()` is the right second instrument and returns
+`scope: None` here, because its `SCOPE_MARKERS` (`compose/code/p427-conjunctive-grant/conjunctive_grant.py:73`)
+are English: `portions of`, `derived from`, `remain under`, `original license`, `third-party`.
+🟢 **So the surplus goes to a human with the language named**, and the question put to them is
+fixed and answerable in two minutes: *does this clause (a) add a notice obligation, (b) narrow
+the subject matter of the grant, or (c) move a liability onto the operator?* 🔵 `p438`'s
+specimen is **(b) and (c)**: the repository ships no book content, and the operator carries the
+copyright liability for the material it is pointed at.
+
+### 🟢 Step 4 — wire it as a gate and keep the ledger
+
+One job in the client's CI, one TSV in the repository: `component, address, branch, file,
+bytes, sha256₁₂, family, addition_verdict, human_read_by, date`. 🟢 `p436`'s ledger lesson
+applies and is why the ledger is the artefact: **a claim with no committed row is a claim that
+disappears at the next rewrite** — that pass found **176** addresses claimed promoted with no
+live row behind them.
+
+### 🟢 A concrete stack this runs over, every row already cleared first-hand on these shelves
+
+| layer | component | grant |
+|---|---|---|
+| tutoring core | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0, `LICENSE` 11 408 B |
+| learner modelling | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT, `LICENSE` 1 066 B |
+| LMS seam (no AGPL contact) | [openedx/XBlock](https://github.com/openedx/XBlock) | Apache-2.0, `LICENSE.TXT` 11 358 B |
+| offline delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT |
+| pedagogy layer | [smashburger-dev/socratic-workshop](https://github.com/smashburger-dev/socratic-workshop) | MIT, `LICENSE` 1 072 B · `7f3dec641d9f` |
+| learner-memory skill | [briannajzhang/personal-tutor](https://github.com/briannajzhang/personal-tutor) | Apache-2.0, `LICENSE` 11 357 B · `c71d239df917` |
+| obligation check | [tomdxb0004/eu-ai-act-risk-checker](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | MIT — 🟢 the **post-Omnibus-correct** one per `p437`; `engine.js:32` encodes `2027-12-02` |
+
+🔴 **And one row that this gate is the reason you can still use**:
+[fangyuan-3149/book-learning-tutor](https://github.com/fangyuan-3149/book-learning-tutor)
+(MIT, `LICENSE` 1 503 B · `54ceeac19921`). Cleared by a scanner, cleared by `needs_a_human`,
+and it belongs in a build **only** with its clause in the statement of work. 🟢 Step 3 is what
+turns it from a hidden liability into a priced one.
+
+### 🔵 Price and where it goes in the engagement
+
+**2–3 weeks** for the job, the ledger and the first full sweep of an existing estate, then
+minutes per new component. 🟢 Sell it as the first phase of any education build and as a
+stand-alone diligence piece into an estate someone else assembled — `Pattern AP`'s scoping
+gate decides *whether* the product is high-risk; this one decides *whether its parts can be
+shipped at all*, and the two are sold together.
+
+
 ## 🆕 Pattern AP — `p437` The **Article 6(3) scoping gate**: decide whether the client's adaptive-learning product is high-risk *before* writing the architecture
 
 🔵 **The engagement this answers.** A client wants adaptive learning, knowledge tracing or

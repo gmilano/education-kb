@@ -112,6 +112,30 @@ number, Japan is still on a guideline from December 2024. 🔴 Every government 
 is unreachable from this host, so both are graded secondary-with-mirrors and must not be cited as
 settled law. 🔵 The single `## Opportunities by region` block below is amended in place.**
 
+## 🆕 `p438` · 2026-10-25 — **All four regional legs ran; **APAC is the only one that discovered**, and it paid three quantities with zero prior mentions. 🟢 The market-size leg paid four new analyst anchors and one funding figure, which widen the published range rather than replace it. 🔴 And `p433`'s ceiling — *no government primary is reachable from this host* — is re-measured on three fresh hosts and holds: three `000`s. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
+
+🔵 **How each leg is graded, per this base's standing rule.** A leg that re-returns what these
+shelves already hold is **confirmation**, is labelled as such, and is not re-written as
+discovery. A leg that returns nothing has its nil **written down with the jurisdiction named**,
+because silence reads exactly like coverage.
+
+| leg | verdict | what it paid |
+|---|---|---|
+| **North America** | 🔵 **confirmation** | Idaho `S.B. 1227`, Maryland `S.B. 720`, North Carolina `Session Law 2026-41`, California `A.B. 1159`, Arizona `HB 4040`, the Katy ISD K-6 prohibition — all already on this file or `intel/policy-matrix.tsv` |
+| **EMEA** | 🔵 **confirmation**, 🔴 **plus a nil** | Article 4 literacy duty, Article 5(1)(f) emotion-recognition prohibition in education, and `Regulation (EU) 2026/1744` moving Annex III to **2 December 2027** — all carried. 🔴 **Nothing on the Middle East or Africa**: the leg returned EU-only material and one vendor page. MEA proper is unanswered this pass |
+| **APAC** | 🟢 **discovery** | Three quantities at **zero** prior mentions, placed under `### APAC` below |
+| **LATAM** | 🔵 **confirmation**, one figure sharpened | UNESCO-IESALC 87 % adoption / 26 % formal strategy and the DEC · Tec de Monterrey 92 % both re-returned verbatim. 🆕 The student series is now carried as a **trend with its channel named**: **86 % (2024) → 92 % (2026)**, UNAM reading |
+| **market size** | 🟢 **discovery** | Four analyst anchors and one funding figure, none previously on this file — see `## Market size` below |
+
+🔴 **The ceiling under every regulatory claim on this file, re-measured rather than restated.**
+`p433` established that no government primary is reachable from this host. `p438` re-tested it
+on three hosts that matter to the legs above — the IMDA primary PDF for Singapore's agentic-AI
+framework, `eur-lex.europa.eu` for `Regulation (EU) 2026/1744`, and `unesco.org` for the APAC
+generative-AI guidance — and all three returned **`000`** (no response through the egress
+allowlist; `curl -I`, 25 s timeout, 2026-10-25). 🟢 **So every regulatory date on this file is
+a secondary reading, and it is labelled that way.** 🔵 Per `p413`, a `000` here is a fact about
+the **channel**, not about the host: the documents exist and this base cannot open them.
+
 ## Market size — use the range, never a single figure
 
 | Segment | 2026 | Horizon | CAGR | Source class |
@@ -124,6 +148,37 @@ settled law. 🔵 The single `## Opportunities by region` block below is amended
 on today's size and ~1.4 on the horizon. Quote the range and name it as a range; a pitch
 that cites one number is citing one vendor's model. Market-research education forecasts are
 systematically optimistic — treat the low end as the planning number.
+
+### 🆕 `p438` — four analyst anchors and one funding figure, none of them previously on this file
+
+🟢 **New, and each one read this pass.** All five are secondary readings (the analyst
+primaries are paywalled and, per the ceiling measurement above, unreachable from this host),
+so each is carried **with the firm named**, which is the only way a range of this spread is
+usable:
+
+| anchor | 2026 | horizon | CAGR | firm |
+|---|---|---|---|---|
+| AI in education | **$9.58B** | $136.79B by 2035 | 34.52 % | Precedence Research |
+| AI in education | **$11.4B** | $57.2B by 2033 | 25.9 % | Grand View Research ($8.3B for 2025) |
+| AI in education (increment) | — | **+$3 367.8M** 2026→2030 | 45.0 % | Technavio |
+| AI in education (range of four firms) | **$6.4B – $11.4B** | — | — | roundup of four 2026 pricings |
+| Global EdTech (all tech) | **$404B** | $580B by 2030 | 16.3 % | HolonIQ |
+
+🔴 **The spread widened, and that is the finding — not a new centre.** This file's published
+band was **$6.9B – $11.4B** for 2026; the new readings push the low end to **$6.4B** and leave
+the top at **$11.4B**, so the factor between reputable firms on *today's* size is now **~1.8**.
+🔴 The horizon spread is far worse: Precedence's $136.79B by 2035 against Grand View's $57.2B
+by 2033 is **not** a difference about growth, it is a difference about **what counts as the
+market**. 🟢 Quote the band, name the firm beside any single figure, and plan on the low end —
+this file's standing rule, now with a wider band behind it.
+
+🔵 **One demand-side figure that cuts the other way, and belongs in the same breath.** Global
+EdTech venture funding was **$512M across 63 deals in Q1 2026, down 24 % year on year**.
+🔴 **A market sized in the tens of billions and funded at half a billion a quarter is a
+market where the buyer is an institution's operating budget, not a VC round** — which is
+consistent with this file's standing read that the sellable work is compliance-driven and
+budget-funded, not greenfield product. 🟡 Graded as a single secondary reading; it is the
+only funding figure on this file and should be re-asked next pass rather than built on.
 
 ## The one number that should shape every pitch
 
@@ -533,6 +588,56 @@ with "we will build you a platform." It can open with the client's **own ministr
 (Udir, DfE, Oak) and a **permissive connector to the platform they already run**.
 
 ### APAC
+
+**🆕 `p438` — the one leg that discovered this pass: three quantities at zero prior mentions.**
+
+🟢 **1. Singapore's agentic-AI governance instrument, which is the one APAC artefact that
+speaks directly to what Globant ships.** IMDA and the AI Verify Foundation co-published the
+**Model AI Governance Framework for Agentic AI**, `v1.0` launched **22 January 2026**, revised
+in **May–June 2026** (🟡 sources disagree on **20 May** vs **5 June**; the conflict is carried
+rather than resolved, because the IMDA primary is unreachable from this host — see the ceiling
+measurement in `p438`'s block above). It keeps four dimensions — bound the risk up front, keep
+a human accountable, implement technical controls, enable end-user responsibility — and the
+May–June revision adds **system complexity** and **use of third-party solutions** as risk
+factors. 🔴 **It is voluntary: no penalty clause, no registration, no enforcement mechanism.**
+🔵 Separately, Singapore's Cyber Security Agency published *Securing Agentic AI*, an addendum
+to its AI-systems guidance, in **June 2026** — also non-mandatory.
+🟢 **Why this is commercially decisive and not trivia**: it is the first framework in APAC
+whose unit of governance is **the agent**, not the model, and *"use of third-party solutions"*
+is precisely the row a Globant-assembled tutor stack occupies. An engagement in Singapore can
+be sold against a named, dated, four-dimension checklist instead of against general AI
+principles — and the fact that it carries no penalty is an argument for adoption speed, not
+against it.
+
+🟢 **2. The adoption gap inside APAC, measured on one channel.** Microsoft's **June 2026**
+reading puts **Singapore first in Asia at 64.3 %** of working-age people using AI, against
+**Japan at 24.7 %** — a **2.6× spread inside the same region**. 🔵 Carried as a single
+secondary reading of one vendor's diffusion measure, with its denominator stated
+(*working-age population*, not students or staff), because this file's standing rule is that
+an adoption percentage without a denominator is unusable.
+
+🟢 **3. Singapore's supply-side targets**, which is the capacity half of the same story:
+**National AI Strategy 2.0** triples the AI-talent target to **15 000**, and the country
+carries **70+ corporate AI Centres of Excellence**. 🔵 Japan's **National AI Basic Plan**
+(December 2025, already carried here) sets measurable targets against exactly the usage gap
+figure 2 names.
+
+🔵 **Graded as confirmation, not discovery, and listed so a successor does not re-buy the
+leg**: the Ipsos *Education Monitor 2026* school-AI-ban support series (India **26 %**,
+Singapore **28 %** — down from 37 % — Japan and Malaysia **29 %**, South Korea **31 %**) is
+already on this file; China's and Singapore's *AI in Education* policy guidelines, China's
+service-specific rules with the AI-content labelling duty from **1 September 2025**, Japan's
+penalty-free AI Promotion Act, India's absence of an AI-specific statute with synthetic-content
+labelling from **February 2026**, and the `AI Verify` testing toolkit all re-returned and are
+all carried.
+
+🟡 **The opportunity this adds for an APAC engagement**: a *"governed agentic deployment"*
+offer, scoped to the IMDA four dimensions and priced for a market that has the strategy and
+the budget but, on figure 2, a usage base far below Singapore's outside the city-state. The
+buyer is the ministry or the institution, the artefact is the framework's own risk-assessment
+step, and the differentiator is that the stack's third-party components are each cleared on
+the three-column read now standing on `repos/foundations.md`.
+
 
 **🆕 `p437` — confirmation across the board.** The APAC leg returned Korea's AI Framework Act
 (in force 22 January 2026, with 2026 operating as a pilot year under a one-year penalty grace

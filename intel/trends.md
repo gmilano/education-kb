@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 36 — `p438` Licence tooling has learned to **detect** a modified grant and not to **escalate** one, and the gap is widest exactly where the AI supply chain is growing
+
+🟢 **The datum, measured on this base's own instruments rather than a vendor's.** One call to
+`bespoke_census.grade()` on a new education specimen returns, in a single row,
+`p1054_verdict = MIT-BODY-PLUS:unclassified-addition` **and** `needs_a_human = no`. Over the
+**238** licence payloads committed under `compose/code/**/fixtures/`, **9** carry an addition
+verdict and 🔴 **7 of those 9 are routed `needs_a_human = no`** — including `p427`'s own
+two-family specimen, the payload this base wrote a 24-control gate about because it carries a
+notice obligation of two. 🔴 A second instrument, `p427`'s `conjunctive_grant.classify()`,
+returns `scope: None` on the same payload because every entry in its `SCOPE_MARKERS` is an
+English phrase, and the clause is in Chinese.
+
+🔵 **Why this is a trend and not a bug report.** The pattern holds across three generations of
+tooling on this base, and the direction is consistent: **detection capability keeps growing
+and the escalation surface does not.** `p228`'s shelf gate graded families. `p341` added a
+title-form and an addition column. `p427` added conjunctive families. `p382` added subtrees.
+Every one of those instruments **widened what can be seen**; `needs_a_human` — the one
+function whose docstring says it produces *"the rows a consultancy must not clear from a
+scanner's output alone"* — still reads the same three inputs it was written with: an English
+restriction hit, a bespoke title, an unreadable payload. 🔴 **The industry shape is the same
+one**: SBOM and licence-scanning tools report an SPDX identifier per file, and an SPDX
+identifier is exactly the column that says `MIT` here.
+
+🟢 **What makes 2026 the year it starts to bite.** The AI layer on an education engagement is
+no longer three large dependencies; it is dozens of small permissive repositories, and
+`p438`'s own census shows where they come from: the **tail** of the topic listings (0 new at
+ranks 1–20, 7 new at ranks 41–60), written by individual authors, in their own language,
+often in the last ninety days. 🔴 Those are precisely the payloads most likely to be a stock
+text **plus a sentence the author added by hand** — and least likely to have been read by
+anyone. **1 of the 9 addresses graded this pass (11 %) carried such a clause**, and the clause
+shifted content-copyright liability onto the operator.
+
+🔴 **The consequence that reaches a client, stated plainly.** A scanner report saying *"MIT,
+cleared"* and a payload saying *"you carry the copyright liability for the material you feed
+this"* are the same row. On an education engagement the material is textbooks and the operator
+is the school or the ministry. 🟢 **The defensible position is a three-column clearance** —
+family, addition column, and a human read of any bytes above the family's stock band, in the
+payload's own language — now standing on `repos/foundations.md` and wired as a step in
+`Pattern AQ`.
+
+🟡 **What would refute this trend**: an addition column that routes to escalation by default
+(the one-disjunct fix priced as `Gap 438-A`), or a measurement showing the addition class is
+confined to sub-20 ★ repositories and therefore never reaches production. 🔵 The second is
+testable and **this base cannot currently claim it**: the 7 un-escalated payloads in the
+census include components already on these shelves, not only this pass's tail rows.
+
+
 ## 🆕 Trend 35 — `p437` Regulatory change now outpaces the open-source tooling built to track it, and the tools **fail confidently**
 
 🟢 **The datum**: of five permissive EU-AI-Act compliance repositories graded first-hand this

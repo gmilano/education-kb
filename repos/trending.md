@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p438` · 2026-10-25 — **The GitHub-topic channel measured **by rank depth** rather than declared saturated: 0/20 new at ranks 1–20, 2/20 at 21–40, **7/20 at 41–60**. 🟢 Coverage decays with rank, so the five passes that called this channel "a duplicate detector" were reading the head and generalising to the tail. 🔴 And one of the seven tail rows is the payload that broke this base's escalation column.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 The census, every slug `grep -rilF`'d against the live shelves
+
+Channel: the GitHub **topic listing pages** (`github.com/topics/<topic>?page=N`), read
+**2026-10-25**. 🔵 Named explicitly because `p435` established that `api.github.com` refuses
+third-party repositories from this host (**403**, a per-repository authorization refusal), so
+this base publishes **no star column read from the API**. The star figures below are the
+**listing page's own** figures and are labelled as such.
+
+| channel · depth | ranks | new | duplicate | hit rate |
+|---|---|---|---|---|
+| topic `ai-tutor` page 1 | 1–20 | 🔴 **0** | 20 | 0 % |
+| topic `ai-tutor` page 2 | 21–40 | 🟡 **2** | 18 | 10 % |
+| topic `ai-tutor` page 3 | 41–60 | 🟢 **7** | 13 | 35 % |
+| topic `education-ai` page 1 | 1–20 | 🔴 **0** | 20 | 0 % |
+| topic `intelligent-tutoring-system` page 1 | 1–9 graded | 🔴 **0** | 9 | 0 % |
+| **total** | — | **9** | **80** | **10.1 %** |
+
+🟢 **What the head being fully held actually proves.** Every one of the 20 ranks on
+`ai-tutor` page 1 was already shelved, including `HKUDS/DeepTutor` (listing: 42.7k ★),
+`Miaotofu01/Study-Mate` (1.2k ★), `24kchengYe/human-skill-tree` (583 ★),
+`ankimcp/anki-mcp-server` (533 ★), `Li-Evan/Bloom` (292 ★), `Selleo/mentingo` (97 ★),
+`ahmedEid1/lumen` (90 ★) and `zijinz456/OpenTutor` (148 ★). On
+`intelligent-tutoring-system`, `open-spaced-repetition/fsrs4anki` (4.1k ★),
+`GarethManning/education-agent-skills` (908 ★), `GeminiLight/gen-mentor` (133 ★),
+`luffycodes/Tutorbot-Spock` (56 ★) and `thm-mni-ii/feedbacksystem` (24 ★) are all carried.
+🔵 **The head coverage is real and it is the reason the tail was never reached**: a pass that
+reads page 1 and finds 20 duplicates concludes the channel is spent, and stops one click
+above the only new supply it has.
+
+🟡 **And priced honestly, because a hit rate is not a value.** The seven page-3 rows top out
+at **18 ★** on the listing page and are single-purpose agent skills, not foundations. 🔴
+**No row from this census belongs in `repos/foundations.md`**, and this pass adds none there —
+stated rather than padded, per this base's standing rule that fewer real rows beat filler.
+Their grants are on `agents/trending.md` `p438`, first-hand, and the eight permissive ones are
+shelved on `agents/top.md`.
+
+### 🔴 The one tail row that was worth the whole census
+
+[`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor) —
+`LICENSE` **1 503 B** · `sha256₁₂ 54ceeac19921`, HEAD `f0ef6fc3acd7`, listing **11 ★**, rank
+**56**. A stock MIT text with a **Chinese-language scope addendum** appended after a `---`
+rule. 🔴 `bespoke_census.grade()` marks it `MIT-BODY-PLUS:unclassified-addition` **and**
+`needs_a_human = no`; `conjunctive_grant.classify()` returns `scope: None`. Over this base's
+**238** committed licence payloads, **7 of the 9** addition-bearing payloads are routed
+`needs_a_human = no`, `p427`'s own two-family specimen among them. 🔵 Full evidence and the
+line numbers are on `agents/trending.md` `p438`; registered as **`Gap 438-A`**.
+
+🔵 **The methodological point for this shelf specifically.** A trending census is normally
+graded on how many rows it adds. 🟢 This one added nine marginal rows and one instrument
+defect, and the defect is worth more than the rows — which is an argument for buying the next
+page of depth, not against it, because **the defect was only reachable by grading a payload
+nobody else had graded**.
+
+### 🟡 `Gap 438-C` — the next depth, with its price written down
+
+Buy `ai-tutor` page 4 (ranks 61–80) and `education-ai` page 2 (21–40) next pass: **two
+fetches, ~40 dup checks, ~9 payload probes**, on a measured expectation of **~7 new rows all
+below 20 ★**. 🔴 Stop at the point where the rows stop carrying a grant worth reading — the
+value found here was in a payload, not in a star count, and page 3's rows average under 15 ★
+already.
+
 ## 🆕 `p437` · 2026-10-25 — **A new permissive tier the shelves did not have: **EU AI Act obligation tooling**, five MIT repos, graded by whether their encoded deadline survives the Digital Omnibus. 🔴 Two of three date-bearing tools hardcode the superseded `2026-08-02`. 🟢 One is correct, education-aware, and implements the Article 6(3) profiling carve-out in code.**
 
 🔵 **Append-only. Nothing below this block was edited.**

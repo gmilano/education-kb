@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p438` — The platform decision survives a **licence scan** and not a **licence read**, and the difference is now measured on this base's own instruments
+
+🔵 **Why this lands on the verticals shelf.** A platform choice is the one decision on an
+education engagement that a client's procurement function actually audits, and it audits it
+with a scanner report. 🟢 This shelf's standing finding is that the platform tier is almost
+entirely copyleft — Moodle (GPL), Open edX (AGPL-3.0, narrowed), Chamilo (GPL-3.0), Canvas
+community edition (AGPL-3.0) — with `OpenOLAT` (Apache-2.0), `Sakai` (ECL-2.0, Apache-derived)
+and `learningequality/kolibri` (MIT) the permissive exceptions. 🔴 `p438` adds the part of the
+audit that a scanner cannot do.
+
+### 🔴 The measurement, on this base's instruments, not a vendor's
+
+`p438` graded a new education specimen,
+[`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor)
+(`LICENSE` **1 503 B** · `sha256₁₂ 54ceeac19921`, HEAD `f0ef6fc3acd7`, read 2026-10-25). One
+`bespoke_census.grade()` call returns, **in one row**:
+
+| column | value | what a procurement report would print |
+|---|---|---|
+| `titled_family` | `MIT` | 🟢 "permissive" |
+| `scan_verdict` | `PERMISSIVE` | 🟢 "cleared" |
+| `stock` | `YES` | 🟢 "standard text, no review needed" |
+| `p1054_verdict` | 🔴 `MIT-BODY-PLUS:unclassified-addition` | ⚠️ nothing — this column is not in the report |
+| `needs_a_human` | 🔴 `no` | 🔴 "no legal read required" |
+
+The appended clause — in Chinese, after a `---` rule — states that the repository ships **no
+book or copyrighted content**, that the operator supplies the material, and that **the
+operator carries the legal and copyright liability for it**. 🔴 On an education engagement the
+operator is the client, and the content is textbooks. 🔵 `p427`'s `conjunctive_grant.classify()`
+returns `scope: None` on the same payload because every entry in its `SCOPE_MARKERS` is an
+English phrase.
+
+🟢 **Sized over the corpus, so it is not one anecdote:** of the **238** licence payloads
+committed under `compose/code/**/fixtures/`, **9** carry an addition verdict and **7 of those
+9 are routed `needs_a_human = no`** — `p427`'s own two-family specimen among them. Registered
+as `Gap 438-A`; the one-disjunct remedy is priced there and deliberately not slipped into this
+pass.
+
+### 🟢 The procurement consequence, stated so it can go in a proposal
+
+🔵 **It does not change which platform to pick.** The copyleft map on this file stands: every
+payload here was read first-hand and none of them is a stock text with an unread addendum.
+🟢 **It changes what Globant can credibly say about the components bolted onto that
+platform.** The AI layer on an education engagement is assembled from small permissive
+repositories — this pass alone shelved eight — and that layer is where the addendum class
+lives: 🔴 **1 of the 9 addresses graded this pass, 11 %, carried a clause that both of this
+base's automated instruments missed and that shifts content liability onto the client.**
+
+🟡 **So the deliverable is a three-column clearance, applied to every component that reaches a
+client's estate** — the integration-layer analogue of the foundation rule now on
+`repos/foundations.md`:
+
+1. 🟢 family from the payload, never from a badge or a comparison blog (this shelf's
+   `formalms` row is the standing example: Apache-2.0 in one comparison, GPL-2.0 in another,
+   resolved here from the payload);
+2. 🟢 the addition column read, not just the family column;
+3. 🟢 any bytes above the family's stock band read **by a person, in the payload's own
+   language** — the band is an excellent detector that a payload was modified and no
+   detector at all of what the modification says.
+
+🔵 **And the platform tier's own exposure is bounded, which is worth saying plainly to a
+client**: the large copyleft platforms ship canonical GPL/AGPL texts whose bytes this base has
+already measured, so the addendum risk on this file is **low and measured** — it concentrates
+in the long tail of permissive components, exactly where the delivery team is moving fastest.
+
 ## 🆕 `p437` — Conformity is a **procurement surface** on the platform decision, and it reverses the usual copyleft calculus
 
 🔵 **The connection this file was missing.** This shelf's standing finding is that the

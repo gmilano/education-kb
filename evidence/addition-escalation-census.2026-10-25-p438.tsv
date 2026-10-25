@@ -1,0 +1,10 @@
+payload	family	addition_verdict	needs_a_human	escalated
+mit+isc-unimcp-1980.LICENSE	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+feynman-root.mit-plus-busl-note.txt	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+schul-system.LICENSE.md.mit-plus-carveout	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+nfc-attendance-reader.LICENSE.mit-plus-scope	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+mit-plus-attribution.txt	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+telekom-ki-in-schulen.HOLDERLESS-mit.LICENSE	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+nextgen-ai.LICENSE.txt	MIT	MIT-BODY-PLUS:unclassified-addition	no	NO
+#	graded_payloads	238	addition_bearing	9
+#	un-escalated	7	rate	77.8%

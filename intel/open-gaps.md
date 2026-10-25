@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p438`
+
+🔴 **`p437` is registered retrospectively here, because it wrote six shelves and no register
+entry.** `gate-register-currency` (built by `p418` for exactly this drift) was **RED on the
+inherited commit** `edca837` — *register newest=p436; agents/top.md newest=p437; stale by 1
+pass* — alongside `gate-census-currency`, `gate-census-union` and `gate-union-currency`.
+🟢 **56 of 60 gates green on the baseline, run before `p438` wrote a line.** Three of the four
+reds are closed by this pass; the fourth is adjudicated below rather than silenced.
+
+### 🔴 `Gap 438-A` — **OPEN.** The addition is detected and then not escalated: `needs_a_human` never reads the column its own grader just wrote
+
+🟢 **The measurement.** `bespoke_census.grade()` on
+[`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor)
+(`LICENSE` **1 503 B** · `sha256₁₂ 54ceeac19921`, HEAD `f0ef6fc3acd7`, read 2026-10-25)
+returns `titled_family = MIT`, `scan_verdict = PERMISSIVE`, `stock = YES`,
+`p1054_verdict = MIT-BODY-PLUS:unclassified-addition` and 🔴 `needs_a_human = no`, **in one
+row, from one call**.
+
+🔴 **The cause, by line.** `bespoke_census.needs_a_human()` (`bespoke_census.py:260`) returns
+`True` on three disjuncts — a `p257` effective restriction hit, `title_form == BESPOKE_TITLED`,
+or `scan_verdict == UNREADABLE` — and consults `p1054_verdict` on **none** of them. A stock
+SPDX-titled payload whose addition is written in a language the restriction scanner does not
+read scores zero on all three.
+
+🟢 **The population, not the anecdote.** `grade()` run over every licence-shaped payload
+committed under `compose/code/**/fixtures/` — **238 graded, 9 carrying an addition verdict,
+7 of those 9 routed `needs_a_human = no` (77.8 %)**:
+
+| payload | family | verdict |
+|---|---|---|
+| `mit+isc-unimcp-1980.LICENSE` | MIT | 🔴 `p427`'s **own** two-family specimen — notice obligation of two, routed "no human needed" |
+| `feynman-root.mit-plus-busl-note.txt` | MIT | 🔴 a BUSL note appended to an MIT body |
+| `schul-system.LICENSE.md.mit-plus-carveout` | MIT | 🔴 carve-out |
+| `nfc-attendance-reader.LICENSE.mit-plus-scope` | MIT | 🔴 scope clause |
+| `mit-plus-attribution.txt` | MIT | 🔴 added attribution obligation |
+| `telekom-ki-in-schulen.HOLDERLESS-mit.LICENSE` | MIT | 🔴 holderless MIT with an addition |
+| `nextgen-ai.LICENSE.txt` | MIT | 🔴 addition |
+
+🔵 **The second instrument is not a backstop.** `conjunctive_grant.classify()` returns
+`{'mode': 'SINGLE', 'families': ['MIT'], 'scope': None}` on the specimen, because every entry
+in `SCOPE_MARKERS` (`conjunctive_grant.py:73`) is an English phrase.
+
+🟢 **The remedy and its price, written down rather than taken.** One disjunct in
+`needs_a_human` — an addition verdict escalates — then a regression over all 238 payloads and
+the escalation list re-published. **Cost: one pass.** 🔴 **Deliberately not applied in `p438`**:
+it moves rows across a boundary that committed suites assert against, and `Gap 435-A`'s lesson
+is that a predicate change is sized against its population **before** it is wired. 🟡 The
+second half is harder and is part of this gap, not a separate one: `SCOPE_MARKERS` is an
+English vocabulary and the specimen that exposed it is Chinese — a language-agnostic trigger
+(*any* non-ASCII run inside a stock payload, or any text after a horizontal rule) is the
+candidate, and it must be priced against its false-positive rate before it is built.
+
+### 🟡 `Gap 438-B` — **NARROWS `Gap 400-B` with the mechanism.** `gate-census-union` fires because a *population* fact stopped holding — it is a gate design question, not a corpus defect
+
+🔵 **First, what is NOT new here.** `gate-census-union` has been this base's **declared,
+non-blocking red** for many passes — `DECLARED_RED` at `Makefile:208`, cited by name in
+`Gap 400-B` and excluded from `COMMIT_GATES` — so `p438` neither found it red nor decided to
+tolerate it. 🟢 **What is new is the mechanism**, which `Gap 400-B` carried without one, and
+a remedy with a price:
+
+🔴 **The inherited red.** `p375-census-union` control **24** — *"the two new rejection classes
+both fire on the live shelves, so neither arm is dead code carried for a fixture"* — wants
+`['NAME-DOT-RUN', 'NAME-REF-OR-PATH']` and the live shelves now yield `['NAME-REF-OR-PATH']`
+alone. 🟢 **Nothing is wrong with the classifier**: `name_reject()` returns `NAME-DOT-RUN`
+correctly on its fixtures (`test_census_union.py:48,56`). What changed is the **corpus** — no
+live shelf currently carries an address with a dot-run in its name.
+
+🔵 **Why this is `Gap 435-A`'s lesson from the other side.** That gap found a gate firing on
+**59.1 %** of its population and called it a classifier, not a detector. This one is a gate
+that fires when its population drops to **zero** — it asserts *"a specimen of each class exists
+on the shelves"*, which is a property of the **harvest**, not of the code, and the only way to
+make it green by hand is to put a malformed address back on a shelf. 🔴 **That is not done**,
+and it is the whole reason this gap is registered instead of closed.
+
+🟢 **The remedy, priced.** Split control 24: keep the *classifier-liveness* assertion against
+the **fixtures** (where it belongs, and where it passes), and move the *population* assertion
+to a **census target** that measures and never fails — the exact shape `Gap 435-A` prescribed
+for `gate-promotion`. **Cost: one pass, ~1 control moved, no corpus change.** 🔵 Until then
+`make hooks` carries one known red with a written reason — the arrangement `Gap 400-B` already
+describes, now with the failing control named — and `make commit-gates` is the suite that
+governs the commit: 🟢 **59 blocking gates green on this pass's writes.**
+
+### 🟡 `Gap 438-C` — **OPEN.** Discovery coverage decays with rank, and the next depth has a price
+
+🟢 **The measurement that replaces five passes of "the channel is saturated".** Every slug on
+four GitHub topic listings, `grep -rilF`'d against the live shelves on 2026-10-25:
+**`ai-tutor` page 1 → 0/20 new; page 2 → 2/20; page 3 → 7/20; `education-ai` page 1 → 0/20;
+`intelligent-tutoring-system` page 1 → 0/9 graded.** **89 slugs, 80 duplicates, 9 new.**
+
+🔵 **So the claim was right about the head and wrong as a generalisation.** The head is held
+completely (`HKUDS/DeepTutor`, `GarethManning/education-agent-skills`,
+`open-spaced-repetition/fsrs4anki`, `Selleo/mentingo`, `zijinz456/OpenTutor`, `ahmedEid1/lumen`,
+`Li-Evan/Bloom`, `TovTechOrg/Tov-learn`, `SirhanMacx/Claw-ED` and 14 more, all already shelved);
+new supply lives below roughly **40 ★**, one click further down.
+
+🟢 **Next buy, with its expected yield**: `ai-tutor` page 4 (ranks 61–80) and `education-ai`
+page 2 (21–40) — **two fetches, ~40 dup checks, ~9 payload probes, expectation ~7 new rows all
+below 20 ★**. 🔴 **The stopping rule matters more than the yield**: page 3's rows average under
+15 ★ and none of them is a foundation. The value this pass extracted from the tail was **an
+instrument defect found by grading a payload nobody had graded** — so buy depth for the
+payloads, and stop when the payloads stop being interesting, not when the stars do.
+
+### 🔵 `Gap 438-D` — **OPEN, carried deliberately.** MEA went unanswered and the nil is recorded
+
+🔴 The EMEA leg returned **nothing** on the Middle East or Africa: EU-only material plus one
+vendor page. `p435` closed the EMEA sub-regional drought on UK, DACH, Nordic and Gulf; **MEA
+proper is unanswered**, and per this base's standing rule the nil is written down with the
+jurisdictions named rather than left to look like coverage. 🟢 Next pass runs it as its own
+leg, in-language where applicable, per `Gap 435-C`'s shape.
+
+### 🔵 Re-confirmed this pass, not re-discovered: the egress ceiling under every regulatory claim
+
+`p433` established that no government primary is reachable from this host. 🟢 Re-measured on
+three hosts the legs actually needed — the IMDA primary PDF for Singapore's agentic-AI
+framework, `eur-lex.europa.eu` for `Regulation (EU) 2026/1744`, `unesco.org` for the APAC
+guidance — **all three returned `000`** (`curl -I`, 25 s, 2026-10-25). 🔵 Per `p413` that is a
+fact about the **channel**, not the hosts, and it is why every regulatory date on
+`intel/market.md` is labelled a secondary reading.
+
+
 ## 🆕 `p436`
 
 ### 🟢 `Gap 435-B` — **CLOSED with the notation, the join and the ratchet it prescribed — and the population is 59× what the register knew**
