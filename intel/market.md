@@ -4,6 +4,214 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **Four regional legs, four returned material, no nil. 🟢 The fact that moved is a SUPPLY-SIDE one and this base measured it itself: the institutional-agent supply in this cohort is ENTIRELY NON-US — sixteen addresses, zero North American institutions, checked rather than assumed. 🔴 And `Gap 425-A` reproduces on a SECOND channel, so every policy cell below is `reported` and none can ever be `authoritative` on a host of this class.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54** blocking gates green at baseline —
+before this pass wrote a line — and 🟢 **55** after these writes, the new one being
+`gate-conjunctive-grant`, built and wired this pass. 🔵 **No date straddle:** every leg,
+`ls-remote`, clone, tree enumeration and digest happened **2026-10-25**; the commit lands
+**2026-10-25**.
+
+🔴 **`Gap 425-A`, re-measured and NARROWED.** `p426` recorded `curl` at `HTTP 000` for every
+non-GitHub domain. This pass tested a **second, independent** fetch channel and it fails
+differently and just as completely: the tool-side fetcher returns **`ENOTFOUND`** — a **DNS**
+failure — for `unesco.org`, `digital-strategy.ec.europa.eu` and the rest, while resolving
+`github.com` normally. 🟢 **So the finding is not "this host has no egress": DNS resolves GitHub
+and nothing else, and server-side search summaries are the one remaining non-GitHub channel.**
+🔴 A summary cannot be digested or pinned, so **no policy or market cell on a host of this class
+can ever be graded `authoritative`** — not by working harder, but by construction. Every licence
+and ref cell in this pass is `authoritative`; **every cell in this file is `reported`.**
+
+### 🔵 The regional legs — stated per region so silence cannot read as coverage
+
+| region | leg | returned |
+|---|---|---|
+| **North America** | `AI education North America 2026 state law regulation school districts adoption` | 🟢 material — eight named statutes with dates, and a 🔴 **disagreement between sources on the enacted count** |
+| **EMEA** | `AI education EMEA Europe 2026 AI Act high-risk education compliance adoption` | 🟢 material — the Annex III deferral, with 🔴 **sources disagreeing on its adoption timeline** |
+| **APAC** | `AI education APAC 2026 India China Japan Korea regulation adoption players` | 🟡 **partial — a declared nil inside it**: regulation for four countries, and 🔴 **no education-specific adoption figure and no named edtech player for any of them** |
+| **LATAM** | `AI education Latin America 2026 adoption regulation Brazil Mexico Chile policy` | 🟢 material — the strongest education-specific regional evidence in the set |
+
+### 🟢 The supply-side fact, and it is this base's OWN measurement
+
+🟢 **Sixteen institutional-agent addresses, zero North American institutions.** This was
+**checked, not inferred**: every `.edu` string across the sixteen READMEs resolves to
+**`.edu.ar`** (`virtual.unju.edu.ar`, `exavirtual.unsa.edu.ar`, `frc.utn.edu.ar`),
+**`.edu.eg`** (`moodle.zewailcity.edu.eg`), or the placeholder `lms.university.edu`.
+
+| region | institutional agents verified this pass | institutions named |
+|---|---|---|
+| **LATAM** | **3** | UTN, UNJu, UNSa *(Argentina)*; a Brazilian-authored Moodle plugin |
+| **EMEA** | **7** | TU München, SPbPU + `openedu.ru`, SRCE Merlin *(Croatia)*, Zewail City *(Egypt)*, Universidade Aberta *(Portugal)*, plus es-ES and ru-RU teacher tools |
+| **APAC** | **3** | Jaipuria *(India)*, a Thai special-education tool, a Malaysian deadline normaliser — 🔴 **all three carry NO licence** |
+| **North America** | 🔴 **0** | 🔴 **none** |
+| **Global** *(institution-agnostic)* | **3** | configured by URL, no institution named |
+
+🔴 **The asymmetry is the opportunity, and it cuts both ways.** The LMS whose agent ecosystem
+dominates these shelves — **Canvas** — is a **US-market** platform, yet **not one** of the
+institution-specific agents this pass found serves a US or Canadian institution. 🟡 `Gap 427-B`:
+nothing has measured whether that is a discovery artefact or a real asymmetry, and it is
+directly testable by running this pass's two-term leg against `canvas`, `powerschool` and
+`blackboard`. 🔵 Where it is real, it is a **build** opportunity rather than a compose one.
+
+## Opportunities by region
+
+### North America
+
+🔵 **All cells `reported`.** 🔴 **The named statutes and their dates — and sources disagree on
+how many have been enacted, which is itself the procurement fact.** One source counts **three**
+states with enacted K-12 AI statutes; others enumerate more. Treat bill numbers as leads to
+verify against the legislature, not as settled law.
+
+| jurisdiction | instrument | the date that binds | what it requires |
+|---|---|---|---|
+| Idaho | `SB 1227` | signed **2026-03-26**, effective **2026-07-01** | state education department builds a generative-AI framework; districts adopt aligned policies |
+| Maryland | `SB 720` | effective **2026-06-01** | MSDE issues guidance; **every district names an AI coordinator** |
+| Ohio | — | deadline **2026-07-01** | every public district, community school and STEM school adopts a formal AI policy |
+| Oklahoma | `SB 1734` | before the **2027-28** school year | written district AI policy, **parent opt-out**, and **alternative access to core instruction** |
+| Virginia | `HB 1186` | — | AI pilot programme plus state guidance |
+| Alabama | `HB 329` | — | an approved CS course including AI instruction **for graduation** |
+| Utah | `HB 273` | — | AI integrated into CS standards |
+| Florida | proposed rule, **not adopted** | would bind **2027-07-01** | **parent opt-in**, a **public approved-tool list**, and **thirty-day interaction records** |
+
+🟢 **The opportunity: the deliverable is a POLICY-AND-EVIDENCE artefact, not a model.** Across
+Idaho, Maryland, Ohio and Oklahoma the obligation falls on the **district** — adopt a policy,
+name a coordinator, offer an opt-out and an alternative path. 🔵 Roughly **33–35 states plus
+Puerto Rico** have issued guidance and **77** classroom-AI bills moved across **27** states in
+the 2026 session, so this is a repeatable engagement rather than a bespoke one.
+🟢 **Florida's proposed thirty-day interaction record is the most demanding technical
+requirement in the region**, and it is the same artefact `Trend 48` tracks: a retained,
+reviewable per-student interaction trail. A studio that builds it once satisfies Florida's
+proposal, Oklahoma's opt-out audit and the EU's Article 26 deployer duty with one component.
+🔴 **No supply-side opportunity here is evidenced by this pass:** zero North American
+institutional agents were found (see `Gap 427-B`).
+
+### EMEA
+
+🔵 **All cells `reported`.** 🔴 **The deferral is real and its adoption status is NOT settled in
+these sources, which is exactly what a client will ask.**
+
+- 🔴 **High-risk obligations deferred `2026-08-02` → `2027-12-02`** by the **Digital Omnibus**,
+  proposed **2025-11-19**. 🔴 **Sources disagree on how it got there**: one reports the second
+  trilogue (**2026-04-28**) ending without agreement, another a provisional political agreement
+  on **2026-05-07**, with formal adoption and OJ publication anticipated. 🔴 **And one source
+  states the decisive caveat: until the amendments enter into force, the AI Act's ORIGINAL
+  schedule remains legally operative.** 🔵 This is consistent with the **2027-12-02** date
+  `p426` carries; what is new is that the *route* to it is contested.
+- 🟢 **Annex III education uses, enumerated:** admission or placement; **evaluating learning
+  outcomes**; assessing the level of education a person can attain; and **monitoring students
+  for prohibited behaviour during tests**. 🔵 There is an exemption for applications posing no
+  significant risk — but it must be **assessed and documented per application**, which is itself
+  a deliverable.
+- 🔴 **Emotion inference in education has been PROHIBITED since `2025-02-02`** — unaffected by
+  any deferral. 🔵 Already carried on these shelves; restated because it is the one limb that is
+  a **ban**, not a compliance burden.
+- 🟢 **What the deferral does NOT defer:** **Article 26** deployer duties and **Article 27**'s
+  **Fundamental Rights Impact Assessment**, required *before* a high-risk system goes into use.
+  One legal source puts it plainly: the postponement delays **enforcement**, not the
+  requirements.
+
+🟢 **The opportunity, and the deferral makes it larger rather than smaller.** The eighteen-month
+slip converts a compliance scramble into a **design window**: an institution that builds the
+Article 27 FRIA and the Article 26 oversight trail now, against a system still in development,
+pays far less than one retrofitting in late 2027. 🔵 **`simonseifert/merlin-mcp`
+(MIT, `1 070` B `c458af6b099b`) is the architectural reference**: read-only by construction with
+writes gated on an out-of-band human approval. 🔴 One signal to hold lightly: **78 %** of
+organisations reportedly had taken no meaningful compliance step as of **2026-04** — that figure
+is **not sector-broken-out** and is a vendor's, so it is a direction, not a number.
+🟢 **Supply here is the deepest of any region**: seven institutional agents, MIT or ISC, across
+Germany, Russia, Croatia, Egypt and Portugal.
+
+### APAC
+
+🔵 **All cells `reported`.** 🔴 **A nil is declared INSIDE this region and it is the honest
+headline: the regulatory picture is well covered and the education-specific picture is not.**
+
+| jurisdiction | instrument | status | education-specific limb |
+|---|---|---|---|
+| **South Korea** | **AI Basic Act** | 🟢 **in force `2026-01-22`** | 🟢 **Education is a "high-impact" sector** → **human oversight** and **documented risk assessments**. Fines capped at **KRW 30 million**, with a promised grace period of at least a year |
+| **China** | service-type regulation, not a general AI law | 🟢 in force | AI-content **labelling** since **2025-09-01**; registration and security assessment for services reaching Chinese users; amended **Cybersecurity Law** with an AI-governance clause effective **2026-01-01** |
+| **Japan** | **AI Promotion Act** | 🟢 in force | 🔵 **No fines and no prohibitions** — an effort-based duty. New **AI Basic Plan** adopted **2026-07** |
+| **India** | — | 🔴 **no dedicated AI law** | 🔴 **Sources conflict**: one reports a **2026-07** government signal toward legislation, another describes reliance on voluntary guidance, and a third asserts mandatory labelling already in effect. Unresolved here |
+
+🔴 **The declared nil.** The APAC leg returned **no education-specific adoption figure and no
+named edtech or AI-education player** for any of these four countries. 🟡 `Gap 427-E`: the leg
+asked about *regulation, adoption and players* in one query and got only regulation — the same
+over-ANDing defect `T132` names on the supply side. A successor should run **one country, one
+question** (`AI in schools India 2026 adoption`), not four countries and three questions.
+
+🟢 **The opportunity: Korea is the cleanest high-impact engagement available anywhere.** The
+obligation is **already in force** (unlike the EU's, now deferred to 2027), it names education
+explicitly, it asks for **exactly** the artefact three other jurisdictions ask for — documented
+human oversight — and the promised grace period means the work can be done before penalties
+attach. 🔵 **One deliverable, four jurisdictions** — this is now the fourth, alongside EU Annex
+III, Vietnam's Decision 33 and the US state statutes `p426` recorded.
+🔴 **Supply caution specific to this region:** all **three** APAC addresses this pass found carry
+**no licence at all**, including `JaipuriaAILabs/Moodle-MCP` at **93** refs — the highest
+activity signal in the entire leg. An APAC engagement should expect to **build**, not compose.
+
+### LATAM
+
+🔵 **All cells `reported`.** 🟢 **The strongest education-specific regional evidence in this
+pass — and the gap it names is an institutional one, not a technical one.**
+
+- 🟢 **UNESCO launched the Observatory on AI in Education for Latin America and the Caribbean on
+  `2026-04-14`**, with **CENIA** (Chile), **CETIC.br** (Brazil) and **Tecnológico de Monterrey**
+  (Mexico) among its partners.
+- 🔴 **The readiness gap, quantified: teacher use exceeds `50 %` in Chile and Brazil, while
+  fewer than `10 %` of institutions in the region have formal guidelines.** 🔵 That single
+  asymmetry is the most actionable cell in this file — adoption has already happened and
+  governance has not.
+- 🟢 An **IDB** review (**2026-01**) catalogued **193** AI initiatives in the region's education
+  sector.
+- 🔴 **CENIA: 13 of the 19** LAC countries studied **do not teach early AI** in schools.
+- 🔴 **Regulation is thin.** As of **2026-09**, **only Peru has an enacted AI law**; Mexico,
+  Argentina, Chile and Colombia remain at bill, guidance or policy stage, with Chile's bill
+  pending as **Boletín 16821-19**. 🔴 **Brazil's status could not be confirmed** from this leg
+  and is **not asserted here**; a **Brazil–EU** AI and tech regulation agreement was reported in
+  **2026-06**. 🔵 Mexico's education-specific work is pilot-stage — a UNESCO pilot with
+  **CONALEP** and **DGETI** was announced **2026-08**.
+
+🟢 **The opportunity, and it is the inverse of EMEA's.** EMEA engagements are driven by a
+regulator with a date; LATAM engagements are driven by **teachers who have already adopted the
+tools and institutions with no policy to govern them**. The first deliverable is therefore
+**institutional governance** — an acceptable-use policy, a human-oversight trail, a data-handling
+position — and it sells without a statute, because the exposure already exists.
+🔵 **And the supply is unusually well matched to it**: `nialvape/utn-mcp` (**ISC**) and
+`HyNuwa/UniMCP` (**MIT and ISC**) are the first addresses on these shelves to reach **SIU
+Guaraní**, the student-records system used across Argentine public universities, and `UniMCP` is
+**multi-tenant** across UTN, UNJu and UNSa. 🟢 A regional engagement composes one connector
+across institutions instead of one per campus. 🔴 Both are small — **12** and **10** refs — so
+they are integration references, not dependencies.
+
+### Global
+
+🔵 **All cells `reported`.** 🔴 **The market number remains unusable as a single figure, and this
+pass reproduces the disagreement rather than resolving it.** For **2026**, three houses give
+**USD `9.58` B** (Precedence), **USD `10.6` B** (Research and Markets) and **USD `11.4` B**
+(Grand View) — a `~19 %` spread for the *same year*. Long-run forecasts diverge far more
+sharply: **USD `136.79` B by 2035** (Precedence) against **USD `42.48` B by 2030** (Research and
+Markets), while Technavio states growth of **USD `3 367.8` M over 2026-2030 at a `45 %` CAGR` —
+a figure whose *units* are not comparable to the others.
+
+🔵 **How to use it, which is the only honest instruction:** quote **one** house, name it, and
+give the range. 🔴 **Do not average them** — the bases differ on what counts as "AI in
+education", and `p424` already recorded ~6× disagreement on the current year. 🟡 The
+tutoring/adaptive sub-segment is reported at **USD `3.6` B → `17.7` B by 2033 (`30.5 %` CAGR)`,
+but it comes from an aggregator and is the **least** reliable cell here.
+
+🔵 **Adoption signals, all `reported` and all from vendor or aggregator channels:** institution-wide
+higher-education AI implementation at **`66 %`**; **`88 %`** of students worldwide reportedly
+using generative AI; **Khanmigo** past **1.4 M** users; **Duolingo** at **`58.7` M** DAU
+(**+23 %**) in Q2 2026. 🔴 Several widely-repeated figures in this space (for instance "83 % of
+institutions plan to deploy AI teaching assistants") were **unsourced** in the channels read and
+are **not carried here**.
+
+🟢 **The structural trend both regulators and vendors now agree on:** the shift from
+experimental generative-AI pilots to **deployed agentic workflows**, with grading and scheduling
+named as the first automated tasks. 🔵 That is precisely the boundary `p421` established — *a
+tutor is generally outside Annex III; a grader is inside it* — so the market's direction of
+travel is **into** the regulated tier, not around it.
+
 ## 🆕 `p426` · 2026-10-25 — **Ten legs, four regions, no nil — and only TWO new policy cells in the whole set, which is the eleventh consecutive saturated policy layer. 🟢 The procurement fact that moved is a SUPPLY one for the first time in four passes: the staged-grading deliverable three jurisdictions converge on now has an MIT reference implementation. 🔴 And `Gap 425-C` is CLOSED — the census `p425` declared underivable was derivable, on a host where the gates run.**
 
 🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 This contradicts
@@ -69,7 +277,7 @@ per the gate's own instruction, and restated below rather than back-fitted into 
 > 🟢 **Census, re-derived after this pass's writes, 2026-10-25:** see the closing figure block at
 > the end of this section — `make union-currency` output, pinned to its derivation time.
 
-## Opportunities by region
+## Opportunities by region — `p426`, SUPERSEDED by `p427`'s block above
 
 ### North America
 

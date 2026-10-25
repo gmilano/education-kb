@@ -59,6 +59,7 @@ SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trend
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
 COMMIT_GATE_LOG ?= /tmp/education-kb-gate-commit-gate.log
 CASEGATE_LOG ?= /tmp/education-kb-gate-case-collision.log
+CONJGRANT_LOG ?= /tmp/education-kb-gate-conjunctive-grant.log
 FORKAUDIT_LOG ?= /tmp/education-kb-gate-shelf-fork.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
 ALIAS_LOG ?= /tmp/education-kb-gate-alias-canonical.log
@@ -82,7 +83,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
+.PHONY: gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -120,7 +121,44 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
              gate-capability-absence gate-fork-direction gate-group-lineage \
-             gate-action-answered gate-commit-gate gate-case-collision
+             gate-action-answered gate-commit-gate gate-case-collision \
+             gate-conjunctive-grant
+
+# ---------------------------------------------------------------- p427
+# 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
+# THAT SHAPE.  Found first-hand on `HyNuwa/UniMCP`'s `LICENSE` (`1 980` B
+# `sha256(12) 727b864af003` @ HEAD `2916cce7a726`): the title is `MIT License` (© MaxiFG),
+# and below a separator the payload says *"Portions of this software are derived from
+# utn-mcp and remain under its original license"* followed by a standalone `ISC License`
+# (© Joaquín Peñalva).  Both grants are LIVE AND SIMULTANEOUS — nothing is chosen.
+#
+# 🔴 Measured at p427, NINE instruments on this base answer `MIT` and NOT ONE reports the
+# ISC segment.  Six family classifiers (`p198`, `p306`, `p228`, `p211`, `p191`, `p419`)
+# return `MIT`; and all THREE purpose-built multi-grant readers miss it BY CONSTRUCTION,
+# which is why this is a new scope rather than a bug report:
+#   `p228.dual_grant`            -> None          (its subject is a CHOICE: "either A or B")
+#   `p202.scope_reader`          -> split_scope=False, and it emits the separator line as a
+#                                   spurious scope row (its subject is a PATH: `skills/`)
+#   `p419.menciones_cruzadas`    -> []            (needles are copyleft-only: affero, lesser)
+# So the taxonomy is three shapes, not two: DISJUNCTIVE (p228), PATH-SCOPED (p202), and
+# DERIVATION-SCOPED — this gate.
+#
+# 🔴 THE COST PASSES EVERY TIER CHECK.  Both families are permissive, so `commercial_use`
+# is unaffected and no licence gate goes red.  The defect is an UNDERSTATED NOTICE
+# OBLIGATION: the cell says MIT, one notice; the payload owes two, and the second names a
+# third party's copyright.  That is why it is checked by SHAPE.
+#
+# 🔵 The two guards are load-bearing and both were calibrated against a REAL payload.
+# Stock GPL-3.0 (`35 149` B, carried by `EduardoKrausME/moodle-local_mcp`) names
+# `GNU Affero General Public License` in its own §13 and contains `at your option` twice,
+# so a naive detector of EITHER shape fires on it.  Guard 1: a family counts only as a
+# STANDALONE TITLE LINE.  Guard 2: a conjunctive verdict also needs a SCOPE SENTENCE above
+# the second title.  Stock GPL-3.0 has none, and C7-C10 hold it out.  No network.
+gate-conjunctive-grant: ## p427 — one payload, two LIVE families, and a notice obligation of two
+	@cd compose/code/p427-conjunctive-grant && { $(PY) -I test_conjunctive_grant.py > $(CONJGRANT_LOG) 2>&1 || { echo "🔴 p427-conjunctive-grant FAILED — its own report follows:" ; sed "s/^/   /" $(CONJGRANT_LOG) ; false ; } ; } && echo "── p427-conjunctive-grant (24 controls: the MIT+ISC positive, stock GPL-3.0 and Apache-2.0 negatives, the disjunctive shape left to p228, and both guards in isolation)" && echo "   PASS" || exit 1
+
+conjunctive-census: ## p427 — the population arm over every committed payload.  A measurement, never a failure.
+	@cd compose/code/p427-conjunctive-grant && $(PY) -I sweep.py --root ../../..
 
 # ---------------------------------------------------------------- p423
 # 🔴 `make hooks` HAS BEEN RED ON PURPOSE SINCE p398, so its exit status has carried no

@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **SIXTEEN unshelved addresses from ONE two-word leg, after `p426` recorded eleven consecutive passes of zero. 🟢 `Gap 426-C` is CONFIRMED and its MECHANISM is named: this cohort is named after the INSTITUTION, not the platform, so `p426`'s name-keyed census catches exactly 1 of the 16. 🔴 And one of the sixteen carries a grant shape nine instruments on this base read wrong.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: the baseline run was 🟢 **54 blocking gates
+green** before this pass wrote a line, and after these writes `make commit-gates` exits `0` over
+🟢 **55 blocking gates green** — the new one is `gate-conjunctive-grant`, built and wired on this
+pass. 🔵 **No date straddle:** every leg, `ls-remote`, shallow clone, tree enumeration and payload
+digest happened **2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+🔴 **`Gap 425-A` reproduces, and this pass measured it on a SECOND channel.** `p426` recorded
+`curl` at `HTTP 000` for every non-GitHub domain. On this host **both** fetch channels fail:
+`curl` returns `000` for `unesco.org`, `oecd.org`, `iesalc.unesco.org`,
+`education.ec.europa.eu`, `multistate.us`, `en.wikipedia.org` and
+`digital-strategy.ec.europa.eu`, and the tool-side fetcher fails **DNS resolution**
+(`ENOTFOUND`) on the same domains while resolving `github.com` normally. 🟢 So the gap is
+narrower and harder than "this host cannot reach": **DNS is GitHub-only, and server-side search
+summaries are the one non-GitHub channel** — summaries cannot be digested, so **no policy or
+market cell on a host of this class can ever be `authoritative`.** Every licence cell below is
+`authoritative`; every policy and market cell is `reported`.
+
+### 🟢 Promoted to this shelf — six addresses, every grant read first-hand at the SHA
+
+| address | grant, read at the SHA | heads | capability — band stated per cell | region |
+|---|---|---|---|---|
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | 🟢 **MIT** — `LICENSE` **`1 078` B `sha256₁₂ d0a329112827`** @ HEAD `a0c831a7d1af`. 🟢 Tree **ENUMERATED**: `git ls-tree -r` returns **exactly one** licence-shaped path. 🟢 `package.json` declares `"license": "MIT"` — two channels **agree** | **13** refs; last **2026-10-24**; 19 open issues | 🟢 Teacher-side Moodle agent, **es-ES throughout** (`"Te ayuda a preparar tu asignatura"`). Grades against **the teacher's own rubric**, works the forum, builds topics and quizzes, and reports how the class is going. Built on the **Claude Agent SDK** with **Playwright** browser automation — so it drives Moodle's *web UI* where no web-service token exists. 🟢 **`authoritative`** — read from the payload at the SHA | EMEA |
+| [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) | 🟢 **ISC** — `LICENSE` **`748` B `sha256₁₂ 2ad14eb14513`** @ HEAD `bdafc6ae0932`. 🟢 Tree **ENUMERATED**: one licence-shaped path. 🟢 `package.json` declares `"license": "ISC"` — two channels **agree** | **12** refs; last **2026-10-24** | 🟢 Moodle **+ SIU Guaraní** (the student-records system used across Argentine public universities) behind one agent. 🔵 The SIU Guaraní limb is the part that matters: it is a **records** system, not an LMS, and no prior row on these shelves reaches one. Authenticates on the institutional mail form `<legajo>@<especialidad>.frc.utn.edu.ar` 🟢 **`authoritative`** | LATAM |
+| [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) | 🟢 **MIT *and* ISC** — root `LICENSE` **`1 980` B `sha256₁₂ 727b864af003`** @ HEAD `2916cce7a726`. 🔴 **This cell is TWO families and nine instruments on this base said one** — see the finding below. 🟢 Tree **ENUMERATED**: **four** licence-shaped paths, so a root-only read is wrong twice over (`gate-subtree-grant`) | **10** refs; last **2026-10-24**; carries `evals/` and `mcpb/` packaging | 🟢 Generalises `utn-mcp` from one university to **many**: UTN, **UNJu** (`virtual.unju.edu.ar`), **UNSa** (`exavirtual.unsa.edu.ar`) — Moodle *and* SIU Guaraní per institution. 🔵 A **multi-tenant** institutional connector is the shape a regional engagement actually needs 🟢 **`authoritative`** | LATAM |
+| [`jamestesting0/tum-mcp`](https://github.com/jamestesting0/tum-mcp) | 🟢 **MIT** — `LICENSE` **`1 092` B `sha256₁₂ ce90dfa77bef`** @ HEAD `ef7cb0a8dc59`. 🟢 Tree **ENUMERATED**: one licence-shaped path. 🟢 **Three** channels agree: `package.json` `"license": "MIT"` **and** `pyproject.toml` `license = "MIT"` | **4** refs; last **2026-10-25** | 🟢 **36 tools** over **TU München** Moodle **+ Artemis** (the interactive-exercise/assessment platform) **+ Zulip**. 🔵 The Artemis limb is the first **assessment-platform** reach on these shelves that is not an LMS gradebook. Published to npm as `@jamestesting888/tum-mcp` — 🔴 note the npm scope (`…888`) differs from the GitHub owner (`…0`); pin the repository, not the package name. 🔴 README states it is **unofficial and independent of TUM** 🟢 **`authoritative`** | EMEA |
+| [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | 🟢 **MIT** — `LICENSE` **`1 064` B `sha256₁₂ 0dc1ec808f28`** @ HEAD `f142752372ac`. 🟢 Tree **ENUMERATED**: one licence-shaped path. 🟢 **`clean` under `Amendment 13`** — holder `kad-xyz` equals the owner segment, the **only** one of thirteen payloads this pass read where that is true | **20** refs; last **2026-10-24** | 🟢 **Go** implementation over SPbPU: `dl.spbstu.ru` Moodle, university mail, **and `openedu.ru`** (the Russian national MOOC platform). 🔵 Highest ref count among the granted addresses in this leg, and the only **compiled-language** member — relevant where a client will not run a Node or Python toolchain inside the campus network 🟢 **`authoritative`** | EMEA |
+| [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) | 🟢 **MIT** — `LICENSE` **`1 070` B `sha256₁₂ c458af6b099b`** @ HEAD `a2633e3e1cda`. 🟢 Tree **ENUMERATED**: one licence-shaped path. 🟢 `package.json` declares `"license": "MIT"` — two channels **agree** | 🔴 **2** refs — the thinnest in the set; last **2026-10-24** | 🟢 **SRCE Merlin** (the Moodle 5.2 service shared across Croatian universities). 🟢 **Read-only by construction, with "phone-approved sends"** — a write is gated on an out-of-band human confirmation. 🔵 **That is the oversight artefact `Trend 48` is about, arrived at independently**: this is the second address on these shelves where human-in-the-loop is the default rather than studio-added, and the first where the approval leaves the machine 🟢 **`authoritative`** | EMEA |
+
+🔴 **Graded honestly: these are small.** Ref counts run **2**–**20**; `merlin-mcp` and
+`moodlia-portable` have **2**. 🔴 **They are pattern exemplars and connectors, not
+dependencies** — an engagement should read the architecture, pin a SHA, and expect to own the
+code. 🔵 Their value is that each one has already solved an **institution-specific
+authentication and data-shape problem** that a studio would otherwise discover in week 3.
+
+### 🔴 `T427` — `HyNuwa/UniMCP`'s grant is TWO FAMILIES, and nine instruments on this base read ONE
+
+🟢 **The payload, read at the SHA.** Below a separator rule, `LICENSE` continues past its MIT
+body:
+
+> `Portions of this software are derived from utn-mcp and remain under its original license:`
+> `ISC License` · `Copyright (c) 2026 Joaquín Peñalva`
+
+🟢 **Both grants are live and simultaneous.** Nothing is chosen: **MIT** (© *MaxiFG*) governs the
+work, **ISC** (© *Joaquín Peñalva*) governs the derived portions, and a distributor owes **both**
+notices. 🟢 **And this pass verified the named parent independently in the same leg** —
+`nialvape/utn-mcp`, **ISC**, `748` B `sha256₁₂ 2ad14eb14513`, **© Joaquín Peñalva**: the same
+holder the ISC segment names. 🔵 This is the **correctly-attributed** form of what `p426`'s
+`T129` caught undeclared — the lineage is stated **inside the grant**.
+
+🔴 **Nine instruments, one answer, and it is incomplete:**
+
+| instrument | its declared subject | on this payload |
+|---|---|---|
+| `p198` `p306` `p228` `p211` `p191` `p419` *(6 family classifiers)* | the licence **family** | 🔴 all six → **`MIT`**; none reports ISC |
+| `p228.dual_grant` | a **CHOICE** — *"available under either MIT or GPLv2"* | 🔴 **`None`** — the payload offers no choice |
+| `p202.scope_reader` | a **PATH** — `skills/` AGPL-3.0, `app/` AGPL-only | 🔴 **`split_scope=False`**, and it emits the `-----` separator as a spurious scope row |
+| `p419.menciones_cruzadas` | copyleft parentage (needles `affero`, `lesser general public`) | 🔴 **`[]`** — a permissive-to-permissive cross-grant is outside its vocabulary |
+
+🟢 **Not one of those is a bug; each is correct inside its scope.** The gap is that **no scope
+covered this payload**, so the taxonomy is **three** shapes and this base had instruments for
+two: **DISJUNCTIVE** (`p228`), **PATH-SCOPED** (`p202`), and **DERIVATION-SCOPED** — which had
+none.
+
+🔴 **The cost passes every tier check, which is why nothing caught it.** Both families are
+permissive, so `commercial_use` is unaffected and no licence gate goes red. The defect is an
+**understated notice obligation**: the `MIT` cell owes **one** notice; the payload owes **two**,
+and the second is a **named third party's copyright**. A studio shipping one notice here drops an
+attribution it actually holds.
+
+🟢 **Built and wired on this pass**, so it is standing rather than a one-off:
+[`gate-conjunctive-grant`](../compose/code/p427-conjunctive-grant/) — **24 controls**,
+blocking, no network, in `HOOK_GATES` and `COMMIT_GATES`.
+🔵 **Its two guards were calibrated against a real payload, not an imagined one.** Stock
+**GPL-3.0** (`35 149` B, carried by `EduardoKrausME/moodle-local_mcp`) names
+`13. Use with the GNU Affero General Public License.` in its own §13 **and** contains
+`at your option` twice — so the naive form of *both* detectors fires on it. Guard 1 requires a
+**standalone title line**; guard 2 requires a **scope sentence** above the second title, and
+stock GPL-3.0 has none. `C7`–`C10` hold it out.
+🔵 **Population, derived after the writes:** **265** licence payloads committed to this base,
+**1** conjunctive, **2** disjunctive, **262** single. 🔴 One in 265 is not a trend — but it was
+found in the **first ten addresses this pass read**, and those two rates are not the same claim.
+
+### 🔴 `T428` — `Amendment 13` MEASURED: it fires on 12 of 13 payloads and NONE of the 12 is a fork
+
+🟢 `p426` registered `Amendment 13` — *compare the copyright **holder** against the **owner**
+segment* — on **one** specimen, and explicitly made it *"a signal rather than a verdict."* 🟢
+**That caution is now vindicated with a number.** Across the **13** payloads this pass read
+first-hand, the raw comparison fires **12** times (**92 %**) and **zero** of those twelve is a
+fork. Full rows in
+[`evidence/p427-amendment13-measurement.2026-10-25-p427.tsv`](../evidence/p427-amendment13-measurement.2026-10-25-p427.tsv).
+
+| class | n | why it fires |
+|---|---|---|
+| 🟢 **CLEAN** | **1** | `kad-xyz/spbstu-mcp` — holder equals owner |
+| 🟡 **NORMALISATION** | **4** | one identity in two spellings: `Simon Seifert`/`simonseifert`, `Carlos André Ferreira`/`CarlosAndreFerreira` *(accent fold)*, `Matt Lo`/`Mattlo0546` *(digit strip)*, `Alexander Leschinskiy`/`av-leschinskiy` *(surname substring)* |
+| ⚪ **STOCK-TEXT — the question is UNDEFINED** | **2** | both GPL-3.0 rows: a stock copyleft text carries the **Free Software Foundation's** notice and **never** names the project's holder, so no named party exists to compare against |
+| 🟡 **COLLECTIVE** | **2** | `TUM Moodle integration contributors`, `Lakshman Reddy and contributors` — a project body, not a named party |
+| 🔴 **PERSON-VS-HANDLE — irreducible** | **4** | a real person whose handle or org simply differs: `falkenslab`/*Francisco Vargas Ruiz*, `nialvape`/*Joaquín Peñalva*, `OmarAli-prod`/*Omar Ismail*, `HyNuwa`/*MaxiFG* |
+
+🔴 **The obvious refinement is REFUTED by `p426`'s own specimen, and this pass tested it rather
+than assuming it.** Adding *"holder equals the HEAD commit author"* as a third channel resolves
+`HyNuwa/UniMCP` cleanly — holder `MaxiFG`, HEAD author `MaxiFG`. 🔴 **But on `thc1006/moodle-mcp`
+the HEAD commit author is ALSO `G36maid`**, because a fork **carries the upstream's commits**, so
+the upstream's author is the fork's HEAD author **by construction**. The channel is satisfied in
+the fork case **and** the legitimate case: it cannot discriminate, and wiring it would turn this
+base's **only** true positive into a **miss**. 🔵 Recorded as a refutation, not an improvement.
+
+🟢 **What did separate the two specimens: the licence payload DIGEST, shared across OWNERS.**
+`thc1006/moodle-mcp` and `G36maid/moodle-mcp` both carry `LICENSE` at **`1 064` B
+`sha256₁₂ 5da1fff0a1db`** — byte-identical, two owners, and the holder names *the other owner*.
+`UniMCP`'s payload (`1 980` B `727b864af003`) collides with nothing, because it is **not a copy**:
+it is a declared derivative that states its lineage in the grant text. 🔵 That is
+`gate-payload-digest`'s existing subject, so the discriminating form of `Amendment 13` is a
+**join onto an instrument this base already has**. 🔴 **Not claimed as a rate:** two specimens, one
+positive and one negative, is a hypothesis.
+
+### 🔴 Three of sixteen carry NO grant at any depth, and the largest is the worst case
+
+| address | refs | tree enumeration | consequence |
+|---|---|---|---|
+| [`JaipuriaAILabs/Moodle-MCP`](https://github.com/JaipuriaAILabs/Moodle-MCP) | 🔴 **93** — the **highest ref count in the whole leg** | 🔴 **zero** licence-shaped paths | 🔴 **Not shelvable at any capability.** Serves Jaipuria institutions (India) and gates on a Google account. The activity signal is the strongest in the set and the grant is absent — which is exactly the pair a studio misreads as maturity |
+| [`JeabtiE/iep-gen-assistant`](https://github.com/JeabtiE/iep-gen-assistant) | 59 | 🔴 **zero** licence-shaped paths | 🔴 Not shelvable. **Thai special-education IEP** generation, built for the **JUMP THAILAND Hackathon 2026** — see the declared capability gap below |
+| [`hd659/moodle-ed-autopilot-patch`](https://github.com/hd659/moodle-ed-autopilot-patch) | 2 | 🔴 **zero** licence-shaped paths | 🔴 Not shelvable. A **MYT (Malaysia)** deadline normaliser and short-extension guard; `README.md` is **empty** |
+
+### 🔵 Declared, so silence cannot read as coverage
+
+- 🔴 **ZERO North American addresses in sixteen.** Checked rather than assumed: every `.edu`
+  string in the set resolves to **`.edu.ar`** (`unju`, `unsa`, `utn`), **`.edu.eg`**
+  (`zewailcity`), or the placeholder `lms.university.edu`. 🟡 `Gap 427-B`: the institutional-agent
+  supply in this cohort is **entirely non-US**, while the LMS whose agents dominate these shelves
+  (Canvas) is **US-market**. Nothing has measured whether that is a discovery artefact or a real
+  asymmetry.
+- 🔴 **A real capability gap, now with a specimen and no grant.** **Special-education IEP**
+  generation appears twice in this pass's capability legs (`JeabtiE/iep-gen-assistant`, and
+  `100205ivan/EyeEP` which is **already shelved**) and the unshelved one carries **no licence**.
+  🟡 `Gap 427-C`: there is demand-side evidence for IEP tooling and **no permissively-granted
+  implementation** this base can offer.
+- 🔵 **`ISC` is NOT new to this base.** Checked before claiming it: `ISC` already appears in cells
+  across `agents/top.md`, `repos/foundations.md` and four other shelves, so `utn-mcp` extends an
+  existing family rather than opening one.
+- 🔴 **`24kchengYe/human-skill-tree` is NOT a `p427` finding.** This pass's census flagged its
+  split notice as disjunctive; checking first showed `p200`/`p202` **already** registered it,
+  with `ACTION OJ`/`ACTION OR` and a built scope reader. Recorded so the sweep's output is not
+  mistaken for a discovery.
+
 ## 🆕 `p426` · 2026-10-25 — **One unshelved address in eight legs — and it is the first grading agent on these shelves whose DEFAULT behaviour is the artefact three jurisdictions demand. 🔴 And this pass COMMITTED `T127` before catching it: a slug census run without a boundary terminator reported four live addresses as dead, because `owner/moodle-mcp-server` folds into `owner/moodle-mcp` under an unanchored pattern.**
 
 🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 This **contradicts `Gap 425-B`**, which recorded `make commit-gates` and `make hooks`

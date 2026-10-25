@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 427 — reads 2026-10-25, commit 2026-10-25 — **The eleven-pass drought was a QUERY, not the field: one two-word leg returned 16 unshelved addresses. 🟢 `Gap 426-C` CONFIRMED and mechanised — this cohort is named after the INSTITUTION, not the platform. 🟢 A new grant SHAPE found, gated and wired. 🔴 And `Amendment 13` measured at a 92 % fire rate with zero true positives.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, shallow clone, tree enumeration and payload
+digest happened **2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+🟢 **Gates RAN on this host**, against `13ecffc`: a baseline run **before this pass wrote a
+line** exited `0` over 🟢 **54 blocking gates green**, and after the shelf writes
+`make commit-gates` exits `0` over 🟢 **55 blocking gates green** — the new one is
+`gate-conjunctive-grant`, built and wired here. 🟢 **Three gates fired on this pass's own drafts
+and all three were right**: `gate-register-currency` (the register lagged all six shelves by one
+pass), `gate-census-currency` and `gate-union-currency` (both censuses stale the moment the
+shelves were written, exactly as `p352` says is structural).
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 426-C` is CONFIRMED, and the mechanism is a NAMING convention.** `p426` recorded
+  eleven consecutive passes of zero unshelved addresses from the eight prescribed legs and
+  refused to read it as saturation. 🟢 One GitHub repository search of **two words** —
+  `moodle mcp`, `sort=updated` — reports **`total_count` 242** and returned **16 unshelved
+  in-domain addresses in its first 20 results**. 🟢 `p426`'s census pattern required the
+  repository name to *begin* with `moodle-mcp`; of the 16 it catches **exactly one**. The other
+  15 are named after the **institution** (`utn-mcp`, `tum-mcp`, `merlin-mcp`, `spbstu-mcp`,
+  `UniMCP`), the **product** (`miyagi`, `slidemate`, `open-moodle`), or carry the platform name
+  non-initially. 🔵 **`p426`'s census was correct for what it asked**; the inference from it —
+  *"the whole Moodle MCP cohort"* — was wider than the measurement.
+- 🟢 **Six addresses promoted**, every grant read first-hand at the SHA: `falkenslab/miyagi`
+  (MIT), `nialvape/utn-mcp` (ISC), `HyNuwa/UniMCP` (MIT **and** ISC), `jamestesting0/tum-mcp`
+  (MIT), `kad-xyz/spbstu-mcp` (MIT), `simonseifert/merlin-mcp` (MIT); plus
+  `EduardoKrausME/moodle-local_mcp` (GPL-3.0) to the foundation layer.
+- 🔴 **`T427` — a grant may carry two families CONJUNCTIVELY, and nine instruments on this base
+  read one.** `HyNuwa/UniMCP`'s `LICENSE` (**`1 980` B `sha256₁₂ 727b864af003`** @ HEAD
+  `2916cce7a726`) is titled `MIT License` and, below a separator, states *"Portions of this
+  software are derived from utn-mcp and remain under its original license"* followed by a
+  standalone **ISC** grant © *Joaquín Peñalva*. Both are live and simultaneous. 🟢 **The named
+  parent was verified independently in the same leg** — `nialvape/utn-mcp`, ISC, © the same
+  holder. 🔴 Six family classifiers answer `MIT`, and all three purpose-built multi-grant
+  readers miss it **by construction**: `p228.dual_grant` needs a **choice**,
+  `p202.scope_reader` needs a **path**, `p419.menciones_cruzadas` is **copyleft-only**. 🔴 **The
+  cost passes every tier check** — both families are permissive, so no gate goes red and the
+  defect is an **understated notice obligation**: one notice owed where two are.
+  🟢 **Closed by `gate-conjunctive-grant`** — 24 controls, blocking, no network.
+- 🔴 **`T428` — `Amendment 13` measured: it fires on 12 of 13 payloads (92 %) and NONE of the
+  twelve is a fork.** Four are one identity in two spellings, **two are stock copyleft texts
+  where the question is UNDEFINED** (the holder is the FSF), two name a project body, four are a
+  person whose handle differs. 🔴 **The obvious fix was tested and FAILED**: adding *"holder
+  equals the HEAD commit author"* resolves `UniMCP`, but on `p426`'s own specimen
+  `thc1006/moodle-mcp` the HEAD author is **also** `G36maid`, because a fork **carries the
+  upstream's commits** — so the channel is satisfied in both cases and wiring it would turn this
+  base's only true positive into a **miss**. 🟢 What did discriminate: the **payload digest
+  shared across owners**, which is `gate-payload-digest`'s existing subject.
+- 🟢 **The grant follows the ARCHITECTURE**, which replaces a tally with a rule: an agent running
+  **in-process** as a Moodle plugin is **GPL-3.0** by inheritance (**2 / 2**, both carrying the
+  identical stock digest `sha256₁₂ 3972dc9744f6`); one talking to it **over the REST API** is
+  **MIT/ISC** by choice (**10 / 10**, ten distinct digests, no copyleft). 🔴 So the licence
+  question is settled at the **architecture decision**, weeks before anyone reads a `LICENSE`.
+- 🔴 **Three of sixteen carry NO licence-shaped path at any depth** and are unshelvable whatever
+  their capability — including `JaipuriaAILabs/Moodle-MCP` at **93** refs, the **highest**
+  activity signal in the whole leg.
+- 🔴 **ZERO North American institutions in sixteen**, checked rather than assumed: every `.edu`
+  string resolves to `.edu.ar`, `.edu.eg`, or the placeholder `lms.university.edu`.
+  🟡 `Gap 427-B`.
+- 🔴 **`Gap 425-A` reproduces and is NARROWED by a second channel.** `curl` returns `HTTP 000`
+  for every non-GitHub domain **and** the tool-side fetcher fails **DNS** (`ENOTFOUND`) on the
+  same hosts while resolving `github.com` normally. 🟢 So the gap is not "no egress": **DNS
+  resolves GitHub and nothing else**, and search summaries are the one surviving non-GitHub
+  channel. 🔴 A summary cannot be digested, so **no policy or market cell on a host of this class
+  can ever be `authoritative`** — by construction. Every licence cell here is `authoritative`;
+  every policy and market cell is `reported`.
+
+### 🟢 The census, derived LAST — after every shelf write
+
+🔵 Derived from the nine shelf files of the tree this pass commits, as `p352` requires, and
+restated rather than back-fitted:
+
+**2 796** harvested shapes → **38** are not addresses → **2 758 addresses**.
+
+🔵 **2 758** channel-U addresses and **3 237** channel-B survivors give
+**3 603 addresses over both channels**.
+
+🟢 **The `+16` on channel-U is checkable against this pass's own narrative**, which is the point
+of stating it: `p426` committed **2 742**, this pass promoted or recorded **16** new addresses,
+and `2 742 + 16 = 2 758`. 🔵 Both censuses were red before this section existed —
+`gate-census-currency` and `gate-union-currency` caught the inherited figures the moment the
+shelves were written, which is `p352`'s ordering defect behaving exactly as designed.
+
+### 🔵 Declared gaps, re-tested rather than re-asserted
+
+🟡 **Opened:** `Gap 427-A` (prescribed legs must be re-specified by **term count** — at seven
+ANDed terms a leg cannot distinguish an empty field from an empty query), `Gap 427-B` (the
+non-US asymmetry), `Gap 427-C` (special-education IEP has demand and no granted implementation),
+`Gap 427-D` (the architecture rule is untested on Canvas and Open edX), `Gap 427-E` (the APAC leg
+returned regulation only, with no adoption figure and no named player), `Gap 427-F` (no address pairs the
+oversight artefact with a **local model path**), `Gap 427-G` (`Amendment 13` unusable alone),
+`Gap 427-H` (the `T` series has no allocation instrument — `p426`'s `T127`–`T129` collide with
+`archive/`, which is why this pass verified `T427`–`T430` free before using them).
+
+🔴 **Standing, unworked, and said so:** `Gap 425-D`, `Gap 425-E`, `Gap 426-B`, `Gap 477`
+remainder. 🔴 `gate-census-union` remains the one **declared, non-blocking red**.
+
 ## Pass 426 — reads 2026-10-25, commit 2026-10-25 — **The gates RAN on this host, and the first thing they did was fail on `p425`'s inherited census — which is the measurable cost of a pass that could only check its contracts by hand. 🟢 `Gap 425-C` CLOSED. 🟢 One unshelved address in ten legs, MIT, and it is the first component on these shelves that produces the oversight artefact three jurisdictions demand BY DEFAULT. 🔴 And this pass manufactured four 404s before catching itself.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, clone, tree enumeration and payload digest

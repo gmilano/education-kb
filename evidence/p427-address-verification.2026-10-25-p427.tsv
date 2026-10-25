@@ -1,0 +1,26 @@
+# p427 · 2026-10-25 · sixteen candidate addresses from ONE corrected discovery leg, every grant read FIRST-HAND from a shallow clone at the SHA on 2026-10-25.
+# Leg: GitHub repository search `moodle mcp`, sorted by `updated` desc (total_count=242), plus two capability legs (`special education IEP`, `student dropout early warning`).
+# 🔴 p426 recorded ELEVEN consecutive passes of ZERO unshelved addresses from the eight PRESCRIBED legs, and declared Gap 426-C: that is evidence about QUERY SHAPE, not supply.
+# 🟢 Gap 426-C is CONFIRMED and quantified here: 16 of 21 candidates were unshelved. The prescribed legs over-AND their terms; this leg uses two words.
+# Tree ENUMERATED with `git ls-tree -r HEAD` (never laddered), per gate-subtree-grant. licence_paths counts EVERY licence-shaped path in the tree.
+# refs from `git ls-remote`. commits_shallow is 1 for every row because the clones are --depth 1; it is NOT a commit count and must not be read as one.
+# AMD13 = p426's Amendment 13 (compare copyright HOLDER against the OWNER segment), recorded raw. See p427-amendment13-measurement for what the raw signal is worth.
+slug	refs	head_sha12	last_commit	licence_paths	root_grant	bytes	sha256_12	channel2	holder	AMD13_raw	region	placed_by
+falkenslab/miyagi	13	a0c831a7d1af	2026-10-24	1	MIT	1078	d0a329112827	package.json=MIT	Francisco Vargas Ruiz	FIRES	EMEA	README+UI language es-ES; teacher-facing Moodle agent
+HyNuwa/UniMCP	10	2916cce7a726	2026-10-24	4	MIT+ISC	1980	727b864af003	package.json=MIT	MaxiFG; Joaquín Peñalva	FIRES	LATAM	README: "universidades argentinas"; Moodle + SIU Guaraní
+nialvape/utn-mcp	12	bdafc6ae0932	2026-10-24	1	ISC	748	2ad14eb14513	package.json=ISC	Joaquín Peñalva	FIRES	LATAM	README: "el MCP NO OFICIAL de la UTN" (Argentina)
+kad-xyz/spbstu-mcp	20	f142752372ac	2026-10-24	1	MIT	1064	0dc1ec808f28	none	kad-xyz	clean	EMEA	SPbPU St Petersburg; Moodle + openedu.ru
+EduardoKrausME/moodle-local_mcp	27	2e2d456685f9	2026-10-25	1	GPL-3.0	35149	3972dc9744f6	none	Free Software Foundation (stock text)	FIRES-structural	LATAM	Moodle local plugin; owner is a Brazilian Moodle developer
+simonseifert/merlin-mcp	2	a2633e3e1cda	2026-10-24	1	MIT	1070	c458af6b099b	package.json=MIT	Simon Seifert	FIRES	EMEA	SRCE Merlin, Croatian universities, Moodle 5.2
+jamestesting0/tum-mcp	4	ef7cb0a8dc59	2026-10-25	1	MIT	1092	ce90dfa77bef	package.json=MIT; pyproject=MIT	TUM Moodle integration contributors	FIRES	EMEA	TU München; Moodle + Artemis + Zulip
+OmarAli-prod/zewailcity-moodle-mcp	5	7fb2fd191829	2026-10-25	1	MIT	1068	e6fa66717af9	none	Omar Ismail	FIRES	EMEA	Zewail City of Science and Technology, Egypt
+gafapa/moodlia-portable	2	744ac1f3c0e5	2026-10-24	1	GPL-3.0	35149	3972dc9744f6	package.json=GPL-3.0-or-later	Free Software Foundation (stock text)	FIRES-structural	EMEA	companion to shelved gafapa/moodle-local_moodlia
+av-leschinskiy/moodle-mcp	5	69c36847e7ad	2026-10-24	1	MIT	1078	67b516c28e67	package.json=MIT	Alexander Leschinskiy	FIRES	EMEA	ru-RU README; teacher-facing Moodle REST
+sonstellar969/open-moodle	2	c705e91d8239	2026-10-24	1	MIT	1088	2e0193644321	pyproject=MIT	Lakshman Reddy and contributors	FIRES	Global	no institution named in the payload or README
+CarlosAndreFerreira/moodle-obsidian-mcp	2	e645eb308ff9	2026-10-24	1	MIT	1079	3fdb2fd7a3ec	pyproject=MIT	Carlos André Ferreira	FIRES	EMEA	pt-PT README; doctoral/higher-education scope
+Mattlo0546/slidemate	27	109713c2f14c	2026-10-24	1	MIT	1064	51795943e530	none	Matt Lo	FIRES	Global	macOS study app; Canvas/Blackboard/Moodle pulls
+JaipuriaAILabs/Moodle-MCP	93	d5acbacd4f98	2026-10-24	0	NO GRANT	-	-	none	-	undefined	APAC	Jaipuria institutions, India; Google-account gated
+JeabtiE/iep-gen-assistant	59	e03c5711c72f	2026-09-14	0	NO GRANT	-	-	none	-	undefined	APAC	Thai special education; JUMP THAILAND Hackathon 2026
+hd659/moodle-ed-autopilot-patch	2	a9efc1108b29	2026-10-25	0	NO GRANT	-	-	none	-	undefined	APAC	MYT (Malaysia) timezone normaliser; README is EMPTY
+# 🔴 THREE of sixteen carry NO licence-shaped path at any depth, so they are NOT shelvable whatever their capability: JaipuriaAILabs/Moodle-MCP (93 refs, the highest ref count in the set), JeabtiE/iep-gen-assistant, hd659/moodle-ed-autopilot-patch.
+# 🔴 100205ivan/EyeEP was a candidate on the IEP leg and is ALREADY SHELVED; it is excluded from the 16 and from the yield.

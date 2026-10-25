@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **`Pattern AY` — the multi-institution connector, wired on two addresses that are a DECLARED parent-and-derivative pair this pass verified in one leg. 🟢 Plus `Amendment 15`: the grant ladder gains a NOTICE COUNT, because a permissive cell can be right about the tier and wrong about what you owe.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54** blocking gates green at baseline,
+🟢 **55** after these writes — the new one is `gate-conjunctive-grant`, built this pass.
+🔵 All component reads **2026-10-25**, at the SHAs named.
+
+### 🟢 `Pattern AY` — one connector across many institutions, not one deployment per campus
+
+🔵 **When to reach for it.** A client is a **ministry, a university system, or a provider serving
+several institutions** — not one campus. Each institution runs its own LMS instance, often its
+own student-records system, and its own authentication form. The naive plan is one integration
+per institution, priced N times.
+
+🟢 **Why these components.** `p427` verified a **declared parent-and-derivative pair** in a
+single leg, and the derivative is the generalisation of the parent:
+
+| role | component | grant, read at the SHA | what it contributes |
+|---|---|---|---|
+| 🟢 **the multi-tenant shape** | [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) | 🟢 **MIT *and* ISC** — root `LICENSE` **`1 980` B `sha256₁₂ 727b864af003`** @ HEAD `2916cce7a726`; tree **ENUMERATED**: **4** licence-shaped paths | 🟢 A **host table per institution** (UTN, UNJu `virtual.unju.edu.ar`, UNSa `exavirtual.unsa.edu.ar`), each with both an LMS and a records endpoint. Ships `evals/` and `mcpb/` packaging |
+| 🟢 **the single-institution reference** | [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) | 🟢 **ISC** — `LICENSE` **`748` B `sha256₁₂ 2ad14eb14513`** @ HEAD `bdafc6ae0932`; tree **ENUMERATED**: one path | 🟢 The parent `UniMCP`'s own grant names. Shows the **institution-shaped auth form** concretely: `<legajo>@<especialidad>.frc.utn.edu.ar` |
+| 🟢 **the records reach** | *(both of the above)* | *(as above)* | 🟢 **SIU Guaraní** — the first **student-records** reach on these shelves. Every prior Moodle agent here reads an LMS gradebook only |
+| 🟢 **the oversight limb** | [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) | 🟢 **MIT** — `LICENSE` **`1 070` B `sha256₁₂ c458af6b099b`** @ HEAD `a2633e3e1cda`; tree **ENUMERATED**: one path | 🟢 **Read-only by construction, writes gated on an out-of-band phone approval.** Lift the approval boundary, not the Croatian-service specifics |
+| 🟡 **the in-LMS alternative** | [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🟡 **GPL-3.0** — `LICENSE` **`35 149` B `sha256₁₂ 3972dc9744f6`** @ HEAD `2e2d456685f9` | 🔴 Use **only** if the client insists the agent run *inside* Moodle. 🔴 That choice is a **copyleft** choice — see the architecture rule below |
+
+🟢 **How to wire it.**
+
+1. 🟢 **Decide the architecture FIRST, because it decides the licence.** External client over
+   the web-services REST API → **MIT/ISC**, the whole cohort above is available. In-process
+   Moodle plugin → **GPL-3.0**, inherited from Moodle itself. 🔴 Settle this before licence
+   review, not at it.
+2. 🟢 **Take `UniMCP`'s host-table shape as the tenancy model**: institution → `{lms_url,
+   records_url, auth_form}`. Read `utn-mcp` beside it to see what one fully-worked institution
+   costs.
+3. 🟢 **Keep the records limb separate from the LMS limb.** SIU Guaraní is a **system of record**;
+   enrolment and academic history carry a different data-protection posture than a gradebook
+   read, and the EU's Annex III admission/placement limb attaches to the records side.
+4. 🟢 **Put `merlin-mcp`'s approval boundary on every write**, from the start. 🔵 This is what
+   `Trend 50`'s four jurisdictions ask for, and **Korea's demand is already in force** — so for
+   an APAC client this is current, not anticipatory.
+5. 🔴 **Expect to own the code.** Ref counts are **10**, **12** and **2**. Fork at a pinned SHA,
+   run the client's CVE sweep in week 1, and price maintenance. 🔵 The saving is not the code —
+   it is that each institution's **auth form and data shape are already solved**.
+6. 🔴 **Answer the model-path question separately.** None of these components states where
+   inference runs; `Gap 427-F` records that no address here pairs the oversight artefact with a
+   local or in-tenant model path. Under CA `AB 1159` and the EU data-governance limb that is a
+   **procurement blocker**, not a detail.
+
+🔴 **What this pattern does NOT cover.** No component here reaches a **North American**
+institution — zero of sixteen (`Gap 427-B`) — so a US engagement gets the tenancy shape and the
+oversight boundary from this pattern and must **build** the connectors. 🔴 Nor does it cover
+**PowerSchool, Schoology, Skyward or Infinite Campus**: a direct leg for agents against those
+four US K-12 systems returned `total_count` **0**.
+
+### 🟢 `Amendment 15` — the grant ladder gains a NOTICE COUNT
+
+🔵 **Why.** `p426` added `Amendment 13` (holder versus owner) because a fork defeated every other
+axis. 🔴 **This pass found the inverse failure: a grant that is correct about the tier and wrong
+about the obligation.** `HyNuwa/UniMCP`'s payload is titled `MIT License`, and **every one of the
+nine instruments on this base answers `MIT`** — six family classifiers plus all three
+purpose-built multi-grant readers. 🔴 Below a separator the same file says *"Portions of this
+software are derived from utn-mcp and remain under its original license"* and carries a full
+**ISC** grant © *Joaquín Peñalva*. **Both grants are live and simultaneous.**
+
+🔴 **The cost passes every tier check, which is why nothing caught it.** MIT and ISC are both
+permissive, so `commercial_use` is unaffected and **no licence gate goes red**. The defect is an
+**understated notice obligation**: the cell owes **one** notice, the payload owes **two**, and the
+second names a third party.
+
+🟢 **The ladder rung, stated so it is mechanical:**
+
+> **After reading a grant, count the NOTICES, not just the family.** If the payload names a
+> second licence title on its own line *and* a scope sentence above it (`portions of`,
+> `derived from`, `remain under`, `third-party`, `bundled`), the cell is **two families** and the
+> deliverable owes **both** attributions.
+
+🟢 **Wired, not advisory:** `make gate-conjunctive-grant` — **24** controls, blocking, no
+network, in `HOOK_GATES` and `COMMIT_GATES`; `make conjunctive-census` for the population arm.
+🔵 **Its guards were calibrated on a real payload rather than an imagined one:** stock GPL-3.0
+names `GNU Affero General Public License` in its own §13 and contains `at your option` twice, so
+the naive form of **both** a conjunctive and a disjunctive detector fires on it. Guard 1 demands
+a **standalone title line**; guard 2 demands the **scope sentence**. 🔵 `p228.dual_grant` keeps
+the **disjunctive** shape and `p202.scope_reader` the **path-scoped** shape; this is the third.
+🔵 **Population at this commit:** **265** committed payloads, **1** conjunctive, **2**
+disjunctive, **262** single.
+
+### 🔴 `Amendment 13` — downgraded to a TRIGGER, with the number that justifies it
+
+🔴 **Measured on 13 payloads: the raw holder-versus-owner comparison fires `12` times (`92 %`)
+and NONE of the twelve is a fork.** Four are one identity in two spellings, two are stock texts
+where the question is **undefined** (the holder is the FSF), two name a project body, and four
+are a person whose handle simply differs. 🟢 `p426` called it *"a signal rather than a verdict"*
+and that is now vindicated quantitatively.
+
+🔴 **And the obvious fix is REFUTED, tested against `p426`'s own specimen rather than assumed.**
+Adding *"holder equals the HEAD commit author"* resolves `UniMCP` — but on `thc1006/moodle-mcp`
+the HEAD author is **also** `G36maid`, because a fork **carries the upstream's commits**. The
+channel is satisfied in both cases: it cannot discriminate, and wiring it would turn this base's
+**only** true positive into a **miss**.
+
+🟢 **So use `Amendment 13` as a TRIGGER FOR ONE MORE READ, never as a verdict:**
+
+> A holder that does not match the owner means **read the payload digest against other owners**.
+> `thc1006/moodle-mcp` and `G36maid/moodle-mcp` carry **byte-identical** `LICENSE` files
+> (`1 064` B `sha256₁₂ 5da1fff0a1db`) and the holder names the *other* owner — that is a fork.
+> `UniMCP`'s payload collides with nothing because it is not a copy but a **declared
+> derivative**. 🔵 The digest comparison is `gate-payload-digest`'s existing subject, so this is a
+> **join onto an instrument this base already has**, not a new channel.
+
+🔴 **Not claimed as a rate:** one positive and one negative specimen is a hypothesis, not a
+measurement.
+
 ## 🆕 `p426` · 2026-10-25 — **`Pattern AX` — the compliant grading engagement, wired on an address that was unshelved this morning. 🟢 It is the first recipe on these shelves where the human-in-the-loop step is INHERITED from a component rather than built by the studio. 🟢 Plus `Amendment 13`: the grant ladder gains a HOLDER comparison, because a five-day-stale fork defeats every other axis in it.**
 
 🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` scoped to `p425`'s host. 🔵 All

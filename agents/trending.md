@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **The eleven-pass drought was a QUERY-SHAPE artefact, and this pass has the number: ONE two-word leg returned 16 unshelved addresses. 🟢 `Gap 426-C` CONFIRMED, with the mechanism named — this cohort is named after the INSTITUTION, not the platform.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54 blocking gates green** at baseline,
+🟢 **55** after these writes (`gate-conjunctive-grant` is new this pass). 🔵 All reads
+**2026-10-25**.
+
+### 🟢 `Gap 426-C` is confirmed, and the mechanism is a NAMING convention
+
+🔵 **What `p426` measured.** Eleven consecutive passes, **zero** unshelved addresses from the
+**eight prescribed legs**; `p426` declined to call it saturation and declared `Gap 426-C`:
+*"this is evidence about query shape, not about supply growth."*
+
+🟢 **What this pass measured.** A single GitHub repository search — **`moodle mcp`**, two words,
+sorted by `updated` desc — reports **`total_count` = 242** and returned **16 unshelved
+in-domain addresses in its first 20 results**.
+
+🔴 **And the mechanism is visible in the slugs themselves.** `p426`'s census pattern was
+`github\.com/[A-Za-z0-9_.-]+/moodle-mcp[A-Za-z0-9_.-]*` — it requires the repository **name to
+begin with `moodle-mcp`**. Of this pass's 16 addresses it catches **exactly one**
+(`av-leschinskiy/moodle-mcp`):
+
+| why the name-keyed census misses it | addresses | n |
+|---|---|---|
+| 🔴 named after the **institution**, not the platform | `utn-mcp`, `tum-mcp`, `merlin-mcp`, `spbstu-mcp`, `UniMCP`, `Moodle-MCP` *(Jaipuria)* | **6** |
+| 🔴 named after the **product** | `miyagi`, `slidemate`, `moodlia-portable`, `open-moodle` | **4** |
+| 🔴 platform name **not at the start** of the slug | `zewailcity-moodle-mcp` | **1** |
+| 🔴 platform name present, **different suffix shape** | `moodle-local_mcp`, `moodle-obsidian-mcp`, `moodle-ed-autopilot-patch` | **3** |
+| 🔴 **case fold** — `Moodle-MCP` does not match a lower-case pattern | `JaipuriaAILabs/Moodle-MCP` | *(counted above)* |
+| 🟢 **caught** by the pattern | `av-leschinskiy/moodle-mcp` | **1** |
+
+🟢 **So `p426`'s "whole Moodle MCP cohort — 16 exact slugs" is a NAME census, correctly run and
+correctly reported, describing the slugs THESE SHELVES CARRY.** 🔴 It is not the cohort. The
+cohort is **name-invisible**, because an institutional Moodle agent is named after the
+university. 🔵 This also sharpens `T100`: the discriminator is not capability vocabulary versus
+recency vocabulary — it is **how few terms the query ANDs**. The prescribed legs AND four to six
+terms; this leg ANDs two.
+
+### 🟢 The sixteen, every grant read first-hand at the SHA on 2026-10-25
+
+🔵 Promoted to [`agents/top.md`](top.md) this pass: `falkenslab/miyagi`, `nialvape/utn-mcp`,
+`HyNuwa/UniMCP`, `jamestesting0/tum-mcp`, `kad-xyz/spbstu-mcp`, `simonseifert/merlin-mcp`.
+🔵 Promoted to [`repos/foundations.md`](../repos/foundations.md): `EduardoKrausME/moodle-local_mcp`.
+🔵 The remainder are recorded here with full verification and **not** promoted — reason per row.
+
+| address | grant @ SHA | refs | why it stays here | region |
+|---|---|---|---|---|
+| [`av-leschinskiy/moodle-mcp`](https://github.com/av-leschinskiy/moodle-mcp) | 🟢 **MIT** `1 078` B `sha256₁₂ 67b516c28e67` @ `69c36847e7ad`; tree **ENUMERATED**, one path; `package.json` **agrees** | 5 | 🟡 Teacher-facing Moodle REST server, **ru-RU** README. Capability overlaps `miyagi` and `tum-mcp` without adding a platform reach | EMEA |
+| [`Mattlo0546/slidemate`](https://github.com/Mattlo0546/slidemate) | 🟢 **MIT** `1 064` B `sha256₁₂ 51795943e530` @ `109713c2f14c`; tree **ENUMERATED**, one path | 27 | 🟡 **Student**-side macOS study app: slide tutor, lecture transcription, FSRS flashcards, pulls from Canvas/Blackboard/Moodle. 🔴 A desktop end-user product, not a composable component — the studio cannot wire it into a client stack | Global |
+| [`CarlosAndreFerreira/moodle-obsidian-mcp`](https://github.com/CarlosAndreFerreira/moodle-obsidian-mcp) | 🟢 **MIT** `1 079` B `sha256₁₂ 3fdb2fd7a3ec` @ `e645eb308ff9`; tree **ENUMERATED**, one path; `pyproject.toml` **agrees** | 🔴 2 | 🟡 **pt-PT**, doctoral/higher-ed, Moodle → **Obsidian** vault. 🔴 Its headline feature is an **"SSO Auto-Token Catcher"** — token capture is the opposite of what a client security review will accept, and that is a procurement blocker rather than a defect | EMEA |
+| [`OmarAli-prod/zewailcity-moodle-mcp`](https://github.com/OmarAli-prod/zewailcity-moodle-mcp) | 🟢 **MIT** `1 068` B `sha256₁₂ e6fa66717af9` @ `7fb2fd191829`; tree **ENUMERATED**, one path | 5 | 🟡 **Zewail City** (Egypt), `moodle.zewailcity.edu.eg`. 🟢 Credit where due: the README states the token *"goes nowhere except"* the institution's host, and CI is present. Single-institution scope is why it is not promoted | EMEA |
+| [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) | 🟢 **MIT** `1 088` B `sha256₁₂ 2e0193644321` @ `c705e91d8239`; tree **ENUMERATED**, one path; `pyproject.toml` **agrees** | 🔴 2 | 🟡 The one **institution-agnostic** member — configured by URL (`lms.university.edu` in its own example). 🔴 Which is also why it adds nothing the shelves lack: generic Moodle clients are already well covered here | Global |
+| [`gafapa/moodlia-portable`](https://github.com/gafapa/moodlia-portable) | 🟡 **GPL-3.0** `35 149` B `sha256₁₂ 3972dc9744f6` @ `744ac1f3c0e5`; tree **ENUMERATED**, one path; `package.json` declares **`GPL-3.0-or-later`** | 🔴 2 | 🟡 Desktop Moodle authoring companion to the **already-shelved** `gafapa/moodle-local_moodlia`. 🔴 **Copyleft** — outside the permissive set, flagged not hidden | EMEA |
+| [`JaipuriaAILabs/Moodle-MCP`](https://github.com/JaipuriaAILabs/Moodle-MCP) | 🔴 **NO GRANT** — tree **ENUMERATED**: **zero** licence-shaped paths @ `d5acbacd4f98` | 🔴 **93** | 🔴 **Unshelvable.** Highest ref count in the leg, no licence. 🔴 The activity-without-a-grant pair is the one a studio misreads as maturity | APAC |
+| [`JeabtiE/iep-gen-assistant`](https://github.com/JeabtiE/iep-gen-assistant) | 🔴 **NO GRANT** — **zero** licence-shaped paths @ `e03c5711c72f` | 59 | 🔴 **Unshelvable.** Thai **special-education IEP** generation, JUMP THAILAND Hackathon 2026. 🟡 `Gap 427-C`: the capability is real and has no granted implementation | APAC |
+| [`hd659/moodle-ed-autopilot-patch`](https://github.com/hd659/moodle-ed-autopilot-patch) | 🔴 **NO GRANT** — **zero** licence-shaped paths @ `a9efc1108b29` | 2 | 🔴 **Unshelvable**, and `README.md` is **empty**. A **MYT** deadline normaliser + short-extension guard, created **2026-10-25** | APAC |
+
+🔵 **One candidate was excluded from the sixteen before counting:** `100205ivan/EyeEP`
+(AI-assisted IEP management, surfaced on the special-education capability leg) is **already
+shelved**, so it is not novelty and is not in the yield.
+
+### 🔵 The legs, stated per leg so silence cannot read as coverage
+
+| leg | shape | result |
+|---|---|---|
+| 🟢 `moodle mcp`, `sort=updated` | **2 terms** | 🟢 `total_count` **242**; **16** unshelved in first 20 |
+| 🔴 `open badges verifiable credentials education AI agent pushed:>2026-06-01` | 7 terms + filter | 🔴 `total_count` **0** — and that is a **query** result, not a supply result |
+| 🔴 `IEP special education individualized education program AI pushed:>2026-05-01` | 7 terms + filter | 🔴 `total_count` **1** → `100205ivan/EyeEP`, already shelved |
+| 🟡 `special education IEP teacher AI assistant` | 5 terms | 🟡 `total_count` **1** → `JeabtiE/iep-gen-assistant`, **no grant** |
+| 🔴 `student dropout early warning prediction machine learning education pushed:>2026-01-01` | 9 terms + filter | 🔴 `total_count` **1**, a single notebook project; nothing shelvable |
+| 🔴 `powerschool schoology skyward infinite campus mcp server` | 7 terms | 🔴 `total_count` **0** — no agent reaches these three US K-12 SIS platforms |
+| 🟢 `topic:ai-tutor`, `sort=stars` | topic facet | 🔴 `total_count` **763**; **first 20 all already shelved** — this channel is genuinely swept |
+| 🟢 `github.com/topics/ai-tutor` page read | topic page | 🔴 20 repositories listed, **all 20 already shelved** |
+
+🔴 **The two-term leg returning 242 while a seven-term leg on the same platform returns 0 is the
+finding.** 🟡 `Gap 427-A`: the **prescribed leg set should be re-specified by term count**, and
+nothing has yet measured yield as a function of ANDed terms across other capabilities.
+
+🔴 **`T429` — a zero from an over-ANDed query is indistinguishable from an absence.** This pass's
+first three capability legs returned `total_count` of **0**, **1** and **1**, which reads exactly
+like a swept field. Re-running one of them with two terms (`moodle mcp`) returned **242**. 🔵 The
+class matters because `gate-absence` protects against publishing an absence **the index
+refutes** — it cannot protect against an absence that a **query shape manufactured**, and
+`p426`'s `T127` was the same failure mode one layer down (an unanchored pattern manufacturing
+four 404s).
+
 ## 🆕 `p426` · 2026-10-25 — **TEN legs — the eight prescribed plus two capability legs — and the two capability legs are the only ones that returned anything unshelved. 🟢 One promotion: `kaushikgunasekaren/canvas-grader-mcp`, MIT, five days old. 🔴 `T100` is BROKEN on the capability axis and CONFIRMED on the prescribed axis, which is the week's actual signal.**
 
 🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 This

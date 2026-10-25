@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **The prescribed trending leg is still zero — and this pass shows that is a property of the QUERY, not the supply: a two-word leg on the same platform returned 242 candidates and 16 unshelved addresses.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **55** blocking gates green after these
+writes, including `gate-conjunctive-grant` built this pass. 🔵 All reads **2026-10-25**.
+
+### 🟢 Promoted to [`repos/foundations.md`](foundations.md) this pass
+
+| repository | grant, first-hand | why |
+|---|---|---|
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🟡 **GPL-3.0**, `LICENSE` **`35 149` B `sha256₁₂ 3972dc9744f6`** @ HEAD `2e2d456685f9`, tree **ENUMERATED** (one path) | 🟢 The only address on these shelves that makes **Moodle itself** the MCP server, rather than a client of it. 🔴 Copyleft, and that is **inherited from Moodle's own GPL-3.0** by running in-process — see the architecture rule in `foundations.md` |
+
+### 🔴 `T430` — a GitHub `total_count` is a function of the QUERY, and three legs this pass proved it
+
+🔴 **Measured, in one sitting, against one platform:**
+
+| query | ANDed terms | `total_count` |
+|---|---|---|
+| 🔴 `open badges verifiable credentials education AI agent pushed:>2026-06-01` | 7 + filter | **0** |
+| 🔴 `powerschool schoology skyward infinite campus mcp server` | 7 | **0** |
+| 🔴 `special education IEP teacher AI assistant` | 5 | **1** |
+| 🟢 **`moodle mcp`** | **2** | **242** |
+
+🟢 **A positive control was run before any of these zeros was believed**, which is why they are
+reported as query results rather than as absences: `moodle mcp` was issued precisely to test
+whether the search channel on this host was truncated. It was not — **242**, with 16 unshelved
+addresses in the first 20 results. 🔵 The channel is healthy; the **seven-term queries are the
+defect**.
+
+🔴 **The trending question this raises about this base's own history.** Eleven consecutive passes
+of zero were recorded from the **prescribed** legs, and `p426` was right to refuse to call it
+saturation. 🟡 `Gap 427-A` registers the re-specification: **the prescribed leg set should be
+stated in terms of maximum ANDed terms**, because at seven terms a leg cannot distinguish an
+empty field from an empty query.
+
+### 🔵 Trending channels swept this pass, with their nils
+
+- 🔴 **`topic:ai-tutor` — genuinely swept, not an artefact.** `total_count` **763**; the top 20 by
+  stars were checked one by one against the shelves and **all 20 are already carried**
+  (`HKUDS/DeepTutor` 42 569★, `Miaotofu01/Study-Mate` 1 175★, `24kchengYe/human-skill-tree` 583★,
+  `ankimcp/anki-mcp-server` 531★, `ZeKaiNie/universal-examprep-skill` 318★,
+  `karanb192/algo-sensei` 298★, `Li-Evan/Bloom` 292★,
+  `SenmuuuuW/universal-diagnostic-tutor-skill` 251★, `artcc/freelingo` 207★, `nichochar/ari`
+  203★, `KeWang0622/kaogong-skill` 200★, `zijinz456/OpenTutor` 149★,
+  `flysheep-ai/education-skills` 117★, `PrepLabsAI/InterviewMentor` 113★,
+  `SimonsTang/feifei-companion` 109★, `Selleo/mentingo` 97★, `mahseema/aibooks` 93★,
+  `ahmedEid1/lumen` 90★, `codeXsidd/Studivexa` 72★, `yh2072/edgameclaw` 72★). 🔵 **A zero from a
+  two-word facet leg is a real sweep**; that is exactly the contrast with the seven-term legs
+  above.
+- 🟡 **Star counts are `reported`, from the search channel's own response, not read from
+  `api.github.com`** — which stays AUTHZ-refused on this host. Ref counts and grants in this
+  pass's tables are `authoritative`; star counts are not, and are never used to rank a promotion.
+- 🔴 **`github trending` as a page could not be read.** `Gap 425-A` reproduces on **both** fetch
+  channels: `curl` returns `HTTP 000` and the tool-side fetcher fails **DNS** (`ENOTFOUND`) for
+  every non-GitHub host. Only `github.com` and `raw.githubusercontent.com` resolve.
+
 ## 🆕 `p426` · 2026-10-25 — **The prescribed trending leg returned ZERO unshelved for the eleventh consecutive pass, and an unprescribed CAPABILITY leg returned a promotion on its first outing. 🔴 It also returned a five-day-stale FORK presented as canonical — the second specimen, and the one that proves freshness heuristics cannot catch this class.**
 
 🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` was a host property, now

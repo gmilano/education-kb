@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **Two trends, and both are about MEASUREMENT rather than models. 🔴 `Trend 49`: the open-source education-agent supply has gone INSTITUTION-LOCAL, which makes it invisible to every platform-keyed census — including this base's own. 🟢 `Trend 50`: four jurisdictions on three continents now ask for one artefact, and Korea's demand is the only one already IN FORCE.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **55** blocking gates green after these
+writes. 🔵 All supply reads **2026-10-25** and `authoritative`; every policy cell `reported`
+(`Gap 425-A`).
+
+🔵 **Numbering, disclosed because a silent collision is worse than an ugly footnote.** The trends
+**defined** in this file run `Trend 41`–`Trend 48`, so these two continue the sequence. 🔴 But a
+historical line in [`agents/trending.md`](../agents/trending.md) already **references** a
+*"Trend 50"* — a forward or stray citation written before any `Trend 50` was defined. 🟢 That
+reference **does not point at the `Trend 50` below**, and the line is left untouched because the
+discovery logs are append-only.
+
+### 🔴 `Trend 49` — the supply went INSTITUTION-LOCAL, and that is why the censuses saw a drought
+
+🔵 **The observation.** Of **16** unshelved addresses this pass verified first-hand, **13** are
+built for **one named institution or one national system** — TU München, SPbPU and `openedu.ru`,
+SRCE Merlin across Croatian universities, Zewail City, UTN, UNJu, UNSa, Jaipuria, Universidade
+Aberta, a Thai special-education programme, a Malaysian academic calendar. Only **3** are
+institution-agnostic.
+
+🟢 **Why this is a trend and not a list.** It changes what a census can see. The agent is named
+after the **university**, not the platform it talks to:
+
+| naming | examples | visible to a platform-keyed census? |
+|---|---|---|
+| institution | `utn-mcp`, `tum-mcp`, `merlin-mcp`, `spbstu-mcp`, `UniMCP`, `Moodle-MCP` | 🔴 **no** |
+| product | `miyagi`, `slidemate`, `moodlia-portable`, `open-moodle` | 🔴 **no** |
+| platform, non-initial or variant | `zewailcity-moodle-mcp`, `moodle-local_mcp`, `moodle-obsidian-mcp` | 🔴 **no** |
+| platform, initial and exact | `av-leschinskiy/moodle-mcp` | 🟢 **yes** — **1 of 16** |
+
+🔴 **This base paid the cost directly.** `p426` ran a boundary-terminated census
+(`github\.com/…/moodle-mcp[A-Za-z0-9_.-]*`) — correct for what it asked — and described the
+result as *"the whole Moodle MCP cohort — 16 exact slugs."* 🟢 It was a precise count of the
+slugs **these shelves carry**; the live cohort behind a two-word search is **`total_count` 242**.
+🔵 The census was right and the inference from it was wide, which is a cleaner failure than a
+broken instrument and harder to notice.
+
+🟢 **The three mechanisms driving it, each visible in the payloads:**
+
+1. 🟢 **Authentication is institution-shaped.** `utn-mcp` requires the form
+   `<legajo>@<especialidad>.frc.utn.edu.ar`; `UniMCP` carries a host table per university. That
+   is not generalisable configuration — it is per-institution code.
+2. 🟢 **The reach is not just the LMS.** `utn-mcp` and `UniMCP` reach **SIU Guaraní** (student
+   records), `tum-mcp` reaches **Artemis** (assessment) and **Zulip**, `spbstu-mcp` reaches
+   **`openedu.ru`**. A generic Moodle client cannot have these limbs.
+3. 🟢 **Language is part of the product.** es-ES (`miyagi`), ru-RU (`av-leschinskiy`), pt-PT
+   (`moodle-obsidian-mcp`), and Spanish throughout `UniMCP` and `utn-mcp`.
+
+🔴 **The procurement consequence.** A studio searching for "the Moodle agent" will find a
+handful of generic clients and conclude the field is thin. 🟢 **The right search is for the
+client's own institution**, and the right expectation is a **pattern exemplar that has already
+solved this institution's auth form** — not a dependency. 🔵 Ref counts across the set run
+**2**–**20**: this is a field of many small, locally-correct implementations, which is the
+opposite of the one-hub-no-middle shape `p415` once proposed.
+
+### 🟢 `Trend 50` — four jurisdictions, one artefact, and the binding one is already in force
+
+🔵 `p426` recorded three jurisdictions converging on a **reviewable human-in-the-loop evidence
+trail**. 🟢 **This pass adds a fourth and, more usefully, re-orders them by WHEN THEY BIND:**
+
+| jurisdiction | instrument | binds | what it asks for |
+|---|---|---|---|
+| 🟢 **South Korea** | AI Basic Act | 🟢 **IN FORCE `2026-01-22`** | education is **high-impact** → **human oversight** + **documented risk assessment** |
+| 🟢 **Vietnam** | Decision 33 | 🟢 **in force `2026-08-15`** | *(as carried by `p426`)* |
+| 🟡 **United States** *(states)* | Ohio, Maryland, Idaho, Oklahoma; Florida proposed | **`2026-06-01` → `2027-07-01`** | district policy, named coordinator, **parent opt-out**, and in Florida's proposal **thirty-day interaction records** |
+| 🔴 **EU** | AI Act Annex III | 🔴 **DEFERRED `2026-08-02` → `2027-12-02`** | Article 26 deployer duties + Article 27 **FRIA**, neither of which the deferral postpones |
+
+🔴 **The re-ordering is the finding, and it inverts the usual assumption.** The EU is treated as
+the forcing function, and it is now the **latest** of the four. **Korea's duty is live today**,
+Vietnam's since August. 🟢 **So a client who sequences by "wait for the EU date" has the order
+backwards**, and a studio with an APAC footprint has an in-force obligation to serve now.
+
+🟢 **One component still satisfies all four**, which is why this is worth tracking as one trend
+rather than four policies: a **staged, reviewable, human-confirmed action trail**. 🔵 Two
+addresses on these shelves now produce it by default — `kaushikgunasekaren/canvas-grader-mcp`
+(`p426`: stages grades locally, posts only on explicit confirmation) and, found independently
+this pass, **`simonseifert/merlin-mcp`** (MIT, `1 070` B `c458af6b099b`): read-only by
+construction, with writes gated on an **out-of-band phone approval**. 🟢 **That the approval
+leaves the machine is a stronger form of the same artefact** — and it arrived from a Croatian
+university service with no apparent knowledge of any of these four statutes, which is the
+clearest evidence yet that this is a convergent design rather than a compliance feature.
+
+🔴 **The limb none of the four addresses answers.** `p426` recorded that
+`canvas-grader-mcp`'s own README states student work is sent to whichever model the assistant
+uses. 🔵 Under **CA `AB 1159`** and the EU data-governance limb, **that sentence is the
+procurement question**, and a staged-approval trail does not answer it. 🟡 `Gap 427-F`: no
+address on these shelves pairs the oversight artefact with a **local or in-tenant model path**,
+and the two are separate requirements that engagements routinely conflate.
+
 ## 🆕 `p426` · 2026-10-25 — **Two trends with procurement consequences, and neither is about a model. 🔴 `Trend 47`: the forked-address channel defect has shortened from 683 commits of staleness to FIVE DAYS, which puts it below every freshness heuristic and leaves exactly one field that still catches it. 🟢 `Trend 48`: regulators have converged on one artefact across three continents, and this pass shelved the first open-source address that produces it by default.**
 
 🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` was a host property. 🔵 All reads

@@ -1,0 +1,28 @@
+# p427 · 2026-10-25 · Amendment 13 (p426: "compare the copyright HOLDER against the OWNER segment — a signal rather than a verdict") MEASURED on 13 payloads read first-hand, plus p426's own fork specimen as a POSITIVE CONTROL.
+# p426 registered the amendment on ONE specimen (thc1006/moodle-mcp, a fork serving G36maid's grant) and correctly declined to make it a verdict. This is the first measurement of its FIRE RATE.
+# 🔴 RESULT: the raw signal fires on 12 of 13 payloads (92%) and NOT ONE of those 12 is a fork. As a standalone test it is unusable; p426's caution is vindicated with a number.
+# class: CLEAN = holder equals owner | NORMALISATION = same identity under casefold/despace/deaccent/strip-digits | COLLECTIVE = holder is a project body, not a named party | STOCK-TEXT = holder is the licence STEWARD (FSF/ASF), never the project — the question is UNDEFINED, not failing | PERSON-VS-HANDLE = a real person whose GitHub handle or org simply differs
+slug	owner	holder	head_commit_author	raw_amd13	class	resolved_by	is_fork
+kad-xyz/spbstu-mcp	kad-xyz	kad-xyz	kad-xyz	clean	CLEAN	-	no
+simonseifert/merlin-mcp	simonseifert	Simon Seifert	-	FIRES	NORMALISATION	casefold+despace -> simonseifert	no
+CarlosAndreFerreira/moodle-obsidian-mcp	CarlosAndreFerreira	Carlos André Ferreira	-	FIRES	NORMALISATION	casefold+despace+DEACCENT -> carlosandreferreira	no
+Mattlo0546/slidemate	Mattlo0546	Matt Lo	-	FIRES	NORMALISATION	casefold+despace+strip-digits -> mattlo	no
+av-leschinskiy/moodle-mcp	av-leschinskiy	Alexander Leschinskiy	-	FIRES	NORMALISATION	surname substring only (initials-plus-surname handle)	no
+EduardoKrausME/moodle-local_mcp	EduardoKrausME	Free Software Foundation, Inc.	-	FIRES	STOCK-TEXT	UNDEFINED: GPL-3.0 stock text never names the project holder	no
+gafapa/moodlia-portable	gafapa	Free Software Foundation, Inc.	-	FIRES	STOCK-TEXT	UNDEFINED: GPL-3.0 stock text never names the project holder	no
+jamestesting0/tum-mcp	jamestesting0	TUM Moodle integration contributors	-	FIRES	COLLECTIVE	no named party to compare	no
+sonstellar969/open-moodle	sonstellar969	Lakshman Reddy and contributors	-	FIRES	COLLECTIVE	no named party to compare	no
+falkenslab/miyagi	falkenslab	Francisco Vargas Ruiz	-	FIRES	PERSON-VS-HANDLE	irreducible: a person publishing under an org handle	no
+nialvape/utn-mcp	nialvape	Joaquín Peñalva	-	FIRES	PERSON-VS-HANDLE	irreducible: handle shares no substring with the name	no
+OmarAli-prod/zewailcity-moodle-mcp	OmarAli-prod	Omar Ismail	-	FIRES	PERSON-VS-HANDLE	irreducible: given name matches, surname does not	no
+HyNuwa/UniMCP	HyNuwa	MaxiFG	MaxiFG	FIRES	PERSON-VS-HANDLE	HEAD commit author equals the holder	no
+thc1006/moodle-mcp	thc1006	G36maid	G36maid	FIRES	POSITIVE CONTROL (p426 T129)	-	YES
+#
+# 🔴 THE OBVIOUS REFINEMENT IS REFUTED BY THE POSITIVE CONTROL. Adding "holder equals the HEAD commit author" as a third channel resolves HyNuwa/UniMCP (holder MaxiFG = author MaxiFG, not a fork).
+# 🔴 But on thc1006/moodle-mcp the HEAD commit author is ALSO G36maid — because a fork CARRIES THE UPSTREAM'S COMMITS, so the upstream author is the fork's HEAD author by construction.
+# 🔴 The channel is therefore satisfied in BOTH the fork case and the legitimate case: it cannot discriminate, and wiring it would convert this base's ONLY true positive into a MISS. Recorded as a refutation, not an improvement.
+#
+# 🟢 WHAT DID DISCRIMINATE, on these two specimens: the LICENCE PAYLOAD DIGEST shared across OWNERS.
+# thc1006/moodle-mcp and G36maid/moodle-mcp both carry LICENSE at 1064 B sha256_12 5da1fff0a1db — byte-identical, two owners, and the holder names the OTHER owner. HyNuwa/UniMCP's payload (1980 B 727b864af003) collides with nothing, because it is not a copy: it is a DECLARED derivative that states its own lineage in the grant text.
+# 🔵 That is gate-payload-digest's existing subject ("do two repositories ship the same payload?"), so the discriminating form of Amendment 13 is a JOIN onto an instrument this base already has, not a new channel.
+# 🔴 NOT CLAIMED: this is 2 specimens. The join is a hypothesis with a positive and a negative, not a measured rate.

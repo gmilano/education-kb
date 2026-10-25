@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **The platform tier gains nothing, loses nothing, and for the first time its licence shape is explained by a RULE rather than a tally: the grant follows the ARCHITECTURE. 🟢 A Moodle agent installed INSIDE Moodle is GPL-3.0 by inheritance; one talking to it over REST is MIT by choice — 2/2 and 10/10 in this pass's own first-hand reads.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **55** blocking gates green after these
+writes. 🔵 All reads **2026-10-25**.
+
+### 🔴 The platform tier — no row moves, ninth independent channel
+
+🔵 **The settled grade stays the first column after the name**, deliberately, so a shelf-derived
+parser reads the grant before the prose.
+
+| platform | settled grade | what moved this pass |
+|---|---|---|
+| **Moodle** (`moodle/moodle`) | 🔴 **GPL-3.0** | 🟢 Nothing in the platform — but its grant is now shown to **propagate into the agent layer by architecture**, which is new and is the finding below |
+| **Open edX** (`openedx/edx-platform`) | 🔴 **AGPL-3.0** | — |
+| **Canvas** (`instructure/canvas-lms`) | 🔴 **AGPL-3.0** | — |
+| **ILIAS**, **OpenOLAT**, **Chamilo**, **Sakai**, **Kolibri**, **OpenEduCat** | as carried | — |
+
+🔴 **The ninth channel, and this one was volunteered by the search provider.** A direct leg for a
+permissive SIS (`open source student information system SIS school ERP Apache MIT 2026
+self-hosted`) returned a channel stating in its own words that **no result named an Apache- or
+MIT-licensed SIS**, and naming `RosarioSIS` (**GPL**), `Gibbon` (**GPL**), `OpenEduCat`,
+`Academico` and the already-shelved `frappe/education`. 🔵 `reported`, not `authoritative`:
+`Gap 425-A` reproduces on both fetch channels, so no vendor page could be read at source.
+
+### 🟢 The rule: at the platform tier the grant is decided by WHERE THE CODE RUNS
+
+| architecture | couples to the platform by | grant, read first-hand this pass | n |
+|---|---|---|---|
+| 🔴 **plugin, inside the LMS process** | linking against Moodle's PHP plugin API | 🔴 **GPL-3.0** — `EduardoKrausME/moodle-local_mcp` and `gafapa/moodlia-portable`, both carrying the **same** stock digest `sha256₁₂ 3972dc9744f6`; the latter's `package.json` says `GPL-3.0-or-later` | **2 / 2** |
+| 🟢 **external client, own process** | the web-services REST API + a token | 🟢 **MIT** ×9, **ISC** ×1 — ten distinct digests, **no copyleft** | **10 / 10** |
+
+🟢 **Why this is a mechanism and not a correlation:** Moodle is GPL-3.0, and in-process linkage
+inherits that grant. The REST boundary breaks the linkage, and every address on the far side of
+it chose permissively.
+
+🔴 **The procurement consequence, which is the point of this shelf.** The licence question is
+**settled at the architecture decision**, not at licence review:
+
+- 🔴 *"Put the agent inside our Moodle"* → **GPL-3.0**, plan the copyleft obligations, and expect
+  the client's legal review to engage before the first sprint.
+- 🟢 *"The agent may hold a web-services token and run beside Moodle"* → **MIT/ISC**, and the
+  whole cohort this pass verified becomes available.
+
+🔵 **Stated with its scope:** 12 addresses, one platform, one leg. 🟡 `Gap 427-D`: the same
+in-process/out-of-process split should predict the divide on **Canvas** and **Open edX** (both
+AGPL-3.0), and this base carries far more client-side addresses for those platforms than it has
+tested against this rule.
+
+### 🟢 The agent-facing tier over these platforms — what the cohort now reaches
+
+🔵 The platforms do not move; the **tier above them** gained institutional reach this pass, and
+two of those reaches are to systems that are **not** an LMS at all:
+
+| reach | address | why it is new on these shelves |
+|---|---|---|
+| 🟢 **SIU Guaraní** — student *records*, used across Argentine public universities | `nialvape/utn-mcp`, `HyNuwa/UniMCP` | 🟢 **The first SIS/records reach in the cohort.** Every prior Moodle agent here reads an LMS gradebook; these read the system of record for enrolment and academic history |
+| 🟢 **Artemis** — interactive exercises and assessment | `jamestesting0/tum-mcp` | 🟢 First **assessment-platform** reach that is not an LMS gradebook |
+| 🟢 **openedu.ru** — Russian national MOOC platform | `kad-xyz/spbstu-mcp` | 🟢 First national-MOOC reach |
+| 🟢 **Multi-tenant** across institutions | `HyNuwa/UniMCP` | 🟢 UTN + UNJu + UNSa behind one connector — the shape a regional engagement needs, rather than one deployment per campus |
+
+🔴 **And the honest limit on all four.** Ref counts run **2**–**20**; none is a dependency. 🔵 They
+are **integration references**: the value is that each has already solved an institution's
+authentication form and data shape, which is the part a studio otherwise discovers late.
+
 ## 🆕 `p426` · 2026-10-25 — **The platform tier gains nothing and loses nothing, and for the first time the DISCOVERY CHANNEL ITSELF states this base's standing finding as a negative result: "no result described an MIT-licensed LMS, SIS, or ERP." 🟢 The movement is one layer up again — the agent-facing tier over these platforms now has a GRADING member whose default is the artefact three regulators ask for.**
 
 🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` scoped to `p425`'s host, now

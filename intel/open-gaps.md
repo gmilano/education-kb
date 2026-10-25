@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **`Gap 426-C` is CONFIRMED and MECHANISED: the eleven-pass drought was a query-shape artefact, and ONE two-word leg returned 16 unshelved addresses. 🟢 A new grant SHAPE found and gated. 🔴 `Amendment 13` measured at a 92 % fire rate with zero true positives, and the obvious fix refuted by `p426`'s own specimen.**
+
+🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves it
+describes** — all eight shelves carry a `p427` section — so `gate-register-currency`'s requirement
+is satisfied by construction. 🟢 **And it is satisfied by a GATE RUN:** `make commit-gates` was run
+**before** this pass wrote a line (🟢 **54** blocking gates green against `13ecffc`) and again after
+(🟢 **55**, the new one being `gate-conjunctive-grant`, built here). 🔵 **No date straddle:** every
+leg, `ls-remote`, clone, tree enumeration and payload digest happened **2026-10-25**; the commit
+lands **2026-10-25**.
+
+🔴 **`gate-register-currency` fired on this pass and it was RIGHT.** The first full run after the
+shelf writes went red with six findings — *register newest=p426; <shelf> newest=p427; stale by 1
+pass* — one per shelf. This section is the repair, and the gate's report is the only reason it
+exists in the same commit rather than the next one.
+
+### 🟢 Closed or advanced this pass
+
+| gap | disposition this pass |
+|---|---|
+| 🟢 **`Gap 426-C`** — *the prescribed leg set is saturated, and the legs that produced the find are NOT in it* | 🟢 **CONFIRMED, and the MECHANISM is now named rather than suspected.** `p426` refused to read eleven passes of zero as saturation and scoped it to query shape. 🟢 **Measured here:** one GitHub repository search of **two words** — `moodle mcp`, `sort=updated` — reports **`total_count` 242** and returned **16 unshelved in-domain addresses in its first 20 results**. 🟢 **The mechanism is a NAMING convention:** `p426`'s census pattern required the repository name to *begin* with `moodle-mcp`, and of the 16 it catches **exactly one** — the other 15 are named after the **institution** (`utn-mcp`, `tum-mcp`, `merlin-mcp`, `spbstu-mcp`, `UniMCP`, `Moodle-MCP`), the **product** (`miyagi`, `slidemate`, `moodlia-portable`, `open-moodle`), or carry the platform name non-initially or in a variant shape (`zewailcity-moodle-mcp`, `moodle-local_mcp`, `moodle-obsidian-mcp`, `moodle-ed-autopilot-patch`). 🔵 **`p426`'s census was correct for what it asked**; the inference from it — *"the whole Moodle MCP cohort"* — was wider than the measurement, which is a cleaner failure than a broken instrument and harder to see. 🟡 **Replaced by `Gap 427-A`**, the correctly-scoped successor |
+| 🔴 **`Gap 425-A`** — *this host cannot reach any non-GitHub source* | 🔴 **REPRODUCES, and is now NARROWED by a measurement on a SECOND channel.** `p426` measured `curl`. This pass measured both: `curl` returns `HTTP 000` for `unesco.org`, `oecd.org`, `iesalc.unesco.org`, `education.ec.europa.eu`, `multistate.us`, `en.wikipedia.org` and `digital-strategy.ec.europa.eu`, **and the tool-side fetcher fails DNS resolution (`ENOTFOUND`) on the same hosts** while resolving `github.com` normally. 🟢 **So the gap is not "no egress": DNS resolves GitHub and nothing else**, and server-side search summaries are the one surviving non-GitHub channel. 🔴 **A summary cannot be digested or pinned, so no policy or market cell on a host of this class can EVER be graded `authoritative`** — by construction, not for want of effort. 🔵 That converts the gap from a defect a successor might fix into a **standing property of the host class**, and it is why every cell in `intel/market.md` this pass is `reported` |
+| 🔴 **`Gap 426-A`** — *a slug census without a boundary terminator MANUFACTURES 404s* | 🟡 **ADVANCED, and generalised one level up.** `p426` found the class in a slug **pattern**; this pass found the same failure mode in a **query**, which is a larger surface. `T429` records three capability legs returning `total_count` of **0**, **1** and **1** — indistinguishable from a swept field — where re-running one of them with two terms returned **242**. 🟢 **A positive control was run before any zero was believed** (`moodle mcp`, precisely to test whether the search channel was truncated; it was not). 🔴 **Still open:** `gate-absence` protects against an absence the index refutes and **cannot** protect against one a query shape manufactured |
+| 🟡 **`Gap 426-B`** — *one repository under two owner spellings in the append-only logs; population unmeasured* | 🟡 **STANDS, unworked this pass.** 🔵 Stated rather than silently carried. 🟢 `gate-case-collision` ran green on this pass's own writes, so no new collision was imported onto a curated shelf |
+| 🔴 **`Gap 425-E`** — *hex values in payload-digest columns may be COMMIT SHAs* | 🔴 **STANDS, unworked.** 🔵 This pass's own digest cells are stated with their byte counts and an explicit `sha256₁₂` prefix on every row, so none of them adds to the ambiguity |
+| 🟡 **`Gap 425-D`** — *twelve Canadian provinces and territories have no curriculum component* | 🟡 **STANDS, unworked.** 🔴 `Gap 425-A` keeps the provincial-curriculum layer unreachable from this host, and this pass's measurement shows that is now a **permanent** property here rather than a temporary one |
+
+### 🔴 Opened this pass
+
+| gap | why it is open rather than answered |
+|---|---|
+| 🟡 **`Gap 427-A`** — **the prescribed leg set must be re-specified by TERM COUNT, because at seven ANDed terms a leg cannot distinguish an empty field from an empty query** | 🔴 Measured on one platform in one sitting: `open badges verifiable credentials education AI agent pushed:>2026-06-01` (7 terms + filter) → **0**; `powerschool schoology skyward infinite campus mcp server` (7) → **0**; `special education IEP teacher AI assistant` (5) → **1**; **`moodle mcp` (2) → 242**. 🟡 **Open because nothing has measured yield as a function of term count across other capabilities** — this is one platform, and the prescription itself is not yet rewritten |
+| 🔴 **`Gap 427-B`** — **the institutional-agent supply in this cohort is ENTIRELY non-US, and nothing has measured whether that is a discovery artefact or a real asymmetry** | 🟢 **Checked, not assumed:** every `.edu` string across the sixteen READMEs resolves to `.edu.ar` (`unju`, `unsa`, `utn`), `.edu.eg` (`zewailcity`), or the placeholder `lms.university.edu`. **Zero** North American institutions. 🔴 **The asymmetry is strange enough to be suspicious**: Canvas, whose agents dominate these shelves, is a **US-market** platform. 🟡 **Directly testable** by running this pass's two-term leg against `canvas`, `powerschool` and `blackboard` — not done here, so the gap is the honest record |
+| 🟡 **`Gap 427-C`** — **special-education IEP tooling has demand-side evidence and NO permissively-granted implementation on these shelves** | 🔴 Two specimens surfaced on this pass's capability legs: `JeabtiE/iep-gen-assistant` (**59** refs, Thai special education, JUMP THAILAND Hackathon 2026) carries **zero** licence-shaped paths at any depth, and `100205ivan/EyeEP` is **already shelved**. 🟡 Open because the capability is real, the regulatory exposure is high (an IEP is a legally binding document in several jurisdictions), and this base can offer no granted implementation |
+| 🟡 **`Gap 427-D`** — **the architecture-decides-the-licence rule is established on ONE platform and untested on the two where it matters most** | 🟢 The rule is mechanical and backed by Moodle's own grant: in-process plugin → **GPL-3.0** (2 / 2, both carrying the identical stock digest `sha256₁₂ 3972dc9744f6`); external REST client → **MIT/ISC** (10 / 10, ten distinct digests, no copyleft). 🟡 **Open because it is 12 addresses on one platform in one leg.** The same in-process/out-of-process boundary should predict the divide on **Canvas** and **Open edX** (both AGPL-3.0), and this base carries many more client-side addresses for those platforms than it has tested |
+| 🟡 **`Gap 427-E`** — **the APAC regional leg returned regulation ONLY — no adoption figure and no named player — and the cause is the leg's own shape** | 🔴 The leg asked about *regulation, adoption and players* across *four countries* in one query and returned **no education-specific adoption figure and no named edtech player** for any of them. 🔵 Same over-ANDing defect as `Gap 427-A`, on the policy side rather than the supply side. 🟡 A successor should run **one country, one question** |
+| 🟡 **`Gap 427-F`** — **no address on these shelves pairs the human-oversight artefact with a LOCAL or in-tenant model path, and engagements routinely conflate the two** | 🔴 `p426` recorded that `kaushikgunasekaren/canvas-grader-mcp`'s own README states student work is sent to whichever model the assistant uses. 🟢 This pass found a second address with a stronger oversight boundary — `simonseifert/merlin-mcp`, read-only with writes gated on an **out-of-band phone approval** — and it is **equally silent on where inference runs**. 🔴 Under CA `AB 1159` (student data barred from training unless the school directly benefits) and the EU data-governance limb these are **two** requirements; a staged-approval trail answers only one |
+| 🔴 **`Gap 427-G`** — **`Amendment 13` is unusable as a standalone verdict, and the obvious repair is REFUTED** | 🟢 **Measured on 13 payloads read first-hand: the raw holder-versus-owner comparison fires 12 times (92 %) and ZERO of the twelve is a fork.** Four are one identity in two spellings (accent, space and digit folds), **two are stock copyleft texts where the question is UNDEFINED** because the holder is the Free Software Foundation, two name a project body, four are a person whose handle differs. 🟢 `p426` called it *"a signal rather than a verdict"* — vindicated with a number. 🔴 **The obvious fix was TESTED AND FAILED:** adding *"holder equals the HEAD commit author"* resolves `HyNuwa/UniMCP`, but on `p426`'s own specimen `thc1006/moodle-mcp` the HEAD author is **also** `G36maid`, because a fork **carries the upstream's commits**. The channel is satisfied in both cases and wiring it would turn this base's only true positive into a **miss**. 🟢 **What did discriminate: the payload DIGEST shared across owners** (`thc1006` and `G36maid` both at `1 064` B `sha256₁₂ 5da1fff0a1db`) — which is `gate-payload-digest`'s existing subject, so the repair is a **join onto an instrument already here**. 🔴 **Open because that is 2 specimens**, one positive and one negative: a hypothesis, not a rate. Full rows in [`evidence/p427-amendment13-measurement.2026-10-25-p427.tsv`](../evidence/p427-amendment13-measurement.2026-10-25-p427.tsv) |
+
+### 🟢 Answered by an instrument built this pass
+
+| finding | instrument |
+|---|---|
+| 🟢 **`T427` — a grant may carry two families CONJUNCTIVELY, and this base had no scope for that shape.** `HyNuwa/UniMCP`'s `LICENSE` (**`1 980` B `sha256₁₂ 727b864af003`** @ HEAD `2916cce7a726`) is titled `MIT License` and, below a separator, says *"Portions of this software are derived from utn-mcp and remain under its original license"* followed by a standalone **ISC** grant © *Joaquín Peñalva*. Both are live and simultaneous. 🔴 **Nine instruments answer `MIT` and none reports the ISC segment** — six family classifiers, plus all three purpose-built multi-grant readers missing it **by construction**: `p228.dual_grant` → `None` (its subject is a **choice**), `p202.scope_reader` → `split_scope=False` (its subject is a **path**, and it emits the separator as a spurious scope row), `p419.menciones_cruzadas` → `[]` (needles are copyleft-only). 🔴 **The cost passes every tier check**: both families are permissive so `commercial_use` is unaffected and no gate goes red — the defect is an **understated notice obligation**, one notice owed where two are, the second a named third party's | 🟢 **CLOSED by [`gate-conjunctive-grant`](../compose/code/p427-conjunctive-grant/)** — **24** controls, blocking, no network, wired into `HOOK_GATES` and `COMMIT_GATES` **on the pass that found it**. 🔵 Guards calibrated on a real payload: stock GPL-3.0 names `GNU Affero General Public License` in its own §13 and contains `at your option` twice, so the naive form of **both** detectors fires on it — guard 1 demands a **standalone title line**, guard 2 a **scope sentence**, and `C7`–`C10` hold it out. 🔵 `Amendment 15` states the ladder rung; `make conjunctive-census` is the population arm. 🔵 **Population: 265** committed payloads, **1** conjunctive, **2** disjunctive, **262** single — 🔴 one in 265 is not a trend, but it was found in the **first ten addresses this pass read**, and those are not the same claim |
+
+### 🔵 Declared, so silence does not read as coverage
+
+- 🔴 **Three of sixteen addresses carry NO licence-shaped path at any depth** and are therefore
+  unshelvable whatever their capability: `JaipuriaAILabs/Moodle-MCP` (🔴 **93** refs — the
+  **highest** activity signal in the whole leg), `JeabtiE/iep-gen-assistant` (59),
+  `hd659/moodle-ed-autopilot-patch` (2, and its `README.md` is empty). 🔵 Activity without a grant
+  is the pair a studio most reliably misreads as maturity.
+- 🔵 **`ISC` is NOT new to this base** — checked before claiming it. `ISC` already appears in cells
+  across `agents/top.md`, `repos/foundations.md` and four other shelves, so `nialvape/utn-mcp`
+  extends an existing family rather than opening one.
+- 🔴 **`24kchengYe/human-skill-tree` is NOT a `p427` finding.** This pass's census flagged its split
+  notice as disjunctive; checking first showed `p200`/`p202` **already** registered it, with
+  `ACTION OJ`, `ACTION OR` and a built scope reader. Recorded so the sweep's output is not mistaken
+  for a discovery.
+- 🔵 **Identifier hygiene, because this pass found a collision in the convention itself.** `T427`–
+  `T430` were chosen after verifying that `T130`–`T134` are **live, established findings from
+  earlier passes** (a `571 ★` row's header notice, `T124`'s bound, the topic-list unreliability).
+  🔴 `p426`'s own `T127`–`T129` collide with identifiers in `archive/`. 🟡 `Gap 427-H`: the `T`
+  series has no allocation instrument, so every pass re-derives free numbers by grep and `p426`
+  got it wrong. 🔵 The same check moved this pass's ladder rung from `Amendment 14` — **taken by
+  `p426`** — to `Amendment 15`.
+- 🔵 **`Trend 50` numbering is disclosed, not silently reused:** trends **defined** in
+  `intel/trends.md` run `41`–`48`, and a historical line in `agents/trending.md` already
+  **references** a *"Trend 50"* that was never defined. That reference does not point at this
+  pass's `Trend 50`, and the append-only line is left untouched.
+- 🔴 **`gate-census-union` remains the one DECLARED, non-blocking red**, cited here by name as
+  `gate-commit-gate` requires.
+
 ## 🆕 `p426` · 2026-10-25 — **`Gap 425-B` is REFUTED as a suite property and CONFIRMED as a host property — the gates ran here. 🟢 `Gap 425-C` is CLOSED by running them, and the red they returned was `p425`'s own stale census, which is the measurable cost of the refusal. 🔴 Three new gaps, two of them found by this pass reproducing an error before catching it.**
 
 🟢 **Register hygiene, stated first.** This section is written **in the same pass as the shelves it

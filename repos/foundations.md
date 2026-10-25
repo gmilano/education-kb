@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p427` · 2026-10-25 — **The platform tier still has no MIT member — and this pass can finally say WHY in mechanical terms rather than as a tally. 🟢 The grant follows the ARCHITECTURE: a Moodle agent that runs INSIDE Moodle is GPL-3.0 by inheritance, and one that talks to it over REST is MIT by choice. Both shapes were read first-hand in the same leg.**
+
+🟢 **Gates RAN on this host**, against `13ecffc`: 🟢 **54** blocking gates green at baseline,
+🟢 **55** after these writes. 🔵 All reads **2026-10-25**.
+
+### 🟢 Added to the foundation layer — one row, and it is the SERVER-SIDE shape
+
+| address | grant, read at the SHA | why it is a foundation and not a mention |
+|---|---|---|
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🟡 **GPL-3.0** — `LICENSE` **`35 149` B `sha256₁₂ 3972dc9744f6`** @ HEAD `2e2d456685f9`. 🟢 Tree **ENUMERATED** (`gate-subtree-grant`): **exactly one** licence-shaped path. 🔴 **Copyleft — outside the permissive set, flagged not hidden.** 🔵 `Amendment 13` fires **structurally**: the holder is the **Free Software Foundation**, because a stock GPL-3.0 text never names the project's holder | 🟢 **It is the only address on these shelves that turns Moodle itself into the MCP server.** A `local` plugin, **`27` refs**, HEAD **2026-10-25**, with its own documentation site. 🟢 **Architecturally it is the inverse of every Moodle agent here:** the others are external clients holding a web-service token; this one is *installed into* the LMS and extensible from inside it. 🔵 Owner is a Brazilian Moodle developer; README names **Brazil** |
+
+### 🟢 The grant follows the architecture — an eighth channel becomes a MECHANISM
+
+🔵 `p426` recorded *"no education platform is MIT"* as an **eighth independent channel agreeing**
+— a tally of observations. 🟢 **This pass read both architectures in one leg, so the tally can be
+replaced by a rule:**
+
+| architecture | where the code runs | grant observed, first-hand | n in this leg |
+|---|---|---|---|
+| 🔴 **server-side plugin** — installed into the LMS | inside Moodle's PHP process, against Moodle's plugin API | 🔴 **GPL-3.0** — `moodle-local_mcp` `35 149` B `3972dc9744f6`; `moodlia-portable` **the same digest** and `package.json` `GPL-3.0-or-later` | **2 / 2** |
+| 🟢 **external client** — talks to the LMS | its own process, over the web-services REST API | 🟢 **MIT** ×9, **ISC** ×1 — ten distinct payload digests, no copyleft among them | **10 / 10** |
+
+🟢 **The mechanism is Moodle's own licence, not a cultural preference.** Moodle is **GPL-3.0**; a
+plugin links against it in-process and inherits that grant. An external REST client does not
+link against it and is free to choose, and **every single one in this leg chose permissively.**
+🔵 **Two independent payloads confirm the server-side half byte-for-byte**: `moodle-local_mcp` and
+`gafapa/moodlia-portable` carry licence files with the **identical digest**
+`sha256₁₂ 3972dc9744f6` — which is the stock GPL-3.0 text, as `gate-payload-digest` expects of
+two projects shipping the same stock licence.
+
+🔴 **This is the procurement rule, and it is the opposite of a licence preference.** A client who
+wants the agent *inside* their Moodle gets copyleft and must plan for it; a client who accepts a
+**token-holding external service** gets MIT. 🔵 **So the licence question is settled at the
+ARCHITECTURE decision**, weeks before anyone reads a `LICENSE` file — and that is the sentence an
+engagement needs, not a count of non-MIT platforms.
+
+🔵 **Scope, stated honestly.** This is **12** addresses on **one** platform in **one** leg. The
+rule is a mechanism claim backed by Moodle's own grant, and the counts are small. 🟡 `Gap 427-D`:
+nothing here has tested the same split on **Canvas** (whose core is AGPL-3.0) or **Open edX**
+(AGPL-3.0), where the in-process/out-of-process boundary should predict the same divide and the
+shelves carry many more client-side addresses to test it against.
+
+### 🔴 No platform row moves, and the foundations layer gains no permissive platform
+
+🔴 The LMS/SIS/ERP tier is unchanged: **Moodle** GPL-3.0, **Open edX** AGPL-3.0, **Canvas**
+AGPL-3.0, **ILIAS**/**OpenOLAT**/**Chamilo**/**Sakai** as carried. 🔵 This pass's discovery legs
+returned **no** permissively-granted LMS, SIS or ERP, and the one direct leg for it
+(`open source student information system SIS school ERP Apache MIT 2026 self-hosted`) returned a
+search channel stating in its own words that **no result named an Apache- or MIT-licensed SIS** —
+naming `RosarioSIS` (**GPL**), `Gibbon` (**GPL**), `OpenEduCat`, `Academico` and the
+already-shelved `frappe/education`. 🔵 `reported`, not `authoritative`: `Gap 425-A` means no
+non-GitHub page could be read at its source on this host.
+
 ## 🆕 `p426` · 2026-10-25 — **No platform row moves, and that is now an EIGHTH independent channel agreeing: no education platform is MIT. 🟢 The foundation layer gains one integration-tier row, and this pass can finally state the licence shape of the whole Moodle MCP cohort from first-hand reads rather than from a census — 16 exact slugs, 9 granted, all MIT, 3 ungranted, 1 unresolvable.**
 
 🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 `Gap 425-B` is a property of `p425`'s host, not of the suite. 🔵 All reads
