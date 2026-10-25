@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AR — `p439` The **grant-presence gate in the build**: make "every third-party licence was READ, not scanned" a CI artefact, and wire the same gate a client's procurement can run
+
+🔵 **The problem this pattern solves, measured rather than asserted.** `Pattern AQ` (`p438`)
+made component clearance an auditable build artefact. 🔴 `p439` found the hole in exactly that
+artefact: a licence **scan** passes a payload that contains no grant. Live specimen from
+education supply, read 2026-10-25:
+[`spragginsdesigns/ai-tutor-webapp`](https://github.com/spragginsdesigns/ai-tutor-webapp),
+`LICENSE` **552 B** · `sha256₁₂ 5809eb2eab28`, titled Apache-2.0, holder 🔴 **Vercel, Inc.**,
+licence text **not in the repository**. Every instrument on this base graded it
+`PERMISSIVE / stock = True / needs_a_human = False`. A clearance report built on a scanner
+would have shipped it green.
+
+### The recipe — concrete repos, concrete wiring
+
+🔵 **And the reason this is a pattern rather than a tip**: the principle is old and keeps not
+travelling. `P1065` on this base settled in pass 254 that a pointer to a licence is not a
+grant; the predicate was implemented for **Creative Commons content licences** and never
+reached the instruments that grade MIT, Apache-2.0 and BSD. 🔴 In a client pipeline the same
+thing happens by default — the rule lands in whichever scanner surfaced the problem, not in
+the one that writes the verdict. **Wire it where the verdict is written.**
+
+**1. The gate itself (build it once, ~1 day).**
+[`compose/code/p439-grant-presence/`](./code/p439-grant-presence) in this base is the working
+reference: `grant_presence.py` classifies a payload into **GRANT-PRESENT /
+GRANT-BY-REFERENCE / GRANT-TRUNCATED / GRANT-UNCALIBRATED** by asking whether the family's
+**operative clauses** are present, with 19 controls in `test_grant_presence.py`.
+
+```
+make gate-grant-presence     # controls, offline, committed fixtures — CAN go red
+make grant-presence-census   # the live dependency set — a MEASUREMENT, always exits 0
+```
+
+🔵 **Keep that split in the client's pipeline too.** The controls block a merge; the
+population only reports. A gate that goes red because the *dependency set* changed teaches a
+team to disable the gate — this base learned that twice (`Gap 435-A`, `Gap 438-B`) and both
+times the remedy was the same split.
+
+**2. Wire it where the payloads already arrive.** Compose it with what this base already
+carries rather than building a new scanner:
+
+| Stage | Component | Grant | Role |
+|---|---|---|---|
+| Resolve branch + fetch payload | [`lib/probe_payload.sh`](./code/lib) (this base) | — | `ls-remote --symref` so a non-`main` default (`master`, `develop`, `v31.0.00`) is never read as *ungranted*; README-link rung before the filename ladder |
+| Family, by title block | [`lib/license_family.sh`](./code/lib) (this base) | — | `P171`: classify by **title block**, never body substring — GPL-3.0 §13 is titled with AGPL's name |
+| 🆕 **Grant presence, by clause** | `p439-grant-presence` | — | the new rung: is the granting text actually here? |
+| Orchestrate per dependency | [`temporalio/temporal`](https://github.com/temporalio/temporal) | MIT | one durable workflow per component; retries and the full read history survive a crash |
+| Surface the report | [`appsmith`](https://github.com/appsmithorg/appsmith) | Apache-2.0 | the procurement-facing view: filter to `GRANT-BY-REFERENCE` + `GRANT-TRUNCATED` |
+| Model indirection (APAC) | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | MIT | only if the pipeline summarises clauses with an LLM — keeps sovereign models swappable |
+
+**3. The three rungs, in this order, and the order is the whole pattern.**
+
+```
+exists?            git ls-remote            -> UNRESOLVED is not "ungranted"
+what is it called? family_of (title block)  -> P171
+🆕 is it HERE?     grant_presence.classify  -> Gap 439-A
+```
+
+**4. The two negative controls to copy, because they are defects this base actually had.**
+
+- 🔴 **Do not key on "the payload says the licence is elsewhere."** That phrase appears
+  **verbatim inside the full Apache-2.0 text** — the APPENDIX is part of the licence. Measured:
+  the 11 357 B full text carries **all three** reference markers. Ask clauses **first**; let
+  the markers only separate `TRUNCATED` from `BY-REFERENCE`.
+- 🔴 **Fold typographic quotes before matching anything.** A complete MIT licence that
+  typesets “AS IS” with U+201C/U+201D was graded `GRANT-TRUNCATED` by this instrument's first
+  draft — a real grant condemned by a punctuation character.
+- 🔴 **And do not substitute a byte floor.** BSD stock payloads span **221 B → 1 514 B** on
+  this base's corpus, because BSD-0/2/3 are three lengths under one family name.
+
+**5. What ships to the client.** Per-component: slug, resolved default branch, payload path,
+bytes, `sha256₁₂`, HEAD SHA, family, **grant verdict**, and for anything not `GRANT-PRESENT`
+the **named missing clauses**. 🟢 The two obligations this catches and a scanner cannot —
+Apache-2.0 **§4(a)**'s duty to supply a copy of the License, and MIT's notice obligation
+against a holder that resolves to nobody — are both *integrator* duties, which is precisely
+why they must be found before delivery and not after.
+
+**Effort:** ~1 day for the gate against an existing clearance pipeline (this base's reference
+is ~300 lines plus 19 controls); **2–3 weeks** to stand up the whole chain from nothing.
+🟡 **Where it pays**: any engagement that **vendors or redistributes** third-party components —
+an LMS platform build, a white-labelled tutor, anything shipped to a public-sector buyer. For
+a system the client only *calls* over a network, this ranks below `P26` (the access-rights
+question, which lives in a Terms of Use and not in a licence).
+
+---
+
 ## 🆕 Pattern AQ — `p438` The **component-clearance gate**: make "every third-party part of this stack was read, not scanned" a build artefact the client can audit
 
 🔵 **The engagement this answers.** Any education build that assembles AI components — which

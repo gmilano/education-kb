@@ -309,6 +309,78 @@ freshness all fail to separate the correct tools from the wrong ones.** The only
 works is reading the date out of the payload — three greps, written down in
 `repos/trending.md` `p437` and wired as a gate in `compose/patterns.md` Pattern AO.
 
+## 🆕 `p439` — The tail tier gets a **second page** and the yield more than doubles; and one of its rows is a payload **shorter than the grant it names**, which the code-licence path never asks about
+
+🟢 **`Gap 438-C` bought, and its hypothesis held.** `p438` measured coverage by rank depth
+and predicted new supply below roughly 40 ★. `p439` bought the next two pages it priced —
+`ai-tutor` ranks **61–80** and `education-ai` ranks **21–40** — and the new-rate rose from
+**9/89 (10.1 %)** to 🟢 **23/40 (57.5 %)**. Coverage does not just decay with rank; on this
+corpus it **collapses** past rank 60. Full slug-by-slug record in
+`evidence/p439-topic-depth.2026-10-25-p439.tsv`.
+
+🔴 **And the tail's real character is not low stars, it is NO GRANT AT ALL.** Of the 23 new
+addresses, **10 (43 %) carry no licence payload of any kind**, 1 would not resolve a default
+branch, and 1 is 🔴 CC-BY-NC-SA-4.0 (`rajantripathi/open-course-rag-benchmark`, `LICENSE`
+936 B · `86d64326f24d` @ `3074eaa83b7f` — **non-commercial, excluded, not shelved**). 🟢 That
+leaves **11 shelvable**, below. 🔵 This is the stopping rule `Gap 438-C` asked for, answered
+with a number: buying depth past rank 60 buys mostly **ungranted** addresses, so the next
+page is worth buying for its payloads and not for its rows.
+
+Every payload read first-hand on **2026-10-25** through `compose/code/lib/probe_payload.sh`
+(sourced, not re-implemented), every `sha256₁₂` independently re-measured off
+`raw.githubusercontent.com`, every HEAD from `git ls-remote`. Stars are the topic listing's
+own figure at read time.
+
+| Agent / repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | What it does | Region |
+|---|---|---|---|---|---|
+| [Abelo9996/LearnOS](https://github.com/Abelo9996/LearnOS) | MIT | `f528067d714b` | `LICENSE` 1 077 B · `4679aa0db6a3` | Open "AI university": per-learner tutors over a mastery-based progression rather than a fixed syllabus. 9 ★. | Global |
+| [ShowayLiao/Engineering-Exam-AI-Tutor](https://github.com/ShowayLiao/Engineering-Exam-AI-Tutor) | Apache-2.0 | `b113c4b574a6` | `LICENSE` 11 357 B · `c71d239df917` | Engineering-exam tutor shipped as a prompt architecture rather than an app — the whole artefact is the instruction set, so it ports to any runtime. The only patent-granting licence in this tier. | APAC |
+| [X-RayLuan/Openclaw-Study-Coach](https://github.com/X-RayLuan/Openclaw-Study-Coach) | MIT | `59c4793b01e8` | `LICENSE` 1 066 B · `b48efd882d37` | K-12 tutoring skill pack across subjects, graded by year level, **with a parent-facing guide** — the parent surface of `Trend 10` as a skill rather than a platform. 8 ★. | APAC |
+| [lecrix/netem-ai-predictor](https://github.com/lecrix/netem-ai-predictor) | MIT | `22ee956a0783` | `LICENSE` 1 075 B · `04a5cd187b32` | Single-file, serverless exam-question simulator for China's postgraduate English entrance test (NETEM). 🟡 **`P26` applies**: the code grant is permissive, the hosted model it calls is not the grant's to give. 8 ★. | APAC |
+| [Weichenleeeee123/oh-my-chinese-teacher](https://github.com/Weichenleeeee123/oh-my-chinese-teacher) | MIT | `3949339d2f41` | `LICENSE` 1 091 B · `d1e0c4117d88` | Gaokao essay coach: topic analysis, outline, then graded feedback against the exam's own rubric. A marking surface pinned to one national assessment. 7 ★. | APAC |
+| [umitkacar/memogen-ielts-flashcards](https://github.com/umitkacar/memogen-ielts-flashcards) | MIT | `dac37aeea89b` | `LICENSE` 1 078 B · `7a318295ce1f` | IELTS vocabulary as 3D interactive flashcards on a spaced-repetition schedule. Pairs with `fsrs4anki` on the trend record for the scheduling half. 6 ★. | EMEA — Türkiye |
+| [lowellran/Study_via_AI](https://github.com/lowellran/Study_via_AI) | MIT | `0e7dcf8486b4` | `LICENSE` 1 066 B · `8f0b227698a5` | Socratic tutor over a Markdown knowledge base, with its own testing loop. 6 ★. | Global |
+| [thendralmagudapathi/RAG-for-NCERT](https://github.com/thendralmagudapathi/RAG-for-NCERT) | MIT | `e3f233daa4d1` | `LICENSE` 1 077 B · `627670c5c6f5` | RAG grounded on **NCERT Class 11–12 textbooks** — India's national curriculum. 🟢 The **fourth** curriculum-grounding instance on these shelves, after Brazil's BNCC (`p387`), `os-taxonomy` (`p384`) and British Columbia (`p388`), and the first for India. | APAC — India |
+| [Devanik21/AI-Nano-Course-Generator](https://github.com/Devanik21/AI-Nano-Course-Generator) | MIT | `57d584879648` | `LICENSE` 1 066 B · `1e4635354929` | Generates AI/ML micro-courses: modules, explanations and auto-graded quizzes. 🟡 Holder/owner mismatch — see the note below this table. | APAC — India |
+| [Devanik21/FluentFlow](https://github.com/Devanik21/FluentFlow) | MIT | `b5197cd14b29` | `LICENSE` 1 066 B · `1e4635354929` | Language-learning platform with adaptive practice and grammar feedback. 🟡 **Byte-identical payload to the row above** (`1e4635354929`), same holder string. | APAC — India |
+
+### 🔴 `spragginsdesigns/ai-tutor-webapp` — shelved **nowhere**, and it is the most instructive row of the pass
+
+`LICENSE` **552 B** · `sha256₁₂ 5809eb2eab28` @ `963dfa9c55c7`, read 2026-10-25. Graded by
+this base's own census: `titled_family = Apache-2.0`, `scan_verdict = PERMISSIVE`,
+🔴 `stock = True`, 🔴 `needs_a_human = False`. **Every instrument said "permissive, no human
+needed."** Read, the payload is the Apache-2.0 **APPENDIX notice** — its own words are
+*"You may obtain a copy of the License at"* a URL — and the holder it names is
+🔴 **Vercel, Inc.**, the Next.js template's notice carried unchanged into a tutor app. Two
+things a client pays for, neither visible in that row:
+
+1. 🔴 **Nothing in the repository grants anything over the code its author wrote.** The only
+   copyright line present belongs to a third party.
+2. 🔴 **Apache-2.0 §4(a) obliges a redistributor to give recipients a copy of the License.**
+   A repository shipping only the pointer has not done it, so the obligation lands on
+   whoever vendors it next — on an engagement, the client.
+
+🔴 **And this is NOT a new class — which makes it worse.** `P1065` (pass 254) settled on this
+base that **a pointer to a licence is not a grant**, and
+`pass258-content-licence-family/content_licence.py::is_grant()` already implements it by
+exactly the right method: look for the words that *perform* the grant, not the name of the
+licence. 🔴 **It is scoped to Creative Commons content licences and never travelled to the
+code-licence path**, so `is_stock()` and `needs_a_human()` — the predicates that grade MIT,
+Apache-2.0 and BSD — have never asked the question for a single code payload. 🔵 That is this
+base's signature failure mode (`lib/README.md` on pass 77 re-importing `P171`; `Gap 394-B` on
+a standing gate whose rule never reached the writing path), not a discovery. 🟢 `Gap 439-A`
+carries `P1065` one directory across, to the licence families a client actually
+redistributes: `compose/code/p439-grant-presence/` (25 controls), `make gate-grant-presence`,
+with `make grant-presence-census` for the live population.
+
+### 🟡 Holder/owner mismatch, carried as a provenance note and not a licence one
+
+Both `Devanik21` rows name `Copyright (c) 2025 **Debanik21**` — one letter off the account
+that owns them, and the payloads are byte-identical. The MIT grant stands; what does not
+resolve is the **notice obligation**, which requires reproducing a holder name that matches
+no GitHub account. 🔵 Same shape as `dmontgomery40`/`dmoshehun-prog` on the verified tier
+(`p433`): recorded, not treated as a blocker.
+
 ## 🆕 `p438` — The **tail tier**: eight permissive agent skills reached by buying one extra page of topic depth, and one of them carries a clause two of this base's instruments cannot read
 
 🔵 **Why these eight are a tier and not a list.** `p433`–`p437` each recorded the global

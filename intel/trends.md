@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 37 — `p439` **The AI supply chain has learned to ship a licence NAME without a licence TEXT, and every scanner in the industry reads the name**
+
+🔵 **The one-sentence trend.** As AI code generation and template scaffolding become the
+default way a repository starts, the `LICENSE` file is increasingly **inherited furniture**
+rather than an authored act — and the inherited artefact is often a *pointer* to a licence, or
+a template vendor's own notice, instead of the grant the repository needs. 🔴 Measured in
+live education supply this pass, not inferred.
+
+**The specimen, and it is ordinary rather than exotic.**
+[`spragginsdesigns/ai-tutor-webapp`](https://github.com/spragginsdesigns/ai-tutor-webapp)
+ships `LICENSE` **552 B** · `sha256₁₂ 5809eb2eab28` @ `963dfa9c55c7`. Titled Apache-2.0.
+Graded by this base's own census: `scan_verdict = PERMISSIVE`, `stock = True`,
+🔴 `needs_a_human = False`. Read, it is the Apache-2.0 **APPENDIX notice** — *"You may obtain a
+copy of the License at"* a URL — and the holder it names is 🔴 **Vercel, Inc.**: the Next.js
+template's notice, carried unchanged into a tutor application. Nothing in the repository
+grants anything over the code its author actually wrote.
+
+**Why this is a trend and not an anecdote — three independent observations from one hour:**
+
+1. 🔴 **The deep tail of the discovery channel is mostly ungranted.** Of **23** new addresses
+   at `ai-tutor` ranks 61–80 and `education-ai` ranks 21–40, **10 (43 %) carry no licence
+   payload of any kind**. Supply is being produced far faster than it is being licensed.
+2. 🔴 **Payload reuse is now visible at the byte level.** `Devanik21/AI-Nano-Course-Generator`
+   and `Devanik21/FluentFlow` carry a **byte-identical** payload (`1e4635354929`) naming a
+   holder, `Debanik21`, that **matches no GitHub account** — one letter off the owner. The
+   notice obligation cannot be discharged against it. The same shape appeared at `p433`
+   (`dmoshehun-prog` shipping `virgiliojr94`'s copyright line).
+3. 🔴 **The class is already everywhere in this base's own corpus and nobody had joined the
+   facts.** `make grant-presence-census`: of **218** titled payloads, **29** carry no granting
+   words — **24 licence payloads plus 5 registry-metadata files** — and 🔴 **23 of them grade
+   `stock = True, needs_a_human = False`.**
+
+**What it means commercially, which is the part a client pays for.** A licence *scan* answers
+"what is this called?" A licence *read* answers "what may we do, and what do we owe?" These
+have been treated as the same question because for a decade the name implied the text.
+🔴 **That implication is breaking.** Two obligations cannot be discharged from a by-reference
+payload at all:
+
+- **Apache-2.0 §4(a)** requires a redistributor to **give recipients a copy of the License**.
+  A repository holding only the pointer has not done it, so the duty lands on whoever vendors
+  it next — on an engagement, the client.
+- **MIT's notice obligation** requires reproducing a holder name. Where that name is a
+  template vendor or a misspelling, there is no name to reproduce that means anything.
+
+🟢 **The defensible position, and it is cheap.** Ask the question of **clauses, not bytes**:
+are the words that perform the grant present? That is `Gap 439-A`'s instrument
+(`make gate-grant-presence`, 19 controls). 🔵 A byte floor is the tempting shortcut and this
+base's own corpus refutes it — BSD stock payloads run **221 B → 1 514 B**, because BSD-0,
+BSD-2 and BSD-3 are three lengths under one family name, so any single floor either misses a
+truncated BSD-3 or condemns every valid BSD-0.
+
+🔴 **And the tooling lesson is not "nobody thought of this" — it is that the fix did not
+travel.** `P1065` on this base settled in pass 254 that **a pointer to a licence is not a
+grant**, and `pass258-content-licence-family` implements the predicate by the right method.
+🔴 It covers **Creative Commons content licences only**. The predicates that grade MIT,
+Apache-2.0 and BSD — the families a client redistributes — never inherited it. 🔵 For a studio
+reading this trend the transferable point is the one this base keeps paying for: **a licence
+correction implemented in one classifier is not a capability of your pipeline.** Ask which
+instrument *writes the verdict*, and whether the rule reaches it.
+
+🟡 **How this trend connects to `Trend 36`.** `Trend 36` (`p438`) found that licence tooling
+has learned to **detect** a modified grant and not to **escalate** one. 🔴 `Trend 37` is the
+harder half: an **absent** grant is not detected at all, because every "is this stock?"
+predicate in common use asks about the title, the family and the restrictions — and none of
+them asks whether the granting text is in the file. 🔵 Together they are one trend seen from
+two sides: **licence tooling matured against hand-written licences and the supply chain has
+stopped hand-writing them.**
+
+---
+
 ## 🆕 Trend 36 — `p438` Licence tooling has learned to **detect** a modified grant and not to **escalate** one, and the gap is widest exactly where the AI supply chain is growing
 
 🟢 **The datum, measured on this base's own instruments rather than a vendor's.** One call to

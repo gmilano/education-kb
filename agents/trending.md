@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p439` · 2026-10-25 — **A payload can be SHORTER than the grant it names, and this base had no instrument that could tell. 🔴 `spragginsdesigns/ai-tutor-webapp`: `LICENSE` 552 B, titled Apache-2.0, graded `stock = True` and `needs_a_human = False` by this base's own census — and it is the Apache-2.0 APPENDIX notice, holder **Vercel, Inc.**, with the licence text not in the repository at all. 🟢 `Gap 438-C`'s next depth bought: new-rate **9/89 → 23/40**, and the tail's real character is that **10 of 23 new addresses carry no licence payload of any kind**. 🟢 `Gap 438-D` closed — the MEA leg ran and discovered.**
+
+🔵 **No date straddle.** Ten WebSearch legs (four regional, one MEA-specific closing
+`Gap 438-D`, four global, one platform), two GitHub topic-listing reads, 40 dup checks, 23
+payload probes through `lib/probe_payload.sh`, 23 `git ls-remote` HEAD reads, 12 independent
+`sha256` re-measurements, 218 offline payload gradings through two instruments, and one
+baseline `make hooks` — all **2026-10-25**, commit **2026-10-25**.
+
+🟢 **The inherited commit was GREEN, and it is reported before anything this pass did.**
+`make hooks` against `81b7359`, run **before `p439` wrote a line**, exited 2 with
+🟢 **59 of 60 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Makefile:208`, `Gap 400-B`, mechanism in `Gap 438-B`). 🔵 So `p438`
+left no drift behind it: `gate-register-currency`, `gate-census-currency` and
+`gate-union-currency` were all green on arrival, which is the first clean inheritance since
+`p436`.
+
+**What this pass established, first-hand:**
+
+- 🔴 **AND IT IS NOT A NEW CLASS, WHICH MAKES IT WORSE.** `P1065` (pass 254) settled that **a
+  pointer to a licence is not a grant**, and
+  `pass258-content-licence-family/content_licence.py::is_grant()` implements it by exactly the
+  method used here — look for the words that *perform* the grant, not the licence's name.
+  🔴 **It is scoped to Creative Commons content licences and never travelled to the code-licence
+  path**, so `is_stock()` and `needs_a_human()`, which grade MIT / Apache-2.0 / BSD, have never
+  asked the question for a single code payload. 🔵 This base's signature failure mode, named in
+  its own docs: `lib/README.md` records pass 77 re-importing `P171` because the correction lived
+  in five instruments and a sixth inherited nothing, and `Gap 394-B` records a standing gate
+  whose rule never reached the path that writes the verdicts. 🟢 `p439` carries `P1065` one
+  directory across, to the families a client actually redistributes.
+- 🔴 **`Gap 439-A` — the escalation column sees a MODIFIED grant and not an ABSENT one.**
+  `bespoke_census.is_stock()` asks three questions — the title names a family, no effective
+  restriction fires, the family is one `p257` grades — and 🔴 **none of the three asks
+  whether the granting words are present.** So a 552 B *pointer* to Apache-2.0 grades
+  identically to the 11 357 B licence. 🟢 **The class was already fixtured here and nobody
+  had joined the two facts**: `md-incorporation-by-reference.md` (226 B),
+  `licence-apache2-appendix.txt` (311 B), `grant-apache20.txt` (742 B), `apache.txt`
+  (157 B), `xblock.LICENSE.TXT.head` (159 B), `apache-2.0.txt` (3 000 B),
+  `webuntis-ha.LICENSE.mit-truncated` (797 B),
+  `aprende-brasil.LICENSE.mit-truncated` (814 B), `pupilfirst.LICENSE.head` (601 B),
+  `md-dangling-file-reference.md` (90 B) — 🔴 **10 of 10 graded `stock = True,
+  needs_a_human = False`.** The fixtures were built to test other instruments; the
+  escalation column never learned from one of them.
+- 🟢 **Built, tested and wired, with the population split from the controls.**
+  `compose/code/p439-grant-presence/` — `grant_presence.py` (clause-presence classifier,
+  four verdicts), `test_grant_presence.py` **19/19 offline**, `census.py` for the live
+  corpus. `make gate-grant-presence` is in `HOOK_GATES`; `make grant-presence-census`
+  **always exits 0**. 🔵 That split is `Gap 435-A`'s and `Gap 438-B`'s lesson honoured
+  rather than re-learned: a population question goes in a target that measures and never
+  fails, so this gate cannot go red on a harvest.
+- 🔴 **`needs_a_human()` IS NOT TOUCHED by this pass, deliberately.** The one-disjunct fix
+  `Gap 438-A` priced is still the right fix and it still moves rows across a boundary that
+  committed suites assert against. `Gap 435-A`'s sizing lesson applies to `Gap 439-A`'s
+  remedy identically, and both are now priced in the register together.
+- 🔴 **Two defects in this pass's OWN instrument, caught by this base's corpus before the
+  gate was wired, and both are now its load-bearing negative controls.**
+  🔴 **(C6)** The first clause profile matched MIT's disclaimer as `provided "as is"` with
+  ASCII quotes and graded `mit-openhands-1096.LICENSE` — a **complete** MIT licence from a
+  load-bearing dependency — as `GRANT-TRUNCATED`, because it typesets “AS IS” with
+  U+201C/U+201D. 🟡 A real grant condemned by a punctuation character; every quote form is
+  now folded before any clause is asked for.
+  🔴 **(C3)** The obvious discriminator — "does the payload say the licence is elsewhere?" —
+  is present **verbatim inside the full Apache-2.0 text**, because the APPENDIX notice is
+  part of the licence. Measured: the 11 357 B full text carries **all three**
+  `REFERENCE_MARKERS`. 🔵 That is `P171`'s shape exactly, and it is why clause presence is
+  asked first and the markers only break the tie between TRUNCATED and BY-REFERENCE.
+- 🟡 **And a third correction, from the fixture names.** The first profile graded both
+  `*.mit-truncated` fixtures `GRANT-PRESENT` against their own names. Reading them showed
+  why, and it is the truncation that matters most on an engagement: both keep the warranty
+  disclaimer and drop MIT's **final paragraph, the liability cap**. `"AS IS"` and
+  `"IN NO EVENT SHALL … BE LIABLE"` are two different protections, and a payload can keep
+  the first while withholding the second. `liability-cap` is now a fifth MIT clause.
+- 🟢 **The live population, measured and never gating** (`make grant-presence-census`):
+  **218** titled payloads graded — 88 `GRANT-PRESENT`, 20 `GRANT-TRUNCATED`,
+  9 `GRANT-BY-REFERENCE`, 101 `GRANT-UNCALIBRATED`. Of the 29 carrying no grant,
+  **24 are licence payloads and 5 are registry metadata** (`"license": "MIT"` as a *field* —
+  counted apart, not dropped, per `p275`). 🔴 **23 of them grade `stock = True,
+  needs_a_human = False`.** Row-by-row in `evidence/grant-presence.2026-10-25-p439.tsv`.
+  🔵 `GRANT-UNCALIBRATED` is a **third answer, not a pass**: 101 payloads belong to families
+  with no clause profile here, and the instrument declines to judge them rather than guess
+  (`P250`). A single BSD byte floor would have been the alternative and this base's own
+  corpus refutes it — BSD stock payloads run **221 B → 1 514 B** (n=8), because BSD-0, BSD-2
+  and BSD-3 are three lengths under one family name.
+- 🟢 **`Gap 438-C` bought and answered with a number.** `ai-tutor` ranks 61–80 → **8/20
+  new**; `education-ai` ranks 21–40 → **15/20 new**. 23/40 overall (**57.5 %**) against
+  `p438`'s 9/89 (10.1 %). Coverage does not decay past rank 60 so much as collapse. 🔴 The
+  stopping rule, now measurable: **10 of the 23 (43 %) carry no payload at all**, so the
+  next page buys mostly ungranted addresses. Buy it for payloads, not for rows.
+- 🟢 **11 shelvable of 23**: 9 MIT, 2 Apache-2.0. 1 excluded 🔴 CC-BY-NC-SA-4.0
+  (`rajantripathi/open-course-rag-benchmark`). 1 🔴 unresolvable default branch
+  (`rajantripathi/edu_mentor` — `ls-remote --symref` returned no ref, so it is recorded
+  UNRESOLVED and **not** written down as ungranted, which a hardcoded `main` would have
+  done).
+- 🟡 **Two rows share a byte-identical payload with a misspelled holder.**
+  `Devanik21/AI-Nano-Course-Generator` and `Devanik21/FluentFlow` both carry
+  `1e4635354929` naming `Debanik21` — one letter off the owning account. The grant stands;
+  the **notice obligation** cannot be discharged against a holder that matches no account.
+- 🟢 **The head is confirmed held, by re-measurement rather than by assertion.** Four
+  shelf-held addresses re-probed independently this hour returned byte-for-byte and
+  HEAD-for-HEAD what the shelves already carry: `HKUDS/DeepTutor` (Apache-2.0, 11 408 B,
+  `a31d82624c27`), `frappe/lms` (🔴 AGPL-3.0, `license.txt` 33 893 B, `5d6df8e3ed8e`,
+  default branch **`develop`**), `OpenOLAT/OpenOLAT` (Apache-2.0, 10 982 B, `d073ad444fe5`,
+  branch **`master`**), `withmarbleapp/os-taxonomy` (🟡 **ODbL**, 25 289 B, `7bd8b6794cb7`).
+  🔴 **And the 2026 roundups are still wrong about Frappe LMS**: three of this pass's own
+  search results called it "the MIT-licensed option". It is AGPL-3.0; the MIT belongs to
+  `frappe/frappe`, the framework. `p425`'s `T125` holds, re-verified at source.
+
+---
+
 ## 🆕 `p438` · 2026-10-25 — **The addition is **detected and then not escalated**. `bespoke_census.grade()` writes `MIT-BODY-PLUS:unclassified-addition` and `needs_a_human = no` **in the same row**, because the escalation predicate never reads the column the grader just computed. 🔴 Measured over this base's own 238 committed payloads: **7 of the 9** addition-bearing payloads are routed as needing no human read — **`p427`'s own two-family specimen among them**. 🟢 Found by a new education specimen whose stock-MIT payload carries a liability-shifting scope clause **in Chinese**, which `p427`'s English `SCOPE_MARKERS` cannot see.**
 
 🔵 **Append-only. Nothing below this block was edited.**

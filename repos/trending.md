@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p439` · 2026-10-25 — **`Gap 438-C`'s next depth bought and its hypothesis beaten: the new-rate goes 9/89 → 23/40 (57.5 %) past rank 60. 🔴 But the tail's defining property is not low stars — **10 of the 23 new addresses carry no licence payload at all (43 %)**, so depth past rank 60 buys mostly ungranted supply. 🟢 That is the stopping rule `p438` asked for, as a number.**
+
+**The two channels, by rank, read 2026-10-25.** Full slug-by-slug record with branch,
+payload, bytes, family and holder in `evidence/p439-topic-depth.2026-10-25-p439.tsv`.
+
+| Channel | Ranks | Slugs | Duplicates | 🟢 New | New-rate |
+|---|---|---|---|---|---|
+| `github.com/topics/ai-tutor` page 4 | 61–80 | 20 | 12 | **8** | 40.0 % |
+| `github.com/topics/education-ai` page 2 | 21–40 | 20 | 5 | **15** | 75.0 % |
+| **Total this pass** | — | **40** | **17** | **23** | **57.5 %** |
+| *`p438`, for comparison* | 1–60 + 2 pages | *89* | *80* | *9* | *10.1 %* |
+
+🔵 **What the shape means, and it is not what five passes assumed.** `p433`–`p437` each
+recorded "the discovery channel is saturated"; `p438` refuted that for the tail and predicted
+new supply below ~40 ★. 🟢 Both pages bought here beat the prediction, and the `education-ai`
+page is **75 % new** at ranks 21–40 — a *shallower* depth than `ai-tutor` page 4. So
+saturation is a property of **a channel at a depth**, never of the topic space, and the two
+channels are at very different depths of exhaustion despite covering the same industry.
+
+🔴 **The grant census of the new supply is the finding, not the count of rows.**
+
+| Outcome | Addresses | Note |
+|---|---|---|
+| 🔴 **No licence payload of any kind** | **10** | `grep`-visible ladder exhausted by `probe_payload.sh`, including the README licence-link rung. Ungranted — unusable on an engagement at any price. |
+| 🟢 MIT | 9 | Shelved on `agents/top.md`. |
+| 🟢 Apache-2.0 | 2 | One of them 🔴 **552 B** — see below. |
+| 🔴 CC-BY-NC-SA-4.0 | 1 | `rajantripathi/open-course-rag-benchmark`, non-commercial. Excluded, not shelved. |
+| 🔴 Default branch unresolved | 1 | `rajantripathi/edu_mentor`. Recorded UNRESOLVED, **not** written down as ungranted — a hardcoded `main` would have asserted the latter. |
+
+🔴 **And one of the two Apache-2.0 rows is not a grant.** `spragginsdesigns/ai-tutor-webapp`
+ships 552 B naming Apache-2.0, holder **Vercel, Inc.**, whose own words point at a URL for
+the licence text. This base's census graded it `stock = True, needs_a_human = False`.
+🟢 Registered `Gap 439-A`, instrument built and wired (`make gate-grant-presence`), and the
+full reasoning is on `agents/trending.md` under this pass.
+
+🟡 **Zero rows added to `repos/foundations.md`, stated rather than padded.** All 23 new
+addresses are single-purpose skills, apps or prompt packs; nothing downstream can depend on
+one. The screening amendment is on that file under this pass.
+
+---
+
 ## 🆕 `p438` · 2026-10-25 — **The GitHub-topic channel measured **by rank depth** rather than declared saturated: 0/20 new at ranks 1–20, 2/20 at 21–40, **7/20 at 41–60**. 🟢 Coverage decays with rank, so the five passes that called this channel "a duplicate detector" were reading the head and generalising to the tail. 🔴 And one of the seven tail rows is the payload that broke this base's escalation column.**
 
 🔵 **Append-only. Nothing below this block was edited.**

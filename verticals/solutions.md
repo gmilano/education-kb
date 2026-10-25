@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p439` — The platform tier re-measured at source, and the **one licence error this industry keeps making** is confirmed live for the third time
+
+🟢 **Four platform-tier addresses re-probed first-hand this hour**, byte-for-byte and
+HEAD-for-HEAD against what this shelf already carries. The point of the exercise is that it
+was run as a *measurement* and not as an assumption — a shelf that is never re-read is a
+shelf whose staleness is unknown:
+
+| Platform | Licence (re-verified 2026-10-25) | Default branch | Payload | Shelf agrees |
+|---|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | ⚠️ `master` | `LICENSE` 10 982 B @ `d073ad444fe5` | 🟢 yes |
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** | ⚠️ `develop` | `license.txt` 33 893 B @ `5d6df8e3ed8e` | 🟢 yes |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | `main` | `LICENSE` 11 408 B @ `a31d82624c27` | 🟢 yes |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 **ODbL** | `main` | `LICENSE` 25 289 B @ `7bd8b6794cb7` | 🟢 yes |
+
+🔴 **THE ERROR, LIVE AGAIN: "Frappe LMS is the MIT-licensed option."** Three separate 2026
+LMS-comparison pages returned by this pass's own platform search say exactly that, one of
+them phrasing it as *"MIT licence with self-hosted data ownership"*. 🟢 **It is AGPL-3.0**,
+read from `license.txt` at the commit above. The MIT belongs to **`frappe/frappe`**, the
+*framework*; the LMS *application* built on it is AGPL-3.0. `p425` registered this as `T125`
+and `p439` is the third independent confirmation.
+
+🔵 **Why this specific error is the most expensive one available in this tier.** The
+framework-permissive / application-copyleft split is invisible in a vendor comparison table
+and decisive for a client: AGPL-3.0 §13 reaches users **over a network**, so a hosted
+student-facing deployment of a modified Frappe LMS owes source to its users. A studio that
+priced the engagement off "MIT" has mispriced the whole delivery model, not a line item.
+🟢 **And it is the generalisable lesson**, which is why it sits on this shelf rather than only
+in the trend record: in a platform tier, **the licence belongs to the artefact you ship, not
+to the project whose name is on the box.** Two keys, one platform.
+
+### 🟡 Two default branches that are not `main`, and that is a *platform-tier* property
+
+`OpenOLAT` resolves to **`master`** and `frappe/lms` to **`develop`**. 🔴 A hardcoded `main`
+writes both down as **ungranted** — the exact trap `lib/probe_payload.sh` exists to close
+(measured on `GibbonEdu/core` → `v31.0.00`, `portabilis/i-educar` → `2.12`,
+`francoisjacquet/rosariosis` → `mobile`, three of the five highest-starred open SIS platforms
+in existence). 🔵 Mature platform projects are *more* likely than new agents to carry a
+non-`main` default, because their branch conventions predate the convention. Resolve with
+`ls-remote --symref`, never assume.
+
+### 🟢 The customisation seam, restated for the licences actually on this shelf
+
+Both headline AI-on-top platforms this pass touched are **copyleft** (`frappe/lms` AGPL-3.0;
+Moodle GPL-3.0 at **5.2**, April 2026; Open edX AGPL-3.0, current release **Verawood**, with
+**Willow** expected December 2026; Canvas AGPL-3.0; Chamilo GPL-3.0; ILIAS at **11**,
+PHP 8.3/8.4). 🟢 **The two permissive answers in the whole tier remain `OpenOLAT`
+(Apache-2.0) and `kolibri` (MIT)** — and the seam that lets a studio put AI on a copyleft LMS
+without inheriting its obligations is still the one this shelf has carried since `p387`:
+build **outside** the core, against a supported extension point —
+[`openedx/XBlock`](https://github.com/openedx/XBlock) (Apache-2.0) for Open edX, LTI 1.3 or
+the REST API for Moodle and Canvas — and keep the AI component in its own repository under
+its own grant. 🔵 Calling an AGPL system **over a network boundary** is a different act from
+linking into it, and the boundary is the deliverable.
+
+🔴 **New screening question on this tier as of this pass, and it is not theoretical.** Before
+adopting any platform component, ask whether its grant is **present** or merely **named** —
+`make gate-grant-presence`. A 552 B payload titled Apache-2.0 was found in live education
+supply this hour (`spragginsdesigns/ai-tutor-webapp`), holder **Vercel, Inc.**, licence text
+absent from the repository. For a platform component the client will *redistribute*,
+Apache-2.0 §4(a)'s duty to supply a copy of the License lands on the integrator. See
+`Gap 439-A`.
+
+---
+
 ## 🆕 `p438` — The platform decision survives a **licence scan** and not a **licence read**, and the difference is now measured on this base's own instruments
 
 🔵 **Why this lands on the verticals shelf.** A platform choice is the one decision on an

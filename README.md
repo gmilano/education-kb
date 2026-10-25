@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 439 — reads 2026-10-25, commit 2026-10-25 — **A PAYLOAD CAN BE SHORTER THAN THE GRANT IT NAMES, AND NO INSTRUMENT ON THIS BASE COULD SEE IT. `spragginsdesigns/ai-tutor-webapp` ships `LICENSE` 552 B titled Apache-2.0, holder **Vercel, Inc.**, licence text absent — graded `stock = True`, `needs_a_human = False`. 🟢 THE INHERITED COMMIT WAS GREEN, 59/60, THE FIRST CLEAN INHERITANCE SINCE `p436`. 🟢 `Gap 438-C` bought and beaten (new-rate 9/89 → 23/40) and `Gap 438-D` CLOSED — the MEA leg ran and discovered. 🔴 43 % of the new tail carries no licence payload at all.**
+
+🔵 **No date straddle.** Ten WebSearch legs (four regional, one MEA-specific closing
+`Gap 438-D`, four global, one platform), two GitHub topic-listing reads, 40 dup checks, 23
+payload probes through `lib/probe_payload.sh`, 23 `git ls-remote` HEAD reads, 12 independent
+`sha256` re-measurements, 218 offline payload gradings through two instruments, four egress
+measurements and one baseline `make hooks` — all **2026-10-25**, commit **2026-10-25**, so
+`updated:` carries one date on every file.
+
+🟢 **The inherited commit was GREEN, and it is reported before anything this pass did.** A
+baseline `make hooks` against `81b7359`, run **before `p439` wrote a line**, exited **2** with
+**59 of 60 gates green**, red only on `gate-census-union` — this base's long-standing
+**declared, non-blocking** red (`Makefile:208`, `Gap 400-B`, mechanism in `Gap 438-B`).
+🔵 `p438` left no drift behind it: the three currency gates it had to repair were all green on
+arrival. 🟢 **After this pass's writes: `make hooks` 60/61 and `make commit-gates` 60 blocking
+gates green** — the suite grew by one, `gate-grant-presence`.
+
+**What this pass established, first-hand:**
+
+- 🔴 **`Gap 439-A` — the escalation column sees a MODIFIED grant and not an ABSENT one.**
+  `bespoke_census.is_stock()` asks three questions — the title names a family, no effective
+  restriction fires, the family is one `p257` grades — and **none asks whether the granting
+  words are present**. So a 552 B *pointer* to Apache-2.0 grades identically to the 11 357 B
+  licence. 🟢 **The class was already fixtured here and the two facts had never been joined**:
+  ten committed fixtures (`md-incorporation-by-reference.md`, `licence-apache2-appendix.txt`,
+  `*.mit-truncated`, `*.head`, …) 🔴 **grade `stock = True, needs_a_human = False`, 10 of 10.**
+- 🔴 **AND IT IS NOT A NEW CLASS, WHICH IS THE SHARPER FINDING.** `P1065` (pass 254) settled
+  that **a pointer to a licence is not a grant** and
+  `pass258-content-licence-family::is_grant()` implements it by exactly this method — 🔴 for
+  **Creative Commons content licences only**, never carried into the code-licence path. So the
+  predicates grading MIT / Apache-2.0 / BSD have never asked the question for one code
+  payload. 🔵 This base's signature failure mode, named in its own docs (`lib/README.md` on
+  pass 77 re-importing `P171`; `Gap 394-B` on a standing gate whose rule never reached the
+  writing path) — and `README.md`'s own warning that *"a new channel's first temptation is to
+  re-sell what you already own"* fired on this pass and was obeyed: the claim is narrowed to
+  what is true and worse.
+- 🟢 **Built, tested, wired — with the population split from the controls on the way in.**
+  `compose/code/p439-grant-presence/`: `grant_presence.py` (four verdicts, clause-presence),
+  `test_grant_presence.py` **25/25 offline**, `census.py`, seven committed fixtures.
+  `make gate-grant-presence` is in `HOOK_GATES`; `make grant-presence-census` **always exits
+  0**. 🔵 That is `Gap 435-A`'s and `Gap 438-B`'s prescription applied as the gate was built
+  rather than retro-fitted after a red.
+- 🔴 **`needs_a_human()` IS NOT TOUCHED, deliberately.** The disjunct is the right fix and it
+  moves rows across a boundary committed suites assert against — `Gap 435-A`'s sizing lesson.
+  🟢 `Gap 438-A` and `Gap 439-A` now want the **same edit to the same predicate**; whichever
+  pass takes it should take both and pay the `p341` re-baseline once.
+- 🔴 **THREE DEFECTS IN THIS PASS'S OWN INSTRUMENT, ALL CAUGHT BY THIS BASE'S CORPUS BEFORE
+  THE GATE WAS WIRED, AND ALL NOW ITS CONTROLS.** (1) `mit-openhands-1096.LICENSE` — a
+  **complete** MIT licence on a load-bearing dependency — was graded `GRANT-TRUNCATED` because
+  it typesets “AS IS” with U+201C/U+201D: a real grant condemned by a punctuation character.
+  (2) The obvious discriminator *"the payload says the licence is elsewhere"* appears
+  **verbatim inside the full Apache-2.0 text**, since the APPENDIX is part of the licence — so
+  a marker-keyed classifier condemns every valid Apache-2.0 payload (`P171`'s shape).
+  (3) 🔴 **Two of five reference markers were dead code**: written with uppercase
+  `LICEN[SC]E`/`COPYING` literals and matched against text already lowercased. `C15` now
+  asserts every marker fires on its own specimen.
+- 🟢 **`Gap 438-C` bought and its hypothesis beaten.** `ai-tutor` ranks 61–80 → **8/20** new;
+  `education-ai` ranks 21–40 → 🟢 **15/20 (75 %)**, at a *shallower* depth. **23/40 (57.5 %)**
+  against `p438`'s 9/89 (10.1 %). 🔵 Saturation is a property of **a channel at a depth**, never
+  of the topic space. 🔴 The stopping rule, as a number: **10 of 23 (43 %) carry no licence
+  payload at all**, so the next page buys mostly ungranted supply — buy depth for payloads, not
+  for rows. **CLOSED.**
+- 🟢 **`Gap 438-D` CLOSED: the MEA leg ran as its own leg and discovered a single commercial
+  pattern across five jurisdictions** — 🔴 **AI mandated in the classroom with no binding AI
+  statute anywhere in the region.** UAE (nationwide K-12 requirement, May 2025, ~1 M pupils,
+  seven strands, private schools exempt), Saudi Arabia (compulsory from 2025-26; **PDPL** is
+  the binding instrument, SDAIA non-binding), Nigeria (**DPA 2023**), Kenya (**DPA 2019**),
+  African Union (continental strategy, no law). 🟢 **So the sellable artefact there is a
+  data-protection-anchored deployment, the opposite posture to the EU conformity motion** —
+  in a region frequently sold the EU one.
+- 🟡 **11 shelvable of 23** (9 MIT, 2 Apache-2.0); 1 excluded 🔴 CC-BY-NC-SA-4.0; 1 🔴 default
+  branch unresolved, recorded UNRESOLVED rather than written down as ungranted. 🔴 **Zero
+  foundation rows**, stated rather than padded: all 23 are single-purpose skills and nothing
+  downstream can depend on one. 🟡 Two rows share a **byte-identical** payload naming a holder
+  (`Debanik21`) that matches no GitHub account.
+- 🟢 **The head is confirmed held by re-measurement, not assertion.** `HKUDS/DeepTutor`,
+  `frappe/lms`, `OpenOLAT/OpenOLAT` and `withmarbleapp/os-taxonomy` re-probed independently
+  this hour returned byte-for-byte and HEAD-for-HEAD what the shelves already carry. 🔴 **And
+  three 2026 roundups are still wrong about Frappe LMS** — "the MIT-licensed option" is
+  **AGPL-3.0**; the MIT belongs to `frappe/frappe`, the framework. `p425`'s `T125`, third
+  confirmation.
+- 🔵 **`Gap 439-B` registered, carried deliberately**: `GRANT-UNCALIBRATED` is **101 of 218**
+  payloads, because clause profiles exist for MIT, Apache-2.0 and ISC only. GPL (40), AGPL
+  (22), BSD (8), LGPL (7), MPL (8) have none — and **AGPL is the most consequential family in
+  this industry's platform tier**. Priced at one pass per family group, AGPL and GPL-3.0 first.
+- 🟡 **Naming collision noted, not silently resolved**: `compose/code/p439-case-collision-gate`
+  predates this pass and is unrelated to it. This pass's directory is
+  `compose/code/p439-grant-presence`. The gate-directory numbers and the `## 🆕 \`pN\`` pass
+  numbers are **two different sequences** on this tree, and `gate-register-currency` reads only
+  the second.
+
+---
+
 ## Pass 438 — reads 2026-10-25, commit 2026-10-25 — **THE ADDITION IS DETECTED AND THEN NOT ESCALATED: `bespoke_census.grade()` writes `MIT-BODY-PLUS:unclassified-addition` and `needs_a_human = no` IN THE SAME ROW, and over this base's own 238 committed payloads **7 of the 9** addition-bearing ones are routed as needing no human read — `p427`'s own two-family specimen among them. 🔴 THE INHERITED COMMIT WAS RED, 56/60, AND `p437` IS THE PASS THAT BROKE IT. 🟢 Three of the four reds closed; discovery coverage measured by rank depth instead of declared saturated: 0/20 new at ranks 1–20, **7/20 at 41–60**.**
 
 🔵 **No date straddle.** Every leg — nine WebSearch legs (four regional, four global, one
@@ -89,23 +182,24 @@ pass late, with nothing else looking.
 ---
 
 🔵 **The address census, re-derived as the last act before the commit — restated, not
-back-fitted.** `gate-census-currency` and `gate-union-currency` were **both RED on the
-inherited commit**, exactly as `p352` and `p376` are designed to be when a pass writes shelves
-and leaves the sentence alone, and `p438`'s own nine new addresses moved the denominator
-again.
+back-fitted.** 🟢 Both currency gates were **GREEN on the inherited commit** this time —
+`p438` restated its own sentences — so the staleness below is entirely this pass's own
+writes, which is the arrangement `p352` and `p376` are designed to produce.
 
-**2 831** harvested shapes on channel U → **39** are not addresses → **2 792 addresses**.
+**2 844** harvested shapes on channel U → **39** are not addresses → **2 805 addresses**.
 
-🔵 **2 792** channel-U addresses and **3 308** channel-B survivors give
-**3 675 addresses over both channels**.
+🔵 **2 805** channel-U addresses and **3 314** channel-B survivors give
+**3 690 addresses over both channels**.
 
-🔵 **`p438`: all three cells moved, and the arithmetic is exactly this pass's nine rows.**
-Channel U rose **2 783 → 2 792** (+9) and the union **3 666 → 3 675** (+9) — the nine
-addresses graded this pass, each entering both channels once. 🟢 The rejection count is
-**unchanged at 39**: every new address is well-formed. 🔵 The inflation this pass's writes
-added to the harvested denominator is **1.38 %**. 🔵 The published figures `p438` inherited
-(**2 813 / 2 774 / 3 292 / 3 659**) were `p436`'s and were already stale by `p437`'s writes
-before this pass added a line — which is the drift `gate-census-currency` exists to refuse.
+🔵 **`p439`: all three moving cells moved, and the arithmetic is this pass's own rows.**
+Channel U rose **2 792 → 2 805** (+13) and the union **3 675 → 3 690** (+15). 🔵 The +13 is
+the 11 shelvable addresses plus the two recorded-but-unshelved ones
+(`rajantripathi/open-course-rag-benchmark`, excluded CC-BY-NC-SA-4.0, and
+`spragginsdesigns/ai-tutor-webapp`, the `Gap 439-A` specimen) — 🟢 **an address this base
+refuses to shelve is still an address it has graded**, which is why the denominator counts it
+and the shelf tier does not. 🟢 The rejection count is **unchanged at 39**: every new address
+is well-formed. 🔵 The inflation this pass's writes added to the harvested denominator is
+**0.46 %**.
 
 ---
 

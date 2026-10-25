@@ -6,6 +6,72 @@ updated: 2026-10-25
 
 # 🏗️ Foundational repos — Education
 
+## 🆕 `p439` — **Zero rows added, and the screening question is now a measured one: can a dependency's grant even be READ from the repository?**
+
+🔴 **No foundation rows this pass.** All **23** new addresses `p439` discovered (`ai-tutor`
+ranks 61–80, `education-ai` ranks 21–40) are single-purpose tutoring skills, exam coaches,
+prompt packs or student apps. A foundation on this shelf is something another component can
+**depend on**; none of these is. 🟡 They are shelved on `agents/top.md` where they belong,
+and the count here stays where it was rather than being inflated to look like progress.
+
+### 🟢 The screening amendment — a third question, before licence family
+
+This shelf has screened candidate foundations on existence, then default branch, then
+licence family. `p439` adds a question that must come **between** family and adoption, because
+it is the one that defeated every instrument on this base at once:
+
+> **Is the granting text actually present in the repository, or only named?**
+
+🔴 Measured on live supply this pass: `spragginsdesigns/ai-tutor-webapp` ships `LICENSE`
+**552 B** titled Apache-2.0 — the APPENDIX *notice*, holder **Vercel, Inc.**, pointing at a
+URL. This base's census returned `titled_family = Apache-2.0`, `scan_verdict = PERMISSIVE`,
+`stock = True`, `needs_a_human = False`. 🔵 **A scan cannot answer this question and a byte
+count should not**: the same measurement over this base's corpus shows BSD stock payloads
+spanning **221 B → 1 514 B** (n=8), so any single BSD floor either misses a truncated BSD-3
+or condemns every valid BSD-0.
+
+🔴 **And the question was already settled here, one directory away.** `P1065` (pass 254):
+*a pointer to a licence is not a grant* — implemented in
+`pass258-content-licence-family/content_licence.py::is_grant()` for **Creative Commons content
+licences only**, and never carried into the code-licence path that grades MIT, Apache-2.0 and
+BSD. 🔵 A rule that exists in one classifier is not a property of the screen.
+
+🟢 **So the question is asked of clauses, and it is now a `make` target, not a habit**:
+
+```
+make gate-grant-presence     # 19 controls, offline, committed fixtures
+make grant-presence-census   # the live corpus; a MEASUREMENT, always exits 0
+```
+
+**Why it matters specifically for a foundation.** A foundation is vendored, so its
+obligations travel to whoever ships it next. Two of them cannot be discharged from a
+by-reference payload at all: Apache-2.0 **§4(a)** requires giving recipients a copy of the
+License — a repository holding only the pointer has not done it, and the duty lands on the
+integrator — and MIT's notice obligation requires reproducing a holder name, which in the
+Vercel case names a party that never wrote the code. 🔵 For a dependency the client will
+redistribute, `GRANT-BY-REFERENCE` is a **procurement finding**, not a footnote.
+
+### 🟢 Four existing foundation-tier and platform addresses re-measured, and the shelf held
+
+Independent re-probe this hour, byte-for-byte and HEAD-for-HEAD against what these shelves
+already carry — a staleness check run as a measurement rather than assumed:
+
+| Address | Re-measured 2026-10-25 | Agrees with shelf |
+|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0, `LICENSE` 11 408 B, HEAD `a31d82624c27` | 🟢 yes |
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 AGPL-3.0, `license.txt` 33 893 B, HEAD `5d6df8e3ed8e`, branch **`develop`** | 🟢 yes |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0, `LICENSE` 10 982 B, HEAD `d073ad444fe5`, branch **`master`** | 🟢 yes |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 ODbL, `LICENSE` 25 289 B, HEAD `7bd8b6794cb7` | 🟢 yes |
+
+🔴 **And the secondary sources are still wrong about the first one a client will Google.**
+Three of this pass's own 2026 search results named Frappe LMS "the MIT-licensed option" for
+self-hosted LMS. It is **AGPL-3.0**; the MIT belongs to `frappe/frappe`, the *framework*.
+`p425`'s `T125` re-verified at source — and the same two-key confusion (framework permissive,
+application copyleft) is the single most expensive licence error available in this industry's
+platform tier.
+
+---
+
 ## 🆕 `p438` — **This pass adds ZERO foundation rows, and that is the finding** — plus the screening amendment that applies to every row already here
 
 🔴 **Stated rather than padded.** `p438` graded **nine** new addresses first-hand (eight

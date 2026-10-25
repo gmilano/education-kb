@@ -1,0 +1,41 @@
+rank	channel	slug	dup_or_new	branch	payload	bytes	family	holder
+61	github-topic:ai-tutor:page4:ranks61-80	legostin/learn-almost-anything	DUP	-	-	-	-	-
+62	github-topic:ai-tutor:page4:ranks61-80	liuwenji007/regulus-academy	DUP	-	-	-	-	-
+63	github-topic:ai-tutor:page4:ranks61-80	Abelo9996/LearnOS	NEW	main	LICENSE	1077	MIT	Copyright (c) 2025 LearnOS Contributors
+64	github-topic:ai-tutor:page4:ranks61-80	ahmtsahin/deutsch-loop	DUP	-	-	-	-	-
+65	github-topic:ai-tutor:page4:ranks61-80	Kaiji-Z/LookatStudy	DUP	-	-	-	-	-
+66	github-topic:ai-tutor:page4:ranks61-80	DuckInAShirt/leetmate	DUP	-	-	-	-	-
+67	github-topic:ai-tutor:page4:ranks61-80	ZelinZhou-THU/stem-tutor-agent	DUP	-	-	-	-	-
+68	github-topic:ai-tutor:page4:ranks61-80	dragonpilee/ScholarMate	DUP	-	-	-	-	-
+69	github-topic:ai-tutor:page4:ranks61-80	ningkaikok/dotty-tutor	DUP	-	-	-	-	-
+70	github-topic:ai-tutor:page4:ranks61-80	kiingxo/brain-crate-mobile	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+71	github-topic:ai-tutor:page4:ranks61-80	X-RayLuan/Openclaw-Study-Coach	NEW	main	LICENSE	1066	MIT	Copyright (c) 2026 X-RayLuan
+72	github-topic:ai-tutor:page4:ranks61-80	lecrix/netem-ai-predictor	NEW	main	LICENSE	1075	MIT	Copyright (c) 2025 NETEM AI Predictor
+73	github-topic:ai-tutor:page4:ranks61-80	skillcoco/skillcoco	DUP	-	-	-	-	-
+74	github-topic:ai-tutor:page4:ranks61-80	gupta-v/KIRA	DUP	-	-	-	-	-
+75	github-topic:ai-tutor:page4:ranks61-80	spragginsdesigns/ai-tutor-webapp	NEW	main	LICENSE	552	Apache-2.0	Copyright 2024 Vercel, Inc.
+76	github-topic:ai-tutor:page4:ranks61-80	pulkitpareek18/LearnFlow-AI	DUP	-	-	-	-	-
+77	github-topic:ai-tutor:page4:ranks61-80	Weichenleeeee123/oh-my-chinese-teacher	NEW	main	LICENSE	1091	MIT	Copyright (c) 2026 oh-my-chinese-teacher contributors
+78	github-topic:ai-tutor:page4:ranks61-80	umitkacar/memogen-ielts-flashcards	NEW	main	LICENSE	1078	MIT	Copyright (c) 2024-2025 MEMO-IMAGEN Team
+79	github-topic:ai-tutor:page4:ranks61-80	SHALINISAURAV/AI-Study-Assistant	DUP	-	-	-	-	-
+80	github-topic:ai-tutor:page4:ranks61-80	lowellran/Study_via_AI	NEW	main	LICENSE	1066	MIT	Copyright (c) 2026 lowellran
+21	github-topic:education-ai:page2:ranks21-40	Gokul-ram-j/Online-Class-Environment-Monitoring-with-Pose-Estimation-and-Attention-Tracking	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+22	github-topic:education-ai:page2:ranks21-40	MoKangMedical/digital-sage	DUP	-	-	-	-	-
+23	github-topic:education-ai:page2:ranks21-40	myvipbackup2/china-k12-teacher-skills	DUP	-	-	-	-	-
+24	github-topic:education-ai:page2:ranks21-40	non-question-proficiency-evaluation/Interactive-Proficiency-AKT	DUP	-	-	-	-	-
+25	github-topic:education-ai:page2:ranks21-40	Adityavanjre/Project-K	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+26	github-topic:education-ai:page2:ranks21-40	Maryam-qureshi/Emualim-CRAG	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+27	github-topic:education-ai:page2:ranks21-40	MUJINN/score-dimension	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+28	github-topic:education-ai:page2:ranks21-40	NagaPranathiRallabandi/gnn-explainable-education-recommender	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+29	github-topic:education-ai:page2:ranks21-40	yahiacuda/Lesson-Rag-Agent	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+30	github-topic:education-ai:page2:ranks21-40	wxxxqcy/ai-learning-assistant	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+31	github-topic:education-ai:page2:ranks21-40	Devanik21/AI-Nano-Course-Generator	NEW	main	LICENSE	1066	MIT	Copyright (c) 2025 Debanik21
+32	github-topic:education-ai:page2:ranks21-40	MUJINN/intelligent-correction	DUP	-	-	-	-	-
+33	github-topic:education-ai:page2:ranks21-40	ShowayLiao/Engineering-Exam-AI-Tutor	NEW	main	LICENSE	11357	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+34	github-topic:education-ai:page2:ranks21-40	rajantripathi/edu_mentor	NEW	-	UNRESOLVED	0	UNRESOLVED	-
+35	github-topic:education-ai:page2:ranks21-40	MUJINN/question-marking	DUP	-	-	-	-	-
+36	github-topic:education-ai:page2:ranks21-40	Devanik21/FluentFlow	NEW	main	LICENSE	1066	MIT	Copyright (c) 2025 Debanik21
+37	github-topic:education-ai:page2:ranks21-40	divinesaun/uz-info-bot	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
+38	github-topic:education-ai:page2:ranks21-40	rajantripathi/open-course-rag-benchmark	NEW	main	LICENSE	936	CC-BY-NC-SA-4.0	NOT-APPLICABLE (CC-BY-NC-SA-4.0: holder not in the license text by construction)
+39	github-topic:education-ai:page2:ranks21-40	thendralmagudapathi/RAG-for-NCERT	NEW	main	LICENSE	1077	MIT	Copyright (c) 2025 Thendral Magudapathi
+40	github-topic:education-ai:page2:ranks21-40	rajantripathi/insight-driven-learning-platform	NEW	main	NO-PAYLOAD	0	NO-PAYLOAD	-
