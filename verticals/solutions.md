@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p440` — The platform tier's grants are read **clause by clause** for the first time, and all ten hold
+
+🟢 Every pass before this one verified the platform tier by reading its payload and
+naming its **family**: *this is AGPL-3.0, 35 136 B, here is the digest*. That answers
+"which licence" and 🔴 **not** "is the licence actually in there". `p439` showed on the
+code path why the two differ — a 552 B file titled Apache-2.0 that was a pointer — but
+its instrument had profiles for MIT, Apache-2.0 and ISC only, so 🔴 **every copyleft row
+on this file was `GRANT-UNCALIBRATED`: the instrument declining to judge the entire tier
+this file exists to sell.**
+
+🟢 `p440` profiles the GPL family. The ten platform repositories below were re-probed at
+source **2026-10-25** and graded against their own licence version's operative clauses.
+
+| Platform | Branch | Payload | Bytes | `sha256₁₂` | Profile | Grant check |
+|---|---|---|---|---|---|---|
+| **Moodle** · [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | `COPYING.txt` | 35 147 | `8ceb4b9ee5ad` | GPL-3.0 | 🟢 **GRANT-PRESENT** |
+| **Open edX** · [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `LICENSE` | 35 136 | `e12d78569742` | AGPL-3.0 | 🟢 **GRANT-PRESENT** |
+| **Frappe LMS** · [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 33 893 | `db1a87ba81e8` | AGPL-3.0 | 🟢 **GRANT-PRESENT** |
+| **Chamilo** · [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `LICENSE` | 35 147 | `8ceb4b9ee5ad` | GPL-3.0 | 🟢 **GRANT-PRESENT** |
+| **Canvas LMS** · [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | 34 520 | `57c8ff33c9c0` | AGPL-3.0 | 🟢 **GRANT-PRESENT** |
+| **Gibbon** · [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `v31.0.00` | `LICENSE` | 35 121 | `93178a43d6d3` | GPL-3.0 | 🟢 **GRANT-PRESENT** |
+| **RosarioSIS** · [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` | `LICENSE` | 15 214 | `d954e14e5c75` | GPL-2.0 | 🟢 **GRANT-PRESENT** |
+| **i-Educar** · [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | `LICENSE` | 18 092 | `8177f9751321` | GPL-2.0 | 🟢 **GRANT-PRESENT** |
+| **openSIS Classic** · [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` | `docs/License.txt` | 17 286 | `224ac3d403e3` | GPL-2.0 | 🟢 **GRANT-PRESENT** |
+| **PeerTube** · [`Chocobozzz/PeerTube`](https://github.com/Chocobozzz/PeerTube) | `develop` | `LICENSE` | 34 520 | `76a97c878c9c` | AGPL-3.0 | 🟢 **GRANT-PRESENT** |
+
+🟢 **Ten of ten.** 🔵 **What a clean sweep is worth, precisely:** it does not make the
+copyleft exposure smaller — Moodle is still GPL-3.0 and Open edX is still AGPL-3.0, and
+the posture on this file is unchanged. What it removes is a *different* risk, the one
+`p439` found on the permissive side: a platform whose licence file is a **pointer** to
+its licence, leaving the client to discharge the distribution obligation it names. 🟢 On
+this tier that risk is now measured at **zero**, rather than assumed.
+
+### 🔴 The sentence a client should hear about AGPL, now that §13 is readable
+
+The AGPL-3.0 profile built this pass requires the **operative §13 sentence** —
+*"...interacting with it remotely through a computer network ... an opportunity to
+receive the Corresponding Source"*. 🔵 That clause is the whole commercial difference
+between Moodle and Open edX, and it is the one a procurement conversation turns on:
+
+- **GPL-3.0 (Moodle, Chamilo, Gibbon)** — the obligation attaches to **distribution**.
+  A hosted deployment that never ships binaries to anyone does not trigger it.
+- **AGPL-3.0 (Open edX, Canvas, Frappe LMS, PeerTube)** — the obligation attaches to
+  **network interaction**. A hosted deployment triggers it by being used, and
+  🔴 modifications must be offered to the platform's own users.
+- **GPL-2.0 (i-Educar, RosarioSIS, openSIS)** — distribution again, and 🔵 **no network
+  clause at all**, because GPL-2.0 predates the question. These three are the LATAM and
+  low-cost SIS tier, and this is a genuine, under-stated advantage for a hosted
+  engagement: the same posture that makes them look dated makes them cheaper to host.
+
+🔴 **And `p440` measured why that GPL-2.0 row cannot be graded with GPL-3.0's clauses:**
+a complete GPL-2.0 licence is missing **four of GPL-3.0's six** operative clauses, so a
+single unversioned "GPL" rule would have condemned all three of those platforms as
+carrying a truncated grant. The profile is version-aware for exactly that reason.
+
+🟡 **`LGPL-3.0` is still unread, and two platforms on this file carry it** —
+**BigBlueButton** and **OpenEduCat**. LGPL-3.0 incorporates GPL-3.0 *by reference* by its
+own design, so it needs a verdict this instrument does not yet have. Registered as
+`Gap 440-B`; until then those two rows stay `GRANT-UNCALIBRATED`, which is the
+instrument declining rather than approving.
+
+---
+
 ## 🆕 `p439` — The platform tier re-measured at source, and the **one licence error this industry keeps making** is confirmed live for the third time
 
 🟢 **Four platform-tier addresses re-probed first-hand this hour**, byte-for-byte and

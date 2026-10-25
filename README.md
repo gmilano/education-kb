@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 440 — reads 2026-10-25, commit 2026-10-25 — **`Gap 439-B` BOUGHT TO ITS OWN STOPPING RULE, AND THE FAMILY IT UNLOCKED IS THE ONE THIS INDUSTRY RUNS ON. 🟢 `GRANT-UNCALIBRATED` falls **101/218 → 39/218** on the identical population. 🔴 The return is not the 52 grants confirmed — it is the **10 payloads revealed as non-grants**, 7 of them AGPL, that sat inside a verdict which aggregates exactly like a pass. 🟢 The live platform tier is read clause-by-clause for the first time: **11/11 GRANT-PRESENT**. 🔴 And all four regional legs returned confirmation and nothing else — the first four-nil on discovery, written down as one.**
+
+🔵 **No date straddle.** Six WebSearch legs (four regional, two global), 11 live payload
+probes through `compose/code/lib/probe_payload.sh` **sourced, not re-implemented**, 11
+`git ls-remote` HEAD reads, 11 independent `sha256` re-measurements, 224 offline payload
+gradings, two mutation runs against this pass's own instrument, and one baseline
+`make hooks` — all **2026-10-25**, commit **2026-10-25**, so `updated:` carries one date on
+every file.
+
+🟢 **The inherited commit was GREEN, and it is reported before anything this pass did.** A
+baseline `make hooks` against `ede2c9c`, run **before `p440` wrote a line**, exited **2** with
+**60 of 61 gates green**, red only on `gate-census-union` — this base's long-standing
+**declared, non-blocking** red (`Makefile:208`, `Gap 400-B`, mechanism in `Gap 438-B`).
+🔵 `p439` left no drift: all three currency gates were green on arrival. 🟢 That is the
+**second clean inheritance in a row** — the first consecutive pair this base has recorded.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 439-B` CLOSED for the GPL family group**, to the stopping rule it wrote for
+  itself — *"profile AGPL and GPL-3.0 first."* Three version-aware profiles added to
+  `grant_presence.py`: **AGPL-3.0**, **GPL-3.0**, **GPL-2.0**. On the identical 218-payload
+  population, `GRANT-UNCALIBRATED` **101 → 39**.
+- 🔴 **AND THE POINT IS THE 10, NOT THE 52.** Of 62 newly judged payloads, 52 are
+  `GRANT-PRESENT` and **10 are not grants at all** — seven AGPL, 287 B → 3 000 B, under
+  filenames like `agpl-3.0.txt` against a real AGPL-3.0 of 34 523 B. 🔵 None was a new
+  defect. Each had been sitting in `GRANT-UNCALIBRATED`, which is the instrument *declining*
+  and which renders, in every report that aggregates it, identically to "fine" (`Trend 38`).
+- 🔴 **BOTH HALVES OF THE TRAP `Gap 439-B` PRICED ARE NOW NUMBERS.** `P171`: stock GPL-3.0
+  carries `GNU Affero General Public License` in its own §13 **heading**, so a name-keyed
+  clause reports **18 of 18** GPL-3.0 payloads as AGPL — the defect pass 77 first paid for,
+  363 passes ago. The clause taken is AGPL's **operative sentence**: 🟢 **15/15** on full
+  AGPL-3.0, 🟢 **0/18** on GPL-3.0. Version: the 19 stock GPL-2.0 payloads carry neither
+  `basic permissions` nor `conveying modified source versions`, so one unversioned `"GPL"`
+  profile condemns **all nineteen complete licences**.
+- 🟢 **MUTATION-TESTED, NOT MERELY WRITTEN.** Re-keying AGPL's clause on the name fails
+  **exactly one** control (`C17`, the intended guard, nothing else); disabling version
+  resolution fails **10**. 🔵 `C17` was hardened mid-pass — it dereferenced
+  `clause_report(...)[1]`, so *removing* the profile raised a `TypeError` rather than a red.
+  A control that crashes still stops a commit, but it reports a broken test when the truth is
+  a withdrawn guard. Suite **46 controls**, up from 25.
+- 🟢 **TURNED ON LIVE SUPPLY, NOT ONLY FIXTURES.** Eleven repositories probed this hour and
+  graded against their own version's clauses: 🟢 **11 of 11 `GRANT-PRESENT`**, including the
+  ten platform repositories this base sells — Moodle, Open edX, Frappe LMS, Chamilo, Canvas,
+  Gibbon, RosarioSIS, i-Educar, openSIS, PeerTube. 🔵 Three of the ten are **not** on `main`
+  or `master` (`v31.0.00`, `2.12`, `mobile`), which is the trap the shared library exists to
+  close. The copyleft tier was `GRANT-UNCALIBRATED` until this hour.
+- 🟢 **One new address, stated as one.**
+  [`AnkitClassicVision/tutor-engine`](https://github.com/AnkitClassicVision/tutor-engine) —
+  adaptive tutor for ages 5–14, missions from the child's real schoolwork, bring-your-own
+  model, per-family encryption. `LICENSE` **34 523 B · `0d96a4ff68ad`** @ `30cbe59f37c3`,
+  **AGPL-3.0**, 🟢 `GRANT-PRESENT`. 🔴 **Not a build-on row** — §13 is exactly what a hosted
+  tutor triggers. Its payload is byte-identical to `exelearning/exelearning`'s, already
+  shelved, which corroborates the fetch.
+- 🔴 **`Gap 440-B` — LGPL DECLINES ON PURPOSE, and it needs a VERDICT rather than a profile.**
+  LGPL-3.0 incorporates GPL-3.0 by reference *by its own design*; on this base's 7 LGPL
+  payloads **none** carries `basic permissions`, `disclaimer of warranty` or
+  `limitation of liability`. A GPL-3.0-derived profile would mark every valid LGPL payload
+  `GRANT-BY-REFERENCE` — true and useless. 🔵 **BigBlueButton** and **OpenEduCat** are both
+  LGPL-3.0 and both on `verticals/solutions.md`. `C21` pins the decision.
+- 🔴 **`Gap 439-B`'S OWN ENUMERATION WAS WRONG AND IS CORRECTED RATHER THAN RESTATED.** It
+  listed *"GPL (40), AGPL (22), BSD (8), LGPL (7), MPL (8)"* — 85 against the 101 in the same
+  sentence. Measured: **GPL 40, AGPL 22, BSD 14, MPL 9, EPL 9, LGPL 7 = 101**, with **EPL
+  omitted entirely**. 🟡 Nothing was decided on it, so realised cost zero; the lesson is
+  `p310`'s — a family count needs its denominator attached.
+- 🔴 **ALL FOUR REGIONAL LEGS CONFIRMED AND NONE DISCOVERED — the first four-nil, and it is
+  written down.** NA (`SB 1227`, `SB 720`, `AB 1159`, `H.R. 8747`), EMEA
+  (`Regulation (EU) 2026/1744`, Annex III to 2 December 2027), APAC (Korea's AI Basic Act,
+  IMDA, the Ipsos spread), LATAM (Peru `Ley N° 31814`, Brazil `PL 2338/2023`, Chile `21.719`)
+  — every fact already carried. 🔵 `p432`–`p439` each reported three or four of four
+  confirming, so this is a trend reaching its endpoint. 🟢 Registered as `Gap 440-C` with a
+  priced remedy: **one rotating region per pass**, standing exception for a pass whose window
+  contains a known date, freed legs to supply.
+- 🟢 **`T125` gets a FOURTH confirmation and a second instance of its class.** 2026 roundups
+  read this hour still call `frappe/lms` *"MIT"* — it is **AGPL-3.0** (`license.txt` 33 893 B ·
+  `db1a87ba81e8`, re-probed). 🆕 The same channel now does it to **Open edX**, listing it
+  *"Apache License 2.0 — allows proprietary modifications"*: `openedx/edx-platform` is
+  **AGPL-3.0** (35 136 B · `e12d78569742`); the Apache-2.0 belongs to **`openedx/XBlock`**, a
+  different repository. 🔵 Same shape both times — *the permissive grant of a satellite
+  repository reported as the grant of the platform* — and both run in the direction that gets
+  a client sued.
+- 🟢 **New this pass**: `Trend 38` (unknown and fine render identically, and copyleft is where
+  it costs most) and `Pattern AS` (the copyleft obligation map — verdict → obligation →
+  deployment trigger, run **before** the hosting model is fixed). 🔵 `Pattern AS`'s LATAM
+  finding is the one nobody pitches: the region's SIS tier is **GPL-2.0**, which **predates
+  the network-service question and carries no §13 at all**.
+
+---
+
+🔵 **The address census, re-derived as the last act before the commit — restated, not
+back-fitted.** 🟢 All three currency gates were **GREEN on the inherited commit** again, so
+the staleness below is entirely this pass's own writes — the arrangement `p352` and `p376`
+are designed to produce, now holding for a second consecutive pass.
+
+**2 845** harvested shapes on channel U → **39** are not addresses → **2 806 addresses**.
+
+🔵 **2 806** channel-U addresses and **3 315** channel-B survivors give
+**3 691 addresses over both channels**.
+
+🔵 **`p440`: all three moving cells moved by exactly one, and the one is nameable.**
+Channel U rose **2 805 → 2 806** (+1) and the union **3 690 → 3 691** (+1). 🟢 The +1 is
+[`AnkitClassicVision/tutor-engine`](https://github.com/AnkitClassicVision/tutor-engine), the
+single new address this pass graded and shelved. 🔵 **This is the smallest census delta this
+base has recorded, and it is the honest shape of the trade `p440` made**: the legs that
+`p438` and `p439` spent on topic-page depth went to payload grading instead, so the pass
+bought **one** address and **62** newly gradeable grants. 🟢 The rejection count is
+**unchanged at 39** — the new address is well-formed. 🔵 The inflation this pass's writes
+added to the harvested denominator is **0.04 %**.
+
+---
+
 ## Pass 439 — reads 2026-10-25, commit 2026-10-25 — **A PAYLOAD CAN BE SHORTER THAN THE GRANT IT NAMES, AND NO INSTRUMENT ON THIS BASE COULD SEE IT. `spragginsdesigns/ai-tutor-webapp` ships `LICENSE` 552 B titled Apache-2.0, holder **Vercel, Inc.**, licence text absent — graded `stock = True`, `needs_a_human = False`. 🟢 THE INHERITED COMMIT WAS GREEN, 59/60, THE FIRST CLEAN INHERITANCE SINCE `p436`. 🟢 `Gap 438-C` bought and beaten (new-rate 9/89 → 23/40) and `Gap 438-D` CLOSED — the MEA leg ran and discovered. 🔴 43 % of the new tail carries no licence payload at all.**
 
 🔵 **No date straddle.** Ten WebSearch legs (four regional, one MEA-specific closing

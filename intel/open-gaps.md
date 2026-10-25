@@ -4,6 +4,128 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p440`
+
+🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**
+`make hooks` against `ede2c9c`, run **before `p440` wrote a line**, exited 2 with
+**60 of 61 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Makefile:208`, `Gap 400-B`, mechanism in `Gap 438-B`). 🔵 `p439` left no
+drift either: all three currency gates were green on arrival. 🟢 That is the **second clean
+inheritance in a row**, the first consecutive pair this base has recorded.
+
+### 🟢 `Gap 439-B` — **CLOSED for the GPL family group.** Bought to its own stopping rule; the remainder is re-registered below with a corrected enumeration
+
+🟢 **What the gap asked for, in its own words:** *"profile **AGPL and GPL-3.0 first** — they
+are the families a client actually redistributes in this industry."* Three profiles were
+added to `compose/code/p439-grant-presence/grant_presence.py`: **AGPL-3.0**, **GPL-3.0** and
+**GPL-2.0**. On the **identical 218-payload population** `p439` measured,
+`GRANT-UNCALIBRATED` falls 🟢 **101 → 39**.
+
+🔴 **And the return was not the 52 grants confirmed — it was the 10 revealed as non-grants.**
+Of 62 newly judged payloads, 52 are `GRANT-PRESENT` and **10 are `GRANT-TRUNCATED` or
+`GRANT-BY-REFERENCE`**, seven of them AGPL, ranging 287 B → 3 000 B under filenames like
+`agpl-3.0.txt` against a real AGPL-3.0 of 34 523 B. 🔵 None was a new defect; each sat inside
+a verdict that aggregates, in any report, exactly like a pass.
+
+🟢 **Both halves of the trap the gap priced are now measured rather than asserted:**
+
+- **The `P171` half.** Stock GPL-3.0 carries `GNU Affero General Public License` in its own
+  §13 heading and `interaction through a network` in that section's body, so a clause keyed on
+  either phrase reports 🔴 **18 of 18** stock GPL-3.0 payloads as AGPL. The clause taken is
+  AGPL's **operative sentence**, which fires on 🟢 **15/15** full AGPL-3.0 and 🟢 **0/18**
+  GPL-3.0 payloads.
+- **The version half.** The 19 stock GPL-2.0 payloads carry neither `basic permissions` nor
+  `conveying modified source versions`, so one unversioned `"GPL"` profile condemns **all
+  nineteen** complete licences. `titled_family()` answers `GPL`, never `GPL-2.0`, so
+  `resolve_version()` runs first and an unresolvable or ambiguous version **declines**.
+
+🟢 **Mutation-tested, because a control that cannot fail is not a control.** Re-keying AGPL's
+clause on the name fails **exactly one** control (`C17`); disabling version resolution fails
+**10**. 🔵 `C17` was hardened mid-pass: it dereferenced `clause_report(...)[1]` directly, so
+*removing* the profile raised a `TypeError` instead of a red — a crash stops a commit but
+tells the next reader the test is broken when the truth is the guard was withdrawn.
+
+🟢 **Verified on live supply, not only fixtures:** 11 payloads probed through
+`compose/code/lib/probe_payload.sh` (sourced, `set +u`) and graded — **11/11
+`GRANT-PRESENT`**, including the ten platform repositories this base sells
+(`verticals/solutions.md`). The suite is **46 controls**, up from 25.
+
+🔴 **The gap's own enumeration was wrong, and it is corrected here rather than quietly
+restated.** It listed *"GPL (40), AGPL (22), BSD (8), LGPL (7), MPL (8)"* — 85 against the
+101 it reported in the same sentence. Measured: **GPL 40, AGPL 22, BSD 14, MPL 9, EPL 9,
+LGPL 7 = 101**. 🔴 **EPL was omitted entirely**, and EPL is already registered as a hole in a
+*different* instrument (`Gap 396-E`). 🟡 Nothing was decided on the wrong figure, so the
+realised cost is zero; the lesson is `p310`'s — a family count is a claim about a corpus and
+needs its denominator attached.
+
+### 🔴 `Gap 440-A` — **OPEN.** The remainder: BSD, MPL and EPL are 32 of the 39 still unprofiled, and BSD is the one that touches a shelved row
+
+🟢 `GRANT-UNCALIBRATED` now stands at **39 of 218**: **BSD 14, MPL 9, EPL 9, LGPL 7**
+(LGPL carried separately as `Gap 440-B`).
+
+🔴 **BSD first, and the reason is the reason a byte floor was refused at `p439`.** BSD-0,
+BSD-2 and BSD-3 are three different licences under one family name, spanning **164 B →
+1 620 B** on this tree. A single BSD profile either misses BSD-3 truncation or condemns every
+valid BSD-0, so BSD needs the same **version/variant-aware** treatment the GPL family just
+got — the variant resolved from the clause structure, not from the length. 🔵 It touches
+published supply: [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+is shelved **BSD-3-Clause** on `agents/top.md`, so one build-on row is currently unscreened by
+the screening rule.
+
+🟡 **MPL (9) and EPL (9) are lower value and should be bought together**: both are
+file-scoped copyleft with a similar operative shape, and neither appears in this industry's
+platform tier. 🔵 EPL additionally has a standing registration against a different instrument
+(`Gap 396-E`), so whichever pass buys it should close both.
+
+🔵 **Priced**: one pass for BSD (variant-aware, with the three-length spread as its control
+set), one pass for MPL + EPL together. **Stopping rule: BSD first** — it is the only one of
+the three with a row on a build-on shelf.
+
+### 🔴 `Gap 440-B` — **OPEN, and it needs a VERDICT rather than a profile.** LGPL-3.0 incorporates GPL-3.0 by design, so "by reference" is the wrong answer about it
+
+🔴 **The measurement.** On this base's **7** LGPL payloads (3 000 B → 8 241 B), **none**
+carries `basic permissions`, `disclaimer of warranty` or `limitation of liability` — they live
+in the GPL-3.0 text LGPL-3.0 *points at*. Its own words: it *"incorporates the terms and
+conditions of version 3 of the GNU General Public License, supplemented by the additional
+permissions listed below"*.
+
+🔴 **So an LGPL profile built from GPL-3.0's clauses grades every valid LGPL-3.0 payload
+`GRANT-BY-REFERENCE` — formally true and commercially useless**, because incorporation by
+reference is this licence's *design*, not a truncation. The existing four-verdict vocabulary
+has no cell for *"the grant is elsewhere and that is correct"*. 🟢 Deliberately not bought:
+adding a fifth verdict (`GRANT-BY-DESIGN`) changes the finding set and the TSV contract that
+`census.py` and `Pattern AR`'s CI artefact both read — `Gap 435-A`'s sizing lesson, applied
+before the edit rather than after a red.
+
+🟢 **`C21` pins the decision**, so adding an LGPL profile without that verdict now breaks a
+test instead of shipping a wrong answer. 🔵 **It is not hypothetical supply:
+`BigBlueButton` and `OpenEduCat` are both LGPL-3.0 and both are on
+`verticals/solutions.md`** — they are `GRANT-UNCALIBRATED` today and must not be read as
+cleared.
+
+### 🔵 `Gap 440-C` — **OPEN, and it is about this base's LEGS rather than its code.** The regulatory channel is saturated and four legs a pass are being spent to confirm it
+
+🔴 **The measurement.** `p440` ran four regional legs and two global ones. **Every**
+regulatory fact returned was already on `intel/market.md` with a prior pass's citation:
+NA (`SB 1227`, `SB 720`, `AB 1159`, `H.R. 8747`), EMEA (`Regulation (EU) 2026/1744`),
+APAC (Korea's AI Basic Act, IMDA, Ipsos), LATAM (Peru `31814`, Brazil `PL 2338/2023`,
+Chile `21.719`). 🔴 **Six legs, zero new regulatory facts — the first four-nil on discovery
+this base has recorded.**
+
+🔵 **The shape matters: `p432`–`p439` each reported three or four of four legs "confirming
+rather than discovering", so this is a trend reaching its endpoint, not an anomaly.** 🟢 And
+`p440` is evidence for the alternative: the legs it redirected to payload grading returned 62
+previously-ungradeable grants and 10 revealed non-grants.
+
+🟡 **Not a recommendation to stop reading regulation** — the EU Annex III date moves, and a
+missed move is expensive. 🔵 **Priced**: drop the regional legs to **one rotating region per
+pass** (a quarter of the current spend, each region re-read every fourth pass), and hold a
+standing exception for any pass whose window contains a known date. The freed legs go to
+supply and payloads. 🔴 **Stopping rule for reversing this**: two consecutive passes in which
+the single rotating leg discovers something.
+
+---
+
 ## 🆕 `p439`
 
 🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**
@@ -148,7 +270,7 @@ this gap and takes nothing from it, but notes that `gate-grant-presence` was bui
 prescription — controls against fixtures, population in a target that cannot fail — so the
 remedy shape `Gap 438-B` priced is now demonstrated in working code on this tree.
 
-### 🔵 `Gap 439-B` — **OPEN, carried deliberately.** `GRANT-UNCALIBRATED` is 101 of 218 payloads, and that is a declared blind spot rather than a result
+### 🟢 `Gap 439-B` — **CLOSED at `p440` for the GPL family group** (was: OPEN, carried deliberately). `GRANT-UNCALIBRATED` was 101 of 218 payloads; it is now **39 of 218**, and the remainder is re-registered as `Gap 440-A` (BSD / MPL / EPL) and `Gap 440-B` (LGPL). The original entry is kept below unedited
 
 🟢 `grant_presence.py` ships clause profiles for **MIT, Apache-2.0 and ISC** only, so **101**
 of the 218 titled payloads on this tree return `GRANT-UNCALIBRATED` — the instrument declining

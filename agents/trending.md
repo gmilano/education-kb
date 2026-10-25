@@ -4,6 +4,136 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p440` · 2026-10-25 — **`Gap 439-B` bought to its own stopping rule, and the family it unlocked is the one this industry runs on. 🟢 `GRANT-UNCALIBRATED` falls **101/218 → 39/218** on the identical population. 🔴 And the real finding is not the 52 grants confirmed — it is the **10 payloads that were never non-grants until now**, 7 of them AGPL, hiding inside a verdict that read like coverage. 🟢 The live platform tier is verified clause-by-clause for the first time: **10 of 10 GRANT-PRESENT**.**
+
+🔵 **No date straddle.** Six WebSearch legs (four regional, two global), 11 live payload
+probes through `compose/code/lib/probe_payload.sh` **sourced, not re-implemented**, 11
+`git ls-remote` HEAD reads, 11 independent `sha256` re-measurements, 224 offline payload
+gradings, two mutation runs against this pass's own instrument, and one baseline
+`make hooks` — all **2026-10-25**, commit **2026-10-25**.
+
+🟢 **The inherited commit was GREEN, and it is reported before anything this pass did.**
+`make hooks` against `ede2c9c`, run **before `p440` wrote a line**, exited 2 with
+🟢 **60 of 61 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Makefile:208`, `Gap 400-B`, mechanism in `Gap 438-B`). 🔵 So `p439`
+left no drift behind it either: the three currency gates were green on arrival. That is
+the second clean inheritance in a row, after one at `p439` and none since `p436`.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 439-B` is CLOSED for the GPL family group, and it was bought to the stopping
+  rule that gap wrote for itself** — *"profile AGPL and GPL-3.0 first — they are the
+  families a client actually redistributes in this industry."* Three profiles added to
+  `grant_presence.py`: **AGPL-3.0**, **GPL-3.0** and **GPL-2.0**. On the **identical 218
+  payload population** `p439` measured, `GRANT-UNCALIBRATED` falls 🟢 **101 → 39**.
+- 🔴 **AND THE POINT IS NOT THE 52 GRANTS CONFIRMED. IT IS THE 10 THAT ARE NOT GRANTS.**
+  Of the 62 payloads newly judged, 52 are `GRANT-PRESENT` and 🔴 **10 are revealed as
+  non-grants that no instrument on this base could see yesterday** — because
+  `GRANT-UNCALIBRATED` and "fine" are not the same answer, and only one of them is
+  visible in a shelf row. Seven are AGPL:
+
+  | Payload | Family | Bytes | Verdict now |
+  |---|---|---|---|
+  | `human-skill-tree.LICENSE.scope` | AGPL | 287 | 🔴 GRANT-TRUNCATED |
+  | `agpl-notice.txt` | AGPL | 360 | 🔴 GRANT-TRUNCATED |
+  | `gpl3-section13.txt` | AGPL | 470 | 🔴 GRANT-TRUNCATED |
+  | `licence-gpl3-head.txt` | GPL | 593 | 🔴 GRANT-TRUNCATED |
+  | `gpl-3.0-wrapped-prose-line.LICENSE` | GPL | 658 | 🔴 GRANT-BY-REFERENCE |
+  | `gpl-3.0-narrative.LICENSE` | GPL | 674 | 🔴 GRANT-BY-REFERENCE |
+  | `agpl-3.0-narrative-anki.LICENSE` | AGPL | 1 930 | 🔴 GRANT-TRUNCATED |
+  | `anki-perfile-split.txt` ×2 | AGPL | 1 930 | 🔴 GRANT-TRUNCATED |
+  | `agpl-3.0.txt` | AGPL | 3 000 | 🔴 GRANT-TRUNCATED |
+
+  🔵 `agpl-3.0.txt` is the one to read twice: **3 000 B under a canonical filename**,
+  against the real AGPL-3.0 at **34 523 B**. A file named after the licence is not the
+  licence, which is `P1065` again — the principle `p439` carried from the Creative
+  Commons path to the code path, now carried to the family that path could not grade.
+
+- 🔴 **THE TRAP `Gap 439-B` PRICED IS REAL, AND IT IS MEASURED HERE RATHER THAN
+  ASSERTED.** That gap refused a naive profile because *"GPL/AGPL/LGPL share operative
+  text across three versions and two of them, so a naive profile re-imports `P171`."*
+  Both halves are now numbers on this base's own corpus:
+  - 🔴 **The AGPL half.** Stock GPL-3.0 carries `GNU Affero General Public License` in
+    its own §13 **heading** and `interaction through a network` in that section's body.
+    A clause keyed on either phrase reports 🔴 **all 18** of this base's stock GPL-3.0
+    payloads as AGPL — `P171` exactly, 363 passes after pass 77 first paid for it. The
+    clause taken instead is AGPL's **operative sentence**
+    (*"interacting with it remotely through a computer network"*), which fires on
+    🟢 **15 of 15** full AGPL-3.0 payloads and 🟢 **0 of 18** GPL-3.0 payloads.
+  - 🔴 **The version half.** The 19 stock GPL-2.0 payloads (15 057 B → 19 350 B) carry
+    **neither** `basic permissions` **nor** `conveying modified source versions`, so a
+    single unversioned `"GPL"` profile written from the 3.0 text condemns **all
+    nineteen** complete licences as truncated. `titled_family()` answers `GPL`, never
+    `GPL-2.0`, so the version is resolved first and an unresolvable one declines.
+- 🟢 **THE TWO GUARDS WERE MUTATION-TESTED, NOT JUST WRITTEN.** A control that cannot
+  fail is not a control, so both were re-broken on purpose and the suite re-run:
+  swapping AGPL's operative clause for the name-keyed phrase fails 🟢 **exactly one**
+  control (`C17`, the intended guard, and nothing else); disabling version resolution
+  fails 🟢 **10**. 🔵 `C17` was also hardened mid-pass — it read
+  `gp.clause_report(...)[1]` directly, so *removing* the AGPL profile altogether raised a
+  `TypeError` instead of reporting a red. A control that crashes still stops a commit,
+  but it tells the next reader the test is broken when the truth is the guard was
+  withdrawn.
+- 🟢 **And the instrument was turned on LIVE SUPPLY, not only on fixtures** — eleven
+  payloads probed this hour through the shared library, each graded against its own
+  version's clauses. 🟢 **11 of 11 `GRANT-PRESENT`.** The ten platform rows are on
+  `verticals/solutions.md`; the eleventh is the one new address below.
+- 🟢 **One new address, and it is the first row this base has shelved whose grant was
+  verified CLAUSE BY CLAUSE at the moment of shelving.**
+  [`AnkitClassicVision/tutor-engine`](https://github.com/AnkitClassicVision/tutor-engine)
+  — adaptive tutor for ages 5–14, missions built from the child's real schoolwork,
+  bring-your-own model, per-family encryption. `LICENSE` **34 523 B · `0d96a4ff68ad`**
+  @ HEAD `30cbe59f37c3`, branch `main`, **AGPL-3.0**, `AGPL-3.0` profile,
+  🟢 `GRANT-PRESENT`, no clause missing. 🔵 Its payload is **byte-identical** to
+  `exelearning/exelearning`'s, already on these shelves — the canonical AGPL-3.0 text,
+  which is corroboration that the fetch is clean. 🔴 **Not a build-on row**: AGPL §13 is
+  the clause this pass just made visible, and a hosted tutor is exactly what it reaches.
+  Integrate over an interface; never vendor.
+- 🔴 **`Gap 439-B`'s OWN ENUMERATION WAS WRONG, AND THIS IS THE SECOND TIME A COUNT ON
+  THIS BASE WAS CARRIED IN PROSE WITHOUT A DENOMINATOR.** It listed the unprofiled
+  families as *"GPL (40), AGPL (22), BSD (8), LGPL (7), MPL (8)"* — 85, against the 101
+  it reported in the same sentence. Measured: **GPL 40, AGPL 22, BSD 14, MPL 9, EPL 9,
+  LGPL 7 = 101**. 🔴 **EPL was omitted entirely**, and EPL is the family `Gap 396-E`
+  already registered as a hole in a *different* instrument. 🟡 Nothing was decided on
+  the wrong figure, so the cost is zero and the lesson is `p310`'s: a family count is a
+  statement about a corpus and needs its denominator attached.
+- 🔴 **`Gap 440-B` — LGPL DECLINES ON PURPOSE, and the reason is a verdict this
+  instrument does not have.** LGPL-3.0 is not a standalone grant: its own text
+  incorporates GPL-3.0 by reference and supplements it. Measured on this base's 7 LGPL
+  payloads (3 000 B → 8 241 B), **none** carries `basic permissions`,
+  `disclaimer of warranty` or `limitation of liability` — they live in the document it
+  points at. 🔴 So an LGPL profile built from GPL-3.0's clauses grades every valid
+  LGPL-3.0 payload `GRANT-BY-REFERENCE`: **formally true and commercially useless**,
+  because incorporation by reference is this licence's *design*, not a truncation. It
+  needs a fourth verdict (`GRANT-BY-DESIGN`), which is a vocabulary change and is not
+  bought here. 🟢 `C21` pins the decision, so adding an LGPL profile without that
+  verdict now breaks a test instead of shipping a wrong answer. 🔵 This matters on these
+  shelves: **BigBlueButton** and **OpenEduCat** are both LGPL-3.0.
+- 🔴 **ALL FOUR REGIONAL LEGS RETURNED CONFIRMATION AND NOTHING ELSE. WRITTEN DOWN AS A
+  NIL, because silence looks exactly like coverage.** NA (state-level K-12 AI policy —
+  Idaho `SB 1227`, Maryland `SB 720`, California `AB 1159`, `H.R. 8747`), EMEA
+  (`Regulation (EU) 2026/1744`, Annex III to 2 December 2027, Article 50 live since
+  2 August 2026), APAC (Korea's AI Basic Act, Singapore's IMDA agentic framework, the
+  Ipsos classroom-ban spread) and LATAM (Peru `Ley N° 31814`, Brazil `PL 2338/2023`,
+  Chile `21.719`) each re-returned material **already carried on `intel/market.md`**.
+  🔵 Six legs, zero new regulatory facts. That is a real result about the *channel*:
+  the regulatory surface of this industry was saturated by `p432`–`p439`, and the next
+  pass should spend its legs on supply, not on policy.
+- 🟢 **`T125` gets a FOURTH independent confirmation, and a second instance of its
+  class.** 2026 LMS roundups read this hour still call `frappe/lms` *"MIT"* — it is
+  🔴 **AGPL-3.0**, `license.txt` 33 893 B · `db1a87ba81e8`, re-probed this hour. 🆕 And
+  the same channel now does it to **Open edX**: one roundup lists it as *"Apache
+  License 2.0 — allows proprietary modifications."* 🔴 `openedx/edx-platform` is
+  **AGPL-3.0** (35 136 B · `e12d78569742`, re-probed this hour); the Apache-2.0 belongs
+  to **`openedx/XBlock`**, the component SDK, which is a different repository and is the
+  row already on `agents/top.md`. 🔵 Same error shape as the Frappe one — *the permissive
+  grant of a satellite repository reported as the grant of the platform* — and in both
+  cases the mistake runs in the direction that gets a client sued.
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+---
+
 ## 🆕 `p439` · 2026-10-25 — **A payload can be SHORTER than the grant it names, and this base had no instrument that could tell. 🔴 `spragginsdesigns/ai-tutor-webapp`: `LICENSE` 552 B, titled Apache-2.0, graded `stock = True` and `needs_a_human = False` by this base's own census — and it is the Apache-2.0 APPENDIX notice, holder **Vercel, Inc.**, with the licence text not in the repository at all. 🟢 `Gap 438-C`'s next depth bought: new-rate **9/89 → 23/40**, and the tail's real character is that **10 of 23 new addresses carry no licence payload of any kind**. 🟢 `Gap 438-D` closed — the MEA leg ran and discovered.**
 
 🔵 **No date straddle.** Ten WebSearch legs (four regional, one MEA-specific closing

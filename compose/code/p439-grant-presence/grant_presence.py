@@ -113,7 +113,119 @@ CLAUSE_PROFILE = {
         ("permission-grant", r"permission\s+to\s+use,\s+copy,\s+modify"),
         ("warranty-disclaimer", r'provided\s+"as\s+is"'),
     ],
+    # ---------------------------------------------------------------- p440
+    # 🟢 `Gap 439-B`'s first family group, bought to that gap's OWN stopping rule:
+    # "profile AGPL and GPL-3.0 first -- they are the families a client actually
+    # redistributes in this industry".  Every clause below was CALIBRATED against this
+    # base's own corpus BEFORE it was written: 69 GPL-family payloads under
+    # `compose/code/**/fixtures/**`, whose clause signatures are UNIFORM inside each
+    # (family, version) group and DISJOINT across them.  Nothing here is taken from a
+    # licence's reputation or from an SPDX identifier.
+    #
+    # 🔴 WHY THE KEYS CARRY A VERSION AND THE FAMILY LABEL DOES NOT.  `titled_family()`
+    # answers `GPL`, never `GPL-2.0` -- and GPL-2.0 and GPL-3.0 are not the same
+    # instrument.  Measured here: the 19 stock GPL-2.0 payloads (15 057 B -> 19 350 B)
+    # carry NEITHER `basic permissions` NOR `conveying modified source versions`, so a
+    # single "GPL" profile written from the 3.0 text condemns all nineteen as TRUNCATED
+    # -- a real grant failed by a version it never claimed.  That is `P171` re-imported
+    # in a new place, which is precisely the cost `Gap 439-B` priced and declined to pay
+    # on `p439`.  The version is resolved FIRST, and a payload whose version cannot be
+    # resolved is UNCALIBRATED, never guessed.
+    "GPL-3.0": [
+        ("basic-permissions", r"basic\s+permissions"),
+        ("corresponding-source", r"corresponding\s+source"),
+        ("conveying-modified", r"conveying\s+modified\s+source\s+versions"),
+        ("disclaimer-of-warranty", r"disclaimer\s+of\s+warranty"),
+        ("limitation-of-liability", r"limitation\s+of\s+liability"),
+        ("termination", r"\btermination\b"),
+    ],
+    # 🔴 THE AGPL PROFILE IS THE GPL-3.0 PROFILE PLUS §13, AND §13 IS THE WHOLE POINT.
+    # AGPL-3.0 and GPL-3.0 share their operative text almost entirely; the clause that
+    # distinguishes them is the one an education client is actually exposed to, because
+    # every platform in this industry's LMS tier is reached over a network.  A payload
+    # titled AGPL that does not carry §13 has not granted the only term that made it
+    # AGPL -- and `frappe/lms`, Open edX and Kuali are all on these shelves under it.
+    #
+    # 🔴 AND THIS IS EXACTLY WHERE `P171` FIRES IF THE CLAUSE IS CHOSEN BY NAME.  Stock
+    # GPL-3.0 carries the string `GNU Affero General Public License` in its own §13
+    # HEADING ("Use with the GNU Affero General Public License") and the words
+    # `interaction through a network` in that section's body -- so a detector keyed on
+    # either phrase reports all 18 of this base's stock GPL-3.0 payloads as AGPL.  The
+    # clause taken here is AGPL's OPERATIVE sentence, which GPL-3.0 does not contain.
+    # Measured over the corpus it fires on 🟢 15 of 15 full AGPL-3.0 payloads and on
+    # 🟢 0 of 18 stock GPL-3.0 payloads.  `C17` holds that line as a control.
+    "AGPL-3.0": [
+        ("basic-permissions", r"basic\s+permissions"),
+        ("corresponding-source", r"corresponding\s+source"),
+        ("conveying-modified", r"conveying\s+modified\s+source\s+versions"),
+        ("disclaimer-of-warranty", r"disclaimer\s+of\s+warranty"),
+        ("limitation-of-liability", r"limitation\s+of\s+liability"),
+        ("termination", r"\btermination\b"),
+        ("remote-network-heading", r"remote\s+network\s+interaction"),
+        ("remote-network-grant",
+         r"interacting\s+with\s+it\s+remotely\s+through\s+a\s+computer\s+network"),
+    ],
+    # GPL-2.0 defines no `Corresponding Source` term and has no `convey` vocabulary: it
+    # says `complete corresponding machine-readable source code` and `distribute`.
+    # Calibrated on 19 payloads, uniform.  🔵 Note `corresponding source` DOES appear in
+    # GPL-2.0 as part of that longer phrase, which is why it is not a 3.0 discriminator
+    # and is not asked for here as one.
+    "GPL-2.0": [
+        ("copy-and-distribute", r"you\s+may\s+copy\s+and\s+distribute"),
+        ("machine-readable-source",
+         r"complete\s+corresponding\s+machine-readable\s+source\s+code"),
+        ("no-warranty", r"no\s+warranty"),
+        ("liability-cap", r"in\s+no\s+event"),
+    ],
+    # 🔴 LGPL IS DELIBERATELY ABSENT AND THAT IS A FINDING, NOT AN OMISSION.  LGPL-3.0
+    # is not a standalone grant: its own text says it "incorporates the terms and
+    # conditions of version 3 of the GNU General Public License, supplemented by the
+    # additional permissions listed below".  Measured on this base's 7 LGPL payloads
+    # (3 000 B -> 8 241 B), NONE carries `basic permissions`, `disclaimer of warranty`
+    # or `limitation of liability` -- because those live in the GPL-3.0 text it points
+    # at.  🔴 So an LGPL profile built from GPL-3.0's clauses would grade every valid
+    # LGPL-3.0 payload BY-REFERENCE, and the verdict would be formally true and
+    # commercially useless: incorporation by reference is this licence's DESIGN, not a
+    # truncation.  Registered as `Gap 440-B`; it needs a verdict vocabulary this
+    # instrument does not yet have, so it declines to judge instead.  `C21` pins it.
 }
+
+# 🔵 Families whose operative text CHANGES BY VERSION, so the profile key is
+# `FAMILY-VERSION` and the version must be resolved before any clause is asked for.
+VERSIONED_FAMILIES = ("GPL", "AGPL", "LGPL")
+
+# 🔵 The order below is NOT load-bearing: a payload matching two version declarations
+# REFUSES rather than taking the first (`resolve_version`).  Measured over all 69
+# GPL-family payloads on this tree, 🟢 zero are ambiguous and zero are unresolvable, so
+# the refusal path is a guard against future supply and not a live population.
+_VERSION_PATTERNS = [("3.0", re.compile(r"version\s+3")),
+                     ("2.0", re.compile(r"version\s+2")),
+                     ("1.0", re.compile(r"version\s+1"))]
+
+
+def resolve_version(text):
+    """The licence version a payload DECLARES, or None.
+
+    🔴 Returns None when two different versions are declared.  `P250`: an instrument
+    that cannot tell which of two grants it is holding must decline, because the two
+    carry different obligations and picking one silently is the error that costs a
+    client.  None propagates to GRANT-UNCALIBRATED.
+    """
+    flat = _norm(text)
+    hits = [v for v, rx in _VERSION_PATTERNS if rx.search(flat)]
+    return hits[0] if len(hits) == 1 else None
+
+
+def profile_key(text, family):
+    """The CLAUSE_PROFILE key for this payload, or None when there is no profile.
+
+    🔵 Unversioned families pass straight through, so MIT / Apache-2.0 / ISC behave
+    exactly as they did at `p439` -- `C4`, `C3` and `C8` are unchanged and still pass.
+    """
+    if family in VERSIONED_FAMILIES:
+        v = resolve_version(text)
+        return None if v is None else "%s-%s" % (family, v)
+    return family
 
 # Markers that say "the grant lives somewhere else".  Presence of any one of these, with
 # the operative clauses absent, is the BY-REFERENCE shape rather than a bare excerpt.
@@ -164,8 +276,11 @@ def _norm(text):
 
 def clause_report(text, family):
     """Which of the family's operative clauses are present.  Returns (present, missing)
-    or (None, None) when the family has no profile here."""
-    profile = CLAUSE_PROFILE.get(family)
+    or (None, None) when the family has no profile here.
+
+    🔵 `p440`: the profile is looked up by `profile_key()`, so a versioned family is
+    graded against ITS OWN version's clauses and an unresolvable version declines."""
+    profile = CLAUSE_PROFILE.get(profile_key(text, family))
     if profile is None:
         return None, None
     flat = _norm(text)
@@ -186,9 +301,13 @@ def classify(text, family):
     not re-answer the family question (`P171`: it has a hardened owner)."""
     present, missing = clause_report(text, family)
     refs = references_found(text)
+    # 🔵 `p440`: reported so a row says WHICH profile judged it.  A verdict whose
+    # version is invisible cannot be audited -- `GPL` TRUNCATED and `GPL-2.0`
+    # TRUNCATED are different claims about the world.
+    key = profile_key(text, family)
     if present is None:
         return {
-            "verdict": "GRANT-UNCALIBRATED", "family": family,
+            "verdict": "GRANT-UNCALIBRATED", "family": family, "profile": key,
             "missing": [], "present": [], "refs": refs,
             "bytes": len(text.encode("utf-8", "replace")),
         }
@@ -199,7 +318,7 @@ def classify(text, family):
     else:
         verdict = "GRANT-TRUNCATED"
     return {
-        "verdict": verdict, "family": family,
+        "verdict": verdict, "family": family, "profile": key,
         "missing": missing, "present": present, "refs": refs,
         "bytes": len(text.encode("utf-8", "replace")),
     }
@@ -223,7 +342,7 @@ def main(argv):
                            / "p341-bespoke-instrument-census"))
     import bespoke_census as bc
 
-    print("payload\tfamily\tbytes\tverdict\tmissing\trefs\tfinding")
+    print("payload\tfamily\tprofile\tbytes\tverdict\tmissing\trefs\tfinding")
     findings = 0
     for p in argv:
         path = pathlib.Path(p)
@@ -236,8 +355,8 @@ def main(argv):
         f = FINDING.get(r["verdict"], "")
         if f:
             findings += 1
-        print("%s\t%s\t%d\t%s\t%s\t%s\t%s" % (
-            path.name, r["family"], r["bytes"], r["verdict"],
+        print("%s\t%s\t%s\t%d\t%s\t%s\t%s\t%s" % (
+            path.name, r["family"], r["profile"] or "-", r["bytes"], r["verdict"],
             ",".join(r["missing"]) or "-", ",".join(r["refs"]) or "-", f or "-"))
     print("#\tfindings\t%d" % findings)
     return 1 if findings else 0

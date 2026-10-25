@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p440` · 2026-10-25 — **The discovery channel was NOT bought this pass, deliberately, and `Gap 438-C`'s own stopping rule is why. 🟢 The legs went to PAYLOADS instead: 11 live grants read clause-by-clause, **11/11 GRANT-PRESENT**, including the ten platform repositories this base actually sells. 🔴 One new address, stated as one.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 Why no topic-depth page was bought
+
+`Gap 438-C` closed at `p439` with a stopping rule expressed as a number: ranks 61–80 and
+21–40 returned **23 new addresses of 40**, but 🔴 **10 of the 23 (43 %) carried no licence
+payload of any kind**, so *"the next page buys mostly ungranted supply — buy depth for
+payloads, not for rows."* 🟢 **`p440` is the first pass to obey it.** The legs that would
+have gone to a fifth topic page went to the grant census instead, and the return was the
+GPL-family profile that made 62 previously-ungradeable payloads answerable.
+
+🔵 That is the trade stated honestly: **this pass adds one row to the shelves and a
+capability to the instruments.** A pass that bought another page would have added more
+rows and learned nothing about the 101 payloads it already held.
+
+### 🟢 The live grant census — 11 repositories, read 2026-10-25
+
+Probed through `compose/code/lib/probe_payload.sh` **sourced, not re-implemented**
+(`set +u`, per `p436`), then graded by `grant_presence.py` against the version-aware
+profiles this pass added. 🔵 Every default branch was resolved with `ls-remote --symref`
+and **three of the eleven are not `main` or `master`** — `GibbonEdu/core` is `v31.0.00`,
+`portabilis/i-educar` is `2.12`, `francoisjacquet/rosariosis` is `mobile`. A hardcoded
+branch writes all three down as ungranted, which is the trap the shared library exists to
+close.
+
+| Repository | Branch | Payload | Bytes | `sha256₁₂` | Profile | Verdict |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | `COPYING.txt` | 35 147 | `8ceb4b9ee5ad` | GPL-3.0 | 🟢 GRANT-PRESENT |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `LICENSE` | 35 136 | `e12d78569742` | AGPL-3.0 | 🟢 GRANT-PRESENT |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 33 893 | `db1a87ba81e8` | AGPL-3.0 | 🟢 GRANT-PRESENT |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `LICENSE` | 35 147 | `8ceb4b9ee5ad` | GPL-3.0 | 🟢 GRANT-PRESENT |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | 34 520 | `57c8ff33c9c0` | AGPL-3.0 | 🟢 GRANT-PRESENT |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `v31.0.00` | `LICENSE` | 35 121 | `93178a43d6d3` | GPL-3.0 | 🟢 GRANT-PRESENT |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` | `LICENSE` | 15 214 | `d954e14e5c75` | GPL-2.0 | 🟢 GRANT-PRESENT |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | `LICENSE` | 18 092 | `8177f9751321` | GPL-2.0 | 🟢 GRANT-PRESENT |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` | `docs/License.txt` | 17 286 | `224ac3d403e3` | GPL-2.0 | 🟢 GRANT-PRESENT |
+| [`Chocobozzz/PeerTube`](https://github.com/Chocobozzz/PeerTube) | `develop` | `LICENSE` | 34 520 | `76a97c878c9c` | AGPL-3.0 | 🟢 GRANT-PRESENT |
+| 🆕 [`AnkitClassicVision/tutor-engine`](https://github.com/AnkitClassicVision/tutor-engine) | `main` | `LICENSE` | 34 523 | `0d96a4ff68ad` | AGPL-3.0 | 🟢 GRANT-PRESENT |
+
+🟢 **11 of 11 present, and the clean sweep is the result worth having.** The platform tier
+is where a client's copyleft exposure lives, and until this pass every one of these rows
+graded `GRANT-UNCALIBRATED` — the instrument declining. 🔵 Three of the four `GPL-2.0`
+rows are the LATAM / low-cost SIS tier (`i-educar` Brazil, `RosarioSIS`, `openSIS`), and
+they are the rows that would have been condemned wholesale by an unversioned `"GPL"`
+profile: a complete GPL-2.0 licence is missing **four of GPL-3.0's six** clauses.
+
+🟡 **One oddity, recorded and not chased.** `instructure/canvas-lms` and
+`Chocobozzz/PeerTube` both serve **34 520 B** of AGPL-3.0 with **different** digests
+(`57c8ff33c9c0` vs `76a97c878c9c`), and the canonical text on these shelves is 34 523 B.
+Equal length with unequal bytes is a three-byte difference somewhere in two independent
+copies; both grade `GRANT-PRESENT` clause-for-clause, so nothing commercial turns on it.
+
+### 🔴 Zero rows added to `repos/foundations.md`, stated rather than padded
+
+The one new address is a self-hosted application under network copyleft, not a library:
+nothing downstream can depend on it, and AGPL is the wrong grant to put in a foundation
+tier at all. 🔵 The screening amendment is on that file under this pass.
+
+---
+
 ## 🆕 `p439` · 2026-10-25 — **`Gap 438-C`'s next depth bought and its hypothesis beaten: the new-rate goes 9/89 → 23/40 (57.5 %) past rank 60. 🔴 But the tail's defining property is not low stars — **10 of the 23 new addresses carry no licence payload at all (43 %)**, so depth past rank 60 buys mostly ungranted supply. 🟢 That is the stopping rule `p438` asked for, as a number.**
 
 **The two channels, by rank, read 2026-10-25.** Full slug-by-slug record with branch,

@@ -309,6 +309,38 @@ freshness all fail to separate the correct tools from the wrong ones.** The only
 works is reading the date out of the payload — three greps, written down in
 `repos/trending.md` `p437` and wired as a gate in `compose/patterns.md` Pattern AO.
 
+## 🆕 `p440` — The first row shelved with its grant verified **clause by clause**, and it is not a build-on row
+
+🟢 One new address this pass, stated as one. It is listed here rather than in the
+permissive tier above because its grant is **network copyleft**, and `p440` is the pass
+that made that grant readable: until this hour every AGPL payload on this base graded
+`GRANT-UNCALIBRATED`.
+
+| Agent / repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | Grant check | What it does | Region |
+|---|---|---|---|---|---|---|
+| [AnkitClassicVision/tutor-engine](https://github.com/AnkitClassicVision/tutor-engine) | 🔴 **AGPL-3.0** | `30cbe59f37c3` | `LICENSE` 34 523 B · `0d96a4ff68ad` (branch `main`) | 🟢 **GRANT-PRESENT** under the `AGPL-3.0` profile — all eight operative clauses, §13 included | Adaptive tutor for ages 5–14 **and their parents**: short missions generated from the child's *real schoolwork*, mastery inferred from independent work rather than from chat, **bring-your-own model**, per-family encryption. 🟡 Author labels it early release and warns AI feedback can be wrong. | Global |
+
+🔴 **Why this is not a build-on row, in one sentence a client can act on.** AGPL §13 —
+the clause whose presence was confirmed above — obliges whoever *runs a modified version
+over a network* to offer that version's Corresponding Source to its users. A hosted
+tutor is precisely the shape §13 reaches. 🟢 **Integrate over an interface; never
+vendor.** Same posture this file already carries for `Apomera/AlloFlow`.
+
+🔵 **What is genuinely new is the check, not the row.** Every permissive row in the
+table at the top of this file was verified by reading its payload and naming its family.
+This row is the first verified by asking whether the payload contains **the words that
+perform the grant** — which is the question `P1065` settled at pass 254 for Creative
+Commons content licences, `p439` carried to MIT / Apache-2.0 / ISC, and `p440` carried to
+the GPL family. A payload can name AGPL-3.0 and be 287 B; this one is 34 523 B and
+complete, and the difference is now a column rather than an assumption.
+
+🟡 **And the row's own supply tier is thin, which is worth saying.** The parent-facing
+persona (`Trend 10`) still has few maintained answers, and this one is early, single
+author, and under the grant that most limits what a studio can ship. It is a reference
+architecture for *bring-your-own-model, per-family encryption* — not a dependency.
+
+---
+
 ## 🆕 `p439` — The tail tier gets a **second page** and the yield more than doubles; and one of its rows is a payload **shorter than the grant it names**, which the code-licence path never asks about
 
 🟢 **`Gap 438-C` bought, and its hypothesis held.** `p438` measured coverage by rank depth

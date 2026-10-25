@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 38 — `p440` **"Unknown" and "fine" render identically in every licence report in this industry, and the copyleft tier is where the difference is worth the most**
+
+🔵 `Trend 37` (`p439`) established that the supply chain ships a licence **name** without
+a licence **text**, and that every scanner reads the name. 🟢 `p440` measured the
+*second* half of that failure, and it is the half a vendor's dashboard is built to hide:
+**what an instrument does when it cannot answer.**
+
+🔴 **The number.** This base's own grant-presence instrument, shipped one pass earlier and
+working correctly, returned `GRANT-UNCALIBRATED` for **101 of 218** licence payloads —
+46 %. Not wrong: *declining*, because it carried clause profiles for MIT, Apache-2.0 and
+ISC only. 🔴 **And the declined set was not a random 46 %.** It was GPL (40), AGPL (22),
+BSD (14), MPL (9), EPL (9) and LGPL (7) — **the entire copyleft tier**, which in
+education is Moodle, Open edX, Canvas, Chamilo, Frappe LMS, BigBlueButton, OpenEduCat and
+every SIS a LATAM ministry runs. 🔵 The instrument was most confident exactly where the
+industry's exposure is smallest, and silent exactly where it is largest.
+
+🟢 **After profiling the GPL family the remainder falls to 39 of 218 — and 10 payloads
+move from "not judged" to "not a grant".** Seven of the ten are AGPL. They range from
+287 B to 3 000 B under filenames like `agpl-3.0.txt`, against a real AGPL-3.0 of
+34 523 B. 🔴 **None of them was a new defect.** They sat on this base for passes, inside a
+verdict that reads, in any report that aggregates it, exactly like a pass.
+
+**Why this is a trend about the industry and not a note about one tool:**
+
+- 🔴 **The three-way answer is almost never rendered.** `PRESENT` / `ABSENT` /
+  `NOT ASSESSED` collapses to two columns in every dashboard, SBOM summary and
+  procurement spreadsheet this base has read. A row that says *"AGPL-3.0 ✓"* means "the
+  title said AGPL-3.0", and the tick is supplied by the renderer.
+- 🔴 **Copyleft is where the collapse costs most, and it is the direction nobody
+  checks.** A truncated MIT payload costs an attribution line. A payload that names
+  AGPL-3.0 and carries none of its clauses is a repository whose **§13 source-offer
+  obligation is unresolved** — and the party who discovers that is the client who has
+  already deployed it over a network.
+- 🔴 **Version-blindness is the same failure one level down.** `GPL` is not a licence;
+  GPL-2.0 and GPL-3.0 are, and they differ on the question that decides hosted
+  deployments. Measured here: a complete GPL-2.0 licence lacks **four of GPL-3.0's six**
+  operative clauses. Any tool that grades "GPL" against one text is wrong about the
+  other, and in education the GPL-2.0 estate is concentrated in **one region's** SIS
+  tier — so the error is not evenly distributed, it lands on LATAM.
+- 🟢 **The honest instrument is the one that says it cannot tell.** `LGPL-3.0`
+  incorporates GPL-3.0 **by reference by design**, so profiling it with GPL-3.0's clauses
+  would mark every valid LGPL payload as a non-grant — true, and useless. `p440`
+  declines on LGPL and registers why (`Gap 440-B`) rather than shipping a confident
+  wrong answer about **BigBlueButton** and **OpenEduCat**.
+
+🟢 **What to sell.** The artefact is a **three-column** component clearance report —
+*verdict · the clauses actually found · what was not assessed and why* — with the
+uncalibrated set published rather than suppressed. 🔵 `Pattern AQ` specifies the
+clearance gate and `Pattern AR` makes it a CI artefact; `Pattern AS` (this pass) wires the
+copyleft-specific read into both. A
+client who has never seen the third column has never seen their real exposure, and in
+this industry the third column is where their LMS lives.
+
+---
+
 ## 🆕 Trend 37 — `p439` **The AI supply chain has learned to ship a licence NAME without a licence TEXT, and every scanner in the industry reads the name**
 
 🔵 **The one-sentence trend.** As AI code generation and template scaffolding become the

@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AS — `p440` The **copyleft obligation map**: turn "which licence" into "which obligation, triggered by which deployment choice", before the hosting model is fixed
+
+🔵 `Pattern AR` (`p439`) makes *"every third-party licence was READ, not scanned"* a CI
+artefact. 🔴 It had a hole that was invisible until this pass: its grant-presence gate
+could read MIT, Apache-2.0 and ISC, and **declined on the entire copyleft tier** — which
+in education is the LMS, the SIS and the video layer, i.e. the parts the client cannot
+replace. `Pattern AS` is the copyleft arm, and it is a **pre-architecture** deliverable:
+run before the hosting model is chosen, because after that the obligation is already
+incurred.
+
+### The problem, stated the way a client experiences it
+
+An education client picks a platform on features and TCO, hosts it, then modifies it.
+🔴 Nothing in that sequence asks *whether the modification must be published*, and the
+answer is decided entirely by a clause in a file nobody opened. Open edX and Moodle look
+interchangeable on a feature matrix. They are not: one obliges a hosted deployment to
+offer its users the Corresponding Source, and the other does not.
+
+### The wiring — concrete, with the repos this base has verified
+
+**1. Resolve the payload, not the badge.** `compose/code/lib/probe_payload.sh`,
+**sourced, never re-implemented** (`set +u`, per `p436`). It resolves the default branch
+with `ls-remote --symref` — 🔴 three of the ten platforms verified at `p440` are not on
+`main` or `master` (`GibbonEdu/core` → `v31.0.00`, `portabilis/i-educar` → `2.12`,
+`francoisjacquet/rosariosis` → `mobile`), and a hardcoded branch writes all three down as
+ungranted.
+
+**2. Grade the grant against its own licence VERSION.**
+`compose/code/p439-grant-presence/grant_presence.py` with `p440`'s version-aware
+profiles (`AGPL-3.0`, `GPL-3.0`, `GPL-2.0` alongside MIT / Apache-2.0 / ISC).
+🔴 `resolve_version()` first: a complete GPL-2.0 licence is missing four of GPL-3.0's six
+operative clauses, so grading the family instead of the version condemns a valid grant.
+An unresolvable version returns `GRANT-UNCALIBRATED` — publish it, never suppress it.
+
+**3. Map verdict → obligation → deployment trigger.** This is the deliverable:
+
+| Grant | Trigger | What the client owes | Platforms (verified 2026-10-25) |
+|---|---|---|---|
+| **MIT / Apache-2.0 / BSD** | — | attribution; Apache-2.0 §4(a) also a **copy of the licence** | `openedx/XBlock`, `huggingface/smolagents`, `learningequality/kolibri` |
+| **GPL-2.0** | **distribution** of binaries | complete corresponding source to recipients. 🟢 **No network clause — it predates the question** | `portabilis/i-educar`, `francoisjacquet/rosariosis`, `OS4ED/openSIS-Classic` |
+| **GPL-3.0** | **distribution** | corresponding source; anti-tivoisation | `moodle/moodle`, `chamilo/chamilo-lms`, `GibbonEdu/core` |
+| 🔴 **AGPL-3.0** | **network interaction** (§13) | modified version's Corresponding Source offered **to the platform's own users** | `openedx/edx-platform`, `instructure/canvas-lms`, `frappe/lms`, `Chocobozzz/PeerTube` |
+| 🟡 **LGPL-3.0** | — | 🔴 **not assessed** — incorporation by reference by design (`Gap 440-B`) | `BigBlueButton`, `OpenEduCat` |
+
+**4. Place the AI work on the permissive side of the seam.** The whole point of the map
+is that it tells you where to stand. On an AGPL platform, build **through the supported
+extension point** rather than in the core: [`openedx/XBlock`](https://github.com/openedx/XBlock)
+(Apache-2.0, `LICENSE.TXT` 11 358 B · `cfc7749b96f6`) is the Open edX seam, and the
+agents this base shelves — `canvas-grader-mcp`, `littlecookie0722/AI-Teaching-Agent`,
+`ls1intum/edutelligence` — are all MIT services that integrate **over an interface**.
+🟢 Nothing the studio writes inherits §13.
+
+**5. Ship the third column.** The report has **three** columns — verdict, the clauses
+actually found, and what was **not assessed and why**. 🔴 A two-column report renders
+"unknown" and "fine" identically (`Trend 38`), and the uncalibrated rows are exactly the
+ones with the largest obligations attached.
+
+### What it is worth, and where
+
+🟢 **LATAM is the unexpected winner and the pitch nobody makes.** The region's SIS tier is
+**GPL-2.0** — no §13, so a hosted deployment triggers no source-offer obligation to its
+users. That is a real, defensible hosting advantage for `i-Educar`, `RosarioSIS` and
+`openSIS`, and it is invisible to any tool that grades "GPL" as one thing.
+🔵 **EMEA**: GPL-3.0 on Moodle/Chamilo keeps copyleft off the hosting model, which
+composes cleanly with the 2 December 2027 Annex III runway (`Pattern AP`).
+🔴 **NA and APAC** are the exposed ones — Canvas and Open edX are AGPL — and there the
+XBlock/interface seam is the engagement, not a detail.
+
+**Sizing.** 2–3 weeks for a platform estate of this size: ~1 week probing and grading,
+~1 week mapping obligations to the client's actual hosting and modification plan, ~1 week
+wiring the gate into CI as `Pattern AR` specifies. 🟡 It is cheap because the instruments
+exist; it is valuable because it runs **before** the architecture is fixed.
+
+---
+
 ## 🆕 Pattern AR — `p439` The **grant-presence gate in the build**: make "every third-party licence was READ, not scanned" a CI artefact, and wire the same gate a client's procurement can run
 
 🔵 **The problem this pattern solves, measured rather than asserted.** `Pattern AQ` (`p438`)

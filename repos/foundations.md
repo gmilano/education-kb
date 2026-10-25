@@ -6,6 +6,51 @@ updated: 2026-10-25
 
 # 🏗️ Foundational repos — Education
 
+## 🆕 `p440` — **Zero rows added, for the fourth pass running — and this time the screening question has an answer the previous three could not compute**
+
+🔴 `p440` adds **no** foundation row. The pass's one new address,
+[`AnkitClassicVision/tutor-engine`](https://github.com/AnkitClassicVision/tutor-engine),
+is a self-hosted application under **AGPL-3.0**: nothing downstream can depend on it, and
+network copyleft is the wrong grant to put in a tier whose whole purpose is *things a
+deliverable may vendor*. It is shelved on `agents/top.md` with that posture attached.
+
+### 🟢 The screening amendment: "can the grant be READ" is now answerable for copyleft too
+
+`p439` added the screening question — 🔵 *before a dependency is shelved here, ask not
+only which licence it names but whether the payload contains the words that perform the
+grant.* 🔴 That question had a hole exactly where this file's risk is: `grant_presence.py`
+carried profiles for **MIT, Apache-2.0 and ISC only**, so every GPL, AGPL, LGPL, BSD, MPL
+and EPL payload returned `GRANT-UNCALIBRATED` — **101 of 218**. A foundation row under
+GPL-2.0 could not be screened by the screening rule.
+
+🟢 `p440` profiles the GPL family (AGPL-3.0, GPL-3.0, GPL-2.0), and the remainder falls to
+**39 of 218**. For this file that means the 🔴 **Copyleft foundations** section below is
+screenable for the first time, and the ten platform repositories behind it were read at
+source this hour: **10 of 10 `GRANT-PRESENT`** (table on `verticals/solutions.md`).
+
+🔵 **The amendment, stated so the next pass can apply it without re-deriving it:**
+
+1. **Ask the grant question before the tier question.** A payload that names a family and
+   does not contain its operative clauses is not a candidate for *any* tier — the row is
+   `GRANT-TRUNCATED` or `GRANT-BY-REFERENCE`, and the obligation it names lands on
+   whoever vendors it next. On this base's own corpus that is 🔴 **36 payloads**.
+2. **Resolve the version before judging a GPL-family grant.** A complete GPL-2.0 licence
+   is missing four of GPL-3.0's six operative clauses. Grading it against the wrong
+   version condemns a valid grant — and the three GPL-2.0 platforms on these shelves
+   (`i-educar`, `RosarioSIS`, `openSIS`) are the LATAM / low-cost SIS tier, so the error
+   would have fallen entirely on one region's supply.
+3. 🟡 **`LGPL` still declines, and two shelved platforms carry it.** LGPL-3.0
+   incorporates GPL-3.0 by reference *by design*, so it needs a fourth verdict rather
+   than a profile (`Gap 440-B`). **BigBlueButton** and **OpenEduCat** are
+   `GRANT-UNCALIBRATED` and must not be read as cleared.
+4. 🔴 **`BSD`, `MPL` and `EPL` remain unprofiled — 32 payloads** (BSD 14, MPL 9, EPL 9).
+   BSD is the one that matters most to this file, because BSD-0/2/3 are three different
+   licences under one family name spanning 164 B → 1 620 B, and
+   [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) is
+   shelved BSD-3-Clause on `agents/top.md`. `Gap 440-A`.
+
+---
+
 ## 🆕 `p439` — **Zero rows added, and the screening question is now a measured one: can a dependency's grant even be READ from the repository?**
 
 🔴 **No foundation rows this pass.** All **23** new addresses `p439` discovered (`ai-tutor`

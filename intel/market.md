@@ -10,6 +10,63 @@ updated: 2026-10-25
 > every pass and a nil result is written down as a nil, because silence reads exactly like
 > coverage.
 
+## 🆕 `p440` · 2026-10-25 — **🔴 ALL FOUR REGIONAL LEGS RETURNED CONFIRMATION AND NOTHING ELSE — the first four-nil on discovery this file has recorded, and it is written down as a nil because silence looks exactly like coverage. 🟢 That is a result about the CHANNEL, not about the regions: the regulatory surface of this industry was saturated by `p432`–`p439`. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
+
+🔵 **Four regional legs plus two global legs ran 2026-10-25.** Every regulatory fact they
+returned is **already on this file**, with a prior pass's citation. Graded honestly:
+
+| Leg | Verdict | What came back, and where it already lives |
+|---|---|---|
+| **North America** | 🔵 **confirmation** | State-led K-12 AI policy: Idaho `SB 1227` (AI literacy standards, educator training, no AI replacement of licensed teachers), Maryland `SB 720` (local policies, effective 1 June 2026), California `AB 1159` (limits training on student data), `H.R. 8747` (K-12 AI Literacy and Readiness Act, **advanced in committee, not enacted**), Arizona `HB 4040` (introduced). 🔴 One leg source claimed a **$2.5 B federal AI personalised-learning grant programme**; it traces to a single blog with no primary behind it and is 🔴 **NOT carried** |
+| **EMEA** | 🔵 **confirmation** | `Regulation (EU) 2026/1744` (the Digital Omnibus): Annex III high-risk education AI to **2 December 2027**, Annex I to 2 August 2028, Article 50 transparency live since **2 August 2026**, Article 5(1)(f) emotion-recognition prohibition in education. All resolved at `p380` and carried since |
+| **APAC** | 🔵 **confirmation** | Korea's **AI Basic Act** (in force 22 January 2026, the region's first comprehensive statute), Singapore's IMDA / AI Verify agentic framework (January 2026, voluntary), Japan's AI Promotion Act (no penalties), China's targeted rules (AI-content labelling since 1 September 2025), India's DPDP phase-in to May 2027, and the Ipsos Education Monitor classroom-ban spread |
+| **LATAM** | 🔵 **confirmation** | Peru `Ley N° 31814` (still the region's **only enacted** AI statute), Brazil `PL 2338/2023` (Senate-approved December 2024, pending in the Chamber, education among high-risk uses), Chile bulletin `16821-19` in committee and the proposal to move Law `21.719` from December 2026 to December 2027, Mexico's bills and 10 000-specialist training target |
+
+🔴 **So the finding is the nil, and it has an operational consequence.** Six legs, **zero**
+new regulatory facts. 🔵 `p432` through `p439` each reported that three or four of four
+legs "confirmed rather than discovered"; `p440` is the first where **all** of them did.
+The regulatory channel for this industry is saturated at this base's reading depth, and a
+pass that spends four legs there is buying confirmation at full price. 🟢 **`p440` spent
+its remaining legs on payloads instead and the return was 62 previously-ungradeable
+grants** — the trade is recorded on `repos/trending.md`.
+
+🟡 **One analyst band is widened, not replaced.** The 2026 AI-in-education base now reads
+**$9.58 B** (Precedence, to $136.79 B by 2035, 34.52 % CAGR) against the $10.6 B → $42.48 B
+by 2030 (41.5 %) already on this file, and the **AI-tutors sub-segment** is sized
+separately at **$2.7 B** for 2026 (Grand View, to $17.7 B by 2033, 30.5 %). 🔵 The
+disagreement is again about *what counts as the market* and not about growth — and the
+tutors figure being a quarter of the whole is the useful part, because it is the segment
+this base's supply actually addresses. 🟡 Technavio's **66 % institution-wide
+implementation** is carried as indicative, single-channel.
+
+### 🟢 Amendment to the single `## Opportunities by region` block below — the copyleft read is now per-region, and it is new
+
+`p440` made the GPL family's grants machine-readable, and the result reorders one
+procurement argument **by region** rather than globally:
+
+- **North America** — Canvas LMS (**AGPL-3.0**, verified `GRANT-PRESENT` this hour) is the
+  integration reality in US higher ed. 🔴 The §13 network clause is now a *named,
+  verified* obligation rather than a licence badge, and the draft-and-sign artefacts this
+  base shelves (`canvas-grader-mcp`, `California-IEP-AI-project-kit`) sit **outside** the
+  platform, which is the posture that keeps the obligation off the client.
+- **EMEA** — Moodle and Chamilo are **GPL-3.0**: the obligation attaches to
+  *distribution*, not to network use. 🟢 For a hosted EU deployment that is materially
+  lighter than AGPL, and it pairs with the 2 December 2027 Annex III runway: build the
+  conformity artefacts on a GPL-3.0 base and the copyleft question never reaches the
+  hosting model.
+- **APAC** — Open edX (**AGPL-3.0**) dominates the MOOC-scale tier that the region's
+  national programmes buy. 🔴 §13 applies to every hosted modification, so the
+  Apache-2.0 **XBlock** seam is not a stylistic preference here but the commercial one.
+- **LATAM** — 🟢 **the strongest and least-known finding of this pass.** The region's
+  SIS tier — `portabilis/i-educar` (Brazil), `RosarioSIS`, `openSIS` — is **GPL-2.0**,
+  which **predates the network-service question and carries no §13 at all**. A hosted
+  deployment on these platforms triggers no source-offer obligation to its users. 🔵 The
+  same age that makes them look dated is a genuine hosting advantage, and 🔴 `p440`
+  measured that an unversioned "GPL" rule would have condemned all three as carrying a
+  truncated grant — the error would have fallen entirely on LATAM's supply.
+
+---
+
 ## 🆕 `p430` · 2026-10-25 — **Four regional legs, four returned material, no nil.** 🟢 All four regulatory postures re-read and dated; the LATAM governance gap (87% adoption / 26% strategy) is confirmed as the strongest single number in the file. 🔴 This shelf carried **12** `## Opportunities by region` blocks, eleven of them marked SUPERSEDED — the task fixes **one**. The eleven are consolidated into the single current block below; every one of them remains in `git log`.
 
 🔵 **Structural change, stated plainly:** the per-pass narrative that opened this file now
