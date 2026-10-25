@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **The prescribed trending leg returned ZERO unshelved for the eleventh consecutive pass, and an unprescribed CAPABILITY leg returned a promotion on its first outing. 🔴 It also returned a five-day-stale FORK presented as canonical — the second specimen, and the one that proves freshness heuristics cannot catch this class.**
+
+🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` was a host property, now
+vindicated as scoped. 🔵 All reads **2026-10-25**.
+
+### 🟢 Promoted to [`repos/foundations.md`](foundations.md) this pass
+
+| repository | grant, first-hand | why |
+|---|---|---|
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** — `LICENSE` **`1 076` B `2bcdae923d26`** @ HEAD `c47e8b3ac2ae`; tree **enumerated** (one licence-shaped path); `pyproject.toml` `"MIT"` agrees; **2** refs; **1** commit; **2026-10-20**; CI + tests present | 🟢 Canvas grading for teachers/TAs where **stage → review → post on explicit confirmation** is the default construction. 🔴 **Not found by the trending leg** — found by a capability leg this prescription does not contain |
+
+### 🔵 The prescribed trending leg itself — leg 2
+
+| repository | this pass | verdict |
+|---|---|---|
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🟡 Reported at **5 900+ ★** by an October roundup, against the **6 262 ★** another roundup gave `p425` | 🟢 **CARRIED.** 🔴 **ODbL** (`25 289` B `77d2692c3d64`), re-read byte-exact by `p425` today — a **share-alike database** licence, not a code licence. 🟡 Two roundups now disagree about its star count by ~360; **neither is measured here** |
+| `luongnv89/claude-howto`, `karpathy/nanochat`, `developer-roadmap`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026` | — | 🔴 **All carried.** Learning **material**, not education software; out of tier, as recorded since `p424` |
+
+🔴 **Zero unshelved from leg 2 — `T100`'s eleventh consecutive confirmation on the trending axis.**
+🔵 The trending channel is the one a studio most expects to produce novelty; on these shelves it
+has produced none for eleven passes, while **payload re-reads, shelf greps and now capability-shaped
+queries** have produced a find in each of the last four.
+
+### 🔴 The capability leg's fork specimen — `T129`
+
+| repository | `LICENSE` | `sha256₁₂` | copyright holder in its OWN payload | HEAD | last commit |
+|---|---|---|---|---|---|
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | `1 064` B | `5da1fff0a1db` | *"© 2026 **G36maid**"* | `18bd1777eb0b` | **2026-10-20** |
+| [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) | `1 064` B | `5da1fff0a1db` | 🔴 *"© 2026 **G36maid**"* | `cac60b6b37a8` | 🔴 **2026-10-15** |
+
+🟢 **Byte-identical payloads, identical README banner, downstream copy five days stale, upstream
+already carried.** 🔴 **Five days is the point.** `p422`'s fork specimen was **683 commits** stale
+and visible on any activity axis; this one would pass every freshness filter a studio runs. 🟢
+**The field that catches it costs nothing: the copyright holder inside `thc1006`'s own `LICENSE` is
+`G36maid`.** 🔴 A licence *grade* is blind here — both repositories are correctly `🟢 MIT`.
+
+### 🔴 And this pass's own census was wrong before it was right — `T127`
+
+🔴 An unanchored slug pattern (`[A-Za-z0-9_.-]+/moodle-mcp`) folded `owner/moodle-mcp-server` into
+`owner/moodle-mcp` and **manufactured four 404s** against addresses this base never published.
+🟢 Boundary-terminated re-run: **16** exact slugs, **12** `moodle-mcp` + **4** `moodle-mcp-server`,
+**one** unresolvable — and that one, `nahuelalbornoz/moodle-mcp`, was **already on the register**.
+🟢 **Corrected yield: zero new dead addresses.** 🔵 Published with the wrong figure beside the right
+one because the wrong one looked exactly like a finding.
+
 ## 🆕 `p425` · 2026-10-25 — **Zero promotions from a trending leg, and one promotion from a GREP: the Canadian provincial foundation this base has carried since `p388` while its register called Canada an open gap. 🔴 `os-taxonomy` re-read byte-exact: ODbL, not MIT.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by

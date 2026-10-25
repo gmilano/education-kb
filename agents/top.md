@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **One unshelved address in eight legs — and it is the first grading agent on these shelves whose DEFAULT behaviour is the artefact three jurisdictions demand. 🔴 And this pass COMMITTED `T127` before catching it: a slug census run without a boundary terminator reported four live addresses as dead, because `owner/moodle-mcp-server` folds into `owner/moodle-mcp` under an unanchored pattern.**
+
+🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 This **contradicts `Gap 425-B`**, which recorded `make commit-gates` and `make hooks`
+as refused by the host's auto-mode classifier. Per `p423`'s rule — *a declared-un-run suite must
+never be read as un-runnable* — `p425` scoped that refusal to **its** host rather than to the
+suite, and the scoping is now **vindicated**: the suite is runnable and it was the **host** that
+varied. 🔵 **No date straddle:** every leg, `ls-remote`, clone, tree enumeration and payload digest
+happened **2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+### 🟢 The one unshelved address in eight legs — promoted to this shelf
+
+| address | grant, read at the SHA | heads | capability — band stated per cell |
+|---|---|---|---|
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** — `LICENSE` **`1 076` B `sha256₁₂ 2bcdae923d26`** @ HEAD `c47e8b3ac2ae`. 🟢 Tree **ENUMERATED**, not laddered (`gate-subtree-grant`): `git ls-tree -r` returns **exactly one** licence-shaped path. 🟢 `pyproject.toml` declares `license = "MIT"` — the two channels **agree**, so this is not a `T117` metadata conflict | **2** refs (`HEAD`, `main`); **1** commit; last **2026-10-20**; CI present (`.github/workflows/test.yml`) and `tests/test_server.py` | 🟢 Canvas LMS grading for **teachers and TAs**. Reads rubric criteria and ratings, **per-student** due dates including overrides and extensions, and the course's automatic late policy; ingests submissions as **PDF, `.docx`, Jupyter, Scratch `.sb3`, zip, source**; classifies every submitted link so a photo album is not accepted as the required video; flags students who submitted **identical files**. 🟢 **`authoritative`** — read from the payload at the SHA |
+
+🟢 **Why it earns a row rather than a mention.** `p421` established the boundary regulators are
+drawing — *a tutor is generally outside EU Annex III; a grader is inside it* — and `p425`'s Global
+block states that **one** deliverable serves EMEA's Annex III (**2027-12-02**), Vietnam's Decision
+33 (**in force 2026-08-15**) and the US state statutes barring AI from replacing a licensed
+educator: **a reviewable human-in-the-loop evidence trail.** 🟢 This address is the first on these
+shelves where that trail is the **default construction** rather than an integration the studio
+adds: grades, rubric scores and comments are **staged locally, previewed, and posted only on
+explicit confirmation**, and the staged breakdown — per-category scores, late penalty, extra
+credit — is written into the student's comment, which is the audit artefact itself.
+
+🔴 **Graded honestly, because the row is five days old.** **1** commit, **2** refs, a star count in
+the single digits. 🔴 **It is a pattern exemplar, not a dependency** — an engagement should read
+the architecture and expect to own the code, not pin the package. 🔴 **And its own `README.md`
+states the exposure plainly**: the server runs locally, but *the student work it reads is sent to
+whichever AI model you use*. 🔵 Under **CA `AB 1159`** (student data barred from training AI models
+unless the school directly benefits) and under Annex III, **that sentence is the procurement
+question**, not a footnote — and it is to the repository's credit that it is in the README rather
+than discovered at legal review.
+
+### 🔴 `T127` — THIS PASS REPORTED FOUR LIVE ADDRESSES AS DEAD, AND THE CAUSE WAS A MISSING BOUNDARY TERMINATOR
+
+🔴 **Committed, then caught, inside this pass.** Testing whether the discovery channel's
+`moodle-mcp` was shelved, this pass ran a slug census over the live shelves with the pattern
+`[A-Za-z0-9_.-]+/moodle-mcp` — **unanchored at the right-hand end**. It returned **18** owners. Five
+of them answered `git ls-remote` with **0 refs** and `raw.githubusercontent.com` with **404**,
+which this pass briefly recorded as *five dead addresses on the live shelves*, two of them
+(`peancor` at 73 hits, `csmediapro` at 65) the base's most-cited of the name.
+
+🟢 **The finding was false, and the re-run with a boundary terminator shows why:**
+
+| census | pattern | distinct slugs | unresolvable |
+|---|---|---|---|
+| 🔴 first run | `[A-Za-z0-9_.-]+/moodle-mcp` *(unanchored)* | **18** | 🔴 **5** |
+| 🟢 re-run | `github\.com/[A-Za-z0-9_.-]+/moodle-mcp[A-Za-z0-9_.-]*` *(boundary-terminated, captures the full slug)* | **16** — **12** `moodle-mcp` + **4** `moodle-mcp-server` | 🟢 **1** |
+
+🟢 **Four of the five "dead" addresses are alive, and they are a DIFFERENT REPOSITORY** — the base
+never carried `owner/moodle-mcp` for any of them, it carried `owner/moodle-mcp-**server**`, and the
+unanchored pattern truncated the slug at its own last literal character:
+
+| carried slug | refs, read this pass | `raw` README |
+|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **5** | 🟢 `200` |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟢 **9** | 🟢 `200` |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟢 **23** | 🟢 `200` |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | 🟢 **6** | 🟢 `200` |
+
+🟢 **And the fifth is not new either.** `nahuelalbornoz/moodle-mcp` is genuinely unresolvable — **0**
+refs, `raw` `404` — and [`intel/open-gaps.md`](../intel/open-gaps.md) **already names it**, in the
+`5 of 47 addresses do not resolve` row, flagged `🆕` at the time it was found. 🟢 **So the corrected
+yield of the whole exercise is ZERO new dead addresses.**
+
+🔴 **Why this class is worth a `T`-number rather than a correction note.** A truncating census does
+not fail loudly — it **manufactures a 404** by probing an address nobody ever published, and the
+404 then reads as hard first-hand evidence of decay. 🔵 It is the mirror image of `gate-bare-slug`'s
+concern: that gate asks whether a slug has an owner, and this failure invents a slug that *has* an
+owner and does not exist. 🟢 **The control is one character**: a slug census must capture to a
+**boundary**, never to the pattern's last literal. 🔵 Recorded with the wrong figure shown beside
+the right one on purpose, because the wrong one looked exactly like a finding.
+
+### 🔴 `T128` — THE CASE COLLISION IS REAL, IT IS INVISIBLE TO THE GATE BY DESIGN, AND THIS PASS PROVED BOTH BY BREAKING THE GATE
+
+🟢 **The repository.** [`marcosnahuel/moodle-mcp`](https://github.com/marcosnahuel/moodle-mcp) is
+also cited, in this base's append-only logs, under the owner spelling `MarcosNahuel`. 🟢 **Probed
+separately this pass, both spellings `ls-remote` to the same HEAD
+`d5ca68e8cd1b0ebc861a3f35916cfe9fb5ff7fdd`** — one repository. GitHub owner names are
+**case-insensitive for resolution and case-preserving for display**, so both serve and neither
+`404`s: every existence and currency probe this base runs passes on **both**.
+
+🔴 **This pass's first draft was WRONG about where the collision lives, and the correction is the
+more useful result:**
+
+| population | `MarcosNahuel` | `marcosnahuel` | collision visible to `gate-case-collision`? |
+|---|---|---|---|
+| the **six curated shelves** the gate scans — `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `intel/trends.md`, `compose/patterns.md` | 🟢 **0** before this pass | **7** | 🟢 **No collision existed.** Run against pristine `49585c4`: **368** distinct slugs, **0 findings** |
+| the **two append-only logs** — `agents/trending.md`, `repos/trending.md` | 🔴 **32** | **3** | 🔴 **Collision — and the gate does not scan these files** |
+
+🟢 **The exclusion is deliberate and documented in the gate's own module:** *"The append-only files
+are NOT scanned. History records the spelling that was published, and editing it would be the error
+this KB forbids elsewhere."* 🔵 **So this is not a gate defect — it is the stated cost of the
+append-only convention.** A repository may stand under two spellings **permanently** in the
+history, and the detector is right to ignore it, because the only repair available is the
+retro-edit `p352` forbids.
+
+🔴 **And the demonstration was accidental.** This pass's first draft quoted both spellings as
+`github.com/…` links into `agents/top.md` and `intel/open-gaps.md` — **importing a historical
+collision onto a curated shelf** — and `gate-case-collision` went red at once, naming
+`agents/top.md:89`. 🟢 **The gate was right and the write-up was wrong: documenting a collision is
+not a licence to create one.** 🟢 The row above therefore links **one** canonical spelling — the
+one the live shelves already used — and names the variant **as a string**.
+
+🔵 **`p423` found this class on the repository segment**, via an instrument that had been in no
+`make` target; this is the **owner** segment, and the reason it survived that wiring is that it
+never reached a scanned file. 🟡 **`Gap 426-B` is therefore about a POPULATION, not a repair:** no
+census has asked how many other repositories are dual-spelled inside the append-only logs, where
+nothing is looking.
+
+### 🔴 `T129` — THE DISCOVERY CHANNEL SERVED A FORK AS THE CANONICAL ADDRESS. SECOND SPECIMEN, AND THIS ONE IS CHEAP TO CATCH
+
+🔴 Leg 9 returned [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) as *the* Moodle MCP
+server — *"MCP server that lets AI agents operate Moodle: courses, assignments, forums, grades and
+files-as-markdown"* — with no indication it is downstream of anything.
+
+🟢 **Measured first-hand, both repositories, at their SHAs:**
+
+| repository | `LICENSE` | `sha256₁₂` | copyright line **inside that repository** | HEAD | last commit |
+|---|---|---|---|---|---|
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | **`1 064` B** | **`5da1fff0a1db`** | *"Copyright (c) 2026 **G36maid**"* | `18bd1777eb0b` | **2026-10-20** |
+| [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) | **`1 064` B** | **`5da1fff0a1db`** | *"Copyright (c) 2026 **G36maid**"* | `cac60b6b37a8` | 🔴 **2026-10-15** |
+
+🟢 **Byte-identical grant payloads, identical README banner, and the downstream copy is FIVE DAYS
+STALE.** 🟢 `G36maid/moodle-mcp` is **already carried** on these shelves (13 mentions), so the
+channel offered a fork of a shelved address as new supply.
+
+🔵 **`p422` found this exact shape** — *"the discovery leg served a 683-commit-stale FORK as the
+canonical address, with the upstream's copyright line intact so a licence-only check cannot see
+it."* 🟢 **This specimen sharpens the control rather than repeating it.** `p422`'s was 683 commits
+stale and therefore visible on any activity axis; this one is **five days** stale, which no
+freshness heuristic would flag. 🟢 **What does catch it is free and deterministic: the copyright
+holder inside `thc1006`'s own payload is `G36maid`, not `thc1006`.** 🔴 A licence *grade* cannot
+see this — both repositories grade `🟢 MIT`, correctly. 🟢 **The holder string, compared against the
+owner segment, is a one-field fork oracle**, and it is the field a licence read already has in
+hand. 🔵 `gate-fork-direction` exists in this Makefile; this pass records the specimen and the
+oracle rather than claiming the gate covers it.
+
 ## 🆕 `p425` · 2026-10-25 — **`T100`'s TENTH confirmation, and the cleanest one: three addresses the discovery channel presented as NEW, three payload reads, three carried cells reproduced EXACTLY — zero unshelved. 🔴 And the pass's real find is on this shelf itself: `agents/top.md` carries Canada's only provincial education-AI asset and, before this pass wrote into it, contained the string `canad` ZERO times — which is the mechanism by which `Gap 422-B` published an absence this base refutes.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by

@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 426 — reads 2026-10-25, commit 2026-10-25 — **The gates RAN on this host, and the first thing they did was fail on `p425`'s inherited census — which is the measurable cost of a pass that could only check its contracts by hand. 🟢 `Gap 425-C` CLOSED. 🟢 One unshelved address in ten legs, MIT, and it is the first component on these shelves that produces the oversight artefact three jurisdictions demand BY DEFAULT. 🔴 And this pass manufactured four 404s before catching itself.**
+
+🔵 **No date straddle.** Every leg, `ls-remote`, clone, tree enumeration and payload digest
+happened **2026-10-25**; the commit lands **2026-10-25**, so `updated:` carries one date.
+
+🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at
+`gate-union-currency`** on `p425`'s inherited census, and after this pass's writes `make
+commit-gates` exits `0` over 🟢 **54 blocking gates green** (`gate-census-union` is the one
+declared, non-blocking red). 🟢 **Three gates fired on this pass's own first drafts and all three
+were right** — `gate-union-currency` (`p425`'s stale census), `gate-identity` (a two-row rendering
+of one repository) and `gate-case-collision` (a historical collision quoted onto a curated shelf).
+🟢 **`Gap 425-B` is refuted as a SUITE property and confirmed as a HOST property.** Per
+`p423`'s rule — *a declared-un-run suite must never be read as un-runnable* — `p425` scoped its
+refusal to **its** host rather than to the suite. That scoping was correct, and this pass is the
+measurement that vindicates it.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 425-C` is CLOSED, and closing it names the cost of `Gap 425-B`.** `gate-union-currency`
+  fired red **before this pass wrote a line**: the inherited sentence published
+  **2 740 / 3 216 / 3 582** against a derivation of **2 740 / 3 217 / 3 583**. 🔵 `p425` honoured
+  its file contracts by hand and **said so**, which was the right disclosure — and the one thing a
+  hand check cannot see is a census derived before the pass's own writes. 🟢 Re-derived here as the
+  **last act before the commit** and restated below, never back-fitted (`p352`).
+- 🟢 **One unshelved address in TEN legs —
+  [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp)**,
+  🟢 **MIT**, `LICENSE` **`1 076` B `sha256₁₂ 2bcdae923d26`** @ HEAD `c47e8b3ac2ae`, tree
+  **ENUMERATED** to exactly one licence-shaped path, `pyproject.toml` `license = "MIT"` agreeing.
+  🟢 **Why it is the find:** grades, rubric scores and comments are **staged locally, previewed and
+  posted only on explicit confirmation**, with the per-category breakdown written into the
+  student's comment — so the audit trail EU **Annex III**, Vietnam **Decision 33** and the US state
+  oversight bars all ask for is a **by-product of normal operation** rather than an integration the
+  studio builds. 🔴 **1 commit, 2 refs, five days old: import the architecture, not the package.**
+  🔴 And its own README states student work is **sent to whichever AI model the assistant uses** —
+  so it answers the oversight limb and **not** CA `AB 1159` or the EU data-governance limb.
+- 🔴 **`T127` — this pass REPORTED FOUR LIVE ADDRESSES AS DEAD, then caught itself.** A slug census
+  run with the unanchored pattern `[A-Za-z0-9_.-]+/moodle-mcp` folded
+  `owner/moodle-mcp-**server**` into `owner/moodle-mcp`, returning **18** owners of which **5**
+  answered `0` refs and `raw` `404`. 🟢 Four are live `-server` repositories (`peancor` 5 refs,
+  `csmediapro` 9, `Jawadh-Salih` 23, `lmscloud-io` 6); the fifth was **already on the register**.
+  🟢 Boundary-terminated re-run: **16** exact slugs, **1** unresolvable, **zero** new dead
+  addresses. 🔴 **The class is worth a number because it does not error — it MANUFACTURES evidence,
+  and a fabricated `404` is indistinguishable from a real one at the point of reading.**
+- 🔴 **`T128` — a real case collision the gate CANNOT see, and this pass proved it by breaking the
+  gate.** `moodle-mcp` under the owner spellings `marcosnahuel` and `MarcosNahuel` is **one
+  repository** — both `ls-remote` to HEAD `d5ca68e8cd1b`. 🟢 **The six curated shelves were
+  clean:** `gate-case-collision` against pristine `49585c4` reports **368** distinct slugs and
+  **0 findings**. 🔴 The collision lives entirely in the two **append-only logs** (**32**
+  occurrences against **3**), which the gate **deliberately does not scan** — its own module states
+  that editing published history would be the error this KB forbids elsewhere. 🔴 **This pass's
+  first draft quoted both spellings as `github.com/…` links onto a curated shelf, and the gate went
+  red on `agents/top.md:89`.** 🟢 **The gate was right:** documenting a collision is not a licence
+  to create one. 🟡 `Gap 426-B` is a **population** question — nothing has measured how many other
+  repositories are dual-spelled where nothing is looking.
+- 🔴 **`T129` — the discovery channel served a FORK as canonical, and this specimen is FIVE DAYS
+  stale.** `thc1006/moodle-mcp` carries a `LICENSE` byte-identical to carried `G36maid/moodle-mcp`
+  (**`1 064` B `5da1fff0a1db`**), the same README banner, and a HEAD dated **2026-10-15** against
+  the upstream's **2026-10-20**. 🔴 `p422`'s specimen was **683 commits** stale and visible on any
+  activity axis; **this one passes every freshness bar a studio sets, and grades `🟢 MIT`
+  correctly.** 🟢 **One field still separates them and the grant read already has it: the copyright
+  holder inside `thc1006`'s own payload reads *"© 2026 G36maid"*.** Recorded as `Amendment 13` —
+  compare **holder** against **owner**, a signal rather than a verdict.
+- 🔴 **The prescribed leg set is saturated.** The **eight prescribed legs** returned **zero**
+  unshelved repositories — eleventh consecutive pass — and only **two** new policy cells in the
+  whole set (**Charleston County Schools**, NA; **FLACSO Ecuador (CTS Lab)**, LATAM), both
+  *implementers* rather than instruments. 🟢 Both of this pass's supply findings came from **two
+  capability-shaped legs that are not in the prescription**. 🟡 `Gap 426-C`: this is evidence about
+  **query shape**, not about supply growth — one address in ten legs is still one address.
+- 🔴 **`Gap 425-A` reproduces, measured again.** `unesco.org`, `oecd.org`, `iesalc.unesco.org`,
+  `education.ec.europa.eu`, `multistate.us`, `en.wikipedia.org` — **all `HTTP 000`**;
+  `raw.githubusercontent.com` (`301`) and `github.com` (`400`) answer. 🟢 So **every licence cell
+  this pass publishes is `authoritative`** and **every policy and market cell is `reported`**.
+
+### 🟢 The census, derived LAST — after every shelf write
+
+🟢 **Re-derived as the last act before the commit**, per `p352` and `p376`. 🔵 **The shape
+census:**
+**2 780** harvested shapes → **38** are not addresses → **2 742 addresses**.
+🔵 **2 742** channel-U addresses and **3 221** channel-B survivors give
+**3 587 addresses over both channels**.
+
+🔵 **The movement decomposes across TWO passes, because the anchor sentence was last derived at
+`p424`** and `p425` declared `Gap 425-C` rather than restating it:
+
+| derivation point | shape triple | union triple | attributable to |
+|---|---|---|---|
+| published by `p424` | `2 778 / 38 / 2 740` | `2 740 / 3 216 / 3 582` | — |
+| derived at this pass's **first** gate run, **before** any `p426` write | `2 778 / 38 / 2 740` | `2 740 / **3 217** / **3 583**` | 🟡 **`p425`: +0 / +1 / +1** |
+| derived **after** this pass's nine shelf writes | `**2 780** / 38 / **2 742**` | `**2 742** / **3 221** / **3 587**` | 🟢 **`p426`: +2 / +4 / +4** |
+
+🟢 **The `+2` on channel-U is checkable against this pass's own narrative**, which is why it is
+shown split rather than as a single delta: `p426` introduced exactly two addresses this base had
+never carried — [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp)
+and [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) — one promoted and one recorded
+as a fork specimen. 🟢 `p352`'s rule holds in the direction that matters: `p424`'s figures stay
+published against the tree that produced them, and nothing below this section was edited to agree.
+
 ## Pass 425 — reads 2026-10-25, commit 2026-10-25 — **`Gap 422-B` IS REFUTED, AND THE REFUTATION COST ONE `grep`: Canada's federal instrument was on `agents/trending.md` with its date, and a Canadian PROVINCIAL asset was a full MIT row on `agents/top.md` since `p388`. 🔴 THIRD CONSECUTIVE PASS WHERE THE CORPUS HELD THE ANSWER AND THE PASS REPUBLISHED THE ABSENCE. 🟢 AND `T125`: a false "MIT" claim that survives both of this base's existing licence instruments, because it is TRUE about a different repository from the same vendor.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, SHA read and payload digest happened

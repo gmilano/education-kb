@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **No platform row moves, and that is now an EIGHTH independent channel agreeing: no education platform is MIT. 🟢 The foundation layer gains one integration-tier row, and this pass can finally state the licence shape of the whole Moodle MCP cohort from first-hand reads rather than from a census — 16 exact slugs, 9 granted, all MIT, 3 ungranted, 1 unresolvable.**
+
+🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 `Gap 425-B` is a property of `p425`'s host, not of the suite. 🔵 All reads
+**2026-10-25**.
+
+### 🟢 Added to the foundation layer
+
+| address | grant, read at the SHA | why it is a foundation and not a mention |
+|---|---|---|
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** — `LICENSE` **`1 076` B `2bcdae923d26`** @ `c47e8b3ac2ae`; tree **enumerated**, exactly one licence-shaped path; `pyproject.toml` `license = "MIT"` agrees | 🟢 **It is the reference implementation of the staged-grading seam**, which `p421`'s `Pattern AS` and `p425`'s Global block both describe as the single deliverable serving three jurisdictions. 🔴 **Import the architecture, not the package** — 1 commit, 2 refs, five days old |
+
+### 🟢 The Moodle integration cohort, graded exactly, from first-hand reads
+
+🔵 `p422` established the licence shape a studio bills against — *platform tier copyleft without
+exception, agent tier above it MIT without exception* — over **ten** addresses. 🟢 This pass
+re-grades the **Moodle** arm of that cohort from the shelves' own exact slugs, after `T127` showed
+the slug list itself was being read wrong:
+
+| grant state | n | addresses |
+|---|---|---|
+| 🟢 **MIT**, payload read at HEAD this pass | **9** | `falkenslab` (`1 067` B `66fa873bd85d`), `MarcosNahuel`≡`marcosnahuel` (`1 065` B `f27341a8425b`), `G36maid` (`1 064` B `5da1fff0a1db`), `duck-5` (`1 072` B `64dc9680d3bb`), `a2br` (`1 073` B `5b4bad3aa359`), `SaadRahman01` (`1 068` B `df0b3e71710c`), `Snaw80` (`1 072` B `b2bb31ce9d90`), `1alexandrer` (`1 074` B `ecc232c0b2aa`), `thc1006` (`1 064` B `5da1fff0a1db` — 🔴 a **fork**, see `T129`) |
+| 🔴 **no licence-shaped path anywhere in the tree** | **3** | `loyaniu`, `ink-waffle`, `linomck` — 🟢 all three **already recorded as ungranted** on these shelves, `ink-waffle` with the sharper state *"`package.json` MIT, no file"* |
+| 🔴 **unresolvable** | **1** | `nahuelalbornoz` — 🟢 **already on the register** |
+| 🟢 **`-server` siblings, a different repository** | **4** | `peancor` (5 refs), `csmediapro` (9), `Jawadh-Salih` (23), `lmscloud-io` (6) — 🔴 **the four `T127` briefly reported dead**; all four alive, and `lmscloud-io` is the cohort's one **`GPL-3.0`** member |
+
+🟢 **The shape holds and is now exactly countable: of 12 distinct `moodle-mcp` repositories, every
+one that grants at all grants MIT — 9 of 9, zero copyleft, zero exceptions.** 🔴 **The ungranted
+three are the real procurement hazard on this tier**, not a copyleft one: an engagement that reads
+a registry entry rather than a tree gets `ink-waffle`'s `package.json` MIT and no grant to rely on.
+
+🔴 **And the count carries a known defect, stated rather than folded:** `MarcosNahuel` and
+`marcosnahuel` are **one repository** (identical HEAD `d5ca68e8cd1b`, `T128`), so a census keying on
+the cited string reads **13** repositories where there are **12**. 🟢 **On the curated shelves this
+has never been live** — `gate-case-collision` grades them **0 findings** — because the second
+spelling appears only in the append-only logs, which that gate deliberately does not scan.
+
+### 🔴 The platform tier did not move, and the channel agreed with this base unprompted
+
+🔴 Leg 3 returned OpenOLAT, Sakai, Open edX, Moodle, Chamilo, Canvas, OpenEduCat, forma LMS and
+Open LMS — **every one carried**. 🟢 **Its own summary states the conclusion these shelves reached
+by payload read:** *"No result described an MIT-licensed LMS, SIS, or ERP."* 🔵 That is the
+**eighth** independent channel to agree, and the first to say it as a negative finding rather than
+leaving it to be inferred from a list.
+
+🟡 **One recurring claim re-flagged, not re-graded:** the leg again lists **Sakai** as Apache-2.0,
+while another source in the same result set gives ECL-2.0. 🟢 **`p425` settled this first-hand** —
+ECL-2.0, `LICENSE` `11 120` B `0688f62d04f1`, confirmed at HEAD `4debc947` — so the Apache-2.0
+claim is a **channel defect that reproduces**, and `gate-conflict` has the standing answer. 🔵 No
+new read spent on a question already answered at a SHA (`p289`: a restatement is not an authority,
+and neither is a re-reading of a settled one).
+
 ## 🆕 `p425` · 2026-10-25 — **`Gap 298`'s refutation is QUALIFIED, not widened: the only other permissive platform the discovery channel offers is a FALSE POSITIVE. 🟢 `OpenOLAT` stands alone as the Apache-2.0 foundation, with Sakai's ECL-2.0 beside it — and no education platform anywhere on these shelves is MIT.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by

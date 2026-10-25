@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **The platform tier gains nothing and loses nothing, and for the first time the DISCOVERY CHANNEL ITSELF states this base's standing finding as a negative result: "no result described an MIT-licensed LMS, SIS, or ERP." 🟢 The movement is one layer up again — the agent-facing tier over these platforms now has a GRADING member whose default is the artefact three regulators ask for.**
+
+🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` scoped to `p425`'s host, now
+vindicated. 🔵 All reads **2026-10-25**.
+
+### 🔴 The platform tier — no row moves, eighth independent channel
+
+🔵 **The settled grade is the FIRST column after the name, deliberately.** A shelf-derived parser
+reads a platform row's grade as the first licence token after its name, so a table that puts the
+**channel's claim** there publishes the claim as this base's grade. 🔴 `gate-action-answered` fired
+on this table's first draft for exactly that — it read **Sakai** as `Apache-2.0` off a cell
+reporting what a roundup said. 🟢 Column order is a correctness property here, not layout.
+
+| platform | this base, settled at a SHA | the channel's claim this pass |
+|---|---|---|
+| **OpenOLAT** | 🟢 **Apache-2.0** — `10 982` B `6dbc5b605ed0`, read at SHA (`p424`) | agrees |
+| **Sakai** | 🟢 **ECL-2.0** — `11 120` B `0688f62d04f1`, confirmed at HEAD `4debc947` (`p425`) | 🔴 **Conflicted**: one source says Apache-2.0, another ECL-2.0. The Apache-2.0 claim **reproduces**; `gate-conflict` has the standing answer |
+| **Open edX** | 🟢 **AGPL-3.0** platform; its permissive component is real and named — `openedx/XBlock`, Apache-2.0 (`p421`) | 🔴 One source grades the whole platform Apache-2.0 |
+| **OpenEduCat** | 🟢 **LGPL-3.0** — carried, grade agrees | Education ERP on PostgreSQL — admissions, attendance, gradebook, fees |
+| **Moodle / Chamilo / Canvas** | 🟢 **GPL-2.0 / GPL-3.0 / AGPL-3.0** — carried. Moodle's grant **moves with its ref** (`p420`) | agrees |
+| **forma LMS** | 🔴 **Refuted at `p424`** — the circulating Apache-2.0 string traced to a **web-server line in a requirements list** | Apache-2.0, re-asserted |
+| **frappe/lms** | 🔴 **AGPL-3.0** — `33 893` B `db1a87ba81e8`. `p425`'s `T125`: the MIT belongs to `frappe/frappe`, the **framework** | *(not re-claimed this pass)* |
+
+🟢 **The channel's own summary is the finding:** *"No result described an MIT-licensed LMS, SIS, or
+ERP."* 🔵 Eight channels now agree, and this is the **first** to publish it as a negative result
+rather than leaving it to be inferred from a list of copyleft grants. 🟢 For a studio this is a
+settled planning constant, not an open question: **the platform is the client's copyleft install;
+the deliverable IP lives above it.**
+
+### 🟢 The agent-facing tier over these platforms gains its grading member
+
+| address | grant | what it sits on | why the vertical cares |
+|---|---|---|---|
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** — `1 076` B `2bcdae923d26` @ `c47e8b3ac2ae`, tree enumerated, `pyproject.toml` agrees | **Canvas LMS** (platform community edition is **AGPL-3.0**) | 🟢 **It is `p422`'s licence boundary in one address**: the AGPL platform stays the client's install, the MIT agent is the deliverable, and the seam is Canvas's **HTTP API with a personal access token** — a process boundary, not a link. 🟢 And the **staged grading trail** it produces by default is the Annex III / Decision 33 / US-state-oversight artefact |
+
+🔴 **The deployment caveat belongs on this shelf, not in a footnote.** The server runs locally, but
+its own `README.md` states that **student work is sent to whichever AI model the assistant uses**.
+🔴 Under **CA `AB 1159`** and EU **Annex III** this is the controlling question for a vertical
+deployment, and it is **not** answered by the MIT grant. 🟡 Two further operational facts a studio
+must price: it requires a **Canvas personal access token** with grading permission, and *"some
+schools disable personal access tokens"* — an admin dependency on the client side before any code
+runs.
+
+### 🔵 The Moodle integration tier, now countable
+
+🟢 Twelve distinct `moodle-mcp` repositories, read first-hand this pass: **9 granted, all MIT, zero
+copyleft**; **3 with no licence-shaped path anywhere in the tree** (`loyaniu`, `ink-waffle`,
+`linomck`); **1 unresolvable** (`nahuelalbornoz`, already on the register). 🔴 The hazard on this
+tier is **ungranted, not copyleft** — `ink-waffle` publishes MIT in `package.json` and ships no
+grant file, which is the state a registry read cannot distinguish from a real one. 🔴 Separately,
+the four `moodle-mcp-**server**` addresses are a **different repository set** and include the
+cohort's one `GPL-3.0` member, `lmscloud-io` (see `T127`).
+
 ## 🆕 `p425` · 2026-10-25 — **The platform tier gains a row and loses a candidate: `frappe/lms` circulated this week as "100% MIT" and is AGPL-3.0 at its own SHA. 🟢 The procurement rule this forces is a boundary rule — a grant belongs to a REPOSITORY, never to a vendor or to the framework underneath it.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by

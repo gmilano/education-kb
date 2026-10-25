@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **Two trends with procurement consequences, and neither is about a model. 🔴 `Trend 47`: the forked-address channel defect has shortened from 683 commits of staleness to FIVE DAYS, which puts it below every freshness heuristic and leaves exactly one field that still catches it. 🟢 `Trend 48`: regulators have converged on one artefact across three continents, and this pass shelved the first open-source address that produces it by default.**
+
+🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` was a host property. 🔵 All reads
+**2026-10-25**.
+
+### 🔴 `Trend 47` — the fork-as-canonical defect is getting HARDER to see, not rarer
+
+🔵 `p422` recorded the first specimen: a discovery leg serving a **683-commit-stale fork** as the
+canonical address, *"with the upstream's copyright line intact so a licence-only check cannot see
+it."* 🟢 This pass has the second, and the interesting axis is the **distance**:
+
+| pass | specimen | staleness | caught by a freshness filter? |
+|---|---|---|---|
+| `p422` | fork served as canonical | 🔴 **683 commits** | 🟢 **Yes** — visible on any activity axis |
+| `p426` | [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) vs carried [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 🔴 **5 days** (`2026-10-15` vs `2026-10-20`) | 🔴 **No** — a 5-day-old HEAD passes every recency bar a studio sets |
+
+🔴 **The procurement consequence.** A fork this fresh is **indistinguishable from the upstream on
+every axis a buyer normally checks**: it is MIT, it is granted, its tree enumerates to one licence
+path, its payload digest is clean, its HEAD is days old, and its README is the upstream's README.
+🔴 **A correct licence grade is not protection** — both repositories grade `🟢 MIT`, and both grades
+are right.
+
+🟢 **One field still separates them, and a licence read already has it in hand: the copyright
+HOLDER inside the downstream payload names the UPSTREAM.** `thc1006`'s own `LICENSE` reads
+*"Copyright (c) 2026 **G36maid**"*. 🟢 **Holder-vs-owner is a one-comparison fork oracle**, costing
+nothing beyond the grant read a studio performs anyway. 🔵 `p422` observed the holder line survived
+the fork; this pass records it as the **detection mechanism** rather than as a curiosity, because
+staleness has stopped being usable.
+
+🟡 **Stated with its limit:** the oracle gives a **signal, not a verdict**. A vendor who renames,
+an org transfer, or a contributor who assigns copyright upstream all produce the same mismatch
+legitimately. 🔵 It narrows the set worth a provenance read; it does not decide one.
+
+### 🟢 `Trend 48` — three continents have converged on ONE deliverable, and the supply just produced its first default implementation
+
+🔵 `p425`'s Global block stated the convergence; this pass can now name an address that **ships**
+it. 🟢 The three mechanisms, each carried and re-confirmed by this pass's legs:
+
+| jurisdiction | instrument | what it requires of a grading system |
+|---|---|---|
+| 🟢 **EMEA** | EU AI Act **Annex III** high-risk; Digital Omnibus **Reg. (EU) 2026/1744**; obligations **2027-12-02** | Conformity assessment before placing on market; **human oversight** by qualified staff who can monitor, intervene and **override** |
+| 🟢 **APAC** | Vietnam **Decision 33/2026/QD-TTg**; in force **2026-08-15**, compliance **2027-03-01** | Education named a high-risk sector; a system is high-risk **where its output drives decisions without meaningful human review** |
+| 🟢 **North America** | US state statute — OK and MD human-oversight bars; 🆕 **Charleston County Schools** (Jan 2026) | AI may not be the **sole basis** for a high-stakes decision about a student |
+
+🟢 **All three describe the same artefact**: a staged decision a qualified human reviews, overrides
+and signs, leaving a trail. 🔵 Vietnam's wording is the sharpest — the trigger is *the absence of
+meaningful human review*, which means **the review step is not a mitigation, it is the thing that
+keeps the system out of the high-risk tier.**
+
+🟢 **The supply-side half of the trend is new this pass.** Every grading-adjacent address these
+shelves carried previously treats review as an integration the studio builds.
+[`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp)
+(**MIT**, `1 076` B `2bcdae923d26` @ `c47e8b3ac2ae`) inverts the default: grades, rubric scores and
+comments are **staged locally, previewed, and posted only on explicit confirmation**, and the
+per-category breakdown is written into the student's comment — so the audit artefact is a
+**by-product of normal operation** rather than an instrumentation layer.
+
+🔴 **The trend's counter-pressure, in the same address.** Its README states that student work is
+**sent to whichever AI model the assistant uses**. 🔴 So the architecture answers the *oversight*
+limb of all three instruments and answers **neither** the EU **data-governance** limb nor **CA
+`AB 1159`**. 🟢 **The honest trend statement is therefore narrower than it looks:** oversight is
+becoming a default in open-source education supply; **data residency is not**, and the two are
+separately priced.
+
 ## 🆕 `p425` · 2026-10-25 — **Two trends with procurement consequences, and neither is about a model. 🔴 `Trend 45`: a false licence claim now travels by VENDOR INHERITANCE — a permissive framework lending its grant to a copyleft application. 🔴 `Trend 46`: this base's own typed layer cannot see a jurisdiction its prose holds, which is how a mapped market gets sold as a gap.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by

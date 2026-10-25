@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **`Pattern AX` — the compliant grading engagement, wired on an address that was unshelved this morning. 🟢 It is the first recipe on these shelves where the human-in-the-loop step is INHERITED from a component rather than built by the studio. 🟢 Plus `Amendment 13`: the grant ladder gains a HOLDER comparison, because a five-day-stale fork defeats every other axis in it.**
+
+🟢 **Gates RAN on this host**, against `49585c4`. 🔵 `Gap 425-B` scoped to `p425`'s host. 🔵 All
+component reads **2026-10-25**, at the SHAs named.
+
+### 🟢 `Pattern AX` — Canvas grading that is out of the high-risk tier by construction
+
+🔵 **When to reach for it.** A client runs **Canvas** and wants AI assistance with grading, in a
+jurisdiction with an oversight rule: EU **Annex III** (obligations **2027-12-02**), Vietnam
+**Decision 33** (in force **2026-08-15**, compliance **2027-03-01**), or a US state with a
+human-oversight bar (**OK**, **MD**, and district policies such as 🆕 **Charleston County Schools**,
+Jan 2026, barring AI as the **sole basis** for a high-stakes student decision).
+
+🟢 **The components, each read first-hand at a SHA:**
+
+| layer | component | grant, at the SHA | role |
+|---|---|---|---|
+| platform | **Canvas LMS** community edition | 🔴 **AGPL-3.0** | 🔵 The **client's install**, never the deliverable. Reached over its **HTTP API**, which is the process boundary `Pattern AT` requires |
+| grading seam | [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** — `1 076` B `2bcdae923d26` @ `c47e8b3ac2ae`; tree enumerated; `pyproject.toml` agrees | 🟢 **The staged-decision engine.** Rubric + per-student due dates + late policy in; a **staged** grade, per-category breakdown and comment out; **posted only on explicit confirmation** |
+| curriculum grounding *(optional, jurisdictional)* | [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) | 🟢 **MIT** — `1 070` B `e14de82d46bf` @ `687c55b7ed3c` | 🟢 Where the engagement is **British Columbia**, grounds the rubric in the statutory K-12 curriculum incl. the **First Peoples Principles of Learning** |
+| evidence | the student comment itself | — | 🟢 The breakdown written back into Canvas **is** the audit trail. No separate logging layer |
+
+🟢 **Wiring, in the order the obligations fall:**
+
+1. 🟢 **Establish the boundary first.** The agent speaks to Canvas over HTTP with a **personal
+   access token** scoped to a teacher/TA role with `Grade submissions`. 🔴 **Price an admin
+   dependency before any code**: the README notes *"some schools disable personal access tokens"*,
+   so token policy is a client-side gate, not a configuration step.
+2. 🟢 **Pin the component, own the architecture.** 🔴 **1 commit, 2 refs, five days old** — vendor
+   the source into the engagement repo under its MIT grant and expect to maintain it. `uvx --from
+   git+https://…` is correct for evaluation and **wrong for delivery**.
+3. 🟢 **Keep `stage → review → post` as the default, and make the default contractual.** The
+   oversight limb of all three instruments is satisfied by the component's own behaviour; the
+   studio's job is to ensure no deployment flag removes it. 🔵 Vietnam's wording is why this is
+   step 3 and not step 7: the trigger is *output driving decisions without meaningful human
+   review*, so **the review step is what keeps the system out of the high-risk tier** rather than
+   a control applied to a high-risk system.
+4. 🔴 **Answer the data question separately, because the component does not.** Its README states
+   student work is **sent to whichever AI model the assistant uses**. 🔴 Under **CA `AB 1159`** and
+   the EU data-governance limb this is the controlling question. 🟢 **Two priceable options:** a
+   model endpoint under a DPA with no-training terms and in-region processing, or a self-hosted
+   model behind the same MCP interface. 🔵 The MIT grant **does not** answer this and must not be
+   presented as if it does.
+5. 🟢 **Take the consistency check as compliance evidence, not a feature.** Identical-submission
+   detection and per-student due-date/override handling are exactly the *"applied the same rule to
+   every student"* record an appeal demands.
+6. 🟡 **Scope the tutor out.** `p421`'s boundary stands: a **tutor** is generally outside Annex III,
+   a **grader** is inside it. Shipping both under one deployment pulls the tutor into the grader's
+   obligations for no benefit.
+
+🔴 **What this pattern does NOT give you.** No conformity assessment (step 4 is a precondition for
+one, not a substitute). No answer for a client on **Moodle** — that is the `moodle-mcp` cohort, **9
+of 9 granted MIT** but with **3 ungranted members** and one `GPL-3.0` `-server` sibling, so the
+address must be chosen by payload read, not by name (`T127`, `T129`).
+
+### 🟢 `Amendment 13` to the grant ladder — add the HOLDER comparison
+
+🔵 The ladder currently establishes **what** the grant is: enumerate the tree (`Amendment 8`), over
+each ref (`Amendment 9`), as `(ref, TREE)` with a positive control (`Amendment 10`), case-insensitively
+(`Amendment 11`), across channels (`Amendment 12`).
+
+🔴 **`T129` defeats all five.** A five-day-stale fork enumerates to one licence path, on a live ref,
+with a clean digest, correct case, and agreeing channels — and grades `🟢 MIT`, **correctly**.
+🟢 Every rung passes and the engagement still pins the wrong address.
+
+🟢 **`Amendment 13`: having read the grant payload, compare the COPYRIGHT HOLDER against the OWNER
+segment of the slug. A mismatch is a fork signal and sends the address to a provenance read before
+it is pinned.**
+
+- 🟢 **Costs nothing** — the holder line is in the payload the ladder has already fetched.
+- 🟢 **Catches what staleness cannot:** `thc1006/moodle-mcp` ships *"Copyright (c) 2026 G36maid"*.
+- 🟡 **Signal, not verdict.** Renames, org transfers and upstream copyright assignment all produce
+  legitimate mismatches. It narrows the set worth a provenance read; it does not decide one.
+- 🔵 **Positive control** for any implementation: `G36maid/moodle-mcp` must **not** fire
+  (holder `G36maid` ≡ owner `G36maid`), and `thc1006/moodle-mcp` **must**.
+
+### 🔴 `Amendment 14` — a slug census must capture to a BOUNDARY
+
+🔴 `T127`: an unanchored pattern folded `owner/moodle-mcp-server` into `owner/moodle-mcp` and
+**manufactured four 404s** against addresses nobody published — reported, briefly, as four dead
+cells on live shelves.
+
+🟢 **The rule:** a census that extracts slugs must terminate on a **boundary**, not on the
+pattern's last literal character, and the extracted slug must be **probed exactly as extracted**.
+🔵 **Positive control:** a shelf containing both `x/moodle-mcp` and `x/moodle-mcp-server` must yield
+**two** slugs, and a census that yields one has the defect. 🔴 **Why it earns an amendment:** this
+failure does not error — it **produces evidence**, and a fabricated `404` is indistinguishable from
+a real one at the point of reading.
+
 ## 🆕 `p425` · 2026-10-25 — **`Pattern AW` — the Canadian engagement, which `Gap 422-B` made unwriteable for three passes. 🟢 Wired on components this base already holds and re-read at their SHAs today, with the federal/provincial split as its load-bearing structure.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by

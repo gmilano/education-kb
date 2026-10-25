@@ -4,6 +4,209 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **Ten legs, four regions, no nil — and only TWO new policy cells in the whole set, which is the eleventh consecutive saturated policy layer. 🟢 The procurement fact that moved is a SUPPLY one for the first time in four passes: the staged-grading deliverable three jurisdictions converge on now has an MIT reference implementation. 🔴 And `Gap 425-C` is CLOSED — the census `p425` declared underivable was derivable, on a host where the gates run.**
+
+🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 This contradicts
+`Gap 425-B`. Per `p423`'s rule, `p425` scoped its refusal to **its** host rather than to the suite;
+that scoping is now vindicated, and the cost of the refusal is visible in `Gap 425-C`. 🔵 **No date
+straddle:** every leg, `ls-remote`, clone, tree enumeration and digest happened **2026-10-25**.
+
+### 🔵 The regional legs — stated per region so silence cannot read as coverage
+
+| region | returned | new to these shelves |
+|---|---|---|
+| **North America** | 134 bills / 31 states; `H.R. 8747` @ 2026-07-21; CA `AB 1159`; Idaho `SB 1227`; OK + MD oversight bars; GA + MS CS-credit plans; NA **36 %** / **$3.68 B**; **60 %** of US K-12 teachers used AI in 2024-25, **32 %** weekly; Katy ISD; *STUDENTS FIRST Act*; Canada *AI for All*; Mexico — bills, **no enforcing regulator** | 🟡 **One cell: Charleston County Schools** (Jan 2026 — AI barred as the **sole basis** for high-stakes student decisions) |
+| **EMEA** | Annex III high-risk for admissions/evaluation; Digital Omnibus **Reg. (EU) 2026/1744** in OJ **2026-07-24**, applying **2026-07-27**; high-risk **2027-12-02** / **2028-08-02**; conformity assessment + human-oversight duties; literacy duty since **2025-02-02**; Europe **$2.64 B** → **$8.0 B** @ **31.9 %**; FI/EE/NL lead; **10 %** of 450+ institutions with formal guidelines; UK **£4 M**; Erasmus+ 2026 policy-experimentation calls | 🔴 **Nothing.** 🔴 **Africa and the Middle East returned NOTHING again — third consecutive pass** |
+| **APAC** | Vietnam **Decision 33/2026/QD-TTg** @ 2026-07-02, education high-risk, grace to **2026-08-15**, compliance **2027-03-01**; Korea `AI Basic Act` with MSIT treating 2026 as a **pilot period** + one-year penalty grace; Japan principles-only, no penalties; Singapore voluntary; Taiwan AI Basic Act (Dec 2025); China most binding; Google / Microsoft / IBM / Pearson / Byju's named | 🔴 **Nothing** — every instrument and date carried |
+| **LATAM** | UNESCO IESALC, 200 institutions / 19 countries: **87 %** using AI, **26 %** with a formal strategy; type split **84 %** private non-profit / **68 %** public / **52 %** private for-profit; TALIS 2024 Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** vs OECD **36 %**; UNESCO LAC Observatory (Santiago); CENIA / ILIA — *"plenty of AI strategy and little budget"*; UNU-IAS | 🟡 **One cell: FLACSO Ecuador (CTS Lab)**, running AI-regulation training for officials with UNESCO's Quito and Chile offices |
+
+🔴 **Two new cells out of ten legs. The policy layer is saturated against these shelves for the
+eleventh consecutive pass** — and both new cells are *implementers* (a district, a faculty), not
+instruments. 🟡 **The EMEA nil is structural, not thin:** the string `EMEA` retrieves EU material,
+which is why every Africa and Middle East cell this base holds came from a **jurisdiction-shaped**
+leg (`p423`'s rule). 🔵 Stated so a successor does not read three identical nils as three
+measurements.
+
+### 🟢 The procurement fact that actually moved — and it is a supply fact this time
+
+🔵 `p423`, `p424` and `p425` each moved a **licence** fact. This pass moves a **capability** one.
+
+🟢 **The deliverable three jurisdictions converge on now has an MIT reference implementation.**
+[`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp)
+(**MIT**, `LICENSE` `1 076` B `2bcdae923d26` @ `c47e8b3ac2ae`, tree enumerated, `pyproject.toml`
+agreeing) stages grades, rubric scores and comments **locally**, previews them, and posts **only on
+explicit confirmation** — with the per-category breakdown written into the student's comment, so
+the audit artefact is a by-product of normal operation.
+
+🟢 **What that changes in a proposal.** The oversight limb of EU **Annex III**, Vietnam **Decision
+33** and the US state bars stops being a line item the studio builds and becomes a property of a
+component it imports. 🔴 **What it does not change:** the data limb. The README states student work
+is **sent to whichever AI model the assistant uses**, which under **CA `AB 1159`** and EU data
+governance is the controlling question — and the MIT grant does not answer it. 🟢 **Oversight and
+data residency are now separately priced, and only one of them has an off-the-shelf answer.**
+
+🔴 **Graded honestly:** 1 commit, 2 refs, five days old. **Import the architecture, expect to own
+the code.**
+
+### 🟢 `Gap 425-C` — CLOSED, and the closure is the cost of a declared-un-run suite
+
+🔴 `p425` recorded: *"the census was NOT re-derived … the instruments that derive it are `make`
+targets refused on this host (`Gap 425-B`), so **no figure was derived**"*, and correctly left
+`p424`'s triple attributed to `p424` rather than restating it as current.
+
+🟢 **On this host the targets run, and `gate-union-currency` fired red on the inherited figures
+before this pass wrote a single line** — published **2 740 / 3 216 / 3 582** against derived
+**2 740 / 3 217 / 3 583**: **two of three union cells stale, each by exactly one address.**
+
+🔵 **The sequence is the lesson.** `p425` honoured its file contracts **by hand** and said so —
+which was the right disclosure — and the hand check was sound on everything it could see. 🔴 **The
+one thing it could not see by hand was the one thing the suite measures**: a census derived before
+the pass's own writes. 🟢 **So `Gap 425-B` was not merely an inconvenience; it had a measurable
+cost, and the cost is now named and paid.** 🔵 Re-derived as the **last act before this commit**,
+per the gate's own instruction, and restated below rather than back-fitted into history
+(`p352`: a census is not repaired by editing history).
+
+> 🟢 **Census, re-derived after this pass's writes, 2026-10-25:** see the closing figure block at
+> the end of this section — `make union-currency` output, pinned to its derivation time.
+
+## Opportunities by region
+
+### North America
+
+- 🟢 **The binding layer is STATE statute, and it names the deliverable.** 134 AI-in-education bills
+  across **31** states in the 2026 session; **Oklahoma** and **Maryland** require human oversight
+  and bar AI from high-stakes student decisions; California **AB 1159** would bar student data from
+  training AI models unless the school directly benefits; **Idaho `SB 1227`** would require privacy
+  protections for AI tools in schools; `H.R. 8747` (K-12 AI Literacy and Readiness Act) advanced at
+  a **2026-07-21** markup.
+- 🟢 **The district layer is now where the enforceable wording lives.** 🆕 **Charleston County
+  Schools** (Jan 2026) bars AI as the **sole basis** for a high-stakes decision about a student —
+  the same test as the OK/MD statutes, arriving at **procurement** scale. 🔵 Katy ISD bans
+  generative chatbots for K-6 while NYC, Chicago, Denver and Charlotte-Mecklenburg issue
+  permissive-with-guardrails guidance: **the divergence is the sales problem**, and a configurable
+  oversight step is what survives it.
+- 🟢 **Sell the staged-grading evidence trail, and sell it as an import.** This base now holds an
+  **MIT** reference implementation —
+  [`canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) (`1 076` B
+  `2bcdae923d26`) — whose default is stage → review → post on explicit confirmation. 🔴 **Pair it
+  with a data answer**, because `AB 1159` is about the model endpoint, not the agent.
+- 🟢 **Dated procurement triggers:** Ohio — every district, community and STEM school to adopt an
+  AI-use policy by **2026-07-01**; Oklahoma **SB 1734** — written district AI policies before the
+  **2027-28** school year; Florida **H.B. 1361** — K-12 guidance due **2026-07-01**.
+- 🟢 **CANADA — a mapped market** (`Gap 422-B` refuted at `p425`). *AI for All* (**2026-06-04**):
+  1 M post-secondary students, >3 000 K-12 educators, `$30 M` CanCode. 🔴 **Education is
+  provincial**, so federal money buys literacy while **curriculum-aligned deployment is a
+  provincial sale** — and this base holds
+  [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) (**MIT**,
+  `1 070` B `e14de82d46bf`), a British Columbia K-12 grounding layer **including the First Peoples
+  Principles of Learning**.
+- 🟡 **MEXICO — named, and thin.** The channel places it as *bills with no enforcing regulator*.
+  🔴 This base holds no Mexican education-AI instrument with a date; recorded as an **informed gap**
+  rather than left to read as coverage.
+- 🔵 Adoption: **60 %** of US K-12 teachers used AI tools in 2024-25, **32 %** at least weekly; NA
+  is **36 %** of the global market at **$3.68 B** (2026). 🟡 All `reported`.
+
+### EMEA
+
+- 🟢 **The deadline that shapes the engagement plan:** education is **Annex III high-risk**; the
+  Digital Omnibus (**Regulation (EU) 2026/1744**, in the Official Journal **2026-07-24** and
+  applying since **2026-07-27**) puts stand-alone high-risk obligations at **2027-12-02** and AI
+  embedded in regulated products at **2028-08-02**.
+- 🟢 **In force now regardless:** the AI-literacy duty (since **2025-02-02**), transparency, and
+  AI-content disclosure. 🔵 **The two duties that decide an architecture** are a **conformity
+  assessment before placing on market or putting into service**, and **human oversight by qualified
+  staff who can monitor, intervene and override** — the second is the staged-grading artefact, and
+  it is now importable rather than bespoke.
+- 🟢 **Scope line worth quoting in a proposal:** a **tutor** is generally outside Annex III; a
+  **grader** is inside it (`p421`). Shipping both in one deployment pulls the tutor in for nothing.
+- 🔵 Market: Europe **$2.64 B** (2026) → **$8.0 B** (2030) at **31.9 %** CAGR; **Finland, Estonia
+  and the Netherlands** lead K-12 integration; **only 10 %** of 450+ surveyed institutions hold
+  formal AI guidelines; UK **£4 M** for lesson-planning and marking tools; **Erasmus+ 2026** calls
+  cover policy experimentation. 🟡 All `reported`.
+- 🔴 **AFRICA AND THE MIDDLE EAST: the prescribed EMEA leg returned NOTHING for the third
+  consecutive pass.** 🟢 **This is a channel property, not an absence of activity** — the string
+  `EMEA` retrieves EU material, and every Egypt / Rwanda / Kuwait / Saudi / UAE cell this base
+  holds was won by a **jurisdiction-shaped** leg instead. 🟡 A successor running the prescribed
+  wording here will improve the **count** and never the **coverage**.
+
+### APAC
+
+- 🟢 **The region's first education-named high-risk decree is live and dated.** Vietnam **Decision
+  No. 33/2026/QD-TTg** (issued **2026-07-02**) lists education among its high-risk sectors, covering
+  automated assessment and behavioural monitoring. 🟢 **The trigger wording is the most useful
+  sentence in the region's law:** a system is high-risk where its **output drives decisions without
+  meaningful human review**. 🔵 Systems operating before **2026-08-15** get a six-month grace;
+  compliance **2027-03-01**.
+- 🟡 **Korea's statute is in force and its enforcement is not.** The `AI Basic Act` applies from
+  **2026-01-22**, but MSIT has indicated **2026 is effectively a pilot period**, with a **one-year
+  grace on penalties**. 🔵 Plan to the statute, price to the grace.
+- 🔵 **The rest of the region diverges on purpose:** Japan's AI Promotion Act is principles-only
+  with **no penalties**; Singapore's framework is **voluntary** guidance; Taiwan passed an AI Basic
+  Act in **Dec 2025**; China is the most binding, with labelling, registration and generative-AI
+  service rules, plus compulsory AI education from age six. 🔴 **There is no single APAC
+  framework** — a regional rollout is N jurisdictional engagements, not one.
+- 🔵 Named incumbents: Google, Microsoft, IBM, Pearson, Byju's; China, India and Japan dominate
+  regional spend; APAC is the fastest-growing region at **44.2 %** CAGR. 🟡 All `reported`, from a
+  commercial market-research page.
+- 🟢 **Where a studio wins here:** the oversight artefact satisfies Vietnam's trigger directly, and
+  Korea's pilot period is the window to deploy it **before** enforcement rather than after.
+
+### LATAM
+
+- 🟢 **The gap is governance, and it is quantified.** UNESCO IESALC, **200 institutions across 19
+  countries**: **87 %** already use AI in at least one area; **only 26 %** hold a formal AI
+  strategy. 🟢 **The institution-type split is the targeting instrument:** **84 %** of private
+  non-profit universities are implementing, against **68 %** public and **52 %** private for-profit.
+- 🟢 **Teachers are ahead of the OECD, not behind it.** TALIS 2024: **Brazil 56 %**, **Chile 55 %**,
+  **Colombia 53 %**, **Costa Rica 52 %** had used AI in the previous year, against an OECD average
+  of **36 %**. 🔵 **Demand is not the constraint here** — the sellable deliverable is the policy,
+  oversight and evidence layer wrapped around use that is already happening.
+- 🟢 **Adoption is bottom-up, which decides the engagement shape.** UNESCO finds uptake driven by
+  individual academics, researchers and students rather than institutional strategy. 🔵 So the
+  entry point is an **institution-wide governance artefact**, and the staged-grading trail is its
+  most concrete component.
+- 🔵 **Who is in the room:** UNESCO IESALC and the **Observatory on AI in Education for LAC**
+  (launched **April 2026**, Santiago); **UNU-IAS**; **CENIA** and the **Latin American AI Index
+  (ILIA)**; 🆕 **FLACSO Ecuador (CTS Lab)**, running AI-regulation training for public officials
+  with UNESCO's Quito and Chile offices.
+- 🔴 **The budget caveat, from the region's own index:** CENIA on ILIA — Latin America has *"plenty
+  of AI strategy and little budget"*, and regional coordination is *"definitely lacking"*. 🟡 Price
+  engagements against institutional, not national, budgets.
+- 🟡 **Still open:** this base holds **no national LATAM education-AI regulation with a date**
+  beyond Colombia's CONPES 4144 and Uruguay's CoE signature. 🔵 An informed gap, restated so three
+  UNESCO-weighted legs do not read as full regulatory coverage.
+
+### Global
+
+- 🟢 **The licence facts a client can act on, each read first-hand at a SHA:** the education
+  **platform** tier has **two** permissive members and **no MIT one** — `OpenOLAT` (**Apache-2.0**,
+  `10 982` B `6dbc5b605ed0`) and `Sakai` (**ECL-2.0**, `11 120` B `0688f62d04f1`). 🟢 **An eighth
+  independent channel agreed this pass**, and the first to publish it as a negative result:
+  *"No result described an MIT-licensed LMS, SIS, or ERP."*
+- 🟢 **The tier above it is permissive without exception, and now countable.** Of **12** distinct
+  `moodle-mcp` repositories read first-hand: **9 granted, 9 MIT, zero copyleft**; **3 with no
+  licence-shaped path anywhere in the tree**; **1 unresolvable**. 🔴 **The hazard on this tier is
+  ungranted, not copyleft** — one member publishes MIT in `package.json` and ships no grant file.
+- 🟢 **Procurement rule, in four parts, each paid for on these shelves:** a grant belongs to a
+  **repository at a SHA** (not a vendor, product family or underlying framework — `p425`); it is
+  read from a **payload over the whole enumerated tree** (`p424`); **metadata is a claim, not a
+  grant** (`p423`); and 🆕 **a correct grant does not identify the right address** — compare the
+  **copyright holder** against the **owner** segment, because a five-day-stale fork grades `🟢 MIT`
+  correctly while carrying the upstream's holder line (`T129`, `Amendment 13`).
+- 🟢 **One deliverable still serves three jurisdictional mechanisms** — EMEA Annex III
+  (**2027-12-02**), Vietnam Decision 33 (**in force 2026-08-15**), US state oversight bars — and as
+  of this pass **it has an MIT reference implementation**
+  ([`canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp), `1 076` B
+  `2bcdae923d26`). 🔴 **It answers the oversight limb only.** Data residency is a separate line
+  item with no off-the-shelf answer.
+- 🟡 **The market figure is a spread, not a number**, and it widened again: `$12.3 B` for the
+  current year against `$6 B` (2024) → `$32 B` (2030), with at least one series including corporate
+  training. 🔵 One source in this pass's own leg set flags that its two figures *"don't match"*.
+  **Quote the range or quote nothing.**
+- 🔴 **This host could not reach a single non-GitHub source**, so **every** policy and market cell
+  above is `reported` and **every licence cell is `authoritative`**. 🔵 Stated so the band reads as
+  a channel property rather than as diligence.
+
 ## 🆕 `p425` · 2026-10-25 — **`Gap 422-B` IS REFUTED, AND THIS FILE IS WHERE THE FALSE ABSENCE WAS PUBLISHED. 🔴 This file has carried *"no Canadian federal or provincial education-AI instrument is on these shelves"* while `agents/trending.md` held the federal instrument with a date and `agents/top.md` held a Canadian PROVINCIAL curriculum asset, MIT, since `p388`. 🟢 Canada gets a real market cell this pass — and the band is `reported`, because this host cannot reach a single Canadian primary source.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
@@ -85,7 +288,7 @@ carried figure among peers rather than a finding. 🟡 Regional decomposition th
 CAGR**; **APAC fastest at ~44.2 % CAGR**. 🔴 The regional parts do not reconcile with any single
 global figure, which is itself the honest statement.
 
-## Opportunities by region
+## Opportunities by region — `p425`, SUPERSEDED by `p426`'s block above
 
 ### North America
 

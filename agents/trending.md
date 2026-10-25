@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p426` · 2026-10-25 — **TEN legs — the eight prescribed plus two capability legs — and the two capability legs are the only ones that returned anything unshelved. 🟢 One promotion: `kaushikgunasekaren/canvas-grader-mcp`, MIT, five days old. 🔴 `T100` is BROKEN on the capability axis and CONFIRMED on the prescribed axis, which is the week's actual signal.**
+
+🟢 **Gates RAN on this host**, against `49585c4`: the first run went **red at `gate-union-currency`** on `p425`'s inherited census, and the final run is 🟢 **54 blocking gates green** (`gate-census-union` is the one declared, non-blocking red). 🔵 Three gates fired on this pass's own first drafts and all three were right — `gate-union-currency`, `gate-identity`, `gate-case-collision`. 🔵 This
+contradicts `Gap 425-B`; the suite is runnable and it was the **host** that varied, which is
+exactly how `p423`'s rule said to scope it. 🔵 **No date straddle:** every leg, `ls-remote`, clone
+and digest happened **2026-10-25**.
+
+### 🔵 The ten legs, stated per leg so silence cannot read as coverage
+
+| # | leg | returned | disposition |
+|---|---|---|---|
+| 1 | `top open source AI agents education 2026 github MIT` | 🔴 **Nothing education-specific.** General-purpose agents (OpenHands, OpenCode, CrewAI, LangGraph, Hermes) and *learning-resource* repos (MS AI Agents for Beginners, HF Agents Course, `500-AI-Agents-Projects`) | 🔴 **0 unshelved.** 🔵 The leg concedes it in its own summary: *"didn't surface a list of MIT-licensed agents built specifically for education"* — a **declared nil on the supply axis**, for the second consecutive pass |
+| 2 | `github trending education AI 2026` | `withmarbleapp/os-taxonomy`, `luongnv89/claude-howto`, `karpathy/nanochat`, `developer-roadmap`, awesome-lists | 🔴 **All carried.** 🔵 Identical return set to `p425`'s leg 2, item for item |
+| 3 | `open source platform education LMS SIS ERP MIT Apache 2026` | OpenOLAT *(Apache-2.0)*, Sakai *(ECL-2.0 in one source, Apache-2.0 in another)*, Open edX, Moodle, Chamilo, Canvas, OpenEduCat *(LGPL-3.0)*, forma LMS, Open LMS | 🔴 **Every platform carried.** 🟢 **The leg states the conclusion this base reached independently:** *"No result described an MIT-licensed LMS, SIS, or ERP."* 🔵 **Eighth** independent channel agreeing that no education platform is MIT |
+| 4 | `AI education industry trends 2026` | Pilots → embedded infrastructure; governance over tool-buying (1EdTech); purpose-built over generic (Teachbetter); evidence-of-learning-gain demands (HolonIQ); digital credentials; RAND **54 %** K-12 / **92 %** university | 🔴 **All carried.** 🟡 The market spread **widens again** — `$12.3 B` (2026, vendor blog) against `$6 B` (2024) → `$32 B` (2030); the leg itself flags that these *"don't match"* |
+| 5 | `AI education North America 2026 adoption regulation players` | 134 bills / 31 states; `H.R. 8747` @ 2026-07-21; CA `AB 1159`; **Idaho `SB 1227`**; OK + MD human-oversight bars; GA + MS CS-credit plans; NA **36 %** / **$3.68 B**; Katy ISD; *STUDENTS FIRST Act*; Canada *AI for All*; **Mexico — bills, no enforcing regulator** | 🟡 **One new cell: `Charleston County Schools`** (Jan 2026 policy barring AI as the **sole basis** for high-stakes student decisions). 🔴 Everything else carried, `Idaho SB 1227` included |
+| 6 | `AI education EMEA 2026 adoption regulation players` | Annex III high-risk for admissions/evaluation; Digital Omnibus `2026/1744` in OJ **2026-07-24**, applying **2026-07-27**; high-risk **2027-12-02** / **2028-08-02**; conformity assessment + human-oversight duties; Europe **$2.64 B** → **$8.0 B** @ 31.9 %; FI/EE/NL lead; **10 %** of 450+ institutions with formal guidelines; UK £4 M; Erasmus+ 2026 policy-experimentation calls | 🔴 **All carried.** 🔴 **Africa and the Middle East returned NOTHING on this EMEA-labelled query — third consecutive pass.** 🔵 Not a thin read but a **structural property of the channel**: the string `EMEA` retrieves EU material. `p423`'s lesson — a nil must name a jurisdiction — is the standing remedy, and it is why the carried Egypt / Rwanda / Kuwait / Saudi / UAE cells exist at all |
+| 7 | `AI education APAC 2026 adoption regulation players` | Vietnam Decision `33/2026/QD-TTg` @ 2026-07-02, education in the high-risk list, grace to **2026-08-15**, compliance **2027-03-01**; Korea `AI Basic Act` with MSIT treating 2026 as a **pilot period** + one-year penalty grace; Japan principles-only; Singapore voluntary; **Taiwan AI Basic Act, Dec 2025**; China most binding; Google/Microsoft/IBM/Pearson/Byju's named | 🔴 **All carried**, every instrument and every date |
+| 8 | `AI education LATAM 2026 adoption regulation players` | UNESCO IESALC 200 institutions / 19 countries — **87 %** using AI, **26 %** with a formal strategy; institution-type split **84 %** private non-profit / **68 %** public / **52 %** private for-profit; TALIS 2024 Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** vs OECD **36 %**; UNESCO LAC Observatory (Santiago); CENIA / ILIA; UNU-IAS | 🟡 **One new cell: `FLACSO Ecuador (CTS Lab)`**, running AI-regulation training for officials with UNESCO's Quito and Chile offices. 🔴 Everything else carried |
+| 9 | 🆕 `education MCP server open source github 2026 curriculum grading teacher agent` *(capability leg, not prescribed)* | `canvas-grader-mcp`, `thc1006/moodle-mcp`, `edupage-mcp`, `school-mcp`, `classroom-mcp`, `global-education-mcp`, `EduBase/MCP`, `open-curriculum-ecosystem`, `classroomio` | 🟢 **THE PRODUCTIVE LEG. One unshelved address — `kaushikgunasekaren/canvas-grader-mcp` — promoted.** 🔴 `thc1006/moodle-mcp` is a **stale fork** of carried `G36maid/moodle-mcp` (`T129`). 🔴 The other seven all carried |
+| 10 | 🆕 `new open source AI tutor grading agent repository released October 2026` *(capability leg, not prescribed)* | `AI-Teaching-Agent`, `Jeanikt/tutor-ai-agent`, `claude-study-agent`, `Ebimsv/AITutorAgent`, `HKUDS/DeepTutor`, `AITutor-EvalKit` | 🔴 **All six carried.** 🟢 The leg's own caveat is accurate: *"no open-source AI tutor or grading agent clearly released in October 2026"* |
+
+### 🟢 Promoted to [`agents/top.md`](top.md) this pass
+
+| address | grant, first-hand | why |
+|---|---|---|
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** — `LICENSE` **`1 076` B `2bcdae923d26`** @ `c47e8b3ac2ae`; tree **enumerated**, one licence-shaped path; `pyproject.toml` `"MIT"` **agrees**; **2** refs, **1** commit, **2026-10-20** | 🟢 **Stage → review → post is the DEFAULT**, not an integration — the reviewable human-in-the-loop trail that EMEA Annex III, Vietnam Decision 33 and the US state oversight bars all ask for. 🔴 Five days old: a pattern exemplar, not a dependency |
+
+### 🔴 What `T100` actually says now — it is broken, and the break is informative
+
+🟢 **Nine consecutive passes of "zero unshelved" ended this pass, and it ended on a leg that is not
+in the prescription.** 🔴 The eight prescribed legs returned **zero** unshelved repositories for the
+**eleventh** consecutive pass. 🟢 The two capability legs — written around a *capability* (`grading`,
+`curriculum`, `teacher agent`) instead of around `education` plus a year — returned one shelf-worthy
+MIT address and one fork specimen on their **first** outing.
+
+🔵 **The inference this base can support, and the one it cannot.** 🟢 Supportable: the prescribed
+query shapes are **saturated against these shelves** — they retrieve the same roundups, which
+retrieve the same addresses. 🔴 Not supportable: that the supply is growing. **One address in ten
+legs is still one address**, and it is five days old with a single commit. 🔵 Recorded because
+"`T100` broken" would otherwise read as a supply recovery, and it is a **query-shape** result.
+
 ## 🆕 `p425` · 2026-10-25 — **Eight legs, THREE candidates, ZERO unshelved — `T100`'s tenth. 🔴 The week's one new claim is a LICENCE claim and it is false: "Frappe LMS is 100% MIT" is a framework/app conflation, measured on both repositories at their SHAs.**
 
 🔴 **Gates could NOT run on this host.** `make commit-gates` and `make hooks` were both refused by
