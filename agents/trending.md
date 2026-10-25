@@ -4,6 +4,172 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p431` · 2026-10-25 — **A tier this base has never carried: tutor EVALUATION. Eleven addresses measured first-hand. 🟢 Seven are build-on, 🔴 three are not — and each of the three fails for a *different* reason, one of them a failure shape this base has not seen before.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### Why this tier, and why now
+
+`intel/trends.md` has carried **`Trend 8` — “measurement gap in this pass”** as a standing,
+unclosed item. Every pattern in `compose/patterns.md` that promises *adaptive*, *pedagogically
+sound* or *evidence-backed* tutoring has so far been unable to name the harness that would prove
+it. This pass went looking for that harness specifically. **It exists, it is permissively
+licensed, and none of it was on any shelf in this repository.**
+
+### The measurement — all eleven addresses, read at HEAD today
+
+| Address | HEAD @ 2026-10-25 | Licence file | Bytes | `sha256₁₂` | Family read from the payload | Verdict |
+|---|---|---|---|---|---|---|
+| [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | `772f5cdca5dd` | `LICENSE` | 1 099 | `8a0a4ba421a0` | **MIT** — body verbatim, *no title line* | 🟢 build-on |
+| [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | `f9d69c7ce3e1` | `LICENSE` | 11 358 | `cfc7749b96f6` | **Apache-2.0** (code) + CC-BY-4.0 (content) + brand policy | 🟢 build-on |
+| [DannyWeitekamp/tutorenvs](https://github.com/DannyWeitekamp/tutorenvs) | `eacba91d2b6b` | `LICENSE` | 1 064 | `eb1ef5e1a637` | **MIT**, © 2020 MacLellan | 🟢 lineage |
+| [Teachable-AI-Lab/tutorenv](https://github.com/Teachable-AI-Lab/tutorenv) | `b90a4d01f2f1` | `LICENSE` | 1 064 | `eb1ef5e1a637` | **MIT** — byte-identical to the row above | 🟢 lineage root |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | `b90bd88a2899` | `LICENSE` | 1 069 | `297c4cba7b33` | **MIT** | 🟢 build-on |
+| [Gchism94/ai-tutor](https://github.com/Gchism94/ai-tutor) | `cdee3f5f27a3` | `LICENSE` | 1 070 | `3d5a24e51479` | **MIT** | 🟢 build-on |
+| [098765d/AI_Tutor](https://github.com/098765d/AI_Tutor) | `e7503b7c95de` | `LICENSE` | 1 059 | `15ecd34b91de` | **MIT** | 🟢 build-on |
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | `5c2f92416c04` | `LICENSE` | 35 149 | `3972dc9744f6` | **GPL-3.0** | 🟡 integrate, do not vendor |
+| [eth-lre/MathTutorBench](https://github.com/eth-lre/MathTutorBench) | `6faed173ec2b` | 🔴 **none in tree** | — | — | 🔴 **ungranted** — see below | 🔴 do not ship |
+| [sdrangan/llmgrader](https://github.com/sdrangan/llmgrader) | `c5efaea7e9aa` | `LICENSE` | 1 224 | `4c8368a01cb6` | 🔴 **“PySilicon Research License”** — non-commercial | 🔴 do not build on |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) *(control)* | `a31d82624c27` | `LICENSE` | 11 408 | `cd2f54e1e506` | **Apache-2.0** | 🟢 unchanged vs `p430` |
+
+**Eleven addresses resolved. Seven permissive, one copyleft, three unusable or unshippable.**
+
+### 🟢 The two that change what this base can promise
+
+**[Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) — MIT, Georgia Tech
+(Weitekamp, MacLellan, Siddiqui).** A standard interface for running an LLM agent *inside existing
+intelligent tutoring systems*, in **both directions**: the model as the **tutor**, and the model as
+the **student**. The README names its three backends explicitly — `ctat`, `apprentice`, **`oatutor`**.
+
+🟢 **That third backend is already on this base's verified shelf.** `CAHLR/OATutor` (MIT,
+UC Berkeley) has sat in `agents/top.md` for many passes as deployable tutoring supply **with no way
+to score it**. `tutor_gym` is the scorer, under a compatible grant, already wired to it.
+**These two compose with no adapter work** — the cheapest capability this base has added in weeks.
+
+🟡 **Caveat, measured rather than guessed:** last commit **2025-09-10** — ~13.5 months stale at
+today's date. Under `Trend 13` (*the supply has a currency problem*) that is a maintenance
+liability, not a disqualification: an evaluation testbed is a **fixture**, and fixtures age more
+gracefully than runtimes. Budget for a fork, not for a dependency.
+
+**[shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) — Apache-2.0 code, actively
+maintained.** “Teachometry TutorBench”: a scenario-based evaluation **and regression** engine for
+tutoring systems — it keeps the evidence needed to re-test a pedagogical failure after you fix it.
+Last commit **today, 2026-10-25** (`#296`), and the tree carries `NOTICE`, `SECURITY.md`,
+`CITATION.cff`, `CODE_OF_CONDUCT.md` and a `LICENSES/` directory: a **governed** project, not a
+paper drop. The contrast with `tutor_gym`'s 13.5-month silence is the whole fork-vs-depend decision
+in a single line.
+
+🟡 **Its licensing is a three-scope map, and the single-licence read is wrong.** `LICENSES.md`
+states plainly that this is a multi-licensed project and *“not an SPDX claim that every file is
+simultaneously licensed under every listed license”*:
+
+| Scope | Grant |
+|---|---|
+| Software implementation | **Apache-2.0** |
+| Authored benchmark, dataset and evaluation content | **CC-BY-4.0** |
+| Name and brand assets | **TutorBench Brand Policy** — explicitly *not* granted by the other two |
+
+For an engagement that means: **ship the engine, attribute the scenarios, and keep the TutorBench
+name off the client's product.** Workable terms — but three decisions, not one.
+
+🔴 **And it is a naming collision.** The README opens by disambiguating itself from **Scale AI's
+separately named TutorBench dataset** on Hugging Face. `ScaleAI/tutorbench` does **not** resolve as a
+GitHub address (`git ls-remote` → `fatal:`). Two different artefacts, one name, one of them not on
+GitHub at all — this is `Trend 25`'s error class (*a string matched as though it were a meaning*)
+turning up inside the very tier this base just added.
+
+### 🔵 The lineage, recorded by digest rather than by claim
+
+`tutor_gym` is a fork of `DannyWeitekamp/tutorenvs`, itself a fork of `Teachable-AI-Lab/tutorenv`.
+The two ancestors ship a **byte-identical** licence payload — 1 064 B · `eb1ef5e1a637`, © 2020
+MacLellan — while `tutor_gym`'s is 1 099 B · `8a0a4ba421a0`, © 2025 and three names. Same grant,
+re-attributed at the fork. Recorded so a digest sweep reads the collision as lineage, not as a clash.
+
+🟡 **`tutor_gym`'s MIT payload has no title line** — it opens straight at `Copyright 2025 …`.
+A sweep keyed on the string `MIT License` returns **UNKNOWN** for a verbatim MIT grant. Ours did,
+on the first run. The grant is MIT; the *title* is absent. Another instance of `Trend 25`, and the
+mirror image of Red 1 below: **a title without the grant, and a grant without the title, in the
+same eleven-row sample.**
+
+### 🔴 Red 1 — `sdrangan/llmgrader` opens with the MIT sentence and then forbids commercial use
+
+The file is called `LICENSE`. Its third line is the sentence every MIT payload opens with —
+*“Permission is hereby granted, free of charge, to any person or organization obtaining a copy
+of this software…”*. A header sniff, a badge read, or a skim of the first paragraph returns MIT.
+
+The title line above it says **`PySilicon Research License`**, and clause 2 says:
+
+> *The Software may not be used, copied, modified, or distributed for commercial purposes
+> without prior written permission from the copyright holder.*
+
+Clause 1 scopes the grant to *“non-commercial research, academic, and educational purposes”*.
+**A studio engagement is a commercial purpose.** This address cannot enter a client deliverable,
+and the search result describing it as an open autograding engine is wrong about the only
+property that decides the question.
+
+🔵 **Why it matters beyond this one repo — this is a new failure shape for this base.**
+`p429`/`p430` caught `pengusto` by its *title* (“Pengusto Commercial License 1.0”): loud, and a
+title read catches it. This one is quiet — MIT prose, under a non-MIT title, in a file named
+`LICENSE`, at 1 224 B, only ~155 B larger than the stock MIT text. **Byte size alone would not
+flag it, and neither would the opening sentence.** The only instrument that catches it is
+reading clause 2.
+
+### 🔴 Red 2 — `eth-lre/MathTutorBench` has no licence file, and its README cites two different licences
+
+`git ls-tree -r HEAD` returns **no** `LICENSE`, `LICENCE` or `COPYING` anywhere in the tree.
+The README then contradicts itself:
+
+| README location | Licence claimed |
+|---|---|
+| line 3 — badge | **CC BY 4.0** |
+| lines 199–203 — licence section | **CC BY-SA 4.0** (*share-alike*) |
+
+The two differ on the one thing a client cares about: **BY-SA puts a share-alike obligation on
+derivatives; BY does not.** And neither is a *code* licence, while the tree ships `main.py`,
+`models/`, `reward_model/`, `dataloaders/` and `registry.py` — executable code offered under a
+content licence, or under nothing at all.
+
+The EMNLP 2025 paper calls it an *open-source benchmark*. **Measured at HEAD, the code in it is
+ungranted.** Fine to read and to cite; not shippable, and not safe to vendor.
+
+### 🟡 Red 3 — `plastic-labs/tutor-gpt` is GPL-3.0, not permissive
+
+35 149 B · `3972dc9744f6` — a GPL-3.0 payload, and *distinct* from the stock FSF digest this base
+already records for Moodle and Chamilo (35 147 B · `8ceb4b9ee5ad`). Theory-of-Mind tutoring is
+genuinely interesting supply; it is **integrate-over-an-interface** supply, not fork supply.
+
+### 🔵 Method, and the one instrument that still does not work here
+
+`curl -sI https://github.com/…` was re-tested this pass and still returns **403** from the egress
+proxy — as does `https://api.github.com/…`. `p430`'s finding reproduces exactly: **the prescribed
+verification step cannot run on this host, and 403 is not 404.** Every row above was therefore
+established by the two channels that do work:
+
+1. `git ls-remote <url> HEAD` → existence + HEAD SHA.
+2. `git clone --depth 1 --filter=blob:none --no-checkout`, then `git ls-tree -r`, then a targeted
+   `git checkout -- <licence>` → the licence **payload itself**, with byte size and `sha256`.
+
+No row above was taken from a GitHub badge, a package manifest, a paper's self-description, or a
+search-result summary. **Three of the eleven rows contradict at least one of those sources.**
+
+### 🔵 Declared gaps from this pass — written down, because silence reads exactly like coverage
+
+- **`Gap 431-A` — no permissive *second-language* or *non-English* tutor benchmark found.**
+  `L2-Bench` (arXiv 2607.08842) is described as an open-source benchmark for second-language
+  education but surfaced with **no resolvable repository address** this pass. For a base whose
+  strongest regional stories are LATAM (Spanish/Portuguese) and APAC (in-language tutoring),
+  **the evaluation layer found today is English-first, and that is a real limit on it.**
+- **`Gap 431-B` — `EduClaw-Bench` (arXiv 2608.03206) is behind an anonymised `4open.science` link.**
+  A 30-day simulated-learner, long-horizon tutoring benchmark is precisely what `Pattern AH`'s
+  draft-and-sign loop would need to justify itself across a term. **No public repository to measure.**
+- **`Gap 431-C` — no evaluation harness found for the *grading* path at all.** Everything measured
+  today scores **tutoring**: dialogue, hinting, diagnosis. The one grading-side candidate
+  (`sdrangan/llmgrader`) is non-commercial, and `ELBench` (arXiv 2608.09548) surfaced as a title
+  with no release. Since NA, EMEA and APAC statutes all bite hardest on **assessment**,
+  **the regulated surface is the unmeasured one.** This is the most valuable open gap in the base.
+
+---
+
 ## 🆕 `p430` · 2026-10-25 — **Independent re-measurement: `p429`'s licence regression REPRODUCES byte-for-byte. 🟢 Three licence claims circulating in 2026 listicles are refuted at source. 🔴 And the prescribed `curl -sI` verification step cannot run on this host at all — every `github.com` HEAD returns 403 from the egress proxy.**
 
 🔵 **Append-only. Nothing below this block was edited.**

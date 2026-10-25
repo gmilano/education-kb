@@ -9,6 +9,76 @@ updated: 2026-10-25
 > Concrete recipes: named repos, named licences, and how they wire together.
 > Every component below was licence-verified at a commit SHA on 2026-10-25.
 
+## 🆕 Pattern AJ — `p431` The evidence-gated tutor pilot (the deliverable that survives a board review in NA, EMEA and APAC)
+
+**The problem it solves.** Every tutoring pilot this base can already build stalls at the same
+question: *how do you know it teaches well?* Until this pass there was no permissive answer — the
+scorer was either a closed vendor or an ungranted academic benchmark. There is now. This pattern
+ships the **evidence**, not the tutor, and the tutor rides along.
+
+### The stack, with the grant on every piece — all read at HEAD on 2026-10-25
+
+| Layer | Component | Grant | HEAD |
+|---|---|---|---|
+| Tutoring runtime | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | `e24c8456e5f7` |
+| Evaluation fixture | [`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym) | **MIT** | `772f5cdca5dd` |
+| Regression engine | [`shuangyan123/tutorbench`](https://github.com/shuangyan123/tutorbench) | **Apache-2.0** (code) | `f9d69c7ce3e1` |
+| Mastery measurement | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `ccbaf37b07e3` |
+| Human-sign-off surface | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** | `b90bd88a2899` |
+| LMS seam (if Open edX) | [`openedx/XBlock`](https://github.com/openedx/XBlock) | **Apache-2.0** | `c73c4bb42aa7` |
+| Offline delivery (if needed) | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | `44a4e68aac3e` |
+
+**Permissive end to end.** No GPL, no AGPL, no ungranted code. The client owns the deliverable.
+
+### How it wires together
+
+1. **Fork `tutor_gym` on day one.** Its last commit is 2025-09-10; treat it as a fixture you now
+   maintain, not a dependency you track. Pin the fork SHA in the client's repo.
+2. **Stand up `OATutor` as the tutoring runtime** and point `tutor_gym`'s `oatutor` backend at it:
+   `python llm_tutor_eval.py --tutor-kind oatutor --profile oa_compl-aug.prof --model <model>`.
+   This is the step that normally costs adapter work and here costs none — the binding already exists.
+3. **Run the *student* direction too** (`llm_stu_eval.py`). A simulated-learner run is what produces
+   a defensible claim about *learning* rather than about *answer quality* — and it is the half most
+   pilots skip.
+4. **Wrap the scored runs in `tutorbench` as a regression suite.** This is the piece that makes the
+   evidence *durable*: when a prompt, model or curriculum changes, the same scenarios re-run and the
+   diff is the artefact. Wire it into CI as a merge gate.
+5. **Ground mastery claims in `pykt-toolkit`** (BKT/DKT) rather than in model self-report, so the
+   adaptivity claim is a measurement, not a narrative.
+6. **Route every student-affecting output through `AI-Teaching-Agent`'s `WAITING_REVIEW` queue**, so
+   each action carries a recorded human approve/reject. That record is the oversight evidence.
+7. **Deliver the evidence pack**: scored baseline, simulated-learner results, regression suite in CI,
+   human-sign-off log, and the licence read for every component.
+
+### Why the same artefact clears three jurisdictions
+
+| Region | What it is asked for | Which step answers it |
+|---|---|---|
+| **North America** | Oklahoma / Maryland: no high-stakes AI decision without human oversight; district board review | Step 6 (sign-off log) + step 7 (scored baseline) |
+| **EMEA** | Article 50 transparency **from 2 Aug 2026**; Annex III conformity by **2 Dec 2027** (Reg. (EU) 2026/1744) | Steps 4 and 7 — the regression suite is the start of the conformity file |
+| **APAC** | Vietnam's high-risk list names automated assessment (obligations **1 Mar 2027**); Korea's AI Basic Act **in force 22 Jan 2026** | Steps 3, 4 and 6 |
+| **LATAM** | UNESCO IESALC: 87% adoption, 26% with a strategy — the governance gap | The whole pack, sold as assurance attached to the platform (`Trend 21`) |
+
+### 🔴 The four things that will bite, named up front
+
+1. **`tutor_gym` is 13.5 months stale.** Budget the fork in week 1. Do not present it as maintained.
+2. **`tutorbench` is three licences, not one.** Apache-2.0 for the engine, **CC-BY-4.0 for the
+   scenario content** (attribute it), and a **brand policy** over the name — keep “TutorBench” off
+   the client's product and marketing.
+3. **The harnesses are English-first** (`Gap 431-A`). For LATAM and APAC, **scope scenario
+   translation as a line item**. The CC-BY-4.0 content grant makes re-authoring lawful; it does not
+   make it free.
+4. **This pattern scores tutoring, not grading** (`Gap 431-C`). If the client's real exposure is
+   assessment — and under NA, EMEA and APAC statutes it usually is — **say so explicitly in the
+   proposal** and scope a bespoke rubric harness. Do **not** reach for
+   [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader): its licence forbids commercial use.
+
+### Shape and duration
+
+**6–8 weeks** for a single-subject pilot with the evidence pack, assuming the client already runs an
+LMS. Add **2–3 weeks** for scenario localisation outside English. The fork of `tutor_gym` is a
+permanent maintenance line to hand over at the end, and the proposal should say so.
+
 ## 🆕 Pattern AH — The draft-and-sign grader (the one architecture that satisfies NA, EMEA and APAC at once)
 
 **The problem.** Three regulatory regimes independently converged on the same requirement,

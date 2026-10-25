@@ -21,8 +21,9 @@ updated: 2026-10-25
 | [openfun/richie](https://github.com/openfun/richie) | **MIT** | `7cf513c235ee` | `LICENSE` 1 079 B · `e4b2a3148135` | Django/React course-portal CMS (France Université Numérique). The public-sector MOOC front-end. |
 | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL** (Apache-derived) | `4debc94780cc` | `LICENSE` 11 120 B · `0688f62d04f1` | Higher-ed consortium LMS. Permissive in practice — but record it as ECL-2.0, **not** Apache-2.0. |
 
-**7 verified permissive foundations.** Each resolved under `git ls-remote` and each licence
-was read from the repository's own payload.
+**7 verified permissive foundations** in the platform/agent tiers above. Each resolved under
+`git ls-remote` and each licence was read from the repository's own payload. 🆕 `p431` adds a
+further **4** in **Tier 9 — the evaluation layer** below, for **11** permissive foundations in all.
 
 ## 🔴 Copyleft foundations — usable, but integrate, do not vendor
 
@@ -283,6 +284,33 @@ whole name space), `packagist.org/search.json` (PHP — open, measured by `p392`
 `raw.githubusercontent.com` + `git ls-remote` for first-hand verification of whatever any of them
 returns. 🔴 **Still missing: Maven, NuGet, RubyGems and CRAN** — and `R` matters here, because
 `otter-grader` grades R and the statistics-teaching stack is CRAN-shaped.
+
+## 🆕 `p431` — Tier 9: the evaluation layer, which is what makes every other tier's claim checkable
+
+Every tier above supplies something that **does** tutoring, grading or delivery. None of them
+supplies anything that says whether the tutoring was any **good**. `Trend 8` has carried that as an
+open measurement gap for many passes. Measured first-hand on 2026-10-25, the layer exists:
+
+| Repo | Licence | HEAD | Payload | Role in a build |
+|---|---|---|---|---|
+| [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | **Apache-2.0** (code) | `f9d69c7ce3e1` | `LICENSE` 11 358 B · `cfc7749b96f6` | Scenario-based evaluation **and regression** engine. Diagnoses a concrete pedagogical failure and keeps the evidence to re-test it after the fix. The CI gate for a tutoring deliverable. **Maintained** — commit 2026-10-25. |
+| [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | **MIT** | `772f5cdca5dd` | `LICENSE` 1 099 B · `8a0a4ba421a0` | Runs a model as tutor **and** as simulated student across existing ITSs (`ctat`, `apprentice`, `oatutor`). The acceptance-test fixture. 🟡 Stale since 2025-09-10 — fork it. |
+| [DannyWeitekamp/tutorenvs](https://github.com/DannyWeitekamp/tutorenvs) | **MIT** | `eacba91d2b6b` | `LICENSE` 1 064 B · `eb1ef5e1a637` | `tutor_gym`'s upstream. Relevant only if the fork diverges; recorded for lineage. |
+| [Teachable-AI-Lab/tutorenv](https://github.com/Teachable-AI-Lab/tutorenv) | **MIT** | `b90a4d01f2f1` | `LICENSE` 1 064 B · `eb1ef5e1a637` | Lineage root. Payload **byte-identical** to the row above — same grant, re-attributed at the fork. |
+
+**4 verified permissive rows, bringing this file to 11 permissive foundations.**
+
+🟢 **The composition that comes free.** `tutor_gym`'s `oatutor` backend binds to
+[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT), already on this shelf, and `pykt-toolkit`
+(MIT) already supplies knowledge tracing. **Tutor → measurement → evaluation is now MIT end to end**,
+which is the first time this base can price an *evidence* deliverable without a licence caveat.
+
+🔴 **What this tier does NOT cover, and it is the regulated half.** Every address above scores
+**tutoring** — dialogue, hinting, diagnosis. **Nothing found scores grading.** The only grading-side
+candidate measured, [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader), is
+**non-commercial** (see `agents/top.md`). NA, EMEA and APAC statutes all bite hardest on
+**assessment**, so the surface with the most regulatory exposure is the one with no open harness.
+Tracked as **`Gap 431-C`**.
 
 ## 🔴 Dead addresses corrected this pass
 

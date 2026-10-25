@@ -38,10 +38,19 @@ licence payload at the commit shown. These are safe starting points for an engag
 | [vTanco/google-classroom-mcp](https://github.com/vTanco/google-classroom-mcp) | MIT | `9ba0070eff2f` | `LICENSE` 1 145 B · `a01639b20880` | Teacher-side Google Classroom authoring: bulk coursework, per-student Drive copies, due dates — **created as draft**. See the licence note below: this address now carries the MIT lane. | EMEA |
 | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | BSD-3-Clause | `196c547291da` | `LICENSE` 1 531 B · `57c341d09920` | Tutoring platform with voice, video and 3D avatars; Docker-first, runs local LLMs via Ollama. | EMEA |
 | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | MIT | `dd7426f65b24` | `LICENSE` 1 068 B · `8ea022e30a9b` | Agentic-AI curriculum used at national teaching scale. Courseware, not a runtime — the fastest way to staff a team. | APAC |
+| [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | MIT | `772f5cdca5dd` | `LICENSE` 1 099 B · `8a0a4ba421a0` | Evaluation testbed that runs an LLM as **tutor** *and* as **student** inside existing ITSs — backends `ctat`, `apprentice`, **`oatutor`**. The scorer for the OATutor row above. 🟡 Last commit 2025-09-10; fork, do not depend. | North America |
+| [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | Apache-2.0 (code) | `f9d69c7ce3e1` | `LICENSE` 11 358 B · `cfc7749b96f6` | “Teachometry TutorBench” — scenario-based evaluation **and regression** engine for tutoring systems. Actively maintained (commit 2026-10-25). 🟡 Benchmark **content** is CC-BY-4.0 and the **name** is under a brand policy: three scopes, not one. | Global |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT | `b90bd88a2899` | `LICENSE` 1 069 B · `297c4cba7b33` | Markdown teaching material → Lab / Exam / Grading artefacts, each raised as a `WAITING_REVIEW` task with the human approve/reject decision recorded. The draft-and-sign shape `Pattern AH` asks for, already implemented. | Global |
 
-**14 verified permissive rows.** Every slug resolved under `git ls-remote` and every
+**17 verified permissive rows.** Every slug resolved under `git ls-remote` and every
 licence was read from the repository's own payload — none was taken from a GitHub badge,
 a package manifest, or a directory listing.
+
+🆕 `p431` added the last three rows, which together open a tier this base did not carry:
+**tutor evaluation**. `tutor_gym` scores a tutoring agent against `CAHLR/OATutor` — a row already
+on this shelf — under a compatible MIT grant and with no adapter work, which is the cheapest
+capability added here in weeks. 🟡 Note its MIT payload carries **no `MIT License` title line**;
+a sweep keyed on that string reports UNKNOWN for a verbatim MIT grant.
 
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 
@@ -54,6 +63,9 @@ These are the findings that change a build decision. All re-measured 2026-10-25.
 | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | newly trending, assumed permissive | 🟡 **ODbL** (Open Database License), `LICENSE` 25 289 B · `77d2692c3d64` @ `7bd8b6794cb7` | A **share-alike data** licence, not a code licence. A derived curriculum database inherits ODbL. Usable, but it is a copyleft obligation on client data — flag before adoption. |
 | [frappe/lms](https://github.com/frappe/lms) | MIT per some 2026 roundups | 🔴 **AGPL-3.0**, `license.txt` 33 893 B · `db1a87ba81e8` | Network copyleft. The "MIT" claim circulating in listicles is wrong. |
 | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | Apache-2.0 per some roundups | 🟡 **Educational Community License**, `LICENSE` 11 120 B · `0688f62d04f1` | ECL-2.0 is an Apache-2.0 derivative and OSI-approved — permissive in practice, but it is not Apache-2.0 and should not be recorded as such. |
+| [sdrangan/llmgrader](https://github.com/sdrangan/llmgrader) | “Open autograding engine” per search results and roundups | 🔴 **“PySilicon Research License”**, `LICENSE` 1 224 B · `4c8368a01cb6` @ `c5efaea7e9aa` | **Do not build on this.** Clause 1 grants *“non-commercial research, academic, and educational purposes”* only; clause 2 forbids commercial use without written permission. A studio engagement is commercial. 🔵 The trap: the file is named `LICENSE` and **opens with the verbatim MIT sentence** — only clause 2 reveals it. |
+| [eth-lre/MathTutorBench](https://github.com/eth-lre/MathTutorBench) | “Open-source benchmark” (EMNLP 2025) | 🔴 **No licence file anywhere in the tree** (`git ls-tree -r` @ `6faed173ec2b` returns none), and the README cites **two different** licences: a CC-BY-4.0 badge on line 3, CC-BY-**SA**-4.0 in the licence section at lines 199–203 | Ungranted **code** (`main.py`, `models/`, `reward_model/`) offered under a *content* licence, or under none. Cite it; do not vendor or ship it. BY vs BY-SA is the difference between no obligation and a share-alike one. |
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | Often listed simply as an open-source AI tutor | 🟡 **GPL-3.0**, `LICENSE` 35 149 B · `3972dc9744f6` @ `5c2f92416c04` | Integrate over an interface; do not fork into a deliverable. 🔵 Its payload is **not** the stock FSF digest this base records for Moodle/Chamilo (35 147 B · `8ceb4b9ee5ad`) — recorded so a digest sweep does not treat the near-miss as a match. |
 
 ### The MIT Google Classroom lane survives — at a different address
 

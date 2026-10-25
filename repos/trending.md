@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p431` · 2026-10-25 — **The trending read turned up an *evaluation* tier rather than more tutors — and the two usable addresses split cleanly on maintenance: one commit today, one silent for 13.5 months.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### Trending, placed by region and graded by grant
+
+| Repo | Region | Grant (read at HEAD) | Last commit | Why it trends |
+|---|---|---|---|---|
+| [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | Global | Apache-2.0 (code) / CC-BY-4.0 (content) | **2026-10-25** | Tutoring **regression** engine — keeps the evidence to re-test a fixed pedagogical failure. Governed repo: `NOTICE`, `SECURITY.md`, `CITATION.cff`. |
+| [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | North America | MIT | 2025-09-10 | Georgia Tech; evaluates a model as tutor **and** as student across existing ITSs, `oatutor` among them. |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | Global | MIT | re-verified `b90bd88a2899` | Markdown → Lab / Exam / Grading artefacts with `WAITING_REVIEW` tasks and recorded approve/reject. **Promoted to `agents/top.md` this pass.** |
+| [eth-lre/MathTutorBench](https://github.com/eth-lre/MathTutorBench) | EMEA | 🔴 **no licence file in tree** | `6faed173ec2b` | EMNLP 2025 pedagogy benchmark. Trending in citations, **ungranted in code**. |
+| [sdrangan/llmgrader](https://github.com/sdrangan/llmgrader) | Global | 🔴 PySilicon Research License (non-commercial) | `c5efaea7e9aa` | Rubric-driven autograder. Reads as MIT for one sentence, then forbids commercial use. |
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | Global | 🟡 GPL-3.0 | `5c2f92416c04` | Theory-of-Mind tutoring. Integrate over an interface; do not vendor. |
+
+🔵 **Region placement, stated honestly.** `tutor_gym` is placed **North America** on its authors'
+institutional affiliation (Georgia Tech). `MathTutorBench` is placed **EMEA** on the `eth-lre`
+organisation handle (ETH Zurich). The remaining three have **no domicile this pass could establish
+from the repository itself**, so they are recorded **Global** rather than guessed into a bucket —
+a wrong region is worse than an honest one, because the filter silently stops working.
+
+### The maintenance split is the finding, not the star count
+
+This base's `Trend 13` says the supply has a currency problem and that it is now a number. In this
+tier the number is stark: of the two addresses a studio can actually build on, **one shipped a
+security fix today and the other has been silent since September 2025.** They are not
+interchangeable, and the choice between them is a staffing decision:
+
+- **Need it to keep working for the length of a retainer** → `tutorbench` (Apache-2.0, maintained),
+  and accept its three-scope licence map.
+- **Need 223 tutor domains and an `oatutor` binding today** → `tutor_gym` (MIT, stale), and
+  **budget the fork up front**.
+
+---
+
 ## 🆕 `p430` · 2026-10-25 — **One unshelved in-domain trending address, and its licence is a DATA licence. 🟢 The permissive/copyleft split across the whole platform tier re-measured at source: 3 permissive, 7 copyleft.**
 
 🔵 **Append-only. Nothing below this block was edited.**

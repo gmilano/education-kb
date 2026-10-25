@@ -268,6 +268,23 @@ returns market research.*
   each says where it came from. Earlier cycles in the rotation had to publish a correction for
   pipeline-inflated stars — that correction stands.
 
+#### 🆕 `p431` — Global: the evidence pack becomes a sellable artefact, because the harness is finally permissive
+
+The market-size range in this file is unchanged this pass and the spread remains ~1.7×; nothing
+measured today moves it. **What moved is what can be sold inside it.** HolonIQ's 2026 read — that
+systems increasingly expect *evidence* that a product improves learning quality, persistence or
+job-relevant skills — has been a demand signal this base could not supply against, because scoring
+a tutor required either a closed vendor or an ungranted academic benchmark.
+
+Measured at source today: [`shuangyan123/tutorbench`](https://github.com/shuangyan123/tutorbench)
+(Apache-2.0 code, maintained) and [`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym)
+(MIT). **The evidence pack — scored baseline, regression suite, re-test after each change — is now
+a deliverable Globant can build on permissive terms and hand to the client as their own.**
+
+🔵 It also prices a line this base previously had to leave open: an evaluation engagement is
+**weeks, not months**, because the fixtures exist. The cost is a licence read per address and,
+for `tutor_gym`, a fork budget.
+
 ### North America
 
 **🆕 `p395` · 2026-10-23.** 🟡 **A richer sizing picture, and `Gap 393-C` explicitly still open.**
@@ -581,6 +598,30 @@ widely-repeated Boston graduation-requirement claim that conflated a district pr
 proposal. This pass added **no** primary-source state rule either: every figure above comes from a
 tracker or from committee reporting, not from a statute read first-hand. **This base still holds no
 primary US state education-AI rule.**
+
+#### 🆕 `p431` — North America: the region supplies the evaluation tier, and its statutes are the reason to sell it
+
+**Supply.** The one MIT tutoring-evaluation testbed found anywhere this pass is North American:
+[`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym), Georgia Tech
+(Weitekamp, MacLellan, Siddiqui), with lineage back through `DannyWeitekamp/tutorenvs` to
+`Teachable-AI-Lab/tutorenv`. It binds to `CAHLR/OATutor` (MIT, UC Berkeley) — also North American,
+also already on this base's shelf. **The whole tutor-plus-scorer stack is NA-origin and MIT.**
+
+**Why the statutes make it the pitch.** The 2026 state surface this file already records — 134 bills
+across 31 states, **Oklahoma and Maryland barring AI from high-stakes decisions about students**,
+NYC's K–8 student-facing moratorium, California AB 1159 on training-data use, Idaho SB 1227 — is a
+demand for **demonstrable human oversight and demonstrable quality**, not for less AI. Federally,
+the **K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747)** advanced out of the House Education
+and Workforce Committee on 21 July 2026, which funds literacy rather than restricting tools.
+
+🟢 **The engagement, concretely:** a district or state system that must show a board *why* an AI
+tutor is safe to deploy can be handed a scored baseline and a regression suite built entirely from
+MIT components developed in its own jurisdiction. **That provenance is itself a procurement
+argument**, and it is free.
+
+🔴 **The NA-specific hole:** Oklahoma and Maryland regulate **high-stakes decisions** — i.e.
+grading and placement. `Gap 431-C` says there is no open harness for the grading path. **In this
+region the unmeasured surface is precisely the regulated one.**
 
 ### EMEA
 
@@ -900,6 +941,31 @@ relocating. 🔵 Weigh it as what it is — a cloud vendor's public argument aga
 customers are subject to — but the *skills* half corroborates the delivery-capacity constraint this
 shelf already records for EMEA.
 
+#### 🆕 `p431` — EMEA: the region's contribution to the evaluation tier is **ungranted**, and the compliance clock is the sales argument
+
+🔴 **A nil on supply, stated as a nil.** The EMEA entry in this tier is
+[`eth-lre/MathTutorBench`](https://github.com/eth-lre/MathTutorBench) (ETH Zurich, EMNLP 2025) — the
+most-cited open pedagogy benchmark for LLM tutors. Measured at HEAD `6faed173ec2b` it carries **no
+licence file anywhere in its tree**, and its README cites **CC-BY-4.0** in a badge and
+**CC-BY-SA-4.0** in its licence section. **Europe's flagship tutoring benchmark cannot be shipped in
+a client deliverable.** For an EMEA engagement the usable harnesses are the NA-origin and
+Global ones.
+
+**The clock, re-read this pass.** The **Digital Omnibus on AI, Regulation (EU) 2026/1744**, moved the
+deadline for stand-alone Annex III high-risk education systems from 2 August 2026 to **2 December
+2027** (and 2 August 2028 for AI embedded in regulated products). Two duties did **not** move:
+**Article 50 transparency applies from 2 August 2026**, and the **Article 4 AI-literacy obligation has
+applied since 2 February 2025** to every organisation using AI, schools included. The Commission and
+the OECD published *Empowering Learners for the Age of AI* — an AI literacy framework for primary and
+secondary education — on **18 June 2026**, alongside updated guidelines on ethical AI use in teaching.
+
+🟢 **How to sell into that shape.** The delay is not relief; it is a **budget window with a fixed
+end**. Annex III names assessment, admissions triage and proctoring as high-risk, and conformity
+work on those cannot start from nothing in late 2027. An evidence pack built now on Apache-2.0
+`tutorbench` is **the same artefact** the Article 50 disclosure and the eventual Annex III
+conformity file will both draw on — and `huggingface/smolagents` (Apache-2.0, EU-domiciled) keeps the
+agent layer in-region for a sovereignty-sensitive buyer.
+
 ### APAC
 
 **🆕 `p395` · 2026-10-23.** 🟢 **APAC supplies the best new address in this pass, which reverses the
@@ -1147,6 +1213,34 @@ naming Google, Microsoft, IBM, Pearson and Byju's as "key players" and asserting
 Japan dominate — which is a vendor's player list, not an adoption measurement, and is **not** promoted
 to a figure here. 🔵 So APAC on this shelf is now **well mapped on regulation and effectively unmapped
 on adoption**, and that asymmetry is the opposite of LATAM's below.
+
+#### 🆕 `p431` — APAC: 🔴 an explicit NIL on evaluation supply, and the reason it matters more here than anywhere else
+
+**This leg returned nothing, and that is the finding.** Searched this pass for an APAC-origin or
+APAC-language tutoring evaluation harness: none resolved to a repository with a readable grant.
+`L2-Bench` (arXiv 2607.08842), a pedagogy-led benchmark for **second-language education** and the
+single most relevant artefact to this region, surfaced with **no resolvable repository address**
+(`Gap 431-A`). `ELBench` (arXiv 2608.09548) surfaced as a title only.
+
+🔴 **Why the nil bites hardest in APAC.** This base's APAC story (`Trend 14`) is that the region
+became the **net exporter** of open-source education AI, and its strongest engagement shape is
+**in-language tutoring** — sovereign models are the regional supply: Sarvam AI (India), SEA-LION
+(Singapore), ILMU (Malaysia), Sahabat AI (Indonesia), HyperCLOVA X Think (South Korea), Sarashina
+(NTT, Japan), TAIDE (Taiwan). **Every harness measured today is English-first.** A tutor built on a
+sovereign model therefore cannot be scored by anything this base can ship — the measurement layer
+does not speak the language the product is sold in.
+
+**The regulatory clock is nonetheless the most concrete in the world here.** South Korea's **AI Basic
+Act took effect 22 January 2026** — the second comprehensive AI law after the EU's. **Vietnam places
+education on its high-risk list by name** (automated assessment, behavioural monitoring), with
+obligations from **1 March 2027** and a six-month extension only for systems already in operation
+before 15 August 2026. China runs mandatory registration; Japan, Singapore and Australia remain
+voluntary. Ipsos' Education Monitor 2026 puts support for **banning** AI in schools at 23%
+(Indonesia) to 31% (South Korea) — restriction is live public opinion here, not a fringe view.
+
+🟢 **The consequence for a proposal:** in APAC, **scope the evaluation harness as build work, not
+as a component.** Translating or re-authoring `tutorbench` scenarios into the target language is a
+real line item — and, under its CC-BY-4.0 content grant, one that is legally clean to do.
 
 ### LATAM
 
@@ -1559,6 +1653,33 @@ trigger and institutions that must meet it; LATAM has near-total adoption and, p
 **institutions without the frameworks to govern it**. 🟢 **The deliverable differs accordingly:** in
 EMEA a studio sells conformity; in LATAM it sells the governance scaffold the institution has not
 built — and that is advisory work attached to a platform engagement, not a licence sale.
+
+#### 🆕 `p431` — LATAM: 🔴 a second explicit NIL on supply — and the region where the evidence pack is nonetheless the easiest sale
+
+**Nil, stated as a nil.** No LATAM-origin tutoring evaluation harness resolved this pass, and no
+Spanish- or Portuguese-language pedagogy benchmark resolved to a readable repository (`Gap 431-A`
+again). The region that most needs the instrument supplies none of it.
+
+**But the demand side is the strongest in this file, and it is measured.** UNESCO IESALC, across
+**200 institutions in 19 countries**: **87%** use AI in at least one area, **74%** in teaching and
+learning — and only **26%** have a formal AI strategy. OECD TALIS 2024 secondary-teacher AI use:
+**Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%**, against an OECD average of **36%**. Ceibal
+reports **75%** of Uruguayan public-school teachers using these tools. UNESCO launched its
+**Observatory on Artificial Intelligence in Education for Latin America and the Caribbean** at ECLAC
+in Santiago on **14 April 2026**.
+
+🟢 **Why the nil does not block the engagement here.** LATAM's buyer has adoption without
+governance — the 87%/26% gap is this file's headline number. **The evidence pack is exactly the
+missing 74 points.** The harnesses are permissive and portable, and the scenario content under
+`tutorbench`'s CC-BY-4.0 grant can be **translated and re-authored into Spanish and Portuguese
+lawfully** — which converts `Gap 431-A` from a blocker into **billable localisation work with a
+clean licence path**. Pair it with `learningequality/kolibri` (MIT, offline-first) where
+connectivity is the constraint.
+
+🔵 Against this base's standing finding that LATAM public tenders procure AI education platforms
+as **subscriptions** and **no tender asks for open source** (`Trend 21`): the evidence pack is sold
+as **advisory and assurance work attached to the platform**, not as a licence. That is the shape the
+procurement actually has room for.
 
 ## Sources
 

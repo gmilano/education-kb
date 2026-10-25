@@ -56,6 +56,34 @@ not the platform. A studio told *"Canvas is MIT"* would ship AGPL-3.0.
 | **Blackboard Learn** | 🟢 **MIT** | MCP servers over Blackboard Learn's REST API. |
 | **SCORM Runtime** | 🟢 **MIT** | SCORM 1.2/2004 packaging and playback. |
 
+## 🆕 `p431` — Evaluation is a platform-adjacent procurement surface, and it is the one tier with no copyleft problem
+
+This file grades **platforms**, and its standing finding is that the platform tier is copyleft while
+the agent tier is permissive. `p431` measured a third tier that sits beside both and behaves
+differently from either: **tutoring evaluation.**
+
+| Component | Grant (read at HEAD, 2026-10-25) | Where it sits relative to the platform |
+|---|---|---|
+| [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | Apache-2.0 code / CC-BY-4.0 content / brand policy | **Beside** the platform — runs in CI, never links the LMS |
+| [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | MIT | **Beside** — drives the tutoring runtime through its own interface |
+
+🟢 **Why that placement matters commercially.** An evaluation harness **never links against the
+LMS**. It drives the tutoring runtime from outside and reads results. So a client on **Moodle
+(GPL-3.0)**, **Open edX (AGPL-3.0)**, **Chamilo (GPL-3.0)** or **Frappe LMS (AGPL-3.0)** can take a
+fully permissive evidence pack **without the platform's copyleft reaching any of it**. This is the
+one tier on this shelf where the platform's licence is simply not a constraint — no XBlock seam, no
+GPL-adapter sandwich, no packaging decision.
+
+🟡 **It is also the part of a bid the incumbent platform vendor cannot supply.** Moodle, Canvas and
+Open edX vendors sell delivery; none of them sells *proof that the AI teaches well*. Against the
+LATAM pattern this base already records — public buyers procuring AI education platforms as
+**subscriptions**, with **no tender asking for open source** (`Trend 21`) — the evidence pack is the
+line item that fits: assurance work attached to someone else's platform, priced as advisory.
+
+🔴 **Scope limit, stated:** this covers **tutoring** only. There is no open harness for the
+**grading** path (`Gap 431-C`), which is the surface NA, EMEA and APAC statutes regulate hardest.
+Quote grading assurance as bespoke work.
+
 ## Choosing the base — the decision in one pass
 
 1. **Client needs a full LMS and cannot accept copyleft** → **OpenOLAT** (Apache-2.0).

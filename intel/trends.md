@@ -9,6 +9,64 @@ updated: 2026-10-25
 > Current trends, re-measured each pass. Trends 1–8 are the standing set; 9–11 were added
 > or amended on 2026-10-25 from first-hand measurement.
 
+## 🆕 Trend 26 — `p431` The evaluation layer arrived, and it is permissive — which moves the sellable unit from *adoption* to *evidence*
+
+For many passes this file carried `Trend 8` as a standing, unclosed **measurement gap**: this base
+could supply tutoring agents but could not name the instrument that scores them. Measured
+first-hand on 2026-10-25, **that gap closes on the tutoring side**:
+
+| Harness | Grant | Maintained | What it scores |
+|---|---|---|---|
+| [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | Apache-2.0 (code) | 🟢 commit 2026-10-25 | Scenario-based pedagogical failure + **regression** after a fix |
+| [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | MIT | 🔴 silent since 2025-09-10 | A model as **tutor** and as **simulated student**, inside real ITSs |
+
+**Why this is a trend and not an inventory note.** `Trend 1` says adoption is finished and
+governance is the market; `Trend 2` says procurement is being rewired around **evidence**. Both have
+pointed at a deliverable this base could not actually build, because *“our tutor is pedagogically
+sound”* was an assertion with no instrument behind it. With an MIT harness that binds to
+`CAHLR/OATutor` — already on this base's verified shelf — and `pykt-toolkit` (MIT) underneath for
+knowledge tracing, **tutor → measurement → evaluation is MIT end to end.**
+
+🟢 **What that changes commercially.** The sellable unit stops being the tutor and becomes the
+**evidence pack**: a scored baseline, a regression suite, and a re-test after each change. That is
+the artefact HolonIQ's “evidence of improved learning” expectation, the EU's Article 50 transparency
+duty, and a US district's procurement review each separately ask for — **one deliverable, three
+jurisdictions**, which is `Trend 3`'s divergence problem answered rather than absorbed.
+
+🔴 **The half that did not arrive, and it is the regulated half.** Everything measured scores
+**tutoring**. **Nothing open scores grading.** The one grading-side candidate
+([`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader)) is non-commercial by clause 2 of its
+licence. Meanwhile NA (Oklahoma, Maryland: no high-stakes AI decisions without human oversight),
+EMEA (Annex III: assessment is high-risk) and APAC (Vietnam: automated assessment on the high-risk
+list) all regulate **assessment** hardest. **The most exposed surface is the one with no harness.**
+Tracked as `Gap 431-C`; it is now the most valuable open gap in this base.
+
+## 🆕 Trend 27 — `p431` The licence trap inverted: a grant with no title, and a title with no grant, in the same eleven-repo sample
+
+`Trend 25` says a string matched as though it were a meaning is this base's most productive error
+class. This pass produced **both directions of that error at once**, which is worth separating out
+because the two need *different* instruments:
+
+| Direction | Address | What a naive read returns | What the payload says |
+|---|---|---|---|
+| **Grant without title** | `Teachable-AI-Lab/tutor_gym` | `UNKNOWN` — the payload never contains the string `MIT License`; it opens at `Copyright 2025 …` | 🟢 **Verbatim MIT**, fully permissive |
+| **Title without grant** | `sdrangan/llmgrader` | `MIT` — the file is named `LICENSE` and its first grant sentence is the MIT one, word for word | 🔴 **“PySilicon Research License”** — clause 2 forbids commercial use |
+
+🔵 **The practical consequence: no single cheap check is sound.** A title sweep false-negatives the
+first row and false-positives the second. A byte-size heuristic fails too — `llmgrader` is 1 224 B
+against the stock MIT ~1 069 B, a 155 B difference that looks like a longer copyright line. A
+`sha256` sweep catches the second only *after* someone has read it once and recorded the digest.
+
+**The only instrument that is correct on both is reading the operative clauses.** For a studio this
+is a cost line, not a philosophy: **budget one human licence read per address you intend to ship**,
+and let the digest sweep do what it is actually good at — detecting *change* at a known address
+between passes, which is how `p429` caught the `pengusto` relicensing within 24 hours.
+
+🟡 **A third variant, same family:** `eth-lre/MathTutorBench` has **no licence file at all**, and a
+README that cites CC-BY-4.0 in a badge and CC-BY-**SA**-4.0 in its licence section. Here even
+reading does not settle it — the repository contradicts itself, so the honest record is
+*ungranted*, not *probably CC*.
+
 ## 🆕 `p430` · 2026-10-25 — **Three trends added from first-hand measurement: a permissive licence has a SHELF LIFE (`Trend 9`), education's permissive supply is in the agent layer and not the platform layer (`Trend 10`), and DATA licences have arrived in education (`Trend 11`).**
 
 ## 🆕 Trend 9 — A permissive licence has a shelf life, and nothing in this industry measures it
