@@ -56,6 +56,34 @@ not the platform. A studio told *"Canvas is MIT"* would ship AGPL-3.0.
 | **Blackboard Learn** | 🟢 **MIT** | MCP servers over Blackboard Learn's REST API. |
 | **SCORM Runtime** | 🟢 **MIT** | SCORM 1.2/2004 packaging and playback. |
 
+## 🆕 `p433` — The "education ERP" sweep returns a **standing nil**, and it is the reason this file leads with OpenOLAT and Kolibri
+
+The brief for every pass asks for platforms *"like Odoo for ERP"*. `p433` ran that leg directly —
+`open source platform education ERP CRM MIT Apache` — and the result is a **nil worth recording as
+a standing fact rather than re-discovering every pass**:
+
+| What the sweep returned | Grant | Education-relevant? |
+|---|---|---|
+| Apache OFBiz | Apache-2.0 | 🔴 No education module; a general ERP framework |
+| Aureus ERP, Krayin CRM, Atomic CRM | MIT | 🔴 General ERP/CRM, no education vertical |
+| Huly Platform | Apache-2.0 | 🔴 General, and needs strong in-house capability |
+| **ERPNext** | 🔴 **GPL-3.0** | 🟡 **Lists Education among its verticals** — the nearest thing to an education ERP, and it is copyleft |
+| iDempiere (GPL-2.0), Dolibarr (GPL-3.0) | 🔴 copyleft | 🔴 General |
+
+🔴 **So: there is no MIT/Apache-licensed education ERP.** The one system that genuinely covers the
+education vertical, **ERPNext**, is GPL-3.0, which puts it in this file's integrate-don't-vendor
+tier alongside Moodle and Chamilo. **OpenEduCat**, already on this shelf, is the Odoo-based
+education ERP and is **LGPL-3.0** — weak copyleft, which is materially better than GPL for an
+AI-layer build but still not permissive.
+
+🟢 **Which is the whole argument for how this file is ordered.** `OpenOLAT` (Apache-2.0) and
+`Kolibri` (MIT) are not merely *options* in the permissive tier — after this sweep they are
+**demonstrably the only ones**, and that is now a measured statement rather than a curatorial
+preference. A client who needs a permissive full platform has exactly two choices; a client who
+can take copyleft has many. 🔵 `Gap 433-C` applies: this is a search-channel nil, not proof of
+absence — but it is the fourth consecutive pass on which the permissive platform tier has not
+grown.
+
 ## 🆕 `p432` — Special education is a **platform gap**, not a product gap
 
 Every platform row on this file treats the IEP/§504 learner as an ordinary enrolment. None of

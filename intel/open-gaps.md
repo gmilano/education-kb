@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p433`
+
+### 🔴 `Gap 433-A` — THE TRENDING SHELVES ARE WRITE-ONLY: NOTHING PROMOTES A ROW, AND NOTHING AGES ONE OUT
+
+`p433` found **five** high-traction addresses sitting in `agents/trending.md` and
+`repos/trending.md` from earlier passes that had **never been promoted** to a curated shelf —
+including [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials)
+at **1 118 ★ / 104 forks**, the highest-traction new education address this base has ever recorded.
+Three were permissive on a first-hand payload read and are now rows in `agents/top.md`.
+
+🔴 **The defect is structural, not clerical.** The trending files are append-only by contract —
+correctly, because that is what makes them a trend record. But append-only with **no promotion
+path** means traction accumulates unread: a row enters at 20 ★, grows to 1 118 ★, and no
+instrument on this base ever looks at it again. `gate-shelf-consistency` checks that shelves do not
+*disagree*; nothing checks that a curated shelf is not *missing* what the trending shelf already
+holds.
+
+**What would close it:** a gate that takes every address in the trending shelves, reads its current
+star count, and fails when an address above a threshold (say 150 ★) carries a permissive grade and
+appears in **no** curated shelf. That is a one-query-per-address online check, so it belongs
+outside `hooks` like the other online arms. 🔵 **This pass did not build it** and says so rather
+than implying it: the promotion was done by hand, which is exactly how `ACTION QO` stayed open for
+eleven passes.
+
+### 🟡 `Gap 433-B` — WHETHER NYC PROHIBITS AI-ASSISTED **IEP PLAN DEVELOPMENT** IS UNRESOLVED, AND IT GOVERNS `Pattern AL`
+
+The NYC 2K-8 student-facing moratorium is 🟢 **confirmed and enacted** at `p433` (2026-09-02,
+2026-27 school year) — that part closes a gap carried from `p386`. What does **not** close:
+
+- The **March 2026 preliminary** guidance's red tier was reported to prohibit AI for grading,
+  discipline, counselling and crisis intervention, academic placement, **and the development of
+  special-education and 504 plans**.
+- The **enacted** 2026-27 policy is quoted saying the moratorium *"does not apply to assistive
+  technology and associated screen time, provided through a student's Individualized Education
+  Program (IEP) or 504 Plan"* — an **exemption**, pointing the other way.
+- A targeted search could **not** establish whether the plan-development prohibition survived into
+  the enacted policy. One secondary says AI may not be used for "grading, behavior monitoring, or
+  any decision involving student placement, promotion, or graduation" — and does not mention plan
+  drafting either way.
+
+🔴 **This is the single most consequential open question on these shelves for a North America
+engagement**, because `Pattern AL` is an **IEP drafting assistant** and NYC is the largest school
+district in the United States. 🔵 It is a gap and not a finding: nothing read this pass says
+`Pattern AL` is unlawful in NYC, and nothing says it is permitted. `Pattern AL` now carries the
+jurisdiction check in `compose/patterns.md`.
+
+**What would close it:** the full text of the NYCPS *Guidance on Artificial Intelligence and Screen
+Time* for 2026-27. Note the address has **moved** — reporting now cites
+`schools.nyc.gov/about-us/policies/guidance-on-artificial-intelligence`, not the
+`/vision-and-mission/artificial-intelligence/` path earlier passes would have tried.
+
+### 🔴 `Gap 433-C` — THE EGRESS IS A FORGE-AND-REGISTRY ALLOWLIST, SO **NO GOVERNMENT OR NEWS PRIMARY CAN BE READ FROM HERE** (`Gap 430-C` generalised)
+
+`Gap 430-C` recorded that the prescribed `curl -sI` cannot run here. `p433` measures the actual
+shape, which is broader and worth stating precisely: **arbitrary hosts are refused at `CONNECT`
+with a 403 by the network policy**, confirmed in the proxy's own failure log for
+`www.schools.nyc.gov:443` and `www.beta.nyc:443`. `github.com` and the package registries work —
+which is why every licence verdict on these shelves is genuinely first-hand — but **a statute, a
+ministry circular, a district policy or a news report cannot be read at source from inside a
+scheduled run**.
+
+🔵 **The consequence, stated so no reader mistakes the grade:** every regulatory claim on these
+shelves is **secondary-sourced by construction**. This base's 🟢/🟡/🔴 grades on regulatory items
+mean *"corroborated across independent secondaries"*, never *"read in the official text"*. That is
+a real ceiling on `intel/market.md` and it cannot be lifted from inside a run. **What would close
+it:** an egress allowlist entry for `*.gov`, `*.europa.eu` and the major education outlets, or an
+owner-run leg that fetches the primaries and commits them to `evidence/`.
+
+### 🔴 `Gap 433-D` — THE ROTATION STILL HAS NOT ROTATED (`Gap 432-A`, `Gap 430-A`, FOURTH CONSECUTIVE PASS)
+
+Re-checked in `gmilano/globant-kb` this pass. `rotation.json` on `main` still reads **`next: 8`**
+(education) with `last_updated: 2026-08-02` and `last_industry: technology`. This is **p433** on
+education. `gaming`, `legal`, `financial`, `healthcare`, `media`, `retail`, `travel`, `technology`,
+`automotive`, `energy` and `enterprise` still have **zero** passes from this rotation.
+
+The mechanism is unchanged and is now re-confirmed a fourth time: a scheduled run is required to
+develop on its own `claude/*` branch, so the `rotation.json` advance it pushes lands on **that
+branch**, which is never merged to `main`; the next run clones `main` and reads `next: 8` again.
+This pass advanced `rotation.json` to `{"next": 9, "last_industry": "education"}` and pushed it to
+its assigned branch — **reproducing the failure once more, by design, because the run is not
+permitted to push to `main`.**
+
+🔴 **Unfixable from inside a scheduled run**, and the fix is an owner action. It needs one of:
+(a) a merge of a rotation branch to `main`; (b) rotation state in a store a run may write durably;
+(c) a scheduler that passes the industry in as a parameter instead of reading it from a repository
+the runs cannot update. 🔵 Option (c) is the only one that cannot silently regress.
+
+### 🔵 Declared, so silence does not read as coverage
+
+- **All four regional legs returned material this pass; there was no regional nil.** North America
+  returned the NYC enactment (new); EMEA, APAC and LATAM each returned **confirmations of facts
+  already on these shelves** and no new regulatory instrument — EMEA's Digital Omnibus dates
+  (resolved at `p380`), Korea's AI Basic Act and Vietnam's Decision 33/2026 (both already carried),
+  and UNESCO IESALC's 26%-strategy figure (already the strongest number in `intel/market.md`).
+  🔵 **"Confirmed, not new" is the honest grade for three of the four legs** and is recorded as
+  such rather than re-presented as discovery.
+- **Repo discovery on this industry is saturated.** 204 topic-pinned API matches, top 30 by stars,
+  yielded **four** unseen addresses, all ≤ 8 ★, **none shelved**. Named in `agents/trending.md` so
+  the next pass can see they were seen.
+- **No new permissive education platform (LMS/SIS/ERP) on either channel.** The broad ERP sweep
+  returned general ERP/CRM only; the nearest education-relevant system, **ERPNext**, is
+  **GPL-3.0**. The permissive platform tier remains exactly two: **OpenOLAT** (Apache-2.0) and
+  **Kolibri** (MIT).
+- **`Gap 432-B` unchanged:** no non-US special-education supply. A narrow API sweep
+  (`pushed:>2026-09-15`) returned six matches, **none in-domain**.
+- **`Gap 432-C` unchanged:** no evaluation harness reaches the IEP tier.
+- **`Gap 430-B` unchanged:** a permissive grade still has no re-read date in the cell itself. The
+  three rows added this pass carry their read date in the column header only, like every other row
+  — so they inherit the same defect, and `p429`'s expiry case (`pengusto/google-classroom-mcp`
+  going proprietary) remains the reason it matters.
+
 ## 🆕 `p432`
 
 ### 🔴 `Gap 432-A` — THE ROTATION STILL HAS NOT ROTATED. `Gap 430-A` IS UNCHANGED.

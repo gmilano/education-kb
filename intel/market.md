@@ -18,6 +18,38 @@ market map, which is what an engagement reads.
 
 ## 🆕 `p432` · 2026-10-25 — **All four regional legs returned material again, no nil. 🟢 EMEA's high-risk scope carve-out and India's Class-3 mandate are the two commercially decisive updates. 🔴 One figure on this file is corrected: the NA bill count is one tracker's, not the count. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
 
+## 🆕 `p433` · 2026-10-25 — **All four regional legs returned material; no nil. 🟢 The `p386` NEW YORK CITY moratorium — carried 🔴 UNCONFIRMED for forty-seven passes — is CONFIRMED AND ENACTED, and it is the largest single district restriction in the United States. 🔵 Three of the four legs returned confirmation rather than discovery, and are graded that way. 🔴 And the ceiling under every regulatory claim on this file is now measured and named: no government primary is reachable from this host.**
+
+🟢 **The one new regulatory fact, and it is a big one.** NYC Public Schools enacted a
+**student-facing generative-AI moratorium for grades 2K-8** on **2026-09-02** for the 2026-27
+school year — **~600,000 students**, companion chatbots barred in **every** grade including high
+school, teacher-facing AI retained for lesson planning and translation. This base held the item as
+🔴 `UNCONFIRMED` from `p386` through `p432` on two secondaries with inconsistent date metadata, and
+**that caution was correct**: what resolved it was the *enactment* being reported across several
+independent outlets, not a better read of the same two sources. The single
+`## Opportunities by region` block below is **amended in place** — it is still one block.
+
+🔵 **Three legs confirmed; they did not discover.** EMEA returned the Digital Omnibus dates this
+base **already resolved at `p380`** (Regulation (EU) 2026/1744 — Annex III to 2 December 2027,
+Annex I to 2 August 2028, Article 50 live since 2 August 2026); APAC returned Korea's AI Basic Act
+(22 January 2026) and Vietnam's Decision 33/2026, **both already carried**; LATAM returned UNESCO
+IESALC's **26% formal-AI-strategy** figure, already the strongest single number on this file.
+**"Confirmed, not new" is recorded as such** rather than re-presented as a finding — a leg that
+returns a confirmation is worth exactly one line, and three of four did.
+
+🔴 **The ceiling, measured this pass and stated once for the whole file.** `schools.nyc.gov` and
+`beta.nyc` were refused at this host's egress with **403 to `CONNECT`** (confirmed in the proxy's
+own failure log). The network policy is a **forge-and-package-registry allowlist**: `github.com`
+works, which is why every *licence* verdict here is genuinely first-hand, but **no statute,
+ministry circular, district policy or news report can be read at source from inside a scheduled
+run.** Every regulatory 🟢 on this file therefore means *"corroborated across independent
+secondaries"*, never *"read in the official text"*. `Gap 433-C` carries it; it is an owner fix.
+
+🔵 **Structural note:** `Trend 30` argues from this pass's NA leg that the **district**, not the
+state, is now the layer that decides whether a US build is legal — NYC, Charleston County and Katy
+ISD draw three mutually inconsistent lines, and Ohio and Tennessee *require* per-district policy by
+statute. That changes who the compliance conversation is with.
+
 ## Market size — use the range, never a single figure
 
 | Segment | 2026 | Horizon | CAGR | Source class |
@@ -56,6 +88,40 @@ high-stakes decisions** about a student. Charleston County extends that to disci
 placement and special-education determination. The federal **K-12 AI Literacy and Readiness
 Act of 2026 (H.R. 8747)** advanced out of committee on 21 July 2026. Districts add their own
 layer: Katy ISD bans generative chatbots for K-6 with scaffolded access to grade 12.
+
+🟢 **`p433` — NEW YORK CITY IS NO LONGER UNCONFIRMED, AND IT IS THE LARGEST SINGLE DISTRICT
+RESTRICTION IN THE COUNTRY.** This shelf carried a 🔴 **UNCONFIRMED** NYC moratorium from `p386`
+to `p432` — forty-seven passes on one EdWeek sighting of a *proposal* with a feedback window to
+2026-05-08. **It was enacted.** For the **2026-27 school year** NYC Public Schools is running a
+**moratorium on student-facing generative AI in grades 2K-8**, announced **2026-09-02** by Mayor
+Zohran Mamdani, with limited high-school use and grade-banded screen-time limits. It reaches
+**~600,000 students**. **Companion chatbots are prohibited in every grade, high school included.**
+Teachers keep approved AI for lesson planning and translation. Reporting also has the city
+requiring **38 ed-tech vendors to strip AI features** for the younger grades. 🟡 Framing is
+contested and both readings are in print: Chalkbeat calls it a *ban*, Gothamist a *one-year
+pause*; the two draw on the same internal documents and have not been reconciled. **Nothing in
+the engagement thesis turns on which word wins** — the teacher-facing lane is open either way, and
+that is where a Globant build sits.
+
+🔵 **The trap on this item, because it is an easy one to walk into.** NYC's guidance *does* name
+**IEP and 504 plans** — as a **carve-out from the ban**, not as a prohibition: the official text
+says the policy *"does not apply to assistive technology and associated screen time, provided
+through a student's Individualized Education Program (IEP) or 504 Plan."* That is the **opposite
+direction** from a restriction, and a careless read turns an exemption into a ban. Separately, the
+**March 2026 preliminary** guidance's red tier was reported to prohibit AI for grading,
+discipline, counselling and crisis intervention, academic placement, **and the development of
+special-education and 504 plans**. 🟡 **Whether that plan-development prohibition survived into
+the enacted 2026-27 policy is UNRESOLVED from this host** — a targeted search could not confirm
+it, and the primary could not be read (see the egress note below). It bears directly on
+`Pattern AL`, and `Gap 433-B` carries it.
+
+🔴 **Egress note, so the grade on the two items above is legible.** `schools.nyc.gov` and
+`beta.nyc` were both refused at this host's network policy (**403 to `CONNECT`**, confirmed in the
+proxy's own failure log), so **no primary document was read for this finding**. What is 🟢 above is
+corroborated across several independent outlets *and* quoted from the official guidance in search
+results; what is 🟡 is single-sourced or could not be confirmed. 🔵 This base's convention is that
+an unread primary is written down as unread rather than rounded up to first-hand.
+
 **Canada** launched *AI for All* on 4 June 2026 — national AI literacy, watermarking of
 AI-generated content, and a Canada Trusted AI Certification — direction-setting, not yet law.
 
@@ -596,6 +662,10 @@ defensible piece of work with no licence obstacle — and it is **not** availabl
   from a different source than the EdWeek item below. 🔴 **Still `UNCONFIRMED`** — two secondaries
   with inconsistent date metadata are not a primary, and the NYC Chancellor's office is not
   reachable from here. Keep it out of a client deck.
+  🟢 **RESOLVED at `p433` — and the call to withhold it was right at the time.** The proposal was
+  enacted on **2026-09-02** for the 2026-27 school year. Two secondaries with bad date metadata
+  genuinely were not enough in `p386`; what closed it was the *enactment* being reported across
+  several independent outlets, not a better read of the same two. See the North America leg.
 - 🆕 **Federal privacy — the amended COPPA Rule is the binding deadline that already passed.** The
   FTC's amended Children's Online Privacy Protection Rule took effect **23 Jun 2025** with **full
   compliance due 22 Apr 2026**. It brings a **broader definition of personal information**,
@@ -613,10 +683,11 @@ defensible piece of work with no licence obstacle — and it is **not** availabl
   **systemwide AI policy** that embeds **AI literacy into general education from fall 2026**. 🟢 The
   buying unit in US public higher ed is shifting from the campus to the system — one engagement,
   many institutions, and a single policy to implement against.
-- 🔴 **UNCONFIRMED:** an EdWeek item reports a **New York City moratorium** on student-facing
-  generative AI (attributed to Mayor Mamdani and Chancellor Samuels) as part of a wider restriction
-  movement. The item's **date metadata is inconsistent** — do not put this in a client deck without
-  primary confirmation. Several vendor-blog specifics (a Florida SB1194, Puerto Rico Copilot
+- 🟢 **CONFIRMED at `p433`** (carried 🔴 `UNCONFIRMED` from `p386` to `p432`): an EdWeek item
+  reported a **New York City moratorium** on student-facing generative AI (attributed to Mayor
+  Mamdani and Chancellor Samuels). The item's **date metadata was inconsistent**, which is why it
+  was held. **It was enacted 2026-09-02 for the 2026-27 school year, grades 2K-8.** The
+  attribution to Mamdani holds. Several vendor-blog specifics (a Florida SB1194, Puerto Rico Copilot
   mandates) likewise did not verify.
 
 **Opportunities.**
@@ -757,7 +828,7 @@ a *buying-cycle* map rather than a market size.
 | States adding AI instruction to **CS graduation requirements** | **Georgia, Mississippi** | same |
 | Federal | **H.R. 8747**, K-12 AI Literacy and Readiness Act of 2026 — advanced out of House Education & Workforce **2026-07-21**, largely along party lines | committee reporting |
 | Canada | **"AI for All"** national strategy launched **2026-06-04**, including AI literacy | 🔴 a strategy, **not** a statute |
-| New York City | proposed **one-year moratorium** on student-facing AI through grade 8; feedback window to 2026-05-08 | district proposal |
+| New York City | 🟢 `p433` **ENACTED** — moratorium on student-facing generative AI in **grades 2K-8** for the **2026-27 school year**, announced **2026-09-02**; limited HS use; **companion chatbots barred in every grade**; ~600,000 students | 🟢 in force (was "district proposal" through `p432`); 🟡 *ban* vs *one-year pause* contested in reporting |
 | Regional share | NA = **36%** of the AI-in-education market; **$3.68B (2026) → $32B (2030)** | 🔴 **vendor statistics compilation, single source — flagged, not to be quoted as a range** |
 
 🔵 **The actionable reading is the oversight clause, not the bill count.** Oklahoma and Maryland

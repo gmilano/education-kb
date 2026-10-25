@@ -9,6 +9,65 @@ updated: 2026-10-25
 > Current trends, re-measured each pass. Trends 1–8 are the standing set; 9–11 were added
 > or amended on 2026-10-25 from first-hand measurement.
 
+## 🆕 Trend 30 — `p433` In North America the **district**, not the state, is now the layer that decides whether a build is legal
+
+Every regulatory read on these shelves has been organised by **state**: 134 bills across 31
+states, California AB 1159, Oklahoma and Maryland on human oversight, Ohio HB 96 and Tennessee
+SB 1711 on policy mandates, Alabama HB 329 on graduation. That framing is now **the wrong unit for
+a build decision**, and this pass can say why with three cases rather than one.
+
+**What the states actually did.** Read the mandates together and a pattern appears: the states
+that legislated mostly legislated *procedure*. Ohio and Tennessee require districts **to write
+their own AI policies** — Ohio's deadline was **1 July 2026** and has passed. 35+ states publish
+**guidance**. Oklahoma and Maryland set a *standard* ("not the sole basis") rather than a
+prohibition. **A state telling every district to write a policy is a state declining to write
+one.** The binding text ends up one level down, and by statutory design.
+
+**What the districts did with that delegation.** They prohibited things, specifically and
+unevenly:
+
+| District | Instrument | What it bars |
+|---|---|---|
+| **New York City** | 2026-27 guidance, enacted **2026-09-02** | Student-facing generative AI, **grades 2K-8** (~600,000 students); **companion chatbots in every grade**, high school included. Preliminary (March 2026) red tier was reported to bar grading, discipline, counselling, placement **and special-education / 504 plan development** (🟡 survival into the enacted text unresolved — `Gap 433-B`) |
+| **Charleston County** | district policy | Discipline, placement, **special-education determination** |
+| **Katy ISD** | district policy | Generative chatbots K-6, scaffolded access to grade 12 |
+
+🔴 **The three do not agree with each other, and none of them is a state rule.** NYC draws its
+line at **grade 8** and adds an all-grades companion-chatbot ban; Katy ISD draws it at **grade 6**;
+Charleston County draws it by **decision type** rather than by grade. A vendor compliant in Texas
+is non-compliant in New York on the same product.
+
+**Why this is a trend and not a list.** The delegation is *structural*: Ohio and Tennessee
+**require** per-district policy, so the number of binding, mutually inconsistent AI rules in US
+K-12 grows with the number of districts — roughly **13,000** of them — not with the number of
+states. State-level tracking, which is what every tracker and every vendor summary does, is
+measuring the layer that chose not to decide.
+
+**What it changes in a build, concretely:**
+
+1. **Student-facing vs teacher-facing stops being a product decision and becomes a
+   configuration axis.** `Trend` guidance on this file already said *"student-facing optional
+   should be an architectural switch from day one"*. NYC makes it unavoidable: the same deployment
+   must run teacher-facing-only in grades 2K-8 and limited-student-facing in high school, **in one
+   district**. A product that cannot be switched per grade band cannot be sold to NYC at all.
+2. **Grade band becomes a first-class policy input**, alongside jurisdiction. Not a setting in an
+   admin screen — a constraint the agent layer enforces and logs.
+3. **Companion-chatbot shape is separately regulated from AI generally.** NYC bars companion
+   chatbots in **every** grade while permitting teacher-facing AI. A persistent-persona tutor and a
+   task-scoped assistant are now **different regulatory objects** even though they are the same
+   technology, which is an argument for building the task-scoped one.
+4. **Due diligence moves from statute to district policy.** `Pattern AL` now carries this as a
+   go/no-go in week 1 rather than a formality.
+
+🔵 **The honest limit on this trend.** All three district instruments are read from secondary
+reporting; `Gap 433-C` records that no government primary is reachable from this host, so **none
+of the three was read in its official text**. The *structure* of the argument — states delegating
+by statute, districts prohibiting unevenly — rests on the Ohio and Tennessee mandates, which are
+themselves corroborated across independent trackers. 🔴 Three districts is also not a census: this
+is a pattern with three data points and a stated mechanism, not a measured rate across 13,000
+districts. **What would strengthen it:** a sweep of the twenty largest US districts' AI policies.
+No instrument on this base does that, and this pass did not build one.
+
 ## 🆕 Trend 28 — `p432` Regulatory intensity and open-source supply are **inversely** correlated in education, and special education is the proof
 
 Every other trend on this file reads the market from the demand side. This one reads it from the
@@ -291,8 +350,10 @@ For two years the only direction was adoption. In 2026 the brake appeared:
 - **Ipsos Education Monitor 2026:** **Australia and New Zealand show the highest support for
   banning AI in schools**, while Asian markets show the lowest. One company, two opposite mandates.
 - **European Schools:** **no** generative AI tool approved for system-wide use.
-- 🔴 **UNCONFIRMED:** a reported **New York City moratorium** on student-facing generative AI
-  (EdWeek; date metadata inconsistent). If it holds, the largest US district has gone the other way.
+- 🟢 **CONFIRMED at `p433`** (held 🔴 `UNCONFIRMED` from `p386`): the **New York City moratorium**
+  on student-facing generative AI was **enacted 2026-09-02** for the 2026-27 school year, grades
+  **2K-8**, ~600,000 students, with **companion chatbots barred in every grade**. **It holds — the
+  largest US district has gone the other way**, which is no longer a conditional.
 
 **So:** "student-facing optional" should be an architectural switch from day one, not a retrofit.
 A product that cannot run teacher-facing-only is unsellable in a growing share of the market.

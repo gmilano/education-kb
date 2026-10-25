@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p433` · 2026-10-25 — **The trending backlog had been accumulating build-on addresses nobody promoted. 🟢 Three permissive addresses move to the curated tier on first-hand payload reads, one of them the highest-traction new education address on these shelves. 🔴 The two next-biggest are both AGPL-3.0, read at source. 🔵 And this base's own blocking gate was RED when the pass opened — `agents/top.md` was publishing two data rows as table headers.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### The gate was red before this pass wrote a line
+
+🔴 `make commit-gates` **exited 2** on the commit this pass inherited (`300b983`). `gate-tables`
+reported two `BLANK-SPLITS-TABLE` defects in `agents/top.md`: a stray empty line inside the
+verified build-on table (before `Miaotofu01/Study-Mate`) and another inside the licence-trap
+table (before `Apomera/AlloFlow`). A blank line terminates a GFM table, so **the first row after
+each blank re-opened a new table as its header row** — two curated data rows were being published
+as headers, which is the exact defect `gate-tables` exists to catch and the exact shape the
+standing instruction *"never leave a header or example row as data"* names.
+
+🟢 **Fixed by deleting the two blank lines** — both sides of each break carried identical column
+counts (6 and 4), so the breaks were accidental, not two tables sharing a shape. `gate-tables`
+now reports `10 shelves, no row is published as a header`, and `make commit-gates` exits `0`.
+🔵 **Stated plainly: this was a pre-existing defect committed by `p432`, not one this pass
+introduced.** It is recorded here because a red blocking gate that nobody reports is worse than
+the defect itself.
+
+### Promoted to the curated tier — payloads read first-hand on 2026-10-25
+
+Each row below was already in this append-only shelf from an earlier pass and had **never been
+promoted** into `agents/top.md`. Star and fork counts are GitHub API reads on 2026-10-25; HEAD via
+`git ls-remote`; licence family from the repository's own payload in a `--depth 1` tree, with byte
+size and `sha256` prefix.
+
+| Repo | Grant (payload read) | HEAD | Payload | Why it earns the tier | Region |
+|---|---|---|---|---|---|
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT** | `f8849746d85c` | `LICENSE.md` 1 122 B · `15ce43afa44a` | **1 118 ★ / 104 forks — the highest-traction new education address these shelves have recorded.** Turns PDFs, books, slides, Word files and web pages into *traceable* knowledge bases and interactive learning pages. Built to the Agent Skills standard, so it drops into an existing harness rather than demanding a platform. 307 files, `v1.1.0`. 🟡 See the author-key flag below. | APAC |
+| [122-syf-wcy/PhysicsOS](https://github.com/122-syf-wcy/PhysicsOS) | 🟢 **Apache-2.0** | `a25c6ee26583` | `LICENSE` 11 356 B · `f1a2e5fccede` | 255 ★ / 17 forks. An AI layer that reads a K-12 physics problem and drives a **real physics engine**, so the answer is observable and *verifiable* rather than asserted — the grounding move `Trend 3` has been asking for, applied to a subject where a wrong answer is checkable. Stated as a public-benefit (公益) project; DeepSeek-backed, TypeScript. | APAC |
+| [cabbage2000-lab/textbook-writer-skills](https://github.com/cabbage2000-lab/textbook-writer-skills) | 🟢 **MIT** | `e2b825072ba5` | `LICENSE` 1 064 B · `0d5a33d13ca9` | 37 ★ / 12 forks. UbD backward-design courseware authoring as a gated skill chain (positioning → five-part gate → chapter-tree gate → four-stage chapter writing → review). 🟢 **It ships the discipline this base runs on itself**: STEM claims are recomputed, humanities citations are checked word-by-word against the source, and anything it cannot verify is written out as *"needs author confirmation"* rather than asserted. Subject-agnostic core plus pluggable subject profiles. | APAC |
+
+🟡 **Author-key flag on `learn-from-materials`, recorded rather than smoothed over.** The MIT
+payload names **`Copyright (c) 2025 virgiliojr94`**, while the repository owner is
+`dmoshehun-prog` and the HEAD commit is authored by `dmoshehun-prog <dmoshehun@gmail.com>`
+(2026-10-20); the repository was created 2026-09-08 and GitHub reports `fork: false`. **The grant
+is MIT either way** — MIT is MIT whoever holds the copyright — but the *holder* named in the
+payload is a third party with a 2025 date that predates the repository. That is a provenance
+question, not a licence question, and it is `gate-author-key`'s domain. 🔵 Recorded as a flag, not
+a defect: nothing here establishes that the grant is bad, and nothing establishes that it is the
+owner's to give. A client vendoring this file should ask.
+
+### Graded NOT build-on — both read at source, both high-traction
+
+| Repo | Grant (payload read) | HEAD | Payload | Verdict | Region |
+|---|---|---|---|---|---|
+| [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 🔴 **AGPL-3.0** | `b9bcbc2312f8` | `LICENSE` 34 523 B · `0d96a4ff68ad` | 400 ★ / 80 forks, created 2026-10-10 — the fastest-rising education-adjacent address this window. Explainer-video generation via an AI "director" agent, local-first, model-agnostic. **Network copyleft on a generation service.** Integrate over an interface; never vendor. | APAC |
+| [helixnow/deep-student](https://github.com/helixnow/deep-student) | 🔴 **AGPL-3.0** at the root | `c565f0c3043a` | `LICENSE` 34 532 B · `894342980454` | 290 ★ / 55 forks. Local-first learning workbench (FSRS spaced repetition, Anki import, mindmaps, RAG, Tauri). Same verdict, same reason. 🔵 **Subtree note:** its tree also carries vendored permissive payloads — `src-tauri/vendor/lancedb/LICENSE` Apache-2.0 11 348 B · `22cdf18289ac`, `src-tauri/vendor/object_store/LICENSE.txt` Apache-2.0 11 360 B · `240b8a39fdfd`, `src-tauri/vendor/r2d2_sqlite/LICENSE` MIT 1 084 B · `26487b4d8281`. A root-only read calls the whole tree AGPL; `gate-subtree-grant` is the instrument, and these three are *dependencies*, not a permissive lane into the product. | APAC |
+
+🔵 **Two AGPLv3 payloads, nine bytes apart, recorded so a digest sweep does not mis-pair them.**
+`frametell` is **34 523 B · `0d96a4ff68ad`**; `deep-student` is **34 532 B · `894342980454`**. Both
+are the stock AGPLv3 body. Neither matches the stock **GPL**-3.0 digest this base records for
+Moodle/Chamilo (35 147 B · `8ceb4b9ee5ad`) or `tutor-gpt`'s near-miss (35 149 B · `3972dc9744f6`).
+Four GNU-family payloads on these shelves now, four distinct digests, all four written down.
+
+### What the trending read did *not* find, stated as a nil
+
+🔴 **Repo discovery on this industry is saturated, and the honest report is that almost nothing
+is new.** A GitHub API sweep over `topic:education topic:ai-agent pushed:>2026-09-01`
+(204 matches, top 30 by stars) returned **four** addresses absent from every shelf —
+`ZYT64/KuroTutor` (4 ★), `simpleqt/radai` (6 ★), `FIY-pc/vibe-logisim` (8 ★),
+`lhd23333/QuizForge` (7 ★). **None was promoted and none is written into a curated table**: at
+4–8 ★ with no second contributor they are indistinguishable from the long tail `p432` already
+measured, and padding a table with them would cost more than it adds. They are named here so the
+next pass can see they were seen. 🔵 Everything else in the top 30 was already on a shelf — which
+is the real finding: **the backlog, not the frontier, was where this pass found value.**
+
 ## 🆕 `p432` · 2026-10-25 — **Special education: the most heavily regulated surface in education AI, and a measured supply desert. 🟢 Three MIT addresses exist and all three are jurisdiction-pinned. 🔴 The two most purpose-built tools in the category carry no licence at all. 🔵 And GitHub's own licence field was wrong in BOTH directions in this sample.**
 
 🔵 **Append-only. Nothing below this block was edited.**

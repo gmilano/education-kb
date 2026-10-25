@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p433` · 2026-10-25 — **A measured saturation result: the frontier returned almost nothing new, and the value was sitting unpromoted in this base's own backlog. 🟢 2 of 5 high-traction trending addresses are permissive and move to the foundations/curated tier. 🔴 The other 3 are AGPL-3.0 or flagged. 🔵 The trending shelf had become a write-only log.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### The sweep, and its denominator
+
+| Channel | Query | Result |
+|---|---|---|
+| GitHub API, topic-pinned | `topic:education topic:ai-agent pushed:>2026-09-01`, sorted by stars, top 30 of **204** | 26 of 30 already named on a shelf; **4** absent, all ≤ 8 ★ |
+| GitHub API, narrow | `IEP special education AI agent …  pushed:>2026-09-15 stars:>3` | **6** matches, **0** in-domain — the special-education supply desert `p432` measured is unchanged one month on |
+| WebSearch, global | `top open source AI agents education 2026 github MIT` | 🔴 **nil in-domain.** Returned only general-purpose agents (OpenClaw, Hermes, OpenHands, browser-use). Written down as a nil because a nil is information. |
+| WebSearch, trending | `github trending education AI 2026` | 2 in-domain, **both already on shelf**: `HKUDS/DeepTutor` (reported ≈ 42.6 k ★, +635/day since 2026-10-21 — consistent with the **42 610 ★** already recorded in `intel/trends.md`), `withmarbleapp/os-taxonomy` (ODbL, already graded `p432`) |
+| WebSearch, verticals | `open source platform education ERP CRM MIT Apache` | 🔴 **nil for education.** Returned general ERP/CRM only (OFBiz, Aureus, Krayin, Huly). The closest education-relevant hit, **ERPNext**, is **GPL-3.0** — not a permissive education vertical. Recorded as a standing nil: *there is still no MIT/Apache education ERP*, which is why `verticals/solutions.md` leads with OpenOLAT and Kolibri. |
+
+🔴 **The structural finding, stated as a defect in this base's own practice.** Five addresses
+graded below — including the **highest-traction new education address on these shelves at
+1 118 ★** — were *already in this append-only shelf from earlier passes* and had **never been
+promoted** to `agents/top.md` or `repos/foundations.md`. The trending shelf had become
+write-only: things entered it and nothing left. 🟢 `p433` promotes the permissive ones and
+grades the rest; `Gap 433-A` registers the missing instrument.
+
+### The five, graded on payloads read first-hand 2026-10-25
+
+HEAD via `git ls-remote`; family from the repository's own payload in a `--depth 1` tree, with
+byte size and `sha256` prefix; stars/forks are GitHub API reads on 2026-10-25.
+
+| Repo | Grant | HEAD | Payload | Traction | Verdict | Region |
+|---|---|---|---|---|---|---|
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT** | `f8849746d85c` | `LICENSE.md` 1 122 B · `15ce43afa44a` | **1 118 ★ / 104 forks** | 🟢 **Promote.** Material → traceable knowledge base → interactive learning page, as an Agent Skill. 🟡 author-key flag (payload names `virgiliojr94`, owner is `dmoshehun-prog`) | APAC |
+| [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 🔴 **AGPL-3.0** | `b9bcbc2312f8` | `LICENSE` 34 523 B · `0d96a4ff68ad` | 400 ★ / 80 forks | 🔴 **Do not vendor.** Network copyleft on a hosted generation service. Integrate over an interface | APAC |
+| [helixnow/deep-student](https://github.com/helixnow/deep-student) | 🔴 **AGPL-3.0** (root) | `c565f0c3043a` | `LICENSE` 34 532 B · `894342980454` | 290 ★ / 55 forks | 🔴 **Do not vendor.** Vendored Apache-2.0/MIT subtrees are dependencies, not a lane | APAC |
+| [122-syf-wcy/PhysicsOS](https://github.com/122-syf-wcy/PhysicsOS) | 🟢 **Apache-2.0** | `a25c6ee26583` | `LICENSE` 11 356 B · `f1a2e5fccede` | 255 ★ / 17 forks | 🟢 **Promote.** AI reads the problem, a physics engine renders and *checks* it | APAC |
+| [cabbage2000-lab/textbook-writer-skills](https://github.com/cabbage2000-lab/textbook-writer-skills) | 🟢 **MIT** | `e2b825072ba5` | `LICENSE` 1 064 B · `0d5a33d13ca9` | 37 ★ / 12 forks | 🟢 **Promote.** Gated UbD courseware authoring; verifies or writes *"needs author confirmation"* | APAC |
+
+🔵 **All five are APAC by origin.** That is now the **fourth consecutive pass** on which the new
+permissive education supply is APAC — consistent with `intel/trends.md`'s majority-APAC reading of
+`agents/top.md`, and worth saying out loud before an EMEA or LATAM engagement assumes a
+local-origin base exists. It does not; the grant is permissive, so origin is a support and
+language question, not a licence one.
+
+### Nil results, written down
+
+- 🔴 **No new permissive education *platform* (LMS/SIS/ERP) this window, on either channel.** The
+  permissive platform tier is unchanged: OpenOLAT (Apache-2.0) and Kolibri (MIT) remain the only
+  two, and the broad ERP sweep confirms no MIT/Apache education ERP has appeared.
+- 🔴 **No new special-education / IEP address above 8 ★.** `p432`'s desert measurement stands.
+- 🔴 **No LATAM-origin and no EMEA-origin new permissive address.** Searched; nothing returned.
+
 ## 🆕 `p432` · 2026-10-25 — **The trending read found a whole category rather than a repo: special education / IEP. 584 addresses, top-30-by-recency all ≤ 5 ★ — and the one address with real momentum this window is a *content* licence, not a code one.**
 
 🔵 **Append-only. Nothing below this block was edited.**

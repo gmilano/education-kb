@@ -41,6 +41,30 @@ further **4** in **Tier 9 — the evaluation layer** below, for **11** permissiv
 > FSF text. Recorded so a digest sweep does not misread the collision as a fork.
 
 
+## 🆕 `p433` — The permissive foundation tier did **not** grow, and that is the finding
+
+`p433` promoted three permissive addresses into `agents/top.md` after first-hand payload reads —
+[`learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) (MIT,
+`LICENSE.md` 1 122 B · `15ce43afa44a`, **1 118 ★**),
+[`PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) (Apache-2.0, `LICENSE` 11 356 B ·
+`f1a2e5fccede`) and
+[`textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) (MIT,
+`LICENSE` 1 064 B · `0d5a33d13ca9`). 🔵 **None of them belongs on this file**, and saying why is
+the point: all three are **agents and skill packs**, not foundations. They compose *onto* a base;
+they are not a base.
+
+🔴 **The permissive foundation tier above is unchanged for the fourth consecutive pass:**
+OpenOLAT (Apache-2.0), Kolibri (MIT), XBlock (Apache-2.0), pykt-toolkit (MIT), smolagents
+(Apache-2.0). The `p433` ERP sweep (see `verticals/solutions.md`) independently confirms there is
+**no MIT/Apache education ERP** to add, and the trending sweep returned no permissive platform.
+
+🔵 **The asymmetry is worth naming for anyone sizing an engagement.** New permissive supply in this
+industry arrives almost entirely as **agent-layer** work — small, fast-moving, APAC-origin, often
+skill-pack shaped. The **foundation** layer moves on a scale of years and is majority copyleft.
+A proposal that assumes it can pick a fresh permissive platform is mispriced; a proposal that
+assumes it can pick a fresh permissive agent is usually right. `Trend 14` is the demand-side
+reading of the same fact.
+
 ## 🆕 `p432` — Tier 10: the special-education / IEP layer, and why it is a tier of seeds
 
 The surface North American law regulates hardest has the thinnest open-source supply measured

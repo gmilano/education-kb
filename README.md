@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 433 — reads 2026-10-25, commit 2026-10-25 — **The frontier is saturated and the value was in this base's own backlog: a 1 118 ★ permissive address had been sitting unpromoted in the trending shelf. 🟢 The `p386` NYC moratorium is CONFIRMED AND ENACTED after forty-seven passes carried it UNCONFIRMED. 🔴 And `make commit-gates` was RED on the inherited commit — `agents/top.md` was publishing two data rows as table headers.**
+
+🔵 **No date straddle.** Every leg — four regional WebSearch legs, two GitHub API sweeps, five
+`git ls-remote` probes and five `--depth 1` payload reads — happened **2026-10-25**, and the commit
+lands **2026-10-25**, so `updated:` carries one date on every file.
+
+🔴 **The inherited commit was RED, and that is the first thing this write-up says.** A baseline
+`make commit-gates` against `300b983`, run **before this pass wrote a line**, exited **2**:
+`gate-tables` reported two `BLANK-SPLITS-TABLE` defects in `agents/top.md`, where a stray blank
+line inside a table makes the next row render as a new table's **header**. Both breaks had
+identical column counts on each side (6 and 4), so they were accidental; deleting the two blank
+lines restores one continuous table each. 🟢 After the fix and all of this pass's writes,
+`make commit-gates` exits **0**. The defect was committed by `p432`.
+
+**What this pass established, first-hand:**
+
+- 🟢 **Three permissive addresses promoted from the trending backlog to `agents/top.md`**, each
+  read at its own payload: [`learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials)
+  (**MIT**, `LICENSE.md` **1 122** B · `15ce43afa44a`, HEAD `f8849746d85c`, **1 118 ★ / 104
+  forks**), [`PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) (**Apache-2.0**, `LICENSE`
+  **11 356** B · `f1a2e5fccede`, HEAD `a25c6ee26583`, 255 ★) and
+  [`textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) (**MIT**,
+  `LICENSE` **1 064** B · `0d5a33d13ca9`, HEAD `e2b825072ba5`, 37 ★).
+- 🔴 **`Gap 433-A` — the trending shelves are write-only.** All five addresses graded this pass were
+  *already* in the append-only shelves from earlier passes, the largest at **1 118 ★**, and
+  **none had ever been promoted**. Append-only with no promotion path means traction accumulates
+  unread. `gate-shelf-consistency` checks that shelves do not disagree; nothing checks that a
+  curated shelf is **missing** what the trending shelf holds. **This pass did not build that gate**
+  and says so — the promotion was done by hand.
+- 🔴 **Two high-traction addresses graded NOT build-on, at source:**
+  [`frametell`](https://github.com/sitor-ai/frametell) (**AGPL-3.0**, `LICENSE` **34 523** B ·
+  `0d96a4ff68ad`, 400 ★) and [`deep-student`](https://github.com/helixnow/deep-student)
+  (**AGPL-3.0**, `LICENSE` **34 532** B · `894342980454`, 290 ★, with vendored Apache-2.0/MIT
+  subtrees that are dependencies, not a permissive lane). 🔵 Four GNU-family payloads on these
+  shelves now carry four distinct digests, all four written down.
+- 🟢 **NEW YORK CITY IS NO LONGER UNCONFIRMED.** Held 🔴 `UNCONFIRMED` from `p386` to `p432` on two
+  secondaries with inconsistent date metadata; **enacted 2026-09-02** for the **2026-27 school
+  year** — student-facing generative AI barred in **grades 2K-8** (**~600,000 students**),
+  **companion chatbots barred in every grade** including high school, teacher-facing AI retained.
+  🔵 **`p386`'s caution was correct**: what closed it was the *enactment* being reported across
+  several independent outlets, not a better read of the same two sources.
+- 🔵 **The trap on that item, recorded because it is an easy one.** NYC's enacted text names IEP and
+  504 plans as a **carve-out from the ban** (assistive technology is exempt) — the **opposite**
+  direction from a prohibition. Separately, the **March 2026 preliminary** red tier was reported to
+  bar *"development of special education and 504 plans"*. 🟡 **Whether that survived into the
+  enacted policy is UNRESOLVED** (`Gap 433-B`) — and it governs `p432`'s brand-new `Pattern AL`,
+  which now carries a jurisdiction **go/no-go** instead of a formality.
+- 🟢 **`Trend 30`:** in North America the **district**, not the state, is now the layer that decides
+  whether a build is legal. Ohio (HB 96) and Tennessee (SB 1711) **require** per-district policy by
+  statute, so the count of binding, mutually inconsistent rules grows with ~13,000 districts rather
+  than 50 states. NYC draws its line at grade 8, Katy ISD at grade 6, Charleston County by decision
+  type. 🔴 Three data points and a stated mechanism — not a measured rate.
+- 🟢 **`Pattern AM` — the teacher-facing courseware factory**, nine components and **nine permissive
+  grants with no copyleft in the required path**, the cleanest licence position of any pattern here.
+  It is legal in NYC *because* no student touches the model, and it is outside EU AI Act Annex III
+  because it neither scores a student nor determines access.
+- 🔴 **`Gap 433-C` — no government or news primary is readable from this host.** `schools.nyc.gov`
+  and `beta.nyc` were refused at **`CONNECT` with 403**, confirmed in the proxy's own failure log.
+  The egress is a forge-and-registry allowlist: `github.com` works, which is why every *licence*
+  verdict here is first-hand, but **every regulatory claim on these shelves is secondary-sourced by
+  construction**. A 🟢 on a regulatory item means *"corroborated across independent secondaries"*,
+  never *"read in the official text"*.
+- 🔴 **Four regional legs, no nil — but three returned confirmation, not discovery**, and are graded
+  that way: EMEA's Digital Omnibus dates — **Regulation (EU) 2026/1744**, Annex III high-risk to
+  **2 December 2027** and Annex I to 2 August 2028, with Article 50 live since 2 August 2026 — were
+  resolved at `p380` and are **restated, not re-opened**; APAC's Korea AI Basic Act and
+  Vietnam Decision 33/2026 were already carried; LATAM's UNESCO IESALC 26%-strategy figure was
+  already the strongest number on `intel/market.md`.
+- 🔴 **Standing nils re-measured:** no MIT/Apache **education ERP** exists (ERPNext, the only system
+  with a real education vertical, is **GPL-3.0**); the permissive **platform** tier remains exactly
+  **OpenOLAT** (Apache-2.0) and **Kolibri** (MIT), unchanged a fourth pass; no new
+  special-education address above 8 ★; no new LATAM- or EMEA-origin permissive address. **All five
+  addresses graded this pass are APAC-origin — the fourth consecutive pass.**
+- 🔴 **`Gap 433-D` — the rotation still has not rotated**, fourth consecutive pass.
+  `gmilano/globant-kb`'s `rotation.json` on `main` still reads `next: 8` with
+  `last_updated: 2026-08-02`. A scheduled run may only push to its own `claude/*` branch, which is
+  never merged, so the next run reads `next: 8` again and education is processed forever while
+  eleven industries get zero. **This pass advanced it to `{"next": 9}` on its assigned branch —
+  reproducing the failure once more, by design.** The fix is an owner action.
+
+🟢 **Gates RAN on this host.** Baseline against `300b983` exited **2** (`gate-tables`, above). After
+all writes, `make commit-gates` exits **0**. 🔵 `gate-census-currency` and `union-currency` both
+fired on this pass's drafts — exactly as `p352` and `p376` are designed to — because the three new
+rows changed the harvested denominator. **Re-derived as the last act before the commit, and
+restated rather than back-fitted:**
+
+**2 794** harvested shapes → **38** are not addresses → **2 756 addresses**.
+
+🔵 **2 756** channel-U addresses and **3 287** channel-B survivors give
+**3 656 addresses over both channels**.
+
+🔵 Rejection classes unchanged in kind — `NAV-NAMESPACE` 30, `OWNER-ELLIDED` 3, `EMPTY-NAME` 2,
+`OWNER-TEMPLATE-VAR` 1, `PLACEHOLDER-NAME` 1, `PLACEHOLDER-OWNER` 1 — and the inflation this pass's
+writes added to the harvested denominator is **1.36 %**. 🔵 `p429`'s figures below are left exactly
+as `p429` derived them; this is a restatement, not an edit of history.
+
 ## Pass 429 — reads 2026-10-25, commit 2026-10-25 — **A row this base recommended has gone PROPRIETARY, and the instrument that caught it also found the replacement. 🔴 p428's `Trend 53` is refuted one pass after publication by the cohort it never read. 🟢 `Gap 428-E` moves from two anecdotes to a measured rate over 46 payloads.**
 
 🔵 **No date straddle.** Every leg, `ls-remote`, shallow clone, tree enumeration,

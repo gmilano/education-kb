@@ -57,7 +57,7 @@ carries a copyleft obligation.
    each goal; an LLM narrative *on top of* those numbers, never instead of them.
 8. **Serve the parent from the same instance** with the `access-to-education` corpus.
 
-### 🔴 The five things that will bite, named up front
+### 🔴 The six things that will bite, named up front
 
 1. **No evaluation exists for this category.** `p431`'s tutor-evaluation tier (`tutor_gym`,
    `tutorbench`) does not score IEP goal quality, and no IEP benchmark surfaced. **Budget to build
@@ -73,6 +73,23 @@ carries a copyleft obligation.
 5. **AGPL contamination risk is concentrated in one optional step.** If `AlloFlow` is adopted,
    hold it behind a network interface and write the boundary into the architecture document. The
    temptation to fork "just the differentiation bit" is how AGPL enters a deliverable.
+6. 🆕 `p433` **THE JURISDICTION CHECK IS NOW THE FIRST GATE, AND NEW YORK CITY IS WHY.** This
+   pattern assumes draft-and-sign is sufficient because no US rule bars an AI *draft* of an IEP —
+   only AI as the *sole basis* for the decision. 🔴 **That assumption is no longer safe
+   everywhere.** NYC Public Schools' **March 2026 preliminary** guidance was reported to place
+   **"development of special education and 504 plans"** on its **red / prohibited** tier — not
+   "not the sole basis", but prohibited. NYC then **enacted** a student-facing generative-AI
+   moratorium for 2026-27 (2026-09-02, grades 2K-8, ~600,000 students). 🟡 **Whether the
+   plan-development prohibition survived into the enacted policy could not be established**
+   (`Gap 433-B`), and the enacted text that *is* quoted names IEP/504 only as an **exemption**
+   from the ban for assistive technology — the opposite direction.
+   🔵 **So the instruction is procedural, not a verdict.** Do not pitch this pattern into a
+   district until its own rule is read: in the largest US district the answer may be *prohibited
+   outright*, which no amount of human-sign-off architecture cures. Week 1's "jurisdiction pinning"
+   (below) stops being a formality and becomes a **go/no-go**: pin the district's own AI policy,
+   not just the state statute, and get the red-tier list in writing. **Charleston County and NYC
+   are now two independent NA districts naming special education explicitly** — treat
+   district-level prohibition as the base case to disprove, not the edge case.
 
 ### Shape and duration
 
@@ -88,6 +105,99 @@ inclusive-education mandates of Brazil, Chile and Colombia have **no open-source
 `robotros` kit as a structural reference only.
 
 ---
+
+## 🆕 Pattern AM — `p433` The **teacher-facing courseware factory**: the build that is legal in NYC *because* no student ever touches the model
+
+**Why this pattern exists.** `Trend 30` establishes that the binding US rule is now the
+**district's**, and that the districts prohibit by **grade band** and by **who faces the model**:
+NYC bars student-facing generative AI in grades 2K-8 and companion chatbots in *every* grade, while
+**explicitly retaining teacher-facing AI for lesson planning and translation**. Katy ISD draws the
+same kind of line at grade 6. 🟢 **That is not a constraint to work around — it is a specification.**
+A system whose only user is a teacher, and whose output is courseware a human approves before any
+student sees it, is sellable into the single largest US district *today*, in the grade bands where
+every student-facing product is currently barred. It is also, by construction, outside EU AI Act
+Annex III: it neither scores a student nor determines access to education.
+
+### The stack, with the grant on every piece — all read at HEAD on 2026-10-25
+
+| Role | Component | Grant | HEAD | Payload |
+|---|---|---|---|---|
+| Authoring chain (the core) | [cabbage2000-lab/textbook-writer-skills](https://github.com/cabbage2000-lab/textbook-writer-skills) | **MIT** | `e2b825072ba5` | `LICENSE` 1 064 B · `0d5a33d13ca9` |
+| Source-material ingest | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | **MIT** | `f8849746d85c` | `LICENSE.md` 1 122 B · `15ce43afa44a` |
+| STEM grounding (physics) | [122-syf-wcy/PhysicsOS](https://github.com/122-syf-wcy/PhysicsOS) | **Apache-2.0** | `a25c6ee26583` | `LICENSE` 11 356 B · `f1a2e5fccede` |
+| Orchestration | [huggingface/smolagents](https://github.com/huggingface/smolagents) | **Apache-2.0** | `96f33faaf028` | `LICENSE` 11 357 B · `c71d239df917` |
+| Delivery base — AI *inside* | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | `d073ad444fe5` | `LICENSE` 10 982 B · `6dbc5b605ed0` |
+| Delivery base — offline/equity | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | `44a4e68aac3e` | `LICENSE` 1 097 B · `3c056b34a476` |
+| Delivery base — Open edX client | [openedx/XBlock](https://github.com/openedx/XBlock) | **Apache-2.0** | `c73c4bb42aa7` | `LICENSE.TXT` 11 358 B · `cfc7749b96f6` |
+| Did it work? | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `ccbaf37b07e3` | `LICENSE` 1 066 B · `f5f955194636` |
+| Regression on prompt change | [shuangyan123/tutorbench](https://github.com/shuangyan123/tutorbench) | **Apache-2.0** (code) | `f9d69c7ce3e1` | `LICENSE` 11 358 B · `cfc7749b96f6` |
+
+🟢 **Nine components, nine permissive grants, zero copyleft in the required path** — and no
+quarantined AGPL step at all, unlike `Pattern AL`. This is the cleanest licence position of any
+pattern on this file.
+
+### How it wires together
+
+1. **Ingest** — teacher drops the syllabus, textbook chapters, slide decks and standards documents
+   into `learn-from-materials`. It produces a **traceable** knowledge base: every extracted claim
+   keeps a pointer back to the source page. **Keep that traceability; it is the audit artefact**
+   that answers "where did this lesson come from?" later.
+2. **Author** — `textbook-writer-skills` runs its gated UbD chain over that KB: teaching
+   positioning → five-part gate → chapter-tree gate → four-stage chapter writing → review. 🟢 **Do
+   not remove its gates.** Its verify-or-flag behaviour — recompute STEM claims, check humanities
+   citations word-by-word, emit *"needs author confirmation"* where it cannot verify — is the
+   single most valuable property in the stack, because it converts the model's uncertainty into a
+   teacher's task queue instead of into confident prose.
+3. **Ground the STEM** — for physics, route generated worked examples through `PhysicsOS`: the
+   physics engine **executes** the scenario, so a wrong number is caught by simulation rather than
+   by a reviewer's eye. This is the only component in this base that can falsify its own output.
+   🔵 Physics only; there is no equivalent for chemistry or biology (see the limits below).
+4. **Orchestrate** — `smolagents` holds the chain. Two reasons over a heavier framework: it is
+   minimal enough that the gate logic stays legible in review, and it is **EU-domiciled**, which is
+   a procurement answer in EMEA rather than a technical one.
+5. **The approval gate — this is the pattern, not a step in it.** Nothing reaches a learner until a
+   named teacher approves it. Store approver identity, timestamp, the model and version used, and
+   the diff between generated and approved text. **This record is the product** in a district that
+   must show AI did not decide anything.
+6. **Deliver** — publish approved courseware into the base: **OpenOLAT** when the client needs a
+   full LMS and can take the AI layer *inside* the platform (the only Apache-2.0 LMS, so this is
+   lawful); **Kolibri** where connectivity or equity is the constraint; an **XBlock** component
+   when the client is already on Open edX and the Apache-2.0 seam keeps your code out of the
+   platform's AGPL reach.
+7. **Measure** — `pykt-toolkit` over the resulting activity data for knowledge tracing, so the
+   claim "this courseware worked" is defensible rather than rhetorical. `tutorbench` as the
+   **regression** harness: re-run it on every prompt or model change, because a silent quality
+   regression in a courseware factory ships to every class at once.
+
+### 🔴 The four things that will bite
+
+1. **`textbook-writer-skills` is 37 ★ with 12 forks and no second maintainer.** Fork it, pin
+   `e2b825072ba5`, and price maintenance in. Its gates are the asset; a fork that strips them to
+   "go faster" deletes the reason to choose it.
+2. **`learn-from-materials` carries an author-key flag.** Its MIT payload names
+   `Copyright (c) 2025 virgiliojr94` while the owner is `dmoshehun-prog` and the repository was
+   created 2026-09-08. **The MIT grant stands** — but before vendoring into a client deliverable,
+   raise it with the maintainer and record the answer. `agents/trending.md` `p433` has the detail.
+3. **`PhysicsOS` grounds physics and nothing else.** Do not generalise its guarantee. For
+   non-physics STEM the stack is back to `textbook-writer-skills`' recompute-or-flag, which is
+   honest but weaker. Say which subjects are grounded in the proposal.
+4. **Copyright of the *source* material is the client's problem and it will land on you.** Ingesting
+   a commercial textbook into a KB and generating derived courseware is a licensing question about
+   the textbook, not about any component here. Surface it in week 1. 🔵 This is the one risk in
+   this pattern that no licence read on these shelves can clear.
+
+### Shape and duration
+
+**6–8 weeks** to a teacher-piloted factory: 1 week ingest and traceability, 2 weeks authoring chain
+and gate tuning against the client's standards, 1 week STEM grounding where applicable, 1 week
+approval workflow and audit record, 1–2 weeks delivery into the chosen base, 1 week measurement
+wiring. 🟢 **Shorter than `Pattern AL` (10–14 weeks) for a structural reason**: there is no
+jurisdiction go/no-go to clear first, because teacher-facing-with-human-approval is the lane the
+restrictive districts *left open on purpose*.
+
+🔵 **Where this pattern is the wrong answer:** a client who wants a student-facing tutor. Say so
+plainly and move them to `Pattern AJ` or `Pattern AI` — and tell them which grade bands they can
+sell it into, which in NYC today is high school only, and never as a companion chatbot.
 
 ## 🆕 Pattern AJ — `p431` The evidence-gated tutor pilot (the deliverable that survives a board review in NA, EMEA and APAC)
 
