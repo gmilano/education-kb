@@ -4,6 +4,287 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p445` · 2026-10-25 — **`Gap 444-A` is ANSWERED, and the answer refutes `Trend 44`, which this base published one pass ago. 🔴 "The institution publishes and does not licence" is IFRN-specific, not institution-generic: measured over **3 932** first-hand addresses instead of 5, institutional publishers grant at **72.2 %** against a **76.3 %** baseline, Fisher **p = 0.558**. 🔴 And the discovery channel this pass was told to run returned **0 new addresses from 14 candidates**.**
+
+🔵 **Why this pass went at the base's own freshest claim instead of at a region.** `p444`
+closed with `Gap 444-A` in its own words: *"Does 'the institution publishes and does not
+licence' hold outside Brazil?"* — and `Trend 44` had already been published on `intel/trends.md`
+as a trend, on this basis:
+
+| publisher class | n | grants present |
+|---|---|---|
+| institution | 3 | 🔴 **0** |
+| individual | 2 | 🟢 **2** |
+
+🔴 **n = 5. One country, one platform (SUAP), one institution (IFRN).** A rate of zero
+measured on three repositories became a trend about institutions, one pass after this base
+corrected `p443`'s `Trend 42` for exactly the same error — *too small to carry the claim it was
+used for*. So the gap was worth more than another region.
+
+### 🔴 First, the prescription could not be followed, and the reason is a host limit
+
+`Gap 444-A` prescribed *"probe the institutional GitHub orgs behind the paying platforms —
+UANL, U. de Chile, UNAL, the federal-university SIGAA operators"*. That needs org
+enumeration. Re-measured this hour on this host:
+
+| channel | result |
+|---|---|
+| `api.github.com/search/repositories` | 🔴 **403** |
+| `github.com/search?q=…&type=repositories` | 🔴 **403** |
+| `git ls-remote https://github.com/<owner>/<repo>` | 🟢 resolves |
+| `raw.githubusercontent.com` | 🟢 serves |
+
+🔴 **There is no channel here that answers "list the repositories owned by `unal`".** So the
+prescription's *method* is unavailable, and a pass that reported it as unpaid would be
+reporting a host limit as an absence.
+
+🟢 **But the gap's QUESTION needs no new network.** Every address this base has verified
+first-hand across 445 passes is already on disk: **1 228 TSVs** under `evidence/`. Classifying
+*those* by publisher class answers the question at a denominator three orders of magnitude
+above five, and costs nothing. Instrument, pipeline and limits:
+[`compose/code/p445-publisher-class-census/README.md`](../compose/code/p445-publisher-class-census/README.md).
+Recipe: `Pattern AX`.
+
+### 🟢 The census
+
+Built from this base's own accumulated first-hand reads, never from column names — the 61
+`verified-repos.*.tsv` alone carry 20+ header forms, so the extractor finds the slug by
+pattern and decides grant presence from a word-bounded licence-FAMILY match against this
+base's own absence verdicts (`NO-PAYLOAD`, `NO-GRANT-PATH`, `ABSENCE-ENUMERATED`,
+`DECLARED-NOT-GRANTED`). A row carrying neither signal is **excluded and counted as
+excluded**, because a guess here would be a measurement of the classifier.
+
+| | n |
+|---|---|
+| evidence files read | 1 228 |
+| rows scored | 18 957 |
+| rows excluded as unscoreable | 26 287 |
+| 🟢 **distinct addresses with a first-hand grant verdict** | 🟢 **3 932** |
+
+Two decisions worth naming, both of them this base's own prior findings rather than new
+choices. **Casefold dedupe:** `p443` measured that *no case oracle exists on this host* —
+every GitHub channel resolves `owner/repo` case-insensitively — so `CAHLR/OATutor` and
+`cahlr/oatutor` are one address, and counting them twice would inflate exactly the class
+under test. **Licence ids are not addresses:** the grammar censuses wrote rows like
+`0/agpl-3.0` into slug-shaped cells, and scoring those would count the classifier's own
+vocabulary as repositories.
+
+| class | n | grant | rate |
+|---|---|---|---|
+| INSTITUTIONAL | 36 | 26 | 🟡 **72.2 %** |
+| NON-INSTITUTIONAL | 3 896 | 2 971 | **76.3 %** |
+
+🔴 **Fisher exact, two-tailed: p = 0.558.** Institutional 95 % CI **56.0 – 84.2 %**;
+non-institutional **74.9 – 77.6 %**. The intervals overlap almost completely.
+
+### 🔴 Then all 36 institutional rows were hand-labelled — the whole class, not a sample
+
+| | n | grant | rate |
+|---|---|---|---|
+| 🔴 **false positives, hand-labelled** | 🔴 **9 of 36** | — | 🔴 **precision 75.0 %** |
+| false positives removed, by ADDRESS | 27 | 18 | **66.7 %** |
+| same data, by **PUBLISHER** | 15 | 11 | **73.3 %** |
+| non-institutional, same unit | 2 914 | 2 246 | **77.1 %** |
+
+🔴 **The nine false positives, and the pattern in them.** `UniversalDependencies` (six
+addresses) is an NLP treebank consortium that matched on `univ` *inside its own name*;
+`EscolaLMS` is a Polish LMS **vendor**; `schoolutils` is a developer utility org;
+`schoolyardsms` is an SMS product. Every one of them is a **supplier or a project**, matched
+on an institution WORD. Full labels and reasons: `handlabel.tsv`. Four are asserted as
+regression cases in `test_publisher_class.py` (**21/21 offline**) so a successor who tightens
+the classifier sees them flip rather than rediscovering the contamination.
+
+### 🔴 The verdicts against the predictions registered BEFORE the census ran
+
+`scratchpad/p445/predictions.txt`.
+
+| | verdict |
+|---|---|
+| **P3** institutional rate < non-institutional | 🟡 **CONFIRMED in direction, every way it is cut** — 72.2 / 66.7 / 73.3 % against 76.3 / 77.1 % — 🔴 **but p = 0.558: indistinguishable from noise** |
+| **P4** `p444`'s rate of ZERO will not reproduce | 🟢 **CONFIRMED.** The institutional rate is 66.7–73.3 %, nowhere near 0 % |
+| **P5** the classifier, not the arithmetic, is the binding error term | 🟢 **CONFIRMED.** Precision 75.0 % |
+
+### 🔴 So `Gap 444-A` is answered, and the answer is a correction of this base
+
+**"The institution publishes and does not licence" does not generalise. It is IFRN-specific,
+not institution-generic.** `Trend 44` is corrected on `intel/trends.md` rather than left
+standing — `Trend 45` carries the replacement.
+
+🔴 **And the second finding is about this base, not about institutions.** Only **36 of 3 932**
+addresses — **0.9 %** — have an institutional publisher at all. Nine are misclassifications.
+The surviving 27 come from **15 publishers**, and **one of them, `cahlr` (a UC Berkeley
+research lab), supplies 9**. The correct unit of analysis is the publisher, not the address,
+so the real n is **15** against `p444`'s 5.
+
+🟡 **Graded honestly, therefore, the verdict is not "yes" or "no" but this:** the claim is
+**refuted at the magnitude it was stated**, and the corpus is **too thin in this class to put
+a sharp number on whatever residual effect remains**. That thinness is now measured instead of
+assumed, which is what `Gap 445-A` hands forward.
+
+🟢 **The one thing that survives, and it is still worth money.** `ifrn` + `ifrn-oficial` remain
+the only institutional publisher in the entire 3 932-address corpus with **multiple addresses
+and zero grants** (3 addresses, 0 grants). That is a real, sharp fact about **IFRN**, and
+`Pattern AW` is still the correct response to it. It was never a fact about institutions.
+
+### 🔴 The discovery legs: 14 candidates, 0 new addresses — and the mandated channel is saturated
+
+This pass ran the four mandated global English legs (`top open source AI agents education
+2026 github MIT`, `github trending education AI 2026`, `open source platform education … MIT
+Apache`, `AI education industry trends 2026`) plus one shaped leg at the **agent-addressable**
+category this base values most — LMS MCP servers.
+
+| leg | candidates | 🟢 new to this base |
+|---|---|---|
+| 4 × mandated global English | 🔴 0 addresses (listicles and market-research pages only) | 🔴 **0** |
+| LMS MCP servers (Canvas + Moodle) | 10 | 🔴 **0** |
+
+🔴 **All ten were already here, and not marginally:** `vishalsachdev/canvas-mcp` appears in
+**77** files of this base, `bruchris/canvas-lms-mcp` in **70**, `csmediapro/moodle-mcp-server`
+in **43**, `r-huijts/canvas-mcp` in **41**. 🔵 This is `p443`'s measurement (28 of 29 already
+known) reproduced on a *different and better-shaped* query, which upgrades it from a result
+about one query to a result about the **channel**: **generic English discovery is exhausted
+for this base.** A successor should not re-buy it, and the four mandated global legs should be
+run as a *confirmation* channel, not a discovery one.
+
+🔴 **A caution for whoever reads that MCP tier as ten options:** six of the ten carry near-identical
+descriptions ("up to 102 tools and 8 agent skills"), which is a fork arm, not ten projects. The
+distinct-project count was not measured this pass and is `Gap 445-C`.
+
+### 🟢 What DID pay: the platform-noun channel, for a third pass running — and it paid copyleft
+
+`Gap 444-B` named the unrun legs: a Peruvian university's **system-of-record** noun, a UdelaR
+platform noun for Uruguay, and Mexico beyond UANL. All three were run. Every address below was
+read first-hand this hour — existence and real default ref by `git ls-remote --symref`, every
+grant path by `git ls-tree -r` over a blobless clone, every payload measured from the file by
+`lib/measure`. Full table:
+[`evidence/verified-repos.2026-10-25-p445.tsv`](../evidence/verified-repos.2026-10-25-p445.tsv).
+
+| address | grant, read first-hand 2026-10-25 | HEAD | files |
+|---|---|---|---|
+| [`macielti/sigaa-cli`](https://github.com/macielti/sigaa-cli) | 🟡 **GPL-3.0** · `LICENSE` 35 149 B · `3972dc9744f6` | 2020-01-04 | 25 |
+| [`fernandobrito/cursos_ufpb`](https://github.com/fernandobrito/cursos_ufpb) | 🟡 **GPL-3.0** · `LICENSE` 35 141 B · `589ed823e9a8` | 2017-01-26 | 168 |
+| [`fernandobrito/ufpb_sigaa_api_old`](https://github.com/fernandobrito/ufpb_sigaa_api_old) | 🟡 **GPL-3.0** · `LICENSE` 35 141 B · `589ed823e9a8` | 2016-02-07 | 14 |
+
+🟢 **Three new addresses, all three new to this base (0 prior mentions each), all three on
+SIGAA** — the Brazilian federal-university system of record `p443` bought this channel on.
+🔴 **And all three are GPL-3.0 and stale (2016–2020).** So the SIGAA integration tier is
+**real supply that cannot be vendored**: the shape is read-and-reimplement, or integrate over
+the interface, never ship the repository. That is consistent with `p444`'s correction and
+sharpens it — the student side of the glass is not *permissive*, it is **mixed, and on this
+platform it is uniformly copyleft**.
+
+🔴 **The Mexico leg found exactly one address and it is DEAD.** Universidad de Guadalajara runs
+**SIIAU**, and the only integration SDK for it is `dev-cucei-itrans/siiau-api-client` — a
+Laravel client for SIIAU's internal API, published on Packagist, which marks it **abandoned**.
+Probed first-hand: 🔴 **`git ls-remote` DOES NOT RESOLVE.** The package survives on Packagist;
+its GitHub address does not. 🔵 That is a cleaner negative than a nil: the shape existed for
+SIIAU, somebody built it, and it is gone. An engagement at UdeG starts from zero.
+
+### 🔴 Two nils, written down as nils
+
+| leg | shape | result |
+|---|---|---|
+| 🔴 **Uruguay — UdelaR** | `bedelías` / UdelaR platform noun | 🔴 **NIL.** The only artefact is a **2015 Facultad de Ingeniería student report** describing a scrape of the bedelías site to render prerequisites; no repository is published with it |
+| 🔴 **Peru — university system of record** | PUCP *Campus Virtual*, UNI *SIGA*, UNSA | 🔴 **NIL on a SECOND channel.** PUCP's portal has an official mobile app authenticating against Campus Virtual and **no public integration code**; UNI and UNSA return nothing |
+
+🔵 **Peru's reading matters because `p444` already recorded a nil there on a different
+channel** — the ministry noun (SIAGIE) and the university's own *name* (UNMSM, which returned
+884 coursework repos). This pass ran the channel `Gap 444-B` said had never been run, the
+**system-of-record noun**, and it also returned nothing. 🔴 **Peru is now twice-unpaid on two
+distinct channels, which is weak evidence of a real absence rather than a measurement
+artefact** — and that is a different and more useful statement than "unpaid". `Gap 445-B`
+carries it.
+
+### 🟡 `Gap 444-C` was NOT run, and the reason is recorded rather than left as silence
+
+`Gap 444-C` asks for *"one issue per address, on the five most engagement-relevant"* of the 18
+ungranted addresses, to test whether **asking** for a licence works. 🔴 **This pass declined to
+run it.** Filing issues writes to third parties' repositories under Globant's name, and this
+pass ran unattended on a schedule with no human in the loop. 🟡 **It is registered as
+requiring a human decision, not as unpaid work** — the experiment is still worth running, by
+someone who can authorise an outward-facing message. `Gap 445-D`.
+
+🟢 **What was re-verified instead, because it was free:** `sebassg/sia-unal-mcp`, the Colombian
+MCP server `p444` shelved as ungranted, re-probed this hour at the **same** HEAD
+`529e017f264c` — grant state **`ABSENCE-ENUMERATED` over 35 paths**. 🟢 `p444`'s cell
+**reproduces**. And `ivmelo/suapbot` re-reads as **AGPL-3.0 · 34 520 B**, HEAD `d1f90f18ecf5`,
+2017-08-24, 121 files — unchanged, still nine years stale.
+
+### 🔴 The gate suite, run as the contract requires — and FOUR gates were RED ON ARRIVAL
+
+🔵 Final state of this commit: 🟢 **`make commit-gates` exits 0 — 60 blocking gates green**,
+202 published payload cells, **202 green, 0 red**. Two declared, non-blocking reds:
+`gate-census-union` (`Gap 400-B`, inherited) and `gate-promotion-ledger` (🆕 `Gap 445-H`).
+
+🔴 **But the suite was red on arrival on four gates, and every one of them is `p444`'s.**
+Attributed the way `p443` did it — by re-running each against `ed86a96` with this pass's writes
+**stashed**, so the arrival state is measured rather than assumed:
+
+| gate | state at `ed86a96` (`p444`'s commit) | cause |
+|---|---|---|
+| `gate-register-currency` | 🔴 **RED** — *register newest=p443; shelves newest=p444, stale by 1* | `p444` published five gaps in shelf prose and never registered them in `intel/open-gaps.md` |
+| `gate-census-currency` | 🔴 **RED** — published 2 820, derived 2 835 | `p444` shelved its tranche and did not restate the triple |
+| `gate-union-currency` | 🔴 **RED** — 3 of 3 union cells stale | same |
+| `gate-promotion-ledger` | 🔴 **RED** — `C1-UNADJUDICATED lib/measure` | `Gap 421-C` firing live; see `Gap 445-H` |
+
+🟢 **All four are discharged or declared in this commit**, and `p444`'s gaps are carried into the
+register with this pass's verdicts attached rather than silently absorbed.
+
+🔴 **`p444`'s eleven published payload cells had never been swept either.** The record is a
+set since `Gap 443-E`, so this pass appended its own
+(`evidence/published-cell-reproduction.2026-10-25-p445.tsv`) rather than editing another pass's
+evidence. 🟢 **All 16 swept cells returned `REPRODUCES`** — `p444`'s eleven were *correct and
+unrecorded*, which is a different and much better finding than wrong.
+
+🔴 **And this pass found its own defect before the gate did not.** The three new SIGAA rows were
+first published with the **HEAD sha in the payload-digest slot**, and the foundations rows
+carried **no digest at all** — so `gate-cell-reproduction` could not see them, and the published
+cell count was **198** when it should have been 202. Repaired by measuring each payload with
+`lib/measure --cell`: `macielti/sigaa-cli` **35 149 B · `3972dc9744f6`**,
+`fernandobrito/cursos_ufpb` and `fernandobrito/ufpb_sigaa_api_old` both
+**35 141 B · `589ed823e9a8`** (identical payloads, same author). 🔵 **A cell the gate cannot
+parse is worse than a wrong one**, because it is green by omission — the same class as
+`Trend 38`'s *"unknown and fine render identically"*.
+
+### 🟢 `Gap 423-E`'s pinned-literal class, FIFTH instance — and this one was on the instrument that governs declarations
+
+🔴 Declaring `gate-promotion-ledger` red is the sanctioned mechanism (`p423`: a declaration
+costs a registered gap, in the open, under a pass number). It was **impossible** to use:
+`test_commit_gate.py` pinned `assertEqual(red, ["gate-census-union"])` — the *content* of the
+declaration list — inside a control whose stated purpose is only to prove the Makefile parser
+did not silently return `[]`.
+
+🔵 **Effect: a pass making a legitimate, registered declaration could not do so without editing
+the control that guards declarations** — which from the outside is indistinguishable from
+silencing it. 🟢 **Fixed with `Gap 423-E`'s own standing remedy — derive the literal, don't pin
+it:** the control now asserts the list parsed non-empty and that every declared gate is in
+`HOOK_GATES`, which is the invariant it exists for. 🟢 **Registration is NOT weakened** —
+`test_the_live_declaration_is_registered` (`cg.gate() == []`) is untouched and still enforces
+`P423-UNREGISTERED-RED`. 16/16 controls pass.
+
+🔵 `Gap 443-E` predicted this: *"nothing on this base enumerates its own suites for pinned
+evidence paths, so a fifth instance is as undetectable as the first four were."* It was the
+fifth, and it was found by tripping over it rather than by an instrument.
+
+### 🆕 Gaps this pass hands forward
+
+| gap | what it says |
+|---|---|
+| 🆕 `Gap 445-A` | 🔴 **The corpus holds 15 institutional publishers and cannot settle `Gap 444-A`'s residual.** 0.9 % of 3 932 addresses, one lab supplying 9 of 27. 🟢 **Prescription:** the binding constraint is org enumeration, which is 403 here. Find a channel that lists an owner's repositories without `api.github.com` — a package registry's owner index, a mirror, or `git ls-remote` against a *guessed* slug set built from the institution's own site — and the class becomes measurable |
+| 🆕 `Gap 445-B` | 🟡 **Peru is twice-unpaid on two distinct channels, which is now weak evidence of absence.** Ministry noun (`p444`) and system-of-record noun (`p445`) both nil. 🟢 **Prescription:** one more channel decides it — the *private* Peruvian universities (UPC, UTP, Continental) run commercial platforms with student developer populations; if those are nil too, Peru should be written down as a genuine supply absence and stop being re-bought |
+| 🆕 `Gap 445-C` | 🟡 **The LMS-MCP tier's distinct-project count is unmeasured.** Six of ten candidates share near-identical descriptions, which is a fork arm. This base shelves some of them as separate rows. 🔵 Nothing has checked whether its own MCP shelf counts forks as projects |
+| 🆕 `Gap 445-D` | 🟡 **`Gap 444-C` reclassified, not dropped.** The ask-for-a-licence experiment requires an outward-facing message under Globant's name and cannot be run by an unattended pass. It needs a human decision, and it is still the cheapest available move on 18 unusable addresses |
+| 🔴 `Gap 443-A` | 🔴 **Untouched for a second pass.** The promotion ledger's population is still not derived from the record; `PROMO_RATCHET = 148` still measures claims, not findings |
+| 🟡 `Gap 444-D` | 🟡 **Untouched.** The homonym audit over existing *sell* rows was not run this pass; the census took the hour. Still the right next instrument after `Gap 445-A` |
+| 🟢 `Gap 444-A` | 🟢 **ANSWERED — and it refutes `Trend 44`.** See above; replacement is `Trend 45` |
+| 🟢 `Gap 444-B` | 🟢 **PAID in part.** Mexico and Uruguay legs run and reported (one dead address, one nil); Peru run and nil, carried forward as `Gap 445-B` |
+| 🟢 `Gap 444-F` | 🟢 **PAID.** LATAM adoption now has a named instrument with a stated method and population — see `intel/market.md` |
+| 🆕 `Gap 445-H` | 🔴 **`gate-promotion-ledger` DECLARED RED.** `Gap 421-C` firing live: `claims.py::slugs_in` reads this base's own backticked tool path `lib/measure` as a promoted GitHub address. Red on arrival at `ed86a96`. 🔵 Deliberately **not** fixed — the parser is shared by three gates and narrowing it moves `PROMO_RATCHET`, which needs its own pass and its own before/after figures, not a late side-effect |
+| 🆕 `Gap 445-G` | 🟡 **A gate nobody runs on arrival cannot tell whose defect it is.** Four gates were red on arrival this pass and establishing that cost a stash. 🟢 **Prescription:** run `make commit-gates` BEFORE the first write of a pass and record the arrival state |
+| 🟢 `Gap 423-E` | 🟢 **Fifth instance found and CLOSED on `test_commit_gate.py`** — the pinned declaration list that made a registered declaration impossible. Remedy was its own standing one: derive the literal. 16/16 controls pass, registration contract untouched |
+
+---
+
 ## 🆕 `p444` · 2026-10-25 — **`Gap 443-B` is paid, and four of its five "nils" were the wrong question, not an absence. 🟢 The variable is not the country and not the string: it is WHO OPERATES THE PLATFORM — 6 of 8 university-system legs pay, 0 of 5 ministry legs do. 🔴 And across 37 addresses verified first-hand, the modal grant is NO GRANT AT ALL (18, 49 %), which refutes `Trend 42` one pass after this base published it.**
 
 🔵 **What `p443` handed this pass.** `Gap 443-B` listed five countries where the

@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p445` — **Two more systems of record mapped, and they are the two OPPOSITE ends of this map: 🟡 SIGAA has a real documented integration layer that is uniformly GPL-3.0, and 🔴 SIIAU has NOTHING — its only SDK's repository has been deleted**
+
+🔵 **Why these two.** `p444` added **SUAP** as the first entry on this map that is
+*open-ecosystem without being open-source*. This pass ran the platform-noun channel at three
+more countries and the two results that landed are a matched pair: the same platform class
+(university system of record), the same region, and **opposite supply states**. Read together
+they are the argument for `Pattern AX` — you cannot price one from the other.
+
+### 🟡 SIGAA — Brazil's federal universities. Supply exists, is documented, and cannot be vendored
+
+🟢 **What it is.** **SIGAA** (*Sistema Integrado de Gestão de Atividades Acadêmicas*) is the
+academic system of record across Brazil's **federal university** network — UFPB, UFRN, UFMG and
+the rest. It holds curricula, enrolment, grades and class administration. Technically it is a
+**JSF web application with no public REST API**, which is why every integration in existence is
+a parser rather than a client.
+
+| | |
+|---|---|
+| **Operator** | each federal university runs its own instance |
+| **Region** | **LATAM** (Brazil) |
+| **Source available?** | 🔴 **No.** The platform itself is not public |
+| **Integration supply** | 🟢 **Yes — three addresses, verified first-hand 2026-10-25** |
+| **Licence of that supply** | 🔴 **GPL-3.0, all three of three** |
+| **Freshness** | 🔴 2016, 2017, 2020 |
+
+| address | grant | HEAD | gives you |
+|---|---|---|---|
+| [`fernandobrito/cursos_ufpb`](https://github.com/fernandobrito/cursos_ufpb) | 🟡 GPL-3.0 · 35 141 B · `cbdcf32a9188` | 2017-01-26 · 168 files | the endpoint shape (`/api/curricula`) and the `sigaa_parser` logic |
+| [`macielti/sigaa-cli`](https://github.com/macielti/sigaa-cli) | 🟡 GPL-3.0 · 35 149 B · `85b9a51f5603` | 2020-01-04 · 25 files | the **auth flow against any SIGAA instance**, by configurable base URL |
+| [`fernandobrito/ufpb_sigaa_api_old`](https://github.com/fernandobrito/ufpb_sigaa_api_old) | 🟡 GPL-3.0 · 35 141 B · `4fa17f22c442` | 2016-02-07 · 14 files | the reference shape for "SIGAA behind an HTTP API" |
+
+🟢 **How to customise with AI on top — and it is NOT the usual answer for this map.** For Moodle
+or Open edX the move is *write a plugin*. For SIGAA there is no plugin seam and no licence that
+permits vendoring, so the move is: **read these three as specification, write a clean-room
+adapter, wrap it as an MCP server, and put the agent layer on that.** Full stack with every
+licence measured: `Pattern AY`. 🔴 The adapter is unavoidable work; budget it as build, not as
+integration.
+
+🔴 **The access gate is separate from the licence gate and is the one that stops projects.**
+SIGAA holds student records. A grant answers copyright only; *may we call this system* lives in
+the university's terms of use. Get written registrar authorisation before the adapter touches
+production.
+
+### 🔴 SIIAU — Universidad de Guadalajara. Zero supply, and that is a measurement, not an absence of information
+
+🟢 **What it is.** **SIIAU** (*Sistema Integral de Información y Administración Universitaria*)
+is UdeG's own system of record — finance, HR, school records and planning, with **SIIAU Escolar**
+as the student-facing portal for grades, credits and mobility paperwork. UdeG describes itself as
+the first Mexican institution to build such a system for its own needs, and it is consolidated
+and heavily used. Mexico's second-largest public university system runs on it.
+
+| | |
+|---|---|
+| **Operator** | Universidad de Guadalajara |
+| **Region** | **LATAM** (Mexico) |
+| **Source available?** | 🔴 **No** |
+| **Integration supply** | 🔴 **ZERO.** One SDK ever existed: `dev-cucei-itrans/siiau-api-client`, a Laravel client for SIIAU's internal API, published on Packagist and **marked abandoned** there |
+| **Probed first-hand 2026-10-25** | 🔴 `git ls-remote https://github.com/dev-cucei-itrans/siiau-api-client` → **DOES NOT RESOLVE** |
+
+🔵 **Why this entry is worth as much as a positive one.** The package record survives on
+Packagist; **the repository behind it is gone.** So the shape existed for SIIAU — somebody built
+a client, published it, and deleted it — and an engagement at UdeG therefore starts from **zero**,
+not from an unmaintained base it can revive. 🟢 **That is a scoping fact a proposal can be
+written against**, and it is the single most common case on this map to be mistaken for *"we'll
+find something open source"*. 🔴 Price the adapter as greenfield, and treat the dead Packagist
+entry as evidence that UdeG's integration surface is reachable, not as a starting point.
+
+🔵 **Where to go instead for Mexico, from this base's own legs:** **SIASE** (UANL) returned six
+addresses (`p444`, top at 38 ★). An engagement that needs a *reference* Mexican implementation
+should read SIASE's tier, not SIIAU's.
+
+### 🔴 Two nils on this map, recorded so nobody re-buys them
+
+| platform | country | result |
+|---|---|---|
+| **UdelaR** / `bedelías` | Uruguay | 🔴 **NIL.** The only artefact is a **2015 Facultad de Ingeniería student report** describing a scrape of the bedelías site to render prerequisites; no repository published with it |
+| PUCP *Campus Virtual* · UNI *SIGA* · UNSA | Peru | 🔴 **NIL on a second channel.** PUCP ships an official mobile app authenticating against Campus Virtual and **no public integration code**; UNI and UNSA return nothing. With `p444`'s ministry-noun nil (SIAGIE) and its `UNMSM` coursework result, 🔴 **Peru is now twice-unpaid on two distinct channels** — weak evidence of a genuine supply absence rather than a measurement artefact (`Gap 445-B`) |
+
+---
+
 ## 🆕 `p444` — **SUAP: a platform running across Brazil's federal institute network, with a real API ecosystem and 🔴 NO PUBLIC SOURCE — the first entry on this map that is open-ecosystem without being open-source**
 
 🟢 **What SUAP is.** **SUAP** (*Sistema Unificado de Administração Pública*) is the academic and

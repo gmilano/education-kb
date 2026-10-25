@@ -1,0 +1,45 @@
+p445 — REGISTERED BEFORE THE CENSUS WAS RUN, 2026-10-25
+=======================================================
+
+GAP UNDER TEST: `Gap 444-A`, handed forward by p444 in these words —
+  "Does 'the institution publishes and does not licence' hold outside Brazil?
+   Measured on IFRN's three official clients (81 stars, zero grants) against two MIT
+   student wrappers.  Prescription: probe the INSTITUTIONAL GitHub orgs behind the
+   paying platforms and count grant presence BY PUBLISHER CLASS, not by star count."
+
+WHAT p444 ACTUALLY MEASURED (the whole basis of the claim):
+
+  publisher class   n   grants present
+  institution       3   0
+  individual        2   2
+
+  n = 5, one country (Brazil), one platform (SUAP), one institution (IFRN).
+
+INSTRUMENT p445 WILL RUN: rather than probe new institutional orgs one at a time, classify
+EVERY address this base has already verified first-hand across its accumulated evidence
+corpus by PUBLISHER CLASS, then measure grant presence per class.  The corpus is already
+first-hand measured, so the census costs no network and the n is two to three orders of
+magnitude above 5.
+
+HYPOTHESIS H2: publisher class predicts grant presence — an address published by the
+INSTITUTION that operates the platform carries a grant LESS often than one published by
+anybody else.
+
+PREDICTION P3: over the full corpus, grant-presence rate (INSTITUTIONAL) < grant-presence
+rate (NON-INSTITUTIONAL).
+  P3 is REFUTED if institutional >= non-institutional.
+
+PREDICTION P4 (the sharper, falsifiable half): p444's magnitude — 0 of 3, a rate of ZERO —
+is an artefact of n=5 and will NOT reproduce.  At corpus scale the institutional grant rate
+will be strictly ABOVE 0 % and strictly BELOW the non-institutional rate.
+  P4 is REFUTED if the institutional rate is 0 %, or if it is not below non-institutional.
+
+PREDICTION P5: the classifier itself is the weak point, not the arithmetic.  Hand-labelling
+a random sample of owners will show the name-pattern classifier's precision on the
+INSTITUTIONAL class is the binding error term, and it will be BELOW 100 %.
+  P5 is REFUTED if hand-labelling finds no misclassification in the sample.
+
+WHY REGISTERED: H2 is p444's own hypothesis, derived from the five rows it measured.
+Testing it on those same five rows would be post-hoc.  P3/P4/P5 name the direction, the
+magnitude and the expected failure mode BEFORE the census is run, which is the only way
+this base can tell a rule from a story.

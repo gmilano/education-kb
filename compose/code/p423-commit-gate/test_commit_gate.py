@@ -45,7 +45,21 @@ class LiveMakefile(unittest.TestCase):
         in `fold_identity`'s register loader."""
         hooks, red = cg.read_sets()
         self.assertGreater(len(hooks), 40, "HOOK_GATES did not parse")
-        self.assertEqual(red, ["gate-census-union"])
+        # 🔴 p445 — THE FIFTH INSTANCE OF `Gap 423-E`'s PINNED-LITERAL CLASS, and the first
+        # on the instrument that governs declarations itself.  This line read
+        # `assertEqual(red, ["gate-census-union"])`, which froze the CONTENT of the
+        # declaration list inside a control whose stated purpose (above) is only to prove
+        # the parser did not silently return `[]`.  Effect: a pass making a LEGITIMATE,
+        # REGISTERED declaration could not do so without editing this control — which is
+        # indistinguishable from silencing it.
+        # 🟢 The pin is replaced by the invariant the control is actually for.  Registration
+        # is NOT weakened: `test_the_live_declaration_is_registered` asserts `cg.gate() == []`
+        # and is the clause that enforces `P423-UNREGISTERED-RED`, so a declaration still
+        # costs a registered gap in the open, under a pass number.
+        self.assertTrue(red, "DECLARED_RED did not parse -- the zero-denominator defect")
+        for g in red:
+            self.assertIn(g, hooks,
+                          "a declaration for a gate the suite does not run (P423-UNDECLARED-RED)")
 
     def test_the_blocking_set_is_the_hook_set_minus_the_declared_reds(self):
         hooks, red = cg.read_sets()

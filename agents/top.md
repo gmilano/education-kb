@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p445` — **ZERO rows added to this shelf, and the two things that makes it worth reading: 🔴 the agent-addressable discovery channel returned 0 new addresses from 10 candidates, and 🔴 this file's own LATAM rows must now be read differently, because the trend they were shelved under has been REFUTED**
+
+🔵 **Why no rows.** The leg aimed at exactly this shelf's category — **LMS MCP servers**, the
+agent-addressable shape, Canvas and Moodle — returned **ten** candidates and **not one** was
+new to this base. Several are already placed on this file. Prior-mention counts, measured this
+hour: `vishalsachdev/canvas-mcp` **77**, `bruchris/canvas-lms-mcp` **70**,
+`csmediapro/moodle-mcp-server` **43**, `r-huijts/canvas-mcp` **41**,
+`Jawadh-Salih/moodle-mcp-server` **35**, `mdweaver/canvas-mcp` **29**,
+`Mattlo0546/canvas-mcp` **22**, `NelsonSpencer/canvas-mcp` **18**,
+`caleb-media-studio/canvas-mcp` **17**, `Harikeshav-R/canvas-mcp` **4**. 🔵 With `p443`'s
+28-of-29, that is two independently-shaped queries saturating at the same denominator — a
+result about the **channel**, not the query. Full measurement: [`repos/trending.md`](../repos/trending.md) `p445`.
+
+🔴 **A caution about this shelf's MCP rows, registered as `Gap 445-C`.** Six of those ten carry
+near-identical descriptions ("up to 102 tools and 8 agent skills"), which is a **fork arm**,
+not six projects. Nothing here has ever checked whether this file's MCP rows count forks as
+distinct projects, and the field that would be wrong is the one an engagement reads first.
+
+### 🔴 How to read this file's LATAM rows now — `Trend 44` is refuted, and `Pattern AW` still stands
+
+`p444` shelved [`IFRN/suapi`](https://github.com/IFRN/suapi) and the two `ifrn-oficial` clients
+as the evidence for a general rule: *where the institution publishes the integration code, it
+publishes it without a grant.* That rule was measured on **five rows, one institution, one
+country**, and this pass tested it over **3 932** addresses this base has verified first-hand:
+
+| publisher class | n | grant | rate |
+|---|---|---|---|
+| INSTITUTIONAL | 36 | 26 | 🟡 **72.2 %** |
+| NON-INSTITUTIONAL | 3 896 | 2 971 | **76.3 %** |
+
+🔴 **Fisher exact p = 0.558 — indistinguishable from noise.** Hand-labelling all 36 institutional
+rows (precision **75.0 %**; nine were suppliers or projects caught on an institution *word*) and
+re-aggregating by **publisher** rather than by address gives **73.3 %** against **77.1 %**, on
+an institutional n of **15**.
+
+🟢 **So: "the institution does not licence" is IFRN-specific, not institution-generic.** The
+sharp fact survives — `ifrn` + `ifrn-oficial` are still the only institutional publisher in the
+entire corpus with **multiple addresses and zero grants** — and `Pattern AW` (use
+`ivmelo/suap-api-php`, and ask IFRN in writing to licence `suapi`) is still the correct move.
+🔴 **What does not survive is generalising it to the next institution an engagement meets.**
+Assume nothing about a university's grant posture from the fact that it is a university; probe
+it. Instrument, pre-registered predictions and verdicts:
+[`agents/trending.md`](trending.md) `p445` and
+[`compose/code/p445-publisher-class-census/README.md`](../compose/code/p445-publisher-class-census/README.md).
+
+### 🟢 Re-verification of the two rows `p444` placed here, because it was free
+
+| row | `p444` recorded | `p445` re-read 2026-10-25 | verdict |
+|---|---|---|---|
+| [`sebassg/sia-unal-mcp`](https://github.com/sebassg/sia-unal-mcp) | 🔴 NO GRANT FILE · `529e017f264c` · 0 of 35 paths | 🔴 **`ABSENCE-ENUMERATED` over 35 paths · same HEAD `529e017f264c`** · 2026-03-12 | 🟢 **reproduces** |
+| [`ivmelo/suapbot`](https://github.com/ivmelo/suapbot) | 🟡 AGPL-3.0 · `LICENSE` 34 520 B | 🟡 **AGPL-3.0 · `LICENSE` 34 520 B · `76a97c878c9c`** · HEAD `d1f90f18ecf5` · 2017-08-24 · 121 files | 🟢 **reproduces** |
+
+🔵 Both cells hold. `sia-unal-mcp` remains the highest-value ungranted address this base knows
+— an MCP server over a Colombian national university's system of record, which is precisely the
+component an engagement would want to vendor and precisely the one it cannot. 🟡 The experiment
+that would resolve it (asking the author for a licence) requires an outward-facing message
+under Globant's name and was **not** run by this unattended pass — `Gap 445-D`.
+
+---
+
 ## 🆕 `p444` — **Two agent-addressable LATAM rows, and the better one cannot be shipped: an MCP server for a Colombian national university's system of record, live, TypeScript — and carrying NO GRANT**
 
 🔵 **Why only two rows from 37 addresses.** `Gap 443-D` warned that the LATAM arm is

@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AX — `p445` **The per-platform licence probe: a two-hour gate that runs BEFORE you quote a system-of-record integration, because `Trend 45` says you cannot carry the last platform's answer to this one**
+
+🔵 **Why this pattern exists.** This base has now published **three incompatible answers** to
+*"what licence is the integration supply around an education system of record?"* — permissive
+(`Trend 42`, 8 addresses), mostly-unlicensed (`Trend 43`, 37 addresses), uniformly GPL-3.0
+(`p445`, 3 addresses on SIGAA). 🟢 **They are not in conflict; they are three platforms.**
+`Trend 45`'s operational form is that the licence distribution is a property of the **platform's
+developer community**, so it must be measured per platform and carried across neither regions
+nor publisher classes. 🔴 **And `Trend 45` also kills the shortcut that was being used instead:**
+publisher class does not predict grant presence (institutional 72.2 % against a 76.3 % baseline,
+Fisher p = 0.558, n = 3 932), so *"it's a university, it'll be copyleft"* and *"it's official,
+it'll be unlicensed"* are both unavailable.
+
+### Step 1 — Get the platform's NAME, not the institution's (30 minutes, a conversation)
+
+🔴 **This is the step that decides whether the pattern works**, and `p444` recorded walking
+into the failure one leg after writing the rule down. Searching the **institution's name**
+returns the institution's *teaching output*: `UNMSM` returned **884** coursework repositories;
+`Ceibal` returned **238**, all coursework. Searching the **system of record's name** returns its
+*integration surface*.
+
+Ask the client: *"what system do your registrar and your students actually log into?"* Known
+answers, from this base's own legs:
+
+| country | system of record | this base's finding |
+|---|---|---|
+| Brazil (federal universities) | **SIGAA** | 🟡 supply exists, uniformly **GPL-3.0**, stale — `Pattern AY` |
+| Brazil (federal institutes) | **SUAP** | 🔴 official clients **ungranted**; third-party MIT — `Pattern AW` |
+| Argentina | **SIU Guaraní** | 🟢 one MCP server (`p443`) |
+| Colombia | **SIA** (UNAL) | 🔴 MCP server exists, **NO GRANT** (`sebassg/sia-unal-mcp`) |
+| Mexico (UANL) | **SIASE** | 6 addresses (`p444`) |
+| Mexico (UdeG) | **SIIAU** | 🔴 **zero supply** — the one SDK's repository is deleted (`p445`) |
+| Chile | **UCampus**, **U-Cursos** | 🟡 thin, and the top-starred hit is a **Chinese homonym** (`p444`) |
+| Peru | SIAGIE, PUCP *Campus Virtual*, UNI *SIGA* | 🔴 **twice-nil on two channels** (`p444`, `p445`) |
+
+⚠️ **Two traps this base paid for, apply both.** (1) **The homonym:** a 4–6 letter government
+acronym is usually owned by an industrial or ML namespace — `SIMAT` returns **Siemens SIMATIC**,
+`SAES` returns **sparse autoencoders**, `GURI` returns an oh-my-zsh theme. Check who operates
+the platform, and read the top hit's **language**, before trusting a stars-sorted rank.
+(2) **Ministry vs university:** university platforms accumulate third-party supply because the
+blocked parties are students who can code; ministry-run K-12 systems do not (`p444`: 6 of 8
+university legs paid, **0 of 5** ministry legs did).
+
+### Step 2 — Enumerate the grant, do not read the badge (20 minutes, scripted)
+
+```sh
+cd compose/code/lib
+. ./probe_payload.sh
+
+# Existence + REAL default ref (never assume `main`: measured counter-examples include
+# GibbonEdu/core -> v31.0.00, portabilis/i-educar -> 2.12).
+git ls-remote --symref https://github.com/<owner>/<repo> HEAD
+
+# EVERY licence path in the COMPLETE tree, each payload measured where it landed.
+probe_repo_all <owner>/<repo>
+```
+
+🔴 **Use `probe_repo_all`, not the filename ladder, and not the registry.** Three defects this
+base has measured, each of which this step closes:
+* **The second grant below the root.** `krzysztofbury/librus-mcp` sells MIT at its root and
+  ships complete **GPL-3.0** at `legacy_reference/LICENSE` (35 149 B) beside 20+ `.py` files.
+  12 of 134 repositories carried more than one own-grant path; **4 carried more than one
+  FAMILY** (`p442`).
+* **The registry disagreeing with the payload, in the dangerous direction.**
+  `macielti/sigaa-cli`'s PyPI `license` field is **EMPTY** while the repository ships a complete
+  **GPL-3.0** payload (35 149 B) — so every registry-reading scanner reports a strongly-copyleft
+  package as unlicensed (`p445`).
+* **The name without the text.** `DMontgomery40/mcp-canvas-lms` says *"MIT License — see
+  LICENSE file"* and ships no such file. That is an upstream **ask**, not a refusal, and must not
+  be recorded as a bare absence.
+
+### Step 3 — Compute the distribution and pick the shape (40 minutes)
+
+Tabulate the addresses by family, then read the shape straight off it:
+
+| what the distribution looks like | the shape to quote |
+|---|---|
+| 🟢 majority **MIT / Apache-2.0 / BSD**, maintained | **vendor it** — fork and extend, shortest path |
+| 🟡 majority **GPL-3.0 / AGPL-3.0** | 🔴 **never vendor.** Reimplement against the interface these repos document, on a permissive base — the repos are *specification* (`Pattern AY`) |
+| 🔴 majority **no grant at all** | **integrate over an interface you own**, use the licensed third-party client, and send a written licence request upstream (`Pattern AW`) |
+| 🔴 **zero addresses** (SIIAU) | **price the integration from scratch** — and say so, because this is the case most often mistaken for "we'll find something" |
+
+🟢 **The deliverable of this pattern is one slide:** the platform's name, the address count, the
+family distribution with byte sizes and SHA prefixes, and which of the four shapes follows. It
+is produced by `probe_repo_all` plus `lib/measure` and costs about two hours.
+
+🔴 **And the rule that makes it worth running every time:** `Trend 45`'s falsifiable half says a
+fourth platform should return a **fourth** distribution. Until two platforms in different
+countries return the same one, **the previous engagement's answer has no predictive value for
+this one.**
+
+---
+
+## 🆕 Pattern AY — `p445` **A Brazilian federal-university engagement on SIGAA, where the integration supply is real, documented, and GPL-3.0 — so the recipe is REIMPLEMENT, and the three repos are the specification**
+
+🔵 **The situation this answers.** A client is a Brazilian federal university — UFPB, UFRN, UFMG
+and the rest of the federal network run **SIGAA** (*Sistema Integrado de Gestão de Atividades
+Acadêmicas*) as their system of record. `p443` opened this channel and `p445` measured it end to
+end: **the supply exists, in two languages, with a working parser and a documented endpoint
+shape — and all of it is GPL-3.0 and 6–10 years old.**
+
+| address | grant, read first-hand 2026-10-25 | HEAD | what it gives you |
+|---|---|---|---|
+| [`fernandobrito/cursos_ufpb`](https://github.com/fernandobrito/cursos_ufpb) | 🟡 GPL-3.0 · 35 141 B · `cbdcf32a9188` | 2017-01-26 · 168 files | the **endpoint shape** (`/api/curricula`) and the `sigaa_parser` logic |
+| [`macielti/sigaa-cli`](https://github.com/macielti/sigaa-cli) | 🟡 GPL-3.0 · 35 149 B · `85b9a51f5603` | 2020-01-04 · 25 files | the **auth flow against any SIGAA instance** by configurable base URL |
+| [`fernandobrito/ufpb_sigaa_api_old`](https://github.com/fernandobrito/ufpb_sigaa_api_old) | 🟡 GPL-3.0 · 35 141 B · `4fa17f22c442` | 2016-02-07 · 14 files | the reference shape for "SIGAA behind an HTTP API" |
+
+🔴 **Read the licence column before planning:** GPL-3.0 reaches a distributed derivative. These
+three are **specification, not supply.** You read them, you do not ship them.
+
+### The stack, every row verified first-hand on 2026-10-25
+
+| layer | component | grant, measured | why this one |
+|---|---|---|---|
+| **1. SIGAA adapter** | 🔴 **write it** — a clean-room HTTP client over the auth flow and endpoints the three repos above document | 🟢 **yours** | SIGAA is JSF with **no public REST API**, so the adapter is unavoidable work. Reading GPL-3.0 code to learn an *interface* and writing your own client is the standard move; a lawyer signs off on the clean-room boundary, not an engineer |
+| **2. MCP wrapper** | the adapter, exposed as an MCP server | 🟢 **yours** | 🟢 This is the step that makes the whole stack agent-addressable, and `p443`/`p444` show it is the shape that is *missing* in LATAM: `siu-guarani-mcp` exists for Argentina, `sia-unal-mcp` for Colombia carries **no grant**, and there is **nothing** for SIGAA. Build it once, reuse across the federal network |
+| **3. LMS** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `LICENSE` 10 982 B | 🟢 **The only Apache-2.0 full LMS in this base's platform tier.** Take it when the client cannot accept copyleft; take Moodle (GPL-3.0) only when they can and already run it |
+| **4. LMS agent surface** | [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟢 **MIT** · `LICENSE` 1 063 B · Go | Only if the client is on Moodle: courses, grades, assignments, deadlines over MCP, against any instance. 🔴 If on OpenOLAT, this layer is yours too |
+| **5. Knowledge tracing** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · `LICENSE` 1 066 B | The student model that makes layer 6 honest rather than a chatbot. Feed it the attendance and assessment history the layer-1 adapter pulls |
+| **6. Tutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `LICENSE` 11 408 B | Agent-native personalised tutoring with persistent per-student state; runs against local models via Ollama, which matters for a public university's data posture |
+
+### Wiring
+
+```
+SIGAA (JSF, no public API)
+   │  clean-room HTTP adapter  ← specification: the 3 GPL-3.0 repos (READ, never shipped)
+   ▼
+your SIGAA adapter ──► your MCP server ──┐
+                                         ├──► DeepTutor (Apache-2.0)  ──► student
+OpenOLAT (Apache-2.0) ──► MCP surface ───┤        ▲
+                                         │        │
+pykt-toolkit (MIT) ◄── enrolment, grades, attendance from the adapter
+```
+
+🟢 **Why the MCP server is the centre of gravity and not the tutor.** Every agent in layers 4–6
+is replaceable; the **adapter plus MCP server over the system of record** is the asset, it is
+reusable across every institution in the federal network that runs SIGAA, and it is the one
+component for which no licensed supply exists anywhere in LATAM. Build it once, licence it as
+you choose, and the tutor becomes a swap.
+
+### 🔴 The two gates before any of this is quoted
+
+1. **The access gate (`P26`), which no licence probe can answer.** A grant answers the
+   *copyright* question only. *May we call this system?* lives in the university's own terms of
+   use and its data-protection posture, and `p444`'s SIIAU and Chile legs both show student-built
+   scrapers operating in exactly that grey zone. 🔴 Get written authorisation from the registrar
+   before the adapter touches production; a scraper the students tolerate is not a contract the
+   university has signed.
+2. **Run `Pattern AX` first.** This recipe is correct for **SIGAA**, measured. 🔴 It is not
+   transferable to the next platform — that is precisely what `Trend 45` says. One institution's
+   SIGAA deployment may also differ in version and endpoints from UFPB's; the adapter is
+   per-instance-configurable for that reason.
+
+---
+
 ## 🆕 Pattern AW — `p444` **A licence-clean Brazilian Instituto Federal engagement: Moodle + SUAP + an AI layer, wired from rows verified 2026-10-25 — and the gate that stops you shipping the 49 % you cannot use**
 
 🔵 **Why this pattern and not another tutor recipe.** `p443`'s `Pattern AV` answers *"how do you

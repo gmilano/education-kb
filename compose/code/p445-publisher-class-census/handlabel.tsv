@@ -1,0 +1,23 @@
+owner	hand_label	why
+UniversalDependencies	FALSE-POSITIVE	NLP treebank consortium; matched Tier A `univ` inside "UniversalDependencies". Not an education institution.
+universaldependencies	FALSE-POSITIVE	same publisher, other casing
+EscolaLMS	FALSE-POSITIVE	Polish LMS VENDOR (product org); matched `escola`. A supplier, not an institution.
+schoolutils	FALSE-POSITIVE	developer utility org; matched `\bschool`. Not a school.
+schoolyardsms	FALSE-POSITIVE	SMS product org; matched `school\b`. Not a school.
+universidade-livre	BORDERLINE	community free-courses collective, not a chartered university
+ki-campus	BORDERLINE	German national AI-learning PROJECT (BMBF-funded consortium); matched `\bcampus\b`
+CAHLR	TRUE-LAB	UC Berkeley research LAB (Computational Approaches to Human Learning Research). Institutional, but a research lab, not the operator of a system of record.
+cahlr	TRUE-LAB	same publisher, other casing
+inria	TRUE-LAB	French national research institute
+Moodle-An-Hochschulen	TRUE-CONSORTIUM	German university consortium for Moodle (Moodle an Hochschulen e.V.)
+IFRN	TRUE-OPERATOR	Instituto Federal do Rio Grande do Norte -- operates SUAP
+ifrn-oficial	TRUE-OPERATOR	same institution, official org
+Harvard-University-iCommons	TRUE-OPERATOR	Harvard University central IT
+harvard-university-icommons	TRUE-OPERATOR	same publisher, other casing
+universita-di-ferrara	TRUE-OPERATOR	University of Ferrara
+illinois	TRUE-OPERATOR	University of Illinois org
+aclascollege	TRUE-OPERATOR	a college
+groton-school	TRUE-OPERATOR	Groton School
+Lawrence-Public-Schools	TRUE-OPERATOR	US school district
+Zhengzhou-11-Highschool	TRUE-OPERATOR	Chinese high school
+sandiegocodeschool	TRUE-OPERATOR	private code school

@@ -203,18 +203,38 @@ the longest run this base has recorded.
 ---
 
 🔵 **The address census, re-derived as the last act before the commit — restated, not
-back-fitted.** 🟡 **`p443`: two of the three currency gates were GREEN on the inherited commit
-and `gate-census-union` was RED on arrival** — this base's declared, non-blocking red
-(`Gap 400-B`), attributed by re-running all three against `f240c21` with this pass's writes
-stashed. 🟢 So the staleness restated below is entirely this pass's own writes, which is the
-arrangement `p352` and `p376` are designed to produce, now holding for a fourth consecutive
-pass.
+back-fitted.** 🔴 **`p445`: ALL THREE currency gates were RED ON ARRIVAL, and that is `p444`'s
+staleness, not this pass's.** Measured the way `p443` did it — by re-running all three against
+`ed86a96` (`p444`'s commit) with this pass's writes **stashed**:
 
-**2 859** harvested shapes on channel U → **39** are not addresses →
-**2 820 addresses**.
+| cell | published anchor (`p443`) | 🔴 on arrival at `ed86a96` | 🟢 after `p445`'s writes |
+|---|---|---|---|
+| harvested_folded | 2 859 | 🔴 **2 874** | 🟢 **2 878** |
+| rejected_non_addresses | 39 | 39 | 39 |
+| channel-U addresses | 2 820 | 🔴 **2 835** | 🟢 **2 839** |
+| channel-B survivors | 3 332 | 🔴 **3 342** | 🟢 **3 347** |
+| union over both channels | 3 704 | 🔴 **3 720** | 🟢 **3 724** |
 
-🔵 **2 820** channel-U addresses and **3 332** channel-B survivors give
-**3 704 addresses over both channels**.
+🔴 **So `p444` shelved its tranche and did not restate the triple**, leaving
+`gate-census-currency`, `gate-union-currency` **and** `gate-register-currency` red for a
+successor to find — which is the exact failure mode `p352` and `p376` were built to prevent,
+and the third consecutive instrument on this base to be defeated by *"remember to re-run it"*.
+🟢 Registered as `Gap 445-G` with a one-command remedy: **run `make commit-gates` BEFORE the
+first write of a pass and record the arrival state**, so every later red is attributable
+without a stash.
+
+🟢 **`p445`'s own delta is +4 on channel U and it reconciles exactly.** Channel U
+**2 835 → 2 839**, channel-B survivors **3 342 → 3 347**, union **3 720 → 3 724**. This pass
+introduced precisely **four** new addresses — `macielti/sigaa-cli`,
+`fernandobrito/cursos_ufpb`, `fernandobrito/ufpb_sigaa_api_old` and the dead
+`dev-cucei-itrans/siiau-api-client` — so the census moves by four and the arithmetic is a
+check on the pass rather than a formality.
+
+**2 878** harvested shapes on channel U → **39** are not addresses →
+**2 839 addresses**.
+
+🔵 **2 839** channel-U addresses and **3 347** channel-B survivors give
+**3 724 addresses over both channels**.
 
 🟢 **`p443`: the delta, and it is TWELVE TIMES `p442`'s for a reason worth stating.** Channel U
 rose **2 808 → 2 820** (+12), channel-B survivors **3 321 → 3 332** (+11) and the union

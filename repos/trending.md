@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p445` · 2026-10-25 — **The platform-noun channel pays for a third pass and this time it pays COPYLEFT: three new SIGAA addresses, all GPL-3.0, all stale. 🔴 The mandated English discovery legs returned 0 new addresses from 14 candidates, which upgrades `p443`'s one-query finding into a result about the CHANNEL. 🔴 And the Mexico leg's single address is DEAD — probed, does not resolve.**
+
+### 🟢 The three new repos, every cell read first-hand this hour
+
+Existence and real default ref by `git ls-remote --symref`; **every** grant path by
+`git ls-tree -r` over a blobless shallow clone (`p442`'s tree channel, which lives in
+`lib/probe_payload.sh::probe_repo_all`, not beside it); every payload measured from the file
+so `P834`'s trailing-newline run survives into the cell. Driver:
+`compose/code/p445-publisher-class-census/probe_tranche.sh`. Full table:
+[`evidence/verified-repos.2026-10-25-p445.tsv`](../evidence/verified-repos.2026-10-25-p445.tsv).
+
+| repo | grant | HEAD | files | region | what it is |
+|---|---|---|---|---|---|
+| [`macielti/sigaa-cli`](https://github.com/macielti/sigaa-cli) | 🟡 **GPL-3.0** · `LICENSE` 35 149 B · `3972dc9744f6` | 2020-01-04 | 25 | **LATAM** (Brazil) | Python client/CLI against a **SIGAA** instance — authenticates to a configurable institution base URL. Published on PyPI as `sigaa-cli` 0.8.0, 🔴 whose `license` metadata field is **EMPTY** while the repository ships complete GPL-3.0 |
+| [`fernandobrito/cursos_ufpb`](https://github.com/fernandobrito/cursos_ufpb) | 🟡 **GPL-3.0** · `LICENSE` 35 141 B · `589ed823e9a8` | 2017-01-26 | 168 | **LATAM** (Brazil) | Rails app exposing UFPB curriculum data parsed out of SIGAA (`/api/curricula`), via the author's own `sigaa_parser` gem. The largest of the three (168 files) and the one with real API surface |
+| [`fernandobrito/ufpb_sigaa_api_old`](https://github.com/fernandobrito/ufpb_sigaa_api_old) | 🟡 **GPL-3.0** · `LICENSE` 35 141 B · `589ed823e9a8` | 2016-02-07 | 14 | **LATAM** (Brazil) | Sinatra web service over the same UFPB SIGAA curriculum data. Self-described as dated and use-at-your-own-risk; carried as the **reference shape**, not a dependency |
+
+🔴 **All three are new to this base — 0 prior mentions each — and all three are GPL-3.0.**
+🟢 **The commercial read, and it is the useful part:** the SIGAA integration tier is **real
+supply that cannot be vendored.** GPL-3.0 reaches a distributed derivative, so the shape is
+*integrate over the interface* or *read and reimplement*, never *ship the repository*. 🔵 It
+also sharpens `p444`'s correction of `Trend 42`: the student side of the glass is not
+*permissive*, it is **mixed — and on this one platform it is uniformly copyleft**.
+
+🔴 **A registry-vs-payload divergence, found in passing and worth its own line.** `sigaa-cli`'s
+PyPI record carries an **empty `license` field** while the repository ships a complete 35 149 B
+GPL-3.0 payload. Every tool that reads the registry sees "no licence stated" on a repository
+that is strongly copyleft — the **opposite** of `p439`'s "licence NAME without a licence TEXT",
+and the more dangerous direction for a buyer, because the permissive-looking answer is the
+wrong one.
+
+### 🔴 The Mexico leg: one address, and it is gone
+
+Universidad de Guadalajara runs **SIIAU** (Sistema Integral de Información y Administración
+Universitaria) — finance, HR, school records and planning, with `SIIAU Escolar` as the
+student-facing portal. The only integration artefact that exists for it is
+`dev-cucei-itrans/siiau-api-client`, a Laravel SDK for SIIAU's internal API, published on
+Packagist and marked **abandoned** there.
+
+| | |
+|---|---|
+| `git ls-remote https://github.com/dev-cucei-itrans/siiau-api-client` | 🔴 **DOES NOT RESOLVE** |
+| Packagist record | 🟡 survives, marked abandoned, canonical repository gone |
+
+🔵 **This is a cleaner negative than a nil, and it should be read as one:** the shape existed
+for SIIAU, somebody built it, and it has been deleted. An engagement at UdeG — Mexico's second
+largest public university system — starts from **zero integration supply**, not from an
+unmaintained base. That is a scoping fact, not an absence of information.
+
+### 🔴 The saturation measurement, and why it is now about the channel
+
+| leg | candidates | 🟢 new to this base |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 0 addresses returned (listicles) | 🔴 **0** |
+| `github trending education AI 2026` | 🔴 0 addresses returned (third-party trackers) | 🔴 **0** |
+| `open source platform education … ERP MIT Apache` | 🔴 0 **new** (OpenEduCat, openSIS, Gibbon — all shelved) | 🔴 **0** |
+| `AI education industry trends 2026` | 🔴 0 addresses returned (vendor blogs) | 🔴 **0** |
+| LMS MCP servers, Canvas + Moodle | 10 | 🔴 **0** |
+
+🔴 **Every one of the ten MCP candidates was already here, and not marginally:**
+`vishalsachdev/canvas-mcp` appears in **77** files of this base, `bruchris/canvas-lms-mcp` in
+**70**, `csmediapro/moodle-mcp-server` in **43**, `r-huijts/canvas-mcp` in **41**,
+`Jawadh-Salih/moodle-mcp-server` in **35**, `mdweaver/canvas-mcp` in **29**,
+`Mattlo0546/canvas-mcp` in **22**, `NelsonSpencer/canvas-mcp` in **18**,
+`caleb-media-studio/canvas-mcp` in **17**, `Harikeshav-R/canvas-mcp` in **4**.
+
+🟢 **`p443` measured 28 of 29 already-known on the two canonical topic listings and three
+English web legs. This pass reproduced it on a DIFFERENT and better-shaped query** — the
+agent-addressable MCP category, which is the shape this base values most — and got **0 of
+10**. 🔵 Two independent query shapes at the same denominator is a result about the **channel,
+not the query**: **generic English discovery is exhausted for this base.** The four mandated
+global legs are worth running as a **confirmation** channel; a successor should not spend the
+hour on them expecting addresses.
+
+🔴 **And a caution about reading that tier as ten options:** six of the ten carry
+near-identical descriptions ("up to 102 tools and 8 agent skills"), which is a **fork arm**,
+not ten projects. This base shelves several of them as separate rows. Whether its own MCP
+shelf counts forks as projects has never been checked — `Gap 445-C`.
+
+### 🟢 The instrument this pass built, and what it is for
+
+[`compose/code/p445-publisher-class-census/`](../compose/code/p445-publisher-class-census/) —
+a **network-free** census over this base's own 1 228 evidence TSVs, extracting **3 932**
+distinct addresses that carry a first-hand grant verdict, and classifying each by publisher
+class. It exists because `Gap 444-A`'s prescribed method (org enumeration) is **403 on this
+host** while the gap's *question* needed no new network at all.
+
+🔵 **The reusable part is the extractor, not the answer.** `extract_corpus.py` turns 445
+passes of heterogeneous evidence into one typed table without trusting a single column name,
+and refuses to score a row that carries neither a licence family nor one of this base's own
+absence verdicts (**26 287 rows excluded and counted as excluded**). Any future question of
+the form *"across everything this base has ever verified, how often …"* now costs one command.
+Verdict against the pre-registered predictions, and the correction it forces on `Trend 44`:
+[`agents/trending.md`](../agents/trending.md) `p445`. Recipe: `Pattern AX`.
+
+---
+
 ## 🆕 `p444` · 2026-10-25 — **`Gap 443-C` CLOSED: the README-vs-payload comparator exists, 43/43 offline, and its first run over all 321 sell rows found ONE genuine divergence — the one `p443` had already caught by hand. 🔴 The other four "findings" were defects in the instrument. 🔴 And the sweep found something it was not looking for: a grant lives in at least THREE channels, and every instrument on this base reads ONE.**
 
 ### 🟢 The instrument `Gap 443-C` asked for

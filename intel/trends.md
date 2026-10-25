@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 45 — `p445` **Publisher class does NOT predict grant presence in education open source. 🔴 `Trend 44`, published on this file one pass ago, was an n=5 artefact: measured over 3 932 first-hand addresses the institutional grant rate is 72.2 % against a 76.3 % baseline, Fisher p = 0.558. 🟢 What DOES predict the licence is the PLATFORM's developer community**
+
+### 🔴 The claim this trend replaces, and why it was published
+
+`Trend 44` (`p444`) reads: *"Where the institution publishes the integration code itself, it
+publishes it WITHOUT a grant — and the third-party copy is the licensed one."* Its entire
+basis:
+
+| publisher class | n | grants present |
+|---|---|---|
+| institution | 3 | 🔴 **0** |
+| individual | 2 | 🟢 **2** |
+
+🔴 **One country (Brazil), one platform (SUAP), one institution (IFRN), five repositories.** A
+measured rate of zero on three addresses became a trend about institutions — one pass after
+this base corrected `Trend 42` for the identical error, *too small to carry the claim it was
+used for*. The pattern is now twice-recorded on this file, which makes it a property of how
+this base generalises and not of either tranche.
+
+### 🟢 The test, at a denominator three orders of magnitude larger
+
+`Gap 444-A` prescribed probing institutional GitHub orgs. That needs org enumeration, which is
+**403 on this host** (`api.github.com`, `github.com/search` and `codeload.github.com` all
+re-measured this hour). 🟢 **But the question needed no new network:** every address this base
+has verified first-hand over 445 passes is on disk — **1 228 TSVs** under `evidence/`. Those
+were classified by publisher class instead. Instrument, pipeline and stated limits:
+[`compose/code/p445-publisher-class-census/README.md`](../compose/code/p445-publisher-class-census/README.md).
+
+| | n |
+|---|---|
+| evidence files read | 1 228 |
+| rows scored | 18 957 |
+| rows excluded as unscoreable, and counted as excluded | 26 287 |
+| 🟢 **distinct addresses with a first-hand grant verdict** | 🟢 **3 932** |
+
+| class | n | grant | rate | 95 % CI |
+|---|---|---|---|---|
+| INSTITUTIONAL | 36 | 26 | 🟡 **72.2 %** | 56.0 – 84.2 % |
+| NON-INSTITUTIONAL | 3 896 | 2 971 | **76.3 %** | 74.9 – 77.6 % |
+
+🔴 **Fisher exact, two-tailed: p = 0.558.** Then all **36** institutional rows were
+hand-labelled — the whole class, not a sample. **Nine were false positives** (precision
+**75.0 %**): `UniversalDependencies`, an NLP treebank consortium caught on `univ` *inside its
+own name*; `EscolaLMS`, a Polish LMS **vendor**; `schoolutils`, a developer utility org;
+`schoolyardsms`, an SMS product. Every one is a **supplier or project** matched on an
+institution word.
+
+| after correction | n | grant | rate |
+|---|---|---|---|
+| by ADDRESS | 27 | 18 | **66.7 %** |
+| by **PUBLISHER** (the correct unit) | 15 | 11 | **73.3 %** |
+| non-institutional, same unit | 2 914 | 2 246 | **77.1 %** |
+
+🟡 **The direction survives every cut — institutional is lower, by 4 to 10 points — and not one
+cut makes it distinguishable from noise.** Predictions registered before the census ran
+(`scratchpad/p445/predictions.txt`): **P3** (direction) confirmed but insignificant; **P4**
+(*the rate of zero will not reproduce*) 🟢 **confirmed** — the rate is 66.7–73.3 %, nowhere
+near 0 %; **P5** (*the classifier, not the arithmetic, is the binding error term*) 🟢
+**confirmed**.
+
+### 🔴 And the finding about this base, which is the part a successor must not skip
+
+Only **36 of 3 932** addresses — **0.9 %** — have an institutional publisher at all. Nine are
+misclassifications. The surviving 27 come from **15 publishers**, and **one of them — `cahlr`,
+a UC Berkeley research lab — supplies 9 of the 27.**
+
+🔴 **So the correct unit of analysis is the publisher, the real institutional n is 15, and after
+445 passes this base has barely ever measured the class it published a trend about.** The
+honest verdict is therefore neither *yes* nor *no*: the claim is **refuted at the magnitude it
+was stated**, and the corpus is too thin in this class to put a sharp number on any residual
+effect. That thinness is now measured instead of assumed — `Gap 445-A`.
+
+🟢 **The sharp fact that does survive, and it is still worth money.** `ifrn` + `ifrn-oficial`
+remain the **only** institutional publisher in the entire 3 932-address corpus with multiple
+addresses and zero grants (3 of 3 ungranted, 81 ★ between them). That is a real and actionable
+fact about **IFRN** — `Pattern AW` is unchanged — and it was never a fact about institutions.
+
+### 🟢 What replaces it: the platform's developer community, not the publisher's class
+
+Three readings of the same question now sit on this file, each from a different denominator:
+
+| | claim | denominator |
+|---|---|---|
+| `Trend 42` (`p443`) | the student side of the glass is **permissive** — 6 of 8 | 8 addresses, 2 platforms |
+| `Trend 43` (`p444`) | the modal grant is **NO GRANT** — 18 of 37, permissive 22 % | 37 addresses, 9 platforms |
+| 🆕 `p445` | on **SIGAA**, measured end to end, the student side is **uniformly copyleft** — GPL-3.0, 3 of 3 | 3 addresses, 1 platform |
+
+🔵 **Three incompatible answers, and they are not in conflict — they are three platforms.**
+The variable that moves is not the side of the glass (`Trend 42`), not the publisher's class
+(`Trend 44`), and not the country (`p443`/`p444` both tested that). **It is the licence habit of
+the developer community that forms around a particular platform.** SUAP's community attached
+MIT and nothing at all; SIGAA's attached GPL-3.0 three times out of three, in two languages,
+across two publishers and four years.
+
+🟢 **The operational form, which is the only part that should reach a client conversation:**
+**the licence distribution is a property of the PLATFORM, so it must be measured per platform
+and can be carried across neither regions nor publisher classes.** An engagement that meets a
+new system of record has learned nothing about its grant posture from the last one, and the
+probe is cheap — `git ls-remote` plus a blobless tree enumeration, which is what
+`lib/probe_payload.sh` already does.
+
+🔴 **The falsifiable half, so this trend is testable rather than another story:** a fourth
+platform, measured end to end, should return a **fourth** distribution that matches neither
+MIT-and-nothing nor uniform GPL-3.0. If two platforms in different countries return the same
+distribution, this trend is wrong and the variable is something above the platform.
+
+---
+
 ## 🆕 Trend 43 — `p444` **The LATAM education integration layer is not permissive and not copyleft: it is UNLICENSED. 18 of 37 addresses carry no grant at all, and `Trend 42` — published one pass ago — does not survive the larger denominator**
 
 🔴 **The correction first, because this base published the claim it is correcting.**

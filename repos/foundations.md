@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p445` — **Three new SIGAA addresses, and all three land in the COPYLEFT tier — so the Brazilian system-of-record integration layer is now known to be real supply that cannot be vendored. 🔴 Zero permissive rows added, and the reason is measured: the mandated discovery legs returned 0 new addresses from 14 candidates**
+
+🔵 **Where these came from.** `Gap 444-B` named three unrun legs — a Peruvian university's
+**system-of-record** noun, a UdelaR platform noun for Uruguay, and Mexico beyond UANL. All
+three were run. Mexico returned one address and it is **deleted**; Uruguay and Peru returned
+nothing; and the **SIGAA** channel `p443` opened returned three addresses nobody here had
+seen. Mechanism, the two nils and the saturation measurement:
+[`repos/trending.md`](trending.md) `p445`.
+
+### 🟡 Copyleft and current-enough to read — integrate over the interface, never vendor
+
+Every cell read first-hand on **2026-10-25**: existence and real default ref via
+`git ls-remote --symref`, **every** grant path via `git ls-tree -r` over a blobless shallow
+clone, every payload measured from the file (so `P834`'s trailing-newline run is in the byte
+count). Driver: `compose/code/p445-publisher-class-census/probe_tranche.sh`. Evidence:
+[`evidence/verified-repos.2026-10-25-p445.tsv`](../evidence/verified-repos.2026-10-25-p445.tsv).
+
+| Repo | Licence | HEAD | Payload | Region | Why it is here, and the bound on using it |
+|---|---|---|---|---|---|
+| [`fernandobrito/cursos_ufpb`](https://github.com/fernandobrito/cursos_ufpb) | 🟡 **GPL-3.0** | `cbdcf32a9188` · 2017-01-26 · 168 files | `LICENSE` 35 141 B · `589ed823e9a8` | **LATAM** (Brazil) | The **largest and most API-shaped** of the three: a Rails app that parses UFPB's **SIGAA** and exposes curriculum data at `/api/curricula`, via the author's own `sigaa_parser` gem. 🟢 The useful artefact is the **parser's logic and the endpoint shape**, which is what an engagement needs to rebuild. 🔴 GPL-3.0 reaches a distributed derivative, so this is a **read-and-reimplement** row |
+| [`macielti/sigaa-cli`](https://github.com/macielti/sigaa-cli) | 🟡 **GPL-3.0** | `85b9a51f5603` · 2020-01-04 · 25 files | `LICENSE` 35 149 B · `3972dc9744f6` | **LATAM** (Brazil) | Python client/CLI that authenticates against **any** SIGAA instance by configurable base URL — so it is the **portable** one of the three rather than UFPB-specific. 🔴 Carries a registry defect worth knowing: its PyPI record's `license` field is **EMPTY** while the repository ships a complete GPL-3.0 payload, so every registry-reading scanner will report this strongly-copyleft package as unlicensed |
+| [`fernandobrito/ufpb_sigaa_api_old`](https://github.com/fernandobrito/ufpb_sigaa_api_old) | 🟡 **GPL-3.0** | `4fa17f22c442` · 2016-02-07 · 14 files | `LICENSE` 35 141 B · `589ed823e9a8` | **LATAM** (Brazil) | Sinatra service over the same UFPB SIGAA curriculum data, self-described as dated and use-at-your-own-risk. 🔴 Ten years stale and superseded by the row above it. Shelved only as the **reference shape** for "SIGAA behind an HTTP API", never as a dependency |
+
+🟢 **What the three together establish, which no single row does.** SIGAA — the system of
+record at the Brazilian federal universities — **has** a public integration layer, in two
+languages, with a working parser and a documented endpoint shape. 🔴 **And it is uniformly
+GPL-3.0 and 6–10 years stale.** So the sellable shape at a Brazilian federal university is
+*reimplement the parser against the interface these repositories document*, on a clean
+permissive base, and the three rows above are **specification, not supply**. Recipe:
+`Pattern AY`.
+
+🔵 **This also sharpens `p444`'s correction of `Trend 42` rather than just agreeing with it.**
+`p443` published *the student side of the glass is permissive, 6 of 8*; `p444` refuted it over
+37 addresses (*permissive is 22 %, modal outcome is no licence*). This pass adds a third
+reading: on **one platform, measured end to end, the student side is neither permissive nor
+unlicensed — it is uniformly copyleft, 3 of 3.** The honest generalisation is that **the
+licence distribution is a property of the PLATFORM's developer community, not of the side of
+the glass**, which is `Trend 45`'s second half.
+
+### 🔴 Zero permissive rows added, and the denominators are published rather than implied
+
+| leg | candidates | 🟢 new to this base | permissive and new |
+|---|---|---|---|
+| 4 × mandated global English legs | 🔴 0 addresses returned | 🔴 **0** | 🔴 **0** |
+| LMS MCP servers (Canvas + Moodle) | 10 | 🔴 **0** — all already here, up to **77** prior mentions | 🔴 **0** |
+| SIGAA platform noun | 3 | 🟢 **3** | 🔴 **0** (all GPL-3.0) |
+| SIIAU platform noun (Mexico) | 1 | 🔴 **0** — 🔴 `git ls-remote` **DOES NOT RESOLVE** | 🔴 **0** |
+| UdelaR / `bedelías` noun (Uruguay) | 🔴 0 | 🔴 **0** | 🔴 **0** |
+| Peru system-of-record noun | 🔴 0 | 🔴 **0** | 🔴 **0** |
+
+🔵 **Read the top row before concluding the tier is saturated.** The ten MCP candidates were
+not *rejected* — they were **already shelved**, several of them on this file and on
+`agents/top.md`. Generic English discovery is exhausted for this base (`p443` got 1 of 29, this
+pass got 0 of 10 on a differently-shaped query); the platform-noun channel is the one still
+paying, and it has now paid on three consecutive passes.
+
+---
+
 ## 🆕 `p444` — **The LATAM academic-portal tier triples, and two things the licence column alone would never have shown: 🔴 across the 37 addresses the PLATFORM-NAME legs returned, the permissive-and-maintained intersection is EXACTLY ONE — and 🟢 the best address of the pass came from a DIFFERENT leg shape entirely, which is the more useful finding**
 
 🟢 **What was added and why it is small.** `p443` opened this tier with six Brazilian and

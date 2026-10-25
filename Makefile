@@ -207,7 +207,7 @@ conjunctive-census: ## p427 — the population arm over every committed payload.
 # yes-or-no question.  A gate may be carried red only if it is DECLARED here AND a
 # `Gap N-X` in `intel/open-gaps.md` cites it by name — `gate-commit-gate` enforces both,
 # so quieting a gate costs a registered gap in the open rather than a silent habit.
-DECLARED_RED = gate-census-union
+DECLARED_RED = gate-census-union gate-promotion-ledger
 
 # The set a commit may be blocked on: every gate the suite runs, minus the declared reds.
 COMMIT_GATES = $(filter-out $(DECLARED_RED),$(HOOK_GATES))

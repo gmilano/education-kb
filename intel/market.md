@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p445` · 2026-10-25 — **Four regional legs. 🟢 `Gap 444-F` is PAID: the LATAM 92 % finally has a named instrument, a population and a date instead of a press attribution. 🟢 The APAC leg returns the sharpest procurement fact this file has ever carried — a national AI-education programme was REVERSED by statute. 🔴 And the EMEA leg is written down as a NIL, with the reason, because one of its two "findings" surveyed the wrong continent.**
+
+🔵 **Shape.** `p427`'s prescription — *one country, one question* — ran for a third consecutive
+pass. `p444` ran it four times and all four paid; this pass ran it four times, **three paid and
+one nilled**, and the nil is recorded as a nil. The single `## Opportunities by region` block
+below is amended **in place** — it is still one block, one `###` per region.
+
+### 🟢 `Gap 444-F` — PAID. The LATAM adoption figures now have instruments
+
+`Gap 444-F` was the residue `p444` left when it closed `Gap 436-D`: the teacher and institution
+rates were *"relayed through EFE press reporting of the launch rather than read out of a UNESCO
+document"*, and the **92 %** was *"attributed to Tec de Monterrey without a public method"*.
+One leg in the prescribed shape — one region, one question, adoption only — returned both
+missing instruments:
+
+| instrument | population and method, as stated | figures |
+|---|---|---|
+| 🟢 **UNESCO IESALC + UNU-IAS**, working paper on AI implementation in higher education in Latin America and the Caribbean | **200 institutions, 19 countries**, surveyed **August–October 2025** | adoption by area: 🟢 **teaching and learning 73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement **20.0 %** |
+| 🟢 **Digital Education Council — AI in Higher Education LATAM Survey 2026**, run with Tecnológico de Monterrey's *Institute for the Future of Education* | **30 000+ responses, 29 institutions**, published **February 2026** | 🟢 **92 % of students** and **79 % of faculty** actively engaging with AI; **94 % of faculty** expect to use AI in future teaching |
+
+🟢 **So the 92 % is no longer a press figure.** It has a survey name, a sample size, an
+institution count, a partner and a publication month — which is exactly what `Gap 444-F` asked
+for, and it means this file can re-query the same two instruments every pass instead of
+re-quoting a column.
+
+⚠️ **Graded honestly: NOT read first-hand, and the reason is a host limit, not a choice.**
+Both publishers were probed directly this hour and both are blocked from this host:
+
+| source | probe |
+|---|---|
+| `unu.edu` | 🔴 **403** |
+| `www.iesalc.unesco.org` | 🔴 **403** |
+
+🔴 So these cells are **search-relayed**, one channel better than `p444`'s EFE relay (the
+method and population are now attributed to the instrument itself) but still not a primary
+read. `Gap 445-E` carries the residue, and it is a **reachability** problem now rather than a
+sourcing one.
+
+### 🟢 The reconciliation that stops this file quoting two institutional-readiness numbers
+
+This file carries 🔴 **"< 10 % of institutions have formal guidelines and sufficient capacity"**
+(UNESCO, via EFE, `p444`). This pass returned 🟡 **"only 30 % of universities in Latin America
+have published policies on how to use AI."** Those look like a conflict and are not one:
+
+| figure | what it actually measures |
+|---|---|
+| **30 %** | has a **published AI-use policy** |
+| **< 10 %** | has a policy **AND** sufficient capacity to run it |
+
+🟢 **The ~20-point gap between them is not noise — it is the sellable quantity.** It is the set
+of institutions that have **written the policy and cannot staff it**: they have already made
+the decision, already named the obligation, and lack exactly the implementation capacity a
+studio sells. 🔵 That is a better qualifying question than either number alone — *"do you have
+an AI policy, and who operates it?"* — and both figures are kept with their definitions
+attached rather than one being dropped.
+
+### 🟢 APAC — Korea: a national AI-education programme was reversed BY STATUTE, and that is a procurement fact
+
+| date | step |
+|---|---|
+| 2024 | 🔵 **₩533.3 bn** allocated to the AI digital textbook programme in that year alone; flagship initiative of the Yoon administration |
+| 2024 | 🟡 First retreat before launch: Korean and home economics **dropped**; social studies and science **deferred to 2027**, at the request of the National Council of Governors of Education |
+| 1H 2025 | Pilot in English, maths and secondary computer science; national mandate replaced by **school-by-school voluntary adoption** |
+| 🔴 **4 Aug 2025** | 🔴 **The National Assembly reclassified AI digital textbooks from *textbooks* to *educational materials*, effective on promulgation — removing the legal AND financial basis for school use** |
+| 2H 2025 | 🔴 Adoption falls to **1 686 schools**, a **−58.8 %** drop against the first semester |
+| Dec 2025 | 🔴 **State audit**: the ministry **skipped the planned pilot**; six instances of illegality or impropriety, with caution requests issued |
+| Jun 2026 | 🔴 **~10 publishers sued the government for ~₩200 bn** in damages |
+
+🔴 **The commercial reading, and it is not "Korea is a bad market".** It is that in APAC the
+dominant risk to an education AI build is **procurement reversal, not model quality**. A
+ministry-mandated national rollout was unwound by statute inside twelve months, and the parties
+left holding the loss were **the vendors who had built to the mandate**. 🟢 So the design rule
+is: build for a **voluntary, school-by-school or district-by-district buyer** who can adopt you
+without a national instrument, and never let a national mandate be the revenue assumption.
+🔵 The demand did not disappear — teachers moved to self-adopted tools funded by the **17
+provincial offices of education**, which is the layer that kept paying. That layer is the one
+to sell to.
+
+🔵 **This is the APAC analogue of `Trend 30`** (*in North America the district, not the state,
+is the layer that decides whether a build is legal*). Two regions, same structural answer:
+**the sub-national layer is the buyer.**
+
+### 🟢 North America — the state guidance count, with its instrument and date, and the spread is the finding
+
+| as of | count | instrument |
+|---|---|---|
+| Jan 2026 | **31** states | Ballotpedia tracker, cited in a Carahsoft K-12 AI readiness deck (Feb 2026) |
+| 🟢 **27 May 2026** | **> 35** states | 🟢 **New Mexico Legislative Education Study Committee brief** — a legislature's own document |
+| Jun 2026 | **37** states **+ Puerto Rico** | Playlab policy directory |
+
+🟢 **Monotone growth over five months, from three independent trackers: 31 → >35 → 37.** 🔵 The
+spread is not a contradiction to resolve — it is the measurement's resolution, and it is the
+honest way to carry the number. This file should quote **"37 states plus Puerto Rico as of June
+2026, on a count that was 31 in January"**, never a bare "37 states", because the figure's rate
+of change is faster than this base's own refresh interval. ⚠️ The Playlab directory itself
+advises verifying status with each state department, and the count includes territories in some
+trackers and not others.
+
+### 🔴 EMEA — written down as a NIL, and one of its two apparent findings surveyed the wrong continent
+
+The mandated leg (`AI education EMEA 2026 adoption regulation players`) returned **enterprise**
+AI material and **no education-sector adoption, regulation or player facts**. Recorded as a nil
+because silence reads exactly like coverage.
+
+🔴 **And the sharper half: the one figure that looked usable is not an EMEA figure at all.**
+CompTIA's IT Industry Outlook 2026 — *94 % of organizations at least somewhat likely to invest
+in AI-specific training in 2026* — appears under an EMEA-titled page, and **its survey
+population is US professionals only**. 🔴 Carried onto this file as an EMEA adoption rate it
+would have been a region error of exactly the kind `region.py`'s closed vocabulary exists to
+prevent. It is **refused**, and named here so no successor re-buys it.
+
+🟢 **Why the nil is not a gap in coverage.** EMEA's regulatory picture was re-confirmed
+independently by `p444` one pass ago and is unchanged: **Regulation (EU) 2026/1744** (the
+*Digital Omnibus on AI*), in force **27 July 2026**, moves the Annex III stand-alone high-risk
+deadline — the one covering education — to **2 December 2027**, while transparency, GPAI, the
+**AI-literacy requirement** and prohibited-practices stay on their original schedule. The
+`p427` shape that pays for EMEA is a **country** leg, not a region leg; `Gap 445-F` names it.
+
+---
+
+
 ## 🆕 `p444` · 2026-10-25 — **Four regional legs in `p427`'s prescribed shape, and all four paid. 🟢 `Gap 436-D` is CLOSED: LATAM adoption is no longer quoted through a newspaper column but through a UNESCO/CEPAL observatory and a named regional index. 🔴 And the EMEA leg independently re-confirms `p437`'s correction — the deadline this base once published as passed is 2 December 2027.**
 
 🔵 **Shape, not volume.** `p427` diagnosed this file's regional legs as **over-ANDed**
@@ -451,6 +572,19 @@ supply and a permissive agent layer can.
 
 ### North America
 
+**🆕 `p445` — the state K-12 AI guidance count, carried with its instrument and its date, because the figure moves faster than this base refreshes.**
+🟢 **37 states plus Puerto Rico have official AI guidance or a policy framework as of June 2026**
+(Playlab policy directory) — against **more than 35** on **27 May 2026** (New Mexico Legislative
+Education Study Committee brief, a legislature's own document) and **31** as of **January 2026**
+(Ballotpedia tracker, via a February 2026 Carahsoft readiness deck). 🔵 **Three independent
+trackers, monotone growth 31 → >35 → 37 in five months.** The spread is the measurement's
+resolution, not a conflict: quote *"37 plus Puerto Rico as of June 2026, on a count that was 31
+in January"*, never a bare "37 states". ⚠️ Trackers differ on whether territories are included,
+and Playlab itself advises verifying with each state department.
+🔵 **Why this is the number to lead with in NA:** it places the decision layer. Guidance now
+exists almost everywhere, so the sellable question has moved from *may we* to *who operates
+it* — consistent with `Trend 30`, where the **district** is the layer that decides.
+
 **🆕 `p442` — nil on discovery, and one pipeline item worth pricing.** 🔵 Every instrument
 the leg returned is already on this file: Ohio `HB 96`, Tennessee `SB 1711`, the four-state
 mandatory-district-policy cluster (Maryland, Idaho, Oklahoma, Virginia), `AB 1159`, `SB 720`,
@@ -708,6 +842,25 @@ unbundled, unmandated and needed**, which is the cleanest NA service shape on th
 authoritative text and has not been read first-hand.
 
 ### EMEA
+
+**🆕 `p445` — 🔴 the region leg returned a NIL, and one apparent finding is REFUSED for a region error.**
+The mandated leg (`AI education EMEA 2026 adoption regulation players`) returned **enterprise**
+AI material and **no** education-sector adoption, regulation or player facts. Written down as a
+nil because silence reads exactly like coverage.
+🔴 **The refusal, named so no successor re-buys it:** CompTIA's IT Industry Outlook 2026 figure
+— *94 % of organizations at least somewhat likely to invest in AI-specific training in 2026* —
+sits on an EMEA-titled page and **surveys US professionals only**. Carried here as an EMEA
+adoption rate it would be precisely the region error `region.py`'s closed vocabulary exists to
+prevent.
+🟢 **Coverage is not lost:** the regulatory picture was re-confirmed independently by `p444` and
+is unchanged — **Regulation (EU) 2026/1744** (*Digital Omnibus on AI*), in force **27 July
+2026**, defers the Annex III stand-alone high-risk deadline covering education to **2 December
+2027**, while **transparency, GPAI obligations, the AI-literacy requirement and the
+prohibited-practices ban stay on their original schedule**. 🔵 The commercial reading is
+unchanged and still under-scoped: **~14 months of runway on Annex III conformity, ZERO runway on
+AI literacy and transparency.**
+🔵 **Method note for successors:** `p427`'s shape pays for EMEA only as a **country** leg. The
+region leg has now nilled here; `Gap 445-F` names the fix.
 
 **🆕 `p442` — 🟢 one multilateral instrument added, 🔴 one refused.**
 🟢 **UNESCO ministerial statement on education in the age of AI, adopted 9 September 2026** at
@@ -1002,6 +1155,28 @@ remains `Pattern AP`, and `Article 6(3)`'s profiling override still lands knowle
 architectures (`pykt-toolkit`, `OATutor`) in high-risk **by construction**.
 
 ### APAC
+
+**🆕 `p445` — 🔴 Korea: a national AI-education programme was reversed BY STATUTE, and this is a procurement fact, not a technology one.**
+
+| date | step |
+|---|---|
+| 2024 | 🔵 **₩533.3 bn** allocated to the AI digital textbook programme in that year alone |
+| 2024 | 🟡 Korean and home economics **dropped**; social studies and science **deferred to 2027** |
+| 1H 2025 | Pilot in English, maths, secondary CS; national mandate replaced by **voluntary adoption** |
+| 🔴 **4 Aug 2025** | 🔴 **National Assembly reclassified AI digital textbooks from *textbooks* to *educational materials***, removing the legal and financial basis for school use |
+| 2H 2025 | 🔴 Adoption falls to **1 686 schools** — **−58.8 %** against the first semester |
+| Dec 2025 | 🔴 **State audit**: the planned pilot was **skipped**; six instances of illegality or impropriety |
+| Jun 2026 | 🔴 **~10 publishers sued the government for ~₩200 bn** |
+
+🔴 **The reading: in APAC the dominant risk to an education AI build is PROCUREMENT REVERSAL,
+not model quality.** A ministry-mandated national rollout was unwound by statute inside twelve
+months and the loss landed on **the vendors who had built to the mandate**. 🟢 So: design for a
+**voluntary, school-by-school or district buyer** who can adopt without a national instrument,
+and never make a national mandate the revenue assumption. 🔵 Demand did not disappear —
+teachers moved to self-adopted tools funded by the **17 provincial offices of education**, and
+that is the layer still paying.
+🔵 **This is the APAC analogue of `Trend 30`:** two regions, same structural answer — **the
+sub-national layer is the buyer.**
 
 **🆕 `p442` — 🟢 two new instruments, and both are RUNWAY rather than posture.**
 🟢 **Japan: draft national curriculum guidelines released 31 August.** AI and information
@@ -1321,6 +1496,28 @@ Either way the mandate's direct reach is a small fraction of Indian schooling, a
 boards are the real denominator (`Gap 444-G`).
 
 ### LATAM
+
+**🆕 `p445` — 🟢 `Gap 444-F` PAID: the adoption figures now have named instruments with stated populations, and the two institutional-readiness numbers are RECONCILED rather than carried as a conflict.**
+
+| instrument | population and method, as stated | figures |
+|---|---|---|
+| 🟢 **UNESCO IESALC + UNU-IAS**, working paper on AI implementation in higher education in LAC | **200 institutions, 19 countries**, surveyed **Aug–Oct 2025** | 🟢 **teaching and learning 73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement **20.0 %** |
+| 🟢 **Digital Education Council — AI in Higher Education LATAM Survey 2026**, with Tec de Monterrey's *Institute for the Future of Education* | **30 000+ responses, 29 institutions**, published **Feb 2026** | 🟢 **92 % of students**, **79 % of faculty** actively engaging; **94 % of faculty** expect future use |
+
+🟢 **The 92 % this file carried as a press attribution now has a survey name, a sample size, an
+institution count, a partner and a month** — so it can be re-queried every pass instead of
+re-quoted. ⚠️ **But NOT read first-hand:** `unu.edu` and `www.iesalc.unesco.org` both return
+🔴 **403** from this host, probed this hour. These cells are **search-relayed** — one channel
+better than `p444`'s EFE relay, still not primary. `Gap 445-E` carries it as a **reachability**
+problem rather than a sourcing one.
+🟢 **The reconciliation, and it is where the money is.** This file's 🔴 **"< 10 % of institutions
+have formal guidelines AND sufficient capacity"** and this pass's 🟡 **"only 30 % of universities
+have published AI policies"** are not in conflict — they measure different things (policy
+published vs policy **plus** capacity to run it). 🔵 **The ~20-point gap between them is the
+sellable set: institutions that have already written the policy and cannot staff it.** They have
+made the decision and named the obligation, and lack exactly the implementation capacity a
+studio sells. The qualifying question that follows is *"do you have an AI policy, and who
+operates it?"* — better than either number alone.
 
 **🆕 `p442` — 🟢 one new instrument, 🔴 one measurement conflict carried as a conflict.**
 🟢 **Estado de México amended Article 61 of its state education law in April 2026** to promote
