@@ -37,6 +37,43 @@ registry client, the Canvas vendor's own LTI library and the client library unde
 gradebook connector. 🆕 `p431` adds a further **4** in **Tier 9 — the evaluation layer** below,
 for **19** permissive foundations in all.
 
+## 🔁 Restored by `p436` — including the repository two open gaps are written against
+
+> 🔴 **Restorations, not discoveries**, from the **171**-address population `p436`
+> measured for `Gap 435-B`. Every payload below was re-read first-hand on **2026-10-25**.
+> 🔴 **The most serious single row is `LongsightGroup/qti3`**: `Gap 238` was closed
+> against it with a tested artefact and `Gap 240` is still open on it, yet it was on
+> **no live shelf** — the rewrite deleted the evidence under two registered gap verdicts
+> while the verdicts themselves survived. That is `Gap 435-B`'s mechanism reaching the
+> gap register itself.
+
+| Repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | Why it is a foundation | Region |
+|---|---|---|---|---|---|
+| [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** | `db379e0c8757` | `LICENSE` 10 173 B · `a6cba85bc92e` | Serves a **OneRoster 1.2 API from an Ed-Fi ODS** (Data Standard 4.0, 5.x and 6.1). The roster-interoperability seam for US district data, and the row that lets an agent read enrolment without touching the SIS directly. | North America |
+| [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** | `902996d89729` | `LICENSE.md` 1 072 B · `00ed05b90bf8` | QTI 3 toolkit whose `packages/core` implements the **full parametric-item mechanism** — template declaration parsing, a real `randomInteger` draw over min/max/step, answer keys derived from the draw, and a constraint-retry loop. **This is the repository `Gap 238`/`Gap 240` are written against**, and it had been off every live shelf. | North America |
+| [OpenOLAT/qtiworks](https://github.com/OpenOLAT/qtiworks) | **BSD-3-Clause** | `57cdf4affa26` | `LICENSE.txt` 2 058 B · `a5c692f12090` | QTI 2.1 delivery engine with **JQTI+** and **MathAssess** (Edinburgh lineage). 🟢 **The live fork**: byte-identical payload to the abandoned `davemckain/qtiworks` and maintained to **2026-06-30** — see the decline note below. | EMEA |
+| [amp-up-io/qti3-item-player](https://github.com/amp-up-io/qti3-item-player) | **MIT** | `2e304fd0efb0` | `LICENSE` 1 076 B · `7faa621251d7` | QTI 3 **item player** — the rendering half of the assessment boundary, pairing with `qti3`'s authoring and `qtiworks`' delivery. | North America |
+| [Kennisnet/php-qti3](https://github.com/Kennisnet/php-qti3) | **MIT** | `cad6125a16ff` | `LICENSE` 1 066 B · `27fb6d463569` | PHP QTI 3 implementation published by **Kennisnet, the Dutch national education-ICT body** — a state education body shipping its own permissive assessment code, which is the EMEA supply tier this base kept recording as absent. | EMEA |
+| [datakind/student-success-tool](https://github.com/datakind/student-success-tool) | **MIT** | `e35c41af1dc1` | `LICENSE.md` 1 080 B · `04c23f1c41cd` | DataKind's data-assisted advising tool for retention: a **deployed** intervention, with John Jay College reporting a 32 % rise in senior graduation over two years via its CUSP programme (the project's own claim). Backed by google.org. 🟡 HEAD 2025-09-08 — over a year old; check currency before building on it. | North America |
+| [marcosroriz/sete](https://github.com/marcosroriz/sete) | **MIT** | `9f1f9c87ec93` | `LICENSE` 1 069 B · `0bbd32e7e09a` | **SETE** — school-transport e-governance from CECATE/UFG, with web, desktop and mobile builds; the desktop build exists specifically so municipalities **with restricted internet** can operate it. The clearest LATAM public-sector education system on this base. 🔴 HEAD 2023-03-20 — stale; treat as a reference design, not a live dependency. | LATAM |
+| [AI-for-Education/edu-qurating](https://github.com/AI-for-Education/edu-qurating) | **MIT** | `e007badc4e66` | `LICENSE` 1 063 B · `e6081fef4354` | **Edu-QuRating** — educational-quality rating of pretraining text, with a paper (arXiv 2609.09425) and released models; began as a fork of Princeton NLP's QuRating, upstream kept under `upstream/` with history. The data-curation layer under any education-domain model work. 🟡 `+0000` does not place a region on the offset channel; recorded Global. | Global |
+
+### 🔴 Declined in the same tranche — `davemckain/qtiworks`
+
+🔴 **Not restored, and the reason is in its own README**: *"IMPORTANT! This project is no
+longer supported and is going to be closed in early 2023."* HEAD **2023-01-04**.
+🟢 **The payload is BSD-3-Clause and re-read clean (2 058 B, `a5c692f12090`) — the grant
+was never the problem**, and a licence-only promotion test would have shelved it.
+🟢 **`OpenOLAT/qtiworks` carries the identical payload digest and is maintained to
+2026-06-30, so it is restored in its place.** 🔵 This one row is the concrete
+demonstration of `Gap 435-A`'s finding that *permissive* is not *recommendable*: both
+forks pass the licence test, one is dead, and only a README read separates them.
+Recorded as `DECLINED-p436` in the ledger so it is never re-litigated.
+
+🟡 **Stated reach bound**: the QTI layer is restored on **grant + currency + README**;
+no suite was executed, because installing a third-party repository's dependencies is not
+permitted in this environment — the same limit `P533` carried.
+
 ## 🔴 Copyleft foundations — usable, but integrate, do not vendor
 
 | Repo | Licence | HEAD | Payload | Note |

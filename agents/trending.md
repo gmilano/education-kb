@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p436` · 2026-10-25 — **`Gap 435-B` is CLOSED and it was **fifty-nine times** bigger than the register knew: not 3 dropped rows but **176** addresses claimed promoted and sitting on no live shelf. 🟢 The notation and the join `Gap 435-B` asked for are built, wired and green, with the backlog on a ratchet. 🟢 28 rows restored, every payload re-read first-hand. 🔴 And the deletion reached the gap register itself — `LongsightGroup/qti3`, the repository `Gap 238` was closed against and `Gap 240` is still open on, was on no shelf at all.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🔴 The population, and why the register's figure was never going to be right
+
+`Gap 435-B` found **three** claimed-but-absent addresses by hand and said the population was
+*"bounded but unmeasured"*, naming the measurement as the first thing a successor should do.
+🟢 **Measured, over all 12 `archive/` snapshots and both trend shelves:**
+
+| quantity | value |
+|---|---|
+| `Promoted` claim sites on the two trend shelves | **203** — the register estimated **19** |
+| └─ positive and naming an address | **80** |
+| distinct addresses claimed promoted | **219** |
+| 🔴 **claimed promoted, on no live shelf row** | **176** |
+| ├─ an `archive/` snapshot still holds the row | **150** |
+| └─ the row is in **no** snapshot — the claim was written, the row never was | **26** |
+| 🟢 dropped from the **append-only** shelves | **0** |
+| 🟢 restored this pass, payload re-read first-hand | **28** |
+| 🔴 declined this pass, reason recorded | **1** |
+| 🟡 backlog carried, one adjudicated ledger row each | **148** |
+
+🟢 **The append-only contract held perfectly — `0` drops from these two files.** That is worth
+stating plainly, because it is the one structural protection on this base that did its job, and
+it is the reason the 176 are recoverable at all: every one of them still has its first-hand
+grant, byte count and SHA recorded *here*.
+
+🔴 **Two mechanisms, not one.** `Gap 435-B` blamed *"a full-file rewrite"* and was right for
+**150** of the 176. The other **26** never reached a snapshot at all: the trend shelf recorded
+`Promoted` and the curated shelf was never written. 🔵 **A rewrite gate would have caught 150 and
+called the job done**, which is why the instrument is a ledger join and not a diff.
+
+### 🔴 Three defects in `p436`'s OWN instruments, each caught by its own control
+
+🔴 **1. `\bPromoted\b` matches *"deliberately NOT promoted"*.** The first build accused **218**
+addresses. `audit_blocks.py` — written to *grade* the extraction rule rather than trust it —
+showed **10 of 39** header sites were **negative** claims, including *"Five new rows, licences
+READ, deliberately NOT promoted"*. With a negation guard: **171**. 🔵 **A 21.6 % over-accusation,
+the `P543` error class, caught before publication rather than after.**
+
+🔴 **2. The guard then over-fired in the opposite direction.** A 40-character window let `never`
+in *"nine never-before-seen slugs, two promoted"* negate a **positive** claim. Re-anchored
+backward over ≤25 characters, forbidden from crossing a comma. 🟢 **The negative control is what
+found it**: all 56 negated sites were re-read by hand and that one did not belong.
+
+🔴 **3. A mention is not a row — and the looser reading hid the defect.** Reading the live
+shelves as free text counted this pass's **own decline note** as a landing, because the note names
+the declined address in prose. The row predicate moved the population **171 → 176** and the
+carried backlog **142 → 148**. 🔵 **Both earlier numbers were wrong in the direction that makes
+the shelf look healthier than it is**, which is the direction that matters.
+
+### 🟢 Restored to [`agents/top.md`](top.md) — 20 LMS connectors, grant re-read at the SHA
+
+🔴 **Not discoveries.** Each was promoted in an earlier pass and deleted by a later rewrite.
+🟢 **All 20 payloads returned `200` on 2026-10-25 and every digest matched the one recorded at
+promotion time** — independent confirmation that the original evidence was sound and only the
+shelf write was lost. Families via `p228`: **19 MIT, 1 ISC**.
+
+| address | cohort | grant re-read @ SHA | region (offset channel) |
+|---|---|---|---|
+| `BxnIceLemon/minerva-mcp` | Blackboard | 🟢 **ISC** `741` B `5d3787deebf3` @ `534b7dc7b78e` | **EMEA** `+0100` |
+| `UKplus8HRS/bb-mcp` | Blackboard | 🟢 **MIT** `1 067` B `02049138f239` @ `d639765bc267` | **EMEA** `+0100` |
+| `AnonymousOnyx22/google-classroom-student-mcp` | Classroom | 🟢 **MIT** `1 072` B `ed912ca72d9e` @ `f3c1bd8e6a11` | **North America** `-0400` |
+| `Mugen-Ibi/Classroom-MCP` | Classroom | 🟢 **MIT** `1 081` B `b77185922cd4` @ `5f746bdae197` | **APAC** `+0900` |
+| `Mattlo0546/classroom-mcp` | Classroom | 🟢 **MIT** `1 067` B `13c8ad755224` @ `46e4ff4195b6` | **EMEA** `+0100` |
+| `supachai-j/google-classroom-mcp-project` | Classroom | 🟢 **MIT** `1 090` B `125a8bf7ce31` @ `9490c0fc068b` | **APAC** `+0700` |
+| `charlie2233/coursebinder-ai-ready-google-classroom-exporter` | Classroom | 🟢 **MIT** `1 068` B `7f208bdb3cc4` @ `54e1eccaf943` | **North America** `-0700` |
+| `sinh-x/personal-google-mcp` | Classroom | 🟢 **MIT** `1 068` B `5ed26262319d` @ `6e6a98d957e0` | **APAC** `+0700` |
+| `praisethefacts/dsh-plugin-google-classroom` | Classroom | 🟢 **MIT** `1 064` B `c35e96e7d382` @ `4115d38621e4` | **EMEA** `+0200` |
+| `PrahanG/Google-Classroom-MCP` | Classroom | 🟢 **MIT** `1 060` B `f06ff8fa5a6c` @ `5c675c96b901` | **APAC** `+0530` |
+| `Shiv-D-Coder/google-mcp-agent` | Classroom | 🟢 **MIT** `1 069` B `2deff4ab7dff` @ `206bff862a0e` | **APAC** `+0530` |
+| `Teci-AI/moodle-mcp-connector` | Moodle | 🟢 **MIT** `1 103` B `c8bcb50d415c` @ `2318b9927da5` | **EMEA** `+0100` |
+| `The-Morrow-Project/Morrow-Bridge` | Canvas + Moodle | 🟢 **MIT** `1 071` B `f37f80963047` @ `b5e9993c5d53` | **North America** `-0500` |
+| `Jacob-Met/canvaspilot` | Canvas | 🟢 **MIT** `1 075` B `85144488dcaf` @ `e75196e94c6c` | **North America** `-0700` |
+| `arthurcuri/mcp-instructure-canvas` | Canvas | 🟢 **MIT** `1 074` B `161c1c8666c3` @ `fc3c813e76d0` | **LATAM** `-0300` |
+| `angelonrevelo/bettercanvasmcp` | Canvas | 🟢 **MIT** `1 070` B `fe401a64566c` @ `1f5a5969e502` | **APAC** `+0800` |
+| `sweeden-ttu/canvas-lms-mcp` | Canvas | 🟢 **MIT** `1 056` B `06dcddbb6908` @ `13f357361fe8` | **North America** `-0500` |
+| `a-ariff/canvas-mcp` | Canvas | 🟢 **MIT** `1 064` B `040d00e3cf79` @ `28496f9ca414` | **APAC** `+1300` |
+| `Kuria-Mbatia/Canvas-MCP-server` | Canvas | 🟢 **MIT** `1 063` B `fd34175ea8f9` @ `c2fee6cb2fc0` | **North America** `-0400` |
+| `Shashwatpog/poke-canvas-mcp` | Canvas | 🟢 **MIT** `1 072` B `b60d2cd596b7` @ `4917cf253ef7` | **APAC** `+0530` |
+
+🔵 **Regional spread: 8 APAC, 6 EMEA, 6 North America, 1 LATAM.** 🔵 **Currency**: 13 of 20
+have a HEAD inside October 2026; oldest are `Shiv-D-Coder/google-mcp-agent` (2025-07-27) and
+`Kuria-Mbatia/Canvas-MCP-server` (2025-10-08).
+
+🟢 **`Promoted:`** 28 restorations in total — the 20 above plus 8 to
+[`repos/foundations.md`](../repos/foundations.md) (`Ed-Fi-Alliance-OSS/edfi-oneroster`,
+`LongsightGroup/qti3`, `OpenOLAT/qtiworks`, `amp-up-io/qti3-item-player`,
+`Kennisnet/php-qti3`, `datakind/student-success-tool`, `marcosroriz/sete`,
+`AI-for-Education/edu-qurating`). 🔵 **Every one has a ledger row**, so this claim is now
+machine-checkable rather than prose — which is the whole point of `Gap 435-B`.
+
+### 🔴 Declined — `davemckain/qtiworks`, and it is the single clearest case against a licence-only promotion test
+
+🟢 **The grant is clean**: BSD-3-Clause, re-read at 2 058 B, `a5c692f12090`. 🔴 **The project is
+dead and says so in its own README**: *"IMPORTANT! This project is no longer supported and is
+going to be closed in early 2023."* HEAD **2023-01-04**. 🟢 **`OpenOLAT/qtiworks` carries the
+identical payload digest and is maintained to 2026-06-30, and is restored in its place.**
+🔵 **Two forks, one payload, one dead — `gate-promotion`'s predicate cannot tell them apart, and
+`gate-recency` can. That is `Gap 435-A` with a name on it.** Recorded `DECLINED-p436` so no later
+pass re-litigates it.
+
+### 🟢 `Gap 435-C` CLOSED — both in-language legs paid on the first try
+
+`Gap 435-C` recorded `p435` running the **wrong query shape** (ministry name in English) and
+prescribed *"two legs in-language, using `p407`'s exact query strings."* 🟢 **Run, and both
+returned an instrument immediately** — detail and the citation limits are on
+[`intel/market.md`](../intel/market.md) under APAC.
+
+- 🟢 **China:** 《"人工智能+教育"行动计划》 — **教科信〔2026〕1号**, five ministries jointly
+  (教育部 · 国家发展改革委 · 工业和信息化部 · 科技部 · 国家数据局), signed **2026-04-02**.
+  Names K-12 AI education into **local curriculum systems**, continues 《中小学人工智能通识教育指南》,
+  and puts AI **into the teacher-certification examination**.
+- 🟢 **Japan:** MEXT's school guideline is **still Ver. 2.0 (2024-12-26)**. A **Ver. 2.1**
+  direction was presented to the Central Council for Education on **2026-06-30** and an
+  August-2026 MEXT deck still points schools at the December-2024 text. 🔵 **The finding is the
+  non-event**: the two largest APAC school systems have diverged, China mandating and Japan
+  holding a two-year-old voluntary guideline.
+
+🔴 **Stated citation limit, and it is the whole reason this is not graded green-primary**: every
+government host for both legs — `moe.gov.cn`, `mext.go.jp`, `nda.gov.cn`, `chsi.com.cn` — is
+**unreachable from this host** (DNS/proxy, `Gap 56` class, verified by `curl` this pass). The
+document number, the five issuing bodies and the 2026-04-02 date are **consistent across ~10
+independent mirrors** including two municipal education bureaus and two universities, which is
+strong secondary evidence and still secondary. 🔴 **Do not put either in a client deliverable as
+primary-sourced law.** → `Gap 436-C`.
+
 ## 🆕 `p435` · 2026-10-25 — **`Gap 434-A` is CLOSED: all 2 450 unpromoted addresses graded first-hand, and the result refutes `gate-promotion`'s own predicate — permissiveness is **59.1 %** of this backlog, so it classifies rather than detects. 🟢 Sixteen rows promoted, opening the **national school-platform connector** tier, twelve of them EMEA — the region this base had declared a sub-regional nil in for three passes. 🔴 And one row was promoted to `agents/top.md` once already: a full-file rewrite deleted it.**
 
 🔵 **Append-only. Nothing below this block was edited.**

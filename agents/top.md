@@ -226,6 +226,60 @@ not a verdict, and this pass's own candidates are the proof.
 `repos/foundations.md`, and the second spelling is recorded here rather than published as a
 separate address.
 
+## 🔁 Restored by `p436` — the LMS-connector tier that a full-file rewrite deleted
+
+> 🔴 **These rows are not new findings.** Each was promoted in an earlier pass with its
+> grant read first-hand at a pinned SHA, recorded on [`agents/trending.md`](trending.md),
+> and then **silently dropped by a later full-file rewrite** — the mechanism `Gap 435-B`
+> named. `p436` measured the whole population (**171** claimed-and-absent addresses, not
+> the 3 the register knew), re-read every payload below on **2026-10-25**, and restored
+> this tranche. The verdict for all 171 is committed in
+> [`evidence/promotion-ledger.2026-10-25-p436.tsv`](../evidence/promotion-ledger.2026-10-25-p436.tsv),
+> and `gate-promotion-ledger` now **fails** if any row here is dropped again.
+
+> 🔵 **Why the tier matters commercially**: every row speaks to an LMS a client already
+> runs — Canvas, Moodle, Blackboard, Google Classroom — so it is the shortest path from an
+> AI mandate to something inside the system of record. 🔵 **Read the permissions wording
+> before the capability wording**: most of this cohort is read-only on purpose, and the
+> rows that write do so only on explicit opt-in.
+
+| Agent / repo | Licence (verified) | HEAD @ 2026-10-25 | Licence payload | What it does | Region |
+|---|---|---|---|---|---|
+| [BxnIceLemon/minerva-mcp](https://github.com/BxnIceLemon/minerva-mcp) | ISC | `534b7dc7b78e` | `LICENSE` 741 B · `5d3787deebf3` | Unofficial MCP server **and** CLI for the University of Leeds' Minerva (Blackboard Learn Ultra) plus Gradescope. Minerva access is read-only; the only mutating actions are Gradescope upload and regrade. **The user types password and MFA into their own browser window — the server never sees them.** | EMEA |
+| [UKplus8HRS/bb-mcp](https://github.com/UKplus8HRS/bb-mcp) | MIT | `d639765bc267` | `LICENSE` 1 067 B · `02049138f239` | Local MCP server for Blackboard Learn, **institution-agnostic by design** — assumes no particular university, identity provider or academic calendar. Playwright driving a visible Edge window. | EMEA |
+| [AnonymousOnyx22/google-classroom-student-mcp](https://github.com/AnonymousOnyx22/google-classroom-student-mcp) | MIT | `f3c1bd8e6a11` | `LICENSE` 1 072 B · `ed912ca72d9e` | Student-side Google Classroom MCP: classes, assignments and what is still owed. No sign-up; the learner's credentials go only to Google. | North America |
+| [Mugen-Ibi/Classroom-MCP](https://github.com/Mugen-Ibi/Classroom-MCP) | MIT | `5f746bdae197` | `LICENSE` 1 081 B · `b77185922cd4` | Cloudflare Worker MCP giving read-only Google Classroom (courses, published coursework, own submissions) to MCP clients, deployed **per user into their own account**. Documents the 7-day refresh-token expiry under Google OAuth External/Testing — the operational catch most of this cohort omits. | APAC |
+| [Mattlo0546/classroom-mcp](https://github.com/Mattlo0546/classroom-mcp) | MIT | `46e4ff4195b6` | `LICENSE` 1 067 B · `13c8ad755224` | **A single Python file with no dependencies** (3.9+, macOS/Linux/Windows): read-only student Classroom view plus slide and doc download to PDF, one folder per course. The lowest-friction row in the cohort. | EMEA |
+| [supachai-j/google-classroom-mcp-project](https://github.com/supachai-j/google-classroom-mcp-project) | MIT | `9490c0fc068b` | `LICENSE` 1 090 B · `125a8bf7ce31` | Teacher-side Classroom MCP — courses, rosters, submissions, reporting. **Read-only by design: grade write-back is deliberately unsupported**, with CSV export as the bulk path. The explicit-refusal pattern an oversight regime asks for. | APAC |
+| [charlie2233/coursebinder-ai-ready-google-classroom-exporter](https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter) | MIT | `54e1eccaf943` | `LICENSE` 1 068 B · `7f208bdb3cc4` | Browser-extension exporter: turns the Classroom content a logged-in user can **already see** into a local AI-readable archive. Needs no API credential — the route in where API access is refused. | North America |
+| [sinh-x/personal-google-mcp](https://github.com/sinh-x/personal-google-mcp) | MIT | `6e6a98d957e0` | `LICENSE` 1 068 B · `5ed26262319d` | **Rust** MCP server over personal Google services: Classroom and Drive, with course details and announcements as typed tools. The only non-JS/Python runtime in the cohort. | APAC |
+| [praisethefacts/dsh-plugin-google-classroom](https://github.com/praisethefacts/dsh-plugin-google-classroom) | MIT | `4115d38621e4` | `LICENSE` 1 064 B · `c35e96e7d382` | Configuration-only harness bundle that serves a Classroom MCP's read-only tools into an agent harness. **The packaging pattern rather than a server** — the row to copy when wrapping any of the above for a fleet. | EMEA |
+| [PrahanG/Google-Classroom-MCP](https://github.com/PrahanG/Google-Classroom-MCP) | MIT | `5c675c96b901` | `LICENSE` 1 060 B · `f06ff8fa5a6c` | Google Classroom MCP carrying **both JavaScript and Python implementations** in one tree. | APAC |
+| [Shiv-D-Coder/google-mcp-agent](https://github.com/Shiv-D-Coder/google-mcp-agent) | MIT | `206bff862a0e` | `LICENSE` 1 069 B · `2deff4ab7dff` | FastMCP agent unifying Gmail, Drive and Classroom tools — the cohort's one row that treats Classroom as part of a wider workspace surface. | APAC |
+| [Teci-AI/moodle-mcp-connector](https://github.com/Teci-AI/moodle-mcp-connector) | MIT | `2318b9927da5` | `LICENSE` 1 103 B · `c8bcb50d415c` | MCP server over **Moodle's own REST web services**: courses, structure, full text of Pages/Books/Labels/Lessons, quizzes, grades, deadlines, completion — and content create/edit **only when explicitly enabled**. The supported seam into a GPL LMS without forking it. | EMEA |
+| [The-Morrow-Project/Morrow-Bridge](https://github.com/The-Morrow-Project/Morrow-Bridge) | MIT | `b5e9993c5d53` | `LICENSE` 1 071 B · `f37f80963047` | Monorepo connecting an assistant the learner already uses to **Canvas and Moodle** for building and reviewing real coursework. States its own maturity honestly: Canvas checked on live test courses, Moodle early, Blackboard not shipped. | North America |
+| [Jacob-Met/canvaspilot](https://github.com/Jacob-Met/canvaspilot) | MIT | `e75196e94c6c` | `LICENSE` 1 075 B · `85144488dcaf` | Canvas MCP + CLI with a **stay-open session broker**: works where student personal access tokens are disabled and Canvas sits behind SSO/MFA — the access problem most Canvas MCPs cannot solve. | North America |
+| [arthurcuri/mcp-instructure-canvas](https://github.com/arthurcuri/mcp-instructure-canvas) | MIT | `fc3c813e76d0` | `LICENSE` 1 074 B · `161c1c8666c3` | Canvas MCP plus Telegram deadline notification and activity help, **instance-configurable** (the examples use PUC Minas's Canvas). v0.5.3, Portuguese-language docs, Docker packaging and an end-to-end validation page. | LATAM |
+| [angelonrevelo/bettercanvasmcp](https://github.com/angelonrevelo/bettercanvasmcp) | MIT | `1f5a5969e502` | `LICENSE` 1 070 B · `fe401a64566c` | Student-side Canvas MCP built on the observation that **the popular Canvas MCPs are instructor consoles a student token cannot drive**. Writes only on explicit opt-in, reports when Canvas refused, and treats `submissions/self` as the only completion proof. | APAC |
+| [sweeden-ttu/canvas-lms-mcp](https://github.com/sweeden-ttu/canvas-lms-mcp) | MIT | `13f357361fe8` | `LICENSE` 1 056 B · `06dcddbb6908` | Canvas LMS MCP scoped to a **named institution** (Texas Tech) — the single-tenant shape, useful as the template for a campus deployment. | North America |
+| [a-ariff/canvas-mcp](https://github.com/a-ariff/canvas-mcp) | MIT | `28496f9ca414` | `LICENSE` 1 064 B · `040d00e3cf79` | Local Canvas MCP whose stated point is that **the API key stays on the machine** instead of being handed to a hosted server. | APAC |
+| [Kuria-Mbatia/Canvas-MCP-server](https://github.com/Kuria-Mbatia/Canvas-MCP-server) | MIT | `c2fee6cb2fc0` | `LICENSE` 1 063 B · `fd34175ea8f9` | Canvas MCP with **composite tools** rather than thin API wrappers: student dashboard, course health report, assignment context with rubric and module prerequisites, prioritised attention filter. The most product-shaped row in the cohort. | North America |
+| [Shashwatpog/poke-canvas-mcp](https://github.com/Shashwatpog/poke-canvas-mcp) | MIT | `4917cf253ef7` | `LICENSE` 1 072 B · `b60d2cd596b7` | Canvas MCP targeting a **consumer assistant over iMessage** — read-only student scope. Evidence that the surface is already leaving the IDE. | APAC |
+
+🟢 **Grant re-read, not restated**: all 20 payloads returned `200` on
+`raw.githubusercontent.com` on 2026-10-25, and the digests **match the ones the trend
+shelf recorded at promotion time** — independent confirmation that the original evidence
+was sound and only the shelf write was lost. Families via `p228`'s earliest-title
+classifier: **19 MIT, 1 ISC**. Regions placed on the commit-offset channel
+(`gate-offset-region`), never on a region word.
+
+🔵 **Cohort currency, stated because a permissive licence has a shelf life (`Trend 9`)**:
+13 of 20 have a HEAD inside October 2026; the two oldest are
+`Shiv-D-Coder/google-mcp-agent` (2025-07-27) and `Kuria-Mbatia/Canvas-MCP-server`
+(2025-10-08). 🔵 **Regional spread: 8 APAC, 6 EMEA, 6 North America, 1 LATAM** — and the
+LATAM row (`arthurcuri/mcp-instructure-canvas`, PUC Minas) is the only one shipping
+Portuguese-language documentation.
+
 ## 🔴 Licence corrections — rows that are NOT what a badge-read would tell you
 
 These are the findings that change a build decision. All re-measured 2026-10-25.

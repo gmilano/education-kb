@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p436` · 2026-10-25 — **The deletion reached the gap register: `LongsightGroup/qti3` — the repository `Gap 238` was CLOSED against with a tested artefact, and `Gap 240` is still OPEN on — was on **no live shelf**. 🔴 And **110 of 464** register citations (23.7 %) name a finding ID no live shelf defines. 🟢 The QTI assessment layer is restored whole, four rows, two of them EMEA including the Dutch national education-ICT body.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🔴 The worst single consequence of the rewrite mechanism
+
+`Gap 435-B` observed that an archived `intel/market.md` cited a deleted row by name, so *"the
+claim survived the rewrite; the evidence under it did not."* 🔴 **The same thing happened to the
+gap register, and nobody was looking:**
+
+| citation on `intel/open-gaps.md` | what it points at | state before `p436` |
+|---|---|---|
+| `Gap 238` — CLOSED *"with a tested artefact"* | `LongsightGroup/qti3` | 🔴 on **no** live shelf |
+| `Gap 240` — OPEN, *"the smallest gap on this KB"* | `LongsightGroup/qti3` | 🔴 on **no** live shelf |
+| `P527`, `P533` — the findings that recorded the measurement | — | 🔴 defined on **no** live shelf |
+
+🟢 **The artefact itself survived** — `compose/code/p533-qti3-template-emitter/` is on the tree
+and intact. 🔴 **What vanished was the shelf row naming the repository it targets**, so
+`Gap 240` was an open, actionable, *"one pull request"* gap pointing at an address the corpus no
+longer listed. 🟢 **Restored, with the grant re-read at the SHA, and `Gap 240` is re-grounded.**
+
+### 🔴 `110 of 464` register citations are dead — and the first measurement of it was WRONG
+
+🔴 **The instrument's first build reported 462 dead citations.** It graded the register against
+the **curated** shelves — which hold **3** finding IDs in total (`agents/top.md` 3,
+`repos/foundations.md` **0**). 🔵 **That is a wrong denominator, not a finding**, and publishing
+it would have been this base's largest single false claim. The definition channel is the pair of
+**append-only** trend shelves (588 + 467 IDs). `finding_citations.py` now **refuses** any
+denominator under 100 rather than grading against it.
+
+🟢 **Corrected figure: 110 of 464 (23.7 %).** Including the evidence pointers for **`Gap 236`,
+`Gap 237`, `Gap 241`, `Gap 242`, `Gap 243`, `Gap 245` and `Gap 246`** — all currently open.
+
+🔵 **And the "never written" label was wrong too, which matters because it is the difference
+between sloppiness and loss.** `git log -S` places `P527`, `P543` and `P599` in the shelves at
+**passes 42–49**, removed at commit `306eb06` (**pass 90, 2026-10-09**) — a rewrite that took
+**no `archive/` snapshot**. 🟢 **So nothing was fabricated**: of the 110, **30** are recoverable
+from `archive/` and **80** from `git log -S` alone. 🔴 `gate-dead-citation` (`p372`) passes on
+this tree because it grades **addresses**; nothing graded finding IDs. → `Gap 436-B`.
+
+### 🟢 Restored to [`repos/foundations.md`](foundations.md) — the QTI layer restored whole
+
+| address | grant re-read @ SHA | HEAD | region |
+|---|---|---|---|
+| `LongsightGroup/qti3` | 🟢 **MIT** `1 072` B `00ed05b90bf8` @ `902996d89729` (`LICENSE.md`) | 2026-10-09 | **North America** `-0400` |
+| `OpenOLAT/qtiworks` | 🟢 **BSD-3-Clause** `2 058` B `a5c692f12090` @ `57cdf4affa26` | 2026-06-30 | **EMEA** `+0200` |
+| `amp-up-io/qti3-item-player` | 🟢 **MIT** `1 076` B `7faa621251d7` @ `2e304fd0efb0` | 2025-06-21 | **North America** `-0700` |
+| `Kennisnet/php-qti3` | 🟢 **MIT** `1 066` B `27fb6d463569` @ `cad6125a16ff` | 2026-10-13 | **EMEA** `+0200` |
+| `Ed-Fi-Alliance-OSS/edfi-oneroster` | 🟢 **Apache-2.0** `10 173` B `a6cba85bc92e` @ `db379e0c8757` | 2026-10-16 | **North America** `-0500` |
+| `datakind/student-success-tool` | 🟢 **MIT** `1 080` B `04c23f1c41cd` @ `e35c41af1dc1` (`LICENSE.md`) | 🟡 2025-09-08 | **North America** `-0400` |
+| `marcosroriz/sete` | 🟢 **MIT** `1 069` B `0bbd32e7e09a` @ `9f1f9c87ec93` | 🔴 2023-03-20 | **LATAM** `-0300` |
+| `AI-for-Education/edu-qurating` | 🟢 **MIT** `1 063` B `e6081fef4354` @ `e007badc4e66` | 2026-09-11 | 🟡 Global (`+0000` does not place) |
+
+🟢 **`Kennisnet/php-qti3` is the quietly important row.** Kennisnet is the **Dutch national
+education-ICT body**, publishing its own MIT assessment implementation — a *state education body
+shipping permissive code*, which is precisely the EMEA supply tier this base recorded as a nil
+for three passes before `p435` and is now confirmed from a second direction.
+
+🔵 **The assessment boundary is now armed end to end again, and permissively**:
+`qti3` (authoring + the parametric mechanism, MIT) → `amp-up-io/qti3-item-player` (rendering,
+MIT) → `OpenOLAT/qtiworks` (delivery + JQTI+/MathAssess, BSD-3-Clause) → `Kennisnet/php-qti3`
+(a PHP estate's route in, MIT). 🔴 **Reach bound: grant + currency + README only. No suite was
+executed** — installing a third-party repository's dependencies is not permitted here, the same
+limit `P533` carried.
+
 ## 🆕 `p435` · 2026-10-25 — **The trend record was never the problem: it held **1 449** permissive addresses nobody had graded. 🟢 All 2 450 unpromoted addresses are now graded first-hand and the backlog has a shape — 59.1 % permissive, 20.4 % with no licence file at all. 🔴 Six consecutive passes reported the permissive foundation tier "unchanged" while this sat underneath it.**
 
 🔵 **Append-only. Nothing below this block was edited.**

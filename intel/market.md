@@ -106,6 +106,12 @@ raw host, and the distinction is load-bearing because it is why no star count on
 reproducible from `make` (`Gap 434-B`).
 
 
+## 🆕 `p436` · 2026-10-25 — **`Gap 435-C` CLOSED: both APAC legs re-run **in language** paid on the
+first try, and the finding is a divergence — China has a five-ministry action plan with a document
+number, Japan is still on a guideline from December 2024. 🔴 Every government primary for both legs
+is unreachable from this host, so both are graded secondary-with-mirrors and must not be cited as
+settled law. 🔵 The single `## Opportunities by region` block below is amended in place.**
+
 ## Market size — use the range, never a single figure
 
 | Segment | 2026 | Horizon | CAGR | Source class |
@@ -285,6 +291,34 @@ own** LTI library), [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswr
 (MIT, Schoology + StudentVUE + Ion for one large district) and
 [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)
 (Apache-2.0, four teacher skills **shipped with their evaluation framework**).
+
+#### 🆕 `p436` · 2026-10-25 — the state-policy layer, and an explicit tracker caveat
+
+🟡 **Scale, from policy trackers rather than from statute text**: roughly **33–35 states plus
+Puerto Rico** now publish official guidance on AI in education (up from ~28 in early 2025), and
+one tracker counts **134+ bills across 31 states** touching K-12 and higher education.
+🔴 **Both figures are a tracker's count, not a count this base verified**, and the trackers
+disagree with each other on individual bill statuses — `p432` already corrected one NA bill
+count on exactly this ground, so the caveat is carried rather than discovered.
+
+🟢 **The commercially decisive shift is from guidance to binding district obligation**, and two
+dates carry it:
+- **Ohio** — every district, community school and STEM school had to **adopt an AI use policy by
+  1 July 2026**. A policy mandate with a deadline is a services engagement, not a memo.
+- **Illinois** — **AI literacy instruction for grades 6–12**, reported effective
+  **1 August 2026**. 🟡 Single-source in this pass's channel; treat as indicative.
+
+🔵 **Where the spend follows**: the recurring obligations across these instruments are *teacher
+training and professional development* (Maryland SB 720, Virginia SB 394) and *student-data
+governance* — anonymisation, data minimisation, parental consent and retention (California's
+January-2026 guidance), with proposals to bar student data from training models absent direct
+school benefit. 🔴 **And the weak spot is vendor accountability**: most current proposals do
+**not** require vendors to supply auditable records of user interactions — which is exactly the
+gap the staged human-sign-off artefacts on `agents/top.md` are built to fill.
+
+🔴 **Stated limit**: several sources in this leg are vendor or advocacy blogs, and one tracker
+states plainly that as of 2026-09-07 there is **no single state-law pattern** for school AI.
+Primary statute text was not read this pass.
 
 ### EMEA
 
@@ -552,6 +586,56 @@ here for the successor: the leg that pays is the **instrument's own name** in th
 jurisdiction's own language, not the country's name in English. Carried as part of
 `Gap 435-C`.
 
+#### 🆕 `p436` · 2026-10-25 — 🟢 **`Gap 435-C` CLOSED. Both legs re-run in language, both paid on the first try, and the two systems have DIVERGED**
+
+🔵 **The prescription was exact and it worked**: query the instrument in the jurisdiction's own
+language. `p425`, `p427`, `p435` and now `p436` all record the same lesson — **the query shape
+was the defect, never the jurisdiction.**
+
+🟢 **China — 《"人工智能+教育"行动计划》, and it is the most committing education-AI instrument
+on any of these shelves.**
+- **Document number `教科信〔2026〕1号`**, signed **2 April 2026**, published ~**10 April 2026**.
+- 🔵 **Five ministries jointly**, which is the part that matters commercially: 教育部 (Education),
+  国家发展改革委 (NDRC), 工业和信息化部 (MIIT), 科技部 (Science & Technology) and
+  **国家数据局 (National Data Bureau)**. A plan co-signed by the data regulator and the
+  industrial-policy ministry is a procurement signal, not a curriculum memo.
+- Issued under the **《教育强国建设规划纲要（2024—2035年）》** and the State Council's
+  **《关于深入实施"人工智能+"行动的意见》**.
+- **K-12:** continue refining the **《中小学人工智能通识教育指南》**; bring AI education
+  **fully into local curriculum systems** (推动人工智能教育全面纳入地方课程体系) with per-stage
+  objectives, content and **class-hour requirements**; encourage cross-disciplinary teaching and
+  extend AI into after-school services and study-practice activities.
+- **Teachers:** 🆕 **AI is to be written into the teacher-qualification examination and
+  certification** (将人工智能纳入教师资格考试和认证内容) — the single most durable demand signal
+  in the document, because it makes AI competence a licensing condition.
+- **Equity:** strengthen K-12 AI education bases and **support rural and remote schools** in
+  running AI courses off the national platform.
+- **Build items named:** 智能学伴 (intelligent learning companions) and dynamic learning-path
+  optimisation.
+
+🟡 **Japan — the finding is the NON-event, and it is a real datum rather than a nil.**
+- MEXT's school guideline is **still Ver. 2.0, dated 2024-12-26** — the revision of the
+  provisional Ver. 1.0 (July 2023), addressed to teachers and boards of education.
+- A direction toward **Ver. 2.1** was presented to the **中央教育審議会 initial-and-secondary
+  education digital-learning-foundation special committee on 2026-06-30**, and an **August-2026**
+  MEXT deck still instructs schools to follow the **December-2024** text.
+- Standing principles: humans retain final decisions, and information literacy is built for a
+  world that contains generative AI. Higher education and technical colleges sit under a
+  **separate** MEXT notice.
+- 🔵 **So the two largest APAC school systems have diverged inside one year**: China mandating
+  through curriculum and teacher licensing, Japan holding a two-year-old voluntary guideline
+  whose own update has been in committee since June. **For a pitch, that is the APAC slide** —
+  the same region needs a compliance story in one country and an enablement story in the other.
+
+🔴 **Citation limit, stated because it decides whether this is usable in a deliverable.** Every
+government primary for both legs is **unreachable from this host** — `moe.gov.cn`,
+`mext.go.jp`, `nda.gov.cn` and `chsi.com.cn` all fail DNS/proxy (`curl` run this pass, `Gap 56`
+class). 🟢 The document number, the five issuing bodies, the 2026-04-02 signing date and the
+quoted Chinese clauses are **consistent across ~10 independent mirrors**, among them the
+National Data Bureau's republication, two municipal education bureaus and two universities.
+🔴 **That is strong secondary evidence and it is still secondary: do not present either
+instrument as primary-sourced law.** → `Gap 436-C`.
+
 🟢 **Vietnam, unchanged and still the sharpest APAC compliance story:** **Decision
 33/2026/QĐ-TTg** under Law 134/2025/QH15 and Decree 142/2026/NĐ-CP — 46 high-risk
 categories across six sectors, three of them education, with sectoral compliance due
@@ -682,6 +766,33 @@ inspection** — [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/s
 (Apache-2.0) is a translator from Chile's national AI centre with nothing
 education-specific in it. 🔵 **An honest nil beats a padded row**: the LATAM supply side
 remains regulation-and-demand, not supply, for the fifth consecutive measurement.
+
+#### 🆕 `p436` · 2026-10-25 — a regional institution now exists, and the comparison frame is unflattering
+
+🟢 **UNESCO launched an Observatory on AI in Education for Latin America and the Caribbean,
+presented in Santiago de Chile on 14 April 2026.** 🔵 **Why it is worth a line in a pitch**:
+until now LATAM AI-education policy evidence on these shelves was per-country and uneven; a
+standing regional observatory is a citable counterpart to the EU's instruments and a natural
+convening partner for a regional engagement.
+
+🟡 **Regulatory posture, consistent with what this file already carries**: no unified regional
+framework. Chile leads with a National AI Policy since 2021 plus a law under discussion and the
+**"PotencIA el aprendizaje"** document (2025); Brazil and Colombia have national AI strategies
+**without education-sector regulation**; Uruguay's **Ceibal** framework remains the region's
+most mature delivery vehicle. Commentary expects risk-tier laws modelled on the EU approach to
+begin taking effect across the region during 2026.
+
+🔴 **The uncomfortable comparison, and it is the honest framing for a LATAM conversation**: the
+same commentary notes that **China and the UAE mandated AI education from the 2025–26 cycle
+while LATAM does not appear on that map at all.** 🟢 `p436`'s own APAC leg independently
+confirms the China half of that claim with a document number — so the asymmetry is real and
+dated, not rhetorical.
+
+🟡 **Adoption-vs-governance figures attributed to Stanford's AI Index 2026** (four in five
+secondary and university students already using generative AI for coursework; only about half of
+schools having any policy) are quoted **second-hand through a newspaper column** and were **not
+read from the Index itself**. 🔴 **Do not put them in a deck on this basis** — the primary read
+is the cheap next step. → `Gap 436-D`.
 
 ### Global
 

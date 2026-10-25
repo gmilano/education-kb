@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AO — `p436` The **assessment-interoperability** engagement: parametric items a client can author, deliver and prove, with no copyleft anywhere in the chain
+
+🔵 **The engagement this answers.** A client with a real examination obligation — a ministry, a
+board, a university consortium — needs items that are *generated per learner* (so they cannot be
+shared), *delivered in a standard the regulator recognises*, and *provable after the fact*. Until
+`p436` this chain could not be assembled from this base's live shelves at all: the repository it
+depends on had been silently deleted.
+
+🟢 **The stack, every grant re-read first-hand on 2026-10-25, every licence permissive:**
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| 1 · author | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) `packages/core` | **MIT** `1 072` B · `00ed05b90bf8` | the only readable implementation of `qti-template-declaration` / `qti-template-processing` with a real `randomInteger` draw over min/max/step and a constraint-retry loop |
+| 1b · emit | `compose/code/p533-qti3-template-emitter/` (this tree) | — | 🟢 the `Gap 238` artefact: regenerates two upstream fixtures **node-for-node**, 43 assertions, 11 of 11 mutations detected. 🔴 `qti3`'s **writer** cannot emit these elements — this is the workaround, and `Gap 240` is to contribute it upstream |
+| 2 · render | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** `1 076` B · `7faa621251d7` | QTI 3 item rendering |
+| 3 · deliver | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | **BSD-3-Clause** `2 058` B · `a5c692f12090` | QTI 2.1 delivery, **JQTI+** and **MathAssess** for mathematical response processing; live to 2026-06-30 |
+| 3b · PHP estate | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** `1 066` B · `27fb6d463569` | the route in when the estate is PHP (i.e. Moodle); published by the **Dutch national education-ICT body** |
+| 4 · roster | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** `10 173` B · `a6cba85bc92e` | OneRoster 1.2 over an Ed-Fi ODS — who sits the exam, without touching the SIS |
+| 5 · connect | the restored LMS-connector tier on [`agents/top.md`](../agents/top.md) | **MIT / ISC** | push items and pull submissions from the LMS the client already runs (Canvas, Moodle, Blackboard, Classroom) |
+| 6 · sign-off | `kaushikgunasekaren/canvas-grader-mcp` (already shelved) | **MIT** | **draft-for-human-sign-off by default** — the staged artefact EU, Vietnamese and US-state oversight rules all require |
+
+### How it wires together
+
+1. 🟢 **Author one template, not N items.** Hand-author the template XML from
+   `qti3`'s `packages/fixtures/xml/random-integer-template-reference.xml` (~35 lines), **or** run
+   the `p533` emitter to generate it. 🔴 **Do not plan on `qti3`'s `writer` package** — it has
+   **0 of 33** exports for these elements (`Gap 39`, refuted for authoring).
+2. 🟢 **Let `core` execute the draw.** It parses the declaration, draws over the declared grid,
+   derives the answer key **from the draw**, and retries up to 100 times against constraints. The
+   per-learner variant and its key are produced by the same pass — which is what makes the result
+   defensible.
+3. 🟢 **Validate transitively, not by assertion.** The emitter's output matches the fixtures
+   `qti3`'s own schema gate validates against the sha256-pinned official ASI schema, so validity
+   is inherited. 🔴 **Stated limit**: the official XSD could not be fetched here
+   (`purl.imsglobal.org` proxy-blocked, `Gap 56` class), and `qti3`'s suite was **not executed** —
+   installing a third-party repository's dependencies is not permitted in this environment.
+4. 🟢 **Render and deliver** through layer 2/3, or 3b for a PHP estate.
+5. 🟢 **Resolve cohort from layer 4**, so the exam roster is the SIS's answer and not a copy.
+6. 🟢 **Return results through layer 5, and gate every grade through layer 6.** Nothing writes a
+   grade without a human action.
+
+### Why the licences matter here specifically
+
+🟢 **There is no copyleft anywhere in the chain** — MIT, MIT, MIT, BSD-3-Clause, MIT, Apache-2.0.
+🔵 That is unusual on this base and it is the point: the assessment boundary is the one tier where
+a client most often needs to **ship a modified binary to a ministry** without publishing it, and
+the AGPL platform tier (Open edX, Moodle's GPL) cannot be the carrier for that.
+
+### Cost, and what would sink it
+
+🟡 **Realistic shape: 8–10 weeks** — 2 to wire author→render→deliver on the fixtures, 2 for the
+roster seam, 2 for the LMS connector, 2–4 for the sign-off path and the audit trail.
+🔴 **What would sink it**: (a) `qti3`'s suite has **never been executed in this environment**, so
+first-week work is standing the upstream suite up on a real checkout; (b) `amp-up-io`'s HEAD is
+**2025-06-21** — the only stale link in the chain, and the one to re-check before committing;
+(c) if the regulator requires QTI **3** delivery rather than 2.1, layer 3 does not satisfy it and
+the chain is authoring-and-rendering only.
+
+🔴 **Provenance warning, because this pattern is the reason it matters**: four of these six
+components were **off every live shelf until `p436` restored them**, while `Gap 240` stayed open
+pointing at one of them. 🟢 `gate-promotion-ledger`'s `C3` control now fails if any of them is
+dropped again.
+
 # 🧩 Compose patterns — Education
 
 > Concrete recipes: named repos, named licences, and how they wire together.

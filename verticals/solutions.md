@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p436` — The interoperability layer is a vertical in its own right, and a **national** education body is shipping it permissively
+
+🔵 **The platform map on this file answers "which LMS do we build on?".** `p436` restores a tier
+that answers a different and often better question: **"what do we build between the systems the
+client already runs?"** Every row below was re-read first-hand on 2026-10-25.
+
+| system | licence (verified) | layer | what it unlocks | Region |
+|---|---|---|---|---|
+| [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** `10 173` B · `a6cba85bc92e` | roster / SIS interop | Serves a **OneRoster 1.2 API over an Ed-Fi ODS** (DS 4.0, 5.x, 6.1). Lets an agent read enrolment and class structure **without integrating against the SIS**. The US district-data seam. | North America |
+| [Kennisnet/php-qti3](https://github.com/Kennisnet/php-qti3) | **MIT** `1 066` B · `27fb6d463569` | assessment interop (PHP) | QTI 3 in PHP from the **Dutch national education-ICT body** — the route into a PHP estate, which is most of the Moodle world. | EMEA |
+| [OpenOLAT/qtiworks](https://github.com/OpenOLAT/qtiworks) | **BSD-3-Clause** `2 058` B · `a5c692f12090` | assessment delivery | QTI 2.1 delivery with **JQTI+** and **MathAssess**. Maintained to **2026-06-30**. | EMEA |
+| [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** `1 072` B · `00ed05b90bf8` | assessment authoring | QTI 3 toolkit; `packages/core` implements the **parametric-item mechanism** end to end. | North America |
+| [amp-up-io/qti3-item-player](https://github.com/amp-up-io/qti3-item-player) | **MIT** `1 076` B · `7faa621251d7` | assessment rendering | QTI 3 item player — the rendering half of the boundary. | North America |
+| [marcosroriz/sete](https://github.com/marcosroriz/sete) | **MIT** `1 069` B · `0bbd32e7e09a` | public-sector operations | **SETE** (CECATE/UFG): school-transport e-governance with a **desktop build for municipalities with restricted internet**. 🔴 HEAD 2023-03-20 — a reference design, not a live dependency. | LATAM |
+
+🟢 **Why `Kennisnet/php-qti3` changes the EMEA story on this file.** This file has repeatedly
+recorded that EMEA's open-source education supply is thin and regulation-heavy. A **national
+education-ICT agency publishing its own MIT assessment implementation** is the opposite shape:
+state-funded, permissively licensed, and institutionally durable. 🔵 Taken with `p435`'s national
+school-platform connector tier (IServ, Librus, Smartschool, EduPage, Skola24), the EMEA pattern is
+now clear — **the supply is there, it is national rather than pan-European, and it was invisible
+to every pan-regional query this base ran.**
+
+🔵 **The decision this tier adds to "choosing the base"**: if the client's constraint is *several
+systems that must agree* rather than *one system to extend*, the interop layer is the engagement
+and the LMS choice is downstream of it. 🔴 **Reach bound: grant + currency + README; no suite was
+executed here.**
+
 # 🏫 Vertical solutions — Education
 
 > Real, deployable platforms that an AI layer can be built **on top of** — the education

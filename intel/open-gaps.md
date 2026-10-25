@@ -4,6 +4,201 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p436`
+
+### 🟢 `Gap 435-B` — **CLOSED with the notation, the join and the ratchet it prescribed — and the population is 59× what the register knew**
+
+`Gap 435-B` prescribed: *"a notation first — one line per promotion in a committed ledger with
+the slug and the target file — then a gate that joins the ledger against the live shelves. One
+pass for the notation plus the gate; the 19 historical claims are adjudicated by hand in the same
+pass."* It also named the first task: *"There are 12 `archive/` rewrite snapshots on this tree,
+so the population of silently-dropped rows is bounded but unmeasured, and that measurement is the
+first thing the ledger pass should do."*
+
+🟢 **All three delivered at the price quoted.** `compose/code/p436-promotion-ledger/`, wired as
+`gate-promotion-ledger` in `HOOK_GATES` (so it is in `make hooks` *and* `make commit-gates`),
+**22 offline controls**, red on its first run, green after the restorations it forced. The ledger
+is `evidence/promotion-ledger.2026-10-25-p436.tsv` — **265 rows, 219 distinct addresses, one
+adjudicated verdict each**.
+
+🔴 **The measurement, which is the finding:**
+
+| quantity | register's figure | `p436` measured |
+|---|---|---|
+| `Promoted` claim sites | 19 | **203** |
+| claimed promoted, on no live shelf **row** | 3 | **176** |
+| └─ an `archive/` snapshot still holds it | — | **150** |
+| └─ in **no** snapshot: claim written, row never written | — | **26** |
+| dropped from the **append-only** shelves | — | 🟢 **0** |
+
+🔴 **The register's single-mechanism diagnosis was right for 150 and incomplete.** `Gap 435-B`
+blamed *"a full-file rewrite"*; **26** addresses never reached a snapshot at all — the trend
+shelf recorded `Promoted` and the target shelf was never written. 🔵 **A rewrite-diff gate would
+have caught 150 and called the job done**, which is why the instrument is a ledger join.
+
+🟢 **The append-only contract is the one structural protection on this base that worked** — `0`
+drops — and it is why all 176 are recoverable: every one still carries its first-hand grant,
+byte count and SHA on the trend record.
+
+🟢 **Acted on, not just counted: 28 restored, 1 declined.** 20 LMS connectors to
+`agents/top.md`, 8 foundations to `repos/foundations.md`. All 29 payloads re-read on
+`raw.githubusercontent.com` on 2026-10-25; **every digest matched the one recorded at promotion
+time**, which independently confirms the original evidence was sound and only the write was lost.
+Families: 23 MIT, 1 ISC, 1 Apache-2.0, 2 BSD-3-Clause (one declined).
+
+🔴 **Three defects in `p436`'s own instruments, each caught by its own control and each recorded
+rather than quietly fixed:**
+
+1. 🔴 **`\bPromoted\b` matches *"deliberately NOT promoted"*.** First build accused **218**;
+   `audit_blocks.py` showed **10 of 39** header sites were negative claims. With the guard:
+   **171**. A **21.6 % over-accusation** — the `P543` class, caught pre-publication.
+2. 🔴 **The guard then over-fired**: a 40-char window let `never` in *"nine never-before-seen
+   slugs, two promoted"* negate a **positive** claim. Re-anchored backward over ≤25 chars, no
+   comma crossing. Found by hand-reading all 56 negated sites — the negative control.
+3. 🔴 **A mention is not a row.** Free-text reading counted this pass's **own decline note** as a
+   landing. The row predicate moved the population **171 → 176** and the backlog **142 → 148**.
+   🔵 **Both earlier figures erred in the direction that makes the shelf look healthier.**
+4. 🔴 **`restore_sweep.sh` hand-rolled a probe loop that already existed — the third recorded
+   instance.** `lib/probe_payload.sh` says *"source this, do not rewrite it"* and names two
+   earlier passes that did. 🟢 **`gate-ladder-case` caught it** (`STANDING:SINGLE-SPELLING`
+   18 → 19), correctly, because the hand-rolled ladder decided **absence**. 🟢 Fixed by
+   sourcing the library, ratchet back to 18, and the fix **paid at once**: the library resolved
+   `datakind/student-success-tool`'s default branch as **`develop`**, invisible to a
+   `main`/`master` loop. 🔴 **And the library needs `set +u`** — under `set -u` every
+   `probe_repo` call returned a silently **empty** row. 🟢 All 30 addresses re-swept through the
+   corrected instrument; every family and byte count agreed, so no published row changes.
+
+🔵 **Why the gate is a ratchet rather than a pass/fail**, per `Gap 435-A`'s own lesson: a gate
+firing 148 times is a classifier, not a detector. `C1` makes the notation **binding** (a future
+pass cannot claim a promotion without a ledger verdict), `C2` pins the backlog so it may **only
+fall**, `C3` fails if a restored row is dropped again.
+
+### 🟢 `Gap 435-C` — **CLOSED. Both in-language legs paid on the first attempt**
+
+`Gap 435-C` recorded `p435` running the wrong query shape and prescribed *"two legs in-language,
+using `p407`'s exact query strings. Cost: one pass, two legs."* 🟢 **Run at that price, both
+returned an instrument immediately.**
+
+- 🟢 **China:** 《"人工智能+教育"行动计划》, **`教科信〔2026〕1号`**, **five ministries**
+  (教育部 · 国家发展改革委 · 工业和信息化部 · 科技部 · 国家数据局), signed **2026-04-02**.
+  K-12 AI education **into local curriculum systems** with mandated class hours; 《中小学人工智能
+  通识教育指南》 continued; 🆕 **AI written into the teacher-qualification examination**.
+- 🟡 **Japan:** MEXT's school guideline is **still Ver. 2.0 (2024-12-26)**; a Ver. 2.1 direction
+  went to the Central Council for Education on **2026-06-30** and an August-2026 MEXT deck still
+  points schools at the December-2024 text. **The non-event is the finding.**
+
+🔵 **Fourth consecutive pass to confirm the same lesson** (`p425`, `p427`, `p435`, `p436`): the
+query shape was the defect, never the jurisdiction. 🟢 Both are now on `intel/market.md` under
+APAC and carried as `Trend 34`. 🔴 **Residual, and it is a citation gap rather than a
+measurement gap → `Gap 436-C`.**
+
+### 🟡 `Gap 434-D` — **CARRIED a second pass, unchanged and deliberately not spent**
+
+`gate-dates` still cannot distinguish the stale EU August-2026 claim from a genuine non-EU
+August-2026 commencement. Priced at *"one pass, one regex arm, two controls."* 🔴 **`p436` did
+not spend it either**, because `Gap 435-B` was the higher-value leg and was. 🟢 **No new sentence
+on these shelves trips it**: this pass's dates are *signed*, *published*, *presented* and *still
+Ver. 2.0*, none of which forms a candidate. 🟡 **Priority unchanged**, and the fixture remains
+written down in `p434`'s entry.
+
+### 🔴 `Gap 436-A` — THE 148-ROW BACKLOG IS ADJUDICATED AS A CLASS, NOT ROW BY ROW
+
+🟢 **What is settled**: all 176 have a committed ledger verdict, the backlog may only fall, and
+29 were acted on with first-hand re-reads. 🔴 **What is not**: the **148** carried rows are
+adjudicated as a *class* — each carries a first-hand grant from its declaring pass, but `p436`
+re-read payloads for only the 29 it acted on. **A carried row is therefore evidence of a past
+measurement, not a current one.**
+
+🔵 **Remedy and cost, measured rather than guessed.** `restore_sweep.sh` ran **26 addresses in
+~2 minutes** serially on two channels (payload + treeless HEAD), so the whole backlog is
+**~12 minutes at that rate**, or well under 2 at `parallelism=20` on `p435`'s shape. 🔴 **The
+expensive half is not the sweep, it is the READ**: `Gap 435-A` established that licence and
+recency do not decide fitness-to-recommend, and `davemckain/qtiworks` is this pass's proof — a
+clean BSD-3-Clause grant on a project its own README declares closed. **So the cost is ~148
+human README reads, at `p435`'s observed rate of roughly 200 per pass.** 🟢 **One pass closes
+it**, and the ratchet makes partial progress safe: any pass may restore or decline a subset and
+the figure cannot regress.
+
+### 🔴 `Gap 436-B` — THE GAP REGISTER'S OWN CITATIONS ARE 23.7 % DEAD, AND NO GATE LOOKS AT THEM
+
+🔴 **Measured, not suspected: 110 of 464** finding-ID citations on this file name a `P`-number
+that **no live shelf defines** — including the evidence pointers for `Gap 236`, `Gap 237`,
+`Gap 241`, `Gap 242`, `Gap 243`, `Gap 245` and `Gap 246`, **all currently open**. The worst case
+is structural rather than cosmetic: **`Gap 238` was closed against `LongsightGroup/qti3` and
+`Gap 240` is still open on it, and that repository was on no live shelf at all** — so an
+actionable *"one pull request"* gap pointed at an address the corpus no longer listed.
+🟢 Restored this pass.
+
+🔴 **This instrument was ALSO wrong on its first build, and the error is recorded because it was
+nearly published.** Graded against the **curated** shelves it reported **462** dead citations —
+an artefact of a denominator holding **3** finding IDs (`repos/foundations.md` holds **0**).
+The definition channel is the pair of **append-only** shelves (588 + 467).
+`finding_citations.py` now **refuses** any denominator under 100 (control `C17`).
+
+🔵 **And the first label was wrong too, which changes what this gap means.** `p436` initially
+partitioned 80 of the 110 as *never written*. 🟢 **`git log -S` refutes that**: `P527`, `P543`
+and `P599` are in the shelves at **passes 42–49**, removed at commit **`306eb06` (pass 90,
+2026-10-09)** — a rewrite that took **no `archive/` snapshot**. **Nothing was fabricated**: 30
+recoverable from `archive/`, 80 from `git log -S`.
+
+🔴 **Why no gate catches it**: `gate-dead-citation` (`p372`) grades **addresses** and passes
+cleanly on this tree. Nothing grades **finding IDs**. 🔵 **Remedy and cost**: wire
+`finding_citations.py` as a gate with a ratchet on the same shape as `gate-promotion-ledger`,
+then recover the 110 definitions from `git log -S` into the trend record. 🟡 **Two passes, and
+the first is cheap**: the instrument exists, is tested and runs from `make dead-citations`; only
+the ratchet and the recovery are outstanding. 🔴 **`p436` did not wire it as blocking**, because
+a gate that fires 110 times on its first run is `Gap 435-A`'s error repeated — the pin has to be
+set by the pass that does the recovery.
+
+### 🔴 `Gap 436-C` — NO GOVERNMENT PRIMARY FOR EITHER APAC INSTRUMENT IS REACHABLE FROM THIS HOST
+
+🔴 **Verified by `curl` this pass, not assumed**: `moe.gov.cn`, `mext.go.jp`, `nda.gov.cn` and
+`chsi.com.cn` all fail DNS/proxy resolution (`000`), while `raw.githubusercontent.com` returns
+`301` on the same run — so the refusal is **per-host policy, not a dead transport**. Same class
+as `Gap 56` and `Gap 241` (`eur-lex`).
+
+🟢 **The evidence is strong for secondary**: `教科信〔2026〕1号`, the five issuing bodies, the
+2026-04-02 signing date and the quoted Chinese clauses are **consistent across ~10 independent
+mirrors**, including the National Data Bureau's republication, two municipal education bureaus
+and two universities. 🔴 **It is still secondary. Neither instrument may appear in a client
+deliverable as primary-sourced law**, exactly as `Gap 241` holds for the EU Annex III deferral.
+
+🔵 **Remedy and cost**: one pass with these hosts reachable pins both primaries in minutes —
+**blocked on network policy, not on effort**. 🔵 **A cheaper partial that does not need the
+policy changed**: China's plan is republished by provincial and municipal bureaus on many
+domains, so a successor should sweep mirror hosts for one that resolves rather than re-querying
+the ministry. 🟡 Priority: below a measurement leg, above a prose fix.
+
+### 🟡 `Gap 436-D` — THE LATAM ADOPTION FIGURES ARE QUOTED THROUGH A NEWSPAPER COLUMN
+
+🟡 The LATAM leg returned adoption figures attributed to **Stanford's AI Index 2026** — four in
+five secondary and university students already using generative AI for coursework; only about
+half of schools holding any policy. 🔴 **They were read from a newspaper column citing the
+Index, not from the Index**, and the column's own publication dates are internally inconsistent.
+🔵 **Why it matters rather than being pedantry**: the adoption-minus-governance gap is this
+file's single strongest pitch number for the region, and `Gap 242` is already open on a
+*different* regional ordering from a publisher whose sampling frame could not be established.
+**Two of this file's headline regional numbers now rest on unread primaries.**
+🟢 **Remedy and cost: read the AI Index 2026 chapter directly — low cost, and `ai.stanford.edu`
+has not been tested from this host.** 🔵 Test it in the same pass that retries `Gap 436-C`'s
+mirrors; one reachability sweep answers both.
+
+### 🔴 `Gap 433-D` — THE ROTATION, seventh consecutive pass — and `p436` writes the advance anyway
+
+`rotation.json` in `gmilano/globant-kb` still reads **`next: 8`**, `last_updated: 2026-08-02`,
+`last_industry: technology`. This is **p436** on education; eleven industries still have **zero**
+passes from this rotation. 🟢 The mechanism is unchanged and is not a defect in these passes: the
+scheduled run is constrained to a **designated development branch** and instructed never to push
+elsewhere without explicit permission, **so `main` cannot be advanced by this run by
+construction.** 🟢 **`p436` writes the advance (`next: 9`, `last_industry: education`) to its
+designated branch**, where it is correct and inert until someone merges it. 🔴 **What would
+close it: one merge, or pointing the scheduler at `main` for this one file.** 🔵 Each pass on
+education is still productive — this one closed two registered gaps, restored 28 rows and
+measured two defect populations nobody had sized — **but the brief's stated priority order is
+not being executed, and that remains a cost of exactly one merge.**
+
+---
+
 ## 🆕 `p435`
 
 ### 🟢 `Gap 434-A` — **CLOSED. All 2 450 ungraded addresses graded first-hand — and the result refutes `gate-promotion`'s predicate**

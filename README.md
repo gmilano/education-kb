@@ -84,20 +84,22 @@ is finance analytics over DfE data rather than a finance system.
 ---
 
 🔵 **The address census, re-derived as the last act before the commit — restated, not
-back-fitted.** `gate-census-currency` and `gate-union-currency` both fired on this pass's
-drafts, exactly as `p352` and `p376` are designed to, because 24 promoted rows and this
+back-fitted.** `gate-census-currency` and `gate-union-currency` both fired on `p436`'s
+drafts, exactly as `p352` and `p376` are designed to, because 28 restored rows and this
 pass's write-ups changed the harvested denominator.
 
-**2 795** harvested shapes on channel U → **39** are not addresses → **2 756 addresses**.
+**2 813** harvested shapes on channel U → **39** are not addresses → **2 774 addresses**.
 
-🔵 **2 756** channel-U addresses and **3 291** channel-B survivors give
-**3 658 addresses over both channels**.
+🔵 **2 774** channel-U addresses and **3 292** channel-B survivors give
+**3 659 addresses over both channels**.
 
-🔵 Channel U is **unchanged** at 2 756 (`MATCH`): every one of the 24 promoted addresses was
-already in the harvested corpus — which is the whole point of this pass. What moved is the
-**shape** count (2 794 → 2 795) and the rejection count (38 → 39), from one new
-`NAV-NAMESPACE` shape in this pass's prose. 🔵 The inflation this pass's writes added to the
-harvested denominator is **1.40 %**.
+🔵 **`p436`: all three cells moved, and the reason is the opposite of `p435`'s.** Channel U
+rose **2 756 → 2 774** (+18) and the union **3 658 → 3 659** (+1). 🔵 `p435` could report
+channel U `MATCH` because every address it promoted was already harvested; **`p436`
+restored 28 addresses that a rewrite had deleted from the corpus**, so 18 of them re-enter
+the channel-U denominator as genuinely new harvested shapes. 🔵 The rejection count is
+**unchanged at 39** — every restored row is a well-formed address. 🔵 The inflation this
+pass's writes added to the harvested denominator is **1.39 %**.
 
 ---
 

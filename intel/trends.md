@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 34 — `p436` In the two largest APAC school systems, AI in education has become a **teacher-licensing** question, not a curriculum question
+
+🟢 **The datum**: China's 《"人工智能+教育"行动计划》 (`教科信〔2026〕1号`, 2026-04-02) states
+that AI is to be written **into the teacher-qualification examination and certification**
+(将人工智能纳入教师资格考试和认证内容), alongside bringing AI education **into local curriculum
+systems** with mandated per-stage class hours.
+
+🔵 **Why this is a trend and not a fact.** Every other instrument on these shelves regulates the
+*system* — what software may decide, what data it may hold, which decisions need a human. A
+licensing requirement regulates the **workforce**, and it behaves differently in three ways:
+
+| axis | a system rule | a licensing rule |
+|---|---|---|
+| what it creates | a compliance obligation on a vendor | **standing demand** from every teacher-training institution |
+| how it decays | superseded when the rule changes | **does not decay** — it is in the credential |
+| who buys | the ministry or the district | **universities, normal schools, certification bodies** |
+
+🟢 **Corroboration on the same axis, from a different jurisdiction and a different pass**: the
+UAE's Cabinet AI curriculum (`p435`) is paired with **~22 000 educators to be trained**, and
+India's CBSE mandate (`p435`) runs to a **2029 board examination**. 🔵 **Three of the four
+largest APAC mandates are enablement programmes with a workforce number attached.**
+
+🟡 **The counter-case is Japan, and it sharpens rather than weakens the trend**: MEXT's school
+guideline is still **Ver. 2.0 (2024-12-26)** with Ver. 2.1 in committee since 2026-06-30. Where
+there is no mandate there is no workforce number — so the two systems now need **opposite**
+offers: compliance-and-enablement in China, and in Japan a voluntary-adoption case that has to
+survive without a regulatory forcing function.
+
+🔴 **Citation limit**: `moe.gov.cn` and `mext.go.jp` are unreachable from this host; both legs
+rest on ~10 consistent secondary mirrors. Strong, and still secondary (`Gap 436-C`).
+
+## 🆕 Trend 35 — `p436` A knowledge base's **own citations** decay faster than the repositories they point at, and nothing in this industry measures that either
+
+🔵 **`Trend 9` established that a permissive licence has a shelf life.** `p436` measured a second
+kind of decay on the same tree, and it is faster and less visible:
+
+| decay channel | measured rate | instrument that sees it |
+|---|---|---|
+| a permissive grant going stale (`Trend 9`) | 195 of 1 449 older than two years (13.5 %) | 🟢 `gate-recency` |
+| a shelf **row** silently deleted | **176** claimed promotions on no live row | 🟢 `gate-promotion-ledger` (`p436`) |
+| a **citation** whose referent is gone | **110 of 464 register citations (23.7 %)** | 🔴 **nothing, before `p436`** |
+
+🔴 **The second and third rows are self-inflicted**, which is what makes this a trend worth a
+client conversation rather than housekeeping. The mechanism is ordinary: a full-file rewrite is
+the cheapest way to keep a long document readable, and it is also a silent delete. On this tree a
+rewrite at **pass 90** removed the rows defining `P527`, `P543` and `P599` **without taking an
+`archive/` snapshot**, so 80 of the 110 dead citations are recoverable only from `git log -S`.
+
+🟢 **The generalisable lesson for any client knowledge system**: an append-only log and a curated
+shelf decay at completely different rates. `p436` measured **0** drops from this base's two
+append-only shelves and **176** from its curated ones. 🔵 **So the architecture, not the
+discipline, is what preserved the evidence** — the curated shelves were maintained by the same
+passes that lost 176 rows.
+
+🔵 **What to sell from this**: any "AI knowledge base" engagement needs a **join** between the
+claim and the artefact, re-run on every write. Not a review process — a gate. `p436`'s is three
+controls and 22 offline tests (`compose/code/p436-promotion-ledger/`), and it caught **three
+defects in its own first builds** before publication.
+
 # 📈 Trends — Education AI
 
 > Current trends, re-measured each pass. Trends 1–8 are the standing set; 9–11 were added
