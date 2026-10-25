@@ -10,6 +10,31 @@ updated: 2026-10-25
 > every pass and a nil result is written down as a nil, because silence reads exactly like
 > coverage.
 
+## 🆕 `p442` · 2026-10-25 — **Eight legs: 🟢 three new instruments, 🔴 one measurement CONFLICT carried as a conflict, 🔴 one single-source item REFUSED, and 🔴 two candidate "new facts" killed by grading them against this file instead of against memory. 🟢 `Gap 440-C`'s refinement holds for a second pass: the PROGRAMME tier pays, the STATUTE tier does not. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
+
+| Leg | Verdict | What came back |
+|---|---|---|
+| **North America** | 🔵 **confirmation** | Ohio `HB 96`, Tennessee `SB 1711`, the four-state mandatory-district-policy cluster (MD/ID/OK/VA), `AB 1159`, `SB 720`, Alabama `HB 329`, Virginia `SB 394`, the 134-bills/31-states tracker — **all already on this file**. 🟡 Florida's proposed rule (parent opt-in, public approved-tool list, 30-day interaction records, by 1 July 2027) is **proposed, not adopted**, and is carried as a pipeline item only |
+| **EMEA** | 🟢 **1 new · 1 refused** | 🟢 UNESCO's **ministerial statement on education in the age of AI, adopted 9 September 2026** at Digital Learning Week — 25+ ministers, eight priorities spanning governance, equity and teacher support. The **venue** was already on this file; the **statement** was not. 🔴 A **Council of Europe AI-literacy recommendation dated 4 September 2026** rests on one weak secondary source and is **refused**, not carried |
+| **APAC** | 🟢 **2 new, and both are runway** | 🟢 **Japan's draft national curriculum guidelines, released 31 August**: AI and information literacy become core content, schools may cut class hours by up to **15 %**, **information classes start 2028** and full elementary introduction is **fiscal 2030**. 🟢 Korea's **2026 University AI Basic Curriculum Development Support Project** funds **20 universities** to build AI-literacy courses for every major. 🔵 Singapore's Primary-4 tools (teacher-supervised, government platform only) and India's Class-3 mandate confirm; India's delivery vehicle is named for the first time — **NISHTHA**, retraining **10 M+** teachers |
+| **LATAM** | 🟢 **1 new · 1 conflict** | 🟢 **Estado de México** amended **Article 61** of its state education law in **April 2026** to promote responsible, graduated AI use in upper-secondary and tertiary education — the first Mexican **state-level** education-AI instrument on this file, and it matters because Mexico has no general AI statute. 🔴 **A conflict is carried as a conflict:** ILIA 2026 is reported as *"11 of 20 countries already incorporate AI content in school programmes, against 2 in 2024"*; this file carries CENIA's *"13 of 19 LAC countries do not yet teach early AI adoption"*. Same source family, **different denominators (20 vs 19)**, and the arithmetic does not reconcile. Neither is withdrawn and both now travel with their denominator (`p310`) |
+| **Market size** | 🔵 **not re-bought** | `p441` recorded this leg as **unusable** after a 9× divergence on one horizon. It was not re-run; the published bands stand |
+| **Supply · trending · platforms** | 🔴 **zero unknown addresses, one error confirmed a fifth time** | 18 of 18 topic-listing candidates already in this base (detail on `repos/trending.md`); 🔴 a 2026 LMS roundup calls **Frappe LMS** *"the only MIT-licensed option"* — `frappe/lms` is **AGPL-3.0**. `T125`, fifth instance |
+
+🔴 **Two candidate "new facts" were killed by grading them, and that is the leg's most useful
+output.** Alabama `HB 329` and Virginia `SB 394` both came back reading like discoveries and
+both are **already on this file** (lines 406 and 488) under spellings without full stops. 🔵 A
+leg graded against the file finds confirmation; a leg graded against memory publishes a false
+novelty. The same grep is what promoted the Japanese and Mexican items from *plausible* to
+*new*.
+
+🟡 **And the regulatory ceiling this file has carried since `p433` is unchanged and still
+load-bearing:** no government primary is reachable from this host, `mext.go.jp` included.
+🔵 So Japan's 2028/2030 runway is **secondary-sourced** and is marked as such — but note what
+that means in practice: this file's standing fact is that *MEXT's school guideline is still
+Ver. 2.0 of 2024-12-26*, and that remains true. **The guidance tier has not moved; the
+curriculum tier has.** Those are two different instruments and an engagement answers to both.
+
 ## 🆕 `p441` · 2026-10-25 — **🟡 `Gap 440-C` is REFINED, not confirmed: the regulatory channel is saturated at the STATUTE tier and still paying at the PROGRAMME tier. Nine legs returned four facts with zero prior mentions, and all four are sub-statutory — a state act, a state-board guidance deadline, a ministry pilot programme and an elective module set. 🔴 One leg is written down as UNUSABLE rather than carried. 🔵 The single `## Opportunities by region` block below is amended in place — it is still one block.**
 
 🔵 **Nine legs ran 2026-10-25** (four regional, one per-country retry, four global). Graded
@@ -283,6 +308,18 @@ supply and a permissive agent layer can.
 
 ### North America
 
+**🆕 `p442` — nil on discovery, and one pipeline item worth pricing.** 🔵 Every instrument
+the leg returned is already on this file: Ohio `HB 96`, Tennessee `SB 1711`, the four-state
+mandatory-district-policy cluster (Maryland, Idaho, Oklahoma, Virginia), `AB 1159`, `SB 720`,
+Alabama `HB 329`, Virginia `SB 394`, the 134-bills/31-states tracker. 🔴 **Written down as a
+nil, because silence reads exactly like coverage** — and recorded with its near-miss: two of
+those (`HB 329`, `SB 394`) read like discoveries until they were grepped against this file,
+where they already sat under spellings without full stops.
+🟡 **The pipeline item:** Florida has **proposed, not adopted**, a rule that would require
+**parent opt-in**, a **public approved-tool list**, and **thirty-day retention of interaction
+records**, by **1 July 2027**. If adopted it is the strictest consent-and-audit regime in the
+United States and it reshapes a student-facing deployment's data design, not just its policy
+annex. 🔵 It is carried as a pipeline item, not as law.
 **🆕 `p439` — confirmation plus two commercially decisive specifics.** 🔵 The NA leg
 re-returned this file's existing frame (the ~134-bill / 31-state count, already labelled
 here as *one tracker's* rather than *the* count; H.R. 8747; Canada's `AI for All`) and added
@@ -506,6 +543,18 @@ Primary statute text was not read this pass.
 
 ### EMEA
 
+**🆕 `p442` — 🟢 one multilateral instrument added, 🔴 one refused.**
+🟢 **UNESCO ministerial statement on education in the age of AI, adopted 9 September 2026** at
+Digital Learning Week (Paris), by **25+ education ministers**, with **eight priorities** across
+governance, equity and teacher support. 🔵 This file already carried Digital Learning Week as
+the **venue** of the LAC survey it cites; the statement itself is new here. It is not binding,
+and its practical weight is as the **reference a ministry cites when it writes its own
+programme** — which is the tier `Gap 440-C` identified as the paying one.
+🔴 **Refused, and recorded as refused:** a *Council of Europe AI-literacy recommendation of
+4 September 2026* appears in one weak secondary source with no primary reachable from this
+host. 🔵 This file carries the Council of Europe **AI framework convention** (Uruguay as first
+LAC signatory) and a 2023-dated CoE consultancy call; a 2026 recommendation would sit between
+them and is exactly the shape that propagates unchallenged (`Gap 543`). **Not carried.**
 **🆕 `p439` — 🟢 `Gap 438-D` CLOSES: the MEA leg ran as its own leg and discovered.** For
 several passes this subsection was EU-only material and the Middle East / Africa nil was
 carried explicitly rather than hidden. It is now answered, and the answer is a **single
@@ -771,6 +820,24 @@ with "we will build you a platform." It can open with the client's **own ministr
 
 ### APAC
 
+**🆕 `p442` — 🟢 two new instruments, and both are RUNWAY rather than posture.**
+🟢 **Japan: draft national curriculum guidelines released 31 August.** AI and information
+literacy become **core content**; schools may reduce class hours by up to **15 %** to make
+room; **information classes begin 2028**; **full elementary introduction is fiscal 2030**.
+🔵 Read against this file's standing measurement — *MEXT's school guideline is still Ver. 2.0,
+dated 2024-12-26*, with `mext.go.jp` unreachable from this host — the correct statement is
+that **the guidance tier has not moved and the curriculum tier has**. Secondary-sourced, and
+marked so. **Commercially: a Japanese engagement signed in 2026 has a 2028 delivery date it
+can be held to, and that is a planning horizon no other APAC jurisdiction on this file
+publishes.**
+🟢 **Korea: the 2026 University AI Basic Curriculum Development Support Project** selects
+**20 universities** to build AI-literacy courses for students in **every major**. 🔵 Note the
+tier: Korea's *school* AI-textbook programme collapsed (adoption below 30 %, official status
+stripped — already on this file), while the **tertiary** channel is being funded. For a vendor
+that is a redirection, not a retreat.
+🟢 **India: the delivery vehicle is named for the first time here — NISHTHA**, the teacher-training
+programme carrying the Class-3 AI mandate to **10 M+** educators. 🔵 The mandate was already
+carried; **the programme is the thing an engagement actually plugs into** (`Trend 39`).
 **🆕 `p439` — the region now has the world's second comprehensive AI law in force, and the one
 jurisdiction that names education as high-risk with a dated deadline.** All readings
 secondary; see the egress note at the foot of this block.
@@ -1026,6 +1093,20 @@ reconciled, so records are *as reported*, not *as current*.
 
 ### LATAM
 
+**🆕 `p442` — 🟢 one new instrument, 🔴 one measurement conflict carried as a conflict.**
+🟢 **Estado de México amended Article 61 of its state education law in April 2026** to promote
+the responsible, graduated use of AI in upper-secondary and tertiary schools. 🔵 Why it matters
+out of proportion to its size: **Mexico has no general AI statute** — this file records the
+federal period closing without one — so Mexican demand is being shaped **state by state**, and
+this is the first state-level education-AI instrument on this file. An engagement in Mexico
+prices per state, not per country.
+🔴 **The conflict, stated rather than resolved.** ILIA 2026 is reported as **11 of 20**
+countries already incorporating AI content in school programmes, against **2 in 2024**; this
+file carries CENIA's **13 of 19** LAC countries *not yet teaching early AI adoption*. Same
+source family, **different denominators (20 vs 19)**, and the two do not reconcile
+arithmetically. 🔵 Both are kept, each with its denominator attached (`p310`), and **neither is
+used alone in a pitch**. The direction both agree on is the usable claim: **curricular AI
+content in the region is rising fast from a very low base.**
 **🆕 `p439` — the governance gap is re-confirmed from its own study and remains the strongest
 single number on this file.** All readings secondary; egress note at the foot.
 

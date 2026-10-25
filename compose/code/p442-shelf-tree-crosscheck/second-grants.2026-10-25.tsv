@@ -1,0 +1,20 @@
+repo	branch	head	path	bytes	sha12	family	holder
+krzysztofbury/librus-mcp	main	56515efee01b	legacy_reference/LICENSE	35149	3972dc9744f6	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)
+krzysztofbury/librus-mcp	main	56515efee01b	LICENSE	1071	22e7ab2dbddc	MIT	Copyright (c) 2026 Krzysztof Bury
+Hiepler/EuConform	main	011a5ad9bea2	LICENSE-EUPL	13240	3dcf9c6f6119	EUPL-1.2	NOT-APPLICABLE (EUPL-1.2: holder not in the license text by construction)
+GarethManning/education-agent-skills	main	135d6275e7db	mcp-server/LICENSE	978	f8366f5391f4	CC-BY-SA-4.0	NOT-APPLICABLE (CC-BY-SA-4.0: holder not in the license text by construction)
+withmarbleapp/os-taxonomy	main	7bd8b6794cb7	LICENSE-CONTENT	18375	cde7883b9050	CC-BY-SA-4.0	NOT-APPLICABLE (CC-BY-SA-4.0: holder not in the license text by construction)
+Apomera/AlloFlow	main	2e0388b930e3	mathlive-assets/LICENSE-MATHLIVE.txt	1099	3caebd186119	MIT	Copyright (c) 2017 - present Arno Gourdol. All rights reserved.
+Apomera/AlloFlow	main	2e0388b930e3	sre-assets/LICENSE-SPEECH-RULE-ENGINE.txt	10174	0d542e0c8804	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+Apomera/AlloFlow	main	2e0388b930e3	sre-assets/LICENSE-TEMML.txt	1074	12b4e5592a12	MIT	Copyright (c) 2020 Ron Kok
+open-webui/open-webui	main	33c1978d5bad	LICENSE_HISTORY	2872	b1567cc97632	MIT	Copyright (c) 2023-2025 Timothy Jaeryang Baek
+open-webui/open-webui	main	33c1978d5bad	LICENSE_NOTICE	721	9de72254becb	MIT	NO-HOLDER-LINE
+bigbluebutton/bigbluebutton	v4.0.x-develop	ec452b65043b	bigbluebutton-web/COPYING.LESSER	7637	9ccf26cfe845	LGPL-3.0	NOT-APPLICABLE (LGPL-3.0: holder not in the license text by construction)
+chamilo/chamilo-lms	master	2e5139a816d3	license.txt	1614	0aaf39205490	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)
+sakaiproject/sakai	master	4debc94780cc	delegatedaccess/LICENSE	11110	6001bb8caa76	ECL-2.0	NOT-APPLICABLE (ECL-2.0: holder not in the license text by construction)
+dodona-edu/dolos	main	2b82821c29d7	cli/LICENSE	1084	881163366572	MIT	Copyright (c) 2019 Team Dolos <dolos@ugent.be>
+dodona-edu/dolos	main	2b82821c29d7	core/LICENSE	1084	881163366572	MIT	Copyright (c) 2019 Team Dolos <dolos@ugent.be>
+microsoft/agent-governance-toolkit	main	70a4ab8e8a04	agent-governance-dotnet/LICENSE	1074	7df20dcdf919	MIT	Copyright (c) Microsoft Corporation.
+The-Morrow-Project/Morrow-Bridge	main	b5e9993c5d53	desktop/LICENSE	1071	f37f80963047	MIT	Copyright (c) 2026 Braden Riggins
+sjgant80-hub/fall-euaiact	main	5d8d27b65f68	sdk/LICENSE	1067	0ddf3b67a14a	MIT	Copyright (c) 2026 Simon Gant
+ucbds-infra/ottr	master	693b3df78950	LICENSE	108	de5d9459d263	UNCLASSIFIED	COPYRIGHT HOLDER: UC Berkeley Data Science Education Program

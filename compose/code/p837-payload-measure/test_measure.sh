@@ -74,11 +74,46 @@ check "family field is MIT"                      "MIT" "$(printf '%s' "$row" | c
 check "a missing payload is NO-PAYLOAD, not 0 B" "NO-PAYLOAD" \
       "$(measure_payload_file $F/does-not-exist.txt globant/example main | cut -f3)"
 
+printf '\n-- p442: the publishable CELL, and the digest half of P834 --\n'
+# 🔴 The defect these controls hold out is MEASURED, not hypothetical: 19 of the 162 payload
+# cells this base publishes carry the capture signature — a byte count short by the
+# trailing-newline run and a digest taken of the stripped bytes.  `cell_of_file` is the
+# single owner of that string now, so the controls below are what stands between a published
+# cell and `P834`.
+check "sha12 of the FILE, 3-newline fixture"  "$(sha256sum $F/mit-three-newlines.txt | cut -c1-12)" \
+      "$(sha12_of_file $F/mit-three-newlines.txt)"
+# NEGATIVE CONTROL, the sizing half's exact analogue: with a trailing newline run the two
+# digests must DISAGREE.  A control that cannot fail is not a control.
+if [ "$(sha12_of_file $F/mit-three-newlines.txt)" != "$(sha12_of_capture_BROKEN $F/mit-three-newlines.txt)" ]; then
+  pass=$((pass+1)); printf '  OK   capture digest DISAGREES on a trailing-newline payload\n'
+else
+  fail=$((fail+1)); printf '  FAIL capture digest should disagree on a trailing-newline payload\n'
+fi
+# ... and with NO trailing newline they must AGREE, which is what makes the disagreement
+# above attributable to the newline run and nothing else (`P126`-2).
+check "no trailing newline: digests AGREE"    "$(sha12_of_file $F/mit-no-newline.txt)" \
+      "$(sha12_of_capture_BROKEN $F/mit-no-newline.txt)"
+check "cell carries the file's own digest"    "$(sha12_of_file $F/mit-three-newlines.txt)" \
+      "$(cell_of_file $F/mit-three-newlines.txt | sed 's/.*. //')"
+check "cell carries the byte-exact size"      "$(size_of_file $F/mit-three-newlines.txt)" \
+      "$(cell_of_file $F/mit-three-newlines.txt | sed -E 's/ B .*//' | tr -d ' ')"
+# The grouping these shelves actually use — ASCII spaces, measured off `agents/top.md`.
+check "grouping: 999 ungrouped"               "999"      "$(group_digits 999)"
+check "grouping: 1000 -> '1 000'"             "1 000"    "$(group_digits 1000)"
+check "grouping: 35442 -> '35 442'"           "35 442"   "$(group_digits 35442)"
+check "grouping: 1234567 -> '1 234 567'"      "1 234 567" "$(group_digits 1234567)"
+
 printf '\n-- lib/measure: argument-invocable, and fails loudly --\n'
 check "--size matches the primitive"             "244" "$(bash ../lib/measure --size $F/mit-trailing-newline.txt)"
 check "--newlines reports the run"               "3"   "$(bash ../lib/measure --newlines $F/mit-three-newlines.txt)"
 check "--family delegates to P171"               "GPL-3.0" "$(bash ../lib/measure --family $F/gpl3-section13.txt)"
 check "--count is word-bounded"                  "1"   "$(bash ../lib/measure --count $F/paths-lti-trap.txt lti)"
+check "--sha matches the primitive"              "$(sha12_of_file $F/mit-trailing-newline.txt)" \
+      "$(bash ../lib/measure --sha $F/mit-trailing-newline.txt)"
+check "--cell matches the primitive"             "$(cell_of_file $F/mit-trailing-newline.txt)" \
+      "$(bash ../lib/measure --cell $F/mit-trailing-newline.txt)"
+bash ../lib/measure --cell $F/does-not-exist.txt >/dev/null 2>&1
+check "--cell on a missing payload exits non-zero" "1" "$?"
 # A missing payload must EXIT NON-ZERO, never print 0.  `Gap 328`'s whole point is that a
 # pass must not be able to mistake a failure for a measurement.
 bash ../lib/measure --size $F/does-not-exist.txt >/dev/null 2>&1

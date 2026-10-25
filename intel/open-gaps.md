@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p442`
+
+🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**
+`make hooks` against `d1d97ce`, run **before `p442` wrote a line**, exited 2 with
+**60 of 61 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Gap 400-B`, mechanism in `Gap 438-B`). 🔵 All three currency gates green
+on arrival. 🟢 **Fourth clean inheritance in a row.**
+
+### 🟢 `Gap 441-A` — **CLOSED.** The tree channel is in the library every pass sources, not beside it
+
+🟢 **Bought exactly where the gap said the hole was.** `probe_tree_paths` and `probe_repo_all`
+are now in `compose/code/lib/probe_payload.sh`; the path filter's exclusions and admissions are
+asserted as controls; `lib/test_probe_payload.sh` goes **14 → 35 live checks**.
+🔵 `P441`'s own instrument (`p441-tree-licence-enumeration/enumerate_licence.py`) was
+**invoked, not re-implemented**, over the 134 repositories these shelves publish a payload path
+for: **121** single-grant, 🔴 **12** multi-grant, 🔴 **4** multi-family, **1**
+`ABSENCE-ENUMERATED` (corroborating an already-published proprietary row), **0** published
+paths absent from a tree. Cost: **33 s** for 134.
+
+🔴 **And the gap's own framing understated the class.** It described the `ottr` shape — the
+ladder returning a 108 B stub — as a case the family classifier could own. Measured: at 108 B
+`grant_presence.py --family BSD` returns `GRANT-UNCALIBRATED`, not `GRANT-TRUNCATED`, because
+the BSD variant cannot be resolved from a payload with neither title nor discriminator
+(`p441`'s asymmetry rule, working correctly). 🟢 **So no grader can reach this class; only
+enumeration can.** `p441` closed *"is the grant complete?"* and could not close *"is this the
+grant?"*.
+
+### 🔴 `Gap 442-A` — **a published cell is an unverified claim unless something re-derives it, and nothing did for 441 passes**
+
+🔴 **Measured:** of the **162** payload cells on the three sell shelves, 🟢 143 reproduce from
+the file and 🔴 **19 carry the `P834` capture signature** (bytes short by the trailing-newline
+run, digest of the stripped bytes). Attributed by first-shelving pass: `p432` **5/5**,
+`p433` **2/5**, `p438` **2/11**, all others **0/113** — **intra-pass**, not lane-shaped.
+🟢 **Bought in the same pass that found it:** the 19 cells are repaired, `cell_of_file` /
+`lib/measure --cell` / `sha12_of_file` own the cell string, and `gate-cell-reproduction`
+(21 offline controls, 11 negative, in `HOOK_GATES`) reports **162/162** and types any
+un-re-measured cell `CELL-UNMEASURED`.
+🔵 **What stays open:** the gate is a **join against a recorded sweep**, so it proves a cell
+was re-measured *at the recorded commit*, not that the upstream payload is unchanged today.
+A payload edited upstream after the sweep reads green until the next sweep. 🟡 That is the
+same boundary every currency gate on this base has, and it is **declared rather than
+papered over**. The next depth is a **staleness** column: the age of each cell's last
+re-measurement, red past a declared horizon. **Not bought here.**
+
+### 🔴 `Gap 442-B` — `is_own_path()` does not know `*-assets/`, so a vendored grant is typed as the project's own
+
+🔴 **Measured on `Apomera/AlloFlow`:** three grants under `mathlive-assets/` and `sre-assets/`
+(MathLive **MIT** 1 099 B · `3caebd186119`, Speech Rule Engine **Apache-2.0** 10 174 B ·
+`0d542e0c8804`, Temml **MIT** 1 074 B · `12b4e5592a12`) are vendored third-party texts and are
+typed `OWN-GRANT-AT-ROOT` alongside the project's real AGPL-3.0. 🔵 The enumerator excludes
+`node_modules/`, `vendor/`, `third_party/` and `.corepack/` — a list, which is the thing
+`P441` exists to replace. 🟡 **Cost of the error here is zero** (the verdict is right for this
+repository for a different reason) but the **family list on its row is three families too
+wide**, and on a repository whose own grant is *absent* the same error would manufacture one.
+🔵 **The fix is not a longer list**: ask whether the directory is **declared as a dependency
+surface** by a manifest in the tree, which is `p280`'s provenance channel, already built.
+**Priced, not bought.**
+
+### 🔴 `Gap 442-C` — **EUPL-1.2 has no clause profile, and it is the EMEA public-sector grant**
+
+🔴 `Hiepler/EuConform`'s second payload (`LICENSE-EUPL` **13 240 B · `3dcf9c6f6119`**) grades
+`GRANT-UNCALIBRATED`. 🔴 **And `p440`'s own enumeration of unprofiled families omitted EUPL
+entirely** — it listed MPL, LGPL, EPL and BSD — which is a denominator fault of exactly the
+shape `p310` named, now on its third recorded instance.
+🔵 **Why it ranks above MPL and EPL**, which `Gap 440-A` still prices: EUPL-1.2 is the licence
+a European public buyer's own procurement office uses, this file already carries one EMEA row
+that ships it, and `Opetushallitus/aoe` (Finland's national learning-materials service) is
+EUPL-1.2 too. 🟢 **Stopping rule: profile EUPL-1.2 only, and only after reading whether its
+compatibility annex changes what "the grant is present" means** — a licence that declares
+other licences compatible may need a fifth verdict, which is the `Gap 440-B` trap again.
+
+### 🟡 `Gap 442-D` — `open-webui`'s MIT history is a CLAIM ABOUT A COMMIT and is not sold until read there
+
+🟢 **Measured:** `LICENSE_HISTORY` **2 872 B · `b1567cc97632`**, MIT, holder *"Copyright (c)
+2023-2025 Timothy Jaeryang Baek"*, alongside the branded BSD-3 `LICENSE` (2 819 B) and a
+721 B `LICENSE_NOTICE` that grades 🔴 `GRANT-BY-REFERENCE`. 🔵 **The commercial prize is real**
+— a client needing a clean MIT campus gateway could fork at a commit the MIT grant covered,
+instead of switching project — 🔴 **but a grant that applied *then* must be read *there*:**
+the commit range, the payload at the last MIT commit, and whether any file in the fork
+postdates it. **Nothing on these shelves may state it until that read exists.** Priced:
+one `git log --follow` on the licence path plus two payload reads at pinned commits.
+
 ## 🆕 `p441`
 
 🟢 **The inherited commit was GREEN and it is reported before anything this pass did.**

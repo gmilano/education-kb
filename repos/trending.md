@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p442` · 2026-10-25 — **The two canonical topic listings ARE reachable, and they returned **18 of 18 already known** — a saturated channel, measured on 40 slugs rather than 4. 🟢 But *known* is not *shelved*: nine were tree-probed and **seven became rows**, including one that had sat verified in this base's own backlog since `p381`. 🔴 And `T125` lands a fifth time, on Frappe LMS again.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+### 🟢 The channel, with its surface named
+
+`github.com/trending` is still unreachable from this host (`p433`'s ceiling, re-measured at
+`p438`). 🟢 **`github.com/topics/<topic>` is not** — both `topics/ai-tutor` (780 repositories
+listed, 20 rendered) and `topics/ai-education` (549 listed, 20 rendered) were read this hour.
+🔵 That is a **topic-listing** surface, which `Gap 542` flags as uncalibrated against the
+repo-page renderer for star counts; the figures below carry that limit.
+
+| | n |
+|---|---|
+| candidate slugs read off the two listings | **40** (20 + 20, with overlap) |
+| 🔴 already present somewhere in this base | 🔴 **18 of 18 checked** |
+| of those, already on a **sell** shelf | **8** |
+| present only in `trending`/`archive`/`evidence` — i.e. **known and unsold** | 🟢 **10** |
+| tree-probed first-hand this pass | **9** |
+| 🟢 **promoted to `agents/top.md`** | 🟢 **7** |
+
+🔴 **So the discovery nil is real and it is not the interesting number.** The channel has
+nothing unknown left for this base at this depth; what it has is a **backlog**, and `p435`
+already named that failure mode (*twelve permissive EMEA addresses sat ungraded in this
+base's own backlog while the file carried a nil*).
+
+### 🟢 The nine probed, with `probe_repo_all` — the tree arm, not the ladder
+
+| repository | ★ (topic listing) | grant, read first-hand @ HEAD | shelved |
+|---|---|---|---|
+| [`liuliu667/cram-engine`](https://github.com/liuliu667/cram-engine) | 176 | **MIT** `LICENSE` 1 064 B · `c33ea68946e4` @ `982cd31cc68e` — 🟢 reproduces `p381`'s digest to the byte, four days on | 🟢 yes |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 318 | **MIT** 1 065 B · `21f44893f051` @ `3a979e3bead9`; the same MIT text repeats at `full/` and `skills/universal-exam-cram-coach/`; 🟡 one **CC0-1.0** 613 B payload in a test-fixture corpus | 🟢 yes |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 449 | **MIT** 1 069 B · `262b47ee1fff` @ `438a6288fa74` | 🟢 yes |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 298 | **MIT** 1 081 B · `3b2ca73e81ad` @ `25ea970f82c5` | 🟢 yes |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 118 | **MIT** 1 068 B · `23b91d7c0aef` @ `b4c935210206` | 🟢 yes |
+| [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 36 | **MIT** 1 064 B · `092d389ac156` @ `290af750671a`, default branch `master` | 🟢 yes |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 583 | 🔴 root 1 134 B · `3fb8cda58638` is a **notice** (`GRANT-BY-REFERENCE`); grant at `app/LICENSE` 34 523 B · `0d96a4ff68ad` **AGPL-3.0**; 🟢 `skills/` content is **AGPL-3.0 *or* MIT at the user's option** | 🟢 yes, as a dual row |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 90 | **GPL-3.0** 35 149 B @ `07635d3c81ad` — not a build-on row | 🔴 no |
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | 72 | **AGPL-3.0** twice, and at **two different sizes**: `LICENSE` 34 523 B (canonical) and `LICENSE-AGPL-3.0` 35 013 B @ `4d92b73121d6` | 🔴 no |
+
+🔵 **`edgameclaw` is worth the row it did not get.** Two AGPL-3.0 payloads in one tree
+differing by **490 B** is the shape `p378`'s presentation-fold work exists for, and it is
+only visible by enumeration — a ladder returns `LICENSE` and stops.
+
+### 🔴 `T125`, fifth independent confirmation — still Frappe, still the dangerous direction
+
+A 2026 open-source-LMS roundup read this hour states that **Frappe LMS** is *"the only
+MIT-licensed option"* among the platforms it compares. 🔴 `frappe/lms` is **AGPL-3.0**
+(`license.txt` 33 893 B · `db1a87ba81e8`, probed at `p440`). 🔵 Five instances, one direction:
+**a permissive label on a copyleft platform**. The same roundup also reads Moodle as GPL,
+Open edX and Canvas as AGPLv3 and Sakai as ECL-2.0 — all correct — so this is not a sloppy
+source, it is a **specific, repeated error about Frappe**, and it is the error that reaches
+procurement.
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+---
+
 ## 🆕 `p441` · 2026-10-25 — **The discovery channel was tested and returned a HARD ZERO: four candidate addresses probed first-hand, 🔴 three already shelved and the fourth carrying no licence payload at all. 🟢 The legs went to the BSD payload tier instead — 12 payloads across 11 published repositories, read clause-by-clause, **11/12 `GRANT-PRESENT`**. 🔴 And the shared probe loop was caught guessing a filename on an R-convention repository, which is `Gap 393-F`'s own rule missing from the library that enforces it.**
 
 🔵 **Append-only. Nothing below this block was edited.**

@@ -136,7 +136,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-action-answered gate-commit-gate gate-case-collision \
              gate-conjunctive-grant gate-branch-alias \
              gate-promotion gate-recency gate-promotion-ledger \
-             gate-grant-presence
+             gate-grant-presence gate-cell-reproduction
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -355,6 +355,26 @@ capability-absence-census: ## p392 — the whole-shelf arm: a measurement, never
 CAPABS_LOG ?= /tmp/education-kb-gate-capability-absence.log
 FORKDIR_LOG ?= /tmp/education-kb-gate-fork-direction.log
 GROUPLIN_LOG ?= /tmp/education-kb-gate-group-lineage.log
+
+# ---------------------------------------------------------------- p442
+# 🔴 p442: A PUBLISHED PAYLOAD CELL IS THE ONLY PART OF A SHELF ROW A READER CAN CHECK, AND
+# 19 OF THE 162 THIS BASE PUBLISHES DID NOT REPRODUCE.  Re-measured against the file and
+# against `printf '%s' "$(cat f)"`: 143 🟢 REPRODUCES, 19 🔴 CAPTURE-MEASURED — byte count
+# short by the trailing-newline run and a digest taken OF THE STRIPPED BYTES, which is
+# `P834` in the cell itself.  All 19 came from `p432` (5 of its 5 rows), `p433` (2 of 5) and
+# `p438` (2 of 11): the same pass measured some rows through `lib/payload_measure.sh` and
+# typed others by hand, so the defect is not even consistent within a pass and a reader
+# cannot tell the two apart by looking.  The 19 are repaired in this pass's commit.
+# 🟢 The gate is the RATCHET, and it is OFFLINE: it joins the cells the three SELL shelves
+# publish against the recorded sweep in `evidence/`, so a cell nobody has re-measured is
+# `CELL-UNMEASURED` and red — the shape `gate-register-currency` already uses.  The two
+# correct ways to stay green are both in the library now: build the cell with
+# `lib/measure --cell`, and extend the record with `sweep_published.sh`.
+gate-cell-reproduction: ## p442 — Gap 441-A's sibling: no sell shelf may publish a payload cell nobody has re-measured, and a capture-measured cell (`P834`) is red
+	@cd compose/code/p442-shelf-tree-crosscheck && { $(PY) -I test_cell_reproduction.py > $(CELLREP_LOG) 2>&1 || { echo "🔴 p442-cell-reproduction FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CELLREP_LOG) ; false ; } ; } && echo "── p442-cell-reproduction (29 controls: the capture-measured cell, the unrecorded cell, the stale record, no cross-slug digest credit, the branch-qualified spelling, P355's three empty cases, the header-row control, and C12-C14 — the three parser defects this gate found in its OWN parser)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p442-shelf-tree-crosscheck/cell_reproduction_gate.py --root . || exit 1
+
+CELLREP_LOG ?= /tmp/education-kb-gate-cell-reproduction.log
 
 gate-offset-region: ## p382 — Gap 541: a timezone offset census is placed with its DST span, or refused with the reason
 	@cd compose/code/p382-offset-region && { $(PY) -I test_offset_region.py > $(OFFSET_LOG) 2>&1 || { echo "🔴 p382-offset-region FAILED — the suite's own report follows:" ; sed "s/^/   /" $(OFFSET_LOG) ; false ; } ; } && echo "── p382-offset-region (10 controls: p381's two specimens, the L1 DST-degeneracy specimen, positive LATAM resolution, negative controls)" && echo "   PASS" || exit 1

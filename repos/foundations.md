@@ -6,6 +6,49 @@ updated: 2026-10-25
 
 # 🏗️ Foundational repos — Education
 
+## 🆕 `p442` — **Zero rows added, sixth pass running — and the tier's own cells were the finding: 5 of them did not reproduce, and one platform ships a 1 614 B POINTER beside its 35 147 B grant**
+
+🔴 `p442` adds **no** foundation row. Its six new permissive addresses are **Agent Skills and
+tutoring tools**, not things a deliverable vendors as a dependency; they are shelved on
+`agents/top.md`. 🔵 The work this file got instead is **verification of what it already
+sells**.
+
+### 🔴 Five cells on this file were measured through a capture, and are repaired in this commit
+
+All 162 payload cells across the three sell shelves were re-measured from the file and
+through `lib/payload_measure.sh`'s preserved `P834` control. 🔴 **19 carried the capture
+signature** — bytes short by the trailing-newline run, digest taken of the stripped bytes —
+and **five of them are on this file**:
+
+| row | published | 🟢 now |
+|---|---|---|
+| [`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit) | 1 064 B · `2524a8e74f10` | **1 065 B · `43554d1189d8`** |
+| [`67tallchris/iep-builder`](https://github.com/67tallchris/iep-builder) | 1 068 B · `523f156051cf` | **1 069 B · `aa8cfde0dc31`** |
+| [`dougdevitre/access-to-education`](https://github.com/dougdevitre/access-to-education) | 1 068 B · `68657618a157` | **1 069 B · `fc7c8b90fee1`** |
+| [`ezixen/PlannedEducation`](https://github.com/ezixen/PlannedEducation) | 1 085 B · `4ec3cc564448` | **1 086 B · `53de23fdecc2`** |
+| [`rwrife/rubric-desk`](https://github.com/rwrife/rubric-desk) | 1 062 B · `ec0b7dad19a4` | **1 063 B · `c186f5cb204a`** |
+
+🟢 The grant itself was never in doubt for any of the five — MIT in every case, unchanged —
+and that is the point worth taking: **a cell can be wrong in a way that does not change the
+licence and still destroys the one thing a reader can check.**
+`make gate-cell-reproduction` now holds it, and `lib/measure --cell` builds the string.
+
+### 🔴 `chamilo/chamilo-lms` carries its grant TWICE, and one of the two is not a grant
+
+Enumerating the tree (`Gap 441-A`'s fix, now in the shared library) returned two licence
+paths for Chamilo: the root `LICENSE` — **35 147 B · `8ceb4b9ee5ad`**, the full GPL-3.0 this
+file publishes — and **`license.txt`, 1 614 B · `0aaf39205490`**, which grades 🔴
+`GRANT-BY-REFERENCE`: GPL-3.0 titled, **all six profiled clauses absent**, a URL in place of
+the text.
+
+🔵 **Nothing is wrong with the shelf row, and that is what makes this worth recording.** The
+ladder in `lib/probe_payload.sh` emits `LICENSE` before `license.txt`, so it happened to land
+on the complete text. 🔴 **The order of a hand-tuned filename list is the only thing that
+stood between this file and publishing a 1 614 B pointer as Chamilo's grant** — and `p337`
+already refuted that list's empirical basis by finding a real project whose only payload is a
+**lowercase** `license.txt`. For a repository shaped like that one and licensed like this one,
+the ladder picks the pointer.
+
 ## 🆕 `p440` — **Zero rows added, for the fourth pass running — and this time the screening question has an answer the previous three could not compute**
 
 🔴 `p440` adds **no** foundation row. The pass's one new address,
@@ -411,11 +454,11 @@ repository's own payload at the HEAD shown (2026-10-25).
 
 | Repo | Licence | HEAD | Payload | Role in a build |
 |---|---|---|---|---|
-| [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 064 B · `2524a8e74f10` | The **knowledge and boundary layer**. Two CA special-education roles as pinned knowledge packs with a declared draft-only / authorised-system-of-record boundary. Start an NA special-education engagement from this, not from a blank prompt. 🔴 Prose discipline, no runtime enforcement — adding that is the work. |
-| [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | **MIT** | `b39df0e9a4a1` | `LICENSE` 1 068 B · `523f156051cf` | The **deployment reference**: Svelte + Cloudflare Pages Functions + D1 with bring-your-own-key AI. Shows a per-district deployment that holds no vendor key and no central student store. Jurisdiction-pinned to Arizona K-8. |
-| [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | **MIT** | `f8abd70707ba` | `LICENSE` 1 068 B · `68657618a157` | The **parent-facing corpus**: 69 files / ~120 k words on IEP navigation, family–school communication and advocacy, under a code licence. The only MIT answer to the unserved-parent persona of `Trend 10`. |
-| [ezixen/PlannedEducation](https://github.com/ezixen/PlannedEducation) | **MIT** | `06fb12159f5e` | `LICENSE` 1 085 B · `4ec3cc564448` | Adjacent, not special-ed specific: grading companion + secure test-taking, privacy-first self-host. Default branch `dev`. |
-| [rwrife/rubric-desk](https://github.com/rwrife/rubric-desk) | **MIT** | `010a44006014` | `LICENSE` 1 062 B · `ec0b7dad19a4` | The **offline marking surface** (Flutter; phone/tablet/Windows, no accounts, no cloud LMS). Pairs with `kolibri` wherever connectivity cannot be assumed. 🟡 Created 2026-10-25. |
+| [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 065 B · `43554d1189d8` | The **knowledge and boundary layer**. Two CA special-education roles as pinned knowledge packs with a declared draft-only / authorised-system-of-record boundary. Start an NA special-education engagement from this, not from a blank prompt. 🔴 Prose discipline, no runtime enforcement — adding that is the work. |
+| [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | **MIT** | `b39df0e9a4a1` | `LICENSE` 1 069 B · `aa8cfde0dc31` | The **deployment reference**: Svelte + Cloudflare Pages Functions + D1 with bring-your-own-key AI. Shows a per-district deployment that holds no vendor key and no central student store. Jurisdiction-pinned to Arizona K-8. |
+| [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | **MIT** | `f8abd70707ba` | `LICENSE` 1 069 B · `fc7c8b90fee1` | The **parent-facing corpus**: 69 files / ~120 k words on IEP navigation, family–school communication and advocacy, under a code licence. The only MIT answer to the unserved-parent persona of `Trend 10`. |
+| [ezixen/PlannedEducation](https://github.com/ezixen/PlannedEducation) | **MIT** | `06fb12159f5e` | `LICENSE` 1 086 B · `53de23fdecc2` | Adjacent, not special-ed specific: grading companion + secure test-taking, privacy-first self-host. Default branch `dev`. |
+| [rwrife/rubric-desk](https://github.com/rwrife/rubric-desk) | **MIT** | `010a44006014` | `LICENSE` 1 063 B · `c186f5cb204a` | The **offline marking surface** (Flutter; phone/tablet/Windows, no accounts, no cloud LMS). Pairs with `kolibri` wherever connectivity cannot be assumed. 🟡 Created 2026-10-25. |
 
 **5 permissive additions**, taking this file to **16 permissive foundations** in all.
 

@@ -4,6 +4,176 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p442` · 2026-10-25 — **`Gap 441-A` bought, and the tree answers a question the clause grader cannot even be asked: on **12 of 134** repositories this base sells, the ladder's single row is not the whole grant, and one row sold as **MIT** ships a complete **GPL-3.0** below its root. 🔴 Then the sweep turned on this base's own cells: **19 of 162 did not reproduce**, all 19 carrying the `P834` capture signature, from three passes that had the fix available. Repaired, with a ratchet. 🟢 Seven new rows, every cell built by the primitive.**
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+🔵 **No date straddle.** Eight WebSearch legs (four regional, four global), two GitHub
+topic-listing reads, **134 repository trees enumerated** through
+`p441-tree-licence-enumeration/enumerate_licence.py` **invoked, not re-implemented** (33 s
+for all 134), **162 published cells re-measured twice each** through
+`lib/payload_measure.sh` (file **and** the library's preserved `P834` control), **28 payloads
+fetched and digested** first-hand, **9 discovery candidates tree-probed**, 21 offline controls
+and 35 live controls run, **ten mutation runs** against this pass's own two instruments, and
+one baseline `make hooks` — all **2026-10-25**, commit **2026-10-25**.
+
+🟢 **The inherited commit was GREEN, and it is reported before anything this pass did.**
+`make hooks` against `d1d97ce`, run **before `p442` wrote a line**, exited 2 with
+🟢 **60 of 61 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Gap 400-B`, mechanism in `Gap 438-B`). 🟢 **Fourth clean inheritance in
+a row**, and all three currency gates were green on arrival, so `p441` left no drift.
+
+### 🟢 `Gap 441-A` is closed where the gap said it was open: in the library, not beside it
+
+That gap recorded the mechanism exactly — `lib/probe_payload.sh::probe_repo` **returns on the
+first ladder hit**, so `P441`'s rule (*a filename list can only FIND a licence; to sustain its
+ABSENCE you must ENUMERATE the tree*) was implemented at `p441-tree-licence-enumeration`,
+re-run at `p444-root-vs-tree-family`, and **absent from the one loop every pass sources**.
+🟢 `probe_tree_paths` and `probe_repo_all` now live in that library, beside the ladder they
+correct, with the path filter's exclusions asserted as controls (a `.underscore` template, the
+European Commission's `.svg` badge, `node_modules/`, `.corepack/`, a `LICENSES/` inventory, a
+Moodle `.feature` test) and its admissions too (`LICENSE.TXT`, `licence`,
+`aoe-web-frontend/LICENSE`, `COPYING.LESSER`, `LICENSE/LICENSE.code`, `debian/copyright`).
+`lib/test_probe_payload.sh`: **14 → 35 live checks**.
+
+🔵 **Why it is a second entry point and not a change to `probe_repo`.** A blobless depth-1
+clone costs **~0.7 s** — 134 repositories in **33 s**, measured — but a pass re-reading one
+known payload should still pay one request. So the clone is paid where the error is
+expensive: at the moment a row is **shelved**.
+
+### 🔴 The canonical case, and why `p441`'s own fix could not have caught it
+
+`ucbds-infra/ottr` ships `LICENSE` — **108 B · `de5d9459d263`**, the R `YEAR:` /
+`COPYRIGHT HOLDER:` convention, family `UNCLASSIFIED` — and its real grant one spelling away
+at `LICENSE.md` (**1 555 B · `1677c5307530`**, BSD-3). Run this hour:
+
+    probe_repo     ucbds-infra/ottr -> LICENSE      108 B  UNCLASSIFIED      (one row, and it stops)
+    probe_repo_all ucbds-infra/ottr -> LICENSE      108 B  UNCLASSIFIED
+                                      LICENSE.md  1 555 B  BSD
+
+🔴 **And the stub is invisible to `p441`'s clause grader too.** Handed to
+`grant_presence.py --family BSD`, 108 B grades `GRANT-UNCALIBRATED`, not `GRANT-TRUNCATED`:
+the BSD variant cannot be resolved from a payload that carries neither a title nor the
+discriminator, which is `p441`'s own asymmetry rule working correctly. 🔵 **So this class is
+not reachable by any grader — only by enumeration.** `p441` closed the question *"is the
+grant complete?"*; it could not close *"is this the grant?"*.
+
+### 🔴 12 of 134, and four of them carry more than one family
+
+| | measured, live, this hour |
+|---|---|
+| repositories whose payload path these shelves publish | **134** |
+| exactly one own-grant path in the tree | 🟢 **121** |
+| 🔴 **more than one** | 🔴 **12** |
+| 🔴 more than one **FAMILY** | 🔴 **4** |
+| `ABSENCE-ENUMERATED` | 🟡 **1** — `pengusto/google-classroom-mcp`, already published here as proprietary. Independent corroboration, not a defect |
+| published path absent from the tree | 🟢 **0** |
+
+🔴 **The one that costs money: [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)**
+— sold on `agents/top.md` as MIT (root `LICENSE` 1 071 B · `22e7ab2dbddc`, re-read this hour)
+— carries a **complete GPL-3.0 at `legacy_reference/LICENSE`, 35 149 B · `3972dc9744f6`,
+🟢 `GRANT-PRESENT`**, beside 20+ `.py` files (`src/librus_client.py`, `src/server.py`,
+`src/scraping.py`, tests and specs): the v1.x implementation the native-API rewrite replaced.
+🟢 The recommendation changes, not the row: **integrate over MCP, never vendor the tree.**
+
+🟡 Three more: `Hiepler/EuConform` is **MIT + EUPL-1.2** (`LICENSE-EUPL` 13 240 B ·
+`3dcf9c6f6119`); `withmarbleapp/os-taxonomy` carries **two** share-alike regimes, ODbL for the
+database **and** CC BY-SA 4.0 for the content (`LICENSE-CONTENT` 18 375 B · `cde7883b9050`,
+graded `CONTENT-COPYLEFT:share-alike`); `Apomera/AlloFlow`'s three extra grants are **vendored
+assets** (MathLive MIT, Speech Rule Engine Apache-2.0, Temml MIT) and are a limit of the
+enumerator's `is_own_path`, which knows `node_modules/` and `vendor/` but not `*-assets/`
+(`Gap 442-B`).
+
+### 🟢 The inverse case is the stronger argument, and it opens an MIT lane this base had closed
+
+[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (583 ★): root
+`LICENSE` **1 134 B · `3fb8cda58638`** grades 🔴 `GRANT-BY-REFERENCE` — a notice — while the
+complete **AGPL-3.0 (34 523 B · `0d96a4ff68ad`**, byte-identical to the canonical text this
+base already holds for `exelearning` and `AnkitClassicVision/tutor-engine`) sits at
+`app/LICENSE`. 🔴 **The ladder's answer was not incomplete, it was wrong about the project.**
+🟢 And read first-hand, that notice carries a clause nothing here had joined: the `skills/`
+content is available **AGPL-3.0 *or* MIT at the user's option**, precisely so the packs can be
+embedded in an AI tool without AGPL obligations; only `app/` is AGPL-only. **The 30+ skill
+packs are a permissive lane in a repository this base had typed AGPL.** The row is on
+`agents/top.md`.
+
+### 🔴 Then the same question was asked of this base's own cells, and 19 answered wrong
+
+A published cell — `` `<path>` <bytes> B · `<sha256₁₂>` `` — is the only part of a shelf row a
+reader can check. All **162** were re-measured twice: from the file (`size_of_file`,
+`sha12_of_file`) and through the library's preserved defect (`size_of_capture_BROKEN`,
+`sha12_of_capture_BROKEN`).
+
+| verdict | n | what it means |
+|---|---|---|
+| 🟢 `REPRODUCES` | **143** | bytes and digest are the file's |
+| 🔴 `CAPTURE-MEASURED` | **19** | byte count short by the trailing-newline run **and** a digest taken of the **stripped** bytes — `P834`, in the published cell |
+| `MISMATCH` / `NO-PAYLOAD` / `UNRESOLVED` | **0** | every path and every repository still resolves |
+
+🔵 **The signature is reproduced, not inferred.** `GarethManning/education-agent-skills` at its
+pinned commit `135d6275e7db`: the file is **1 230 B · `f952182df4eb`**, and
+`printf '%s' "$(cat LICENSE)"` is **1 229 B · `40db9b472090`** — the published cell, to the
+digit. 🔴 The 19 cells are 10 repositories across all three sell shelves; all are repaired in
+this commit.
+
+🔴 **My first reading of the attribution was wrong and is recorded rather than quietly
+dropped.** I expected a lane: *the discovery passes never source the library, the verification
+passes do.* Measured against which pass first shelved each slug: `p432` **5 of its 5**,
+`p433` **2 of 5**, `p438` **2 of 11**, every other pass **0 of 113**. 🔵 So it is **intra-pass**
+— the same pass measured some rows through the library and typed others by hand — which is a
+worse shape than a bad lane, because a reader cannot tell the two apart by looking. 🟢 Hence a
+primitive (`cell_of_file`, `lib/measure --cell`, `sha12_of_file`) **and** a ratchet
+(`gate-cell-reproduction`, 21 offline controls of which 11 are negative, wired into
+`HOOK_GATES`, reporting **162/162** on this commit and typing any future un-re-measured cell
+`CELL-UNMEASURED`).
+
+🔵 **Mutation-tested, both instruments, because a control that cannot fail is not a control:**
+publish the capture digest from `cell_of_file` → **1** red; publish the capture size → **1**;
+group digits in fours → **3**; make `--cell` emit only the size → **1**; make the capture
+control identical to the correct primitive → **1**; let the gate count any recorded verdict as
+green → **4**; drop bytes and digest from its key → **2**; key it on the digest alone → **1**;
+let an empty or missing record pass → **2**; let zero parsed cells pass → **2**.
+
+### 🟢 Seven new rows — and the discovery channel's own nil, written down
+
+🔴 **The two canonical GitHub topic listings are saturated for this base: 18 of 18
+repositories read off `topics/ai-tutor` and `topics/ai-education` were already known here.**
+That is the second consecutive pass with zero *unknown* addresses from the supply channel, and
+it is written down because silence reads exactly like coverage. 🟢 **But "known" is not
+"shelved", and that gap paid seven rows**, six of them permissive and verified
+`GRANT-PRESENT` at the moment of shelving:
+`liuliu667/cram-engine` (MIT, 1 064 B · `c33ea68946e4`, 176 ★ — 🟢 **off the backlog**, where
+`p381` verified it four days ago and no pass promoted it; its digest reproduces to the byte),
+`ZeKaiNie/universal-examprep-skill` (MIT, 1 065 B · `21f44893f051`, 318 ★),
+`karanb192/algo-sensei` (MIT, 1 081 B · `3b2ca73e81ad`, 298 ★),
+`assafkip/claudemy` (MIT, 1 069 B · `262b47ee1fff`, 449 ★),
+`flysheep-ai/education-skills` (MIT, 1 068 B · `23b91d7c0aef`, 118 ★),
+`TovTechOrg/Tov-learn` (MIT, 1 064 B · `092d389ac156`, 36 ★), plus `human-skill-tree`'s dual
+lane above. 🔵 `p435` already named this failure mode — *twelve permissive EMEA addresses sat
+ungraded in this base's own backlog while the file carried a nil* — and it is still the
+cheapest supply in the building.
+
+### 🔵 The eight research legs, graded — and one conflict carried as a conflict
+
+🟢 **Three new facts, one measurement conflict, one single-source item refused, and the rest
+confirmation.** 🔴 **And two candidate "new" facts were killed by grading them**: Alabama
+`HB 329` and Virginia `SB 394` both came back from the NA leg and both are **already on
+`intel/market.md`** (lines 406 and 488) under spellings without full stops — a false novelty
+claim avoided only because the leg was graded against the file instead of against memory.
+
+| Leg | Verdict | What came back |
+|---|---|---|
+| **North America** | 🔵 **confirmation** | Ohio `HB 96` and Tennessee `SB 1711` (both carried), the four-state mandatory-district-policy cluster, `AB 1159`, `SB 720`, Alabama `HB 329`, Virginia `SB 394`, the 134-bills/31-states tracker. 🟡 One Florida proposed rule (parent opt-in, approved-tool list, 30-day interaction records, 1 July 2027) is **not adopted** and is not carried as policy |
+| **EMEA** | 🟢 **1 new + 1 refused** | 🟢 UNESCO's **ministerial statement on education in the age of AI, adopted 9 September 2026** at Digital Learning Week with eight priorities (25+ ministers) — the venue was on the file, the statement was not. 🔴 A **Council of Europe AI-literacy recommendation of 4 September 2026** is reported by a single weak secondary source and is **refused**, not carried |
+| **APAC** | 🟢 **2 new, both runway** | 🟢 **Japan's draft national curriculum guidelines (released 31 August)** make AI and information literacy core, allow up to a **15 % cut in class hours**, and schedule **information classes from 2028** with full elementary introduction in **fiscal 2030** — this base's standing measurement is that MEXT's *school guideline* is still Ver. 2.0 of 2024-12-26 and `mext.go.jp` is unreachable from this host, so the curriculum tier has moved while the guidance tier has not. 🟢 Korea's **2026 University AI Basic Curriculum Development Support Project** selects **20 universities** to build AI literacy courses for students in every major. 🔵 Singapore's Primary-4 tools (teacher-supervised, government platform only) and India's Class-3 mandate confirm |
+| **LATAM** | 🟢 **1 new + 1 conflict** | 🟢 **Estado de México** amended Article 61 of its education law in **April 2026** to promote responsible, graduated AI use in upper-secondary and tertiary schools — the first Mexican **state-level** education-AI instrument on this file. 🔴 **A measurement conflict is carried as a conflict:** ILIA 2026 is reported as *"11 of 20 countries already incorporate AI content in school programmes, against 2 in 2024"*, while this base carries CENIA's *"13 of 19 LAC countries do not yet teach early AI adoption"*. Both are ILIA-derived, the denominators differ (**20 vs 19**) and the arithmetic does not reconcile. 🔵 `p310`'s rule: a count is a claim about a corpus and travels with its denominator. Neither figure is withdrawn |
+| **Supply (agents, trending, platforms)** | 🔴 **zero unknown addresses** | 18 of 18 topic-listing candidates already in this base. 🟢 Seven were shelvable anyway |
+| **Platform / LMS leg** | 🔴 **`T125` confirmed a FIFTH time** | A 2026 open-source-LMS roundup read this hour calls **Frappe LMS** *"the only MIT-licensed option"*. 🔴 `frappe/lms` is **AGPL-3.0** (`license.txt` 33 893 B · `db1a87ba81e8`, re-probed at `p440`). Fifth independent instance, same direction: **the one that gets a client sued** |
+
+🔵 **Append-only. Nothing below this block was edited.**
+
+---
+
 ## 🆕 `p441` · 2026-10-25 — **`Gap 440-A` bought, and the gap was wrong twice: the resolver it prescribed is UNSOUND, and the row it named as unscreened is UNTITLED, so no BSD profile could ever have reached it. 🟢 Every BSD row this base sells is now verified clause-by-clause — **11 of 12 payloads `GRANT-PRESENT`** — and the twelfth is a 108 B stub whose real grant sits one filename away. 🔴 Two defects in this pass's own instruments are recorded rather than quietly fixed, one of which made eleven live repositories look unreachable.**
 
 🔵 **Append-only. Nothing below this block was edited.**

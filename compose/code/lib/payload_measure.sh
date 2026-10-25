@@ -79,6 +79,46 @@ trailing_newlines() {
   printf '%s\n' "$n"
 }
 
+# ── p442: THE PUBLISHABLE CELL ────────────────────────────────────────────────────────────
+#
+# 🔴 Why this is in the shared library and not in a pass directory.  `P834` has a RULE
+# (`lib/README.md`: "Ninguna cifra de bytes se publica desde `$(…)`") and a FIX
+# (`size_of_file`), and `p442` re-measured all 162 payload cells this base publishes on its
+# three sell shelves against both methods: 🟢 **143 reproduce**, 🔴 **19 carry the capture
+# signature** — byte count short by the trailing-newline run AND a digest that is the digest
+# of the STRIPPED bytes.  All 19 come from `p432` (5 of 5 rows), `p433` (2 of 5) and `p438`
+# (2 of 11), so the defect is not even consistent WITHIN a pass: the same pass measured some
+# rows through the library and typed others by hand, and the file gives a reader no way to
+# tell which cell is which.
+#
+# 🟢 So the cell itself — the string a shelf publishes — now has one owner.  A pass that
+# calls `cell_of_file` cannot commit `P834`, because there is nothing left to hand-roll.
+sha12_of_file() {
+  [ -f "$1" ] || { printf '-\n'; return 1; }
+  sha256sum "$1" | cut -c1-12
+}
+
+# The digest half of the `P834` defect, preserved as a control exactly as
+# `size_of_capture_BROKEN` preserves the sizing half.  NEVER publish from it: it exists so a
+# suite can assert that the two digests DISAGREE on a payload with a trailing newline and
+# AGREE on one without, and so `p442`'s sweep can TYPE a non-reproducing cell as
+# capture-measured instead of merely calling it wrong.
+sha12_of_capture_BROKEN() {
+  local b; b=$(cat "$1" 2>/dev/null)
+  printf '%s' "$b" | sha256sum | cut -c1-12
+}
+
+# Group a byte count the way these shelves write it: ASCII spaces every three digits, which
+# is what `agents/top.md` carries (measured: `1 063`, U+0020, not a narrow no-break space).
+group_digits() {
+  printf '%s' "$1" | rev | sed -E 's/([0-9]{3})/\1 /g' | rev | sed -E 's/^ +//'
+}
+
+# The cell, byte-exact and digest-exact: `<grouped bytes> B · <sha256₁₂>`.
+cell_of_file() {
+  printf '%s B \xc2\xb7 %s\n' "$(group_digits "$(size_of_file "$1")")" "$(sha12_of_file "$1")"
+}
+
 # ── classification (delegated, never re-implemented) ─────────────────────────────────────
 
 # family_of/holder_of take the payload TEXT.  Both are newline-insensitive, so reading the

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Trend 40 — `p442` **The second grant lives below the root, and in this industry that is where the copyleft is**
+
+🔵 `Trend 37`: a licence **name** without a licence **text**. `Trend 38`: a tool that declines
+and a tool that clears produce the same green. `Trend 39`: a complete grant no title-keyed
+tool can classify. 🟢 **`Trend 40` is the structural one: the repository's licence question has
+more than one answer, and the extra answers are not at the root.**
+
+🔴 **Measured, 2026-10-25, over the 134 repositories whose payload path these shelves
+publish** — every tree enumerated first-hand:
+
+| | n |
+|---|---|
+| exactly one own-grant path | 🟢 121 |
+| 🔴 **more than one** | 🔴 **12 (9 %)** |
+| 🔴 more than one **family** | 🔴 **4 (3 %)** |
+
+🔴 **And the direction is the commercially dangerous one.** Of the four multi-family
+repositories, **three put the stronger obligation below the root**:
+`krzysztofbury/librus-mcp` is MIT at the root with a complete **GPL-3.0** in
+`legacy_reference/`; `Hiepler/EuConform` is MIT at the root with **EUPL-1.2** beside it;
+`withmarbleapp/os-taxonomy` is ODbL at the root with **CC BY-SA 4.0** for its content. 🔵 The
+root file is the *permissive* one in each case, which is exactly the shape a rooted probe —
+and a GitHub licence badge, and every scanner that reads one file — reports as clean.
+
+🟢 **The inverse exists too and is worth as much money.** `24kchengYe/human-skill-tree`'s root
+payload is a **notice**, so the project reads as ungranted while its real AGPL-3.0 sits in
+`app/` — and that same notice carries a **dual AGPL-or-MIT option for `skills/`** that no
+root-only read can see. **An enumeration finds permissive lanes, not only obligations.**
+
+🔵 **Why this industry specifically.** Education repositories are *assemblies*: courseware
+plus code, a platform plus per-module restatements, a skills pack plus an MCP server, a
+taxonomy plus its data. Four of the twelve are per-module restatements of one grant
+(`sakaiproject/sakai` ×4, `dodona-edu/dolos` ×3, `microsoft/agent-governance-toolkit`,
+`The-Morrow-Project/Morrow-Bridge`) — harmless, and evidence of the same cause: **a
+multi-artefact repository is forced to say the licence more than once, and the moment it says
+it twice the two can differ.**
+
+🟢 **What to do with it:** `Pattern AU` is the four-step screen, and step 1 is the enumeration.
+The cost is **~0.7 s per repository** (blobless depth-1 clone, no API), so there is no version
+of this trend where the screen is too expensive to run.
+
+## 🆕 Trend 41 — `p442` **A published figure is a claim about a measurement, and 12 % of this base's own were produced by a method it had already written a rule against**
+
+🔴 **The measurement, on this base's own shelves.** All **162** payload cells on
+`agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` were re-measured from the
+file **and** through the preserved defect: 🟢 **143 reproduce**, 🔴 **19 (11.7 %) carry the
+`P834` capture signature** — byte count short by the trailing-newline run and a digest taken
+**of the stripped bytes**.
+
+🔵 **Why this is a trend and not a bug report.** The rule existed (`lib/README.md`: *no byte
+figure is published from `$(…)`*), the fix existed (`lib/payload_measure.sh::size_of_file`,
+asserted 27/27 at `p837`), and the rows were written **afterwards, by passes that had both**.
+Attributed: `p432` **5 of its 5**, `p433` **2 of 5**, `p438` **2 of 11**, every other pass
+**0 of 113**. 🔴 So the defect is **intra-pass** — the same pass used the library for some rows
+and typed others by hand — which means a reader cannot infer a cell's trustworthiness from
+*who wrote it*, only from *re-measuring it*.
+
+🟢 **The generalisation for anyone reading this base, or building one:** a correction needs
+three things and the industry habit is to ship one. A **rule** tells the next author what not
+to do. A **fix** gives them a correct primitive. 🟢 **Only a gate makes the wrong path cost
+something** — and only if the gate sits on the artefact the reader trusts, which here is the
+**cell**, not the payload. `make gate-cell-reproduction` is that gate: 21 offline controls,
+11 of them negative, and a `CELL-UNMEASURED` verdict for any cell nobody has re-measured.
+
+🔵 **The client-facing version of the same lesson, which is the reason it is on a trends
+shelf:** when a vendor hands you a licence report, ask which figures were *re-derived from the
+artefact* and which were *copied from the sentence that last stated them*. In this base's own
+file the two were visually identical and 19 of them disagreed with the file they named.
+
 ## 🆕 Trend 39 — `p441` **Five of the twelve BSD payloads in this industry's teaching tier carry no title line, so every title-keyed licence tool reports them as UNKNOWN — and the tier they sit in is the one a university actually runs**
 
 🔵 `Trend 37` found the supply chain shipping a licence **name** without a licence **text**.

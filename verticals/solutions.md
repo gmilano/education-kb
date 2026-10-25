@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 `p442` — The platform tier is **enumerated**, not just read: four of these platforms carry a second licence text, and one of this file's own cells did not reproduce
+
+🟢 `p440` and `p441` read the platform grants clause by clause. `p442` asks the prior
+question — **is the payload we read the only one the repository carries?** — with the tree
+channel now inside the shared library (`Gap 441-A`). Over the **134** repositories these
+shelves publish a payload path for: **121** carry exactly one own-grant path, 🔴 **12 carry
+more than one**, and four of those twelve are platforms or platform-adjacent rows on this
+file.
+
+| platform | the grant this file publishes | what else the tree carries, read first-hand | the read |
+|---|---|---|---|
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 · `LICENSE` 35 147 B · `8ceb4b9ee5ad` | 🔴 `license.txt` **1 614 B · `0aaf39205490`** — GPL-3.0 titled, all six clauses **absent**, `GRANT-BY-REFERENCE` | the complete grant is the root file; the second payload is a **pointer** and must never be the one cited |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | `bigbluebutton-web/COPYING.LESSER` **7 637 B · `9ccf26cfe845`**, LGPL-3.0 | 🟢 consistent, and it is the **component** grant: `bigbluebutton-web` states its own LGPL-3.0 rather than inheriting silently. 🔵 Still `GRANT-UNCALIBRATED` — LGPL incorporates GPL-3.0 **by design** and needs `p440`'s unbought `GRANT-BY-DESIGN` verdict (`Gap 440-B`) |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | ECL-2.0 | **four** ECL-2.0 texts: root plus `delegatedaccess/`, `external-calendaring-service/`, `roster2/` (sampled: `delegatedaccess/LICENSE` **11 110 B · `6001bb8caa76`**) | 🟢 consistent; a per-module restatement in a 400-module monorepo, not a second grant |
+| [`Apomera/AlloFlow`](https://github.com/Apomera/AlloFlow) | AGPL-3.0 · `LICENSE` **35 442 B · `698099632698`** (🔴 **repaired here** — the published cell read 35 441 B · `d8d2ea7ef0a1`, measured through a capture) | MIT ×2 + Apache-2.0 under `mathlive-assets/` and `sre-assets/` (MathLive 1 099 B, Speech Rule Engine 10 174 B, Temml 1 074 B) | 🟡 **vendored third-party assets, not the project's grant.** The enumerator's `is_own_path` knows `node_modules/` and `vendor/` but not `*-assets/`, so it types them as own — recorded as `Gap 442-B`, not quietly fixed |
+
+🔵 **What changes for an engagement:** nothing about these four platforms' own licences, which
+hold as published. What changes is the **screening procedure** — a platform's grant is now
+established by enumerating its tree, so a second text can be *seen* and classified rather than
+hidden behind whichever filename a ladder happened to try first. `Pattern AU` is the recipe.
+
 ## 🆕 `p441` — The **permissive** half of the platform tier is now read clause by clause too, and one platform-adjacent row is sold with a restriction attached
 
 🟢 `p440` read the ten **copyleft** platforms' grants clause by clause. `p441` does the same
@@ -485,11 +506,11 @@ incumbent open platform to displace, and the integration surface is the SIS, not
 
 | Component | Licence | HEAD | Payload | Where it sits |
 |---|---|---|---|---|
-| [**AlloFlow**](https://github.com/Apomera/AlloFlow) | 🔴 **AGPL-3.0-or-later** | `6194e51e8f1f` | `LICENSE` 35 441 B · `d8d2ea7ef0a1` | …**beside, over an interface.** The only maintained accessibility-first differentiation engine found: UDL levels/layers/outputs, WCAG, AAC, text-to-speech, offline-first, i18n, Electron + React. Network copyleft over a hosted engine — reach it over HTTP, never vendor it. |
-| [**California IEP AI project kit**](https://github.com/robotros/California-IEP-AI-project-kit) | 🟢 **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 064 B · `2524a8e74f10` | …**as the knowledge and boundary layer** on whatever drafting surface the district already has. Carries its own "not the system of record" discipline. |
-| [**iep-builder**](https://github.com/67tallchris/iep-builder) | 🟢 **MIT** | `b39df0e9a4a1` | `LICENSE` 1 068 B · `523f156051cf` | …**as a standalone per-district app** (Cloudflare Pages + D1, bring-your-own-key). The deployment shape when a district will not accept a central student store. |
-| [**access-to-education**](https://github.com/dougdevitre/access-to-education) | 🟢 **MIT** | `f8abd70707ba` | `LICENSE` 1 068 B · `68657618a157` | …**in the parent portal** (`p388`'s surface). ~120 k words of IEP navigation and advocacy content, MIT-granted. |
-| [**rubric-desk**](https://github.com/rwrife/rubric-desk) | 🟢 **MIT** | `010a44006014` | `LICENSE` 1 062 B · `ec0b7dad19a4` | …**as the offline marking surface** (Flutter, no accounts). Pairs with Kolibri where connectivity cannot be assumed. 🟡 Created 2026-10-25. |
+| [**AlloFlow**](https://github.com/Apomera/AlloFlow) | 🔴 **AGPL-3.0-or-later** | `6194e51e8f1f` | `LICENSE` 35 442 B · `698099632698` | …**beside, over an interface.** The only maintained accessibility-first differentiation engine found: UDL levels/layers/outputs, WCAG, AAC, text-to-speech, offline-first, i18n, Electron + React. Network copyleft over a hosted engine — reach it over HTTP, never vendor it. |
+| [**California IEP AI project kit**](https://github.com/robotros/California-IEP-AI-project-kit) | 🟢 **MIT** | `ff1ae0ce30e7` | `LICENSE` 1 065 B · `43554d1189d8` | …**as the knowledge and boundary layer** on whatever drafting surface the district already has. Carries its own "not the system of record" discipline. |
+| [**iep-builder**](https://github.com/67tallchris/iep-builder) | 🟢 **MIT** | `b39df0e9a4a1` | `LICENSE` 1 069 B · `aa8cfde0dc31` | …**as a standalone per-district app** (Cloudflare Pages + D1, bring-your-own-key). The deployment shape when a district will not accept a central student store. |
+| [**access-to-education**](https://github.com/dougdevitre/access-to-education) | 🟢 **MIT** | `f8abd70707ba` | `LICENSE` 1 069 B · `fc7c8b90fee1` | …**in the parent portal** (`p388`'s surface). ~120 k words of IEP navigation and advocacy content, MIT-granted. |
+| [**rubric-desk**](https://github.com/rwrife/rubric-desk) | 🟢 **MIT** | `010a44006014` | `LICENSE` 1 063 B · `c186f5cb204a` | …**as the offline marking surface** (Flutter, no accounts). Pairs with Kolibri where connectivity cannot be assumed. 🟡 Created 2026-10-25. |
 
 🔴 **Not available, and it is the load-bearing piece:** an open-source special-education **system
 of record**. `OpenSIS Classic` (GPL-2.0) and `Academico` (MIT) are general SIS products with no

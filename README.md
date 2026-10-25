@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-25
 ---
 
+## Pass 442 — reads 2026-10-25, commit 2026-10-25 — **`Gap 441-A` BOUGHT: the tree channel is now IN the library every pass sources, and on 12 of the 134 repositories these shelves sell, the ladder's single row is not the whole grant — one of them, sold as MIT, ships a complete GPL-3.0 below its root. 🔴 THEN THE SAME QUESTION WAS ASKED OF THIS BASE'S OWN CELLS: 19 of 162 did not reproduce, every one of them carrying the `P834` capture signature, from three passes that had the fix available. Repaired, with a gate. 🟢 Seven new rows, every cell built by the primitive**
+
+🔵 **No date straddle.** Eight WebSearch legs (four regional, four global), two GitHub
+topic-listing reads, **134 repository trees enumerated** (33 s) through `p441`'s own
+enumerator **invoked, not re-implemented**, **180 published cells re-measured twice each**
+through `lib/payload_measure.sh`, **28 payloads fetched and digested** first-hand, **9
+discovery candidates tree-probed**, **29 offline + 35 live controls**, **ten mutation runs**
+against this pass's two instruments, and one baseline `make hooks` — all **2026-10-25**,
+commit **2026-10-25**, so `updated:` carries one date on every file.
+
+🟢 **The inherited commit was GREEN, and it is reported before anything this pass did.** A
+baseline `make hooks` against `d1d97ce`, run **before `p442` wrote a line**, exited **2** with
+**60 of 61 gates green**, red only on `gate-census-union` — this base's **declared,
+non-blocking** red (`Gap 400-B`, mechanism in `Gap 438-B`). 🔵 All three currency gates green
+on arrival. 🟢 **Fourth clean inheritance in a row.**
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 441-A` CLOSED where the gap said the hole was: in the library, not beside it.**
+  `probe_tree_paths` and `probe_repo_all` now sit in `compose/code/lib/probe_payload.sh`
+  beside the ladder they correct; `lib/test_probe_payload.sh` goes **14 → 35 live checks**,
+  including the path filter's rejections (a `.underscore` template, the European Commission's
+  `.svg` badge, `node_modules/`, a `LICENSES/` inventory, a Moodle `.feature` test) and its
+  admissions (`LICENSE.TXT`, `licence`, `aoe-web-frontend/LICENSE`, `COPYING.LESSER`,
+  `LICENSE/LICENSE.code`, `debian/copyright`). Cost measured: **~0.7 s** per repository,
+  **33 s** for all 134, no GitHub API.
+- 🔴 **12 of 134 repositories carry more than one own-grant path; 4 carry more than one
+  FAMILY** — and in three of those four the **root is the permissive one**, which is the
+  direction a rooted probe, a GitHub badge and every one-file scanner reports as clean.
+  🔴 **`krzysztofbury/librus-mcp` is sold here as MIT and ships a complete GPL-3.0 at
+  `legacy_reference/LICENSE` (35 149 B · `3972dc9744f6`, `GRANT-PRESENT`) beside 20+ `.py`
+  files.** The row keeps its place with a changed disposition: **integrate over MCP, never
+  vendor the tree.**
+- 🟢 **And the inverse case opened a permissive lane this base had closed.**
+  `24kchengYe/human-skill-tree`'s root payload is a **notice** (1 134 B · `3fb8cda58638`,
+  `GRANT-BY-REFERENCE`) with the real AGPL-3.0 at `app/LICENSE` — and that notice grants the
+  `skills/` content under **AGPL-3.0 *or* MIT at the user's option**. A root-only read calls
+  this repository AGPL; the tree says 30+ skill packs are MIT-takeable.
+- 🔴 **19 of 162 published payload cells did not reproduce, and the method that produced them
+  is identified rather than guessed.** The capture signature is reproduced side by side: for
+  `GarethManning/education-agent-skills` at its pinned commit the file is **1 230 B ·
+  `f952182df4eb`** and `printf '%s' "$(cat LICENSE)"` is **1 229 B · `40db9b472090`** — the
+  published cell, to the digit. Attributed by first-shelving pass: `p432` **5 of 5**, `p433`
+  **2 of 5**, `p438` **2 of 11**, everyone else **0 of 113**. 🔵 **Intra-pass, not
+  lane-shaped** — my first hypothesis was a lane and it is recorded as wrong.
+- 🟢 **Both halves bought in the same pass that found them.** The 19 cells are repaired;
+  `cell_of_file` / `lib/measure --cell` / `sha12_of_file` own the cell string so there is
+  nothing left to hand-roll; `gate-cell-reproduction` is wired into `HOOK_GATES` with **29
+  offline controls, 11 of them negative**, and reports **180/180** on this commit.
+- 🔴 **The gate then found three defects in its own parser, on this pass's own prose, and
+  they are controls now (`C12`–`C14`):** a **bolded** byte count was invisible to it, a row
+  publishing **two** payloads was read as one, and a digest in a cell with no path in it was
+  mistaken for a commit. 🔵 A parser that cannot see a cell lets that cell go unverified while
+  the gate shows green — the same failure as having no gate.
+- 🟢 **Seven new rows on `agents/top.md`**, six permissive and graded `GRANT-PRESENT` at the
+  moment of shelving (`cram-engine`, `universal-examprep-skill`, `algo-sensei`, `claudemy`,
+  `education-skills`, `Tov-learn`) plus `human-skill-tree`'s dual lane. 🔵 `cram-engine` came
+  **off this base's own backlog**, where `p381` verified it four days ago and no pass promoted
+  it; its digest reproduces to the byte.
+- 🔴 **The discovery channel is saturated and it is written down as a nil:** 18 of 18
+  candidates read off `github.com/topics/ai-tutor` and `topics/ai-education` were already
+  known here. 🟢 **But *known* is not *shelved*, and that distinction paid all seven rows.**
+- 🟢 **Three new regional facts, one conflict carried as a conflict, one single-source item
+  refused:** Japan's draft curriculum guidelines (information classes **2028**, full
+  elementary introduction **fiscal 2030**, up to a 15 % class-hour cut), Korea's **20-university**
+  AI Basic Curriculum project, **Estado de México**'s April-2026 Article 61 amendment;
+  🔴 ILIA 2026's *"11 of 20"* against this base's CENIA *"13 of 19"* — different denominators,
+  irreconcilable arithmetic, **both kept with their denominators**; 🔴 a Council of Europe
+  AI-literacy recommendation on one weak source, **refused**.
+- 🔴 **Two candidate "new facts" were killed by grading them against the file** — Alabama
+  `HB 329` and Virginia `SB 394` are both already on `intel/market.md` under spellings without
+  full stops. 🔵 A leg graded against memory publishes a false novelty; the same grep promoted
+  the Japanese and Mexican items from plausible to new.
+- 🔴 **`T125` confirmed a FIFTH time:** a 2026 LMS roundup read this hour calls **Frappe LMS**
+  *"the only MIT-licensed option"*. `frappe/lms` is **AGPL-3.0**. The same source reads Moodle,
+  Open edX, Canvas and Sakai correctly, so this is a specific, repeated error about one
+  project — in the direction that reaches procurement.
+
+---
+
 ## Pass 441 — reads 2026-10-25, commit 2026-10-25 — **`Gap 440-A` BOUGHT FOR BSD, AND THE GAP WAS WRONG TWICE: the resolver it prescribed is UNSOUND (a BSD-3 truncated at the one clause that distinguishes it grades as a complete BSD-2), and the row it named as unscreened is UNTITLED, so no BSD profile could ever have reached it. 🟢 `GRANT-UNCALIBRATED` on the BSD slice falls **14 → 3**, and the three that remain are KB markdown tables rather than licence payloads. 🟢 Every BSD row this base sells is verified clause-by-clause: **11 of 12 payloads `GRANT-PRESENT`**. 🔴 Three defects in this pass's own instruments are recorded rather than quietly fixed, one of which made eleven live repositories look unreachable and one of which was found by mutating the suite meant to catch it.**
 
 🔵 **No date straddle.** Nine WebSearch legs (four regional, one per-country retry, four
@@ -127,14 +207,24 @@ back-fitted.** 🟢 All three currency gates were **GREEN on the inherited commi
 the staleness below is entirely this pass's own writes — the arrangement `p352` and `p376`
 are designed to produce, now holding for a third consecutive pass.
 
-**2 846** harvested shapes on channel U → **39** are not addresses →
-**2 807 addresses**.
+**2 847** harvested shapes on channel U → **39** are not addresses →
+**2 808 addresses**.
 
-🔵 **2 807** channel-U addresses and **3 318** channel-B survivors give
-**3 692 addresses over both channels**.
+🔵 **2 808** channel-U addresses and **3 321** channel-B survivors give
+**3 693 addresses over both channels**.
 
-🔵 **`p441`: the delta, and the one new address is nameable.** Channel U rose **2 806 →
-2 807** (+1), channel-B survivors **3 315 → 3 318** (+3) and the union **3 691 → 3 692** (+1).
+🔵 **`p442`: the delta, and it is small for a reason worth stating.** Channel U rose **2 807 →
+2 808** (+1), channel-B survivors **3 318 → 3 321** (+3) and the union **3 692 → 3 693** (+1).
+🔴 **Seven rows were shelved and the union moved by one**, which is the measurement behind this
+pass's discovery nil: every one of the seven addresses was **already in this base** — in
+`trending`, in `archive` or in an `evidence` TSV — and six of them had been verified and never
+promoted. 🟢 The one genuinely new address is
+[`liuliu667/cram-engine`](https://github.com/liuliu667/cram-engine)'s channel-U shape; the
+repository itself was verified at `p381`. 🔵 **A supply channel can be saturated while the
+shelf is still underweight, and only one of those two facts is visible from a search.**
+
+🔵 **`p441`'s delta, for continuity:** channel U **2 806 → 2 807** (+1), survivors
+**3 315 → 3 318** (+3), union **3 691 → 3 692** (+1).
 🟢 The single new address is
 [`ArturoNereu/AI-Study-Group`](https://github.com/ArturoNereu/AI-Study-Group) — the discovery
 leg's only new find, 🔴 carrying **no licence payload** and therefore shelved nowhere. 🔵 Every

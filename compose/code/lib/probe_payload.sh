@@ -178,6 +178,80 @@ _row_from_fetch() { # _row_from_fetch <repo> <branch> <path> <filename-for-the-r
   return "$rc"
 }
 
+# ── p442: Gap 441-A — ENUMERATE THE TREE.  `probe_repo` RETURNS ON THE FIRST LADDER HIT ───
+#
+# 🔴 Measured, and it is this base's signature failure mode for the third recorded time.
+# `ucbds-infra/ottr` ships `LICENSE` — **108 B**, the R `YEAR:` / `COPYRIGHT HOLDER:`
+# convention, family `UNCLASSIFIED` — and its real grant one spelling away at `LICENSE.md`
+# (**1 555 B**, BSD-3-Clause).  The ladder above requests `LICENSE` first and RETURNS, so the
+# stub is what every pass sourcing this file has measured.  🔵 And the stub is invisible to
+# `p441`'s grant-presence instrument too: at 108 B the BSD variant cannot be resolved, so it
+# grades `GRANT-UNCALIBRATED`, not `GRANT-TRUNCATED`.  **Only enumeration catches this
+# class** — a clause grader cannot, because it is never handed the right file.
+#
+# 🟢 `P441` already settled the channel and `p441-tree-licence-enumeration` already
+# implements it — *"a filename list can only FIND a licence; to sustain its ABSENCE you must
+# ENUMERATE the tree"* — and `p444-root-vs-tree-family` already ran it over 412 rows.  🔴 It
+# was never carried into the library every pass sources, which is `lib/README.md`'s own
+# lesson (pass 77 re-imported `P171` because the correction lived in five instruments and a
+# sixth inherited nothing).  So it lands HERE, beside the ladder it corrects.
+#
+# 🔵 What it costs: a blobless, treeless-depth-1 clone is **~0.7 s** per repository and
+# needs no API (`api.github.com` is 403 in this environment) — 134 repositories in **33 s**,
+# measured this pass.  So the tree arm is a SEPARATE entry point rather than a change to
+# `probe_repo`: a pass re-reading one known payload keeps paying one request, and a pass
+# SHELVING a row pays the clone, which is where the error is expensive.
+PROBE_TREE_RE="${PROBE_TREE_RE:-(^|/)(un)?licen[cs]e|(^|/)copying|(^|/)copyright}"
+# Excluded before any fetch, each one a rule this base already established: somebody else's
+# grant (`node_modules/`, `vendor/`, pass 52 trend 259), an INVENTORY rather than a grant
+# text, and a SOURCE/TEMPLATE/IMAGE file whose NAME merely contains the word (the European
+# Commission's `licence-EUPL 1.2-brightgreen.svg` badge is the cleanest specimen).
+PROBE_TREE_SKIP="${PROBE_TREE_SKIP:-(^|/)(node_modules|vendor|third_party|\.corepack|LICENSES)/|licenses\.(json|xml|csv|ya?ml|toml)$|\.(py|js|ts|vue|xsl|svg|mustache|properties|feature|underscore|rtf|spdx)$}"
+
+# Every licence-ish path in the COMPLETE tree, at any depth, one per line.  Empty output
+# means the repository does not resolve; a resolving repository with no candidate prints
+# nothing and the caller must say ABSENCE-ENUMERATED rather than NO-PAYLOAD.
+probe_tree_paths() { # probe_tree_paths <owner/repo> [ref]
+  local repo="$1" ref="${2:-}" d
+  d=$(mktemp -d) || return 1
+  if timeout "${PROBE_TREE_TIMEOUT:-120}" git clone --quiet --filter=blob:none \
+       --no-checkout --depth 1 "https://github.com/$repo" "$d/r" >/dev/null 2>&1; then
+    if [ -n "$ref" ]; then
+      # A pinned ref is FETCHED, never assumed: a tree read at today's HEAD cannot sustain a
+      # claim about the commit a shelf row names.
+      timeout "${PROBE_TREE_TIMEOUT:-120}" git -C "$d/r" fetch --quiet --filter=blob:none \
+        --depth 1 origin "$ref" >/dev/null 2>&1 || ref=""
+    fi
+    git -C "$d/r" ls-tree -r --name-only "${ref:-HEAD}" 2>/dev/null \
+      | grep -Ei "$PROBE_TREE_RE" | grep -Ev "$PROBE_TREE_SKIP"
+  fi
+  rm -rf "$d"
+}
+
+# One row per licence text the tree carries, measured where it landed.  The caller gets the
+# WHOLE set and decides; this function does not pick, because picking is what the ladder did
+# wrong.  A candidate whose payload classifies `UNCLASSIFIED`/`UNKNOWN` is still emitted —
+# that is how the `ottr` stub becomes VISIBLE instead of becoming the answer.
+probe_repo_all() { # probe_repo_all <owner/repo> [ref]
+  local repo="$1" ref="${2:-}" br n=0 p
+  br=$(probe_default_branch "$repo")
+  if [ -z "$br" ]; then
+    printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "-" "UNRESOLVED" "0" "UNRESOLVED" "-"; return
+  fi
+  while IFS= read -r p; do
+    [ -z "$p" ] && continue
+    _row_from_fetch "$repo" "${ref:-$br}" "$p" "$p" && n=$((n+1))
+  done <<EOF
+$(probe_tree_paths "$repo" "$ref")
+EOF
+  # 🔵 An absence is only a finding when the tree was enumerated (`P441`), and it is a
+  # DIFFERENT verdict from the ladder's `NO-PAYLOAD`, which only ever meant "not at the
+  # spellings I tried".
+  [ "$n" -eq 0 ] && printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "$br" \
+    "ABSENCE-ENUMERATED" "0" "ABSENCE-ENUMERATED" "-"
+  return 0
+}
+
 probe_repo() {
   local repo="$1" br="$2" fn p
   [ -z "$br" ] && br=$(probe_default_branch "$repo")

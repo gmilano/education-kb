@@ -13,6 +13,8 @@
 #   measure --size <payload-file>        byte-exact size (`P834`-proof)
 #   measure --newlines <payload-file>    trailing-newline run = the exact `P834` error for it
 #   measure --family <payload-file>      licence family only (`P171`-hardened classifier)
+#   measure --sha <payload-file>         sha256 prefix of the FILE (`P834`-proof)
+#   measure --cell <payload-file>        the publishable shelf cell: `<bytes> B · <sha256₁₂>`
 #   measure --count <payload-file> <word>  word-bounded count (`P831`-proof)
 #   measure --self-test                  run the offline suite
 #
@@ -44,6 +46,19 @@ case "$1" in
     [ "$#" -ge 2 ] || { echo "measure --family needs a file" >&2; exit 2; }
     [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
     family_of_file "$2"
+    ;;
+  --sha)
+    [ "$#" -ge 2 ] || { echo "measure --sha needs a file" >&2; exit 2; }
+    [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
+    sha12_of_file "$2"
+    ;;
+  # p442: the whole cell, so a pass publishing a payload row has nothing to assemble.  19 of
+  # the 162 cells on this base's sell shelves were measured through a capture before this
+  # existed; see `p442-shelf-tree-crosscheck/README.md`.
+  --cell)
+    [ "$#" -ge 2 ] || { echo "measure --cell needs a file" >&2; exit 2; }
+    [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
+    cell_of_file "$2"
     ;;
   --count)
     [ "$#" -ge 3 ] || { echo "measure --count needs a file and a word" >&2; exit 2; }

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-25
 ---
 
+## 🆕 Pattern AU — `p442` **Clear a repository's licence in four steps that cannot be done in the wrong order**, and the three repositories that each break a different one
+
+🔵 `Pattern AT` (`p441`) clears a **stack** whose grants are already known. `Pattern AU` is the
+step before it: the screen you run on a repository **nobody here has read yet**, built out of
+this base's four existing instruments in the one order that works. Every component is in the
+clone; nothing below is new code.
+
+### The screen
+
+```sh
+# 0 · the repository resolves, and its DEFAULT BRANCH is read, never assumed
+#     (measured: GibbonEdu/core -> v31.0.00, rosariosis -> mobile, i-educar -> 2.12)
+. compose/code/lib/probe_payload.sh
+probe_default_branch "$SLUG"
+
+# 1 · ENUMERATE THE TREE.  A filename list can only FIND a licence; only enumeration can
+#     say which payload is the grant, or that there is none (P441).
+probe_repo_all "$SLUG"            # one row per licence text: path, bytes, family, holder
+                                  # ~0.7 s; blobless depth-1 clone, no GitHub API needed
+
+# 2 · FAMILY, from the hardened owner only.  Never re-answer it in a grader (P171).
+lib/measure --family <payload>
+
+# 3 · IS THE GRANT ACTUALLY THERE?  A pointer to a licence is not a grant (P1065).
+python3 -I compose/code/p439-grant-presence/grant_presence.py --family "$FAM" <payload>
+python3 -I compose/code/pass258-content-licence-family/content_licence.py <payload>  # CC/content
+
+# 4 · publish the cell with the primitive, so the row cannot carry P834
+lib/measure --cell <payload>      # -> `1 069 B · 262b47ee1fff`
+```
+
+🔴 **The order is the pattern.** Step 3 on step 1's *first* answer is what this base did for
+441 passes, and it is wrong in both directions: on `ucbds-infra/ottr` the first answer is a
+108 B stub that no clause profile can even grade, and on `24kchengYe/human-skill-tree` it is a
+notice that makes a well-licensed project look unlicensed.
+
+### The three repositories that break three different steps — each verified 2026-10-25
+
+| step it breaks | repository | what happens without it | what the screen returns |
+|---|---|---|---|
+| **1 · enumerate** | [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | the ladder returns `LICENSE` **108 B**, family `UNCLASSIFIED` (R's `YEAR:` / `COPYRIGHT HOLDER:` stub) and stops | `LICENSE` 108 B `UNCLASSIFIED` **and** `LICENSE.md` **1 555 B · `1677c5307530`** → **BSD-3, `GRANT-PRESENT`** |
+| **1 · enumerate (inverse)** | [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | the root payload (1 134 B · `3fb8cda58638`) grades `GRANT-BY-REFERENCE` → reads as *"project did not grant"* | the grant is at `app/LICENSE` **34 523 B · `0d96a4ff68ad`** (AGPL-3.0) **and** the root notice offers `skills/` under **AGPL-3.0 *or* MIT at the user's option** → a permissive lane |
+| **1 · enumerate (subtree copyleft)** | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | root is MIT 1 071 B · `22e7ab2dbddc`; the row reads *permissive, vendor freely* | 🔴 **GPL-3.0 at `legacy_reference/LICENSE`, 35 149 B · `3972dc9744f6`, `GRANT-PRESENT`**, beside 20+ `.py` files → **integrate over MCP, never vendor** |
+| **3 · is the grant there** | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `LICENSE` 1 230 B is titled CC BY-SA 4.0 and *reads* like a grant | 🔴 `CONTENT-POINTER: not-a-grant` — the payload says *"This is a human-readable notice. The full legal terms are available at …/legalcode"*; the binding text is the canonical 18 375 B one |
+| **4 · publish the cell** | this base's own shelves | 19 of 162 published cells carried the capture signature (`P834`) | `cell_of_file` owns the string; `make gate-cell-reproduction` reports **162/162** |
+
+### What to hand a client's counsel
+
+1. The `probe_repo_all` TSV for each component — **every** licence text in the tree, not the
+   first one found, with bytes and `sha256₁₂` at a named commit.
+2. The `grant_presence` verdict per payload, with the **profile** that judged it
+   (`GRANT-PRESENT` / `GRANT-TRUNCATED` / `GRANT-BY-REFERENCE` / `GRANT-UNCALIBRATED`).
+3. A one-line disposition per component: **vendor**, **integrate over an interface**, or
+   **do not use** — and for a subtree-copyleft repository the disposition is a *boundary*,
+   not a yes/no.
+4. 🔴 The declared blind spots, because a screen that hides them is worse than none:
+   **EUPL-1.2 has no clause profile here** (`Gap 442-C`), **LGPL needs a `GRANT-BY-DESIGN`
+   verdict it does not have** (`Gap 440-B`), and **`*-assets/` is not on the vendored-path
+   exclusion list**, so a vendored grant in such a directory is typed as the project's own
+   (`Gap 442-B`).
+
+### When to run it
+
+🟢 On **every** component before it enters a proposal, and the cost says you can: 134
+repositories enumerated in **33 s**, measured this pass. 🔵 Where the client is the one asking
+(procurement, a counsel review, an OSPO), steps 1–3 are also the deliverable — a licence
+report whose every figure reproduces from a named commit is worth more than a scanner's
+summary, and it is the thing this base can hand over that a scanner cannot.
+
 ## 🆕 Pattern AT — `p441` The **autograded course stack that is entirely BSD-3, verified clause-by-clause**, and the three screening rules that stop it being badge-deep
 
 🔵 `Pattern AS` (`p440`) maps the **copyleft** obligations a hosting choice triggers.
