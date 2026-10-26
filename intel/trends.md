@@ -1,7 +1,52 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 Trend 47 — `p447` **A region is a reporting bucket, not a research unit — and the cost of confusing them is not a thin answer but a MANUFACTURED one. The same hour that a region-level EMEA query produced two false, quotable facts, a country-shaped query killed both.**
+
+🔵 **Why this is a trend and not one pass's bad luck.** This base has now nilled the EMEA
+region-level leg on **three consecutive passes** (`p445`, `p446`, `p447`) and the North America
+region-level leg on **six**. `p445` diagnosed the shape and prescribed country legs; `p446`
+re-confirmed the nil and re-registered the prescription; `p447` finally **acted** on it. The
+result was not a marginal improvement in yield. It was a **change in kind**.
+
+### 🔴 What the region-level leg produced, and what the country leg did to it
+
+| region-level output | country-leg verdict |
+|---|---|
+| French ministry signed a February partnership with Mistral to put a chatbot in **lycées** from 2026-27 | 🔴 **FALSE.** Amue is trialling two Mistral tools across **81 public HIGHER-EDUCATION establishments**, bounded to 2026; a separate pilot put a Mistral assistant in front of **10 000 state agents**. A *school* deployment that resolves to a *university* experiment plus a *staff* pilot |
+| UK Generative AI in Education framework **updated March 2026** | 🔴 **FALSE.** Product-safety expectations were retitled and expanded **19 January 2026**; *module 3* carries **19 May 2026**; the only May-2026 circular is **Northern Ireland's DE Circular 2026/02** — a different jurisdiction |
+
+🟢 **The mechanism, and it is the part worth generalising.** "EMEA" has no ministry, no statute,
+no department and no publication calendar. A query addressed to it cannot be answered by
+quotation, so the channel answers by **synthesis** — and synthesis across thirty jurisdictions
+produces a sentence that is *shaped* like a fact, carries a month, names a real vendor and a real
+department, and is wrong. 🔴 **A thin answer announces itself; a manufactured one does not.** This
+is the failure mode `Trend 46` found on the supply side (ten addresses reading as ten options)
+appearing on the **demand** side.
+
+### 🟢 What a country leg does differently, mechanically
+
+1. 🟢 **It has an addressable primary**, so the answer can be a quotation rather than a synthesis.
+2. 🟢 **It can be run in the jurisdiction's own language** — the French leg was, and that is what
+   separated *lycée* from *établissement d'enseignement supérieur*, a distinction the
+   English-language region query collapsed.
+3. 🟢 **It fails loudly.** A country leg that finds nothing returns nothing; a region leg that
+   finds nothing returns an average.
+
+🔵 **Standing instruction this base should now follow:** the five `###` headings on
+`intel/market.md` are a **reporting** vocabulary — closed, five values, unchanged. They are
+**not a research unit**. Research is addressed to a **country**; findings are **filed** to a
+region. 🔴 Where a regional claim on these shelves cannot be traced to a country-shaped query,
+it should be re-read as **possibly manufactured**, not merely as thin.
+
+🟡 **The uncomfortable corollary, recorded rather than buried:** this base cannot currently
+check any of it against a primary. Eleven official and one commercial host all refuse from this
+host (`Gap 446-D`), on two independent channels with two different failure signatures. **The
+country leg improves which question gets asked; it does not fix who can be read.**
+
 ---
 
 ## 🆕 Trend 46 — `p446` **An address count is not an option count. In the one education category where this base has the densest supply, 10 addresses are 6 projects — and the inflation is invisible to every channel this base routinely uses: stars, descriptions, file sets and directory listings all report ten.**

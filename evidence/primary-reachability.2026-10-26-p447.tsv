@@ -1,0 +1,15 @@
+host	channel	result	class
+www.iesalc.unesco.org	curl	CONNECT tunnel failed, response 403	official-primary
+www.unesco.org	curl	CONNECT tunnel failed, response 403	official-primary
+eur-lex.europa.eu	curl	CONNECT tunnel failed, response 403	official-primary
+unu.edu	curl	CONNECT tunnel failed, response 403	official-primary
+indicelatam.cl	curl	CONNECT tunnel failed, response 403	official-primary
+www.oecd.org	curl	CONNECT tunnel failed, response 403	official-primary
+www.gov.uk	curl	CONNECT tunnel failed, response 403	official-primary
+assets.publishing.service.gov.uk	curl	CONNECT tunnel failed, response 403	official-primary
+www.education-ni.gov.uk	curl	CONNECT tunnel failed, response 403	official-primary
+www.education.gouv.fr	curl	CONNECT tunnel failed, response 403	official-primary
+www.amue.fr	curl	CONNECT tunnel failed, response 403	official-primary
+acteurspublics.fr	curl	CONNECT tunnel failed, response 403	commercial-news
+raw.githubusercontent.com	curl	200	code-host-CONTROL
+eur-lex.europa.eu	WebFetch	getaddrinfo ENOTFOUND	official-primary-second-channel

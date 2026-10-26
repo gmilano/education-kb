@@ -1,7 +1,73 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447`
+
+🔴 **REPORTED FIRST, as `Gap 446-A`'s own prescription requires of every pass: `make hooks` DID
+NOT RUN.** One attempt, refused with `[Code from External]` — the same refusal `p446` recorded,
+now on a **different hour and a different container**. 🔵 `p446` could only say the variable was
+*"the execution policy of the host the pass runs on"*; **two consecutive denials make it a
+standing property of the environment unattended passes run in.** No arrival baseline, no
+post-write gate, no inherited-red attribution.
+
+🟢 **The register is written in the same pass as the shelves it registers**, per
+`gate-register-currency`. Shelves carrying `p447`: `agents/top.md`, `agents/trending.md`,
+`repos/foundations.md`, `repos/trending.md`, `verticals/solutions.md`, `intel/market.md`,
+`intel/trends.md`, `compose/patterns.md`.
+
+### 🟢 `p446`'s gaps, with this pass's verdicts attached
+
+| gap | state after `p447` |
+|---|---|
+| 🔴 `Gap 446-A` | 🔴 **REPRODUCED, and therefore ESCALATED rather than re-registered.** `make hooks` denied again, different host and hour. 🔵 This is no longer a flaky hour: **an unattended pass on this host class cannot run this base's gate at all.** It needs a **decision by a person** — either the gate is made runnable for unattended passes, or this base accepts that its shelves are verified by hand-carried commands and says so at the top of every file. `p446`'s prescription #1 (a gate-posture line on every pass) is **honoured here and should become permanent** |
+| 🟢 `Gap 446-B` | 🟢 **ANSWERED, with a denominator and a CORRECTED rule.** 18 line-scoped pins re-resolved: **17 exact, 1 stale** after ~24 h. The one mover's grant is **byte-identical across the move** (35 442 B · `698099632698`, reproducing `p433` to the digit) → `p446`'s cell-over-HEAD prescription **confirmed on an independent specimen**. 🔴 But the obvious predictor is **wrong**: commit volume gets staleness **backwards** (the two busiest repos have the most stable pins). 🟢 The predictor that survives is **recency at the moment of pinning** → `Pattern AZ`, `Trend 47` |
+| 🟢 `Gap 446-C` | 🟢 **Materially advanced.** `p446` asked why prose similarity missed the real lineage arms. `p447` re-ran the lineage instrument from independent clones: `vishalsachdev` root `afe32c3e1721` and `r-huijts` root `731aa116052b` **both reproduce to the digit**, and the tenth address `lucanardinocchi/canvas-mcp` is a **singleton** (root `75ae284711d6`, 3 commits). 🟢 **"Ten addresses, six projects" STANDS**, now confirmed by a member `p446` did not clone |
+| 🔴 `Gap 446-D` | 🔴 **CONFIRMED, WIDENED to eleven hosts, and given a CONTROL.** All eleven official primaries — plus one **commercial** news host — return `curl: (56) CONNECT tunnel failed, response 403`. 🟢 **Control:** `raw.githubusercontent.com` returns **200** from the same shell in the same minute, so this is a **selective block passing code hosts**, not lost egress. 🔴 **Second channel:** `WebFetch` on `eur-lex.europa.eu` fails with `getaddrinfo ENOTFOUND` — a **different** signature. Neither channel reaches a primary |
+| 🔴 `Gap 446-E` | 🔴 **UNTOUCHED.** The fork-arm fraction of the ~134 shelved repositories is still unmeasured |
+| 🟢 `Gap 445-F` | 🟢 **CLOSED, and it paid twice over.** The EMEA region leg was retired for **country** legs. They returned **five items at zero prior word-scoped hits** 🔴 **and falsified two claims the region-level leg produced in the same hour** (a French *lycée* Mistral deployment; a DfE framework "updated March 2026"). 🔵 The lesson generalises beyond EMEA → `Trend 47` |
+| 🟡 `Gap 445-D` | 🟡 **UNCHANGED and correctly so** — still needs a human with authority to send an outward-facing message; this pass also ran unattended. 🔴 **Third pass carrying it. It should be escalated to a person, not registered a fourth time** |
+| 🔴 `Gap 445-A`, `Gap 443-A`, `Gap 444-D`, `Gap 445-H` | 🔴 **UNTOUCHED.** Org enumeration is still a host 403; the ledger population is still claim-derived; the homonym audit over existing sell rows was not run; `claims.py::slugs_in` still parses `lib/measure` as a repository — 🔵 not touched blind again, for the same reason `p446` refused: **no gate run is available to verify a fix** |
+
+### 🆕 `Gap 447-A` — **a four-letter acronym cannot be novelty-checked by substring, and this pass nearly published a false nil because of it**
+
+| check | result |
+|---|---|
+| `grep -ri "amue"` (substring, as this base's novelty checks are routinely run) | 🔴 **3 hits** → would have suppressed the finding as already-known |
+| the three "hits", inspected | 🔴 `Samuels`, `samuelgursky`, `samuel.s.ogden` — **all false** |
+| `grep -riw "amue"` (word-scoped) | 🟢 **0** — genuinely new |
+
+🟢 **Prescription:** any candidate shorter than ~6 characters, or acronym-shaped, must be
+novelty-checked **word-scoped** (`grep -riw`). 🔴 **The failure direction matters:** a substring
+check fails toward *"already known"*, which **suppresses real findings silently** — the one
+error class a saturated discovery channel cannot distinguish from genuine saturation.
+🟡 **Unmeasured:** how many past nils on these shelves were produced by substring checks.
+
+### 🆕 `Gap 447-B` — **the LMS-MCP tier may be read-only, and the test is cheap**
+
+A single relayed secondary source states that **no community education MCP server creates and
+publishes a course** — authoring and publishing being vendor-built. 🔴 Single-sourced and the
+corroborating primaries are unreachable, so it is carried on `verticals/solutions.md` as a
+**hypothesis**, not a fact. 🟢 **Test:** enumerate registered tool names across the **six
+distinct projects** behind the ten Canvas/Moodle addresses and classify read vs write. One
+write-capable tool refutes it; zero across six confirms it with a denominator. Fully offline
+once cloned.
+
+### 🆕 `Gap 447-C` — **the pin-recency rule is uncalibrated**
+
+The pin/no-pin split is **n = 18**; the **date axis is n = 5**. `Pattern AZ` and `Trend 47` both
+rest on that five-row table. 🟢 Run the recency measurement over all ~134 shelved repositories
+before treating the rule as calibrated. 🔵 Cheap: one blobless clone plus one `show -s` each.
+
+### 🆕 `Gap 447-D` — **the North America leg is the wrong shape, and this pass has the control that proves it**
+
+🔴 **Six consecutive nils** on the NA region-level leg. 🟢 In the **same hour**, the EMEA leg
+re-shaped from region to country **paid**. 🔵 That is a controlled comparison, not an inference:
+same pass, same channels, same operator. **Prescription:** retire the region-level NA query for
+**state**-level legs — the layer `Trend 30` already identifies as the deciding one.
+
 ---
 
 ## 🆕 `p446`

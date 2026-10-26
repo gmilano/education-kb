@@ -1,7 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447` — **🔴 Gate posture: DENIED, no baseline (`Gap 446-A`, second consecutive pass). 🟢 ZERO new rows, and that is the result: the discovery channel returned only names already on this shelf, for the second hour running. 🟢 The shelf's pins were audited as a population instead — 17 of 18 still exact, and the one that moved did not move its grant.**
+
+🔴 **No rows are added this pass, and no row is padded to meet a count.** Four global discovery
+legs returned **nine** candidates; **all nine** were already on a sell shelf, each graded by
+`grep` against this file before being written down. 🔵 `p446` nilled the same channel on 18 of
+18. **Two consecutive saturations is a statement about the channel, not the supply.**
+
+🟢 **The one candidate that was *known but not shelved* stays off, for a reason re-measured
+today.** `lucanardinocchi/canvas-mcp` resolves (HEAD `f0dbbcb28ec8`) but carries **no `LICENSE`
+and no `LICENSE.md`** — re-confirming `p441`'s `ABSENCE-ENUMERATED` grading at a **new HEAD**.
+🔵 *Known is not shelved* paid `p442` seven rows; here the same distinction correctly pays
+**none**, and the absence is stronger for having survived a HEAD move.
+
+### 🟢 Pin-currency audit over this shelf — the first time it has been run as a population
+
+| result | count | detail |
+|---|---|---|
+| 🟢 pin still exact after ~24 h | **17 of 18** | across `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` |
+| 🔴 pin stale | **1 of 18** | `Apomera/AlloFlow` `6194e51e8f1f` → `1499a80fd362` |
+
+🟢 **`Apomera/AlloFlow`'s row needs no change.** Its `LICENSE` is **35 442 B · `698099632698`**
+at *both* the published pin and the live HEAD, reproducing `p433`'s published cell to the digit.
+The row's AGPL-3.0 verdict and its *vendor-over-MCP* disposition **stand**; only the pin is a
+day old. 🔵 This is `Gap 446-B`'s rule working exactly as `p446` wrote it: **the cell is the
+identity, the pin is a date.**
+
+🔴 **`vishalsachdev/canvas-mcp` is the exception that should be read as a warning on this
+shelf**: three HEADs in ~24 h (`884d48cd0873` → `c47a611cfbed` → `08edff523e00`), with `p446`'s
+pin already stale **25 minutes** after the commit it names. Full mechanism, and the rule that
+replaces the obvious-but-wrong one, in `repos/trending.md` under `p447`.
+
+🟢 **`p446`'s lineage finding reproduces independently** — `vishalsachdev` root `afe32c3e1721`
+and `r-huijts` root `731aa116052b`, both to the digit from fresh blobless clones; and the tenth
+address, `lucanardinocchi/canvas-mcp`, is a **singleton** (root `75ae284711d6`, 3 commits).
+**Ten addresses, six projects, stands.**
+
 ---
 
 ## 🆕 `p446` — **`Gap 445-C` ANSWERED, and this shelf has been over-counting the LMS-MCP tier by 40 %: 🔴 the ten Canvas/Moodle addresses are SIX distinct projects. 🔵 And the hypothesis that found them was right for the wrong reason — the "six near-identical descriptions" do not exist; LINEAGE does.**

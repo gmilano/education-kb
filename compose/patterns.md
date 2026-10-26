@@ -1,7 +1,78 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 Pattern AZ — `p447` **The pin-recency pre-flight: a 60-second check that tells you whether the commit you are about to put in a client deliverable will still be there on Monday — and why the metric you would reach for first (commit volume) gets it backwards**
+
+🔵 **The problem this solves.** A studio engagement pins commits: in an SOW appendix, a
+`requirements.txt`, a vendored submodule, a slide that says *"verified at `abc123`"*. `p446`
+established that a pinned HEAD is a **timestamp, not an identity**. `p447` measured how fast
+that timestamp rots, and the answer is **uneven in a way that is predictable** — but not by the
+obvious metric.
+
+### 🔴 Do NOT grade staleness by commit volume. It is refuted by measurement.
+
+| repository | commits / 30 d | pin after ~24 h |
+|---|---|---|
+| `HKUDS/DeepTutor` | **661** | 🟢 still exact |
+| `frappe/lms` | **571** | 🟢 still exact |
+| `Apomera/AlloFlow` | 417 | 🔴 **stale** |
+| `vishalsachdev/canvas-mcp` | 371 | 🔴 **stale — third HEAD in 24 h** |
+| `withmarbleapp/os-taxonomy` | 126 | 🟢 still exact |
+
+🔴 The **two busiest** repositories have the **most stable** pins. A 30-day count is
+**backward-looking**: it counts a burst that has already ended. `DeepTutor` logged 661 commits
+and then went quiet for **seven days**.
+
+### 🟢 The check that works, and it is one command
+
+```bash
+# Is the commit I am about to pin on a MOVING tree or a SETTLED one?
+git clone --quiet --filter=blob:none https://github.com/OWNER/REPO /tmp/pin && \
+git -C /tmp/pin show -s --format='pinned_commit_date=%cI' HEAD && date -u +'now=%Y-%m-%dT%H:%M:%SZ'
+```
+
+**Read the gap between `pinned_commit_date` and `now`:**
+
+| gap | tree state | what to do |
+|---|---|---|
+| **minutes–hours** | 🔴 **moving** — you are pinning mid-burst | Do **not** put the HEAD in the deliverable. Pin the **payload cell** instead |
+| **days** | 🟢 **settled** | The pin will hold. Safe to quote with its date |
+
+🟢 **Measured basis:** across the five repositories above, `pinned_commit_date == HEAD date`
+**iff** the pin held. Both movers were pinned while the project was still committing —
+`AlloFlow` pinned 10-24 12:35 with HEAD at 10-25 18:50; `canvas-mcp` pinned 19:41 with HEAD at
+**20:06 the same evening**, stale **25 minutes** after the commit it names.
+
+### 🟢 What to pin INSTEAD, when the tree is moving — and the evidence it is sound
+
+Pin the **grant payload cell**, not the HEAD:
+
+```bash
+curl -sS "https://raw.githubusercontent.com/OWNER/REPO/HEAD/LICENSE" -o /tmp/L && \
+printf '%s B · %s\n' "$(wc -c < /tmp/L)" "$(sha256sum /tmp/L | cut -c1-12)"
+```
+
+🟢 **Why this is safe, measured this pass:** `Apomera/AlloFlow` moved
+`6194e51e8f1f` → `1499a80fd362`, and its `LICENSE` is **35 442 B · `698099632698`** at **both**
+refs — reproducing a cell this base published **fourteen passes ago** at `p433`, to the digit.
+🔵 **The tree moved; the grant did not.** A licence verdict anchored on the cell survives
+exactly the churn that invalidates a HEAD.
+
+### 🟢 Wiring it into an engagement
+
+1. **At shelving / SOW time** — run the recency check. Record **pin + pinned-commit-date**, never the pin alone.
+2. **Moving tree** → the deliverable cites the **payload cell**; the HEAD appears only as *"tree seen on <date>"*.
+3. **Settled tree** → cite the HEAD, with its commit date beside it.
+4. **Before any client re-read** — re-resolve with `git ls-remote <slug> HEAD`. 🟢 Budget realistically: **17 of 18** of this base's pins survived 24 h, so this is a **cheap minority repair**, not a re-verification campaign.
+5. 🔴 **Never** infer staleness from stars, commit counts or "last updated" badges. `Trend 46` showed those channels over-count supply; this pattern shows they get **churn backwards** too.
+
+🟡 **Calibration limit, stated rather than hidden:** the date axis is **n = 5**. The pin/no-pin
+split is **n = 18**. Run it over all ~134 shelved repositories before treating the recency rule
+as calibrated — `Gap 447-C`.
+
 ---
 
 ## 🆕 Pattern AY — `p446` **The lineage pre-flight: a 10-minute gate that runs BEFORE you tell a client how many options they have, because `Trend 46` says the shelf over-counts and `Gap 446-B` says the pin you quoted may already be stale**

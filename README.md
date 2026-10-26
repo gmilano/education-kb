@@ -1,8 +1,77 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
 ---
+
+## Pass 447 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 445-F` CLOSED AND IT PAID TWICE OVER: the EMEA country leg did not merely pay where two region legs nilled, it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🟢 `Gap 446-B` ANSWERED with a denominator — 17 of 18 pins still exact, and the obvious predictor (commit volume) is REFUTED by its own measurement. 🔴 `make hooks` DENIED for the second consecutive pass, so `Gap 446-A` is a property of this host class, not an hour's bad luck.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` did not run.** One attempt,
+refused with `[Code from External]` — the same refusal `p446` recorded, now on a **different
+hour and a different container**. 🔵 `p446` could say only that the variable was *"the execution
+policy of the host"*; two consecutive denials make it **standing**. 🟡 **No arrival baseline, no
+post-write gate.** Every claim below is first-hand and carries the command that produced it;
+none is gate-checked.
+
+🔵 **No date straddle.** Four global WebSearch legs, four regional legs (EMEA re-shaped into
+**country** legs, one run in French), **18 published pins re-resolved** against live HEADs,
+**5 blobless clones** with root-commit and commit-date extraction, **3 licence payloads fetched
+and digested**, **12 primary reachability probes on two independent channels**, and **1 absence
+re-confirmed at a new HEAD** — all **2026-10-26**, commit **2026-10-26**, so `updated:` carries
+one date on every file.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 445-F` CLOSED, and the country leg's real value is that it CORRECTS, not that it
+  yields.** Two region-level EMEA claims died in the same hour they were produced: a French
+  ministry partnership putting a Mistral chatbot in **lycées** from 2026-27 (🔴 false — it is
+  **Amue** trialling two Mistral tools across **81 public HIGHER-EDUCATION establishments**,
+  bounded to 2026, plus a **10 000 state agent** civil-service pilot: *university* experiment
+  and *staff* pilot, not schools), and a DfE framework *"updated March 2026"* (🔴 false — the
+  product-safety expectations were retitled and expanded **19 January 2026**, *module 3* carries
+  **19 May 2026**, and the only May-2026 circular is **Northern Ireland's DE Circular 2026/02**,
+  a different jurisdiction). 🟢 **Both were killed by asking a country-shaped question**, one in
+  the country's own language. Five further EMEA items at zero prior word-scoped hits.
+- 🟢 **`Gap 446-B` ANSWERED with a population and a corrected rule.** 18 line-scoped pins:
+  **17 exact, 1 stale** after ~24 h, so the gap's alarm level comes **down** while its
+  prescription stays up. 🟢 The one mover, `Apomera/AlloFlow`, did **not** move its grant —
+  `LICENSE` is **35 442 B · `698099632698`** at both refs, reproducing `p433`'s published cell
+  **fourteen passes later, to the digit**. 🔴 `vishalsachdev/canvas-mcp` moved **again** (third
+  HEAD in 24 h), its `p446` pin stale **25 minutes** after the commit it names.
+- 🔴 **This pass's own hypothesis was refuted by its own measurement, and it is recorded rather
+  than dropped.** Commit **volume** gets staleness backwards: `DeepTutor` (**661**/30 d) and
+  `frappe/lms` (**571**/30 d) are the busiest repositories sampled and **both pins held**, while
+  both movers sit mid-range. A 30-day count is backward-looking — it counts a burst that has
+  **ended**. 🟢 The predictor that survives is **recency at the moment of pinning**: in every row,
+  `pinned-commit-date == HEAD-date` **iff** the pin held → `Pattern AZ`, `Trend 47`.
+- 🟢 **`p446`'s lineage result REPRODUCES from independent clones**: roots `afe32c3e1721` and
+  `731aa116052b` both to the digit, and the tenth address `lucanardinocchi/canvas-mcp` is a
+  **singleton** (root `75ae284711d6`, 3 commits). **Ten addresses, six projects, stands.**
+  🔴 That address is also correctly **off** the sell shelves: re-probed at HEAD `f0dbbcb28ec8`,
+  **no `LICENSE`, no `LICENSE.md`** — an absence re-confirmed at a **moved** HEAD.
+- 🔴 **`Gap 446-D` widened to eleven hosts and given a CONTROL.** Eleven official primaries plus
+  one **commercial** news host all return `curl: (56) CONNECT tunnel failed, response 403`,
+  while 🟢 `raw.githubusercontent.com` returns **200** from the same shell in the same minute —
+  so this is a **selective block that passes code hosts**, not lost egress. 🔴 `WebFetch` on
+  `eur-lex.europa.eu` fails differently again (`getaddrinfo ENOTFOUND`). **Every EMEA and LATAM
+  regulatory statement on these shelves is relayed; the EU AI Act's authoritative text has never
+  been read first-hand here.**
+- 🔴 **Discovery SATURATED for the second consecutive pass — zero new rows, and no padding.**
+  All nine candidates from four global legs were already on a sell shelf.
+- 🔴 **A defect in this pass's own novelty check, caught before it published a false nil.**
+  Substring `grep -ri "amue"` reported **3 hits**, all of them `Samuels` / `samuelgursky` /
+  `samuel.s.ogden`; word-scoped `grep -riw` returns **0**, and the item was genuinely new.
+  🔵 A substring check fails toward *"already known"*, which **suppresses real findings
+  silently** — the one error a saturated channel cannot distinguish from real saturation →
+  `Gap 447-A`.
+
+🔵 **Declared gaps carried forward unpaid:** `Gap 445-A` (org enumeration is a host 403),
+`Gap 443-A` (ledger population still claim-derived), `Gap 444-D` (homonym audit over existing
+rows), `Gap 445-H` (`claims.py::slugs_in`, not touched blind with no gate available),
+`Gap 446-E` (fork-arm fraction unmeasured). 🔴 `Gap 445-D` needs **a person**, not a fourth
+registration. 🆕 `Gap 447-B` (LMS-MCP read-only hypothesis, single-sourced),
+`Gap 447-C` (pin-recency rule uncalibrated, n = 5 on the date axis),
+`Gap 447-D` (the NA leg is the wrong shape — six nils against a controlled EMEA payment).
 
 ## Pass 446 — reads 2026-10-25, commit 2026-10-25 — **`Gap 445-C` ANSWERED AND THE SHELF IS OVER-COUNTING ITS DENSEST CATEGORY BY 40 %: ten Canvas/Moodle MCP addresses are SIX projects, graded by root commit and confirmed by byte-identical licence payload. 🔴 The gap's own evidence was false — the "102 tools" descriptions it cited do not exist. 🟢 `Gap 445-B` CLOSED: Peru's fourth channel nils, so a country is recorded as a genuine supply absence. 🔴 AND THIS PASS HAS NO GATE RUN AT ALL — `make hooks` was DENIED on this host, twice, which re-opens `Gap 425-B` wider than `p443` narrowed it.**
 

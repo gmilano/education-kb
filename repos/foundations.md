@@ -1,7 +1,32 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447` — **🔴 Gate posture: DENIED, no baseline (`Gap 446-A`). 🟢 No foundational repo changes grant this pass, and that is a MEASURED statement rather than an unexamined one: every pinned row on this shelf was re-resolved against its live HEAD, and the single mover's licence payload is byte-identical across the move.**
+
+🟢 **Every pinned row on the three sell shelves was re-resolved this hour** —
+`git ls-remote <slug> HEAD`, 18 line-scoped rows, no GitHub API (403 here). **17 of 18 pins are
+still exact.** The foundations rows specifically (`OpenOLAT/OpenOLAT` `d073ad444fe5`,
+`frappe/lms` `5d6df8e3ed8e`, `withmarbleapp/os-taxonomy` `7bd8b6794cb7`,
+`GeminiLight/awesome-ai-llm4education` `48f2d16ca617`) are **all unchanged**.
+
+🟢 **The one mover is not a foundations row, and its grant did not move:** `Apomera/AlloFlow`
+`LICENSE` is **35 442 B · `698099632698`** at both refs. 🔵 Which means **no grant on this shelf
+requires re-grading this pass** — stated as a measurement with its instrument, not as silence.
+
+🔴 **What this shelf still cannot do, and it is worth naming here rather than only in the gap
+register:** `make hooks` has now been **denied on two consecutive passes**, so none of the
+above is gate-checked. 🟢 The mitigation is the one `Gap 446-A` prescribes — every cell is
+published with the command that produced it, and the hash method (`sha256` first 12 over raw
+bytes) was validated against an already-published cell (`p433`'s `698099632698`) **before** any
+new cell was written.
+
+🔴 **Discovery added nothing.** `OpenOLAT`, `sakaiproject/sakai`, `openeducat/openeducat_erp`
+and `francoisjacquet/rosariosis` all re-returned from the global platform leg; **all four are
+already on this shelf**. Second consecutive saturated hour.
+
 ---
 
 ## 🆕 `p446` — **🟢 An upstream this base has audited twice has now published its OWN provenance review, and it is first-hand readable: `krzysztofbury/librus-mcp` ships a 9 662 B `LICENSE_REVIEW.md` that confirms `p442`'s GPL-3.0 subtree finding from the other side — and names a THIRD lane this base did not have, in which the MIT grant does NOT hold**

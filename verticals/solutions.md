@@ -1,7 +1,37 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447` — **🟡 A CAPABILITY ABSENCE on the LMS-connector tier, carried as a hypothesis with a named test rather than as a fact: the community MCP supply for Moodle and Canvas is overwhelmingly READ-ONLY, and the authoring-and-publishing half appears to be vendor-built.**
+
+🟡 **The claim, and its provenance, stated before its content.** A directory review of the
+education MCP tier read this hour reports that the community servers are predominantly
+**read-only student tools**, and states that *not one community server in that guide creates
+and publishes a course*. 🔴 **This is a single relayed secondary source**, and the official
+primaries that could corroborate it are **unreachable from this host** (`Gap 446-D`, re-probed
+and widened below). It is therefore recorded as a **hypothesis**, not promoted to a shelf fact.
+
+🟢 **Why it is worth carrying even at that confidence.** If it holds, it is a **market-structure**
+statement rather than a tooling note: the connector tier this base sells is strong exactly where
+an engagement needs it **least** (reading a student's own timetable and grades) and absent
+exactly where an engagement bills **most** (course authoring, bulk enrolment, publishing). 🔵 It
+would also explain `Trend 46`'s shape — ten addresses collapsing to six projects is what a
+category looks like when everyone re-implements the same small read-only surface.
+
+🟢 **The test, which is cheap and fully offline once cloned, and which the base already has the
+instrument for.** Enumerate the registered tool names in each of the **six distinct projects**
+`p446` established behind the ten Canvas/Moodle addresses, and classify each tool
+**read vs write**. A single write-capable tool (`create_course`, `publish_module`,
+`enrol_user`) refutes the absence; zero across six projects confirms it with a denominator.
+Registered as `Gap 447-B`.
+
+🔵 **Standing caution on this tier, unchanged and reinforced:** these servers reach **student
+records**. Any of them entering a client engagement is a data-protection review, not merely a
+licence review — and in EMEA that review now has no first-hand authority behind it, because
+`eur-lex.europa.eu` has **never been readable from this host** (`Gap 446-D`).
+
 ---
 
 ## 🆕 `p446` — **The Moodle/Canvas connector tier re-priced by project count rather than address count: 🔴 the Canvas side is ONE maintained permissive project plus a second small arm, and the Moodle side is AGPL-3.0 or a 13-commit MIT alternative**

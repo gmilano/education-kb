@@ -1,0 +1,4 @@
+slug	root_commit	commits	p446_published_root	verdict
+vishalsachdev/canvas-mcp	afe32c3e17211	1150	afe32c3e1721	REPRODUCES
+r-huijts/canvas-mcp	731aa116052b5	60	731aa116052b	REPRODUCES
+lucanardinocchi/canvas-mcp	75ae284711d66	3	-	SINGLETON-CONFIRMS-6-PROJECTS

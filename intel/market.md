@@ -1,7 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447` · 2026-10-26 — **🟢 `Gap 445-F` IS CLOSED, AND IT PAID TWICE OVER: the EMEA country leg did not merely return facts where two consecutive region legs nilled — it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🔴 The other three legs nil. 🔴 And `Gap 446-D` is now measured across ELEVEN primaries with a control: this file's entire EMEA and LATAM regulatory layer is relayed.**
+
+🔴 **Gate posture: `make hooks` DENIED, no baseline** (`Gap 446-A`, second consecutive pass).
+
+🔵 **Shape.** `p427`'s *one country, one question* ran for a fifth pass, but the **EMEA leg was
+re-shaped** — region-level query retired, replaced by **country** legs, one of them run in the
+country's own language. That is `Gap 445-F`'s prescription, registered by `p445` and re-confirmed
+by `p446`, finally **acted on**. The single `## Opportunities by region` block below is amended
+**in place** — one block, one `###` per region, closed vocabulary intact.
+
+| leg | verdict | what it returned |
+|---|---|---|
+| **North America** | 🔴 **NIL, sixth consecutive** | the 134-bills/31-states tracker, `AB 1159`, Idaho `SB 1227`, `H.R. 8747`, Katy ISD, the NYC moratorium proposal, Canada's *AI for All*, the student-authored *STUDENTS FIRST Act* — **every one already on this file** |
+| **EMEA (country legs)** | 🟢 **PAID — the only leg that did, and it also CORRECTED the region-level leg** | five items at zero prior word-scoped hits, and two falsifications — below |
+| **APAC** | 🔴 **NIL** | Vietnam's education high-risk register, Korea's AI Basic Act (22 Jan 2026, one-year penalty grace), Taiwan's AI Basic Act (Dec 2025), Singapore's agentic-AI guidance — all already carried |
+| **LATAM** | 🔴 **NIL** | UNESCO IESALC 87 % / 26 % / 74 %, the TALIS 2024 teacher figures (Brazil 56 %, Chile 55 %, Colombia 53 %, Costa Rica 52 % vs OECD 36 %), Ceibal's 75 %, the UNESCO Observatory of 14 April 2026 — all already carried |
+
+### 🟢 `Gap 445-F` — CLOSED, and the country leg's real value is that it CORRECTS
+
+🔴 **Two claims the region-level EMEA search produced this hour do not survive a country leg,
+and both would have reached a client deck:**
+
+| region-level claim | what the country leg established | verdict |
+|---|---|---|
+| *"The French education ministry signed a February partnership with Mistral AI to deploy a domestic chatbot in **lycées** from the 2026-2027 academic year."* | 🔴 **No such secondary-school partnership is traceable.** What exists is **higher education** — **Amue** (the French universities' digital mutualisation agency) trialling two Mistral generative tools across **81 public establishments**, explicitly **bounded to the year 2026** as the basis for a future framework agreement, preceded by a virtual-tutor pilot in **21 establishments** from 2025 — plus a **civil-service** pilot of **10 000 state agents** from 22 October 2025, of which ~**3 000** sit in the education, culture and social ministries. **Ministry staff, not pupils.** | 🔴 **FALSE as stated** — a *school* deployment that resolves to a *university* experiment plus a *staff* pilot |
+| *"The UK's Generative AI in Education framework was updated in **March 2026**."* | 🔴 **No DfE March-2026 publication is traceable.** The real dates: the product-safety expectations, first issued January 2025, were **retitled and expanded on 19 January 2026** with four new standards (cognitive development, emotional and social development, mental health, protection against manipulation); the staff-training *module 3* page carries **19 May 2026**; and the only May-2026 circular is **DE Circular 2026/02**, issued **11 May 2026** by **Northern Ireland's** Department of Education — **a different jurisdiction from the DfE**. | 🔴 **FALSE as stated**, and it conflates two jurisdictions |
+
+🟢 **This is a stronger result than "the country leg found more."** A region-level leg does not
+merely under-return for EMEA — it **manufactures plausible, quotable, wrong facts**, because
+"EMEA" has no ministry, no statute and no publication schedule of its own, so the channel fills
+the gap with the nearest confident-sounding sentence. 🔵 **Both falsifications came from asking
+a country-shaped question** (one in French, one naming the actual department). **Retire the
+EMEA region-level leg.** `Gap 445-F` is **CLOSED**.
+
+🟡 **Confidence on the five new EMEA items is RELAYED, and that is not a formality.** Every
+primary that could confirm them — `education.gouv.fr`, `amue.fr`, `gov.uk`,
+`assets.publishing.service.gov.uk`, `education-ni.gov.uk` — is **unreachable from this host**.
+
+### 🔴 `Gap 446-D` — re-probed, widened to eleven hosts, and given a control and a second channel
+
+| probe | result |
+|---|---|
+| `iesalc.unesco.org`, `unesco.org`, `eur-lex.europa.eu`, `unu.edu`, `indicelatam.cl`, `oecd.org`, `gov.uk`, `assets.publishing.service.gov.uk`, `education-ni.gov.uk`, `education.gouv.fr`, `amue.fr` | 🔴 **all eleven** — `curl: (56) CONNECT tunnel failed, response 403` |
+| `acteurspublics.fr` (a **commercial** news host) | 🔴 same 403 — so this is **not** an "official primaries" rule |
+| 🟢 **control:** `raw.githubusercontent.com` | 🟢 **200**, same shell, same minute |
+| 🔴 **second channel:** `WebFetch` on `eur-lex.europa.eu` | 🔴 `getaddrinfo ENOTFOUND` — **DNS failure, a different signature from curl's proxy refusal** |
+
+🟢 **The control is what makes this diagnostic.** `p446` could say only that primaries 403; with
+a code host returning 200 from the same shell in the same minute, this is **not** loss of
+egress but a **selective block that passes code hosts and refuses document hosts**. 🔴 **Two
+independent channels, two distinct failure modes, neither reaching the primary.**
+
+🔴 **The consequence, stated plainly and without softening: every EMEA and LATAM regulatory
+statement on this file is RELAYED.** The authoritative text of the EU AI Act — the regulation
+this file's entire EMEA analysis turns on — **has never been read first-hand from this host.**
+
 ---
 
 ## 🆕 `p446` · 2026-10-25 — **Four regional legs, 🔴 three of them NIL on discovery and written down as nils, and the fourth returns one new cut that is honestly labelled relayed. 🟢 The pass's real regional result is a CLOSURE: Peru's fourth channel nils, so a country moves from "unpaid" to "genuine supply absence".**
@@ -636,6 +694,17 @@ supply and a permissive agent layer can.
 
 ### North America
 
+**🆕 `p447` — NIL on discovery, SIXTH consecutive, and the streak is now itself the finding.**
+🔴 Every instrument the leg returned is already on this file — the 134-bills/31-states tracker,
+`AB 1159`, Idaho `SB 1227`, `H.R. 8747`, Katy ISD, the proposed New York City moratorium through
+eighth grade, Canada's *AI for All*, and the student-authored *STUDENTS FIRST Act of 2026* — each
+grepped against this file **before** being written down. 🔵 **Six consecutive nils is no longer a
+statement about coverage being complete; it is a statement that the LEG IS THE WRONG SHAPE**, and
+this pass has direct evidence of what to do about it: the EMEA leg, re-shaped from region to
+**country**, paid in the same hour this one nilled for the sixth time. 🟢 **Prescription:** retire
+the region-level NA query for **state**-level legs (the layer `Trend 30` already identifies as the
+deciding one), exactly as `Gap 445-F` prescribed for EMEA. Registered as `Gap 447-D`.
+
 **🆕 `p446` — NIL on discovery, and the nil is the record.** 🔴 Every instrument the leg
 returned is already on this file — the 134-bills/31-states tracker, `AB 1159`, Idaho `SB 1227`,
 `H.R. 8747`, the four-state mandatory-district-policy cluster, Katy ISD, Charleston County,
@@ -917,6 +986,32 @@ unbundled, unmandated and needed**, which is the cleanest NA service shape on th
 authoritative text and has not been read first-hand.
 
 ### EMEA
+
+**🆕 `p447` — 🟢 PAID, and it is the first EMEA payment in three passes. `Gap 445-F` CLOSED: the
+region-level leg was retired for COUNTRY legs, and the country legs both paid and CORRECTED.**
+
+🟢 **Five items at zero prior word-scoped hits on this base, all FRANCE and UK:**
+
+| item | detail | confidence |
+|---|---|---|
+| **Amue / Mistral, higher education** | The French universities' digital mutualisation agency is trialling **two Mistral generative tools across 81 public establishments**, explicitly **bounded to the year 2026**, as the basis for a future framework agreement | 🟡 relayed |
+| **Virtual-tutor pilot** | A MESR/Amue conversational tutor for students, piloted in **21 establishments** from 2025 | 🟡 relayed |
+| **French civil-service pilot** | **10 000 state agents** testing a Mistral assistant from **22 October 2025**; ~**3 000** in the education, culture and social ministries | 🟡 relayed |
+| **DE Circular 2026/02** | **Northern Ireland** Department of Education guidance for education professionals on generative AI, **11 May 2026** — a jurisdiction this file did not carry at all | 🟡 relayed |
+| **DfE dates, corrected** | Product-safety expectations **retitled and expanded 19 January 2026** (four new standards: cognitive development, emotional and social development, mental health, protection against manipulation); staff *module 3* page **19 May 2026** | 🟡 relayed |
+
+🔴 **And the leg falsified two region-level claims in the same hour** — a French *lycée*
+deployment that resolves to a **university** experiment plus a **civil-service** pilot, and a
+DfE framework "updated March 2026" that does not exist and conflates England with Northern
+Ireland. Both are set out in full in this file's `p447` pass entry. 🔵 **The sellable reading:**
+France's real money is in **higher education and ministry back-office**, not in schools, and
+it is **time-boxed to 2026 pending a framework agreement** — which is a procurement window with
+a date on it, not a general adoption trend. The UK's decision layer is **four nations moving at
+different speeds**, so "the UK framework" is not a thing to quote.
+
+🟡 **All five are RELAYED and this is load-bearing:** `education.gouv.fr`, `amue.fr`, `gov.uk`,
+`assets.publishing.service.gov.uk` and `education-ni.gov.uk` are **all unreachable from this
+host** (`Gap 446-D`). Quote them with the hedge attached.
 
 **🆕 `p446` — NIL, second consecutive pass, and `Gap 445-F`'s prescription should now be acted
 on rather than re-registered.** 🔴 The region-level leg returned only material this base already
@@ -1245,6 +1340,14 @@ remains `Pattern AP`, and `Article 6(3)`'s profiling override still lands knowle
 architectures (`pykt-toolkit`, `OATutor`) in high-risk **by construction**.
 
 ### APAC
+
+**🆕 `p447` — NIL on discovery.** 🔴 Vietnam's education high-risk register, Korea's **AI Basic
+Act** in force **22 January 2026** with a lenient first year and a one-year penalty grace,
+Taiwan's **AI Basic Act** (December 2025) and Singapore's agentic-AI framework as
+**guidance rather than law** all re-returned, and **all are already on this file**. 🔵 The one
+structural line worth restating because it survives every re-read: APAC is the region where
+**the statute and the enforcement date are different questions**, so an APAC engagement prices
+the **grace period**, not the commencement date.
 
 **🆕 `p446` — NIL on discovery; the regulatory picture re-confirmed on three jurisdictions.**
 🔴 Already carried, all of it: Vietnam's education high-risk register (high-risk only where the
@@ -1600,6 +1703,17 @@ boards are the real denominator (`Gap 444-G`).
 
 ### LATAM
 
+**🆕 `p447` — NIL on discovery, and the nil is clean.** 🔴 The UNESCO IESALC headline figures
+(**87 %** of 200 institutions across 19 countries using AI in at least one area, **26 %** with a
+formal strategy, **~74 %** in teaching and learning), the TALIS 2024 teacher-use figures
+(**Brazil 56 %**, **Chile 55 %**, **Colombia 53 %**, **Costa Rica 52 %** against an OECD average
+of **36 %**), Ceibal's **75 %** for Uruguayan public-school teachers, and the UNESCO
+**Observatory on AI in Education for LAC** launched **14 April 2026** all re-returned — **every
+one already carried here**. 🟢 `p446`'s institution-type split (private non-profit **84 %**,
+public **68 %**, private for-profit **52 %**) re-returned **unchanged** and is therefore
+corroborated by a second hour's reading, though still 🟡 **relayed**: `iesalc.unesco.org`,
+`unesco.org` and `indicelatam.cl` are **all 403 from this host** (`Gap 446-D`).
+
 **🆕 `p446` — one new cut, labelled relayed; and `Gap 445-B` CLOSES with Peru recorded as a
 genuine supply absence.** 🟡 **New:** UNESCO IESALC's **institution-type split** — private
 non-profit **84 %**, public **68 %**, private for-profit **52 %**. 🟢 **Why it is worth
@@ -1916,6 +2030,16 @@ the launch, not read from a UNESCO document (`Gap 444-F`). ILIA and the UNESCO I
 study of **8 September 2026** are the two re-queryable primaries.
 
 ### Global
+
+**🆕 `p447` — the cross-region finding of this pass is about METHOD, and it changes how every
+region on this file should be read.** 🔴 A region-level query does not merely under-return: for
+EMEA it **manufactured two plausible, quotable, false facts in a single hour** (a French *lycée*
+Mistral deployment; a DfE framework "updated March 2026"), because "EMEA" has no ministry, no
+statute and no publication schedule of its own, so the channel fills the vacuum with the nearest
+confident-sounding sentence. 🟢 **Both were killed by asking a country-shaped question** — one in
+French, one naming the actual department. 🔵 **Read across the whole file:** region-level
+regulatory claims carry a **manufacture risk**, not merely a coverage gap, and the four
+`###` headings here are a **reporting** vocabulary, never a **research** unit.
 
 **🆕 `p439` — the cross-regional reading, and one number class this file will not carry.**
 

@@ -1,7 +1,71 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447` · reads 2026-10-26, commit 2026-10-26 — **🔴 GATE POSTURE: DENIED, NO BASELINE — second consecutive pass with no gate run, so `Gap 446-A` is a property of this host class and not an hour's bad luck. 🟢 `Gap 445-F` ACTED ON AND VINDICATED IN THE STRONGEST WAY AVAILABLE: the country leg did not merely pay where two region legs nilled — it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🔴 Discovery saturated again: zero new rows.**
+
+🔴 **Gate posture, stated first because `Gap 446-A`'s own prescription requires it of every
+pass: `make hooks` DID NOT RUN.** One attempt, refused with `[Code from External]` — the same
+refusal `p446` recorded, now on a **different hour and a different container**. 🔵 `p446` left
+this open as possibly host-specific; **two consecutive denials make it a standing property of
+the environment unattended passes run in**, not a fluke. 🟡 **No arrival baseline, no post-write
+gate, no inherited-red attribution.** Every measurement below is first-hand and carries the
+command that produced it; none is gate-checked.
+
+🔵 **No date straddle.** Four global WebSearch legs, four regional legs (one of them
+re-shaped into **country** legs per `Gap 445-F`), **18 published pins re-resolved** against
+live HEADs, **5 blobless clones** with root-commit and commit-date extraction, **3 licence
+payloads fetched and digested**, **11 primary reachability probes** on two independent
+channels, and **1 absence re-confirmed at a new HEAD** — all **2026-10-26**, commit
+**2026-10-26**, so `updated:` carries one date on every file.
+
+### 🔴 Discovery — SATURATED, second consecutive pass, and written down as a nil
+
+Every candidate the four global legs returned was **already on a sell shelf**, each graded by
+`grep` against `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` **before**
+being written down:
+
+| candidate | verdict |
+|---|---|
+| `withmarbleapp/os-taxonomy` | 🔴 already shelved — all three sell shelves (`p384`) |
+| `luongnv89/claude-howto` | 🔴 already shelved — `agents/top.md` |
+| `OpenOLAT/OpenOLAT`, `sakaiproject/sakai`, `openeducat/openeducat_erp`, `francoisjacquet/rosariosis` | 🔴 already shelved — all three sell shelves |
+| `DMontgomery40/mcp-canvas-lms`, `peancor/moodle-mcp-server`, `loyaniu/moodle-mcp` | 🔴 already shelved |
+| `lucanardinocchi/canvas-mcp` | 🟢 known, **correctly NOT shelved** — see the absence re-confirmation below |
+
+🟢 **Zero new rows, and that is the finding.** `p446` nilled this channel on 18 of 18
+candidates; `p447` nils it again. 🔵 The read is that **the discovery channel this base uses
+is exhausted for this industry** — not that supply stopped. A channel that returns only
+known names for two consecutive hours should be **re-shaped**, which is exactly what
+`Gap 445-F` prescribed for the regional legs and what paid below.
+
+### 🟢 `p446`'s lineage result REPRODUCES from an independent clone, and the tenth address closes it
+
+| measurement | `p446` published | `p447` measured, independent clone | verdict |
+|---|---|---|---|
+| `vishalsachdev/canvas-mcp` root | `afe32c3e1721` | `afe32c3e1721` (1 150 commits) | 🟢 reproduces to the digit |
+| `r-huijts/canvas-mcp` root | `731aa116052b` | `731aa116052b` (60 commits) | 🟢 reproduces to the digit |
+| `lucanardinocchi/canvas-mcp` root | *(not cloned by `p446`)* | 🆕 `75ae284711d6`, **3 commits** | 🟢 **singleton** — one of the four |
+
+🟢 **`p446`'s headline — ten addresses, SIX projects — STANDS**, now confirmed by a group member
+it did not itself clone. Instrument re-run unchanged: `git clone --filter=blob:none` +
+`git rev-list --max-parents=0 HEAD`, ~1 s per repository, **no GitHub API** (403 here).
+
+🔴 **And `lucanardinocchi/canvas-mcp` is correctly off the sell shelves.** Re-probed today at
+HEAD `f0dbbcb28ec8`: **no `LICENSE`, no `LICENSE.md`** — re-confirming this base's
+`ABSENCE-ENUMERATED` grading (`p441`: 0 of 20 probes, no manifest field) **at a new HEAD**. 🔵 An
+absence that survives re-measurement at a moved HEAD is worth more than the original grading.
+
+### 🔴 A defect in this pass's OWN novelty check, found before it published a false nil
+
+🔴 A case-insensitive **substring** grep reported `Amue` **hits = 3**, which would have
+suppressed a genuinely new EMEA fact as already-known. All three were **`Samuels`**,
+**`samuelgursky`** and **`samuel.s.ogden`**. 🟢 `grep -riw "amue"` returns **0**. A four-letter
+acronym **cannot** be novelty-checked by substring. Registered as `Gap 447-A`; every
+acronym-shaped candidate in this pass was re-checked word-scoped.
+
 ---
 
 ## 🆕 `p446` · reads 2026-10-25, commit 2026-10-25 — **The LMS-MCP tier was audited by LINEAGE instead of by prose, and the supply is 40 % smaller than this base has been counting: 🔴 ten addresses, SIX projects. 🔴 And `make hooks` would not run on this host, which re-opens `Gap 425-B` wider than `p443`'s correction allowed.**

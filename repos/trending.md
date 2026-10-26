@@ -1,7 +1,91 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-25
+updated: 2026-10-26
+---
+
+## 🆕 `p447` · reads 2026-10-26, commit 2026-10-26 — **🔴 Gate posture: DENIED, no baseline. 🟢 `Gap 446-B` ANSWERED WITH A DENOMINATOR: 17 of 18 published pins are still exact after ~24 h, the one that moved did NOT move its grant — and the predictor everyone would reach for first, commit VOLUME, is refuted by its own measurement.**
+
+🔴 **Gate posture: `make hooks` did not run** (`[Code from External]`, second consecutive pass —
+`Gap 446-A`). No arrival baseline. Every cell below carries the command that produced it.
+
+### 🟢 The pin-currency audit — a population, not two specimens
+
+`p446` registered `Gap 446-B` on **two** specimens that moved and concluded *"a pinned HEAD is a
+timestamp, not an identity."* 🟢 That framing is right, and it now has a **denominator**.
+
+**Population.** Every row on the three sell shelves where a slug and its pin cell share a
+**single line** (line-scoped, so no cross-row bleed): **18 rows**. Instrument:
+`git ls-remote https://github.com/<slug> HEAD`, no GitHub API.
+
+| result | count |
+|---|---|
+| 🟢 pin still exact | **17 of 18** |
+| 🔴 pin stale | **1 of 18** — `Apomera/AlloFlow` `6194e51e8f1f` → `1499a80fd362` |
+
+🟢 **So the alarm level of `Gap 446-B` comes DOWN, and the prescription stays UP.** Over a
+~24-hour horizon this base's pins are **94 % exact**. The gap was registered off its two worst
+cases; measured over a population it is a **minority condition**, and it is correctly handled
+by `p446`'s rule rather than by re-pinning everything.
+
+### 🟢 The decisive test: the one pin that moved did NOT move its grant
+
+| ref | path | bytes | cell |
+|---|---|---|---|
+| `6194e51e8f1f` (published pin) | `LICENSE` | **35 442 B** | `698099632698` |
+| `1499a80fd362` (live HEAD) | `LICENSE` | **35 442 B** | `698099632698` |
+
+🟢 **Byte-identical across the move, and it reproduces `p433`'s published cell
+(`35 442 B · 698099632698`) to the digit** — a cell this base shelved **fourteen passes ago**.
+🔵 `p446` saw a cell hold still while a HEAD moved on `librus-mcp`; `p447` sees the same on an
+independent specimen, across a full day, against a much older published value. **`p446`'s
+prescription — anchor the grant verdict on the CELL, read the HEAD pin as the date the tree was
+seen — is confirmed, not merely restated.** Method: `sha256` first 12 over raw bytes.
+
+### 🔴 `vishalsachdev/canvas-mcp` moved AGAIN — a third HEAD in ~24 h
+
+| reading | HEAD |
+|---|---|
+| `p446`, first read | `884d48cd0873` |
+| `p446`, same hour, mid-leg | `c47a611cfbed` |
+| 🆕 `p447`, ~24 h later | `08edff523e00` |
+
+🔴 And `p446`'s pin was stale **25 minutes after the commit it names**: `c47a611cfbed` is
+committed `2026-10-25T19:41:33`, while that evening's HEAD is `2026-10-25T20:06:10`.
+🟢 `krzysztofbury/librus-mcp` is **unchanged** at `56515efee01b`, exactly as `p446` published it.
+
+### 🔴 The hypothesis this pass set out to confirm, and the measurement that killed it
+
+**Hypothesis:** pin staleness tracks **commit velocity**, so a 30-day commit count would let the
+base grade staleness risk per repository with an instrument it already has.
+
+| slug | pin | moved? | pin commit date | HEAD date | commits / 30 d |
+|---|---|---|---|---|---|
+| `HKUDS/DeepTutor` | `a31d82624c27` | 🟢 SAME | 2026-10-19T04:12:56 | 2026-10-19T04:12:56 | **661** |
+| `frappe/lms` | `5d6df8e3ed8e` | 🟢 SAME | 2026-10-24T01:15:09 | 2026-10-24T01:15:09 | **571** |
+| `Apomera/AlloFlow` | `6194e51e8f1f` | 🔴 MOVED | 2026-10-24T12:35:30 | 2026-10-25T18:50:44 | 417 |
+| `vishalsachdev/canvas-mcp` | `c47a611cfbed` | 🔴 MOVED | 2026-10-25T19:41:33 | 2026-10-25T20:06:10 | 371 |
+| `withmarbleapp/os-taxonomy` | `7bd8b6794cb7` | 🟢 SAME | 2026-10-24T20:09:06 | 2026-10-24T20:09:06 | 126 |
+
+🔴 **Refuted, and in the exact opposite direction.** The **two highest-volume** repositories in
+the sample — 661 and 571 commits in 30 days — are the two whose pins are **still exact**, while
+both movers sit in the **middle** of the range. 🔵 **Why:** a 30-day count is **backward-looking**.
+It counts a burst that has already **ended**. `DeepTutor` logged 661 commits and then went quiet
+for **seven days**; its pin cannot go stale while nobody is committing.
+
+🟢 **The predictor that survives measurement is RECENCY AT THE MOMENT OF PINNING.** In every
+row above, `pin commit date == HEAD date` **iff** the pin held. The movers were pinned **while
+the project was still committing** (`AlloFlow` pinned 10-24 12:35, HEAD 10-25 18:50;
+`canvas-mcp` pinned 19:41, HEAD 20:06 **the same evening**). The stable pins were taken on a
+HEAD that was **already dormant**.
+
+🟢 **Usable rule, and it costs one extra field at shelving time:** record the **pinned commit's
+own committer date** beside the pin. A pin taken on a commit **minutes to hours old** is a pin
+of a *moving* tree — expect it stale within the hour. A pin taken on a HEAD that is **already
+days old** is a pin of a *settled* tree and will hold. 🟡 **Derived from n = 5 on the date axis**
+— the full 18, and ideally all ~134 shelved repositories, should be run before this is treated
+as calibrated. Registered as `Gap 447-C`.
+
 ---
 
 ## 🆕 `p446` · reads 2026-10-25, commit 2026-10-25 — **The lineage measurement, as a repository record: 10 Canvas/Moodle MCP addresses resolve to 6 root commits, and 2 of the 10 carry nothing their upstream does not already have**
