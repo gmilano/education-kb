@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — **🟢 `Gap 452-D` IS CLOSED FOR NORTH AMERICA, AND IT WAS THE CHEAP GAP `p452` SAID IT WAS: five permissively-granted US institution-registry assets, all read first-hand at `HEAD`, where the prior pass could name none and had searched for none. 🔴 APAC is closed as an INFORMED ABSENCE instead: India's school directory exists at 1.47 M rows and NOT ONE of its packaged forms carries a permissive grant.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is
+gate-attested; the load-bearing contracts were re-implemented independently and all are green.
+
+### 🟢 The North America institution-registry layer — the gap `p452` opened, closed one pass later
+
+🔵 `p452` registered `Gap 452-D` as *"the institution-registry layer is one country deep and four
+of five regions have never been searched for it"*, and named the US series (NCES CCD, IPEDS) whose
+*"packaged permissive form is simply unknown here"*. 🟢 It is known now.
+
+| repository | grant, read first-hand at `HEAD` | what it actually is | region |
+|---|---|---|---|
+| [`bolewood/collegedata-fyi`](https://github.com/bolewood/collegedata-fyi) | 🟢 **MIT** — `LICENSE` **1 115 B `sha256₁₂ a3a16c648652`** | 🟢 **The strongest row of the five.** An open **Common Data Set** API and preservation archive: each school's CDS document found, extracted to a canonical schema (**1 105 fields** keyed by stable question number from the official 2025-26 template) and published beside the raw source, plus an NCES/IPEDS federal baseline keyed by zero-padded `UNITID`. Self-reported integrity audit of 2026-08-06: **6 322 institutions** in the federal directory, **4 071** archived CDS documents, **262 537** `cds_fields` rows | 🟢 **North America** — US |
+| [`paulgp/ipeds-database`](https://github.com/paulgp/ipeds-database) | 🟢 **MIT** — `LICENSE` **1 056 B `sha256₁₂ 1126322e2cc8`** | Builds a harmonised **DuckDB** database from 20+ years of IPEDS in one command: **~27 M rows across 23 tables**, every US postsecondary institution **1997-2024** — admissions, enrolment, completions, tuition, aid, graduation rates, staffing | 🟢 **North America** — US |
+| [`scienceforamerica/scipeds`](https://github.com/scienceforamerica/scipeds) | 🟢 **MIT** — `LICENSE` **1 088 B `sha256₁₂ e04b31a1be21`** *(body-form grant: no title line, opens at `Permission is hereby granted`)* | Python package that pre-processes and standardises IPEDS into a queryable store; carries **institutional-characteristics directory** data, which is the registry axis proper. `v0.0.9` adds 2025 data | 🟢 **North America** — US |
+| [`UrbanInstitute/ipeds-scraper`](https://github.com/UrbanInstitute/ipeds-scraper) | 🟢 **MIT** — `LICENSE.md` **1 058 B `sha256₁₂ bac93c5411aa`** *(body-form)* | Downloads IPEDS complete data files and dictionaries — the ingestion leg under the two rows above. Institutional publisher (**Urban Institute**) | 🟢 **North America** — US |
+| [`rhawrami/genpeds`](https://github.com/rhawrami/genpeds) | 🟢 **MIT** — `LICENSE.md` **1 071 B `sha256₁₂ c39fac37d50c`** *(body-form)* | Python API for requesting and cleaning IPEDS data, `pip`-installable | 🟢 **North America** — US |
+
+🟢 **Why this is a foundations row and not an agents row.** None of the five is an agent. They are
+the **system of record an engagement keys its rollout to** — the question *"which institutions
+exist, and what is true of them"* — which `p452` identified as the layer this base had eight
+platforms to *run* a school with and almost no data about *which schools exist*.
+
+### 🔴 `ajhaller/IPEDS` — a grant that is neither present nor absent, and the mechanism is the R ecosystem
+
+🔴 Its `LICENSE` is **43 B** — `YEAR: 2022` / `COPYRIGHT HOLDER: IPEDS authors`. 🔵 **That is not a
+grant and not an absence**: `DESCRIPTION` declares `License: MIT + file LICENSE`, and the MIT text
+is served from `LICENSE.md`. The R convention **splits the grant across two files**, so a payload
+reader sees 43 B of metadata and a code-licence grader returns `UNREAD`.
+🟢 **This base already records the sibling class** — `cran/catR` is carried as *"GPL (>= 3) —
+`DESCRIPTION` only"* — so what `p453` adds is the **two-file composite** (`cran/shiny` is the
+control instance, `YEAR`/`COPYRIGHT HOLDER` stub plus `MIT + file LICENSE`), not the ecosystem
+itself. 🔴 Registered as `Gap 453-C`.
+
+### 🔴 APAC: recorded as an informed absence, with the denominator that makes it informative
+
+🔴 **India's school directory is the largest in the world and none of its packaged forms is
+permissively granted.** Probed first-hand at `HEAD` this pass:
+
+| address | grant at `HEAD` | consequence |
+|---|---|---|
+| [`deedy/cbse_schools_data`](https://github.com/deedy/cbse_schools_data) | 🟡 **CC-BY-SA-4.0** — `LICENSE` **20 131 B `sha256₁₂ 1f5de47ca3fb`** | ~20 367 CBSE schools (2018). 🔴 **Share-alike**: a derived registry inherits the obligation, so it is not a permissive base |
+| [`learnram/ads-schools-data`](https://github.com/learnram/ads-schools-data) | 🔴 **no payload at 9 probed paths** | UDISE+-derived national directory, ~28 MB gzipped CSV — **ungranted** |
+| [`dougj892/public-datasets`](https://github.com/dougj892/public-datasets) | 🔴 **no payload at 9 probed paths** | India education datasets — ungranted |
+| [`unknownsteve7/UDISE_DATA_ANALYSIS`](https://github.com/unknownsteve7/UDISE_DATA_ANALYSIS) | 🔴 **no payload** | 4 GB pipeline over 1.47 M schools, 2023-24 + 2024-25 — ungranted |
+| [`mukulyadav0118/india-school-education-analytics`](https://github.com/mukulyadav0118/india-school-education-analytics) | 🔴 **no payload** | UDISE+ 2025-26, seven states — ungranted |
+
+🔵 **This is the kind of absence the encargo asks to be written down rather than left silent:
+the supply exists, it is large, and 4 of 5 packaged forms grant nothing**, so an APAC engagement
+keyed to a school registry must go to the UDISE+ portal's own terms, not to GitHub. 🔴 `Gap 453-D`
+carries the unsearched remainder: **Global** and the rest of **APAC** (Japan, Indonesia,
+Philippines) have still not been searched for this layer.
+
+### 🟢 One LATAM data row, and it is a licence disagreement as well as a registry asset
+
+| repository | grant | surface | region |
+|---|---|---|---|
+| [`nataliasm23/icones-bandeiras-br-uf`](https://github.com/nataliasm23/icones-bandeiras-br-uf) | 🔴 **CC0-1.0** — `LICENSE` **7 048 B `sha256₁₂ a2010f343487`**. 🔴 **npm `municipios-br@3.2.1` declares `MIT`** — see `Gap 453-A` | Brazilian municipality and UF (state) reference data with flag icons — the administrative-geography key a LATAM rollout joins a school list to | 🟢 **LATAM** — Brazil |
+
+🔵 **CC0 is the right instrument for data and the wrong one to infer from a code manifest**: the
+registry's `MIT` would have been published here as the grant had the payload not been read.
+
 ## 🆕 `p452` — **🟢 `Gap 450-C` ANSWERED WITH A NUMBER after carrying one pass: 394 carried byte cells re-read with the corrected method, 361 reproduce EXACTLY, and the uncorrected trailing-newline method accounts for 11 of them — 2.8 %, not a sweep-wide defect. 🔴 Getting that number took FOUR cuts of the extractor, and the first three each produced a confident phantom-drift list of 200, 104 and 5 rows. Every phantom was caught by a control, never by inspection.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is

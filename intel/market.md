@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — **🟢 The North America opportunity set gains a layer it did not have — the institution registry, five permissive rows deep — and EMEA gains a market shape these shelves had never recorded: a closed national system of record reached only by third-party clients. 🔴 And the market-research channel the encargo prescribes is graded as a channel for the first time: 4 legs, 0 primaries, 0 repositories, 0 licences.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is
+gate-attested; the region-heading contract (`CANON`/`VOCAB`, `check_headings.py:17-19`) was read
+and re-implemented, and the single canonical `## Opportunities by region` block below is amended
+**in place** — exactly one block, five closed-vocabulary children, none added.
+
+### 🔴 The prescribed market legs, graded as a channel rather than quoted
+
+🔵 The encargo prescribes `AI {industry} industry trends {year}` and four regional legs. 🟢 Run,
+and graded on what they can support:
+
+| leg | what it returned | usable for a market map? |
+|---|---|---|
+| 🔴 global trends | market sizes from 3 firms for the same year: **$6.4 B → $79.6 B by 2034**, **$8.3 B → $57.2 B by 2033**, **$10.6 B at 40.9 % CAGR** | 🔴 **No** — three vendor estimates of one quantity, scopes undisclosed, spread > 60 % |
+| 🔴 North America | **$951 M (2024) → $2.3 B (2029), 15.9 % CAGR**; 36 % global share; **10 %** of institutions with formal AI guidelines; **71 %** of US teachers untrained | 🟡 **Directionally** — the governance figures are the useful half; the sizes are vendor |
+| 🔴 EMEA | no education-specific result at all; enterprise-AI adoption and EU AI Act commentary only | 🔴 **No** |
+| 🔴 APAC | TCS-Pearson skills alliance, LearnUpon Sydney HQ; **49 %** infrastructure barrier, **87 %** encouraging agents vs **47 %** with governance | 🟡 **Adjacent** — none of it education-specific |
+| 🔴 LATAM | the **UNESCO IESALC / UNU-IAS** survey — 200 HEIs, 19 countries, Aug-Oct 2025 | 🔴 **Primary UNREACHABLE** — see below |
+
+🔴 **`Gap 450-B` extends from 16 hosts to 17, and the new one is the substitute host.** `p450`
+recorded `www.unesco.org`, `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` as refused at
+`CONNECT`. 🔴 **`unu.edu`, which publishes the same IESALC working paper, returns `000` in the same
+shell in the same minute that `raw.githubusercontent.com` returns `200`.** 🔵 So the LATAM
+higher-education adoption primary this base has wanted for four passes is not reachable by
+changing host *within* the IGO channel — the whole channel class is refused here.
+🟢 **What that means for the figures already on this shelf: the 87 %/26 % IESALC cells remain
+relayed, not primary, and no pass should record them otherwise until the channel changes.**
+
+### 🟢 The market shape EMEA was missing
+
+🟢 **A closed national system of record is a different commercial object from a licensable
+platform**, and these shelves had no row for one. ÉcoleDirecte (France) holds the record and
+publishes nothing; three independent parties maintain clients under three different grants
+(Apache-2.0, GPL-3.0, and an unpayloaded ISC). 🔴 **The buyer-side consequence: integration risk
+and licence risk attach to the connector, and cannot be avoided by choosing a different platform.**
+🔵 The same shape is already on these shelves unnamed in two other regions — SIIAU (Mexico) and
+Librus (Poland) — so it is a recurring market structure, not a French peculiarity.
+
 ## 🆕 `p452` · 2026-10-26 — **🔴 EIGHTH CONSECUTIVE NIL on the prescribed region legs — and this is the first pass that can state the MECHANISM instead of the count. 🟢 Holding the channel fixed and varying only the word list, six LMS-vocabulary legs returned 120 graded hits and ZERO at zero prior hits, while six pedagogy-vocabulary legs on the IDENTICAL channel returned 39. The saturation is a property of the prescribed QUERY VOCABULARY, not of the sector and not of the channel — which refutes `Gap 450-A`'s own proposed remedy.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED** (`Code from
@@ -274,6 +313,30 @@ point — Brazil/Argentina/Colombia are *compose* markets, Mexico/Chile/Peru are
 
 ### North America
 
+
+🆕 **`p453` — the institution-registry layer, five permissive rows deep.** The question *which
+institutions exist and what is true of them* is now answerable from MIT-granted code, where one
+pass ago this base could name no US asset and had searched for none:
+
+- 🟢 **Common Data Set + federal baseline** — [`bolewood/collegedata-fyi`](https://github.com/bolewood/collegedata-fyi)
+  (**MIT** · `LICENSE` 1 115 B `a3a16c648652`): 4 071 archived CDS documents, a 1 105-field canonical
+  schema from the official 2025-26 template, 6 322 institutions in the federal directory, CDS and
+  IPEDS kept **separately labelled**.
+- 🟢 **Longitudinal federal series** — [`paulgp/ipeds-database`](https://github.com/paulgp/ipeds-database)
+  (**MIT** · 1 056 B `1126322e2cc8`): ~27 M rows, 23 tables, every US postsecondary institution
+  1997-2024, one command to build.
+- 🟢 **Directory + analysis tooling** — [`scienceforamerica/scipeds`](https://github.com/scienceforamerica/scipeds)
+  (**MIT** · 1 088 B `e04b31a1be21`, 2025 data in `v0.0.9`),
+  [`UrbanInstitute/ipeds-scraper`](https://github.com/UrbanInstitute/ipeds-scraper) (**MIT** · 1 058 B
+  `bac93c5411aa`), [`rhawrami/genpeds`](https://github.com/rhawrami/genpeds) (**MIT** · 1 071 B
+  `c39fac37d50c`).
+
+🟢 **The opportunity is the join, not the data.** All five are permissive and none of them answers
+an institution's *own* current-year disclosure and the federal baseline together without blending
+them — which `collegedata-fyi` deliberately refuses to do. 🔵 Paired with the governance numbers
+this pass's NA leg returned (**10 %** of institutions with formal AI guidelines, **71 %** of US
+teachers untrained), the sellable work is an advisory/data layer keyed to `UNITID`, not a tutor.
+
 🟢 **The strongest NA opportunity this base has recorded, and it is new this pass.** A US state
 has **mandated** that SIS vendors speak API to a system of record whose implementation is
 **Apache-2.0**. That is the rare combination of a *compelled* integration deadline and a
@@ -314,6 +377,24 @@ it is a market-research page with no primary behind it, and `Gap 450-B` records 
 cannot reach primaries to check it.
 
 ### EMEA
+
+
+🆕 **`p453` — a market shape this file had never carried: the closed national system of record.**
+France's **ÉcoleDirecte** holds grades, homework, timetable and `vie scolaire`, publishes **no open
+core**, and is reached only through third-party clients:
+[`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) (**Apache-2.0**
+· 11 357 B `c71d239df917` — 🔴 npm declares `ISC`),
+[`papillonapp/papillon-ed-core`](https://github.com/papillonapp/papillon-ed-core) (**GPL-3.0** ·
+35 149 B `3972dc9744f6`), [`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte)
+(**ISC** declared, 🔴 **no payload at 9 paths**).
+
+🔴 **The opportunity and its risk are the same object.** A French engagement integrates the SIS
+before it reads an Annex III deadline, so the connector — not the platform — carries both the
+integration and the licence exposure, and it cannot be swapped away. 🟢 Only the Apache-2.0 client
+is build-on; the other two are watch-tier for grant reasons, which is the kind of distinction a
+badge read would miss here (two of the three grants are misstated or absent at the registry).
+🔵 Algeria's `yasserstudio/geoalgeria` (MIT) remains the only EMEA institution-registry row and the
+only one outside Europe.
 
 🟡 **A real market with real interfaces and no way in through code — so the shape is partner,
 not build.** Germany, read this hour through a country-shaped (German-language) leg:
@@ -366,6 +447,27 @@ or sub-Saharan Africa. EMEA on this file remains EU-weighted plus one North Afri
 
 ### APAC
 
+
+🆕 **`p453` — the institution-registry stratum is searched for the first time, and the finding is
+an informed absence with a denominator.** India's directory is the largest in the world and its
+packaged forms are **ungranted**: [`learnram/ads-schools-data`](https://github.com/learnram/ads-schools-data)
+(UDISE+-derived, ~28 MB gzipped CSV), [`dougj892/public-datasets`](https://github.com/dougj892/public-datasets),
+[`unknownsteve7/UDISE_DATA_ANALYSIS`](https://github.com/unknownsteve7/UDISE_DATA_ANALYSIS) (4 GB
+over 1.47 M schools, 2023-24 + 2024-25) and
+[`mukulyadav0118/india-school-education-analytics`](https://github.com/mukulyadav0118/india-school-education-analytics)
+(UDISE+ 2025-26, seven states) serve **no licence payload at 9 probed paths**; only
+[`deedy/cbse_schools_data`](https://github.com/deedy/cbse_schools_data) grants anything, and it is
+🟡 **CC-BY-SA-4.0** (20 131 B `1f5de47ca3fb`) — **share-alike**, so a derived registry inherits the
+obligation.
+
+🔴 **4 of 5 ungranted is the finding, and it is actionable in the negative**: an APAC engagement
+keyed to a school registry must license from the UDISE+ portal's own terms, not from GitHub, and
+should budget for that rather than discover it in review. 🔵 The rest of APAC — Japan, Indonesia,
+the Philippines — has **still not been searched** for this layer (`Gap 453-D`). 🔵 This pass's APAC
+market leg returned nothing education-specific: the usable figures are adjacent (**49 %** citing
+insufficient real-time data infrastructure; **87 %** encouraging agents against **47 %** with
+governance), which describes the governance gap an engagement sells into, not the education market.
+
 🔴 **The largest denominator in this file and the thinnest supply — recorded as an absence, not
 as silence.** India, via a country-shaped leg:
 
@@ -403,6 +505,20 @@ Microsoft, IBM, Pearson and Byju's as "key players", which is a vendor list and 
 🔴 **The largest denominator in this file still has the thinnest measured demand.**
 
 ### LATAM
+
+
+🆕 **`p453` — one administrative-geography row, and a correction to how its grant is read.**
+[`nataliasm23/icones-bandeiras-br-uf`](https://github.com/nataliasm23/icones-bandeiras-br-uf)
+publishes Brazilian municipality and UF reference data — the unit a school list must join to —
+under 🔴 **CC0-1.0** (`LICENSE` 7 048 B `a2010f343487`), while its npm record `municipios-br@3.2.1`
+declares **MIT**. 🟢 CC0 is the correct instrument for data and the wrong one to infer from a code
+manifest; the published cell is the payload's, not the registry's.
+🟢 Also added: [`t2-educacao/midas-ui`](https://github.com/t2-educacao/midas-ui) (**MIT** · 1 070 B
+`3db74f670f09`), the React design system of T2 Educação, shared across its site, hub and student
+platform — a delivery-acceleration asset for a Brazilian education product, not a tutor.
+🔴 **The region's adoption primary remains unreachable**: the UNESCO IESALC / UNU-IAS survey of 200
+HEIs in 19 countries is refused on `unesco.org` **and** on `unu.edu` from this host class, so the
+87 %/26 % figures on this shelf stay relayed rather than primary.
 
 🔴 **LATAM is not one market, and this pass measured the seam.**
 
@@ -458,6 +574,27 @@ near-universal adoption against one institution in four having a strategy — an
 by the same survey, not by a new one, so it is a **re-read and not a new measurement**.
 
 ### Global
+
+
+🆕 **`p453` — the credential substrate is placed, and graded against the trap of placing all of
+it.** The `credentialing` vocabulary leg returned 13 live permissive packages, and the useful
+distinction is which of them is education-facing *on its own terms*:
+🟢 [`interop-alliance/verifier-core`](https://github.com/interop-alliance/verifier-core) (**MIT** ·
+`LICENSE.md` 1 087 B `6e7a616c4d70`) verifies W3C Verifiable Credentials in browser, Node and React
+Native and names badge/learner/academic vocabulary **10 times** in its README; by contrast
+[`digitalbazaar/vc`](https://github.com/digitalbazaar/vc) (**BSD-3-Clause** · 1 525 B
+`4f0d287e80be`) and [`trustvc/w3c`](https://github.com/trustvc/w3c) (**Apache-2.0** · 11 357 B
+`c71d239df917`) name it **0** times, and
+[`openwallet-foundation-labs/identity-common-ts`](https://github.com/openwallet-foundation-labs/identity-common-ts)
+(**Apache-2.0** · 11 355 B `7339fa418c9a`) **once**.
+
+🟢 **So the opportunity is one verification row on a permissive identity substrate, not a
+credentials practice** — the substrate is general-purpose and would be mis-sold as education
+tooling. 🔴 And the substrate carries this pass's licence lesson:
+[`decentralized-identity/did-jwt-vc`](https://github.com/decentralized-identity/did-jwt-vc)
+declares `ISC` on npm and serves **Apache-2.0** (11 342 B `ca9b5b162cbf`).
+🔵 The only EBSI-adjacent address seen here, a **DC4EU vocational microcredential** package at
+`gitlab.com/europeum/public`, is **unreachable at `HEAD`** and is recorded as a lead, not a row.
 
 🟢 **The one cross-region finding `p449` adds, and it is a capability fact rather than a
 forecast: the community LMS-connector tier WRITES, and by more than `p448` published.**

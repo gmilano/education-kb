@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — **🟢 `Gap 452-A` IS ANSWERED WITH THE LARGEST DISCOVERY DENOMINATOR THIS BASE HAS EVER HAD, AND IT CONFIRMS `p452`'s PREDICTION IN BOTH DIRECTIONS: the eight prescribed identically-worded legs returned 13 tokens and ZERO at zero prior hits, while ten NEW-VOCABULARY legs on the same registry channel returned 182 candidates and 157 at zero. 🔴 And the finding that costs the most: 2 of those 157 are education assets and the rest are HOMONYMS — a live, permissively-granted address can pass every probe this base owns and still have nothing to do with education.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED.** The host refused
+the recipe (`Code from External`) before any gate body ran — **eight denials in nine passes**.
+🔵 Nothing below is gate-attested. The load-bearing contracts were re-implemented independently
+(region-heading `CANON`/`VOCAB` read from `check_headings.py:17-19`, newest-first insertion read
+from `check_newest_block.py`, frontmatter vocabulary, append-only byte containment,
+table-header-as-data) and all are green.
+
+### 🟢 `Gap 452-A` settled: the word list is the variable, now measured against its own control
+
+`p452` left this as a **prediction with a mechanism**: *"a ninth identically-worded regional leg
+will nil"*, and *"the cheaper and now-evidenced move is to vary the word list."* 🟢 **Both halves
+were run in the same hour, which is what makes this a test and not another anecdote.**
+
+| arm | legs | tokens / candidates | at **zero** prior hits | verdict |
+|---|---|---|---|---|
+| 🔴 the **prescribed** vocabulary (`{agents, trending, verticals, news} × {global, NA, EMEA, APAC, LATAM}`) | 8 | 13 graded tokens | 🔴 **0** | 🔴 **ninth consecutive nil — predicted, and confirmed** |
+| 🟢 **new** vocabulary (pedagogy · assessment · credentialing · special-education · early-years · vocational · curriculum · ES · PT · FR) | 10 | **182** candidates | 🟢 **157** | 🟢 **the word list is the variable** |
+
+🔵 Every prescribed-leg token carried prior hits, and the *thinnest* of them (`Ednova`, 8 files)
+is the one that would expose a coverage hole first — so the nil is attributable to exhausted
+vocabulary, not to a thin channel. Ledger:
+[`evidence/vocabulary-spend-ledger.2026-10-26-p453.tsv`](../evidence/vocabulary-spend-ledger.2026-10-26-p453.tsv);
+instrument [`compose/code/p453-vocabulary-ledger/`](../compose/code/p453-vocabulary-ledger/).
+🟢 **The ledger is the instrument `Gap 452-A` said did not exist** — it records which vocabularies
+have been spent, with the yield of each, so `p454` does not re-spend them blind.
+
+### 🔴 And the expensive half of the answer: novelty is NOT relevance
+
+🔴 **157 addresses at zero prior hits sounds like a discovery channel. It is not, and the measured
+reason is homonymy.** The vocabulary that is unspent *in education* is heavily spent elsewhere:
+
+| leg | what it was meant to find | what npm's text ranking actually returned |
+|---|---|---|
+| 🔴 `curriculum standards alignment` | curriculum mapping tools | **text-alignment libraries** — `ansi-align`, `wide-align`, `@udecode/plate-alignment`, `remark-lint-table-pipe-alignment`, `ndarray-base-dtype-alignment` |
+| 🔴 `early years kindergarten literacy` | early-years learning tools | `@putout/plugin-apply-early-return`, `haraka-plugin-early_talker`, `end-of-stream`, `d3-time` — and `kindergarten` (MIT), which is an **authorization/permissions library** |
+| 🔴 `educacao escolar aprendizagem` | Brazilian education tooling | **13 Laboratoria bootcamp `md-links` exercises** (cohort slugs `sap0xx`, `lim0xx`, `mex008`) |
+
+🔴 **The worked example that proves the gate is insufficient, and it is the cleanest one this base
+has produced:** [`food-x-technologies/escolar`](https://github.com/food-x-technologies/escolar)
+is **live** at `HEAD`, serves a **real MIT payload** (`LICENSE` **1 075 B `sha256₁₂ 3b443e863252`**),
+and its npm record **back-links the exact slug**. It passes the back-link probe (`p452`), the
+reachability probe (`Gap 452-B`) and the grant read — **three of this base's instruments, all
+green** — and its entire surface is *"Replace properties in json with file contents."* 🔴 **It is
+not an education asset and no probe this base owns could say so.** Registered as `Gap 453-B`: the
+promotion precondition needs a **third, SURFACE probe**, and only a first-hand `README` read at
+`HEAD` supplies it. 🔵 Every row below passed that read; the ones that failed it are named as
+rejections rather than quietly dropped.
+
+### 🟢 Promotions — each read first-hand at `HEAD` this pass, and each surface read before shelving
+
+🔵 Byte counts are `curl -w '%{size_download}'`, never shell command substitution, which strips
+the trailing newline and runs every count one short (`Gap 450-C` defect (b)). Licence family is
+read **title-anchored**, never by whole-body grep, which calls every GPLv3 file LGPL (defect (a)).
+
+| repository | grant, read first-hand at `HEAD` | surface, read first-hand | region |
+|---|---|---|---|
+| [`interop-alliance/verifier-core`](https://github.com/interop-alliance/verifier-core) | 🟢 **MIT** — `LICENSE.md` **1 087 B `sha256₁₂ 6e7a616c4d70`** | Verifies **W3C Verifiable Credentials** in browser, Node.js and React Native (`verifyCredential`, `verifyPresentation`, batch `createVerifier`). 🟢 **The one credential-substrate row that is education-facing on its own terms: 10 `README` mentions of badge/learner/academic vocabulary**, where `digitalbazaar/vc` and `trustvc/w3c` have **0** | ⚪ **Global** |
+| [`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) | 🔴 **Apache-2.0** — `LICENSE` **11 357 B `sha256₁₂ c71d239df917`**, title `Apache License / Version 2.0`. 🔴 **npm declares `ISC` on every published version** — see `Gap 453-A` | Client for **ÉcoleDirecte**, a French national school system of record: authentication for **Élève** and **Famille** accounts, then `notes`, `devoirs`, `emplois du temps` and `vie scolaire` (retards, absences, sanctions) | 🟢 **EMEA** — France |
+| [`t2-educacao/midas-ui`](https://github.com/t2-educacao/midas-ui) | 🟢 **MIT** — `LICENSE` **1 070 B `sha256₁₂ 3db74f670f09`** | `@t2-educacao/midas` — the React component library and design system of **T2 Educação**, a Brazilian education provider: accessible components, light/dark design tokens, Tabler icons, shared across its site, hub and student platform | 🟢 **LATAM** — Brazil |
+
+🟡 **Watch tier, not build-on — stated with the reason, because the grant is the whole point:**
+
+| repository | grant | why it is not a build-on row |
+|---|---|---|
+| [`papillonapp/papillon-ed-core`](https://github.com/papillonapp/papillon-ed-core) | 🔴 **GPL-3.0** — `LICENSE` **35 149 B `sha256₁₂ 3972dc9744f6`** | The ÉcoleDirecte core of the Papillon French school-life app. 🔴 **Strong copyleft**: linking it into a client deliverable carries the obligation outward |
+| [`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte) | 🔴 **`ISC` declared on npm, NO payload at 9 probed paths** | 🔴 `Gap 451-C`'s **manifest-only** class, on a **live** package: the grant exists as a registry string and no file in the repository serves its text. Buildable only after legal review |
+| [`barglabs/cejel`](https://github.com/barglabs/cejel) | 🔴 **AGPL-3.0** — `LICENSE` **34 523 B `sha256₁₂ 0d96a4ff68ad`** | 🔴 **Network copyleft** — §13 attaches a source-provision duty to *hosted* use, which is how an engagement would deploy it |
+
+🔴 **Rejections, named rather than dropped** — all three pass the licence and reachability probes
+and fail the surface read: [`food-x-technologies/escolar`](https://github.com/food-x-technologies/escolar)
+(MIT 1 075 B — JSON file interpolation, not schools), `jirichara/kindergarten` (MIT — an
+authorization library), and the **13** Laboratoria `md-links` bootcamp exercises (ISC/MIT — course
+work, not industry supply). 🟡 [`bq-educacion/editor`](https://github.com/bq-educacion/editor)
+(**MIT**, `LICENSE` **1 084 B `sha256₁₂ 2a3b698d8ae8`**) is held back deliberately: the *publisher*
+is an EMEA/Spain education org, but the artifact is a general-purpose React rich-text editor, so it
+is recorded here as an **org-placed generic surface** and not as an education row.
+
+🟡 **Not a star claim.** `api.github.com` returns **403** on this host (re-confirmed this pass), so
+no popularity figure is published for any row — only the grant, the path, the bytes, the hash and
+the surface, each read this pass.
+
 ## 🆕 `p452` — **🟢 `Gap 451-A` ANSWERED WITH A DENOMINATOR: the back-link rule `p451` made standing was swept over all 71 carried registry-sourced cells, and it finds ZERO mis-attributed licences — the population was already clean. 🔴 What it does find is that 8 of 71 are not registry-attributable AT ALL, and the mechanism is not what `p451` expected: the record exists and carries no repository field. 🔴 And this pass's own instrument produced 3 false DISAGREE verdicts before correction, every one of them by deriving an address from a package name — the exact heuristic `Gap 451-A` forbids.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED.** The host refused

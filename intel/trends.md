@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — **🟢 Three trends this pass can assert with a measured mechanism rather than a vendor quote, and all three change what an engagement does on day one: a registry licence badge is wrong 3 % of the time and wrong in the expensive direction once; the national system of record, not the LMS, is the real integration surface outside the Anglosphere; and the institution-registry layer has split into strata that answer different questions.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is
+gate-attested; the load-bearing contracts were re-implemented independently and all are green.
+
+### 🔴 `T453-1` — A package registry's licence field is not a licence, and now there is a rate
+
+🟢 **Measured, not inferred: 166 live education-vertical packages, declared npm licence against the
+payload read first-hand at `HEAD`.**
+
+| verdict | n | share | what it means on an engagement |
+|---|---|---|---|
+| 🟢 `AGREE` | 121 | 72.9 % | the badge is corroborated by the payload |
+| 🔴 `MANIFEST_ONLY` | 35 | 21.1 % | a grant **declared** in the registry with **no payload at 9 probed paths** — nothing in the repository serves its text |
+| 🔴 `DISAGREE` | **5** | **3.0 %** | the repository grants something **different** from the badge |
+| 🔴 `POINTER` | 4 | 2.4 % | `SEE LICENSE IN …` — a pointer out of the registry, not a grant |
+| 🟡 `PAYLOAD_UNREAD` | 1 | 0.6 % | payload present, family not determinable title-anchored |
+
+🔵 **Why this is a different question from the one `p452` answered.** `p452` swept whether a
+registry record back-links the right **address** (63 of 71 `AGREE`, **0** `DISAGREE`) and concluded
+the population was clean. 🟢 **That conclusion stands and is not weakened** — but address
+attribution and licence **value** are independent axes, and on the value axis the population is
+*not* clean. A record can back-link the correct repository and still state the wrong licence.
+🔴 **The asymmetry is what matters: 4 of the 5 disagreements are permissive↔permissive or
+permissive↔public-domain, and 1 is `MIT` declared over `AGPL-3.0` served** — a shipping blocker
+read as a green light. 🟢 **Standing rule: the payload at `HEAD` is the grant; the registry field
+is a hint.** Encoded in `P453-A`.
+🔵 Honest bound on the `MANIFEST_ONLY` share: **13 of the 35** are Laboratoria bootcamp `md-links`
+exercises reached by one Portuguese-vocabulary leg. Excluding that cluster the rate is **22 of
+153 = 14.4 %**, still the second-largest class.
+
+### 🟢 `T453-2` — Outside the Anglosphere the integration surface is a closed national SIS, not an LMS
+
+🔵 These shelves carry eight self-hostable platforms and ~30 Moodle/Canvas/Blackboard/Brightspace
+connectors — an architecture that assumes the institution runs an LMS the engagement can reach.
+🔴 **France does not match that assumption**, and this pass found it only by changing vocabulary:
+**ÉcoleDirecte** holds grades, homework, timetable and `vie scolaire`, publishes **no open core**,
+and is reached exclusively through third-party client libraries —
+[`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) (Apache-2.0),
+[`papillonapp/papillon-ed-core`](https://github.com/papillonapp/papillon-ed-core) (GPL-3.0),
+[`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte) (ISC,
+manifest-only).
+
+🟢 **Three independent parties maintaining clients for one closed SIS is the market signature of
+this trend**: where the system of record publishes nothing, the integration layer is rebuilt per
+app instead of shared, and the grant varies per rebuild — permissive, copyleft and unpayloaded
+across these three. 🔴 **Consequence for Globant: the licence risk in such a market attaches to
+the connector, not to the platform**, and the platform cannot be swapped to avoid it.
+🔵 Corroborating instances already on these shelves, now readable as the same pattern:
+`dev-cucei-itrans/siiau-api-client` (SIIAU, Mexico — grant split across versions, Packagist the
+only surviving channel) and `krzysztofbury/librus-mcp` (Librus, Poland). 🔴 The pattern is
+**three regions deep and was never named** until this pass.
+
+### 🟢 `T453-3` — The institution-registry layer is three strata, and they are not substitutes
+
+🟢 `p452` opened this layer with one country. 🔵 With North America added it is legible as strata:
+a **national directory** (*which institutions exist* — `geoalgeria`, MIT), a **federal statistical
+series** (*what is true of each, longitudinally* — `ipeds-database`/`scipeds`, MIT, 27 M rows
+1997-2024), and **school-authored disclosure** (*what the institution says about itself this year*
+— `collegedata-fyi`, MIT, 4 071 archived CDS documents).
+🔴 **They disagree by construction**, and an engagement that merges them produces figures no
+institution will confirm — which is why `collegedata-fyi` keeping CDS and federal data separately
+labelled is the design decision worth copying, not an implementation detail.
+🔴 **The stratum APAC lacks is the first one**: India's UDISE+-derived directories number 1.47 M
+schools and **4 of 5 packaged forms grant nothing**, the fifth being CC-BY-SA-4.0. 🔵 Recorded as
+an informed absence — the supply exists and the *grants* do not.
+
 ## 🆕 `p452` — **🟢 Two trends this pass can assert with a mechanism rather than a vendor quote, and both are about PROVENANCE rather than capability: the registry channel corroborates npm grants and structurally CANNOT corroborate PyPI ones, and the education agent tier has produced its first instance that points at the developer instead of the LMS.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is

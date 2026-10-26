@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — reads 2026-10-26, commit 2026-10-26 — **🟢 What is new this week is a REGION and a TIER, not a star count: a French national system of record reached by client library, and the first credential-verification agent on these shelves that names learners in its own README. 🔴 What is also new is a measured reason to distrust a registry licence badge: 5 of 166 live packages declare a licence their own repository contradicts, and one of them declares MIT while serving AGPL-3.0.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes, so nothing here is
+gate-attested. Append-only: this section is added at the top and every prior section is kept
+below it, byte-identical (verified by byte containment this pass).
+
+### 🟢 New this week — the ÉcoleDirecte cluster (EMEA / France)
+
+🔵 Reached on the **`non-en-fr` vocabulary leg**, which is the highest-precision leg of the ten run
+this pass: **7 of 9 candidates live, and 3 of those are education assets** — against a `curriculum`
+leg where 19 of 19 were text-alignment libraries.
+
+- 🟢 [`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) —
+  **Apache-2.0** (`LICENSE` 11 357 B `sha256₁₂ c71d239df917`), **npm declares `ISC`**. Élève and
+  Famille authentication, then `notes`, `devoirs`, `emplois du temps`, `vie scolaire`.
+- 🟡 [`papillonapp/papillon-ed-core`](https://github.com/papillonapp/papillon-ed-core) —
+  **GPL-3.0** (35 149 B `3972dc9744f6`). The ÉcoleDirecte core of the Papillon school-life app.
+- 🔴 [`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte) — **`ISC`
+  declared on npm, no payload at 9 probed paths**: a live manifest-only grant.
+
+🔵 **Why it is a trend and not three rows:** three independent parties maintain clients for the
+same closed national SIS, which is what a market looks like when the system of record publishes no
+open core — the integration surface gets rebuilt per app rather than shared.
+
+### 🟢 New this week — credential verification arrives education-facing
+
+- 🟢 [`interop-alliance/verifier-core`](https://github.com/interop-alliance/verifier-core) — **MIT**
+  (`LICENSE.md` 1 087 B `sha256₁₂ 6e7a616c4d70`). Verifies **W3C Verifiable Credentials** in
+  browser, Node and React Native.
+
+🔵 **Graded against its own substrate, which is the point.** The `credentialing` leg returned 13
+live permissive packages and most are generic identity plumbing: `digitalbazaar/vc`
+(**BSD-3-Clause**, 1 525 B `4f0d287e80be`) and `trustvc/w3c` (**Apache-2.0**, 11 357 B
+`c71d239df917`) mention badge/learner/academic vocabulary **0 times** in their READMEs;
+`openwallet-foundation-labs/identity-common-ts` (**Apache-2.0**, 11 355 B `7339fa418c9a`) **once**;
+`verifier-core` **ten times**. 🟢 So the substrate is shelved as substrate and only one row is
+shelved as an education agent — a distinction a licence-and-stars read cannot make.
+
+### 🔴 The week's most actionable number: a registry licence badge is wrong 3 % of the time
+
+🔴 **166 live packages, declared npm licence vs the payload read first-hand at `HEAD`: 121 `AGREE`
+(72.9 %), 35 `MANIFEST_ONLY` (21.1 %), 5 `DISAGREE` (3.0 %), 4 `POINTER`, 1 unreadable.** Full
+census: [`evidence/declared-vs-payload.2026-10-26-p453.tsv`](../evidence/declared-vs-payload.2026-10-26-p453.tsv).
+
+| address | npm declares | payload at `HEAD` | direction |
+|---|---|---|---|
+| 🔴 [`nodetool-ai/nodetool`](https://github.com/nodetool-ai/nodetool) | **MIT** | 🔴 **AGPL-3.0** (`LICENSE.txt` 34 522 B `4df3c306ddda`) | 🔴 **the dangerous direction** — permissive badge over network copyleft |
+| 🟡 [`decentralized-identity/did-jwt-vc`](https://github.com/decentralized-identity/did-jwt-vc) | `ISC` | **Apache-2.0** (11 342 B `ca9b5b162cbf`) | 🟡 more obligated than advertised |
+| 🟡 [`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) | `ISC` | **Apache-2.0** (11 357 B `c71d239df917`) | 🟡 same |
+| 🟡 [`nataliasm23/icones-bandeiras-br-uf`](https://github.com/nataliasm23/icones-bandeiras-br-uf) | **MIT** | **CC0-1.0** (7 048 B `a2010f343487`) | 🔵 code manifest over a data grant |
+| 🔵 [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | BSD-3-Clause | **MIT** (1 065 B `ebb4f09972ae`) | 🔵 permissive either way |
+
+🟢 **`nodetool-ai/nodetool` is the row that would have cost money.** It surfaced on the
+`assessment` leg as `@nodetool-ai/image-nodes`, an MIT-badged node library; a team that trusted the
+badge would have shipped a hosted AGPL-3.0 dependency, whose §13 attaches a source-provision duty
+to *network* use — exactly how an engagement deploys it.
+
 ## 🆕 `p452` — reads 2026-10-26, commit 2026-10-26 — **🔴 `Gap 450-A` IS ANSWERED, AND THE ANSWER REFUTES ITS OWN PREMISE: `p450` said "a new row requires a new CHANNEL, not a new query"; `p451` changed channel and got 2 rows; this pass changed channel and query on the SAME channel and got ZERO — then changed the VOCABULARY and got 39 addresses at zero prior hits from the identical channel. 🟢 The variable was never the channel. It is the word list.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes, so nothing here is

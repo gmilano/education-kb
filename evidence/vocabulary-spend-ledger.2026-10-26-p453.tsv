@@ -1,0 +1,224 @@
+leg	term	verdict	package	address	reachable	licence_declared	probe_leg	prior_shelf_files	novelty
+pedagogy	pedagogy didactic teaching	CANDIDATE	@fluentui/react-teaching-popover	github.com/microsoft/fluentui	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@deepseek-ai/dsh-cordis-client-runner	github.com/deepseek-ai/deepseek-harness	LIVE	BSD-3-Clause	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@docshield/didactic	github.com/docshield-labs/didactic	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	nearley	github.com/hardmath123/nearley	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	NO_BACKLINK	mentorx			MIT			
+pedagogy	pedagogy didactic teaching	CANDIDATE	was-teaching-server	github.com/interop-alliance/was-teaching-server	LIVE	AGPL-3.0-or-later	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@plurnk/plurnk-meta	github.com/plurnk/plurnk-service	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@arcaneorion/dsh-teaching-board	github.com/arcaneorion/dsh-teaching-board	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@sourceacademy/c-slang	github.com/source-academy/c-slang	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	svf-tools	github.com/svf-tools/svf	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	NO_BACKLINK	antigravity			MIT			
+pedagogy	pedagogy didactic teaching	CANDIDATE	eslint-plugin-llm-core	github.com/pertrai1/eslint-plugin-llm-core	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@mongodb-js/nearley	github.com/mongodb-forks/nearley	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	digitaljs	github.com/tilk/digitaljs	LIVE	BSD-2-Clause	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	tailor-teaching-elements	github.com/extensionengine/tailor-teaching-elements	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	NO_BACKLINK	@mindrian_os/cli			BSL-1.1			
+pedagogy	pedagogy didactic teaching	CANDIDATE	local-leetcode-trainer	github.com/karote00/local-leetcode-trainer	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@moxn/context-cli	github.com/moxn-ai/moxn	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	keating	github.com/diogenesoftoronto/keating	LIVE	MPL-2.0	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	diagcalc	github.com/tiagojct/diagcalc	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	study-code	github.com/luojz/study-code	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@interop/storage-core	github.com/interop-alliance/storage-core	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+pedagogy	pedagogy didactic teaching	CANDIDATE	@magenta/sketch	github.com/tensorflow/magenta-js	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@plasius/learning	github.com/plasius-ltd/learning	LIVE	Apache-2.0	raw:README.md	1	prior
+assessment	rubric formative assessment grading	CANDIDATE	@intellectif/lk-core	github.com/intellectif/learning-kit	LIVE	MIT	raw:README.md	6	prior
+assessment	rubric formative assessment grading	CANDIDATE	@longsightgroup/qti3-player	github.com/longsightgroup/qti3	LIVE	MIT	raw:README.md	10	prior
+assessment	rubric formative assessment grading	CANDIDATE	@pie-players/pie-players-shared	github.com/pie-framework/pie-players	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@nakafa/aksara-contracts	github.com/nakafaai/aksara	LIVE	SEE LICENSE IN LICENSE	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@transcend-io/mcp-server-assessment	github.com/transcend-io/tools	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	dsh-essay-rubric-check	github.com/perrylink/dsh-essay-rubric-check	LIVE	Apache-2.0	raw:README.md	2	prior
+assessment	rubric formative assessment grading	CANDIDATE	n8n-nodes-mcp	github.com/nerding-io/n8n-nodes-mcp	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@clossys/designer	github.com/clossys/foundry	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@spur.us/monocle-backend	github.com/spurintel/javascript	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	dsh-plugin-education	github.com/863683348/dsh-plugin-education	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@cejel/cejel	github.com/barglabs/cejel	LIVE	AGPL-3.0-only	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	NO_BACKLINK	qti3-item-player			MIT			
+assessment	rubric formative assessment grading	CANDIDATE	formative	github.com/hally9k/formative	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@orkestrel/study	github.com/orkestrel/study	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	litmus-cli	github.com/litmus-team/litmus	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@ikrigel/ragas-lib-typescript	github.com/ikrigel/ragas-lib-typescript	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@edpire/sdk	github.com/youssefalmia/edpire-web	UNREACHABLE	SEE LICENSE IN LICENSE	both-legs-failed	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	NO_BACKLINK	@aptora/mcp			MIT			
+assessment	rubric formative assessment grading	CANDIDATE	fta-cli	github.com/sgb-io/fta	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	NO_BACKLINK	@timeback/qti						
+assessment	rubric formative assessment grading	NO_BACKLINK	qti3-item-player-vue3			MIT			
+assessment	rubric formative assessment grading	CANDIDATE	@telebort/question-banks	github.com/telebort/question-banks	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	recaptcha-password-check-helpers	github.com/googlecloudplatform/typescript-recaptcha-password-check-helpers	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+assessment	rubric formative assessment grading	CANDIDATE	@nodetool-ai/image-nodes	github.com/nodetool-ai/nodetool	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@digitalbazaar/vc-bitstring-status-list-context	github.com/digitalbazaar/vc-bitstring-status-list-context	LIVE	BSD-3-Clause	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	did-jwt-vc	github.com/decentralized-identity/did-jwt-vc	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@agenticprimitives/verifiable-credentials	github.com/agentictrustlabs/agenticprimitives	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@digitalcredentials/vc	github.com/digitalcredentials/vc	LIVE	BSD-3-Clause	raw:README.md	3	prior
+credentialing	open badges verifiable credential	CANDIDATE	@aws-sdk/credential-provider-sso	github.com/aws/aws-sdk-js-v3	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	storybook-addon-tag-badges	github.com/sidnioulz/storybook-addon-tag-badges	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@dfinity/verifiable-credentials	github.com/dfinity/verifiable-credentials-sdk	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@interop/verifier-core	github.com/interop-alliance/verifier-core	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	NO_BACKLINK	@sphereon/oid4vci-client			Apache-2.0			
+credentialing	open badges verifiable credential	CANDIDATE	@smithy/credential-provider-imds	github.com/smithy-lang/smithy-typescript	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@azure/identity	github.com/azure/azure-sdk-for-js	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@digitalbazaar/vc	github.com/digitalbazaar/vc	LIVE	BSD-3-Clause	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@openid4vc/openid4vci	github.com/openwallet-foundation-labs/identity-common-ts	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@animo-id/pex	github.com/sphereon-opensource/pex	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+credentialing	open badges verifiable credential	CANDIDATE	@trustvc/w3c-credential-status	github.com/trustvc/w3c	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	iep-ui	github.com/iep-ui/iep-ui	UNREACHABLE	MIT	both-legs-failed	2	prior
+special-education	IEP special education accessibility	CANDIDATE	dom-accessibility-api	github.com/eps1lon/dom-accessibility-api	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	axe-core	github.com/dequelabs/axe-core	LIVE	MPL-2.0	raw:README.md	7	prior
+special-education	IEP special education accessibility	CANDIDATE	@storybook/addon-a11y	github.com/storybookjs/storybook	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	axobject-query	github.com/a11yance/axobject-query	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	eslint-plugin-jsx-a11y	github.com/jsx-eslint/eslint-plugin-jsx-a11y	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@dnd-kit/accessibility	github.com/clauderic/dnd-kit	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	eslint-plugin-vuejs-accessibility	github.com/vue-a11y/eslint-plugin-vuejs-accessibility	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	serverless-domain-manager	github.com/amplify-education/serverless-domain-manager	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@angular-eslint/eslint-plugin-template	github.com/angular-eslint/angular-eslint	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-copysign	github.com/stdlib-js/math-base-special-copysign	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	escape-string-regexp	github.com/sindresorhus/escape-string-regexp	LIVE	MIT	raw:readme.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-gamma	github.com/stdlib-js/math-base-special-gamma	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-gammaln	github.com/stdlib-js/math-base-special-gammaln	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-exp	github.com/stdlib-js/math-base-special-exp	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	html-entities	github.com/mdevils/html-entities	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-trunc	github.com/stdlib-js/math-base-special-trunc	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	picomatch	github.com/micromatch/picomatch	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-erfc	github.com/stdlib-js/math-base-special-erfc	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-gamma1pm1	github.com/stdlib-js/math-base-special-gamma1pm1	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-gamma-lanczos-sum-expg-scaled	github.com/stdlib-js/math-base-special-gamma-lanczos-sum-expg-scaled	LIVE	Apache-2.0 AND BSL-1.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-gammainc	github.com/stdlib-js/math-base-special-gammainc	LIVE	Apache-2.0 AND BSL-1.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@stdlib/math-base-special-log1pmx	github.com/stdlib-js/math-base-special-log1pmx	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@lexical/a11y	github.com/facebook/lexical	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+special-education	IEP special education accessibility	CANDIDATE	@ckeditor/ckeditor5-special-characters	github.com/ckeditor/ckeditor5	LIVE	SEE LICENSE IN LICENSE.md	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	kindergarten	github.com/jirichara/kindergarten	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	next-fonts	github.com/rohanray/next-fonts	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	@sanity/ailf	github.com/sanity-labs/ai-literacy-framework	UNREACHABLE	MIT	both-legs-failed	2	prior
+early-years	early years kindergarten literacy	CANDIDATE	@sentry-internal/feedback	github.com/getsentry/sentry-javascript	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	NO_BACKLINK	vue-kindergarten			MIT			
+early-years	early years kindergarten literacy	FOREIGN_FORGE	json-schema	git@github.com/kriszyp/json-schema		(AFL-2.1 OR BSD-3-Clause)			
+early-years	early years kindergarten literacy	CANDIDATE	end-of-stream	github.com/mafintosh/end-of-stream	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	d3-time	github.com/d3/d3-time	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	FOREIGN_FORGE	@civ-clone/base-science-advance-literacy	git@github.com/civ-clone/base-science-advance-literacy		MIT			
+early-years	early years kindergarten literacy	CANDIDATE	@elastic/transport	github.com/elastic/elastic-transport-js	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	helper-date	github.com/helpers/helper-date	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	fibers	github.com/laverdet/node-fibers	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	@regru/eslint-plugin-prefer-early-return	github.com/regru/eslint-plugin-prefer-early-return	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	@netflix/nerror	github.com/netflix/nerror	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	is-unicode-supported	github.com/sindresorhus/is-unicode-supported	LIVE	MIT	raw:readme.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	node-opcua-pki	github.com/node-opcua/node-opcua-pki	LIVE	MIT	raw:readme.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	react-innertext	github.com/charlesstover/react-innertext	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	@putout/plugin-apply-early-return	github.com/coderaiser/putout	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	react-transition-group	github.com/reactjs/react-transition-group	LIVE	BSD-3-Clause	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	@d3fc/d3fc-group	github.com/d3fc/d3fc	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	pretty-cache-header	github.com/jjenzz/pretty-cache-header	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	haraka-plugin-early_talker	github.com/haraka/haraka-plugin-early_talker	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+early-years	early years kindergarten literacy	CANDIDATE	duration-fns	github.com/dlevs/duration-fns	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@plasius/training	github.com/plasius-ltd/training	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@maschinenlesbar.org/ausbildungssuche-cli	github.com/maschinenlesbar-org/ausbildungssuche-cli	LIVE	AGPL-3.0-or-later	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@europeum-ebsi/vcdm1.1-dc4eu-vocational-education-and-training-microcredential	gitlab.com/europeum/public	UNREACHABLE	EUPL-1.2	both-legs-failed	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@tensorflow/tfjs-layers	github.com/tensorflow/tfjs	LIVE	Apache-2.0 AND MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@geoalgeria/formation-professionnelle	github.com/yasserstudio/geoalgeria	LIVE	SEE LICENSE IN LICENSE	raw:README.md	7	prior
+vocational	vocational apprenticeship training	CANDIDATE	@plasius/item-crafting	github.com/plasius-ltd/item-crafting	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@metaharness/weight-eft	github.com/ruvnet/agent-harness-generator	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@bahmutov/cy-grep	github.com/bahmutov/cy-grep	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	gibberish-detective	github.com/alpha4615/gibberish-detection	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@ruvector/graph-transformer	github.com/ruvnet/ruvector	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	cypress-data-session	github.com/bahmutov/cypress-data-session	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@tanstack/intent	github.com/tanstack/intent	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	NO_BACKLINK	runbios-mcp			MIT			
+vocational	vocational apprenticeship training	CANDIDATE	@sap-ai-sdk/ai-api	github.com/sap/ai-sdk-js	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	NO_BACKLINK	@inference/cli			MIT			
+vocational	vocational apprenticeship training	CANDIDATE	@dofek/training	github.com/asherlc/dofek	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@effect/platform-node-shared	github.com/effect-ts/effect	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@tauri-apps/plugin-deep-link	github.com/tauri-apps/plugins-workspace	LIVE	MIT OR Apache-2.0	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	agent-apprenticeship	github.com/forsy-ai/agent-apprenticeship	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	symspell-ex	github.com/m-elbably/symspell-ex	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	paypal-checkout	github.com/paypal/paypal-checkout	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@tensorflow/tfjs-vis	github.com/tensorflow/tfjs-vis	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	ts-trainingpeaks	github.com/stacksjs/ts-watches	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+vocational	vocational apprenticeship training	CANDIDATE	@skillfm/local	github.com/ericm1018/skillfm	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	@medplum/ccda	github.com/medplum/medplum	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	ansi-align	github.com/nexdrew/ansi-align	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	NO_BACKLINK	@thanh01.pmt/curriculum-kit			MIT			
+curriculum	curriculum standards alignment	CANDIDATE	wide-align	github.com/iarna/wide-align	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	FOREIGN_FORGE	@freecodecamp/curriculum-helpers	git@github.com/freeCodeCamp/curriculum-helpers		BSD-3-Clause			
+curriculum	curriculum standards alignment	CANDIDATE	@visulima/tabular	github.com/visulima/visulima	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	@udecode/plate-alignment	github.com/udecode/plate	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	ink-scroll-list	github.com/bytelandtechnology/ink-scroll-list	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	@stdlib/ndarray-base-dtype-alignment	github.com/stdlib-js/ndarray-base-dtype-alignment	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	rc	github.com/dominictarr/rc	LIVE	(BSD-2-Clause OR MIT OR Apache-2.0)	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	mssql-mcp	github.com/bymcs/mssql-mcp	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	remark-lint-table-pipe-alignment	github.com/remarkjs/remark-lint	LIVE	MIT	raw:readme.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	editorjs-text-alignment-blocktune	github.com/kaaaaaaaaaaai/editorjs-alignment-blocktune	LIVE	MIT	raw:readme.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	css-selector-parser	github.com/mdevils/css-selector-parser	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	cytoscape-fcose	github.com/ivis-at-bilkent/cytoscape.js-fcose	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	cli-table3	github.com/cli-table/cli-table3	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	pdfjs-dist	github.com/mozilla/pdf.js	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	NO_BACKLINK	@zapier/spectral-api-ruleset						
+curriculum	curriculum standards alignment	CANDIDATE	@svta/cml-cta	github.com/streaming-video-technology-alliance/common-media-library	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	@primer/octicons-react	github.com/primer/octicons	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	extsprintf	github.com/davepacheco/node-extsprintf	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+curriculum	curriculum standards alignment	CANDIDATE	get-east-asian-width	github.com/sindresorhus/get-east-asian-width	LIVE	MIT	raw:readme.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	@badgie/cli	github.com/gregmontalvo/badgie	UNREACHABLE	MIT	both-legs-failed	2	prior
+non-en-es	educacion escuela aprendizaje	CANDIDATE	bq-editor-fork	github.com/bq-educacion/editor	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	@hablala/client	github.com/hablala/hablala	UNREACHABLE	MIT	both-legs-failed	2	prior
+non-en-es	educacion escuela aprendizaje	CANDIDATE	codexivo	github.com/urielcuriel/codexivo	LIVE	ISC	raw:README.md	2	prior
+non-en-es	educacion escuela aprendizaje	NO_BACKLINK	@z2h-academy/tutor			SEE LICENSE IN LICENSE			
+non-en-es	educacion escuela aprendizaje	NO_BACKLINK	@qoriva/platform-sdk			MIT			
+non-en-es	educacion escuela aprendizaje	CANDIDATE	cat-ching-md-links	github.com/arianajaramillo17/lim017-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	md-links-sylviagomez	github.com/sylviagomez/dev011-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	NO_BACKLINK	practica			ISC			
+non-en-es	educacion escuela aprendizaje	CANDIDATE	mita-dom	github.com/moonhuntercode/mita-dom	LIVE	SEE LICENSE IN LICENSE.md	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	@pipeworx/mcp-open-contracting	github.com/pipeworx-io/mcp-open-contracting	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	pbl-project-chronicler	github.com/d4vram369/pbl-project-chronicler	LIVE	MIT	raw:README.md	5	prior
+non-en-es	educacion escuela aprendizaje	CANDIDATE	opencode-menthor	github.com/juandacor/opencode-menthor	UNREACHABLE	MIT	both-legs-failed	2	prior
+non-en-es	educacion escuela aprendizaje	CANDIDATE	ysa-mdlinks	github.com/ysandysperez/scl018-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	@jozzer182/md-links	github.com/laurilugo/md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	mdlinks-dm	github.com/dmarinel/mdlinks	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	NO_BACKLINK	programa_para_hacer_horarios_escolares_full_88y			ISC			
+non-en-es	educacion escuela aprendizaje	NO_BACKLINK	g9d4-md-links			MIT			
+non-en-es	educacion escuela aprendizaje	CANDIDATE	aliciapalacios10-md-link	github.com/aliciapalacios10/mex008-fe-md-link	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	jackie-mdlinks	github.com/jackie2806/lim018-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	NO_BACKLINK	argentina-escuelas-secundarias			ISC			
+non-en-es	educacion escuela aprendizaje	CANDIDATE	@charlie.act7/jintia	github.com/charliecardenastoledo/jintia	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	mdlinks-areli10	github.com/arelia10/lim017-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-es	educacion escuela aprendizaje	CANDIDATE	tania-md-links	github.com/taniatenorio/mex008-fe-md-link	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	@t2-educacao/midas	github.com/t2-educacao/midas-ui	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	@g4-educacao/g4-apollo-design-system						
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	magicwords			ISC			
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	municipios-br	github.com/nataliasm23/icones-bandeiras-br-uf	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	md-links-sara-anita-sa	github.com/hommatech/mql-simplify	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	nmonalisa-md-links			ISC			
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	@thaisdury/mdlinks	github.com/thaisdurynek/sap004-md-links	UNREACHABLE	ISC	both-legs-failed	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	@foodx/escolar	github.com/food-x-technologies/escolar	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	sap004-md-links	github.com/lualuliz/sap004-md-links	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	md-links-pamela-dandolo	github.com/pamelitadandolo/sap011-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	thalita-carnicell-mdlinks	github.com/thalita-carnicell/sap010-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	FOREIGN_FORGE	md-links-eu-erika	git@github.com/euerika/SAP009-md-links		ISC			
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	md-links-laboratoria-gss	github.com/giselleschwab/sap009-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	alessandraalveslopes-mdlinks	github.com/alessandraalveslopes/sap010-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	sap003-md-links	github.com/jbockhorny/sap003-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	tharla-md-links			MIT			
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	md-links-carol-protasio	github.com/carolprotasio/sap010-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	dowload_ebok_design_de_aprendizagem_com_uso_de_canvas_by_flora_alves_e1hnp			ISC			
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	md-links-florahaus			MIT			
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	markdown-links-lib	github.com/milaroque/sap004-md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	FOREIGN_FORGE	md-links-ariane-vieira	git@github.com/VieiraAriane/SAP009-md-links		ISC			
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	md-links-daphnevilhar						
+non-en-pt	educacao escolar aprendizagem	CANDIDATE	md-links-kap	github.com/karinapedra/md-links	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	mdlinks-alinevieira			ISC			
+non-en-pt	educacao escolar aprendizagem	NO_BACKLINK	enablers-marista-ds			ISC			
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	@tataille/node-red-french-holidays	github.com/tataille/node-red-french-holidays	LIVE	Apache-2.0	raw:README.md	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	@mytil67/school-map	github.com/mytil67/school-map	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	api-ecoledirecte	github.com/louislegrain/api-ecoledirecte	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	@astratra/closure			MIT			
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	@lerma-corps/gestion-scolaire-client-ts	github.com/lerma-corps/gestion-scolaire-client-ts	UNREACHABLE	MIT	both-legs-failed	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	node-ecole-directe	github.com/androz2091/node-ecole-directe	LIVE	ISC	raw:README.md	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	@papillonapp/ed-core	github.com/papillonapp/papillon-ed-core	LIVE	GPL-3.0	raw:README.md	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	node-red-contrib-displayext-node			MIT			
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	gtfs-sqljs-calendar-hints	github.com/sysdevrun/gtfs-sqljs-calendar-hints	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	dowload_ebok_aikido_by_leroy_eric_leroy_agency_press_pygl7			ISC			
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	dowload_ebok_je_passe_mon_cap_patissier_en_candidat_libre_by_damien_duquesne_regis_garnaud_veunx			ISC			
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	ppft-cli	github.com/pipeframework/ppft	LIVE	MIT	raw:README.md	0	ZERO_PRIOR
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	dowload_ebok_maitre_eckhart_l_homme_a_qui_dieu_ne_cachait_rie_by_bernard_mcginn_gdeke			ISC			
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	dowload_ebok_mohammed_prophete_de_l_islam_by_malek_chebel_ybkjs			ISC			
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	dowload_ebok_eugenie_by_jean_des_cars_y22bn			ISC			
+non-en-fr	pedagogie scolaire enseignement	NO_BACKLINK	dowload_ebok_he_is_a_beast_t01_by_saki_aikawa_se87o			ISC			
+non-en-fr	pedagogie scolaire enseignement	CANDIDATE	universa-reports	github.com/aris2104/universa-reports	LIVE	MIT	raw:README.md	0	ZERO_PRIOR

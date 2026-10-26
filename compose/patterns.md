@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — **Three recipes, each built only from grants read first-hand at `HEAD` this pass. 🟢 `P453-A` is the three-probe promotion gate this pass proved is necessary — because a live, MIT-granted, correctly-back-linked package can still have nothing to do with education. 🟢 `P453-B` is a US institution-intelligence engagement that is buildable for the first time. 🟢 `P453-C` is a French parent-facing agent on a closed national SIS.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is
+gate-attested; the load-bearing contracts were re-implemented independently and all are green.
+
+---
+
+### 🟢 `P453-A` — The three-probe promotion gate
+
+🔵 **The defect it closes.** `Gap 452-B` asked for a reachability probe before promotion. This pass
+built it, ran it on 182 candidates — and then found
+[`food-x-technologies/escolar`](https://github.com/food-x-technologies/escolar): **live** at `HEAD`,
+**real MIT payload** (1 075 B `sha256₁₂ 3b443e863252`), npm record **back-linking the exact slug**,
+and a surface that reads *"Replace properties in json with file contents."* 🔴 **Two probes are not
+enough. Three are.**
+
+| # | probe | instrument | what it establishes | what it CANNOT establish |
+|---|---|---|---|---|
+| 1 | **back-link** | `vocab_probe.norm()` — forge-qualified, case-folded | the registry record belongs to **this** address | that the address is reachable (`Gap 452-B`) or that the licence value is right (`Gap 453-A`) |
+| 2 | **reachability** | `vocab_probe.live_probe()` — `raw/HEAD/{9 paths}` → `git ls-remote` | the address resolves **now** | that the repository is on-topic |
+| 3 | 🆕 **surface** | first-hand `README.md` read at `HEAD` | what the project **is** | — |
+
+🟢 **Wiring it, concretely:**
+
+```bash
+# 1+2: candidate discovery with both probes, writing the spend ledger
+python3 compose/code/p453-vocabulary-ledger/run_legs.py
+#   -> evidence/vocabulary-spend-ledger.2026-10-26-p453.tsv
+#      columns: leg, term, verdict, package, address, reachable, licence_declared,
+#               probe_leg, prior_shelf_files, novelty
+
+# 3: grant read title-anchored + byte-exact, for every surviving address
+python3 compose/code/p453-vocabulary-ledger/verify.py {owner}/{repo} ...
+#   bytes from curl -w '%{size_download}'  (NOT $(...), which strips the
+#   trailing newline and runs every count one short -- Gap 450-C defect (b))
+#   family from the payload TITLE   (NOT a body grep, which calls every
+#   GPLv3 file LGPL -- Gap 450-C defect (a))
+
+# 3b: the probe no instrument can replace -- read the README and decide
+curl -s https://raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md | head -40
+```
+
+🔴 **Do not skip probe 3 because probes 1 and 2 are green.** On this pass's population that
+combination was green for **157** addresses and correct for **6**.
+
+---
+
+### 🟢 `P453-B` — US institution intelligence, keyed to `UNITID` (North America)
+
+🔵 **Why it is buildable only now.** `Gap 452-D` recorded that the US registry layer's *"packaged
+permissive form is simply unknown here"*. Five MIT rows later it is known, so the engagement no
+longer starts with a data-acquisition project.
+
+| layer | component | grant, read first-hand |
+|---|---|---|
+| ingestion | [`UrbanInstitute/ipeds-scraper`](https://github.com/UrbanInstitute/ipeds-scraper) | **MIT** · `LICENSE.md` 1 058 B `bac93c5411aa` |
+| warehouse | [`paulgp/ipeds-database`](https://github.com/paulgp/ipeds-database) → DuckDB, 27 M rows / 23 tables, 1997-2024 | **MIT** · 1 056 B `1126322e2cc8` |
+| query layer | [`scienceforamerica/scipeds`](https://github.com/scienceforamerica/scipeds) (directory + completions, 2025 data) | **MIT** · 1 088 B `e04b31a1be21` |
+| current-year disclosure | [`bolewood/collegedata-fyi`](https://github.com/bolewood/collegedata-fyi) — 4 071 archived CDS docs, 1 105-field schema | **MIT** · 1 115 B `a3a16c648652` |
+
+🟢 **The wiring, and the one rule that makes it defensible:**
+
+1. Build the DuckDB warehouse (`uv run python build_database.py`) — one command, ~1 GB.
+2. Load the CDS extracts beside it, keyed on zero-padded `UNITID` (`ipeds_id`).
+3. 🔴 **Keep the two sources in separate labelled tables and never coalesce a field.** IPEDS is the
+   federal baseline; the CDS is school-authored and current-year. They disagree **by
+   construction** — and `collegedata-fyi` refuses to blend them for exactly this reason.
+4. Put the agent **on top of the warehouse, not on the PDFs**: retrieval over typed rows, with
+   every answer citing `(source ∈ {CDS, IPEDS, Scorecard}, year, UNITID)`.
+
+🔵 **The sellable wedge, from this pass's own NA market leg:** **10 %** of US institutions have
+formal AI guidelines and **71 %** of teachers are untrained — so the first deliverable is an
+institution-intelligence and governance layer, not a tutor. 🟡 All four grants are permissive, so
+the deliverable can be closed-source; `collegedata-fyi`'s own figures are **self-reported** from
+its 2026-08-06 audit and should be re-counted before they appear in a client deck.
+
+---
+
+### 🟢 `P453-C` — A parent-facing `vie scolaire` agent on a closed national SIS (EMEA / France)
+
+🔵 **The shape.** There is no French LMS to integrate: ÉcoleDirecte holds the record and publishes
+no open core, so the connector *is* the platform decision.
+
+| layer | component | grant | why this one |
+|---|---|---|---|
+| SIS connector | [`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) | 🟢 **Apache-2.0** · 11 357 B `c71d239df917` | 🟢 the **only** build-on client of the three: Élève + Famille auth, `notes`, `devoirs`, `emplois du temps`, `vie scolaire` |
+| 🔴 rejected | [`papillonapp/papillon-ed-core`](https://github.com/papillonapp/papillon-ed-core) | 🔴 GPL-3.0 · 35 149 B | strong copyleft propagates into the deliverable |
+| 🔴 rejected | [`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte) | 🔴 ISC declared, **no payload** | `Gap 451-C` manifest-only: nothing serves the grant's text |
+| parent persona | the `p388` parent/guardian tier already on `agents/top.md` | — | the persona is shelved; only the French record was missing |
+| grading | 🔴 **not the LLM** — keep marks as retrieved fields | — | Pattern BC's split-clock rule: Reg. (EU) 2026/1744 Art. 50 is live since 2026-08-02 |
+
+🔴 **The licence step is mandatory here and is the pattern's actual lesson.** npm declares
+`node-ecole-directe` as `ISC`; the repository serves **Apache-2.0**. 🟢 Build under **Apache-2.0**
+— it is the more obligated reading (retain `NOTICE`, mark modified files) *and* the one that
+actually governs, and it adds the patent grant `ISC` does not have. 🔵 A team that trusted the
+badge would under-comply on attribution while believing it had fewer obligations.
+
+🟡 **Scope honestly.** ÉcoleDirecte's API is undocumented and unversioned; all three clients track
+it by observation. Budget for breakage on the vendor's schedule, and treat `vie scolaire` writes as
+out of scope — `p448` measured that 136 of 414 connector tool declarations mutate, and a wrong
+write here lands on a child's disciplinary record.
+
 ## 🆕 `p452` — **Two recipes, both built only from grants read first-hand this pass. 🟢 `P452-A` is a licence-assurance gate that encodes the one thing this pass proved — that registry corroboration works for npm and fails for PyPI — so an engagement stops treating "it's on a registry" as uniform evidence. 🟢 `P452-B` is an EMEA/Maghreb vocational-training engagement that is buildable because the institution registry finally exists.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is

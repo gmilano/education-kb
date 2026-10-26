@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — reads 2026-10-26, commit 2026-10-26 — **🔴 The GitHub-trending channel nilled for education a tenth consecutive window, and this pass can finally say WHY with a measurement rather than a shrug: the channel is not thin, the QUERY VOCABULARY is exhausted. Eight identically-worded legs returned 13 tokens and zero at zero prior hits; ten new-vocabulary legs on the same registry channel returned 182 candidates and 157 at zero.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Append-only: this
+section is added at the top; every prior section is kept below it, byte-identical (verified by
+byte containment this pass).
+
+### 🔴 The prescribed trending leg, graded token by token
+
+| token returned | prior shelf files | at zero? |
+|---|---|---|
+| `pguso/agents-from-scratch` | 183 | 🔴 no |
+| `rohitg00/ai-engineering-from-scratch` | 197 | 🔴 no |
+| `MadsLorentzen/ai-job-search` | 54 | 🔴 no |
+| `h9-tect/AI-Roadmaps` | 16 | 🔴 no |
+| `Hermes Agent` | 135 | 🔴 no |
+| `AutoGPT` | 13 | 🔴 no |
+| `openeducat` · `openSIS` · `Kuali` | 412 · 317 · 204 | 🔴 no |
+| `LearnUpon` · `Ednova` | 37 · **8** | 🔴 no |
+
+🔵 **`Ednova` at 8 files is the control that makes the nil attributable.** It is the thinnest token
+of the thirteen — the one that would expose a coverage hole first if the channel were simply
+under-read — and it is already carried. 🔴 **Ninth consecutive nil, and `p452` predicted it with a
+mechanism.** The prescribed legs also returned only aggregator pages and vendor market estimates
+for the market question: no primary, no repository, no licence.
+
+### 🟢 What the new vocabulary returned, per leg — the ledger `Gap 452-A` asked for
+
+🔵 Full ledger:
+[`evidence/vocabulary-spend-ledger.2026-10-26-p453.tsv`](../evidence/vocabulary-spend-ledger.2026-10-26-p453.tsv).
+🟢 **This table is the point of the instrument: `p454` can read which vocabularies are spent, and
+at what yield, instead of re-spending them blind.**
+
+| leg | candidates | live | at zero prior hits | education assets after the surface read | precision |
+|---|---|---|---|---|---|
+| 🟢 `non-en-fr` | 9 | 7 | 7 | 🟢 **3** (ÉcoleDirecte cluster) | 🟢 **43 %** — best of ten |
+| 🟡 `credentialing` | 14 | 13 | 12 | 🟡 **1** education-facing + 6 substrate | 🟡 8 % |
+| 🟡 `non-en-pt` | 14 | 13 | 13 | 🟡 **2** (`t2-educacao/midas-ui`, `municipios-br`) | 🟡 15 % |
+| 🟡 `non-en-es` | 18 | 14 | 12 | 🟡 **0** build-on (1 org-placed generic) | 🔴 0 % |
+| 🔴 `assessment` | 21 | 18 | 14 | 🔴 **0** — and one AGPL-3.0 mislabelled MIT | 🔴 0 % |
+| 🔴 `special-education` | 25 | 24 | 23 | 🔴 **0** | 🔴 0 % |
+| 🔴 `vocational` | 22 | 20 | 19 | 🔴 **0** | 🔴 0 % |
+| 🔴 `pedagogy` | 20 | 19 | 19 | 🔴 **0** | 🔴 0 % |
+| 🔴 `early-years` | 20 | 19 | 19 | 🔴 **0** — `kindergarten` is an authorization library | 🔴 0 % |
+| 🔴 `curriculum` | 19 | 19 | 19 | 🔴 **0** — 19 of 19 are text-**alignment** libraries | 🔴 0 % |
+| **total** | **182** | **166** | **157** | **6** | **3.3 %** |
+
+🔴 **The headline finding, stated against the number that tempts the opposite reading: 157
+addresses at zero prior hits yielded 6 education assets.** Novelty is not relevance, and the
+mechanism is **homonymy** — "standards *alignment*", "*early* years", "*escolar*" are heavily
+spent words outside education, and npm's text ranking has no topic model.
+🟢 **Operational rule for `p454`: prefer vocabulary whose education sense is UNAMBIGUOUS** — a
+named system of record (`ecoledirecte`, `pronote`, `udise`, `siiau`), a named standard (`QTI`,
+`OneRoster`, `xAPI`, `Open Badges`), or a non-English word with no software homonym. 🔴 The three
+zero-precision legs that look most promising in English (`pedagogy`, `special-education`,
+`vocational`) are the ones to stop spending.
+
+### 🔴 Reachability, measured again on a bigger population — and `p452`'s 80 % was a small-n artefact
+
+🔴 **16 of 182 candidates (8.8 %) back-link an address that is `404` at `HEAD` on every probed
+path.** 🟢 Five are the exact addresses `p452` named in `Gap 452-B` — `iep-ui/iep-ui`,
+`sanity-labs/ai-literacy-framework`, `gregmontalvo/badgie`, `hablala/hablala`,
+`juandacor/opencode-menthor` — **recovered independently by a different instrument on a different
+candidate set**, which is the strongest form this base's reproductions take.
+🔵 **But the RATE is corrected: `p452` measured 6 of 10 (80 %) and called it an 80 % rejection
+rate. On 182 candidates it is 8.8 %.** The 80 % was a property of a ten-row hand-picked set, not
+of the channel. 🟢 The standing consequence is unchanged and now better founded: a back-link proves
+an address *existed*, never that it is reachable now, and a promotion needs both probes.
+🆕 New instances this pass: `moxn-ai/moxn`, `litmus-team/litmus`, `youssefalmia/edpire-web`,
+`telebort/question-banks`, `agentictrustlabs/agenticprimitives`, `ericm1018/skillfm`,
+`charliecardenastoledo/jintia`, `mytil67/school-map`,
+`lerma-corps/gestion-scolaire-client-ts`, and `gitlab.com/europeum/public` — the last being a
+**DC4EU vocational-microcredential** package on a non-GitHub forge, and the only EBSI-adjacent
+address these shelves have seen.
+
 ## 🆕 `p452` — reads 2026-10-26, commit 2026-10-26 — **🔴 The GitHub-trending channel returned ONE education-vertical repository this window and this base ALREADY CARRIES IT, graded two licences deep. 🟢 The useful finding is not the repo: it is that a third-party trending digest presented a 451-pass-old shelf entry as new, which is what an unverified "trending" row looks like from the inside.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Append-only: this

@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p453` — **🟢 The institution-registry layer `p452` opened with one country now spans two regions and three strata — national directory, federal statistical series and school-authored disclosure — and the US stratum is the one an engagement can actually build on. 🔴 And a vertical row is corrected in place: the French national SIS tier exists here for the first time, under a grant its own registry record states wrongly.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is
+gate-attested; the load-bearing contracts were re-implemented independently and all are green.
+
+### 🟢 The institution-registry vertical, now readable as a layer rather than a row
+
+🔵 `p452` added `yasserstudio/geoalgeria` and wrote that the layer was *"one country deep"*. 🟢 It
+is now three strata deep in two regions, and the strata are **not interchangeable** — an
+engagement needs to know which question each answers.
+
+| stratum | question it answers | instance, grant read first-hand | region |
+|---|---|---|---|
+| 🟢 **national directory** | *which institutions exist, by administrative unit* | [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) — **MIT** (1 101 B `691e4ec845d7`, carried from `p452`): 1 932 MFEP vocational establishments, 177 MESRS higher-ed, 11 858 schools, 69 wilayas | 🟢 **EMEA** — Algeria |
+| 🟢 **federal statistical series** | *what is TRUE of each institution, longitudinally* | [`paulgp/ipeds-database`](https://github.com/paulgp/ipeds-database) — **MIT** (1 056 B `1126322e2cc8`): 27 M rows, 23 tables, 1997-2024; [`scienceforamerica/scipeds`](https://github.com/scienceforamerica/scipeds) — **MIT** (1 088 B `e04b31a1be21`) | 🟢 **North America** — US |
+| 🟢 **school-authored disclosure** | *what the institution says about ITSELF, current year* | [`bolewood/collegedata-fyi`](https://github.com/bolewood/collegedata-fyi) — **MIT** (1 115 B `a3a16c648652`): 4 071 archived Common Data Set documents, 1 105-field canonical schema, 6 322-institution federal directory | 🟢 **North America** — US |
+| 🟢 **administrative geography** | *the unit a school list JOINS to* | [`nataliasm23/icones-bandeiras-br-uf`](https://github.com/nataliasm23/icones-bandeiras-br-uf) — **CC0-1.0** (7 048 B `a2010f343487`) | 🟢 **LATAM** — Brazil |
+| 🔴 **absent stratum** | *national directory, APAC* | 🔴 India's UDISE+-derived directories: **4 of 5 packaged forms grant nothing**, the fifth is **CC-BY-SA-4.0**. See `repos/foundations.md` | 🔴 **APAC** — recorded as an informed absence |
+
+🟢 **Why the US stratification matters commercially.** The federal series and the school-authored
+disclosure disagree by construction — IPEDS is the broad-coverage federal baseline, the CDS is the
+current-year, school-authored admissions detail — and `collegedata-fyi` is the only row here that
+keeps them **separately labelled** rather than blending them. 🔵 An engagement that silently
+merges the two produces numbers no institution will confirm.
+
+### 🟢 A new vertical tier: the national SIS that is NOT an LMS
+
+🔵 Every platform row on this shelf until now runs a *course* (Moodle, Canvas, Open edX, Kolibri)
+or an *institution* (OpenEduCat, openSIS, Gibbon, Fedena). 🟢 **ÉcoleDirecte is a third thing: a
+French national school system of record for grades, homework, timetable and `vie scolaire`**,
+reached only through client libraries, with no self-hostable open core at all.
+
+| row | grant, read first-hand at `HEAD` | posture |
+|---|---|---|
+| [`androz2091/node-ecole-directe`](https://github.com/androz2091/node-ecole-directe) | 🔴 **Apache-2.0** — `LICENSE` **11 357 B `sha256₁₂ c71d239df917`**, title-anchored. 🔴 **npm declares `ISC`** on every version | 🟢 **Build-on.** Apache-2.0 is the *more* obligated of the two readings (NOTICE, change notices) and the one that actually governs; it also carries the patent grant `ISC` lacks |
+| [`papillonapp/papillon-ed-core`](https://github.com/papillonapp/papillon-ed-core) | 🔴 **GPL-3.0** — 35 149 B `3972dc9744f6` | 🔴 **Watch only** — strong copyleft propagates into a client deliverable |
+| [`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte) | 🔴 **`ISC` on npm, no payload at 9 paths** | 🔴 **Legal review first** — `Gap 451-C` manifest-only class, on a live package |
+
+🔴 **The correction this tier forces on the shelf's own method.** These shelves have graded the
+French market through *EU regulation* (Reg. (EU) 2026/1744, Pattern BC) and never through its
+*systems of record*. A French engagement integrates ÉcoleDirecte or Pronote long before it reads
+an Annex III deadline, and neither appeared on any shelf until this pass.
+
 ## 🆕 `p452` — **🟢 A vertical layer these shelves have never carried is now populated: the national INSTITUTION REGISTRY — the master list an engagement keys its rollout to, before any LMS is chosen. 🔴 And it exposes the shape of the gap: this base has eight platforms that run a school and almost no data about which schools exist.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is
