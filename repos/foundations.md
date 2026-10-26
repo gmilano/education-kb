@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` — **🟢 THREE substrate rows from twenty novel addresses, and all three are REGISTRIES OR LANGUAGE SUBSTRATE rather than models or frameworks. 🔴 One of them carries a defect class this base has never named: a `LICENSE` that states an INTENTION to license rather than granting anything.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
+below is gate-attested. 🔵 Payload figures below are **raw bytes** (the `p464` convention); see
+`Gap 465-A` on [`agents/top.md`](../agents/top.md) for why that has to be said out loud.
+
+### 🟢 Foundation rows added this pass
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | why it is substrate and not an application |
+|---|---|---|---|---|---|
+| [`stanleyHayes/ghanaschools`](https://github.com/stanleyHayes/ghanaschools) | 1 | 2026-09-01 | 🟢 Apache-2.0 · `0be2dbbe5781` · 11 355 B | **EMEA** · Ghanaian institutions, `ghana` topic | source-linked registry of Ghanaian education institutions in Go, with **stable identifiers and field-level provenance**. 🟢 **It declares its own exclusions**: "no personal, student or quality data" — so it is an identifier spine a client system can join against without inheriting a privacy surface. 🟢 Framed as digital public infrastructure, not a product; HEAD `14e953e9386d` |
+| [`Open-Syria/data-universities`](https://github.com/Open-Syria/data-universities) | 4 | 2026-06-28 | 🔴 **see defect below** · `76f7100206a3` · 864 B (`LICENSE.md`) | **EMEA** · Syrian higher education | open dataset of Syrian universities — Arabic *and* English names, websites, locations, identifiers, logos, source attribution, served as CSV/JSON with an API shape. 🟢 The only first-hand instance of Syrian education data on this base; HEAD `b886b54de41d` |
+| [`boi-network12/igboscript`](https://github.com/boi-network12/igboscript) | 12 | 2025-09-16 | 🟢 MIT · `ad3d62daf713` · 1 082 B | **EMEA** · Igbo language, Nigeria | JavaScript transpiler driven by **Igbo keywords**. Substrate rather than courseware: it is a language layer other teaching material is written *in*. 🔵 **It is also the highest-starred repository in the entire African education census below** — 12★ is the ceiling, and this is it; HEAD `698b69afbf67` |
+
+### 🔴 The defect: a licence payload that states an INTENTION instead of granting
+
+🔵 `Open-Syria/data-universities` splits data from code, which is correct practice for a dataset.
+🔴 **But the operative sentence is conditional.** Read first-hand at `b886b54de41d`:
+
+> "Released data artifacts and documentation **are intended to be published under**: `Creative Commons Attribution 4.0 International (CC BY 4.0)`"
+
+🔴 **"Intended to be published under" is not a grant.** It describes a plan. Nothing in the payload
+conveys any permission to the reader, and no present-tense licensing verb appears. A
+classifier keyed on the string `CC BY 4.0` grades this row **CC-BY-4.0 and clean**; a lawyer
+grades it **unlicensed with a stated aspiration**. 🟢 The row is therefore carried as
+**substrate with its grant marked unsettled**, not as CC-BY-4.0 supply.
+
+🔵 **Why this is a class and not one repository.** This base's grant reader — every version of it
+across `p228`, `p411`, `p455` — anchors on the licence **title block** and on family/version
+strings. An anchor that reads *which licence is named* cannot see *whether it was granted*. Both
+`NOASSERTION` (`Gap 461-B`) and this case defeat it, in opposite directions. Registered as
+**`Gap 465-E`**.
+
+### 🔵 What the recency channel did NOT return, stated so the shape is visible
+
+🔴 **Zero models, zero frameworks, zero datasets-at-scale.** Twenty novel addresses, and the
+substrate yield is two registries and a transpiler. 🟢 This reproduces `p464`'s finding ("the
+recency channel returns APPLICATIONS and SKILLS, not substrate") for a second pass, now with a
+larger denominator — and it means the foundations shelf cannot be grown by recency discovery
+alone. 🟡 `Gap 465-F`: the substrate legs need a channel keyed on **package registries**
+(PyPI/npm/HF) rather than on repository recency, which `p393`'s PyPI cache already half-builds.
+
+
 ## 🆕 `p464` — **🔴 ONE foundation row from twelve novel addresses, and the 1-of-12 is itself the finding: the recency channel returns APPLICATIONS and SKILLS, not substrate. 🟢 The one row it did return is the first citation-AUDIT component this base has carried, which is the piece every "show what the answer rested on" clause in `intel/market.md` actually needs.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every

@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` · 2026-10-26 — **🔴 THE PRESCRIBED WEB CHANNEL IS A NIL FOR THE SEVENTH CONSECUTIVE PASS, AND THIS HOUR IT IS A NIL WITH A FULL DENOMINATOR: 24 named facts graded against this base, 22 of them ALREADY CARRIED. 🟢 The two that were not are the pass's whole market yield, and one of them is a licence form rather than a market fact.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
+below is gate-attested.
+
+### 🔴 The saturation measurement, with its denominator published
+
+🔵 Eight legs were run (one global, four regional, three national-system). Every named fact they
+returned was grepped against all eight shelves **before** being written anywhere:
+
+| fact returned by the web legs | already on this base? |
+|---|---|
+| EU `Regulation (EU) 2026/1744` Digital Omnibus · Annex III education → **2027-12-02** | 🔴 carried (39 files, since `p380`) |
+| EU Art. 50 chatbot transparency live **2026-08-02** | 🔴 carried |
+| EU Art. 4 AI-literacy duty since **2025-02-02** | 🔴 carried |
+| EU Art. 5(1)(f) emotion-recognition prohibition in education | 🔴 carried |
+| Korea AI Basic Act | 🔴 carried (38 files) |
+| Korea AI textbooks stripped of official status | 🔴 carried (47 files on `textbook`) |
+| India AI + Computational Thinking mandatory from **Class 3**, NEP 2020 | 🔴 carried (35 / 15 files) |
+| China AI compulsory from age 6; Beijing 8 h/yr; Guangdong tiering | 🔴 carried (44 / 10 files) |
+| UAE AI compulsory KG–G12, standalone subject from 2026-27 | 🔴 carried (38 files) |
+| Saudi **SDAIA** AI risk framework | 🔴 carried (16 files) |
+| Brazil **PL 2338/2023**, education as high-risk | 🔴 carried (31 files) |
+| Peru the only enacted LATAM AI law | 🔴 carried (55 files) |
+| Chile Law **21.719** effective-date shift | 🔴 carried (23 files) |
+| Mexico **INFOTEC/TecNM** 10 000 specialists | 🔴 carried (15 files) |
+| Ohio / Tennessee district-policy mandates; Oklahoma 2027-28 | 🔴 carried (38 / 17 / 49 files) |
+| California **A.B. 1159** student-data training ban | 🔴 carried (37 files) |
+| Virginia **S.B. 394**, Maryland S.B. 720 | 🔴 carried (10 files) |
+| Alabama procurement data-usage-restriction clause | 🔴 carried (20 files) |
+| NYC AI Playbook | 🔴 carried (10 files) |
+| 🟢 **Nigeria: FG + NUC push AI adoption with tougher oversight; a national university AI policy announced; Minister of State Suwaiba Ahmad, NUC 2026 retreat, Abuja, 2026-10-13** | 🟢 **NOVEL** — `Suwaiba` returns **0** files |
+| 🟢 **`WAQF` as a grant form on an education repository** | 🟢 **NOVEL** — `waqf` returns **0** files |
+
+🔴 **22 of 24 carried. The channel's market yield this hour is one fact.** 🔵 That is the seventh
+consecutive measurement (`p458` called it the sixth) and the denominator is now large enough that
+the conclusion should be acted on rather than re-measured: **the prescribed region-word web legs
+are exhausted for this industry.** What is *not* exhausted is the national-system supply leg —
+which returned 20 novel addresses this hour (see [`repos/trending.md`](../repos/trending.md)).
+
+### 🟢 The one novel market fact, placed
+
+| region | instrument | what is new |
+|---|---|---|
+| **EMEA** | 🟢 **Nigeria — National Universities Commission** | At the NUC's 2026 retreat in Abuja on **2026-10-13**, Minister of State for Education **Suwaiba Ahmad** pressed universities to accelerate AI and digital adoption *while tightening regulatory compliance, transparency and accountability*, and reporting the same week says Nigerian universities are **to receive a national AI policy**. 🔴 **Contents and timeline are NOT confirmed** by any source in this leg, and this is carried as an announced instrument, not a published one. 🟡 Context already on this base: a 2025 study found **no HEI in Ghana or Nigeria** with a formal, publicly accessible AI policy — so this would be the first. |
+
+### 🔴 Legs that returned nothing relevant, written down rather than left silent
+
+| leg | result |
+|---|---|
+| 🔴 **Kenya** (intel) | **nil.** No Kenyan HE AI policy, regulation or adoption fact returned on any leg. 🟢 But Kenyan *supply* exists and is MIT (`Civicom-Aid/matokeo-rms`) — intel and supply are nil on opposite sides. `Gap 465-D` prescribes the named-instrument retry (Commission for University Education; Ministry of Education ICT policy). |
+| 🟡 **Gulf beyond UAE/Saudi/Bahrain** | **nil.** No education-specific ministry instrument returned for Kuwait, Qatar or Oman. The GCC-level item that did return is procedural: ministers approved a Strategic Plan for Innovation and Entrepreneurship in Higher Education, with a **Joint Action in Education plan for 2027–2032 still in preparation**. |
+| 🔴 **LATAM supply** (novelty) | **nil for a second pass.** `Gap 464-B` flagged that the clearest LATAM opportunity — rubric-based assignment feedback — had no granted row. 🟢 **A permissive row for that shape now exists** (`erlan775959-code/markwise`, MIT, multilingual feedback), 🔴 **but it is not LATAM-placed** — it has no regional basis at all and is shelved `Global`. The LATAM-*specific* nil stands. |
+
+### 🟡 Vendor-source hygiene, because this hour's legs were thick with it
+
+🔴 Several legs returned market sizes from vendor and SEO pages that disagree by more than an order
+of magnitude: AI-in-education at **$6.4 B (2025)** on one page against **$6.9 B (2025) → $41 B
+(2030)** on another, with mid-2030s projections spanning tens of billions to **> $100 B**. 🔵
+Per `p455`'s precedent — which retired "134 bills / 31 states" once three trackers disagreed by
+2.6× — **no figure from that set is carried onto any shelf.** 🟢 The one analyst-house claim worth
+recording is directional and attributed: **Futuresource Consulting** reports K-12/HE AI moving from
+experimentation to structured implementation, and projects AI-capable devices at **~15 % of
+institutional PC shipments in 2026**, rising toward half by 2030. 🟡 Attributed to one house, not
+corroborated.
+
+### 🔵 Append-only note
+
+🟢 Nothing above replaces a prior section; `p464` and its history follow unchanged below.
+
+
 ## 🆕 `p464` · 2026-10-26 — **The recency channel is reproduced by a second, independent operator and it holds: 20 candidates on one `created:>2026-06-01` slice, 12 absent from this entire base, 7 granted. 🔴 But 8 of 20 were ALREADY CARRIED, including a 2 500★ row — so the channel's novel yield is falling as the base saturates it, and that rate is now measured rather than assumed.**
 
 🔵 **Record posture.** This file is append-only; every section below is untouched. The sell-shelf

@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` — **🟢 FOUR copyleft platforms added, and the pass's value is the FORM they take: a national OS distribution, a school report system, an offline-first platform and a subjective-question marker. 🔴 None is permissive, so all four are deployment-or-fork decisions, not build-on components — which is exactly why they belong here and not on `agents/top.md`.**
+
+🔴 **`make hooks` DENIED** — twelfth denial in thirteen passes; nothing below is gate-attested.
+🔵 Payload figures are **raw bytes**; see `Gap 465-A`.
+
+### 🟢 Platform rows added this pass
+
+| platform | ★ | created | grant · `sha256₁₂` | region · basis | what it is, and what adopting it costs |
+|---|---|---|---|---|---|
+| [`princebilogocode/naabiga-os`](https://github.com/princebilogocode/naabiga-os) | 1 | 2026-07-28 | 🔴 GPL-3.0 · `3972dc9744f6` · 35 149 B | **EMEA** · Burkina Faso, francophone | **Naabiga OS (N-OS)** — a Linux LTS distribution built by and for Burkinabè users, scoped explicitly at developers, office work, **higher education and public administration**, tied to ICONEDOR and Université Aube Nouvelle (Bobo-Dioulasso). 🟡 1★ and 22 open issues: this is a *national-sovereignty signal*, not a shippable platform. 🟢 Its payload is **stock GPL-3.0** — raw 35 149 B · `3972dc9744f6` — which is what settled `Gap 465-A`; HEAD `adc4460d4fac` |
+| [`Civicom-Aid/matokeo-rms`](https://github.com/Civicom-Aid/matokeo-rms) | 1 | 2026-04-24 | 🟢 MIT · `10ed6c1f9bb2` · 1 081 B | **EMEA** · Kenya, `kenya` topic | Django academic **report management** system for schools, web and desktop. 🔵 Shelved here rather than on `agents/top.md` because it is a system of record, not an agent. 🟢 **It is the whole of this pass's Kenya evidence** — the Kenya *intel* leg returned nothing at all (`Gap 465-D`), while Kenya *supply* resolves and is permissively granted; HEAD `9649f7cafb25` |
+| [`KajarnakLOKOSSOU2008/edubox`](https://github.com/KajarnakLOKOSSOU2008/edubox) | 1 | 2026-09-04 | 🟢 MIT · `1196398ae2f6` · 1 081 B | **EMEA** · Benin, francophone | **offline-first** education platform for low-connectivity environments, declared a prototype/MVP by Kajarnak Tech. 🟡 Carried with `Gap 465-B` attached: its owner published a second repository **two seconds later**, and that sibling is ungranted; HEAD `506a239775dd` |
+| [`Maicarons/RubricSpan`](https://github.com/Maicarons/RubricSpan) | 1 | 2026-09-10 | 🔴 AGPL-3.0 · `0d96a4ff68ad` · 34 523 B | **APAC** · zh README, Chinese curriculum | 阅微 — **Chinese subjective-question marking**: a teacher model for humanities free-text scoring, local, explainable, with a **dual backend (Rust + GPU online / WASM offline)**. 🔴 AGPL-3.0 makes a hosted SaaS deployment a source-disclosure event; the WASM offline path is the one that avoids it. 🟢 Its payload is **byte-identical to `Vacademy-io`'s AGPL-3.0**, which is what refuted this pass's "two AGPL variants" reading before publication; HEAD `e9299b4c678f` |
+
+### 🔵 A census note the vertical shelf should carry
+
+🟢 **The marking/assessment tier that actually exists is copyleft or trivial.** Graded first-hand
+this pass across the `topic:grading topic:ai` population (32 repositories): the two with
+meaningful adoption are **GPL-3.0** (`five-plus-one/AI-Marker-Suite`, 104★) and **AGPL-3.0**
+(`ai-lingnan/econai-agent-platform`, 39★ — both already carried), the best-designed novel one is
+**AGPL-3.0** (`RubricSpan`, above), and **every permissive one is at 3★ or below**
+(`AutoGrader-Agent` 3★, `markwise` 0★ — both on [`agents/top.md`](../agents/top.md)).
+
+🔴 **So the choice a marking engagement faces is real and it is a fork in the road, not a
+preference**: adopt proven copyleft and accept the disclosure boundary, or build on permissive
+code that has no adoption behind it. 🟢 That is a sellable finding precisely because it is not
+flattering to either option.
+
+
 ## 🆕 `p464` — **🔴 A STANDING CLAIM ON THIS BASE IS REFUTED BY THIS BASE'S OWN SHELF: `intel/market.md` says "of ten carried platforms exactly one — Kolibri, MIT — is freely redistributable", while `agents/top.md` carries `OpenOLAT/OpenOLAT` at **Apache-2.0** in a cell that calls it "the only Apache-2.0 one". 🟢 Both re-read first-hand this hour; the mechanism of the error is identified and it is a CENSUS that spans two shelves and is computed from one. 🔴 And an external roundup's "Frappe LMS is MIT" is refuted at the payload.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every

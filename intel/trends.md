@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` · 2026-10-26 — **🟢 A TREND THIS BASE HAS NOT STATED, AND MEA IS THE PROOF: mandate intensity and open-supply depth are INVERSELY related. The region with the world's most aggressive curriculum mandate (UAE, AI from kindergarten) has the emptiest open layer this base has ever measured (African education ★ ceiling = 12). 🔴 And a methodological trend that now outweighs the market ones: this base's own measuring instruments are failing more often than its sources are.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
+below is gate-attested.
+
+### 🟢 `T1` — Mandate intensity and open supply are inversely related
+
+🔵 Placed side by side for the first time this pass:
+
+| region | mandate depth | open-supply depth (first-hand ★ ceiling) |
+|---|---|---|
+| **MEA** (within EMEA) | 🟢 **highest** — UAE AI compulsory KG–G12, standalone subject 2026-27 | 🔴 **lowest** — 12 (Africa), 6 (Arabic) |
+| **APAC** | 🟢 high — China from age 6; India from Class 3 (2026-27) | 🟡 moderate — Chinese-language marking and tutoring supply exists, mostly copyleft |
+| **EMEA (EU-27)** | 🟡 restraint-shaped — prohibition live, high-risk deferred to 2027-12-02 | 🟢 deepest — the AGPL/GPL LMS estate plus post-Omnibus compliance tooling |
+| **North America** | 🔴 no federal mandate; state guidance + district-policy duties | 🟢 deep but commercial-leaning |
+| **LATAM** | 🔴 lowest — Peru only enacted law; Brazil pending | 🔴 **novelty nil for two passes** |
+
+🟢 **Why it matters commercially:** a mandate creates obligation without creating components. The
+regions that *must* teach AI are the regions with least to build on — so MEA and LATAM engagements
+are **import-and-localise**, while EU-27 engagements are **compose-and-comply**. Those are
+different service lines, not different clients.
+
+### 🔴 `T2` — Instrument failure now outruns source failure on this base
+
+🔵 Count this pass: **one** novel market fact from the prescribed web channel, against **four**
+distinct instrument defects found and published — this pass's own newline-stripping bug
+(`Gap 465-A` nearly published a phantom byte-variant), the two-convention payload-size
+inconsistency between `p455` and `p464`, a `LICENSE` that states intent rather than granting
+(`Gap 465-E`), and a template detector blind to same-owner batches (`Gap 465-B`). 🔴 **The base is
+now learning more per pass about its own measuring apparatus than about education markets.** 🟢
+That is not a failure — it is what saturation looks like from the inside, and it is the signal to
+move the hour elsewhere (see the rotation note below).
+
+### 🟢 `T3` — "Permissive" and "adopted" have separated in the assessment tier
+
+🔵 Measured first-hand across `topic:grading topic:ai` (32 repositories): everything with adoption
+is copyleft (GPL-3.0 at 104★, AGPL-3.0 at 39★), everything permissive is pre-adoption (3★, 0★).
+🔴 So in marking and feedback — the highest-demand education-AI function in every region on
+[`intel/market.md`](market.md) — **there is no permissive, proven option.** 🟢 The trend to watch is
+whether the permissive tier (`markwise`, `AutoGrader-Agent`) accretes stars, because that is the
+leading indicator for whether assessment work stops being a copyleft decision.
+
+### 🟢 `T4` — Deterministic-first is becoming the design norm in graded AI
+
+🔵 Both permissive marking rows added this pass do the same structural thing without sharing code
+or authors: **they keep the model out of the parts that must be defensible.**
+`omerfarooq223/AutoGrader-Agent` does *all* arithmetic in Python (totals, deductions, capping) and
+resolves student identity from a roster before ever parsing content;
+`erlan775959-code/markwise` **verifies in code that every quoted piece of evidence actually occurs
+in the student's work** and flags invented evidence, plus attempts to manipulate the grader. 🟢
+Convergent design from unrelated authors is a trend rather than a coincidence, and it is the
+pattern a high-stakes education client can actually pass an audit with.
+
+### 🟡 `T5` — Privacy tooling is arriving client-side, ahead of policy
+
+🔵 `oas114/EduShield` (MIT, Taiwan) masks student data **in the browser before it reaches a hosted
+model** and restores it after — and its own README declines to claim legal compliance. 🔵 This is
+the first permissive component on this base that answers North America's procurement-clause turn
+(Alabama's data-usage restriction, California's A.B. 1159) even though it was written for a
+different jurisdiction's statute. 🟢 **Jurisdiction-portable privacy plumbing is the trend**; the
+policy citations are local, the mechanism is not.
+
+### 🔴 `T6` — The rotation itself is the largest finding on this base, and it is unchanged
+
+🔴 `p459` measured that **10 of 12 industry KBs had no commit since 2026-08-01** while education
+took **458 passes** in the same window, and wrote *"This pass advances the rotation."* 🔴 **It did
+not persist.** Read first-hand this hour, `globant-kb/rotation.json` still carries
+`{"next": 8, "last_updated": "2026-08-02", "last_industry": "technology"}` — **index 8 for 85
+days.** 🔵 The likely mechanism, named so it can be fixed rather than re-attempted: passes edit the
+rotation inside a working copy whose push to `globant-kb` does not land on the branch the scheduler
+reads. 🟢 This pass advances it **and reports the branch it landed on**, so the next operator can
+verify rather than assume.
+
+
 ## 🆕 `p464` · 2026-10-26 — **🔴 "Regulation diverged by region" (`p463`) is TRUE BUT TOO COARSE: it also diverged by DUTY TYPE inside a single region, and EMEA is the proof — a live prohibition since 2025-02-02 sitting under a high-risk regime deferred to 2027-12-02. 🟢 And a trend this base has not stated: in 2026 education-AI law became a DEMAND GENERATOR, not only a constraint — three of this hour's four regional instruments oblige institutions to adopt, promote or govern AI rather than to restrict it.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every

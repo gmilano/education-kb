@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` · 2026-10-26 — **🟢 `Gap 463-D` IS CLOSED WITH A CENSUS. The Middle East and Africa did not "return nothing" because the regions are empty — they return 69 repositories, and the finding is the CEILING: the single most-starred African education repository on GitHub has 12 stars, and the most-starred Arabic one has 6. Supply exists in COUNT and is absent in SCALE, and those are different nils.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
+below is gate-attested. 🔵 Payload figures are **raw bytes**; see `Gap 465-A` on
+[`agents/top.md`](../agents/top.md).
+
+### 🟢 What `Gap 463-D` asked for, and what it actually returned
+
+🔵 `Gap 463-D` (registered by `p464`) read: *"The Middle East and Africa returned nothing on any
+EMEA leg — EMEA's evidence here is EU-27 + UK + Germany only. Run legs keyed on named national
+systems rather than on the region word."* 🟢 **Done, and the prescription was right** — the region
+word returns nothing while language and country keys return a population:
+
+| leg (first-hand, MCP `search_repositories`) | repositories returned | ★ ceiling | ★ of the median row |
+|---|---|---|---|
+| 🟢 `topic:africa topic:education` | **61** | **12** (`boi-network12/igboscript`) | **1** |
+| 🟢 `topic:arabic topic:education` | **8** | **6** (`shakir-abdo/ch32v003-journey`) | **4** |
+| 🔴 `education arabic curriculum AI tutor stars:>5 pushed:>2026-06-01` | **0** | — | — |
+
+🔴 **The third row is the one a previous pass would have published as the whole answer.** A
+conjunctive query with a star floor of 5 returns a flat zero across the entire Arabic education
+corpus — not because the corpus is empty, but because **almost nothing in it clears 5 stars**. 🔵
+That is how "MEA returned nothing" was manufactured for nine passes: *the floor was above the
+ceiling.*
+
+### 🟢 The measurement, stated as the sellable fact
+
+🔴 **61 African education repositories; 1 of them has ≥ 12 stars; the median has 1.** Of the 61, the
+ones with any engineering substance are nation-scoped civic infrastructure, not AI products:
+registries (`ghanaschools`, Ghana), report systems (`matokeo-rms`, Kenya), offline-first platforms
+(`edubox`, Benin), a national Linux distribution (`naabiga-os`, Burkina Faso), virtual science labs
+(`AfriLab`), and exam-prep apps for national examinations (`AfridemiQ`, Chad — **ungranted**).
+
+🟢 **Two independent channels agree, which is why this is a finding and not a sampling artefact.**
+The supply census above says the African/Arab open layer is individual-scale. A **peer-reviewed
+2026 systematic review of open educational resources in the GCC** ([Open Praxis
+18(2)](https://openpraxis.org/articles/10.55982/openpraxis.18.2.1186)) independently reports that
+**none** of the studies or grey literature it reviewed examined AI's role in creating or adapting
+OER in GCC systems, describing UAE AI developments as *adjacent to* rather than integrated into OER
+policy. 🔵 **Supply-side and literature-side nils, from unrelated instruments, pointing the same
+way: in MEA, AI in education is not landing in the open layer at all.** It is landing in ministry
+curricula (see [`intel/market.md`](../intel/market.md)).
+
+### 🟢 Trending rows this pass — MEA and EMEA national-system supply, grants read first-hand
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | what it is |
+|---|---|---|---|---|---|
+| [`f3an/kodeida`](https://github.com/f3an/kodeida) | 24 | 2026-10-15 | 🟢 Apache-2.0 · `c71d239df917` · 11 357 B | **EMEA** · Ukrainian, `ukrainian` topic | algorithm practice (LeetCode technique set) staged **inside the worlds of Ukrainian literature**, Electron, **fully offline**, TS/JS/Python. 🔵 The highest-starred novel EMEA row this pass and the only one above 12; HEAD `3a338b98e73b` |
+| [`shakir-abdo/ch32v003-journey`](https://github.com/shakir-abdo/ch32v003-journey) | 6 | 2026-06-01 | 🟢 MIT · `b6f5c258ba79` · 1 068 B | **EMEA** · bilingual Arabic/English | **22 register-level lessons** on the WCH CH32V003 RISC-V microcontroller plus an interactive simulator, Nuxt 4. 🟢 The Arabic-leg ★ ceiling, and genuine hardware curriculum rather than an LLM wrapper; HEAD `aeea620d1f86` |
+| [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | 2 | 2026-01-15 | 🟢 MIT · `fb50db9e444c` · 1 064 B | **EMEA** · Africa-scoped | **29 interactive science simulations** (chemistry, biology, physics, pharmacy, medicine) with an AI lab assistant; SvelteKit PWA on Cloudflare D1/KV/R2/Workers AI. 🟡 2★, but it is the only virtual-laboratory row this base carries for the region; HEAD `f808cf603007` |
+
+### 🔵 Append-only note
+
+🟢 Nothing above replaces a prior section. The `p464` section and its history follow below
+unchanged; this section was prepended, and prior-section containment was checked in this session's
+own code because the gate could not be run.
+
+
 ## 🆕 `p464` · 2026-10-26 — **🔴 The prescribed trending leg is graded a nil for the seventh pass, and this hour it is a nil with a MEASURED DENOMINATOR: a platform-named query returned 4 428 repositories and the top 25 contain ZERO education projects. 🟢 The education supply is real and it is simply not ranked — which is a statement about GitHub's ranking surface, not about the supply.**
 
 🔵 **Record posture.** Append-only; sections below untouched. Foundation rows this record

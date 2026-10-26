@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` — **🟢 Three recipes, and the first one is the only permissive, audit-defensible marking stack this base can assemble — it became possible this hour. 🔴 The second is an IMPORT-AND-LOCALISE recipe for regions that have a mandate and no supply, which is a shape this file has never carried.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
+below is gate-attested. Every address named below was resolved by `git ls-remote` this pass and its
+grant read at the payload; figures are **raw bytes** (`Gap 465-A`).
+
+### 🟢 `Pattern BF` — Audit-defensible rubric marking with ZERO copyleft
+
+🔵 **The problem it solves.** Marking is the highest-demand function in every region on
+[`intel/market.md`](../intel/market.md), and until this pass every *adopted* option was GPL-3.0 or
+AGPL-3.0 — a source-disclosure event for a hosted deployment. 🟢 A fully permissive path now exists.
+
+| layer | component | grant · `sha256₁₂` | why this one |
+|---|---|---|---|
+| Marking workflow | [`erlan775959-code/markwise`](https://github.com/erlan775959-code/markwise) | 🟢 MIT · `e33397c72fff` | double-marking + moderator; **code-verified quote evidence**; grader-manipulation and safeguarding flags |
+| Deterministic scoring | [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) | 🟢 MIT · `78adf0554b1a` | **all arithmetic in Python**, roster-first identity, TF-IDF + char n-gram similarity |
+| Student-data shield | [`oas114/EduShield`](https://github.com/oas114/EduShield) | 🟢 MIT · `6c106d9deefc` | client-side mask→send→restore, so identifiers never reach the model |
+| Obligation check | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 MIT · carried `p437` | the **post-Omnibus** date oracle (`highRiskAnnexIII: '2027-12-02'`); 🔴 **never** `ark-forge/mcp-eu-ai-act`, which hardcodes the retired 2026-08-02 deadline |
+
+🔵 **Wiring.** `EduShield` masks the submission set in the browser → `markwise` transcribes and
+double-marks each rubric criterion, emitting per-criterion scores with quoted evidence →
+`AutoGrader-Agent`'s Python engine recomputes every total, deduction and cap so **no number
+originates in a model** → disagreements above one rubric level, unverifiable quotes and safeguarding
+flags route to a human queue → `EduShield` restores identifiers only for the teacher-facing view.
+Run the risk-checker **first**: grading is Annex III point 3, so in the EU this is a high-risk
+system from **2027-12-02** and an Art. 50 disclosure obligation **today**.
+
+🔴 **State the weakness to the client, do not hide it.** `markwise` is **0★ and self-declared
+Alpha**; `AutoGrader-Agent` is **3★**. This stack buys licence freedom and audit defensibility at
+the price of adoption, and the honest alternative is `AI-Marker-Suite` (GPL-3.0, 104★) with its
+disclosure boundary accepted. 🟡 Estimate **8–10 weeks** to a defensible pilot, most of it
+hardening, not integration.
+
+### 🟢 `Pattern BG` — Import-and-localise for a mandate-without-supply region (MEA)
+
+🔵 **The problem it solves.** `intel/market.md` establishes this pass that MEA has the world's most
+aggressive curriculum mandate (UAE KG–G12) and the emptiest open layer (African education ★ ceiling
+**12**, Arabic **6**, nothing above a star floor of 5). 🔴 There is nothing regional to compose
+from, so composition is the wrong frame: **the recipe is localisation with provenance.**
+
+| step | component | grant | role |
+|---|---|---|---|
+| 1 · Identifier spine | [`stanleyHayes/ghanaschools`](https://github.com/stanleyHayes/ghanaschools) | 🟢 Apache-2.0 `0be2dbbe5781` | the pattern to **copy**, not the data: stable IDs + **field-level provenance**, and it declares "no personal, student or quality data" |
+| 2 · Curriculum carrier | [`shakir-abdo/ch32v003-journey`](https://github.com/shakir-abdo/ch32v003-journey) | 🟢 MIT `b6f5c258ba79` | a working **bilingual Arabic/English** register-level curriculum + simulator — the localisation reference, 22 lessons deep |
+| 3 · Offline delivery | [`KajarnakLOKOSSOU2008/edubox`](https://github.com/KajarnakLOKOSSOU2008/edubox) | 🟢 MIT `1196398ae2f6` | offline-first for low-connectivity deployment; 🟡 1★ prototype, carried for its shape |
+| 4 · Lab substitute | [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | 🟢 MIT `fb50db9e444c` | 29 science simulations where physical labs are absent |
+| 5 · Grant hygiene | — | — | 🔴 **mandatory gate**: 5 of 20 novel MEA/Africa addresses served **no root grant at all**, and one states only an *intention* to license (`Gap 465-E`). Resolve every candidate at the payload before it enters a client deliverable |
+
+🔵 **Wiring.** Stand up the registry spine first (step 1's *schema*, populated from the client's
+ministry data), because every later layer joins on institution identity. Localise step 2's
+bilingual pattern — RTL-correct, Arabic-first, English-secondary — rather than translating an
+English course. Ship through step 3's offline path and treat connectivity as optional, not
+degraded. 🟡 **12–16 weeks**, and the dominant cost is content localisation and grant diligence,
+not engineering.
+
+### 🟡 `Pattern BH` — Student-data egress control as a standalone North America engagement
+
+🔵 **The problem it solves.** North America's binding edge has moved to **procurement and data
+flow**: Alabama's model policy recommends a data-usage-restriction clause in district contracts and
+California's **A.B. 1159** (proposed) would bar training models on student data. 🟢 A district does
+not need a tutor to need this.
+
+| layer | component | grant | role |
+|---|---|---|---|
+| Egress shield | [`oas114/EduShield`](https://github.com/oas114/EduShield) | 🟢 MIT `6c106d9deefc` | mask→send→restore **entirely client-side**; written for Taiwan's PDPA, mechanism is jurisdiction-portable |
+| Policy mapping | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 MIT | carried `p437`; use for the EU arm of a multinational district/university |
+| Identifier spine | registry pattern per `Pattern BG` step 1 | 🟢 Apache-2.0 | field-level provenance, so a contract clause can be **evidenced** rather than asserted |
+
+🔴 **The honest caveat, carried from the component's own README:** `EduShield` states it provides
+technical masking, is **not** legal advice, and does **not** by itself guarantee statutory
+compliance. 🟢 Sell it as **an engineering control that makes a procurement clause auditable**, never
+as compliance. 🟡 **4–6 weeks**; the deliverable is a data-flow map plus an enforced egress boundary.
+
+
 ## 🆕 `p464` — **🟢 Four recipes. `Pattern BE` is the one this pass's correction unlocks: a university-grade LMS stack with ZERO copyleft anywhere in it, which this base's own headline said was impossible. 🔴 And `Pattern BB` is the first recipe here whose first step is to DECLINE a feature the client asked for, because in the EU that feature has been illegal for 20 months.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every

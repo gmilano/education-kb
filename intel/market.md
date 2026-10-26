@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` — **🟢 `Gap 463-D` IS CLOSED ON BOTH SIDES AT ONCE, AND THE TWO SIDES DISAGREE IN A USEFUL WAY: in MEA the ministry layer is the most aggressive on earth (UAE mandates AI from kindergarten) while the open layer is the emptiest this base has measured (African education ★ ceiling = 12). 🔴 And the regional web legs are a NIL FOR THE SEVENTH PASS with a 24-fact denominator — 22 already on this file.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
+below is gate-attested. This file's region contract (closed vocabulary; one `## Opportunities by
+region` heading with one `###` per region; no LATAM-only section) was re-read and is honoured
+below.
+
+### 🔴 The channel verdict, first, because it governs how much of this section is new
+
+🔵 24 named facts were returned across eight legs and each was grepped against all eight shelves
+before being written. **22 were already carried.** The full fact-by-fact denominator is published
+on [`agents/trending.md`](../agents/trending.md). 🟢 The two novel items are Nigeria's NUC
+instrument (below) and a licence form (`WAQF`, on [`agents/top.md`](../agents/top.md)).
+
+### 🟢 The MEA asymmetry — this pass's one genuinely new regional reading
+
+🔵 `Gap 463-D` assumed MEA was under-sampled. 🟢 **It was, and sampling it properly produces a
+split, not a gap:**
+
+| layer | what MEA actually shows | measured by |
+|---|---|---|
+| 🟢 **Ministry / curriculum** | **The most aggressive mandate in this base.** UAE requires AI across **KG–Grade 12**, taught from 2026-27 as a standalone subject ("Artificial Intelligence and Technology") replacing CCDI, extended to private schools on the national curriculum. Saudi **SDAIA** published a national AI-risk framework (2026-07-14). Bahrain's standalone AI bill was **not enacted** as of 2026-07. | web legs (🔴 the UAE curriculum detail rests on a **vendor** page and is flagged pending ministry documents) |
+| 🔴 **Open-source / OER** | **The emptiest layer measured.** 61 African education repositories with a ★ **ceiling of 12** and a median of 1; 8 Arabic education repositories, ceiling 6. A star floor of 5 returns **zero** across the whole Arabic corpus. | first-hand `search_repositories` census → [`repos/trending.md`](../repos/trending.md) |
+| 🟢 **Literature** | Independent corroboration: a **peer-reviewed 2026 systematic review** of OER in the GCC found **no** study examining AI's role in creating or adapting OER in GCC systems, calling UAE AI work *adjacent to* rather than integrated into OER practice. | [Open Praxis 18(2)](https://openpraxis.org/articles/10.55982/openpraxis.18.2.1186) |
+
+🟢 **The commercial reading, stated plainly:** in MEA there is **demand mandated by ministries and
+no open supply to meet it**. Every other region on this file has some open layer to compose from;
+MEA's must be imported or built. That is a positive finding for a services business and this base
+has never stated it.
+
+## Opportunities by region
+
+### North America
+🔵 **State guidance is now the norm and the binding edge has moved to procurement and data.**
+Roughly **33–35 states plus Puerto Rico** have issued AI-in-education guidance (up from ~28 in
+early 2025) — 🔴 **carried as a range, not a number**: trackers disagree, and `p455` retired a
+single-tracker figure on exactly this axis. **Ohio** and **Tennessee** legally require districts to
+adopt AI policies (Ohio's deadline **2026-07-01**, already passed); **Oklahoma**'s applies before
+the 2027-28 school year. 🟢 **Where the work is:** Alabama's procurement model policy recommends a
+**data-usage-restriction clause** in district contracts and California's **A.B. 1159** (proposed)
+would bar training models on student data — so the sellable artefact is a **contract-and-data-flow
+control layer**, not a tutor. 🟢 `oas114/EduShield` (MIT, client-side de-identification, on
+[`agents/top.md`](../agents/top.md)) is the first permissive component this base carries that maps
+directly onto that clause, despite being built for Taiwan's PDPA.
+
+### EMEA
+🔵 **A deferred high-risk regime over a live prohibition — and now a third tier underneath both.**
+`Regulation (EU) 2026/1744` (Digital Omnibus) moved stand-alone high-risk education AI to
+**2027-12-02**; Art. 50 chatbot transparency has been live since **2026-08-02**; the Art. 4
+AI-literacy duty since **2025-02-02**; the Art. 5(1)(f) **emotion-recognition prohibition in
+education is in force now**. 🔴 All carried since `p380` — this hour's EMEA leg was **confirmation,
+not discovery**. 🟢 **What is new is beneath the EU**: Nigeria's **NUC** pressed universities on
+2026-10-13 to accelerate AI adoption *with* tighter compliance, and a **national university AI
+policy** was announced (🔴 contents and timeline unconfirmed) — which would be the first, since a
+2025 study found **no Ghanaian or Nigerian HEI** with a formal public AI policy. Burkina Faso's
+`naabiga-os` and Ghana's `ghanaschools` registry place francophone and anglophone West African
+supply on these shelves for the first time. 🔴 **Kenya returned nothing on intel** while returning
+MIT-granted supply — `Gap 465-D`.
+
+### APAC
+🔵 **Mandates at national scale, and one instructive reversal.** China: AI compulsory from **age
+6** since 2025-09, with provincial hour floors (Beijing **8 h/yr** primary and secondary; Guangdong
+6 h in lower grades rising to a fortnightly hour in grades 10–11) over the 2024 MOE three-tier
+framework. India: **AI + Computational Thinking mandatory from Class 3 in 2026-27** under NEP 2020
+— 🔴 gated by **>10 million teachers** needing preparation, which is the single largest
+training-services line item on this file. 🔴 **South Korea is the cautionary case**: mandatory AI
+textbook adoption sat **below 30 %** by March and the National Assembly **stripped the textbooks of
+official status** that August after unions said the rollout had outrun preparation. Japan moves
+slowly — digital textbooks may become official only around the **2030** school year. 🟢 All
+carried; the APAC-specific *supply* added this pass is `Maicarons/RubricSpan` (AGPL-3.0, Chinese
+subjective-question marking) and `oas114/EduShield` (MIT, Taiwan).
+
+### LATAM
+🔵 **Adoption is ahead of the rules, and the rules are moving this quarter.** Brazil's **PL
+2338/2023** passed the Senate (2024-12-10), sits in the Chamber of Deputies with the vote expected
+to resume **after the October 2026 elections**, and its risk tiers put **education among high-risk
+uses** requiring impact assessment and human oversight — the most consequential pending instrument
+in the region for this industry. Chile's AI bill (bulletin 16821-19) is in committee, and the
+government has asked to move Law **21.719**'s general effective date from 2026-12-01 to
+**2027-12-01**. 🔴 **Mexico's status is genuinely contested** in this hour's sources — one legal
+guide describes enacted 2026 amendments creating binding obligations, others say no AI bill has
+passed — and it is carried as **conflicting**, not resolved. **Peru remains the only enacted AI law
+in LATAM.** 🟡 Meanwhile classroom AI use is described as proceeding largely without oversight or
+guidelines. 🔴 **The LATAM supply nil persists**: the rubric-feedback shape this file has named as
+LATAM's clearest opportunity for six passes now has a permissive implementation
+(`erlan775959-code/markwise`, MIT) but **no LATAM-placed one** — and `markwise` is at 0★.
+
+### Global
+🔵 **The cross-region constant is the governance-to-capability gap**, and it is what a studio sells
+into. Directionally (🟡 **Futuresource Consulting**, one house, uncorroborated): K-12 and HE are
+moving from experimentation to structured implementation, with AI-capable devices at ~**15 %** of
+institutional PC shipments in 2026 toward half by 2030; agentic AI and **small, curriculum-specific
+models** are flagged as emerging, partly driven by the EU AI Act. 🔴 **No market-size figure is
+carried**: this hour's sources ranged from $6.4 B to >$100 B for overlapping definitions, and per
+`p455`'s precedent a spread that wide is reported as a spread or not at all. 🟢 The durable,
+first-hand global fact from this pass is a **supply** one: across every leg run, **the permissive
+marking/feedback tier tops out at 3★ while the adopted tier is GPL/AGPL** — so assessment work is
+a copyleft-boundary decision in every region.
+
+
 ## 🆕 `p464` — **🟢 THE REGION LEGS BREAK THEIR NINE-PASS NIL, AND ON ALL FOUR REGIONS AT ONCE. 🔴 EMEA is not "13 months of runway": an education-specific PROHIBITION has been in force since 2025-02-02 and this file never carried it. 🟢 LATAM's standing "no binding education-AI instrument anywhere" is NARROWED by a sub-national statute approved in Edomex in April 2026. 🟢 APAC gains India — the largest demand-side instrument in this base and absent from its APAC table until now. 🟢 NA gains a duty whose deadline has ALREADY PASSED.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
@@ -162,7 +262,7 @@ that three others disagree with by **2.6×**. 🟢 It came back from a different
 hour and is **still not promoted** — a retired figure returning through a new source is not new
 evidence.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p465` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 

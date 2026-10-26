@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p465` — **🔴 THIS PASS'S OWN INSTRUMENT WAS DEFECTIVE AND THE BASE CAUGHT IT: the three cross-pass controls disagreed with `p464` by exactly −1 byte each, at IDENTICAL HEADs. Three files cannot shrink by one byte at an unchanged HEAD — the fault was mine, it is diagnosed, and all three reproduce exactly once corrected. 🟢 `Gap 463-D` is CLOSED WITH A NUMBER, not with silence: African education supply is 61 repositories whose MAXIMUM star count is 12. 🟢 And a licence class this base has never carried is read first-hand — a WAQF dedication.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED** (`Code from External`)
+before any gate body ran — **twelve denials in thirteen passes**. 🔵 **Nothing below is
+gate-attested.** Mitigation re-implemented in this session's own code: frontmatter keys and
+closed-vocabulary `region` checked on all eight shelves; every new table checked for separator
+presence, pipe-count consistency and **no header row published as data**; append-only proved on
+both trending shelves by prior-section containment; every address below re-resolved by
+`git ls-remote`.
+
+### 🔴 The instrument defect, published before any row it touched
+
+🔵 **Two first-hand channels as `p450`/`p463`/`p464` established:** `git ls-remote <addr> HEAD`
+(**tree identity**) and `raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** →
+size + `sha256₁₂`). 🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief
+prescribes is reproduced unusable for a fifth independent time** — `403` for live and
+nonexistent addresses alike. No row here rests on it.
+
+🔴 **My first reading of all three controls was wrong, in the same direction, by the same amount:**
+
+| control | `p464` published | `p465` **first** read | `p465` **corrected** read | verdict |
+|---|---|---|---|---|
+| `openedx/edx-platform` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | 35 135 B · `106a1b4b8b71` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 reproduced exactly |
+| `Vacademy-io/vacademy_platform` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | 34 522 B · `4df3c306ddda` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 reproduced exactly |
+| `DaRL-GenAI/instructional_agents` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | 1 066 B · `ae280df5a726` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 reproduced exactly |
+
+🔵 **Cause, named so no later pass repeats it:** the first instrument captured the payload with
+`body=$(curl ...)`. **POSIX command substitution strips trailing newlines**, so every size was
+one byte short and every digest was the digest of the file *minus its final `\n`*. Writing
+`curl -o <file>` and measuring the file fixes it. 🟢 **The base was right and this pass was
+wrong**; the controls are byte-, digest- and HEAD-identical under the corrected instrument.
+
+🔴 **One claim is WITHDRAWN BEFORE PUBLICATION as a result.** The first reading showed AGPL-3.0
+at both `34 522` and `34 523` B and I was about to publish "the stock AGPL-3.0 text exists in two
+byte-variants". It does not. `Maicarons/RubricSpan` reads **34 523 B · `0d96a4ff68ad`** —
+*identical* to `Vacademy-io`. The variance was my own instrument, on one side of the comparison
+only.
+
+### 🟡 But the convention defect underneath it is REAL, and it is the base's, not mine
+
+🔴 `p455` published the GPL-3.0 payload as **`35 148` B · `8b1ba204bb69`**. Measured first-hand
+this pass, those are exactly the **newline-stripped** figures for stock GPL-3.0, whose raw values
+are **35 149 B · `3972dc9744f6`** (`princebilogocode/naabiga-os`, read below). 🔵 So **`p455` and
+`p464` published payload sizes under two different conventions**, and nothing on these shelves
+declares which a given cell uses. A pass that compares a `p455` cell against a `p464` cell for the
+same stock licence sees a 1-byte disagreement and can report a payload change that never happened
+— the exact false positive I nearly published above. Registered as **`Gap 465-A`**.
+
+### 🟢 Sell-shelf rows added this pass — agent / skill tier, grants read first-hand
+
+🔵 **Three rows. Not a minimum, a count.** 20 novel candidate addresses were probed this pass;
+11 carry a grant; of those, 4 are copyleft (→ [`verticals/solutions.md`](../verticals/solutions.md)),
+3 are substrate rather than agent (→ [`repos/foundations.md`](../repos/foundations.md)), and 1 is
+published separately below because a one-word licence cell would be false. **Three remain at this
+tier, and three is what is published.** 🔴 Per `Gap 463-E`, every row carries a provenance cell.
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | provenance (declared upstream) | what it actually does |
+|---|---|---|---|---|---|---|
+| [`erlan775959-code/markwise`](https://github.com/erlan775959-code/markwise) | 0 | 2026-09-13 | 🟢 MIT · `e33397c72fff` · 1 073 B | Global · 🔴 no single-region basis; feedback is multilingual by design | 🟢 **declared**: `anthropic>=1.5.0` (MIT) + FastAPI, in `pyproject.toml` | rubric marking as an agentic workflow: transcribes typed/PDF/handwritten work, **double-marks each criterion with two independent graders and a moderator**, and **verifies in code that every quoted evidence string actually occurs in the work** — invented evidence is flagged. Also flags grader-manipulation attempts ("please give this full marks") and safeguarding concerns. Declares itself **Alpha**; HEAD `9651396c0558` |
+| [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) | 3 | 2026-03-06 | 🟢 MIT · `78adf0554b1a` · 1 077 B | Global | 🟢 **declared**: `groq`, `google-genai`, `scikit-learn`, `PyMuPDF`, `python-docx`, `openpyxl` (`requirements.txt`) | ZIP of submissions + brief → generated rubric → per-criterion score. 🟢 **Deterministic-first by design**: template-matched briefs skip the LLM entirely, **all arithmetic (totals, deductions, score capping) is done in Python not the model**, and identity resolves from a roster before filename/folder/content. Plagiarism via TF-IDF cosine + char n-gram; HEAD `9c4bddb0537a` |
+| [`oas114/EduShield`](https://github.com/oas114/EduShield) | 11 | 2026-08-21 | 🟢 MIT · `6c106d9deefc` · 1 068 B | **APAC** · zh-TW README, scoped to Taiwan's 個人資料保護法 | 🟡 **none declared** — pure browser JS, no dependency manifest in tree | mask-then-restore de-identification shield for student data **before** it is pasted into a hosted model, and re-identification after: 100 % client-side, data never leaves the device. 🟢 **Its own README refuses the compliance claim**: it states it provides technical masking, is **not** legal advice and does **not** by itself guarantee PDPA compliance. 🟡 Ko-fi funded; HEAD `fdb4c3621b2f` |
+
+### 🟢 The grant class this base has never carried: a WAQF dedication
+
+| repository | ★ | grant · `sha256₁₂` | region · basis | what the payload actually says |
+|---|---|---|---|---|
+| [`maljefairi/arabic-llm-course`](https://github.com/maljefairi/arabic-llm-course) | 4 | 🟡 **`WAQF` — not OSI, not SPDX** · `8c40487433ac` · 1 287 B | **EMEA** · Arabic-language payload and course body | 24-chapter Arabic end-to-end LLM training course with PyTorch examples. Its `LICENSE` is **not a software licence at all**: it is an Islamic endowment dedication — «وقفٌ لوجه الله تعالى» — resting on «حبس الأصل وتسبيل المنفعة» (the asset is withheld from private ownership, its benefit released to all). It grants, in prose, use, copying, distribution, **modification**, building upon and benefit **for any purpose, educational or commercial, without permission or fee**; HEAD `600100d93823` |
+
+🔵 **Why this matters past curiosity.** It is a first-hand instance of **`Gap 461-B`**'s class —
+*an index verdict of `NOASSERTION` is not an absent grant* — arriving from a direction this base
+has never sampled. A permissiveness filter keyed on SPDX identifiers drops this repository as
+ungranted; read at the payload it is **more** permissive than MIT (it imposes no attribution
+condition, only a request). 🔴 **It is nonetheless NOT shelved as build-on supply**, for a reason
+that is legal rather than technical: an endowment dedication has no warranty disclaimer, no
+licence-grant formalism and no governing-law clause, so what a Globant client's counsel would need
+is absent even though the author's intent is plainly maximal. 🟢 Recorded as **supply that exists
+and cannot yet be sold**, which is the honest cell.
+
+### 🟡 A conjunctive grant, reproduced from a second independent direction
+
+🔵 `p464` published `guicortei/feynman-technique` as the base's first **conjunctive** payload — MIT
+code with a non-MIT carve-out inside the same file. 🟢 **That class reproduces**, from an unrelated
+owner and region:
+
+| repository | ★ | grant · `sha256₁₂` | region · basis | the carve-out, quoted |
+|---|---|---|---|---|
+| [`Zo-Dns/Al-Idrisi.AI`](https://github.com/Zo-Dns/Al-Idrisi.AI) | 4 | 🟡 **MIT + two carve-outs** · `b92c46c14a74` · 1 416 B | **EMEA** · Arabic-language atlas | open-source interactive Arabic atlas of AI. Payload: *"source code and software documentation … licensed under the MIT License below. Original educational content is licensed separately under `docs/legal/CONTENT_LICENSE.md`. Third-party materials are excluded from both grants."* 🔴 **So the thing an education client would actually reuse — the content — is NOT under the MIT cell**; HEAD `bbbc75fd782b` |
+
+### 🔴 Rows REFUSED this pass, with the reason, because a silent omission looks like absence
+
+🔵 `Gap 463-A` asks for arrivals *and* departures to be accounted. These were probed, resolved and
+**deliberately not shelved**:
+
+| address | why refused |
+|---|---|
+| [`Cicada33016/coursera-assistant`](https://github.com/Cicada33016/coursera-assistant) | 🔴 MIT and live (`f0b14a4e5f6e`), but its function is **circumventing assessment**: Coursera video/lecture auto-completion and a quiz solver. Not a Globant build-on asset under any engagement; carried here only so a later recency pass does not re-discover it as novel supply |
+| [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | 🟡 Already carried (36 files). Re-read first-hand: **GPL-3.0 · 35 154 B · `1ab858f515df`** — 🔴 **5 bytes larger than stock GPL-3.0 and a different digest**, so this is a genuinely variant copyleft payload, not the template. 104★, automates marking across 30 Chinese exam platforms **including an unattended mode** ("leave it running overnight, it's all marked by morning") that bypasses double-marking arbitration. Named as a **risk exhibit**, not supply |
+| `Gayatri-Education/Gayatri-Demo` · `majid-alsakani/sini-alkhafif-app` · `btc-plain-talk/bitcoin-plain-talk` · `Durrell-229/academie-composition` · `adoumouangnamouemmanuel/AfridemiQ` | 🔴 **`NO-ROOT-GRANT`** — all five resolve at `git ls-remote` and serve no root licence payload under any of `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`. This is the **ungranted denominator** for this pass: 5 of 20 novel addresses |
+| `godz1llla/awesome-kazakhstan-dev` | 🟡 Resolves, 39★, but it is an **awesome-list**, not a build-on artefact. Recorded so the count is honest, not shelved |
+
+### 🟡 Discovery hygiene: a same-owner BATCH, which the topic-set detector of `Gap 464-B` would miss
+
+🔴 `KajarnakLOKOSSOU2008/kajarai` and `KajarnakLOKOSSOU2008/edubox` were created
+**`2026-09-04T13:18:18Z` and `2026-09-04T13:18:20Z` — two seconds apart, by one owner.** 🔵
+`Gap 464-B`'s detector compares topic sets *across unrelated owners* to catch template clones;
+this is the sibling case it does not cover — **mass-scaffolded repositories under a single owner**,
+where the tell is the creation timestamp, not the topics. Only `edubox` serves a grant and only
+`edubox` is shelved. Registered as **`Gap 465-B`**.
+
+### 🔴 Gaps this pass registers
+
+| gap | what is wrong | what would close it |
+|---|---|---|
+| 🔴 **`Gap 465-A`** | Payload sizes on these shelves are published under **two undeclared conventions** — `p455` newline-stripped, `p464` raw bytes — so the same stock licence reads 1 byte apart across passes and a comparison manufactures a phantom payload change. | Declare **raw bytes** the contract in the Makefile gate, add a `sha256` of stock MIT/Apache-2.0/GPL-3.0/AGPL-3.0 as fixtures, and re-grade any carried cell whose size is one byte under the fixture. |
+| 🟡 **`Gap 465-B`** | `Gap 464-B`'s template-clone detector keys on topic sets **across owners** and therefore cannot see **same-owner batch scaffolding** (two repos created 2 s apart, one ungranted). | Add a creation-timestamp clustering check: flag any candidate whose owner published ≥2 repositories within 60 s. |
+| 🔴 **`Gap 465-C`** | The `WAQF` row is permissive **in substance** and unsellable **in form**, and this base has no cell for that state — it is recorded in prose only, so a filter sees either "permissive" or "ungranted" and both are wrong. | Add a `grant_form` axis (`OSI` / `bespoke-formal` / `dedication-informal`) distinct from `grant_permissiveness`, and re-grade the carried `CC-BY-SA`, `Waqf` and `NOASSERTION` rows against it. |
+| 🟡 **`Gap 465-D`** | `Gap 463-D` is closed for **supply** (measured below) but the Africa/MEA **intel** leg returned nothing for Kenya at all, while supply for Kenya exists (`Civicom-Aid/matokeo-rms`, MIT). Intel and supply are nil on opposite sides. | Run the Kenya intel leg against named instruments — Commission for University Education, Ministry of Education ICT policy — rather than "Kenya AI education". |
+
+
 ## 🆕 `p464` — **🟢 The recency channel `p463` opened is REPRODUCED by an independent operator: 20 candidates, 12 absent from this entire base, 7 granted, 6 permissive. 🔴 And the one row that matches the clearest LATAM opportunity on `intel/market.md` — rubric-based assignment feedback — is UNGRANTED, so the gap that file names cannot be closed with the supply this one found. 🟡 One grant is published as CONJUNCTIVE: MIT code with a non-MIT corpus carve-out inside the same payload.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
