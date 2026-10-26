@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p455` — **Two recipes, built only from grants read first-hand at `HEAD` this pass. `P455-A` is the EMEA engagement this base could not have specified a pass ago; `P455-B` is the licence gate that `Gap 454-C` proves every deliverable here needs and no pass had built.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes.
+
+### 🟢 `P455-A` — EMEA parent/teacher assistant over a closed national school system (6-8 weeks)
+
+🔵 **The shape this is for:** a French or DACH client whose system of record is **PRONOTE**,
+**EcoleDirecte**, **Schulportal Hessen** or **WebUntis** — proprietary, closed, un-forkable, and
+reachable only through community clients (`Trend 41`). There is no platform to customise, so the
+deliverable is an **adapter plus agent layer**, and the whole licensing question is settled before
+any model is chosen.
+
+**Wiring, by country, with the grant that permits it:**
+
+| layer | 🇫🇷 France | 🇩🇪🇦🇹🇨🇭 DACH | grant (read this pass) |
+|---|---|---|---|
+| **1. System-of-record adapter** | [`bain3/pronotepy`](https://github.com/bain3/pronotepy) (PRONOTE) or [`studoo-app/ecole-directe-api`](https://github.com/studoo-app/ecole-directe-api) (EcoleDirecte, PHP) | [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) (timetables) + [`kurwjan/LanisAPI`](https://github.com/kurwjan/LanisAPI) (Schulportal Hessen) | 🟢 **all MIT** — `1 062`/`1 071`/`1 070`/`1 076` B, digests on [`agents/top.md`](../agents/top.md). **Vendorable** |
+| **2. Rate governor** *(not optional)* | — | per-tenant token bucket at **<10 req/s, ≤1 800 req/h, hard ceiling 3 600 req/h** | 🔴 The limit is the vendor's, stated by `Suiram1701/WebUntisAPI.Client`; penalty is **permanent blocking** |
+| **3. Adapter isolation** | one process per client library, typed DTO out | same | 🟡 The client tier is unofficial and breaks when the vendor moves — `pronotepy` is in maintenance mode, `ecoledirecte.js` abandoned 2023-08-08 |
+| **4. Tool surface** | MCP server exposing `get_grades`, `get_timetable`, `get_homework`, `get_absences` — **read-only** | same | 🔵 Follow [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)'s shape (MIT at root) but 🔴 **never vendor its tree** — `legacy_reference/` is GPL-3.0 |
+| **5. Agent** | any permissive framework already shelved | same | 🟢 Keep the adapter boundary so the model layer is replaceable |
+
+🔴 **Two rules this recipe exists to enforce, and both are measured rather than cautious:**
+
+1. 🔴 **Do not take the public-API client into a vendored deliverable.**
+   [`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client) is the only WebUntis
+   client on the **documented public** JSON-RPC API, and it is **GPL-3.0-or-later** (`35 562` B
+   `72d2f09334f8`). 🟢 Its `or-later` grant is declared *and* served, so it **may** be taken
+   forward into a GPL-3.0 service — but then that service is GPL-3.0. 🔵 **The permissive path and
+   the documented path are different repositories**; choose one deliberately and write the choice
+   into the architecture decision, because it is not recoverable later.
+2. 🔴 **The Lanis clients are a copyleft trap in the Rust/TS lane.**
+   [`lanis-mobile/lanis-rs`](https://github.com/lanis-mobile/lanis-rs) and
+   [`elderguardian/maria`](https://github.com/elderguardian/maria) are both **GPL-3.0-or-later**;
+   only `kurwjan/LanisAPI` (Python) is MIT. 🔵 A Python adapter is therefore the vendorable choice
+   for Hesse, and the language decision is a **licensing** decision here.
+
+🔵 **Why 6-8 weeks and not 4:** the per-tenant rate governor, the credential handling for
+parent/teacher accounts, and one adapter rewrite budgeted against the maintenance tail.
+
+### 🟢 `P455-B` — the pre-ship licence gate, version-aware (2-3 days to wire, runs per build)
+
+🔵 **Why this is a pattern and not a script:** `Gap 454-C` showed this base graded two mutually
+incompatible licences as the same constraint for an entire pass, and `Trend 42` shows 11 cells still
+cannot answer a compatibility question. Any deliverable assembled from these shelves inherits that.
+
+**Wiring:**
+
+1. 🟢 **Read the grant first-hand, gated on status.** Import
+   [`fetch_fast.grant()`](../compose/code/p455-version-axis/fetch_fast.py). 🔴 It must be this
+   ladder and not a `HEAD`-only read: `Gap 455-A` measured `kurwjan/LanisAPI` serving **no licence
+   at `HEAD` and MIT at `master`**, and a first-live-ref reader reports a false *unlicensed* —
+   discarding a usable dependency.
+2. 🟢 **Grade with the version axis.**
+   [`family_version.family()`](../compose/code/p455-version-axis/family_version.py) — title-anchored
+   (a preamble cannot reach it) and version-bearing. 🔴 **Do not import
+   `p453-vocabulary-ledger/verify.py::family`**: `Gap 454-A` records its 40-line window as unsound
+   and it is still unpatched.
+3. 🟢 **Read the forward grant separately.** `only_or_later()` over the whole payload, because the
+   election lives in the per-file notice and the *How to Apply* appendix, never the title block.
+   🔴 Treat `UNSTATED` as **undecided**, never as permission.
+4. 🟢 **Decide with `compatible()`**, which returns `False` for differing GNU versions of one family
+   and 🔵 **`None` — "not decided here" — rather than a reassuring `True`** for everything outside
+   the GNU axis.
+5. 🔴 **Close the dependency tree, not the root.** Apache-2.0 or MIT at the root does not clear the
+   tree (`Trend 40`); chain `compose/code/dependency-licence-closure`.
+6. 🔴 **Three failure modes to assert against, each one a defect this pass's own instrument had:**
+   a registry **200 with a malformed body** read as *"declares no licence"* (`Gap 455-C` — assert
+   record **shape**, not status); the compact shorthand **`gplv3`** falling through a normaliser
+   that only handled the spaced form (`Gap 455-D`); and 🔴 **a per-subtree grant** that a root-only
+   reader cannot see at all — `librus-mcp` is MIT at root and GPL-3.0 under `legacy_reference/`,
+   so the gate must probe the **paths the deliverable actually vendors**, not just the repository root.
+
+🔵 **Control discipline, carried from `Gap 454-E`:** run the gate's own assertions in **both**
+directions and include a **fabricated negative control** (`nope-…/nope-…` → `ADDRESS_DEAD`), or the
+positives are a property of the probe and not a measurement. 34 controls cover the modules above
+([`controls.py`](../compose/code/p455-version-axis/controls.py)); three of this pass's four
+instrument defects were caught by them before anything was published.
+
 ## 🆕 `p454` — **Three recipes, each built only from grants read first-hand at `HEAD` this pass. 🟢 `P454-A` is the licence reader this pass had to build because the carried one mis-grades 2.8 % of payloads; `P454-B` is an Indonesia engagement on four MIT rows; `P454-C` is the three-grant clearance an education deliverable actually needs.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes.

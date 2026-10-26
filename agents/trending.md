@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 2026-10-26 · `p455` — **The French and DACH national school systems arrive on these shelves with eleven permissive clients, and a project recommended by name as the maintained successor to a shelved one has nothing readable at its own registry's back-link.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — ten denials in eleven passes. 🔵 This file is
+**APPEND-ONLY**: the block above is new, everything below is prior history, retained verbatim.
+
+### 🟢 What is new this week — a supply tier, not a single agent
+
+🟢 **The movement is categorical rather than a star count.** Eleven clients to four closed national
+school systems were read first-hand at `HEAD` this pass, and the category — *agent surface against a
+system of record a ministry already owns and you cannot fork* — had exactly one instance on these
+shelves a pass ago (Indonesia's **Dapodik**, `p454`) and now has five countries.
+
+| what moved | address | grant (first-hand) | region |
+|---|---|---|---|
+| 🆕 PRONOTE client, the French gradebook standard | [`bain3/pronotepy`](https://github.com/bain3/pronotepy) | **MIT** `1 062` B `4f074ab7dccb` · PyPI `2.15.7` | EMEA |
+| 🆕 WebUntis reference client (DACH timetabling) | [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **MIT** `1 070` B `d2e54565d9bf` · npm `2.2.1` | EMEA |
+| 🆕 Schulportal Hessen client | [`kurwjan/LanisAPI`](https://github.com/kurwjan/LanisAPI) | **MIT** `1 076` B `0bc449776673` **@`master`** | EMEA |
+| 🆕 EcoleDirecte PHP client | [`studoo-app/ecole-directe-api`](https://github.com/studoo-app/ecole-directe-api) | **MIT** `1 071` B `6c086a4639ac` · Packagist `v0.1.5` | EMEA |
+| 🆕 WebUntis on the **public** JSON-RPC API | [`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client) | 🔴 **GPL-3.0-or-later** `35 562` B `72d2f09334f8` | EMEA |
+
+🔵 Seven further clients in the same tier (`webuntis_headless`, `untis-js`, `WebUntisAPI.Client`,
+`WebUntisAPI` Java, `lanis-rs`, `maria`, `ecoledirecte.js`) are on
+[`agents/top.md`](../agents/top.md) with their grants and their caveats.
+
+### 🟡 Carried forward from the general-trend channel, with grants now dated
+
+🟡 **[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)** — named the
+standout education repository in an October 2026 GitHub-trending roundup at **~5 900 ★**, for a
+curriculum graph of **1 590 topics and 3 221 prerequisite edges** covering primary/elementary
+learning. 🔴 Re-read this pass: **ODbL**, `25 289` B `77d2692c3d64` — a share-alike *database*
+licence with **no code grant**. The star count is a trend signal; the licence is a constraint, and
+the two must not be read together as "available".
+
+🟡 **DeepTutor** was again named as the education instance in a 2026-10-26 open-source AI trend
+report, whose own framing is that agent scaffolding has become commoditised infrastructure and the
+movement is now into verticals. 🔵 Shelved already; **no new first-hand read this pass**, so no
+star figure is promoted here — `Gap 454-D`'s rule stands, a grant and a count are *dated* or they
+are assertions about the past.
+
+🟡 **[`skyzh/tiny-llm`](https://github.com/skyzh/tiny-llm)** (**Apache-2.0**, `11 357` B
+`c71d239df917`) — carried in the same report under a *"learn inference internals"* trend. Teaching
+material rather than an agent, and permissively granted.
+
+### 🔴 The refusals, written down because a trend shelf that only records arrivals overstates the week
+
+| candidate | why it looked real | probe verdict |
+|---|---|---|
+| 🔴 **Pawnote** | Recommended **by `pronotepy`'s own maintainers** as the actively-developed alternative; npm `pawnote@1.6.2` declares `GPL-3.0-or-later` and back-links `LiterateInk/Pawnote.js` | 🔴 `ADDRESS_DEAD` on four case variants × 13 grant paths × 7 refs |
+| 🔴 **Pawdirecte** | Same publisher, described as the maintained EcoleDirecte wrapper (Rust + JS) | 🔴 npm serves **200 with an empty record**; crates.io `404` → no address resolved |
+| 🔴 **Linkdirecte** | *"Newer SDK: 2FA login, grades, timetable, homework"*, wiki updated **July 2026** | 🔴 `Scolup/Linkdirecte` → `ADDRESS_DEAD`. A live wiki URL is not a readable repository |
+| 🔴 **education-crm** | A directory listing carried an **"MIT mention"** | 🟡 `asadbekme/education-crm` → `REPO_LIVE_NO_GRANT`: no licence file at 13 paths. **Not shelved as MIT** |
+
 ## 🆕 2026-10-26 · `p454` — **Indonesia arrives on these shelves with four MIT clients to a national register, and a grant this base already called NOT-OSI re-closed HARDER two days ago.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — nine denials in ten passes. 🔵 This file is

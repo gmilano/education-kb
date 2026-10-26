@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 2026-10-26 · `p455` — **The GNU population of these shelves is measured for the first time with a version axis: 461 cell-attributed cells, 11 that cannot support a compatibility decision at all, and 88 apparent disagreements retracted as this pass's own extraction error.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — ten denials in eleven passes. 🔵 This file is
+**APPEND-ONLY**: the block above is new, everything below is prior history, retained verbatim.
+
+### 🟢 The trending movement that is structural rather than a star count
+
+🟢 **`Gap 454-C` is answered**, and the answer changes how every GPL row on these shelves must be
+read. The reader now returns `GPL-2.0` / `GPL-3.0` / `LGPL-2.1` / `LGPL-3.0` / `AGPL-3.0` instead of
+a bare family, and separately reads the **forward grant** (`or-later` / `only` / `UNSTATED`) that
+decides whether a version mismatch actually blocks a combination.
+
+| what the sweep found over 461 cell-attributed GNU cells | count | share |
+|---|---|---|
+| 🟢 `AGREE` — payload matches the shelf's attributed claim | 306 | 66.4 % |
+| 🔴 `FAMILY_DISAGREE` — 🔴 **retracted in full as instrument error** (see below) | 88 | 19.1 % |
+| 🔴 `UNCHECKABLE` — address dead, or live with no readable grant | 56 | 12.1 % |
+| 🟡 `UNDER_SPECIFIED` — 🟢 **the sound new number**: shelf states a bare family, payload serves a version, so no compatibility decision is possible in either direction | 11 | 2.4 % |
+
+🔵 Evidence, per cell:
+[`evidence/gnu-version-axis.2026-10-26-p455.tsv`](../evidence/gnu-version-axis.2026-10-26-p455.tsv),
+including the **20** addresses refused as `AMBIGUOUS` and named rather than silently dropped.
+
+### 🔴 Why 88 is retracted, and the rule it yields
+
+🔴 Three mechanisms, each caught by reading the shelf line the verdict rested on: **line-level
+co-occurrence** (every GNU token on a line attributed to every address on it — which produced
+`GPL-3.0` for the MIT project **Kolibri** — re-read this pass, `1 097` B — and `GPL` for
+**JUnit 4**, which 🔴 **this pass first "corrected" to EPL from background knowledge and not from a
+read; re-probed, `junit-team/junit4` serves NO grant at any of 13 root paths, so the shelf's claim
+and the correction were both unread**),
+**sole-address prose rows**, and 🔴 **per-subtree grants a root-only reader cannot grade**
+— [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) is **MIT at root** and
+**GPL-3.0 on `legacy_reference/`**, and the sweep compared a root payload against a claim never
+made about the root.
+
+🔵 **The shelves were already right, and already more precise than the instrument.** This file's
+own prior passes classify that population as `DEPENDENCY-SCOPED` and `BOUNDARY-NAMED` — of Kolibri:
+*"the repo is MIT and the prose says so"*. 🔴 **`Gap 455-B`**: a GNU sweep must consume that
+taxonomy rather than re-derive it, and no shelf carries a machine-readable grant column that would
+let it. **On a prose shelf, adjacency is not attribution** — now measured on a third channel, after
+registry names (`Gap 451`) and table shapes (`Gap 454-I`).
+
+### 🔴 `Gap 455-A` — a trending-repo probe can report a false "unlicensed", and the cause is `HEAD`
+
+🔴 Measured first-hand on [`kurwjan/LanisAPI`](https://github.com/kurwjan/LanisAPI):
+`HEAD/LICENSE` → **404**, `HEAD/README.md` → **200 (331 B)**, while `master/LICENSE` → **200
+(1 076 B, MIT)** and `master/README.md` → **200 (3 554 B)**. Two READMEs of different sizes:
+`HEAD` and `master` are **different commits**, and the substantive tree with the grant is on
+`master` only. 🔵 Any probe that accepts the first ref whose README resolves will publish
+`REPO_LIVE_NO_GRANT` for a permissively-licensed repository — the failure direction that
+**discards** a usable dependency. 🟢 Fixed in
+[`fetch_fast.py`](../compose/code/p455-version-axis/fetch_fast.py); 🔴 carried probes unaudited.
+
 ## 🆕 2026-10-26 · `p454` — **A foundational OER repository joins the shelves, and its registry licence field names a GPL version that is incompatible with the one it serves.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — nine denials in ten passes. 🔵 This file is

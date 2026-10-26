@@ -1,0 +1,484 @@
+address	shelf_claims	attribution_basis	served	forward_grant	verdict	bytes	sha	at
+1111philo/learn	AGPL-3.0	sole-row	UNREAD	or-later	FAMILY_DISAGREE	35240	119d54a4bd57	LICENSE@HEAD
+19otherrsh-dot/Opencred	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+1EdTech/lti-1-3-php-library	AGPL|GPL	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11343	78b49eeaddbf	LICENSE@HEAD
+24kchengYe/human-skill-tree	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	1134	3fb8cda58638	LICENSE@HEAD
+AaronGrace978/EduHelp	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+Acture/scriptmark	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+Agso-o/sigaa-calendar	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+Ajatt-Tools/mpvacious	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+AnkitClassicVision/tutor-engine	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+Apomera/AlloFlow	AGPL|AGPL-3.0|AGPLv3	sole-row	UNREAD	or-later	FAMILY_DISAGREE	35442	698099632698	LICENSE@HEAD
+ArnaudGuiovanna/tutor-mcp	GPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1073	1e05c9440068	LICENSE@HEAD
+BLPS/oneroster-php-api	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	LICENSE@HEAD
+Berserk-hub150/moodle-ai-skill-navigator	AGPL-3.0|GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35153	ebdc0e5b7005	LICENSE@HEAD
+CAHLR/OATutor	AGPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1105	5baaaf977a28	LICENSE@HEAD
+CambridgeAssessmentResearch/KernEqWPS	GPL|GPL-2|GPL-3	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1077	5e006dcb41ac	LICENSE@HEAD
+CapSoftware/Cap	AGPLv3	sole-row	UNREAD	or-later	FAMILY_DISAGREE	34972	146364c489e6	LICENSE@HEAD
+Chocobozzz/PeerTube	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	76a97c878c9c	LICENSE@HEAD
+Citolab/lti-1p3-platform-example	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+Citolab/qti-components	GPL-2.0|GPL-3.0|LGPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35199	c4b11c89ca88	LICENSE.md@HEAD
+Citolab/qti-convert	GPL|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35196	f93eb1d94904	LICENSE@HEAD
+Citolab/qti-convert-python	GPL-3.0|LGPL-3.0	cell	GPL-3.0	or-later	AGREE	35196	f93eb1d94904	LICENSE@HEAD
+ClassroomIO/ClassroomIO	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+CoopCodeCommun/pyopenbadges	LGPL-2.1	sole-row	LGPL-2.1	or-later	AGREE	26526	20c17d8b8c48	LICENSE@HEAD
+Cvmcosta/ltijs	AGPL-3.0	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11361	d5fcb264ff39	LICENSE@HEAD
+DMOJ/judge-server	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	57c8ff33c9c0	LICENSE@HEAD
+DMOJ/online-judge	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	57c8ff33c9c0	LICENSE@HEAD
+DigiKlausur/e2x-docs	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+DigitalPlatDev/FreeDomain	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+Dmoayad/essay-grader-llm	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+Dolibarr/dolibarr	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35151	e79e9c8a0c85	COPYING@HEAD
+ECNU-ICALK/EduChat	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	AGPL-3.0|GPL-2.0	sole-row	Apache-2.0	UNSTATED	FAMILY_DISAGREE	10172	59899c6091b5	LICENSE.txt@HEAD
+EduardoKrausME/moodle-local_mcp	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+EdupageAPI/edupage-api	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	LICENSE@HEAD
+Elgg/Elgg	GPL-2.0	sole-row	COMPOSITE: GPL+MIT	UNSTATED	FAMILY_DISAGREE	17173	7188c83d8764	LICENSE.txt@HEAD
+Elmaldelego/OPEN-TUTOR-IA	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+FWU-DE/ais-chat	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+FenixEdu/fenixedu-academic	LGPL-3.0	sole-row	LGPL-3.0	or-later	AGREE	7652	97628afebc60	LICENSE@HEAD
+FiredMosquito831/ase-moodle-mcp	GPL	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11358	cfc7749b96f6	LICENSE@HEAD
+Fordham-EDM-Lab/Grading-Analysis-Tool	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+FreeLanguageTools/vocabsieve	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+GarethManning/education-agent-skills	AGPL-3.0	cell	CC-BY-SA-4.0	UNSTATED	FAMILY_DISAGREE	1230	f952182df4eb	LICENSE@HEAD
+GatorEducator/gatorgrade	AGPL|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+GatorEducator/gatorgrader	AGPL-3.0|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35191	57756125771d	LICENSE.md@HEAD
+Gego-K12/gegok12	LGPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1150	b8694396d7dc	LICENSE@HEAD
+GibbonEdu/core	AGPL-3.0|GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35121	93178a43d6d3	LICENSE@HEAD
+HKUDS/DeepTutor	AGPL-3.0	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11408	cd2f54e1e506	LICENSE@HEAD
+HernanDiaz/moodle-local_aigrader	GPL-3.0	sole-row	COMPOSITE: LGPL+GPL	or-later	FAMILY_DISAGREE	1594	66c045368bcd	LICENSE@HEAD
+HugeCatLab/ChatTutor	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34522	20b067f86de3	LICENSE@HEAD
+ILIAS-eLearning/ILIAS	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+INGInious/INGInious	AGPL|AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+GPL	or-later	FAMILY_DISAGREE	34764	6d1ebe4ddf66	LICENSE@HEAD
+IgorFonck/logicits	AGPL-3.0|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+Jawadh-Salih/moodle-mcp-server	GPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1063	2cf91ec5272f	LICENSE@HEAD
+JudgePeach/math-question-bank	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+JuezUN/INGInious	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34840	bf251efc1462	LICENSE@HEAD
+Kennisnet/qti-components	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35199	c4b11c89ca88	LICENSE.md@HEAD
+Koha-Community/Koha	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35151	e79e9c8a0c85	LICENSE@HEAD
+Kosudo/nextSIS	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+KristiyanVachev/Question-Generation	AGPL|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+LT-Gen/Lesson_Timetable_Generator	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+Lamb-Project/lamb	GPL-3.0	cell	UNREAD	or-later	FAMILY_DISAGREE	35349	17fe6d0ffa96	LICENSE@HEAD
+Lamb-Project/lamba	GPL	sole-row	GPL-3.0	or-later	UNDER_SPECIFIED	35149	3972dc9744f6	LICENSE@HEAD
+LearnPress/learnpress	GPL|GPL-3.0|GPLv3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+LearningLocker/learninglocker	AGPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+Learnosity/learnosity-qti	GPL-2.0	cell	GPL-2.0	or-later	AGREE	18264	e3c23a194748	LICENSE@HEAD
+LibreClass/libreclass	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+LibreLingo/LibreLingo	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34524	e9df4c4e4e64	LICENSE@HEAD
+Limekiller/moodle-block_openai_chat	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+MarcosNahuel/moodle-mcp	GPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1065	f27341a8425b	LICENSE@HEAD
+MeetPlan/MeetPlanBackend	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+MeetYourAI/AIProf	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@master
+MuriloCalegari/Ifes-Academico	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+NCSIS/InfiniteCampus-Vendor-Integration	AGPL-3.0|GPL	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+OHF-Voice/piper1-gpl	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	0ae0485a5bd3	COPYING@HEAD
+OPEN-ENT-NG/entcore	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+MIT+MPL-2.0	UNSTATED	FAMILY_DISAGREE	8537	86b7a74b9496	LICENSE@HEAD
+OS4ED/openSIS-Classic	AGPL|GPL|GPL-2.0|GPL-3|GPL-3.0|LGPL	cell	GPL-2.0	or-later	AGREE	17286	224ac3d403e3	docs/License.txt@HEAD
+OS4ED/openSIS-Responsive-Design	GPL-2.0|LGPL	sole-row	GPL-2.0	or-later	AGREE	17286	224ac3d403e3	docs/License.txt@HEAD
+OpenBoard-org/OpenBoard	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+OpenEMIS/core	GPL-2.0	sole-row	GPL-2.0	UNSTATED	AGREE	15518	b6f03c6715ee	LICENSE@HEAD
+OpenEduCat/openeducat_erp	LGPL	sole-row	LGPL-3.0	or-later	UNDER_SPECIFIED	8241	528f84036800	LICENSE@HEAD
+OpenOLAT/OpenOLAT	AGPL-3|GPL-3|GPL-3.0	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	10982	6dbc5b605ed0	LICENSE@HEAD
+OptiKey/OptiKey	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35144	ed0c320a8eb2	LICENSE.txt@HEAD
+OtterDen-Lab/Autograder	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+Ovsyanka83/autograder	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+PLus123456/lecture-live	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+PapillonApp/papillon-v6	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+PeerTube/PeerTube	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+PlaypowerLabs/EdOptimize	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+PrairieLearn/PrairieLearn	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+MIT	or-later	FAMILY_DISAGREE	36983	f3fba75145cf	LICENSE@HEAD
+ProjectsAndPrograms/school-management-system	LGPL-2.1	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+SDUOJ/OnlineJudge	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34522	4df3c306ddda	LICENSE@HEAD
+SafeExamBrowser/seb-server	AGPL|AGPL-3.0|GPL|GPL-3.0	sole-row	MPL-2.0	or-later	FAMILY_DISAGREE	16725	1f256ecad192	LICENSE@HEAD
+SapuSeven/BetterUntis	GPL|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+Schlaflied/Plot-Ark	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+Schroedinger-Hat/certo	AGPL-3.0|GPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	33820	895609d3e304	LICENSE@HEAD
+SdSarthak/AegisAI	AGPL|AGPL-3.0	cell	UNREAD	UNSTATED	FAMILY_DISAGREE	1015	956f54f917d3	LICENSE@HEAD
+SiddharthG1210/RAG-AI-TUTOR	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+Simon-Initiative/oli-torus	AGPL|AGPL-3|GPL|GPL-3	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1083	696205cef189	LICENSE.md@HEAD
+Snaw80/moodle-mcp	GPL	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1072	b2bb31ce9d90	LICENSE@HEAD
+StudyDrift/lextures	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	57c8ff33c9c0	LICENSE@HEAD
+Swaraj-Mandre/Vidhya-Setu	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+THU-MAIC/OpenMAIC	AGPL-3.0|LGPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1065	ba2525637432	LICENSE@HEAD
+Tadreeb-LMS/tadreeblms	AGPL-3.0|GPL-3	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+Tampere/trevaka	LGPL	cell	LGPL-2.1	or-later	UNDER_SPECIFIED	27030	7ffe1954587c	LICENSE@HEAD
+Tangerine-Community/Tangerine	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE.txt@HEAD
+Teci-AI/moodle-mcp-connector	GPL	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1103	c8bcb50d415c	LICENSE@HEAD
+TouchRefletz/maia.edu	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+TricksterGuy/complx	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	32422	963392e038d7	LICENSE@HEAD
+UCL-INGI/INGInious	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+GPL	or-later	FAMILY_DISAGREE	34764	6d1ebe4ddf66	LICENSE@HEAD
+UniTime/unitime	GPL-3.0	sole-row	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11357	58d1e17ffe51	LICENSE@HEAD
+UniversalDependencies/UD_Spanish-AnCora	GPL|GPL-3.0	sole-row	CC-BY-4.0	UNSTATED	FAMILY_DISAGREE	189	653702c7fdee	LICENSE.txt@HEAD
+Utdanningsdirektoratet/moodle-block_hero	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	0ae0485a5bd3	LICENSE@HEAD
+Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+Vacademy-io/vacademy_platform	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+X5GON/x5moodle	AGPL-3.0	cell	BSD-2-Clause	UNSTATED	FAMILY_DISAGREE	1325	2a992db80952	LICENSE@HEAD
+YTFL/AttendMate-Bunk-Calculator-Attendance-Tracker	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+ZelinZhou-THU/stem-tutor-agent	AGPL-3.0	sole-row	UNREAD	or-later	FAMILY_DISAGREE	35211	fab96a92c83a	LICENSE@HEAD
+abdomoaz58-tech/OpenLearn-AI	AGPL|AGPL-3.0|AGPLv3	sole-row	AGPL-3.0	or-later	AGREE	35184	6f1e622c82a3	LICENSE@HEAD
+academico-sis/academico	GPL|LGPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1094	6051a15f4d44	LICENSE@HEAD
+acanas/swad-core	AGPL-3.0|GPL-3.0	cell	AGPL-3.0	or-later	AGREE	34501	884b434957ba	LICENSE@HEAD
+adamjenkins/moodle-local_nomoreai	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+adaptlearning/adapt_framework	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35129	e90ca2f081fa	LICENSE@HEAD
+adelahladka/difNLR	GPL-3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+adlnet/tla	AGPL-3.0	cell	NOT-OSI (This is free and unencumbered software released into the pub)	UNSTATED	FAMILY_DISAGREE	1211	6b0382b16279	LICENSE@HEAD
+aesophor/hacklympics	GPL-3.0	sole-row	MPL-2.0	or-later	FAMILY_DISAGREE	16725	1f256ecad192	LICENSE@HEAD
+affromero/Sotto	AGPL-3.0	sole-row	NOT-OSI (PolyForm Noncommercial License 1.0.0)	UNSTATED	FAMILY_DISAGREE	4563	ffcca38841ad	LICENSE@HEAD
+ahmedEid1/Lumen	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+ahmedEid1/lumen	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+ai-lingnan/econai-agent-platform	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+ajjalti/EvalStudio	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	33061	09b00d0bf35f	LICENSE@HEAD
+andymatuschak/orbit	AGPL-3.0	sole-row	POINTER_IN_REPO (Readme.md)	or-later	FAMILY_DISAGREE	457	86b93fd1d19a	LICENSE@HEAD
+ankidroid/Anki-Android	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35068	fc82ca8b6fdb	COPYING@HEAD
+ankitects/anki	AGPL-3.0	cell	AGPL-3.0	UNSTATED	AGREE	1930	bde7d05790a0	LICENSE@HEAD
+aprincar/curriculum-bncc	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+arashactive/laramint	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+archboard/tidal-ptc	GPL-3.0	cell	GPL-3.0	or-later	AGREE	34931	0a29a2a70e16	LICENSE.md@HEAD
+artcc/freelingo	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34514	ea94d5765c59	LICENSE@HEAD
+asbplayer/asbplayer	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+atutor/ATutor	GPL|GPL-2.0|GPL-3|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+aulasneo/tutor-contrib-let	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34523	debf08813eec	LICENSE.txt@HEAD
+autism-technology-research-syndicate/sealapplication	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+avps82/mentar	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+barglabs/cejel	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+bgwdotdev/libre-oneroster	AGPL	cell	AGPL-3.0	or-later	UNDER_SPECIFIED	34523	8486a10c4393	LICENSE@HEAD
+bigbluebutton/bbb-install	GPL|LGPL	cell	LGPL-3.0	or-later	UNDER_SPECIFIED	7651	da7eabb7bafd	LICENSE@HEAD
+bigbluebutton/bigbluebutton	GPL-3.0|LGPL|LGPL-3.0	sole-row	LGPL-3.0	or-later	AGREE	7652	e3a994d82e64	LICENSE@HEAD
+bigdata-ustc/RCD	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+bigdata-ustc/TechCD	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+bigdata-ustc/Zero-1-to-3	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+blend-ed/openedx-mcp	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34524	8d56b405468a	LICENSE@HEAD
+blend-ed/tutor-contrib-openedxmcp	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34524	8d56b405468a	LICENSE@HEAD
+bmosoluciones/now-lms	AGPL|GPL|LGPL	sole-row	Apache-2.0	UNSTATED	FAMILY_DISAGREE	10915	a9c4042d767d	LICENSE@HEAD
+bncc-dev/bncc-dados	GPL-2.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1092	e162f8f4b461	LICENSE@HEAD
+bnsoftware/lti-1p3-tool	GPL|LGPL	sole-row	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11343	78b49eeaddbf	LICENSE.md@HEAD
+braivo/braivo	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34561	3df32708ab18	LICENSE@HEAD
+brownplt/LTLTutor	AGPL|AGPL-3.0|GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	LICENSE.txt@HEAD
+bruchris/canvas-lms-mcp	AGPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1070	c29329c5ef3b	LICENSE@HEAD
+bycs-lp/moodle-block_ai_chat	GPL|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+bycs-lp/moodle-local_ai_injection	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+bycs-lp/moodle-local_ai_manager	GPL|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+caiocarvalhofre/moodle-mod_maici	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35178	ccb349b4132e	LICENSE.md@HEAD
+caiuc/equipo-8-haCAIthon-2026	AGPL-3.0|GPLv3	sole-row	AGPL-3.0	or-later	AGREE	34932	0047c2f48685	LICENSE@HEAD
+canyongbs/advisingapp	AGPL	sole-row	NOT-OSI (Elastic License 2.0)	UNSTATED	FAMILY_DISAGREE	3860	48255018b41f	LICENSE@HEAD
+carmonabernaldiego/sistema-escolar	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+cboard-org/cboard	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE.txt@HEAD
+celtic-project/LTI-PHP	LGPL-3.0	sole-row	LGPL-3.0	or-later	AGREE	7651	da7eabb7bafd	LICENSE@HEAD
+cerpus/Edlib	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	34915	0e1372769c3e	LICENSE@HEAD
+cgrevisse/moodle-qbank_genai	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35178	ccb349b4132e	LICENSE.md@HEAD
+cgtuebingen/infomark-backend	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+chamilo/chamilo-lms	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+chipmates/agoracosmica	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+chrisryugj/kordoc	GPL|LGPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1067	af5f2aced9ce	LICENSE@HEAD
+claroline/Claroline	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+GPL	or-later	FAMILY_DISAGREE	34616	9107f2ed4192	LICENSE@HEAD
+classmoji/classmoji	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+classroomio/classroomio	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+code-dibyajyotirout/vibelocus-npm-package	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	32359	d58d6dc87db1	LICENSE@HEAD
+codeforlife-education/aimmo	AGPL-3.0	sole-row	POINTER_IN_REPO (LICENSE.md)	UNSTATED	FAMILY_DISAGREE	115	f406d19420ea	LICENSE.md@HEAD
+codelitdev/courselit	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34143	281e174e4d5f	LICENSE.md@HEAD
+coqui-ai/TTS	AGPL-3.0	cell	MPL-2.0	or-later	FAMILY_DISAGREE	16726	fab3dd6bdab2	LICENSE.txt@HEAD
+cran/TAM	GPL|GPL-3	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+cran/catR	GPL|GPL-3	cell			UNCHECKABLE/ADDRESS_DEAD	0		@
+cran/difR	GPL	sole-row			UNCHECKABLE/ADDRESS_DEAD	0		@
+cran/exams	GPL-2|GPL-3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+csmediapro/moodle-mcp-server	AGPL|AGPL-3.0|GPL	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+danielcregg/moodle-local_aitutor	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+datacamp/catsim	GPL-3.0|LGPLv3	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	COPYING@HEAD
+datauy/ElijoEstudiar	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+davidpesce/moodle-logstore_xapi	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35121	e1c0ad728983	LICENSE@HEAD
+deng-group/wendao	GPL	sole-row	GPL-3.0	or-later	UNDER_SPECIFIED	35149	3972dc9744f6	LICENSE@HEAD
+dequelabs/axe-core	GPL	sole-row	MPL-2.0	or-later	FAMILY_DISAGREE	15921	af175b9d96ee	LICENSE@HEAD
+despedite/siu-guarani	GPL-3.0|LGPL	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+dexter-psychometrics/dexter	LGPL-3	sole-row	LGPL-3.0	or-later	AGREE	7639	a853c2ffec17	LICENSE@HEAD
+digital-learning-gmbh/educa-lrs	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	33889	201d43058b44	LICENSE.md@HEAD
+dmitry-viskov/pylti1.3	AGPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1070	5aef77eb4471	LICENSE@HEAD
+douglasrizzo/catsim	AGPL-3.0	cell	BSD-3-Clause	UNSTATED	FAMILY_DISAGREE	1514	1bdccc1d297a	LICENSE@HEAD
+dummerchen/Ucampus	GPL-2.0	cell	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+dvjvp/lut-to-ue4-clut	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+eLearning-BS23/moodle-quizaccess_proctoring	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35178	ccb349b4132e	LICENSE.md@HEAD
+echo-loop/Echo-Loop	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+edificeio/entcore	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+MIT+MPL-2.0	UNSTATED	FAMILY_DISAGREE	8537	86b7a74b9496	LICENSE@HEAD
+edly-io/h5pxblock	AGPL|AGPL-3.0|GPL|GPL-3.0|GPLv3	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1064	4d17b43eb718	LICENSE@HEAD
+edu-sharing/Edu-Sharing	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	LICENSE.txt@HEAD
+edubadges/badgr-server	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34519	91b65277959e	LICENSE@HEAD
+edubadges/edubadges-server	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34519	91b65277959e	LICENSE@HEAD
+edumind-es/edumind-miclase	AGPL	sole-row	AGPL-3.0	or-later	UNDER_SPECIFIED	511	920e1bb5b955	LICENSE@HEAD
+edx/ease	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	35136	e12d78569742	LICENSE.txt@HEAD
+eecs-autograder/autograder-server	LGPL	sole-row	LGPL-3.0	or-later	UNDER_SPECIFIED	7652	b96e8c21c928	LICENSE.txt@HEAD
+eledia/moodle-block_elediaai_tutor	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+eledia/moodle-elediaai-suite-free	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+elgg/elgg	GPL-2.0	sole-row	COMPOSITE: GPL+MIT	UNSTATED	FAMILY_DISAGREE	17173	7188c83d8764	LICENSE.txt@HEAD
+elmsln/elmsln	AGPL-3.0|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35193	0e6d22ed58b6	LICENSE.md@HEAD
+espocrm/espocrm	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34522	4df3c306ddda	LICENSE.txt@HEAD
+espoon-voltti/evaka	LGPL	sole-row	UNREAD	or-later	FAMILY_DISAGREE	1001	b889788fbc7b	LICENSE@HEAD
+exelearning/exelearning	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+exelearning/iteexe	GPL-2.0	cell	GPL-2.0	or-later	AGREE	17992	32b1062f7da8	COPYING@HEAD
+fabrica-de-inovacao/expeditto	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+fauzcategui/moodle-sence	GPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+fedcal/open-jarvis	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35613	666e1d543c5e	LICENSE@HEAD
+fedora-infra/tahrir	AGPL-3.0|GPL	sole-row	AGPL-3.0	or-later	AGREE	34917	f59751a85c4e	LICENSE@HEAD
+fentas/lani	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34524	8d56b405468a	LICENSE@HEAD
+fernandobrito/cursos_ufpb	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+fernandobrito/ufpb_sigaa_api_old	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+fga-eps-mds/2017.2-MerendaMais	GPL-3.0|LGPL	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+five-plus-one/AI-Marker-Suite	AGPL-3.0|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35154	1ab858f515df	LICENSE@HEAD
+foradian/fedena	GPL-2.0	sole-row			UNCHECKABLE/ADDRESS_DEAD	0		@
+formalms/formalms	GPL|GPL-2|GPL-2.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+foundation50/classroom50	AGPL|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35150	e57f1c320b8c	LICENSE@HEAD
+foundation50/classroom50-language-packs	GPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+francoisjacquet/rosariosis	GPL|GPL-2.0|GPL-3.0	cell	GPL-2.0	UNSTATED	AGREE	15214	d954e14e5c75	LICENSE@HEAD
+frappe/education	AGPL|AGPL-3.0|GPL|GPL-2.0|GPL-3|GPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+frappe/erpnext	AGPL-3.0|GPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+frappe/frappe	AGPL-3.0|GPL-3.0	sole-row	MIT (body form, no title)	UNSTATED	FAMILY_DISAGREE	1118	bc6001a54ffc	LICENSE@HEAD
+frappe/lms	AGPL|AGPL-3.0|GPL|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+fwu-de/ais-chat	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+g3i/lxHive	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+gafapa/moodlia-cli	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	284	427bf0128d41	LICENSE@HEAD
+gafapa/moodlia-portable	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+gazpachu/hypatia	LGPL	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+gibbonedu/core	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35121	93178a43d6d3	LICENSE@HEAD
+gocodebox/lifterlms	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+grey8-io/learn-ai-with-grey8	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+guedesindev/ai_tutor_forge	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+h5p/h5p-php-library	GPL-3.0|GPLv3	sole-row	GPL-3.0	or-later	AGREE	35146	c53a65c2fd56	LICENSE.txt@HEAD
+helixnow/deep-student	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34532	894342980454	LICENSE@HEAD
+hesham0-0nasser/tutor-lms-mcp	GPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+hneemann/Digital	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+hoijui/obadgen	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34020	d8a6cc31abc1	LICENSE.txt@HEAD
+hpi-schul-cloud/schulcloud-server	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	76a97c878c9c	LICENSE@HEAD
+hrshadhin/school-management-system	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34522	4df3c306ddda	LICENSE@HEAD
+human2human-ai/moodle-tool_human2human	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+hydro-dev/Hydro	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34522	4df3c306ddda	LICENSE@HEAD
+iDavi/heidy_backend	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+iDavi/usp-mcp	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+ics-tools/ics.tools	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+ictinnovations/moodle-mod_ictexam	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+idempiere/idempiere	GPL-2.0	sole-row	GPL-2.0	UNSTATED	AGREE	15057	ff71df08df5d	LICENSE.md@HEAD
+inducer/relate	AGPL-3|GPL-3	sole-row	MIT (body form, no title)	UNSTATED	FAMILY_DISAGREE	1145	66ff89ebf05f	LICENSE@HEAD
+inepdadosabertos/api	GPL-2.0|LGPL	sole-row	GPL-2.0	or-later	AGREE	18025	a01259a1b522	LICENSE@HEAD
+infomark-org/infomark	AGPL|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+instructure/analytics	AGPL|AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34520	76a97c878c9c	LICENSE.txt@HEAD
+instructure/canvas-lms	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	57c8ff33c9c0	LICENSE@HEAD
+ioi/isolate	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	583	f581b7044fac	LICENSE@HEAD
+ipti/br.tag	GPL-2.0|LGPL	sole-row	GPL-2.0	or-later	AGREE	18027	111e1f411730	LICENSE@HEAD
+ivan-my-wong/flowclass	AGPL|AGPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1066	806e79da59d2	LICENSE@HEAD
+ivmelo/suapbot	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	76a97c878c9c	LICENSE@HEAD
+jeanlucio/moodle-local_aihub	GPL-3|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	COPYING.txt@HEAD
+jhudsl/ottrpal	GPL-3	cell	GPL-3.0	or-later	AGREE	34891	9e63ba22c808	LICENSE.md@HEAD
+jknowles/EWStools	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35156	65a7aee2cb0d	LICENSE@HEAD
+josueninadiaz/kunnskap	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+jplag/JPlag	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+junit-team/junit4	GPL	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+jxmorris12/language_tool_python	GPL-3.0|LGPL	sole-row	GPL-3.0	or-later	AGREE	35151	e79e9c8a0c85	LICENSE@HEAD
+kadusic1/e-gradebook-platform	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+kalvilabs/kalvi	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+kamlendras/OpenProctor	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+kantord/LibreLingo	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34524	e9df4c4e4e64	LICENSE@HEAD
+khayyam-math/khayyam-math	AGPL	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1079	4068e5e09efd	LICENSE@HEAD
+kiwix/kiwix-tools	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35068	fc82ca8b6fdb	COPYING@HEAD
+krzysztofbury/librus-mcp	GPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1071	22e7ab2dbddc	LICENSE@HEAD
+kstateome/lti-launch	LGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+kuali/kc	AGPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+kuali/kfs	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+GPL	or-later	FAMILY_DISAGREE	33755	55618c37d2ae	LICENSE@HEAD
+languagetool-org/languagetool	LGPL-2.1	sole-row	LGPL-2.1	or-later	AGREE	26432	95a62130965b	COPYING.txt@HEAD
+lanis-mobile/lanis	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+learnhouse/learnhouse	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+learningequality/kolibri	GPL-3.0|LGPL	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1097	3c056b34a476	LICENSE@HEAD
+learningequality/kolibri-server	GPL|GPL-2	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+leogaggl/lxHive	GPL-2.0	cell	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+lepo-project/roster-hub	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+limekiller/moodle-block_openai_chat	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+lingdojo/kana-dojo	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34273	db52e3daad92	LICENSE.md@HEAD
+linil/centreSIS	GPL-2.0	sole-row	GPL-2.0	UNSTATED	AGREE	15235	d2aa3d7153ee	LICENSE@HEAD
+lmscloud-io/moodle-aiprovider_openaicompatible	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+lmscloud-io/moodle-mcp-server	AGPL-3.0|GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	LICENSE@HEAD
+logisim-evolution/logisim-evolution	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	32089	f8d4768b381f	LICENSE.md@HEAD
+longnhgsvn/Learn-with-AI-tieng-viet	AGPL-3.0	sole-row	GPL-3.0	or-later	FAMILY_DISAGREE	35149	3972dc9744f6	LICENSE@HEAD
+loventures/loplatform	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34354	32a0a7381bbc	LICENSE.md@HEAD
+ls1intum/Artemis	GPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1091	63a0a2b4d6d9	LICENSE@HEAD
+luisgf/openbadgeslib	LGPL-3.0|LGPLv3	sole-row	LGPL-3.0	or-later	AGREE	7650	ea8af5e789cb	LICENSE.txt@HEAD
+luisricar-do/portugol-ai-tutor	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+macielti/sigaa-cli	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+macsnoeren/genai-open-assessment	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+manifoldscholar/manifold	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE.md@HEAD
+marcusgreen/moodle-qtype_aitext	GPL|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+marcusgreen/moodle-tool_aiconnect	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+masakhane-io/lafand-mt	GPL	sole-row	GPL-3.0	or-later	UNDER_SPECIFIED	35149	3972dc9744f6	LICENSE@HEAD
+mebis-lp/moodle-local_ai_manager	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+meefik/ITMOproctor	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	411535cf4a79	LICENSE@HEAD
+memphis-iis/MoFaCTS	AGPL-3.0|GPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+mengxi-ream/read-frog	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+meyerjp3/psychometrics	GPL-3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+mhlavac/edupage-mcp	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35183	3b39dd1dc47e	LICENSE@HEAD
+michael-milette/moodle-local_aiid	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	32477	0a8386e5af66	LICENSE.md@HEAD
+microsoft/moodle-ai-assistant	GPL|GPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1084	e0eb0d5ceba1	LICENSE@HEAD
+microsoft/moodle-local_copilot	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	LICENSE@HEAD
+microsoft/o365-moodle	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+mint-o-badges/badgr-server	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34519	91b65277959e	LICENSE@HEAD
+mizcausevic-dev/mcp-ai-tutor	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+mjnaderi/Sharif-Judge	AGPL-3.0|GPL-3.0	cell	GPL-3.0	or-later	AGREE	35146	c53a65c2fd56	LICENSE@HEAD
+mohaneesh-03/mcp-tutor	GPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1056	1126322e2cc8	LICENSE@HEAD
+moodle/moodle	AGPL-3.0|GPL|GPL-3|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	COPYING.txt@HEAD
+moodlehq/moodle-enrol_oneroster	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+moodlehq/moodle-plugin-ci	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35146	c53a65c2fd56	LICENSE@HEAD
+moodlehq/moodle-tool_dataprivacy	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+mumuki/mumuki-laboratory	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+nextcloud/context_chat_backend	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	57c8ff33c9c0	LICENSE@HEAD
+nextcloud/integration_openai	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34519	91b65277959e	COPYING@HEAD
+nextcloud/live_transcription	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+nextcloud/llm2	AGPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1069	2e5e8698e58b	LICENSE@HEAD
+nextcloud/talk_bot_ai	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+nilc-nlp/nilcmetrix	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34522	20b067f86de3	LICENSE@HEAD
+nirholas/ai-tutor-mcp	GPL-3.0	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11338	08cadd94b53a	LICENSE@HEAD
+nodetool-ai/nodetool	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34522	4df3c306ddda	LICENSE.txt@HEAD
+nvaccess/nvda	GPL-2.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+oat-sa/devkit-lti1p3	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+oat-sa/extension-tao-testqti	GPL-2.0|GPLv3	cell	GPL-2.0	or-later	AGREE	18025	a01259a1b522	LICENSE@HEAD
+oat-sa/lib-lti1p3-core	GPL-2.0|GPLv3|LGPL|LGPL-2.1	cell	GPL-2.0	or-later	AGREE	18091	f9c375a1be4a	LICENSE@HEAD
+oat-sa/lib-lti1p3-deep-linking	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18091	f9c375a1be4a	LICENSE@HEAD
+oat-sa/oneroster-import	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18026	39db8f9acf03	LICENSE@HEAD
+oat-sa/package-tao	LGPL	sole-row	GPL-2.0	or-later	FAMILY_DISAGREE	18027	a45d0bb572ed	LICENSE@HEAD
+oat-sa/qti-sdk	GPL-2.0|GPL-3.0|GPLv3|LGPL	cell	GPL-2.0	or-later	AGREE	18025	a01259a1b522	LICENSE@HEAD
+oat-sa/tao-core	GPL|GPL-2.0|GPL-3.0|GPLv2|GPLv3|LGPL|LGPL-3.0	sole-row	GPL-2.0	or-later	AGREE	18025	a01259a1b522	LICENSE@HEAD
+okpy/ok	GPL-3.0|LGPL-3.0	cell	Apache-2.0	UNSTATED	FAMILY_DISAGREE	13979	e3b80e19df08	LICENSE@HEAD
+onbirdev/moodle-webservice_mcp	GPL|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+open-behavior-analysis/aba-clinical-agent	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+open-ent/entcore	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+MIT+MPL-2.0	UNSTATED	FAMILY_DISAGREE	9097	165e4a153126	LICENSE@HEAD
+opendigitaleducation/entcore	AGPL-3.0	sole-row	COMPOSITE: AGPL-3.0+MIT+MPL-2.0	UNSTATED	FAMILY_DISAGREE	8537	86b7a74b9496	LICENSE@HEAD
+openeducat/openeducat_erp	GPL|GPL-3.0|LGPL|LGPL-3.0	sole-row	LGPL-3.0	or-later	AGREE	8241	528f84036800	LICENSE@HEAD
+openedx/XBlock	AGPL|AGPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+openedx/course-discovery	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	35116	28bc942b8134	LICENSE@HEAD
+openedx/credentials	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35116	28bc942b8134	LICENSE@HEAD
+openedx/ease	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35136	e12d78569742	LICENSE.txt@HEAD
+openedx/edx-enterprise	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	35136	e12d78569742	LICENSE@HEAD
+openedx/edx-ora2	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35135	106a1b4b8b71	LICENSE@HEAD
+openedx/edx-platform	AGPL|AGPL-3.0|GPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35136	e12d78569742	LICENSE@HEAD
+openedx/edx-proctoring	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35119	a28ed4f09e68	LICENSE.txt@HEAD
+openedx/event-routing-backends	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35139	4135b640deea	LICENSE.txt@HEAD
+openedx/event-tracking	AGPL-3.0	cell			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+openedx/frontend-app-learning	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+openedx/openedx-ai-extensions	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+openedx/openedx-filters	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	35139	4135b640deea	LICENSE.txt@HEAD
+openedx/openedx-learning	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35139	4135b640deea	LICENSE.txt@HEAD
+openedx/openedx-mcp	AGPL|AGPL-3.0	sole-row			UNCHECKABLE/ADDRESS_DEAD	0		@
+openedx/openedx-platform	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35136	e12d78569742	LICENSE@HEAD
+openedx/xblock-lti-consumer	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	57c8ff33c9c0	LICENSE@HEAD
+openemis/core	GPL	sole-row	GPL-2.0	UNSTATED	UNDER_SPECIFIED	15518	b6f03c6715ee	LICENSE@HEAD
+openfun/richie	AGPL	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1079	e4b2a3148135	LICENSE@HEAD
+openfun/xblock-proctor-exam	AGPL-3.0	sole-row	AGPL-3.0	UNSTATED	AGREE	29077	9bc8001fdc39	LICENSE@HEAD
+opensalt/opensalt	GPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1080	38e322d5ab06	LICENSE@HEAD
+openstax/openstax-cms	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34541	6179a3052bab	LICENSE@HEAD
+os4ed/openSIS-Classic	GPL-2.0	cell	GPL-2.0	or-later	AGREE	17286	224ac3d403e3	docs/License.txt@HEAD
+overhangio/tutor	AGPL-3.0|GPL-3.0	cell	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE.txt@HEAD
+packbackbooks/lti-1-3-php-library	AGPL|GPL	sole-row	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11343	78b49eeaddbf	LICENSE.md@HEAD
+papillonapp/papillon-ed-core	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+patriciamar/ShinyItemAnalysis	GPL|GPL-3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+pawtograder/assignment-action	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	674	160b0e51b5d5	LICENSE@HEAD
+pawtograder/platform	GPL-3.0	sole-row	UNREAD	or-later	FAMILY_DISAGREE	658	61d7698783f4	LICENSE@HEAD
+pdfmathtranslate/pdfmathtranslate	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+peancor/moodle-mcp-server	GPL-3.0	sole-row	MIT	UNSTATED	FAMILY_DISAGREE	1064	845ac6ac9e57	LICENSE@HEAD
+penecho/penecho	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+philchalmers/mirt	GPL	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+plastic-labs/honcho	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+plastic-labs/tutor-gpt	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+portabilis/i-diario	AGPL-3.0	sole-row	UNREAD	UNSTATED	FAMILY_DISAGREE	35326	fe85f94658bf	LICENSE@HEAD
+portabilis/i-educar	AGPL-3.0|GPL-2.0|LGPL|LGPL-3.0	sole-row	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+portabilis/pre-matricula-digital	AGPL-3.0	sole-row	UNREAD	UNSTATED	FAMILY_DISAGREE	35326	fe85f94658bf	LICENSE@HEAD
+pressbooks/pressbooks	GPL-3.0	cell	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE.md@HEAD
+processing/p5.js	LGPL|LGPL-2.1	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+programadores-obreros/Agente-editor-inet	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+pupilfirst/pupilfirst	AGPL-3.0	sole-row	MIT (body form, no title)	UNSTATED	FAMILY_DISAGREE	1684	bda0aa6d49f2	LICENSE@HEAD
+purysho/EduBoard	AGPL-3.0	cell	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+pywirrarika/naki	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35141	589ed823e9a8	LICENSE@HEAD
+qingjian-team/qingjian	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+qxbao/qldt-hanu-mcp	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+r-dcm/measr	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	34904	585e25ef8f59	LICENSE.md@HEAD
+rabser/moodle-aiprovider_openwebui	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+raif-s-naffah/xapi-rs	GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+rajeevsathish/project-sunbird.github.io	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	76a97c878c9c	LICENSE@HEAD
+rathena/rathena	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+regexPattern/fiuba-reviews-backend	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+ripose-jp/Memento	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18097	a99d7b0625a0	LICENSE@HEAD
+robbert-harms/ybe	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+ronda-ai/Ronda-App	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35094	fc4fc588c469	LICENSE@HEAD
+sage-is/ai-ui	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	33895	c3d8ee6f4e07	LICENSE@HEAD
+saniales/ai-lesson-planner	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	4f04c705a26c	LICENSE@HEAD
+sansan0/trendradar	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+sardorml/captureflow	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	35057	59494826b1a2	LICENSE@HEAD
+sas-fossdev/saspes	AGPL-3.0|GPL	cell	AGPL-3.0	or-later	AGREE	34522	20b067f86de3	LICENSE@HEAD
+saylordotorg/moodle-local_ai_course_assistant	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+schemaspy/schemaspy	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	COPYING@HEAD
+schroedinger-Hat/certo	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	33820	895609d3e304	LICENSE@HEAD
+schroedinger-hat/certo	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	33820	895609d3e304	LICENSE@HEAD
+scibly-dev/scibly	AGPL-3.0	sole-row	UNREAD	or-later	FAMILY_DISAGREE	34739	9027c56f2fc5	LICENSE@HEAD
+senjun-team/senjun-courses	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+sf-shenfeng/learn-shell	AGPL|AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+simjanos-dev/LinguaCafe	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	32423	d1bfc7a74995	LICENSE@HEAD
+sitor-ai/frametell	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+snflwr-ai/snflwr.ai	AGPL-3.0	cell	COMPOSITE: AGPL-3.0+BSD	UNSTATED	FAMILY_DISAGREE	2833	0f14d6b37818	LICENSE@HEAD
+sodadata/soda-core	AGPL-3.0	cell	NOT-OSI (Elastic License 2.0)	UNSTATED	FAMILY_DISAGREE	3804	572dca2c34e2	LICENSE@HEAD
+sonic-pi-net/sonic-pi	AGPL	sole-row	COMPOSITE: AGPL-3.0+GPL+MIT	or-later	FAMILY_DISAGREE	15981	def8251f2c07	LICENSE.md@HEAD
+sourcegrade/jagr	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+stasolejnik/elektron	AGPL-3.0	sole-row	GPL-3.0	or-later	FAMILY_DISAGREE	35149	3972dc9744f6	LICENSE@HEAD
+suap-ava-suite/moodle-local_suap	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35161	54b00c9ffd02	LICENSE@HEAD
+sudosylabs/Proctor	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	32386	fb9ce8b6dfc4	LICENSE@HEAD
+tadreeb-lms/tadreeblms	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+talbano/equate	GPL-3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+thecyberbrick/fits-rating-tool	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35148	8b1ba204bb69	COPYING@HEAD
+themeum/tutor	GPL-3.0|GPLv2|GPLv3	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+thiswillbeyourgithub/AnkiAIUtils	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+tl-its-umich-edu/caliper-php-public	LGPL|LGPL-3.0	sole-row	LGPL-3.0	or-later	AGREE	7438	8c401dfc8928	LICENSE@HEAD
+tonyzimbinski/infinite-campus	AGPL-3.0|GPL	cell	GPL-3.0	or-later	UNDER_SPECIFIED	35149	3972dc9744f6	LICENSE@HEAD
+tooljet/tooljet	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34503	7f8f48e4266a	LICENSE@HEAD
+trane-project/trane	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	0d96a4ff68ad	LICENSE@HEAD
+tunapanda/h5p-standalone	GPL	sole-row	MIT (body form, no title)	UNSTATED	FAMILY_DISAGREE	1077	c296703063e7	LICENSE@HEAD
+tusharnankani/Aankh	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+twentyhq/twenty	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	39965	caece25ff05e	LICENSE@HEAD
+ucfopen/Materia	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+ucfopen/Obojobo	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34520	76a97c878c9c	LICENSE@HEAD
+ucfopen/UDOIT	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+ucfopen/canvasapi	AGPL-3.0	sole-row	MIT (body form, no title)	UNSTATED	FAMILY_DISAGREE	1130	f422adb6cde4	LICENSE@HEAD
+ucsd-ets/openedx-caliper-tracking	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+umlx5h/LLPlayer	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+untisapi/untis4j	GPL|GPL-3.0|LGPL|LGPL-2.1|LGPL-3.0	sole-row	LGPL-3.0	or-later	AGREE	7378	dc1ab8bc8b6a	LICENSE@HEAD
+veraPDF/veraPDF-library	GPL|GPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+vnschneider/suap-mcp	AGPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+vosslab/qti_package_maker	GPL-3.0|LGPL|LGPL-3.0	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+wenchao-ma/GDINA	GPL-3	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+willianmano/moodle-theme_moove	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	34903	831e92808eb5	LICENSE.md@HEAD
+xiaochong0302/course-tencent-cloud	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+xzhaopsy/MIRT	GPL	sole-row			UNCHECKABLE/REPO_LIVE_NO_GRANT	0		@HEAD
+yedidiaklein/moodle-local_aiquestions	GPL|GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35178	ccb349b4132e	LICENSE.md@HEAD
+yetanalytics/lrsql	GPL	sole-row	Apache-2.0	UNSTATED	FAMILY_DISAGREE	11357	c71d239df917	LICENSE@HEAD
+yh2072/edgameclaw	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+yokowasis/autograder	GPL-3.0	sole-row			UNCHECKABLE/ADDRESS_DEAD	0		@
+yomidevs/yomitan	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35147	8ceb4b9ee5ad	LICENSE@HEAD
+ystemsrx/sql-to-ER	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE@HEAD
+yukazakiri/koakademy	AGPL-3.0	sole-row	AGPL-3.0	or-later	AGREE	34523	8486a10c4393	LICENSE.md@HEAD
+yunger7/enem-api	GPL-2.0|LGPL	cell	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+zhblue/hustoj	GPL-2.0	sole-row	GPL-2.0	or-later	AGREE	18092	8177f9751321	LICENSE@HEAD
+zijinz456/OpenTutor	GPL-3.0	cell	MIT	UNSTATED	FAMILY_DISAGREE	1068	5352b4967982	LICENSE@HEAD
+zmievsa/autograder	GPL-3.0	sole-row	GPL-3.0	or-later	AGREE	35149	3972dc9744f6	LICENSE@HEAD
+
+# refused as AMBIGUOUS (adjacency only, no cell-level attribution):
+# ADORSYS-GIS/moodle-aiprovider_openaicompatible	GPL|GPL-3.0
+# Vallaury/vallaury-android	AGPL-3.0
+# Vallaury/vallaury-desktop	AGPL-3.0
+# academic-innovation/django-lti	AGPL|GPL
+# bennix/AIGaokao	GPL-3.0
+# bennix/HighChem	GPL-3.0
+# federicazoe/gradetools	GPL|GPL-3.0
+# gafapa/moodle-local_moodlia	GPL-3.0
+# infinity-decoder/Shiori	GPL
+# jcputney/scorm-again	GPL-3.0
+# jeanlucio/moodle-local_studiolms	GPL-3.0
+# jeanlucio/moodle-mod_codereview	GPL-3.0
+# learningequality/ricecooker	GPL-3.0
+# learningequality/studio	GPL-3.0
+# lti-tool/lti-tool	AGPL|GPL
+# nextcloud/assistant	AGPL-3.0
+# nextcloud/context_chat	AGPL-3.0
+# open-spaced-repetition/fsrs4anki	AGPL-3.0
+# rhasspy/piper	GPL-3.0
+# valentineus/moodle-webhooks	GPL-3.0

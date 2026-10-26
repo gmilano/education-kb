@@ -1,0 +1,7720 @@
+[
+ {
+  "addr": "1111philo/learn",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35240,
+  "sha": "119d54a4bd57",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "19otherrsh-dot/Opencred",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "1EdTech/lti-1-3-php-library",
+  "shelf_claims": [
+   "AGPL",
+   "GPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11343,
+  "sha": "78b49eeaddbf",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "24kchengYe/human-skill-tree",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 1134,
+  "sha": "3fb8cda58638",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ADORSYS-GIS/moodle-aiprovider_openaicompatible",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "compose/patterns.md"
+  ]
+ },
+ {
+  "addr": "AaronGrace978/EduHelp",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "Acture/scriptmark",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Agso-o/sigaa-calendar",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Ajatt-Tools/mpvacious",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "AnkitClassicVision/tutor-engine",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Apomera/AlloFlow",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "AGPLv3"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35442,
+  "sha": "698099632698",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "intel/trends.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "ArnaudGuiovanna/tutor-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1073,
+  "sha": "1e05c9440068",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "BLPS/oneroster-php-api",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Berserk-hub150/moodle-ai-skill-navigator",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35153,
+  "sha": "ebdc0e5b7005",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "CAHLR/OATutor",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1105,
+  "sha": "5baaaf977a28",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "CambridgeAssessmentResearch/KernEqWPS",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2",
+   "GPL-3"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1077,
+  "sha": "5e006dcb41ac",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "CapSoftware/Cap",
+  "shelf_claims": [
+   "AGPLv3"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 34972,
+  "sha": "146364c489e6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Chocobozzz/PeerTube",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "76a97c878c9c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "Citolab/lti-1p3-platform-example",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Citolab/qti-components",
+  "shelf_claims": [
+   "GPL-2.0",
+   "GPL-3.0",
+   "LGPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35199,
+  "sha": "c4b11c89ca88",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Citolab/qti-convert",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35196,
+  "sha": "f93eb1d94904",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Citolab/qti-convert-python",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0",
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35196,
+  "sha": "f93eb1d94904",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "ClassroomIO/ClassroomIO",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "CoopCodeCommun/pyopenbadges",
+  "shelf_claims": [
+   "LGPL-2.1"
+  ],
+  "served": "LGPL-2.1",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 26526,
+  "sha": "20c17d8b8c48",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Cvmcosta/ltijs",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11361,
+  "sha": "d5fcb264ff39",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "DMOJ/judge-server",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "57c8ff33c9c0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "DMOJ/online-judge",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "57c8ff33c9c0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "DigiKlausur/e2x-docs",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "DigitalPlatDev/FreeDomain",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Dmoayad/essay-grader-llm",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Dolibarr/dolibarr",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35151,
+  "sha": "e79e9c8a0c85",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ECNU-ICALK/EduChat",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Ed-Fi-Alliance-OSS/Ed-Fi-ODS",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-2.0"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 10172,
+  "sha": "59899c6091b5",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "EduardoKrausME/moodle-local_mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "EdupageAPI/edupage-api",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Elgg/Elgg",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "COMPOSITE: GPL+MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 17173,
+  "sha": "7188c83d8764",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Elmaldelego/OPEN-TUTOR-IA",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "FWU-DE/ais-chat",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "FenixEdu/fenixedu-academic",
+  "shelf_claims": [
+   "LGPL-3.0"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7652,
+  "sha": "97628afebc60",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "FiredMosquito831/ase-moodle-mcp",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11358,
+  "sha": "cfc7749b96f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "intel/market.md"
+  ]
+ },
+ {
+  "addr": "Fordham-EDM-Lab/Grading-Analysis-Tool",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "FreeLanguageTools/vocabsieve",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "GarethManning/education-agent-skills",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "CC-BY-SA-4.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1230,
+  "sha": "f952182df4eb",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "GatorEducator/gatorgrade",
+  "shelf_claims": [
+   "AGPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "GatorEducator/gatorgrader",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35191,
+  "sha": "57756125771d",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Gego-K12/gegok12",
+  "shelf_claims": [
+   "LGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1150,
+  "sha": "b8694396d7dc",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "GibbonEdu/core",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35121,
+  "sha": "93178a43d6d3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "HKUDS/DeepTutor",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "LGPL-3.0"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11408,
+  "sha": "cd2f54e1e506",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "HernanDiaz/moodle-local_aigrader",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "COMPOSITE: LGPL+GPL",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1594,
+  "sha": "66c045368bcd",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "HugeCatLab/ChatTutor",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "20b067f86de3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ILIAS-eLearning/ILIAS",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "INGInious/INGInious",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+GPL",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 34764,
+  "sha": "6d1ebe4ddf66",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "IgorFonck/logicits",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Jawadh-Salih/moodle-mcp-server",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1063,
+  "sha": "2cf91ec5272f",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "JudgePeach/math-question-bank",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "JuezUN/INGInious",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34840,
+  "sha": "bf251efc1462",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Kennisnet/qti-components",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35199,
+  "sha": "c4b11c89ca88",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "Koha-Community/Koha",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35151,
+  "sha": "e79e9c8a0c85",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Kosudo/nextSIS",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "KristiyanVachev/Question-Generation",
+  "shelf_claims": [
+   "AGPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "LT-Gen/Lesson_Timetable_Generator",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Lamb-Project/lamb",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35349,
+  "sha": "17fe6d0ffa96",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Lamb-Project/lamba",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "compose/patterns.md"
+  ]
+ },
+ {
+  "addr": "LearnPress/learnpress",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0",
+   "GPLv3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "LearningLocker/learninglocker",
+  "shelf_claims": [
+   "AGPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Learnosity/learnosity-qti",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18264,
+  "sha": "e3c23a194748",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "LibreClass/libreclass",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "LibreLingo/LibreLingo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34524,
+  "sha": "e9df4c4e4e64",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Limekiller/moodle-block_openai_chat",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "MarcosNahuel/moodle-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1065,
+  "sha": "f27341a8425b",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "MeetPlan/MeetPlanBackend",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "MeetYourAI/AIProf",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@master",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "MuriloCalegari/Ifes-Academico",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "NCSIS/InfiniteCampus-Vendor-Integration",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OHF-Voice/piper1-gpl",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "0ae0485a5bd3",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OPEN-ENT-NG/entcore",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+MIT+MPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 8537,
+  "sha": "86b7a74b9496",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OS4ED/openSIS-Classic",
+  "shelf_claims": [
+   "AGPL",
+   "GPL",
+   "GPL-2.0",
+   "GPL-3",
+   "GPL-3.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 17286,
+  "sha": "224ac3d403e3",
+  "at": "docs/License.txt@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "intel/market.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "OS4ED/openSIS-Responsive-Design",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 17286,
+  "sha": "224ac3d403e3",
+  "at": "docs/License.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OpenBoard-org/OpenBoard",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OpenEMIS/core",
+  "shelf_claims": [
+   "GPL-2.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 15518,
+  "sha": "b6f03c6715ee",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OpenEduCat/openeducat_erp",
+  "shelf_claims": [
+   "LGPL"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 8241,
+  "sha": "528f84036800",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OpenOLAT/OpenOLAT",
+  "shelf_claims": [
+   "AGPL-3",
+   "GPL-3",
+   "GPL-3.0"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 10982,
+  "sha": "6dbc5b605ed0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md"
+  ]
+ },
+ {
+  "addr": "OptiKey/OptiKey",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35144,
+  "sha": "ed0c320a8eb2",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "OtterDen-Lab/Autograder",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "Ovsyanka83/autograder",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "PLus123456/lecture-live",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "PapillonApp/papillon-v6",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "PeerTube/PeerTube",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "PlaypowerLabs/EdOptimize",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "PrairieLearn/PrairieLearn",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+MIT",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 36983,
+  "sha": "f3fba75145cf",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ProjectsAndPrograms/school-management-system",
+  "shelf_claims": [
+   "LGPL-2.1"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "SDUOJ/OnlineJudge",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "4df3c306ddda",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "SafeExamBrowser/seb-server",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "MPL-2.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 16725,
+  "sha": "1f256ecad192",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "SapuSeven/BetterUntis",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Schlaflied/Plot-Ark",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Schroedinger-Hat/certo",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 33820,
+  "sha": "895609d3e304",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "SdSarthak/AegisAI",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1015,
+  "sha": "956f54f917d3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "SiddharthG1210/RAG-AI-TUTOR",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Simon-Initiative/oli-torus",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3",
+   "GPL",
+   "GPL-3"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1083,
+  "sha": "696205cef189",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/foundations.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "Snaw80/moodle-mcp",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1072,
+  "sha": "b2bb31ce9d90",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "StudyDrift/lextures",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "57c8ff33c9c0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "Swaraj-Mandre/Vidhya-Setu",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "THU-MAIC/OpenMAIC",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "LGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1065,
+  "sha": "ba2525637432",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Tadreeb-LMS/tadreeblms",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Tampere/trevaka",
+  "shelf_claims": [
+   "LGPL"
+  ],
+  "served": "LGPL-2.1",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 27030,
+  "sha": "7ffe1954587c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Tangerine-Community/Tangerine",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Teci-AI/moodle-mcp-connector",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1103,
+  "sha": "c8bcb50d415c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md"
+  ]
+ },
+ {
+  "addr": "TouchRefletz/maia.edu",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "TricksterGuy/complx",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 32422,
+  "sha": "963392e038d7",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "UCL-INGI/INGInious",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+GPL",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 34764,
+  "sha": "6d1ebe4ddf66",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "UniTime/unitime",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11357,
+  "sha": "58d1e17ffe51",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "UniversalDependencies/UD_Spanish-AnCora",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "CC-BY-4.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 189,
+  "sha": "653702c7fdee",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Utdanningsdirektoratet/moodle-block_hero",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "0ae0485a5bd3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Vacademy-io/vacademy_platform",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Vallaury/vallaury-android",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "Vallaury/vallaury-desktop",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "X5GON/x5moodle",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "BSD-2-Clause",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1325,
+  "sha": "2a992db80952",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "YTFL/AttendMate-Bunk-Calculator-Attendance-Tracker",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "ZelinZhou-THU/stem-tutor-agent",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35211,
+  "sha": "fab96a92c83a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "abdomoaz58-tech/OpenLearn-AI",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "AGPLv3"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35184,
+  "sha": "6f1e622c82a3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "academic-innovation/django-lti",
+  "shelf_claims": [
+   "AGPL",
+   "GPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1098,
+  "sha": "c24a6b35e390",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "academico-sis/academico",
+  "shelf_claims": [
+   "GPL",
+   "LGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1094,
+  "sha": "6051a15f4d44",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "acanas/swad-core",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34501,
+  "sha": "884b434957ba",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "adamjenkins/moodle-local_nomoreai",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "adaptlearning/adapt_framework",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35129,
+  "sha": "e90ca2f081fa",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "adelahladka/difNLR",
+  "shelf_claims": [
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "adlnet/tla",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "NOT-OSI (This is free and unencumbered software released into the pub)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1211,
+  "sha": "6b0382b16279",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "aesophor/hacklympics",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MPL-2.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 16725,
+  "sha": "1f256ecad192",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "affromero/Sotto",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "NOT-OSI (PolyForm Noncommercial License 1.0.0)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 4563,
+  "sha": "ffcca38841ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ahmedEid1/Lumen",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ahmedEid1/lumen",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ai-lingnan/econai-agent-platform",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "ajjalti/EvalStudio",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 33061,
+  "sha": "09b00d0bf35f",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "andymatuschak/orbit",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "POINTER_IN_REPO (Readme.md)",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 457,
+  "sha": "86b93fd1d19a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "ankidroid/Anki-Android",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35068,
+  "sha": "fc82ca8b6fdb",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ankitects/anki",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 1930,
+  "sha": "bde7d05790a0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "aprincar/curriculum-bncc",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "arashactive/laramint",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "archboard/tidal-ptc",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34931,
+  "sha": "0a29a2a70e16",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "artcc/freelingo",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34514,
+  "sha": "ea94d5765c59",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "asbplayer/asbplayer",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "atutor/ATutor",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2.0",
+   "GPL-3",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "aulasneo/tutor-contrib-let",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "debf08813eec",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/foundations.md"
+  ]
+ },
+ {
+  "addr": "autism-technology-research-syndicate/sealapplication",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "avps82/mentar",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "barglabs/cejel",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md"
+  ]
+ },
+ {
+  "addr": "bennix/AIGaokao",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "bennix/HighChem",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "bgwdotdev/libre-oneroster",
+  "shelf_claims": [
+   "AGPL"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bigbluebutton/bbb-install",
+  "shelf_claims": [
+   "GPL",
+   "LGPL"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 7651,
+  "sha": "da7eabb7bafd",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bigbluebutton/bigbluebutton",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7652,
+  "sha": "e3a994d82e64",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "bigdata-ustc/RCD",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bigdata-ustc/TechCD",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bigdata-ustc/Zero-1-to-3",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "blend-ed/openedx-mcp",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34524,
+  "sha": "8d56b405468a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "blend-ed/tutor-contrib-openedxmcp",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34524,
+  "sha": "8d56b405468a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bmosoluciones/now-lms",
+  "shelf_claims": [
+   "AGPL",
+   "GPL",
+   "LGPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 10915,
+  "sha": "a9c4042d767d",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/foundations.md"
+  ]
+ },
+ {
+  "addr": "bncc-dev/bncc-dados",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1092,
+  "sha": "e162f8f4b461",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "bnsoftware/lti-1p3-tool",
+  "shelf_claims": [
+   "GPL",
+   "LGPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11343,
+  "sha": "78b49eeaddbf",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "braivo/braivo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34561,
+  "sha": "3df32708ab18",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "brownplt/LTLTutor",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bruchris/canvas-lms-mcp",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1070,
+  "sha": "c29329c5ef3b",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "bycs-lp/moodle-block_ai_chat",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "bycs-lp/moodle-local_ai_injection",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "bycs-lp/moodle-local_ai_manager",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "caiocarvalhofre/moodle-mod_maici",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35178,
+  "sha": "ccb349b4132e",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "caiuc/equipo-8-haCAIthon-2026",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPLv3"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34932,
+  "sha": "0047c2f48685",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "canyongbs/advisingapp",
+  "shelf_claims": [
+   "AGPL"
+  ],
+  "served": "NOT-OSI (Elastic License 2.0)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 3860,
+  "sha": "48255018b41f",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "carmonabernaldiego/sistema-escolar",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cboard-org/cboard",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "celtic-project/LTI-PHP",
+  "shelf_claims": [
+   "LGPL-3.0"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7651,
+  "sha": "da7eabb7bafd",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cerpus/Edlib",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34915,
+  "sha": "0e1372769c3e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cgrevisse/moodle-qbank_genai",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35178,
+  "sha": "ccb349b4132e",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "cgtuebingen/infomark-backend",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "chamilo/chamilo-lms",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "intel/market.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "chipmates/agoracosmica",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "chrisryugj/kordoc",
+  "shelf_claims": [
+   "GPL",
+   "LGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1067,
+  "sha": "af5f2aced9ce",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "claroline/Claroline",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+GPL",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 34616,
+  "sha": "9107f2ed4192",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "classmoji/classmoji",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "classroomio/classroomio",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "code-dibyajyotirout/vibelocus-npm-package",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 32359,
+  "sha": "d58d6dc87db1",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "codeforlife-education/aimmo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "POINTER_IN_REPO (LICENSE.md)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 115,
+  "sha": "f406d19420ea",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "codelitdev/courselit",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34143,
+  "sha": "281e174e4d5f",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "coqui-ai/TTS",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MPL-2.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 16726,
+  "sha": "fab3dd6bdab2",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cran/TAM",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cran/catR",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/ADDRESS_DEAD",
+  "bytes": 0,
+  "sha": "",
+  "at": "@",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cran/difR",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/ADDRESS_DEAD",
+  "bytes": 0,
+  "sha": "",
+  "at": "@",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "cran/exams",
+  "shelf_claims": [
+   "GPL-2",
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "csmediapro/moodle-mcp-server",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "danielcregg/moodle-local_aitutor",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "datacamp/catsim",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPLv3"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "datauy/ElijoEstudiar",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "davidpesce/moodle-logstore_xapi",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35121,
+  "sha": "e1c0ad728983",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "compose/patterns.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "deng-group/wendao",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "dequelabs/axe-core",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "MPL-2.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 15921,
+  "sha": "af175b9d96ee",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "despedite/siu-guarani",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "dexter-psychometrics/dexter",
+  "shelf_claims": [
+   "LGPL-3"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7639,
+  "sha": "a853c2ffec17",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "digital-learning-gmbh/educa-lrs",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 33889,
+  "sha": "201d43058b44",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "dmitry-viskov/pylti1.3",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1070,
+  "sha": "5aef77eb4471",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "douglasrizzo/catsim",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "BSD-3-Clause",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1514,
+  "sha": "1bdccc1d297a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "dummerchen/Ucampus",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "dvjvp/lut-to-ue4-clut",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "eLearning-BS23/moodle-quizaccess_proctoring",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35178,
+  "sha": "ccb349b4132e",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "echo-loop/Echo-Loop",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "edificeio/entcore",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+MIT+MPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 8537,
+  "sha": "86b7a74b9496",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "edly-io/h5pxblock",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0",
+   "GPLv3"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1064,
+  "sha": "4d17b43eb718",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "compose/patterns.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "edu-sharing/Edu-Sharing",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "edubadges/badgr-server",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34519,
+  "sha": "91b65277959e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "edubadges/edubadges-server",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34519,
+  "sha": "91b65277959e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "edumind-es/edumind-miclase",
+  "shelf_claims": [
+   "AGPL"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 511,
+  "sha": "920e1bb5b955",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "edx/ease",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35136,
+  "sha": "e12d78569742",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "eecs-autograder/autograder-server",
+  "shelf_claims": [
+   "LGPL"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 7652,
+  "sha": "b96e8c21c928",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "eledia/moodle-block_elediaai_tutor",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "eledia/moodle-elediaai-suite-free",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "elgg/elgg",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "COMPOSITE: GPL+MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 17173,
+  "sha": "7188c83d8764",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "elmsln/elmsln",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35193,
+  "sha": "0e6d22ed58b6",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "espocrm/espocrm",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "4df3c306ddda",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "espoon-voltti/evaka",
+  "shelf_claims": [
+   "LGPL"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1001,
+  "sha": "b889788fbc7b",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "exelearning/exelearning",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "exelearning/iteexe",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 17992,
+  "sha": "32b1062f7da8",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "fabrica-de-inovacao/expeditto",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "fauzcategui/moodle-sence",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "fedcal/open-jarvis",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35613,
+  "sha": "666e1d543c5e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "federicazoe/gradetools",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34908,
+  "sha": "10bf8bb1de5d",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "fedora-infra/tahrir",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34917,
+  "sha": "f59751a85c4e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "fentas/lani",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34524,
+  "sha": "8d56b405468a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "fernandobrito/cursos_ufpb",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "fernandobrito/ufpb_sigaa_api_old",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "fga-eps-mds/2017.2-MerendaMais",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "five-plus-one/AI-Marker-Suite",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35154,
+  "sha": "1ab858f515df",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "foradian/fedena",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/ADDRESS_DEAD",
+  "bytes": 0,
+  "sha": "",
+  "at": "@",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "formalms/formalms",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2",
+   "GPL-2.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "foundation50/classroom50",
+  "shelf_claims": [
+   "AGPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35150,
+  "sha": "e57f1c320b8c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "foundation50/classroom50-language-packs",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "francoisjacquet/rosariosis",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 15214,
+  "sha": "d954e14e5c75",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "frappe/education",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL",
+   "GPL-2.0",
+   "GPL-3",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "frappe/erpnext",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "frappe/frappe",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "MIT (body form, no title)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1118,
+  "sha": "bc6001a54ffc",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "frappe/lms",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "fwu-de/ais-chat",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "g3i/lxHive",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "gafapa/moodle-local_moodlia",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 652,
+  "sha": "ce8a30c1107e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "gafapa/moodlia-cli",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 284,
+  "sha": "427bf0128d41",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "gafapa/moodlia-portable",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "gazpachu/hypatia",
+  "shelf_claims": [
+   "LGPL"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "gibbonedu/core",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35121,
+  "sha": "93178a43d6d3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "gocodebox/lifterlms",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "grey8-io/learn-ai-with-grey8",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "guedesindev/ai_tutor_forge",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "h5p/h5p-php-library",
+  "shelf_claims": [
+   "GPL-3.0",
+   "GPLv3"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35146,
+  "sha": "c53a65c2fd56",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "helixnow/deep-student",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34532,
+  "sha": "894342980454",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "hesham0-0nasser/tutor-lms-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "hneemann/Digital",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "hoijui/obadgen",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34020,
+  "sha": "d8a6cc31abc1",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "hpi-schul-cloud/schulcloud-server",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "76a97c878c9c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "hrshadhin/school-management-system",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "4df3c306ddda",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "human2human-ai/moodle-tool_human2human",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "hydro-dev/Hydro",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "4df3c306ddda",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "iDavi/heidy_backend",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "iDavi/usp-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ics-tools/ics.tools",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ictinnovations/moodle-mod_ictexam",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "idempiere/idempiere",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 15057,
+  "sha": "ff71df08df5d",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "inducer/relate",
+  "shelf_claims": [
+   "AGPL-3",
+   "GPL-3"
+  ],
+  "served": "MIT (body form, no title)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1145,
+  "sha": "66ff89ebf05f",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "inepdadosabertos/api",
+  "shelf_claims": [
+   "GPL-2.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18025,
+  "sha": "a01259a1b522",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "infinity-decoder/Shiori",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1072,
+  "sha": "03d351572510",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "infomark-org/infomark",
+  "shelf_claims": [
+   "AGPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "instructure/analytics",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "76a97c878c9c",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "instructure/canvas-lms",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "57c8ff33c9c0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "ioi/isolate",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 583,
+  "sha": "f581b7044fac",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ipti/br.tag",
+  "shelf_claims": [
+   "GPL-2.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18027,
+  "sha": "111e1f411730",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "ivan-my-wong/flowclass",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1066,
+  "sha": "806e79da59d2",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ivmelo/suapbot",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "76a97c878c9c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md"
+  ]
+ },
+ {
+  "addr": "jcputney/scorm-again",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1072,
+  "sha": "383b85b370e8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "jeanlucio/moodle-local_aihub",
+  "shelf_claims": [
+   "GPL-3",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "COPYING.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "jeanlucio/moodle-local_studiolms",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "COPYING.txt@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "jeanlucio/moodle-mod_codereview",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "jhudsl/ottrpal",
+  "shelf_claims": [
+   "GPL-3"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34891,
+  "sha": "9e63ba22c808",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/top.md"
+  ]
+ },
+ {
+  "addr": "jknowles/EWStools",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35156,
+  "sha": "65a7aee2cb0d",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "josueninadiaz/kunnskap",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "jplag/JPlag",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "junit-team/junit4",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "jxmorris12/language_tool_python",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35151,
+  "sha": "e79e9c8a0c85",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kadusic1/e-gradebook-platform",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kalvilabs/kalvi",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kamlendras/OpenProctor",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kantord/LibreLingo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34524,
+  "sha": "e9df4c4e4e64",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "khayyam-math/khayyam-math",
+  "shelf_claims": [
+   "AGPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1079,
+  "sha": "4068e5e09efd",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kiwix/kiwix-tools",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35068,
+  "sha": "fc82ca8b6fdb",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "krzysztofbury/librus-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1071,
+  "sha": "22e7ab2dbddc",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md"
+  ]
+ },
+ {
+  "addr": "kstateome/lti-launch",
+  "shelf_claims": [
+   "LGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kuali/kc",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "kuali/kfs",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+GPL",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 33755,
+  "sha": "55618c37d2ae",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "languagetool-org/languagetool",
+  "shelf_claims": [
+   "LGPL-2.1"
+  ],
+  "served": "LGPL-2.1",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 26432,
+  "sha": "95a62130965b",
+  "at": "COPYING.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "lanis-mobile/lanis",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "learnhouse/learnhouse",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "learningequality/kolibri",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1097,
+  "sha": "3c056b34a476",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "learningequality/kolibri-server",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "learningequality/ricecooker",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1087,
+  "sha": "8e7a35d64f5c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "learningequality/studio",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT (body form, no title)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1115,
+  "sha": "5715e50830cd",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "leogaggl/lxHive",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "lepo-project/roster-hub",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "limekiller/moodle-block_openai_chat",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "lingdojo/kana-dojo",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34273,
+  "sha": "db52e3daad92",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "linil/centreSIS",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 15235,
+  "sha": "d2aa3d7153ee",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "lmscloud-io/moodle-aiprovider_openaicompatible",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md"
+  ]
+ },
+ {
+  "addr": "lmscloud-io/moodle-mcp-server",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "logisim-evolution/logisim-evolution",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 32089,
+  "sha": "f8d4768b381f",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "longnhgsvn/Learn-with-AI-tieng-viet",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "loventures/loplatform",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34354,
+  "sha": "32a0a7381bbc",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ls1intum/Artemis",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1091,
+  "sha": "63a0a2b4d6d9",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "lti-tool/lti-tool",
+  "shelf_claims": [
+   "AGPL",
+   "GPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1077,
+  "sha": "25628bd9222b",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "luisgf/openbadgeslib",
+  "shelf_claims": [
+   "LGPL-3.0",
+   "LGPLv3"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7650,
+  "sha": "ea8af5e789cb",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "luisricar-do/portugol-ai-tutor",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "macielti/sigaa-cli",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "macsnoeren/genai-open-assessment",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "manifoldscholar/manifold",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "marcusgreen/moodle-qtype_aitext",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "marcusgreen/moodle-tool_aiconnect",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "masakhane-io/lafand-mt",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "mebis-lp/moodle-local_ai_manager",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "meefik/ITMOproctor",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "411535cf4a79",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "memphis-iis/MoFaCTS",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "mengxi-ream/read-frog",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "meyerjp3/psychometrics",
+  "shelf_claims": [
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "mhlavac/edupage-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35183,
+  "sha": "3b39dd1dc47e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "michael-milette/moodle-local_aiid",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 32477,
+  "sha": "0a8386e5af66",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "microsoft/moodle-ai-assistant",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1084,
+  "sha": "e0eb0d5ceba1",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "microsoft/moodle-local_copilot",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "microsoft/o365-moodle",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "mint-o-badges/badgr-server",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34519,
+  "sha": "91b65277959e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "mizcausevic-dev/mcp-ai-tutor",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "mjnaderi/Sharif-Judge",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35146,
+  "sha": "c53a65c2fd56",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "mohaneesh-03/mcp-tutor",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1056,
+  "sha": "1126322e2cc8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "moodle/moodle",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL",
+   "GPL-3",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "COPYING.txt@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "moodlehq/moodle-enrol_oneroster",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "moodlehq/moodle-plugin-ci",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35146,
+  "sha": "c53a65c2fd56",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "moodlehq/moodle-tool_dataprivacy",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "mumuki/mumuki-laboratory",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/assistant",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34519,
+  "sha": "91b65277959e",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/context_chat",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34519,
+  "sha": "91b65277959e",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/context_chat_backend",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "57c8ff33c9c0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/integration_openai",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34519,
+  "sha": "91b65277959e",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/live_transcription",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/llm2",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1069,
+  "sha": "2e5e8698e58b",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nextcloud/talk_bot_ai",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "nilc-nlp/nilcmetrix",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "20b067f86de3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "nirholas/ai-tutor-mcp",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11338,
+  "sha": "08cadd94b53a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "nodetool-ai/nodetool",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "4df3c306ddda",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "nvaccess/nvda",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/devkit-lti1p3",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/extension-tao-testqti",
+  "shelf_claims": [
+   "GPL-2.0",
+   "GPLv3"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18025,
+  "sha": "a01259a1b522",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/lib-lti1p3-core",
+  "shelf_claims": [
+   "GPL-2.0",
+   "GPLv3",
+   "LGPL",
+   "LGPL-2.1"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18091,
+  "sha": "f9c375a1be4a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/lib-lti1p3-deep-linking",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18091,
+  "sha": "f9c375a1be4a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/oneroster-import",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18026,
+  "sha": "39db8f9acf03",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/package-tao",
+  "shelf_claims": [
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 18027,
+  "sha": "a45d0bb572ed",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/qti-sdk",
+  "shelf_claims": [
+   "GPL-2.0",
+   "GPL-3.0",
+   "GPLv3",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18025,
+  "sha": "a01259a1b522",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "oat-sa/tao-core",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2.0",
+   "GPL-3.0",
+   "GPLv2",
+   "GPLv3",
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18025,
+  "sha": "a01259a1b522",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "intel/trends.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "okpy/ok",
+  "shelf_claims": [
+   "GPL-3.0",
+   "LGPL-3.0"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 13979,
+  "sha": "e3b80e19df08",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "onbirdev/moodle-webservice_mcp",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md"
+  ]
+ },
+ {
+  "addr": "open-behavior-analysis/aba-clinical-agent",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "open-ent/entcore",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+MIT+MPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 9097,
+  "sha": "165e4a153126",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "open-spaced-repetition/fsrs4anki",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1079,
+  "sha": "2ec9e6e61ed8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/foundations.md"
+  ]
+ },
+ {
+  "addr": "opendigitaleducation/entcore",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+MIT+MPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 8537,
+  "sha": "86b7a74b9496",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openeducat/openeducat_erp",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0",
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 8241,
+  "sha": "528f84036800",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "openedx/XBlock",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/course-discovery",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35116,
+  "sha": "28bc942b8134",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/credentials",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35116,
+  "sha": "28bc942b8134",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/ease",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35136,
+  "sha": "e12d78569742",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/edx-enterprise",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35136,
+  "sha": "e12d78569742",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/edx-ora2",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35135,
+  "sha": "106a1b4b8b71",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "openedx/edx-platform",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35136,
+  "sha": "e12d78569742",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "intel/trends.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "openedx/edx-proctoring",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35119,
+  "sha": "a28ed4f09e68",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md",
+   "intel/trends.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/event-routing-backends",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35139,
+  "sha": "4135b640deea",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/event-tracking",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/frontend-app-learning",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/openedx-ai-extensions",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "openedx/openedx-filters",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35139,
+  "sha": "4135b640deea",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/openedx-learning",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35139,
+  "sha": "4135b640deea",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "intel/trends.md"
+  ]
+ },
+ {
+  "addr": "openedx/openedx-mcp",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/ADDRESS_DEAD",
+  "bytes": 0,
+  "sha": "",
+  "at": "@",
+  "shelves": [
+   "agents/top.md"
+  ]
+ },
+ {
+  "addr": "openedx/openedx-platform",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35136,
+  "sha": "e12d78569742",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openedx/xblock-lti-consumer",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "57c8ff33c9c0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "intel/trends.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openemis/core",
+  "shelf_claims": [
+   "GPL",
+   "GPL-2.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 15518,
+  "sha": "b6f03c6715ee",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openfun/richie",
+  "shelf_claims": [
+   "AGPL"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1079,
+  "sha": "e4b2a3148135",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openfun/xblock-proctor-exam",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "UNSTATED",
+  "verdict": "AGREE",
+  "bytes": 29077,
+  "sha": "9bc8001fdc39",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "opensalt/opensalt",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1080,
+  "sha": "38e322d5ab06",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "openstax/openstax-cms",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34541,
+  "sha": "6179a3052bab",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "os4ed/openSIS-Classic",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 17286,
+  "sha": "224ac3d403e3",
+  "at": "docs/License.txt@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "overhangio/tutor",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0",
+   "GPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "packbackbooks/lti-1-3-php-library",
+  "shelf_claims": [
+   "AGPL",
+   "GPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11343,
+  "sha": "78b49eeaddbf",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/foundations.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "papillonapp/papillon-ed-core",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "intel/market.md",
+   "intel/trends.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "patriciamar/ShinyItemAnalysis",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "pawtograder/assignment-action",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 674,
+  "sha": "160b0e51b5d5",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "pawtograder/platform",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 658,
+  "sha": "61d7698783f4",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "pdfmathtranslate/pdfmathtranslate",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "peancor/moodle-mcp-server",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1064,
+  "sha": "845ac6ac9e57",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "penecho/penecho",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "philchalmers/mirt",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "plastic-labs/honcho",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "plastic-labs/tutor-gpt",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "compose/patterns.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "portabilis/i-diario",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35326,
+  "sha": "fe85f94658bf",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "portabilis/i-educar",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL-2.0",
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "compose/patterns.md",
+   "intel/market.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "portabilis/pre-matricula-digital",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35326,
+  "sha": "fe85f94658bf",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "pressbooks/pressbooks",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "processing/p5.js",
+  "shelf_claims": [
+   "LGPL",
+   "LGPL-2.1"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "programadores-obreros/Agente-editor-inet",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "pupilfirst/pupilfirst",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT (body form, no title)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1684,
+  "sha": "bda0aa6d49f2",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "purysho/EduBoard",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "pywirrarika/naki",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35141,
+  "sha": "589ed823e9a8",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "qingjian-team/qingjian",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "qxbao/qldt-hanu-mcp",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "r-dcm/measr",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34904,
+  "sha": "585e25ef8f59",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "rabser/moodle-aiprovider_openwebui",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "raif-s-naffah/xapi-rs",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "rajeevsathish/project-sunbird.github.io",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "76a97c878c9c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "rathena/rathena",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "regexPattern/fiuba-reviews-backend",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "rhasspy/piper",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1071,
+  "sha": "4cd71dece703",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ripose-jp/Memento",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18097,
+  "sha": "a99d7b0625a0",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "robbert-harms/ybe",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ronda-ai/Ronda-App",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35094,
+  "sha": "fc4fc588c469",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "sage-is/ai-ui",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 33895,
+  "sha": "c3d8ee6f4e07",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "saniales/ai-lesson-planner",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "4f04c705a26c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "sansan0/trendradar",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "sardorml/captureflow",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35057,
+  "sha": "59494826b1a2",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "sas-fossdev/saspes",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34522,
+  "sha": "20b067f86de3",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "saylordotorg/moodle-local_ai_course_assistant",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "schemaspy/schemaspy",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "schroedinger-Hat/certo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 33820,
+  "sha": "895609d3e304",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "schroedinger-hat/certo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 33820,
+  "sha": "895609d3e304",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "scibly-dev/scibly",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "UNREAD",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 34739,
+  "sha": "9027c56f2fc5",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "senjun-team/senjun-courses",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "sf-shenfeng/learn-shell",
+  "shelf_claims": [
+   "AGPL",
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "simjanos-dev/LinguaCafe",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 32423,
+  "sha": "d1bfc7a74995",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "sitor-ai/frametell",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "snflwr-ai/snflwr.ai",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+BSD",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 2833,
+  "sha": "0f14d6b37818",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "sodadata/soda-core",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "NOT-OSI (Elastic License 2.0)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 3804,
+  "sha": "572dca2c34e2",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "sonic-pi-net/sonic-pi",
+  "shelf_claims": [
+   "AGPL"
+  ],
+  "served": "COMPOSITE: AGPL-3.0+GPL+MIT",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 15981,
+  "sha": "def8251f2c07",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "sourcegrade/jagr",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "stasolejnik/elektron",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "suap-ava-suite/moodle-local_suap",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35161,
+  "sha": "54b00c9ffd02",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "compose/patterns.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "sudosylabs/Proctor",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 32386,
+  "sha": "fb9ce8b6dfc4",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "tadreeb-lms/tadreeblms",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "talbano/equate",
+  "shelf_claims": [
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "thecyberbrick/fits-rating-tool",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35148,
+  "sha": "8b1ba204bb69",
+  "at": "COPYING@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "themeum/tutor",
+  "shelf_claims": [
+   "GPL-3.0",
+   "GPLv2",
+   "GPLv3"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "thiswillbeyourgithub/AnkiAIUtils",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "tl-its-umich-edu/caliper-php-public",
+  "shelf_claims": [
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7438,
+  "sha": "8c401dfc8928",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/top.md",
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "tonyzimbinski/infinite-campus",
+  "shelf_claims": [
+   "AGPL-3.0",
+   "GPL"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "VERSION_DISAGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "tooljet/tooljet",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34503,
+  "sha": "7f8f48e4266a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "trane-project/trane",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "0d96a4ff68ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "tunapanda/h5p-standalone",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "MIT (body form, no title)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1077,
+  "sha": "c296703063e7",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "tusharnankani/Aankh",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "twentyhq/twenty",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 39965,
+  "sha": "caece25ff05e",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ucfopen/Materia",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ucfopen/Obojobo",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34520,
+  "sha": "76a97c878c9c",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ucfopen/UDOIT",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ucfopen/canvasapi",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "MIT (body form, no title)",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1130,
+  "sha": "f422adb6cde4",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "ucsd-ets/openedx-caliper-tracking",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "umlx5h/LLPlayer",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "untisapi/untis4j",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0",
+   "LGPL",
+   "LGPL-2.1",
+   "LGPL-3.0"
+  ],
+  "served": "LGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 7378,
+  "sha": "dc1ab8bc8b6a",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "valentineus/moodle-webhooks",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35200,
+  "sha": "6e7ee8ecc13c",
+  "at": "LICENSE.txt@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "veraPDF/veraPDF-library",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "vnschneider/suap-mcp",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "vosslab/qti_package_maker",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0",
+   "LGPL",
+   "LGPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "compose/patterns.md",
+   "repos/foundations.md",
+   "repos/trending.md",
+   "verticals/solutions.md"
+  ]
+ },
+ {
+  "addr": "wenchao-ma/GDINA",
+  "shelf_claims": [
+   "GPL-3"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "willianmano/moodle-theme_moove",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34903,
+  "sha": "831e92808eb5",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "xiaochong0302/course-tencent-cloud",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "xzhaopsy/MIRT",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/REPO_LIVE_NO_GRANT",
+  "bytes": 0,
+  "sha": "",
+  "at": "@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "yedidiaklein/moodle-local_aiquestions",
+  "shelf_claims": [
+   "GPL",
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35178,
+  "sha": "ccb349b4132e",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "yetanalytics/lrsql",
+  "shelf_claims": [
+   "GPL"
+  ],
+  "served": "Apache-2.0",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 11357,
+  "sha": "c71d239df917",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "yh2072/edgameclaw",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "yokowasis/autograder",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "",
+  "fwd": "",
+  "verdict": "UNCHECKABLE/ADDRESS_DEAD",
+  "bytes": 0,
+  "sha": "",
+  "at": "@",
+  "shelves": [
+   "agents/top.md"
+  ]
+ },
+ {
+  "addr": "yomidevs/yomitan",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35147,
+  "sha": "8ceb4b9ee5ad",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "ystemsrx/sql-to-ER",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "yukazakiri/koakademy",
+  "shelf_claims": [
+   "AGPL-3.0"
+  ],
+  "served": "AGPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 34523,
+  "sha": "8486a10c4393",
+  "at": "LICENSE.md@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "yunger7/enem-api",
+  "shelf_claims": [
+   "GPL-2.0",
+   "LGPL"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "zhblue/hustoj",
+  "shelf_claims": [
+   "GPL-2.0"
+  ],
+  "served": "GPL-2.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 18092,
+  "sha": "8177f9751321",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "repos/trending.md"
+  ]
+ },
+ {
+  "addr": "zijinz456/OpenTutor",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "MIT",
+  "fwd": "UNSTATED",
+  "verdict": "FAMILY_DISAGREE",
+  "bytes": 1068,
+  "sha": "5352b4967982",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md"
+  ]
+ },
+ {
+  "addr": "zmievsa/autograder",
+  "shelf_claims": [
+   "GPL-3.0"
+  ],
+  "served": "GPL-3.0",
+  "fwd": "or-later",
+  "verdict": "AGREE",
+  "bytes": 35149,
+  "sha": "3972dc9744f6",
+  "at": "LICENSE@HEAD",
+  "shelves": [
+   "agents/trending.md",
+   "repos/trending.md"
+  ]
+ }
+]

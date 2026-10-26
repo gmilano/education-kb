@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p455` — **🟢 `Gap 454-F` IS REFUTED IN ITS GENERAL FORM AND CONFIRMED IN A NARROWER ONE: the prescribed regional legs returned education-specific material for ALL FOUR regions this pass — the first non-nil in nine passes — but what they returned for EMEA and APAC is REGULATION, not adoption. 🔴 And the North America leg produced the most consequential correction on this file: the "134 bills in 31 states" figure five passes have carried is ONE TRACKER'S SNAPSHOT, and three other trackers covering the same session disagree by a factor of 2.6.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes. 🔵 The region
+contract (`CANON`/`VOCAB`, [`check_headings.py:17-19`](../compose/code/p383-region-heading-gate/check_headings.py))
+was read and re-implemented: the single canonical `## Opportunities by region` block below is
+amended **in place** — exactly one block, five closed-vocabulary children, none added, none renamed.
+
+### 🟢 The prescribed channel, graded a third time — and this time it is not a nil
+
+`Gap 454-F` stated the defect as regional: *"EMEA and APAC returned ZERO education-specific
+findings"* across eight legs and two passes. 🟢 **Run again this pass with the prescribed wording,
+all four regions returned education-specific material.** But the refutation is partial, and the
+precise form matters more than the count:
+
+| leg | returned | novelty against these shelves |
+|---|---|---|
+| 🟢 North America | Education-specific statutes and tracker counts | 🟡 **Currency pass + one correction.** Every headline token was already shelved; the *tracker disagreement* is new and it retires a carried figure |
+| 🟢 EMEA | 🔴 **Regulation only** — Annex III classification, the Digital Omnibus, Article 50 dates, the emotion-recognition ban | 🟢 **New specifics**: sub-points, the corrected 2027 date, and the two duties already in force |
+| 🟢 APAC | 🔴 **Regulation only** — Vietnam's instrument by number, Korea, Taiwan, China, Singapore, Japan | 🟢 **New and dated**: Decision `33/2026/QD-TTg` with its three education entries |
+| 🟢 LATAM | 🟢 **Adoption, with a denominator** — the UNESCO IESALC survey, TALIS 2024 teacher use | 🟢 Confirmed on a **second independent leg** |
+
+🔵 **So the honest restatement of `Gap 454-F`:** the prescribed channel does **not** fail by region.
+It fails by **question type** outside LATAM — it carries *regulatory* facts for EMEA and APAC
+reliably and returns **no institution-level adoption rate for either**. 🔴 That is the gap that is
+still open, and it is now specific enough to be searched for deliberately rather than noted.
+
+### 🔴 The North America correction — a carried number is retired, not refreshed
+
+🔴 **Five passes of this file carry "the MultiState tracker's 134 bills across 31 states" as the
+NA legislative figure.** This pass's leg returned it again, and returned **three other trackers
+counting the same 2026 session**:
+
+| tracker | count | as of |
+|---|---|---|
+| MultiState | **134 bills / 31 states** | March 2026 |
+| FutureEd | **87 bills / 28 states** | 2026 session |
+| *(secondary summary)* | **77 bills / 27 states** | AI-in-classroom-instruction scope |
+| *(secondary summary)* | **52 bills / 25 states** | Q1 2026 |
+
+🔴 **A 2.6× spread on the same session.** The sources attribute it to differing scope (all
+AI-in-education vs classroom-instruction only) and differing snapshot dates. 🔵 **Standing rule
+this adds:** a bill count on this file is cited **with its tracker and its as-of date**, or it is
+not cited. A bare "134 bills in 31 states" asserts a precision no tracker claims.
+
+🟢 **What the leg did add, and it is the actionable half** — the statutes behind the generic
+"OK + MD human-oversight" cell these shelves carry, each now named and dated:
+
+- 🟢 **California `AB 1159`** (Addis) — **signed**; bars covered operators from using student
+  information collected through their products **to train a generative AI system**, and creates a
+  **private right of action** for students actually harmed. 🔵 **Effective dates are staged**:
+  K-12 amendments **2027-01-01**, higher-education provisions operative **2027-07-01**.
+- 🟢 **Maryland `SB 720`** — signed **2026-05-26**, effective **2026-06-01**: state AI guidance,
+  an **AI coordinator designated by each local school system**, and an AI Education Collaborative.
+- 🟢 **Oklahoma `SB 1734`** — signed **2026-05-12** (Senate **42-0**, House **89-0**), effective
+  **2026-07-01**: instructional AI tools must be **educator-directed with human-in-the-loop review**.
+
+🔵 Sourcing posture, per `Gap 455-E` below: these are **relayed**, not read from the legislatures.
+
+### 🔴 `Gap 455-E` — every market figure on this file is structurally relayed, and that is now measured on the host
+
+🔴 `p450` recorded that the EU's own primaries are refused at CONNECT by this host's network
+policy. 🟢 **This pass reproduced it and widened it.** `www.unesco.org`,
+`www.iesalc.unesco.org` and `education.ec.europa.eu` were all attempted and all refused at
+CONNECT — logged by the proxy as `connect_rejected` — while `raw.githubusercontent.com`,
+`pypi.org`, `registry.npmjs.org`, `crates.io` and `packagist.org` all served 200 in the same
+session.
+
+🔵 **So the asymmetry is channel-wide and it is a property of the environment, not of the sector:
+this base can read SUPPLY first-hand and can only ever RELAY demand.** Every licence on these
+shelves is a byte-level read; every market, adoption and regulatory figure — including the ones
+above and the ones in the region block below — is a search relay that cannot be checked against
+the primary document from here. 🔴 That applies retroactively to every market figure these shelves
+carry, and it is the reason the regulatory specifics above are stated with their *instrument
+numbers*, which are at least checkable by someone who can reach the primary.
+
 ## 🆕 `p454` — **🟢 APAC gains the opportunity it has never had on these shelves: a national register reachable from four MIT clients, in a country of 1.4 M+ teachers. 🔴 And the market-research channel the encargo prescribes is graded a second time — 8 legs, and the two it was supposed to serve best (EMEA and APAC education) returned NOTHING education-specific.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes. Nothing here is
@@ -340,6 +415,22 @@ point — Brazil/Argentina/Colombia are *compose* markets, Mexico/Chile/Peru are
 
 ### North America
 
+🆕 `p455` 🔴 **A carried figure is RETIRED, not refreshed.** The *"134 bills across 31 states"*
+count this file has carried for five passes is the **MultiState** tracker **as of March 2026**, and
+three other trackers covering the same 2026 session report **87/28** (FutureEd), **77/27** and
+**52/25** — a **2.6× spread**, attributed to scope (all AI-in-education vs classroom-instruction
+only) and snapshot date. 🔵 **Rule: a bill count is cited with its tracker and as-of date, or not
+at all.** 🟢 **And the generic "OK + MD human-oversight" cell is replaced by the instruments**:
+California **`AB 1159`** (signed; bars student data collected through a product from **training a
+generative AI system**, creates a **private right of action**, staged effect **2027-01-01** K-12 /
+**2027-07-01** higher education), Maryland **`SB 720`** (signed 2026-05-26, effective 2026-06-01;
+an **AI coordinator per local school system** plus an AI Education Collaborative), Oklahoma
+**`SB 1734`** (signed 2026-05-12, Senate 42-0 / House 89-0, effective 2026-07-01; instructional AI
+must be **educator-directed with human-in-the-loop review**). 🔵 **The engagement consequence is
+unchanged and now better supported**: NA is sold **state by state**, and the dated statutes above
+give three concrete compliance wedges with named deadlines. 🔴 Relayed, never read from the
+legislatures (`Gap 455-E`).
+
 
 🆕 **`p453` — the institution-registry layer, five permissive rows deep.** The question *which
 institutions exist and what is true of them* is now answerable from MIT-granted code, where one
@@ -419,6 +510,37 @@ describes a **mock student-senate vote** organised by MIT RAISE, not a statute, 
 as one.
 
 ### EMEA
+
+🆕 `p455` 🟢 **EMEA gains the thing it has never had on these shelves: a SUPPLY tier, read
+first-hand.** `Gap 454-F` forced EMEA's opportunities to be sourced from supply, and this pass found
+it by applying `Gap 453-B`'s long-distinctive-name rule to Europe's national systems of record.
+**Eleven permissive clients to four closed national school systems** — PRONOTE and EcoleDirecte
+(🇫🇷), Schulportal Hessen (🇩🇪 Hesse), WebUntis (🇦🇹🇩🇪🇨🇭) — are now on
+[`agents/top.md`](../agents/top.md) and [`verticals/solutions.md`](../verticals/solutions.md) with
+byte-level grants. 🟢 **The opportunity is an agent layer against a system of record the client
+cannot fork, host or extend** — the inverse of a Moodle or Open edX engagement, and it prices
+differently: an adapter with a maintenance tail, not a platform customisation. 🔴 **Three
+constraints are measured, not assumed**: a stated rate limit (never 10 req/s, ≤1 800/h, in no case
+>3 600/h, with permanent blocking as the penalty), an unofficial client tier that breaks when the
+vendor moves (`pronotepy` is in maintenance mode for this reason, `ecoledirecte.js` was abandoned
+for it), and 🔴 **the permissive path and the documented-API path are different repositories** —
+every French and WebUntis client is MIT except [`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client),
+**GPL-3.0-or-later**, which is the only one on the *public* JSON-RPC API.
+
+🆕 `p455` 🟢 **And the regulatory cell gains specifics with a corrected date.** The prescribed leg
+returned education-specific EU material for the first time in nine passes: AI used for **admissions
+and applicant ranking** is Annex III point **3(a)** and **grading / evaluation of learning
+outcomes** point **3(b)**; core high-risk obligations apply from 🔴 **2027-12-02**, not the
+*2027-08-02* several guides still print, a change attributed to the **Digital Omnibus**,
+**Regulation (EU) 2026/1744**, in force since **2026-07-27**; AI embedded in regulated products
+follows at **2028-08-02**. 🔴 **Two duties are already live**: the **ban on emotion recognition in
+education** and the **AI-literacy duty** since **February 2025**, and Article 50 **transparency**
+duties since **2026-08-02**. 🟡 Education deployers that are public bodies should assume a
+**fundamental-rights impact assessment** before first use. 🔴 **Extraterritorial**: the Act reaches
+non-EU providers whose outputs affect EU-located students — which is the clause that makes this a
+Globant delivery constraint and not only a client's problem. 🔴 Sources are secondary compliance
+analyses; the sub-point letters and the Omnibus citation are **relayed** and unverifiable from this
+host (`Gap 455-E`).
 
 
 🆕 **`p453` — a market shape this file had never carried: the closed national system of record.**
@@ -503,6 +625,27 @@ with maintained Angular API and UI bindings (`ngx-edu-sharing-api@10.0.1`, modif
 component, and that is the opposite of the Ed-Fi shape North America offers.
 
 ### APAC
+
+🆕 `p455` 🟢 **The APAC regulatory cell gains its first instrument NUMBER, and education is named in
+it explicitly.** Vietnam's **Decision `33/2026/QD-TTg`**, issued **2026-06-30** and effective
+**2026-08-15**, lists **46 high-risk AI systems across six sectors**, of which 🔴 **three are
+education**: systems providing **self-learning content from uncontrolled data sources**, systems
+that **automatically assess, grade or rank students**, and systems that **monitor learner behaviour
+using biometric data**. 🔵 Many listed systems are high-risk **only where the AI output is the sole
+basis for a decision without meaningful human review** — so a human-in-the-loop design is a
+classification argument, not merely good practice. 🟢 **Deadlines split, and the split is the
+planning fact**: systems put into operation within six months of the effective date must comply by
+**2027-03-01**, while systems already operating before **2026-08-15** in **health, education and
+finance** have until **2027-09-01**. Obligations include **conformity assessment before
+deployment** (by a registered body for some systems, provider self-assessment for others), risk
+management and data-quality documentation, and **strict liability for damages**. 🟡 Regionally:
+**South Korea**'s AI Framework Act took effect **2026-01-22** with a one-year penalty grace,
+**Taiwan**'s AI Basic Act passed **December 2025**, **China** maintains the region's most
+comprehensive binding regime (generative AI + content labelling), and **Singapore** and **Japan**
+remain guidance-only. 🔴 **Still missing, and now specifically so**: no institution-level AI
+adoption rate for any APAC education system was returned by any leg
+(`Gap 454-F`, narrowed). 🔴 Relayed; one source dates Vietnam's instrument to July rather than
+30 June, and the official text was only partially visible (`Gap 455-E`).
 
 
 🆕 **`p453` — the institution-registry stratum is searched for the first time, and the finding is
@@ -596,6 +739,24 @@ it; it is a competitor to map, not a base to extend.
 
 ### LATAM
 
+🆕 `p455` 🟢 **The LATAM adoption cell is CONFIRMED on a second independent leg, and gains its
+institution-type split.** The UNESCO IESALC study launched at **Digital Learning Week 2026** with
+UNU-IAS support surveyed **200 higher-education institutions in 19 countries**: 🟢 **87 %** use AI
+in at least one area, **74 %** in teaching and learning, **57 %** in research — and 🔴 only
+**26 %** have a **formal AI strategy**, with gaps in policies, governance structures and monitoring.
+🔴 **Adoption is driven by individual academics, researchers and students rather than institutional
+plans**, and **1 in 2 students reports confusion about appropriate AI use** while staff training is
+comparatively common. 🟢 **By institution type**: private non-profit **84 %**, public **68 %**,
+private for-profit **52 %** — and public institutions face the greater resource and capacity
+constraint. 🟢 **School level, from TALIS 2024**: teachers who used AI in the previous year —
+**Brazil 56 %**, **Chile 55 %**, **Colombia 53 %**, **Costa Rica 52 %** against an **OECD average
+of 36 %**. 🔵 **A separate IESALC figure must not be mixed with the 26 %**: **45 %** of LAC
+institutions report *formal AI guidance* against **70 %** in Europe and North America — that
+measures guidance, not strategy. 🟢 **The opportunity this sharpens**: the regional deficit is
+**governance**, not usage. The sellable work is an institutional AI-governance and
+policy-instrumentation layer — strategy, monitoring, student-facing guidance — for institutions
+that are already using AI at 87 % and cannot say under what rules. 🔴 Relayed (`Gap 455-E`).
+
 
 🆕 **`p453` — one administrative-geography row, and a correction to how its grant is read.**
 [`nataliasm23/icones-bandeiras-br-uf`](https://github.com/nataliasm23/icones-bandeiras-br-uf)
@@ -688,6 +849,22 @@ data — provided the deliverable carries the CC BY attribution string the proje
 **50 %/19 %** feedback gap above is what it should be sold against.
 
 ### Global
+
+🆕 `p455` 🔵 **The channel finding that governs every demand-side cell on this file.** `Gap 454-F`
+claimed the prescribed market channel fails **by region**. 🟢 **Refuted in that form**: all four
+regional legs returned education-specific material this pass, the first non-nil in nine passes.
+🔴 **Confirmed in a narrower and more useful form**: outside LATAM the channel carries
+**regulation** and returns **no institution-level adoption rate** — EMEA and APAC yielded statutes,
+instrument numbers and dates, and nothing measuring what institutions actually do. 🔴 **And
+`Gap 455-E`, measured on the host rather than inferred**: `www.unesco.org`,
+`www.iesalc.unesco.org` and `education.ec.europa.eu` are refused at CONNECT by this
+environment's network policy (logged `connect_rejected`), while `raw.githubusercontent.com`,
+`pypi.org`, `registry.npmjs.org`, `crates.io` and `packagist.org` all served 200 in the same
+session. 🔵 **So this base reads SUPPLY first-hand and can only ever RELAY demand** — every licence
+here is a byte-level read; every market figure is a relay, retroactively including the ones carried
+from earlier passes. 🟢 The mitigation used throughout this pass is to state **instrument numbers**
+(`AB 1159`, `SB 720`, `SB 1734`, `Regulation (EU) 2026/1744`, `Decision 33/2026/QD-TTg`) so a reader
+who *can* reach a primary is able to check the claim this file could not.
 
 
 🆕 **`p453` — the credential substrate is placed, and graded against the trap of placing all of

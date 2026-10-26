@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-26
 ---
 
+## Pass 455 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 454-C` DELIVERED: the licence reader now carries a VERSION axis and the one live incompatibility on these shelves finally disagrees. 🔴 And this pass's own sweep produced a 20.6 % shelf-defect rate that is RETRACTED IN FULL — adjacency is not attribution, and the shelves were more precise than the instrument. 🟢 EMEA gains eleven permissive clients to four closed national school systems. 🔴 A figure five passes old is RETIRED: "134 bills / 31 states" is one tracker, and three others disagree by 2.6×.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED**
+(`Code from External`) before any gate body ran — **ten denials in eleven passes**. 🔵 Nothing in
+this pass is gate-attested. Five contracts were re-implemented independently and all are green;
+that is **5 of 62**.
+
+### 🟢 What closed, on the axis the gap named
+
+🟢 `Gap 454-C` asked for one thing and said `p454` had not done it: *"add a version axis and
+re-sweep the carried GPL/LGPL/AGPL cells"*. 🟢 **The axis exists**
+([`family_version.py`](compose/code/p455-version-axis/family_version.py), **34/34 controls**),
+anchored on the title block — `p454`'s anchor, the only region of a payload a preamble cannot
+reach — and the pair the gap named now grades correctly:
+
+| | declared | served at `HEAD` | `p454` | `p455` |
+|---|---|---|---|---|
+| [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | npm **`GNU GPL v2`** | **GPL *Version 3*** `35 148` B `8b1ba204bb69` | 🔴 `GPL` vs `GPL` → **`AGREE`** | 🟢 `GPL-2.0` vs `GPL-3.0` → **`DISAGREE`**, `compatible()` → `False` |
+
+🟢 **A second axis was needed and is now read.** `GPL-2.0-only` cannot combine with GPL-3.0 while
+`GPL-2.0-or-later` can, and that election lives outside the title block. Read first-hand,
+[`oat-sa/tao-core`](https://github.com/oat-sa/tao-core)'s GPLv2 is **`or-later`** — so TAO *may* be
+combined forward, where a version-only reader would have called it a dead end. 🔴 `UNSTATED` is
+never guessed in either direction.
+
+🟡 **The sound new number from the sweep: 11 of 461 cell-attributed GNU cells (2.4 %) are
+`UNDER_SPECIFIED`** — a bare family on the shelf against a versioned payload, so no compatibility
+decision is possible either way. Plus **306 `AGREE` (66.4 %)**, **56 `UNCHECKABLE` (12.1 %)** and
+**20 refused as `AMBIGUOUS`** and named rather than dropped
+([`evidence/gnu-version-axis.2026-10-26-p455.tsv`](evidence/gnu-version-axis.2026-10-26-p455.tsv)).
+
+### 🔴 The pass's most load-bearing result is a retraction, and it is this pass's own
+
+🔴 **The sweep's first run reported 99 `FAMILY_DISAGREE` (20.6 %) and a corrected run reported 88
+(19.1 %). Both are retracted in full.** Three mechanisms, each found by reading the shelf line the
+verdict rested on:
+
+1. 🔴 **Line-level co-occurrence** — every GNU token on a line attributed to every address on it, so
+   the **MIT** project [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+   "claimed" `GPL-3.0` and
+   [`junit-team/junit4`](https://github.com/junit-team/junit4) "claimed" `GPL`. 🔴 **And the first
+   write of this sentence asserted JUnit 4 is "EPL" from background knowledge; re-probed, it
+   serves no grant at any of 13 root paths, so both the shelf's claim and the correction were
+   unread** — caught by this pass's own digest re-verification before commit.
+2. 🔴 **Sole-address prose rows** — a sentence naming one repository and one licence is not a grant
+   assertion about that repository.
+3. 🔴 **Per-subtree grants, ungradeable by a root-only reader** —
+   [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) is **MIT at root** and
+   **GPL-3.0 under `legacy_reference/`**, with the instruction *"integrate over MCP, never vendor
+   the repository"*. The sweep compared a root payload against a claim never made about the root.
+
+🔵 **And the finding that makes this a closure rather than a failure: the shelves had already built
+the taxonomy.** The trending shelves class that population `DEPENDENCY-SCOPED` — of Kolibri,
+*"the repo is MIT and the prose says so"* — and `BOUNDARY-NAMED` — of
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server), *"it is MIT while
+in-tree Moodle plugins are GPL-3.0; the licence boundary **is** the architecture finding"*.
+🔴 `Gap 455-B`: **a sweep must consume that taxonomy, not re-derive it**, and no shelf carries a
+machine-readable grant column that would let it. Third measurement of the same rule, after registry
+names (`Gap 451`) and table shapes (`Gap 454-I`).
+
+### 🟢 What the shelves gained — a region, and a tier they had one instance of
+
+🟢 **EMEA had no supply tier on these shelves; it now has eleven clients across five countries**,
+every grant read first-hand at `HEAD`. Applying `Gap 453-B`'s measured rule — *prefer a named
+system of record whose name is LONG* — to Europe's national systems returned assets on the first
+attempt for all four: **PRONOTE** and **EcoleDirecte** (🇫🇷), **Schulportal Hessen** (🇩🇪 Hesse),
+**WebUntis** (🇦🇹🇩🇪🇨🇭). 🔵 **The shape is the finding**: these systems are proprietary,
+un-forkable and reachable only through unofficial clients, so the engagement inverts from platform
+customisation to an **adapter plus agent layer against a system of record the client does not
+control** (`Trend 41`, pattern `P455-A`).
+
+🔴 **And the tier carries three constraints that are measured, not assumed**: a vendor-stated rate
+limit (never 10 req/s, ≤1 800/h, hard ceiling 3 600/h, **permanent blocking** as the penalty); a
+client tier that breaks when the vendor moves (`pronotepy` is in maintenance mode for this reason,
+`a2br/ecoledirecte.js` abandoned 2023-08-08); and 🔴 **the permissive path and the documented-API
+path are different repositories** — every French and WebUntis client is MIT except
+[`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client), **GPL-3.0-or-later**,
+the only one on the *public* JSON-RPC API.
+
+### 🔴 Four refusals, and the first is the expensive kind
+
+🔴 **Nothing was padded.** **Pawnote** — recommended by `pronotepy`'s own maintainers as the
+maintained alternative, with npm `pawnote@1.6.2` declaring `GPL-3.0-or-later` and back-linking
+`LiterateInk/Pawnote.js` — is `ADDRESS_DEAD` on **four case variants**. **Pawdirecte** resolved to
+no address at all. **Linkdirecte**'s wiki is live and dated July 2026; the repository is dead.
+And `asadbekme/education-crm`, which a directory listing described with an *"MIT mention"*, serves
+**no licence file at 13 paths** — 🔴 **not shelved as MIT**, because an "MIT mention" is not a grant.
+
+### 🔴 One carried figure retired, and the mechanism should worry the next pass
+
+🔴 *"134 bills across 31 states"* has been on `intel/market.md` for five passes. It is the
+**MultiState** tracker **as of March 2026**; three other trackers covering the same session report
+**87/28**, **77/27** and **52/25** — a **2.6× spread**. 🔵 `p450`, `p451` and `p452` each recorded
+it as a token *already shelved* and therefore a nil, so the saturation check confirmed the figure's
+**presence** three times and never its **provenance**. 🟢 New standing rule: a bill count is cited
+with its tracker and as-of date, or not at all (`Gap 455-F`).
+
+### 🔴 The channel asymmetry, measured on the host
+
+🔴 `www.unesco.org`, `www.iesalc.unesco.org` and `education.ec.europa.eu` are refused at **CONNECT**
+by this environment's network policy (`connect_rejected`), while `raw.githubusercontent.com`,
+`pypi.org`, `registry.npmjs.org`, `crates.io` and `packagist.org` all served **200** in the same
+session. 🔵 **So this base reads SUPPLY first-hand and can only ever RELAY demand** — every licence
+here has a byte count and a digest; every market figure is a relay, retroactively including the
+carried ones. 🟢 Mitigation applied throughout: publish the **instrument number** (`AB 1159`,
+`SB 720`, `SB 1734`, `Regulation (EU) 2026/1744`, `Decision 33/2026/QD-TTg`) so a reader who can
+reach a primary can check what this base could not (`Gap 455-E`).
+
+### 🔵 Contracts re-implemented in the gate's absence — all green, and none of it attested
+
+🔵 `intel/market.md`: exactly **1** current canonical `## Opportunities by region`, **5**
+closed-vocabulary `###` children **in vocabulary order**, each amended **in place**, **0**
+out-of-vocabulary, **0** missing, LATAM-only **False**. 🔵 **Append-only proved by byte
+containment**: prior bodies of **4 247 770** B (`agents/trending.md`) and **3 220 083** B
+(`repos/trending.md`) each contained verbatim in the new file. 🔵 Frontmatter keys and region
+vocabulary checked on all **9** shelves; no table-header-shaped row written as data; newest-first
+insertion on every shelf. 🔴 That is **5 of 62**, and the three instruments this pass built are
+themselves ungated.
+
+🔴 **`Gap 454-A` is deliberately NOT closed**: `p453-vocabulary-ledger/verify.py`'s unsound 40-line
+window is still unpatched, because this pass would not edit gate-adjacent code it cannot run a gate
+against. 🟢 Instead: later passes should import `family()`/`canon()` from
+[`p455-version-axis/family_version.py`](compose/code/p455-version-axis/family_version.py) and treat
+`verify.py::family` as superseded — a convention, not an enforcement, until the gate runs.
+
 ## Pass 454 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 453-A`'s prescribed closure RAN over all 71 carried cells, and its FIRST answer was retracted before publication: it reported 6 disagreements and 3 were the instrument's own. 🔴 Four reader defects, and the first is INHERITED FROM THE GATE CODE — `p450`'s 40-line window mis-grades GPLv2 as LGPL. 🟢 `Gap 453-D` CLOSES for Indonesia on four MIT rows. 🔴 A carried grant went STALE two days ago, in the one direction that costs.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from

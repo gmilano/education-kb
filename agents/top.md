@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p455` — **🟢 EMEA GAINS A SUPPLY TIER THESE SHELVES HAVE NEVER CARRIED: eleven permissive clients to the four national school systems of France and the DACH countries, every grant read first-hand at `HEAD`. 🔴 And four candidates that every secondary source called real are REFUSED — one of them recommended by name as the maintained alternative to a shelved project, with nothing readable at the address its own registry record names.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED**
+(`Code from External`) before any gate body ran — **ten denials in eleven passes**. 🔵 Nothing
+below is gate-attested. The contracts were re-implemented independently and run in both
+directions ([`compose/code/p455-version-axis/`](../compose/code/p455-version-axis/));
+34 controls pass, and **three of this pass's own four instrument defects were caught by them
+before anything was published**.
+
+### 🟢 The tier EMEA was missing, and it is the one `Gap 454-F` predicted would have to be found on the supply side
+
+`Gap 454-F` recorded that the prescribed market channel returns nothing education-specific for
+EMEA, and that EMEA's opportunities therefore had to be sourced from **supply read first-hand**.
+This pass did that deliberately, applying `Gap 453-B`'s measured rule — *prefer vocabulary whose
+education sense is unambiguous, and whose name is LONG* — to Europe's national systems of record:
+`pronote`, `ecoledirecte`, `schulportal hessen`, `webuntis`. All four are orthographically
+distinctive, and all four returned assets at the first attempt.
+
+| agent / client | address | grant (first-hand, `HEAD` this pass) | region | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 pronotepy | [`bain3/pronotepy`](https://github.com/bain3/pronotepy) | **MIT** · `LICENSE` `1 062` B `4f074ab7dccb` · PyPI `2.15.7` declares `MIT` → 🟢 `AGREE` | EMEA | Python client for **PRONOTE** (Index Éducation), the gradebook/timetable system of most French secondary schools. 🟡 **Maintenance mode by the maintainers' own notice**: bug fixes and PRONOTE-compatibility updates only, no new features. Does **not** use the official HYPERPLANNING API |
+| 🆕 🟢 EcoleDirecte API (PHP) | [`studoo-app/ecole-directe-api`](https://github.com/studoo-app/ecole-directe-api) | **MIT** · `LICENSE` `1 071` B `6c086a4639ac` · Packagist `studoo/ecole-directe-api@v0.1.5` declares `MIT` → 🟢 `AGREE` | EMEA | PHP client for **EcoleDirecte**, the second French school portal. 🔵 **The package vendor and the git owner differ** (`studoo` vs `studoo-app`) — resolved from the record's repository field, never from the name (`Gap 451`) |
+| 🆕 🟡 ecoledirecte.js | [`a2br/ecoledirecte.js`](https://github.com/a2br/ecoledirecte.js) | **MIT** · `LICENSE` `1 073` B `e4ba09041791` | EMEA | TypeScript client for the EcoleDirecte private API. 🔴 **Unmaintained by the author's own notice since 2023-08-08** and expected to break as the API moves — shelved as a reference implementation, not a dependency |
+| 🆕 🟢 LanisAPI | [`kurwjan/LanisAPI`](https://github.com/kurwjan/LanisAPI) | **MIT** · `LICENSE` **@`master`** `1 076` B `0bc449776673` | EMEA | Python client for **Schulportal Hessen** ("Lanis"), a German *Land*-level education portal: homework, substitution plans, calendar, conversations. 🔴 **The grant is not at `HEAD`** — see `Gap 455-A`, the defect this row produced |
+| 🆕 🟢 lanis-rs | [`lanis-mobile/lanis-rs`](https://github.com/lanis-mobile/lanis-rs) | **GPL-3.0**, forward grant **`or-later`** · `LICENSE` `35 149` B `3972dc9744f6` · crates.io `0.3.0` declares `GPL-3.0` → 🟢 `AGREE` | EMEA | Rust API for the same portal. 🟡 Maintainers state it is early and expects *"drastic & breaking changes"*. 🔴 Copyleft: usable behind a service boundary, not vendorable |
+| 🆕 🟢 maria | [`elderguardian/maria`](https://github.com/elderguardian/maria) | **GPL-3.0**, `or-later` · `LICENSE` `35 149` B `3972dc9744f6` | EMEA | TypeScript Lanis library: authentication, substitute-teacher plan, homework. 🔵 **Byte-identical licence digest to `lanis-rs`** — both serve the *stock* GPL-3.0 text, so a digest match here is evidence of a stock payload and **never** of shared lineage |
+| 🆕 🟢 WebUntis (SchoolUtils) | [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **MIT** · 🔴 **`License`** `1 070` B `d2e54565d9bf` · npm `webuntis@2.2.1` declares `MIT` → 🟢 `AGREE` | EMEA | The reference Node/TS client for **WebUntis**, the timetable system used across Austrian, German and Swiss schools. 🔵 Grant served at mixed-case **`License`** — a path a `LICENSE`-only reader misses |
+| 🆕 🟢 webuntis_headless | [`Tynobi-Company/webuntis_headless`](https://github.com/Tynobi-Company/webuntis_headless) | **MIT** · `LICENSE` `1 070` B `2b7c9c3fffa3` · npm `1.0.0` declares `MIT` → 🟢 `AGREE` | EMEA | Headless WebUntis sessions, timetables over a date range, lesson detail |
+| 🆕 🟢 untis-api-client | [`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client) | **GPL-3.0** · `LICENSE` `35 562` B `72d2f09334f8` · npm `1.1.0` declares `GPL-3.0-or-later` → 🟢 `AGREE` **on the version axis** | EMEA | WebUntis client over the **public** JSON-RPC API (the others use the internal one). 🟢 `or-later` is declared *and* served, so it may be taken forward into a GPL-3.0 work |
+| 🆕 🟢 untis-js | [`thatmarcel/untis-js`](https://github.com/thatmarcel/untis-js) | **MIT** (body form, no title) · `LICENSE` `1 068` B `a1139daad821` · npm `1.0.1` declares `MIT` → 🟢 `AGREE` | EMEA | ESM-only WebUntis client for Node |
+| 🆕 🟢 WebUntisAPI.Client | [`Suiram1701/WebUntisAPI.Client`](https://github.com/Suiram1701/WebUntisAPI.Client) | **MIT** · `LICENSE.txt` `1 067` B `8b7a2e8d023e` | EMEA | .NET/NuGet WebUntis client. 🟡 **Carries the only rate limit any row on this shelf states**: never 10 req/s, no more than 1 800 req/h and in no case above 3 600 req/h — exceeding it *"could permanently block"* access |
+| 🆕 🟢 WebUntisAPI (Java) | [`Keule0010/WebUntisAPI`](https://github.com/Keule0010/WebUntisAPI) | **MIT** · `LICENSE` `1 064` B `e29c116f5d80` | EMEA | Java wrapper over the WebUntis JSON-RPC 2.0 API; Java 8+ |
+
+🔵 **Fabricated negative control:** `github.com/nope-p455-version-axis/nope-p455` and
+`nope-p455-sweep/nope-p455` returned `ADDRESS_DEAD` on the full ladder, so every `READ` above is
+a measurement and not a property of the probe.
+
+🟢 **Two non-EMEA rows read first-hand this pass**, both already known to the trending shelves and
+now carrying a dated grant: [`skyzh/tiny-llm`](https://github.com/skyzh/tiny-llm) (**Apache-2.0** ·
+`11 357` B `c71d239df917`) and [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)
+(🔴 **ODbL**, re-read `25 289` B `77d2692c3d64` — a share-alike *database* licence with **no code
+grant**, which the title-anchored reader now classes `NOT-OSI` by name rather than leaving `UNREAD`).
+
+### 🔴 Four refusals — and the first one is the expensive kind
+
+🔴 **Nothing here is padded.** Each of these was named by a secondary source as a real,
+licensed project; each is refused because the grant could not be read at an address that exists.
+
+| candidate | what the secondary channel said | what the probe found | verdict |
+|---|---|---|---|
+| 🔴 **Pawnote** | Recommended **by the `pronotepy` maintainers themselves** as the actively-developed alternative. npm `pawnote@1.6.2` declares **`GPL-3.0-or-later`** and back-links `LiterateInk/Pawnote.js` | 🔴 `ADDRESS_DEAD` on **four case variants** (`LiterateInk/Pawnote.js`, `LiterateInk/pawnote`, `literateink/Pawnote.js`, `LiterateInk/Pawnote`), all 13 grant paths × 7 refs | 🔴 **NOT SHELVED.** `Gap 454-H`'s class exactly: a declared grant that can no longer be checked against anything. A live registry record with a populated back-link is **not** evidence that the code is readable |
+| 🔴 **Pawdirecte** | Described as the maintained EcoleDirecte wrapper, Rust + JS, GPL-3.0, on npm and crates.io | 🔴 npm serves **HTTP 200 with an empty record**; crates.io **404** | 🔴 **NO ADDRESS RESOLVED** — and the empty 200 is `Gap 455-C` |
+| 🔴 **Linkdirecte** | *"A newer SDK covering login with 2FA, grades, timetable and homework"*, wiki **updated July 2026** | 🔴 `Scolup/Linkdirecte` → `ADDRESS_DEAD` | 🔴 **NOT SHELVED.** A live wiki URL in a result set is not evidence of a readable repository |
+| 🔴 **education-crm** | A search result carried an **"MIT mention"** for a school/student/teacher management platform | 🟡 `asadbekme/education-crm` → `REPO_LIVE_NO_GRANT`: the repository serves `README.md` and **no licence file at any of 13 paths** | 🔴 **NOT SHELVED as MIT.** An "MIT mention" in a directory listing is not a grant. This is the precise shape of the padding the encargo forbids |
+
+### 🔴 `Gap 455-A` — `HEAD` is not the default branch, and a first-live-ref reader publishes a FALSE UNGRANTED
+
+🔴 The fast probe ladder this pass built assumed what its own docstring asserted: that `HEAD` on
+`raw.githubusercontent.com` follows the repository's default branch, so one probe covers every
+non-`main` ref in `Gap 454`'s list. **It does not.** Measured first-hand on `kurwjan/LanisAPI`:
+
+| ref | `LICENSE` | `README.md` |
+|---|---|---|
+| `HEAD` | 🔴 `404` (14 B) | 🟢 `200` — **331 B** |
+| `master` | 🟢 `200` — **1 076 B** | 🟢 `200` — **3 554 B** |
+| `main` | 🔴 `404` | 🔴 `404` |
+
+🔴 **Two READMEs of two different sizes: `HEAD` and `master` are different commits**, and the
+substantive tree — including the MIT grant — is on `master` only. So a ladder that accepts the
+first ref whose README resolves reports `REPO_LIVE_NO_GRANT` for a repository carrying an **MIT
+licence one ref over**. 🔵 That failure direction is the mirror of `Gap 454-B`'s: a false `UNREAD`
+invites a wrong promotion, a false *ungranted* **discards a usable permissive dependency**.
+🟢 Fixed here by never treating "live but no grant at this ref" as a verdict — the ladder records
+it and keeps walking, and publishes it only once every ref is exhausted
+([`fetch_fast.py`](../compose/code/p455-version-axis/fetch_fast.py)). 🔴 **Open:** the carried
+probes were not audited for the same short-circuit, and `REPO_LIVE_NO_GRANT` cells already on
+these shelves were not re-probed across refs.
+
 ## 🆕 `p454` — **🟢 `Gap 453-A`'s prescribed closure IS RUN over the 71 carried cells, and the answer the first run gave was WRONG: it reported 6 disagreements and 3 of them were the instrument's own. 🔴 Four defects in this pass's licence reader, and the first is INHERITED FROM THE GATE CODE — the 40-line window that `p450` installed to fix GPLv3 mis-grades GPLv2 as LGPL. 🟢 `Gap 453-D` CLOSES for Indonesia with four MIT rows read first-hand.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED** (`Code from

@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p455` — **🟢 `Gap 454-C` IS ANSWERED: the licence reader gains a VERSION AXIS, and the `edu-sharing` pair that `p454`'s `canon()` graded `AGREE` now disagrees — `GPL-2.0` declared against `GPL-3.0` served, mutually incompatible. 🔴 And the sweep that answer was supposed to deliver produced 88 apparent family disagreements that are RETRACTED IN FULL, because the mechanism is this pass's extractor and the shelves were right.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes. 🔵 Contracts
+re-implemented and run independently; 34 controls pass
+([`controls.py`](../compose/code/p455-version-axis/controls.py)).
+
+### 🟢 `Gap 454-C` closed on the axis it named
+
+`Gap 454-C` stated the defect and its cost precisely: *"A family-level reader cannot grade a
+version-level incompatibility, and this base has one live."* `canon()` collapsed `GPL-2.0` and
+`GPL-3.0` onto the family `GPL`, so the one real mismatch on these shelves graded `AGREE`.
+
+🟢 **[`family_version.py`](../compose/code/p455-version-axis/family_version.py)** keeps `p454`'s
+title-block anchor — the only region of a payload a preamble cannot reach — and reads the version
+from the same anchor, where the GNU licences state it. Measured on the pair the gap named:
+
+| | declared | served at `HEAD` | `p454` `canon()` | `p455` `canon()` |
+|---|---|---|---|---|
+| [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | npm `ngx-edu-sharing-api@10.0.1` → **`GNU GPL v2`** | **GPL *Version 3*** · `LICENSE.txt` `35 148` B `8b1ba204bb69` | 🔴 `GPL` vs `GPL` → **`AGREE`** | 🟢 `GPL-2.0` vs `GPL-3.0` → **`DISAGREE`**, and `compatible()` returns **`False`** |
+
+🟢 **And a second axis the same title block does NOT carry, which decides whether the
+incompatibility actually bites.** `GPL-2.0-only` cannot combine with `GPL-3.0`; `GPL-2.0-or-later`
+can, because it may be taken forward. That election lives in the per-file notice and the
+*How to Apply* appendix, never in the title block, so `only_or_later()` reads the whole payload and
+returns **`UNSTATED`** when the payload does not say — guessing `or-later` invents a combination
+right, guessing `only` invents a prohibition. 🟢 **Read first-hand this pass, it changes a live
+verdict:** [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core)'s GPLv2 (`18 025` B
+`a01259a1b522`) is **`or-later`**, so TAO *may* be combined with GPL-3.0 code — where a
+version-only reader would have called it a dead end.
+
+### 🔴 The sweep's headline is RETRACTED, and the mechanism is worth more than the number was
+
+The sweep ran over **481 distinct addresses** across all eight shelves whose shelf line names a
+GNU family ([`evidence/gnu-version-axis.2026-10-26-p455.tsv`](../evidence/gnu-version-axis.2026-10-26-p455.tsv)).
+Its first run reported **99 `FAMILY_DISAGREE` (20.6 %)**. 🔴 **That number is an artefact, and so
+is the 88 that survived a first correction.** Three mechanisms, each found by reading the shelf
+line the verdict was built on:
+
+1. 🔴 **Line-level co-occurrence.** The extractor attributed every GNU token on a line to every
+   address on it. These shelves are prose and multi-project tables, so it "found"
+   [`learningequality/kolibri`](https://github.com/learningequality/kolibri) claiming `GPL-3.0`
+   (Kolibri is **MIT**) and [`junit-team/junit4`](https://github.com/junit-team/junit4) claiming
+   `GPL` — 🔴 **and this pass's own first write of that sentence called JUnit 4 "EPL" from
+   background knowledge rather than a read; re-probed, `junit-team/junit4` serves NO grant at
+   any of 13 root paths (`REPO_LIVE_NO_GRANT`), so the shelf's `GPL` is unsupported and so was
+   the correction.** Corrected to cell-level attribution: 481 → 461 cells.
+2. 🔴 **Sole-address prose rows.** The correction's fallback — *a row naming exactly one address is
+   about that address* — is also unsound, because a prose sentence mentioning one repository and
+   one licence is not a grant assertion about that repository.
+3. 🔴 **Per-subtree grants, which a root-only reader cannot grade at all.** The decisive case:
+   [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) is carried as **MIT at
+   root** (`1 071` B `22e7ab2dbddc`) **and GPL-3.0 on its `legacy_reference/` subtree**
+   (`35 149` B `3972dc9744f6`), with an explicit instruction — *integrate over MCP, never vendor
+   the repository*. The sweep compared a root payload against a claim that was never about the root.
+
+🔵 **And the finding that makes this a closure rather than a failure: a previous pass had already
+built the taxonomy.** The trending shelves classify exactly this population —
+`DEPENDENCY-SCOPED` for Kolibri (*"explicitly scoped to dependencies … the repo is MIT and the
+prose says so"*) and `BOUNDARY-NAMED` for
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (*"it is MIT while
+in-tree Moodle plugins are GPL-3.0 — the licence boundary **is** the architecture finding"*).
+🔴 **Registered as `Gap 455-B`:** a GNU sweep must CONSUME that taxonomy, not re-derive it, and
+no shelf carries a machine-readable grant column that would let it. **On a prose shelf, adjacency
+is not attribution** — the same rule `Gap 451` set for registry names and `Gap 454-I` for table
+shapes, now measured a third time on a third channel.
+
+### 🟢 What the sweep DOES establish, with its denominator
+
+| verdict | cells | share | what it means |
+|---|---|---|---|
+| 🟢 `AGREE` | 306 | 66.4 % | payload grade matches a cell-attributed shelf claim |
+| 🔴 `FAMILY_DISAGREE` | 88 | 19.1 % | 🔴 **RETRACTED as instrument error** — an upper bound on *apparent* disagreement, not a shelf-defect rate |
+| 🔴 `UNCHECKABLE` | 56 | 12.1 % | `ADDRESS_DEAD` or `REPO_LIVE_NO_GRANT`: the carried grant cannot be checked against anything. 🔵 Consistent with `Gap 454-H`'s **22.5 %** on a smaller, differently-selected population |
+| 🟡 `UNDER_SPECIFIED` | 11 | 2.4 % | 🟢 **The sound new number.** The shelf states a bare `GPL`/`LGPL`/`AGPL` with no version while the payload serves one — so these 11 cells **cannot support a compatibility decision in either direction** |
+| 🔵 `AMBIGUOUS` (refused) | 20 | — | no cell-level attribution anywhere; excluded from the denominator and **named** in the evidence file, because a silently-dropped cell looks exactly like one that agreed |
+
+### 🔴 Two more defects of this pass's own instrument, both caught by controls before publication
+
+🔴 **`Gap 455-D` — `canon()` could not normalise the commonest shorthand there is.** The
+version-stripping rule was `\bv(\d)` → digit. `l` and `v` are both word characters, so there is no
+boundary inside **`gplv3`**: `"GNU GPL v2"` (spaced) normalised correctly and `GPLv3` (compact)
+fell through to the identity branch and compared unequal to everything. The compact form is what
+npm and crates.io actually serve. 🔵 `p454`'s own `FAMILY_TOKENS` anticipated it (`\bgplv?[23]\b`);
+this pass's `canon()` did not — a defect **inside one pass, between two files**.
+
+🔴 **`Gap 455-C` — a `200` is not evidence of a well-formed record.** `registry.npmjs.org/pawnote`
+was read **twenty times**: nineteen returned `1.6.2 / GPL-3.0-or-later / LiterateInk/Pawnote.js`,
+and **one returned HTTP 200 with a body that parsed as JSON and carried no `dist-tags` at all**.
+An unguarded parser records that as *"the package declares no licence"* — a silent false negative
+on the channel every registry-sourced cell on these shelves rests on. 🟢 Fixed by asserting record
+**shape**, not status ([`fetch.py`](../compose/code/p455-version-axis/fetch.py) `REQUIRED_SHAPE`).
+🔵 And the repeat reads are the reason this is stated as a rate rather than a flap: 12 consecutive
+reads of three registries were **STABLE**, so the channel is sound and the *single-read* discipline
+was not.
+
+🔴 **Two control defects were this pass's too**, and they failed in the safe direction: the first
+cut expected `MIT` where `p454` correctly grades a titleless payload `MIT (body form, no title)`,
+and asserted that every GNU grade must *differ* from `p454`'s — wrong for `AGPL`, whose only live
+version is 3.0, so there was nothing to refine. 🟢 Both were the **expectation's** error, not the
+reader's, and both were corrected before any verdict was published.
+
+### 🔴 `Gap 454-A` is still open, and this pass deliberately did not close it
+
+`Gap 454-A` records that the defective 40-line-window reader in
+[`p453-vocabulary-ledger/verify.py`](../compose/code/p453-vocabulary-ledger/verify.py) is *"still
+what the next pass will import unless it reads this row"*. 🔴 **This pass read the row and did not
+patch that file** — it built `family_version.py` beside it instead, for `p454`'s stated reason:
+gate-adjacent code should not be edited by a pass that cannot run the gate against it, and the
+gate has now been denied ten times in eleven passes. 🟢 **The actionable form:** any later pass
+should import `family()` and `canon()` from
+[`p455-version-axis/family_version.py`](../compose/code/p455-version-axis/family_version.py),
+which is title-anchored, version-bearing and control-covered, and treat `verify.py::family` as
+superseded. 🔴 Until the gate runs, that is a convention and not an enforcement.
+
 ## 🆕 `p454` — **🟢 `Gap 453-D` CLOSES for APAC with Indonesia's national register reached by four permissive clients, and a fifth region gains a foundational OER repository. 🔴 And that repository is the pass's second licence correction: npm declares `GNU GPL v2`, the payload at `HEAD` is `GPL-3.0` — two incompatible licences under one hint.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes. Nothing here is

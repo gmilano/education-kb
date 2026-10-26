@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p455` — **🟢 A VERTICAL SHAPE THESE SHELVES HAD ONLY ONE INSTANCE OF NOW HAS FOUR: the closed national school system reachable only through third-party clients. France and the DACH countries together, eleven permissive clients, zero customisable cores.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes.
+
+### 🟢 The shape, and why it is a different engagement from Moodle or Open edX
+
+`p453` recorded *"a market shape these shelves had never recorded: a closed national system of
+record reached only by third-party clients"*, and `p454` added Indonesia's **Dapodik** as the APAC
+instance. This pass establishes that the shape is **the norm across Western Europe**, not an
+exception — and that it inverts the economics of every other row on this file.
+
+🔵 **Moodle, Open edX, Kolibri, OpenEduCat and Sakai are platforms you install and extend.**
+The systems below are platforms a ministry or a *Land* has already installed, that **cannot be
+forked, hosted or extended**, and whose only integration surface is an API — usually undocumented
+— wrapped by community clients. The sellable work is therefore an **agent or integration layer
+against a system of record you do not control**, never a platform customisation.
+
+| national system | country / scope | status | permissive client tier read first-hand this pass | what it exposes |
+|---|---|---|---|---|
+| 🔴 **PRONOTE** (Index Éducation) | 🇫🇷 France — the gradebook/timetable of most secondary schools | 🔴 **Proprietary, closed.** No open core at any address | 🟢 [`bain3/pronotepy`](https://github.com/bain3/pronotepy) **MIT** (`1 062` B `4f074ab7dccb`), 🟡 maintenance mode | Grades, timetable, homework, attendance for student/parent/teacher accounts. 🔴 Not the official HYPERPLANNING API |
+| 🔴 **EcoleDirecte** | 🇫🇷 France — the second school portal | 🔴 Proprietary, closed | 🟢 [`studoo-app/ecole-directe-api`](https://github.com/studoo-app/ecole-directe-api) **MIT** (`1 071` B `6c086a4639ac`); 🟡 [`a2br/ecoledirecte.js`](https://github.com/a2br/ecoledirecte.js) **MIT** (`1 073` B `e4ba09041791`), unmaintained since 2023-08-08 | Login (incl. 2FA on some clients), grades, timetable, homework |
+| 🔴 **Schulportal Hessen** ("Lanis") | 🇩🇪 Germany — the *Land* of Hesse's statewide portal | 🔴 Proprietary, closed, and 🔴 **maintainer-documented as fragmented**: functions *"at specific schools or after a while may no longer work"* | 🟢 [`kurwjan/LanisAPI`](https://github.com/kurwjan/LanisAPI) **MIT** (`1 076` B `0bc449776673`, **@`master`**); 🔴 [`lanis-mobile/lanis-rs`](https://github.com/lanis-mobile/lanis-rs) + [`elderguardian/maria`](https://github.com/elderguardian/maria) both **GPL-3.0 `or-later`** (`35 149` B `3972dc9744f6`) | Homework, substitution plans, calendar, conversations, substitute-teacher plan |
+| 🔴 **WebUntis** (Untis GmbH) | 🇦🇹🇩🇪🇨🇭 DACH — the dominant school timetabling system | 🔴 Proprietary, closed. 🔵 **Has a public JSON-RPC API *and* an internal one**, and the client tier splits on which it uses | 🟢 [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) **MIT** (`License`, `1 070` B `d2e54565d9bf`) · [`Tynobi-Company/webuntis_headless`](https://github.com/Tynobi-Company/webuntis_headless) **MIT** · [`thatmarcel/untis-js`](https://github.com/thatmarcel/untis-js) **MIT** · [`Suiram1701/WebUntisAPI.Client`](https://github.com/Suiram1701/WebUntisAPI.Client) **MIT** (.NET) · [`Keule0010/WebUntisAPI`](https://github.com/Keule0010/WebUntisAPI) **MIT** (Java) · 🔴 [`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client) **GPL-3.0-or-later** (public API) | Timetables over date ranges, lesson detail, sessions |
+| 🟡 **Librus Synergia** | 🇵🇱 Poland — *(carried, re-stated here for the shape)* | 🔴 Proprietary, closed | 🟡 [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) **MIT at root** — 🔴 **GPL-3.0 on its `legacy_reference/` subtree**: integrate over MCP, never vendor the tree | Grades, attendance, timetable, homework, messages |
+
+### 🔴 Three constraints this tier carries that a platform engagement does not
+
+🔴 **(1) A stated rate limit, and it is the only one on this file.**
+`Suiram1701/WebUntisAPI.Client`'s own documentation sets it: never 10 req/s, no more than
+1 800 req/h, **in no case above 3 600 req/h**, and exceeding it *"could permanently block"* the
+institution's access. 🔵 That is an architectural constraint on any agent that polls — a per-tenant
+scheduler and cache is not an optimisation here, it is a precondition.
+
+🟡 **(2) The client tier is unofficial by construction, so it breaks when the vendor moves.**
+`pronotepy` is in maintenance mode *because* of this; `ecoledirecte.js` was abandoned for it;
+LanisAPI's maintainers say the portal is fragmented per school. 🔵 A deliverable must treat the
+client as a **replaceable adapter**, and the engagement must price a maintenance tail.
+
+🔴 **(3) Copyleft is distributed unevenly across the tier, and it decides the architecture.**
+Every WebUntis and French client above is **MIT** except `untis-api-client`, which is
+**GPL-3.0-or-later** — and it is the only one on the *public* API. 🟡 So the permissive path and
+the documented-API path are **different repositories**: a vendorable deliverable takes the MIT
+clients on the internal API and accepts the fragility, or takes the GPL client on the public API
+and keeps it behind a service boundary. 🟢 The `or-later` grant, read first-hand, means that
+boundary may itself be GPL-3.0.
+
 ## 🆕 `p454` — **🟢 A national system of record this base had never named is customisable from MIT code: Indonesia's Dapodik, reached at three strata. 🔴 And the vertical layer gains a licence SHAPE that no single SPDX field can express — the three-strata grant, found independently in Brazil and Indonesia in the same hour.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes.

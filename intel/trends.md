@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p455` — **Four trends, each with a denominator measured this pass. 🔴 The first retires a number this file's neighbour carried for five passes; the second says Europe's school systems are closed by default and that this is the market, not an obstacle.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes.
+
+### 🔴 `Trend 41` — the closed national system of record is the DEFAULT in Western Europe, and the client tier is the whole supply
+
+🟢 **Measured, not asserted: four national school systems across five countries, zero open cores,
+eleven permissive third-party clients.** PRONOTE and EcoleDirecte (France), Schulportal Hessen
+(Hesse), WebUntis (Austria/Germany/Switzerland) are all proprietary and closed; none has an open
+core at any address this pass could read. Every integration surface is a community client over an
+API that is usually undocumented.
+
+🔵 **Why this is a trend and not a list:** these shelves spent four hundred passes building a
+platform-customisation picture (Moodle, Open edX, Kolibri, Sakai, OpenEduCat) in which the asset is
+a forkable core. 🔴 **In Western Europe the asset does not exist.** The engagement inverts: an
+**adapter and agent layer against a system of record the client cannot fork, host or extend**,
+priced with a maintenance tail because the client tier is unofficial by construction. 🟢 Evidence
+of that tail is on the rows themselves — `pronotepy` is in **maintenance mode** for exactly this
+reason, `a2br/ecoledirecte.js` was **abandoned 2023-08-08** for it, and LanisAPI's maintainers
+state the portal is fragmented per school.
+
+🔴 **And the constraint that decides the architecture before any model choice is made:** a stated
+rate limit of **never 10 req/s, ≤1 800 req/h, in no case >3 600 req/h**, with *permanent blocking*
+named as the penalty. A polling agent needs a per-tenant scheduler and cache as a **precondition**,
+not an optimisation.
+
+### 🔴 `Trend 42` — a licence FAMILY is not a licence, and 11 cells on these shelves cannot answer a compatibility question at all
+
+🟢 `Gap 454-C` is answered and the axis is now live: the reader returns `GPL-2.0` / `GPL-3.0` /
+`LGPL-2.1` / `LGPL-3.0` / `AGPL-3.0`, and the pair the gap named —
+[`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing), **`GNU GPL v2`** declared
+against **GPL *Version 3*** served — now **disagrees** where `p454`'s family-level `canon()` graded
+it `AGREE`. GPL-2.0 and GPL-3.0 are **mutually incompatible**, so the shelf was telling an
+engagement team that two opposite constraints were the same constraint.
+
+🟡 **The new number: 11 of 461 cell-attributed GNU cells (2.4 %) are `UNDER_SPECIFIED`** — the shelf
+states a bare family, the payload serves a version, and no combination decision is possible in
+either direction. 🔵 **And the second axis matters as much as the first**: `GPL-2.0-only` cannot
+combine with GPL-3.0 while `GPL-2.0-or-later` can. Read first-hand this pass,
+[`oat-sa/tao-core`](https://github.com/oat-sa/tao-core)'s GPLv2 is **`or-later`** — so TAO *may*
+be combined forward, where a version-only reader would have called it a dead end. 🔴 `UNSTATED` is
+a real and common answer and is never guessed: guessing `or-later` invents a combination right,
+guessing `only` invents a prohibition.
+
+### 🔴 `Trend 43` — the regulatory frontier for education AI has moved from "principles" to "named instruments with dated deadlines", and human-in-the-loop is now a CLASSIFICATION argument
+
+🟢 Three jurisdictions crossed into binding, education-specific classification this year, and all
+three can be cited by instrument number:
+
+| jurisdiction | instrument | what it classifies in education | when it bites |
+|---|---|---|---|
+| 🇪🇺 EU | **Regulation (EU) 2026/1744** (Digital Omnibus), in force **2026-07-27**, amending the AI Act | Annex III **3(a)** admissions/ranking, **3(b)** grading and evaluation of learning outcomes | 🔴 **2027-12-02** for stand-alone Annex III systems (*not* the 2027-08-02 many guides still print); 2028-08-02 embedded in regulated products. Emotion-recognition ban + AI-literacy duty live since **Feb 2025**; Article 50 transparency since **2026-08-02** |
+| 🇻🇳 Vietnam | **Decision `33/2026/QD-TTg`**, issued **2026-06-30**, effective **2026-08-15** | 3 of 46 listed systems: self-learning content from **uncontrolled data sources**; **automatic assessment/grading/ranking**; **biometric behaviour monitoring** | **2027-03-01** for systems started within 6 months of effect; **2027-09-01** for health/education/finance systems already operating before 2026-08-15 |
+| 🇰🇷 Korea | **AI Framework Act**, effective **2026-01-22** | General framework; education not separately enumerated | 1-year penalty grace, 2026 treated as a pilot period |
+
+🔵 **The design consequence, and it is the same in both of the specific regimes:** the EU requires
+that qualified staff can *monitor, intervene, override and shut down* a high-risk system, and
+Vietnam lists many systems as high-risk **only where the AI output is the sole basis for a decision
+without meaningful human review**. 🟢 **So a human-in-the-loop architecture is an argument about
+which regulatory class a product falls into** — not a UX preference and not merely good practice.
+🔴 **Extraterritorial reach is the clause that makes this Globant's constraint and not only a
+client's**: the EU Act reaches non-EU providers whose outputs affect EU-located students.
+
+### 🔴 `Trend 44` — the demand side of this base is structurally unverifiable from this host, and the supply side is structurally first-hand
+
+🔴 **Measured on the proxy's own register this pass**, extending `p450`'s EU-primaries finding:
+`www.unesco.org`, `www.iesalc.unesco.org` and `education.ec.europa.eu` are refused at
+**CONNECT** (`connect_rejected`), while `raw.githubusercontent.com`, `pypi.org`,
+`registry.npmjs.org`, `crates.io` and `packagist.org` all served **200** in the same session.
+
+🔵 **The asymmetry is a property of the environment, not the sector**, and it is permanent until the
+policy changes: every licence on these shelves is a byte-level read with a digest; **every market,
+adoption and regulatory figure is a search relay** that cannot be checked against the primary from
+here. 🟢 The only available mitigation is the one applied across this pass — publish the
+**instrument number** so that a reader who can reach a primary is able to check what this base
+could not. 🔴 And one carried figure failed exactly this test: *"134 bills across 31 states"* turns
+out to be **one tracker as of March 2026**, against **87/28**, **77/27** and **52/25** from three
+others on the same session — a **2.6× spread** that five passes of these shelves reported as a fact.
+
 ## 🆕 `p454` — **Three trends, each with a measured denominator from this pass rather than a vendor quote. 🔴 The first says the licence READER is now a bigger error source than the licence FIELD; the second is a licence shape education has for a structural reason; the third amends a shelf rule this base wrote one pass ago.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes.
