@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p462` · 2026-10-26 — **🔴 THE PRESCRIBED REGION LEGS ARE GRADED A NINTH TIME AND IT IS AGAIN A NIL WITH A FULL DENOMINATOR: four regional legs, ten named regulatory and adoption facts, TEN of them already on this file. 🟢 The canonical region block is therefore amended NOWHERE — and one `p461` finding is independently REPRODUCED off a different source set.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
+This pass is executing under a harness whose permission classifier **refused the `make hooks`
+invocation outright** (`Code from External`) — not a proxy failure, not a missing target, a refusal
+to execute the repository's own Makefile. So **nothing below is gate-attested**, and the gate's
+inability to run is itself the standing obstacle: `Gap 446-A` cannot be closed by a pass that is
+not permitted to run the gate.
+
+### 🔴 The four regional legs, graded fact by fact, so the nil is auditable
+
+| region | fact the leg returned | already on this file? |
+|---|---|---|
+| North America | `H.R. 8747` K-12 AI Literacy and Readiness Act advanced out of committee | 🔴 **carried** |
+| North America | California `AB 1159` — bar on training models on student data | 🔴 **carried** |
+| North America | NYC student-facing AI moratorium through 8th grade | 🔴 **carried** |
+| EMEA | AI Act enforcement by the AI Office from **2 August 2026** | 🔴 **carried** |
+| EMEA | Annex III high-risk education obligations at **2 December 2027** | 🔴 **carried** |
+| APAC | South Korea **AI Basic Act**, in force 22 January 2026 | 🔴 **carried** |
+| APAC | Vietnam **Law 134/2025/QH15**, in force 1 March 2026 | 🔴 **carried** |
+| LATAM | UNESCO **IESALC** higher-education study — 19 countries, 200 institutions | 🔴 **carried** |
+| LATAM | UNESCO **Observatory on AI in Education for LAC** | 🔴 **carried** |
+| LATAM | **ILIA** Latin American AI Index | 🔴 **carried** |
+
+🟢 **Ten for ten. No region gains a child, no child is renamed, and no LATAM-only section is
+written** — the single `## Opportunities by region` block below is untouched by this pass.
+
+### 🟢 The one thing this pass adds: a cross-source REPRODUCTION of `p461`'s EMEA headline
+
+`p461` published the EMEA high-risk education deadline as **moved to 2027-12-02**. This pass's EMEA
+leg reached that same conflict off a **different source set** and reached the same shape: the
+European Commission's own page gives **2 August 2026** as the date the AI Office and national
+authorities begin enforcing, while the Annex III high-risk obligations are dated **2 December
+2027**. 🟢 Two passes, two source sets, one answer — so the two dates are **not a contradiction in
+the sources, they are two different obligations**, and this file's EMEA child already reads them
+that way. 🔴 Neither date is read from EUR-Lex by either pass, so both remain **relayed**, per
+`Gap 455-E`.
+
+### 🟡 One new intel token, recorded UNPROMOTED
+
+🟡 **`BYJU'S`** is named as an APAC "key player" in AI-in-education by a market-research vendor
+page, alongside Google, Microsoft, IBM and Pearson. It is the only market token this pass found
+that these shelves do not carry, and it is **not promoted to the region block**, for two reasons
+stated plainly: the source is a market-research vendor list of the kind `Gap 455-E` already grades
+as structurally relayed, and BYJU'S own well-documented financial restructuring makes a
+present-tense "key player" claim one this pass cannot support from any primary source it reached.
+🔴 Recorded as a token, not as a fact.
+
+### 🔴 Declared gaps — stated, because silence looks exactly like coverage
+
+- 🔴 **EMEA beyond the EU is a NIL, and it was searched.** The EMEA leg returned EU material only.
+  **No** data on Middle East or Africa school AI adoption, regulation or vendors was returned at
+  all. That is a coverage hole on the demand side, not a finding of absence.
+- 🔴 **`Gap 456-D` stays OPEN.** No sourceable EMEA institution-level adoption rate. The closest
+  the channel offers is ~**30 %** of EU *teachers* having taken AI training and ~**30 %** of EU
+  *workers* using AI tools — a workforce figure, not an institutional adoption rate, and recorded
+  here as the near-miss rather than promoted as the answer.
+- 🔴 **Education-specific regulation in APAC is thin and the sources disagree on names.** One market
+  report cites a South Korean "AI Data Protection Act" for EdTech; that title matches no instrument
+  this pass could resolve, and the AI Basic Act is not it. 🔴 **Refused, not shelved.**
+- 🟡 **The global sizing range is still not a figure.** This pass's legs returned $12.3 B (2026) and
+  ~$6 B (2024) → $32 B (2030) from two different aggregators — mutually inconsistent, both
+  relayed. Unchanged from `p456`: there is no citable global number here, only a range.
+
 ## 🆕 `p461` — **Market structure re-placed by region, with the regulatory clock as the primary driver: EMEA's high-risk education deadline MOVED to 2027-12-02, APAC made AI instruction compulsory, North America regulates state-by-state with no federal floor, and LATAM remains a declared coverage gap on the supply side.**
 
 🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.

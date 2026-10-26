@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p462` · 2026-10-26 — **Nothing new is trending in education agents, and that is now the finding on the PRESCRIBED channel: the four global legs and the four regional legs returned 36 repository tokens and 34 of them are already shelved, with the other two not being repositories at all. 🔴 What did move is a CORRECTION: one of `p461`'s four "aliases" is a diverged fork pair.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
+This pass is executing under a harness whose permission classifier **refused the `make hooks`
+invocation outright** (`Code from External`) — not a proxy failure, not a missing target, a refusal
+to execute the repository's own Makefile. So **nothing below is gate-attested**, and the gate's
+inability to run is itself the standing obstacle: `Gap 446-A` cannot be closed by a pass that is
+not permitted to run the gate.
+
+### 🟡 What the trending legs actually surfaced this week
+
+🔴 **No education-specific trending board exists.** Both trending legs returned general
+agent-tooling boards, and the daily report they surfaced states plainly that today's board is
+*"dominated by agent skills and harness-layer tooling"*. The education-adjacent items on those
+boards were: `withmarbleapp/os-taxonomy` (curriculum graph, **carried** — ODbL, a database grant
+with no code grant), `microsoft/ML-For-Beginners` (**carried**), `mlabonne/llm-course`
+(**carried**), `nanochat` (**carried**). 🟢 Zero unshelved.
+
+🟡 **One tutor-shaped token that looked new and is not:** `maxew6/ai-tutor-project`, an MIT
+redeployment of `krishna16-origin/ai-tutor` with upstream attribution retained. **Both addresses are
+already carried on these shelves.**
+
+### 🟢 Identity graded by HEAD sha — the channel `p461` did not have
+
+`git ls-remote <addr> HEAD` works from this host and returns the commit the address resolves to.
+Two addresses that return the **same sha** are the same repository; two that return **different
+shas** are two repositories, whatever their licence payloads look like.
+
+| address pair | raw `LICENSE` payload | HEAD sha, alias | HEAD sha, canonical | verdict |
+|---|---|---|---|---|
+| `openedx/edx-platform` → `openedx/openedx-platform` | identical · 35 136 B · `e12d78569742` | `addd09d7801b` | `addd09d7801b` | 🟢 **same repository** — rename alias, and it still resolves |
+| `Vacademy-io/vacademy_platform` → `Vacademy-io/vacademy_edtech_platform` | identical · 34 523 B · `0d96a4ff68ad` | `3a9c66db938c` | `3a9c66db938c` | 🟢 **same repository** — rename alias, and it still resolves |
+| `DaRL-GenAI/instructional_agents` vs `Hyan-Yao/instructional_agents` | identical · 1 067 B · `4e085d826a64` | `f835eb45f508` | `1c2a9f9e3d26` | 🔴 **NOT the same repository** — two live, divergent HEADs |
+| `OpenEduCat-Inc/OpenEduCat` → `openeducat/openeducat_erp` | alias **404** at `19.0`, `master` and `main`; canonical **200** · 8 241 B · `528f840368` | 🔴 unresolvable — `ls-remote` falls through to a credential prompt | `46a5d7d40082` | 🔴 **alias is ABSENT**, not a redirect |
+
+### 🔴 The rule this establishes, and it is reusable
+
+🔴 **A byte-identical licence payload is near-zero evidence of repository identity, and for the
+boilerplate grant families it is no evidence at all.** `p461` read an identical 1 067 B MIT text at
+`DaRL-GenAI/instructional_agents` and `Hyan-Yao/instructional_agents` and concluded one was the
+other's stale alias. The HEAD shas say otherwise: `f835eb45f508` ≠ `1c2a9f9e3d26`, two live
+repositories with independent histories. The payloads match **because stock MIT text is
+universal** — the same 1 067 B body appears on dozens of unrelated rows on these very shelves.
+Identity is a property of the **tree**, and only the sha channel reads the tree.
+
+### 🔴 The prescribed channel, graded in full — 36 tokens, and the novel repository yield is ZERO
+
+This pass ran **the eight prescribed legs and no others**: the four global legs
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM SIS MIT Apache`, `AI education industry trends 2026`) and
+the four regional legs (North America, EMEA, APAC, LATAM). Every repository-shaped token any leg
+returned was graded against these shelves.
+
+| | n | share |
+|---|---|---|
+| repository/project tokens returned and graded | **36** | |
+| 🔴 already carried on these shelves | **34** | **94.4 %** |
+| 🟡 unshelved | **2** | **5.6 %** |
+| 🔴 **unshelved AND a repository — i.e. usable** | **0** | **0 %** |
+
+🔴 **The two unshelved tokens are not repositories.** `BYJU'S` is a company name, returned by a
+market-research vendor page as an APAC "key player"; `spacebasic.com` is the blog host that served
+one of the vertical-platform hits. Neither is an address, a licence or a thing to build on.
+
+🟢 **Fifth consecutive nil, and the first on the PRESCRIBED channel itself.** `p458`–`p461` reached
+their nils on GitHub-API and topic-page channels while recording the prescribed web-search channel
+separately. This pass ran the prescribed wording verbatim, global and per region, and it returns
+**nothing these shelves do not hold** — so the saturation is now reproduced on the channel the
+encargo actually specifies, not only on the substitutes built around it.
+
+🟡 **Carried tokens, named so the denominator is auditable rather than asserted:**
+`500-AI-Agents-Projects`, `ai-agents-for-beginners`, `agents-course`, `nanochat`, `llm-course`,
+`ML-For-Beginners`, `OpenHands`, `MetaGPT`, `OpenClaw`, `CrewAI`, `LangChain`, `LangGraph`,
+`smolagents`, `AutoGen`, `DeepTutor`, `OpenTutor`, `maxew6/ai-tutor-project`,
+`krishna16-origin/ai-tutor`, `k-dense-ai/scientific-agent-skills`, `withmarbleapp/os-taxonomy`,
+`HuggerHustle/ai-radar`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`, `GegoK12`, `RosarioSIS`, `frappe/erpnext`, `Dolibarr`,
+`OpenEduCat`, `Open edX`, `Moodle`, `Kolibri`, `BigBlueButton`, `Canvas`, `Pearson`.
+
+### 🔴 The week's honest summary for a studio reader
+
+🟢 There is **no new education agent to adopt this week**. The agent tier these shelves carry —
+`HKUDS/DeepTutor` (Apache-2.0), `satvik314/educhain` (MIT), `ai-shifu/ai-shifu` (Apache-2.0),
+`Selleo/mentingo` (MIT), `Open-TutorAi/open-tutor-ai-CE` (BSD-3-Clause) — is the current tier, and
+five consecutive passes on four distinct channels have failed to find a sixth candidate that is
+both unshelved and granted. 🔴 **A studio planning an education engagement should treat the
+existing shelf as complete and spend its evaluation budget on fit, not on further discovery.**
+
 ## 🆕 `p461` · 2026-10-26 — **The third consecutive measured zero, and this one is a CLEAN SWEEP: 30 addresses graded, 30 already shelved, 0 unshelved. 🔴 The novel finding is not a repo — it is that four carried addresses are aliases, and the instrument that verified them cannot see a rename.**
 
 🔵 Appended above the history, nothing below edited or removed.

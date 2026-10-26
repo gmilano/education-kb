@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p462` — **The vertical-platform leg is graded and it is a nil: every platform it returned is already shelved. 🟢 But it produced the pass's most useful single correction — OpenEduCat's grant and default ref, read first-hand: `NOASSERTION` in the index, LGPL-3.0 in the payload, at a default branch of `19.0` where `main` 404s.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
+This pass is executing under a harness whose permission classifier **refused the `make hooks`
+invocation outright** (`Code from External`) — not a proxy failure, not a missing target, a refusal
+to execute the repository's own Makefile. So **nothing below is gate-attested**, and the gate's
+inability to run is itself the standing obstacle: `Gap 446-A` cannot be closed by a pass that is
+not permitted to run the gate.
+
+### 🟢 `Gap 461-B` gains a first-hand instance: `NOASSERTION` is an index verdict, not an absent grant
+
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) is classified
+**`NOASSERTION`** (`"license": {"key": "other", "name": "Other"}`) by the GitHub index. Its payload
+is not absent and not ambiguous:
+
+| field | value |
+|---|---|
+| default ref | 🔴 **`19.0`** — not `main`, and `main` 404s |
+| grant path | `19.0/LICENSE` (also served at `master`) |
+| bytes · digest | **8 241 B** · `528f840368` |
+| declared family | **LGPL-3.0** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below"*, with the GPL text appended beneath it as the LGPL's base |
+| notice obligation | the payload reserves bundled external libraries to *"other GPL-compatible licenses"*, per-file |
+
+🔴 So an index-only reader records this platform as ungranted, and a `main`-assuming payload reader
+records it as ungranted too — **two independent ways to lose a real, readable copyleft grant on the
+same row.** The grant is LGPL-3.0: usable as a dependency boundary, not a tier Globant can
+relicense.
+
+### 🔴 The prescribed vertical leg, graded token by token
+
+The leg `open source platform education ERP CRM SIS MIT Apache` returned nine platform tokens.
+All nine are carried:
+
+| platform token | shelf state | grant as this pass understands it |
+|---|---|---|
+| **OpenEduCat** · `openeducat/openeducat_erp` | 🔴 carried | 🟢 **LGPL-3.0**, payload-read at `19.0` — see above; index says `NOASSERTION` |
+| **Open edX** · `openedx/openedx-platform` | 🔴 carried | 🔴 AGPL-3.0 · 35 136 B · `e12d78569742` — network copyleft; the supported seam is an **XBlock** (Apache-2.0) |
+| **RosarioSIS** | 🔴 carried | GPL-2.0 |
+| **ERPNext** · `frappe/erpnext` | 🔴 carried | GPL-3.0 |
+| **Dolibarr** | 🔴 carried | GPL-3.0 |
+| **GegoK12** | 🔴 carried | MIT per vendor claim — 🔴 a **vendor marketing** assertion, and the module split it advertises (26 free / 12 paid) is not a licence statement |
+| **Moodle** | 🔴 carried | GPL-3.0 |
+| **Kolibri** | 🔴 carried | MIT |
+| **BigBlueButton** | 🔴 carried | LGPL-3.0 |
+
+🔴 **The structural finding for a studio, and it has not changed in five passes:** the education
+vertical's platform layer is **copyleft almost end to end**. Of the nine platforms above, exactly
+one (**Kolibri**, MIT) is on a tier Globant can build on and redistribute freely; OpenEduCat and
+BigBlueButton are LGPL (usable across a dependency boundary); the rest are GPL or AGPL. 🟢 **The
+practical consequence is an architectural one, not a legal blocker** — build on the platforms'
+*extension seams* (Open edX XBlocks, Moodle plugins, Odoo modules) and keep proprietary work on the
+far side of the process boundary.
+
+### 🟢 Identity graded by HEAD sha — the channel `p461` did not have
+
+`git ls-remote <addr> HEAD` works from this host and returns the commit the address resolves to.
+Two addresses that return the **same sha** are the same repository; two that return **different
+shas** are two repositories, whatever their licence payloads look like.
+
+| address pair | raw `LICENSE` payload | HEAD sha, alias | HEAD sha, canonical | verdict |
+|---|---|---|---|---|
+| `openedx/edx-platform` → `openedx/openedx-platform` | identical · 35 136 B · `e12d78569742` | `addd09d7801b` | `addd09d7801b` | 🟢 **same repository** — rename alias, and it still resolves |
+| `Vacademy-io/vacademy_platform` → `Vacademy-io/vacademy_edtech_platform` | identical · 34 523 B · `0d96a4ff68ad` | `3a9c66db938c` | `3a9c66db938c` | 🟢 **same repository** — rename alias, and it still resolves |
+| `DaRL-GenAI/instructional_agents` vs `Hyan-Yao/instructional_agents` | identical · 1 067 B · `4e085d826a64` | `f835eb45f508` | `1c2a9f9e3d26` | 🔴 **NOT the same repository** — two live, divergent HEADs |
+| `OpenEduCat-Inc/OpenEduCat` → `openeducat/openeducat_erp` | alias **404** at `19.0`, `master` and `main`; canonical **200** · 8 241 B · `528f840368` | 🔴 unresolvable — `ls-remote` falls through to a credential prompt | `46a5d7d40082` | 🔴 **alias is ABSENT**, not a redirect |
+
+### 🔴 The rule this establishes, and it is reusable
+
+🔴 **A byte-identical licence payload is near-zero evidence of repository identity, and for the
+boilerplate grant families it is no evidence at all.** `p461` read an identical 1 067 B MIT text at
+`DaRL-GenAI/instructional_agents` and `Hyan-Yao/instructional_agents` and concluded one was the
+other's stale alias. The HEAD shas say otherwise: `f835eb45f508` ≠ `1c2a9f9e3d26`, two live
+repositories with independent histories. The payloads match **because stock MIT text is
+universal** — the same 1 067 B body appears on dozens of unrelated rows on these very shelves.
+Identity is a property of the **tree**, and only the sha channel reads the tree.
+
 ## 🆕 `p461` — **No platform is added. 🔴 Two carried platform rows change materially: `openeducat_erp` is payload-confirmed LGPL-3.0 against an index that classifies it `NOASSERTION`, and the Open edX row's address is an alias for `openedx/openedx-platform`.**
 
 🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.

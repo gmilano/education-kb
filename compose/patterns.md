@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p462` — **No new pattern is added, because no new component was found: the prescribed channel returned 36 tokens and 34 are already wired into the recipes below. 🟢 What changes is that two recipe components are re-pointed to their canonical addresses and one component pair is SPLIT — a recipe that cites `instructional_agents` must now say WHICH one.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
+This pass is executing under a harness whose permission classifier **refused the `make hooks`
+invocation outright** (`Code from External`) — not a proxy failure, not a missing target, a refusal
+to execute the repository's own Makefile. So **nothing below is gate-attested**, and the gate's
+inability to run is itself the standing obstacle: `Gap 446-A` cannot be closed by a pass that is
+not permitted to run the gate.
+
+### 🔴 Component address corrections for the recipes below
+
+🟢 No recipe is broken — both aliases still resolve and still serve the correct tree. These are the
+addresses a recipe should cite going forward, so that a reader resolving components through the
+GitHub index (which no longer resolves the old names) does not read them as missing:
+
+| recipe component, as cited below | address to cite | effect on the recipe |
+|---|---|---|
+| `openedx/edx-platform` | `openedx/openedx-platform` | none — same tree (`addd09d7801b`), same AGPL-3.0 grant, same XBlock seam |
+| `Vacademy-io/vacademy_platform` | `Vacademy-io/vacademy_edtech_platform` | none — same tree (`3a9c66db938c`), same AGPL-3.0 grant |
+
+🔴 **And one component must be disambiguated before it is wired.**
+`DaRL-GenAI/instructional_agents` and `Hyan-Yao/instructional_agents` are **two repositories**, not
+one address and its alias:
+
+| address | HEAD sha | last push | ★ | grant |
+|---|---|---|---|---|
+| `DaRL-GenAI/instructional_agents` | `f835eb45f508` | — | — | MIT · 1 067 B · `4e085d826a64` |
+| `Hyan-Yao/instructional_agents` | `1c2a9f9e3d26` | 2026-06-18 | **22** | MIT · 1 067 B · `4e085d826a64` |
+
+🔴 **Any recipe that wires "instructional_agents" as a course-generation component is
+underspecified until `Gap 462-A` resolves fork direction.** Both carry a real MIT grant, so either
+is buildable — but they are not interchangeable, and a recipe that does not name the sha is not
+reproducible. 🟢 **Interim rule for a studio: pin the sha, not the name.**
+
+### 🟡 The recipe consequence of the OpenEduCat grant read
+
+🟢 `openeducat/openeducat_erp` is confirmed **LGPL-3.0** by payload read at its default ref `19.0`
+(8 241 B · `528f840368`), against an index that says `NOASSERTION`. For any recipe that uses
+OpenEduCat as the student-information-system layer, this is the operative constraint:
+
+- 🟢 **LGPL permits use across a dependency boundary** — an Odoo *module* alongside OpenEduCat, or a
+  service calling it over its API, does not inherit the copyleft.
+- 🔴 **It does not permit relicensing OpenEduCat itself**, and the payload additionally reserves
+  bundled external libraries to other GPL-compatible terms **per file** — so a recipe that vendors
+  OpenEduCat source into a client deliverable inherits a per-file notice obligation.
+- 🟢 **Pin the ref.** A recipe citing `main` gets a 404; the branch is `19.0`.
+
+### 🔴 Why there is no new recipe this pass, stated rather than padded
+
+🟢 Five consecutive passes on four distinct channels — and now on the prescribed channel itself —
+have found no unshelved, granted education agent. The composition surface has therefore **not
+changed**, and a new recipe written this pass would be a recombination of the same components
+rather than a new capability. 🔴 **The honest reading is that the shelf's recipe set is complete
+against the current supply**, and the next genuine pattern needs either a new component or a new
+client constraint, neither of which this pass found.
+
 ## 🆕 `p461` — **Three recipes, each wired only from rows whose grant was verified this pass, and each written to survive the two defects this pass found: alias addresses (`Gap 461-A`) and `NOASSERTION` grants (`Gap 461-B`).**
 
 🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.

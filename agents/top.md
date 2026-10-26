@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p462` — **`Gap 461-A` IS CORRECTED, AND THE CORRECTION SHRINKS IT: of the four addresses `p461` published as stale aliases, only TWO are aliases. One is a DIVERGED FORK PAIR that `p461` mistook for a rename because the two repositories serve the same stock MIT text, and one was never a live shelf address at all. 🔴 And the saturation nil is reproduced a fifth time — this time on the PRESCRIBED web-search channel itself, 36 tokens graded, usable novel repository yield ZERO.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
+This pass is executing under a harness whose permission classifier **refused the `make hooks`
+invocation outright** (`Code from External`) — not a proxy failure, not a missing target, a refusal
+to execute the repository's own Makefile. So **nothing below is gate-attested**, and the gate's
+inability to run is itself the standing obstacle: `Gap 446-A` cannot be closed by a pass that is
+not permitted to run the gate.
+
+🔵 **Instrument.** Three channels, and the decisive one is new to this line of passes:
+`git ls-remote <addr> HEAD` (**tree identity**), `raw.githubusercontent.com` (**payload bytes**, reused
+deliberately as the cross-pass control), and the authenticated GitHub repository-search API
+(**index resolution and exact `stargazers_count`**).
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p461` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` | **35 136 B · `e12d78569742`** | 🟢 **reproduced, byte- and digest-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` | **34 523 B · `0d96a4ff68ad`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` | **1 067 B · `4e085d826a64`** | 🟢 **reproduced** |
+| 🟢 `openeducat/openeducat_erp` `19.0/LICENSE` | 8 241 B | **8 241 B · `528f840368`** | 🟢 **reproduced, and the digest is now recorded** |
+
+### 🟢 Identity graded by HEAD sha — the channel `p461` did not have
+
+`git ls-remote <addr> HEAD` works from this host and returns the commit the address resolves to.
+Two addresses that return the **same sha** are the same repository; two that return **different
+shas** are two repositories, whatever their licence payloads look like.
+
+| address pair | raw `LICENSE` payload | HEAD sha, alias | HEAD sha, canonical | verdict |
+|---|---|---|---|---|
+| `openedx/edx-platform` → `openedx/openedx-platform` | identical · 35 136 B · `e12d78569742` | `addd09d7801b` | `addd09d7801b` | 🟢 **same repository** — rename alias, and it still resolves |
+| `Vacademy-io/vacademy_platform` → `Vacademy-io/vacademy_edtech_platform` | identical · 34 523 B · `0d96a4ff68ad` | `3a9c66db938c` | `3a9c66db938c` | 🟢 **same repository** — rename alias, and it still resolves |
+| `DaRL-GenAI/instructional_agents` vs `Hyan-Yao/instructional_agents` | identical · 1 067 B · `4e085d826a64` | `f835eb45f508` | `1c2a9f9e3d26` | 🔴 **NOT the same repository** — two live, divergent HEADs |
+| `OpenEduCat-Inc/OpenEduCat` → `openeducat/openeducat_erp` | alias **404** at `19.0`, `master` and `main`; canonical **200** · 8 241 B · `528f840368` | 🔴 unresolvable — `ls-remote` falls through to a credential prompt | `46a5d7d40082` | 🔴 **alias is ABSENT**, not a redirect |
+
+### 🔴 The rule this establishes, and it is reusable
+
+🔴 **A byte-identical licence payload is near-zero evidence of repository identity, and for the
+boilerplate grant families it is no evidence at all.** `p461` read an identical 1 067 B MIT text at
+`DaRL-GenAI/instructional_agents` and `Hyan-Yao/instructional_agents` and concluded one was the
+other's stale alias. The HEAD shas say otherwise: `f835eb45f508` ≠ `1c2a9f9e3d26`, two live
+repositories with independent histories. The payloads match **because stock MIT text is
+universal** — the same 1 067 B body appears on dozens of unrelated rows on these very shelves.
+Identity is a property of the **tree**, and only the sha channel reads the tree.
+
+### 🟡 What this leaves on the shelves — and it is less than `p461`'s headline implied
+
+| `p461` claim | `p462` verdict | live-shelf consequence |
+|---|---|---|
+| 🔴 "FOUR shelf addresses are stale aliases" | 🟡 **TWO are** (`openedx/edx-platform`, `Vacademy-io/vacademy_platform`) | **cosmetic** — both resolve, both serve the right tree, neither is broken |
+| 🔴 `DaRL-GenAI/instructional_agents` is an alias of `Hyan-Yao/instructional_agents` | 🔴 **refuted** — divergent HEADs, a fork pair | the two must be graded as **two rows**, never merged |
+| 🔴 `OpenEduCat-Inc/OpenEduCat` is a stale shelf address | 🟢 **it is not a shelf address** — every live row on `verticals/solutions.md` (4) and `repos/foundations.md` (5) already cites `openeducat/openeducat_erp`; the alias appears **only inside `p461`'s own narrative** | **nothing to fix** |
+
+🟢 **So the live shelves carry zero broken addresses.** That is a better state than `p461` reported
+against itself, and it is stated here because an overstated defect costs the next pass real probes.
+
+### 🟢 `Gap 461-B` gains a first-hand instance: `NOASSERTION` is an index verdict, not an absent grant
+
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) is classified
+**`NOASSERTION`** (`"license": {"key": "other", "name": "Other"}`) by the GitHub index. Its payload
+is not absent and not ambiguous:
+
+| field | value |
+|---|---|
+| default ref | 🔴 **`19.0`** — not `main`, and `main` 404s |
+| grant path | `19.0/LICENSE` (also served at `master`) |
+| bytes · digest | **8 241 B** · `528f840368` |
+| declared family | **LGPL-3.0** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below"*, with the GPL text appended beneath it as the LGPL's base |
+| notice obligation | the payload reserves bundled external libraries to *"other GPL-compatible licenses"*, per-file |
+
+🔴 So an index-only reader records this platform as ungranted, and a `main`-assuming payload reader
+records it as ungranted too — **two independent ways to lose a real, readable copyleft grant on the
+same row.** The grant is LGPL-3.0: usable as a dependency boundary, not a tier Globant can
+relicense.
+
+### 🔴 The prescribed channel, graded in full — 36 tokens, and the novel repository yield is ZERO
+
+This pass ran **the eight prescribed legs and no others**: the four global legs
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM SIS MIT Apache`, `AI education industry trends 2026`) and
+the four regional legs (North America, EMEA, APAC, LATAM). Every repository-shaped token any leg
+returned was graded against these shelves.
+
+| | n | share |
+|---|---|---|
+| repository/project tokens returned and graded | **36** | |
+| 🔴 already carried on these shelves | **34** | **94.4 %** |
+| 🟡 unshelved | **2** | **5.6 %** |
+| 🔴 **unshelved AND a repository — i.e. usable** | **0** | **0 %** |
+
+🔴 **The two unshelved tokens are not repositories.** `BYJU'S` is a company name, returned by a
+market-research vendor page as an APAC "key player"; `spacebasic.com` is the blog host that served
+one of the vertical-platform hits. Neither is an address, a licence or a thing to build on.
+
+🟢 **Fifth consecutive nil, and the first on the PRESCRIBED channel itself.** `p458`–`p461` reached
+their nils on GitHub-API and topic-page channels while recording the prescribed web-search channel
+separately. This pass ran the prescribed wording verbatim, global and per region, and it returns
+**nothing these shelves do not hold** — so the saturation is now reproduced on the channel the
+encargo actually specifies, not only on the substitutes built around it.
+
+🟡 **Carried tokens, named so the denominator is auditable rather than asserted:**
+`500-AI-Agents-Projects`, `ai-agents-for-beginners`, `agents-course`, `nanochat`, `llm-course`,
+`ML-For-Beginners`, `OpenHands`, `MetaGPT`, `OpenClaw`, `CrewAI`, `LangChain`, `LangGraph`,
+`smolagents`, `AutoGen`, `DeepTutor`, `OpenTutor`, `maxew6/ai-tutor-project`,
+`krishna16-origin/ai-tutor`, `k-dense-ai/scientific-agent-skills`, `withmarbleapp/os-taxonomy`,
+`HuggerHustle/ai-radar`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`, `GegoK12`, `RosarioSIS`, `frappe/erpnext`, `Dolibarr`,
+`OpenEduCat`, `Open edX`, `Moodle`, `Kolibri`, `BigBlueButton`, `Canvas`, `Pearson`.
+
+### 🟡 A carried ★ figure moved by one, and that is a measurement, not a defect
+
+`p461` recorded `openedx/openedx-platform` at **8 209**; this pass reads **8 210** on the same API
+field. 🟢 Exact-integer ★ counts are **live counters**, so any such cell is true only at its read
+time — which is why these shelves cite them with the pass that read them and never as standing
+facts. The other three reproduce unchanged: `openeducat/openeducat_erp` **899**,
+`Vacademy-io/vacademy_edtech_platform` **23**, `Hyan-Yao/instructional_agents` **22**.
+
+### 🔴 Gaps this pass registers
+
+- **`Gap 462-A`** — the fork pair `DaRL-GenAI/instructional_agents` (`f835eb45f508`) and
+  `Hyan-Yao/instructional_agents` (`1c2a9f9e3d26`) is **ungraded for direction**: which is upstream,
+  what diverged, and whether both are maintained. `gate-fork-direction` (`p404`) is the instrument
+  for it and it needs full history, which this pass's shallow access does not have.
+- **`Gap 462-B`** — every address on these shelves is carried under the name it was found under.
+  A **population-scale alias census** by HEAD sha has never been run, so the alias rate across all
+  carried addresses is unknown. `p461` found four candidates in 30 probes; that is a rate worth
+  measuring, not extrapolating.
+- **`Gap 446-A` stays OPEN and the obstacle is now named**: the gate cannot be run under a harness
+  that refuses to execute the Makefile.
+
 ## 🆕 `p461` — **No row is added, and the nil is now REPRODUCED ON A FOURTH CHANNEL: 30 addresses graded against these shelves, 30 already carried, 0 unshelved — usable novel yield ZERO at a 100 % carried share, the highest yet. 🔴 But this pass found a defect the three prior instruments could not see: FOUR shelf addresses are stale aliases that resolve by redirect to repositories with different canonical names, and the raw channel serves byte-identical payloads for alias and canonical, so it cannot detect this at all.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN** — this pass reached the

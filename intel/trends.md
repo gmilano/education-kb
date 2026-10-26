@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p462` · 2026-10-26 — **The trend legs return one consistent, well-sourced signal and it is not a technology: 2026 is the year education AI moved from pilots to GOVERNED deployment, and the binding constraint is evidence and oversight, not model capability. 🔴 `p461`'s alias trend-note is CORRECTED — one of its four cases is a fork pair, not a rename.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
+This pass is executing under a harness whose permission classifier **refused the `make hooks`
+invocation outright** (`Code from External`) — not a proxy failure, not a missing target, a refusal
+to execute the repository's own Makefile. So **nothing below is gate-attested**, and the gate's
+inability to run is itself the standing obstacle: `Gap 446-A` cannot be closed by a pass that is
+not permitted to run the gate.
+
+### 🟢 The trend the prescribed leg actually supports, stated once
+
+🟢 Across every source the `AI education industry trends 2026` leg returned — a standards body, two
+analyst notes and four vendor blogs — the agreement is on **shape, not product**:
+
+1. 🟢 **Pilots → infrastructure.** AI is being embedded into admissions, advising, learning and
+   administration as ordinary workflow, rather than run as standalone pilots.
+2. 🟢 **Governance is the gate.** The standards-body source frames 2026 as the shift *from
+   experimentation to governance* — policies, data boundaries and oversight as the precondition for
+   adoption. This is the same conclusion these shelves reached from the supply side.
+3. 🟢 **Evidence is being demanded.** Buyers increasingly require proof that a product improves
+   learning, persistence, well-being or job-relevant skills. 🔴 **This is the trend with the most
+   direct consequence for an open-source shelf:** none of the agent-tier repositories these shelves
+   carry ships an efficacy evaluation harness.
+4. 🟡 **Education-specific over general chatbots**, and **agents over single prompts** — multi-step
+   task execution rather than one-shot generation.
+5. 🟡 **Digital credentials** as a mechanism for skills-based learning and hiring.
+
+🔴 **Every adoption percentage these sources quote is refused, not shelved.** The leg returned an
+"83 % AI teaching-assistant deployment" figure and a "60 % of U.S. K-12 teachers" figure from
+aggregator pages whose own numbers conflict with each other by large factors. Per `Gap 455-E` they
+are relayed, and this pass does not promote them.
+
+### 🔴 The correction to `p461`'s alias note on this file
+
+`p461` recorded on this file that four carried addresses resolve by redirect to different canonical
+names. 🔴 **That is right for two of them and wrong for the other two.**
+
+### 🟢 Identity graded by HEAD sha — the channel `p461` did not have
+
+`git ls-remote <addr> HEAD` works from this host and returns the commit the address resolves to.
+Two addresses that return the **same sha** are the same repository; two that return **different
+shas** are two repositories, whatever their licence payloads look like.
+
+| address pair | raw `LICENSE` payload | HEAD sha, alias | HEAD sha, canonical | verdict |
+|---|---|---|---|---|
+| `openedx/edx-platform` → `openedx/openedx-platform` | identical · 35 136 B · `e12d78569742` | `addd09d7801b` | `addd09d7801b` | 🟢 **same repository** — rename alias, and it still resolves |
+| `Vacademy-io/vacademy_platform` → `Vacademy-io/vacademy_edtech_platform` | identical · 34 523 B · `0d96a4ff68ad` | `3a9c66db938c` | `3a9c66db938c` | 🟢 **same repository** — rename alias, and it still resolves |
+| `DaRL-GenAI/instructional_agents` vs `Hyan-Yao/instructional_agents` | identical · 1 067 B · `4e085d826a64` | `f835eb45f508` | `1c2a9f9e3d26` | 🔴 **NOT the same repository** — two live, divergent HEADs |
+| `OpenEduCat-Inc/OpenEduCat` → `openeducat/openeducat_erp` | alias **404** at `19.0`, `master` and `main`; canonical **200** · 8 241 B · `528f840368` | 🔴 unresolvable — `ls-remote` falls through to a credential prompt | `46a5d7d40082` | 🔴 **alias is ABSENT**, not a redirect |
+
+### 🔴 The rule this establishes, and it is reusable
+
+🔴 **A byte-identical licence payload is near-zero evidence of repository identity, and for the
+boilerplate grant families it is no evidence at all.** `p461` read an identical 1 067 B MIT text at
+`DaRL-GenAI/instructional_agents` and `Hyan-Yao/instructional_agents` and concluded one was the
+other's stale alias. The HEAD shas say otherwise: `f835eb45f508` ≠ `1c2a9f9e3d26`, two live
+repositories with independent histories. The payloads match **because stock MIT text is
+universal** — the same 1 067 B body appears on dozens of unrelated rows on these very shelves.
+Identity is a property of the **tree**, and only the sha channel reads the tree.
+
+🟢 The trend-level lesson is the one worth carrying forward: **as projects rename, re-org and fork,
+an address is not a stable identifier for a repository.** A shelf that cites addresses needs a tree
+identity channel, and `git ls-remote` is it.
+
 ## 🆕 `p461` — **Five trends, and the load-bearing one is structural rather than technical: the permissive share of this field is small, shrinking at the top, and systematically misreported by the tooling everyone uses to check it.**
 
 🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.
