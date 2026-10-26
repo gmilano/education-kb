@@ -52,6 +52,22 @@ TARGETS = [
 SHELVES = [t for t, _ in TARGETS]
 
 
+# p449 (`Gap 445-H`, registered by `p445` and carried untouched by `p446`-`p448` because
+# "no gate run is available to verify a fix"): a backticked `a/b` whose OWNER position is a
+# directory of THIS repository's own source tree is a LOCAL PATH, not a GitHub address.
+# `lib/measure` is the specimen -- it held `gate-promotion-ledger` red from `p445` to `p448`
+# as two C1-UNADJUDICATED promotion claims that name no repository at all.
+# Safety, measured before narrowing rather than asserted: over all eight live shelves, each
+# owner below was checked against every `github.com/<owner>/` URL on those same shelves.
+# NONE of them is also a real GitHub owner here, so this arm drops 21 local paths and zero
+# addresses.  The `github.com/...` extraction path above is untouched.
+LOCAL_TREE_OWNER = frozenset({
+    "lib", "src", "bin", "test", "tests", "docs", "doc", "scripts", "script",
+    "compose", "evidence", "ingest", "archive", "scratchpad", "fixtures",
+    "node_modules",
+})
+
+
 def slugs_in(text):
     out = []
     for owner, repo in SLUG.findall(text):
@@ -62,6 +78,9 @@ def slugs_in(text):
     for s in BACKTICK_SLUG.findall(text):
         # a backticked a/b is a slug only if it is not a path to a .md/.tsv file
         if re.search(r"\.(md|tsv|json|sh|py|txt|xml|ts|yml|yaml)$", s):
+            continue
+        # p449 / `Gap 445-H`: nor is it a slug if its owner is this tree's own directory.
+        if s.partition("/")[0].lower() in LOCAL_TREE_OWNER:
             continue
         out.append(s)
     seen, uniq = set(), []

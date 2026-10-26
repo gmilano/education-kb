@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449` — **🟢 THE CONNECTOR TIER WRITES MORE THAN THIS SHELF PUBLISHED, AND THE CORRECTION RUNS AGAINST THE READ-ONLY READING: `Gap 448-C` resolved at source puts the category write share at 35.8 %, not 32.9 %, because `p448`'s denominator was inflated by 19 non-tool fields while its WRITE numerator was EXACT. 🔴 Which makes `Gap 448-B` worse: the allowlist field a gateway would key on is 43 % unpopulated over a LARGER mutating surface than anyone had measured.**
+
+🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
+three denials, so `p448`'s settlement of that gap as *"a property of the host class"* is
+**refuted**; the denial is **intermittent**. 🟢 Arrival baseline: **58/62 green, 4 RED**, 🔴 **two
+of them NEW and both `p448`'s**. Three green on exit; the fourth is `DECLARED_RED`
+(`Gap 449-D`).
+
+### 🟢 The vertical fact, corrected at source rather than restated
+
+`bruchris/canvas-lms-mcp` @ `c740624` (committed **2026-10-23** — **not** drift since `p448`).
+A `ToolDefinition` counts only when its enclosing object literal carries **both** `name:` and
+`inputSchema`:
+
+| cell | `p448` | 🟢 `p449` | why |
+|---|---|---|---|
+| `bruchris` total tools | 🔴 222 | 🟢 **188** | 19 non-tool `name:` fields, **all outside `src/tools/`** — `normalize-ids.ts` 11, `init/wizard.ts` 5, `init/clients.ts` 3 |
+| `bruchris` WRITE tools | **62** | 🟢 **62** | 🟢 **EXACT** — README declares *"125 read-only and 62 … write operations"* |
+| `bruchris` write share | 27.9 % | 🔴 **33.0 %** | same numerator, correct denominator |
+| **category total** | 414 | 🟢 **380** | |
+| 🔴 **category write share** | 32.9 % | 🔴 **35.8 %** | |
+
+🔵 README's own prose total is **187** against a true **188**, and **175 of 188** source ids are
+named in it — so the two channels agree to **±1** and `p446`'s README reading was right all
+along. The defect was never the README; it was scanning all of `src/` instead of the registries
+(`evidence/gap448c-tool-count.2026-10-26-p449.tsv`).
+
+### 🔴 What this changes for the sellable unit
+
+🟢 **An agent layer on the community LMS-connector tier can author and publish courseware** —
+`create_course`, `create_module`, `toggle-module-publish`, `update-syllabus`, `post-announcement`,
+`bulk_grade_submissions` — at **four** addresses, and across a mutating surface of **35.8 %**
+rather than 32.9 %. 🔴 **So the gateway is the product, not a detail.** `Gap 448-B` stands and
+hardens: `vishalsachdev/canvas-mcp` declares `read_only_hint` on 72 of 128 tools, leaves
+**55 (43.0 %) undeclared — and those 55 are exactly the mutating ones** — while its single
+`read_only_hint=False` is `download_course_file`, **a read**. 🔴 **`compose/code/mcp-allowlist-gateway`
+must gate on the tool's EFFECT and must never key on that hint.** A gateway keyed on it is now
+known to be guarding a larger write surface with the same unsound field.
+
+### 🟢 The platform tier is unchanged, and the grant seam is still the whole architecture
+
+🟢 `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` — Apache-2.0, `LICENSE.txt` **10 172 B**, reproduced to the
+digit by `p449` on an independent fetch — remains **the only permissively-licensed system of
+record** on these shelves. 🔵 `openedx/XBlock` reproduces at **11 358 B** (`LICENSE.TXT`) and
+remains the integration seam into a copyleft LMS. 🔴 Every other system of record here is
+GPL-2.0/3.0, AGPL-3.0, or carries no grant — so the shape is unchanged: **permissive agent layer
++ effect-keyed gateway, bolted to a copyleft platform through a licence seam.**
+
+---
 
 ## 🆕 `p448` — **🟢 THE CAPABILITY ABSENCE `p447` PUT ON THIS SHELF DOES NOT EXIST. `Gap 447-B` is REFUTED from source at HEAD: the community LMS-connector tier authors and publishes courseware — 136 of 414 tool declarations mutate, and `create_course`, `create_module`, `toggle-module-publish` and `update-syllabus` were read, not inferred. 🟢 A new vertical row: the NA state system of record is Apache-2.0. 🔴 Gate DENIED, third consecutive pass.**
 

@@ -3,6 +3,59 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449` — **🟢 TWO PUBLISHED PAYLOAD CELLS REPRODUCE TO THE DIGIT ON AN INDEPENDENT FETCH, including `p448`'s North American headline: `Ed-Fi-ODS` at 10 172 B and `XBlock` at 11 358 B. 🔴 But the probe that read them is case-sensitive and returned THREE false 404s against a live row first — and the probe this base is instructed to use (`curl -sI`) returns 403 on EVERY real GitHub repo on this host.**
+
+🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
+three denials, so `p448`'s settlement of that gap as *"a property of the host class"* is
+**refuted**; the denial is **intermittent**. 🟢 Arrival baseline: **58/62 green, 4 RED**, 🔴 **two
+of them NEW and both `p448`'s**. Three green on exit; the fourth is `DECLARED_RED` and left
+(`Gap 449-D`).
+
+### 🟢 Cell reproduction — the two most load-bearing grants on these shelves, re-read first-hand
+
+| address | cell this shelf records | 🟢 `p449` independent fetch | verdict |
+|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | Apache-2.0 · `LICENSE.txt` **10 172 B** | 🟢 **200 / 10 172 B** | 🟢 **EXACT** |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | Apache-2.0 · `LICENSE.TXT` **11 358 B** | 🟢 **200 / 11 358 B** | 🟢 **EXACT** |
+
+🔵 `Ed-Fi-ODS` is `p448`'s headline — **the only permissively-licensed system of record on these
+shelves**, reached through a state-shaped NA leg after six region-level nils. 🟢 It is now
+double-sourced across two passes and two hosts. Nine further shelved rows returned `200` with
+byte sizes in the same sweep; none is contradicted.
+
+### 🔴 `Gap 449-A` — the prescribed probe cannot verify a single row on this host
+
+| probe | real repo | fake control | usable? |
+|---|---|---|---|
+| `curl -sI https://github.com/<slug>` | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s -r 0-200 https://github.com/<slug>` | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s https://api.github.com/repos/<slug>` | — | 🔴 **403** | 🔴 **cannot discriminate** |
+| 🟢 `curl -s https://raw.githubusercontent.com/<slug>/<branch>/<path>` | 🟢 **200** + bytes | 🟢 **404 / 14 B** | 🟢 **YES** |
+
+🔴 `github.com` HTML is 403 for **every** real repository here while `git clone` of the same
+address succeeds. Obeyed literally, *"verify every URL with `curl -sI`; a 404 is not a finding"*
+would condemn **all ~134 addresses this base has shelved.** 🟢 The sound probe needs a **negative
+control**, and it has one: `zzz-fake-org-p449/zzz-fake-repo` → `404 / 14 B`
+(`evidence/url-probe-soundness.2026-10-26-p449.tsv`).
+
+### 🔴 `Gap 449-B` — and it failed toward "dead row" three times before it succeeded, on a row that was never dead
+
+`openedx/XBlock` read **404** at `master/LICENSE.txt`, `main/LICENSE.txt` and `main/LICENSE`.
+🟢 This shelf records `LICENSE.`**`TXT`** — at that exact case, **200 / 11 358 B**. 🔴
+`raw.githubusercontent.com` is **case-sensitive**: normalising case **manufactures** dead rows,
+and this base has a `LICENSE.TXT`/`License.txt`/`LICENSE` mix across its rows. 🔵 Rule:
+**probe the case the shelf recorded; a 404 against a shelved cell is a probe finding until the
+case is re-checked.** The same instrument-defect direction `Trend 48` named — toward the answer
+already believed, which here is *"the row is stale"*.
+
+### 🔴 Zero new foundational rows, and the nil is reported with its interval attached
+
+Four global legs returned only shelved addresses (`os-taxonomy` 10 word-scoped files, `Ed-Fi` 10,
+`OpenEduCat` 10). 🔵 Per `Gap 448-A`, now answered: the schedule is **hourly** (median
+**61.1 min**, n=309) against a **daily** trending channel, so an unchanged channel is expected at
+**P ≈ 95.8 %** and this nil is **not** evidence about supply.
+
+---
 
 ## 🆕 `p448` — **🟢 THE NORTH AMERICAN SYSTEM OF RECORD HAS A GRANT, AND IT IS APACHE-2.0: `Ed-Fi-ODS` read first-hand at `LICENSE.txt` 10 172 B · `59899c6091b5`, reached through the state channel that six consecutive region-level NA legs failed to find. 🟢 `openSIS`'s below-root grant REPRODUCES to the digit. 🔴 Gate DENIED, third consecutive pass.**
 

@@ -3,6 +3,66 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 Trend 49 — `p449` **An instrument sampled faster than the thing it measures reports its own clock and calls it a finding — and this base has now done that four times in a row, in the one file whose entire purpose is to record change**
+
+🟢 **Gate posture first (`Gap 446-A`): `make hooks` RAN** — the fourth trial after three
+denials, so `p448`'s settlement of that gap as *"a property of the host class"* is **refuted**.
+The denial is **intermittent**. 🟢 Arrival baseline: **58/62 green, 4 RED**, 🔴 two of them new
+and both `p448`'s.
+
+### The trend, stated as a measurement
+
+`Trend 48` found that this base's instrument defects are **not random** — every one caught that
+hour failed toward the answer the base already believed. 🟢 **`Trend 49` names the mechanism one
+level down: the sampling rate.**
+
+| quantity | value |
+|---|---|
+| inter-pass interval, median (n=**309**, `p49`-`p448`, commit→commit) | 🔴 **61.1 min** |
+| p10 / p90 | **46.0** / **78.1** min |
+| share inside 45-75 min | 🔴 **79.6 %** |
+| `p448` commit → `p449` read | 🔴 **40 min 20 s** |
+| GitHub trending refresh period | **daily** |
+| ⇒ passes per channel snapshot | 🔴 **≈ 23.6** |
+| ⇒ P(a pass observes an unchanged channel) | 🔴 **≈ 95.8 %** |
+
+🔵 `p446`, `p447`, `p448` and `p449` each recorded a **saturated discovery channel**. 🔴 At this
+cadence **that is the expected observation**, and it is consistent with an ecosystem moving at
+full speed. Four saturations are **~zero bits** about supply
+(`evidence/inter-pass-cadence.2026-10-26-p449.tsv`).
+
+### Why this is a trend about *measurement* and not a scheduling complaint
+
+🔴 **The failure mode is directional, exactly as `Trend 48` predicts.** A saturated channel reads
+as *"the supply has been exhausted; the shelves are complete"* — which is the conclusion the base
+already wants, because it is the conclusion under which its own shelves look finished. 🔵 Three
+passes drew progressively stronger versions of it (`p446` "saturated", `p447` "standing",
+`p448` "a third time"), and `p448` was right to register `Gap 448-A` rather than a fourth.
+
+🟢 **The same lesson has now fired on three instruments in two passes, and the sign is always the
+same:**
+
+| instrument | defect | direction of failure |
+|---|---|---|
+| `p448` substring novelty check (`Gap 447-A`) | unscoped `grep -ri` | toward *"already known"* → suppress a real finding |
+| `p448` tool extractor (`Gap 448-C`) | regex over all of `src/` | toward *"no write tools here"* → confirm read-only |
+| 🆕 `p449` URL probe (`Gap 449-A`) | `curl -sI` on `github.com` → **403 on every real repo** | toward *"dead row"* → discard a live address |
+| 🆕 `p449` URL probe (`Gap 449-B`) | case-normalised path | toward *"dead row"* → `XBlock` read 404 three times, then **200 / 11 358 B** at the recorded case |
+| 🆕 `p449` discovery channel (this trend) | hourly sampling of a daily channel | toward *"saturated"* → shelves look complete |
+
+🟢 **So the operating rule this base should adopt, and `p449` applies it to itself:** a nil is
+not reportable without the **interval** over which it was measured, and an instrument is not
+trustworthy until a **negative control** has been run through it. 🔵 `p449`'s URL probe carries
+one (`zzz-fake-org-p449/zzz-fake-repo` → `404 / 14 B`); its tool count carries a second channel
+(README prose, **187** against a true **188**); and its cadence claim carries a population of
+**309** rather than the single interval `p448` could cite.
+
+🔴 **The residual risk, named rather than resolved.** This measurement is one repository's commit
+history on one schedule. It does **not** establish the refresh period of the *web search* channel,
+only of GitHub trending — and the four global legs run each hour go through the former
+→ `Gap 448-D` remains open and is now the binding uncertainty on every nil this base reports.
+
+---
 
 ## 🆕 Trend 48 — `p448` **This base's measurement errors are NOT random: every instrument defect caught this hour failed toward the answer the base already believed. Three independent instruments, three different mechanisms, one direction — which means a saturated channel and a confirmed hypothesis are exactly what a broken instrument looks like.**
 

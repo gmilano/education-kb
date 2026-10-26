@@ -3,6 +3,54 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE GATE RAN after three denials, and its arrival baseline caught TWO undetected contract violations, both `p448`'s. 🟢 Discovery saturated a FOURTH time — and for the first time the saturation is INTERPRETABLE, because `Gap 448-A` is answered with n=309: the schedule is hourly against a daily channel, so an unchanged shelf is the EXPECTED observation at P ≈ 95.8 %. 🔴 `curl -sI` is a false-negative machine on this host.**
+
+🟢 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` RAN.** One
+attempt, no refusal — the **fourth** trial after three consecutive denials. 🔴 `p448` closed
+`Gap 446-A` as *"a property of the host class unattended passes run in"*; **that settlement is
+refuted.** The denial is **intermittent**. 🟢 So this pass carries what `p446`-`p448` could not:
+an **arrival baseline** — **58/62 green, 4 RED**, of which 🔴 **two were NEW reds and both were
+`p448`'s** (`gate-region-headings`, `gate-register-currency`). Three are green on exit; the
+fourth is `DECLARED_RED` and deliberately left (`Gap 449-D`).
+
+### 🟢 `Gap 448-A` ANSWERED — the trend record's own cadence, measured over 309 consecutive passes
+
+`p448` registered this gap because three consecutive "saturations" had been recorded **without
+anyone measuring the inter-pass interval**. Measured now, commit→commit, `p49`-`p448`
+(`evidence/inter-pass-cadence.2026-10-26-p449.tsv`):
+
+| statistic | value |
+|---|---|
+| median | 🔴 **61.1 min** |
+| mean | 66.1 min |
+| p10 / p90 | **46.0** / **78.1** min |
+| inside 45-75 min | 🔴 **79.6 %** (246/309) |
+| under 45 min | 8.7 % (27/309) |
+
+🔴 **The schedule is hourly.** `p447`→`p448` was 60.4 min; `p448` committed **01:59:04Z** and
+`p449` read **02:39:24Z** — **40 min 20 s**. 🔴 **GitHub trending refreshes daily.** So ≈**23.6
+passes sample each trending snapshot**, and the probability a given pass sees an unchanged
+channel is ≈**95.8 %**. 🔵 **A trend file written hourly against a daily channel records the
+clock, not the trend** — and this is the shelf where that matters most, because it is the one
+whose whole purpose is to record change → `Trend 49`.
+
+🟡 **What this does NOT license.** It is not a reason to stop sampling, and not evidence that
+supply is static — it is a statement that **"saturated" is uninformative at this cadence**, and
+that a nil must be reported with its interval attached or it should not be reported at all.
+
+### 🔴 Candidates this hour — four legs, all already shelved, graded word-scoped before write-down
+
+| candidate | word-scoped files | verdict |
+|---|---|---|
+| `withmarbleapp/os-taxonomy` (1 590-topic curriculum graph, 3 221 prerequisite edges) | **10** | 🔴 shelved; already graded **ODbL** |
+| `Ed-Fi` / `TSDS` | **10 / 7** | 🔴 shelved by `p448` |
+| `OpenEduCat` (LGPL-3.0), `Krayin` (MIT, CRM not education), `Forma LMS` | **10 / 8 / 5** | 🔴 shelved |
+| `skyzh/tiny-llm`, `Apertus`, `Soofi`, `EuroLLM-22B` | **1 / 1 / 1 / 0** | 🔴 general-purpose, not education verticals |
+
+🔵 **Zero new agent rows, fourth consecutive pass.** Stated as a nil with its interval attached,
+per the rule above — **not** as evidence that the supply has stopped moving.
+
+---
 
 ## 🆕 `p448` · reads 2026-10-26, commit 2026-10-26 — **🔴 GATE DENIED FOR THE THIRD CONSECUTIVE PASS, so `Gap 446-A` is settled as a host-class property. 🟢 `Gap 447-B` REFUTED FROM SOURCE — the LMS-connector tier is not read-only; 136 of 414 tool declarations mutate and four addresses create and publish courseware. 🔴 Discovery saturated a THIRD time — but `p448` read 43 minutes after `p447` committed, so the saturation is uninterpretable and that is now a registered gap.**
 

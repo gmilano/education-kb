@@ -1,0 +1,5 @@
+gate	arrival_state	declared	cause	disposition_p449
+gate-region-headings	RED	NOT declared	p448 added a 2nd `## Opportunities by region` block (+1, removed 0) and its block lacked `### Global`	FIXED by p449 - gate green
+gate-register-currency	RED	NOT declared	p448 wrote 8 shelves to p448 and never touched intel/open-gaps.md (register newest=p447)	FIXED by p449 - register written this pass
+gate-promotion-ledger	RED	DECLARED_RED (Makefile:210)	Gap 445-H live: claims.py::slugs_in read backticked `lib/measure` as a GitHub address -> 2 C1-UNADJUDICATED	FIXED by p449 - parser narrowed, 22/22 controls, backlog 147->144
+gate-census-union	RED	DECLARED_RED (Makefile:210)	p375 control 24 wants NAME-DOT-RUN and NAME-REF-OR-PATH both to fire on live shelves; only NAME-REF-OR-PATH does	NOT FIXED - left red, see Gap 449-D

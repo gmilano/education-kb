@@ -1,0 +1,13 @@
+url	probe	result	ground_truth	verdict
+https://github.com/bruchris/canvas-lms-mcp	curl -sI (HEAD)	403	REAL repo	FALSE NEGATIVE
+https://github.com/bruchris/canvas-lms-mcp	curl -s -r 0-200 (GET)	403	REAL repo	FALSE NEGATIVE
+https://github.com/withmarbleapp/os-taxonomy	curl -sI (HEAD)	403	REAL repo (shelved)	FALSE NEGATIVE
+https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS	curl -sI (HEAD)	403	REAL repo (shelved)	FALSE NEGATIVE
+https://raw.githubusercontent.com/bruchris/canvas-lms-mcp/main/LICENSE	curl -s (GET)	200 / 1070 B	REAL	SOUND
+https://raw.githubusercontent.com/zzz-fake-org-p449/zzz-fake-repo/main/LICENSE	curl -s (GET)	404 / 14 B	FAKE (control)	SOUND
+https://api.github.com/repos/bruchris/zzz-nonexistent-p449	curl -s (GET)	403	FAKE (control)	UNUSABLE - cannot discriminate
+https://www.apec.org/...apec-artificial-intelligence-(ai)-initiative-(2026-2030)	curl -sI	000 / CONNECT 403	policy denial, logged	NOT AN ABSENCE
+https://www.stdaily.com/web/English/2026-08/05/content_558725.html	curl -sI	000 / CONNECT 403	policy denial, logged	NOT AN ABSENCE
+https://raw.githubusercontent.com/openedx/XBlock/master/LICENSE.txt	curl -s (GET)	404 / 14 B	REAL repo, WRONG CASE	FALSE NEGATIVE (case)
+https://raw.githubusercontent.com/openedx/XBlock/master/LICENSE.TXT	curl -s (GET)	200 / 11358 B	REAL, shelf records 11 358 B	SOUND + REPRODUCES
+https://raw.githubusercontent.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS/main/LICENSE.txt	curl -s (GET)	200 / 10172 B	REAL, shelf records 10 172 B	SOUND + REPRODUCES

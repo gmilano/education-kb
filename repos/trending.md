@@ -3,6 +3,43 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE GATE RAN after three denials and its arrival baseline caught two undetected contract violations, both `p448`'s. 🔴 Trending discovery saturated a FOURTH time — and `Gap 448-A`, answered over 309 passes, shows why: this file is written HOURLY against a channel that refreshes DAILY, so ≈23.6 passes read each snapshot and "unchanged" is the expected observation at P ≈ 95.8 %.**
+
+🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
+three denials, so `p448`'s settlement of that gap as *"a property of the host class"* is
+**refuted**; the denial is **intermittent**. 🟢 Arrival baseline: **58/62 green, 4 RED**, 🔴 **two
+of them NEW and both `p448`'s**. Three green on exit; the fourth is `DECLARED_RED` and left
+(`Gap 449-D`).
+
+### 🔴 The structural finding about this file, and it is the one that should change how it is read
+
+| quantity | value |
+|---|---|
+| inter-pass interval, median (n=309, `p49`-`p448`) | 🔴 **61.1 min** |
+| 79.6 % of intervals fall in | **45-75 min** |
+| `p448` commit → `p449` read | 🔴 **40 min 20 s** |
+| GitHub trending refresh | **daily** |
+| ⇒ passes per trending snapshot | 🔴 **≈ 23.6** |
+| ⇒ P(a given pass sees an unchanged channel) | 🔴 **≈ 95.8 %** |
+
+🔵 **A trend file sampled 24× faster than the channel it samples cannot distinguish "the trend
+stopped" from "the clock moved".** Four consecutive saturations (`p446`-`p449`) are consistent
+with a perfectly healthy, fast-moving ecosystem. 🟡 The fix is not to stop sampling — it is that
+**every nil on this file must carry its inter-pass interval**, or it should not be written down
+(`evidence/inter-pass-cadence.2026-10-26-p449.tsv`, `Trend 49`).
+
+### 🔴 This hour's trending candidates — all shelved, graded word-scoped
+
+| candidate | word-scoped files | verdict |
+|---|---|---|
+| `withmarbleapp/os-taxonomy` — 5 900★, 1 590-topic curriculum graph, 3 221 prerequisite edges | **10** | 🔴 shelved; **ODbL** (share-alike database licence, not a code grant) |
+| `skyzh/tiny-llm` — inference-internals teaching repo | **1** | 🔴 general-purpose |
+| `luongnv89/claude-howto`, `addyosmani/agent-skills`, `cloudflare/security-audit-skill` | **0-3** | 🔴 harness/agent-skill tooling, **not** education verticals |
+| `HKUDS/DeepTutor` | **many** | 🔴 shelved; 661 commits/30 d and **50 % pin-stale** (`p448`) |
+
+🔵 **Zero new trending rows.** Reported as a nil with its interval, not as a supply finding.
+
+---
 
 ## 🆕 `p448` · reads 2026-10-26, commit 2026-10-26 — **🟢 A NEW FOUNDATIONAL REPO AND IT IS THE FIRST PERMISSIVELY-LICENSED SYSTEM OF RECORD ON THESE SHELVES: `Ed-Fi-ODS`, Apache-2.0, read first-hand, reached through the state-shaped NA leg that closed `Gap 447-D` after six region-level nils. 🔴 Gate DENIED, third consecutive pass. 🔴 Trending discovery saturated a third time.**
 

@@ -3,6 +3,56 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449` · 2026-10-26 — **🟢 THE GATE RAN AFTER THREE DENIALS, AND ITS ARRIVAL BASELINE CAUGHT A VIOLATION OF THIS FILE'S OWN REGION CONTRACT: `p448` added a SECOND `## Opportunities by region` block and left the vocabulary incomplete. Both are fixed and the gate is green. 🔴 Four regional legs ran; all four saturated, and two APAC candidates at ZERO prior hits are declared UNVERIFIABLE rather than shelved, because their primaries are refused at CONNECT by this host's network policy.**
+
+🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
+three denials, so `p448`'s settlement of that gap as *"a property of the host class"* is
+**refuted**; the denial is **intermittent**. 🟢 Arrival baseline: **58/62 green, 4 RED**, 🔴 **two
+of them NEW and both `p448`'s**. Three green on exit; the fourth is `DECLARED_RED`
+(`Gap 449-D`).
+
+### 🔴 This file's own contract was broken by the previous pass, and only the gate found it
+
+| finding | detail | fix |
+|---|---|---|
+| 🔴 `P383-MULTIPLE-BLOCKS` | `p448` **added** a `## Opportunities by region` block (`git show f80c0e0 -- intel/market.md`: **+1 added, 0 removed**) — this file carried **2** where the contract fixes **1** | 🟢 the stale duplicate is retitled **SUPERSEDED**, per `p430`'s precedent; content retained here and in `git log` |
+| 🔴 `P383-MISSING-REGION` | `p448`'s new block carried only four `###` children — **`### Global` absent** from a **closed** five-value vocabulary | 🟢 `### Global` written, with this pass's cross-region material |
+
+🔵 `gate-region-headings` is **green on exit**. 🔴 Both defects sat undetected for three passes
+because the gate that checks them did not run — which is the cost of `Gap 446-A` stated as a
+quantity rather than a complaint.
+
+### 🔴 Four regional legs, four saturations — and the nils carry their interval, per `Gap 448-A`
+
+| region | leg shape | result |
+|---|---|---|
+| North America | 🟢 **state-shaped** (`p448`'s learned shape, which closed `Gap 447-D`) | 🔴 **nil on novelty.** Every instrument already shelved: the 134-bills/31-states tracker (`134 bills` ×29 files), `SB 1227` ×39, `1734` ×33, `S.B. 720` ×14, `HB 329` ×12. 🟡 `Ohio House Bill 96` (districts must adopt AI policy by **1 Jul 2026**) and `WV H.B. 5205` are each at **1** file — thinly shelved, not new |
+| EMEA | 🟢 run **in German** (`Gap 445-F`'s prescription) | 🟢 **a cross-channel REPRODUCTION, zero new rows.** A German-language leg independently returned the Digital Omnibus posture this file already carries at `intel/trends.md:1355` — Reg. **(EU) 2026/1744**, Annex III education high-risk **2 Aug 2026 → 2 Dec 2027**, Art. 50 transparency **still 2 Aug 2026**, Art. 4 AI literacy binding since **2 Feb 2025**. 🔵 Second-language confirmation of a shelved regulatory cell |
+| APAC | region-level | 🟡 **two candidates at ZERO word-scoped hits, both UNVERIFIABLE** → `Gap 449-C` |
+| LATAM | run **in Spanish** | 🔴 **nil on novelty.** The 716-instruments/23-countries study (`716` ×16 files), Peru's nine laws, the UNESCO observatory (33 ministries), the 2026-2027 regional roadmap and Chile's lead are all shelved |
+
+### 🟡 `Gap 449-C` — the two APAC candidates, and why they are NOT written to a sell shelf
+
+| candidate | word-scoped hits | primary | state |
+|---|---|---|---|
+| **APEC AI Initiative (2026-2030)** | 🟢 **0** (`APEC Artificial Intelligence`) | `www.apec.org` → 🔴 **CONNECT 403** | 🔴 **NOT shelved** |
+| **China: "AI + Education" in the 15th Five-Year Plan** | 🟢 **0** (`15th Five-Year`) | `www.stdaily.com` → 🔴 **CONNECT 403** | 🔴 **NOT shelved** |
+
+🔵 Both would be the first APAC rows at zero prior hits since `p443`. 🔴 Neither goes on a shelf
+on one relayed secondary with its primary unreachable. 🟢 **And this pass can cite the host
+rather than infer it:** the proxy's own `recentRelayFailures` logs both as `connect_rejected` —
+*"gateway answered 403 to CONNECT (policy denial or upstream failure)"*. 🟢 Control:
+`raw.githubusercontent.com` returns **200** in the same shell in the same minute. 🔵
+`Gap 446-D` is thereby widened to **thirteen hosts** and the finding is upgraded from inference
+to a **logged** policy denial. **The gap is the channel, not the fact** — a host that can reach
+`apec.org` closes it in one leg.
+
+🟡 **Interval attached, as `Gap 448-A` now requires of every nil on these files.** `p448`
+committed **01:59:04Z**; `p449` read **02:39:24Z** — **40 min 20 s**. Median inter-pass interval
+over 309 passes is **61.1 min**. Against regulatory channels that move on legislative calendars,
+four saturations in four hours are **expected** and carry no information about the regions.
+
+---
 
 ## 🆕 `p448` · 2026-10-26 — **🟢 `Gap 447-D` IS CLOSED ON THE FIRST ATTEMPT: after SIX consecutive region-level nils, the North America leg paid the moment it was re-shaped to the STATE — and what it returned is the first permissively-licensed system of record on these shelves. 🟢 All four regions now have a PLACED system-of-record verdict, and the grant posture differs by region in a way that dictates the engagement shape. 🔴 Gate DENIED, third consecutive pass.**
 
@@ -155,6 +205,39 @@ once inverted — the MCP allowlist gateway keys on an unsound field), `Gap 448-
 extractor over-counts `bruchris` 222 vs 187; needs an AST walk), `Gap 448-D` (recency
 calibration is one industry, one host, one 14-day window, 24-h horizon only), `Gap 448-E`
 (California's absence is a single-channel nil; the CDE vendor-documentation channel is unpaid).
+
+### Global
+
+🟢 **The one cross-region finding `p449` adds, and it is a capability fact rather than a
+forecast: the community LMS-connector tier WRITES, and by more than `p448` published.**
+`Gap 448-C` resolved at source (`bruchris/canvas-lms-mcp` @ `c740624`): the true
+`ToolDefinition` count is **188**, not the **222** `p448` carried — the extra 19 are non-tool
+`name:` fields outside `src/tools/` (`src/canvas/normalize-ids.ts` 11, `src/init/wizard.ts` 5,
+`src/init/clients.ts` 3). 🟢 **`p448`'s WRITE numerator is EXACT** — that repo's own README
+declares *"125 tools are read-only and 62 tools perform Canvas write operations"*, and `p448`'s
+source census said **62**. 🔴 **So the share was understated, not overstated:** `bruchris`
+62/**188** = **33.0 %** (published 27.9 %), and the category total corrects **414 → 380** tools,
+**32.9 % → 35.8 %** write share. The correction moves *against* the read-only reading, which is
+the direction that matters commercially: **an agent layer on this tier can author and publish
+courseware in any region**, and the gating must key on the tool's effect, never on
+`read_only_hint` (`Gap 448-B`).
+
+🟢 **Grant posture is the global discriminator, and it is now placed in all four regions.**
+`Ed-Fi-Alliance-OSS/Ed-Fi-ODS` remains the **only permissively-licensed system of record** on
+these shelves (Apache-2.0 · `LICENSE.txt` **10 172 B**, reproduced to the digit by `p449` on an
+independent fetch); every other system of record here is GPL-2.0/3.0, AGPL-3.0 or carries no
+grant. 🔵 `openedx/XBlock` likewise reproduces at **11 358 B** (`LICENSE.TXT`). **The sellable
+unit is unchanged and global: governed adoption, not adoption** — a permissive agent layer with
+an effect-keyed gateway, bolted to a copyleft platform tier through a licence seam.
+
+🔴 **A global limit this pass measured rather than assumed.** No government or analyst primary
+is reachable from this host class: `www.apec.org` and `www.stdaily.com` both refused at CONNECT
+with a gateway **403 policy denial**, logged in the proxy's own `recentRelayFailures`
+(`Gap 446-D`, now at thirteen hosts). 🔵 Control: `raw.githubusercontent.com` returns **200** in
+the same shell in the same minute. So every regulatory cell on this file remains **relayed**,
+and two APAC candidates at **zero** prior word-scoped hits are declared unverifiable rather
+than shelved → `Gap 449-C`.
+
 
 ---
 
@@ -844,7 +927,7 @@ trail, or a human-in-the-loop story. **Globant's sellable unit in education is g
 adoption, not adoption.** It is also the one thing the copyleft platform tier cannot
 supply and a permissive agent layer can.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p449` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 

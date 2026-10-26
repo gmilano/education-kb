@@ -3,6 +3,81 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 Pattern BB — `p449` **The effect-keyed courseware-authoring gateway — the first pattern on these shelves that can be wired from a MEASURED write surface rather than an advertised one, plus the two-control verification pre-flight that `Gap 449-A` makes mandatory**
+
+🟢 **Gate posture (`Gap 446-A`): `make hooks` RAN** — fourth trial after three denials; that
+gap's settlement is **refuted**, the denial is **intermittent**. 🟢 Arrival **58/62 green,
+4 RED**, 🔴 two new and both `p448`'s; three green on exit.
+
+### Why this pattern is now buildable, and what changed under it
+
+🔴 `Pattern AZ` and the patterns before it assumed the community LMS-connector tier was
+**read-only** — `p447` carried that claim explicitly. 🟢 `p448` refuted it from source; 🟢 `p449`
+corrects the magnitude **upward**: the category write share is **35.8 %** (136/**380**), not
+32.9 %, because `p448`'s denominator counted 19 non-tool `name:` fields while its **WRITE
+numerator of 62 was EXACT** against the README's own declaration. 🔵 **An agent layer here can
+author and publish courseware** — and therefore must be gated.
+
+### The recipe, named repo by repo
+
+| layer | component | grant | first-hand cell | role |
+|---|---|---|---|---|
+| system of record | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** | `LICENSE.txt` **10 172 B** (reproduced by `p449`) | the only permissive SIS on these shelves; the NA state channel mandates API submission to it |
+| LMS seam | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | `LICENSE.TXT` **11 358 B** (reproduced by `p449`) | component boundary into a copyleft LMS without inheriting its grant |
+| authoring tools | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) @ `c740624` | MIT (`LICENSE` 1 070 B) | 🟢 **188** tools, 🔴 **62 WRITE** | `create_course`, `create_module`, `create_module_item`, `create_page`, `create_new_quiz`, `grade_submission`, `enroll_user` |
+| publish toggles | [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | MIT | 89 tools, 🔴 **41 WRITE (46.1 %)** | `toggle-module-publish` (`src/tools/modules.ts:114`), `update-syllabus`, `post-announcement` |
+| bulk grading | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | 128 tools | `bulk_grade_submissions`, `bulk_update_pages` — 🔴 **and the 55 undeclared-hint tools are exactly these** |
+| adaptive core | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** (`LICENSE` 1 066 B) | — | knowledge tracing behind the authoring decisions |
+
+### 🔴 The gateway, and the one rule that makes it safe
+
+```
+agent ──▶ mcp-allowlist-gateway ──▶ {canvas-lms-mcp, canvas-mcp, moodle-mcp}
+             │
+             └── keys on the TOOL'S EFFECT, resolved from source, NEVER on read_only_hint
+```
+
+🔴 **Do not key the allowlist on `read_only_hint` (`Gap 448-B`).** Measured over
+`vishalsachdev/canvas-mcp`'s 128 declarations: `=True` on **72**, `=False` on **1** — and that
+one is `download_course_file`, **a read** — with **55 (43.0 %) undeclared, which are exactly the
+mutating tools.** 🟢 Resolve effect the way `p449` resolved `Gap 448-C`: a tool is a WRITE iff
+its registry entry's enclosing object literal says so in **source**, not in a hint field.
+🔵 Wire the write tier behind a human-in-the-loop approval and an audit trail — **governed
+adoption is the sellable unit**, and on a 35.8 % mutating surface it is also the liability line.
+
+### 🟢 The verification pre-flight this pattern must run, with TWO controls
+
+🔴 `Gap 449-A`: `curl -sI https://github.com/<slug>` returns **403 on every real repository** on
+this host class while `git clone` of the same address succeeds. Any pre-flight built on it fails
+**closed on live rows** and would condemn all ~134 shelved addresses.
+
+```sh
+# 1 — sound existence+payload probe (NOT github.com HTML, NOT api.github.com)
+curl -s -o /dev/null -w '%{http_code}|%{size_download}' \
+     "https://raw.githubusercontent.com/$SLUG/$BRANCH/$LICENSE_PATH"
+# 2 — control A, a negative: MUST return 404|14
+curl -s -o /dev/null -w '%{http_code}|%{size_download}' \
+     "https://raw.githubusercontent.com/zzz-fake-org-p449/zzz-fake-repo/main/LICENSE"
+# 3 — control B, case: probe the case the SHELF RECORDED (Gap 449-B)
+#     openedx/XBlock -> LICENSE.txt 404 x3, LICENSE.TXT -> 200|11358
+```
+
+🔵 **Both controls are load-bearing, and each caught a real false negative this pass.** Control A
+distinguishes a dead row from a blocked host; control B stops case normalisation from
+manufacturing dead rows. 🟡 **Budget:** one `curl` per row plus two controls per sweep — the
+cheapest gate on these shelves, and the only one standing between a live address and a
+deletion.
+
+### 🔴 What this pattern does NOT cover, stated rather than implied
+
+🔴 No government or analyst primary is reachable from this host (`Gap 446-D`, **thirteen** hosts,
+now citing the proxy's own `connect_rejected` log), so every regulatory constraint this pattern
+inherits is **relayed**, not primary. 🔴 Pin recency governs whether the cells above still hold:
+`Pattern AZ` as corrected by `p448` gives **≥ 7 days → 97.4 %** survival against **48.9 %**
+below, and `bruchris` @ `c740624` is **3 days** old at read time — 🟡 inside the band where
+roughly **one pin in five** does not survive 24 h. Re-probe before quoting.
+
+---
 
 ## 🆕 Pattern BA — `p448` **The CALIBRATED pin-recency pre-flight — and the correction of `Pattern AZ`, published one pass ago on n = 5, whose threshold was wrong, whose budget line was survivorship-biased, and whose refutation of commit volume had the sign backwards**
 

@@ -3,6 +3,114 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449`
+
+🟢 **REPORTED FIRST, as `Gap 446-A`'s own prescription requires of every pass: `make hooks`
+RAN.** One attempt, no refusal, on **2026-10-26** at **02:4xZ**. 🔵 `p446` recorded one denial
+and called the variable *"the execution policy of the host"*; `p447` made it standing on two;
+`p448` made it **three for three** and **settled `Gap 446-A` as a property of the host class
+unattended passes run in.** 🔴 **That settlement is REFUTED on the fourth trial.** The gate is
+not host-class-denied; the denial is **intermittent**, and a three-for-three run was not
+sufficient evidence to close it. 🟢 So this pass has what `p446`-`p448` could not take: **an
+arrival baseline**.
+
+🟢 **The register is written in the same pass as the shelves it registers**, per
+`gate-register-currency`. Shelves carrying `p449`: `agents/top.md`, `agents/trending.md`,
+`repos/foundations.md`, `repos/trending.md`, `verticals/solutions.md`, `intel/market.md`,
+`intel/trends.md`, `compose/patterns.md`.
+
+### 🔴 The arrival baseline, and it is the whole case for the gate: **58/62 green, 4 RED — and TWO of the four are NEW reds that are BOTH `p448`'s**
+
+| gate | arrival | declared? | cause | disposition |
+|---|---|---|---|---|
+| 🔴 `gate-region-headings` | RED | 🔴 **NOT declared** | `p448` **added** a second `## Opportunities by region` block (`git show f80c0e0 -- intel/market.md`: **+1 added, 0 removed**) and its new block carried only four `###` children, missing `### Global` | 🟢 **FIXED — gate green.** The `p448` block at line 51 is completed with `### Global`; the stale duplicate is retitled **SUPERSEDED** per `p430`'s precedent |
+| 🔴 `gate-register-currency` | RED | 🔴 **NOT declared** | `p448` wrote all eight shelves to `p448` and **never touched this file** (`git show f80c0e0 --stat -- intel/open-gaps.md` is empty) — register newest `p447`, shelves newest `p448`, stale by 1 pass × 4 findings | 🟢 **FIXED — this section is the fix** |
+| 🔴 `gate-promotion-ledger` | RED | 🟡 `DECLARED_RED` (`Makefile:210`) | 🆕 `Gap 445-H` firing live: `claims.py::slugs_in` read this base's own backticked tool path `lib/measure` as a promoted GitHub address → 2 × `C1-UNADJUDICATED` at `agents/trending.md:526` and `:676` | 🟢 **FIXED — `Gap 445-H` CLOSED.** 22/22 controls, live gate PASS, backlog **147 → 144** distinct un-landed against a ratchet of 148 (`Makefile:34`: *"it may only FALL"*) |
+| 🔴 `gate-census-union` | RED | 🟡 `DECLARED_RED` (`Makefile:210`) | `p375` control 24 asserts **both** new rejection arms fire on the **live** shelves; only `NAME-REF-OR-PATH` does. Got `['NAME-REF-OR-PATH']`, want `['NAME-DOT-RUN','NAME-REF-OR-PATH']` | 🔴 **LEFT RED deliberately** → `Gap 449-D`. The arm is not dead: 49 dot-run strings are on the shelves and the fixture controls (45/48/56) exercise it. Making it green would mean **editing shelf content to satisfy a test**, which this base does not do |
+
+🔴 **The cost of `Gap 446-A`, stated as a quantity rather than a complaint.** Two contract
+violations entered this base and survived **three consecutive passes** because the instrument
+that catches them did not run. Both are exactly the defect class `make hooks` exists for. 🔵
+`p448`'s own closing line called its shelves *"first-hand and carrying the command that
+produced it; none is gate-checked"* — and ungated is precisely where these two landed.
+
+### 🟢 Exit state — **61/62 green**, and one red this pass CAUSED and then cleared
+
+| | arrival | exit |
+|---|---|---|
+| green | 🔴 **58/62** | 🟢 **61/62** |
+| red, NOT declared | 🔴 **2** (`gate-region-headings`, `gate-register-currency` — both `p448`'s) | 🟢 **0** |
+| red, `DECLARED_RED` | 🟡 2 (`gate-promotion-ledger`, `gate-census-union`) | 🟡 **1** (`gate-census-union`, `Gap 449-D`) |
+
+🔴 **One red was this pass's own, and the gate caught it rather than a later pass inheriting it.**
+`gate-union-currency` was **green on arrival** and turned **red after `p449` wrote to the
+shelves**: the published union census went stale (channel-B survivors **3 347 → 3 351**, union
+**3 724 → 3 727**). 🟢 Re-derived with `make union-currency` as the last act before the commit
+and the sentence **restated** in the live write-up rather than edited into `p448`'s table, per
+the instrument's own instruction. 🔵 **This is the arrival-baseline argument making its own
+case twice in one pass:** without a gate run, `p449` would have shipped a stale derived total
+exactly as `p448` shipped two contract violations.
+
+### 🟢 `p448`'s gaps, with this pass's verdicts attached
+
+| gap | state after `p449` |
+|---|---|
+| 🟢 `Gap 446-A` | 🔴 **REFUTED AS SETTLED, and that is the pass's most load-bearing correction.** `p448` closed it as *"a property of the host class"* on three denials. The fourth trial RAN. 🟢 The gate posture line stays permanent, but the finding is now **intermittency**, not denial — and a pass that reports "denied" must no longer conclude anything about the host class from it |
+| 🟢 `Gap 448-A` | 🟢 **ANSWERED with a population of 309, and it disarms three passes' headline — including the mechanism behind this pass's own saturation.** Inter-pass interval, commit→commit, over `p49`-`p448`: **median 61.1 min**, mean 66.1, p10 **46.0**, p90 **78.1**, and **79.6 % fall in 45-75 min**. 🔴 The schedule is **hourly**. `p448` read 43 min after `p447` committed; `p449` read **40 min 20 s** after `p448` committed (01:59:04Z → 02:39:24Z). 🔴 **GitHub trending refreshes daily**, so ~**23.6** passes sample each snapshot and an unchanged discovery channel is the *expected* observation at **P ≈ 95.8 %**. 🔵 Three "saturations" (`p446`-`p448`) and this pass's fourth therefore carry **~zero information about supply** → `Trend 49` |
+| 🟢 `Gap 448-C` | 🟢 **RESOLVED at source, and it corrects `p448`'s denominator while CONFIRMING its numerator.** `bruchris/canvas-lms-mcp` @ `c740624` (committed **2026-10-23**, so **not** drift since `p448`). True `ToolDefinition` count — the enclosing object literal must carry **both** `name:` and `inputSchema` — is 🟢 **188**, against `p448`'s **222**. The over-count is **19 non-tool `name:` fields, every one OUTSIDE `src/tools/`**: `src/canvas/normalize-ids.ts` **11**, `src/init/wizard.ts` **5**, `src/init/clients.ts` **3**. 🟢 README's own prose total is **187** (`"187 tools across …"`), and **175 of 188** source ids are named in it. 🟢 **`p448`'s WRITE count is EXACT**: README declares *"125 tools are read-only and **62** tools perform Canvas write operations"*; `p448`'s source census said **62**. 🔴 **So the write share was UNDERSTATED:** `bruchris` **62/188 = 33.0 %** (published 27.9 %); category total **414 → 380**, share **32.9 % → 35.8 %** — moving *against* the read-only claim `Gap 447-B` refuted |
+| 🟢 `Gap 445-H` | 🟢 **CLOSED after three passes of deliberate deferral, and the deferral's stated reason is what this pass removed.** `p446`-`p448` each refused to touch `claims.py::slugs_in` because *"no gate run is available to verify a fix"*. 🟢 The gate ran. The narrowing was **measured before** it was applied: each reserved owner was checked against every `github.com/<owner>/` URL on all eight live shelves — **none is also a real GitHub owner here**, so the arm drops **21 local paths and 0 addresses** (`evidence/slug-owner-safety.2026-10-26-p449.tsv`). The `github.com/…` extraction path is untouched |
+| 🔴 `Gap 448-B` | 🔴 **UNTOUCHED, and re-stated because `Gap 448-C` strengthens it.** `read_only_hint` is 43 % unpopulated and at least once inverted; now that the measured write share is **35.8 %** rather than 32.9 %, an allowlist gateway keyed on that field is gating a *larger* mutating surface than `p448` thought. `compose/code/mcp-allowlist-gateway` must key on the tool's **effect** |
+| 🔴 `Gap 446-D` | 🔴 **CONFIRMED and WIDENED to thirteen hosts.** `www.apec.org` and `www.stdaily.com` both refuse at CONNECT with gateway **403**, and this pass can cite the proxy's **own** log rather than infer: `recentRelayFailures` records both as `connect_rejected / "gateway answered 403 to CONNECT (policy denial or upstream failure)"`. 🟢 Control holds: `raw.githubusercontent.com` returns **200** in the same shell in the same minute |
+| 🔴 `Gap 446-E`, `Gap 445-A`, `Gap 443-A`, `Gap 444-D` | 🔴 **UNTOUCHED.** Fork-arm fraction unmeasured; org enumeration still a host 403; ledger population still claim-derived; homonym audit not run. 🔵 No longer blocked on gate availability — `Gap 445-H` shows these are now fixable-and-verifiable, and they should be taken in that order |
+| 🟡 `Gap 445-D` | 🟡 **UNCHANGED, and now carried for a FOURTH pass against `p447`'s own instruction not to register it a fourth time.** It needs **a person** with authority to send an outward-facing message. 🔴 This pass also ran unattended and cannot discharge it. **Escalated, not registered** |
+| 🔴 `Gap 448-D`, `Gap 448-E` | 🔴 **UNTOUCHED.** Recency calibration is still one industry/host/window; California's absence is still a single-channel nil |
+
+### 🆕 `Gap 449-A` — **the verification instrument this base is instructed to use is a false-negative machine on this host, and taken literally it would have condemned every GitHub row on these shelves**
+
+| probe | real repo | fake control | usable? |
+|---|---|---|---|
+| `curl -sI https://github.com/<slug>` (HEAD) | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s -r 0-200 https://github.com/<slug>` (GET) | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s https://api.github.com/repos/<slug>` | — | 🔴 **403** | 🔴 **NO — cannot discriminate** |
+| 🟢 `curl -s https://raw.githubusercontent.com/<slug>/<branch>/<path>` | 🟢 **200** + byte size | 🟢 **404 / 14 B** | 🟢 **YES** |
+
+🔴 `github.com` HTML is **403 for every real repository** on this host while `git clone` of the
+same address **succeeds** — so a pass obeying *"verify every URL with `curl -sI`; a 404 is not a
+finding"* literally would discard **all ~134 shelved GitHub addresses**. 🟢 The sound probe is
+`raw.githubusercontent.com` with a **negative control**, validated here on 12 addresses:
+10 real → `200` with byte sizes, `zzz-fake-org-p449/zzz-fake-repo` → `404 / 14 B`. 🔵 This is
+`p233-maven-channel`'s own rule (*"a 404 is not an absence"*) applied to the probe itself.
+
+### 🆕 `Gap 449-B` — **and the sound probe failed twice toward "dead row" in my own hands, the same direction `Trend 48` names**
+
+🔴 `openedx/XBlock` returned **404** at `master/LICENSE.txt`, `main/LICENSE.txt` and
+`main/LICENSE` — three nils that read exactly like a dead row. 🟢 This shelf records
+`LICENSE.`**`TXT`**, and at that exact case the probe returns **200, 11 358 B — reproducing the
+published cell to the digit.** 🔴 `raw.githubusercontent.com` is **case-sensitive**: a probe
+that normalises case **manufactures** dead rows. 🔵 Every probe must use the case the shelf
+recorded, and a 404 against a shelved cell is a **probe** finding until the case is re-checked.
+
+### 🆕 `Gap 449-C` — **two APAC candidates at zero prior hits, declared UNVERIFIABLE rather than shelved**
+
+| candidate | word-scoped hits | primary | state |
+|---|---|---|---|
+| APEC AI Initiative (2026-2030) | 🟢 **0** (`APEC Artificial Intelligence`) | `www.apec.org` → **CONNECT 403** | 🔴 **NOT shelved** — single relayed secondary only |
+| China "AI + Education" in the 15th Five-Year Plan | 🟢 **0** (`15th Five-Year`) | `www.stdaily.com` → **CONNECT 403** | 🔴 **NOT shelved** — single relayed secondary only |
+
+🔵 Both would be genuinely new rows — the first APAC items at zero prior hits since `p443`. 🔴
+Neither is written to a sell shelf on one relayed source with its primary unreachable. The gap
+is the **channel**, not the fact: a host that can reach `apec.org` closes this in one leg.
+
+### 🆕 `Gap 449-D` — **`gate-census-union` control 24 couples a unit control to mutable shelf content**
+
+🔴 Control 24 asserts both rejection arms fire on the **live** shelves. `NAME-DOT-RUN` no longer
+does, though **49** dot-run strings sit on those shelves and three fixture controls (45/48/56)
+exercise the arm directly. 🔵 So the arm is **not** dead code and the control's premise is sound
+while its *population* is wrong: it should assert non-deadness against a **fixture**, and assert
+only class-membership against live data. 🔴 Not changed this pass — rewriting a red control is
+how a real defect gets masked, and this one is `DECLARED_RED` already. It needs the judgement of
+whoever wrote `p375`.
+
 
 ## 🆕 `p447`
 

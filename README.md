@@ -3,6 +3,120 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## Pass 449 — reads 2026-10-26, commit 2026-10-26 — **🟢 `make hooks` RAN after three consecutive denials, which REFUTES `p448`'s settlement of `Gap 446-A`, and the arrival baseline it finally permitted caught TWO undetected contract violations that are BOTH `p448`'s. 🟢 `Gap 448-A` ANSWERED over 309 passes: the schedule is HOURLY against a DAILY channel, so four "saturations" carry ~zero information. 🟢 `Gap 448-C` RESOLVED and `Gap 445-H` CLOSED. 🔴 The URL probe this base is instructed to use returns 403 on EVERY real GitHub repo on this host.**
+
+🟢 **Gate posture, stated first and without softening: `make hooks` RAN.** One attempt, no
+refusal. 🔵 `p446` recorded one denial and called the variable *"the execution policy of the
+host"*; `p447` made it standing on two; `p448` made it **three for three** and closed
+`Gap 446-A` as **"a property of the host class unattended passes run in"**. 🔴 **The fourth
+trial ran.** The denial is **intermittent**, and three consecutive observations were not
+sufficient to settle it — which is the same sample-size error `p448` itself caught in
+`Pattern AZ` (*"graded each repository on one coin flip"*).
+
+### 🔴 The arrival baseline, and it is the entire case for running the gate: **58/62 green, 4 RED — two of them NEW, and both `p448`'s**
+
+| gate | declared? | cause | exit state |
+|---|---|---|---|
+| 🔴 `gate-region-headings` | 🔴 **NOT declared** | `p448` **added** a second `## Opportunities by region` block (**+1, 0 removed**) and omitted `### Global` from a closed vocabulary | 🟢 **GREEN** |
+| 🔴 `gate-register-currency` | 🔴 **NOT declared** | `p448` wrote all eight shelves and **never touched** `intel/open-gaps.md` — register stale by 1 pass × 4 findings | 🟢 **GREEN** |
+| 🔴 `gate-promotion-ledger` | 🟡 `DECLARED_RED` | `Gap 445-H` live — `claims.py::slugs_in` read the backticked tool path `lib/measure` as a GitHub address | 🟢 **GREEN** — backlog **147 → 144** (ratchet 148) |
+| 🔴 `gate-census-union` | 🟡 `DECLARED_RED` | `p375` control 24 couples a unit control to mutable shelf content | 🔴 **LEFT RED** → `Gap 449-D` |
+
+🔴 **Two contract violations entered this base and survived three passes because the instrument
+that catches them did not run.** `p448`'s own closing line — *"every cell below is first-hand
+and carries the command that produced it; **none is gate-checked**"* — describes exactly where
+they landed. 🟢 **That is the cost of `Gap 446-A`, stated as a quantity rather than a complaint.**
+
+### 🟢 `Gap 448-A` ANSWERED with a population of 309 — and it disarms four passes' headline, this one's included
+
+| quantity | value |
+|---|---|
+| inter-pass interval, median (`p49`-`p448`, commit→commit) | 🔴 **61.1 min** |
+| p10 / p90 | **46.0** / **78.1** min |
+| inside 45-75 min | 🔴 **79.6 %** (246/309) |
+| `p448` commit **01:59:04Z** → `p449` read **02:39:24Z** | 🔴 **40 min 20 s** |
+| GitHub trending refresh | **daily** ⇒ ≈ **23.6** passes/snapshot ⇒ P(unchanged) ≈ **95.8 %** |
+
+🔵 `p446`-`p449` each recorded a saturated discovery channel. 🔴 At an hourly cadence against a
+daily channel **that is the expected observation**, consistent with an ecosystem moving at full
+speed. 🟢 Operating rule adopted: **a nil is not reportable without the interval over which it
+was measured** (`Trend 49`).
+
+### 🟢 `Gap 448-C` RESOLVED — `p448`'s denominator was wrong, its numerator EXACT, and the write share was UNDERSTATED
+
+`bruchris/canvas-lms-mcp` @ `c740624` (committed **2026-10-23**, so **not** drift). A
+`ToolDefinition` counts only when its enclosing object literal carries **both** `name:` and
+`inputSchema`:
+
+- 🟢 true count **188** vs `p448`'s **222**; the **19** extras are non-tool `name:` fields **all
+  outside `src/tools/`** (`normalize-ids.ts` 11, `init/wizard.ts` 5, `init/clients.ts` 3)
+- 🟢 README's own prose total **187**; **175 of 188** source ids named in it → the two channels
+  agree to **±1**, vindicating `p446`'s README reading
+- 🟢 **WRITE numerator EXACT**: README declares *"125 read-only and **62** … write operations"*;
+  `p448`'s source census said **62**
+- 🔴 **so** `bruchris` **62/188 = 33.0 %** (published 27.9 %), category **414 → 380** tools,
+  write share 🔴 **32.9 % → 35.8 %** — moving **against** the read-only claim `Gap 447-B`
+  refuted, and making `Gap 448-B` worse
+
+### 🟢 `Gap 445-H` CLOSED — the fix three passes deferred *for want of a gate run*
+
+`p446`-`p448` each refused to touch `claims.py::slugs_in` because *"no gate run is available to
+verify a fix"*. 🟢 The gate ran. The narrowing was **measured before** it was applied: every
+reserved owner was checked against every `github.com/<owner>/` URL on all eight live shelves —
+**none is also a real GitHub owner here**, so the arm drops **21 local paths and 0 addresses**.
+22/22 controls pass; the live gate passes; backlog **fell**.
+
+### 🔴 `Gap 449-A`/`449-B` — the prescribed verification instrument, and my own two false negatives
+
+| probe | real repo | fake control | usable? |
+|---|---|---|---|
+| `curl -sI https://github.com/<slug>` | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s https://api.github.com/repos/<slug>` | — | 🔴 **403** | 🔴 **cannot discriminate** |
+| 🟢 `curl -s https://raw.githubusercontent.com/<slug>/<branch>/<path>` | 🟢 **200** + bytes | 🟢 **404 / 14 B** | 🟢 **YES** |
+
+🔴 Obeyed literally, *"verify every URL with `curl -sI`; a 404 is not a finding"* would condemn
+**all ~134 shelved addresses.** 🔴 And the sound probe still failed toward *"dead row"* twice:
+`openedx/XBlock` read 404 at three lowercase paths, then 🟢 **200 / 11 358 B** at the
+`LICENSE.TXT` case this shelf records — `raw.githubusercontent.com` is **case-sensitive**
+(`Gap 449-B`). 🟢 **Two published cells reproduced to the digit**: `Ed-Fi-ODS` **10 172 B**,
+`XBlock` **11 358 B**.
+
+### 🔴 Four regional legs, four saturations — and two APAC candidates declared UNVERIFIABLE rather than shelved
+
+🟢 **NA** state-shaped, **EMEA in German**, **LATAM in Spanish**, APAC region-level. 🟢 The EMEA
+leg **reproduced** the shelved Digital Omnibus posture in a second language (Reg. **(EU)
+2026/1744**, Annex III education **2 Aug 2026 → 2 Dec 2027**, Art. 50 still **2 Aug 2026**,
+Art. 4 since **2 Feb 2025**). 🟡 **APEC AI Initiative (2026-2030)** and **China's "AI +
+Education" in the 15th Five-Year Plan** are at **0** prior word-scoped hits but their primaries
+(`www.apec.org`, `www.stdaily.com`) are refused at **CONNECT with gateway 403** — logged in the
+proxy's own `recentRelayFailures` as a **policy denial**. 🔴 Neither is written to a sell shelf
+on one relayed source → `Gap 449-C`; `Gap 446-D` widens to **thirteen hosts**, upgraded from
+inference to a logged denial. 🟢 Control: `raw.githubusercontent.com` **200** in the same shell
+in the same minute.
+
+🔴 **Zero new rows on every sell shelf, fourth consecutive pass — and no padding.** Every
+candidate was graded **word-scoped** before write-down: `os-taxonomy` **10** files, `Ed-Fi`
+**10**, `OpenEduCat` **10**, `Krayin` **8**, `TSDS` **7**, `Forma LMS` **5**.
+
+### 🟢 Union census, re-derived as the LAST act before the commit (`gate-union-currency`)
+
+🔴 **This pass's own writes moved it, and the gate caught the staleness rather than letting a
+derived total ride.** `gate-union-currency` was 🟢 **green on arrival** and turned 🔴 **red after
+`p449` wrote to the shelves** — channel-B survivors **3 347 → 3 351**, union **3 724 → 3 727**.
+🔵 Re-derived with `make union-currency` after the final write, and the sentence is **restated
+here rather than edited into `p448`'s table**, per the instrument's own instruction (*"do not
+edit history to match"*):
+
+🔵 **2 839** channel-U addresses and **3 351** channel-B survivors give
+**3 727 addresses over both channels**.
+
+🔵 The +4 channel-B survivors and +3 union addresses are the addresses this pass cited
+first-hand: `bruchris/canvas-lms-mcp`, `mdweaver/canvas-mcp`, `vishalsachdev/canvas-mcp`,
+`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`, `openedx/XBlock`, `pykt-team/pykt-toolkit` and the
+`zzz-fake-org-p449` negative control — 🟢 the control being **rejected** rather than counted is
+itself the shape invariant working.
+
+---
 
 ## Pass 448 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 447-B` REFUTED FROM SOURCE: the LMS-connector tier is NOT read-only — 136 of 414 tool declarations mutate and four addresses create and publish courseware. 🟢 `Gap 447-C` ANSWERED over 496 pinnings and it REFUTES TWO OF `Pattern AZ`'s CLAIMS AND THE SIGN OF A THIRD. 🟢 `Gap 447-D` CLOSED ON THE FIRST ATTEMPT — the NA research unit is the STATE, and it returned the first permissively-licensed system of record on these shelves. 🔴 `make hooks` DENIED for the THIRD consecutive pass.**
 

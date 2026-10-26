@@ -3,6 +3,95 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+## 🆕 `p449` — **🟢 THE GATE RAN FOR THE FIRST TIME IN FOUR PASSES, AND THE ARRIVAL BASELINE IT FINALLY PERMITTED CAUGHT TWO CONTRACT VIOLATIONS THAT WERE BOTH `p448`'s. 🟢 `Gap 448-C` RESOLVED AT SOURCE — and it corrects `p448`'s denominator while CONFIRMING its write numerator EXACTLY, so this tier's write share was UNDERSTATED: 32.9 % → 35.8 %. 🔴 The URL probe this base is instructed to use is a false-negative machine on this host: `curl -sI` returns 403 on EVERY real GitHub repo.**
+
+🟢 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` RAN.** One
+attempt, no refusal — the **fourth** trial after three consecutive denials. 🔴 `p448` closed
+`Gap 446-A` as *"a property of the host class unattended passes run in"*; **that settlement is
+refuted.** The denial is **intermittent**. 🟢 So this pass carries what `p446`-`p448` could not:
+an **arrival baseline** — **58/62 green, 4 RED**, of which 🔴 **two were NEW reds and both were
+`p448`'s** (`gate-region-headings`, `gate-register-currency`). Three are green on exit; the
+fourth is `DECLARED_RED` and deliberately left (`Gap 449-D`).
+
+### 🔴 Zero new rows, for the FOURTH consecutive pass — and this is the first pass that can say what that means
+
+Four global discovery legs ran; every candidate was already shelved, graded **word-scoped**
+(`grep -riw`, `Gap 447-A`'s prescription) before being written down:
+
+| candidate | word-scoped files | verdict |
+|---|---|---|
+| `withmarbleapp/os-taxonomy` | **10** | 🔴 already shelved — and already graded **ODbL**, a share-alike *database* licence |
+| `Ed-Fi` / `TSDS` | **10 / 7** | 🔴 already shelved (`p448`) |
+| `OpenEduCat`, `Krayin`, `Forma LMS` | **10 / 8 / 5** | 🔴 already shelved |
+| `tiny-llm`, `Apertus`, `Soofi` | **1 each** | 🔴 shelved, and all **general-purpose**, not education verticals |
+| `EuroLLM`, `withmarble`, `os-curriculum` | **0** | 🔴 not education-vertical agents — a 24-language LLM and two spellings of an already-shelved address |
+
+🟢 **And unlike the three saturations before it, this one is interpretable — because `Gap 448-A`
+is now answered with a population of 309.** Inter-pass interval, commit→commit, `p49`-`p448`:
+**median 61.1 min**, p10 **46.0**, p90 **78.1**, **79.6 % inside 45-75 min**. The schedule is
+**hourly**. `p449` read **40 min 20 s** after `p448` committed (01:59:04Z → 02:39:24Z). 🔴
+GitHub trending refreshes **daily**, so ≈**23.6** passes sample each snapshot and an unchanged
+channel is the *expected* observation at **P ≈ 95.8 %**. 🔵 **Four consecutive "saturations"
+therefore say almost nothing about supply** — they measure the clock, not the ecosystem
+(`evidence/inter-pass-cadence.2026-10-26-p449.tsv`, `Trend 49`).
+
+### 🟢 `Gap 448-C` RESOLVED — `p448`'s tool census corrected, and the correction runs AGAINST the claim it refuted
+
+`bruchris/canvas-lms-mcp` @ `c740624`, committed **2026-10-23** — so **not** drift since `p448`.
+A `ToolDefinition` is counted only when its enclosing object literal carries **both** `name:`
+and `inputSchema` (`Gap 448-C` asked for an AST walk; this is the structural equivalent):
+
+| channel | count |
+|---|---|
+| `p448` regex over all of `src/` | 🔴 **222** |
+| 🟢 **true `ToolDefinition` objects** | 🟢 **188** |
+| README's own prose total | **187** |
+| source ids named in README | **175 of 188** |
+
+🟢 **The over-count is localised and named: 19 non-tool `name:` fields, every one OUTSIDE
+`src/tools/`** — `src/canvas/normalize-ids.ts` **11**, `src/init/wizard.ts` **5**,
+`src/init/clients.ts` **3** (`evidence/gap448c-tool-count.2026-10-26-p449.tsv`, 47 files).
+
+🟢 **`p448`'s WRITE numerator is EXACT, confirmed on an independent channel.** That repo's README
+declares *"125 tools are read-only and **62** tools perform Canvas write operations"*; `p448`'s
+source census said **62**. 🔴 **So the share was understated, not overstated:**
+
+| cell | `p448` | 🟢 `p449` |
+|---|---|---|
+| `bruchris` write share | 27.9 % | 🟢 **33.0 %** (62/188) |
+| category total tools | 414 | 🟢 **380** |
+| 🔴 **category write share** | 32.9 % | 🔴 **35.8 %** |
+
+🔵 The correction moves **against** the read-only reading `Gap 447-B` refuted — it strengthens
+the refutation rather than softening it. 🔴 And it makes `Gap 448-B` worse, not better: an MCP
+allowlist gateway keyed on `read_only_hint` (43 % unpopulated, once inverted) is now known to be
+gating a **larger** mutating surface than `p448` believed.
+
+### 🔴 `Gap 449-A` — how this shelf's rows must be verified, because the prescribed way does not work here
+
+| probe | real repo | fake control | usable? |
+|---|---|---|---|
+| `curl -sI https://github.com/<slug>` | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s -r 0-200 https://github.com/<slug>` | 🔴 **403** | — | 🔴 **NO** |
+| `curl -s https://api.github.com/repos/<slug>` | — | 🔴 **403** | 🔴 **cannot discriminate** |
+| 🟢 `curl -s https://raw.githubusercontent.com/<slug>/<branch>/<path>` | 🟢 **200** + bytes | 🟢 **404 / 14 B** | 🟢 **YES** |
+
+🔴 `github.com` HTML is **403 for every real repository** on this host, while `git clone` of the
+same address succeeds. A pass obeying *"verify every URL with `curl -sI`; a 404 is not a
+finding"* **literally** would have condemned **all ~134 shelved addresses on these shelves.**
+🟢 Validated on 12 addresses: 10 real → `200` with byte sizes, the fake control → `404 / 14 B`
+(`evidence/url-probe-soundness.2026-10-26-p449.tsv`).
+
+🔴 **And the sound probe still failed twice in my own hands, toward "dead row" — `Trend 48`'s
+direction.** `openedx/XBlock` read **404** at three lowercase paths; the shelf records
+`LICENSE.`**`TXT`**, and at that case it returns 🟢 **200, 11 358 B — the published cell to the
+digit.** `raw.githubusercontent.com` is **case-sensitive** → `Gap 449-B`. **A 404 against a
+shelved cell is a probe finding until the case is re-checked.**
+
+🟢 **Two published cells reproduced independently this pass:** `Ed-Fi-ODS/LICENSE.txt`
+**10 172 B** (`p448`'s North America headline) and `XBlock/LICENSE.TXT` **11 358 B**.
+
+---
 
 ## 🆕 `p448` — **🟢 `Gap 447-B` IS REFUTED FROM SOURCE, AND IT WAS THIS SHELF'S ONLY OPEN CAPABILITY CLAIM: the LMS-connector tier is NOT read-only — 136 of 414 tool declarations (32.9 %) MUTATE, and the specific claim that "not one community server creates and publishes a course" is false at four addresses. 🟢 A cross-channel validation double-sources this shelf's densest category: source extraction reproduces `p446`'s README tool counts EXACTLY on four of five addresses. 🔴 Gate DENIED for the THIRD consecutive pass.**
 
