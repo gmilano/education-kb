@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` · 2026-10-26 — **the trending movement is a vocabulary, not a repository: paper assessment**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes.
+🔵 Append-only: this section is added at the top and every section below it is retained verbatim.
+
+### 🟢 The tier that was always trending and never visible here
+
+🔵 **Measured before any web leg:** nine tokens searched against the three primary shelves —
+**`OMR`, `optical mark recognition`, `bubble-sheet`, `mark recognition`, `phoneme`, `braille`,
+`sign language`, `dyslexia`, `speech-to-text` — nine of nine at ZERO mentions** across 457 carried
+addresses. 🔴 These shelves tracked an industry whose dominant assessment instrument across most of
+its install base is a printed answer sheet, and carried nothing that reads one.
+
+| repo | grant | bytes · `sha256₁₂` | ref | what | region |
+|---|---|---|---|---|---|
+| [`Udayraj123/OMRChecker`](https://github.com/Udayraj123/OMRChecker) | 🟢 MIT | 1 104 B · `3d72ab01aefd` | 🔴 `master` | the canonical OMR engine; reads sheets from a scanner **or a phone camera** | ⚪ Global |
+| [`crispin0007/OMR`](https://github.com/crispin0007/OMR) | 🟢 Apache-2.0 | 11 358 B · `cfc7749b96f6` | `main` | full exam pipeline **offline on one Windows PC, no internet, no fees**: sheet design → ADF scan → marks, ranks, **merit lists**; scoped by its README to **Nepal CEE, NEET, JEE** | 🟢 APAC |
+| [`sajidbuet/OMRFlow`](https://github.com/sajidbuet/OMRFlow) | 🟢 MIT | 1 081 B · `71787b5c24e2` | `main` | examination administration: template design, **uncertain-mark review**, **attendance reconciliation**, auditable Excel | 🟢 APAC |
+| [`power0matin/omr-bubble-sheet-marker`](https://github.com/power0matin/omr-bubble-sheet-marker) | 🟢 MIT | 1 072 B · `440f3c6ab70c` | `main` | offline PDF/image MCQ marking (OpenCV + PyMuPDF) · 🟡 thinnest of the four | ⚪ Global |
+
+🔴 **Copyleft flag:** [`bthicks/OMR-Grader`](https://github.com/bthicks/OMR-Grader) is **GPL-3.0**
+(`LICENSE.txt` 35 149 B · `3972dc9744f6`) — behind a service boundary, not in a deliverable.
+🔴 **Refusal:** [`sakethbachu/OMR-scanner`](https://github.com/sakethbachu/OMR-scanner), live at
+`master`, no grant at 12 probed paths.
+
+🟢 **Why it is a trend and not four repositories:** two of the four name **offline single-machine
+operation as a feature in their own README**. That is the one deployment envelope the entire
+MCP/LMS-connector tier on these shelves cannot serve, and it is the envelope of the
+high-volume, low-connectivity examination estates this base's regional sections call under-served.
+🔵 Wiring: `P457-1` in [`../compose/patterns.md`](../compose/patterns.md).
+
+### 🔵 `p456`'s digest-lineage rule, reproduced in both directions by accident
+
+🟢 Two of this week's rows confirm the rule `p456` narrowed (*a digest match is evidence of lineage
+iff the licence family embeds a holder*) without having set out to:
+
+- 🔴 `crispin0007/OMR` is **11 358 B `cfc7749b96f6`** — byte- and digest-identical to the cell
+  `p451` published for `FiredMosquito831/ase-moodle-mcp`. **Apache-2.0 stock text, no holder, zero
+  lineage.**
+- 🔴 `bthicks/OMR-Grader` is **35 149 B `3972dc9744f6`** — identical to this base's
+  `papillonapp/papillon-ed-core`. **GPL-3.0 stock, same conclusion.**
+- 🟢 `NSoiffer/MathCAT` and `AVauraTech/assistive-ai-accessibility-suite` are **both 1 065 B** with
+  **different digests** — **MIT embeds a holder**, so the rule's positive arm holds too.
+
+🟢 **Operational form:** never infer a fork from a licence digest unless the family is MIT or BSD.
+
+### 🔴 Census of the whole shelf, this week's numbers
+
+🟢 **457** addresses re-read at their resolved default ref: **390** serve a grant (**252 MIT**,
+**49 Apache-2.0** — **77 %** of readable supply in the two families that need no service boundary),
+**54** `REPO_LIVE_NO_GRANT`, **13** dead, 2/2 fabricated controls dead. 🟡 Of 20 cells claiming a
+licence with no payload, **8 are recoverable from an in-repo manifest** (`package.json`,
+`pyproject.toml`, CRAN `DESCRIPTION`) and **12 from neither channel** (`Gap 457-B`). 🟡 One cell
+corrected in the safe direction: [`cran/exams`](https://github.com/cran/exams) grants
+**`GPL-2 | GPL-3` disjunctively**, where this base carried GPL-3.0 only.
+
+
 ## 🆕 2026-10-26 · `p456` — **The ref axis of every repo on these shelves is measured for the first time: 455 addresses, 439 live, `HEAD` follows the resolved default branch in 439 of 439 — and 15 projects whose default branch is a release line, not a trunk.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — eleven denials in twelve passes. 🔵 This file is

@@ -1,0 +1,25 @@
+leg	region	fact_returned	prior_mentions_on_market_md	grade
+AI education {region} 2026 adoption regulation players	North America	134 AI-education bills / 31 states 2026	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	North America	California AB 1159 (student data / model training)	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	North America	H.R. 8747 K-12 AI Literacy and Readiness Act (advanced 21 Jul 2026)	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	North America	NYC moratorium through 8th grade	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	North America	Canada 'AI for All' strategy Jun 2026	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	North America	AFT National Academy for AI Instruction (programme name)	0 (AFT itself: 48)	NOT_A_FINDING
+AI education {region} 2026 adoption regulation players	EMEA	Digital Omnibus in OJ 24 Jul 2026	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	EMEA	high-risk 2 Dec 2027 standalone / 2 Aug 2028 embedded	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	EMEA	UK AI Opportunities Action Plan	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	EMEA	Germany EUR 20bn 2025-2030	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	EMEA	EU enterprise AI adoption ~19.95%	n/a	REFUSED_WRONG_POPULATION
+AI education {region} 2026 adoption regulation players	EMEA	student AI use 66% (2024) -> 92% (2025)	>=1	REFUSED_NOT_EMEA
+AI education {region} 2026 adoption regulation players	APAC	Vietnam Decision 33/2026/QD-TTg (2 Jul 2026), education high-risk	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	APAC	Korea AI Framework Act in force 22 Jan 2026	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	APAC	China registration + content labelling	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	LATAM	DEC LATAM 2026: 92% students / 79% faculty, 30000+ responses, 29 institutions	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	LATAM	72% LATAM faculty positive vs 57% global	>=1	ALREADY_CARRIED
+AI education {region} 2026 adoption regulation players	LATAM	UNESCO IESALC: adoption widespread, governance lagging	>=1	ALREADY_CARRIED
+top open source AI agents education 2026 github MIT	Global	no education-specific MIT agent ranking; general-agent lists only	n/a	NIL
+github trending education AI 2026	Global	DeepTutor, withmarbleapp/os-taxonomy	>=1	ALREADY_CARRIED
+open source platform education LMS SIS MIT Apache 2026	Global	OpenOLAT Apache-2.0; Sakai ECL-2.0 vs Apache-2.0 dispute	>=1	ALREADY_CARRIED
+AI education industry trends 2026	Global	governance-over-hype, embedded infrastructure, digital credentials	>=1	ALREADY_CARRIED
+open source OMR optical mark recognition bubble sheet exam grading github MIT Apache	Global	4 permissive OMR engines + 1 GPL-3.0 + 1 ungranted	0	NEW_TIER
+open source assistive technology education dyslexia braille sign language github MIT Apache 2026	Global	4 permissive assistive foundations + 1 ungranted	0	NEW_TIER

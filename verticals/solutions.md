@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` — **🔴 THE VERTICAL THIS SHELF HAS NEVER DESCRIBED IS THE PAPER ONE: every platform carried here assumes a hosted LMS and a network, and the assessment instrument most of this industry's install base actually uses is a printed answer sheet read by a scanner. 🟢 A permissive, offline, single-machine paper-assessment stack now exists on these shelves. 🔴 And one carried platform cell went commercial two days ago.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing
+below is gate-attested; instrument and controls at
+[`compose/code/p457-payload-census/`](../compose/code/p457-payload-census/census.py).
+
+### 🔴 The deployment envelope this shelf could not serve
+
+🔵 Every row on this shelf — ILIAS, Moodle, Open edX/Tutor, Canvas, BigBlueButton, OpenEduCat,
+Gibbon, RosarioSIS, i-Educar — is a **server**. It needs hosting, a database, a network and an
+administrator. 🔴 That is a correct description of the platforms and an **incomplete description of
+the market**: an exam office scoring MCQ sheets for a cohort of 2 000 on one Windows PC with no
+reliable internet is a real engagement shape, and this shelf had no row for it.
+
+🟢 **Measured, not asserted:** two of the four OMR engines promoted this pass name offline
+single-machine operation as a *feature* in their own README —
+[`crispin0007/OMR`](https://github.com/crispin0007/OMR) (*"all on one Windows PC with no internet
+and no fees"*, **Apache-2.0**, `LICENSE` 11 358 B `cfc7749b96f6`) and
+[`sajidbuet/OMRFlow`](https://github.com/sajidbuet/OMRFlow) (*"entirely on your own machine"*,
+**MIT**, 1 081 B `71787b5c24e2`).
+
+### 🟢 The paper-assessment vertical, as a deployable stack
+
+| layer | platform | grant | what it does | pin |
+|---|---|---|---|---|
+| sheet design + scoring | [`crispin0007/OMR`](https://github.com/crispin0007/OMR) | 🟢 **Apache-2.0** | answer-sheet authoring, ADF-scanner intake, marks, ranks, **merit lists**, negative marking, Excel + PDF scorecards | `-b main` |
+| exam administration | [`sajidbuet/OMRFlow`](https://github.com/sajidbuet/OMRFlow) | 🟢 **MIT** | template design, **uncertain-mark review queue**, **attendance reconciliation**, auditable Excel results | `-b main` |
+| camera-grade intake | [`Udayraj123/OMRChecker`](https://github.com/Udayraj123/OMRChecker) | 🟢 **MIT** | reads sheets from a **phone camera** as well as a scanner — the field-collection path where no scanner exists | 🔴 `-b master` |
+| component | [`power0matin/omr-bubble-sheet-marker`](https://github.com/power0matin/omr-bubble-sheet-marker) | 🟢 **MIT** | PDF/image MCQ marking (OpenCV + PyMuPDF) | `-b main` |
+| accessibility | [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | 🟢 **MIT** | MathML → speech + **braille** (Nemeth, UEB Technical), **15 languages** | `-b main` |
+
+🔴 **Refs are stated because `p456` proved they cannot be inherited**: `Udayraj123/OMRChecker`
+defaults to **`master`**, not `main`, so a recipe that clones without `-b` is guessing. 🟡 One row
+of the four is **GPL-3.0** and is therefore *not* in this table:
+[`bthicks/OMR-Grader`](https://github.com/bthicks/OMR-Grader) (35 149 B `3972dc9744f6`) — usable
+behind a service boundary, not vendorable into a deliverable.
+
+🟢 **Where this stack meets the existing shelf:** the OMR layer produces per-item response data,
+which is exactly the input the psychometrics tier on these shelves already consumes
+(`patriciamar/ShinyItemAnalysis`, `philchalmers/mirt`, `cran/catR`) and the format the LMS
+connector tier can write back. 🔵 The wiring is `P457-1` in
+[`compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 A carried cell on these shelves went commercial on 2026-10-24
+
+🔵 [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) is carried
+with an **MIT** cell. At `HEAD` it serves **`Pengusto Commercial License 1.0`** (`LICENSE` 3 053 B
+`d84e558a5033`), *"effective for distributions carrying this notice from **2026-10-24**"*, over the
+maintainer's own additions. 🔴 **The upstream it names
+(`adriasantacreu/google-classroom-mcp` at commit `29c2c2a0767069…`) serves no licence file at any
+of six probed paths** — its only grant is a `package.json` declaration, and the readable MIT text
+survives only inside the fork that relicensed it. 🟢 Full measurement, including the engagement
+remedy, on [`agents/top.md`](../agents/top.md).
+
+🔵 Two further carried addresses re-issued licence text on **the same date** —
+`nakafaai/aksara` and `nakafaai/nakafa.com`, both now **`Nakafa Source Available License 2.0`**,
+*"not open source, and … not free to reuse"*. 🟡 These shelves already carried them as closed; what
+is new is the dated instrument.
+
+### 🟡 The manifest channel, and what it does and does not rescue
+
+🔵 **20 addresses on these shelves state a licence with no payload behind it.** Probed this pass
+against four in-repo manifests, **8 are recoverable** and the platform-tier results are the ones
+that matter here:
+
+| platform | manifest | grant recovered |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `package.json` | 🔴 **AGPL-3.0-or-later** — the `-or-later` is on the manifest and not on the carried cell |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `pyproject.toml` | 🟢 **Apache-2.0** confirmed (this shelf carries both AGPL-3.0 and Apache-2.0 for the Open edX estate; the XBlock SDK lane is the Apache one) |
+| [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | `package.json` | 🟢 **MIT** |
+| [`louislegrain/api-ecoledirecte`](https://github.com/louislegrain/api-ecoledirecte) | `package.json` | 🟢 **ISC** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | — | 🔴 **neither channel** — a carried SIS platform whose GPL-2.0 cell this base cannot now corroborate (`Gap 457-B`) |
+
+🔴 **`OS4ED/openSIS-Classic` is the entry on this list a vertical reader should care about**: it is
+a *platform* row, not a connector, and its grant is currently unverifiable from this host on both
+the payload and the manifest channel. 🟡 It is **not** retracted — it is flagged, with the channel
+that failed named, so a client-facing use gets a legal read rather than a shelf cell.
+
+
 ## 🆕 `p456` — **🔴 Eleven of the platforms on this shelf do NOT default to a trunk: ILIAS checks out `release_11`, Tutor `release`, OpenEduCat `19.0`, BigBlueButton `v4.0.x-develop`. Every deployment recipe on these shelves that clones without `-b` has been pinning silently to whatever release line the maintainers last promoted.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing

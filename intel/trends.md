@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` — **🔴 THE TREND THIS PASS CAN EVIDENCE WITH A DATE IS LICENCE REVOCATION IN PLACE: three of 457 carried addresses re-issued their licence text inside one 48-hour window, and one of them moved from MIT to commercial while its shelf cell still said MIT. 🟢 And a structural trend with a nine-token denominator: this industry's dominant assessment instrument is paper, and the entire open-source vocabulary these shelves search in is digital.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing
+below is gate-attested; instrument and controls at
+[`compose/code/p457-payload-census/`](../compose/code/p457-payload-census/census.py).
+
+### 🔴 `T1` — An address is not a licence, and the licence can change under a stable address
+
+🟢 **Measured, with dates:** of 457 addresses carried on the primary shelves, **three served licence
+text re-issued on 2026-10-24**, two days before this pass:
+
+| address | instrument now served | effective |
+|---|---|---|
+| `pengusto/google-classroom-mcp` | 🔴 `Pengusto Commercial License 1.0` | **2026-10-24** |
+| `nakafaai/aksara` | 🔴 `Nakafa Source Available License 2.0` | **2026-10-24** |
+| `nakafaai/nakafa.com` | 🔴 `Nakafa Source Available License 2.0` | **2026-10-24** |
+
+🔵 Every prior trend on this file about licences has been about **reading** them correctly — badges
+that lie, pointers that are not grants, manifests that disagree with payloads. 🔴 **This one is
+different in kind: the grant was read correctly and then changed.** The address did not move, the
+project did not die, the stars did not fall. A shelf cell built from a correct first-hand read in
+`p4xx` was wrong by `p457` without anything observable from outside the payload.
+
+🟢 **The trend, stated for an engagement:** *in agentic-education supply, the licence is a
+**time-varying** property of an address, and the rate is now measured at least once — 3 of 457
+addresses in a 48-hour window.* 🔴 **The consequence is a procurement practice, not a caveat**: a
+dependency's grant is pinned to a **commit**, re-read at vendoring time, and the grant text is
+copied into the vendor tree. 🔵 This base has no instrument that would *notice* the next one
+(`Gap 457-C`) — all three were found by re-reading everything, which costs a full sweep.
+
+### 🔴 `T2` — The relicensing shape is "fork, extend, charge for the extensions"
+
+🔵 `pengusto` is worth reading closely because it is **not** a rug-pull and it is more awkward than
+one. Its licence scopes itself to *"the copyrightable additions and modifications made by
+Pengusto"*, names its upstream at a commit, and states that the upstream *"remains available under
+MIT"* — preserving the upstream notice at `LICENSES/MIT-upstream.txt`.
+
+🔴 **And the upstream serves no licence file at all** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+`LICENCE`, `COPYING`, `license` all **404** on
+`adriasantacreu/google-classroom-mcp`; its only grant is a `package.json` field.
+
+🟢 **So the trend is a dependency-graph fact:** the permissive layer became *less* readable than the
+commercial layer built on top of it. 🔵 The only readable MIT text in that pair lives inside the
+repository that charges. 🔴 **For Globant this is the pattern to expect in the MCP-connector tier
+generally** — single-maintainer MIT servers, forked by a second party who adds the production
+hardening and prices it — and the defence is to pin the upstream commit and vendor the grant text,
+because the upstream has no incentive to publish one.
+
+### 🟢 `T3` — The supply vocabulary is digital and the install base is paper
+
+🟡 **A measured absence, with its denominator.** Before any web leg, nine tokens were searched
+against the three primary shelves: **`OMR`, `optical mark recognition`, `bubble-sheet`, `mark
+recognition`, `phoneme`, `braille`, `sign language`, `dyslexia`, `speech-to-text` — nine of nine at
+ZERO mentions** across 457 carried addresses.
+
+🔵 **The cause is not that the supply does not exist** — one leg in the new vocabulary returned four
+permissively-licensed OMR engines and four assistive foundations, all live, all read first-hand
+(see [`repos/foundations.md`](../repos/foundations.md)). 🔴 **The cause is that 456 passes of
+discovery were phrased in the language of hosted digital education**: LMS, MCP, tutor, autograder,
+LTI, xAPI. An exam office scanning NEET practice sheets on one offline Windows PC is not in that
+vocabulary.
+
+🟢 **The trend proper:** *the open-source education supply has a large, permissive, actively
+maintained offline tier, and the channels that find agentic tooling do not return it.* 🔵 This is
+`p453`'s finding — the word list is the variable, not the channel — **confirmed on a new axis**,
+and it is the strongest argument on this file for budgeting discovery legs by vocabulary rather
+than by region.
+
+### 🟡 `T4` — Accessibility is statutory demand with permissive supply, and the two were never connected here
+
+🔵 These shelves sell hardest into the two regions where accessible instruction is a **legal
+obligation** — IDEA and Section 504 in the US, the European Accessibility Act in the EU — and
+carried the word *"accessibility"* only as prose. 🟢 The supply is permissive and specific:
+`NSoiffer/MathCAT` (**MIT**) emits **braille in Nemeth and UEB Technical** and speech in **15
+languages** from MathML; `AVauraTech/assistive-ai-accessibility-suite` (**MIT**) runs eight
+modalities **on-device via WASM with an offline fallback**.
+
+🔴 **The commercial reading:** accessibility work is procured because it is *required*, not because
+it is *wanted*, which makes it the rare education line item with a non-discretionary budget — and
+the permissive supply to serve it has been sitting one vocabulary away from these shelves the whole
+time. 🟡 Stated as an opportunity and not as a win: none of these four rows has an institutional
+install base this pass could measure.
+
+### 🔴 `T5` — Methodological: the regulatory channel is saturated, and this is the sixth consecutive nil
+
+🔵 Eight legs ran this pass — four global, four regional, in the prescribed wording. **14 named
+facts were returned and graded against [`intel/market.md`](../intel/market.md): 13 were already
+carried.** Vietnam's Decision 33/2026/QD-TTg, Korea's AI Framework Act, California AB 1159,
+H.R. 8747, the Digital Omnibus dates, Canada's *AI for All*, the DEC LATAM rates, UNESCO IESALC's
+governance lag — all on the shelf already.
+
+🟢 **That is a result about the channel, and it is now six passes old.** 🔴 **Where this pass paid
+regionally was the SUPPLY side** — APAC gained two OMR rows placed by the national exam systems
+their own READMEs name, North America gained one assistive row placed by device. 🔵 The trend for a
+curator: **after saturation, a region is moved by a supply row, not by a regulation leg.**
+
+
 ## 🆕 `p456` — **🔴 The trend this pass can actually evidence is a supply-chain one: education platforms do not ship from a trunk, unofficial clients to national systems get WITHDRAWN by their maintainers, and a licence badge is not a licence. 🟢 Plus one methodological trend that governs this whole file: a search channel's nil and non-nil one pass apart are variance, not change.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing

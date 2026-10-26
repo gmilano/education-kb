@@ -1,0 +1,4310 @@
+{
+"0xnavarro/IA-PARA-TODOS": {
+"bytes": 11471,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "81fd0ede357d",
+"slug": "0xnavarro/IA-PARA-TODOS",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"122-syf-wcy/PhysicsOS": {
+"bytes": 11356,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f1a2e5fccede",
+"slug": "122-syf-wcy/PhysicsOS",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"1EdTech/lti-1-3-php-library": {
+"bytes": 11343,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "78b49eeaddbf",
+"slug": "1EdTech/lti-1-3-php-library",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"24kchengYe/human-skill-tree": {
+"bytes": 1134,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "3fb8cda58638",
+"slug": "24kchengYe/human-skill-tree",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"67tallchris/iep-builder": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "aa8cfde0dc31",
+"slug": "67tallchris/iep-builder",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"AI-Matrix-Engine/aidream": {
+"ref": null,
+"slug": "AI-Matrix-Engine/aidream",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"AI-for-Education/edu-qurating": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e6081fef4354",
+"slug": "AI-for-Education/edu-qurating",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Aaryan-Kapoor/d2l-cli": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4a3a6b184d9e",
+"slug": "Aaryan-Kapoor/d2l-cli",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"AbdelStark/eu-ai-act-toolkit": {
+"bytes": 1056,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "1126322e2cc8",
+"slug": "AbdelStark/eu-ai-act-toolkit",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Abelo9996/LearnOS": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4679aa0db6a3",
+"slug": "Abelo9996/LearnOS",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"AkariAsai/OpenScholar": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "AkariAsai/OpenScholar",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"AnkitClassicVision/tutor-engine": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0d96a4ff68ad",
+"slug": "AnkitClassicVision/tutor-engine",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"AnonymousOnyx22/brightspace-d2l-mcp": {
+"bytes": 1200,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c7f8d1452807",
+"slug": "AnonymousOnyx22/brightspace-d2l-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"AnonymousOnyx22/google-classroom-student-mcp": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ed912ca72d9e",
+"slug": "AnonymousOnyx22/google-classroom-student-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Apomera/AlloFlow": {
+"bytes": 35442,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "698099632698",
+"slug": "Apomera/AlloFlow",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"BaronCyrus/dsh-aha-tutor": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c83a57edd27c",
+"slug": "BaronCyrus/dsh-aha-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"BxnIceLemon/minerva-mcp": {
+"bytes": 741,
+"family": "ISC",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5d3787deebf3",
+"slug": "BxnIceLemon/minerva-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"CAHLR/OATutor": {
+"bytes": 1105,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5baaaf977a28",
+"slug": "CAHLR/OATutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"CAHLR/pyBKT": {
+"bytes": 1132,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "ad0c7a38bf01",
+"slug": "CAHLR/pyBKT",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"CENIA-DEV/multilingual-translator-app": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "CENIA-DEV/multilingual-translator-app",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"CarlSvejstrup/dtu-learn-mcp": {
+"bytes": 1079,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4f21e3f0f9fc",
+"slug": "CarlSvejstrup/dtu-learn-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Chloris-Blaxk/inno-agent-hub": {
+"ref": "main",
+"slug": "Chloris-Blaxk/inno-agent-hub",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Chocobozzz/PeerTube": {
+"bytes": 34520,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "develop",
+"sha256_12": "76a97c878c9c",
+"slug": "Chocobozzz/PeerTube",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Citolab/qti-convert": {
+"bytes": 35196,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f93eb1d94904",
+"slug": "Citolab/qti-convert",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Citolab/qti-convert-python": {
+"bytes": 35196,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f93eb1d94904",
+"slug": "Citolab/qti-convert-python",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ClassroomIO/ClassroomIO": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8486a10c4393",
+"slug": "ClassroomIO/ClassroomIO",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"CogitoNTNU/TutorAI": {
+"bytes": 1140,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c56df8d19cd5",
+"slug": "CogitoNTNU/TutorAI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Cristianojr9/sigaa-new-design": {
+"ref": "master",
+"slug": "Cristianojr9/sigaa-new-design",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Cvmcosta/ltijs": {
+"bytes": 11361,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "d5fcb264ff39",
+"slug": "Cvmcosta/ltijs",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"D4vRAM369/pbl-project-chronicler": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "95576ceceaa3",
+"slug": "D4vRAM369/pbl-project-chronicler",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"DFE-Digital/education-benchmarking-and-insights": {
+"bytes": 1091,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5a22fb5576a5",
+"slug": "DFE-Digital/education-benchmarking-and-insights",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"DFE-Digital/get-information-about-schools": {
+"bytes": 1116,
+"family": "MIT",
+"path": "LICENCE",
+"ref": "main",
+"sha256_12": "e18299fd1942",
+"slug": "DFE-Digital/get-information-about-schools",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"DFE-Digital/teaching-vacancies": {
+"bytes": 1092,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c561ea849ed6",
+"slug": "DFE-Digital/teaching-vacancies",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"DMontgomery40/mcp-canvas-lms": {
+"ref": "main",
+"slug": "DMontgomery40/mcp-canvas-lms",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Daniel-ux1026/Tutor-Inteligente": {
+"ref": "main",
+"slug": "Daniel-ux1026/Tutor-Inteligente",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"DannyWeitekamp/tutorenvs": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "eb1ef5e1a637",
+"slug": "DannyWeitekamp/tutorenvs",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Dathis/swiss-moodle-mcp": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "84e5d85f30e9",
+"slug": "Dathis/swiss-moodle-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"DavidLMS/learnmcp-xapi": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4aa758cb51b2",
+"slug": "DavidLMS/learnmcp-xapi",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Devanik21/AI-Nano-Course-Generator": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "1e4635354929",
+"slug": "Devanik21/AI-Nano-Course-Generator",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Devanik21/FluentFlow": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "1e4635354929",
+"slug": "Devanik21/FluentFlow",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Django-CRM/Django-CRM": {
+"bytes": 1101,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "293663d46bdc",
+"slug": "Django-CRM/Django-CRM",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"DozenTwelve/Papermorph": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "41857092247a",
+"slug": "DozenTwelve/Papermorph",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Ed-Fi-Alliance-OSS/Ed-Fi-ODS": {
+"bytes": 10172,
+"family": "Apache-2.0",
+"path": "LICENSE.txt",
+"ref": "main",
+"sha256_12": "59899c6091b5",
+"slug": "Ed-Fi-Alliance-OSS/Ed-Fi-ODS",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation": {
+"bytes": 10173,
+"family": "Apache-2.0",
+"path": "LICENSE.txt",
+"ref": "main",
+"sha256_12": "a6cba85bc92e",
+"slug": "Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Ed-Fi-Alliance-OSS/edfi-oneroster": {
+"bytes": 10173,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a6cba85bc92e",
+"slug": "Ed-Fi-Alliance-OSS/edfi-oneroster",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Ed-Fi-Exchange-OSS/LMS-Toolkit": {
+"bytes": 10141,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "cc4d4de0920b",
+"slug": "Ed-Fi-Exchange-OSS/LMS-Toolkit",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"EleutherAI/lm-evaluation-harness": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "a806e4254762",
+"slug": "EleutherAI/lm-evaluation-harness",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"FXArth/Tutor-Programacao": {
+"ref": "main",
+"slug": "FXArth/Tutor-Programacao",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"FiredMosquito831/ase-moodle-mcp": {
+"bytes": 11358,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "cfc7749b96f6",
+"slug": "FiredMosquito831/ase-moodle-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Fireiscoolsolo/canvas-lms-mcp-local": {
+"bytes": 1091,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "86321f3ea183",
+"slug": "Fireiscoolsolo/canvas-lms-mcp-local",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Fireiscoolsolo/canvas-lms-mcp-server": {
+"bytes": 1091,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "86321f3ea183",
+"slug": "Fireiscoolsolo/canvas-lms-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Future-House/paper-qa": {
+"bytes": 11341,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a10f591e3522",
+"slug": "Future-House/paper-qa",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"G3-Devs/siu-auto-asistencia": {
+"ref": "main",
+"slug": "G3-Devs/siu-auto-asistencia",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"GarethManning/education-agent-skills": {
+"bytes": 1230,
+"family": "CC",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f952182df4eb",
+"slug": "GarethManning/education-agent-skills",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"GeminiLight/awesome-ai-llm4education": {
+"ref": "main",
+"slug": "GeminiLight/awesome-ai-llm4education",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"GeovaneSchmitz/sigaa-api": {
+"bytes": 1108,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "ecb193695a94",
+"slug": "GeovaneSchmitz/sigaa-api",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"GibbonEdu/core": {
+"bytes": 35121,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "v31.0.00",
+"sha256_12": "93178a43d6d3",
+"slug": "GibbonEdu/core",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Git-Kaushal/AI-Teacher-Training": {
+"bytes": 2100,
+"family": "CC",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "bff1c2669c03",
+"slug": "Git-Kaushal/AI-Teacher-Training",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"GuilhermeScarpini/agente-bncc-professores": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2121152fdef1",
+"slug": "GuilhermeScarpini/agente-bncc-professores",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"HKUDS/DeepTutor": {
+"bytes": 11408,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "cd2f54e1e506",
+"slug": "HKUDS/DeepTutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Harikeshav-R/canvas-mcp": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5385a26e2fac",
+"slug": "Harikeshav-R/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Harvard-University-iCommons/django-lti-dynamic-registration": {
+"bytes": 1100,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "1ade29a33914",
+"slug": "Harvard-University-iCommons/django-lti-dynamic-registration",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Hiepler/EuConform": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "65335056589f",
+"slug": "Hiepler/EuConform",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"HugeCatLab/ChatTutor": {
+"bytes": 34522,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "20b067f86de3",
+"slug": "HugeCatLab/ChatTutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"IFRN/suapi": {
+"ref": "master",
+"slug": "IFRN/suapi",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"ILIAS-eLearning/ILIAS": {
+"bytes": 35147,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "release_11",
+"sha256_12": "8ceb4b9ee5ad",
+"slug": "ILIAS-eLearning/ILIAS",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"IMSGlobal/lti-1-3-php-library": {
+"bytes": 11343,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "78b49eeaddbf",
+"slug": "IMSGlobal/lti-1-3-php-library",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"InCruiter-NewProducts/proctoring-sdk": {
+"ref": null,
+"slug": "InCruiter-NewProducts/proctoring-sdk",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"Jacob-Met/canvaspilot": {
+"bytes": 1075,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "85144488dcaf",
+"slug": "Jacob-Met/canvaspilot",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Jawadh-Salih/moodle-mcp-server": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2cf91ec5272f",
+"slug": "Jawadh-Salih/moodle-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Jeanikt/tutor-ai-agent": {
+"bytes": 1103,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "fb865cf5738d",
+"slug": "Jeanikt/tutor-ai-agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"JhostinAleck/brightspace-mcp": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "008ec594c78e",
+"slug": "JhostinAleck/brightspace-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Kennisnet/php-qti3": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "27fb6d463569",
+"slug": "Kennisnet/php-qti3",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Keule0010/WebUntisAPI": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e29c116f5d80",
+"slug": "Keule0010/WebUntisAPI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Kretiandpleti/skola-24-haos-integration": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8b34b498bb1f",
+"slug": "Kretiandpleti/skola-24-haos-integration",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Kuria-Mbatia/Canvas-MCP-server": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "fd34175ea8f9",
+"slug": "Kuria-Mbatia/Canvas-MCP-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"LabSirius/TutorIA": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "346d7b5d3913",
+"slug": "LabSirius/TutorIA",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Li-Evan/Bloom": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7d574cf3632e",
+"slug": "Li-Evan/Bloom",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Loganxgreaves/blackboard-mcp": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "d492af3af080",
+"slug": "Loganxgreaves/blackboard-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"LongsightGroup/qti3": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "00ed05b90bf8",
+"slug": "LongsightGroup/qti3",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Mattlo0546/blackboard-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "13c8ad755224",
+"slug": "Mattlo0546/blackboard-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Mattlo0546/canvas-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "13c8ad755224",
+"slug": "Mattlo0546/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Mattlo0546/classroom-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "13c8ad755224",
+"slug": "Mattlo0546/classroom-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"MauroDruwel/Smartschool-MCP": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b414ff32815f",
+"slug": "MauroDruwel/Smartschool-MCP",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Mckaroff/GraphLMS": {
+"ref": null,
+"slug": "Mckaroff/GraphLMS",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"Mcp-Brasil/mcp-brasil": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "eaf38a4975eb",
+"slug": "Mcp-Brasil/mcp-brasil",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Miaotofu01/Study-Mate": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "dc1997d82189",
+"slug": "Miaotofu01/Study-Mate",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Mugen-Ibi/Classroom-MCP": {
+"bytes": 1081,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b77185922cd4",
+"slug": "Mugen-Ibi/Classroom-MCP",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"MysterionRise/adaptive-knowledge-graph": {
+"bytes": 1094,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2c4797226a30",
+"slug": "MysterionRise/adaptive-knowledge-graph",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Naitik-xd/CurriculumCraft-AI": {
+"bytes": 1091,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "d826e01acb5e",
+"slug": "Naitik-xd/CurriculumCraft-AI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"NelsonSpencer/canvas-mcp": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5385a26e2fac",
+"slug": "NelsonSpencer/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Nutlope/llamatutor": {
+"ref": "main",
+"slug": "Nutlope/llamatutor",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"OS4ED/openSIS-Classic": {
+"ref": "master",
+"slug": "OS4ED/openSIS-Classic",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Open-Source-eUdeC/UdeCursos-bot": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "198619b5e4a3",
+"slug": "Open-Source-eUdeC/UdeCursos-bot",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Open-TutorAi/open-tutor-ai-CE": {
+"bytes": 1531,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "57c341d09920",
+"slug": "Open-TutorAi/open-tutor-ai-CE",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"OpenOLAT/OpenOLAT": {
+"bytes": 10982,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "6dbc5b605ed0",
+"slug": "OpenOLAT/OpenOLAT",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"OpenOLAT/qtiworks": {
+"bytes": 2058,
+"family": "BSD-3-Clause",
+"path": "LICENSE.txt",
+"ref": "master",
+"sha256_12": "a5c692f12090",
+"slug": "OpenOLAT/qtiworks",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"PeerTube/PeerTube": {
+"bytes": 35141,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "589ed823e9a8",
+"slug": "PeerTube/PeerTube",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Poki-cbq/inno-agent": {
+"bytes": 1080,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f92c6c6a1cc8",
+"slug": "Poki-cbq/inno-agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"PrahanG/Google-Classroom-MCP": {
+"bytes": 1060,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f06ff8fa5a6c",
+"slug": "PrahanG/Google-Classroom-MCP",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Priyamakeshwari/TeachGPT": {
+"bytes": 1057,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "0696feb7158c",
+"slug": "Priyamakeshwari/TeachGPT",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Projeto-SIAC/suap-wrapper": {
+"bytes": 1061,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "7d6794d36990",
+"slug": "Projeto-SIAC/suap-wrapper",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"PucaVaz/sigaa-tools": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "75d9af3e2e90",
+"slug": "PucaVaz/sigaa-tools",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"QuantStack/jupyter-ai-tutor": {
+"bytes": 1532,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ccaa70decf0d",
+"slug": "QuantStack/jupyter-ai-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"RobertLMcCrary/D2L-MCP": {
+"bytes": 2181,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "afdae807b865",
+"slug": "RobertLMcCrary/D2L-MCP",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"RohanMuppa/brightspace-mcp-server": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "047079fbd491",
+"slug": "RohanMuppa/brightspace-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"RusticiSoftware/TinCanPython": {
+"bytes": 11358,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "3.x",
+"sha256_12": "cfc7749b96f6",
+"slug": "RusticiSoftware/TinCanPython",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Ryfter/canvas-toolchain": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "39e9d2b9aeea",
+"slug": "Ryfter/canvas-toolchain",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"SaadRahman01/moodle-mcp": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "df0b3e71710c",
+"slug": "SaadRahman01/moodle-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Scaler-Opensource/exam-guard": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "Scaler-Opensource/exam-guard",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"SchoolUtils/WebUntis": {
+"ref": "master",
+"slug": "SchoolUtils/WebUntis",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Seechange-edu/act-ai-tutor-backend": {
+"ref": "main",
+"slug": "Seechange-edu/act-ai-tutor-backend",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Selleo/mentingo": {
+"bytes": 1062,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ceb97717de1f",
+"slug": "Selleo/mentingo",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"SenmuuuuW/dsh-diagnostic-tutor": {
+"bytes": 1090,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6d6319152a02",
+"slug": "SenmuuuuW/dsh-diagnostic-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"SenmuuuuW/universal-diagnostic-tutor-skill": {
+"bytes": 1102,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a9ca00bcc7a5",
+"slug": "SenmuuuuW/universal-diagnostic-tutor-skill",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Shashwatpog/poke-canvas-mcp": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b60d2cd596b7",
+"slug": "Shashwatpog/poke-canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Shiv-D-Coder/google-mcp-agent": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2deff4ab7dff",
+"slug": "Shiv-D-Coder/google-mcp-agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ShowayLiao/Engineering-Exam-AI-Tutor": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "ShowayLiao/Engineering-Exam-AI-Tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Simon-Initiative/oli-torus": {
+"bytes": 1083,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "master",
+"sha256_12": "696205cef189",
+"slug": "Simon-Initiative/oli-torus",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Snaw80/moodle-mcp": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b2bb31ce9d90",
+"slug": "Snaw80/moodle-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Submitty/Submitty": {
+"bytes": 1542,
+"family": "BSD-3-Clause",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "c123708cb4ef",
+"slug": "Submitty/Submitty",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Suiram1701/WebUntisAPI.Client": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE.txt",
+"ref": "master",
+"sha256_12": "8b7a2e8d023e",
+"slug": "Suiram1701/WebUntisAPI.Client",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Sunbird-Ed/SunbirdEd-mobile-app": {
+"bytes": 1078,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "bea3458f45df",
+"slug": "Sunbird-Ed/SunbirdEd-mobile-app",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Sunbird-Ed/SunbirdEd-portal": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "7dde06716f25",
+"slug": "Sunbird-Ed/SunbirdEd-portal",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"SuperPiTT/moodle-rag": {
+"bytes": 1094,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "75f0c034caea",
+"slug": "SuperPiTT/moodle-rag",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"THU-MAIC/OpenMAIC": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ba2525637432",
+"slug": "THU-MAIC/OpenMAIC",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Teachable-AI-Lab/tutor_gym": {
+"bytes": 1099,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8a0a4ba421a0",
+"slug": "Teachable-AI-Lab/tutor_gym",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Teachable-AI-Lab/tutorenv": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "eb1ef5e1a637",
+"slug": "Teachable-AI-Lab/tutorenv",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"TecFancy/dsh-deeptutor": {
+"ref": "main",
+"slug": "TecFancy/dsh-deeptutor",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"Teci-AI/moodle-mcp-connector": {
+"bytes": 1103,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c8bcb50d415c",
+"slug": "Teci-AI/moodle-mcp-connector",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"The-Morrow-Project/Morrow-Bridge": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f37f80963047",
+"slug": "The-Morrow-Project/Morrow-Bridge",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"TovTechOrg/Tov-learn": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "092d389ac156",
+"slug": "TovTechOrg/Tov-learn",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"TricksterGuy/complx": {
+"bytes": 32422,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "963392e038d7",
+"slug": "TricksterGuy/complx",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Tynobi-Company/webuntis_headless": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2b7c9c3fffa3",
+"slug": "Tynobi-Company/webuntis_headless",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"UCL-INGI/INGInious": {
+"bytes": 34764,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6d1ebe4ddf66",
+"slug": "UCL-INGI/INGInious",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"UKplus8HRS/bb-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "02049138f239",
+"slug": "UKplus8HRS/bb-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"UOC/java-lti-1.3-core": {
+"bytes": 1060,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "b6b29f11f74e",
+"slug": "UOC/java-lti-1.3-core",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Unstructured-IO/unstructured": {
+"bytes": 11360,
+"family": "Apache-2.0",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "4b190a3ffeb6",
+"slug": "Unstructured-IO/unstructured",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"UrbanInstitute/ipeds-scraper": {
+"bytes": 1058,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "master",
+"sha256_12": "bac93c5411aa",
+"slug": "UrbanInstitute/ipeds-scraper",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Utdanningsdirektoratet/PAS2-Public": {
+"bytes": 11325,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "cb5e8e7e5f4a",
+"slug": "Utdanningsdirektoratet/PAS2-Public",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"Weichenleeeee123/oh-my-chinese-teacher": {
+"bytes": 1091,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "d1e0c4117d88",
+"slug": "Weichenleeeee123/oh-my-chinese-teacher",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"X-RayLuan/Openclaw-Study-Coach": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b48efd882d37",
+"slug": "X-RayLuan/Openclaw-Study-Coach",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ZeKaiNie/universal-examprep-skill": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "21f44893f051",
+"slug": "ZeKaiNie/universal-examprep-skill",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"a-ariff/canvas-mcp": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "040d00e3cf79",
+"slug": "a-ariff/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"a2br/ecoledirecte.js": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e4ba09041791",
+"slug": "a2br/ecoledirecte.js",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"abdulrdeveloper/klar-AI": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2351980f79fd",
+"slug": "abdulrdeveloper/klar-AI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"academic-innovation/django-lti": {
+"bytes": 1098,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c24a6b35e390",
+"slug": "academic-innovation/django-lti",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"academico-sis/academico": {
+"bytes": 1094,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6051a15f4d44",
+"slug": "academico-sis/academico",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"adereksisusanto/dapodik-api-php": {
+"bytes": 1105,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "ce39902853af",
+"slug": "adereksisusanto/dapodik-api-php",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ai-shifu/ai-shifu": {
+"bytes": 11342,
+"family": "Apache-2.0",
+"path": "LICENSE.txt",
+"ref": "main",
+"sha256_12": "c00cbb6a47a7",
+"slug": "ai-shifu/ai-shifu",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"aivangogh/ph-address": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENCE",
+"ref": "main",
+"sha256_12": "71973c5f874a",
+"slug": "aivangogh/ph-address",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"alanwtom/blackboard-mcp": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "87e2de769b52",
+"slug": "alanwtom/blackboard-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ale-alejandro/beadkit": {
+"ref": null,
+"slug": "ale-alejandro/beadkit",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"allenai/ai2-scholarqa-lib": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "allenai/ai2-scholarqa-lib",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"allenai/olmocr": {
+"bytes": 11359,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "62fb8a3a9621",
+"slug": "allenai/olmocr",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"amp-up-io/qti3-item-player": {
+"bytes": 1076,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7faa621251d7",
+"slug": "amp-up-io/qti3-item-player",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"anastasasenov/bbmcps": {
+"ref": "main",
+"slug": "anastasasenov/bbmcps",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"andres-tovar-purdue/ai-grader": {
+"ref": "main",
+"slug": "andres-tovar-purdue/ai-grader",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"androz2091/node-ecole-directe": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "c71d239df917",
+"slug": "androz2091/node-ecole-directe",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"angelonrevelo/bettercanvasmcp": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "fe401a64566c",
+"slug": "angelonrevelo/bettercanvasmcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ankimcp/anki-mcp-server": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0ef87fdb98da",
+"slug": "ankimcp/anki-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ankitects/anki": {
+"bytes": 1930,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "bde7d05790a0",
+"slug": "ankitects/anki",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"anthonygacis/psgc-js": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c2e62c9400d9",
+"slug": "anthonygacis/psgc-js",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"anthropics/k12-teacher-skills": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "58d1e17ffe51",
+"slug": "anthropics/k12-teacher-skills",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"apache/ofbiz": {
+"bytes": 13759,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "trunk",
+"sha256_12": "67f568adde92",
+"slug": "apache/ofbiz",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"apache/ofbiz-framework": {
+"bytes": 11906,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "trunk",
+"sha256_12": "cbac9a0fde05",
+"slug": "apache/ofbiz-framework",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"appliedrelevance/frappe_mcp_server": {
+"ref": null,
+"slug": "appliedrelevance/frappe_mcp_server",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"aquario-ufpb/aquario": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ca675f365799",
+"slug": "aquario-ufpb/aquario",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ardianryan/dapodik-sdk": {
+"bytes": 1739,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "29e7d361ee3d",
+"slug": "ardianryan/dapodik-sdk",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ark-forge/mcp-eu-ai-act": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "002af8f9b59c",
+"slug": "ark-forge/mcp-eu-ai-act",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"arnim279/untis-api-client": {
+"bytes": 35562,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "72d2f09334f8",
+"slug": "arnim279/untis-api-client",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"arthtyagi/judge": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "08cf22015d03",
+"slug": "arthtyagi/judge",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"arthurcuri/mcp-instructure-canvas": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "161c1c8666c3",
+"slug": "arthurcuri/mcp-instructure-canvas",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"arvoreeducacao/seedling": {
+"bytes": 11358,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "cfc7749b96f6",
+"slug": "arvoreeducacao/seedling",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"asherlc/dofek": {
+"bytes": 1125,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3307cb042fcc",
+"slug": "asherlc/dofek",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ashishpatel26/500-AI-Agents-Projects": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2108a479cb7f",
+"slug": "ashishpatel26/500-AI-Agents-Projects",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ashleycribb/learnmcp-xapi": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4aa758cb51b2",
+"slug": "ashleycribb/learnmcp-xapi",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"assafelovic/gpt-researcher": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "assafelovic/gpt-researcher",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"assafkip/claudemy": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "262b47ee1fff",
+"slug": "assafkip/claudemy",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"astiusa/lti": {
+"bytes": 1108,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6e58273960b0",
+"slug": "astiusa/lti",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"aswanth9495/exam-guard": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "aswanth9495/exam-guard",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"aulasneo/tutor-contrib-let": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE.txt",
+"ref": "main",
+"sha256_12": "debf08813eec",
+"slug": "aulasneo/tutor-contrib-let",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"aureuserp/aureuserp": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "c6dca3b0db5b",
+"slug": "aureuserp/aureuserp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bain3/pronotepy": {
+"bytes": 1062,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "4f074ab7dccb",
+"slug": "bain3/pronotepy",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"baker-jr-john/automated-summary-evaluation-llm": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "12ccba5ca428",
+"slug": "baker-jr-john/automated-summary-evaluation-llm",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bantenprov/dapodik-data-guru": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "3508ba25c5ad",
+"slug": "bantenprov/dapodik-data-guru",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"barglabs/cejel": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0d96a4ff68ad",
+"slug": "barglabs/cejel",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bigbluebutton/bigbluebutton": {
+"bytes": 7652,
+"family": "LGPL-3.0",
+"path": "LICENSE",
+"ref": "v4.0.x-develop",
+"sha256_12": "e3a994d82e64",
+"slug": "bigbluebutton/bigbluebutton",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"blend-ed/openedx-mcp": {
+"bytes": 34524,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "8d56b405468a",
+"slug": "blend-ed/openedx-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"blend-ed/tutor-contrib-openedxmcp": {
+"bytes": 34524,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "8d56b405468a",
+"slug": "blend-ed/tutor-contrib-openedxmcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bmosoluciones/now-lms": {
+"bytes": 10915,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a9c4042d767d",
+"slug": "bmosoluciones/now-lms",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bncc-dev/bncc-dados": {
+"bytes": 1092,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e162f8f4b461",
+"slug": "bncc-dev/bncc-dados",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bncc-dev/bncc-pacotes": {
+"bytes": 1299,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "86bf5f5e6306",
+"slug": "bncc-dev/bncc-pacotes",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bolewood/collegedata-fyi": {
+"bytes": 1115,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a3a16c648652",
+"slug": "bolewood/collegedata-fyi",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bq-educacion/editor": {
+"bytes": 1084,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2a3b698d8ae8",
+"slug": "bq-educacion/editor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"braiinz94/braiinz-education": {
+"bytes": 11356,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "eee6f26f94bb",
+"slug": "braiinz94/braiinz-education",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"briannajzhang/personal-tutor": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "briannajzhang/personal-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bruchris/canvas-lms-mcp": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c29329c5ef3b",
+"slug": "bruchris/canvas-lms-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"bycs-lp/moodle-block_ai_chat": {
+"ref": "main",
+"slug": "bycs-lp/moodle-block_ai_chat",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"bycs-lp/moodle-local_ai_manager": {
+"ref": "main",
+"slug": "bycs-lp/moodle-local_ai_manager",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"cabbage2000-lab/textbook-writer-skills": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0d5a33d13ca9",
+"slug": "cabbage2000-lab/textbook-writer-skills",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"caleb-media-studio/canvas-mcp": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e7b1808c2ef8",
+"slug": "caleb-media-studio/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"canyrtcn/PractiSQL": {
+"bytes": 1079,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c03af9304b8b",
+"slug": "canyrtcn/PractiSQL",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"chamilo/chamilo-lms": {
+"bytes": 35147,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "8ceb4b9ee5ad",
+"slug": "chamilo/chamilo-lms",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"charlie2233/coursebinder-ai-ready-google-classroom-exporter": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7f208bdb3cc4",
+"slug": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"chenning42/iserv-mcp": {
+"bytes": 1090,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5dc99bd5061f",
+"slug": "chenning42/iserv-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"chrischall/canvas-parent-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "17dd00098383",
+"slug": "chrischall/canvas-parent-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"chrischall/infinitecampus-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "17dd00098383",
+"slug": "chrischall/infinitecampus-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ckeditor/ckeditor5": {
+"bytes": 170,
+"family": "UNCLASSIFIED",
+"path": "LICENSE.md",
+"ref": "master",
+"sha256_12": "6226a1b6b05e",
+"slug": "ckeditor/ckeditor5",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"cran/TAM": {
+"ref": "master",
+"slug": "cran/TAM",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"cran/catR": {
+"ref": "master",
+"slug": "cran/catR",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"cran/exams": {
+"ref": "master",
+"slug": "cran/exams",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"crewAIInc/crewAI": {
+"bytes": 1055,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "28868731966f",
+"slug": "crewAIInc/crewAI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"csmediapro/moodle-mcp-server": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0d96a4ff68ad",
+"slug": "csmediapro/moodle-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"danieltyukov/tudelft-mcp": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "41160f273317",
+"slug": "danieltyukov/tudelft-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"danny-avila/LibreChat": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "1ce5c9d51e5a",
+"slug": "danny-avila/LibreChat",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"datakind/student-success-tool": {
+"bytes": 1080,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "develop",
+"sha256_12": "04c23f1c41cd",
+"slug": "datakind/student-success-tool",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"davepacheco/node-extsprintf": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "5626c1e21f73",
+"slug": "davepacheco/node-extsprintf",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"deedy/cbse_schools_data": {
+"bytes": 20131,
+"family": "CC",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "1f5de47ca3fb",
+"slug": "deedy/cbse_schools_data",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"dev-cucei-itrans/siiau-api-client": {
+"ref": null,
+"slug": "dev-cucei-itrans/siiau-api-client",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"digitalcredentials/vc": {
+"bytes": 1525,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4f0d287e80be",
+"slug": "digitalcredentials/vc",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"django-by-kelsoncm/django-auth-suap": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "113d1a85e628",
+"slug": "django-by-kelsoncm/django-auth-suap",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"dmitry-viskov/pylti1.3": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "5aef77eb4471",
+"slug": "dmitry-viskov/pylti1.3",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"dmontgomery40/mcp-canvas-lms": {
+"ref": "main",
+"slug": "dmontgomery40/mcp-canvas-lms",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"dmoshehun-prog/learn-from-materials": {
+"bytes": 1122,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "15ce43afa44a",
+"slug": "dmoshehun-prog/learn-from-materials",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"docling-project/docling": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "edb765d1e3e6",
+"slug": "docling-project/docling",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"dodona-edu/dolos": {
+"bytes": 1084,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "881163366572",
+"slug": "dodona-edu/dolos",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"dougdevitre/access-to-education": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "fc7c8b90fee1",
+"slug": "dougdevitre/access-to-education",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"dougj892/public-datasets": {
+"ref": "master",
+"slug": "dougj892/public-datasets",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"drop-project-edu/java-lti-1.3-core-for-dp": {
+"bytes": 1060,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "b6b29f11f74e",
+"slug": "drop-project-edu/java-lti-1.3-core-for-dp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"e9x/blackboard-mcp": {
+"ref": null,
+"slug": "e9x/blackboard-mcp",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"eakarsu/ai-special-education-iep-compliance": {
+"ref": "main",
+"slug": "eakarsu/ai-special-education-iep-compliance",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"edanalytics/edfi_api_client": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "edanalytics/edfi_api_client",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"edly-io/h5pxblock": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "4d17b43eb718",
+"slug": "edly-io/h5pxblock",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"edu-sharing/Edu-Sharing": {
+"bytes": 35148,
+"family": "GPL-3.0",
+"path": "LICENSE.txt",
+"ref": "maven/fixes/10.0",
+"sha256_12": "8b1ba204bb69",
+"slug": "edu-sharing/Edu-Sharing",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"edulinq/autograder-py": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7eb48830c022",
+"slug": "edulinq/autograder-py",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ehtsmulhq/ArabicTutorRAG": {
+"ref": "main",
+"slug": "ehtsmulhq/ArabicTutorRAG",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"elderguardian/maria": {
+"bytes": 35149,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3972dc9744f6",
+"slug": "elderguardian/maria",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ernestosrf/sigaa-horarios-extension": {
+"ref": "main",
+"slug": "ernestosrf/sigaa-horarios-extension",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"eth-lre/MathTutorBench": {
+"ref": "main",
+"slug": "eth-lre/MathTutorBench",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"eugeniughelbur/doceo": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "94b7323d4984",
+"slug": "eugeniughelbur/doceo",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"exelearning/exelearning": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0d96a4ff68ad",
+"slug": "exelearning/exelearning",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ezixen/PlannedEducation": {
+"bytes": 1086,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "dev",
+"sha256_12": "53de23fdecc2",
+"slug": "ezixen/PlannedEducation",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"faizan45640/google-classroom-mcp-server": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c60c95242947",
+"slug": "faizan45640/google-classroom-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"falkenslab/moodle-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "66fa873bd85d",
+"slug": "falkenslab/moodle-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"fangyuan-3149/book-learning-tutor": {
+"bytes": 1503,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "54ceeac19921",
+"slug": "fangyuan-3149/book-learning-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"felipedias-ie/blackboard-mcp": {
+"bytes": 1084,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "d65abf96e389",
+"slug": "felipedias-ie/blackboard-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"fernandobrito/cursos_ufpb": {
+"bytes": 35141,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "589ed823e9a8",
+"slug": "fernandobrito/cursos_ufpb",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"fernandobrito/ufpb_sigaa_api_old": {
+"bytes": 35141,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "589ed823e9a8",
+"slug": "fernandobrito/ufpb_sigaa_api_old",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"flysheep-ai/education-skills": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "23b91d7c0aef",
+"slug": "flysheep-ai/education-skills",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"food-x-technologies/escolar": {
+"bytes": 1075,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3b443e863252",
+"slug": "food-x-technologies/escolar",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"francoisjacquet/rosariosis": {
+"bytes": 15214,
+"family": "GPL-2.0",
+"path": "LICENSE",
+"ref": "mobile",
+"sha256_12": "d954e14e5c75",
+"slug": "francoisjacquet/rosariosis",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"frappe/erpnext": {
+"ref": "develop",
+"slug": "frappe/erpnext",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"frappe/lms": {
+"ref": "develop",
+"slug": "frappe/lms",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"gabotachak/sia-unal-bridge": {
+"bytes": 1085,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7521387e0869",
+"slug": "gabotachak/sia-unal-bridge",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"gafapa/moodlia-cli": {
+"bytes": 284,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "427bf0128d41",
+"slug": "gafapa/moodlia-cli",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"general-mudkip/d2l-mcp-server": {
+"ref": "main",
+"slug": "general-mudkip/d2l-mcp-server",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"gmilano/this-repository-does-not-exist-p457": {
+"ref": null,
+"slug": "gmilano/this-repository-does-not-exist-p457",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"gradescope/autograder_samples": {
+"ref": "master",
+"slug": "gradescope/autograder_samples",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"gradescope/gradescope-utils": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "1fa57a15a75b",
+"slug": "gradescope/gradescope-utils",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"grasped-dev/staircase": {
+"ref": "main",
+"slug": "grasped-dev/staircase",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"h5p/h5p-php-library": {
+"bytes": 35146,
+"family": "GPL-3.0",
+"path": "LICENSE.txt",
+"ref": "master",
+"sha256_12": "c53a65c2fd56",
+"slug": "h5p/h5p-php-library",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"hendrycks/test": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "5d841b9eee8b",
+"slug": "hendrycks/test",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"henriquebotelhogomes/educacao": {
+"ref": "master",
+"slug": "henriquebotelhogomes/educacao",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"hhyqhh/inno-agent": {
+"bytes": 1080,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f92c6c6a1cc8",
+"slug": "hhyqhh/inno-agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"huggingface/agents-course": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "huggingface/agents-course",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"huggingface/smolagents": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "huggingface/smolagents",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"hyunbinseo/neis-school-info": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e82e1769aaaf",
+"slug": "hyunbinseo/neis-school-info",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"imazhar101/mcp-canvas-server": {
+"ref": null,
+"slug": "imazhar101/mcp-canvas-server",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"inducer/relate": {
+"bytes": 1145,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "66ff89ebf05f",
+"slug": "inducer/relate",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"infiniflow/ragflow": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "infiniflow/ragflow",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"instructure/canvas-lms": {
+"bytes": 34520,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "57c8ff33c9c0",
+"slug": "instructure/canvas-lms",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"instructure/ims-lti": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE.txt",
+"ref": "main",
+"sha256_12": "f7e95fbe6fa9",
+"slug": "instructure/ims-lti",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"intellectif/learning-kit": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ff3ce4617079",
+"slug": "intellectif/learning-kit",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"interop-alliance/verifier-core": {
+"bytes": 1087,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "6e7a616c4d70",
+"slug": "interop-alliance/verifier-core",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ipti/br.tag": {
+"bytes": 18027,
+"family": "GPL-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "111e1f411730",
+"slug": "ipti/br.tag",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ivmelo/suap-api-php": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "8dd4b842ad4d",
+"slug": "ivmelo/suap-api-php",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ivmelo/suapbot": {
+"bytes": 34520,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "76a97c878c9c",
+"slug": "ivmelo/suapbot",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jagmarques/awesome-eu-ai-act": {
+"bytes": 7049,
+"family": "CC",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7179683e8000",
+"slug": "jagmarques/awesome-eu-ai-act",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jarodise/Language-Transfer": {
+"ref": "main",
+"slug": "jarodise/Language-Transfer",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada": {
+"bytes": 1262,
+"family": "UNCLASSIFIED",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "33a3bb8713ec",
+"slug": "jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jhudsl/ottrpal": {
+"bytes": 34891,
+"family": "GPL-3.0",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "9e63ba22c808",
+"slug": "jhudsl/ottrpal",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jibberswrld/fcps-school-mcp": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "cd9e736254f8",
+"slug": "jibberswrld/fcps-school-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jibrilsettles-dot/Arabic-Tutor": {
+"ref": "claude/eager-newton-boy1g0",
+"slug": "jibrilsettles-dot/Arabic-Tutor",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"jobuntux/psgc": {
+"bytes": 1086,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3890207c9a07",
+"slug": "jobuntux/psgc",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jpmanson/siu-guarani-mcp": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "53d0fa710f43",
+"slug": "jpmanson/siu-guarani-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"juan-c-cardenas/sia-scraper": {
+"bytes": 1085,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "ca571ae2faa5",
+"slug": "juan-c-cardenas/sia-scraper",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"juliancasaburi/siu-guarani-promedio-extension": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "652d46c067d4",
+"slug": "juliancasaburi/siu-guarani-promedio-extension",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"junit-team/junit4": {
+"ref": "main",
+"slug": "junit-team/junit4",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"jupyter/nbgrader": {
+"bytes": 1512,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3a83d5b8e22c",
+"slug": "jupyter/nbgrader",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jupyterhub/jupyterhub": {
+"bytes": 1475,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7069c7e8d60e",
+"slug": "jupyterhub/jupyterhub",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jupyterhub/ltiauthenticator": {
+"bytes": 1528,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "08eebd9662cb",
+"slug": "jupyterhub/ltiauthenticator",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jupyterlab/jupyter-ai": {
+"bytes": 1516,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a0be5735cdce",
+"slug": "jupyterlab/jupyter-ai",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"jupyterlite/jupyterlite": {
+"bytes": 1525,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "574f8a9cab1e",
+"slug": "jupyterlite/jupyterlite",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"karanb192/algo-sensei": {
+"bytes": 1081,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3b2ca73e81ad",
+"slug": "karanb192/algo-sensei",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"kaushikgunasekaren/canvas-grader-mcp": {
+"bytes": 1076,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2bcdae923d26",
+"slug": "kaushikgunasekaren/canvas-grader-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"kazoya/build-your-own-agent-ar": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "56cb0b0673b0",
+"slug": "kazoya/build-your-own-agent-ar",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"kit-sdq/autograder": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "30a0bc0d48b4",
+"slug": "kit-sdq/autograder",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"krayin/laravel-crm": {
+"bytes": 1078,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "2.2",
+"sha256_12": "a76aa4a4405c",
+"slug": "krayin/laravel-crm",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"krzysztofbury/librus-mcp": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "22e7ab2dbddc",
+"slug": "krzysztofbury/librus-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"krzysztofbury/librus-python-api": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "22e7ab2dbddc",
+"slug": "krzysztofbury/librus-python-api",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"kurwjan/LanisAPI": {
+"ref": "deprecation-notice",
+"slug": "kurwjan/LanisAPI",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"lanis-mobile/LanisAPI": {
+"ref": "deprecation-notice",
+"slug": "lanis-mobile/LanisAPI",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"lanis-mobile/lanis-rs": {
+"bytes": 35149,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "3972dc9744f6",
+"slug": "lanis-mobile/lanis-rs",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"lanis-mobile/liblanis-for-python": {
+"bytes": 1079,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "66f943b0689f",
+"slug": "lanis-mobile/liblanis-for-python",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"laurauguc/grading_assistant": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3b21045edbad",
+"slug": "laurauguc/grading_assistant",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"lbhubedu/lbedu.me": {
+"bytes": 2118,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "18272c548223",
+"slug": "lbhubedu/lbedu.me",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"learnhouse/learnhouse": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "dev",
+"sha256_12": "8486a10c4393",
+"slug": "learnhouse/learnhouse",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"learningequality/kolibri": {
+"bytes": 1097,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "develop",
+"sha256_12": "3c056b34a476",
+"slug": "learningequality/kolibri",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"learnram/ads-schools-data": {
+"ref": "main",
+"slug": "learnram/ads-schools-data",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"lecrix/netem-ai-predictor": {
+"bytes": 1075,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "04a5cd187b32",
+"slug": "lecrix/netem-ai-predictor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"littlecookie0722/AI-Teaching-Agent": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "297c4cba7b33",
+"slug": "littlecookie0722/AI-Teaching-Agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"liuliu667/cram-engine": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c33ea68946e4",
+"slug": "liuliu667/cram-engine",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"liunor/nlp-agent": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ef01967408a8",
+"slug": "liunor/nlp-agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"livekit/agents": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "livekit/agents",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"lmgveerhoek/brightspace-mcp-server": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "047079fbd491",
+"slug": "lmgveerhoek/brightspace-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"lmscloud-io/moodle-mcp-server": {
+"bytes": 35148,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8b1ba204bb69",
+"slug": "lmscloud-io/moodle-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"louislegrain/api-ecoledirecte": {
+"ref": "master",
+"slug": "louislegrain/api-ecoledirecte",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"lowellran/Study_via_AI": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8f0b227698a5",
+"slug": "lowellran/Study_via_AI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"loyaniu/moodle-mcp": {
+"ref": "main",
+"slug": "loyaniu/moodle-mcp",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"ls1intum/edutelligence": {
+"bytes": 1091,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6b9b9eda00d6",
+"slug": "ls1intum/edutelligence",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"lti-tool/lti-tool": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "25628bd9222b",
+"slug": "lti-tool/lti-tool",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"luizpicolo/code": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE.txt",
+"ref": "master",
+"sha256_12": "a2874113b3b5",
+"slug": "luizpicolo/code",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"luizpicolo/suap_api": {
+"bytes": 1078,
+"family": "MIT",
+"path": "LICENSE.txt",
+"ref": "master",
+"sha256_12": "798df9e7634a",
+"slug": "luizpicolo/suap_api",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"lukecarroll15/blackboard-mcp": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "tcd",
+"sha256_12": "87e2de769b52",
+"slug": "lukecarroll15/blackboard-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"macewan-cs/lti": {
+"bytes": 1108,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6e58273960b0",
+"slug": "macewan-cs/lti",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"macielti/sigaa-cli": {
+"bytes": 35149,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "3972dc9744f6",
+"slug": "macielti/sigaa-cli",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"marcosroriz/sete": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "0bbd32e7e09a",
+"slug": "marcosroriz/sete",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"marcusgreen/moodle-qtype_aitext": {
+"ref": "main",
+"slug": "marcusgreen/moodle-qtype_aitext",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"matthewliu10/brightspace-mcp-server": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "047079fbd491",
+"slug": "matthewliu10/brightspace-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"mdestafadilah/proctoring.js": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c9f09b3fe729",
+"slug": "mdestafadilah/proctoring.js",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"mdweaver/canvas-mcp": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ab5109aafdb8",
+"slug": "mdweaver/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"michaelsboost/ArabEngo": {
+"bytes": 17766,
+"family": "CC",
+"path": "LICENSE.md",
+"ref": "gh-pages",
+"sha256_12": "4cddab880325",
+"slug": "michaelsboost/ArabEngo",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"microsoft/agent-governance-toolkit": {
+"bytes": 1074,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7df20dcdf919",
+"slug": "microsoft/agent-governance-toolkit",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"microsoft/ai-agents-for-beginners": {
+"bytes": 1141,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c2cfccb812fe",
+"slug": "microsoft/ai-agents-for-beginners",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"microsoft/autogen": {
+"bytes": 18650,
+"family": "CC",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7e7170e3cebf",
+"slug": "microsoft/autogen",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"microsoft/pybryt": {
+"bytes": 1141,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c2cfccb812fe",
+"slug": "microsoft/pybryt",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"mitodl/open-learning-ai-tutor": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "77a612c534cf",
+"slug": "mitodl/open-learning-ai-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"molguin92/UCampusViz": {
+"bytes": 1514,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "3510752bf472",
+"slug": "molguin92/UCampusViz",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"moocupv/lti-ai-grader": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "moocupv/lti-ai-grader",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"moodle/moodle": {
+"bytes": 35147,
+"family": "GPL-3.0",
+"path": "COPYING.txt",
+"ref": "main",
+"sha256_12": "8ceb4b9ee5ad",
+"slug": "moodle/moodle",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"mozilla/common-voice": {
+"bytes": 16726,
+"family": "MPL-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3f3d9e0024b1",
+"slug": "mozilla/common-voice",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"mtgibbs/canvas-lms-mcp": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6923a6b4bf1c",
+"slug": "mtgibbs/canvas-lms-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"mukulyadav0118/india-school-education-analytics": {
+"ref": "main",
+"slug": "mukulyadav0118/india-school-education-analytics",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"nakafaai/aksara": {
+"bytes": 11997,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "97e8bdc2e3cd",
+"slug": "nakafaai/aksara",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"nakafaai/nakafa.com": {
+"bytes": 11997,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "97e8bdc2e3cd",
+"slug": "nakafaai/nakafa.com",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"nanobpm/nano-ide": {
+"ref": "main",
+"slug": "nanobpm/nano-ide",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"naorpeled/aitutor": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5425f7125406",
+"slug": "naorpeled/aitutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"nataliasm23/icones-bandeiras-br-uf": {
+"bytes": 7048,
+"family": "CC",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "a2010f343487",
+"slug": "nataliasm23/icones-bandeiras-br-uf",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"netless-io/flat": {
+"bytes": 1062,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8fa1566550df",
+"slug": "netless-io/flat",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"nitsuah/bb-mcp": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e024d09e682a",
+"slug": "nitsuah/bb-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"oaknational/oak-ai-lesson-assistant": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "d150aadcccd2",
+"slug": "oaknational/oak-ai-lesson-assistant",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"oaknational/oak-curriculum-api": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0eeb9d32caed",
+"slug": "oaknational/oak-curriculum-api",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"oat-sa/tao-core": {
+"bytes": 18025,
+"family": "GPL-2.0",
+"path": "LICENSE",
+"ref": "develop",
+"sha256_12": "a01259a1b522",
+"slug": "oat-sa/tao-core",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"okba-boubakeur/Taqyeed-AI": {
+"bytes": 1373,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "46c12bfefbe6",
+"slug": "okba-boubakeur/Taqyeed-AI",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"okpy/ok": {
+"bytes": 13979,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "e3b80e19df08",
+"slug": "okpy/ok",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"oliverhruby/edupage-mcp": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e99290e1540b",
+"slug": "oliverhruby/edupage-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"onbirdev/moodle-webservice_mcp": {
+"ref": "main",
+"slug": "onbirdev/moodle-webservice_mcp",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"open-edge-platform/education-ai-suite": {
+"bytes": 11351,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3f17cff4210f",
+"slug": "open-edge-platform/education-ai-suite",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"open-spaced-repetition/fsrs4anki": {
+"bytes": 1079,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "2ec9e6e61ed8",
+"slug": "open-spaced-repetition/fsrs4anki",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"open-webui/open-webui": {
+"bytes": 2819,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5f1bd74c48bf",
+"slug": "open-webui/open-webui",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openai/grade-school-math": {
+"bytes": 1062,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "86bbb73e8558",
+"slug": "openai/grade-school-math",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openaziz00-sudo/Arab-Artificial-Intelligence": {
+"bytes": 1609,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f010c7e54a45",
+"slug": "openaziz00-sudo/Arab-Artificial-Intelligence",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"opencast/opencast": {
+"bytes": 11340,
+"family": "ECL-2.0",
+"path": "LICENSE",
+"ref": "develop",
+"sha256_12": "76a975068930",
+"slug": "opencast/opencast",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openeducat/openeducat_erp": {
+"bytes": 8241,
+"family": "LGPL-3.0",
+"path": "LICENSE",
+"ref": "19.0",
+"sha256_12": "528f84036800",
+"slug": "openeducat/openeducat_erp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openedx/XBlock": {
+"ref": "master",
+"slug": "openedx/XBlock",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"openedx/edx-ora2": {
+"bytes": 35135,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "106a1b4b8b71",
+"slug": "openedx/edx-ora2",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openedx/edx-platform": {
+"bytes": 35136,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "e12d78569742",
+"slug": "openedx/edx-platform",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openedx/openedx-ai-extensions": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8486a10c4393",
+"slug": "openedx/openedx-ai-extensions",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openedx/openedx-mcp": {
+"ref": null,
+"slug": "openedx/openedx-mcp",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"openedx/xblock-lti-consumer": {
+"bytes": 34520,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "57c8ff33c9c0",
+"slug": "openedx/xblock-lti-consumer",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openfun/django-lti-toolbox": {
+"bytes": 1078,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "504c17f9869b",
+"slug": "openfun/django-lti-toolbox",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"openfun/richie": {
+"bytes": 1079,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "e4b2a3148135",
+"slug": "openfun/richie",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"oppia/oppia": {
+"bytes": 11358,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "develop",
+"sha256_12": "cfc7749b96f6",
+"slug": "oppia/oppia",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"overhangio/tutor": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE.txt",
+"ref": "release",
+"sha256_12": "0d96a4ff68ad",
+"slug": "overhangio/tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"packbackbooks/lti-1-3-php-library": {
+"bytes": 11343,
+"family": "Apache-2.0",
+"path": "LICENSE.md",
+"ref": "master",
+"sha256_12": "78b49eeaddbf",
+"slug": "packbackbooks/lti-1-3-php-library",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"panaversity/learn-agentic-ai": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8ea022e30a9b",
+"slug": "panaversity/learn-agentic-ai",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"paper-instruments/rubric": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c5cc7d2cd1eb",
+"slug": "paper-instruments/rubric",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"papillonapp/papillon-ed-core": {
+"bytes": 35149,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "dev",
+"sha256_12": "3972dc9744f6",
+"slug": "papillonapp/papillon-ed-core",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"parkseokjune/unist-blackboard-mcp": {
+"ref": null,
+"slug": "parkseokjune/unist-blackboard-mcp",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"patriciamar/ShinyItemAnalysis": {
+"ref": "master",
+"slug": "patriciamar/ShinyItemAnalysis",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"paulgp/ipeds-database": {
+"bytes": 1056,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "1126322e2cc8",
+"slug": "paulgp/ipeds-database",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"pcofilada/psgc": {
+"bytes": 1058,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "439bcca79ffb",
+"slug": "pcofilada/psgc",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"pdg6/bc-curriculum-mcp-server": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e14de82d46bf",
+"slug": "pdg6/bc-curriculum-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"peancor/moodle-mcp-server": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "845ac6ac9e57",
+"slug": "peancor/moodle-mcp-server",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"pengusto/google-classroom-mcp": {
+"bytes": 3053,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "d84e558a5033",
+"slug": "pengusto/google-classroom-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"philchalmers/mirt": {
+"ref": "main",
+"slug": "philchalmers/mirt",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"pipeworx-io/mcp-education-data": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "42501667035e",
+"slug": "pipeworx-io/mcp-education-data",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"pipeworx-io/mcp-estat-japan": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "42501667035e",
+"slug": "pipeworx-io/mcp-estat-japan",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"plastic-labs/tutor-gpt": {
+"bytes": 35149,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3972dc9744f6",
+"slug": "plastic-labs/tutor-gpt",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"portabilis/i-educar": {
+"bytes": 18092,
+"family": "GPL-2.0",
+"path": "LICENSE",
+"ref": "2.12",
+"sha256_12": "8177f9751321",
+"slug": "portabilis/i-educar",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"praisethefacts/dsh-plugin-google-classroom": {
+"bytes": 1064,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c35e96e7d382",
+"slug": "praisethefacts/dsh-plugin-google-classroom",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"projectfedena/fedena": {
+"ref": "master",
+"slug": "projectfedena/fedena",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"pruettlazaro143-a11y/smc-ai-tutor": {
+"bytes": 19018,
+"family": "CC",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "600ca4e25fe1",
+"slug": "pruettlazaro143-a11y/smc-ai-tutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"pykt-team/pykt-toolkit": {
+"bytes": 1066,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "f5f955194636",
+"slug": "pykt-team/pykt-toolkit",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"r-huijts/canvas-mcp": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "ab5109aafdb8",
+"slug": "r-huijts/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"raccoongang/openedx-ai-extensions": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "8486a10c4393",
+"slug": "raccoongang/openedx-ai-extensions",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ramomar/siase-schedule-scraper": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "09c43d110fc7",
+"slug": "ramomar/siase-schedule-scraper",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ramomar/uniswag-chrome": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "b36468e555d3",
+"slug": "ramomar/uniswag-chrome",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"rhawrami/genpeds": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "c39fac37d50c",
+"slug": "rhawrami/genpeds",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"robotros/California-IEP-AI-project-kit": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "43554d1189d8",
+"slug": "robotros/California-IEP-AI-project-kit",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"rodrigmatrix/sigaa_ufc_android": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "c71d239df917",
+"slug": "rodrigmatrix/sigaa_ufc_android",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"rohitg00/ai-engineering-from-scratch": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "d116e214adbc",
+"slug": "rohitg00/ai-engineering-from-scratch",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"rstudio/gradethis": {
+"bytes": 49,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "bc2f766bedb6",
+"slug": "rstudio/gradethis",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"rstudio/learnr": {
+"bytes": 10472,
+"family": "UNCLASSIFIED",
+"path": "LICENSE.md",
+"ref": "main",
+"sha256_12": "60a581bccd57",
+"slug": "rstudio/learnr",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"rwrife/rubric-desk": {
+"bytes": 1063,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c186f5cb204a",
+"slug": "rwrife/rubric-desk",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sakaiproject/sakai": {
+"bytes": 11120,
+"family": "ECL-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "0688f62d04f1",
+"slug": "sakaiproject/sakai",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"santillana-ai/tutor-sdk": {
+"ref": null,
+"slug": "santillana-ai/tutor-sdk",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"sartaj1995/arabic-tutor": {
+"ref": "main",
+"slug": "sartaj1995/arabic-tutor",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"satvik314/educhain": {
+"bytes": 1092,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e3321a1b62cd",
+"slug": "satvik314/educhain",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"scaler-opensource/exam-guard": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "scaler-opensource/exam-guard",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"scienceforamerica/scipeds": {
+"bytes": 1088,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e04b31a1be21",
+"slug": "scienceforamerica/scipeds",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sdrangan/llmgrader": {
+"bytes": 1224,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "4c8368a01cb6",
+"slug": "sdrangan/llmgrader",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sebassg/sia-unal-mcp": {
+"ref": "main",
+"slug": "sebassg/sia-unal-mcp",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"semyonfox/canvas-mcp": {
+"bytes": 1881,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "fea4cd7cb04d",
+"slug": "semyonfox/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"serlo/serlo.org": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b40930bbcf80",
+"slug": "serlo/serlo.org",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sf-shenfeng/learn-shell": {
+"bytes": 34523,
+"family": "AGPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0d96a4ff68ad",
+"slug": "sf-shenfeng/learn-shell",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"shuangyan123/tutorbench": {
+"bytes": 11358,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "cfc7749b96f6",
+"slug": "shuangyan123/tutorbench",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sinh-x/personal-google-mcp": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5ed26262319d",
+"slug": "sinh-x/personal-google-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sjgant80-hub/fall-euaiact": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0ddf3b67a14a",
+"slug": "sjgant80-hub/fall-euaiact",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"skyzh/tiny-llm": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "c71d239df917",
+"slug": "skyzh/tiny-llm",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"smantriplw/vervalpd-node": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0ae5076b1e03",
+"slug": "smantriplw/vervalpd-node",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"smashburger-dev/socratic-workshop": {
+"bytes": 1072,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7f3dec641d9f",
+"slug": "smashburger-dev/socratic-workshop",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"stanfordnlp/dspy": {
+"bytes": 1085,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "fc84421fcf96",
+"slug": "stanfordnlp/dspy",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"studoo-app/ecole-directe-api": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "6c086a4639ac",
+"slug": "studoo-app/ecole-directe-api",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"suap-ava-suite/moodle-local_suap": {
+"bytes": 35161,
+"family": "GPL-3.0",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "54b00c9ffd02",
+"slug": "suap-ava-suite/moodle-local_suap",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"supachai-j/google-classroom-mcp-project": {
+"bytes": 1090,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "125a8bf7ce31",
+"slug": "supachai-j/google-classroom-mcp-project",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"sweeden-ttu/canvas-lms-mcp": {
+"bytes": 1056,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "06dcddbb6908",
+"slug": "sweeden-ttu/canvas-lms-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"t2-educacao/midas-ui": {
+"bytes": 1070,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "3db74f670f09",
+"slug": "t2-educacao/midas-ui",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"tcpassos/moodle-student-mcp": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "322307ac9d65",
+"slug": "tcpassos/moodle-student-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"thanh01pmt/interactive-quiz-kit": {
+"ref": null,
+"slug": "thanh01pmt/interactive-quiz-kit",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"thatmarcel/untis-js": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a1139daad821",
+"slug": "thatmarcel/untis-js",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"the-open-agent/openagent": {
+"bytes": 11357,
+"family": "Apache-2.0",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "c71d239df917",
+"slug": "the-open-agent/openagent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"thendralmagudapathi/RAG-for-NCERT": {
+"bytes": 1077,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "627670c5c6f5",
+"slug": "thendralmagudapathi/RAG-for-NCERT",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"thiagoudweb/techTutor": {
+"bytes": 1069,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "bc9653b0ba1d",
+"slug": "thiagoudweb/techTutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"tl-its-umich-edu/caliper-php-public": {
+"bytes": 7438,
+"family": "LGPL-3.0",
+"path": "LICENSE",
+"ref": "public",
+"sha256_12": "8c401dfc8928",
+"slug": "tl-its-umich-edu/caliper-php-public",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"tomdxb0004/eu-ai-act-risk-checker": {
+"bytes": 1073,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b7b08f330649",
+"slug": "tomdxb0004/eu-ai-act-risk-checker",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"triffon/moodle-mcp": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "66fa873bd85d",
+"slug": "triffon/moodle-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"trindadetiago/sigaa-caiu": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e69df76328c3",
+"slug": "trindadetiago/sigaa-caiu",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"tutors-sdk/tutors": {
+"bytes": 1088,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "development",
+"sha256_12": "4800b7fa4014",
+"slug": "tutors-sdk/tutors",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ucbds-infra/otter-grader": {
+"bytes": 1560,
+"family": "BSD-3-Clause",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "6af203d41a01",
+"slug": "ucbds-infra/otter-grader",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"ucbds-infra/ottr": {
+"bytes": 108,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "master",
+"sha256_12": "de5d9459d263",
+"slug": "ucbds-infra/ottr",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"umitkacar/memogen-ielts-flashcards": {
+"bytes": 1078,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "7a318295ce1f",
+"slug": "umitkacar/memogen-ielts-flashcards",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"unknownsteve7/UDISE_DATA_ANALYSIS": {
+"ref": "main",
+"slug": "unknownsteve7/UDISE_DATA_ANALYSIS",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"vTanco/google-classroom-mcp": {
+"bytes": 1145,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "a01639b20880",
+"slug": "vTanco/google-classroom-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"vishalsachdev/canvas-mcp": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5385a26e2fac",
+"slug": "vishalsachdev/canvas-mcp",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"vosslab/qti_package_maker": {
+"ref": "main",
+"slug": "vosslab/qti_package_maker",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"vulinh1704/ai-tutor-agent": {
+"bytes": 1071,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "e70d1d08d60a",
+"slug": "vulinh1704/ai-tutor-agent",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"wajhullah/arabic-literature-ai": {
+"ref": "main",
+"slug": "wajhullah/arabic-literature-ai",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"wenflow-org/wenflow": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b6fac57d4710",
+"slug": "wenflow-org/wenflow",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"withmarbleapp/os-taxonomy": {
+"bytes": 25289,
+"family": "UNCLASSIFIED",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "77d2692c3d64",
+"slug": "withmarbleapp/os-taxonomy",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"x-cookie/agent": {
+"ref": "main",
+"slug": "x-cookie/agent",
+"state": "LIVE",
+"verdict": "REPO_LIVE_NO_GRANT"
+},
+"yarikleto/claude-teacher-plugin": {
+"bytes": 1065,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "b6519647c247",
+"slug": "yarikleto/claude-teacher-plugin",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"yasserstudio/geoalgeria": {
+"bytes": 1101,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "691e4ec845d7",
+"slug": "yasserstudio/geoalgeria",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"yokowasis/autograder": {
+"ref": null,
+"slug": "yokowasis/autograder",
+"state": "DEAD",
+"verdict": "ADDRESS_DEAD"
+},
+"zaikaman/SGU-Academic-MCP": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "0b02f0945515",
+"slug": "zaikaman/SGU-Academic-MCP",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"zhangl1001/civil-ai": {
+"bytes": 1067,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5731a2d3ccea",
+"slug": "zhangl1001/civil-ai",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+},
+"zijinz456/OpenTutor": {
+"bytes": 1068,
+"family": "MIT",
+"path": "LICENSE",
+"ref": "main",
+"sha256_12": "5352b4967982",
+"slug": "zijinz456/OpenTutor",
+"state": "LIVE",
+"verdict": "PAYLOAD_READ"
+}
+}

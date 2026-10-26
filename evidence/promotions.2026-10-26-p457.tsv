@@ -1,0 +1,14 @@
+decision	slug	verdict	family	bytes	sha256_12	ref	path
+PROMOTED	Udayraj123/OMRChecker	PAYLOAD_READ	MIT	1104	3d72ab01aefd	master	LICENSE
+PROMOTED	crispin0007/OMR	PAYLOAD_READ	Apache-2.0	11358	cfc7749b96f6	main	LICENSE
+PROMOTED	sajidbuet/OMRFlow	PAYLOAD_READ	MIT	1081	71787b5c24e2	main	LICENSE
+PROMOTED-THIN	power0matin/omr-bubble-sheet-marker	PAYLOAD_READ	MIT	1072	440f3c6ab70c	main	LICENSE
+PROMOTED	NSoiffer/MathCAT	PAYLOAD_READ	MIT	1065	f8f65c73234f	main	LICENSE
+PROMOTED	AVauraTech/assistive-ai-accessibility-suite	PAYLOAD_READ	MIT	1065	142a4062de61	main	LICENSE
+PROMOTED	open-source-accessibility/monarch-message	PAYLOAD_READ	MIT	1082	43433fb8ca32	main	LICENSE
+PROMOTED	Sais-gallego/braillevision-ocr	PAYLOAD_READ	MIT	1069	4fdf172c6b2d	main	LICENSE
+FLAGGED-COPYLEFT	bthicks/OMR-Grader	PAYLOAD_READ	GPL-3.0	35149	3972dc9744f6	master	LICENSE.txt
+REFUSED-NO-GRANT	sakethbachu/OMR-scanner	REPO_LIVE_NO_GRANT				master	
+REFUSED-NO-GRANT	davidjenner/OpenDyslexic-Converter	REPO_LIVE_NO_GRANT				main	
+NEGATIVE-CONTROL	gmilano/fabricated-negative-control-p457	ADDRESS_DEAD					
+NEGATIVE-CONTROL	gmilano/this-repository-does-not-exist-p457	ADDRESS_DEAD					

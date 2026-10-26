@@ -4,6 +4,220 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` — **🟢 `Gap 456-A` IS CLOSED BY READING THE PAYLOAD AT ALL 457 CARRIED ADDRESSES, NOT 15 OF THEM — and the one genuine disagreement in 356 graded cells is a RELICENSING DATED TWO DAYS BEFORE THIS PASS: [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) is shelved here as MIT and serves `Pengusto Commercial License 1.0` at `HEAD`. 🔴 And the MIT upstream it names serves NO licence file at any path — its grant text survives only inside the fork that relicensed it.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED**
+(`Code from External`) — **twelfth denial in thirteen passes**. 🔵 Nothing below is gate-attested.
+The instrument and its controls are at
+[`compose/code/p457-payload-census/`](../compose/code/p457-payload-census/census.py); **two
+fabricated addresses were swept inside the same run and both came back `ADDRESS_DEAD`**, and two
+published cells were asserted as positive controls and both reproduced exactly
+(`HKUDS/DeepTutor` **11 408 B**, the value `p450` published; `moodle/moodle` **GPL-3.0**).
+🔴 **Seven defects in this pass's own code are recorded below rather than quietly fixed**, and one
+of them published a false disagreement before a hand-read caught it.
+
+**Evidence:**
+[`payload-census`](../evidence/payload-census.2026-10-26-p457.tsv) — 356 graded cells, one row per
+address with claimed family, measured family, bytes and digest ·
+[`payload-census-raw`](../evidence/payload-census-raw.2026-10-26-p457.json) — all 458 records
+including refs and verdicts ·
+[`promotions`](../evidence/promotions.2026-10-26-p457.tsv) — 8 promoted, 1 copyleft-flagged,
+2 refused, 2 fabricated negative controls ·
+[`leg-grading`](../evidence/leg-grading.2026-10-26-p457.tsv) — all 24 facts the eight search legs
+returned, each graded against [`intel/market.md`](../intel/market.md) so the nil is auditable ·
+the instrument at [`census.py`](../compose/code/p457-payload-census/census.py), its grader at
+[`grade.py`](../compose/code/p457-payload-census/grade.py) and
+**46 controls** at [`controls.py`](../compose/code/p457-payload-census/controls.py).
+
+### 🟢 `Gap 456-A` — the sweep `p456` could not afford, run in full
+
+🔵 `p456` resolved the ref for every carried address and then re-read the **payload** for only the
+**15** whose default branch fell outside the guessed list. The remaining **424** were resolved and
+not read, which is the gap it registered. Every address is now read:
+
+| | n |
+|---|---|
+| addresses extracted from `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` | **457** |
+| 🟢 `PAYLOAD_READ` — a grant served at the resolved default ref | **390** |
+| 🟡 `REPO_LIVE_NO_GRANT` — repository resolves, no grant at any of 12 probed paths | **54** |
+| 🔴 `ADDRESS_DEAD` | **13** |
+| 🟢 fabricated negative controls, both `ADDRESS_DEAD` | **2 / 2** |
+
+🔵 Measured family distribution over the 390: **MIT 252**, Apache-2.0 **49**, AGPL-3.0 **24**,
+GPL-3.0 **22**, BSD-3-Clause **9**, CC/ODbL **8**, GPL-2.0 **4**, LGPL-3.0 **3**, ECL-2.0 **2**,
+ISC **1**, MPL-2.0 **1**, and **15 the instrument could not name** — resolved by hand below.
+🟢 **64.6 % of the grants on these shelves are MIT**, which is the first time that share has been
+measured over the whole population rather than over a tier.
+
+### 🟢 Graded against what the shelves CLAIM — 356 cells, and the headline is the single disagreement
+
+🔵 The claim is read **line-locally**: these shelves are markdown tables, so the licence token on
+the same line as the address is that address's cell. 🔴 **91 addresses sit on lines carrying more
+than one address; they are counted and EXCLUDED rather than guessed at**, which is the one honest
+move available and it costs this sweep a fifth of its population.
+
+| verdict | n | after hand resolution |
+|---|---|---|
+| 🟢 `AGREE` | 318 | **327** (91.9 %) |
+| 🔴 `DISAGREE` | 1 | 🟢 **0** — the one was this pass's own defect, see below |
+| 🟡 `UNREAD_BY_INSTRUMENT` | 9 | 🔴 **1 genuine disagreement** + 8 resolved |
+| 🔴 `CLAIM_WITHOUT_PAYLOAD` | 20 | 8 manifest-recoverable, **12 not** |
+| 🔴 `DEAD_BUT_CLAIMED` | 8 | 8 |
+
+🔴 **One genuine disagreement in 356 graded cells, and it is the expensive kind.**
+
+### 🔴 `pengusto/google-classroom-mcp` — the shelf says MIT and `HEAD` says commercial
+
+🔵 This address is carried on these shelves with an **MIT** cell. Read first-hand this pass at the
+resolved default ref (`master`):
+
+```
+LICENSE   3 053 B   sha256₁₂ d84e558a5033
+  Pengusto Commercial License 1.0
+  Effective for distributions carrying this notice from 2026-10-24.
+  Copyright (c) 2026 Pengusto (maintainer-authored extensions).
+  All rights reserved except as expressly granted below or by applicable law.
+```
+
+🔴 **Two days before this pass.** 🟡 And the licence is narrower than "it went commercial": by its
+own §1 it covers only *"the copyrightable additions and modifications made by Pengusto … including
+their source code, compiled counterparts, documentation and tests"*, and it names its upstream
+precisely — `adriasantacreu/google-classroom-mcp` at commit
+`29c2c2a07670692da28d3fdcee38cb7a54c8f18a`, which *"remains available under MIT"*.
+
+🔴 **So the shelf's MIT cell is wrong about the repository as distributed, and right about a part
+of it.** A team that pins this address at `HEAD` off that cell ships the maintainer's code under a
+commercial licence. 🟢 **The MIT path is the upstream at the pinned commit** — and this pass
+measured what that actually gets you, because it is not what it looks like:
+
+| probe | result |
+|---|---|
+| `git ls-remote --symref` on the upstream | 🟢 live, `HEAD` → `master` → **`29c2c2a07670692da28d3fdcee38cb7a54c8f18a`** — *exactly* the commit the fork pins |
+| upstream `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license` | 🔴 **404 at all six** |
+| upstream `package.json` | 🟡 **MIT, declared in a manifest** (901 B) — the only grant it serves |
+| the fork's `LICENSES/MIT-upstream.txt` | 🟢 **200, 1 101 B** — *"MIT License / Copyright (c) 2026 Adrià Santacreu…"* |
+
+🔴 **The readable MIT grant text for the upstream exists only inside the fork that relicensed
+it.** 🔵 The upstream's own grant is a manifest declaration with no payload behind it — `p452`'s
+`MANIFEST_ONLY` class, arrived at from the opposite direction. 🟢 **The engagement rule:** take the
+upstream at the pinned commit, and carry the fork's `LICENSES/MIT-upstream.txt` into the vendor
+tree as the evidence of the grant, because the project that grants it does not publish it.
+
+### 🔴 Three carried addresses changed licence TEXT on the same date
+
+🔵 `pengusto` is not alone, and the date is the finding:
+
+| address | instrument served at `HEAD` | effective date |
+|---|---|---|
+| [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) | 🔴 `Pengusto Commercial License 1.0` · 3 053 B `d84e558a5033` | **2026-10-24** |
+| [`nakafaai/aksara`](https://github.com/nakafaai/aksara) | 🔴 `Nakafa Source Available License 2.0` · 11 997 B | **October 24, 2026** |
+| [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 `Nakafa Source Available License 2.0` · 11 997 B | **October 24, 2026** |
+
+🟡 **The nakafa pair is not news to these shelves** — they are already carried as *"genuinely
+closed"*, and this pass adds only the instrument's **name, version and date**, which they lacked.
+🔵 Nakafa's own words, read first-hand: *"Nakafa is source available. It is not open source, and it
+is not free to reuse."* 🔴 **What is new is the clustering**: three of 457 carried addresses
+re-issued their licence text within a 48-hour window, and the shelf cell for one of them still
+said MIT an hour before this pass ran.
+
+### 🟡 The nine the instrument could not name, resolved by hand — and the KB was ahead of it twice
+
+| address | payload | resolution |
+|---|---|---|
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `LICENSE` 1 512 B `3a83d5b8e22c` | 🟢 **untitled BSD-3-Clause** — AGREES with the shelf |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `LICENSE` 1 475 B `7069c7e8d60e` | 🟢 **untitled BSD-3-Clause** — AGREES |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `LICENSE` 1 531 B `57c341d09920` | 🟢 **untitled BSD-3-Clause** — AGREES |
+| [`rstudio/learnr`](https://github.com/rstudio/learnr) | `LICENSE.md` 10 472 B `60a581bccd57` | 🟢 **Apache-2.0 in markdown** — AGREES |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | `LICENSE` 25 289 B `77d2692c3d64` | 🟢 **ODbL** — and **these shelves already graded it ODbL**; the instrument was behind the KB |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | `LICENSE` **108 B** `de5d9459d263` | 🔴 a **stub**, not a grant — and **these shelves already record the real grant at `LICENSE.md` 1 555 B**; the instrument was behind the KB again |
+| [`rstudio/gradethis`](https://github.com/rstudio/gradethis) | `LICENSE` **49 B** `bc2f766bedb6` | 🟡 `YEAR: 2021 / COPYRIGHT HOLDER: Posit Software, PBC` — **CRAN convention**; `DESCRIPTION` says `License: MIT + file LICENSE` |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | `LICENSE` 1 299 B `86bf5f5e6306` | 🟢 **dual by content type** — *"Código — MIT"* plus a separate content grant; AGREES with the shelf's dual cell |
+| [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) | `LICENSE` 3 053 B `d84e558a5033` | 🔴 **the genuine disagreement above** |
+
+🔴 **Two of the nine are cells where the shelves are MORE correct than this pass's reader**, and
+that is worth more than the eight agreements: it means the published cells were built by a channel
+that reads better than a first-200-wins payload probe, and a future sweep that trusts the probe
+over the shelf will *regress* those two cells.
+
+### 🟡 The R tier's grant is a `DESCRIPTION` field, and a payload reader returns a 49-byte non-grant
+
+🔵 `p394` opened an R teaching/psychometrics tier on these shelves. This pass measures why a
+payload-only read cannot grade it: **by CRAN convention a root `LICENSE` file carries only the year
+and the copyright holder**, and the grant itself is the `DESCRIPTION` `License:` field.
+
+```
+rstudio/gradethis   DESCRIPTION → License: MIT + file LICENSE
+ucbds-infra/ottr    DESCRIPTION → License: BSD_3_clause + file LICENSE
+cran/exams          DESCRIPTION → License: GPL-2 | GPL-3
+```
+
+🔴 **And `cran/exams` corrects a cell**: this shelf carries it as **GPL-3.0**, and the package
+offers **`GPL-2 | GPL-3` disjunctively** — the integrator may elect GPL-2.0. 🟡 The carried cell is
+not false, it is **narrower than the grant**, which is the safe direction to be wrong in and is
+still worth fixing.
+
+### 🟢 Two refusals, both live repositories with nothing to build on
+
+| address | ref | why refused |
+|---|---|---|
+| [`sakethbachu/OMR-scanner`](https://github.com/sakethbachu/OMR-scanner) | `master` | 🔴 `REPO_LIVE_NO_GRANT` — 12 licence paths probed, none served |
+| [`davidjenner/OpenDyslexic-Converter`](https://github.com/davidjenner/OpenDyslexic-Converter) | `main` | 🔴 `REPO_LIVE_NO_GRANT` — same |
+
+### 🟢 `p456`'s digest-lineage rule is independently REPRODUCED, in both directions
+
+🔵 `p456` narrowed it to: *a digest match is evidence of lineage iff the licence family embeds a
+holder.* This pass's candidate reads confirm it without having set out to:
+
+- 🔴 **Apache-2.0 stock carries no holder** — [`crispin0007/OMR`](https://github.com/crispin0007/OMR)
+  is **11 358 B `cfc7749b96f6`**, byte- and digest-identical to the cell `p451` published for
+  `FiredMosquito831/ase-moodle-mcp`. Two unrelated projects, one digest, **zero lineage**.
+- 🔴 **GPL-3.0 stock carries no holder** — [`bthicks/OMR-Grader`](https://github.com/bthicks/OMR-Grader)
+  is **35 149 B `3972dc9744f6`**, identical to this shelf's `papillonapp/papillon-ed-core`.
+- 🟢 **MIT embeds a holder** — `NSoiffer/MathCAT` and `AVauraTech/assistive-ai-accessibility-suite`
+  are **both 1 065 B** with **different digests** (`f8f65c73234f` vs `142a4062de61`).
+
+🟢 **So the rule holds on both arms**, and the operational form is: *never infer a fork from a
+licence digest unless the family is MIT or BSD.*
+
+### 🔴 Seven defects in this pass's own instrument — five in the reader, two in the controls
+
+🔵 Recorded rather than quietly fixed, per this base's standing practice. **Four were caught by the
+`UNCLASSIFIED` safety net rather than by mis-grading**, which is the design that mattered — the
+historical defects in this class *published confident wrong families*.
+
+| # | defect | what it would have published | how it was caught |
+|---|---|---|---|
+| 1 | 🔴 **untitled BSD blind spot** — a BSD-3 payload whose first 14 lines never contain the string `BSD` | 3 cells `UNGRANTED`/unnamed | 🟢 `UNCLASSIFIED` bucket + hand read. **This is the historical `P459` defect reappearing in a different instrument** |
+| 2 | 🔴 **markdown-titled Apache-2.0** — `Apache License` / `==========` / `_Version 2.0, January 2004_` is not contiguous, so the title regex missed it | `rstudio/learnr` unnamed | 🟢 same |
+| 3 | 🔴 **ODbL absent from the family table** | `os-taxonomy` unnamed | 🟢 same — and the **shelf already had it right** |
+| 4 | 🔴 **first-200-wins path ordering** — the reader returns the first licence path that answers 200, so a 108 B root stub beats the real `LICENSE.md` | `ucbds-infra/ottr` graded off a stub | 🟢 the shelf's own cell contradicted it |
+| 5 | 🔴 **false `DISAGREE` from claim-line family ordering** — `ZeKaiNie/universal-examprep-skill`'s row names `CC0` in prose and `MIT` as its grant; the grader ordered CC above MIT and **published a disagreement** | a correct cell reported as wrong | 🟢 hand read: the payload reproduces the published cell **byte- AND digest-exact** (1 065 B `21f44893f051`). **This is `p452`'s defect class in a new instrument** |
+
+🟡 **Two more, in the CONTROL code rather than the reader** — and both were caught by the controls
+failing on correct data, which is the direction a control is supposed to fail in:
+
+| # | defect | what it asserted wrongly |
+|---|---|---|
+| 6 | 🔴 the region-contract control counted `### North America` **file-wide** | `n=3` and a red — but the contract is scoped to the canonical block, and a **SUPERSEDED** block legitimately carries its own children. Fixed to count **inside** the block |
+| 7 | 🔴 the preservation control asserted **contiguous containment** of the prior body on all eight shelves | red on `intel/market.md`, which is amended **in place** by design, so contiguity cannot hold. Its real contract is **insert-only**, proved by `git diff --numstat` showing **0 deletions**; the per-line check replaced the contiguity one |
+
+🔴 **Defect 5 is the one to carry forward**: it is the third time on these shelves that an
+instrument has matched a *string* where a *meaning* was required, and the first two were `p452`'s
+and `p454`'s. 🟢 The denominator saves it — one false disagreement out of 356 graded cells is a
+0.3 % error rate, and it was found because every non-`AGREE` verdict was read by hand.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement | cheapest closure |
+|---|---|---|
+| 🔴 `457-A` | **91 of 457 addresses were excluded from grading** because their claim line carries more than one address. A fifth of the population is ungraded and the exclusion is silent in the totals | parse the table **cell**, not the line |
+| 🔴 `457-B` | **12 of 20 `CLAIM_WITHOUT_PAYLOAD` cells are unrecoverable on both the payload and the manifest channel.** These shelves state a licence for them and no channel this base owns can corroborate it | a third channel — the package registry `p451` opened — or demote the cells |
+| 🟡 `457-C` | The three 2026-10-24 relicensings were found **by re-reading**, not by watching. There is no instrument that would notice the next one | a dated digest ledger: one row per address, re-read each pass, diff |
+| 🟡 `457-D` | `p456` reported **16** dead addresses over 455; this pass measures **13** over 457. The two address sets were never reconciled, so neither number refutes the other | diff the two extractions |
+| 🔴 `457-E` | `Gap 456-D` is **unclosed and was searched**: no EMEA institution-level adoption rate is sourceable — see [`intel/market.md`](../intel/market.md) for what was returned instead |  |
+| 🟡 `457-F` | `Gap 456-E` (`tosuki/moodle-mcp`) is **not re-probed this pass** and stays open | one two-channel probe |
+
+
 ## 🆕 `p456` — **🔴 `Gap 455-A` IS REFUTED AT 439/439 WITH ZERO DIVERGENCES, and the ladder rewrite it licensed is what put a WITHDRAWN grant on this shelf: `p455`'s own LanisAPI row is MIT read off a branch named `deprecated-0.4.1`, for a project whose HEAD README says in German that it is deprecated. 🟢 The ref axis is now RESOLVED, not guessed — `git ls-remote` works from this host and has for seven passes.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED**

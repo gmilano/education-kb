@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` · 2026-10-26 — **the week's movement is a licence moving, not an agent arriving**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes.
+🔵 Append-only: this section is added at the top and every section below it is retained verbatim.
+
+### 🔴 Moved this week — `pengusto/google-classroom-mcp`, MIT → commercial, dated 2026-10-24
+
+🔵 The most consequential change on the agent shelf this week is not a new agent. An address
+carried here with an **MIT** cell now serves **`Pengusto Commercial License 1.0`** (`LICENSE`
+3 053 B `sha256₁₂ d84e558a5033`), *"effective for distributions carrying this notice from
+**2026-10-24**"*, scoped to the maintainer's own additions to a Google Classroom MCP server.
+
+🔴 Its MIT upstream — `adriasantacreu/google-classroom-mcp` at commit `29c2c2a0767069…`, which
+`ls-remote` confirms is exactly what that repository's `HEAD` points at — **serves no licence file
+at any of six probed paths**. Its only grant is a `package.json` field, and the readable MIT text
+survives **only inside the fork that relicensed it**
+(`LICENSES/MIT-upstream.txt`, 1 101 B). 🟢 Full measurement on
+[`top.md`](top.md); the vendoring gate is `P457-3` in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+🔵 Two further carried addresses re-issued licence text on **the same date** — `nakafaai/aksara`
+and `nakafaai/nakafa.com`, both now **`Nakafa Source Available License 2.0`** (11 997 B), stating
+in their own words *"not open source, and … not free to reuse."* 🔴 **Three of 457 carried
+addresses in one 48-hour window** is the trend line to watch, and no instrument here would have
+noticed it without a full re-read (`Gap 457-C`).
+
+### 🟢 New to these shelves this week — the assistive tier
+
+🔵 Four permissive assistive foundations, each read first-hand at its resolved default ref this
+pass. None is new to GitHub; all four are new to **this** base, and the reason they were invisible
+is recorded as a measurement: **`braille`, `sign language`, `dyslexia`, `phoneme` and
+`speech-to-text` were all at ZERO mentions** across 457 carried addresses.
+
+| repo | grant | bytes · `sha256₁₂` | ref | what |
+|---|---|---|---|---|
+| [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | 🟢 MIT | 1 065 B · `f8f65c73234f` | `main` | MathML → speech (**15 languages**) + **braille** (Nemeth, UEB Technical, CMU) + structural math navigation; DAISY-sourced |
+| [`AVauraTech/assistive-ai-accessibility-suite`](https://github.com/AVauraTech/assistive-ai-accessibility-suite) | 🟢 MIT | 1 065 B · `142a4062de61` | `main` | 8 modalities in one browser tab — ASL fingerspelling, eye-gaze, air writing, live captions, braille studio — **MediaPipe on-device via WASM**, offline fallback |
+| [`Sais-gallego/braillevision-ocr`](https://github.com/Sais-gallego/braillevision-ocr) | 🟢 MIT | 1 069 B · `4fdf172c6b2d` | `main` | **braille OCR in reverse** — embossed and printed 6-dot cells → text → speech; full Grade-1 English |
+| [`open-source-accessibility/monarch-message`](https://github.com/open-source-accessibility/monarch-message) | 🟢 MIT | 1 082 B · `43433fb8ca32` | `main` | braille messenger for the **APH Monarch** refreshable tablet · 🟢 **North America** |
+
+🔴 **Two refusals this week**, both live repositories serving no grant at any probed path:
+[`sakethbachu/OMR-scanner`](https://github.com/sakethbachu/OMR-scanner) and
+[`davidjenner/OpenDyslexic-Converter`](https://github.com/davidjenner/OpenDyslexic-Converter).
+
+### 🔵 Shelf health, measured rather than assumed
+
+🟢 All 457 carried addresses re-read this pass: **390** serve a grant, **54** are
+`REPO_LIVE_NO_GRANT`, **13** are dead. Graded against what the shelves claim: **356** cells carried
+a line-local claim, **327 AGREE (91.9 %)**, **1 genuine disagreement** (the `pengusto` row above),
+**8 dead-but-claimed**, **20 claim-without-payload** of which 8 are manifest-recoverable. 🔴 **91
+addresses were excluded from grading** because their claim line carries more than one address
+(`Gap 457-A`). 🔴 Seven defects in this pass's own code (five reader, two control) are published on [`top.md`](top.md).
+
+
 ## 🆕 2026-10-26 · `p456` — **A shelved EMEA agent turns out to have been deprecated by its own maintainers before it was shelved, and the successor it names is this week's real movement. The instrument that missed it was guessing refs while `git ls-remote` worked the whole time.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — eleven denials in twelve passes. 🔵 This file is

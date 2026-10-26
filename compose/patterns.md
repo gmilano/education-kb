@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` — **🟢 Two recipes forced by this pass's measurements: an offline paper-to-psychometrics assessment line for the install base these shelves could not serve, and a licence-drift gate for the failure `p457` caught — a dependency that was MIT when it was shelved and commercial when it was read.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing
+below is gate-attested; instrument and controls at
+[`compose/code/p457-payload-census/`](../compose/code/p457-payload-census/census.py).
+
+### 🟢 `P457-1` — The offline paper-assessment line (OMR → item analysis → LMS write-back)
+
+🔵 **The engagement:** an exam office or ministry unit that scores MCQ assessments on paper, at
+cohort scale, without reliable connectivity — the envelope every server platform on
+[`verticals/solutions.md`](../verticals/solutions.md) assumes away. 🟢 Every component is permissive
+and every ref is stated, because `p456` proved refs cannot be inherited.
+
+```bash
+# 1. Sheet design, scanning, scoring, merit lists -- offline, one machine.
+git clone -b main   --depth 1 https://github.com/crispin0007/OMR          # Apache-2.0
+# 2. Exam administration: uncertain-mark review, attendance reconciliation, auditable Excel.
+git clone -b main   --depth 1 https://github.com/sajidbuet/OMRFlow        # MIT
+# 3. Field intake where there is no scanner: phone camera.
+git clone -b master --depth 1 https://github.com/Udayraj123/OMRChecker    # MIT  <- master, NOT main
+# 4. Item-level psychometrics on the response matrix (already on these shelves).
+git clone -b master --depth 1 https://github.com/patriciamar/ShinyItemAnalysis   # GPL-3 (DESCRIPTION)
+git clone -b main   --depth 1 https://github.com/philchalmers/mirt              # IRT  <- main
+```
+
+🟢 **The wiring, and the reason the stack is more than its parts:** the OMR layer's output is a
+**per-item response matrix** — candidate × item × mark. That is precisely the input the
+psychometrics tier consumes, so the pipeline runs:
+
+```
+scanned sheets ──▶ OMR (crispin0007/OMR | OMRFlow)
+                      │  per-item response matrix (CSV)
+                      ├──▶ scoring + merit list        ──▶ results to candidates
+                      ├──▶ mirt / ShinyItemAnalysis    ──▶ item difficulty, discrimination,
+                      │                                     distractor analysis, flagged items
+                      └──▶ LMS write-back (optional)   ──▶ Moodle / Canvas gradebook
+```
+
+🔴 **Where the LLM goes, and where it must not.** The scoring path is **deterministic and must stay
+so** — a mark is read by computer vision against a template, never inferred by a model, because a
+contested grade has to be reproducible from the sheet. 🟢 **The model's place is the uncertain-mark
+queue and the item review**: `OMRFlow` already exposes a review step for marks its CV layer cannot
+resolve, and that queue — not the gradebook — is where an agent earns its keep by proposing a
+reading with the cropped bubble image attached for a human to confirm.
+
+🔴 **Two constraints to price, both measured rather than assumed:**
+`crispin0007/OMR` is **Windows-only** by its own README, so the offline node is a Windows box —
+plan the deployment, don't discover it. And `bthicks/OMR-Grader`, the fourth engine in this space,
+is **GPL-3.0** (35 149 B `3972dc9744f6`): it stays behind a service boundary or out of the
+deliverable.
+
+🟡 **Pair it with `P457-2` when the cohort includes blind or low-vision candidates** — a paper-first
+pipeline is the *worst* case for accessibility, and the remedy is in the next pattern, not in a
+caveat.
+
+### 🟢 `P457-2` — The accessible-assessment layer (MathML → braille + speech, on-device)
+
+🔵 **The obligation, not the feature:** accessible instruction and assessment is statutory in the
+regions these shelves sell into (IDEA / Section 504; European Accessibility Act). 🟢 The permissive
+supply, read first-hand this pass:
+
+```bash
+git clone -b main --depth 1 https://github.com/NSoiffer/MathCAT                            # MIT
+git clone -b main --depth 1 https://github.com/AVauraTech/assistive-ai-accessibility-suite # MIT
+git clone -b main --depth 1 https://github.com/Sais-gallego/braillevision-ocr              # MIT
+git clone -b main --depth 1 https://github.com/open-source-accessibility/monarch-message   # MIT
+```
+
+🟢 **The line, in the direction the obligation runs:**
+
+```
+item content (MathML)  ──▶ MathCAT ──┬──▶ speech, 15 languages (embedded engine commands)
+                                     ├──▶ braille: Nemeth / UEB Technical / CMU
+                                     └──▶ structural navigation (overviews, drill-down)
+                                              │
+refreshable device ◀── monarch-message ◀──────┘        (APH Monarch, US school install base)
+
+existing PAPER material ──▶ braillevision-ocr ──▶ text ──▶ speech   (embossed + printed 6-dot)
+candidate input modality ──▶ AVaura suite (eye-gaze, air writing, ASL fingerspelling, captions)
+                              └─ MediaPipe on-device via WASM, offline fallback
+```
+
+🔴 **Why the on-device property is the architectural decision and not a detail:** assessment audio
+and braille output for an identified candidate is **student data**. Routing it to a cloud endpoint
+puts an accessibility accommodation inside the scope of exactly the rules these shelves track —
+California AB 1159 on student data and AI training, GDPR, the EU AI Act's Annex III treatment of
+evaluation. 🟢 **MathCAT runs locally and the AVaura suite runs in the browser tab with WASM**, so
+the accommodation is deliverable **without a data-transfer argument at all**, which is both cheaper
+to ship and the stronger position in a procurement review.
+
+🟡 **Stated as scope, not as a claim:** `MathCAT` is production-grade and DAISY-sourced; the other
+three are small projects. Price them as components to harden, not platforms to adopt.
+
+### 🔴 `P457-3` — The licence-drift gate (the step that would have caught `p457`'s one disagreement)
+
+🔵 **The defect being fixed is this base's own.** A shelf cell said **MIT**. The payload at `HEAD`
+said **`Pengusto Commercial License 1.0`**, effective **two days** earlier. Nothing about the
+address, the stars or the activity changed. 🔴 **Every recipe on this file that names a dependency
+without pinning and re-reading its grant has this exposure**, and 3 of 457 carried addresses
+re-issued licence text in one 48-hour window.
+
+```bash
+# The gate. Run it at vendoring time and in CI -- not once at selection time.
+slug=$1; want=$2                      # e.g.  pengusto/google-classroom-mcp  MIT
+
+# 1. Resolve the ref authoritatively. curl -sI returns 403 for every real repo here (Gap 449-A);
+#    ls-remote is the channel that works, and it gives you the COMMIT to pin.
+read -r _ ref <<<"$(git ls-remote --symref "https://github.com/$slug" HEAD | head -1)"
+commit=$(git ls-remote "https://github.com/$slug" HEAD | cut -f1)
+
+# 2. Read the grant AT that ref. No grant there IS the answer -- do not walk to a stale alias
+#    looking for a friendlier one (p456's withdrawn-MIT lesson).
+for p in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING; do
+  code=$(curl -sL -o /tmp/g -w '%{http_code}' "https://raw.githubusercontent.com/$slug/HEAD/$p")
+  [ "$code" = 200 ] && break
+done
+
+# 3. Grade the TITLE, and record bytes + digest INCLUDING the trailing newline.
+head -14 /tmp/g | grep -qiE "$want"  || { echo "DRIFT: $slug no longer grants $want"; exit 1; }
+printf '%s\t%s\t%s B\t%s\n' "$slug" "$commit" "$(wc -c </tmp/g)" "$(sha256sum /tmp/g | cut -c1-12)"
+
+# 4. If the payload is a 49-108 byte stub, the grant is in the MANIFEST, not the file.
+#    CRAN:  DESCRIPTION -> License:        npm: package.json      Python: pyproject.toml
+```
+
+🟢 **Three rules this gate encodes, each paid for by a measurement on these shelves:**
+
+1. 🔴 **Pin the commit, not the branch.** `ls-remote` hands you both in one request.
+2. 🔴 **Vendor the grant TEXT into your tree.** `adriasantacreu/google-classroom-mcp` serves **no
+   licence file at six paths** — its MIT text is readable only inside the fork that relicensed it.
+   If you did not copy it, you cannot now produce it.
+3. 🟡 **A stub is not a grant and a manifest can be the grant.** `rstudio/gradethis` serves a
+   **49-byte** `LICENSE` carrying a year and a holder; the grant is `DESCRIPTION: MIT + file
+   LICENSE`. A payload-only check calls that project ungranted.
+
+🔵 **Scope it honestly:** this gate detects drift at the moment it runs. It does not watch
+(`Gap 457-C`), and these three relicensings were found by re-reading all 457 addresses — which is
+the cost of not having had the gate.
+
+
 ## 🆕 `p456` — **🟢 Two recipes, both forced by this pass's measurements: a ref-pinned vendoring step that every earlier pattern on this file is missing, and an EMEA national-system adapter built so that the maintainer withdrawal `p456` caught is survivable rather than fatal.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing

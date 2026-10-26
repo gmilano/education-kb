@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p457` — **🟢 A SUPPLY TIER THESE SHELVES HAVE NEVER CARRIED, AND IT IS THE ONE MOST OF THE WORLD'S SCHOOLS ACTUALLY RUN ON: paper assessment. Eight permissive rows — four OMR engines and four assistive/accessible-learning foundations — every grant read first-hand at the resolved default ref. 🔴 Plus the whole shelf re-read: 390 of 457 carried addresses serve a grant, and 64.6 % of them are MIT.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing
+below is gate-attested; the instrument, its two fabricated negative controls and its two positive
+controls are at [`compose/code/p457-payload-census/`](../compose/code/p457-payload-census/census.py).
+🔴 **Seven defects in this pass's own code — five in the reader, two in the controls — are
+published on [`agents/top.md`](../agents/top.md)** rather than hidden.
+
+### 🔴 The absence this pass closes, and why it was invisible for 456 passes
+
+🔵 Searched against these three shelves before searching the web: **`OMR`, `optical mark
+recognition`, `bubble-sheet`, `mark recognition`, `phoneme`, `braille`, `sign language`,
+`dyslexia`, `speech-to-text` — all NINE at ZERO mentions.** 🔴 **These shelves carry 457 addresses
+for an industry whose dominant assessment instrument, across most of its install base, is a sheet
+of paper** — and they carried nothing that reads one.
+
+🟡 The mechanism is the one `p453` named: the vocabulary is the variable. Every discovery leg these
+shelves have run was phrased in the language of *digital* education — LMS, MCP, tutor, autograder,
+LTI, xAPI. **A school in Nepal grading NEET practice exams off an ADF scanner is not in that
+vocabulary**, so it was never returned, and the silence read exactly like coverage.
+
+### 🟢 Tier 7 — paper assessment (OMR). Every grant read at the resolved default ref this pass
+
+| repo | grant | ref | what it is | region |
+|---|---|---|---|---|
+| [`Udayraj123/OMRChecker`](https://github.com/Udayraj123/OMRChecker) | 🟢 **MIT** · `LICENSE` **1 104 B** `3d72ab01aefd` | 🔴 `master` | The canonical OMR engine: reads marked sheets *"fast and accurately using a scanner 🖨 or your phone 🤳"* — **a phone camera is a supported input**, which is the whole low-infrastructure case | ⚪ Global · India-origin |
+| [`crispin0007/OMR`](https://github.com/crispin0007/OMR) | 🟢 **Apache-2.0** · `LICENSE` **11 358 B** `cfc7749b96f6` | `main` | Full exam pipeline, **offline on one Windows PC with no internet and no fees**: design answer sheets → scan from any ADF scanner → marks, ranks, **merit lists**, Excel + PDF scorecards, optional negative marking. Scoped by its own README to **Nepal CEE, NEET, JEE and school exams** | 🟢 **APAC** |
+| [`sajidbuet/OMRFlow`](https://github.com/sajidbuet/OMRFlow) | 🟢 **MIT** · `LICENSE` **1 081 B** `71787b5c24e2` | `main` | Examination-administration grade: template design, **uncertain-mark review**, **attendance reconciliation**, MCQ scoring, **auditable** Excel results, entirely local | 🟢 **APAC** |
+| [`power0matin/omr-bubble-sheet-marker`](https://github.com/power0matin/omr-bubble-sheet-marker) | 🟢 **MIT** · `LICENSE` **1 072 B** `440f3c6ab70c` | `main` | Offline marker for MCQ sheets as **PDF or image** (OpenCV + PyMuPDF). 🟡 **The thinnest row of the four** — the README is largely badges, and it is shelved as a component, not a platform | ⚪ Global |
+
+🔴 **One copyleft flag, stated rather than shelved as permissive:**
+[`bthicks/OMR-Grader`](https://github.com/bthicks/OMR-Grader) is **GPL-3.0** (`LICENSE.txt`
+**35 149 B** `3972dc9744f6`) — a Python/OpenCV bubble-sheet grader. 🟡 Usable, but it carries the
+obligation outward and so is not a vendoring candidate for a client deliverable.
+
+🔴 **One refusal:** [`sakethbachu/OMR-scanner`](https://github.com/sakethbachu/OMR-scanner) is live
+at `master` and serves **no grant at any of 12 probed paths**.
+
+🟢 **Why this is a foundations tier and not a curiosity:** `crispin0007/OMR` and `sajidbuet/OMRFlow`
+both state **offline, single-machine operation** as a feature, not a limitation. That is the exact
+deployment envelope of the institutions these shelves' regional sections describe as
+under-served — and it is the one envelope the entire MCP/LMS-connector tier on these shelves
+**cannot** serve, because every row in it assumes a hosted LMS and a network.
+
+### 🟢 Tier 8 — assistive and accessible-learning foundations
+
+🔵 Accessibility is a **statutory** requirement in the two regions these shelves sell into hardest
+(IDEA and Section 504 in the US; the European Accessibility Act in the EU), and it was carried here
+only as the word *"accessibility"* in prose. These are the readable, permissive foundations:
+
+| repo | grant | ref | what it is | region |
+|---|---|---|---|---|
+| [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | 🟢 **MIT** · `LICENSE` **1 065 B** `f8f65c73234f` | `main` | **The strongest row in this tier.** MathML → speech **and braille** (**Nemeth, UEB Technical, CMU** and others) plus **navigation of math** by structure. Speech in **15 shipped languages** (Chinese Traditional, English, Finnish, French, German, Greek, Hungarian, Indonesian, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Vietnamese); sourced from the **DAISY Consortium** | ⚪ Global |
+| [`AVauraTech/assistive-ai-accessibility-suite`](https://github.com/AVauraTech/assistive-ai-accessibility-suite) | 🟢 **MIT** · `LICENSE` **1 065 B** `142a4062de61` | `main` | Eight assistive tools in **one browser tab with no cloud dependency**: ASL fingerspelling, eye-gaze control, air writing, live captions, braille studio, scene description, document reader, depth obstacle warning. **MediaPipe on-device via WASM**, optional VLM with offline fallback | ⚪ Global |
+| [`open-source-accessibility/monarch-message`](https://github.com/open-source-accessibility/monarch-message) | 🟢 **MIT** · `LICENSE` **1 082 B** `43433fb8ca32` | `main` | Braille messenger for the **APH Monarch** — the American Printing House's refreshable multi-line braille tablet, a device with a real US school install base. 🟡 Small surface, concrete hardware target | 🟢 **North America** |
+| [`Sais-gallego/braillevision-ocr`](https://github.com/Sais-gallego/braillevision-ocr) | 🟢 **MIT** · `LICENSE` **1 069 B** `4fdf172c6b2d` | `main` | **Braille OCR in the reverse direction**: decodes *embossed and printed* 6-dot cells into text and speaks it. Full Grade-1 English: alphabet, numeric prefix `⠼`, capital indicator `⠠`, punctuation | ⚪ Global |
+
+🔴 **One refusal:** [`davidjenner/OpenDyslexic-Converter`](https://github.com/davidjenner/OpenDyslexic-Converter)
+is live at `main` with **no grant served**.
+
+🟢 **The composition that makes this a tier rather than four rows:** `MathCAT` turns the *content*
+accessible, `braillevision-ocr` turns *existing paper* accessible, `monarch-message` reaches the
+*device*, and the AVaura suite covers the *input* modalities. 🔵 Wired together they are the
+accessibility layer for the OMR tier above — see
+[`compose/patterns.md`](../compose/patterns.md) `P457-2`.
+
+### 🟢 The whole shelf re-read — `Gap 456-A`'s numbers, in the form that matters here
+
+🔵 Full result and grading on [`agents/top.md`](../agents/top.md). For a foundations reader the two
+load-bearing numbers are:
+
+- 🟢 **390 of 457** carried addresses serve a grant at their resolved default ref; **252 are MIT**
+  (**64.6 %** of grants read) and **49 Apache-2.0** — so **77 %** of the readable supply on these
+  shelves is in the two families a client can build on without a service boundary.
+- 🔴 **54 are `REPO_LIVE_NO_GRANT`** and **13 are dead**. 🟡 Of the 20 whose cell states a licence
+  with no payload behind it, **8 are recoverable from an in-repo manifest** — `package.json`,
+  `pyproject.toml` or a CRAN `DESCRIPTION` — and **12 are recoverable from neither channel**
+  (`Gap 457-B`).
+
+🟡 **A correction to this shelf, in the safe direction:** [`cran/exams`](https://github.com/cran/exams)
+is carried as **GPL-3.0** and its `DESCRIPTION` grants **`GPL-2 | GPL-3` disjunctively** — the
+integrator may elect **GPL-2.0**. The cell is narrower than the grant, not wrong.
+
+
 ## 🆕 `p456` — **🟢 Every foundational platform on this shelf now carries its RESOLVED default branch, and for 11 of them it is not what a bare `git clone` would suggest: ILIAS checks out `release_11`, Tutor `release`, OpenEduCat `19.0`, BigBlueButton `v4.0.x-develop`. 🟢 And the licence families this shelf carries are CONFIRMED — 14 of 15 off-list cells re-read byte-identical.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing
