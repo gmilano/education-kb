@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — **🟢 Two trends this pass can assert with a mechanism rather than a vendor quote, and both are about PROVENANCE rather than capability: the registry channel corroborates npm grants and structurally CANNOT corroborate PyPI ones, and the education agent tier has produced its first instance that points at the developer instead of the LMS.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is
+gate-attested; the four load-bearing contracts were re-implemented by hand and all four are green.
+
+### 🟢 `T452-1` — Grant provenance splits by ECOSYSTEM, and it decides what Globant can ship
+
+🟢 Measured this pass over **71** carried registry-sourced licence cells
+([`evidence/backlink-agreement-sweep.2026-10-26-p452.tsv`](../evidence/backlink-agreement-sweep.2026-10-26-p452.tsv)):
+**63 AGREE, 6 ABSENT, 1 PAGES_ONLY, 1 NO_RECORD, 0 DISAGREE.** 🔴 The failures are not evenly
+distributed: **4 of the 6 `ABSENT` and the single `PAGES_ONLY` are PyPI**, against **2 `ABSENT` on
+npm**.
+
+🔵 **Mechanism, not correlation.** npm's `repository` field is conventional to the point of
+near-universality and `npm publish` surfaces it; PyPI's `project_urls` is optional and is frequently
+`null` — `deeptutor` `1.6.15`, this base's most-cited agent, declares **`project_urls: null`** and
+**no `home_page`**, so its Apache-2.0 has **no registry back-link at all**.
+
+🔴 **Consequence for an engagement, stated as a rule:** *"it is published on a registry"* is
+**uniform-looking evidence that is not uniform**. It corroborates a grant in the JavaScript tier
+and largely cannot in the Python tier — and the Python tier is most of this base's tutoring,
+psychometrics and analytics supply. 🟢 A licence-assurance step must therefore read the **payload**
+for Python dependencies and may lean on the registry for Node ones. 🔵 `p451`'s standing back-link
+rule is necessary and **not sufficient**: it tells you when a record *is* evidence, and this trend
+says which half of your dependency tree will have no record to rule on.
+
+### 🟢 `T452-2` — The education agent tier turns inward: the first agent here that instruments the DEVELOPER, not the institution
+
+🔵 Every agent on [`agents/top.md`](../agents/top.md) until this pass points **at** an education
+system — Moodle, Canvas, Blackboard, Brightspace, D2L, a registrar, an SIS. 🟢
+[`D4vRAM369/pbl-project-chronicler`](https://github.com/D4vRAM369/pbl-project-chronicler) (🟢 **MIT**,
+`LICENSE` 1 066 B `sha256₁₂ 95576ceceaa3`) points at the **development session** and treats it as the
+learning object: a glossary with analogies, a reproducible step-by-step, architecture decisions
+*and their reasons*, and errors kept deliberately as *"oro pedagógico"*.
+
+🟢 **Why this is a trend datum and not a curiosity.** It is the project-based-learning pedagogy
+implemented as an **agent skill** rather than as courseware, and it inverts the integration cost
+that gates every other row on that shelf: no LMS, no institutional credential, no token, no security
+review of a third-party LMS integration. 🔵 **It is deployable in a Globant engagement on day one**,
+which no LMS connector on these shelves is.
+
+🟡 **Its denominator, so it is not over-read: n = 1.** One MIT repository, Spanish-first, no
+institution asserted. 🔴 It is an instance of a category, not evidence of a wave, and it is recorded
+as the category's first instance so a later pass can test whether the category grows.
+
+### 🔴 `T452-3` — The "trending" channel reports this base's own shelf back to it
+
+🔴 The prescribed GitHub-trending leg returned exactly one education-vertical repository this window,
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy), presented as an October
+2026 highlight. 🔵 This base has carried it since `p395` and graded it **two licences deep**: `LICENSE`
+**ODbL** 25 289 B, `LICENSE-CONTENT` **CC BY-SA 4.0** 18 375 B — **share-alike on the database and on
+the content**, so Globant cannot build a proprietary deliverable on the best curriculum graph here.
+
+🟢 **The trend is structural:** a popularity channel selects for what is already well known, and
+what is already well known is already shelved after 451 passes. 🔴 **Popularity channels cannot grow
+this base; inventory channels can** — 39 addresses at zero prior hits from a registry search under
+an unused vocabulary, against 0 from 120 graded hits on the saturated one. 🔵 `agents/top.md:1237`
+records the matching near-miss: `os-taxonomy` entered as *"newly trending, assumed permissive"* and
+turned out **ODbL**. The assumption a trending list invites is precisely the one that costs a
+deliverable.
+
 ## 🆕 Trend 51 — `p451` **A package registry is a time machine for deleted repositories — and a package NAME is not, which is the half that costs you a wrong row**
 
 🔴 **Measured, not argued.** Nine addresses carried on these shelves return `404` on

@@ -1,0 +1,8 @@
+registry	package	claimed_slug	verdict	declared_repository	declared_licence	version	normalised
+npm	express	expressjs/express	AGREE	git+https://github.com/expressjs/express.git	MIT	5.3.0	github.com/expressjs/express
+npm	globant-fab-452-nope-pkg	globant-fab-452/nope	NO_RECORD				
+pypi	requests	psf/requests	AGREE	https://github.com/psf/requests	Apache-2.0	2.34.2	github.com/psf/requests
+pypi	globant-fab-452-nope-pkg	globant-fab-452/nope	NO_RECORD				
+packagist	laravel/framework	laravel/framework	AGREE	https://github.com/laravel/framework	MIT	13.x-dev	github.com/laravel/framework
+packagist	globant-fab-452/nope	globant-fab-452/nope	NO_RECORD				
+npm	blackboard-mcp	e9x/blackboard-mcp	DISAGREE	git+https://github.com/felipedias-ie/blackboard-mcp.git	MIT	0.1.2	github.com/felipedias-ie/blackboard-mcp

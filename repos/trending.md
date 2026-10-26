@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — reads 2026-10-26, commit 2026-10-26 — **🔴 The GitHub-trending channel returned ONE education-vertical repository this window and this base ALREADY CARRIES IT, graded two licences deep. 🟢 The useful finding is not the repo: it is that a third-party trending digest presented a 451-pass-old shelf entry as new, which is what an unverified "trending" row looks like from the inside.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Append-only: this
+section is added at the top; every prior section is kept below it, byte-identical.
+
+### 🔴 The trending leg, and the one candidate it produced
+
+| candidate, as the digest presented it | the digest's claim | what this base already holds | verdict |
+|---|---|---|---|
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | *"over 5 900 stars … a structured graph of what children learn in primary and elementary years, 1 590 micro-topics and 3 221 prerequisite links"*, listed as an October 2026 trending highlight | 🔴 **carried since `p395`**, and graded **two licences deep**: `LICENSE` **ODbL**, 25 289 B `sha256₁₂ 77d2692c3d64` — a share-alike **database** licence — plus `LICENSE-CONTENT` **CC BY-SA 4.0**, 18 375 B `sha256₁₂ cde7883b…`. `agents/top.md:220` records it as *"already shelved — and already graded ODbL"* | 🔴 **NOT NEW** |
+
+🟢 **The row is still worth writing, because the failure is instructive.** A reader taking that
+digest at face value would have added an ODbL/CC-BY-SA asset to a shelf of permissive grants as a
+fresh permissive find. 🔵 `agents/top.md:1237` records exactly that near-miss from an earlier pass:
+*"newly trending, assumed permissive"* → 🟡 **ODbL**. The assumption was wrong then and the digest
+invites it again now. 🔴 **`os-taxonomy` is the single most useful curriculum graph on these shelves
+and Globant cannot build a proprietary deliverable on it** — share-alike on the database *and* on
+the content.
+
+### 🔴 Also graded and rejected this window: the other digest claims
+
+| claim | word-scoped grading | verdict |
+|---|---|---|
+| `luongnv89/claude-howto` — *"educational content about coding agents is its own trending category"* | — | 🔴 **not education-vertical**: a tutorial repo about a coding tool, not an education-sector artefact |
+| `microsoft/ML-For-Beginners` ~91.7 k ★, `microsoft/AI-For-Beginners` ~70.3 k ★ | prior hits on both | 🔵 **carried**; curricula *about* AI, long-standing, no change this window |
+| `kakapez/agents-radar`, `HuggerHustle/ai-radar` | — | 🔴 **auto-generated digests**, i.e. the channel itself, not findings on it |
+| `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`, `ashishpatel26/500-AI-Agents-Projects` | prior hits | 🔵 **list repositories**, already carried; a list is not a vertical agent |
+
+🔴 **Zero new education-vertical rows from the prescribed GitHub-trending leg — the seventh
+consecutive nil on it.** 🟢 Recorded with its interval per `Gap 448-A`: the schedule is **hourly**
+against a channel that updates **daily**, so consecutive nils on it carry close to zero information
+and this one should not be read as a change in the sector.
+
+### 🟢 Where the window's two real rows actually came from
+
+🟢 Neither promotion this pass came from a trending surface. Both came from **npm registry search
+under a pedagogy vocabulary** — see [`agents/trending.md`](../agents/trending.md) `p452` for the
+controlled test. 🔵 For this file the operational point is narrow and worth carrying:
+
+🔴 **A "trending" list is a popularity channel, and popularity is correlated with being already
+shelved.** It cannot produce a row this base lacks, because this base has been reading it for
+451 passes. 🟢 **A registry search under an unused vocabulary is an inventory channel**, and
+inventory is where the unshelved tail lives — 39 addresses at zero prior hits, against 0 from
+120 graded LMS-vocabulary hits on the identical channel.
+
+| promoted this pass | found on | grant, first-hand at `HEAD` | shelf |
+|---|---|---|---|
+| [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) | npm registry search, `vocational training skills` | 🟢 **MIT**, `LICENSE` 1 101 B `sha256₁₂ 691e4ec845d7` | [`repos/foundations.md`](foundations.md) |
+| [`D4vRAM369/pbl-project-chronicler`](https://github.com/D4vRAM369/pbl-project-chronicler) | npm registry search, pedagogy vocabulary | 🟢 **MIT**, `LICENSE` 1 066 B `sha256₁₂ 95576ceceaa3` | [`agents/top.md`](../agents/top.md) |
+
+🔴 **And the channel's cost, stated with the yield: 6 of 10 education-vertical candidates from the
+new vocabulary back-link an address that does not resolve at `HEAD`, and 2 more resolve with no
+grant.** A 20 % promotion rate is the price of an inventory channel, and it is only knowable because
+every candidate was probed in both directions before anything was written.
+
 ## 🆕 `p451` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE 9 UNREACHABLE ADDRESSES FROM `p450`'s CENSUS ARE TYPED: 6 of 9 PROVED to have existed and been withdrawn, 1 with no trace on three registries, and 2 contaminated by a third party holding the same package name. 🔴 `make hooks` DENIED, so nothing here is gate-attested.**
 
 🔵 **APPEND-ONLY shelf** — inserted above `p450`'s section; nothing below is rewritten.

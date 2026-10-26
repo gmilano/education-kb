@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — **🟢 `Gap 451-A` ANSWERED WITH A DENOMINATOR: the back-link rule `p451` made standing was swept over all 71 carried registry-sourced cells, and it finds ZERO mis-attributed licences — the population was already clean. 🔴 What it does find is that 8 of 71 are not registry-attributable AT ALL, and the mechanism is not what `p451` expected: the record exists and carries no repository field. 🔴 And this pass's own instrument produced 3 false DISAGREE verdicts before correction, every one of them by deriving an address from a package name — the exact heuristic `Gap 451-A` forbids.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED.** The host refused
+the recipe (`Code from External`) before any gate body ran — **seven denials in eight passes**.
+🔵 Nothing below is gate-attested. The four load-bearing contracts were re-implemented
+independently (region-heading `CANON` and `VOCAB` read from `check_headings.py:17-19`, newest-block
+insertion read from `check_newest_block.py`, frontmatter vocabulary, table-header-as-data) and all
+four are green.
+
+### 🟢 The sweep, and its controls run in three directions before any verdict was read
+
+`p451` left this as the open half of `Gap 451-A`: *"the next pass should run a back-link agreement
+sweep over the carried registry-sourced licence cells and report disagreements by mechanism."*
+🟢 The instrument is [`compose/code/p452-backlink-sweep/sweep.py`](../compose/code/p452-backlink-sweep/sweep.py);
+its population and full output are committed to
+[`evidence/backlink-agreement-sweep.2026-10-26-p452.tsv`](../evidence/backlink-agreement-sweep.2026-10-26-p452.tsv).
+
+| control | channel | expected | observed | discriminates? |
+|---|---|---|---|---|
+| 🟢 positive | npm `express` → `expressjs/express` | AGREE | 🟢 **AGREE**, MIT, `5.3.0` | 🟢 YES |
+| 🟢 positive | PyPI `requests` → `psf/requests` | AGREE | 🟢 **AGREE**, Apache-2.0, `2.34.2` | 🟢 YES |
+| 🟢 positive | Packagist `laravel/framework` | AGREE | 🟢 **AGREE**, MIT | 🟢 YES |
+| 🧪 fabricated negative | `globant-fab-452-nope-pkg`, all three registries | NO_RECORD | 🟢 **NO_RECORD** ×3 | 🟢 YES |
+| 🟢 **reproduction** | npm `blackboard-mcp` → `e9x/blackboard-mcp` | DISAGREE *(`p451`, by hand)* | 🟢 **DISAGREE** → `felipedias-ie/blackboard-mcp` | 🟢 YES — `p451`'s hand verdict recovered mechanically |
+
+🔵 The reproduction control is the one that matters: `p451` reached that verdict by reading one
+record by eye, and an instrument that could not recover it would not be measuring the same thing.
+
+### 🟢 The result over 71 carried cells — and the headline is a negative finding worth more than a positive one
+
+| verdict | n | share | what it means for a deliverable |
+|---|---|---|---|
+| 🟢 `AGREE` | **63** | 89 % | the registry's own metadata back-links the exact address the shelf carries; the licence cell is corroborated on a second channel |
+| 🔴 `ABSENT` | **6** | 8 % | the record exists and declares **no repository field at all** — the licence may be right, but nothing ties it to the address, so it is unusable as corroboration |
+| 🔴 `PAGES_ONLY` | **1** | 1 % | the only URL is a GitHub **Pages** site, which asserts a published page, not a repository |
+| 🔴 `NO_RECORD` | **1** | 1 % | the package name the manifest claims is 404 on the registry |
+| 🟢 `DISAGREE` | **0** | 0 % | 🟢 **no carried licence cell is attributed to the wrong address** |
+
+🟢 **`Gap 451-A`'s worry does not materialise on this population.** `p451` wrote that *"every licence
+cell these shelves derived from a registry read before `p451` was taken on the name"* and that the
+population had not been swept. 🟢 It is swept now, and the mis-attribution count is **zero**. That is
+the answer, and it is good news that only a measurement could have produced.
+
+### 🔴 The 8 that are not registry-attributable, by mechanism — and PyPI is structurally worse than npm
+
+| address as carried | registry record | mechanism | consequence |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | PyPI `deeptutor` `1.6.15`, declares **Apache-2.0** | 🔴 `ABSENT` — `project_urls` is **`null`**, `home_page` is **`None`** | 🟡 this base's most-cited agent has **no registry back-link**; its grant stands on the first-hand `LICENSE` read (**11 408 B**, re-read EXACT this pass), never on PyPI |
+| [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | PyPI `tincan` `1.0.0`, declares **Apache License 2.0** | 🔴 `PAGES_ONLY` — the sole URL is `rusticisoftware.github.io/TinCanPython/` | 🔴 **the trap a naive `grep -i github` falls into**: a Pages host's owner segment need not equal the repository owner, so the string matches and the evidence does not |
+| [`openedx/openedx-mcp`](https://github.com/openedx/openedx-mcp) | PyPI `openedx-mcp` `0.1.9`, declares **AGPL-3.0** | 🔴 `ABSENT` | 🔴 an **AGPL** claim with no back-link is the worst case of the eight: the licence is the one that decides whether Globant can ship it |
+| [`appliedrelevance/frappe_mcp_server`](https://github.com/appliedrelevance/frappe_mcp_server) | PyPI `frappe-mcp-server` `1.2.0`, declares **MIT** | 🔴 `ABSENT` | 🟡 permissive but uncorroborated |
+| [`django-by-kelsoncm/django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap) | PyPI `django-suap-auth` `1.8.9`, declares **MIT License** | 🔴 `ABSENT` | 🟡 LATAM (IFRN/SUAP) rostering leg, uncorroborated |
+| [`InCruiter-NewProducts/proctoring-sdk`](https://github.com/InCruiter-NewProducts/proctoring-sdk) | npm `@incproctor/proctoring-sdk` `1.0.4`, declares **`SEE LICENSE IN LICENSE`** | 🔴 `ABSENT` | 🔴 **`Gap 451-C`'s unrecoverable class, but on a LIVE package**: the grant names a file and the record gives no way to locate it |
+| [`imazhar101/mcp-canvas-server`](https://github.com/imazhar101/mcp-canvas-server) | npm `@imazhar101/mcp-canvas-server` `2.1.3`, **no licence field** | 🔴 `ABSENT` | 🔵 already carried as unauditable since `p143`; the sweep reproduces it |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | npm `blackboard-learn-mcp` | 🔴 `NO_RECORD` | 🔵 reproduces this shelf's own `p387` finding — the manifest claims a name that was never published |
+
+🔴 **The mechanism splits by registry, and it is not symmetric: 4 of the 6 `ABSENT` and the single
+`PAGES_ONLY` are PyPI, against 2 `ABSENT` on npm.** npm's `repository` field is conventional to the
+point of near-universality; PyPI's `project_urls` is optional and frequently `null`. 🟢 **Operational
+rule this yields: the registry channel corroborates npm-published grants and largely cannot
+corroborate PyPI-published ones.** A pass that treats "it is on a registry" as uniform evidence is
+wrong about Python, which is most of this base's tutoring and analytics tier.
+
+### 🔴 Three false DISAGREE verdicts this pass produced, and they are the whole lesson
+
+🔴 **Before correction the sweep reported three mis-attributions. All three were mine, not the
+shelves'** — I had filled the *claimed address* column by deriving it from the package name, which is
+the precise heuristic `Gap 451-A` was registered to forbid.
+
+| package | address I derived from the name | address the shelf actually carries | who was right |
+|---|---|---|---|
+| npm `@superbuilders/oneroster` | `superbuilders/oneroster` | 🟢 `trilogy-group/oneroster-ts` — recorded at `agents/trending.md:17492` | 🟢 **the shelf** |
+| npm `@longsightgroup/qti3-core` | `longsightgroup/qti3-core` | 🟢 `LongsightGroup/qti3` — and `repos/trending.md:37948` **already records that `qti3-core` is 404** | 🟢 **the shelf**, twice over |
+| npm `@groton/canvas-api` | `groton/canvas-api` | 🟢 `groton-school/canvas-cli` — recorded at `repos/trending.md:6858` | 🟢 **the shelf** |
+
+🟢 **Measured error rate of the forbidden heuristic, on a population where the truth was already
+written down: 3 of 3 of its disagreements were the heuristic's own fault.** 🔵 That is a stronger
+argument for `Gap 451-A`'s rule than the sweep's clean result is, and it is only available because
+the shelves had recorded the right answer first.
+
+### 🔴 A fourth instrument defect, in the same class: the normaliser matched `github.com` ONLY
+
+🔴 The first cut of `norm()` accepted only `github.com`, so PyPI `travo` — which declares
+`https://gitlab.com/travo-cr/travo.git/`, an **exact and correct** back-link — came back `ABSENT`.
+🟢 A forge-blind back-link checker manufactures absences on every project that is not on GitHub, and
+this base carries `travo-cr/travo` on **GitLab** precisely so that case exists. 🟢 Fixed: the
+normaliser now returns a **forge-qualified** `forge/owner/repo`, so two forges holding the same
+`owner/repo` pair can never score as agreeing, and a new `FOREIGN_FORGE` verdict separates
+"different forge" from "different project". `travo` reads `AGREE` under the corrected instrument.
+
+🔴 **And a fifth, caught by the same discipline:** the `PAGES_ONLY` class **could not fire** in the
+first cut — `pypi()` discarded the Pages URL before the grader saw it, so the class read as *"no
+project ever did this"*. A verdict class that cannot fire is worse than no class at all. Fixed, and
+`tincan` is what it catches.
+
+### 🟢 One promotion, and it is a category this shelf has not carried before
+
+| repository | grant, read first-hand at `HEAD` | surface | region |
+|---|---|---|---|
+| [`D4vRAM369/pbl-project-chronicler`](https://github.com/D4vRAM369/pbl-project-chronicler) | 🟢 **MIT** — `LICENSE` **1 066 B `sha256₁₂ 95576ceceaa3`**, title `MIT License`; npm `pbl-project-chronicler` back-links the exact slug (🟢 `AGREE`) | An **agent skill** for Claude Code, Codex and OpenCode that turns a development session into *pedagogical* documentation: a glossary with analogies, a reproducible step-by-step, architecture decisions **and their reasons**, and `05_ERRORES_Y_SOLUCIONES.md` — real errors kept deliberately as *"oro pedagógico"*. Installs per detected agent (`npx pbl-project-chronicler --claude/--codex`) | ⚪ **Global** — Spanish-first (`README.md` ES, `README_english-version.md` EN). 🔵 **No institution or country is asserted, so none is recorded**, per `p451`'s rule for `tcpassos/moodle-student-mcp` |
+
+🟢 **Why it is a new category and not another connector.** Every agent on this shelf until now points
+*at* an education system — Moodle, Canvas, Blackboard, Brightspace, a registrar. This one points at
+the **development session itself** and treats it as the learning object. 🔵 It is the first instance
+on these shelves of *pedagogical instrumentation of the coding agent*, which is a different buy:
+it needs no LMS, no institutional credential and no integration review, so it is deployable inside a
+Globant engagement on day one rather than after a security review of an LMS token.
+
+🟡 **Not a star claim.** This host has no channel returning a star count (the GitHub API is
+`403`/denied here), so no popularity figure is published — only the grant, the ref and the surface,
+each read this pass.
+
 ## 🆕 `p451` — **🟢 THE NINE UNREACHABLE ADDRESSES `p450` COULD ONLY COUNT ARE NOW TYPED: six of nine are proved to have EXISTED and been WITHDRAWN, because a published artifact's metadata records the repository URL at publish time and a never-existing address cannot have one. 🔴 And two of the three remaining have registry name-hits that belong to THIRD PARTIES — a future pass treating a name hit as evidence would have attributed a live MIT project to a dead address.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED.** The host refused

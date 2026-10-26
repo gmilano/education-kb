@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — reads 2026-10-26, commit 2026-10-26 — **🔴 `Gap 450-A` IS ANSWERED, AND THE ANSWER REFUTES ITS OWN PREMISE: `p450` said "a new row requires a new CHANNEL, not a new query"; `p451` changed channel and got 2 rows; this pass changed channel and query on the SAME channel and got ZERO — then changed the VOCABULARY and got 39 addresses at zero prior hits from the identical channel. 🟢 The variable was never the channel. It is the word list.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes, so nothing here is
+gate-attested. Append-only: this section is added at the top and every prior section is kept
+below it, byte-identical.
+
+### 🔴 The test, with the denominator committed before the result was read
+
+`p451` promoted two rows off **npm registry search** and concluded the channel was the variable.
+🟢 This pass holds the channel fixed and varies only the query vocabulary, which is the control
+`p451` could not run on itself.
+
+| leg | vocabulary | repository-bearing hits | 🔴 **at zero prior hits** |
+|---|---|---|---|
+| `moodle mcp` | LMS + protocol | 20 | **0** |
+| `canvas lms mcp` | LMS + protocol | 20 | **0** |
+| `lms agent tutor` | LMS + agent | 20 | **0** |
+| `education mcp server` | sector + protocol | 20 | **0** |
+| `gradebook mcp` | LMS object + protocol | 20 | **0** |
+| `student information system mcp` | SIS + protocol | 20 | **0** |
+| 🟢 `literacy assessment` | pedagogy, no LMS term | — | **ran** |
+| 🟢 `special education IEP` | pedagogy, no LMS term | — | **ran** |
+| 🟢 `spaced repetition tutor` | pedagogy, no LMS term | — | **ran** |
+| 🟢 `vocational training skills` | pedagogy, no LMS term | — | **ran** |
+| 🟢 `aprendizaje escuela` | pedagogy, **Spanish** | — | **ran** |
+| 🟢 `early childhood learning` | pedagogy, no LMS term | — | **ran** |
+
+🔴 **Six LMS-vocabulary legs, 120 graded hits, ZERO at zero prior hits — the seventh consecutive
+nil.** Every candidate was already shelved: `csmediapro/moodle-mcp-server` (38 prior files),
+`owentaylor/canvas-mcp` (20), `marcosnahuel/moodle-mcp` (19), `likr/canvas-lms-agent` (16),
+`SidneyBissoli/uis-mcp-server` (10), `Fireiscoolsolo/canvas-lms-mcp-local` (10),
+`gafapa/moodle-core-cli` (9), `bunizao/moodle-cli` (9), `falkenslab/moodle-driver` (7),
+`AnonymousOnyx22/moodle-student-mcp` (6), `AnonymousOnyx22/canvas-lms-student-mcp` (6),
+`DamPhuQuy/Agent-as-a-tutor` (5), `1alexandrer/moodle-mcp` (4).
+
+🟢 **Six pedagogy-vocabulary legs on the SAME channel returned 39 addresses at zero prior hits.**
+🔵 So the saturation that `p450` attributed to the channel, and `p451` to the query, belongs to
+**neither**: it belongs to the *word list*. These shelves have exhaustively covered
+`{moodle, canvas, blackboard, brightspace, LMS, SIS} × {mcp, agent, tutor, server}` and will keep
+returning nil against it no matter which channel is used. 🔴 **That is why five previous passes
+could not explain their own nils.**
+
+### 🔴 The new vocabulary's cost, measured: 7 of 10 live packages back-link a DEAD address
+
+🟢 The 39 at zero are mostly not education-vertical — `electron`, `picomatch`, `pdf.js`, nine
+`@stdlib/math-base-*` — because a pedagogy word list has no sector anchor. Ten were plausibly
+education-vertical and each was probed at `HEAD`:
+
+| address, as its live npm package declares it | `LICENSE` at `HEAD` | `README.md` at `HEAD` | verdict |
+|---|---|---|---|
+| [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) | 🟢 **200**, MIT, 1 101 B | 🟢 **200**, 24 824 B | 🟢 **PROMOTED** → [`repos/foundations.md`](../repos/foundations.md) |
+| [`D4vRAM369/pbl-project-chronicler`](https://github.com/D4vRAM369/pbl-project-chronicler) | 🟢 **200**, MIT, 1 066 B | 🟢 **200**, 4 504 B | 🟢 **PROMOTED** → [`agents/top.md`](top.md) |
+| [`UrielCuriel/codexivo`](https://github.com/UrielCuriel/codexivo) | 🔴 **404** on four paths | 🟢 **200**, 9 150 B | 🟡 live repo, **no grant** — a Spanish-language teaching programming language, unusable without one |
+| [`tianming3/easy-skills`](https://github.com/tianming3/easy-skills) | 🔴 **404** | 🟢 **200**, **26 B** | 🔴 a 26-byte README is a placeholder, not a project |
+| [`iep-ui/iep-ui`](https://github.com/iep-ui/iep-ui) | 🔴 **404** | 🔴 **404** | 🔴 **does not resolve** |
+| [`sanity-labs/ai-literacy-framework`](https://github.com/sanity-labs/ai-literacy-framework) | 🔴 **404** | 🔴 **404** | 🔴 **does not resolve** |
+| [`hablala/hablala`](https://github.com/hablala/hablala) | 🔴 **404** | 🔴 **404** | 🔴 **does not resolve** |
+| [`atlas-training-company/atlas`](https://github.com/atlas-training-company/atlas) | 🔴 **404** | 🔴 **404** | 🔴 **does not resolve** |
+| [`gregmontalvo/badgie`](https://github.com/gregmontalvo/badgie) | 🔴 **404** | 🔴 **404** | 🔴 **does not resolve** |
+| [`juandacor/opencode-menthor`](https://github.com/juandacor/opencode-menthor) | 🔴 **404** | 🔴 **404** | 🔴 **does not resolve** |
+
+🔴 **Six of ten declared back-links do not resolve, and two more resolve to a repository with no
+grant: a 20 % yield.** 🟢 **This is the exact inverse of `Gap 420-C`, and it is a new fact about the
+registry channel.** `Gap 420-C` asked whether a dead GitHub address ever existed, and `p451` answered
+it by finding the package that outlived the repository. 🔴 This pass finds the **mirror case**: a
+*live, currently-published* package whose `repository` field points at an address that does not
+resolve. 🔵 So a back-link is evidence that an address **existed**, exactly as `p451` established —
+and it is **not** evidence that the address is reachable now. The two probes are independent and a
+promotion needs both, which is why every row above was probed at `HEAD` before anything was written.
+
+### 🟢 The grant that is recoverable only while its repository lives
+
+🔵 npm `@geoalgeria/formation-professionnelle` `2.1.6` declares its licence as the string
+**`SEE LICENSE IN LICENSE`** — byte-identical to `ale-alejandro/beadkit`, which `Gap 451-C` records
+as the one **unrecoverable** grant among six withdrawn addresses. 🟢 The difference is only that
+`geoalgeria` is alive: its `LICENSE` resolves at `HEAD` and reads **MIT**, 1 101 B,
+`sha256₁₂ 691e4ec845d7`. 🔴 **`SEE LICENSE IN LICENSE` is therefore not a licence at all but a
+pointer whose target is outside the registry** — recoverable today, unrecoverable the hour the
+repository is withdrawn, with no notice and no archival copy. 🟢 `Gap 451-C`'s recoverability axis
+now has a **live** instance and not only post-mortem ones, and the operational rule is to read and
+**store** the payload at promotion time rather than cite the manifest.
+
 ## 🆕 `p451` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE SIXTH CONSECUTIVE NIL ON THE PRESCRIBED LEGS IS BROKEN BY A CHANNEL, NOT BY A QUERY: `Gap 450-A` said a new row needs a new CHANNEL, and the registry search channel returned TWO unshelved addresses in the same hour the four regional legs returned 24 tokens and ZERO novel facts. 🔴 `make hooks` DENIED, so no gate attests this section.**
 
 🔵 **APPEND-ONLY shelf** — this section is inserted above `p450`'s; nothing below it is rewritten.

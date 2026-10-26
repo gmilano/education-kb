@@ -1,0 +1,72 @@
+registry	package	claimed_slug	verdict	declared_repository	declared_licence	version	normalised
+npm	@thanh01.pmt/interactive-quiz-kit	thanh01pmt/interactive-quiz-kit	AGREE	git+https://github.com/thanh01pmt/interactive-quiz-kit.git	MIT	1.4.11	github.com/thanh01pmt/interactive-quiz-kit
+npm	beadkit	ale-alejandro/beadkit	AGREE	git+https://github.com/ale-alejandro/beadkit.git	SEE LICENSE IN LICENSE	0.1.0	github.com/ale-alejandro/beadkit
+npm	rhizome-lms-mcp	Mckaroff/GraphLMS	AGREE	git+https://github.com/Mckaroff/GraphLMS.git	MIT	0.3.1	github.com/mckaroff/graphlms
+npm	@santillana-ai/create-tutor-app	santillana-ai/tutor-sdk	AGREE	git+https://github.com/santillana-ai/tutor-sdk.git	MIT	5.9.0	github.com/santillana-ai/tutor-sdk
+npm	ase-moodle-mcp	FiredMosquito831/ase-moodle-mcp	AGREE	git+https://github.com/FiredMosquito831/ase-moodle-mcp.git	Apache-2.0	0.2.2	github.com/firedmosquito831/ase-moodle-mcp
+npm	@tcpassos/moodle-student-mcp	tcpassos/moodle-student-mcp	AGREE	git+https://github.com/tcpassos/moodle-student-mcp.git	MIT	0.2.1	github.com/tcpassos/moodle-student-mcp
+npm	@dodona/dolos	dodona-edu/dolos	AGREE	git+https://github.com/dodona-edu/dolos.git	MIT	2.10.0	github.com/dodona-edu/dolos
+npm	dsh-aha-tutor	BaronCyrus/dsh-aha-tutor	AGREE	git+https://github.com/BaronCyrus/dsh-aha-tutor.git	MIT	1.7.0	github.com/baroncyrus/dsh-aha-tutor
+npm	dsh-diagnostic-tutor	SenmuuuuW/dsh-diagnostic-tutor	AGREE	git+https://github.com/SenmuuuuW/dsh-diagnostic-tutor.git	MIT	0.1.1	github.com/senmuuuuw/dsh-diagnostic-tutor
+npm	canvas-mcp-server	DMontgomery40/mcp-canvas-lms	AGREE	git+https://github.com/DMontgomery40/mcp-canvas-lms.git	MIT	2.2.3	github.com/dmontgomery40/mcp-canvas-lms
+npm	d2l-mcp-server	general-mudkip/d2l-mcp-server	AGREE	git+https://github.com/general-mudkip/d2l-mcp-server.git	MIT	1.0.1	github.com/general-mudkip/d2l-mcp-server
+npm	blackboard-learn-mcp	nitsuah/bb-mcp	NO_RECORD				
+npm	brightspace-mcp-server	RohanMuppa/brightspace-mcp-server	AGREE	git+https://github.com/RohanMuppa/brightspace-mcp-server.git	MIT	5.1.23	github.com/rohanmuppa/brightspace-mcp-server
+npm	brightspace-d2l-mcp	AnonymousOnyx22/brightspace-d2l-mcp	AGREE	git+https://github.com/AnonymousOnyx22/brightspace-d2l-mcp.git	MIT	1.4.4	github.com/anonymousonyx22/brightspace-d2l-mcp
+npm	brightspace-mcp	JhostinAleck/brightspace-mcp	AGREE	git+https://github.com/JhostinAleck/brightspace-mcp.git	MIT	1.3.1	github.com/jhostinaleck/brightspace-mcp
+npm	@r-huijts/canvas-mcp	r-huijts/canvas-mcp	AGREE	git+https://github.com/r-huijts/canvas-mcp.git	MIT	1.5.1	github.com/r-huijts/canvas-mcp
+npm	@ankimcp/anki-mcp-server	ankimcp/anki-mcp-server	AGREE	git+https://github.com/ankimcp/anki-mcp-server.git	MIT	0.27.0	github.com/ankimcp/anki-mcp-server
+npm	proctoring.js	mdestafadilah/proctoring.js	AGREE	git+https://github.com/mdestafadilah/proctoring.js.git	MIT	0.5.1	github.com/mdestafadilah/proctoring.js
+npm	@exam_guard/core	Scaler-Opensource/exam-guard	AGREE	git+https://github.com/Scaler-Opensource/exam-guard.git	ISC	10.1.0	github.com/scaler-opensource/exam-guard
+npm	exam-guard	aswanth9495/exam-guard	AGREE	git+https://github.com/aswanth9495/exam-guard.git	ISC	10.0.4	github.com/aswanth9495/exam-guard
+npm	@incproctor/proctoring-sdk	InCruiter-NewProducts/proctoring-sdk	ABSENT		SEE LICENSE IN LICENSE	1.0.4	
+npm	ltijs	Cvmcosta/ltijs	AGREE	git+https://github.com/Cvmcosta/ltijs.git	Apache-2.0	7.0.7	github.com/cvmcosta/ltijs
+npm	@intellectif/lk-core	intellectif/learning-kit	AGREE	git+https://github.com/intellectif/learning-kit.git	MIT	1.5.0	github.com/intellectif/learning-kit
+npm	@creaditor/course-starterkit	Creaditor/frontend	AGREE	git+https://github.com/Creaditor/frontend.git	ISC	0.13.0	github.com/creaditor/frontend
+npm	@bncc/dados	bncc-dev/bncc-pacotes	AGREE	git+https://github.com/bncc-dev/bncc-pacotes.git	MIT	0.7.0	github.com/bncc-dev/bncc-pacotes
+npm	@bncc/mcp	bncc-dev/bncc-pacotes	AGREE	git+https://github.com/bncc-dev/bncc-pacotes.git	MIT	0.5.0	github.com/bncc-dev/bncc-pacotes
+npm	lingua-mcp	Marsmanleo/LinguaMCP	AGREE	git+https://github.com/Marsmanleo/LinguaMCP.git	Apache-2.0	0.3.0	github.com/marsmanleo/linguamcp
+npm	aimlinterviews-mcp	alirezadir/AIMLInterviews	AGREE	git+https://github.com/alirezadir/AIMLInterviews.git	MIT	0.1.2	github.com/alirezadir/aimlinterviews
+npm	@falkenslab/moodle-mcp	falkenslab/moodle-mcp	AGREE	git+https://github.com/falkenslab/moodle-mcp.git	MIT	0.6.0	github.com/falkenslab/moodle-mcp
+npm	@promptster/rubric	promptster-ai/rubric	AGREE	git+https://github.com/promptster-ai/rubric.git	MIT	0.7.0	github.com/promptster-ai/rubric
+npm	blackboard-mcp	felipedias-ie/blackboard-mcp	AGREE	git+https://github.com/felipedias-ie/blackboard-mcp.git	MIT	0.1.2	github.com/felipedias-ie/blackboard-mcp
+npm	@imazhar101/mcp-canvas-server	imazhar101/mcp-canvas-server	ABSENT			2.1.3	
+npm	@superbuilders/oneroster	trilogy-group/oneroster-ts	AGREE	git+https://github.com/trilogy-group/oneroster-ts.git		0.7.0	github.com/trilogy-group/oneroster-ts
+npm	@longsightgroup/qti3-core	LongsightGroup/qti3	AGREE	git+https://github.com/LongsightGroup/qti3.git	MIT	0.13.3	github.com/longsightgroup/qti3
+npm	@groton/canvas-api	groton-school/canvas-cli	AGREE	https://github.com/groton-school/canvas-cli.git		0.3.11	github.com/groton-school/canvas-cli
+pypi	unist-blackboard-mcp	parkseokjune/unist-blackboard-mcp	AGREE	https://github.com/parkseokjune/unist-blackboard-mcp	MIT	0.2.0	github.com/parkseokjune/unist-blackboard-mcp
+pypi	librus-mcp	krzysztofbury/librus-mcp	AGREE	https://github.com/krzysztofbury/librus-mcp	MIT License	2.2.1	github.com/krzysztofbury/librus-mcp
+pypi	smartschool-mcp	MauroDruwel/Smartschool-MCP	AGREE	https://github.com/MauroDruwel/Smartschool-MCP	MIT	0.3.0	github.com/maurodruwel/smartschool-mcp
+pypi	d2l-cli	Aaryan-Kapoor/d2l-cli	AGREE	https://github.com/Aaryan-Kapoor/d2l-cli	MIT	0.3.0	github.com/aaryan-kapoor/d2l-cli
+pypi	swiss-moodle-mcp	Dathis/swiss-moodle-mcp	AGREE	https://github.com/Dathis/swiss-moodle-mcp		0.5.0	github.com/dathis/swiss-moodle-mcp
+pypi	mcp-moodle	Snaw80/moodle-mcp	AGREE	https://github.com/Snaw80/moodle-mcp	MIT	0.1.2	github.com/snaw80/moodle-mcp
+pypi	moodle-mcp	loyaniu/moodle-mcp	AGREE	https://github.com/loyaniu/moodle-mcp		0.2.1	github.com/loyaniu/moodle-mcp
+pypi	django-lti-toolbox	openfun/django-lti-toolbox	AGREE	https://github.com/openfun/django-lti-toolbox	MIT	2.0.0	github.com/openfun/django-lti-toolbox
+pypi	django-lti	academic-innovation/django-lti	AGREE	https://github.com/academic-innovation/django-lti	MIT License	0.10.1	github.com/academic-innovation/django-lti
+pypi	jupyterhub-ltiauthenticator	jupyterhub/ltiauthenticator	AGREE	https://github.com/jupyterhub/ltiauthenticator	BSD 3-Clause License                  Copyright (c) 2016,...	1.6.3	github.com/jupyterhub/ltiauthenticator
+pypi	lti-consumer-xblock	openedx/xblock-lti-consumer	AGREE	https://github.com/openedx/xblock-lti-consumer	GNU Affero General Public License v3	11.4.3	github.com/openedx/xblock-lti-consumer
+pypi	PyLTI1p3	dmitry-viskov/pylti1.3	AGREE	https://github.com/dmitry-viskov/pylti1.3	MIT	2.0.0	github.com/dmitry-viskov/pylti1.3
+pypi	django-suap-auth	django-by-kelsoncm/django-auth-suap	ABSENT		MIT License	1.8.9	
+pypi	now-lms	bmosoluciones/now-lms	AGREE	https://github.com/bmosoluciones/now-lms		2.0.4	github.com/bmosoluciones/now-lms
+pypi	edfi-lms-harmonizer	Ed-Fi-Exchange-OSS/LMS-Toolkit	AGREE	https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit	Apache-2.0	1.2.2	github.com/ed-fi-exchange-oss/lms-toolkit
+pypi	qti-package-maker	vosslab/qti_package_maker	AGREE	https://github.com/vosslab/qti_package_maker	GNU Lesser General Public License v3 (LGPLv3)	26.7.14	github.com/vosslab/qti_package_maker
+pypi	sigaa-cli	macielti/sigaa-cli	AGREE	https://github.com/macielti/sigaa-cli	GNU General Public License v3 or later (GPLv3+)	0.8.0	github.com/macielti/sigaa-cli
+pypi	canvas-local-mcp	admin978/canvas-mcp	AGREE	https://github.com/admin978/canvas-mcp	MIT	0.1.3	github.com/admin978/canvas-mcp
+pypi	canvasapi	ucfopen/canvasapi	AGREE	https://github.com/ucfopen/canvasapi	MIT License	3.6.0	github.com/ucfopen/canvasapi
+pypi	tincan	RusticiSoftware/TinCanPython	PAGES_ONLY	http://rusticisoftware.github.io/TinCanPython/	Apache License 2.0	1.0.0	
+pypi	coqui-tts	idiap/coqui-ai-TTS	AGREE	https://github.com/idiap/coqui-ai-TTS	MPL-2.0	0.28.0	github.com/idiap/coqui-ai-tts
+pypi	open-schools	rubelw/OSSS	AGREE	https://github.com/rubelw/OSSS	Apache-2.0	0.0.0.dev2	github.com/rubelw/osss
+pypi	clawed	SirhanMacx/Claw-ED	AGREE	https://github.com/SirhanMacx/Claw-ED	MIT License	9.18.2026.1	github.com/sirhanmacx/claw-ed
+pypi	ralph-malph	openfun/ralph	AGREE	https://github.com/openfun/ralph	MIT License                  Copyright (c) 2020-present F...	5.1.0	github.com/openfun/ralph
+pypi	pybryt	microsoft/pybryt	AGREE	https://github.com/microsoft/pybryt	MIT	0.7.0	github.com/microsoft/pybryt
+pypi	deeptutor	HKUDS/DeepTutor	ABSENT		Apache-2.0	1.6.15	
+pypi	educhain	satvik314/educhain	AGREE	https://github.com/satvik314/educhain	MIT License	0.4.0	github.com/satvik314/educhain
+pypi	travo	gitlab.com/travo-cr/travo	AGREE	https://gitlab.com/travo-cr/travo.git/		2.1.1	gitlab.com/travo-cr/travo
+pypi	openedx-mcp	openedx/openedx-mcp	ABSENT		AGPL-3.0	0.1.9	
+pypi	frappe-mcp-server	appliedrelevance/frappe_mcp_server	ABSENT		MIT	1.2.0	
+packagist	packbackbooks/lti-1p3-tool	packbackbooks/lti-1-3-php-library	AGREE	https://github.com/packbackbooks/lti-1-3-php-library	Apache-2.0	v5.x-dev	github.com/packbackbooks/lti-1-3-php-library
+packagist	wikiwijs/php-qti3	Kennisnet/php-qti3	AGREE	https://github.com/kennisnet/php-qti3	MIT	0.7.0	github.com/kennisnet/php-qti3
+packagist	umich-its-tl/caliper-php	tl-its-umich-edu/caliper-php-public	AGREE	https://github.com/tl-its-umich-edu/caliper-php-public	proprietary	1.0.1	github.com/tl-its-umich-edu/caliper-php-public
+packagist	dev-cucei-itrans/siiau-api-client	dev-cucei-itrans/siiau-api-client	AGREE	https://github.com/dev-cucei-itrans/siiau-api-client	BSD-3-Clause	v1.1.3	github.com/dev-cucei-itrans/siiau-api-client
+packagist	oat-sa/tao-core	oat-sa/tao-core	AGREE	https://github.com/oat-sa/tao-core	GPL-2.0-only	v56.14.9	github.com/oat-sa/tao-core
+packagist	imsglobal/caliper	IMSGlobal/caliper-php	AGREE	https://github.com/IMSGlobal/caliper-php	LGPL-3.0	1.2.0-beta	github.com/imsglobal/caliper-php

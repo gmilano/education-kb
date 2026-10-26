@@ -1,0 +1,8 @@
+# positive + fabricated negative, both directions, same process (P249)
+npm	express	expressjs/express
+npm	globant-fab-452-nope-pkg	globant-fab-452/nope
+pypi	requests	psf/requests
+pypi	globant-fab-452-nope-pkg	globant-fab-452/nope
+packagist	laravel/framework	laravel/framework
+packagist	globant-fab-452/nope	globant-fab-452/nope
+npm	blackboard-mcp	e9x/blackboard-mcp

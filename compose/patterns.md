@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — **Two recipes, both built only from grants read first-hand this pass. 🟢 `P452-A` is a licence-assurance gate that encodes the one thing this pass proved — that registry corroboration works for npm and fails for PyPI — so an engagement stops treating "it's on a registry" as uniform evidence. 🟢 `P452-B` is an EMEA/Maghreb vocational-training engagement that is buildable because the institution registry finally exists.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is
+gate-attested; the four load-bearing contracts were re-implemented by hand and all four are green.
+
+---
+
+### 🟢 `P452-A` — **Dependency licence assurance that knows which half of the tree it can corroborate**
+
+🔴 **The problem it solves, measured not assumed.** `p451` made a rule standing: a registry record is
+evidence for a repository only when its own metadata **back-links that exact `owner/repo`**. 🟢 This
+pass swept all **71** carried registry-sourced cells and found **0** mis-attributions — but **8 that
+cannot be corroborated at all**, and the mechanism is ecosystem-specific: **4 of 6 `ABSENT` plus the
+only `PAGES_ONLY` are PyPI**. 🔴 So a single uniform "check the registry" step silently passes the
+Node tier and silently produces nothing for the Python tier.
+
+**Wiring, concrete:**
+
+1. 🟢 **Back-link resolver** — [`compose/code/p452-backlink-sweep/sweep.py`](code/p452-backlink-sweep/sweep.py),
+   as built and run this pass. For each dependency it reads `registry.npmjs.org/{pkg}`,
+   `pypi.org/pypi/{pkg}/json` or `packagist.org/packages/{v}/{p}.json` and emits
+   `AGREE` / `DISAGREE` / `FOREIGN_FORGE` / `PAGES_ONLY` / `ABSENT` / `NO_RECORD`.
+   🔴 Two defects this pass had to fix in it are load-bearing and must not be reintroduced:
+   the normaliser must be **forge-qualified** (a `github.com`-only matcher called PyPI `travo`'s
+   exact GitLab back-link `ABSENT`), and a **GitHub Pages** URL must grade `PAGES_ONLY`, never as a
+   back-link — `rusticisoftware.github.io/TinCanPython/` matches a naive `grep -i github` and is
+   not evidence.
+2. 🔴 **Ecosystem routing, which is the whole point.** `AGREE` on npm → accept the registry licence
+   as corroboration. **Any PyPI dependency → go straight to the payload**, because the expected
+   outcome is `ABSENT`. Payload read is `curl -w '%{size_download}'` against
+   `raw.githubusercontent.com/{slug}/HEAD/LICENSE`, recording **bytes + `sha256₁₂`** — never shell
+   command substitution, which strips the trailing newline and reads one byte low (`p450`; 11 such
+   cells found on these shelves this pass).
+3. 🔴 **Hard-fail list, each with a live instance from these shelves:**
+   `SEE LICENSE IN LICENSE` → **not a licence, a pointer out of the registry**
+   (npm `@geoalgeria/formation-professionnelle`, `@incproctor/proctoring-sdk`; and
+   `ale-alejandro/beadkit`, where the repository was withdrawn and **no party can now produce the
+   grant** — `Gap 451-C`). No licence field at all → `@imazhar101/mcp-canvas-server` `2.1.3`, which
+   registers **227 tools of which 61 are undocumented writes** to an LMS. Version-split grants →
+   `dev-cucei-itrans/siiau-api-client`, **`proprietary` on 4 of 7 versions**, so a `^1.0`
+   constraint resolves *into* the proprietary band.
+4. 🟢 **Store the payload at approval time.** The `geoalgeria` case is the argument: a
+   `SEE LICENSE IN LICENSE` grant is recoverable **only while its repository lives**, with no notice
+   and no archival copy when it is withdrawn.
+
+🟢 **Stack:** `sweep.py` + `curl` + the repo's own CI. 🟡 **Effort:** 1–2 weeks to wire into a
+pipeline. 🔵 **What it buys:** the Python half of an education stack stops being certified by a
+check that structurally cannot certify it.
+
+---
+
+### 🟢 `P452-B` — **EMEA / Maghreb vocational-training engagement, keyed on a registry that now exists**
+
+🔴 **Why this was not buildable before this pass.** This base could answer *"what runs a school"* —
+eight platforms on [`verticals/solutions.md`](../verticals/solutions.md) — and could not answer
+*"which schools exist"* for any region. 🔴 A ministry or group engagement sizes and segments the
+estate **before** it picks a platform, so the missing layer was the first one needed.
+
+**Wiring, concrete, every grant read first-hand at `HEAD` this pass or carried with a byte-exact
+re-read:**
+
+| layer | component | grant |
+|---|---|---|
+| 🟢 **Institution registry** *(the join key)* | [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) — **1 932** vocational establishments (856 CFPA, 182 INSFP, 723 private accredited, 58 DFEPs) from **MFEP / takwin.dz**, **177** MESRS higher-ed, **11 858** schools, **69** wilayas, GPS + capacity + boarding, EN/FR/AR | 🟢 **MIT**, `LICENSE` 1 101 B `sha256₁₂ 691e4ec845d7` |
+| 🟡 **Delivery platform** | [`moodle/moodle`](https://github.com/moodle/moodle) — the Maghreb's installed base | 🔴 **GPL-3.0**, `COPYING.txt` 35 147 B *(re-read EXACT this pass)* — **link, don't absorb** |
+| 🟢 **Agent access layer** | [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp) — courses, assignments, grades, deadlines; the pattern proven at ASE Bucharest, i.e. **single-institution and permissive** | 🟢 **Apache-2.0**, `LICENSE` 11 358 B `sha256₁₂ cfc7749b96f6` *(re-read EXACT)* |
+| 🟢 **Read-only student surface** | [`tcpassos/moodle-student-mcp`](https://github.com/tcpassos/moodle-student-mcp) — official mobile-app web service, **nothing is ever changed on Moodle**, SSO + MFA | 🟢 **MIT**, `LICENSE` 1 069 B `sha256₁₂ 322307ac9d65` |
+| 🟢 **Offline tier** *(non-negotiable here)* | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT**, `LICENSE` 1 097 B *(re-read EXACT this pass)* |
+| 🟢 **Session-to-documentation** | [`D4vRAM369/pbl-project-chronicler`](https://github.com/D4vRAM369/pbl-project-chronicler) — turns CFPA workshop sessions into reproducible step-by-step records; **French/Arabic instructor cohorts need the translated README path, which exists** | 🟢 **MIT**, `LICENSE` 1 066 B `sha256₁₂ 95576ceceaa3` |
+
+**Sequence:** segment the 1 932 establishments by wilaya, type and capacity from the registry → phase
+the rollout territorially against GPS and boarding capacity → stand up Moodle per establishment group
+with Kolibri for low-connectivity wilayas → put `ase-moodle-mcp` on the instructor side and
+`tcpassos/moodle-student-mcp` on the student side (read-only by construction, so it clears a review
+that a write-capable connector does not) → chronicler on practical workshops.
+
+🟡 **Effort:** 10–12 weeks. 🟢 **Licence posture:** the deliverable's own code sits on MIT/Apache-2.0
+and only **links** the GPL-3.0 platform.
+
+🔴 **Four cautions, stated so the recipe is not over-sold.** (1) The registry is **data, not
+software** — no API, no auth, no runtime. (2) Its three tiers do **not** carry equal authority: the
+vocational and higher-education tiers are ministry-sourced (MFEP, MESRS), the **11 858** schools
+figure is **OpenStreetMap-derived** and is a volunteer-mapped count, not a census — they must never
+be cited as one number. (3) `@geoalgeria/*` declares `SEE LICENSE IN LICENSE` on npm, so
+**`P452-A` step 4 applies to this very pattern**: store the payload. (4) 🔴 **One country.** This
+pattern is Algeria-specific; the rest of the Maghreb, the Gulf and sub-Saharan Africa have **no
+registry asset on these shelves** (`Gap 452-E`), and nothing here should be sold as regional
+coverage.
+
 ## 🆕 Pattern BD — `p451` **Grant recovery for a withdrawn dependency: how to keep shipping when the repository behind a component disappears, and how to know within one hour whether you can**
 
 🔵 **Why this pattern.** Six addresses on these shelves were withdrawn from GitHub while their

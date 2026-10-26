@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — **🟢 A vertical layer these shelves have never carried is now populated: the national INSTITUTION REGISTRY — the master list an engagement keys its rollout to, before any LMS is chosen. 🔴 And it exposes the shape of the gap: this base has eight platforms that run a school and almost no data about which schools exist.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is
+gate-attested; the four load-bearing contracts were re-implemented by hand and all four are green.
+
+### 🟢 The new row, read first-hand at `HEAD`
+
+| asset | grant | layer | what it contains | region |
+|---|---|---|---|---|
+| [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) | 🟢 **MIT** — `LICENSE` **1 101 B `sha256₁₂ 691e4ec845d7`**. 🔴 the npm manifest declares only `SEE LICENSE IN LICENSE`, so the **payload** is the grant | 🟢 **Institution registry / reference data** — *new layer on this shelf* | **11 858** schools & kindergartens by cycle (primaire, CEM, lycée, préscolaire, from OpenStreetMap) · **1 932** vocational-training establishments (856 CFPA, 182 INSFP, 723 private accredited, 58 DFEPs — **MFEP / takwin.dz**) · **177** higher-education institutions (universities, grandes écoles, ENS, centres — **MESRS**) · all **69 wilayas**, with GPS, contacts, capacity and boarding · trilingual EN/FR/AR | 🟢 **EMEA** — Algeria |
+
+### 🔴 The gap it makes visible, and it is a real asymmetry in this shelf
+
+🔵 This file carries the platforms that **operate** an institution — Moodle (GPL-3.0), Open edX
+(AGPL-3.0), Canvas LMS CE (AGPL-3.0), Sakai (Apache-2.0), Kolibri (MIT), OpenEduCat (LGPL-3.0),
+BigBlueButton (LGPL-3.0), H5P (MIT). 🔴 **It carries almost nothing that says which institutions
+exist.** Those are different buys and they arrive in a different order: a ministry or a group
+engagement sizes and segments the estate *before* it selects a platform, and until this pass this
+base could serve the second question and not the first.
+
+🟢 **What the registry layer is worth in an engagement.** It is the join key. A rollout plan, a
+territorial phasing, a capacity model, a per-wilaya cost estimate and a baseline for measuring
+reach all key against the institution list; a permissive, ministry-sourced, GPS-bearing list is
+the difference between a proposal with numbers in it and one without.
+
+### 🟡 What this row is NOT, stated so no engagement over-reads it
+
+🔴 It is **data, not software** — there is no API, no auth, no multi-tenancy and no runtime; it is
+npm packages of records. 🔴 It is **one country**. 🔴 Its school tier is **OpenStreetMap-derived**,
+so that 11 858 is a volunteer-mapped count and not a ministry census, while the vocational and
+higher-education tiers **are** ministry-sourced (MFEP, MESRS) — 🟡 **the three tiers do not carry
+the same authority and must not be cited as one figure.**
+
+### 🔴 The rest of the layer, named as an informed absence rather than left silent
+
+🟢 **Comparable permissively-licensed national education registries on these shelves, by region:**
+
+| region | institution-registry asset carried | state |
+|---|---|---|
+| 🟢 **EMEA** | [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) — MIT, Algeria | 🟢 **new this pass** |
+| 🟡 **LATAM** | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) — Brazil's **BNCC curriculum** as data (CC-BY-4.0); [`portabilis/i-educar`](https://github.com/portabilis/i-educar) — **GPL-2.0**, a municipal system, not a registry | 🟡 **curriculum data, not an institution registry** |
+| 🔴 **North America** | — | 🔴 **none carried.** The US equivalents are federal/state series (NCES CCD, IPEDS); 🔵 whether a permissively-licensed packaged form exists has **not been searched** on these shelves |
+| 🔴 **APAC** | — | 🔴 **none carried** |
+| 🔴 **Global** | — | 🔴 **none carried.** UNESCO UIS publishes aggregates, not institution lists |
+
+🔴 **Four of five regions have no institution-registry asset on this shelf, and three of those four
+have never been searched for one.** 🟢 That is an informed gap and it is registered as
+`Gap 452-D`: the layer is newly visible, one country deep, and the absence elsewhere is
+unmeasured rather than established.
+
 ## 🆕 `p451` — **🔴 THIS FILE'S SIIAU ROW UNDERSTATED THE PROBLEM: it recorded the one existing SIS SDK as "abandoned", which is a maintenance fact. The licence fact is worse and is corrected here — FOUR of its seven published versions are `proprietary`, and only `v1.1.2` onward is BSD-3-Clause.**
 
 🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no cell below is

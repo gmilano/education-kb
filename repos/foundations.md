@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p452` — **🟢 `Gap 450-C` ANSWERED WITH A NUMBER after carrying one pass: 394 carried byte cells re-read with the corrected method, 361 reproduce EXACTLY, and the uncorrected trailing-newline method accounts for 11 of them — 2.8 %, not a sweep-wide defect. 🔴 Getting that number took FOUR cuts of the extractor, and the first three each produced a confident phantom-drift list of 200, 104 and 5 rows. Every phantom was caught by a control, never by inspection.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — seventh denial in eight passes. Nothing here is
+gate-attested; the four load-bearing contracts were re-implemented by hand and all four are green.
+
+### 🟢 `Gap 450-C`'s open question, and the answer
+
+`p450` found that reading a payload through shell command substitution **strips the trailing
+newline**, so every byte count taken that way runs **exactly one byte low** — silently, and
+selectively, since a payload with no trailing newline measures identically both ways. 🔵 It left the
+question: *"how many byte counts already on these shelves were produced by the uncorrected
+method?"*, with the warning that a one-byte-low cell is indistinguishable from drift.
+
+🟢 The instrument is
+[`compose/code/p452-byte-census/extract_cells.py`](../compose/code/p452-byte-census/extract_cells.py);
+the census output is committed to
+[`evidence/byte-cell-census.2026-10-26-p452.tsv`](../evidence/byte-cell-census.2026-10-26-p452.tsv).
+Every cell was re-read with `curl -w '%{size_download}'`, the method `p450` proved correct.
+
+| verdict | n | share of 394 | reading |
+|---|---|---|---|
+| 🟢 `EXACT` | **361** | 91.6 % | the carried cell is reproduced to the byte |
+| 🔴 `OFF_BY_ONE` | **13** *(11 confirmed by hand)* | 2.8 % | `measured − carried = 1`, and **every one of them ends in a trailing newline** — `p450`'s mechanism exactly |
+| ⚪ `UNREACHABLE` | **12** | 3.0 % | `404` at `HEAD`; several are addresses this base already carries as withdrawn |
+| 🟡 `OTHER_DELTA` | **8** *(5 genuine)* | 1.3 % | a real disagreement, listed below |
+
+🟢 **The mechanism is confirmed and it is bounded.** Not one of the 361 `EXACT` cells is off by one,
+and all 13 off-by-one cells end in a trailing newline — so the `+1` class is **not noise**, it is
+`p450`'s defect, and it touched under 3 % of the population rather than the sweep `Gap 450-C` feared.
+
+### 🔴 The eleven confirmed, each one a cell to correct rather than a drift to investigate
+
+| address | carried | re-read | ends in newline? |
+|---|---|---|---|
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 11 342 B | 🔴 **11 343 B** | 🟢 yes |
+| [`Git-Kaushal/AI-Teacher-Training`](https://github.com/Git-Kaushal/AI-Teacher-Training) | 2 099 B | 🔴 **2 100 B** | 🟢 yes |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | 11 356 B | 🔴 **11 357 B** | 🟢 yes |
+| [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 1 524 B | 🔴 **1 525 B** | 🟢 yes |
+| [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | 1 067 B | 🔴 **1 068 B** | 🟢 yes |
+| [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | 1 071 B | 🔴 **1 072 B** | 🟢 yes |
+| [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | 1 076 B | 🔴 **1 077 B** | 🟢 yes |
+| [`baker-jr-john/automated-summary-evaluation-llm`](https://github.com/baker-jr-john/automated-summary-evaluation-llm) | 1 070 B | 🔴 **1 071 B** | 🟢 yes |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 11 350 B | 🔴 **11 351 B** | 🟢 yes |
+| [`0xnavarro/IA-PARA-TODOS`](https://github.com/0xnavarro/IA-PARA-TODOS) | 11 470 B | 🔴 **11 471 B** | 🟢 yes |
+| [`ClassroomIO/ClassroomIO`](https://github.com/ClassroomIO/ClassroomIO) | 34 522 B | 🔴 **34 523 B** | 🟢 yes |
+
+🟡 Two further `OFF_BY_ONE` rows are **withheld**, not published: `Ebimsv/AITutorAgent`, whose shelf
+text in fact reads `1 072 B` — equal to the re-read, so the `1 071` my extractor paired with it came
+off a multi-address line; and `GibbonEdu/core`, whose matched line is about `frappe/education`, so
+the attribution cannot be confirmed. 🔵 A cell I cannot attribute is not a finding.
+
+### 🟡 The five genuine disagreements — candidates for upstream drift, not for correction
+
+| address | path | carried | re-read | δ |
+|---|---|---|---|---|
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | `LICENSE` | 1 520 B | 1 094 B | 🔴 **−426** |
+| [`Django-CRM/Django-CRM`](https://github.com/Django-CRM/Django-CRM) | `LICENSE` | 1 069 B | 1 101 B | 🟡 **+32** |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | `LICENSE` | 1 073 B | 1 092 B | 🟡 **+19** |
+| [`junit-team/junit4`](https://github.com/junit-team/junit4) | `LICENSE-junit.txt` | 11 374 B | 11 376 B | 🟡 **+2** |
+| [`jagmarques/awesome-eu-ai-act`](https://github.com/jagmarques/awesome-eu-ai-act) | `LICENSE` | 7 047 B | 7 049 B | 🟡 **+2** |
+
+🔵 A `+2` on an 11 KB Apache payload is the shape of a copyright-year edit; **−426 B** is not, and
+`MysterionRise/adaptive-knowledge-graph` is the one row here that warrants a grant re-read rather
+than a byte correction.
+
+### 🔴 Four cuts of the extractor, and what each wrong cut would have published
+
+🔴 **This is recorded in full because the failure mode is invisible without a control, and three
+separate cuts of this instrument produced a fluent, specific, entirely wrong drift report.**
+
+| cut | defect | phantom "drifts" | how it was caught |
+|---|---|---|---|
+| 🔴 1 | `(\d(?:SEP?\d{3})*)` — unanchored, separator **optional**: on `11 408 B` the engine skipped the leading digit and returned `1408` | **200 of 395**, in a telltale band of +10000 / +20000 / +30000 | 🟢 a hand-written control row asserting DeepTutor is **11 408 B** disagreed with the extracted `1 408` |
+| 🔴 2 | negative lookbehind and mandatory separator added — but the separator class held only **spaces**: on `1,070 B` it matched `070` | **104**, all exactly +1000 / +11000 / +35000 | 🟢 `cat -A` on the raw shelf bytes showed the comma |
+| 🔴 3 | comma added; one cell still failed | **1** | 🟢 an 8-value self-check: the shelf writes `**1.071 B**` with a **period** |
+| 🟢 4 | all four separators; self-check gates the run | **0** | 🟢 8/8 self-check, then 361/394 `EXACT` |
+
+🟢 **The finding underneath the bug, and it is why no earlier pass built this census: across 451
+passes these shelves group thousands FOUR different ways** — U+202F narrow no-break space, plain
+space, comma, and period. 🔴 Any single-separator reader silently truncates the other three **and
+reports the truncation as upstream drift**. The extractor now carries all four and will not run at
+all unless it reproduces eight cells read by hand, one for each separator form.
+
+🔴 **A fifth defect, of a different kind: the path key is a basename.** `LICENSE` at the repository
+root and `legacy_reference/LICENSE` on a vendored subtree collapse to one key, which paired
+`krzysztofbury/librus-mcp`'s **35 149 B GPL-3.0 subtree** figure with its **1 071 B MIT root** cell
+and reported a −34 078 B drift. 🟢 The root cell re-reads at **1 071 B `sha256₁₂ 22e7ab2dbddc`** —
+byte-identical *and* hash-identical to what this base carries, and `p442`'s GPL-3.0 subtree finding
+stands untouched. 🔵 **Four of the five withheld rows are this one defect**, so basename keying is
+the single largest source of phantom drift in a census of this kind.
+
+### 🟢 One foundational repository promoted — and it is reference DATA, not code
+
+| repository | grant, read first-hand at `HEAD` | what it is | region |
+|---|---|---|---|
+| [`yasserstudio/geoalgeria`](https://github.com/yasserstudio/geoalgeria) | 🟢 **MIT** — `LICENSE` **1 101 B `sha256₁₂ 691e4ec845d7`**, title `MIT License`. 🔴 npm declares only `SEE LICENSE IN LICENSE`, so **the payload is the grant and the manifest is not** | A machine-readable registry of **Algeria's education estate**, published as scoped npm packages with GPS coordinates, contacts, capacity and boarding: 🟢 **11 858 schools** and kindergartens classified by cycle (primaire / CEM / lycée / préscolaire) from OpenStreetMap; 🟢 **1 932 vocational-training establishments** — 856 CFPA, 182 INSFP, 723 private accredited, 58 DFEPs — from **MFEP / takwin.dz**; 🟢 **177 higher-education institutions** — universities, grandes écoles, ENS, centres — with official sites, from **MESRS**. All **69 wilayas**. Trilingual `README` (EN / FR / AR). 10 versions, 2026-06-22 → 2026-10-21 | 🟢 **EMEA** — Algeria, asserted by the ministries it sources and the wilaya coverage |
+
+🟢 **Why it belongs on a foundations shelf and not an agents shelf.** It executes nothing. It is the
+layer every education engagement needs first and that this base has had almost nowhere: an
+authoritative, permissively-licensed **master list of institutions** to key a deployment, a rollout
+plan or a market sizing against. 🔵 **And it moves this base's EMEA coverage off Europe for the
+first time** — the EMEA tier here has been Romania (`ase-moodle-mcp`), France, the Netherlands and
+Germany; Algeria and the Maghreb were an unstated absence. 🔴 Stated plainly as `Gap 452-E`: the
+*rest* of the Middle East and Africa remains absent, and this one address does not close it.
+
 ## 🆕 `p451` — **🟢 THE "CIRCULAR GRANT" THIS FILE HAS CARRIED SINCE `p390` IS NOW PROVED RATHER THAN INFERRED — and the proof makes it worse: npm's own record shows `beadkit` published TWO versions whose licence string names a file in a repository that no longer exists, so the grant is not merely unread, it is UNREADABLE BY ANYONE. 🔴 And a second address on this shelf tier turns out to have shipped FOUR `proprietary` versions before its last two went BSD-3-Clause.**
 
 🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no cell below is
