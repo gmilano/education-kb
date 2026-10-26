@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` — **No foundation row is added. 🟢 But seven carried foundation grants were re-read first-hand from their bytes and ALL SEVEN reproduce exactly — and the one that appeared not to was this pass's own case-sensitivity defect, on a row these shelves had already got right.**
+
+🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves through
+a fresh clone rather than the Makefile, so **nothing below is gate-attested**.
+
+🔵 Instrument: a byte-read of the payload at `raw.githubusercontent.com`, gated on `%{http_code}`,
+with two fabricated addresses as negative controls (both **404, 14-byte `404: Not Found`** —
+`Gap 453-E` (d)'s exact mode, correctly refused).
+
+### 🟢 Seven carried foundation grants, re-read and reproduced
+
+| address | shelf value | read this pass | verdict |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 · `COPYING.txt` 35 147 B | **35 147 B** | 🟢 reproduced |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 · 35 136 B · `e12d78569742` | **35 136 B · `e12d78569742`** | 🟢 reproduced |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | Apache-2.0 · `LICENSE.TXT` 11 358 B · `cfc7749b96f6` | **11 358 B · `cfc7749b96f6`** | 🟢 reproduced **at the uppercase path the shelf names** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 ECL-2.0 · 11 120 B · `0688f62d04f1` | **11 120 B · `0688f62d04f1`** | 🟢 reproduced |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | MIT | **MIT · 1 066 B · `f5f955194636`** | 🟢 confirmed, digest now on file |
+| [`openfun/richie`](https://github.com/openfun/richie) | MIT | **MIT · 1 079 B · `e4b2a3148135`** | 🟢 confirmed, digest now on file |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | MIT | **MIT · 1 105 B · `5baaaf977a28`** | 🟢 confirmed, digest now on file |
+
+🟡 Three digests above (`pykt-toolkit`, `richie`, `OATutor`) are **new to this file** — the grants
+were already correct, they simply had no byte count or digest recorded. That is the whole of this
+pass's additive contribution to this shelf.
+
+### 🔴 The defect, on the row that looked like a finding
+
+🔴 This pass's grant ladder probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`
+and four more — **and not `LICENSE.TXT`**. It therefore produced *"`openedx/XBlock` — NO GRANT at
+9 probed paths, head `4b3f5246f43f`, resolved default ref `master`"*, for a **live** repository
+(`AUTHORS` 1 373 B and `README.rst` 7 455 B both 200 on the same ref).
+
+🟢 **The shelf was already right, and more specific than the instrument** — it carries the path as
+**`LICENSE.TXT`, uppercase extension**, and had already recorded the trap verbatim: *"LICENSE.txt
+404 x3, LICENSE.TXT -> 200"*. 🔵 The failure direction is `Gap 455-A`'s — a false *ungranted*
+**discards a usable permissive dependency** — reached by a new mechanism: filename **case**, not
+ref. 🔴 Registered as `Gap 460-A`: no carried probe on these shelves is known to be
+case-insensitive on the extension, and the `REPO_LIVE_NO_GRANT` population has not been re-probed
+for case variants.
+
 ## 🆕 `p459` — **No foundation row is added, and the reason is stated rather than padded: of 42 addresses probed, the 2 unshelved ones carry no licence grant and neither is foundation-grade.**
 
 🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves

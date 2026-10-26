@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` · 2026-10-26 — **The trending movement is the SECOND consecutive measured zero, and this one was measured with a different instrument: 34 addresses, 33 already shelved, 1 new, 0 usable.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### The cross-channel comparison, which is the point of this entry
+
+| pass | instrument | surfaced | unshelved | granted & usable |
+|---|---|---|---|---|
+| `p458` | GitHub repo-search API | 62 | 26 — 41.9 % | rows added |
+| `p459` | GitHub repo-search API, 3 legs | 42 | 2 — 4.8 % | **0** |
+| 🆕 `p460` | web search + **topic-page enumeration** + payload byte-reads | **34** | **1 — 2.9 %** | **0** |
+
+🟢 **Why this entry is worth a line at all:** `p459`'s zero could have been its instrument. It was
+not. A channel sharing no code path with it returns the same zero in the same hour.
+
+### 🔵 Topic-page denominators, recorded because they are a population and not a sample
+
+| topic page | repositories the page reports | top-20 rows read | unshelved among them |
+|---|---|---|---|
+| `topics/ai-tutor` | **788** | 20 | 0 |
+| `topics/ai-education` | **551** | 20 | 0 |
+| `topics/education-ai` | **70** | 20 | **1** |
+
+🔵 Per the standing note on this shelf that **a topic page is star-sorted**, novelty rises with
+pagination — so three unpaginated top-20 reads are a *floor* on the remaining supply, not a census.
+🔴 The single unshelved address, [`mwasifanwar/eduadapt-ai`](https://github.com/mwasifanwar/eduadapt-ai)
+(26★), serves **no grant at 10 probed paths** and is refused.
+
+### 🟡 What is moving, where anything is
+
+🔵 Nothing on this shelf's ★ axis moved enough to report as a trend, and the one movement large
+enough to name is a **correction to a figure this base carried from an external mirror**, not a
+market event: `HKUDS/DeepTutor` reads **43.5k★** at `v1.6.15` (released 2026-10-19) against the
+`22k+` still published in the stale `globant-kb/education/` mirror — see `intel/trends.md`.
+🟡 The categorical observation that survives: of the 60 topic rows read, the dominant *form* is no
+longer a framework or a platform but an **agent skill** — `education-agent-skills` (913★,
+**CC BY-SA 4.0**, 165 skills), `lineage-skill` (463★, **Apache-2.0**), `Papermorph` (949★, **MIT**),
+`algo-sensei` (298★, **MIT**), `Bloom` (292★, **MIT**, `LICENSE` 1 062 B read first-hand). 🔴 All
+five already carried here; the form is the observation, not the rows.
+
 ## 🆕 `p459` · 2026-10-26 — **The week's movement is a ZERO, and it is the first measured zero on the channel that worked: 42 addresses probed, 2 unshelved, both ungranted.**
 
 🔵 Appended above the history, nothing below edited or removed.

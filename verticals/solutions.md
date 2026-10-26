@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` — **No platform is added, and the three licence traps this shelf exists to protect against were re-read from their bytes: Open edX is AGPL-3.0, Sakai is ECL-2.0, Chamilo is GPL-3.0. 🔴 All three are the values a secondary roundup gets WRONG, and this pass independently reproduced the shelf's digests for two of them.**
+
+🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — fresh clone, not the Makefile, so
+nothing below is gate-attested.
+
+🔵 Instrument: payload byte-read at `raw.githubusercontent.com`, gated on `%{http_code}`; two
+fabricated addresses returned **404 / 14-byte body** as negative controls.
+
+### 🔴 The three traps, re-read — and why each one is expensive in an engagement
+
+| platform | what roundups say | 🟢 what the payload says | cost of the error |
+|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 "Apache-2.0" | **AGPL-3.0** · 35 136 B · `e12d78569742` | 🔴 network-copyleft on a **hosted** LMS — the obligation triggers on serving it, which is the deployment model |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 "Apache-2.0" | 🟡 **ECL-2.0** · 11 120 B · `0688f62d04f1` | Apache-derived but **not** Apache — the patent clause is narrowed to the contributing institution's own use |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 "GPL-2.0" | **GPL-3.0** · 35 147 B · `8ceb4b9ee5ad` | 🔴 **GPL-2.0 and GPL-3.0 are mutually incompatible** (`Gap 454-C`'s class) — the wrong version breaks a combination, not just a notice |
+
+🟢 **A canonical-digest observation, free:** Chamilo's `LICENSE` and Moodle's `COPYING.txt` are
+**both 35 147 B with digest `8ceb4b9ee5ad`** — byte-identical, because both serve the unmodified
+GPL-3.0 text. 🔵 That makes `8ceb4b9ee5ad` a **canonical GPL-3.0 fingerprint** on these shelves:
+a payload matching it is the stock licence and carries no project-specific modification, which is
+exactly what a vendoring step needs to know and what a family-name reader cannot tell it.
+
+🟡 **Two more platform grants read, digests new to this file:**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) serves an **8 241 B**
+`LICENSE` (`528f84036800`) that **opens by pointing at `COPYRIGHT`** rather than granting — a
+pointer, `Gap 454-E` (d)'s class, so the LGPL-3.0 this shelf carries rests on a second file and is
+recorded as such. [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+serves **1 531 B** (`57c341d09920`) opening `Copyright (c) 2023-2025 Mohamed El hajji On behalf of…`
+— consistent with the BSD-3-Clause this shelf carries.
+
 ## 🆕 `p459` — **No platform is added. Two licence traps already on these shelves were RE-READ first-hand and both records are confirmed correct — which is the useful result, because a wrong grant here is what ships into a client engagement.**
 
 🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves

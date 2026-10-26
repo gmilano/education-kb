@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` · 2026-10-26 — **🔴 THE PRESCRIBED CHANNEL IS GRADED AN EIGHTH TIME: eight legs, 23 named facts, 19 already on this file. 🟡 Four tokens are new and all four are EMEA SUPPLY-side instrument names that REINFORCE this file's existing EMEA finding rather than amend it. 🟢 The canonical region block gains four instrument names inside its existing EMEA child — no new child, no rename, no LATAM-only section.**
+
+🔴 **`make hooks` was NOT RUN** — fresh clone, not the Makefile, so nothing below is gate-attested.
+
+🟢 **Region contract honoured:** this file carries exactly **one** `## Opportunities by region`
+block with exactly five closed-vocabulary children (North America, EMEA, APAC, LATAM, Global).
+🔵 **This pass adds no sixth child, renames none, and writes no LATAM-only section.**
+
+### The eight prescribed legs, graded against this file
+
+| leg | named facts | already on file | new |
+|---|---|---|---|
+| global — open-source education agents | 4 | 4 | 0 |
+| global — GitHub trending education | 3 | 3 | 0 |
+| global — vertical platforms / ERP / SIS | 3 | 3 | 0 |
+| global — AI education industry trends | 3 | 3 | 0 |
+| North America | 4 | 4 | 0 |
+| EMEA | 4 | 0 | 🟡 **4** |
+| APAC | 3 | 3 | 0 |
+| LATAM | 3 | 3 | 0 |
+| **total** | **23** | **19 — 82.6 %** | **4 — 17.4 %** |
+
+🔵 **The nil legs are currency confirmations, named so the zero is auditable, not silence:** NA
+returned the state-bill count (🔴 already **retired** by `Gap 455-F` as a tracker snapshot — the
+channel re-served it and this pass does **not** re-shelve it), `AB 1159`, `H.R. 8747`, and a 60 %
+K-12 teacher-use figure. APAC returned Korea's **AI Basic Act** (in force 2026-01-22), Vietnam's
+**Decision 33/2026/QD-TTg**, and the **Ipsos Education Monitor 2026**. LATAM returned the **UNESCO
+IESALC** survey (200 institutions / 19 countries, 87 % using AI somewhere, 26 % with a formal AI
+strategy) and **Latam-GPT**. 🟢 **All eight already on file**, several on multiple shelves.
+
+### 🟡 The four new tokens — EMEA, supply side, amended IN PLACE
+
+| token | value read | why it is supply, not demand |
+|---|---|---|
+| **OpenEuroLLM** | €**37.4 M**; first formal model release targeted **end-2026**, final models **2028** | a pan-European open-model programme — general-purpose, **not education** |
+| **EUROPA** (EU frontier model) | consortium led by **Domyn**, selected **2026-06-19**; >**400 B** params, **24** EU languages | general-purpose, **not education** |
+| **SOOFI** | ~€**20 M**, German, first public version targeted Q3-2026 | 🟡 **already named on these shelves** — listed here only to complete the set |
+| **Digital Europe EdTech Accelerator** | 🔴 deadline **2026-10-01 — PASSED** | the one EU instrument that *was* education-specific, and its window has closed |
+
+🟢 **What these four change, and it is a confirmation not a correction:** this file's EMEA child
+already states that EMEA-origin supply arrives as **sovereign models and regulation rather than
+education agents**. These four put **instrument names and figures** on that statement. 🔴 **The
+informed gap stands and is now sharper: searched across two legs, there is no EU-funded
+open-source AI *education* repository** — every EU open-model instrument found is general-purpose,
+and the education-specific funding call has closed. 🔵 Recorded per `Gap 455-E`: every figure in
+this block is a **relayed** search result, not a first-hand read, because this host is refused at
+CONNECT by `education.ec.europa.eu`. The instrument names are published precisely so a reader who
+can reach a primary can verify what this base could not.
+
+🔵 **Market sizing — read, and deliberately NOT shelved as a figure.** The channel returned a
+2026 base ranging **$2.21 B to $11.4 B** across five houses (Global Growth Insights $2.21 B/12.7 %
+CAGR; Precedence $9.58 B/34.52 %; Research&Markets $10.6 B/41.5 %; Grand View $11.4 B/25.9 %;
+Technavio +$3.37 B/45 %). 🔴 **A 5.2× spread on the same named market is not a measurement**, and
+per `Gap 455-F`'s standing rule this pass cites the spread and its houses rather than promoting any
+single number onto the region block.
+
 ## 🆕 `p459` · 2026-10-26 — **🔴 THE PRESCRIBED CHANNEL IS GRADED A SEVENTH TIME AND IT IS AGAIN A NIL WITH A FULL DENOMINATOR: eight legs, 19 named facts, 19 of them ALREADY ON THIS FILE. 🟢 The canonical region block is therefore amended NOWHERE — and this pass states plainly that the limit is the rotation, not the research.**
 
 🔴 **`make hooks` was NOT RUN** — fresh clone, not the Makefile, so nothing below is gate-attested.
@@ -974,6 +1030,28 @@ additions, while the MIT upstream it forks (`adriasantacreu/google-classroom-mcp
 `29c2c2a0767069…`, both parties European by their notices) **serves no licence file at any of six
 probed paths**. 🟢 The remedy is to pin the upstream commit and vendor the grant text from the
 fork's `LICENSES/MIT-upstream.txt`, because the granting project does not publish it.
+
+#### 🆕 `p460` — the EU open-model instruments, named; and the education-specific one has closed
+
+🔵 Four instrument names added to this child, and they **sharpen the finding above rather than
+change it**: EMEA-origin supply arrives as sovereign general-purpose models and regulation, not as
+education agents. 🟢 **OpenEuroLLM** — €**37.4 M**, first formal model release targeted **end-2026**,
+final models **2028**. 🟢 **EUROPA**, the EU frontier-model programme — consortium led by **Domyn**,
+selected **2026-06-19**, >**400 B** parameters across **24** EU languages. 🟡 **SOOFI** (~€20 M,
+German, Q3-2026 target) was already named on these shelves. 🔴 **And the one EU instrument that was
+education-specific — the Digital Europe `EdTech Accelerator` — closed on 2026-10-01.**
+
+🔴 **The informed gap, stated rather than left as silence:** searched across two legs this pass,
+**there is no EU-funded open-source AI *education* repository** — every EU open-model instrument
+found is general-purpose, and the education-specific funding window has passed. 🟢 The permissive
+EMEA education supply these shelves can actually build on therefore remains what was read
+first-hand, not what was funded: [`Selleo/mentingo`](https://github.com/Selleo/mentingo) — **MIT**,
+`LICENSE` **1 062 B**, an AI-native self-hosted LMS from a **Polish** team (Bielsko-Biała), already
+carried here — plus the eleven national-system clients `p455` placed.
+
+🔵 Per `Gap 455-E` every figure in this subsection is a **relayed** search result: this host is
+refused at CONNECT by `education.ec.europa.eu`, so the instrument names are published so that a
+reader who can reach a primary can check what this base could not.
 
 ### APAC
 

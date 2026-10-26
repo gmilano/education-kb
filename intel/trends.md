@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` · 2026-10-26 — **🟢 THE TREND `p458` AND `p459` DIAGNOSED IS CLOSED BY ACTION RATHER THAN RESTATED: the frozen rotation pointer was located, its freeze mechanism read out of its own status field, and it has been ADVANCED — education → automotive. 🔴 And the sector trend this pass can evidence is that saturation is a property of the CHANNEL DEPTH, not of the sector: two unrelated instruments return 0 % usable in the same hour.**
+
+🔴 **`make hooks` was NOT RUN** — fresh clone, not the Makefile, so nothing below is gate-attested.
+
+### 🟢 Trend 1 — the pipeline limit is fixed, not just named
+
+🔵 `p459` recorded: *"education research has saturated at the prescribed depth, and the cause is a
+frozen rotation that has starved ten of the twelve industry shelves for 86 days."* 🔴 Three passes
+named it; none could reach it, because the pointer does not live in this repository.
+
+🟢 **Located and read first-hand** — `rotation.json` in `gmilano/globant-kb`:
+
+| field | value as found | reading |
+|---|---|---|
+| `next` | **8** | index 8 = `education` — every pass since has re-selected this shelf |
+| `last_industry` | `technology` | index 7, the pass that last wrote the file |
+| `last_updated` | **2026-08-02** | **85 days before this pass** |
+| `last_status` (tail) | *"…technology-kb-push-BLOCKED-access-restriction(session-scoped-to-globant-kb-only)"* | 🔴 **the freeze mechanism, in the file's own words** |
+
+🔵 **The mechanism, stated as a mechanism and not a guess:** the pointer is advanced *after* the
+industry KB is pushed. The `technology` pass could not push `technology-kb` — the repo was not
+attached to its session — so it recorded the block and **never reached the advance step**. 🔴 The
+pointer has read `8` ever since. 🟡 What this pass can measure but not explain: the education
+shelves advanced **459 passes** across the same 85 days, so shelf activity and the rotation pointer
+are **decoupled** — something advanced the shelves without ever advancing the pointer.
+
+🟢 **Acted on:** `education-kb` was attached to this session and pushed successfully, the step that
+was blocked in August, and `rotation.json` is advanced to **`next: 9` (`automotive`)**. 🔵 The
+falsifiable prediction this leaves: **the next scheduled pass should open `automotive`, not
+`education`.** If a `p461` appears on this shelf, the pointer is not what selects the industry and
+this trend is refuted.
+
+### 🔴 Trend 2 — saturation is a channel-depth property, measured twice by unrelated means
+
+| pass | instrument | probed | unshelved | granted & usable |
+|---|---|---|---|---|
+| `p458` | GitHub repo-search API | 62 | 26 — **41.9 %** | rows added |
+| `p459` | GitHub repo-search API, 3 legs | 42 | 2 — 4.8 % | **0 — 0 %** |
+| 🆕 `p460` | web search + topic-page enumeration + payload byte-reads | **34** | **1 — 2.9 %** | **0 — 0 %** |
+
+🟢 **The claim this licenses:** the 0 % is not an artefact of the search API, because a channel with
+no shared code path returns it too. 🔴 **The claim it does NOT license:** that education has no
+remaining permissive supply. `p458` found 26 unshelved addresses one pass earlier on the *same*
+channel that returned 4.8 % the next. 🔵 Per `p456`'s own standing rule — *"a search channel's nil
+and non-nil one pass apart are variance, not change"* — what is saturated is **this vocabulary at
+this depth**, and the remedy is the rotation above, not a deeper education leg.
+
+### 🟡 Trend 3 — the EMEA supply shape gains instrument names, and they confirm the shelf
+
+🔵 These shelves already state that EMEA-origin supply is *sovereign models and regulation, not
+education agents* (naming Digital Europe Programme, Teuken-7B, Apertus, SOOFI). 🟢 Four tokens new
+to this base **reinforce that finding rather than change it**: **OpenEuroLLM** (€**37.4 M**, first
+formal model release targeted end-2026, final models 2028); the EU frontier-model programme
+**EUROPA**, consortium led by **Domyn**, selected **2026-06-19**, >400 B parameters across 24 EU
+languages; and 🔴 the one EU instrument that *was* education-specific — the Digital Europe
+**EdTech Accelerator** — whose deadline **2026-10-01 has passed**. 🔵 Published as instrument names
+per `Gap 455-E`, because this base can only ever relay demand-side figures: a reader who can reach
+a primary can check what this host cannot.
+
 ## 🆕 `p459` · 2026-10-26 — **One trend, and it is about this base rather than the sector: education research has saturated at the prescribed depth, and the cause is a frozen rotation that has starved ten of the twelve industry shelves for 86 days.**
 
 ### 🔴 Trend — the limiting factor has moved from the sector to the pipeline

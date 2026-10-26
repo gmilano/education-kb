@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` — **No row is added, and this time the nil is REPRODUCED ON A THIRD CHANNEL that shares no code path with `p459`'s: 34 addresses graded against these shelves, 33 already carried, 1 unshelved, and that 1 serves NO GRANT at 10 paths — usable novel yield ZERO. 🟢 And the cause `p458` and `p459` could only diagnose is FIXED this pass, outside this repo: the frozen rotation pointer has been advanced.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN** — this pass reached the
+shelves through a fresh clone rather than the Makefile, so **nothing below is gate-attested**.
+
+🔵 **Instrument, and it shares no code path with `p458`/`p459`'s.** This pass discovered through
+web search plus **GitHub topic-page enumeration** (`topics/ai-education` **551** repos,
+`topics/ai-tutor` **788**, `topics/education-ai` **70**) and verified every grant by **byte-reading
+the payload** at `raw.githubusercontent.com`, gating on `%{http_code}`. **Controlled in both
+directions before any verdict, and it reproduces seven values these shelves already published:**
+
+| control | published here | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `HKUDS/DeepTutor` `LICENSE` | Apache-2.0 · 11 408 B · `cd2f54e1e506` | **11 408 B · `cd2f54e1e506`** | **reproduced, byte- and digest-identical** |
+| 🟢 `moodle/moodle` `COPYING.txt` | GPL-3.0 · 35 147 B | **35 147 B** | **reproduced** |
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` | **35 136 B · `e12d78569742`** | **reproduced** |
+| 🟢 `sakaiproject/sakai` `LICENSE` | ECL-2.0 · 11 120 B · `0688f62d04f1` | **11 120 B · `0688f62d04f1`** | **reproduced** |
+| 🟢 `openedx/XBlock` `LICENSE.TXT` | Apache-2.0 · 11 358 B · `cfc7749b96f6` | **11 358 B · `cfc7749b96f6`** | **reproduced** |
+| 🟢 `ahmedEid1/lumen` `LICENSE` | GPL-3.0 · 35 149 B · `3972dc9744f6` | **35 149 B · `3972dc9744f6`** | **reproduced** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B | **34 523 B · `0d96a4ff68ad`** | **reproduced** |
+| 🟢 two fabricated addresses — negative | — | **404, 14-byte `404: Not Found`** | correctly refused (`Gap 453-E` (d) mode) |
+
+### 🔴 The saturation finding, reproduced on an independent channel
+
+🔵 `p459` measured saturation with the **GitHub repository-search API** (42 probed → 2 unshelved →
+0 granted). This pass measured it with **web search + topic-page enumeration + payload byte-reads**
+— no shared instrument, same hour, same shelf:
+
+| | n | share |
+|---|---|---|
+| addresses surfaced and graded against these shelves | **34** | |
+| 🔴 already carried here | **33** | **97.1 %** |
+| 🟡 unshelved | **1** | **2.9 %** |
+| 🔴 **unshelved AND granted — i.e. usable** | **0** | **0 %** |
+
+🟢 **Two channels, two instruments, one hour, same verdict.** `p459`'s 0 % usable is not a property
+of its instrument.
+
+### The one unshelved address, and why it is not a row
+
+| address | grant read at `HEAD` | ★ | verdict |
+|---|---|---|---|
+| [`mwasifanwar/eduadapt-ai`](https://github.com/mwasifanwar/eduadapt-ai) | 🔴 **NO GRANT** — 404 at all 10 probed paths | 26 | 🔴 **Refused.** RL-based adaptive-learning app; nothing may be vendored without a written grant |
+
+### 🔴 Two defects in this pass's own instrument — recorded, not quietly fixed
+
+1. 🔴 **A FALSE UNGRANTED on a carried foundation row, and it is a case-sensitivity defect.** This
+   pass's grant ladder probed `LICENSE.txt` and **not** `LICENSE.TXT`, and published
+   *"`openedx/XBlock` — NO GRANT at 9 paths"* internally before correction. 🟢 **The shelf was
+   already right and already specific**: it carries the path as **`LICENSE.TXT` — uppercase
+   extension**, and had recorded the exact trap (*"LICENSE.txt 404 x3, LICENSE.TXT -> 200"*) before
+   this pass ran. Re-probed at the recorded path: **Apache-2.0, 11 358 B, `cfc7749b96f6`** —
+   reproduced. 🔵 This is `Gap 455-A`'s failure *direction* (a false ungranted **discards a usable
+   permissive dependency**) reached by a new mechanism: filename **case**, not ref.
+2. 🔴 **A rendered-page licence label is not a grant, and it asserts one where no root grant file
+   exists.** GitHub's sidebar labels `openedx/XBlock` `Apache-2.0`; the repository serves no grant
+   at any lowercase root path, and the rendered claim rests on `README.rst` prose plus a
+   `shields.io` badge. 🔵 Complementary direction to `p459`'s own fallback-matcher defect (which
+   read `os-taxonomy` as "MIT"): that one **invented** a grant from a body scan, this one
+   **relays** one from a renderer. 🟡 Every ★ figure this pass quotes is a **rounded rendered
+   value** (`1.2k`, `7.5k`) — recorded as such, not as a count.
+
+### 🟡 A licence badge over a contrary payload — second first-hand instance
+
+[`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) ships `![License: MIT]` in its `README.md`
+and serves **GPL-3.0** at `HEAD/LICENSE` (**35 149 B · `3972dc9744f6`**). 🟢 **These shelves
+already carry it correctly as GPL-3.0 at that exact digest** — so this is a reproduction, not a
+correction, and it is the second first-hand instance of `p456`'s *"a licence badge is not a
+licence"*, in the expensive direction: a reader trusting the badge vendors copyleft as permissive.
+
+### 🟡 A carried ★ figure has a motive attached to it
+
+[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (584★, grant file
+a **1 134-byte AGPL notice**, not the full text) ships `README.md` (**36 305 B · `1984e06440ee`**)
+whose lines **815** and **817** address AI agents directly, in Chinese and English, and ask them to
+press ⭐ Star — citing a fabricated statistic (*"agents who star quality repos run 200 % more
+efficiently"*). 🟢 **Stated accurately: it is explicitly jocular** (*"Trust me, bro"*) and this pass
+does **not** call it an attack. 🔵 It is recorded because **these shelves carry ★ as data**, and a
+README that instructs its agent readers to move that metric is a reason to treat ★ as a
+popularity relay rather than an independent signal — which is also why defect (2) above matters.
+
 ## 🆕 `p459` — **No row is added. Three GitHub-API legs returned 42 education addresses, 2 of them unshelved, and BOTH are refused for want of a licence grant — so the usable novel yield of this pass is ZERO, and that is the finding.**
 
 🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves

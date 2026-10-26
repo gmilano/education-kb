@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` · 2026-10-26 — **Saturation confirmed a second time and by other means: 0 % usable novel yield on a channel that shares no code path with the one that measured it last pass.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### The measured comparison
+
+| channel | legs | surfaced | unshelved | granted & usable |
+|---|---|---|---|---|
+| `p459` — GitHub repo-search API | 3 | 42 | 2 — 4.8 % | **0 — 0 %** |
+| 🆕 `p460` — web search + topic enumeration + byte-reads | 8 | **34** | **1 — 2.9 %** | **0 — 0 %** |
+
+🟢 **Two instruments, one hour, one verdict.** 🔵 And per `p456`'s standing rule this is still
+**variance at a depth**, not a proof of exhaustion: the same API channel returned 41.9 % novel one
+pass before it returned 4.8 %.
+
+### 🟢 Seven carried grants re-read from bytes — all seven reproduce
+
+🔵 With the discovery yield at zero, this pass spent its reads on **verification instead of
+padding**. Reproduced exactly: `DeepTutor` (11 408 B · `cd2f54e1e506`), `moodle/moodle`
+(35 147 B · `8ceb4b9ee5ad`), `edx-platform` (35 136 B · `e12d78569742`), `XBlock`
+(11 358 B · `cfc7749b96f6`), `sakai` (11 120 B · `0688f62d04f1`), `lumen`
+(35 149 B · `3972dc9744f6`), `vacademy_platform` (34 523 B · `0d96a4ff68ad`).
+🟡 Three digests **new to these shelves**: `pykt-toolkit` (MIT, 1 066 B · `f5f955194636`),
+`richie` (MIT, 1 079 B · `e4b2a3148135`), `OATutor` (MIT, 1 105 B · `5baaaf977a28`).
+
+### 🔴 A host-channel finding: the GitHub API cannot tell a live repo from a fabricated one
+
+🔵 `p458` recorded the repository-**search** API as working from this host, which it does. 🔴 **The
+per-repository endpoint does not, and it fails in the one direction a liveness probe cannot
+survive:**
+
+| address | `api.github.com/repos/…` | body |
+|---|---|---|
+| 🟢 `HKUDS/DeepTutor` — live, 43.5k★ | **403** | 378 B |
+| 🔴 `nope-p460-fabricated/nope-p460` — fabricated | **403** | **378 B — byte-identical** |
+| 🟢 `gmilano/education-kb` — attached to this session | **200** | 6 055 B |
+
+🔴 **A live repository and an invented one are indistinguishable on this channel**, because the
+gate is session scope, not existence. 🔵 This is the second measurement of `p450`'s class (*"the
+fabricated control emits BYTE-IDENTICAL stderr to all eight carried addresses"*) on a different
+channel, and it means **no reachability census may be built on `api.github.com/repos`** from this
+host. 🟢 The channel that does work for grants and is used throughout this pass:
+`raw.githubusercontent.com`, which returns **200** with the payload and **404 with a 14-byte body**
+for a fabricated address — separable, and controlled in both directions.
+
 ## 🆕 `p459` · 2026-10-26 — **Saturation, measured: the channel that returned 41.9 % novel one pass ago returns 4.8 % this pass, and 0 % usable.**
 
 🔵 Appended above the history, nothing below edited or removed.

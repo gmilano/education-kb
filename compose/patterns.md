@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p460` — **No new pattern, and the reason is `p459`'s: zero granted novel inputs. 🟢 What this pass ships instead is a GATE STEP every existing pattern is missing, forced by a defect this pass found in its OWN instrument — a grant ladder that is case-blind on the filename publishes a false ungranted and discards a usable dependency. 🔴 And the first draft of that gate step had a SECOND defect, caught by running it rather than by reading it.**
+
+🔵 This pass returned **0 granted novel addresses** (34 surfaced, 1 unshelved, that one ungranted at
+10 paths — see [`agents/top.md`](../agents/top.md)). Every component a new recipe could be wired
+from is already wired into a pattern below.
+
+### 🟢 `P460-A` — the case-insensitive grant ladder, run before any vendoring step
+
+🔴 **The failure it prevents, measured on a carried foundation row this pass:** `openedx/XBlock`
+serves **no grant** at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `LICENCE`,
+`LICENSE-MIT`, `license`, `MIT-LICENSE` or `NOTICE` on its resolved default ref — and serves
+**Apache-2.0** at **`LICENSE.TXT`**. 🔵 A ladder stopping at the lowercase forms concludes
+`UNGRANTED` for a permissively licensed dependency: `Gap 455-A`'s expensive direction.
+
+Code, with its controls, at
+[`compose/code/p460-grant-ladder/p460a.sh`](code/p460-grant-ladder/p460a.sh):
+
+```bash
+#!/usr/bin/env bash
+# P460-A — resolve the default ref, then walk grant paths CASE-INSENSITIVELY.
+# Separates: GRANTED | POINTER_OR_STUB | REPO_LIVE_NO_GRANT | ADDRESS_DEAD.
+set -uo pipefail
+repo="$1"   # e.g. openedx/XBlock
+
+ref=$(git ls-remote --symref "https://github.com/$repo" HEAD 2>/dev/null \
+      | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+if [ -z "$ref" ]; then echo "$repo ADDRESS_DEAD (no ref)"; exit 0; fi
+
+stems="LICENSE LICENCE COPYING NOTICE LICENSE-MIT MIT-LICENSE LICENSE-APACHE"
+# NOTE: the empty extension is a literal "" array entry, NOT produced by
+# `eval echo` — an unquoted empty word is dropped by word-splitting and the bare
+# stem is then never probed. That defect is what made this ladder's own first
+# draft miss plain `LICENSE`; see the retraction below.
+exts=("" ".md" ".txt" ".TXT" ".rst" ".MD" ".html")
+
+for s in $stems; do
+  for e in "${exts[@]}"; do
+    lower=$(printf '%s' "$s" | tr 'A-Z' 'a-z')
+    upper=$(printf '%s%s' "$s" "$e" | tr 'a-z' 'A-Z')
+    for cand in "$s$e" "$lower$e" "$upper"; do
+      url="https://raw.githubusercontent.com/$repo/$ref/$cand"
+      code=$(curl -s -o /tmp/p460.payload -w '%{http_code}' --max-time 12 "$url")
+      # GATE ON STATUS, never on body: a 404 here is a 14-byte "404: Not Found"
+      # that a byte-reader will otherwise shelve as a licence (Gap 453-E(d)).
+      if [ "$code" = "200" ]; then
+        sz=$(stat -c%s /tmp/p460.payload)
+        if [ "$sz" -lt 200 ]; then
+          echo "$repo POINTER_OR_STUB $cand ${sz}B"; continue
+        fi
+        echo "$repo GRANTED $cand ${sz}B $(sha256sum /tmp/p460.payload | cut -c1-12)"
+        echo "  title: $(head -2 /tmp/p460.payload | tr -d '\n' | tr -s ' ' | cut -c1-58)"
+        exit 0
+      fi
+    done
+  done
+done
+# Live-but-ungranted is NOT dead: probe a known-present file before concluding.
+live=$(curl -s -o /dev/null -w '%{http_code}' --max-time 12 \
+       "https://raw.githubusercontent.com/$repo/$ref/README.md")
+[ "$live" = "200" ] && echo "$repo REPO_LIVE_NO_GRANT (ref=$ref)" \
+                    || echo "$repo UNRESOLVED (ref=$ref)"
+```
+
+🟢 **Run, not asserted — controls in all four verdict directions:**
+
+| control | expected | 🟢 emitted |
+|---|---|---|
+| `openedx/XBlock` — grant at an **uppercase extension** | `GRANTED` | `GRANTED LICENSE.TXT 11358B cfc7749b96f6` |
+| `HKUDS/DeepTutor` — grant at the **bare stem** | `GRANTED` | `GRANTED LICENSE 11408B cd2f54e1e506` — **reproduces `p458`** |
+| `CAHLR/OATutor` | `GRANTED` | `GRANTED LICENSE 1105B 5baaaf977a28` |
+| `Selleo/mentingo` | `GRANTED` | `GRANTED LICENSE 1062B ceb97717de1f` |
+| `mwasifanwar/eduadapt-ai` — live, ungranted | `REPO_LIVE_NO_GRANT` | `REPO_LIVE_NO_GRANT (ref=main)` |
+| two fabricated addresses | `ADDRESS_DEAD` | `ADDRESS_DEAD (no ref)` ×2 |
+
+### 🔴 The retraction, recorded because it is the whole lesson
+
+🔴 **This pass's first draft of `P460-A` reported `REPO_LIVE_NO_GRANT` for `HKUDS/DeepTutor` and
+`Selleo/mentingo` — both of which serve a plain `LICENSE`.** The cause: the extension list was
+written as a string `"'' .md .txt …"` expanded with `eval echo`, and an unquoted empty word is
+**dropped by word-splitting**, so the bare stem was never probed. 🔴 **A ladder written to fix a
+false ungranted shipped a false ungranted of its own, in its first draft, on the highest-★ row on
+these shelves.** 🟢 It was caught by **executing the controls**, not by reading the code — the
+defect is invisible on inspection and unmistakable on run. 🔵 Same class as `Gap 455-D`'s *"a
+defect that failed to travel inside one pass"*, and the standing lesson for this file: **a pattern
+containing code is not shippable until its controls have been run in every verdict direction it
+claims to separate.**
+
+### 🔴 Where to wire it
+
+Every pattern on this file that clones or vendors a component runs `P460-A` on that component
+first and **halts on `REPO_LIVE_NO_GRANT`**. 🔵 It replaces `curl -sI`-style reachability entirely:
+per this pass's measurement, `api.github.com/repos/<any-unattached-repo>` returns a **byte-identical
+403** for a live repository and a fabricated one, so an existence check built on it cannot fail
+safe.
+
 ## 🆕 `p459` — **No new pattern. The inputs did not change, and a recipe assembled from unchanged inputs would be a new name for an existing pattern rather than a new capability.**
 
 🔵 This pass returned **0 granted novel addresses** (42 probed, 2 unshelved, both ungranted — see
