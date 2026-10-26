@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `2026-10-26` · `p466` — **🟢 MEASURED, NOT ASSERTED: 9 of the 39 distinct education repositories in the top-20s of two GitHub topic channels ship as a SKILL or MCP artefact for a host agent rather than as a runnable application — and they carry the channel's star mass, led by a 36 200★ skill compiler. 🔴 The most-starred artefact in the pattern is `CC-BY-SA`, not MIT.**
+
+🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained
+unaltered, and containment against `HEAD` was checked before writing.
+
+### 🟢 The packaging shift, with the denominator stated
+
+🔵 Channels sampled first-hand this pass via the **GitHub web topic pages** (see
+[`repos/trending.md`](../repos/trending.md) for why that channel matters):
+`github.com/topics/ai-tutor` (top-20 of 790 claimed) and `github.com/topics/edtech`
+(top-20 of 4 819 claimed). `Li-Evan/Bloom` appears in both → **39 distinct rows**.
+
+**9 of 39 (23 %)** ship as an agent *skill* or an *MCP server* — an artefact that assumes a host
+runtime and provides none:
+
+| repository | ★ | grant (first-hand where probed) | what it packages |
+|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36 200** | 🟢 **MIT** · `LICENSE.md` · 1 068 B · `be9b04bccfb4` @ HEAD `a24e62f4d8ca` | 🟢 a **compiler**, not a tutor: technical book PDFs → agent skills for study and reference. The pattern's centre of mass by two orders of magnitude |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 955 | 🔵 not probed this pass | a skill that turns books into animated, narrated, interactive web pages |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 914 | 🔴 **`CC-BY-SA-4.0`** · 1 230 B · `f952182df4eb` @ HEAD `135d6275e7db` | 165 evidence-based skills for teachers, school leaders and EdTech builders. 🔴 **Content-copyleft, not a software grant** — see [`agents/top.md`](top.md) |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 535 | 🔵 not probed this pass | MCP server exposing an existing Anki collection to any agent — 🟢 the *integration* flavour of the same shift |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 319 | 🔵 not probed this pass | exam coach that teaches from the learner's own lecture slides **with page citations**, and remembers across sessions |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 293 | 🔵 carried | Socratic tutor that **dual-ships**: self-hostable app *and* agent skill |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 250 | 🔵 not probed this pass | diagnosis-first tutoring for STEM/CS — assess the misconception before teaching |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 204 | 🔵 not probed this pass | China civil-service exam prep. 🟢 **APAC**, zh-CN |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 118 | 🔵 not probed this pass | teaching/learning support skill collection, zh-CN. 🟢 **APAC** |
+
+🟢 **And the pattern reproduces on the recency channel**, independently of the topic pages:
+`created:>2026-09-15` returned [`ShawnRen57/omni-learning-anything`](https://github.com/ShawnRen57/omni-learning-anything)
+(🟢 MIT · 1 092 B · `f3a9a5d7a599`, shelved on [`agents/top.md`](top.md)) and
+[`dymchenkko/claude-study-agent`](https://github.com/dymchenkko/claude-study-agent) — both
+skill-packaged, both days old.
+
+### 🔵 What this changes for a Globant engagement, stated plainly
+
+🟢 **The buy/build line has moved.** When a quarter of visible education supply is a *skill* —
+prompt scaffolding, rubrics, pedagogy, citation discipline — the reusable asset is **the method,
+not the runtime**, and it is cheap to adopt and cheap to fork. 🔴 **But the licence risk moved with
+it**: skill artefacts are predominantly *content*, and content repositories reach for Creative
+Commons. The pattern's second-most-starred row is `CC-BY-SA-4.0` and the third-most-starred data
+asset found this pass is `CC-BY-NC-4.0`. A studio that treats "it's just a skill" as "it's just
+MIT" will ship a ShareAlike obligation into a client deliverable. 🔵 Per `Gap 466-A`, read the
+first non-blank line of the payload before adopting a skill.
+
+### 🔴 Trend-channel saturation, measured
+
+| channel | rows coverage-checked against this base | already carried | novel |
+|---|---|---|---|
+| `topics/ai-tutor` top-20 | 19 | **19** | 🔴 **0** |
+| `topics/edtech` + `topics/grading` top-20s | ~21 (those cross-checked) | 21 | 🔴 **0** |
+| `search?q=education agent created:>2026-09-15` | 10 shown of 44 claimed | 8 | 🟢 **2** (1 ungranted) |
+| **GitHub total** | **30** | **28** | **2 — 6.7 %** |
+
+🔵 **Four hundred and sixty-six passes have exhausted the GitHub education topic channels.** The
+honest reading is not "there is no new supply" but "**this base has already seen what these
+channels show**". The channel that was *not* exhausted is on [`repos/trending.md`](../repos/trending.md).
+
 ## 🆕 `p465` · 2026-10-26 — **🔴 THE PRESCRIBED WEB CHANNEL IS A NIL FOR THE SEVENTH CONSECUTIVE PASS, AND THIS HOUR IT IS A NIL WITH A FULL DENOMINATOR: 24 named facts graded against this base, 22 of them ALREADY CARRIED. 🟢 The two that were not are the pass's whole market yield, and one of them is a licence form rather than a market fact.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing

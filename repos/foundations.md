@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🟢 `Gap 465-A` IS CLOSED WITH FIXTURES — AND THE CONTRACT IT PROPOSED IS NOT SUFFICIENT. Declaring "raw bytes" fixes the convention defect but does NOT fix the comparison, because TWO legitimate canonical texts of Apache-2.0 circulate ~1.1 KB apart, and that — not tampering — is what explains the three different Apache-2.0 sizes this base carries. 🔴 AGPL-3.0 now has SIX observed live byte-values, so any size-based licence screen misclassifies.**
+
+### 🟢 Stock-licence fixtures, fetched first-hand from the SPDX canonical corpus
+
+🔵 `Gap 465-A` asked for "a `sha256` of stock MIT/Apache-2.0/GPL-3.0/AGPL-3.0 as fixtures".
+Fetched from `raw.githubusercontent.com/spdx/license-list-data/main/text/<id>.txt`, measured under
+the **raw-bytes** contract (`curl -o`, then `wc -c`):
+
+| SPDX id | canonical raw bytes | `sha256₁₂` |
+|---|---|---|
+| `MIT` | **1 078 B** | `b05785f9f18e` |
+| `Apache-2.0` | **10 280 B** | `074e6e32c86a` |
+| `GPL-3.0-only` | **34 674 B** | `fb981668c18a` |
+| `AGPL-3.0-only` | **34 020 B** | `d8a6cc31abc1` |
+| `BSD-3-Clause` | **1 460 B** | `5a93d5831e12` |
+| `CC-BY-SA-4.0` | **18 375 B** | `cde7883b9050` |
+
+### 🔴 And the fixtures REFUTE the assumption the gap rested on
+
+🔵 `Gap 465-A` assumed one stock text per licence, so that a carried cell could be graded against
+it. **For Apache-2.0 that is false**, and the three Apache-2.0 payloads read first-hand this pass
+fall into two clean families:
+
+| repository | first-hand payload | family |
+|---|---|---|
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **10 273 B** · `73ba74dfaa52` @ HEAD `d48c2a6ae053` | 🟢 **bare licence text** — within 7 B of the SPDX canonical **10 280 B** |
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | **11 337 B** · `36d6788503b8` @ HEAD `94cedd7d4e02` | 🟡 **licence + "APPENDIX: How to apply"** boilerplate |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **11 408 B** · `cd2f54e1e506` @ HEAD `a31d82624c27` | 🟡 **licence + appendix, with the holder fields filled in** |
+
+🟢 **So the ~1.1 KB spread this base has carried across passes is the APPENDIX, not a variant
+grant.** The two families differ by whether the project copied GitHub's template (which includes
+the appendix) or SPDX's bare text. 🔵 This retires, with a mechanism, any reading of the Apache-2.0
+size spread as evidence of a modified licence.
+
+### 🔴 AGPL-3.0: six live byte-values, so a size screen cannot classify
+
+🔵 Combining this pass's GitLab reads (below) with the GitHub-side controls the base already
+carries:
+
+| payload bytes | `sha256₁₂` | observed at |
+|---|---|---|
+| **34 020 B** | `d8a6cc31abc1` | 🟢 SPDX canonical `AGPL-3.0-only` |
+| **34 449 B** | `feff6860d5ea` | `moodlenet/backend` (GitLab) |
+| **34 481 B** | `6dbb120dadf0` | `moodlenet/frontend` (GitLab) |
+| **34 520 B** | `57c8ff33c9c0` | `Openki/Openki` (GitLab) |
+| **34 523 B** | `0d96a4ff68ad` | 🔵 the base's carried GitHub control — `Vacademy-io`, `RubricSpan`, `gygy-open/question-bank`, three unrelated HEADs |
+| **34 588 B** | `a7f13bbcc053` | `DD-workspace/DD` (GitLab) |
+| **35 136 B** | `e12d78569742` | 🔵 carried: `openedx/edx-platform` |
+
+🟢 **`p462`'s payload-identity rule survives and is sharpened:** the digest identifies the licence
+text **plus holder**; the size identifies **nothing** — seven values spanning 1 116 B for one
+licence. 🔴 A pass screening AGPL-3.0 on `size == 34 523` (the only value this base carried before
+today) would have misclassified **all four** GitLab rows as non-AGPL. Registered as
+**`Gap 466-C`**.
+
+### 🟢 MIT confirms the same shape at small scale
+
+🔵 Six MIT payloads read first-hand this pass: **1 063 / 1 064 / 1 066 / 1 068 / 1 072 / 1 092 B**,
+six distinct digests, against the SPDX canonical **1 078 B**. The variance is the copyright holder
+line. 🟢 Consistent with `p464`'s finding that two MIT payloads can share a size and differ in
+digest — **neither size nor digest identifies a project, and size does not identify a licence**.
+
+### 🟢 Substrate rows confirmed permissive this pass — assessment plumbing
+
+🔵 `Gap 464-C` says to stop reading a foundation nil from the application-tier recency channel and
+source substrate elsewhere. The `topics/grading` channel, sampled here for the first time, is a
+**substrate** channel: these are the pieces an assessment build stands on, and all three are
+permissive.
+
+| repository | ★ | grant · `sha256₁₂` · HEAD | what it gives a build |
+|---|---|---|---|
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 1 400 | 🟢 **BSD-3-Clause** · 1 512 B · `3a83d5b8e22c` @ `c2e1ab63512b` | the reference assign→release→collect→autograde→feedback pipeline for notebook coursework, with a release/solution split that keeps answers out of student copies. 🟢 The deterministic spine an LLM grader should be bolted *onto*, not replace |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 359 | 🟢 **MIT** · 1 072 B · `383b85b370e8` @ `86ab328f0e5b` (`br=master`) | a modern SCORM 1.2 / 2004 + AICC runtime in JavaScript. 🔵 **The unglamorous row that decides whether a build can ship into an incumbent LMS at all** — SCORM is how content talks to Moodle/Canvas/Cornerstone |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 377 | 🟢 **Apache-2.0** · 10 273 B · `73ba74dfaa52` @ `d48c2a6ae053` (`br=master`) | an **LTI** framework — the standards-based way to mount an external tool inside any compliant LMS, with roster and grade passback. 🟢 Together with `scorm-again` this is the full integration surface for selling *into* existing institutional estates rather than replacing them |
+
+🔵 **`Gap 464-C` is answered in substance, not just in method**: a channel chosen for substrate
+returned 3 substrate rows out of 3 probed, against the recency channel's 1-in-12. The channel, not
+the supply, was the limiting variable.
+
+### 🔴 Gap registered
+
+| gap | what is wrong | what would close it |
+|---|---|---|
+| 🔴 **`Gap 466-C`** | **Payload size is used on these shelves as if it screened licence family, and it does not.** AGPL-3.0 shows **7** live byte-values spanning 1 116 B; Apache-2.0 shows two canonical families ~1.1 KB apart; MIT shows 6 values in 29 B. The `34 523 B` AGPL value the base carried as *the* control is one of seven. | Replace the size screen with a **first-non-blank-line match** against the SPDX title strings, keep size and digest as provenance only, and re-grade every carried cell that asserts a licence family from a size. |
+
 ## 🆕 `p465` — **🟢 THREE substrate rows from twenty novel addresses, and all three are REGISTRIES OR LANGUAGE SUBSTRATE rather than models or frameworks. 🔴 One of them carries a defect class this base has never named: a `LICENSE` that states an INTENTION to license rather than granting anything.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing

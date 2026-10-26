@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🔴 THREE HIGH-VISIBILITY ROWS THIS BASE CARRIES ARE NOT BUILD-ON SUPPLY, and every one of them would pass a star-count and "has-a-LICENSE" screen: a 914★ teacher-skills library is `CC-BY-SA-4.0` (not a software licence), a 340★ higher-ed advising platform is `Elastic-2.0` (not OSI), and a 4 000★ maths knowledge graph is `CC-BY-NC-4.0` — NonCommercial, so it is unusable in any Globant client engagement. 🟢 And a FORGE this base has never sampled is reachable and NOT saturated: GitLab yields novel education supply at ~2.5× the GitHub rate — all of it AGPL-3.0.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was not run** — the harness refuses
+execution of code that arrived in a clone (`Code from External`), now **thirteen denials in
+fourteen passes**. 🔵 **Nothing below is gate-attested.** The checks were re-implemented in this
+session's own code: frontmatter keys and closed-vocabulary `region` on all nine shelves; every new
+table checked for separator presence, pipe-count consistency and **no header row published as
+data**; append-only proved on both trending shelves by prior-body containment; every address below
+re-resolved first-hand.
+
+### 🟢 The instrument, with a NEGATIVE control this base has never published
+
+🔵 Two first-hand channels, as `p450`/`p463`/`p464`/`p465` established: `git ls-remote --symref
+<addr> HEAD` (**tree identity + default branch**) and `raw.../<addr>/<branch>/<LICENSE>` captured
+with `curl -o <file>` (**payload bytes** → size + `sha256₁₂`), measured per `Gap 465-A`'s
+**raw-bytes** contract, never through command substitution.
+
+| probe | live address (`HKUDS/DeepTutor`) | nonexistent address | discriminates? |
+|---|---|---|---|
+| 🔴 `curl -sI https://github.com/<addr>` — **the probe the ingest brief prescribes** | `403` | `403` | 🔴 **NO — sixth independent reproduction of zero bits.** No row on this shelf rests on it |
+| 🟢 `git ls-remote --symref` | `HEAD a31d82624c27`, `br=main` | **UNRESOLVED** | 🟢 **YES** — this is why the house instrument is `ls-remote`, and the first time the base has recorded the negative leg |
+
+🟢 **Cross-pass control reproduced byte-, digest- and HEAD-identical to `p465`:** `HKUDS/DeepTutor`
+`LICENSE` **Apache-2.0 · 11 408 B · `cd2f54e1e506`** @ HEAD **`a31d82624c27`**. 🔵 Its star count is
+**43.8k** against the **43 537** `p465` recorded index-exact — still incrementing, so the base's
+headline agent is fresh, not stale.
+
+### 🔴 The three licence re-grades — read at the payload, against what a screen would have said
+
+| repository | ★ | what a star + "has-a-LICENSE" screen says | 🔴 what the payload actually says, read first-hand | consequence for a Globant engagement |
+|---|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 914 | permissive supply — "165 evidence-based AI skills for teachers, school leaders and EdTech builders" | 🔴 **`CC-BY-SA-4.0`** · 1 230 B · `f952182df4eb` @ HEAD `135d6275e7db` — **not a software licence at all**, and **ShareAlike** | 🔴 Usable as *content* with attribution, but the ShareAlike condition propagates to adaptations. **Not** a library to vendor into a client deliverable without counsel. The single most-starred teacher-skills artefact in this window, and it is **not** MIT |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | an open-source higher-ed advising CRM + AI assistant — the closest thing in this window to a sellable vertical platform | 🔴 **`Elastic License 2.0`** · 3 860 B · `48255018b41f` @ HEAD `c79803f21cb8` — **source-available, NOT OSI-approved** | 🔴 Elastic-2.0 forbids providing the software to third parties **as a hosted or managed service**. That is precisely the Globant delivery model for a university CRM. **Refused as build-on supply**; retained as a design reference |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4 000 | a large, actively-maintained maths/English/physics knowledge graph with diagnostics — exactly the substrate an adaptive-learning build needs | 🔴 **`CC-BY-NC-4.0`** · 19 347 B · `41003d4a7474` @ HEAD `cf262d886821` — **NonCommercial** | 🔴 **Unusable in any paid engagement**, which is every Globant engagement. The highest-star education-specific *data* asset found this pass and it is commercially closed |
+
+🔵 **Why this is the headline and not a footnote.** All three resolve, all three serve a root
+licence payload, all three would be shelved as supply by any screen that checks *presence* of a
+`LICENSE` rather than *reading* it — and two of the three (`CC-BY-NC`, `Elastic-2.0`) are
+affirmatively **unsellable**, not merely awkward. This is `Gap 461-B`'s class inverted: that gap
+warned that *an index verdict of `NOASSERTION` is not an absent grant*; these rows show that **a
+present grant is not a permissive one**. Registered as **`Gap 466-A`**.
+
+### 🟢 Sell-shelf row added this pass — agent/skill tier
+
+🔵 **One row. Not a minimum, a count.** 30 candidate addresses were coverage-checked across two
+GitHub channels; **28 were already carried by this base** and 2 were novel, of which **1 is
+ungranted**. One remains at this tier, and one is what is published.
+
+| repository | ★ | grant · `sha256₁₂` | region · basis | provenance (declared upstream) | what it actually does |
+|---|---|---|---|---|---|
+| [`ShawnRen57/omni-learning-anything`](https://github.com/ShawnRen57/omni-learning-anything) | 3 | 🟢 **MIT** · `f3a9a5d7a599` · 1 092 B | Global · 🔴 no single-region basis | 🟡 **none declared** — ships as a portable *agent skill*, no dependency manifest | takes any subject and emits a personalised learning plan plus illustrated daily lessons. 🔵 Shelved less for its own weight (3★) than as a **datapoint in the skill-packaging trend measured on [`agents/trending.md`](trending.md)**: it is supply that assumes a host agent and ships no runtime of its own; HEAD `0d9b20e5c770` |
+
+### 🔴 The ungranted denominator — published, because a silent omission looks like absence
+
+| address | ★ | first-hand verdict |
+|---|---|---|
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | **498** | 🔴 **`NO-ROOT-GRANT`** @ HEAD `9acaafc718f2` — resolves, 498★, a nonprofit delivering multilingual AI tutoring to underserved and neurodiverse learners, and it serves **no root licence payload** under any of `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`. 🔵 The most-starred **ungranted** education row this base has recorded; mission-aligned and legally unusable |
+| [`henriquegpb/gradesinteli`](https://github.com/henriquegpb/gradesinteli) | 86 | 🔴 **`NO-ROOT-GRANT`** @ HEAD `2ded74019bb2` — 🔴 **and it is the LATAM row.** Brazilian, built against the Adalove platform. See the standing LATAM finding below |
+| [`paher-din/XunJie`](https://github.com/paher-din/XunJie) | 5 | 🔴 **`NO-ROOT-GRANT`** @ HEAD `d72aed730e26` — novel this pass, project-based teaching agent (循阶). Ungranted |
+
+🔴 **The LATAM assignment-feedback gap `p464` registered does NOT close, and now it has a named
+cause.** `p464` found the repository matching `intel/market.md`'s clearest LATAM opportunity —
+rubric-based assignment feedback — **ungranted**. This pass found the Brazilian grade/feedback row
+`gradesinteli` and it is **also ungranted**, at 86★. 🟢 One LATAM row *does* carry a grant
+([`menthorlabs/menthor`](https://github.com/menthorlabs/menthor), Apache-2.0, below and on
+[`verticals/solutions.md`](../verticals/solutions.md)) but it is a teaching **platform**, not
+feedback. 🔵 Two independent passes, two ungranted LATAM feedback rows: this is now a **reproduced**
+pattern, not a single miss.
+
+### 🟡 Re-grades of carried rows, confirming rather than correcting
+
+| repository | first-hand read | verdict |
+|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** · `LICENSE.md` (not `LICENSE`) · 1 068 B · `be9b04bccfb4` @ HEAD `a24e62f4d8ca`, `br=master` | 🟢 permissive, confirmed. **36.2k★** — the largest education-adjacent artefact in this window, and it is a *skill compiler*, not an app |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** · 1 072 B · `383b85b370e8` @ HEAD `86ab328f0e5b`, `br=master` | 🟢 permissive. Substrate → [`repos/foundations.md`](../repos/foundations.md) |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** · 1 512 B · `3a83d5b8e22c` @ HEAD `c2e1ab63512b` | 🟢 permissive. Substrate → [`repos/foundations.md`](../repos/foundations.md) |
+| [`CGSeb/lessonfolk`](https://github.com/CGSeb/lessonfolk) · [`OmarZen/scholarship-navigator`](https://github.com/OmarZen/scholarship-navigator) · [`finereli/yarareads`](https://github.com/finereli/yarareads) | 🟢 MIT at **1 063 B** `55873542fedc` / **1 064 B** `cdc1ae6b9064` / **1 066 B** `7c4cf856c78c` | 🟢 three MIT payloads, three sizes, three digests — 🔵 see the fixture finding on [`repos/foundations.md`](../repos/foundations.md): **MIT size is not an identity** |
+
+### 🔴 Gaps this pass registers
+
+| gap | what is wrong | what would close it |
+|---|---|---|
+| 🔴 **`Gap 466-A`** | **A present grant is not a permissive grant, and no screen on these shelves tests the difference.** Three carried rows (914★, 340★, 4 000★) serve root licence payloads that are respectively content-copyleft, source-available-non-OSI and **NonCommercial**. A "has-a-LICENSE" check passes all three; two are unsellable. | Add a `grant_class` axis read from the payload's **first non-blank line**, with an explicit `UNSELLABLE` value for `*-NC`, `Elastic-*`, `BUSL-*`, `SSPL`, and require it on every sell-shelf row before publication. |
+| 🟡 **`Gap 466-B`** | **The ungranted denominator correlates with star count in the wrong direction and nothing here measures it.** The single most-starred row probed this pass that is *not* a known project (`ai-ethos`, 498★) is ungranted, as is the 86★ LATAM row, while 3★ rows carry clean MIT. Visibility is not evidence of a grant, and a pass that prioritises candidates by stars will spend its probes on ungranted supply. | Record `(★, grant-present)` for every probed address in the evidence store and publish the correlation once n ≥ 60, so candidate ordering can be set from measurement rather than from stars. |
+
 ## 🆕 `p465` — **🔴 THIS PASS'S OWN INSTRUMENT WAS DEFECTIVE AND THE BASE CAUGHT IT: the three cross-pass controls disagreed with `p464` by exactly −1 byte each, at IDENTICAL HEADs. Three files cannot shrink by one byte at an unchanged HEAD — the fault was mine, it is diagnosed, and all three reproduce exactly once corrected. 🟢 `Gap 463-D` is CLOSED WITH A NUMBER, not with silence: African education supply is 61 repositories whose MAXIMUM star count is 12. 🟢 And a licence class this base has never carried is read first-hand — a WAQF dedication.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED** (`Code from External`)

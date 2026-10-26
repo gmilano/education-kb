@@ -4,6 +4,172 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🔴 THIS BASE'S OWN HEADLINE FORECAST FAILS AN ARITHMETIC CHECK AGAINST ITS SOURCE'S LONGER HORIZON: the carried `$9.58B → $42.48B (2030)` implies a 45.1 % CAGR, while the same firm's 2035 forecast from the SAME 2026 base implies 34.5 % — and 34.52 % compounded to 2030 gives `$31.4B`, not `$42.48B`. 🟢 Two regulatory deadlines land within FIVE WEEKS of this pass: EU Art. 50 content-marking (2026-12-02) and Chile's Ley 21.719 (2026-12-01). 🟢 `Gap 465-D` is CLOSED — the Kenya leg returns four named instruments.**
+
+### 🔴 The arithmetic defect in the carried forecast
+
+🔵 `Gap 464-A` registered that no gate here grades a **prose claim** against another shelf. This is
+the same class, one rung harder: a claim that is internally inconsistent with **its own source's**
+other published horizon.
+
+| figure | source horizon | implied CAGR from the common `$9.58B` 2026 base |
+|---|---|---|
+| 🔵 carried on this shelf: **`$42.48B` by 2030** | 4 years | **45.1 %** |
+| 🟢 read this pass: **`$136.79B` by 2035**, firm-stated CAGR **34.52 %** | 9 years | **34.4 %** — 🟢 reproduces the firm's own stated figure |
+| 🔴 **34.52 % compounded from `$9.58B` to 2030** | 4 years | **`$31.4B`** |
+
+🔴 **So the carried 2030 figure sits 35 % above what the same firm's own CAGR produces**, and both
+numbers have been published here as if on one curve. 🟢 **Correction applied in place:** the 2026
+base (`$9.58B`) is reproduced and retained; the long horizon is restated as **`$136.79B` by 2035 at
+34.52 %** (Precedence Research); the `$42.48B`-by-2030 cell is **retired** as not reconcilable with
+it. 🔵 Independent cross-check from a second firm, carried as a range not a point: **`$11.4B`
+(2026) → `$57.2B` (2033) at 25.9 %**, and a round-up of four firms spanning **`$6.4B`–`$11.4B`**
+for 2026. 🔴 **The honest cell is the range, not any point.** Registered as **`Gap 466-F`**.
+
+### 🔵 Regional share, as measured rather than asserted
+
+| region | share / growth | basis |
+|---|---|---|
+| North America | **36 %** of the global AI-in-education market — largest single share | market-research aggregate |
+| APAC | 🟢 **fastest-growing, 35.3 % CAGR** | same aggregate |
+| EMEA · LATAM · MEA | 🔴 **no share figure returned on any leg this pass** | an informed gap, recorded per the ingest brief rather than left silent |
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buyable work is policy-to-practice conversion, and the volume is now statutory.** More than
+**1 500** AI-related bills were introduced across the states this year, with roughly **100**
+directly touching K-12 student AI use, and ~**34 states + DC + Puerto Rico** have issued guidance.
+Federal curriculum standards remain **absent** — the `K-12 AI Literacy and Readiness Act`
+(**H.R. 8747**) has only advanced in committee, and would unlock *existing* federal funding streams
+for AI-literacy procurement rather than mandate content.
+
+Named instruments that create dated obligations:
+
+| instrument | obligation | status read this pass |
+|---|---|---|
+| **Idaho SB 1227** | statewide K-12 generative-AI framework: local policies, AI-literacy standards, data-privacy rules, and a **bar on AI replacing teachers** | 🟢 signed **2026-03-19**, effective **2026-07-01** |
+| **Ohio Rev. Code 3301.24** | **every district** must adopt a board-approved AI policy | 🟢 carried, in force |
+| **Oklahoma SB 1734** | age-appropriate tools, **teacher review of AI output**, **parent opt-out**, district policies | 🟢 before the **2027-28** school year |
+| **Maryland SB 720** | SDE to publish AI guidance, run professional development, help districts evaluate tools | 🔴 **status contested across three trackers** (effective 2026-06-01 / signed 2026-05-26 / passed one chamber). Relayed, **not** relied on |
+| **Arizona HB 4040** | K-12 **and public universities** to adopt student AI-use policies | 🟡 **introduced, not enacted** |
+
+🔵 **The offer that fits:** a district-level *AI policy conformance* engagement — inventory tools,
+map each to the state's duty (teacher-review, opt-out, literacy standard), and instrument the
+evidence. 🟢 Oklahoma's **teacher review of AI output** and Idaho's **no-replacement** clause are
+both requirements that `Pattern BJ` on [`compose/patterns.md`](../compose/patterns.md) satisfies
+architecturally — a human-arbitrated, deterministic-scoring assessment spine — rather than by
+policy text.
+
+### EMEA
+
+🔴 **A deadline inside five weeks, and it is the one nobody is briefing.** Art. **50**
+transparency duties (chatbot disclosure, synthetic-content marking) apply from **2026-08-02**, and
+systems **already on the market** have until **2026-12-02** to add content marking. 🟢 That is
+**~5 weeks from this pass** and it bites every AI feature already live in an EU institution.
+
+| instrument | what it does | date |
+|---|---|---|
+| 🔴 **Art. 5(1)(f)** | **prohibits** inferring emotions in educational institutions (medical/safety exception), to **€35 M / 7 %** | 🔴 **in force since 2025-02-02** — a live prohibition, not runway |
+| 🔴 **Art. 50** | chatbot disclosure + synthetic-content marking; **existing** systems must comply | 🔴 **2026-12-02** |
+| 🟢 **Regulation (EU) 2026/1744** | **moves** stand-alone high-risk (Annex III) education systems from **2026-08-02** to **2027-12-02** | 🟢 amendment read this pass |
+| 🟡 Commission draft guidelines (May 2026) | **tutoring, practice feedback and information chatbots generally fall OUTSIDE Annex III**; admissions, learning-steering grading and proctoring are inside | 🟡 draft |
+| 🟡 FRIA | public universities (and private bodies providing a public service) need a fundamental-rights impact assessment before first use | 🟡 with the high-risk regime |
+
+🔵 **The offer that fits, and it now has matching supply.** The Annex III slip to **2027-12-02**
+buys institutions 14 months — so the sellable work in the window is **Art. 50 marking + Art. 5
+prohibition audit**, then sovereign-stack readiness. 🟢 This pass found the EMEA supply for the
+second half on a forge this base had never sampled: `DD-workspace/DD` (Xnet, Barcelona),
+`moodlenet` (federated OER) and `Openki` — all **AGPL-3.0**, which fits institutional self-hosting
+and **not** multi-tenant SaaS. See [`repos/trending.md`](../repos/trending.md) and `Pattern BI`.
+
+### APAC
+
+🟢 **The fastest-growing region (35.3 % CAGR) and the only one where the state is the system
+integrator**, which changes who the buyer is.
+
+| market | named instrument | what it commits to |
+|---|---|---|
+| **China** | 🟢 MOE **"AI Plus Education" action plan** (2026-04-10) + the **2026-03-31** priorities meeting | a comprehensive AI education system **primary school → university, full implementation by 2030**, with pilots and 🔵 explicitly **strengthened data-security and personal-information protection** as AI spreads in education |
+| **Singapore** | 🟢 MOE **Authoring Copilot** (teacher lesson/assessment material) + **Learning Assistant** platform; four principles **Agency · Inclusivity · Fairness · Safety** | 🟢 a **phased age gate**: lower primary kept away from AI tools, upper primary introduced **under close teacher supervision**. Minister Desmond Lee confirmed MOE is formally studying AI's impact (**2026-02-25**) |
+| **India** | 🟡 AI + computational thinking **mandatory from Class 3**, 2026-27 | 🔴 **single secondary source** — relayed, not relied on |
+| **South Korea** | 🟡 **AI Basic Act** | 🔴 sources conflict: "in force January 2026" vs "due during 2026" |
+
+🔵 Adoption asymmetry worth pricing: working-age generative-AI use **Singapore 64.3 % vs Japan
+24.7 %** (June 2026). 🟢 **The offer that fits:** teacher-workload copilots procured to a
+*published* national framework. Singapore's four principles and China's data-protection emphasis are
+both answerable with the on-device/no-egress design in `Pattern BJ`; 🟢 APAC is also where the
+**skill-packaged** supply is densest (`kaogong-skill`, `flysheep-ai/education-skills`, zh-CN), so the
+localisation asset already exists.
+
+### LATAM
+
+🔴 **A deadline inside five weeks here too, and it is the harder one.** **Chile's Ley 21.719**
+(data protection) enters into force **2026-12-01** and already regulates **automated profiling and
+algorithmic decision-making** — which is what adaptive learning and automated grading *are*. 🟢 It
+binds before any Chilean AI statute does; the risk-based AI bill is still in `trámite`.
+
+| market | instrument | status |
+|---|---|---|
+| **Chile** | 🔴 **Ley 21.719** — automated profiling + algorithmic decisions | 🔴 **in force 2026-12-01** |
+| **Brazil** | **PL 2338/2023** | 🟡 Senate-approved Dec 2024, **still pending in the Câmara dos Deputados** |
+| **Mexico** | "Ley Nahui" initiative | 🟡 pending |
+
+🟢 **The governance gap is measured, and it is the opportunity.** UNESCO: in **Chile and Brazil
+more than 50 % of teachers already use these tools**, while **fewer than 10 % of institutions in
+the region have formal guidelines and sufficient capacity**. 🔵 **So the deficit is institutional
+governance, not adoption** — the inverse of the North American picture, where policy is racing
+ahead of practice. UNESCO has stood up an **Observatory of AI in Education for Latin America and
+the Caribbean**, and the **ILIA 2026** (CEPAL + CENIA) index reads **Chile 71.4 · Brazil 68.4 ·
+Uruguay 67.0 · Mexico 52.0**, with **11** of the analysed countries now carrying AI content in
+school curricula against **2 in 2024**. Demand-side anchor: **Tec de Monterrey** is redesigning
+**44+** degree programmes for full AI integration.
+
+🔴 **And the supply-side warning reproduces.** For the **second consecutive pass**, the repository
+matching this region's clearest opportunity — rubric-based assignment feedback — is **ungranted**:
+`p464`'s row, and this pass's Brazilian `henriquegpb/gradesinteli` (86★, `NO-ROOT-GRANT`). 🟢 The
+one granted LATAM row found is `menthorlabs/menthor` (**Apache-2.0**, Portuguese, teaching
+platform) — 🔴 a platform, **not** feedback. **The LATAM feedback gap cannot be closed with
+carried supply**; it must be built. That is `Pattern BK`.
+
+### Global
+
+🟢 **Market frame, as a range:** **`$6.4B`–`$11.4B`** in 2026 across four firms; the longest
+defensible horizon read first-hand is **`$136.79B` by 2035 at 34.52 %** from a `$9.58B` 2026 base.
+🔴 The `$42.48B`-by-2030 cell this shelf carried is retired as arithmetically irreconcilable with
+it (above).
+
+🟢 **The cross-regional structural finding of this pass:** the **forge you source from selects your
+delivery model**. GitHub education supply read this pass is MIT/Apache-dominant (9 of 12 granted
+rows permissive) and suits multi-tenant SaaS; GitLab education supply is **AGPL-3.0 on 4 of 5
+granted rows** and suits institutional self-hosting — which is precisely the EMEA sovereignty and
+LATAM public-sector buyer. 🔵 A studio sourcing only from GitHub systematically under-serves both.
+
+🔴 **And the licence trap is global, not regional:** of 12 granted GitHub rows read first-hand this
+pass, **three are unsellable or restricted** — `CC-BY-NC-4.0` (a 4 000★ maths knowledge graph),
+`Elastic-2.0` (a 340★ higher-ed advising platform) and `CC-BY-SA-4.0` (the 914★ teacher-skills
+library). See `Gap 466-A` on [`agents/top.md`](../agents/top.md).
+
+## 🟢 `Gap 465-D` — CLOSED. The Kenya intel leg, run against named instruments
+
+🔵 `Gap 465-D` recorded that supply for Kenya existed while the **intel** leg returned nothing, and
+prescribed querying **named institutions** rather than "Kenya AI education". Done:
+
+| instrument | what it says | status |
+|---|---|---|
+| 🟢 **Artificial Intelligence Bill, 2026** | creates an independent **AI Commissioner**; signals that AI deployed in critical sectors — **education named explicitly**, alongside health, agriculture, finance, employment — would fall in the **high-risk** class | 🟡 **published as a Bill**, not enacted; operational detail to come via the Commissioner's regulations |
+| 🟢 **KNEC** (Kenya National Examinations Council) | warns teachers against using AI to **produce learners' School-Based Assessment work** under the 2026 SBA guidelines; 🔵 the Council clarified this is **not a blanket AI ban** but is specific to assessed learner work | 🟢 in force for the 2026 SBA cycle |
+| 🟢 **National AI Strategy 2025–2030** | the policy frame the Bill sits inside | 🟢 published |
+| 🔴 **draft Universities (General) Regulations, 2026** (Ministry of Education with **CUE**) | accreditation, programme approval, quality audits, foreign-university collaborations — 🔴 **and silent on AI**; the public-input window has closed | 🔴 **an informed gap, not coverage**: Kenya's university regulator is mid-reform and is **not** regulating AI in that instrument |
+
+🟢 **So the gap closes with content on three instruments and an explicit nil on the fourth.** 🔴
+Paired with `p465`'s supply measurement — African education supply is **61 repositories whose
+maximum star count is 12** — the regional picture is now symmetric and both halves are thin:
+**regulatory intent is arriving ahead of any local build-on supply.** For a Kenyan engagement the
+assets must come from the Global/EMEA shelves; `Kolibri` (MIT, offline-first) remains the only
+carried platform whose licence **and** operating assumptions fit.
+
 ## 🆕 `p465` — **🟢 `Gap 463-D` IS CLOSED ON BOTH SIDES AT ONCE, AND THE TWO SIDES DISAGREE IN A USEFUL WAY: in MEA the ministry layer is the most aggressive on earth (UAE mandates AI from kindergarten) while the open layer is the emptiest this base has measured (African education ★ ceiling = 12). 🔴 And the regional web legs are a NIL FOR THE SEVENTH PASS with a 24-fact denominator — 22 already on this file.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
@@ -34,7 +200,7 @@ no open supply to meet it**. Every other region on this file has some open layer
 MEA's must be imported or built. That is a positive finding for a services business and this base
 has never stated it.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p466` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 🔵 **State guidance is now the norm and the binding edge has moved to procurement and data.**

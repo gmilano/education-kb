@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🟢 Four trends with denominators this pass, not adjectives: (1) 23 % of visible education supply ships as an agent SKILL with no runtime; (2) the forge selects the licence family — GitHub permissive, GitLab AGPL; (3) regulation is converging on a shape, DETERMINISTIC-AND-REVIEWABLE, from four unrelated jurisdictions; (4) the content/data layer is where the commercial closure is — the most-starred data asset found is NonCommercial.**
+
+### 🟢 Trend 1 — Education AI is shipping as a *skill*, not an application
+
+🔵 **Measured:** 9 of the 39 distinct repositories in the top-20s of `topics/ai-tutor` and
+`topics/edtech` ship as an agent skill or MCP server; the pattern's largest member is a **36 200★**
+skill *compiler* (`virgiliojr94/book-to-skill`, MIT). Reproduced independently on the
+`created:>2026-09-15` recency channel. Full table and provenance on
+[`agents/trending.md`](../agents/trending.md).
+
+🔵 **What it means commercially:** the reusable asset is **the method** — rubrics, Socratic
+sequencing, diagnosis-before-instruction, citation discipline — and the runtime is assumed. 🟢 That
+collapses the cost of adopting pedagogy and raises the value of **owning the integration surface**
+(LTI, SCORM, roster, gradebook), because that is the part a skill cannot supply. 🔴 **The
+counter-force:** skills are *content*, content repositories reach for Creative Commons, and the
+second-most-starred row in the pattern is `CC-BY-SA-4.0`.
+
+### 🟢 Trend 2 — The forge selects the licence family, and therefore the delivery model
+
+| channel | granted rows read first-hand | families |
+|---|---|---|
+| GitHub (topics + recency) | 12 | **MIT ×6 · Apache-2.0 ×2 · BSD-3-Clause ×1** · CC-BY-SA ×1 · CC-BY-NC ×1 · Elastic-2.0 ×1 |
+| GitLab | 5 | 🔴 **AGPL-3.0 ×4 · composite ×1 — zero permissive** |
+
+🔵 Network copyleft is not an obstacle to be routed around; it is a **fit signal**. AGPL suits the
+institutional, self-hosted, sovereignty-motivated buyer — the EMEA public-sector and LATAM
+public-university engagement — and is wrong for multi-tenant SaaS. 🔴 A base that samples one forge
+sees one half of the market and will mis-advise the other. 🔴 Three further forges (Codeberg,
+sourcehut, Framagit) are **DNS-unreachable from this environment**, so this trend is confirmed for
+GitLab and **untested** elsewhere (`Gap 466-D`).
+
+### 🟢 Trend 3 — Four jurisdictions, independently, are converging on the same required shape
+
+🔵 Not a theme — the same three properties, named in instruments from four unrelated legal systems:
+
+| property required | where it is written |
+|---|---|
+| **a human must review AI output before it affects a learner** | 🟢 Oklahoma **SB 1734** (teacher review of AI output); Idaho **SB 1227** (AI may not replace teachers); EU **Annex III** (grading that steers learning is high-risk); 🟢 Kenya **KNEC** (AI may not produce assessed learner work) |
+| **no emotion or affect inference on learners** | 🔴 EU **Art. 5(1)(f)** — prohibited since **2025-02-02**, €35 M / 7 % |
+| **automated decisions about a learner are themselves regulated** | 🔴 **Chile Ley 21.719** (automated profiling + algorithmic decisions, **in force 2026-12-01**); 🟢 China MOE's explicit data-security and personal-information emphasis; 🟡 Kenya's AI Bill placing education in the high-risk class |
+
+🟢 **So the architecture is being specified by law, and it is the same architecture everywhere:**
+deterministic scoring, an auditable evidence trail, a human arbiter, and no affect inference. 🔵
+That is buildable today from permissive carried supply — `nbgrader` (BSD-3) for the deterministic
+spine, `AutoGrader-Agent` (MIT, all arithmetic in Python not the model), `markwise` (MIT,
+double-marking plus **verification that quoted evidence actually occurs in the work**), `EduShield`
+(MIT, client-side de-identification before any hosted model). 🟢 `Pattern BJ` wires exactly this.
+
+### 🔴 Trend 4 — The commercial closure has moved to the content and data layer
+
+🔵 The code is permissive; the **assets** increasingly are not. Read first-hand this pass:
+
+| asset | ★ | grant | effect |
+|---|---|---|---|
+| `xiaoyang111222/cn-math-taxonomy` — maths/English/physics knowledge graph + diagnostics | **4 000** | 🔴 **CC-BY-NC-4.0** | 🔴 **unusable in any paid engagement** |
+| `GarethManning/education-agent-skills` — 165 teacher/leader skills | 914 | 🔴 **CC-BY-SA-4.0** | 🟡 adaptations inherit ShareAlike |
+| `canyongbs/advisingapp` — higher-ed advising CRM + AI assistant | 340 | 🔴 **Elastic-2.0** | 🔴 forbids providing it **as a hosted service** — the Globant delivery model |
+| `Zo-Dns/Al-Idrisi.AI` — Arabic AI atlas (carried, `p465`) | 4 | 🟡 MIT **code** + separate content licence | 🔴 the part a client would reuse is **outside** the MIT cell |
+
+🔵 **The pattern across all four:** permissive source, restricted substance. 🟢 The practical rule
+for a studio: **the curriculum, item bank, rubric corpus and knowledge graph are the deliverable's
+licence risk**, not the framework — and they are the components a client most wants to reuse.
+Pedagogical *method* is cheap and open; pedagogical *content* is where the moat was rebuilt.
+
+### 🔵 Carried trends re-checked this pass
+
+| trend | status |
+|---|---|
+| 🟢 `DeepTutor` as the category's centre of gravity | 🟢 **holds and still compounding** — **43.8k★** against the **43 537** `p465` recorded index-exact; Apache-2.0 payload reproduced byte-identical (**11 408 B · `cd2f54e1e506`** @ HEAD `a31d82624c27`) |
+| 🟡 Market-size trajectory | 🔴 **restated** — the carried `$42.48B`-by-2030 cell is arithmetically irreconcilable with the same firm's 2035 horizon; see [`intel/market.md`](market.md) and `Gap 466-F` |
+| 🟢 LMS incumbency as the real integration constraint | 🟢 **strengthened** — this pass shelved the two standards runtimes that decide it, `scorm-again` (MIT) and `tsugi` (Apache-2.0, LTI) |
+
 ## 🆕 `p465` · 2026-10-26 — **🟢 A TREND THIS BASE HAS NOT STATED, AND MEA IS THE PROOF: mandate intensity and open-supply depth are INVERSELY related. The region with the world's most aggressive curriculum mandate (UAE, AI from kindergarten) has the emptiest open layer this base has ever measured (African education ★ ceiling = 12). 🔴 And a methodological trend that now outweighs the market ones: this base's own measuring instruments are failing more often than its sources are.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing

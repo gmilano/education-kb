@@ -1,0 +1,7 @@
+host	result	usable_as_channel	note
+github.com	responds	YES	the only channel this base has used in 466 passes
+raw.githubusercontent.com	301	YES	payload-bytes leg
+gitlab.com	301 / api-v4 200	YES	NEVER SAMPLED BEFORE p466; unauthenticated API v4 answers
+codeberg.org	DNS ENOTFOUND	NO	UNTESTED channel, not an absence of supply
+git.sr.ht	DNS failure	NO	UNTESTED channel, not an absence of supply
+framagit.org	DNS failure	NO	UNTESTED channel, not an absence of supply

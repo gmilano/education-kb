@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🟢 Two gaps closed with content (`465-A` with fixtures that REFUTE its own premise, `465-D` with four named Kenyan instruments), one superseded (`464-D` — two token-free discovery channels work), and six registered — the largest being that a PRESENT grant is not a PERMISSIVE grant, proved on three rows of 914★, 340★ and 4 000★.**
+
+🟢 **The register is written in the same pass as the shelves it registers**, per
+`gate-register-currency`. Shelves carrying `p466`: `agents/top.md`, `agents/trending.md`,
+`repos/foundations.md`, `repos/trending.md`, `verticals/solutions.md`, `intel/market.md`,
+`intel/trends.md`, `compose/patterns.md`.
+
+### 🔴 Gate posture — thirteen denials in fourteen passes
+
+| invocation | result |
+|---|---|
+| 🔴 `make hooks` | **not run** — the harness refuses execution of code that arrived in a clone (`Code from External`) |
+| 🔴 repo gate scripts (`table_structure.py`, `check_headings.py`) | **not run**, same reason |
+
+🔵 The denial is on *executing code that arrived in a clone*, which is a defensible posture and not
+a proxy failure. 🔴 Its effect is unchanged: **`Gap 446-A` cannot be closed by any pass** and
+nothing on this pass's shelves is gate-attested.
+
+🟢 **Mitigation re-implemented in this session's own code** (not the repo's), and **not** a
+substitute for the gate:
+
+| check | result |
+|---|---|
+| 🟢 frontmatter keys + closed-vocabulary `region` on all 9 shelves | **9/9 pass** |
+| 🟢 `p466` tables: separator present, pipe-count consistent | **0 problems** |
+| 🟢 **no header row published as data** (the failure the ingest brief names explicitly) | **0 findings** |
+| 🟢 single canonical `## Opportunities by region` with all 5 `###` children on `intel/market.md` | 🟢 **1 canonical block, 5/5 regions** — the prior block renamed `— SUPERSEDED by p466`, per the `p383` contract |
+| 🟢 append-only on both trending shelves, by prior-body containment against `HEAD` | 🟢 **both intact** |
+| 🟢 every address introduced this pass resolved first-hand (`git ls-remote --symref`) | **22 addresses: 19 live, 3 ungranted-but-live, 1 unresolved (`jezhops/moodle-theme_adaptable`)** |
+
+### 🟢 Closed / answered this pass
+
+| gap | closure |
+|---|---|
+| 🟢 **`Gap 465-A` — CLOSED, and its premise REFUTED** | Fixtures fetched from the SPDX canonical corpus under the raw-bytes contract: `MIT` **1 078 B** `b05785f9f18e` · `Apache-2.0` **10 280 B** `074e6e32c86a` · `GPL-3.0-only` **34 674 B** `fb981668c18a` · `AGPL-3.0-only` **34 020 B** `d8a6cc31abc1` · `BSD-3-Clause` **1 460 B** `5a93d5831e12` · `CC-BY-SA-4.0` **18 375 B** `cde7883b9050`. 🔴 **But the gap assumed one stock text per licence and that is false:** Apache-2.0 circulates in **two** canonical families ~1.1 KB apart — bare SPDX text (`tsugi` **10 273 B**) vs GitHub's template **with the "APPENDIX: How to apply"** (`menthor` **11 337 B**, `DeepTutor` **11 408 B**). 🟢 **That mechanism explains the entire carried Apache-2.0 spread without any tampering.** Declaring raw bytes is necessary and **not sufficient**; you must also declare *which* canonical text |
+| 🟢 **`Gap 465-D` — CLOSED with four named instruments** | The Kenya intel leg, run against named institutions as the gap prescribed: **AI Bill 2026** (independent AI Commissioner; **education named** among critical sectors likely high-risk; a Bill, not law) · **KNEC** 2026 SBA guidelines (teachers may not use AI to **produce assessed learner work**; explicitly **not** a blanket ban) · **National AI Strategy 2025–2030** · 🔴 **draft Universities (General) Regulations 2026** (Ministry of Education with **CUE**) — **silent on AI**, input window closed. 🟢 Three instruments with content, one explicit nil. Paired with `p465`'s supply measurement (African education supply = **61 repos, max 12★**): **regulatory intent is arriving ahead of any local build-on supply** |
+| 🟢 **`Gap 464-D` — SUPERSEDED, its conclusion was too narrow** | It concluded repository search *"survives only via the MCP `search_repositories` tool"*. 🟢 **Two token-free channels work and are not repository-scoped:** the GitHub **web topic pages** (`github.com/topics/<topic>` → top-20 **with stars and `Updated` dates**; 3 channels, 60 rows this pass) and the GitHub **web search UI** (`github.com/search?q=…` → 44 claimed, 10 rendered, **2 novel**). 🟢 Plus a third forge entirely: the **GitLab API v4**, unauthenticated, `200`. Its closure contract — *record the working channel* — is met |
+| 🟢 **The prescribed `curl -sI` probe — SIXTH reproduction of its uselessness, now with a negative control** | `403` for live (`HKUDS/DeepTutor`) **and** nonexistent addresses alike. 🟢 **And for the first time the base publishes the comparison leg:** `git ls-remote --symref` returns `HEAD a31d82624c27` for the live address and **UNRESOLVED** for the nonexistent one. The house instrument has signal; the prescribed one has none |
+| 🟢 **`p462`'s payload-identity rule — sharpened, not merely reproduced** | AGPL-3.0 now shows **7 live byte-values spanning 1 116 B** (34 020 SPDX · 34 449 · 34 481 · 34 520 · **34 523** the base's only prior control · 34 588 · 35 136). 🔴 A pass screening AGPL on `size == 34 523` would misclassify **all four** GitLab rows. Rule: **digest identifies licence text + holder; size identifies nothing** |
+| 🟢 **Cross-pass control — reproduced exactly** | `HKUDS/DeepTutor` Apache-2.0 **11 408 B · `cd2f54e1e506`** @ HEAD **`a31d82624c27`** — byte-, digest- and HEAD-identical to `p465`. Stars **43.8k** vs the **43 537** `p465` recorded index-exact: still incrementing |
+| 🟡 **`Gap 463-G` (the rotation pointer) — reproduced, still OWNER-ONLY, now a SEVENTH consecutive run** | `gmilano/globant-kb` `origin/main:rotation.json` still reads **`next: 8`, `last_industry: technology`, `last_updated: 2026-08-02`** while this pass's write goes to a `claude/ecstatic-mccarthy-*` branch that is never merged. 🔴 **Education has now been the selected industry for seven consecutive runs** and eleven of twelve industries are starving. 🔴 **Not closable by a pass** — it needs the branch merged to `main`, which is an owner action |
+
+### 🆕 Registered this pass
+
+| gap | finding |
+|---|---|
+| 🆕 **`Gap 466-A`** | 🔴 **A present grant is not a permissive grant, and no screen here tests the difference.** Three carried rows serve root licence payloads and would pass any "has-a-LICENSE" check: `GarethManning/education-agent-skills` (914★) is **`CC-BY-SA-4.0`** — content copyleft, not a software licence; `canyongbs/advisingapp` (340★) is **`Elastic-2.0`** — forbids hosted-service delivery, i.e. the Globant model; `xiaoyang111222/cn-math-taxonomy` (4 000★) is **`CC-BY-NC-4.0`** — **NonCommercial, barred from every paid engagement**. **Closure:** a `grant_class` axis read from the payload's **first non-blank line**, with an explicit `UNSELLABLE` value for `*-NC`, `Elastic-*`, `BUSL-*`, `SSPL`, required on every sell-shelf row before publication |
+| 🆕 **`Gap 466-B`** | 🟡 **The ungranted denominator correlates with stars in the wrong direction and nothing measures it.** The most-starred non-established row probed this pass, `aaryansamanta/ai-ethos` (**498★**, multilingual tutoring for underserved and neurodiverse learners), is **`NO-ROOT-GRANT`**, as is the 86★ LATAM row — while 3★ rows carry clean MIT. A pass ordering candidates by stars spends its probes on ungranted supply. **Closure:** record `(★, grant-present)` for every probed address in the evidence store; publish the correlation at n ≥ 60 and set candidate ordering from it |
+| 🆕 **`Gap 466-C`** | 🔴 **Payload size is used on these shelves as if it screened licence family, and it does not.** AGPL-3.0: 7 values / 1 116 B. Apache-2.0: two canonical families ~1.1 KB apart. MIT: 6 values in 29 B. **Closure:** replace the size screen with a **first-non-blank-line match** against SPDX title strings; keep size and digest as provenance only; re-grade every carried cell asserting a family from a size |
+| 🆕 **`Gap 466-D`** | 🔴 **The base's GitHub-only supply picture is partly a NETWORK ARTIFACT and has never been tested.** Measured this pass: `gitlab.com` **reachable** (API v4 `200`); `codeberg.org`, `git.sr.ht`, `framagit.org` all **DNS-unreachable**. Codeberg and Framagit are exactly where EU-sovereignty-motivated public-sector education projects migrate. 🟢 Confirmed for GitLab, **untested for three forges**. **Closure:** record forge reachability every pass; where a forge is unreachable, publish it as an **untested channel** rather than letting a GitHub-only census read as a market census |
+| 🆕 **`Gap 466-E`** | 🟢 **The forge selects the licence family, and therefore the delivery model.** GitHub granted rows this pass: MIT ×6, Apache-2.0 ×2, BSD-3 ×1 (9 of 12 permissive). GitLab: **AGPL-3.0 ×4, composite ×1 — zero permissive.** AGPL is network copyleft, which **fits** the institutional self-hosted buyer (EMEA sovereignty, LATAM public university) and is wrong for multi-tenant SaaS. **A base sampling one forge advises half the market.** **Closure:** make forge a recorded dimension on every sell-shelf row and run the GitLab leg every pass until n ≥ 30 |
+| 🆕 **`Gap 466-F`** | 🔴 **A carried headline forecast fails arithmetic against its own source's other horizon.** `$9.58B → $42.48B (2030)` implies **45.1 %** CAGR; the same firm's `$136.79B` by 2035 from the same base implies **34.4 %** (reproducing its stated 34.52 %) — and 34.52 % compounded to 2030 yields **`$31.4B`**, not `$42.48B`. The 2030 cell is **35 % high**. Retired in place; the market frame is restated as a **range** (`$6.4B`–`$11.4B` for 2026 across four firms). **Closure:** no forecast point is publishable here without its CAGR and base year recorded alongside, so the next pass can recompute it; and any two horizons from one firm must be checked for a common curve before both are carried |
+
 ## 🆕 `p464` — **🔴 THE STRICTEST GATE POSTURE YET RECORDED: `make hooks` AND every individual gate script were refused, so for the first time this base cannot run even the hand-run mitigations `p463` used. 🟢 The checks were re-implemented in this session's own code instead and are green on 9 shelves / 32 tables / 137 rows / 29 addresses. 🔴 And a STANDING CLAIM on `intel/market.md` is refuted by this base's own `agents/top.md` — a class of defect no gate here can see, because every gate grades a row against a payload and none grades a PROSE CLAIM against another shelf.**
 
 🟢 **The register is written in the same pass as the shelves it registers**, per

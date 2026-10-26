@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🟢 THREE PLATFORMS ADDED FROM A FORGE THIS BASE HAS NEVER SAMPLED, all AGPL-3.0 and all EMEA-placed — including the deployable artefact of a Barcelona digital-sovereignty programme. 🔴 And one 340★ platform that reads as the pass's best vertical find is REFUSED: `Elastic-2.0` forbids exactly the hosted-service delivery Globant sells.**
+
+### 🔴 Refused as build-on supply — read the payload, not the star count
+
+| platform | ★ | grant read first-hand | why it is refused |
+|---|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🔴 **Elastic License 2.0** · 3 860 B · `48255018b41f` @ HEAD `c79803f21cb8` | 🔴 **Source-available, not OSI.** A higher-ed **student-success CRM with an AI assistant** — recruitment, retention, advising — which is the single most saleable vertical shape found this pass. Elastic-2.0 forbids **providing the software to third parties as a hosted or managed service**. 🔴 That is the delivery model for a university CRM engagement. 🟢 Retained as a **design reference** for scope and data model; **not** as a codebase to build on |
+
+🔵 This is `Gap 466-A`'s instance at the platform tier: present grant, non-permissive substance, and
+a star count that invites exactly the wrong conclusion.
+
+### 🟢 Platforms added — GitLab channel, all payloads read first-hand
+
+🔵 Default branches are `develop`, `dev` and `main` across these five — resolved with
+`git ls-remote --symref`, not assumed.
+
+| platform | ★ | grant · `sha256₁₂` · branch · HEAD | region · basis | what it is, and what it is for |
+|---|---|---|---|---|
+| [`DD-workspace/DD`](https://gitlab.com/DD-workspace/DD) | 12 | 🟡 **AGPL-3.0** · 34 588 B · `a7f13bbcc053` · `main` · `ab820f90134a` | **EMEA** · Xnet, Barcelona (ES) | 🟢 **NOVEL — absent from this entire base.** The deployable education workspace of Xnet's **Democratic Digitalisation** framework: a schools stack built explicitly to keep student data out of hyperscaler platforms. 🟢 **This is the artefact EMEA sovereignty demand is asking for**, and this base had no row for it |
+| [`moodlenet/backend`](https://gitlab.com/moodlenet/backend) | 21 | 🟡 **AGPL-3.0** · 34 449 B · `feff6860d5ea` · `develop` · `9f7e86989866` | **EMEA** · Moodle HQ | **MoodleNet** — **ActivityPub-federated** sharing and curation of open educational resources *between* institutions (Elixir). 🟢 The only **federated** platform on these shelves: resource sovereignty without a central host |
+| [`moodlenet/frontend`](https://gitlab.com/moodlenet/frontend) | 19 | 🟡 **AGPL-3.0** · 34 481 B · `6dbb120dadf0` · `develop` · `0a4756bd2ad0` | **EMEA** | MoodleNet client (React + TypeScript) |
+| [`Openki/Openki`](https://gitlab.com/Openki/Openki) | 35 | 🟡 **AGPL-3.0** · 34 520 B · `57c8ff33c9c0` · `dev` · `dd10d490a3f6` | **EMEA** · Swiss, de/fr UI | course-organisation platform for **self-organised local learning communities** — learners propose courses and they run when enough people commit. 🟢 **An inverted governance model** no carried LMS implements: demand-led rather than institution-scheduled. Fits municipal/NGO reskilling mandates |
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | 53 | 🟡 **composite** · 517 B · `21a1dedbfaf3` · `main` · `49a1c8f1c5b3` | **EMEA** · Universität Osnabrück (DE) | OER authoring/publishing toolchain (reveal.js + recorded audio), used for real university courses. 🔴 Its `LICENSE` is a **pointer, not a grant** — *"this repository embeds different resources under different licences"* — so **no single-family cell is truthful**; third instance of the conjunctive class, and the first where the payload declines to name one licence at all |
+
+🔴 **All four granted rows are AGPL-3.0 — network copyleft.** Deploying a modified MoodleNet,
+Openki or DD as a hosted service for a client obliges offering the modified source to its users.
+🟢 **That is a fit signal, not a blocker:** it suits the institutional self-hosted engagement, which
+is the EMEA public-sector and LATAM public-university buyer. 🔴 It is wrong for a multi-tenant SaaS
+deliverable. See `Gap 466-E` on [`repos/trending.md`](../repos/trending.md).
+
+### 🟢 The integration surface — the rows that decide whether any of this can be sold *into* an estate
+
+🔵 Carried platforms (Moodle, Open edX, Canvas, Kolibri, OpenEduCat, Sakai, BigBlueButton, H5P,
+OpenOLAT) are the incumbents a Globant build must live beside. This pass shelves the two standards
+runtimes that make that possible, both permissive — details on
+[`repos/foundations.md`](../repos/foundations.md):
+
+| runtime | grant | why it is a vertical concern and not a detail |
+|---|---|---|
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** · 10 273 B · `73ba74dfaa52` | **LTI** — mount an external tool inside any compliant LMS **with roster and grade passback**. 🟢 The supported route into Moodle/Canvas/Open edX without forking them |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** · 1 072 B · `383b85b370e8` | SCORM 1.2 / 2004 + AICC runtime. 🔵 How content reports completion and score to an incumbent LMS or corporate LXP |
+
+🔵 **Why this matters against Trend 1:** 23 % of visible supply now ships as a *skill* with no
+runtime ([`agents/trending.md`](../agents/trending.md)). **LTI and SCORM are the runtime** — and
+they are the part a skill library cannot provide and a client already requires.
+
+### 🟢 LATAM platform row
+
+| platform | ★ | grant · `sha256₁₂` · HEAD | region · basis | note |
+|---|---|---|---|---|
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | 582 | 🟢 **Apache-2.0** · 11 337 B · `36d6788503b8` @ `94cedd7d4e02` | **LATAM** · Portuguese-language, Brazil | free open-source programming-teaching platform. 🟢 **The one granted LATAM row found this pass**, and the Apache-2.0 payload is the *with-appendix* family (see the fixture finding on [`repos/foundations.md`](../repos/foundations.md)). 🔴 Last pushed **2024-04-21** per the channel listing — **maintenance risk, stated**: usable as a fork base, not as a live upstream |
+
 ## 🆕 `p465` — **🟢 FOUR copyleft platforms added, and the pass's value is the FORM they take: a national OS distribution, a school report system, an offline-first platform and a subjective-question marker. 🔴 None is permissive, so all four are deployment-or-fork decisions, not build-on components — which is exactly why they belong here and not on `agents/top.md`.**
 
 🔴 **`make hooks` DENIED** — twelfth denial in thirteen passes; nothing below is gate-attested.

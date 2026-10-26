@@ -1,0 +1,23 @@
+forge	address	stars	branch	head12	grant_file	licence	payload_bytes	sha256_12	grant_class	region	channel	novelty
+github	HKUDS/DeepTutor	43800	main	a31d82624c27	LICENSE	Apache-2.0	11408	cd2f54e1e506	PERMISSIVE	Global	cross-pass-control	CARRIED
+github	ShawnRen57/omni-learning-anything	3	main	0d9b20e5c770	LICENSE	MIT	1092	f3a9a5d7a599	PERMISSIVE	Global	search-created-gt-2026-09-15	ZERO_PRIOR
+github	paher-din/XunJie	5	main	d72aed730e26	NONE	NO-ROOT-GRANT			UNGRANTED	APAC	search-created-gt-2026-09-15	ZERO_PRIOR
+github	aaryansamanta/ai-ethos	498	main	9acaafc718f2	NONE	NO-ROOT-GRANT			UNGRANTED	Global	topics-edtech	CARRIED
+github	henriquegpb/gradesinteli	86	main	2ded74019bb2	NONE	NO-ROOT-GRANT			UNGRANTED	LATAM	topics-grading	CARRIED
+github	menthorlabs/menthor	582	main	94cedd7d4e02	LICENSE	Apache-2.0	11337	36d6788503b8	PERMISSIVE	LATAM	topics-edtech	CARRIED
+github	OmarZen/scholarship-navigator	7	main	f6281d855960	LICENSE	MIT	1064	cdc1ae6b9064	PERMISSIVE	Global	search-created-gt-2026-09-15	CARRIED
+github	finereli/yarareads	29	main	e45b23b609d9	LICENSE	MIT	1066	7c4cf856c78c	PERMISSIVE	Global	search-created-gt-2026-09-15	CARRIED
+github	CGSeb/lessonfolk	3	main	84ee63228899	LICENSE	MIT	1063	55873542fedc	PERMISSIVE	Global	search-created-gt-2026-09-15	CARRIED
+github	xiaoyang111222/cn-math-taxonomy	4000	main	cf262d886821	LICENSE	CC-BY-NC-4.0	19347	41003d4a7474	UNSELLABLE	APAC	topics-edtech	CARRIED
+github	GarethManning/education-agent-skills	914	main	135d6275e7db	LICENSE	CC-BY-SA-4.0	1230	f952182df4eb	CONTENT-COPYLEFT	Global	topics-edtech	CARRIED
+github	canyongbs/advisingapp	340	main	c79803f21cb8	LICENSE	Elastic-2.0	3860	48255018b41f	UNSELLABLE	North America	topics-edtech	CARRIED
+github	virgiliojr94/book-to-skill	36200	master	a24e62f4d8ca	LICENSE.md	MIT	1068	be9b04bccfb4	PERMISSIVE	Global	topics-edtech	CARRIED
+github	jupyter/nbgrader	1400	main	c2e1ab63512b	LICENSE	BSD-3-Clause	1512	3a83d5b8e22c	PERMISSIVE	Global	topics-grading	CARRIED
+github	jcputney/scorm-again	359	master	86ab328f0e5b	LICENSE	MIT	1072	383b85b370e8	PERMISSIVE	Global	topics-edtech	CARRIED
+github	tsugiproject/tsugi	377	master	d48c2a6ae053	LICENSE	Apache-2.0	10273	73ba74dfaa52	PERMISSIVE	Global	topics-edtech	CARRIED
+gitlab	moodlenet/backend	21	develop	9f7e86989866	LICENSE	AGPL-3.0	34449	feff6860d5ea	NETWORK-COPYLEFT	EMEA	gitlab-api-v4	THIN_PRIOR
+gitlab	moodlenet/frontend	19	develop	0a4756bd2ad0	LICENSE	AGPL-3.0	34481	6dbb120dadf0	NETWORK-COPYLEFT	EMEA	gitlab-api-v4	THIN_PRIOR
+gitlab	Openki/Openki	35	dev	dd10d490a3f6	LICENSE	AGPL-3.0	34520	57c8ff33c9c0	NETWORK-COPYLEFT	EMEA	gitlab-api-v4	THIN_PRIOR
+gitlab	DD-workspace/DD	12	main	ab820f90134a	LICENSE	AGPL-3.0	34588	a7f13bbcc053	NETWORK-COPYLEFT	EMEA	gitlab-api-v4	ZERO_PRIOR
+gitlab	oer/emacs-reveal	53	main	49a1c8f1c5b3	LICENSE	COMPOSITE-POINTER	517	21a1dedbfaf3	COMPOSITE	EMEA	gitlab-api-v4	THIN_PRIOR
+gitlab	jezhops/moodle-theme_adaptable	11			NONE	UNRESOLVED			UNRESOLVED	EMEA	gitlab-api-v4	THIN_PRIOR

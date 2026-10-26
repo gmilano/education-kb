@@ -1,0 +1,8 @@
+payload_bytes	sha256_12	observed_at	forge
+34020	d8a6cc31abc1	spdx-canonical-AGPL-3.0-only	spdx
+34449	feff6860d5ea	moodlenet/backend	gitlab
+34481	6dbb120dadf0	moodlenet/frontend	gitlab
+34520	57c8ff33c9c0	Openki/Openki	gitlab
+34523	0d96a4ff68ad	Vacademy-io + RubricSpan + gygy-open/question-bank (carried control)	github
+34588	a7f13bbcc053	DD-workspace/DD	gitlab
+35136	e12d78569742	openedx/edx-platform (carried)	github

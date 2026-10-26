@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `2026-10-26` · `p466` — **🟢 A FORGE THIS BASE HAS NEVER SAMPLED IS REACHABLE, AND IT IS NOT SATURATED: the GitLab API v4 answers, returns novel education supply at ~2.5× the GitHub rate — and every granted row it returned is AGPL-3.0. 🔴 Three OTHER forges are DNS-unreachable from this environment, so the base's GitHub-only supply picture is partly a NETWORK ARTIFACT, not a fact about supply.**
+
+🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained
+unaltered, and containment against `HEAD` was checked before writing.
+
+### 🔴 Forge reachability, measured — the control no pass here has run
+
+🔵 466 passes have sourced supply from one forge. Whether that reflects where education code
+*lives* or only where this environment can *reach* has never been tested. It is now:
+
+| host | result | consequence |
+|---|---|---|
+| 🟢 `github.com` / `raw.githubusercontent.com` | responds | the carried channel |
+| 🟢 **`gitlab.com`** | **`301`, API v4 answers `200`** | 🟢 **reachable and never sampled** — see below |
+| 🔴 `codeberg.org` | **DNS `ENOTFOUND`** | 🔴 unreachable |
+| 🔴 `git.sr.ht` | **DNS failure** | 🔴 unreachable |
+| 🔴 `framagit.org` | **DNS failure** | 🔴 unreachable |
+
+🔴 **So "education OSS lives on GitHub" is, in this base, partly unfalsifiable by construction.**
+Codeberg and Framagit are exactly where EU-sovereignty-motivated public-sector education projects
+migrate, and neither can be probed from here. 🟢 The honest cell: **the GitHub-only picture is
+confirmed for GitLab (sampled, below) and remains UNTESTED for three forges.** Registered as
+**`Gap 466-D`**.
+
+### 🟢 And the discovery instrument that makes this cheap — `Gap 464-D` superseded
+
+🔵 `Gap 464-D` recorded that the GitHub **search API** returns `403` from the `gh` CLI here
+(*"sessions are bound to their configured repositories"*) and concluded repository search *"survives
+only via the MCP `search_repositories` tool"*. 🟢 **Two further channels work and neither needs an
+API token or the MCP tool:**
+
+| channel | how | what it returned this pass |
+|---|---|---|
+| 🟢 **GitHub web topic pages** | fetch `github.com/topics/<topic>` | top-20 rows **with star counts and `Updated` dates** — three channels sampled (`ai-tutor`, `edtech`, `grading`), 60 rows |
+| 🟢 **GitHub web search UI** | fetch `github.com/search?q=…&type=repositories` | 44 claimed results for `education agent created:>2026-09-15`, 10 rendered, **2 novel** |
+| 🟢 **GitLab API v4** | `gitlab.com/api/v4/projects?search=…&order_by=star_count` | `200`, unauthenticated, 12–20 rows per query, 5 queries run |
+
+🔵 `Gap 464-D`'s closure contract — *"record the working channel at the top of the discovery
+recipe"* — is **met**, and its finding is **widened**: the MCP tool is not the only survivor, and
+the two web channels are preferable here because they are not repository-scoped.
+
+### 🟢 GitLab education supply, read first-hand
+
+🔵 Queries `moodle`, `elearning`, `education ai`, `schulverwaltung`, `apprentissage`, ordered by
+stars. Payloads read at `gitlab.com/<path>/-/raw/<branch>/<LICENSE>`, raw bytes, same contract as
+the GitHub channel. **Default branches are not `main`** on three of five — `ls-remote --symref`
+earns its place here.
+
+| project | ★ | grant · `sha256₁₂` · branch · HEAD | region · basis | what it is |
+|---|---|---|---|---|
+| [`moodlenet/backend`](https://gitlab.com/moodlenet/backend) | 21 | 🟡 **AGPL-3.0** · 34 449 B · `feff6860d5ea` · `br=develop` · `9f7e86989866` | **EMEA** · Moodle HQ's European-facing OER effort | **MoodleNet** federated server, Elixir — ActivityPub-based sharing and curation of open educational resources *between* institutions. 🟢 The only **federated** education row this base carries from any channel |
+| [`moodlenet/frontend`](https://gitlab.com/moodlenet/frontend) | 19 | 🟡 **AGPL-3.0** · 34 481 B · `6dbb120dadf0` · `br=develop` · `0a4756bd2ad0` | **EMEA** | MoodleNet client, React + TypeScript |
+| [`Openki/Openki`](https://gitlab.com/Openki/Openki) | 35 | 🟡 **AGPL-3.0** · 34 520 B · `57c8ff33c9c0` · `br=dev` · `dd10d490a3f6` | **EMEA** · Swiss (openki.net), de/fr UI | course-organisation platform for **self-organised local learning communities** — people propose and fill courses rather than an institution scheduling them. 🟢 A governance model no carried LMS implements |
+| [`DD-workspace/DD`](https://gitlab.com/DD-workspace/DD) | 12 | 🟡 **AGPL-3.0** · 34 588 B · `a7f13bbcc053` · `br=main` · `ab820f90134a` | **EMEA** · Xnet, Barcelona (ES) | 🟢 **NOVEL — absent from this entire base.** An education workspace built inside Xnet's *Democratic Digitalisation* framework: the deployable artefact of a **digital-sovereignty** programme for schools, i.e. the thing EMEA policy demand is actually asking for |
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | 53 | 🟡 **composite** · 517 B · `21a1dedbfaf3` · `br=main` · `49a1c8f1c5b3` | **EMEA** · Universität Osnabrück (DE) | OER authoring/publishing toolchain (reveal.js + audio). 🔵 Its `LICENSE` is a **pointer**, not a grant: *"this repository embeds different resources under different licences"* — the conjunctive class `p464`/`p465` opened, third instance, and the first where **no** single family can be published in a one-word cell |
+
+### 🔴 The structural result: the two forges supply DIFFERENT licence families
+
+| channel | granted rows read this pass | licence families |
+|---|---|---|
+| 🟢 GitHub topic + recency | 12 | **MIT ×6, Apache-2.0 ×2, BSD-3-Clause ×1, CC-BY-SA ×1, CC-BY-NC ×1, Elastic-2.0 ×1** |
+| 🟡 GitLab | 5 | 🔴 **AGPL-3.0 ×4, composite ×1 — zero permissive rows** |
+
+🔵 **This is decision-relevant and it is new.** AGPL-3.0 is **network** copyleft: deploying a
+modified MoodleNet or Openki as a hosted service for a client obliges offering the modified source
+to its users. 🟢 That is workable for a public-sector or institutional self-hosted engagement — and
+it is exactly the EMEA sovereignty buyer. 🔴 It is **not** workable for a multi-tenant SaaS
+deliverable without counsel. **So the forge you source from selects your delivery model**, and a
+pass that samples only GitHub sees only the permissive half of the market. Registered as
+**`Gap 466-E`**.
+
+| channel | rows coverage-checked | already carried | novel |
+|---|---|---|---|
+| 🔴 GitHub (3 channels) | 30 | 28 | **2 — 6.7 %** |
+| 🟢 **GitLab** | 6 | 5 (4 thinly, ≤18 mentions) | 🟢 **1 — 17 %** |
+
+🔵 Small denominators, stated as such: **1 of 6 is not a rate**, it is a reason to run the channel
+again. But it is the first non-zero novelty this base has recorded outside GitHub.
+
 ## 🆕 `p465` · 2026-10-26 — **🟢 `Gap 463-D` IS CLOSED WITH A CENSUS. The Middle East and Africa did not "return nothing" because the regions are empty — they return 69 repositories, and the finding is the CEILING: the single most-starred African education repository on GitHub has 12 stars, and the most-starred Arabic one has 6. Supply exists in COUNT and is absent in SCALE, and those are different nils.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing

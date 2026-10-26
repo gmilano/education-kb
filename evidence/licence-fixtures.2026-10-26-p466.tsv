@@ -1,0 +1,7 @@
+spdx_id	source	payload_bytes	sha256_12	note
+MIT	spdx/license-list-data/text/MIT.txt	1078	b05785f9f18e	canonical; observed repo payloads 1063-1092 B, variance is the holder line
+Apache-2.0	spdx/license-list-data/text/Apache-2.0.txt	10280	074e6e32c86a	BARE text family; GitHub template family runs 11337-11408 B with the APPENDIX
+GPL-3.0-only	spdx/license-list-data/text/GPL-3.0-only.txt	34674	fb981668c18a	canonical
+AGPL-3.0-only	spdx/license-list-data/text/AGPL-3.0-only.txt	34020	d8a6cc31abc1	canonical; 6 further live byte-values observed, span 1116 B
+BSD-3-Clause	spdx/license-list-data/text/BSD-3-Clause.txt	1460	5a93d5831e12	canonical
+CC-BY-SA-4.0	spdx/license-list-data/text/CC-BY-SA-4.0.txt	18375	cde7883b9050	canonical

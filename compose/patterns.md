@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p466` — **🟢 Three recipes, each built only from rows whose grant was read FIRST-HAND this pass, and each matched to a delivery model by its licence family rather than in spite of it: an AGPL sovereign stack for EMEA institutions, a deterministic-and-reviewable assessment spine that satisfies four jurisdictions' converging requirement, and an LTI/SCORM carrier that turns the 23 % skill supply into something an estate can actually run.**
+
+### 🟢 `Pattern BI` — EMEA sovereign federated learning estate (AGPL by design, 10–12 wk)
+
+🔵 **Buyer:** an EU/EEA ministry, region or university consortium under sovereignty pressure, that
+self-hosts. 🟢 **The licence fits the buyer:** every component is AGPL-3.0, which obliges source
+availability to users — acceptable and often *desirable* for a public body, and the reason this
+stack cannot be resold as multi-tenant SaaS.
+
+| layer | component | grant (read first-hand `p466`) |
+|---|---|---|
+| schools workspace | [`DD-workspace/DD`](https://gitlab.com/DD-workspace/DD) | 🟡 AGPL-3.0 · 34 588 B · `a7f13bbcc053` |
+| cross-institution OER exchange | [`moodlenet/backend`](https://gitlab.com/moodlenet/backend) + [`frontend`](https://gitlab.com/moodlenet/frontend) | 🟡 AGPL-3.0 · `feff6860d5ea` / `6dbb120dadf0` |
+| demand-led course formation | [`Openki/Openki`](https://gitlab.com/Openki/Openki) | 🟡 AGPL-3.0 · `57c8ff33c9c0` |
+| OER authoring | [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | 🔴 **composite** — `LICENSE` is a pointer; per-asset clearance required before any client delivery |
+| mounting into the incumbent LMS | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (LTI) | 🟢 Apache-2.0 · `73ba74dfaa52` |
+| inference | self-hosted open-weight serving (carried: Ollama / vLLM) | 🟢 permissive |
+
+**Wiring.** `DD` is the tenant surface per school. MoodleNet federates OER *between* institutions
+over ActivityPub, so no central host owns the corpus — this is the technical content of
+"sovereignty" and the reason MoodleNet rather than a shared drive. `Openki` handles the courses
+that are demand-led (municipal reskilling, adult education) where no institution schedules them.
+`tsugi` exposes each as an LTI tool so an existing Moodle/Open edX estate consumes them **without a
+fork**. Inference stays on-premises: 🔴 **do not route learner text to a hosted model** — EU
+Art. 5(1)(f) prohibits emotion inference outright and Art. 50 marking bites **2026-12-02**.
+
+🔴 **Where it breaks.** All four AGPL components must be delivered as the client's own
+self-hosted deployment, with modified source offered to users; a Globant-hosted shared instance
+changes the obligation. `emacs-reveal`'s composite licence must be cleared asset-by-asset. `DD` is
+a 12★ project — 🔵 treat it as a **fork base with a maintenance budget**, not a supported upstream.
+
+### 🟢 `Pattern BJ` — Deterministic-and-reviewable assessment spine (6–8 wk)
+
+🔵 **Buyer:** any institution that grades at scale under a jurisdiction that regulates it — which
+per [`intel/trends.md`](../intel/trends.md) Trend 3 is now Oklahoma, Idaho, the EU, Chile and
+Kenya, independently converging on the same three requirements: **deterministic scoring, an
+auditable evidence trail, a human arbiter, and no affect inference.**
+
+| layer | component | grant | the requirement it discharges |
+|---|---|---|---|
+| deterministic spine | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** · 1 512 B · `3a83d5b8e22c` | assign→release→collect→autograde→feedback with a release/solution split; **the score comes from executed tests, not a model** |
+| secure execution | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) (carried) | 🟢 permissive | sandboxed automated exercise assessment |
+| rubric arbitration | [`erlan775959-code/markwise`](https://github.com/erlan775959-code/markwise) (carried `p465`) | 🟢 MIT · `e33397c72fff` | **double-marks each criterion with two independent graders plus a moderator**, and **verifies in code that every quoted evidence string actually occurs in the work** — invented evidence is flagged |
+| arithmetic integrity | [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) (carried `p465`) | 🟢 MIT · `78adf0554b1a` | **all totals, deductions and capping computed in Python, not by the model**; template-matched briefs skip the LLM entirely |
+| data minimisation | [`oas114/EduShield`](https://github.com/oas114/EduShield) (carried `p465`) | 🟢 MIT · `6c106d9deefc` | mask-then-restore de-identification **client-side, before** anything reaches a hosted model |
+| LMS return path | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT · `383b85b370e8` | scores and completion reported back to the incumbent LMS |
+
+**Wiring.** `nbgrader` owns the gradebook and the deterministic score; the LLM layer is **advisory
+only** and writes to a separate feedback field that a teacher releases. `markwise`'s two-grader +
+moderator loop is the *human arbiter* requirement in code, and its evidence-string check is what
+makes the trail auditable rather than merely logged. `AutoGrader-Agent`'s rule — **arithmetic in
+Python, never in the model** — is what keeps a score reproducible under appeal. `EduShield` runs
+first in the chain. `scorm-again` returns the released result.
+
+🔴 **Where it breaks, and the carried risk exhibit that shows how.** This pattern is void the moment
+anyone enables unattended marking. 🔴 `five-plus-one/AI-Marker-Suite` (carried as a **risk exhibit**,
+GPL-3.0, 104★) advertises exactly that — *"leave it running overnight, it's all marked by
+morning"* — which **bypasses the double-marking arbitration** and breaches Oklahoma SB 1734's
+teacher-review duty and KNEC's SBA rule simultaneously. 🔵 Ship the human-release gate as
+non-optional, or the architecture's legal value is gone.
+
+### 🟢 `Pattern BK` — Skill-carrier: make the 23 % runnable inside an estate (4–6 wk)
+
+🔵 **The problem this solves.** 9 of 39 visible education repositories now ship as an agent skill
+with **no runtime** ([`agents/trending.md`](../agents/trending.md)) — excellent pedagogy, nothing an
+institution can deploy, no roster, no gradebook, no audit trail.
+
+| layer | component | grant | role |
+|---|---|---|---|
+| carrier | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 · `73ba74dfaa52` | LTI tool shell: identity, roster, **grade passback** |
+| content runtime | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT · `383b85b370e8` | SCORM/AICC reporting for packaged activities |
+| pedagogy, as skills | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (dual-ships) · [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) · [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) · [`ShawnRen57/omni-learning-anything`](https://github.com/ShawnRen57/omni-learning-anything) | 🟢 MIT where probed (`omni-learning-anything` 1 092 B · `f3a9a5d7a599`) | Socratic sequencing · slide-grounded exam coaching **with page citations** · diagnosis-before-instruction · plan generation |
+| skill production | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 MIT · `LICENSE.md` 1 068 B · `be9b04bccfb4` | compiles the client's **own** licensed course texts into skills — 🟢 the step that makes the stack defensible, because the corpus is the client's |
+| de-identification | [`oas114/EduShield`](https://github.com/oas114/EduShield) | 🟢 MIT · `6c106d9deefc` | client-side masking before any hosted inference |
+
+**Wiring.** `tsugi` is the LTI shell the LMS launches; the skill runs behind it against a host
+agent; `EduShield` masks on the way out; any score returns via `tsugi` grade passback or
+`scorm-again`. `book-to-skill` is run on the **client's own** licensed material.
+
+🔴 **Where it breaks — and this is the licence trap, stated once more because it is the pass's
+headline.** 🔴 **Do not vendor `GarethManning/education-agent-skills`** (914★, the obvious choice):
+it is **`CC-BY-SA-4.0`** (1 230 B · `f952182df4eb`), so adaptations inherit ShareAlike into a client
+deliverable. 🔴 **Do not use `xiaoyang111222/cn-math-taxonomy`** (4 000★, the obvious knowledge
+graph): it is **`CC-BY-NC-4.0`** (19 347 B · `41003d4a7474`) — **NonCommercial, so it is barred from
+every paid engagement.** 🟢 Compile the knowledge graph from the client's own curriculum with
+`book-to-skill` instead. 🔵 Per `Gap 466-A`: **read the first non-blank line of the payload before
+adopting any skill or corpus.**
+
+### 🔴 Not a pattern — the LATAM recipe that cannot be written
+
+🔵 For the **second consecutive pass**, the component the clearest LATAM opportunity needs —
+rubric-based assignment feedback in Portuguese/Spanish — **does not exist under a grant**:
+`p464`'s row was ungranted, and this pass's Brazilian `henriquegpb/gradesinteli` (86★) is
+`NO-ROOT-GRANT` @ HEAD `2ded74019bb2`. 🟢 The one granted LATAM row, `menthorlabs/menthor`
+(Apache-2.0), is a teaching **platform** and last pushed **2024-04-21**. 🔴 **So the honest cell is
+that `Pattern BJ` must be delivered into LATAM with its rubric layer BUILT, not sourced** — and
+built before **2026-12-01**, when Chile's Ley 21.719 brings automated profiling and algorithmic
+decisions in scope. That is the costing a LATAM engagement should carry, and it is a build line,
+not a reuse line.
+
 ## 🆕 `p465` — **🟢 Three recipes, and the first one is the only permissive, audit-defensible marking stack this base can assemble — it became possible this hour. 🔴 The second is an IMPORT-AND-LOCALISE recipe for regions that have a mandate and no supply, which is a shape this file has never carried.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes; nothing
