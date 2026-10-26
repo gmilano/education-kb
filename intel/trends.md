@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 Trend 48 — `p448` **This base's measurement errors are NOT random: every instrument defect caught this hour failed toward the answer the base already believed. Three independent instruments, three different mechanisms, one direction — which means a saturated channel and a confirmed hypothesis are exactly what a broken instrument looks like.**
+
+🔵 **Why this is a trend and not one pass's housekeeping.** `p447` caught a substring novelty
+check reporting *"already known"* for a genuinely new item and registered it as `Gap 447-A`,
+calling out that *"a substring check fails toward 'already known', which suppresses real
+findings silently."* `p448` found **two more instruments with the same bias, by different
+mechanisms, in the same hour** — and in one of them the bias would have **confirmed a published
+hypothesis that is in fact false**. One instance is a defect. Three, pointing the same way, is a
+property of how this base measures.
+
+### 🔴 The three instances, each with its mechanism and the false conclusion it would have produced
+
+| instrument | mechanism of the defect | the comfortable answer it produced | 🟢 the truth, measured |
+|---|---|---|---|
+| **substring novelty check** (`grep -ri`) | `teds` matches inside `relaTEDSubject` and `generaTEDStatus` — 3 hits, **0** word-scoped | 🔴 *"TSDS/TEDS already known"* → the NA state finding suppressed | 🟢 `grep -riw` = **0**. `TEDS`, `TSDS`, `PEIMS`, `CAASPP`, `ELPAC` all genuinely new |
+| **MCP tool extractor** (regex over registries) | three unseen idioms: bare `@mcp.tool` with no parens (**130** occurrences read as **1**), nested-paren decorator args, and a **Go** codebase scanned only for `.py`/`.ts`/`.js` (read as **0**) | 🔴 *"the community LMS connectors are read-only"* → `Gap 447-B` **CONFIRMED** | 🟢 **136 of 414** declarations mutate (**32.9 %**); `create_course`, `toggle-module-publish`, `update-syllabus` all read from source |
+| **pin-stability sample** (`Pattern AZ`) | the 18 pins were drawn from pins **already carried across passes**, i.e. pre-selected for having survived | 🔴 *"17 of 18 survive 24 h — a cheap minority repair"* | 🔴 Over 496 unbiased pinnings, **67.3 %** survive. **A third die.** |
+
+🟢 **The first two were caught only because something external contradicted them.** The
+substring hit was questioned because a *state-shaped* search had just produced a name the base
+did not recognise. The extractor was questioned because its output was **absurd** — one tool in
+a repository `p446` had independently counted at **128**. 🔴 **Neither was caught by a gate**;
+`make hooks` has now been denied three passes running.
+
+### 🔴 The structural reason, and it generalises past this base
+
+Every one of these instruments answers a question of the form *"is there anything here?"*, and
+each fails by **not finding** rather than by finding wrongly:
+
+- a substring match **adds** false hits → the novelty test, which reads *hits = known*, flips to *known*
+- a regex that misses an idiom **removes** tools → a capability test flips to *absent*
+- a sample drawn from survivors **removes** failures → a stability test flips to *stable*
+
+🔵 **A null result is therefore the least trustworthy result this base can produce**, because
+it is the result every broken instrument produces. 🔴 And this base's most-repeated recent
+finding is a null: **three consecutive passes of "discovery saturated, zero new rows."**
+
+### 🟡 The second-order finding: `n = 1 per unit` manufactures confident, wrong rules
+
+`Pattern AZ` published **three** quantitative claims from **five** observations — one pinning
+per repository. `p448` re-measured with 14 pinnings per repository:
+
+| `AZ`'s claim, from n = 5 | 🟢 `p448`, n = 496 |
+|---|---|
+| *"`pinned_date == HEAD date` **iff** the pin held, in every row"* | 🔴 biconditional **fails in 44 of 167** rows |
+| *"**days** → settled, safe to quote"* | 🔴 at **1–3 days the pin fails 28 %** of the time; the real gate is **7 days → 97.4 %** |
+| *"commit volume gets staleness **backwards**"* | 🔴 **ρ = +0.886.** Volume is a **good** predictor; the sign was inverted |
+
+🔵 `Trend 45` already recorded an **n = 5 artefact** being published as a rule one pass earlier
+(`Trend 44`), and `Trend 41` recorded that **12 %** of this base's own published figures came
+from a method it had written a rule against. 🔴 **This is the third time.** The recurring shape
+is not a bad instrument but a **denominator of one per unit**.
+
+### 🟢 What follows, as checks rather than sentiment
+
+1. 🟢 **Word-scope every novelty check.** `grep -riw`, never `grep -ri`. Two confirmed
+   suppressions in two consecutive passes.
+2. 🟢 **Never publish a null without an instrument control.** `Gap 446-D` is the model to copy:
+   eleven primaries returning 403 was only interpretable because `raw.githubusercontent.com`
+   returned **200** from the same shell in the same minute. A saturated discovery leg has **no
+   such control** — and `p448`'s legs ran **43 minutes** after `p447` committed (`Gap 448-A`).
+3. 🟢 **Make the absurdity check routine.** The extractor was caught because its output
+   disagreed with a number another channel had already published. 🟢 Cross-channel agreement is
+   now double-sourced on this shelf: source extraction reproduces `p446`'s README tool counts
+   **exactly** at **128 / 126 / 89 / 69**.
+4. 🔴 **One observation per unit is not a measurement.** Before a rule is published, state the
+   per-unit denominator next to the population denominator.
+
+🟡 **Limit of this trend:** three instances, one hour, one base. The *direction* is unanimous
+and each mechanism is identified, but no one has gone back over earlier passes' nulls to measure
+how many were instrument artefacts — the audit `Gap 444-D` asks for, still unpaid.
+
+---
+
 ## 🆕 Trend 47 — `p447` **A region is a reporting bucket, not a research unit — and the cost of confusing them is not a thin answer but a MANUFACTURED one. The same hour that a region-level EMEA query produced two false, quotable facts, a country-shaped query killed both.**
 
 🔵 **Why this is a trend and not one pass's bad luck.** This base has now nilled the EMEA

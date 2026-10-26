@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p448` — **🟢 THE CAPABILITY ABSENCE `p447` PUT ON THIS SHELF DOES NOT EXIST. `Gap 447-B` is REFUTED from source at HEAD: the community LMS-connector tier authors and publishes courseware — 136 of 414 tool declarations mutate, and `create_course`, `create_module`, `toggle-module-publish` and `update-syllabus` were read, not inferred. 🟢 A new vertical row: the NA state system of record is Apache-2.0. 🔴 Gate DENIED, third consecutive pass.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Gap 446-A`, third consecutive pass, third container).
+
+### 🟢 `Gap 447-B` REFUTED — and `p447` was right to carry it as a hypothesis rather than a fact
+
+`p447` wrote on this shelf, flagged explicitly as **a single relayed secondary source**, that
+the community MCP supply for Moodle and Canvas is *"overwhelmingly READ-ONLY"* and that *"not
+one community server in that guide creates and publishes a course."* 🟢 **It named a test. The
+test was run this hour, against source, and the hypothesis fails.**
+
+| the claim | 🟢 what source says |
+|---|---|
+| *"overwhelmingly read-only"* | 🔴 **136 of 414** tool declarations mutate — **32.9 %**, and a **lower bound** |
+| *"not one community server creates and publishes a course"* | 🔴 **false at four addresses** |
+
+| address | authoring / publishing tools, read from the registry |
+|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **`create_course`** (`src/tools/courses.ts:205`, asserted in `tests/tools/courses.test.ts:53`), `create_module`, `create_module_item`, `create_page`, `create_new_quiz`, `grade_submission`, `enroll_user` — **62 write tools** |
+| [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | 🟢 `create-module`, `create-module-item`, **`toggle-module-publish`** (`src/tools/modules.ts:114`), **`update-syllabus`** (`src/tools/courses.ts:124`), **`post-announcement`** (`:216`) — **41 write tools, 46.1 %** |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | 🟢 `create-module`, `create-module-item`, `toggle-module-publish`, `post-announcement` — **30 write tools, 43.5 %** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `create_announcement`, `create_assignment`, `create_module`, `create_page`, `bulk_grade_submissions`, `bulk_update_pages` |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟡 **Go** codebase, 19 tools, 3 write |
+
+🔵 **A server that creates a module and then toggles it published is publishing courseware.**
+The authoring half of this tier is **not** vendor-only, and `Pattern AM`'s teacher-facing
+courseware factory no longer needs a bespoke write path on Canvas.
+
+### 🟡 But the gate you would reach for to make that safe is itself unsound
+
+🟢 The one address that annotates read-only intent per tool, `vishalsachdev/canvas-mcp`,
+declares it on **72 of 128** tools, leaves **55 (43.0 %) undeclared — and those 55 are exactly
+the mutating ones** — while the **single** tool marked `read_only_hint=False` is
+`download_course_file`, **a read**. 🔴 An MCP allowlist gateway keyed on `read_only_hint` is
+keyed on a field that is **43 % unpopulated and at least once inverted**.
+🟢 `compose/code/mcp-allowlist-gateway` must gate on the tool's **effect** — an explicit
+write-tool denylist read from the registry — never on the hint → `Gap 448-B`.
+
+### 🟢 A new vertical row — the NA state system of record, and it is permissive
+
+| platform | repo | licence, read first-hand 2026-10-26 | region | what it is, and whether Globant can build on it |
+|---|---|---|---|---|
+| 🟢 **Ed-Fi ODS/API** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** · `59899c6091b5` · HEAD `4d626f9ab257` | **North America** (US, Texas) | The operational data store and API behind **Texas TSDS/TEDS**, which TEA has **mandated** SIS vendors submit to via API transactions. 🟢 **The first permissively-licensed system of record on this shelf** — every other one is GPL-2.0/3.0, AGPL-3.0 or carries no grant. 🟢 **Vendor-and-build row.** 🟡 Bounded by a **233 924 B `NOTICES.md`** (`609e95c99d9b`): Apache-2.0 at the root does not clear the tree (`Trend 40`), so a dependency-closure pass is owed before shipping. |
+| 🟢 **Ed-Fi ODS Implementation** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | 🟡 not read this pass | **North America** | Deployment/implementation tooling for the above. 🟢 Reachable, HEAD `b6b72e594bc4`. Grant unread → next pass. |
+
+### 🟢 `openSIS Classic` re-verified, and the below-root grant reproduces to the digit
+
+| check | result |
+|---|---|
+| `docs/License.txt` | 🟢 **17 286 B · `224ac3d403e3`** — reproduces this shelf's published cell exactly |
+| root grant paths | 🔴 **9 of 9 → 404** → `ABSENCE-ENUMERATED` at root |
+| README | *"licensed under the GNU General Public License"*, pointing at `docs/License.txt` |
+
+🔴 **GPL-2.0 confirmed, so the shelf's existing read stands:** distribution-triggered, no
+network clause — a self-hosted customisation is fine, a redistributed derivative is not.
+
+### 🔴 Where this tier still cannot serve an engagement, stated as absences rather than silence
+
+| region | system of record | connector supply | verdict |
+|---|---|---|---|
+| **North America** | TSDS / Ed-Fi | 🟢 Apache-2.0 platform **+** a write-capable Canvas connector tier | 🟢 **servable today** |
+| **EMEA** | Bayern `ASV`/`ByCS`/`VIDIS`, Niedersachsen `DaNiS`→`NEO` | 🔴 **no published API spec, no OSS** — `VIDIS` third-party integration still **pilot**; `NEO` primary-school release due **start of 2026/27** | 🟡 **procure through the state programme** |
+| **APAC** | `UDISE+` (1.47 M schools) | 🔴 **no official API, no OSS tooling found** | 🔴 **absence** — sell teacher enablement, not integration |
+| **LATAM** | `SIGED` (MX), `SIGE` (CL) | 🔴 none; one **third-party commercial** endpoint. Contrast Brazil/Argentina/Colombia, where code exists but is 🔴 **unlicensed more often than copyleft** (`Trend 43`) | 🔴 **split market** |
+
+---
+
 ## 🆕 `p447` — **🟡 A CAPABILITY ABSENCE on the LMS-connector tier, carried as a hypothesis with a named test rather than as a fact: the community MCP supply for Moodle and Canvas is overwhelmingly READ-ONLY, and the authoring-and-publishing half appears to be vendor-built.**
 
 🟡 **The claim, and its provenance, stated before its content.** A directory review of the

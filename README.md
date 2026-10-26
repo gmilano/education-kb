@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-26
 ---
 
+## Pass 448 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 447-B` REFUTED FROM SOURCE: the LMS-connector tier is NOT read-only — 136 of 414 tool declarations mutate and four addresses create and publish courseware. 🟢 `Gap 447-C` ANSWERED over 496 pinnings and it REFUTES TWO OF `Pattern AZ`'s CLAIMS AND THE SIGN OF A THIRD. 🟢 `Gap 447-D` CLOSED ON THE FIRST ATTEMPT — the NA research unit is the STATE, and it returned the first permissively-licensed system of record on these shelves. 🔴 `make hooks` DENIED for the THIRD consecutive pass.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` did not run.** One attempt,
+refused with `[Code from External]` — the **third consecutive pass** and the **third distinct
+container** to refuse it. 🔵 `p446` could say only that the variable was *"the execution policy
+of the host"*; `p447` made it standing on two; `p448` makes it **three for three**, so
+`Gap 446-A` is settled as a property of the host class unattended passes run in. 🟡 **No arrival
+baseline, no post-write gate.** Every claim below is first-hand and carries the command that
+produced it; none is gate-checked.
+
+🔵 **No date straddle.** Four global WebSearch legs, four regional legs (**North America
+re-shaped to STATE** legs, EMEA run in **German**, LATAM run in **Spanish**), **36 blobless
+clones** yielding **496 simulated pinnings**, **9 depth-1 clones** of the MCP tier with **414
+tool declarations extracted from source**, **4 licence payloads fetched and digested**, **13
+raw-channel probes**, **9 438 commit-date pairs** checked for monotonicity, and **two
+already-published cells reproduced to the digit** — all **2026-10-26**, commit **2026-10-26**,
+so `updated:` carries one date on every file.
+
+**What this pass established, first-hand:**
+
+- 🟢 **`Gap 447-B` REFUTED — this shelf's only open capability claim does not survive source.**
+  `p447` carried, flagged as a single relayed directory review, that the community Moodle/Canvas
+  MCP supply is *"overwhelmingly READ-ONLY"* and that *"not one community server creates and
+  publishes a course."* Measured from the registries at HEAD: **136 of 414** declarations mutate
+  (**32.9 %**, a lower bound). `create_course` is at
+  `bruchris/canvas-lms-mcp:src/tools/courses.ts:205`, asserted in its own test suite;
+  `toggle-module-publish`, `update-syllabus` and `post-announcement` at
+  `mdweaver/canvas-mcp:src/tools/{modules,courses}.ts`. 🟢 **Four addresses author and publish.**
+- 🟡 **And the gate that would make that safe is unsound — the more useful half of the finding.**
+  `vishalsachdev/canvas-mcp` declares `read_only_hint=True` on **72 of 128** tools, leaves
+  **55 (43.0 %) undeclared — and those 55 are exactly the mutating ones** — while its single
+  `read_only_hint=False` is `download_course_file`, **a read**. 🔴 An MCP allowlist gateway keyed
+  on that hint is keyed on a field 43 % unpopulated and at least once inverted → `Gap 448-B`.
+- 🟢 **`Gap 447-C` ANSWERED with a population, and `Pattern AZ` is corrected rather than
+  extended.** 496 pinnings across 36 shelved repositories, by retrospective simulation:
+  P(pin survives 24 h) = **6.1 %** (< 1 h) → **20.0 %** (1–6 h) → **35.4 %** (6–24 h) →
+  **71.6 %** (1–3 d) → **81.4 %** (3–7 d) → **98.0 %** (7–30 d). 🔴 `AZ`'s *"days → settled,
+  safe to quote"* fails **28 %** of the time at 1–3 days; the real gate is **≥ 7 days →
+  97.4 %** (vs **48.9 %** below). 🔴 `AZ`'s biconditional fails in **44 of 167** rows. 🔴 And
+  `AZ`'s budget line (*"17 of 18 pins survive — a cheap minority repair"*) was
+  **survivorship-biased**: unbiased survival is **67.3 %**, so **a third of pins die in 24 h**.
+- 🔴 **`AZ`'s refutation of commit volume had the sign backwards, and this pass records that
+  rather than quietly re-deriving it.** Over 36 repos × 14 pinnings, **Spearman ρ = +0.886**
+  between commits/30 d and stale rate. `DeepTutor` (661/30 d) is **50 %** stale and `frappe/lms`
+  (571) **71.4 %**, against **0.0 %** for ten quiet repositories. 🔵 `AZ` graded each repository
+  on **one coin flip**. 🟢 Volume and recency are the same predictor (volume vs mean age-at-pin,
+  **ρ = −0.852**); recency wins because it is per-pin and one command.
+- 🟢 **`Gap 447-D` CLOSED on the first attempt — in North America the research unit is the
+  STATE.** After **six** consecutive region-level nils, one state-shaped leg returned a TEA
+  **mandate** that SIS vendors submit to TSDS by API transaction, the fact that TEDS is built on
+  **Ed-Fi**, and a first-hand grant: `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` · 🟢 **Apache-2.0** ·
+  `LICENSE.txt` **10 172 B · `59899c6091b5`** · HEAD `4d626f9ab257`. 🟢 **The first
+  permissively-licensed system of record on these shelves** — every other is GPL-2.0/3.0,
+  AGPL-3.0 or carries no grant. 🔴 With a named jurisdictional absence beside it: **California
+  has no statewide SIS API standard**, only CAASPP/ELPAC test delivery → `Gap 448-E`.
+- 🟢 **All four regions now carry a PLACED system-of-record verdict, and the grant posture
+  dictates the engagement shape:** NA (Texas) Ed-Fi/TSDS, Apache-2.0, API mandated →
+  **build-on**; EMEA (Germany) Bayern `ASV`/`ByCS`/`VIDIS` and Niedersachsen `DaNiS`→`NEO`,
+  real interfaces but **no published spec and no grant** → **partner/procure**; APAC (India)
+  `UDISE+` at 1.47 M schools with **no API and no OSS tooling found** → **absence**; LATAM
+  `SIGED` (MX) and `SIGE` (CL) with **no API and no OSS** → 🔴 **absence, and LATAM is a SPLIT
+  market**, because Brazil/Argentina/Colombia carry real integration code while Mexico/Chile
+  carry none.
+- 🟢 **`Gap 447-A` CONFIRMED a second time, caught in the act.** `TEDS`: substring `grep -ri` =
+  **3 hits**, word-scoped `grep -riw` = **0**. The three were `RelatedSubjectArea`,
+  `RelatedSubject` and `defaultGeneratedStatus` — *"teds"* inside **relaTEDSubject** and
+  **generaTEDStatus**. A substring novelty check would have **suppressed the entire NA finding**.
+  🟢 Promoted to `Trend 48`: three instruments failed this hour and **all three failed toward
+  the answer the base already believed**.
+- 🟢 **A cross-channel validation that double-sources this shelf's densest category.** Source
+  extraction reproduces `p446`'s independently-counted README tool totals **exactly on four of
+  five** addresses — **128 / 126 / 89 / 69**. 🔴 `bruchris` over-counts (222 vs 187): non-tool
+  `name:` fields match → `Gap 448-C`. 🟢 The arm structure is coherent on a third axis:
+  `Harikeshav-R` (0 unique commits, **94 behind**) carries exactly **2 fewer** tools than
+  upstream.
+- 🟢 **Instruments validated against already-published cells BEFORE any new cell was written:**
+  `openSIS Classic` `docs/License.txt` = **17 286 B · `224ac3d403e3`** with **9 of 9** root
+  grant paths **404** (`ABSENCE-ENUMERATED` at root, `GRANT-PRESENT` beneath — a second
+  independent confirmation of `Trend 40`); `Apomera/AlloFlow`'s refs dating to **12:35** and
+  **18:50**, matching `p447`'s published timestamps **to the minute**; and committer-date
+  monotonicity over **9 438** adjacent pairs — **0 inversions, 36 of 36 repositories clean**.
+- 🔴 **Discovery SATURATED for the THIRD consecutive pass — zero new rows, no padding.** Every
+  global-leg candidate was already shelved, each graded **word-scoped**. 🔴 **But `p447`
+  committed 00:58:40Z and `p448` read 01:41:58Z — 43 minutes apart.** A saturated channel 43
+  minutes on is evidence about the clock, not about the supply, and three "saturations" have
+  now been recorded without anyone measuring the interval → `Gap 448-A`.
+
+🔵 **Declared gaps carried forward unpaid:** `Gap 445-A` (org enumeration is a host 403),
+`Gap 443-A` (ledger population still claim-derived), `Gap 444-D` (homonym audit over existing
+rows), `Gap 445-H` (`claims.py::slugs_in`, not touched blind with no gate available),
+`Gap 446-E` (fork-arm fraction unmeasured), `Gap 446-D` (eleven primaries 403 against a
+`raw.githubusercontent.com` **200** control — every EMEA and LATAM regulatory statement on
+these shelves is relayed). 🔴 `Gap 445-D` needs **a person**, not a fourth registration.
+🆕 `Gap 448-A` (inter-pass interval unmeasured), `Gap 448-B` (`read_only_hint` unsound as a
+gate), `Gap 448-C` (tool extractor over-counts; needs an AST walk), `Gap 448-D` (recency
+calibration is one industry, one host, one 14-day window, 24-h horizon only), `Gap 448-E`
+(California's absence is a single-channel nil).
+
 ## Pass 447 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 445-F` CLOSED AND IT PAID TWICE OVER: the EMEA country leg did not merely pay where two region legs nilled, it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🟢 `Gap 446-B` ANSWERED with a denominator — 17 of 18 pins still exact, and the obvious predictor (commit volume) is REFUTED by its own measurement. 🔴 `make hooks` DENIED for the second consecutive pass, so `Gap 446-A` is a property of this host class, not an hour's bad luck.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` did not run.** One attempt,

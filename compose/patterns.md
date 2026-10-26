@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 Pattern BA — `p448` **The CALIBRATED pin-recency pre-flight — and the correction of `Pattern AZ`, published one pass ago on n = 5, whose threshold was wrong, whose budget line was survivorship-biased, and whose refutation of commit volume had the sign backwards**
+
+🔵 **Why this supersedes `Pattern AZ` rather than extending it.** `AZ` (`p447`) built a
+pre-flight on **five** observations — one pinning per repository, i.e. one coin flip each — and
+published three claims from it. `Gap 447-C` registered the calibration limit itself. `p448` paid
+it: **496 observations across 36 shelved repositories**, and the pattern survives in **direction**
+while **two of its three published claims do not**.
+
+### 🟢 The instrument: a retrospective simulation, so the calibration needs no waiting
+
+For each repository, for each offset `d` in 1…14 days, ask what a studio pinning at that moment
+would have got, and whether it held 24 h later:
+
+```bash
+# one observation: would a pin taken at time T still be HEAD at T+24h?
+git clone --quiet --filter=blob:none --no-checkout https://github.com/OWNER/REPO /tmp/r
+PIN=$(git -C /tmp/r rev-list -1 --before="$T" HEAD)
+NXT=$(git -C /tmp/r rev-list -1 --before="$T +1 day" HEAD)
+AGE=$(git -C /tmp/r show -s --format=%cI "$PIN")   # how old was that commit when pinned?
+[ "$PIN" = "$NXT" ] && echo HELD || echo STALE
+```
+
+🟢 **36 blobless clones → 496 observations, in one pass, with no 24-hour wait.**
+🟢 **Validated before use**, against a cell this base already published: `Apomera/AlloFlow`'s
+refs date to `2026-10-24T12:35:30-04:00` and `2026-10-25T18:50:44-04:00`, reproducing `p447`'s
+*"pinned 10-24 12:35, HEAD 10-25 18:50"* **to the minute**.
+🟢 **Pre-condition checked, not assumed:** the method needs committer dates to be monotone along
+history. Measured over **9 438** adjacent commit pairs in these 36 repositories: **0
+inversions**, **36 of 36** repositories clean.
+
+### 🟢 The calibration curve — this is the pattern
+
+| age of the commit **at the moment you pin it** | n | 🟢 P(pin still HEAD after 24 h) |
+|---|---|---|
+| < 1 h | 33 | 🔴 **6.1 %** |
+| 1–6 h | 35 | 🔴 **20.0 %** |
+| 6–24 h | 99 | 🔴 **35.4 %** |
+| 1–3 d | 81 | 🟡 **71.6 %** |
+| 3–7 d | 59 | 🟡 **81.4 %** |
+| **7–30 d** | 100 | 🟢 **98.0 %** |
+| > 30 d | 89 | 🟢 **96.6 %** |
+
+🔴 **`Pattern AZ`'s threshold was wrong.** `AZ` said **days** → *"settled, the pin will hold,
+safe to quote with its date."* At **1–3 days the pin fails 28 % of the time.** The operating
+point that earns the word "settled" is **seven days**:
+
+| rule | n above threshold | P(held) |
+|---|---|---|
+| 🟢 **age at pin ≥ 7 d** | 189 | 🟢 **97.4 %** |
+| 🔴 age at pin < 7 d | 307 | 🔴 **48.9 %** |
+
+🔴 **`AZ`'s biconditional was an artefact of n = 5.** It published that
+`pinned_commit_date == HEAD-date` **iff** the pin held, *"in every row"*. Over the proper
+denominator the biconditional **fails in 44 of the 167** observations with age < 24 h. As a
+classifier, `AZ`'s 24-hour rule scores precision **73.7 %**, recall **75.9 %**, accuracy
+**83.3 %** — useful, but a tendency, **not an identity**.
+
+🔴 **`AZ`'s budget line was survivorship-biased, and this is the correction a studio will feel.**
+`AZ` told engagements to expect *"17 of 18 pins survive 24 h — a cheap minority repair, not a
+re-verification campaign."* Over 496 unbiased pinnings: **67.3 % survive. A third of pins die
+within 24 hours.** 🔵 The 18-pin sample was drawn from pins **already carried across passes**,
+i.e. already selected for having survived.
+
+### 🔴 And the metric `AZ` told you to stop using is in fact a good one — its refutation had the sign backwards
+
+`AZ` published: *"Do NOT grade staleness by commit volume. It is refuted by measurement"*,
+because `DeepTutor` (661 commits/30 d) and `frappe/lms` (571) each held their one pin.
+
+| | `Pattern AZ` (n = 5, one pin each) | 🟢 `p448` (n = 36 repos × 14 pinnings) |
+|---|---|---|
+| commits/30 d vs 24-h stale rate | 🔴 claimed **negative** ("backwards") | 🟢 **Spearman ρ = +0.886** |
+
+| repository | commits / 30 d | `AZ`'s single pin | 🟢 `p448` stale rate over 14 pinnings |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | **661** | 🟢 held | 🔴 **50.0 %** |
+| `frappe/lms` | **571** | 🟢 held | 🔴 **71.4 %** |
+| `Apomera/AlloFlow` | 417 | 🔴 stale | 🔴 **85.7 %** |
+| `vishalsachdev/canvas-mcp` | 373 | 🔴 stale | 🔴 **92.9 %** |
+| `withmarbleapp/os-taxonomy` | 126 | 🟢 held | 🟡 **42.9 %** |
+| `Citolab/qti-convert-python`, `LongsightGroup/qti3`, `GeovaneSchmitz/sigaa-api`, `ivmelo/suapbot`, `sebassg/sia-unal-mcp`, `r-huijts`/`mdweaver`/`caleb-media-studio` `canvas-mcp` | low | — | 🟢 **0.0 %** |
+
+🔵 **`AZ` graded each repository on one coin flip and read the noise as the signal.** The two
+busiest repositories did hold *that* pin; over fourteen pinnings each they are among the worst.
+
+🟢 **And the two predictors are the same predictor.** commits/30 d vs **mean age-at-pin**:
+**ρ = −0.852**. The busiest six repositories present HEADs **3.5–41.7 h** old; the quietest six
+present HEADs **555 h to 80 196 h** old. 🔵 **Volume is a repo-level proxy; recency is the
+mechanism.** Use recency — it is per-pin, it needs no history window, and it is one command.
+
+### 🟢 Wiring it into an engagement
+
+1. **At SOW / shelving time**, for every commit about to be quoted:
+   ```bash
+   git clone -q --filter=blob:none --no-checkout https://github.com/OWNER/REPO /tmp/pin && \
+   git -C /tmp/pin show -s --format='pin=%h pinned_commit_date=%cI' HEAD && date -u +'now=%Y-%m-%dT%H:%M:%SZ'
+   ```
+2. **Age ≥ 7 days** → 🟢 cite the HEAD with its commit date beside it. **97.4 %** survival.
+3. **Age < 7 days** → 🔴 do **not** put the HEAD in the deliverable. Cite the **grant payload
+   cell** instead, and let the HEAD appear only as *"tree seen on `<date>`"*:
+   ```bash
+   curl -sS "https://raw.githubusercontent.com/OWNER/REPO/HEAD/LICENSE" -o /tmp/L && \
+   printf '%s B · %s\n' "$(wc -c < /tmp/L)" "$(sha256sum /tmp/L | cut -c1-12)"
+   ```
+   🟢 **Why the cell is the safe anchor, measured twice:** `AlloFlow` moved
+   `6194e51e8f1f` → `1499a80fd362` while its `LICENSE` stayed **35 442 B · `698099632698`** at
+   both refs; and `openSIS`'s `docs/License.txt` re-read this pass is **17 286 B ·
+   `224ac3d403e3`**, the published cell to the digit. **Trees move; grants do not.**
+4. **Budget honestly.** 🔴 Expect **~33 %** of pins to need repair at 24 h, not 6 % — unless
+   every pin cleared the 7-day gate, in which case **~3 %**. 🟢 The gate is the cheap half of
+   this pattern; re-verification is the expensive half. Spend on the gate.
+5. 🔴 **Never** grade staleness from stars or "last updated" badges (`Trend 46`). 🟡 And do not
+   grade it from commit volume either — it *works* (ρ = +0.886) but it is a 30-day
+   backward-looking window standing in for a number you can read directly off the commit.
+
+🟡 **Calibration limits, stated rather than hidden:** 496 observations, but **36 repositories,
+one industry, one host, one 14-day window**, and the 24-hour horizon is the only one measured —
+nothing here calibrates a 1-week or 1-quarter pin → `Gap 448-D`.
+
+---
+
 ## 🆕 Pattern AZ — `p447` **The pin-recency pre-flight: a 60-second check that tells you whether the commit you are about to put in a client deliverable will still be there on Monday — and why the metric you would reach for first (commit volume) gets it backwards**
 
 🔵 **The problem this solves.** A studio engagement pins commits: in an SOW appendix, a

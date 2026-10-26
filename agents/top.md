@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p448` — **🟢 `Gap 447-B` IS REFUTED FROM SOURCE, AND IT WAS THIS SHELF'S ONLY OPEN CAPABILITY CLAIM: the LMS-connector tier is NOT read-only — 136 of 414 tool declarations (32.9 %) MUTATE, and the specific claim that "not one community server creates and publishes a course" is false at four addresses. 🟢 A cross-channel validation double-sources this shelf's densest category: source extraction reproduces `p446`'s README tool counts EXACTLY on four of five addresses. 🔴 Gate DENIED for the THIRD consecutive pass.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` DID NOT
+RUN.** One attempt, refused with `[Code from External]` — the third consecutive pass and the
+**third distinct container** to refuse it. 🔵 `p446` called the variable *"the execution policy
+of the host"*; `p447` called two denials **standing**; `p448` makes it **three for three**, so
+`Gap 446-A` is a property of the host class unattended passes run in and not an hour's bad luck.
+🟡 **No arrival baseline, no post-write gate.** Every cell below is first-hand and carries the
+command that produced it; none is gate-checked.
+
+### 🔴 Zero new rows, for the THIRD consecutive pass — and no padding
+
+Four global discovery legs returned candidates; **every one was already on a sell shelf**, graded
+by **word-scoped** `grep -riw` against these files before being written down (`Gap 447-A`'s
+prescription, applied):
+
+| candidate | word-scoped files | verdict |
+|---|---|---|
+| `openSIS` | **32** | 🔴 already shelved (`OS4ED/openSIS-Classic`, GPL-2.0) |
+| `Ed-Fi` / `edfi` | **16 / 15** | 🔴 already shelved |
+| `Chamilo` | **23** | 🔴 already shelved |
+| `OpenEduCat`, `Sakai`, `ILIAS` | **many** | 🔴 already shelved |
+| `agents-from-scratch`, `ai-engineering-from-scratch`, `AI-Roadmaps`, `500-ai-agents-projects`, `h9-tect`, `pguso`, `rohitg00` | **3–4 each** | 🔴 already shelved, and all **general-purpose**, not education verticals |
+
+🔴 **A cadence caveat that must be stated, because it changes how the saturation reads.**
+`p447` committed **00:58:40Z** and `p448` read at **01:41:58Z** — **43 minutes** apart. A
+saturated discovery channel 43 minutes after the previous pass is **not evidence about the
+supply**; it is evidence that no time has elapsed. Three consecutive "saturations" have now
+been recorded without anyone measuring the inter-pass interval → `Gap 448-A`.
+
+### 🟢 `Gap 447-B` REFUTED — read from source at HEAD, not from a directory review
+
+`p447` carried, explicitly as a single relayed secondary claim, that the community MCP supply
+for Moodle and Canvas is *"overwhelmingly READ-ONLY"* and that *"not one community server in
+that guide creates and publishes a course."* 🟢 **Both halves are false.** Nine addresses were
+cloned at `--depth 1` and their tool registries read:
+
+| project | lang | tools | READ | 🔴 WRITE | other | write % |
+|---|---|---|---|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | ts | 222 | 126 | 🔴 **62** | 34 | 27.9 % |
+| [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | ts | 89 | 47 | 🔴 **41** | 1 | **46.1 %** |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | ts | 69 | 38 | 🔴 **30** | 1 | **43.5 %** |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **go** | 19 | 16 | 🔴 3 | 0 | 15.8 % |
+| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | py | 10 | 0 | 0 | 10 | 0 % |
+| [`caleb-media-studio/canvas-mcp`](https://github.com/caleb-media-studio/canvas-mcp) | ts | 3 | 0 | 0 | 3 | 0 % |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | ts | 2 | 1 | 0 | 1 | 0 % |
+| **TOTAL** | | **414** | **228** | 🔴 **136** | 50 | 🔴 **32.9 %** |
+
+🟢 **The authoring-and-publishing capability exists at four addresses, named tool by tool:**
+
+| address | the tools that falsify the claim |
+|---|---|
+| `bruchris/canvas-lms-mcp` | `create_course`, `create_module`, `create_module_item`, `create_page`, `create_new_quiz`, `grade_submission`, `enroll_user`, `upload_file` |
+| `mdweaver/canvas-mcp` | `create-module`, `create-module-item`, `post-announcement`, `toggle-module-publish`, `update-syllabus`, `publish-appointment-group` |
+| `r-huijts/canvas-mcp` | `create-module`, `create-module-item`, `post-announcement`, `toggle-module-publish` |
+| `vishalsachdev/canvas-mcp` | `create_announcement`, `create_assignment`, `create_module`, `create_page`, `bulk_grade_submissions`, `bulk_update_pages` |
+
+🟢 **`create_course` was read, not inferred**:
+`src/tools/courses.ts:205` → `name: 'create_course',`, with `tests/tools/courses.test.ts:53`
+asserting `expect(names).toContain('create_course')` and the README's own capability table
+listing it. 🟢 `toggle-module-publish` at `mdweaver/canvas-mcp:src/tools/modules.ts:114`,
+`update-syllabus` and `post-announcement` at `src/tools/courses.ts:124` and `:216`. **An MCP
+server that creates a module and then toggles it published is publishing courseware.**
+
+### 🟡 A safety finding that matters more than the census: `read_only_hint` cannot be trusted as a gate
+
+`vishalsachdev/canvas-mcp` is the only address on this shelf that annotates read-only intent
+per tool. Measured over all **128** of its declarations:
+
+| `read_only_hint` | n | share |
+|---|---|---|
+| 🟢 `=True` | 72 | 56.2 % |
+| 🔴 `=False` | **1** | 0.8 % |
+| 🔴 **not declared at all** | **55** | 🔴 **43.0 %** |
+
+🔴 The 55 undeclared tools are **exactly the mutating ones** (`create_announcement`,
+`create_assignment`, `create_module`, `create_page`, `bulk_grade_submissions`,
+`bulk_update_pages`, `assign_peer_review`, `bulk_delete_announcements` …), and the **single**
+tool explicitly marked `read_only_hint=False` is `download_course_file` — **a read**. 🔴 So the
+one field an MCP allowlist gateway would key on is **43 % unpopulated and at least once
+inverted** on the densest server in this category. `compose/code/mcp-allowlist-gateway` must
+gate on the **tool's effect**, never on this hint → `Gap 448-B`.
+
+### 🟢 A cross-channel validation, and it vindicates `p446`'s numbers
+
+`p446` refuted `Gap 445-C`'s false *"102 tools"* claim by counting each README's advertised
+tools: **187 / 128 / 126 / 99 / 89 / 69**. `p448` counted the **source** instead, a fully
+independent channel:
+
+| address | `p446` README | `p448` source | verdict |
+|---|---|---|---|
+| `vishalsachdev/canvas-mcp` | 128 | **128** | 🟢 **EXACT** |
+| `Harikeshav-R/canvas-mcp` | 126 | **126** | 🟢 **EXACT** |
+| `mdweaver/canvas-mcp` | 89 | **89** | 🟢 **EXACT** |
+| `r-huijts/canvas-mcp` | 69 | **69** | 🟢 **EXACT** |
+| `bruchris/canvas-lms-mcp` | 187 | 222 | 🔴 **over-count** — non-tool `name:` fields match → `Gap 448-C` |
+
+🟢 **Four exact reproductions across two independent channels.** And the arm structure
+`p446` graded by root commit is **coherent on a third axis**: `Harikeshav-R` is the pure
+duplicate address — `0` unique commits, **94 behind** — and it carries exactly **2 fewer tools**
+than its upstream (126 vs 128). 🔵 The drift is the 94 commits.
+
+🔴 **Instrument limits, stated rather than buried.** The extractor is regex over tool
+registries, not an AST walk: it **over-counts** `bruchris` (222 vs a README-advertised 187) and
+it needed three separate fixes before it saw three different registration idioms —
+`@mcp.tool` **without parentheses** (130 occurrences in `vishalsachdev`, first run extracted
+**1**), nested-paren decorator arguments, and a **Go** codebase (`Jawadh-Salih`, first run
+extracted **0** because only `.py`/`.ts`/`.js` were scanned). 🔵 Each miss failed toward
+*"no write tools here"* — the same direction as `Gap 447-A`'s substring defect, and the reason
+the first census run would have **confirmed** `Gap 447-B` instead of refuting it. The
+32.9 % write share is therefore a **lower bound**.
+
+---
+
 ## 🆕 `p447` — **🔴 Gate posture: DENIED, no baseline (`Gap 446-A`, second consecutive pass). 🟢 ZERO new rows, and that is the result: the discovery channel returned only names already on this shelf, for the second hour running. 🟢 The shelf's pins were audited as a population instead — 17 of 18 still exact, and the one that moved did not move its grant.**
 
 🔴 **No rows are added this pass, and no row is padded to meet a count.** Four global discovery

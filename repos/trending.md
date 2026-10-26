@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p448` · reads 2026-10-26, commit 2026-10-26 — **🟢 A NEW FOUNDATIONAL REPO AND IT IS THE FIRST PERMISSIVELY-LICENSED SYSTEM OF RECORD ON THESE SHELVES: `Ed-Fi-ODS`, Apache-2.0, read first-hand, reached through the state-shaped NA leg that closed `Gap 447-D` after six region-level nils. 🔴 Gate DENIED, third consecutive pass. 🔴 Trending discovery saturated a third time.**
+
+🔴 **Gate posture: `make hooks` DENIED** — one attempt, `[Code from External]`, third
+consecutive pass and third container (`Gap 446-A`, now a host-class property).
+
+**Repo-layer findings, first-hand:**
+
+- 🟢 **NEW ROW — [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS)**
+  · 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** · `59899c6091b5` · HEAD `4d626f9ab257`.
+  The ODS/API behind **Texas TSDS/TEDS**, which TEA has mandated SIS vendors submit to via API
+  transactions. 🟢 **The first permissively-licensed system of record on this shelf** — every
+  other is GPL-2.0/3.0, AGPL-3.0, or carries no grant at all. 🟡 Bounded by a
+  **233 924 B `NOTICES.md`** (`609e95c99d9b`): a dependency-closure pass is owed before
+  shipping, because Apache-2.0 at the root does not clear the tree (`Trend 40`).
+- 🟢 **Reachable, grant unread, queued:**
+  [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation)
+  HEAD `b6b72e594bc4`.
+- 🟢 **`openSIS Classic` reproduces to the digit, below the root:** `docs/License.txt` =
+  **17 286 B · `224ac3d403e3`**, GPL-2.0, while **9 of 9** root grant paths return **404**
+  (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `license`, `license.txt`,
+  `LICENCE`, `Licence.txt`). 🟢 `ABSENCE-ENUMERATED` at root, `GRANT-PRESENT` beneath it — an
+  independent second confirmation of `Trend 40`.
+- 🟢 **All four pinned foundations rows HELD:** `OpenOLAT/OpenOLAT` `d073ad444fe5`,
+  `frappe/lms` `5d6df8e3ed8e`, `withmarbleapp/os-taxonomy` `7bd8b6794cb7`,
+  `GeminiLight/awesome-ai-llm4education` `48f2d16ca617`. 🔴 **Worth little**: those pins are
+  **43 minutes** old.
+- 🟢 **`Gap 447-C` ANSWERED over the repo population — and the pin budget this shelf publishes
+  was wrong.** 496 simulated pinnings across **36** shelved repositories: only **67.3 %** of
+  pins survive 24 h, against `Pattern AZ`'s published *"17 of 18."* 🟢 The gate that works is
+  **age of the commit at pin time ≥ 7 days → 97.4 %** (vs **48.9 %** below 7 days).
+  🔴 And `AZ`'s dismissal of commit volume is inverted: **ρ = +0.886**, with `DeepTutor` at
+  **50 %** and `frappe/lms` at **71.4 %** stale over 14 pinnings each, against **0.0 %** for
+  `Citolab/qti-convert-python`, `LongsightGroup/qti3`, `GeovaneSchmitz/sigaa-api`,
+  `ivmelo/suapbot`, `sebassg/sia-unal-mcp`, `r-huijts`/`mdweaver`/`caleb-media-studio`
+  `canvas-mcp`.
+- 🟢 **Instrument pre-condition checked rather than assumed:** committer-date monotonicity over
+  **9 438** adjacent commit pairs in those 36 repositories — **0 inversions, 36 of 36 clean**.
+- 🔴 **Trending discovery SATURATED, third consecutive pass, zero new rows and no padding.**
+  Global platform and trending legs re-returned `OpenOLAT`, `sakaiproject/sakai`,
+  `openeducat/openeducat_erp`, `francoisjacquet/rosariosis`, `moodle/moodle`, `Chamilo`,
+  `ILIAS`, `openSIS` — all already shelved, each graded **word-scoped** (`Gap 447-A`). The
+  remaining candidates (`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`,
+  `h9-tect/AI-Roadmaps`, `aneelv75/github-trending`, `MadsLorentzen/ai-job-search`,
+  `500-ai-agents-projects`) are **general-purpose, not education verticals**, and all were
+  already present. 🔴 43 minutes after `p447` committed → `Gap 448-A`.
+
+---
+
 ## 🆕 `p447` · reads 2026-10-26, commit 2026-10-26 — **🔴 Gate posture: DENIED, no baseline. 🟢 `Gap 446-B` ANSWERED WITH A DENOMINATOR: 17 of 18 published pins are still exact after ~24 h, the one that moved did NOT move its grant — and the predictor everyone would reach for first, commit VOLUME, is refuted by its own measurement.**
 
 🔴 **Gate posture: `make hooks` did not run** (`[Code from External]`, second consecutive pass —

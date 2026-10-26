@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p448` — **🟢 THE NORTH AMERICAN SYSTEM OF RECORD HAS A GRANT, AND IT IS APACHE-2.0: `Ed-Fi-ODS` read first-hand at `LICENSE.txt` 10 172 B · `59899c6091b5`, reached through the state channel that six consecutive region-level NA legs failed to find. 🟢 `openSIS`'s below-root grant REPRODUCES to the digit. 🔴 Gate DENIED, third consecutive pass.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Gap 446-A`, third consecutive pass, third container).
+Nothing below is gate-checked; every cell carries its command.
+
+### 🟢 A new foundational row, and it is the one `Gap 447-D` was blocking
+
+🔵 Texas's TEA has **mandated** that student-information vendors submit to TSDS through **API
+transactions** built on TEDS, and TEDS is *"a collection of data standards based on the national
+**Ed-Fi** core"* — so the NA state system of record **is** an Ed-Fi deployment. That makes
+`Ed-Fi-ODS` a foundations row rather than an integration curiosity. Grant read this hour over
+the `raw.githubusercontent.com` channel (the one channel `Gap 446-D` shows returns **200**):
+
+| repo | grant path | bytes | `sha256`[:12] | licence | verdict |
+|---|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `LICENSE.txt` | **10 172** | `59899c6091b5` | 🟢 **Apache-2.0** | 🟢 **GRANT-PRESENT**, HEAD `4d626f9ab257` |
+| same | `NOTICES.md` | **233 924** | `609e95c99d9b` | third-party notices | 🟡 a 234 kB notices file is a **dependency-closure obligation**, not a blocker |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | — | — | — | — | 🟢 reachable, HEAD `b6b72e594bc4` |
+
+🟢 **Why this row is worth more than its licence line.** Every other system-of-record row on
+these shelves is either copyleft (`SIGAA` GPL-3.0, `suapbot` AGPL-3.0, `openSIS` GPL-2.0,
+`RosarioSIS` GPL-2.0) or carries **no grant at all** (`sia-unal-mcp`). 🟢 `Ed-Fi-ODS` is the
+**first permissively-licensed system of record on this shelf** — and it is the one a US state
+*requires* its vendors to speak to. 🔵 That is a **vendor-and-build** row, not a
+read-and-reimplement row.
+
+🟡 **Bounded, and the bound is named:** the 234 kB `NOTICES.md` means an Ed-Fi-derived
+deliverable owes a dependency-closure pass before it ships
+(`compose/code/dependency-licence-closure` is the existing instrument). Apache-2.0 at the root
+does **not** clear the tree — that is `Trend 40`'s whole point.
+
+### 🟢 `openSIS`'s below-root grant reproduces, and the absence re-enumerates
+
+`p4xx` published `openSIS Classic`'s grant at `docs/License.txt` · **17 286 B** ·
+`224ac3d403e3` · GPL-2.0. Re-read this hour, independently:
+
+| check | result |
+|---|---|
+| `docs/License.txt` payload | 🟢 **17 286 B · `224ac3d403e3`** — reproduces the published cell **to the digit** |
+| first line | `GNU GENERAL PUBLIC LICENSE` |
+| root grant paths probed | 🔴 **9 of 9 return 404** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `license`, `license.txt`, `LICENCE`, `Licence.txt`) |
+| README's own statement | *"openSIS is an Open Source Project licensed under the GNU General Public License"*, pointing at `docs/License.txt` |
+
+🟢 **`ABSENCE-ENUMERATED` at root, `GRANT-PRESENT` below it** — a second, independent
+confirmation of `Trend 40` (*the second grant lives below the root*), and a validation of the
+raw-channel + `sha256`[:12] method **against an already-published cell** before any new cell
+was written this pass.
+
+### 🟢 Pinned rows on this shelf: all four HELD
+
+| row | published pin | live HEAD | verdict |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `d073ad444fe5` | `d073ad444fe5` | 🟢 **HELD** |
+| [`frappe/lms`](https://github.com/frappe/lms) | `5d6df8e3ed8e` | `5d6df8e3ed8e` | 🟢 **HELD** |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | `7bd8b6794cb7` | `7bd8b6794cb7` | 🟢 **HELD** |
+| [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) | `48f2d16ca617` | `48f2d16ca617` | 🟢 **HELD** |
+
+🔴 **But do not read that 4-of-4 as reassurance, because this pass measured what it is worth.**
+Those pins are **43 minutes** old (`p447` committed 00:58:40Z, `p448` read 01:41:58Z). Over the
+proper denominator — **496** simulated pinnings across **36** of these repositories — only
+**67.3 %** of pins survive 24 h. 🔴 `p447`'s published budget line (*"17 of 18 of this base's
+pins survived 24 h, so this is a cheap minority repair"*) is **survivorship-biased** and is
+corrected in `Pattern BA`. 🟢 The predictor that actually works, and the one to apply before
+putting any row below into a client deliverable, is **age of the commit at the moment you pin
+it**: ≥ 7 days → **97.4 %** survival; < 7 days → **48.9 %**.
+
+🔵 **Instrument validation for that claim, against a cell this base already published:**
+`Apomera/AlloFlow`'s two refs date to `2026-10-24T12:35:30-04:00` and
+`2026-10-25T18:50:44-04:00` — reproducing `p447`'s published *"pinned 10-24 12:35 with HEAD at
+10-25 18:50"* **to the minute**.
+
+---
+
 ## 🆕 `p447` — **🔴 Gate posture: DENIED, no baseline (`Gap 446-A`). 🟢 No foundational repo changes grant this pass, and that is a MEASURED statement rather than an unexamined one: every pinned row on this shelf was re-resolved against its live HEAD, and the single mover's licence payload is byte-identical across the move.**
 
 🟢 **Every pinned row on the three sell shelves was re-resolved this hour** —

@@ -4,6 +4,160 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p448` · 2026-10-26 — **🟢 `Gap 447-D` IS CLOSED ON THE FIRST ATTEMPT: after SIX consecutive region-level nils, the North America leg paid the moment it was re-shaped to the STATE — and what it returned is the first permissively-licensed system of record on these shelves. 🟢 All four regions now have a PLACED system-of-record verdict, and the grant posture differs by region in a way that dictates the engagement shape. 🔴 Gate DENIED, third consecutive pass.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Gap 446-A`, third consecutive pass, **third
+container** — the variable is the host class, not the hour).
+
+🔵 **Shape.** `p427`'s *one country, one question* now runs for a sixth pass. `p447` re-shaped
+**EMEA** to country legs and they falsified two of its own region-level claims. `p448` applied
+the same prescription to **North America**, where `Gap 447-D` recorded *"the NA leg is the wrong
+shape — six nils."* 🟢 **The NA research unit is the STATE**, for the same reason the EMEA unit
+is the country: **the state owns the system of record.**
+
+### 🟢 `Gap 447-D` CLOSED — the state-shaped NA leg, and it paid immediately
+
+| finding | evidence | status |
+|---|---|---|
+| 🟢 **Texas has MANDATED API submission to its state system of record** | TEA/TSDS: vendors *"will be required to provide TSDS data through API transactions"*, replacing manual XML loading; the 2025-26 special-education circular tells districts to coordinate with SIS vendors to configure those API transactions | 🟡 relayed from TEA pages (`Gap 446-D`: official primaries are 403 here) |
+| 🟢 **and that system of record is Ed-Fi** | TEDS is *"a collection of data standards based on the national **Ed-Fi** core"*; TEA's TSDS Upgrade Project is *"a multi-year initiative to upgrade the ODS and TEDS to a current version of Ed-Fi"* | 🟡 relayed |
+| 🟢 **Ed-Fi's grant, read FIRST-HAND this hour** | `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` · `LICENSE.txt` **10 172 B · `59899c6091b5`** · 🟢 **Apache-2.0** · HEAD `4d626f9ab257`; `NOTICES.md` 233 924 B · `609e95c99d9b` | 🟢 **first-hand** |
+| 🔴 **California has NO statewide equivalent** | no CDE-wide SIS API standard found; the only state SIS API surface is **CAASPP/ELPAC** test delivery (*"API specifications for SIS vendors"*, vendor credentialing) | 🔴 **placed informed gap**, single channel → `Gap 448-E` |
+| 🟢 **genuinely new to this base** | word-scoped: `TSDS` **0**, `TEDS` **0**, `PEIMS` **0**, `CAASPP` **0**, `ELPAC` **0** | 🟢 (and `TEDS` is `Trend 48`'s caught suppression: substring said 3) |
+
+🔵 **Six region-level NA legs returned nothing because they asked the wrong unit.** One
+state-level question returned a mandate, a standard, a permissive licence and a named
+jurisdictional absence. **`Trend 47` generalises: in NA the research unit is the state.**
+
+### 🟢 The four-region system-of-record map — placed, and it dictates the engagement shape
+
+🟢 **This is the first pass at which all four regions carry a system-of-record verdict.** The
+grant posture is not a detail; it is the whole engagement model:
+
+| region | system(s) of record | API posture | grant posture | 🟢 engagement shape |
+|---|---|---|---|---|
+| **North America** (Texas) | TSDS / TEDS on **Ed-Fi** | 🟢 **mandated**, API-first | 🟢 **Apache-2.0**, read first-hand | 🟢 **BUILD-ON / VENDOR** |
+| **EMEA** (Germany) | Bayern **ASV** + **ByCS** + **VIDIS**; Niedersachsen **DaNiS** → **NEO** | 🟡 interfaces exist, **no published spec** | 🔴 **no grant; not open source** | 🟡 **PARTNER / PROCURE** |
+| **APAC** (India) | **UDISE+** | 🔴 **no official API found** | 🔴 **no OSS tooling found** | 🔴 **ABSENCE** |
+| **LATAM** (Mexico, Chile) | **SIGED** (SEP), **SIGE** (MINEDUC) | 🔴 **no official API found** | 🔴 no OSS; one **third-party commercial** endpoint | 🔴 **ABSENCE — and LATAM is a SPLIT market** |
+
+🔵 **The LATAM split is the most commercially useful line in this table.** Brazil and Argentina
+carry **real integration code on GitHub** (`GeovaneSchmitz/sigaa-api`, `ivmelo/suapbot`,
+`sebassg/sia-unal-mcp`, `siu-guarani-mcp`); Mexico and Chile return **nothing** at the
+integration layer. 🔴 **"LATAM" as one market is a reporting bucket**, exactly `Trend 47`'s
+point — Brazil/Argentina/Colombia are *compose* markets, Mexico/Chile/Peru are *build* markets
+(`p446` retired Peru as a buying channel on four channels of nils).
+
+## Opportunities by region
+
+### North America
+
+🟢 **The strongest NA opportunity this base has recorded, and it is new this pass.** A US state
+has **mandated** that SIS vendors speak API to a system of record whose implementation is
+**Apache-2.0**. That is the rare combination of a *compelled* integration deadline and a
+*permissive* grant.
+
+- 🟢 **Ed-Fi-native agent layer** — `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` (Apache-2.0 ·
+  `LICENSE.txt` 10 172 B · `59899c6091b5`) is vendorable, not merely integrable. Every other
+  system of record on these shelves is GPL/AGPL or unlicensed.
+- 🟢 **The compliance wedge**: districts are being told to *coordinate with their SIS vendors*
+  to configure API transactions. That is a funded, dated, non-discretionary integration
+  programme, not a pilot.
+- 🟡 **Bounded by a 234 kB `NOTICES.md`** — an Ed-Fi-derived deliverable owes a
+  dependency-closure pass before it ships (`compose/code/dependency-licence-closure`).
+  Apache-2.0 at the root does not clear the tree (`Trend 40`).
+- 🔴 **Do not generalise Texas to the US.** California has no statewide SIS API standard — only
+  CAASPP/ELPAC test delivery. **NA must be sold state by state**, and that is now measured,
+  not assumed.
+- 🟢 **And the connector tier can author, not just read** — `Gap 447-B` refuted this pass:
+  `bruchris/canvas-lms-mcp` registers `create_course`, `mdweaver`/`r-huijts` register
+  `toggle-module-publish` and `update-syllabus`. A courseware-authoring engagement on Canvas
+  no longer needs a vendor-built write path.
+
+### EMEA
+
+🟡 **A real market with real interfaces and no way in through code — so the shape is partner,
+not build.** Germany, read this hour through a country-shaped (German-language) leg:
+
+- 🟡 **Bayern**: `ByCS` (BayernCloud Schule) is open to all state, municipal and private
+  schools; `ASV` added a **ByCS JSON export** in **July 2026**, and an import/export tooling
+  interface reached all school types on **30 September 2026**. `VIDIS` has, since the
+  **2025/26** school year, been able to integrate timetable/substitution software, digital
+  class registers and parent-communication systems — 🟡 still **pilot phase**.
+- 🟡 **Niedersachsen**: `DaNiS` is the state's free school-administration software with
+  documented export interfaces and `moin.schule` SSO; successor **NEO Niedersachsen** will
+  replace numerous school-administration applications with one central platform, with
+  interfaces to timetabling, LMS and `moin.schule`. 🟢 **A primary-school release is due at the
+  start of the 2026/27 school year** — a dated, nameable entry point.
+- 🔴 **Declared gap, explicitly:** no source confirms these interfaces are open source or
+  publicly specified. Nothing was found on AI use in school administration in either state.
+  🔴 And **every EMEA regulatory statement on these shelves is relayed** — `Gap 446-D`:
+  eleven official primaries return `curl: (56) CONNECT tunnel failed, response 403`, while
+  `raw.githubusercontent.com` returns **200** from the same shell. The EU AI Act's
+  authoritative text has **never** been read first-hand here.
+- 🟢 **The opportunity that follows from the absence**: EMEA engagements buy *integration into
+  a closed system of record*, procured through the state's own interface programme
+  (`VIDIS`, `NEO`), not a GitHub dependency. `Pattern AN`'s national-connector shape applies.
+
+### APAC
+
+🔴 **The largest denominator in this file and the thinnest supply — recorded as an absence, not
+as silence.** India, via a country-shaped leg:
+
+- **UDISE+ 2024-25 baseline**: **1.47 M schools**, **247 M students**, **10.1 M teachers**,
+  **64.7 %** computer access, **63.5 %** internet connectivity. 🔴 **Single advocacy-blog
+  source** (Education for All in India) — relayed, not primary; PIB or the UDISE+ portal would
+  settle it.
+- 🔴 **No official UDISE+ API documented, and no open-source tooling for it found.** Stated
+  plainly: this is the one region where the system of record is enormous and the integration
+  layer is **empty on every channel tried**.
+- 🟡 Policy direction, relayed: at the India AI Impact Summit (**Feb 2026**) the framing was
+  *AI as assistant, not replacement*, with a universal teacher-literacy target of **1 crore**
+  educators. 🟢 **Teacher-enablement at that scale is the APAC opportunity** — it needs no
+  system-of-record write path, which is exactly what APAC lacks.
+- 🔴 **Japan nils.** The MEXT school-DX leg returned nothing in this hour; recorded as an
+  unpaid channel, not as an absence.
+- 🔴 The **connectivity floor** (63.5 %) is the design constraint: offline-first
+  (`Pattern AI`, Kolibri) is not a nice-to-have in this region.
+
+### LATAM
+
+🔴 **LATAM is not one market, and this pass measured the seam.**
+
+- 🟢 **Compose markets — integration code exists and is on these shelves**: Brazil
+  (`GeovaneSchmitz/sigaa-api`, `ivmelo/suapbot` AGPL-3.0 · `LICENSE` 34 520 B ·
+  `76a97c878c9c`), Colombia (`sebassg/sia-unal-mcp` — 🔴 **NO GRANT FILE**, 0 of 35 paths),
+  Argentina (`siu-guarani-mcp`). 🔴 **`Trend 43` still governs: this layer is UNLICENSED more
+  often than it is copyleft** — 18 of 37 addresses carry no grant at all. Read-and-reimplement,
+  never vendor.
+- 🔴 **Build markets — no integration layer at all**: **Mexico** (`SIGED`, SEP) and **Chile**
+  (`SIGE`, MINEDUC) are genuine national systems of record — SIGE *"concentrates in one place
+  the information of sostenedores, establishments, teachers and students"*, covering
+  enrolment, attendance, actas and performance for every establishment in the country — with
+  🔴 **no official public API and no open-source code found**. The only API surface located is
+  a **third-party commercial** certificate-validation endpoint (Verifik's documented
+  `GET /v2/mx/siged/certificado`), explicitly **not** an SEP API.
+- 🔴 **Peru stays retired as a buying channel** — `p446` closed it on **four channels, four
+  nils**, re-read as a build market.
+- 🟢 **The commercial read**: in Mexico and Chile the first mover builds the integration layer
+  that does not exist, and in Brazil/Argentina/Colombia the work is *clearing* a layer that
+  does (`Pattern AX`'s per-platform licence probe, because `Trend 45` says you cannot carry the
+  last platform's answer to this one).
+
+🔴 **Carried forward, unpaid and named:** `Gap 445-A` (org enumeration is a host 403),
+`Gap 443-A` (ledger population still claim-derived), `Gap 444-D` (homonym audit over existing
+rows), `Gap 445-H` (`claims.py::slugs_in`, untouched with no gate available), `Gap 446-E`
+(fork-arm fraction unmeasured), `Gap 446-D` (eleven primaries 403, control passes),
+`Gap 445-D` (needs **a person**, not a fourth registration).
+🆕 `Gap 448-A` (inter-pass interval unmeasured — `p448` read 43 min after `p447` committed, so
+three "saturations" are uninterpretable), `Gap 448-B` (`read_only_hint` 43 % unpopulated and
+once inverted — the MCP allowlist gateway keys on an unsound field), `Gap 448-C` (tool
+extractor over-counts `bruchris` 222 vs 187; needs an AST walk), `Gap 448-D` (recency
+calibration is one industry, one host, one 14-day window, 24-h horizon only), `Gap 448-E`
+(California's absence is a single-channel nil; the CDE vendor-documentation channel is unpaid).
+
+---
+
 ## 🆕 `p447` · 2026-10-26 — **🟢 `Gap 445-F` IS CLOSED, AND IT PAID TWICE OVER: the EMEA country leg did not merely return facts where two consecutive region legs nilled — it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🔴 The other three legs nil. 🔴 And `Gap 446-D` is now measured across ELEVEN primaries with a control: this file's entire EMEA and LATAM regulatory layer is relayed.**
 
 🔴 **Gate posture: `make hooks` DENIED, no baseline** (`Gap 446-A`, second consecutive pass).
