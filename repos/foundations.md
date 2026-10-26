@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` — **No foundation row is added, and the reason is stated rather than padded: of 42 addresses probed, the 2 unshelved ones carry no licence grant and neither is foundation-grade.**
+
+🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves
+through a fresh clone rather than the Makefile, so **nothing below is gate-attested**.
+
+🔵 Instrument: a two-stage probe — `git ls-remote --symref` for liveness and default ref, then a
+10-path grant read at that ref. **Controlled in both directions before use:**
+
+| control | result |
+|---|---|
+| 🟢 `HKUDS/DeepTutor` — positive, asserted against the grant these shelves carry | **Apache-2.0**, `LICENSE` **11 408 B**, head `a31d82624c27` — **reproduced** |
+| 🟢 two fabricated addresses — negative | both **`ADDRESS_DEAD`** |
+| 🔴 **instrument defect, recorded against this pass, not against the shelves** | the probe's *fallback* licence matcher (a bare substring scan, used only when no licence title matches in the first 30 lines) read `withmarbleapp/os-taxonomy` as **"MIT"**. It is **not** MIT. The shelves' own first-hand record — **ODbL-1.0 + CC BY-SA 4.0**, `LICENSE` **25 289 B** — was re-read and **stands uncorrected**. Every grant quoted below was read from the licence title, never from the fallback |
+
+### What was searched, and what was missing
+
+🔵 Three legs against the GitHub repository-search API (`topic:ai-tutor`, `topic:education` +
+`topic:ai-agent`, `topic:edtech` + `topic:education`/`topic:mcp-server`), plus the four prescribed
+global web legs. 🔴 **Nothing foundation-grade was returned that these shelves do not already
+carry.** The candidates that *looked* foundational on first pass were all already shelved:
+
+| candidate | status on these shelves |
+|---|---|
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔵 already carried — ODbL-1.0 + CC BY-SA 4.0, 25 289 B |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔵 already carried, 🔴 correctly flagged **CC BY-NC-4.0** |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🔵 already carried (23 files) |
+| [`frappe/lms`](https://github.com/frappe/lms) · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) · [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🔵 all already carried |
+
+🟢 The existing foundation table below is **unchanged and still current** — every row in it was
+reachable this pass. 🔴 What this pass establishes is that *adding* to it now requires a deeper or
+different channel than the one the encargo prescribes, not another hour on the same one.
+
 ## 🆕 `p458` — **Two foundation-grade rows arriving from the GitHub API channel, and one of them is the first curriculum-graph row these shelves carry that is built from OFFICIAL curricula rather than a scrape**
 
 🔵 Grants read first-hand at the resolved default ref; instrument and controls as recorded in

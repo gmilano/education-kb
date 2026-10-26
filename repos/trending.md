@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` · 2026-10-26 — **Saturation, measured: the channel that returned 41.9 % novel one pass ago returns 4.8 % this pass, and 0 % usable.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### The measured comparison
+
+| channel | legs | returned | unshelved | granted & usable |
+|---|---|---|---|---|
+| 🟡 GitHub repository-search API | 3 | **42 addresses** | **2** | 🔴 **0** |
+| 🔴 the prescribed web-search channel (4 global + 4 regional, as written) | 8 | 19 named facts | 🔴 **0** | — |
+
+🔵 Both run in the same hour against the same carried shelves. 🔴 **The web channel is now a nil
+for the seventh consecutive pass** (`p453`–`p459`); the API channel has fallen from 26 novel
+addresses to 2, and both of those are ungranted.
+
+### What this is, and what it is not
+
+🟢 It is **not** instrument failure — the probe was controlled in both directions this pass
+(positive: `HKUDS/DeepTutor` Apache-2.0 11 408 B reproduced; negative: two fabricated addresses
+both `ADDRESS_DEAD`).
+
+🔴 It is **supply exhaustion at the prescribed depth for ONE industry**, and the cause is not in
+education at all — it is in the rotation that chooses the industry. Measured this pass across all
+twelve shelves:
+
+| industry KB | last commit | days stale |
+|---|---|---|
+| 🟢 education | 2026-10-26 | **0** — *458 passes* |
+| 🟢 automotive | 2026-10-26 | 0 |
+| 🔴 gaming · legal · financial · healthcare · media · retail · travel · technology · energy · enterprise | **2026-08-01** | 🔴 **86 each** |
+
+🔵 Full reasoning in [`intel/trends.md`](../intel/trends.md).
+
 ## 🆕 `p458` · 2026-10-26 — **A channel result, not a star result: 62 education candidates off the GitHub repository-search API, 26 of them unshelved — against 0 novel facts from the prescribed web channel in the same hour**
 
 🔵 Appended above the history, nothing below edited or removed.

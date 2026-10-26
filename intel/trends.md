@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` · 2026-10-26 — **One trend, and it is about this base rather than the sector: education research has saturated at the prescribed depth, and the cause is a frozen rotation that has starved ten of the twelve industry shelves for 86 days.**
+
+### 🔴 Trend — the limiting factor has moved from the sector to the pipeline
+
+🔵 Measured, not asserted. Three independent measurements taken in the same hour:
+
+**1 — the supply channel collapsed, and not because it broke.**
+
+| pass | addresses probed | unshelved | novel share | granted & usable |
+|---|---|---|---|---|
+| `p458` | 62 | 26 | 41.9 % | several |
+| 🔴 `p459` | 42 | 2 | **4.8 %** | 🔴 **0** |
+
+🟢 The probe was controlled in both directions this pass (positive `HKUDS/DeepTutor` Apache-2.0
+11 408 B reproduced; negative two fabricated addresses `ADDRESS_DEAD`), so this is a shelf result,
+not an instrument result.
+
+**2 — the demand channel is a seventh consecutive nil.** Eight prescribed legs, 19 named facts,
+19 already on [`market.md`](market.md). Denominator published there, leg by leg.
+
+**3 — the rotation is frozen, and this is the actual cause.** Every industry KB probed first-hand:
+
+| industry KB | last commit | days stale |
+|---|---|---|
+| 🟢 `education-kb` | 2026-10-26 | **0** — and **458 passes** deep |
+| 🟢 `automotive-kb` | 2026-10-26 | 0 |
+| 🔴 `gaming-kb` | 2026-08-01 | **86** |
+| 🔴 `legal-kb` | 2026-08-01 | **86** |
+| 🔴 `financial-kb` | 2026-08-01 | **86** |
+| 🔴 `healthcare-kb` | 2026-08-01 | **86** |
+| 🔴 `media-kb` | 2026-08-01 | **86** |
+| 🔴 `retail-kb` | 2026-08-01 | **86** |
+| 🔴 `travel-kb` | 2026-08-01 | **86** |
+| 🔴 `technology-kb` | 2026-08-01 | **86** |
+| 🔴 `energy-kb` | 2026-08-01 | **86** |
+| 🔴 `enterprise-kb` | 2026-08-01 | **86** |
+
+🔵 `globant-kb/rotation.json` has read `{"next": 8}` — education — since **2026-08-02**, and its
+`last_industry` is still `technology`. Every hourly pass since has re-selected education, updated
+these shelves, and failed to advance the index. The 458 passes and the 86 days are the same fact
+seen from two ends.
+
+### 🟢 What follows for an engagement
+
+🔵 These shelves are **not** short of education material — they carry it to a depth no engagement
+will exhaust. 🔴 What a studio cannot currently do is open a *gaming*, *legal*, *financial*,
+*healthcare*, *media*, *retail*, *travel*, *technology*, *energy* or *enterprise* engagement on
+anything newer than **1 August 2026** — which, in a sector where the EU's high-risk schedule moved
+in July 2026 and Korea's framework act commenced in January 2026, is old enough to be wrong rather
+than merely thin.
+
+🟢 **This pass advances the rotation to index 9 and pushes it**, per the encargo's step 5. If the
+advance holds, the eleven starved shelves clear within twelve passes.
+
+### 🔵 Carried forward, unchanged
+
+The trends recorded at `p458` — verification moving out of the model, and the per-region
+LMS-connector layer building against each region's dominant system — were re-probed this pass and
+**both still hold**. No evidence was returned against either.
+
 ## 🆕 `p458` · 2026-10-26 — **Two trends this pass, and the measurable one is about where verification runs: it is moving OUT of the model. The other is that this base's own discovery instrument was wrong for 457 passes.**
 
 ### 🟢 Trend — the correctness check is leaving the LLM

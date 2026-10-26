@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` · 2026-10-26 — **The week's movement is a ZERO, and it is the first measured zero on the channel that worked: 42 addresses probed, 2 unshelved, both ungranted.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### What is new this week
+
+🔴 **Nothing that can be built on.** The full novel set, stated rather than padded:
+
+| address | grant read at `HEAD` | ★ | why it is not carried forward |
+|---|---|---|---|
+| [`Takamatsu-Hikaru/AI-Research-Guide`](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | 🔴 **NO GRANT** · `8df0f4d42d8d` | 181 | ungranted, and prose rather than software |
+| [`selmetwa/parallel-arabic`](https://github.com/selmetwa/parallel-arabic) | 🔴 **NO GRANT** · `1eb4d3acd568` | 26 | ungranted |
+
+### The movement that is real, and already on file
+
+🔵 Two star deltas were re-measured first-hand this pass and are reported here **only** so the
+history carries the number, not as discoveries — both addresses were already shelved:
+
+| address | shelved value | value this pass | delta |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) · Apache-2.0 | 42 610 ★ | **43 419 ★** | +809 |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) · 🔴 CC BY-NC-4.0 | 1 704 ★ (`repos/trending.md`) | **3 992 ★** | **+2 288** |
+
+🔴 `cn-math-taxonomy` more than doubled in the window and is **still NonCommercial** — grant
+re-read first-hand this pass: `LICENSE` **19 347 B**, title line *"Attribution-NonCommercial 4.0
+International"*, head `cf262d886821`. **It cannot ship in paid client work.** Its permissive
+counterpart for the same job remains [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)
+(ODbL-1.0 + CC BY-SA 4.0 — usable, under share-alike).
+
+### Channel yield, pass over pass
+
+| pass | probed | unshelved | novel share | usable |
+|---|---|---|---|---|
+| `p458` | 62 | 26 | **41.9 %** | several |
+| 🔴 `p459` | 42 | 2 | **4.8 %** | **0** |
+
 ## 🆕 `p458` · 2026-10-26 — **The week's movement is a CHANNEL, not a repo: the GitHub repository-search API returns 26 unshelved education addresses where the prescribed web channel returns zero. And the fastest riser on it is one day old.**
 
 🔵 Appended above the history, nothing below edited or removed.

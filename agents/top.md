@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` — **No row is added. Three GitHub-API legs returned 42 education addresses, 2 of them unshelved, and BOTH are refused for want of a licence grant — so the usable novel yield of this pass is ZERO, and that is the finding.**
+
+🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves
+through a fresh clone rather than the Makefile, so **nothing below is gate-attested**.
+
+🔵 Instrument: a two-stage probe — `git ls-remote --symref` for liveness and default ref, then a
+10-path grant read at that ref. **Controlled in both directions before use:**
+
+| control | result |
+|---|---|
+| 🟢 `HKUDS/DeepTutor` — positive, asserted against the grant these shelves carry | **Apache-2.0**, `LICENSE` **11 408 B**, head `a31d82624c27` — **reproduced** |
+| 🟢 two fabricated addresses — negative | both **`ADDRESS_DEAD`** |
+| 🔴 **instrument defect, recorded against this pass, not against the shelves** | the probe's *fallback* licence matcher (a bare substring scan, used only when no licence title matches in the first 30 lines) read `withmarbleapp/os-taxonomy` as **"MIT"**. It is **not** MIT. The shelves' own first-hand record — **ODbL-1.0 + CC BY-SA 4.0**, `LICENSE` **25 289 B** — was re-read and **stands uncorrected**. Every grant quoted below was read from the licence title, never from the fallback |
+
+### The two unshelved addresses, and why neither becomes a row
+
+| address | grant read at `HEAD` | ★ | verdict |
+|---|---|---|---|
+| [`Takamatsu-Hikaru/AI-Research-Guide`](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | 🔴 **NO GRANT** at 10 paths · head `8df0f4d42d8d` | 181 | 🔴 **Refused.** Also not an agent: a bilingual (中文/EN) *reading guide* to entering AI research, published by the UESTC AI society. Prose, not a runnable tutor |
+| [`selmetwa/parallel-arabic`](https://github.com/selmetwa/parallel-arabic) | 🔴 **NO GRANT** at 10 paths · head `1eb4d3acd568` | 26 | 🔴 **Refused.** Arabic reading/practice platform, Svelte. Nothing may be vendored without a written grant |
+
+🟢 **Both were genuinely new to these shelves** — the discovery channel did not fail. What failed
+is the *supply*: at the depth these searches reach, education has no un-shelved, permissively
+licensed agent left to add.
+
+### The denominator, so the nil is auditable
+
+| leg | returned | unshelved | usable (granted) |
+|---|---|---|---|
+| `topic:ai-tutor` · `pushed:>2026-07-01` | 20 | 0 | 0 |
+| `topic:education`+`topic:ai-agent` · `pushed:>2026-08-01`·`stars:>20` | 16 | 0 | 0 |
+| `topic:edtech` · `pushed:>2026-09-15`·`stars:>15` + `topic:education`+`topic:mcp-server` | 25 + 12 | 2 | **0** |
+| **total (deduplicated probe set)** | **42** | **2 — 4.8 %** | **0 — 0 %** |
+
+🔴 Against `p458`'s **41.9 %** novel share on the same channel one pass earlier. The channel is
+unchanged; the shelf is full. 🟢 The consequence is recorded in
+[`intel/trends.md`](../intel/trends.md) and acted on in this repo's rotation — see that file.
+
 ## 🆕 `p458` — **🟢 THE CHANNEL RECORDED AS BLOCKED FOR 457 PASSES WORKS, AND IT IS THE FIRST ONE TO BEAT THE PRESCRIBED CHANNEL BY A MARGIN: the GitHub repository-search API returned 62 education candidates and 26 of them (41.9 %) are addresses these shelves have NEVER carried, against the prescribed web-search channel's SIXTH consecutive zero. 🔴 And the reason this is pass 458 of ONE industry is not a research finding at all — the rotation that selects the industry has been stuck for 85 days.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was NOT RUN** — this pass

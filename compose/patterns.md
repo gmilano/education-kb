@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` — **No new pattern. The inputs did not change, and a recipe assembled from unchanged inputs would be a new name for an existing pattern rather than a new capability.**
+
+🔵 This pass returned **0 granted novel addresses** (42 probed, 2 unshelved, both ungranted — see
+[`agents/top.md`](../agents/top.md)). Every component a new pattern could be wired from is already
+wired into one of the patterns below.
+
+### 🟢 What was checked before declaring this
+
+🔵 Each of the two candidate addresses was tested against the one question that would justify a new
+recipe — *does it do a job no carried pattern already does?*
+
+| candidate | job | already covered by |
+|---|---|---|
+| [`Takamatsu-Hikaru/AI-Research-Guide`](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | curated study pathway into a field | 🔵 the curriculum-graph tier (`os-taxonomy` + `skillpilot`) already generates pathways from *official* curricula, and is granted |
+| [`selmetwa/parallel-arabic`](https://github.com/selmetwa/parallel-arabic) | language reading/practice | 🔵 `artcc/freelingo` (AGPL-3.0, carried) covers the self-hosted language tier; the grant question is the only open one and `parallel-arabic` is **worse** on it (no grant at all) |
+
+🔴 Neither is granted, so neither could be wired into a deliverable pattern even if the job were
+novel.
+
+### 🔵 Pattern BD and its predecessors are re-affirmed, not replaced
+
+Every component of **Pattern BD** (the ungradeable-by-itself tutor) was re-probed for liveness this
+pass and all resolve at their recorded refs. 🟢 The objection it answers — OECD 2026 finding
+chatbot gains vanished once access was withdrawn — is unchanged, and so is the pattern.
+
+🔴 **The honest recommendation this pass makes is not a pattern at all:** the next genuinely new
+education recipe will come from a *deeper* channel than the one the encargo prescribes (conference
+artefacts, LMS plugin registries, national procurement catalogues), or from one of the eleven
+industry shelves that has had no pass in 86 days. See [`intel/trends.md`](../intel/trends.md).
+
 ## 🆕 `p458` — **Pattern BD: the ungradeable-by-itself tutor — a tutoring stack whose grader is NOT the model that teaches, wired from four repos verified this pass**
 
 🔵 Every component below was read first-hand at its resolved default ref this pass (grants,

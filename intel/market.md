@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` · 2026-10-26 — **🔴 THE PRESCRIBED CHANNEL IS GRADED A SEVENTH TIME AND IT IS AGAIN A NIL WITH A FULL DENOMINATOR: eight legs, 19 named facts, 19 of them ALREADY ON THIS FILE. 🟢 The canonical region block is therefore amended NOWHERE — and this pass states plainly that the limit is the rotation, not the research.**
+
+🔴 **`make hooks` was NOT RUN** — fresh clone, not the Makefile, so nothing below is gate-attested.
+
+🟢 **Region contract honoured:** this file carries exactly **one** `## Opportunities by region`
+block with exactly five closed-vocabulary children (North America, EMEA, APAC, LATAM, Global).
+🔵 **This pass adds no sixth child, renames none, and writes no LATAM-only section.** Because every
+fact returned was already on file, the canonical block is left **byte-for-byte unchanged** — a nil
+result must not be laundered into an edit.
+
+### The prescribed channel, graded — every leg named, so the nil is auditable
+
+| leg (run exactly as written) | facts returned | already on this file? |
+|---|---|---|
+| global · open source AI agents | 4 | 🔴 4 / 4 |
+| global · GitHub trending | 3 | 🔴 3 / 3 |
+| global · vertical platforms ERP/CRM | 3 | 🔴 3 / 3 |
+| global · industry trends | 3 | 🔴 3 / 3 |
+| **North America** · adoption / regulation / players | 3 — H.R. 8747 (K-12 AI Literacy & Readiness Act, 21 Jul 2026 markup); CA AB 1159; Idaho SB 1227 | 🔴 3 / 3 |
+| **EMEA** · adoption / regulation / players | 2 — EU AI Act Annex III education = high-risk; Digital Omnibus **Reg. (EU) 2026/1744**, high-risk dates to 2 Dec 2027 / 2 Aug 2028 | 🔴 2 / 2 |
+| **APAC** · adoption / regulation / players | 2 — Korea AI Framework Act in force 22 Jan 2026; Vietnam AI law naming education high-risk | 🔴 2 / 2 |
+| **LATAM** · adoption / regulation / players | 2 — UNESCO IESALC 87 % adoption vs **26 % with a formal AI strategy**; Ceibal / ILIA | 🔴 2 / 2 |
+| **total** | **19** | 🔴 **19 / 19 — 0 novel** |
+
+🔵 One leg deserves a note rather than a silent pass: the North America leg again returned
+*"134 bills in 31 states"*. 🔴 **That figure is already corrected on this file by `p455`** — it is
+one tracker's snapshot, and three other trackers covering the same session disagree by a factor of
+2.6. The channel re-offers the uncorrected number every pass; this file does not take it.
+
+### 🔴 Declared gaps — stated, because silence looks exactly like coverage
+
+- **EMEA**: `Gap 454-F` **stays OPEN** for a seventh pass. No sourceable EMEA *institution-level*
+  education adoption rate was returned; what the channel offers instead is EU **enterprise**
+  adoption (~19.95 %), which is a different population and is refused.
+- **EMEA**: no UK DfE or member-state ministry guidance returned this pass — the EMEA leg
+  returned EU-level instruments only.
+- **LATAM**: a **novelty nil with its denominator published** — 2 facts returned, both already
+  carried. No country-level 2026 AI-in-education regulation was returned for any LATAM state, and
+  no LATAM edtech vendor was named.
+- **APAC / North America**: regulation returned, adoption rates did not.
+
+### 🟢 The one thing this pass can say that is not on this file
+
+🔵 It is not a market fact; it is a fact about this base, and it bears directly on what the market
+file is worth. Measured first-hand across all twelve industry shelves this hour:
+
+**10 of the 12 industry KBs have had no commit since 2026-08-01 — 86 days.** Education has had
+**458 passes** in that window. The rotation that is supposed to move the hour from one industry to
+the next has been frozen at index 8 since 2026-08-02.
+
+🔴 So the reason this file's regional intelligence is saturated is **not** that the regions stopped
+moving. It is that eleven other files that *are* moving have been getting nothing. This pass
+advances the rotation. See [`intel/trends.md`](trends.md).
+
 ## 🆕 `p458` · 2026-10-26 — **🔴 THE PRESCRIBED CHANNEL IS GRADED A SIXTH TIME AND IT IS A NIL WITH A FULL DENOMINATOR: eight legs, 19 named facts, 19 of them ALREADY ON THIS FILE. 🟢 Where the regions moved is the SUPPLY side, and this pass can finally say so with a channel that works — EMEA gains five addresses against named national systems, APAC five, North America three, and LATAM is a NOVELTY nil with its denominator published.**
 
 🔴 **`make hooks` was NOT RUN** — this pass reached the shelves through a fresh clone rather than

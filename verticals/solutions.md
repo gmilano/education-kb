@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p459` — **No platform is added. Two licence traps already on these shelves were RE-READ first-hand and both records are confirmed correct — which is the useful result, because a wrong grant here is what ships into a client engagement.**
+
+🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves
+through a fresh clone rather than the Makefile, so **nothing below is gate-attested**.
+
+🔵 Instrument: a two-stage probe — `git ls-remote --symref` for liveness and default ref, then a
+10-path grant read at that ref. **Controlled in both directions before use:**
+
+| control | result |
+|---|---|
+| 🟢 `HKUDS/DeepTutor` — positive, asserted against the grant these shelves carry | **Apache-2.0**, `LICENSE` **11 408 B**, head `a31d82624c27` — **reproduced** |
+| 🟢 two fabricated addresses — negative | both **`ADDRESS_DEAD`** |
+| 🔴 **instrument defect, recorded against this pass, not against the shelves** | the probe's *fallback* licence matcher (a bare substring scan, used only when no licence title matches in the first 30 lines) read `withmarbleapp/os-taxonomy` as **"MIT"**. It is **not** MIT. The shelves' own first-hand record — **ODbL-1.0 + CC BY-SA 4.0**, `LICENSE` **25 289 B** — was re-read and **stands uncorrected**. Every grant quoted below was read from the licence title, never from the fallback |
+
+### The two traps, re-verified this pass
+
+| Platform | Repo | Grant read at `HEAD` this pass | Shelf record | Verdict |
+|---|---|---|---|---|
+| **Advising App** | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic License 2.0** — title line read directly; `LICENSE` **3 860 B**, head `66459ede3245` | 🟢 already recorded as *"Elastic Licence 2.0 — source-available"* | 🔴 **Not open source.** Source-available; ELv2 bars providing it to third parties as a managed service. Read, do not resell |
+| **cn-math-taxonomy** | [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **CC BY-NC-4.0** — *"Attribution-NonCommercial 4.0 International"*; `LICENSE` **19 347 B**, head `cf262d886821` | 🟢 already recorded as *"CC BY-NC — cannot ship"* | 🔴 **Barred from paid work**, and it grew to 3 992 ★ this window, so it will keep being proposed |
+
+🟢 **Why this is worth a section rather than silence:** a naive licence reader — including the
+fallback in this pass's own probe, see the instrument note — classifies both of these as
+permissive. `advisingapp` is a 340 ★ higher-education student-success CRM with "open" in its
+description; `cn-math-taxonomy` is the fastest-growing curriculum graph on these shelves. They are
+exactly the two rows an engagement would reach for first, and neither may be built on.
+
+🔵 The permissive alternatives these shelves already carry for the same two jobs:
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) (**MIT**, 1 062 B, head `e137ca47cbec`) for
+the AI-native LMS tier, and [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)
+(ODbL-1.0 + CC BY-SA 4.0) for the curriculum graph.
+
 ## 🆕 `p458` — **One Apache-2.0 LMS arrives for the self-hosted tier (the tier these shelves keep finding is copyleft), and the two platforms beside it are exactly why the tier needs reading twice**
 
 🔵 Grants read first-hand at the resolved default ref; instrument and controls as recorded in
