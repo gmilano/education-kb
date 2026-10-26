@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` · 2026-10-26 — **The third consecutive measured zero, and this one is a CLEAN SWEEP: 30 addresses graded, 30 already shelved, 0 unshelved. 🔴 The novel finding is not a repo — it is that four carried addresses are aliases, and the instrument that verified them cannot see a rename.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### The cross-channel comparison, which is the point of this entry
+
+| pass | instrument | surfaced | unshelved | granted & usable |
+|---|---|---|---|---|
+| `p459` | GitHub repository-search API | 42 | 2 (4.8 %) | **0** |
+| `p460` | web search + topic-page enumeration + payload byte-reads | 34 | 1 (2.9 %) | **0** |
+| 🔴 `p461` | repository-search API with `license:` resolution + exact ★ integers | **30** | **0 (0 %)** | **0** |
+
+🟢 **Three passes, three instruments, three zeros — and the unshelved share is now itself zero.**
+The trend across the three is monotone (4.8 % → 2.9 % → 0 %), which is what saturation looks like
+when it is real rather than an artefact of one channel.
+
+### What was swept this pass
+
+🔵 Topic sets enumerated and graded: `ai-tutor` (`stars:>50`, then `>100`), `ai-education`
+(`stars:>80`), `knowledge-tracing` (`stars:>30`), `education`+`llm` (`stars:>400`), plus
+`moodle`-plugin name queries and **Spanish- and Portuguese-language** description/readme surfaces.
+
+🔴 **Every one of the 30 graded addresses was already carried**, including the ones that look
+newest: `Miaotofu01/Study-Mate` (**1 218**★, created 2026-09-17), `assafkip/claudemy` (**458**★,
+created 2026-10-14), `sitor-ai/frametell` (**407**★, created 2026-10-10) and `nichochar/ari`
+(**208**★, created 2026-10-18). 🟢 Four repositories created inside the last six weeks, all four
+already on these shelves — the shelf is not lagging the field, it is current with it.
+
+### 🔴 The finding that is not a repo — `Gap 461-A`
+
+Four carried addresses **do not resolve in the search index at all**; each has been renamed and
+each old address answers only by redirect:
+
+| carried address | canonical name now | ★ exact | alias vs canonical payload |
+|---|---|---|---|
+| `openedx/edx-platform` | **`openedx/openedx-platform`** | **8 209** | byte-identical, 35 136 B · `e12d78569742` |
+| `Vacademy-io/vacademy_platform` | **`Vacademy-io/vacademy_edtech_platform`** | **23** | byte-identical, 34 523 B · `0d96a4ff68ad` |
+| `DaRL-GenAI/instructional_agents` | **`Hyan-Yao/instructional_agents`** | **22** | byte-identical, 1 067 B · `4e085d826a64` |
+| `OpenEduCat-Inc/OpenEduCat` | **`openeducat/openeducat_erp`** | **899** | alias **404**; canonical **200**, 8 241 B |
+
+🔴 **A payload byte-read cannot detect a rename** — the alias and the canonical name return the
+same bytes and the same digest. So `p458`–`p460` were each right about the licence and wrong about
+which repository holds it. 🟡 Three of the four still answer today; the fourth
+(`OpenEduCat-Inc/OpenEduCat`) has **already stopped**, which is the demonstration that this decays.
+
+### 🟡 Movement worth recording, since no row moved
+
+- 🟢 `HKUDS/DeepTutor` read **43 537★ incrementing to 43 538★ within this pass** — recorded as a
+  range, not a point. Still the field's centre of gravity and still Apache-2.0.
+- 🔴 `JushBJJ/Mr.-Ranedeer-AI-Tutor` at **29 548★** remains the most-starred education repo in the
+  field and holds **NO GRANT** (404 × 3), last pushed 2025-09-30 — ~13 months stale.
+- 🔴 `GarethManning/education-agent-skills` (**913**★) is **CC-BY-SA-4.0**, not the permissive
+  grant its `NOASSERTION` index state might invite — 165 teacher-facing skills under share-alike.
+
+---
 ## 🆕 `p460` · 2026-10-26 — **The trending movement is the SECOND consecutive measured zero, and this one was measured with a different instrument: 34 addresses, 33 already shelved, 1 new, 0 usable.**
 
 🔵 Appended above the history, nothing below edited or removed.

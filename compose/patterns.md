@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` — **Three recipes, each wired only from rows whose grant was verified this pass, and each written to survive the two defects this pass found: alias addresses (`Gap 461-A`) and `NOASSERTION` grants (`Gap 461-B`).**
+
+🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.
+🟢 **Composition rule applied throughout:** copyleft platforms are reached **across a process or
+API boundary**, never vendored, so the client's own code keeps its licence.
+
+### 🟢 P461-1 — Auditable adaptive tutoring on the Apache seam (North America, 6–8 weeks)
+
+🔵 **Problem it answers:** an Ohio-style district that adopted an AI policy by the 2026-07-01
+deadline and must now *evidence* learning gain with student data staying in-house.
+
+```
+openedx/openedx-platform (AGPL-3.0, 8 209★)   ← platform, NEVER forked
+  └── openedx/XBlock (Apache-2.0, 471★)        ← THE PERMISSIVE SEAM; client code lives here
+       │   grant: LICENSE.TXT 11 358 B · cfc7749b96f6   (UPPERCASE .TXT — p460's trap)
+       ├── tutoring XBlock
+       │     └── CAHLR/OATutor (MIT, 271★) — BKT scaffolded hints, ReactJS
+       └── mastery XBlock
+             └── pykt-team/pykt-toolkit (MIT, 452★) — DKT/SAKT over courseware event logs
+                   └── HFUT-LEC/EduStudio (MIT, 80★) — cognitive-diagnosis cross-check
+  inference: self-hosted open-weight model (student data never leaves the tenant)
+```
+
+🟢 **Why the seam is the whole design.** Open edX is **AGPL-3.0** and AGPL reaches across a network
+boundary, so a hosted fork would oblige publication of the client's work. XBlocks sit behind the
+plugin API under **Apache-2.0** — the custom components do **not** inherit the platform's AGPL.
+🔴 **Do not** vendor platform code into the XBlock; that collapses the boundary the pattern exists
+to create. 🟡 Probe the grant at **`LICENSE.TXT`**, uppercase extension — lowercase 404s, which is
+the defect `p460` recorded and nearly published as "no grant".
+
+### 🟢 P461-2 — Compliance scaffolding ahead of the EU deadline (EMEA, 8–10 weeks)
+
+🔵 **Problem it answers:** an EU institution whose automated marking or proctoring becomes
+**high-risk on 2027-12-02**, but whose **transparency duty already binds since 2026-08-02**.
+
+```
+ILIAS-eLearning/ILIAS (GPL-3.0, 505★)  — or moodle/moodle (GPL-3.0, 7 543★)
+  └── REST API boundary ONLY (copyleft stays on its side of the wire)
+       ├── disclosure layer        → Art. 50 transparency: every student-facing turn
+       │                             declares it is an AI (binding NOW, not delayed)
+       ├── human-in-the-loop gate  → no grade is emitted without an educator action
+       │                             (Annex III: evaluation of learning outcomes)
+       ├── audit log               → immutable record of input, model, output, reviewer
+       └── openfun/richie (MIT, 316★) — MIT catalogue/portal front, freely brandable
+  inference: artcc/freelingo (AGPL-3.0, 208★) as the Ollama-backed reference for
+             self-hosted local models  — study the integration, do NOT vendor (AGPL)
+  ⛔ EXCLUDED BY LAW, not by preference: emotion recognition — prohibited in schools
+     since 2025-02-02. Do not build it, do not demo it.
+```
+
+🟡 **Grey-area warning that changes the build:** predictive dropout / early-warning tooling is
+classifiable as **high-risk** on some readings of Annex III. If P461-1's pyKT mastery layer is
+deployed in EMEA, it inherits the human-oversight and logging duties — so build the audit log
+**first**, not last. 🔵 Sixteen extra months exist (2026-08-02 → 2027-12-02); the transparency
+layer does not get them.
+
+### 🟢 P461-3 — National-curriculum teacher enablement (APAC, 4–6 weeks)
+
+🔵 **Problem it answers:** China's compulsory AI subject from age six (≥8 h/student/year in
+Beijing) and India's compulsory AI from Class 3 starting **2026–27** both need teacher-facing
+material at national scale in the same academic year.
+
+```
+course + material generation
+  └── Hyan-Yao/instructional_agents (MIT, 22★)   ← CANONICAL ADDRESS
+        🔴 NOT DaRL-GenAI/instructional_agents — that address is an ALIAS (Gap 461-A).
+           Grant proof: MIT License, 1 067 B · 4e085d826a64,
+           copyright line still reads "Copyright (c) 2025 DaRL-GenAI" (a transfer).
+        multi-agent ADDIE: syllabus → LaTeX slides → assessment  (EACL 2026)
+  ├── delivery / tutoring
+  │     └── HKUDS/DeepTutor (Apache-2.0, 43 537★) — persistent learner model, 6 modes
+  ├── explanation levelling
+  │     └── DreambigOu/ELI5 (MIT, 1 854★) — retarget one explanation across grade bands
+  └── localisation check
+        └── DAMO-NLP-SG/M3Exam (105★) — multilingual/multilevel exam benchmark
+              🟡 grant unresolved this pass — use to EVALUATE, do not redistribute
+  ⚠️ DO NOT WIRE IN: ECNU-ICALK/EduChat (975★) — NO GRANT, ~15 months stale.
+     It is the obvious APAC choice by reputation and it is unusable.
+```
+
+🟢 **Why `instructional_agents` at 22★ and not something bigger.** It is **MIT**, peer-reviewed
+(EACL 2026 Main), and carries **120 forks against 22 stars** — a fork-to-star ratio above 5, which
+is the signature of a repository people *run* rather than bookmark. 🔵 On this shelf that ratio is
+a better adoption signal than ★.
+
+### 🔴 Wiring prohibitions carried forward from this pass
+
+| do not | reason |
+|---|---|
+| 🔴 vendor `GarethManning/education-agent-skills` (**913**★) | **CC-BY-SA-4.0** — share-alike; the index's `NOASSERTION` hides this |
+| 🔴 vendor `24kchengYe/human-skill-tree` (**584**★) | **AGPL-3.0** by payload; also ~7 months stale |
+| 🔴 build on `JushBJJ/Mr.-Ranedeer-AI-Tutor` (**29 548**★) | **NO GRANT** — 404 × 3; popularity is not permission |
+| 🔴 build on `aaryansamanta/ai-ethos` (**498**★) | **NO GRANT** |
+| 🟡 fork `openeducat/openeducat_erp` (**899**★) into proprietary modules | **LGPL-3.0** by payload — **link**, do not fork into |
+
+---
 ## 🆕 `p460` — **No new pattern, and the reason is `p459`'s: zero granted novel inputs. 🟢 What this pass ships instead is a GATE STEP every existing pattern is missing, forced by a defect this pass found in its OWN instrument — a grant ladder that is case-blind on the filename publishes a false ungranted and discards a usable dependency. 🔴 And the first draft of that gate step had a SECOND defect, caught by running it rather than by reading it.**
 
 🔵 This pass returned **0 granted novel addresses** (34 surfaced, 1 unshelved, that one ungranted at

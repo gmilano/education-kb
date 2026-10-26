@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` — **Five trends, and the load-bearing one is structural rather than technical: the permissive share of this field is small, shrinking at the top, and systematically misreported by the tooling everyone uses to check it.**
+
+🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.
+
+### 🔴 T1 — The field's most-starred assets are the least usable
+
+🔵 Rank education repositories by ★ and grant quality moves the **opposite** way:
+
+| rank by ★ | repo | ★ exact | grant | usable by Globant? |
+|---|---|---|---|---|
+| 1 | `HKUDS/DeepTutor` | **43 537** | Apache-2.0 | 🟢 **yes** |
+| 2 | `JushBJJ/Mr.-Ranedeer-AI-Tutor` | **29 548** | **NO GRANT** | 🔴 **no** |
+| 3 | `DreambigOu/ELI5` | **1 854** | MIT | 🟢 yes |
+| 4 | `HugeCatLab/ChatTutor` | **1 314** | AGPL-3.0 | 🟡 network copyleft |
+| 5 | `Miaotofu01/Study-Mate` | **1 218** | MIT | 🟢 yes |
+| 6 | `pguso/agents-from-scratch` | **1 062** | MIT | 🟢 yes |
+| 7 | `ECNU-ICALK/EduChat` | **975** | **NO GRANT** | 🔴 **no** |
+| 8 | `DozenTwelve/Papermorph` | **949** | MIT | 🟢 yes |
+| 9 | `GarethManning/education-agent-skills` | **913** | **CC-BY-SA-4.0** | 🟡 share-alike |
+
+🔴 **Two of the top nine serve no grant at all, and two more are copyleft.** The #2 asset in the
+entire field — 29 548★ — cannot be vendored. 🟢 Trend direction: the permissive core is *narrower*
+than the star distribution suggests, and a studio that picks by popularity picks wrong.
+
+### 🔴 T2 — `NOASSERTION` is the field's most dangerous metadata state
+
+🔵 Established this pass (`Gap 461-B`): the index's **absent** licence field meant genuinely no
+grant in **4 of 4** probes, but **`NOASSERTION` meant a real, nameable grant in 3 of 3** — and
+**two of those three were copyleft** (AGPL-3.0, CC-BY-SA-4.0). 🔴 So the single state that looks
+most like "unknown, skip it" is the state most likely to hide an obligation. Any pipeline that
+treats index metadata as authoritative will both discard usable LGPL work and silently admit
+share-alike material.
+
+### 🔴 T3 — Shelf addresses decay by rename, and the standard verification method cannot see it
+
+🔵 Four carried addresses are aliases (`Gap 461-A`). A `raw.githubusercontent.com` byte-read —
+the most rigorous check these passes have used — returns **identical bytes and digests** at the
+alias and the canonical name. 🟡 One of the four (`OpenEduCat-Inc/OpenEduCat`) has **already
+stopped answering**, which converts this from theory to observed decay. 🟢 Trend: licence
+verification and *identity* verification are different problems, and only the first has been
+solved here.
+
+### 🟢 T4 — Agent-skill packaging has displaced the standalone tutoring app
+
+🔵 The newest high-★ education repositories are not applications but **skills and plugins** for
+existing agent harnesses: `assafkip/claudemy` (**458**★, created 2026-10-14),
+`DozenTwelve/Papermorph` (**949**★), `ZeKaiNie/universal-examprep-skill` (**318**★),
+`SenmuuuuW/universal-diagnostic-tutor-skill` (**250**★), `liuliu667/cram-engine` (**176**★),
+`flysheep-ai/education-skills` (**118**★), `GarethManning/education-agent-skills` (**913**★).
+🟢 Commercially this is good news: skills are **small, MIT-dominated and composable**, so the
+integration cost is low and the licence posture is usually clean — the opposite of the platform
+tier, which is uniformly copyleft.
+
+### 🟢 T5 — Local-first and self-hosted is now the default posture, and regulation is why
+
+🔵 `zijinz456/OpenTutor` (**152**★, 10+ LLM providers, local), `artcc/freelingo` (**208**★,
+Ollama), `nichochar/ari` (**208**★, local-first), `Fazmin/AILearningGuide` (**233**★,
+offline-first), `sitor-ai/frametell` (**407**★, local-first), `pguso/agents-from-scratch`
+(**1 062**★, local LLM, no cloud APIs). 🟢 This lines up exactly with the regional constraints in
+`intel/market.md`: North American student-data residency rules and EMEA's deployer duties both
+push toward self-hosted inference. **Local-first is a compliance feature, not a preference.**
+
+### 🟡 Declared gaps — stated so silence is not mistaken for coverage
+
+1. 🔴 **No LATAM-originated open-source education-AI agent repo ≥50★** surfaced in Spanish- or
+   Portuguese-language index queries this pass. See `intel/market.md` → LATAM.
+2. 🔴 **No dominant open-source tutoring-evaluation or learning-gain observability project.**
+   `DAMO-NLP-SG/M3Exam` (**105**★) benchmarks model knowledge, not pedagogical effect. The field
+   measures models, not learning.
+3. 🟡 **Moodle's AI plugin tier is thin** — the two verifiable plugins are **17★** and **15★**
+   against a **7 543★** core; `qbank_genai` and `block_ai_chat` did not resolve to repositories.
+
+---
 ## 🆕 `p460` · 2026-10-26 — **🟢 THE TREND `p458` AND `p459` DIAGNOSED IS CLOSED BY ACTION RATHER THAN RESTATED: the frozen rotation pointer was located, its freeze mechanism read out of its own status field, and it has been ADVANCED — education → automotive. 🔴 And the sector trend this pass can evidence is that saturation is a property of the CHANNEL DEPTH, not of the sector: two unrelated instruments return 0 % usable in the same hour.**
 
 🔴 **`make hooks` was NOT RUN** — fresh clone, not the Makefile, so nothing below is gate-attested.

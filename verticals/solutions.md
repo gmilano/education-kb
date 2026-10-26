@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` — **No platform is added. 🔴 Two carried platform rows change materially: `openeducat_erp` is payload-confirmed LGPL-3.0 against an index that classifies it `NOASSERTION`, and the Open edX row's address is an alias for `openedx/openedx-platform`.**
+
+🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN.** Nothing below is gate-attested.
+
+### 🟢 The vertical set, with grant strength stated as the first-order fact
+
+🔵 For a studio engagement the question is never "is it open source" but **"what does the grant
+oblige us to publish"**. Ordered by how freely Globant can build on it:
+
+| platform | repo | grant | obligation on a client build | ★ exact | last push |
+|---|---|---|---|---|---|
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 🟢 permissive (Apache-derived) — customise freely | **1 239** | 2026-10-26 |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | 🟢 permissive — no obligation | **316** | 2026-10-26 |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** *(payload; index says `NOASSERTION`)* | 🟡 weak copyleft — **link, do not fork into** proprietary modules | **899** | 2026-10-26 |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | 🟡 copyleft — build **plugins**, keep client IP outside the tree | **7 543** | 2026-10-21 |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | 🟡 copyleft — same posture as Moodle | **1 020** | 2026-10-26 |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **GPL-3.0** | 🟡 copyleft | **637** | 2026-10-23 |
+| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | 🟡 copyleft | **505** | 2026-10-26 |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **AGPL-3.0** | 🔴 **network** copyleft — reach it through the **XBlock** seam only | **8 209** | 2026-10-26 |
+| **Vacademy** | [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform) | **AGPL-3.0** | 🔴 network copyleft; **23**★ — thin community | **23** | 2026-10-26 |
+
+🟢 **The architectural consequence, and it is the whole reason this file exists.** Open edX is
+**AGPL-3.0**, and AGPL reaches across a network boundary — so a hosted client build that forks the
+platform acquires a publication obligation. The permissive escape hatch is
+[`openedx/XBlock`](https://github.com/openedx/XBlock), **Apache-2.0**, **471**★, payload-verified
+at `LICENSE.TXT` (11 358 B · `cfc7749b96f6` — note the **uppercase extension**, the trap `p460`
+recorded). 🔵 Custom learning components built as XBlocks sit **behind** the plugin API and do not
+inherit the platform's AGPL. **That seam is the single most valuable fact on this shelf.**
+
+### 🟡 Moodle's AI surface — what is actually verifiable, and what is not
+
+🔵 Two Moodle AI plugins resolve to real, current addresses:
+
+| plugin | repo | grant | ★ | last push |
+|---|---|---|---|---|
+| SOLA course assistant | [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | **GPL-3.0** | **17** | 2026-10-20 |
+| AI question generation | [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟡 unresolved this pass | **15** | 2025-11-30 |
+
+🔴 **Recorded as a gap, not padded over:** `qbank_genai` and `block_ai_chat` — both named in
+earlier descriptions of Moodle's AI subsystem — **did not resolve to any repository** in this
+pass's name queries. They are **not** written as rows. 🟡 They may exist in the Moodle plugin
+directory rather than on GitHub under those names; until an address is verified they stay out.
+
+🔵 Both verified plugins are **GPL-3.0 / unresolved and tiny** (17★, 15★). The honest read is that
+Moodle's AI plugin ecosystem is **thin and immature** relative to the 7 543★ core — which argues
+for integrating at Moodle's **REST API** boundary rather than depending on third-party plugins.
+
+---
 ## 🆕 `p460` — **No platform is added, and the three licence traps this shelf exists to protect against were re-read from their bytes: Open edX is AGPL-3.0, Sakai is ECL-2.0, Chamilo is GPL-3.0. 🔴 All three are the values a secondary roundup gets WRONG, and this pass independently reproduced the shelf's digests for two of them.**
 
 🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — fresh clone, not the Makefile, so

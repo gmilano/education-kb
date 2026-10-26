@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` · 2026-10-26 — **Saturation confirmed a third time, now at 0 % unshelved on a channel with exact ★ integers and index-level grant resolution. 🔴 And the pass found that the shelf's own addresses are decaying: four are renamed aliases, one of which has already stopped answering.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### The measured comparison
+
+| pass | instrument | graded | unshelved | usable novel |
+|---|---|---|---|---|
+| `p459` | repository-search API | 42 | 2 | **0** |
+| `p460` | topic-page enumeration + payload reads | 34 | 1 | **0** |
+| 🔴 `p461` | repository-search API + `license:` qualifier + exact ★ | **30** | **0** | **0** |
+
+### 🟢 What this channel adds that the prior two could not
+
+1. **Exact integer ★**, retiring `p460`'s self-recorded rounding caveat. Index-exact:
+   `openedx/openedx-platform` **8 209**, `moodle/moodle` **7 543**, `sakaiproject/sakai` **1 239**,
+   `chamilo/chamilo-lms` **1 020**, `openeducat/openeducat_erp` **899**, `GibbonEdu/core` **637**,
+   `ILIAS-eLearning/ILIAS` **505**, `openedx/XBlock` **471**, `pykt-team/pykt-toolkit` **452**,
+   `openfun/richie` **316**, `CAHLR/OATutor` **271**.
+2. **Grant-by-`license:`-qualifier**, which is the index's own classification and therefore a
+   cross-check on payload reads rather than a repeat of them.
+
+### 🔴 Where the two channels disagree — and the payload wins
+
+| repo | index | payload | governs |
+|---|---|---|---|
+| `openeducat/openeducat_erp` | `NOASSERTION` | 8 241 B → **LGPL-3.0** | **LGPL-3.0** |
+| `GarethManning/education-agent-skills` | `NOASSERTION` | 1 230 B → **CC-BY-SA-4.0** | **CC-BY-SA-4.0** |
+| `24kchengYe/human-skill-tree` | `NOASSERTION` | 1 134 B → **AGPL-3.0** | **AGPL-3.0** |
+
+🔵 Four further repos whose index licence field is **absent** (not `NOASSERTION`) were probed and
+**all four genuinely serve no grant** — `awesome-ai-llm4education`, `Mr.-Ranedeer-AI-Tutor`,
+`EduChat`, `ai-ethos`. 🟢 So the two index states mean different things and must be handled
+differently: see `Gap 461-B` in `agents/top.md`.
+
+### 🟡 Repos created in the last six weeks — all already carried
+
+`Miaotofu01/Study-Mate` (**1 218**★, 2026-09-17) · `assafkip/claudemy` (**458**★, 2026-10-14) ·
+`sitor-ai/frametell` (**407**★, AGPL-3.0, 2026-10-10) · `nichochar/ari` (**208**★, 2026-10-18).
+🔵 Recorded because four sub-six-week repositories at >200★ is a live field, and the shelf matched
+all four — which is the evidence that this pass's zero is saturation and not a dead channel.
+
+---
 ## 🆕 `p460` · 2026-10-26 — **Saturation confirmed a second time and by other means: 0 % usable novel yield on a channel that shares no code path with the one that measured it last pass.**
 
 🔵 Appended above the history, nothing below edited or removed.

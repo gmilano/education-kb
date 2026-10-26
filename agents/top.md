@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` — **No row is added, and the nil is now REPRODUCED ON A FOURTH CHANNEL: 30 addresses graded against these shelves, 30 already carried, 0 unshelved — usable novel yield ZERO at a 100 % carried share, the highest yet. 🔴 But this pass found a defect the three prior instruments could not see: FOUR shelf addresses are stale aliases that resolve by redirect to repositories with different canonical names, and the raw channel serves byte-identical payloads for alias and canonical, so it cannot detect this at all.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN** — this pass reached the
+shelves through a fresh clone rather than the Makefile, so **nothing below is gate-attested**.
+
+🔵 **Instrument, and its primary channel shares no code path with `p458`–`p460`.** This pass
+resolved through the **GitHub repository-search API** (`search_repositories`), which supplies two
+things none of the prior passes had:
+
+1. 🟢 **Exact integer `stargazers_count`** — this directly retires the limitation `p460` recorded
+   against itself (*"every ★ figure this pass quotes is a rounded rendered value (`1.2k`, `7.5k`)
+   — recorded as such, not as a count"*).
+2. 🟢 **Grant resolution by `license:` qualifier** — the *index's own* classification, which is a
+   third kind of grant assertion, distinct from `p460`'s payload byte-read and from the sidebar
+   badge `p460` caught relaying a grant it did not hold.
+
+🔵 **The raw-payload byte-read channel was deliberately REUSED, not replaced** — not as the
+instrument but as the **control**, so this pass's numbers can be tied back to `p460`'s.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p460` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` | **35 136 B · `e12d78569742`** | **reproduced, byte- and digest-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` | **34 523 B · `0d96a4ff68ad`** | **reproduced** |
+| 🟢 fabricated address — negative | — | **404, NO GRANT at all probed paths** | **correctly refused** (`Gap 453-E` (d) mode) |
+
+### 🔴 Saturation, fourth instrument, and the carried share is now total
+
+| | n | share |
+|---|---|---|
+| addresses graded against these shelves | **30** | |
+| 🔴 already carried here | **30** | **100 %** |
+| 🟡 unshelved | **0** | **0 %** |
+| 🔴 **unshelved AND granted — i.e. usable** | **0** | **0 %** |
+
+🟢 **Four instruments, four passes, one verdict.** `p459` measured 97.1 % carried on the
+repository-search API, `p460` measured 97.1 % on topic-page enumeration, and this pass — probing
+the `ai-tutor`, `ai-education`, `knowledge-tracing`, `education`+`llm` topic sets and the
+Spanish- and Portuguese-language surfaces — found **not one address these shelves do not already
+hold**. The shelf is saturated against every channel so far applied to it.
+
+### 🔴 `Gap 461-A` — the alias defect: an address that resolves to a repository other than the one named
+
+🔵 The search index **does not resolve** four addresses these shelves carry. Each one's canonical
+name has changed, and each old address still answers by redirect:
+
+| shelf address | index resolves it? | canonical name per index | ★ exact | raw payload, alias vs canonical |
+|---|---|---|---|---|
+| 🔴 `openedx/edx-platform` | **no** | **`openedx/openedx-platform`** | **8 209** | **identical** — 35 136 B · `e12d78569742` both |
+| 🔴 `Vacademy-io/vacademy_platform` | **no** | **`Vacademy-io/vacademy_edtech_platform`** | **23** | **identical** — 34 523 B · `0d96a4ff68ad` both |
+| 🔴 `DaRL-GenAI/instructional_agents` | **no** | **`Hyan-Yao/instructional_agents`** | **22** | **identical** — 1 067 B · `4e085d826a64` both |
+| 🔴 `OpenEduCat-Inc/OpenEduCat` | **no** | **`openeducat/openeducat_erp`** | **899** | **NOT identical** — alias **404** at `19.0`; canonical **200**, 8 241 B |
+
+🟢 **The transfer is confirmed from inside the payload, not inferred from the rename.**
+`Hyan-Yao/instructional_agents` serves `MIT License` whose copyright line reads
+**`Copyright (c) 2025 DaRL-GenAI`** — the grant itself still names the old owner, which is what a
+transfer looks like from the bytes up.
+
+🔴 **Why the three prior instruments were blind to this.** A redirect is invisible to a payload
+byte-read: `raw.githubusercontent.com` returns **the same bytes and the same digest** at the alias
+and at the canonical name. So `p458`–`p460` each read a grant, each reproduced it exactly, and each
+was **right about the licence and wrong about which repository holds it**.
+
+🔵 **Direction of failure, and it is a new one.** `p459`'s fallback matcher **invented** a grant
+from a body scan. `p460`'s sidebar badge **relayed** a grant the repository did not serve. This
+defect does neither — the grant is real and correctly read. What is wrong is the **binding**: a
+correct grant attached to a name that no longer designates the thing. 🟡 Consequence for anything
+built on these shelves: an address that resolves today by redirect is **not a stable identifier**,
+and a rename that is later un-redirected turns a verified row into a dead one with no change to
+this repository.
+
+### 🔴 `Gap 461-B` — `NOASSERTION` is not `absent`, and conflating them loses usable grants *and* admits copyleft
+
+🔵 The index reports grant state in two distinguishable failure modes, and this pass tested both
+against the payload. **They do not behave the same way:**
+
+| repo | index says | payload read | real grant |
+|---|---|---|---|
+| 🟡 `openeducat/openeducat_erp` | `NOASSERTION` | **200**, 8 241 B | **LGPL-3.0** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* |
+| 🔴 `GarethManning/education-agent-skills` | `NOASSERTION` | **200**, 1 230 B · `f952182df4eb` | **CC-BY-SA-4.0** — a *content* licence with share-alike, not a software grant |
+| 🔴 `24kchengYe/human-skill-tree` | `NOASSERTION` | **200**, 1 134 B · `3fb8cda58638` | **AGPL-3.0** (short-form notice, not the full 34 KB text) |
+| 🟢 `GeminiLight/awesome-ai-llm4education` | *field absent* | **404 × 3** | **NO GRANT** |
+| 🟢 `JushBJJ/Mr.-Ranedeer-AI-Tutor` | *field absent* | **404 × 3** | **NO GRANT** |
+| 🟢 `ECNU-ICALK/EduChat` | *field absent* | **404 × 3** | **NO GRANT** |
+| 🟢 `aaryansamanta/ai-ethos` | *field absent* | **404 × 2** | **NO GRANT** |
+
+🟢 **The rule this establishes, and it is actionable in both directions:**
+
+- **`absent` → 4 of 4 genuinely serve no grant.** The index's *silence* is reliable; it may be
+  treated as a refusal without a payload read.
+- 🔴 **`NOASSERTION` → 3 of 3 serve a real, nameable grant.** The index's *`NOASSERTION`* means
+  only *"the detector could not classify this file"*. It is *neither* a refusal *nor* a permission,
+  and **must** trigger a payload read.
+- 🔴 **And the cost of getting this backwards runs both ways.** Treating `NOASSERTION` as a refusal
+  discards **LGPL-3.0 `openeducat_erp`**, an 899★ vertical this shelf wants. Treating it as a
+  permission vendors **CC-BY-SA-4.0** and **AGPL-3.0** material into work that cannot carry
+  share-alike — the more expensive error of the two, and the one no prior pass was positioned to
+  catch, because `p460`'s instrument read payloads only where the index had already named a licence.
+
+### 🟢 Exact ★ integers — retiring `p460`'s self-recorded rounding limitation
+
+Index-exact at this pass, not rendered: `HKUDS/DeepTutor` **43 537** (observed incrementing to
+**43 538** mid-pass — a live counter, recorded as a range not a point),
+`openedx/openedx-platform` **8 209**, `moodle/moodle` **7 543**, `sakaiproject/sakai` **1 239**,
+`chamilo/chamilo-lms` **1 020**, `openeducat/openeducat_erp` **899**, `GibbonEdu/core` **637**,
+`ILIAS-eLearning/ILIAS` **505**, `openedx/XBlock` **471**, `pykt-team/pykt-toolkit` **452**,
+`openfun/richie` **316**, `CAHLR/OATutor` **271**, `GeminiLight/awesome-ai-llm4education` **221**,
+`Open-TutorAi/open-tutor-ai-CE` **114**, `Vacademy-io/vacademy_edtech_platform` **23**,
+`Hyan-Yao/instructional_agents` **22**.
+
+### 🔴 Decay flags — four carried rows are going stale, and two of them hold no grant
+
+| row | last push | age at this pass | compounding problem |
+|---|---|---|---|
+| 🔴 `JushBJJ/Mr.-Ranedeer-AI-Tutor` | 2025-09-30 | **~13 months** | **NO GRANT** — 29 548★ and unvendorable |
+| 🔴 `ECNU-ICALK/EduChat` | 2025-07-18 | **~15 months** | **NO GRANT** |
+| 🟡 `24kchengYe/human-skill-tree` | 2026-03-25 | **~7 months** | grant is **AGPL-3.0** |
+| 🟡 `Open-TutorAi/open-tutor-ai-CE` | 2026-06-26 | **~4 months** | BSD-3-Clause — the shelf's most permissive tutoring platform is its stalest |
+
+🔵 `Open-TutorAi/open-tutor-ai-CE` is the one worth watching: **BSD-3-Clause at 114★** is the most
+permissive multimodal tutoring base these shelves carry, and it has not moved in four months.
+
+---
 ## 🆕 `p460` — **No row is added, and this time the nil is REPRODUCED ON A THIRD CHANNEL that shares no code path with `p459`'s: 34 addresses graded against these shelves, 33 already carried, 1 unshelved, and that 1 serves NO GRANT at 10 paths — usable novel yield ZERO. 🟢 And the cause `p458` and `p459` could only diagnose is FIXED this pass, outside this repo: the frozen rotation pointer has been advanced.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN** — this pass reached the

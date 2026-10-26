@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p461` — **No foundation row is added; the four candidate channels returned only addresses already carried. 🔴 What changes is the grant state of carried rows: `openeducat/openeducat_erp` is confirmed LGPL-3.0 by payload against an index that says `NOASSERTION`, and `openedx/edx-platform` is confirmed to be an ALIAS for `openedx/openedx-platform`.**
+
+🔴 **Gate posture per `Gap 446-A`: `make hooks` was NOT RUN** — fresh clone, not the Makefile.
+Nothing below is gate-attested.
+
+### 🟢 The permissive foundation set, with index-exact ★ and payload-verified grants
+
+🔵 Grants below are recorded with the channel that attested them. Where the index and the payload
+disagree, **the payload governs** and the disagreement is recorded rather than resolved silently.
+
+| repo | grant | attested by | ★ exact | last push | base for AI? |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | payload `COPYING.txt` 35 147 B (reproduced `p460`) | **7 543** | 2026-10-21 | ✅ plugin subsystem; copyleft — integrate at the API, do not vendor |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **AGPL-3.0** | payload `LICENSE` 35 136 B · `e12d78569742` | **8 209** | 2026-10-26 | ⚠️ AGPL — network copyleft; XBlock boundary only |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | **Apache-2.0** | payload `LICENSE.TXT` 11 358 B · `cfc7749b96f6` | **471** | 2026-10-26 | ✅ **the permissive seam into Open edX** |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | index + `license:mit` | **452** | 2026-10-18 | ✅ knowledge tracing, cleanest permissive core |
+| [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | index + `license:mit` | **316** | 2026-10-26 | ✅ course-catalogue front, MIT end to end |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | index + `license:mit` | **271** | 2026-10-26 | ✅ ITS with BKT, UC Berkeley |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | payload `LICENSE` 11 120 B · `0688f62d04f1` (reproduced `p460`) | **1 239** | 2026-10-26 | ✅ Apache-derived, permissive |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** | **payload 8 241 B — index says `NOASSERTION`** | **899** | 2026-10-26 | ✅ education ERP/SIS; weak copyleft, linkable |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | index `license:gpl-3.0` | **1 020** | 2026-10-26 | ✅ LATAM-weighted LMS; copyleft |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **GPL-3.0** | index `license:gpl-3.0` | **637** | 2026-10-23 | ✅ school management / SIS |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | index `license:gpl-3.0` | **505** | 2026-10-26 | ✅ EMEA-weighted LMS (DE/CH/AT) |
+
+🟢 **Permissive subset Globant can build on without copyleft obligation — five rows:**
+`openedx/XBlock` (Apache-2.0), `pykt-team/pykt-toolkit` (MIT), `openfun/richie` (MIT),
+`CAHLR/OATutor` (MIT), `sakaiproject/sakai` (ECL-2.0). 🔵 Every other foundation row above is
+copyleft of some strength, which is the single most load-bearing fact on this shelf and the reason
+`Gap 461-B` matters: a `NOASSERTION` read as a permission puts AGPL and share-alike material
+inside that five-row set.
+
+### 🟢 Permissive knowledge-tracing bench — all MIT, all index-attested
+
+🔵 `license:mit` over `topic:knowledge-tracing` returns **8 of 17** repos in the topic. The
+permissive share of this sub-field is unusually high and the shelf should treat it as the
+dependable corner:
+
+| repo | grant | ★ exact | last push |
+|---|---|---|---|
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | MIT | **452** | 2026-10-18 |
+| [`hcnoh/knowledge-tracing-collection-pytorch`](https://github.com/hcnoh/knowledge-tracing-collection-pytorch) | MIT | **194** | 2026-10-04 |
+| [`jhljx/GKT`](https://github.com/jhljx/GKT) | MIT | **141** | 2026-09-23 |
+| [`jilljenn/ktm`](https://github.com/jilljenn/ktm) | MIT | **140** | 2026-05-13 |
+| [`lccasagrande/Deep-Knowledge-Tracing`](https://github.com/lccasagrande/Deep-Knowledge-Tracing) | MIT | **107** | 2026-09-07 |
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | MIT | **82** | 2026-10-22 |
+| [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) | MIT | **80** | 2026-10-25 |
+| [`THUwangcy/HawkesKT`](https://github.com/THUwangcy/HawkesKT) | MIT | **31** | 2026-09-16 |
+
+🟡 `tswsxk/EduData` (**83**★) sits in the same topic but is **not** in the MIT set and was not
+payload-probed this pass — recorded as unresolved, not as permissive.
+
+### 🔴 Refused this pass — stated so the gap is informed rather than silent
+
+| address | why not a foundation row |
+|---|---|
+| 🔴 `GeminiLight/awesome-ai-llm4education` (**221**★) | **NO GRANT** — 404 × 3. A paper index, and unvendorable regardless |
+| 🔴 `ECNU-ICALK/EduChat` (**975**★) | **NO GRANT** + ~15 months stale |
+| 🔴 `JushBJJ/Mr.-Ranedeer-AI-Tutor` (**29 548**★) | **NO GRANT** — the field's most-starred education repo is unusable |
+| 🔴 `aaryansamanta/ai-ethos` (**498**★) | **NO GRANT** |
+
+---
 ## 🆕 `p460` — **No foundation row is added. 🟢 But seven carried foundation grants were re-read first-hand from their bytes and ALL SEVEN reproduce exactly — and the one that appeared not to was this pass's own case-sensitivity defect, on a row these shelves had already got right.**
 
 🔴 **Gate posture, stated first: `make hooks` was NOT RUN** — this pass reached the shelves through
