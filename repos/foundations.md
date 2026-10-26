@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p456` — **🟢 Every foundational platform on this shelf now carries its RESOLVED default branch, and for 11 of them it is not what a bare `git clone` would suggest: ILIAS checks out `release_11`, Tutor `release`, OpenEduCat `19.0`, BigBlueButton `v4.0.x-develop`. 🟢 And the licence families this shelf carries are CONFIRMED — 14 of 15 off-list cells re-read byte-identical.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing
+below is gate-attested; 31 controls run in both directions
+([`compose/code/p456-ref-resolution/controls.py`](../compose/code/p456-ref-resolution/controls.py)).
+
+### 🟢 The ref column this shelf has never had, and why it is a foundations fact
+
+🔵 A foundational repo is one a client **vendors, forks or pins**. For 15 of the 455 addresses
+carried across these shelves the **resolved default branch is outside the ref list every pass
+since `p449` guessed** — so a recipe that names a repository without naming a ref gets whatever
+the project's maintainers point `HEAD` at, which for these eleven platforms is a **release line**,
+not a trunk:
+
+| foundation | address | resolved default branch | grant re-read at that ref | re-read agrees with the carried cell? |
+|---|---|---|---|---|
+| ILIAS | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`release_11`** | **GPL-3.0** · `LICENSE` | 🟢 byte-identical |
+| BigBlueButton | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **`v4.0.x-develop`** | **LGPL-3.0** · `LICENSE` | 🟢 byte-identical |
+| Tutor (Open edX) | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **`release`** | **AGPL-3.0** · `LICENSE.txt` | 🟢 byte-identical |
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** | **LGPL-3.0** · `LICENSE` | 🟢 byte-identical |
+| Gibbon | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **`v31.0.00`** | **GPL-3.0** · `LICENSE` | 🟢 byte-identical |
+| Edu-Sharing | [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | 🔴 **`maven/fixes/10.0`** | **GPL-3.0** · `LICENSE.txt` | 🟢 byte-identical |
+| i-Educar | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **`2.12`** | **GPL-2.0** · `LICENSE` | 🟢 byte-identical |
+| RosarioSIS | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** | **GPL-2.0** · `LICENSE` | 🟢 byte-identical |
+| Krayin CRM | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🔴 **`2.2`** | **MIT** · `LICENSE` | 🟢 byte-identical |
+| TinCanPython (xAPI) | [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | 🔴 **`3.x`** | **Apache-2.0** · `LICENSE` | 🟢 byte-identical |
+| Caliper PHP | [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) | 🔴 **`public`** | **LGPL-3.0** · `LICENSE` | 🟢 byte-identical |
+
+🔴 **The operational consequence, and it is not cosmetic:** `git clone https://github.com/ILIAS-eLearning/ILIAS`
+gives you `release_11`, not a trunk — a *maintenance line* that will stop moving. `overhangio/tutor`
+gives `release`, which tracks whatever Open edX named current. 🟢 **Every clone or vendor step in
+[`compose/patterns.md`](../compose/patterns.md) must name `-b <ref>` explicitly**, and the refs are
+the column above. 🔵 Four further off-list cells are not foundations and are recorded in the
+evidence rather than here: `lukecarroll15/blackboard-mcp` (`tcd`), `michaelsboost/ArabEngo`
+(`gh-pages`), `jibrilsettles-dot/Arabic-Tutor` (🔵 default branch
+`claude/eager-newton-boy1g0` — an agent session branch left as the project's default, and it
+carries **no grant**), and `lanis-mobile/LanisAPI` (`deprecation-notice`, the corrected row).
+
+### 🟢 The licence families on this shelf are confirmed, by a channel that could have refuted them
+
+🟢 **14 of the 15 off-list cells re-read byte-identical** — same family, same digest — against
+`p455`'s own ladder reproduced in `p456`'s instrument. Only `lanis-mobile/LanisAPI` differed, and
+that is the corrected row on [`agents/top.md`](../agents/top.md). 🔵 So the exotic default branches
+were **never** the hazard `Gap 455-A` feared: `HEAD` on `raw.githubusercontent.com` followed the
+resolved default branch for **439 of 439 live addresses, zero divergences**, and that is why the
+carried reads were right. Evidence:
+[`evidence/carried-default-off-list.2026-10-26-p456.tsv`](../evidence/carried-default-off-list.2026-10-26-p456.tsv),
+[`evidence/ref-axis-head-vs-default.2026-10-26-p456.tsv`](../evidence/ref-axis-head-vs-default.2026-10-26-p456.tsv).
+
+### 🟢 The dead-address class is confirmed cross-channel, 455/455
+
+🟢 16 addresses resolve nothing through `ls-remote`, and **every one is already carried as
+`ADDRESS_DEAD` or `ABSENT`** from the independent 404 sweep — including both fabricated negative
+controls. 🔵 `Gap 454-H` left standing the worry that an `ADDRESS_DEAD` cell might be an artefact
+of guessing paths and refs; two independent channels agreeing on all 455 settles it.
+
+### 🔵 What this does not establish
+
+🔴 **`Gap 456-A`:** the **424** cells whose default branch is inside the guessed list were checked
+for *ref identity* (`HEAD` == default, 439/439) but **not re-read for payload** at the resolved
+ref. A payload drift there would be invisible to this pass.
+
 ## 🆕 `p455` — **🟢 `Gap 454-C` IS ANSWERED: the licence reader gains a VERSION AXIS, and the `edu-sharing` pair that `p454`'s `canon()` graded `AGREE` now disagrees — `GPL-2.0` declared against `GPL-3.0` served, mutually incompatible. 🔴 And the sweep that answer was supposed to deliver produced 88 apparent family disagreements that are RETRACTED IN FULL, because the mechanism is this pass's extractor and the shelves were right.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes. 🔵 Contracts

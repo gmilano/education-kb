@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p456` — **🟢 Two recipes, both forced by this pass's measurements: a ref-pinned vendoring step that every earlier pattern on this file is missing, and an EMEA national-system adapter built so that the maintainer withdrawal `p456` caught is survivable rather than fatal.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing
+below is gate-attested; 31 controls run in both directions
+([`compose/code/p456-ref-resolution/controls.py`](../compose/code/p456-ref-resolution/controls.py)).
+
+### 🟢 `P456-1` — Ref-pinned platform vendoring (a correction to every pattern on this file)
+
+🔴 **The defect being fixed:** every clone step on this file names a repository without a ref. For
+**11 of the platforms these patterns build on, the default branch is a release line**, so those
+steps pin silently to whatever the maintainers last promoted — and change meaning between passes.
+
+🟢 **The step, with the refs measured first-hand this pass:**
+
+```bash
+# Resolve before you clone. One request, authoritative.
+git ls-remote --symref https://github.com/ILIAS-eLearning/ILIAS HEAD
+#   ref: refs/heads/release_11   HEAD     <- NOT main, NOT master
+
+# Then pin explicitly, always with -b:
+git clone -b release_11        --depth 1 https://github.com/ILIAS-eLearning/ILIAS
+git clone -b release           --depth 1 https://github.com/overhangio/tutor
+git clone -b 19.0              --depth 1 https://github.com/openeducat/openeducat_erp
+git clone -b v4.0.x-develop    --depth 1 https://github.com/bigbluebutton/bigbluebutton
+git clone -b v31.0.00          --depth 1 https://github.com/GibbonEdu/core
+git clone -b maven/fixes/10.0  --depth 1 https://github.com/edu-sharing/Edu-Sharing
+git clone -b 2.12              --depth 1 https://github.com/portabilis/i-educar
+git clone -b mobile            --depth 1 https://github.com/francoisjacquet/rosariosis
+git clone -b 2.2               --depth 1 https://github.com/krayin/laravel-crm
+git clone -b 3.x               --depth 1 https://github.com/RusticiSoftware/TinCanPython
+git clone -b public            --depth 1 https://github.com/tl-its-umich-edu/caliper-php-public
+```
+
+🔴 **And read the grant at the resolved ref, not at a guessed one.** The one-line rule this pass
+installs, after a guessed ref put a withdrawn MIT grant on `agents/top.md`:
+
+```bash
+# The grant is what the DEFAULT branch serves. No grant there IS the answer.
+curl -sL -w '%{http_code}' https://raw.githubusercontent.com/OWNER/REPO/HEAD/LICENSE
+```
+
+🟢 `HEAD` is safe for this and now measured: it pointed at the resolved default branch for
+**439 of 439** live addresses, **zero divergences**. 🔴 **What is not safe is walking on to
+`master`/`main` when `HEAD` has no licence** — that is how `lanis-mobile/LanisAPI` was shelved as
+MIT off a rename alias pointing at `deprecated-0.4.1`. 🔵 Use
+[`compose/code/p456-ref-resolution/resolve.py`](code/p456-ref-resolution/resolve.py) to get the
+typed verdict (`GRANT_AT_DEFAULT` / `GRANT_OFF_DEFAULT` / `GRANT_ONLY_AT_ALIAS` / `LIVE_NO_GRANT` /
+`ADDRESS_DEAD`) rather than a boolean.
+
+### 🟢 `P456-2` — EMEA national-system adapter, built to survive its own upstream
+
+🔵 **The engagement:** a German *Land* or French académie wants an AI assistant over a gradebook or
+portal it does not own and the client cannot fork — Schulportal Hessen, PRONOTE, EcoleDirecte,
+WebUntis. 🔴 **The measured risk this pass adds:** the client libraries are **withdrawal-prone**
+(`T2`). One of `p455`'s eleven was deprecated by its maintainers within a pass; two others are in
+maintenance mode or abandoned. 🟢 **So the pattern's whole job is to make the adapter replaceable.**
+
+| layer | what to use | grant (read at the resolved default branch) |
+|---|---|---|
+| portal client, **isolated** | [`lanis-mobile/liblanis-for-python`](https://github.com/lanis-mobile/liblanis-for-python) (Schulportal Hessen) · [`bain3/pronotepy`](https://github.com/bain3/pronotepy) (PRONOTE) · [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) (DACH timetabling) | **MIT** `1 079` B `66f943b0689f` · **MIT** `1 062` B `4f074ab7dccb` · **MIT** `1 070` B `d2e54565d9bf` |
+| agent + tool surface | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) — FastAPI + LangGraph, rubric grading with **totals computed in code** | **MIT** `1 071` B `e70d1d08d60a` |
+| LMS tools, where a Moodle also exists | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) (**upstream**, ~140 tools) | **MIT** `1 067` B `66fa873bd85d` |
+
+🟢 **Wiring, and the three constraints are structural rather than advisory:**
+
+1. 🟢 **One adapter interface, one implementation per portal.** Every call to `liblanis`,
+   `pronotepy` or `WebUntis` goes through a single `PortalClient` port — read timetable, read
+   grades, read homework. 🔴 **Nothing above that port imports the vendor library.** When the next
+   upstream is deprecated, you replace one module; `p456` had to replace exactly one.
+2. 🔴 **Pin the client, and treat a pre-release as pre-release.** `liblanis` is `1.0.0a1`,
+   needs **Python ≥ 3.14** and is **not on PyPI** — so it is vendored from a pinned commit at
+   `master`, with `lanis-mobile/LanisAPI@deprecated-0.4.1` kept as a **read-only reference
+   implementation**, never as a fallback dependency.
+3. 🔴 **Honour the one stated rate limit on these shelves.** WebUntis: never 10 req/s, ≤ 1 800/h,
+   in no case > 3 600/h, **permanent blocking** as the penalty — so the portal client sits behind a
+   token-bucket limiter and a cache, and the agent is never allowed to drive it directly.
+
+🔵 **Licence boundary:** every row above is **MIT**, so the adapter and agent layer are Globant's
+to own and ship. 🔴 **The only GPL path in this tier is
+[`arnim279/untis-api-client`](https://github.com/arnim279/untis-api-client)** (GPL-3.0-**or-later**,
+declared *and* served), which is also the only one on WebUntis's **public** JSON-RPC API — so the
+documented-API route and the permissive route are different repositories, and choosing the
+documented one is a copyleft decision. 🟡 **8–10 weeks** for one portal plus the agent surface;
+🔴 each additional portal is a new adapter, not a configuration flag.
+
+### 🔴 What these two recipes deliberately do NOT claim
+
+🔴 Neither is gate-attested (`make hooks` denied). 🔴 `P456-2`'s commercial framing rests on EMEA
+market figures that are **relayed and uncheckable from this host** (`Gap 455-E`), and EMEA has **no
+institution-level adoption rate** on these shelves at all (`Gap 456-D`) — the one on offer is
+refused on [`intel/market.md`](../intel/market.md). 🟢 The **licences and refs** in both recipes
+are byte-level first-hand reads, and those are the parts a build can be staked on.
+
 ## 🆕 `p455` — **Two recipes, built only from grants read first-hand at `HEAD` this pass. `P455-A` is the EMEA engagement this base could not have specified a pass ago; `P455-B` is the licence gate that `Gap 454-C` proves every deliverable here needs and no pass had built.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes.

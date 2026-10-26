@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 2026-10-26 · `p456` — **A shelved EMEA agent turns out to have been deprecated by its own maintainers before it was shelved, and the successor it names is this week's real movement. The instrument that missed it was guessing refs while `git ls-remote` worked the whole time.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — eleven denials in twelve passes. 🔵 This file is
+**APPEND-ONLY**: the block above is new, everything below is prior history, retained verbatim.
+
+### 🔴 What moved is a *withdrawal* — the first one these shelves have caught at the source
+
+🔴 **`lanis-mobile/LanisAPI`, shelved by `p455` one pass ago as an MIT EMEA client, is deprecated by
+its own HEAD README** and has been for long enough that its branches say so (`deprecation-notice`
+is the default branch; the MIT grant `p455` published lives on `deprecated-0.4.1`). 🔵 The
+deprecation notice is in German and names the successor, so this was legible at `HEAD` the whole
+time — what hid it was a ladder that walked **past** `HEAD` looking for a grant and took the first
+one it found.
+
+| what moved | address | grant (resolved default branch) | region |
+|---|---|---|---|
+| 🆕 🟢 **the successor**, named by LanisAPI's own HEAD | [`lanis-mobile/liblanis-for-python`](https://github.com/lanis-mobile/liblanis-for-python) | **MIT** @`master` `1 079` B `66f943b0689f` · 🔴 **PyPI 404**, `liblanis` `1.0.0a1`, `requires-python >=3.14` | EMEA |
+| 🔴 🟡 **withdrawn**, retained as a reference implementation only | [`lanis-mobile/LanisAPI`](https://github.com/lanis-mobile/LanisAPI) | **MIT** @`deprecated-0.4.1` `1 076` B `0bc449776673` — 🔴 `GRANT_OFF_DEFAULT`, not the project's current licence | EMEA |
+| 🆕 🟢 rubric-grading tutor starter | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | **MIT** @`main` `1 071` B `e70d1d08d60a` | Global |
+| 🆕 🟢 Moodle MCP fork, ~230 tools | [`triffon/moodle-mcp`](https://github.com/triffon/moodle-mcp) | **MIT** @`main` `1 067` B `66fa873bd85d` · 🔴 holder is **upstream's** | EMEA |
+| 🔴 **refused**, no grant payload | `tosuki/moodle-mcp` | 🟡 `MANIFEST_ONLY`: MIT badge linking to a `LICENSE` that does not exist, `package.json` declares MIT | LATAM |
+
+### 🟢 The trending signal behind those rows: Moodle MCP servers are a fork tier, not a field
+
+🟢 Six Moodle MCP servers surfaced on the search channel this week
+(`csmediapro`, `lmscloud-io`, `G36maid`, `duck-5`, `falkenslab`, `triffon`, plus `tosuki`), and the
+shape matters more than the count: 🔴 **`triffon` serves a byte-identical MIT payload to
+`falkenslab` naming `Copyright (c) 2026 Falkenslab`** — a fork shipping upstream's holder. 🔵 So
+what looks like seven independent projects is a small number of codebases plus forks, and a
+Globant engagement should pick the **upstream** and read the fork's delta, not treat the list as a
+competitive field. 🟡 `duck-5/moodle-mcp` is configured for Tel Aviv University and
+`G36maid/moodle-mcp` claims live validation against Moodle 3.7 → 5.x — those are the two
+differentiated cells.
+
+### 🔵 The instrument note, because it changes what "trending" can mean on this file
+
+🟢 `git ls-remote` works from this host and has for seven passes (`Gap 449-A`'s 403 on
+`curl -sI https://github.com/...` was read as "github.com is closed"). 🟢 That makes a **withdrawal
+detectable**: the default branch name, the full ref list and `HEAD`'s commit are all readable in
+one request, so a project that renamed its branches to say *deprecated* can be caught without
+reading prose. 🔴 Nothing on this file before this block was screened that way.
+
 ## 🆕 2026-10-26 · `p455` — **The French and DACH national school systems arrive on these shelves with eleven permissive clients, and a project recommended by name as the maintained successor to a shelved one has nothing readable at its own registry's back-link.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — ten denials in eleven passes. 🔵 This file is

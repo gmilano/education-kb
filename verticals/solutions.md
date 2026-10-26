@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p456` — **🔴 Eleven of the platforms on this shelf do NOT default to a trunk: ILIAS checks out `release_11`, Tutor `release`, OpenEduCat `19.0`, BigBlueButton `v4.0.x-develop`. Every deployment recipe on these shelves that clones without `-b` has been pinning silently to whatever release line the maintainers last promoted.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing
+below is gate-attested; 31 controls run in both directions
+([`compose/code/p456-ref-resolution/`](../compose/code/p456-ref-resolution/)).
+
+### 🔴 The deployment fact, stated as a command
+
+🔵 These are the customisable systems a Globant engagement actually stands up — and for a vertical
+shelf the ref is **part of the platform's identity**, not a git detail. Measured first-hand with
+`git ls-remote --symref` this pass:
+
+| platform | what it is | clone the way these shelves have been describing it | 🔴 what you actually get | 🟢 pin instead |
+|---|---|---|---|---|
+| **ILIAS** | LMS, GPL-3.0, German public-sector install base | `git clone .../ILIAS-eLearning/ILIAS` | 🔴 `release_11` — a maintenance line | `-b release_11` *(stated, not inherited)* |
+| **Tutor** | Open edX distribution, AGPL-3.0 | `git clone .../overhangio/tutor` | 🔴 `release` | `-b release` |
+| **OpenEduCat** | education ERP on Odoo, LGPL-3.0 | `git clone .../openeducat/openeducat_erp` | 🔴 `19.0` — tracks the Odoo major | `-b 19.0` |
+| **BigBlueButton** | virtual classroom, LGPL-3.0 | `git clone .../bigbluebutton/bigbluebutton` | 🔴 `v4.0.x-develop` — a **develop** branch is the default | `-b v4.0.x-develop` |
+| **Gibbon** | school management, GPL-3.0 | `git clone .../GibbonEdu/core` | 🔴 `v31.0.00` | `-b v31.0.00` |
+| **Edu-Sharing** | learning-object repository, GPL-3.0 | `git clone .../edu-sharing/Edu-Sharing` | 🔴 `maven/fixes/10.0` | `-b maven/fixes/10.0` |
+| **i-Educar** | Brazilian municipal SIS, GPL-2.0 | `git clone .../portabilis/i-educar` | 🔴 `2.12` | `-b 2.12` |
+| **RosarioSIS** | SIS, GPL-2.0 | `git clone .../francoisjacquet/rosariosis` | 🔴 `mobile` | `-b mobile` |
+| **Krayin CRM** | Laravel CRM, **MIT** | `git clone .../krayin/laravel-crm` | 🔴 `2.2` | `-b 2.2` |
+| **TinCanPython** | xAPI/Tin Can library, **Apache-2.0** | `git clone .../RusticiSoftware/TinCanPython` | 🔴 `3.x` | `-b 3.x` |
+| **Caliper PHP** | IMS Caliper analytics, LGPL-3.0 | `git clone .../tl-its-umich-edu/caliper-php-public` | 🔴 `public` | `-b public` |
+
+🟢 **Why this belongs on the vertical shelf and not only in the instrument notes:** a client
+hand-off that says *"we built on ILIAS"* without the ref is unreproducible, and 🔴 **a
+`v4.0.x-develop` default means BigBlueButton's own maintainers expect integrators to track a
+develop line** — which is a support posture to price, not a detail. 🔵 Every grant above was
+re-read **at the resolved ref** this pass and **all eleven are byte-identical** to the cells these
+shelves already carried, so the licence column is confirmed, not revised.
+
+### 🔴 The licence asymmetry this makes legible
+
+🔵 Of the eleven, exactly **two** are permissive — `krayin/laravel-crm` (**MIT**) and
+`RusticiSoftware/TinCanPython` (**Apache-2.0**). The other nine are copyleft: four GPL-3.0/GPL-2.0,
+three LGPL-3.0, one AGPL-3.0 (Tutor). 🟢 **The composition rule that follows is unchanged but now
+has its refs**: the copyleft platform is deployed and extended **behind a service boundary**, and
+the agent layer Globant builds and owns sits on the permissive side of that boundary — the MCP
+servers and national-system clients on [`agents/top.md`](../agents/top.md), all MIT.
+🔴 Tutor's **AGPL-3.0** is the one that reaches across a network boundary, so an AI feature served
+*from inside* a Tutor deployment is the case to design around, not vendor into.
+
+### 🟡 A vertical candidate refused this pass
+
+🔴 **`tosuki/moodle-mcp`** — a Moodle MCP server for university portals with Microsoft Teams SSO
+(2FA), with **pt-BR** submission strings (`Enviado para avaliação`), so genuinely LATAM-shaped.
+🟡 Refused: its README carries an MIT **shields.io badge linking to `LICENSE`** and `package.json`
+declares `"license": "MIT"`, but **no payload exists at any of 13 grant paths** at its resolved
+default branch `main`. 🔵 A badge whose own link resolves to nothing is not a grant (`Gap 456-E`).
+
 ## 🆕 `p455` — **🟢 A VERTICAL SHAPE THESE SHELVES HAD ONLY ONE INSTANCE OF NOW HAS FOUR: the closed national school system reachable only through third-party clients. France and the DACH countries together, eleven permissive clients, zero customisable cores.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes.

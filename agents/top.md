@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p456` — **🔴 `Gap 455-A` IS REFUTED AT 439/439 WITH ZERO DIVERGENCES, and the ladder rewrite it licensed is what put a WITHDRAWN grant on this shelf: `p455`'s own LanisAPI row is MIT read off a branch named `deprecated-0.4.1`, for a project whose HEAD README says in German that it is deprecated. 🟢 The ref axis is now RESOLVED, not guessed — `git ls-remote` works from this host and has for seven passes.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED**
+(`Code from External`) — **eleven denials in twelve passes**, and running the carried gate
+bodies directly is denied by the same classifier. 🔵 Nothing below is gate-attested.
+**31 controls** were implemented independently and run in both directions
+([`compose/code/p456-ref-resolution/controls.py`](../compose/code/p456-ref-resolution/controls.py));
+three assert payload digests earlier passes published, and **two of this pass's own expectation
+errors were caught by them** before anything reached this shelf.
+
+### 🟢 The channel that was open for seven passes
+
+🔵 `Gap 449-A` established that `curl -sI https://github.com/...` returns **403** on every real
+repository on this host. Every pass since read that as *"github.com is closed"* and **guessed** the
+ref axis from a fixed list (`HEAD`, `main`, `master`, `develop`, `dev`, `development`, `trunk`).
+🟢 It is not closed to git:
+
+```
+$ git ls-remote --symref https://github.com/lanis-mobile/LanisAPI HEAD
+ref: refs/heads/deprecation-notice	HEAD
+```
+
+One request, authoritative, and it decides `ADDRESS_DEAD` without a 91-request 404 sweep —
+and decides it **more strongly**, because it separates *"no such repository"* from *"repository
+with no licence file"* without guessing a single path.
+
+### 🔴 `Gap 455-A` settled at population scale, at zero extra requests
+
+`ls-remote --symref` returns the commit `HEAD` points at **and** every branch's commit in the
+same response, so the gap's claim reduces to one comparison asked over all **455** carried
+addresses on this shelf, `repos/foundations.md` and `verticals/solutions.md`:
+
+| | n |
+|---|---|
+| live addresses | **439** |
+| 🟢 `HEAD` points at the resolved default branch | **439** |
+| 🔴 `HEAD` diverges | **0** |
+
+🔴 **`Gap 455-A` is false.** `p455` inferred it from **one** repository by comparing two README
+byte-counts (`HEAD` 331 B vs `master` 3 554 B), concluding the refs were different commits and
+therefore that `HEAD` was unmoored. Both byte-counts are real; the conclusion does not follow:
+
+| what it is | measured |
+|---|---|
+| 🟢 `HEAD` | **is** the default branch `deprecation-notice` — 331 B README, **no LICENSE**, same sha |
+| 🔴 `master` | **is not a branch of this repository.** `refs/heads/` holds exactly `deprecated-0.4.1` and `deprecation-notice`. GitHub keeps a **rename redirect**; `raw.githubusercontent` still serves it, resolving to `deprecated-0.4.1` — 3 554 B README, MIT, digest `0bc449776673`, **byte-identical to what `p455` published "at `master`"** |
+
+🔵 The two READMEs differ because the two **branches** differ. `p455` compared `HEAD` against a
+ref that is not a branch and attributed the difference to `HEAD`.
+Evidence: [`evidence/ref-axis-head-vs-default.2026-10-26-p456.tsv`](../evidence/ref-axis-head-vs-default.2026-10-26-p456.tsv).
+
+### 🔴 `p455`'s LanisAPI row is CORRECTED — the grant is real and the project has withdrawn it
+
+`p455`'s rewrite was *"never treat 'live but no grant at this ref' as a verdict — record it and
+keep walking."* Applied to LanisAPI it walked **past a correct `REPO_LIVE_NO_GRANT` at `HEAD`**,
+reached the stale alias, and shelved MIT. 🔴 Read at the project's own `HEAD` this pass:
+
+> *"Das Projekt wurde deprecated. Entwicklung findet jetzt [hier](https://github.com/lanis-mobile/liblanis-for-python) statt."*
+
+🔴 **Four defects in one row**: the project is deprecated by its own HEAD; the grant was cited at
+a ref that is not a branch; the branch it actually lives on is named `deprecated-0.4.1`; and the
+owner `kurwjan` is itself a **stale owner alias** — `kurwjan/LanisAPI` and `lanis-mobile/LanisAPI`
+resolve to the same commit `9c0bd764`, and the canonical owner is `lanis-mobile`.
+🟢 **The pre-`p455` behaviour was correct.** The rule this pass installs:
+
+> 🟢 Read the grant at the **resolved default branch**. **No grant there IS the verdict.** A grant
+> at any other ref is *that ref's* grant, is labelled `GRANT_OFF_DEFAULT` or
+> `GRANT_ONLY_AT_ALIAS`, and is **never** shelved as the project's licence.
+
+🟢 **The blast radius is one cell, and that is the other half of the finding.** 15 of 455 carried
+addresses have a default branch outside the guessed list — and for **14 of them the carried ladder
+read `HEAD` and got the byte-identical payload**, same family, same digest. Only LanisAPI differed,
+and it is the row `p455` added in the pass that raised the gap. The carried licence families are
+right.
+
+### 🟢 Three rows read first-hand at the resolved default branch
+
+| agent / client | address | grant (`GRANT_AT_DEFAULT`, resolved ref) | region | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 liblanis | [`lanis-mobile/liblanis-for-python`](https://github.com/lanis-mobile/liblanis-for-python) | **MIT** · `LICENSE` @`master` `1 079` B `66f943b0689f` · holder *"2026 lanis-mobile developers"* | EMEA | The successor named by LanisAPI's own HEAD: Python API for **Schulportal Hessen** (Lanis), the Hesse *Land* education portal. 🔴 **Pre-release and not a drop-in**: `pyproject` declares `liblanis` **`1.0.0a1`** and `requires-python >=3.14`; **PyPI returns 404** for `liblanis`, so 🔵 **no registry cross-check exists for this row** — the grant is a byte-level read and nothing corroborates it |
+| 🆕 🟢 ai-tutor-agent | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | **MIT** · `LICENSE` @`main` `1 071` B `e70d1d08d60a` · holder *"2026 Vu Linh Truong"* | Global | FastAPI + LangGraph tutoring starter: Socratic hints, **rubric-based grading** (per-criterion points + feedback, validated against the rubric) and session memory. 🟢 **Totals are computed in code, never by the model** — the one design choice on this shelf that makes a grade auditable. Runs on OpenAI or Claude, with an offline demo mode. 🔴 No LMS integration |
+| 🆕 🟢 moodle-mcp (triffon) | [`triffon/moodle-mcp`](https://github.com/triffon/moodle-mcp) | **MIT** · `LICENSE` @`main` `1 067` B `66fa873bd85d` · 🔴 holder *"2026 **Falkenslab**"* | EMEA | Fork of [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) exposing **~230 tools** against Moodle (upstream ~140), driven through a real browser logged in as the user. 🔴 **Ships upstream's copyright holder and asserts none of its own** — see the narrowed lineage rule below |
+
+🔵 **Fabricated negative control:** `nope-p456-ref-resolution/nope-p456` resolved nothing on
+`ls-remote` and returned `ADDRESS_DEAD`, so every `GRANT_AT_DEFAULT` above is a measurement and
+not a property of the probe.
+
+### 🔴 One refusal — a licence badge whose own link is broken
+
+🔴 **Nothing here is padded.** This candidate was named MIT by the search channel and is refused
+because no grant payload exists at an address that does exist.
+
+| candidate | what the secondary channel said | what the probe found | verdict |
+|---|---|---|---|
+| 🔴 **tosuki/moodle-mcp** | Described as the MIT-licensed Moodle MCP server for university portals with Microsoft Teams SSO (2FA) | 🟡 `LIVE_NO_GRANT` at the resolved default branch `main`: README line 8 carries a **shields.io `License-MIT` badge linking to `LICENSE`**, and `package.json` declares `"license": "MIT"` — but **no payload at any of 13 grant paths** | 🔴 **NOT SHELVED.** `MANIFEST_ONLY`. A badge whose own link resolves to nothing is not a grant, and a manifest field is a declaration, not a licence. 🔵 Genuinely useful and LATAM-relevant (pt-BR submission strings, `Enviado para avaliação`) — see `Gap 456-E` |
+
+### 🟢 A cross-channel confirmation nobody had asked for
+
+🟢 16 of 455 addresses resolve nothing through `ls-remote`, and **every one is already carried on
+these shelves as `ADDRESS_DEAD` or `ABSENT`** — determined by the 404 sweep, a completely
+independent channel. Two channels, **455/455 agreement**, both fabricated negative controls
+(`nope-p454-dapodik`, `nope-p455-version-axis`) correctly dead. 🔵 **So the `ADDRESS_DEAD` class on
+these shelves is not an inference artefact** — a worry `Gap 454-H` left standing and that nothing
+until now could settle.
+
+### 🟡 `p455`'s digest-lineage rule is NARROWED by measurement, not retired
+
+`p455` wrote, of two identical GPL-3.0 digests: *"both serve the stock GPL-3.0 text, so a digest
+match here is evidence of a stock payload and **never** of shared lineage."* 🟡 Measured, that
+holds only for **holder-free** families:
+
+| payload | holder line in the text? | what an identical digest proves |
+|---|---|---|
+| 🔵 GPL-3.0, `35 149` B | 🔴 **none** — 0 `Copyright (c) YEAR HOLDER` lines | a stock payload. Nothing about lineage |
+| 🟢 MIT, `1 067` B | 🟢 **yes** — `Copyright (c) 2026 Falkenslab`, in both | the **same holder string**, so it **is** lineage |
+
+🟢 **The corrected rule:** a digest match is evidence of lineage **iff** the family embeds a
+holder (MIT, BSD, ISC), and evidence of nothing when it is a stock copyleft text. `p455`'s
+sentence is right about GPL-3.0 and wrong as stated generally.
+
+### 🔴 Gaps this pass registers
+
+- 🔴 **`Gap 456-A`** — the **424** cells whose default branch *is* in the guessed list were not
+  re-read for **payload** at the resolved ref; only the 15 off-list cells were. The 439/439
+  `HEAD`-is-default proof makes a divergence unlikely, but it is **unmeasured**.
+- 🟡 **`Gap 456-B`** — `GRANT_ONLY_AT_ALIAS` is implemented and control-tested, but **no carried
+  cell exercised it**: LanisAPI resolved to `GRANT_OFF_DEFAULT` because `deprecated-0.4.1` is a
+  live branch. The class is unexercised on real data.
+- 🟡 **`Gap 456-C`** — this pass's own address extractor swept `github.com/owner/repo` out of a
+  **prose template** at `agents/top.md:567` and fed it to the census as an address. It was
+  correctly reported `ADDRESS_DEAD` so nothing was published wrong, but the extractor cannot
+  distinguish a cited address from a placeholder, and any later automated census inherits that.
+- 🔴 **`Gap 456-E`** — `tosuki/moodle-mcp` is unshelveable only for want of a `LICENSE` its own
+  badge already links to. Nobody has asked the maintainer.
+
 ## 🆕 `p455` — **🟢 EMEA GAINS A SUPPLY TIER THESE SHELVES HAVE NEVER CARRIED: eleven permissive clients to the four national school systems of France and the DACH countries, every grant read first-hand at `HEAD`. 🔴 And four candidates that every secondary source called real are REFUSED — one of them recommended by name as the maintained alternative to a shelved project, with nothing readable at the address its own registry record names.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED**

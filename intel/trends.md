@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p456` — **🔴 The trend this pass can actually evidence is a supply-chain one: education platforms do not ship from a trunk, unofficial clients to national systems get WITHDRAWN by their maintainers, and a licence badge is not a licence. 🟢 Plus one methodological trend that governs this whole file: a search channel's nil and non-nil one pass apart are variance, not change.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes. 🔵 Nothing
+below is gate-attested; 31 controls run in both directions
+([`compose/code/p456-ref-resolution/controls.py`](../compose/code/p456-ref-resolution/controls.py)).
+
+### 🟢 `T1` — The education-platform tier ships from release branches, and that is a maturity signal
+
+🟢 **Measured, not asserted:** of 455 repository addresses on these shelves, **15** point `HEAD` at
+something outside a trunk, and **11 of the 15 are the foundational platform tier** — ILIAS
+`release_11`, Tutor `release`, OpenEduCat `19.0`, BigBlueButton `v4.0.x-develop`, Gibbon
+`v31.0.00`, Edu-Sharing `maven/fixes/10.0`, i-Educar `2.12`, RosarioSIS `mobile`, Krayin `2.2`,
+TinCanPython `3.x`, Caliper PHP `public`. 🔵 **LMS and SIS projects with real institutional
+install bases default to a version line and keep no moving trunk as default**, because their users
+are schools on an academic calendar, not developers. 🔴 **The consequence is a delivery risk, not a
+curiosity:** a recipe that clones without `-b` pins silently, and BigBlueButton's `v4.0.x-develop`
+default means its maintainers expect integrators to **track a develop line** — a support posture to
+price. 🟢 Refs are now pinned on [`verticals/solutions.md`](../verticals/solutions.md).
+
+### 🔴 `T2` — The national-system adapter tier is withdrawal-prone, and the first withdrawal is caught
+
+🔴 `p455` opened an EMEA tier of **eleven permissive clients to four closed national school
+systems** (PRONOTE, EcoleDirecte, Schulportal Hessen, WebUntis). 🔴 **One pass later, one of them
+is deprecated by its own maintainers** — `lanis-mobile/LanisAPI`'s default branch is literally
+named `deprecation-notice` and its README points to a successor. 🔵 Combined with what `p455`
+already recorded — `pronotepy` in **maintenance mode**, `ecoledirecte.js` **abandoned since
+2023-08-08**, `Pawnote` and `Pawdirecte` with declared grants and **no readable code** — the
+pattern is now evidenced rather than suspected:
+
+🔴 **An unofficial client to a system of record that the client cannot fork, host or extend has a
+short and unpredictable life, because it breaks whenever the vendor moves and there is no
+commercial relationship obliging anyone to fix it.** 🟢 **The trend for Globant is that this tier
+is sold as a maintained adapter with a named maintenance tail — never as a dependency** — and the
+single point of failure is named in the engagement, not discovered in it.
+
+### 🔴 `T3` — Declared grants outrun readable ones, and the gap is widening
+
+🔵 Three distinct failure shapes are now on these shelves, all measured first-hand:
+
+| shape | instance this pass | why it matters |
+|---|---|---|
+| 🔴 badge/manifest without payload | `tosuki/moodle-mcp` — MIT **shields.io badge linking to `LICENSE`** + `package.json` `"license": "MIT"`, **no payload at 13 paths** | 🔴 a badge whose own link resolves to nothing is the most convincing non-grant there is |
+| 🔴 registry declares, repository gone | `p455`'s `Pawnote` (npm `GPL-3.0-or-later`, address dead on 4 case variants) | a populated back-link is not evidence the code is readable |
+| 🟡 grant alive on a withdrawn ref | `lanis-mobile/LanisAPI` — MIT on `deprecated-0.4.1` | 🔴 a grant can outlive the project's own intention to offer it |
+
+🟢 **The rule all three force:** the grant is what the **resolved default branch** serves, read
+byte-for-byte. A declaration anywhere else — badge, manifest, registry, directory listing — is a
+claim about a licence, not a licence.
+
+### 🟡 `T4` — The LMS-agent surface is consolidating into forks, not competitors
+
+🟡 Seven Moodle MCP servers surfaced this week. 🔴 **`triffon/moodle-mcp` serves a byte-identical
+MIT payload to `falkenslab/moodle-mcp`, naming `Copyright (c) 2026 Falkenslab`** — upstream's
+holder, with no copyright asserted by the fork. 🔵 So the apparent field is a few codebases plus
+forks, differentiated mostly by **tool count** (~140 upstream, ~230 in the fork) rather than by
+design. 🟢 **The trend to act on: pick the upstream, read the fork's delta.** A tool-count headline
+is not a capability difference, and 🔵 the two genuinely differentiated cells are
+`G36maid/moodle-mcp` (Rust, 22 curated tools, claimed live validation against Moodle 3.7 → 5.x)
+and `duck-5/moodle-mcp` (OpenAPI bridge, configured for one university).
+
+### 🟢 `T5` — The methodological trend, and it is the one that constrains this file
+
+🔴 `p455` graded the prescribed market channel as having **started to serve all four regions** —
+*"the first non-nil in nine passes"*. 🔴 **One pass later, with the same prescribed wording, EMEA
+and APAC returned the same non-education sources `p454` recorded.** 🟢 **A single run of a search
+channel is not evidence that the channel has changed.** A nil and a non-nil one pass apart are
+leg-to-leg variance until a result survives two passes. 🔵 That now governs every *"the channel
+improved"* claim these shelves make, and it is why `Gap 454-F` is restored to `p454`'s statement
+rather than left closed.
+
+### 🟢 `T6` — What the adoption numbers say once they are placed, not pooled
+
+🟢 On one survey programme (**Digital Education Council 2026**, 45 398 responses / 35 countries),
+the placed figures tell a story the pooled global number hides: 🟢 **LATAM 92 % students / 79 %
+faculty runs ABOVE global 88 % / 77 %**; 🟢 **APAC faculty are the most optimistic cohort (57 %)**;
+🔴 **APAC students the most anxious (50 % expect fewer jobs vs 41 % globally)**. 🔴 And the
+governance deficit is global, not regional: **57 %** of students say assessments give inadequate AI
+guidance and only **31 %** of faculty feel meaningfully involved in setting AI policy.
+🔵 **So the sector's binding constraint is no longer adoption — it is assessment design and
+governance**, and that is consistent across every region these shelves can place.
+🔴 **EMEA has no institution-level rate at all** (`Gap 456-D`), and the one on offer is refused on
+[`intel/market.md`](market.md). 🔴 All of it relayed (`Gap 455-E`); this host can read supply
+first-hand and demand never.
+
 ## 🆕 `p455` — **Four trends, each with a denominator measured this pass. 🔴 The first retires a number this file's neighbour carried for five passes; the second says Europe's school systems are closed by default and that this is the market, not an obstacle.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes.

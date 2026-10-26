@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p456` — **🔴 `p455`'s refutation of `Gap 454-F` DOES NOT REPRODUCE: run again with the prescribed wording, the EMEA leg returned a 2023 Workday study and the APAC leg returned corporate L&D — the same non-education sources `p454` recorded. 🟢 The narrow form CLOSES for APAC on a deliberately reworded leg, with a 45 398-response denominator. 🔴 And it stays OPEN for EMEA, because the one institution-level EMEA rate on offer is REFUSED.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — eleventh denial in twelve passes, and running
+the carried `check_headings.py` body directly is denied by the same classifier. 🔵 The region
+contract (`CANON`/`VOCAB`, `check_headings.py:17-19`) was read and re-implemented: the single
+canonical `## Opportunities by region` block below is amended **in place** — exactly one block,
+five closed-vocabulary children, none added, none renamed.
+
+### 🔴 The prescribed channel, graded a fourth time — and the previous grade does not hold
+
+`p455` reported that *"the prescribed regional legs returned education-specific material for ALL
+FOUR regions this pass — the first non-nil in nine passes."* 🔴 **Run again this pass with the
+same prescribed wording, that result does not reproduce:**
+
+| leg (`AI education {region} 2026 adoption regulation players`) | returned | grade |
+|---|---|---|
+| 🟡 North America | market-report sizing ($951 M 2024 → $2.3 B 2029, 15.9 % CAGR; 36 % regional share), the carried 10 %-formal-guidance and 71 %-untrained-teachers figures, IBM/Microsoft/Google named from a **2024** report | 🟡 Currency, no novelty |
+| 🔴 **EMEA** | 🔴 CompTIA EMEA IT trends, a **2023** Workday study, a 2024 year-in-review the channel itself flagged low-quality | 🔴 **Zero education-specific findings** — identical failure to `p454`'s |
+| 🔴 **APAC** | 🔴 APAC enterprise-AI priorities, Singapore **financial-sector** consultations, the 49 % real-time-infrastructure barrier, corporate L&D (TCS/Pearson, LearnUpon, Alteryx) | 🔴 **Zero K-12 or higher-ed policy findings** — identical failure to `p454`'s |
+| 🟢 LATAM | UNESCO IESALC / UNU-IAS working paper (200 HEIs, 19 countries, Aug–Oct 2025, **Sept 2026** publication date), Baker McKenzie on regulatory fragmentation, CENIA/ECLAC public-investment gap | 🟢 Serves, as it always has |
+
+🔵 **So the honest status of `Gap 454-F` is `p454`'s, not `p455`'s**: the prescribed channel serves
+LATAM and North America and returns nothing education-specific for EMEA or APAC. 🔴 `p455`'s
+non-nil was most likely leg-to-leg variance in a search channel, and **a single run is not
+evidence that a channel has changed** — that is the methodological lesson, and it applies to every
+"the channel improved" claim these shelves might make later.
+
+### 🟢 `Gap 454-F`'s narrow form CLOSES for APAC — a reworded leg, with a denominator
+
+🟢 `p455` narrowed the gap correctly: the channel *"returns no institution-level adoption rate for
+either [EMEA or APAC]"*. Searched **deliberately** this pass rather than through the prescribed
+wording, APAC has one:
+
+🟢 **Digital Education Council, *AI in Higher Education Global Survey 2026*** — **45 398 responses
+across 35 countries**:
+
+| cut | figure |
+|---|---|
+| 🟢 students using AI (global) | **88 %** |
+| 🟢 faculty using AI (global) | **77 %**, up **16 points** year on year |
+| 🟢 **APAC faculty** — the most optimistic region | **57 %** excited about AI making learning more effective and accessible |
+| 🔴 **APAC students** — job-market anxiety peaks here | **50 %** expect fewer job openings by graduation, against **41 %** globally |
+| 🔴 students saying assessments give inadequate AI guidance (global) | **57 %** |
+| 🔴 faculty who feel meaningfully involved in shaping AI policy (global) | **31 %** |
+
+🔴 **Methodology, stated with the figure as `Gap 455-D`'s rule requires:** DEC data is **opt-in
+through member institutions**, not an independently audited random sample. It is indicative, and it
+is the best available APAC institution-level cut on this channel.
+
+🟢 **And it recontextualises a carried LATAM figure.** `p454` shelved DEC's **LATAM 2026** cut at
+**92 %** of students and **79 %** of faculty. Against this global **88 % / 77 %**, 🟢 **LATAM runs
+ABOVE global on both**, on the same survey programme — which is a sharper selling fact than the
+raw LATAM number alone, and it is now stated as a comparison rather than a level.
+
+### 🔴 The narrow form stays OPEN for EMEA — and the available figure is REFUSED, not shelved
+
+🔴 **The only institution-level EMEA rate the channel offers** is *"68 % of EU higher-education
+institutions operate at least one AI-powered teaching tool, up from 34 % in 2024,"* attributed to
+a **European University Association survey of March 2026**. 🔴 **It is refused**, for three
+reasons measured this pass:
+
+1. 🔴 It appears on a **secondary site** which, in the same page, asserts an unverifiable **23 %
+   retention improvement at ETH Zürich** — a companion claim of exactly the shape that discredits
+   the first.
+2. 🔴 **EUA's own pages carry no such percentage.** What EUA does publish is policy guidance:
+   *Adopting AI that serves the needs and values of universities* (**January 2026**), drafted by a
+   task-and-finish group of member universities, and its page on the 2nd IAU global survey on
+   digital transformation.
+3. 🔴 **`eua.eu` is unreachable from this host** (below), so the primary cannot be checked.
+
+🔵 **A figure this plausible and this specific is precisely the padding the encargo forbids.** It
+is recorded here as refused so a later pass does not re-find it and shelve it. 🟡 Two EMEA items
+that *are* attributable, and are weaker on purpose: a **HEPI** study cited secondhand at **95 %**
+of UK university respondents using generative tools, and **Ellucian**'s 2026 report, in which
+*nearly two-thirds* of executive leaders say their institution **already allocates funds
+specifically for AI**. 🔴 Neither is an adoption rate across institutions.
+🔴 **`Gap 456-D`: the named target is EUA's own March-2026 survey report, unreachable from here.**
+
+### 🔴 `Gap 455-E` reproduced a second time, with a wider host set
+
+🟢 Measured in one session this pass, and the asymmetry is total:
+
+| host | result |
+|---|---|
+| 🔴 `www.unesco.org`, `www.iesalc.unesco.org`, `education.ec.europa.eu`, `www.eua.eu`, `www.digitaleducationcouncil.com`, `studyverso.com` | 🔴 **all refused at CONNECT** |
+| 🟢 `raw.githubusercontent.com`, `pypi.org`, `registry.npmjs.org` | 🟢 **200** |
+
+🔵 **So this base can read SUPPLY first-hand and can only ever RELAY demand** — now including the
+DEC survey PDF and the EUA pages behind the two figures above. 🔴 Every market, adoption and
+regulatory figure on this file is a search relay that **cannot be checked against the primary from
+here**, and that applies retroactively to every figure these shelves carry. It is why the
+regulatory specifics on this file are stated with their **instrument numbers**, which are at least
+checkable by someone who can reach the primary.
+
+### 🟡 The global sizing range, unchanged and still not a figure
+
+🔵 The global legs returned the same three irreconcilable estimates `p454` recorded — **$10.6 B**
+(The Business Research Company, 40.9 % CAGR), **$11.4 B** (2026→2033 forecast), and IMARC's
+**$6.4 B (2025) → $79.6 B (2034)** at 31.35 % CAGR. 🟡 **Recorded as a range, never as a figure.**
+New tokens this pass, all from vendor market pages and all 🔴 relayed: North America at **37.5 %**
+of 2025 revenue, STEM subjects **34.78 %** of AI-tutor revenue, cloud deployment **71.22 %** share
+(2024), and global student AI usage quoted as **66 % (2024) → 92 % (2025)**. 🔴 That last one
+cannot be reconciled with DEC's 88 % for 2026 and is **not promoted**: two different survey
+programmes, two different populations, opposite directions of travel.
+
 ## 🆕 `p455` — **🟢 `Gap 454-F` IS REFUTED IN ITS GENERAL FORM AND CONFIRMED IN A NARROWER ONE: the prescribed regional legs returned education-specific material for ALL FOUR regions this pass — the first non-nil in nine passes — but what they returned for EMEA and APAC is REGULATION, not adoption. 🔴 And the North America leg produced the most consequential correction on this file: the "134 bills in 31 states" figure five passes have carried is ONE TRACKER'S SNAPSHOT, and three other trackers covering the same session disagree by a factor of 2.6.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — tenth denial in eleven passes. 🔵 The region
@@ -415,6 +520,8 @@ point — Brazil/Argentina/Colombia are *compose* markets, Mexico/Chile/Peru are
 
 ### North America
 
+🆕 `p456` 🟡 **A currency pass with no novelty, and the carried figures are re-confirmed rather than advanced.** The prescribed leg returned market sizing (**$951 M** 2024 → **$2.3 B** 2029, **15.9 %** CAGR; **36 %** regional share) and the two carried adoption cells — **10 %** of institutions with formal AI guidance, **71 %** of US teachers untrained. 🔴 Its named players (IBM, Microsoft, Google) come from a **2024** report and are not promoted. 🔵 `p455`'s tracker rule holds and is restated because it is the durable part: **a bill count is cited with its tracker and its as-of date, or not at all.** 🟢 The engagement shape is unchanged — NA is sold **state by state**, on the three dated statutes above (`AB 1159`, `SB 720`, `SB 1734`). 🔴 All relayed; no NA primary is reachable from this host (`Gap 455-E`).
+
 🆕 `p455` 🔴 **A carried figure is RETIRED, not refreshed.** The *"134 bills across 31 states"*
 count this file has carried for five passes is the **MultiState** tracker **as of March 2026**, and
 three other trackers covering the same 2026 session report **87/28** (FutureEd), **77/27** and
@@ -510,6 +617,8 @@ describes a **mock student-senate vote** organised by MIT RAISE, not a statute, 
 as one.
 
 ### EMEA
+
+🆕 `p456` 🔴 **EMEA's opportunity must STILL be sourced from supply, and this pass establishes that as a reproduced property of the channel rather than a one-pass nil.** The prescribed leg, run a third time, returned CompTIA EMEA IT trends, a **2023** Workday study and a 2024 year-in-review — 🔴 **zero education-specific findings**, identical to `p454`'s failure, so `p455`'s claim that all four regions had started serving **does not reproduce**. 🔴 **And the one institution-level EMEA rate the channel offers is REFUSED**: *"68 % of EU HEIs operate at least one AI-powered teaching tool, up from 34 % in 2024"*, attributed to an EUA **March 2026** survey, appears only on a secondary site that in the same page asserts an unverifiable 23 % retention gain at ETH Zürich; EUA's own pages carry no such percentage; and `eua.eu` is refused at CONNECT from this host. 🔵 Shelving it would be exactly the padding the encargo forbids — `Gap 456-D` names it as the open target. 🟡 Attributable but weaker: **HEPI** at **95 %** of UK university respondents using generative tools (secondhand), and **Ellucian** 2026 — *nearly two-thirds* of executive leaders say their institution **already allocates funds specifically for AI**; neither is a cross-institution adoption rate. 🟢 **The supply-side opportunity gains a correction and a successor this pass**: the Schulportal Hessen client `p455` shelved is **deprecated by its own maintainers**, and the live MIT path is now [`lanis-mobile/liblanis-for-python`](https://github.com/lanis-mobile/liblanis-for-python) (`1 079` B `66f943b0689f`), 🔴 pre-release at `1.0.0a1`, `requires-python >=3.14`, **not on PyPI**. 🔵 That is the measured risk of the whole EMEA national-system adapter tier: **unofficial clients to a system of record the client cannot fork are withdrawn by their maintainers, and the withdrawal is the engagement risk to price** — a maintenance tail with a named single point of failure, not a platform build.
 
 🆕 `p455` 🟢 **EMEA gains the thing it has never had on these shelves: a SUPPLY tier, read
 first-hand.** `Gap 454-F` forced EMEA's opportunities to be sourced from supply, and this pass found
@@ -626,6 +735,8 @@ component, and that is the opposite of the Ed-Fi shape North America offers.
 
 ### APAC
 
+🆕 `p456` 🟢 **APAC gains its first institution-level adoption rate on these shelves, and `Gap 454-F`'s narrow form closes here.** Not from the prescribed leg — 🔴 that returned enterprise-AI priorities, Singapore **financial-sector** consultations and corporate L&D (TCS/Pearson, LearnUpon, Alteryx), **zero K-12 or higher-ed policy findings**, identical to `p454`'s nil. 🟢 From a deliberately reworded leg: the **Digital Education Council *AI in Higher Education Global Survey 2026***, **45 398 responses across 35 countries**, with two APAC cuts — 🟢 **APAC faculty are the most optimistic region at 57 %** excited about AI making learning more effective and accessible, and 🔴 **APAC students show the sharpest job anxiety: 50 % expect fewer job openings by graduation against 41 % globally**. 🔴 **Opt-in through member institutions, not an audited random sample** — indicative, and stated with the figure. 🟢 **The opportunity those two numbers define is specific**: APAC faculty are the least likely cohort to need convincing and the most likely to be sold *capability*, while APAC students are the most likely to buy **employability** framing — so the same platform is positioned differently on the two sides of one institution. 🔵 The regulatory wedge is unchanged and remains the planning fact: Vietnam's **Decision `33/2026/QD-TTg`** with its three education entries and the **2027-09-01** deadline for systems already operating in education before 2026-08-15. 🔴 All relayed (`Gap 455-E`).
+
 🆕 `p455` 🟢 **The APAC regulatory cell gains its first instrument NUMBER, and education is named in
 it explicitly.** Vietnam's **Decision `33/2026/QD-TTg`**, issued **2026-06-30** and effective
 **2026-08-15**, lists **46 high-risk AI systems across six sectors**, of which 🔴 **three are
@@ -739,6 +850,8 @@ it; it is a competitor to map, not a base to extend.
 
 ### LATAM
 
+🆕 `p456` 🟢 **The carried LATAM adoption figures are now stated as a COMPARISON rather than a level, and the comparison is the stronger fact.** `p454` shelved the Digital Education Council **LATAM 2026** cut at **92 %** of students and **79 %** of faculty engaging with AI. This pass read DEC's **global** survey — **45 398 responses, 35 countries** — at **88 %** of students and **77 %** of faculty. 🟢 **So LATAM runs ABOVE global on both sides, on the same survey programme**, which is a defensible claim in a way a bare 92 % never was. 🔵 It also sharpens the carried contradiction rather than resolving it: LATAM leads on *use* while only **30 %** of LATAM universities have a published AI policy and only **19 %** of faculty use AI-assisted assignment feedback against **50 %** of students who want it. 🔴 **That gap IS the LATAM engagement** — the region buys governance and assessment design, not adoption. 🟢 Re-confirmed this pass on an independent leg: the **UNESCO IESALC / UNU-IAS** working paper (**200 HEIs, 19 countries**, surveyed **Aug–Oct 2025**, carrying a **September 2026** publication date) across teaching, research, community engagement, administration and governance. 🔵 Public investment remains the structural constraint — **CENIA/ECLAC** put the regional average at **six times lower** than the global one — and regulatory fragmentation (Baker McKenzie) means a multi-country LATAM rollout prices per jurisdiction. 🟡 One supply note: the refused `tosuki/moodle-mcp` is a LATAM-shaped Moodle MCP server (**pt-BR** strings, university portal via Teams SSO) blocked from these shelves only for want of a `LICENSE` its own badge links to (`Gap 456-E`).
+
 🆕 `p455` 🟢 **The LATAM adoption cell is CONFIRMED on a second independent leg, and gains its
 institution-type split.** The UNESCO IESALC study launched at **Digital Learning Week 2026** with
 UNU-IAS support surveyed **200 higher-education institutions in 19 countries**: 🟢 **87 %** use AI
@@ -849,6 +962,8 @@ data — provided the deliverable carries the CC BY attribution string the proje
 **50 %/19 %** feedback gap above is what it should be sold against.
 
 ### Global
+
+🆕 `p456` 🔴 **The global sizing range is unchanged, and this pass's contribution is a rule about reading it rather than a new number.** The same three irreconcilable estimates recur — **$10.6 B** (TBRC, 40.9 % CAGR), **$11.4 B** (2026→2033), IMARC's **$6.4 B (2025) → $79.6 B (2034)** at 31.35 % — and remain 🟡 **a range, never a figure**. New relayed tokens: NA at **37.5 %** of 2025 revenue, STEM **34.78 %** of AI-tutor revenue, cloud **71.22 %** (2024), and student AI usage quoted **66 % (2024) → 92 % (2025)** — 🔴 **the last is NOT promoted**, because it cannot be reconciled with DEC's **88 %** for 2026: two survey programmes, two populations, opposite directions of travel. 🔵 **The durable global finding this pass adds is methodological**: `p455` graded the prescribed channel as having started to serve all four regions, and one pass later that **does not reproduce**. 🟢 **A single run of a search channel is not evidence that the channel has changed** — a nil and a non-nil one pass apart are leg-to-leg variance until a result survives two passes. That now governs every "the channel improved" claim on this file. 🔴 And the asymmetry under all of it is reproduced and wider (`Gap 455-E`): **supply is readable first-hand, demand can only ever be relayed** — `unesco.org`, `iesalc.unesco.org`, `education.ec.europa.eu`, `eua.eu`, `digitaleducationcouncil.com` and `studyverso.com` were all refused at CONNECT while `raw.githubusercontent.com`, `pypi.org` and `registry.npmjs.org` served 200 in the same session.
 
 🆕 `p455` 🔵 **The channel finding that governs every demand-side cell on this file.** `Gap 454-F`
 claimed the prescribed market channel fails **by region**. 🟢 **Refuted in that form**: all four

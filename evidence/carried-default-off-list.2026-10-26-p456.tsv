@@ -1,0 +1,16 @@
+addr	default_branch	verdict	resolved_ref	resolved_path	resolved_bytes	resolved_sha	resolved_family	carried_ladder_ref	carried_ladder_path	carried_bytes	carried_sha	carried_family	same_payload
+GibbonEdu/core	v31.0.00	GRANT_AT_DEFAULT	v31.0.00	LICENSE	35121	93178a43d6d3	GPL-3.0	HEAD	LICENSE	35121	93178a43d6d3	GPL-3.0	SAME
+ILIAS-eLearning/ILIAS	release_11	GRANT_AT_DEFAULT	release_11	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	HEAD	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	SAME
+RusticiSoftware/TinCanPython	3.x	GRANT_AT_DEFAULT	3.x	LICENSE	11358	cfc7749b96f6	Apache-2.0	HEAD	LICENSE	11358	cfc7749b96f6	Apache-2.0	SAME
+bigbluebutton/bigbluebutton	v4.0.x-develop	GRANT_AT_DEFAULT	v4.0.x-develop	LICENSE	7652	e3a994d82e64	LGPL-3.0	HEAD	LICENSE	7652	e3a994d82e64	LGPL-3.0	SAME
+edu-sharing/Edu-Sharing	maven/fixes/10.0	GRANT_AT_DEFAULT	maven/fixes/10.0	LICENSE.txt	35148	8b1ba204bb69	GPL-3.0	HEAD	LICENSE.txt	35148	8b1ba204bb69	GPL-3.0	SAME
+francoisjacquet/rosariosis	mobile	GRANT_AT_DEFAULT	mobile	LICENSE	15214	d954e14e5c75	GPL-2.0	HEAD	LICENSE	15214	d954e14e5c75	GPL-2.0	SAME
+jibrilsettles-dot/Arabic-Tutor	claude/eager-newton-boy1g0	LIVE_NO_GRANT	claude/eager-newton-boy1g0		0					0			DIFFER
+krayin/laravel-crm	2.2	GRANT_AT_DEFAULT	2.2	LICENSE	1078	a76aa4a4405c	MIT	HEAD	LICENSE	1078	a76aa4a4405c	MIT	SAME
+kurwjan/LanisAPI	deprecation-notice	GRANT_OFF_DEFAULT	deprecated-0.4.1	LICENSE	1076	0bc449776673	MIT	master	LICENSE	1076	0bc449776673	MIT	SAME
+lukecarroll15/blackboard-mcp	tcd	GRANT_AT_DEFAULT	tcd	LICENSE	1065	87e2de769b52	MIT	HEAD	LICENSE	1065	87e2de769b52	MIT	SAME
+michaelsboost/ArabEngo	gh-pages	GRANT_AT_DEFAULT	gh-pages	LICENSE.md	17766	4cddab880325	CC-BY-NC-4.0	HEAD	LICENSE.md	17766	4cddab880325	CC-BY-NC-4.0	SAME
+openeducat/openeducat_erp	19.0	GRANT_AT_DEFAULT	19.0	LICENSE	8241	528f84036800	LGPL-3.0	HEAD	LICENSE	8241	528f84036800	LGPL-3.0	SAME
+overhangio/tutor	release	GRANT_AT_DEFAULT	release	LICENSE.txt	34523	0d96a4ff68ad	AGPL-3.0	HEAD	LICENSE.txt	34523	0d96a4ff68ad	AGPL-3.0	SAME
+portabilis/i-educar	2.12	GRANT_AT_DEFAULT	2.12	LICENSE	18092	8177f9751321	GPL-2.0	HEAD	LICENSE	18092	8177f9751321	GPL-2.0	SAME
+tl-its-umich-edu/caliper-php-public	public	GRANT_AT_DEFAULT	public	LICENSE	7438	8c401dfc8928	LGPL-3.0	HEAD	LICENSE	7438	8c401dfc8928	LGPL-3.0	SAME

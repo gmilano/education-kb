@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 2026-10-26 · `p456` — **The ref axis of every repo on these shelves is measured for the first time: 455 addresses, 439 live, `HEAD` follows the resolved default branch in 439 of 439 — and 15 projects whose default branch is a release line, not a trunk.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — eleven denials in twelve passes. 🔵 This file is
+**APPEND-ONLY**: the block above is new, everything below is prior history, retained verbatim.
+
+### 🟢 The structural movement: a channel, not a star count
+
+🟢 **`git ls-remote` works from this host against arbitrary public repositories**, and no pass
+since `p449` had tried it — `Gap 449-A` measured a 403 on `curl -sI https://github.com/...` and
+seven passes read that as *"github.com is closed"*, guessing the ref axis from a fixed list
+instead. 🔵 One request now returns the default branch, every head, every tag and `HEAD`'s commit.
+
+| measurement, over the 455 addresses on the three primary shelves | n | share |
+|---|---|---|
+| 🟢 live (resolves on `ls-remote`) | **439** | 96.5 % |
+| 🟢 `HEAD` points at the resolved default branch | **439** | **100 % of live** |
+| 🔴 `HEAD` diverges from the default branch | **0** | 0 % |
+| 🔴 default branch **outside** the ref list every carried pass guessed | **15** | 3.3 % |
+| 🔴 resolves nothing — authoritative `ADDRESS_DEAD` | **16** | 3.5 % |
+
+### 🔴 What the 15 are, and why it is a trending fact rather than a trivium
+
+🔵 These projects point `HEAD` at a **release line**: `ILIAS-eLearning/ILIAS` → `release_11`,
+`overhangio/tutor` → `release`, `openeducat/openeducat_erp` → `19.0`,
+`bigbluebutton/bigbluebutton` → `v4.0.x-develop`, `GibbonEdu/core` → `v31.0.00`,
+`edu-sharing/Edu-Sharing` → `maven/fixes/10.0`, `portabilis/i-educar` → `2.12`,
+`krayin/laravel-crm` → `2.2`, `RusticiSoftware/TinCanPython` → `3.x`,
+`tl-its-umich-edu/caliper-php-public` → `public`, `francoisjacquet/rosariosis` → `mobile`.
+🟢 **That is the release discipline of the education-platform tier showing up in its branch
+layout** — mature LMS and SIS projects ship from a version branch and do not keep a moving trunk
+as default. 🔴 A clone recipe that omits `-b` therefore pins silently to whatever line the
+maintainers last promoted.
+
+🔵 Two cells in the 15 are not that pattern and are worth naming:
+`jibrilsettles-dot/Arabic-Tutor`'s default branch is **`claude/eager-newton-boy1g0`** — an agent
+session branch left as the repository default, carrying **no grant** — and
+`michaelsboost/ArabEngo` defaults to `gh-pages`, serving **CC-BY-NC-4.0**, which is 🔴 not a code
+licence and not commercially usable.
+
+### 🟢 And the negative result, which is the one that cost something to get
+
+🔴 **`Gap 455-A` is refuted.** Its claim — that `HEAD` does not follow the default branch — was
+inferred from one repository and is false across 439. 🔴 The ladder rewrite it licensed
+("keep walking refs, publish the first grant found") produced the only false grant these shelves
+have carried: `lanis-mobile/LanisAPI`'s MIT, read off a **rename alias** pointing at a branch named
+`deprecated-0.4.1`, for a project whose `HEAD` README declares it deprecated. 🟢 Corrected on
+[`agents/top.md`](../agents/top.md), with the successor
+[`lanis-mobile/liblanis-for-python`](https://github.com/lanis-mobile/liblanis-for-python)
+(**MIT**, `1 079` B `66f943b0689f`) shelved in its place.
+
 ## 🆕 2026-10-26 · `p455` — **The GNU population of these shelves is measured for the first time with a version axis: 461 cell-attributed cells, 11 that cannot support a compatibility decision at all, and 88 apparent disagreements retracted as this pass's own extraction error.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — ten denials in eleven passes. 🔵 This file is
