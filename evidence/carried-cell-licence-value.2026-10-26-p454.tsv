@@ -1,0 +1,72 @@
+registry	package	p452_address_verdict	address	declared_registry	payload_family	payload_path	payload_bytes	sha256_12	value_verdict	canon_declared	canon_payload
+npm	@thanh01.pmt/interactive-quiz-kit	AGREE	github.com/thanh01pmt/interactive-quiz-kit	MIT	NO_PAYLOAD		0		MANIFEST_ONLY	MIT	NO-PAYLOAD
+npm	beadkit	AGREE	github.com/ale-alejandro/beadkit	SEE LICENSE IN LICENSE	NO_PAYLOAD		0		NO_GRANT_ANYWHERE	POINTER-OUT-OF-REGISTRY	NO-PAYLOAD
+npm	rhizome-lms-mcp	AGREE	github.com/mckaroff/graphlms	MIT	NO_PAYLOAD		0		MANIFEST_ONLY	MIT	NO-PAYLOAD
+npm	@santillana-ai/create-tutor-app	AGREE	github.com/santillana-ai/tutor-sdk	MIT	NO_PAYLOAD		0		MANIFEST_ONLY	MIT	NO-PAYLOAD
+npm	ase-moodle-mcp	AGREE	github.com/firedmosquito831/ase-moodle-mcp	Apache-2.0	Apache-2.0	LICENSE	11358	cfc7749b96f6	AGREE	APACHE-2.0	APACHE-2.0
+npm	@tcpassos/moodle-student-mcp	AGREE	github.com/tcpassos/moodle-student-mcp	MIT	MIT	LICENSE	1069	322307ac9d65	AGREE	MIT	MIT
+npm	@dodona/dolos	AGREE	github.com/dodona-edu/dolos	MIT	MIT	LICENSE	1084	881163366572	AGREE	MIT	MIT
+npm	dsh-aha-tutor	AGREE	github.com/baroncyrus/dsh-aha-tutor	MIT	MIT	LICENSE	1067	c83a57edd27c	AGREE	MIT	MIT
+npm	dsh-diagnostic-tutor	AGREE	github.com/senmuuuuw/dsh-diagnostic-tutor	MIT	MIT	LICENSE	1090	6d6319152a02	AGREE	MIT	MIT
+npm	canvas-mcp-server	AGREE	github.com/dmontgomery40/mcp-canvas-lms	MIT	NO_PAYLOAD		0		MANIFEST_ONLY	MIT	NO-PAYLOAD
+npm	d2l-mcp-server	AGREE	github.com/general-mudkip/d2l-mcp-server	MIT	NO_PAYLOAD		0		MANIFEST_ONLY	MIT	NO-PAYLOAD
+npm	blackboard-learn-mcp	NO_RECORD					0		NO_ADDRESS		
+npm	brightspace-mcp-server	AGREE	github.com/rohanmuppa/brightspace-mcp-server	MIT	MIT	LICENSE	1068	047079fbd491	AGREE	MIT	MIT
+npm	brightspace-d2l-mcp	AGREE	github.com/anonymousonyx22/brightspace-d2l-mcp	MIT	MIT	LICENSE	1200	c7f8d1452807	AGREE	MIT	MIT
+npm	brightspace-mcp	AGREE	github.com/jhostinaleck/brightspace-mcp	MIT	MIT	LICENSE	1070	008ec594c78e	AGREE	MIT	MIT
+npm	@r-huijts/canvas-mcp	AGREE	github.com/r-huijts/canvas-mcp	MIT	MIT	LICENSE	1065	ab5109aafdb8	AGREE	MIT	MIT
+npm	@ankimcp/anki-mcp-server	AGREE	github.com/ankimcp/anki-mcp-server	MIT	MIT	LICENSE	1074	0ef87fdb98da	AGREE	MIT	MIT
+npm	proctoring.js	AGREE	github.com/mdestafadilah/proctoring.js	MIT	MIT	LICENSE	1070	c9f09b3fe729	AGREE	MIT	MIT
+npm	@exam_guard/core	AGREE	github.com/scaler-opensource/exam-guard	ISC	Apache-2.0	LICENSE	11357	c71d239df917	DISAGREE	ISC	APACHE-2.0
+npm	exam-guard	AGREE	github.com/aswanth9495/exam-guard	ISC	Apache-2.0	LICENSE	11357	c71d239df917	DISAGREE	ISC	APACHE-2.0
+npm	@incproctor/proctoring-sdk	ABSENT		SEE LICENSE IN LICENSE			0		NO_ADDRESS	POINTER-OUT-OF-REGISTRY	
+npm	ltijs	AGREE	github.com/cvmcosta/ltijs	Apache-2.0	Apache-2.0	LICENSE	11361	d5fcb264ff39	AGREE	APACHE-2.0	APACHE-2.0
+npm	@intellectif/lk-core	AGREE	github.com/intellectif/learning-kit	MIT	MIT	LICENSE	1072	ff3ce4617079	AGREE	MIT	MIT
+npm	@creaditor/course-starterkit	AGREE	github.com/creaditor/frontend	ISC	NO_PAYLOAD		0		MANIFEST_ONLY	ISC	NO-PAYLOAD
+npm	@bncc/dados	AGREE	github.com/bncc-dev/bncc-pacotes	MIT	COMPOSITE: MIT+CC-BY	LICENSE	1299	86bf5f5e6306	COMPOSITE	MIT	COMPOSITE
+npm	@bncc/mcp	AGREE	github.com/bncc-dev/bncc-pacotes	MIT	COMPOSITE: MIT+CC-BY	LICENSE	1299	86bf5f5e6306	COMPOSITE	MIT	COMPOSITE
+npm	lingua-mcp	AGREE	github.com/marsmanleo/linguamcp	Apache-2.0	Apache-2.0	LICENSE	10763	2a15310eff02	AGREE	APACHE-2.0	APACHE-2.0
+npm	aimlinterviews-mcp	AGREE	github.com/alirezadir/aimlinterviews	MIT	MIT	LICENSE	1074	4bbc737c412d	AGREE	MIT	MIT
+npm	@falkenslab/moodle-mcp	AGREE	github.com/falkenslab/moodle-mcp	MIT	MIT	LICENSE	1067	66fa873bd85d	AGREE	MIT	MIT
+npm	@promptster/rubric	AGREE	github.com/promptster-ai/rubric	MIT	MIT	LICENSE	1067	c2b6e8192ca6	AGREE	MIT	MIT
+npm	blackboard-mcp	AGREE	github.com/felipedias-ie/blackboard-mcp	MIT	MIT	LICENSE	1084	d65abf96e389	AGREE	MIT	MIT
+npm	@imazhar101/mcp-canvas-server	ABSENT					0		NO_ADDRESS		
+npm	@superbuilders/oneroster	AGREE	github.com/trilogy-group/oneroster-ts		ISC	LICENSE	711	8b211ca07d3f	REGISTRY_SILENT		ISC
+npm	@longsightgroup/qti3-core	AGREE	github.com/longsightgroup/qti3	MIT	MIT	LICENSE.md	1072	00ed05b90bf8	AGREE	MIT	MIT
+npm	@groton/canvas-api	AGREE	github.com/groton-school/canvas-cli		GPL	LICENSE	35149	3972dc9744f6	REGISTRY_SILENT		GPL
+pypi	unist-blackboard-mcp	AGREE	github.com/parkseokjune/unist-blackboard-mcp	MIT	NO_PAYLOAD		0		MANIFEST_ONLY	MIT	NO-PAYLOAD
+pypi	librus-mcp	AGREE	github.com/krzysztofbury/librus-mcp	MIT License	MIT	LICENSE	1071	22e7ab2dbddc	AGREE	MIT	MIT
+pypi	smartschool-mcp	AGREE	github.com/maurodruwel/smartschool-mcp	MIT	MIT	LICENSE	1069	b414ff32815f	AGREE	MIT	MIT
+pypi	d2l-cli	AGREE	github.com/aaryan-kapoor/d2l-cli	MIT	MIT	LICENSE	1070	4a3a6b184d9e	AGREE	MIT	MIT
+pypi	swiss-moodle-mcp	AGREE	github.com/dathis/swiss-moodle-mcp		MIT	LICENSE	1063	84e5d85f30e9	REGISTRY_SILENT		MIT
+pypi	mcp-moodle	AGREE	github.com/snaw80/moodle-mcp	MIT	MIT	LICENSE	1072	b2bb31ce9d90	AGREE	MIT	MIT
+pypi	moodle-mcp	AGREE	github.com/loyaniu/moodle-mcp		NO_PAYLOAD		0		NO_GRANT_ANYWHERE		NO-PAYLOAD
+pypi	django-lti-toolbox	AGREE	github.com/openfun/django-lti-toolbox	MIT	MIT	LICENSE	1078	504c17f9869b	AGREE	MIT	MIT
+pypi	django-lti	AGREE	github.com/academic-innovation/django-lti	MIT License	MIT	LICENSE	1098	c24a6b35e390	AGREE	MIT	MIT
+pypi	jupyterhub-ltiauthenticator	AGREE	github.com/jupyterhub/ltiauthenticator	BSD 3-Clause License                  Copyright (c) 2016,...	BSD-3-Clause	LICENSE	1528	08eebd9662cb	AGREE	BSD-3-CLAUSE	BSD-3-CLAUSE
+pypi	lti-consumer-xblock	AGREE	github.com/openedx/xblock-lti-consumer	GNU Affero General Public License v3	AGPL-3.0	LICENSE	34520	57c8ff33c9c0	AGREE	AGPL-3.0	AGPL-3.0
+pypi	PyLTI1p3	AGREE	github.com/dmitry-viskov/pylti1.3	MIT	MIT	LICENSE	1070	5aef77eb4471	AGREE	MIT	MIT
+pypi	django-suap-auth	ABSENT		MIT License			0		NO_ADDRESS	MIT	
+pypi	now-lms	AGREE	github.com/bmosoluciones/now-lms		Apache-2.0	LICENSE	10915	a9c4042d767d	REGISTRY_SILENT		APACHE-2.0
+pypi	edfi-lms-harmonizer	AGREE	github.com/ed-fi-exchange-oss/lms-toolkit	Apache-2.0	Apache-2.0	LICENSE	10141	cc4d4de0920b	AGREE	APACHE-2.0	APACHE-2.0
+pypi	qti-package-maker	AGREE	github.com/vosslab/qti_package_maker	GNU Lesser General Public License v3 (LGPLv3)	NO_PAYLOAD		0		MANIFEST_ONLY	LGPL	NO-PAYLOAD
+pypi	sigaa-cli	AGREE	github.com/macielti/sigaa-cli	GNU General Public License v3 or later (GPLv3+)	GPL	LICENSE	35149	3972dc9744f6	AGREE	GPL	GPL
+pypi	canvas-local-mcp	AGREE	github.com/admin978/canvas-mcp	MIT	MIT	LICENSE	1072	507310119817	AGREE	MIT	MIT
+pypi	canvasapi	AGREE	github.com/ucfopen/canvasapi	MIT License	MIT (body form, no title)	LICENSE	1130	f422adb6cde4	AGREE	MIT	MIT
+pypi	tincan	PAGES_ONLY		Apache License 2.0			0		NO_ADDRESS	APACHE-2.0	
+pypi	coqui-tts	AGREE	github.com/idiap/coqui-ai-tts	MPL-2.0	MPL-2.0	LICENSE.txt	16725	1f256ecad192	AGREE	MPL-2.0	MPL-2.0
+pypi	open-schools	AGREE	github.com/rubelw/osss	Apache-2.0	Apache-2.0	LICENSE	11363	ccf32a3c6ae1	AGREE	APACHE-2.0	APACHE-2.0
+pypi	clawed	AGREE	github.com/sirhanmacx/claw-ed	MIT License	MIT	LICENSE	1078	4d5d987f4f89	AGREE	MIT	MIT
+pypi	ralph-malph	AGREE	github.com/openfun/ralph	MIT License                  Copyright (c) 2020-present F...	MIT	LICENSE.md	1094	08ea77291de9	AGREE	MIT	MIT
+pypi	pybryt	AGREE	github.com/microsoft/pybryt	MIT	MIT	LICENSE	1141	c2cfccb812fe	AGREE	MIT	MIT
+pypi	deeptutor	ABSENT		Apache-2.0			0		NO_ADDRESS	APACHE-2.0	
+pypi	educhain	AGREE	github.com/satvik314/educhain	MIT License	MIT	LICENSE	1092	e3321a1b62cd	AGREE	MIT	MIT
+pypi	travo	AGREE	gitlab.com/travo-cr/travo		BSD-3-Clause	LICENSE	1517	80d949266562	REGISTRY_SILENT		BSD-3-CLAUSE
+pypi	openedx-mcp	ABSENT		AGPL-3.0			0		NO_ADDRESS	AGPL-3.0	
+pypi	frappe-mcp-server	ABSENT		MIT			0		NO_ADDRESS	MIT	
+packagist	packbackbooks/lti-1p3-tool	AGREE	github.com/packbackbooks/lti-1-3-php-library	Apache-2.0	Apache-2.0	LICENSE.md	11343	78b49eeaddbf	AGREE	APACHE-2.0	APACHE-2.0
+packagist	wikiwijs/php-qti3	AGREE	github.com/kennisnet/php-qti3	MIT	MIT	LICENSE	1066	27fb6d463569	AGREE	MIT	MIT
+packagist	umich-its-tl/caliper-php	AGREE	github.com/tl-its-umich-edu/caliper-php-public	proprietary	LGPL	LICENSE	7438	8c401dfc8928	DISAGREE	PROPRIETARY	LGPL
+packagist	dev-cucei-itrans/siiau-api-client	AGREE	github.com/dev-cucei-itrans/siiau-api-client	BSD-3-Clause	NO_PAYLOAD		0		MANIFEST_ONLY	BSD-3-CLAUSE	NO-PAYLOAD
+packagist	oat-sa/tao-core	AGREE	github.com/oat-sa/tao-core	GPL-2.0-only	GPL	LICENSE	18025	a01259a1b522	AGREE	GPL	GPL
+packagist	imsglobal/caliper	AGREE	github.com/imsglobal/caliper-php	LGPL-3.0	NO_PAYLOAD		0		MANIFEST_ONLY	LGPL	NO-PAYLOAD

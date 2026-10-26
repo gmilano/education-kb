@@ -3,6 +3,81 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## Pass 454 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 453-A`'s prescribed closure RAN over all 71 carried cells, and its FIRST answer was retracted before publication: it reported 6 disagreements and 3 were the instrument's own. 🔴 Four reader defects, and the first is INHERITED FROM THE GATE CODE — `p450`'s 40-line window mis-grades GPLv2 as LGPL. 🟢 `Gap 453-D` CLOSES for Indonesia on four MIT rows. 🔴 A carried grant went STALE two days ago, in the one direction that costs.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from
+External`) before any gate body ran — **nine denials in ten passes**. 🔵 Nothing in this pass is
+gate-attested. Five contracts were re-implemented independently and all are green; that is **5 of
+62**.
+
+### 🔴 The pass's most load-bearing result is a retraction, and it is this pass's own
+
+🟢 `Gap 453-A` named the sweep of the **71 carried registry-sourced licence cells** as *"`p454`'s
+cheapest closure"*. It ran. 🔴 **Its first output said 6 `DISAGREE` (8.5 %) — nearly triple
+`p453`'s 3.0 % on novel packages — and three of the six were the licence READER's, not the
+registry's.** `oat-sa/tao-core` serves `GNU GENERAL PUBLIC LICENSE Version 2` and Packagist
+declares `GPL-2.0-only`: **`AGREE`**. `bncc-dev/bncc-pacotes` ×2 serves a documented two-part
+notice: **`COMPOSITE`**, not a disagreement.
+
+🟢 **Corrected: 3 of 71 (4.2 %)** — statistically indistinguishable from `p453`'s 3.0 % at 3/71 vs
+5/166, which **refutes** the premise the gap was opened on. A curated licence cell is no cleaner
+than a registry-found one.
+
+🔴 **And the larger error source is the tool.** Re-reading **179 carried payloads** with both
+readers, **5 (2.8 %) grade differently** and the carried reader is wrong in all five — **three of
+them as `UNREAD`**, the verdict that reads as *"grant not determined"* and invites a promotion.
+Two of those three are **genuinely closed**.
+
+### 🟢 What closed, and what is honestly absent
+
+- 🟢 **`Gap 453-D` → Indonesia.** Dapodik, the national school/teacher/student register, is closed
+  with no open core, yet reachable from **four MIT clients at three strata** — `dapodik-sdk`,
+  `dapodik-api-php`, `vervalpd-node`, `dapodik-data-guru` — each read first-hand at `HEAD`, with a
+  fabricated control dead on all 15 probed paths.
+- 🟡 **Japan** adds one row, graded honestly as a **general** statistics gateway (`mcp-estat-japan`
+  over e-Stat), not an education asset.
+- 🔴 **The Philippines is an informed absence with a denominator and a named cause:** `deped`
+  returned **59 candidates, 0 education assets**, because the string lives inside `deptrac`,
+  `php-di` and every `dependency`-shaped package on Packagist.
+- 🟢 **`Gap 453-B`'s remedy is confirmed AND amended by measurement:** a named system of record
+  beats a common noun **only if the name is long**. `dapodik` 100 % precision; `deped` and `psa`
+  0 %.
+- 🔴 **`Gap 454-D`:** `nakafaai/nakafa.com` moved from Source Available `1.0` (`7 705` B
+  `de3d94045061`) to **`2.0`, effective `2026-10-24`** (`11 997` B `97e8bdc2e3cd`), with its
+  content and trademark instruments re-versioned the same day. §13 puts **every act started on or
+  after that date** under the new terms. The carried cell is six months stale, and `p453` read the
+  new payload and called it `UNREAD`.
+- 🔴 **`Gap 454-F`:** the prescribed market-research channel fails **by region** — LATAM and North
+  America pay; **EMEA and APAC returned zero education-specific findings** across 8 legs. Both
+  regions' opportunities are therefore sourced from supply read first-hand, and the substitution is
+  stated on the shelf.
+
+### 🔴 And one of this pass's OWN published figures was corrected inside the pass
+
+🔴 **`MANIFEST_ONLY` (14.1 %) conflated two different facts.** A grant-path probe cannot tell
+"repository exists without a licence file" from "repository is gone" — both `404` on all 13 grant
+paths. 🟢 Re-probed on 13 **non-licence** paths, the 12 such cells split **8 `ADDRESS_DEAD` / 4
+`REPO_LIVE_NO_GRANT`**. 🔴 **So the honest decay figure is 16 of 71 carried cells (22.5 %) pointing
+at nothing readable, not 4.2 %** — and one of the dead eight is `imsglobal/caliper-php`, the IMS
+Global reference implementation of the **Caliper** analytics standard, whose plausible successors
+also `404`. 🔵 Registered as `Gap 454-H`; the shelves were amended rather than left standing.
+
+🔴 **A control this pass wrote also cried wolf twice** (`Gap 454-I`): its "header-shaped data row"
+check flagged five rows that are legitimate data rows of **transposed** tables, a shape this base
+uses routinely — and all five predate this pass by thousands of lines. The check is wrong, not the
+shelves, and it is not wired into anything until it reads table orientation.
+
+### 🔵 Contracts re-implemented in the gate's absence — all green, and none of it attested
+
+`intel/market.md` verified programmatically as exactly **1** canonical `## Opportunities by region`
+with **5** closed-vocabulary `###` children in vocabulary order, each amended **in place**;
+newest-first insertion read from `check_newest_block.py`; **append-only proved by byte
+containment** on both trending shelves (prior bodies of **4 356 760** B and **3 309 238** B
+contained verbatim); frontmatter keys and region vocabulary checked on all 9 shelves; no
+table-header-shaped row written as data. 🟢 Every URL introduced was probed at `HEAD` with a
+fabricated negative control.
+
 ## Pass 449 — reads 2026-10-26, commit 2026-10-26 — **🟢 `make hooks` RAN after three consecutive denials, which REFUTES `p448`'s settlement of `Gap 446-A`, and the arrival baseline it finally permitted caught TWO undetected contract violations that are BOTH `p448`'s. 🟢 `Gap 448-A` ANSWERED over 309 passes: the schedule is HOURLY against a DAILY channel, so four "saturations" carry ~zero information. 🟢 `Gap 448-C` RESOLVED and `Gap 445-H` CLOSED. 🔴 The URL probe this base is instructed to use returns 403 on EVERY real GitHub repo on this host.**
 
 🟢 **Gate posture, stated first and without softening: `make hooks` RAN.** One attempt, no

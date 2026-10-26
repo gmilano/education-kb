@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p454` — **Three recipes, each built only from grants read first-hand at `HEAD` this pass. 🟢 `P454-A` is the licence reader this pass had to build because the carried one mis-grades 2.8 % of payloads; `P454-B` is an Indonesia engagement on four MIT rows; `P454-C` is the three-grant clearance an education deliverable actually needs.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes.
+
+### 🟢 `P454-A` — The payload-first licence gate, with the four routes the carried reader lacks
+
+🔵 **Problem it solves.** `p453` established *"the payload at `HEAD` is the grant; the registry
+field is a hint"*. This pass found that the **reader of the payload** is itself an error source:
+5 of 179 carried payloads (2.8 %) grade wrong, and three of the five grade as `UNREAD` — the
+verdict that invites a promotion.
+
+**Wire-up** — [`compose/code/p454-carried-cell-value/`](code/p454-carried-cell-value/):
+
+1. **Fetch gating on `%{http_code}`, never on body length.** `curl -s -w '%{http_code} %{size_download}'`;
+   consult the body only on `200`. 🔵 Live control this pass:
+   `raw.githubusercontent.com/ckeditor/ckeditor5/HEAD/LICENSE` → **404 with a 14-byte body**
+   reading `404: Not Found`. A byte-reader records a 14-byte licence.
+2. **Route 1 — title-block anchoring for the GPL family.** Discriminate `AGPL`/`LGPL`/`GPL` on the
+   **first non-empty lines only**. A 40-line window fails on GPLv2, whose preamble recommends the
+   LGPL at line 15 (`family_title.py`).
+3. **Route 2 — the `NOT-OSI` class, tested by the ABSENCE of an affirmative grant.** Do **not**
+   enumerate refusals: Nakafa's content licence refuses as *"not public domain, not open content,
+   and not free material"*, which no enumeration anticipated. The sound test is *title names a
+   licence/policy/terms* **AND** no grant form (`permission is hereby granted…`,
+   `redistribution and use…`, an OSI title) appears. 🔴 And never trigger on
+   `all rights reserved` — that is the opening line of
+   [`davepacheco/node-extsprintf`](https://github.com/davepacheco/node-extsprintf)'s **MIT**
+   payload.
+4. **Route 3 — in-repo pointer, followed ONE hop.** A payload under `600` B naming another path is
+   an absence, not a refusal; resolve it and grade the target (`pointer_target()`).
+5. **Route 4 — composite detection by DISTINCT FAMILIES NAMED, never by heading count.** Heading
+   count graded `aksara`'s 15 numbered sections as a composite and lost `bncc-pacotes`'s MIT half.
+6. **Controls both directions, asserting values EARLIER passes published.** 23 controls; 8 assert
+   prior payload digests (`nodetool` `4df3c306ddda`, `escolar` `3b443e863252`, `collegedata-fyi`
+   `a3a16c648652`). 🟢 Three of this pass's four reader defects were caught that way and none
+   reached a shelf.
+
+🔴 **Known limit, registered as `Gap 454-C`:** `canon()` collapses GPL **versions**, so
+`edu-sharing/Edu-Sharing` (npm says `GNU GPL v2`, payload serves **GPL-3.0**) grades `AGREE`
+although the two licences are **incompatible**. Add a version axis before trusting a GPL cell.
+
+**Effort:** 1-2 days to port into an existing SBOM step; it is a reader, not a service.
+
+### 🟢 `P454-B` — An Indonesia schools engagement on four MIT rows
+
+🔵 **Context.** Dapodik is the Ministry's single register of schools, teachers and students —
+closed, with no open core, like ÉcoleDirecte in EMEA. 🟢 Unlike ÉcoleDirecte, its client layer is
+**MIT in three languages at three strata**.
+
+**Stack, all grants read first-hand at `HEAD` this pass:**
+
+| layer | component | grant |
+|---|---|---|
+| register access (Node services) | [`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) | **MIT** · `1 739` B `29e7d361ee3d` |
+| register access (PHP estate) | [`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php) | **MIT** · `1 105` B `ce39902853af` |
+| student identity | [`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) | **MIT** · `1 068` B `0ae5076b1e03` |
+| aggregate reporting | [`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru) | **MIT** · `1 072` B `3508ba25c5ad` |
+| orchestration | `LangGraph` (MIT) + `LiteLLM` (MIT) — already carried on these shelves | — |
+
+**Wire-up:** `dapodik-sdk` (or `dapodik-api-php` where the client runs PHP) as the register
+adapter → `vervalpd-node` as the identity resolver behind it → `dapodik-data-guru` as the
+reporting shape to mirror for other provinces → LangGraph nodes for the per-province policy
+differences, with LiteLLM holding the model choice so an on-shore model can be swapped in.
+
+🔴 **Two risks to price, not hide.** (a) `vervalpd-node` is a **scraper of a non-documented API**:
+budget a change-detection test suite, and treat it as fragility rather than an SLA.
+(b) `bantenprov/*` is **one province** (Banten) — the aggregate tier is a template to generalise,
+not national coverage.
+
+**Effort:** 6-8 weeks for a provincial pilot with the reporting tier; the register adapters are
+days, the policy differences are the work.
+
+### 🟡 `P454-C` — Three-grant clearance for an education deliverable
+
+🔵 **Why.** Education verticals ship curriculum with code, so one artefact carries two legally
+different asset classes plus a brand. Found independently on two continents this pass
+(`T454-2`).
+
+**The clearance, per asset — three reads, three digests, recorded separately:**
+
+1. **Code grant** — the payload at `HEAD`, via `P454-A`. Record path, bytes, `sha256_12`, date.
+2. **Content/data grant** — a *different* file. `bncc-pacotes` → `LICENSE-DADOS.md`
+   (`1 108` B `965ba269fac6`, **CC BY 4.0**, with the attribution string the project asks for);
+   `aksara` → `CONTENT_LICENSE.md` (`10 053` B `2af44ab89691`, **not open**).
+3. **Brand grant** — usually a **withholding**, and it binds the deliverable's UI.
+   `bncc-pacotes` withholds wordmark, logo, colours and typography outright; `aksara` →
+   `TRADEMARKS.md` (`4 508` B `3ba64345e201`).
+
+🔴 **The failure this prevents, stated concretely:** vendoring `bncc-pacotes` on its registry
+`MIT` badge ships **CC BY 4.0 curriculum data with an attribution duty** inside an npm tarball or
+a PyPI wheel — the project states both artefacts carry both grants — and a deliverable that
+renders that data without the attribution string is out of compliance while every SBOM tool
+reports `MIT`.
+
+🟢 **And date the read.** `nakafaai/nakafa.com` moved from Source Available `1.0` (`7 705` B
+`de3d94045061`) to `2.0` (`11 997` B `97e8bdc2e3cd`) on `2026-10-24`, and §13 puts **every act
+started on or after that date** under the new terms regardless of when the copy was taken. A
+clearance without a date is a statement about the past.
+
+**Effort:** half a day per asset the first time, then a CI step.
+
 ## 🆕 `p453` — **Three recipes, each built only from grants read first-hand at `HEAD` this pass. 🟢 `P453-A` is the three-probe promotion gate this pass proved is necessary — because a live, MIT-granted, correctly-back-linked package can still have nothing to do with education. 🟢 `P453-B` is a US institution-intelligence engagement that is buildable for the first time. 🟢 `P453-C` is a French parent-facing agent on a closed national SIS.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is

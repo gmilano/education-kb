@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p454` — **🟢 `Gap 453-D` CLOSES for APAC with Indonesia's national register reached by four permissive clients, and a fifth region gains a foundational OER repository. 🔴 And that repository is the pass's second licence correction: npm declares `GNU GPL v2`, the payload at `HEAD` is `GPL-3.0` — two incompatible licences under one hint.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes. Nothing here is
+gate-attested; the contracts were re-implemented and are listed in `intel/open-gaps.md`.
+
+### 🟢 The APAC institution-registry layer — the region `Gap 453-D` named as unsearched
+
+🔵 `Gap 453-D` recorded the layer as *"two regions deep and three never searched"*, with
+**Indonesia, Japan, the Philippines** named. 🟢 **Indonesia closes.** Its national education data
+system, **Dapodik** (*Data Pokok Pendidikan*, `dapo.kemendikdasmen.go.id`), is reachable from
+permissively-granted code in three languages, and the student-identity tier (**VerValPD**) in a
+fourth:
+
+| repo | grant (first-hand, `HEAD`) | stratum | region |
+|---|---|---|---|
+| [`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) | **MIT** · `1 739` B `29e7d361ee3d` | national register — typed SDK (TS/JS) | APAC |
+| [`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php) | **MIT** · `1 105` B `ce39902853af` | national register — PHP client, CI-tested | APAC |
+| [`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) | **MIT** · `1 068` B `0ae5076b1e03` | student-identity verification (VerValPD) | APAC |
+| [`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru) | **MIT** · `1 072` B `3508ba25c5ad` | provincial teacher-data aggregate | APAC |
+| [`pipeworx-io/mcp-estat-japan`](https://github.com/pipeworx-io/mcp-estat-japan) | **MIT** · `1 070` B `42501667035e` | national statistics portal (e-Stat), education one domain of ~5 000 tables | APAC |
+
+🟢 **Why this is a foundation and not a trend row: all four Indonesian grants are MIT, and they
+stack.** The register (`dapodik-sdk` / `dapodik-api-php`), the identity tier (`vervalpd-node`) and
+the aggregate tier (`dapodik-data-guru`) are three different strata of one national system, each
+separately vendorable. That is the same shape `p453` closed for North America with IPEDS, and the
+first time this base can say it for an APAC country.
+
+### 🔴 EMEA/Global — a foundational OER repository, and a GPL **version** disagreement
+
+| repo | registry hint | payload at `HEAD` | region |
+|---|---|---|---|
+| [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | npm `ngx-edu-sharing-api@10.0.1` declares **`GNU GPL v2`** | 🔴 **`GNU GENERAL PUBLIC LICENSE Version 3`** · `LICENSE.txt` `35 148` B `8b1ba204bb69` | EMEA *(Germany)* |
+
+🟢 **edu-sharing is a genuine foundational asset** — an open-source repository/federation layer for
+**open educational resources**, with maintained Angular API and UI bindings (`ngx-edu-sharing-api`,
+`ngx-edu-sharing-ui`, modified `2026-08-07`), used across German-speaking state education portals.
+
+🔴 **But the licence hint is wrong in the one way that cannot be waved through: GPL-2.0 and
+GPL-3.0 are mutually incompatible.** A deliverable assembled on the npm field's authority could
+not lawfully combine edu-sharing with a GPL-2.0-only dependency. 🔵 And this base's **own** family
+reader hides it: `canon()` collapses `GPL-2.0-only` and `GPL-3.0` onto the family `GPL`, so the
+sweep graded the pair `AGREE`. 🔴 That is `Gap 454-C`, registered this pass — **a family-level
+reader cannot grade a version-level incompatibility**, and three of this base's carried GPL cells
+are family-level only.
+
+### 🔵 Philippines — an INFORMED ABSENCE, with a denominator and a named cause
+
+🔴 **No Philippine school-registry asset surfaced, and the reason is the search term, not the
+country.** `deped` returned **59 candidates and 0 education assets**: on Packagist it matches the
+substring `dep` in `deptrac/deptrac`, `php-di/php-di`, `symfony/dependency-injection`,
+`shipmonk/composer-dependency-analyser` and every other dependency-shaped package. `psa`
+(Philippine Statistics Authority) matched ConnectWise PSA, PureScript `psa` and Oracle `oci-psa`.
+
+🟡 **What DID surface is a different stratum, and it is real:** the **PSGC** (Philippine Standard
+Geographic Code) layer — [`pcofilada/psgc`](https://github.com/pcofilada/psgc),
+[`jobuntux/psgc`](https://github.com/jobuntux/psgc),
+[`anthonygacis/psgc-js`](https://github.com/anthonygacis/psgc-js),
+[`aivangogh/ph-address`](https://github.com/aivangogh/ph-address) — administrative geography, the
+same stratum as LATAM's `municipios-br`. 🔵 Grants **not** read first-hand this pass and therefore
+**not** celled; they are candidates for `p455`, not rows.
+
+🟢 **Stated so the absence is not mistaken for coverage:** the Philippine *school* register
+(DepEd's EBEIS/LIS) is **not** reachable from any package registry this pass searched, and the
+unambiguous vocabulary for it — a long, distinctive proper name — **has not been identified**.
+That is the actionable half of the nil.
+
 ## 🆕 `p453` — **🟢 `Gap 452-D` IS CLOSED FOR NORTH AMERICA, AND IT WAS THE CHEAP GAP `p452` SAID IT WAS: five permissively-granted US institution-registry assets, all read first-hand at `HEAD`, where the prior pass could name none and had searched for none. 🔴 APAC is closed as an INFORMED ABSENCE instead: India's school directory exists at 1.47 M rows and NOT ONE of its packaged forms carries a permissive grant.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is

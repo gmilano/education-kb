@@ -4,6 +4,169 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p454` — **🟢 `Gap 453-A`'s prescribed closure IS RUN over the 71 carried cells, and the answer the first run gave was WRONG: it reported 6 disagreements and 3 of them were the instrument's own. 🔴 Four defects in this pass's licence reader, and the first is INHERITED FROM THE GATE CODE — the 40-line window that `p450` installed to fix GPLv3 mis-grades GPLv2 as LGPL. 🟢 `Gap 453-D` CLOSES for Indonesia with four MIT rows read first-hand.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED** (`Code from
+External`) before any gate body ran — **nine denials in ten passes**. 🔵 Nothing below is
+gate-attested. 23 controls were re-implemented independently and run in **both** directions
+([`compose/code/p454-carried-cell-value/controls.py`](../compose/code/p454-carried-cell-value/controls.py),
+[`family_controls.py`](../compose/code/p454-carried-cell-value/family_controls.py)); eight of them
+assert payload digests **earlier passes published**, which is how three of this pass's four reader
+defects were caught.
+
+### 🔴 `Gap 453-A` answered — and the headline is that the instrument lied first
+
+`Gap 453-A` named this *"`p454`'s cheapest closure"*: 71 carried registry-sourced licence cells
+swept by `p452` for **address** (63/71 `AGREE`, 0 `DISAGREE`) and **never for value**.
+
+🔴 **The first run reported 6 `DISAGREE` (8.5 %) — nearly triple `p453`'s 3.0 % on novel
+packages — and that number was an artefact.** Three of the six were the licence reader's:
+
+| address | first run said | first-hand read says | verdict |
+|---|---|---|---|
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 declared `GPL`, served **`LGPL`** | 🟢 payload is **`GNU GENERAL PUBLIC LICENSE Version 2`** (`LICENSE` 18 025 B `a01259a1b522`); Packagist `v56.14.9` declares **`GPL-2.0-only`** | 🟢 **`AGREE`** — the disagreement was manufactured |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) ×2 | 🔴 declared `MIT`, served **`CC-BY`** | 🟡 payload is a **documented two-part notice**: code `MIT`, embedded data `CC BY 4.0` (`LICENSE` 1 299 B `86bf5f5e6306`) | 🟡 **`COMPOSITE`**, not a disagreement — and the registry's `MIT` is half-right |
+
+🟢 **The corrected figures over all 71 carried cells**
+([`evidence/carried-cell-licence-value.2026-10-26-p454.tsv`](../evidence/carried-cell-licence-value.2026-10-26-p454.tsv)):
+
+| verdict | n | share | what it means |
+|---|---|---|---|
+| 🟢 `AGREE` | 41 | 57.7 % | registry value and payload at `HEAD` are the same family |
+| 🟡 `MANIFEST_ONLY` | 10 | 14.1 % | registry declares a grant; **no payload at 13 paths** — 🔴 see the split below, this class conflates two facts |
+| 🔵 `NO_ADDRESS` | 8 | 11.3 % | `p452`'s 6 `ABSENT` + 1 `NO_RECORD` + 1 `PAGES_ONLY` |
+| 🟡 `REGISTRY_SILENT` | 5 | 7.0 % | payload grants; the registry field is empty |
+| 🔴 `DISAGREE` | 3 | 4.2 % | registry value and payload differ |
+| 🔴 `NO_GRANT_ANYWHERE` | 2 | 2.8 % | neither registry nor repository grants anything |
+| 🟡 `COMPOSITE` | 2 | 2.8 % | one artefact, two grants, one registry field |
+
+🔵 **And the comparison `Gap 453-A` was opened to make: 4.2 % carried vs 3.0 % novel is
+indistinguishable at these denominators (3/71 vs 5/166).** So the hypothesis that this base's
+*published* cells are cleaner than the open registry **is refuted** — and so is the opposite. The
+licence field is equally unreliable whether a human curated it or a probe found it.
+
+### 🔴 `MANIFEST_ONLY` conflated two different facts, and the split is the pass's bluntest number
+
+🔴 **A verdict built from grant paths alone cannot tell "the repository exists and has no licence
+file" from "the repository is gone".** Both return `404` on all 13 paths. 🟢 Re-probed on **13
+NON-licence paths** (`README.md`, `package.json`, `composer.json`, `pyproject.toml`, …), the 12
+`MANIFEST_ONLY` + `NO_GRANT_ANYWHERE` cells split:
+
+| class | n | addresses |
+|---|---|---|
+| 🔴 **`ADDRESS_DEAD`** — repository gone at `HEAD` | **8** | `thanh01pmt/interactive-quiz-kit` *(npm declared MIT)*, `ale-alejandro/beadkit`, `mckaroff/graphlms` *(MIT)*, `santillana-ai/tutor-sdk` *(MIT)*, `creaditor/frontend` *(ISC)*, `parkseokjune/unist-blackboard-mcp` *(MIT)*, `dev-cucei-itrans/siiau-api-client` *(BSD-3-Clause)*, `imsglobal/caliper-php` *(LGPL-3.0)* |
+| 🟡 `REPO_LIVE_NO_GRANT` — repository live, no grant anywhere | 4 | [`dmontgomery40/mcp-canvas-lms`](https://github.com/dmontgomery40/mcp-canvas-lms), [`general-mudkip/d2l-mcp-server`](https://github.com/general-mudkip/d2l-mcp-server), [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp), [`vosslab/qti_package_maker`](https://github.com/vosslab/qti_package_maker) |
+
+🔴 **So the honest figure for shelf decay is not 4.2 %: 16 of 71 carried cells (22.5 %) point at
+nothing readable** — 8 with no address at all (`p452`'s `ABSENT`/`NO_RECORD`/`PAGES_ONLY`) and 8
+with an address that is **dead at `HEAD`**. 🔵 That extends `Gap 452-B`, whose corrected
+unreachability rate on *newly discovered* registry addresses was **8.8 %**: on **carried** cells it
+is **11.3 %** dead plus 11.3 % addressless. 🟢 `imsglobal/caliper-php` is the one that should sting
+— it is the IMS Global reference implementation of the **Caliper** analytics standard, and both
+plausible successors (`1EdTech/caliper-php`, `IMSGlobal/caliper-php`) also `404`.
+
+### 🔴 The three disagreements that survived a first-hand read
+
+| address | registry says | payload at `HEAD` says | why it matters |
+|---|---|---|---|
+| [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) · [`scaler-opensource/exam-guard`](https://github.com/scaler-opensource/exam-guard) | npm `exam-guard@10.0.4` → **`ISC`** | **`Apache-2.0`** (`LICENSE` 11 357 B `c71d239df917`, both addresses) | 🟡 permissive↔permissive, but Apache-2.0 carries a **patent grant and a NOTICE duty** that ISC does not. 🟢 Third and fourth instances of the ISC-declared/Apache-served pattern `p453` first saw on `node-ecole-directe` |
+| [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) | carried as **`proprietary`** | **`LGPL-3.0`** (`LICENSE` 7 438 B `8c401dfc8928`) | 🔴 **the under-granting direction, and it is new.** A team filtering on the registry field **discards** a genuinely LGPL asset. 🔴 And the registry record itself is **gone**: `repo.packagist.org/p2/…` and `/packages/….json` both **404** today, so the carried `proprietary` is no longer checkable at source |
+
+### 🔴 A carried row is STALE, and the direction is the worst one available
+
+🔵 These shelves carry [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) as
+*"Nakafa Source Available `1.0`, eff. `2026-04-24` — NOT OSI"*, `7 705` B `de3d94045061`
+(`p229`, re-cited by `p230` and `p348`).
+
+🔴 **At `HEAD` today it is `Nakafa Source Available License 2.0`, effective `2026-10-24` — two
+days ago — `11 997` B `97e8bdc2e3cd`**, and the payload is **byte-identical** at
+[`nakafaai/aksara`](https://github.com/nakafaai/aksara). The whole estate re-versioned on the
+same date:
+
+| path | grant | bytes · `sha256_12` |
+|---|---|---|
+| `LICENSE` | 🔴 Nakafa **Source Available** License 2.0 | `11 997` · `97e8bdc2e3cd` |
+| `CONTENT_LICENSE.md` | 🔴 Nakafa **Content** License 2.0 | `10 053` · `2af44ab89691` |
+| `TRADEMARKS.md` | 🔴 Nakafa **Trademark and Brand Policy** 2.0 | `4 508` · `3ba64345e201` |
+
+🔴 **`p453` held this exact payload in its hands and recorded it `UNREAD` / `POINTER`.** On a
+shelf, `UNREAD` reads as *"grant not determined"* — which **invites a later pass to promote it** —
+while the payload's own second sentence is *"It is not open source, and it is not free to reuse."*
+🔵 Read first-hand: §4 forbids fork, mirror, redistribution, packaging, sublicensing, sale and
+hosting without written permission, and permits a fork **only** to prepare a pull request. §13 is
+the clause an engagement must read: a copy **lawfully received before** `2026-10-24` stays under
+`1.0` **for that copy only**, and every act started on or after that date — *"including a fork,
+publication, recording, post, Benefit, or AI use"* — is under `2.0`; version `1.0` is pinned at
+commits `ec5cb15359fc…` (`nakafa.com`) and `9b8cbbd9cc82…` (Aksara).
+
+🟢 **Standing rule this adds to `P453-A`:** a grant is **dated**, not just read. A carried licence
+cell with no re-read date is an assertion about the past.
+
+### 🟢 Promotions — Indonesia closes `Gap 453-D`, each row read first-hand at `HEAD` this pass
+
+🟢 **`Gap 453-B`'s remedy is confirmed with a measured contrast, which is the first time this base
+has had one.** Its rule was *"prefer vocabulary whose education sense is unambiguous — a named
+system of record"*. Run over four legs × three registries:
+
+| term | kind | candidates | education assets | precision |
+|---|---|---|---|---|
+| 🟢 `dapodik` | **distinctive proper name** (Indonesia's national school data system) | 4 | **4** | 🟢 **100 %** |
+| 🟢 `e-stat` / `gakko kihon chosa` | named statistical service | 47 | 1 | 🟡 2 % |
+| 🔴 `deped` | **short acronym** (Philippine education department) | 59 | **0** | 🔴 **0 %** — matched `deptrac`, `php-di`, `symfony/dependency-injection`, every `depend`-shaped package on Packagist |
+| 🔴 `psa` | short acronym | — | 0 | 🔴 **0 %** — matched ConnectWise PSA, PureScript `psa`, Oracle `oci-psa` |
+
+🔵 **So the remedy needs one amendment, and it is cheap: a named system of record only helps if
+the NAME IS LONG.** `dapodik`, `ecoledirecte`, `pronote`, `vervalpd` are orthographically
+distinctive; `deped`, `psa`, `npsn`, `uis` are three-to-five-letter strings that live inside
+ordinary English software words.
+
+| agent / client | address | grant (first-hand, `HEAD`) | region | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 Dapodik WebService SDK | [`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) | **MIT** · `LICENSE` `1 739` B `29e7d361ee3d` | APAC | Typed TS/JS SDK for the **Dapodik** web service (`dapo.kemendikdasmen.go.id`), Indonesia's national school/teacher/student register. npm `@smansage/dapodik-sdk@1.0.0`, modified `2026-08-30` |
+| 🆕 🟢 VerValPD client | [`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) | **MIT** · `LICENSE` `1 068` B `0ae5076b1e03` | APAC | Node client for **VerValPD** (`vervalpd.data.kemdikbud.go.id`), the student-identity verification system; `findStudent(query, limit, offset)` over an undocumented API |
+| 🆕 🟢 Dapodik API (PHP) | [`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php) | **MIT** (body form, no title) · `LICENSE.md` `1 105` B `ce39902853af` | APAC | Packagist-published PHP client for the same register, with CI |
+| 🆕 🟢 Dapodik teacher statistics | [`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru) | **MIT** · `LICENSE` `1 072` B `3508ba25c5ad` | APAC | Provincial (Banten) recapitulation of Dapodik **teacher** data — the aggregate tier above the register |
+| 🆕 🟡 e-Stat MCP (Japan) | [`pipeworx-io/mcp-estat-japan`](https://github.com/pipeworx-io/mcp-estat-japan) | **MIT** · `LICENSE` `1 070` B `42501667035e` | APAC | MCP over **e-Stat**, Japan's official statistics portal (~5 000 tables incl. the School Basic Survey). 🟡 **Graded honestly: a general-government-statistics gateway, not an education asset** — education is one domain of many |
+
+🔵 **Fabricated negative control:** `github.com/nope-p454-dapodik/nope-p454` returned
+`NO_PAYLOAD` on all 9 grant paths and all 6 README paths, so the six reachable rows above are a
+measurement and not a property of the probe.
+
+### 🔴 Four reader defects, and the first one is the gate's
+
+🔴 **(a) INHERITED, and it is the load-bearing one.** `Gap 450-C` defect (a) was *"a body grep
+calls every GPLv3 payload LGPL"*; `p450`'s remedy — carried in
+[`p453-vocabulary-ledger/verify.py`](../compose/code/p453-vocabulary-ledger/verify.py) — truncates
+to the first **40 non-empty lines**. 🔴 **GPLv2's PREAMBLE recommends the LGPL at non-empty line
+15**, inside that window: *"(Some other Free Software Foundation software is covered by the GNU
+Lesser General Public License instead.)"* So the window fixes GPLv3 and **breaks GPLv2**, and the
+defect stayed invisible for four passes because it was only ever validated on the version whose
+mention falls **outside** the window. 🟢 The sound anchor is the **title block**.
+
+🔴 **(b)-(d) this pass's own**, each caught by a first-hand read before anything was published:
+the composite check keyed on **markdown heading count** (so `aksara`'s 15 numbered sections read
+as a composite, and `bncc`'s genuine two-part notice lost its MIT half); `all rights reserved` was
+treated as evidence of a closed grant (it is the **opening line of thousands of MIT payloads** —
+[`davepacheco/node-extsprintf`](https://github.com/davepacheco/node-extsprintf) serves exactly
+that and then grants MIT in the next sentence); and an in-repo **pointer** was graded `NOT-OSI`
+([`ckeditor/ckeditor5`](https://github.com/ckeditor/ckeditor5) serves a `170` B root `LICENSE.md`
+reading *"maintained in `packages/ckeditor5/LICENSE.md`"*, and the repo really does serve a
+`17 983` B `COPYING.GPL`).
+
+🟢 **Measured cost of the carried reader: 5 of 179 payloads (2.8 %) grade differently**
+([`evidence/family-reader-delta.2026-10-26-p454.tsv`](../evidence/family-reader-delta.2026-10-26-p454.tsv)),
+and **three of the five were `UNREAD`** — the verdict that invites a promotion. Two of those three
+are genuinely closed: `nakafaai/aksara` above, and
+[`asherlc/dofek`](https://github.com/asherlc/dofek) (`1 125` B `3307cb042fcc`), whose payload
+grants *"viewing and reference purposes only"*, carries an explicit **no-AI-training clause**, and
+defers to a **per-directory `LICENSE` override**.
+
+🟢 **`Gap 453-E` (d) reproduced live as a control, not inferred:**
+`raw.githubusercontent.com/ckeditor/ckeditor5/HEAD/LICENSE` returns **HTTP 404 with a 14-byte
+body** whose content is the string `404: Not Found`. Every read in this pass gates on
+`%{http_code}`, so no phantom grant was published — but a byte-reader would have recorded a
+14-byte licence.
+
 ## 🆕 `p453` — **🟢 `Gap 452-A` IS ANSWERED WITH THE LARGEST DISCOVERY DENOMINATOR THIS BASE HAS EVER HAD, AND IT CONFIRMS `p452`'s PREDICTION IN BOTH DIRECTIONS: the eight prescribed identically-worded legs returned 13 tokens and ZERO at zero prior hits, while ten NEW-VOCABULARY legs on the same registry channel returned 182 candidates and 157 at zero. 🔴 And the finding that costs the most: 2 of those 157 are education assets and the rest are HOMONYMS — a live, permissively-granted address can pass every probe this base owns and still have nothing to do with education.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED.** The host refused

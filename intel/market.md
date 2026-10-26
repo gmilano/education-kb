@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p454` — **🟢 APAC gains the opportunity it has never had on these shelves: a national register reachable from four MIT clients, in a country of 1.4 M+ teachers. 🔴 And the market-research channel the encargo prescribes is graded a second time — 8 legs, and the two it was supposed to serve best (EMEA and APAC education) returned NOTHING education-specific.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes. Nothing here is
+gate-attested; the region-heading contract (`CANON`/`VOCAB`, `check_headings.py:17-19`) was read
+and re-implemented, and the single canonical `## Opportunities by region` block below is amended
+**in place** — exactly one block, five closed-vocabulary children, none added.
+
+### 🔴 The prescribed channel, graded again — and the gap is now placed, not just noted
+
+🔵 `p453` graded the market-research channel for the first time (4 legs, 0 primaries, 0
+repositories, 0 licences). 🟢 This pass ran **8 legs** — 4 global + 4 regional — and the result
+splits sharply **by region**, which is the actionable part:
+
+| leg | returned | usable |
+|---|---|---|
+| 🟡 global × 4 | SEO aggregators and vendor blogs; 2026 AI-education market quoted at **$10.6 B / $11.4 B / $79.6 B-by-2034** by three firms with CAGRs of **40.9 % / 25.9 % / 31.35 %** | 🔴 **Not comparable.** Recorded as a range, never as a figure |
+| 🟢 North America | Ohio's K-12 AI-policy mandate (districts due **1 Jul 2026**), 35 states + DC + PR with introduced legislation, 24 states enacted, **10 %** of institutions with formal AI guidance, **71 %** of US teachers untrained | 🟡 **All already shelved** by `p450`-`p453`. A pass on currency, a nil on novelty |
+| 🔴 **EMEA** | enterprise-AI trend pieces, a **2023** Workday study, CompTIA survey with **US-only** respondents | 🔴 **Zero education-specific findings. No ministry, regulator, edtech vendor or university named** |
+| 🔴 **APAC** | APAC enterprise-AI priorities, Singapore **financial-sector** consultations, a **49 %** real-time-infrastructure barrier, **87 % / 47 %** agent-encouragement-vs-governance gap | 🔴 **Zero K-12 or higher-ed policy findings.** The education items were corporate L&D (TCS/Pearson, LearnUpon Sydney HQ, Alteryx Academy) |
+| 🟢 LATAM | Digital Education Council LATAM 2026 (**30 000+** responses, 29 institutions): **92 %** of students and **79 %** of faculty engaging with AI; **50 %** of students support AI-assisted assignment feedback against **19 %** of faculty using it; only **30 %** of LATAM universities have a published AI policy. UNESCO IESALC / UNU-IAS (200 HEIs, 19 countries): teaching **73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement **20.0 %** | 🟢 **Two new cuts** (the 50/19 feedback gap, the 30 % policy figure); the IESALC shares re-confirm `p450`'s relayed values |
+
+🔴 **So the channel's failure is not uniform, and that is new information:** it serves LATAM and
+North America and returns *nothing education-specific* for EMEA and APAC. 🟢 **Both EMEA and APAC
+opportunities below are therefore sourced from SUPPLY — repositories and grants read first-hand —
+not from this channel.** That is written down so a later pass does not read the thin regional
+prose as thin opportunity.
+
 ## 🆕 `p453` — **🟢 The North America opportunity set gains a layer it did not have — the institution registry, five permissive rows deep — and EMEA gains a market shape these shelves had never recorded: a closed national system of record reached only by third-party clients. 🔴 And the market-research channel the encargo prescribes is graded as a channel for the first time: 4 legs, 0 primaries, 0 repositories, 0 licences.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is
@@ -376,6 +403,21 @@ vendor figure *36 % of the global market, $3.68 B in 2026* recurred and is **sti
 it is a market-research page with no primary behind it, and `Gap 450-B` records that this host
 cannot reach primaries to check it.
 
+
+🔵 `p454` · 2026-10-26 — 🔴 **Leg re-run, NIL on novelty, PASS on currency, and the tokens are
+named so the nil is auditable.** Returned: **Ohio**'s first-in-nation K-12 AI-policy mandate with
+districts due to adopt by **1 Jul 2026** (policy development only, no AI-literacy instruction
+requirement), **Tennessee** Public Chapter 550 (2024) as its predecessor, **35 states + DC +
+Puerto Rico** with introduced AI-education legislation and **24** enacted, **10 %** of
+institutions with formal AI guidelines, **71 %** of US teachers without AI training, and the NA
+regional market at **$951 M (2024) → $2 303 M (2029)** with a **36 %** regional share. 🟢 All of it
+is already on this shelf from `p450`-`p453`, so the **sell-state-by-state** rule above stands
+re-confirmed and unchanged. 🔴 **No NA-placed supply finding this pass** — the registry legs
+returned APAC and EMEA addresses, and that absence is recorded rather than filled. 🔵 One NA item
+was **refused**: a result headlined as a national student-written K-12 AI policy (Jul 2026)
+describes a **mock student-senate vote** organised by MIT RAISE, not a statute, and is not shelved
+as one.
+
 ### EMEA
 
 
@@ -445,6 +487,21 @@ readable from here and the secondaries disagree.
 🔴 **Informed gap, stated rather than left silent:** the leg returned **nothing** on the UK, the Gulf
 or sub-Saharan Africa. EMEA on this file remains EU-weighted plus one North African supply row.
 
+
+🔵 `p454` · 2026-10-26 — 🔴 **The regulatory leg returned nothing education-specific** (enterprise
+AI trend pieces, a **2023** Workday study, a CompTIA survey whose respondents are **US-only**),
+and that is written down as an **informed gap with a named cause**: this channel does not carry
+EMEA education policy, so EMEA regulatory facts on this shelf remain **relayed** per `Gap 446-D`'s
+thirteen-host finding. 🟢 **The EMEA opportunity this pass adds comes from supply instead, and it
+is a foundational one:** [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing)
+(*Germany*) — an open-source **repository and federation layer for open educational resources**,
+with maintained Angular API and UI bindings (`ngx-edu-sharing-api@10.0.1`, modified
+`2026-08-07`). 🔴 **Price the grant correctly before proposing it:** the payload at `HEAD` is
+**GPL *Version 3*** (`LICENSE.txt` `35 148` B `8b1ba204bb69`) while npm declares **`GNU GPL v2`**
+— two **incompatible** licences under one hint. An OER-federation deliverable here is a
+**copyleft** engagement (hosted service or separate-process integration), not a vendorable
+component, and that is the opposite of the Ed-Fi shape North America offers.
+
 ### APAC
 
 
@@ -503,6 +560,39 @@ AI Promotion Act as a principles law without penalties; Singapore's voluntary fr
 institution-level adoption figure** for any APAC country — only a commercial report naming Google,
 Microsoft, IBM, Pearson and Byju's as "key players", which is a vendor list and is **not promoted**.
 🔴 **The largest denominator in this file still has the thinnest measured demand.**
+
+
+🔵 `p454` · 2026-10-26 — 🟢 **The strongest APAC supply finding this base has recorded, and it
+closes `Gap 453-D` for a country.** **Indonesia's Dapodik** (*Data Pokok Pendidikan*,
+`dapo.kemendikdasmen.go.id`) — the Ministry of Primary and Secondary Education's single register
+of schools, teachers and students — is **closed, with no open core**, yet its client layer is
+**MIT at three strata and in three languages**:
+[`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) (`1 739` B `29e7d361ee3d`),
+[`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php)
+(`1 105` B `ce39902853af`),
+[`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) (`1 068` B
+`0ae5076b1e03`, student-identity tier) and
+[`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru) (`1 072` B
+`3508ba25c5ad`, provincial teacher aggregate). 🟢 **The sellable shape is the same one that pays
+in North America — an integration layer against a compelled national system of record — but here
+the clients are permissive and the vendor lock is absent.** `P454-B` is the recipe.
+🟡 **Japan** adds one honest row and no more: [`pipeworx-io/mcp-estat-japan`](https://github.com/pipeworx-io/mcp-estat-japan)
+(**MIT** · `1 070` B `42501667035e`) is an MCP over **e-Stat**, the official statistics portal
+(~5 000 tables including the School Basic Survey) — a **general** government-statistics gateway,
+graded as such rather than as an education asset.
+🔴 **The Philippines is an INFORMED ABSENCE with a denominator**: `deped` returned **59 candidates
+and 0 education assets** because the string matches `deptrac`, `php-di` and every
+`dependency`-shaped package on Packagist; `psa` matched ConnectWise PSA and Oracle `oci-psa`. The
+DepEd school register (EBEIS/LIS) is **not reachable from any package registry searched**, and the
+unambiguous term for it has **not been identified**. 🟡 What did surface is the **PSGC**
+administrative-geography stratum (`pcofilada/psgc`, `jobuntux/psgc`, `anthonygacis/psgc-js`,
+`aivangogh/ph-address`) — grants **not** read first-hand this pass and therefore not celled.
+🔴 **And one APAC risk hardened two days ago:** Indonesia's most visible education platform,
+[`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) / `aksara`, re-versioned its whole
+estate to **Source Available 2.0** on `2026-10-24` (code `11 997` B `97e8bdc2e3cd`, content
+`10 053` B `2af44ab89691`, brand `4 508` B `3ba64345e201`) — fork, mirror, redistribution,
+packaging, sublicensing and hosting all require **written permission**. A studio cannot build on
+it; it is a competitor to map, not a base to extend.
 
 ### LATAM
 
@@ -572,6 +662,30 @@ constraints; the Tec de Monterrey × UNESCO agreement.
 🟢 **The 87 % / 26 % governance gap is re-confirmed as the single strongest number on this file** —
 near-universal adoption against one institution in four having a strategy — and it is re-confirmed
 by the same survey, not by a new one, so it is a **re-read and not a new measurement**.
+
+
+🔵 `p454` · 2026-10-26 — 🟢 **Two new demand cuts and one new supply shape.**
+**Demand:** the Digital Education Council's **LATAM 2026** survey (**30 000+** responses across 29
+institutions) reports **92 %** of students and **79 %** of faculty actively engaging with AI, and
+the gap that is actually sellable — **50 %** of students support AI-assisted feedback on
+assignments while only **19 %** of faculty currently do it — against only **30 %** of LATAM
+universities having a **published AI policy**. 🔵 The UNESCO IESALC / UNU-IAS regional survey (200
+HEIs, 19 countries, Aug-Oct 2025) re-confirms `p450`'s relayed adoption shares: teaching and
+learning **73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement
+**20.0 %**. 🔵 Governance unchanged and still the barrier: **Chile** has had a national AI policy
+since 2021 with a bill under discussion; **Brazil** and **Colombia** have national strategies
+with no education-sector rules; **Mexico**'s SEP/ANUIES/Observatorio IA recommendations are
+explicitly **non-binding**.
+🟢 **Supply:** [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) — packaged
+**BNCC** (*Base Nacional Comum Curricular*) curriculum standards for Brazil, with an MCP worker,
+published to **both** npm and PyPI. 🔴 **And it is the cleanest instance of this pass's licence
+finding:** the registry declares `MIT`, while the repository serves a documented **two-part**
+grant — code **MIT**, embedded curriculum JSON **CC BY 4.0** (`LICENSE` `1 299` B `86bf5f5e6306`,
+`LICENSE-DADOS.md` `1 108` B `965ba269fac6`) — and the project states that the **npm tarball and
+the PyPI wheel carry both grants in the same artefact**. 🟢 **The opportunity: a curriculum-aligned
+tutor or assessment layer for Brazil can be built on permissive code with authoritative BNCC
+data — provided the deliverable carries the CC BY attribution string the project specifies.** The
+**50 %/19 %** feedback gap above is what it should be sold against.
 
 ### Global
 
@@ -647,6 +761,23 @@ the channel.** `Gap 450-A` proposed new channels; `p451` changed channel and got
 changed channel *and* query on one channel and got zero, then changed vocabulary and got 39. 🔴 **A
 ninth identically-worded regional leg will nil too, and that is now a prediction with a mechanism
 behind it rather than a complaint.** Registered as `Gap 452-A`.
+
+
+🔵 `p454` · 2026-10-26 — 🔴 **The global market figures remain non-comparable and are recorded as a
+range, not a number:** three firms put 2026 AI-in-education at **$10.6 B**, **$11.4 B** and on a
+path to **$79.6 B by 2034**, with CAGRs of **40.9 %**, **25.9 %** and **31.35 %** — spans too wide
+to plan against, and all from secondary aggregators. 🟡 One widely-repeated adoption figure
+(student AI use **66 % → 92 %**, 2024→2025) is carried as **relayed and unverified**.
+🟢 **The Global opportunity this pass can assert with its own measurement is advisory, and it is
+new:** a **licence-attestation** capability. Measured here, on this base's own published rows:
+a registry's licence value disagrees with the payload **4.2 %** of the time (3 of 71 carried
+cells), and — larger — the **reader** of the payload is wrong **2.8 %** of the time (5 of 179), with
+**three of those five reporting silence where the payload states a refusal**. 🔴 Two carried
+instances show what that costs: a `proprietary` cell over an **LGPL-3.0** payload whose registry
+record has since **404'd**, and an `MIT` npm badge over a **GPL-2.0-declared / GPL-3.0-served**
+incompatibility. 🟢 Every enterprise shipping an AI education product has an SBOM that reports a
+family and a date it never re-checked; `P454-A` and `P454-C` are the deliverable, and they are
+industry-agnostic.
 
 ## 🆕 `p447` · 2026-10-26 — **🟢 `Gap 445-F` IS CLOSED, AND IT PAID TWICE OVER: the EMEA country leg did not merely return facts where two consecutive region legs nilled — it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🔴 The other three legs nil. 🔴 And `Gap 446-D` is now measured across ELEVEN primaries with a control: this file's entire EMEA and LATAM regulatory layer is relayed.**
 

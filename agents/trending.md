@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 2026-10-26 · `p454` — **Indonesia arrives on these shelves with four MIT clients to a national register, and a grant this base already called NOT-OSI re-closed HARDER two days ago.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — nine denials in ten passes. 🔵 This file is
+**append-only**: the section below is added at the top and nothing beneath it is rewritten.
+
+### 🟢 New this week — APAC, and the first Indonesian education rows this base has celled
+
+🟢 All five read first-hand at `HEAD` this pass, with a fabricated negative control
+(`nope-p454-dapodik/nope-p454`) dead on all 15 probed paths:
+
+| agent / client | address | grant | region |
+|---|---|---|---|
+| Dapodik WebService SDK (TS/JS) | [`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) | **MIT** · `1 739` B `29e7d361ee3d` | APAC *(Indonesia)* |
+| VerValPD student-identity client | [`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) | **MIT** · `1 068` B `0ae5076b1e03` | APAC *(Indonesia)* |
+| Dapodik API (PHP) | [`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php) | **MIT** · `1 105` B `ce39902853af` | APAC *(Indonesia)* |
+| Dapodik teacher-data statistics | [`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru) | **MIT** · `1 072` B `3508ba25c5ad` | APAC *(Indonesia)* |
+| e-Stat MCP (general statistics) | [`pipeworx-io/mcp-estat-japan`](https://github.com/pipeworx-io/mcp-estat-japan) | **MIT** · `1 070` B `42501667035e` | APAC *(Japan)* |
+
+### 🔴 The week's most consequential movement is a grant, not a release
+
+🔴 **`Nakafa Source Available License 2.0`, effective `2026-10-24`** — `11 997` B `97e8bdc2e3cd`,
+byte-identical at [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) and
+[`nakafaai/aksara`](https://github.com/nakafaai/aksara), with
+`CONTENT_LICENSE.md` 2.0 (`10 053` B `2af44ab89691`) and `TRADEMARKS.md` 2.0 (`4 508` B
+`3ba64345e201`) re-versioned the same day. 🔵 These shelves carried version `1.0`
+(`7 705` B `de3d94045061`, eff. `2026-04-24`) from `p229`. 🔴 `p453` read the 2.0 payload and
+recorded it **`UNREAD`**. It is not unread — §4 forbids fork, mirror, redistribution, packaging,
+sublicensing, sale and hosting without written permission, and §13 puts **every act started on or
+after `2026-10-24`** under 2.0 regardless of when the copy was obtained.
+
+🟡 **Also newly celled as closed:** [`asherlc/dofek`](https://github.com/asherlc/dofek)
+(`1 125` B `3307cb042fcc`) — *"viewing and reference purposes only"*, with an explicit
+**no-AI-training clause** and a per-directory `LICENSE` override. Previously `UNREAD`.
+
+### 🔵 Discovery-channel yield this week, recorded so `p455` does not re-spend it
+
+| leg | terms | candidates | education assets | precision |
+|---|---|---|---|---|
+| 🟢 Indonesia | `dapodik`, `npsn`, `data pokok pendidikan`, `sekolah kemdikbud` | 70 | 4 | 🟢 **100 % on `dapodik` alone** |
+| 🟡 Japan | `mext school`, `gakko kihon chosa`, `e-stat school japan` | 47 | 1 | 🟡 2 % |
+| 🔴 Philippines | `deped`, `ebeis lis deped`, `philippine school id psa` | 59 | 0 | 🔴 **0 %** |
+| 🔴 Global | `unesco uis education`, `isced level`, `edu-sharing oer` | 61 | 1 *(edu-sharing, placed EMEA)* | 🔴 2 % |
+
+🔵 **The mechanism, and it amends `Gap 453-B` rather than repeating it:** a named system of record
+only beats a common noun **if the name is long**. `dapodik` and `vervalpd` have no software
+homonym; `deped` and `psa` are short strings that live inside `deptrac`, `dependency-injection`,
+`purescript-psa` and `oci-psa`.
+
 ## 🆕 `p453` — reads 2026-10-26, commit 2026-10-26 — **🟢 What is new this week is a REGION and a TIER, not a star count: a French national system of record reached by client library, and the first credential-verification agent on these shelves that names learners in its own README. 🔴 What is also new is a measured reason to distrust a registry licence badge: 5 of 166 live packages declare a licence their own repository contradicts, and one of them declares MIT while serving AGPL-3.0.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes, so nothing here is

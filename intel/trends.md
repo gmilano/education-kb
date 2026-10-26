@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p454` — **Three trends, each with a measured denominator from this pass rather than a vendor quote. 🔴 The first says the licence READER is now a bigger error source than the licence FIELD; the second is a licence shape education has for a structural reason; the third amends a shelf rule this base wrote one pass ago.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes.
+
+### 🔴 `T454-1` — The reader is the instrument, and it has a measured error rate
+
+🔵 `p453` established that a registry's licence field disagrees with the payload **3.0 %** of the
+time. 🟢 This pass measured the same question over the cells this base has **published**: **3 of 71
+(4.2 %)** — indistinguishable from the novel rate, which refutes the idea that curation cleans the
+field.
+
+🔴 **But the larger error was in the tool, not the data.** Re-reading **179 carried payloads** with
+two readers, **5 (2.8 %) grade differently**, and the carried reader is wrong in all five:
+
+| mis-grade | instance | why |
+|---|---|---|
+| 🔴 `GPL-2.0` read as `LGPL` | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | GPLv2's **preamble** recommends the LGPL at non-empty line 15 — inside the 40-line window `p450` installed to fix the *GPLv3* case, whose mention falls outside it |
+| 🔴 closed grant read as `UNREAD` | [`nakafaai/aksara`](https://github.com/nakafaai/aksara), [`asherlc/dofek`](https://github.com/asherlc/dofek) | neither payload is an OSI family, so a family-matcher returns "unknown" for text that says *"not open source"* in its second sentence |
+| 🟡 pointer read as `UNREAD` | [`ckeditor/ckeditor5`](https://github.com/ckeditor/ckeditor5) | a `170` B root file naming another path is the **absence** of a grant here, not the refusal of one |
+| 🟡 composite read as one family | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | a two-part notice graded `CC-BY` and silently discarded the MIT half |
+
+🟢 **The direction is what makes this a trend and not a bug report: three of the five were
+`UNREAD`.** On a shelf, `UNREAD` reads as *"grant not determined"* — an invitation to a later pass
+to promote the row. **Two of those three are genuinely closed.** A licence pipeline's dangerous
+failure is not mislabelling MIT as Apache; it is reporting *silence* where there is a **refusal**.
+
+🔵 **Engagement consequence:** a licence attestation is only as good as the reader that produced
+it, and a reader validated on one licence version is not validated. Ask which reader, on which
+date, against which control set.
+
+### 🟡 `T454-2` — Education licenses in three strata, and a single SPDX field cannot say so
+
+🟢 Found **independently, in one hour, on two continents**: `bncc-dev/bncc-pacotes` (Brazil) splits
+**MIT code / CC BY 4.0 curriculum data / withheld brand**; `nakafaai/aksara` (Indonesia) splits
+**Source Available 2.0 code / Content License 2.0 material / Trademark Policy 2.0 brand**.
+
+🔵 **The mechanism is structural, not stylistic.** A vertical that ships curriculum with code holds
+two legally different asset classes in one artefact, and content is not licensed like software.
+`bncc-pacotes` says so explicitly: the npm tarball and the PyPI wheel carry **both grants in the
+same artefact**.
+
+🔴 **So every "MIT" badge on an education data package is a partial statement**, and the part it
+omits is the part with the attribution duty. 🟢 The clearance unit for this industry is **three
+grants per asset**, not one.
+
+### 🟢 `T454-3` — A named system of record beats a common noun only if the name is LONG
+
+🔵 `Gap 453-B`'s remedy, written one pass ago, was *"prefer a named system of record"* after
+`pedagogy`, `special-education` and `vocational` returned **0 % precision over 61 candidates**.
+🟢 Tested this pass over 4 legs × 3 registries, and it holds **with an amendment**:
+
+| term | shape | candidates | education assets | precision |
+|---|---|---|---|---|
+| 🟢 `dapodik` | long, distinctive proper name | 4 | 4 | 🟢 **100 %** |
+| 🟡 `gakko kihon chosa` / `e-stat` | named service | 47 | 1 | 🟡 2 % |
+| 🔴 `deped` | **5-letter acronym** | 59 | 0 | 🔴 **0 %** |
+| 🔴 `psa` | **3-letter acronym** | — | 0 | 🔴 **0 %** |
+
+🔴 **`deped` matched the substring `dep` across all of Packagist** — `deptrac`, `php-di`,
+`symfony/dependency-injection`, `composer-dependency-analyser`. `psa` matched ConnectWise PSA,
+PureScript `psa`, Oracle `oci-psa`. 🟢 **Amended rule:** a system-of-record name is only
+unambiguous when it is **orthographically distinctive** — `dapodik`, `vervalpd`, `ecoledirecte`,
+`pronote` qualify; `deped`, `psa`, `npsn`, `uis`, `ISCED` do not, and spending a leg on them buys
+a homonym list.
+
 ## 🆕 `p453` — **🟢 Three trends this pass can assert with a measured mechanism rather than a vendor quote, and all three change what an engagement does on day one: a registry licence badge is wrong 3 % of the time and wrong in the expensive direction once; the national system of record, not the LMS, is the real integration surface outside the Anglosphere; and the institution-registry layer has split into strata that answer different questions.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is

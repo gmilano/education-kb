@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p454` — **🟢 A national system of record this base had never named is customisable from MIT code: Indonesia's Dapodik, reached at three strata. 🔴 And the vertical layer gains a licence SHAPE that no single SPDX field can express — the three-strata grant, found independently in Brazil and Indonesia in the same hour.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — ninth denial in ten passes.
+
+### 🟢 Dapodik — Indonesia's national education register, as a customisable base
+
+🔵 **Dapodik** (*Data Pokok Pendidikan*, `dapo.kemendikdasmen.go.id`) is the Ministry of Primary
+and Secondary Education's single register of schools, teachers and students. Like ÉcoleDirecte
+(EMEA, `p453`) it is a **closed national system of record with no open core** — but unlike
+ÉcoleDirecte, its client layer is **MIT across three languages and three strata**:
+
+| stratum | asset | grant (first-hand, `HEAD`) | what it gives an engagement |
+|---|---|---|---|
+| register access | [`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) | **MIT** · `1 739` B `29e7d361ee3d` | typed TS/JS SDK over the Dapodik web service |
+| register access | [`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php) | **MIT** · `1 105` B `ce39902853af` | PHP client, CI-tested — the stack most Indonesian school software is written in |
+| student identity | [`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) | **MIT** · `1 068` B `0ae5076b1e03` | VerValPD lookups (`findStudent`) over an undocumented API |
+| aggregate reporting | [`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru) | **MIT** · `1 072` B `3508ba25c5ad` | provincial teacher-data recapitulation |
+
+🟡 **Read the stratum honestly before selling it.** `vervalpd-node` describes itself as a
+**scraper of a non-documented API**. That is a real integration path and a real fragility: it is
+not a supported contract, and an engagement that depends on it owes a change-detection test, not
+an SLA.
+
+### 🔴 The three-strata grant — a vertical-layer shape, found twice in one hour
+
+🔵 Two unrelated education projects, on two continents, independently split their grant the same
+way — and **neither split is expressible in a registry's single `license` field**:
+
+| project | code | content / data | name & brand |
+|---|---|---|---|
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) *(LATAM, Brazil)* | 🟢 **MIT** (`LICENSE-CODIGO.md`) | 🟡 **CC BY 4.0** for the BNCC curriculum JSON (`LICENSE-DADOS.md` `1 108` B `965ba269fac6`) | 🔴 *"não licenciados"* — wordmark, logo, colours explicitly withheld |
+| [`nakafaai/aksara`](https://github.com/nakafaai/aksara) *(APAC, Indonesia)* | 🔴 **Source Available 2.0** (`11 997` B `97e8bdc2e3cd`) | 🔴 **Content License 2.0** (`10 053` B `2af44ab89691`) | 🔴 **Trademark Policy 2.0** (`4 508` B `3ba64345e201`) |
+
+🟢 **Why education specifically.** A vertical that ships *curriculum* alongside *code* has two
+different kinds of asset in one artefact, and content is not licensed like software. `bncc-pacotes`
+states the consequence outright: the **npm tarball and the PyPI wheel carry MIT code and CC BY 4.0
+data in the same artefact**. 🔴 A studio that vendors it on the registry's `MIT` badge therefore
+inherits **attribution obligations it never read**, and the attribution string the project asks for
+is specified in `LICENSE-DADOS.md`, not in the package metadata.
+
+🟢 **Operational rule for this layer, and it is new:** for any education vertical, clear **three**
+grants — code, content, brand — and record each one's bytes and digest separately. One SPDX value
+per package is a category error here, not a shortcut.
+
+### 🔵 Carried vertical rows, re-read at `HEAD`
+
+🟢 [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) — **GPL-2.0, correctly declared**
+(`18 025` B `a01259a1b522`). TAO remains the copyleft assessment platform on these shelves;
+GPL-2.0 (not LGPL, as a reader defect this pass briefly reported) means **no proprietary
+linking**.
+🔴 `imsglobal/caliper-php` — **the address is DEAD, which is worse than the `MANIFEST_ONLY` this
+pass first recorded.** Packagist declared `LGPL-3.0`; the Packagist record now **404s**; and the
+repository itself returns `404` at `HEAD` on **all 13 non-licence paths probed** (`README.md`,
+`composer.json`, `.gitignore`, …), as do both plausible successors `1EdTech/caliper-php` and
+`IMSGlobal/caliper-php`. 🔴 **The IMS Global reference implementation of the Caliper analytics
+standard is not retrievable from this address at all** — so it is not a licence question, and this
+row is a dead citation, not a vertical option.
+🔴 [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) —
+the fork that **does** serve one: **LGPL-3.0** (`7 438` B `8c401dfc8928`), against a carried cell
+of `proprietary`. 🟢 For a Caliper engagement, this is the address to read.
+🟢 [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) — **GPL-3.0**
+(`35 148` B `8b1ba204bb69`), an OER repository/federation platform customisable with AI on top;
+🔴 npm's `GNU GPL v2` hint is wrong and the two versions are incompatible.
+
 ## 🆕 `p453` — **🟢 The institution-registry layer `p452` opened with one country now spans two regions and three strata — national directory, federal statistical series and school-authored disclosure — and the US stratum is the one an engagement can actually build on. 🔴 And a vertical row is corrected in place: the French national SIS tier exists here for the first time, under a grant its own registry record states wrongly.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Nothing here is

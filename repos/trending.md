@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 2026-10-26 · `p454` — **A foundational OER repository joins the shelves, and its registry licence field names a GPL version that is incompatible with the one it serves.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — nine denials in ten passes. 🔵 This file is
+**append-only**: the section below is added at the top and nothing beneath it is rewritten.
+
+### 🔴 `edu-sharing/Edu-Sharing` — real asset, wrong hint
+
+| repo | registry hint | payload at `HEAD` | bytes · `sha256_12` |
+|---|---|---|---|
+| [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | npm `ngx-edu-sharing-api@10.0.1` → **`GNU GPL v2`** | 🔴 **GPL *Version 3*** | `35 148` · `8b1ba204bb69` |
+
+🟢 Open-source repository and federation layer for **open educational resources**, with maintained
+Angular API/UI bindings (modified `2026-08-07`); widely deployed in German-speaking state
+education portals. Region **EMEA** *(Germany)*; surfaced on the `global` probe leg.
+
+🔴 **GPL-2.0 and GPL-3.0 are mutually incompatible**, so this is not a cosmetic mismatch: a
+deliverable built on the npm field's authority could not lawfully combine edu-sharing with a
+GPL-2.0-only dependency. 🔴 This base's own `canon()` collapses both onto the family `GPL` and
+therefore graded the pair `AGREE` — registered as `Gap 454-C`.
+
+### 🟢 The APAC register tier, newly celled
+
+[`ardianryan/dapodik-sdk`](https://github.com/ardianryan/dapodik-sdk) (**MIT** · `1 739` B
+`29e7d361ee3d`), [`adereksisusanto/dapodik-api-php`](https://github.com/adereksisusanto/dapodik-api-php)
+(**MIT** · `1 105` B `ce39902853af`),
+[`smantriplw/vervalpd-node`](https://github.com/smantriplw/vervalpd-node) (**MIT** · `1 068` B
+`0ae5076b1e03`), [`bantenprov/dapodik-data-guru`](https://github.com/bantenprov/dapodik-data-guru)
+(**MIT** · `1 072` B `3508ba25c5ad`),
+[`pipeworx-io/mcp-estat-japan`](https://github.com/pipeworx-io/mcp-estat-japan) (**MIT** ·
+`1 070` B `42501667035e`).
+
+### 🔵 Carried rows re-read at `HEAD` this pass — 71 cells, 3 real disagreements
+
+🟢 [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) is **GPL-2.0, correctly declared**
+(`LICENSE` `18 025` B `a01259a1b522`; Packagist `v56.14.9` → `GPL-2.0-only`). 🔴 A reader defect
+this pass found and fixed had reported it as `LGPL` — see `agents/top.md` `p454`.
+🔴 [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public)
+serves **LGPL-3.0** (`7 438` B `8c401dfc8928`) while carried as `proprietary`, and its Packagist
+record now **404s** on both metadata endpoints.
+🟡 [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) is a **composite**, not a
+disagreement: code `MIT`, embedded BNCC data `CC BY 4.0` (`LICENSE` `1 299` B `86bf5f5e6306`,
+`LICENSE-DADOS.md` `1 108` B `965ba269fac6`) — and the project states the npm tarball and the PyPI
+wheel carry **both in one artefact**.
+
 ## 🆕 `p453` — reads 2026-10-26, commit 2026-10-26 — **🔴 The GitHub-trending channel nilled for education a tenth consecutive window, and this pass can finally say WHY with a measurement rather than a shrug: the channel is not thin, the QUERY VOCABULARY is exhausted. Eight identically-worded legs returned 13 tokens and zero at zero prior hits; ten new-vocabulary legs on the same registry channel returned 182 candidates and 157 at zero.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — eighth denial in nine passes. Append-only: this
