@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 `p450` · reads 2026-10-26, commit 2026-10-26 — **🔴 FIFTEEN CANDIDATES OFF SIX LEGS, FIFTEEN ALREADY SHELVED, ZERO AT ZERO PRIOR HITS — the fifth consecutive nil. 🟢 The pass's finding is not on the discovery channel but on the VERIFICATION one: nine addresses carried in this file's own history are unreachable on two independent channels, and five of those nine still publish working npm packages. 🔴 `make hooks` DENIED, so no gate attests this section.**
+
+🔵 **APPEND-ONLY shelf** — this section is inserted above `p449`'s; nothing below it is rewritten.
+🔵 **Single date:** every probe, `ls-remote`, licence read and digest below ran **2026-10-26**.
+
+### 🔴 The week's discovery stream, graded before it was written down
+
+| leg | candidates returned | at **zero** prior hits |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | general-purpose agents + two curated lists | 🔴 **0** |
+| `github trending education AI 2026` | DeepTutor, `skyzh/tiny-llm`, `withmarbleapp/os-taxonomy`, `microsoft/ML-For-Beginners` | 🔴 **0** |
+| `open source AI tutor agent 2026 Apache` | Open TutorAI *(arXiv 2602.07176)* | 🔴 **0** — 22 prior files |
+| LMS-connector MCP | `vishalsachdev/canvas-mcp`, `peancor/moodle-mcp-server`, `Mattlo0546/classroom-mcp`, `JohannsenLum/canvas-api-mcp`, `DMontgomery40/mcp-canvas-lms` | 🔴 **0** |
+| automated grading / assessment | `Submitty`, `INGInious`, `savinoo/ai-grading-system`, `Fatima0923/AssessmentAI`, `ai-lingnan/econai-agent-platform`, `BaijayantaRoy/bandup`, `sourcegrade/jagr` | 🔴 **0** |
+| vertical platforms | Moodle, Open edX, OpenEduCat, Sakai, ILIAS, Chamilo | 🔴 **0** |
+
+🟢 **The obscure tail is the informative part.** `BaijayantaRoy/bandup` (a Singapore-exam marking
+assistant) and `ai-lingnan/econai-agent-platform` are exactly the addresses a gap in coverage would
+expose first, and both return **8 prior files**. 🔵 Coverage of the *prescribed* channels is not the
+question any more; `Gap 450-A` records the consequence — **the next new row has to come from a new
+channel** (package registries, conference artefact tracks, ministry procurement listings), not a
+new query.
+
+### 🔴 Nine addresses in this file's own history cannot be reached — and the npm half still works
+
+Probed on **two** channels with a **fabricated negative control**
+(`evidence/slug-oracle-control.2026-10-26-p450.tsv`;
+`evidence/shelf-reachability-census.2026-10-26-p450.tsv`):
+
+| address *(as carried in this file)* | `raw HEAD/README.md` | `ls-remote` | 🟡 surviving channel |
+|---|---|---|---|
+| [thanh01pmt/interactive-quiz-kit](https://github.com/thanh01pmt/interactive-quiz-kit) | 🔴 404 | 🔴 128 | 🟡 **npm `@thanh01.pmt/interactive-quiz-kit`, 103 versions** |
+| [santillana-ai/tutor-sdk](https://github.com/santillana-ai/tutor-sdk) | 🔴 404 | 🔴 128 | 🟡 **npm `@santillana-ai/create-tutor-app`, 63 versions** |
+| [yokowasis/autograder](https://github.com/yokowasis/autograder) | 🔴 404 | 🔴 128 | 🟡 **npm `exam-autograder` v1.6.0** |
+| [ale-alejandro/beadkit](https://github.com/ale-alejandro/beadkit) | 🔴 404 | 🔴 128 | 🟡 **npm `beadkit` v0.1.0** — grant reads `"SEE LICENSE IN LICENSE"`, pointing into an unreachable tree |
+| [Mckaroff/GraphLMS](https://github.com/Mckaroff/GraphLMS) | 🔴 404 | 🔴 128 | 🟡 **npm `rhizome-lms-mcp` v0.3.1** |
+| [AI-Matrix-Engine/aidream](https://github.com/AI-Matrix-Engine/aidream) | 🔴 404 | 🔴 128 | 🟡 npm `@ai-matrx/print` |
+| [e9x/blackboard-mcp](https://github.com/e9x/blackboard-mcp) · [parkseokjune/unist-blackboard-mcp](https://github.com/parkseokjune/unist-blackboard-mcp) | 🔴 404 | 🔴 128 | 🔴 **none** — already graded `DEAD / private` at `agents/top.md` by `p386` |
+| [dev-cucei-itrans/siiau-api-client](https://github.com/dev-cucei-itrans/siiau-api-client) | 🔴 404 | 🔴 128 | 🔴 **none** — Packagist package marked abandoned |
+
+🟢 **The two-channel result is controlled in both directions:** 366 of 375 shelved addresses
+resolve in the same run, so the channels work; the fabricated slug `nope-xyz-123/nope` fails both,
+so they discriminate. 🔴 **And `Gap 420-C`'s promised closure is unavailable in principle** — the
+fabricated control emits stderr byte-identical to all eight carried addresses, so a credential
+prompt cannot separate *absent* from *private* on GitHub over HTTPS. Closed as **UNANSWERABLE ON
+THIS CHANNEL** in `agents/top.md`.
+
+🔵 **The row that matters for a studio engagement:** five of these nine are **installable and
+un-forkable**. The published artefact survives on npm while the repository does not, so there is
+nothing to audit, patch or vendor. 🟢 `gate-dead-citation`'s rule already covers it — *a dead
+address may be recorded, never recommended* — and this pass changes none of these rows' grades,
+only their evidence.
+
+### 🟡 One trending-channel observation, recorded as an observation
+
+The two automated digests that surfaced this week (`kakapez/agents-radar` #1676 and
+`HuggerHustle/ai-radar` #56, both dated **2026-10-26**) name **DeepTutor** as the education entry
+in a field otherwise made of coding and general-purpose agents. 🔵 Unchanged from `p449`, and the
+reason is cadence, not ecosystem: GitHub trending refreshes **daily** against an **hourly** read, so
+≈23.6 passes sample each snapshot (`Gap 448-A`, n=309). 🔴 **An unchanged digest is the expected
+observation at P ≈ 95.8 % and is not evidence about supply.**
 ## 🆕 `p449` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE GATE RAN after three denials, and its arrival baseline caught TWO undetected contract violations, both `p448`'s. 🟢 Discovery saturated a FOURTH time — and for the first time the saturation is INTERPRETABLE, because `Gap 448-A` is answered with n=309: the schedule is hourly against a daily channel, so an unchanged shelf is the EXPECTED observation at P ≈ 95.8 %. 🔴 `curl -sI` is a false-negative machine on this host.**
 
 🟢 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` RAN.** One

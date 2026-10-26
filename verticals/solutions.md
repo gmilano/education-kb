@@ -3,6 +3,67 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 `p450` — **🔴 THIS FILE CONTRADICTED ITSELF ON THE MOST EXPENSIVE LICENCE IN THE INDUSTRY: one table graded H5P `🟢 MIT`, another in the SAME FILE graded it `🟡 GPL-3.0` and added "widely mislabelled MIT". A first-hand read settles it — GPL-3.0 — and the wrong row is corrected in place rather than left for a reader to pick between. 🟢 Two platform defaults are also measured and neither is `main`: Tutor defaults to `release`, Oppia to `develop`.**
+
+🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no gate attests the
+cells below. Stated first, per `Gap 446-A`.
+
+### 🔴 The self-contradiction, and why it is the one that matters
+
+| line | row as it stood | status |
+|---|---|---|
+| `verticals/solutions.md:687` *(carried platform rows)* | **`\| H5P \| 🟢 MIT \| Interactive content types; embeds in Moodle, Canvas and Open edX. \|`** | 🔴 **WRONG** |
+| `verticals/solutions.md:1031` *(same file, later block)* | **`\| H5P \| 🟡 GPL-3.0 \| … 🔴 Widely mislabelled MIT. \|`** | 🟢 **RIGHT** |
+
+🔴 **Both rows were live, in one file, and a reader taking the first table at face value inherits a
+copyleft obligation this file had already identified and warned about.** This file's own Canvas row
+states the stakes: *"conflating the two is the single most expensive licence error available in this
+industry."*
+
+🟢 **Settled first-hand through the `raw` channel, 2026-10-26**
+(`evidence/licence-title-anchored.2026-10-26-p450.tsv`):
+[h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) · ref **`master`** · grant at **`LICENSE.txt`** · **GPL-3.0, Version 3, 35 146 B** — the same GPLv3
+text [moodle/moodle](https://github.com/moodle/moodle) carries at `COPYING.txt`, **35 147 B**, the
+one-byte delta being a trailing newline.
+🟢 **Line 687 is corrected in place to `🔴 GPL-3.0`** with the mislabelling note carried onto the
+row itself, so the correction travels with the citation instead of living two tables away.
+
+🔵 **The distinction the corrected row preserves, because it is what makes H5P usable at all:**
+H5P's **JavaScript content types** are MIT; **`h5p-php-library`, the server-side integration
+layer, is GPL-3.0**. "H5P is MIT" is true of the half nobody integrates and false of the half
+everybody does. 🟢 The permissive route this file already shelves stands unchanged —
+[edly-io/h5pxblock](https://github.com/edly-io/h5pxblock) (MIT, 1 064 B) loads H5P as **runtime
+content** inside Open edX rather than linking the PHP library.
+
+### 🟢 Platform default refs, measured — and `main` is the minority
+
+Measured on the `ls-remote --symref` channel, **2026-10-26**:
+
+| platform | default ref | heads | 🔴 what a `main`-assuming read returns |
+|---|---|---|---|
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **`release`** | 17 | 🔴 nothing — no `main` exists |
+| [oppia/oppia](https://github.com/oppia/oppia) | 🔴 **`develop`** | 500 | 🔴 nothing — no `main` exists |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `master` | 294 | 🔴 nothing |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `master` | 60 | 🔴 nothing — including the licence |
+| [moodle/moodle](https://github.com/moodle/moodle) | 🟢 `main` | 40 | 🟢 resolves — the exception, not the rule |
+
+🟢 **Across the 19 addresses measured this pass the split is `master` 11, `main` 5, `develop` 1,
+`release` 1.** 🔵 This is `T104` (*"a grant's PATH is a function of the REF"*) with a denominator:
+**74 % of these platform addresses are not on `main`**, so resolving the ref is not a refinement of
+the read, it is the read. 🟢 The `HEAD` alias used by this pass's probe does it automatically and is
+the reason the licence table above has no holes.
+
+### 🔴 Vertical-platform discovery: nil, and the leg is recorded so the silence is not read as coverage
+
+One leg ran on the prescribed shape (`open source platform education ERP CRM MIT Apache`). 🔴 **It
+returned a single vendor source — OpenEduCat's own comparison pages, repeated across ten
+translations — and zero addresses not already on these shelves.** Named in it: Moodle, Open edX,
+OpenEduCat, Sakai, ILIAS, Canvas, Chamilo; all seven are shelved and graded. 🔵 **The leg's one
+informative result is negative and worth the row: no MIT- or Apache-licensed system of record
+(LMS *or* SIS) surfaced on the prescribed query** — consistent with `p448`'s `Gap 447-D` finding
+that the first permissively-licensed system of record on these shelves came from a *state*-shaped
+query, not a market-shaped one.
 ## 🆕 `p449` — **🟢 THE CONNECTOR TIER WRITES MORE THAN THIS SHELF PUBLISHED, AND THE CORRECTION RUNS AGAINST THE READ-ONLY READING: `Gap 448-C` resolved at source puts the category write share at 35.8 %, not 32.9 %, because `p448`'s denominator was inflated by 19 non-tool fields while its WRITE numerator was EXACT. 🔴 Which makes `Gap 448-B` worse: the allowlist field a gateway would key on is 43 % unpopulated over a LARGER mutating surface than anyone had measured.**
 
 🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
@@ -684,7 +745,7 @@ the HEAD shown, never from a badge.
 | **Canvas LMS** | 🔴 **AGPL-3.0** | The dominant North American LMS. 🔴 Its *agent* ecosystem is MIT — see below — and conflating the two is the single most expensive licence error available in this industry. |
 | **Forma LMS** | 🟢 **Apache-2.0** | Corporate-training LMS; permissive. |
 | **Opencast** | 🟡 **ECL-2.0** | Lecture capture and video management. |
-| **H5P** | 🟢 **MIT** | Interactive content types; embeds in Moodle, Canvas and Open edX. |
+| **H5P** | 🔴 **GPL-3.0** *(corrected `p450`)* | Interactive content types; embeds in Moodle, Canvas and Open edX. 🔴 ~~MIT~~ — `h5p-php-library` `LICENSE.txt` read first-hand 2026-10-26: **GPLv3, 35 146 B**. The MIT grant covers the **JS content types**, not the PHP integration layer. Permissive route: [edly-io/h5pxblock](https://github.com/edly-io/h5pxblock) (MIT), H5P as runtime content. |
 | **Academico** | 🟢 **MIT** | Lightweight SIS. |
 | **OpenSIS Classic** | 🔴 **GPL-2.0** | Student information system. |
 | **frappe/lms** | 🔴 **AGPL-3.0** | Same project as **Frappe LMS**; two keys, one platform. 🔴 `p425`'s `T125`: the MIT belongs to `frappe/frappe`, the **framework**, not the LMS. |

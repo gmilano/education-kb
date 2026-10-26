@@ -1,0 +1,11 @@
+slug	channel	exit	stderr_first_line	class
+nope-xyz-123/nope	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	FABRICATED CONTROL — provably does not exist
+AI-Matrix-Engine/aidream	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+Mckaroff/GraphLMS	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+ale-alejandro/beadkit	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+e9x/blackboard-mcp	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+dev-cucei-itrans/siiau-api-client	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+parkseokjune/unist-blackboard-mcp	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+santillana-ai/tutor-sdk	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+thanh01pmt/interactive-quiz-kit	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control
+yokowasis/autograder	git ls-remote (GIT_TERMINAL_PROMPT=0)	128	fatal: could not read Username for 'https://github.com': terminal prompts disabled	CARRIED ADDRESS — byte-identical to control

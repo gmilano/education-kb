@@ -3,6 +3,78 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 `p450` · 2026-10-26 — **🔴 FOUR REGIONAL LEGS, FOUR REPRODUCTIONS, ZERO NOVEL FACTS — and every one of the twelve regulatory specifics they returned was already on these shelves, which is written down as a nil because silence looks exactly like coverage. 🟢 What the legs DID buy is a currency check on the single most load-bearing EMEA cell, and a measured reason it can never be anything better than relayed: the EU's own primaries are refused at CONNECT by this host, logged in the proxy's own failure register.**
+
+🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no gate attests any
+cell below, including this file's region-heading contract. 🔵 `check_headings.py` and
+`check_newest_block.py` were **read** instead of run, and this pass's writes are shaped to them by
+hand: **the single `## Opportunities by region` block below is amended in place — it is still one
+block, with one `###` per region across the closed five-value vocabulary.**
+
+### 🔴 The four legs, and the twelve facts they returned that this file already had
+
+| region | leg | facts returned | 🔴 at **zero** prior hits |
+|---|---|---|---|
+| North America | `AI education North America 2026 adoption regulation players` | 134 bills/31 states · CA AB 1159 · Idaho SB 1227 · OK + MD human-oversight · **K-12 AI Literacy and Readiness Act of 2026** · Canada **"AI for All"** + **Trusted AI Certification** · Mexico bills without a regulator | 🔴 **0 of 7** |
+| EMEA | `AI education EMEA 2026 adoption regulation players` | **Reg. (EU) 2026/1744** · Annex III → **2 Dec 2027** · Annex I → **2 Aug 2028** · **Art. 50 not delayed** · machine-readable marking → 2 Dec 2026 | 🔴 **0 of 5** |
+| APAC | `AI education APAC 2026 adoption regulation players` | Korea **AI Framework Act, 22 Jan 2026** + 2026 pilot/one-year **penalty grace** · Vietnam lists **education** (automated assessment, behavioural monitoring) as high-risk · China registration + labelling | 🔴 **0 of 3** |
+| LATAM | `AI education LATAM 2026 adoption regulation players` | UNESCO IESALC **87 % adoption / 26 % strategy** (200 institutions, 19 countries) · TALIS 2024 **BR 56 / CL 55 / CO 53 / CR 52 vs OECD 36** · Uruguay Ceibal 75 % | 🔴 **0 of 3** |
+
+🟢 **Word-scoped before writing, per `Gap 447-A`:** `Article 50` ×37 files, `Annex III` ×64,
+`2 December 2027` ×28, `1744` ×48, `AI Framework Act` ×15, `22 January 2026` ×12,
+`AI Literacy and Readiness` ×20, `AI for All` ×14, `Trusted AI Certification` ×4. 🔵 **This is the
+fifth four-nil on this file's regulatory channel** and it confirms `Gap 440-C`'s refinement rather
+than extending it — the **statute tier is saturated**; nothing this pass ran touched the
+**programme** tier where that gap says the channel still pays.
+
+🟢 **A reproduction is not a nil on currency, and that is what this leg is worth.** Regulatory cells
+decay, and the EMEA cell is the one an EU engagement is priced on. Ten independent secondary
+sources returned this hour agree with what this file carries: **Annex III high-risk → 2 Dec 2027,
+Annex I embedded → 2 Aug 2028, Article 50 transparency NOT delayed** (applied since 2 Aug 2026,
+with a transitional period to **2 Dec 2026** for machine-readable marking of systems already on the
+market). 🔵 **The commercially decisive half is the part that was not delayed** — a tutor shipped in
+the EU today owes Article 50 disclosure *now*, while the learner-evaluation conformity work is due
+December 2027.
+
+### 🔴 Why that cell is permanently relayed, measured on the proxy's own register
+
+| host | class | this pass |
+|---|---|---|
+| `eur-lex.europa.eu` | 🔴 `connect_rejected` — *"gateway answered 403 to CONNECT (policy denial)"* | the Official Journal text of **Reg. (EU) 2026/1744** |
+| `digital-strategy.ec.europa.eu` | 🔴 `connect_rejected`, same detail | the Commission's own AI-Act pages |
+| `www.unesco.org` | 🔴 `connect_rejected`, same detail | the **IESALC** primary behind the LATAM 87 %/26 % cell |
+| 🟢 `raw.githubusercontent.com` *(control, same shell, same minute)* | 🟢 **200** | — |
+
+🔴 **So the primaries for BOTH of this file's load-bearing regional cells — the EU regulation and
+the UNESCO LATAM survey — are unreachable from this host class**, and `Gap 446-D` goes from
+thirteen hosts to **sixteen**. 🟢 **One mechanism correction worth more than the count:** the
+browser-side channel reports this failure as **DNS `ENOTFOUND`**, which invites a future pass to
+chase name resolution. It is not DNS. The proxy's `recentRelayFailures` register names it exactly
+— **403 at CONNECT, a policy denial** — three entries timestamped `2026-10-26T03:50:43–44Z`. 🔵
+`Gap 450-B`: a pass that needs a primary must change hosts, not resolvers.
+
+### 🟡 The honest global datum this pass can add: the forecast spread, not a forecast
+
+Six houses read this hour for **2026 base year**:
+
+| house | 2026 size | horizon | CAGR |
+|---|---|---|---|
+| Grand View Research | **$11.4 B** | $57.2 B by 2033 | 25.9 % |
+| Research and Markets | **$10.6 B** | $42.48 B by 2030 | 41.5 % |
+| Precedence Research | **$9.58 B** | $136.79 B by 2035 | 34.52 % |
+| Technavio | — | +$3.37 B over 2026–2030 | 45.0 % |
+| Insight Partners | $2.73 B *(2025 base)* | $11.27 B by 2034 | 17.08 % |
+| Market Reports World | **$1.94 B** | $48.36 B by 2035 | 42.95 % |
+
+🔴 **The 2026 base spans $1.94 B → $11.4 B — a factor of 5.9 — and the CAGR spans 17.08 % → 45.0 %,
+a factor of 2.6.** 🟢 **The dispersion is the finding, and it is a definitional artefact, not
+disagreement about the world**: the houses differ on whether embedded AI revenue inside an LMS
+subscription counts as "AI in education". 🔵 **Operational rule: never quote one of these numbers
+to a client without its house and its definition.** The two regional claims *are* consistent across
+houses and are the ones worth carrying — **North America is the largest current share, APAC the
+fastest-growing** (Grand View and Research and Markets agree; TrendX attributes APAC's rate to
+state AI-literacy programmes in CN/IN/JP/KR).
 ## 🆕 `p449` · 2026-10-26 — **🟢 THE GATE RAN AFTER THREE DENIALS, AND ITS ARRIVAL BASELINE CAUGHT A VIOLATION OF THIS FILE'S OWN REGION CONTRACT: `p448` added a SECOND `## Opportunities by region` block and left the vocabulary incomplete. Both are fixed and the gate is green. 🔴 Four regional legs ran; all four saturated, and two APAC candidates at ZERO prior hits are declared UNVERIFIABLE rather than shelved, because their primaries are refused at CONNECT by this host's network policy.**
 
 🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
@@ -124,6 +196,8 @@ has **mandated** that SIS vendors speak API to a system of record whose implemen
   `toggle-module-publish` and `update-syllabus`. A courseware-authoring engagement on Canvas
   no longer needs a vendor-built write path.
 
+- 🆕 `p450` 🔴 **The NA leg returned seven regulatory facts and all seven were already shelved** — 134 bills/31 states, CA AB 1159, Idaho SB 1227, OK + MD human-oversight, the federal **K-12 AI Literacy and Readiness Act of 2026**, Canada's **"AI for All"** strategy with its **Trusted AI Certification**, and Mexico's bills-without-a-regulator. 🔵 Recorded as a **nil on novelty and a pass on currency**: the sell-state-by-state rule above is unchanged and re-confirmed this hour, and Canada remains **policy, not statute** — an engagement there is governed by procurement terms, not by a compliance deadline.
+
 ### EMEA
 
 🟡 **A real market with real interfaces and no way in through code — so the shape is partner,
@@ -149,6 +223,8 @@ not build.** Germany, read this hour through a country-shaped (German-language) 
   a closed system of record*, procured through the state's own interface programme
   (`VIDIS`, `NEO`), not a GitHub dependency. `Pattern AN`'s national-connector shape applies.
 
+- 🆕 `p450` 🟢 **The dates are re-confirmed this hour against ten independent sources, and the half that was NOT delayed is the half that sells.** **Reg. (EU) 2026/1744**: Annex III high-risk (learner evaluation, programme assignment, proctoring, access to qualifications) → **2 Dec 2027**; Annex I embedded → **2 Aug 2028**; 🔴 **Article 50 transparency was not delayed and has applied since 2 Aug 2026**, with a transitional period to **2 Dec 2026** for machine-readable marking of systems already on the market. 🔵 **So the EMEA engagement splits in two**: disclosure and content-marking work is due **now**, conformity-assessment work is a 14-month programme. 🔴 And it cannot be verified first-hand from this host — `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` are both **403 at CONNECT** (`Gap 446-D`, now sixteen hosts).
+
 ### APAC
 
 🔴 **The largest denominator in this file and the thinnest supply — recorded as an absence, not
@@ -169,6 +245,8 @@ as silence.** India, via a country-shaped leg:
   unpaid channel, not as an absence.
 - 🔴 The **connectivity floor** (63.5 %) is the design constraint: offline-first
   (`Pattern AI`, Kolibri) is not a nice-to-have in this region.
+
+- 🆕 `p450` 🔴 **Three facts, three prior hits, zero novelty** — Korea's **AI Framework Act** in force **22 Jan 2026** with 2026 run as a pilot and a one-year **penalty grace**; **Vietnam naming education explicitly in its high-risk list** (automated assessment, behavioural monitoring); China's registration-plus-labelling regime. 🟢 The one commercially live reading is unchanged and re-dated: **Vietnam is the region's only jurisdiction that names education as high-risk by sector**, so an APAC assessment product is scoped by Vietnamese law before it is scoped by anyone else's, while Korea's grace period makes 2026 the cheap year to enter. 🔵 Market-report attribution for the region remains single-source and is not promoted.
 
 ### LATAM
 
@@ -206,6 +284,8 @@ extractor over-counts `bruchris` 222 vs 187; needs an AST walk), `Gap 448-D` (re
 calibration is one industry, one host, one 14-day window, 24-h horizon only), `Gap 448-E`
 (California's absence is a single-channel nil; the CDE vendor-documentation channel is unpaid).
 
+- 🆕 `p450` 🟢 **Re-confirmed, not extended, and the confirmation is worth dating because this is the strongest single number on the file**: UNESCO IESALC — **87 % of 200 institutions across 19 countries using AI in at least one area, 74 % in teaching and learning, 57 % in research, and only 26 % with a formal AI strategy**; split by control, **private non-profit 84 % · public 68 % · private for-profit 52 %**. School tier, TALIS 2024: **Brazil 56 % · Chile 55 % · Colombia 53 % · Costa Rica 52 %** against an **OECD average of 36 %**, with Uruguay's Ceibal at **75 %** of public-school teachers. 🔴 **The primary is unreachable from this host** (`www.unesco.org` → 403 at CONNECT), so the cell stays **relayed**. 🔵 The 87/26 gap remains the region's sellable unit: **governance, not adoption**.
+
 ### Global
 
 🟢 **The one cross-region finding `p449` adds, and it is a capability fact rather than a
@@ -240,6 +320,8 @@ than shelved → `Gap 449-C`.
 
 
 ---
+
+- 🆕 `p450` 🔴 **The global forecast is a 5.9× spread, and that is the datum.** Six houses read this hour put the **2026 base between $1.94 B and $11.4 B** and the CAGR between **17.08 % and 45.0 %**; the divergence is definitional — whether AI embedded in an LMS subscription counts — not empirical. 🔵 **Rule: no figure travels to a client without its house and its definition.** 🟢 **What the houses do agree on, and what should be used instead:** **North America is the largest current share, APAC the fastest-growing.** 🟢 Cross-region engineering fact added this pass, and it is the one that changes a build: **74 % of the platform addresses on these shelves do not default to `main`** (`master` 11 · `main` 5 · `develop` 1 · `release` 1 of 19 measured), so every grant, README and manifest read must resolve the ref first — the `HEAD` alias does it for free.
 
 ## 🆕 `p447` · 2026-10-26 — **🟢 `Gap 445-F` IS CLOSED, AND IT PAID TWICE OVER: the EMEA country leg did not merely return facts where two consecutive region legs nilled — it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🔴 The other three legs nil. 🔴 And `Gap 446-D` is now measured across ELEVEN primaries with a control: this file's entire EMEA and LATAM regulatory layer is relayed.**
 

@@ -3,6 +3,116 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 `p450` — **🟢 THE URL PROBE THIS BASE IS INSTRUCTED TO USE IS REPLACED, NOT COMPLAINED ABOUT: a two-channel probe with a FABRICATED NEGATIVE CONTROL now separates live from dead on this host, and its first run is the first full reachability census these shelves have ever had — 375 addresses, 366 live, 9 not. 🔴 And `Gap 420-C`, carried THIRTY passes as "cheapest closure available to the next pass", is closed as UNANSWERABLE: the fabricated control emits BYTE-IDENTICAL stderr to all eight carried addresses, so `gate-slug-oracle`'s premise is refuted on this channel.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` was DENIED.**
+The host refused the recipe (`Code from External`) before any gate body ran — the same class
+`p446`–`p448` recorded, which `p449` showed to be **intermittent** rather than permanent. So this
+pass has **no arrival baseline and no exit baseline**, and nothing below is gate-attested. 🔵 The
+gate *sources* were read instead of run (`compose/code/p383-region-heading-gate/check_headings.py`,
+`compose/code/p170-newest-block-gate/check_newest_block.py`) and this pass's writes are shaped to
+their contracts by hand: newest-FIRST insertion, one canonical `## Opportunities by region`,
+closed five-value vocabulary.
+
+### 🟢 `Gap 449-A` / `Gap 449-B` RESOLVED — the probe is replaced, with controls in both directions
+
+`p449` established that `curl -sI https://github.com/{slug}` returns **403 on every address** on
+this host. 🔴 This pass reproduces that and adds the part that makes it damning: **the fabricated
+slug `nope-xyz-123/nope` also returns 403.** A probe that returns the same verdict for
+`moodle/moodle` and for an address that has never existed carries **zero bits**. It is not a weak
+probe, it is **not a probe**.
+
+| channel | `HKUDS/DeepTutor` | `moodle/moodle` | 🧪 `nope-xyz-123/nope` (fabricated) | discriminates? |
+|---|---|---|---|---|
+| 🔴 `curl -sI github.com/{slug}` *(prescribed)* | **403** | **403** | **403** | 🔴 **NO** |
+| 🔴 `curl api.github.com/repos/{slug}` | **403** | — | **403** | 🔴 **NO** — proxy refuses the API host |
+| 🔴 `curl codeload.github.com/...` | **403** | — | — | 🔴 **NO** |
+| 🟢 **`curl raw.githubusercontent.com/{slug}/HEAD/README.md`** | **200** | **200** | 🟢 **404** | 🟢 **YES** |
+| 🟢 **`git ls-remote --heads github.com/{slug}`** | **OK** | **OK** | 🟢 **exit 128** | 🟢 **YES** |
+
+🟢 **The ref alias `HEAD` is what makes the `raw` leg usable**, and it closes `Gap 449-B`'s
+case-sensitivity objection for the *owner/repo* half: `HEAD` resolves the default branch whatever
+it is called, so the 13-addresses-not-on-`main` problem `p386` measured does not reach this probe.
+
+🟢 **Standing protocol, two stages, because neither channel alone is sound:**
+`raw` **200** → live, no second call. `raw` **404** → **not a verdict**, escalate to `ls-remote`.
+`ls-remote` OK → **live, serves no `HEAD/README.md`**. Both fail → **unreachable un-credentialled**.
+
+### 🟢 First full reachability census of these shelves — 375 addresses
+
+Every `github.com/owner/repo` in `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md`, deduplicated, probed **2026-10-26**
+(`evidence/shelf-reachability-census.2026-10-26-p450.tsv`, 375 rows):
+
+| verdict | n | share |
+|---|---|---|
+| 🟢 **live, `raw` serves `HEAD/README.md`** | **347** | 92.5 % |
+| 🟡 **live on `ls-remote`, NO `HEAD/README.md`** | **19** | 5.1 % |
+| 🔴 **unreachable on both channels** | **9** | 2.4 % |
+| 🟢 **live, total** | 🟢 **366** | 🟢 **97.6 %** |
+
+🟢 **The census is self-validating in two directions.** Positive: 366 of 375 resolve, so neither
+channel is broken on this host at this hour. Negative: the fabricated control fails both. 🟢 **And
+it independently reproduces a verdict this base reached by hand** — `dev-cucei-itrans/siiau-api-client`,
+which `verticals/solutions.md:236` recorded as `DOES NOT RESOLVE` on **2026-10-25**, fails both
+channels here on **2026-10-26**. A probe that re-derives a known answer unprompted is a probe worth
+keeping.
+
+### 🔴 `Gap 420-C` CLOSED — and the closure it was promised cannot exist
+
+`Gap 420-C` has been carried since `p420`: eight addresses return exit `128`, *"and this run cannot
+call them dead"*, with `gate-slug-oracle` (`p293`) named as **"exactly the instrument"** on the
+principle *"a credential prompt is a MEASUREMENT, not an inconclusive result"*. 🔴 **That principle
+is false on GitHub over HTTPS, and one control proves it.** Run un-credentialled with
+`GIT_TERMINAL_PROMPT=0` (`evidence/slug-oracle-control.2026-10-26-p450.tsv`):
+
+| slug | exit | stderr |
+|---|---|---|
+| 🧪 **`nope-xyz-123/nope`** — fabricated, certainly absent | `128` | `fatal: could not read Username for 'https://github.com': terminal prompts disabled` |
+| `thanh01pmt/interactive-quiz-kit` | `128` | 🔴 **byte-identical** |
+| `AI-Matrix-Engine/aidream` · `Mckaroff/GraphLMS` · `santillana-ai/tutor-sdk` | `128` | 🔴 **byte-identical** |
+| `ale-alejandro/beadkit` · `yokowasis/autograder` | `128` | 🔴 **byte-identical** |
+| `e9x/blackboard-mcp` · `parkseokjune/unist-blackboard-mcp` | `128` | 🔴 **byte-identical** |
+
+🔴 **GitHub emits the credential prompt for addresses that do not exist**, precisely so that a
+404 cannot leak the existence of a private repository. The prompt therefore carries **no
+information about privacy**, and `gate-slug-oracle` cannot separate *absent* from *private* here
+**in principle** — not for want of being run. 🟢 `Gap 420-C` is closed as **UNANSWERABLE ON THIS
+CHANNEL**; the honest verdict is the one `p420` already chose, and the operational consequence is
+unchanged and already enforced by `gate-dead-citation`: **unreachable un-credentialled means
+un-clonable, and a row nobody can clone is never a recommendation.**
+
+🔵 **What survives of those nine is on a different channel, and that distinction is commercially
+real.** Five of them have **npm packages this base read first-hand as tarballs** — `santillana-ai`
+(`@santillana-ai/create-tutor-app`, 63 versions), `thanh01pmt` (103 versions), `yokowasis`,
+`ale-alejandro`, `Mckaroff`. 🔴 **The code is published and the repository is not**, so it can be
+installed and cannot be forked, audited, or patched. For a studio engagement that is the difference
+between a dependency and a starting point.
+
+### 🔴 Zero new rows, for the FIFTH consecutive pass — and the grading was done before the writing
+
+Six discovery legs ran (open-source agents, GitHub trending, tutor/Apache, LMS-connector MCP,
+automated grading, vertical platforms). Every candidate was word-scoped against these shelves
+(`grep -riw`, `Gap 447-A`'s prescription) **before** being written down:
+
+| candidate | word-scoped files | verdict |
+|---|---|---|
+| `Submitty/Submitty` · `UCL-INGI/INGInious` | **32 / 38** | 🔴 already shelved |
+| `savinoo/ai-grading-system` *(IFF, Brazil)* · `Fatima0923/AssessmentAI` | **4 / 3** | 🔴 already shelved |
+| `ai-lingnan/econai-agent-platform` · `BaijayantaRoy/bandup` *(Singapore)* | **8 / 8** | 🔴 already shelved |
+| `biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent` | **3** | 🔴 already shelved |
+| `vishalsachdev/canvas-mcp` · `peancor/moodle-mcp-server` · `Mattlo0546/classroom-mcp` · `JohannsenLum/canvas-api-mcp` | **60 / 35 / 14 / 3** | 🔴 already shelved |
+| `Open TutorAI` *(arXiv 2602.07176)* · `sourcegrade/jagr` | **22 / 7** | 🔴 already shelved |
+| `HKUDS/DeepTutor` · `satvik314/educhain` · `CAHLR/OATutor` | **83 / 49 / 75** | 🔴 already shelved |
+
+🔵 **Fifteen candidates, fifteen prior hits, zero at zero.** 🟢 Read against `Gap 448-A`'s answered
+cadence — hourly reads against a **daily** trending refresh, so ≈23.6 passes sample each snapshot —
+a fifth nil is the *expected* observation and still says little about supply. 🔴 What it does say is
+that **the six prescribed search shapes are exhausted**, including the two obscure tails
+(`bandup`, `econai-agent-platform`) that would be the first to show a gap. 🔵 `Gap 450-A`: the next
+pass that wants a new row must change the *channel*, not the query — package registries, conference
+artefact tracks, or ministry procurement listings, none of which the prescribed six touch.
 ## 🆕 `p449` — **🟢 THE GATE RAN FOR THE FIRST TIME IN FOUR PASSES, AND THE ARRIVAL BASELINE IT FINALLY PERMITTED CAUGHT TWO CONTRACT VIOLATIONS THAT WERE BOTH `p448`'s. 🟢 `Gap 448-C` RESOLVED AT SOURCE — and it corrects `p448`'s denominator while CONFIRMING its write numerator EXACTLY, so this tier's write share was UNDERSTATED: 32.9 % → 35.8 %. 🔴 The URL probe this base is instructed to use is a false-negative machine on this host: `curl -sI` returns 403 on EVERY real GitHub repo.**
 
 🟢 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` RAN.** One

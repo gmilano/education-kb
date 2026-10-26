@@ -3,6 +3,75 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 Trend 50 — `p450` **A probe that cannot fail is not a weak probe, it is zero bits — and in THIS industry its false negatives land on the platform tier, not the long tail**
+
+🔴 **Measured, not argued.** The probe this base is instructed to use — `curl -sI github.com/{slug}`
+— returns **403** for `moodle/moodle`, **403** for `HKUDS/DeepTutor` and **403** for
+`nope-xyz-123/nope`, an address fabricated for the purpose. 🟢 **A verdict function that is constant
+across its domain carries no information**, so the instruction to *"verify every URL before writing
+it"* was, on this host, satisfiable without verifying anything. 🔵 The replacement is two-stage with
+controls in both directions (`raw.githubusercontent.com/{slug}/HEAD/README.md`, escalating to
+`git ls-remote`), and its first run produced the census below.
+
+🔴 **The non-obvious half, and the reason this is a trend rather than a bug report: the error is not
+uniformly distributed.** Of 375 shelved addresses, **19 are live and invisible to a one-path
+`README.md` probe** — and they are not obscure:
+
+| would be condemned as dead | what it actually is |
+|---|---|
+| `openedx/edx-platform` *(`README.rst`, ref `master`, 294 heads)* | the reference Open edX platform |
+| `overhangio/tutor` *(`README.rst`, ref 🔴 **`release`**)* | the canonical Open edX deployer |
+| `oppia/oppia` *(no README at 10 paths, ref 🔴 **`develop`**, 500 heads)* | Apache-2.0, grant read first-hand |
+| `h5p/h5p-php-library` *(`README.txt`, ref `master`)* | embedded in nearly every LMS |
+
+🟢 **Mechanism, stated so it generalises past education:** `raw` is a **path** server, not a
+repository server. It resolves `{ref}/{exact-cased-path}` and nothing else, so **the README's
+extension, its letter case and the default ref are three independent variables**, and a probe that
+fixes all three measures none of them. Measured distribution of the 19: **`.rst` 10 · lowercase
+`readme.md` 4 · none-at-10-paths 3 · `README.txt` 1 · `README.markdown` 1**; default refs
+**`master` 11 · `main` 5 · `develop` 1 · `release` 1**.
+
+🔴 **Why education specifically.** The platform half of this industry — Open edX, XBlock, ORA2,
+Tutor, the LTI libraries — is a **reStructuredText and Python-packaging ecosystem**, so `.rst` is
+not an exception here, it is the convention. 🔵 **An automated KB pipeline built on a
+`main`+`README.md` assumption therefore prunes edtech's most important repositories first**, and
+reports a clean run while doing it. That is the generalisable claim: **in any vertical, naive
+discovery tooling fails hardest on the vertical's oldest and most load-bearing projects**, because
+those predate the conventions the tooling assumes.
+
+🔴 **`gate-slug-oracle`'s premise falls to the same control.** `p293` held that *"a credential
+prompt is a MEASUREMENT, not an inconclusive result"*, and `Gap 420-C` named it the cheapest
+closure available for thirty passes. Run un-credentialled, the fabricated slug emits stderr
+**byte-identical** to all eight carried addresses: GitHub returns a credential prompt for
+non-existent repositories precisely so a 404 cannot leak a private one's existence. 🟢 **A signal
+engineered to be uninformative cannot be made informative by running it again** — closed as
+UNANSWERABLE ON THIS CHANNEL.
+
+🔵 **Operational residue, and it is the only part a client sees:** 5 of the 9 unreachable addresses
+still publish working npm packages. **Installable and un-forkable** — nothing to audit, patch or
+vendor. A dependency, never a starting point.
+
+---
+
+## 🆕 Trend 51 — `p450` **The AI-in-education forecast is a 5.9× spread, and the spread is definitional — so the market-size number is the least transportable thing in a proposal**
+
+Six houses, read **2026-10-26**, all for a **2026** base year: **$11.4 B** (Grand View) · **$10.6 B**
+(Research and Markets) · **$9.58 B** (Precedence) · **$2.73 B** (Insight Partners, 2025 base) ·
+**$1.94 B** (Market Reports World); Technavio prices the *increment* at **+$3.37 B** over 2026–2030.
+CAGRs: **17.08 % → 45.0 %**.
+
+🔴 **A 5.9× spread on the base and a 2.6× spread on the growth rate**, between houses reading the
+same year. 🟢 **It is not disagreement about the world — it is a boundary question**: whether AI
+embedded inside an LMS subscription is "AI in education" revenue or LMS revenue. The low estimates
+count standalone AI products; the high ones count embedded capability.
+
+🔵 **Rule, and it is the usable output of this trend: no figure travels without its house and its
+definition.** 🟢 **What the houses agree on, and what should be quoted instead:** **North America
+is the largest current share; APAC is the fastest-growing** — concordant across Grand View and
+Research and Markets, with APAC's rate attributed to state AI-literacy programmes in CN/IN/JP/KR.
+🔵 A directional claim two independent houses share outranks a point estimate only one of them
+would defend.
 ## 🆕 Trend 49 — `p449` **An instrument sampled faster than the thing it measures reports its own clock and calls it a finding — and this base has now done that four times in a row, in the one file whose entire purpose is to record change**
 
 🟢 **Gate posture first (`Gap 446-A`): `make hooks` RAN** — the fourth trial after three

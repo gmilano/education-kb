@@ -3,6 +3,77 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 `p450` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE FIRST FULL REACHABILITY CENSUS OF THESE SHELVES: 375 addresses, 366 live, 9 unreachable, 19 live-but-invisible-to-a-one-path-probe. 🔴 And the 19 are not a long tail — they are `openedx/edx-platform`, `overhangio/tutor`, `oppia/oppia` and `h5p/h5p-php-library`, the platform tier this file is built on. 🔴 `make hooks` DENIED, so nothing here is gate-attested.**
+
+🔵 **APPEND-ONLY shelf** — inserted above `p449`'s section; nothing below is rewritten.
+🔵 **Single date:** every probe below ran **2026-10-26**.
+
+### 🟢 Census — every `github.com/owner/repo` on the three graded shelves
+
+Deduplicated from `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md`
+(`evidence/shelf-reachability-census.2026-10-26-p450.tsv`, 375 rows):
+
+| verdict | n | share | channel that produced it |
+|---|---|---|---|
+| 🟢 live, `raw` serves `HEAD/README.md` | **347** | 92.5 % | `raw.githubusercontent.com` |
+| 🟡 live, **no** `HEAD/README.md` | **19** | 5.1 % | 🟢 recovered by the `ls-remote` escalation |
+| 🔴 unreachable, both channels | **9** | 2.4 % | both fail; fabricated control also fails both |
+
+🟢 **Controls, because a census without them is a claim.** Positive: 366/375 resolve in the same
+run. Negative: `nope-xyz-123/nope` → `raw` **404** + `ls-remote` **128**. 🔴 The **prescribed**
+probe (`curl -sI github.com/{slug}`) returns **403 for all three** of `moodle/moodle`,
+`HKUDS/DeepTutor` and the fabricated slug — `Gap 449-A`, resolved in `agents/top.md` by replacing
+the instrument rather than re-running it.
+
+### 🔴 `T107`'s sibling, and it cuts the other way
+
+`T107` established that *"`gh-pages` is built output, not source"* — an absence on a built-docs
+orphan is not a licensing finding. 🔴 **This pass's finding is the inverse error: an absence
+produced by the PROBE being read as a property of the REPOSITORY.** Measured causes of the 19:
+
+| cause | n | examples |
+|---|---|---|
+| **`README.rst`** | **10** | `openedx/edx-platform`, `overhangio/tutor`, `openedx/XBlock`, `openedx/edx-ora2`, `openedx/xblock-lti-consumer`, `inducer/relate`, `dmitry-viskov/pylti1.3`, `raccoongang/openedx-ai-extensions`, `aulasneo/tutor-contrib-let`, `openedx/openedx-ai-extensions` |
+| 🔴 **lowercase `readme.md`** | **4** | `anastasasenov/bbmcps`, `arthtyagi/judge`, `ivmelo/suapbot`, `juan-c-cardenas/sia-scraper` |
+| **none at 10 probed paths** | **3** | `oppia/oppia`, `cran/catR`, `Seechange-edu/act-ai-tutor-backend` |
+| **`README.txt`** | **1** | `h5p/h5p-php-library` |
+| **`README.markdown`** | **1** | `projectfedena/fedena` |
+
+🔴 **Four of nineteen are one character of case**, which settles the open half of `Gap 449-B` with a
+number: `raw` is **case-sensitive on the path**, GitHub's web UI is not. 🟢 `.rst` dominates because
+the Open edX and Python-packaging half of this industry is a reStructuredText ecosystem — **this
+file's own subject matter is the false-negative's habitat.**
+
+### 🟢 Default refs, measured — `main` is the minority on this shelf
+
+`ls-remote --symref … HEAD`, 2026-10-26, over the 19: **`master` 11 · `main` 5 · `develop` 1 ·
+`release` 1.**
+
+| address | default ref | heads |
+|---|---|---|
+| [oppia/oppia](https://github.com/oppia/oppia) | 🔴 **`develop`** | **500** |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **`release`** | 17 |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `master` | **294** |
+| [openedx/edx-ora2](https://github.com/openedx/edx-ora2) | `master` | 171 |
+| [inducer/relate](https://github.com/inducer/relate) | `main` | 80 |
+| [openedx/xblock-lti-consumer](https://github.com/openedx/xblock-lti-consumer) | `master` | 63 |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `master` | 60 |
+| [moodle/moodle](https://github.com/moodle/moodle) *(control)* | 🟢 `main` | 40 |
+
+🟢 **`T104` with a denominator.** *"A grant's PATH is a function of the REF"* — here **74 % of the
+measured addresses are not on `main`**, so a `main`-assuming read of a licence, a README or a
+manifest returns "absent" for three addresses in four. 🔵 The `HEAD` alias removes the variable at
+no cost and is why this pass's 15 licence reads (`repos/foundations.md`) have no holes.
+
+### 🔴 Trending discovery: nil, fifth consecutive, and the channel explains it
+
+Legs: `github trending education AI 2026`, plus the two automated digests dated **2026-10-26**
+(`kakapez/agents-radar` #1676, `HuggerHustle/ai-radar` #56). 🔴 **Zero addresses at zero prior
+hits.** Candidates named — `skyzh/tiny-llm`, `withmarbleapp/os-taxonomy`,
+`microsoft/ML-For-Beginners`, DeepTutor — are all shelved, and the first three were already graded
+**not education-vertical** by `p449`. 🔵 Cause is cadence (`Gap 448-A`, n=309): **hourly reads
+against a daily refresh**, so an unchanged channel is expected at **P ≈ 95.8 %**.
 ## 🆕 `p449` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE GATE RAN after three denials and its arrival baseline caught two undetected contract violations, both `p448`'s. 🔴 Trending discovery saturated a FOURTH time — and `Gap 448-A`, answered over 309 passes, shows why: this file is written HOURLY against a channel that refreshes DAILY, so ≈23.6 passes read each snapshot and "unchanged" is the expected observation at P ≈ 95.8 %.**
 
 🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after

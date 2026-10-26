@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 Pattern BC — `p450` **The split-clock EU tutor: ship the Article 50 obligations that are live NOW, and isolate the Annex III surface so December 2027 is a conformity deliverable instead of a rewrite — every component's grant and ref read first-hand this pass**
+
+🔵 **Why this pattern and not another "AI tutor" recipe.** `Reg. (EU) 2026/1744` split the EU
+compliance clock in two, and no pattern on these shelves is built around the split: **Article 50
+transparency has applied since 2 Aug 2026** (machine-readable marking transitional to **2 Dec
+2026**), while **Annex III high-risk obligations — learner evaluation, programme assignment,
+proctoring, access to qualifications — do not bite until 2 Dec 2027**. 🔴 **A build that treats
+those as one deadline gets it wrong in both directions**: it ships non-compliant disclosure today,
+and it over-engineers conformity work a year early. This pattern makes the split a boundary in the
+code.
+
+### 🟢 Components — grant, ref and size re-read first-hand 2026-10-26 (`evidence/licence-title-anchored.2026-10-26-p450.tsv`)
+
+| role | component | 🟢 grant *(verified this pass)* | ref | why this one |
+|---|---|---|---|---|
+| Tutor / dialogue agent | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `LICENSE` 11 408 B | `main` | permissive, so the deliverable is vendorable; the one agent-native tutor on these shelves |
+| Courseware generation | [satvik314/educhain](https://github.com/satvik314/educhain) | 🟢 **MIT** · `LICENSE` 1 092 B | `main` | generates the artefacts that Art. 50(2) marking must attach to |
+| 🔴 **Mastery / grading decision** | [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) + [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 **MIT** · 1 132 B / 1 105 B | `main` | 🔴 **the Annex III surface, and it is deliberately NOT an LLM** — Bayesian Knowledge Tracing is deterministic, inspectable and reproducible |
+| LMS launch seam | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) *(py)* or [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) *(php)* | 🟢 **MIT** 1 070 B / 🟢 **Apache-2.0** 11 343 B | `master` / `main` | LTI 1.3 launch keeps the platform at arm's length — **this is the licence seam** |
+| LMS read/write connector | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) · [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** · 1 071 B / 1 070 B | `main` | the write tier `Gap 447-B` confirmed: `create_course`, `update-syllabus`, publish toggles |
+| Interactive content | [edly-io/h5pxblock](https://github.com/edly-io/h5pxblock) | 🟢 **MIT** · `LICENSE` 1 064 B | `master` | 🔴 **loads H5P as runtime content** — never link [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library), **GPL-3.0, 35 146 B** |
+| Platform tier *(behind the seam)* | [moodle/moodle](https://github.com/moodle/moodle) **GPL-3.0** 35 147 B · [openedx/edx-platform](https://github.com/openedx/edx-platform) **AGPL-3.0** 35 136 B · [overhangio/tutor](https://github.com/overhangio/tutor) **AGPL-3.0** 34 523 B | 🔴 copyleft | `main` / `master` / 🔴 **`release`** | 🔴 **deployed, never forked into the deliverable** |
+
+### 🟢 Wiring — six steps, and the two boundaries are the whole point
+
+1. **Launch** — the LMS launches the tutor over **LTI 1.3** (`pylti1.3`). 🟢 **Boundary 1, the
+   licence seam:** the tutor runs as a separate service reached by signed launch, so Moodle's
+   GPL-3.0 and Open edX's AGPL-3.0 never reach the Apache/MIT deliverable. Forking the platform
+   would pull copyleft into the client's product; AGPL would reach their *hosted* use.
+2. **Disclose, at the first token** — a disclosure interceptor in front of DeepTutor emits the
+   Art. 50(1) notice that the learner is interacting with an AI system. 🔴 **Due now, not 2027.**
+3. **Generate and mark** — `educhain` produces explanations, quizzes and course outlines; every
+   artefact is written with **machine-readable provenance marking** at the moment of generation
+   (Art. 50(2)). 🔴 **For content already in a client's library before 2 Aug 2026 the transitional
+   deadline is 2 Dec 2026** — a backfill job, and it is the nearest deadline in this pattern.
+4. 🔴 **Route every grade-affecting decision to `pyBKT`, never to the model.** The LLM may explain,
+   hint, rephrase and tutor; **mastery state, item selection and any score come from BKT over
+   OATutor's item bank.** 🟢 **Boundary 2, the Annex III surface:** it is deterministic, replayable
+   from the event log, and defensible without interpreting a model.
+5. **Human in the loop on the high-stakes path** — a grade, placement or progression
+   recommendation is surfaced to an instructor and **never written back as the sole basis for a
+   decision**. Write-back uses the MCP connector's authoring tools, **gated on the tool's
+   EFFECT, never on `read_only_hint`** (`Gap 448-B`).
+6. **Content** — H5P activities render through `h5pxblock` as runtime content, keeping the GPL-3.0
+   PHP library out of the link graph.
+
+### 🟢 What step 4 and 5 buy outside the EU — the same boundary satisfies three more regimes
+
+| region | requirement | satisfied by |
+|---|---|---|
+| **North America** | Oklahoma and Maryland require human oversight and bar AI as the basis of high-stakes student decisions; Charleston County's Jan-2026 policy bars AI as the **sole** basis for discipline, placement and special-education determinations | 🟢 steps **4 + 5**, unchanged |
+| **APAC** | 🔴 **Vietnam is the only APAC jurisdiction naming education in its high-risk list** (automated assessment, behavioural monitoring) — and much of it binds only where output is *the sole basis without meaningful human review* | 🟢 step **5** keeps the product outside the binding case |
+| **LATAM** | UNESCO IESALC: **87 % adoption, 26 % with any formal AI strategy** — the gap is governance, not capability | 🟢 the event log from step **4** *is* the governance artefact an institution cannot otherwise produce |
+
+🔵 **So the pattern is one build with four regulatory readings**, which is what makes it sellable
+beyond a single geography — and the regional cells behind it are **relayed, not first-hand**:
+`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and `www.unesco.org` are all **403 at CONNECT**
+from this host class (`Gap 446-D`, sixteen hosts). 🔴 **A client-facing version of this pattern must
+re-read the Official Journal text directly.**
+
+### 🟢 Build gate — wire this pass's probe into CI, because the alternative is shipping a dead address
+
+```bash
+# Two-stage reachability + authoritative grant read. Stage 2 is not optional:
+# 1 in 20 live addresses on these shelves serves no HEAD/README.md.
+probe() {  # $1 = owner/repo
+  code=$(curl -s -o /dev/null -w '%{http_code}' "https://raw.githubusercontent.com/$1/HEAD/README.md")
+  [ "$code" = 200 ] && { echo "$1 LIVE"; return 0; }
+  GIT_TERMINAL_PROMPT=0 git ls-remote --heads "https://github.com/$1" >/dev/null 2>&1 \
+    && echo "$1 LIVE (no HEAD/README.md)" || { echo "$1 UNREACHABLE"; return 1; }
+}
+grant() {  # length is a property of the TRANSFER, never of a shell-captured string
+  for p in LICENSE LICENSE.md LICENSE.txt COPYING COPYING.txt; do
+    read -r c n < <(curl -s -o /tmp/g -w '%{http_code} %{size_download}' \
+                      "https://raw.githubusercontent.com/$1/HEAD/$p")
+    [ "$c" = 200 ] || continue
+    # family from the TITLE (first 6 non-blank lines): GPLv3's closing paragraph
+    # recommends the LGPL, so a whole-body grep misreads every GPLv3 file.
+    grep -v '^[[:space:]]*$' /tmp/g | head -6 | grep -qi 'LESSER' && f=LGPL \
+      || grep -v '^[[:space:]]*$' /tmp/g | head -6 | grep -qi 'AFFERO' && f=AGPL \
+      || f=$(grep -v '^[[:space:]]*$' /tmp/g | head -6 | grep -oiE 'apache|mit|general public' | head -1)
+    echo "$1 $p $f ${n}B"; return 0
+  done; echo "$1 NO-GRANT-AT-5-PATHS"; return 1
+}
+```
+
+🔴 **Fail the build on `UNREACHABLE` or on a copyleft family appearing in the link graph** — the
+two failures this pass found on the shelves themselves: nine unreachable addresses, and one
+platform graded `🟢 MIT` in one table and `🟡 GPL-3.0` in another table of the same file.
+
+🔵 **Effort, in the shape these shelves use:** 🟢 **steps 1–3 + 6, 4–5 weeks** (launch seam,
+disclosure, marking, H5P) — this is the Art. 50 deliverable and it is due now. 🟢 **Steps 4–5,
+4–6 weeks** (BKT mastery, item bank, instructor review, effect-keyed write-back). 🟡 **Annex III
+conformity packaging — assessment, human-oversight documentation, post-market monitoring —
+scheduled against 2 Dec 2027, not now**, which is the saving the split clock pays for.
+
+🔴 **What this pattern does not do.** It does not make an LLM safe to grade with; it removes the
+LLM from grading. It does not cover proctoring or behavioural monitoring — both are Annex III and
+Vietnam high-risk, and nothing permissive on these shelves does them defensibly. And it inherits
+`Trend 40`: **Apache-2.0 at the root does not clear the dependency tree**, so a dependency-closure
+pass (`compose/code/dependency-licence-closure`) is a prerequisite to shipping, not a follow-up.
 ## 🆕 Pattern BB — `p449` **The effect-keyed courseware-authoring gateway — the first pattern on these shelves that can be wired from a MEASURED write surface rather than an advertised one, plus the two-control verification pre-flight that `Gap 449-A` makes mandatory**
 
 🟢 **Gate posture (`Gap 446-A`): `make hooks` RAN** — fourth trial after three denials; that

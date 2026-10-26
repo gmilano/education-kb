@@ -3,6 +3,124 @@ industry: education
 region: Global
 updated: 2026-10-26
 ---
+
+## 🆕 `p450` — **🔴 A ONE-PATH README PROBE WOULD HAVE CONDEMNED FOUR OF THIS SHELF'S MOST IMPORTANT PLATFORMS AS DEAD — `openedx/edx-platform`, `oppia/oppia`, `overhangio/tutor` and `h5p/h5p-php-library` all serve 404 at `HEAD/README.md` while being entirely alive. 🟢 And a licence instrument written THIS PASS was caught misreading GPL-3.0 as LGPL on 2 of 15 reads, because GPLv3's own closing paragraph recommends the LGPL; it was fixed before publication and both readings are kept side by side.**
+
+🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`), so no cell below is
+gate-attested. Stated first, per `Gap 446-A`.
+
+### 🔴 The false-negative class a single-path probe publishes as dead — 19 of 375 addresses
+
+`agents/top.md`'s `p450` section establishes the two-stage probe. This is the half that matters to
+*this* file: **19 live addresses serve nothing at `HEAD/README.md`** and are recovered only by the
+`ls-remote` escalation (`evidence/shelf-reachability-census.2026-10-26-p450.tsv`):
+
+| address | 🟢 README path, MEASURED | default ref | 🔴 verdict a one-path `README.md` probe prints |
+|---|---|---|---|
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **`README.rst`** | `master` (294 heads) | 🔴 **DEAD** — the reference Open edX platform |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | **`README.rst`** | 🔴 **`release`** (17 heads) | 🔴 **DEAD** — the canonical Open edX deployer |
+| [openedx/XBlock](https://github.com/openedx/XBlock) · [openedx/edx-ora2](https://github.com/openedx/edx-ora2) · [openedx/xblock-lti-consumer](https://github.com/openedx/xblock-lti-consumer) · [openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions) | **`README.rst`** ×4 | `master` ×3, `main` ×1 | 🔴 **DEAD ×4** — the whole XBlock extension surface, incl. ORA2 (open response assessment) |
+| [raccoongang/openedx-ai-extensions](https://github.com/raccoongang/openedx-ai-extensions) · [aulasneo/tutor-contrib-let](https://github.com/aulasneo/tutor-contrib-let) | **`README.rst`** ×2 | `main` ×2 | 🔴 **DEAD ×2** — the EMEA and LATAM Open edX integrators |
+| [inducer/relate](https://github.com/inducer/relate) · [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **`README.rst`** ×2 | `main`, `master` | 🔴 **DEAD ×2** — incl. the LTI 1.3 Python library, MIT, first-hand read this pass |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 🟡 **`README.txt`** | `master` (60 heads) | 🔴 **DEAD** — embedded in nearly every LMS |
+| [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟡 **`README.markdown`** | `master` | 🔴 **DEAD** — the open SIS of the India/APAC shelf |
+| [anastasasenov/bbmcps](https://github.com/anastasasenov/bbmcps) · [arthtyagi/judge](https://github.com/arthtyagi/judge) · [ivmelo/suapbot](https://github.com/ivmelo/suapbot) · [juan-c-cardenas/sia-scraper](https://github.com/juan-c-cardenas/sia-scraper) | 🔴 **`readme.md`** — lowercase ×4 | `main` ×1, `master` ×3 | 🔴 **DEAD ×4** — and this is `Gap 449-B`'s case-sensitivity class, now MEASURED rather than asserted |
+| [oppia/oppia](https://github.com/oppia/oppia) | 🔴 **none at 10 probed paths** | 🔴 **`develop`** (500 heads) | 🔴 **DEAD** — Apache-2.0, grant read first-hand this pass |
+| [cran/catR](https://github.com/cran/catR) · [Seechange-edu/act-ai-tutor-backend](https://github.com/Seechange-edu/act-ai-tutor-backend) | 🔴 **none at 10 probed paths** | `master`, `main` | 🟡 live, and genuinely without a root README |
+
+🟢 **Measured distribution of the 19 — this is the finding, not the anecdotes.** README path:
+**`.rst` 10**, lowercase **`readme.md` 4**, none-at-10-paths **3**, `README.txt` **1**,
+`README.markdown` **1**. Default ref: **`master` 11, `main` 5, `develop` 1, `release` 1** — 🔴 **only
+5 of 19 are on `main`**, and two of the most consequential addresses on this shelf default to
+`develop` (Oppia) and `release` (Tutor).
+
+🔴 **Four of the nineteen are pure case collisions**, which settles the open half of `Gap 449-B`
+with a number: `raw.githubusercontent.com` is **case-sensitive on the path** while GitHub's web UI
+is not, so `readme.md` is invisible to a `README.md` probe. 🟢 That is **21 % of this file's
+false-negative class** caused by one character of case.
+
+🟡 **`Gap 420-B`'s mechanism, answered for ONE of its four cases and explicitly not the others.**
+`Gap 420-B` asked why four refs that `ls-remote` lists serve nothing on `raw` at *"nine common
+control paths"*. 🟢 **For `projectfedena/fedena` the mechanism is now named: its root README is
+`README.markdown`**, an extension outside any nine-path control set — so the absence was the
+probe's, not the repository's. 🔴 **The other three are NOT answered here and the difference is the
+ref.** `Gap 420-B` probed *non-default* refs (`gh-pages`, `Version_8.0`,
+`projectfedena-patch-1`, a feature branch); this pass probed **`HEAD` only**. For
+`Seechange-edu/act-ai-tutor-backend` even `HEAD` serves nothing at ten paths, so that case is
+reproduced and still unexplained. 🔵 The empty-orphan-vs-LFS question stays open; what is now
+closed is the assumption that a nine-path control set is exhaustive. 🟢 **The general mechanism is
+stated as a rule: `raw` is a PATH server, not a repository server** — it resolves
+`{ref}/{exact-cased-path}` and nothing else, so the README's extension, its case, and the default
+ref are three independent variables and a probe that fixes all three measures none of them.
+
+🔴 **Consequence for the standing protocol, stated as a rule:** a 404 at one path is **never** a
+reachability verdict on this shelf, because **1 in 20 live addresses here fails it** — and the
+failures are concentrated in the platform tier, not the long tail. `T104`'s finding that *"a grant's
+PATH is a function of the REF"* has a sibling: **a README's path is a function of the ecosystem.**
+
+### 🟢 Fifteen grants re-read first-hand — and the instrument was wrong before it was right
+
+Read through the `raw` channel at seven candidate paths each, **2026-10-26**
+(`evidence/licence-title-anchored.2026-10-26-p450.tsv`, both classifiers kept side by side):
+
+| repo | grant path | 🟢 family *(title-anchored)* | bytes |
+|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `LICENSE` | 🟢 **Apache-2.0** | 11 408 |
+| [oppia/oppia](https://github.com/oppia/oppia) | `LICENSE` | 🟢 **Apache-2.0** | 11 358 |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | `LICENSE` | 🟢 **Apache-2.0** | 11 343 |
+| [satvik314/educhain](https://github.com/satvik314/educhain) | `LICENSE` | 🟢 **MIT** | 1 092 |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | `LICENSE` | 🟢 **MIT** | 1 105 |
+| [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | `LICENSE` | 🟢 **MIT** | 1 132 |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | `LICENSE` | 🟢 **MIT** | 1 097 |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | `LICENSE` | 🟢 **MIT** | 1 071 |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | `LICENSE` | 🟢 **MIT** | 1 070 |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | `LICENSE.md` | 🟢 **BSD** | 1 542 |
+| [moodle/moodle](https://github.com/moodle/moodle) | `COPYING.txt` | 🔴 **GPL-3.0** | 35 147 |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `LICENSE.txt` | 🔴 **GPL-3.0** | 35 146 |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `LICENSE` | 🔴 **AGPL-3.0** | 35 136 |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | `LICENSE.txt` | 🔴 **AGPL-3.0** | 34 523 |
+| [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | `LICENSE` | 🔴 **AGPL-3.0** | 34 764 |
+
+🔴 **The defect, declared because it was the instrument's and it nearly reached a table.** A
+whole-body `grep -i "GNU LESSER"` classifier returned **LGPL** for `moodle/moodle` and
+`h5p/h5p-php-library`. Both are **GPL-3.0**. The cause is in the licence text itself: GPLv3's
+closing *"How to Apply"* paragraph reads *"…if your program is a subroutine library… use the GNU
+Lesser General Public License instead of this License"*, so **every GPLv3 file matches an LGPL
+whole-body grep.** 🟢 **Fix: anchor the family to the first six non-blank lines — the title — and
+test LESSER before GENERAL.** 2 of 15 reads flipped; 13 were unaffected.
+
+🟢 **Two independent confirmations fall out of the corrected read.** `moodle/moodle`'s grant is at
+**`COPYING.txt`**, exactly where `T104` placed it, at **35 147 B**. And `h5p/h5p-php-library`'s
+`LICENSE.txt` carries **the same GPLv3 text at 35 146 B — one byte short of Moodle's, the trailing
+newline being the whole difference** — which corroborates
+this file's line 954 (*"routinely described as MIT; it is not"*) on a channel that pass did not use.
+🔵 That carried row is **confirmed, not amended**; the contradicting row lives in
+`verticals/solutions.md` and is fixed there this pass.
+
+### 🔴 A SECOND instrument defect, caught the same way, and it is the one that would have looked like drift
+
+🔴 **Every byte count in the table above was one short on first measurement.** Reading a payload
+through shell command substitution (`$(curl …)`) **strips the trailing newline**, so any grant file
+ending in `\n` measured one byte under its true length. 🟢 **Fix: take the length from the transfer,
+not from the captured string** — `curl -w '%{size_download}'`. 🔴 **The defect is silent and
+selective**: `Ed-Fi-ODS`'s `LICENSE.txt` has **no** trailing newline, so it measured **10 172 B**
+both ways and looked like a confirmation that the method was sound.
+
+🟢 **The corrected method reproduces three cells this base published on earlier passes, to the
+digit** — which is the test that matters under `gate-cell-reproduction`:
+
+| cell | carried on these shelves | 🟢 `p450` authoritative re-read |
+|---|---|---|
+| `HKUDS/DeepTutor` `LICENSE` | **11 408 B** *(`repos/foundations.md`)* | 🟢 **11 408** — EXACT |
+| `learningequality/kolibri` `LICENSE` | **1 097 B** | 🟢 **1 097** — EXACT |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` `LICENSE.txt` | **10 172 B** *(reproduced by `p449`)* | 🟢 **10 172** — EXACT |
+
+🔴 **Had the uncorrected numbers been published, all three would have read one byte low** and a
+future pass would have recorded drift on cells that never moved — a fabricated finding on a real
+gate. 🔵 **Rule for any pass that measures a payload: the length is a property of the transfer, and
+a string that has been through a shell is not the payload.** 🟢 The full GPL-3.0 text on these
+shelves is **35 147 B** (Moodle `COPYING.txt`, Chamilo root `LICENSE`), which the corrected method
+now agrees with.
 ## 🆕 `p449` — **🟢 TWO PUBLISHED PAYLOAD CELLS REPRODUCE TO THE DIGIT ON AN INDEPENDENT FETCH, including `p448`'s North American headline: `Ed-Fi-ODS` at 10 172 B and `XBlock` at 11 358 B. 🔴 But the probe that read them is case-sensitive and returned THREE false 404s against a live row first — and the probe this base is instructed to use (`curl -sI`) returns 403 on EVERY real GitHub repo on this host.**
 
 🟢 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` RAN** — fourth trial after
