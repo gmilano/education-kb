@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` — **Two foundation-grade rows arriving from the GitHub API channel, and one of them is the first curriculum-graph row these shelves carry that is built from OFFICIAL curricula rather than a scrape**
+
+🔵 Grants read first-hand at the resolved default ref; instrument and controls as recorded in
+[`agents/top.md`](../agents/top.md).
+
+| Repo | Licence (read at `HEAD`) | ★ | What it gives a build |
+|---|---|---|---|
+| [`enpasos/skillpilot`](https://github.com/enpasos/skillpilot) | **Apache-2.0** · 10 089 B `6bbe4ace8a18` | 3 | Curriculum-backed **skill graphs** with mastery tracking — dependency-aware learning paths generated from *official* curricula (currently German Gymnasium). Java/Spring Boot + React, MCP surface. |
+| [`Man0dya/Tutor-AI`](https://github.com/Man0dya/Tutor-AI) | **Apache-2.0** · 10 251 B `0ac1681f915c` | 17 | A complete **multi-agent tutoring reference**: content generation → question-set generation → answer evaluation → feedback, as four separable agents. FastAPI + React, vector search. Useful as an architecture to copy, not a product to deploy. |
+
+### 🟢 Why `skillpilot` is a foundation row and not an agent row
+
+🔵 These shelves already carry two larger curriculum graphs, and **the grant is why neither
+replaces this row** — both were re-probed first-hand this pass:
+
+| graph | size | grant served at `HEAD` | usable in paid client work? |
+|---|---|---|---|
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 1 590 topics · 3 221 edges | 🟡 **ODbL** · 25 289 B `77d2692c3d64` | 🟡 Share-alike on the *database* — derived graphs must be re-published |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 1 644 points · 2 403 edges · **3 948 ★** | 🔴 **CC BY-NC 4.0** · 19 347 B `41003d4a7474` | 🔴 **No — NonCommercial bars it from paid work** |
+| [`enpasos/skillpilot`](https://github.com/enpasos/skillpilot) | German Gymnasium, official | 🟢 **Apache-2.0** · 10 089 B `6bbe4ace8a18` | 🟢 **Yes** |
+
+🟢 **So `skillpilot` differs on the two axes that decide an engagement, not on size.** Its graph is
+derived from a **published state curriculum**, so the prerequisite edges can be defended to a
+Kultusministerium rather than only to a product manager — and Apache-2.0 means the graph *and* the
+mastery-tracking code are both buildable on, which is true of neither larger graph. 🔴 The largest
+and fastest-growing of the three is the one a studio may not bill against.
+
+🟡 Both rows are small by stars (3 and 17). 🔵 They are shelved on provenance and architecture, and
+the star count is published here so nobody mistakes either for a widely-reviewed dependency.
+
+
 ## 🆕 `p457` — **🟢 A SUPPLY TIER THESE SHELVES HAVE NEVER CARRIED, AND IT IS THE ONE MOST OF THE WORLD'S SCHOOLS ACTUALLY RUN ON: paper assessment. Eight permissive rows — four OMR engines and four assistive/accessible-learning foundations — every grant read first-hand at the resolved default ref. 🔴 Plus the whole shelf re-read: 390 of 457 carried addresses serve a grant, and 64.6 % of them are MIT.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing

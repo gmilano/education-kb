@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` · 2026-10-26 — **The week's movement is a CHANNEL, not a repo: the GitHub repository-search API returns 26 unshelved education addresses where the prescribed web channel returns zero. And the fastest riser on it is one day old.**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### What is new this week
+
+| address | licence (read at `HEAD`) | age | ★ | why it moved |
+|---|---|---|---|---|
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **MIT** · 1 072 B `4450dee7f762` | **1 day** (created 2026-10-25) | **115** | 26 Canvas tools, **every one a `GET`**; bilingual README; argues its own blast radius. 🟡 115 ★ / **0 forks** — a ratio no other row here has |
+| [`OmarZen/scholarship-navigator`](https://github.com/OmarZen/scholarship-navigator) | **MIT** · 1 064 B `cdc1ae6b9064` | 1 day | 5 | 56 **Erasmus Mundus** programmes as structured eligibility data, reachable over MCP |
+| [`m1kuorg/asked-before`](https://github.com/m1kuorg/asked-before) | **Apache-2.0** · 11 357 B `c71d239df917` | 1 day | 0 | Inverts the tutoring loop — mines your own AI transcripts for repeated questions, then **tests you with the model removed** |
+| [`FredMichel/chalkcast`](https://github.com/FredMichel/chalkcast) | **MIT** · 1 072 B `ec57848632f7` | 2 days | 0 | Renders Manim **and visually verifies the render** before returning it |
+| [`lilong65190349/mcd-math-journey`](https://github.com/lilong65190349/mcd-math-journey) | **MIT** · 1 086 B `48038468aa58` | 2 days | 1 | 81 primary-maths levels whose **answer key is checked against a third-party priced API**, not against the model that wrote it |
+| [`IndexFlowing/MandarinClips-mcp`](https://github.com/IndexFlowing/MandarinClips-mcp) | **MIT** · 1 074 B `4a8b6a46d4b4` | 3 days | 0 | 180 000+ cinema dialogue clips aligned to **HSK 3.0** for TCSL teaching |
+| [`Hussain004/SAMOSA`](https://github.com/Hussain004/SAMOSA) | **MIT** · 1 064 B `987261e3f863` | 5 days | 2 | Audits every step of a derivation **exactly, over finite fields** — assessment without an LLM in the grading path |
+| [`kkongiu/elettrolab`](https://github.com/kkongiu/elettrolab) | **MIT** · 1 072 B `00003db93c6b` | 6 days | 0 | Italian didactic electronics lab: MNA solver, 2D breadboard, MCP surface |
+
+### 🟢 The pattern under all eight: verification is moving OUT of the model
+
+🔵 Four of the eight rows above — `chalkcast`, `mcd-math-journey`, `SAMOSA`, `asked-before` —
+share one property, and it is not a subject or a stack: **the correctness check does not run on
+the LLM.** Manim renders and is looked at; the answer key is re-derived from a priced API; the
+derivation is checked over finite fields; the quiz is scored with the model removed. 🟢 **That is
+this week's actual trend on these shelves**, and it is the opposite of the 2025-era pattern where
+an LLM graded its own output. 🔵 It is also the only structural read this base can make from one
+week of arrivals without over-claiming.
+
+### 🔴 Stated as a nil so the gap is not mistaken for coverage
+
+🔵 **Zero LATAM arrivals this week** among the 26 unshelved addresses. 🟢 The channel does reach
+LATAM — it returned `alejooroncoy/campus-cli` (UPC Aula Virtual, Peru) — but that address is
+already carried, so the nil is in novelty, not coverage. 🟡 `falkenslab/miyagi` is
+Spanish-language Moodle tooling whose own text names **no country**; it is flagged, not counted.
+
+---
+
+
 ## 🆕 `p457` · 2026-10-26 — **the week's movement is a licence moving, not an agent arriving**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes.

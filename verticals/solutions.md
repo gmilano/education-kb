@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` — **One Apache-2.0 LMS arrives for the self-hosted tier (the tier these shelves keep finding is copyleft), and the two platforms beside it are exactly why the tier needs reading twice**
+
+🔵 Grants read first-hand at the resolved default ref; instrument and controls as recorded in
+[`agents/top.md`](../agents/top.md). 🔵 This section corrects nothing on the existing tables; it
+adds three rows and flags two of them.
+
+| Platform | Repo | Licence (read at `HEAD`) | ★ | Shape | Verdict |
+|---|---|---|---|---|---|
+| **TutorLoom** | [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🟢 **Apache-2.0** · 11 362 B `a89039268428` | 49 | Multi-tenant LMS for institutes and training teams: course builder, batch enrolment, trainer and student portals, grading, progress. Django + React, Flutter client | 🟢 **Build-on.** Permissive and multi-tenant in the same row |
+| **Vacademy** | [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform) | 🔴 **AGPL-3.0** · 34 523 B `0d96a4ff68ad` | 23 | Topics itself `erp` + `crm` + `lms`: content delivery, learner tracking, assessment management | 🔴 **Read, do not host.** Network copyleft — a hosted multi-tenant deployment triggers source disclosure |
+| **ARSnova** | [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | 🔴 **NO GRANT** at 10 paths, **none in `build.gradle.kts` or `gradle.properties`** | **67** | Audience-response-system backend, Kotlin, containerised, created **2013** | 🔴 **Refused.** Needs a written grant from Particify before a line is vendored |
+
+### 🟢 Why `TutorLoom` is worth a line of its own on this shelf
+
+🔵 These shelves have recorded, pass after pass, that **the platform tier is almost entirely
+copyleft**: Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0, OpenEduCat LGPL-3.0, Sakai
+ECL-2.0. 🟢 `TutorLoom` is an **Apache-2.0** LMS that is multi-tenant out of the box — which is the
+exact combination a studio needs when a client wants a white-labelled platform it can modify
+without publishing the modifications. 🟡 It is three weeks old (created 2026-10-07) and carries 49 ★,
+so it is shelved as a **starting point to evaluate**, not as a Moodle replacement: the maturity
+gap against Moodle's two decades is not closeable by a licence.
+
+### 🔴 `ARSnova` is the clearest licence trap this tier has produced
+
+🔵 Thirteen years old, 67 ★, **44 forks**, Kotlin, a published `docker-compose` — every signal a
+buyer reads as "open source". 🔴 **There is no grant.** Not at `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `LICENCE`, `LICENCE.txt`, `COPYING`, `COPYING.txt`, `license`, `LICENSE-MIT` or
+`LICENSE.rst`, and **not as a licence field in its Gradle build either** — so this is a cleaner
+negative than `p452`'s `MANIFEST_ONLY` class, where a grant at least existed in metadata. 🟢 The
+engagement rule, and it applies to all 44 forks as much as to the original: **a container image
+is not a licence.** Ask Particify in writing, or build on something else.
+
+
 ## 🆕 `p457` — **🔴 THE VERTICAL THIS SHELF HAS NEVER DESCRIBED IS THE PAPER ONE: every platform carried here assumes a hosted LMS and a network, and the assessment instrument most of this industry's install base actually uses is a printed answer sheet read by a scanner. 🟢 A permissive, offline, single-machine paper-assessment stack now exists on these shelves. 🔴 And one carried platform cell went commercial two days ago.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing

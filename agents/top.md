@@ -4,6 +4,187 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` — **🟢 THE CHANNEL RECORDED AS BLOCKED FOR 457 PASSES WORKS, AND IT IS THE FIRST ONE TO BEAT THE PRESCRIBED CHANNEL BY A MARGIN: the GitHub repository-search API returned 62 education candidates and 26 of them (41.9 %) are addresses these shelves have NEVER carried, against the prescribed web-search channel's SIXTH consecutive zero. 🔴 And the reason this is pass 458 of ONE industry is not a research finding at all — the rotation that selects the industry has been stuck for 85 days.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was NOT RUN** — this pass
+reached the shelves through a fresh clone rather than the Makefile, so **nothing below is
+gate-attested**. 🔵 The instrument is a two-stage probe (`git ls-remote --symref` for liveness and
+default ref, then a 10-path payload read at that ref) and it was **controlled in both directions
+before use**:
+
+| control | result |
+|---|---|
+| 🟢 `HKUDS/DeepTutor` — positive, asserted against the value `p450` published | **11 408 B** · `cd2f54e1e506` — **reproduced exactly** |
+| 🟢 `moodle/moodle` — positive | GPL-3.0 at **`COPYING.txt` 35 147 B** `8ceb4b9ee5ad` |
+| 🟢 two fabricated addresses — negative | both **`ADDRESS_DEAD`** |
+
+🔵 A second, unplanned corroboration: `m1kuorg/asked-before`'s Apache-2.0 payload reads
+**11 357 B · `c71d239df917`** — byte- and digest-identical to the value `p453` published for
+`node-ecole-directe`, measured by a different instrument on a different pass. 🟢 **Two passes
+agree on a canonical grant digest.**
+
+### 🟢 The discovery finding — a channel with a measured yield, not an assertion
+
+🔵 `p450` recorded the GitHub API as *"github-api-proxy-blocked"* and every pass since has worked
+around it. 🔴 **It is not blocked from this host.** Four queries over `topic:education`,
+`topic:edtech`, `topic:mcp` and `topic:ai-agent` with `pushed:>2026-09-15` returned **62 distinct
+education candidates**; each was checked against the **2 932 addresses** these shelves already
+carry:
+
+| | n | share |
+|---|---|---|
+| candidates returned | **62** | |
+| 🟢 **NOT carried on any shelf here** | **26** | **41.9 %** |
+| 🔵 already carried | 36 | 58.1 % |
+
+🔵 Graded against the prescribed channel run in the same hour — four global legs plus one leg per
+region, every token checked against [`intel/market.md`](../intel/market.md): **0 novel facts, 19
+of 19 already on file**. 🟢 **The variable is the channel, and the margin is 26 to 0.** 🔵 The
+mechanism is structural rather than lucky: the API returns `license.spdx_id` and `pushed_at` as
+typed fields, so a licence and a liveness date arrive *with* the address instead of needing a
+probe per candidate — which is what made 62 candidates affordable in one pass.
+
+### 🟢 Twenty-one permissive build-on rows, every grant read first-hand at the resolved default ref
+
+🔵 Of the 26 new addresses, **23 serve a readable grant**, **3 serve none anywhere** and **2 of
+the 23 are copyleft** — leaving **21 permissive build-on rows**. 🔵 **19 are shelved here**; the two
+platform-shaped ones go to [`verticals/solutions.md`](../verticals/solutions.md) and
+[`repos/foundations.md`](../repos/foundations.md) rather than being double-counted on this shelf. Placed by region **only where the
+repository's own text names a national system, an institution or a published standard**; where the
+only evidence was the README's language, the row is left unplaced, because a language is not a
+region.
+
+#### 🇪🇺 EMEA — 5 permissive rows, each placed by a named national system
+
+| Agent | Repo | Licence (read at `HEAD`) | What it is | Placed by |
+|---|---|---|---|---|
+| skillpilot | [`enpasos/skillpilot`](https://github.com/enpasos/skillpilot) | **Apache-2.0** · 10 089 B `6bbe4ace8a18` | Official curricula turned into dependency-aware skill graphs with mastery tracking | **German Gymnasium** curricula, named |
+| somtoday-mcp | [`barzoj/somtoday-mcp`](https://github.com/barzoj/somtoday-mcp) | **MIT** · 1 082 B `47056e024c62` | Read-only MCP server for the Somtoday parent portal | **Somtoday**, Dutch parent portal |
+| scholarship-navigator | [`OmarZen/scholarship-navigator`](https://github.com/OmarZen/scholarship-navigator) | **MIT** · 1 064 B `cdc1ae6b9064` | Eligibility checks, fit scores and dated plans over 35 scholarships + **56 Erasmus Mundus** programmes; MCP + skills | **Erasmus Mundus**, named |
+| elettrolab | [`kkongiu/elettrolab`](https://github.com/kkongiu/elettrolab) | **MIT** · 1 072 B `00003db93c6b` | Didactic electronics lab — JSON circuits, MNA solver, 2D breadboard, MCP server for LLMs | Italian-language, **ITIS lab** idiom |
+| miyagi | [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | **MIT** · 1 078 B `d0a329112827` | Teacher agent over a **Moodle** course: grades to your rubric, runs the forum, builds topics and quizzes | 🟡 Spanish-language; **country NOT stated** |
+
+🟡 `miyagi` is listed under EMEA on the Moodle-plus-Spanish reading and **flagged**: its own text
+names no country, and Spanish-language Moodle tooling is as likely LATAM. 🔵 An engagement should
+confirm before citing it as either.
+
+#### 🌏 APAC — 5 permissive rows, placed by exam system or language standard
+
+| Agent | Repo | Licence (read at `HEAD`) | What it is | Placed by |
+|---|---|---|---|---|
+| kaoyan-navigator-skill | [`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) | **MIT** · 1 093 B `ddfed82a8a76` | Postgraduate school-selection skill: researches cutoffs, quotas and admission data, emits reach/match/safety advice | **考研**, China's national postgraduate exam |
+| MandarinClips-mcp | [`IndexFlowing/MandarinClips-mcp`](https://github.com/IndexFlowing/MandarinClips-mcp) | **MIT** · 1 074 B `4a8b6a46d4b4` | 180 000+ authentic cinema dialogue clips, **HSK 3.0** vocabulary and pragmatic grammar formulas for TCSL educators | **HSK 3.0**, published standard |
+| video2book | [`LINJIANG12/video2book`](https://github.com/LINJIANG12/video2book) | **MIT** · 1 100 B `0cec272164f7` | Turns long-form lecture video into textbook-grade prose and exam notes (faster-whisper) | **Bilibili** course corpus |
+| mcd-math-journey | [`lilong65190349/mcd-math-journey`](https://github.com/lilong65190349/mcd-math-journey) | **MIT** · 1 086 B `48038468aa58` | 81 answer-**verifiable** maths levels for primary grades 3–6; answers re-checked against a live priced API, read-only | Chinese 课标 primary curriculum |
+| studyhub-local | [`langming58-hash/studyhub-local`](https://github.com/langming58-hash/studyhub-local) | **MIT** · 1 084 B `27ec4446626e` | Local-first course-material hub with source-grounded study tools over Canvas | 🟡 zh-CN README; weak placement |
+
+🟢 `mcd-math-journey` is the one row on this shelf whose **answer key is externally verifiable**:
+the generator re-checks every answer against a third-party priced API rather than against the
+model that wrote the question. 🔵 That is the pattern worth taking, independently of the subject.
+
+#### 🇺🇸 North America — 3 permissive rows, placed by vendor or institution
+
+| Agent | Repo | Licence (read at `HEAD`) | What it is | Placed by |
+|---|---|---|---|---|
+| canvas-mcp | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **MIT** · 1 072 B `4450dee7f762` | **26 tools, every one a `GET`** — read-only Canvas LMS server; cannot submit, post, delete or mark read | **Canvas / Instructure** |
+| Brightspace-API | [`RohanMuppa/Brightspace-API`](https://github.com/RohanMuppa/Brightspace-API) | **MIT** · 1 068 B `047079fbd491` | Read-only Brightspace layer usable from scripts or cron **without an agent** — the non-MCP sibling of `brightspace-mcp-server`, which these shelves already carry | **D2L Brightspace**, Purdue |
+| canvasexpert-se | [`longhornteacher/canvasexpert-se`](https://github.com/longhornteacher/canvasexpert-se) | **MIT** · 1 085 B `a55fcd2567ea` | Teacher-directed Canvas assistant: portable engine, editable teaching playbooks, local MCP tools | **Canvas**, US K-12 idiom |
+
+🟢 **`canvas-mcp` is the counter-example to `p448`'s finding, and it is explicit about it.**
+`p448` measured that the LMS-connector tier is *not* read-only — 136 of 414 tool declarations
+mutate. This server declares 26 tools and states that every one issues `GET` only, *"so even a
+leaked connector URL only exposes what you could already see"*. 🔵 It is the first row here whose
+read-only property is a **design claim in its own README** rather than an absence this base had to
+measure. 🟡 Two caveats a buyer should know: it is **one day old** (created 2026-10-25) and sits at
+**115 ★ with 0 forks**, a ratio no other row here has.
+
+🔴 **`longhornteacher/canvasexpert-se` resolves its default ref to `dev`, not `main` or
+`master`.** 🔵 This is exactly the false-negative class `p450` chased and `p456` resolved: a
+guessed-ref probe would have returned `ADDRESS_DEAD` for a live, permissively granted repository.
+🟢 `--symref` resolved it on the first attempt.
+
+#### 🌐 Not placed — 6 permissive rows whose own text names no region
+
+| Agent | Repo | Licence (read at `HEAD`) | What it is |
+|---|---|---|---|
+| chalkcast | [`FredMichel/chalkcast`](https://github.com/FredMichel/chalkcast) | **MIT** · 1 072 B `ec57848632f7` | MCP server that authors, renders **and visually verifies** Manim animations from a concept |
+| SAMOSA | [`Hussain004/SAMOSA`](https://github.com/Hussain004/SAMOSA) | **MIT** · 1 064 B `987261e3f863` | Step auditor for matrix algebra and stochastics — checks every step of a derivation exactly, over finite fields |
+| yarareads | [`finereli/yarareads`](https://github.com/finereli/yarareads) | **MIT** · 1 066 B `7c4cf856c78c` | Decodable early-literacy reader: every word sounds out from phonics already taught; bring-your-own-agent over MCP |
+| lessonfolk | [`CGSeb/lessonfolk`](https://github.com/CGSeb/lessonfolk) | **MIT** · 1 063 B `55873542fedc` | Zero-to-advanced AI curriculum with an agent as the tutor |
+| asked-before | [`m1kuorg/asked-before`](https://github.com/m1kuorg/asked-before) | **Apache-2.0** · 11 357 B `c71d239df917` | Mines a ChatGPT/Claude export for the questions you keep re-asking, then **tests you without AI** until proven |
+| sciencelab3d | [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | **MIT** · 1 069 B `c4161f1cc9be` | 40+ browser virtual experiments across physics, chemistry and biology |
+
+🟢 `SAMOSA` and `chalkcast` share the property that makes them worth more than their star counts:
+**both verify their own output** — SAMOSA by exact arithmetic over finite fields, chalkcast by
+rendering the animation and looking at it. 🔵 `asked-before` inverts the usual tutoring loop by
+removing the model from the assessment step.
+
+### 🔴 Three addresses REFUSED — live, education-specific, and ungranted on every channel probed
+
+🔵 These are not shelved as build-on rows. All three resolve, all three are real projects, and
+**none serves a grant at any of 10 probed paths — nor declares one in its manifest**, which is a
+cleaner negative than `p452`'s `MANIFEST_ONLY` class:
+
+| address | ref | 10 licence paths | manifest | note |
+|---|---|---|---|---|
+| [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | `master` | 🔴 404 at all 10 | 🔴 `build.gradle.kts`, `gradle.properties` — **no licence field** | **67 ★, 44 forks, created 2013** — the most-forked ungranted project these shelves have found |
+| [`OutBlade/kit-campus-mcp`](https://github.com/OutBlade/kit-campus-mcp) | `main` | 🔴 404 at all 10 | 🔴 `pyproject.toml` — no licence field | Exam results and module catalogues for the **KIT Campus** portal (Karlsruhe) |
+| [`peterxing/openscout`](https://github.com/peterxing/openscout) | `main` | 🔴 404 at all 10 | 🔴 `package.json` — no licence field | Signs in to Microsoft 365 itself via Graph |
+
+🔴 **`arsnova-server` is the expensive one.** It is a thirteen-year-old audience-response backend
+with 44 forks, and the word *"open"* appears nowhere in a grant. 🔵 A team that reads 67 ★ and a
+`docker-compose` as permission is wrong, and so is every one of those 44 forks. 🟢 Engagement rule:
+ARSnova needs a written grant from Particify before a line of it is vendored — ask, do not assume.
+
+### 🟡 Two copyleft rows — recorded, NOT on the build-on tier
+
+| address | licence read at `HEAD` | why it is flagged |
+|---|---|---|
+| [`Arudchayan/adam-mcp`](https://github.com/Arudchayan/adam-mcp) | 🟡 **GPL-3.0** · 35 149 B `3972dc9744f6` | Read-only MCP for **University of Basel ADAM (ILIAS 10)**, SWITCH edu-ID kept in the browser — the first **ILIAS** address on these shelves, and it is copyleft |
+| [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform) | 🔴 **AGPL-3.0** · 34 523 B `0d96a4ff68ad` | Topics itself `erp` + `crm` + `lms`; network copyleft, so a hosted multi-tenant deployment triggers source disclosure |
+
+🔵 `adam-mcp` matters out of proportion to its 0 ★: **ILIAS is a national-scale LMS in the
+German-speaking university sector** and no shelf here carried an address against it. 🟡 GPL-3.0
+makes it a reference to read, not a library to link.
+
+### 🔴 LATAM — a NIL, and the denominator says it is a NOVELTY nil, not a coverage hole
+
+🔵 Stated explicitly because silence looks like coverage: **zero of the 26 new addresses are
+LATAM.** 🟢 But the channel did not fail to return LATAM supply — it returned
+[`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) (UPC Aula Virtual,
+Blackboard Learn, Peru), which **these shelves already carry**. 🔵 So the nil is in *novelty*, not
+in coverage: this channel reaches LATAM, and the LATAM supply it reaches was already found. 🟡 The
+one row that could have been LATAM — `miyagi` — does not name its country, and is flagged above
+rather than counted here.
+
+
+### 🔴 Three defects found inside this pass, in this pass's own instruments — recorded, not quietly fixed
+
+🔵 Each would have published a confident wrong statement, and each was caught by a control
+asserting a value this base had already published:
+
+| # | defect | what it would have published | caught by |
+|---|---|---|---|
+| **(a)** | the append-only proof snapshotted both trending files to `$DIR/$(basename f).pre` — **both basenames are `trending.md`**, so one snapshot silently overwrote the other | a **false append-only VIOLATION** on [`agents/trending.md`](trending.md), comparing it against `repos/trending.md`'s bytes | the two "prior" sizes came back **identical** (3 324 005 B) for files of 51 077 and 39 810 lines |
+| **(b)** | whole-body byte containment was applied to [`intel/market.md`](../intel/market.md), whose region block is amended **in place** by contract | a **false violation** — in-place amendment necessarily breaks containment of the whole prior body | `git diff --numstat` reporting **161 insertions, 0 deletions**, which is the correct instrument for an in-place file |
+| **(c)** | the first licence-path list omitted `COPYING.txt`, so the `moodle/moodle` positive control returned `REPO_LIVE_NO_GRANT` | **"Moodle serves no grant"** — about the most-installed LMS in the world | the positive control failing *before* the sweep ran; path list extended to 10 and re-run |
+
+🟢 Defect (a) is the useful one to carry forward: **whole-body containment is the right instrument
+for an append-only file and the wrong one for a file amended in place**, and the two contracts need
+two different checks. 🔵 Re-proved against `git show HEAD:<file>` rather than a local snapshot:
+both trending files contain their **entire** prior body verbatim (4 372 716 B and 3 323 943 B), and
+**all eight files show 0 deletions**.
+
+### 🟡 An unplanned corroboration, and a correction to this pass's own first draft
+
+🔵 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) —
+already carried here — was re-probed to check the sibling claim above. Its grant reads **MIT ·
+1 068 B · `047079fbd491`**, **byte- and digest-identical** to `Brightspace-API`'s. 🟢 Same author,
+same MIT text, two addresses — the sibling relationship is measured, not inferred. 🔴 This pass's
+first draft had listed `brightspace-mcp-server` as a *new* row with its byte count guessed from
+the sibling; it is **already carried**, the guess is replaced by a first-hand read, and the North
+America count is corrected from 4 to **3**.
+
 ## 🆕 `p457` — **🟢 `Gap 456-A` IS CLOSED BY READING THE PAYLOAD AT ALL 457 CARRIED ADDRESSES, NOT 15 OF THEM — and the one genuine disagreement in 356 graded cells is a RELICENSING DATED TWO DAYS BEFORE THIS PASS: [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) is shelved here as MIT and serves `Pengusto Commercial License 1.0` at `HEAD`. 🔴 And the MIT upstream it names serves NO licence file at any path — its grant text survives only inside the fork that relicensed it.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED**

@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` · 2026-10-26 — **A channel result, not a star result: 62 education candidates off the GitHub repository-search API, 26 of them unshelved — against 0 novel facts from the prescribed web channel in the same hour**
+
+🔵 Appended above the history, nothing below edited or removed.
+
+### The measured comparison
+
+| channel | legs | returned | novel to these shelves | novel share |
+|---|---|---|---|---|
+| 🟢 GitHub repository-search API (`topic:` + `pushed:>2026-09-15`) | 4 | **62 addresses** | **26** | **41.9 %** |
+| 🔴 the prescribed web-search channel (4 global + 4 regional, as written) | 8 | 19 named facts | **0** | **0 %** |
+
+🔵 Both were run in the same hour against the same **2 932** carried addresses and the same
+[`intel/market.md`](../intel/market.md). 🟢 The margin is **26 to 0**, and the mechanism is not
+luck: the API returns `license.spdx_id`, `pushed_at` and `topics` as **typed fields**, so a
+licence and a liveness date arrive with the address instead of costing one probe each — which is
+what made 62 candidates affordable in a single pass. 🔴 `p450` recorded this channel as
+*"github-api-proxy-blocked"* and **457 passes worked around a channel that was open.**
+
+### Trending repos this week, by grant
+
+🟢 **Permissive, payload read at `HEAD`** — 21 of 26 (19 shelved on
+[`agents/top.md`](../agents/top.md), 2 on [`foundations`](foundations.md) and
+[`verticals`](../verticals/solutions.md)):
+`boyuchengz/canvas-mcp` (MIT, 115 ★, 1 day) · `pacewisdomhq/TutorLoom` (Apache-2.0, 49 ★) ·
+`mcxiaoxiao/kaoyan-navigator-skill` (MIT, 38 ★) · `finereli/yarareads` (MIT, 29 ★) ·
+`LINJIANG12/video2book` (MIT, 26 ★) · `rudra496/sciencelab3d` (MIT, 23 ★) ·
+`Man0dya/Tutor-AI` (Apache-2.0, 17 ★) · `langming58-hash/studyhub-local` (MIT, 10 ★) ·
+`OmarZen/scholarship-navigator` (MIT, 5 ★) · `enpasos/skillpilot` (Apache-2.0, 3 ★) ·
+`CGSeb/lessonfolk` (MIT, 3 ★) · `Hussain004/SAMOSA` (MIT, 2 ★) ·
+`RohanMuppa/Brightspace-API` (MIT, 1 ★) · `barzoj/somtoday-mcp` (MIT, 1 ★) ·
+`longhornteacher/canvasexpert-se` (MIT, 1 ★, ref **`dev`**) ·
+`lilong65190349/mcd-math-journey` (MIT, 1 ★) · `kkongiu/elettrolab` (MIT, 0 ★) ·
+`falkenslab/miyagi` (MIT, 0 ★) · `FredMichel/chalkcast` (MIT, 0 ★) ·
+`IndexFlowing/MandarinClips-mcp` (MIT, 0 ★) · `m1kuorg/asked-before` (Apache-2.0, 0 ★)
+
+🟡 **Copyleft, recorded not recommended** — 2:
+[`Arudchayan/adam-mcp`](https://github.com/Arudchayan/adam-mcp) (**GPL-3.0**, first **ILIAS**
+address on these shelves) · [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform)
+(**AGPL-3.0**, topics itself `erp`+`crm`+`lms` — network copyleft on a hosted deployment)
+
+🔴 **Refused — live, education-specific, ungranted at 10 paths AND in the manifest** — 3:
+[`particify/arsnova-server`](https://github.com/particify/arsnova-server) (**67 ★, 44 forks,
+created 2013** — the most-forked ungranted project these shelves have found) ·
+[`OutBlade/kit-campus-mcp`](https://github.com/OutBlade/kit-campus-mcp) (KIT Campus portal) ·
+[`peterxing/openscout`](https://github.com/peterxing/openscout)
+
+### 🔴 The star count is the wrong instrument this week, and here is the measurement
+
+🔵 Of the 21 permissive rows, **10 sit at 3 ★ or fewer** and four of those are the rows with the
+most defensible engineering (`skillpilot`'s official-curriculum provenance, `SAMOSA`'s exact
+finite-field auditing, `chalkcast`'s render-then-verify loop, `mcd-math-journey`'s externally
+checkable answer key). 🔴 Meanwhile the **highest** star count in the whole set belongs to an
+**ungranted** project (`arsnova-server`, 67 ★). 🟢 **On this week's population, stars and
+shippability are not merely uncorrelated — the single highest-starred row is the one nobody may
+legally ship.**
+
+---
+
+
 ## 🆕 `p457` · 2026-10-26 — **the trending movement is a vocabulary, not a repository: paper assessment**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes.

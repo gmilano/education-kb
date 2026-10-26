@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` · 2026-10-26 — **Two trends this pass, and the measurable one is about where verification runs: it is moving OUT of the model. The other is that this base's own discovery instrument was wrong for 457 passes.**
+
+### 🟢 Trend — the correctness check is leaving the LLM
+
+🔵 Measured, not asserted: of the 26 unshelved education addresses this pass found, **the four
+most defensible pieces of engineering all move the correctness check off the language model**, and
+they do it in four unrelated subjects:
+
+| address | what grades the output | what the LLM does instead |
+|---|---|---|
+| [`Hussain004/SAMOSA`](https://github.com/Hussain004/SAMOSA) | exact arithmetic over **finite fields** | proposes the derivation |
+| [`lilong65190349/mcd-math-journey`](https://github.com/lilong65190349/mcd-math-journey) | a **third-party priced API** re-derives the answer key | writes the word problem |
+| [`FredMichel/chalkcast`](https://github.com/FredMichel/chalkcast) | the animation is **rendered and visually inspected** | authors the Manim scene |
+| [`m1kuorg/asked-before`](https://github.com/m1kuorg/asked-before) | the learner is tested **with the model removed** | mines the transcript for the question |
+
+🟢 This is the supply side catching up with the demand side that this file already records: the
+**OECD 2026** digital-education finding that chatbot gains disappeared — and sometimes reversed —
+in exams once access was withdrawn, and **1EdTech**'s read that the sector has moved from
+experimentation to governance. 🔵 A tutoring system whose grader is the same model as its tutor
+cannot answer either objection. These four can. 🟢 **For an engagement: this is now a design
+requirement to put in the proposal, not a differentiator to discover later.**
+
+🟡 Denominator, so this is not over-read: four addresses out of 26, in one week, on one channel.
+It is a direction with evidence, not a measured market share.
+
+### 🔴 Trend — in this base's own instruments, and it is the expensive kind
+
+🔵 The GitHub repository-search API was recorded by `p450` as *"github-api-proxy-blocked"*. 🔴 **It
+is open from this host, and this pass used it to return 62 education candidates of which 26
+(41.9 %) were unshelved — in the same hour that the prescribed web-search channel returned 19
+facts and ZERO novel ones, its sixth consecutive nil.** 🟢 The lesson generalises past this base:
+**a channel recorded as blocked is a claim with a date on it, and it decays.** Five passes
+reported nils and attributed them to a saturated subject; the subject was not saturated, the
+channel was.
+
+### 🔴 And the trend that is not about education at all
+
+🔵 Stated here because it explains the shape of this entire base and no file records it: **the
+rotation that is supposed to move this curator across twelve industries each hour has not
+advanced since 2026-08-02.** 🔴 `rotation.json` has read `{"next": 8}` for **85 days**, which is why
+this is **pass 458 of education** and why automotive, energy, enterprise, gaming, legal, financial,
+healthcare, media, retail, travel and technology have had **no pass since early August**. 🟢 This
+pass advances the rotation to index 9 (automotive). 🔵 The reader-facing consequence: **the depth
+of this KB against the other eleven is an artefact of a stuck counter, not a judgement that
+education matters 458 times more.**
+
+---
+
+
 ## 🆕 `p457` — **🔴 THE TREND THIS PASS CAN EVIDENCE WITH A DATE IS LICENCE REVOCATION IN PLACE: three of 457 carried addresses re-issued their licence text inside one 48-hour window, and one of them moved from MIT to commercial while its shelf cell still said MIT. 🟢 And a structural trend with a nine-token denominator: this industry's dominant assessment instrument is paper, and the entire open-source vocabulary these shelves search in is digital.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing

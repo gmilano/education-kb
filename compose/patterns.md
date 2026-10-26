@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p458` — **Pattern BD: the ungradeable-by-itself tutor — a tutoring stack whose grader is NOT the model that teaches, wired from four repos verified this pass**
+
+🔵 Every component below was read first-hand at its resolved default ref this pass (grants,
+byte counts and digests in [`agents/top.md`](../agents/top.md)). 🟢 This pattern exists because the
+objection it answers is now the sector's main one, and it is on file: **OECD 2026** found chatbot
+gains vanished or reversed once access was withdrawn, and **1EdTech** reads the sector as having
+moved from experimentation to governance. 🔴 A stack whose tutor grades its own output cannot
+answer either.
+
+### The wiring
+
+```
+                     ┌──────────────────────────────────────────┐
+  official curriculum│  enpasos/skillpilot      Apache-2.0      │
+  (state/ministry)   │  → prerequisite skill graph + mastery    │
+                     └───────────────┬──────────────────────────┘
+                                     │ "learner is ready for topic T"
+                                     ▼
+                     ┌──────────────────────────────────────────┐
+                     │  Man0dya/Tutor-AI        Apache-2.0      │
+                     │  → 4 separable agents:                   │
+                     │    content · questions · eval · feedback │
+                     └──────┬──────────────────────┬────────────┘
+                            │ question             │ explanation
+                            ▼                      ▼
+        ┌───────────────────────────┐  ┌────────────────────────────┐
+        │ Hussain004/SAMOSA   MIT   │  │ FredMichel/chalkcast  MIT  │
+        │ → step audit, EXACT,      │  │ → Manim render, then       │
+        │   over finite fields      │  │   VISUALLY VERIFIES it     │
+        └───────────┬───────────────┘  └────────────┬───────────────┘
+                    │ pass / fail (no LLM)          │ verified asset
+                    └───────────────┬───────────────┘
+                                    ▼
+                     ┌──────────────────────────────────────────┐
+                     │  mastery written back to skillpilot      │
+                     │  ONLY on a non-LLM pass verdict          │
+                     └──────────────────────────────────────────┘
+```
+
+### Why each piece, specifically
+
+| Step | Repo | Licence | Why this one and not the model |
+|---|---|---|---|
+| 1. What to teach next | [`enpasos/skillpilot`](https://github.com/enpasos/skillpilot) | Apache-2.0 | Its prerequisite edges come from a **published state curriculum** (German Gymnasium), so sequencing is defensible to a ministry or school board. Ask the LLM instead and you cannot cite the ordering. |
+| 2. Teach and ask | [`Man0dya/Tutor-AI`](https://github.com/Man0dya/Tutor-AI) | Apache-2.0 | Already splits content / question-set / evaluation / feedback into **four separable agents** — so step 3 can replace the evaluator without a rewrite. That seam is the whole point. |
+| 3a. Grade maths and stochastics | [`Hussain004/SAMOSA`](https://github.com/Hussain004/SAMOSA) | MIT | Checks **every step** of a derivation exactly over finite fields. Deterministic, auditable, reproducible — three properties an LLM grader does not have. |
+| 3b. Grade the explanation asset | [`FredMichel/chalkcast`](https://github.com/FredMichel/chalkcast) | MIT | **Renders then visually verifies** the Manim output, so a broken or misleading animation is caught before a learner sees it. |
+| 4. Record mastery | back into `skillpilot` | Apache-2.0 | Write mastery **only** on a step-3 pass. The LLM never writes to the mastery store. |
+
+### The one rule that makes it an engagement claim rather than an architecture diagram
+
+🟢 **Nothing on the LLM's path may write to the mastery store.** The model proposes; `SAMOSA` or
+`chalkcast` disposes; only their verdict is persisted. 🔵 That single constraint is what lets a
+studio answer "how do you know the learner actually learned it" with an artefact rather than an
+assurance — and it is auditable after the fact, because the grader is deterministic and its input
+is on disk.
+
+### Regional substitutions, all verified this pass
+
+🔵 The grader and the curriculum source are the parts that must be local; the middle two are not:
+
+| Region | Swap in | Licence | For |
+|---|---|---|---|
+| **EMEA** | [`barzoj/somtoday-mcp`](https://github.com/barzoj/somtoday-mcp) · [`OmarZen/scholarship-navigator`](https://github.com/OmarZen/scholarship-navigator) | MIT · MIT | Dutch parent-portal reporting · Erasmus Mundus progression advice |
+| **EMEA** (🟡 copyleft — reference only) | [`Arudchayan/adam-mcp`](https://github.com/Arudchayan/adam-mcp) | GPL-3.0 | **ILIAS 10** institution-of-record reads (Univ. of Basel) |
+| **APAC** | [`IndexFlowing/MandarinClips-mcp`](https://github.com/IndexFlowing/MandarinClips-mcp) · [`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) | MIT · MIT | HSK 3.0-aligned TCSL corpus · 考研 admission sequencing |
+| **North America** | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (read-only, 26 `GET` tools) · [`RohanMuppa/Brightspace-API`](https://github.com/RohanMuppa/Brightspace-API) | MIT · MIT | Canvas and Brightspace as the system of record |
+| **LATAM** | 🔴 **no row verified this pass** | — | 🔵 The channel reached LATAM but returned only already-carried supply (`alejooroncoy/campus-cli`, UPC Peru). Build step 1 from a **national curriculum document**, not from a repo, until a LATAM curriculum-graph address exists. |
+| **Global** | [`lilong65190349/mcd-math-journey`](https://github.com/lilong65190349/mcd-math-journey) | MIT | The externally-verified-answer-key technique, portable to any subject with a priced or computable ground truth |
+
+🟡 **Maturity warning, stated because the star counts invite a wrong read:** `skillpilot` is at
+3 ★, `SAMOSA` at 2 ★, `chalkcast` at 0 ★. 🔵 These are shelved on provenance and on verifiability,
+not on community review. 🟢 For a client engagement, treat Pattern BD as an **architecture to
+implement**, taking the technique from each repo, rather than four dependencies to pin.
+
+
 ## 🆕 `p457` — **🟢 Two recipes forced by this pass's measurements: an offline paper-to-psychometrics assessment line for the install base these shelves could not serve, and a licence-drift gate for the failure `p457` caught — a dependency that was MIT when it was shelved and commercial when it was read.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — twelfth denial in thirteen passes. 🔵 Nothing

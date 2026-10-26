@@ -1,0 +1,10 @@
+address	verdict	default_ref	licence_path	bytes	sha256_12	family	role
+moodle/moodle	PAYLOAD_READ	main	COPYING.txt	35147	8ceb4b9ee5ad	GPL-3.0	POSITIVE_CONTROL
+HKUDS/DeepTutor	PAYLOAD_READ	main	LICENSE	11408	cd2f54e1e506	Apache-2.0	POSITIVE_CONTROL_reproduces_p450
+globant-kb/this-repo-does-not-exist-470f	ADDRESS_DEAD	-	-	-	-	-	NEGATIVE_CONTROL
+ZZfabricated-owner-470f/nope	ADDRESS_DEAD	-	-	-	-	-	NEGATIVE_CONTROL
+ZZ-fabricated-negative-p458/not-real	ADDRESS_DEAD	-	-	-	-	-	NEGATIVE_CONTROL
+alejooroncoy/campus-cli	PAYLOAD_READ	main	LICENSE	748	4ca1bd2e969c	ISC	CARRIED_recheck_shelf_AGREES
+withmarbleapp/os-taxonomy	PAYLOAD_READ	main	LICENSE	25289	77d2692c3d64	ODbL	CARRIED_recheck_shelf_AGREES
+xiaoyang111222/cn-math-taxonomy	PAYLOAD_READ	main	LICENSE	19347	41003d4a7474	CC-BY-NC-4.0	CARRIED_recheck_NONCOMMERCIAL
+RohanMuppa/brightspace-mcp-server	PAYLOAD_READ	main	LICENSE	1068	047079fbd491	MIT	CARRIED_recheck_digest_identical_to_Brightspace-API
