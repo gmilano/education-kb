@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` — **🔴 THE STRICTEST GATE POSTURE YET RECORDED: `make hooks` AND every individual gate script were refused, so for the first time this base cannot run even the hand-run mitigations `p463` used. 🟢 The checks were re-implemented in this session's own code instead and are green on 9 shelves / 32 tables / 137 rows / 29 addresses. 🔴 And a STANDING CLAIM on `intel/market.md` is refuted by this base's own `agents/top.md` — a class of defect no gate here can see, because every gate grades a row against a payload and none grades a PROSE CLAIM against another shelf.**
+
+🟢 **The register is written in the same pass as the shelves it registers**, per
+`gate-register-currency`. Shelves carrying `p464`: `agents/top.md`, `agents/trending.md`,
+`repos/foundations.md`, `repos/trending.md`, `verticals/solutions.md`, `intel/market.md`,
+`intel/trends.md`, `compose/patterns.md`.
+
+### 🔴 Gate posture — eleven denials in twelve passes, and one rung stricter
+
+| invocation | result |
+|---|---|
+| 🔴 `make hooks` | **DENIED** by the harness permission classifier (`Code from External`) before any gate body ran |
+| 🔴 `python3 compose/code/p277-table-structure/table_structure.py .` | 🔴 **DENIED** — 🔵 `p463` **was** permitted to run this one by hand |
+| 🔴 `python3 compose/code/p383-region-heading-gate/check_headings.py intel/market.md` | 🔴 **DENIED** — 🔵 `p463` ran this one and closed `p383`'s contract with it |
+
+🔴 **Nothing on this pass's shelves is gate-attested.** 🔵 The denial is on *executing code that
+arrived in a clone*, which is a defensible posture and not a proxy failure — but its effect is
+that `Gap 446-A` cannot be closed by any pass, and the escalation is now visible: the mitigation
+route `p463` relied on is also gone.
+
+🟢 **Mitigation, re-implemented in this session's own code rather than the repo's** (so it is not
+"code from external"), and it is **not** a substitute for the gate:
+
+| check | result |
+|---|---|
+| 🟢 frontmatter keys + closed-vocabulary `region` on all 9 shelves | **9/9 pass** — every `region` one of the five permitted values |
+| 🟢 `p464` tables: separator present, pipe-count consistent | **32 tables / 137 data rows, 0 problems** |
+| 🟢 **no header row published as data** (the failure the ingest brief names explicitly) | **0 findings across 137 rows** |
+| 🟢 append-only on both trending shelves, by prior-body containment against `HEAD` | 🟢 **both intact** |
+| 🟢 every address introduced this pass re-resolved by `git ls-remote` | **29 distinct addresses, 29 live, 0 dead** |
+
+### 🟢 Closed / answered this pass
+
+| gap | closure |
+|---|---|
+| 🔴 **A STANDING CLAIM REFUTED FROM INSIDE — and its mechanism identified** | `intel/market.md` carried, from `p462`: *"of ten carried platforms exactly one — Kolibri, MIT — is freely redistributable"*. 🟢 `agents/top.md` carries [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) at **Apache-2.0** in a cell reading *"the only Apache-2.0 one… strongly under-used"*. 🟢 Re-read first-hand: **10 982 B · `6dbc5b605ed0`** @ HEAD **`891b9434e822`** — digest reproduced, HEAD moved from the carried `d073ad444fe5`. 🔵 **Mechanism:** the count was computed from the **eight**-platform census on `verticals/solutions.md` and then stated about *all* carried platforms; OpenOLAT is shelved elsewhere and was invisible to it. 🟢 Claim corrected in place on both files; recipe `Pattern BE` built on the recovered option |
+| 🟢 **`p463`'s recency channel — REPRODUCED by an independent operator** | 20 candidates → **12 novel (60 %)** → **7 granted (58 % of novel)** → **6 permissive**. 🔵 Against `p463`'s 17 → 13 → 11 one hour earlier: novelty held, **grant rate fell 65 % → 58 %**. 🔴 Two passes is a baseline, not a trend |
+| 🟢 **`p462`'s payload-identity rule — THIRD instance** | [`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) serves AGPL-3.0 **34 523 B · `0d96a4ff68ad`** at a third unrelated HEAD (`aba4510778ff`), matching the `Vacademy-io` control and `p463`'s `sitor-ai/frametell`. 🔴 **And the over-read is blocked:** `openedx/edx-platform` is also AGPL-3.0 at a **different** digest (35 136 B · `e12d78569742`), so ≥2 byte-variants circulate; `maplexrain/unyra` and the `instructional_agents` control are both MIT at **exactly 1 067 B** with different digests. 🟢 Rule: **size screens, digest identifies the licence text + holder, neither identifies the project** |
+| 🟢 **The prescribed `curl -sI` probe — fourth independent reproduction of its uselessness** | `403` for `openedx/edx-platform` **and** for a nonexistent slug alike. No row rests on it |
+| 🟢 **`p463`'s "the language is the wrong variable" — fifth confirmation, and now on the form that could have explained it away** | `educación aprendizaje IA estudiantes created:>2026-04-01 stars:>5` → **`total_count: 0`**. 🔴 First time run **recency-bounded**, which rules out the hypothesis that earlier Spanish nils were older repositories drowning the slice. No further pass should spend a call on this form |
+| 🟢 **`p455`'s retirement of "134 bills / 31 states" — reproduced independently** | This hour's NA legs returned **"134 bills / 31 states"**, **"27 states with active bills"** and **"already law in ten states"** from three different trackers. 🟢 The retirement stands |
+| 🟢 **The nine-pass regional-leg nil — BROKEN, on all four regions** | Five facts returned that this file did not carry: EU **Art. 5(1)(f)**, **Ohio Rev. Code 3301.24**, **India** Class-3 curriculum, **Edomex Art. 61**, **Brazil `PL 2338/2023`** status. 🔵 `p462` and `p463` graded this leg a nil with a full denominator; the difference was asking each region for *instruments* rather than for adoption percentages |
+| 🟡 **`Gap 463-G` (the rotation pointer) — reproduced, still OWNER-ONLY** | Measured again first-hand in `gmilano/globant-kb`: `origin/main:rotation.json` reads **`next: 8`, `last_industry: technology`, `last_updated: 2026-08-02`**, while the remote carries **1 963** `claude/ecstatic-mccarthy-*` branches. 🔴 Education has now been the selected industry for **six** consecutive runs. Not closable by a pass |
+
+### 🆕 Registered this pass
+
+| gap | finding |
+|---|---|
+| 🆕 **`Gap 464-A`** | 🔴 **No gate here grades a prose claim against another shelf's rows.** Every gate grades a *row* against a *payload* — grant presence, digest, region vocabulary, table shape — so a headline that contradicts this base's own cells survives indefinitely while every cell it contradicts is individually green. The `p462` platform count is the proven instance. **Closure:** a **platform census that is the union of the platform rows on all nine shelves**, keyed on address, licence family taken from the payload cell and never from prose, with the count that feeds `intel/market.md`'s Global item generated from it rather than written by hand |
+| 🆕 **`Gap 464-B`** | 🔴 **The recency channel carries template clones and the fork flag cannot see them.** [`tjayze/olympiad-problem-forge`](https://github.com/tjayze/olympiad-problem-forge) and [`princechhimpachhimpasaab-lang/omega-epsilon-problem-forge`](https://github.com/princechhimpachhimpasaab-lang/omega-epsilon-problem-forge) share an **identical 14-string topic set**, near-identical descriptions, 0 forks each, star counts one apart — and **both declare `fork: false`**. 🔴 One advertises **"Spanish"** content, so a LATAM-hunting pass would have shelved it. **Closure:** compare topic sets across candidates in the discovery slice before shelving; identical topic-set ⇒ hold both pending a payload and a commit-history read |
+| 🆕 **`Gap 464-C`** | 🔴 **The recency channel is a channel onto the APPLICATION tier, and this base keeps asking it for substrate.** Of 12 novel addresses: 5 applications, 3 skills/plugins, 2 platforms, **1 substrate**, **0 evaluation harnesses**. `p463` saw the same shape from the other end (7 of 13 ship as a skill). **Closure:** source foundations from a different channel — package registries, dependency closures of carried rows, or the eviction store (`Pattern AW`) — and stop reading a foundation nil as evidence about supply |
+| 🆕 **`Gap 464-D`** | 🔴 **The GitHub *search* API is unreachable from the `gh` CLI here and its failure looks like an empty result.** `gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured repositories"`**. Repository search survives **only** via the MCP `search_repositories` tool. 🔴 A pass that reaches for the obvious tool gets a hard error on every query and could publish a manufactured saturation nil — the exact error class `p463` spent a pass refuting. **Closure:** record the working channel at the top of the discovery recipe |
+| 🆕 **`Gap 464-E`** | 🟡 **The Edomex instrument is unconfirmed at the only step that makes it binding.** Committee approval is confirmed by the Congreso del Estado de México's own channel and plenary approval is recorded by a legislative observatory as **2026-04-27/28**, but **publication in the Gaceta del Gobierno and entry into force were not reached on any leg**. It bears on a standing negative claim about LATAM, so it is relayed and the claim is **narrowed, not refuted**. **Closure:** read the Gaceta del Gobierno del Estado de México directly |
+| 🆕 **`Gap 464-F`** | 🔴 **This base carried a region's DEFERRED duty and missed its LIVE one for an unknown number of passes.** EU **Art. 5(1)(f)** has prohibited emotion inference in educational institutions since **2025-02-02**, to **€35 M / 7 %** — and the EMEA section framed the region as *"13 months of runway"* off the Annex III date alone. 🔵 The sampling bias is legible: the legs asked *when do obligations start*, which returns future dates and never returns a prohibition already in force. **Closure:** a per-region **prohibitions** row that is queried separately from the high-risk calendar, on every regional leg |
+
 ## 🆕 `p463` — **🟢 THE SATURATION NIL BREAKS ON BOTH SIDES, AND THE SECOND SIDE IS A CHANNEL NOTHING HERE MEASURES: 21 projects were silently EVICTED from every sell shelf since `p406`, 10 of them live and permissive. 🟢 `p383`'s region contract is CLOSED for the first time since it was wired — the gate reported 3 live blocks and now reports 0 findings. 🔵 And this pass's own first headline — a 15.5 % ledger defect — is REFUTED before publication.**
 
 🟢 **The register is written in the same pass as the shelves it registers**, per

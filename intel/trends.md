@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` · 2026-10-26 — **🔴 "Regulation diverged by region" (`p463`) is TRUE BUT TOO COARSE: it also diverged by DUTY TYPE inside a single region, and EMEA is the proof — a live prohibition since 2025-02-02 sitting under a high-risk regime deferred to 2027-12-02. 🟢 And a trend this base has not stated: in 2026 education-AI law became a DEMAND GENERATOR, not only a constraint — three of this hour's four regional instruments oblige institutions to adopt, promote or govern AI rather than to restrict it.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🔴 `T1` — The divergence is two-dimensional, and the second axis changes what you sell
+
+🔵 `p462` and `p463` established the regional axis: **Hanoi has a live duty, Frankfurt has 13
+months.** 🟢 That holds. 🔴 **What it misses is that a single jurisdiction now carries duties with
+opposite clocks:**
+
+| region | live **now** | deferred | consequence for a proposal |
+|---|---|---|---|
+| 🔴 **EMEA** | **Art. 5(1)(f)** — emotion/attention inference in education **prohibited since 2025-02-02**, to **€35 M / 7 %** | Annex III high-risk (admissions, evaluation, exam scoring) → **2027-12-02** | 🔴 **You cannot tell an EMEA client "we have a runway".** One feature class must be declined today; the rest has 13 months |
+| 🔴 **APAC** | Vietnam (2026-03-01, education named), Korea (2026-01-22), China | — | duty-first: classify before deploying |
+| 🟡 **NA** | **Ohio** policy duty **expired 2026-07-01**; state human-oversight statutes | federal bill in committee | the artefact is a *policy that exists and is implementable* |
+| 🟢 **LATAM** | 🔴 nothing national in force; Brazil parked behind the Oct-2026 elections | — | governance is the product, not the obstacle |
+
+🟢 **The sellable form of `T1`:** a multi-region programme needs a **per-feature** compliance
+matrix, not a per-region one. The same attention-analytics module is *prohibited* in the EU,
+*high-risk and self-classified* in Vietnam, and *unregulated* in Brazil.
+
+### 🟢 `T2` — NEW: education-AI law turned into a demand generator
+
+🔵 Every regulatory trend this file has carried reads law as a **constraint**. 🟢 **Three of the
+four instruments this pass promoted are obligations to *do* something:**
+
+| instrument | duty | what an institution must now buy |
+|---|---|---|
+| 🟢 **India** — AI + Computational Thinking from **Class 3**, 2026-27 session | introduce a curriculum across all schools | curriculum content, **teacher training at national scale** (NISHTHA), handbooks, assessment |
+| 🟢 **Ohio Rev. Code 3301.24** | **adopt an AI policy** by 2026-07-01 | policy drafting, tool-approval process, governance role, staff training |
+| 🟡 **Estado de México, Art. 61** | **promote** responsible, ethical and gradual AI use (upper-secondary and higher) | teacher capability, institutional policy, access provisioning |
+| 🔴 **EU Art. 5(1)(f)** | **do not** infer emotions | 🔴 the one pure prohibition in the set |
+
+🔴 **Why this is a trend and not four facts.** The 2026 instruments that name education most
+explicitly are **adoption mandates**, and an adoption mandate with a date is a procurement
+pipeline: it obliges thousands of institutions to produce an artefact they do not have the
+capability to produce. 🟢 **For Globant that inverts the sales motion** — the entry point in NA,
+India and Edomex is **capability and governance delivery** (policy, training, tool-approval
+workflow), not a model or a tutor. 🔵 It is also the only category of education-AI demand on this
+file that is **immune to the efficacy-evidence blocker** below, because the buyer's success
+criterion is *the policy exists and is defensible*, not *learning improved*.
+
+### 🟡 `T3` — The efficacy gap holds, but its ADJACENT category started shipping
+
+🔴 **Sixth consecutive pass with zero evaluation harnesses in the discovery slice** (0 of 12 this
+pass; `p463` found 1 of 13 and it was *recovered*, not discovered). Buyers in every region ask for
+proof of learning gain and the open-source supply still cannot answer.
+
+🟢 **What did arrive is one step to the side of it, and both rows are new this pass:**
+
+| row | what it measures | why it is not an efficacy harness |
+|---|---|---|
+| [`junichikatsu/SocraMetry`](https://github.com/junichikatsu/SocraMetry) (MIT) | **attainment, accuracy and growth rate on 5 axes**, explicitly designed as objective evidence for **HR evaluation** | 🔵 measures an individual's trajectory for a personnel decision; no cohort, no control, no learning-gain claim |
+| [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) (MIT) | whether a cited quotation **exists in the source** | 🔵 audits *provenance*, not *learning* |
+
+🟢 **The pattern across the two:** the supply is learning to produce **auditable evidence about an
+answer or a trajectory** — which is what Vietnam's automated-assessment rule, Annex III's
+oversight duty and NA's "sole basis" clauses actually ask for — **before** it learns to produce
+evidence of pedagogical effect. 🔵 Provenance and defensibility are arriving first because
+regulation asks for them; efficacy is not arriving because nothing compels it.
+
+### 🟢 `T4` — The packaging shift is reproduced by an independent operator
+
+🔵 `p463`: **7 of 13** novel addresses shipped as an **agent skill** rather than an application.
+🟢 This pass, different slice, same channel: of **12** novel addresses, **3** are skills or harness
+plugins, **5** are desktop applications, **2** platforms, **1** substrate, **0** evaluation.
+🔴 The notable number is the **1 of 12 substrate** — detailed on
+[`repos/foundations.md`](../repos/foundations.md) `p464`. 🟢 **Both passes agree on the direction:
+education AI is being packaged as something that plugs into a harness the user already runs**, and
+the recency channel sees the application tier far better than the substrate tier.
+
+### 🔴 `T5` — Education AI has no star-ranked surface, and that is now measured
+
+🔵 A platform-named query (`moodle OR canvas OR openedx MCP`) returned **4 428** repositories with
+**0 education projects in the top 25 by stars**; the leaders are agent infrastructure at
+**77 913★**, **27 813★** and **16 796★**. 🟢 **Education AI's entire shelf on this base is
+outweighed by a single token-compression library.** 🔴 The consequence is methodological and it is
+the reason this base's discovery works at all: **sorting by stars discards the sector**, so
+discovery must be bounded by **recency**, where the agent-infra giants are not present.
+
+### 🔴 `T6` — The recency channel carries template-clone pollution, and one clone wore a region label
+
+🔵 Two of this pass's five ungranted rows share an **identical 14-string topic set**, near-identical
+descriptions, 0 forks each, `fork: false` on both and star counts one apart. 🔴 One of them
+advertises **"Spanish"** Math Olympiad content — and a pass hunting LATAM supply, which
+`intel/market.md` has hunted for five passes, would have shelved it as a LATAM find.
+🟢 **The trend statement:** as the recency channel becomes the primary discovery instrument, its
+failure mode stops being *too few results* and becomes *synthetic results that pass a star floor*.
+Topic-set identity is the cheap detector and this base collects topics without comparing them
+(`Gap 464-B`).
+
 ## 🆕 `p463` · 2026-10-26 — **🟢 The trend legs reproduce `p462`'s governed-deployment shape and add one it could not see, because it is visible only in the SHAPE of the supply: 13 of 17 novel addresses were created within five months and 7 of 13 ship as an agent SKILL rather than an application — the packaging format of education AI changed this year. 🔴 And "regulation is tightening" is no longer one trend: in 2026 it DIVERGED by region.**
 
 ### 🟢 The trend legs reproduce `p462`'s shape and add one thing it could not see

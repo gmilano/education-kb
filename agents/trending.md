@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` · 2026-10-26 — **The recency channel is reproduced by a second, independent operator and it holds: 20 candidates on one `created:>2026-06-01` slice, 12 absent from this entire base, 7 granted. 🔴 But 8 of 20 were ALREADY CARRIED, including a 2 500★ row — so the channel's novel yield is falling as the base saturates it, and that rate is now measured rather than assumed.**
+
+🔵 **Record posture.** This file is append-only; every section below is untouched. The sell-shelf
+rows this record licenses are on [`agents/top.md`](top.md) `p464`.
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🟢 New this week — agent-tier arrivals, grants read first-hand
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | note |
+|---|---|---|---|---|---|
+| [`maplexrain/unyra`](https://github.com/maplexrain/unyra) | 54 | 2026-09-29 | 🟢 MIT · `f7ef32f1240e` | **APAC** · zh README | local-first exploratory learning, Electron + React; **shelved** |
+| [`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) | 22 | 2026-08-15 | 🟢 MIT · `157154a57ac1` | Global | BKT mastery + SM-2 review over any repo or folder; **shelved** |
+| [`Nauv357/pickq`](https://github.com/Nauv357/pickq) | 22 | 2026-08-08 | 🟢 MIT · `91192368c03b` | Global | offline question bank from PDFs and screenshots; **shelved** |
+| [`junichikatsu/SocraMetry`](https://github.com/junichikatsu/SocraMetry) | 16 | 2026-08-09 | 🟢 MIT · `7b779e5b512d` | **APAC** · ja README | Socratic questions + 5-axis growth measurement for HR evidence; **shelved** |
+| [`guicortei/feynman-technique`](https://github.com/guicortei/feynman-technique) | 16 | 2026-07-28 | 🟡 **MIT + corpus carve-out** · `be43f29a819a` | Global | explanation-ladder skill; **shelved with the carve-out published** |
+| [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) | 20 | 2026-09-07 | 🟢 MIT · `e250f7a46d43` | Global | cited context packs + quotation audit, CLI/browser/MCP; **shelved to foundations** |
+| [`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) | 75 | 2026-07-14 | 🔴 **AGPL-3.0** · `0d96a4ff68ad` | **APAC** · zh README | AI-native question bank + paper composition, Docker server; **shelved to verticals, copyleft flagged** |
+
+### 🔴 Returned by the slice and NOT shelved — with the reason
+
+| address | ★ | created | reason |
+|---|---|---|---|
+| [`tjayze/olympiad-problem-forge`](https://github.com/tjayze/olympiad-problem-forge) | 56 | 2026-09-21 | 🔴 ungranted — no payload on five candidate paths |
+| [`princechhimpachhimpasaab-lang/omega-epsilon-problem-forge`](https://github.com/princechhimpachhimpasaab-lang/omega-epsilon-problem-forge) | 55 | 2026-08-25 | 🔴 ungranted **and a template clone of the row above** — identical 14-string topic set, `fork: false` on both (`Gap 464-B`) |
+| [`vincenzo-afk/PenFlow`](https://github.com/vincenzo-afk/PenFlow) | 25 | 2026-08-14 | 🔴 ungranted — handwriting / OCR study pages |
+| [`roVeloupe/essay-grader`](https://github.com/roVeloupe/essay-grader) | 20 | 2026-09-07 | 🔴 ungranted — **and it is the rubric-feedback workflow LATAM's 19 % gap needs** |
+| [`scriptology/open-course-cli`](https://github.com/scriptology/open-course-cli) | 17 | 2026-07-16 | 🔴 ungranted — Rust terminal language tutor |
+
+### 🔴 Already carried — the saturation rate of this channel, measured
+
+🔵 `p463` opened the recency channel and reported its novel yield. This pass ran it independently
+and **8 of 20 candidates were already on these shelves**, which is the number that tells a future
+pass whether the channel is still worth its calls:
+
+| already-carried address | ★ | note |
+|---|---|---|
+| [`penecho/penecho`](https://github.com/penecho/penecho) | **2 500** | 🔵 by far the largest education-adjacent row in this window — shared canvas for handwriting, equations and spatial reasoning — and **already carried**, so the channel is not missing the big ones |
+| [`Takamatsu-Hikaru/AI-Research-Guide`](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | 183 | bilingual AI-research onboarding guide |
+| [`ERRRC/kaogong-shuati`](https://github.com/ERRRC/kaogong-shuati) | 122 | shelved by `p463` this same day |
+| [`ryannli/immersive-reading`](https://github.com/ryannli/immersive-reading) | 48 | shelved by `p463` |
+| [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | 28 | Brightspace/D2L MCP connector tier |
+| [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 24 | carried |
+| [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | 20 | 12 K12 Chinese-language teaching skills |
+| [`eugeniughelbur/doceo`](https://github.com/eugeniughelbur/doceo) | 15 | carried |
+
+🟢 **Yield, stated as a rate so it can be compared next pass:** 20 candidates → **12 novel
+(60 %)** → **7 granted (35 % of candidates, 58 % of novel)** → **6 permissive (30 %)** → 5 on this
+tier. 🔵 Against `p463`'s 17 → 13 → 11 on the same channel one hour earlier, the **grant** rate
+fell (65 % → 58 %) while the novelty rate held. 🔴 Two passes is not a trend; it is a baseline,
+and it is written down so the third one can say which.
+
 ## 🆕 `p463` · 2026-10-26 — **The agent tier's nil BREAKS, and on two channels at once: a recency-bounded discovery slice returned 13 unshelved addresses (11 granted) after four passes of zero, and an audit of this base's own evidence store recovered 10 live permissive addresses that had been SILENTLY EVICTED from every sell shelf.**
 
 🔵 **Record posture.** This file is append-only; the sections below it are untouched. What follows

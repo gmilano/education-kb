@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` — **🔴 ONE foundation row from twelve novel addresses, and the 1-of-12 is itself the finding: the recency channel returns APPLICATIONS and SKILLS, not substrate. 🟢 The one row it did return is the first citation-AUDIT component this base has carried, which is the piece every "show what the answer rested on" clause in `intel/market.md` actually needs.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🟢 Foundation-tier row added this pass
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | why it is substrate rather than an app |
+|---|---|---|---|---|---|
+| [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) | 20 | 2026-09-07 | 🟢 MIT · `e250f7a46d43` · 1 065 B | Global | ships as **CLI + browser + MCP server**, not a product surface: indexes local PDFs and notes, builds **cited AI context packs**, and **audits quotations** back to source. Holder "Lapmlnex". HEAD `408d51f2ce68` |
+
+🟢 **Why this one is promoted to the foundation shelf and the other six are not.** It has no
+learner-facing opinion — no course model, no mastery model, no review schedule. It answers one
+question (*does this quotation exist in the cited source?*) behind an MCP boundary, which makes it
+composable under anything else on these shelves. 🔵 Every other granted row this pass is an
+application or a skill with pedagogy baked in.
+
+### 🔴 The foundation nil, typed by measurement — 1 of 12, and this is now the third pass to see the shape
+
+| tier the novel addresses landed in | n of 12 | reading |
+|---|---|---|
+| 🟡 application / desktop app | 5 | `unyra`, `pickq`, `PenFlow`, `essay-grader`, `olympiad-problem-forge` |
+| 🟡 agent skill / harness plugin | 3 | `feynman-technique`, `dsh-plugin-lookatstudy`, `SocraMetry` |
+| 🟡 platform | 2 | `gygy-open/question-bank` (AGPL-3.0), `omega-epsilon-problem-forge` |
+| 🟢 **substrate / library / MCP** | **1** | `studyproof` |
+| 🔴 **evaluation harness** | **0** | 🔴 **the efficacy gap holds for a sixth pass** |
+
+🔵 `p463` measured *7 of 13 ship as an agent skill*; this pass measures **1 of 12 is substrate**.
+🟢 Same phenomenon from the other end, by an independent operator on a different slice: **the
+recency channel is a channel onto the application tier.** 🔴 A pass that needs foundations cannot
+get them from `created:>` bounds, and this base should stop expecting it to. Registered as
+`Gap 464-C`.
+
+### 🟡 What the measurement instrument learned, and one rule that must NOT be over-read
+
+🟢 **`p462`'s payload-identity rule gains a THIRD instance, and this pass found it by accident:**
+[`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) serves the AGPL-3.0
+payload **34 523 B · `0d96a4ff68ad`** — byte- and digest-identical to the
+`Vacademy-io/vacademy_platform` control and to `p463`'s `sitor-ai/frametell`, at a **third**
+unrelated HEAD (`aba4510778ff`). Three unrelated projects, one payload.
+
+🔴 **And the over-reading this base is one step away from making.** Measured on this pass's own
+seven payloads:
+
+| observation | what it licenses | what it does **not** license |
+|---|---|---|
+| 🟢 AGPL-3.0 at `0d96a4ff68ad` on three unrelated repos | the payload is the **canonical FSF text**, so digest ⇒ **licence-text identity** | 🔴 digest ⇒ *project* identity. These are three different projects |
+| 🔴 `openedx/edx-platform` is **also** AGPL-3.0 but **35 136 B · `e12d78569742`** | there are **≥ 2 circulating byte-variants of AGPL-3.0** | 🔴 a digest allow-list keyed on one AGPL digest will mis-grade the other as unknown |
+| 🔴 `maplexrain/unyra` and the `instructional_agents` control are **both MIT at exactly 1 067 B** with **different** digests (`f7ef32f1240e` vs `4e085d826a64`) | 🟢 for MIT the digest separates on the **copyright-holder line**, so digest ⇒ text **+ holder** | 🔴 **size ⇒ identity. Equal size, different grant holder.** |
+
+🟢 **The usable rule, stated once:** *size* is a screen, *digest* is an identity for the licence
+text and its holder, and **neither is an identity for the project**. 🔵 That is why the
+`feynman-technique` anomaly above was read rather than rounded off — the size screen fired, and
+the payload turned out to carry a carve-out.
+
 ## 🆕 `p463` — **🟢 Four foundation rows added, every grant permissive and read first-hand (Apache-2.0 ×2, MIT ×2), and the discovery nil four passes published is shown to be an artifact of the CHANNEL: a `created:>` bound returned 13 unshelved addresses where the prescribed legs returned 0. 🔴 And `pytorch/opacus` — the only differential-privacy component this base has ever carried — is recovered from a silent eviction that no gate here would have caught.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN.** The harness

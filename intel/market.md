@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` — **🟢 THE REGION LEGS BREAK THEIR NINE-PASS NIL, AND ON ALL FOUR REGIONS AT ONCE. 🔴 EMEA is not "13 months of runway": an education-specific PROHIBITION has been in force since 2025-02-02 and this file never carried it. 🟢 LATAM's standing "no binding education-AI instrument anywhere" is NARROWED by a sub-national statute approved in Edomex in April 2026. 🟢 APAC gains India — the largest demand-side instrument in this base and absent from its APAC table until now. 🟢 NA gains a duty whose deadline has ALREADY PASSED.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🟢 The four prescribed regional legs, graded fact by fact — the first non-nil since `p454`
+
+🔵 `p462` and `p463` graded these legs a nil with a full denominator: every fact they returned was
+already here. 🟢 **This pass's legs returned five facts that are not on this file, and one of them
+contradicts the framing of an entire region's section.** Graded:
+
+| # | fact returned | on this file before? | verdict |
+|---|---|---|---|
+| 1 | 🔴 **EU AI Act Art. 5(1)(f)** bans emotion-inference in educational institutions — **applicable since 2025-02-02**, penalties to **€35 M / 7 %** of global turnover | 🔴 **NO** | 🟢 **PROMOTED** — multiple independent sources agree on the date and the article; it is primary-law text, not an estimate |
+| 2 | 🟢 **Ohio Rev. Code 3301.24** (enacted in the **HB 96** budget): every district, community (charter) and STEM school **must have adopted an AI policy by 2026-07-01** | 🔴 NO | 🟢 **PROMOTED** — a state statutory duty with an official state model-policy page behind it |
+| 3 | 🟢 **India** — AI + Computational Thinking introduced **from Class 3** in all schools from the **2026-27** session (NCF-SE 2023 / NEP 2020), CBSE expert committee chaired by **Prof. Karthik Raman, IIT Madras**; teacher training via **NISHTHA** | 🔴 NO — 🔴 **India was absent from this file's APAC table entirely** | 🟢 **PROMOTED off the Ministry of Education press release (PIB PRID 2184211)**; 🔴 the word **"mandatory"** is **REFUSED** — that is a blog gloss, the official text says *introduction*, and time allocation was still being worked out |
+| 4 | 🟢 **Estado de México** reform to **Art. 61** of the state Education Law — responsible, ethical and **gradual** AI use at upper-secondary and higher level | 🔴 NO — and it bears on a standing negative claim | 🟡 **RELAYED, and it NARROWS the claim** — see below |
+| 5 | 🟢 **Brazil `PL 2338/2023` is NOT law**, and the mechanism is dated | 🔴 NO | 🟢 **PROMOTED** — Senate approved **2024-12-10**, sent to the Câmara **2025-03-17**, still in special committee awaiting the rapporteur's report; rapporteur **Aguinaldo Ribeiro** said on **2026-08-24** the vote waits until after the **October 2026** elections |
+| — | 🔴 "134 bills across 31 states" (US) | 🔴 `p455` **RETIRED** this figure | 🟢 **retirement REPRODUCED independently**: this hour's legs returned **"134 bills / 31 states"**, **"27 states with active bills"** and **"already law in ten states"** from three trackers. 🔴 Still unusable |
+| — | 🔴 Korea's AI-textbook programme reportedly below **30 %** adoption, official status removed by the National Assembly | 🔴 no | 🟡 **RELAYED only** — single source, no corroboration found |
+| — | 🔴 Mexico: "**73 %** of university students use AI for coursework", ">**80 %** of HEIs lack a framework" | 🔴 no | 🔴 **REFUSED** — no method, no population, no primary source |
+| — | 🔴 EMEA: "European Parliament voted 2026-06-16, Council adoption still pending" | 🔵 superseded | 🔴 **REFUSED as stale** — this file already carries the **OJ publication, Regulation (EU) 2026/1744, 2026-07-24**. 🔵 The pre-adoption reading is still circulating and will keep arriving on these legs |
+
+### 🔴 The EMEA finding, stated plainly because it inverts how this file frames the region
+
+🔵 This file's EMEA section says the deliverable is an **Annex III conformity posture** and that
+**"13 months to 2027-12-02 is a build runway, not a scramble"**. 🟢 That remains true for
+admissions, evaluation and exam scoring. 🔴 **But it is not the whole duty, and the part this file
+omitted is already enforceable:**
+
+| instrument | applies since | what it forbids |
+|---|---|---|
+| 🔴 **Art. 5(1)(f)** — prohibited practice, **not** high-risk | 🔴 **2025-02-02 — in force for over 20 months** | AI that **infers emotions** in educational institutions. 🔴 Reported scope includes inferring **student attention or interest** from camera or voice, and emotion detection in admission tests. 🔵 **No consent exception**; narrow medical / safety exception only |
+| 🟡 **Art. 27 FRIA** | with the high-risk regime | a **Fundamental Rights Impact Assessment** before a public body deploys a high-risk education system |
+
+🔴 **The engagement consequence, and it is the opposite of a runway:** engagement-detection,
+attention-scoring and "is the student focused?" telemetry — standard features in proctoring and
+classroom-analytics products, and a common ask in an edtech brief — are **already prohibited in
+the EU**, at up to €35 M or 7 % of global turnover. 🟢 A Globant EMEA engagement has **no runway
+at all on that feature class**: the correct answer at proposal stage is to decline it and offer
+behaviour-free alternatives (task completion, attempt counts, mastery signals from
+`CAHLR/OATutor`-style Bayesian tracing), which this base can already compose.
+🟡 Institution-level movers named by the same legs — **Utrecht University** (risk-classified AI
+policy) and the **University of Edinburgh** (Act-aligned governance guidelines) — are relayed as
+instances. 🔴 **`Gap 456-D` stays OPEN**: these are policies, not adoption *rates*.
+
+### 🟡 The LATAM finding — a standing negative is NARROWED, not refuted, and the distinction is the point
+
+🔵 This file states: **"No binding education-AI instrument in any LATAM jurisdiction surfaced on
+any leg."** 🟢 This pass found one that is education-specific:
+
+| element | reading |
+|---|---|
+| instrument | reform to **Art. 61 of the Ley de Educación del Estado de México** |
+| what it does | state education authorities **shall promote**, among teachers and students at **upper-secondary and higher** level, the **responsible, ethical and gradual** use of AI for educational purposes; progressive provision of ICT access incl. free internet in educational spaces for academic use |
+| 🔵 scope carve-out | **basic education is deliberately excluded**, on a stated cognitive-maturity rationale |
+| origin | Dip. **Lilia Urbina Salazar** (PRI), filed **November 2025** |
+| 🟢 what is confirmed | the **Congreso del Estado de México's own channel** states the united committees approved it **unanimously** |
+| 🔴 what is **not** confirmed | plenary date (a legislative observatory says **2026-04-27/28**), **publication in the Gaceta del Gobierno**, and **entry into force** — none found on any leg |
+
+🟢 **Therefore the claim is narrowed, not refuted.** It holds as stated for *national* instruments
+and for *in-force* ones. It does **not** hold as "nothing education-specific exists in LATAM
+law-making" — a **sub-national** education-AI statute was approved by a state legislature in
+April 2026. 🔴 And even if in force it is **hortatory, not a risk regime**: it imposes a duty to
+*promote* responsible use, with no classification, conformity or oversight obligation.
+🟢 **Which makes it demand, not compliance** — a state that must promote responsible AI use across
+upper-secondary and higher education needs teacher training, institutional policy and tooling, and
+that is a procurement, not a burden. Registered as `Gap 464-E` (confirm the Gaceta publication).
+
+🟢 **Brazil, added because its absence read as coverage.** LATAM's largest education market has
+**no AI statute in force**, and the delay now has a date and a named cause: `PL 2338/2023` passed
+the Senate on **2024-12-10**, reached the Câmara on **2025-03-17**, and has sat in special
+committee awaiting the rapporteur's report, with the rapporteur stating on **2026-08-24** that the
+vote waits for after the **October 2026** elections. 🔵 This is the mechanism behind this file's
+own thesis: **in LATAM demand arrived before governance**, and in Brazil governance is now
+explicitly parked behind an electoral calendar.
+
 ## 🆕 `p463` — **🔴 The education-AI compliance calendar SPLIT by region in 2026, and that divergence — not market size — is what a multi-region programme has to carry: EMEA's Annex III duty postponed to 2027-12-02 while Vietnam brought an explicitly education-naming high-risk regime into force on 2026-03-01. 🟢 LATAM's 92 %-adoption / 19 %-faculty-feedback split is the clearest opportunity shape on this file; its open-source student tier is measured at 6-of-6 UNGRANTED. 🔴 MEA returned nothing on any leg and that is declared, not hidden.**
 
 ### 🔴 The LATAM discovery leg — an informed gap, typed by measurement rather than left silent
@@ -69,6 +178,8 @@ moved a step this year.
 | 🟡 Non-governmental | **STUDENTS FIRST Act of 2026**, a student-written framework (Day of AI / AASA) — would bar AI-generated written and artistic assignments at every grade. Not law |
 | 🔵 Canada | **"AI for All"** strategy, **2026-06-04** — national AI-literacy commitment, 🔴 no AI statute |
 | 🔵 Mexico | bills stacked, 🔴 no regulator to enforce them |
+| 🟢 **Ohio — a duty whose deadline has PASSED** (`p464`) | **Ohio Rev. Code 3301.24**, enacted in the **HB 96** budget: every school district, community (charter) school and STEM school **must have adopted an AI policy by 2026-07-01**. The statute requires a policy to *exist* and does not prescribe its contents; the state published an optional **model policy**. 🔵 The first NA instrument on this file whose compliance date is behind us — the question in an Ohio engagement is no longer *whether* a policy exists but whether it is implementable |
+| 🟡 **Idaho — relayed, sources disagree** (`p464`) | **SB 1227**, reported signed **2026-03-19**, effective **2026-07-01**, establishing a statewide generative-AI framework for public education. 🔴 Three trackers describe it three different ways — AI-literacy standards / a district AI framework with a designated governance role / a student-data-privacy mandate aimed at AI edtech — and disagree on the district deadline (before the 2026-27 school year vs 120 days after state guidance). 🔴 **Not promoted; the statute text was not reached on any leg** |
 
 🟢 **One hard survey figure, and it is the only adoption number this pass promotes anywhere:**
 **60 %** of U.S. K-12 teachers used AI tools during the 2024-25 school year and **32 %** used them
@@ -91,6 +202,8 @@ two deadline stories circulating are a year apart:
 | 🟢 **Digital Omnibus, Regulation (EU) 2026/1744** — OJ **2026-07-24** | stand-alone **Annex III** high-risk (education access & assessment) → **2027-12-02**; AI embedded in regulated products → **2028-08-02** | 🟢 **reproduced, two independent legs, two passes** |
 | 🔴 the superseded reading | "high-risk applies from **2026-08**" | 🔴 **refused** — it is the pre-Omnibus date and still in circulation |
 | 🟡 Commission timeline | Omnibus entry into force **2026-07-27** | 🟡 relayed; sources disagree with the OJ date by three days and nothing turns on it |
+| 🔴 **Art. 5(1)(f) — PROHIBITED PRACTICE, in force since 2025-02-02** (`p464`) | AI that **infers emotions in educational institutions** is **banned now**, not in 2027: reported scope includes inferring **student attention or interest** from camera or voice and emotion detection in admission tests; **no consent exception**, narrow medical/safety exception only; penalties to **€35 M / 7 %** of global turnover | 🟢 **PROMOTED — and it was missing from this file.** 🔴 EMEA does **not** have 13 months of runway on this feature class; it has had a live prohibition for over 20 months |
+| 🟡 **Art. 27 FRIA** (`p464`) | a **Fundamental Rights Impact Assessment** before a public body deploys a high-risk education system | 🟡 relayed — rides the Annex III clock to 2027-12-02 |
 
 🔵 Education sits in **Annex III**: admissions, student evaluation and exam scoring are
 **high-risk**, and the Act reaches non-EU systems whose outputs affect EU students.
@@ -127,6 +240,7 @@ calendar.**
 | 🟡 **Japan** | AI Promotion Act — principles, **no penalties** | 🔵 general |
 | 🟡 **Singapore** | agentic-AI framework — **guidance, not law** | 🔵 general |
 | 🔵 **Taiwan** | AI Basic Act, **Dec 2025** | 🔵 general |
+| 🟢 **India — the largest DEMAND-side instrument on this file** (`p464`) | **AI + Computational Thinking introduced from Class 3** in all schools from the **2026-27** session, under NCF-SE 2023 / NEP 2020; CBSE expert committee chaired by **Prof. Karthik Raman (IIT Madras)**; joint NCERT–CBSE quality assurance; teacher training through **NISHTHA**, with NCERT handbooks and digital resources | 🟢 **yes — curriculum, not risk regulation.** Promoted off the Ministry of Education release (**PIB PRID 2184211**). 🔴 The widely repeated word **"mandatory" is refused** — the official text says *introduction* and left time allocation open; 🔴 2026-27 rollout status (final textbooks, whether the Dec-2025 teacher-training milestone was met) **not confirmed on any leg** |
 
 🔴 **A named figure is refused.** A commercial report names Google, Microsoft, IBM, Pearson and
 Byju's as key APAC players and asserts China/India/Japan dominance. Vendor-report assertion with
@@ -156,9 +270,24 @@ numbers come from the same hour's legs.**
 | 🔴 Integrity anxiety | **61 %** of students fear peer misuse | same |
 | 🔴 Governance | adoption widespread, **governance lags** | UNESCO IESALC study, Digital Learning Week 2026 |
 
-🔴 **No binding education-AI instrument in any LATAM jurisdiction surfaced on any leg.** Stated as
-a finding: the region's constraint is **not** regulatory latency, it is that **demand has arrived
-before governance**, which is the opposite of EMEA's problem.
+🔴 **No binding *national* education-AI instrument in any LATAM jurisdiction surfaced on any leg**
+— 🔵 **narrowed by `p464`, which found a sub-national one.** The **Estado de México** reform to
+**Art. 61 of its state Ley de Educación** is education-specific and was approved **unanimously in
+united committees** (confirmed by the Congreso del Estado de México's own channel), with a
+legislative observatory recording plenary approval on **2026-04-27/28**; 🔴 **Gaceta del Gobierno
+publication and entry into force were not reached on any leg** (`Gap 464-E`), and the text is
+**hortatory** — a duty to *promote* responsible, ethical and gradual AI use at upper-secondary and
+higher level, with **basic education deliberately excluded** on a cognitive-maturity rationale —
+so it carries **no classification, conformity or oversight obligation**.
+🟢 **Brazil, so that silence does not read as coverage:** the region's largest education market has
+**no AI statute in force**. `PL 2338/2023` passed the Senate **2024-12-10**, reached the Câmara
+**2025-03-17**, and sits in special committee awaiting the rapporteur's report; rapporteur
+**Aguinaldo Ribeiro** stated on **2026-08-24** that the vote waits until after the **October 2026**
+elections.
+🟢 Stated as a finding, now with a mechanism: the region's constraint is **not** regulatory
+latency in the sense of drafting — it is that **demand has arrived before governance**, and in
+Brazil governance is explicitly parked behind an electoral calendar. That is the opposite of
+EMEA's problem.
 
 🟢 **Where the work is, and it follows directly from the 92 %/19 % split.** Students have adopted;
 faculty have not adopted the *feedback* workflow they would most benefit from, and integrity
@@ -182,9 +311,19 @@ boundary. Recipe: `Pattern AZ`.
    offer them**: of this pass's 12 novel rows, exactly **one**
    ([`ai4bharat/indicifeval`](https://github.com/ai4bharat/indicifeval), recovered rather than
    discovered) is an evaluation harness. The efficacy-evaluation gap stands.
-3. 🟢 **The platform layer is copyleft almost end to end** (`p462`, unchanged): of ten carried
-   platforms exactly one — **Kolibri**, MIT — is freely redistributable. Build on extension
-   seams; keep proprietary work across the process boundary.
+3. 🟢 **The platform layer is copyleft almost end to end, but NOT end to end — corrected by
+   `p464`.** 🔴 The `p462` form of this item said *"of ten carried platforms exactly one —
+   **Kolibri**, MIT — is freely redistributable"*, and **this base's own `agents/top.md`
+   contradicts it**: [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is carried at
+   **Apache-2.0** (payload re-read this pass: 10 982 B · `6dbc5b605ed0` @ HEAD `891b9434e822`) in
+   a cell that calls it *"the only Apache-2.0 one… strongly under-used"*. 🟢 **At least two
+   platform rows are freely redistributable — Kolibri (MIT) and OpenOLAT (Apache-2.0,
+   university-grade LMS)** — and **Sakai** is unsettled on this base (ECL-2.0 in two places,
+   Apache-2.0 in a third). 🔵 **Mechanism:** the count was computed from the eight-platform
+   census on `verticals/solutions.md` and stated about *all* carried platforms, while OpenOLAT is
+   shelved on `agents/top.md` (`Gap 464-A`). 🟢 Build on extension seams and keep proprietary work
+   across the process boundary **by default** — but an engagement that must *ship* an LMS inside a
+   redistributable deliverable **does** have a permissive option.
 4. 🔵 **The supply is recency-shaped.** 13 of this pass's 17 discovered addresses were created
    within five months, and **7 of 13 ship as an agent *skill*** rather than an application. The
    packaging format of education AI changed this year.

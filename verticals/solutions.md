@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` — **🔴 A STANDING CLAIM ON THIS BASE IS REFUTED BY THIS BASE'S OWN SHELF: `intel/market.md` says "of ten carried platforms exactly one — Kolibri, MIT — is freely redistributable", while `agents/top.md` carries `OpenOLAT/OpenOLAT` at **Apache-2.0** in a cell that calls it "the only Apache-2.0 one". 🟢 Both re-read first-hand this hour; the mechanism of the error is identified and it is a CENSUS that spans two shelves and is computed from one. 🔴 And an external roundup's "Frappe LMS is MIT" is refuted at the payload.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🔴 The contradiction, with both sides read first-hand this pass
+
+| side | where it lives | what it says |
+|---|---|---|
+| 🔴 the claim | [`intel/market.md`](../intel/market.md) `## Opportunities by region` → `### Global`, item 3 (carried from `p462`) | *"The platform layer is copyleft almost end to end: of **ten carried platforms exactly one** — **Kolibri**, MIT — is freely redistributable."* |
+| 🟢 the counter-example, **on this base already** | [`agents/top.md`](../agents/top.md) | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — *"🟢 **Apache-2.0** · `LICENSE` 10 982 B · `6dbc5b605ed0` · ✅ University-grade LMS, **the only Apache-2.0 one**. Strongly under-used."* |
+| 🟢 this pass's own read | `git ls-remote` + `raw.githubusercontent.com` | **Apache-2.0 · 10 982 B · `6dbc5b605ed0`** @ HEAD **`891b9434e822`** — 🟢 **digest reproduced**, 🔵 HEAD has **moved** from the carried `d073ad444fe5`: the project advanced, the grant did not |
+
+🟢 **The correct statement, which this pass substitutes:** of the platform-layer rows this base
+carries, **at least two are freely redistributable** — **Kolibri** (MIT) and **OpenOLAT**
+(Apache-2.0, university-grade LMS) — and a third, **Sakai**, is *unsettled on this base itself*:
+`verticals/solutions.md` says **ECL-2.0** in one place (and "ECL-2.0, Apache-derived" in another)
+and **Apache-2.0** in a third, a conflict `intel/open-gaps.md` already records.
+
+### 🟢 The mechanism — this is the part a gate can be built from
+
+🔵 The enumeration the claim rests on is on this file, and **it lists eight platforms, not ten**:
+*Moodle (GPL-3.0), Open edX (AGPL-3.0), Canvas LMS CE (AGPL-3.0), Sakai (Apache-2.0), Kolibri
+(MIT), OpenEduCat (LGPL-3.0), BigBlueButton (LGPL-3.0), H5P (MIT)*.
+🔴 **`OpenOLAT` is not in it — because `OpenOLAT` is shelved on `agents/top.md`, not here.** The
+claim was computed from the **verticals** census and then stated about **all carried platforms**.
+A permissive university-grade LMS was invisible to the count that concluded there was only one.
+
+🔴 **Note what the gates here would and would not catch.** Every gate in `make hooks` grades a row
+against a *payload* — grant presence, digest, region vocabulary, table shape. **None grades a
+prose claim against another shelf's rows**, so a count that is wrong about this base's own
+contents can survive indefinitely while every cell it contradicts is individually green.
+🟢 **Closure:** a platform census that is the **union** of the platform rows on all eight shelves,
+keyed on address, with the licence family taken from the payload cell — not from the prose.
+Registered as `Gap 464-A`.
+
+🔵 **Why it is commercially material and not pedantry.** "Copyleft almost end to end → build on
+extension seams, keep proprietary work across the process boundary" is correct for Moodle, Open
+edX and Canvas and it is the right default. 🔴 But it **over-constrains the one case that does not
+need it**: an engagement that must *ship* a university-grade LMS inside a redistributable
+deliverable has a permissive option, and this base's own cell calls it **"strongly under-used"**
+while its headline tells a reader no such option exists.
+
+### 🟢 Platform grants re-read first-hand this pass — five addresses, all already carried
+
+| platform | HEAD today | payload read | grant |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `891b9434e822` | `master/LICENSE` 10 982 B · `6dbc5b605ed0` | 🟢 **Apache-2.0** — permissive, redistributable |
+| [`frappe/lms`](https://github.com/frappe/lms) | `54ad7dea5b1d` | `main/license.txt` 33 893 B · `db1a87ba81e8` | 🔴 **AGPL-3.0** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `fa5f4b66caf4` | `master/LICENSE` 15 214 B · `d954e14e5c75` | 🔴 **GPL-2.0 family** (SIS) |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `65f86bf061fa` | `v30.0.00/LICENSE` 35 121 B · `93178a43d6d3` | 🔴 **GPL-3.0** (school management) |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `master/LICENSE` 8 241 B · `528f84036800` | 🔴 **LGPL-3.0** |
+
+🔴 **An external claim refused at the payload.** A 2026 open-source-LMS roundup lists **Frappe LMS
+under the MIT licence** and recommends it for SMBs and nonprofits on that basis. Read first-hand,
+`license.txt` is the **GNU Affero General Public License** — 33 893 B, `db1a87ba81e8`. 🟢 The
+roundup is wrong and **this base was already right** (`verticals/solutions.md` carries
+`AGPL-3.0-or-later` for it off the `package.json` manifest). 🔵 A Globant team that took the
+roundup's word and embedded Frappe LMS in a hosted client product would have taken on an Affero
+obligation across a network boundary.
+
+### 🟢 Vertical row added this pass
+
+| platform | ★ | created | grant · `sha256₁₂` | region · basis | what it is, and the boundary it forces |
+|---|---|---|---|---|---|
+| [`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) | 75 | 2026-07-14 | 🔴 **AGPL-3.0** · `0d96a4ff68ad` · 34 523 B | **APAC** · zh README | AI-native **question bank + paper composition**: imports Word / Markdown / images, matches knowledge points, generates explanations, rich text + LaTeX, multi-model, **review workflow**, Windows desktop **and Docker server**. HEAD `aba4510778ff`. 🔴 Affero: the Docker deployment is a network service, so **customisations must be offered to its users** — usable as an institution-hosted system, **not** as an embedded component of a Globant product |
+
+🔵 **It is the first assessment-authoring platform with a built-in review workflow on this shelf**,
+which is the piece an Annex III / Vietnam-style "recorded human decision" posture needs at the
+*item-authoring* stage rather than at scoring time.
+
+### 🔴 The prescribed vertical/platform leg — a nil for the seventh consecutive pass, with a denominator
+
+🔵 The platform-connector leg returned **4 428 repositories** and **zero education projects in the
+top 25 by stars** (graded in full on [`repos/trending.md`](../repos/trending.md) `p464`). Of five
+platform addresses probed by name this pass, **five were already carried**. 🟢 The platform tier
+of this base is **saturated**: it is not missing platforms, and a pass should stop spending legs
+looking for them. What it is missing is the **permissive** tier, and the finding above is that it
+had one more than it believed.
+
 ## 🆕 `p463` — **🔴 The prescribed vertical leg is a nil for the sixth consecutive pass: nine platform tokens, nine already carried. 🟢 What it bought instead is a reusable rule about NOVELTY CHECKS — `openSIS` read as uncarried only because the check was keyed on a GUESSED slug, while `OS4ED/openSIS-Classic` sits on three shelves — plus one unsettled same-HEAD pair that this pass deliberately does NOT call an alias.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN.** The harness

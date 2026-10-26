@@ -4,6 +4,164 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` — **🟢 Four recipes. `Pattern BE` is the one this pass's correction unlocks: a university-grade LMS stack with ZERO copyleft anywhere in it, which this base's own headline said was impossible. 🔴 And `Pattern BB` is the first recipe here whose first step is to DECLINE a feature the client asked for, because in the EU that feature has been illegal for 20 months.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+🔵 **Provenance of every component below.** Addresses marked 🟢 **re-read** were probed first-hand
+this pass (`git ls-remote` + payload digest, recorded on the shelves above). Addresses marked
+🔵 **carried** are taken from this base's existing cells and were **not** re-probed this hour —
+stated so a reader knows which grants are this-hour fresh.
+
+### 🟢 `Pattern BE` — The zero-copyleft redistributable learning stack (the corrected-claim recipe)
+
+🔵 **Why it exists.** `intel/market.md` told readers for two passes that **exactly one** carried
+platform was freely redistributable, so every recipe here routed proprietary work across a process
+boundary. 🟢 `p464` found a second — **OpenOLAT, Apache-2.0, university-grade** — and with it a
+full stack that can be **vendored into a client deliverable with no boundary argument at all**.
+
+| layer | component | grant | basis |
+|---|---|---|---|
+| LMS / institution | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10 982 B · `6dbc5b605ed0` | 🟢 **re-read** @ HEAD `891b9434e822` |
+| assessment delivery | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🔵 permissive · 2 058 B · `a5c692f12090` | 🔵 carried (digest stable since `p390`) |
+| offline / low-connectivity | `learningequality/kolibri` | 🔵 **MIT** | 🔵 carried |
+| interactive content | **H5P** | 🔵 **MIT** | 🔵 carried |
+| mastery model | `CAHLR/OATutor` · `CAHLR/pyBKT` | 🔵 **MIT** | 🔵 carried |
+| course generation + review schedule | [`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) | 🟢 **MIT** · `157154a57ac1` | 🟢 **re-read** |
+| learner practice | [`Nauv357/pickq`](https://github.com/Nauv357/pickq) | 🟢 **MIT** · `91192368c03b` | 🟢 **re-read** |
+| provenance audit | [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) | 🟢 **MIT** · `e250f7a46d43` | 🟢 **re-read** |
+| privacy-preserving training | `pytorch/opacus` | 🔵 **Apache-2.0** · 10 241 B · `bcf6964d43d8` | 🔵 carried (recovered by `p463`) |
+
+**Wiring.** OpenOLAT is the system of record and the only thing the institution logs into.
+`qtiworks` serves items; `lookatstudy` compiles the client's existing course material into a gated
+skill tree and owns the **SM-2** review schedule, while `pyBKT`/`OATutor` own the **mastery
+estimate** — keep these two separate, because the review scheduler and the mastery model answer
+different questions and merging them is how auditability is lost. `pickq` is the learner-side
+offline practice surface, syncing attempt records back as events. `studyproof` sits on every
+generated explanation and refuses to emit one whose citation it cannot resolve. `opacus` is only
+needed if you train on student records.
+🟢 **What this buys that no other recipe here can:** the whole stack is Apache-2.0/MIT, so the
+integration code, the configuration and the derived course content can be **delivered and
+relicensed to the client** without an AGPL conversation. 🔴 **What it costs:** OpenOLAT is Java and
+"strongly under-used" per this base's own cell — expect thin community answers and budget a
+Java/Spring-capable team, which is the real reason teams default to Moodle and then inherit GPL.
+**Effort:** 10–12 weeks to a running pilot.
+
+### 🔴 `Pattern BB` — The EMEA attention-analytics refusal kit (declining a feature as the deliverable)
+
+🔵 **The trigger.** An EMEA edtech or proctoring brief asks for engagement detection, attention
+scoring, "is the student focused?", or sentiment from webcam or microphone. 🔴 **Under EU AI Act
+Art. 5(1)(f) that is a prohibited practice and has been since 2025-02-02** — penalties to **€35 M
+or 7 %** of global turnover, **no consent exception**. This is not a conformity exercise; there is
+no lawful way to build it for EU learners.
+
+**The recipe is a substitution table, and it is the proposal artefact.**
+
+| what was asked for | 🔴 verdict | 🟢 lawful substitute that answers the same business question |
+|---|---|---|
+| webcam attention / emotion score | 🔴 prohibited | **task-level telemetry**: time-on-task, attempt counts, hint requests, abandonment points — behavioural events the learner performs, not inferred affect |
+| "disengaged student" alerts | 🔴 prohibited if inferred from affect | **mastery-decay alerts** from `CAHLR/pyBKT` 🔵 carried — a falling mastery estimate is an observation about answers, not about a face |
+| exam-integrity monitoring | 🟡 case-by-case; emotion inference out | item-level anomaly signals + 🟢 [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) (MIT, **re-read**) to audit whether submitted citations resolve |
+| "personalised difficulty from engagement" | 🔴 prohibited as specified | 🟢 [`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) (MIT, **re-read**) — BKT mastery + SM-2 scheduling drive difficulty from **performance** |
+
+**Wiring.** Put every learner signal through one event schema that is **affect-free by
+construction** — if a field cannot be derived from an action the learner took, it does not exist in
+the schema. That makes the prohibition an architectural property rather than a policy promise, and
+it is what survives an audit. Add 🔵 `pytorch/opacus` if models are trained on the event stream.
+🟢 **Deliverable:** the substitution table above, signed off at proposal stage, plus the event
+schema. **Effort:** 2–3 weeks as a compliance-and-architecture engagement; it usually precedes a
+larger build.
+
+### 🟢 `Pattern BC` — The adoption-mandate kit (Ohio · India · Edomex)
+
+🔵 **The trigger**, and it is the demand class `intel/trends.md` `T2` names: a jurisdiction obliges
+institutions to **adopt, promote or govern** AI by a date — **Ohio Rev. Code 3301.24** (policy
+required by 2026-07-01, already past), **India** (AI + Computational Thinking from Class 3,
+2026-27 session), **Estado de México Art. 61** (promote responsible use at upper-secondary and
+higher level). 🟢 The buyer's success criterion is **"the artefact exists and is defensible"**, not
+learning gain — which is why this is the one sellable category immune to the efficacy-evidence
+blocker.
+
+| deliverable | component | grant |
+|---|---|---|
+| tool-approval workflow with an enforceable allow-list | 🔵 this repo's own `compose/code/mcp-allowlist-gateway` pattern | 🔵 internal |
+| teacher-facing explanation quality | 🟢 [`guicortei/feynman-technique`](https://github.com/guicortei/feynman-technique) | 🟡 **MIT code, corpus NOT MIT** — 🟢 **re-read** |
+| measuring capability uplift in teacher training | 🟢 [`junichikatsu/SocraMetry`](https://github.com/junichikatsu/SocraMetry) | 🟢 **MIT** · `7b779e5b512d` — **re-read** |
+| citation discipline in produced materials | 🟢 [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) | 🟢 **MIT** — **re-read** |
+| offline delivery where connectivity is the constraint | 🔵 `learningequality/kolibri` | 🔵 **MIT** |
+
+**Wiring.** The allow-list gateway is the spine: every AI tool a teacher may use is an entry with
+an owner, a data-handling note and a review date, and the gateway refuses anything unlisted — that
+single artefact satisfies the bulk of a 3301.24-style policy duty. `SocraMetry` instruments the
+**teacher** cohort, not students: its 5-axis attainment/accuracy/growth output is the evidence an
+education authority needs that its NISHTHA-style training spend changed capability.
+`feynman-technique` sets the house style for generated explanations — 🔴 **and its carve-out is
+load-bearing here: ship the skill, never the quoted corpus**, which rules out bundling its source
+material into teacher handbooks. **Effort:** 6–8 weeks per authority; the policy artefact lands in
+the first 2.
+
+### 🟢 `Pattern BD` — The defensible-assessment pipeline (Vietnam · Annex III, 2027-12-02)
+
+🔵 **The trigger.** Automated assessment under a regime that demands a **recorded human decision
+point** and a reason per determination — Vietnam's July-2026 high-risk designation naming
+automated assessment, and Annex III from 2027-12-02.
+
+| stage | component | grant | boundary |
+|---|---|---|---|
+| item authoring **with a review workflow** | 🟢 [`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) | 🔴 **AGPL-3.0** · `0d96a4ff68ad` — 🟢 **re-read** | 🔴 **institution-hosted service only**; never embedded in a Globant product |
+| item delivery | 🔵 [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🔵 permissive | 🟢 vendorable |
+| mastery estimate behind each score | 🔵 `CAHLR/pyBKT` · `CAHLR/OATutor` | 🔵 **MIT** | 🟢 vendorable |
+| provenance of every generated rationale | 🟢 [`yukunou703/studyproof`](https://github.com/yukunou703/studyproof) | 🟢 **MIT** | 🟢 vendorable |
+| training privacy | 🔵 `pytorch/opacus` | 🔵 **Apache-2.0** | 🟢 vendorable |
+
+**Wiring.** `question-bank`'s review workflow is the **authoring-side** human decision point — the
+piece this base has been missing, because every prior recipe placed the human only at scoring time,
+and a defect introduced at authoring reaches every learner before any scorer sees it. Run it as a
+service the institution owns (Docker), with Globant's work on the `qtiworks` and orchestration side
+of the process boundary. 🔴 **The Affero obligation is real and specific:** customisations to
+`question-bank` itself must be offered to its users, so keep client-specific logic in the
+orchestration layer, not in forks of it. Every scored determination emits `{item id, model output,
+mastery estimate, resolved citations, human reviewer, reason string}` — that record **is** the
+conformity artefact. **Effort:** 8–10 weeks.
+
+🔴 **One gap these four recipes cannot close, stated rather than papered over.** None of them
+produces **evidence of learning gain**, because nothing on these shelves does (0 of 12 novel
+addresses this pass; sixth consecutive pass). A client who asks "did it work?" still gets a study
+design and an instrumented pipeline, **not** an off-the-shelf efficacy harness.
+
 ## 🆕 `p463` — **🟢 Five recipes, and the first one is new in kind: `Pattern AW` mines this base's OWN evidence store for silently evicted rows and returned a yield comparable to the discovery channel for ZERO network calls. 🟢 `Pattern BA` is the first end-to-end pipeline on this file with no copyleft anywhere in it, so it can be vendored into a client deliverable without a boundary argument.**
 
 ### 🟢 `Pattern AW` — Re-promotion before discovery: mine the base's own evidence files

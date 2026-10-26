@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` · 2026-10-26 — **🔴 The prescribed trending leg is graded a nil for the seventh pass, and this hour it is a nil with a MEASURED DENOMINATOR: a platform-named query returned 4 428 repositories and the top 25 contain ZERO education projects. 🟢 The education supply is real and it is simply not ranked — which is a statement about GitHub's ranking surface, not about the supply.**
+
+🔵 **Record posture.** Append-only; sections below untouched. Foundation rows this record
+licenses are on [`repos/foundations.md`](../repos/foundations.md) `p464`.
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🔴 The platform-named leg, with its denominator — the strongest form of this nil yet published
+
+🔵 The leg `moodle OR canvas OR openedx MCP server created:>2026-01-01 stars:>8` was run to find
+the education **platform-connector** tier. It returned **`total_count: 4 428`**. Graded, the top
+25 by stars:
+
+| rank band | what actually came back | education? |
+|---|---|---|
+| 1 | [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) — **77 913★**, token compression for agents | 🔴 no |
+| 2 | [`t8y2/dbx`](https://github.com/t8y2/dbx) — **27 813★**, database client | 🔴 no |
+| 3 | [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — **16 796★**, local-first search + MCP | 🔴 no |
+| 4–25 | `stitch-skills`, `gentle-ai`, `engram`, `open-seo-mcp-skills`, `ouroboros`, `agent-device`, `AiSOC`, `radar`, `kordoc`, `nitrostack` and peers | 🔴 **none** |
+| — | **education projects in the top 25** | 🔴 **0 of 25** |
+
+🔴 **The words `moodle`, `canvas` and `openedx` were in the query and did not survive ranking.**
+What ranked is general agent infrastructure, because star mass in this window belongs to
+agent-harness tooling by two to three orders of magnitude — `headroom` alone outweighs every
+education row this base has ever shelved, combined. 🟢 **This independently reproduces `p463`'s
+aggregator claim** ("trending is dominated by agent skills and harness tooling, not education")
+**from the API rather than from a roundup, and with a denominator.**
+
+🔵 **The operational consequence, which is the only reason to write a nil down:** a star-sorted
+query whose vocabulary is education-shaped is **not** an education query. The vocabulary reaches
+4 428 repositories and the *sort* discards all of them. 🟢 The channel that works is the one
+`p463` found — a **recency bound** — because it sorts within a window the agent-infra giants were
+not created in.
+
+### 🔴 A channel that is NOT available here, measured so a future pass does not misread its 403
+
+| channel | result this pass |
+|---|---|
+| 🟢 MCP `search_repositories` | **works** — every novel address this pass and `p463` published came through it |
+| 🔴 `gh api "search/repositories?q=..."` | 🔴 **`403` — "This GitHub API path is not available: sessions are bound to their configured repositories. Use repository-scoped endpoints"** |
+| 🟢 `git ls-remote https://github.com/<addr> HEAD` | **works for any public address**, attached or not — tree identity |
+| 🟢 `raw.githubusercontent.com/<addr>/<branch>/<path>` | **works for any public address** — payload bytes |
+| 🔴 `curl -sI https://github.com/<addr>` | 🔴 **`403` for live and nonexistent alike** — fourth independent reproduction |
+
+🔴 **Why this is a finding and not housekeeping.** `gh` is installed, authenticated and
+proxy-configured here, so it is the obvious tool to reach for; its `403` is an **authorization
+scope** message, not an empty result set. A pass that runs discovery through `gh` gets a hard
+error on every query and could publish "the channel returned nothing" — manufacturing exactly the
+false saturation nil `p463` spent a pass refuting. 🟢 Two repository-scoped `gh` calls **do**
+work, against `gmilano/globant-kb` and `gmilano/education-kb`. Registered as `Gap 464-D`.
+
+### 🔴 The Spanish-language leg, run once more and nil again — fifth consecutive confirmation
+
+🔵 `educación aprendizaje IA estudiantes created:>2026-04-01 stars:>5` → **`total_count: 0`**.
+🟢 `p463` concluded *"the language is the wrong variable"*; this is the fifth pass to confirm it
+and the first to confirm it on a **recency-bounded** form, which rules out the remaining
+explanation — that the earlier Spanish nils were an artifact of unbounded queries drowning in
+older repositories. 🔴 **They were not. The Spanish-language education supply is not on GitHub
+under Spanish-language metadata**, and no further pass should spend a call on this form. The one
+Spanish-shaped result this hour arrived in **English** metadata and is an ungranted template clone
+(`Gap 464-B`).
+
 ## 🆕 `p463` · 2026-10-26 — **GitHub trending, graded: the live trending surface is still agent-harness tooling, not education — but a RECENCY-bounded repository-search slice returns the education supply that trending pages do not show. 13 unshelved addresses, 11 granted, after four passes of nil.**
 
 🔵 **Record posture.** Append-only; sections below untouched. Foundation rows this licenses are on

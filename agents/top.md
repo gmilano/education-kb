@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p464` — **🟢 The recency channel `p463` opened is REPRODUCED by an independent operator: 20 candidates, 12 absent from this entire base, 7 granted, 6 permissive. 🔴 And the one row that matches the clearest LATAM opportunity on `intel/market.md` — rubric-based assignment feedback — is UNGRANTED, so the gap that file names cannot be closed with the supply this one found. 🟡 One grant is published as CONJUNCTIVE: MIT code with a non-MIT corpus carve-out inside the same payload.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED, and so was every
+individual gate.** The harness permission classifier refused both `make hooks` and a direct
+`python3` invocation of the repo's own gate scripts (`Code from External`) — **eleven denials in
+twelve passes, and one step stricter than `p463`**, which was still permitted to run
+`p277-table-structure` and `p383-region-heading-gate` by hand. 🔵 **Nothing below is
+gate-attested.** Mitigation, re-implemented in this session's own code rather than the repo's:
+frontmatter keys and closed-vocabulary `region` checked on all eight shelves; every new table
+checked for separator presence, pipe-count consistency and **no header row published as data**;
+append-only proved on both trending shelves by prior-section containment; **every address
+introduced this pass re-resolved by `git ls-remote`.**
+
+🔵 **Instrument.** Two first-hand channels, as `p450` and `p463` established:
+`git ls-remote <addr> HEAD` (**tree identity**) and
+`raw.githubusercontent.com/<addr>/<branch>/LICENSE` (**payload bytes** → size + `sha256₁₂`).
+🔴 **The `curl -sI https://github.com/<addr>` probe the ingest brief prescribes is reproduced
+unusable, now from a fourth independent direction:** it returns `403` for a live address and for
+a nonexistent one *alike* — `openedx/edx-platform` and `gmilano/this-does-not-exist-xyz123` are
+indistinguishable through it. No row here rests on it.
+
+🔴 **A channel measurement that is new this pass, and a future pass will misread it if it is not
+written down: the GitHub *search* API is not reachable from the `gh` CLI here.**
+`gh api "search/repositories?q=..."` returns **`403 — "sessions are bound to their configured
+repositories. Use repository-scoped endpoints"`**. Repository search survives **only** through
+the MCP `search_repositories` tool; `gh` reaches only the two attached repos. 🔵 A pass that
+reaches for `gh` to discover supply will read that `403` as *no results* and publish a nil that
+is an artifact of the channel — the exact error class `p463` caught on the web legs.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p463` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+### 🟢 Sell-shelf rows added this pass — agent / skill tier, grants read first-hand
+
+🔵 **Five rows. Not a minimum, a count:** 12 novel addresses were probed, 7 carry a grant, and of
+those 7 one is AGPL-3.0 (→ [`verticals/solutions.md`](../verticals/solutions.md)) and one is
+substrate rather than agent (→ [`repos/foundations.md`](../repos/foundations.md)). Five remain,
+and five is what is published.
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | what it actually does |
+|---|---|---|---|---|---|
+| [`maplexrain/unyra`](https://github.com/maplexrain/unyra) | 54 | 2026-09-29 | 🟢 MIT · `f7ef32f1240e` · 1 067 B | **APAC** · zh README (归一 Unyra) | local-first exploratory-learning desktop app (Electron + React); HEAD `ebec6b22918d` |
+| [`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) | 22 | 2026-08-15 | 🟢 MIT · `157154a57ac1` · 1 081 B | Global · 🔴 no language or institution basis; the DeepSeek-Harness ecosystem is **not** a region | turns any markdown / folder / GitHub repo into a gated skill-tree course with **BKT mastery + SM-2 review**; HEAD `d7d86c48c1af` |
+| [`Nauv357/pickq`](https://github.com/Nauv357/pickq) | 22 | 2026-08-08 | 🟢 MIT · `91192368c03b` · 1 064 B | Global | PDFs / notes / screenshots → private question bank, spaced repetition, **fully offline**; default branch `master`, HEAD `31753c5f106f` |
+| [`junichikatsu/SocraMetry`](https://github.com/junichikatsu/SocraMetry) | 16 | 2026-08-09 | 🟢 MIT · `7b779e5b512d` · 1 069 B | **APAC** · ja README, B2B | Socratic questioning that **returns questions, not answers**, plus 5-axis attainment / accuracy / growth scoring meant as evidence for HR review; default branch `develop`, HEAD `dd46d7a4aa1c` |
+| [`guicortei/feynman-technique`](https://github.com/guicortei/feynman-technique) | 16 | 2026-07-28 | 🟡 **MIT + carve-out** · `be43f29a819a` · 1 695 B | Global · 🔴 owner handle reads lusophone; **a handle is not a basis** and this is not placed on it | explanation-ladder agent skill: mechanism before name, one analogy with its limits; HEAD `7905e9b1a230` |
+
+### 🟡 The conjunctive grant, published as its own row because a one-word licence cell would be wrong
+
+🔵 [`guicortei/feynman-technique`](https://github.com/guicortei/feynman-technique)'s payload is
+**1 695 B where every other MIT payload this pass read is 1 064–1 081 B**, and the difference is
+not boilerplate drift. Read first-hand, the file is the MIT text **plus a titled section**:
+
+> *NOTE ON QUOTED MATERIAL* — quotations "remain the property of their respective copyright
+> holders and are **not licensed under the MIT terms above**"; *The Feynman Lectures on Physics*
+> is **© California Institute of Technology**, free to read online but **not in the public
+> domain**.
+
+🟢 **The grading, and it is the useful part for a client deliverable:** the **code** is MIT and
+may be vendored; the **corpus the skill is built from is not**, and the payload says so in its
+own words. 🔴 A shelf cell reading `MIT` alone would license a Globant engagement to ship the
+corpus. This is `p427`'s conjunctive-grant class arriving on the agent tier, where the base has
+mostly seen it on platforms, and it is the reason the size anomaly was read instead of rounded off.
+
+### 🔴 Not shelved, with the reason — and one of them is the LATAM opportunity this base already named
+
+| address | ★ | created | HEAD | why not shelved |
+|---|---|---|---|---|
+| [`tjayze/olympiad-problem-forge`](https://github.com/tjayze/olympiad-problem-forge) | 56 | 2026-09-21 | `e7e488923641` | 🔴 **no licence payload** on any of `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` — ungranted |
+| [`princechhimpachhimpasaab-lang/omega-epsilon-problem-forge`](https://github.com/princechhimpachhimpasaab-lang/omega-epsilon-problem-forge) | 55 | 2026-08-25 | `1571d001e055` | 🔴 ungranted — **and see the clone finding below** |
+| [`roVeloupe/essay-grader`](https://github.com/roVeloupe/essay-grader) | 20 | 2026-09-07 | `f124b665d881` | 🔴 ungranted. 🔵 **This is the painful one:** photo → OCR → proofreading → **rubric-based grading** → export is precisely the assignment-feedback workflow `intel/market.md` names as LATAM's clearest opening (92 % student adoption vs **19 %** faculty feedback use). The matching tool exists and **may not be used** |
+| [`vincenzo-afk/PenFlow`](https://github.com/vincenzo-afk/PenFlow) | 25 | 2026-08-14 | `f5ba85efbd33` | 🔴 ungranted — local-first handwriting / OCR study pages |
+| [`scriptology/open-course-cli`](https://github.com/scriptology/open-course-cli) | 17 | 2026-07-16 | `99f761f44d73` | 🔴 ungranted — terminal language tutor in Rust |
+
+🔵 **Ungranted rate this pass: 5 of 12 (41.7 %).** 🟢 That is the *same order* as the 6-of-6 and
+4-of-17 figures `p463` measured on different slices, and it is now the stable shape of this
+channel: **roughly half of what recency discovery returns cannot be built on at all**, which is
+an argument for budgeting discovery against grant yield rather than hit count.
+
+### 🔴 A discovery-channel hygiene finding: recency + a star floor does not screen out TEMPLATE CLONES
+
+🔵 Two of the five ungranted rows are not two projects. Measured side by side:
+
+| field | [`tjayze/olympiad-problem-forge`](https://github.com/tjayze/olympiad-problem-forge) | [`princechhimpachhimpasaab-lang/omega-epsilon-problem-forge`](https://github.com/princechhimpachhimpasaab-lang/omega-epsilon-problem-forge) |
+|---|---|---|
+| description | "Best Open-Source Math Olympiad Problem Generator 2026" | "Olympiad Problem Generator **2026**: Create Infinite **Spanish** Math Olympiad-Style Challenges" |
+| topic set | 14 topics incl. `epsilon-ome-trainer`, `llama-cpp-python`, `pyqt5`, `sqlite3`, `ome` | 🔴 **the same 14 topics, identical strings** |
+| language · forks · grant | HTML · 0 · none | HTML · 0 · none |
+| ★ · created | 56 · 2026-09-21 | 55 · 2026-08-25 |
+| `fork` flag | `false` | `false` |
+
+🔴 **Both declare `fork: false`, so the fork-lineage channel cannot see this.** An identical
+14-string topic set across two unrelated owners, with near-identical descriptions, 0 forks each
+and star counts one apart, is a template clone, not independent corroboration of a trend.
+🟢 **The cheap detector is the topic set**, which this base already collects and does not compare.
+🔴 **Why it matters beyond hygiene:** the second one says **"Spanish"**, and a pass hunting LATAM
+supply — which `intel/market.md` has hunted for five passes — would have shelved it as a LATAM
+find. It is ungranted and probably synthetic. Registered as `Gap 464-B`.
+
 ## 🆕 `p463` — **🟢 THE SATURATION NIL BREAKS ON BOTH SIDES AT ONCE. One date bound returned 13 addresses absent from this entire base, 11 of them granted — after four passes published "usable novel yield ZERO". 🔴 And an audit of this base's OWN evidence store found a channel nothing here measures: 21 projects were SILENTLY EVICTED from every sell shelf since `p406`, 10 of them live and permissive, including the only differential-privacy row this base has ever carried. 🔵 My own first reading of that — a 15.5 % ledger defect — is REFUTED and withdrawn before publication: graded at its own commit the ledger is 238/238 correct.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN.** The harness
