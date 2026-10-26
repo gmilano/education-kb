@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p451` — **🟢 THE NINE UNREACHABLE ADDRESSES `p450` COULD ONLY COUNT ARE NOW TYPED: six of nine are proved to have EXISTED and been WITHDRAWN, because a published artifact's metadata records the repository URL at publish time and a never-existing address cannot have one. 🔴 And two of the three remaining have registry name-hits that belong to THIRD PARTIES — a future pass treating a name hit as evidence would have attributed a live MIT project to a dead address.**
+
+🔴 **Gate posture, stated first as `Gap 446-A` requires: `make hooks` was DENIED.** The host refused
+the recipe (`Code from External`) before any gate body ran — the same class `p446`–`p448` and `p450`
+recorded, and which `p449` showed to be **intermittent**. Six denials in seven passes. **Nothing
+below is gate-attested**; the four load-bearing contracts were re-implemented independently this
+pass (region-heading `CANON` regex read from `check_headings.py` and applied by hand, table-header
+-as-data, frontmatter vocabulary, append-only shelf identity) and all four are green.
+
+### 🟢 `Gap 420-C` is no longer wholly unanswerable — it was the wrong CHANNEL, not an impossible question
+
+🔵 `p450` closed `Gap 420-C` as **UNANSWERABLE** after thirty passes, on the measurement that
+GitHub emits a byte-identical response for a provably non-existent repository, so *"a prompt
+carries zero information about privacy"*. 🟢 **That verdict is correct about its channel and wrong
+as a general claim.** The question *"did this address ever exist?"* is answerable on a channel
+nobody had pointed at it: **a package registry records the `repository` URL at publish time**, and
+that record survives the repository's deletion.
+
+🔴 **The instrument has to be controlled in both directions or its negatives are unpublishable**
+(`P249`), so every channel below carries a live positive control and a **fabricated** negative:
+
+| channel | positive control | negative control | discriminates? |
+|---|---|---|---|
+| 🟢 `raw.githubusercontent` `HEAD/README.md` | `moodle/moodle` → `200` | `globant-fabricated-451/does-not-exist` → `404` | 🟢 **YES** |
+| 🟢 `git ls-remote` | `moodle/moodle` → `0` | fabricated → `128` | 🟢 **YES** |
+| 🟢 `registry.npmjs.org` | `express` → `200` | `globant-fabricated-451-nope-pkg` → `404` | 🟢 **YES** |
+| 🟢 `pypi.org` | `requests` → `200` | fabricated → `404` | 🟢 **YES** |
+| 🟢 `packagist.org/packages/{v}.json` | `laravel/framework` → `200` | `globant-fab-451/nope` → `404` | 🟢 **YES** |
+| 🔴 `repo.packagist.org/packages/…` | `laravel/framework` → **`404`** | fabricated → `404` | 🔴 **NO — the path this pass tried FIRST, and its negative on `siiau-api-client` would have been a false "never existed"** |
+| 🔴 **authenticated GitHub MCP** `get_file_contents` | `HKUDS/DeepTutor` → `ACCESS_DENIED` | fabricated → `ACCESS_DENIED` | 🔴 **NO — zero bits, the same defect class as the `curl -sI` probe `p450` refuted** |
+| ⚪ GitHub MCP `search_repositories` | **NOT RUN** | — | this session's scope permits repository search only within the two attached repositories, so the channel is closed by **policy**, not by a constant oracle |
+
+🔵 `registry.npmjs.org` and `pypi.org` are in this host's proxy **`noProxy`** list — they are reached
+directly, which is *why* they discriminate where every `403`-at-`CONNECT` host in the
+refusal ledger (`archive.softwareheritage.org`, `api.deps.dev`, `ungh.cc`, `data.jsdelivr.com`)
+cannot. 🔴 **`packagist.org` is a fourth registry channel this base had never read**, and it is the
+only surviving channel for the one PHP address on these shelves.
+
+### 🟢 The nine, resolved — the back-link is the evidence, never the name
+
+| carried address | surviving artifact | back-links to the exact slug? | licence, as the registry declares it | verdict |
+|---|---|---|---|---|
+| [`thanh01pmt/interactive-quiz-kit`](https://github.com/thanh01pmt/interactive-quiz-kit) | npm **`@thanh01.pmt/interactive-quiz-kit`** `1.4.10`, **103** versions, 2025-06-12 → 2026-09-23 | 🟢 YES | 🟢 **MIT** | 🟢 **EXISTED → WITHDRAWN**, licence recoverable |
+| [`ale-alejandro/beadkit`](https://github.com/ale-alejandro/beadkit) | npm **`beadkit`** `0.1.0`, 2 versions, 2026-08-26 → 2026-10-12, maintainer `alebuild.co` | 🟢 YES | 🔴 **`SEE LICENSE IN LICENSE`** | 🔴 **EXISTED → WITHDRAWN**, licence **UNRECOVERABLE** |
+| [`parkseokjune/unist-blackboard-mcp`](https://github.com/parkseokjune/unist-blackboard-mcp) | PyPI **`unist-blackboard-mcp`** `0.2.0` | 🟢 YES — `Homepage`, `Repository`, `Issues` **and** a `CHANGELOG.md` blob on `main` | 🟢 **MIT** | 🟢 **EXISTED → WITHDRAWN**, licence recoverable |
+| [`Mckaroff/GraphLMS`](https://github.com/Mckaroff/GraphLMS) | npm **`rhizome-lms-mcp`** `0.3.1`, 4 versions, 2026-04-30 → 2026-05-03 | 🟢 YES | 🟢 **MIT** | 🟢 **EXISTED → WITHDRAWN**, licence recoverable |
+| [`santillana-ai/tutor-sdk`](https://github.com/santillana-ai/tutor-sdk) | npm **`@santillana-ai/create-tutor-app`** `5.9.0`, 63 versions | 🟢 YES | 🟡 **MIT in the manifest, NO payload in the tarball** (`p450`, re-read) | 🟡 **EXISTED → WITHDRAWN**, manifest-only grant |
+| [`dev-cucei-itrans/siiau-api-client`](https://github.com/dev-cucei-itrans/siiau-api-client) | **Packagist** `dev-cucei-itrans/siiau-api-client`, **7** versions, 1 023 downloads, 7 stars, 2023-10-13 → 2024-10-08, `abandoned: true` | 🟢 YES | 🔴 **SPLIT — `proprietary` on `v1.0.0-BETA`, `v1.0.0`, `v1.1.0`, `v1.1.1`; `BSD-3-Clause` only on `v1.1.2` and `dev-main`** | 🔴 **EXISTED → WITHDRAWN**, licence **VERSION-DEPENDENT** |
+| [`e9x/blackboard-mcp`](https://github.com/e9x/blackboard-mcp) | npm `blackboard-mcp` `0.1.2` | 🔴 **NO — it back-links [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp)**, a different, live, MIT project already on this shelf | — | 🔴 **NO TRACE** — third-party name collision |
+| [`yokowasis/autograder`](https://github.com/yokowasis/autograder) | npm `autograder` (`sulejmanca`, 2017-04-10 → 2021-09-23, no `repository`) **and** PyPI `autograder` `3.7.7` (**GPL-3.0**, back-links `zmievsa/autograder`) | 🔴 **NO, on both** | — | 🔴 **NO TRACE** — **two** third-party collisions on two registries |
+| [`AI-Matrix-Engine/aidream`](https://github.com/AI-Matrix-Engine/aidream) | none on npm, PyPI or Packagist | — | — | 🔴 **NO TRACE on three registries** — the only address of the nine with no trace anywhere |
+
+🟢 **Six of nine resolved from *"`128` twice, which does not separate absent from private"*
+([`repos/trending.md`](../repos/trending.md), `p450`) to a dated, typed, first-hand verdict.**
+🔴 **Three remain unresolved, and the honest statement is that `Gap 420-C` still holds for them**:
+no registry trace is not evidence of non-existence, because a repository can be deleted having
+published nothing. `AI-Matrix-Engine/aidream` is the clean instance; the other two are *contaminated*
+by a third party holding the same name.
+
+### 🔴 The rule this pass extracts, with its denominator: **2 of 9 registry name-hits are somebody else's project**
+
+🔵 `p450` recorded the class at the harvest layer (*"three of thirteen npm names declared in these
+cohorts' own manifests resolve to someone else's project"*). 🔴 **This pass puts it on the graded
+shelf and on this base's own carried addresses:** of the **9** dead slugs, **3** produced a registry
+hit under their natural name and **2 of those 3 belonged to a third party** — one of them to
+`felipedias-ie/blackboard-mcp`, which this very file already carries as the live MIT Blackboard row
+at `p386`. 🟢 **The rule: a registry hit counts as evidence for an address only when its own
+metadata back-links to that exact `owner/repo`.** Name, maintainer handle and description do not.
+
+### 🟢 Two addresses promoted this pass — both found on the registry channel, both read first-hand
+
+| repository | grant, read first-hand at `HEAD` | surface | region |
+|---|---|---|---|
+| [`tcpassos/moodle-student-mcp`](https://github.com/tcpassos/moodle-student-mcp) | 🟢 **MIT** — `LICENSE` **1 069 B `sha256₁₂ 322307ac9d65`**; `package.json` `"license": "MIT"`, `v0.2.1` | Student-side Moodle MCP over Moodle's **official mobile-app web service**, so it sees only what the student sees; read-only by construction (*"nothing is ever changed on Moodle"*); any login method incl. SSO + MFA; Node 22+. Packaged as a plugin for Claude Code, Copilot CLI, Codex and Gemini CLI | ⚪ **Global** — the README places no institution and claims any Moodle site; no region is asserted |
+| [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp) | 🟢 **Apache-2.0** — `LICENSE` **11 358 B `sha256₁₂ cfc7749b96f6`**; npm `ase-moodle-mcp` declares `Apache-2.0`, `v0.2.2` | Python client + CLI + MCP server + plugin for **BL@ASE (`online.ase.ro`)**: courses, materials, assignments, forums, grades, quizzes, notifications, deadlines. CI workflow present; Python 3.10+ | 🟢 **EMEA** — Romanian-language README, **ASE Bucharest** (Bucharest University of Economic Studies) |
+
+🟡 **Neither is a star claim.** This host has no channel that returns a star count (the GitHub API
+is `403`/denied here), so no popularity figure is published for either — only the grant, the ref
+and the surface, each read this pass.
+
+🔵 **Why `ase-moodle-mcp` matters beyond its size:** it is a **single-institution** MCP server
+written in the institution's own language, and it is **Apache-2.0**. The EMEA pattern on these
+shelves has been *"copyleft platform, permissive agent layer"*; this is a datum that the
+institution-specific tier is being built permissively too, which is what makes it vendorable.
+
+---
+
 ## 🆕 `p450` — **🟢 THE URL PROBE THIS BASE IS INSTRUCTED TO USE IS REPLACED, NOT COMPLAINED ABOUT: a two-channel probe with a FABRICATED NEGATIVE CONTROL now separates live from dead on this host, and its first run is the first full reachability census these shelves have ever had — 375 addresses, 366 live, 9 not. 🔴 And `Gap 420-C`, carried THIRTY passes as "cheapest closure available to the next pass", is closed as UNANSWERABLE: the fabricated control emits BYTE-IDENTICAL stderr to all eight carried addresses, so `gate-slug-oracle`'s premise is refuted on this channel.**
 
 🔴 **Gate posture, stated first as `Gap 446-A` requires of every pass: `make hooks` was DENIED.**
@@ -2331,7 +2418,7 @@ The exact ref-and-path each grant above was read from, so any reader can repeat 
 | [RobertLMcCrary/D2L-MCP](https://github.com/RobertLMcCrary/D2L-MCP) | `main/LICENSE` | MIT — 2,181 B, **two stacked MIT grants** (own + `d2l-cli`) *(`p386`)* |
 | [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | — none at 9 paths; no manifest licence field | UNGRANTED *(`p386`)* |
 | [jarodise/Language-Transfer](https://github.com/jarodise/Language-Transfer) | 🟢 **whole tree enumerated** (42 files): no licence file, no SPDX, no manifest — grant at **`README.md:167`** | 🔴 ~~UNGRANTED~~ → 🟡 **README-ONLY MIT** *(`p394`)* |
-| [e9x/blackboard-mcp](https://github.com/e9x/blackboard-mcp) · [parkseokjune/unist-blackboard-mcp](https://github.com/parkseokjune/unist-blackboard-mcp) | — `ls-remote` returns nothing | **DEAD / private** — both listed by search results as live MIT servers *(`p386`)* |
+| [e9x/blackboard-mcp](https://github.com/e9x/blackboard-mcp) · [parkseokjune/unist-blackboard-mcp](https://github.com/parkseokjune/unist-blackboard-mcp) | — `ls-remote` returns nothing | **DEAD / private** — both listed by search results as live MIT servers *(`p386`)*. 🆕 `p451` **SEPARATES THEM, and they are not the same case:** `parkseokjune/unist-blackboard-mcp` is 🟢 **EXISTED → WITHDRAWN** — PyPI `unist-blackboard-mcp` `0.2.0` declares **MIT** and back-links this exact slug in four `project_urls`, so the grant is recoverable; `e9x/blackboard-mcp` is 🔴 **NO TRACE** — the npm name `blackboard-mcp` belongs to [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp), a third party, so nothing supports the `e9x` address either way |
 **13 of the 58 live addresses are not on `main`** (`master`, `develop`, `dev`, `release`,
 `development`, `release_11`, `19.0`) — 🆕 `p386` adds **four more refs** to that list from 22 new
 probes: **`tcd`** (`lukecarroll15/blackboard-mcp`), **`master`** (`Loganxgreaves/blackboard-mcp`,

@@ -1,0 +1,10 @@
+channel	probe	positive_control	positive_result	negative_control	negative_result	discriminates	publishable_negative
+raw.githubusercontent	GET /{slug}/HEAD/README.md	moodle/moodle	200	globant-fabricated-451/does-not-exist	404	YES	YES
+raw.githubusercontent	GET /{slug}/HEAD/README.md	HKUDS/DeepTutor	200	nope-xyz-123/nope	404	YES	YES
+git ls-remote	git ls-remote https://github.com/{slug}	moodle/moodle	OK(0)	globant-fabricated-451/does-not-exist	FAIL(128)	YES	YES
+github MCP get_file_contents	mcp__github__get_file_contents	HKUDS/DeepTutor	ACCESS_DENIED	globant-fabricated-451/does-not-exist	ACCESS_DENIED	NO	NO
+github MCP search_repositories	mcp__github__search_repositories	NOT RUN - session scope forbids out-of-scope repo search	-	-	-	UNTESTED	NO
+registry.npmjs.org	GET /{pkg}	express	200	globant-fabricated-451-nope-pkg	404	YES	YES
+pypi.org	GET /pypi/{pkg}/json	requests	200	globant-fabricated-451-nope-pkg	404	YES	YES
+repo.packagist.org/packages	GET /packages/{v}.json	laravel/framework	404	globant-fabricated-451/nope-pkg	404	NO	NO
+packagist.org/packages	GET /packages/{v}.json	laravel/framework	200	globant-fab-451/nope	404	YES	YES

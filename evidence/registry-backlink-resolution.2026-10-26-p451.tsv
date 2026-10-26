@@ -1,0 +1,10 @@
+slug	raw_HEAD_README	ls_remote	registry_hit	registry	backlinks_to_exact_slug	declared_licence	versions	window	verdict
+thanh01pmt/interactive-quiz-kit	404	FAIL	@thanh01.pmt/interactive-quiz-kit 1.4.10	npm	YES	MIT	103	2025-06-12..2026-09-23	EXISTED_WITHDRAWN_LICENCE_RECOVERABLE
+ale-alejandro/beadkit	404	FAIL	beadkit 0.1.0	npm	YES	SEE LICENSE IN LICENSE	2	2026-08-26..2026-10-12	EXISTED_WITHDRAWN_LICENCE_UNRECOVERABLE
+parkseokjune/unist-blackboard-mcp	404	FAIL	unist-blackboard-mcp 0.2.0	pypi	YES	MIT	n/a	..2026 (latest 0.2.0)	EXISTED_WITHDRAWN_LICENCE_RECOVERABLE
+Mckaroff/GraphLMS	404	FAIL	rhizome-lms-mcp 0.3.1	npm	YES	MIT	4	2026-04-30..2026-05-03	EXISTED_WITHDRAWN_LICENCE_RECOVERABLE
+santillana-ai/tutor-sdk	404	FAIL	@santillana-ai/create-tutor-app 5.9.0	npm	YES	MIT (manifest; no payload, p450)	63	2025-08-28..2025-10-21	EXISTED_WITHDRAWN_MANIFEST_ONLY
+dev-cucei-itrans/siiau-api-client	404	FAIL	dev-cucei-itrans/siiau-api-client	packagist	YES	proprietary x4 then BSD-3-Clause x2	7	2023-10-13..2024-10-08	EXISTED_WITHDRAWN_LICENCE_VERSION_DEPENDENT
+e9x/blackboard-mcp	404	FAIL	blackboard-mcp 0.1.2	npm	NO - backlinks felipedias-ie/blackboard-mcp	MIT (of the OTHER repo)	3	2026-09-10	NO_TRACE_THIRD_PARTY_NAME_COLLISION
+yokowasis/autograder	404	FAIL	autograder (npm, sulejmanca) / autograder 3.7.7 (pypi, zmievsa)	npm+pypi	NO - npm no backlink; pypi backlinks zmievsa/autograder	GPL-3.0 (of the OTHER repo)	-	2017-04-10..2021-09-23 / v3.7.7	NO_TRACE_TWO_THIRD_PARTY_COLLISIONS
+AI-Matrix-Engine/aidream	404	FAIL	none	npm+pypi+packagist	n/a	n/a	n/a	n/a	NO_TRACE_ON_THREE_REGISTRIES

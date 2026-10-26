@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p451` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE SIXTH CONSECUTIVE NIL ON THE PRESCRIBED LEGS IS BROKEN BY A CHANNEL, NOT BY A QUERY: `Gap 450-A` said a new row needs a new CHANNEL, and the registry search channel returned TWO unshelved addresses in the same hour the four regional legs returned 24 tokens and ZERO novel facts. 🔴 `make hooks` DENIED, so no gate attests this section.**
+
+🔵 **APPEND-ONLY shelf** — this section is inserted above `p450`'s; nothing below it is rewritten.
+🔵 **Single date:** every probe, registry read, licence read and back-link below ran **2026-10-26**.
+
+### 🟢 `Gap 450-A` ANSWERED — the channel was the variable, and it paid in one hour
+
+🔵 `p450` registered `Gap 450-A` as *"a new row needs a new CHANNEL, not a new query"* after its
+fifth consecutive nil. 🟢 **Tested this pass and it is correct.** Holding the subject constant
+(education MCP servers and agents) and changing only the channel from **GitHub search** to
+**registry search** (`registry.npmjs.org/-/v1/search`, five legs):
+
+| leg | channel | candidates graded | unshelved | yield |
+|---|---|---|---|---|
+| 🔴 `AI education {region} 2026 adoption regulation players` × 4 regions | WebSearch (prescribed) | 24 tokens | **0** | 🔴 **nil — sixth consecutive** |
+| 🟢 `moodle mcp` · `mcp server education` · `canvas lms mcp` · `tutor agent mcp` · `classroom mcp server` | **npm registry search** | 15 repository-bearing packages | **2** | 🟢 **13 %** |
+
+🟢 **The two unshelved, both verified at `HEAD` and promoted to [`top.md`](top.md) this pass:**
+
+- 🟢 [`tcpassos/moodle-student-mcp`](https://github.com/tcpassos/moodle-student-mcp) — **MIT**
+  (`LICENSE` 1 069 B `sha256₁₂ 322307ac9d65`), npm `@tcpassos/moodle-student-mcp` `0.2.1`,
+  3 versions, 2026-10-18. Student-side, read-only by construction, official mobile-app web
+  service, SSO + MFA. ⚪ **Global** — no institution asserted.
+- 🟢 [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp) —
+  **Apache-2.0** (`LICENSE` 11 358 B `sha256₁₂ cfc7749b96f6`), npm `ase-moodle-mcp` `0.2.2`,
+  4 versions, 2026-10-15 → 2026-10-16. 🟢 **EMEA** — Romanian README, **ASE Bucharest**,
+  `online.ase.ro`; Python 3.10+, CI present.
+
+🔵 **Why this channel sees what the other does not.** A GitHub query ranks on repository
+metadata; a registry query ranks on **published package** metadata, so it surfaces projects whose
+repository is new, small or un-starred but whose artifact is already installable. 🔴 It also
+inverts the failure mode: the registry channel **cannot see a project that publishes nothing**,
+which is why it is an addition to the GitHub leg and not a replacement for it.
+
+### 🟡 The same channel's hazard, measured on this base's own carried addresses
+
+🔴 **2 of the 9 unreachable addresses produced a registry hit that belongs to somebody else** —
+`blackboard-mcp` (npm) is [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp),
+already on this shelf as the live MIT Blackboard row; `autograder` is held **twice** by two
+unrelated third parties (npm `sulejmanca` 2017→2021; PyPI `zmievsa` **GPL-3.0** `3.7.7`). 🟢 **The
+discipline that makes the channel safe is one line: accept a registry hit as evidence for an
+address only when its own metadata back-links to that exact `owner/repo`.** Full resolution table
+in [`top.md`](top.md); per-address evidence in
+`evidence/registry-backlink-resolution.2026-10-26-p451.tsv`.
+
+🔵 **One package is recorded and NOT promoted:** npm `@thanh01.pmt/curriculum-kit` `2.0.37`
+(**200** versions, MIT, 2026-09-02 → 2026-10-09, same author as the withdrawn
+`interactive-quiz-kit`) declares **no `repository` field at all** — `p280`'s unattributable class.
+🔴 It is live, recent and MIT, and there is still **no address to audit**, so it does not enter a
+recommendation tier.
+
+---
+
 ## 🆕 `p450` · reads 2026-10-26, commit 2026-10-26 — **🔴 FIFTEEN CANDIDATES OFF SIX LEGS, FIFTEEN ALREADY SHELVED, ZERO AT ZERO PRIOR HITS — the fifth consecutive nil. 🟢 The pass's finding is not on the discovery channel but on the VERIFICATION one: nine addresses carried in this file's own history are unreachable on two independent channels, and five of those nine still publish working npm packages. 🔴 `make hooks` DENIED, so no gate attests this section.**
 
 🔵 **APPEND-ONLY shelf** — this section is inserted above `p449`'s; nothing below it is rewritten.

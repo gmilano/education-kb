@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p451` — **🔴 THIS FILE'S SIIAU ROW UNDERSTATED THE PROBLEM: it recorded the one existing SIS SDK as "abandoned", which is a maintenance fact. The licence fact is worse and is corrected here — FOUR of its seven published versions are `proprietary`, and only `v1.1.2` onward is BSD-3-Clause.**
+
+🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no cell below is
+gate-attested. Stated first, per `Gap 446-A`.
+
+### 🔴 The correction, in place
+
+🔵 The carried cells (`Integration supply` / `Probed first-hand 2026-10-25`) said: *"One SDK ever
+existed: `dev-cucei-itrans/siiau-api-client`, a Laravel client for SIIAU's internal API, published
+on Packagist and marked abandoned there"*, and that `git ls-remote` **does not resolve**. 🟢 **Both
+cells are reproduced exactly this pass.** 🔴 **What they omit is the grant**, and the grant is the
+part an engagement cannot proceed without:
+
+| version | published | licence as published on Packagist |
+|---|---|---|
+| `v1.0.0-BETA` · `v1.0.0` · `v1.1.0` · `v1.1.1` | 2023-10-20 → 2024-08-14 | 🔴 **`proprietary`** |
+| `v1.1.2` · `dev-main` | 2024-08-25 → 2024-10-08 | 🟢 **`BSD-3-Clause`** |
+
+🔵 Read first-hand 2026-10-26 from `packagist.org/packages/dev-cucei-itrans/siiau-api-client.json`
+with `laravel/framework` → `200` as the positive control and a fabricated name → `404` as the
+negative. Package created 2023-10-13 · **7** versions · **1 023** downloads · 7 stars ·
+`abandoned: true` · `repository` back-links the exact carried slug.
+
+🔴 **Rule for any SIIAU engagement:** pin **`>=1.1.2`**. A `^1.0` constraint resolves into the
+proprietary band, and because the repository is withdrawn (`404`/`128`, byte-identical to a
+fabricated control) **the Packagist record is the only surviving evidence of either grant** — it
+is the artefact to retain, not a convenience link.
+
+🟢 **The row's strategic reading is unchanged and now better supported:** SIIAU's integration
+supply is not merely thin, it is *ungranted*. A Globant engagement on this system of record is a
+**build**, not an integration — and the pinning boundary above is the reason the one existing
+client cannot be adopted as a shortcut.
+
+### 🟢 Platform tier, unchanged this pass and re-stated so the shelf is not read as stale
+
+🔵 No platform licence was re-measured this pass; the H5P correction `p450` made in place
+(**GPL-3.0**, against the `🟢 MIT` cell this file previously contradicted itself with) stands, as
+do Tutor's `release` and Oppia's `develop` defaults. 🔴 **This pass changed exactly one row** — the
+SIIAU grant above — and adds no platform claim it did not read.
+
+---
+
 ## 🆕 `p450` — **🔴 THIS FILE CONTRADICTED ITSELF ON THE MOST EXPENSIVE LICENCE IN THE INDUSTRY: one table graded H5P `🟢 MIT`, another in the SAME FILE graded it `🟡 GPL-3.0` and added "widely mislabelled MIT". A first-hand read settles it — GPL-3.0 — and the wrong row is corrected in place rather than left for a reader to pick between. 🟢 Two platform defaults are also measured and neither is `main`: Tutor defaults to `release`, Oppia to `develop`.**
 
 🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no gate attests the
@@ -295,6 +337,7 @@ and heavily used. Mexico's second-largest public university system runs on it.
 | **Source available?** | 🔴 **No** |
 | **Integration supply** | 🔴 **ZERO.** One SDK ever existed: `dev-cucei-itrans/siiau-api-client`, a Laravel client for SIIAU's internal API, published on Packagist and **marked abandoned** there |
 | **Probed first-hand 2026-10-25** | 🔴 `git ls-remote https://github.com/dev-cucei-itrans/siiau-api-client` → **DOES NOT RESOLVE** |
+| 🆕 **Grant, read first-hand 2026-10-26 (`p451`)** | 🔴 **SPLIT across versions — 4 of its 7 are `proprietary`.** `v1.0.0-BETA` · `v1.0.0` · `v1.1.0` · `v1.1.1` = **`proprietary`**; **`BSD-3-Clause` only from `v1.1.2`** (2024-08-25) and on `dev-main`. 🔴 **Pin `>=1.1.2`** — a `^1.0` constraint resolves into the proprietary band. 🔵 Packagist (`packagist.org/packages/…`, controls both ways) is now the **only** surviving channel for either grant: 7 versions · 1 023 downloads · `abandoned: true`. Full table in the `p451` section at the head of this file |
 
 🔵 **Why this entry is worth as much as a positive one.** The package record survives on
 Packagist; **the repository behind it is gone.** So the shape existed for SIIAU — somebody built

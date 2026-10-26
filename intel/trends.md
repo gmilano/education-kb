@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 Trend 51 — `p451` **A package registry is a time machine for deleted repositories — and a package NAME is not, which is the half that costs you a wrong row**
+
+🔴 **Measured, not argued.** Nine addresses carried on these shelves return `404` on
+`raw.githubusercontent HEAD/README.md` and `128` on `git ls-remote`, **byte-identical to a
+fabricated control** (`globant-fabricated-451/does-not-exist`). On the GitHub channel that is all
+there is to know, which is why `p450` closed `Gap 420-C` as unanswerable. 🟢 **On the registry
+channel, six of the nine resolve** — because npm, PyPI and Packagist store the `repository` URL
+**submitted at publish time**, and that record outlives the repository:
+
+- 🟢 `thanh01pmt/interactive-quiz-kit` → npm `@thanh01.pmt/interactive-quiz-kit`, **103** versions,
+  2025-06-12 → 2026-09-23, **MIT**.
+- 🟢 `parkseokjune/unist-blackboard-mcp` → PyPI `0.2.0`, **MIT**, four `project_urls` naming it.
+- 🟢 `Mckaroff/GraphLMS` → npm `rhizome-lms-mcp` `0.3.1`, **MIT**.
+- 🟡 `santillana-ai/tutor-sdk` → npm `@santillana-ai/create-tutor-app`, 63 versions, MIT manifest,
+  no payload.
+- 🔴 `ale-alejandro/beadkit` → npm `beadkit`, licence string **`SEE LICENSE IN LICENSE`**.
+- 🔴 `dev-cucei-itrans/siiau-api-client` → **Packagist**, 7 versions, `proprietary` on four of
+  them, `BSD-3-Clause` from `v1.1.2`.
+
+🔵 **The asymmetry is the trend, and it has to be stated in both directions or it misleads:** a
+registry back-link **proves prior existence** (an address that never existed cannot be the
+back-link of 103 published versions); the **absence** of one proves nothing, because a repository
+can be deleted having published nothing. 🔴 `AI-Matrix-Engine/aidream` has no trace on three
+registries and is recorded as **unresolved**, never as fabricated.
+
+### 🔴 The expensive half: a registry hit on the NAME is somebody else's project 2 times in 3
+
+🔴 Of the nine dead addresses, **3** produced a registry hit under their natural name, and **2 of
+those 3 were a third party's**:
+
+| dead address | registry hit on the name | who it actually is |
+|---|---|---|
+| 🔴 `e9x/blackboard-mcp` | npm `blackboard-mcp` `0.1.2` | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) — a **live, MIT** project this base already shelves at `p386` |
+| 🔴 `yokowasis/autograder` | npm `autograder` **and** PyPI `autograder` `3.7.7` | two unrelated parties — `sulejmanca` (2017 → 2021, no `repository`) and `zmievsa` (**GPL-3.0**) |
+| 🟢 `thanh01pmt/interactive-quiz-kit` | npm `@thanh01.pmt/interactive-quiz-kit` | 🟢 itself — the back-link matches |
+
+🟢 **The discipline, one line:** *a registry record is evidence for an address only when its own
+metadata back-links to that exact `owner/repo`.* 🔴 Had this pass accepted the name, it would have
+written **GPL-3.0** onto an address whose real grant is unknown, and attributed a live MIT
+Blackboard server to a withdrawn one — on a shelf that already carries the real one, two rows up.
+
+### 🟡 And the licence axis this trend forces: permissive is not the same as recoverable
+
+🔵 These shelves grade *what* the licence is. 🔴 **A withdrawn address shows that is one axis
+short**: of the six, **3** are registry-recoverable MIT, **1** is manifest-only, **1** is
+version-dependent, **1** is unrecoverable. 🟢 Only the first class is buildable on without legal
+review — **3 of 6**. 🔵 *"MIT, repository gone"* is three different situations and two of them are
+not a grant. Carried in [`repos/foundations.md`](../repos/foundations.md) as the recoverability
+classification.
+
+---
+
 ## 🆕 Trend 50 — `p450` **A probe that cannot fail is not a weak probe, it is zero bits — and in THIS industry its false negatives land on the platform tier, not the long tail**
 
 🔴 **Measured, not argued.** The probe this base is instructed to use — `curl -sI github.com/{slug}`

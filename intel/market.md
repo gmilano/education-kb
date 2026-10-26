@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p451` · 2026-10-26 — **🔴 THE FOUR PRESCRIBED REGIONAL LEGS RETURNED 24 GRADED TOKENS AND ZERO NOVEL FACTS — the SIXTH consecutive nil, written down because silence looks exactly like coverage. 🟢 But the two region-placed facts this pass DID produce came off a different channel entirely: a registry, not a search engine — one for EMEA, one for LATAM, both supply-side, both first-hand.**
+
+🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no cell below,
+including this file's region-heading contract, is gate-attested. 🔵 `check_headings.py` was **read,
+not run**: its canonical predicate is `^## +Opportunities by region\s*$`, which this file satisfies
+with **exactly one** matching heading (the `p449`-superseded block at the foot is de-canonicalised
+by its trailing text, which is the remedy that file's own test suite sanctions). 🟢 The single
+block below is **amended in place**, one bullet per region, with `### Global` present as the closed
+vocabulary requires.
+
+### 🔴 The nil, with its denominator — 24 tokens, 4 legs, 0 novel
+
+🔵 Every token the four legs returned was grepped against the live shelves **before** it was
+written down. Full table in `evidence/regional-leg-reproduction.2026-10-26-p451.tsv`.
+
+| leg | tokens returned | already shelved | novel |
+|---|---|---|---|
+| 🔴 North America | 7 — `134 bills`/31 states, `AB 1159`, Idaho `SB 1227`, `H.R. 8747`, Katy ISD, Canada *AI for All*, NA share **36 % / $3.68 B** | **7** | **0** |
+| 🔴 EMEA | 3 — `Reg. (EU) 2026/1744`, Annex III **2 Dec 2027**, embedded **2 Aug 2028** | **3** | **0** |
+| 🔴 APAC | 6 — Korea `AI Basic Act`, Vietnam high-risk education + **1 Mar 2027** / **15 Aug 2026** grace, Ipsos Education Monitor, Indonesia | **6** | **0** |
+| 🔴 LATAM | 8 — UNESCO `IESALC` 87 %/26 %, `CONPES` 4144, the LAC `Observatory`, `TALIS`, `PISA 2025`, Ceibal, Cetic.br, Tec de Monterrey | **8** | **0** |
+
+🔵 **This is the sixth consecutive nil on these legs**, and `p447`, `p449` and `p450` each
+concluded the same thing in different words: the **leg shape** is the variable, not the supply.
+🟢 `Gap 450-A` stated it as *"a new row needs a new CHANNEL, not a new query"* — **tested and
+confirmed this hour** (see [`agents/trending.md`](../agents/trending.md)): the registry channel
+returned two unshelved addresses while these four legs returned nothing, and **both of the new
+addresses are region-placeable**, which the regulatory tokens no longer are.
+
+### 🟡 What the nil does and does not license this file to say
+
+🟢 **Currency pass:** every load-bearing regulatory cell in the four regional sections below was
+re-confirmed as still-current this hour. 🔴 **Novelty nil:** nothing was added to them. 🔴 **And
+the EU cell remains structurally relayed, not primary** — `Gap 450-B` stands unchanged: EUR-Lex,
+the Commission's digital-strategy pages and UNESCO are `403` at `CONNECT` on this host, so every
+EU date here is a relay of secondary reporting. 🔵 This pass did not re-probe them; `p450`'s
+measurement is one day old and the proxy's refusal register is not a thing a pass can argue with.
+
+---
+
 ## 🆕 `p450` · 2026-10-26 — **🔴 FOUR REGIONAL LEGS, FOUR REPRODUCTIONS, ZERO NOVEL FACTS — and every one of the twelve regulatory specifics they returned was already on these shelves, which is written down as a nil because silence looks exactly like coverage. 🟢 What the legs DID buy is a currency check on the single most load-bearing EMEA cell, and a measured reason it can never be anything better than relayed: the EU's own primaries are refused at CONNECT by this host, logged in the proxy's own failure register.**
 
 🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no gate attests any
@@ -198,6 +238,8 @@ has **mandated** that SIS vendors speak API to a system of record whose implemen
 
 - 🆕 `p450` 🔴 **The NA leg returned seven regulatory facts and all seven were already shelved** — 134 bills/31 states, CA AB 1159, Idaho SB 1227, OK + MD human-oversight, the federal **K-12 AI Literacy and Readiness Act of 2026**, Canada's **"AI for All"** strategy with its **Trusted AI Certification**, and Mexico's bills-without-a-regulator. 🔵 Recorded as a **nil on novelty and a pass on currency**: the sell-state-by-state rule above is unchanged and re-confirmed this hour, and Canada remains **policy, not statute** — an engagement there is governed by procurement terms, not by a compliance deadline.
 
+
+- 🆕 `p451` 🔴 **NIL again — seventh leg, seven tokens, all seven already here** (134 bills/31 states, `AB 1159`, Idaho `SB 1227`, `H.R. 8747`, Katy ISD, Canada's *AI for All*, and the **36 % / $3.68 B** NA share). 🟢 Recorded as a **pass on currency**: the sell-state-by-state rule above is re-confirmed and unchanged. 🔵 No NA-placed supply finding this pass — the registry channel's two new addresses are EMEA and Global, and that absence is written down rather than filled.
 ### EMEA
 
 🟡 **A real market with real interfaces and no way in through code — so the shape is partner,
@@ -225,6 +267,8 @@ not build.** Germany, read this hour through a country-shaped (German-language) 
 
 - 🆕 `p450` 🟢 **The dates are re-confirmed this hour against ten independent sources, and the half that was NOT delayed is the half that sells.** **Reg. (EU) 2026/1744**: Annex III high-risk (learner evaluation, programme assignment, proctoring, access to qualifications) → **2 Dec 2027**; Annex I embedded → **2 Aug 2028**; 🔴 **Article 50 transparency was not delayed and has applied since 2 Aug 2026**, with a transitional period to **2 Dec 2026** for machine-readable marking of systems already on the market. 🔵 **So the EMEA engagement splits in two**: disclosure and content-marking work is due **now**, conformity-assessment work is a 14-month programme. 🔴 And it cannot be verified first-hand from this host — `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` are both **403 at CONNECT** (`Gap 446-D`, now sixteen hosts).
 
+
+- 🆕 `p451` 🔴 **Regulatory nil — three tokens, all three already here** (`Reg. (EU) 2026/1744`, Annex III **2 Dec 2027**, embedded-product **2 Aug 2028**); 🔴 and the EU cells stay **relayed, never primary**, per `Gap 450-B`. 🟢 **The EMEA finding this pass is supply-side and new:** [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp) — **Apache-2.0** (`LICENSE` 11 358 B `sha256₁₂ cfc7749b96f6`, read at `HEAD` this pass), a Python client + CLI + **MCP server** + agent plugin for a *single institution's* Moodle (**BL@ASE / `online.ase.ro`, ASE Bucharest**), Romanian-language README, CI present. 🟢 **Why it is an opportunity and not a curiosity:** the EMEA shape on these shelves has been *copyleft platform, permissive agent layer* — this is evidence the **institution-specific** tier is being built permissively too, which makes a university-by-university engagement **vendorable** instead of a bespoke GPL fork. 🟡 It is pre-1.0 (`0.2.2`, 4 npm versions, 2026-10-15 → 16) — a reference architecture to adopt, not a dependency to pin.
 ### APAC
 
 🔴 **The largest denominator in this file and the thinnest supply — recorded as an absence, not
@@ -248,6 +292,8 @@ as silence.** India, via a country-shaped leg:
 
 - 🆕 `p450` 🔴 **Three facts, three prior hits, zero novelty** — Korea's **AI Framework Act** in force **22 Jan 2026** with 2026 run as a pilot and a one-year **penalty grace**; **Vietnam naming education explicitly in its high-risk list** (automated assessment, behavioural monitoring); China's registration-plus-labelling regime. 🟢 The one commercially live reading is unchanged and re-dated: **Vietnam is the region's only jurisdiction that names education as high-risk by sector**, so an APAC assessment product is scoped by Vietnamese law before it is scoped by anyone else's, while Korea's grace period makes 2026 the cheap year to enter. 🔵 Market-report attribution for the region remains single-source and is not promoted.
 
+
+- 🆕 `p451` 🔴 **NIL — six tokens, all six already here** (Korea's `AI Basic Act`, Vietnam's high-risk education classification with its **1 Mar 2027** deadline and **15 Aug 2026** grace cut-off, the Ipsos Education Monitor ban-support spread, Indonesia). 🟢 **Pass on currency**, and the multi-jurisdiction rule above is unchanged. 🔴 **No APAC-placed supply finding this pass, and that is the fifth consecutive APAC supply absence** — the registry legs run this hour (`moodle mcp`, `canvas lms mcp`, `mcp server education`, `tutor agent mcp`, `classroom mcp server`) returned **no** APAC-placed repository at all. 🔵 Written down as a measured gap in the supply, not as an absence of demand: Vietnam has a dated compliance obligation and no open-source education-agent supply on these shelves to meet it with.
 ### LATAM
 
 🔴 **LATAM is not one market, and this pass measured the seam.**
@@ -286,6 +332,8 @@ calibration is one industry, one host, one 14-day window, 24-h horizon only), `G
 
 - 🆕 `p450` 🟢 **Re-confirmed, not extended, and the confirmation is worth dating because this is the strongest single number on the file**: UNESCO IESALC — **87 % of 200 institutions across 19 countries using AI in at least one area, 74 % in teaching and learning, 57 % in research, and only 26 % with a formal AI strategy**; split by control, **private non-profit 84 % · public 68 % · private for-profit 52 %**. School tier, TALIS 2024: **Brazil 56 % · Chile 55 % · Colombia 53 % · Costa Rica 52 %** against an **OECD average of 36 %**, with Uruguay's Ceibal at **75 %** of public-school teachers. 🔴 **The primary is unreachable from this host** (`www.unesco.org` → 403 at CONNECT), so the cell stays **relayed**. 🔵 The 87/26 gap remains the region's sellable unit: **governance, not adoption**.
 
+
+- 🆕 `p451` 🔴 **Adoption nil — eight tokens, all eight already here** (UNESCO IESALC **87 % / 26 %**, `CONPES` 4144, the LAC `Observatory`, `TALIS`, `PISA 2025`, Ceibal, Cetic.br, Tec de Monterrey). 🟢 **The LATAM finding this pass is a correction, and it changes an engagement's first week:** the only SIS integration SDK that ever existed for **SIIAU** (Universidad de Guadalajara's system of record — `dev-cucei-itrans` is CUCEI) published **7 versions of which FOUR are `proprietary`**; `BSD-3-Clause` begins only at **`v1.1.2`** (read first-hand from Packagist 2026-10-26, controls both ways; the repository itself is withdrawn — `404`/`128`). 🔴 **A `^1.0` composer constraint resolves into the proprietary band**, so the pinning boundary is `>=1.1.2` and the **Packagist record is the only surviving evidence of either grant**. 🟢 **Strategic reading, strengthened:** LATAM's SIS integration supply is not thin, it is *ungranted* — which makes a Mexican public-university engagement a **build** with a retained grant trail, not an integration, and that is a larger and better-defended scope.
 ### Global
 
 🟢 **The one cross-region finding `p449` adds, and it is a capability fact rather than a
@@ -323,6 +371,8 @@ than shelved → `Gap 449-C`.
 
 - 🆕 `p450` 🔴 **The global forecast is a 5.9× spread, and that is the datum.** Six houses read this hour put the **2026 base between $1.94 B and $11.4 B** and the CAGR between **17.08 % and 45.0 %**; the divergence is definitional — whether AI embedded in an LMS subscription counts — not empirical. 🔵 **Rule: no figure travels to a client without its house and its definition.** 🟢 **What the houses do agree on, and what should be used instead:** **North America is the largest current share, APAC the fastest-growing.** 🟢 Cross-region engineering fact added this pass, and it is the one that changes a build: **74 % of the platform addresses on these shelves do not default to `main`** (`master` 11 · `main` 5 · `develop` 1 · `release` 1 of 19 measured), so every grant, README and manifest read must resolve the ref first — the `HEAD` alias does it for free.
 
+
+- 🆕 `p451` 🟢 **A rule that prices every withdrawn dependency in every region, and it is measured on nine of this base's own addresses:** a package registry records a repository's URL **at publish time**, so it **proves prior existence** after the repository is deleted — but **absence** of a registry trace proves nothing, and **2 of the 3 registry hits on a dead address's NAME belonged to a third party** (one of them a live **MIT** project this base already shelves, one a **GPL-3.0** package by an unrelated author). 🔴 **The back-link, never the name, is the evidence.** 🟡 And licence *recoverability* is a second axis independent of the licence itself: of six withdrawn addresses, **3** are registry-recoverable MIT, **1** manifest-only, **1** version-dependent, **1** unrecoverable — so only **3 of 6** are buildable on without legal review. 🔵 Procedure, with its controls and named replacements, in [`compose/patterns.md`](../compose/patterns.md) `Pattern BD`.
 ## 🆕 `p447` · 2026-10-26 — **🟢 `Gap 445-F` IS CLOSED, AND IT PAID TWICE OVER: the EMEA country leg did not merely return facts where two consecutive region legs nilled — it FALSIFIED TWO CLAIMS THE REGION-LEVEL LEG PRODUCED IN THE SAME HOUR. 🔴 The other three legs nil. 🔴 And `Gap 446-D` is now measured across ELEVEN primaries with a control: this file's entire EMEA and LATAM regulatory layer is relayed.**
 
 🔴 **Gate posture: `make hooks` DENIED, no baseline** (`Gap 446-A`, second consecutive pass).

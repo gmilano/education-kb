@@ -1,0 +1,15 @@
+slug	raw_HEAD_README	ls_remote	cited_as	consistent
+FiredMosquito831/ase-moodle-mcp	200	OK	RECOMMENDED (promoted, Apache-2.0)	YES
+tcpassos/moodle-student-mcp	200	OK	RECOMMENDED (promoted, MIT)	YES
+felipedias-ie/blackboard-mcp	200	OK	RECOMMENDED (replacement, MIT, already shelved p386)	YES
+christophblessing/quiz-recap	200	OK	RECOMMENDED (replacement, MIT, already shelved)	YES
+thanh01pmt/interactive-quiz-kit	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+ale-alejandro/beadkit	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+parkseokjune/unist-blackboard-mcp	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+Mckaroff/GraphLMS	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+santillana-ai/tutor-sdk	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+dev-cucei-itrans/siiau-api-client	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+e9x/blackboard-mcp	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+yokowasis/autograder	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+AI-Matrix-Engine/aidream	404	FAIL	WITHDRAWN (cited as withdrawn, never as available)	YES
+globant-fabricated-451/control-negative	404	FAIL	NEGATIVE CONTROL	YES

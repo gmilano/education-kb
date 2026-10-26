@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p451` — **🟢 THE "CIRCULAR GRANT" THIS FILE HAS CARRIED SINCE `p390` IS NOW PROVED RATHER THAN INFERRED — and the proof makes it worse: npm's own record shows `beadkit` published TWO versions whose licence string names a file in a repository that no longer exists, so the grant is not merely unread, it is UNREADABLE BY ANYONE. 🔴 And a second address on this shelf tier turns out to have shipped FOUR `proprietary` versions before its last two went BSD-3-Clause.**
+
+🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`) — no cell below is
+gate-attested. Stated first, per `Gap 446-A`. Six denials in seven passes.
+
+### 🟢 `ale-alejandro/beadkit` — the circle closed, with dates
+
+🔵 This file has recorded since `p390` that `beadkit`'s *"manifest reads `"SEE LICENSE IN LICENSE"`
+— pointing at a file in a repository nobody can read"*, and `compose/patterns.md` carries it as the
+worked example of the class. 🟢 **The registry record now supplies what the inference lacked:**
+
+| measured 2026-10-26 | value |
+|---|---|
+| npm package | **`beadkit`**, **`0.1.0`** latest, **2** versions |
+| window | **created 2026-08-26**, **last modified 2026-10-12** |
+| maintainer | `alebuild.co` |
+| `repository` back-link | 🟢 **`git+https://github.com/ale-alejandro/beadkit.git`** — the exact carried slug |
+| declared licence | 🔴 **`SEE LICENSE IN LICENSE`** |
+| the repository that holds `LICENSE` | 🔴 `404` on `raw`, `128` on `ls-remote`, byte-identical to a fabricated control |
+
+🟢 **So the address was real** — a registry does not invent a back-link for 2 published versions —
+🔴 **and the grant is unrecoverable on every channel this host has.** 🔴 **Not recommendable, and
+for a stronger reason than "unverified": there is no longer any party able to verify it.** The
+package is installable today; its licence is not knowable today. 🔵 For a Globant engagement that
+is the worst of the three states — *available, attractive and unlicensable*.
+
+### 🔴 `dev-cucei-itrans/siiau-api-client` — a licence that CHANGED mid-life, recoverable only from Packagist
+
+🔵 [`verticals/solutions.md`](../verticals/solutions.md) has carried this address as the only SIS
+integration SDK that ever existed for SIIAU, *"marked abandoned"* on Packagist. 🟢 **Read
+first-hand this pass** (`packagist.org/packages/dev-cucei-itrans/siiau-api-client.json`, after the
+positive control `laravel/framework` → `200`):
+
+| version | published | licence as published |
+|---|---|---|
+| `v1.0.0-BETA` | 2023-10-20 | 🔴 **`proprietary`** |
+| `v1.0.0` | 2023-10-23 | 🔴 **`proprietary`** |
+| `v1.1.0` | 2024-08-13 | 🔴 **`proprietary`** |
+| `v1.1.1` | 2024-08-14 | 🔴 **`proprietary`** |
+| `v1.1.2` | 2024-08-25 | 🟢 **`BSD-3-Clause`** |
+| `dev-main` | 2024-10-08 | 🟢 **`BSD-3-Clause`** |
+
+🔵 Package created **2023-10-13**, **7** versions, **1 023** downloads, **7** stars recorded by
+Packagist, `abandoned: true`. 🔴 **Four of seven published versions are `proprietary`**, and the
+repository that could settle the intent is gone — **Packagist is now the only channel on which
+this grant exists at all.**
+
+🔴 **The consequence is a pinning rule, not a footnote:** a composer constraint such as `^1.0`
+resolves into the **proprietary** band. 🟢 **Only `v1.1.2` or later is BSD-3-Clause**, and because
+the repository is withdrawn, that boundary can never be re-read from source. 🔵 Any engagement
+touching SIIAU must pin `>=1.1.2` **and** carry the Packagist record as its grant evidence, or
+have no grant at all.
+
+### 🟢 The classification this shelf tier gains: licence RECOVERABILITY, independent of licence
+
+🔵 These shelves grade *what* a licence is. 🔴 **Six withdrawn addresses this pass show that is one
+axis short** — a grant can be permissive and still unusable because nothing can serve its text:
+
+| recoverability class | n (of the 6 withdrawn) | instances |
+|---|---|---|
+| 🟢 **Registry-recoverable** — a registry declares an SPDX identifier | **3** | `interactive-quiz-kit` (MIT) · `unist-blackboard-mcp` (MIT) · `GraphLMS` (MIT) |
+| 🟡 **Manifest-only** — identifier declared, no payload ever shipped | **1** | `santillana-ai/tutor-sdk` (MIT in `@santillana-ai/create-tutor-app`, no payload in the tarball) |
+| 🔴 **Version-dependent** — the identifier changes across published versions | **1** | `siiau-api-client` (`proprietary` → `BSD-3-Clause` at `v1.1.2`) |
+| 🔴 **Unrecoverable** — the declaration points at a file nobody can serve | **1** | `beadkit` (`SEE LICENSE IN LICENSE`) |
+
+🟢 **Only the first class is buildable on without a legal review**, and it is 3 of 6. 🔵 That ratio
+is the reason this axis is worth carrying: *"MIT"* on a withdrawn address is three different
+situations, and two of them are not a grant.
+
+---
+
 ## 🆕 `p450` — **🔴 A ONE-PATH README PROBE WOULD HAVE CONDEMNED FOUR OF THIS SHELF'S MOST IMPORTANT PLATFORMS AS DEAD — `openedx/edx-platform`, `oppia/oppia`, `overhangio/tutor` and `h5p/h5p-php-library` all serve 404 at `HEAD/README.md` while being entirely alive. 🟢 And a licence instrument written THIS PASS was caught misreading GPL-3.0 as LGPL on 2 of 15 reads, because GPLv3's own closing paragraph recommends the LGPL; it was fixed before publication and both readings are kept side by side.**
 
 🔴 **`make hooks` was DENIED on this host this pass** (`Code from External`), so no cell below is

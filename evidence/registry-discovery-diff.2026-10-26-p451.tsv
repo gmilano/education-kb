@@ -1,0 +1,16 @@
+candidate_repo	found_via	registry_name	version	declared_licence	shelf_state
+tcpassos/moodle-student-mcp	npm search "moodle mcp"	@tcpassos/moodle-student-mcp	0.2.1	MIT	UNSHELVED
+FiredMosquito831/ase-moodle-mcp	npm search "moodle mcp"	ase-moodle-mcp	0.2.2	Apache-2.0	UNSHELVED
+SidneyBissoli/uis-mcp-server	npm search "mcp server education"	uis-mcp-server	1.8.0	MIT	shelved
+christophblessing/quiz-recap	npm search "interactive-quiz-kit"	@openhpi/quiz-recap	3.1.0	MIT	shelved
+falkenslab/moodle-mcp	npm search "moodle mcp"	@falkenslab/moodle-mcp	0.6.0	MIT	shelved
+falkenslab/moodle-driver	npm search "moodle mcp"	@falkenslab/moodle-driver	0.13.0	MIT	shelved
+AnonymousOnyx22/moodle-student-mcp	npm search "moodle mcp"	moodle-student-mcp	0.1.6	MIT	shelved
+alejooroncoy/campus-cli	npm search "moodle mcp"	campus-cli	2.2.3	ISC	shelved
+csmediapro/moodle-mcp-server	npm search "moodle mcp"	moodle-mcp-server-aql	0.1.7	-	shelved
+1alexandrer/moodle-mcp	npm search "moodle mcp"	moodle-mcp	0.2.0	-	shelved
+marcosnahuel/moodle-mcp	npm search "moodle mcp"	@nahuelalbornoz/moodle-mcp	0.5.1	-	shelved
+bunizao/moodle-cli	npm search "moodle mcp"	moodle-cli	0.11.0	-	shelved
+gafapa/moodle-core-cli	npm search "moodle mcp"	moodle-core-cli	0.4.1	-	shelved
+OpenSourceAGI/qwksearch-research-agent	npm search "mcp server education"	education-playlists	0.1.80	-	shelved
+(no repo declared)	npm search "interactive-quiz-kit"	@thanh01.pmt/curriculum-kit	2.0.37	MIT	shelved - unattributable class (no repository field)

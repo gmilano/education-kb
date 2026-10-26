@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 Pattern BD — `p451` **Grant recovery for a withdrawn dependency: how to keep shipping when the repository behind a component disappears, and how to know within one hour whether you can**
+
+🔵 **Why this pattern.** Six addresses on these shelves were withdrawn from GitHub while their
+published artifacts stayed installable. 🔴 An engagement discovers this the way `p450` did — a
+`404` in CI or an audit — and the question it then has to answer is not *"is it still
+installable?"* (it is) but **"do we have a grant, and can we prove it?"** 🟢 This pattern is the
+measured procedure, built from the nine resolutions this pass made, and it runs in under an hour.
+
+### 🟢 Step 1 — Establish that your probe can fail, before you trust any negative
+
+🔴 **Do not skip this**: two instruments were caught constant-across-domain on this host, and a
+third was caught on a wrong path **in this pass's own code**.
+
+```bash
+# both controls are mandatory: a live address AND a fabricated one
+for slug in moodle/moodle globant-fabricated-451/does-not-exist; do
+  curl -sS -o /dev/null -w "$slug raw=%{http_code}\n" \
+    "https://raw.githubusercontent.com/$slug/HEAD/README.md"
+  git ls-remote "https://github.com/$slug" >/dev/null 2>&1 \
+    && echo "$slug lsremote=OK" || echo "$slug lsremote=FAIL"
+done
+# expect: moodle 200/OK, fabricated 404/FAIL.  Equal results = the probe is zero bits, STOP.
+```
+
+🔴 **Known-bad instruments on this host, each measured:** `curl -sI github.com/{slug}` → `403`
+for live, dead and fabricated alike (`p450`); authenticated **GitHub MCP** `get_file_contents` →
+identical access-denied for `HKUDS/DeepTutor` and for a fabricated slug (`p451`);
+`repo.packagist.org/packages/{v}.json` → `404` **for `laravel/framework`** (`p451`, caught by the
+positive control). 🟢 The working paths are `raw.githubusercontent`, `git ls-remote`,
+`registry.npmjs.org`, `pypi.org` and **`packagist.org/packages/{v}.json`**.
+
+### 🟢 Step 2 — Go to the registry the component actually ships on, and read the BACK-LINK
+
+```bash
+# npm — note that the scoped name may differ from the bare one:
+#   thanh01pmt/interactive-quiz-kit publishes as @thanh01.pmt/interactive-quiz-kit
+curl -sS "https://registry.npmjs.org/$(printf %s "@thanh01.pmt/interactive-quiz-kit" | sed 's|/|%2f|')" \
+  | python3 -I -c 'import json,sys; d=json.load(sys.stdin); v=d["dist-tags"]["latest"]; m=d["versions"][v]; print(v, m.get("license"), m.get("repository",{}).get("url"))'
+
+# PyPI — project_urls is where the back-link lives
+curl -sS "https://pypi.org/pypi/unist-blackboard-mcp/json" \
+  | python3 -I -c 'import json,sys; i=json.load(sys.stdin)["info"]; print(i["version"], i.get("license"), i.get("project_urls"))'
+
+# Packagist — per-VERSION licences, which is the field that caught siiau-api-client
+curl -sS "https://packagist.org/packages/dev-cucei-itrans/siiau-api-client.json" \
+  | python3 -I -c 'import json,sys; p=json.load(sys.stdin)["package"]; print(p["repository"], p.get("abandoned")); [print(k, (v.get("time") or "")[:10], v.get("license")) for k,v in sorted(p["versions"].items())]'
+```
+
+🔴 **Accept the record as evidence for your address only if the back-link is that exact
+`owner/repo`.** On this base's own nine, **2 of the 3 name-hits belonged to a third party** —
+`blackboard-mcp` is `felipedias-ie`'s live MIT server, `autograder` is held twice by two unrelated
+parties, one of them **GPL-3.0**. Taking the name would have written somebody else's licence onto
+your dependency.
+
+### 🟢 Step 3 — Classify what you got, because it decides the engagement, not just the ticket
+
+| what the registry gave you | what you may do | worked example from these shelves |
+|---|---|---|
+| 🟢 SPDX identifier + matching back-link | 🟢 **Ship.** Vendor the tarball, record the registry JSON as grant evidence, pin exactly | `@thanh01.pmt/interactive-quiz-kit` **MIT** `1.4.10` · PyPI `unist-blackboard-mcp` **MIT** `0.2.0` · npm `rhizome-lms-mcp` **MIT** `0.3.1` |
+| 🟡 identifier in the manifest, **no payload** ever shipped | 🟡 **Ship only with legal sign-off** — there is a declaration but no licence text to attach | `@santillana-ai/create-tutor-app` (MIT manifest, tarball carries `README` + templates only) |
+| 🔴 identifier **changes across versions** | 🔴 **Pin above the boundary and prove it** | `siiau-api-client`: `proprietary` on `v1.0.0-BETA`…`v1.1.1`, **`BSD-3-Clause` from `v1.1.2`** → constrain `>=1.1.2`, never `^1.0` |
+| 🔴 declaration points at a file nobody can serve | 🔴 **Do not ship. Replace the component.** | `beadkit`: npm says `SEE LICENSE IN LICENSE`; that `LICENSE` was in the deleted repo, so **no party on earth can now produce the grant** |
+| 🔴 no trace on npm, PyPI **or** Packagist | 🟡 **Unresolved — not "unlicensed".** Treat as a build-or-replace decision; do not write a licence cell | `AI-Matrix-Engine/aidream` |
+
+### 🟢 Step 4 — Replace, with named substitutes from these shelves
+
+🔵 Withdrawal is usually not fatal to the *capability*, only to the address. For the tiers hit this
+pass there are live, first-hand-verified replacements:
+
+- **Blackboard** → [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp)
+  — **MIT**, `LICENSE` 1 084 B, Ultra courses/content/files/grades/deadlines over the user's own
+  browser session (replaces both withdrawn Blackboard addresses).
+- **Moodle, student-side** → [`tcpassos/moodle-student-mcp`](https://github.com/tcpassos/moodle-student-mcp)
+  — **MIT**, `LICENSE` 1 069 B `sha256₁₂ 322307ac9d65`, official mobile-app web service,
+  read-only by construction, SSO + MFA.
+- **Moodle, single-institution (EMEA)** → [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp)
+  — **Apache-2.0**, `LICENSE` 11 358 B `sha256₁₂ cfc7749b96f6`, BL@ASE / `online.ase.ro`,
+  Python 3.10+, CI present.
+- **Quiz/assessment authoring** → `@openhpi/quiz-recap` (**MIT**,
+  [`christophblessing/quiz-recap`](https://github.com/christophblessing/quiz-recap), 35 versions)
+  for the recap surface; 🔴 do **not** reach for `@thanh01.pmt/curriculum-kit` as a replacement
+  despite being live and MIT — it declares **no `repository` field**, so there is no address to
+  audit (`p280`'s unattributable class).
+
+### 🔴 Step 5 — Make the recovery durable, or you will repeat it next quarter
+
+🟢 **Vendor, do not reference.** Commit the tarball (or a lockfile with integrity hashes) **and**
+the registry JSON that carried the back-link and licence, into your own repository. 🔴 The
+registry record is the single point of failure once the repository is gone — `beadkit` shows what
+remains when the second channel goes too: an installable package with an unknowable grant. 🔵 The
+dependency-closure pass still applies on top (`compose/code/dependency-licence-closure`): a
+permissive root does not clear the tree (`Trend 40`).
+
+---
+
 ## 🆕 Pattern BC — `p450` **The split-clock EU tutor: ship the Article 50 obligations that are live NOW, and isolate the Annex III surface so December 2027 is a conformity deliverable instead of a rewrite — every component's grant and ref read first-hand this pass**
 
 🔵 **Why this pattern and not another "AI tutor" recipe.** `Reg. (EU) 2026/1744` split the EU

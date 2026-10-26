@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p451` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE 9 UNREACHABLE ADDRESSES FROM `p450`'s CENSUS ARE TYPED: 6 of 9 PROVED to have existed and been withdrawn, 1 with no trace on three registries, and 2 contaminated by a third party holding the same package name. 🔴 `make hooks` DENIED, so nothing here is gate-attested.**
+
+🔵 **APPEND-ONLY shelf** — inserted above `p450`'s section; nothing below is rewritten.
+🔵 **Single date:** every probe and registry read below ran **2026-10-26**.
+
+### 🟢 From a count to a verdict — what `p450` left open and this pass closes
+
+🔵 `p450` delivered the first full reachability census of these shelves (**375** addresses, **366**
+live, **9** unreachable, **19** live-but-invisible-to-a-one-path-probe) and said of the nine, in
+this file, that exit **`128`** twice *"does not separate **absent** from **private**"*. 🟢 **This
+pass separates a third state that is more useful than either: EXISTED-AND-WITHDRAWN.**
+
+🔴 **Independently re-probed before anything was concluded** — all nine reproduce **exactly** as
+`p450` recorded (`404` on `raw.githubusercontent HEAD/README.md`, `128` on `git ls-remote`), and
+all nine are **byte-identical to a fabricated negative control**
+(`globant-fabricated-451/does-not-exist`), which is the measurement that makes the GitHub channel
+useless for this question and `p450`'s refusal to call them dead correct.
+
+| resolution class | n | addresses |
+|---|---|---|
+| 🟢 **EXISTED → WITHDRAWN, licence recoverable from the registry** | **4** | `thanh01pmt/interactive-quiz-kit` (**MIT**, 103 versions) · `parkseokjune/unist-blackboard-mcp` (**MIT**, PyPI `0.2.0`) · `Mckaroff/GraphLMS` (**MIT**, npm `rhizome-lms-mcp` `0.3.1`) · `santillana-ai/tutor-sdk` (🟡 MIT **manifest-only**, 63 versions) |
+| 🔴 **EXISTED → WITHDRAWN, licence NOT recoverable** | **2** | `ale-alejandro/beadkit` (npm says `SEE LICENSE IN LICENSE` — the file was in the deleted repo) · `dev-cucei-itrans/siiau-api-client` (**Packagist: `proprietary` on 4 of 7 versions**, `BSD-3-Clause` on 2) |
+| 🔴 **NO TRACE, third-party name collision — NOT evidence either way** | **2** | `e9x/blackboard-mcp` (npm name → `felipedias-ie/blackboard-mcp`) · `yokowasis/autograder` (npm → `sulejmanca`; PyPI → `zmievsa`, GPL-3.0) |
+| 🔴 **NO TRACE on three registries** | **1** | `AI-Matrix-Engine/aidream` |
+
+### 🟢 Why a registry record is PROOF of prior existence, stated so it can be refuted
+
+🔵 A package registry stores the `repository` URL **submitted at publish time**, together with
+version timestamps. 🟢 **An address that never existed cannot be the back-link of a package that
+published 103 versions between 2025-06-12 and 2026-09-23.** 🔴 The converse does not hold and is
+not claimed: **absence of a registry trace is not absence of a repository**, because a repository
+can be deleted having published nothing — which is exactly why `AI-Matrix-Engine/aidream` is
+recorded as *unresolved*, not as *fabricated*.
+
+🔵 **The channel exists here for a measurable reason:** `registry.npmjs.org` and `pypi.org` are on
+this host's proxy **`noProxy`** list and are reached directly, where every archival channel in the
+refusal ledger (`archive.softwareheritage.org`, `api.deps.dev`, `ungh.cc`, `data.jsdelivr.com`) is
+**`403` at `CONNECT`** and discriminates nothing.
+
+### 🔴 An instrument defect found in this pass's own code, before publication
+
+🔴 **The first Packagist probe this pass wrote used `repo.packagist.org/packages/{v}.json` and
+returned `404` for `laravel/framework`** — a *positive control failing*. 🟢 Caught by the control,
+not by the result: the correct path is **`packagist.org/packages/{v}.json`** (`laravel/framework`
+→ `200`, fabricated → `404`). 🔴 **Had the control been skipped, this pass would have published
+"no Packagist trace" for `dev-cucei-itrans/siiau-api-client` — a false "never existed" about the
+one address whose grant now survives ONLY on Packagist.** 🔵 Both paths are recorded in
+`evidence/registry-channel-controls.2026-10-26-p451.tsv` so the mistake stays visible.
+
+🔴 **A second instrument measured as zero-bits this pass:** the authenticated **GitHub MCP**
+`get_file_contents` returns the *same* access-denied string for `HKUDS/DeepTutor` (live) and for a
+fabricated slug — a verdict function constant across its domain, the same defect class as the
+`curl -sI` probe `p450` refuted. `search_repositories` was **not run**: this session's scope
+permits repository search only inside the two attached repositories, so that channel is closed by
+**policy**, which is a different and documentable reason from a broken oracle.
+
+---
+
 ## 🆕 `p450` · reads 2026-10-26, commit 2026-10-26 — **🟢 THE FIRST FULL REACHABILITY CENSUS OF THESE SHELVES: 375 addresses, 366 live, 9 unreachable, 19 live-but-invisible-to-a-one-path-probe. 🔴 And the 19 are not a long tail — they are `openedx/edx-platform`, `overhangio/tutor`, `oppia/oppia` and `h5p/h5p-php-library`, the platform tier this file is built on. 🔴 `make hooks` DENIED, so nothing here is gate-attested.**
 
 🔵 **APPEND-ONLY shelf** — inserted above `p449`'s section; nothing below is rewritten.
@@ -1751,7 +1809,7 @@ improvised ladder reproduces a hazard the canonical one does not have.** The sta
 | 🟢 **`T107` — `gh-pages` is built output, not source** | **6** surviving pairs are `gh-pages`. Shape control: `index.html` **`200`**, `package.json` **`404`** on `rstudio/learnr` and `netless-io/flat`. 🔵 **Absence of a grant on a built-docs orphan is not a licensing finding** |
 | 🟡 **One real residual, and it is about PINNING** | [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) `release-2.6.0` and `release-2.7.0` carry **no grant at 25 root paths** and a `package.json` with **no `license` field**, while the project is MIT on `main`. 🔵 **Release branches cut without the grant** — only consequential to an engagement that pins an old Sunbird release, which India/APAC engagements do |
 | 🟢 **Two carried `EXISTS-NO-REFS` rows CONFIRMED first-hand** | `cdweaver1992/edfi-mcp-server` and `openfresno/edgenuity-aeries-grade-passback` → **0 heads** on `ls-remote`. 🔵 `repos/foundations.md` already names both as empty-but-existing; this is a confirmation, not a finding |
-| 🟡 **8 carried addresses did not resolve, and are NOT called dead** | `thanh01pmt/interactive-quiz-kit`, `AI-Matrix-Engine/aidream`, `Mckaroff/GraphLMS`, `santillana-ai/tutor-sdk`, `ale-alejandro/beadkit`, `yokowasis/autograder`, `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp` — exit **`128`** twice, un-credentialled, which does not separate *absent* from *private*. 🔵 `gate-slug-oracle` (`p293`) is the instrument and was not run against them — `Gap 420-C` |
+| 🟡 **8 carried addresses did not resolve, and are NOT called dead** | `thanh01pmt/interactive-quiz-kit`, `AI-Matrix-Engine/aidream`, `Mckaroff/GraphLMS`, `santillana-ai/tutor-sdk`, `ale-alejandro/beadkit`, `yokowasis/autograder`, `e9x/blackboard-mcp`, `parkseokjune/unist-blackboard-mcp` — exit **`128`** twice, un-credentialled, which does not separate *absent* from *private*. 🔵 `gate-slug-oracle` (`p293`) is the instrument and was not run against them — `Gap 420-C`. 🆕 `p451` **answers 6 of the 9 on a different channel**: a registry stores the `repository` URL at publish time, so `interactive-quiz-kit`, `beadkit`, `unist-blackboard-mcp`, `GraphLMS`, `tutor-sdk` and `siiau-api-client` are **EXISTED → WITHDRAWN** with dates and declared licences; `aidream` has no trace on three registries, and `e9x/blackboard-mcp` + `yokowasis/autograder` have only **third-party** name hits. See the `p451` section at the head of this file |
 
 ## 🆕 `p419` · 2026-10-24 — **The repository layer's finding is a BRANCH axis: `piyushdhoka/GradeU` is three applications on three branches and only the default one carries a grant. 🔴 And the channel this base reads payloads on aliases `master` to the default branch, so the branch half of a grant path cannot be falsified there.**
 
