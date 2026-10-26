@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` · 2026-10-26 — **The agent tier's nil BREAKS, and on two channels at once: a recency-bounded discovery slice returned 13 unshelved addresses (11 granted) after four passes of zero, and an audit of this base's own evidence store recovered 10 live permissive addresses that had been SILENTLY EVICTED from every sell shelf.**
+
+🔵 **Record posture.** This file is append-only; the sections below it are untouched. What follows
+is the arrival record for this hour — the sell-shelf rows it licenses are on
+[`agents/top.md`](top.md) `p463`.
+
+### 🟢 New this week — agent-tier arrivals, grants read first-hand
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | note |
+|---|---|---|---|---|---|
+| [`ERRRC/kaogong-shuati`](https://github.com/ERRRC/kaogong-shuati) | 122 | 2026-08-29 | 🟢 MIT · `449d0e5f8c86` | **APAC** · CN civil-service exam | offline-first bank + AI explanation; **shelved** |
+| [`Andiii208/seu-handbook-skill`](https://github.com/Andiii208/seu-handbook-skill) | 52 | 2026-10-05 | 🟢 MIT · `965a0edb5701` | **APAC** · Southeast University | per-clause traceable rulebook skill; **shelved** |
+| [`Queena34/StudyPilot`](https://github.com/Queena34/StudyPilot) | 50 | 2026-08-25 | 🟢 MIT · `1c49d485d539` | **APAC** · zh README | corpus-only answers with citations + explicit refusal; **shelved** |
+| [`ryannli/immersive-reading`](https://github.com/ryannli/immersive-reading) | 48 | 2026-06-30 | 🟢 MIT · `db7ff5821c21` | Global | long-form → learning space; **shelved** |
+| [`callmevanshh/campusask`](https://github.com/callmevanshh/campusask) | 41 | 2026-10-05 | 🟢 MIT · `0b3e2dc7fa93` | **APAC** · IIIT Delhi | cited RAG over academic rules; **shelved** |
+| [`2362094903-ops/study-assistant-skills`](https://github.com/2362094903-ops/study-assistant-skills) | 27 | 2026-06-11 | 🟢 MIT · `d4b1c51084cb` | **APAC** · 考研 | 🔴 in this record since `p434`, shelved only now — second instance of `Gap 443-A` |
+| [`mantou6666/Math-Modeling-Agent-Flow`](https://github.com/mantou6666/Math-Modeling-Agent-Flow) | 26 | 2026-08-19 | 🟢 MIT · `b66691d6d740` | **APAC** · CUMCM | 4-stage contest pipeline; **shelved** |
+| [`Aisland-SJL/Aisland-teach`](https://github.com/Aisland-SJL/Aisland-teach) | 16 | 2026-08-31 | 🟢 MIT · `f46f29be1b28` | **APAC** · bilingual | restatement-verified teaching skill, derivation declared; **shelved** |
+| [`weishao2/tizhuang-agent-skills`](https://github.com/weishao2/tizhuang-agent-skills) | 32 | 2026-08-11 | 🟡 not probed this pass | **APAC** · CN K12 bank | 🟡 already in this record; **not shelved**, carried for the trend only |
+| [`gotonote/awesome-agent-boom`](https://github.com/gotonote/awesome-agent-boom) | 21 | 2026-08-22 | 🟡 not probed this pass | **APAC** | 🟡 a list, not a tool; already in this record |
+
+### 🔴 Returned by the legs and NOT shelved — with the reason
+
+| address | ★ | reason |
+|---|---|---|
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 407 | 🔴 **AGPL-3.0** (34 523 B · `0d96a4ff68ad`); already carried since `p445`. 🔵 HEAD has moved to `683b3e5e8cfa` from this record's `b9bcbc2312f8`, and its star count from 400 → 407 |
+| [`Frisher1/ClaudeCode-Workflow-Lab`](https://github.com/Frisher1/ClaudeCode-Workflow-Lab) | 117 | 🔴 **no grant payload** on either branch at four enumerated paths |
+| [`Ciucky/no-numb`](https://github.com/Ciucky/no-numb) | 32 | 🔴 **no grant payload** |
+
+### 🟢 Recovered from eviction — the agent-addressable half
+
+🔴 The Canvas/Blackboard **MCP connector tier had vanished from every sell shelf**. All three
+addresses are live and MIT, re-probed this hour:
+[`bartmassey-upstream/canvas-mcp`](https://github.com/bartmassey-upstream/canvas-mcp)
+(1 071 B · `5385a26e2fac`),
+[`bibo242/blackboard-mcp`](https://github.com/bibo242/blackboard-mcp) (1 084 B · `d65abf96e389`),
+[`anonymousonyx22/canvas-lms-student-mcp`](https://github.com/anonymousonyx22/canvas-lms-student-mcp)
+(1 072 B · `ed912ca72d9e`). 🔴 A fourth,
+[`eastarctica/canvas-mcp`](https://github.com/eastarctica/canvas-mcp), **no longer resolves at
+all** — so that one eviction was correct and the other three were not. Also recovered:
+[`lowwwbank/anything-to-course`](https://github.com/lowwwbank/anything-to-course) (MIT ·
+`d41346e796d6`), [`098765d/ai_tutor`](https://github.com/098765d/ai_tutor) (MIT · `15ecd34b91de`),
+[`sirhanmacx/claw-ed`](https://github.com/sirhanmacx/claw-ed) (MIT · `4d5d987f4f89`).
+Full audit, including the 11 evictions this pass judges **justified**:
+[`agents/top.md`](top.md) `p463`.
+
+### 🔵 The instrumentation lesson, recorded for the record's sake
+
+🔴 **The prescribed `curl -sI https://github.com/<addr>` URL check returns `403` from this host for
+every address, live or withdrawn.** It cannot tell a real repository from an invented one, and no
+row in this pass rests on it. The two channels that work are `git ls-remote <addr> HEAD` and
+`raw.githubusercontent.com`. 🟢 Three `p462` controls reproduced byte-, digest- and HEAD-identical
+before any verdict was taken.
+
 ## 🆕 `p462` · 2026-10-26 — **Nothing new is trending in education agents, and that is now the finding on the PRESCRIBED channel: the four global legs and the four regional legs returned 36 repository tokens and 34 of them are already shelved, with the other two not being repositories at all. 🔴 What did move is a CORRECTION: one of `p461`'s four "aliases" is a diverged fork pair.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**

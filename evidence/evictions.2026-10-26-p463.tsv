@@ -1,0 +1,41 @@
+# p463-evictions — addresses attributed to a sell shelf by evidence/carried-existence.2026-10-23-p406.tsv
+# and ABSENT from that shelf at HEAD a2bfd2d (p462).  Graded at ed3d76c (p406) first: 238/238 reproduced there,
+# so every row below is an EVICTION, not a ledger defect.  Channels: git ls-remote HEAD + raw.githubusercontent.com.
+slug	fate	head12	grant_path	bytes	sha256_12	family	eviction_verdict
+1edtech/lti-1-3-php-library	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+academic-innovation/django-lti	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+bmosoluciones/now-lms	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+citolab/qti-convert	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+citolab/qti-convert-python	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+ed-fi-exchange-oss/lms-toolkit	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+edanalytics/edfi_api_client	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+edly-io/h5pxblock	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+frappe/education	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+harvard-university-icommons/django-lti	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+harvard-university-icommons/django-lti-dynamic-registration	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+mcp-brasil/mcp-brasil	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+mdestafadilah/proctoring.js	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+openedx/xblock-lti-consumer	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+openfun/django-lti-toolbox	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+superbuilders/timeback-dev-python	MOVED	-	-	-	-	-	NOT-AN-EVICTION:on-another-sell-shelf
+eastarctica/canvas-mcp	DROPPED	NO-HEAD	-	-	-	-	JUSTIFIED:address-no-longer-resolves
+naresh1401/education-tutor-agent	DROPPED	2cb9dcf317c1	-	-	-	NONE	JUSTIFIED:no-grant-payload
+a-r007/multi-agent-study-assistant	DROPPED	3c1c88b95a9d	-	-	-	NONE	JUSTIFIED:no-grant-payload
+adorsys-gis/moodle-aiprovider_openaicompatible	DROPPED	371278b0ebd6	-	-	-	NONE	JUSTIFIED:no-grant-payload
+lmscloud-io/moodle-aiprovider_openaicompatible	DROPPED	040b74d5b13e	-	-	-	NONE	JUSTIFIED:no-grant-payload
+matsuolab/lecture-ai-engineering-2026-hi	DROPPED	d74eafdda870	-	-	-	NONE	JUSTIFIED:no-grant-payload
+murderszn/open-tutor	DROPPED	bf57de841f5f	main/LICENSE	869	c341a936e405	UNTITLED	JUSTIFIED:notice-only-grant-by-reference
+lamb-project/lamb	DROPPED	d49c5843626b	main/LICENSE	35349	17fe6d0ffa96	GPL	JUSTIFIED:copyleft
+lamb-project/lamba	DROPPED	87e203af202c	main/LICENSE	35149	3972dc9744f6	GPL-3.0	JUSTIFIED:copyleft
+openedx/ease	DROPPED	056da0adc6f3	master/LICENSE.txt	35136	e12d78569742	AGPL-3.0	JUSTIFIED:network-copyleft
+edx/ease	DROPPED	056da0adc6f3	master/LICENSE.txt	35136	e12d78569742	AGPL-3.0	JUSTIFIED:network-copyleft-same-HEAD-as-openedx/ease
+pytorch/opacus	DROPPED	df040e4a1594	main/LICENSE	10241	bcf6964d43d8	Apache-2.0	UNJUSTIFIED:live-permissive-recovered-p463
+meta-pytorch/opacus	DROPPED	df040e4a1594	main/LICENSE	10241	bcf6964d43d8	Apache-2.0	UNJUSTIFIED:live-permissive-same-HEAD-as-pytorch/opacus
+bartmassey-upstream/canvas-mcp	DROPPED	b62e1ec8abd6	main/LICENSE	1071	5385a26e2fac	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+bibo242/blackboard-mcp	DROPPED	1fd96db0378d	main/LICENSE	1084	d65abf96e389	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+anonymousonyx22/canvas-lms-student-mcp	DROPPED	e1335f93f05c	main/LICENSE	1072	ed912ca72d9e	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+ai4bharat/anudesh-backend	DROPPED	4e6460823f5b	master/LICENSE	1067	e2cd4cec54f7	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+ai4bharat/indicifeval	DROPPED	1bb5f1bc4936	main/LICENSE	1074	1bff713bf26a	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+lowwwbank/anything-to-course	DROPPED	f11bbf21572a	main/LICENSE	1066	d41346e796d6	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+098765d/ai_tutor	DROPPED	e7503b7c95de	main/LICENSE	1059	15ecd34b91de	MIT	UNJUSTIFIED:live-permissive-recovered-p463
+sirhanmacx/claw-ed	DROPPED	18f2e223cdd1	main/LICENSE	1078	4d5d987f4f89	MIT	UNJUSTIFIED:live-permissive-recovered-p463

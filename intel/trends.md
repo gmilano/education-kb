@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` · 2026-10-26 — **🟢 The trend legs reproduce `p462`'s governed-deployment shape and add one it could not see, because it is visible only in the SHAPE of the supply: 13 of 17 novel addresses were created within five months and 7 of 13 ship as an agent SKILL rather than an application — the packaging format of education AI changed this year. 🔴 And "regulation is tightening" is no longer one trend: in 2026 it DIVERGED by region.**
+
+### 🟢 The trend legs reproduce `p462`'s shape and add one thing it could not see
+
+🟢 **Reproduced, from the same standards body and analyst sources `p462` read:** 2026 is the year
+education AI moved from pilots to **governed deployment**; governance is the gate; buyers demand
+**evidence** of learning gain; education-specific tools are displacing general chatbots; agents
+are displacing single prompts; digital credentials are the skills-economy mechanism. 🔵 None of
+that changed in a day and this pass does not restate it as new.
+
+🔴 **The adoption percentages those legs carry are refused again** — an "83 % of institutions"
+figure and a "60 % of U.S. K-12 teachers" figure arrive from aggregators whose own numbers
+conflict by large factors. 🟢 **One exception, promoted:** the U.S. teacher figure (**60 %** in
+2024-25, **32 %** weekly) traces to a survey with a stated population, so it is promoted on
+`intel/market.md` and the aggregator restatements around it are not.
+
+### 🔴 The trend `p462` could not see, because it is visible only in the SHAPE of the supply
+
+🔵 This pass ran the discovery channel on a **recency** slice for the first time
+(`created:>2026-06-01`). What came back is a trend statement in its own right:
+
+| what the slice shows | n | reading |
+|---|---|---|
+| 🟢 novel addresses created within ~5 months | **13 of 17** | the education supply is being written **now**, faster than an hourly shelf samples it |
+| 🟢 shipped as an **agent skill**, not an application | **7 of 13** | 🔴 **the packaging format of education AI changed this year** — a `SKILL.md` + prompts repository, installable into a coding agent, has replaced the web app as the default unit of distribution |
+| 🟢 APAC-placed on first-hand evidence | **9 of 12** shelved rows | the centre of gravity of new open education tooling is APAC, and it is not close |
+| 🔴 carrying an efficacy-evaluation harness | **1** | the evidence trend above has **no supply behind it** |
+| 🔴 LATAM-placed and shippable | **0** | see the LATAM gap: supply exists, 6 of 6 ungranted |
+
+🟢 **Why the packaging shift is the actionable half.** A skill is a text artefact with a declared
+licence and no runtime: it composes, it reviews cleanly, and it can be vendored into an
+engagement in an afternoon. 🔴 It also carries a **new provenance risk this pass met first-hand** —
+[`Aisland-SJL/Aisland-teach`](https://github.com/Aisland-SJL/Aisland-teach) is MIT and **declares
+derivation from another MIT skill in its README**. 🟢 That chain is stated, so it grades clean;
+nothing guarantees the next one states it. **Skill-tier supply needs provenance read at the
+README, not just a grant read at `LICENSE`** — `p288`'s README channel, now load-bearing for a
+whole tier rather than an exception. Registered as `Gap 463-E`.
+
+### 🔴 The regulatory trend, and it is a DIVERGENCE rather than a direction
+
+🟢 Every prior pass recorded "regulation is tightening". 🔴 **That is no longer one trend.** In
+2026 the education-AI compliance calendar **split**: EMEA **postponed** its Annex III education
+duty to **2027-12-02** (Digital Omnibus, Regulation (EU) 2026/1744) while **Vietnam** brought an
+explicitly education-naming high-risk regime into force (**2026-03-01**, six sectors incl.
+education, automated assessment and behavioural monitoring named), **South Korea** commenced its
+AI Basic Act (**2026-01-22**, one-year penalty grace), and **China** holds registration and
+labelling duties with penalties to **¥50 M**. 🔵 **Consequence for a multi-region studio
+programme: one compliance posture no longer spans two regions.** Full table and the citation
+posture per instrument: [`intel/market.md`](market.md) `p463`.
+
+### 🟢 A trend about this base's own behaviour, which is a trend about mature KBs generally
+
+🔴 Four consecutive passes published *zero novel yield* and concluded the supply was saturated.
+🟢 **It was not: one date bound returned 13 unshelved addresses, 11 of them granted.** And in the
+same hour, diffing a nine-pass-old evidence file against the shelves recovered **10 live
+permissive addresses that had been silently evicted** — for no network calls at all.
+🔵 **The generalisable finding: at high maturity a knowledge base's scarcest resource stops being
+discovery and becomes RETENTION.** It is cheaper, and more productive, to measure what left than
+to search again for what never arrived. Mechanism, denominators and the eviction audit:
+[`agents/top.md`](../agents/top.md) `p463`. Recipe: `Pattern AW`.
+
+### 🔵 Gap register opened by this pass
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🔴 **`Gap 463-A`** | The sell shelves have **no eviction ledger**. 21 projects left every sell shelf between `p406` and `p462` with no row, no reason and no gate; every existing gate measures arrival. | Write `evidence/evictions.<date>-p<N>.tsv` from the `Pattern AW` diff, and add a gate that fails when an address on the previous commit's sell shelves is absent from this one **without a reason cell**. |
+| 🔴 **`Gap 463-B`** | A novelty check keyed on a **guessed slug** manufactures false positives — `openSIS` read as uncarried when `OS4ED/openSIS-Classic` sits on 3 shelves. | Resolve the product name to an address through the probe **before** the `grep`, and key the check on the resolved address. |
+| 🟡 **`Gap 463-C`** | `OS4ED/openSIS-Classic` and `OS4ED/openSIS-Responsive-Design` share HEAD `8348cd069aa2`. Alias or undiverged fork is **unsettled**, and neither serves a root grant so the payload channel cannot settle it. | Run `gate-fork-direction`'s full-history channel on the pair. |
+| 🔴 **`Gap 463-D`** | **The Middle East and Africa returned nothing on any EMEA leg** — EMEA's evidence here is EU-27 + UK + Germany only. | Run legs keyed on named national systems (as `p443` did for LATAM) rather than on the region word: Gulf ministry platforms, Nigerian and Kenyan HE systems, francophone African curricula. |
+| 🟡 **`Gap 463-E`** | Skill-tier supply (**7 of 13** novel addresses) carries **derivation chains stated only in the README**. A `LICENSE` read grades such a row clean while saying nothing about what it was built from. | Make `p288`'s README channel standing for the skill tier: every skill-tier row records a provenance cell (declared upstream + its grant) or `PROVENANCE-UNSTATED`. |
+| 🔴 **`Gap 446-A`** | **Still open, and still not closable by this pass.** `make hooks` was refused (`Code from External`); nothing in this pass is gate-attested. | Needs a harness permission decision, not a pass. |
+
 ## 🆕 `p462` · 2026-10-26 — **The trend legs return one consistent, well-sourced signal and it is not a technology: 2026 is the year education AI moved from pilots to GOVERNED deployment, and the binding constraint is evidence and oversight, not model capability. 🔴 `p461`'s alias trend-note is CORRECTED — one of its four cases is a fork pair, not a rename.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**

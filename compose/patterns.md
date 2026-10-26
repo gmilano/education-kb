@@ -4,6 +4,140 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` — **🟢 Five recipes, and the first one is new in kind: `Pattern AW` mines this base's OWN evidence store for silently evicted rows and returned a yield comparable to the discovery channel for ZERO network calls. 🟢 `Pattern BA` is the first end-to-end pipeline on this file with no copyleft anywhere in it, so it can be vendored into a client deliverable without a boundary argument.**
+
+### 🟢 `Pattern AW` — Re-promotion before discovery: mine the base's own evidence files
+
+🔵 **The recipe this pass's headline finding licenses, and it costs zero network calls.** At this
+maturity the base's evidence store knows more than its shelves do.
+
+1. Pick the newest `evidence/carried-existence.*.tsv` — it records, per address, the sell-shelf
+   files that carried it at that commit.
+2. 🔴 **Grade it at its OWN commit first** (`git show <commit>:agents/top.md`). If the claims
+   reproduce there, any disagreement with HEAD is **churn, not a ledger defect**. Skipping this
+   step is how `p455` published and retracted a 20.6 % defect rate.
+3. Diff: every address the file attributes to a sell shelf and that `grep` cannot find on that
+   shelf at HEAD is an **eviction**.
+4. Split the evictions: still on another sell shelf → **moved** (fine); on none → **dropped**.
+5. Re-probe every dropped address on both channels — `git ls-remote <addr> HEAD` and
+   `raw.githubusercontent.com/<addr>/<branch>/LICENSE`.
+6. Grade each: **no HEAD** → withdrawn, eviction justified; **no payload** → ungranted, justified;
+   **untitled/short payload** → notice-only, justified; **GPL/AGPL** → justified off a build-on
+   shelf; 🟢 **permissive + live → recover it, with a fresh cell.**
+
+**Yield, measured this pass:** 238 claims → 37 evictions → 16 moved, 21 dropped → **11 justified,
+10 recovered** (incl. the base's only differential-privacy row). 🔵 Compare the discovery channel
+the same hour: 8 web legs + 6 API queries → 11 granted novel addresses. **Comparable yield; one
+of them is free.**
+
+### 🟢 `Pattern AX` — EMEA Annex III tutoring with a privacy boundary · 13-month runway
+
+**The clock:** stand-alone high-risk education systems apply **2027-12-02** (Digital Omnibus, Reg.
+(EU) 2026/1744). Admissions, student evaluation and exam scoring are Annex III high-risk, and the
+Act reaches non-EU systems whose outputs affect EU students.
+
+**Wiring, named repo by repo:**
+
+- **Tutoring core** — `CAHLR/OATutor` (MIT, carried): Bayesian knowledge tracing, so a mastery
+  claim is a traceable state, not a model opinion.
+- **Evidence** — `pykt-team/pykt-toolkit` (MIT, carried) to *evidence* learning gain, plus
+  [`ai4bharat/indicifeval`](https://github.com/ai4bharat/indicifeval) (MIT, **recovered this
+  pass**) where instruction-following has to be scored rather than asserted.
+- 🟢 **Privacy control** — [`pytorch/opacus`](https://github.com/pytorch/opacus) (Apache-2.0,
+  10 241 B · `bcf6964d43d8`, **recovered this pass**): DP-SGD so a model trained on cohort data
+  cannot memorise a student. 🔴 This is the layer every prior EMEA pattern asserted and none
+  named a component for.
+- **Platform seam** — an Open edX **XBlock** (Apache-2.0) over the AGPL-3.0 platform: proprietary
+  work stays across the process boundary, never inside the AGPL tree.
+- **Human decision point** — a recorded reason string per determination, which is also what
+  Oklahoma's and Maryland's oversight clauses require, so the same build serves both regions.
+
+**Boundary to respect:** Open edX is AGPL-3.0 (35 136 B · `e12d78569742`) and OpenEduCat is
+LGPL-3.0 at ref `19.0`. Neither is a tier to relicense. **8–10 weeks** to a conformity-shaped
+pilot.
+
+### 🟢 `Pattern AY` — APAC multi-jurisdiction assessment agent · duty is LIVE
+
+**The clock, inverted from EMEA:** Vietnam's July 2026 decision names **education** among six
+high-risk sectors, citing **automated assessment** and **behavioural monitoring**, under a law in
+force since **2026-03-01**; providers self-classify before deployment. Korea's AI Basic Act is in
+force with a penalty grace year; China holds registration + labelling duties.
+
+**Wiring:**
+
+- **Answer core that can survive an audit** —
+  [`Queena34/StudyPilot`](https://github.com/Queena34/StudyPilot) (MIT, 1 065 B · `1c49d485d539`):
+  answers **only** from the supplied course corpus, **with citations**, and **refuses** when the
+  corpus does not cover the question. 🟢 That refusal is the property a self-classification
+  dossier can actually point at.
+- **Institutional rules as an auditable artefact** —
+  [`Andiii208/seu-handbook-skill`](https://github.com/Andiii208/seu-handbook-skill) (MIT, 1 497 B ·
+  `965a0edb5701`): the regulation split **per clause with provenance**, so a determination cites
+  the rule it applied.
+- **Scoring evidence** — [`ai4bharat/indicifeval`](https://github.com/ai4bharat/indicifeval) (MIT)
+  for Indic languages; `ai4bharat/anudesh-backend` (MIT) if instruction data must be collected.
+- **LMS write-back** — [`bartmassey-upstream/canvas-mcp`](https://github.com/bartmassey-upstream/canvas-mcp)
+  (MIT, 1 071 B · `5385a26e2fac`), [`bibo242/blackboard-mcp`](https://github.com/bibo242/blackboard-mcp)
+  (MIT, 1 084 B · `d65abf96e389`), and
+  [`anonymousonyx22/canvas-lms-student-mcp`](https://github.com/anonymousonyx22/canvas-lms-student-mcp)
+  (MIT) for the student-scoped read side. 🔴 **All three were evicted from every sell shelf and are
+  recovered this pass** — the whole LMS-connector tier had gone missing.
+- **Data residency** — [`rasidi3112/pondok-ai`](https://github.com/rasidi3112/pondok-ai) (MIT,
+  1 079 B · `c3dc4b0503f8`): one command stands up Ollama + Open WebUI + RAG + Qdrant +
+  OpenAI-compatible API for a whole room, on hardware that never leaves the building.
+
+**12–14 weeks**, and the risk-tier dossier is a deliverable, not a by-product.
+
+### 🟢 `Pattern AZ` — LATAM: integrate over an interface, never vendor, never fork the student tier
+
+**The shape of the demand, measured:** **92 %** of students and **79 %** of faculty engaged, but
+only **19 %** of faculty use AI for assignment feedback while **half of students want it**, and
+**61 %** of students fear peer misuse (DEC LATAM 2026, 30 000+ responses, 29 institutions).
+🔴 **So the sellable thing is assessment feedback with an audit trail, not another tutor.**
+
+**The hard constraint this pass measured:** the Brazilian ENEM/vestibular OSS tier is **6 of 6
+ungranted** at 0–1★ — there is nothing there to fork, whatever it looks like.
+
+**Wiring:**
+
+- **Integration boundary** — `mcp-brasil/mcp-brasil` and `p443`'s `siu-guarani-mcp` (Argentine SIU
+  Guaraní) as MCP servers in front of the institutional systems of record. 🔵 Every LATAM
+  platform holding student records is copyleft (GPL-2.0/GPL-3.0/AGPL-3.0, **0 of 4** permissive),
+  so the interface *is* the architecture.
+- **LMS** — `bmosoluciones/now-lms` where a platform is needed at all.
+- **Feedback core** — [`lowwwbank/anything-to-course`](https://github.com/lowwwbank/anything-to-course)
+  (MIT, 1 066 B · `d41346e796d6`, **recovered this pass**) for material → practice, plus
+  [`Aisland-SJL/Aisland-teach`](https://github.com/Aisland-SJL/Aisland-teach) (MIT) whose
+  restatement check is an integrity answer rather than a detector.
+- 🔴 **Do not** build on any address in the LATAM gap table. They are listed so nobody re-finds
+  them, not so anybody ships them.
+
+**6–8 weeks** to a faculty-facing feedback pilot at one institution.
+
+### 🟢 `Pattern BA` — Curriculum-to-course pipeline, entirely permissive, entirely new this pass
+
+🔵 Four rows this pass shelved compose into one pipeline with no copyleft anywhere in it:
+
+1. **Curriculum structure** — [`seehiong/eduvis`](https://github.com/seehiong/eduvis)
+   (Apache-2.0, 9 831 B · `898c5a5080eb`): a curriculum-aware IR with a schema validator and a
+   reference SVG renderer. Pedagogical meaning separated from presentation, so the structure is
+   reviewable by a subject expert who does not read code.
+2. **Sequencing** — `withmarbleapp/os-taxonomy` (carried; 🔴 **ODbL + CC BY-SA 4.0 content** per
+   `p442` — a share-alike **content** obligation, so use it to *order* topics, do not redistribute
+   the graph inside a proprietary deliverable).
+3. **Course generation** — [`lowwwbank/anything-to-course`](https://github.com/lowwwbank/anything-to-course)
+   (MIT): material → retrieval practice + spaced repetition + tutor mode, as an agent skill.
+4. **Verification** — [`Aisland-SJL/Aisland-teach`](https://github.com/Aisland-SJL/Aisland-teach)
+   (MIT, 1 099 B · `f46f29be1b28`): teaches from the learner's level, then verifies by
+   **restatement**. 🔵 Declares its derivation from Matt Pocock's `teach` (MIT) in its README —
+   read the README for provenance on every skill-tier row, per `Gap 463-E`.
+5. **Delivery, offline** — Kolibri (**MIT** — the only freely redistributable platform row) or
+   [`rasidi3112/pondok-ai`](https://github.com/rasidi3112/pondok-ai) (MIT) for a LAN-local stack.
+
+🟢 **Why this one is worth naming:** every component is MIT or Apache-2.0, so the whole pipeline
+can be vendored into a client deliverable without a boundary argument — which is **not** true of
+any pattern on this file that touches Moodle, Open edX, ERPNext or OpenEduCat. **4–6 weeks.**
+
 ## 🆕 `p462` — **No new pattern is added, because no new component was found: the prescribed channel returned 36 tokens and 34 are already wired into the recipes below. 🟢 What changes is that two recipe components are re-pointed to their canonical addresses and one component pair is SPLIT — a recipe that cites `instructional_agents` must now say WHICH one.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**

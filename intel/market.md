@@ -4,6 +4,191 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` — **🔴 The education-AI compliance calendar SPLIT by region in 2026, and that divergence — not market size — is what a multi-region programme has to carry: EMEA's Annex III duty postponed to 2027-12-02 while Vietnam brought an explicitly education-naming high-risk regime into force on 2026-03-01. 🟢 LATAM's 92 %-adoption / 19 %-faculty-feedback split is the clearest opportunity shape on this file; its open-source student tier is measured at 6-of-6 UNGRANTED. 🔴 MEA returned nothing on any leg and that is declared, not hidden.**
+
+### 🔴 The LATAM discovery leg — an informed gap, typed by measurement rather than left silent
+
+🔵 Three LATAM legs were run. Two returned nothing and the third returned a tier that cannot be
+shipped. **All three are written down, because a silent region looks exactly like a covered one.**
+
+| leg | result |
+|---|---|
+| `SIGAA OR SIU-Guarani OR SIAGIE OR SIMAT ... IA` (combined platform names) | 🔴 **0 results.** 🔵 Instrumentation note: `p443` bought a whole tier from these same words **entered one at a time**. The combined/`OR` form returns nothing — the form, not the vocabulary, is what failed |
+| `educación IA estudiantes profesores created:>2025-09-01 stars:>5` (Spanish, recency-bounded) | 🔴 **0 results** — and this is the fourth pass to confirm `p4xx`'s conclusion that **the language is the wrong variable** |
+| `ENEM estudo questoes IA` (Portuguese, Brazilian exam name) | 🟡 **7 real addresses** — and every one unusable, below |
+
+🔴 **The Brazilian ENEM / vestibular study-tool tier EXISTS and is UNGRANTED. Six of six probed
+carry no licence payload at all:**
+
+| address | ★ | HEAD | grant |
+|---|---|---|---|
+| [`italodsz/Gabaritei---PI-VI`](https://github.com/italodsz/Gabaritei---PI-VI) | 0 | `bc77b0aedd9b` | 🔴 none — INEP official data + IRT-style recommendation, and no grant to use it |
+| [`bielwzn/IA-para-estudos`](https://github.com/bielwzn/IA-para-estudos) | 0 | `5bb3e76f838a` | 🔴 none |
+| [`miguelmoraes-tech/Plataforma-de-estudo`](https://github.com/miguelmoraes-tech/Plataforma-de-estudo) | 0 | `cee5ec3106d1` | 🔴 none |
+| [`ProjetoVestIA/VestIA_Back-end`](https://github.com/ProjetoVestIA/VestIA_Back-end) | 0 | `7fca106f236e` | 🔴 none |
+| [`67ESTUDAI/ESTUDAI`](https://github.com/67ESTUDAI/ESTUDAI) | 0 | `1f6927e1d716` | 🔴 none |
+| [`PietroLearnAndMake/OrganiStuda-`](https://github.com/PietroLearnAndMake/OrganiStuda-) | 1 | `562940369611` | 🔴 none |
+
+🟢 **"Ungranted and at zero stars" is a different statement from "nothing found", and it carries a
+different instruction.** The addresses are listed so the next pass does not re-spend the
+vocabulary discovering them again, and **none is shelved**: a studio cannot build on any of them.
+
+🟢 **So the buildable LATAM layer is not the student-facing tier — it is the integration tier**,
+and this pass's eviction audit shows that tier is **still carried**: `mcp-brasil/mcp-brasil` and
+`bmosoluciones/now-lms` are among the **16 MOVED** addresses, live on `repos/foundations.md` /
+`verticals/solutions.md`, alongside `p443`'s `siu-guarani-mcp`. 🔴 The structural read is
+unchanged and now has a second kind of evidence behind it: **in LATAM, integrate over an
+interface; never vendor the platform, and never fork the student tier.**
+
+🟡 **Market sizing is refused as a point value for the third consecutive pass, and this pass's
+legs widened the spread rather than narrowing it.** Returned this hour: **USD 3.68 B** (2026,
+North America share of a $32 B-by-2030 series), **~USD 6 B** (2024) → **USD 32 B** (2030), and
+**USD 12.3 B** (2026) — a **~3.3×** disagreement between aggregators on the same year.
+🔵 Consistent with `p461`'s ~1.7× finding and `p456`'s refusal: **sizing cannot carry an
+engagement argument here. The regulatory calendar can, and below it does.**
+
+🔴 **One figure this pass's North America leg returned is REFUSED ON SIGHT because this base
+already retired it:** *"134 bills across 31 states"*. `p455` retired it as one tracker's count
+that three others disagree with by **2.6×**. 🟢 It came back from a different aggregator this
+hour and is **still not promoted** — a retired figure returning through a new source is not new
+evidence.
+
+## Opportunities by region
+
+### North America
+
+🔵 **Regulatory shape: no federal floor, fifty state clocks** — unchanged, and the federal layer
+moved a step this year.
+
+| signal | detail |
+|---|---|
+| 🟡 Federal, in committee | **K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747)** — advanced at a House Education and Workforce markup, **2026-07-21**. 🔴 Committee passage is not law; recorded as a clock, not a duty |
+| 🟢 Student-data law | **California AB 1159** — bars using student data to train AI models |
+| 🟢 Human-oversight law | **Oklahoma** and **Maryland** — require human oversight and bar AI from sole high-stakes decisions about students |
+| 🔵 District-level practice | **Katy ISD** phases supervised access from grade 7; **Charleston County** bars AI as sole basis for discipline, placement or special-education determinations |
+| 🟡 Non-governmental | **STUDENTS FIRST Act of 2026**, a student-written framework (Day of AI / AASA) — would bar AI-generated written and artistic assignments at every grade. Not law |
+| 🔵 Canada | **"AI for All"** strategy, **2026-06-04** — national AI-literacy commitment, 🔴 no AI statute |
+| 🔵 Mexico | bills stacked, 🔴 no regulator to enforce them |
+
+🟢 **One hard survey figure, and it is the only adoption number this pass promotes anywhere:**
+**60 %** of U.S. K-12 teachers used AI tools during the 2024-25 school year and **32 %** used them
+at least weekly.
+
+🟢 **Where the work is.** "Sole basis" and "human oversight" clauses are *architecture
+requirements*, not policy text: they demand a recorded human decision point and a reason string
+per determination. 🔴 **This pass recovered the component that argument needs and that this base
+had silently dropped:** [`pytorch/opacus`](https://github.com/pytorch/opacus) (Apache-2.0,
+10 241 B · `bcf6964d43d8`) for training that cannot memorise a student, beside the carried
+`CAHLR/OATutor` (MIT) for auditable Bayesian knowledge tracing. Recipe: `Pattern AX`.
+
+### EMEA
+
+🟢 **`p461`'s date is REPRODUCED from an independent leg this hour**, which matters because the
+two deadline stories circulating are a year apart:
+
+| instrument | date | status |
+|---|---|---|
+| 🟢 **Digital Omnibus, Regulation (EU) 2026/1744** — OJ **2026-07-24** | stand-alone **Annex III** high-risk (education access & assessment) → **2027-12-02**; AI embedded in regulated products → **2028-08-02** | 🟢 **reproduced, two independent legs, two passes** |
+| 🔴 the superseded reading | "high-risk applies from **2026-08**" | 🔴 **refused** — it is the pre-Omnibus date and still in circulation |
+| 🟡 Commission timeline | Omnibus entry into force **2026-07-27** | 🟡 relayed; sources disagree with the OJ date by three days and nothing turns on it |
+
+🔵 Education sits in **Annex III**: admissions, student evaluation and exam scoring are
+**high-risk**, and the Act reaches non-EU systems whose outputs affect EU students.
+Non-binding context: UNESCO's generative-AI guidance for education; UK **principles-based** (AI
+Opportunities Action Plan, Jan 2025); Germany's **€20 bn** AI commitment 2025-2030.
+
+🔴 **`Gap 456-D` stays OPEN** — still no sourceable EMEA *institution-level* adoption rate; the
+nearest offers remain workforce figures (~30 % of EU teachers trained, ~19.95 % EU enterprise
+adoption), which are not it.
+
+🔴 **A COVERAGE GAP THIS PASS DECLARES RATHER THAN HIDES: the Middle East and Africa returned
+NOTHING.** Every EMEA leg resolved to EU-27 plus the UK and Germany. MEA is **one third of the
+region's name and zero of its evidence here** — and that is a statement about this base's
+sampling, not about MEA. 🟢 The one thing this pass can offer against it is supply, not
+intelligence: [`kevindegila/construire-un-llm-de-zero`](https://github.com/kevindegila/construire-un-llm-de-zero)
+(Apache-2.0) is a **francophone** curriculum, and francophone Africa is the largest education
+market this base has never sampled. Registered as `Gap 463-D`.
+
+🟢 **Where the work is.** **13 months** to 2027-12-02 is a build runway, not a scramble, and the
+deliverable is an Annex III conformity posture: `pytorch/opacus` for the privacy control, an
+Open edX **XBlock** (Apache-2.0) as the seam over an AGPL platform, and a recorded human decision
+point at every scoring step. Recipe: `Pattern AX`.
+
+### APAC
+
+🔴 **APAC is the region where education-AI duties are LIVE NOW, and it is the inverse of EMEA's
+calendar.**
+
+| jurisdiction | instrument | education-specific? |
+|---|---|---|
+| 🔴 **Vietnam** | AI law effective **2026-03-01**; a **July 2026** decision names six high-risk sectors **including education**, citing **automated assessment** and **behavioural monitoring**; providers must self-classify into three risk tiers before deployment | 🟢 **yes, explicitly — the most education-specific binding instrument in this base** |
+| 🟡 **South Korea** | **AI Basic Act** in force **2026-01-22**; regulator signalled 2026 as a pilot year with a **one-year grace period** on penalties | 🔵 general |
+| 🔴 **China** | mandatory registration, content-labelling duties, penalties to **¥50 M** | 🔵 general, strictest |
+| 🟡 **Japan** | AI Promotion Act — principles, **no penalties** | 🔵 general |
+| 🟡 **Singapore** | agentic-AI framework — **guidance, not law** | 🔵 general |
+| 🔵 **Taiwan** | AI Basic Act, **Dec 2025** | 🔵 general |
+
+🔴 **A named figure is refused.** A commercial report names Google, Microsoft, IBM, Pearson and
+Byju's as key APAC players and asserts China/India/Japan dominance. Vendor-report assertion with
+no method — **relayed, not promoted**.
+
+🟢 **Where the work is, and APAC is where this pass's supply actually landed: 9 of the 12 novel
+rows are APAC-placed with a first-hand basis.** Vietnam's automated-assessment rule asks for a
+system that can show what an answer rested on — which is exactly
+[`Queena34/StudyPilot`](https://github.com/Queena34/StudyPilot)'s stated constraint (answers only
+from the supplied corpus, with citations, and an explicit refusal when the corpus does not cover
+it). Add [`ai4bharat/indicifeval`](https://github.com/ai4bharat/indicifeval) (MIT, recovered from
+eviction) for Indic-language evaluation, and
+[`rasidi3112/pondok-ai`](https://github.com/rasidi3112/pondok-ai) (MIT) where student data cannot
+leave the premises. Recipe: `Pattern AY`.
+
+### LATAM
+
+🟢 **Adoption is the highest this base has recorded anywhere; governance is the lowest. Both
+numbers come from the same hour's legs.**
+
+| signal | figure | source posture |
+|---|---|---|
+| 🟢 Student engagement | **92 %** | Digital Education Council LATAM survey 2026 — **30 000+** responses, **29** institutions. 🟡 Self-run survey, self-selected respondents: relayed with its method stated |
+| 🟢 Faculty engagement | **79 %** | same |
+| 🟢 Faculty sentiment | **72 %** positive vs **57 %** globally | same — 🔵 LATAM faculty are *more* AI-positive than their global peers |
+| 🔴 The gap that is the opportunity | only **19 %** of faculty use AI for assignment feedback, though **half of students support it** | same |
+| 🔴 Integrity anxiety | **61 %** of students fear peer misuse | same |
+| 🔴 Governance | adoption widespread, **governance lags** | UNESCO IESALC study, Digital Learning Week 2026 |
+
+🔴 **No binding education-AI instrument in any LATAM jurisdiction surfaced on any leg.** Stated as
+a finding: the region's constraint is **not** regulatory latency, it is that **demand has arrived
+before governance**, which is the opposite of EMEA's problem.
+
+🟢 **Where the work is, and it follows directly from the 92 %/19 % split.** Students have adopted;
+faculty have not adopted the *feedback* workflow they would most benefit from, and integrity
+anxiety is the stated blocker. The sellable engagement is **assessment-feedback with an audit
+trail** — not a tutor. 🔴 **And it must be built on the integration tier, because this pass
+measured the student-facing OSS tier at 6-of-6 ungranted** (see the LATAM gap above):
+`mcp-brasil/mcp-brasil`, `bmosoluciones/now-lms` and `p443`'s `siu-guarani-mcp` behind an MCP
+boundary. Recipe: `Pattern AZ`.
+
+### Global
+
+🔵 **The cross-region structure this pass can state, which no single region shows:**
+
+1. 🔴 **The compliance calendar SPLIT by region in 2026.** EMEA postponed its education high-risk
+   duty to **2027-12-02** while Vietnam, Korea, China and Taiwan brought general or
+   education-specific duties **into force**. A multi-region programme can no longer carry one
+   compliance posture: **an engagement in Hanoi has a live duty, one in Frankfurt has 13 months.**
+   That divergence is the single most engagement-relevant fact on this file.
+2. 🟢 **Evidence, not capability, is the binding constraint everywhere.** Buyers in every region
+   now ask for proof of learning gain, and 🔴 **the open-source supply still has almost nothing to
+   offer them**: of this pass's 12 novel rows, exactly **one**
+   ([`ai4bharat/indicifeval`](https://github.com/ai4bharat/indicifeval), recovered rather than
+   discovered) is an evaluation harness. The efficacy-evaluation gap stands.
+3. 🟢 **The platform layer is copyleft almost end to end** (`p462`, unchanged): of ten carried
+   platforms exactly one — **Kolibri**, MIT — is freely redistributable. Build on extension
+   seams; keep proprietary work across the process boundary.
+4. 🔵 **The supply is recency-shaped.** 13 of this pass's 17 discovered addresses were created
+   within five months, and **7 of 13 ship as an agent *skill*** rather than an application. The
+   packaging format of education AI changed this year.
+
 ## 🆕 `p462` · 2026-10-26 — **🔴 THE PRESCRIBED REGION LEGS ARE GRADED A NINTH TIME AND IT IS AGAIN A NIL WITH A FULL DENOMINATOR: four regional legs, ten named regulatory and adoption facts, TEN of them already on this file. 🟢 The canonical region block is therefore amended NOWHERE — and one `p461` finding is independently REPRODUCED off a different source set.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**
@@ -77,7 +262,7 @@ Precedence (9.58 B), Research & Markets (10.6 B) and a HolonIQ figure (12.3 B) �
 between vendors. 🔵 A spread that wide is itself the finding: it means sizing cannot carry an
 engagement argument, and the **regulatory calendar** below can.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p463` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -915,7 +1100,7 @@ integration layer. 🔴 **"LATAM" as one market is a reporting bucket**, exactly
 point — Brazil/Argentina/Colombia are *compose* markets, Mexico/Chile/Peru are *build* markets
 (`p446` retired Peru as a buying channel on four channels of nils).
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p463` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 

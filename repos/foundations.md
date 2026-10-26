@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` — **🟢 Four foundation rows added, every grant permissive and read first-hand (Apache-2.0 ×2, MIT ×2), and the discovery nil four passes published is shown to be an artifact of the CHANNEL: a `created:>` bound returned 13 unshelved addresses where the prescribed legs returned 0. 🔴 And `pytorch/opacus` — the only differential-privacy component this base has ever carried — is recovered from a silent eviction that no gate here would have caught.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN.** The harness
+permission classifier **refused the invocation outright** (`Code from External`) — the same
+refusal `p462` recorded, not a proxy failure and not a missing target. **Nothing below is
+gate-attested**, and the gate's inability to run remains the standing obstacle: `Gap 446-A`
+cannot be closed by a pass that is not permitted to run the gate.
+
+🔵 **Instrument, and one channel the prescribed probe cannot replace.** Two channels, both
+first-hand: `git ls-remote <addr> HEAD` (**tree identity**) and `raw.githubusercontent.com`
+(**payload bytes**). 🔴 **The `curl -sI https://github.com/<addr>` check this base is instructed
+to use is unusable from this host: it returns `403` for every address, live or withdrawn** —
+`openedx/edx-platform` and a non-existent slug are indistinguishable through it. A probe that
+returns the same code for a 200 and a 404 is not a verification step, and no row below rests on
+it. This reproduces `p450`'s replacement of that probe from an independent direction.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p462` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+🟢 `p462`'s rule — *a byte-identical licence payload is near-zero evidence of repository
+identity* — is **independently confirmed on a new pair this pass found**:
+[`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) serves the **same** AGPL-3.0
+payload as `Vacademy-io/vacademy_platform` (34 523 B · `0d96a4ff68ad`) at a **different** HEAD
+(`683b3e5e8cfa` ≠ `3a9c66db938c`). Two unrelated projects, one stock text.
+
+### 🟢 The saturation nil is an artifact of the DISCOVERY SLICE, not of supply — and the variable is RECENCY
+
+🔴 Four consecutive passes (`p459`–`p462`) graded the prescribed channel and published the same
+verdict: *usable novel repository yield ZERO*. 🟢 **That verdict is correct about the channel and
+wrong about the supply.** Both legs were run this pass, side by side:
+
+| channel | addresses returned | absent from the ENTIRE base | granted | permissive |
+|---|---|---|---|---|
+| 🔴 the prescribed web-search legs (4 global + 4 regional) | ~30 repo-shaped tokens | 🔴 **0** | — | — |
+| 🟢 GitHub repository-search API, `created:>` × `stars:>` slice | **17** | 🟢 **13** | 🟢 **11** | 🟢 **10** |
+
+🔴 **Every repo-shaped token the web legs returned falls into one of three already-known
+buckets**, which is why they grade nil: a general-purpose agent (OpenHands, CrewAI, `opencode`,
+OpenClaw — not education supply), an already-carried vertical platform (OpenEduCat, Open edX,
+ERPNext/`frappe`, Moodle, Kolibri, RosarioSIS, Dolibarr, Fedena), or an already-carried education
+repository (`withmarbleapp/os-taxonomy`).
+
+🟢 **One of those requires a correction to how a nil gets read.** The vertical leg returned
+**openSIS**, and a slug-shaped guess (`openSIS-Classic/OpenSIS-Classic`) is `grep`-absent from
+this base — which looks like a discovery. It is not: the platform is carried under its real
+address [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic), on **3** sell
+shelves. 🔴 **A novelty check keyed on a guessed slug manufactures false positives**; the check
+must be keyed on the address the probe resolves.
+
+🟢 **And the probe returned a free identity reading while confirming it:**
+`OS4ED/openSIS-Classic` and `OS4ED/openSIS-Responsive-Design` both resolve to HEAD
+**`8348cd069aa2`** — the same tree under two names. 🟡 Graded honestly, same-HEAD is **alias *or*
+undiverged fork** and this pass does not claim which; per `p462` the payload cannot settle it
+either (both serve no root grant at all). Registered as `Gap 463-C`.
+
+🔵 **The variable that bought the 13, stated so the next pass can reuse it.** Not vocabulary —
+`p453`'s vocabulary-spend ledger already shows vocabulary exhausted, and this pass's Spanish and
+platform-name legs returned **0** and **0**. The variable is **`created:>2026-06-01`**. The
+education supply is being written *now*, faster than the shelves sample it, and a star-ranked
+query without a date bound returns the same incumbents every hour. **A date bound is the cheapest
+discovery instrument this base has.**
+
+### 🟢 Novel foundation rows — 4, each grant read first-hand this hour
+
+🔵 `p443`'s split applies: these are **integration surface** — a schema and compiler, a
+curriculum, a deployable stack, a teaching artefact — not agents. The agent-addressable half of
+this pass's harvest is on [`agents/top.md`](../agents/top.md) `p463`.
+
+| repository | grant · payload · `sha256₁₂` | HEAD | ★ | region · basis | why it is a foundation |
+|---|---|---|---|---|---|
+| [`kevindegila/construire-un-llm-de-zero`](https://github.com/kevindegila/construire-un-llm-de-zero) | 🟢 **Apache-2.0** · `LICENSE` 11 344 B · `3ac10e0c7f91` | `bc15ffd6d9c0` | 46 | **EMEA** · francophone, `llmdezero.com` | 22-chapter from-scratch LLM curriculum **in French**, tensors → agents, as runnable notebooks. 🟢 **The only non-English-language curriculum foundation this base carries**, and francophone EMEA/Africa is precisely where `Gap 456-D`'s coverage is thinnest |
+| [`romanticamaj/promptasy`](https://github.com/romanticamaj/promptasy) | 🟢 **MIT** · `LICENSE` 1 226 B · `677fe7e31abe` | `fd8eabe431a6` | 43 | **APAC** · 繁體中文 + author site | prompt-engineering taught as a browser game, **each technique cited to its OpenAI / Anthropic / Google / xAI source** — a citable curriculum, not a vibe |
+| [`rasidi3112/pondok-ai`](https://github.com/rasidi3112/pondok-ai) | 🟢 **MIT** · `LICENSE` 1 079 B · `c3dc4b0503f8` | `05fcd0dcdc01` | 37 | **APAC** · Indonesia | 🟢 one command stands up a **whole-classroom on-prem** stack — Ollama + Open WebUI + RAG + Qdrant + an OpenAI-compatible API, sized to the hardware, shared to phones on the LAN. **The data-residency answer for any jurisdiction where student data cannot leave the building** |
+| [`seehiong/eduvis`](https://github.com/seehiong/eduvis) | 🟢 **Apache-2.0** · `LICENSE` 9 831 B · `898c5a5080eb` | `ed82a1870b6e` | 28 | 🟡 Global · author signal only, **weak** — not placed on it | a curriculum-aware **intermediate representation**: schema, validator, compiler pipeline and reference SVG renderer, separating pedagogical structure from rendering |
+
+🟡 **One placement is deliberately withheld.** `seehiong/eduvis` has an author/host signal that
+points APAC and **no first-hand national or institutional claim anywhere in the repository**.
+Per this base's own closed-vocabulary rule it is recorded **Global** rather than placed on a
+guess — a wrong placement is worse than an unplaced row, and `region` is a filter, not a hint.
+
+### 🔴 Ten permissive foundation-tier addresses were EVICTED and are recovered here
+
+🔵 The eviction audit is on this pass's section of [`agents/top.md`](../agents/top.md) in full.
+The one row this file must not lose again:
+[`pytorch/opacus`](https://github.com/pytorch/opacus) — **Apache-2.0 · 10 241 B ·
+`bcf6964d43d8` · HEAD `df040e4a1594`** — is the **only differential-privacy component this base
+has ever carried**, it was dropped from every sell shelf between `p406` and `p462` with no
+recorded reason, and it is the exact control an EMEA high-risk education deployment is asked for.
+🟢 `meta-pytorch/opacus` resolves to the **same HEAD**: one project, two addresses, cite one.
+
+### 🔵 Gap register opened by this pass
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🔴 **`Gap 463-A`** | The sell shelves have **no eviction ledger**. 21 projects left every sell shelf between `p406` and `p462` with no row, no reason and no gate; every existing gate measures arrival. | Write `evidence/evictions.<date>-p<N>.tsv` from the `Pattern AW` diff, and add a gate that fails when an address on the previous commit's sell shelves is absent from this one **without a reason cell**. |
+| 🔴 **`Gap 463-B`** | A novelty check keyed on a **guessed slug** manufactures false positives — `openSIS` read as uncarried when `OS4ED/openSIS-Classic` sits on 3 shelves. | Resolve the product name to an address through the probe **before** the `grep`, and key the check on the resolved address. |
+| 🟡 **`Gap 463-C`** | `OS4ED/openSIS-Classic` and `OS4ED/openSIS-Responsive-Design` share HEAD `8348cd069aa2`. Alias or undiverged fork is **unsettled**, and neither serves a root grant so the payload channel cannot settle it. | Run `gate-fork-direction`'s full-history channel on the pair. |
+| 🔴 **`Gap 463-D`** | **The Middle East and Africa returned nothing on any EMEA leg** — EMEA's evidence here is EU-27 + UK + Germany only. | Run legs keyed on named national systems (as `p443` did for LATAM) rather than on the region word: Gulf ministry platforms, Nigerian and Kenyan HE systems, francophone African curricula. |
+| 🟡 **`Gap 463-E`** | Skill-tier supply (**7 of 13** novel addresses) carries **derivation chains stated only in the README**. A `LICENSE` read grades such a row clean while saying nothing about what it was built from. | Make `p288`'s README channel standing for the skill tier: every skill-tier row records a provenance cell (declared upstream + its grant) or `PROVENANCE-UNSTATED`. |
+| 🔴 **`Gap 446-A`** | **Still open, and still not closable by this pass.** `make hooks` was refused (`Code from External`); nothing in this pass is gate-attested. | Needs a harness permission decision, not a pass. |
+
 ## 🆕 `p462` — **No foundation row is added; the prescribed vertical-platform leg returned only carried addresses. 🟢 What changes is a GRANT and an ADDRESS: `openeducat/openeducat_erp` is `NOASSERTION` in the index and serves an explicit LGPL-3.0 payload at a default ref of `19.0`, and two carried addresses are confirmed rename aliases by HEAD sha while a third is confirmed NOT to be one.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**

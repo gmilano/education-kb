@@ -1,0 +1,25 @@
+# p463-verified-repos — the recency-bounded discovery slice (created:> x stars:>), GitHub repository-search API.
+# Grant read first-hand at raw.githubusercontent.com; identity by git ls-remote HEAD.  stars = point reading this hour.
+# region: closed vocabulary (North America|EMEA|APAC|LATAM|Global).  basis = the first-hand evidence the placement rests on.
+slug	stars	created	head12	grant_path	bytes	sha256_12	family	region	basis	shelf
+ERRRC/kaogong-shuati	122	2026-08-29	12cf8e73be8f	main/LICENSE	1062	449d0e5f8c86	MIT	APAC	cn-civil-service-exam-gongkao	agents/top.md
+Andiii208/seu-handbook-skill	52	2026-10-05	38f5000aa444	main/LICENSE	1497	965a0edb5701	MIT	APAC	southeast-university-cn	agents/top.md
+Queena34/StudyPilot	50	2026-08-25	abe229cb120b	main/LICENSE	1065	1c49d485d539	MIT	APAC	zh-hans-readme	agents/top.md
+ryannli/immersive-reading	48	2026-06-30	efce3dc24138	main/LICENSE	1063	db7ff5821c21	MIT	Global	no-placement-signal	agents/top.md
+callmevanshh/campusask	41	2026-10-05	7cb9e1c32190	main/LICENSE	1067	0b3e2dc7fa93	MIT	APAC	iiit-delhi-india	agents/top.md
+2362094903-ops/study-assistant-skills	27	2026-06-11	3f555b845ac1	main/LICENSE	1062	d4b1c51084cb	MIT	APAC	zh-kaoyan	agents/top.md
+mantou6666/Math-Modeling-Agent-Flow	26	2026-08-19	69b2a4f15995	main/LICENSE	1067	b66691d6d740	MIT	APAC	cumcm-mcm-icm	agents/top.md
+Aisland-SJL/Aisland-teach	16	2026-08-31	e11b8fc33344	main/LICENSE	1099	f46f29be1b28	MIT	APAC	bilingual-en-zh-hans	agents/top.md
+kevindegila/construire-un-llm-de-zero	46	2026-06-21	bc15ffd6d9c0	main/LICENSE	11344	3ac10e0c7f91	Apache-2.0	EMEA	francophone-llmdezero.com	repos/foundations.md
+romanticamaj/promptasy	43	2026-07-30	fd8eabe431a6	main/LICENSE	1226	677fe7e31abe	MIT	APAC	zh-hant-author-site	repos/foundations.md
+rasidi3112/pondok-ai	37	2026-10-08	05fcd0dcdc01	main/LICENSE	1079	c3dc4b0503f8	MIT	APAC	indonesia-topic-and-readme	repos/foundations.md
+seehiong/eduvis	28	2026-06-13	ed82a1870b6e	main/LICENSE	9831	898c5a5080eb	Apache-2.0	Global	placement-withheld-author-signal-only	repos/foundations.md
+Frisher1/ClaudeCode-Workflow-Lab	117	2026-06-28	415cca9127eb	-	-	-	NONE	Global	no-placement-signal	REFUSED:no-grant-payload
+Ciucky/no-numb	32	2026-06-18	891d93f87974	-	-	-	NONE	Global	no-placement-signal	REFUSED:no-grant-payload
+sitor-ai/frametell	407	2026-10-10	683b3e5e8cfa	main/LICENSE	34523	0d96a4ff68ad	AGPL-3.0	Global	carried-since-p445	REFUSED:network-copyleft-and-not-novel
+italodsz/Gabaritei---PI-VI	0	2026-10-05	bc77b0aedd9b	-	-	-	NONE	LATAM	brazil-enem-inep	REFUSED:no-grant-payload
+bielwzn/IA-para-estudos	0	2026-08-11	5bb3e76f838a	-	-	-	NONE	LATAM	brazil-enem-pt-br	REFUSED:no-grant-payload
+miguelmoraes-tech/Plataforma-de-estudo	0	2026-07-27	cee5ec3106d1	-	-	-	NONE	LATAM	brazil-enem-pt-br	REFUSED:no-grant-payload
+ProjetoVestIA/VestIA_Back-end	0	2025-10-02	7fca106f236e	-	-	-	NONE	LATAM	brazil-vestibular-fuvest	REFUSED:no-grant-payload
+67ESTUDAI/ESTUDAI	0	2026-08-13	1f6927e1d716	-	-	-	NONE	LATAM	brazil-ensino-medio	REFUSED:no-grant-payload
+PietroLearnAndMake/OrganiStuda-	1	2026-03-05	562940369611	-	-	-	NONE	LATAM	brazil-enem-pt-br	REFUSED:no-grant-payload

@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` — **🔴 The prescribed vertical leg is a nil for the sixth consecutive pass: nine platform tokens, nine already carried. 🟢 What it bought instead is a reusable rule about NOVELTY CHECKS — `openSIS` read as uncarried only because the check was keyed on a GUESSED slug, while `OS4ED/openSIS-Classic` sits on three shelves — plus one unsettled same-HEAD pair that this pass deliberately does NOT call an alias.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN.** The harness
+permission classifier **refused the invocation outright** (`Code from External`) — the same
+refusal `p462` recorded, not a proxy failure and not a missing target. **Nothing below is
+gate-attested**, and the gate's inability to run remains the standing obstacle: `Gap 446-A`
+cannot be closed by a pass that is not permitted to run the gate.
+
+🔵 **Instrument, and one channel the prescribed probe cannot replace.** Two channels, both
+first-hand: `git ls-remote <addr> HEAD` (**tree identity**) and `raw.githubusercontent.com`
+(**payload bytes**). 🔴 **The `curl -sI https://github.com/<addr>` check this base is instructed
+to use is unusable from this host: it returns `403` for every address, live or withdrawn** —
+`openedx/edx-platform` and a non-existent slug are indistinguishable through it. A probe that
+returns the same code for a 200 and a 404 is not a verification step, and no row below rests on
+it. This reproduces `p450`'s replacement of that probe from an independent direction.
+
+### 🟢 Cross-pass controls — reproduced before any verdict
+
+| control | published by `p462` | this pass read | verdict |
+|---|---|---|---|
+| 🟢 `openedx/edx-platform` `LICENSE` | AGPL-3.0 · 35 136 B · `e12d78569742` · HEAD `addd09d7801b` | **35 136 B · `e12d78569742`** · HEAD **`addd09d7801b`** | 🟢 **reproduced, byte-, digest- and HEAD-identical** |
+| 🟢 `Vacademy-io/vacademy_platform` `LICENSE` | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` · HEAD `3a9c66db938c` | **34 523 B · `0d96a4ff68ad`** · HEAD **`3a9c66db938c`** | 🟢 **reproduced** |
+| 🟢 `DaRL-GenAI/instructional_agents` `LICENSE` | MIT · 1 067 B · `4e085d826a64` · HEAD `f835eb45f508` | **1 067 B · `4e085d826a64`** · HEAD **`f835eb45f508`** | 🟢 **reproduced** |
+
+🟢 `p462`'s rule — *a byte-identical licence payload is near-zero evidence of repository
+identity* — is **independently confirmed on a new pair this pass found**:
+[`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) serves the **same** AGPL-3.0
+payload as `Vacademy-io/vacademy_platform` (34 523 B · `0d96a4ff68ad`) at a **different** HEAD
+(`683b3e5e8cfa` ≠ `3a9c66db938c`). Two unrelated projects, one stock text.
+
+### 🔴 The prescribed vertical leg is a nil for the sixth pass — and it produced one address correction
+
+The leg `open source platform education ERP CRM SIS MIT Apache` returned nine platform tokens.
+🔴 **All nine are carried**, and the licence frontier `p462` measured is unchanged:
+
+| platform token | shelf state | grant as this base understands it |
+|---|---|---|
+| **OpenEduCat** · `openeducat/openeducat_erp` | 🔴 carried | **LGPL-3.0**, payload-read at `19.0`; index says `NOASSERTION` |
+| **Open edX** · `openedx/openedx-platform` | 🔴 carried | **AGPL-3.0** · 35 136 B · `e12d78569742` — seam is an **XBlock** (Apache-2.0) |
+| **ERPNext** · `frappe/erpnext` | 🔴 carried | GPL-3.0 |
+| **Frappe Education** · `frappe/education` | 🔴 carried | 🔵 and **moved** — see the eviction audit; it left `agents/top.md` and lives on `repos/foundations.md` |
+| **openSIS** · [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 carried on **3** sell shelves | 🔴 **no root grant payload** served at `main` or `master` |
+| **RosarioSIS** | 🔴 carried | GPL-2.0 |
+| **Dolibarr** | 🔴 carried | GPL-3.0 |
+| **Moodle** | 🔴 carried | GPL-3.0 |
+| **Kolibri** | 🔴 carried | MIT — 🟢 still the **only** platform-layer row on a tier Globant can redistribute freely |
+| **Fedena** | 🔴 carried | 🟡 vendor claim, not a payload reading |
+
+### 🟢 The correction, and it is a reusable rule about NOVELTY CHECKS
+
+🔴 **openSIS looked like a discovery and was not.** The leg returns the product name *openSIS*;
+the obvious slug guess `openSIS-Classic/OpenSIS-Classic` is `grep`-absent from this entire base,
+which reads as an uncarried platform. 🟢 The real address is **`OS4ED/openSIS-Classic`**, carried
+on three sell shelves. **A novelty check keyed on a guessed slug manufactures false positives**;
+it must be keyed on the address the probe resolves. Registered as `Gap 463-B`.
+
+### 🟡 A free identity reading from the same probe
+
+| address pair | HEAD | verdict |
+|---|---|---|
+| `OS4ED/openSIS-Classic` vs `OS4ED/openSIS-Responsive-Design` | **`8348cd069aa2`** vs **`8348cd069aa2`** | 🟡 **same tree at HEAD** — alias *or* undiverged fork, and this pass does **not** claim which |
+
+🔵 Per `p462`'s rule the payload cannot settle it either — **neither address serves a root grant**,
+so there is no payload to compare. 🔴 Settling it needs full history on both addresses
+(`gate-fork-direction`'s channel), which this pass did not run. Registered as `Gap 463-C`.
+🟢 Stated this way rather than as an alias claim, because `p462`'s whole lesson was that a
+same-looking pair graded on the wrong channel produces a confident wrong answer.
+
+### 🔵 Gap register opened by this pass
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🔴 **`Gap 463-A`** | The sell shelves have **no eviction ledger**. 21 projects left every sell shelf between `p406` and `p462` with no row, no reason and no gate; every existing gate measures arrival. | Write `evidence/evictions.<date>-p<N>.tsv` from the `Pattern AW` diff, and add a gate that fails when an address on the previous commit's sell shelves is absent from this one **without a reason cell**. |
+| 🔴 **`Gap 463-B`** | A novelty check keyed on a **guessed slug** manufactures false positives — `openSIS` read as uncarried when `OS4ED/openSIS-Classic` sits on 3 shelves. | Resolve the product name to an address through the probe **before** the `grep`, and key the check on the resolved address. |
+| 🟡 **`Gap 463-C`** | `OS4ED/openSIS-Classic` and `OS4ED/openSIS-Responsive-Design` share HEAD `8348cd069aa2`. Alias or undiverged fork is **unsettled**, and neither serves a root grant so the payload channel cannot settle it. | Run `gate-fork-direction`'s full-history channel on the pair. |
+| 🔴 **`Gap 463-D`** | **The Middle East and Africa returned nothing on any EMEA leg** — EMEA's evidence here is EU-27 + UK + Germany only. | Run legs keyed on named national systems (as `p443` did for LATAM) rather than on the region word: Gulf ministry platforms, Nigerian and Kenyan HE systems, francophone African curricula. |
+| 🟡 **`Gap 463-E`** | Skill-tier supply (**7 of 13** novel addresses) carries **derivation chains stated only in the README**. A `LICENSE` read grades such a row clean while saying nothing about what it was built from. | Make `p288`'s README channel standing for the skill tier: every skill-tier row records a provenance cell (declared upstream + its grant) or `PROVENANCE-UNSTATED`. |
+| 🔴 **`Gap 446-A`** | **Still open, and still not closable by this pass.** `make hooks` was refused (`Code from External`); nothing in this pass is gate-attested. | Needs a harness permission decision, not a pass. |
+
 ## 🆕 `p462` — **The vertical-platform leg is graded and it is a nil: every platform it returned is already shelved. 🟢 But it produced the pass's most useful single correction — OpenEduCat's grant and default ref, read first-hand: `NOASSERTION` in the index, LGPL-3.0 in the payload, at a default branch of `19.0` where `main` 404s.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**

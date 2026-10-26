@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` · 2026-10-26 — **GitHub trending, graded: the live trending surface is still agent-harness tooling, not education — but a RECENCY-bounded repository-search slice returns the education supply that trending pages do not show. 13 unshelved addresses, 11 granted, after four passes of nil.**
+
+🔵 **Record posture.** Append-only; sections below untouched. Foundation rows this licenses are on
+[`repos/foundations.md`](../repos/foundations.md) `p463`.
+
+### 🔴 What the trending leg itself returned, and why it grades thin
+
+The leg `github trending education AI 2026` returned **no live trending page** — only third-party
+roundups and auto-generated daily reports. Graded token by token:
+
+| token | verdict |
+|---|---|
+| `withmarbleapp/os-taxonomy` (~5 900★ claimed) | 🔴 **already carried** — and `p442` read its grant as **ODbL + CC BY-SA 4.0 content**, a share-alike content obligation |
+| `luongnv89/claude-howto` | 🟡 agent-harness documentation, not education supply |
+| `microsoft/ML-For-Beginners`, `mlabonne/llm-course` | 🔴 evergreen course repos, carried / out of scope as education *tooling* |
+| aggregator claim: "trending is dominated by agent skills and harness tooling, not education" | 🟢 **confirmed independently by this pass's own slice** — 7 of 13 novel education addresses *are* agent skills |
+
+🔴 **Star counts in these roundups conflict with each other and with the API.** None is promoted.
+
+### 🟢 Foundation-tier arrivals this week — grants read first-hand
+
+| repository | ★ | created | grant · `sha256₁₂` | region · basis | note |
+|---|---|---|---|---|---|
+| [`kevindegila/construire-un-llm-de-zero`](https://github.com/kevindegila/construire-un-llm-de-zero) | 46 | 2026-06-21 | 🟢 Apache-2.0 · `3ac10e0c7f91` | **EMEA** · francophone | 22-chapter from-scratch LLM curriculum in French; **shelved** |
+| [`romanticamaj/promptasy`](https://github.com/romanticamaj/promptasy) | 43 | 2026-07-30 | 🟢 MIT · `677fe7e31abe` | **APAC** · 繁體中文 | prompt-engineering game, techniques cited to source; **shelved** |
+| [`rasidi3112/pondok-ai`](https://github.com/rasidi3112/pondok-ai) | 37 | 2026-10-08 | 🟢 MIT · `c3dc4b0503f8` | **APAC** · Indonesia | one-command on-prem classroom stack; **shelved** |
+| [`seehiong/eduvis`](https://github.com/seehiong/eduvis) | 28 | 2026-06-13 | 🟢 Apache-2.0 · `898c5a5080eb` | 🟡 Global · author signal only | curriculum IR + validator + SVG renderer; **shelved, placement withheld** |
+
+### 🟢 Recovered from eviction — the foundation half
+
+🔴 [`pytorch/opacus`](https://github.com/pytorch/opacus) — **Apache-2.0 · 10 241 B ·
+`bcf6964d43d8` · HEAD `df040e4a1594`** — **the only differential-privacy component this base has
+ever carried**, dropped from every sell shelf between `p406` and `p462` with no recorded reason.
+🟢 `meta-pytorch/opacus` resolves to the **same HEAD**: one project, two addresses.
+Also recovered: [`ai4bharat/anudesh-backend`](https://github.com/ai4bharat/anudesh-backend)
+(MIT · `e2cd4cec54f7`) and [`ai4bharat/indicifeval`](https://github.com/ai4bharat/indicifeval)
+(MIT · `1bff713bf26a`) — **APAC**, AI4Bharat / IIT Madras, and the second is the only
+instruction-following **evaluation** harness on these shelves.
+
+### 🔴 The LATAM leg, written down rather than left silent
+
+Three LATAM legs: two returned **0 results**; the Portuguese `ENEM` leg returned **7 real
+addresses** of which **6 of 6 probed carry no licence payload at all**, at 0–1★. 🟢 Supply
+exists, none of it is shippable, and the addresses are listed on
+[`intel/market.md`](../intel/market.md) `p463` so the vocabulary is not re-spent.
+
 ## 🆕 `p462` · 2026-10-26 — **The GitHub trending legs returned no education repository these shelves do not hold. 🔴 The one education item on this week's boards, `withmarbleapp/os-taxonomy`, is carried AND its grant is the trap: ODbL is a database licence with no code grant.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was NOT RUN, and the reason is new.**

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-26
 ---
 
+## 🆕 `p463` — **🟢 THE SATURATION NIL BREAKS ON BOTH SIDES, AND THE SECOND SIDE IS A CHANNEL NOTHING HERE MEASURES: 21 projects were silently EVICTED from every sell shelf since `p406`, 10 of them live and permissive. 🟢 `p383`'s region contract is CLOSED for the first time since it was wired — the gate reported 3 live blocks and now reports 0 findings. 🔵 And this pass's own first headline — a 15.5 % ledger defect — is REFUTED before publication.**
+
+🟢 **The register is written in the same pass as the shelves it registers**, per
+`gate-register-currency`. Shelves carrying `p463`: `agents/top.md`, `agents/trending.md`,
+`repos/foundations.md`, `repos/trending.md`, `verticals/solutions.md`, `intel/market.md`,
+`intel/trends.md`, `compose/patterns.md`.
+
+🔴 **Gate posture: `make hooks` was NOT RUN** — the harness permission classifier refused the
+invocation (`Code from External`), as at `p462`. 🟢 **But two gates were run individually and
+both are green, so this pass is partially gate-attested rather than not at all:**
+
+| gate run directly | result |
+|---|---|
+| 🟢 `compose/code/p277-table-structure/table_structure.py .` | **"10 shelves, no row is published as a header"** — the failure mode the ingest brief names explicitly is attested clean |
+| 🟢 `compose/code/p383-region-heading-gate/check_headings.py intel/market.md` | **0 findings** (see the closure below) |
+| 🔴 `compose/code/p223-selfclaim-date-gate/gate.py .` | 🔴 refused by the same classifier; **not attested** |
+
+Mitigations re-implemented independently, and they are not a substitute for the gate: frontmatter
+keys and closed-vocabulary `region` checked on all eight shelves; **29 new tables / 145 new data
+rows** checked for separator presence and pipe-count consistency, 0 problems; append-only proved
+on both trending shelves by prior-section containment; **46 distinct GitHub addresses introduced
+this pass re-resolved by `git ls-remote`, 45 live and the 1 that is not is published AS
+withdrawn.**
+
+### 🟢 Closed / answered this pass
+
+| gap | closure |
+|---|---|
+| 🟢 **`p383`'s region contract — CLOSED, and it had never passed** | 🔴 Run directly, `check_headings.py` reported **`P383-MULTIPLE-BLOCKS` ×2 (bloques=3, el encargo pide 1)** and **`P383-MISSING-REGION: Global`**. The file had carried **two** live `## Opportunities by region` blocks since before `p461` — the contract was failing and `make hooks` has not been permitted to run since `p446`, so nothing reported it. 🟢 `p463`'s block is now the single canonical one (all **5** closed-vocabulary regions, in order); `p461`'s and `p448`'s are marked **SUPERSEDED by `p463`** in place, content retained. Gate now returns **0 findings**. |
+| 🟢 **The `p459`–`p462` saturation verdict — REFUTED as a claim about SUPPLY, upheld as a claim about the CHANNEL** | 🔴 Four passes published *usable novel yield ZERO*. 🟢 Both channels run side by side this hour: the prescribed web legs returned **0** unshelved addresses; a **`created:>2026-06-01` × `stars:>`** repository-search slice returned **17 addresses, 13 absent from the entire base, 11 granted, 10 permissive**. 🔵 **The variable is recency, not vocabulary** — `p453`'s vocabulary ledger is exhausted and this pass's Spanish and combined-platform-name legs returned 0 and 0. |
+| 🟢 **`Gap 443-A` gains a second instance** | [`2362094903-ops/study-assistant-skills`](https://github.com/2362094903-ops/study-assistant-skills) has been in this base's record since `p434`, graded `OK`/MIT there, and was on **no** sell shelf until this pass. The record keeps working; nothing reads it. |
+| 🔵 **A `p463` headline RETRACTED BEFORE PUBLICATION, and the method is the point** | `evidence/carried-existence.2026-10-23-p406.tsv` disagrees with `agents/top.md` at HEAD on **37 of 238** rows — a 15.5 % "ledger defect", the exact shape `p455` published and retracted in full. 🟢 Graded against **its own commit** (`ed3d76c`) first, the ledger is **238/238 correct**. 🔴 There is no ledger defect; the 37 are evictions. **A disagreement between an instrument and a shelf is a question about WHEN.** |
+| 🟢 **`p462`'s identity rule confirmed on a new pair** | [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) serves the **same** AGPL-3.0 payload as `Vacademy-io/vacademy_platform` (34 523 B · `0d96a4ff68ad`) at a **different** HEAD. Identical payload, unrelated projects. Three `p462` controls also reproduced byte-, digest- and HEAD-identical. |
+
+### 🆕 Registered this pass
+
+| gap | finding |
+|---|---|
+| 🆕 **`Gap 463-A`** | 🔴 **The sell shelves have no eviction ledger, and eviction is this base's largest unmeasured flow.** 21 projects left every sell shelf between `p406` and `p462` with no row, no reason and no gate, while `agents/top.md` grew **187 → 374** addresses and **1 576 → 3 767** lines. Every gate here measures *arrival*. **11** of the 21 evictions are justified first-hand (1 withdrawn address, 5 ungranted, 1 notice-only, 2 GPL, 2 AGPL); **10 are live and permissive**, including `pytorch/opacus` — the only differential-privacy row this base has ever carried — and the entire Canvas/Blackboard MCP connector tier. 🟢 First artefact delivered: `evidence/evictions.2026-10-26-p463.tsv` (38 rows). **Closure:** a gate that fails when an address on the previous commit's sell shelves is absent from this one without a reason cell. |
+| 🆕 **`Gap 463-B`** | 🔴 **A novelty check keyed on a GUESSED slug manufactures false positives.** The vertical leg returned the product name *openSIS*; the guess `openSIS-Classic/OpenSIS-Classic` is `grep`-absent from this base and reads as a discovery, while the platform is carried as [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) on **3** sell shelves. **Closure:** resolve the name to an address through the probe *before* the `grep`, and key the check on the resolved address. |
+| 🆕 **`Gap 463-C`** | 🟡 **An unsettled same-HEAD pair, deliberately not called an alias.** `OS4ED/openSIS-Classic` and `OS4ED/openSIS-Responsive-Design` both resolve to HEAD **`8348cd069aa2`** — alias *or* undiverged fork, and **neither serves a root grant**, so `p462`'s payload channel cannot settle it either. **Closure:** `gate-fork-direction`'s full-history channel on the pair. |
+| 🆕 **`Gap 463-D`** | 🔴 **The Middle East and Africa returned NOTHING on any EMEA leg** — EMEA's evidence on `intel/market.md` is EU-27 + UK + Germany only, i.e. one third of the region's name and zero of its evidence. **Closure:** legs keyed on named national systems, as `p443` did for LATAM — Gulf ministry platforms, Nigerian and Kenyan HE systems, francophone African curricula. 🟢 This pass's one offering against it is supply, not intelligence: [`kevindegila/construire-un-llm-de-zero`](https://github.com/kevindegila/construire-un-llm-de-zero) (Apache-2.0), francophone. |
+| 🆕 **`Gap 463-E`** | 🟡 **The skill tier carries derivation chains stated only in the README.** **7 of 13** novel addresses ship as agent skills rather than applications; [`Aisland-SJL/Aisland-teach`](https://github.com/Aisland-SJL/Aisland-teach) is MIT and declares derivation from another MIT skill in its README alone. A `LICENSE` read grades such a row clean while saying nothing about what it was built from. **Closure:** make `p288`'s README channel standing for the skill tier — a provenance cell per row, or `PROVENANCE-UNSTATED`. |
+| 🆕 **`Gap 463-F`** | 🔴 **The LATAM student-facing OSS tier is measured UNGRANTED, and that is a shelf-level finding rather than a search failure.** The Portuguese ENEM leg returned 7 real addresses; **6 of 6 probed carry no licence payload at all**, at 0–1★. Two other LATAM legs returned 0 and 0. 🟢 Addresses listed on `intel/market.md` `p463` so the vocabulary is not re-spent; **none shelved**. **Closure:** target the LATAM *integration* tier (`mcp-brasil`, `siu-guarani-mcp`, `now-lms`) rather than the student tier, per `Pattern AZ`. |
+| 🔴 **`Gap 446-A`** | **Still open and still not closable by a pass.** `make hooks` was refused again (`Code from External`). 🟢 Partially mitigated for the first time: two gates were run individually and are green (above). Needs a harness permission decision. |
+| 🟡 **`Gap 460-D`** | 🟢 **Re-confirmed first-hand, and its structural half is now measured.** The second source of truth is `gmilano/globant-kb/education/` — 8 files mirroring these shelves, last substantive update **2026-07-14** (103 days). 🔴 **0 of its 8 files carry YAML frontmatter**, which is the exact condition the ingest brief names as breaking typed compilation (`region` and licence inferred from prose instead of read from a field), and its tables are headed `| Nombre | Repo | Licencia |` — the brief's own named failure case. 🔵 **Deliberately NOT repaired by this pass:** adding frontmatter would make 103-day-old rows compile as authoritative typed entities, which is worse than failing to compile. **Closure is an owner decision, not a pass action** — delete the duplicate, or point the compiler at `education-kb`. |
+| 🟡 **`Gap 460-C`** | 🟢 **Checked, as `p460` asked, and the prediction FAILED.** `p460` recorded that it had advanced `rotation.json` to `next: 9` (automotive). Read first-hand this hour, `gmilano/globant-kb/rotation.json` still reads **`next: 8`** with `last_updated: 2026-08-02` — the pointer did **not** move, consistent with this base's long record of blocked pushes to that repository. 🔵 This pass is therefore a **fifth** consecutive education run. `p463` advances it to **`next: 9`**; whether that lands is the next check. |
+
 ## 🆕 `p460` — **🟢 THE CAUSE `p458` AND `p459` COULD ONLY DIAGNOSE IS ACTED ON: the frozen rotation pointer was located in another repository, its freeze mechanism read out of its own status field, and it has been advanced. 🟢 `p459`'s saturation verdict is REPRODUCED on an instrument sharing no code path with it. 🔴 And this pass's own gate step shipped a false ungranted in its first draft, on the highest-★ row on these shelves.**
 
 🟢 **The register is written in the same pass as the shelves it registers**, per
