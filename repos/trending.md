@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **the trending signal this week is a measurement artefact being corrected in two places at once: the learning-record tier that `Gap 467-I` called copyleft-only is the most permissive tier in this KB, and the LATAM supply that `Gap 467-E` measured at 1 % is a working stack that answers to Portuguese**
+
+🔵 **Append-only.** The `p472` body and all prior passes stand unchanged below this section. Stars
+index-relayed from MCP `search_repositories`, **2026-10-27** (`Gap 467-D`). Every grant read
+first-hand from `raw.githubusercontent.com`, every address resolved by `git ls-remote --symref`.
+🔴 `curl -sI` not used — dead on this harness (`Gap 472-A`).
+
+### 🟢 New to these shelves — the learning-record / analytics tier, `Gap 467-I` closed and refuted
+
+| Repo | Stars | Grant (path read, bytes, digest) | Region | Role |
+|---|---|---|---|---|
+| [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | **585** | 🟡 GPL-3.0-or-later — `master/LICENSE`, 35,141 B `589ed823e9a8` | EMEA | The best-known open LRS, started 2014. 🔴 **Last push 2024-05-30** — highest-★ and stalest |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | 334 | 🟢 **Apache-2.0** — `master/LICENSE`, 11,357 B `58d1e17ffe51` | North America | The **reference** LRS, from the body that authored xAPI |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 144 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,357 B `c71d239df917` | North America | SQL-backed LRS. Pushed **today** (`61594164edf5`) — the default pick |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 62 | 🟢 **ECL-2.0** — `master/LICENSE`, 9,878 B `f339063d2f60` | North America | The only row speaking **xAPI + IMS Caliper + OneRoster**. 🔴 Patent grant narrower than Apache-2.0 by design — `Gap 473-B` |
+| [openfun/ralph](https://github.com/openfun/ralph) | 51 | 🟢 **MIT** — `main/LICENSE.md`, 1,094 B `08ea77291de9` | EMEA | France Université Numérique. **An MIT Learning Record Store** — the row `Gap 467-I` said did not exist. Pushed **today** |
+| [tl-its-umich-edu/my-learning-analytics](https://github.com/tl-its-umich-edu/my-learning-analytics) | 37 | 🟢 **Apache-2.0** — `master/LICENSE`, 11,379 B `b89b380a589b` | North America | MyLA, U. Michigan — learner-facing analytics dashboards |
+| [PlaypowerLabs/EdOptimize](https://github.com/PlaypowerLabs/EdOptimize) | 31 | 🟡 GPL-3.0-or-later — `master/LICENSE`, 35,149 B `3972dc9744f6` | APAC | K-12 curriculum + assessment analytics in R |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | 21 | 🟢 **Apache-2.0** — `development/LICENSE`, 11,323 B `6dc0e068dcf3` | North America | 🟢 **RCTs inside a live LMS over LTI** — the apparatus for proving an AI intervention worked, permissively licensed |
+
+🟢 **Tier census: 5 of 9 permissive, 1 ECL-2.0, 3 copyleft, ZERO ungranted.** Against the agent
+tier's 14.3 % ungranted and the evaluation tier's 44.4 %, this is the only shelf in this KB where
+capability can decide the pick.
+
+### 🟢 New to these shelves — LATAM, reached on the language axis (`Gap 467-E`)
+
+| Repo | Stars | Grant (path read, bytes, digest) | Country | Why it matters |
+|---|---|---|---|---|
+| [Universidade-Livre/ciencia-da-computacao](https://github.com/Universidade-Livre/ciencia-da-computacao) | **20,970** | 🟢 **MIT** — `main/LICENSE`, 1,087 B `6520b550c69f` | Brazil | 🔴 **The largest LATAM education repository on GitHub, and this base had never seen it** — it answers to `educação`, not to `education`. A self-study CS curriculum, 1,688 forks |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | 720 | 🟡 **GPL-2.0-or-later** — `2.12/LICENSE`, 18,092 B `8177f9751321` | Brazil | Brazil's largest free **school information system**, 552 forks, classed *software público*. 🔴 **18,092 B is a new GNU size on these shelves** — every prior GNU payload here sat at 34–35 KB |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 135 | 🟢 **MIT** — `main/LICENSE`, 1,070 B `277707dcaa3b` | Chile | Curated Chilean public data including education, one-line load into Polars/DuckDB |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | 117 | 🔴 **AGPL-3.0-or-later** — `1.6/LICENSE`, 35,326 B `fe85f94658bf` | Brazil | The teacher gradebook. 🔴 **Its licence payload is in PORTUGUESE** — `LICENÇA PÚBLICA GERAL AFFERO GNU` — which every English-anchored reader on this base grades `UNSTATED`. `Gap 473-C` |
+| [prefeiturasp/dados-educacao](https://github.com/prefeiturasp/dados-educacao) | 57 | 🔴 **UNGRANTED** — 11 paths probed, HEAD `9e6516753747` | Brazil | São Paulo's municipal education open data. 🔴 A city government repository with no licence |
+| [gpassero/uol-redacoes-xml](https://github.com/gpassero/uol-redacoes-xml) | 39 | 🟢 **Apache-2.0** — `master/LICENSE`, 11,357 B `b40930bbcf80` | Brazil | ENEM-style essay bank in XML for pt-BR NLP — the automated-essay-scoring substrate |
+| [fauzcategui/moodle-sence](https://github.com/fauzcategui/moodle-sence) | 29 | 🟡 GPL-3.0-or-later — 🔴 `master/license.txt` **(lowercase)**, 35,126 B `c3bc1fd94148` | Chile | Attendance reporting into **SENCE**, Chile's national training service. 🔴 **`Gap 472-B` reproduced independently** |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 22 | 🟢 **MIT** — `main/LICENSE`, 1,092 B `e162f8f4b461` | Brazil | 🟢 **Brazil's BNCC national curriculum as open data**: 1,721 objectives, per-record provenance, MCP surface. **The permissively-licensed counterpart to APAC's NonCommercial curriculum graph** |
+
+🔴 **The asymmetry inside LATAM, measured.** The `educacao` token at ≥20★ returns **15** repositories
+and the stack above; the `educacion` token at ≥20★ returns **8**, of which **one** is education
+infrastructure. 🔵 On this evidence LATAM open-source education supply is **Brazilian**; it needs a
+lower star floor before that is carried as a standing position.
+
+### 🔵 Instrument note — the digest rule, tested from both sides in one sweep
+
+| observation | payloads | reading |
+|---|---|---|
+| 🔴 **11,357 B, three different digests** | `lrsql` `c71d239df917` · `ADL_LRS` `58d1e17ffe51` · `uol-redacoes-xml` `b40930bbcf80` | `lrsql`↔`ADL_LRS`: a leading blank line against a missing trailing newline, **cancelling to the byte**. `uol-redacoes-xml`: the **pre-2019 GitHub template with `{}` placeholders** where the others carry `[]` — same length |
+| 🟢 **11,358 B, one digest, two unrelated repos** | `lineage-skill` and `oppia/oppia`, both `cfc7749b96f6` | the digest correctly identifies one canonical instance across repositories sharing no authorship |
+| 🔴 **Apache-2.0 spans 10,982 → 11,408 B this pass** | 8 payloads, **6 byte values, 7 digests** | OpenOLAT 10,982 · terracotta 11,323 · 11,357 ×3 · 11,358 ×2 · my-learning-analytics 11,379 · DeepTutor 11,408 |
+
+🟢 **`Gap 465-A`'s amendment gains a third canonical Apache-2.0 family** — bare SPDX, GitHub-template
+with **brackets**, GitHub-template with **braces** — and the last two are the same size. Raw bytes
+are necessary, the canonical text must be named, **and only the digest is sufficient.**
+
 ## 🆕 `p472` — `2026-10-27` — **the trending education repo of this window is a nine-day-old curriculum knowledge graph with 1,028 forks and a NonCommercial licence, and the verification channel this base is instructed to use returns 403 on every live address**
 
 🔵 **Append-only.** The `p471` body and all prior passes stand unchanged below this section. Star

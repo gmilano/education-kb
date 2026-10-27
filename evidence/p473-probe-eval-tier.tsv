@@ -1,0 +1,10 @@
+repo	HEADsha	default_ref	path	bytes	sha256_12	line1	line2
+eth-lre/mathtutorbench	6faed173ec2b	main	NOGRANT/14_paths	-	-	-	-
+Khan/tutoring-accuracy-dataset	fbbeff86b5c1	main	LICENSE	2690	53cf7aa78a89	Evaluation Dataset License; Conditions of Use	Copyright© 2024 Khan Academy, Inc.  
+Yunfeng-Wan/CSTutorBench	27deaea3bf6e	main	LICENSE	313	9530f3063565	Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4	This work is licensed under the Creative Commons Attribution
+divadbaroon/TutorTrace_dataset_and_benchmark	bc7990370da1	main	NOGRANT/14_paths	-	-	-	-
+conradborchers/llm-instruction-benchmarking	0a359c0e4224	main	NOGRANT/14_paths	-	-	-	-
+isra-moussaoui/Multi-Agent-Tutoring-Systems	1ab3d842d47b	main	NOGRANT/14_paths	-	-	-	-
+bncc-dev/bncc-benchmark	4713901ce5d7	main	LICENSE	911	d19733bb7540	# Licenças	Este repositório usa duas licenças, porque contém duas co
+acheamponge/wassce-benchmark	140a2568db3c	main	LICENSE	1076	df8c7a998c17	MIT License	Copyright (c) 2026 Emmanuel Acheampong
+kcelestinomaria/overlooked-bench	065af988ef50	main	LICENSE	34523	0d96a4ff68ad	GNU AFFERO GENERAL PUBLIC LICENSE	Version 3, 19 November 2007

@@ -4,6 +4,163 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **three recipes built only from grants read first-hand this pass: a telemetry spine with ZERO copyleft in the deliverable, a LATAM public-education stack that crosses two different copyleft triggers and the boundary that keeps them outside the AI layer, and the evidence gate the whole market is asking for and almost nobody can license.**
+
+🔵 Every repository named below was address-resolved by `git ls-remote --symref` and grant-verified
+by payload read from `raw.githubusercontent.com` this pass; digests are in
+[`evidence/grant-class.2026-10-27-p473.tsv`](../evidence/grant-class.2026-10-27-p473.tsv).
+🔴 No pattern here composes a row whose grant was taken from an index, a README badge or a
+comparison table.
+
+---
+
+### 🟢 `P473-1` — The xAPI telemetry spine: an auditable AI tutor with no copyleft in the deliverable
+
+🔵 **When to reach for it.** The client needs AI-assisted learning *and* a record of what the AI did
+to each learner — because a regulator (EU AI Act high-risk assessment duties), a statute
+(Oklahoma SB 1734's "not the main basis for grading") or a procurement team asks for it. 🔴 The
+trap this avoids: wiring the AI into an AGPL LMS and owing its source to the client's learners.
+
+**The parts, all permissive, all grant-verified:**
+
+| role | component | grant (read first-hand) |
+|---|---|---|
+| Tutoring engine | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0, `main/LICENSE` 11,408 B `cd2f54e1e506` |
+| Record store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0, `main/LICENSE` 11,357 B `c71d239df917` |
+| Statement pipeline / validation | [openfun/ralph](https://github.com/openfun/ralph) | **MIT**, `main/LICENSE.md` 1,094 B `08ea77291de9` |
+| Conformance oracle (test-time only) | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | Apache-2.0, `master/LICENSE` 11,357 B `58d1e17ffe51` |
+| LMS seam, no linking | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | MIT, `master/LICENSE` 1,072 B |
+| Learner-facing dashboards | [tl-its-umich-edu/my-learning-analytics](https://github.com/tl-its-umich-edu/my-learning-analytics) | Apache-2.0, `master/LICENSE` 11,379 B `b89b380a589b` |
+
+**Wiring.**
+
+1. **Emit, don't embed.** The tutor emits one xAPI statement per pedagogical act — not per API call.
+   The verbs that matter to a regulator are `experienced`, `answered`, `was-assisted-by` and
+   `progressed`; the ones that matter to nobody are token counts. Put the model's identity, prompt
+   revision and a decision-provenance flag in the statement's `context.extensions`, because
+   *"a human made the grading decision"* is a claim you must be able to serve six months later.
+2. **Validate at the edge, store in SQL.** `ralph` (MIT) does Pydantic-level statement validation and
+   forwarding; `lrsql` (Apache-2.0) persists to Postgres. 🟢 The reason to pair them rather than pick
+   one: `ralph` rejects malformed statements *before* they reach the store, so the store stays
+   queryable by the client's own BI team, which is what makes the audit trail usable rather than
+   merely present.
+3. **Prove conformance against the reference implementation.** Run the same statement set into
+   `ADL_LRS` — authored by the body that wrote the Experience API — in CI only. 🔵 It never ships;
+   it is the oracle that stops a bespoke statement shape from being discovered by the client's
+   auditor instead of by you.
+4. **Cross the LMS boundary over the runtime, never the codebase.** Where the incumbent is Moodle
+   (GPL-3.0), Canvas (AGPL-3.0) or Open edX (AGPL-3.0), report completion and scores through
+   `scorm-again` (MIT) as a SCORM 1.2/2004 runtime, or over LTI. 🟢 **Nothing links to the LMS and
+   nothing modifies it**, so neither copyleft trigger fires.
+5. **Hand back the dashboards as yours to restyle.** `my-learning-analytics` is Apache-2.0, so the
+   learner-facing views can be rebranded and extended inside a proprietary deliverable.
+
+🟢 **Licence result: every shipped component is MIT or Apache-2.0. The copyleft in the deployment is
+all pre-existing and all unmodified.**
+🔴 **The one place this breaks:** if the client's standard is **IMS Caliper** rather than xAPI, the
+only row this base has found is `OpenLRW` — and it is **ECL-2.0**, whose patent grant is
+deliberately narrower than Apache-2.0's (`repos/foundations.md`, `Gap 473-B`). That needs its own
+counsel review, not a licence-family assumption.
+
+---
+
+### 🟡 `P473-2` — The LATAM public-education stack: two copyleft triggers in one deployment, and where to stand
+
+🔵 **When to reach for it.** A Brazilian municipality or state secretariat engagement. The incumbent
+is already installed: [portabilis/i-educar](https://github.com/portabilis/i-educar) has **552
+forks**, which is a municipal install base rather than a star count.
+
+🔴 **The hazard, in one table, because the two components look like one product and are not:**
+
+| component | grant, read first-hand | trigger | what fires it |
+|---|---|---|---|
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) — the SIS | 🟡 **GPL-2.0-or-later**, `2.12/LICENSE` 18,092 B `8177f9751321` | **distribution** | shipping a modified build. 🟢 Hosting it unmodified owes nothing |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) — the gradebook | 🔴 **AGPL-3.0-or-later**, `1.6/LICENSE` 35,326 B `fe85f94658bf`, **payload in pt-BR** | **network use** | modifying it and letting teachers reach it over a network. 🔴 **An AI grading assistant wired into `i-diario` is a modification** |
+
+**Wiring.**
+
+1. **Put the AI layer outside both.** Talk to `i-diario` over its HTTP API as an external service.
+   The AI service is yours; the gradebook stays byte-for-byte upstream. 🟢 This is `P473-1` step 4
+   applied to a LATAM incumbent, and it is the whole design.
+2. **Take the curriculum from a permissive source, not from the SIS.**
+   [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) is **MIT** (`main/LICENSE` 1,092 B
+   `e162f8f4b461`) and ships the **BNCC's 1,721 learning objectives** in JSON / SQLite / CSV with
+   **per-record provenance** and an MCP surface. 🟢 Probed for a separate data licence at three paths,
+   all `404` — the MIT grant is the only grant and it covers the compilation. So alignment-to-national-
+   curriculum, the first thing a secretariat asks for, is an MIT dependency and not an integration.
+3. **Score Portuguese writing on a permissive corpus.**
+   [gpassero/uol-redacoes-xml](https://github.com/gpassero/uol-redacoes-xml) (Apache-2.0,
+   `master/LICENSE` 11,357 B `b40930bbcf80`) is an ENEM-style essay bank in XML built for pt-BR NLP
+   validation — the substrate for an essay-feedback feature that does not have to be trained on the
+   client's own student work.
+4. **Where connectivity is the constraint, change the core.** [learningequality/kolibri](https://github.com/learningequality/kolibri)
+   is **MIT** (`develop/LICENSE` 1,097 B `3c056b34a476`), offline-first by design, 1,012 forks.
+   🟢 For a rural deployment it replaces the LMS question entirely and brings no copyleft with it.
+5. **Gate on the Brazilian benchmark before go-live** — `P473-3`.
+
+🔴 **Instrument warning that belongs in the runbook, not a footnote:** `i-diario`'s licence is served
+**in Portuguese**, so an automated licence screen keyed on English titles reports the single
+riskiest component in this stack as *unlicensed*. 🔵 On any LATAM or Iberian engagement, **read the
+LICENSE payload by eye** (`Gap 473-C`).
+
+---
+
+### 🟢 `P473-3` — The evidence gate: the thing five independent bodies are asking for, assembled from the two instruments that permit it
+
+🔵 **When to reach for it.** Always, now. `intel/trends.md` Trend 1 records 1EdTech, the OECD,
+HolonIQ, Oklahoma SB 1734 and the EU AI Act converging on *demonstrable evidence* inside one window.
+🔴 And `agents/top.md` records that the open evaluation tier is **44.4 % ungranted**, so this is the
+pattern where the licence decides the architecture rather than the reverse.
+
+**The parts, with their constraints stated as constraints:**
+
+| role | component | grant | where it may run |
+|---|---|---|---|
+| Trial apparatus inside the LMS | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0, `development/LICENSE` 11,323 B `6dc0e068dcf3` | 🟢 **anywhere, including the deliverable** |
+| Scored baseline, unconditional | [acheamponge/wassce-benchmark](https://github.com/acheamponge/wassce-benchmark) | 🟢 **MIT**, `main/LICENSE` 1,076 B `df8c7a998c17` | 🟢 **anywhere** |
+| Scored baseline, curriculum-aligned | [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🟢 code **MIT** `e1ed7acaf9e2` / items **CC BY 4.0** `9b70e1d9a0c9` | 🟢 anywhere, **with attribution** on the item bank |
+| Accuracy reference | [Khan/tutoring-accuracy-dataset](https://github.com/Khan/tutoring-accuracy-dataset) | 🟡 bespoke *Evaluation Dataset License*, 2,690 B `53cf7aa78a89` | 🔴 **internal evaluation only.** No redistribution, **no model training**, no production use, not sublicensable — and the restriction propagates into any merged dataset |
+| Breadth probe | [kcelestinomaria/overlooked-bench](https://github.com/kcelestinomaria/overlooked-bench) | 🟡 AGPL-3.0 `0d96a4ff68ad` | 🟡 **CI only**, never inside the deliverable |
+| Theory-grounded adaptivity | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 MIT, `main/LICENSE` 1,090 B `ed2ed868dffc` | 🟢 anywhere |
+
+**Wiring.**
+
+1. **Separate the gate from the deliverable physically, not by intention.** Two repositories: the
+   product, and an `eval/` repository that is never published. The AGPL and bespoke-licensed
+   instruments live only in the second. 🔵 This is what makes the Khan dataset usable at all — its
+   §3 explicitly permits evaluating *products intended for commercial use* and commercial use of the
+   *insights*, while prohibiting the dataset from travelling. Those are compatible with a private
+   eval repo and incompatible with a monorepo.
+2. **Pick the baseline by the client's exam, not by star count.** `wassce-benchmark` for West
+   Africa, `bncc-benchmark` for Brazil. 🔴 Where the client's curriculum has no open benchmark — which
+   is most of the world — build the item set from a permissive curriculum source
+   (`bncc-dados` MIT shows the shape) rather than from a NonCommercial one. 🔴 **Do not reach for
+   [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)** however good it is:
+   CC BY-NC 4.0, `19,347 B` `41003d4a7474`, re-read first-hand this pass. 1,644 knowledge points you
+   may not sell.
+3. **Make the adaptivity falsifiable.** `knowledge-spaces` (MIT) implements **Knowledge Space
+   Theory** — prerequisite structure, adaptive assessment, just-in-time instruction planning — so the
+   claim *"it adapts"* becomes a prediction about which items a learner can pass, which is a thing a
+   benchmark can check. 🔵 A prompt chain cannot be wrong in this way, which is exactly why it cannot
+   be shown to be right.
+4. **Prove it on the client's own learners with `terracotta`.** Randomised arms inside the live LMS
+   over LTI, consent hidden from the teacher, non-consenting participants filtered from exports,
+   identifiers stripped. 🟢 Apache-2.0, so the trial apparatus itself can ship as part of the
+   platform — the client keeps the ability to re-run the experiment after the engagement ends, which
+   is the deliverable a ministry actually wants.
+5. **Report provenance, not scores.** Emit each eval run as xAPI into the `P473-1` spine, so
+   *"this model, this prompt revision, this item set, this date, this result"* is one query.
+
+🟢 **Why this is the pattern worth leading with commercially.** Capability is commoditised —
+`DeepTutor` is Apache-2.0 at 44k★. **Proof is not**: there are **two** unconditionally usable
+education evaluation instruments on earth that this base can find, and they are 4★ and 9★. A studio
+that can show a regulator how it measured is selling the scarce half.
+
+🔴 **Honest limit on all three patterns.** None has been executed end-to-end on this harness. They
+compose grants that were verified first-hand and interfaces that are documented; they are not
+integration-tested, and the `i-diario` API surface in `P473-2` in particular is read from its
+repository, not exercised.
+
 ## 🆕 `p472` — `2026-10-27` — **🟢 SIX RECIPES, EVERY COMPONENT GRANT-VERIFIED BY PAYLOAD THIS PASS, AND EACH ONE NAMED WITH THE LICENCE THAT LETS IT SHIP. 🔴 `P5` exists because the two best curriculum graphs in open source are NonCommercial and ODbL — the recipe is how to get the same asset licitly. 🔴 And `P7` is costed as original work because the measurement layer three regimes and every analyst now demand HAS NO OPEN-SOURCE IMPLEMENTATION.**
 
 🔵 **Component gate, per `p471` and extended by `Gap 472-A`/`Gap 472-B`:** before a repository enters

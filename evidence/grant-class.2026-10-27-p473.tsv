@@ -1,0 +1,44 @@
+repo	HEADsha12	ref_read	grant_path	bytes	sha256_12	family	class	region_basis
+yetanalytics/lrsql	61594164edf5	main	LICENSE	11357	c71d239df917	Apache-2.0	PERMISSIVE	North America (Yet Analytics, US; sqllrs.com)
+adlnet/ADL_LRS	efa045e2fc6e	master	LICENSE	11357	58d1e17ffe51	Apache-2.0	PERMISSIVE	North America (ADL Initiative, lrs.adlnet.gov)
+openfun/ralph	91fef112394d	main	LICENSE.md	1094	08ea77291de9	MIT	PERMISSIVE	EMEA (France Universite Numerique / openFUN)
+Apereo-Learning-Analytics-Initiative/OpenLRW	a243920ab120	master	LICENSE	9878	f339063d2f60	ECL-2.0	PERMISSIVE_NARROW_PATENT	North America (Apereo Foundation)
+LearningLocker/learninglocker	5fec948a823e	master	LICENSE	35141	589ed823e9a8	GPL-3.0-or-later	COPYLEFT_DISTRIBUTION	EMEA (Learning Pool, UK/IE)
+tl-its-umich-edu/my-learning-analytics	44dbf906f7c8	master	LICENSE	11379	b89b380a589b	Apache-2.0	PERMISSIVE	North America (University of Michigan)
+PlaypowerLabs/EdOptimize	fbcc8bd1a30e	master	LICENSE	35149	3972dc9744f6	GPL-3.0-or-later	COPYLEFT_DISTRIBUTION	APAC (Playpower Labs, India) - institutional, not orthographic
+vanderbilt-data-science/knowledge-spaces	08e7aef8dd32	main	LICENSE	1090	ed2ed868dffc	MIT	PERMISSIVE	North America (Vanderbilt University)
+terracotta-education/terracotta	eaf8b8f697e5	development	LICENSE	11323	6dc0e068dcf3	Apache-2.0	PERMISSIVE	North America (Terracotta Education)
+portabilis/i-educar	435649b0474f	2.12	LICENSE	18092	8177f9751321	GPL-2.0-or-later	COPYLEFT_DISTRIBUTION	LATAM (Brazil; pt orthography in repo)
+portabilis/i-diario	ef909f23755a	1.6	LICENSE	35326	fe85f94658bf	AGPL-3.0-or-later (pt-BR TRANSLATION)	COPYLEFT_NETWORK	LATAM (Brazil; licence payload itself is pt-BR)
+bncc-dev/bncc-dados	9c268978efa2	main	LICENSE	1092	e162f8f4b461	MIT	PERMISSIVE	LATAM (Brazil; Profy Tecnologias Educacionais Ltda)
+bncc-dev/bncc-benchmark	4713901ce5d7	main	LICENSE	911	d19733bb7540	COMPOSITE_PER_ASSET	PERMISSIVE_SPLIT	LATAM (Brazil; pt-BR licence payload)
+bncc-dev/bncc-benchmark#code	4713901ce5d7	main	LICENSE-CODIGO.md	1286	e1ed7acaf9e2	MIT	PERMISSIVE	LATAM
+bncc-dev/bncc-benchmark#data	4713901ce5d7	main	LICENSE-DADOS.md	577	9b70e1d9a0c9	CC-BY-4.0	PERMISSIVE_ATTRIBUTION	LATAM
+gpassero/uol-redacoes-xml	94b74fc91c4e	master	LICENSE	11357	b40930bbcf80	Apache-2.0	PERMISSIVE	LATAM (Brazil; pt-BR corpus, UOL/ENEM)
+prefeiturasp/dados-educacao	9e6516753747	master	-	-	-	UNSTATED	UNGRANTED	LATAM (Prefeitura de Sao Paulo)
+fauzcategui/moodle-sence	b69ee208dc79	master	license.txt	35126	c3bc1fd94148	GPL-3.0-or-later	COPYLEFT_DISTRIBUTION	LATAM (Chile; SENCE; es orthography)
+Universidade-Livre/ciencia-da-computacao	b995c118fdb3	main	LICENSE	1087	6520b550c69f	MIT	PERMISSIVE	LATAM (Brazil; pt-BR)
+cortega26/chile-hub	cf5a2c02aca0	main	LICENSE	1070	277707dcaa3b	MIT	PERMISSIVE	LATAM (Chile; es orthography)
+JuneYaooo/lineage-skill	7e2cbc5dc317	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	PERMISSIVE	Global (no orthographic or institutional evidence)
+SirhanMacx/Claw-ED	18f2e223cdd1	main	LICENSE	1078	4d5d987f4f89	MIT	PERMISSIVE	Global (no evidence; holder "EDUagent Contributors")
+ASEpochs/ai-digital-teacher	b9bdcd78a85e	main	-	-	-	UNSTATED	UNGRANTED	Global (no evidence)
+bobuel/bloom-taxonomy-quiz-builder-skill	5fed5008499b	main	-	-	-	UNSTATED	UNGRANTED	Global (no evidence)
+classroomio/classroomio	eb7b7a09d479	main	LICENSE	34523	8486a10c4393	AGPL-3.0	COPYLEFT_NETWORK	Global
+learningequality/kolibri	f72936bd41e5	develop	LICENSE	1097	3c056b34a476	MIT	PERMISSIVE	North America origin (Learning Equality); deployment strength LATAM/Africa
+sakaiproject/sakai	849cc0d9f991	master	LICENSE	11120	0688f62d04f1	ECL-2.0	PERMISSIVE_NARROW_PATENT	Global higher ed
+OpenOLAT/OpenOLAT	891b9434e822	master	LICENSE	10982	6dbc5b605ed0	Apache-2.0	PERMISSIVE	EMEA (DACH)
+oppia/oppia	7e5f82dfdd0c	develop	LICENSE	11358	cfc7749b96f6	Apache-2.0	PERMISSIVE	Global
+openedx/edx-platform	03698e2b6ff4	master	LICENSE	35136	e12d78569742	AGPL-3.0	COPYLEFT_NETWORK	Global
+moodle/moodle	46c042e7da65	main	COPYING.txt	35147	8ceb4b9ee5ad	GPL-3.0-or-later	COPYLEFT_DISTRIBUTION	Global
+instructure/canvas-lms	1c9f0bb8013e	master	LICENSE	34520	57c8ff33c9c0	AGPL-3.0	COPYLEFT_NETWORK	North America
+frappe/lms	54ad7dea5b1d	develop	license.txt	33893	db1a87ba81e8	AGPL-3.0	COPYLEFT_NETWORK	APAC (India)
+xiaoyang111222/cn-math-taxonomy	9e9498c786aa	main	LICENSE	19347	41003d4a7474	CC-BY-NC-4.0	UNSELLABLE	APAC (zh-Hans orthography)
+eth-lre/mathtutorbench	6faed173ec2b	main	-	-	-	UNSTATED	UNGRANTED	EMEA (ETH Zurich LRE)
+Khan/tutoring-accuracy-dataset	fbbeff86b5c1	main	LICENSE	2690	53cf7aa78a89	BESPOKE "Evaluation Dataset License"	RESTRICTED_INTERNAL_EVAL_ONLY	North America (Khan Academy, Inc.)
+Yunfeng-Wan/CSTutorBench	27deaea3bf6e	main	LICENSE	313	9530f3063565	CC-BY-NC-4.0 (pointer form)	UNSELLABLE	APAC
+divadbaroon/TutorTrace_dataset_and_benchmark	bc7990370da1	main	-	-	-	UNSTATED	UNGRANTED	Global (no evidence)
+conradborchers/llm-instruction-benchmarking	0a359c0e4224	main	-	-	-	UNSTATED	UNGRANTED	Global (no evidence)
+isra-moussaoui/Multi-Agent-Tutoring-Systems	1ab3d842d47b	main	-	-	-	UNSTATED	UNGRANTED	Global (no evidence)
+acheamponge/wassce-benchmark	140a2568db3c	main	LICENSE	1076	df8c7a998c17	MIT	PERMISSIVE	EMEA (West Africa; WASSCE)
+kcelestinomaria/overlooked-bench	065af988ef50	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	COPYLEFT_NETWORK	EMEA (Kenya)
+HKUDS/DeepTutor	a31d82624c27	main	LICENSE	11408	cd2f54e1e506	Apache-2.0	PERMISSIVE	APAC (HKU) - CROSS-PASS CONTROL, byte+digest+HEAD identical to p465/p466/p472

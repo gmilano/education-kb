@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **the window's real movement is not a repository, it is a vocabulary: an entire tier this base had declared absent for dozens of passes — education-AI evaluation — appears in full the moment the search runs on research tokens instead of product tokens, and 4 of its 9 instruments grant nothing**
+
+🔵 **Append-only.** The `p472` body and all prior passes stand unchanged below this section. Star
+counts from the MCP `search_repositories` channel and the GitHub web topic channel,
+**2026-10-27**, and **index-relayed, never first-hand** (`Gap 467-D`). Every grant read first-hand
+from `raw.githubusercontent.com`, body written to a file and the file measured (`Gap 468-A`).
+🔴 `curl -sI` not used for verification — dead on this harness (`Gap 472-A`), reproduced once as a
+control and abandoned.
+
+### 🟢 Newly surfaced this window — agents
+
+| Repo | Stars | Grant (path read, bytes, digest) | Region | Why it moved |
+|---|---|---|---|---|
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | **463** | 🟢 **Apache-2.0** — `main/LICENSE`, 11,358 B `cfc7749b96f6` | Global | Videos, PDFs, transcripts and notes → **source-backed** teacher skills. 🔵 Its payload is **digest-identical to `oppia/oppia`'s** — the same canonical Apache-2.0 instance in two unrelated repositories, which is the digest rule working in the direction nobody tests |
+| [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 63 | 🟢 **MIT** — `main/LICENSE`, 1,078 B `4d5d987f4f89` | Global | **Local-first** teaching assistant producing *editable* lesson drafts, student materials and slides. 🟢 Local-first is a compliance feature now, not an austerity one — it is what survives a district data-residency rule |
+| [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | 30 | 🟢 **MIT** — `main/LICENSE`, 1,090 B `ed2ed868dffc` | North America | Created 2026-02-12, surfaced here for the first time. **Knowledge Space Theory** end to end: materials → knowledge graph → adaptive assessment → JIT instruction planning. 🔵 The only row this base carries whose adaptivity rests on a **named learning theory** rather than a prompt chain |
+| [ASEpochs/ai-digital-teacher](https://github.com/ASEpochs/ai-digital-teacher) | 13 | 🔴 **UNGRANTED** — 14 root paths probed, HEAD `b9bdcd78a85e` | Global | Updated **2026-10-26**. Multimodal classroom observation: camera perception, behaviour reasoning, voice alerts. 🔴 The capability lands precisely where the EU AI Act and Vietnam's Law on AI are strictest, and there is nothing to license |
+| [bobuel/bloom-taxonomy-quiz-builder-skill](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 3 | 🔴 **UNGRANTED** — 14 root paths probed, HEAD `5fed5008499b` | Global | Source-grounded quiz building with teacher review at explicit **Bloom levels** — the right shape, ungranted |
+
+### 🟢 The window's actual discovery: the evaluation tier, which this base had recorded as nonexistent
+
+🔵 The standing gap read *"no open-source education-AI evaluation harness surfaced **at any star
+floor**"* across five product tokens. 🟢 On research tokens the tier is immediately present — and
+its star distribution explains the blindness: **every instrument is below 60★**, so every
+star-ordered sweep this base ran could not have reached it.
+
+| Repo | Stars | Grant (read first-hand) | Region | What it measures |
+|---|---|---|---|---|
+| [Khan/tutoring-accuracy-dataset](https://github.com/Khan/tutoring-accuracy-dataset) | 57 | 🟡 bespoke **Evaluation Dataset License**, 2,690 B `53cf7aa78a89` | North America | Khan Academy's own math-tutoring accuracy benchmark. 🔴 Internal non-commercial evaluation only |
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 45 | 🔴 **UNGRANTED**, 14 paths | EMEA | EMNLP 2025 **Oral**: open-ended pedagogical capability + a reward model for teacher responses |
+| [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 9 | 🟢 **MIT** code + **CC BY 4.0** items | LATAM | BNCC curriculum hallucination: 15,300 answers, 17 models, private held-out split |
+| [conradborchers/llm-instruction-benchmarking](https://github.com/conradborchers/llm-instruction-benchmarking) | 7 | 🔴 **UNGRANTED**, 14 paths | Global | AIED25 — can LLMs match tutoring-system **adaptivity**? |
+| [divadbaroon/TutorTrace_dataset_and_benchmark](https://github.com/divadbaroon/TutorTrace_dataset_and_benchmark) | 5 | 🔴 **UNGRANTED**, 14 paths | Global | Tutoring trace dataset + benchmark |
+| [isra-moussaoui/Multi-Agent-Tutoring-Systems](https://github.com/isra-moussaoui/Multi-Agent-Tutoring-Systems) | 5 | 🔴 **UNGRANTED**, 14 paths | Global | Whether multi-agent architectures reduce **pedagogical sycophancy** (BEA 2026) |
+| [acheamponge/wassce-benchmark](https://github.com/acheamponge/wassce-benchmark) | 4 | 🟢 **MIT**, 1,076 B `df8c7a998c17` | EMEA | Open LLMs on the **WASSCE** — ~2 M West African candidates a year |
+| [Yunfeng-Wan/CSTutorBench](https://github.com/Yunfeng-Wan/CSTutorBench) | 2 | 🔴 **CC BY-NC 4.0**, 313 B `9530f3063565` | APAC | 2,970 multi-turn CS-tutoring dialogues from real university forums |
+| [kcelestinomaria/overlooked-bench](https://github.com/kcelestinomaria/overlooked-bench) | 1 | 🟡 **AGPL-3.0**, 34,523 B `0d96a4ff68ad` | EMEA | What mainstream evals skip, incl. *education beyond the university track* |
+
+🔴 **The two usable instruments in that list are 4★ and 9★, from West Africa and Brazil.** The two
+regions this base has recorded as supply-absent for passes are the only two that supplied one.
+
+### 🔵 Movement on rows this base already carries
+
+| Repo | Stars now | prior reading | Note this window |
+|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | — | `p472`: 44,177 | 🟢 **Cross-pass control reproduced for the fourth consecutive pass**: `main/LICENSE` **11,408 B · `cd2f54e1e506`** at HEAD **`a31d82624c27`** — byte-, digest- **and HEAD**-identical to `p465`, `p466`, `p472`. The payload channel is the stable one |
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,103** | `p472`: 4,086 | 🔴 Still **CC BY-NC 4.0**, re-read first-hand: 19,347 B `41003d4a7474`. +17★ in a day; nine days old at `p472`, ten now. **Nobody may sell it**, and `intel/market.md` now carries its openly-licensed LATAM counterpart |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **36,211** | `p472`: 36,206 | 🟢 MIT. +5★ in a day — the curve has flattened sharply from its launch slope |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 2,049 | `p472`: 2,049 | 🔴 Unchanged, and still the **non-commercial bespoke licence** of `Gap 467-A`. 🔴 This pass found the same shape at **Khan Academy** — a grant sentence in MIT's form followed by `internally, solely`. The signature is not confined to small repositories |
+
 ## 🆕 `p472` — `2026-10-27` — **the week's movement is a 9-day-old curriculum knowledge graph at 4,086★ that nobody may sell, and the fact that `curl -sI` — the check this base is instructed to verify URLs with — returns 403 on every live repository**
 
 🔵 **Append-only.** The `p471` body and all prior passes stand unchanged below this section. Star

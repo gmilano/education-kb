@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **🟢 `Gap 467-I` IS CLOSED AND ITS PREMISE IS REFUTED: the learning-record / analytics tier is not copyleft-only, it is the MOST PERMISSIVE TIER THIS BASE HAS MEASURED — 5 of 9 rows permissive (55.6 %) against the agent tier's 42.9 %, including an MIT Learning Record Store. 🔴 And a permissive licence on these shelves has been carrying a clause nobody here has graded: ECL-2.0's patent grant is NARROWER than the Apache-2.0 it is derived from, by design and in writing.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness
+repo. **Nothing below is gate-attested.** Every address resolved first-hand (`git ls-remote
+--symref`); every grant read first-hand from `raw.githubusercontent.com`, body written to a file and
+the file measured (`Gap 468-A`). Stars from MCP `search_repositories`, **2026-10-27**, and
+**index-relayed, never first-hand** (`Gap 467-D`).
+🔴 `curl -sI` not used for verification — dead on this harness (`Gap 472-A`).
+
+### 🟢 `Gap 467-I` — what it said, and what the payloads say
+
+🔵 The gap read: *"No permissive row exists at the LRS / learning-analytics tier. The only Learning
+Record Store carried (`g3i/lxHive`) is GPL-2.0-or-later, so an xAPI analytics component cannot enter
+a proprietary deliverable from these shelves."* 🟢 Its closure contract was to **probe the
+xAPI / `caliper` / LRS vocabulary and grade every hit.** Run, graded, and the conclusion inverts.
+
+| Repo | Grant (path read, bytes, digest) | Stars | Region | Role, and what it is for |
+|---|---|---|---|---|
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** — `main/LICENSE`, 11,357 B `c71d239df917` | 144 | North America | 🟢 **A SQL-backed Learning Record Store** — Postgres/SQLite rather than a document store. Pushed **today** (`61594164edf5`). **The default LRS pick:** permissive, actively maintained, and it lands xAPI statements in a database a client's BI team already knows how to query |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** — `master/LICENSE`, 11,357 B `58d1e17ffe51` | 334 | North America | The **reference** LRS from the ADL Initiative, the body that authored the Experience API itself. 🔵 Use it as the conformance oracle to test against, even when shipping another |
+| [openfun/ralph](https://github.com/openfun/ralph) | 🟢 **MIT** — `main/LICENSE.md`, 1,094 B `08ea77291de9` | 51 | EMEA | 🟢 **An MIT-licensed LRS and learning-analytics pipeline** from **France Université Numérique**: FastAPI + Pydantic validation, Elasticsearch/ClickHouse backends, stream processing, a CLI. Pushed **today** (`91fef112394d`). 🔴 Its grant lives at `LICENSE.md`, not `LICENSE` — a root-path probe that stops at `LICENSE` publishes this row as ungranted |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **ECL-2.0** — `master/LICENSE`, 9,878 B `f339063d2f60` | 62 | North America | A standards-based learning-record **warehouse** speaking **xAPI, IMS Caliper and OneRoster** together — the only row here that bridges all three. 🔴 **Read the patent note below before building on it** |
+| [tl-its-umich-edu/my-learning-analytics](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** — `master/LICENSE`, 11,379 B `b89b380a589b` | 37 | North America | **MyLA**, University of Michigan: student-facing analytics dashboards (resource access, assignment planning, grade distribution) running against an LMS. 🟢 The *consumer* end of the pipeline, permissive — so a studio can restyle and extend the dashboards for a client |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0** — `development/LICENSE`, 11,323 B `6dc0e068dcf3` | 21 | North America | 🟢 **Randomised controlled trials inside a live LMS, over LTI**: assignment content differentiated by experimental condition, random assignment to arms, informed consent hidden from the teacher, non-consenting participants filtered from exports, identifiers stripped. 🔵 **This is the apparatus for proving an AI intervention worked** — and it is permissive. See `compose/patterns.md` `P473-3` |
+| [PlaypowerLabs/EdOptimize](https://github.com/PlaypowerLabs/EdOptimize) | 🟡 **GPL-3.0-or-later** — `master/LICENSE`, 35,149 B `3972dc9744f6` | 31 | APAC | K-12 learning-analytics platform in R: curriculum analytics, content usage, assessment dashboards. 🔴 Distribution copyleft — run it as an internal analysis tool, do not ship it |
+| [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | 🟡 **GPL-3.0-or-later** — `master/LICENSE`, 35,141 B `589ed823e9a8` | 585 | EMEA | The best-known open LRS (Learning Pool, UK/IE), **started 2014**. 🔴 **Last push 2024-05-30** — the highest-★ row in this tier is also the stalest. Named for recognition, not recommended |
+| [g3i/lxHive](https://github.com/g3i/lxHive) | 🟡 **GPL-2.0** — carried from prior passes | 79 | APAC | The row `Gap 467-I` was written about. It is real and it is copyleft; it was never the whole tier |
+
+### 🟢 The tier, stated as a number — and the comparison that makes it matter
+
+| grant class | rows | share |
+|---|---|---|
+| 🟢 Permissive (Apache-2.0 ×4, MIT ×1) | 5 | **55.6 %** |
+| 🟢 ECL-2.0 (permissive, narrowed patent grant) | 1 | 11.1 % |
+| 🟡 GPL-2.0 / GPL-3.0 | 3 | 33.3 % |
+| 🔴 Ungranted | **0** | **0 %** |
+
+🟢 **Zero ungranted rows in nine.** Against the agent tier (14.3 % ungranted, `p472`) and this pass's
+evaluation tier (**44.4 %** ungranted, `agents/top.md`), the infrastructure tier is the only shelf in
+this KB where a studio can pick by capability and not have the grant decide for it. 🔵 The reading:
+**standards-driven tiers are licensed tiers.** xAPI, Caliper and OneRoster are consortium
+specifications, and a project built to be interoperable is built to be adopted — which means it
+carries a grant.
+
+### 🔴 The new axis this pass is forced to open: ECL-2.0 is permissive, and its patent grant is not Apache's
+
+🔵 Two ECL-2.0 payloads were read first-hand and they are **1,242 B apart** — `OpenLRW` at 9,878 B
+`f339063d2f60`, [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) at 11,120 B
+`0688f62d04f1` (the same text with an SPDX-style title line prepended). 🔵 Another clean
+reproduction of *size identifies nothing*, on a family this base had never graded first-hand.
+
+🔴 **But the substance is the finding.** The payload states its own derivation in its second
+paragraph:
+
+> *"The Educational Community License version 2.0 ("ECL") consists of the Apache 2.0 license,
+> **modified to change the scope of the patent grant in section 3 to be specific to the needs of the
+> education communities** using this license."*
+
+🔴 **So ECL-2.0 is not "Apache-2.0 with a different name."** It is OSI-approved and permissive on
+copyright — modify freely, keep it closed, ship it — and its §3 patent licence is **deliberately
+narrower**. 🟢 Operative guidance, stated plainly because this base has been treating ECL as
+Apache-equivalent for several passes:
+
+- 🟢 **Copyright-wise, treat ECL-2.0 as permissive.** Sakai and OpenLRW may be forked, modified and
+  shipped closed. Nothing on this shelf changes.
+- 🔴 **Patent-wise, do not tell a client ECL-2.0 gives them Apache-2.0's patent peace.** Where a
+  client's counsel has approved *Apache-2.0* specifically — common in enterprise procurement — ECL-2.0
+  is a **different instrument requiring its own review**, and the clause that differs is the one
+  procurement cares about.
+- 🔵 **Registered as `Gap 473-B`:** every ECL cell on these shelves was graded on the Apache-family
+  resemblance of its body. The next pass should re-read §3 of each ECL payload directly and publish
+  the patent-scope sentence, rather than inferring it from the family.
+
+### 🔴 Declared gaps on this shelf
+
+- 🔴 **IMS Caliper is one row.** `OpenLRW` is the only Caliper-speaking row found, and the
+  `caliper` token on its own returned nothing usable at any star floor. The LRS tier is
+  **xAPI-shaped**; a client standardised on Caliper has one option and it is ECL-2.0.
+- 🔴 **No LRS row is LATAM- or Africa-origin.** The permissive five are North America ×4 and EMEA
+  (France) ×1. 🔵 This sits against the same pass's finding that the only usable *evaluation*
+  instruments are West-African and Brazilian — the regional asymmetry **inverts between tiers**, and
+  neither direction should be generalised from one pass.
+- 🔵 **`Gap 467-D` unchanged:** every star figure above is index-relayed. `api.github.com` → `403`
+  on this harness, reproduced once as a control this pass and not retried.
+
 ## 🆕 `p472` — `2026-10-27` — **🔴 THE EDUCATION STACK'S LOAD-BEARING CORE IS COPYLEFT AND ITS PERMISSIVE ALTERNATIVES ARE UNDER-KNOWN: Moodle GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0, `frappe/lms` AGPL-3.0 — while Sakai (ECL-2.0), OpenOLAT (Apache-2.0), Oppia (Apache-2.0) and Kolibri (MIT) sit permissive and unmentioned in every vendor comparison searched this pass. 🔴 And `frappe/lms` grants at `develop/license.txt` — a NINTH path, lowercase, absent from the seven-path probe set this base has used for 471 passes.**
 
 🔵 Stars from MCP `search_repositories`, **2026-10-27**. Licence column names the **path read

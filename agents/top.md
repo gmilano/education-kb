@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **🟢 THE "NO OPEN-SOURCE EDUCATION-AI EVALUATION HARNESS EXISTS" GAP THIS BASE HAS CARRIED FOR DOZENS OF PASSES IS CLOSED AND ITS PREMISE EXPLAINED: nine instruments exist, every one of them sits below 60★, and so every star-ordered sweep this base has ever run was structurally blind to the entire tier. 🔴 And the tier is the least usable shelf in this KB — 4 of 9 are UNGRANTED, Khan Academy's carries a bespoke licence that recites a permissive grant and then bars production use and model training, and the ONLY permissively-licensed education evaluation harness found anywhere is West-Africa-origin at 4★.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned outside
+the harness repo this pass. **Nothing below is gate-attested.** Checks re-implemented in this
+session's own code and green: frontmatter keys and closed-vocabulary `region` on all nine shelves;
+every table below checked for separator presence and pipe-count consistency, with **no header row
+published as data**; append-only preserved on both trending shelves and on these shelves by
+prepend-only edit; every address resolved first-hand by `git ls-remote --symref`
+([`evidence/p473-address-resolution.tsv`](../evidence/p473-address-resolution.tsv)); every grant
+read first-hand from `raw.githubusercontent.com`, body written to a file and the file measured
+(`Gap 468-A`). 43 graded cells in
+[`evidence/grant-class.2026-10-27-p473.tsv`](../evidence/grant-class.2026-10-27-p473.tsv).
+
+🔴 **`Gap 472-A` honoured, not retried.** `curl -sI https://github.com/HKUDS/DeepTutor` → `403`
+behind the proxy's own `200 Connection Established`; `api.github.com/repos/HKUDS/DeepTutor` → `403`.
+Reproduced once as a control and then abandoned, as `p472` prescribed.
+
+🟢 **Cross-pass control reproduced exactly, fourth consecutive pass.** `HKUDS/DeepTutor`
+`main/LICENSE` **11,408 B · `cd2f54e1e506`** at HEAD **`a31d82624c27`** — byte-, digest- **and
+HEAD**-identical to `p465`, `p466` and `p472`. The payload channel is stable; the index channel is
+not (stars read **44,177** by `p472` this morning).
+
+### 🟢 The standing evaluation-harness gap — CLOSED with nine named instruments, and the reason it stayed open
+
+🔵 The gap has been phrased on this shelf for many passes as *"no open-source education-AI
+evaluation harness surfaced at any star floor — searched `education agent`, `topic:edtech`,
+`topic:education-ai`, `topic:lms`, `grading topic:education`."* 🟢 **Every one of those tokens is a
+product vocabulary.** The supply is published as **benchmarks in the research literature** and
+named accordingly, so it answers to `benchmark`, `*Bench`, `llm-evaluation` and `evaluation-framework`
+and to none of the five tokens tried. Run on the research vocabulary, the tier appears at once.
+
+| Instrument | Repo | Grant (path read, bytes, digest) | Stars | Region | What it measures, and whether Globant may use it |
+|---|---|---|---|---|---|
+| **wassce-benchmark** | [acheamponge/wassce-benchmark](https://github.com/acheamponge/wassce-benchmark) | 🟢 **MIT** — `main/LICENSE`, 1,076 B `df8c7a998c17` | 4 | EMEA | 🟢 **The only permissively-licensed education evaluation harness this base has found, at any star floor, in any region.** Open LLMs scored on the **WASSCE**, the exam ~2 million West Africans sit every year. **Usable in a paid engagement without conditions** |
+| **bncc-benchmark** | [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **COMPOSITE** — `main/LICENSE` 911 B `d19733bb7540` → code **MIT** (`LICENSE-CODIGO.md` 1,286 B `e1ed7acaf9e2`) + items/results/methodology **CC BY 4.0** (`LICENSE-DADOS.md` 577 B `9b70e1d9a0c9`) | 9 | LATAM | 🟢 **LLM hallucination over Brazil's BNCC national curriculum**: 15,300 answers from 17 models, a published methodology and a **private held-out split against contamination**. 🟢 `CC BY 4.0` is **BY, not BY-NC** — the item bank is commercially usable with attribution. **Usable** |
+| **mathtutorbench** | [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 🔴 **UNGRANTED** — no payload at 14 root paths | 45 | EMEA | 🔴 **An EMNLP 2025 Oral benchmark for open-ended pedagogical capability, with a reward model for scoring teacher responses — and it grants nothing.** The most cited instrument in the tier is the one with no licence |
+| **tutoring-accuracy-dataset** | [Khan/tutoring-accuracy-dataset](https://github.com/Khan/tutoring-accuracy-dataset) | 🟡 **BESPOKE "Evaluation Dataset License"** — `main/LICENSE`, 2,690 B `53cf7aa78a89` | 57 | North America | Khan Academy's math-tutoring accuracy benchmark. 🔴 **Restricted to internal non-commercial model evaluation**; redistribution, **model training** and production use expressly prohibited, not sublicensable, and the restriction **propagates into any combined dataset**. 🟢 But §3 explicitly permits evaluating *products intended for commercial use* and commercial use of the *insights*. **Usable as an internal gate; never shippable** |
+| **CSTutorBench** | [Yunfeng-Wan/CSTutorBench](https://github.com/Yunfeng-Wan/CSTutorBench) | 🔴 **CC BY-NC 4.0** — `main/LICENSE`, 313 B `9530f3063565` (pointer form) | 2 | APAC | 2,970 multi-turn CS-tutoring dialogues from real university forums. 🔴 Payload states *"Commercial use is strictly prohibited."* **Not usable** |
+| **overlooked-bench** | [kcelestinomaria/overlooked-bench](https://github.com/kcelestinomaria/overlooked-bench) | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B `0d96a4ff68ad` | 1 | EMEA | A recurring benchmark aimed squarely at what mainstream evals skip, **"education beyond the university track"** and small/non-US organisational tasks, Kenya-origin. 🔴 Network copyleft: run it in CI, never inside the deliverable |
+| **TutorTrace** | [divadbaroon/TutorTrace_dataset_and_benchmark](https://github.com/divadbaroon/TutorTrace_dataset_and_benchmark) | 🔴 **UNGRANTED** — no payload at 14 root paths | 5 | Global | Dataset + benchmark, no stated grant |
+| **llm-instruction-benchmarking** | [conradborchers/llm-instruction-benchmarking](https://github.com/conradborchers/llm-instruction-benchmarking) | 🔴 **UNGRANTED** — no payload at 14 root paths | 7 | Global | AIED25: *can LLMs match tutoring-system adaptivity?* — the adaptivity question stated as a measurement, ungranted |
+| **Multi-Agent-Tutoring-Systems** | [isra-moussaoui/Multi-Agent-Tutoring-Systems](https://github.com/isra-moussaoui/Multi-Agent-Tutoring-Systems) | 🔴 **UNGRANTED** — no payload at 14 root paths | 5 | Global | Whether multi-agent architectures reduce **pedagogical sycophancy**, on the BEA 2026 propositional-logic benchmark. 🔵 The question a studio should be asking of its own tutor, with no grant to borrow |
+
+### 🔴 The evaluation tier, stated as a number — and it is the worst shelf in this KB
+
+| grant class | instruments | share | Globant can build on it? |
+|---|---|---|---|
+| 🔴 **UNGRANTED** | 4 | **44.4 %** | **No** |
+| 🟢 Permissive (MIT, incl. the composite's code half) | 2 | 22.2 % | Yes |
+| 🔴 NonCommercial / bespoke non-shippable | 2 | 22.2 % | Internal evaluation only, never shipped |
+| 🟡 AGPL-3.0 | 1 | 11.1 % | CI-side only, outside the deliverable |
+
+🔴 **Set that against this base's own agent tier, which `p472` measured at 42.9 % permissive and
+14.3 % ungranted.** The tier that exists to *verify* education AI is **three times more likely to be
+ungranted** than the tier it verifies. 🔵 The causal reading is plain and worth carrying: the agent
+tier is built by people shipping products, who reach for a licence; the evaluation tier is built by
+researchers shipping papers, for whom the artefact of record is the PDF and the repository is a
+supplement.
+
+🟢 **And the single operative sentence for an engagement:** the only education evaluation instrument
+that may enter a deliverable unconditionally is **4★ and from West Africa**, and the second is
+**9★ and from Brazil**. The two regions this base has recorded for passes as *supply-absent* are
+the only two that supplied a usable one.
+
+### 🟢 New permissive agent rows, grant-verified this pass
+
+| Agent | Repo | Grant (path read, bytes) | Stars | Region | What it is |
+|---|---|---|---|---|---|
+| **knowledge-spaces** | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** — `main/LICENSE`, 1,090 B `ed2ed868dffc` | 30 | North America | 🟢 **Knowledge Space Theory as a working pipeline**, 10 agent skills: course materials → knowledge graph → adaptive assessment → personalised materials → just-in-time instruction planning. Vanderbilt Data Science. 🔵 The one row on this shelf with a **named learning theory** under the adaptivity, rather than a prompt chain |
+| **lineage-skill** | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 🟢 **Apache-2.0** — `main/LICENSE`, 11,358 B `cfc7749b96f6` | 463 | Global | Videos, PDFs, transcripts and notes → **source-backed** teacher skills. 🔵 Its licence payload is **digest-identical** to `oppia/oppia`'s — see the instrument note below |
+| **Claw-ED** | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** — `main/LICENSE`, 1,078 B `4d5d987f4f89` | 63 | Global | **Local-first** AI teaching assistant producing *editable* lesson drafts, student materials and slides. 🟢 Local-first matters where the EU AI Act's high-risk duties or a district data-residency rule bite |
+
+### 🔴 Two ungranted newcomers, named rather than dropped
+
+| Repo | Stars | Probe result | Why it is worth naming anyway |
+|---|---|---|---|
+| [ASEpochs/ai-digital-teacher](https://github.com/ASEpochs/ai-digital-teacher) | 13 | 🔴 **UNGRANTED** at 14 root paths, HEAD `b9bdcd78a85e` | Multimodal **classroom observation**: camera perception, behaviour reasoning, voice alerts. 🔴 The capability sits exactly where the EU AI Act is strictest and the grant is absent — a row to watch, not to use |
+| [bobuel/bloom-taxonomy-quiz-builder-skill](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 3 | 🔴 **UNGRANTED** at 14 root paths, HEAD `5fed5008499b` | Source-grounded quiz building with teacher review at explicit **Bloom levels** — the shape `compose/patterns.md` wants, with nothing to borrow |
+
+### 🔴 `Gap 467-A`'s signature reproduced independently, on a major organisation's repo
+
+🔵 `Gap 467-A` said: *a permissive grant FORM is not a permissive grant*, proved on `CaviraOSS/PageLM`,
+and warned that the signature to re-sweep is a grant sentence in a bespoke instrument.
+🔴 **Khan Academy's `Evaluation Dataset License` is that shape exactly**, and it is not a hobby repo:
+
+> *"permission to use the Dataset internally, solely for purposes of evaluating artificial
+> intelligence models… including, without limitation, the rights to use, copy, modify, merge, or
+> combine with other data"*
+
+🔵 Read to the end of that sentence and it says `internally, solely`. Read only the familiar middle
+and it reads as MIT. 🟢 **The gap's prescription holds and is now two-for-two across unrelated
+publishers** — the restriction override must run on *every* payload carrying a permissive grant
+sentence without a recognised title, not merely on the ones that look amateur.
+
+### 🟢 An instrument result this pass did not go looking for: the digest rule, demonstrated in BOTH directions in one sweep
+
+🔵 `p466`'s standing rule is *"digest identifies licence text + holder; size identifies nothing."*
+This pass's Apache-2.0 population tests it from both sides at once:
+
+| observation | payloads | reading |
+|---|---|---|
+| 🔴 **11,357 B, THREE different digests** | `lrsql` `c71d239df917` · `ADL_LRS` `58d1e17ffe51` · `uol-redacoes-xml` `b40930bbcf80` | A size screen at 11,357 would call three distinct payload instances one file. 🔵 And the causes are legible: `lrsql`↔`ADL_LRS` differ by a **leading blank line against a missing trailing newline — two changes that cancel to the byte**; `uol-redacoes-xml` carries the **pre-2019 GitHub template with `{}` placeholders** where the others carry `[]`, the same length either way |
+| 🟢 **11,358 B, ONE digest shared by two unrelated repos** | `lineage-skill` and `oppia/oppia`, both `cfc7749b96f6` | 🟢 The digest correctly identifies the *same* canonical instance across repositories that share no authorship |
+| 🔴 **Apache-2.0 spans 10,982 → 11,408 B this pass alone** | 8 payloads, **6 distinct byte values, 7 distinct digests** | OpenOLAT 10,982 · terracotta 11,323 · (11,357 ×3) · (11,358 ×2) · my-learning-analytics 11,379 · DeepTutor 11,408 |
+
+🟢 **So `Gap 465-A`'s amendment gets a third canonical Apache-2.0 family**: bare SPDX (~10,273 B),
+GitHub-template-with-APPENDIX in **brackets**, and GitHub-template-with-APPENDIX in **braces** — and
+the last two are **the same size**. Declaring raw bytes is necessary, declaring *which* canonical
+text is necessary, and **only the digest is sufficient.**
+
+### 🔵 Declared gaps on this shelf
+
+- 🔴 **`Gap 473-A` — the evaluation tier's 44 % ungranted rate is measured at n = 9 and that is too
+  small to carry.** The tier was found on one vocabulary in one pass. Next pass should run
+  `*Bench` / `llm-evaluation` / `evaluation-framework` / `topic:benchmark` with **no star floor** and
+  publish hits, novel-by-address and **usable supply after relevance grading** as three separate
+  numbers (`Gap 467-H`), so the rate is tested rather than assumed.
+- 🔴 **Four ungranted instruments are worth one email each, and that is not a repository action.**
+  `mathtutorbench` (ETH Zurich), `TutorTrace`, `llm-instruction-benchmarking` (AIED25) and
+  `Multi-Agent-Tutoring-Systems` are all academic artefacts whose authors almost certainly intend
+  openness. Recorded as **ungranted**, because intent is not a licence.
+- 🔵 **No LATAM-origin conversational *agent* surfaced even on the language axis.** The Portuguese
+  leg (`intel/market.md`, `repos/foundations.md`) returned a school information system, a gradebook,
+  a curriculum dataset, an essay corpus and a benchmark — **infrastructure and content, no tutor.**
+  Stated as an informed asymmetry, not as coverage.
+
 ## 🆕 `p472` — `2026-10-27` — **🔴 THE VERIFICATION CHANNEL THE STANDING TASK PRESCRIBES IS A UNIFORM FALSE-NEGATIVE GENERATOR: `curl -sI https://github.com/<repo>` returned 403 on 31 of 31 repositories verified-live this pass, and its single non-403 was the proxy's own `Connection Established` line, not GitHub's. 🔴 And on the live top tier only 6 of 14 agents are build-on-able — the single most-starred AI tutor on GitHub (29,550★) carries NO GRANT AT ALL, and a 2,049★ repo that reads open ships a bespoke NON-COMMERCIAL licence.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned outside

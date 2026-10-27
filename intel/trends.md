@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **🟢 THE TREND EVERY SOURCE THIS PASS AGREES ON IS THE ONE THE OPEN-SOURCE SUPPLY CANNOT SERVE: five independent bodies — 1EdTech, the OECD, HolonIQ, a US state legislature and the EU AI Act — are all converging on DEMONSTRABLE EVIDENCE as the 2026 requirement, and the open evaluation tier that would supply it is 44.4 % UNGRANTED with exactly two usable instruments worldwide.**
+
+🔵 Every trend below is attributed to the body that stated it, with source class named. 🔴 Vendor
+roundups are marked and are not primary research. 🟢 Where this pass measured something first-hand
+instead of relaying it, the measurement is given with its payload digest.
+
+### 🟢 Trend 1 — the year's consensus is *evidence*, and the convergence is independent
+
+🔵 Five bodies with no shared interest arrived at the same requirement inside one window:
+
+| body | what it said | source class |
+|---|---|---|
+| **1EdTech** | AI in education is shifting **from experimentation to governance**; clear policies, data boundaries and oversight become essential | standards consortium |
+| **OECD** (2026 Digital Education Outlook) | move **beyond general-purpose AI tools toward purpose-built educational AI** | multilateral analyst, via roundup |
+| **HolonIQ** | systems increasingly expect **evidence that products improve learning quality, persistence, well-being or job-relevant skills** | analyst |
+| **Oklahoma SB 1734** | bars **AI as the main basis for grading or discipline**; every district to hold a written AI policy before 2027-28 | legislative tracker |
+| **EU AI Act** | education access and assessment are **high-risk**: conformity assessment plus human oversight able to monitor, intervene, override and shut down | regulation, commentary-relayed |
+
+🟢 **Four of the five are not asking for better models. They are asking to be shown the working.**
+🔴 And the open-source tier that would show it is this KB's worst-licensed shelf: nine instruments,
+**four ungranted** (including ETH Zurich's EMNLP-2025-Oral `mathtutorbench`), one NonCommercial, one
+bespoke internal-eval-only, one AGPL — and **two** usable, at **4★** and **9★**
+(`agents/top.md`). 🔵 **The trend and the supply are moving in opposite directions**, which is the
+most commercially legible fact this pass produced.
+
+### 🟢 Trend 2 — capability has commoditised at the agent tier; the grant has not
+
+🔵 Measured first-hand across this pass and `p472`:
+
+| tier | permissive share | ungranted share | measured where |
+|---|---|---|---|
+| 🟢 Learning-record / analytics infrastructure | **55.6 %** (+11.1 % ECL-2.0) | **0 %** | `repos/foundations.md`, n = 9 |
+| 🟡 Agents | 42.9 % | 14.3 % | `agents/top.md` `p472`, n = 14 |
+| 🔴 Evaluation / benchmarks | 22.2 % | **44.4 %** | `agents/top.md` `p473`, n = 9 |
+
+🟢 **The ordering is not random and the mechanism is readable.** The infrastructure tier is built to
+**consortium specifications** — xAPI, IMS Caliper, OneRoster — and a project built to interoperate is
+built to be adopted, so it carries a grant. The agent tier is built by people shipping products, who
+reach for a licence out of habit. The evaluation tier is built by researchers whose artefact of
+record is the **paper**; the repository is a supplement, and a supplement does not get a LICENSE
+file. 🔵 **Prediction for the next pass to test:** any education-AI tier defined by a published
+*specification* will show a near-zero ungranted rate, and any tier defined by a published *paper*
+will show a high one. `caliper`, `OneRoster`, `LTI` and `QTI` are the specification-side tokens;
+`*Bench`, `AIED`, `BEA` and `EDM` are the paper-side ones.
+
+### 🟢 Trend 3 — binding AI law is now in force in APAC, and education is named high-risk by statute
+
+🔵 Not proposed, in force:
+
+- 🟢 **South Korea** — the **AI Basic Act took effect 2026-01-22**, reported as the world's second
+  comprehensive AI law.
+- 🟢 **Vietnam** — **Law on AI No. 134/2025/QH15 in force 2026-03-01**, and a government list classes
+  **education AI (automated assessment, behavioural monitoring) as high-risk**. 🔴 Compliance
+  deadline disputed between sources: **2027-03-01** with a six-month grace for running systems, or
+  **2027-09-01**.
+- 🟡 **Japan / Singapore / Australia** — voluntary guidelines, a voluntary testing toolkit, and a
+  National AI Plan (Dec 2025) resting on technology-neutral law with **mandatory guardrails paused**.
+
+🔴 **The live trend is divergence, not harmonisation.** Within one region, a behavioural-monitoring
+tutor is a statutory high-risk system in Vietnam, a voluntary-toolkit matter in Singapore and
+unregulated-by-design in Australia. 🔵 A multi-country APAC rollout cannot carry one compliance
+posture, and `intel/market.md` now records the instruments by name.
+
+### 🔴 Trend 4 — classroom restriction is arriving from directions a vendor roadmap does not model
+
+🔵 Three distinct restriction mechanisms were observable in one pass, none of them a national
+curriculum rule:
+
+| mechanism | instance | why it is the awkward one |
+|---|---|---|
+| 🔴 **District moratorium** | New York City's one-year ban on student-facing AI through eighth grade, promoted as a template (carried from `p472`) | the buyer and the banner are the same institution |
+| 🔴 **Decision-authority limits** | Oklahoma SB 1734 — AI barred as the **main basis** for grading or discipline | constrains the architecture, not the procurement |
+| 🟡 **Consent gates** | Alabama and Missouri bills requiring **written parental opt-in** | makes per-student enablement a product requirement |
+| 🔵 **Student-authored restriction** | the **STUDENTS FIRST Act of 2026**, written by students from all 50 states with Day of AI and AASA, proposing that students not use AI to generate written or artistic work — a proposal, not law | the constituency assumed to be pulling hardest is pushing back |
+
+🟢 **Operative reading:** the restrictions cluster on **student-facing generation** and on
+**AI-as-decision-maker**, and leave **teacher-facing preparation** and **measurement** largely
+untouched. That is a product-shape instruction, not a market-size one — and it points at exactly the
+tier `compose/patterns.md` `P473-3` builds.
+
+### 🟢 Trend 5 — adoption figures have stopped being the interesting number
+
+🔵 This pass's legs returned **92 %** of university students using AI (one 2026 report) and **86 %**
+across 16 countries (a second, different method), against **~60 %** of US K-12 teachers (Gallup, via
+roundup) and **26 %** of US teens using ChatGPT for schoolwork (Pew, via roundup).
+
+🔴 **Four figures, four methods, no comparability** — and none of them changes a decision. 🟢 The
+pair that does is UNESCO IESALC's LATAM **87 % using / 26 % with a strategy**, because the two halves
+are measured on the same population by the same instrument, and the gap between them is the scope of
+work. 🔵 **Rule for this file going forward:** an adoption percentage is worth carrying only when its
+denominator is shared with a governance percentage. Otherwise it is a headline, not a finding.
+
+### 🔴 Trend 6 — a counter-trend this base is positioned to see and the literature is not: discovery language is now a market boundary
+
+🟢 This pass ran the LATAM leg on **Portuguese and Spanish tokens** rather than English, as
+`Gap 467-E` prescribed, and the standing finding inverted: LATAM open-source education supply went
+from *"1 row in 103, archived"* to a working stack — a school information system with **552 forks**,
+a gradebook, the **national curriculum as MIT-licensed open data** (1,721 objectives) and a
+**CC BY 4.0** benchmark over it (`intel/market.md`).
+
+🔴 **And the language boundary reaches past discovery into grading.** `portabilis/i-diario`'s licence
+payload is an **AGPL-3.0 in Portuguese** — `LICENÇA PÚBLICA GERAL AFFERO GNU`, 35,326 B
+`fe85f94658bf`, read first-hand — which every English-title-anchored reader on this base returns as
+`UNSTATED` (`verticals/solutions.md`, `Gap 473-C`).
+
+🔵 **The trend statement, generalised and testable:** *the apparent geography of open-source supply
+is substantially an artefact of the searcher's language.* 🟢 It predicts that the same leg run in
+**Arabic and Turkish** will move the EMEA Middle East / Africa picture the way Portuguese moved
+LATAM — registered as **`Gap 473-E`** and the cheapest high-value leg available to the next pass.
+
+### 🔵 Declared gaps on this shelf
+
+- 🔴 **Trend 2's tier comparison rests on n = 9, n = 14, n = 9.** The ordering is clean and the
+  mechanism is plausible, and neither makes it robust. It must be re-measured at a larger
+  denominator before it carries a client argument.
+- 🔴 **No trend on this file is primary-sourced for the EU.** `europa.eu` does not resolve from this
+  host; every AI Act date is commentary-relayed (`intel/market.md`).
+- 🟡 **Trend 5's rule retires figures this file has previously led with.** Applied strictly, the
+  92 % / 86 % / 60 % / 26 % set is demoted to context. Recorded as a deliberate demotion so a later
+  pass does not read their absence as a gap in coverage.
+
 ## 🆕 `p472` — `2026-10-27` — **🔴 THE BINDING CONSTRAINT ON THE EDUCATION-AI SHELF IS NO LONGER CAPABILITY OR COST — IT IS THE GRANT, and the correlation runs the wrong way: of the five most-starred education-AI repositories live this window, THREE cannot enter a paid deliverable. Star rank is anti-predictive of usability at the top of this market.**
 
 🔵 Eight trends. Each is stated as a claim, with the measurement or source that supports it and the

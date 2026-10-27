@@ -1,0 +1,21 @@
+== 1. frontmatter keys + closed-vocabulary region ==
+  OK   top.md                     industry=education region=Global updated=2026-10-27
+  OK   trending.md                industry=education region=Global updated=2026-10-27
+  OK   foundations.md             industry=education region=Global updated=2026-10-27
+  OK   trending.md                industry=education region=Global updated=2026-10-27
+  OK   solutions.md               industry=education region=Global updated=2026-10-27
+  OK   market.md                  industry=education region=Global updated=2026-10-27
+  OK   trends.md                  industry=education region=Global updated=2026-10-27
+  OK   patterns.md                industry=education region=Global updated=2026-10-27
+  OK   open-gaps.md               industry=education region=Global updated=2026-10-27
+== 2. p473 tables: separator present, pipe count consistent, no header row as data ==
+  31 tables, 157 data rows across 9 shelves
+== 3. append-only containment on the two trending shelves, vs git HEAD ==
+  OK   agents/trending.md     prior body contained verbatim: True (old 4338120 B -> new 4345011 B)
+  OK   repos/trending.md      prior body contained verbatim: True (old 3305811 B -> new 3312983 B)
+== 4. single canonical Opportunities block with 5 region children ==
+  OK   bare canonical blocks=1, children=['North America', 'EMEA', 'APAC', 'LATAM', 'Global']
+== 5. every sha256-12 printed on a shelf is in the evidence ledger ==
+  37 distinct 12-hex values printed; 0 not in evidence
+
+== RESULT: ALL CHECKS GREEN ==

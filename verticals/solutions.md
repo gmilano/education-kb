@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p473` — `2026-10-27` — **🔴 EVERY LICENCE READER THIS BASE HAS BUILT IS KEYED ON ENGLISH TITLE STRINGS, AND THE LATAM LANGUAGE AXIS BREAKS IT ON THE FIRST TRY: `portabilis/i-diario`'s grant payload is an AGPL-3.0 IN PORTUGUESE — "LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3" — which every English-anchored screen on these shelves returns as UNSTATED. 🟢 And Brazil's largest free school software turns out to be a licence-boundary trap shipped as one product: the school information system is GPL-2.0-or-later and its own gradebook is AGPL — distribution trigger beside network trigger, from the same vendor, in the same deployment.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness
+repo. **Nothing below is gate-attested.** Every address resolved first-hand (`git ls-remote
+--symref`); every grant read first-hand from `raw.githubusercontent.com`, body written to a file and
+the file measured (`Gap 468-A`). 🔴 `curl -sI` not used — dead here (`Gap 472-A`).
+
+### 🔴 The instrument result, first, because it invalidates a screen rather than a row
+
+🔵 `Gap 467-E` prescribed running the LATAM leg *"on the language axis (`pt`/`es` tokens) … not the
+English vocabulary."* 🟢 It was run. 🔴 **The first Brazilian repository it reached does not merely
+sit outside the English discovery vocabulary — its licence payload sits outside the English
+GRADING vocabulary:**
+
+| repo | grant path read | bytes · digest | title block as served | what an English-anchored reader returns |
+|---|---|---|---|---|
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | `1.6/LICENSE` | **35,326 B** · `fe85f94658bf` | **`LICENÇA PÚBLICA GERAL AFFERO GNU`** / `Versão 3, 19 de novembro de 2007` | 🔴 **`UNSTATED`** — no substring of `GNU AFFERO GENERAL PUBLIC LICENSE` is present in the payload |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | `2.12/LICENSE` | **18,092 B** · `8177f9751321` | `GNU GENERAL PUBLIC LICENSE` / `Version 2, June 1991` | 🟢 `GPL-2.0`, and the **`or-later`** election is present (`any later version`) |
+
+🔴 **Two consequences, both load-bearing:**
+
+1. **The strongest copyleft on these shelves can hide behind a language.** AGPL-3.0 is the one family
+   whose trigger is *network use* — the trigger a studio hosting software for a client actually
+   pulls. A screen that reads `i-diario` as ungranted would file it as "no rights at all" (safe, by
+   accident); a screen that defaults ungranted-to-permissive would file the single riskiest row on
+   this shelf as free to host. 🔵 `Gap 468`'s version axis and `p467`'s `grant_class` both anchor on
+   the **English** title block, so both fail here, in opposite directions depending on their default.
+2. 🟡 **A translated GNU licence is not the operative licence, and that is not a loophole.** The FSF
+   does not approve translations as legally operative text; the operative grant is the English
+   AGPL-3.0, and this payload is an unofficial rendering of it. 🔴 **The obligations are unchanged**:
+   `i-diario` is **AGPL-3.0-or-later** (`qualquer versão posterior`, read first-hand) and hosting a
+   modified build for a client's users triggers source disclosure **to those users**.
+
+🔵 **Registered as `Gap 473-C`:** add a **non-English title layer** to every grant reader on this
+base — at minimum the Portuguese and Spanish GNU-family renderings (`LICENÇA PÚBLICA GERAL`,
+`LICENCIA PÚBLICA GENERAL`, `AFFERO`, `Versão`/`Versión`) and the `or-later` elections that go with
+them (`qualquer versão posterior`, `cualquier versión posterior`). 🔴 Until that exists, **no LATAM
+or Iberian row on these shelves may be graded `UNSTATED` without reading its payload by eye.**
+
+### 🟢 The LATAM public-education stack, grant-verified — and why it is one trap, not two products
+
+🔵 [`portabilis`](https://github.com/portabilis) ships what its own README calls *"o maior software
+livre de educação do Brasil"*, as two repositories that deploy together.
+
+| Component | Repo | Grant (path read, bytes, digest) | Stars · forks | What it does |
+|---|---|---|---|---|
+| **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🟡 **GPL-2.0-or-later** — `2.12/LICENSE`, 18,092 B `8177f9751321` | **720** · **552** | The **student information system**: enrolment, school records, student and staff registries, reporting. PHP/Laravel, classed as Brazilian *software público*. 🟢 552 forks is a real municipal install base, not a star count |
+| **i-diario** | [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0-or-later** — `1.6/LICENSE`, 35,326 B `fe85f94658bf`, **payload in pt-BR** | 117 · 62 | The teacher-facing **gradebook / diário de classe**: attendance, marks, lesson records, feeding i-educar |
+
+🔴 **The trap, stated as the engagement sees it.** A LATAM ministry or municipality engagement that
+hosts this stack as a service crosses **two different copyleft triggers in one deployment**:
+
+- 🟡 `i-educar` is **GPL-2.0-or-later** → the trigger is **distribution**. Host it unmodified as a
+  service and nothing is owed. 🟢 And `or-later` means it **may be combined forward** with GPL-3.0
+  components — the same election `Gap 467` read on `oat-sa/tao-core`.
+- 🔴 `i-diario` is **AGPL-3.0** → the trigger is **network use**. Modify it and let the client's
+  teachers reach it over a network and **the modified source is owed to those teachers**. An AI
+  grading assistant wired *into* `i-diario` is a modification.
+- 🔴 **18,092 B is a new GNU size on these shelves.** Every GNU payload this base had carried sat at
+  34–35 KB; GPL-2.0's canonical text is ~18 KB. 🔵 A screen with a GNU size band learned from
+  AGPL/GPL-3.0 observations would not have recognised `i-educar`'s licence at all.
+
+🟢 **The pattern that avoids both**: leave `i-diario` unmodified and reach it over its API, putting
+the AI layer outside the copyleft boundary — the `scorm-again` / LTI firewall shape already on this
+shelf, applied to a LATAM incumbent. Written up as `compose/patterns.md` `P473-2`.
+
+### 🟢 More LATAM supply, graded — the language axis paid out beyond the stack
+
+| Repo | Grant (path read, bytes) | Stars | Country | Why it is on a vertical shelf |
+|---|---|---|---|---|
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** — `main/LICENSE`, 1,092 B `e162f8f4b461` | 22 | Brazil | 🟢 **Brazil's BNCC national curriculum as verified open data**: **1,721 learning objectives** in JSON, SQLite and CSV, **per-record provenance**, a reproducible extraction pipeline, and an MCP surface. 🟢 **A single MIT grant covering the whole repository** — probed for a separate data licence at three paths, all `404`, so the code grant is the only grant and it covers the compilation. Holder: *Profy Tecnologias Educacionais Ltda* |
+| [gpassero/uol-redacoes-xml](https://github.com/gpassero/uol-redacoes-xml) | 🟢 **Apache-2.0** — `master/LICENSE`, 11,357 B `b40930bbcf80` | 39 | Brazil | A corpus of **UOL's ENEM-style essay bank in XML**, built for Portuguese NLP validation. 🟢 The automated-essay-scoring substrate for pt-BR, permissively licensed |
+| [fauzcategui/moodle-sence](https://github.com/fauzcategui/moodle-sence) | 🟡 **GPL-3.0-or-later** — 🔴 `master/license.txt` **(lowercase)**, 35,126 B `c3bc1fd94148` | 29 | Chile | A Moodle plugin recording attendance into **SENCE**, Chile's national training service. 🔵 Copyleft is unavoidable here — it is a Moodle plugin and Moodle is GPL. 🔴 **Its grant is at lowercase `license.txt` — `Gap 472-B` reproduced independently**, see below |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 🟢 **MIT** — `main/LICENSE`, 1,070 B `277707dcaa3b` | 135 | Chile | Curated, normalised Chilean public data **including education**, consumable from Polars/DuckDB/SQLite in one line. Created 2026-05-30 |
+| [prefeiturasp/dados-educacao](https://github.com/prefeiturasp/dados-educacao) | 🔴 **UNGRANTED** — no payload at 11 root paths, HEAD `9e6516753747` | 57 | Brazil | São Paulo's municipal education open-data analyses. 🔴 **A city government's own repository with no licence** — named rather than dropped |
+
+### 🟢 `Gap 472-B` reproduced on an unrelated repo, so it is a rule and not an anecdote
+
+🔵 `p472` registered the gap on `frappe/lms` (grant at `develop/license.txt`) and prescribed adding
+lowercase paths to the probe set. 🟢 Done — and this pass's 14-path set caught a **second**
+independent case, `fauzcategui/moodle-sence` at `master/license.txt`, in a different country,
+language, ecosystem and licence family. 🔴 **Both rows would have published as UNGRANTED under the
+pre-`p472` probe set.** The gap's prescription is now load-bearing, not speculative: two of the 36
+granted rows this pass (5.6 %) grant **only** at a lowercase path.
+
+### 🟢 A published licence claim REFUTED by its own payload — and the literature disagreed with itself first
+
+🔵 The vertical-platform leg this pass searched returned an LMS roundup set in which **three sources
+state three different licences for Open edX**: *"Released under AGPLv3"*, *"Apache License 2.0: Used
+by Open edX. Allows proprietary modifications"*, and *"the core is AGPL with some libraries under
+Apache 2.0."*
+
+🔴 **Read first-hand, there is nothing to average.** `openedx/edx-platform` `master/LICENSE` is
+**AGPL-3.0, 35,136 B `e12d78569742`**, at HEAD `03698e2b6ff4`.
+
+🔴 **The consequential source is the one that is wrong in the permissive direction.** *"Allows
+proprietary modifications"* is the precise opposite of what AGPL-3.0 does to a hosted modified
+build, and it is the sentence a studio would act on. 🟢 This is the third pass in which a market- or
+listicle-sourced licence claim has been refuted by a payload read, and the standing rule stands:
+**a licence is read from the repository, never from a comparison table.**
+
+### 🔴 The hosting tier's licence shape, stated as a number
+
+🔵 Across the nine LMS / platform cores graded first-hand this pass and last:
+
+| grant class | platforms | which |
+|---|---|---|
+| 🔴 **AGPL-3.0 — network-use trigger** | 4 | Open edX `35,136 B` · Canvas `34,520 B` · frappe/lms `33,893 B` · ClassroomIO `34,523 B` |
+| 🟡 GPL — distribution trigger | 2 | Moodle `35,147 B` (`main/COPYING.txt`) · Chamilo |
+| 🟢 Permissive / ECL | 4 | Kolibri **MIT** `1,097 B` `3c056b34a476` · OpenOLAT **Apache-2.0** `10,982 B` · Oppia **Apache-2.0** `11,358 B` · Sakai **ECL-2.0** `11,120 B` |
+
+🔴 **The AGPL rows are concentrated at exactly the tier a studio HOSTS.** Four of the ten
+best-known open LMS cores put network copyleft on the component that faces the client's learners,
+which is the one deployment shape every engagement actually takes. 🔵 That is not an argument
+against them — it is an argument for deciding the licence boundary **before** the architecture, not
+after.
+
+🟢 **`learningequality/kolibri` is now grant-verified MIT, first-hand** (`develop/LICENSE`, 1,097 B
+`3c056b34a476`, holder *Learning Equality*), where `p472` carried it from a shortlist. 🟢 With
+**1,012 forks** and offline-first as a design premise rather than a feature, it remains the pick
+wherever connectivity or compute is the binding constraint. 🔵 Precision on region: Kolibri's
+**origin** is North America; its **deployment strength** is LATAM, Africa and rural APAC. Those are
+different facts and this shelf has previously printed only the second.
+
+### 🔴 Declared gaps on this shelf
+
+- 🔴 **The Spanish leg is thin and that is a measurement, not a silence.** The `educacion` token at
+  ≥20★ returned **8 repositories**, of which **one** (`moodle-sence`, 29★) is education
+  *infrastructure*; the rest are Spanish-language programming curricula and open-data projects.
+  🟢 The Portuguese token at ≥20★ returned **15**, including a school information system, a
+  gradebook, a curriculum dataset and an essay corpus. **Within LATAM, the open-source education
+  supply is Brazilian** on this evidence, and the next pass should test that at a lower star floor
+  before it is carried as a standing position.
+- 🔴 **No LATAM-origin LMS core surfaced.** `i-educar` is an SIS and `menthor` (Brazil, Apache-2.0)
+  remains archived. The LATAM incumbent LMS is still **Chamilo** — GPL-3.0 and Spain-origin, not
+  LATAM-origin, with a LATAM install base. Stated as an informed gap.
+- 🔵 **`Gap 473-B` (ECL-2.0 patent scope) applies here too.** Sakai is this shelf's only permissive
+  LMS with a gradebook of record, and its patent grant is narrower than Apache-2.0's by design — see
+  `repos/foundations.md`.
+
 ## 🆕 `p472` — `2026-10-27` — **🟢 THE PERMISSIVE SHORTLIST, NAMED: for a client that must keep its modifications closed, the education vertical has exactly five viable cores — Sakai (ECL-2.0), OpenOLAT (Apache-2.0), Oppia (Apache-2.0), Kolibri (MIT), Academico (MIT) — and NOT ONE of them appears in the vendor LMS comparison this pass searched, which lists seven platforms and never states that Sakai is permissive.**
 
 🔵 Every grant below read first-hand from `raw.githubusercontent.com` this pass, body written to a
