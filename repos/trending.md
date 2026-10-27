@@ -3,6 +3,139 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-Y` IS CLOSED WITH A COMPLETE ADDRESS CENSUS — all **3,198** distinct repository addresses across **11,125** citations on all eight shelves were resolved first-hand — and `Gap 479-X` gets the correction table it has been asking for across three passes: **64 dead addresses carrying 153 citations**, published by name. 🟢 It also kills a false alarm: **15 of the "dead" addresses were never repositories at all.** 🔴 And the Caliper finding finally has substance: **every Caliper SDK address this base cites is dead, while the spec repo is alive.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. **Nothing below is gate-attested.** Append-only preserved: this section sits above `p479` and the full
+history is retained below it, unedited.
+
+---
+
+### 🟢 `Gap 479-Y` closed — a complete address census, not a sample
+
+🔵 `Gap 479-Y`: *"No address census ran this pass. `p478`'s 3,245-address sweep is neither refreshed nor
+refuted."* 🟢 It is now refreshed, end to end
+([`evidence/address-census-summary.2026-10-27-p480.tsv`](../evidence/address-census-summary.2026-10-27-p480.tsv)):
+
+| measure | value |
+|---|---|
+| distinct `owner/repo`-shaped addresses cited across all eight shelves | **3,198** |
+| total citations | **11,125** |
+| addresses resolving via `git ls-remote` | **3,118** |
+| addresses not resolving | **80** |
+| — of which `github.com/topics/…` or `/trending/…` paths, i.e. **not repositories** | 15 addresses · 30 citations |
+| — of which a documented command template (`OWNER/REPO`) | 1 address · 8 citations |
+| 🔴 **TRUE dead repository addresses** | **64** |
+| 🔴 **TRUE citations pointing at a dead address** | **153** |
+
+🟢 **The method is first-hand and cheap**: `grep -rhoE` for repo-shaped URLs across all eight shelves →
+`sort -u` → `git ls-remote <addr> HEAD` twelve-way parallel. **98.0% of this base's addresses resolve.**
+
+### 🟢 A false alarm this census removes, and a non-defect it clears
+
+🔴 **15 "dead" addresses were never repositories.** `github.com/topics/ai-tutor`,
+`github.com/topics/intelligent-tutoring-system`, `github.com/trending/python` and twelve more are legitimate
+GitHub URLs that a repo-shaped regex captures and `git ls-remote` then fails on. 🟢 **Any link checker this base
+builds must exclude `topics/`, `trending/`, `orgs/`, `collections/` and similar reserved paths**, or it will
+report healthy citations as rot — which is how a 72-address figure becomes a 64-address one.
+
+🟢 **And `OWNER/REPO` is not a leaked placeholder.** It appears 8 times, and reading the context shows it is a
+**command template** — `git clone --depth 1 --filter=blob:none https://github.com/OWNER/REPO d` in
+`compose/patterns.md` — which this base **already classifies as a placeholder** on this very shelf. 🔵 Recorded
+here so a future pass does not "fix" a working instruction.
+
+### 🟢 `Gap 479-X` — the correction table, by name and citation weight
+
+🔵 `Gap 479-X`: *"The 175 citations pointing at 72 dead addresses in retained history are still uncorrected…
+This pass added a correction nowhere and applied none."* 🟢 The dead addresses carrying **three or more**
+citations, every one resolved first-hand this pass
+([`evidence/dead-address-census.2026-10-27-p480.tsv`](../evidence/dead-address-census.2026-10-27-p480.tsv) —
+all 64 are listed there):
+
+| dead address | citations | note |
+|---|---|---|
+| `1EdTech/caliper-js` | **11** | Caliper SDK — see below |
+| `thanh01pmt/interactive-quiz-kit` | 8 | gone |
+| `ale-alejandro/beadkit` | 8 | gone |
+| `santillana-ai/tutor-sdk` | 6 | a **LATAM** vendor SDK address — gone |
+| `yokowasis/autograder` | 5 | gone; relevant to the standing grading-gap finding |
+| `concentricsky/badgr-server` | 5 | open-badges server — gone |
+| `Mckaroff/GraphLMS` | 5 | gone |
+| `InCruiter-NewProducts/proctoring-sdk` | 5 | gone |
+| `AI-Matrix-Engine/aidream` | 5 | gone |
+| `superbuilders/timeback-dev-python` | 4 | gone |
+| `parkseokjune/unist-blackboard-mcp` | 4 | gone |
+| `imsglobal/caliper-python` | 4 | Caliper SDK — see below |
+| `e9x/blackboard-mcp` | 4 | gone |
+| `dev-cucei-itrans/siiau-api-client` | 4 | gone |
+| `1edtech/caliper-php` | 4 | Caliper SDK — see below |
+| `jakerains/scormplayer` | 3 | SCORM player — gone |
+| `huaxx-lab/LeetLens` | 3 | gone |
+| `Epesi-Team/epesi` | 3 | gone |
+| `Batlez/CloakBox` | 3 | gone |
+| `1EdTech/caliper-java` | 3 | Caliper SDK — see below |
+
+🔵 **Correction applied, in the only form this shelf permits.** Both trending shelves are append-only, so the
+historical sections that contain these citations are **not edited** — the table above and the evidence file are
+the correction, published where a reader meets the shelf. 🔴 **`Gap 479-X`'s underlying objection therefore
+survives in narrowed form**: the citations in retained history still point at dead addresses, and now a reader
+has a named, dated list to check them against.
+
+### 🔴 `Gap 479-Z` gets substance — the Caliper SDKs are gone, the spec is not
+
+🔵 `Gap 479-Z`: *"The Caliper SDK finding is carried unchanged from `p478` and remains GitHub-only. No
+non-GitHub forge or 1EdTech source was consulted, and none can be from here."* 🟢 Still GitHub-only — **and a
+targeted probe now makes the finding sharp rather than carried**:
+
+| address | status |
+|---|---|
+| `1EdTech/caliper-js` | 🔴 **dead** (11 citations here) |
+| `imsglobal/caliper-python` | 🔴 **dead** (4) |
+| `1edtech/caliper-php` | 🔴 **dead** (4) |
+| `1EdTech/caliper-java` | 🔴 **dead** (3) |
+| `imsglobal/caliper-java` | 🔴 **dead** |
+| `IMSGlobal/caliper-js` | 🔴 **dead** |
+| [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | 🟢 **LIVE** |
+| the `1EdTech` and `imsglobal` orgs themselves | 🟢 **LIVE** (both answer 200 on an unrelated repo path) |
+
+🟢 **The pattern is unambiguous and it is not org deletion: 1EdTech still publishes the Caliper *specification*
+and has removed or relocated every *language SDK* this base cites.** 🔵 For a studio, the consequence is
+concrete: **a Caliper-based analytics integration has a live spec and no official SDK at any address this base
+knows.** That is a build-versus-find decision, and it was previously hidden behind an unresolved citation.
+🔴 Whether the SDKs moved to a non-GitHub forge or were retired **cannot be determined from here** — every
+non-GitHub host is refused at the gateway.
+
+### 🔵 A consistency check worth recording: the two Open edX addresses are one repository
+
+🔵 This base cites both `openedx/edx-platform` (**232** citations) and `openedx/openedx-platform` (**105**).
+🟢 **Both resolve, both report `master` as HEAD, and both serve a 35,136-byte `LICENSE`** — they are the same
+repository under a rename, which GitHub redirects. 🟢 **So the licence finding on `repos/foundations.md` — the
++616-byte edX Inc. RPC scope clarification — holds under either citation**, and neither address needs
+correcting. 🔵 Recorded because a dead-address census that flagged one of them would have been wrong, and
+because a reader comparing the two shelves should know they are not two platforms.
+
+### 🔵 The window this pass can and cannot measure
+
+🟢 Four star-floor censuses ran with `incomplete_results` **false**: `topic:edtech` ≥50★ returns **64**,
+`topic:e-learning` ≥50★ returns **28**, `topic:ai-tutor` ≥50★ returns **25** (reproducing `p479` exactly) and
+≥20★ returns **36**; `topic:education` ≥100★ reports **634** and was read to **page 1 of 100**
+([`evidence/census-queries.2026-10-27-p480.tsv`](../evidence/census-queries.2026-10-27-p480.tsv)).
+🔴 **No date-windowed census ran this pass** — `p479`'s 30-day ≥30★ `topic:education` window is neither
+refreshed nor refuted here, so this section's new-arrival reading lives on `agents/trending.md` and this shelf's
+window claim is **carried, not re-measured**.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-X`** | **`Gap 479-X` is narrowed, not discharged.** The 153 citations in retained history still point at 64 dead addresses; append-only forbids editing them, so the correction is a published table and an evidence file, **not a repair**. A reader who does not reach this section still meets the dead citations unannotated. |
+| 🔴 **`Gap 480-Y`** | **The census resolves addresses, not content.** `git ls-remote` answering proves an address serves refs — it does **not** prove the repository is the one originally cited. **Renames and transfers resolve silently** (the two Open edX names prove it), so an unknown number of the 3,118 "live" addresses may now point somewhere other than what a past pass described. |
+| 🔴 **`Gap 480-Z`** | **`Gap 479-Z` is sharpened but still GitHub-only.** Where the Caliper SDKs went is unmeasured and unmeasurable from here; no 1EdTech source, registry or non-GitHub forge was consulted, because every non-GitHub host is refused at the gateway. |
+| 🟡 **`Gap 480-AA`** | **No date-windowed census ran on this shelf.** The four censuses are star-floor, not time-bounded, so `p479`'s 30-day window and its licence shares are carried unchanged; `topic:education` was read to 100 of 634, making the union a floor (`Gap 480-C`). |
+| 🟡 **`Gap 480-AB`** | **`Gap 479-AB` carries forward untouched:** `cn-math-taxonomy`'s licence scope is still read from its README's own licence section rather than from a clause inside the CC BY-NC text, and no determination about whether the tool code falls inside that grant is available here. |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🟢 A LICENCE-COMPLETE WINDOW, FOR THE FIRST TIME ON THIS SHELF: all **22** repositories in the 30-day ≥30★ `topic:education` census carry a grant read as a payload this pass — **16 MIT, 1 Apache-2.0-family, 1 AGPL-3.0, 1 GPL-3.0, 2 Creative Commons NON-COMMERCIAL, 2 with no grant file at all**. 🔴 And the two non-commercial rows are exactly the two curriculum-and-content repositories, which turns this base's standing "code is permissive, curriculum is not" observation into a measured property of a complete population.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history. Census in

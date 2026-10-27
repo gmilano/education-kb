@@ -1,0 +1,81 @@
+dead_address	citations_in_retained_history	class
+1EdTech/caliper-js	11	dead repo address
+thanh01pmt/interactive-quiz-kit	8	dead repo address
+ale-alejandro/beadkit	8	dead repo address
+santillana-ai/tutor-sdk	6	dead repo address
+yokowasis/autograder	5	dead repo address
+concentricsky/badgr-server	5	dead repo address
+Mckaroff/GraphLMS	5	dead repo address
+InCruiter-NewProducts/proctoring-sdk	5	dead repo address
+AI-Matrix-Engine/aidream	5	dead repo address
+superbuilders/timeback-dev-python	4	dead repo address
+parkseokjune/unist-blackboard-mcp	4	dead repo address
+imsglobal/caliper-python	4	dead repo address
+e9x/blackboard-mcp	4	dead repo address
+dev-cucei-itrans/siiau-api-client	4	dead repo address
+1edtech/caliper-php	4	dead repo address
+jakerains/scormplayer	3	dead repo address
+huaxx-lab/LeetLens	3	dead repo address
+Epesi-Team/epesi	3	dead repo address
+Batlez/CloakBox	3	dead repo address
+1EdTech/caliper-java	3	dead repo address
+xmike04/canvas-student-mcp	2	dead repo address
+tura-learn/Dhee	2	dead repo address
+plastic-labs/bloom	2	dead repo address
+marsley01/Edyfra	2	dead repo address
+joojdev/academic-tracker-mcp	2	dead repo address
+invincible-summer/Next-Tutor-Agent	2	dead repo address
+eastarctica/canvas-mcp	2	dead repo address
+NmaaAlhawary/MCP-Moodle	2	dead repo address
+NiccoloSalvini/mcp-moodle-teacher	2	dead repo address
+GIT_USER_ID/GIT_REPO_ID.git	2	dead repo address
+EastArctica/canvas-mcp	2	dead repo address
+Ahmed-html/unlimited-ai-platform	2	dead repo address
+tipsedu2019/tips_dashboard	1	dead repo address
+this-org-does-not-exist-zzz9/nope	1	dead repo address
+thanh01pmt/curriculum-kit	1	dead repo address
+sanity-labs/ai-literacy-framework	1	dead repo address
+sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit	1	dead repo address
+radhepa/Teacher-MCP	1	dead repo address
+projectremedy-ai/remedy-canvas-lti	1	dead repo address
+openedx/openedx-mcp	1	dead repo address
+kerntau/class-log-system	1	dead repo address
+juandacor/opencode-menthor	1	dead repo address
+jmolpea/moodle-block_openaiagent	1	dead repo address
+imazhar101/mcp-canvas-server	1	dead repo address
+iep-ui/iep-ui	1	dead repo address
+hablala/hablala	1	dead repo address
+gregmontalvo/badgie	1	dead repo address
+gegok12/school-erp	1	dead repo address
+gegok12/gegok12	1	dead repo address
+fh-yarbouh/oak-curriculum-ontology	1	dead repo address
+belentani7/aprende-brasil	1	dead repo address
+aule-org/AImauta	1	dead repo address
+atlas-training-company/atlas	1	dead repo address
+appliedrelevance/frappe_mcp_server	1	dead repo address
+apereo/opencast	1	dead repo address
+ale-alejandro/beadkit.git	1	dead repo address
+UOC/java-lti-1.3-provider	1	dead repo address
+NiccoloSalvini/mcp-moodle-staff	1	dead repo address
+HanChein/ElimuAI	1	dead repo address
+GegoK12/gegok12	1	dead repo address
+Dondo0936/vietnamese-ai-for-beginner	1	dead repo address
+Creaditor/frontend	1	dead repo address
+Cleison-Morais/koba	1	dead repo address
+AlekSIS/AlekSIS-Core	1	dead repo address
+topics/ai-tutor	4	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/student-information-system	3	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/proctoring	3	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/intelligent-tutoring-system	3	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+trending/python	2	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/language-learning	2	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/education-ai	2	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/education	2	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/ai-education	2	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/academic-integrity	2	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/open-educational-resources	1	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/open-badges	1	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/learning-analytics	1	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/knowledge-tracing	1	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+topics/edtech	1	NOT a repo - github.com/topics or /trending path, false positive of a repo-shaped regex
+OWNER/REPO	8	NOT a defect - documented command template (compose/patterns.md) already classed as placeholder by this base

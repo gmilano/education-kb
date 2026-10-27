@@ -3,6 +3,99 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-N` IS CLOSED BY CLONING THE ROW, AND IT KILLS THE RECOMMENDATION: Fedena — this shelf's only permissively-licensed SIS — is **Rails 2.3.5**, boots on an API removed in Rails 3.0, has **no `Gemfile` at all**, and declares its one gem from **`http://gemcutter.org`**, a host that stopped being rubygems.org in 2010. 🟢 Its Apache-2.0 is now *stronger* than `p479` thought — **175 source files carry the full header** — so the blocker is squarely engineering, not licensing. 🟢 And the two big LMS rows now have *different* documented copyleft postures.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. **Nothing below is gate-attested.** Frontmatter, closed-vocabulary `region`, pipe-counts,
+no-header-as-data and prepend-only re-checked in this session's own code.
+
+---
+
+### 🟢 `Gap 479-N` closed — the permissive SIS is not "fifteen years old", it is architecturally pre-modern
+
+🔵 `Gap 479-N`: *"Fedena was not run, and its maintenance state is unmeasured. 547★ and a 2011 copyright are not
+a cadence; no push date, release tag or dependency audit was read."* 🟢 Cloned at `68a84ac` and audited
+([`evidence/clone-tier-source-reads.2026-10-27-p480.tsv`](../evidence/clone-tier-source-reads.2026-10-27-p480.tsv)):
+
+| what was read | finding | why it costs more than age |
+|---|---|---|
+| `config/environment.rb` | `RAILS_GEM_VERSION = '2.3.5'` | **Rails 2.3.5** — released **January 2010**, not 2011 |
+| the boot sequence | `Rails::Initializer.run` with a block-passed `config` | the **pre-Rails-3 boot API, removed in Rails 3.0**. A port is not an upgrade path; the whole boot and config layer is rewritten |
+| dependency manifest | 🔴 **no `Gemfile` exists** | Bundler arrived with Rails 3. There is **nothing to audit** — the dependency set must be reconstructed from scratch |
+| the one declared gem | `config.gem 'declarative_authorization', :source => 'http://gemcutter.org'` | **gemcutter.org** was renamed rubygems.org in **2010**, over plain HTTP. The sole declared dependency source is a dead address |
+| `vendor/plugins` | **14 plugins** | the Rails *plugin* mechanism, **removed in Rails 4** |
+| — of which | `open_flash_chart` | **Flash**. No browser has had a Flash runtime since **December 2020** — the reporting layer is not old, it is **non-functional** |
+| — and | `fckeditor` | FCKeditor, superseded by CKEditor in **2009** |
+| size | 273,846 LOC — 62,479 Ruby · 52,214 ERB · **159,153 JS** | the JS is the largest tier and predates every modern toolchain |
+| test suite | **212** `*_spec.rb` / `*_test.rb` files | 🟢 a suite **does** exist — `Gap 479-AR` assumed nothing was known |
+| is the app intact? | **74 models, 50 controllers, 781 views** | 🟢 yes — the last commit's message, *"emptying content"*, did **not** gut the domain model |
+| last commit | **2016-07-20** | ten years and three months of no activity |
+
+🔴 **The verdict reverses the recipe arm.** `p479` priced this port at *"6–10 weeks if the port is clean"*. The
+port crosses **six Rails majors and the Rails 2→3 rewrite boundary**, with no manifest, a dead gem source, a
+Flash-dependent reporting layer and 159k lines of pre-modern JavaScript. **That estimate is not credible**, and
+this pass withdraws it rather than restating it. See `compose/patterns.md` P16.
+
+🟢 **The licensing news is good, and it is the half worth keeping.** `Gap 479-M` asked whether a `NOTICE` alone
+carried the grant; **175 Ruby files under `app/` and `lib/` carry the full Apache-2.0 per-file header.** So
+Fedena's value to a studio is now precisely locatable: **not the code — the domain model.** An Apache-2.0
+schema covering students, enrolment, attendance, exams and fees, corroborated across 175 files, is a reusable
+*specification* even when the implementation is not reusable.
+
+### 🟢 The two dominant open LMS platforms now read differently on the question that decides architecture
+
+| platform | repo | election | scope clarification in `LICENSE`? | what that means for an AI service beside it |
+|---|---|---|---|---|
+| Open edX | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | 🟢 **YES — 616 B appended by edX Inc.** | a *public, independently available* service reached by **RPC/inter-service communication** is stated by the licensor **not** to be a derivative work, and its source **not** Corresponding Source |
+| Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0-only** (per-file: *"version 3 of the License"*) | 🔴 **none** | the same architecture rests on **this base's own architectural reasoning**, exactly as `Gap 479-R` says |
+
+🔵 **Same licence family, same election, opposite evidentiary position.** For a studio choosing a platform to
+build an AI layer onto, this is the difference between a quoted licensor statement and an inference — and it is
+the kind of thing that only shows up if you diff the `LICENSE` file instead of reading its SPDX tag. Full quote
+and its three stated limits are in `repos/foundations.md`.
+
+### 🟢 The platform shelf
+
+| platform | repo | grant | what it is | state read this pass |
+|---|---|---|---|---|
+| Open edX | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · 35,136 B | MOOC-scale LMS | 🟢 `LICENSE` diffed; **RPC clarification found** |
+| Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0-**only** · 34,520 B | LMS of record in much of US higher ed | 🟢 election read from per-file header |
+| Open edX deploy path | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 · 34,523 B | the supported Docker deployment of Open edX | 🟢 `LICENSE` payload read |
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | the default open LMS worldwide | 🔵 carried from `p479`; not re-read |
+| Fedena | [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 **Apache-2.0** · `NOTICE` + **175 file headers** | SIS: students, enrolment, attendance, exams, fees | 🟢 **cloned** — Rails 2.3.5, see above |
+| LearnHouse | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 AGPL-3.0 | AI-native learning platform, 2,424★ | 🟢 grant + cadence from census (pushed 2026-10-25) |
+| Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** | AI-native LMS, 99★, created 2024-08-01 | 🟢 cadence re-read: pushed **2026-10-27** |
+| IBL LMS | [iblai/lms](https://github.com/iblai/lms) | 🟢 **MIT** | skills-intelligence platform: competencies, credentials | 🟢 cadence re-read: pushed 2026-10-26 (already carried on this shelf) |
+| Anki (as a tool surface) | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | exposes spaced repetition to agents over MCP | 🟢 536★; new to *this* shelf, already on `agents/top.md` |
+| Canvas integration, read-only | [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** | 26 read-only tools onto Canvas | 🟢 **cloned** — 0 write calls, 500-item ceiling |
+| Canvas integration, read/write | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | 136 tools incl. rubric grading | 🟢 **cloned** — 12 write call sites |
+
+### 🔴 The informed gaps on this shelf, stated rather than left silent
+
+🔵 **LATAM:** `i-Educar` (GPL-2.0) and `i-Diario` (AGPL-3.0, licence text in **Portuguese**) remain the only
+region-origin platform rows this base has ever placed, carried unchanged from `p479` and **not re-read this
+pass**. No new LATAM platform surfaced in any census or search this pass.
+🔵 **APAC:** no region-origin *platform* row exists on this shelf at all — APAC's supply, as measured on
+`agents/top.md`, is agents and skills, not LMS or SIS software.
+🔵 **EMEA:** `mentingo` (Poland, Selleo) is the shelf's one EMEA-origin permissive LMS; `freelingo` (AGPL-3.0) is
+EMEA-origin by its Spanish-language author but is a language-learning app, not a platform.
+🔵 **North America:** every large platform row here — Open edX, Canvas, Moodle's largest deployments — is North
+America-origin or North America-dominant, which is why no "NA gap" appears: the gap on this shelf is the
+*reverse* one, and it is APAC and LATAM.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-M`** | **Fedena's port cost is now bounded below, not estimated.** The audit proves the obstacles (Rails 2.3.5, no `Gemfile`, dead gem source, Flash reporting, 14 removed-mechanism plugins); it does **not** produce a week figure, and this pass deliberately publishes **no** number rather than replacing one uncredible estimate with another. The 212-file test suite was **counted, never run** (`Gap 480-A`). |
+| 🔴 **`Gap 480-N`** | **The Open edX clarification is quoted, not adjudicated** (`Gap 480-G`). It names edX Inc., not the Axim Collaborative; it covers only a *public, independently available* service over inter-service communication; and it plainly does **not** cover an in-process plugin. A studio must have counsel read it. |
+| 🔴 **`Gap 480-O`** | **`Gap 479-O` and `Gap 479-P` stand untouched.** No APK was built or instrumented for the elimu.ai tier, and every regulatory reading on this shelf remains law-firm and compliance-vendor commentary — EUR-Lex is refused at the gateway (`intel/market.md`). |
+| 🟡 **`Gap 480-P`** | **Nine of eleven platform rows were not cloned.** Moodle, ILIAS, H5P, Sakai, Gibbon, RosarioSIS, Frappe LMS and the two LATAM SIS rows are grant-and-description rows; the clone instrument that settled Fedena **was not pointed at any of them**, which is availability, not absence. |
+| 🟡 **`Gap 480-Q`** | **`Gap 479-Q` carries forward: versions are still read for a minority of the shelf.** No tag was dated this pass either, so "latest" still means "highest-sorting", not "most recent". |
+| 🟡 **`Gap 480-R`** | **The Canvas/Open edX contrast is a licence-text contrast, not a tested one.** Neither platform's plugin API was exercised, no LTI boundary was probed, and `boyuchengz/canvas-mcp` — which now offers a concrete, verified read-only way to test the Canvas boundary — **was read but not run**, so `Gap 479-R`'s core objection survives in narrowed form. |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🔴 `p478`'s HEADLINE NEEDS CORRECTING: a permissively-licensed student information system DOES exist. `Gap 478-R`'s three unprobed candidates were all probed this pass and **Fedena declares Apache-2.0 — in a `NOTICE` file, not a `LICENSE`**, at 547★ with a copyright line reading **2011**. 🟢 The usable conclusion is sharper than the old one: the permissive SIS is not missing, it is **fifteen years old**. 🟢 Two new permissive LMS rows also land, and every platform's version is read first-hand for the first time.**
 
 🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).

@@ -1,0 +1,9 @@
+measure	value	method
+distinct github.com/owner/repo-shaped addresses cited across all 8 shelves	3198	grep -rhoE over agents/ repos/ verticals/ intel/ compose/ then sort -u
+total citations	11125	same, with counts
+addresses resolving via git ls-remote	3118	git ls-remote <addr> HEAD, 12-way parallel
+addresses NOT resolving	80	same
+ - of which github.com/topics or /trending paths (false positives, not repos)	15 addresses / 30 citations	pattern exclusion
+ - of which a documented command template (OWNER/REPO)	1 address / 8 citations	already classed as a placeholder by this base
+TRUE dead repo addresses	64	80 minus 15 false positives minus 1 template
+TRUE citations pointing at a dead repo address	153	161 minus the 8 template citations

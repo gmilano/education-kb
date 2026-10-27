@@ -3,6 +3,158 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 P14'S LOAD-BEARING ASSUMPTION IS NOW VERIFIED IN SOURCE RATHER THAN ASSUMED FROM A NAME — `canvas-mcp` really cannot write — and the same clone channel hands P14 the grading component `Gap 479-AQ` said did not exist, at the price of that boundary. 🔴 **P16 arm A is withdrawn, not re-estimated**: Fedena is Rails 2.3.5 with no `Gemfile`. 🟢 And P17 is the first recipe on this shelf whose copyleft boundary rests on a sentence the **licensor wrote**, not on this base's architectural reasoning.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. **Nothing below is gate-attested.** Frontmatter, closed-vocabulary `region`, pipe-counts,
+no-header-as-data and prepend-only re-checked in this session's own code.
+
+---
+
+### 🟢 P14 corrected — the boundary holds on evidence, and the frozen grading gate now has a real alternative
+
+🔵 **What `Gap 479-AP` demanded:** *"P14's whole licence argument rests on `canvas-mcp` being read-only; that
+claim is read from its description and name, **not** from its source, its scopes or a transcript. If it can
+write, P14's boundary argument collapses."*
+
+🟢 **It does not collapse.** [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) was cloned at
+`a91eeb9` and read in full
+([`evidence/clone-tier-source-reads.2026-10-27-p480.tsv`](../evidence/clone-tier-source-reads.2026-10-27-p480.tsv)):
+**26 tools, every name `get_*` or `list_*`; a 33-call surface of 20 `getList` + 11 `getOne` + 1 `resolve` +
+1 `download`; zero write calls; `request()` passes no `method` option so fetch defaults to GET; the string
+`method:` appears nowhere in `src/`; and the exported client has no write primitive to call.**
+
+🟢 **Two source-only facts that change the recipe, not just its justification:**
+
+| finding | effect on P14 |
+|---|---|
+| 🟢 `getList` refuses a `rel="next"` link whose origin differs from the configured Canvas host, and `download()` omits the token | the component already has the token-exfiltration guard a reviewer would otherwise ask P14 to add |
+| 🔴 `MAX_PAGES = 5` × `per_page = 100` = **500 items per list call**, silently truncating | **P14 must add pagination handling or scope to courses under 500 assignments/submissions.** This is a real defect-in-waiting and no description discloses it |
+| 🔵 `package.json` is `"private": true` | integration is a **clone and pin**, not `npm install` |
+
+🔴 **And the correction `Gap 479-AQ` needs is internal, not external.** That gap records P14's assessment gate
+as a **0★** project *"chosen because the grading census returns zero alternatives."* An alternative has been on
+this base's shelves all along — **cited 56 times in retained history**, with its write tools and its
+`read_only_hint=True` on 72 of 128 tools already recorded by earlier passes. It was never carried into the
+recipe:
+[vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) — **308★, MIT, created 2025-02-28,
+pushed 2026-10-26, 32,878 LOC, 136 `@mcp.tool` definitions at `becd181`** — and it grades, via
+`grade_single_submission` and `grade_with_rubric`. 🔴 **It also writes**: this pass measured **12 write call
+sites** at the HTTP-client level (8 `client.post` + 3 `client.put` + 1 `client.delete`), with
+`create_assignment`, `edit_page_content` and `delete_assignment_with_confirmation` in the same surface. 🔵 The
+12-call-site figure is the new measurement; the tool count is an update to the "102–103" and "128" this base
+published from weaker channels.
+
+🟢 **So P14 now has an explicit, documented fork rather than a hidden assumption:**
+
+| arm | components | what you get | what you accept |
+|---|---|---|---|
+| **A — read-only** *(recommended default)* | [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) 🟢 MIT + [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) 🟡 Apache-2.0 as the tutoring engine | 🟢 a provably non-mutating integration into the LMS of record — **verified at 33 call sites**, which is an argument you can put in front of a district's counsel and its CISO | 🔴 grading stays human; the agent advises and cannot record |
+| **B — read/write** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) 🟢 MIT + DeepTutor | 🟢 rubric-based grading against Canvas from a maintained 308★ project | 🔴 12 write call sites into the system of record, including deletes; **the whole safety argument for arm A is surrendered**, and the write guards are uninspected (`Gap 480-F`) |
+
+🔵 **Wiring, both arms:** Canvas ← MCP server (stdio) ← agent runtime; DeepTutor carries an MCP **client in its
+core dependencies**, so it is the tool-calling host rather than something glued to one. Deploy the MCP server as
+a separate process; keep the Canvas API token in the server's environment, never in the agent's context.
+🔵 **Recommendation: start on arm A, and treat arm B as a second phase gated on a written data-handling
+review** — not because arm B is bad, but because arm A's claim is now *provable* and that is a rare asset in a
+public-sector procurement.
+
+🔵 **Estimate: not given.** `Gap 479-AO` has flagged every week figure on this shelf as judgement rather than
+measurement for three passes; this pass stops producing them (see `Gap 480-AO`).
+
+### 🔴 P16 arm A — withdrawn, not re-estimated
+
+🔵 `Gap 479-AR`: *"P16 arm A is unpriced. Fedena's dependency manifest, Ruby and Rails versions, test suite and
+last commit were **not read**; '6–10 weeks if the port is clean' is a sentence, not an estimate."*
+
+🟢 They have now been read, from a clone at `68a84ac`, and the conditional was carrying everything:
+
+| what was read | finding |
+|---|---|
+| `config/environment.rb` | `RAILS_GEM_VERSION = '2.3.5'` — **Rails 2.3.5, January 2010** |
+| boot API | `Rails::Initializer.run` — **removed in Rails 3.0**; the boot/config layer is a rewrite, not an upgrade |
+| dependency manifest | 🔴 **no `Gemfile` exists.** Bundler arrived with Rails 3 — there is nothing to audit and the dependency set must be reconstructed |
+| the single declared gem | `config.gem 'declarative_authorization', :source => 'http://gemcutter.org'` — **a host renamed in 2010**, over plain HTTP |
+| `vendor/plugins` | **14**, a mechanism **removed in Rails 4** — including **`open_flash_chart`** (Flash; no browser runtime since **Dec 2020**) and `fckeditor` (superseded 2009) |
+| size | **273,846 LOC** — 62,479 Ruby · 52,214 ERB · **159,153 JS** |
+| test suite | **212** spec/test files 🟢 exist — and were **not run** (`Gap 480-A`) |
+| domain model | 🟢 intact: **74 models, 50 controllers, 781 views** |
+
+🔴 **"6–10 weeks if the port is clean" is withdrawn.** The port crosses **six Rails majors and the Rails 2→3
+rewrite boundary** with no manifest, a dead gem source and a non-functional Flash reporting layer. 🔵 This pass
+publishes **no replacement figure**, because substituting one unmeasured number for another is what `Gap 479-AO`
+is about.
+
+🟢 **But P16 keeps a usable arm, and the clone is what made it visible.** `Gap 479-M` asked whether a `NOTICE`
+carried Fedena's grant; **175 Ruby files carry the full Apache-2.0 per-file header.** So:
+
+| arm | what you take from Fedena | why this survives the audit |
+|---|---|---|
+| 🔴 **A — port the application** | ~~the running Rails app~~ | **withdrawn** on the evidence above |
+| 🟢 **B — take the domain model, not the code** | the Apache-2.0 **schema and domain semantics** for students, enrolment, attendance, exams, fees — 74 models, corroborated across 175 headers | a 2010 Rails *implementation* is a liability; a 2010 *school-administration domain model* is a specification, and it is permissively licensed. Build fresh against it |
+
+### 🟢 P17 — an Open edX AI layer whose copyleft boundary the licensor wrote down
+
+🔵 **Why this recipe is new in kind.** `Gap 478-T`, `Gap 479-R` and `Gap 479-AS` all say the same thing: every
+"deployed, not linked" boundary on this shelf is **this base's own architectural reasoning**. For Open edX
+specifically, it no longer has to be. `openedx/edx-platform`'s `LICENSE` is **616 bytes longer than the bare FSF
+text**, and the extra bytes are a clarification in edX Inc.'s own voice: a *"public, independently available web
+service … communicating … by any form of inter-service communication, including but not limited to Remote
+Procedure Call (RPC) interfaces, **is not a work based on our copyrighted work**"*, and its source files are
+**not** Corresponding Source (full quote and limits: `repos/foundations.md`).
+
+| slot | component | grant | role |
+|---|---|---|---|
+| platform | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 **+ the RPC clarification** | courses, enrolment, grades — **left unforked** |
+| deployment | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 | the supported Docker deployment path |
+| the AI service | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟡 Apache-2.0 *(non-canonical — read it)* | tutoring engine, **own process, own repo, own licence** |
+| spaced repetition | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | retention scheduling as MCP tools |
+| pronunciation (language courses) | [Halleck45/OpenPronounce](https://github.com/Halleck45/OpenPronounce) | 🟢 MIT | phoneme-level assessment, self-hosted; **replaces a priced cloud API** |
+
+🔵 **Wiring that matches the clarification's own words, which is the whole point:** run the AI service as a
+**separate, independently deployable HTTP/RPC service**. It talks to Open edX over its REST APIs and LTI; Open
+edX does **not** import it and it does **not** import Open edX. 🔴 **Do not implement it as an in-process Open
+edX plugin or an XBlock** — an in-process extension is plainly *not* what the quoted sentence protects, and that
+choice is exactly where the architectural argument would have to resume.
+
+🔴 **Three limits that must travel with this recipe** (`Gap 480-G`): the clarification is the **licensor's stated
+interpretation**, not an amendment; it names **edX Inc.**, while the project is now stewarded by the **Axim
+Collaborative**; and it is **Open edX only — Canvas carries no equivalent**, so P14 cannot borrow it. **Counsel
+reads the sentence; this base does not rule on it.**
+
+### 🟢 P18 — a licence-diligence gate, because this pass found two ways a scanner gets education AI wrong
+
+🔵 Not a product recipe — a **step to insert into any education-AI engagement**, built from this pass's own
+findings. It exists because two different failure modes were measured, and both fail in the *permissive*
+direction:
+
+| failure mode | measured instance | the check |
+|---|---|---|
+| 🔴 a **prose claim with no grant file** | [mahseema/aibooks](https://github.com/mahseema/aibooks) — README says `## License` → `[MIT](LICENSE.md)`; `LICENSE.md`, `LICENSE`, `LICENSE.txt` are **all 404 on both branches** | never accept a README licence. Resolve the **file**, at the pinned ref |
+| 🔴 a **non-canonical licence body** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (11,408 B) and [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) (10,227 B) — both differ from `apache.org`'s 11,358 B text, **in the same three body lines** | **diff the payload against the canonical text**, not its SPDX tag. A digest match is the only clean pass |
+| 🔴 an **unread version election** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) — the `LICENSE` is bare AGPL; the election (**"version 3 of the License"**, no "or later") is in the **per-source-file header** | read a source file's header, not only `LICENSE` |
+| 🔴 a **scope clarification hidden in byte count** | [openedx/edx-platform](https://github.com/openedx/edx-platform) — +616 B over the bare text, and those bytes are commercially decisive | diff `LICENSE` against the bare upstream licence text; **investigate any delta** |
+| 🔴 **attention without licensability** | [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) — **29,550★, no grant at 14 probed paths, no README licence line** | star rank is not a licence signal. Probe before shortlisting |
+
+🟢 **Wiring:** a pre-flight script per candidate repo — `git ls-remote` to pin the ref → fetch `LICENSE` and
+every common variant **as a file** → `sha256` against a canonical-text control set → diff on mismatch → grep one
+source file's header for a version election → fail closed on 404. 🔵 Across the 305-row union, **19% declare no
+grant and a further 12% are `NOASSERTION`**, so this gate changes the shortlist for roughly **one candidate in
+three** (`intel/market.md`).
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-AO`** | **No recipe on this shelf has been built or run, and this pass stops issuing week estimates.** `Gap 479-AO` and `Gap 478-AI` carry forward: no integration executed, no version compatibility tested, no xAPI profile validated. **P14's boundary is now verified in source; P14 itself is still unbuilt**, and the harness refuses to execute cloned code (`Gap 480-A`). Withdrawing P16-A's figure without replacing it is deliberate. |
+| 🔴 **`Gap 480-AP`** | **P17's boundary rests on a quoted sentence this base cannot adjudicate** (`Gap 480-G`/`480-N`): licensor interpretation rather than amendment, naming edX Inc. rather than the Axim Collaborative, covering only a public independently-available service over inter-service communication. **It is a far stronger position than P11–P16 ever had and it is not a legal opinion.** |
+| 🔴 **`Gap 480-AQ`** | **P14 arm B is recommended against on an uninspected basis.** `vishalsachdev/canvas-mcp`'s 12 write call sites and 136 tools were inventoried by grep; **no scope model, permission check or confirmation flow was read** (`Gap 480-F`). "It writes" is certain; "its writes are unsafe" was **not** measured and is not claimed. |
+| 🔴 **`Gap 480-AR`** | **P16-B asserts a domain model is reusable without modelling it.** 74 models and 781 views were counted, not read; no entity-relationship extract was produced, and whether Fedena's 2010 school-administration semantics fit any current jurisdiction's SIS requirements is **entirely unexamined**. |
+| 🟡 **`Gap 480-AS`** | **P18's gate is specified, not implemented.** The five checks are each derived from a measurement this pass actually made, but **no script was written, committed or run against the 305-row union** — the "one candidate in three" figure is arithmetic on the census, not a gate's output. |
+| 🟡 **`Gap 480-AT`** | **`Gap 479-AT` carries forward: no recipe was checked for localisation fit.** P17 adds `OpenPronounce` for language courses with **no check of which languages it actually supports** beyond its own English-focused description, and no region other than LATAM has been checked for a permissive curriculum dataset. |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🔴 THIS PASS CORRECTS ITS OWN RECIPES BEFORE ADDING ANY: **P11's hand-waved Canvas boundary now has an MIT implementation**, **P12's mastery component has not been pushed since 2024-01-02**, and **P12's record store has 0★ and nothing since 2026-08-08**. 🟢 Three components swapped on measured grounds, then three new recipes — one per region that this pass could actually place — including the first LATAM recipe built on working *software público* rather than on imported parts.**
 
 🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).

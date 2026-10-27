@@ -1,0 +1,9 @@
+query	total_count	incomplete_results	returned
+topic:ai-tutor stars:>50	25	false	25
+topic:ai-tutor stars:>20	36	false	36
+topic:e-learning stars:>50	28	false	28
+topic:edtech stars:>50	64	false	64
+topic:education stars:>100	634	false	100
+"ai tutor" in:name,description stars:>50	49	false	49
+canvas-mcp in:name	277	false	30
+grading OR autograding OR "automated feedback" in:name,description topic:education	927	false	50

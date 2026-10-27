@@ -3,6 +3,101 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-U` IS DISCHARGED FOR THE ROW THIS SHELF SAID TO CARRY: `canvas-mcp`'s claim to reach Canvas read-only is no longer unexercised — the repository was **cloned and read in full**, and the claim is **true at 33 call sites with zero writes**. 🔴 `Gap 479-T` is CONFIRMED rather than closed: `THU-MAIC/OpenMAIC` is absent from a **four-topic union plus two keyword probes**, so topic-blindness is now measured across six instruments, not suspected from one. 🔴 And GitHub's own Trending page is still unreachable, so nothing here is "trending" in GitHub's sense.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. **Nothing below is gate-attested.** Append-only preserved: this section is added above `p479` and the
+full history is retained below it, unedited.
+
+---
+
+### 🟢 `Gap 479-U` — the row this shelf recommended carrying has now been read, not just described
+
+🔵 `Gap 479-U`: *"Not one row was run. The 7-day table is grants plus descriptions; `canvas-mcp`'s claim to reach
+Canvas read-only is **unexercised**, and it is the row this pass recommends carrying."*
+
+🟢 **A new instrument closed the readable half of that gap: arbitrary public repositories can be cloned here.**
+[boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) was cloned at `a91eeb9` and read in full —
+1,276 lines of JavaScript
+([`evidence/clone-tier-source-reads.2026-10-27-p480.tsv`](../evidence/clone-tier-source-reads.2026-10-27-p480.tsv)):
+
+| claim on this shelf | status after a source read |
+|---|---|
+| "reaches Canvas read-only" | 🟢 **TRUE.** 26 tools, every name `get_*`/`list_*`; call surface is 20 `getList` + 11 `getOne` + 1 `resolve` + 1 `download` = **33 calls, zero writes**; `request()` passes **no `method` option** so fetch defaults to GET; `method:` appears nowhere in `src/`; the exported client exposes **no write primitive** |
+| "MIT" | 🟢 confirmed, 1,072 B |
+| *(undisclosed)* | 🔴 **`MAX_PAGES = 5` × `per_page = 100` = a silent 500-item ceiling per list call** |
+| *(undisclosed)* | 🟢 a token-exfiltration guard: `getList` refuses a `rel="next"` link whose origin differs from the configured host; `download()` omits the token deliberately |
+| *(undisclosed)* | 🔵 `package.json` is `"private": true` — **not on npm**; integration is a clone-and-pin |
+
+🔴 **The gap is only half discharged, and the remaining half has a named cause.** The harness refuses to execute
+code arriving in a clone (`Code from External`), so **no row on this shelf has been run, installed or
+benchmarked**. "Contains no write path" is verified; "works" is not.
+
+### 🔴 `Gap 479-T` confirmed across six instruments — topic-blindness is now measured
+
+🔵 `Gap 479-T`: *"The four censuses are topic-filtered and therefore blind in the same way. A new repository
+whose owner set no topics is invisible to all four — and `THU-MAIC/OpenMAIC`, at 41,612★, proves such
+repositories exist and are large."*
+
+🟢 This pass ran **six** instruments — `topic:ai-tutor` at two floors, `topic:edtech`, `topic:e-learning`,
+`topic:education`, and two topic-independent keyword probes (`"ai tutor" in:name,description`, `canvas-mcp
+in:name`) — producing a 328-address union
+([`evidence/census-union.2026-10-27-p480.tsv`](../evidence/census-union.2026-10-27-p480.tsv)).
+🔴 **`THU-MAIC/OpenMAIC` appears in none of them**, despite being cited **51 times** in this base's own history.
+🔵 So the blindness is not a property of *topic* filtering specifically — the keyword probes missed it too. It is
+a property of **discovery by label and name**, and the only instrument that finds `OpenMAIC` is this base's
+accumulated attention. 🟢 **That is worth stating as a method conclusion: a census and a citation corpus are
+complementary instruments, and neither subsumes the other.**
+
+### 🟢 New arrivals this pass — created in October 2026, with grants and cadence first-hand
+
+🔵 Every row's ★, grant, `created_at` and `pushed_at` come from the authenticated search channel with
+`incomplete_results` false. 🔵 The "new to this base" column is a **first-hand check against all eight
+shelves**, not an assumption:
+
+| repo | ★ | grant | created · pushed | what it is | new to this base? |
+|---|---|---|---|---|---|
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 967 | 🟢 MIT | 2026-10-03 · 2026-10-27 | turns books into animated, narrated, interactive web experiences | 🔵 no |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 468 | 🟢 MIT | 2026-10-14 · — | open alternative to Udemy/Coursera: a topic becomes a course of 2-minute audio lessons | 🔵 no |
+| [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 418 | 🔴 AGPL-3.0 | 2026-10-10 · 2026-10-27 | explainer videos from material via an AI director agent; local-first, Electron | 🔵 no |
+| [zuhairhalawa/studyai](https://github.com/zuhairhalawa/studyai) | **223** | 🟢 **MIT** | 2026-10-18 · 2026-10-24 | local-first study platform for university lectures: slides, spaced repetition, exams, optional tutor on Gemini free tier | 🟢 **yes** |
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 🟢 MIT | 2026-10-18 · 2026-10-24 | "learn stuff with pen + paper + AI"; local-first | 🔵 no |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 115 | 🟢 MIT | 2026-10-25 · 2026-10-27 | **26 read-only tools onto Canvas LMS — source-verified this pass** | 🔵 no |
+| [pruettlazaro143-a11y/smc-ai-tutor](https://github.com/pruettlazaro143-a11y/smc-ai-tutor) | 41 | 🟡 `NOASSERTION` | 2026-10-17 · 2026-10-20 | AI tutor; grant present but unclassifiable by the channel | 🔵 no |
+| [smashburger-dev/socratic-workshop](https://github.com/smashburger-dev/socratic-workshop) | 22 | 🟢 MIT | 2026-10-17 · 2026-10-20 | Socratic-method workshop agent | 🔵 no |
+| [CorCvusRamboChen/canvas-session-mcp](https://github.com/CorCvusRamboChen/canvas-session-mcp) | 4 | 🟢 **MIT** | 2026-10-05 · 2026-10-05 | Canvas MCP using a **normal login session — no access token** | 🟢 **yes** |
+| [shu-silc-osc/canvas-chaoxing-silc-mcp](https://github.com/shu-silc-osc/canvas-chaoxing-silc-mcp) | 3 | 🟢 **MIT** | 2026-10-11 · 2026-10-13 | read-only Canvas + **Chaoxing** (Chinese HE platform) student tools | 🟢 **yes** |
+
+🟢 **The shape of the week: Canvas is where the new integration work is going.** Five of the ten rows above
+touch Canvas, and `canvas-mcp in:name` returns **277** repositories overall. 🔵 Two of the three rows genuinely
+new to this base are Canvas connectors, and both take an interesting line on credentials — one uses a browser
+session instead of an API token, the other bridges a **Chinese** platform alongside Canvas, which is the first
+APAC-facing LMS connector this base has recorded.
+
+🔴 **Local-first is the other visible pattern** — `studyai`, `ari` and `frametell` all state it — but this is
+read from **descriptions and topic lists, not from source**: none of the three was cloned.
+
+### 🔴 What this shelf still cannot claim
+
+🔴 **`Gap 479-S` stands: GitHub's Trending page is unreachable** — `github.com` HTML is refused at the gateway
+CONNECT with 403, and `api.github.com` and `codeload.github.com` both return 403. **Nothing here is "trending" in
+GitHub's sense.** These are *new arrivals above a star floor*, found by label and keyword, which is a different
+and stated claim. 🔵 A web search for a Trending snapshot returned only third-party **Trendshift** pages, whose
+rankings are their own and which explicitly place the education-AI rows they list **outside** their top 25 for
+the periods covered — so that channel does not substitute either.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-S`** | **`Gap 479-S` unchanged: GitHub's Trending page is still unreachable** and no substitute was found. Every row above is a new arrival above a star floor, discovered by label or name. |
+| 🔴 **`Gap 480-T`** | **`Gap 479-T` is confirmed and generalised, not fixed.** `OpenMAIC` escapes all six instruments including the two topic-independent ones, so discovery-by-label-and-name has a measured blind spot and **no instrument reachable from here closes it**. |
+| 🔴 **`Gap 480-U`** | **One row of eleven was read; none was run.** `boyuchengz/canvas-mcp` is source-verified; `studyai`, `ari`, `frametell`, `canvas-session-mcp` and `canvas-chaoxing-silc-mcp` are **descriptions plus grants**. The "local-first" grouping is self-declared and unaudited, and execution is refused (`Gap 480-A`). |
+| 🔴 **`Gap 480-V`** | **The two credential-handling claims are the most interesting and the least verified.** `canvas-session-mcp` "needs no access token" and `canvas-chaoxing-silc-mcp` is "read-only" are **both read from their descriptions** — the exact failure mode `Gap 479-U` was written about, now repeated on two 3–4★ rows whose source was not opened. |
+| 🟡 **`Gap 480-W`** | **`Gap 479-W` carries forward: the learner/teacher labelling is still this base's own**, and this pass did not re-derive it. The "new to this base" column, by contrast, **is** first-hand — a `grep -F` across all eight shelves per row. |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🟢 THE CENSUS INSTRUMENT IS BACK AND IT REVERSES `p478`'s READING OF THIS SHELF: that pass's six-row keyword sample concluded "every new arrival is TEACHER-facing"; a complete 30-day census at a 30★ floor returns **22** rows and **19 of them are LEARNER-facing**. 🟢 The week's most-starred new education arrival is [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) — **115★ in two days**, MIT, and it is an LMS-integration component rather than a tutor. 🔴 And the fortnight's shape is brutal: in `topic:ai-education`, **one** new repository above 400★ and **nothing else above 3★**.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

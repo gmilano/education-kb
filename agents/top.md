@@ -3,6 +3,267 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 THE CLONE CHANNEL WORKS, AND IT ENDS THE DESCRIPTION-ONLY ERA OF THIS SHELF: arbitrary public repositories can be cloned here, so for the first time in this base's history rows are graded on **source read first-hand** rather than on a description plus a grant. 🟢 `Gap 479-AP` is settled on code: `canvas-mcp`'s read-only claim is **TRUE** — 26 tools, all `get_*`/`list_*`, a 33-call surface with **zero write calls**. 🟢 `Gap 479-B` is closed and the answer **corrects the gap**: the union across four topics is 305 live repositories, and this base already cited **3,198** — coverage was never the problem; the topic filter's effect on the *licence* picture is. 🔴 And execution is still refused at the harness, so "none run" survives — with a named cause.**
+
+🔵 **Gate posture, unchanged from `p475`–`p479` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's own code,
+held outside the clone, and green: frontmatter keys and closed-vocabulary `region` on all eight shelves; every
+table checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and prepend-only on these; every grant fetched to a file and the
+**file** measured (`Gap 468-A`).
+
+---
+
+### 🟢 A new instrument, and it is the one this base has been missing for five passes
+
+🔵 Every pass from `p476` to `p479` declared a variant of the same red gap: *rows are never cloned, never run,
+never evaluated*. That gap was treated as a standing limitation. **It was never tested.** This pass tested it
+([`evidence/reachability.2026-10-27-p480.tsv`](../evidence/reachability.2026-10-27-p480.tsv)):
+
+| channel | result this pass | what it yields |
+|---|---|---|
+| `git clone --depth 1` on an **arbitrary public repo** | 🟢 **WORKS** (exit 0) | **the full source tree** — LOC, manifests, per-file licence headers, tool definitions |
+| `git ls-remote` on an arbitrary public repo | 🟢 works | default branch, HEAD sha, tag list |
+| `raw.githubusercontent.com` | 🟢 **200** | licence payloads, README, any single file at a ref |
+| authenticated repository search | 🟢 works, account-wide, `incomplete_results` false | exact ★, `created_at`, `pushed_at`, `license.spdx_id`, `topics`, `total_count` |
+| `api.github.com` (`curl`) | 🔴 **403** | nothing |
+| `codeload.github.com` tarball | 🔴 **403** | nothing |
+| `github.com` HTML (`curl`) | 🔴 **403** at gateway CONNECT | nothing |
+| **execution** of cloned code (`npm install`, `node --test`) | 🔴 **REFUSED** — `Code from External` | nothing |
+
+🔴 **The split matters and this pass states it precisely.** `Gap 479-A` bundled two different claims — *not read*
+and *not run*. **The first half is now discharged** for four repositories. **The second half is not, and cannot
+be from here**: the harness refuses to execute code that arrived in a clone, which is the same boundary
+`Gap 446-A` records for `make hooks`. So every verdict below is a **static** source read. That is a large step up
+from a README and still short of a benchmark.
+
+### 🟢 `Gap 479-AP` closed on source — the read-only claim is true, and the audit found two things the description could not
+
+🔵 `Gap 479-AP`: *"`canvas-mcp` is two days old and unexercised here. P14's whole licence argument rests on it
+being read-only; that claim is read from its description and name, **not** from its source."* 🟢 Cloned at
+`a91eeb9` and read in full — 1,276 lines of JavaScript across `src/` and `test/`
+([`evidence/clone-tier-source-reads.2026-10-27-p480.tsv`](../evidence/clone-tier-source-reads.2026-10-27-p480.tsv)):
+
+| what was measured | finding |
+|---|---|
+| tool count and naming | **26** `registerTool` calls; **all 26** names are `get_*` or `list_*` (`get_grades`, `list_assignments`, `get_syllabus`, …) |
+| the whole call surface across every tool module | **20** `canvas.getList` + **11** `canvas.getOne` + 1 `resolve` + 1 `download` = **33 calls, zero writes** |
+| the HTTP layer (`src/canvas.js`) | `request()` calls `fetchImpl(url, {headers})` with **no `method` option**, so fetch defaults to GET. The string `method:` **does not appear anywhere in `src/`** |
+| the exported client surface | `{origin, buildUrl, getOne, getList, download, resolve}` — **there is no write primitive to call** |
+| the grades module, the highest write-risk area | `grades.js` uses only `canvas.getList` and `canvas.getOne` |
+
+🟢 **Verdict: the read-only claim holds, and P14's boundary argument survives on evidence rather than on a name.**
+The project's own comment is accurate: *"Minimal read-only client for the Canvas LMS REST API. Every request it
+makes is a GET; there is intentionally no way to write."*
+
+🟢 **Two findings no description would have surfaced, both commercially useful:**
+
+- 🟢 **A token-exfiltration guard.** `getList` refuses to follow a `Link: rel="next"` pagination target whose
+  origin differs from the configured Canvas host — *"otherwise the bearer token could be sent to a third party"* —
+  and `download()` deliberately omits the token because Canvas file URLs carry their own short-lived verifier.
+  That is a deliberate security posture, not an accident.
+- 🔴 **A hard capability ceiling.** `MAX_PAGES = 5` at `per_page=100` means **500 items maximum per list call**.
+  A course with more than 500 assignments or submissions is silently truncated. **Any recipe built on this
+  component inherits that ceiling**, and no prior pass could have known it.
+- 🔵 `package.json` is `"private": true` — it is **not published to npm**, so the integration path is a clone, not
+  a dependency.
+
+### 🔴 Two `canvas-mcp` projects, opposite safety postures — and an inconsistency inside this base
+
+🔵 `canvas-mcp in:name` returns **277** repositories. Two of them matter, they share a name, and they have
+opposite postures. 🔵 **Stated plainly so this pass does not overclaim: the second one is not a discovery.**
+`vishalsachdev/canvas-mcp` is cited **56 times** in this base's retained history, and earlier passes already
+recorded its write tools (`create_assignment`, `bulk_grade_submissions`) and its `read_only_hint=True` on 72 of
+128 tools. What is new here is the **clone-tier measurement** of both at a pinned commit:
+
+| repo | ★ | created | grant | source read | writes? |
+|---|---|---|---|---|---|
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 115 | 2026-10-25 | 🟢 MIT · 1,072 B | 1,276 LOC JS, read in full | 🟢 **no** — 33 calls, 0 writes |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **308** | **2025-02-28** | 🟢 MIT · 1,071 B | 32,878 LOC Python under `src/` | 🔴 **yes** — 8 `client.post` + 3 `client.put` + 1 `client.delete` |
+
+🔴 `vishalsachdev/canvas-mcp` carries **136** `@mcp.tool` definitions including `create_assignment`,
+`create_announcement`, `create_rubric`, `edit_page_content`, `delete_assignment_with_confirmation`,
+`delete_module`, **`grade_single_submission`** and **`grade_with_rubric`**.
+
+🔵 **The 136 figure is an update, not a first count** — earlier passes published "102–103" and then 128 from
+different channels; 136 is the count at `becd181` today. 🟢 **The genuinely new measurement is the write surface
+at the HTTP-client level**: 12 call sites, which is what actually determines whether a deployment can mutate the
+LMS, and it is consistent with this base's own earlier reading that 56 of the tools are *not* annotated
+read-only.
+
+🔴 **And that exposes an inconsistency inside this base rather than a gap in the world.** `Gap 479-AQ` records
+P14's assessment gate as a **0★** project chosen *"because the grading census returns zero alternatives."*
+**This base's own shelves already cite a 308★, twenty-month-old, MIT, actively-maintained project that grades
+against Canvas** — 56 times over. The alternative was never missing; it was never carried into the recipe. 🔴 The
+reason it is not a free win is the boundary: taking it means taking 12 write call sites into the system of
+record. **The choice between these two repositories *is* P14's architectural decision**, and it should be
+documented as a fork rather than resolved by omission. See `compose/patterns.md`.
+
+### 🟢 `Gap 479-B` closed — the union is 305 live repositories, and the topic filter was hiding an order of magnitude
+
+🔵 `Gap 479-B`: *"The census is one topic… no union across topics was computed."* 🟢 Four star-floor censuses plus
+three probes, every one with `incomplete_results` **false**
+([`evidence/census-queries.2026-10-27-p480.tsv`](../evidence/census-queries.2026-10-27-p480.tsv)):
+
+| query | `total_count` | returned |
+|---|---|---|
+| `topic:ai-tutor stars:>50` | 25 | 25 |
+| `topic:ai-tutor stars:>20` | 36 | 36 |
+| `topic:e-learning stars:>50` | 28 | 28 |
+| `topic:edtech stars:>50` | **64** | 64 |
+| `topic:education stars:>100` | **634** | 100 (page 1) |
+| `"ai tutor" in:name,description stars:>50` | 49 | 49 |
+| `canvas-mcp in:name` | 277 | 30 |
+| `grading`/`autograding`/`"automated feedback"` + `topic:education` | 927 | 50 |
+
+🟢 **The union is 328 distinct repositories, 305 of them live** (0 forks, 23 archived)
+([`evidence/census-union.2026-10-27-p480.tsv`](../evidence/census-union.2026-10-27-p480.tsv)). `p479` reproduces
+exactly — `topic:ai-tutor` ≥50★ still returns **25** — so the instrument is stable and the old number was right
+*for its label*. 🔴 It was simply the wrong label to generalise from.
+
+🔵 **Grant distribution across the 305 live rows**, each from `license.spdx_id` on the search channel:
+
+| grant | rows | share |
+|---|---|---|
+| 🟢 MIT | 126 | 41% |
+| 🔴 **none declared** | **57** | **19%** |
+| 🟡 `NOASSERTION` (present but unrecognised) | 38 | 12% |
+| 🟢 Apache-2.0 | 20 | 7% |
+| 🔴 GPL-3.0 | 18 | 6% |
+| 🔴 AGPL-3.0 | 17 | 6% |
+| 🟢 BSD-3-Clause | 7 | 2% |
+| 🟡 CC0-1.0 / CC-BY-4.0 / CC-BY-SA-4.0 | 11 | 4% |
+| other (EPL, GPL-2.0, LGPL-2.1, MPL-2.0, MulanPSL-2.0, EUPL-1.2, ISC, CERN-OHL-S) | 11 | 4% |
+
+🔴 **Permissive share falls from 76% to 50% once the topic filter is removed**, and **31% of the population is
+either unlicensed or carries a grant the channel cannot classify.** `p479`'s observation that *"the instrument you
+choose decides the licence picture you see"* is now a measured effect with a size.
+
+### 🔵 A caution this pass must publish against its own number
+
+🔵 **185 of the 305 live rows are not software.** `topic:education` at ≥100★ is dominated by curriculum and
+resource repositories — `freeCodeCamp/freeCodeCamp` (458,025★), `EbookFoundation/free-programming-books`
+(400,270★), `TheAlgorithms/Python` (225,562★). Classifying by topic labels and description keywords leaves
+**120 AI-relevant live rows**, 64 of them created in 2026. 🔵 So `p479`'s narrow census was *defensible* as an
+agent shelf and *wrong* as a population estimate, and the honest union figure for this shelf's purpose is **120**,
+not 305. The classifier is this base's own and is stated as a gap below.
+
+### 🔴 And the union's real lesson is the opposite of what `Gap 479-B` feared — coverage was never the problem
+
+🔵 `Gap 479-B` was written as a coverage worry: the topic filter must be hiding large repositories. 🟢 **Tested
+against this base's own corpus, it mostly is not.** An address census over all eight shelves finds this base
+already cites **3,198 distinct `owner/repo` addresses across 11,125 citations**
+([`evidence/address-census-summary.2026-10-27-p480.tsv`](../evidence/address-census-summary.2026-10-27-p480.tsv)) —
+**ten times the 305-row union.** Checked row by row, nearly every repository the union surfaced is already here:
+
+| row the union returned | ★ | grant | already in this base? |
+|---|---|---|---|
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 36,250 | 🟢 MIT | 🔵 **yes** — on 7 shelves, this one included |
+| [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | 4,527 | 🔴 AGPL-3.0 | 🔵 **yes** — on this shelf 7 times |
+| [penecho/penecho](https://github.com/penecho/penecho) | 2,504 | 🔴 AGPL-3.0 | 🔵 **yes** — on this shelf 7 times |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 2,424 | 🔴 AGPL-3.0 | 🔵 **yes** — on this shelf 8 times |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 536 | 🟢 MIT | 🔵 **yes** — on this shelf 4 times |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 209 | 🔴 AGPL-3.0 | 🔵 **yes** — on 8 shelves |
+| [iblai/lms](https://github.com/iblai/lms) | 208 | 🟢 MIT | 🟡 **partly** — on `repos/trending.md` and `verticals/`, **not on this shelf** |
+| [Halleck45/OpenPronounce](https://github.com/Halleck45/OpenPronounce) | 165 | 🟢 MIT | 🟡 **partly** — on `agents/trending.md` and `repos/trending.md`, **not on this shelf** |
+| [zuhairhalawa/studyai](https://github.com/zuhairhalawa/studyai) | 223 | 🟢 MIT | 🟢 **no — absent from every shelf** |
+| [CorCvusRamboChen/canvas-session-mcp](https://github.com/CorCvusRamboChen/canvas-session-mcp) | 4 | 🟢 MIT | 🟢 **no — absent from every shelf** |
+| [shu-silc-osc/canvas-chaoxing-silc-mcp](https://github.com/shu-silc-osc/canvas-chaoxing-silc-mcp) | 3 | 🟢 MIT | 🟢 **no — absent from every shelf** |
+
+🟢 **So `Gap 479-B` is closed, and the answer corrects the gap rather than confirming it.** The union adds
+**three** rows this base did not have, at 223★, 4★ and 3★ — and the largest of them is a local-first study
+platform, not a missed flagship. 🔵 `p479`'s claim that *"16 of them have never appeared on this shelf"* was a
+statement about a single shelf's *recent* sections, not about this base's coverage.
+
+🔴 **What the union measures instead is real and different: the licence distribution of a population, and the
+size of the topic filter's distortion.** Those two numbers — 50% permissive against 76%, and 19% with no grant —
+are properties of the population that **no amount of accumulated citation gives you**, because this base's 3,198
+addresses were gathered by attention, not by sampling. 🟢 **That is the instrument's actual contribution**, and
+it is a measurement this base could not previously make at all.
+
+🔵 **One row genuinely worth promoting onto this shelf**, found by the union and absent here:
+[Halleck45/OpenPronounce](https://github.com/Halleck45/OpenPronounce) — 165★, **MIT**, phoneme-level
+pronunciation assessment (Wav2Vec2 + DTW), positioned as a self-hosted replacement for **Azure Pronunciation
+Assessment**. 🔵 A narrow permissive component that displaces a priced cloud API is a different and more
+tractable commercial shape than a tutor, and it is already carried on two other shelves.
+
+### 🟡 `Gap 479-C` — a third interval, a wider panel, and the concentration holds
+
+🔵 Both endpoints are exact counts from the same channel; `t1` is `p479`'s own 11:50:25Z read
+([`evidence/star-velocity.2026-10-27-p480.tsv`](../evidence/star-velocity.2026-10-27-p480.tsv)):
+
+| repo | `t1` 11:50:25Z | `t2` 12:54:50Z | Δ | ★/h |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,827 | **44,950** | **+123** | 🟢 **114.6** |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,230 | 1,231 | +1 | 0.9 |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 348 | 352 | +4 | 3.7 |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 56 | **0** | 0.0 |
+
+🟢 **Three passes, three intervals, one conclusion.** 123 events over 64.4 minutes give a Poisson 95% interval of
+**94.4–134.8 ★/h**, which **overlaps `p479`'s 80.6–107.4** — so the two measurements are consistent — while the
+point estimate rises from 94.0 to 114.6. Against a lifetime average of **148.3 ★/day = 6.18 ★/h** over 303 days,
+the current rate is **18.5× its own lifetime average**, up from `p479`'s 15.2×. 🔴 **Concentration holds at
+24.6 : 1**: DeepTutor took +123 while the other three measured rows took +5 between them.
+
+🔴 **`Gap 479-C` is only partly discharged.** The panel is wider in intent but not in effect — three of `p479`'s
+eight rows fell outside this pass's censuses, and the four that resolved still include only **one** repository
+moving fast enough to have a rate of its own.
+
+### 🔴 `Gap 479-F` closed — and the answer is bigger than one row: a non-canonical Apache-2.0 is circulating
+
+🔵 `Gap 479-F` asked whether `feifei-companion`'s 1,130-byte shortfall was *"a truncation, a translation or a
+modification of the operative terms."* 🟢 Both it and the shelf's flagship row were diffed against
+`apache.org/licenses/LICENSE-2.0.txt` (11,358 B)
+([`evidence/licence-forensics.2026-10-27-p480.tsv`](../evidence/licence-forensics.2026-10-27-p480.tsv)):
+
+| repo | bytes | Δ vs control | what the diff shows |
+|---|---|---|---|
+| [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 10,227 | **−1,131** | 🟢 **mostly benign**: the whole non-operative APPENDIX is removed — which accounts for the shortfall — and the boilerplate is applied instead as *"Copyright 2026 Xue Lai Xue Qu Learning Society"*. 🟡 **But three body lines differ from the control.** |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 11,408 | **+50** | 🔴 **not byte-identical either** — 16 changed line pairs. The copyright is properly filled in (*"Data Intelligence Lab, The University of Hong Kong"*), but the appendix text is **garbled** — *"Please also get an 'Alarm or alarm' copyright header…"* — and **the same three body lines differ.** |
+
+🔴 **The three deviations are identical across both repositories, and absent from the control and from
+`canvas-lms`** ([`evidence/apache-body-deviations.2026-10-27-p480.tsv`](../evidence/apache-body-deviations.2026-10-27-p480.tsv)):
+
+| § | canonical | as published in both repos |
+|---|---|---|
+| §1 Definitions | "submitted to Licensor for inclusion" | "submitted to **the** Licensor for inclusion" |
+| §1 Definitions | "received by Licensor and" | "received by **the** Licensor and" |
+| §4 Redistribution | "excluding **those** notices that do not" | "excluding **any** notices that do not" |
+
+🟢 **Two independently authored projects do not make the same three edits by chance.** Both carry a **shared
+non-canonical rendering** of the Apache-2.0 body, and both are APAC-origin. 🔵 This base takes no view on whether
+"any" versus "those" in §4 changes legal effect — **that is a determination it cannot make.** What it can say is
+operational and matters for diligence: **a byte-count or digest check against the canonical text will flag these
+rows, and a human will have to read the diff.** The flagship row of this shelf is one of them.
+
+### 🟢 `Gap 479-E` closed — and the two verdicts are different from each other
+
+🔵 Every path probed as a file, on both candidate branches, with the README read as well
+([`evidence/no-grant-probes.2026-10-27-p480.tsv`](../evidence/no-grant-probes.2026-10-27-p480.tsv)):
+
+| repo | ★ | probed | verdict |
+|---|---|---|---|
+| [mahseema/aibooks](https://github.com/mahseema/aibooks) | 95 | 14 paths × 2 branches **+ README** | 🟡 **a dangling claim, not an absence.** The README has a `## License` section reading **`[MIT](LICENSE.md)`** — and `LICENSE.md`, `LICENSE` and `LICENSE.txt` are **all 404 on both branches**. An MIT assertion in prose with no grant file behind it is neither "no grant" nor MIT. |
+| [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29,550** | 14 paths + README | 🔴 **no grant, confirmed independently** of `p479`'s 20-path probe. Exclusive copyright at 29.5k★. |
+| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 64 | 14 paths × 2 branches + README | 🔴 **no grant.** Nothing at any path on either branch, no README licence prose. |
+
+🟢 `aibooks` is the useful one: it is the failure mode a prose-reading licence scanner gets **wrong in the
+permissive direction**, which is the dangerous direction.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-A`** | **The clone channel reads; it does not run.** Four repositories were cloned and read; **none was executed, installed, or benchmarked**, because the harness refuses `Code from External`. `canvas-mcp`'s 26 tools are verified to *contain no write path*; they are **not** verified to *work*. No grading output from `grade_with_rubric` has been seen. The second half of `Gap 479-A` stands with a named cause. |
+| 🔴 **`Gap 480-B`** | **Four repositories out of 305 were cloned.** The clone-tier verdicts cover `boyuchengz/canvas-mcp`, `vishalsachdev/canvas-mcp`, `projectfedena/fedena` and `HKUDS/DeepTutor`. Every other row on this shelf is still a description plus a grant, exactly as `Gap 479-A` says. |
+| 🔴 **`Gap 480-C`** | **The 120 "AI-relevant" figure rests on this base's own classifier** — a topic-label and description-keyword filter applied to 305 rows. It is reproducible from the census file and it is **not** an architectural audit; `topic:education` at ≥100★ was also read only to page 1 of 634, so the union is a floor, not a census. |
+| 🟡 **`Gap 480-D`** | **`Gap 479-C` is only partly discharged.** Three of `p479`'s eight velocity rows fell outside this pass's queries and were not re-read, and only **one** of the four that resolved moved enough to carry a rate. "The tier is flat" is still a claim about hours. |
+| 🟡 **`Gap 480-E`** | **The shared-Apache-rendering finding is a two-row sample.** Two repositories sharing three deviations is strong evidence of a common source and **no evidence at all** about how widely that rendering has spread; the other 18 Apache rows in the union were not diffed. No provenance for the rendering was found. |
+| 🟡 **`Gap 480-F`** | **`vishalsachdev/canvas-mcp`'s write surface is counted, not characterised.** 12 write call sites and 136 tools were inventoried by grep; **no scope, permission model or confirmation flow was read**, so "it writes" is certain and "what guards those writes" is unexamined — which is precisely what a recipe would need. |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🟢 THE AUTHENTICATED SEARCH CHANNEL IS BACK, AND THE FIRST THING IT PROVES IS THAT THIS SHELF WAS A SAMPLE, NOT A CENSUS: a star-floor census of `topic:ai-tutor` returns **25** rows at ≥50★ and **16 of them have never appeared on this shelf**, including four above 200★. 🟢 Every one of the 25 now carries a first-hand grant read — 19 permissive, 4 copyleft, **2 with no grant file at all**. 🟢 And `Gap 478-A` is closed with a two-hour baseline: `HKUDS/DeepTutor` is running at **94.0 ★/h**, a 1.33×-wide interval against `p477`'s 3.8×.**
 
 🔵 **Gate posture, unchanged from `p475`–`p478` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is

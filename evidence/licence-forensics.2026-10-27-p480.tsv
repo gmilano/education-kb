@@ -1,0 +1,8 @@
+repo	grant_as_published	bytes	vs_canonical_control	finding
+HKUDS/DeepTutor	Apache-2.0	11408	control=11358 delta=+50	NOT byte-identical. 16 changed line pairs. 3 BODY deviations + appendix replaced with garbled "Alarm or alarm" text + copyright filled as "Data Intelligence Lab, The University of Hong Kong"
+SimonsTang/feifei-companion	Apache-2.0	10227	control=11358 delta=-1131	NOT byte-identical. Appendix REMOVED (explains the -1131 B) and boilerplate applied as "Copyright 2026 Xue Lai Xue Qu Learning Society". Same 3 BODY deviations as DeepTutor.
+apache.org LICENSE-2.0.txt (control)	Apache-2.0	11358	self	canonical
+instructure/canvas-lms	AGPL-3.0	34520	bare FSF text	ELECTION READ in per-file header app/models/course.rb: "as published by the Free Software Foundation, version 3 of the License." -> AGPL-3.0-ONLY, no "or later"
+openedx/edx-platform	AGPL-3.0	35136	bare FSF text +616 B	The +616 B is an edX Inc. SCOPE CLARIFICATION: a public independently-available web service communicating by RPC/inter-service communication is NOT a work based on the copyrighted work, and its source is NOT Corresponding Source.
+overhangio/tutor	AGPL-3.0	34523	bare FSF text	deployment path; no clarification appended
+projectfedena/fedena	Apache-2.0 (NOTICE, 680 B)	680	n/a	CORROBORATED: 175 .rb files under app/ and lib/ carry the full per-file Apache-2.0 header

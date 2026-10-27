@@ -1,0 +1,9 @@
+channel	result	http_or_exit	what_it_yields
+git clone --depth 1 (arbitrary public repo)	WORKS	exit 0	FULL SOURCE TREE: files, LOC, manifests, per-file licence headers, tool definitions
+git ls-remote (arbitrary public repo)	WORKS	exit 0	default branch, HEAD sha, tag list
+raw.githubusercontent.com	WORKS	200	licence payloads, README, any single file at a ref
+authenticated repository search (MCP)	WORKS account-wide	incomplete_results=false	exact stars, created_at, pushed_at, license.spdx_id, topics, fork, archived, size, total_count
+api.github.com (curl)	REFUSED	403	nothing
+codeload.github.com (tar.gz)	REFUSED	403	nothing
+github.com HTML (curl)	REFUSED	403 at gateway CONNECT	nothing
+EXECUTION of cloned code (npm install / node --test)	REFUSED BY HARNESS	Code from External	nothing - clone-tier is READ-ONLY this pass

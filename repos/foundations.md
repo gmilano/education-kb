@@ -3,6 +3,119 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-H` IS CLOSED ON BOTH ROWS, AND ONE OF THE TWO ANSWERS IS WORTH MORE THAN AN ELECTION: Canvas LMS elects **AGPL-3.0-only** — read from its per-file header, not guessed — and Open edX's `LICENSE` carries **616 bytes the bare FSF text does not have**: an explicit edX Inc. clarification that a separate web service talking to it over **RPC is not a derivative work**. 🟢 That is the first first-hand grant-text basis this base has ever had for the "deployed, not linked" boundary its whole compose shelf rests on.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — the harness refuses execution of
+code arriving in a clone (`Code from External`). **Nothing below is gate-attested.** Frontmatter, closed-vocabulary
+`region`, table pipe-counts, no-header-as-data, prepend-only and grant-measured-as-a-file all re-checked in this
+session's own code.
+
+---
+
+### 🟢 `Gap 479-H`, row one — Canvas LMS elects AGPL-3.0-**only**, and the election was never in the `LICENSE` file
+
+🔵 `Gap 479-H`: *"Two elections remain unread — `canvas-lms` (bare `AGPL-3.0`)…"* 🔵 The reason prior passes could
+not read it is that they read the wrong file. `instructure/canvas-lms`'s `LICENSE` is the **bare FSF text**
+(34,520 B); the only "any later version" strings in it sit in the FSF's own non-operative *"How to Apply These
+Terms"* appendix. 🟢 **The operative election lives in the per-source-file header**, and it is unambiguous
+(`app/models/course.rb`, read via `raw.githubusercontent.com`):
+
+> *"Canvas is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General
+> Public License as published by the Free Software Foundation, **version 3 of the License.**"*
+
+🔴 **No "or (at your option) any later version".** Canvas LMS is **AGPL-3.0-only** — the same election `tutor`
+carries on the Open edX deployment path, so the two dominant open LMS platforms now read the same way on version.
+
+### 🟢 `Gap 479-H`, row two — Open edX's `LICENSE` is 616 bytes longer than the bare text, and the extra bytes are the finding
+
+🔵 `openedx/edx-platform`'s `LICENSE` is **35,136 B** against `canvas-lms`'s 34,520 B and `tutor`'s 34,523 B.
+🟢 Diffing it against `canvas-lms` isolates the difference exactly: **ten appended lines, in edX Inc.'s own voice**:
+
+> *"EdX Inc. wishes to state, in clarification of the above license terms, that any public, independently
+> available web service offered over the network and communicating with edX's copyrighted works by any form of
+> inter-service communication, including but not limited to Remote Procedure Call (RPC) interfaces, **is not a
+> work based on our copyrighted work** within the meaning of the license. 'Corresponding Source' of this work, or
+> works based on this work, as defined by the terms of this license **do not include source code files for
+> programs used solely to provide those public, independently available web services.**"*
+
+🟢 **This is the single most useful sentence this base has found for its own compose shelf.** `Gap 478-T`,
+`Gap 479-R` and `Gap 479-AS` all say the same thing: the "AI service alongside the platform, talking over
+HTTP" boundary is *architectural reasoning, never verified*. For **Open edX specifically**, it no longer is —
+the copyright holder states in the licence file that an independently available service communicating by RPC is
+outside the copyleft scope and that its source is not Corresponding Source.
+
+🔴 **Three limits, stated plainly, because this is a legal reading and this base does not give advice:**
+
+| limit | why it matters |
+|---|---|
+| 🔴 It is a **clarification of the licensor's interpretation**, not an amendment to the AGPL text | its weight against a third party is a legal question this base cannot answer |
+| 🔴 It names **edX Inc.** | Open edX is now stewarded by the **Axim Collaborative**; whether the statement binds successors or later contributors is unread here |
+| 🔴 It covers a service that is **"public, independently available"** and reached by **inter-service communication** | an AI component embedded as a *plugin inside* the platform process is plainly **not** what this sentence protects |
+
+🔴 **And the contrast is decision-grade: Canvas carries no equivalent clarification.** Two platforms, the same
+AGPL-3.0-only election, the same proposed architecture — and **materially different documented posture**. See
+`verticals/solutions.md` and `compose/patterns.md`.
+
+### 🟢 `Gap 479-M` closed, in the opposite direction from the gap's suspicion
+
+🔵 `Gap 479-M`: *"Fedena's Apache-2.0 rests on a `NOTICE`, not a `LICENSE`… **No source file header was read to
+corroborate it.**"* 🟢 The repository was cloned (`68a84ac`) and the headers were read:
+**175 Ruby files under `app/` and `lib/` carry the full per-file Apache-2.0 notice**, `app/models/student.rb`
+among them:
+
+> `#Licensed under the Apache License, Version 2.0 (the "License");` … `#You may obtain a copy of the License at`
+> … `#  http://www.apache.org/licenses/LICENSE-2.0`
+
+🟢 **The grant is corroborated per-file, exactly as the gap asked.** A `NOTICE` plus 175 concordant source
+headers is a far stronger statement of intent than a `NOTICE` alone. 🔵 Whether a `NOTICE` *suffices as the
+instrument* remains a legal determination this base cannot make — but the evidentiary position is no longer
+one file.
+
+### 🟢 The foundations tier — grant, liveness and, for four rows, source read first-hand
+
+| repo | ★ · grant | last pushed | read this pass | what it is |
+|---|---|---|---|---|
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · 35,136 B | live | 🟢 `LICENSE` diffed byte-for-byte | MOOC-scale LMS; **carries the RPC scope clarification above** |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 · 34,520 B | live | 🟢 `LICENSE` + per-file header | LMS of record in much of US higher ed; **AGPL-3.0-only, no clarification** |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 · 34,523 B | live | 🟢 `LICENSE` payload | the supported Open edX deployment path; Docker-based |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟡 Apache-2.0 · 11,408 B *(non-canonical)* | 2026-10-27 | 🟢 **cloned `a31d826`** | **819,646 LOC** (523,055 Python · 173,012 TSX · 123,255 TS); v1.6.15; wheels `deeptutor`, `deeptutor-cli` |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 🟢 MIT · 1,072 B | 2026-10-27 | 🟢 **cloned `a91eeb9`** | 1,276 LOC; **26 read-only tools onto Canvas**; 500-item/list ceiling |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT · 1,071 B | 2026-10-26 | 🟢 **cloned `becd181`** | 32,878 LOC Python; **136 tools, 12 write call sites**, incl. rubric grading |
+| [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 Apache-2.0 · `NOTICE` 680 B **+ 175 file headers** | 2016-07-20 | 🟢 **cloned `68a84ac`** | 273,846 LOC SIS; **Rails 2.3.5** — see `verticals/solutions.md` |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | 2026-10-22 | 🔵 grant + metadata only | 536★; spaced repetition exposed as MCP tools |
+
+🔵 **Four of eight rows on this shelf now rest on a clone.** That is the first time any row here has.
+
+### 🟢 What a clone shows about DeepTutor that no metadata channel could
+
+🔵 `Gap 479-L`: *"No row was installed, run or benchmarked."* 🔴 Still true — execution is refused. 🟢 But the
+tree itself carries maturity signals that a star count cannot:
+
+| signal | what was found | why it reads as maturity |
+|---|---|---|
+| `.importlinter` | present at repo root | the project **enforces layer/import contracts in CI** — a deliberate architectural boundary, rare at this size |
+| `pyproject.toml` | `requires-python = ">=3.11,<3.15"` with a commented forward-cap rationale | the cap is *reasoned* ("compiled base dependencies such as FAISS publish compatible wheels"), not copied |
+| published artefacts | `pip install deeptutor` / `deeptutor-cli` | a **wheel**, not a clone-only project — unlike `boyuchengz/canvas-mcp`, which is `"private": true` |
+| `.secrets.baseline`, `.pre-commit-config.yaml` | present | secret scanning and hooks wired in |
+| `THIRD_PARTY_NOTICES.md`, `CITATION.cff` | present | attribution and citation handled deliberately |
+| MCP client | in **core** dependencies, not an extra | tool-calling is architectural, not an add-on |
+
+🔵 For a studio deciding whether a 44.9k★ repository is a toy or a base to build on, **these are the signals that
+answer the question**, and all six require a clone to see.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-G`** | **The Open edX clarification is read, not adjudicated.** Whether it binds the Axim Collaborative as edX Inc.'s successor, whether it reaches later third-party contributors' code in the same tree, and whether a court would read it as the gap says are **three separate legal questions, none of them answerable here**. The sentence is quoted so a lawyer can rule on it — it is not itself a ruling. |
+| 🔴 **`Gap 480-H`** | **`Gap 479-G` and `Gap 478-J` stand: no depth or scope probe ran.** Rows are graded on one grant file plus, for four of them, a static source read. The ECL-2.0 patent reading on `sakaiproject/sakai` is untouched this pass and remains this base's own reading of licence text. |
+| 🔴 **`Gap 480-I`** | **`Gap 479-I` unchanged: BigBlueButton's per-source-file notice is still unread**, and the LGPL-3.0 reading still rests on one `LICENSE` plus one module's `build.sbt`. The per-file technique that closed `Gap 479-M` for Fedena and the election for Canvas **was not applied to it**, which is an omission of effort, not of instrument. |
+| 🟡 **`Gap 480-J`** | **Canvas's election rests on one source file.** `app/models/course.rb` is representative of a convention, not proof of it; no sweep across the tree confirmed that every file carries the same "version 3 of the License" wording, and `canvas-lms` was **not** cloned — it was read one path at a time. |
+| 🟡 **`Gap 480-K`** | **`Gap 479-J` and `Gap 479-K` carry forward untouched.** No digest family was mapped to an FSF publication event, and `last push` versus `updated_at` is still a mixed basis for "alive" across the older rows on this shelf. |
+| 🟡 **`Gap 480-L`** | **DeepTutor's maturity signals are *present*, not *exercised*.** `.importlinter` existing is not the same as its contracts passing; the wheels are named in packaging metadata and **were not installed**; `requires-python` was read, not satisfied. Every row of that table is a static read (`Gap 480-A`). |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🟢 THE AGPL-3.0 CONTROL EXISTS AFTER ALL — four unrelated projects are byte-identical at **34,523 B · `0d96a4ff68ad`** — and the same measurement found the thing this base has been asserting without proof: a **byte-count collision**. Two projects carry 34,523 B with a **different digest**, so for AGPL-3.0 a matching byte count is not merely weak evidence, it is *actively misleading*. 🔴 And the maintenance read is the commercial finding: **`EduKTM` has not been pushed since 2024-01-02** and **`pelotech/xapi-lrs` has 0★** — both are load-bearing components in this base's own recipes.**
 
 🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green — see the

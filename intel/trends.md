@@ -3,6 +3,123 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p480` — `2026-10-27` — **🟢 THE TREND THIS PASS CAN MEASURE THAT NO PREVIOUS ONE COULD IS A LICENSING TREND, AND IT IS A WARNING: with the topic filter removed, **19% of 305 live education-AI repositories declare no grant at all** and permissive share falls from 76% to **50%** — and the two Apache-2.0 files read byte-for-byte this pass are **both non-canonical, with the same three deviations**. 🟢 Attention stays concentrated **24.6 : 1** in one repository, now across a third interval. 🔴 The efficacy literature is unmoved and unreadable from here.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. **Nothing below is gate-attested.** Frontmatter, closed-vocabulary `region`, pipe-counts,
+no-header-as-data and prepend-only re-checked in this session's own code.
+
+---
+
+### 🟢 Trend 1 — the grant, not the architecture, is where this tier is drifting
+
+🔵 Measured across the 305-row live union, not a sample:
+
+| grant class | rows | share |
+|---|---|---|
+| 🟢 permissive (MIT 126 · Apache-2.0 20 · BSD-3-Clause 7 · ISC 1) | 154 | **50%** |
+| 🔴 **no grant declared** | **57** | **19%** |
+| 🟡 `NOASSERTION` — present but unclassifiable | 38 | 12% |
+| 🔴 copyleft (GPL-3.0 18 · AGPL-3.0 17 · others 10) | 45 | 15% |
+| 🟡 Creative Commons | 11 | 4% |
+
+🔴 **Nearly one row in five cannot legally be built on, and nearly one in three cannot be costed without a human
+reading a file.** 🟢 The sharpest instance is on `agents/top.md`: the **second-most-starred AI-tutor repository
+on GitHub, at 29,550★, carries no grant on any channel** — exclusive copyright. 🔵 The trend statement is
+therefore not "open source is winning education AI" but **"attention and licensability are decoupling"**, and
+this is the first pass with a population measurement behind that claim rather than an impression.
+
+### 🟢 Trend 2 — a non-canonical Apache-2.0 is circulating in APAC education AI
+
+🔵 Two Apache-2.0 rows were diffed against `apache.org/licenses/LICENSE-2.0.txt` this pass. **Both differ from
+the control, and they differ in the same three places**
+([`evidence/apache-body-deviations.2026-10-27-p480.tsv`](../evidence/apache-body-deviations.2026-10-27-p480.tsv)):
+"submitted to **the** Licensor", "received by **the** Licensor", and §4's "excluding **any** notices" for
+"excluding **those** notices". 🔵 The control and `canvas-lms` carry none of the three.
+
+🟢 **Two independently authored projects do not make the same three edits by chance** — they share a rendering.
+Both are APAC-origin on a first-hand licence-file read: `HKUDS/DeepTutor` names *"Data Intelligence Lab, The
+University of Hong Kong"*, `SimonsTang/feifei-companion` names *"Xue Lai Xue Qu Learning Society"*.
+🔵 **The operational consequence, which is all this base can assert:** a digest- or byte-count-based licence
+scanner **will flag these rows**, and whether "any" versus "those" in §4 alters legal effect is a determination
+this base cannot make. A studio sourcing APAC education-AI components should budget for reading licence text.
+
+### 🟡 Trend 3 — attention concentration holds across a third interval
+
+🔵 `t1` is `p479`'s own 11:50:25Z read; `t2` is 12:54:50Z
+([`evidence/star-velocity.2026-10-27-p480.tsv`](../evidence/star-velocity.2026-10-27-p480.tsv)):
+
+| measure | `p479` | `p480` |
+|---|---|---|
+| DeepTutor rate | 94.0 ★/h (80.6–107.4) | **114.6 ★/h (94.4–134.8)** |
+| multiple of its own lifetime average | 15.2× | **18.5×** (lifetime 148.3 ★/day = 6.18 ★/h over 303 days) |
+| concentration vs the rest of the panel | 31.5 : 1 over 7 rows | **24.6 : 1** over 3 rows |
+
+🟢 The two Poisson intervals **overlap**, so the measurements are consistent while the point estimate rises.
+🔴 **But the trend claim is weaker than the numbers look**: only one repository in the panel moves enough to
+have a rate at all, so "the tier is flat" remains a statement about hours, not weeks (`Gap 480-D`).
+
+### 🟢 Trend 4 — the unit of supply is a skill or an MCP server, and the clone tier now shows what that costs
+
+🔵 `p479` counted 12 of 25 census rows as agent skills or MCP servers rather than applications. 🟢 This pass read
+one of them in full and the finding generalises into a **cost**, not just a shape:
+`boyuchengz/canvas-mcp` is **1,276 lines** and carries a hard **`MAX_PAGES = 5` × `per_page=100` = 500-item
+ceiling per list call**, plus `"private": true` (no npm publication, so integration is a clone).
+🔵 **The trend is that the unit of supply is small enough to read in an afternoon and small enough to have
+undocumented ceilings.** Both properties follow from the same cause, and only a clone reveals the second.
+
+### 🟢 Trend 5 — the topic label is now a measured distortion, not a suspected one
+
+🔵 `topic:ai-tutor` ≥50★ returns 25 rows and 76% permissive. The union across `ai-tutor`, `edtech`,
+`e-learning` and `education` returns **305 live rows and 50% permissive**, and `topic:education` ≥100★ alone
+reports **634**. 🟢 The largest rows the narrow label does not return include
+[virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) at **36,250★ MIT** (it declares
+`edtech`, not `ai-tutor`), plus four AGPL-3.0 applications between 2.4k and 4.5k★ — all of which this base
+already carries, so the distortion is about *which instrument sees what*, not about coverage (`agents/top.md`).
+🔵 **Direction of the distortion, stated so it is usable:** topic-filtered lists over-represent *small
+permissive skills*; star-ranked lists over-represent *large unshippable applications*. A studio needs both
+instruments and should expect them to disagree.
+
+### 🔴 Trend 6 — efficacy: unmoved, and still unreadable from here
+
+🔴 `Gap 479-AI` stands without improvement. No study was read first-hand this pass either; `arxiv.org`,
+`edworkingpapers.com` and `clinicaltrials.gov` are refused at the gateway, and the **−0.37 SD** figure this base
+has carried remains **load-bearing and unverified**. 🔵 This pass adds no new efficacy claim rather than
+restating an old one at second hand — the honest move, and a non-finding.
+
+### 🔵 Trend 7 — institutional readiness is the consensus gap, and the sources contradict each other
+
+🔵 Every demand-side source this pass read agrees adoption outruns governance: **86%** of students across 16
+countries using AI in study; usage reported rising **66% (2024) → 92% (2025)**; **10%** of institutions with
+formal AI guidelines; **71%** of US teachers without AI training. 🔴 Against which another compilation puts
+**~70%** of European and North American institutions as having or developing AI guidance. **Those cannot both
+be true of the same population** and neither survey could be opened. 🟢 The trend survives the contradiction —
+governance lags use — and no percentage from it should be quoted without its source.
+
+### 🔵 Trend 8 — regulation is diverging by region, and one prohibition already binds
+
+🔵 EU: Annex III education duties at **2 Dec 2027** (Regulation (EU) 2026/1744), **emotion recognition in
+schools already prohibited since 2 Feb 2025**. US: no federal instrument; **Colorado and Texas** piecemeal.
+China: Interim AI Measures since **15 Aug 2023** (registration, security review, content labelling) plus an
+**"AI Plus"** 90%-penetration-by-2030 target. Japan: light-touch voluntary. Vietnam: standalone AI law from
+**1 Mar 2026**. LATAM: **no unified framework**.
+🟢 **The design consequence is singular and present-tense**: an engagement-detection or emotion-sensing feature
+is *already illegal* in EU education, years before the high-risk regime starts. Everything else is a 2027
+planning problem; that is a today problem.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 480-AI`** | **`Gap 479-AI` unchanged — no study read first-hand.** Every efficacy figure this base carries, the −0.37 SD included, is a search-tool summary of a paper it cannot open. This pass did not improve the position and declined to restate it as if it had. |
+| 🔴 **`Gap 480-AJ`** | **Trend 1's shares are `license.spdx_id` values, not licence readings.** 38 rows are `NOASSERTION`, which means a grant exists and the channel could not classify it; those were **not** fetched and read. The 19% "no grant" figure is the channel's verdict, confirmed by file probe on only **three** rows. |
+| 🔴 **`Gap 480-AK`** | **Trend 2 is a two-row sample** (`Gap 480-E`). The shared rendering is strongly evidenced and its **prevalence is entirely unmeasured** — the other 18 Apache rows in the union were not diffed, and no provenance for the rendering was found. |
+| 🟡 **`Gap 480-AL`** | **Trend 3 is 64 minutes long and one repository wide.** Three of `p479`'s eight panel rows were not re-read, and the concentration ratio rests on three comparison rows that moved +5 between them. |
+| 🟡 **`Gap 480-AM`** | **Trend 4 generalises from one clone.** The 500-item ceiling is a property of `boyuchengz/canvas-mcp`, verified in its source; that small MCP servers *characteristically* carry such ceilings is an inference from one example (`Gap 480-B`). |
+| 🟡 **`Gap 480-AN`** | **Trend 5's "AI-relevant" split rests on this base's own keyword classifier** (`Gap 480-C`), and `topic:education` was read to page 1 of 634. The distortion's **direction** is measured; its **magnitude** is a floor. |
+
+---
+
 ## 🆕 `p479` — `2026-10-27` — **🟢 THE STRUCTURAL TREND THIS PASS CAN ACTUALLY MEASURE IS A CHANGE IN THE UNIT OF SUPPLY: **12 of the 25** repositories in a complete ≥50★ agent census are **agent skills or MCP servers, not applications** — and the week's standout new arrival is an MCP server onto Canvas LMS (115★ in two days). 🔴 Attention is concentrated **31.5 : 1** in a single repository, measured over two hours with exact endpoints. 🔴 And the efficacy literature has not moved in this base's favour: the only new 2026 study found is a **rule-based** tutor, not an agentic one.**
 
 🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).

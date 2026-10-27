@@ -1,0 +1,306 @@
+full_name	stars	license_spdx	created_at	pushed_at	lang	topics	found_by_queries
+freeCodeCamp/freeCodeCamp	458025	BSD-3-Clause	2014-12-24	2026-10-27	TypeScript	careers,certification,community,curriculum,d3,education,freecodecamp,javascript,learn-to-code,math	topic:education stars:>100
+EbookFoundation/free-programming-books	400270	CC-BY-4.0	2013-10-11	2026-10-26	Python	books,education,hacktoberfest,list,resource	topic:education stars:>100
+TheAlgorithms/Python	225562	MIT	2016-07-16	2026-10-20	Python	algorithm,algorithm-competitions,algorithms-implemented,algos,community-driven,education,hacktoberfest,interview,learn,practice	topic:education stars:>100
+DigitalPlatDev/FreeDomain	206021	AGPL-3.0	2024-05-30	2026-08-12	Markdown	digitalplat,dns,dns-tutorial,documentation,domain,domain-platform,domain-registration,domainname,domains,education	topic:education stars:>100
+getify/You-Dont-Know-JS	184833	NOASSERTION	2013-11-16	2026-02-15		async,book,book-series,closures,education,es2015,es6,javascript,learn-to-code,programming	topic:education stars:>100
+krahets/hello-algo	131492	NOASSERTION	2022-11-04	2026-10-27	Java	algo,algorithm,algorithms,book,data-structure,data-structures,data-structures-and-algorithms,dsa,education,leetcode	topic:education stars:>100
+Chalarangelo/30-seconds-of-code	129351	CC-BY-4.0	2017-11-29	2026-10-26	JavaScript	astro,awesome-list,css,education,es6-javascript,git,html,javascript,learn-to-code,learning-resources	topic:education stars:>100
+microsoft/Web-Dev-For-Beginners	97024	MIT	2020-11-10	2026-10-20	JavaScript	css,curriculum,education,html,javascript,learning,microsoft-for-beginners,tutorials	topic:education stars:>100
+microsoft/ML-For-Beginners	91781	MIT	2021-03-03	2026-10-21	Jupyter Notebook	data-science,education,machine-learning,machine-learning-algorithms,machinelearning,machinelearning-python,microsoft-for-beginners,ml,python,r	topic:education stars:>100
+HKUDS/DeepTutor	44940	Apache-2.0	2025-12-28	2026-10-27	Python	ai-agents,ai-tutor,clawbot,cli-tool,deepresearch,interactive-learning,learning,multi-agent-systems,rag	topic:ai-tutor stars:>50
+FreeCodeCampChina/freecodecamp.cn	37790	NOASSERTION	2016-09-30	2023-07-16	CSS	career,certification,cn-freecodecamp,community,curriculum,d3,education,freecodecamp,javascript,learn-to-code	topic:education stars:>100
+virgiliojr94/book-to-skill	36250	MIT	2026-05-01	2026-10-25	Python	agent-skills,ai-agents,book-to-skill,context-engineering,document-processing,edtech,knowledge-base,knowledge-management,llm,pdf-to-markdown	topic:edtech stars:>50
+carbon-app/carbon	36125	MIT	2017-06-16	2026-10-27	JavaScript	beautiful,carbon,education,github-gist,javascript,presentation,sharing,snippets,tweet	topic:education stars:>100
+JushBJJ/Mr.-Ranedeer-AI-Tutor	29550	NONE	2023-03-31	2025-09-30		ai,education,gpt-4,llm	topic:education stars:>100 | "ai tutor" in:name,description stars:>50
+processing/p5.js	24227	LGPL-2.1	2013-02-26	2026-10-27	JavaScript	art,creative-coding,design,education,graphics,html,javascript,learning,p5js,processing	topic:education stars:>100
+TheAlgorithms/C	22579	GPL-3.0	2016-07-16	2024-08-07	C	algorithm-challenges,algorithm-competitions,algorithms,c,community-driven,computer-science,data-structures,datastructures,education,educational	topic:education stars:>100
+hemanth/functional-programming-jargon	18745	MIT	2015-02-22	2026-10-04	JavaScript	awesome-list,education,fp,functional-programming,glossary,javascript	topic:education stars:>100
+mahmoud/awesome-python-applications	18121	NONE	2018-11-14	2026-10-18	Jupyter Notebook	application,audio,education,game,graphics,gui,productivity,python,science,video	topic:education stars:>100
+getify/Functional-Light-JS	16723	NOASSERTION	2016-08-17	2023-12-26	JavaScript	book,education,functional-programming,javascript,training-materials,training-providers	topic:education stars:>100
+iggredible/Learn-Vim	15336	NOASSERTION	2020-07-13	2026-09-07	Dockerfile	advanced,beginner,book,book-series,code-editor,editor,education,intermediate,learning,learning-to-code	topic:education stars:>100
+Hacker0x01/hacker101	14591	NOASSERTION	2017-11-27	2025-02-22	SCSS	clickjacking,csrf,education,hacker101,hackerone,hacking,mobile-security,security,session-fixation,sql-injection	topic:education stars:>100
+s-matyukevich/raspberry-pi-os	13960	MIT	2017-06-22	2024-03-29	C	arm,armv8,assembler,c,education,kernel,learn,linux-kernel,operating-system,osdev	topic:education stars:>100
+bolshchikov/js-must-watch	13641	CC0-1.0	2014-06-21	2022-01-20		awesome,awesome-list,education,javascript,videos,watch	topic:education stars:>100
+nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters	12308	NONE	2019-01-15	2024-07-23		bug-bounty,bug-bounty-hunters,bugbounty,education,hackers,hacking,learn2hack,pentest,ssrf,web-security	topic:education stars:>100
+sonic-pi-net/sonic-pi	12232	NOASSERTION	2013-04-29	2026-10-23	C++	art,audio,education,instrument,live-coding,livecoding,music,schools,sonic-pi,synthesis	topic:education stars:>100
+ankidroid/Anki-Android	12100	GPL-3.0	2013-01-20	2026-10-27	Kotlin	android,anki,ankidroid,education,flashcards,kotlin,learning,srs	topic:education stars:>100
+logisim-evolution/logisim-evolution	7840	GPL-3.0	2014-09-19	2026-10-27	Java	circuit,circuits,digital-circuit,digital-circuits,digital-logic,digital-logic-design,education,fpga,logic,logisim	topic:education stars:>100
+linsa-io/books	7743	NONE	2017-06-05	2026-03-04		awesome,awesome-list,books,education,free,learn-anything,learning,list,pdf,resources	topic:education stars:>100
+metagrover/ES6-for-humans	6956	NONE	2016-07-03	2019-06-12		education,es2015,es6,guide,javascript,learn-to-code,programming	topic:education stars:>100
+oppia/oppia	6947	Apache-2.0	2015-08-14	2026-10-27	Python	angular,appengine,appengine-python,education,hacktoberfest,interactive,javascript,learning,nonprofit,python	topic:education stars:>100
+CTFd/CTFd	6893	Apache-2.0	2015-01-01	2026-10-26	Python	ctf,ctfd,education,flask,security	topic:education stars:>100
+pshenok/server-survival	6469	MIT	2025-11-21	2026-10-21	JavaScript	aws,cloud,devops,education,game,javascript,learning,open-source,simulation,threejs	topic:education stars:>100
+netless-io/flat	6439	MIT	2020-08-26	2026-10-27	TypeScript	agora,agora-flat,cloud-recording,e-class,e-learning,electron,flat,online-classroom,virtual-classroom,whiteboard	topic:e-learning stars:>50
+gsantner/markor	6337	NOASSERTION	2017-08-26	2026-10-25	Java	android-app,asciidoc,clipboard,csv-reader,editor,education,filemanager,markdown,markdown-editor,org-mode	topic:education stars:>100
+mikesprague/udacity-nanodegrees	6237	MIT	2016-04-03	2024-05-16		education,learning,nanodegree,nanodegree-programs,never-stop-learning,udacity,udacity-nanodegree	topic:education stars:>100
+ivmm/Student-resources	6194	NOASSERTION	2016-08-24	2023-09-16		education	topic:education stars:>100
+hneemann/Digital	6129	GPL-3.0	2016-06-28	2026-10-08	Java	circuit,digital-circuits,education,logic,logic-gates,logisim,simulator	topic:education stars:>100
+PetoiCamp/OpenCat-Quadruped-Robot	5512	MIT	2021-01-03	2026-09-08	C++	ai,arduino,block-coding,education,iot,legged-robot,physical-ai,quadruped,quadruped-robot-gaits,raspberry-pi	topic:education stars:>100
+JuliaPluto/Pluto.jl	5404	MIT	2020-02-23	2026-10-27	JavaScript	designed-for-teachers,education,exploration,interactive,julia,notebook,pluto-notebooks,reactive,visualization	topic:education stars:>100
+Kaustubh-Natuskar/moreThanFAANGM	5256	MIT	2021-09-18	2026-08-10		appliances,ecommerce,edtech,electronics,engineering,faang,fintech,hacktoberfest,hacktoberfest-2024,it	topic:edtech stars:>50
+algorithmica-org/algorithmica	5134	NONE	2021-01-27	2024-08-11	Jupyter Notebook	computer-science,education,markdown	topic:education stars:>100
+brycewang-stanford/Auto-Empirical-Research-Skills	4790	NOASSERTION	2026-04-03	2026-10-26	Stata	academic-research,agent-skills,ai-agent,awesome-list,communication,copaper,economics,education,empirical-research,international-relations	topic:education stars:>100
+luban-agi/Awesome-AIGC-Tutorials	4566	MIT	2023-08-22	2024-03-31		ai,aigc,awesome,chatgpt,courses-resource,deep-learning,llm,midjourney,multimodal,nlp	"ai tutor" in:name,description stars:>50
+echo-loop/Echo-Loop	4527	AGPL-3.0	2026-05-07	2026-10-25	Dart	ai,education,english-learning,flutter,language-learning,listening-practice,spaced-repetition,speaking-practice	topic:education stars:>100
+oceanbase/miniob	4432	MulanPSL-2.0	2021-10-12	2026-06-25	C++	classroom,cplusplus,database,education,hackertoberfest,learn-to-database,mini-database,training	topic:education stars:>100
+anu0012/awesome-computer-science-opportunities	4182	MIT	2018-01-18	2024-06-10		android,awesome,awesome-list,computer-science-students,data-science,devops,education,fellowship,learning,mooc	topic:education stars:>100
+xiaoyang111222/cn-math-taxonomy	4178	NOASSERTION	2026-10-18	2026-10-27	Python	chinese,curriculum,diagnostic,edtech,education,elementary-school,english,high-school,junior-high-school,k12	topic:edtech stars:>50 | topic:education stars:>100
+berwin/Blog	4147	MIT	2015-11-17	2022-09-20	JavaScript	article,blog,education,javascript,koa,learn-to-code,learning,learning-js,vue	topic:education stars:>100
+grantjenks/free-python-games	4038	NOASSERTION	2012-08-09	2024-08-16	Python	education,free,games,learning,python	topic:education stars:>100
+MariaLetta/free-gophers-pack	4008	CC0-1.0	2019-04-02	2024-12-22	Go	blog,character,course,education,emoji,free,go,golang,gopher,gophers	topic:education stars:>100
+EbTech/rust-algorithms	3987	MIT	2017-05-16	2025-02-27	Rust	algorithm,algorithms,codeforces,competition-programmers,cookbook,data-structures,education,learn,programming-contests,rust	topic:education stars:>100
+antonio-morales/Fuzzing101	3920	Apache-2.0	2021-08-03	2026-06-16		afl,afl-fuzz,bug-hunting,bugbounty,education,fuzz-testing,fuzzer,fuzzilli,fuzzing,hacking	topic:education stars:>100
+0atman/noboilerplate	3877	CC0-1.0	2022-05-21	2026-05-24	HTML	education,rust,video	topic:education stars:>100
+brootware/awesome-cyber-security-university	3722	CC0-1.0	2022-03-31	2026-10-04		awesome,awesome-list,courses,curriculum,cyber-security,cybersecurity,education,educational-project,free,hacking	topic:education stars:>100
+cbamls/AI_Tutorial	3702	NONE	2018-12-04	2026-06-09		ai-agent,artificial-intelligence,artificial-intelligence-algorithms,llm,machine-learning,recommender-systems,search-system	"ai tutor" in:name,description stars:>50
+yhzhang0128/egos-2000	3700	NOASSERTION	2022-04-18	2026-08-16	C	education,operating-system	topic:education stars:>100
+rathena/rathena	3633	GPL-3.0	2013-07-17	2026-10-06	C++	c-plus-plus,education,game-development,game-server,hacktoberfest,learning,mmorpg,mmorpg-server,mysql,ragnarok	topic:education stars:>100
+ob-f/OpenBot	3591	MIT	2020-07-31	2026-10-26	Swift	android,arduino,deeplearning,education,openbot,research,robot,robotics,smartphone	topic:education stars:>100
+dawdle-deer/awesome-learn-gamedev	3588	CC0-1.0	2022-08-14	2026-06-01		awesome,awesome-list,education,game-development,gamedev,learn,learning,list	topic:education stars:>100
+mortbopet/Ripes	3460	MIT	2017-10-27	2026-10-22	C++	computer-architecture,cpu-emulator,education,processor-architecture,qt,risc,risc-v,simulator	topic:education stars:>100
+trifectatechfoundation/teach-rs	3412	CC-BY-SA-4.0	2022-10-07	2026-10-09	Rust	education,rust	topic:education stars:>100
+MTrajK/coding-problems	3404	MIT	2019-05-10	2025-11-26	Python	algorithms,coding-problem,data-structures,education,interview,learn,leetcode,problem-solving,python	topic:education stars:>100
+frappe/lms	3351	AGPL-3.0	2021-02-15	2026-10-27	TypeScript	courses-management-system,education,frappe,hacktoberfest,javascript,learning,learning-management-system,lms,online-course-platform,online-learning	topic:education stars:>100
+noob-hackers/infect	3040	MIT	2019-12-15	2025-08-27	Shell	2020,bash-script,education,free,kali-linux,noob-friendly,termux,termux-hacking,termux-tools,virus	topic:education stars:>100
+frankwxu/digital-forensics-lab	3027	NOASSERTION	2021-01-11	2026-10-14	Jupyter Notebook	cyber,cybercrime,cybersecurity,cybersecurity-education,digital,education,forensics,free,hands-on,investigation	topic:education stars:>100
+ClassIsland/ClassIsland	2891	GPL-3.0	2023-07-08	2026-10-21	C#	automation,avalonia,classisland,classroom,dotnet,education,fluent-design,fluentavalonia,linux,macos	topic:education stars:>100
+mitmath/computational-thinking	2842	NOASSERTION	2020-08-25	2026-08-12	Julia	computational-thinking,education,julia-language,mit,pluto-notebooks	topic:education stars:>100
+GDQuest/learn-gdscript	2810	NOASSERTION	2021-05-10	2026-10-21	GDScript	education,game-development,gdscript,godot	topic:education stars:>100
+FurkanGozukara/Stable-Diffusion	2781	GPL-3.0	2023-05-01	2026-10-19	Jupyter Notebook	ai-art,coding,deepfake-generation,dreambooth,education,flux-dev,flux-lora,generative-ai,guides,how-to	topic:education stars:>100
+lovasoa/whitebophir	2673	AGPL-3.0	2013-08-27	2026-10-24	JavaScript	art,collaborative,draw,education,javascript,teaching,whiteboard	topic:education stars:>100
+hackclub/hackclub	2637	NOASSERTION	2015-04-10	2026-09-08	JavaScript	community,curriculum,education,hackclub,learn-to-code,nonprofits	topic:education stars:>100
+Exorust/TorchLeet	2593	MIT	2024-12-25	2026-10-21	Jupyter Notebook	coding-interviews,deep-learning,from-scratch,interview-preparation,interview-questions,leetcode,llm,machine-learning-interview,pytorch,rlhf	"ai tutor" in:name,description stars:>50
+penecho/penecho	2504	AGPL-3.0	2026-07-14	2026-10-23	JavaScript	ai,canvas,claude,codex,education,handwriting,nodejs,visual-thinking	topic:education stars:>100
+learnhouse/learnhouse	2424	AGPL-3.0	2022-05-10	2026-10-25	Python	ai,ai-powered,api,cms,education,educational,headless,learning,lms,platforms	topic:education stars:>100
+Jieyab89/OSINT-Cheat-sheet	2297	MIT	2021-11-22	2026-10-25	HTML	cheatsheet,cybersecurity,datasets,education,hacking,humint,imint,information-gathering,journalism,masint	topic:education stars:>100
+the-turing-way/the-turing-way	2196	NOASSERTION	2018-11-01	2026-10-20	TeX	community,data-science,education	topic:education stars:>100
+showlab/Code2Video	2176	MIT	2025-09-29	2026-08-24	Python	coding,education,multi-agent,video-generation	topic:education stars:>100
+gpiozero/gpiozero	2142	BSD-3-Clause	2015-09-14	2026-07-27	Python	education,gpio,physical-computing,python,raspberry-pi,raspberrypi,zero-boilerplate	topic:education stars:>100
+OpenVidu/openvidu	2138	Apache-2.0	2016-10-10	2026-10-27	TypeScript	active,ai-agents,chat,e-learning,embeddable,meet,openvidu,platform,product,room	topic:e-learning stars:>50
+CaviraOSS/PageLM	2049	NOASSERTION	2025-08-31	2026-10-13	TypeScript	ai,docker,edtech,education,flashcards,javascript,langchain,nodejs,notebooklm,notes	topic:edtech stars:>50 | topic:education stars:>100
+Netflix-Skunkworks/stethoscope	2005	Apache-2.0	2017-01-09	2023-08-01	Python	education,security,user-focused-security	topic:education stars:>100
+iiab/iiab	1990	GPL-2.0	2017-05-28	2026-10-25	Jinja	civic-tech,community-networks,curriculum-design,distraction-free,diy,education,home-school,hotspot,human-rights,international-development	topic:education stars:>100
+jplag/JPlag	1988	GPL-3.0	2015-03-21	2026-10-27	Java	academic-dishonesty,code-similarity,collusion-detection,cs-education,education,moss,online-learning,plagiarism,plagiarism-checker,plagiarism-detection	topic:education stars:>100
+Kalmaegi/computer-book-list	1959	NONE	2021-10-22	2022-10-21		awesome,awesome-list,book,books,computer-science,douban,douban-book,education,goodreads,list	topic:education stars:>100
+DosX-dev/obfus.h	1877	NOASSERTION	2024-04-12	2026-10-26	C	c,compile-time,confuse,ctf,easy-to-use,education,hacktoberfest,information-security,low-level,macro	topic:education stars:>100
+cpinitiative/usaco-guide	1871	NOASSERTION	2020-06-02	2026-10-25	MDX	algorithm,codeforces,competitive-programming,cpp,data-structure,education,java,programming-contests,python,usaco	topic:education stars:>100
+DreambigOu/ELI5	1857	MIT	2026-03-17	2026-03-18	Python	ai-skill,anthropic,claude,claude-code,claude-skill,education,eli5,explain-like-im-5,llm,prompt-engineering	topic:education stars:>100
+risinglightdb/risinglight	1847	Apache-2.0	2021-08-06	2025-08-10	Rust	analytics,database,education,embedded-database,olap,rust,sql	topic:education stars:>100
+xevrion/breakscale	1843	MIT	2026-08-23	2026-10-26	TypeScript	canvas,distributed-systems,education,learning,queueing-theory,react,simulator,system-design,teaching-tool,typescript	topic:education stars:>100
+ai-infra-curriculum/ai-infra-engineer-learning	1826	MIT	2025-10-25	2026-06-26	Python	ai,ai-infrastructure,career-development,curriculum,devops,education,engineer,kubernetes,learning,learning-resources	topic:education stars:>100
+geocompx/geocompr	1795	NOASSERTION	2017-03-07	2026-09-14	R	book,course,education,gdal,geo,geocomputation,geocompx,geography,geos,geospatial	topic:education stars:>100
+dofy/learn-vim	1739	CC0-1.0	2016-01-13	2026-09-10	TypeScript	beginner,book,chinese,editor,education,learning,programming,tips,tutorial,vi	topic:education stars:>100
+classroomio/classroomio	1733	AGPL-3.0	2023-11-01	2026-10-27	TypeScript	assignments,blended-learning,classroom,classroom-app,classroom-management,classroom-tools,course,coursera,edtech,education	topic:edtech stars:>50 | topic:education stars:>100
+SimonWaldherr/golang-examples	1724	MIT	2013-04-15	2026-10-24	Go	education,examples,go,golang,hacktoberfest,hacktoberfest-accepted,howto,learning,programming-language	topic:education stars:>100
+renzorlive/vimmaster	1718	MIT	2025-08-27	2026-07-16	JavaScript	coding,education,game,indie-game,vim	topic:education stars:>100
+hedyorg/hedy	1695	EUPL-1.2	2019-12-09	2026-10-27	CSS	education,gradual,hacktoberfest,hedy,programming	topic:education stars:>100
+TheThirdOne/rars	1668	NOASSERTION	2017-05-26	2024-07-19	Java	assembler,education,ide,mars,risc-v,riscv,simulator	topic:education stars:>100
+alexmojaki/futurecoder	1548	MIT	2020-01-03	2026-05-09	Python	education,learning,learning-by-doing,python	topic:education stars:>100
+tecladocode/rest-apis-flask-python	1509	NONE	2016-12-02	2026-09-01	Python	course,education,flask,python,udemy	topic:education stars:>100
+HugeCatLab/ChatTutor	1315	AGPL-3.0	2025-11-05	2026-01-09	Vue	ai,ai-education,education,llm,stem	"ai tutor" in:name,description stars:>50
+Miaotofu01/Study-Mate	1231	MIT	2026-09-17	2026-10-21	JavaScript	ai-tutor,dsh-plugin,education,learning-agents,self-directed-learning,self-study,self-study-learning,self-study-tools,spaced-repetition	topic:ai-tutor stars:>50
+learningequality/kolibri	1162	MIT	2016-01-19	2026-10-27	Python	edtech,education,hacktoberfest,oer,offline-first,sdg-4	topic:edtech stars:>50
+beltromatti/get-it	1135	Apache-2.0	2026-05-09	2026-06-29	JavaScript	agents,ai,codex,edtech,feynman-technique,flashcards,gdg-ai-hack-2026,hackathon,knowledge-graph,learning	topic:edtech stars:>50
+tuanavu/airflow-tutorial	978	MIT	2018-10-27	2022-11-03	Jupyter Notebook	apache-airflow,python	"ai tutor" in:name,description stars:>50
+DozenTwelve/Papermorph	967	MIT	2026-10-03	2026-10-27	JavaScript	ai-agents,ai-education,animation,claude,claude-code,claude-skills,edtech,education,interactive-textbook,scorm	topic:edtech stars:>50
+plastic-labs/tutor-gpt	932	GPL-3.0	2023-01-21	2026-02-20	TypeScript	ai,education,hacktoberfest,literacy,machine-learning,o1,prompt-engineering,reasoning,theory-of-mind,tutoring	"ai tutor" in:name,description stars:>50
+GarethManning/education-agent-skills	916	NOASSERTION	2026-03-01	2026-10-22	TypeScript	adaptive-learning,agentic-workflow,ai-education,ai-literacy,competency-based-education,curriculum-design,edtech,education,evidence-based-education,historical-thinking	topic:edtech stars:>50
+ls1intum/Artemis	822	MIT	2016-09-29	2026-10-27	Java	apollon,artificial-intelligence,assessment,autograding,automatic-feedback,computer-science,education,education-technology,exam-mode,exercises	grading/autograding topic:education
+autolab/Autolab	808	Apache-2.0	2014-10-25	2026-10-27	Ruby	autograding,autolab,cmu,education,feedback,programming,rails,scoreboard,students,teaching	grading/autograding topic:education
+Submitty/Submitty	804	BSD-3-Clause	2014-01-25	2026-10-27	PHP	autograding,education,hacktoberfest,homework-server,submitty,teaching-tools	grading/autograding topic:education
+24kchengYe/human-skill-tree	584	NOASSERTION	2026-03-07	2026-03-25	TypeScript	agent-skills,ai-education,ai-learning,ai-tutor,chatgpt,claude-code,claude-skills,cognitive-science,copilot,cursor	topic:ai-tutor stars:>50
+ankimcp/anki-mcp-server	536	MIT	2025-09-29	2026-10-22	TypeScript	ai,ai-learning-tool,ai-tutor,anki,anki-addon,anki-flashcards	topic:ai-tutor stars:>50
+Xilinx/Vitis-AI-Tutorials	521	MIT	2020-03-02	2026-01-16			"ai tutor" in:name,description stars:>50
+aaryansamanta/ai-ethos	498	NONE	2025-12-01	2026-09-20	PHP	501c3,accessibility,ai-education,ai-ethics,ai-tutoring,artificial-intelligence,edtech,education-technology,equity,multilingual	topic:edtech stars:>50 | "ai tutor" in:name,description stars:>50
+assafkip/claudemy	468	MIT	2026-10-14	2026-10-16	Python	ai-course-generator,ai-education,anthropic,audio-lessons,claude,claude-code,claude-code-plugin,claude-code-skill,course-generator,coursera-alternative	topic:edtech stars:>50
+sitor-ai/frametell	418	AGPL-3.0	2026-10-10	2026-10-27	JavaScript	ai-agent,ai-video,edtech,education,electron,explainer-video,llm,local-first,storyboard,text-to-video	topic:edtech stars:>50
+wingkwong/react-quiz-component	403	MIT	2018-05-11	2026-10-27	TypeScript	e-learning,education,image-quiz,interactive-quiz,markdown,multiple-choice,quizapp,react,react-components,react-quiz-app	topic:e-learning stars:>50
+hgrif/airflow-tutorial	395	MIT	2016-10-24	2021-09-01		airflow,python,tutorial	"ai tutor" in:name,description stars:>50
+riiid/ednet	386	NONE	2019-12-02	2020-10-21			"ai tutor" in:name,description stars:>50
+tsugiproject/tsugi	377	Apache-2.0	2013-11-28	2026-10-27	PHP	common-cartridge,edtech,imsglobal,lti,tsugi	topic:edtech stars:>50
+jcputney/scorm-again	359	MIT	2019-11-10	2026-10-26	TypeScript	browser,cmi,cross-frame,edtech,educational-technology,elearning,javascript,learning-management-system,learning-standards,lms	topic:edtech stars:>50
+JudgePeach/math-question-bank	355	AGPL-3.0	2026-06-05	2026-10-27	Python	edtech,latex,math-questions,ocr,question-bank,teaching-assistant	topic:edtech stars:>50
+ZeKaiNie/universal-examprep-skill	351	MIT	2026-06-24	2026-10-27	Python	active-learning,agent-skill,ai-tutor,anti-hallucination,antigravity,cheat-sheet,claude-code,codex,cram,cursor	topic:ai-tutor stars:>50
+canyongbs/advisingapp	340	NOASSERTION	2023-02-18	2026-10-27	PHP	artificial-intelligence,conversational-ai,crm,edtech,higher-education,recruitment-crm,retention-crm,student-success	topic:edtech stars:>50
+edrys-org/edrys	334	MPL-2.0	2022-01-31	2024-08-12	Vue	classroom,edrys,edtech,education,remote-teaching,virtual-classroom	topic:edtech stars:>50
+syauqi/learnify	320	MIT	2020-04-02	2022-06-10	PHP	bootstrap4,codeigniter3,e-learning	topic:e-learning stars:>50
+vishalsachdev/canvas-mcp	308	MIT	2025-02-28	2026-10-27	Python	agent-skills,skills-sh	canvas-mcp in:name
+karanb192/algo-sensei	298	MIT	2025-10-21	2026-10-02	Python	ai-tutor,algorithms,claude,claude-ai,claude-code,claude-skills,coding-interview,coding-interviews,competitive-programming,data-structures	topic:ai-tutor stars:>50
+Li-Evan/Bloom	293	MIT	2026-03-10	2026-10-20	JavaScript	adaptive-learning,agent-skills,ai-agent,ai-tutor,bloom-2-sigma,chinese,claude-code,claude-skill,edtech,education	topic:ai-tutor stars:>50 | topic:edtech stars:>50 | "ai tutor" in:name,description stars:>50
+SJRiz/pytogether	261	MIT	2025-08-14	2026-10-21	JavaScript	collaborative-editing,collaborative-learning,collaborative-tools,django,edtech,education,ide,open-source,pyodide,python	topic:edtech stars:>50
+elmsln/elmsln	253	GPL-3.0	2014-01-06	2026-08-14	PHP	edtech,education,lms,ngdle	topic:edtech stars:>50
+SenmuuuuW/universal-diagnostic-tutor-skill	250	MIT	2026-06-26	2026-09-24		ai-education,ai-tutor,codex,codex-skill,computer-science,diagnostics,learning-assistant,math,skill,stem	topic:ai-tutor stars:>50 | "ai tutor" in:name,description stars:>50
+towardsai/ai-tutor-rag-system	244	NONE	2023-12-07	2026-10-08	Jupyter Notebook	agent,agentic,agentic-ai,agents,ai,langchain,llamaindex,llm,llms,rag	"ai tutor" in:name,description stars:>50
+inuyasha2012/pypsy	241	MIT	2017-08-28	2018-11-16	Python	classical-test-theory,cognitive-diagnostic-models,computerized-adaptive-testing,education,factor-analysis,item-response-theory,psychology,psychometrics,questionnaire,structural-equation-modeling	grading/autograding topic:education
+GTyingzi/spring-ai-tutorial	233	NONE	2025-05-23	2026-01-02	Java		"ai tutor" in:name,description stars:>50
+zuhairhalawa/studyai	223	MIT	2026-10-18	2026-10-24	TypeScript		"ai tutor" in:name,description stars:>50
+hkalant/awesome-edtech-tools	216	NONE	2014-07-16	2025-09-02		awesome-list,edtech,educators,learning-technology,lists,resources,tools	topic:edtech stars:>50
+roshan9419/LearnEd_E-learning_Website	213	MIT	2020-09-26	2022-05-26	HTML	css,e-learning,educational-website,html,javascript	topic:e-learning stars:>50
+nichochar/ari	210	MIT	2026-10-18	2026-10-24	TypeScript	ai-tutor,education,local-first	topic:ai-tutor stars:>50
+artcc/freelingo	209	AGPL-3.0	2026-04-30	2026-10-24	JavaScript	ai-tutor,cefr,docker-compose,edtech,fastapi,flashcards,language-learning,listening-practice,llm,nextjs	topic:ai-tutor stars:>50 | topic:edtech stars:>50 | "ai tutor" in:name,description stars:>50
+iblai/lms	208	MIT	2026-03-04	2026-10-26	TypeScript	competency-based-learning,coursework,digital-credentials,e-learning,edtech,education,ibl-ai,learners,learning-management-system,lms	topic:e-learning stars:>50 | topic:edtech stars:>50
+KeWang0622/kaogong-skill	204	MIT	2026-04-06	2026-10-12	Python	agent-skills,ai-tutor,chinese,civil-service-exam,claude-code,education,exam-prep,gongwuyuan,kaogong,skill	topic:ai-tutor stars:>50
+wesleyscholl/credly-badge	197	MIT	2025-02-24	2026-06-04	Shell	awesome-list,badges,career-development,certification,credly,cybersecurity,digital-badges,e-learning,education,free-certifications	topic:e-learning stars:>50
+TirendazAcademy/PandasAI-Tutorials	194	NONE	2023-07-05	2024-05-20	Jupyter Notebook	chainlit,data-analysis,data-science,data-visualization,generative-ai,llama3,llms,ollama,pandas,pandasai	"ai tutor" in:name,description stars:>50
+jcryptool/core	180	EPL-1.0	2011-08-11	2023-09-01	Java	crypto,cryptography,e-learning,eclipse,java,jcryptool,rcp	topic:e-learning stars:>50
+Whu-BrainLab/Embodied-AI-Tutorial	171	Apache-2.0	2025-12-10	2025-12-15			"ai tutor" in:name,description stars:>50
+qingsongedu/awesome-AI-tutorials-surveys	170	MIT	2022-06-10	2023-02-10		ai,artificial-intelligence,awesome,computer-vision,data-mining,data-science,deep-learning,machine-learning,natural-language-processing,review	"ai tutor" in:name,description stars:>50
+CrypToolProject/CrypTool-2	169	Apache-2.0	2021-03-25	2026-10-06	C#	cryptanalysis,cryptography,cryptology,desktop-app,e-learning,wpf-application	topic:e-learning stars:>50
+Halleck45/OpenPronounce	165	MIT	2025-08-26	2026-08-15	Python	ai,asr,edtech,language-learning,learning,phonemes,pronunciation,pronunciation-assessment,python,speech	topic:edtech stars:>50
+cybercussion/SCOBot	164	NOASSERTION	2012-01-17	2026-10-21	JavaScript	api,communication,completed,content,docs,e-learning,javascript,json,package,qunit	topic:e-learning stars:>50
+learning-commons-org/knowledge-graph	164	NOASSERTION	2025-09-17	2026-10-21	Python	academic-standards,ai-in-education,curriculum,edtech,education,instructional-design,knowledge-graph,learning-science	topic:edtech stars:>50
+senjun-team/senjun-courses	161	GPL-3.0	2023-05-01	2026-10-24	C++	courses,edtech	topic:edtech stars:>50
+zijinz456/OpenTutor	152	MIT	2026-02-26	2026-10-26	Python	adaptive-learning,ai,ai-tutor,edtech,education,fastapi,knowledge-graph,learning,llm,local-first	topic:ai-tutor stars:>50 | topic:edtech stars:>50
+chipmates/agoracosmica	149	AGPL-3.0	2026-02-24	2026-10-27	TypeScript	accessibility,byok,conversational-ai,digital-humanities,edtech,education,gdpr,historical-figures,humanities,llm	topic:edtech stars:>50
+daveebbelaar/pydantic-ai-tutorial	144	MIT	2024-12-05	2024-12-05	Python	agents,ai,python	"ai tutor" in:name,description stars:>50
+studentinsights/studentinsights	135	MIT	2016-02-08	2024-08-27	JavaScript	civic-tech,edtech,education,educators,k12,somerville,students,teachers	topic:edtech stars:>50
+luxonis/ai-tutorials	132	MIT	2020-04-24	2026-06-22	Jupyter Notebook		"ai tutor" in:name,description stars:>50
+haxtheweb/haxcms-php	130	Apache-2.0	2018-07-19	2026-10-27	PHP	cms,course,edtech,education,elms,hax,haxcms,haxtheweb,js,lms	topic:edtech stars:>50
+shigella520/MindTrain	128	MIT	2026-07-17	2026-10-15	Java	ai-learning,codex-plugin,edtech,knowledge-training,mcp-server,openai-codex	topic:edtech stars:>50
+nileshhadalgi016/Awesome-ML-AI-Tutorial	127	NONE	2026-02-23	2026-06-24	Jupyter Notebook		"ai tutor" in:name,description stars:>50
+yuanjiusheng/cloud-learning-ce	125	NOASSERTION	2021-01-07	2023-09-24	Java	e-learning	topic:e-learning stars:>50
+tutors-sdk/tutors	125	MIT	2022-06-26	2026-07-23	JavaScript	edtech,education,educational-technology,elearning,hacktoberfest,holopin,sveltekit	topic:edtech stars:>50
+FrancoisPorcher/awesome-ai-tutorials	124	NONE	2023-07-06	2025-07-17	Python	ai,artificial-intelligence,bayesian-inference,cloud,cloud-computing,computer-vision,data-science,efficient-deep-learning,llm,mlops	"ai tutor" in:name,description stars:>50
+onemnemo/mnemo	123	Apache-2.0	2025-07-30	2026-10-22	TypeScript	anki,edtech,education,flashcards,free,knowledge,learning,memory,note-app,note-taking	topic:edtech stars:>50
+abinth11/TutorTrek	121	MIT	2023-06-06	2023-12-01	TypeScript	axios,clean-architecture,e-learning,elearning-application,elearning-platform,expressjs,hackoctoberfest,javascript,jwt,mern-stack	topic:e-learning stars:>50
+flysheep-ai/education-skills	119	MIT	2026-01-29	2026-01-30	Shell	agent-skills,ai-tutor,claude-code-skills,claude-skills,education,gaokao,teaching,tutoring	topic:ai-tutor stars:>50
+ucfopen/UDOIT	117	GPL-3.0	2015-06-10	2026-10-26	JavaScript	a11y,accessibility,canvas,canvas-api,canvas-lms,edtech,eduapp,education,hacktoberfest,instructure	topic:edtech stars:>50
+manjurulhoque/laravel-udemy-clone	116	MIT	2018-12-25	2026-08-08	PHP	e-learning,laravel,udemy-clone	topic:e-learning stars:>50
+kalvilabs/kalvi	116	AGPL-3.0	2024-02-08	2024-05-16	TypeScript	classroom,classroom-app,classroom-management,edtech,education,elearning-platform,lms,online-education-learning,online-learning,virtual-classroom	topic:edtech stars:>50
+PrepLabsAI/InterviewMentor	115	MIT	2026-03-17	2026-10-19		ai-tutor,faang-interview,open-source,sql-interview	topic:ai-tutor stars:>50
+boyuchengz/canvas-mcp	115	MIT	2026-10-25	2026-10-27	JavaScript	canvas,canvas-lms,chatgpt,claude,education,instructure,mcp,mcp-server,model-context-protocol,nodejs	canvas-mcp in:name
+SimonsTang/feifei-companion	110	Apache-2.0	2026-04-19	2026-04-19		ai-education,ai-tutor,aigc-detection,chemistry,chinese-poetry,education,english-learning,essay-writing,family-education,k12	topic:ai-tutor stars:>50
+Wakoma/nimble	110	CERN-OHL-S-2.0	2020-07-03	2026-01-28	Python	community-networks,connectivity,edtech,mesh-networks,offline,offline-first,open-hardware,oshw,wireless,wireless-network	topic:edtech stars:>50
+langx/langx	109	BSD-3-Clause	2023-07-27	2026-10-27	TypeScript	alternative,connect,culture,edtech,exchange,hellotalk,language,language-exchange,languageexchange,languagelearning	topic:edtech stars:>50
+DMontgomery40/mcp-canvas-lms	104	NONE	2024-12-05	2026-05-31	JavaScript	canvas-lms,canvas-lms-api,canvas-lms-grades,mcp,mcp-education-tool,mcp-server,model-context-protocol,school-education	canvas-mcp in:name
+lgy1027/ai-tutorial	103	Apache-2.0	2025-06-03	2026-06-18	Python		"ai tutor" in:name,description stars:>50
+kirill-markin/flashcards-open-source-app	102	MIT	2026-03-02	2026-10-26	TypeScript	android,anki-alternative,aws,edtech,flashcards,fsrs,indexeddb,ios,kotlin,local-first	topic:edtech stars:>50
+mikeghen/airflow-tutorial	100	Apache-2.0	2017-08-12	2020-07-21	PLpgSQL	airflow,bigquery,mysql-database	"ai tutor" in:name,description stars:>50
+Selleo/mentingo	99	MIT	2024-08-01	2026-10-27	TypeScript	ai-lms,ai-mentor,ai-tutor,compliance-training,corporate-training,docebo-alternative,edtech,hrtech,learning-management-system,lms	topic:ai-tutor stars:>50 | topic:edtech stars:>50
+mahseema/aibooks	95	NONE	2023-08-31	2025-08-03		ai,ai-agent,ai-agents,ai-book,ai-books,ai-engineering,ai-resources,ai-tools,ai-tutor,ai-tutorial	topic:ai-tutor stars:>50
+pittisl/Generative-AI-Tutorial	92	MIT	2024-04-12	2024-08-09		ai-tutorial,deep-learning,generative-ai	"ai tutor" in:name,description stars:>50
+ahmedEid1/lumen	91	GPL-3.0	2020-11-29	2026-06-07	Python	agentic-ai,ai-tutor,byok,celery,docker,e-learning,evals,fastapi,llm,llm-as-judge	topic:ai-tutor stars:>50 | topic:e-learning stars:>50
+gopinav/Next.js-AI-Tutorials	89	NONE	2025-07-11	2025-09-15	TypeScript		"ai tutor" in:name,description stars:>50
+trallard/airflow-tutorial	88	CC-BY-4.0	2019-04-15	2022-12-08	Python		"ai tutor" in:name,description stars:>50
+learning-commons-org/evaluators	87	NOASSERTION	2025-09-22	2026-10-26	TypeScript	ai-in-education,edtech,education,education-technology,evaluation,instructional-design,learning-science,pedagogy,rubrics	topic:edtech stars:>50
+GatorEducator/gatorgrader	85	GPL-3.0	2017-08-10	2026-10-06	Python	auto-grading,cli,education,github-classroom,grading,python	grading/autograding topic:education
+DiscoDurodeRoer/tareas-dam-daw-e-learning	84	NONE	2022-05-22	2025-01-26	JavaScript	1-dam,1-daw,2-dam,2-daw,base-de-datos,dam,daw,e-learning,entornos-desarrollo,lenguaje-de-marcas	topic:e-learning stars:>50
+ShawhinT/ai-tutor-skill	82	Apache-2.0	2025-12-17	2025-12-21	Python		"ai tutor" in:name,description stars:>50
+jasp-nerd/canvas-course-downloader	80	MIT	2026-03-07	2026-10-25	JavaScript	ai-study,backup,browser-extension,canvas,canvas-downloader,canvas-exporter,canvas-lms,chatgpt,chrome-extension,course-archive	grading/autograding topic:education
+g3i/lxHive	79	GPL-2.0	2015-03-13	2025-04-15	PHP	conformance,database,edtech,learning,lrs,mongodb,php,xapi	topic:edtech stars:>50
+scollovati/awesome-lti	79	CC-BY-SA-4.0	2020-12-22	2026-10-05		awesome,awesome-list,edtech,learning-technology,lti,lti-advantage,lti-tool	topic:edtech stars:>50
+leemengtw/airflow-tutorials	79	MIT	2018-08-17	2020-05-17	Python		"ai tutor" in:name,description stars:>50
+microsoft/StudentSim	79	MIT	2026-05-28	2026-10-22	HTML		"ai tutor" in:name,description stars:>50
+n00bvn/CanvasMCPClient	78	MIT	2025-10-15	2026-02-11	TypeScript	ai,canvas,mcp,mcp-client,model-context-protocol,self-hosted,widget	canvas-mcp in:name
+zreecespieces/jamstack-ecommerce-course	77	NONE	2020-09-22	2021-10-05	JavaScript	e-commerce,e-learning,gatsby,jamstack,javascript,material-ui,react,strapi,stripe,udemy	topic:e-learning stars:>50
+jcryptool/crypto	76	EPL-1.0	2011-08-11	2023-09-01	Java	crypto,cryptography,e-learning,eclipse,java,jcryptool,rcp	topic:e-learning stars:>50
+acanas/swad-core	76	AGPL-3.0	2014-12-01	2026-10-27	C	b-learning,c,college,courses,e-learning,education,learning,learning-management-system,lms,platform	topic:e-learning stars:>50
+ChickenBenny/Airflow-tutorial	76	NONE	2022-08-17	2022-08-21	Python		"ai tutor" in:name,description stars:>50
+Zenglian990/AI_Tutor_Release	74	MIT	2026-06-29	2026-10-27	JavaScript	ai-agent,ai-tutor,deepseek,edtech,education,gemini,gemini-ai,k12-education,lancedb,llm	topic:ai-tutor stars:>50 | topic:edtech stars:>50 | "ai tutor" in:name,description stars:>50
+jaltekruse/Free-Math	74	NONE	2016-02-12	2026-10-16	JavaScript	edtech,education,grading,math,open-source,teaching	topic:edtech stars:>50
+wombats-writing-code/xoces	74	MIT	2016-03-23	2017-07-24	JavaScript	chord-visualization,data-visualization,edtech,tree-structure	topic:edtech stars:>50
+burakorkmez/cal-ai-tutorial	74	MIT	2026-07-25	2026-08-04	TypeScript		"ai tutor" in:name,description stars:>50
+opengeos/GeoAI-Tutorials	74	MIT	2024-11-27	2026-10-12	Jupyter Notebook	geoai,geopython,jupyter-notebook,leafmap	"ai tutor" in:name,description stars:>50
+apimartc30lq1/unified-ai-tutorial	74	NOASSERTION	2026-10-02	2026-10-12	Python	ai-api-gateway,api-aggregator,api-pricing,apimart-en,llm-api-gateway,openai-compatible,pay-as-you-go,unified-ai	"ai tutor" in:name,description stars:>50
+judygab/quizz-ai-tutorial	73	NONE	2024-04-02	2024-04-19	TypeScript		"ai tutor" in:name,description stars:>50
+Computer-Aided-Drug-Design/AIDD-Tutorial	73	GPL-3.0	2022-09-28	2022-10-19			"ai tutor" in:name,description stars:>50
+codeXsidd/Studivexa	72	MIT	2026-03-07	2026-08-31	JavaScript	ai-tutor,codeinsight,express,gamification,gemini-ai,mongodb,nodejs,productivity,react,web-development	topic:ai-tutor stars:>50
+yh2072/edgameclaw	72	AGPL-3.0	2026-03-11	2026-03-26	Python	active-learning,ai-agents,ai-for-education,ai-for-game,ai-tutor,edtech,educational-game,educational-technology,game,game-based-learning	topic:ai-tutor stars:>50 | topic:edtech stars:>50
+ucfopen/Obojobo	72	AGPL-3.0	2018-09-04	2026-10-14	JavaScript	canvaslms,edtech,education,hacktoberfest,lms,lti,react,slatejs	topic:edtech stars:>50
+jiaopengli/https-github.com-JushBJJ-Mr.-Ranedeer-AI-Tutor	72	NONE	2023-05-29	2023-05-29			"ai tutor" in:name,description stars:>50
+ictinnovations/ICTSchool	71	NONE	2021-06-29	2026-10-13	Blade	edtech,education,laravel,learning-management,open-source,php,school,school-management-software,school-management-system,student-management	topic:edtech stars:>50
+abdullaitcenter-hue/comet-trail-archives	70	NONE	2026-09-22	2026-10-27	HTML	apis-json,company,edtech,education,gaming,roblox,simulation-games	topic:edtech stars:>50
+corsego/corsego	68	GPL-3.0	2020-05-15	2026-02-27	Ruby	e-learning,platform	topic:e-learning stars:>50
+lambiengcode/cloudmate-classroom-flutter	68	MIT	2021-08-22	2023-08-20	Dart	e-learning,education,firebase,flutter,online-learning,open-source	topic:e-learning stars:>50
+particify/arsnova-server	67	GPL-3.0	2013-07-24	2026-10-27	Kotlin	api,arsnova,audience-response-system,backend,container,docker,docker-compose,edtech,education,interactive	topic:edtech stars:>50
+TommyZihao/aidlux_tutorial	66	NONE	2023-06-25	2023-10-14	Jupyter Notebook		"ai tutor" in:name,description stars:>50
+A-R007/Multi-Agent-Study-Assistant	64	NONE	2025-10-16	2025-11-04	Python	ai,ai-tutor,chromadb,education,educational-project,groq,langchain,learning,machine-learning,multi-agent-systems	topic:ai-tutor stars:>50
+SirhanMacx/Claw-ED	63	MIT	2026-03-23	2026-09-19	Python	ai,ai-for-teachers,ai-lesson-planner,curriculum,curriculum-generator,edtech,education,education-ai,k12,lesson-generator	topic:edtech stars:>50
+RandMelville/claude-war-room	62	MIT	2026-03-14	2026-06-26	Shell	ai-agents,chaos-engineering,claude-code,code-analysis,code-review,concurrency,edtech,multi-agent,orchestration,prompt-engineering	topic:edtech stars:>50
+098765d/AI_Tutor	62	MIT	2023-11-15	2026-06-23	Python	educational-technology,large-language-models,openai-api,python,streamlit	"ai tutor" in:name,description stars:>50
+wenflow-org/wenflow	61	MIT	2026-04-12	2026-10-25	TypeScript	ai-agent,ai-learning,ai-tutor,education,llm,multi-agent,self-hosted	topic:ai-tutor stars:>50
+codeforlife-education/rapid-router	60	NOASSERTION	2014-04-03	2026-10-23	JavaScript	blockly,coding,django,edtech,education,educational-game,game,hacktoberfest,learning,primary-school	topic:edtech stars:>50
+RohanMuppa/brightspace-mcp-server	60	MIT	2026-02-06	2026-10-27	TypeScript	ai,assignments,brightspace,brightspace-api,chatgpt,claude,claude-desktop,cursor,d2l,d2l-brightspace	grading/autograding topic:education
+amoldalwai/E-learning-Website	59	NONE	2020-09-16	2024-06-22	PHP	ajax,courses-app,e-learning,pdf-format,php,php-admin-panel,php-chat-app,php-website,php-website-monitor,youtube	topic:e-learning stars:>50
+CrunchyData/Postgres-AI-Tutorial	59	NONE	2023-02-22	2023-08-25	Python		"ai tutor" in:name,description stars:>50
+HumphreySun98/Smart-Study-Agent	57	MIT	2026-04-08	2026-08-16	JavaScript	agent-framework,ai-agent,ai-agents,ai-tutor,anki,chrome-extension,claude-api,contextual-bandit,education,fsrs	topic:ai-tutor stars:>50
+Aniruddha-Gade/Study-Notion-EdTech__MERN-Stack	57	NONE	2023-11-09	2024-06-01	JavaScript	edtech,javascript,lms,mern-stack,mern-stack-development,reactjs	topic:edtech stars:>50
+ArnaudGuiovanna/tutor-mcp	56	MIT	2026-03-30	2026-10-27	Go	adaptive-learning,ai-tutor,bkt,claude,digital-learning,intelligent-tutoring-system,llm,mcp-server,model-context-protocol	topic:ai-tutor stars:>50
+dmlogv/airflow-tutorial	56	NONE	2020-07-21	2020-07-22	Python	airflow,apache-airflow,docker-compose,python,tutorial	"ai tutor" in:name,description stars:>50
+amitsingh6391/Academic-master	55	MIT	2020-10-26	2023-06-10	Dart	academic-project,e-learning,firebase-auth,firebase-database,flutter,flutter-apps	topic:e-learning stars:>50
+particify/arsnova	55	NONE	2021-01-13	2021-01-14		arsnova,audience-response-system,comments,edtech,education,events,feedback,interactive,moderation,poll	topic:edtech stars:>50
+Nurkan1/Anatria-3D	55	NOASSERTION	2026-08-08	2026-10-24	TypeScript	3d,anatomy,female-anatomy,local-first,medical-education,pydantic-ai,react-three-fiber,rust,tauri	"ai tutor" in:name,description stars:>50
+codeforlife-education/codeforlife-portal	54	NOASSERTION	2014-07-23	2026-10-25	Python	django,edtech,education,educational-game,games,hacktoberfest,python,teaching-materials	topic:edtech stars:>50
+postrational/airflow_tutorial	54	NONE	2017-03-20	2018-10-27	Python		"ai tutor" in:name,description stars:>50
+Wakoma/Lokal	53	MIT	2021-04-27	2025-11-15	Jinja	connectivity,edtech,education,floss,network,network-monitoring,offline,offline-first,open-source	topic:edtech stars:>50
+deneyapkart/deneyapkart-arduino-core	53	LGPL-2.1	2021-04-20	2026-10-16	C++	ai,arduino-ide,ble,coding,deneyap-kart,drag-and-drop-programming,edtech,electronics,esp32-arduino,imu-sensor	topic:edtech stars:>50
+CyberAula/ediphy	52	NONE	2016-10-24	2024-03-28	JavaScript	authoring-tool,e-learning,react	topic:e-learning stars:>50
+ramms44/e-learningCodeigniter	52	NOASSERTION	2019-06-27	2023-07-22	PHP	codeigniter,e-learning,php	topic:e-learning stars:>50
+ucfopen/Materia	52	AGPL-3.0	2013-11-07	2026-10-23	JavaScript	canvas-lms,courseware,digital-learning,edtech,eduapp,education,educational-game,games,lti,materia	topic:edtech stars:>50
+ryukzak/wrench	45	BSD-3-Clause	2024-09-28	2026-10-26	Haskell	assembler,computer-architecture,cpu-simulator,cs-education,education,forth,haskell,instruction-set-architecture,m68k,riscv	grading/autograding topic:education
+evoluteur/braille-tools	43	MIT	2016-11-30	2026-10-22	CSS	a11y,accessibility,braille,braille-alphabet,braille-characters,braille-symbols,braille-translator,css,education,javascript	grading/autograding topic:education
+mohanvd/edutraceapp	40	MIT	2026-05-23	2026-05-23	MDX	edtech,education,egypt,lms,mdx,nextjs,stem,typescript	grading/autograding topic:education
+hqn21/nuk-unofficial-app	34	Apache-2.0	2025-08-01	2026-06-24	Swift	app,education,ios,swift,swiftui	grading/autograding topic:education
+earthlab/abc-classroom	29	BSD-3-Clause	2018-07-24	2024-03-25	Python	earth-analytics,education	grading/autograding topic:education
+AnonymousOnyx22/brightspace-d2l-mcp	28	NOASSERTION	2026-09-16	2026-10-27	TypeScript	ai,brightspace,brightspace-mcp,chatgpt,claude,claude-code,cursor,d2l,d2l-ai,d2l-brightspace	grading/autograding topic:education
+lucanardinocchi/canvas-mcp	24	NONE	2026-02-06	2026-05-08	TypeScript		canvas-mcp in:name
+earthlab/matplotcheck	23	BSD-3-Clause	2018-06-25	2022-12-27	Python	autograding,education,matplotlib,python	grading/autograding topic:education
+TrainWithShubham/tws-labs	23	MIT	2026-10-02	2026-10-21	JavaScript	aws,devops,docker,education,elastic-beanstalk,git,github-actions,hands-on,kubernetes,learn-to-code	grading/autograding topic:education
+maruf009sultan/AIELTS-WRITING	23	MIT	2025-09-28	2026-01-10	TypeScript	ai,assessment,edtech,education,english,essay,feedback,gpt-4,grader,grammar	grading/autograding topic:education
+jameskermode/mograder	21	MIT	2026-03-04	2026-10-09	Python	autograding,education,grading,marimo,moodle,nbgrader,notebooks,python	grading/autograding topic:education
+roVeloupe/essay-grader	20	NONE	2026-09-07	2026-10-22	JavaScript	ai,chinese,desktop-app,education,electron,essay-grading,opencode	grading/autograding topic:education
+IEEE-VIT/auto-grader	19	MIT	2021-07-14	2021-11-01	Jupyter Notebook	computer-vision,education,hacktoberfest,hacktoberfest-accepted,hacktoberfest2021,opencv,python,tensorflow	grading/autograding topic:education
+kishanhitk/jumsRebootFlutter	19	NONE	2020-06-12	2022-11-20	Dart	dart,education,firebase,firebase-cloud-messaging,flutter,jadavpur-university	grading/autograding topic:education
+r1ckyIn/canvas-ed-mcp	18	MIT	2025-11-18	2026-08-14	Python	api-integration,canvas-lms,claude,ed-discussion,education,mcp,python,university,usyd,usyd-cs	canvas-mcp in:name
+Easternguy/poker-mentor	18	MIT	2026-07-06	2026-07-10	TypeScript	education,game,poker,react,texas-holdem,typescript	grading/autograding topic:education
+AlterLab-IEU/AlterLab-FC-Skills	18	MIT	2026-03-26	2026-03-30	JavaScript	agent-skills,alterlab,claude-ai,claude-code,claude-skills,communication,education,generative-ai,media-production,public-relations	grading/autograding topic:education
+plyght/canvas-mcp	14	NONE	2025-10-30	2025-10-30	TypeScript	canvas,canvas-lms,education,educational,mcp,mcp-server	canvas-mcp in:name
+r-huijts/canvas-mcp	12	MIT	2024-12-12	2026-09-21	TypeScript		canvas-mcp in:name
+SonAIengine/ku-portal-mcp	12	MIT	2026-03-01	2026-10-03	Python	academic,ai,anthropic,canvas-lms,claude,education,korea-university,kupid,llm,lms	grading/autograding topic:education
+jacksonrakena/gradekeeper	12	NONE	2022-06-10	2026-04-18	TypeScript	education,grade-calculator,grade-tracking,gradebook,grades,hacktoberfest	grading/autograding topic:education
+E-Conners-Lab/PyStarter	12	MIT	2026-03-03	2026-10-26	Python	claude,coding-education,django,docker,e-learning,edtech,education,learning-platform,llm,monaco-editor	grading/autograding topic:education
+mbcrosiersamuel/canvas-mcp	11	NONE	2025-04-02	2026-10-08	TypeScript		canvas-mcp in:name
+aryankeluskar/canvas-mcp	11	ISC	2025-03-20	2026-03-11	TypeScript	anthropic,bun,canvas,mcp,typescript	canvas-mcp in:name
+mattrobball/lean-autograding	11	MIT	2022-01-26	2022-02-11	Lean	education,lean,mathematics	grading/autograding topic:education
+leolost2605/Gradebook	11	GPL-3.0	2022-09-24	2024-04-06	Vala	education,grade-calculator,grades,gtk4,libadwaita,vala	grading/autograding topic:education
+Alamoooooooo/alamo-skills	11	Apache-2.0	2026-07-03	2026-10-27	Python	adaptive-learning,agent-skills,ai-agents,claude-code,codex,coursecoach,education,learning,python,spaced-repetition	grading/autograding topic:education
+bruchris/canvas-lms-mcp	10	MIT	2026-04-12	2026-10-27	TypeScript	ai,canvas-lms,education,instructure,llm,lms,mcp,model-context-protocol,typescript	canvas-mcp in:name | grading/autograding topic:education
+mterwill/canvasgrader	10	NONE	2017-01-16	2023-06-20	Python	canvas-lms,education,instructure	grading/autograding topic:education
+roshanlam/RoshanEssayEdu	10	NONE	2019-06-08	2023-01-13	TypeScript	education,education-tool,educational-project,educational-tool,educational-website,roshan-lamichhane	grading/autograding topic:education
+Kaos599/VIT-GPA-Calculator	10	MIT	2025-02-13	2025-02-16	Python	calculator,camelot,cgpa,cgpa-calculator,cgpa-simulator,data-analysis,education,pandas,pdf,python-	grading/autograding topic:education
+Aaryan-Kapoor/d2l-cli	10	MIT	2026-03-14	2026-09-24	Python	ai-agent,ai-agents,assistant,automation,brightspace,brightspace-api,claude,claude-ai,claude-code,cli	grading/autograding topic:education
+Shashwatpog/poke-canvas-mcp	9	MIT	2025-12-20	2026-02-02	Python		canvas-mcp in:name
+hmontero1205/pygrader	9	MIT	2021-01-01	2021-09-02	Python	education,grader	grading/autograding topic:education
+emirshn/course-management-system	9	NONE	2021-12-27	2023-10-25	TypeScript	course-management,education,school-management	grading/autograding topic:education
+andrisan/si-obe	9	MIT	2022-08-28	2023-01-16	Blade	education,grade-calculator,grade-management	grading/autograding topic:education
+MarvinKweyu/AssessMe	9	MIT	2019-08-08	2026-01-12	JavaScript	assessme,assessment,classroom,django,docker,education,quiz	grading/autograding topic:education
+kaumaron/Data_Science	9	NONE	2017-06-07	2026-01-06	Jupyter Notebook	ceo-compensation,congress,data-science,education,educational-data-mining,free-learning,grade,portfolio	grading/autograding topic:education
+nycu-portal/E3_helper	9	MIT	2025-11-17	2026-10-22	JavaScript	chrome-extension,e3,education,nycu,productivity,university	grading/autograding topic:education
+YYKKCC-kevin/Canvas-MCP-for-students	8	NONE	2026-05-27	2026-06-03	Python		canvas-mcp in:name
+evgenytsydenov/python_course	8	MIT	2021-08-24	2022-12-29	Python	education,grading,jupyter-notebook,nbgrader,python,teaching	grading/autograding topic:education
+ahnopologetic/canvas-lms-mcp	7	MIT	2025-04-12	2026-02-21	Python		canvas-mcp in:name
+arm-education/International-Intro-to-Computing	7	NOASSERTION	2021-11-22	2025-06-12	Python	arm,coding,computer-science-education,education,international-school,microbit,pbl,physical-computing,stem,stem-education	grading/autograding topic:education
+ChantillyAn/homework-grader	7	MIT	2026-02-22	2026-02-22	Python	ai-grading,anthropic,batch-processing,bias-mitigation,claude,claude-code,claude-code-skill,education,excel-export,homework-grading	grading/autograding topic:education
+KrithinP/vanguard-inductions-2026	7	MIT	2026-08-30	2026-10-18	Shell	autonomous-navigation,curriculum,docker,education,gazebo,github-actions,jazzy,mars-rover,robotics,ros2	grading/autograding topic:education
+hung20gg/process_ml_vncodelab	7	NONE	2023-08-05	2024-03-01	Jupyter Notebook	eda,education,machie-learning	grading/autograding topic:education
+GradeAI/gradeai	7	NONE	2023-06-30	2023-08-15	Python	ai,education,gpt-3,python,school	grading/autograding topic:education
+krmu/FlightPHP_School	7	MIT	2024-05-25	2024-06-02	PHP	api,education,flightphp,php,school-management	grading/autograding topic:education
+af-programmer/EduFlow	7	NONE	2026-06-15	2026-08-03	JavaScript	education,express,full-stack,jwt,mysql,node,nodejs,react,rest-api,school-management	grading/autograding topic:education
+mikegropp/hacker-cli-gym	7	MIT	2026-08-04	2026-10-01	JavaScript	bash,cli,command-line,docker,education,gamified-learning,linux,powershell,terminal	grading/autograding topic:education
+HinnliDev/Canvas-CEServer-MCP	6	MIT	2026-08-02	2026-08-02	Python		canvas-mcp in:name
+NoahWeiss123/CanvasMCP-Poke	5	NONE	2026-01-07	2026-01-07	JavaScript		canvas-mcp in:name
+admin978/canvas-mcp	4	MIT	2026-05-11	2026-07-23	Python	canvas-lms,claude,claude-code,mcp,model-context-protocol,python,student-tools	canvas-mcp in:name
+yunwoong7/aws-nova-canvas-mcp	4	MIT	2025-03-31	2025-05-09	Python		canvas-mcp in:name
+CorCvusRamboChen/canvas-session-mcp	4	MIT	2026-10-05	2026-10-05	JavaScript	canvas,canvas-lms,claude,mcp,mcp-server,model-context-protocol,students	canvas-mcp in:name
+jqyyy23/Canvas-LMS-MCP-	4	NONE	2026-09-08	2026-09-27	TypeScript		canvas-mcp in:name
+JohannsenLum/canvas-api-mcp	3	MIT	2026-08-07	2026-08-15	Python	ai-agents,anthropic,assignments,canvas,canvas-api,canvas-lms,claude,claude-code,claude-desktop,edtech	canvas-mcp in:name
+AdityaPrakash-26/Canvas-MCP	3	NONE	2025-03-07	2025-06-10	Python		canvas-mcp in:name
+orionkabeza/canvas-mcp	3	NONE	2026-09-03	2026-09-03	Python		canvas-mcp in:name
+wassermanproductions/master-canvas-mcp	3	MIT	2026-07-13	2026-07-14	JavaScript		canvas-mcp in:name
+shu-silc-osc/canvas-chaoxing-silc-mcp	3	MIT	2026-10-11	2026-10-13	Python		canvas-mcp in:name
+taciturnaxolotl/canvas-mcp	2	NOASSERTION	2026-02-17	2026-03-06	TypeScript		canvas-mcp in:name
+pigeek/canvas-mcp	2	MIT	2026-02-16	2026-02-18	Python	a2ui,ai-agents,canvas,mcp-server,visualization	canvas-mcp in:name
+lcrzhang/canvas-mcp	2	MIT	2026-08-29	2026-10-16	Python		canvas-mcp in:name
+Brian-Two/canvas-mcp-assistance	2	NONE	2025-10-28	2026-06-02	TypeScript		canvas-mcp in:name
+Gediontkd/mcp-nova-canvas	2	NONE	2025-08-11	2025-08-11	Python		canvas-mcp in:name

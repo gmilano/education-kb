@@ -1,0 +1,4 @@
+repo	stars	paths_probed	branches	readme_licence_prose	verdict
+mahseema/aibooks	95	14	master+main	"## License" -> "[MIT](LICENSE.md)"	DANGLING CLAIM: README asserts MIT and links LICENSE.md, but LICENSE.md / LICENSE / LICENSE.txt are all 404 on BOTH branches. An MIT claim in prose with no grant file behind it - not the same as "no grant", and not the same as MIT.
+JushBJJ/Mr.-Ranedeer-AI-Tutor	29550	14	main	none found	NO GRANT, CONFIRMED independently of p479 (which probed 20 paths). LICENSE and LICENSE.md 404; README fetched 200 and carries no licence or copyright line. Exclusive copyright at 29.5k stars.
+A-R007/Multi-Agent-Study-Assistant	64	14	master+main	none found	NO GRANT. No file at 14 paths on either branch; no README licence prose.
