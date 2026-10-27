@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27` — **three recipes. 🟢 `P487-1` is the first on this base that can be sited in a ministry rather than a classroom, because the registry layer it needs now exists. 🔴 `P487-2` exists because a compliance scanner will block a component this base recommends, and the fix is a config line rather than a different component.**
+
+🔵 Every component below carries a licence read from bytes **at a pinned commit SHA**
+([`sha-pinned-licence`](../evidence/sha-pinned-licence.2026-10-27-p487.tsv)) — so a third party can
+reproduce each grant exactly, which `Gap 486-B` established was not true of this base's earlier
+cells. 🔴 **No recipe here has been executed**; `Gap 487-A` / `486-A` / `446-A` stand.
+
+---
+
+### 🟢 `P487-1` — National school-access triage (ministry / public-sector engagement)
+
+**The question it answers:** *which schools in the country are underserved, and what should we send
+them first?* 🔵 This base has never been able to wire this because it had no registry layer.
+
+| layer | component | licence @ pinned commit |
+|---|---|---|
+| identifier | [`suryast/indonesia-gov-apis`](https://github.com/suryast/indonesia-gov-apis) | 🟢 MIT · 1 056 B @ `f2751ecea8d2` |
+| directory | [`wanrabbae/api-sekolah-indonesia`](https://github.com/wanrabbae/api-sekolah-indonesia) | 🔴 **GPL-3.0** · 35 149 B @ `5d4bc92e6474` |
+| reachability | [`datawan-labs/schools`](https://github.com/datawan-labs/schools) | 🟢 MIT · 1 064 B @ `e617f9aa2ef5` |
+| offline delivery | [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) + [`elimu-ai/appstore`](https://github.com/elimu-ai/appstore) | 🟢 MIT (`p486`) |
+| placement | [`elimu-ai/ml-storybook-reading-level`](https://github.com/elimu-ai/ml-storybook-reading-level) | 🟢 MIT · 1 065 B @ `f0c98361f3cf` |
+
+**Wiring.** Pull the school directory and join it to population density to rank catchments by
+learners-per-reachable-school. For the bottom decile, push content through `elimu-ai`'s APK
+store — built for intermittent connectivity and already proven in low-resource schools — and use
+`ml-storybook-reading-level` to place each learner, so the first delivery is level-matched instead
+of uniform.
+
+🔴 **The licence boundary is the architecture.** `api-sekolah-indonesia` is GPL-3.0. 🟢 Run it as a
+**separate service behind HTTP** and the proprietary layer is not a derivative work — the boundary
+`p480` established first-hand from Open edX's own `LICENSE`, which states that a separate web
+service talking over RPC is not a derivative. 🔴 **Vendor it into the application and the whole
+application is GPL-3.0.** 🟢 There is **no network clause**: hosting it as a service is fine, which
+a whole-body licence scanner will deny (see `P487-2`).
+
+🔵 **Portability.** The pattern is country-shaped, not Indonesia-shaped: substitute Algeria's
+`yasserstudio/geoalgeria` (MIT, `p452`), the five NA registries of `p453`, or `cortega26/chile-hub`
+for LATAM — 🔴 noting that **no LATAM row supplies a school *directory*** (`Gap 487-J`).
+
+---
+
+### 🔴 `P487-2` — Licence gate that does not block your own stack
+
+**The question it answers:** *why did compliance reject a component this KB recommends?*
+
+🔴 **The failure is real and reproducible.** A whole-body licence grep — including the ordering this
+base prescribed at `p450` — grades [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) as
+**`AGPL-3.0`**. It is **`GPL-3.0`**. The token `affero` appears because **§13 of GPL-3.0 is titled
+*"Use with the GNU Affero General Public License"***. 🔴 The same class grades `portabilis/i-educar`
+as **`LGPL`** because GPL-2.0's **preamble** names the Lesser GPL.
+
+**Wiring.** Put [`classify.sh`](code/p487-title-anchor/classify.sh) in front of the scanner, or
+port its rule:
+
+1. Resolve the repository's default ref to a **commit SHA** (`git ls-remote --symref`) — 🔴 three of
+   three platform rows probed this pass default to `mobile`, `19.0` and `2.12`, so a probe at
+   `/main/LICENSE` 404s them all.
+2. Fetch the payload **at that SHA**, and reject a 14-byte body with digest `d5558cd419c8` — that is
+   a `404` wearing a `200` (`p256`/`p257`).
+3. Classify from the **title block only** — the first three non-blank lines. 🟢 `p455`'s anchor: the
+   one region of a payload a preamble cannot reach.
+4. Take the version from the same block, and the `only` / `or-later` election from the project's
+   source headers, never from the title.
+
+🟢 **Controls, both directions, or the gate is worthless.** Point it at
+[`artcc/freelingo`](https://github.com/artcc/freelingo) — a genuine AGPL-3.0 — and it must still say
+**AGPL**. A gate that has stopped finding network copyleft is worse than no gate.
+
+🔵 **What it is worth:** on the rows this base carries, the old rule would wrongly block a GPL-3.0
+learner platform and a GPL-3.0 national school directory from any hosted deployment — both of them
+load-bearing in `P487-1`.
+
+---
+
+### 🟢 `P487-3` — In-language sourcing sprint (pre-engagement, half a day)
+
+**The question it answers:** *what already exists in the client's own language before we quote a
+build?*
+
+🔵 **Rationale from measurement, not principle.** One Swahili query returned a five-repository MIT
+platform that 485 passes of English querying missed (`p486`). 🟢 Hindi and Indonesian paid this
+pass. 🔴 And the corpus is **7×–36× larger than this base's own published counts**, because
+`p475`'s census searched names and descriptions while claiming to search READMEs.
+
+**Wiring.**
+
+1. Take the education noun in the target language — `educación`, `pendidikan`, `giáo dục`, `교육`,
+   `elimu`, `शिक्षा`, `การศึกษา`, `eğitim`, `educação`, `تعليم`.
+2. Query the authenticated GitHub search channel **twice**: `in:name,description` and
+   `in:name,description,readme`. 🔴 **Record both.** The ratio is the measurement; one number alone
+   is what produced two false `TRUE ZERO` verdicts.
+3. Run a **control token** in the same script (`p475`'s method) — a high-frequency non-education
+   word. A zero with a zero control says the script is unindexed; a zero with a live control is a
+   real absence and worth writing down.
+4. Licence every survivor through `P487-2` before it reaches a slide.
+5. 🔴 Expect most hits to be homonyms: `p453` found `kindergarten` is an authorization library and
+   `early years` returns `prefer-early-return`. **Adjacency is not attribution** (`p455`).
+
+🔵 **Yield to date, honestly stated:** Swahili 21 hits → 7 rows; Indonesian 214 → 2 rows kept, 2
+refused for having no grant; Hindi 3 → 2 rows. 🔴 Arabic returns a live corpus of 28 and **zero**
+education-AI agents across two passes — a **diagnosed nil**, which is a finding and not a silence.
+
+---
+
 ## 🆕 `p486` — `2026-10-27` — **three recipes, each wired only from rows whose licence was read from bytes this pass or last. 🟢 `P486-1` is the first recipe on this base whose whole stack a client may relicense. 🔴 And `P486-3` is written with its compliance gate IN the recipe, because its best component is biometrics on children.**
 
 🔵 Every component below carries a licence verified from `raw.githubusercontent.com`. 🔴 No recipe

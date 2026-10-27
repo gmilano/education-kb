@@ -1,0 +1,26 @@
+# p487 — closes Gap 486-B. A fingerprint taken at a branch ref measures whatever the branch pointed at
+# at an unrecorded moment. Every row below resolves HEAD to a COMMIT SHA first (git ls-remote --symref)
+# and reads the payload AT THAT SHA, so a third party can reproduce it exactly.
+# Negative control: gmilano/fabricated-negative-control-p487 -> UNREACHABLE (correct).
+# curl -sI is NOT used: it returns 403 for real and fabricated slugs alike, re-measured this pass.
+slug	default_ref	commit_sha	file	http	bytes	sha256_12	licence_title_anchored	status
+nothinx/naskah-id	refs/heads/main	e18d574c6b93	LICENSE	200	1162	5c491be0bcf8	MIT	NEW
+mannnrachman/cbt-man	refs/heads/main	ce816cf5700b	LICENSE	200	1069	5c3623f06e48	MIT	NEW
+suryast/indonesia-gov-apis	refs/heads/main	f2751ecea8d2	LICENSE	200	1056	1126322e2cc8	MIT	NEW
+datawan-labs/schools	refs/heads/main	e617f9aa2ef5	LICENSE	200	1064	a39ea2c42685	MIT	NEW
+wanrabbae/api-sekolah-indonesia	refs/heads/main	5d4bc92e6474	LICENSE	200	35149	3972dc9744f6	GPL-3.0	NEW (v1 of this pass's own reader said AGPL -- defect, see gnu-title-anchor)
+AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs	refs/heads/main	fbdd4da3307e	LICENSE	200	1069	3e7f788130f0	MIT	NEW
+BleeGleeWee/Voice-Based-Native-Language-Service-Agent-	refs/heads/main	e66303daed36	LICENSE	200	1074	6985a2229610	MIT	NEW
+elimu-ai/ml-storybook-reading-level	refs/heads/main	f0c98361f3cf	LICENSE	200	1065	6af12447a42c	MIT	NEW to agents shelf
+ahmedEid1/lumen	refs/heads/main	07635d3c81ad	LICENSE	200	35149	3972dc9744f6	GPL-3.0	CORRECTION: base carried 35148 B / 8b1ba204bb69
+portabilis/i-educar	refs/heads/2.12	435649b0474f	LICENSE	200	18092	8177f9751321	GPL-2.0	CORRECTION: base carried 18091 B, no digest
+francoisjacquet/rosariosis	refs/heads/mobile	fa5f4b66caf4	LICENSE	200	15214	d954e14e5c75	GPL-2.0	REPRODUCES the carried cell exactly (positive control)
+openeducat/openeducat_erp	refs/heads/19.0	46a5d7d40082	LICENSE	200	8241	528f84036800	LGPL-3.0	REPRODUCES the carried cell exactly (positive control)
+wisnuvb/tixam	refs/heads/master	b2ad8a536fc7	-	NO_LICENCE_FILE	-	-	NONE	EXCLUDED -- 96 stars and no grant
+almazary/new_elearning	refs/heads/master	f774d65f52a5	-	NO_LICENCE_FILE	-	-	NONE	EXCLUDED -- 70 stars, 94 forks, no grant
+gmilano/fabricated-negative-control-p487	-	-	-	UNREACHABLE	-	-	-	NEGATIVE CONTROL, correctly unreachable
+# NON-DEFAULT REFS: 3 of 3 platform-scale rows probed resolve to a ref named neither main nor master
+# (mobile, 19.0, 2.12). A one-path probe at /main/LICENSE 404s all three. This is p450's false-negative
+# class, and it is concentrated in exactly the institutional tier this base sells.
+# CANONICAL GPL-3.0 BASELINE, established here for the first time: 35149 B / 3972dc9744f6, byte-identical
+# across two unrelated repositories (ahmedEid1/lumen, Egypt; wanrabbae/api-sekolah-indonesia, Indonesia).

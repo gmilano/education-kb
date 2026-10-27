@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27` — **🔴 THE TREND WITH THE MOST COMMERCIAL WEIGHT THIS PASS IS NOT ABOUT EDUCATION AT ALL: the open-source licence *readers* the whole industry leans on can misgrade a plain `GPL-3.0` as network copyleft, because the grant's own §13 names the Affero licence. 🟢 And the "regional supply nil" this base has reported for twelve passes was a missing search qualifier, not a missing corpus.**
+
+🔵 Eight trends. Those resting on first-hand measurement this pass are marked 🟢; those resting on
+secondary sources 🟡. 🔴 `make hooks` **DENIED** — thirteen in thirteen; nothing is gate-attested.
+
+### 🟢 `T487-1` — automated licence classification is failing in the direction that blocks deals
+
+🟢 **Measured, not argued.** A whole-body licence reader — the ordinary implementation, and the one
+this base itself prescribed at `p450` — produces three distinct false positives on the GNU family:
+GPLv3's closing paragraph recommends the LGPL; **GPL-2.0's preamble names the Library/Lesser GPL**;
+**GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"***.
+
+🔴 The third converts a hostable grant into an un-hostable one. 🔵 Since SBOM and
+licence-compliance tooling is now a procurement gate rather than a nicety, **a studio's compliance
+scanner is a source of false blockers**, and the cheap remedy is to anchor family detection on the
+licence's **title block**. Full mechanism:
+[`gnu-title-anchor`](../evidence/gnu-title-anchor.2026-10-27-p487.tsv).
+
+### 🟢 `T487-2` — non-English discovery is the highest-yield unexploited channel in education AI
+
+🟢 `p486` found a five-repository MIT platform with one Swahili word. 🟢 `p487` adds **Hindi** and
+**Indonesian** rows that twelve passes of English querying never surfaced. 🔵 Education software is
+written in the language of the ministry that buys it, so the English-language corpus is structurally
+a **minority** of global supply — and it is the only corpus most procurement research reads.
+
+### 🟢 `T487-3` — regional "nils" are usually instrument failures, and this one is now named
+
+🔴 `p475`'s language census recorded `TRUE ZERO` for Hindi and Thai. 🟢 Both are **refuted** — the
+census searched names and descriptions while claiming to search READMEs, and the corpus it was
+counting is **7× to 36×** larger than the figures four later passes relied on.
+
+🔵 The general form, and it generalises past this base: **a nil is a claim about an instrument until
+somebody runs a control.** 🟢 `p486`'s language conclusion survived its control this pass; `p475`'s
+denominators did not.
+
+### 🟢 `T487-4` — the institution registry is becoming an addressable layer
+
+🟢 Indonesia supplies all three layers at once — identifier, directory, reachability — two of them
+MIT. 🔵 Every adaptive-learning recipe assumes it knows which school and cohort a learner belongs
+to, and almost none says where that comes from. 🔵 For a ministry engagement the registry is the
+*first* integration, not an afterthought, and it is increasingly available as open data with an API.
+
+### 🟡 `T487-5` — the market figure remains a range of claims, and the spread widened again
+
+🟡 Independent secondary sources reached this pass put the 2026 AI-in-education market at
+**US$3.7 B** (≈21 % CAGR to 2033), **US$6.4 B** 2025 base (≈31 % to 2034) and **US$10.6 B**
+(40.9 % growth) — a **2.9× spread between the lowest and highest 2026 figure**. 🔴 This base's
+standing instruction applies: **print the claims, name the claimants, average nothing.**
+
+### 🟡 `T487-6` — EMEA is building the funding and evaluation layer, not just the rulebook
+
+🟡 The UK's AI Adoption Summit committed **£200 m+** (£100 m expanding Bridge AI, £53 m regional),
+delivered through big-tech partners with Skills England setting the curriculum frame. 🟡 The European
+Commission updated its **ethical guidelines on AI in education** and signed **€25.4 m** in Advanced
+Digital Skills grants. 🟡 The Council of Europe is working toward a **European evaluation framework
+for educational technologies**.
+
+🔵 That last item is the one to watch commercially: an evaluation framework is a **procurement
+gate**, and a gate is a service line.
+
+### 🟡 `T487-7` — governance demand keeps outrunning governance supply, now on both sides of the Atlantic
+
+🟡 LATAM's figure is still the sharpest this base holds: **87 % of institutions using AI against
+26 % with a formal strategy** (UNESCO IESALC / UNU-IAS, 200 institutions, 19 countries). 🟡 A North
+America roundup this pass reports **~10 % of institutions with formal AI guidelines** and **71 % of
+US teachers without AI training** — the same gap, differently sized, measured by a weaker instrument.
+
+🔴 Both are secondary. 🔵 The engagement they describe is identical and this base's supply shelves
+still carry **almost no governance tooling**.
+
+### 🟡 `T487-8` — APAC regulatory divergence is now the planning assumption
+
+🟡 Within one region: **Vietnam** has a dated, binding high-risk obligation covering education;
+**Singapore** governs by mature guidance; **China** legislates against algorithmic misconduct;
+**ASEAN**'s governance guide remains early-stage. 🔵 A single APAC compliance posture does not
+exist, and a deck that implies one will not survive the first country review.
+
+### 🔴 What this pass could not establish
+
+🔴 Nothing here was **executed** (`Gap 487-A`). 🔴 Every market, policy and funding figure in
+`T487-5` through `T487-8` is **secondary**, which `p478` established is an environment boundary and
+not a diligence failure: the primary hosts — EUR-Lex, UNESCO, `govinfo.gov` — are refused at the
+egress allowlist. 🔵 Stated rather than left silent, because silence looks exactly like coverage.
+
+---
+
 ## 🆕 `p486` — `2026-10-27` — **🟢 `T485-1` TAKES ITS STRONGEST TEST YET AND HOLDS AT 9 OF 9 — but the pass's real result is three instrument findings, each of which says a measurement this base trusted was measuring something slightly different from what it claimed. 🔴 And a gate that has never been allowed to run turns out to have been FAILING, not merely silent.**
 
 🔵 Eight trends. Those resting on first-hand measurement are marked 🟢; those resting on secondary

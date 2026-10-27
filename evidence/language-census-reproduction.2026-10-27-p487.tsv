@@ -1,0 +1,18 @@
+# p487 — p475's in-language census is re-run. Its header claims name/description/README. Its numbers
+# are name/description ONLY. Measured by running both query forms against the same tokens, same channel.
+token	language	region	p475_recorded	p487_in_name_description	p487_plus_readme	readme_multiplier	p475_verdict	p487_verdict
+educacion	Spanish	LATAM	17	17	434	25.5x	COMPLETE	p475 value REPRODUCES EXACTLY at name+description; the README index was never searched
+pendidikan	Indonesian	APAC	8	6	214	35.7x	COMPLETE	reproduces within churn at name+description
+giao duc	Vietnamese	APAC	5	(rate-limited)	86	17.2x	COMPLETE	README corpus 17x the recorded figure
+gyoyuk (Korean)	Korean	APAC	47	(rate-limited)	563	12.0x	COMPLETE	README corpus 12x the recorded figure
+shiksha (Hindi)	Hindi	APAC	0	-	3	n/a	TRUE ZERO	REFUTED -- 3 hits with README in scope, one of them an agentic LangGraph/Groq voice AI in Hindi
+kan-suksa (Thai)	Thai	APAC	0	-	9	n/a	TRUE ZERO	REFUTED -- 9 hits with README in scope
+taleem (Arabic)	Arabic	EMEA	4	-	28	7.0x	nil is REAL	p486 re-ran this WITH README (32 hits) and still found 0 education-AI rows: that nil SURVIVES
+# CONTROL ON p486's CONCLUSION -- does the README qualifier explain the Swahili win?
+# p486 ran: elimu in:name,description,readme stars:>3 -> 21 hits, 7 rows.
+# p487 ran: elimu in:name,description           stars:>3 -> 14 hits, and elimu-ai/webapp is RESULT #1.
+# VERDICT: NO. elimu-ai was reachable without the README index. p486's attribution of the African nil
+# to the ENGLISH LANGUAGE is CONFIRMED by a control that could have refuted it. The two variables were
+# confounded in p486's design and they are now separated: language was doing the work, not the qualifier.
+# WHAT IS STILL BROKEN: every per-language DENOMINATOR this base has published since p475 is 12-36x low,
+# and two "TRUE ZERO" verdicts built on it are refuted. The nils were a missing index, not a missing corpus.

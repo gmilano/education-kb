@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27` — **🔴 THE RULE THIS BASE ADOPTED AT `p450` TO STOP ONE LICENCE FALSE POSITIVE MANUFACTURES TWO MORE, AND THE EXPENSIVE ONE TURNS A HOSTABLE `GPL-3.0` ROW INTO A NETWORK-COPYLEFT REFUSAL. 🟢 `Gap 486-B` CLOSED with a reader that pins a commit SHA before it reads a byte — and its first run corrects the byte cell of two rows on this shelf. 🟢 Four new rows, every licence read at a pinned commit.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from
+External`) before any gate body ran — **thirteen denials in thirteen passes**. 🔵 Nothing in this
+pass is gate-attested. Both instruments below were written from scratch in this pass and controlled
+in both directions instead; that is **2 of 62**.
+
+### 🔴 The finding: `p450`'s fix is a defect generator, and this pass's own first instrument proved it
+
+🔵 `p450` found that a whole-body licence grep *"calls every GPLv3 file LGPL, because GPLv3's
+closing paragraph recommends the LGPL"*, and fixed it by testing `gnu lesser` **before**
+`gnu general public`. 🔴 **That ordering is not a fix. It is a different defect**, and the first cut
+of this pass's own reader published two wrong verdicts under it before a control caught them.
+
+🔵 A whole-body grep is unsound in **three** directions, not one
+([`gnu-title-anchor`](../evidence/gnu-title-anchor.2026-10-27-p487.tsv)):
+
+| shape | where the foreign token lives | wrong verdict | status |
+|---|---|---|---|
+| GPLv3's closing paragraph recommends the LGPL | body | `GPL-3.0` → `LGPL` | 🔵 `p450`, known |
+| 🆕 **GPL-2.0's *preamble* names the Library/Lesser GPL** | **line 18**, and again at line 338 | `GPL-2.0` → **`LGPL`** | 🔴 **new** |
+| 🆕 **GPL-3.0 §13 is *titled* "Use with the GNU Affero General Public License"** | **lines 552 / 556 / 559** | `GPL-3.0` → **`AGPL`** | 🔴 **new** |
+
+🔴 **The third one costs money.** [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) — this
+shelf's learner-owned platform — grades **`AGPL`** under the whole-body rule. Its title block reads
+`GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007`. 🟢 **It is plain GPL-3.0 and has no network
+clause at all.** A studio handed the rule's verdict refuses to host as a service a row it is
+perfectly free to host.
+
+🟢 **The sound anchor already exists in this base and nothing was using it.** `p455` built
+`family_version.py` anchored on the **title block** — *"the only region of a payload a preamble
+cannot reach"* — to carry a version axis. 🔵 The *family* classifiers kept grepping the whole body.
+🟢 [`classify.sh`](../compose/code/p487-title-anchor/classify.sh) applies `p455`'s anchor to the
+family question and prints both verdicts side by side:
+
+| payload | slug | whole-body rule | **title anchor** | |
+|---|---|---|---|---|
+| GPL-2.0 | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL` | 🟢 **`GPL-2.0`** | **DISAGREE** |
+| GPL-3.0 | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 `AGPL` | 🟢 **`GPL-3.0`** | **DISAGREE** |
+| GPL-2.0 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `GPL` | 🟢 `GPL-2.0` | agree |
+| AGPL-3.0 | [`artcc/freelingo`](https://github.com/artcc/freelingo) | `AGPL` | 🟢 `AGPL-3.0` | agree |
+
+🔵 **The two `agree` rows are the controls that matter.** A reader that simply called everything
+`GPL-2.0` would also have "corrected" `i-educar`; `freelingo` is the row that proves the new anchor
+can still find a genuine AGPL. 🟢 Both hold.
+
+### 🔵 Why `rosariosis` grades right and `i-educar` grades wrong — and neither project did anything
+
+🟢 The variable is **the FSF's own revision of its own text**, not either project's packaging.
+`rosariosis` carries the original 1991 preamble, *"the GNU **Library** General Public License
+instead"*; `i-educar` carries the post-1999 wording, *"the GNU **Lesser** General Public License
+instead"*. 🔵 Same licence, same title block, same version — one word apart, and that word is the
+one the rule keys on.
+
+🔴 **So the population at risk is not "badly licensed projects". It is every GPL-2.0 payload
+published after about 1999**, which is most of them. This base carries two GPL-2.0 rows and the rule
+mis-grades exactly the one that is its LATAM flagship.
+
+🟢 **The shelves were right and the instrument was wrong.** `i-educar` is published here as
+`GPL-2.0` and `lumen` as `GPL-3.0`; **both values are correct and neither changes.** What changes is
+that no gate had ever run the rule against the payloads the shelves carry, so the rule's unsoundness
+was invisible while its outputs happened to agree.
+
+### 🟢 `Gap 486-B` closed — a fingerprint that a third party can reproduce
+
+🔵 `p486` recorded that uPortal's `sha256` did not survive one hour because `master/LICENSE` is a
+moving ref, and that *"the fix is to record a commit SHA alongside; **not done for any existing
+row**"*. 🟢 [`licread.sh`](../compose/code/p487-title-anchor/licread.sh) resolves `HEAD` to a commit
+SHA with `git ls-remote --symref` **before it reads a byte**, and fetches the payload **at that
+SHA**. 🟢 Every fingerprint below is therefore reproducible by anyone, at any later date.
+
+🟢 **Two positive controls, chosen because this base already published their values independently:**
+`rosariosis` re-reads at `mobile` `fa5f4b66caf4`, `15 214 B`, and `openeducat_erp` at `19.0`
+`46a5d7d40082`, `8 241 B · 528f840368`. 🟢 **Both reproduce the carried cells exactly.**
+
+🔴 **And two carried byte cells do not, both in the direction `p450` named:**
+
+| row | carried | **read at a pinned commit** | |
+|---|---|---|---|
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | `35 148 B` · `8b1ba204bb69` | 🔴 **`35 149 B` · `3972dc9744f6`** @ `07635d3c81ad` | licence **unchanged**, `GPL-3.0` |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `18 091 B` · *no digest* | 🔴 **`18 092 B` · `8177f9751321`** @ `435649b0474f` | licence **unchanged**, `GPL-2.0` |
+
+🔵 Both are the **trailing-newline** class `p450` found and `p452` bounded at under 3 %. 🔴 It is
+still arriving in cells written **after** the fix, which means the fix lives in one instrument and
+not in the habit.
+
+🟢 **A canonical `GPL-3.0` reference now exists, and this base never had one.** `35 149 B ·
+3972dc9744f6`, **byte-identical across two unrelated repositories** on two continents —
+`ahmedEid1/lumen` (Egypt) and `wanrabbae/api-sekolah-indonesia` (Indonesia). 🔵 That matches what
+`p479` did for AGPL-3.0 (`34 523 B · 0d96a4ff68ad`) and `p486` for the Apache pair.
+
+### 🔴 A defect in this pass's own reader, reported rather than quietly fixed
+
+🔴 `licread.sh` v1 graded [`wanrabbae/api-sekolah-indonesia`](https://github.com/wanrabbae/api-sekolah-indonesia)
+as **`AGPL-3.0`** and the row nearly entered this base as network copyleft. 🟢 It is `GPL-3.0`,
+proved twice over: its title block says so, and its payload is **byte-identical to `lumen`'s**.
+🔵 Caught because the digests collided and a collision between a supposed AGPL and a known GPL-3.0
+is impossible — the same reasoning `p479` used when it found a byte-count collision inside AGPL-3.0.
+
+### 🟢 Four new rows, found by reading a backlog this base already paid for
+
+🔵 `p486` closed the African nil by querying in Swahili. 🟢 This pass applies the same lever to the
+**Hindi and Indonesian** channels, which `p475` recorded as `TRUE ZERO` and near-nil
+([`language-census-reproduction`](../evidence/language-census-reproduction.2026-10-27-p487.tsv)).
+🔴 **Both verdicts are refuted**, and the mechanism is in the next section.
+
+| agent | ★ | licence (bytes, **pinned commit**) | `sha12` | what it is |
+|---|---|---|---|---|
+| [nothinx/naskah-id](https://github.com/nothinx/naskah-id) | **84** | 🟢 **MIT** · 1 162 B @ `e18d574c6b93` | `5c491be0bcf8` | 🟢 **NEW — academic-writing agent skill for Indonesian**, gated on EYD V orthography and the KBBI dictionary, aimed at `skripsi`/journal submission. Created **six days ago**; 16 forks already. The first row here whose pedagogy is a *national language standard*. |
+| [mannnrachman/cbt-man](https://github.com/mannnrachman/cbt-man) | 11 | 🟢 **MIT** · 1 069 B @ `ce816cf5700b` | `5c3623f06e48` | 🟢 **NEW — computer-based testing, MIT, modern stack** (TanStack Start + React + Prisma + SQLite). Indonesia runs CBT at national scale; every other CBT repository found this pass carries **no grant at all**. |
+| [AMAN6921/SikhshaBox](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 13 | 🟢 **MIT** · 1 069 B @ `fbdd4da3307e` | `3e7f788130f0` | 🟢 **NEW — isolated per-student virtual lab environments** with automated code feedback and resource allocation. The *affordable-lab* framing is an India constraint stated as a design goal. |
+| [BleeGleeWee/Voice-Based-Native-Language-Service-Agent-](https://github.com/BleeGleeWee/Voice-Based-Native-Language-Service-Agent-) | 6 | 🟢 **MIT** · 1 074 B @ `e66303daed36` | `6985a2229610` | 🟢 **NEW — the first Hindi-channel row this base has ever carried.** LangGraph state machine + Groq Llama-3 + EdgeTTS, **CPU-optimised, no GPU**. Voice-first for a population that does not type. |
+| [elimu-ai/ml-storybook-reading-level](https://github.com/elimu-ai/ml-storybook-reading-level) | 8 | 🟢 **MIT** · 1 065 B @ `f0c98361f3cf` | `6af12447a42c` | 🟢 Promoted from the `elimu-ai` family `p486` opened: predicts a storybook's **reading level**, which is the placement primitive every adaptive recipe here assumes and none of them supplies. |
+
+🔴 **Two rows with real traction were refused**, and they are refused for the reason this base always
+refuses: [`wisnuvb/tixam`](https://github.com/wisnuvb/tixam) (**96★**, Indonesian CBT) and
+[`almazary/new_elearning`](https://github.com/almazary/new_elearning) (**70★**, 94 forks, Indonesian
+LMS) have **no licence file at any of six candidate paths** at a pinned commit. 🔵 Both are more
+popular than three rows that were accepted. Popularity is not a grant.
+
+### 🔵 The `p486` shelf carries forward
+
+🔵 The nineteen rows `p486` published stand unchanged except for `lumen`'s and `i-educar`'s byte
+cells, corrected above. 🔴 **Their `sha12` values remain branch-ref measurements**: `Gap 486-B` is
+closed as an *instrument*, and **open as a backlog** — 17 rows still carry a fingerprint nobody can
+reproduce. 🔵 Re-pinning them is cheap and was not done this pass.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 487-A`** | **Still nothing executed** — `486-A` / `485-M` / `446-A` carry forward unbroken. Four new rows are byte-probed and pinned; **none is run**. The Hindi voice agent's whole claim is latency on a CPU, which is the one property a read cannot check. |
+| 🔴 **`Gap 487-B`** | **The whole-body GNU rule is refuted but not retired.** It is fixed in `classify.sh` only. This base's shared licence library, the `p383` gates and every carried GNU cell were graded by the old rule, and **no sweep has re-graded them under the title anchor**. 11 `UNDER_SPECIFIED` and 20 `AMBIGUOUS` cells from `p455` are prime suspects. |
+| 🔴 **`Gap 487-C`** | **`Gap 486-B` is closed as an instrument and open as a backlog.** 17 of 19 shelf rows still carry a branch-ref `sha12`. Until they are re-pinned, a third party cannot reproduce them and a drift verdict against them is uninterpretable. |
+| 🟡 **`Gap 487-D`** | **All four new rows enter on licence, metadata and description — no source was read.** This is the exact error `Gap 485-Z` named and `486-F`/`486-G` repeated. `naskah-id` claims EYD V and KBBI conformance; `cbt-man` claims nothing testable; `SikhshaBox` claims "smart resource allocation" with 0 forks and no release. |
+| 🟡 **`Gap 487-E`** | **`rosariosis`'s GPL-2.0 is 2 878 B shorter than `i-educar`'s and ends at `END OF TERMS AND CONDITIONS`** — the *"How to Apply These Terms"* appendix is absent. The appendix is non-operative, so on `p482`'s reasoning **no right is narrowed**; but this base has no instrument that separates operative text from appendix for the **GNU** families, only for Apache (`Gap 486-D`). |
+| 🟡 **`Gap 487-F`** | **The GPL-3.0 baseline rests on two payloads, not a census** — the same limit `Gap 486-C` names for Apache. And this base's carried GNU digests were computed one byte short, so re-grading against the new baseline will produce a drift list that is an artefact until the off-by-one is corrected first. |
+
+---
+
 ## 🆕 `p486` — `2026-10-27` — **🟢 THREE GAPS CLOSE BY MEASUREMENT AND EACH ONE CORRECTS THE INSTRUMENT THAT FOUND IT. `Gap 485-X`: velocity exists but **16 of 19 rows are below the floor at a one-hour cadence** — this base runs hourly and its popularity instrument has a *daily* resolution. `Gap 485-Z`: `tutor-mcp`'s BKT is **real, read from Go** — and the source declares **two departures from canonical BKT its description never mentions**. `Gap 485-P`: `oppia` is **byte-identical** to canonical Apache-2.0 — and proving it exposed that this base's Apache baseline needs **two fingerprints, not one**.**
 
 🔵 Every licence figure below is **bytes fetched this pass** from `raw.githubusercontent.com`, with

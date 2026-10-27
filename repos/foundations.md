@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27` — **🟢 THE FOUNDATION TIER THIS SHELF HAS NEVER CARRIED IS THE *INSTITUTION REGISTRY*, AND APAC SUPPLIES THREE OF THEM AT ONCE — but the one with the best data is `GPL-3.0`, not the permissive grant a first reading of it claimed. 🟢 A canonical `GPL-3.0` reference finally exists here, proved byte-identical across two continents.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — **thirteen denials in thirteen passes**. Nothing
+below is gate-attested. Every licence is read from bytes **at a pinned commit SHA**
+([`sha-pinned-licence`](../evidence/sha-pinned-licence.2026-10-27-p487.tsv)), which closes
+`Gap 486-B` as an instrument.
+
+### 🟢 Why an institution registry is a *foundation* and not a dataset
+
+🔵 `p452` opened an institution-registry layer for North America and Algeria and `p453` extended it
+with five permissive registries. 🔵 Nothing has been added since, and the reason this tier matters is
+narrow and practical: **every recipe on this base assumes it knows which school, which cohort and
+which curriculum a learner belongs to**, and not one of them says where that comes from. A registry
+is the row that answers it.
+
+🟢 Indonesia is the densest single-country supply this shelf has found for that question —
+**346 000 schools under one national identifier scheme** — and all three rows were reached through
+the Indonesian-language channel, not an English one.
+
+| repo | ★ | licence (bytes, **pinned commit**) | `sha12` | why it is a foundation |
+|---|---|---|---|---|
+| [suryast/indonesia-gov-apis](https://github.com/suryast/indonesia-gov-apis) | **173** | 🟢 **MIT** · 1 056 B @ `f2751ecea8d2` | `1126322e2cc8` | 🟢 50+ Indonesian government data sources — BPS, OJK, BPOM, Bank Indonesia, BMKG, IDX — **packaged with MCP servers**, so it is a tool surface and not only a list. Pushed today. Documents its own breakage patterns, which is rarer than the data. |
+| [wanrabbae/api-sekolah-indonesia](https://github.com/wanrabbae/api-sekolah-indonesia) | 119 | 🔴 **GPL-3.0** · 35 149 B @ `5d4bc92e6474` | `3972dc9744f6` | 🔴 **The national school directory, and the licence is the finding.** A studio wiring this into a product inherits GPL-3.0 on the combined work. 🟢 There is **no network clause** — see below, because the first reading of this row said there was. |
+| [datawan-labs/schools](https://github.com/datawan-labs/schools) | 68 | 🟢 **MIT** · 1 064 B @ `e617f9aa2ef5` | `a39ea2c42685` | 🟢 School locations against **population density**, DuckDB + MapLibre. The access-equity layer: it answers *who has no school within reach*, which is the question a ministry engagement actually opens with. |
+
+🔵 Together they are the three layers a registry tier needs and this shelf had none of: **identifier**
+(`indonesia-gov-apis`), **directory** (`api-sekolah-indonesia`), **reachability**
+(`datawan-labs/schools`). 🟢 Two of the three are MIT.
+
+### 🔴 The row that nearly entered as network copyleft, and how it was caught
+
+🔴 The first cut of this pass's licence reader graded `api-sekolah-indonesia` **`AGPL-3.0`**, and an
+AGPL verdict on a national school directory is the kind of claim that ends an engagement before it
+starts. 🟢 **It is `GPL-3.0`**, and the proof did not need a human reading: its payload is
+**byte-identical** to [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen)'s, a row this base
+already publishes as GPL-3.0 — `35 149 B · 3972dc9744f6`, same digest, two unrelated projects, two
+continents.
+
+🔵 The mechanism is that GPL-3.0 **§13 is titled** *"Use with the GNU Affero General Public
+License"*, so any reader grepping the whole body finds `affero` in a licence that has no network
+clause. 🔴 That defect, and the matching one in GPL-2.0's preamble, are recorded in full on
+[`agents/top.md`](../agents/top.md) and in
+[`gnu-title-anchor`](../evidence/gnu-title-anchor.2026-10-27-p487.tsv).
+
+### 🟢 The canonical `GPL-3.0` reference this shelf never had
+
+🔵 This base holds a measured canonical **AGPL-3.0** (`34 523 B · 0d96a4ff68ad`, `p479`, four
+projects) and a canonical **Apache-2.0 pair** (`p486`). 🔴 It has never held one for **GPL-3.0**,
+which is the single most common copyleft grant on these shelves.
+
+🟢 **It does now: `35 149 B · 3972dc9744f6`**, established from two byte-identical independent
+payloads. 🔵 That turns *"is this really GPL-3.0?"* into a diff, exactly as `p481` did for Apache.
+
+🔴 **And it immediately finds drift in this base's own cells.** `lumen` is carried at `35 148 B ·
+8b1ba204bb69` and `Edu-Sharing` at `35 148 B` — both **one byte short**, the trailing-newline class
+`p450` named and `p452` bounded. 🔴 A digest taken over a body one byte short is not a weak match,
+it is a **different digest**, so every GNU digest on these shelves must be re-read before it can be
+compared to the new baseline. Registered below.
+
+### 🔴 Three of three platform rows resolve to a ref named neither `main` nor `master`
+
+🔵 Measured as a by-product of pinning commit SHAs:
+
+| row | default ref |
+|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **`2.12`** |
+
+🔴 **A one-path probe at `/main/LICENSE` 404s all three** — `p450`'s false-negative class, and it is
+concentrated in exactly the institutional tier this shelf sells. 🟢 `git ls-remote --symref`
+resolves the ref before any read, so the escalation is unnecessary rather than merely survivable.
+
+### 🟢 Two positive controls on the new reader
+
+🔵 An instrument that only ever produces new values cannot be checked. 🟢 `rosariosis`
+(`15 214 B`) and `openeducat_erp` (`8 241 B · 528f840368`) were re-read **because this base already
+published their values independently**, and both **reproduce exactly**. 🔵 A fabricated slug returns
+`UNREACHABLE` in the same run.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 487-G`** | **Every GNU digest on these shelves predates the GPL-3.0 baseline and most are one byte short.** Re-grading against `3972dc9744f6` before correcting the off-by-one will produce a drift list that is entirely artefact. The order of operations is load-bearing and no pass has done either half. |
+| 🟡 **`Gap 487-H`** | **None of the three registry rows was read as source.** `indonesia-gov-apis` claims MCP servers; the MCP surface was **not** read, counted or run — the same error `Gap 483-R` took four passes to close for DeepTutor. |
+| 🟡 **`Gap 487-I`** | **"346 000 schools" is the registry's own claim, not a measurement.** No row count was taken from any of the three APIs, and `api-sekolah-indonesia`'s upstream is a government host this session has not probed and which `Gap 450-B`'s allowlist findings make unlikely to be reachable. |
+| 🟡 **`Gap 487-J`** | **The registry tier is now NA + Algeria + Indonesia and has no LATAM row**, which is the region this base is built for. `chile-hub` is the nearest thing and it is a data hub, not a school directory. |
+
+---
+
 ## 🆕 `p486` — `2026-10-27` — **🟢 THE FIRST AFRICAN FOUNDATION SET THIS BASE HAS EVER CARRIED — five MIT repositories, licences from bytes — and a baseline correction that touches every Apache row on every shelf: canonical Apache-2.0 is a PAIR of fingerprints, not one.**
 
 🔵 Every licence figure is **bytes fetched this pass**. Evidence:

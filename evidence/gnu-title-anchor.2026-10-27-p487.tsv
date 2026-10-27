@@ -1,0 +1,20 @@
+# p487 — the GNU family classifier is UNSOUND IN BOTH DIRECTIONS, and p450's fix is the cause of half of it.
+# p450 found that GPLv3's closing paragraph recommends the LGPL, and fixed it by testing "gnu lesser"
+# BEFORE "gnu general public". That ordering is itself a defect generator. Measured here on four payloads
+# this base already publishes. Anchor = the title block (p455's anchor; a preamble cannot reach it).
+payload	slug	pinned_commit	title_block	whole_body_rule	title_anchor_rule	verdict	what_it_would_cost
+GPL-2.0	portabilis/i-educar	435649b0474f	GNU GENERAL PUBLIC LICENSE / Version 2, June 1991	LGPL	GPL-2.0	DISAGREE	a GPL-2.0 flagship re-published as LGPL: a studio would believe dynamic linking is granted when it is not
+GPL-3.0	ahmedEid1/lumen	07635d3c81ad	GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007	AGPL	GPL-3.0	DISAGREE	a plain GPL-3.0 re-published as NETWORK COPYLEFT: a hostable row refused as un-hostable
+GPL-2.0	francoisjacquet/rosariosis	fa5f4b66caf4	GNU GENERAL PUBLIC LICENSE / Version 2, June 1991	GPL	GPL-2.0	agree	-
+AGPL-3.0	artcc/freelingo	(branch ref)	GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007	AGPL	AGPL-3.0	agree	-
+# MECHANISM, three distinct false-positive shapes, all from grepping the WHOLE BODY:
+#  (1) GPLv3 closing paragraph recommends the LGPL ............... GPL-3.0 -> LGPL   (p450, known)
+#  (2) GPL-2.0 PREAMBLE line 18 names the Library/Lesser GPL ...... GPL-2.0 -> LGPL   (p487, NEW)
+#      i-educar line 18: "the GNU Lesser General Public License instead.)" and again at line 338.
+#      rosariosis line 18 carries the ORIGINAL 1991 wording "GNU Library General Public License",
+#      which is why the same rule grades rosariosis correctly and i-educar wrongly. The variable is
+#      the FSF's own post-1999 revision of the GPL-2.0 preamble, not anything either project did.
+#  (3) GPL-3.0 section 13 is titled "Use with the GNU Affero GPL" .. GPL-3.0 -> AGPL  (p487, NEW)
+#      lumen lines 552/556/559. This is the expensive one: it manufactures a network-copyleft verdict.
+# THE SHELVES WERE RIGHT. i-educar is published here as GPL-2.0 and lumen as GPL-3.0, both correct.
+# What is wrong is the RULE, which no gate has ever run against the payloads the shelves carry.

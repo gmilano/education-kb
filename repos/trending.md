@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27T19:55Z` — **the institution-registry tier arrives from a single country, through a single non-English query, and the row with the best data is the one a studio may not freely combine**
+
+🔵 Discovery through the authenticated GitHub search channel; licences from
+`raw.githubusercontent.com` **at resolved commit SHAs**, closing `Gap 486-B` as an instrument.
+Evidence: [`sha-pinned-licence`](../evidence/sha-pinned-licence.2026-10-27-p487.tsv),
+[`gnu-title-anchor`](../evidence/gnu-title-anchor.2026-10-27-p487.tsv).
+
+### 🟢 Three registry rows, one country, one query language
+
+| repo | ★ | licence @ pinned commit | layer |
+|---|---|---|---|
+| [suryast/indonesia-gov-apis](https://github.com/suryast/indonesia-gov-apis) | **173** | 🟢 MIT · 1 056 B @ `f2751ecea8d2` | **identifier** — 50+ national data sources (BPS, OJK, BPOM, BI, BMKG, IDX) **packaged with MCP servers**. Pushed today. |
+| [wanrabbae/api-sekolah-indonesia](https://github.com/wanrabbae/api-sekolah-indonesia) | 119 | 🔴 **GPL-3.0** · 35 149 B @ `5d4bc92e6474` | **directory** — the national school registry. 🔴 Combining it propagates GPL-3.0. 🟢 No network clause. |
+| [datawan-labs/schools](https://github.com/datawan-labs/schools) | 68 | 🟢 MIT · 1 064 B @ `e617f9aa2ef5` | **reachability** — school locations against population density, DuckDB + MapLibre. |
+
+🔵 Identifier, directory, reachability. 🟢 Two of three permissive; the copyleft one is the one
+holding the authoritative list, which is the usual shape and worth pricing early.
+
+### 🔴 The GPL-3.0 row was first graded AGPL-3.0 by this pass's own reader
+
+🔴 An AGPL verdict on a national school directory would have removed it from every hosted recipe on
+this base. 🟢 It is `GPL-3.0`, and the disproof needed no judgement: its payload is **byte-identical
+to [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen)'s** — `35 149 B · 3972dc9744f6` — a row
+this base already publishes as GPL-3.0. A digest collision between a supposed AGPL and a known
+GPL-3.0 is impossible, so one of the two verdicts had to be wrong, and the title blocks said which.
+
+🔵 Mechanism: **GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"***. Any
+reader grepping the whole body finds `affero` in a grant that has none of its obligations.
+
+### 🟢 A canonical GPL-3.0 baseline, and it immediately finds drift here
+
+🟢 **`35 149 B · 3972dc9744f6`**, proved byte-identical across two unrelated projects on two
+continents. 🔵 This base held a canonical AGPL-3.0 (`p479`) and an Apache-2.0 pair (`p486`) and never
+one for the commonest copyleft grant on its own shelves.
+
+🔴 Against it, two carried cells are **one byte short**: `lumen` at `35 148 B · 8b1ba204bb69` and
+`Edu-Sharing` at `35 148 B`. 🔴 Because a digest over a truncated body is a *different* digest and
+not a near miss, **every GNU digest here must be re-read before any drift verdict is issued against
+the new baseline**.
+
+### 🔴 Three of three platform rows have a default ref that is neither `main` nor `master`
+
+🔵 `francoisjacquet/rosariosis` → **`mobile`** · `openeducat/openeducat_erp` → **`19.0`** ·
+`portabilis/i-educar` → **`2.12`**. 🔴 A one-path probe at `/main/LICENSE` 404s all three — `p450`'s
+false-negative class, concentrated precisely in the institutional tier these shelves sell. 🟢
+Resolving the symref first makes the escalation unnecessary rather than merely survivable.
+
+### 🔵 Refused this week
+
+🔴 [`wisnuvb/tixam`](https://github.com/wisnuvb/tixam) (96★, Indonesian CBT) and
+[`almazary/new_elearning`](https://github.com/almazary/new_elearning) (70★, 94 forks, Indonesian
+LMS) — **no licence file at six candidate paths** at a pinned commit. Both out-rank rows that were
+accepted; popularity is not a grant.
+
+---
+
 ## 🆕 `p486` — `2026-10-27T18:45Z` — **the AI-native LMS arrives as a repository rather than a plugin, and it is MIT in a field where every incumbent it names is copyleft or closed**
 
 🔵 Discovery through the authenticated GitHub search channel; licences from

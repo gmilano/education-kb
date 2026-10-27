@@ -1,0 +1,14 @@
+slug	default_ref	commit_sha	file	http	bytes	sha256_12	family
+nothinx/naskah-id	refs/heads/main	e18d574c6b93	LICENSE	200	1162	5c491be0bcf8	MIT
+mannnrachman/cbt-man	refs/heads/main	ce816cf5700b	LICENSE	200	1069	5c3623f06e48	MIT
+wanrabbae/api-sekolah-indonesia	refs/heads/main	5d4bc92e6474	LICENSE	200	35149	3972dc9744f6	AGPL
+suryast/indonesia-gov-apis	refs/heads/main	f2751ecea8d2	LICENSE	200	1056	1126322e2cc8	MIT
+datawan-labs/schools	refs/heads/main	e617f9aa2ef5	LICENSE	200	1064	a39ea2c42685	MIT
+wisnuvb/tixam	refs/heads/master	b2ad8a536fc7	-	NO_LICENCE_FILE	-	-	NONE
+almazary/new_elearning	refs/heads/master	f774d65f52a5	-	NO_LICENCE_FILE	-	-	NONE
+elimu-ai/ml-storybook-reading-level	refs/heads/main	f0c98361f3cf	LICENSE	200	1065	6af12447a42c	MIT
+AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs	refs/heads/main	fbdd4da3307e	LICENSE	200	1069	3e7f788130f0	MIT
+BleeGleeWee/Voice-Based-Native-Language-Service-Agent-	refs/heads/main	e66303daed36	LICENSE	200	1074	6985a2229610	MIT
+francoisjacquet/rosariosis	refs/heads/mobile	fa5f4b66caf4	LICENSE	200	15214	d954e14e5c75	GPL
+openeducat/openeducat_erp	refs/heads/19.0	46a5d7d40082	LICENSE	200	8241	528f84036800	LGPL
+gmilano/fabricated-negative-control-p487	-	-	-	UNREACHABLE	-	-	-

@@ -4,6 +4,163 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27` — **🟢 `Gap 486-O` IS CLOSED BY A DECISION RATHER THAN DEFERRED AGAIN: this file carried **thirteen** `## Opportunities by region` headings against a contract demanding one, and the thirteenth was a *phantom* — `p486`'s own paragraph describing the breach was wrapped so that it began with `##`, creating the heading it was complaining about. 🔴 And the supply-side nil this base reported for twelve passes was a search qualifier nobody ran.**
+
+🔴 `make hooks` **DENIED** (`Code from External`) — **thirteen denials in thirteen passes**; the
+`p383` region gate still cannot execute, so the contract below was hand-evaluated against the file
+as it now stands.
+
+### 🟢 `Gap 486-O` closed — the count, the phantom, and the decision
+
+🔵 `p486` found `p383-region-heading-gate` had been **failing rather than silent**, hand-evaluated it
+at **11 `MULTIPLE-BLOCKS`**, and filed the conflict as *"a convention decision, not a patch"*.
+🟢 The decision is taken here, and it is the one `p473` and `p475` already took twice: **mark the
+superseded blocks and keep exactly one live.**
+
+| | before | after |
+|---|---|---|
+| live `## Opportunities by region` | 🔴 **12** | 🟢 **1** (this pass's, below) |
+| 🆕 **phantom heading** | 🔴 **1** | 🟢 **0** |
+| superseded, content retained in place | 14 | 🟢 **26** |
+
+🔴 **The phantom is the part worth keeping.** `p486` wrote a table row explaining the breach; the row
+wrapped, and the continuation line began with `` ## Opportunities by region` ``. 🔵 **A paragraph
+about the contract violated the contract**, and no reader could tell the difference because a
+heading-selecting compiler sees column 0 and nothing else. 🟢 Repaired in one line.
+
+🔵 **Why this is a decision and not a patch.** The append-only convention adds one regional block per
+pass; the `p383` contract demands one per file. 🟢 They are reconcilable only if *superseding* counts
+as retention — and it does: every superseded block keeps its full text in place, under a heading that
+says which pass replaced it. 🔴 **The cost is that this is now a per-pass chore that nothing
+enforces**, and the gate that would enforce it has not been permitted to run in thirteen passes.
+
+### 🔴 The supply denominators this file has quoted since `p475` are 7×–36× low
+
+🔵 `p475`'s per-language census is the instrument behind several "region is saturated" readings here.
+🔴 Its header claims name, description **and README**. Its numbers are name and description only —
+proved by exact reproduction: `educación` returns **17** under the narrow form, which is `p475`'s
+recorded value to the digit, and **434** with READMEs in scope.
+
+🔴 **Two `TRUE ZERO` verdicts — Hindi and Thai — are refuted.** 🟢 Arabic's nil **survives**, because
+`p486` re-ran it with READMEs in scope and still found zero education-AI agents: a diagnosed absence,
+which is worth more than either a silence or a false zero. Full table:
+[`language-census-reproduction`](../evidence/language-census-reproduction.2026-10-27-p487.tsv).
+
+🔵 **The commercial reading:** education software is written in the language of the ministry that
+buys it, so **the English-language corpus is structurally a minority of global supply** — and it is
+the only corpus most competitive research reads.
+
+### 🟡 Market size — the spread widened again, so the claims are printed and nothing is averaged
+
+🟡 Independent secondary sources reached this pass for **2026**: **US$3.7 B** (≈21 % CAGR to 2033),
+**US$6.4 B** 2025 base (≈31 % to 2034), **US$10.6 B** (40.9 % growth). 🔴 **A 2.9× spread on the
+same year.** 🔵 `p476` proved one widely-quoted series was arithmetically impossible and `p474` found
+four mutually incompatible vendor values; this pass adds nothing to settle it and declines to
+average. 🔴 Every figure here is **secondary**: `p478` established that the primary hosts are refused
+at this environment's egress allowlist, which is a boundary, not a diligence failure.
+
+🔴 **And the channel supplying these figures now has a scored accuracy record on this base: 0 for 2.**
+`p486` caught it at **2.7×** on a star count; `p487` caught it claiming `RosarioSIS` is *"MIT,
+Python"* when first-hand bytes say **GPL-2.0, PHP**. 🔵 Both errors point the same way — **toward
+permissive and toward popular** — which is the direction that costs a studio money.
+
+## Opportunities by region
+
+### North America
+
+🟡 **The governance gap is the engagement, and it is now quantified from two directions.** A 2026
+roundup reaching this pass puts **~10 % of institutions with formal AI guidelines** and **71 % of US
+teachers without AI training**, against NA holding the largest regional share of spend. 🔵 Adoption
+is outrunning both policy and training, and neither is a model problem.
+
+🟡 **Regulation stays fragmented and state-led** — Colorado and Texas with piecemeal requirements, no
+federal K-12 instrument (`p483-L` closed Canada the same way). 🔵 For a buyer this means the
+compliance artefact is **district- or state-shaped**, so the sellable unit is a policy-and-assurance
+layer that can be re-pointed per jurisdiction, not a single national conformity package.
+
+🟢 **Supply-side, first-hand:** the five permissive institution registries `p453` read first-hand
+(`collegedata-fyi`, `ipeds-database`, `scipeds`, `ipeds-scraper`, `genpeds` — all MIT) remain the
+strongest registry tier on this base, and `P487-1` is directly portable onto them.
+
+### EMEA
+
+🟡 **The money and the evaluation layer moved this pass, not the rulebook.** The UK's AI Adoption
+Summit committed **£200 m+** (£100 m expanding Bridge AI, £53 m regional), delivered through big-tech
+partners with **Skills England** owning the curriculum frame. 🟡 The European Commission updated its
+**ethical guidelines on AI in education** and signed **€25.4 m** in Advanced Digital Skills grants.
+🟡 The **Council of Europe** is working toward a **European evaluation framework for educational
+technologies**.
+
+🔵 **The evaluation framework is the commercially significant item.** A framework is a procurement
+gate; a gate is a service line, and it arrives before the Annex III deadline rather than after.
+
+🟢 **The dated obligations this base already holds stand unchanged:** Regulation (EU) 2026/1744 moves
+stand-alone high-risk education systems to **2 December 2027**, with Article 50 live since
+**2 August 2026** and a prohibition applying from **2 December 2026**. 🔴 Still not primary-source
+verified — EUR-Lex is refused at the gateway.
+
+🟢 **Supply:** `OpenOLAT` (Apache-2.0) remains the sovereign institutional answer; Algeria's
+`geoalgeria` (MIT, `p452`) remains the only non-European EMEA registry row.
+
+### APAC
+
+🟢 **This is where this pass's supply actually landed, and it landed through the language channel.**
+Indonesia supplied a complete **institution-registry tier** in one query —
+`suryast/indonesia-gov-apis` (MIT), `wanrabbae/api-sekolah-indonesia` (GPL-3.0),
+`datawan-labs/schools` (MIT) — plus two MIT agent rows. 🟢 India supplied the **first Hindi-channel
+row on this base**, a CPU-only voice agent, found by a query `p475` recorded as a true zero.
+
+🔴 **Indonesia's popular education software is largely ungranted:** `tixam` (96★) and
+`new_elearning` (70★, 94 forks) carry **no licence file at all**. 🔵 For an Indonesian engagement the
+practical constraint is not scarcity, it is **provenance**.
+
+🟡 **Regulatory divergence is the planning assumption, not a transitional state.** Vietnam has a
+dated binding high-risk obligation covering education; Singapore governs by mature guidance; China
+legislates against algorithmic misconduct; ASEAN's governance guide is early-stage. 🔴 **No single
+APAC compliance posture exists.**
+
+### LATAM
+
+🟡 **The sharpest number this base holds is still the gap, not the spend:** UNESCO IESALC / UNU-IAS,
+200 institutions across 19 countries — **87 % using AI, 26 % with a formal strategy**. 🔵 A 61-point
+gap says the regional demand is **governance**, and this base's supply shelves still carry almost no
+governance tooling.
+
+🟡 Market sizing for the region remains small and vendor-shaped — *"rest of Latin America"* at
+**US$18.2 M (2024) → US$36 M (2029), 12.1 % CAGR** — which is an order of magnitude below the
+regional enthusiasm, and the discrepancy is itself the sales argument: 🔵 **adoption is informal, so
+it does not appear as spend.**
+
+🟡 Regulation is a patchwork vulnerable to electoral turnover, with **Chile** the cited example of a
+roadmap that survived a change of administration.
+
+🔴 **An informed supply gap, stated rather than left silent: LATAM has no school-directory row on
+this base.** `portabilis/i-educar` (GPL-2.0, now pinned at `2.12` `435649b0474f`, **18 092 B ·
+8177f9751321**) is the deployed municipal system; `cortega26/chile-hub` (MIT) is a data hub.
+🔴 **Neither is a registry**, so `P487-1` — the one new recipe this pass that a ministry could buy —
+**cannot currently be sited in Latin America**. That is the single most actionable hole in this file.
+
+### Global
+
+🟢 **A licence-reading defect that crosses every region.** A whole-body licence classifier grades
+plain **GPL-3.0 as AGPL-3.0**, because GPL-3.0 §13 is *titled* *"Use with the GNU Affero General
+Public License"*. 🔴 On this base alone it would wrongly block a learner platform and a national
+school directory from any hosted deployment. 🔵 Since licence scanning is now a procurement gate in
+every region, **a studio's own compliance tooling is a source of false blockers**, and the remedy is
+a configuration change rather than a different component (`P487-2`).
+
+## 🔴 `p487` declared gaps — stated, because silence looks exactly like coverage
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 487-N`** | **`Gap 486-O` is closed for this file and the contract is still unenforced.** Nothing prevents `p488` from adding a fourteenth live block. The gate exists, has never been permitted to run, and the convention now depends entirely on each pass remembering a manual step. |
+| 🔴 **`Gap 487-O`** | **LATAM has no institution-registry row**, so the pass's strongest new recipe is unsitable in this base's home region. Probing whether Brazil's INEP/Censo Escolar or Mexico's SEP directories are packaged anywhere was **not attempted** this pass. |
+| 🟡 **`Gap 487-P`** | **Every demand-side figure above is secondary** and most are vendor-published. The 2.9× market spread is unresolved and `p476`'s arithmetic refutation shows at least one circulating series cannot be internally consistent. |
+| 🟡 **`Gap 487-Q`** | **The secondary channel's "errs permissive and popular" bias is two observations, not a measurement.** It is the right shape for a warning and far too thin for a finding; a designed comparison over a committed sample has never been run. |
+| 🟡 **`Gap 487-R`** | **The refuted language denominators were never re-swept.** Hindi and Thai are proved non-empty; the Korean (563), Turkish (162) and Chinese (411, floor only) corpora remain **counted and unread**, which is the same backlog `p486` showed pays. |
+
+---
+
 ## 🆕 `p486` — `2026-10-27` — **🟢 `Gap 485-Y` CLOSES AND IT MOVES THE EMEA MAP: the African nil was never supply, it was the ENGLISH LANGUAGE — one Swahili query returned a five-repository MIT platform. 🔴 And the market-size question is answered with a range this base should stop quoting as a number: vendor estimates for *agentic* education AI span **$2.1B to $27.2B** depending on who is counting.**
 
 🔵 Four web searches (global trends, North America, EMEA, APAC/LATAM) plus seven GitHub-channel
@@ -39,7 +196,7 @@ four controls are `P383-MULTIPLE-BLOCKS`, `P383-OUT-OF-VOCAB`, `P383-MISSING-REG
 | 🟡 **`Gap 486-N`** | **Mexico and Canada remain unmeasured at the federal level** for education-specific AI instruments, carried from `p484`. |
 | 🔴 **`Gap 486-O`** | **`p383-region-heading-gate` fails this file on hand-reading: 11 `MULTIPLE-BLOCKS`, ~13 `OUT-OF-VOCAB`, 6 `MISSING-REGION`.** The gate's one-block-per-file contract contradicts the append-only one-block-per-pass convention. `p486`'s own block is clean; the rest is a convention decision nobody has taken. |
 
-## Opportunities by region` blocks — one per retained pass — and the contract demands **exactly one per file** |
+`## Opportunities by region` blocks — one per retained pass — and the contract demands **exactly one per file** |
 | `P383-OUT-OF-VOCAB` | 🔴 **~13 findings** | `### Declared gaps` sits *after* the regions and *before* the next `##`, so the checker counts it as a child region. **10 of 12 blocks** have it |
 | `P383-MISSING-REGION` | 🔴 **6 findings** | six blocks carry no `### Global` |
 
@@ -88,7 +245,7 @@ two channels overlap.** 🔵 This is the first time this base has scored the sec
 its own primary reads, and it is a reason to treat the market figures above as a *range of claims*
 rather than a range of measurements.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -355,7 +512,7 @@ pass were re-confirmed through it: 36/36 exist**
 
 ---
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -526,7 +683,7 @@ primary-source verified (`Gap 483-K` carries forward untouched).
 
 ---
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -732,7 +889,7 @@ named `RejectionReason`s — in Apache-2.0 Java (see `repos/foundations.md`). "E
 the Annex III line item, and a permissively-licensed implementation of the oversight controls now exists to
 point at. That changes a FRIA engagement from a document exercise into a document-plus-architecture one.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -918,7 +1075,7 @@ classification is **case-by-case**, and Art. 27 requires a **Fundamental Rights 
 by the deployer — which is the school or university, not only the vendor. 🔵 That makes the FRIA a
 **deliverable a studio can sell**, independent of the 2027 date.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -1106,7 +1263,7 @@ the canonical operative text, a 3-row cluster shares a non-canonical rendering a
 grant.** 7 of the 13 grant exactly the canonical terms despite differing byte counts; 6 do not. Only reading the
 file distinguishes them, and `license.spdx_id` reports all 13 identically.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -1313,7 +1470,7 @@ projects adopt `ai-tutor`, while large product-shaped applications adopt product
 no licence. 🔴 And **31% of the population is unlicensed or unclassifiable**, which for a studio means a third of
 the apparent supply cannot be costed without a human reading a file.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -1459,7 +1616,7 @@ Palestine's 2025–2027 higher-education AI policy initiative). 🔴 The closed 
 under **EMEA**, alongside the European readings, and that single bucket now spans a binding statute (EU) and a
 measured **absence** of national law across most of the African markets named.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -1595,7 +1752,7 @@ use; 60 % of US teachers; 54 % of K-12 students; 92 % of university students; a 
 teachers for 2025. 🔴 Different instruments, different populations, different years — the direction is solid and
 no single percentage should be quoted from this shelf.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -1775,7 +1932,7 @@ writing the most education-AI *rules* (North America by volume, EMEA by force) a
 direction only — `Gap 476-R`'s objection applies and is repeated at `Gap 477-Z` below: a bill count and a
 repository count are not commensurable quantities and must not be ratioed.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -1999,7 +2156,7 @@ enterprise adoption and policy-to-programme conversion** as the binding constrai
 | 🟡 **`Gap 476-O`** | **Regional market splits do not reconcile.** NA at 36 %/$3.68B and Europe at $2.64B come from aggregators that name no compatible full-market base; 3.68 ÷ 0.36 implies a ~$10.2B global market, which is inside the cluster but matches no vendor's published base exactly. Treated as directional, not summed. |
 | 🟡 **`Gap 476-P`** | **`Gap 475-T` is half-closed.** The UNESCO IESALC figures are now attributed to their own study (200 institutions, 19 countries) rather than to secondary coverage, but it is still **one survey**, and the TALIS teacher figures `p475` juxtaposed with it remain a different instrument on a different population. |
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 
@@ -2096,7 +2253,7 @@ supply" — about the country with the largest school system on earth.
 *metadata carries a token*, at ≥5★. It is not a count of education software, not a count of quality,
 and not a count of a country's output — most non-Anglophone developers publish in English.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p487` (consolidated into the single current block above; content retained here and in `git log`)
 
 🔵 One canonical block, five children, written in the pass that measured the signals above.
 🔴 Supersedes the `p474` block, which is relabelled below.

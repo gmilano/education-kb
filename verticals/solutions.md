@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27` — **🔴 THE SECONDARY CHANNEL NAMED A PERMISSIVE SIS FOR THIS SHELF AND IT IS WRONG ON THE LICENCE *AND* THE LANGUAGE: `RosarioSIS` is **GPL-2.0 PHP**, not "MIT, Python". 🟢 This shelf's own carried value was right all along, and reproducing it exactly is the second time the web channel has been scored against first-hand reads — and the second time it has failed.**
+
+🔴 `make hooks` **DENIED** (`Code from External`), **thirteen in thirteen**. Licences below are read
+from bytes **at pinned commit SHAs**
+([`sha-pinned-licence`](../evidence/sha-pinned-licence.2026-10-27-p487.tsv)).
+
+### 🔴 The permissive-SIS question, asked again by an outside source, and answered the same way
+
+🔵 This shelf has hunted a permissively-licensed student information system for many passes.
+`p479` found **Fedena** declaring Apache-2.0 in a `NOTICE`; `p480` cloned it and found **Rails
+2.3.5**, no `Gemfile`, and a gem host that stopped existing in 2010. The answer has stood since:
+**no permissive, maintained, platform-scale SIS.**
+
+🟢 An independent search channel this pass proposed one anyway, and named it precisely:
+*"**RosarioSIS** is the clearest MIT-licensed match. It is a **Python** student information system
+… under MIT."*
+
+🔴 **Both halves are false, and they were checked rather than believed:**
+
+| claim | secondary channel | 🟢 first-hand, at pinned commit `fa5f4b66caf4` |
+|---|---|---|
+| licence | **MIT** | 🔴 **GPL-2.0** — title block `GNU GENERAL PUBLIC LICENSE / Version 2, June 1991`, `15 214 B · d954e14e5c75` |
+| language | **Python** | 🔴 **PHP** |
+| default ref | — | 🔴 **`mobile`** — a one-path probe at `/main/LICENSE` returns 404 |
+
+🟢 **This shelf already carried `RosarioSIS` as `GPL-2.0` at `mobile` `fa5f4b66caf4`, and the new
+reader reproduced that cell byte-for-byte.** 🔵 The shelf needed no correction; the outside claim
+did. **The permissive-SIS gap is not closed and `RosarioSIS` does not close it.**
+
+### 🔴 The secondary channel now has a scored record, and it is 0 for 2
+
+🔵 `p486` scored this channel for the first time: it reported `DeepTutor` at *"17 000 stars, licence
+not stated"* against a first-hand **45 572★ and Apache-2.0 from bytes** — an error of **2.7×**.
+
+🔴 `p487` scores it a second time, on a different axis, and it fails differently: **a licence
+inverted** (permissive claimed, copyleft served) **and an implementation language wrong**.
+
+🔵 **The two failures are not the same kind and that is the useful part.** A star count is a datum
+that goes stale. A licence is a datum that was never read — and the direction of the error is the
+dangerous one every time: **the channel errs toward permissive and toward popular.** 🔴 A studio
+sourcing its shelf from search results inherits a bias that always points at *"yes, you can build on
+this"*.
+
+### 🟢 `OpenEduCat` — the Odoo education vertical, re-read and confirmed
+
+🔵 The same channel named `OpenEduCat` as an LMS-plus-ERP under LGPLv3. 🟢 **That one is right**, and
+it reproduces this shelf's carried cell exactly: `19.0` `46a5d7d40082`, **`8 241 B · 528f840368`**,
+and the payload states its own election in prose — *"OpenEduCat is published under the GNU LESSER
+GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"*, with `p476`'s `or-later` election corroborated across
+187 of 209 source files.
+
+🔵 Worth stating plainly for an engagement: **LGPL-3.0 is the most permissive grant any
+platform-scale SIS/ERP on this shelf carries.** It permits linking a proprietary layer without
+infecting it, which is precisely what a studio building *on top* needs — and it is a materially
+different posture from the AGPL-3.0 and GPL-2.0 rows beside it.
+
+### 🔵 The shelf's copyleft posture, restated now that the classifier is sound
+
+🔴 A correction that matters more to this shelf than to any other: until this pass, a whole-body
+licence grep would have graded **every GPL-3.0 platform row as AGPL-3.0**, because GPL-3.0 §13 is
+titled *"Use with the GNU Affero General Public License"*.
+
+🟢 The distinction is the entire hosting decision:
+
+| grant | may a studio host it as a SaaS without publishing its own changes? |
+|---|---|
+| **MIT / Apache-2.0 / LGPL-3.0** | 🟢 yes |
+| **GPL-2.0 / GPL-3.0** | 🟢 **yes** — no network clause |
+| **AGPL-3.0** | 🔴 **no** — §13 triggers on network interaction |
+
+🔴 **So a mis-grade in that one direction converts a hostable platform into an unusable one**, and
+this shelf sells hosting posture more than it sells features. Full mechanism on
+[`agents/top.md`](../agents/top.md).
+
+### 🟢 Carried forward unchanged
+
+🔵 `mentingo` (MIT), `OpenOLAT` (Apache-2.0), `Sakai` (ECL-2.0), `uPortal`, `Tsugi`, `Moodle`,
+`ILIAS`, `H5P`, `Open edX`, `Canvas`, `Gibbon`, `Fedena`, `i-educar` and `openSIS` all stand as
+`p486` left them. 🔴 **`i-educar`'s byte cell is corrected** from `18 091 B` to **`18 092 B ·
+8177f9751321`** at pinned commit `435649b0474f` (ref `2.12`); its `GPL-2.0` grant is unchanged.
+
+### 🔴 Declared gaps — what this shelf still cannot say
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 487-K`** | **The permissive-SIS answer is now three passes old and rests on a nil.** `Fedena` is pre-modern, `RosarioSIS` is GPL-2.0, `openSIS` is copyleft. No pass has asked whether the right answer is *build the SIS layer* rather than *find it*, which would change what this shelf is for. |
+| 🟡 **`Gap 487-L`** | **`Gap 480-P` is untouched after seven passes** — nine of eleven platform rows have still never been cloned. `RosarioSIS` was licence-probed again this pass and **not** cloned, so its maintenance posture is as unmeasured as `Fedena`'s was before `p480` killed it. |
+| 🟡 **`Gap 487-M`** | **The secondary channel's error direction is a hypothesis on two observations.** "Errs toward permissive and popular" is the right shape for a warning and far too thin for a finding; it needs a designed comparison over a committed sample, which no pass has run. |
+
+---
+
 ## 🆕 `p486` — `2026-10-27` — **🟢 THIS SHELF HAS CARRIED NINE PLATFORMS AND NOT ONE OF THEM WAS RELICENSABLE. `Selleo/mentingo` is **MIT**, verified from bytes, and it names six of this shelf's own incumbents as what it replaces. 🔴 And a fingerprint this shelf recorded one hour ago does not reproduce — the word verdict does.**
 
 🔵 Licence figures are **bytes fetched this pass**. Evidence:

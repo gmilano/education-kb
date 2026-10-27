@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p487` — `2026-10-27T19:55Z` — **the in-language lever `p486` found pays twice more, in Hindi and Indonesian — and the reason those channels read as empty for twelve passes is not language at all, it is a qualifier that `p475` wrote down and never ran**
+
+🔵 Discovery through the **authenticated GitHub search channel**; every licence then read from
+`raw.githubusercontent.com` **at a resolved commit SHA**. Evidence:
+[`sha-pinned-licence`](../evidence/sha-pinned-licence.2026-10-27-p487.tsv),
+[`language-census-reproduction`](../evidence/language-census-reproduction.2026-10-27-p487.tsv),
+[`gnu-title-anchor`](../evidence/gnu-title-anchor.2026-10-27-p487.tsv).
+
+### 🔴 `p475`'s language census says it searched READMEs. It did not.
+
+🔵 `p475` published a per-language supply census that this base has quoted ever since, with a header
+line reading *"repositories whose **name/description/readme** metadata carries the token"*. 🔴 Its
+numbers are **name and description only**, and the proof is an exact reproduction:
+
+| token | language | `p475` recorded | 🟢 `in:name,description` | 🔴 `+readme` | factor |
+|---|---|---|---|---|---|
+| `educación` | Spanish · LATAM | **17** | 🟢 **17** — *exact* | 🔴 **434** | **25.5×** |
+| `pendidikan` | Indonesian · APAC | 8 | 6 | 🔴 **214** | **35.7×** |
+| `교육` | Korean · APAC | 47 | — | 🔴 **563** | **12.0×** |
+| `giáo dục` | Vietnamese · APAC | 5 | — | 🔴 **86** | **17.2×** |
+| `شيء` → `تعليم` | Arabic · EMEA | 4 | — | 28 | 7.0× |
+| `शिक्षा` | Hindi · APAC | 🔴 **TRUE ZERO** | — | 🔴 **3** | — |
+| `การศึกษา` | Thai · APAC | 🔴 **TRUE ZERO** | — | 🔴 **9** | — |
+
+🟢 **`educación` reproduces at exactly 17 under the narrower form.** That is not a near match or a
+churn artefact — it is the recorded value, which identifies the executed query beyond argument.
+
+🔴 **Two `TRUE ZERO` verdicts are refuted.** Hindi and Thai are not empty corpora; they were never
+searched where the text lives. 🔵 And **every per-language denominator this base has published since
+`p475` is between 7× and 36× low**, which matters because four later passes used those denominators
+to call regions saturated.
+
+### 🟢 The control that could have refuted `p486` — and did not
+
+🔵 `p486` concluded the African nil *"was never a supply problem — the instrument was the English
+language"*. 🔴 But `p486` ran its Swahili leg **with** `readme` in scope while the nils it was
+arguing against were run **without** it. Two variables moved at once, so the conclusion was
+unearned as stated.
+
+🟢 **Separated this pass, and `p486` is right:** `elimu in:name,description stars:>3` — the *narrow*
+form, no README — returns **14 hits with `elimu-ai/webapp` as result #1**. 🟢 `elimu-ai` was
+reachable all along at the same qualifier that returned nothing in English. **Language was doing the
+work.** 🔵 The README defect is a second, independent fault that was hiding behind it.
+
+### 🟢 New this week — four rows, every licence at a pinned commit
+
+| repo | ★ | licence @ pinned commit | region | note |
+|---|---|---|---|---|
+| [nothinx/naskah-id](https://github.com/nothinx/naskah-id) | **84** | 🟢 MIT · 1 162 B @ `e18d574c6b93` | APAC · Indonesia | **Six days old, 16 forks.** Academic-writing agent gated on **EYD V orthography and the KBBI dictionary** — pedagogy as a national language standard, which is a shape no English-channel row here has. |
+| [mannnrachman/cbt-man](https://github.com/mannnrachman/cbt-man) | 11 | 🟢 MIT · 1 069 B @ `ce816cf5700b` | APAC · Indonesia | Computer-based testing on TanStack/React/Prisma/SQLite. **The only CBT repository found this pass carrying a grant at all.** |
+| [AMAN6921/SikhshaBox](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 13 | 🟢 MIT · 1 069 B @ `fbdd4da3307e` | APAC · India | Per-student isolated lab VMs + automated code feedback. *Affordable* is in the repository name — a constraint, not a tagline. |
+| [BleeGleeWee/Voice-Based-Native-Language-Service-Agent-](https://github.com/BleeGleeWee/Voice-Based-Native-Language-Service-Agent-) | 6 | 🟢 MIT · 1 074 B @ `e66303daed36` | APAC · India | 🟢 **First Hindi-channel row on this base.** LangGraph + Groq Llama-3 + EdgeTTS, **CPU-only, no GPU** — found by the query `p475` called a true zero. |
+
+🔴 **Refused, and both out-rank three rows that were accepted:**
+[`wisnuvb/tixam`](https://github.com/wisnuvb/tixam) (**96★**) and
+[`almazary/new_elearning`](https://github.com/almazary/new_elearning) (**70★**, 94 forks) carry **no
+licence file at six candidate paths** at a pinned commit. 🔵 Indonesia's CBT and LMS supply is real
+and mostly ungranted.
+
+### 🔴 The licence reader that nearly shipped two wrong verdicts
+
+🔴 This pass's own first instrument graded `i-educar` **LGPL** and `lumen` **AGPL** — both wrong,
+both caught by controls before publication. 🔵 The cause is the rule `p450` prescribed: test
+`gnu lesser` before `gnu general public`. GPL-2.0's **preamble** names the Lesser GPL and GPL-3.0's
+**§13** names the Affero GPL, so a whole-body grep cannot grade the GNU family at all. 🟢 Fixed by
+anchoring on the **title block** — `p455`'s anchor, reused for the family question for the first
+time. Full write-up on [`agents/top.md`](top.md).
+
+🟢 **A canonical GPL-3.0 reference falls out of it:** `35 149 B · 3972dc9744f6`, byte-identical
+across `ahmedEid1/lumen` (Egypt) and `wanrabbae/api-sekolah-indonesia` (Indonesia).
+
+---
+
 ## 🆕 `p486` — `2026-10-27T18:45Z` — **Africa stops being dark and the cause was never supply: it was the ENGLISH LANGUAGE. One Swahili word surfaced a five-repository MIT platform that every prior English query on this base missed. 🔴 And the secondary channel this base distrusts on principle is now measured wrong by 2.7× on the leader.**
 
 🔵 Discovery ran through the **authenticated GitHub search channel**, with every licence claim then
