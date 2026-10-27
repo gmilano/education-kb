@@ -1,0 +1,27 @@
+# p468 first-hand grant reads, 2026-10-27. Probe: HEAD via `git ls-remote`; payload via
+# raw.<forge>/<repo>/<HEAD>/<path> written TO A FILE and measured from the file (Gap 468-A:
+# never measure a payload through a shell variable -- $(curl ...) strips trailing newlines and
+# reproduces p465's -1-byte defect). curl -sI on github.com is NOT used: 403 for real and
+# fabricated addresses alike, re-confirmed this pass.
+forge	repo	head12	path	bytes	sha256_12	grant	grant_class	status
+github	HKUDS/DeepTutor	a31d82624c27	LICENSE	11408	cd2f54e1e506	Apache-2.0	PERMISSIVE	control-reproduced-p467
+github	GarethManning/education-agent-skills	135d6275e7db	LICENSE	1230	f952182df4eb	CC-BY-SA	CONTENT_NOT_SOFTWARE	control-reproduced-p467
+github	canyongbs/advisingapp	c79803f21cb8	LICENSE	3860	48255018b41f	Elastic-2.0	UNSELLABLE	control-reproduced-p467
+github	xiaoyang111222/cn-math-taxonomy	cf262d886821	LICENSE	19347	41003d4a7474	CC-BY-NC	UNSELLABLE	control-reproduced-p467
+github	CaviraOSS/PageLM	a6646794661b	LICENSE.md	8563	c834209c5f33	PageLM-Community-License	UNSELLABLE	control-reproduced-p467
+github	falkenslab/miyagi	d8849a82e9ea	LICENSE	1078	d0a329112827	MIT	PERMISSIVE	control-added-p468
+github	av-leschinskiy/moodle-mcp	69c36847e7ad	LICENSE	1078	67b516c28e67	MIT	PERMISSIVE	control-added-p468
+github	Selleo/mentingo	e137ca47cbec	LICENSE	1062	ceb97717de1f	MIT	PERMISSIVE	re-read
+github	learningequality/kolibri	f72936bd41e5	LICENSE	1097	3c056b34a476	MIT	PERMISSIVE	re-read
+github	jcputney/scorm-again	86ab328f0e5b	LICENSE	1072	383b85b370e8	MIT	PERMISSIVE	re-read
+github	DilawarShafiq/nietzschian-debugger	94e452d3fc83	LICENSE	1071	a7055a6d5672	MIT	PERMISSIVE	novel-shelved
+github	StudentSuite/awesome-student-resources	602df143c5a9	LICENSE	1069	537c697c69a5	MIT	PERMISSIVE	novel-shelved-lineage-pair
+github	StudentSuite/awesome-study-resources	74d5a7bbf17b	LICENSE	1069	537c697c69a5	MIT	PERMISSIVE	novel-shelved-lineage-pair
+gitlab	ai-swarm-solutions-group/OpenTeacherAgent	59a33fecff73	LICENSE	34523	0d96a4ff68ad	AGPL-3.0-or-later	NETWORK_COPYLEFT	novel-shelved
+github	walkinglabs/modern-llm-notebook	03715769cb94	LICENSE	425	d65ff2212f3e	CC-BY-NC-SA-4.0	UNSELLABLE	novel-refused
+github	rudra496/StealthHumanizer	c727cd6774f7	LICENSE	1074	8967efcf60c6	MIT	PERMISSIVE	novel-refused-adversarial
+github	fabianastudillo/cafe-con-prompts	7ac77c6574a0	LICENSE	751	c7a4fd88d164	CC-Atribucion-es	CONTENT_NOT_SOFTWARE	novel-cited-not-vendored
+github	mdakram2001/AMU-Utilities	cb8b178ef9f8	-	0	-	none-at-10-paths	NO_GRANT	novel-refused
+github	s-caserta99/DocuQuery_MCP	85523c2f8252	-	0	-	none-at-10-paths	NO_GRANT	novel-refused
+github	leonine1983/aprendix	7df5ee4c76d6	-	0	-	none-at-10-paths	NO_GRANT	novel-refused
+gitlab	aj-group4860936/EduAgent	93d406dbaf8a	-	0	-	none-at-4-paths	NO_GRANT	novel-refused

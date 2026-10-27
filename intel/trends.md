@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p468` — **🟢 Four trends, each with a denominator measured this pass: (1) discovery vocabulary, not supply, is what was exhausted — 14.1 % novel in English against 80.0 % in Spanish and Portuguese; (2) automated assessment is the regulated surface in three regions under four instruments; (3) detection EVASION is a permissively licensed, actively maintained market segment; (4) LATAM adoption has outrun LATAM governance by 61 points.**
+
+### 🟢 Trend 1 — Apparent saturation is a language artifact, and the correction buys visibility rather than supply
+
+🔵 **Measured at n = 79** distinct addresses across five discovery legs this pass.
+
+| query language | graded | novel by address | novel rate | usable build-on yield |
+|---|---|---|---|---|
+| English (3 legs) | 64 | 9 | **14.1 %** | 3 |
+| Spanish + Portuguese (2 legs) | 15 | 12 | **80.0 %** | **0** |
+
+🔴 Six consecutive passes published *"usable novel yield ZERO"* from English-only legs and
+attributed it to an exhausted supply. **A 5.7× difference in novel-by-address rate comes from the
+query language alone.** 🟢 But the second column is the one that governs a decision: the twelve
+non-English novel addresses are a doctoral thesis site, three teacher-training project pages from
+one account, a survey's supplementary material, an essay, a prompt library and two pieces of
+software — one of which serves no grant.
+
+🔵 **The generalisable claim:** non-English discovery reveals that LATAM and Spanish-language
+education work exists in volume and is **predominantly academic output rather than shipped
+software**. That is a finding about the regional ecosystem, not about the search index.
+
+### 🔴 Trend 2 — Automated assessment is the regulated surface, in three regions, under four instruments
+
+| jurisdiction | instrument | what it names |
+|---|---|---|
+| EU | AI Act, Annex III | admissions, student evaluation — high-risk |
+| Vietnam | AI Law | automated assessment, behavioural monitoring — high-risk |
+| US (Oklahoma, Maryland) | state law | AI barred from high-stakes decisions about students; human oversight required |
+| US (New York City) | DoE guidance | AI barred from grading, discipline, IEP development |
+
+🟢 Four instruments written independently converge on the **same feature**. 🔵 The design
+consequence is concrete and should be read as a constraint on every recipe in
+[`compose/patterns.md`](../compose/patterns.md): **a grading or placement feature is the part of
+an education build that attracts an obligation.** Products that assist a human assessor carry a
+materially lighter burden than products that decide, in every one of the four.
+
+### 🔴 Trend 3 — Detection evasion is a permissively licensed market segment, not a fringe
+
+🔵 **n = 1 this pass and named as such**, but the row is unambiguous:
+[`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) — **189★**, **MIT**
+(1 074 B · `8967efcf60c6` @ `c727cd6774f7`, read first-hand), 16+ languages, actively pushed
+(last push 2026-10-26), stated purpose defeating Turnitin and GPTZero.
+
+🔴 Two things follow. **For sourcing:** a permissive grant is not a shelving criterion — this row
+passes every licence screen this base owns and is refused on purpose. **For positioning:** any
+assessment-integrity product sold to an education client competes with free, MIT-licensed,
+maintained tooling built to defeat it, and a proposal that does not say so is selling a
+detector whose counter-tool the client's students can install in a minute.
+
+🔵 `nietzschian-debugger` (153★, MIT) is the inverse shape on the same shelf: pedagogy that
+withholds the answer. 🟢 **The design answer to evasion is assessment that evasion does not
+help with**, and that is a product thesis, not a detection arms race.
+
+### 🟢 Trend 4 — LATAM adoption has outrun LATAM governance by 61 points
+
+🔵 UNESCO IESALC with UNU-IAS, **200 institutions across 19 countries**: **87 %** use AI in at
+least one area of activity; **26 %** have a formal AI strategy. Adoption is driven by individual
+academics, researchers and students rather than institutional programmes.
+
+🟢 This is the inverse of the North American picture, where 35+ state education departments
+published guidance and districts are working to dated policy deadlines. **LATAM institutions
+adopted first and are governing second; North American institutions are governing first.**
+
+🔵 For a studio the two require different first engagements: NA buys **policy-to-control
+translation**; LATAM buys **discovery and inventory** — finding where AI is already in use before
+any policy can be written against it. 🔴 And `p467`'s supply-side measurement sharpens the
+contrast: LATAM is **one row in 103** of visible education supply, so the region with the
+highest institutional adoption has the least shippable open source behind it.
+
+### 🟡 Declared gaps — stated so silence is not mistaken for coverage
+
+- 🔴 The **Digital Omnibus** remains unresolved on this channel for a fourteenth month. Every
+  encoded EU AI Act deadline in the carried obligation-tooling tier is ungradeable.
+- 🔴 **Vietnam's education compliance date is carried in conflict** (2027-03-01 vs 2027-09-01).
+  Neither was read from a primary text.
+- 🔴 **No primary statute was read by this pass.** Every regulatory figure above is relayed.
+- 🔴 **Trend 3 rests on n = 1.** It is published because the row is unambiguous, not because the
+  segment is measured.
+- 🔴 **Canada and Mexico returned nothing** on the North America leg; **Africa returned nothing**
+  on the EMEA leg. `Gap 463-D` closed African supply at 61 repositories with a maximum of 12★;
+  the *policy* side of Africa remains unmeasured by this base.
+
+---
+
 ## 🆕 `p467` — **🟢 Four trends, each with a denominator and each measured this pass: (1) the licence screen the whole industry uses — stars plus "has a LICENSE" — carries ZERO information about whether software can be delivered; (2) permissive grant TEXT is now being used as cover for restrictive terms; (3) the grant is migrating from the repository to the ASSET; (4) visible education supply is 21 % APAC, 1 % LATAM.**
 
 ### 🔴 Trend 1 — The industry's default licence screen is uninformative, and now it is measured

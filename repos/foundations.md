@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p468` — **🟢 `Gap 467-D` CLOSES on this shelf too, and the way it closes is the lesson: the dead channel was `curl`, not the data. 🔴 And the pass's most-starred novel foundation candidate is a 272★ LLM-architecture course under `CC-BY-NC-SA-4.0` — a NonCommercial grant on exactly the asset a corporate-upskilling engagement would reach for first.**
+
+### 🟢 Foundation-tier controls, re-read first-hand at `HEAD`
+
+🔵 Every figure below was read today with the file-backed probe (`Gap 468-A`): the payload is
+written to disk and the file is measured. Nothing is counted through a shell variable.
+
+| foundation | grant · bytes · `sha256₁₂` | HEAD | vs `p467` |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · 11 408 B · `cd2f54e1e506` | `a31d82624c27` | 🟢 identical |
+| [`av-leschinskiy/moodle-mcp`](https://github.com/av-leschinskiy/moodle-mcp) | MIT · 1 078 B · `67b516c28e67` | `69c36847e7ad` | 🟢 identical |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | MIT · 1 078 B · `d0a329112827` | `d8849a82e9ea` | 🟢 identical |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 `CC-BY-NC` · 19 347 B · `41003d4a7474` | `cf262d886821` | 🟢 identical — and still unusable in a paid engagement |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 bespoke · 8 563 B · `c834209c5f33` | `a6646794661b` | 🟢 identical |
+
+### 🔴 Candidate foundations refused this pass
+
+| candidate | ★ | grant · bytes · `sha256₁₂` @ HEAD | why it is not a foundation |
+|---|---|---|---|
+| [`walkinglabs/modern-llm-notebook`](https://github.com/walkinglabs/modern-llm-notebook) | 272 | 🔴 `CC-BY-NC-SA-4.0` · 425 B · `d65ff2212f3e` @ `03715769cb94` | 🔴 `UNSELLABLE`. A hands-on course on modern LLM architectures, training and inference — the obvious spine for a paid upskilling curriculum, and **NonCommercial forbids exactly that**. ShareAlike compounds it: derived course material would have to carry the same grant |
+| [`mdakram2001/AMU-Utilities`](https://github.com/mdakram2001/AMU-Utilities) | 0 | 🔴 **NO GRANT** at 10 root paths @ `cb8b178ef9f8` | University SIS MCP server (Aligarh Muslim University, India). No grant, no foundation |
+| [`s-caserta99/DocuQuery_MCP`](https://github.com/s-caserta99/DocuQuery_MCP) | 0 | 🔴 **NO GRANT** at 10 root paths @ `85523c2f8252` | Literature-Q&A MCP server for researchers |
+| [`leonine1983/aprendix`](https://github.com/leonine1983/aprendix) | 0 | 🔴 **NO GRANT** at 10 root paths @ `7df5ee4c76d6` | Brazilian school-management system with AI dropout support. 🔴 The right LATAM product shape, nothing to build on |
+
+### 🟢 Added to the index tier
+
+| repo | grant · bytes · `sha256₁₂` @ HEAD | what it is good for |
+|---|---|---|
+| [`StudentSuite/awesome-student-resources`](https://github.com/StudentSuite/awesome-student-resources) | MIT · 1 069 B · `537c697c69a5` @ `602df143c5a9` | IB / IGCSE / SAT tool index — a **catalogue input** for a market-scan deliverable, not a codebase |
+| [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) | MIT · 1 069 B · `537c697c69a5` @ `74d5a7bbf17b` | 🟡 Exam-prep index with free / freemium / paid / open-source tags. **Byte-identical grant payload to the row above** — two repositories, one grant |
+
+### 🔵 Measurement note carried from `Gap 468-A`
+
+🔴 This pass's first probe read `falkenslab/miyagi` at 1 077 B and a different digest. The cause is
+the `$(curl …)` idiom, whose command substitution strips trailing newlines — **every payload read
+that way is short by its trailing-newline count**. This is `p465`'s −1-byte defect, reproduced
+independently, and the correct statement of it is about the idiom rather than about a script. The
+file-backed reader reproduces all five controls above exactly.
+
+---
+
 ## 🆕 `p467` — **🟢 `Gap 466-C` IS CLOSED IN THE STRONG FORM: the size screen is not merely replaced, it is GONE — no verdict in this pass's reader branches on payload bytes, and 41/41 controls hold without them. 🔴 And the re-grade the gap prescribed found that the base's own standing reader carries a defect the size screen was hiding: it returns `MIT` for a payload that recites MIT and then forbids commercial use.**
 
 ### 🟢 What the gap asked for, and what was actually built

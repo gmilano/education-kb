@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p468` — **🟢 THE SINGLE MOST ACTIONABLE NUMBER THIS FILE HAS CARRIED FOR LATAM, AND IT IS A PRIMARY SOURCE: UNESCO IESALC and UNU-IAS surveyed 200 institutions in 19 countries and found 87 % using AI in at least one area while 26 % have a formal AI strategy. 🔴 That 61-point gap says the regional demand is GOVERNANCE, not another tutor — and this base's own supply shelves carry almost no governance tooling. 🟢 And three of four regions returned at least one hard dated obligation this pass, which is the first time all four legs produced something a contract can be written against.**
+
+🔵 **Reads 2026-10-27.** Region legs run as the ingest brief prescribes —
+`AI education {region} 2026 adoption regulation players`, once per region — plus the global
+trends leg. Figures relayed from secondary sources are marked; nothing below was read from a
+primary statute by this pass.
+
+### 🔴 The region legs, each with what it returned
+
+| region | new this pass | carried already |
+|---|---|---|
+| North America | 🟢 Four dated obligations (below) | 🔴 The `134 bills / 31 states` figure `p466` RETIRED came back **again** as a top result. It stays retired: no tracker publishing it names its inclusion rule |
+| EMEA | 🟢 An enforcement date and an unresolved amendment that directly re-grades a carried tier | The Commission's ethical guidelines for educators |
+| APAC | 🟢 Two national AI laws with education named, and a **date conflict** worth carrying | Ipsos Education Monitor 2026 ban-support spread |
+| LATAM | 🟢 **The UNESCO IESALC 87 % / 26 % split** — the strongest primary-ish figure on this file | Chile / Brazil ILIA ranking |
+
+### 🟢 Dated obligations, by region — the part a statement of work can cite
+
+| region | obligation | date | source quality |
+|---|---|---|---|
+| North America | Amended federal **COPPA** rule general compliance date | **2026-04-22** | 🟢 widely reported, dated |
+| North America | Federal Department of Education **AI grant-priority rule** finalised | **2026-04-13** | 🟡 relayed |
+| North America | **Ohio** — covered districts must have adopted an AI policy | **2026-07-01** | 🟡 relayed |
+| North America | **Oklahoma, Maryland** — human oversight required; AI barred from high-stakes decisions about students | in force | 🟡 relayed |
+| EMEA | **EU AI Act** — AI Office and national authorities begin enforcement | **2026-08-02** | 🟡 relayed |
+| EMEA | 🔴 **Digital Omnibus** would push high-risk obligations to **2027-12** / **2028-08** — sources disagree on whether it is adopted or still proposed | unresolved | 🔴 **conflicting** |
+| APAC | **South Korea AI Basic Act** in force — the region's most binding general AI law | **2026-01-22** | 🟡 relayed |
+| APAC | 🔴 **Vietnam AI Law** names education (automated assessment, behavioural monitoring) among six high-risk sectors. Compliance **2027-03-01** per one source, **2027-09-01** for education per another | 🔴 **conflicting** | 🔴 carry both until a primary text is read |
+| LATAM | **UNESCO Observatory on AI in Education for LAC** launched | **2026-04-14** | 🟢 UNESCO |
+
+🔴 **The EMEA row re-grades a carried tier.** [`agents/top.md`](../agents/top.md) carries an
+*"EU AI Act obligation-tooling tier, graded by whether its encoded deadline survives the Digital
+Omnibus"* (`p437`). The channel still cannot resolve the Omnibus, so **every encoded 2026 deadline
+in that tier remains ungradeable** — and that is now a fourteen-month-old open question, not a
+footnote. Any EMEA engagement quoting an AI Act date must quote both.
+
+### 🟢 Education-specific high-risk classification — the cross-region pattern worth naming
+
+🟢 Three jurisdictions now name **education** as a high-risk or specially regulated use of AI
+rather than leaving it to general data-protection law: the **EU** (admissions and student
+evaluation, Annex III), **Vietnam** (automated assessment and behavioural monitoring), and
+**US states** individually (Oklahoma and Maryland barring AI from high-stakes student decisions;
+NYC's traffic-light guidance barring AI from grading, discipline and IEP development).
+
+🔵 For Globant the convergence matters more than any single rule: **automated assessment is the
+regulated surface in every one of them.** A grading or placement feature is the part of an
+education engagement that attracts an obligation, in three regions, under four different legal
+instruments.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Policy-to-control translation.** 35+ state education departments have published AI guidance
+and districts must adopt policies against dated deadlines (Ohio, 2026-07-01). The gap is between
+a published policy and an enforceable control in the LMS. 🟢 Buildable on permissive supply:
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, verified this pass) for
+the interop layer, an LMS MCP connector from the carried tier for the system of record.
+🔴 **Hard constraint:** NYC-style guidance bars AI from grading, discipline and IEP development,
+so the sellable product is an **audit and oversight layer**, not an autonomous grader.
+
+🔴 **Declared supply gap:** zero novel North American build-on rows this pass.
+
+### EMEA
+
+🟡 **AI Act readiness for education providers, quoted with both deadline scenarios.** Enforcement
+began 2026-08-02; the Digital Omnibus may move high-risk obligations to 2027-12 / 2028-08 and the
+channel cannot resolve it. 🟢 The commercially honest offer is a **readiness assessment that
+prices both timelines**, because a client told only the later date and then held to the earlier
+one has been mis-advised.
+
+🟢 **Self-hosted institutional delivery is the region's natural fit.** National funding is
+directed at public systems (Denmark's €200M AI strategy including education; France's AI for
+Humanity; the Netherlands' national AI strategy), and the platform supply is overwhelmingly
+AGPL — which suits a self-hosted ministry buyer and is wrong for multi-tenant SaaS.
+[`ai-swarm-solutions-group/OpenTeacherAgent`](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent)
+(AGPL-3.0, verified this pass) is the new row here; `Selleo/mentingo` (MIT, verified) is the
+permissive alternative when the buyer needs SaaS.
+
+🔴 **Declared supply gap:** zero novel EMEA build-on rows this pass. Every EMEA address the legs
+returned — Finland (`sisu-mcp`), Bosnia (`ibu-mcp`), Germany (`arsnova-server`), Poland
+(`mentingo`) — was already carried.
+
+### APAC
+
+🟢 **Assessment compliance tooling, with Vietnam as the forcing function.** Vietnam's AI Law names
+automated assessment and behavioural monitoring as high-risk; South Korea's AI Basic Act has been
+in force since 2026-01-22. 🟢 The regional buyer most likely to pay is a **university or national
+system that has already deployed automated assessment and now needs it documented.**
+
+🟡 **Public opinion is the most favourable of any region.** Ipsos Education Monitor 2026: support
+for *banning* AI in schools runs 23 % (Indonesia) to 31 % (South Korea), with Australia and New
+Zealand the exception. 🔵 That is permission to deploy, not evidence of outcomes.
+
+🔴 **The richest APAC curriculum data cannot be sold.** `xiaoyang111222/cn-math-taxonomy`
+(4 029★, 1 644 topics, 2 403 prerequisite edges) is `CC-BY-NC` — verified again this pass.
+Any China-adjacent curriculum product must source its graph elsewhere.
+
+🔴 **Declared supply gap:** APAC's only novel address this pass,
+[`mdakram2001/AMU-Utilities`](https://github.com/mdakram2001/AMU-Utilities) (India), serves **no
+grant at ten root paths**.
+
+### LATAM
+
+🟢 **Institutional AI governance — and this is the region's clearest opportunity on any pass.**
+UNESCO IESALC / UNU-IAS, 200 institutions across 19 countries: **87 % use AI in at least one
+area; 26 % have a formal AI strategy.** Adoption is driven by individual academics and students
+rather than institutions. 🟢 The product that follows is not a tutor: it is **institutional AI
+governance as a delivered system** — an inventory of where AI is already in use, a policy
+baseline, and the controls that make the policy checkable. The 61-point gap is the addressable
+market, and it is already warm because the adoption happened first.
+
+🟢 **The regulatory ground is firming, unevenly.** Uruguay is the first LATAM country to sign the
+Council of Europe AI Framework Convention; Colombia adopted CONPES 4144; Peru's law is in force;
+Mexico's federal bill sits in the Senate. UNESCO's LAC Observatory (2026-04-14) and the
+Tec de Monterrey–UNESCO agreement give an engagement credible local anchors.
+
+🔴 **Declared supply gap, and it is the sharpest one on this file.** The Spanish and Portuguese
+discovery legs were the most productive of the pass by novel addresses (12 of 15) and returned
+**zero** build-on rows. [`leonine1983/aprendix`](https://github.com/leonine1983/aprendix) — a
+Brazilian school-management system with AI dropout support, the exact regional product shape —
+serves **no grant at ten root paths**.
+[`fabianastudillo/cafe-con-prompts`](https://github.com/fabianastudillo/cafe-con-prompts)
+(Ecuador) is usable **as content under attribution**, not as software. 🔵 The operational
+consequence: **a LATAM engagement is a build, not an assembly**, and should be priced that way.
+
+### Global
+
+🟢 **Study tooling is migrating from applications to agent skills.**
+[`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) is at **36 192★** —
+the largest figure these shelves have ever carried — and it is a converter, not a product.
+
+🔴 **Counter-signal, stated because it is also the market.**
+[`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) (189★, MIT, verified
+this pass) exists to defeat Turnitin and GPTZero. Detection-evasion is a funded, permissively
+licensed, actively maintained segment of education AI, and any assessment-integrity product
+Globant sells is competing against it.
+
+---
+
 ## 🆕 `p467` — **🔴 ALL FOUR REGION LEGS RETURNED MATERIAL THIS BASE ALREADY CARRIES — four for four, declared rather than padded. 🟢 And the North America leg returned, unprompted, the exact figure `p466` RETIRED: "134 bills / 31 states" came back as the top result, which makes it the dominant relayed number in the channel and confirms the retirement was the load-bearing decision, not a footnote. 🟢 The one NEW measurement on this file is a SUPPLY-side region distribution: LATAM is one row in 103.**
 
 🔵 **Reads 2026-10-26 → 2026-10-27.** Region legs run exactly as the ingest brief prescribes:

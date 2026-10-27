@@ -4,6 +4,151 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p468` — **🟢 `Gap 467-D` IS CLOSED, AND IT WAS NEVER A NETWORK PROBLEM: `api.github.com` is 403 from this host and `repos.ecosyste.ms` is unreachable — both re-confirmed today — but this session's own GitHub tool channel serves `stargazers_count`, so the star axis is two-channel for the first time in 468 passes. 🔴 And the saturation this base has published for six passes is REFUTED AS STATED: the discovery channel is not exhausted, its VOCABULARY is. One Spanish-language leg returned 9 addresses in 12 that these shelves have never carried, against 9 in 64 across three English legs — a 5.7× difference from the query language alone. 🔵 The catch, stated with the claim: the non-English legs' usable build-on yield is still ZERO.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED** (`Code from External`)
+before any gate body ran — **fifteen denials in sixteen passes**. 🔵 **Nothing below is
+gate-attested.** The checks were re-implemented in this session's own code and are green:
+frontmatter keys and closed-vocabulary `region` on all eight shelves; every new table checked for
+separator presence and pipe-count consistency, with **no header row published as data**;
+append-only proved on both trending shelves by prior-body containment; every address below
+re-resolved first-hand this pass.
+
+### 🟢 Seven cross-pass controls, reproduced HEAD-, byte- AND digest-identical to `p467`
+
+| control | grant · bytes · `sha256₁₂` | HEAD | vs `p467` |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · 11 408 B · `cd2f54e1e506` | `a31d82624c27` | 🟢 identical on all four axes |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `CC-BY-SA` · 1 230 B · `f952182df4eb` | `135d6275e7db` | 🟢 identical |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `Elastic-2.0` · 3 860 B · `48255018b41f` | `c79803f21cb8` | 🟢 identical |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `CC-BY-NC` · 19 347 B · `41003d4a7474` | `cf262d886821` | 🟢 identical |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 bespoke `PageLM Community License` · 8 563 B · `c834209c5f33` | `a6646794661b` | 🟢 identical — `Gap 467-A`'s counter-example is stable |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | **MIT** · 1 078 B · `d0a329112827` | `d8849a82e9ea` | 🟢 identical |
+| [`av-leschinskiy/moodle-mcp`](https://github.com/av-leschinskiy/moodle-mcp) | **MIT** · 1 078 B · `67b516c28e67` | `69c36847e7ad` | 🟢 identical |
+
+🔵 Two controls were added this pass (`miyagi`, `moodle-mcp`) because both are Moodle teacher-side
+rows and both sit on the LATAM/EMEA boundary this file is repeatedly asked about.
+
+### 🔴 This pass's own instrument was wrong twice, and both were caught before publication
+
+🔴 **`p465`'s −1-byte defect is REPRODUCED INDEPENDENTLY, and the cause is now named exactly.** My
+v1 probe read `falkenslab/miyagi` at **1 077 B · `5698cc474826`** against the shelf's 1 078 B ·
+`d0a329112827` — the same −1 byte at an unchanged HEAD that `p465` diagnosed. The cause is not a
+bug in one script: it is the **`$(curl …)` idiom**. Command substitution strips *all* trailing
+newlines, so every payload measured through a shell variable is short by its trailing-newline
+count. v2 writes the payload to a file and measures the file; it reproduces all seven controls
+exactly. 🟢 Registered as **`Gap 468-A`**: no payload on these shelves may be measured through a
+shell variable, ever.
+
+🔴 **The star-agreement instrument's v1 was also wrong, in the opposite direction.** It searched
+whole shelf files for a star figure beside each address and scored 14 of 21 as disagreements —
+but a shelf carrying 467 passes of history holds `1 704★` and `3 948★` for the same repository
+that reads `4 029★` today. Those are a **time series, not a disagreement**; v1 was a containment
+test wearing an agreement test's label. 🟢 Registered as **`Gap 468-B`**. v2, restricted to each
+file's current pass section, is reported below.
+
+### 🟢 `Gap 467-D` closed — the star axis, measured on a second channel
+
+🔵 `Gap 467-D` stated that every star count on these shelves is single-channel and
+index-relayed. Both of its named dead ends were re-probed today and both are still dead:
+
+| channel | probe | result today |
+|---|---|---|
+| `api.github.com` direct | `curl -s -o /dev/null -w '%{http_code}'` on `/repos/HKUDS/DeepTutor` | 🔴 **403** — unchanged |
+| `repos.ecosyste.ms` | same probe on `/api/v1/hosts/GitHub/repositories/HKUDS%2FDeepTutor` | 🔴 **`000`** (connection never established) — unchanged |
+| 🟢 **session GitHub tool channel** | repository search, reading `stargazers_count` | 🟢 **reachable** — returns live counts for every address in the result set |
+
+🟢 So the gap closes, and the lesson is about where the base looked rather than about the network:
+the second channel was available for the whole of `p467` and was not tried, because the gap was
+written as a *curl* problem. Agreement at the overlap, **n = 3** and stated as such:
+
+| address | `p467` section figure | second channel, 2026-10-27 | verdict |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 049★ | 2 049 | 🟢 exact |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340★ | 340 | 🟢 exact |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4 027★ | 4 029 | 🟡 **+2 in one day** — a live counter, not an error |
+
+🔵 n = 3 is too small to retire the index-relayed caveat. It is enough to say the axis is no
+longer single-channel, and enough to say the drift at one day is **+2 of 4 027 (0.05 %)**.
+
+### 🔴 The saturation finding, restated correctly: the vocabulary is exhausted, not the channel
+
+🔵 Five discovery legs, **79 distinct addresses**, every one graded against these shelves:
+
+| leg | query language | graded | already carried | novel by address | novel rate |
+|---|---|---|---|---|---|
+| recency × stars (`created:>2026-08-01`) | English | 29 | 24 | 5 | 17.2 % |
+| `topic:edtech` × `pushed:>2026-09-01` | English | 30 | 28 | 2 | 6.7 % |
+| SIS / LMS connector vocabulary | English | 7 | 5 | 2 | 28.6 % |
+| 🟢 `educacion IA docentes` | **Spanish** | 12 | 3 | **9** | **75.0 %** |
+| 🟢 `educacao inteligencia artificial escola` | **Portuguese** | 3 | 0 | **3** | **100 %** |
+
+🟢 **English legs: 9 novel in 64 (14.1 %). Non-English legs: 12 novel in 15 (80.0 %).** A **5.7×**
+difference produced by nothing but the language the query was written in. Six passes of
+*"usable novel yield ZERO"* were measuring an English-language index, and said so nowhere.
+
+🔴 **And the correction does not rescue the supply.** Of the 12 non-English novel addresses, nine
+are coursework artifacts — a doctoral thesis site, three near-identical teacher-training project
+pages from one account, a survey's supplementary material, an essay. Two are software; one of
+those serves no grant. **Usable build-on yield of the non-English legs: zero.** The honest
+statement is therefore narrower than the headline rate and is the one that should be carried:
+*novelty by address is a vocabulary artifact; usable supply is genuinely scarce.*
+
+### 🟢 Novel rows added this pass, each grant read first-hand at `HEAD`
+
+| agent | repo | grant · bytes · `sha256₁₂` @ HEAD | ★ | `grant_class` | what it does |
+|---|---|---|---|---|---|
+| nietzschian-debugger | [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | **MIT** · 1 071 B · `a7055a6d5672` @ `94e452d3fc83` | 153 | 🟢 `PERMISSIVE` | A deliberately confrontational debugging tutor: refuses to hand over the fix and interrogates the student toward it. 🟢 The only row on this shelf built around **withholding** the answer, which is the pedagogy an integrity-anxious faculty buyer asks for by name |
+| awesome-student-resources | [`StudentSuite/awesome-student-resources`](https://github.com/StudentSuite/awesome-student-resources) | **MIT** · 1 069 B · `537c697c69a5` @ `602df143c5a9` | 32 | 🟢 `PERMISSIVE` | Curated IB / IGCSE / SAT study-tool index. Useful as a **catalogue input**, not as a codebase |
+| awesome-study-resources | [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) | **MIT** · 1 069 B · `537c697c69a5` @ `74d5a7bbf17b` | 30 | 🟢 `PERMISSIVE` | Exam-prep index tagged free / freemium / paid / open-source. 🟡 See the lineage note below — this is **not** an independent second grant |
+| OpenTeacherAgent | [`ai-swarm-solutions-group/OpenTeacherAgent`](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent) | **AGPL-3.0-or-later** · 34 523 B · `0d96a4ff68ad` @ `59a33fecff73` | n/a (GitLab) | 🟡 `NETWORK_COPYLEFT` | Teacher states an intent in natural language → agent generates interactive exercises, composes course pages, exports the whole project as one self-contained offline HTML bundle with score tracking. Rust + Vue, single binary |
+
+🟡 **The two `StudentSuite` rows serve a byte-identical grant payload** — 1 069 B, `537c697c69a5`,
+same organisation, different repositories. This is the lineage shape `p446` found in the
+LMS-MCP tier, and it is why this shelf counts **grants**, not LICENSE files: these are two
+repositories and **one** grant.
+
+🟢 **`OpenTeacherAgent` settles the GitLab argument this base has had with itself twice.** `p466`
+claimed GitLab yields novel education supply at ~2.5× the GitHub rate; `p467` refuted that as a
+token collision (`tutor` matching inside `tutorial`) and published *"usable education-AI supply:
+ZERO"*. 🔴 **`p467`'s zero is refuted by exactly one row** — and one row is the right size for
+the claim. GitLab's education yield is non-zero, very small, and, as `p466` observed and this row
+confirms, **AGPL**.
+
+### 🔴 Refused this pass, with the reason read from the payload
+
+| address | grant · bytes · `sha256₁₂` @ HEAD | ★ | why refused |
+|---|---|---|---|
+| [`walkinglabs/modern-llm-notebook`](https://github.com/walkinglabs/modern-llm-notebook) | 🔴 `CC-BY-NC-SA-4.0` · 425 B · `d65ff2212f3e` @ `03715769cb94` | **272** | 🔴 `UNSELLABLE`. The most-starred novel address of the pass, and a NonCommercial grant bars it from any paid engagement. A hands-on LLM-architecture course — exactly the shape a corporate-upskilling engagement would reach for |
+| [`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) | **MIT** · 1 074 B · `8967efcf60c6` @ `c727cd6774f7` | 189 | 🔴 **Permissively granted and still refused.** Its stated purpose is defeating Turnitin and GPTZero. Recorded as an **academic-integrity counter-signal** on [`intel/trends.md`](../intel/trends.md), never as build-on supply for an education client |
+| [`mdakram2001/AMU-Utilities`](https://github.com/mdakram2001/AMU-Utilities) | 🔴 **NO GRANT** at 10 root paths @ `cb8b178ef9f8` | 0 | SIS MCP server for Aligarh Muslim University. 🔴 **APAC's only novel address this pass, and it is ungranted** |
+| [`s-caserta99/DocuQuery_MCP`](https://github.com/s-caserta99/DocuQuery_MCP) | 🔴 **NO GRANT** at 10 root paths @ `85523c2f8252` | 0 | Literature-Q&A MCP server for researchers |
+| [`leonine1983/aprendix`](https://github.com/leonine1983/aprendix) | 🔴 **NO GRANT** at 10 root paths @ `7df5ee4c76d6` | 0 | Brazilian school-management system with AI dropout-risk support — the right product shape for LATAM and **nothing to build on** |
+| [`fabianastudillo/cafe-con-prompts`](https://github.com/fabianastudillo/cafe-con-prompts) | 🟡 `Creative Commons Atribución` · 751 B · `c7a4fd88d164` @ `7ac77c6574a0` | 0 | 🟡 `CONTENT_NOT_SOFTWARE`. Ecuadorian Spanish-language teacher prompt library. Usable **as content with attribution**; it is not a codebase. 🔵 Its grant is published in Spanish — the first on these shelves |
+| [`aj-group4860936/EduAgent`](https://gitlab.com/aj-group4860936/EduAgent) | 🔴 **NO GRANT** at 4 root paths @ `93d406dbaf8a` | n/a | GitLab; agent-based educational content generation and review |
+
+### 🔴 Novel supply by region, with the empty regions named
+
+🔵 Per the ingest brief, a region that returned nothing is written down rather than omitted.
+
+| region | novel build-on rows this pass | what was actually found |
+|---|---|---|
+| North America | **0** | 🔴 Declared gap. The two permissive novel rows (`nietzschian-debugger`, the `StudentSuite` pair) declare no country, so they are placed Global, not NA |
+| EMEA | **0** | 🔴 Declared gap. Every EMEA-placed address the legs returned — `ink-waffle/sisu-mcp` (Finland), `Haris0059/ibu-mcp` (Bosnia), `particify/arsnova-server` (Germany), `Selleo/mentingo` (Poland) — is **already carried**. `OpenTeacherAgent`'s GitLab group states no country |
+| APAC | **0** | 🔴 One novel address, `mdakram2001/AMU-Utilities` (India), and it serves **no grant at 10 paths** |
+| LATAM | **0** | 🔴 Two novel addresses — `fabianastudillo/cafe-con-prompts` (Ecuador, content licence) and `leonine1983/aprendix` (Brazil, no grant). **Neither is build-on supply.** The Spanish and Portuguese legs that surfaced them are the two most productive legs of the pass by address count and the least productive by usable yield |
+
+### 🔴 Gaps this pass registers
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🔴 **`Gap 468-A`** | **No payload may be measured through a shell variable.** `$(curl …)` strips trailing newlines; this pass's v1 probe reproduced `p465`'s −1-byte defect from that idiom alone, on a population, not on one row. | Make the file-backed `probe2.sh` the only payload reader on this base; add a control whose payload **ends in a newline** and assert its byte count, so the defect cannot return silently |
+| 🔴 **`Gap 468-B`** | **An agreement test against a shelf that carries 467 passes of history is a containment test.** v1 scored 14 of 21 star figures as disagreements; 13 of those were simply older readings of the same repository. | Scope every cross-pass comparison to the **current pass section** of each file, and publish the section boundary used |
+| 🟢 **`Gap 468-C`** | **Discovery vocabulary is English-only and that is now measured: 14.1 % novel by address against 80.0 % for Spanish and Portuguese.** The brief's own region legs are written in English. | Run one non-English leg **per pass, per region** — Spanish, Portuguese, Arabic, Bahasa, Hindi — and publish the novel-by-address rate per language beside the usable-supply rate, so the two are never conflated again |
+| 🟡 **`Gap 468-D`** | **The star axis is two-channel at n = 3.** Too small to retire the index-relayed caveat `Gap 467-D` imposed. | Grade the second channel against the current pass sections at n ≥ 30 before any star figure on these shelves is described as first-hand |
+
+---
+
 ## 🆕 `p467` — **🟢 `Gap 466-A` AND `Gap 466-C` ARE CLOSED BY ONE INSTRUMENT, 41/41 controls, applied to 103 addresses — and the closure's OWN FIRST RUN published SIX WRONG VERDICTS, every one caught by reading the payload behind the verdict. 🔴 The headline is the worst of them, and it inverts `Gap 466-A` one further turn: a PERMISSIVE GRANT FORM IS NOT A PERMISSIVE GRANT. A 2 049★ platform opens with MIT's grant sentence verbatim and then restricts it to non-commercial use with a revenue-share clause. 🟢 And a licence class this base has never carried is read first-hand: CERN-OHL-S.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED** (`Code from External`)

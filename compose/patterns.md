@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p468` — **🟢 Three recipes, every component's grant read FIRST-HAND this pass, each stated with the delivery model it can legally be sold under. 🔴 And one recipe exists because of a regulation rather than a technology: automated assessment is named high-risk in three regions under four instruments, so the assessment recipe below is built to keep a human in the decision — not as a courtesy, as the thing that makes it sellable.**
+
+🔵 **Rule for this file, unchanged and enforced:** no component is named below unless its grant
+was read from its payload **this pass**, and no recipe mixes a `grant_class` its delivery model
+forbids.
+
+### 🟢 `Pattern BM` — Institutional AI-use inventory for a LATAM university (6–8 wk)
+
+🔵 **Why this and not a tutor.** UNESCO IESALC / UNU-IAS: 87 % of 200 LAC institutions use AI
+somewhere, 26 % have a strategy. The buyer's first problem is that **nobody knows where AI is
+already running**, because adoption came from individual academics. A tutor sold into that
+situation adds to the problem it was meant to address.
+
+| component | grant read this pass | role |
+|---|---|---|
+| [`av-leschinskiy/moodle-mcp`](https://github.com/av-leschinskiy/moodle-mcp) | MIT · 1 078 B · `67b516c28e67` @ `69c36847e7ad` | 🟢 `PERMISSIVE` — read courses, activities and graded items out of the system of record |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | MIT · 1 078 B · `d0a329112827` @ `d8849a82e9ea` | 🟢 `PERMISSIVE` — **Spanish-language** Moodle teacher agent; its rubric and forum paths are the reference implementation for what faculty are already automating |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | MIT · 1 072 B · `383b85b370e8` @ `86ab328f0e5b` | 🟢 `PERMISSIVE` — SCORM runtime; surfaces imported third-party courseware the LMS tables do not describe |
+| [`fabianastudillo/cafe-con-prompts`](https://github.com/fabianastudillo/cafe-con-prompts) | 🟡 `CC Atribución` · 751 B · `c7a4fd88d164` @ `7ac77c6574a0` | 🟡 `CONTENT_NOT_SOFTWARE` — **cited, not vendored.** A catalogue of what Spanish-speaking faculty actually prompt for; use it to seed the inventory's taxonomy, with attribution |
+
+**Wiring.** `moodle-mcp` enumerates courses → for each course, `scorm-again`'s runtime
+identifies imported packages the LMS metadata hides → `miyagi`'s tool surface defines the
+"automatable faculty action" taxonomy (grade to rubric, answer forum, build quiz) → classify
+each observed activity against that taxonomy → the deliverable is an **inventory plus a policy
+baseline keyed to it**. 🟢 **Delivery model: anything.** Every software component is
+`PERMISSIVE`; the one content component is cited.
+🔴 **Do not vendor `cafe-con-prompts`** into a deliverable's source tree — attribution travels
+with content, and this grant is published in Spanish.
+
+### 🔴 `Pattern BN` — Human-in-the-loop assessment assistant, built for the obligation (10–12 wk)
+
+🔴 **The constraint comes first.** Automated assessment is named by the EU AI Act (Annex III),
+Vietnam's AI Law, Oklahoma and Maryland statute, and NYC DoE guidance. Three of the four bar the
+system from *deciding*. 🟢 So the recipe's architecture is **assist-and-evidence**, and that is
+also what makes it sellable in all four jurisdictions without a per-region rebuild.
+
+| component | grant read this pass | role |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · 11 408 B · `cd2f54e1e506` @ `a31d82624c27` | 🟢 `PERMISSIVE` — the reasoning and memory spine |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | MIT · 1 078 B · `d0a329112827` @ `d8849a82e9ea` | 🟢 `PERMISSIVE` — rubric-application path against a real Moodle course |
+| [`av-leschinskiy/moodle-mcp`](https://github.com/av-leschinskiy/moodle-mcp) | MIT · 1 078 B · `67b516c28e67` @ `69c36847e7ad` | 🟢 `PERMISSIVE` — writes the *proposed* mark and its evidence, never the final mark |
+| [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | MIT · 1 071 B · `a7055a6d5672` @ `94e452d3fc83` | 🟢 `PERMISSIVE` — borrow its **withholding** interaction pattern for the student-facing half |
+
+**Wiring.** Submission arrives → `DeepTutor` produces a rubric-dimension analysis with citations
+back into the submission → `miyagi`'s rubric path renders it as a draft mark **with every
+criterion traceable to a span** → `moodle-mcp` writes it to a *pending* state that a human must
+confirm → the confirmation event, the draft, and the human's delta are all persisted as the
+oversight record. 🟢 **That persisted delta is the deliverable the regulation actually wants**,
+and no component here requires it to be built twice.
+🔴 **Never wire `moodle-mcp` to write a final grade.** The write path is the compliance boundary.
+🟢 **Delivery model: anything** — all four components are `PERMISSIVE`.
+
+### 🟡 `Pattern BO` — Offline course-authoring for a ministry or school network (8–10 wk)
+
+🔵 **Why AGPL is the right answer here and not a compromise.** EMEA public funding (Denmark's
+€200M AI strategy, France's AI for Humanity, the Netherlands' national strategy) flows to
+self-hosted public systems, and this is the buyer for whom `NETWORK_COPYLEFT` costs nothing.
+
+| component | grant read this pass | role |
+|---|---|---|
+| [`ai-swarm-solutions-group/OpenTeacherAgent`](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent) | **AGPL-3.0-or-later** · 34 523 B · `0d96a4ff68ad` @ `59a33fecff73` | 🟡 `NETWORK_COPYLEFT` — intent → interactive exercises → self-contained offline HTML bundle with score tracking. Rust + Vue, single binary |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | MIT · 1 097 B · `3c056b34a476` @ `f72936bd41e5` | 🟢 `PERMISSIVE` — offline-first distribution and the learner record where connectivity is intermittent |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | MIT · 1 072 B · `383b85b370e8` @ `86ab328f0e5b` | 🟢 `PERMISSIVE` — SCORM wrapper so the exported bundle also ingests into the ministry's existing LMS |
+
+**Wiring.** Teacher states an intent → `OpenTeacherAgent` authors exercises and course pages →
+export once as its self-contained HTML bundle **and** once wrapped by `scorm-again` → distribute
+and collect through `Kolibri` where there is no reliable network → scores reconcile on next sync.
+🟡 **Delivery model: self-hosted only.** `OpenTeacherAgent` is AGPL and reaches users served over
+a network. 🟢 Keep it in its own process behind a documented interface: the two MIT components
+stay separable, so a later SaaS variant can replace the authoring stage without relicensing the
+rest. 🔴 **Do not offer this stack as multi-tenant SaaS** without replacing the AGPL component.
+
+### 🔴 Components refused for every recipe this pass, and why
+
+| component | refused because |
+|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (2 049★) | 🔴 Bespoke grant: non-commercial only, redistribution prohibited, revenue-share before any commercial deployment, and a **partial-use clause reaching a copied design pattern**. The §7 clause means reading it is a risk, not just vendoring it |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (4 029★) | 🔴 `CC-BY-NC`. The best curriculum graph available and unusable in any paid engagement |
+| [`walkinglabs/modern-llm-notebook`](https://github.com/walkinglabs/modern-llm-notebook) (272★) | 🔴 `CC-BY-NC-SA-4.0`. Would have been the spine of a corporate-upskilling curriculum; NonCommercial forbids it and ShareAlike would propagate into the deliverable |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (340★) | 🔴 `Elastic-2.0` forbids hosted-service delivery, which is how a university CRM is delivered |
+| [`leonine1983/aprendix`](https://github.com/leonine1983/aprendix) | 🔴 **No grant** at ten root paths. The right LATAM product shape; usable only as a **requirements reference** |
+| [`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) (189★, MIT) | 🔴 Permissive and refused on purpose: its function is defeating academic-integrity tooling |
+
+---
+
 ## 🆕 `p467` — **🟢 Three recipes, every component's grant read FIRST-HAND this pass and stated with its `grant_class`, so each recipe names the delivery model it can legally be sold under. 🔴 And one recipe is a REPLACEMENT: the obvious build for a curriculum-aligned tutor uses a 4 000★ knowledge graph that cannot be used in any paid engagement, so the substitute is specified instead.**
 
 🔵 **Rule for this file, now enforceable:** no component is named below unless its

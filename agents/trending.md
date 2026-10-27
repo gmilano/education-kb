@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `2026-10-27` · `p468` — **🟢 THE SATURATION THIS SHELF HAS RECORDED FOR SIX PASSES IS A PROPERTY OF THE QUERY LANGUAGE, NOT OF THE SUPPLY: one Spanish leg and one Portuguese leg returned 12 novel addresses in 15, against 9 in 64 across three English legs — 80.0 % versus 14.1 %. 🔴 And the finding that costs the most is the one that follows it: of those 12, exactly ZERO are build-on supply, so the vocabulary fix buys visibility and not inventory.**
+
+🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained
+unaltered, and containment against `HEAD` was checked before writing.
+
+### 🟢 What moved this week
+
+| movement | address | reading |
+|---|---|---|
+| 🟢 **New channel result** | [`ai-swarm-solutions-group/OpenTeacherAgent`](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent) | AGPL-3.0 · 34 523 B · `0d96a4ff68ad` @ `59a33fecff73`. 🔴 **Refutes `p467`'s "GitLab usable education-AI supply: ZERO"** — with exactly one row, which is the right size for the correction. Agentic exercise authoring, Rust + Vue, single offline binary |
+| 🔴 **Most-starred novel row, and unusable** | [`walkinglabs/modern-llm-notebook`](https://github.com/walkinglabs/modern-llm-notebook) | 272★ · `CC-BY-NC-SA-4.0` · 425 B · `d65ff2212f3e` @ `03715769cb94`. NonCommercial — barred from any paid engagement |
+| 🔴 **Adversarial supply, permissively granted** | [`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) | 189★ · MIT · 1 074 B · `8967efcf60c6` @ `c727cd6774f7`. 🔴 An **MIT** tool for defeating Turnitin and GPTZero. A permissive grant is not a reason to shelve something for an education client |
+| 🟢 **Counter-pedagogy row** | [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | 153★ · MIT · 1 071 B · `a7055a6d5672` @ `94e452d3fc83`. Refuses to give the fix; interrogates the student toward it |
+| 🟡 **Two repositories, one grant** | [`StudentSuite/awesome-student-resources`](https://github.com/StudentSuite/awesome-student-resources) · [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) | 32★ / 30★ · both MIT · both **1 069 B · `537c697c69a5`**. Byte-identical payloads from one organisation — the `p446` lineage shape |
+| 🟡 **First Spanish-language grant on these shelves** | [`fabianastudillo/cafe-con-prompts`](https://github.com/fabianastudillo/cafe-con-prompts) | `Creative Commons Atribución` · 751 B · `c7a4fd88d164` @ `7ac77c6574a0`. Ecuador. `CONTENT_NOT_SOFTWARE` |
+
+### 🔴 The language measurement, with both numbers side by side
+
+| leg | language | graded | novel by address | novel rate | **usable build-on yield** |
+|---|---|---|---|---|---|
+| recency × stars | English | 29 | 5 | 17.2 % | 1 |
+| `topic:edtech` × recency | English | 30 | 2 | 6.7 % | 2 |
+| SIS / LMS connector vocabulary | English | 7 | 2 | 28.6 % | 0 |
+| `educacion IA docentes` | Spanish | 12 | 9 | 75.0 % | **0** |
+| `educacao inteligencia artificial escola` | Portuguese | 3 | 3 | 100 % | **0** |
+
+🔵 The nine Spanish novel addresses are a doctoral thesis site, three near-identical
+teacher-training project pages from one account, a survey's supplementary material, a master's
+sustentación site, a YouTube-channel prompt library, a psychopedagogical triage site and a
+Spanish AI-in-education guide. **Real addresses, real authors, not software this base can ship.**
+That is the whole finding: *English-only discovery hid a population of LATAM and Spanish-language
+education work, and that population is coursework.*
+
+### 🟢 Channel posture this pass, per `Gap 466-D`
+
+| forge | reachable | discovering education supply |
+|---|---|---|
+| GitHub (session tool channel) | 🟢 yes | 🟢 yes — and it now also serves `stargazers_count`, closing `Gap 467-D` |
+| GitHub (`api.github.com` via `curl`) | 🔴 403 | — |
+| `repos.ecosyste.ms` | 🔴 `000`, connection never established | — |
+| GitLab | 🟢 yes | 🟡 yes, barely — 1 usable row in 45 results, all AGPL |
+| `curl -sI` on `github.com` | 🔴 **403 for real AND fabricated addresses** — re-confirmed, still a false-negative machine | — |
+
+---
+
 ## 🆕 `2026-10-26` · `p467` — **🟢 A REGION DISTRIBUTION MEASURED OVER A SUPPLY POPULATION, which no pass here has done: 21 % of 103 education repositories document themselves in a non-English APAC language, 4 % EMEA — and LATAM is ONE ROW IN 103. 🔴 And all three NonCommercial rows in the population are Chinese-language, so the richest curriculum data in APAC is the part that cannot be sold.**
 
 🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained

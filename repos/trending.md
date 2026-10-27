@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `2026-10-27` · `p468` — **🟢 `p467`'s GitLab NIL IS REFUTED BY ONE ROW, which is exactly the size the correction deserves: `OpenTeacherAgent` is a real agentic education project on GitLab, AGPL-3.0, read first-hand at 34 523 B. 🔴 And the GitHub channel that rescued `p458` returns 93.3 % already-carried on its `topic:edtech` leg — the single highest carried share this shelf has recorded on any English leg.**
+
+🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained
+unaltered, and containment against `HEAD` was checked before writing.
+
+### 🟢 Trending, read 2026-10-27 — star counts now second-channel (`Gap 467-D` closed)
+
+| repo | ★ | grant read first-hand | note |
+|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36 192** | carried | 🟢 The largest star count any address on these shelves has ever carried. Turns a technical book PDF into an agent skill — self-study tooling, and the clearest signal in the window that **study tooling is being built as agent skills, not as apps** |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4 029** (p467: 4 027) | 🔴 `CC-BY-NC` · 19 347 B · `41003d4a7474` @ `cf262d886821` | 🔴 Still `UNSELLABLE`. +2★ in one day |
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 4 510 | carried, AGPL-3.0 | Chinese-language English listening/speaking trainer |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 732 | carried | Customer-training LMS |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 161 | carried | Offline-first platform; the standing low-connectivity row |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 958 | carried | Books → animated, narrated interactive web experiences |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 410 (p467: 400) | carried, AGPL-3.0 | Explainer-video director agent, local-first |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 359 | carried | SCORM runtime — the interop layer every LMS engagement needs |
+| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) | 350 | carried | LaTeX + OCR maths question bank |
+| 🔴 [`walkinglabs/modern-llm-notebook`](https://github.com/walkinglabs/modern-llm-notebook) | **272** | 🔴 `CC-BY-NC-SA-4.0` · 425 B · `d65ff2212f3e` @ `03715769cb94` | 🔴 **NEW and `UNSELLABLE`** — the most-starred novel address of the pass |
+| 🔴 [`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) | **189** | **MIT** · 1 074 B · `8967efcf60c6` @ `c727cd6774f7` | 🔴 **NEW.** AI-detector evasion. Permissive and still refused — see [`intel/trends.md`](../intel/trends.md) |
+| 🟢 [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | **153** | **MIT** · 1 071 B · `a7055a6d5672` @ `94e452d3fc83` | 🟢 **NEW.** Withholding-by-design debugging tutor |
+| 🟢 [`ai-swarm-solutions-group/OpenTeacherAgent`](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent) | n/a | **AGPL-3.0-or-later** · 34 523 B · `0d96a4ff68ad` @ `59a33fecff73` | 🟢 **NEW, and from GitLab** — the row that refutes `p467`'s nil |
+
+### 🔴 Carried share by leg — the number that makes the English channel's state explicit
+
+| leg | graded | already carried | carried share |
+|---|---|---|---|
+| `topic:edtech` × `pushed:>2026-09-01` × `stars:>20` | 30 | 28 | 🔴 **93.3 %** |
+| recency × stars (`created:>2026-08-01`, `stars:>30`) | 29 | 24 | 82.8 % |
+| SIS / LMS connector vocabulary | 7 | 5 | 71.4 % |
+| 🟢 `educacion IA docentes` (Spanish) | 12 | 3 | 🟢 **25.0 %** |
+| 🟢 `educacao inteligencia artificial escola` (Portuguese) | 3 | 0 | 🟢 **0 %** |
+
+🔵 Read the last two rows with [`agents/trending.md`](../agents/trending.md)'s qualifier attached:
+their novelty is in **addresses**, and their usable build-on yield is **zero**.
+
+---
+
 ## 🆕 `2026-10-26` · `p467` — **🔴 `p466`'s GitLab headline DOES NOT SURVIVE AN INDEPENDENT RUN: the "~2.5× novel education supply" is a TOKEN COLLISION — GitLab's search matches "tutor" inside "tutorial", and 69 of 80 novel-by-address rows are programming courses, a Godot tutorial and a Lineage 2 server emulator. Usable education-AI supply: ZERO. 🟢 And a forge the base has never sampled is REACHABLE BUT NOT DISCOVERABLE, which is a better answer than "unreachable".**
 
 🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained

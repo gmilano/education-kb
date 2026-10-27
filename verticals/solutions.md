@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p468` — **🟡 The platform tier gains one row and it is AGPL: `OpenTeacherAgent`, a single-binary offline course-authoring agent from GitLab, grant read first-hand at 34 523 B. 🔴 And the platform-shaped candidate that fits LATAM best this pass — a Brazilian school-management system with AI dropout support — serves NO GRANT at ten root paths, so the clearest regional product shape in the window is, again, not deliverable.**
+
+### 🟢 Added to the platform tier
+
+| platform | grant read first-hand | `grant_class` | shape · where it fits |
+|---|---|---|---|
+| [`ai-swarm-solutions-group/OpenTeacherAgent`](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent) | **AGPL-3.0-or-later** · 34 523 B · `0d96a4ff68ad` @ `59a33fecff73` | 🟡 `NETWORK_COPYLEFT` | Rust + Vue, **single binary, works offline**. Teacher states an intent → the agent generates interactive exercises, composes course pages and exports the whole project as one self-contained HTML bundle with student score tracking. 🟢 **Fits a self-hosted ministry or school-network buyer**, and the offline export is the feature low-connectivity deployments actually ask for. 🔴 Wrong for multi-tenant SaaS: AGPL reaches users served over a network |
+
+### 🔴 Platform-shaped and refused
+
+| candidate | grant @ HEAD | why |
+|---|---|---|
+| [`leonine1983/aprendix`](https://github.com/leonine1983/aprendix) | 🔴 **NO GRANT** at 10 root paths @ `7df5ee4c76d6` | Enrolment, grades, attendance, reports, modules for students / teachers / managers, plus AI to reduce dropout — written for Brazilian municipal education secretariats. 🔴 **Exactly the LATAM platform brief** and legally untouchable. Retained as a **requirements reference only**, which is what an ungranted repository is good for |
+
+### 🟢 Standing platform rows re-read this pass
+
+| platform | grant · bytes · `sha256₁₂` @ HEAD | status |
+|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `PageLM Community License` · 8 563 B · `c834209c5f33` @ `a6646794661b` | 🔴 Reproduced identical to `p467`. Still refused: non-commercial use only, redistribution prohibited, revenue-share required before any commercial deployment, and a partial-use clause reaching *"any portion, code snippet, algorithm, design pattern"* |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `Elastic-2.0` · 3 860 B · `48255018b41f` @ `c79803f21cb8` | 🔴 Reproduced identical. Hosted-service delivery forbidden — which is the delivery model for a university CRM |
+
+🔵 **The copyleft observation this shelf has carried since `p467` holds unchanged.** Every platform
+added to this tier in the last two passes is AGPL (`OpenTeacherAgent`, `frametell`, `penecho`,
+`learnhouse`) or refused on a non-OSI grant. The permissive platform rows are
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) (MIT · 1 062 B · `ceb97717de1f` @
+`e137ca47cbec`, Poland),
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT · 1 097 B ·
+`3c056b34a476` @ `f72936bd41e5`, offline-first) and, at the interop layer,
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT · 1 072 B · `383b85b370e8`
+@ `86ab328f0e5b`) — all three read first-hand this pass. For a Globant engagement
+that means the **self-hosted institutional buyer is well supplied and the multi-tenant SaaS buyer
+is not**, and that is a positioning fact, not a sourcing failure.
+
+---
+
 ## 🆕 `p467` — **🟢 The permissive platform row the EMEA tier has been short of is read first-hand and PLACED: a Polish AI-native LMS under MIT, against four AGPL platforms. 🔴 And the pass's most-starred platform candidate is REFUSED on a grant that reads MIT until you get to its fourth clause — a 2 049★ self-hosted NotebookLM alternative that requires a REVENUE-SHARING AGREEMENT before any commercial deployment.**
 
 ### 🔴 Refused as build-on supply — and the refusal is not visible from the licence family
