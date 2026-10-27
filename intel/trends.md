@@ -3,6 +3,109 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🟢 THE STRUCTURAL TREND THIS PASS CAN ACTUALLY MEASURE IS A CHANGE IN THE UNIT OF SUPPLY: **12 of the 25** repositories in a complete ≥50★ agent census are **agent skills or MCP servers, not applications** — and the week's standout new arrival is an MCP server onto Canvas LMS (115★ in two days). 🔴 Attention is concentrated **31.5 : 1** in a single repository, measured over two hours with exact endpoints. 🔴 And the efficacy literature has not moved in this base's favour: the only new 2026 study found is a **rule-based** tutor, not an agentic one.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+🔴 **Every study below is read from search-tool summaries.** `arxiv.org` was re-probed this pass and is still
+**refused at the gateway** (`CONNECT tunnel failed, response 403`) — see
+[`evidence/reachability.2026-10-27-p479.tsv`](../evidence/reachability.2026-10-27-p479.tsv). No abstract below was
+read on its own page. Counts and censuses, by contrast, are first-hand
+([`evidence/census.2026-10-27-p479.tsv`](../evidence/census.2026-10-27-p479.tsv)).
+
+---
+
+### 🟢 Trend 1 — the unit of supply is now a skill or an MCP server, not an application *(measured here)*
+
+🔵 Of the 25 rows in the ≥50★ `topic:ai-tutor` census, **12** declare themselves as agent skills or MCP servers in
+their own topic lists (`agent-skills`, `claude-skills`, `codex-skill`, `mcp-server`, `dsh-plugin`) rather than as
+deployable products: `examprep-skill`, `Bloom`, `universal-diagnostic-tutor-skill`, `kaogong-skill`,
+`education-skills`, `human-skill-tree`, `algo-sensei`, `Study-Mate`, `Smart-Study-Agent`, `anki-mcp-server`,
+`tutor-mcp` and — new this window — [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp).
+
+🟢 **Why it matters commercially.** A skill is a *prompt-and-protocol artefact*: cheap to adopt, cheap to
+localise, and it inherits the host agent's model, memory and tool access instead of shipping its own. 🔴 It also
+means the thing being starred is often **not software a studio can deploy** — it is instructions for someone
+else's agent, and its licence governs *prose*, which is where `education-agent-skills`' CC BY-SA 4.0 bites
+hardest. 🟡 The practical consequence: when a client asks for "the open-source tutor", half the supply is a skill
+that presupposes an agent runtime the client has not bought.
+
+### 🔴 Trend 2 — attention is concentrated, and the ratio is measured *(measured here)*
+
+🔵 Between `p477`'s 09:49:47Z read and this pass's 11:50:25Z read, both exact counts from the same channel:
+[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) took **+189★ (94.0 ★/h, Poisson 95% 80.6–107.4)** while the
+other seven measured rows took **+6★ between them** — **31.5 : 1**. 🟢 DeepTutor's rate is **15.2×** its own
+lifetime average of 148.0 ★/day, and `p477` measured 14.6× on an independent interval, so the acceleration is
+two-pass consistent. 🔴 In `topic:ai-education`, 31 repositories created in the last 14 days contain **one** above
+400★ and **nothing else above 3★**. 🔵 The shape of this market is one winner and a very long tail of solo
+artefacts — which is an argument against "pick the top of the list" as a sourcing strategy, because the top of the
+list is one repository and the rest is noise at this resolution.
+
+### 🔴 Trend 3 — code is permissive, content is not, and this is now a property of a complete population *(measured here)*
+
+🔵 All 22 repositories in the 30-day ≥30★ `topic:education` census carry a payload-read grant. 🟢 **16 are MIT.**
+🔴 **Both non-commercial rows are the content rows** — [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy)
+(4,165★, CC BY-NC 4.0, and its README places the **diagnostic tool code** inside that grant) and
+[egplnt/-student-study-framework](https://github.com/egplnt/-student-study-framework) (95★, CC BY-NC-SA 4.0).
+🔴 **Two rows have no grant at all** (453★ and 188★). 🔵 `p477` observed this on two data repositories; it is now
+measured across a complete star-floored population, and the direction is the same: **the curriculum layer is the
+layer a studio cannot ship**, and it is also the layer clients most want aligned.
+
+### 🔴 Trend 4 — the unlicensed upper tail is a real procurement hazard *(measured here)*
+
+🔵 This pass probed licence paths on every row it published and found **five unlicensed education repositories
+totalling over 30,000★**, led by [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+at **29,550★** — the most-starred AI-tutor repository on GitHub, with no grant file at 20 probed paths and no
+licence line in its README. 🔴 Add [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) (2,049★), whose bespoke
+"Community License" prohibits redistribution outright and requires an **executed revenue-sharing agreement**
+before any commercial use. 🟡 Both appear in third-party "best open-source education AI" roundups. 🟢 The
+operational lesson is cheap to apply: **a star count is not a licence**, and a four-second payload probe separates
+the two.
+
+### 🟢 Trend 5 — integration with the incumbent LMS is displacing the standalone tutor *(measured here, thin)*
+
+🔵 Three rows from this window point the same way: [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp)
+(MIT, **115★ in two days**, read-only MCP onto Canvas), [Selleo/mentingo](https://github.com/Selleo/mentingo)
+(MIT, an **AI-native LMS** positioning itself against Moodle, Docebo and Open edX) and
+[pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) (Apache-2.0, multi-tenant LMS, three weeks
+old). 🟢 Each is a bet that the buyer already *has* an LMS and will not replace it — the opposite of the
+standalone-tutor bet that most of the agent tier makes. 🔴 Three rows is a direction, not a trend: two were
+created this month and none has been run here.
+
+### 🔴 Trend 6 — the efficacy evidence still does not cover agentic tutors *(secondary)*
+
+🔵 `p478`'s reading stands: the largest 2026 university RCT found AI-tutor access **reduced** final grades by
+0.37 SD, while smaller trials of structured, course-grounded tutors show gains — the **design**, not the model, is
+what separates them. 🟡 The one new 2026 study this pass found is **TEAMIGO** (Frontiers in Education, June 2026):
+a virtual tutor reporting a **35.5%** reduction in disruptive behaviours among students with ASD and **23.6%**
+among students with ADHD. 🔴 **It is rule-based, not an open generative LLM**, and its own authors call the results
+preliminary and ask for randomised trials. 🔴 So the gap `p478` declared is unchanged and now has a second
+instance: **the studies that work are the ones that constrain the model**, and still **no 2026 trial compares an
+agentic tutor against a non-agentic one**. 🟡 UNESCO's Digital Learning Week concept note puts "agentic" AI on
+education's near-term agenda, and the OECD's Digital Education Outlook 2026 recommends moving from
+general-purpose tools to **purpose-built** educational AI — both are policy framing, not evidence.
+
+### 🔴 Trend 7 — automated grading is still a measured absence *(measured here)*
+
+🔵 `grading rubric teacher in:name,description stars:>15` returns **`total_count` 0**, `incomplete_results` false.
+🟢 The nil is robust rather than fragile, because GitHub **stems** `grading` to `grade` — the query matches
+`production-grade` and still returns nothing in scope. 🔵 A query whose recall is artificially widened and still
+returns zero is stronger evidence of absence than a narrow one. 🔴 `p478`'s reading is therefore corroborated by a
+census rather than by an impression: **a studio asked for automated grading today is building, not composing** —
+and the one MIT project in the category, [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent),
+still has 0★ and a README that freezes grading productisation.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-AI`** | **`Gap 478-AB` unchanged: no study was read first-hand.** Every n, effect size and percentage in Trend 6 is a search-tool summary; `arxiv.org`, `edworkingpapers.com` and `clinicaltrials.gov` are refused at the gateway. The −0.37 SD figure remains load-bearing and **unverified**. |
+| 🔴 **`Gap 479-AJ`** | **Trend 1's count is self-declared topics, not an architectural audit.** A project may declare `agent-skills` and still ship a deployable app, or ship a skill without declaring it. Twelve of 25 is a count of labels. |
+| 🔴 **`Gap 479-AK`** | **Trend 2 is two hours long.** A 31.5 : 1 concentration over one interval says nothing about a week, and the seven comparison rows moved too little for any of them to have a measurable rate of its own. |
+| 🟡 **`Gap 479-AL`** | **Trend 5 rests on three rows, two of them created this month**, and on positioning read from descriptions. No plugin API, LTI boundary or MCP transcript was exercised. |
+| 🟡 **`Gap 479-AM`** | **The TEAMIGO figures are percentage reductions in behaviour counts, not learning outcomes**, from a summary of a paper this base could not open. They are not comparable with the 0.37 SD grade effect in any direction. |
+| 🟡 **`Gap 479-AN`** | **Trend 7's nil is one query family at one floor.** A grading project named in Chinese, or described as "assessment" or "feedback" without the word grading, would not appear — and the stemming argument does not cover a different vocabulary. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🔴 THE EFFICACY EVIDENCE TURNED THIS PASS AND IT CUTS AGAINST THIS BASE'S OWN AGENT SHELF: the LARGEST 2026 university RCT found AI-tutor access REDUCED final grades by 0.37 SD and LMS participation by 0.90 SD, with bigger losses for first-generation students — while smaller trials of STRUCTURED, course-grounded tutors show gains. 🟢 The design variable, not the model, is what separates them. 🔴 And no 2026 trial compares an AGENTIC tutor against a non-agentic one at all.**
 

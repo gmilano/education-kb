@@ -1,0 +1,11 @@
+query	star_floor	date_filter	total_count	incomplete_results	note
+topic:education topic:ai stars:>500	500	none	13	false	narrow slice; 6 rows absent from this base
+topic:education created:>2026-09-27 stars:>30	30	30d	22	false	new-arrivals census, 30-day window
+topic:edtech created:>2026-09-27 stars:>20	20	30d	6	false	new-arrivals census, edtech topic
+topic:ai-tutor stars:>20	20	none	36	false	category census
+topic:ai-tutor stars:>50	50	none	25	false	category census, licence-complete this pass
+topic:ai-education created:>2026-10-13	none	14d	31	false	1 row >400 star, remainder <=3 star
+topic:education created:>2026-10-20 stars:>5	5	7d	13	false	this-week census
+grading rubric teacher in:name,description stars:>15	15	none	0	false	MEASURED NIL under stemming-broadened recall
+educacion OR educativo OR educacao in:name,description stars:>20	20	none	33	false	Spanish/Portuguese supply census
+"fedena" in:name	none	none	185	false	SIS candidate address search

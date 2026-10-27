@@ -1,0 +1,6 @@
+repo	declared_licence	channel	election_resolved	note
+frappe/lms	AGPL-3.0-or-later	package.json line 18	YES or-later	Gap 478-Q closed for this row; upgrade option exists
+openeducat/openeducat_erp	LGPL-3	openeducat_core/__manifest__.py line 25 + file header	YES or-later	header: "either version 3 of the License, or (at your option) any later version"
+instructure/canvas-lms	AGPL-3.0	package.json line 3	NO	bare deprecated identifier; LICENSE "any later version" only at 570/572/638 (sec.14 + appendix)
+openedx/openedx-platform	none declared	package.json (no licence field), pyproject.toml 48,283 B (no licence key, no classifier)	NO	two declaration channels read, both silent; setup.py 404
+overhangio/tutor	AGPL-3.0-only	pyproject.toml (read by p478)	YES only	carried from p478, no upgrade option

@@ -3,6 +3,97 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🔴 `p478`'s HEADLINE NEEDS CORRECTING: a permissively-licensed student information system DOES exist. `Gap 478-R`'s three unprobed candidates were all probed this pass and **Fedena declares Apache-2.0 — in a `NOTICE` file, not a `LICENSE`**, at 547★ with a copyright line reading **2011**. 🟢 The usable conclusion is sharper than the old one: the permissive SIS is not missing, it is **fifteen years old**. 🟢 Two new permissive LMS rows also land, and every platform's version is read first-hand for the first time.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+Probes in [`evidence/sis-probe.2026-10-27-p479.tsv`](../evidence/sis-probe.2026-10-27-p479.tsv); grants in
+[`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv); versions in
+[`evidence/version-tags.2026-10-27-p479.tsv`](../evidence/version-tags.2026-10-27-p479.tsv).
+
+---
+
+### 🔴 `Gap 478-R` closed — and it overturns the claim it was filed against
+
+🔵 `Gap 478-R`: *"`OpenSIS`, `SchoolTool` and `Fedena` were not probed. The claim 'no permissive SIS exists'
+therefore rests on 4 payload reads plus 1 non-resolving address… `Fedena`'s Apache-2.0 claim is the one that would
+overturn it if true."* 🔴 **It is true.**
+
+| candidate | address | what was measured | verdict |
+|---|---|---|---|
+| **Fedena** | [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 resolves; **547★**; created **2011-12-31**; `NOTICE` 680 B reads *"Licensed under the Apache License, Version 2.0"*; 🔴 **no `LICENSE` file at 10 paths** | 🟢 **permissive, declared** — by a `NOTICE`, which is where Apache projects put attribution, not the grant |
+| Fedena (second address) | [foradian/fedena](https://github.com/foradian/fedena) | 🟢 resolves; `NOTICE` 679 B, same Apache-2.0 declaration, *Foradian Technologies Private Limited* | 🟢 corroborates the first at a second address |
+| OpenSIS | [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | 🟢 resolves; 🔴 **no grant file at 20 probed paths**; README says *"licensed under the GNU General Public License"* and links out of the repository | 🔴 copyleft **claimed in prose**, no payload — the vendor table's "GPL-2.0" is unverifiable here |
+| OpenSIS (responsive) | [os4ed/OpenSIS-Responsive-Design](https://github.com/os4ed/OpenSIS-Responsive-Design) | 🟢 resolves; 🔴 no grant file at 20 paths; identical README wording | 🔴 same |
+| SchoolTool | `schooltool/schooltool` | 🔴 **`git ls-remote` fails — the address does not resolve** | 🔴 gone; the secondary source calling it "discontinued" is consistent with this |
+
+🔵 **What this changes for an engagement.** The old line — *"the permissive foundation for school administration is
+a GENERAL ERP, not an education one"* — survives as advice but not as a fact about supply. 🟢 There is an
+Apache-2.0 education SIS with 547★ and 560 forks. 🔴 Its copyright notice says **2011**, it is a Rails application
+of that era, and the same secondary source that named it says development slowed and core features moved behind a
+paid tier. 🟡 So the honest framing is a **choice between two kinds of work**: port a fifteen-year-old Apache-2.0
+Rails SIS, or model the student domain on a maintained permissive ERP. Both are build, not compose — but only one
+of them was visible before today.
+
+### 🟢 The platform census, with versions read first-hand
+
+🔵 `Gap 478-U`: *"No platform's version, release cadence, or maintenance state was read this pass. Secondary
+coverage put Moodle at 5.2 (April 2026) and Chamilo at 2.0 (April 2026); neither was confirmed."* 🟢 Tags read
+directly over `git ls-remote` — and **secondary coverage was stale on both**.
+
+| platform | repo | grant (payload) | bytes · sha | latest tags read | what it is |
+|---|---|---|---|---|---|
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 35,147 · `8ceb4b9ee5ad` | 🟢 **v5.3.0** (also v5.2.4) | the incumbent LMS; `COPYING.txt`, not `LICENSE` |
+| Open edX | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 AGPL-3.0 | 35,136 · `e12d78569742` | `open-release/sumac.master` | MOOC-scale LMS; election **unread** (`Gap 479-H`) |
+| Tutor (Open edX deploy) | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0-only** | 34,523 · `0d96a4ff68ad` | 🟢 **v22.0.3** | official Docker path; **no upgrade option** |
+| Canvas | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 | 34,520 · `57c8ff33c9c0` | 🟢 `release/2026-05-20.143`, v5.14.2 | higher-ed LMS, community edition |
+| Chamilo | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 | 35,147 · `8ceb4b9ee5ad` | 🟢 **v3.0.1** — not 2.0 | LMS; v3 line is tagged |
+| ILIAS | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 | 35,147 · `8ceb4b9ee5ad` | not read this pass | European higher-ed and public-sector LMS |
+| Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0-or-later** | 33,893 · `db1a87ba81e8` | not read this pass | 🟢 election now read: **or-later** |
+| Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** | 11,120 · `0688f62d04f1` | not read this pass | Apache-2.0 with a **narrowed patent grant** |
+| OpenOLAT | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 10,982 · `6dbc5b605ed0` | 🟢 **OpenOLAT_21.1.1** | university/corporate LMS, Java |
+| Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1,097 · `3c056b34a476` | 🟢 **0.19.5** | offline-first platform; 1,162★ |
+| BigBlueButton | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 LGPL-3.0 | 7,652 · `e3a994d82e64` | 🟢 **v4.0.0** | virtual classroom; a **major** line this base had not recorded |
+| H5P | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 🔴 GPL-3.0 | 35,146 · `c53a65c2fd56` | not read this pass | interactive content types |
+| OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0-or-later** | 8,241 · `528f84036800` | branch `17.0` | education ERP/SIS on Odoo; 🟢 election now read |
+| RosarioSIS | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 15,214 · `d954e14e5c75` | not read this pass | K-12 SIS, PHP + Postgres |
+| Gibbon | [GibbonEdu/core](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 | 35,121 · `93178a43d6d3` | not read this pass | K-12 school management |
+| **Fedena** | [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 **Apache-2.0** *(via `NOTICE`)* | 680 · `NOTICE` | not tagged | 🆕 **the permissive SIS** — 547★, copyright 2011, Rails |
+| **TutorLoom** | [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 🟢 **Apache-2.0** | 11,362 · `a89039268428` | not tagged | 🆕 self-hosted multi-tenant LMS, Django + React; 50★, created 2026-10-07 |
+| **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 1,062 · `ceb97717de1f` | not read this pass | 🆕 **AI-native LMS** with mentor + role-play, SCORM and xAPI; 99★, created 2024-08-01 |
+| **i-Educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** | 18,092 · `8177f9751321` | branch `2.12` | 🆕 Brazil's largest free school-management system; 721★, *software público* |
+| **i-Diario** | [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0, Portuguese translation** | 35,326 · `fe85f94658bf` | branch `1.6` | 🆕 teacher gradebook companion to i-Educar; 117★ |
+
+### 🔴 One row's grant is a translation, and it does not say so
+
+🔵 [portabilis/i-diario](https://github.com/portabilis/i-diario) ships its licence as
+**`LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3`** — 35,326 B · `fe85f94658bf`. 🔴 The FSF does not approve
+translations as the operative licence, and **this file carries no disclaimer saying it is unofficial**: a
+case-insensitive search for *"tradu"*, *"unofficial"* and *"não oficial"* returns **zero** matches. 🟡 In practice
+the governing text for a Brazilian municipal deployment is then an unapproved translation with nothing pointing at
+the English original — a question for counsel on any engagement that touches this codebase, and the kind of defect
+that is invisible to any tool that reads the SPDX identifier rather than the file.
+
+### 🟢 Two permissive LMS rows, and what they are each good for
+
+🔵 `p478` published OpenOLAT as *"the only permissive LMS at this scale"*. 🟢 That is still true **at that scale** —
+OpenOLAT is a 21.1.x university platform. 🟢 But the permissive LMS tier now has three entries at three sizes:
+**OpenOLAT** (Apache-2.0, university-scale, Java), **TutorLoom** (Apache-2.0, multi-tenant training institutes,
+Django + React, three weeks old) and **mentingo** (MIT, AI-native with an LLM mentor and role-play built in,
+SCORM + xAPI, two years old). 🔴 None is Moodle's size and none has Moodle's plugin ecosystem; the trade is
+**licence freedom for ecosystem depth**, and that trade is now priced with three options instead of one.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-M`** | **Fedena's Apache-2.0 rests on a `NOTICE`, not a `LICENSE`.** A `NOTICE` that recites the Apache grant is strong evidence of intent and is **not** the same instrument as a licence file; whether it suffices is a legal determination this base cannot make. No source file header was read to corroborate it. |
+| 🔴 **`Gap 479-N`** | **Fedena was not run, and its maintenance state is unmeasured.** 547★ and a 2011 copyright are not a cadence; no push date, release tag or dependency audit was read, and a Rails application of that vintage carries an upgrade cost nothing here has estimated. |
+| 🔴 **`Gap 479-O`** | **`Gap 478-S` stands untouched.** No APK was built or instrumented and only `ml-authentication` was ever cloned out of elimu.ai's repositories; that tier remains description-only. |
+| 🔴 **`Gap 479-P`** | **`Gap 478-P` is unattemptable here and is not retried.** Every regulatory reading on this shelf is law-firm and compliance-vendor commentary; EUR-Lex is refused at the gateway (`intel/market.md`). |
+| 🟡 **`Gap 479-Q`** | **Versions were read for seven platforms, not fifteen.** ILIAS, H5P, Sakai, Gibbon, RosarioSIS, Frappe LMS, mentingo and the two new SIS rows have no first-hand version, and a tag list is not a release date — no tag was dated, so "latest" means "highest-sorting", not "most recent". |
+| 🟡 **`Gap 479-R`** | **`Gap 478-T` unchanged: "deployed, not linked" is still architectural reasoning per recipe**, not verified against either platform's plugin API — and `canvas-mcp` (new on the foundations shelf) now offers a concrete way to test that boundary which this pass did not take. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🔴 THE PERMISSIVE-SIS QUESTION IS ANSWERED AND THE ANSWER IS "NONE": fifteen education platforms now carry a payload-read grant, **eleven are copyleft**, and the only permissively-licensed student information system the literature names does not resolve at any probed address. 🟢 The usable consequence is specific — the permissive foundation for school administration is a GENERAL ERP, not an education one.**
 

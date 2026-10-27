@@ -1,0 +1,19 @@
+family	bytes	sha256_12	repos_seen_here	finding
+AGPL-3.0 FSF unmodified	34523	0d96a4ff68ad	overhangio/tutor, sitor-ai/frametell, penecho/penecho, echo-loop/Echo-Loop	4 unrelated projects byte-identical: this IS an AGPL-3.0 control
+AGPL-3.0 reflowed appendix	34523	8486a10c4393	learnhouse/learnhouse, yh2072/edgameclaw	SAME byte count as the control, DIFFERENT digest: one appendix line re-wrapped
+AGPL-3.0 no final newline	34522	20b067f86de3	HugeCatLab/ChatTutor	control minus trailing newline
+AGPL-3.0 variant	34514	ea94d5765c59	artcc/freelingo	unmatched byte count
+AGPL-3.0 older rendering	34520	57c8ff33c9c0	instructure/canvas-lms	tail cites http:// not https:// gnu.org
+AGPL-3.0 older rendering	33893	db1a87ba81e8	frappe/lms	lowercase license.txt
+AGPL-3.0 older rendering	35136	e12d78569742	openedx/openedx-platform	-
+AGPL-3.0 variant	35240	119d54a4bd57	1111philo/learn	17 occurrences of "Affero"
+AGPL-3.0 Portuguese translation	35326	fe85f94658bf	portabilis/i-diario	unofficial translation, carries NO disclaimer to that effect
+AGPL-3.0 short notice	1134	3fb8cda58638	24kchengYe/human-skill-tree	1,134 B notice, NOT the full licence text
+GPL-3.0 FSF unmodified	35149	3972dc9744f6	plastic-labs/tutor-gpt, saniales/ai-lesson-planner, ahmedEid1/lumen	3 unrelated projects byte-identical
+GPL-2.0	18092	8177f9751321	portabilis/i-educar	Version 2, June 1991
+Apache-2.0 FSF unmodified	11357	c71d239df917	yetanalytics/lrsql, pelotech/xapi-lrs, f3an/kodeida	3 unrelated projects byte-identical
+Apache-2.0 +1 byte	11358	cfc7749b96f6	cyyeh/agent-loop-visualizer, Amine-LG/RootToRun	same digest across 2 unrelated projects
+Apache-2.0 appendix filled	11362	a89039268428	pacewisdomhq/TutorLoom	copyright line completed in the appendix
+Apache-2.0 truncated	10227	59a378bf23a0	SimonsTang/feifei-companion	1,130 B short of the control
+CC BY-NC 4.0	19347	41003d4a7474	xiaoyang111222/cn-math-taxonomy	covers data, question bank, TOOL CODE and docs
+bespoke non-OSI	8563	c834209c5f33	CaviraOSS/PageLM	"PageLM Community License": non-commercial, redistribution prohibited, revenue share

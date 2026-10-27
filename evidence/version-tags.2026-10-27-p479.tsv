@@ -1,0 +1,8 @@
+repo	latest_release_tags_read	channel	note
+moodle/moodle	v5.2.3, v5.2.4, v5.3.0	git ls-remote --tags	secondary coverage said 5.2 (Apr 2026); v5.3.0 tag exists
+chamilo/chamilo-lms	v2.0.3, v3.0.0, v3.0.1	git ls-remote --tags	secondary coverage said 2.0 (Apr 2026); v3 is tagged
+OpenOLAT/OpenOLAT	OpenOLAT_21.1.0, OpenOLAT_21.1.1	git ls-remote --tags	21.1.x current
+bigbluebutton/bigbluebutton	v3.0.38, v3.0.39, v4.0.0	git ls-remote --tags	v4.0.0 tagged
+learningequality/kolibri	0.19.3, 0.19.4, 0.19.5	git ls-remote --tags	-
+instructure/canvas-lms	release/2026-05-20.143, v5.14.2	git ls-remote --tags	dated release tags
+overhangio/tutor	v22.0.1, v22.0.2, v22.0.3	git ls-remote --tags	-

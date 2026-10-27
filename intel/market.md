@@ -3,6 +3,162 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🟢 THE SUPPLY SIDE OF THIS SHELF IS NOW FIRST-HAND AND PLACED BY REGION, WHICH NO PREVIOUS PASS COULD DO: of the 25 repositories in a complete ≥50★ agent census, **11 are APAC**, **2 EMEA**, **0 LATAM**, **0 North America** and 12 unplaceable. 🔴 And LATAM's own-language supply is not agentic at all — it is **school administration and curriculum**: `i-Educar` (721★, GPL-2.0), `i-Diario` (117★, AGPL-3.0 in Portuguese), `bncc-dados` (22★, MIT). 🔴 The demand side stays irreducibly secondary: `Gap 478-W` is a measured environment boundary, not a diligence failure, and this pass does not re-litigate it.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+Supply measurements in [`evidence/census.2026-10-27-p479.tsv`](../evidence/census.2026-10-27-p479.tsv) and
+[`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv); channel boundary
+re-measured in [`evidence/reachability.2026-10-27-p479.tsv`](../evidence/reachability.2026-10-27-p479.tsv).
+
+---
+
+### 🔴 The boundary, restated once and then left alone
+
+🔵 `Gap 478-W` reclassified every market and regulatory figure here as secondary **by environment**, not by
+choice: EUR-Lex, arXiv, UNESCO and every market-research host probed are refused at the gateway. 🔵 Re-probed this
+pass: `eur-lex.europa.eu` and `arxiv.org` both return **`CONNECT tunnel failed, response 403`**. 🟢 What *did*
+change is that the authenticated GitHub search channel came back, so **the supply side is now measurable
+first-hand while the demand side is not**. 🔵 Every adoption percentage, market size and regulatory date below is
+read from search-tool summaries of pages this base never opened. The supply table immediately following is not.
+
+### 🟢 Supply by region, measured — the first first-hand regional reading on this shelf
+
+🔵 Population: the ≥50★ `topic:ai-tutor` census (25 rows, `incomplete_results` false) plus the rows this base
+carries that the topic filter cannot see. Region is assigned on a **stated artefact** — the jurisdiction or
+curriculum a project targets, or the legal entity in its own grant — never on a guess about the owner.
+
+| region | rows in the ≥50★ agent census | what the supply actually is | licence shape |
+|---|---|---|---|
+| **APAC** | **11** | tutors and study agents aimed at named curricula: gaokao, civil-service exams, grades 1–9, Chinese K12 | 9 MIT, 1 AGPL-3.0, 1 Apache-2.0 (truncated text) |
+| **EMEA** | 2 | the adaptive-core layer, not the application: `tutor-mcp` (BKT over MCP), `learnmcp-xapi` | both MIT |
+| **North America** | 0 in census; 4 in the carried tier | **infrastructure and research**: `lrsql`, `xAPI-Spec`, `OATutor`, `tutor-gpt` | 3 permissive, 1 GPL-3.0 |
+| **LATAM** | 0 | 🔴 **school administration and curriculum data**, not agents: `i-Educar`, `i-Diario`, `bncc-dados`, `chile-hub`, `Universidade-Livre` curricula | 2 copyleft, 3 MIT |
+| **Global / unplaceable** | 12 | agent skills with no stated jurisdiction | 10 MIT, 1 AGPL-3.0, 1 ungranted |
+
+🔵 **`Gap 478-Z` closed.** The Spanish/Portuguese supply census ran: `educación OR educativo OR educação
+in:name,description stars:>20` returns **33** rows, `incomplete_results` false. 🔴 Reading them is the finding —
+the large ones are **self-study curricula** ([Universidade-Livre/ciencia-da-computacao](https://github.com/Universidade-Livre/ciencia-da-computacao),
+20,970★, MIT) and **"for educational purposes" clones**, while the genuine education *systems* are two Brazilian
+municipal-school platforms: [portabilis/i-educar](https://github.com/portabilis/i-educar) (721★, **GPL-2.0**,
+*software público*) and [portabilis/i-diario](https://github.com/portabilis/i-diario) (117★, **AGPL-3.0 in
+Portuguese translation**). 🔴 **Not one LATAM-origin AI tutoring agent clears 50★.** The region's only agent row on
+this base, [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA), has 0★ and has not been touched since the
+thirteen minutes after it was created.
+
+🟢 **The commercial reading for a LATAM-rooted studio is specific.** The region's open-source education assets are
+**administrative and curricular** — exactly the layers a ministry or municipal engagement needs, and exactly the
+layers that are copyleft (i-Educar GPL-2.0, i-Diario AGPL-3.0) or non-commercial elsewhere. 🔴 The agentic layer a
+client asks for has to be imported, and it comes overwhelmingly from APAC under MIT, built against Chinese
+curricula and exam structures. 🟡 That import is a **localisation project**, not an integration project, and no
+pass of this base has estimated it.
+
+### 🔴 Market size: the spread is still the finding
+
+| source (secondary) | 2026 value |
+|---|---|
+| ResearchAndMarkets | $10.60 B |
+| Precedence Research | $9.58 B |
+| 🔴 spread across firms describing the same year | **19%** |
+
+🔵 No point estimate is published here. `p478`'s 1.8× spread on the 2026 value stands as the wider bound.
+
+### 🟢 Adoption and regulation, by region — `Gap 478-X` and `Gap 478-AA` addressed
+
+🔵 All secondary. Where a region returned nothing on an axis, that is recorded as **searched-and-missing**.
+
+| region | adoption read this pass | regulation read this pass | named players read this pass |
+|---|---|---|---|
+| **North America** | 🔴 faculty intent to use AI in teaching **fell 76% → 67%** (2025 → 2026) and only **26%** of US/Canada faculty say they are excited about AI in learning (Digital Education Council global survey 2026) | 🟢 **Canada:** no AI statute — AIDA died with Bill C-27 in Jan 2025; the **"AI for All" strategy launched 4 June 2026** carries a National AI Literacy Initiative, AI-content watermarking and a Canada Trusted AI Certification. 🟢 **Mexico:** no general AI law; a constitutional amendment giving Congress explicit AI competence was expected in the session opened 1 Sept 2026; **85 AI initiatives counted since Apr 2023, 67 still pending** | Duolingo **52.7 M DAU** at Q4 2025, +30% YoY |
+| **EMEA** | 🟡 **15%** of students say AI is integrated into *many* of their courses and **43%** into *a few*; the survey's 67%-intent figure is attributed to US/Canada in one summary of the same data and to EMEA in another — 🔴 **this base cannot resolve which** | 🔵 the **EU AI Act** remains the binding frame, phased through 2026–2027; the OECD **Digital Education Outlook 2026** recommends moving from general-purpose tools to **purpose-built educational AI**. 🔴 **Africa:** South Africa's draft national AI policy was **abrogated 27 April 2026**; Ghana sat in a policy vacuum until Feb 2026; **69%** of surveyed respondents do not know whether their country has a national AI policy. 🟢 **MENA:** **34 universities** have an AI policy or guidelines — institutional governance is running ahead of national law | 🟢 **Preply** raised **$150 M** in January, the largest edtech round of that quarter; **American University in Cairo** (administrative chatbots) and **UM6P** (Morocco) named as early adopters; the EAC's **IUCEA** is building a federated AI hub whose **AI-DARASA** platform targets **50,000** people trained by 2028 |
+| **APAC** | 🟡 **49%** of APAC businesses cite insufficient real-time data infrastructure as an adoption barrier; **87%** of organisations encourage AI agents while only **47%** have governance for them (OneTrust) — 🔴 neither figure is education-specific | 🟡 Singapore's regulator consulted on AI in financial institutions (transparency, accountability, risk oversight) and is read as a template for enterprise AI; Australia is tightening AI governance and copyright. 🔴 **No ministry-level education AI regulation was found for any APAC market this pass** | 🟢 **TCS + Pearson** announced a multi-year AI learning alliance aimed at employer skills gaps; **LearnUpon** opened an APAC HQ in Sydney with AI course authoring (Create+) |
+| **LATAM** | 🟡 **Brazil 76%**, **Mexico 70%** AI adoption penetration (NEO report, economy-wide, not education) | 🟢 **716 AI regulatory instruments** across 23 LAC countries and territories as of **3 July 2026** — **Brazil 212, Mexico 126, Colombia 101, Argentina 95, Peru 73** (Universidad de los Andes public-policy report). 🟢 **Chile** has had a national AI policy since 2021 with a law in discussion. 🔴 **Mexico education specifically: SEP, ANUIES and the Observatorio IA have issued recommendations that are explicitly non-binding** — no mandatory guidance for schools or universities | 🔴 **searched and missing** — no LATAM edtech vendor, funding round or named platform surfaced on this pass's queries |
+
+🔵 **`Gap 478-AA`'s objection is now half-answered rather than carried.** Africa, the Middle East and the Levant
+were examined on both axes and returned real material (South Africa, Ghana, the EAC hub, 34 MENA universities,
+Palestine's 2025–2027 higher-education AI policy initiative). 🔴 The closed region vocabulary still files all of it
+under **EMEA**, alongside the European readings, and that single bucket now spans a binding statute (EU) and a
+measured **absence** of national law across most of the African markets named.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Faculty sentiment is falling while institutional procurement continues** — intent to use AI in teaching down
+nine points, only 26% enthusiastic. 🟢 That is an opportunity for **provable human-in-the-loop** work rather than
+for autonomy: a district or university buying a tutoring deployment this year needs the evidence trail that a
+human decided, not a better model. 🟢 The permissive components for exactly that are North American and maintained
+— [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) (Apache-2.0, 144★), [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec)
+(Apache-2.0, 956★), [CAHLR/OATutor](https://github.com/CAHLR/OATutor) (MIT, 271★, pushed the day of this pass) —
+and the Canvas boundary now has an MIT implementation in [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp).
+🟡 **Canada is a distinct engagement, not a US variant**: the "AI for All" strategy's AI-literacy and
+certification tracks are procurement surface that does not exist south of the border. 🔵 Mexico sits in this
+region commercially and in LATAM in this base's vocabulary; see below.
+
+### EMEA
+
+🟢 **The one region where the regulatory frame is binding and dated** is the one where a compliance-shaped
+deliverable sells itself: an Annex III high-risk tutoring file built on a permissive platform. 🟢 EMEA's own
+open-source contribution is the **adaptive core** ([ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp),
+MIT) and the **audit layer** ([DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi), MIT), which is
+exactly the pair a regulated deployment needs. 🔴 The region supplies **two** rows in a 25-row census, so any EMEA
+engagement is composing imported agents under European rules — and the OECD's own 2026 recommendation (move from
+general-purpose to purpose-built educational AI) is an argument for building the purpose-built layer rather than
+reselling a general assistant. 🟢 **Africa and MENA are a separate motion inside this bucket**: with institutional
+guidelines ahead of national law (34 MENA universities with policies, South Africa's national policy abrogated),
+the sellable artefact is an **institutional** AI-use policy plus a deployment that implements it, and the EAC's
+50,000-trainee target by 2028 is a named, dated capacity-building programme.
+
+### APAC
+
+🟢 **This is where the supply is** — 11 of 25 census rows, almost all MIT, and the single accelerating repository
+in the whole base ([HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor), 94.0 ★/h, 15.2× its lifetime average).
+🟢 For a studio the opportunity is **localisation and productisation**: these projects are MIT, maintained and
+built against named curricula, so the work is adapting a working tutor to another curriculum, language and
+assessment regime rather than building one. 🔴 The governance gap is the risk and the second opportunity: 87% of
+organisations encourage agents, 47% have governance for them, and **no ministry-level education AI regulation
+surfaced for any APAC market** — so the guardrails are a deliverable the buyer has not yet been told they need.
+🟡 `TCS + Pearson` and `LearnUpon`'s Sydney build-out indicate the enterprise-skills segment is already contested
+by incumbents.
+
+### LATAM
+
+🔴 **The region's open-source education estate is administrative and copyleft**:
+[portabilis/i-educar](https://github.com/portabilis/i-educar) (GPL-2.0) and
+[portabilis/i-diario](https://github.com/portabilis/i-diario) (AGPL-3.0, and in an **unofficial Portuguese
+translation** that does not declare itself as one). 🟢 That is a real opportunity with a real constraint: a
+municipal or state engagement in Brazil starts from working *software público* rather than from nothing, and the
+licence dictates that AI sits **beside** it over an API, never inside it. 🟢 The curriculum layer is the region's
+permissive asset — [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) (MIT, 1,721 BNCC objectives) and
+[cortega26/chile-hub](https://github.com/cortega26/chile-hub) (MIT, Chilean public data) — and it is the layer that
+is non-commercial everywhere else, which makes it disproportionately valuable here. 🔴 **The agentic layer must be
+imported**, and the regulatory ground is moving fastest of any region by volume: 716 instruments across 23
+countries, Brazil 212, Mexico 126. 🟡 Mexico's education-specific guidance (SEP, ANUIES, Observatorio IA) is
+explicitly **non-binding**, which means an institution buying today is choosing its own standard — and will pay
+for help choosing it.
+
+### Global
+
+🟢 Three things are region-independent on this pass's evidence. 🔴 **First, licensing diligence is not optional at
+the top of the supply:** five unlicensed education repositories totalling over 30,000★, one 2,049★ project under a
+bespoke non-commercial licence demanding a revenue-sharing agreement, and a 4,165★ curriculum graph whose CC BY-NC
+grant covers its tool code. 🔴 **Second, automated grading does not exist as open source** — a census at a 15★
+floor returns **zero** rows, under a query whose recall is widened by GitHub's own stemming. 🟢 **Third, the
+adaptive and audit layers are permissive and maintained everywhere**, so the reusable spine of any engagement
+(knowledge tracing, xAPI, an LRS, an LMS boundary over MCP) is the same in every region, and only the curriculum,
+language and regulatory wrapper changes.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-AC`** | **Every demand-side figure above is secondary and remains so by environment.** `Gap 478-V` and `Gap 478-W` are carried unchanged: no market figure is first-hand, no regulatory date is read from a primary instrument, and the EU high-risk date (2 Aug 2026 vs 2 Dec 2027) is still unresolved. |
+| 🔴 **`Gap 479-AD`** | **The EMEA adoption statistic is ambiguous at the source.** The 67%-intent figure is attributed to US/Canada in one summary and to EMEA in another of the same survey. It is published above **with the ambiguity marked** rather than resolved, because the survey itself could not be opened. |
+| 🔴 **`Gap 479-AE`** | **LATAM returned no named vendor, platform or funding round** on any query this pass. That is recorded as searched-and-missing; it is not evidence that none exists. |
+| 🔴 **`Gap 479-AF`** | **The supply/demand asymmetry is still not a measured ratio** (`Gap 478-Y` unchanged). Regulatory-instrument counts and repository counts come from different instruments over different populations; only the direction should be carried. |
+| 🟡 **`Gap 479-AG`** | **Region is assigned from stated artefacts, not from owner location**, because the authenticated user-search channel returns no `location` field. Twelve of 25 census rows are therefore unplaceable, and a project targeting one curriculum may well be authored elsewhere — the table says what a project *addresses*, not where it was written. |
+| 🟡 **`Gap 479-AH`** | **"No ministry-level APAC education AI regulation" is a statement about this pass's queries**, which were English-language and region-level. A national curriculum authority publishing in Mandarin, Japanese or Bahasa would not have surfaced. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🔴 `Gap 477-Y` CHANGES CATEGORY: "no primary instrument has ever been read first-hand here" is NOT a diligence failure this pass can fix — it is an ENVIRONMENT BOUNDARY, now measured. EUR-Lex, arXiv, UNESCO and every market-research host probed are REFUSED AT THE GATEWAY, and the proxy's own rejection log names them. 🟢 Every market and regulatory line on this shelf is therefore irreducibly secondary HERE, and later passes should stop carrying it as an open action.**
 

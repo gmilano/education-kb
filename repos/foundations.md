@@ -3,6 +3,123 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🟢 THE AGPL-3.0 CONTROL EXISTS AFTER ALL — four unrelated projects are byte-identical at **34,523 B · `0d96a4ff68ad`** — and the same measurement found the thing this base has been asserting without proof: a **byte-count collision**. Two projects carry 34,523 B with a **different digest**, so for AGPL-3.0 a matching byte count is not merely weak evidence, it is *actively misleading*. 🔴 And the maintenance read is the commercial finding: **`EduKTM` has not been pushed since 2024-01-02** and **`pelotech/xapi-lrs` has 0★** — both are load-bearing components in this base's own recipes.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green — see the
+agents shelf). Grants in
+[`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv); licence-text
+controls in [`evidence/license-controls.2026-10-27-p479.tsv`](../evidence/license-controls.2026-10-27-p479.tsv);
+elections in [`evidence/election-probe.2026-10-27-p479.tsv`](../evidence/election-probe.2026-10-27-p479.tsv).
+
+---
+
+### 🟢 The AGPL-3.0 control, and the collision that makes byte counts unsafe
+
+🔵 `p478` recorded: *"no AGPL control exists — four byte counts, so a byte count alone can never identify AGPL-3.0
+here."* 🟢 The control was missing because the sample was four copyleft **platforms**, all shipping older
+renderings. This pass read AGPL payloads from **ten** projects and the FSF text appears cleanly:
+
+| byte count | digest | projects seen at this digest | reading |
+|---|---|---|---|
+| **34,523** | `0d96a4ff68ad` | [overhangio/tutor](https://github.com/overhangio/tutor), [sitor-ai/frametell](https://github.com/sitor-ai/frametell), [penecho/penecho](https://github.com/penecho/penecho), [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | 🟢 **four unrelated projects byte-identical — this is the control** |
+| **34,523** | `8486a10c4393` | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse), [yh2072/edgameclaw](https://github.com/yh2072/edgameclaw) | 🔴 **same length, different bytes** — and reproduced across two unrelated projects, so it is a second rendering, not a typo |
+| 34,522 | `20b067f86de3` | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🟡 the control minus its final newline |
+| 34,520 | `57c8ff33c9c0` | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🟡 older rendering; tail cites `http://` gnu.org |
+| 34,514 | `ea94d5765c59` | [artcc/freelingo](https://github.com/artcc/freelingo) | 🟡 unmatched |
+| 35,240 | `119d54a4bd57` | [1111philo/learn](https://github.com/1111philo/learn) | 🟡 unmatched; 17 occurrences of *"Affero"* |
+| 35,326 | `fe85f94658bf` | [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **a Portuguese translation** of AGPL-3.0 |
+| 35,136 | `e12d78569742` | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🟡 older rendering |
+| 33,893 | `db1a87ba81e8` | [frappe/lms](https://github.com/frappe/lms) | 🟡 older rendering, lowercase `license.txt` |
+| **1,134** | `3fb8cda58638` | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 **a 1.1 KB notice, not the licence** — 584★ and no full text in the repository |
+
+🔵 **`diff` on the collision pair**, run against the control: the two 34,523-byte files differ at lines 636–637,
+inside the FSF *"How to Apply"* appendix, where `as published by / the Free Software Foundation` is re-wrapped as
+`as published / by the Free Software Foundation`. 🟢 **The operative terms are identical**, so `learnhouse` and
+`edgameclaw` really are AGPL-3.0 unmodified in substance. 🔴 **But the method is now disproved**: a byte count that
+*matches the control exactly* can still be a different file. For AGPL-3.0 only the digest identifies the text, and
+every AGPL row on every shelf of this base should be read as digest-identified or not identified at all.
+
+🟢 The same reading gives the other two families a second control each: **Apache-2.0** at 11,357 B ·
+`c71d239df917` now appears in three unrelated projects ([yetanalytics/lrsql](https://github.com/yetanalytics/lrsql),
+[pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs), [f3an/kodeida](https://github.com/f3an/kodeida)), with a
+**+1-byte** variant at `cfc7749b96f6` shared by two more
+([cyyeh/agent-loop-visualizer](https://github.com/cyyeh/agent-loop-visualizer),
+[Amine-LG/RootToRun](https://github.com/Amine-LG/RootToRun)); **GPL-3.0** at 35,149 B · `3972dc9744f6` now appears
+in three ([plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt),
+[saniales/ai-lesson-planner](https://github.com/saniales/ai-lesson-planner),
+[ahmedEid1/lumen](https://github.com/ahmedEid1/lumen)).
+
+### 🔴 The maintenance read — two components this base recommends are not alive
+
+🔵 `Gap 478-N` asked whether the knowledge-tracing libraries are maintained; `Gap 478-M` asked for any differenceable
+state at all. 🟢 The search channel answers both with first-hand timestamps:
+
+| repo | ★ | created | last push / update read | reading |
+|---|---|---|---|---|
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 452 | 2022-05-14 | **pushed 2026-10-18** | 🟢 **alive** — nine days before this pass |
+| [bigdata-ustc/EduKTM](https://github.com/bigdata-ustc/EduKTM) | 267 | 2021-03-17 | 🔴 **pushed 2024-01-02** | 🔴 **dormant 2 y 10 m** — and it is P12's mastery-model component |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 271 | 2019-12-19 | **pushed 2026-10-27** | 🟢 alive, pushed the day of this pass |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 144 | 2021-05-06 | updated 2026-10-27 | 🟢 alive |
+| [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | **0** | 2026-03-04 | 🔴 updated 2026-08-08 | 🔴 **zero stars, nothing in 2½ months** — and it is P12's record store |
+| [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 15 | 2025-05-24 | updated 2026-08-22 | 🟡 quiet |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 22 | 2026-07-09 | updated 2026-10-19 | 🟢 recent |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,162 | 2016-01-19 | updated 2026-10-27 | 🟢 alive; the one permissive platform here |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 1,143 | 2017-02-13 | updated 2026-10-27 | 🟢 alive |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 956 | 2012-12-19 | updated 2026-10-22 | 🟢 the interop contract, maintained |
+
+🔵 **`pelotech/xapi-lrs` also explains an apparent anomaly.** It did not appear in a name search for `xapi-lrs`
+sorted by stars — because it has **none**. 🟢 Its grant is two-pass consistent (11,357 B · `c71d239df917`, the
+Apache control, same as `p478`) and `git ls-remote` resolves it, so this is **not** a canonicality problem of the
+kind `Gap 478-AO` describes: it is a real address with zero adoption. 🔴 Which is worse for a recipe than a
+rename would be.
+
+### 🟢 Elections: two of the four unread ones are now read
+
+🔵 `Gap 478-K` and `Gap 478-Q` named four copyleft rows whose election — *version 3 only* vs *or later* — had never
+been read. Two are now resolved from the projects' own packaging declarations:
+
+| repo | declaration read | election | channel |
+|---|---|---|---|
+| [frappe/lms](https://github.com/frappe/lms) | `"license": "AGPL-3.0-or-later"` | 🟢 **or-later** — an upgrade option exists | `package.json` line 18 |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | `'license': 'LGPL-3'` plus a file header reading *"either version 3 of the License, or (at your option) any later version"* | 🟢 **LGPL-3.0-or-later** | `openeducat_core/__manifest__.py` line 25 + header |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | `"license": "AGPL-3.0"` | 🔴 **unresolved** — a bare, deprecated SPDX identifier that elects nothing | `package.json` line 3 |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | **nothing** — no licence field in `package.json`, no `license` key or classifier in 48,283 B of `pyproject.toml`, `setup.py` 404 | 🔴 **unresolved** | two channels read, both silent |
+
+🔵 `frappe/lms` was the row this base most wanted, because `p477` found a vendor table calling it MIT. 🟢 It is
+AGPL-3.0, **or-later**, declared by the project itself.
+
+### 🟢 The permissive foundation tier, every grant first-hand
+
+🔵 Unchanged rows carry their payload from the pass that read them; new rows are read this pass.
+
+| repo | grant (payload) | bytes · sha | what it is | region |
+|---|---|---|---|---|
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | 11,357 · `c71d239df917` | SQL-backed xAPI Learning Record Store, Clojure; 144★ | North America |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | 11,525 · `a1587287ff04` | the xAPI specification itself; 956★ | North America |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | 1,066 · `f5f955194636` | deep knowledge-tracing benchmarks; 452★, pushed this month | APAC |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | 1,105 · `5baaaf977a28` | BKT-driven open ITS, UC Berkeley CAHL; 271★, pushed today | North America |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1,097 · `3c056b34a476` | offline-first learning platform; 1,162★ | Global |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 11,906 · `cbac9a0fde05` | general ERP framework — the permissive fallback; 1,143★ | Global |
+| [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** | 1,069 · `4aa758cb51b2` | MCP server writing agent turns as xAPI statements; 15★ | EMEA |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** | 1,092 · `e162f8f4b461` | 1,721 BNCC curriculum objectives, JSON/SQLite/CSV; 22★ | LATAM |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** | 1,072 · `4450dee7f762` | 🆕 **read-only MCP server onto Canvas LMS** — the LTI/REST boundary as a component; 115★, created 2026-10-25 | Global |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 🟢 **MIT** | 1,070 · `277707dcaa3b` | 🆕 curated Chilean public data incl. education, Polars/DuckDB/SQLite-ready; 135★ | LATAM |
+| [Universidade-Livre/ciencia-da-computacao](https://github.com/Universidade-Livre/ciencia-da-computacao) | 🟢 **MIT** | 1,087 · `6520b550c69f` | 🆕 Brazilian self-study CS curriculum, 20,970★ — the most-starred Portuguese-language education repository measured here | LATAM |
+| [bigdata-ustc/EduKTM](https://github.com/bigdata-ustc/EduKTM) | 🟢 **Apache-2.0** | 11,367 · `59f13c04f0e6` | knowledge-tracing model zoo — 🔴 **dormant since 2024-01-02** | APAC |
+| [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** | 11,357 · `c71d239df917` | xAPI 1.0.3 + 2.0 LRS on Hono + Postgres — 🔴 **0★, quiet since 2026-08-08** | Global |
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-G`** | **`Gap 478-J` and `Gap 478-O` stand: no depth or scope probe ran.** Every row is graded on one grant file; the ECL-2.0 patent reading on `sakaiproject/sakai` is still this base's own reading of licence text and not advice. |
+| 🔴 **`Gap 479-H`** | **Two elections remain unread** — `canvas-lms` (bare `AGPL-3.0`) and `openedx-platform` (nothing declared in two channels). For Open edX the deployment path's election is known (`tutor` is AGPL-3.0-**only**), so the platform's own election is the gap that matters least in practice and most in principle. |
+| 🔴 **`Gap 479-I`** | **`Gap 478-L` unchanged: BigBlueButton's per-source-file notice is still unread**, and the LGPL-3.0 reading still rests on one `LICENSE` plus one module's `build.sbt`. |
+| 🟡 **`Gap 479-J`** | **The digest families are observational, not exhaustive.** Ten AGPL payloads produced eight distinct digests; nothing here maps those digests to FSF publication events, so "older rendering" is an inference from the `http://` vs `https://` tail and the byte count, not a dated provenance. |
+| 🟡 **`Gap 479-K`** | **`last push` is read for six rows and `updated_at` for the rest.** They are different events — a metadata touch updates one and not the other — so "alive" is graded on a weaker signal for `lrsql`, `kolibri`, `ofbiz-framework`, `xAPI-Spec`, `learnmcp-xapi` and `bncc-dados` than for `EduKTM` and `pykt-toolkit`. |
+| 🟡 **`Gap 479-L`** | **No row was installed, run or benchmarked**, repeating `Gap 478-N`'s core objection. "`pykt-toolkit` is maintained" is now measured; "`pykt-toolkit` works" is not. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-N` IS CLOSED AND THE ANSWER IS THE RESTRICTIVE ONE: `overhangio/tutor` elects **`AGPL-3.0-only`**, declared in `pyproject.toml`, so the standard Open edX deployment path has no upgrade option. 🟢 A declared nil in the secondary literature — "no open source knowledge tracing library" — is refuted by two payload-verified repositories. 🔴 And this pass's own 404 on `frappe/lms` was an artefact of its own path list: the grant is there, in lowercase, and it is AGPL-3.0.**
 

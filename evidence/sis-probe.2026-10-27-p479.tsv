@@ -1,0 +1,8 @@
+candidate	address	resolve	grant_channel	verdict
+OpenSIS Classic	os4ed/openSIS-Classic	LIVE (master)	NO grant file at 20 paths; README says "GNU General Public License"	copyleft claim, no payload
+OpenSIS Responsive	os4ed/OpenSIS-Responsive-Design	LIVE (master)	NO grant file at 20 paths; same README wording	copyleft claim, no payload
+SchoolTool	schooltool/schooltool	DEAD (ls-remote fails)	none	address does not resolve
+Fedena	foradian/fedena	LIVE (master)	NOTICE 679 B: "Licensed under the Apache License, Version 2.0"	PERMISSIVE, declared via NOTICE
+Fedena	projectfedena/fedena	LIVE (master), 547 star, created 2011-12-31	NOTICE 680 B: same Apache-2.0 declaration	PERMISSIVE, declared via NOTICE
+i-Educar	portabilis/i-educar	LIVE (2.12), 721 star	LICENSE 18,092 B GPL-2.0	copyleft, payload read
+i-Diario	portabilis/i-diario	LIVE (1.6), 117 star	LICENSE 35,326 B AGPL-3.0 in Portuguese translation	copyleft, payload read

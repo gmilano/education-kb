@@ -3,6 +3,120 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🔴 THIS PASS CORRECTS ITS OWN RECIPES BEFORE ADDING ANY: **P11's hand-waved Canvas boundary now has an MIT implementation**, **P12's mastery component has not been pushed since 2024-01-02**, and **P12's record store has 0★ and nothing since 2026-08-08**. 🟢 Three components swapped on measured grounds, then three new recipes — one per region that this pass could actually place — including the first LATAM recipe built on working *software público* rather than on imported parts.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+Grants in [`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv);
+maintenance reads in [`evidence/census.2026-10-27-p479.tsv`](../evidence/census.2026-10-27-p479.tsv) and on
+`repos/foundations.md`.
+
+---
+
+### 🔴 Corrections to P11, P12 and P13 — three components fail a maintenance or licence check
+
+| recipe · item | component as published | what was measured this pass | 🔁 replacement |
+|---|---|---|---|
+| **P11 · item 6** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) *"stays a separate deployed service, reached over LTI/REST — never forked, never linked"* — 🔴 architectural reasoning only (`Gap 478-AL`) | 🟢 [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) exists: **MIT**, 1,072 B · `4450dee7f762`, 115★, created 2026-10-25, **read-only** MCP server onto Canvas | 🟢 keep Canvas deployed as-is and **add `canvas-mcp` as item 7**: the agent reads courses, assignments and submissions over MCP. Read-only is the feature — nothing the agent does can write to the AGPL-3.0 system |
+| **P12 · item 3** | [bigdata-ustc/EduKTM](https://github.com/bigdata-ustc/EduKTM) — knowledge-tracing models behind the sequencing decision | 🔴 **last pushed 2024-01-02** — dormant 2 y 10 m; 267★; Apache-2.0 confirmed | 🔁 [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) — **MIT**, 452★, **pushed 2026-10-18**. Already P11's item 2, so the two recipes converge on one maintained library |
+| **P12 · item 5** | [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) — *"embedded PGlite mode for a single-tenant EU deployment"* | 🔴 **0★**, created 2026-03-04, nothing since **2026-08-08**. Grant is sound (Apache-2.0, byte-identical to the control, two passes) but adoption is nil | 🔁 [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) — Apache-2.0, 144★, updated the day of this pass. 🟡 Loses the embedded-PGlite single-binary story; that was the only reason to prefer the 0★ option |
+| **P13 · item 6** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) *"fallback, if LGPL is acceptable"* | 🟢 election now read: **LGPL-3.0-or-later** (manifest + header), so the upgrade path is open | 🟢 unchanged, but the fallback is now **licence-qualified** rather than licence-assumed |
+| **P13 · premise** | *"permissive school administration where no permissive SIS exists"* | 🔴 **the premise is wrong**: [projectfedena/fedena](https://github.com/projectfedena/fedena) declares **Apache-2.0** in a `NOTICE`, 547★, copyright **2011** | 🟢 P13 survives as *one of two* options; the other is P16 below, which prices the port |
+
+🔵 **The pattern in all three corrections is the same and worth naming:** every one of these components passed a
+*licence* check in an earlier pass and failed a *liveness* check in this one. 🟢 A grant tells you whether you may
+build on something; it says nothing about whether anyone else does. 🔴 This base graded components on grants for
+four passes and could not grade them on liveness until the search channel returned.
+
+---
+
+### 🟢 P14 — LMS-attached tutoring for a North American district, without forking anything
+
+🔵 **The engagement.** A district or university already runs Canvas and is procuring AI tutoring into a falling
+faculty-confidence environment (intent to use AI in teaching down 76% → 67%; 26% of US/Canada faculty
+enthusiastic). What sells is not autonomy; it is a provable record that a human decided.
+
+| # | component | repo | grant (payload) | role |
+|---|---|---|---|---|
+| 1 | LMS reader | [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** · 1,072 B · `4450dee7f762` | read-only MCP onto Canvas: courses, assignments, submissions. **No write path exists**, so the AGPL-3.0 system is never touched |
+| 2 | tutoring surface | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 MIT · 1,105 B · `5baaaf977a28` | BKT-driven ITS from a US research lab; 271★, **pushed the day of this pass** |
+| 3 | mastery estimate | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT · 1,066 B · `f5f955194636` | a **computed** mastery state rather than the model's opinion; 452★, maintained |
+| 4 | assessment gate | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT · 1,069 B *(p478)* | every assessment-shaped artefact passes its human-review step before export. 🔴 0★ — chosen because the grading census returns **zero** alternatives |
+| 5 | audit trail | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 MIT · 1,069 B · `4aa758cb51b2` | each agent turn emitted as an xAPI statement over MCP |
+| 6 | record store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 · 11,357 B · `c71d239df917` | queryable LRS — the district's evidence that a human decided, and the artefact a sceptical faculty senate can audit |
+
+🔵 **Wiring.** `canvas-mcp` and `learnmcp-xapi` are both MCP servers, so one agent runtime mounts both: it *reads*
+the course from Canvas and *writes* statements to `lrsql`, and the only write path in the whole design points at
+the LRS. `pykt-toolkit` runs as a batch service over the LRS statement stream and returns a mastery vector that
+`OATutor` consumes for sequencing; `AI-Teaching-Agent` sits in front of any export back to a human.
+🟢 **Every component is permissive and every one except item 4 is demonstrably maintained.**
+🔵 **Estimate 7–10 weeks** — judgement, not measurement (`Gap 479-AO`).
+
+### 🟢 P15 — a Brazilian municipal engagement on working *software público*
+
+🔵 **The engagement.** A Brazilian municipal or state secretariat already runs i-Educar — the largest free
+school-management system in the country — and wants AI assistance for teachers without touching the system of
+record. 🔴 i-Educar is **GPL-2.0** and its gradebook companion i-Diario is **AGPL-3.0 in an unofficial Portuguese
+translation**, so the architecture is dictated by licence before anyone designs it.
+
+| # | component | repo | grant (payload) | role |
+|---|---|---|---|---|
+| 1 | system of record | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** · 18,092 B · `8177f9751321` | **stays deployed, unmodified, reached over its own HTTP API** — never forked, never linked into the deliverable; 721★ |
+| 2 | curriculum spine | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** · 1,092 B · `e162f8f4b461` | 1,721 BNCC objectives in JSON/SQLite/CSV — the alignment layer, and **permissive**, which the alternatives are not |
+| 3 | teacher agent | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** · 1,078 B *(p478)* | local-first lesson and slide drafting with an **Ollama** adapter — runs inside a school network with no egress |
+| 4 | offline delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** · 1,097 B · `3c056b34a476` | learner delivery where connectivity is intermittent; 1,162★, v0.19.5 |
+| 5 | audit trail | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) + [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 MIT + Apache-2.0 | statements out of the agent, into a store the secretariat owns |
+
+🔴 **What this recipe forbids, explicitly.** [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy)
+is the best-structured curriculum knowledge graph this base has measured (1,644 knowledge points, 2,403
+prerequisite edges, 6,723 problems, 4,165★) and it is **CC BY-NC 4.0 with the tool code inside the grant** — it
+**cannot** be used in a paid municipal engagement. Item 2 is the permissive substitute, and it is Brazilian, which
+is also why it fits.
+🟡 **Licence boundary.** GPL-2.0 has no network clause, so item 1 over HTTP is a cleaner boundary than an AGPL-3.0
+system would give — but i-Diario, if in scope, **is** AGPL-3.0, and then item 1's reasoning does not transfer.
+🔵 **Estimate 9–13 weeks** — judgement, not measurement (`Gap 479-AO`).
+
+### 🟢 P16 — the permissive-SIS decision, now that one exists
+
+🔵 **The engagement.** A client wants student administration on a permissive base — no GPL, no AGPL, no LGPL — and
+P13 was written when this base believed no permissive SIS existed. 🟢 One does. This recipe is the **decision**,
+with both arms priced in the same units.
+
+| arm | what you start from | grant | what you are buying | what you are paying |
+|---|---|---|---|---|
+| **A — port** | [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 **Apache-2.0** *(declared in `NOTICE`, 680 B)* | a working education domain model: students, enrolment, attendance, exams, fees — 547★, 560 forks | 🔴 a **2011** Ruby-on-Rails codebase: framework and Ruby upgrades, dependency archaeology, no measured cadence, and `Gap 479-M` on whether a `NOTICE` is the grant |
+| **B — model** | [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · 11,906 B · `cbac9a0fde05` | party, billing, scheduling and a maintained enterprise spine — 1,143★, updated the day of this pass | 🔴 **the student domain does not exist** and must be modelled; this is P13 item 1, still the largest unestimated piece on this shelf (`Gap 478-AM`) |
+| **C — accept LGPL** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0-or-later** *(election read this pass)* | the ready-made education ERP on Odoo | 🔴 copyleft on the module boundary, with an upgrade option now confirmed |
+
+🔵 **How to decide, on this pass's evidence.** 🟢 Arm A is right when the client's constraint is *licence* and the
+domain is standard — the Apache-2.0 grant is the whole point and the domain model is already correct. 🟢 Arm B is
+right when the client's constraint is *maintenance* and the domain is unusual, because an unmaintained correct
+model costs more than a maintained empty one. 🔴 Arm A has never been run here and its upgrade cost is
+**unmeasured**, so this recipe does not recommend one arm: it says that the choice is now real and names what to
+measure first — Fedena's dependency manifest and last commit date, neither of which this pass read.
+🔵 **Estimate: arm A 6–10 weeks *if* the port is clean (unquantified risk); arm B 10–14 weeks; arm C 4–6 weeks** —
+judgement, not measurement (`Gap 479-AO`).
+
+### 🔵 One component note for every recipe above
+
+🔵 Four of the five recipes on this shelf now mount **two or more MCP servers in one agent runtime**
+(`canvas-mcp`, `learnmcp-xapi`, `tutor-mcp`, `anki-mcp-server` where relevant). 🟢 That is the direct consequence
+of Trend 1 on `intel/trends.md`: the unit of supply has become a skill or a server, so composition is increasingly
+*mounting*, not *integrating*. 🔴 No pass of this base has ever started two of these servers in the same runtime
+and checked that their tool namespaces, auth models and statement vocabularies do not collide — which is now the
+single highest-value thing a future pass could actually execute.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-AO`** | **None of P14, P15 or P16 has been built or run**, and `Gap 478-AI` carries forward unchanged: no integration executed, no version compatibility tested, no xAPI profile validated against `lrsql`, and every week estimate is judgement. The corrections to P11–P13 are component swaps on measured liveness, **not** re-tested recipes. |
+| 🔴 **`Gap 479-AP`** | **`canvas-mcp` is two days old and unexercised here.** P14's whole licence argument rests on it being read-only; that claim is read from its description and name, **not** from its source, its scopes or a transcript. If it can write, P14's boundary argument collapses. |
+| 🔴 **`Gap 479-AQ`** | **`Gap 478-AK` persists in a narrower form.** P14's assessment gate is still a **0★** project whose README freezes grading productisation, chosen because the grading census returns zero alternatives. Selection is now on grant, liveness and description — **still never on capability**, because nothing was run. |
+| 🔴 **`Gap 479-AR`** | **P16 arm A is unpriced.** Fedena's dependency manifest, Ruby and Rails versions, test suite and last commit were **not read**; "6–10 weeks if the port is clean" is a sentence, not an estimate, and the conditional is carrying all the risk. |
+| 🟡 **`Gap 479-AS`** | **P15's licence boundary is architectural reasoning**, like every boundary on this shelf (`Gap 478-AL`): GPL-2.0-over-HTTP is read from the absence of a network clause, not from a determination about this codebase, and i-Diario's AGPL-3.0 **Portuguese translation** compounds the question rather than answering it. |
+| 🟡 **`Gap 479-AT`** | **No recipe was checked for localisation fit**, repeating `Gap 478-AN`. P15 is the exception that proves the cost: it exists *because* the APAC-origin curriculum graph could not be used, and its substitute was available only because Brazil happens to have a permissive curriculum dataset. No other region was checked for one. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-AH` IS CLOSED — P10's entire licensing argument rested on `learnmcp-xapi`'s carried MIT and on `bncc-dados`, whose grant had NEVER been read in any pass; both are now payload reads and both are MIT. 🟢 Three new recipes, every component payload-verified, and each one shaped by a constraint the other shelves measured this pass rather than by what is popular.**
 

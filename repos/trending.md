@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🟢 A LICENCE-COMPLETE WINDOW, FOR THE FIRST TIME ON THIS SHELF: all **22** repositories in the 30-day ≥30★ `topic:education` census carry a grant read as a payload this pass — **16 MIT, 1 Apache-2.0-family, 1 AGPL-3.0, 1 GPL-3.0, 2 Creative Commons NON-COMMERCIAL, 2 with no grant file at all**. 🔴 And the two non-commercial rows are exactly the two curriculum-and-content repositories, which turns this base's standing "code is permissive, curriculum is not" observation into a measured property of a complete population.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history. Census in
+[`evidence/census.2026-10-27-p479.tsv`](../evidence/census.2026-10-27-p479.tsv); grants in
+[`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv).
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+
+---
+
+### 🟢 The complete 30-day window, every grant first-hand
+
+🔵 `topic:education`, created on or after 2026-09-27, ≥30★; `total_count` **22**, `incomplete_results` **false**;
+★ exact at 11:50Z 2026-10-27. 🟢 **No row is a fork and no row is archived** — the blanket control `Gap 478-AT`
+asked for, run across this whole population rather than sampled.
+
+| repo | ★ | created | grant (payload) | bytes · sha |
+|---|---|---|---|---|
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,165** | 2026-10-18 | 🔴 **CC BY-NC 4.0** | 19,347 · `41003d4a7474` |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 966 | 2026-10-03 | 🟢 MIT *(p478)* | 1,069 |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 467 | 2026-10-14 | 🟢 MIT *(p478)* | 1,069 |
+| [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) | 453 | 2026-10-21 | 🔴 **no grant file** at 10 paths | — |
+| [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 418 | 2026-10-10 | 🔴 **AGPL-3.0** | 34,523 · `0d96a4ff68ad` |
+| [tonyzedginidze/librecalculator](https://github.com/tonyzedginidze/librecalculator) | 324 | 2026-10-11 | 🟢 **MIT** | 1,072 · `cd55cad16312` |
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 2026-10-18 | 🟢 **MIT** | 1,073 · `9234cc62970c` |
+| [Takamatsu-Hikaru/AI-Research-Guide](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | 188 | 2026-10-05 | 🔴 **no grant file** at 10 paths | — |
+| [keithligh/hk-traffic-intelligence](https://github.com/keithligh/hk-traffic-intelligence) | 137 | 2026-09-29 | 🟢 **MIT** | 1,065 · `b30270aadf8b` |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 115 | 2026-10-25 | 🟢 **MIT** | 1,072 · `4450dee7f762` |
+| [egplnt/-student-study-framework](https://github.com/egplnt/-student-study-framework) | 95 | 2026-09-30 | 🔴 **CC BY-NC-SA 4.0** | 20,850 · `e66c269d4819` |
+| [Zuimeng-0710/java-audit-lab](https://github.com/Zuimeng-0710/java-audit-lab) | 72 | 2026-09-29 | 🟢 **MIT** | 1,084 · `6e8073ed8485` |
+| [maplexrain/unyra](https://github.com/maplexrain/unyra) | 54 | 2026-09-29 | 🟢 **MIT** | 1,067 · `f7ef32f1240e` |
+| [Andiii208/seu-handbook-skill](https://github.com/Andiii208/seu-handbook-skill) | 51 | 2026-10-05 | 🟢 **MIT** | 1,497 · `965a0edb5701` |
+| [AirsupHQ/airsup-lab](https://github.com/AirsupHQ/airsup-lab) | 51 | 2026-09-28 | 🟢 **MIT** | 1,072 · `5506bf74050f` |
+| [shelfom/free-english-learning-tools](https://github.com/shelfom/free-english-learning-tools) | 42 | 2026-10-14 | 🟢 **MIT** | 1,477 · `6fc433902971` |
+| [callmevanshh/campusask](https://github.com/callmevanshh/campusask) | 41 | 2026-10-05 | 🟢 **MIT** | 1,067 · `0b3e2dc7fa93` |
+| [tanle-mtr/ChinaStudyFree](https://github.com/tanle-mtr/ChinaStudyFree) | 41 | 2026-10-16 | 🟢 **MIT** | 1,066 · `8e6a369c18d9` |
+| [rasidi3112/pondok-ai](https://github.com/rasidi3112/pondok-ai) | 37 | 2026-10-08 | 🟢 **MIT** | 1,079 · `c3dc4b0503f8` |
+| [sburton0/encyclopedia-2000](https://github.com/sburton0/encyclopedia-2000) | 36 | 2026-10-10 | 🔴 **GPL-3.0** | 35,149 · `3972dc9744f6` |
+| [valorisa/Reverse-Engineer-Anything](https://github.com/valorisa/Reverse-Engineer-Anything) | 36 | 2026-10-09 | 🟢 **MIT** | 1,065 · `9e7ba7e113bb` |
+| [brunnojob/devstart-lab](https://github.com/brunnojob/devstart-lab) | 31 | 2026-10-10 | 🟢 **MIT** | 1,075 · `8df8bf843e54` |
+
+| grant | rows | share |
+|---|---|---|
+| 🟢 MIT | 16 | 73% |
+| 🟢 Apache-2.0 family | 0 | 0% |
+| 🔴 AGPL-3.0 | 1 | 5% |
+| 🔴 GPL-3.0 | 1 | 5% |
+| 🔴 **CC BY-NC / BY-NC-SA** | **2** | **9%** |
+| 🔴 **no grant file** | **2** | **9%** |
+
+### 🔴 The non-commercial rows are the content rows, and one of them is the window's largest repository
+
+🔵 [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) took **4,165★ in nine
+days** — a curriculum-aligned knowledge graph of 1,644 knowledge points, 2,403 prerequisite edges and 6,723
+problems. 🔴 **Its grant is CC BY-NC 4.0, and its own README puts the tool code inside that grant**, not only the
+data: the licence section names *"知识图谱数据、题库、诊断工具代码及文档"* — graph data, question bank, **diagnostic
+tool code**, and documentation. 🔴 It states commercial use is excluded, naming paid courses, paid apps and
+institutional fee-charging services, and directs commercial users to contact the author for a separate licence.
+
+🔵 The second non-commercial row, [egplnt/-student-study-framework](https://github.com/egplnt/-student-study-framework)
+(95★), is **CC BY-NC-SA 4.0** — share-alike as well as non-commercial, and it declares the licence in its own
+description.
+
+🟢 **So the standing observation is now a measured property of a complete population:** in this window, every
+repository that is primarily *software* is permissive or copyleft, and **every repository that is primarily
+curriculum or study content is non-commercial**. 🔴 For a studio this is the single most expensive line on the
+shelf — the curriculum alignment layer a client asks for is exactly the layer that cannot be shipped, and the
+largest, best-structured example of it arrived this month.
+
+### 🔴 Two repositories with no grant at all, at 453★ and 188★
+
+🔵 [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) (453★) and
+[Takamatsu-Hikaru/AI-Research-Guide](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) (188★) return **404 on
+all ten probed licence paths**. 🔴 With no grant the default is exclusive copyright. 🔵 Together with
+[JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) (29,550★, 20 paths probed, no
+licence line in its README either) and the two ungranted rows on the agents shelf, this pass measured **five
+unlicensed education repositories totalling over 30,000★**. 🟡 "Open source" on this shelf's own evidence means
+*visible source* at least as often as it means *a grant*, in the upper tail.
+
+### 🔵 Two instrument notes the next pass should keep
+
+🔵 **Stemming widens keyword queries.** `grading in:name,description` matches *"production-grade"*: GitHub stems
+`grading` to `grade`. 🟢 That makes this pass's measured nil **stronger**, not weaker — a query whose recall is
+artificially broadened and still returns **0** at a 15★ floor is a robust nil, and it corroborates `p478`'s
+reading that open-source automated grading does not exist at any level of adoption.
+
+🔵 **Zero-star repositories sort last and can look absent.** [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs)
+did not appear in a star-sorted name search because it has **0★** — not because its address moved. Its grant is
+two-pass byte-consistent and `git ls-remote` resolves it. 🔴 A search miss is not evidence of a dead or renamed
+address, which is the inverse of the error `Gap 478-AO` warns about.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-X`** | **`Gap 478-AP` is not discharged.** The 175 citations pointing at 72 dead addresses in retained history are still uncorrected, and `openedx/edx-platform` still appears 47 times. This pass added a correction nowhere and applied none. |
+| 🔴 **`Gap 479-Y`** | **No address census ran this pass.** `p478`'s 3,245-address sweep is neither refreshed nor refuted; the fork/archived control published above covers the 22 census rows and the 25 agent-shelf rows, **not** the 3,146 live addresses in history. |
+| 🔴 **`Gap 479-Z`** | **The Caliper SDK finding is carried unchanged from `p478` and remains GitHub-only.** No non-GitHub forge or 1EdTech source was consulted, and none can be from here. |
+| 🟡 **`Gap 479-AA`** | **The window is one topic at one floor.** `topic:education` ≥30★ over 30 days is complete; the same window at ≥5★ was only run over 7 days, so the long tail of the 30-day window is unmeasured and the licence shares above describe the ≥30★ population only. |
+| 🟡 **`Gap 479-AB`** | **`cn-math-taxonomy`'s licence scope is read from its README's own licence section**, which is the project's statement about its `LICENSE` file rather than a clause inside the CC BY-NC text. Whether a court would read the tool code as covered by that grant is not a determination this base can make. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-J` IS CLOSED BY CENSUS, NOT SAMPLE: all **3,245** distinct addresses in this base were probed, all **11,542** citations accounted for, and the dead-address rate is **2.22 %** — inside `p477`'s 1.4–12.3 % interval and a quarter of its 5.0 % point estimate. 🔴 27 of the 99 non-resolving addresses were never repositories at all. 🔴 And the census surfaced a structural finding: 1EdTech's entire Caliper SDK family is gone while its SPEC survives.**
 

@@ -3,6 +3,189 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🟢 THE AUTHENTICATED SEARCH CHANNEL IS BACK, AND THE FIRST THING IT PROVES IS THAT THIS SHELF WAS A SAMPLE, NOT A CENSUS: a star-floor census of `topic:ai-tutor` returns **25** rows at ≥50★ and **16 of them have never appeared on this shelf**, including four above 200★. 🟢 Every one of the 25 now carries a first-hand grant read — 19 permissive, 4 copyleft, **2 with no grant file at all**. 🟢 And `Gap 478-A` is closed with a two-hour baseline: `HKUDS/DeepTutor` is running at **94.0 ★/h**, a 1.33×-wide interval against `p477`'s 3.8×.**
+
+🔵 **Gate posture, unchanged from `p475`–`p478` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's own code,
+held outside the clone, and green: frontmatter keys and closed-vocabulary `region` on all eight shelves; every
+table checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and prepend-only on these; every grant fetched to a file and the
+**file** measured (`Gap 468-A`).
+
+---
+
+### 🟢 The instrument `p478` lost is available again — and it is the stronger one
+
+🔵 `p478` recorded the authenticated repository-search channel as unreachable ("scoped to attached repositories
+only") and fell back to reading repository HTML. 🟢 **Re-measured this pass, the channel answers account-wide**,
+for repositories with no connection to this session, with `incomplete_results` **false** on every query
+([`evidence/reachability.2026-10-27-p479.tsv`](../evidence/reachability.2026-10-27-p479.tsv)):
+
+| channel | result this pass | what it yields |
+|---|---|---|
+| authenticated repository search | 🟢 **works, account-wide** | exact ★, `created_at`, `fork`, `archived`, `total_count` |
+| `raw.githubusercontent.com` | 🟢 **200** | licence and packaging payloads |
+| `git ls-remote` | 🟢 works | address resolution, default branch, tag list |
+| `github.com` HTML over `curl` | 🔴 **403** at gateway CONNECT | nothing |
+| `api.github.com` (`curl` and `gh api`) | 🔴 **403** | nothing for any repo not attached to this session |
+| authenticated **user** search | 🟡 works, **no `location` field** | nothing usable for region (`Gap 479-D`) |
+
+🔴 **The boundary that matters has not moved:** every non-GitHub host probed is still refused at the gateway, so
+this instrument serves the code tier and does nothing for the market or regulatory tiers.
+
+### 🟢 `Gap 478-A` closed — a velocity with a two-hour baseline, not a five-minute one
+
+🔵 `Gap 478-A`: *"No star velocity was measured this pass… `44.7k` cannot be differenced against `p477`'s
+`44,638`."* 🟢 The rounded figure is gone: both endpoints are now exact counts from the same channel, and the
+interval is **2 h 00 m 38 s** rather than `p477`'s 5.35 minutes
+([`evidence/star-velocity.2026-10-27-p479.tsv`](../evidence/star-velocity.2026-10-27-p479.tsv)).
+
+| repo | `t1` 09:49:47Z (`p477`) | `t2` 11:50:25Z (`p479`) | Δ | ★/h |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,638 | **44,827** | **+189** | 🟢 **94.0** |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,227 | 1,230 | +3 | 1.5 |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 914 | 916 | +2 | 1.0 |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 965 | 966 | +1 | 0.5 |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,182 | 1,182 | **0** | 0.0 |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 348 | 348 | **0** | 0.0 |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 467 | 467 | **0** | 0.0 |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 56 | **0** | 0.0 |
+
+🟢 **The precision gain is the point.** 189 star events give a Poisson 95% interval of **80.6–107.4 ★/h** — a
+factor of **1.33** wide, against `p477`'s 47–177 ★/h at a factor of 3.8. Over 302.8 days DeepTutor's lifetime
+average is **148.0 ★/day = 6.17 ★/h**, so the current rate is **15.2× its own lifetime average** — and `p477`
+independently measured 14.6× on a different interval. 🟢 Two passes, two intervals, same answer: **this repository
+is still accelerating at 44.8k★.**
+
+🔴 **And the tier is not accelerating with it.** DeepTutor took **+189** stars in the same two hours in which the
+other seven measured rows took **+6 between them**, a ratio of **31.5 : 1**. Attention in open-source education AI
+is not distributed across a tier; it is concentrated in one row, and this is now measured rather than asserted.
+
+### 🟢 `Gap 478-F` closed for this shelf — a licence-complete census, and two rows with no grant at all
+
+🔵 `Gap 478-F`: *"No census ran… six repositories found by keyword search with no measurable recall and no star
+floor."* 🟢 This pass ran star-floor censuses with `incomplete_results` checked on every query
+([`evidence/census.2026-10-27-p479.tsv`](../evidence/census.2026-10-27-p479.tsv)). `topic:ai-tutor stars:>50`
+returns **25** rows; `stars:>20` returns 36. 🟢 **All 25 rows of the ≥50★ population carry a grant read as a
+payload this pass** — the first time this shelf has published a complete population with complete licence
+coverage.
+
+| grant, payload-read | rows | share |
+|---|---|---|
+| 🟢 MIT | 17 | 68% |
+| 🟢 Apache-2.0 | 2 | 8% |
+| 🔴 AGPL-3.0 | 3 | 12% |
+| 🔴 GPL-3.0 | 1 | 4% |
+| 🔴 **no grant file at 10 probed paths** | **2** | **8%** |
+
+🔴 **The two ungranted rows are [mahseema/aibooks](https://github.com/mahseema/aibooks) (95★) and
+[A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) (64★).** With no
+grant file the default is exclusive copyright, so neither is build-on-able whatever its README implies.
+
+### 🟢 The ≥50★ `topic:ai-tutor` census — the population, with every grant first-hand
+
+🔵 ★ exact at 11:50:25Z. Grants are payload reads from
+[`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv); the four marked
+*(p478)* are two-pass consistent. `created` is first-hand, which is what closes `Gap 478-H`. No row is a fork and
+none is archived — the blanket control `Gap 478-AT` asked for, run across the whole population.
+
+| agent | repo | ★ | grant (payload) | created | what it is | region |
+|---|---|---|---|---|---|---|
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,827 | 🟡 Apache-2.0 · 11,408 B *(p478)* | 2025-12-28 | lifelong personalised tutoring, multi-agent + RAG | APAC |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,230 | 🟢 MIT · 1,064 B *(p478)* | 2026-09-17 | self-study agent: route planning, spaced repetition | APAC |
+| human-skill-tree | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 584 | 🔴 **AGPL-3.0** · 1,134 B · `3fb8cda58638` | 2026-03-07 | 30+ skill tree, K-12 → career, on cognitive science | APAC |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 536 | 🟢 **MIT** · 1,074 B · `0ef87fdb98da` | 2025-09-29 | MCP server over Anki: agents drive real spaced repetition | Global |
+| examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 348 | 🟢 MIT · 1,065 B *(p478)* | 2026-06-24 | exam coach, page-cited, anti-hallucination | APAC |
+| algo-sensei | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 298 | 🟢 **MIT** · 1,081 B · `3b2ca73e81ad` | 2025-10-21 | DSA/LeetCode mentor: progressive hints, mock interviews | Global |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 293 | 🟢 MIT · 1,069 B *(p478)* | 2026-03-10 | syllabus → one lesson at a time; CLI skill + React/FastAPI | APAC |
+| universal-diagnostic-tutor | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 250 | 🟢 **MIT** · 1,102 B · `a9ca00bcc7a5` | 2026-06-26 | diagnosis-first tutor: picks the next teaching step itself | Global |
+| ari | [nichochar/ari](https://github.com/nichochar/ari) | 210 | 🟢 **MIT** · 1,073 B · `9234cc62970c` | 2026-10-18 | pen-and-paper learning loop, local-first | Global |
+| freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | 209 | 🔴 **AGPL-3.0** · 34,514 B · `ea94d5765c59` | 2026-04-30 | self-hosted language learning: CEFR plans, voice, SRS | Global |
+| kaogong-skill | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 204 | 🟢 **MIT** · 1,083 B · `a6943096ffde` | 2026-04-06 | civil-service exam prep incl. mistake-book review | APAC |
+| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 🟢 **MIT** · 1,068 B · `5352b4967982` | 2026-02-26 | block-based adaptive workspace, local, 10+ providers | Global |
+| education-skills | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | 119 | 🟢 **MIT** · 1,068 B · `23b91d7c0aef` | 2026-01-29 | teaching/tutoring skill collection incl. gaokao | APAC |
+| InterviewMentor | [PrepLabsAI/InterviewMentor](https://github.com/PrepLabsAI/InterviewMentor) | 115 | 🟢 **MIT** · 1,071 B · `aeb634f7110b` | 2026-03-17 | mock interviews for technical hiring prep | Global |
+| feifei-companion | [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 109 | 🟡 **Apache-2.0** · 10,227 B · `59a378bf23a0` — **1,130 B short of the control** | 2026-04-19 | K12 companion: textbook-synced, parent-facing | APAC |
+| mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 🟢 **MIT** · 1,062 B · `ceb97717de1f` | 2024-08-01 | **AI-native LMS** with mentor + role-play; SCORM, xAPI | Global |
+| aibooks | [mahseema/aibooks](https://github.com/mahseema/aibooks) | 95 | 🔴 **no grant file** at 10 paths | 2023-08-31 | curated AI/ML book list | Global |
+| lumen | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 91 | 🔴 **GPL-3.0** · 35,149 B · `3972dc9744f6` | 2020-11-29 | learner-owned platform: private course + scoped RAG, evals in CI | Global |
+| AI_Tutor_Release (EduAgent) | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 🟢 **MIT** · 1,068 B · `695941afdd1f` | 2026-06-29 | RAG tutor for grades 1–9, curriculum-scoped | APAC |
+| Studivexa | [codeXsidd/Studivexa](https://github.com/codeXsidd/Studivexa) | 72 | 🟢 **MIT** · 1,068 B · `58f77360830f` | 2026-03-07 | student workspace: gamified learning, focus rooms | Global |
+| edgameclaw | [yh2072/edgameclaw](https://github.com/yh2072/edgameclaw) | 72 | 🔴 **AGPL-3.0** · 34,523 B · `8486a10c4393` | 2026-03-11 | any learning material → game-based course | Global |
+| Multi-Agent-Study-Assistant | [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 64 | 🔴 **no grant file** at 10 paths | 2025-10-16 | six-agent study platform: roadmaps, quizzes, RAG Q&A | Global |
+| wenflow | [wenflow-org/wenflow](https://github.com/wenflow-org/wenflow) | 61 | 🟢 **MIT** · 1,067 B · `b6fac57d4710` | 2026-04-12 | problem-first learning paths, forgetting-curve review, load tracking | APAC |
+| Smart-Study-Agent | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | 57 | 🟢 **MIT** · 1,067 B · `ca229b6dc765` | 2026-04-08 | RL picks the action, FSRS the timing, LLM only writes quizzes | Global |
+| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 🟢 MIT · 1,073 B *(p478)* | 2026-03-30 | turns any LLM into an ITS; BKT over MCP | EMEA |
+
+### 🔴 What the census cannot see — and why the shelf still needs a second table
+
+🔵 A `topic:` census can only see repositories whose owners applied the topic. 🔴 **`THU-MAIC/OpenMAIC` carries no
+topics at all** and is this base's second-largest row at 41,612★; it is invisible to every topic query above. These
+rows are carried on this shelf and were each re-read this pass:
+
+| agent | repo | ★ | grant (payload) | why the census misses it | region |
+|---|---|---|---|---|---|
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 41,612 | 🟢 MIT · 1,065 B *(p478)* | **no topics set at all** | APAC |
+| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 916 | 🔴 **CC BY-SA 4.0** · 1,230 B *(p478)* | teacher-facing, not `ai-tutor` | EMEA |
+| tutor-gpt | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | 932 | 🔴 **GPL-3.0** · 35,149 B *(p478)* | topics name `tutoring`, not `ai-tutor` | North America |
+| Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 966 | 🟢 MIT · 1,069 B *(p478)* | content transformation, not tutoring | APAC |
+| learn-from-materials | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,182 | 🟢 MIT · 1,122 B *(p478)* | `education`, not `ai-tutor` | APAC |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 467 | 🟢 MIT · 1,069 B *(p478)* | course generation, not tutoring | Global |
+| canvas-mcp | [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 115 | 🟢 **MIT** · 1,072 B · `4450dee7f762` | created 2026-10-25, LMS-integration topics | Global |
+| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 418 | 🔴 **AGPL-3.0** · 34,523 B · `0d96a4ff68ad` | video production topics | Global |
+| Claw-ED (eduagent) | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 63 | 🟢 MIT · 1,078 B *(p478)* | teacher-facing | Global |
+| ChinaStudyFree | [tanle-mtr/ChinaStudyFree](https://github.com/tanle-mtr/ChinaStudyFree) | 41 | 🟢 **MIT** · 1,066 B · `8e6a369c18d9` | below the 50★ floor | APAC |
+| pondok-ai | [rasidi3112/pondok-ai](https://github.com/rasidi3112/pondok-ai) | 37 | 🟢 **MIT** · 1,079 B · `c3dc4b0503f8` | below the floor; Indonesia stated in its own topics | APAC |
+| AI-Teaching-Agent | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 0 *(p478)* | 🟢 MIT · 1,069 B *(p478)* | below the floor | Global |
+| TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 0 | 🟢 MIT · 1,069 B *(p478)* | below the floor | LATAM |
+
+🔴 **`TutorIA` has not been touched since the day it was created** — created `2026-05-20T19:28:03Z`, last updated
+`2026-05-20T19:41:50Z`, thirteen minutes later. It remains this shelf's only LATAM row and it is **dormant**, which
+a star count of 0 did not say and a timestamp does.
+
+### 🟢 `Gap 478-H` closed — "new to this base" and "new to GitHub" are now different claims
+
+🔵 `Gap 478-H`: *"No creation date was read for any of the six… some of these may be old and merely unnoticed
+here."* 🟢 `created_at` is now read for every row. The suspicion was right:
+[Robyn-Collie/QuizWeaver](https://github.com/Robyn-Collie/QuizWeaver) (8★) was created **2025-12-09**, so `p478`
+publishing it as a new arrival was an artefact of this base's attention, not of GitHub's. 🟢 Three census rows are
+older still — `lumen` (2020-11-29), `aibooks` (2023-08-31), `mentingo` (2024-08-01) — and `mentingo` is the one
+that matters commercially, because a two-year-old MIT AI-native LMS is a different proposition from a new one.
+
+### 🔴 Four rejections, and the largest one is the largest education-AI repository on GitHub
+
+| candidate | ★ | what was measured | why it is not published as a usable row |
+|---|---|---|---|
+| [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29,550** | 🔴 **no grant file at 20 probed paths**, and no licence line anywhere in the README | The single most-starred AI-tutor repository on GitHub is under **exclusive copyright**. Nothing in it can be lifted. |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 2,049 | 🔴 bespoke **"PageLM Community License"** · 8,563 B · `c834209c5f33` | Non-commercial; **redistribution "strictly prohibited"**; commercial use requires an executed **revenue-sharing agreement**. Not open source. |
+| [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) | 453 | 🔴 no grant file at 10 paths | exclusive copyright |
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4,165 | 🔴 **CC BY-NC 4.0** · 19,347 B · `41003d4a7474` | Its own README puts **the tool code** inside the non-commercial grant, not just the data. See `repos/trending.md`. |
+
+### 🔴 The instrument you choose decides the licence picture you see
+
+🔵 Inside the `topic:ai-tutor` ≥50★ population, **76% is permissive** (19 of 25). 🔴 Outside it, the largest
+education-AI repositories this pass measured are: 29,550★ **unlicensed**, 4,526★ **AGPL-3.0**
+([echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop)), 4,165★ **CC BY-NC**, 2,504★ **AGPL-3.0**
+([penecho/penecho](https://github.com/penecho/penecho)), 2,424★ **AGPL-3.0**
+([learnhouse/learnhouse](https://github.com/learnhouse/learnhouse)), 2,049★ **bespoke non-commercial**. 🔵 The
+topic filter is not neutral: small permissive agent-skill projects adopt `ai-tutor`, while large product-shaped
+applications adopt product topics and choose copyleft or no licence at all. 🟢 **A studio that reads only a
+topic-filtered list of "MIT education agents" will systematically miss where the users are** — and a studio that
+reads only a star-ranked list will systematically pick things it cannot ship.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-A`** | **`Gap 478-B` and `Gap 477-C` stand untouched.** Thirty-eight rows across two tables, **none cloned, none run, none evaluated.** Every "what it is" is a description plus a grant, and `AI-Teaching-Agent` is still the grading category's only occupant on a README. |
+| 🔴 **`Gap 479-B`** | **The census is one topic.** `topic:ai-tutor` is a single label; `topic:education` and `topic:edtech` were censused only inside date windows, and no union across topics was computed. The 25-row population is complete **for that label at that floor** and for nothing else — as `OpenMAIC`'s absence proves. |
+| 🔴 **`Gap 479-C`** | **The velocity is one repository.** DeepTutor's 94.0 ★/h rests on 189 events in one interval; the other seven rows moved too little to measure a rate at all, so "the tier is flat" is a statement about two hours, not about this week. |
+| 🟡 **`Gap 479-D`** | **Region is still not read first-hand.** The authenticated user-search channel returns **no `location` field**, so eleven rows are `Global` because nothing could be read, and the APAC assignments rest on the *content* each project targets (a Chinese curriculum, the gaokao, Indonesia in its own topic list) rather than on a stated owner location. |
+| 🟡 **`Gap 479-E`** | **Two "no grant" verdicts rest on 10 paths each** (`aibooks`, `Multi-Agent-Study-Assistant`, `esp-labs-web`). `Mr.-Ranedeer` was probed at 20 and its README read; the other three were not README-checked, so a licence stated only in prose would have been missed. |
+| 🟡 **`Gap 479-F`** | **`feifei-companion`'s Apache-2.0 is 1,130 B short of the control** and was not diffed against it. Whether the difference is a truncation, a translation or a modification of the operative terms is unmeasured, and it is the only Apache row on the shelf that is not byte-identical to a known text. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-B` IS FULLY CLOSED — all six unread or carried grants on this shelf were read as payloads this pass — and the result is commercially material rather than bookkeeping: the shelf's North America row is **GPL-3.0** and its EMEA row is **CC BY-SA 4.0**. Neither was ever stated here as copyleft. 🟢 The closure was possible because `github.com` turns out to be reachable through a channel `p477` never tried.**
 

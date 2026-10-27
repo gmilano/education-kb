@@ -1,0 +1,10 @@
+host_or_channel	method	result	yields
+raw.githubusercontent.com	curl	200	licence and packaging payloads
+github.com	curl	403 at gateway CONNECT	nothing
+api.github.com	curl	403	nothing
+api.github.com	gh api (GH_TOKEN)	403 "not enabled for this session"	nothing for unattached repos
+github.com	git ls-remote	works	address resolution, default branch, tag list
+authenticated repository search	MCP github search_repositories	WORKS, account-wide, incomplete_results false	exact star, created_at, fork, archived, total_count
+authenticated user search	MCP github search_users	works but returns NO location field	cannot place a row by region
+eur-lex.europa.eu	curl	CONNECT tunnel failed 403	nothing
+arxiv.org	curl	CONNECT tunnel failed 403	nothing

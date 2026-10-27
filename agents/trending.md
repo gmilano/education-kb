@@ -3,6 +3,102 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p479` — `2026-10-27` — **🟢 THE CENSUS INSTRUMENT IS BACK AND IT REVERSES `p478`'s READING OF THIS SHELF: that pass's six-row keyword sample concluded "every new arrival is TEACHER-facing"; a complete 30-day census at a 30★ floor returns **22** rows and **19 of them are LEARNER-facing**. 🟢 The week's most-starred new education arrival is [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) — **115★ in two days**, MIT, and it is an LMS-integration component rather than a tutor. 🔴 And the fortnight's shape is brutal: in `topic:ai-education`, **one** new repository above 400★ and **nothing else above 3★**.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+Census ledger in [`evidence/census.2026-10-27-p479.tsv`](../evidence/census.2026-10-27-p479.tsv); grants in
+[`evidence/grant-payload.2026-10-27-p479.tsv`](../evidence/grant-payload.2026-10-27-p479.tsv).
+
+---
+
+### 🟢 Declare the instrument first: it is the one `p478` lost
+
+🔵 `p478` opened this shelf by declaring that the authenticated repository-search channel was unavailable and that
+its six rows came from keyword search with **no measurable recall and no star floor**. 🟢 Re-measured, the channel
+answers account-wide with `incomplete_results` **false**. This window therefore has what the last one lacked: a
+floor, a date filter, a total, and a first-hand `created_at` per row.
+
+| census | floor | window | rows |
+|---|---|---|---|
+| `topic:education created:>2026-09-27` | 30★ | 30 days | **22** |
+| `topic:edtech created:>2026-09-27` | 20★ | 30 days | **6** |
+| `topic:ai-education created:>2026-10-13` | none | 14 days | **31** |
+| `topic:education created:>2026-10-20` | 5★ | 7 days | **13** |
+
+🔴 **These are not comparable with any previous window on this shelf**, including `p478`'s six. They are
+comparable with each other and with future passes that re-run the same four queries, which is the point of
+recording them this way.
+
+### 🟢 `Gap 478-I` answered — and the answer is the opposite of what `p478` published
+
+🔵 `Gap 478-I`: *"The teacher/learner split is this pass's own labelling… applied to six rows, with queries that
+named lesson planning and grading."* 🟢 The same labelling applied to the **complete** 30-day ≥30★ population:
+
+| facing | rows | share |
+|---|---|---|
+| 🟢 **learner / self-study** | **19** | 86% |
+| 🟡 teacher / institution | 3 | 14% |
+
+🔵 The three institution-facing rows are [sitor-ai/frametell](https://github.com/sitor-ai/frametell) (explainer
+video production), [rasidi3112/pondok-ai](https://github.com/rasidi3112/pondok-ai) (one machine serving a
+classroom) and [keithligh/hk-traffic-intelligence](https://github.com/keithligh/hk-traffic-intelligence) (built
+for guest lectures). 🔴 **`p478`'s conclusion was an artefact of its queries**, which named lesson planning and
+grading and therefore returned lesson planners and graders. 🟢 The structural reading that survives is the one
+about *size*, not about audience: the learner-facing tier is where the stars are, and the teacher-facing tier is
+where the small projects are.
+
+### 🟢 New this window — the 7-day census, every grant read
+
+🔵 Created on or after 2026-10-20, `topic:education`, ≥5★, at 11:50Z on 2026-10-27. No row is a fork; none is
+archived; both flags read first-hand.
+
+| repo | ★ | created | grant (payload) | what it is |
+|---|---|---|---|---|
+| [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) | 453 | 2026-10-21 | 🔴 **no grant file** at 10 paths | ESP32-S3 bench guide as a React app, 11 languages |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | **115** | **2026-10-25** | 🟢 **MIT** · 1,072 B · `4450dee7f762` | 🟢 read-only MCP server onto **Canvas LMS** — agents reach a real LMS without forking it |
+| [cyyeh/agent-loop-visualizer](https://github.com/cyyeh/agent-loop-visualizer) | 28 | 2026-10-24 | 🟢 **Apache-2.0** · 11,358 B · `cfc7749b96f6` | the agent loop itself as a teaching artefact, local models |
+| [Xooter/Open-Microcosm](https://github.com/Xooter/Open-Microcosm) | 21 | 2026-10-21 | 🟡 GPL-3.0 *(per its own `gpl3` topic; payload not read)* | virtual microscope lab, physics-derived |
+| [xxxhhhccc458/course-helper](https://github.com/xxxhhhccc458/course-helper) | 13 | 2026-10-21 | 🟢 **MIT** · 1,069 B · `b37be88af599` | PDF → revision outline, homework, progress |
+| [Amine-LG/RootToRun](https://github.com/Amine-LG/RootToRun) | 12 | 2026-10-22 | 🟢 **Apache-2.0** · 11,358 B · `cfc7749b96f6` | Linux/Kubernetes/OpenShift lab with real incidents |
+| [LovableWind/Text-Tutor](https://github.com/LovableWind/Text-Tutor) | 11 | 2026-10-22 | 🟢 **MIT** · 1,092 B · `452aa08ce7c0` | margin-note tutor: explains only from what was already taught |
+| [OmarZen/scholarship-navigator](https://github.com/OmarZen/scholarship-navigator) | 11 | 2026-10-25 | 🟢 **MIT** · 1,064 B · `cdc1ae6b9064` | eligibility, fit scores and a dated plan over 35 scholarships + 56 Erasmus Mundus programmes |
+| [111aligiant/xiaokun-learn](https://github.com/111aligiant/xiaokun-learn) | 3 | 2026-10-26 | 🟢 **MIT** · 1,085 B · `364d4c05041e` | offline-first phone tutor that runs real Python/SQLite locally |
+
+🔵 **`canvas-mcp` is the row to carry forward.** 🟢 Every recipe on this base's compose shelf has had to argue that
+Canvas stays a separate deployed service reached over LTI/REST — architectural reasoning this base flagged twice as
+unverified (`Gap 478-AL`). A 115★ MIT read-only MCP server onto Canvas is **that boundary, implemented**, and it
+appeared two days ago.
+
+### 🔴 The fortnight in `topic:ai-education`: one row, then nothing
+
+🔵 `topic:ai-education created:>2026-10-13` returns **31** repositories with no star floor. 🔴 Their distribution:
+[assafkip/claudemy](https://github.com/assafkip/claudemy) at **467★**, and then **nothing above 3★** — the
+remaining 30 sit at 3, 1, 1, 1, 1, 1, 1, 1, 0, 0 and below. 🔵 This is the clearest picture this shelf has had of
+what "new education-AI repository" usually means: a solo artefact with no users. 🟢 It also puts the window's
+headline rows in proportion — `canvas-mcp`'s 115★ in two days is genuinely exceptional against this base rate, not
+merely large.
+
+### 🟢 Velocity, carried from the agents shelf because it is a trend statement
+
+🔵 Measured between `p477`'s 09:49:47Z read and this pass's 11:50:25Z read, both exact:
+[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) took **+189★ in 2 h 00 m 38 s = 94.0 ★/h**, against
+**+6★ between the other seven measured rows in the same interval** — a concentration ratio of **31.5 : 1**.
+🟢 DeepTutor's current rate is **15.2×** its own lifetime average of 148.0 ★/day, and `p477` measured 14.6× on an
+independent interval. 🔴 Nothing else on this shelf is moving at a measurable rate at all.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 479-S`** | **`Gap 478-G` stands: GitHub's Trending page is still unreachable.** Nothing here is "trending" in GitHub's sense. These are *new arrivals above a star floor*, which is a different and now-stated claim. |
+| 🔴 **`Gap 479-T`** | **The four censuses are topic-filtered and therefore blind in the same way.** A new repository whose owner set no topics is invisible to all four — and `THU-MAIC/OpenMAIC`, at 41,612★, proves such repositories exist and are large. |
+| 🔴 **`Gap 479-U`** | **Not one row was run.** The 7-day table is grants plus descriptions; `canvas-mcp`'s claim to reach Canvas read-only is **unexercised**, and it is the row this pass recommends carrying. |
+| 🟡 **`Gap 479-V`** | **`Open-Microcosm`'s GPL-3.0 is read from its own topic list, not from a payload** — the only row in the 7-day table without a grant file read, and it is published as 🟡 for that reason. |
+| 🟡 **`Gap 479-W`** | **The learner/teacher labelling is still this base's own**, now applied to 22 rows instead of 6. It is reproducible from the descriptions in the census file, but no external taxonomy was used and three rows were judged institution-facing on a single clause each. |
+
+---
 
 ## 🆕 `p478` — `2026-10-27` — **🔴 THE INSTRUMENT `p477` USED FOR THIS SHELF IS NOT AVAILABLE TO THIS PASS — the authenticated search channel is scoped to attached repositories only, so there is no star-threshold census this window and no `topic:` census either. 🟢 What replaced it reads repository HTML directly, and the six repositories it surfaced share a shape worth recording: every new arrival is TEACHER-facing and sits between 0 and 63★, while both giants on this shelf are LEARNER-facing at 40k+.**
 

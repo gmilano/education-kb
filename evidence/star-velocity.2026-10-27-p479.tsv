@@ -1,0 +1,9 @@
+repo	t1_2026-10-27T09:49:47Z_p477	t2_2026-10-27T11:50:25Z_p479	delta	interval_h	rate_star_per_h	basis
+HKUDS/DeepTutor	44638	44827	189	2.0106	94.0	both endpoints exact, authenticated search channel
+Miaotofu01/Study-Mate	1227	1230	3	2.0106	1.5	both endpoints exact
+dmoshehun-prog/learn-from-materials	1182	1182	0	2.0106	0.0	both endpoints exact
+ZeKaiNie/universal-examprep-skill	348	348	0	2.0106	0.0	both endpoints exact
+DozenTwelve/Papermorph	965	966	1	2.0106	0.5	both endpoints exact
+assafkip/claudemy	467	467	0	2.0106	0.0	both endpoints exact
+ArnaudGuiovanna/tutor-mcp	56	56	0	2.0106	0.0	both endpoints exact
+GarethManning/education-agent-skills	914	916	2	2.0106	1.0	t1 p477 exact, t2 p479 exact
