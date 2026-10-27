@@ -3,6 +3,96 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27` — **🟢 THE VERTICAL QUESTION THIS SHELF EXISTS TO ANSWER NOW HAS AN ANSWER: of every permissively-licensed institutional LMS this base tracks, exactly **one** ships both an AI provider abstraction and a native MCP server — `OpenOLAT`. Everything else is either AI-native-and-small (`mentingo`, 99★) or institutional-and-AI-less (`Sakai`, `uPortal`, `Tsugi`).**
+
+🔵 The shelf's standing brief is "real systems that can be customized with AI on top". That phrasing assumes
+the AI is the layer *you* add. Measured first-hand this pass, that assumption no longer holds for the strongest
+row: OpenOLAT's AI layer is **upstream**, and the integration work is configuration and oversight, not building.
+
+---
+
+### 🔵 The three postures, and what each costs a studio
+
+| posture | platform | licence | ★ | what you build | what you inherit |
+|---|---|---|---|---|---|
+| 🟢 **AI upstream, institutional scale** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 (file + headers) | 448 | provider config, oversight workflow, tenant policy | **4-provider AI SPI (incl. local ONNX), 106 AI files, 66-file MCP server, 5 essay pre-filters, per-call usage audit log**, QTI/SCORM/LTI |
+| 🟢 **AI-native, product scale** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | 99 | everything institutional (SIS, QTI depth, scale) | **142 MCP tools, 21 declared destructive, 44 RLS-isolated tables, MCP↔REST permission-parity test**, SCORM, xAPI |
+| 🟡 **institutional, AI-less** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) · [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) · [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) · [opencast/opencast](https://github.com/opencast/opencast) | ECL-2.0 · Apache-2.0 · Apache-2.0 · ECL-2.0 | 1,240 · 287 · 377 · 509 | **the entire AI layer**, plus its oversight and audit | production-grade LMS / portal / LTI host / lecture capture |
+| 🟡 **bridge into an incumbent** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) · [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | MIT · MIT | 308 · 115 | guards (14 writes carry none) and consent | agent access to a **live Canvas tenant** without replacing it |
+
+🔴 **No AI/MCP surface was found in Sakai, uPortal, Tsugi or Opencast** by path census. That is a path-name
+instrument, not a code read — a module named without `ai`/`llm`/`mcp` tokens would be missed (`Gap 483-I`) —
+but for four repositories of 573,994 KB, 172,097 KB, 119,286 KB and 293,026 KB respectively, a complete absence
+of such paths is itself strong evidence.
+
+### 🟢 Why `OpenOLAT` is the EMEA sovereign answer this base has been describing without naming
+
+For three cycles this base has written that EMEA buyers want AI features without outbound inference calls, and
+has had no permissively-licensed institutional LMS to point at. OpenOLAT's `services/ai/spi/` holds **four**
+providers:
+
+| provider | what it means for a deployment |
+|---|---|
+| `localonnx` | 🟢 **on-device ONNX inference — no outbound call, no processor agreement, no transfer** |
+| `anthropic` | via `langchain4j-anthropic` |
+| `openAI` | — |
+| `generic` | bring-your-own endpoint (self-hosted vLLM, Ollama, a national model) |
+
+🔵 Alongside them: `AiApiKeySPI`, `AiModule` and `AiFeature` (feature-flag the surface),
+`AiUserPreferenceService` (per-user opt-in), and `AiUsageLog*` (per-call audit with status and search params).
+🟢 **That set is a data-protection posture expressed in code**: a deployment can turn the AI surface on
+feature-by-feature, record every call, let users opt out, and run inference on-premises. 🔵 Swiss origin
+(© frentix GmbH) and German-speaking-university install base make it the natural EMEA starting point.
+🟡 None of it was executed, so "no outbound call" is read from the provider structure, not observed on a wire
+(`Gap 483-A`).
+
+### 🔴 The MCP surface is scaffolding, not a tool catalogue — and that is the more interesting fact
+
+66 Java files under `org/olat/mcp`, on `io.modelcontextprotocol.sdk:mcp-core` **2.1.0**, with the build file
+marking it `spike S1, 2026-10-02`. What those 66 files contain:
+
+| file | what it establishes |
+|---|---|
+| `McpToolProvider` · `McpToolDefinition` · `McpToolSupport` | a registration contract |
+| 🟢 **`McpToolScope`** | **a scope model for tool authorisation** |
+| 🟢 **`McpPermissionException`** | **a dedicated refusal path for unauthorised tool calls** |
+| `McpToolContext` · `McpToolResult` · `McpBinaryContent` | call context and typed results |
+| `McpInvalidArgumentException` | argument validation |
+| `WhoAmIToolProvider` | 🔴 **the only concrete tool shipped** |
+
+🟢 **Read the ordering.** A 2018-vintage institutional LMS adopting MCP built the **permission, scope and
+refusal machinery first and shipped one trivial tool** — `WhoAmI`. Compare `canvas-mcp`: 128 tools, of which
+51 write to Canvas and **14 carry no write-safety mechanism at all**. 🔵 The institutional vendor is building
+the authorisation model before the capability; the community bridge built the capability first. For a studio,
+that is the difference between a platform you can take to a university's data-protection officer and a tool you
+must wrap before you dare point it at a production tenant.
+
+### 🟢 `mentingo`'s permission-parity test is the pattern worth stealing outright
+
+`apps/api/src/mcp/mcp-tool-rest-permission-parity.spec.ts` asserts, for every tool:
+
+```ts
+expect(Reflect.getMetadata(REQUIRED_PERMISSIONS_KEY, restHandler)).toEqual(mcpPermissions)
+```
+
+🟢 **The agent surface cannot be more permissive than the human surface, and a failing test says so.** This is
+the cheapest real control this base has found in any education repository: it converts "did we remember to
+guard the agent path?" from a review question into a build failure. Portable to any stack that keeps
+per-endpoint permission metadata — see `compose/patterns.md`, `P483-1`.
+
+🔵 Supporting structure in the same module: `mcp-auth.guard.ts`, `mcp-oauth.service.ts` + `mcp-consent.controller.ts`
+(OAuth consent flow with a user-facing `McpConsent.page.tsx`), `mcp-tool-scope.ts`, `mcp-tool-access.ts`,
+`mcp-student-access.ts`, `mcp-admin-access.ts`, `mcp-upload-grant.service.ts` (scoped upload grants) and
+`mcp-tracing.ts`. 🟡 Tenant isolation is **44 tables with RLS enabled and 44 `CREATE POLICY` statements** across
+26 SQL files — reproduced this pass; `p482`'s "204 policy clauses" is not reproducible (see `repos/foundations.md`).
+
+### 🔵 The ERP/SIS corner remains unmeasured
+
+The shelf's standing examples for education ERP — **OpenEduCat** (LGPL-3, built on the Odoo framework) and
+**Odoo** itself (LGPL-3 community edition) — were **not re-measured this pass**, and the only source reached
+for them was the vendor's own glossary pages. 🔴 LGPL-3 is a different commercial proposition from MIT or
+Apache-2.0: linking is permitted, but modifications to the library itself carry copyleft. 🟡 No SIS/ERP row on
+this shelf has a first-hand licence measurement or an AI-surface census. See `Gap 483-J`.
 ## 🆕 `p482` — `2026-10-27` — **🔴 THIS SHELF OVERTURNED ITS "LONGEST-STANDING NEGATIVE FINDING" ONE PASS AGO AND GOT THE REPLACEMENT WRONG TOO: the permissive LMS gap did not open on 2026-10-27 with a 99★ project — it was **never real**. `OpenOLAT` is Apache-2.0 with a verbatim grant and `Sakai` is ECL-2.0, and both are platform-scale systems a decade older than `mentingo`. 🟢 What `mentingo` genuinely is: the only **MIT** one, and the only one that ships its agent surface **inside** the platform with an OAuth consent flow and Postgres RLS behind it.**
 
 ---

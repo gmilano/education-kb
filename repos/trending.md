@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27T15:58Z` — `Gap 482-H` CLOSED WITH A MECHANISM: star-ranked discovery misses institutional edtech because **the foundation's name is not its GitHub organisation** — `org:apereo` returns 30 repositories and **not one of them is an LMS, a portal or a lecture-capture system**
+
+🔵 `Gap 482-H` said star-ranked discovery is "a known blind spot with no replacement" and named the untried
+channel: "Apache/Sakai foundation rosters". That channel was tried this pass. It works, and the reason the
+blind spot existed turns out to be mechanical rather than statistical.
+
+### 🔴 The experiment, and the negative result that explains everything
+
+| query | `total_count` | education flagships in the result |
+|---|---|---|
+| `org:apereo` | **30** | 🔴 **0** |
+| `org:sakaiproject org:uPortal-Project org:opencast org:tsugiproject stars:>0` | **74** | 🟢 **4** |
+
+🔴 **Apereo's own GitHub organisation holds CAS and its client libraries, and nothing else of consequence**:
+`apereo/cas` (11,391★), `java-cas-client` (947★), `phpCAS` (800★), `dotnet-cas-client` (230★),
+`mod_auth_cas` (150★) — identity and single sign-on, plus 19 archived sample apps and overlays. The projects
+Apereo is *known* for live in four separate organisations:
+
+| flagship | actual org | ★ | licence (API-verified) |
+|---|---|---|---|
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `sakaiproject` | 1,240 | 🟡 ECL-2.0 |
+| [opencast/opencast](https://github.com/opencast/opencast) | `opencast` | 509 | 🟡 ECL-2.0 |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | `tsugiproject` | 377 | 🟢 Apache-2.0 |
+| [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | `uPortal-Project` | 287 | 🟢 Apache-2.0 |
+
+🟢 **So the fix is one query, not a new instrument.** A single multi-`org:` search enumerates all four
+flagships and 70 satellites deterministically — no star threshold, no `topic:` dependency, and **no
+`incomplete_results` risk**, which is what broke the census channel in `p482`. This is the replacement
+`Gap 482-H` asked for, and it is cheaper than the channel it replaces.
+Evidence: [`evidence/discovery-channel-apereo.2026-10-27-p483.tsv`](../evidence/discovery-channel-apereo.2026-10-27-p483.tsv).
+
+### 🟢 What the channel surfaced that no star ranking can reach
+
+These five rows are **new to this base**. Every one is below every star threshold this base has ever used,
+and the top row would be invisible to any ranking instrument whatsoever.
+
+| repo | ★ | created | what it is | licence |
+|---|---|---|---|---|
+| [apereo/heosat](https://github.com/apereo/heosat) | 🔴 **0** | **2026-09-23** | **Higher Education Open Source Assessment Tool** — a guided maturity assessment for OSS in higher education and edtech | 🔴 **none declared** |
+| [apereo/oss-rubric](https://github.com/apereo/oss-rubric) | 3 | 2022-11-13 | rubric to rate open-source project maturity | 🟡 CC-BY-4.0 |
+| [opencast/annotation-tool](https://github.com/opencast/annotation-tool) | 42 | 2018-01-10 | video annotation service for research, teaching and learning | 🟡 ECL-2.0 family (unmeasured) |
+| [tsugiproject/koseu-php](https://github.com/tsugiproject/koseu-php) | 14 | 2017-03-16 | minimalist LMS / learning-object repository — 🔴 **archived** | 🟡 unmeasured |
+| [uPortal-Project/CoursesPortlet](https://github.com/uPortal-Project/CoursesPortlet) | 12 | 2012-03-14 | course-listing portlet for higher-ed portals | 🟡 unmeasured |
+
+🟢 **`apereo/heosat` is the one to act on, and it is the proof of the whole experiment.** A sector body
+published a *maturity-assessment tool for higher-education open source* five weeks ago. It has **zero stars**,
+zero forks, no topics and no description keywords a `topic:` census would match. For a studio that must justify
+an open-source selection to a university procurement committee, this is a ready-made evaluation framework —
+and it is exactly the artefact that four passes of star-ranked discovery could not have found at any threshold,
+because **its star count will never rise: its audience is committees, not developers**.
+🔴 **It declares no licence.** The API returns no `license` object at all, so it cannot be redistributed or
+embedded in a Globant deliverable as it stands; the usable move is to read the rubric and apply it, not to ship
+it. 🟡 `apereo/oss-rubric` at CC-BY-4.0 *is* attribution-redistributable and covers the same ground more
+generically — that is the pairing to carry into a proposal.
+Evidence: [`evidence/zero-star-finds.2026-10-27-p483.tsv`](../evidence/zero-star-finds.2026-10-27-p483.tsv).
+
+### 🔵 The generalisable rule this pass can state
+
+🟢 **Stars measure developer attention. Institutional edtech is not bought by developers.** Every repository
+this channel surfaced serves a buyer — a registrar, a procurement committee, a lecture-capture operator — who
+does not star GitHub repositories. That is why `OpenOLAT` (448★, and per `repos/foundations.md` the most
+AI-capable LMS on this shelf) and `Sakai` (1,240★, in production at research universities) were missed for
+four-plus passes while a 56★ hobby MCP server sat in the velocity panel.
+
+🟡 **The rule, stated so a later pass can apply it:** for institutional software, enumerate by **organisation**
+and by **standards surface** (`qti`, `scorm`, `lti`, `imsglobal`, `common-cartridge`), never by star rank.
+`tsugiproject/tsugi` carries the topics `imsglobal`, `lti` and `common-cartridge`; those topics are a
+procurement signal, and no AI-flavoured topic would have reached it.
+
+🔴 **What this does not close.** `Gap 482-H` asked what *else* this base cannot see. Two channels named in it
+remain untried: **package registries** (Packagist for the PHP LMS/LTI layer, Maven Central for the Java
+layer, npm for the React/TS layer) and **institutional procurement lists**. The org-roster channel covers one
+foundation; Moodle, Open edX, Canvas/Instructure and OpenOLAT each sit outside Apereo and would each need
+their own enumeration. See `Gap 483-H`.
+
+### 🟡 One row to retire from consideration
+
+[tsugiproject/koseu-php](https://github.com/tsugiproject/koseu-php) is **archived**. 🔵 This base has no
+convention for recording a project it found and rejected, and the absence of one is why the same repositories
+get re-discovered. Recorded here explicitly: **found, read, rejected — archived upstream, do not propose**.
 ## 🆕 `p482` — `2026-10-27T15:06Z` — the Apache deviations, located: 6 of 6 differ from canonical bytes, 0 of 6 narrow the grant — and a permissive platform-scale LMS turns out to have existed all along
 
 🔵 `p481` left this shelf with "7 of 13 are verbatim where it counts, 6 are not". This pass re-fetched the

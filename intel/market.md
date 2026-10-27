@@ -3,6 +3,232 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27` — **🔴 `Gap 482-F`'s DIAGNOSIS IS WRONG AND THE CORRECTION MATTERS MORE THAN THE DATE: EUR-Lex is not "DNS-blocked at the proxy". **Every host tried this pass fails identically** — including a US commercial news site and a non-governmental AI-Act tracker. The fetch channel is down session-wide, so **no URL of any kind can be primary-source verified this pass**. 🟢 Separately, a third independent source now corroborates Regulation (EU) 2026/1744 **and** dates its Official Journal publication to 24 July 2026. 🟢 And NA governance is now countable: **134 bills across 31 states**, with four states mandating district-level policy.**
+
+---
+
+### 🔴 The instrument correction, first — because every claim below inherits it
+
+`p482` concluded: *"EUR-Lex is DNS-blocked at the proxy… the host is unreachable from this session."* That
+attributed a channel-wide failure to one host. The control `p482` never ran:
+
+| host | shell DNS | `curl` via proxy | `WebFetch` | what it proves |
+|---|---|---|---|---|
+| `eur-lex.europa.eu` | FAIL | `000` | `getaddrinfo ENOTFOUND` | reproduces `p482` exactly |
+| `digital-strategy.ec.europa.eu` | FAIL | `000` | — | EU institutional, also fails |
+| `artificialintelligenceact.eu` | FAIL | `000` | `getaddrinfo ENOTFOUND` | 🔴 **non-governmental tracker — also fails** |
+| `www.multistate.us` | FAIL | — | `getaddrinfo ENOTFOUND` | 🔴 **US commercial site — also fails** |
+| `github.com` | FAIL | **HTTP 400** | — | 🔴 **the control: a host that certainly resolves** |
+
+🔴 **`getaddrinfo ENOTFOUND` from this session carries no information about the host.** It is what the channel
+returns for everything. `p482` read a channel failure as a statement about EUR-Lex, and this base then
+published "EUR-Lex is DNS-blocked" as a fact about the EU's publication infrastructure. It was a fact about the
+sandbox. 🟢 **Rule for every later pass: before recording a host as unreachable, fetch a host known to be up.
+If that fails too, record the channel as down and attribute nothing to the target.**
+Evidence: [`evidence/fetch-channel-control.2026-10-27-p483.tsv`](../evidence/fetch-channel-control.2026-10-27-p483.tsv).
+
+🔵 **What still worked:** `WebSearch` (result titles, URLs and summaries) and the **authenticated GitHub API**
+plus `git clone` over the session's git proxy — which is why this pass's repository findings are first-hand
+while every policy finding below is secondary. 🔴 The standing instruction to verify each URL with `curl -sI`
+was **not executable**; GitHub rows were verified through the API instead, which returns the canonical
+`full_name`, SPDX id and star count and is strictly stronger than a status code. Non-GitHub URLs below are
+**search-result URLs, unverified** (`Gap 483-C`).
+
+### 🔵 The compliance calendar, in date order
+
+| date | jurisdiction | what lands | status |
+|---|---|---|---|
+| **Feb 2025** | 🇪🇺 EMEA | emotion-recognition AI in schools **prohibited** (AI Act Art. 5) | 🟢 in force |
+| **1 Sep 2025** | 🇨🇳 APAC | synthetic-content labelling measures effective | 🟢 in force |
+| **22 Jan 2026** | 🇰🇷 APAC | **AI Basic Act in force** — 🟡 regulator signals 2026 as a pilot year, **one-year grace on penalties** | 🟢 in force, soft |
+| **20 Feb 2026** | 🇮🇳 APAC | IT Rules amendments bind platforms hosting AI-generated content | 🟢 in force |
+| **30 Apr 2026** | 🇻🇳 APAC | **Decree 142/2026/ND-CP** — providers must **self-classify** into risk tiers before deployment | 🟢 in force |
+| **AY 2026–27** | 🇮🇳 APAC | AI + Computational Thinking **compulsory from Class 3** (NEP 2020) | 🟢 phasing in |
+| **24 Jul 2026** | 🇪🇺 EMEA | **Digital Omnibus published in the OJ as Regulation (EU) 2026/1744** | 🟡 secondary-sourced |
+| **2 Aug 2026** | 🇪🇺 EMEA | Art. 50 **transparency** duties; Art. 4 AI-literacy duty already live | 🟢 unmoved by the delay |
+| **Dec 2026** | 🇧🇷 LATAM | ANPD regulatory sandbox runs to end-2026 | 🟢 running |
+| **31 Dec 2026** | 🇺🇸 NA | North Carolina **state model AI policy** due | 🟡 pending |
+| **1 Mar 2027** | 🇻🇳 APAC | high-risk list (**33/2026/QD-TTg**) covers education: automated assessment, behavioural monitoring | 🟡 pending |
+| **30 Jun 2027** | 🇺🇸 NA | North Carolina **local district policies** due | 🟡 pending |
+| **2 Dec 2027** | 🇪🇺 EMEA | **Annex III high-risk education obligations** — moved here from 2 Aug 2026 | 🟡 pending |
+| **30 Jun 2028** | 🇺🇸 NA | North Carolina teacher training due | 🟡 pending |
+| **by 2030** | 🇨🇳 APAC | national AI-literacy infrastructure target | 🟡 programme |
+
+🟢 **The reordering `p482` identified holds, and is now sharper.** Vietnam's education deadline (1 Mar 2027)
+lands **nine months before** the EU's (2 Dec 2027), and Vietnam's *self-classification* duty is **already in
+force** as of 30 Apr 2026 — so the first obligation a vendor actually discharges in education AI is Vietnamese,
+not European. A studio sequencing compliance "EU first" has the order backwards for this industry.
+
+🟡 **Provenance on the EU date, third pass running.** `p481` corroborated from an independent query set; `p482`
+added the instrument number; `p483` adds a **third independent secondary source** that supplies both the
+instrument number and the OJ publication date (24 Jul 2026), and separately confirms Art. 50's 2 Aug 2026 date
+is unmoved. 🔴 **Still no primary source**, and this pass establishes that no primary source is reachable
+through any channel available here. One source also reports the Commission's own milestone page listing
+31 Jul 2026 as "entry into force", which conflicts with the 24 Jul OJ date — unresolved (`Gap 483-K`).
+
+### 🔵 What counts as high-risk education AI under Annex III
+
+Admissions and access decisions · evaluating learning outcomes · assigning a person's level of education ·
+monitoring prohibited behaviour during tests. 🟡 Art. 6(3) can carve out narrow or preparatory tools, so
+classification is **case-by-case**, and Art. 27 requires a **Fundamental Rights Impact Assessment before use**
+by the deployer — the school or university, not only the vendor. 🔵 The FRIA is therefore **a deliverable a
+studio can sell today**, independent of the 2027 date.
+
+🟢 **New this pass: the Annex III reference implementation exists.** `OpenOLAT`'s essay pipeline returns a
+`GradingSuggestion` at a declared `AiGradingTier`, with `AnnotatedParagraph`/`AnnotatedSpan` evidence, a
+`GradingPlausibilityCheck` in front of the human, five input pre-filters including an `InjectionPreFilter`, and
+named `RejectionReason`s — in Apache-2.0 Java (see `repos/foundations.md`). "Evaluating learning outcomes" is
+the Annex III line item, and a permissively-licensed implementation of the oversight controls now exists to
+point at. That changes a FRIA engagement from a document exercise into a document-plus-architecture one.
+
+## Opportunities by region
+
+### North America
+
+🔵 **Market shape.** No federal statute; governance is binding **state by state** and now countable:
+**134 AI-in-education bills introduced across 31 states in 2026**, concentrated on student-data privacy,
+classroom-use limits and curriculum. North America holds the largest regional share of the AI-in-education
+market — **36%, ≈ $3.68 B in 2026** (single secondary estimate, treat as indicative).
+
+| jurisdiction | instrument | what it requires |
+|---|---|---|
+| California | AB 1159 | 🔴 **bars using student data to train AI models** |
+| Oklahoma | SB 1734 | AI may **not** be the primary basis for grading, discipline or placement; **parental opt-out** |
+| Maryland | Artificial Intelligence Ready Schools Act | districts must adopt aligned AI policies |
+| Idaho | SB 1227 | privacy protections for school AI tools; **bars AI replacing human teachers** |
+| Ohio | House Bill 96 | **every** district must adopt a board-approved AI policy |
+| Utah | HB 218 | required grade 7/8 digital-skills course including AI literacy |
+| North Carolina | state model policy | model 2026-12-31 · local 2027-06-30 · teacher training 2028-06-30 |
+| Federal | H.R. 8747 (K-12 AI Literacy and Readiness Act of 2026) | 🟡 advanced from House committee; would let schools spend federal funds on AI curriculum |
+
+🟢 **Opportunity — the four-state mandate cluster.** Idaho, Maryland, Oklahoma and Virginia now require **both**
+state guidance **and** mandatory district-level policy adoption. That is a defined, dated, funded compliance
+population, and the deliverable is identical across it: a board-approvable policy plus the configuration that
+enforces it. 🔵 The enforcement half is where the margin is, and it is now concrete: Oklahoma's "AI may not be
+the primary basis for grading" maps **directly** onto OpenOLAT's `GradingSuggestion`-plus-plausibility-check
+architecture, and onto `canvas-mcp`'s `ALLOWED_WRITE_TOOLS` allowlist with `grade_with_rubric` excluded.
+🔴 Sell the enforcement, not the PDF: 60% of US K-12 teachers used AI tools in 2024–25 while most public
+schools still lack a formal policy, so the gap is real and dated.
+
+🟡 **Opportunity — the opt-out plumbing.** Oklahoma requires a parental opt-out. Almost no LMS AI integration
+models per-student AI consent. OpenOLAT's `AiUserPreferenceService` does, and `mentingo` ships an OAuth consent
+page. Wiring opt-out through an LMS, its MCP surface and its audit log is a small, legally-forced,
+repeatable engagement.
+
+🟡 **Canada** is governed separately (workplace AI rules under the Working for Workers Four Act, 2024); no
+education-specific Canadian instrument was found this pass. 🔴 **Declared gap** — see `Gap 483-L`.
+
+### EMEA
+
+🔵 **Market shape.** One binding regime, a delayed deadline, and an unmoved transparency duty. Annex III
+education obligations now land **2 Dec 2027**; Art. 50 transparency stays at **2 Aug 2026**; the Art. 4
+AI-literacy duty and the Art. 5 emotion-recognition prohibition are already live. Deployment is correspondingly
+cautious: parent-facing chatbots for routine queries are the common production case, AI-assisted admissions
+remains in pilots, and predictive at-risk early-warning systems sit in a contested classification zone.
+
+🟢 **Opportunity — sovereign-by-construction, and it is now specific.** EMEA buyers want AI features without
+outbound inference. `OpenOLAT` is Apache-2.0, Swiss-origin (© frentix GmbH), institutional-grade
+(QTI · SCORM · LTI), and ships a **`localonnx`** provider beside `anthropic` and `openAI`, plus a `generic`
+provider for a self-hosted or national model, plus per-call `AiUsageLog` auditing and per-user opt-in. 🔵 This
+is the row that turns the sovereignty conversation from a principle into a configuration: the same deployment
+can run on-premises inference, log every call, and flag each AI feature on or off.
+
+🟢 **Opportunity — the FRIA plus the architecture.** Art. 27 puts the Fundamental Rights Impact Assessment on
+the **deployer** — the school or university. A studio that arrives with both the FRIA template and a reference
+implementation of the oversight controls (suggestion-not-mark, plausibility check, span-level evidence,
+injection pre-filter, named refusal reasons) is selling the answer, not the question. Billable **before**
+Dec 2027 and independent of the delay.
+
+🟡 **Erasmus+ 2026** calls for proposals on policy experimentation are open — a funding channel for pilot work
+rather than a commercial one. 🟡 The **UK** remains principle-based through existing regulators, with no
+education-specific statute found. 🔴 **Declared gap, repeating `p482`'s:** nothing was found this pass on
+Middle East or Africa national AI-in-education policy, and the EMEA label is carrying what is really European
+evidence. See `Gap 483-M`.
+
+### APAC
+
+🔵 **Market shape.** The most binding rules and the earliest education-specific deadlines, split across
+jurisdictions that are diverging rather than converging.
+
+| jurisdiction | instrument | education relevance |
+|---|---|---|
+| 🇻🇳 Vietnam | **33/2026/QD-TTg** (high-risk list) + **142/2026/ND-CP** (in force 30 Apr 2026) | 🟢 **education named**: automated assessment, behavioural monitoring; **provider self-classification before deployment** |
+| 🇰🇷 South Korea | AI Basic Act, in force 22 Jan 2026 | 🟡 pilot year, one-year grace on penalties |
+| 🇨🇳 China | GenAI Services Measures; synthetic-content labelling (1 Sep 2025) | 🟢 binding; national AI-literacy target by 2030 |
+| 🇮🇳 India | IT Rules amendments (20 Feb 2026); NEP 2020 curriculum | 🟢 AI compulsory **from Class 3**, AY 2026–27 |
+| 🇸🇬 Singapore | agentic-AI framework | 🟡 guidance, not law |
+| 🇯🇵 Japan | AI Promotion Act | 🟡 principles, no penalties |
+| 🇹🇼 Taiwan | comprehensive statute since Dec 2025 | 🟡 education relevance unassessed |
+
+🟢 **Opportunity — Vietnam is the live one, and it is a classification engagement.** 142/2026/ND-CP already
+requires providers to **self-classify** risk tier before deployment, and 33/2026/QD-TTg names education. An
+edtech vendor selling into Vietnam needs a defensible classification file **now**, nine months ahead of the EU
+equivalent. That is a short, well-defined, repeatable deliverable, and the EU Annex III work ports into it.
+
+🟢 **Opportunity — India's curriculum mandate is a content-volume problem.** AI and computational thinking
+compulsory from Class 3 across a system of India's scale is a demand for **generated, levelled, multilingual
+curriculum material with provenance**. `Papermorph` (MIT, 970★, books → interactive narrated experiences,
+SCORM-aware), `Educhain` and OpenOLAT's `AiMCQuestionService` with `AiBloomLevel` are the composable pieces —
+and Bloom-level tagging is exactly what a curriculum authority audits.
+
+🟡 **Korea's grace period is a timing arbitrage**: obligations are in force but penalties are suspended for a
+year, which is the cheapest window to get a compliance posture wrong-but-corrected rather than late.
+🔴 **No education-specific adoption statistics were found for any APAC market this pass** — the only vendor
+list reached (Google, Microsoft, IBM, Pearson, Byju's) comes from a market-research summary with no visible
+methodology. See `Gap 483-N`.
+
+### LATAM
+
+🔵 **Market shape — and this pass finally has hard numbers rather than anecdotes.** A UNESCO IESALC study of
+**200 higher-education institutions across 19 countries** found:
+
+| measure | value |
+|---|---|
+| institutions using AI in **at least one** area | 🟢 **87%** |
+| using it in **teaching and learning** | 🟢 **74%** |
+| 🔴 institutions with a **formal AI strategy** | 🔴 **26%** |
+| private non-profit universities implementing | 84% |
+| public institutions | 68% |
+| private for-profit | 52% |
+
+Schoolteacher use (TALIS 2024) runs far above the OECD average of 36%: **Brazil 56%, Chile 55%, Colombia 53%,
+Costa Rica 52%** — the **16–20 point** gap `p482` reported, now attached to its instrument and its four
+countries. Uruguay's **Ceibal** reports **75% of public-school teachers** using these tools (2026).
+
+🟢 **Opportunity — the 87/26 gap is the whole thesis, and it is now measured.** 87% of institutions use AI;
+26% have a strategy. That is **~122 of 200 surveyed institutions running AI with no governing document**, in a
+region where no binding education-specific AI regulation was found. The sellable unit is not a model and not a
+pilot: it is **governance-as-a-product** — an institutional AI policy, an inventory of what is already running
+shadow-style, a consent and audit posture, and the configuration that enforces it.
+
+🔵 **Why this is a better LATAM opportunity than it looks.** The absence of binding regulation means there is
+no deadline forcing the purchase — but there is a **reputational and accreditation** forcing function, and
+UNESCO has supplied the authority: the IESALC report, the **Observatory on AI in Education for Latin America
+and the Caribbean** (launched 14 April), and ethics-and-regulation capacity programmes run for officials in
+Ecuador and Chile. A proposal that cites UNESCO's own instrument and arrives with the artefacts is selling into
+a gap the sector body has publicly named.
+
+🟡 **The constraint to price in.** The Latin American AI Index (ILIA, 20 economies) puts the binding problems
+at **computing infrastructure, enterprise adoption and converting policy commitments into programmes** — and
+regional reporting this month frames the trend as **widening** AI inequality on compute and adoption. 🟢 That
+argues for the same `localonnx`/self-hosted posture as EMEA, for a different reason: not sovereignty but
+**per-token cost and connectivity**. OpenOLAT's local provider and `OpenTutor`'s self-hosted 10-provider
+design are the rows that survive a thin-infrastructure deployment.
+
+🔵 **Delivery note.** `DeepTutor` (Apache-2.0, 45,352★) and `OpenTutor` (MIT, 152★) are both self-hostable and
+multi-provider; `Kolibri`-class offline-first delivery remains the pattern for low-connectivity settings. No
+LATAM-origin education-AI repository surfaced in any channel this pass — see `Gap 483-O`.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 483-C`** | **No URL was verified this pass, and none could be.** `curl` and `WebFetch` fail for every host tried, including controls known to be up; the standing `curl -sI` verification step was not executable. GitHub rows are API-verified (canonical `full_name` + SPDX + stars). **Every non-GitHub citation on every shelf is a search-result URL and unverified.** |
+| 🔴 **`Gap 483-K`** | **No AI Act date in this base is primary-source verified, and `Gap 482-F`'s stated cause was wrong.** Regulation (EU) 2026/1744, the 2 Dec 2027 Annex III date, the 24 Jul 2026 OJ date and the unmoved 2 Aug 2026 Art. 50 date rest on **three independent secondary sources**. One source reports a conflicting Commission figure of 31 Jul 2026 for entry into force; unresolved. Vietnam's dates and instrument numbers inherit the same secondary status. |
+| 🟡 **`Gap 483-L`** | **No Canadian education-specific AI instrument found.** Only federal/provincial workplace AI rules surfaced. The "North America" region is carrying US evidence. |
+| 🟡 **`Gap 483-M`** | **"EMEA" is European evidence only — third pass running.** Nothing found on Middle East or Africa national AI-in-education policy. Gulf states run large national AI programmes and nothing in this base reflects them; this is now the oldest unaddressed regional gap. |
+| 🟡 **`Gap 483-N`** | **No APAC education adoption statistics.** Regulation is well covered; adoption is not. The one vendor list reached has no visible methodology and is not published as data here. |
+| 🟡 **`Gap 483-O`** | **No LATAM-origin repository in any channel.** Every row on every shelf originates in North America, Europe or East Asia. The region with this base's best-measured adoption gap has no represented local tooling, and `Latam-GPT` has not been re-checked since `p479`. |
 ## 🆕 `p482` — `2026-10-27` — **🟢 THE EU DATE THIS BASE HAS RELIED ON FOR TWO PASSES NOW HAS A NAMED LEGAL INSTRUMENT — **Regulation (EU) 2026/1744**, moving stand-alone high-risk education systems from 2 August 2026 to **2 December 2027** — and that reorders the whole compliance calendar: **APAC leads, EMEA trails**. 🔴 But the primary text could **not** be reached from this session (EUR-Lex is DNS-blocked at the proxy), so the instrument number is corroborated across independent secondary sources and **is not primary-source verified**. 🟢 And LATAM finally has hard adoption numbers rather than anecdotes: teacher AI use in Brazil, Chile, Colombia and Costa Rica runs **16–20 points above the OECD average**.**
 
 ---

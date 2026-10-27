@@ -3,6 +3,141 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27` — **🟢 FOUR RECIPES, ALL BUILT FROM REPOSITORIES READ FIRST-HAND THIS PASS. The pattern that changed: `P483-3` no longer builds an AI assessment pipeline — `OpenOLAT` ships one, so the engagement is oversight configuration plus a FRIA, not construction.**
+
+🔵 Every repository named below was cloned and parsed at a stated commit, or read through the authenticated
+GitHub API at `2026-10-27T15:58Z`. 🟡 Effort ranges are this base's estimates and have never been calibrated
+against a delivered engagement (`Gap 483-Q`).
+
+---
+
+### 🟢 `P483-1` — Permission-parity gate for any agent surface over an existing LMS
+
+**The control:** an MCP tool must never require fewer permissions than the REST endpoint it wraps, and CI must
+fail when it does.
+
+**Wire it:**
+1. Copy the invariant from [`Selleo/mentingo`](https://github.com/Selleo/mentingo) `e137ca4`,
+   `apps/api/src/mcp/mcp-tool-rest-permission-parity.spec.ts`:
+   `expect(Reflect.getMetadata(REQUIRED_PERMISSIONS_KEY, restHandler)).toEqual(mcpPermissions)`.
+2. For each tool, resolve the REST handler it delegates to and assert set equality of required permissions —
+   **equality, not subset**, so a tool cannot silently widen *or* narrow.
+3. Pair with `mentingo`'s scope layer as the reference: `mcp-tool-scope.ts`, `mcp-tool-access.ts`,
+   `mcp-student-access.ts`, `mcp-admin-access.ts`, `mcp-auth.guard.ts`.
+4. For consent, lift `mcp-oauth.service.ts` + `mcp-consent.controller.ts` + `McpConsent.page.tsx` — an OAuth
+   consent flow with a user-facing page, which is what an opt-out requirement (Oklahoma SB 1734) needs.
+5. Enforce the same shape in Java against [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `96546d9`:
+   `McpToolScope` + `McpPermissionException` are the hooks; `McpToolProvider`/`McpToolDefinition` the contract.
+
+**Why it is worth the code:** 🟢 it converts the one question every university data-protection officer asks —
+*can the assistant do something a logged-in user could not?* — from a review opinion into a build failure.
+**Stack:** TypeScript/NestJS (mentingo) or Java (OpenOLAT). **Effort:** 🟡 1–2 weeks to port, then free.
+
+### 🟢 `P483-2` — Wrap the 14: a write-safety shim for `canvas-mcp` before it touches a live tenant
+
+**The problem, measured:** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at
+`becd181` registers **128** tools; **51** are `CANVAS_WRITE`; **14** carry none of the server's three
+write-safety mechanisms, and **`execute_typescript`** (`CODE_EXEC`) carries none either.
+
+**Wire it, in this order:**
+1. **Start from the allowlist, not the code.** `core/tool_policy.py` reads `ALLOWED_WRITE_TOOLS`
+   (`ALLOWLIST_ENV`) and `_ALL_KEYWORD_TOOLS` covers `CANVAS_WRITE` + `LOCAL_WRITE` only — so
+   🔴 **`execute_typescript` must be named explicitly or excluded explicitly**; a write-tool enumeration does
+   not reach it.
+2. **Deny `grade_with_rubric` on day one.** It writes a grade with no confirmation token, no body guard and no
+   `dry_run`, while its bulk sibling `bulk_grade_submissions` has `dry_run`. Route single-student grading
+   through the bulk path with `dry_run=True` first, or wrap it in `ConfirmationGuard`.
+3. **Extend the existing mechanism, do not invent one.** `core/write_confirmation.py` already provides
+   `ConfirmationGuard` / `preview_with_token` / `redeem_confirmation`; `tools/pages.py` and
+   `tools/student_calendar.py` are the reference call sites (module-level guard constant, preview, redeem).
+4. **Guard the student-name writes.** `comment_on_my_submission` and `post_discussion_entry` post text as the
+   student with no mechanism, while `submit_assignment` and `mark_module_item_done` require a token. Match them.
+5. **Prefer the read-only server where reads suffice.** [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp)
+   is MIT and read-only by design — a smaller attack surface than configuring 128 tools down to 72.
+6. **Regression-test the policy by construction**, as this pass did: assert `set(registered) == set(TOOL_EFFECTS)`
+   so a new tool cannot ship unclassified. At `becd181` that holds — 128 = 128, 0 unclassified, 0 stale.
+
+**Deliverable:** a pinned fork plus an `ALLOWED_WRITE_TOOLS` value per tenant role (student, instructor, admin).
+**Effort:** 🟡 2–3 weeks. **Evidence:** [`evidence/canvas-mcp-write-guard-map.2026-10-27-p483.tsv`](../evidence/canvas-mcp-write-guard-map.2026-10-27-p483.tsv).
+
+### 🟢 `P483-3` — Annex III-ready AI assessment: configure OpenOLAT, do not build it
+
+🔴 **This pattern replaces every earlier "build an AI grading pipeline" recipe in this shelf.** The pipeline
+exists, in Apache-2.0 Java, at `96546d9`.
+
+**What you inherit** (`core/commons/services/ai/essay/`, 38 files):
+`GibberishPreFilter` · `LanguagePreFilter` · `LengthPreFilter` · **`InjectionPreFilter`** ·
+`GradingPlausibilityCheck` · `GradingSuggestion` + `AiGradingTier` + `MarkKind` (output is a **suggestion**,
+not a mark) · `AnnotatedParagraph`/`AnnotatedSpan` (span-level evidence) · `FormativeFeedback` (decoupled from
+grading) · `RejectionReason` + `EssayGradingIntegrityException` + `EssayGradingPreFilterException` ·
+`EssayAiCorrectionService`/`Dao`/`Task` (async, persisted) · `AiUsageLog*` (per-call audit).
+
+**What you build:**
+1. **Provider decision.** `services/ai/spi/` → `localonnx` for no-outbound-inference deployments,
+   `generic` for a self-hosted endpoint, `anthropic` (via `langchain4j-anthropic`) or `openAI` otherwise.
+   This is the EMEA data-residency and the LATAM cost/connectivity answer in the same switch.
+2. **Oversight workflow.** Art. 14 human oversight: route `GradingSuggestion` into an instructor review queue;
+   never let a tier write a mark unattended. Oklahoma SB 1734 ("AI may not be the primary basis for grading")
+   maps onto the same control, so one build serves both jurisdictions.
+3. **Opt-in/opt-out.** `AiUserPreferenceService` + `AiModule`/`AiFeature` flags give per-user and per-feature
+   switches — the plumbing a parental opt-out requirement needs.
+4. **The FRIA.** Art. 27 puts the Fundamental Rights Impact Assessment on the deployer (the institution).
+   Deliver the template **and** cite the implemented controls as its technical annex.
+5. **Item generation, levelled.** `AiMCQuestionService` + `AiBloomLevel` + `QtiQuestionGenerationTask` emit
+   QTI items tagged by Bloom level — which is what a curriculum authority audits (India's Class-3 mandate).
+
+🟡 **Caveat to state in any proposal:** nothing here was executed. The filters are read, not exercised
+(`Gap 483-A`), and `GradingPlausibilityCheck`'s actual criteria were not traced. 🔴 The MCP side is a **spike**
+— `pom.xml` says `spike S1, 2026-10-02`, and `WhoAmIToolProvider` is the only shipped tool — so do not promise
+an agent-driven OpenOLAT surface; promise the AI assessment surface, which is mature.
+**Effort:** 🟡 6–10 weeks including FRIA. **Evidence:** [`evidence/openolat-ai-mcp-surface.2026-10-27-p483.tsv`](../evidence/openolat-ai-mcp-surface.2026-10-27-p483.tsv).
+
+### 🟢 `P483-4` — A discovery and selection pipeline that a procurement committee will accept
+
+**The problem:** star-ranked discovery structurally misses institutional edtech (see `repos/trending.md`), and a
+star count is not an argument a university committee accepts.
+
+**Wire it:**
+1. **Enumerate by organisation.** One query covers a whole foundation's flagships without truncation risk:
+   `org:sakaiproject org:uPortal-Project org:opencast org:tsugiproject stars:>0` → 74 repositories, all four
+   flagships. 🔴 Do **not** use `org:apereo` — it returns 30 repositories, CAS-only, no LMS.
+2. **Enumerate by standards surface, not by AI topic.** `qti`, `scorm`, `lti`, `imsglobal`,
+   `common-cartridge` are procurement signals; `ai-tutor` is a developer signal and its census channel returns
+   `incomplete_results: true` under load.
+3. **Re-address tracked rows directly.** Rows discovered through a search channel vanish when that channel
+   degrades — which is how this base lost 3,541★ of tracked repositories for four passes. Use `repo:` qualifiers
+   for anything already being tracked.
+4. **Score with the sector's own rubric.** [`apereo/oss-rubric`](https://github.com/apereo/oss-rubric)
+   (CC-BY-4.0, attribution-redistributable) and
+   [`apereo/heosat`](https://github.com/apereo/heosat) — the Higher Education Open Source Assessment Tool,
+   published 2026-09-23, **0★**. 🔴 `heosat` declares **no licence**, so apply the rubric, do not ship the tool.
+5. **Verify licence at the file, never at the API field.** GitHub reports `NOASSERTION` for OpenOLAT, whose
+   LICENSE bytes and every source header say Apache-2.0 — the field is wrong in the direction that **loses** a
+   usable grant. A `NOASSERTION` is a prompt to read the file; an `spdx_id` of `mit` attests a detector match,
+   not an unmodified grant.
+6. **Pin `pushed_at` beside stars.** On sub-1,500★ repositories `pushed_at` is the better liveness instrument:
+   `tutor-mcp` has 0 star delta across five passes and committed today.
+
+**Deliverable:** a scored shortlist with a licence measurement per row and a named rubric behind the ranking.
+**Effort:** 🟡 1 week per vertical. **Evidence:** [`evidence/discovery-channel-apereo.2026-10-27-p483.tsv`](../evidence/discovery-channel-apereo.2026-10-27-p483.tsv) · [`evidence/zero-star-finds.2026-10-27-p483.tsv`](../evidence/zero-star-finds.2026-10-27-p483.tsv).
+
+### 🔴 Patterns this pass declines to write
+
+🔴 **No "deploy a tutoring agent" recipe.** `DeepTutor` (Apache-2.0, 45,352★) is 88.2% of this base's tracked
+star mass and remains **unread** — no clone, no code census, no licence byte-check. Writing a composition
+recipe around a repository this base has only ever counted stars for would be padding. See `Gap 483-R`.
+
+🔴 **No LATAM-specific pattern.** The region has this base's best-measured governance gap (87% adoption vs 26%
+with a strategy) and **zero represented local tooling** (`Gap 483-O`). The honest recipe is `P483-3` with the
+`localonnx`/`generic` provider for cost and connectivity — which is why it is written once, in `P483-3`, rather
+than duplicated under a regional heading it cannot support.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🟡 **`Gap 483-Q`** | **Every effort range on this shelf is uncalibrated.** No pattern in any pass has been checked against a delivered engagement. The ranges are this base's estimates and should be read as relative ordering, not as quotes. |
+| 🔴 **`Gap 483-R`** | **`DeepTutor` is 88.2% of the tracked star mass and has never been read.** Stars, licence, topics and `pushed_at` are API-verified across many passes; the repository has never been cloned, its AI surface never censused, its Apache grant never byte-compared. The largest row in this base is also its least examined, and `p482`'s Apache deviation instrument reported it at +2 tokens from canonical without anyone reading what it does. |
 ## 🆕 `p482` — `2026-10-27` — **🟢 THE CONTROL SET THESE PATTERNS NEED EXISTS — BUT NO SINGLE REPOSITORY HAS IT, SO THE RECIPES BELOW ARE EXPLICITLY **COMPOSITE**: `canvas-mcp` contributes the declared effect policy and the operator allowlist; `mentingo` contributes the thing `p481` correctly said a confirmation token is not — **an OAuth consent bound to an authenticated user id** — plus Postgres RLS. 🔴 And `P4` is retracted and rebuilt: its licence gate was a token-count diff, which this pass proved cannot tell a widened trademark clause from a reflowed parenthesis. 🟢 Plus a new EMEA pattern, now that an Apache-2.0 platform-scale LMS is on the shelves.**
 
 🔵 Every repository named below was read as source by this base (`p480`–`p482`) or had its grant file fetched

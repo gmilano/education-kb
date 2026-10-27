@@ -1,0 +1,155 @@
+tool	file	readOnlyHint	destructiveHint	idempotentHint	annotated
+add_group_language	mcp-admin-tools.ts		False		True
+assign_users_groups	mcp-admin-tools.ts		False		True
+create_group	mcp-admin-tools.ts		False		True
+get_group	mcp-admin-tools.ts	True			True
+get_my_user	mcp-admin-tools.ts	True			True
+get_my_user_details	mcp-admin-tools.ts	True			True
+get_user	mcp-admin-tools.ts	True			True
+get_user_details	mcp-admin-tools.ts	True			True
+list_course_groups	mcp-admin-tools.ts	True			True
+list_groups	mcp-admin-tools.ts	True			True
+list_user_groups	mcp-admin-tools.ts	True			True
+list_user_roles	mcp-admin-tools.ts	True			True
+list_users	mcp-admin-tools.ts	True			True
+remove_group_language	mcp-admin-tools.ts		True		True
+remove_my_avatar	mcp-admin-tools.ts		False		True
+request_my_avatar_upload	mcp-admin-tools.ts		False		True
+set_group_base_language	mcp-admin-tools.ts		False		True
+set_user_groups	mcp-admin-tools.ts		False		True
+update_group	mcp-admin-tools.ts		False		True
+update_my_details	mcp-admin-tools.ts		False		True
+update_my_profile	mcp-admin-tools.ts		False		True
+update_my_user	mcp-admin-tools.ts		False		True
+update_user	mcp-admin-tools.ts		False		True
+update_users_roles	mcp-admin-tools.ts		False		True
+delete_platform_login_document	mcp-customization-tools.ts		True		True
+get_platform_customization	mcp-customization-tools.ts				False
+get_platform_registration_form	mcp-customization-tools.ts				False
+list_platform_login_documents	mcp-customization-tools.ts				False
+remove_platform_image	mcp-customization-tools.ts		True		True
+request_platform_image_upload	mcp-customization-tools.ts				False
+request_platform_login_document_upload	mcp-customization-tools.ts				False
+toggle_platform_customization_flag	mcp-customization-tools.ts			False	True
+update_platform_age_limit	mcp-customization-tools.ts				False
+update_platform_colors	mcp-customization-tools.ts				False
+update_platform_company_information	mcp-customization-tools.ts				False
+update_platform_default_currency	mcp-customization-tools.ts				False
+update_platform_featured_course	mcp-customization-tools.ts				False
+update_platform_live_training_capacity	mcp-customization-tools.ts				False
+update_platform_registration_form	mcp-customization-tools.ts				False
+request_generic_file_upload	mcp-generic-upload-tools.ts				False
+add_article_language	mcp-http.service.ts				False
+add_article_section_language	mcp-http.service.ts				False
+add_category_language	mcp-http.service.ts	False			True
+add_course_language	mcp-http.service.ts				False
+add_courses_to_development_path	mcp-http.service.ts				False
+add_development_path_language	mcp-http.service.ts				False
+add_news_language	mcp-http.service.ts				False
+add_qa_language	mcp-http.service.ts				False
+create_ai_mentor_lesson	mcp-http.service.ts				False
+create_article	mcp-http.service.ts				False
+create_article_section	mcp-http.service.ts				False
+create_category	mcp-http.service.ts	False		False	True
+create_chapter	mcp-http.service.ts	False		False	True
+create_content_lesson	mcp-http.service.ts				False
+create_course	mcp-http.service.ts	False		False	True
+create_development_path	mcp-http.service.ts				False
+create_embed_lesson	mcp-http.service.ts				False
+create_live_training_lesson	mcp-http.service.ts				False
+create_news	mcp-http.service.ts				False
+create_qa_entry	mcp-http.service.ts				False
+create_quiz_lesson	mcp-http.service.ts				False
+create_scorm_course	mcp-http.service.ts				False
+create_scorm_lesson	mcp-http.service.ts				False
+delete_article	mcp-http.service.ts		True	False	True
+delete_article_section	mcp-http.service.ts		True	False	True
+delete_category	mcp-http.service.ts		True	False	True
+delete_chapter	mcp-http.service.ts		True	False	True
+delete_content_lesson	mcp-http.service.ts		True	False	True
+delete_course	mcp-http.service.ts		True	False	True
+delete_development_path	mcp-http.service.ts		True	False	True
+delete_lesson	mcp-http.service.ts		True	False	True
+delete_news	mcp-http.service.ts		True	False	True
+delete_qa_entry	mcp-http.service.ts		True	False	True
+get_article	mcp-http.service.ts	True			True
+get_article_section	mcp-http.service.ts	True			True
+get_category	mcp-http.service.ts	True			True
+get_chapter	mcp-http.service.ts	True			True
+get_course	mcp-http.service.ts	True			True
+get_course_settings	mcp-http.service.ts	True			True
+get_development_path	mcp-http.service.ts	True			True
+get_lesson	mcp-http.service.ts	True			True
+get_my_capabilities	mcp-http.service.ts	True			True
+get_news	mcp-http.service.ts	True			True
+get_qa_entry	mcp-http.service.ts	True			True
+get_video_upload_status	mcp-http.service.ts	True			True
+init_video_upload	mcp-http.service.ts				False
+insert_lesson_resource	mcp-http.service.ts	False			True
+list_article_sections	mcp-http.service.ts	True			True
+list_articles	mcp-http.service.ts	True			True
+list_categories	mcp-http.service.ts	True			True
+list_chapters	mcp-http.service.ts	True			True
+list_course_categories	mcp-http.service.ts	True			True
+list_course_group_deadlines	mcp-http.service.ts	True			True
+list_course_languages	mcp-http.service.ts	True			True
+list_courses	mcp-http.service.ts	True			True
+list_development_path_courses	mcp-http.service.ts	True			True
+list_development_paths	mcp-http.service.ts	True			True
+list_lesson_resources	mcp-http.service.ts	True			True
+list_lessons	mcp-http.service.ts	True			True
+list_news	mcp-http.service.ts	True			True
+list_qa_entries	mcp-http.service.ts	True			True
+remove_article_language	mcp-http.service.ts		True	False	True
+remove_article_section_language	mcp-http.service.ts		True	False	True
+remove_category_language	mcp-http.service.ts		True		True
+remove_course_from_development_path	mcp-http.service.ts		True	False	True
+remove_course_language	mcp-http.service.ts		True	False	True
+remove_lesson_resource	mcp-http.service.ts		True	False	True
+remove_news_language	mcp-http.service.ts		True	False	True
+remove_qa_language	mcp-http.service.ts		True	False	True
+reorder_chapter	mcp-http.service.ts				False
+reorder_development_path_courses	mcp-http.service.ts				False
+reorder_lesson	mcp-http.service.ts				False
+request_ai_mentor_avatar_upload	mcp-http.service.ts				False
+request_authoring_upload	mcp-http.service.ts	False		False	True
+request_course_upload	mcp-http.service.ts	False		False	True
+request_development_path_upload	mcp-http.service.ts				False
+request_editorial_cover_upload	mcp-http.service.ts				False
+set_category_base_language	mcp-http.service.ts	False			True
+set_course_certificate_enabled	mcp-http.service.ts				False
+set_course_group_deadline	mcp-http.service.ts				False
+set_course_pricing	mcp-http.service.ts				False
+set_course_status	mcp-http.service.ts				False
+set_development_path_status	mcp-http.service.ts				False
+set_news_status	mcp-http.service.ts				False
+update_ai_mentor_lesson	mcp-http.service.ts				False
+update_article	mcp-http.service.ts				False
+update_article_section	mcp-http.service.ts				False
+update_category	mcp-http.service.ts	False			True
+update_chapter	mcp-http.service.ts				False
+update_content_lesson	mcp-http.service.ts				False
+update_course	mcp-http.service.ts				False
+update_course_media	mcp-http.service.ts				False
+update_course_settings	mcp-http.service.ts				False
+update_development_path	mcp-http.service.ts				False
+update_embed_lesson	mcp-http.service.ts				False
+update_live_training_lesson	mcp-http.service.ts				False
+update_news	mcp-http.service.ts				False
+update_qa_entry	mcp-http.service.ts				False
+update_quiz_lesson	mcp-http.service.ts				False
+update_scorm_lesson	mcp-http.service.ts				False
+global_search	mcp-search-tools.ts	True			True
+get_chapter	mcp-student-lesson-tools.ts	True			True
+get_lesson	mcp-student-lesson-tools.ts	True			True
+list_chapters	mcp-student-lesson-tools.ts	True			True
+list_lessons	mcp-student-lesson-tools.ts	True			True
+search_lessons	mcp-student-lesson-tools.ts	True			True
+get_article	mcp-student-tools.ts	True			True
+get_course	mcp-student-tools.ts	True			True
+get_news	mcp-student-tools.ts	True			True
+get_qa_entry	mcp-student-tools.ts	True			True
+list_articles	mcp-student-tools.ts	True			True
+list_courses	mcp-student-tools.ts	True			True
+list_news	mcp-student-tools.ts	True			True
+list_qa_entries	mcp-student-tools.ts	True			True

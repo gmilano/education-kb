@@ -1,0 +1,17 @@
+measurement	value	instrument
+commit	96546d9	git clone --filter=blob:none --depth 1
+files_in_tree	26015	git ls-tree -r --name-only HEAD
+java_files	14971	grep -c '\.java$'
+ai_java_files	106	find services/ai -name '*.java'
+mcp_java_files	66	find org/olat/mcp -name '*.java'
+ai_spi_providers	4	ls services/ai/spi (anthropic generic localonnx openAI)
+essay_prefilters	5	ls services/ai/essay | grep -c PreFilter
+mcp_sdk	io.modelcontextprotocol.sdk:mcp-core 2.1.0	pom.xml
+mcp_spike_date	2026-10-02	pom.xml comment "MCP server (spike S1, 2026-10-02)"
+anthropic_binding	langchain4j-anthropic	pom.xml
+qti_path_hits	837	grep -ic qti over file list
+scorm_path_hits	172	grep -ic scorm over file list
+lti_path_hits	361	grep -ic lti over file list
+license_in_source_headers	Apache-2.0	per-file header in services/ai/essay/GradingPlausibilityCheck.java
+license_in_github_metadata	NOASSERTION	GitHub API repo.license.spdx_id
+copyright_holder	frentix GmbH	per-file header

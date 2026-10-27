@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27T15:58Z` — `Gap 482-D`/`481-E` CLOSED: the four repositories this base lost for four passes are re-read, and the panel is **13 rows, not 4** — DeepTutor decelerates for the first time in five intervals
+
+🔵 Read through the **authenticated GitHub API** with `repo:` qualifiers, 14 repositories across two queries
+(`total_count: 7` + `7`, `incomplete_results: false` on both), at **2026-10-27T15:58Z**. The `t4` column is
+`p482`'s own 15:06Z read, so both ends of the interval belong to this base. Interval **0.867 h**.
+
+🟢 **No census figure is attempted this pass.** `p482` published none because the `topic:ai-tutor` channel
+returned `incomplete_results: TRUE`. This pass did not re-query that channel at all — it used **direct `repo:`
+addressing**, which cannot be truncated, and accepted that it therefore measures a *panel*, not a population.
+A panel this base chose is not a discovery instrument, and `repos/trending.md` carries the discovery experiment.
+
+| repo | `t4` 15:06Z | `t5` 15:58Z | Δ | ★/h | note |
+|---|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 45,240 | **45,352** | **+112** | 🟡 **129.2** | 🔴 **first deceleration in five intervals**: 94.0 → 114.6 → 117.7 → 145.5 → **129.2** |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,235 | **1,237** | +2 | 2.31 | 🟢 moving again after one flat interval |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 355 | 355 | +0 | 0.0 | flat; `pushed_at` 03:22Z — code moving, stars not |
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 210 | **+0** | 0.0 | 🔴 **second consecutive flat read** — the 9-day climb `p481` extrapolated has stopped |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 99 | +0 | 0.0 | `pushed_at` **15:14:10Z** — code moving hard, stars flat |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 152 | +0 | 0.0 | unchanged |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 308 | 308 | +0 | 0.0 | unchanged across `p481`–`p483` |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 115 | 115 | +0 | 0.0 | 🟡 115★ in 2 days, then flat for ~1 h |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 56 | +0 | 0.0 | 🔴 **0 delta across `p479`–`p483`**, five passes |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 🔴 not read `p479`–`p482` | **1,185** | — | — | 🟢 **recovered**; MIT; `pushed_at` 2026-10-19 — 8 days quiet |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 🔴 not read `p479`–`p482` | **970** | — | — | 🟢 **recovered**; MIT; `pushed_at` **14:51Z today** — actively developed |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 not read `p479`–`p482` | **916** | — | — | 🟢 recovered; 🔴 **licence NOASSERTION** |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🔴 not read `p479`–`p482` | **470** | — | — | 🟢 **recovered**; MIT; `pushed_at` 2026-10-16 — 11 days quiet |
+
+### 🟢 What closing `Gap 482-D` actually revealed
+
+`p482` recorded four repositories as having gone three passes without a re-read and treated that as an
+administrative debt. It was not administrative. The four hold **3,541★ between them** — more than every
+non-DeepTutor row in the panel combined (**2,532★**). 🔴 **For four passes this base's "velocity panel" excluded
+the majority of its own tracked star mass** and reported concentration ratios computed on the remainder.
+
+🔵 Recovering them cost **one extra API query**. The reason they were lost is instructive: `p479` added them
+from a census channel, and when that channel started returning `incomplete_results: true`, the rows went with
+it. **Rows discovered through a search channel must be re-addressed directly, or they vanish when the channel
+degrades.** Direct `repo:` addressing is immune to that and should be this base's default for any row it has
+already decided to track.
+
+### 🟡 DeepTutor's first deceleration — and why one interval does not make it a trend
+
+145.5 → 129.2 ★/h is a **−11.2%** change over 0.867 h. 🔴 `p482` warned, correctly, that this base had twice
+published a one-hour delta on a small repository as a trend. The same caution applies upward: on +112 stars the
+Poisson standard error is ≈ ±10.6, so ±12.2 ★/h — **the deceleration is inside one standard error of noise**.
+🟢 What is *not* noise: five consecutive intervals of 94.0 → 114.6 → 117.7 → 145.5 → 129.2 have a rising mean,
+and DeepTutor's `pushed_at` is **15:57:51Z**, nine seconds before the read. The repository is being worked on
+continuously; the star rate is the market's response and it is still an order of magnitude above every other row.
+
+### 🔴 Concentration, stated honestly for once
+
+DeepTutor holds **45,352** of the panel's **51,425★** — **88.2%**. The ratio against the second-largest row
+(Study-Mate, 1,237) is **36.7 : 1**. 🟡 `p481` reported 19.8 : 1 and `p482` reported the narrowing was noise.
+Both numbers were computed on a 4-row panel that excluded `learn-from-materials` (1,185), `Papermorph` (970),
+`education-agent-skills` (916) and `claudemy` (470). **The ratio did not change; the panel did.** This base
+should not publish a concentration ratio again without stating the row count it was computed over.
+
+### 🔵 The signal `pushed_at` carries that stars do not
+
+Four rows are flat on stars and moving in code within the last 14 hours: `mentingo` (15:14Z), `Papermorph`
+(14:51Z), `universal-examprep-skill` (03:22Z), `vishalsachdev/canvas-mcp` (02:32Z). 🟢 For a studio picking a
+starting point, **`pushed_at` is the better liveness instrument on a sub-1,500★ repository** — stars on a small
+repo move in bursts driven by external attention, while commits track whether anyone is still maintaining it.
+`tutor-mcp` is the counter-example that proves the pair is needed: 0 star delta across five passes, but
+`pushed_at` 10:09Z today. It is alive and unnoticed.
 ## 🆕 `p482` — `2026-10-27T15:06Z` — DeepTutor accelerates to 145.5 ★/h while the rest of the panel moves +1 in total; the census channel returns a truncated count that must not be read as a population
 
 🔵 Read through the authenticated GitHub search channel with a `repo:` qualifier, 9 repositories in one query

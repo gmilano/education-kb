@@ -3,6 +3,125 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27` — **🟢 `Gap 482-C` CLOSED, AND IT IS THE FIND OF THE CYCLE: `OpenOLAT` — the institutional Java LMS this base graded "on its grant alone" — ships a **four-provider AI SPI including a local-ONNX backend**, a **66-file native MCP server on the official MCP Java SDK 2.1.0**, and an AI essay-grading pipeline with **five pre-filters and a plausibility check**. 🔴 It also exposes GitHub's licence field as an unreliable instrument: the API says `NOASSERTION`, the LICENSE bytes and every source header say Apache-2.0.**
+
+🔵 Measured first-hand at commit **`96546d9`**, cloned `--filter=blob:none --depth 1` (26,015 files in tree,
+**14,971** `.java`), then sparse-checked-out to read only `org/olat/mcp`, `services/ai` and `pom.xml`.
+Evidence: [`evidence/openolat-ai-mcp-surface.2026-10-27-p483.tsv`](../evidence/openolat-ai-mcp-surface.2026-10-27-p483.tsv).
+
+---
+
+### 🟢 What `Gap 482-C` was hiding
+
+`p482` admitted OpenOLAT entered the shelves "as a licence finding, not as a capability claim" and listed
+LOC, AI surface and "whether any MCP/agent integration exists" as unread. All three are now read:
+
+| measurement | value | instrument |
+|---|---|---|
+| files in tree | 26,015 | `git ls-tree -r --name-only HEAD` |
+| `.java` files | 14,971 | pattern count over that list |
+| AI service files | **106** `.java` under `core/commons/services/ai` | `find` |
+| MCP server files | **66** `.java` under `org/olat/mcp` | `find` |
+| AI SPI providers | **4** — `anthropic`, `openAI`, `localonnx`, `generic` | `ls services/ai/spi/` |
+| essay pre-filters | **5** | filenames matching `PreFilter` in `services/ai/essay` |
+| MCP SDK | `io.modelcontextprotocol.sdk:mcp-core` **2.1.0** | `pom.xml` |
+| Anthropic binding | `langchain4j-anthropic` | `pom.xml` |
+| QTI · SCORM · LTI path hits | 837 · 172 · 361 | pattern count over the file list |
+
+🔵 **The `pom.xml` dates the MCP work precisely.** The dependency block carries the comment
+`<!-- MCP server (spike S1, 2026-10-02): official MCP Java SDK, Jackson 2 binding -->`. This is **25 days old**
+— an institutional LMS with a 2018-era GitHub history adopting MCP three weeks ago, and saying in its build
+file that it is still a spike.
+
+### 🟢 The AI service layer is a feature surface, not a chat box
+
+| interface | what it does |
+|---|---|
+| `AiEssayGradingService` · `AiEssayGenerationService` | grade and generate free-text essay items |
+| `AiMCQuestionService` | multiple-choice item generation |
+| `AiImageDescriptionService` | alt-text / accessibility descriptions |
+| `AiEmbeddingSPI` | embeddings behind the same provider abstraction |
+| `AiUsageLog` · `AiUsageLogSearchParams` · `AiUsageLogStatus` | 🟢 **per-call usage auditing as a first-class entity** |
+| `AiUserPreferenceService` | per-user AI opt-in state |
+| `AiFeature` · `AiModule` | feature-flagging the whole surface |
+
+🟢 **`localonnx` is the row that matters commercially.** A provider SPI with an on-device ONNX backend alongside
+Anthropic and OpenAI means the same LMS deployment can run AI features **without any outbound call** — which is
+the EMEA sovereignty requirement this base has described for three cycles without being able to name a
+permissively-licensed LMS that satisfies it. 🔵 `AiApiKeySPI` sits beside it, so the choice is per-deployment
+configuration, not a fork.
+
+### 🟢 The essay pipeline is shaped like an Annex III control, and that is unusual
+
+Reading `services/ai/essay/` (38 files) the architecture is not "call a model, store a grade":
+
+| component | role |
+|---|---|
+| `GibberishPreFilter` · `LanguagePreFilter` · `LengthPreFilter` | reject input before it reaches a model |
+| 🔴 **`InjectionPreFilter`** | **prompt-injection filter on student-submitted text** |
+| `GradingPlausibilityCheck` | check the model's output is credible before it is surfaced |
+| `GradingSuggestion` · `MarkKind` · `AiGradingTier` | the output is a **suggestion** with a tier, not a mark |
+| `EssayGradingIntegrityException` · `EssayGradingPreFilterException` · `RejectionReason` | explicit refusal paths |
+| `FormativeFeedback` · `EssayFormativeFeedbackService` | feedback decoupled from grading |
+| `AnnotatedParagraph` · `AnnotatedSpan` | span-level annotations, so a human can see *where* |
+| `AiBloomLevel` | Bloom-taxonomy level attached to generated items |
+
+🟢 **Why this is a finding and not a feature list.** EU AI Act Annex III names "evaluating learning outcomes" as
+high-risk, and Art. 14 requires human oversight. A pipeline that returns a *suggestion* at a declared tier,
+with span annotations showing the evidence, a plausibility check in front of the human, and named refusal
+reasons, is **the shape an auditor asks for** — and it exists, in a permissively-licensed Java LMS, today.
+🟡 Whether the filters actually reject what they claim is unverified: nothing was executed (`Gap 483-A`).
+🔴 `InjectionPreFilter` is the first prompt-injection control this base has found in any education repository.
+
+### 🔴 GitHub's `license` field disagrees with the file — on two rows
+
+| repo | API `license.spdx_id` | LICENSE file | source headers | verdict |
+|---|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🔴 **NOASSERTION** | 🟢 Apache-2.0 · 10,982 B · grant body **verbatim** (`p482`) | 🟢 **Apache-2.0**, "you may not use this file except in compliance with the License", © frentix GmbH | 🟢 **Apache-2.0** — two instruments beat the metadata |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 **NOASSERTION** | 🔴 unreadable this session | 🔴 unread | 🔴 **unknown — do not reuse** |
+
+🔵 **The lesson generalises.** `p482` built a careful byte-level instrument for Apache grant text and asked, in
+`Gap 482-G`, whether the result scales past 13 repositories. The cheap scaling path looked like the API's
+`license` field. It is not: on OpenOLAT the field is **wrong in the direction that loses a usable grant**. A
+`NOASSERTION` is a *prompt to read the file*, never a finding. 🔴 And the inverse holds too — an API `spdx_id`
+of `mit` attests what GitHub's detector matched, not that the grant is unmodified, which is exactly the
+deviation `p482` measured on 6 of 13.
+
+### The foundations shelf — every row API-verified at `2026-10-27T15:58Z`
+
+| project | repo | licence | ★ | role | AI/MCP surface |
+|---|---|---|---|---|---|
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 (file + headers; API says NOASSERTION) | 448 | institutional LMS: QTI, SCORM, LTI, curriculum, lectures, surveys | 🟢 **106 AI files · 4 SPI providers incl. local ONNX · 66-file MCP server** |
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** (API-verified) | 1,240 | higher-ed LMS/VLE in production at research universities | 🔴 none found in path census |
+| **Opencast** | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 **ECL-2.0** (API-verified) | 509 | automated lecture capture and video distribution at scale | 🟡 adjacent: `opencast/editor`, `opencast/studio` (subtitles) |
+| **Tsugi** | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** (API-verified; grant text measured `p482`) | 377 | LTI / IMS Common Cartridge tool hosting framework |  🔴 none found |
+| **uPortal** | [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | 🟢 **Apache-2.0** (API-verified) | 287 | enterprise higher-ed portal, portlet/soffit model | 🔴 none found |
+| **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 MIT | 99 | AI-native LMS; Moodle/Open edX alternative | 🟢 **142 MCP tools · 44 RLS-isolated tables** |
+| **canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | 308 | agent bridge **into** an existing Canvas tenant | 🟢 **128 tools · 51 Canvas writes** |
+
+🟡 **The Apache/ECL split is the procurement fact on this shelf.** All four Apereo-family licences were read
+from the API this pass: Sakai **ECL-2.0**, Opencast **ECL-2.0**, Tsugi **Apache-2.0**, uPortal **Apache-2.0**.
+ECL-2.0 is Apache-2.0 with its patent grant **narrowed to the contributor's own academic and research use** —
+which is precisely the clause a commercial integrator must read before building a product on it. 🔴 **No ECL
+text was byte-compared against canonical ECL-2.0 this pass**, so whether Sakai's and Opencast's grants are
+verbatim is unmeasured — the same question `p482` answered for 13 Apache rows. See `Gap 483-G`.
+
+### 🔴 `mentingo`'s RLS numbers do not reproduce
+
+`p482` published "tenant isolation in **Postgres RLS — 44 enablements, 204 policy clauses**". At `e137ca4`:
+
+| instrument | value | verdict |
+|---|---|---|
+| `ENABLE ROW LEVEL SECURITY` | **44** | 🟢 reproduces exactly |
+| `CREATE POLICY` | **44** | 🟡 one policy per RLS-enabled table |
+| `USING (` | 47 | — |
+| `WITH CHECK` | 45 | — |
+| `FOR` SELECT / INSERT / UPDATE / DELETE / ALL | 35 | — |
+| `.sql` files containing `ROW LEVEL SECURITY` | 26 | — |
+| **"204 policy clauses"** | 🔴 **not reproduced by any of five instruments** | the mechanism is real; the number is not |
+
+🔵 The isolation claim stands — 44 tables have RLS enabled and 44 policies exist. **The "204" should not be
+cited again** until an instrument that produces it is named.
 ## 🆕 `p482` — `2026-10-27` — **🔴 THIS SHELF'S HEADLINE FROM ONE PASS AGO IS WRONG: `Selleo/mentingo` is **not** "the foundations shelf's first permissively-licensed platform-scale row". `OpenOLAT` has been **Apache-2.0** the whole time, and its grant body is **word-identical to the canonical Apache text through all 1,408 operative tokens** — measured, not asserted. `sakaiproject/sakai` is **ECL-2.0**, also permissive. Both predate `mentingo` by a decade. 🟢 And the Apache alarm `p481` raised is **not supported once the deviations are located**: of the 6 repositories it classed "operative-text ALTERED", **none narrows the rights granted**.**
 
 ---

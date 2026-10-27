@@ -1,0 +1,8 @@
+host	shell_getent_dns	shell_curl_via_proxy	webfetch	verdict
+github.com	FAIL	HTTP 400	not tested	proxy rejects plain curl
+eur-lex.europa.eu	FAIL	000	getaddrinfo ENOTFOUND	unreachable
+op.europa.eu	FAIL	not tested	not tested	DNS unavailable
+data.europa.eu	FAIL	not tested	not tested	DNS unavailable
+digital-strategy.ec.europa.eu	FAIL	000	not tested	unreachable
+artificialintelligenceact.eu	FAIL	000	getaddrinfo ENOTFOUND	unreachable -- NON-EU-GOV control also fails
+www.multistate.us	FAIL	not tested	getaddrinfo ENOTFOUND	unreachable -- US commercial control also fails

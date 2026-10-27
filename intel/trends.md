@@ -3,6 +3,116 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27` — **🟢 THE TREND THIS PASS CAN DEFEND FROM CODE: the differentiator in education AI has moved from *what the agent can do* to *what it is prevented from doing* — and the two postures are now measurable in the same units. Institutional vendors ship authorisation machinery before tools (`OpenOLAT`: 66 MCP files, scope model, permission exception, **one** tool). Community bridges ship tools before guards (`canvas-mcp`: 128 tools, 51 writes, **14 unguarded**).**
+
+🔵 Eight trends. Those resting on first-hand measurement are marked 🟢; those resting on secondary sources
+reached by search are marked 🟡, and this pass could verify **no** URL (`Gap 483-C`), so the distinction is
+load-bearing.
+
+---
+
+### 🟢 `T483-1` — Guard architecture is the product, and it is countable
+
+Two repositories expose the same LMS capability class and differ almost entirely in restraint:
+
+| | `canvas-mcp` (MIT, 308★) | `OpenOLAT` MCP (Apache-2.0, 448★) | `mentingo` (MIT, 99★) |
+|---|---|---|---|
+| tools shipped | **128** | 🔴 **1** (`WhoAmI`) | **142** unique |
+| write tools | 51 Canvas + 4 local + 1 code-exec | — | 21 declared destructive |
+| scope/permission model | `ALLOWED_WRITE_TOOLS` allowlist, enforced on HTTP transport | 🟢 `McpToolScope` + `McpPermissionException` | 🟢 scope + OAuth consent + **REST parity test** |
+| writes with **no** safety mechanism | 🔴 **14** | n/a | 🟡 60 call sites unannotated |
+| tenant isolation | — | — | 🟢 44 RLS tables / 44 policies |
+
+🟢 **The claim:** a studio's differentiator in 2026 education AI is no longer model access or tool count — both
+are commodities — but the ability to state, and test, what the agent cannot reach. `mentingo`'s
+permission-parity assertion is the cheapest instance of that and the one worth copying first.
+
+### 🟢 `T483-2` — MCP↔REST permission parity is emerging as the enforceable invariant
+
+`mentingo` asserts in CI that each MCP tool's required permissions **equal** the REST handler's. 🟢 This is the
+first time this base has found the agent-surface question answered by a **build failure** rather than a review
+checklist. The invariant generalises to any stack with per-endpoint permission metadata, and it is the control
+that answers the one question every university data-protection officer asks: *can the assistant do something a
+logged-in user could not?*
+
+### 🟢 `T483-3` — Institutional vendors are building the authorisation model before the capability
+
+OpenOLAT adopted MCP on **2026-10-02** (its own `pom.xml` calls it `spike S1`) and 25 days later ships 66 files
+of registration contract, scope model, typed results, argument validation and a dedicated permission exception
+— with `WhoAmIToolProvider` as the only concrete tool. 🟢 **Read as a sequencing signal, not a maturity
+deficit.** The institutional buyer cannot adopt a tool surface it cannot scope; the scaffolding *is* the
+product requirement. Expect the tool catalogue to arrive fast once scoping lands, and expect community bridges
+to be retro-fitted with scope models they did not design for.
+
+### 🟢 `T483-4` — Local inference is becoming a provider slot, not a fork
+
+OpenOLAT's `services/ai/spi/` holds `localonnx` **beside** `anthropic` and `openAI`, with `generic` for
+bring-your-own endpoints, `AiApiKeySPI` for credentials and `AiUsageLog*` for per-call audit. 🟢 Sovereign
+deployment stops being a separate build and becomes a configuration choice inside one codebase. 🔵 Two distinct
+buyers want the same slot for different reasons — EMEA for data residency, LATAM for per-token cost and
+connectivity (see `intel/market.md`) — which is what makes it a provider abstraction rather than a feature.
+
+### 🟢 `T483-5` — AI assessment is shipping with refusal paths, and they are Annex III-shaped
+
+OpenOLAT's essay pipeline: five input pre-filters (`Gibberish`, `Language`, `Length`, and notably
+**`InjectionPreFilter`** — the first prompt-injection control this base has found in any education
+repository), a `GradingPlausibilityCheck` between model and human, output typed as `GradingSuggestion` at a
+declared `AiGradingTier` rather than as a mark, `AnnotatedParagraph`/`AnnotatedSpan` span-level evidence,
+`FormativeFeedback` decoupled from grading, and named `RejectionReason`s with
+`EssayGradingIntegrityException`. 🟢 "Evaluating learning outcomes" is an Annex III line item and Art. 14
+requires human oversight; this is what those words look like as a class diagram. 🟡 Unverified behaviourally —
+nothing was executed (`Gap 483-A`).
+
+### 🟢 `T483-6` — Read-only is becoming a deliberate product posture
+
+`boyuchengz/canvas-mcp` (MIT, 115★ in two days) advertises **read-only** against the same Canvas API that
+`vishalsachdev/canvas-mcp` reaches with 51 write tools. 🟢 Two servers, same integration target, opposite
+postures, both alive. For a first engagement against a live student record system the read-only one is the
+correct starting point and carries **one third** the stars — a case where star rank points away from the right
+answer, and a direct instance of `T483-1`.
+
+### 🟢 `T483-7` — Discovery by star rank structurally misses institutional edtech
+
+`Gap 482-H` is closed with a mechanism (see `repos/trending.md`): Apereo's flagships live in **four
+organisations that are not `org:apereo`**, and `org:apereo` itself returns 30 repositories of which none is an
+LMS, portal or lecture-capture system. 🟢 The deeper reason is structural: **stars measure developer attention,
+and institutional edtech is bought by registrars and procurement committees who do not star repositories.**
+`apereo/heosat` — a higher-education OSS maturity-assessment tool published five weeks ago — has **zero
+stars** and always will. Enumerate by organisation and by standards surface (`qti`, `scorm`, `lti`,
+`imsglobal`, `common-cartridge`), never by rank.
+
+### 🟡 `T483-8` — Governance is the binding constraint, and the gap is now quantified where it is widest
+
+🟡 Secondary-sourced throughout. North America: **134 bills across 31 states** in 2026, four states (Idaho,
+Maryland, Oklahoma, Virginia) mandating **both** state guidance and district policy, while most public schools
+still lack a formal policy against ~60% teacher use. LATAM: **87%** of 200 surveyed higher-education
+institutions use AI, **74%** in teaching and learning, **26%** have a formal AI strategy. APAC: regulation is
+ahead of the EU for education specifically — Vietnam's self-classification duty in force since 30 Apr 2026,
+education named in its high-risk list from 1 Mar 2027. 🟢 **What this pass adds to the trend is the supply
+side**: the governance gap is no longer only a policy-document gap, because permissively-licensed
+implementations of the enforcement controls now exist (`T483-1`, `T483-2`, `T483-5`). The sellable unit is the
+configuration that makes a policy true, not the policy.
+
+### 🔴 What this pass removed from the trend list
+
+🔴 **`p482`'s "EMEA sovereignty" framing, as previously stated, was unactionable** — it asserted a buyer
+preference with no permissively-licensed institutional LMS to satisfy it. `T483-4` replaces it with a named
+provider slot in a named Apache-2.0 codebase.
+🔴 **`p482`'s assessment-integrity trend is not restated.** `Gap 482-I` declared it resting on vendor blogs for
+its 5–20% false-positive range and its 2027 secure-assessment expectation. This pass verified **no** URL, so
+re-publishing those figures would have added a pass of apparent corroboration with zero new evidence. The
+mechanism half — that LMS write tools can complete coursework — is strengthened independently: `canvas-mcp`
+exposes `submit_assignment`, `comment_on_my_submission` and `post_discussion_entry` as student-side writes, and
+**`submit_assignment` carries a confirmation token while `comment_on_my_submission` carries none of the three
+mechanisms**. 🟡 The integrity concern is real and first-hand at the capability level; the detector statistics
+stay unverified and uncited.
+
+### 🔴 Declared gap
+
+| gap | statement |
+|---|---|
+| 🟡 **`Gap 483-I`** | **The "no AI surface" finding for Sakai, uPortal, Tsugi and Opencast is a path-name census, not a code read.** Tokens searched: `ai`, `llm`, `mcp`, `genai`, `openai`, `anthropic`, `ollama`, `chatbot`. A module named without any of them — a differently-named assistant or an integration living in a plugin repository — would be missed. Absence of path evidence across four large repositories is strong but not conclusive. |
+| 🟡 **`Gap 483-P`** | **`T483-1` compares three repositories, not a population.** The guard-posture contrast is measured precisely on `canvas-mcp`, `mentingo` and `OpenOLAT`. Whether "institutional ships guards first, community ships tools first" holds across the 305-repository live education-AI population `p480` counted is **unmeasured**, and three points are a hypothesis. |
 ## 🆕 `p482` — `2026-10-27` — **🔴 THE TREND THIS PASS RETIRES IS THIS BASE'S OWN, FOR THE SECOND PASS RUNNING: `p481` corrected "non-canonical Apache-2.0 is circulating" to "half true"; `p482` finds the licence-supply alarm **not supported at all** — of 6 deviating education grants, **0 narrow the rights granted**, and the one real edit **widens** a clause. 🟢 The genuine supply-side trend is the opposite of scarcity: permissive platform-scale LMSs have existed for a decade and this base had simply never measured their grants. 🔴 And the instrument lesson is now unavoidable: **three of this base's published counts for its single best-documented repository were wrong**, each from a grep where an AST was needed.**
 
 ---

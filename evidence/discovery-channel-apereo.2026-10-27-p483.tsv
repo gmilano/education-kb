@@ -1,0 +1,7 @@
+channel	query	total_count	education_flagships_found	note
+github_org_roster	org:apereo	30	0	CAS/SSO only; no LMS, no portal, no lecture capture
+github_org_roster	org:sakaiproject	-	sakaiproject/sakai 1240 stars	flagship LMS lives OUTSIDE the foundation org
+github_org_roster	org:opencast	-	opencast/opencast 509 stars	lecture capture
+github_org_roster	org:uPortal-Project	-	uPortal-Project/uPortal 287 stars	higher-ed portal
+github_org_roster	org:tsugiproject	-	tsugiproject/tsugi 377 stars	LTI/IMS tooling
+combined	org:sakaiproject org:uPortal-Project org:opencast org:tsugiproject stars:>0	74	4	one query enumerates all four flagships

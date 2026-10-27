@@ -3,6 +3,167 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p483` — `2026-10-27` — **🔴 `Gap 482-B` RESTS ON A FALSE PREMISE: `Selleo/mentingo` DOES annotate its MCP tools — **50 tools declare `readOnlyHint: true`, 21 declare `destructiveHint: true`** — so this base's published claim that its tools are "classified by name, not by reading them" describes the *reader*, not the repository. 🔴 The population is **142 unique tools, not 104**. 🟢 And `Gap 482-E` is closed: the 51 `CANVAS_WRITE` tools in `canvas-mcp` resolve to **three** distinct write-safety mechanisms, with **14** carrying none of them — one of which writes a grade.**
+
+🔵 **Gate posture, unchanged from `p475`–`p482` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo. **Nothing below is gate-attested.** Checks re-implemented in this session's own
+code, held in `/home/user/analysis/` outside every clone and run with `python3 -I` on paths passed as arguments.
+🟢 **New channel this pass:** third-party repositories were **cloned and parsed first-hand** (`canvas-mcp`
+`becd181`, `mentingo` `e137ca4`, `OpenOLAT` `96546d9`) — still **no third-party code executed** (`Gap 483-A`).
+
+---
+
+### 🔴 `mentingo`: the annotation finding, and why `p482` missed it
+
+`p482` published: *"`mentingo`'s 104 unannotated tools are classified by name… **No tool body was read**."* The
+tool bodies were read this pass. `mentingo` registers its tools through `server.registerTool(name, {…})` and
+passes the **standard MCP `annotations` object**:
+
+```ts
+server.registerTool("list_courses", {
+  description: "List available or enrolled learner courses …",
+  inputSchema: asMcpInputSchema(Schemas.listStudentCoursesInputSchema),
+  annotations: { readOnlyHint: true },
+```
+
+| instrument | value |
+|---|---|
+| `registerTool()` call sites | **154** |
+| **unique** tool names | **142** |
+| names registered twice (student + HTTP transport) | 12 |
+| call sites carrying an `annotations` block | 94 |
+| `readOnlyHint: true` | **50** |
+| `readOnlyHint: false` | 9 |
+| `destructiveHint: true` | **21** |
+| `idempotentHint: false` | 23 (and `true`: **0**) |
+| call sites with **no** annotations block | 60 |
+
+🔴 So two published numbers are wrong: **104** (the population is 142 unique) and **3 named reads** (50 tools
+*declare* read-only). 🟡 What survives of `Gap 482-B`: the **60 unannotated call sites** are still classified by
+name only — and every one of them *is* a write by name (`update_*`, `create_*`, `set_*`, `reorder_*`,
+`add_*_language`, `request_*_upload`). The direction was right; the counts and the attribution were not.
+Evidence: [`evidence/mentingo-mcp-tool-annotations.2026-10-27-p483.tsv`](../evidence/mentingo-mcp-tool-annotations.2026-10-27-p483.tsv).
+
+### 🟢 `Gap 482-E` closed — the 21-guards-against-51-writes ratio, explained
+
+The ratio was never explicable because the question assumed one mechanism. `canvas-mcp` has **three**, and a
+tool's guard is often reached through a same-module helper rather than named in the tool body:
+
+| write-safety mechanism | how it is recognised | `CANVAS_WRITE` tools using it |
+|---|---|---|
+| single-use confirmation token | `ConfirmationGuard` / `preview_with_token` / `redeem_confirmation`, or a `confirmation_token` parameter | **32** |
+| body guard (optimistic concurrency) | `BodyGuard` / `validate_guard` / `prepare_body`, or a `guard` parameter | **4** |
+| `dry_run` preview | a `dry_run` parameter | **2** |
+| **at least one of the three** | — | **37** |
+| 🔴 **none of the three** | — | **14** |
+
+🔵 **The instrument matters more than the number.** Counting only names appearing inside the tool function body
+gives **34** unguarded. Resolving one hop into same-module helpers gives **16**. Adding `dry_run` gives **14**.
+Depth 3 and depth 4 both return 16 before the `dry_run` correction, so the measurement **converges at two hops**:
+
+| resolution depth | tools with no mechanism |
+|---|---|
+| 0 hops (tool body only) | 34 |
+| 1 hop | 18 |
+| **2 hops** | **16** |
+| 3 hops | 16 |
+| 4 hops | 16 |
+| 2 hops + `dry_run` recognised | **14** |
+
+🟡 A single-hop reader would have published 18 and a naive reader 34. Neither is the repository's behaviour.
+
+### 🔴 The 14, and the one that matters
+
+| tool | module | why it is unguarded |
+|---|---|---|
+| `create_assignment` · `create_module` · `create_page` · `create_discussion_topic` · `add_module_item` · `upload_course_file` · `post_discussion_entry` · `reply_to_discussion_entry` | `assignments` `modules` `pages` `discussions` `files` | 🟢 **additive by design** — an unwanted create is recoverable |
+| `update_module` · `update_module_item` · `assign_peer_review` · `comment_on_my_submission` · `mark_conversations_read` | `modules` `assignments` `student_write` `messaging` | 🟡 state changes, low blast radius |
+| 🔴 **`grade_with_rubric`** | `rubrics` | **writes a grade** — no confirmation token, no body guard, no `dry_run` |
+
+🔴 **And the one `CODE_EXEC` tool carries no mechanism either.** `execute_typescript` is its own effect class —
+the single most consequential tool in the server — and the same census returns **no confirmation token, no body
+guard, no `dry_run`** for it. 🔵 Its protection is the `ALLOWED_WRITE_TOOLS` allowlist (`_ALL_KEYWORD_TOOLS`
+covers `CANVAS_WRITE` and `LOCAL_WRITE`, so a policy that enumerates write tools does **not** implicitly cover
+`CODE_EXEC`) — which means the only thing standing between an agent and arbitrary TypeScript execution is a
+correctly-written environment variable. 🟡 Whether the allowlist actually gates it at runtime is unverified
+(`Gap 483-A`).
+
+🔵 **Student-side writes, checked individually:** `submit_assignment` 🟢 confirmation token ·
+`mark_module_item_done` 🟢 confirmation token · `comment_on_my_submission` 🔴 none · `post_discussion_entry`
+🔴 none. The two tools that place a student's own work under assessment are guarded; the two that post text in
+the student's name are not.
+
+🔴 **The asymmetry is the finding.** `bulk_grade_submissions` — the *bulk* grading path — carries a `dry_run`
+parameter. `grade_with_rubric` — the *single-student* path — carries none of the three mechanisms. The
+lower-volume, higher-precision write is the less guarded one. For a studio deploying this against a live
+Canvas tenant, that single row is the one to wrap first (see `compose/patterns.md`, `P483-2`).
+Evidence: [`evidence/canvas-mcp-write-guard-map.2026-10-27-p483.tsv`](../evidence/canvas-mcp-write-guard-map.2026-10-27-p483.tsv).
+
+### 🟢 `canvas-mcp`'s 128 now has a fourth agreeing instrument
+
+`p482` settled on **128** from three instruments. A fourth, written independently this pass (`ast`, decorator
+detection over `src/**/*.py`, cross-referenced against the `TOOL_EFFECTS` literal), returns:
+
+| property | `p482` | `p483` | verdict |
+|---|---|---|---|
+| registered tools | 128 | **128** | 🟢 agrees |
+| `TOOL_EFFECTS` keys | 128 | **128** | 🟢 agrees · 0 duplicate keys |
+| set equality registered == policy | True | **True** | 🟢 agrees |
+| `READ` | 72 | **72** | 🟢 agrees |
+| `CANVAS_WRITE` | 51 | **51** | 🟢 agrees |
+| `LOCAL_WRITE` | 4 | **4** | 🟢 agrees |
+| `CODE_EXEC` | 1 | **1** | 🟢 agrees |
+
+🔵 `SIDE_EFFECT_TOOLS` and `_ALL_KEYWORD_TOOLS` are **derived** `frozenset` comprehensions over `TOOL_EFFECTS`,
+not literals — so they cannot drift from it by construction. A literal-scanning instrument reports them as
+empty; that is an artefact, and this base should not publish a size for either.
+
+### The panel — every row API-verified at `2026-10-27T15:58Z`
+
+🔵 Stars, licence and `pushed_at` read through the **authenticated GitHub API**, not from search-result prose.
+🔴 `curl` and `WebFetch` were both unavailable this pass for *every* host tried (see `intel/market.md`,
+`Gap 483-C`), so the API is the only verification channel that worked — and for GitHub rows it is stronger than
+an HTTP status code: it returns the canonical `full_name`, the SPDX id and the star count in one read.
+
+| agent | repo | licence | ★ | what it does |
+|---|---|---|---|---|
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 45,352 | lifelong personalised tutoring; multi-agent + RAG; `arXiv:2604.26962` |
+| **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT | 1,237 | self-directed study companion: route, teach, project, spaced repetition |
+| **learn-from-materials** | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 MIT | 1,185 | turns PDFs/books/papers into traceable, quizzable learning pages |
+| **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 970 | books → animated, narrated, interactive web experiences; SCORM topic |
+| **education-agent-skills** | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 **NOASSERTION** | 916 | 165 evidence-grounded skills for teachers and school leaders |
+| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 MIT | 470 | topic → researched course of 2-minute audio lessons with cited sources |
+| **universal-examprep-skill** | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 MIT | 355 | exam coach; teaches from slides with page citations; anti-hallucination |
+| **canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | 308 | Canvas LMS MCP server — **128 tools**, 51 of them Canvas writes |
+| **ari** | [nichochar/ari](https://github.com/nichochar/ari) | 🟢 MIT | 210 | pen + paper + AI; local-first |
+| **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | 152 | block-based adaptive workspace, self-hosted, 10+ LLM providers |
+| **canvas-mcp (read-only)** | [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 🟢 MIT | 115 | **read-only** Canvas MCP server — no write surface at all |
+| **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 MIT | 99 | AI-native LMS; **142 MCP tools**, 21 declared destructive; RLS tenancy |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | 56 | MCP server turning any LLM into an intelligent tutoring system (BKT) |
+
+🔴 **Licence flag, first-hand from the API.** `GarethManning/education-agent-skills` — 916★, the largest
+teacher-facing skill collection this base tracks — resolves to `license.spdx_id: NOASSERTION`. GitHub could not
+identify a licence. **Globant cannot treat it as permissive.** The repository file could not be read: the
+session's GitHub file-contents channel is scoped to the two `gmilano` repositories, and `WebFetch` is down
+(`Gap 483-D`). Until someone reads that LICENSE, this row is a **capability reference, not a reusable grant**.
+
+### 🟢 The read-only sibling is a design statement, not a duplicate
+
+`boyuchengz/canvas-mcp` (115★, created 2026-10-25) and `vishalsachdev/canvas-mcp` (308★) are **not** a fork pair
+— different owners, different languages (JavaScript vs Python), and different postures. One ships 128 tools of
+which 51 write to Canvas and 14 of those are unguarded; the other advertises **read-only** in its own
+description. 🔵 For a first engagement against a live student record system, the 115★ repository is the lower-risk
+starting point and the 308★ one is the capability ceiling. That pairing is the actual procurement choice, and
+star rank points the wrong way.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 483-A`** | **Still nothing executed, now by explicit choice.** Three third-party repositories were cloned and parsed; none was run. The behavioural properties remain unverified: `canvas-mcp`'s allowlist resolution, HMAC token lifecycle and 300 s TTL; whether `mentingo`'s 44 RLS policies actually isolate a tenant; whether OpenOLAT's essay pre-filters reject what they claim to. `Gap 482-A` asked a future pass to decide this deliberately — **this pass decided not to execute third-party code**, and records that as the reason. |
+| 🟡 **`Gap 483-B`** | **The 14 unguarded writes are classified by mechanism, not by consequence.** "Additive by design" is this pass's reading of eight tool *names*, corroborated by their signatures, not by tracing what Canvas does on receipt. `grade_with_rubric` is the one row where the absence of a mechanism was confirmed against the function's full parameter list, and even there no call was made. |
+| 🟡 **`Gap 483-E`** | **`mentingo`'s 60 unannotated tools remain name-classified.** `Gap 482-B` is corrected but not discharged: 94 of 154 call sites declare annotations, 60 do not, and no body among those 60 was traced to a mutation. |
+| 🔴 **`Gap 483-F`** | **`education-agent-skills` (916★) has no readable licence.** Flagged NOASSERTION by the API; the file is unreachable from this session. The base's largest teacher-skill row is unusable until a pass with a working fetch channel reads it. |
 ## 🆕 `p482` — `2026-10-27` — **🔴 THREE OF THIS BASE'S OWN PUBLISHED NUMBERS FOR ITS BEST-DOCUMENTED ROW ARE WRONG, AND THE CORRECTION COMES FROM THREE AGREEING INSTRUMENTS: `vishalsachdev/canvas-mcp` registers **128** tools at `becd181`, not 130 — the figure `p481` published under a class table that summed to 129. 🟢 And the property `p481` filed as unverifiable without execution is verified **by construction**: the set of registered tool names and the set of policy keys are **equal**, 0 unclassified, 0 stale. 🟢 `Gap 481-C` is closed on code: `mentingo` enforces tenant isolation in **Postgres RLS — 44 enablements, 204 policy clauses** — not in application code.**
 
 🔵 **Gate posture, unchanged from `p475`–`p481` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
