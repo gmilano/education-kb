@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p490` — `2026-10-27` — **🔴 THE EDUCATION PLATFORM LAYER IS COPYLEFT AND THAT IS NOW THE BINDING COMMERCIAL CONSTRAINT: of 16 foundational platforms read from bytes this pass, **3 are permissive**. Every incumbent — Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas `AGPL-3.0` — forecloses a closed hosted derivative. 🔴 And `frappe/lms`, published as `MIT` here and by current web sources, is **`AGPL-3.0`** read at `license.txt`.**
+
+🔵 **Channels:** `api.github.com` `403` for unattached repositories, so no authenticated search
+this pass; `curl -sI github.com` `403` as always. Existence and default ref via
+**`git ls-remote --symref`**, licence bytes via **`raw.githubusercontent.com` at a resolved SHA**,
+stars via **page fetch**. Evidence:
+[`licence-and-stars.2026-10-27-p490.tsv`](../evidence/licence-and-stars.2026-10-27-p490.tsv).
+
+### 🔴 The licence census, from bytes
+
+| class | count | repos |
+|---|---|---|
+| **Permissive (MIT / Apache-2.0)** | **3** | `oppia`, `kolibri`, `OpenOLAT` |
+| GPL / LGPL | 8 | `moodle`, `chamilo`, `ILIAS`, `h5p`, `GibbonEdu`, `tao-core`, `rosariosis`, `bigbluebutton`, `openeducat_erp` |
+| **AGPL (network copyleft)** | **5** | `edx-platform`, `canvas-lms`, `frappe/lms`, `tutor`, `anki` |
+
+🟢 **The only three a studio can build a closed derivative on:**
+[`oppia/oppia`](https://github.com/oppia/oppia) Apache-2.0 6 900★ `bc73ecf9cf71`,
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) MIT 1 200★ `dbe14ef6c499`,
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) Apache-2.0 448★ `3736d48fa685`.
+🟢 `OpenOLAT` is **the only permissive *full* LMS found anywhere on these shelves**, and
+`kolibri` is **the only permissive offline-first platform** — the decisive property for ministry
+work in LATAM, Africa and parts of APAC.
+
+### 🔴 `frappe/lms` is not MIT
+
+Read at `6054772c0426`: the grant is at **`license.txt`** (lowercase), **33 893 B**, title block
+`GNU AFFERO GENERAL PUBLIC LICENSE Version 3`. The repository's own GitHub sidebar also reads
+`AGPL-3.0`. 🔵 Two channels agree and both disagree with the comparison sites still printing
+`MIT` for it — and with this base, which carried `MIT`. A hosted Globant derivative of it would
+owe source to its users.
+
+### 🔴 The branch-name trap, which reads as "file absent"
+
+**Ten of 16 platforms do not default to `main`.** A raw fetch hardcoding `/main/` 404s on every
+one of them, and a 404 is indistinguishable from "no licence file" to a probe — which is one
+mechanism by which this base has published `NO GRANT` on granted repositories.
+
+| repo | default ref | repo | default ref |
+|---|---|---|---|
+| `oppia/oppia` | `develop` | `openeducat/openeducat_erp` | `19.0` |
+| `learningequality/kolibri` | `develop` | `GibbonEdu/core` | `v31.0.00` |
+| `openedx/edx-platform` | `master` | `ILIAS-eLearning/ILIAS` | `release_11` |
+| `instructure/canvas-lms` | `master` | `bigbluebutton/bigbluebutton` | `v4.0.x-develop` |
+| `overhangio/tutor` | `release` | `oat-sa/tao-core` | `develop` |
+
+🔵 **Resolve the ref with `git ls-remote --symref` before fetching bytes. Never hardcode `main`.**
+
+### 🟡 Two more grant-location traps on this shelf
+
+- [`moodle/moodle`](https://github.com/moodle/moodle) serves its grant at **`COPYING.txt`**, not
+  `LICENSE`. A root-`LICENSE` probe reports "no grant" for the largest installed base in education.
+- [`microsoft/autogen`](https://github.com/microsoft/autogen) serves **`CC BY 4.0` at `LICENSE`**
+  (18 650 B) and its **code grant as `MIT` at `LICENSE-CODE`**. A `LICENSE`-only sweep files
+  Microsoft agent repos as Creative Commons and drops a usable MIT row.
+
+### 🟢 Foundational shelf as measured, star-ordered
+
+| repo | licence | ★ | SHA |
+|---|---|---|---|
+| [`ankitects/anki`](https://github.com/ankitects/anki) | AGPL-3.0 | 32 300 | `d87cb22bf337` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9 300 | `ac97a8bfdc20` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 | 8 200 | `d9aaee456069` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | 7 600 | `46c042e7da65` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | 6 900 | `bc73ecf9cf71` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6 900 | `1c9f0bb8013e` |
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | 3 400 | `6054772c0426` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1 200 | `dbe14ef6c499` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 | 1 100 | `aa5d1a764b6c` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1 000 | `2d1e97ee4244` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | `46a5d7d40082` |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 647 | `fa5f4b66caf4` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | GPL-3.0 | 635 | `65f86bf061fa` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | `db9582e3cd3e` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 448 | `3736d48fa685` |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | `1e21b7a2da4a` |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | `d9b3da5e6b0a` |
+
+### 🔵 Declared gaps this pass
+
+- **No permissive SIS exists.** `rosariosis` GPL-2.0, `GibbonEdu` GPL-3.0, `openeducat_erp`
+  LGPL-3.0, `openSIS` GPL-2.0. A closed-source SIS derivative has **no** open starting point.
+- **No permissive assessment/QTI engine exists.** `oat-sa/tao-core` (GPL-2.0, 64★) is the only
+  substantial one on any shelf here.
+- **No MCP/tool surface for Moodle or Open edX** reached a usable star floor. Canvas is the sole
+  incumbent with one ([`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), MIT, 309★).
+- **`Fedena` unresolvable.** Claimed `Apache-2.0` by one source; no maintained canonical repo
+  resolved via `ls-remote`. **Not carried as a row** rather than carried on a claim.
+
 ## 🆕 `p489` — `2026-10-27T21:55Z` — **🟢 `Gap 488-A` IS PAID: every byte-size cell on these shelves is reissued as an operative-span blob SHA, and the instrument's first run settles the argument that has run since `p450` — **nine MIT file sizes are one identity**, and `p486`'s "pair of Apache fingerprints" was an artifact of hashing the file. 🔴 Then it finds the thing sizes cannot: an edited Apache payload that has **propagated byte-identically into a derivative repository**.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen in fifteen.** 🔵 `api.github.com` and

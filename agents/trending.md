@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p490` — `2026-10-27` — **🟢 `agents/top.md` HAD NO AGENTS TABLE. It has one again. Six published figures corrected from bytes — `educhain` is **387★, not ~12 000** (31×), `OATutor` **274★, not ~1 500** (5×), `frappe/lms` is **AGPL-3.0, not MIT**. 🔴 And this pass's own licence reader misgraded GPLv2 as LGPL, because the GPLv2 *preamble* names the Lesser GPL — a defect this base can reproduce in every body-scanning reader it has ever run.**
+
+🔵 **Channel posture, stated first.** `api.github.com` returns `403` for every repository not
+attached to this session ("GitHub access to this repository is not enabled for this session"), so
+the authenticated search channel `p479`–`p489` relied on is **not available this pass**.
+`curl -sI https://github.com/<repo>` returned `403` again — it remains the uniform false-negative
+the standing task prescribes and `p472` refuted. What worked: **`git ls-remote --symref`** for
+existence and default ref, **`raw.githubusercontent.com` at a resolved SHA** for licence bytes,
+and **page fetch** for stars. 28 repositories read end-to-end on those three channels.
+Evidence: [`licence-and-stars.2026-10-27-p490.tsv`](../evidence/licence-and-stars.2026-10-27-p490.tsv).
+
+### 🔴 The structural finding: this file's siblings had stopped being a knowledge base
+
+`agents/top.md` was **7 510 lines** and contained **no table of agents**. 57 pass-sections of
+audit narrative, and an engagement lead could not read a licence off it. The six non-append-only
+files carried 57–89 pass-sections each despite the standing task describing them as *tables*.
+All six were rewritten this pass to their specified shape; the prior content is in
+[`archive/2026-10-27-p490-pre-rewrite/`](../archive/2026-10-27-p490-pre-rewrite/).
+🔵 This file and `repos/trending.md` are append-only and were **not** rewritten.
+
+### 🔴 Six corrections, each confirmed on two independent channels
+
+| row | published here | measured `p490` | error |
+|---|---|---|---|
+| `satvik314/educhain` | `~12 000★` since cycle 2 | **387★** | **31×** |
+| `CAHLR/OATutor` | `~1 300★`/`~1 500★` | **274★** | ~5× |
+| `frappe/lms` | `MIT` | **AGPL-3.0** (`license.txt`, 33 893 B; sidebar agrees) | family wrong |
+| `oat-sa/tao-core` | `GPL-2.0-or-later` | **GPL-2.0**; `or-later` **not readable** from payload | overclaimed |
+| `RosarioSIS/RosarioSIS` | cited as a path | **404** → [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | dead URL |
+| `microsoft/autogen` | `MIT` | `LICENSE` is **CC BY 4.0**; code grant is **MIT at `LICENSE-CODE`** | right by luck |
+
+🟢 `educhain` at **387★** independently reproduces `p489`'s correction of the same row — two
+passes, two channels, same answer. The figure is settled.
+
+### 🔴 A defect in this pass's own instrument, recorded rather than quietly fixed
+
+The first reader run graded [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) **`LGPL-2.0`**.
+It is **`GPL-2.0`** — confirmed by its own sidebar. Cause: the reader scanned the first 3 000
+bytes, and **the GPLv2 preamble cross-references the Lesser GPL** ("…the GNU Lesser General
+Public License instead…"), so `LGPL` matches before the real family is reached. Re-anchored on the
+**200-byte title block**, all 28 rows were re-read: `tao-core` and `rosariosis` moved to
+`GPL-2.0`, and the two genuine LGPL rows held (`bigbluebutton` 7 652 B, `openeducat_erp` 8 241 B).
+
+🔵 **Standing rule for later passes: anchor licence family on the title block. Any GNU-family body
+scan is a false-positive generator, and this base has run body scans for most of its history.**
+
+### 🟢 The agent shelf as measured this pass
+
+Nine permissive rows, each licence read at the SHA shown. Full table in
+[`agents/top.md`](top.md).
+
+| agent | licence | ★ | SHA |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | MIT | 78 000 | `dd0f080d07d2` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 45 800 | `a31d82624c27` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | Apache-2.0 | 30 100 | `96f33faaf028` |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` |
+| [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | `32e5d1ca0175` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` |
+| [`panaversity/ksor`](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | MIT | 100 | `e137ca47cbec` |
+
+🔴 Copyleft, named so the omission is not silent:
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) **AGPL-3.0** 1 300★,
+[`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) **GPL-3.0** 932★.
+
+🟡 `microsoft/ai-agents-for-beginners` is the most-starred row at 78 000★ and is **a curriculum,
+not a deployable agent**. Carried because it is routinely miscatalogued as a product.
+
+### 🔵 Declared gaps this pass
+
+- **No permissive education-specific agent between 387★ and 30 100★.** The band is occupied only
+  by general-purpose (`smolagents`) or copyleft (`ChatTutor`, `tutor-gpt`) rows. The permissive
+  education tier is genuinely thin — this is supply, not sampling.
+- **No LATAM- or Africa-origin education agent reached the star floor** on global or per-region
+  search. Regional supply is in deployments and national programmes, not starred repos.
+- **No open-source education-AI evaluation harness above 60★ exists** — carried forward,
+  re-searched, still true. Now written up as a build in
+  [`compose/patterns.md`](../compose/patterns.md) `P490-6`.
+- **Commit recency unavailable.** Page fetch exposes no per-file commit dates and `api.github.com`
+  is `403`; rows carry a pinned SHA instead, which is the stronger claim.
+
 ## 🆕 `p489` — `2026-10-27T21:55Z` — **🔴 `p488` measured the star floor correctly and drew the wrong conclusion from it. The middle band it said nobody had sampled is now sampled: **467 repositories**, and **0 of 20** graded are reusable by a studio. The twelve-interval "regional supply nil" was substantively RIGHT and methodologically wrong, and that is the more useful of the two corrections. 🔴 And the dominant noise source on `tutor` is neither language nor stars — it is substring collision plus one coordinated star-inflated spam network.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen denials in fifteen passes.** Nothing
