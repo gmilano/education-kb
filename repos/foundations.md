@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27` — **🟢 THE FOUNDATIONS SHELF GAINS ITS FIRST PERMISSIVELY-LICENSED PLATFORM-SCALE ROW, READ AS SOURCE: `Selleo/mentingo` — **MIT**, 584,229 LOC, 794 test files, multi-tenant, with a native MCP surface and an OAuth consent controller — against a shelf whose three incumbent platforms are all AGPL-3.0. 🟢 And the canonical Apache-2.0 text is now held in this base as a measured reference (11,358 B · 1,413 operative word tokens), which turns "is this really Apache-2.0?" from a judgement into a diff.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — the harness refuses execution of
+code arriving in a clone. Nothing below is gate-attested, and **nothing cloned this pass was run**
+(`Gap 481-A`).
+
+---
+
+### 🟢 The reference this shelf never had
+
+Every licence verdict this base has published for an Apache-2.0 row has been a comparison against remembered
+text. The licensor's own copy is now fetched, measured and stored as the comparison basis:
+
+| property | value |
+|---|---|
+| source | `https://www.apache.org/licenses/LICENSE-2.0.txt` (`http=200`) |
+| bytes | **11,358** |
+| `sha256` (16) | `cfc7749b96f63bd3` |
+| operative word tokens (to `END OF TERMS AND CONDITIONS`) | **1,413** |
+
+🔵 Two instruments follow from it, and they disagree in a way that matters. Comparing *bytes* calls 13 of 13
+education Apache repositories non-canonical. Comparing *operative words* calls **7 of 13 verbatim**. The
+word-level instrument is the correct one, because Apache-2.0 instructs the licensee to fill in the appendix —
+so an appendix difference is compliance, not deviation. Full table on `repos/trending.md`.
+
+### 🟢 The foundations tier — grant, liveness, and source read first-hand where stated
+
+| repo | ★ · grant | last pushed | read this pass | what it is |
+|---|---|---|---|---|
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · 35,136 B | live | 🔵 carried from `p480` | MOOC-scale LMS; **carries the RPC scope clarification** (`p480`) |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0-only** · 34,520 B | live | 🔵 carried from `p480` | LMS of record in much of US higher ed; **no scope clarification** |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 · 34,523 B | live | 🔵 carried from `p480` | the supported Open edX deployment path; Docker-based |
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | live | 🔵 carried; not re-read | the default open LMS worldwide |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1,062 B | **2026-10-27** | 🟢 **cloned `e137ca4`** | **584,229 LOC** multi-tenant LMS; MCP + OAuth consent; Langfuse tracing; **794 test files** |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT · 1,071 B | 2026-10-26 | 🟢 **cloned `becd181`** | 32,878 LOC; **130 tools under a 4-class effect policy**; 21 confirmation guards; 60+ security tests |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟡 Apache-2.0 · 11,408 B *(operative text **altered**, 4 tokens)* | 2026-10-27 | 🔵 grant re-diffed this pass | 819,646 LOC (`p480`); 45,069★; the largest education-AI repository on GitHub |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | 🟢 MIT · 1,072 B | 2026-10-27 | 🔵 carried from `p480` | 1,276 LOC; **26 read-only tools**, 33 calls, zero writes |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT · 1,073 B | 2026-10-27 | 🟢 **cloned `0342cfb`** | 171,107 LOC **Go**; MCP over HTTP with auth middleware; 365 tests; `Dockerfile` |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 🟢 MIT · 1,068 B | 2026-10-26 | 🟢 **cloned `039bfb9`** | 108,286 LOC; 136 tests; `docker-compose.prod.yml`; no MCP surface |
+| [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 Apache-2.0 · `NOTICE` + 175 headers | 2016-07-20 | 🔵 carried from `p480` | 273,846 LOC SIS; **Rails 2.3.5 — not a viable base** (`p480`) |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | 2026-10-22 | 🔵 grant + metadata only | 536★; spaced repetition as MCP tools |
+
+### 🟢 Why `mentingo` changes the shape of this shelf
+
+The shelf's platform tier has been uniformly copyleft, which forces every recipe this base writes into the
+"deployed beside, not linked into" architecture that `p480` finally found first-hand grant-text support for
+(Open edX's RPC clarification). A **permissively licensed** platform removes that constraint for the first time:
+
+| signal read first-hand | value | why it counts |
+|---|---|---|
+| grant | `MIT License` · `Copyright (c) 2024 Selleo` · 1,062 B | no source-disclosure duty on a hosted service |
+| scale | 584,229 LOC; **794** test files | not a demo |
+| domain model | `courses`, `chapters`, `lessons`, `groups`, `certificates`, `quiz` schema | a real LMS, not a course-content generator |
+| tenancy | `tenant-aware-session` in the storage layer | multi-tenant by construction |
+| agent surface | `apps/api/src/mcp/` — admin tools, customization tools, upload tools, content resource, **`mcp-oauth.controller.ts`**, **`mcp-consent.controller.ts`**, `mcp-auth.guard.ts` | the agent integration is **in** the platform, with an OAuth consent step |
+| observability | `@langfuse/{client,core,otel,tracing,vercel-ai-sdk}`, `@ai-sdk/openai` | LLM tracing wired in, not bolted on |
+| deployment | `docker-compose.yml`, `docker-compose.langfuse.yml`, preview template | a documented path to running it |
+
+🔴 **What this is not.** 99★. Against Moodle's and Canvas's institutional install bases this is a *licensing*
+answer and a *architecture* answer, not an adoption answer. Migration cost, accessibility conformance, LTI
+support and SIS integration are all unexamined (`Gap 481-C`).
+
+### 🔵 The permissive-platform question, restated now that it has two answers
+
+| candidate | grant | blocker |
+|---|---|---|
+| `projectfedena/fedena` | 🟢 Apache-2.0 | 🔴 **architectural** — Rails 2.3.5, no `Gemfile`, Flash reporting, last push 2016 (`p480`) |
+| `Selleo/mentingo` | 🟢 **MIT** | 🟡 **adoption** — 99★, maturity and institutional integrations unexamined |
+
+🔵 These are different kinds of blocker, and the second kind is the kind a studio can absorb. `p479`'s
+conclusion — *"the permissive SIS is not missing, it is fifteen years old"* — needs amending for the LMS tier:
+**the permissive LMS is not missing and not old; it is small.**
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 481-F`** | **Nothing on this shelf was executed** (`Gap 481-A`). `mentingo`'s 794 test files were counted, not run; its `docker-compose.yml` was not brought up. "A documented path to running it" means a file exists. |
+| 🟡 **`Gap 481-G`** | **`mentingo` is profiled, not audited** (`Gap 481-C`): the OAuth consent controller, the MCP auth guard and the tenant-isolation test were identified **by filename** and not read. Whether its MCP tools are write-guarded is **unknown** — and this pass's own `canvas-mcp` finding is the reason that question should not be assumed either way. |
+| 🟡 **`Gap 481-H`** | **The four copyleft platform rows were not re-read this pass.** Their grants, byte counts and elections are carried from `p479`/`p480`. Only `DeepTutor`'s Apache file was re-diffed. |
+| 🟡 **`Gap 481-I`** | **The canonical Apache reference is one fetch on one day.** It was not checked against a second channel, and `apache.org` was the only licensor text this base holds — there is still **no canonical MIT, GPL-3.0 or AGPL-3.0 reference stored here**, so those families remain byte-compared rather than word-compared. |
 ## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-H` IS CLOSED ON BOTH ROWS, AND ONE OF THE TWO ANSWERS IS WORTH MORE THAN AN ELECTION: Canvas LMS elects **AGPL-3.0-only** — read from its per-file header, not guessed — and Open edX's `LICENSE` carries **616 bytes the bare FSF text does not have**: an explicit edX Inc. clarification that a separate web service talking to it over **RPC is not a derivative work**. 🟢 That is the first first-hand grant-text basis this base has ever had for the "deployed, not linked" boundary its whole compose shelf rests on.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — the harness refuses execution of

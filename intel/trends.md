@@ -3,6 +3,113 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27` — **🟢 THE TREND THIS PASS CORRECTS IS ONE THIS BASE CREATED: "non-canonical Apache-2.0 is circulating" is **half true and half an artefact of the wrong instrument**. Measured against the licensor's own text at word level, **7 of 13** education Apache repositories grant exactly the canonical terms despite differing byte counts; **6** do not, and **one has a clause narrowed**. 🟢 And the deeper trend is in agent safety: the best-guarded repository on this shelf publishes, in its own source, that the control pattern this base has been recommending **does not do what this base said it does**.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. Nothing cloned this pass was executed (`Gap 481-A`).
+
+---
+
+### 🟢 Trend 1 — the licence *label* and the licence *grant* have come apart, and only a word-level diff separates them
+
+| instrument | verdict on the same 13 Apache-2.0 repositories |
+|---|---|
+| `license.spdx_id` from the search API | 13 of 13 "Apache-2.0" — **no variance visible at all** |
+| byte count vs canonical (11,358 B) | 13 of 13 "non-canonical" — **variance over-reported** |
+| **word-level diff of the operative text** (1,413 tokens) | 🟢 **7 verbatim** · 🔴 **6 altered** |
+
+🔵 This is the trend with the most direct commercial consequence on the shelf: a studio's licence diligence is
+usually a metadata read, and metadata cannot see any of this. The appendix that Apache-2.0 *instructs* you to
+fill in accounts for most byte differences — so byte comparison manufactures false positives, and label
+comparison manufactures false negatives. Only one of the three instruments answers the question.
+
+### 🟢 Trend 2 — the circulating rendering is confirmed, bounded below, and crosses regions
+
+`p480` saw two repositories sharing three deviations and could say nothing about spread. A two-marker
+fingerprint — `submitted to **the** Licensor` co-occurring with `excluding **any** notices` — now identifies the
+rendering on **three** repositories and on **no other row** in the panel: `HKUDS/DeepTutor` (Hong Kong),
+`SimonsTang/feifei-companion` (APAC), `ANFAIA/SkillNet` (Spain).
+
+🔵 It crosses APAC and EMEA, which argues for a shared *text source* — a template, a translation round-trip, or
+a generated file — rather than one organisation's house style. 🔴 No provenance was found, and the prevalence is
+a **floor of 3**, not a measurement (`Gap 481-AH`).
+
+### 🔴 Trend 3 — one row narrows a clause, and it is not the small one
+
+`beltromatti/get-it` (1,135★) deletes **"reasonable and customary use in"** from § 6 Trademarks, so the
+carve-out reads *"except as required for describing the origin of the Work"*. The reasonableness qualifier is
+gone. Across 13 repositories this is the **only** deviation that changes what a licence permits rather than how
+it is worded — and it sits on the second-most-starred row in the panel, a hackathon project from Milan.
+
+🔵 The usable generalisation: deviations cluster in *definitions* (inert, as far as this base can judge) and in
+*punctuation* (`onemnemo/mnemo`, § 8) and *reflow* (`tsugiproject/tsugi`, § 4 enumerators) — but not
+exclusively. One in thirteen touched a permission. That rate is the reason to read the file.
+
+### 🟢 Trend 4 — agent safety is professionalising, and the leading implementation is candid about its own limits
+
+The strongest evidence this pass is not a count but a document. `vishalsachdev/canvas-mcp` ships a four-layer
+control model (operator allowlist → registration gates → confirmation guards → MCP client approval), a declared
+effect taxonomy over all **130** tools (72 read · 52 Canvas-write · 4 local-write · 1 code-exec), **21**
+single-use content-bound guards, 60+ security test files, and a reference to a published advisory
+(**GHSA-hmr8-mvr2-mvw5**) describing the exact attack: a student plants instructions in content the instructor's
+assistant later reads.
+
+🔴 **And it states the limit this base had wrong.** A confirmation token binds a request; *"it does NOT prove
+that a person saw or approved the preview. The model receives the token and can redeem it itself."* The only
+boundary a prompt injection cannot talk past is the one the model has no hand in — `ALLOWED_WRITE_TOOLS`, fixed
+by the operator in the environment. 🔵 Trend, stated plainly: **the control that works is configuration, not
+conversation.** Recipes built on preview-and-confirm alone have been mislabelling the human-approval step, and
+`compose/patterns.md` is corrected this pass.
+
+### 🟢 Trend 5 — the agent surface is migrating *into* the platform
+
+`p480` found the unit of supply to be a skill or a standalone MCP server. Two rows read this pass complicate
+that: `Selleo/mentingo` (MIT LMS) ships `apps/api/src/mcp/` — admin tools, customization tools, upload tools, a
+content resource, an auth guard and an **OAuth consent controller** — as part of the platform, with Langfuse
+tracing alongside. `ArnaudGuiovanna/tutor-mcp` is 171k LOC of **Go** with auth middleware, which is a different
+engineering posture from a 1,276-LOC single-purpose server.
+
+🔵 Consequence: the integration question is shifting from *"which MCP server do we bolt on"* to *"does the
+platform own the consent screen"* — and a platform that does can obtain a human decision the agent never
+mediates. 🔴 Read at profile depth only (`Gap 481-G`).
+
+### 🟡 Trend 6 — attention concentration held three hours, then narrowed
+
+| measure | `p479` | `p480` | `p481` |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 94.0 ★/h | 114.6 ★/h | **117.7 ★/h** |
+| concentration vs rest of panel | 31.5 : 1 (7 rows) | 24.6 : 1 (3 rows) | **19.8 : 1** (3 rows) |
+
+🔵 Three consecutive hourly intervals with the leader between 94 and 118 ★/h is the most stable series this base
+has. The **narrowing** is the new information, and the honest reading is that it is weak: the two comparison
+rows moved +6 where they moved +5, and ±1★ on a 354★ repository moves the ratio several points
+(`Gap 481-E`).
+
+### 🔴 Trend 7 — regulation is converging on a shape, and the earliest hard education deadline is now APAC's
+
+Education is being written into high-risk schedules across three regions, with the **EU's deferred to 2 December
+2027** and **Vietnam's landing first, 1 March 2027**. North America is regulating by *guardrail* — Oklahoma and
+Maryland barring AI from high-stakes student decisions, NYC placing grading, discipline and placement in a
+prohibited tier — rather than by conformity assessment. 🔵 The convergent pattern across all three: **grading,
+admissions and proctoring are the regulated surface; tutoring and content generation largely are not.** That is
+where a studio's deployable scope sits. 🔴 Entirely secondary-sourced (`Gap 481-AC`).
+
+### 🔴 Trend 8 — efficacy: unmoved, and still unreadable from here
+
+No change. Every efficacy figure this base carries, the −0.37 SD included, remains a search-tool summary of a
+paper it cannot open; `arxiv.org`, `edworkingpapers.com` and `eur-lex.europa.eu` are all refused or unresolved
+at this gateway. This pass did not improve the position and declines to restate it as if it had.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 481-AI`** | **`Gap 480-AI` unchanged — no study read first-hand.** Stated above rather than quietly dropped. |
+| 🔴 **`Gap 481-AJ`** | **Trend 1 and Trend 2 rest on 13 repositories** from `topic:edtech license:apache-2.0` plus two `topic:ai-tutor` rows — not the Apache subset of the 305-row union (`Gap 480-C`). The 7/6 split is a property of this panel; the rendering's prevalence is a floor of 3 with **no upper bound measured**. |
+| 🔴 **`Gap 481-AK`** | **Trend 4 is one repository's source, unexecuted** (`Gap 481-A`, `Gap 481-B`). The four-layer model is verified as *written* — the policy file, the guard module and the test filenames were read — and **not** verified to hold at runtime. No security test was run. |
+| 🟡 **`Gap 481-AL`** | **Trend 5 generalises from two clones**, one of which (`mentingo`) was read at profile depth with its consent controller identified by filename and not read (`Gap 481-G`). Whether its MCP tools are write-guarded at all is unknown. |
+| 🟡 **`Gap 481-AM`** | **Trend 6 is three one-hour intervals on three rows.** Five of `p479`'s eight panel rows have now gone two passes without a re-read (`Gap 481-E`), so "the tier is flat apart from the leader" remains a claim about a narrow panel. |
+| 🟡 **`Gap 481-AN`** | **Trend 3's "one in thirteen touched a permission" is a rate over this panel only**, and whether the `get-it` deletion was deliberate, generated or copied is unknown — no provenance was sought beyond the file itself. |
 ## 🆕 `p480` — `2026-10-27` — **🟢 THE TREND THIS PASS CAN MEASURE THAT NO PREVIOUS ONE COULD IS A LICENSING TREND, AND IT IS A WARNING: with the topic filter removed, **19% of 305 live education-AI repositories declare no grant at all** and permissive share falls from 76% to **50%** — and the two Apache-2.0 files read byte-for-byte this pass are **both non-canonical, with the same three deviations**. 🟢 Attention stays concentrated **24.6 : 1** in one repository, now across a third interval. 🔴 The efficacy literature is unmoved and unreadable from here.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

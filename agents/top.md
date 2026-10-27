@@ -3,6 +3,111 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27` — **🟢 `Gap 480-F` IS CLOSED AND IT OVERTURNS ITS OWN FRAMING: the write surface this base has been warning about for two passes is **the most carefully guarded artefact on this shelf**. `vishalsachdev/canvas-mcp` carries an operator-controlled allowlist, 21 single-use content-bound confirmation guards, an explicit four-class effect taxonomy over all 130 tools, and a published advisory (**GHSA-hmr8-mvr2-mvw5**) naming the exact prompt-injection path. 🟢 It also states, in its own source, the thing this base kept guessing at: **a confirmation token does not prove a human approved anything.** 🟢 Five repositories cloned and read first-hand this pass, taking the base's all-time clone tier from 4 to 9.**
+
+🔵 **Gate posture, unchanged from `p475`–`p480` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's own code,
+held outside the clone, and green: frontmatter keys and closed-vocabulary `region` on all eight shelves; every
+table checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and prepend-only on these; every grant fetched to a file and the
+**file** measured (`Gap 468-A`).
+
+---
+
+### 🟢 `Gap 480-F` closed — and the gap asked the wrong question
+
+`p480` counted 12 write call sites by grep and filed the gap as *"it writes" is certain and "what guards those
+writes" is unexamined*. Reading the source answers it, and inverts the posture. Two structural facts the grep
+could not see:
+
+| what `p480` saw | what the source shows |
+|---|---|
+| "12 write call sites" scattered across tools | **every** `post`/`put`/`delete` in the package lives in **one file**, `core/client.py` — the tool modules have no HTTP write primitive to call |
+| 136 tools, write capability unknown | **130** `@mcp.tool` registrations, each **explicitly classified** in `core/tool_policy.py` by what it can change |
+
+The effect taxonomy is declared, not inferred:
+
+| `Effect` class | tools | what it means |
+|---|---|---|
+| `READ` | **72** | always available, on every transport |
+| `CANVAS_WRITE` | **52** | changes Canvas state, **including sending messages** |
+| `LOCAL_WRITE` | **4** | writes the server's own filesystem; refuses on HTTP anyway |
+| `CODE_EXEC` | **1** | runs caller-supplied code **with the caller's Canvas token** |
+
+🔵 The 72 `READ` entries match the 72 `read_only_hint=True` annotations counted independently in the tool
+modules — two different instruments agreeing. And the project explicitly distrusts the annotation as a control:
+*"`read_only_hint` is not trusted on its own: the classification below is explicit, and
+`tests/security/test_tool_policy.py` requires it to cover every tool and to agree with the annotations."*
+
+### 🟢 The guard model, in four layers — and the honest limit it publishes about itself
+
+| layer | mechanism | what it stops |
+|---|---|---|
+| 1. operator allowlist | `ALLOWED_WRITE_TOOLS` env var; unset on HTTP ⇒ **read-only is the hosted default**; `all`, `none`, or a tool-name list | **the boundary a prompt injection cannot cross** — it decides whether a write tool is registered at all, and no tool can change it at runtime |
+| 2. registration gates | `CANVAS_ROLE`, `STUDENT_WRITE_TOOLS`, `EXECUTE_TYPESCRIPT_ENABLED` | the policy can only *remove* tools after registration; it can never restore one a gate left out |
+| 3. confirmation guards | **21** `ConfirmationGuard` instances; preview → token → confirm; HMAC-signed, per-process secret, single-use, 300 s TTL, bound to a fingerprint of target + payload + caller identity | a changed recipient, body or target **voids the token** |
+| 4. human authorization | the **MCP client's own tool-approval step** | — |
+
+🔴 **The limit the project states about itself**, verbatim from `core/write_confirmation.py`: *"It does NOT prove
+that a person saw or approved the preview. The model receives the token and can redeem it itself."* This base has
+repeatedly treated a confirmation step as equivalent to human review. The source of the best-guarded row on this
+shelf says it is not. A studio wiring layer 3 and calling it human-in-the-loop has **mislabelled layer 4**.
+
+🔵 The threat model is concrete and matches the published advisory: a student plants instructions in content the
+instructor's assistant later reads — an Inbox message, a discussion post, a submission — and the model follows
+them, gathering course data with read tools and sending it out, or changing grades. The 21 guards are grouped
+where that path lands: messaging (6), deletes (9), calendar notes (3), syllabus/rubric updates (2), submission (1).
+
+### 🟢 The clone tier — 5 new rows read as source this pass, 9 in this base's history
+
+| repo | ★ | grant | read this pass | what the source shows |
+|---|---|---|---|---|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 308 | 🟢 MIT · 1,071 B | 🟢 cloned `becd181` | 32,878 LOC Python; 130 tools, 4-class effect policy, 21 guards; **60+ files under `tests/security/`** incl. FERPA, audit-logging, CSV-formula-injection |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 🟢 **MIT** · 1,062 B | 🟢 cloned `e137ca4` | **584,229 LOC**, **794 test files**; full LMS schema (courses · chapters · lessons · groups · certificates · quiz); **MCP with an OAuth consent controller**; multi-tenant sessions; Langfuse tracing |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 🟢 MIT · 1,073 B | 🟢 cloned `0342cfb` | 171,107 LOC **Go**; MCP over HTTP with auth middleware; 365 test files; `Dockerfile` |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 🟢 MIT · 1,068 B | 🟢 cloned `039bfb9` | 108,286 LOC (Python + TSX); 136 test files; `docker-compose.prod.yml` — **no MCP surface** |
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 🟢 MIT · 1,073 B | 🟢 cloned `3b6ce8b` | 12,198 LOC TS; `codex-learning-provider.ts`; `openai` dependency; 24 test files; **created 2026-10-18** — 210★ in 9 days |
+
+🔵 Evidence: [`evidence/clone-tier.2026-10-27-p481.tsv`](../evidence/clone-tier.2026-10-27-p481.tsv).
+
+### 🟢 `Selleo/mentingo` is the row this shelf has been missing, and it belongs on the verticals shelf too
+
+This base has argued since `p478` that **no permissively-licensed LMS or SIS exists** — `p479` found Fedena and
+`p480` cloned it and found Rails 2.3.5 with a Flash reporting layer. `mentingo` is an **MIT-licensed, actively
+pushed (2026-10-27), 584k-LOC multi-tenant LMS with a native MCP surface and an OAuth consent flow**. Against the
+incumbents — Moodle GPL-3.0, Canvas **AGPL-3.0-only**, Open edX AGPL-3.0 — that is a different commercial
+position, and it is the first time this base can name one. 🔴 It is 99★ against Moodle's install base: a
+licensing answer, **not** a maturity claim. See `verticals/solutions.md`.
+
+### 🔵 The `topic:ai-tutor` ≥50★ census — still exactly 25 rows, and the membership moved
+
+`total_count` is **25** at ≥50★, unchanged from `p479` and `p480`, with `incomplete_results: false`. Three rows
+carry the velocity series below; the shelf's standing rows are unchanged in grant. The one genuinely new entrant
+is `nichochar/ari` (created 2026-10-18, now 210★), cloned above.
+
+### 🟡 Velocity, interval `t3` — the concentration **narrowed**, and that is the first time
+
+| repo | `t2` 12:54:50Z | `t3` 13:55:31Z | Δ | ★/h |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,950 | **45,069** | **+119** | 🟢 **117.7** |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,231 | 1,235 | +4 | 3.96 |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 352 | 354 | +2 | 1.98 |
+
+DeepTutor: 94.0 → 114.6 → **117.7 ★/h** across three consecutive hours. But the concentration ratio against the
+rest of the panel fell from **24.6 : 1** to **19.8 : 1**, because the two small rows moved +6 between them where
+they moved +5 before. 🔵 Honest reading: the leader is steady, and the one-hour noise on a 1,200★ repository is
+±4. Evidence: [`evidence/star-velocity.2026-10-27-p481.tsv`](../evidence/star-velocity.2026-10-27-p481.tsv).
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 481-A`** | **`Gap 480-A` stands, unchanged and now deliberate.** Nothing cloned this pass was executed, installed or benchmarked. The harness refuses `Code from External`, and this pass did not attempt to work around it. `canvas-mcp`'s policy is verified to be *written*; it is **not** verified to *hold at runtime* — no test in `tests/security/` was run, and the 4-layer model is read, not exercised. |
+| 🔴 **`Gap 481-B`** | **The guard model is one repository's.** `vishalsachdev/canvas-mcp` is exemplary and is **1 of 305** live education-AI repositories. Nothing here says the other 304 guard anything; the `p480` reading of `boyuchengz/canvas-mcp` (26 tools, zero writes) achieves safety by **having no write path**, which is a different design, not the same discipline. |
+| 🟡 **`Gap 481-C`** | **`mentingo` is read at profile depth.** Schema tables, MCP file inventory, test-file count and grant are first-hand; **no tool was audited for a write guard**, the OAuth consent controller was not read, and multi-tenant isolation is asserted by filename (`tenant-aware-session.spec.ts`), not by reading the test. The MIT grant is first-hand (1,062 B, `Copyright (c) 2024 Selleo`). |
+| 🟡 **`Gap 481-D`** | **`tutor-mcp`, `OpenTutor` and `ari` are profiled, not audited.** LOC, manifest, test-file count, grant bytes and MCP presence are first-hand; architecture, data handling and write surfaces are unread. `ari`'s 210★-in-9-days is a metadata delta, with no second timestamp of this base's own. |
+| 🟡 **`Gap 481-E`** | **`Gap 480-D` is still only partly discharged.** The velocity panel is three rows, chosen because they are the three that recur in the `topic:ai-tutor` census. Five of `p479`'s eight rows have now gone two passes without a re-read. |
 ## 🆕 `p480` — `2026-10-27` — **🟢 THE CLONE CHANNEL WORKS, AND IT ENDS THE DESCRIPTION-ONLY ERA OF THIS SHELF: arbitrary public repositories can be cloned here, so for the first time in this base's history rows are graded on **source read first-hand** rather than on a description plus a grant. 🟢 `Gap 479-AP` is settled on code: `canvas-mcp`'s read-only claim is **TRUE** — 26 tools, all `get_*`/`list_*`, a 33-call surface with **zero write calls**. 🟢 `Gap 479-B` is closed and the answer **corrects the gap**: the union across four topics is 305 live repositories, and this base already cited **3,198** — coverage was never the problem; the topic filter's effect on the *licence* picture is. 🔴 And execution is still refused at the harness, so "none run" survives — with a named cause.**
 
 🔵 **Gate posture, unchanged from `p475`–`p479` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is

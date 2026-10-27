@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27T13:55Z` — the Apache-2.0 population, measured: 7 of 13 are verbatim where it counts, 6 are not
+
+🔵 **Instrument, new this pass:** the canonical Apache-2.0 text fetched from the licensor
+(`https://www.apache.org/licenses/LICENSE-2.0.txt`, `http=200`, **11,358 B**, `sha256 cfc7749b96f63bd3`), then
+every candidate `LICENSE` fetched to a file and compared **two ways**: line-level, and word-level over the
+**operative text only** (everything up to and including `END OF TERMS AND CONDITIONS` — **1,413 word tokens**).
+The second instrument is the one that matters, and it changes the answer.
+
+| repo | ★ | bytes | operative text vs canonical | class |
+|---|---|---|---|---|
+| [Bbar0n234/learnflow-ai](https://github.com/Bbar0n234/learnflow-ai) | 35 | 11,357 | 🟢 **word-identical** | GitHub template rendering |
+| [ably-labs/realtime-quiz-framework](https://github.com/ably-labs/realtime-quiz-framework) | 77 | 11,357 | 🟢 **word-identical** | GitHub template rendering |
+| [f3an/kodeida](https://github.com/f3an/kodeida) | 24 | 11,357 | 🟢 **word-identical** | GitHub template rendering |
+| [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | 130 | 11,362 | 🟢 **word-identical** | appendix filled in as instructed |
+| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 582 | 11,337 | 🟢 **word-identical** | appendix filled in; repo **archived** |
+| [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 50 | 11,362 | 🟢 **word-identical** | appendix filled in as instructed |
+| [sagefy/sagefy](https://github.com/sagefy/sagefy) | 120 | 10,174 | 🟢 **word-identical** | appendix trimmed; repo **archived** |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 45,069 | 11,408 | 🔴 **4 tokens differ** | the circulating rendering |
+| [ANFAIA/SkillNet](https://github.com/ANFAIA/SkillNet) | 21 | 10,758 | 🔴 **4 tokens differ** | the circulating rendering |
+| [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 110 | 10,227 | 🔴 **14 tokens differ** | circulating rendering **+ appendix stripped** |
+| [beltromatti/get-it](https://github.com/beltromatti/get-it) | 1,135 | 11,359 | 🔴 **5 tokens deleted** | **§6 Trademarks narrowed** — see below |
+| [onemnemo/mnemo](https://github.com/onemnemo/mnemo) | 123 | 11,326 | 🔴 **10 tokens differ** | punctuation stripped in §8 |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 377 | 10,273 | 🔴 **4 tokens differ** | §4's `(a)`–`(d)` enumerators dropped by reflow |
+
+🔵 Evidence: [`evidence/apache-operative-text.2026-10-27-p481.tsv`](../evidence/apache-operative-text.2026-10-27-p481.tsv).
+
+### 🟢 `Gap 480-E` closed — the circulating rendering is real, it is a 3-row cluster, and it has a grep-able fingerprint
+
+`p480` found two Apache files sharing three deviations and could say nothing about prevalence. Two markers
+identify the rendering exactly, and they co-occur on **three** repositories and nowhere else in the panel:
+
+| marker | canonical | the rendering |
+|---|---|---|
+| § *Contribution* / § *Contributor* | `submitted to Licensor` · `received by Licensor` | `submitted to **the** Licensor` · `received by **the** Licensor` |
+| § 4 redistribution / NOTICE | `excluding **those** notices` | `excluding **any** notices` |
+
+Carriers: `HKUDS/DeepTutor` (Hong Kong), `SimonsTang/feifei-companion` (APAC), `ANFAIA/SkillNet` (Spain). 🔵 The
+cluster **crosses regions**, which is evidence of a shared text source rather than one organisation's house style.
+🔴 No provenance was found for it, and the deviations are in the *definitions* — semantically inert as far as this
+base can judge, and this base cannot judge it.
+
+### 🔴 One row does not merely re-render the licence, it narrows a clause
+
+[beltromatti/get-it](https://github.com/beltromatti/get-it) — 1,135★, built at GDG AI Hack Milan 2026 — **deletes
+five words** from § 6 Trademarks:
+
+> canonical: *"except as required for **reasonable and customary use in** describing the origin of the Work…"*
+> `get-it`: *"except as required for describing the origin of the Work…"*
+
+The reasonableness qualifier on the trademark carve-out is gone. This is the **only** deviation in the 13 that
+changes the scope of a permission rather than its wording, and it is on the second-most-starred row in the panel.
+
+### 🟡 And a second byte-count collision, this time for Apache-2.0
+
+`haxtheweb/haxcms-php` and `pacewisdomhq/TutorLoom` are both **11,362 B** with **different digests**
+(`b662f44e55…` vs `a890392684…`), and both are word-identical in the operative text. `p479` established that a
+matching byte count is actively misleading for AGPL-3.0; it is misleading for Apache-2.0 too, and the corollary
+also holds — **a differing byte count is not evidence of a differing licence**. 7 of 13 rows here differ in bytes
+from canonical and grant exactly the canonical terms.
+
+---
+
 ## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-Y` IS CLOSED WITH A COMPLETE ADDRESS CENSUS — all **3,198** distinct repository addresses across **11,125** citations on all eight shelves were resolved first-hand — and `Gap 479-X` gets the correction table it has been asking for across three passes: **64 dead addresses carrying 153 citations**, published by name. 🟢 It also kills a false alarm: **15 of the "dead" addresses were never repositories at all.** 🔴 And the Caliper finding finally has substance: **every Caliper SDK address this base cites is dead, while the spec repo is alive.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

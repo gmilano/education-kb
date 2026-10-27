@@ -3,6 +3,153 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27` — **🔴 RECIPE CORRECTION, AND IT AFFECTS EVERY PATTERN ON THIS SHELF THAT CLAIMED A HUMAN IN THE LOOP: a preview→confirm token does **not** constitute human approval. The source of the best-guarded repository on this shelf says so explicitly — the model receives the token and can redeem it itself. 🟢 The control that actually stops a prompt injection is an **operator-set allowlist of which write tools exist**, and the patterns below are rewritten around it. 🟢 Plus a new permissive-stack recipe, now that an MIT LMS exists, and a licence-diligence gate built from this pass's own instrument.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted**. **No pattern below has been
+executed** — the harness refuses `Code from External` (`Gap 481-A`). These are wiring diagrams over components
+whose source was read, not tested deployments.
+
+---
+
+### 🔴 Correction first: the four-layer control model, and which layer is which
+
+Read first-hand from [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) `becd181`
+(`core/tool_policy.py`, `core/write_confirmation.py`):
+
+| layer | mechanism | binds | survives a prompt injection? |
+|---|---|---|---|
+| 1 | `ALLOWED_WRITE_TOOLS` env var (operator-set) | **which tools are registered at all** | 🟢 **yes** — the model has no hand in it and no tool can change it at runtime |
+| 2 | registration gates `CANVAS_ROLE`, `STUDENT_WRITE_TOOLS`, `EXECUTE_TYPESCRIPT_ENABLED` | which tools are ever built | 🟢 yes — the policy can only *remove*, never restore |
+| 3 | `ConfirmationGuard` preview→token→confirm (21 instances, HMAC, single-use, 300 s TTL) | **the request** — target, payload, caller identity | 🔴 **no** — *"It does NOT prove that a person saw or approved the preview"* |
+| 4 | the MCP **client's** tool-approval step | **the human** | 🟢 yes, and this is the only layer that does |
+
+🔵 **What to change in any existing recipe:** keep layer 3 — it genuinely prevents a *swapped* target or payload
+after preview — but stop describing it as human review. If a pattern needs a human decision, it must come from
+layer 4 (the client's approval UI) or from a platform-owned consent screen (see Pattern B).
+
+### 🟢 Pattern A — guarded Canvas co-pilot for US higher ed, FERPA-evidenced
+
+**Components:** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 130 tools) ·
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) (AGPL-3.0-**only**, deployed, never linked)
+· an MCP client with a tool-approval UI.
+
+**Wiring, in order:**
+
+1. Deploy Canvas as a **separate service**. Do not link into it, do not run in-process: Canvas elects
+   `AGPL-3.0-only` and, unlike Open edX, ships **no RPC scope clarification** (`p480`). The boundary rests on
+   this base's architectural reasoning, so keep the AI service independently deployed and talking HTTP.
+2. Run `canvas-mcp` on the **HTTP transport**, where `ALLOWED_WRITE_TOOLS` unset means **read-only by default** —
+   the hosted default is the safe one. Confirm 72 read tools register and no write tool does.
+3. Enable writes **by name only**, never `all`: e.g. `ALLOWED_WRITE_TOOLS="create_announcement,send_conversation"`.
+   `all` excludes `execute_typescript` by design; do not add it.
+4. Leave `EXECUTE_TYPESCRIPT_ENABLED` unset. The single `CODE_EXEC` tool runs caller-supplied code **with the
+   caller's Canvas token** — in a FERPA context that is the one tool to keep unregistered.
+5. Put the human decision in the **client's approval step** (layer 4). The 21 confirmation guards then stop a
+   swapped recipient or body between preview and send; they are not the approval.
+6. Set `AUDIT_LOG_DIR`. The repo ships `core/audit.py` and `tests/security/test_audit_logging.py` — a US
+   engagement must evidence FERPA handling, and `tests/security/test_ferpa_compliance.py` is the reference.
+
+🔵 **Read-only variant:** where only retrieval is needed,
+[`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (MIT, 1,276 LOC) has **26 tools and zero
+write calls** (`p480`) — safety by having no write path, which is simpler to argue than a policy to configure.
+🔴 Note its 500-item list ceiling and `"private": true` manifest (clone-only, no published package).
+
+### 🟢 Pattern B — permissive full stack for EMEA, with a consent screen the agent cannot mediate
+
+**Components:** [`Selleo/mentingo`](https://github.com/Selleo/mentingo) (**MIT**, 584k LOC, multi-tenant LMS with
+`apps/api/src/mcp/`) · Langfuse (`@langfuse/*`, already wired) · `@ai-sdk/openai` or any provider behind it.
+
+**Why this pattern exists:** every previous platform recipe on this shelf had to route around AGPL-3.0 or
+GPL-3.0. An MIT LMS removes the source-disclosure question from a hosted deployment entirely — no RPC-boundary
+argument required.
+
+**Wiring:**
+
+1. Self-host from `docker-compose.yml`; bring up `docker-compose.langfuse.yml` alongside for LLM tracing from
+   day one, because the EU AI Act's **Art. 4 literacy** and **Art. 50 transparency** duties are already in force
+   and tracing is how you evidence them.
+2. Use the platform's **own** MCP surface rather than bolting a server on: `mcp-admin-tools.ts`,
+   `mcp-customization-tools.ts`, `mcp-generic-upload-tools.ts`, `mcp-content-resource.ts`.
+3. Route human approval through `mcp-oauth.controller.ts` + `mcp-consent.controller.ts` — a **platform-owned**
+   consent grant, out of band of the tool call. This is the layer-4 control, owned by your own deployment.
+4. Keep grading, admissions and proctoring **out of scope** until the EU high-risk regime lands
+   **2 December 2027**; tutoring, content generation and administrative assistance are the deployable surface now.
+5. Rely on `tenant-aware-session` for multi-institution deployments — and verify it, because this base has not
+   (`Gap 481-G`).
+
+🔴 **Caveat that belongs in the pitch, not a footnote:** `mentingo` is **99★**. Its licence and architecture are
+verified; its institutional maturity, LTI/SCORM support, accessibility conformance and the security of its MCP
+tools are **not** (`Gap 481-J`). For a risk-averse institutional client, Pattern A on Canvas remains the
+conservative choice.
+
+### 🟢 Pattern C — LATAM: consolidate shadow adoption, do not deploy greenfield
+
+**The demand shape, measured:** 200 higher-education institutions across 19 LAC countries — **87% already using
+AI** in at least one area, **74% in teaching and learning**, **26% with a formal strategy** (UNESCO IESALC /
+UNU-IAS). Adoption is bottom-up, by individual academics and students.
+
+**Wiring — this is a governance engagement with a technical deliverable:**
+
+1. **Inventory first.** The institution is already running AI; the deliverable is finding it. Nothing is
+   installed in step 1.
+2. **Put a traced gateway in front of existing use** rather than replacing tools: Langfuse (as in Pattern B)
+   against the institution's current providers gives per-faculty visibility and the evidence base for a policy.
+3. **Anchor the policy** to the UNESCO **Observatory on AI in Education for LAC** (launched 14 April 2026) and
+   the national instrument that applies — CONPES 4144 (Colombia), Peru's INDECOPI-coordinated framework and its
+   **regulatory sandboxes**, Uruguay's Council of Europe Framework Convention signature.
+4. **Only then** choose a platform. If one is needed, `mentingo` (MIT) avoids the copyleft question;
+   `openedx/edx-platform` carries the licensor's own RPC clarification (`p480`) if Open edX is already in place.
+5. **Spanish/Portuguese content:** the region's open supply is administrative and copyleft — `i-Educar`
+   (GPL-2.0), `i-Diario` (AGPL-3.0), `bncc-dados` (MIT) — so expect to integrate with it, not build on it, and
+   expect the AGPL rows to stay separately deployed.
+
+🔴 No LATAM-domiciled agent repository exists in this base's census to compose with. That is a measured gap
+across three passes, not a research omission.
+
+### 🟢 Pattern D — a licence-diligence gate, built from this pass's own instrument
+
+**The problem this solves:** `license.spdx_id` said "Apache-2.0" for all 13 repositories measured this pass. Six
+of them do not carry the canonical operative text and one has had a permission narrowed. Metadata diligence
+cannot see any of it, and byte comparison produces false positives because Apache-2.0 *instructs* you to fill in
+its appendix.
+
+**The gate, as run this pass:**
+
+1. Fetch the licensor's canonical text once and store it:
+   `https://www.apache.org/licenses/LICENSE-2.0.txt` → **11,358 B**, `sha256 cfc7749b96f63bd3`.
+2. For each candidate, fetch `LICENSE` from `raw.githubusercontent.com` (try `main` and `master`;
+   `LICENSE`, `LICENSE.txt`, `LICENSE.md` — `haxtheweb/haxcms-php` uses `master/LICENSE.md`, and a 404 on
+   `LICENSE` is **not** evidence of no grant).
+3. Truncate both at `END OF TERMS AND CONDITIONS` — everything after is the appendix you are meant to edit.
+4. Compare as **word tokens**, whitespace-insensitive (canonical = **1,413** tokens). Zero delta ⇒ the grant is
+   the canonical grant, whatever the byte count says.
+5. Fail the gate on any non-zero delta and **read the diff**; grep the two-marker fingerprint
+   (`submitted to the Licensor` + `excluding any notices`) to recognise the known circulating rendering.
+
+🔵 Reusable beyond Apache: the same gate applied to AGPL-3.0 explains `p479`'s byte-count collision
+(34,523 B appearing with two different digests) and this pass's Apache collision (11,362 B, two digests, both
+verbatim). 🔴 This base holds a canonical reference for **Apache-2.0 only** — MIT, GPL-3.0 and AGPL-3.0 are
+still byte-compared (`Gap 481-I`), and MIT cannot be word-compared naively because its text embeds the
+copyright line.
+
+### 🟡 Pattern E — composed tutor, unchanged in shape and now with a Go option
+
+**Components:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0 · 🟡 operative text altered,
+4 tokens — see `repos/trending.md`) for tutoring · [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server)
+(MIT) for spaced repetition · [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (MIT, 108k LOC,
+`docker-compose.prod.yml`) as a self-hostable tutor · [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+(MIT, **Go**, 171k LOC, auth middleware, `Dockerfile`) where the deployment target prefers a single static binary
+over a Python runtime.
+
+**Wiring:** retrieval and tutoring in DeepTutor (`pip install deeptutor`, published wheel — `p480`); expose the
+learner's review queue through `anki-mcp-server` so the tutor schedules reinforcement rather than re-explaining;
+keep the LMS as the system of record behind Pattern A or B.
+
+🔴 **Licence note that changes the paperwork:** DeepTutor's `LICENSE` is **not** the canonical Apache-2.0 text —
+4 operative word tokens differ, in the *Contribution*/*Contributor* definitions and the § 4 NOTICE clause. It is
+the largest education-AI repository on GitHub at 45,069★ and its grant should be read by counsel, not assumed
+from the label. 🔵 Unchanged from `p477`: permissive **code** does not imply permissive **curriculum** — the two
+largest education *data* repositories are CC BY-NC and ODbL.
 ## 🆕 `p480` — `2026-10-27` — **🟢 P14'S LOAD-BEARING ASSUMPTION IS NOW VERIFIED IN SOURCE RATHER THAN ASSUMED FROM A NAME — `canvas-mcp` really cannot write — and the same clone channel hands P14 the grading component `Gap 479-AQ` said did not exist, at the price of that boundary. 🔴 **P16 arm A is withdrawn, not re-estimated**: Fedena is Rails 2.3.5 with no `Gemfile`. 🟢 And P17 is the first recipe on this shelf whose copyleft boundary rests on a sentence the **licensor wrote**, not on this base's architectural reasoning.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

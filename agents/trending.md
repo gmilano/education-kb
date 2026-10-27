@@ -3,6 +3,41 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27T13:55Z` — new to this base: a Go MCP tutor server, an MIT LMS with OAuth-consented MCP, and a 9-day-old row at 210★
+
+🔵 **Instrument:** authenticated repository search (`incomplete_results: false`) for membership and ★;
+`git clone --depth 1` for everything stated about source; `raw.githubusercontent.com` for grants. Execution
+refused at the harness (`Gap 481-A`), so nothing below is a behavioural claim.
+
+| repo | ★ | grant (first-hand) | created | why it is here this pass |
+|---|---|---|---|---|
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 🟢 MIT · 1,073 B | **2026-10-18** | **9 days old.** 12,198 LOC TS; `codex-learning-provider.ts` + `codex-app-server.ts`; `openai` dep; 24 tests. The fastest new entrant to the ≥50★ `topic:ai-tutor` census since this base began measuring it |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 🟢 **MIT** · 1,062 B | 2024-08-01 | the **permissive LMS** this base has said for three passes does not exist — 584,229 LOC, 794 tests, MCP + **OAuth consent controller**, Langfuse tracing, pushed today |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 🟢 MIT · 1,073 B | 2026-03-30 | 171,107 LOC **Go** — the first non-Python/TS MCP tutor server on this shelf; auth middleware, 365 tests, `Dockerfile` |
+
+### 🟢 The movement that matters this pass is not a new row, it is a corrected verdict
+
+[vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) has appeared on this shelf since `p479`
+carrying the warning *"it writes"*. Cloned and read this pass: an operator allowlist (`ALLOWED_WRITE_TOOLS`),
+21 single-use content-bound confirmation guards, a declared 4-class effect taxonomy over 130 tools, 60+
+security test files, and the published advisory **GHSA-hmr8-mvr2-mvw5**. The row is **upgraded**, with the
+project's own caveat carried forward: a confirmation token binds a request, it **does not prove a human
+approved it**. Full reading on `agents/top.md`.
+
+### 🔵 Velocity, third consecutive interval
+
+`HKUDS/DeepTutor` 44,950 → **45,069** between 12:54:50Z and 13:55:31Z = **117.7 ★/h** (94.0 → 114.6 → 117.7).
+Concentration against the rest of the panel **narrowed** for the first time, 24.6 : 1 → 19.8 : 1.
+
+### 🔴 What this pass did not find
+
+No new agent row above 250★ entered the `topic:ai-tutor` ≥50★ census, whose `total_count` is **25** for the
+third pass running. Searches run: `topic:ai-tutor stars:>50`, `topic:edtech stars:>20 license:apache-2.0`.
+**LATAM:** no LATAM-domiciled agent repository surfaced in either query this pass — an explicit gap, not
+coverage (see `intel/market.md`).
+
+---
+
 ## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-U` IS DISCHARGED FOR THE ROW THIS SHELF SAID TO CARRY: `canvas-mcp`'s claim to reach Canvas read-only is no longer unexercised — the repository was **cloned and read in full**, and the claim is **true at 33 call sites with zero writes**. 🔴 `Gap 479-T` is CONFIRMED rather than closed: `THU-MAIC/OpenMAIC` is absent from a **four-topic union plus two keyword probes**, so topic-blindness is now measured across six instruments, not suspected from one. 🔴 And GitHub's own Trending page is still unreachable, so nothing here is "trending" in GitHub's sense.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

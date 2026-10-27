@@ -3,6 +3,82 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p481` — `2026-10-27` — **🟢 THIS SHELF'S LONGEST-STANDING NEGATIVE FINDING IS OVERTURNED: a permissively-licensed, actively-maintained, platform-scale LMS exists. `Selleo/mentingo` is **MIT**, 584,229 LOC, multi-tenant, pushed today, and ships its agent integration **inside** the platform — with an OAuth consent controller, which is a different and stronger answer to the human-approval problem than the confirmation tokens this base has been recommending.**
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from
+External`. Nothing cloned this pass was executed (`Gap 481-A`).
+
+---
+
+### 🟢 The claim this shelf has carried since `p478`, and its correction
+
+| pass | claim |
+|---|---|
+| `p478` | no permissively-licensed student information system exists |
+| `p479` | corrected — Fedena declares Apache-2.0 in a `NOTICE`; *"the permissive SIS is not missing, it is fifteen years old"* |
+| `p480` | cloned Fedena — Rails 2.3.5, no `Gemfile`, Flash reporting layer, dead since 2016; **recommendation withdrawn** |
+| **`p481`** | 🟢 **for the LMS tier the gap is closed by a live row**: `Selleo/mentingo`, **MIT**, 584k LOC, pushed 2026-10-27 |
+
+🔵 The SIS tier is **still open** — `mentingo` is an LMS with groups and certificates, not a student information
+system with enrolment, attendance, exams and fees. Fedena remains the only permissive SIS and remains unusable.
+
+### 🟢 The platform shelf
+
+| platform | repo | grant | what it is | state read first-hand |
+|---|---|---|---|---|
+| Open edX | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · 35,136 B | MOOC-scale LMS | 🔵 `p480` — **RPC scope clarification in `LICENSE`** |
+| Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0-only** · 34,520 B | LMS of record in much of US higher ed | 🔵 `p480` — election from per-file header; **no clarification** |
+| Open edX deploy | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 AGPL-3.0 · 34,523 B | supported Docker deployment of Open edX | 🔵 `p480` |
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | the default open LMS worldwide | 🔵 carried; not re-read |
+| **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1,062 B | multi-tenant LMS, **agent surface built in** | 🟢 **cloned `e137ca4`** this pass |
+| TutorLoom | [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 🟢 Apache-2.0 · operative text **verbatim** | self-hosted multi-tenant LMS for training institutes; Django + React | 🟢 grant diffed word-level this pass |
+| HAXcms | [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | 🟢 Apache-2.0 · operative text **verbatim** | web-components course/microsite publishing; LMS-adjacent | 🟢 grant diffed word-level this pass |
+| Tsugi | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟡 Apache-2.0 · reflowed (§4 `(a)`–`(d)` labels lost) | **LTI** tool hosting framework, IMS Global / Common Cartridge | 🟢 grant diffed word-level this pass |
+| OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL-3.0 | Odoo-based education ERP: admissions, fees, library, hostel | 🔵 carried; grant not re-read this pass |
+| LearnHouse | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 AGPL-3.0 | AI-native learning platform, 2,424★ | 🔵 `p480` |
+| Fedena | [projectfedena/fedena](https://github.com/projectfedena/fedena) | 🟢 Apache-2.0 · `NOTICE` + 175 headers | SIS: students, enrolment, attendance, exams, fees | 🔴 **`p480` — Rails 2.3.5, not a viable base** |
+
+🔵 Two new permissive rows are promoted onto this shelf on grant evidence alone: **TutorLoom** (50★, created
+2026-10-07, Django + React, multi-tenant, Moodle-alternative by its own description) and **HAXcms** (130★,
+Apache-2.0, web components). Both carry the **canonical Apache operative text word-for-word**, measured this
+pass. Neither was cloned (`Gap 481-K`).
+
+### 🟢 `mentingo`'s consent step is the architectural finding, not its licence
+
+This base's compose recipes have leaned on preview→confirm tokens as the human-in-the-loop control. This pass
+established from `canvas-mcp`'s own source that **a token does not prove a human approved anything** — the model
+holds the token and can redeem it. `mentingo` places the control somewhere a model cannot reach:
+
+| control | where it lives | what it binds |
+|---|---|---|
+| `ConfirmationGuard` token (`canvas-mcp`) | inside the MCP server, issued *to the model* | the **request** — target, payload, caller |
+| `mcp-oauth.controller.ts` + `mcp-consent.controller.ts` (`mentingo`) | the **platform's** OAuth authorization layer | the **user's grant** to the client, out of band of the tool call |
+| `ALLOWED_WRITE_TOOLS` (`canvas-mcp`) | the **operator's** environment | which tools exist at all |
+
+🔵 A platform that owns its own OAuth consent screen can obtain a human decision that the agent never mediates.
+🔴 This base has **not read** `mentingo`'s consent implementation — the comparison above is between a module
+whose source was read and a module identified by filename (`Gap 481-G`). It is a reason to examine it next pass,
+not a verdict.
+
+### 🔴 The informed gaps on this shelf, stated rather than left silent
+
+- **SIS tier:** still no usable permissive student information system. Fedena is Apache-2.0 and architecturally
+  dead; no replacement surfaced in this pass's searches.
+- **LATAM:** no LATAM-domiciled platform surfaced this pass. The region's open supply remains administrative and
+  copyleft — `i-Educar` (GPL-2.0), `i-Diario` (AGPL-3.0) — which is a finding, not an absence of searching.
+- **Accessibility and standards:** no row on this shelf has had WCAG conformance, LTI certification or SCORM/xAPI
+  support verified first-hand by this base, including `mentingo`. `tsugi` is the only row whose *purpose* is LTI.
+- **Archived rows excluded:** `menthorlabs/menthor` (582★, Apache-2.0, verbatim operative text) and
+  `sagefy/sagefy` (120★) are **archived** and are deliberately not promoted onto this shelf.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 481-J`** | **`mentingo` is the shelf's headline and it is 99★.** Every claim about it is from a clone read at profile depth: schema tables, file inventory, test-file count, manifest and grant. Migration cost, LTI/SCORM support, accessibility, performance at institutional scale and the security of its MCP surface are **all unexamined** (`Gap 481-C`, `Gap 481-G`). |
+| 🟡 **`Gap 481-K`** | **TutorLoom and HAXcms are promoted on grant evidence only.** Their licence text was diffed word-for-word against the licensor's canonical copy; **neither repository was cloned**, so "multi-tenant LMS" and "course publishing" are their own descriptions, not readings of their source. TutorLoom is 20 days old. |
+| 🟡 **`Gap 481-L`** | **The copyleft incumbents were not re-read.** Open edX's RPC clarification, Canvas's `AGPL-3.0-only` election and Moodle's grant are carried from `p479`/`p480` without re-measurement this pass. |
+| 🟡 **`Gap 481-M`** | **OpenEduCat's LGPL-3.0 is carried, not re-read.** Its grant has not been fetched and measured by this base since `p376`, and the claim that an LGPL platform permits a separately-deployed proprietary AI service is this base's reasoning, not a licensor statement. |
 ## 🆕 `p480` — `2026-10-27` — **🟢 `Gap 479-N` IS CLOSED BY CLONING THE ROW, AND IT KILLS THE RECOMMENDATION: Fedena — this shelf's only permissively-licensed SIS — is **Rails 2.3.5**, boots on an API removed in Rails 3.0, has **no `Gemfile` at all**, and declares its one gem from **`http://gemcutter.org`**, a host that stopped being rubygems.org in 2010. 🟢 Its Apache-2.0 is now *stronger* than `p479` thought — **175 source files carry the full header** — so the blocker is squarely engineering, not licensing. 🟢 And the two big LMS rows now have *different* documented copyleft postures.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

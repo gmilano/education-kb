@@ -1,0 +1,6 @@
+repo	commit	grant_bytes	code_loc	test_files	mcp	note
+vishalsachdev/canvas-mcp	becd181	MIT 1071	32878 py	60+ security	yes	130 @mcp.tool; 72 READ/52 CANVAS_WRITE/4 LOCAL_WRITE/1 CODE_EXEC; 21 ConfirmationGuard; ALLOWED_WRITE_TOOLS allowlist; GHSA-hmr8-mvr2-mvw5
+Selleo/mentingo	e137ca4	MIT 1062	584229	794	yes (OAuth consent)	full LMS schema (courses/chapters/lessons/groups/certificates/quiz); multi-tenant; Langfuse tracing; MIT
+ArnaudGuiovanna/tutor-mcp	0342cfb	MIT 1073	171107 go	365	yes (auth middleware)	Go MCP server; Dockerfile
+zijinz456/OpenTutor	039bfb9	MIT 1068	108286	136	no	docker-compose prod; py+tsx
+nichochar/ari	3b6ce8b	MIT 1073	12198	24	yes	codex-learning-provider; openai dep; created 2026-10-18
