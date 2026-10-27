@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **🔴 A GRANT HAS A FAMILY, A VERSION AND A CLASS — AND IT ALSO HAS A *SCOPE*, WHICH NO READER ON THIS BASE HAS EVER READ. Three payloads found this pass license DIFFERENT SUBTREES DIFFERENTLY from one file, and the worst case is an evaluation asset whose LICENSE RETRACTS ITS OWN EARLIER CC BY CLAIM over 1,038,963 problems and points at third-party terms, some of them `CC BY-NC`. 🟢 And `Gap 473-C` is CLOSED: the title reader now reads Portuguese, re-grading two AGPL-3.0-or-later payloads that it previously published as `UNSTATED`.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` **not attempted** — the industry KB is cloned
+outside the harness repo this pass, and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's
+own code and green: frontmatter keys and closed-vocabulary `region` on all nine shelves; every table
+checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and on these shelves by prepend-only edit; every
+address resolved first-hand by `git ls-remote --symref`; every grant read first-hand from
+`raw.githubusercontent.com`, body written to a file and the file measured (`Gap 468-A`).
+27 addresses in
+[`evidence/grant-class.2026-10-27-p474.tsv`](../evidence/grant-class.2026-10-27-p474.tsv),
+24 graded payloads in
+[`evidence/grant-lang-scope.2026-10-27-p474.tsv`](../evidence/grant-lang-scope.2026-10-27-p474.tsv).
+
+🔴 **`Gap 472-A` honoured, not retried.** `curl -sI https://github.com/HKUDS/DeepTutor` → `403`
+behind the proxy's own `200 Connection Established`. Reproduced once as a control, then abandoned.
+
+🟢 **Cross-pass control reproduced exactly, fifth consecutive pass.** `HKUDS/DeepTutor`
+`main/LICENSE` **11,408 B · `cd2f54e1e506`** at HEAD **`a31d82624c27`** — byte-, digest- and
+HEAD-identical to `p470`–`p473`.
+
+---
+
+### 🔴 The scope axis — the pass's load-bearing finding, because it invalidates a COLUMN, not a row
+
+🔵 This base grades a grant on family (`p454`), version (`p455`), presence (`Gap 466-A`) and class
+(`Gap 467-A`). 🔴 **Every one of those axes assumes the grant covers the whole repository.** Three
+payloads read first-hand this pass do not:
+
+| repo | grant path · bytes · digest | what the ONE file actually says | 🔴 why a single licence cell is wrong |
+|---|---|---|---|
+| [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | `main/LICENSE` · **911 B** · `d19733bb7540` | 🔵 Title block is **`# Licenças`** — not a licence title at all. **MIT** for `harness/` and `test/`; **CC BY 4.0** for the item bank (`itens/`), the round results (`resultados/`) and `METODOLOGIA.md` | 🔴 The *code* is permissive; the **benchmark items — the only reason to take the repo — are CC BY**, so attribution travels into any deliverable that ships them |
+| [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | `main/LICENSE` · **1,299 B** · `86bf5f5e6306` | 🔵 Same `# Licenças` model. **MIT** for `packages/*/src/`, `python/bncc/*.py`, `mcp-worker/src/`; **CC BY 4.0** for embedded JSONs synced from a pinned commit of `bncc-dados`. 🔴 Name and visual identity **explicitly not licensed**: *"O código é livre; a marca não"* | 🔴 **The published artifacts carry both grants in one file** — the npm tarball and the PyPI wheel ship MIT code *and* CC BY data together. A client's dependency scanner sees `MIT` and the attribution duty ships silently |
+| [richer-richard/arquimedes](https://github.com/richer-richard/arquimedes) | `main/LICENSE` · **3,103 B** · `b8e2e1c65fdc` | 🔵 Opens *"This repository is not one work and is not under one license."* **MIT** for `arquimedes/`, `tools/`, `site/`; **CC BY 4.0** for this project's own annotations only; 🔴 `problems/` and `images/` are **third-party and NOT relicensed** | 🔴 **The payload retracts its own earlier grant in writing**: *"An earlier version of this file placed `problems/`, `images/`, and `data/` under CC BY 4.0. That sentence was this project's claim. It was not a grant from the contest organizers."* **CEMC material is `CC BY-NC 4.0`** → `UNSELLABLE` under this base's own `grant_class` taxonomy |
+
+🔴 **Read that third row again.** The asset is advertised as 1,038,963 structured maths problems
+with answers and solutions — the single largest education evaluation corpus this base has found.
+**The 1.03M problems are the part that is not licensed to you.** A reader that takes the repo's
+licence from an index, a badge or even this payload's *first* line publishes `MIT` and is wrong
+about everything that matters.
+
+🟢 **Reader shipped, not just the finding.**
+[`family_lang.py`](../compose/code/p474-scope-and-language/family_lang.py) now returns a `scope`
+alongside family/version, and refuses to emit a sound single cell when scope is `SPLIT_SCOPE`
+([`controls.py`](../compose/code/p474-scope-and-language/controls.py), **27/27**, of which **23 are
+real measured payloads** and 4 are labelled synthetic).
+
+### 🟢 `Gap 473-C` closed — the title reader now reads Portuguese, and the second instance found itself
+
+🔵 The gap said every licence reader here is keyed on English title strings, and that
+`portabilis/i-diario`'s AGPL-3.0 **in Portuguese** therefore published as `UNSTATED`. 🟢 The
+non-English title layer exists, folds accents, and carries the `or-later` elections
+(`qualquer versão posterior`, `cualquier versión posterior`):
+
+| payload | bytes · digest | 🔴 English-only reader | 🟢 `p474` reader |
+|---|---|---|---|
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) `1.6/LICENSE` | 35,326 B · `fe85f94658bf` | 🔴 **`UNSTATED`** | 🟢 **`AGPL-3.0-or-later`** |
+| [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) `2.12/LICENSE` | 35,326 B · `fe85f94658bf` | 🔴 **`UNSTATED`** | 🟢 **`AGPL-3.0-or-later`** |
+
+🟢 **The second row was not sought — it arrived on the `educacao` leg and graded itself.** Identical
+bytes and identical digest to `i-diario`, at a **different repository** on a **versioned default
+branch** (`2.12`). So the Portuguese AGPL payload is a *vendor-wide* pattern at Portabilis, not one
+file: every Portabilis component an engagement touches must be assumed AGPL until its payload is
+read. 🔵 **2 disagreements across 24 graded payloads (8.3 %)** — and both are the one family whose
+trigger is network use.
+
+### 🟢 The evaluation tier, re-run with NO star floor (`Gap 473-A`, partially closed)
+
+🔵 `p473` found nine instruments on research vocabulary and declared its own n = 9 too small to
+carry a client argument. 🟢 Two legs re-run this pass with **no star floor**, three numbers each, per
+the gap's own contract:
+
+| leg | hits | returned + graded | 🟢 usable education-AI supply after relevance grading |
+|---|---|---|---|
+| `education llm-evaluation` | **48** | 12 | **8** |
+| `topic:benchmark topic:education` | **19** | 12 | **5** |
+
+🔴 **The relevance trap is the highest-starred row in the leg.**
+[langfuse/langfuse-workshop](https://github.com/langfuse/langfuse-workshop) (57★) is the top hit for
+`education llm-evaluation` and is **a workshop that teaches evaluation** — `education` as a
+*delivery mode*, not as the domain under test. 🔵 Same shape as `Gap 467-H`'s `tutor`/`tutorial`
+collision, now measured on a second vocabulary.
+
+🟢 **The tier's grant rate is much better than `p473`'s 44.4 % ungranted suggested** — on the 11
+evaluation-tier addresses graded first-hand this pass, **10 grant and 1 does not**
+([`AksharaRgsu2024/LLM_Factuality_Evaluation`](https://github.com/AksharaRgsu2024/LLM_Factuality_Evaluation),
+**14 paths probed**, `main`). 🔴 But `Gap 473-A`'s number is **not** closed by that: this is a
+different token set, so the two rates are not comparable, and the real finding is the scope axis
+above — three of these "permissive" rows do not grant what they appear to grant.
+
+### 🟢 Agents and instruments added this pass — 13 rows, every grant read first-hand today
+
+| Name | Repo | Grant (path read · bytes · digest) | ★ | Region | What it is, and what it is for |
+|---|---|---|---|---|---|
+| Atölye.Platform | [PolyOS-Team/Atolye.Platform](https://github.com/PolyOS-Team/Atolye.Platform) | 🟢 **MIT** — `main/LICENSE` · 1,069 B · `fc9ec90c31a1` | 16 | EMEA | 🟢 **The first Turkish education-infrastructure row this base can name.** Exam submission + education management, optimised for **Pardus** (Türkiye's national Linux distribution) school laboratories. Multilingual, React/Node. 🔵 Region basis: **orthographic** (Turkish prose) *and* institutional |
+| StudentBench | [Handshake-AI-Research/studentbench](https://github.com/Handshake-AI-Research/studentbench) | 🟢 **MIT** — `main/LICENSE` · 1,078 B · `3cb4c0b9467a` | 11 | Global | Reproduces every figure, table and empirical result in the StudentBench paper. Tutoring-focused LLM evaluation; **MIT whole-work**, so it can enter a deliverable outright |
+| BNCC Benchmark | [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🔴 **SPLIT_SCOPE** — `main/LICENSE` · 911 B · `d19733bb7540` (MIT code / CC BY 4.0 items) | 9 | LATAM | **Open hallucination benchmark of LLMs over Brazil's national curriculum**: 15,300 responses across 17 models, public methodology and raw data, **private held-out set against contamination**. The only national-curriculum-grounded education benchmark on these shelves |
+| BNCC Pacotes | [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | 🔴 **SPLIT_SCOPE** — `main/LICENSE` · 1,299 B · `86bf5f5e6306` (MIT code / CC BY data / **marca unlicensed**) | 9 | LATAM | npm + PyPI packages **and an MCP server** exposing `bncc-dados` in one line. 🟢 The MCP surface is what makes the Brazilian curriculum callable from an agent |
+| BNCC Dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** — `main/LICENSE` · 1,092 B · `e162f8f4b461` | 22 | LATAM | Brazil's national curriculum as verified open data: **1,721 learning objectives** in JSON, SQLite and CSV with per-record provenance |
+| EduSafeBench | [kaushikatla-cell/EduSafeBench](https://github.com/kaushikatla-cell/EduSafeBench) | 🟢 **MIT** — `main/LICENSE` · 1,056 B · `1126322e2cc8` | 0 | North America | Reproducible reliability benchmarks for AP CSA / AP CSP learning assistants, with an external review workflow. 🔵 Region basis: **institutional, not orthographic** (AP is a US College Board programme) |
+| SLM writing-feedback tutor (pt-BR) | [RandMelville/slm-writing-feedback-tutor-ptbr](https://github.com/RandMelville/slm-writing-feedback-tutor-ptbr) | 🟢 **MIT** — `main/LICENSE` · 1,085 B · `b7e21ba75eea` | 1 | LATAM | Diagnostic benchmark of **8 open SLMs ≤3.8B for OFFLINE Socratic writing tuition in Brazilian Portuguese**, Fisher-exact analysis + 4-isolation falsification protocol. 🟢 The offline/small-model axis is the one that fits low-connectivity public schooling |
+| Arquimedes | [richer-richard/arquimedes](https://github.com/richer-richard/arquimedes) | 🔴 **SPLIT_SCOPE** — `main/LICENSE` · 3,103 B · `b8e2e1c65fdc` (MIT code; **problems third-party, CEMC `CC BY-NC`**) | 1 | Global | 1,038,963 structured maths problems with answers, solutions and LaTeX, as gzipped JSONL shards, plus an MCP server. 🔴 **Take the harness, not the corpus** — see the scope table above |
+| SciReason-Forge | [chenhz01/scireason-forge](https://github.com/chenhz01/scireason-forge) | 🟢 **Apache-2.0** — `main/LICENSE` · 11,938 B · `7cae8b289d20` | 1 | Global | Verifiable scientific-reasoning task **generators** — 5 types, solver-graded, **contamination-proof by construction** (pure stdlib). 🟢 Generated items have no third-party corpus to license: the clean answer to the `arquimedes` trap |
+| Eyedot (点睛) | [Simon-zj1/eyedot](https://github.com/Simon-zj1/eyedot) | 🟢 **MIT** — `main/LICENSE` · 1,089 B · `e385b6b49565` | 2 | APAC | Turns a learner's own PDFs/notes into auto-graded exams with **per-scoring-point judgement**, flags low-confidence judgements for human review, and schedules revision with FSRS. 🔵 Region basis: orthographic (Chinese prose) |
+| Open Harness Atlas | [Benjamin-KY/open-harness-atlas](https://github.com/Benjamin-KY/open-harness-atlas) | 🟢 **Apache-2.0** — `main/LICENSE` · 11,289 B · `e0f0d038f8b6` | 10 | Global | Knowledge graph of 793 open-source AI harnesses across governance, agent, evaluation, red-team and routing, 97 % curator-reviewed. Useful as a **discovery index**, not as a graded source — every grant it names still needs a first-hand read |
+| LLM Factuality Evaluation | [AksharaRgsu2024/LLM_Factuality_Evaluation](https://github.com/AksharaRgsu2024/LLM_Factuality_Evaluation) | 🔴 **UNGRANTED** — 14 paths probed on `main` | 2 | Global | Pipeline judging factuality of LLM responses for AI in education. 🔴 **No grant at any probed path: cannot enter a deliverable.** Carried so the tier's denominator stays honest |
+| Agents from scratch | [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** — `main/LICENSE` · 1,091 B · `f78cc6bf1d57` | 🔵 web-relayed ≈796, **late-May-2026, not re-measured** | Global | Builds agents from first principles against a local LLM; tagged `ai-education`. 🔵 The only MIT education-tagged agent the brief's own generic query surfaced — the generic query is a weak instrument here and that is recorded, not hidden |
+
+🔵 **Stars are index-relayed from MCP `search_repositories`, 2026-10-27, never first-hand**
+(`Gap 467-D`). Grants, addresses, bytes and digests above are all first-hand today.
+
 ## 🆕 `p473` — `2026-10-27` — **🟢 THE "NO OPEN-SOURCE EDUCATION-AI EVALUATION HARNESS EXISTS" GAP THIS BASE HAS CARRIED FOR DOZENS OF PASSES IS CLOSED AND ITS PREMISE EXPLAINED: nine instruments exist, every one of them sits below 60★, and so every star-ordered sweep this base has ever run was structurally blind to the entire tier. 🔴 And the tier is the least usable shelf in this KB — 4 of 9 are UNGRANTED, Khan Academy's carries a bespoke licence that recites a permissive grant and then bars production use and model training, and the ONLY permissively-licensed education evaluation harness found anywhere is West-Africa-origin at 4★.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned outside

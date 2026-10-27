@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **🔴 `Gap 473-B` CLOSED BY PUBLISHING THE SENTENCE: ECL-2.0's patent grant is narrowed exactly where a university is the contributor — it reaches only claims whose INVENTOR IS ALSO THE AUTHOR and only where the institution's own RESEARCH FUNDING AGREEMENTS let it grant, and it closes with "No other express or implied licenses are granted." 🟡 Copyright-wise Sakai and OpenLRW stay Apache-shaped and permissive; patent-wise they are a different instrument from the Apache-2.0 a client's counsel approved.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness
+repo. **Nothing below is gate-attested.** Both ECL payloads re-read first-hand from
+`raw.githubusercontent.com` this pass and measured (`Gap 468-A`). 🔴 `curl -sI` not used
+(`Gap 472-A`).
+
+### 🔴 The clause, quoted rather than inferred — ECL-2.0 §3, last two sentences
+
+🔵 `p473` graded both ECL rows on Apache-family body resemblance and registered `Gap 473-B` because
+nobody here had read §3. 🟢 Read now, in both payloads, and **the narrowing is in the text**:
+
+> *"Any patent license granted hereby with respect to contributions by an individual employed by an
+> institution or organization is **limited to patent claims where the individual that is the author
+> of the Work is also the inventor of the patent claims licensed, and where the organization or
+> institution has the right to grant such license under applicable grant and research funding
+> agreements**. No other express or implied licenses are granted."*
+
+| Payload | path read · bytes · digest | 🟢 §3 narrowing present | 🔵 self-description present |
+|---|---|---|---|
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `master/LICENSE` · 11,120 B · `0688f62d04f1` | 🟢 yes, verbatim as above | 🟢 yes — *"consists of the Apache 2.0 license, modified to change the scope of the patent grant in section 3"* |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `master/LICENSE` · 9,878 B · `f339063d2f60` | 🟢 yes, verbatim as above | 🟢 yes, same sentence |
+
+🔵 **The 1,242 B difference between the two payloads is line wrapping, not terms** — `sakai` serves
+the hard-wrapped rendering and `OpenLRW` the long-line rendering. 🟢 Both carry the identical §3.
+🔴 Which is the cleanest possible restatement of `Gap 466-C`: the byte delta that looked like a
+difference in instrument is a difference in **whitespace**.
+
+### 🟡 What this changes for an engagement, stated plainly
+
+🟢 **For copyright — nothing.** ECL-2.0 is Apache-2.0's grant, permissive, and Sakai or OpenLRW can
+go into a proprietary deliverable on that axis.
+🔴 **For patents — three things.** Under Apache-2.0 §3 a corporate contributor's employer grants the
+claims necessarily infringed by the contribution. Under ECL-2.0, where the contributor is
+**institutionally employed** — which, for Sakai and for an Apereo learning-analytics project, is
+most contributors:
+
+1. the grant reaches only claims where **the author is also the inventor**;
+2. it reaches them only where **the institution's grant and research-funding agreements permit the
+   grant** — and university funding agreements routinely assign IP to a funder or a tech-transfer
+   office;
+3. **"No other express or implied licenses are granted"** forecloses the implied-licence argument
+   that would otherwise cover the gap.
+
+🔵 **So the honest cell is two-part, and this shelf now writes it that way:** *permissive on
+copyright; patent grant conditional on the contributing institution's funding agreements.* 🔴 Where
+a client's counsel approved **"Apache-2.0"** by name, ECL-2.0 has not been approved and §3 is the
+clause they will care about.
+
+### 🟢 A vertical platform added — and it is the first Turkish one
+
+| Platform | Repo | Grant (path read · bytes · digest) | ★ | Region | What it is, and the customisation surface |
+|---|---|---|---|---|---|
+| **Atölye.Platform** | [PolyOS-Team/Atolye.Platform](https://github.com/PolyOS-Team/Atolye.Platform) | 🟢 **MIT** — `main/LICENSE` · 1,069 B · `fc9ec90c31a1` | 16 | EMEA | Open-source **exam submission and education management** platform, built by PolyOS and **optimised for Pardus school laboratories** — Pardus being Türkiye's state-developed Linux distribution. React + Node, multilingual, student-management and exam-system modules. 🟢 **MIT whole-work**: the one platform on this shelf an AI layer can be built into *and shipped* with no copyleft boundary and no patent caveat |
+
+🔵 **Why a 16★ repository is on a shelf with Moodle and Open edX.** Not for its size — for its
+**position**. It is the only education platform found that targets a *national* public-sector
+desktop baseline, and the Pardus tie means a Turkish public-schooling engagement inherits the
+deployment target rather than arguing for one. 🔴 **And its licence is the outlier in good
+company**: the incumbents on this shelf are GPL (Moodle), AGPL (Open edX) and ECL with the patent
+caveat above (Sakai).
+
+### 🔵 The LMS licence landscape, restated with this pass's caveat folded in
+
+| Platform | Grant, as this base carries it | Boundary an AI layer must respect |
+|---|---|---|
+| **Moodle** | GPL | 🟡 Distribution trigger; in-tree plugins inherit it. Integrate over an API, do not vendor |
+| **Open edX** | AGPL | 🔴 **Network trigger** — the one that catches a hosted AI service wired into the platform |
+| **Sakai** | ECL-2.0 | 🟡 Permissive on copyright; 🔴 **patent grant conditional on institutional funding agreements** (new this pass) |
+| **Chamilo** | GPL | 🟡 Distribution trigger. 🔵 Spain-origin with a LATAM install base — the asymmetry `Gap 473-G` sees from the supply side, seen from the demand side |
+| **Atölye.Platform** | 🟢 **MIT** | 🟢 None |
+
 ## 🆕 `p473` — `2026-10-27` — **🔴 EVERY LICENCE READER THIS BASE HAS BUILT IS KEYED ON ENGLISH TITLE STRINGS, AND THE LATAM LANGUAGE AXIS BREAKS IT ON THE FIRST TRY: `portabilis/i-diario`'s grant payload is an AGPL-3.0 IN PORTUGUESE — "LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3" — which every English-anchored screen on these shelves returns as UNSTATED. 🟢 And Brazil's largest free school software turns out to be a licence-boundary trap shipped as one product: the school information system is GPL-2.0-or-later and its own gradebook is AGPL — distribution trigger beside network trigger, from the same vendor, in the same deployment.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness

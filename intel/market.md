@@ -4,6 +4,174 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **🟢 `Gap 473-E`'s FOUR-PASS MIDDLE-EAST-AND-AFRICA DEMAND NIL IS FILLED, and the finding is a posture difference rather than a number: across Saudi Arabia, the UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco and South Africa there are AI STRATEGIES AND NO BINDING AI STATUTE — so an MEA engagement is governed by procurement and policy, not by conformity assessment, which is the exact inverse of EMEA-Europe. 🔴 And the 2026 market figure now has FOUR mutually incompatible values from four vendors; all four are printed and none is averaged.**
+
+🔵 Every figure below is attributed to the source class that stated it. Where sources disagree,
+**both are printed and the disagreement is named** rather than averaged. 🔴 Vendor-authored
+statistics roundups and market-research vendor pages are marked as such; they are not primary
+research and `Gap 455-E` grades them as structurally relayed.
+
+### 🟢 `Gap 473-D` honoured by measurement, not by assumption
+
+🔵 The gap's instruction was: *"count live bare canonical headings before writing and publish the
+count, whatever it is."* 🟢 **Counted before writing: `1`.** `p473`'s repair held through one pass.
+That block is renamed `— SUPERSEDED by p474` in this same edit, and the single canonical block below
+carries exactly five `###` children. 🔵 The count is published whether or not it is flattering;
+`p473` found seven.
+
+### 🔴 The 2026 market size — four vendors, four numbers, no average
+
+| stated 2026 value | implied growth | source class |
+|---|---|---|
+| **≈$3.7 B** | ~21 % CAGR to 2033 | market-research vendor |
+| **≈$10.6 B** | 40.9 % CAGR (from $7.52 B in 2025) | market-research vendor |
+| **≈$11.4 B** | 25.9 % CAGR 2026→2033 | market-research vendor |
+| **$6.4 B–$11.4 B** (range carried since `p467`) | — | this base's standing range |
+
+🔴 **The spread is 2.9× on the same year.** 🔵 A $3.7 B and a $10.6 B estimate for 2026 cannot both
+be measuring the same thing, and none of the four publishes its segment boundary — so the number is
+unusable as a sizing input and is carried only to show the disagreement. 🟢 **The standing range
+`$6.4 B–$11.4 B` is unchanged**, and the new $3.7 B anchor is recorded as a **low outlier**, not
+folded in.
+
+🔴 **`Gap 466-F` holds and the retired figure came back a third time.** The Multistate tracker's
+**"134 bills across 31 states"** reappeared as this pass's lead North America statistic and **stays
+retired**. 🟢 This pass can now say *why* the trackers disagree: ExcelinEd counts **≈100 K-12-specific**
+bills against Multistate's 134 **all-education** bills, so the two are measuring different scopes —
+not contradicting each other. 🔵 Scope, not arithmetic, explains part of `p455`'s 2.6× spread.
+
+### 🟢 Regional demand signals gathered this pass
+
+| region | the signal | source class |
+|---|---|---|
+| **North America** | 🟢 **Idaho SB 1227 enacted** — statewide K-12 AI framework, AI-literacy standards, educator training, data-privacy rules, and a bar on AI replacing human teachers. Vermont HB 650 (ed-tech privacy certification) passed one chamber; New York S.B. 8831 bars AI displacing collective-bargaining rights or staff duties; Oklahoma and Maryland carry human-oversight rules; Georgia and Mississippi add AI to CS credit requirements | legislative trackers + policy orgs |
+| **North America** | 🔴 **A federal/state collision is now explicit**: executive orders through early 2026 build a national AI-in-education framework and a K-12 task force, while a December 2025 order directs that **state AI regulations deemed burdensome be limited** | policy-org relay |
+| **EMEA (Europe)** | 🟢 UK's first **AI Adoption Summit** (8 June) committed **£200 m+** (£100 m expanding Bridge AI, £53 m regional); EU Commission **updated its ethical guidelines on AI in education** (9 June) and signed three Advanced Digital Skills grants worth **€25.4 m** | press + institutional relay |
+| **EMEA (Europe)** | 🟢 **The Council of Europe is working on a European evaluation framework to assess educational technologies** — expert group plus a second working conference in October | institutional |
+| **EMEA (Europe)** | UK **$294.6 M**, Germany **$285.6 M**, France **$228.9 M** = **>60 %** of a European market put at ~$512.6 M in 2024, 17.2 % CAGR to 2029. 🔵 64 % of Europeans agree everyone will need AI literacy by 2030; Eurostat shows **>50 % of large enterprises** using AI against **<15 % of SMEs** | vendor report + survey + Eurostat relay |
+| **EMEA (MEA)** | 🟢 **Strategies, not statutes**: Saudi Arabia, the UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco and South Africa all hold AI strategies; **none has an AI-specific binding statute**. Egypt's council was renamed in **January 2026** to cover AI, quantum and emerging tech; the UAE's **Federal Authority for AI and Data** was unveiled **14 June 2026**; **Qatar's central-bank guidelines are the region's only legally binding AI-specific rules from a national regulator** — and they are financial, not educational | governance guide + compliance vendor |
+| **EMEA (MEA)** | 🟡 Adoption is **tiered by income**: Saudi Arabia, the UAE and Qatar run large-scale national AI-in-education initiatives; Egypt, Morocco and Jordan build capacity through public-private partnerships; lower-income and crisis-affected countries are blocked on infrastructure. **43.9 % of MENA higher-education institutions are still early-stage** on AI adoption | EdTech Hub brief (≈9 months old) + literature review |
+| **EMEA (MEA)** | 🔴 MEA AI-in-education spending **$0.56 B in 2026 → $1.6 B by 2030 (34.3 % CAGR)**; a separate release puts the **MEA + LATAM LMS** market at **$7.92 B** | market-research vendors |
+| **APAC** | 🔴 **An honest near-nil on education specifically.** Every APAC query returned enterprise-AI material. What exists: a **TCS–Pearson** multi-year AI learning alliance; LearnUpon's APAC expansion; Singapore's AI consultations are **financial-sector**, not education; Australia tightening AI governance and copyright. APAC is named the **fastest-growing region at 24.8 % CAGR 2026–2033** — by the same vendor reports whose 2026 base disagrees 2.9× | trade press + vendor reports |
+| **LATAM** | 🟡 **Fragmented and diverging**: Brazil's **Bill 2,338/2023** is pending with a risk-based model and severe penalties; **Chile** updated its National AI Policy and introduced a risk-based bill; **Argentina rejects regulation outright**. A 2025 comparative study covers higher-education AI regulation across Argentina, Brazil, Chile, Peru and Spain | law-firm relay + academic |
+| **LATAM** | 🔴 Market data is thin and scoped oddly — one vendor puts **"Rest of Latin America"** AI-in-education at **$18.2 M (2024) → $36 M (2029)**, omitting the region's largest markets | market-research vendor |
+
+🔴 **Declared gaps on the demand side, stated so silence is not mistaken for coverage:** no
+school-level or university-level AI adoption **rate** for APAC; no education-specific AI rule in
+force anywhere in APAC that these sources name; no Canadian or Mexican education-AI policy found;
+no named education-sector players for LATAM; and no primary (non-vendor) 2026 market size for any
+region.
+
+## Opportunities by region
+
+🔵 One canonical block, five children, written in the pass that measured the signals above.
+
+### North America
+
+🟢 **The lead opportunity is the compliance artefact, not the tutor.** Idaho SB 1227 is **enacted**
+with AI-literacy standards, educator training and a bar on AI replacing teachers; Oklahoma and
+Maryland require human oversight and forbid AI as the main basis for high-stakes student decisions;
+Vermont would make ed-tech vendors **certify** privacy compliance. 🔵 Every one of those is a
+*demonstrability* requirement, and the asset that satisfies it is an auditable record of what the
+AI did to each learner — pattern **`P474-1`** in [`compose/patterns.md`](../compose/patterns.md),
+built on an MIT/Apache xAPI spine.
+🔴 **The risk to price in is the federal/state collision**: a December 2025 order pushes to limit
+state AI rules while 31 states legislate. 🟢 **The hedge is to build to the strictest state rule and
+make the evidence exportable** — a district-level deliverable survives either outcome; a product
+betting on federal pre-emption does not.
+🟢 **Supply match:** [EduSafeBench](https://github.com/kaushikatla-cell/EduSafeBench) (MIT) is the
+only evaluation asset on these shelves aimed at a US curriculum programme (AP CSA/CSP).
+
+### EMEA
+
+🟢 **Europe: the Council of Europe is designing a European evaluation framework for educational
+technology — and the open evaluation tier that would feed it is the weakest shelf in this KB.** That
+is the single clearest supply/demand mismatch this base has measured. 🔵 An engagement that can
+produce defensible evaluation evidence under the EU AI Act's high-risk duties, with instruments it
+can actually license, is selling into a requirement that is being written right now. 🔴 Mind the
+boundary: Open edX is **AGPL** (network trigger) and Sakai is **ECL-2.0**, whose patent grant this
+pass measured as **conditional on the contributing institution's research-funding agreements** — so
+"Apache-approved" does not cover Sakai.
+🟢 **Türkiye is a named, un-worked entry point**:
+[Atölye.Platform](https://github.com/PolyOS-Team/Atolye.Platform) is **MIT whole-work** and targets
+**Pardus**, the state Linux distribution — a public-sector deployment baseline inherited rather than
+argued for.
+🟢 **MEA: the posture inverts.** Strategies and no binding statute means the gate is **procurement
+and national strategy alignment**, not conformity assessment — faster to enter, and won on
+credentials and local-language capability rather than on a CE-style file. 🔵 Tier the approach:
+Gulf states (Saudi Arabia, the UAE, Qatar) fund large national programmes; Egypt, Morocco and
+Jordan buy through public-private partnerships; lower-income markets are infrastructure-blocked, so
+**offline-capable small-model tutoring** is the only honest offer there — and
+[slm-writing-feedback-tutor-ptbr](https://github.com/RandMelville/slm-writing-feedback-tutor-ptbr)
+proves the ≤3.8B-offline pattern, in the wrong language but with transferable method.
+🔴 **Do not price MEA on local open-source ecosystem depth**: Arabic-language GitHub presence is
+**8.5× thinner than Turkish across all domains** (`repos/trending.md`), so expect to bring the
+stack and localise, not to compose a local one. 🟢 African-origin capability exists and is nameable:
+[wassce-benchmark](https://github.com/acheamponge/wassce-benchmark) (MIT, West Africa) and
+[overlooked-bench](https://github.com/kcelestinomaria/overlooked-bench) (AGPL-3.0, Kenya).
+
+### APAC
+
+🔴 **The honest position is that this base cannot yet place an APAC education engagement on
+evidence.** Every regional query this pass returned enterprise-AI material; no education-specific
+rule in force was found; no adoption rate for schools or universities was found. 🔵 That is a
+declared gap, not a quiet one — and it is the same nil `p473` recorded, now reproduced on a second
+query set.
+🟡 **What can be acted on:** the region is called the fastest-growing at 24.8 % CAGR (vendor), the
+**TCS–Pearson** alliance signals that the buyer may be the *employer* rather than the ministry, and
+Australia is tightening AI governance and copyright — which makes **provenance of training and
+assessment content** the live question there.
+🟢 **Supply is real even where demand data is not**: [Eyedot](https://github.com/Simon-zj1/eyedot)
+(MIT, China) does per-scoring-point grading with low-confidence human review — exactly the
+"human in the loop on high-stakes decisions" shape North American statutes demand, built in APAC.
+🔴 And `Gap 467-F`'s Chinese **NonCommercial** content concentration is still ungraded at breadth:
+compose the agents, license the content elsewhere.
+
+### LATAM
+
+🟢 **This is the region where this base now has the most complete picture, and the opportunity is
+the national-curriculum stack.** [bncc-dev](https://github.com/bncc-dev) gives Brazil's curriculum
+as MIT open data (1,721 objectives), an **MCP server** that makes it callable from an agent, and a
+**contamination-resistant hallucination benchmark** over it — curriculum, interface and evidence
+from one organisation. 🔵 Nothing equivalent exists for any other country on these shelves, and
+building it for Mexico, Colombia or Chile is a concrete, scoped offer.
+🔴 **The licence map is the delivery risk, and it is now fully drawn.** Portabilis — Brazil's
+largest free school software vendor — ships **i-educar GPL-2.0-or-later**, **i-diario AGPL-3.0-or-later**
+and **pre-matricula-digital AGPL-3.0-or-later**, the last two with a payload **in Portuguese** that
+every English-anchored licence reader returns as `UNSTATED`. 🟢 Two of three components carry the
+**network-use** trigger, so the AGPL boundary — not the model choice — is the architecture decision:
+pattern **`P474-2`**.
+🔴 **And the public data is not licensed.** São Paulo's municipal education secretariat
+([dados-educacao](https://github.com/prefeiturasp/dados-educacao), 57★) and **Paraguay's Ministry of
+Education** ([mec-opendata](https://github.com/mecpy/mec-opendata)) both publish **UNGRANTED** at
+all 14 probed paths. 🔵 Treat them as read-only reference; source licensed equivalents
+(`bncc-dados`, `ResultadosUNAM---data`, `chile-hub`, all MIT).
+🟢 **Spanish-speaking LATAM is not the adopter-only market `p473` described.** At the no-star floor
+the Spanish token returns **20 % more** education repositories than Portuguese; what differs is
+star accumulation (2.49×), and what the Spanish leg yields is **government and public-data tooling**
+— Uruguay's [ElijoEstudiar](https://github.com/datauy/ElijoEstudiar), Mexico's UNAM admissions data,
+Chile's public-data hub. 🔵 Regulatory divergence is a sales fact, not a blocker: Brazil pending
+risk-based, Chile risk-based, **Argentina rejecting regulation** — three different pitches.
+
+### Global
+
+🟢 **The cross-region constant is that buyers are converging on evidence and the open supply cannot
+license it.** The Council of Europe is drafting an evaluation framework, US states demand human
+oversight and auditability, HolonIQ reports systems expecting proof of learning gains — and the
+instruments that would supply the proof sit at 0–11★ with three of the best carrying
+**`SPLIT_SCOPE`** grants whose corpora are not licensed to the user.
+🔴 **So the highest-value global capability is boring and defensible: a licence-and-scope reading
+practice.** This pass found a 1.03M-problem corpus whose own LICENSE retracts the grant an index
+reports, a vendor whose AGPL hides behind Portuguese, and a permissive family (ECL-2.0) whose
+patent grant depends on a university's funding agreements. 🟢 Any of the three, shipped unexamined,
+is a client liability; catching them is a two-hour read with
+[`family_lang.py`](../compose/code/p474-scope-and-language/family_lang.py).
+🟢 **The clean build targets are the generated and whole-work-permissive assets**:
+[scireason-forge](https://github.com/chenhz01/scireason-forge) (Apache-2.0, items generated so no
+third-party corpus), [studentbench](https://github.com/Handshake-AI-Research/studentbench) (MIT),
+[bncc-dados](https://github.com/bncc-dev/bncc-dados) (MIT) and the permissive xAPI/LRS tier
+`Gap 467-I` opened.
+
 ## 🆕 `p473` — `2026-10-27` — **🔴 THE `p383` SINGLE-CANONICAL-BLOCK CONTRACT HAS BEEN SILENTLY BROKEN FOR SIX CONSECUTIVE PASSES: this file carried SEVEN live `## Opportunities by region` headings, not one, so any reader or compiler that selects by heading was being handed seven mutually contradictory North America sections with no recency ordering. 🟢 Repaired in this pass and reported rather than quietly fixed. 🟢 And the EMEA Middle East/Africa NIL `p472` declared is now HALF-FILLED — from the supply side, by two African-origin repositories, while the demand side stays an honest nil.**
 
 🔵 Every figure below is attributed to the source class that stated it. Where sources disagree,
@@ -79,7 +247,7 @@ explanation is the reason: adoption is **driven by individual academics, researc
 rather than institution-wide strategy.** A 61-point gap between what is running and what is governed
 is not a market-sizing argument — it is a scope of work.
 
-## Opportunities by region
+## Opportunities by region — 🔴 SUPERSEDED by `p474` (consolidated into the single current block above; content retained here and in `git log`)
 
 ### North America
 

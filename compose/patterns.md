@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **three recipes whose parts were all grant-verified by payload read this pass: the evidence dossier North America and Europe are both legislating toward, the Brazilian public-education stack with its two AGPL triggers held outside the AI layer, and a national-curriculum agent built on the one country that has published curriculum, interface and benchmark together.**
+
+🔵 Every repository named below was address-resolved by `git ls-remote --symref` and grant-verified
+by payload read from `raw.githubusercontent.com` this pass; bytes and digests are in
+[`evidence/grant-class.2026-10-27-p474.tsv`](../evidence/grant-class.2026-10-27-p474.tsv) and
+[`evidence/grant-lang-scope.2026-10-27-p474.tsv`](../evidence/grant-lang-scope.2026-10-27-p474.tsv).
+🔴 No pattern here composes a row whose grant was taken from an index, a README badge or a
+comparison table. 🔴 **And no pattern here ships a `SPLIT_SCOPE` corpus into a deliverable** — where
+one is used, the boundary is stated.
+
+---
+
+### 🟢 `P474-1` — The evidence dossier: one telemetry spine, three jurisdictions' paperwork
+
+🔵 **When to reach for it.** The client must *show its working* on AI-assisted learning. In the US
+that is Idaho SB 1227's framework or Oklahoma's "not the main basis for grading"; in Europe it is
+the AI Act's high-risk duties and, shortly, the Council of Europe's evaluation framework; in MEA it
+is a national-strategy alignment memo. 🔴 **The trap this avoids:** building a separate compliance
+artefact per jurisdiction, when the underlying evidence is the same evidence.
+
+**The parts — all permissive whole-work, all verified this pass or carried from `p473`'s LRS tier:**
+
+| role | repo | grant |
+|---|---|---|
+| Learning Record Store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 (`p473`, 11,357 B `c71d239df917`) — SQL-backed, so the client's BI team can query it |
+| xAPI pipeline | [openfun/ralph](https://github.com/openfun/ralph) | 🟢 MIT (`p473`, 1,094 B `08ea77291de9`) |
+| Reliability evaluation | [kaushikatla-cell/EduSafeBench](https://github.com/kaushikatla-cell/EduSafeBench) | 🟢 MIT — 1,056 B `1126322e2cc8` |
+| Tutoring-quality evaluation | [Handshake-AI-Research/studentbench](https://github.com/Handshake-AI-Research/studentbench) | 🟢 MIT — 1,078 B `3cb4c0b9467a` |
+| Contamination-proof item generation | [chenhz01/scireason-forge](https://github.com/chenhz01/scireason-forge) | 🟢 Apache-2.0 — 11,938 B `7cae8b289d20` |
+
+**How to wire it.**
+1. Every AI interaction emits an **xAPI statement** — actor, verb, object, result, and the model and
+   prompt version — into `lrsql`. `ralph` handles ingest and transforms.
+2. The **human-oversight gate** is a statement type, not a UI feature: any AI-proposed grade or
+   intervention writes a `proposed` statement, and a teacher action writes the `confirmed` or
+   `overridden` statement. 🟢 That single pair satisfies Oklahoma's "not the main basis", Idaho's
+   "not replacing teachers" and the AI Act's "able to intervene and override" **from one record.**
+3. **Evaluation runs on a schedule, not once at launch**: `EduSafeBench` for reliability,
+   `studentbench` for tutoring quality, and `scireason-forge` to generate fresh items each cycle.
+4. 🟢 **Why `scireason-forge` and not a bigger corpus:** its items are *generated and solver-graded*,
+   so there is **no third-party item bank in the deliverable** — and no contamination claim against
+   an evaluation whose items did not exist when the model was trained.
+5. The dossier is a **view over the LRS**, rendered per jurisdiction. The evidence does not change;
+   the template does.
+
+🔴 **The part to refuse:** do not seed the item bank from
+[`arquimedes`](https://github.com/richer-richard/arquimedes) despite its 1,038,963 problems. Its
+LICENSE retracts the project's own CC BY claim over `problems/`, points at third-party terms, and
+**CEMC material is CC BY-NC**. 🟡 Its *harness* (`arquimedes/`, `tools/`) is MIT and may be used.
+
+🔵 **Shape:** 8–10 weeks for the spine plus the first jurisdiction's dossier; each additional
+jurisdiction is a template, ~1–2 weeks.
+
+---
+
+### 🔴 `P474-2` — Brazilian public education: an AI layer outside two different copyleft triggers
+
+🔵 **When to reach for it.** A Brazilian municipal or state secretariat runs Portabilis software —
+the largest free school-software estate in the country — and wants AI for enrolment triage,
+attendance-risk flagging or gradebook assistance.
+
+🔴 **The boundary, measured this pass and not assumed:**
+
+| component | grant (read first-hand) | trigger |
+|---|---|---|
+| [i-educar](https://github.com/portabilis/i-educar) — school information system | GPL-2.0-or-later, `2.12/LICENSE` 18,092 B `8177f9751321` | 🟡 distribution |
+| [i-diario](https://github.com/portabilis/i-diario) — gradebook | 🔴 **AGPL-3.0-or-later**, `1.6/LICENSE` 35,326 B `fe85f94658bf` *(Portuguese)* | 🔴 **network use** |
+| [pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) — enrolment | 🔴 **AGPL-3.0-or-later**, `2.12/LICENSE` 35,326 B `fe85f94658bf` *(Portuguese)* | 🔴 **network use** |
+
+🔴 **Read the licences before you plan the integration, and read them in Portuguese.** Both AGPL
+payloads are rendered as *"LICENÇA PÚBLICA GERAL AFFERO GNU"*, which every English-anchored reader
+on this base returned as `UNSTATED` until this pass. 🟢 Two of the three components carry the
+**network** trigger, and an AGPL network trigger is reached by *serving* — a hosted AI assistant
+wired into the gradebook or enrolment flow is inside it.
+
+**How to wire it.**
+1. 🟢 **The AI layer is a separate service with its own repository and licence.** It never imports
+   Portabilis code, is never deployed in the same process, and holds no vendored copy.
+2. 🟢 **Cross the boundary over the database or an HTTP adapter the secretariat owns**, treating
+   i-educar/i-diario as a **system of record you do not control** — the same posture `p455` measured
+   for Europe's PRONOTE and WebUntis, where the asset was proprietary. Here it is copyleft; the
+   architecture is identical.
+3. Curriculum grounding comes from [bncc-dados](https://github.com/bncc-dev/bncc-dados) (🟢 **MIT**,
+   1,092 B `e162f8f4b461`) — not from scraping the LMS.
+4. 🔴 **Public open data is reference only**: São Paulo's
+   [dados-educacao](https://github.com/prefeiturasp/dados-educacao) and Paraguay's
+   [mec-opendata](https://github.com/mecpy/mec-opendata) are **UNGRANTED at 14 probed paths**. Read
+   them to calibrate; do not vendor them.
+5. 🟢 Telemetry into the `P474-1` spine, which is permissive and sits on the AI side of the line.
+
+🔵 **What to tell the client in one sentence:** *the AGPL is not a reason to avoid the estate — it is
+a reason to keep the AI service on the other side of an interface, which you want anyway because
+the secretariat upgrades i-educar on its own schedule.*
+
+🔵 **Shape:** 6–8 weeks, with the first two spent on the licence boundary and the adapter contract.
+
+---
+
+### 🟢 `P474-3` — The national-curriculum agent, built where the full stack already exists
+
+🔵 **When to reach for it.** A ministry or large private group wants an AI tutor or teacher
+assistant that is **demonstrably aligned to the national curriculum** — and wants the alignment
+auditable rather than asserted.
+
+🟢 **Brazil is the only country on these shelves where all three layers are already published, by
+one organisation:**
+
+| layer | repo | grant | what it gives |
+|---|---|---|---|
+| Curriculum as data | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** whole-work, 1,092 B `e162f8f4b461` | 1,721 learning objectives, JSON/SQLite/CSV, provenance per record |
+| Callable interface | [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | 🔴 **SPLIT_SCOPE**, 1,299 B `86bf5f5e6306` | npm + PyPI packages **and an MCP server** — the curriculum as an agent tool |
+| Alignment evidence | [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🔴 **SPLIT_SCOPE**, 911 B `d19733bb7540` | 15,300 responses × 17 models, held-out private set against contamination |
+
+**How to wire it.**
+1. 🟢 Mount `bncc-pacotes`' **MCP server** as a tool on the agent. Every curriculum claim the tutor
+   makes resolves to an objective **code**, not to model recall — which is the whole auditability
+   argument.
+2. Ground generation on `bncc-dados`; the agent cites the objective it is teaching to.
+3. Run `bncc-benchmark` **as the regression gate in CI**, not as a launch-day score. Its
+   private held-out set is what makes a repeated score meaningful.
+4. Telemetry into `P474-1`, so curriculum alignment becomes part of the same evidence record as
+   human oversight.
+
+🔴 **Two licence boundaries to respect, both read first-hand this pass:**
+- 🟡 The two `SPLIT_SCOPE` repositories are **MIT in code and CC BY 4.0 in data**, and the published
+  npm tarball and PyPI wheel **carry both in one artifact**. 🟢 So shipping them is fine and
+  **attribution is owed** — put the CC BY notice in the deliverable's third-party notices, where a
+  scanner reporting only `MIT` will not put it for you.
+- 🔴 The **name and visual identity are expressly not licensed** (*"O código é livre; a marca
+  não"*). The deliverable must not present itself as bncc.dev or use the mark.
+
+🟢 **The replication offer, which is the actual sale.** Mexico, Colombia and Chile have national
+curricula and **no equivalent stack**. The scoped engagement is: curriculum → structured open data
+with provenance → an MCP server → a contamination-resistant benchmark. 🔵 Brazil is the working
+reference implementation, and
+[ResultadosUNAM---data](https://github.com/agn3si/ResultadosUNAM---data) (🟢 MIT) and
+[chile-hub](https://github.com/cortega26/chile-hub) (🟢 MIT) show the public-data habit already
+exists in both of the next two markets.
+
+🔵 **Shape:** 4 weeks to a grounded agent on Brazil; 10–12 weeks per new country, most of it in
+turning a curriculum PDF into provenanced structured data.
+
 ## 🆕 `p473` — `2026-10-27` — **three recipes built only from grants read first-hand this pass: a telemetry spine with ZERO copyleft in the deliverable, a LATAM public-education stack that crosses two different copyleft triggers and the boundary that keeps them outside the AI layer, and the evidence gate the whole market is asking for and almost nobody can license.**
 
 🔵 Every repository named below was address-resolved by `git ls-remote --symref` and grant-verified

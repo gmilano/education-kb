@@ -1,0 +1,28 @@
+addr	resolved	branch	head	grant_path	http	bytes	digest	line1
+PolyOS-Team/Atolye.Platform	OK	main	128ab9c30d13	main/LICENSE	200	1069	fc9ec90c31a1	MIT License
+bncc-dev/bncc-benchmark	OK	main	4713901ce5d7	main/LICENSE	200	911	d19733bb7540	# Licenças
+bncc-dev/bncc-pacotes	OK	main	e9b4985adf83	main/LICENSE	200	1299	86bf5f5e6306	# Licenças
+bncc-dev/bncc-dados	OK	main	9c268978efa2	main/LICENSE	200	1092	e162f8f4b461	MIT License
+Handshake-AI-Research/studentbench	OK	main	a3c0e638a6a9	main/LICENSE	200	1078	3cb4c0b9467a	MIT License
+kaushikatla-cell/EduSafeBench	OK	main	c6cb7f80e55f	main/LICENSE	200	1056	1126322e2cc8	MIT License
+RandMelville/slm-writing-feedback-tutor-ptbr	OK	main	edff23e02f07	main/LICENSE	200	1085	b7e21ba75eea	MIT License
+richer-richard/arquimedes	OK	main	d142f84feb46	main/LICENSE	200	3103	b8e2e1c65fdc	Copyright (c) 2026 richer-richard
+chenhz01/scireason-forge	OK	main	a8acd9bb7275	main/LICENSE	200	11938	7cae8b289d20	Apache License
+Simon-zj1/eyedot	OK	main	2bf1d2974cdf	main/LICENSE	200	1089	e385b6b49565	MIT License
+Benjamin-KY/open-harness-atlas	OK	main	737c3c18ceb2	main/LICENSE	200	11289	e0f0d038f8b6	Apache License
+AksharaRgsu2024/LLM_Factuality_Evaluation	OK	main	786874cd01f3	UNGRANTED@14probed	404	-	-	-
+ipti/br.tag	OK	main	4105188833dc	main/LICENSE	200	18027	111e1f411730	GNU GENERAL PUBLIC LICENSE
+prefeiturasp/SME-PratoAberto-Edu	OK	master	8e6f32fd8663	master/LICENSE	200	35141	589ed823e9a8	GNU GENERAL PUBLIC LICENSE
+prefeiturasp/dados-educacao	OK	master	9e6516753747	UNGRANTED@14probed	404	-	-	-
+mecpy/mec-opendata	OK	master	5500abdf101b	UNGRANTED@14probed	404	-	-	-
+datauy/ElijoEstudiar	OK	master	ed306fef95c5	master/LICENSE	200	35149	3972dc9744f6	GNU GENERAL PUBLIC LICENSE
+agn3si/ResultadosUNAM---data	OK	main	c58b370dcf79	main/LICENSE	200	1063	13e4dd489fe9	MIT License
+cortega26/chile-hub	OK	main	cf5a2c02aca0	main/LICENSE	200	1070	277707dcaa3b	MIT License
+portabilis/pre-matricula-digital	OK	2.12	b73af875578f	2.12/LICENSE	200	35326	fe85f94658bf	LICENÇA PÚBLICA GERAL AFFERO GNU
+pguso/agents-from-scratch	OK	main	da3f9df28a9c	main/LICENSE	200	1091	f78cc6bf1d57	MIT License
+huseyingulsin/Acik-Kaynak-Bilgisayar-Bilimleri	OK	main	1737451aa371	main/LICENSE.md	200	1074	050d076b61bd	MIT License
+Turkish-AI-Community/hsd-agu-egitim	OK	main	7250294309a6	main/LICENSE	200	1073	2f311e0a9f67	MIT License
+Apereo-Learning-Analytics-Initiative/OpenLRW	OK	master	a243920ab120	master/LICENSE	200	9878	f339063d2f60	Educational Community License
+sakaiproject/sakai	OK	master	849cc0d9f991	master/LICENSE	200	11120	0688f62d04f1	Educational Community License, Version 2.0 (ECL-2.0)
+gpassero/uol-redacoes-xml	OK	master	94b74fc91c4e	master/LICENSE	200	11357	b40930bbcf80	Apache License
+globant-education-kb/this-address-does-not-exist	UNRESOLVED	-	-	-	-	-	-	-

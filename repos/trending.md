@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **the discovery result this week is a NORMALISER, not a repository: Arabic-language education supply looks like a nil until you measure Arabic's TOTAL GitHub presence, and then the education share turns out to be 89 % of Turkish's — the education tier is not thin, the language's presence is**
+
+🔵 Append-only honoured: prepended section, history below untouched. All counts from MCP
+`search_repositories`, **2026-10-27**, index-relayed (`Gap 467-D`), recorded in
+[`evidence/discovery-legs.2026-10-27-p474.tsv`](../evidence/discovery-legs.2026-10-27-p474.tsv).
+
+### 🟢 `Gap 473-E`, supply half — run in-language, with the control the gap did not ask for
+
+| leg | token | no floor | ≥5★ | 🟢 usable education infrastructure |
+|---|---|---|---|---|
+| Turkish | `eğitim` | **4,576** | 162 | **1** — [PolyOS-Team/Atolye.Platform](https://github.com/PolyOS-Team/Atolye.Platform) |
+| Turkish | `okul` (school) | — | 35 | 1 (same asset) |
+| Turkish | `müfredat` (curriculum) | **38** | — | 0 — curriculum content only |
+| Arabic | `تعليم` | **480** | **4** 🔴 `incomplete_results: true` | **0** |
+
+🔴 **The raw read is "Arabic education open source does not exist."** Four repositories at ≥5★, and
+all four are off-domain. 🔵 **But a nil measured with no denominator is not a finding**, so this
+pass ran a general-vocabulary control in each language:
+
+| language | education token | general token | ratio |
+|---|---|---|---|
+| Turkish | `eğitim` 4,576 | `yazılım` (software) 5,240 | **0.87** |
+| Arabic | `تعليم` 480 | `برمجة` (programming) 618 | **0.78** |
+
+🟢 **The education share of each language's GitHub presence is nearly the same — Arabic's is 89 % of
+Turkish's.** 🔴 **What differs by 8.5× is the language's total presence**: 618 Arabic general-token
+repositories against 5,240 Turkish. 🔵 **So the standing position changes from "Arabic-speaking
+markets do not build education software" to "Arabic-language open source is thin across every
+domain, and education is not disproportionately thin within it."** The first claim would have sent
+an engagement to the wrong conclusion about a MENA client's local ecosystem.
+
+🔴 **Two instrument caveats, recorded rather than smoothed:** the Arabic leg returned
+`incomplete_results: true` (GitHub's search timed out, so 480 is a floor, not a count); and `okul`
+collides with **`okular`**, the KDE document viewer — a Latin-script collision of exactly the shape
+`Gap 467-H` found with `tutor`/`tutorial`, now observed in a third language.
+
+### 🔴 `Gap 473-G` — the pt/es asymmetry INVERTS at the no-star floor
+
+| token | no floor | ≥5★ | share clearing 5★ |
+|---|---|---|---|
+| `educacao` (pt) | **9,220** | **87** | **0.94 %** |
+| `educacion` (es) | **11,071** | **42** | **0.38 %** |
+
+🔴 **`p473`'s reading — "Brazil builds, Spanish-speaking LATAM adopts" — does not survive its own
+lower floor.** At ≥0★ the **Spanish** token returns **20 % MORE** repositories than Portuguese. 🟢
+The real asymmetry is not volume but **star accumulation**: a Portuguese education repository is
+**2.49×** more likely to clear 5★. 🔵 So the honest statement is *"Brazilian education projects
+concentrate attention; Spanish-language education projects are more numerous and flatter"* — and
+the practical consequence is that **any star-ordered sweep under-reports Spanish-speaking LATAM by
+construction**.
+
+🟢 **And the Spanish leg does return infrastructure once you stop ordering by stars** — it is simply
+a *different kind*: government and public-data tooling rather than platforms.
+[datauy/ElijoEstudiar](https://github.com/datauy/ElijoEstudiar) (🇺🇾 GPL-3.0-or-later, public
+education search), [mecpy/mec-opendata](https://github.com/mecpy/mec-opendata) (🇵🇾 Ministry of
+Education portal, 🔴 **UNGRANTED**),
+[agn3si/ResultadosUNAM---data](https://github.com/agn3si/ResultadosUNAM---data) (🇲🇽 MIT, UNAM
+admissions 2021–2026), [cortega26/chile-hub](https://github.com/cortega26/chile-hub) (🇨🇱 MIT,
+curated public data including education).
+
+### 🟢 New Brazilian stack surfaced on the Portuguese leg
+
+[bncc-dev](https://github.com/bncc-dev) publishes three coordinated repositories —
+[`bncc-dados`](https://github.com/bncc-dev/bncc-dados) (MIT, 1,721 national-curriculum objectives as
+open data), [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) (npm + PyPI + **MCP server**)
+and [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) (15,300 responses × 17 models,
+held-out private set). 🟢 **Curriculum → callable interface → evaluation, from one organisation, in
+one language** — the most complete national-curriculum AI stack on these shelves, and it is LATAM.
+🔴 Two of the three are `SPLIT_SCOPE`; see [`agents/top.md`](../agents/top.md).
+
+🔵 Also new on the Portuguese leg: [ipti/br.tag](https://github.com/ipti/br.tag) (GPL-2.0-or-later
+school management), [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital)
+(🔴 AGPL-3.0-or-later enrolment) and
+[prefeiturasp/SME-PratoAberto-Edu](https://github.com/prefeiturasp/SME-PratoAberto-Edu)
+(GPL-3.0-or-later, São Paulo's municipal education chatbot).
+
 ## 🆕 `p473` — `2026-10-27` — **the trending signal this week is a measurement artefact being corrected in two places at once: the learning-record tier that `Gap 467-I` called copyleft-only is the most permissive tier in this KB, and the LATAM supply that `Gap 467-E` measured at 1 % is a working stack that answers to Portuguese**
 
 🔵 **Append-only.** The `p472` body and all prior passes stand unchanged below this section. Stars

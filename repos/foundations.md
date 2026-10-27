@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **🔴 LATIN AMERICA'S PUBLIC-SECTOR EDUCATION DATA IS PUBLISHED WITHOUT A GRANT: a municipal education secretariat and a national education ministry both ship their open data UNGRANTED at all 14 probed paths, so the most authoritative education data in the region is the data an engagement may not use. 🟢 And the Brazilian school-management vendor stack is now mapped end to end — four components, THREE DIFFERENT COPYLEFT TRIGGERS, one of them rendered in Portuguese.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness
+repo. **Nothing below is gate-attested.** Every address resolved first-hand (`git ls-remote
+--symref`); every grant read first-hand from `raw.githubusercontent.com`, body written to a file and
+the file measured (`Gap 468-A`). Stars index-relayed from MCP `search_repositories`, **2026-10-27**
+(`Gap 467-D`). 🔴 `curl -sI` not used — dead on this harness (`Gap 472-A`).
+
+### 🔴 The ungranted public sector — measured, and the most actionable row on this shelf
+
+| Repo | Grant | ★ | Region | What it holds, and why the grant matters |
+|---|---|---|---|---|
+| [prefeiturasp/dados-educacao](https://github.com/prefeiturasp/dados-educacao) | 🔴 **UNGRANTED** — 14 paths probed on `master` | 57 | LATAM | Open-data analyses and tutorials from the **São Paulo Municipal Education Secretariat** — the largest municipal school system in the Americas. 🔴 Published as open data, licensed as nothing |
+| [mecpy/mec-opendata](https://github.com/mecpy/mec-opendata) | 🔴 **UNGRANTED** — 14 paths probed on `master` | 11 | LATAM | **Paraguay's Ministry of Education and Culture** open-data portal. 🔴 Same shape, national rather than municipal |
+
+🔴 **Why this is not a nitpick.** "Open data" from a public body reads as free to use, and a
+procurement review will ask for the grant. Neither repository states one, so neither can be
+vendored into a client deliverable on the strength of the repository alone — the terms, if they
+exist, live in a portal's terms of use, not in the artifact. 🔵 **The engagement move is to treat
+these as read-only reference and to source the licensed equivalent** — which, for curriculum, is
+[`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (**MIT**, `main/LICENSE` 1,092 B
+`e162f8f4b461`), and for admissions-grade public data
+[`agn3si/ResultadosUNAM---data`](https://github.com/agn3si/ResultadosUNAM---data) (**MIT**, 1,063 B
+`13e4dd489fe9`) and [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (**MIT**,
+1,070 B `277707dcaa3b`).
+
+### 🟢 The Brazilian school-management stack, mapped — one vendor, three copyleft triggers
+
+| Component | Repo | Grant (path read · bytes · digest) | ★ | Trigger |
+|---|---|---|---|---|
+| School information system | [portabilis/i-educar](https://github.com/portabilis/i-educar) | **GPL-2.0-or-later** — `2.12/LICENSE` · 18,092 B · `8177f9751321` | 721 | 🟡 distribution |
+| Gradebook / class diary | [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0-or-later** — `1.6/LICENSE` · 35,326 B · `fe85f94658bf` *(Portuguese payload)* | 117 | 🔴 **network use** |
+| Enrolment + waiting lists | [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) | 🔴 **AGPL-3.0-or-later** — `2.12/LICENSE` · 35,326 B · `fe85f94658bf` *(Portuguese payload)* | 21 | 🔴 **network use** |
+| School-management (independent vendor) | [ipti/br.tag](https://github.com/ipti/br.tag) | **GPL-2.0-or-later** — `main/LICENSE` · 18,027 B · `111e1f411730` | 20 | 🟡 distribution |
+
+🟢 **New this pass: the enrolment module, and it is AGPL — identical bytes AND digest to the
+gradebook's Portuguese payload.** So **two of the three Portabilis components carry the
+network-use trigger**, and the pattern is the vendor's default rather than one component's choice.
+🔴 An AI enrolment-triage or attendance agent that calls either over a network is inside the AGPL
+boundary; the boundary, not the model, is the architecture decision.
+
+🟢 **`p473`'s 18 KB GNU size band reproduces, on a different vendor.** `ipti/br.tag` serves
+**18,027 B** against `i-educar`'s **18,092 B** — 65 B apart, both GPL-2.0-or-later. 🔵 `p473` noted
+it had never observed a GNU payload below 34 KB before `i-educar`; this is the **second**
+observation, from an unrelated organisation, so the band is real. 🔴 It remains provenance only —
+[`Gap 466-C`](../intel/open-gaps.md) holds and **no code path in this pass's reader touches
+`bytes`.**
+
+### 🟢 Public-education delivery assets added — Spanish-speaking LATAM, which `Gap 473-G` had written off
+
+| Repo | Grant (path read · bytes · digest) | ★ | Region | Role |
+|---|---|---|---|---|
+| [datauy/ElijoEstudiar](https://github.com/datauy/ElijoEstudiar) | **GPL-3.0-or-later** — `master/LICENSE` · 35,149 B · `3972dc9744f6` | 5 | LATAM | 🟢 **Uruguay**: search and visualisation across public initial, primary and secondary education centres and courses. A real public-education product, not course material |
+| [prefeiturasp/SME-PratoAberto-Edu](https://github.com/prefeiturasp/SME-PratoAberto-Edu) | **GPL-3.0-or-later** — `master/LICENSE` · 35,141 B · `589ed823e9a8` | 9 | LATAM | 🟢 **São Paulo's municipal education chatbot** — a deployed conversational public-service channel in a school system, predating the LLM wave. The integration surface an AI layer would replace |
+| [gpassero/uol-redacoes-xml](https://github.com/gpassero/uol-redacoes-xml) | 🟢 **Apache-2.0** — `master/LICENSE` · 11,357 B · `b40930bbcf80` | 39 | LATAM | Brazilian essay corpus in XML as a test and validation set for automated writing assessment |
+| [huseyingulsin/Acik-Kaynak-Bilgisayar-Bilimleri](https://github.com/huseyingulsin/Acik-Kaynak-Bilgisayar-Bilimleri) | 🟢 **MIT** — `main/LICENSE.md` · 1,074 B · `050d076b61bd` | 254 | EMEA | Turkish-language open computer-science curriculum — the highest-starred Turkish education asset found. 🔵 Curriculum, **not** infrastructure; it is on this shelf as content, and the distinction is the point |
+| [Turkish-AI-Community/hsd-agu-egitim](https://github.com/Turkish-AI-Community/hsd-agu-egitim) | 🟢 **MIT** — `main/LICENSE` · 1,073 B · `2f311e0a9f67` | 33 | EMEA | Agentic-RAG bootcamp materials from the Turkish AI Community — the EMEA in-language teaching-material tier |
+
+🔵 **`LICENSE.md` matters.** The Turkish curriculum grants at `LICENSE.md`, not `LICENSE` — so
+`Gap 472-B`'s widened 14-path probe set earns its keep again this pass, on a path **case** rather
+than on lowercase.
+
+### 🟡 One provenance note, because `p467` proved size screens nothing
+
+🔵 `gpassero/uol-redacoes-xml` serves an Apache-2.0 payload of **11,357 B** — the **same byte count**
+as `yetanalytics/lrsql`'s Apache-2.0 on [`p473`'s shelf](../repos/foundations.md), with a
+**different digest** (`b40930bbcf80` vs `c71d239df917`). 🟢 Third demonstration on this base that
+identical size is not identity and that the digest is the only provenance claim worth printing.
+
 ## 🆕 `p473` — `2026-10-27` — **🟢 `Gap 467-I` IS CLOSED AND ITS PREMISE IS REFUTED: the learning-record / analytics tier is not copyleft-only, it is the MOST PERMISSIVE TIER THIS BASE HAS MEASURED — 5 of 9 rows permissive (55.6 %) against the agent tier's 42.9 %, including an MIT Learning Record Store. 🔴 And a permissive licence on these shelves has been carrying a clause nobody here has graded: ECL-2.0's patent grant is NARROWER than the Apache-2.0 it is derived from, by design and in writing.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness

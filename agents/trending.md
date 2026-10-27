@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **the window's movement is a licence SHAPE, not a repository: three education-AI assets published this year license different subtrees differently from a single file, and the newest of them RETRACTS ITS OWN EARLIER GRANT in the payload — an open-source project publicly correcting a licence claim it had no right to make**
+
+🔵 Append-only honoured: this section is prepended, the full history below is untouched.
+🔵 Addresses resolved first-hand (`git ls-remote --symref`), grants read first-hand from
+`raw.githubusercontent.com` and measured. Stars index-relayed (MCP, 2026-10-27, `Gap 467-D`).
+
+### 🔴 The trend: split-scope licensing arrives with the benchmark wave
+
+🔵 Education-AI assets shipping this year are increasingly **corpus + harness in one repository**,
+and a corpus is not a program. Three independent projects reached the same answer within months —
+**one LICENSE file, several grants, scoped by directory**:
+
+| asset | published | the split | 🔴 what an index reports |
+|---|---|---|---|
+| [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 2026-07 | MIT `harness/` + `test/` · **CC BY 4.0** items, results, methodology | title block is `# Licenças` → **UNSTATED / no SPDX** |
+| [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | 2026 | MIT code · CC BY 4.0 embedded data · 🔴 **trademark expressly unlicensed** | same |
+| [richer-richard/arquimedes](https://github.com/richer-richard/arquimedes) | 2026-10 | MIT code · CC BY 4.0 **own annotations only** · 🔴 problems third-party, **CEMC `CC BY-NC`** | first line is a bare copyright → **UNSTATED** |
+
+🔴 **The retraction is the newest and most telling signal.** `arquimedes`' payload says, in
+writing: *"An earlier version of this file placed `problems/`, `images/`, and `data/` under CC BY
+4.0. That sentence was this project's claim. It was not a grant from the contest organizers or the
+dataset authors."* 🟢 A maintainer discovering that relicensing third-party exam material is not
+theirs to do, and saying so in the licence rather than quietly editing it. 🔵 **Expect more of this
+as curriculum and exam corpora get packaged for LLM evaluation** — the item banks have owners, and
+the owners did not publish them.
+
+🟢 **Reader shipped this pass**
+([`family_lang.py`](../compose/code/p474-scope-and-language/family_lang.py), 27/27 controls): scope
+is now graded beside family and version, and a single SPDX-style cell is refused when scope is
+`SPLIT_SCOPE`.
+
+### 🟢 Evaluation tier, this window — the no-star-floor re-run
+
+🔵 `Gap 473-A` required three numbers per leg, not one:
+
+| leg | hits | graded | 🟢 usable | 🔴 top-ranked hit is a false positive |
+|---|---|---|---|---|
+| `education llm-evaluation` | 48 | 12 | 8 | [langfuse/langfuse-workshop](https://github.com/langfuse/langfuse-workshop) (57★) — **a workshop teaching evaluation**, not an education-AI evaluation |
+| `topic:benchmark topic:education` | 19 | 12 | 5 | `golang-benchmarks` (145★) — `education` as a tag on a Go performance demo |
+
+🔵 **Both legs' highest-starred rows are vocabulary collisions**, so a star-ordered read of either
+leg returns noise first. The usable supply sits at **0–11★** throughout — `p473`'s finding that this
+entire tier lives under 60★ holds on two fresh vocabularies.
+
+🟢 **Genuinely new instruments this window:**
+[studentbench](https://github.com/Handshake-AI-Research/studentbench) (MIT, 11★, tutoring),
+[scireason-forge](https://github.com/chenhz01/scireason-forge) (Apache-2.0, 1★ — 🟢 **generated**,
+solver-graded, contamination-proof by construction, so it carries **no third-party corpus to
+license**: the structural answer to the split-scope trap above),
+[EduSafeBench](https://github.com/kaushikatla-cell/EduSafeBench) (MIT, AP CSA/CSP reliability), and
+[slm-writing-feedback-tutor-ptbr](https://github.com/RandMelville/slm-writing-feedback-tutor-ptbr)
+(MIT, 8 open SLMs ≤3.8B, **offline** Socratic writing tuition in Brazilian Portuguese).
+
+🔴 **Still ungranted in this tier:**
+[LLM_Factuality_Evaluation](https://github.com/AksharaRgsu2024/LLM_Factuality_Evaluation) — 14 paths
+probed, none grants.
+
 ## 🆕 `p473` — `2026-10-27` — **the window's real movement is not a repository, it is a vocabulary: an entire tier this base had declared absent for dozens of passes — education-AI evaluation — appears in full the moment the search runs on research tokens instead of product tokens, and 4 of its 9 instruments grant nothing**
 
 🔵 **Append-only.** The `p472` body and all prior passes stand unchanged below this section. Star

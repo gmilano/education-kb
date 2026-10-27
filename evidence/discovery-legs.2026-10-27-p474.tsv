@@ -1,0 +1,15 @@
+leg	token	star_floor	total_count	incomplete_results	returned_graded	usable_education_infra	note
+gap473G-pt	educacao	>=5	87	false	40	7	i-educar, i-diario, pre-matricula-digital, br.tag, dados-educacao, SME-PratoAberto-Edu, bncc-dados
+gap473G-pt	educacao	none	9220	false	1	-	total only
+gap473G-es	educacion	>=5	42	false	40	5	moodle-sence, mec-opendata, ElijoEstudiar, ResultadosUNAM, chile-hub
+gap473G-es	educacion	none	11071	false	1	-	total only; INVERTS the >=5 ordering
+gap473E-tr	egitim	>=5	162	false	30	1	Atolye.Platform only; token collides with "training course"
+gap473E-tr	egitim	none	4576	false	1	-	total only
+gap473E-tr	okul	>=5	35	false	12	1	Atolye.Platform; token collides with KDE "okular"
+gap473E-tr	mufredat	none	38	false	1	0	curriculum token; CS curriculum only, no infrastructure
+gap473E-ar	tealim_arabic	>=5	4	TRUE	4	0	measured NIL of usable supply; search timed out
+gap473E-ar	tealim_arabic	none	480	false	1	-	total only
+control-ar	barmaja_arabic	none	618	false	1	-	NORMALISER: Arabic "programming"
+control-tr	yazilim	none	5240	false	1	-	NORMALISER: Turkish "software"
+gap473A-eval	education llm-evaluation	none	48	false	12	8	studentbench, bncc-benchmark, wassce, overlooked, EduSafeBench, eyedot, arquimedes, LLM_Factuality
+gap473A-eval	topic:benchmark topic:education	none	19	false	12	5	bncc-benchmark, wassce, arquimedes, scireason-forge, slm-writing-feedback-ptbr

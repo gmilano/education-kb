@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p474` — `2026-10-27` — **🟢 `p473` predicted the market would demand demonstrable evidence; this pass found the INSTITUTION BUILDING THE DEMAND — the Council of Europe is working on a European evaluation framework for educational technology. 🔴 And the matching trend on the supply side is the one that will bite: the education-AI corpora now being packaged for evaluation are NOT THE PACKAGERS' TO LICENSE, and the best of them says so in its own LICENSE file.**
+
+🔵 Every trend below is attributed to the body that stated it, with source class named. 🔴 Vendor
+roundups are marked and are not primary research. 🟢 Where this pass measured something first-hand
+instead of relaying it, the measurement is given with its payload digest.
+
+### 🟢 Trend 1 — `p473`'s evidence convergence now has an institution and a deliverable
+
+🔵 `p473` recorded five independent bodies converging on *demonstrable evidence* as the 2026
+requirement. 🟢 **This pass found the sixth, and it is the one that turns a trend into a
+procurement document**: the **Council of Europe** has an AI-and-Education expert group and a second
+working conference, whose agenda includes *"the idea of a European evaluation framework to assess
+educational technologies"* (institutional source).
+
+🔴 **The mismatch is now precisely stateable.** A pan-European framework for assessing edtech is
+being drafted, and the open instruments that would let a vendor self-assess against it are:
+**0–11★**, research-published rather than product-published, and — measured this pass — **three of
+the strongest carry `SPLIT_SCOPE` grants whose corpora the publisher does not own.** 🟢 Whoever
+can produce licensable evaluation evidence in Europe over the next two years is selling into a
+requirement with no incumbent.
+
+### 🔴 Trend 2 — the corpus-ownership reckoning: exam material has owners, and they did not publish it
+
+🟢 **The clearest single document this pass read is a retraction inside a licence.**
+[`richer-richard/arquimedes`](https://github.com/richer-richard/arquimedes) (`main/LICENSE`, 3,103 B
+`b8e2e1c65fdc`) states:
+
+> *"An earlier version of this file placed `problems/`, `images/`, and `data/` under CC BY 4.0. That
+> sentence was this project's claim. It was not a grant from the contest organizers or the dataset
+> authors... Several of them are narrower than CC BY 4.0. CEMC material is CC BY-NC 4.0."*
+
+🔵 **This is what the benchmark wave looks like when it meets copyright.** Competition problems,
+national exam items and textbook questions are the natural substrate for education-AI evaluation,
+and almost none of it is the aggregator's to relicense. 🔴 **Prediction, falsifiable:** as
+education-AI benchmarks proliferate through 2027, **licence retractions and NC carve-outs on item
+banks will become common**, and benchmark repositories will increasingly split code from data in
+one file — the `# Licenças` shape found twice at [bncc-dev](https://github.com/bncc-dev) and once
+at `arquimedes`. 🟢 **The structural escape already exists and is worth watching**: generated,
+solver-graded items with no third-party provenance, as in
+[scireason-forge](https://github.com/chenhz01/scireason-forge) (Apache-2.0, *"contamination-proof by
+construction"*).
+
+### 🟢 Trend 3 — regional governance is bifurcating, not converging
+
+| bloc | the instrument | what it asks a vendor for | source class |
+|---|---|---|---|
+| **EU** | AI Act (education = high-risk) + updated ethical guidelines (9 June 2026) + a framework in drafting | 🔴 conformity assessment, human oversight, documentary evidence | regulation + institutional |
+| **US states** | ≈100–134 bills; **Idaho SB 1227 enacted**; Oklahoma, Maryland, Vermont, New York | 🟡 human oversight, privacy certification, no AI in high-stakes decisions — **per state** | legislative trackers |
+| **US federal** | executive orders through early 2026, incl. one directing that burdensome **state** rules be limited | 🔴 an unresolved collision with the above | policy relay |
+| **MEA** | strategies in Saudi Arabia, UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco, South Africa; **no binding AI statute** | 🟢 strategy alignment and procurement credentials | governance guide |
+| **LATAM** | Brazil Bill 2,338/2023 pending; Chile risk-based bill; **Argentina rejecting regulation** | 🟡 three different answers in one region | law-firm relay |
+| **APAC** | 🔴 nothing education-specific found; Singapore's consultations are financial-sector | 🔴 unknown — declared gap | trade press |
+
+🔴 **The practical consequence: "AI in education compliance" is not one capability.** A single
+conformity dossier does not travel from Frankfurt to Riyadh to Boise. 🟢 **What does travel is the
+evidence layer underneath** — a learner-level record of what the AI did, exportable into whichever
+format the jurisdiction demands. That is why pattern `P474-1` builds the telemetry spine first and
+the dossier second.
+
+### 🟢 Trend 4 — the measurement trend: discovery instruments are the binding constraint, not supply
+
+🔵 Three passes running, this base's biggest findings have been **instrument failures rather than
+market facts** — `p473`'s product-vs-research vocabulary, `Gap 467-H`'s `tutor`/`tutorial`
+collision, and this pass's three:
+
+| instrument failure | what it looked like | what it was |
+|---|---|---|
+| 🔴 Arabic education nil (480 hits, 4 at ≥5★) | "MENA does not build education software" | **Arabic GitHub presence is 8.5× thinner than Turkish across all domains**; education's share is 89 % of Turkish's — see `repos/trending.md` |
+| 🔴 `okul` (Turkish for school) returning KDE's document viewer | a thin Turkish tier | Latin-script collision with **`okular`** |
+| 🔴 `educacao` ≫ `educacion` at ≥5★ | "Brazil builds, Spanish LATAM adopts" | **inverts at ≥0★** — Spanish returns 20 % *more*; the difference is star accumulation (2.49×) |
+
+🟢 **The generalisation, now on four observations: every tier this base has declared absent has
+turned out to be present under a different query.** 🔵 So the standing rule tightens — **a nil is
+publishable only with its denominator**, a normaliser in the same instrument, and the word
+`incomplete_results` reproduced when the index returns it. 🔴 `p474` registers this as the
+discipline that found the Arabic result; without the `برمجة`/`yazılım` control this pass would have
+published a false regional claim.
+
+### 🟡 Trend 5 — the teacher-capacity curve is the fastest-moving number anyone reports
+
+🔵 AI professional development for teachers is reported to have risen from **29 % in early 2024 to
+50 % by late 2025** (vendor statistics roundup, relayed). 🟢 If roughly sound, teacher capability —
+not model capability — is the variable moving fastest, which matches the Idaho and Oklahoma
+statutes legislating **educator training** rather than model standards. 🔴 Single relayed source,
+not corroborated: carried as a signal, not a basis.
+
+### 🔴 Declared trend gaps, stated so silence is not read as coverage
+
+- 🔴 **No APAC education-specific regulation or school-level adoption rate found**, on two
+  successive query sets. Second reproduction of `p473`'s nil.
+- 🔴 **No primary (non-vendor) 2026 market size for any region.** Four vendor values for 2026 differ
+  by **2.9×**; all four are printed in [`intel/market.md`](market.md) and none averaged.
+- 🔴 **Chinese NonCommercial content tier still not swept at breadth** (`Gap 467-F`, third pass
+  owing it).
+- 🟡 **The EMEA in-language demand leg was run in English sources about MEA, not in Arabic or
+  Turkish sources.** The supply leg was in-language; the demand leg was not. That asymmetry is this
+  pass's own and is registered.
+
 ## 🆕 `p473` — `2026-10-27` — **🟢 THE TREND EVERY SOURCE THIS PASS AGREES ON IS THE ONE THE OPEN-SOURCE SUPPLY CANNOT SERVE: five independent bodies — 1EdTech, the OECD, HolonIQ, a US state legislature and the EU AI Act — are all converging on DEMONSTRABLE EVIDENCE as the 2026 requirement, and the open evaluation tier that would supply it is 44.4 % UNGRANTED with exactly two usable instruments worldwide.**
 
 🔵 Every trend below is attributed to the body that stated it, with source class named. 🔴 Vendor
