@@ -4,6 +4,179 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — **🔴 A GRANT CAN BE PARTITIONED BY SUBDIRECTORY, AND THE 13-PATH ROOT PROBE THIS BASE SPENT FIVE PASSES REFINING CANNOT SEE IT: `mgarlabx/edukors_graph` serves MIT at `LICENSE.md` and **GPL-3.0-or-later** at `plugin/edukorsplayer/COPYING.txt`, both read first-hand. 🟢 And the governance substrate `p468` said these shelves lacked is found and granted: `panaversity/ksor`, Apache-2.0, 232★, naming education institutions in its own first paragraph.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned
+outside the harness repo this pass. **Nothing below is gate-attested.** The checks were
+re-implemented in this session's own code and are green: frontmatter keys and closed-vocabulary
+`region` on all eight shelves; every new table checked for separator presence and pipe-count
+consistency, with **no header row published as data**; append-only proved on both trending shelves
+by prior-body containment.
+
+🔵 **Channel state, re-probed this pass (`2026-10-27`).** `api.github.com` direct: **403**, for the
+470th pass. `raw.githubusercontent.com`: **200**, every licence payload below. `git ls-remote
+--symref`: working, every default ref and `HEAD` below. Session GitHub tool channel: working, every
+star count below. 🔴 `eur-lex.europa.eu`, `ec.europa.eu`, `europa.eu`, `op.europa.eu` and
+`artificialintelligenceact.eu`: **DNS `ENOTFOUND` on both `curl` and the page-fetch channel** — see
+`intel/market.md` for what that did and did not prevent.
+
+🟢 **`Gap 468-A` honoured.** No payload below was measured through a shell variable: every licence
+body was written to a file and the file measured, so trailing bytes survive.
+
+### 🔴 The headline: a grant split across directories
+
+🔵 [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) presents as a clean MIT
+row. Its root `LICENSE.md` is stock MIT — **1 087 B · `625342dc4d3d`** — and the GitHub licence
+field says `MIT`. Both are true and both are incomplete.
+
+| path read at `main` `6bc743c6a5fe` | payload | class, read first-hand |
+|---|---|---|
+| `LICENSE.md` | **1 087 B** · `625342dc4d3d` | **MIT** — the schema, the standalone player, original Edukors resources |
+| `plugin/edukorsplayer/COPYING.txt` | **35 151 B** · `e79e9c8a0c85` | 🔴 **GPL-3.0-or-later** — the Moodle integration |
+| `plugin/edukorsplayer/THIRD_PARTY.md` | **785 B** · `42e7a91016b6` | reused MIT code retains its own notices |
+
+🔴 **Why the root probe misses it.** This base's licence instrument probes up to thirteen paths —
+all of them at the repository root. Every one of them returns the MIT payload, correctly, and the
+probe stops. The GPL grant is two directories down, and **nothing at the root hints that a second
+grant exists**. The only thing that reveals it is the README's own `# License` heading, which this
+pass read:
+
+> *The schema, standalone player and original Edukors resources are licensed under the MIT License
+> — see LICENSE.md. The Moodle integration in `plugin/edukorsplayer/` is GPL-3.0-or-later — see
+> `plugin/edukorsplayer/COPYING.txt`.*
+
+🔵 The split is not evasive, it is **forced**: Moodle is GPL, so any Moodle plugin must be GPL. That
+is the general case, and it is why this will recur — every permissive education project that ships
+an LMS integration has this shape waiting inside it. 🟢 Registered as **`Gap 470-A`**: a root-path
+licence sweep establishes the grant on the *root tree only*. Where a repository ships a plugin,
+integration or vendored subtree, the grant must be re-read at that subtree, and the README's own
+licence heading is the cheapest index to which subtrees to check.
+
+🟢 **For a studio this is usable, and the boundary is where it falls:** vendor the JSON schema and
+the standalone player under MIT; the moment the Moodle plugin ships, that artefact is
+GPL-3.0-or-later.
+
+### 🟢 Granted novel education agents — every grant read first-hand at `HEAD`, `2026-10-27`
+
+| agent | repo | grant (read first-hand) | ★ | region | what it does |
+|---|---|---|---|---|---|
+| KSoR | [`panaversity/ksor`](https://github.com/panaversity/ksor) | **Apache-2.0** · 11 342 B · `2f538e0b9e84` | **232** (51f) | APAC (Panaversity) | **Knowledge System of Record**: one governed, authoritative knowledge record that humans and agents operate from. Its own second paragraph is about education — "tutors, teaching assistants, and assessment agents operate from different curricula, sources, or rules". Topics include `ai-governance`. TypeScript, `main` `b50f28926fae` |
+| Edukors Graph | [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🟡 **MIT root + GPL-3.0-or-later plugin** — see the split above | 17 (2f) | **LATAM** (BR) | Open standard for **learning graphs**: a course as nodes (what the student sees) and edges (where they go next), one JSON file, diagnose-and-branch. PHP + JSON Schema, self-described **Experimental**. Pushed 2026-10-25 |
+| Education Advisor (教育参谋) | [`232252/education-advisor`](https://github.com/232252/education-advisor) | **MIT** · 1 090 B · `703786ab8abd` | 4 (2f) | APAC (CN) | Local desktop assistant **for the class head-teacher**, not the student: conduct scores, counselling plans, weekly reports, parent-school scripts, academic analysis, AI homework marking. 18 roles, Electron + React + Rust, bring-your-own model, data stays local. Pushed 2026-10-25 |
+| aula | [`NouhKhouyi/aula`](https://github.com/NouhKhouyi/aula) | **MIT** · 1 068 B · `b208dbc2fdee` | 2 | Global | Local-first agent harness that **probes what the learner knows**, plans the shortest route to the goal, and checks each step lands before moving. Topics `ai-tutor`, `agentsmd`. Pushed 2026-10-26 |
+| ZYREN AI Tutor | [`MONaser04/Zyren-AI-Tutor`](https://github.com/MONaser04/Zyren-AI-Tutor) | **MIT** · 1 085 B · `aa716156b15d` | 2 | **EMEA** (Egypt) | Real-time multimodal Socratic tutoring: LiveKit WebRTC voice, screen perception, digital blackboard, 3D WebGL geometry, KaTeX. v2.0.0, 55 tests. Arabic-language support named throughout its README |
+| 活书 huoshu | [`MXC-CKK/huoshu`](https://github.com/MXC-CKK/huoshu) | **MIT** · 1 059 B · `a005f12beb1c` | 3 | APAC (CN) | Turns a textbook into a navigable **knowledge graph**: AI graph build, Socratic questioning, RAG retrieval, spaced repetition. Python, 401 tests passing, published to PyPI as `learning-agent` |
+| SyllabusGraph | [`OscarBarreraGithub/syllabusgraph`](https://github.com/OscarBarreraGithub/syllabusgraph) | **MIT** · 1 083 B · `3cc3fae03d97` | 1 | Global | **Evidence-backed** concept graph and course planner: builds concepts and relationships *with source evidence*, independent review step, then shapes a course. Driven from Codex/Claude Code; keeps source books private |
+| Curriculum Knowledge Graph | [`mizcausevic-dev/curriculum-knowledge-graph`](https://github.com/mizcausevic-dev/curriculum-knowledge-graph) | **MIT** · 1 069 B · `a5ed17e0b90a` | 1 | Global | FastAPI service over courses, prerequisites, skills and outcomes with **prerequisite bottleneck analysis** for higher ed. 🟡 Portfolio-tier: its README's own section is "Why This Repo Is Good" and it pairs with a sibling showcase repo |
+| Bodhi Map | [`AI-First-Community/Bodhi`](https://github.com/AI-First-Community/Bodhi) | **MIT** · 1 095 B · `967480f4f094` | 5 (1f) | Global | Interactive knowledge graph of modern AI — 123 concepts, tokens and attention through LoRA, DPO, reasoning models and agents, typed connections. Installable PWA |
+| DMAS | [`gmtigrisva123/DMAS`](https://github.com/gmtigrisva123/DMAS) | **MIT** · 1 087 B · `3a7f63107f13` | 1 | Global | Deductive multi-agent system aimed at moving AIEd from answer-generation to **cognitive diagnostics** and behavioural inference |
+| GitLearnOS | [`Guojiz/gitlearnos`](https://github.com/Guojiz/gitlearnos) | **MIT** · 1 063 B · `8b1ba1377eaa` | 7 | Global | Git-native learning environment: targeted practice, local RAG, **learner-owned memory** held in the learner's own repository |
+| extend-slides | [`L01nki1/extend-slides`](https://github.com/L01nki1/extend-slides) | **MIT** · 1 064 B · `17dcc81817e1` | 16 | APAC (CN) | Expands courseware, handouts and lecture recordings into standalone revision documents |
+| KuroTutor | [`ZYT64/KuroTutor`](https://github.com/ZYT64/KuroTutor) | **MIT** · 1 079 B · `d797049c4e6a` | 4 | APAC (CN) | Tutor delivered **inside a chat client**: photo problem-solving, homework marking, wrong-answer review, scheduled lessons |
+| exam-kit | [`Tissue-for-charlie/exam-kit`](https://github.com/Tissue-for-charlie/exam-kit) | **MIT** · 1 075 B · `3cd67a7398b6` | 3 | APAC (CN) | Agent skill (`SKILL.md`): slides, Word, PDF or a blackboard photo into a printable revision outline, self-test bank and knowledge graph — **offline, three printable HTML files** |
+| open-book-exam-pack | [`X1a0heZzzz/open-book-exam-pack`](https://github.com/X1a0heZzzz/open-book-exam-pack) | **MIT** · 1 056 B · `1126322e2cc8` | 4 | APAC (CN) | Agent skill building open-book exam revision PDFs from courseware, past papers and **verified textbook page indexes** |
+| benkyo | [`youseiushida/benkyo`](https://github.com/youseiushida/benkyo) | **MIT** · 1 068 B · `7fe4879acb36` | 2 | Global | Textbook into adaptive tutoring: knowledge graphs, problem-first sequencing, memory across sessions |
+| recall | [`Garuda8887/recall`](https://github.com/Garuda8887/recall) | **MIT** · 1 099 B · `0bfc98ccf58b` | 5 | Global | Self-hosted spaced-repetition calendar: SM-2 scheduling, forgetting curves, knowledge graph. Privacy-first, self-hosted |
+| manim-coding-skill | [`shihabshahrier/manim-coding-skill`](https://github.com/shihabshahrier/manim-coding-skill) | **MIT** · 1 065 B · `5ce7ed6c2a3e` | 5 | Global | Agent skill producing **ManimGL STEM animations** — the explainer-video half of a tutoring stack. Default ref `master` |
+| song-hao-math | [`tong666-bit/song-hao-math`](https://github.com/tong666-bit/song-hao-math) | **MIT** · 1 083 B · `f01123fc5f24` | 4 | APAC (CN) | University and postgraduate-entrance mathematics drill agent: calculus, linear algebra, probability, complex analysis; step-by-step board work, counterexamples, theorem conditions |
+| tandemcode-harness | [`Djbrl/tandemcode-harness`](https://github.com/Djbrl/tandemcode-harness) | **MIT** · 1 062 B · `d62944c6f3f9` | 1 | Global | Interactive learning harness: notes, drawing on screenshots, pluggable open-weight models |
+
+🔵 **Twenty rows, twenty grants, twenty first-hand reads.** Every one is novel to these shelves —
+graded by **anchored** address per `Gap 469-B`, so no row here is a substring artefact.
+
+🔴 **The other half of that number, stated here and not buried.** One row is above 20★
+(`panaversity/ksor`, 232). Of the remaining nineteen, **sixteen are at 5★ or below** and twelve are
+single-maintainer. These are **fork-and-own starting points**, not dependencies to take and track
+downstream. The pattern `Gap 464-A`'s closure established holds for a third consecutive pass:
+*permissive education supply exists in quantity and almost none of it exists at scale.*
+
+### 🟢 `p467`'s unsolvable substitution is solvable — and the catch is the star axis
+
+🔵 `p467` recorded that the obvious build for a curriculum-aligned tutor reaches for a **4 000★
+knowledge graph under `CC-BY-NC-4.0`**, unusable in any paid engagement, and specified a substitute
+it could not source. This pass sourced it, on a licence-filtered leg: **ten MIT curriculum- or
+concept-graph projects**, all read first-hand above — `edukors_graph` (17★, the one with a standard
+and a schema behind it), `chat-edu/v3` (16★), `Bodhi` (5★), `recall` (5★), `huoshu` (3★),
+`exam-kit` (3★), `benkyo` (2★), `aula` (2★), `syllabusgraph` (1★), `curriculum-knowledge-graph` (1★).
+
+🔴 **So the substitution is real and the trade is explicit.** The NonCommercial graph has no
+permissive peer anywhere near its scale; it has **ten permissive peers between 1★ and 17★**. A
+client engagement swaps 4 000★ of curation it may not sell for 17★ of a schema it may. 🟢 For the
+recipe that wires the permissive side together, see `compose/patterns.md` this pass.
+
+### 🟡 `Gap 469-A` reproduces on a second repository, as a CONJUNCTIVE grant
+
+🔵 [`mathruffian-dot/taigi-teaching-agent`](https://github.com/mathruffian-dot/taigi-teaching-agent)
+— `main` `6953bf35d521`, **13★** — serves a payload my size screen flagged at **1 453 B ·
+`c3fa97fa9128`**, against stock MIT's ~1 070. Read to the end, as `Gap 469-A` requires: stock MIT,
+then a `---` rule, then a Chinese appendix that **confines the grant to this repository's own code
+and documents**. Named as staying under their own original terms: the **Ithuan Suisiann (意傳媠聲)
+TTS service**, the Ministry of Education's **《臺灣台語常用詞辭典》 dictionary content and audio
+files**, the `facebook/mms-tts-nan` model, and **official MOE teaching materials**.
+
+🔴 **The code is granted; the curriculum corpus is not** — and in a 108-curriculum-aligned Taiwanese
+Hokkien teaching agent, the ministry corpus and the official audio *are* the product. This is
+`p464`'s conjunctive-grant class recurring, and it is now the pattern rather than the exception:
+across this pass and `p464`, every curriculum-*aligned* agent whose grant was read to the end turned
+out to grant its code and withhold its curriculum data. 🟢 Registered as **`Gap 470-B`**: for any
+agent that claims alignment to a national curriculum, the shelf must state the grant on the
+**corpus** separately from the grant on the code, because a studio can ship the second and not the
+first.
+
+### 🔴 Refused this pass — stated, because a silent refusal reads like a miss
+
+| candidate | probe at `HEAD` | why refused |
+|---|---|---|
+| [`shenquan520/reading-analysis`](https://github.com/shenquan520/reading-analysis) | `main` `a63f496bc1ec` · **CC BY-NC-SA 4.0** · 17 124 B · `f5042f838c57` | 🔴 **NonCommercial.** Gaokao/CET/Kaoyan reading-comprehension skill with a 10-class distractor taxonomy and a 127-card methodology library — the best-made assessment artefact of the pass, and unusable in any paid engagement. GitHub's licence field: `NOASSERTION` |
+| [`caijimiao345/study-abroad-planner`](https://github.com/caijimiao345/study-abroad-planner) | `main` `86a123f19181` · **CC BY-NC-SA 4.0** · 20 850 B · `e66c269d4819` | 🔴 **NonCommercial.** Verifies every figure against official university pages — exactly the citation-audit behaviour `intel/market.md` calls for. GitHub's licence field: `NOASSERTION` |
+| [`FIY-pc/vibe-logisim`](https://github.com/FIY-pc/vibe-logisim) | `main` `a69438637ccc` · **GPL-3.0** · 35 149 B · `3972dc9744f6` | copyleft — a deployment-or-fork decision, not a build-on component. AI-assisted Logisim workbench for computer-organisation courses. Placed on `verticals/solutions.md` |
+| [`lhd23333/QuizForge`](https://github.com/lhd23333/QuizForge) | `master` `10138fbfb368` · **GPL-3.0** · 35 149 B · `3972dc9744f6` | copyleft, same reason. Local-first maths/physics question-bank workbench: OCR import, Markdown management, paper assembly, safe TeX templates. Byte- and digest-identical grant to the row above |
+| [`ChengshuaiZhao0/Awesome-Trustworthy-AI4Edu`](https://github.com/ChengshuaiZhao0/Awesome-Trustworthy-AI4Edu) | `main` `b0ff5eb7dc09` · **no licence at 13 paths** | ungranted — and it is the only trustworthy-AI-for-education research index the pass found, which is the loss |
+| [`Pedrosasouza/AcademicFlow-Agent`](https://github.com/Pedrosasouza/AcademicFlow-Agent) | `main` `8e341c21f789` · **no licence at 13 paths** | ungranted — LangGraph/ReAct academic-management agent on Ollama, **LATAM (BR)**, and unusable. The regional loss of the pass |
+| [`goncalvespedroo/sokra-tutor`](https://github.com/goncalvespedroo/sokra-tutor) | `main` `eebbc28b7569` · **no licence at 13 paths** | ungranted — Socratic tutor with persistent student memory |
+| [`sayeeg-11/SahiiiDSA`](https://github.com/sayeeg-11/SahiiiDSA) | `main` `c732abed3a47` · **no licence at 13 paths** | ungranted — DSA tutoring by guided questioning rather than answers |
+| [`simpleqt/radai`](https://github.com/simpleqt/radai) | `main` `0b1e8a4bbf9d` · **no licence at 13 paths** | ungranted — LangGraph platform for university course TA, question banks, learning analytics |
+| [`chuantiet5-stack/zhiqi-ai-education-assistant`](https://github.com/chuantiet5-stack/zhiqi-ai-education-assistant) | `main` `369a11f9a533` · **no licence at 13 paths** | ungranted — education agent, textbook RAG, homework marking, focus monitoring |
+| [`chat-edu/v3`](https://github.com/chat-edu/v3) | `main` `f44f5eeeb68b` · **MIT** · 1 064 B · `3dc45db43baf` | 🟡 granted and **abandoned**: 16★, but last pushed **2026-05-22** and its README is the unmodified `create-next-app` boilerplate. Read as a reference, never a dependency |
+| [`Mereithhh/guandan-lab`](https://github.com/Mereithhh/guandan-lab) | `main` live · Apache-2.0 · 13★ | 🔴 **off-class.** A coach for Guan Dan, a card game. Returned under an education leg because it "teaches"; `p453`'s homonym finding, recurring |
+
+### 🔴 This pass's own instrument published nine wrong assertions before publication, and the base was right
+
+🔵 My first licence classifier labelled **two** GPL-3.0 payloads — `FIY-pc/vibe-logisim` and
+`lhd23333/QuizForge` — as **`AGPL-3.0`**, and attached **seven** false restriction flags across
+three rows. 🔴 **The class error is wrong in the direction that matters most**: AGPL and GPL differ
+precisely on whether network use triggers a disclosure duty, which is the only licence question a
+hosted engagement actually asks.
+
+🔵 **The mechanism.** The classifier tested whether the payload *contains* the string
+`GNU AFFERO GENERAL PUBLIC LICENSE`. Stock **GPL-3.0 names the AGPL three times** — at lines 552,
+556 and 559 of its own text, in `13. Use with the GNU Affero General Public License`. So a
+containment test on the AGPL's name labels **every GPL-3.0 repository in existence** as AGPL.
+
+🟢 **The fix, and it is the same shape as `Gap 467-C`'s:** classify from the payload's **title**,
+anchored to the first lines, never from containment anywhere in the body. Re-run title-anchored, all
+28 payloads classify correctly.
+
+🟢 **And the cross-pass control PASSES, on the largest denominator this base has used for a licence
+control.** These shelves already carry `35 149 B · 3972dc9744f6` as **GPL-3.0** across **31 distinct
+repositories** — `lamb-project/lamba`, `ahmedEid1/lumen`, `papillonapp/papillon-ed-core`,
+`lanis-mobile/lanis-rs`, `elderguardian/maria`, `Arudchayan/adam-mcp`, `plastic-labs/tutor-gpt`,
+`Koha-Community/Koha` at the 35 151 variant, and 24 more — and this pass reproduces **both
+byte-values and both digests exactly**, from three repositories none of those shelves named. The
+base's prior label was right; my instrument was wrong. 🟢 Registered as
+**`Gap 470-C`**: a licence-family test must be anchored to the payload's title, because three
+licence families name each other inside their own bodies.
+
+🔵 **The seven wrong flags, itemised.** `NONCOMMERCIAL` and `CC-NC` fired on
+`FIY-pc/vibe-logisim` and `lhd23333/QuizForge` — both on GPL's *permissive* phrase
+*"noncommercially"*, which appears once in every GPL-3.0 payload. `TRADEMARK` fired on those two
+and on `panaversity/ksor`, the last from Apache-2.0 §6, a clause every Apache-2.0 payload carries.
+🔴 A flag that fires on every member of a licence family carries zero information, and a
+NonCommercial flag that fires on a *permission* is worse than none. The corrected test matches the
+restrictive form only — the licence-name token or an explicit prohibition — and on re-run it fires
+on exactly the two CC BY-NC-SA rows and nothing else. Of five flag classes, **one earned its
+place**: the overlong-payload flag, which is what caught `taigi-teaching-agent` above.
+
 ## 🆕 `p469` — **🔴 A WIDELY-CITED "BEST OPEN-SOURCE LMS 2026" ROUNDUP PUTS AN MIT LABEL ON AN AGPL-3.0 PLATFORM: `frappe/lms` (3 350★) serves GNU AGPLv3 at `license.txt`, read first-hand — the one licence class that would force source disclosure to every network user of a Globant-hosted build. 🟢 And the rubric-feedback gap `p464` named as unclosable IS CLOSED WITH FOUR MIT GRANTS — every one of them at 0–4★ with a single maintainer, which is the other half of the finding and is stated here, not buried.**
 
 🔵 **Gate posture, stated first per `Gap 446-A`:** `make hooks` not attempted — the industry KB is

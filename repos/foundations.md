@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — **🟢 THE GOVERNANCE SUBSTRATE THESE SHELVES HAVE BEEN SHORT OF IS FOUND, GRANTED AND APACHE-2.0: `panaversity/ksor` (232★) builds one authoritative knowledge record for humans and agents, and names education institutions in its own opening. 🔴 And the foundation question this shelf answers best is a warning: a permissive root grant does not make a repository permissive — `edukors_graph` is MIT at the root and GPL-3.0-or-later two directories down.**
+
+🔵 **Gate posture:** `make hooks` not attempted (KB cloned outside the harness repo). Nothing here
+is gate-attested. Every grant below was read first-hand at `HEAD` on **2026-10-27** from
+`raw.githubusercontent.com`, written to a file and the file measured per `Gap 468-A`; every default
+ref resolved by `git ls-remote --symref`.
+
+### 🟢 Foundation rows added this pass
+
+| component | repo | grant (first-hand) | ★ | region | why it is substrate, not an application |
+|---|---|---|---|---|---|
+| **KSoR** | [`panaversity/ksor`](https://github.com/panaversity/ksor) | **Apache-2.0** · 11 342 B · `2f538e0b9e84` | **232** (51f) | APAC | A **Knowledge System of Record**: the governed, authoritative source of truth that tutor, teaching-assistant and assessment agents read from, so they cannot contradict each other or the catalogue. Vendor-neutral SDK, TypeScript, `main` `b50f28926fae`, pushed 2026-10-01, 35.8 MB tree, topics include `ai-governance`. This is a *layer*, not a product |
+| **Edukors Graph schema** | [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🟡 **MIT** · 1 087 B · `625342dc4d3d` at the root — **GPL-3.0-or-later** at `plugin/edukorsplayer/` | 17 (2f) | **LATAM** (BR) | An **open standard** for learning graphs — a course as nodes and edges in one JSON Schema file — plus a standalone player. The schema is the substrate; see the boundary below before vendoring |
+| **Bodhi Map** | [`AI-First-Community/Bodhi`](https://github.com/AI-First-Community/Bodhi) | **MIT** · 1 095 B · `967480f4f094` | 5 (1f) | Global | A **permissively granted** concept graph of modern AI: 123 concepts with typed connections, tokens and attention through LoRA, DPO, reasoning models, agents. Installable PWA, 59.6 MB tree |
+| **SyllabusGraph** | [`OscarBarreraGithub/syllabusgraph`](https://github.com/OscarBarreraGithub/syllabusgraph) | **MIT** · 1 083 B · `3cc3fae03d97` | 1 | Global | Builds a concept graph **with source evidence attached to each relationship** and an independent review step. The citation-audit component that every "show what the answer rested on" clause needs |
+| **Curriculum Knowledge Graph** | [`mizcausevic-dev/curriculum-knowledge-graph`](https://github.com/mizcausevic-dev/curriculum-knowledge-graph) | **MIT** · 1 069 B · `a5ed17e0b90a` | 1 | Global | FastAPI graph service over courses, prerequisites, skills and outcomes, with **prerequisite bottleneck analysis** — the registrar-facing half of a pathway product. 🟡 Portfolio-tier, see the caveat below |
+| **recall** | [`Garuda8887/recall`](https://github.com/Garuda8887/recall) | **MIT** · 1 099 B · `0bfc98ccf58b` | 5 | Global | Self-hosted **SM-2 spaced-repetition scheduler** with forgetting curves — the retention substrate a tutor needs and almost never ships. Default ref `master` |
+
+🔵 **Six rows. Five permissive without qualification; one permissive only above its plugin
+directory.**
+
+### 🔴 The boundary on `edukors_graph`, because a foundation row must state it
+
+🔵 Read first-hand at `main` `6bc743c6a5fe`:
+
+| path | payload | class |
+|---|---|---|
+| `LICENSE.md` | 1 087 B · `625342dc4d3d` | **MIT** — schema, standalone player, original resources |
+| `plugin/edukorsplayer/COPYING.txt` | **35 151 B** · `e79e9c8a0c85` | 🔴 **GPL-3.0-or-later** — the Moodle integration |
+
+🔴 **`Gap 469-C` said the grant is read at `HEAD` or the row does not ship. That is necessary and it
+is not sufficient.** The grant was read at `HEAD`, at thirteen root paths, and the answer was MIT —
+correctly, and incompletely. The GPL grant is not at the root and no root path hints at it.
+🟢 Registered as **`Gap 470-A`** (also on `agents/top.md`): a root-path sweep establishes the grant
+on the **root tree only**; where a repository ships a plugin, integration or vendored subtree, the
+grant is re-read at that subtree, and the README's own licence heading is the cheapest index to
+which subtrees to check.
+
+🔵 **For a studio the boundary is clean, not fatal:** the JSON Schema and the standalone player
+vendor under MIT into a client deliverable. The Moodle plugin, if shipped, is GPL-3.0-or-later. 🔵
+And the cause generalises — Moodle is GPL, so **every permissive education project that ships an LMS
+integration has this split waiting inside it**. Expect it; probe for it.
+
+### 🟢 `p467`'s specified-but-unsourceable substitute is sourced
+
+🔵 `p467` recorded that the standard build for a curriculum-aligned tutor reaches for a **4 000★
+`CC-BY-NC-4.0` knowledge graph**, unusable in paid work, and specified a permissive replacement it
+could not find. A licence-filtered leg found **ten MIT concept- or curriculum-graph projects** this
+pass; four are shelved above as substrate and the rest sit on `agents/top.md`.
+
+🔴 **State the trade, not just the closure.** The replacement set's star counts are 17, 16, 5, 5, 3,
+3, 2, 2, 1, 1. The NonCommercial graph's curation is worth something real and **no permissive peer
+exists within two orders of magnitude of it**. What the studio gets instead is a *schema it may
+sell* and the obligation to populate it. 🟡 `curriculum-knowledge-graph` in particular is
+portfolio-tier — its own README section is titled "Why This Repo Is Good" and it cross-sells a
+sibling showcase repo; read it as a working reference implementation of the FastAPI/graph shape, not
+as a maintained dependency.
+
+### 🔴 Refused as substrate this pass
+
+| candidate | probe at `HEAD` | why it is not a foundation row |
+|---|---|---|
+| [`chat-edu/v3`](https://github.com/chat-edu/v3) | `main` `f44f5eeeb68b` · **MIT** · 1 064 B · `3dc45db43baf` · 16★ | 🟡 **abandoned.** Described as an education knowledge-graph builder and a Microsoft AI Classroom hackathon winner, but last pushed **2026-05-22** and its README is the **unmodified `create-next-app` boilerplate**. 16★ on a repository that never documented itself |
+| [`FIY-pc/vibe-logisim`](https://github.com/FIY-pc/vibe-logisim) | `main` `a69438637ccc` · **GPL-3.0** · 35 149 B · `3972dc9744f6` · 9★ | copyleft — a deployment-or-fork decision. Placed on `verticals/solutions.md` |
+| [`lhd23333/QuizForge`](https://github.com/lhd23333/QuizForge) | `master` `10138fbfb368` · **GPL-3.0** · 35 149 B · `3972dc9744f6` · 7★ | copyleft, same reason; byte- and digest-identical grant |
+| [`ChengshuaiZhao0/Awesome-Trustworthy-AI4Edu`](https://github.com/ChengshuaiZhao0/Awesome-Trustworthy-AI4Edu) | `main` `b0ff5eb7dc09` · **no licence at 13 paths** | ungranted — and it is the only trustworthy-AI-for-education index found. A research entry point this base cannot carry as an asset |
+| [`shenquan520/reading-analysis`](https://github.com/shenquan520/reading-analysis) | `main` `a63f496bc1ec` · **CC BY-NC-SA 4.0** · 17 124 B · `f5042f838c57` | 🔴 NonCommercial |
+| [`caijimiao345/study-abroad-planner`](https://github.com/caijimiao345/study-abroad-planner) | `main` `86a123f19181` · **CC BY-NC-SA 4.0** · 20 850 B · `e66c269d4819` | 🔴 NonCommercial |
+
+### 🔴 `Gap 466-A`'s size finding reproduces on a family it has never been tested on
+
+🔵 This base has established that **AGPL-3.0 has many live byte-values** and that any size-based
+licence screen therefore misclassifies. Two new data points, both read first-hand this pass:
+
+| observation | bytes | consequence |
+|---|---|---|
+| **GPL-3.0** vs **AGPL-3.0** are **2 bytes apart** at the values seen here — GPL at 35 149 / 35 151, and this base's AGPL rows run 32 920–34 616 | ±2 | 🔴 the two licences whose difference is *the entire network-copyleft question* are not separable by length at the margin, and a 2-byte tolerance separates nothing |
+| **CC BY-NC-SA 4.0** appears at **17 124 B** and **20 850 B** — short-notice form and full legalcode, same licence | 3 726 apart | 🔴 the CC family has the same defect as AGPL: one licence, multiple legitimate payload lengths |
+
+🟢 **And the cross-pass control passes on the largest denominator this base has used for one:** the
+base already records `35 149 B · 3972dc9744f6` as **GPL-3.0** across **31 distinct repositories**,
+and `35 151 B` as GPL-3.0 on `Koha-Community/Koha`. This pass reproduces both byte-values and both
+digests exactly, from three repositories none of those rows named.
+
+🔴 **A second axis the size screen cannot see at all:** GitHub's own licence field returned
+`NOASSERTION` for both CC BY-NC-SA rows above. The field was **silent exactly where the answer was
+disqualifying** — a screen built on stars plus "has a LICENSE" plus the API's licence field would
+have shown those two as *unknown*, not as *forbidden*, and `p467`'s conclusion stands unchanged:
+that screen carries no information about whether software can be delivered.
+
 ## 🆕 `p469` — **🟢 THE PERMISSIVE-FOUNDATION QUESTION IS ANSWERED WITH A LICENCE CENSUS, NOT A PREFERENCE: of the eight education platforms Globant is most often asked to build on, exactly ONE is permissively granted — `OpenOLAT` (Apache-2.0, 448★) — and the most-cited "MIT" alternative is AGPL-3.0.**
 
 🔵 Every licence below was read first-hand at `HEAD` on **2026-10-27**: default branch resolved by

@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — **three recipes, every component's grant read first-hand at `HEAD` this pass, and each one specified so the licence boundary falls where the deliverable splits rather than inside it**
+
+🔵 Every component named below was read first-hand on **2026-10-27**: default ref by
+`git ls-remote --symref`, licence payload from `raw.githubusercontent.com` written to a file and the
+file measured. 🔴 Two recipes exist because of a *licence partition* rather than a technology
+choice, which is new on this file: `Gap 470-A` means a recipe must name **which subtree** of a
+component it ships, not only which component.
+
+---
+
+### 🟢 `Pattern BQ` — Governed multi-agent education estate (the "agents cannot contradict the catalogue" build)
+
+**The problem it solves.** `p468` measured 87 % of 200 institutions across 19 countries using AI
+against 26 % with a formal AI strategy. The failure that gap produces in practice is concrete: the
+tutoring agent, the teaching-assistant agent and the assessment agent each answer from different
+curricula, and the institution cannot say which one is authoritative.
+
+| step | component | grant, read first-hand | role |
+|---|---|---|---|
+| 1 | [`panaversity/ksor`](https://github.com/panaversity/ksor) | **Apache-2.0** · 11 342 B · `2f538e0b9e84` · 232★ | The **system of record**. Load approved curricula, assessment rules, academic policy and standards as the one governed knowledge record. Every agent below reads from it and none holds its own copy |
+| 2 | [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) — **root only** | **MIT** · 1 087 B · `625342dc4d3d` | The **learning-graph schema**: each course as nodes and edges, one JSON file, authored against the KSoR record. 🔴 Ship the schema and the standalone player; **do not ship `plugin/edukorsplayer/`** or the deliverable becomes GPL-3.0-or-later |
+| 3 | [`mizcausevic-dev/curriculum-knowledge-graph`](https://github.com/mizcausevic-dev/curriculum-knowledge-graph) | **MIT** · 1 069 B · `a5ed17e0b90a` | Prerequisite and skill-dependency analysis over the graph; **pathway bottleneck** reporting for the registrar. Treat as a reference implementation to fork, not a dependency |
+| 4 | [`NouhKhouyi/aula`](https://github.com/NouhKhouyi/aula) | **MIT** · 1 068 B · `b208dbc2fdee` | The learner-facing agent: probes what the student knows, plans the shortest route, **checks each step lands** before advancing. Local-first, bring-your-own-model |
+| 5 | [`Garuda8887/recall`](https://github.com/Garuda8887/recall) | **MIT** · 1 099 B · `0bfc98ccf58b` | SM-2 scheduling and forgetting curves, so mastery from step 4 is **retained** rather than re-taught |
+
+**Wiring.** KSoR is the only writeable source of truth; the graph schema is generated *from* it, so a
+curriculum change propagates instead of being re-entered. `aula` reads the graph and writes mastery
+events; `recall` consumes mastery events and schedules review. The registrar's bottleneck report
+reads the graph directly — no agent in the loop, because a registrar's decision should not depend on
+a model.
+
+🟢 **Licence outcome: Apache-2.0 + MIT throughout, no copyleft anywhere**, so the whole stack vendors
+into a client deliverable with no boundary argument. 🔴 **Conditional on step 2's exclusion** — this
+is the first recipe on this file whose permissive status depends on a *subdirectory* being left out.
+
+🔴 **What you are buying and what you are building.** Only `ksor` (232★) is at a scale where
+upstream maintenance can be assumed. Steps 2–5 are 17★, 1★, 2★ and 5★, single-maintainer. **Fork and
+own all four and budget the maintenance**; do not present them to a client as vendor components.
+
+---
+
+### 🟢 `Pattern BR` — Curriculum-aligned tutor without the NonCommercial corpus
+
+**The problem it solves.** `p467` found the obvious build reaches for a **4 000★ `CC-BY-NC-4.0`**
+knowledge graph — unusable in any paid engagement — and specified a replacement it could not source.
+This pass sourced it. 🔴 And `Gap 470-B` adds the second trap: a curriculum-*aligned* agent often
+grants its code and withholds its curriculum corpus, so the corpus must be chosen as deliberately as
+the code.
+
+| step | component | grant, read first-hand | role |
+|---|---|---|---|
+| 1 | [`MXC-CKK/huoshu`](https://github.com/MXC-CKK/huoshu) | **MIT** · 1 059 B · `a005f12beb1c` · 3★ | Textbook → navigable **knowledge graph**, with Socratic questioning, RAG retrieval and spaced review already wired. Python, 401 tests, on PyPI as `learning-agent` |
+| 2 | [`OscarBarreraGithub/syllabusgraph`](https://github.com/OscarBarreraGithub/syllabusgraph) | **MIT** · 1 083 B · `3cc3fae03d97` · 1★ | Builds concepts and relationships **with source evidence attached**, plus an independent review step. This is the component that lets the tutor show what an answer rested on |
+| 3 | **the client's own corpus** | 🔴 whatever the client holds | The deliberate choice. The client's licensed textbooks, its own course materials, or openly-licensed material whose terms you have read — **never** a ministry corpus pulled in behind an MIT code grant |
+| 4 | [`shihabshahrier/manim-coding-skill`](https://github.com/shihabshahrier/manim-coding-skill) | **MIT** · 1 065 B · `5ce7ed6c2a3e` · 5★ | ManimGL STEM animation as an agent skill — the explainer-video surface, generated on demand from a graph node. Default ref `master` |
+| 5 | [`Tissue-for-charlie/exam-kit`](https://github.com/Tissue-for-charlie/exam-kit) | **MIT** · 1 075 B · `3cd67a7398b6` · 3★ | Courseware → **printable, offline** revision outline, self-test bank and knowledge graph. The artefact for estates with poor connectivity or a no-devices-in-exams rule |
+
+**Wiring.** Step 2 builds the concept graph from step 3's corpus with evidence links; step 1 serves it
+as a navigable tutor with retrieval bounded to that corpus; step 4 renders a node on demand; step 5
+exports an offline revision pack from the same graph. Retrieval is bounded to the client's corpus at
+step 1's RAG layer — which is what makes step 3's licence the only content licence in the stack.
+
+🟢 **Licence outcome: MIT throughout the code, and the corpus licence is a single explicit decision
+at step 3** instead of an inherited surprise.
+
+🔴 **The trade, stated.** The replacement set's stars are 3, 1, 5, 3 against the NonCommercial
+graph's 4 000. You are swapping curation you may not sell for a schema you may, and the population
+work is yours. For `taigi-teaching-agent`'s shape — ministry dictionary, official audio, a
+third-party TTS — the code is MIT and **none of the valuable data is granted**; read it as a
+reference architecture for curriculum alignment, not as a corpus source.
+
+---
+
+### 🟢 `Pattern BS` — EMEA assessment build inside the two-date window
+
+**The problem it solves.** `Regulation (EU) 2026/1744` (OJ L, 24 July 2026; in force 27 July 2026)
+moves education's Annex III obligations to **2 December 2027** — sixteen months of runway — while a
+**new prohibition applies from 2 December 2026**, five weeks out. A build scoped on the headline
+alone gets the first right and the second wrong.
+
+| step | component | grant, read first-hand | role |
+|---|---|---|---|
+| 1 | [`panaversity/ksor`](https://github.com/panaversity/ksor) | **Apache-2.0** · 11 342 B · `2f538e0b9e84` | The assessment **rubric and rule set** as governed record — versioned, attributable, and the same for every marker |
+| 2 | [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) (GradeMate) | **MIT** · 1 072 B · `3b21045edbad` · `main` `03a7c3d3b946` | Rubric-criterion marking of written work, teacher-uploadable rubrics. React + Django. 🟢 Re-read first-hand this pass — **byte- and digest-identical** to `p469`'s record |
+| 3 | [`vijju9019/GradeAI`](https://github.com/vijju9019/GradeAI) | **MIT** · 1 077 B · `6a1c56b153f8` · `main` `56b8819e0c90` | The **human-review cockpit**: split-screen rubric comparison and score override — the component that keeps a person in the decision. 🟢 Re-read first-hand this pass, **byte- and digest-identical** to `p469` |
+| 4 | [`OscarBarreraGithub/syllabusgraph`](https://github.com/OscarBarreraGithub/syllabusgraph) | **MIT** · 1 083 B · `3cc3fae03d97` | Source-evidence links, so each mark cites the rubric criterion and the material it was judged against |
+| 5 | 🔴 **a hard exclusion, not a component** | — | **No generative image or video capability anywhere in the estate's learner-facing surface.** From 2 December 2026 the non-consensual intimate imagery / CSAM prohibition applies; it is a prohibition, so there is no risk tier to argue and no conformity route to buy |
+
+**Wiring.** Step 1 holds the rubric; step 2 proposes a criterion-level mark; step 3 requires a human
+to confirm or override **before any mark is released** — the model never writes a final grade; step 4
+attaches the evidence trail. The deterministic-and-reviewable spine this base has specified since
+`p466` is unchanged; what `p470` adds is the date it must be ready by and the capability it must not
+contain.
+
+🟢 **Why the sequence matters commercially.** The sixteen-month Annex III deferral means the
+assessment product can be *built properly* rather than rushed to an August 2026 date that no longer
+exists — and it must be, because the deferral does not change what conformity will require, only
+when. 🔴 The December 2026 prohibition is the opposite: not a thing to prepare for, a thing to
+**exclude by architecture now**.
+
+🟢 **Licence outcome: Apache-2.0 + MIT, no copyleft**, deliverable as a managed service with no
+disclosure duty. 🔴 Steps 2–4 are 4★, 0★ and 1★ — fork-and-own, as `Gap 464-A`'s closure established.
+
 ## 🆕 `p469` — **four recipes, every component read first-hand at `HEAD` this pass, every licence boundary drawn where it actually falls**
 
 🔵 Each pattern names the repositories, their grants as read on **2026-10-27**, the wiring, and the

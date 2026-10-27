@@ -4,6 +4,194 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — **🟢 `Gap 469-E` IS CLOSED WITH AN INSTRUMENT NUMBER: the AI Act amendment is **Regulation (EU) 2026/1744**, OJ L of 24 July 2026, in force 27 July 2026 — education's Annex III obligations move to **2 December 2027**, confirming `p469`'s reading. 🔴 And a date NO pass here has carried lands in FIVE WEEKS: a new prohibition applies from 2 December 2026, on exactly the harm schools are the venue for.**
+
+🔵 **Channel state, re-probed `2026-10-27`.** 🔴 `eur-lex.europa.eu`, `ec.europa.eu`, `europa.eu`,
+`op.europa.eu`, `www.europarl.europa.eu`, `www.consilium.europa.eu` and
+`artificialintelligenceact.eu` all fail **DNS `ENOTFOUND`** from this host, on `curl` *and* on the
+page-fetch channel — so `Gap 469-E`'s prescribed closure, "reach EUR-Lex from a channel that
+resolves", is **not** available from here and may never be.
+
+🟢 **But the gap closes anyway, through a channel `p469` did not consider.** The *search* channel
+resolves EUR-Lex even though the fetch channels cannot: it returned the EUR-Lex record itself and
+reported its title, instrument number and Official Journal date. That is a materially different
+evidentiary position from `p469`'s, which had only secondary guides disagreeing with each other and
+**no instrument number at all**.
+
+### 🟢 The amendment, named
+
+| field | value | how established |
+|---|---|---|
+| instrument | **Regulation (EU) 2026/1744** of the European Parliament and of the Council | EUR-Lex record, via the search channel |
+| amends | Regulation (EU) 2024/1689 (the AI Act) | same |
+| dated | **8 July 2026** | same |
+| published | **OJ L, 24 July 2026** | same |
+| in force | **27 July 2026** | same, and consistent with `p469`'s secondary reading |
+| ELI | `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` | returned as the canonical address; 🔴 **not fetchable from this host** |
+
+### 🟢 The dates education is scoped against
+
+| obligation | applies from | change |
+|---|---|---|
+| **Annex III high-risk** — including **point 3, education and vocational training**: admissions, assessment, proctoring | 🟢 **2 December 2027** | moved from 2 August 2026 — **sixteen months of additional runway** |
+| Annex I high-risk (AI embedded in regulated products) | 2 August 2028 | moved from 2 August 2027 |
+| 🔴 **New prohibition** — non-consensual intimate imagery and child sexual abuse material | 🔴 **2 December 2026** | **new**; did not exist in the 2024 text |
+| Article 50 transparency / content marking | unchanged | **not** postponed |
+| Prohibited practices (incl. emotion inference in education) | unchanged — live since **2 February 2025** | **not** postponed |
+| GPAI model-provider obligations | unchanged | **not** postponed |
+| National regulatory sandboxes | August 2027 | binds Member States, not providers |
+
+🔴 **The five-week item is the one to act on, and it is new to this base.** The non-consensual
+intimate imagery and CSAM prohibition applies from **2 December 2026**. Schools and universities are
+a primary venue for exactly that harm — peer deepfake harassment of pupils and staff — and any
+image- or video-generating capability a studio ships into an education estate in EMEA is inside that
+prohibition from that date. It is a **prohibition**, not a high-risk duty, so no postponement
+applies and no conformity route exists: the capability is either prevented or it is unlawful.
+
+🟡 **What is still not closed, stated plainly.** The Annex III wording itself has **not** been read
+first-hand from this host — only the record's metadata and the secondary agreement around it. The
+`2 December 2027` date is now corroborated by a named instrument rather than by disagreeing guides,
+which is why it is published without the `p469` caveat; but 🟢 registered as **`Gap 470-D`**: the
+cheapest remaining closure is to read Article 113 as amended, in the consolidated text, from any
+channel that resolves `europa.eu` — and since none does from this host, the next pass should instead
+record whether the 2026/1744 Annex III wording **changed the education entry itself**, not only its
+date.
+
+### 🔴 The prescribed regional legs are OFF-CLASS, and this pass measured it
+
+🔵 This file has recorded regional legs returning "material already carried" for four passes. That
+diagnosis was too generous. Graded by whether the returned source is **about education at all**:
+
+| prescribed leg | links returned | education-specific | off-class rate |
+|---|---|---|---|
+| `AI education North America 2026 adoption regulation players` | 9 | **8** | 11 % |
+| `AI education LATAM 2026 adoption regulation players` | 9 | **3** | 67 % |
+| `AI education APAC 2026 adoption regulation players` | 10 | **1** | **90 %** |
+| `AI education EMEA 2026 adoption regulation players` | 10 | **0** | 🔴 **100 %** |
+
+🔴 **The EMEA leg returned ten links and not one was about education.** It returned enterprise-IT
+analyst coverage: a CompTIA IT-strategy outlook (five times, in five locales), a 2023 Workday
+AI-adoption study, a CPaaS research note, a customer-contact webinar. The APAC leg returned the same
+register — Forrester CEO adoption rates, Boomi tech priorities, board governance gaps.
+
+🟢 **The mechanism, and it is actionable.** `adoption regulation players` is **enterprise-analyst
+vocabulary**. For North America the education-market research industry publishes against those words
+too, so the leg works. For EMEA and APAC it collides with a far larger enterprise-IT content
+industry and education loses. This is `p468`'s vocabulary finding on a **new axis**: not the
+*language* of the query but its **register**. 🟢 Registered as **`Gap 470-E`**: the regional legs
+must name an education institution type — *schools, universities, ministry of education, curriculum*
+— or they will keep returning CIO content. An unchanged template will keep producing a 90–100 %
+off-class rate in two of four regions, and reporting it as saturation.
+
+### 🔴 An arithmetic check on this pass's own relayed figures, before they are carried
+
+🔵 Per `p466`'s discipline — a relayed forecast is checked against itself before it is shelved. Both
+figures below are from the same research firm's regional pages, same base year.
+
+| figure as relayed | implied CAGR from its own endpoints | endpoint implied by its own stated CAGR | verdict |
+|---|---|---|---|
+| North America: **$951M (2024) → $2.3B (2029)**, stated CAGR **15.9 %** | **19.32 %** | **$1.99B** | 🔴 **INTERNALLY INCONSISTENT** — the stated CAGR and the stated endpoint disagree by **$311M**, 3.4 points of CAGR |
+| Rest of Latin America: **$18.2M (2024) → $36M (2029)**, no CAGR stated | **14.62 %** | n/a | 🟡 arithmetically coherent; no stated CAGR to contradict |
+
+🔴 **So the North America headline is not carried as a forecast.** One of its three numbers is
+wrong and the source does not say which. What *is* carried is the check itself and the ratio, which
+needs only the base years: on this firm's own 2024 figures **North America is ~52× the
+Rest-of-Latin-America market** ($951M against $18.2M). That multiple is the most useful thing the
+regional legs produced this pass, and it is a reason to scope LATAM engagements on *governance and
+institutional need* — per `p468`'s UNESCO 87 %/26 % finding — rather than on market size, where the
+region cannot win a comparison.
+
+### 🔴 The governance supply gap is an absence of SUPPLY, not of discovery
+
+🔵 `p468` established that LATAM demand is **governance**, not another tutor — 87 % of 200
+institutions using AI against 26 % with a formal AI strategy, a 61-point gap — and noted that these
+shelves carry almost no governance tooling. This pass tested whether that was a discovery failure.
+
+🔵 A dedicated leg for education AI governance, policy, compliance and audit tooling returned **70
+addresses novel to this entire base** — a high novel rate. 🔴 **Education-governance tools among
+them: zero.** The leg returned awesome-lists, MCP server catalogues, graduate job boards, a
+crypto-MCP author's eight repositories, an AI glossary and a PDF-workflow collection.
+
+🟢 **One exception, and it is this pass's best supply find:** `panaversity/ksor` (Apache-2.0, 232★),
+a Knowledge System of Record whose own framing is that *"an education institution cannot deliver an
+organized AI-assisted course if its tutors, teaching assistants, and assessment agents operate from
+different curricula, sources, or rules."* See `agents/top.md` and `repos/foundations.md` this pass.
+🔴 **One granted governance component against a 61-point institutional gap across 19 countries** is
+the measurement, and it means the governance work in a LATAM engagement is **built, not assembled**.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Assessment work is unblocked here and time-boxed nowhere.** No federal instrument sets an
+education-AI conformity regime; adoption is decided institution by institution, with state-level
+requirements appearing piecemeal. The relayed institutional readiness numbers — ~10 % of
+institutions with formal AI guidelines, 71 % of US teachers without AI training — describe the
+actual sale: **governance scaffolding and staff capability**, not another tutor.
+🔵 Concrete shapes: rubric-based marking with a human decision point (supply exists — see the four
+MIT grants `p469` shelved, and `GradeMate`, North-America-placed); a curriculum-pathway
+bottleneck service for a university registrar (`curriculum-knowledge-graph`, `syllabusgraph`, both
+MIT this pass); an institutional **knowledge system of record** so that tutor, TA and assessment
+agents cannot contradict the catalogue (`panaversity/ksor`, Apache-2.0).
+🔴 The market-size figure this pass could have carried here failed its own arithmetic check, above.
+
+### EMEA
+
+🔴 **Two dates, and they point opposite ways.** The **2 December 2026** prohibition on
+non-consensual intimate imagery and CSAM is five weeks out and admits no conformity route — any
+image or video generation shipped into a school estate must prevent it by design. The **2 December
+2027** Annex III date gives admissions, assessment and proctoring builds **sixteen months** of
+runway, confirmed this pass against a named instrument.
+🟢 So the EMEA sequence is: build the high-risk-adjacent assessment work *now* with the
+deterministic-and-reviewable spine this base has specified since `p466`, and treat generative
+image capability as a prohibition problem, not a risk-tier problem.
+🔵 The AI literacy duty has applied since **2 February 2025** to every organisation using an AI
+system — it is already live, it is the cheapest compliance sale in the region, and corporate and
+institutional upskilling now has a **permissive** asset behind it: `AI-First-Community/Bodhi`
+(MIT, 123 concepts) replaces the `CC-BY-NC-SA` LLM-architecture course `p468` had to refuse.
+🟢 Supply placed in-region this pass: `MONaser04/Zyren-AI-Tutor` (MIT, Egypt) — multimodal Socratic
+tutoring with Arabic support.
+
+### APAC
+
+🟢 **The region carries the supply mass again, and it is overwhelmingly permissive.** Of twenty
+granted novel rows this pass, **eight are APAC-placed and every one of the eight is MIT**:
+`panaversity/ksor` (Apache-2.0, Pakistan), `232252/education-advisor`, `MXC-CKK/huoshu`,
+`L01nki1/extend-slides`, `ZYT64/KuroTutor`, `Tissue-for-charlie/exam-kit`,
+`X1a0heZzzz/open-book-exam-pack`, `tong666-bit/song-hao-math`.
+🔵 The distinctive shape is **the teacher-facing administrative agent** — `education-advisor` is
+built for the class head-teacher (conduct scores, counselling plans, weekly reports, parent-school
+scripts), a shape no other region produced this pass and one these shelves were thin on.
+🔴 **And the region's richest assessment artefact is unsellable**: `shenquan520/reading-analysis`
+(CC BY-NC-SA) is the best-made exam artefact of the pass. `p467`'s finding holds — the deeper the
+curriculum content in APAC, the more likely it is NonCommercial.
+🔴 **`Gap 470-B`, placed:** `taigi-teaching-agent` grants its code (MIT) and withholds the ministry
+curriculum corpus and official audio. In APAC, curriculum alignment and corpus rights come apart —
+scope the data licence separately from the code.
+🔴 The prescribed APAC leg was **90 % off-class** this pass; the region's facts came from supply, not
+from the news channel.
+
+### LATAM
+
+🟢 **The region's row this pass is the most structurally interesting one on the shelf**, and it is
+Brazilian: [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) (Edukors.org,
+Maurício Garcia) — an open standard plus tooling for learning graphs, MIT at the root, with the
+Moodle integration GPL-3.0-or-later. 🔵 Moodle is the installed base across the region's public
+institutions, so a Moodle-plugin-shaped artefact is the right shape here; the licence boundary is
+the thing to get right at proposal time, not at contract review.
+🔴 **The regional loss, named:** `Pedrosasouza/AcademicFlow-Agent` — a LangGraph/ReAct academic
+management agent running on local Ollama, Brazil-placed, **ungranted at 13 paths**. The closest
+thing to an off-the-shelf regional admin agent, and unusable.
+🔴 **Scope on governance, not on market size.** On one firm's own 2024 numbers the
+Rest-of-Latin-America AI-in-education market is **1/52nd of North America's**. The region's
+demand is the 61-point gap `p468` measured — 87 % of institutions using AI, 26 % with a strategy —
+and this pass established that the supply to close it does not exist: 70 novel addresses on a
+governance leg, zero governance tools. **That is a build engagement, and `ksor` is the only granted
+starting point.**
+🔵 Instruments still standing from prior passes: Brazil's PL 2.338/2023 pending; Chile's
+**Ley 21.719** in force **1 December 2026** — four weeks out, and it binds any student-data
+processing a studio deploys in Chile.
+
 ## 🆕 `p469` — **🔴 THE SINGLE MOST CONSEQUENTIAL DATE IN EDUCATION AI JUST MOVED, AND IT MOVED IN THE DIRECTION NOBODY PRICED: the EU AI Act's high-risk obligations for education — admissions decisions and learner assessment — are reported POSTPONED from 2 August 2026 to 2 DECEMBER 2027 by the AI omnibus. 🟢 That is sixteen extra months of build runway in EMEA. 🔴 And this pass could not reach the primary source to confirm it, which is stated here rather than hidden.**
 
 🔵 Market-size estimates on this shelf's prior passes conflict by an order of magnitude across

@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — `2026-10-27` — **the week's movement is a grant moving INSIDE a repository, and twenty granted novel rows of which sixteen are at 5★ or below**
+
+🔵 Append-only. The `p469` body and all prior passes stand unchanged below this section. Star counts
+are from the session GitHub tool channel on **2026-10-27**; `api.github.com` direct is still **403**
+from this host. Every address below resolved first-hand this pass by `git ls-remote --symref`, with
+a licence-payload read at `HEAD`.
+
+### 🔴 The movement that matters is not a star count
+
+| repo | what moved | read |
+|---|---|---|
+| [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🔴 **the grant, mid-repository** | MIT at `LICENSE.md` (1 087 B · `625342dc4d3d`), **GPL-3.0-or-later** at `plugin/edukorsplayer/COPYING.txt` (35 151 B · `e79e9c8a0c85`). A root-path sweep reads this repo as MIT and is wrong about what ships. `Gap 470-A` |
+| [`mathruffian-dot/taigi-teaching-agent`](https://github.com/mathruffian-dot/taigi-teaching-agent) | 🟡 **the grant's boundary**, visible only past the warranty clause | MIT payload at **1 453 B · `c3fa97fa9128`** — stock MIT plus an appendix placing the MOE 《臺灣台語常用詞辭典》 dictionary content and audio, the Ithuan Suisiann TTS service and `facebook/mms-tts-nan` **outside** the grant. `Gap 469-A` reproduced on a second repo; `Gap 470-B` registered |
+| [`panaversity/ksor`](https://github.com/panaversity/ksor) | 🟢 **a category arriving**, not a repo rising | Apache-2.0 · 11 342 B · `2f538e0b9e84` · **232★** (51 forks, 19 open issues) · `main` `b50f28926fae`, pushed 2026-10-01. The first granted governance-layer component on these shelves, out of **70 novel addresses on a governance leg** |
+
+### 🟢 New to these shelves this week — granted, and read first-hand
+
+| repo | grant (first-hand) | ★ | region | first seen |
+|---|---|---|---|---|
+| [`panaversity/ksor`](https://github.com/panaversity/ksor) | **Apache-2.0** · 11 342 B · `2f538e0b9e84` | 232 | APAC | created 2026-08-17 |
+| [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🟡 **MIT** root / **GPL-3.0-or-later** plugin | 17 | **LATAM** (BR) | created 2026-09-17, pushed 2026-10-25 |
+| [`L01nki1/extend-slides`](https://github.com/L01nki1/extend-slides) | **MIT** · 1 064 B · `17dcc81817e1` | 16 | APAC (CN) | created 2026-09-18 |
+| [`mathruffian-dot/taigi-teaching-agent`](https://github.com/mathruffian-dot/taigi-teaching-agent) | 🟡 **MIT + corpus carve-out** · 1 453 B · `c3fa97fa9128` | 13 | APAC (TW) | created 2026-06-14 |
+| [`FIY-pc/vibe-logisim`](https://github.com/FIY-pc/vibe-logisim) | **GPL-3.0** · 35 149 B · `3972dc9744f6` | 9 | APAC (CN) | created 2026-09-26 |
+| [`Guojiz/gitlearnos`](https://github.com/Guojiz/gitlearnos) | **MIT** · 1 063 B · `8b1ba1377eaa` | 7 | Global | created 2026-07-02 |
+| [`lhd23333/QuizForge`](https://github.com/lhd23333/QuizForge) | **GPL-3.0** · 35 149 B · `3972dc9744f6` | 7 | APAC (CN) | created 2026-08-06 |
+| [`AI-First-Community/Bodhi`](https://github.com/AI-First-Community/Bodhi) | **MIT** · 1 095 B · `967480f4f094` | 5 | Global | created 2026-06-30 |
+| [`Garuda8887/recall`](https://github.com/Garuda8887/recall) | **MIT** · 1 099 B · `0bfc98ccf58b` | 5 | Global | created 2026-05-26, `master` |
+| [`shihabshahrier/manim-coding-skill`](https://github.com/shihabshahrier/manim-coding-skill) | **MIT** · 1 065 B · `5ce7ed6c2a3e` | 5 | Global | created 2026-05-12, `master` |
+| [`232252/education-advisor`](https://github.com/232252/education-advisor) | **MIT** · 1 090 B · `703786ab8abd` | 4 | APAC (CN) | created 2026-04-03, pushed 2026-10-25 |
+| [`ZYT64/KuroTutor`](https://github.com/ZYT64/KuroTutor) | **MIT** · 1 079 B · `d797049c4e6a` | 4 | APAC (CN) | created 2026-08-29 |
+| [`X1a0heZzzz/open-book-exam-pack`](https://github.com/X1a0heZzzz/open-book-exam-pack) | **MIT** · 1 056 B · `1126322e2cc8` | 4 | APAC (CN) | created 2026-06-22 |
+| [`tong666-bit/song-hao-math`](https://github.com/tong666-bit/song-hao-math) | **MIT** · 1 083 B · `f01123fc5f24` | 4 | APAC (CN) | created 2026-08-04 |
+| [`MXC-CKK/huoshu`](https://github.com/MXC-CKK/huoshu) | **MIT** · 1 059 B · `a005f12beb1c` | 3 | APAC (CN) | created 2026-08-01 |
+| [`Tissue-for-charlie/exam-kit`](https://github.com/Tissue-for-charlie/exam-kit) | **MIT** · 1 075 B · `3cd67a7398b6` | 3 | APAC (CN) | created 2026-09-03, `master` |
+| [`NouhKhouyi/aula`](https://github.com/NouhKhouyi/aula) | **MIT** · 1 068 B · `b208dbc2fdee` | 2 | Global | created 2026-09-13, pushed 2026-10-26 |
+| [`MONaser04/Zyren-AI-Tutor`](https://github.com/MONaser04/Zyren-AI-Tutor) | **MIT** · 1 085 B · `aa716156b15d` | 2 | **EMEA** (Egypt) | created 2026-10-17 |
+| [`youseiushida/benkyo`](https://github.com/youseiushida/benkyo) | **MIT** · 1 068 B · `7fe4879acb36` | 2 | Global | created 2026-05-13 |
+| [`OscarBarreraGithub/syllabusgraph`](https://github.com/OscarBarreraGithub/syllabusgraph) | **MIT** · 1 083 B · `3cc3fae03d97` | 1 | Global | created 2026-09-13 |
+| [`mizcausevic-dev/curriculum-knowledge-graph`](https://github.com/mizcausevic-dev/curriculum-knowledge-graph) | **MIT** · 1 069 B · `a5ed17e0b90a` | 1 | Global | created 2026-05-12, pushed 2026-10-26 |
+| [`gmtigrisva123/DMAS`](https://github.com/gmtigrisva123/DMAS) | **MIT** · 1 087 B · `3a7f63107f13` | 1 | Global | created 2026-09-18 |
+| [`Djbrl/tandemcode-harness`](https://github.com/Djbrl/tandemcode-harness) | **MIT** · 1 062 B · `d62944c6f3f9` | 1 | Global | created 2026-10-14 |
+
+🔵 **Twenty-three granted rows, all novel by anchored address (`Gap 469-B`).** 🔴 **Sixteen are at
+5★ or below.** The distribution is the finding: this is not a week in which education agents grew,
+it is a week in which a lot of very small ones were granted. Eight of the twenty-three are
+APAC-placed and MIT.
+
+### 🔴 Not granted this week — stated, so the nil is informed rather than invisible
+
+| repo | probe | ★ |
+|---|---|---|
+| [`ChengshuaiZhao0/Awesome-Trustworthy-AI4Edu`](https://github.com/ChengshuaiZhao0/Awesome-Trustworthy-AI4Edu) | `main` `b0ff5eb7dc09` · no licence at 13 paths | 9 |
+| [`simpleqt/radai`](https://github.com/simpleqt/radai) | `main` `0b1e8a4bbf9d` · no licence at 13 paths | 6 |
+| [`goncalvespedroo/sokra-tutor`](https://github.com/goncalvespedroo/sokra-tutor) | `main` `eebbc28b7569` · no licence at 13 paths | 3 |
+| [`chuantiet5-stack/zhiqi-ai-education-assistant`](https://github.com/chuantiet5-stack/zhiqi-ai-education-assistant) | `main` `369a11f9a533` · no licence at 13 paths | 3 |
+| [`Pedrosasouza/AcademicFlow-Agent`](https://github.com/Pedrosasouza/AcademicFlow-Agent) | `main` `8e341c21f789` · no licence at 13 paths | 2 |
+| [`sayeeg-11/SahiiiDSA`](https://github.com/sayeeg-11/SahiiiDSA) | `main` `c732abed3a47` · no licence at 13 paths | 1 |
+
+🔴 **Granted but NonCommercial**, which is a different and worse outcome than ungranted because it
+looks fine on a star-and-licence screen:
+[`shenquan520/reading-analysis`](https://github.com/shenquan520/reading-analysis) (**CC BY-NC-SA
+4.0** · 17 124 B · `f5042f838c57` · 12★) and
+[`caijimiao345/study-abroad-planner`](https://github.com/caijimiao345/study-abroad-planner)
+(**CC BY-NC-SA 4.0** · 20 850 B · `e66c269d4819` · 5★). 🔵 GitHub's licence field says
+`NOASSERTION` for **both** — silent exactly where the answer is disqualifying.
+
+### 🔴 The prescribed channel, graded by register rather than by novelty
+
+🔵 For the fifth pass the four prescribed global legs returned no granted novel education
+repository. This pass measured *why*, on the regional legs, by asking whether each returned link was
+about education **at all**: North America **8/9** on-class, LATAM **3/9**, APAC **1/10**, EMEA
+🔴 **0/10**. The EMEA leg returned a CompTIA IT-strategy outlook in five locales, a 2023 Workday
+study, a CPaaS note and a customer-contact webinar. 🟢 `Gap 470-E`: the leg template's
+`adoption regulation players` is enterprise-analyst vocabulary, and in two of four regions it
+collides with a larger enterprise-IT content industry and returns zero education. Every granted row
+above came from the GitHub search channel, not from the prescribed legs.
+
 ## 🆕 `p469` — `2026-10-27` — **the week's movement is two 40k★ academic tutors, and the week's novelty is in two non-English legs**
 
 🔵 Append-only. The `p468` body and all prior passes stand unchanged below this section. Star

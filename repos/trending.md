@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — `2026-10-27` — **the trending signal is a licence-filtered leg answering a question four passes called unanswerable: ten MIT curriculum graphs exist, and the largest is 17★**
+
+🔵 Append-only. The `p469` body and all prior passes stand unchanged below this section. Star counts
+from the session GitHub tool channel, **2026-10-27**; `api.github.com` direct still **403**. Every
+grant below read first-hand at `HEAD` from `raw.githubusercontent.com`, written to a file and the
+file measured per `Gap 468-A`.
+
+### 🟢 The leg that produced the week's finding
+
+🔵 `p467` specified a permissive replacement for a **4 000★ `CC-BY-NC-4.0`** curriculum knowledge
+graph and could not source one; `p468`–`p469` did not revisit it. A **licence-filtered** leg —
+asking the forge for `license:mit` on curriculum, syllabus and prerequisite graphs rather than
+asking the web for "best" ones — returned it immediately.
+
+| repo | grant (first-hand) | ★ | region | what it contributes to the replacement |
+|---|---|---|---|---|
+| [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🟡 **MIT** root · 1 087 B · `625342dc4d3d` — **GPL-3.0-or-later** at `plugin/edukorsplayer/` · 35 151 B · `e79e9c8a0c85` | 17 | **LATAM** (BR) | the only one with an **open standard and a JSON Schema** behind it; a course as nodes and edges in one file |
+| [`chat-edu/v3`](https://github.com/chat-edu/v3) | **MIT** · 1 064 B · `3dc45db43baf` | 16 | Global | 🟡 **abandoned** — last pushed 2026-05-22, README is unmodified `create-next-app` boilerplate |
+| [`AI-First-Community/Bodhi`](https://github.com/AI-First-Community/Bodhi) | **MIT** · 1 095 B · `967480f4f094` | 5 | Global | 123 AI concepts with **typed** connections; the permissive answer to `p468`'s `CC-BY-NC-SA` LLM-architecture course |
+| [`Garuda8887/recall`](https://github.com/Garuda8887/recall) | **MIT** · 1 099 B · `0bfc98ccf58b` | 5 | Global | SM-2 spaced repetition and forgetting curves over a graph — the retention layer |
+| [`MXC-CKK/huoshu`](https://github.com/MXC-CKK/huoshu) | **MIT** · 1 059 B · `a005f12beb1c` | 3 | APAC (CN) | textbook → graph with Socratic questioning and RAG already wired; 401 tests, on PyPI |
+| [`Tissue-for-charlie/exam-kit`](https://github.com/Tissue-for-charlie/exam-kit) | **MIT** · 1 075 B · `3cd67a7398b6` | 3 | APAC (CN) | graph → **printable offline** revision pack |
+| [`youseiushida/benkyo`](https://github.com/youseiushida/benkyo) | **MIT** · 1 068 B · `7fe4879acb36` | 2 | Global | textbook → adaptive tutoring with memory across sessions |
+| [`NouhKhouyi/aula`](https://github.com/NouhKhouyi/aula) | **MIT** · 1 068 B · `b208dbc2fdee` | 2 | Global | traverses the graph as a **checked** route: probe, plan, verify each step |
+| [`OscarBarreraGithub/syllabusgraph`](https://github.com/OscarBarreraGithub/syllabusgraph) | **MIT** · 1 083 B · `3cc3fae03d97` | 1 | Global | builds relationships **with source evidence attached** — the citation-audit piece |
+| [`mizcausevic-dev/curriculum-knowledge-graph`](https://github.com/mizcausevic-dev/curriculum-knowledge-graph) | **MIT** · 1 069 B · `a5ed17e0b90a` | 1 | Global | prerequisite **bottleneck analysis** for a registrar; 🟡 portfolio-tier |
+
+🔴 **Ten MIT grants, and the star column is the whole second half of the finding: 17, 16, 5, 5, 3,
+3, 2, 2, 1, 1.** The NonCommercial graph has no permissive peer within two orders of magnitude, and
+the most-starred permissive peer is a repository whose grant changes two directories down. 🟡 The
+second-most-starred is abandoned.
+
+🟢 **Why the channel worked where four passes of web legs did not:** the question was asked of the
+**forge, filtered by licence**, instead of of the web by popularity. A "best open-source X" roundup
+ranks by visibility, and permissive micro-scale supply is invisible by construction. `p469` showed
+a roundup's licence column is a claim; this pass shows its *ranking* is the other half of the same
+problem.
+
+### 🔴 The governance leg: 70 novel addresses, one usable row
+
+| measurement | value |
+|---|---|
+| addresses returned, novel to this entire base by anchored address | **70** |
+| education-governance tools among them | 🔴 **0** |
+| granted components usable for the governance job | 🟢 **1** — [`panaversity/ksor`](https://github.com/panaversity/ksor), **Apache-2.0** · 11 342 B · `2f538e0b9e84` · **232★** |
+
+🔵 What the other 69 were: awesome-lists, MCP server catalogues, graduate job boards, one author's
+eight crypto-MCP repositories, an AI glossary, a PDF-workflow collection, a public-APIs aggregator.
+🔴 `p468` measured LATAM's governance demand at a **61-point** gap (87 % of 200 institutions using
+AI, 26 % with a strategy). This pass establishes the supply side of that gap is **empty** — not
+undiscovered. The governance layer in an education engagement is build work.
+
+### 🔴 Two new byte-value observations, and a cross-pass control that passes on 31 repositories
+
+| observation, read first-hand | consequence |
+|---|---|
+| **GPL-3.0** at **35 149 B** (`3972dc9744f6`, two repos) and **35 151 B** (`e79e9c8a0c85`, one repo) — **2 bytes apart** | 🔴 GPL-3.0 and AGPL-3.0, whose difference *is* the network-copyleft question, are not separable by payload length at the margin |
+| **CC BY-NC-SA 4.0** at **17 124 B** (short-notice form) and **20 850 B** (full legalcode) | 🔴 the CC family carries `Gap 466-A`'s defect too: one licence, multiple legitimate lengths |
+| These shelves already record `35 149 B · 3972dc9744f6` as **GPL-3.0** across **31 distinct repositories**, and `35 151 B` as GPL-3.0 on `Koha-Community/Koha` | 🟢 **control passes** — this pass reproduces both byte-values and both digests exactly, from three repositories none of those rows named |
+| [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) re-read: **MIT** · 1 072 B · `3b21045edbad` · `main` `03a7c3d3b946` | 🟢 **byte- and digest-identical** to `p469` |
+| [`vijju9019/GradeAI`](https://github.com/vijju9019/GradeAI) re-read: **MIT** · 1 077 B · `6a1c56b153f8` · `main` `56b8819e0c90` | 🟢 **byte- and digest-identical** to `p469` |
+
+🔴 **And a defect in this pass's own reader, caught before publication.** Its first run labelled
+`FIY-pc/vibe-logisim` and `lhd23333/QuizForge` **AGPL-3.0**. Both are GPL-3.0. The mechanism:
+stock **GPL-3.0 names the AGPL three times inside its own §13**, so a containment test on the AGPL's
+name mislabels every GPL-3.0 repository in existence. 🟢 Fixed by anchoring classification to the
+payload's title; `Gap 470-C`. The base's label was right on all 31 control rows; the new instrument
+was wrong.
+
 ## 🆕 `p469` — `2026-10-27` — **the trending board is agent tooling, not education, and the one education repo on it is not software-licensed**
 
 🔵 Append-only. The `p468` body and all prior passes stand unchanged below this section.

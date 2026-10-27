@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — **🟢 Four trends, each with a denominator measured this pass: (1) the open grant is fragmenting *inside* the repository — by subdirectory and by asset, not by project; (2) education's regulatory clock in EMEA now runs backwards and forwards at once, a prohibition closing as a high-risk regime opens; (3) the governance demand this base measured has no supply behind it — 70 novel addresses, zero governance tools; (4) permissive curriculum supply arrived in quantity and entirely at micro-scale.**
+
+### 🔴 1. The grant is fragmenting inside the repository, not between repositories
+
+🔵 This base has tracked the grant moving *between* things: from repository to asset (`p467`), from
+code to corpus (`p464`), from permissive form to restrictive terms (`p467`). This pass the
+fragmentation is finer still — **inside a single repository, by directory**.
+
+| case, read first-hand `2026-10-27` | the shape |
+|---|---|
+| [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | **MIT** at `LICENSE.md` (1 087 B) · **GPL-3.0-or-later** at `plugin/edukorsplayer/COPYING.txt` (35 151 B) · third-party MIT notices at a third path |
+| [`mathruffian-dot/taigi-teaching-agent`](https://github.com/mathruffian-dot/taigi-teaching-agent) | **MIT** code (1 453 B payload) · ministry dictionary content, official audio, a TTS service and a third-party model each **outside** the grant |
+| [`lbhubedu/lbedu.me`](https://github.com/lbhubedu/lbedu.me) (`p469`) | **MIT** code · brand, institutional texts and `public/images/` reserved *All Rights Reserved* |
+
+🔵 **Three repositories, three different partition axes — directory, asset class, content type — and
+all three publish a single permissive SPDX identifier.** GitHub's licence field says `MIT` for all
+three, and it is not wrong; it is answering a question about the root payload that nobody asked.
+
+🔴 **Why this is a trend and not three anecdotes: the cause is structural.** Moodle is GPL, so a
+Moodle integration must be GPL. Ministry curriculum corpora are state-owned, so a
+curriculum-aligned agent cannot relicense them. Institutional brand and editorial copy are the
+institution's, so a school's own web app reserves them. **Every education project that integrates
+with an LMS, aligns to a curriculum, or belongs to an institution has a partitioned grant waiting
+inside it** — and education projects are, by definition, usually all three.
+
+🟢 **The consequence for a studio:** the licence question is no longer "what is this repository?" but
+"**which part of it am I shipping?**" A root-path licence sweep — the instrument this base spent five
+passes refining — answers the first question correctly and cannot see the second.
+
+### 🔴 2. EMEA's regulatory clock now runs in both directions at once
+
+🔵 `p464` found that regulation diverged by **duty type** inside one region. This pass that
+divergence acquires exact dates from a named instrument — **Regulation (EU) 2026/1744**, OJ L of
+24 July 2026, in force 27 July 2026.
+
+| duty | direction | date |
+|---|---|---|
+| Annex III high-risk — education admissions, assessment, proctoring | 🟢 **relaxed by 16 months** | 2 August 2026 → **2 December 2027** |
+| New prohibition — non-consensual intimate imagery, CSAM | 🔴 **tightened; new obligation** | **2 December 2026** |
+| Article 50 transparency, prohibited practices, GPAI duties | unchanged | live now |
+
+🔴 **So the same amendment that bought sixteen months of assessment runway opened a prohibition five
+weeks out.** A studio reading only the headline — "education high-risk postponed to 2027" — scopes
+an EMEA engagement that is simultaneously *less* urgent on assessment and *more* exposed on
+generative media, and will find the second out at the wrong moment.
+
+🔵 **The structural point:** postponement is not deregulation, it is **re-sequencing**. The duties
+that moved are the ones requiring conformity infrastructure that does not exist yet; the ones that
+did not move are prohibitions, which need no infrastructure — only prevention. Where a duty is a
+prohibition there is no risk tier to argue about and no conformity route to buy.
+
+### 🔴 3. The governance demand has no supply behind it, and that is now measured
+
+🔵 `p468` measured the demand: **87 % of 200 institutions across 19 countries using AI, 26 % with a
+formal AI strategy** — a 61-point gap — and inferred that the regional sale is governance. The open
+question was whether the supply existed and this base had simply not looked.
+
+🔵 This pass looked, with a leg built for it. **70 addresses novel to this entire base. Education
+governance tools among them: zero.** The leg returned awesome-lists, MCP server catalogues, graduate
+job boards, one author's eight crypto-MCP repositories, an AI glossary, a PDF-workflow collection.
+
+🟢 **One exception in 70**, and it is substrate rather than a governance product:
+`panaversity/ksor` (Apache-2.0, 232★) — one authoritative knowledge record that tutor, TA and
+assessment agents read from, so they cannot contradict each other or the catalogue.
+
+🔴 **The trend, stated as a ratio:** education AI's **demand** has moved to governance and its
+**open supply** has not followed at all. Every other category this base tracks — tutoring, marking,
+content generation, knowledge graphs — returned multiple granted rows this pass. Governance returned
+one, and it is a knowledge layer rather than a policy, audit, disclosure or oversight tool.
+🟢 For a studio that is the opportunity rather than the obstacle: the governance layer in an
+education engagement is **billable build work**, because there is nothing to assemble it from.
+
+### 🟢 4. Permissive curriculum supply arrived in quantity — and entirely at micro-scale
+
+🔵 `p467` specified a permissive replacement for a **4 000★ `CC-BY-NC-4.0`** curriculum knowledge
+graph and could not source one. This pass sourced **ten MIT concept- or curriculum-graph projects**
+on a licence-filtered leg, every grant read first-hand.
+
+| 🟢 what closed | 🔴 the other half |
+|---|---|
+| Ten MIT grants for the exact job: `edukors_graph`, `chat-edu/v3`, `Bodhi`, `recall`, `huoshu`, `exam-kit`, `benkyo`, `aula`, `syllabusgraph`, `curriculum-knowledge-graph` | Star counts: **17, 16, 5, 5, 3, 3, 2, 2, 1, 1**. Sixteen of this pass's twenty granted rows are at 5★ or below; twelve are single-maintainer; one 16★ row is abandoned with a boilerplate README |
+
+🔴 **This is the third consecutive pass where a named supply gap closes at micro-scale** —
+`Gap 464-A` (rubric feedback: four MIT grants at 0–4★), `p469`'s platform census (one permissive LMS
+in eight), and now curriculum graphs. 🟢 **The pattern is stable enough to state as a trend:
+permissive education supply exists for almost every job and almost never exists at scale.** What is
+available is a **schema and a reference implementation**, not a dependency with a maintainer behind
+it. The studio economics follow: fork-and-own, budget the maintenance, and never present one of
+these as a vendor component.
+
+🔵 **And a methodological trend continuing from `p465`:** this pass's own instrument was again the
+least reliable thing in it. The licence classifier published two wrong class verdicts and seven
+false restriction flags before correction — mislabelling GPL-3.0 as AGPL-3.0 because **GPL-3.0's §13
+names the AGPL three times inside its own text**. The base's prior reads were right across 31
+repositories; the new instrument was wrong. Read the title, not the body.
+
 ## 🆕 `p469` — **the market stopped asking whether AI works in education and started asking who signs for it — and the open-source supply has not followed**
 
 🔵 Eight trends, each with the evidence behind it and the date it was read. Where a trend rests on

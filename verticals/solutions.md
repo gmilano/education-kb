@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p470` — **🔴 THE MOODLE PLUGIN IS WHERE PERMISSIVE EDUCATION PROJECTS GO COPYLEFT, AND THIS PASS CAUGHT IT MID-REPOSITORY: `edukors_graph` is MIT at its root and GPL-3.0-or-later inside `plugin/edukorsplayer/`, both payloads read first-hand. 🟢 And two granted course-tier platforms are added, both GPL-3.0, both APAC.**
+
+🔵 **Gate posture:** `make hooks` not attempted (KB cloned outside the harness repo). Nothing here
+is gate-attested. Every grant read first-hand at `HEAD` on **2026-10-27**; refs by
+`git ls-remote --symref`; payloads written to files and the files measured per `Gap 468-A`.
+
+### 🔴 The platform-integration boundary, stated as a rule
+
+🔵 The platform tier's recurring question is what a studio may ship on top of an LMS. This pass
+produced the general answer, from a repository that publishes **both** grants:
+
+| [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) · `main` `6bc743c6a5fe` · 17★ · **LATAM** (BR) | payload | class |
+|---|---|---|
+| root `LICENSE.md` — schema, standalone player, original resources | 1 087 B · `625342dc4d3d` | **MIT** |
+| `plugin/edukorsplayer/COPYING.txt` — the **Moodle integration** | **35 151 B** · `e79e9c8a0c85` | 🔴 **GPL-3.0-or-later** |
+| `plugin/edukorsplayer/THIRD_PARTY.md` | 785 B · `42e7a91016b6` | reused MIT retains its notices |
+
+🟢 **The rule, and it is not specific to this project.** Moodle is GPL, so **a Moodle plugin must be
+GPL** — there is no permissive path to a Moodle-integrated artefact, whatever the surrounding
+project is licensed as. The same holds for every GPL platform on this shelf. So for any
+permissively-licensed education project that ships an LMS integration, the integration subtree is
+the place the grant changes, and a root-path licence read cannot see it (`Gap 470-A`).
+
+🔵 **What that means at proposal time, for the platforms this shelf carries:**
+
+| deliverable shape | licence outcome | so |
+|---|---|---|
+| AI layer calling an LMS over its **web services / REST API**, no plugin | the AI layer keeps its own licence | 🟢 the clean route; prefer it wherever the LMS exposes the API you need |
+| AI layer shipped **as a Moodle plugin** | **GPL-3.0-or-later** for that artefact | 🟡 viable, but the plugin's source goes to the client and downstream; price and scope it knowing that |
+| AI layer **linked into** a GPL platform's own process | copyleft reaches the linked work | 🔴 the case to avoid by architecture, not by argument |
+
+🟢 This is why `edukors_graph` is a genuinely useful LATAM row despite 17★: it ships **the schema and
+a standalone player under MIT** — the player is the API-route deliverable, and the plugin is
+available when the client wants in-LMS delivery and accepts the terms.
+
+### 🟢 Platform-tier rows added this pass
+
+| platform | repo | grant (first-hand) | ★ | region | what it is |
+|---|---|---|---|---|---|
+| vibe-logisim | [`FIY-pc/vibe-logisim`](https://github.com/FIY-pc/vibe-logisim) | **GPL-3.0** · 35 149 B · `3972dc9744f6` | 9 | APAC (CN) | AI-assisted **Logisim workbench** for computer-organisation courses: draw and simulate circuits, and let an agent read, wire, debug and explain them. A whole-course deliverable for a CS department, not a component |
+| QuizForge | [`lhd23333/QuizForge`](https://github.com/lhd23333/QuizForge) | **GPL-3.0** · 35 149 B · `3972dc9744f6` | 7 | APAC (CN) | Local-first maths/physics **question-bank workbench**: OCR import of past papers, Markdown management, handout and paper assembly, agent assistance, sandboxed TeX templates. Windows-first, offline. Byte- and digest-identical grant to the row above |
+| Edukors player + Moodle plugin | [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🟡 **MIT** player · **GPL-3.0-or-later** plugin | 17 | **LATAM** (BR) | Standalone learning-graph player (MIT) plus a Moodle integration (GPL). Self-described **Experimental**; PHP + JSON Schema |
+
+🔵 **Three rows. Two unqualified GPL-3.0, one split.** All three are deployment-or-fork decisions
+rather than build-on components, which is exactly why they belong on this shelf and not on
+`agents/top.md`.
+
+### 🔴 Refused at the platform tier
+
+| candidate | probe at `HEAD` | why refused |
+|---|---|---|
+| [`simpleqt/radai`](https://github.com/simpleqt/radai) | `main` `0b1e8a4bbf9d` · **no licence at 13 paths** | 🔴 ungranted — and it is the most platform-shaped candidate of the pass: a LangGraph platform spanning course teaching-assistant, question-bank practice, learning analytics and a research assistant, with retrieval over a knowledge graph. The platform-tier loss of the hour |
+| [`chuantiet5-stack/zhiqi-ai-education-assistant`](https://github.com/chuantiet5-stack/zhiqi-ai-education-assistant) | `main` `369a11f9a533` · **no licence at 13 paths** | ungranted — education agent, textbook RAG, homework marking, study plans, focus monitoring |
+| [`Pedrosasouza/AcademicFlow-Agent`](https://github.com/Pedrosasouza/AcademicFlow-Agent) | `main` `8e341c21f789` · **no licence at 13 paths** | ungranted — LangGraph/ReAct **academic management** agent on local Ollama, Brazil-placed. The nearest thing to a regional school-administration platform, and unusable |
+| [`chat-edu/v3`](https://github.com/chat-edu/v3) | `main` `f44f5eeeb68b` · **MIT** · 1 064 B · `3dc45db43baf` | 🟡 granted but **abandoned** — last pushed 2026-05-22, README is unmodified `create-next-app` boilerplate |
+
+🔵 **Four refusals, three of them ungranted.** `p468`'s observation holds for a third pass: the
+platform-shaped candidates that fit a regional brief best are the ones most likely to ship no
+licence at all. Three of the four best platform candidates this hour are unusable for that reason,
+and the fourth is unmaintained.
+
+### 🟢 The platform census from `p469` stands, re-stated for use
+
+🔵 Nothing this pass changes `p469`'s finding, and it remains the most load-bearing thing on this
+shelf: of the eight education platforms Globant is most often asked to build on, **exactly one is
+permissively granted** — `OpenOLAT` (Apache-2.0, 448★, Java) — and the most-cited "MIT" alternative,
+`frappe/lms`, serves **GNU AGPL v3** at `license.txt` (33 893 B, read first-hand at `p469`).
+
+🔵 Release axis, unchanged this pass: Moodle 5.2 shipped April 2026 with 5.3 LTS due October 2026;
+Chamilo 2.0 shipped April 2026. Canonical addresses, both confirmed live at `p469`:
+`chamilo/chamilo-lms` (`master`) and `openeducat/openeducat_erp` (default ref **`19.0`**, where
+`main` 404s — `p462`'s correction, still the trap on this shelf).
+
 ## 🆕 `p469` — **🟢 ONE PERMISSIVELY-GRANTED FULL LMS EXISTS AND IT IS NOT THE ONE ANYONE NAMES: `OpenOLAT` (Apache-2.0, 448★, Java). 🔴 `frappe/lms` — the row the 2026 roundups file under MIT — is AGPL-3.0, read first-hand. 🟢 And the release axis is current: Moodle 5.2 shipped April 2026 with 5.3 LTS due October 2026, Chamilo 2.0 shipped April 2026.**
 
 🔵 Every grant below read first-hand at `HEAD` on **2026-10-27** (`Gap 468-A` honoured: payloads
