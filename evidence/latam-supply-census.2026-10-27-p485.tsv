@@ -1,0 +1,21 @@
+repo	country	stars	forks	licence_bytes	licence	archived	note
+portabilis/i-educar	BR	721	552	18091	GPL-2.0	no	municipal SIS; software publico; branch 2.12; structural sections all present
+portabilis/i-diario	BR	117	62	35325	AGPL-3.0 PORTUGUESE TRANSLATION	no	zero English licence text
+portabilis/i-diario-app	BR	29	23	35325	AGPL-3.0 PORTUGUESE TRANSLATION	no	offline attendance capture for teachers
+portabilis/pre-matricula-digital	BR	21	10	35325	AGPL-3.0 PORTUGUESE TRANSLATION	no	enrolment + waitlist module
+portabilis/i-educar-reports-package	BR	35	31	18091	GPL-2.0	no	JasperReports module
+portabilis/i-educar-transport-package	BR	14	5	18091	GPL-2.0	no	
+portabilis/i-educar-library-package	BR	13	4	-	not probed	no	
+portabilis/i-educar-educacenso-package	BR	3	6	-	not probed	no	integrates Brazil national school census (Educacenso)
+ipti/br.tag	BR	20	4	18026	GPL-2.0	no	heading corrupted to Preamble2; appendix template line absent
+cortega26/chile-hub	CL	135	12	1069	MIT	no	curated Chilean public data incl. education; Polars/DuckDB
+juliopez/Taller-Inteligencia-de-Negocios-BI	CL	11	4	1094	MIT	no	EduBI Chile; open Chilean education data; Zenodo DOI
+german-gimenez/komuny	LATAM	-	-	1070	MIT	no	IA para educadores latinoamericanos
+DanielDev87/virtual-center-app	CO	39	16	11357	Apache-2.0	no	0 operative deviations; APPENDIX placeholder filled (correct usage)
+CENIA-DEV/multilingual-translator-app	CL	1	1	11356	Apache-2.0	no	0 deviations; CENIA public org is 8 repos, all <=2 stars
+latam-gpt/llm-data-eval	CL	16	3	0	NO LICENCE FILE	YES	
+latam-gpt/toxicity-classifier	CL	5	1	0	NO LICENCE FILE	YES	
+latam-gpt/language_identifier	CL	3	1	0	NO LICENCE FILE	no	only live latam-gpt repo
+latam-gpt/fasttext-classifiers	CL	0	2	0	NO LICENCE FILE	YES	
+latam-gpt/training-estimations	CL	2	0	0	NO LICENCE FILE	YES	
+Escuela-713/sge_713	AR	8	3	0	NO LICENCE FILE	no	Esquel, Chubut; student-built

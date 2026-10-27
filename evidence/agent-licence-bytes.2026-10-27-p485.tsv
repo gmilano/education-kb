@@ -1,0 +1,16 @@
+repo	stars	branch	bytes	sha256_12	licence	usable_by_globant	note
+HKUDS/DeepTutor	45506	main	-	-	Apache-2.0	yes-with-caveat	star figure re-read this pass; 6 operative deviations recorded p484
+oppia/oppia	6947	develop	11357	58d1e17ffe51	Apache-2.0	yes	
+ZeKaiNie/universal-examprep-skill	355	main	1064	11b8094164f8	MIT	yes	agent-skill form factor
+Li-Evan/Bloom	293	main	1068	315be3d6cf4a	MIT	yes	Bloom 2-sigma; Claude skill + self-hostable web app
+SenmuuuuW/universal-diagnostic-tutor-skill	251	main	1101	6311bbb879c9	MIT	yes	diagnosis-first; no mode menu
+artcc/freelingo	209	main	34514	ea94d5765c59	AGPL-3.0	flagged	network copyleft; CEFR + Ollama self-hosted
+zijinz456/OpenTutor	152	main	1067	72c03c50ecf0	MIT	yes	local-first; 10+ providers
+ahmedEid1/lumen	91	main	35148	8b1ba204bb69	GPL-3.0	flagged	sha matches p455 canonical GPL-3.0 fingerprint; MCP server + CI evals
+Zenglian990/AI_Tutor_Release	74	master	1067	6beebb286c67	MIT	yes	EduAgent; K-9 RAG; LanceDB
+A-R007/Multi-Agent-Study-Assistant	64	-	0	-	NO LICENCE FILE	NO	excluded from shelves on licence grounds
+ArnaudGuiovanna/tutor-mcp	56	main	1072	6bce75979c68	MIT	yes	Go MCP server; BKT; turns any LLM into an ITS
+InfinityZero3000/LexiLingo	49	main	1068	99000de8d84b	MIT	yes	Trace-CAG pipeline
+TovTechOrg/Tov-learn	36	master	1063	16aa56acdbea	MIT	yes	Claude Code skill; spaced repetition
+towardsai/ai-tutor-app	33	main	11386	-	Apache-2.0	yes	0 deviations (p484); LangGraph agentic RAG
+koukekoukej-glitch/feynman-tutor	32	main	1055	26e0d1929275	MIT	yes	Feynman technique; learner teaches the AI

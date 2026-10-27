@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27T17:40Z` — **the five-interval LATAM nil ENDS, and the leader's star figure turns out to have been understated by this base for its whole history**
+
+🔵 Discovery ran through the **authenticated GitHub search channel** (`topic:`, `in:description`,
+`org:`), with every licence claim then verified independently by fetching `LICENSE` from
+`raw.githubusercontent.com`. Four queries this pass.
+
+### 🟢 Entering the panel — licences from bytes
+
+| repository | ★ | licence (bytes) | why it enters |
+|---|---|---|---|
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 293 | 🟢 MIT · 1 068 B | Bloom's **2-sigma** research shipped as a Claude Code skill *and* a self-hostable web app — the dual form factor is new on this panel. 43 forks. |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 251 | 🟢 MIT · 1 101 B | **Diagnosis-first with no mode or command menu** — the agent chooses the next teaching step rather than exposing one. Created 2026-06-26, pushed 2026-10-27. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 209 | 🔴 **AGPL-3.0** · 34 514 B | Self-hosted CEFR language platform: voice conversations, flashcards, spaced repetition, Ollama. 55 forks. **Network copyleft — flagged, not recommended blind.** |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 91 | 🔴 **GPL-3.0** · 35 148 B | The only row here shipping **golden evals in CI** and a public `/eval` endpoint, plus an MCP server and a no-LangChain orchestrator. 40 forks. |
+| [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 🟢 MIT · 1 067 B | **EduAgent** — RAG tutor built specifically for grades 1–9 rather than adult learners. LanceDB. |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 🟢 MIT · 1 072 B | 🟢 **An MCP server that makes any LLM an Intelligent Tutoring System**, implementing **BKT**. Go. The cleanest composition seam found so far. |
+| [InfinityZero3000/LexiLingo](https://github.com/InfinityZero3000/LexiLingo) | 49 | 🟢 MIT · 1 068 B | **Trace-CAG** pipeline aimed at zero-hallucination *pedagogical* feedback — a CAG rather than RAG approach. |
+| [koukekoukej-glitch/feynman-tutor](https://github.com/koukekoukej-glitch/feynman-tutor) | 32 | 🟢 MIT · 1 055 B | Inverts the loop — **the learner teaches the AI** to expose their own gaps. |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 135 | 🟢 **MIT** · 1 069 B | 🟢 **First LATAM-origin entrant in five intervals.** Curated, normalised Chilean public data including education. |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | 721 | 🟡 GPL-2.0 · 18 091 B | 🟢 **The LATAM headline.** 552 forks, `software-publico`, national school-census module, pushed today. Not an AI project — which is the point. |
+
+### 🔴 The leader's star count was understated here for its entire history
+
+🔵 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) read **45 506★** this pass (5 724 forks,
+212 open issues, pushed 2026-10-27T17:47Z). 🔴 This base's own record: `~22k` (`p54`), `~24k`
+(`p65`), then a star figure carried without re-reading through `p484`. 🟢 The current value is **about
+double** the last recorded one. 🔵 `p484` corrected DeepTutor's *licence* by cloning it while leaving
+its *popularity* field stale — a reminder that re-reading one axis of a row does not refresh the
+others.
+
+### 🟢 The trend reading, sharpened from `p484`
+
+🔵 `p484` read four entrants as "local or self-hosted execution". 🟢 With ten more rows the sharper
+statement is about **packaging**:
+
+🟢 **Five of this panel's rows ship as an agent skill, and one as an MCP server — a
+prompt-and-protocol contract rather than a runtime.** `universal-examprep-skill`, `Bloom`,
+`universal-diagnostic-tutor-skill`, `Tov-learn`, `feynman-tutor`, plus `tutor-mcp`. 🔵 They target
+host agents (Claude Code, Cursor, Codex, Windsurf, Antigravity) instead of provisioning a server per
+school, which explains three things at once: they are small, they are **uniformly MIT**, and they
+appeared fast.
+
+🟢 **And the correlation that gives it teeth:** every skill-form row on this panel is **MIT**, while
+all three copyleft rows (`freelingo` AGPL-3.0, `lumen` GPL-3.0, the `portabilis` AGPL set) are
+**full applications with servers**. 🔵 Form factor predicts licence here better than origin or
+star count does.
+
+🟡 **Stated with its limit:** six of sixteen rows, read partly from self-description. A large new
+application-form entrant would weaken it (`Gap 485-Q`).
+
+### 🔴 What this pass did **not** find, recorded so the silence is not mistaken for coverage
+
+🟢 **The LATAM nil is over, and the cause was the instrument — exactly as `p484` suspected.** The fix
+was not owner enumeration but the **`in:description` qualifier**: 75 hits, majority genuinely
+regional, against `p484`'s 207 hits and ~0. Mechanism and both query forms on
+[`intel/market.md`](../intel/market.md). 🔴 **Four of this base's five prior "no LATAM repository
+found" entries were instrument artefacts and should be read as retracted.**
+
+🔴 **`latam-gpt` is not a usable component.** Five repositories, **four archived**, and **all five
+with no licence file**. Any earlier recipe naming Latam-GPT is void; `compose/patterns.md` rewrites
+it this pass.
+
+🔴 **No star deltas, for the second consecutive pass.** `p484` deferred the velocity column and so
+does this pass — discovery spend went to the LATAM channel fix and to licence bytes. 🔵 The panel has
+**current** absolute figures for sixteen rows, which is the input a delta needs; velocity is
+computable next pass and is declared as `Gap 485-X`.
+
+🔴 **No African or Middle-Eastern education repository surfaced**, and unlike the LATAM case this
+pass **did not test an instrument** for it — no Arabic, French, Swahili or Portuguese-African query
+was run. The region is **unmeasured, and this time without a diagnosis** (`Gap 485-Y`).
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-X`** | **Velocity unmeasured for two passes.** Sixteen current absolute star figures exist; no deltas. Next pass can compute them without new discovery. |
+| 🔴 **`Gap 485-Y`** | **Africa and the Middle East: no query run, no instrument tested.** An undiagnosed nil, unlike LATAM's. |
+| 🟡 **`Gap 485-Z`** | **Entry reasons are read from descriptions and topics**, not from source. `tutor-mcp`'s BKT and `LexiLingo`'s Trace-CAG are claims by their authors; neither Go nor Python was read. |
+
+---
+
 ## 🆕 `p484` — `2026-10-27T16:50Z` — two rows enter the panel with licences verified from **bytes** rather than API fields, and the leader is measured from source for the first time in its history on this shelf
 
 🔵 Discovery this pass ran through the **authenticated GitHub API** (search), with every licence

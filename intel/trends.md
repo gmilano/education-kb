@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27` — **🟢 `T484-1`'s multi-tenancy axis SURVIVES a fifth point, but the pass's real result is a different axis entirely: **form factor predicts licence**. Every skill-form row measured is MIT; every copyleft row is a server application. 🔴 And `T485-6` corrects a compliance date this base had wrong by 16 months.**
+
+🔵 Eight trends. Those resting on first-hand measurement are marked 🟢; those resting on secondary
+sources are marked 🟡. Licence figures are **bytes fetched this pass**.
+
+### 🟢 `T485-1` — form factor predicts licence, and it is the strongest new signal
+
+🟢 Sixteen rows on `agents/top.md` and `agents/trending.md`, every licence read from bytes:
+
+| form factor | rows | licences |
+|---|---|---|
+| **agent skill / MCP server** (prompt-and-protocol contract) | `universal-examprep-skill`, `Bloom`, `universal-diagnostic-tutor-skill`, `Tov-learn`, `feynman-tutor`, `tutor-mcp` | 🟢 **MIT, 6 of 6** |
+| **server application** | `freelingo`, `lumen`, `i-diario` + `i-diario-app` + `pre-matricula-digital` | 🔴 **copyleft, 5 of 5** (AGPL-3.0, GPL-3.0, translated AGPL-3.0) |
+
+🔵 **The mechanism is plausible and worth stating:** a skill ships *text and a protocol* — there is no
+server to run, so network copyleft has nothing to attach to and the author has little to protect. A
+platform with a server has both. 🟢 This is a sharper and more useful statement than `p484`'s
+"local or self-hosted execution" reading of the same population, because it **predicts** the licence
+of the next entrant rather than describing the last four.
+
+🟡 **Limit:** eleven classified rows, and form factor was read from descriptions and repository
+shape, not from build manifests (`Gap 485-Q`).
+
+### 🟢 `T485-2` — the multi-tenancy axis takes a fifth point and holds
+
+🟢 `T484-1` replaced a provenance axis (institutional vs community) with **multi-tenancy** after
+DeepTutor — a university lab project — shipped deny-by-default tool grants. 🟢 **The fifth point fits:**
+`ahmedEid1/lumen` is a single-developer GPL-3.0 project that nonetheless ships **BYOK, a moderated
+sharing catalog, golden evals in CI and a public `/eval` endpoint** — governance machinery, because it
+serves *many* learners who share and remix courses. 🔵 Provenance predicts nothing; **whether the
+thing is multi-tenant predicts guard machinery.** 🟡 Five points (`Gap 485-AA`).
+
+### 🔴 `T485-3` — a licence can fail by being in the wrong language, and no instrument here detected it
+
+🔴 Three `portabilis` repositories (117★ + 29★ + 21★) serve AGPL-3.0 **as a Portuguese translation
+with zero English text** — `GNU AFFERO GENERAL PUBLIC LICENSE` occurs **0 times** in 35 325 B. The FSF
+holds its translations unofficial and not legally operative.
+
+🔵 **The trend statement is about instruments, not about Brazil.** This base grades licences on
+**deviation from canonical** (`p484`) and on **version** (`p455`). A translated grant defeats both: a
+deviation counter sees no byte overlap and reports noise; a version reader finds "Versão 3" and
+passes it. 🔴 A **language axis** is required and does not exist (`Gap 485-S`). Any non-English licence
+payload on these shelves is currently **ungraded**, and this pass checked only Portuguese.
+
+### 🔴 `T485-4` — the file-count instinct for i18n is backwards
+
+🟢 Measured across six cloned platform trees (123 967 paths) and then against the actual locale
+payloads:
+
+| platform | es *files* | es *strings* |
+|---|---|---|
+| `sakai` | 318 | 98.6 % |
+| `chamilo` | 272 | 4 639 keys |
+| `kolibri` | 70 | 96.7 % |
+| **`ILIAS`** | **1** | 🟢 **99.99 % — 18 042 of 18 044** |
+
+🔴 **ILIAS ranks last by file count and first by coverage.** Its lang pack is monolithic — one
+1 350 198 B `key#value` file per language. 🟢 **File counts measure packaging architecture, not
+localisation depth**, and any shelf ranking i18n by file count will invert the truth. 🔴 Two
+platforms (Moodle, Open edX) ship translations **out-of-tree** and are honestly *not measurable* from
+their repositories at all — Moodle's in-tree 48 `es` matches are vendored H5P plus the installer.
+
+### 🟢 `T485-5` — LATAM's open-source education output is administrative software, not AI
+
+🟢 With the discovery channel fixed (`in:description`), twelve regional repositories surfaced and
+**nine of twelve predate the LLM era in intent**: school information systems, gradebooks, enrolment,
+offline attendance, statutory census filing, public-data engineering. The largest is
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) — **721★ / 552 forks**, GPL-2.0,
+`software-publico`, thirteen years live, **no AI surface at all**.
+
+🔴 **And the counter-current:** the region's flagship *AI* effort is not usable. `latam-gpt` is five
+repositories, **four archived**, **five of five unlicensed**; `CENIA-DEV` is eight repositories, none
+above 2★. 🔵 **The regional opportunity is an AI layer over deployed administrative software — not a
+regional model.** That inverts how prior passes framed LATAM.
+
+### 🔴 `T485-6` — the EU education deadline moved 16 months, and the 2026 obligations did not
+
+🔴 This base carried the old date. The EU AI Act's **Annex III includes education**, and its
+stand-alone high-risk deadline moved from **2 August 2026** to **2 December 2027** — the Digital
+Omnibus, **Regulation (EU) 2026/1744**, OJ **24 July 2026**, in force **27 July 2026**.
+
+🔴 **Three obligations did *not* move, and they are the ones live now:** **Article 50 transparency
+applies from 2 August 2026** (generative-AI and chatbot disclosure is **not** deferred); **Article 27
+still requires a FRIA** before a high-risk system goes into use; Annex I embedded AI moves to 2 August
+2028. 🔵 **Trend reading:** the delay is a procurement *window*, not a reprieve — an institution buying
+in 2026 wants the FRIA surface and disclosure built in, because retrofitting a high-risk
+classification in 2027 costs more. 🔴 Secondary sources only; `eur-lex.europa.eu` is unreachable
+through this proxy (`Gap 485-H`).
+
+### 🟡 `T485-7` — APAC is regulating curriculum, not risk
+
+🟡 Where the EU writes risk regulation, APAC writes **mandates**: 🇨🇳 China — Beijing ≥**8 AI hours per
+year** in primary and secondary since 2025, Guangdong 6 hours rising to **one hour per fortnight in
+grades 10–11**, a national "AI + Education" plan setting objectives and hours, and **AI added to
+teacher qualification exams**. 🇮🇳 India — **AI and Computational Thinking mandatory from Class 3, from
+the 2026–27 academic year**, framed as "AI for Public Good", teacher training via **NISHTHA**,
+framework by **CBSE with IIT Madras**. 🇸🇬 Singapore — **Code for Fun**, ~10 compulsory hours from
+Primary 4.
+
+🟢 **The consequence is a demand shape, not a sentiment:** national curriculum mandates create demand
+for **teacher-facing** tooling — preparation, qualification, assessment at ministry scale — rather
+than student-facing tutors. 🔵 And that is the clearest case for `T485-1`'s skill form factor: a skill
+reaches teachers without provisioning an application per school. 🟡 News and commentary, except
+Singapore's MOE parliamentary reply of **6 May 2026** (`Gap 485-I`).
+
+### 🟡 `T485-8` — the governance gap is the North American product
+
+🟡 Secondary compilations put North America at **~36 % of global adoption** with **~10 % of
+institutions holding formal AI guidelines** and **~71 % of US teachers lacking AI training**, against
+no federal instrument and piecemeal state rules. 🟢 `Gap 483-L` established Canada has **no federal
+K-12 AI instrument**, and the absence is the finding. 🔵 **Reading:** a 26-point spread between use and
+governance is the sellable unit — the deliverable is the **auditable wrapper** (per-tenant tool
+grants, egress control, audit trail), which is exactly the machinery `T485-2` says multi-tenant
+projects already build. 🟡 All figures directional (`Gap 485-L`).
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-AB`** | **Every guard and governance claim is read from source, descriptions or docstrings; none is executed** (`Gap 485-A`, `484-A`, `483-A`, `446-A`). `lumen`'s CI evals and `tutor-mcp`'s BKT are both unrun. |
+| 🟡 **`Gap 485-AA`** | **`T485-2` has five points.** Better than the three it replaced, still a hypothesis; and all five were selected by this base, which is not a sampling frame. |
+| 🟡 **`Gap 485-AC`** | **`T485-1` is the pass's strongest claim and its most falsifiable.** Eleven classified rows, form factor read from descriptions rather than build manifests. One large MIT-licensed application-form entrant, or one copyleft skill, weakens it materially. |
+| 🟡 **`Gap 485-AD`** | **`T485-4`'s coverage figures are completeness, not quality** — a present `key#value` line may hold untranslated English, and nothing checked that. Sakai's 98.6 % is a 9-of-219 family sample (`Gap 485-B`). |
+| 🔴 **`Gap 485-AE`** | **`T485-6` and `T485-7` rest on secondary sources** — `Gap 484-N` carries forward in substance. Six independent legal commentaries agree on 2 Dec 2027, which is corroboration, not the Official Journal. |
+| 🟡 **`Gap 485-AF`** | **`T485-5` reads 552 forks as deployment**, which is an inference (`Gap 485-K`); and `i-educar`'s "no AI surface" is from topics and package names, not from a cloned tree (`Gap 485-T`). |
+
+---
+
 ## 🆕 `p484` — `2026-10-27` — **🔴 `T483-1` IS REFUTED BY THIS BASE'S OWN LARGEST ROW. The axis `p483` published — institutional vendors ship authorisation machinery, community projects ship tools — does not survive contact with `DeepTutor`: an academic/community project that ships deny-by-default tool grants, two-posture SSRF guards and connect-time DNS-rebinding revalidation. 🟢 The axis that *does* hold the four measured points is **multi-tenancy**, not provenance.**
 
 🔵 Eight trends. Those resting on first-hand code measurement are marked 🟢; those resting on

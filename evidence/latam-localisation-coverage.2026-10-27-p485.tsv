@@ -1,0 +1,8 @@
+platform	commit	licence	instrument	unit	en_baseline	es_count	es_pct	pt_count	pt_pct	pt_variant	note
+ILIAS-eLearning/ILIAS	db9582e	GPL-3.0	monolithic lang pack key#value lines	keys	18044	18042	99.99	18041	99.98	pt	1 file per language; file-count census ranked it LAST
+sakaiproject/sakai	25c133c	ECL-2.0	9-of-219 bundle-family sample, key intersection	keys	283	279	98.6	266	94.0	pt_BR	219 families carry full en+es+pt_BR triples
+chamilo/chamilo-lms	d018153	GPL-3.0	JSON catalogue keys	keys	n/a	4639	n/a	4612	99.4 of es	pt_BR + pt_PT	168 locale tags; ships es_MX and es_419
+learningequality/kolibri	dbe14ef	MIT	core default_frontend message catalogue	keys	553	535	96.7	529	95.7	pt_BR	ships es_419 LatAm Spanish macro-locale
+openeducat/openeducat_erp	46a5d7d	LGPL-3.0	openeducat_core gettext	entries	889	889	100.0	889	100.0	pt	core module only; 12 modules carry es+pt
+moodle/moodle	46c042e	GPL-3.0	NOT MEASURABLE FROM REPO	-	-	-	-	-	-	-	lang packs ship out-of-tree; in-tree 48 es/31 pt are vendored H5P + installer only
+openedx/edx-platform	-	AGPL-3.0	NOT MEASURABLE FROM REPO	-	-	-	-	-	-	-	translations live in openedx/openedx-translations

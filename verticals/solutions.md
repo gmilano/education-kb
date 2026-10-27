@@ -4,6 +4,128 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27` — **🟢 BOTH CHEAP CLOSURES THIS SHELF OWED ARE PAID, AND ONE OF THEM IS A LICENCE CORRECTION ON THIS SHELF'S OWN DATA: `sakaiproject/sakai` is **ECL-2.0**, not the Apache-2.0 this shelf has carried. 🔴 And `Gap 484-U` closes with a result that **inverts the obvious instrument**: ILIAS, which a file-count census ranks DEAD LAST at one file per language, has the most complete Spanish and Portuguese localisation of any platform here — 99.99 % of the English key set.**
+
+🔵 `Gap 484-T` and `Gap 484-U` were both named by `p484` as owed to this shelf, one as "a cheap closure
+left undone". Both are closed from bytes and trees fetched this pass. Full tables:
+[`vertical-licence-bytes`](../evidence/vertical-licence-bytes.2026-10-27-p485.tsv),
+[`latam-localisation-coverage`](../evidence/latam-localisation-coverage.2026-10-27-p485.tsv).
+
+🔵 **Gate posture, unchanged from `p475`–`p484` (`Gap 446-A`):** `make hooks` **not attempted** — the
+industry KB is cloned outside the harness repo and the harness refuses execution of code arriving in
+a clone. Nothing here is gate-attested. Frontmatter keys and closed-vocabulary `region` re-checked by
+hand on all nine shelves: **9/9 pass**.
+
+### 🔴 `Gap 484-T` closed — and it corrects this shelf, not just completes it
+
+🟢 Five carried licences probed on `raw.githubusercontent.com`, plus four neighbours for context.
+Every figure below is **bytes fetched this pass**.
+
+| platform | licence from bytes | B | `sha256[:12]` | verdict |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** *Version 3, 29 June 2007* | 35 146 | `c53a65c2fd56` | 🟢 carried value confirmed |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** *Version 3, 19 Nov 2007* | 35 135 | `106a1b4b8b71` | 🟢 confirmed |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** — *Educational Community License, Version 2.0* | 11 119 | `efbb3e5a1b9a` | 🔴 **CORRECTION — shelf carried Apache-2.0** |
+| [`uPortal-project/uPortal`](https://github.com/uPortal-project/uPortal) | **Apache-2.0** | 11 358 | `f841d74e27be` | 🟢 **0 deviations** — byte-identical to `apache.org` canonical |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | 10 272 | `9ff562631a04` | 🔴 **§4 sub-clause labels stripped** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1 096 | `fa4c9d2697f9` | 🟢 |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** | 8 240 | `8f4ce028f93d` | 🟢 LGPL preamble over GPL body |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | 35 146 | `c53a65c2fd56` | 🟢 |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | 35 146 | `c53a65c2fd56` | 🟢 |
+
+🔴 **The Sakai correction matters practically, not pedantically.** ECL-2.0 is an Apache-2.0
+*derivative* — the Open Source Initiative lists it separately — and its divergence is precisely in
+the **patent grant**, narrowed to the contributor's own contributions rather than Apache's broader
+grant. A client engagement that cleared Sakai through an "Apache-2.0 approved" list cleared it under
+the wrong text.
+
+🟢 **A free cross-check fell out of this probe.** Moodle, Chamilo and ILIAS serve **byte-identical**
+GPL-3.0 (`c53a65c2fd56`, 35 146 B) from three unrelated projects. Three independent repositories
+agreeing to the byte is strong evidence that fingerprint *is* canonical GPL-3.0 — a baseline this
+base can now use without re-fetching, which matters because 🔴 **`gnu.org` is not reachable through
+this proxy** (`403 CONNECT tunnel failed`), so the FSF's own copy cannot be fetched at all.
+
+🔴 **Tsugi's deviation, stated exactly.** Word-level diff against the `apache.org` canonical text:
+**5 deviations, all inside §4 Redistribution** — the sub-clause labels `(a) (b) (c) (d)` are
+**absent**, and `work.` appears as `work`. The four redistribution conditions themselves are present
+and intact, joined by "and". 🔵 So the obligations survive, but **§4(d) — the NOTICE obligation — has
+no label to cite**, which is the clause `p484` found DeepTutor deviating inside. Two of the three
+Apache texts this base has now read deviate in the same clause.
+
+### 🟢 `Gap 484-U` closed — and the obvious instrument is backwards
+
+🔵 The gap asked the question "a LATAM engagement actually asks of an LMS": does it speak Spanish and
+Portuguese? 🟢 Six platforms were cloned `--filter=blob:none --no-checkout --depth 1` — **123 967
+tracked paths** at pinned commits — and then the actual locale payloads were fetched and counted.
+
+🔴 **The first instrument, a file-count census, produces this ranking — and it is wrong:**
+
+| platform | es files | pt files | locale tags |
+|---|---|---|---|
+| `sakai` | 318 | 252 | 53 |
+| `chamilo` | 272 | 134 | 168 |
+| `kolibri` | 70 | 34 | 46 |
+| `moodle` | 48 | 31 | 215 |
+| `openeducat` | 12 | 12 | 19 |
+| **`ILIAS`** | **1** | **1** | 33 |
+
+🟢 **The second instrument — counting translated strings — inverts it:**
+
+| platform | licence | unit | en | **es** | **pt** | pt variant |
+|---|---|---|---|---|---|---|
+| **`ILIAS`** `db9582e` | GPL-3.0 | lang-pack keys | 18 044 | **18 042 · 99.99 %** | **18 041 · 99.98 %** | `pt` |
+| `sakai` `25c133c` | ECL-2.0 | bundle keys (9-of-219 sample) | 283 | 279 · 98.6 % | 266 · 94.0 % | `pt_BR` |
+| `chamilo` `d018153` | GPL-3.0 | JSON catalogue keys | n/a | 4 639 | 4 612 · 99.4 % of es | `pt_BR` + `pt_PT` |
+| `kolibri` `dbe14ef` | MIT | core frontend catalogue | 553 | 535 · 96.7 % | 529 · 95.7 % | `pt_BR` |
+| `openeducat` `46a5d7d` | LGPL-3.0 | `openeducat_core` gettext | 889 | 889 · 100 % | 889 · 100 % | `pt` |
+
+🟢 **ILIAS ships one file per language because its lang pack is monolithic** —
+`lang/ilias_es.lang`, 1 350 198 B of `key#value` lines. One file is not thin coverage; it is a
+packaging choice. The file-count census was measuring **packaging architecture** and reporting it as
+localisation depth. 🔵 Any future shelf tempted to rank i18n by file count should read this row first.
+
+🔴 **Two platforms are honestly NOT MEASURABLE from their repositories, and are recorded that way
+rather than scored.** Moodle ships language packs **out-of-tree** (`lang.moodle.org`), and Open edX
+keeps translations in a separate `openedx/openedx-translations` repository. Moodle's in-tree 48 es /
+31 pt matches are **vendored H5P editor translations plus the installer**, nothing more — reading
+them as Moodle's Spanish coverage would understate the platform enormously. Moodle's real coverage is
+a claim this pass **cannot** make from bytes.
+
+🟢 **Two findings a LATAM engagement can act on directly:**
+- **Kolibri ships `es_419`** — the Latin-American Spanish macro-locale, not `es_ES` — at 96.7 %, and
+  is **MIT**, and is offline-first. For a low-connectivity deployment in the region that combination
+  is unmatched on this shelf.
+- **Sakai and Chamilo distinguish `pt_BR` from `pt_PT`.** ILIAS and OpenEduCat ship generic `pt`.
+  Brazilian Portuguese is not a cosmetic variant to a Brazilian ministry, and three of the five
+  measured platforms get this right.
+
+### The shelf, after two passes of measurement
+
+| platform | licence (bytes) | AI surface | es | pt | fit |
+|---|---|---|---|---|---|
+| ILIAS | GPL-3.0 | 🔴 none native (`p483` census) | **99.99 %** | **99.98 %** | deepest localisation; copyleft |
+| Sakai | **ECL-2.0** | 🔴 none native | 98.6 % | 94.0 % `pt_BR` | Apache-like, narrower patent grant |
+| Chamilo | GPL-3.0 | 🔴 none production-ready | 4 639 keys | `pt_BR`+`pt_PT` | Spanish-first lineage |
+| Moodle | GPL-3.0 | 🟡 4.5 subsystem, early-stage | out-of-tree | out-of-tree | largest installed base |
+| Open edX | AGPL-3.0 | 🟡 plugin-mediated | out-of-tree | out-of-tree | XBlock is the AI seam |
+| Kolibri | **MIT** | 🔴 none native | 96.7 % `es_419` | 95.7 % `pt_BR` | 🟢 permissive + offline + LatAm locale |
+| OpenEduCat | LGPL-3.0 | 🔴 none native | 100 % (core) | 100 % (core) | Odoo ERP seam |
+| uPortal | **Apache-2.0** · 0 dev. | 🔴 n/a (portal) | — | — | permissive front door |
+| Tsugi | Apache-2.0 · §4 stripped | 🔴 n/a (LTI) | — | — | LTI bridge for AI tools |
+
+### 🔴 Declared gaps — what this shelf still cannot say
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-A`** | **Still nothing executed** (`Gap 484-A`, `Gap 483-A`, `Gap 446-A` carry forward unchanged). Every claim is read, not run. |
+| 🟡 **`Gap 485-B`** | **Sakai's coverage is a 9-of-219 sample, not a census.** 283 keys is a thin base for a 98.6 % figure; the remaining 210 families were not fetched. One loop would settle it. |
+| 🔴 **`Gap 485-C`** | **Moodle and Open edX localisation remains unmeasured**, and is the pair that matters most by installed base. It needs the out-of-tree channels (`lang.moodle.org`, `openedx/openedx-translations`), neither probed this pass. |
+| 🟡 **`Gap 485-D`** | **Key counts are not translation quality.** A present `key#value` line can hold an untranslated English string, and nothing here checked that. ILIAS's 99.99 % is a *completeness* figure only. |
+| 🟡 **`Gap 485-E`** | **Canonical GPL-2.0 could not be fetched from the FSF** (`gnu.org` 403 through this proxy). The SPDX text was substituted and is labelled as such everywhere it is used — it is not the FSF's copy. |
+| 🟡 **`Gap 485-F`** | **`Gap 484-S` carries forward**: the corroborating LMS/AI comparison is still a vendor-adjacent blog with no sampling frame, and nothing this pass strengthened it. |
+
+---
+
 ## 🆕 `p484` — `2026-10-27` — **🟢 `p483`'s FIRST-HAND VERDICT NOW HAS INDEPENDENT CORROBORATION: a secondary comparison reaching seven institutional LMS platforms finds **none** with production-ready native AI — which is the same answer `p483` got by censusing module paths, from a channel sharing no method with it. 🔴 And the largest teacher-tooling product on this shelf turns out to be **ShareAlike**.**
 
 🔵 This shelf's brief is *"real systems that can be customized with AI on top"*. Two things changed

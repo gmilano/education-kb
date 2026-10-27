@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27` — **🟢 A FOUNDATION THIS SHELF HAS NEVER LISTED, AND IT IS THE MOST DEPLOYED EDUCATION CODEBASE IN LATIN AMERICA: `portabilis/i-educar` — 721★ against **552 forks**, GPL-2.0, PHP/Laravel, with a module that files Brazil's national school census. 🔴 Its sibling `i-diario` fails this shelf's licence bar for a reason no prior instrument could detect.**
+
+🔵 This shelf's test is whether a repository is something **others build on**. Fork-to-star ratio is
+the cheapest honest proxy for that, and this pass applied it to the LATAM supply that
+[`intel/market.md`](../intel/market.md) surfaced for the first time. Licences are **bytes**; census in
+[`latam-supply-census`](../evidence/latam-supply-census.2026-10-27-p485.tsv).
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted**; nothing gate-attested.
+
+### 🟢 Why `i-educar` belongs on the foundations shelf
+
+| foundation property | evidence |
+|---|---|
+| **fork-to-star ratio** | **552 forks / 721 stars = 0.77** — extraordinarily high. Compare DeepTutor at 5 724/45 506 = **0.13**. Stars measure attention; forks at this ratio measure **people standing up their own instance**. |
+| extension mechanism | A published **package** architecture, not a monolith: `i-educar-reports-package` (35★, JasperReports), `i-educar-transport-package` (14★), `i-educar-library-package` (13★), `i-educar-educacenso-package` (3★). Third parties ship modules against it. |
+| **statutory integration** | `i-educar-educacenso-package` files **Educacenso**, Brazil's national school census. A codebase wired into a country's statutory reporting is infrastructure, not an app. |
+| institutional framing | Self-described *"o maior software livre de educação do Brasil"*, tagged **`software-publico`** — Brazil's public-software designation. |
+| companion products | `i-diario` (117★/62 forks, Ruby/Rails teacher gradebook), `i-diario-app` (29★/23 forks, **offline** attendance capture), `pre-matricula-digital` (21★/10 forks, enrolment + waitlists). |
+| longevity | Created **2013-01-31**, pushed **2026-10-27** — thirteen years live, active today. |
+| 🔴 no AI surface | Nothing. No `ai`, `llm` or `mcp` module in the package set. 🟢 **That is the opportunity, not a defect.** |
+
+🟡 **The ratio is read as deployment and that is an inference** (`Gap 485-K`): 552 forks is consistent
+with municipalities self-hosting, but no instance was probed and no municipality named.
+
+### 🔴 The licence split inside one organisation — and the new instrument it needed
+
+🔴 The `portabilis` repositories **do not share a licence**, and the difference decides whether
+Globant can touch them:
+
+| repository | licence from bytes | B | `sha12` | shelf verdict |
+|---|---|---|---|---|
+| `portabilis/i-educar` | 🟡 **GPL-2.0** *Version 2* | 18 091 | `f9c375a1be4a` | 🟢 **admitted** — copyleft, usable over an API boundary |
+| `portabilis/i-educar-reports-package` | 🟡 GPL-2.0 | 18 091 | `f9c375a1be4a` | 🟢 admitted |
+| `portabilis/i-educar-transport-package` | 🟡 GPL-2.0 | 18 091 | `f9c375a1be4a` | 🟢 admitted |
+| `portabilis/i-diario` | 🔴 **AGPL-3.0 in Portuguese translation** | 35 325 | `837b5cf19787` | 🔴 **grant unresolved** |
+| `portabilis/i-diario-app` | 🔴 AGPL-3.0 **translated** | 35 325 | `837b5cf19787` | 🔴 grant unresolved |
+| `portabilis/pre-matricula-digital` | 🔴 AGPL-3.0 **translated** | 35 325 | `837b5cf19787` | 🔴 grant unresolved |
+
+🔴 **The three AGPL files contain zero English licence text** — the string
+`GNU AFFERO GENERAL PUBLIC LICENSE` occurs **0 times**. The FSF holds its translations unofficial and
+not legally operative, so the grant is, strictly read, undefined. Full treatment on
+[`agents/top.md`](../agents/top.md).
+
+🟢 **The instrument lesson is the transferable part.** This base already graded licences on
+*deviation from canonical* (`p484`) and on *version* (`p455`). **Neither detects a change of
+language** — a translated AGPL has no byte overlap with the canonical text, so a deviation counter
+reports noise and a version reader finds "Versão 3" and moves on. A **language axis** is now required
+and is declared as `Gap 485-S`.
+
+### 🟡 `Gap 484-T` paid a dividend to this shelf too
+
+🟢 `uPortal-project/uPortal` is **Apache-2.0, 11 358 B, byte-identical to the `apache.org` canonical
+text — 0 deviations**. 🔵 That makes it the **cleanest permissive foundation** on this shelf by licence
+hygiene, and it is a *portal* framework — the institutional front door an AI surface can be mounted
+into without touching an AGPL LMS core. 🔴 `tsugiproject/tsugi` (Apache-2.0, 10 272 B) has **§4's
+`(a)(b)(c)(d)` sub-clause labels stripped**, leaving the NOTICE obligation unlabelled; it remains the
+LTI bridge of choice but its grant text is not clean.
+
+### 🟢 The shelf, as it stands
+
+| repository | ★ | forks | f/★ | licence (bytes) | why it is a foundation |
+|---|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 45 506 | 5 724 | 0.13 | 🔴 Apache-2.0, 6 deviations | Plugin-extensible agent platform: 110 tool definitions, 51-file MCP host layer, quota'd sandbox, three-layer memory (`p484`, `a31d826`) |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | 721 | **552** | **0.77** | 🟡 GPL-2.0 · 18 091 B | 🟢 **NEW** — deployed municipal SIS, package architecture, statutory census integration |
+| [oppia/oppia](https://github.com/oppia/oppia) | 6 947 | 5 857 | **0.84** | 🟢 Apache-2.0 · 11 357 B | Interactive-lesson platform with an explorations model others extend; permissive |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | — | — | — | 🟡 GPL-3.0 · 35 146 B | 17 087 files; **99.99 % es / 99.98 % pt** localisation — the deepest on either shelf |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | — | — | — | 🔴 **ECL-2.0** · 11 119 B | 18 348 files, 219 bundle families with full `en`+`es`+`pt_BR` triples |
+| [uPortal-project/uPortal](https://github.com/uPortal-project/uPortal) | — | — | — | 🟢 **Apache-2.0 · 0 deviations** | 🟢 cleanest permissive grant here; institutional portal frame |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | — | — | — | 🟢 **MIT** · 1 096 B | 6 040 files; offline-first; ships **`es_419`** at 96.7 % — the LatAm Spanish macro-locale |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | — | — | — | 🟡 LGPL-3.0 · 8 240 B | Odoo-framework education ERP; 100 % es and pt in core; the ERP seam |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 9 | 0.16 | 🟢 MIT · 1 072 B | 🟢 **NEW** — MCP server implementing BKT; a protocol others build against, which is what a foundation is |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 135 | 12 | 0.09 | 🟢 **MIT** · 1 069 B | 🟢 **NEW** — curated, normalised Chilean public data incl. education; Polars/DuckDB/SQLite ready |
+
+🔵 **Ten rows, ten real repositories, stated as ten.** Four are new this pass. The shelf is not padded
+to a round number, and 🔴 `A-R007/Multi-Agent-Study-Assistant` (64★) was **refused** for having no
+licence file.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-S`** | **A licence LANGUAGE axis is required and does not exist.** Deviation counting and version reading both fail on a translated grant. Until it exists, every non-English licence payload on these shelves is ungraded — and this pass only looked at Portuguese. |
+| 🔴 **`Gap 485-T`** | **`i-educar` has not been cloned or read.** Its package architecture, Educacenso module and absence of an AI surface are all from repository metadata, descriptions and topics — **not from source**. The highest-value unread repository on this shelf. |
+| 🟡 **`Gap 485-U`** | **Fork-to-star ratio is an unvalidated proxy.** It is used here to admit `i-educar` and it is doing real work, but nothing establishes the threshold, and forks inflate from coursework and one-off patches as well as deployments. |
+| 🟡 **`Gap 485-V`** | **`Gap 484-P`, `484-Q`, `484-R` carry forward unaddressed:** DeepTutor's plugin contract is still read rather than exercised, `OpenTutor` still rests on metadata plus licence bytes, and the sandbox remains the least-examined part of the most-examined row. |
+| 🟡 **`Gap 485-W`** | **Star and fork counts for five rows are absent** (ILIAS, Sakai, uPortal, Kolibri, OpenEduCat) — the search channel was spent on discovery, so the f/★ column is incomplete and the ratio argument covers only half the shelf. |
+
+---
+
 ## 🆕 `p484` — `2026-10-27` — **🟢 THE FOUNDATION ROW THIS SHELF NEVER EXAMINED IS NOW EXAMINED: `HKUDS/DeepTutor` is not only the star leader, it is a **plugin-extensible agent platform** — 110 tool definitions, a 51-file MCP host layer, a quota'd sandbox and a three-layer memory — which makes it a *foundation* in this shelf's sense and not merely an application. 🔴 Its Apache-2.0 text is non-canonical in six operative lines.**
 
 🔵 Measured first-hand at commit **`a31d826`** (tag `v1.6.15`, 2026-10-19), cloned

@@ -4,6 +4,187 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27` — **🔴 ONE RECIPE IS WITHDRAWN AND REPLACED: every pattern naming **Latam-GPT** is void — five repositories, four archived, **all five unlicensed**. 🟢 Its replacement is better anyway, because the region turns out to have 552 forks of deployed school software with no AI layer on it.**
+
+🔵 Every component named below had its `LICENSE` fetched from `raw.githubusercontent.com` **this
+pass**, or was cloned at a stated commit this pass or in `p484`. 🔴 Effort ranges remain
+**uncalibrated estimates** (`Gap 483-Q`, `Gap 484-V`) — relative ordering, not quotes.
+
+---
+
+### 🔴 `P485-0` — WITHDRAWN: any recipe naming Latam-GPT as a component
+
+🔴 Prior Globant-side patterns named **Latam-GPT** as the LATAM building block. Measured this pass:
+
+| repository | ★ | archived | licence |
+|---|---|---|---|
+| `latam-gpt/llm-data-eval` | 16 | 🔴 YES | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/toxicity-classifier` | 5 | 🔴 YES | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/language_identifier` | 3 | no | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/fasttext-classifiers` | 0 | 🔴 YES | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/training-estimations` | 2 | 🔴 YES | 🔴 **NO LICENCE FILE** |
+
+🔴 **Absent a licence, default copyright applies — all rights reserved.** None of it can be built on,
+regardless of intent, and four fifths is frozen. What exists is data-pipeline tooling, not a model or
+an education product. 🔵 The recipe is withdrawn rather than patched, and `P485-1` replaces it.
+
+---
+
+### 🟢 `P485-1` — AI layer over a deployed LATAM municipal school system
+
+🔵 **For:** a Brazilian municipality or state secretariat already running `i-educar` — of which there
+are plausibly hundreds, given **552 forks against 721 stars**.
+
+| layer | component | licence (verified this pass) |
+|---|---|---|
+| system of record | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `2.12` | 🟡 **GPL-2.0** · 18 091 B · `f9c375a1be4a` |
+| statutory reporting | [`i-educar-educacenso-package`](https://github.com/portabilis/i-educar-educacenso-package) | files Brazil's **Educacenso** national census |
+| reporting surface | [`i-educar-reports-package`](https://github.com/portabilis/i-educar-reports-package) | 🟡 GPL-2.0 (JasperReports) |
+| tutoring/ITS seam | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 1 072 B |
+| agent orchestration | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `a31d826` tool/MCP layer | 🔴 Apache-2.0, **6 operative deviations** |
+| offline edge | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `dbe14ef` | 🟢 **MIT** · 1 096 B · **`es_419` 96.7 %**, `pt_BR` 95.7 % |
+
+🔵 **Wiring, and the licence boundary is the whole point.** `i-educar` is **GPL-2.0**, so the AI
+components must not be linked into it. Keep them in a **separate process** and talk to the system of
+record over **HTTP/MCP only**:
+
+1. `tutor-mcp` runs as a standalone **MCP server** (Go, MIT) exposing BKT mastery estimation as tools.
+2. A DeepTutor-style host (or any MCP client) consumes those tools and the municipality's own LLM
+   endpoint; **no `i-educar` source is imported into either**.
+3. Reads from `i-educar` go through its HTTP surface and the reports package; writes go back as
+   ordinary records. 🟢 **GPL-2.0 obligations attach to derivative works, and a separate process
+   speaking a network protocol is the standard way to stay outside that** — the same boundary
+   `krzysztofbury/librus-mcp` documented for this base at `p455` (*"integrate over MCP, never vendor
+   the repository"*).
+4. Where connectivity is the binding constraint, **Kolibri** carries the learner-facing side offline,
+   and it is the only platform on these shelves shipping **`es_419`** — Latin-American Spanish rather
+   than `es_ES`.
+
+🟢 **First three use cases, in order of least-AI-risk:** enrolment triage and waitlist ranking over
+`pre-matricula-digital` data; **attendance-anomaly detection** (dropout early warning) over
+`i-diario-app`'s offline captures; **Educacenso filing assistance** — validating a census submission
+before it is filed, which is a checkable, high-value, low-hallucination-exposure task.
+
+🔴 **Blocker to clear before touching the `i-diario` family:** `i-diario`, `i-diario-app` and
+`pre-matricula-digital` ship AGPL-3.0 **as a Portuguese translation with zero English text**
+(35 325 B, `837b5cf19787`). The grant is, strictly read, undefined — see
+[`agents/top.md`](../agents/top.md). 🔵 **Resolve it with the maintainer in writing first.** `i-educar`
+itself is unaffected: its GPL-2.0 is the English text.
+
+🟡 Effort: **8–12 weeks** to a single-municipality pilot, uncalibrated.
+
+---
+
+### 🟢 `P485-2` — EU-compliant tutor with the 2026 obligations built in, not deferred
+
+🔵 **For:** an EU institution procuring in 2026 that does not want to retrofit a high-risk
+classification in 2027.
+
+| layer | component | licence (verified) |
+|---|---|---|
+| tutoring core | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · 1 067 B |
+| or ITS over any LLM | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 1 072 B |
+| eval harness | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) golden-eval + `/eval` pattern | 🔴 GPL-3.0 — **copy the pattern, not the code** |
+| tenancy + guards | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `multi_user/tool_access.py`, `services/mcp/network.py` | 🔴 Apache-2.0, 6 deviations |
+| institutional frame | [`uPortal-project/uPortal`](https://github.com/uPortal-project/uPortal) | 🟢 **Apache-2.0 · 0 deviations** |
+| LMS bridge | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (LTI) | 🔴 Apache-2.0, **§4 labels stripped** |
+
+🔵 **Wiring against the actual dates:**
+1. **Article 50 transparency applies from 2 August 2026 and was NOT deferred** — so build the
+   disclosure surface now: every generative response marked as AI-produced, at the UI layer, not in a
+   policy document.
+2. **Article 27 FRIA** is required before a high-risk system goes into use and was not deferred
+   either. Wire `lumen`'s **golden-evals-in-CI** pattern as the evidence generator: a FRIA that cites
+   a reproducible eval run is defensible; one citing intentions is not. 🔴 `lumen` is GPL-3.0 — take
+   the *pattern*, not the source, unless the whole deployment can be GPL.
+3. Mount through **uPortal** (the cleanest permissive grant on these shelves) and reach the LMS over
+   **LTI via Tsugi**, so an AGPL LMS core is never linked.
+4. Per-tenant **deny-by-default tool grants** modelled on DeepTutor's `tool_access.py`, because the
+   **2 December 2027** Annex III deadline will ask what the agent was permitted to touch, per user.
+
+🟡 Effort: **10–14 weeks**, uncalibrated. 🔴 Dates are from secondary legal commentary; `eur-lex` is
+unreachable through this proxy (`Gap 485-H`).
+
+---
+
+### 🟢 `P485-3` — ministry-scale teacher enablement as a distributable skill
+
+🔵 **For:** an education ministry under a **national curriculum mandate** — India (AI mandatory from
+Class 3, AY 2026–27), China (AI in teacher qualification exams), Singapore (Code for Fun from
+Primary 4). The constraint is that the users are **teachers in thousands of schools**, so
+provisioning a server per school is the thing to avoid.
+
+| layer | component | licence (verified) |
+|---|---|---|
+| diagnostic teaching loop | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** · 1 101 B |
+| mastery + spaced repetition | [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 **MIT** · 1 063 B |
+| understanding check | [`koukekoukej-glitch/feynman-tutor`](https://github.com/koukekoukej-glitch/feynman-tutor) | 🟢 **MIT** · 1 055 B |
+| exam/qualification prep | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** · 1 064 B |
+| pedagogy backbone | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (2-sigma) | 🟢 **MIT** · 1 068 B |
+| mastery state | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (BKT) | 🟢 **MIT** · 1 072 B |
+
+🔵 **Wiring:** 🟢 **all six components are MIT** — this is the one recipe on the shelf with no copyleft
+anywhere in it, which is exactly `T485-1`'s prediction about skill-form projects and the reason this
+pattern is cheap to deliver.
+1. Ship a **skill bundle**, not an application: the teaching loop, mastery tracking and
+   understanding-check behaviours distribute as prompt-and-protocol contracts to whatever host agent
+   the ministry has licensed.
+2. Mount `tutor-mcp` **centrally** as the one server component, holding BKT mastery state per teacher
+   so progress survives across sessions and devices.
+3. Use `universal-examprep-skill`'s slide-grounded, page-citation approach for **qualification-exam
+   preparation** — China is adding AI to teacher qualification exams, so this is the live use case.
+4. 🔵 Localise against the **locale measurements** on [`verticals/solutions.md`](../verticals/solutions.md)
+   rather than guessing: ILIAS for `es`/`pt` depth, Kolibri for `es_419` plus offline.
+
+🟡 Effort: **6–10 weeks** for a pilot cohort, uncalibrated.
+
+---
+
+### 🟢 `P485-4` — AI over an institutional LMS without touching its copyleft core
+
+🔵 **For:** a university on Sakai, ILIAS, Chamilo or Moodle wanting an AI surface its legal team will
+clear.
+
+| layer | component | licence (verified this pass) |
+|---|---|---|
+| LMS of record | `sakai` 🔴 **ECL-2.0** · 11 119 B / `ILIAS` GPL-3.0 / `chamilo` GPL-3.0 / `moodle` GPL-3.0 | all **copyleft** |
+| bridge | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) — LTI | 🔴 Apache-2.0, §4 labels stripped |
+| portal frame | [`uPortal-project/uPortal`](https://github.com/uPortal-project/uPortal) | 🟢 **Apache-2.0 · 0 deviations** |
+| agentic RAG reference | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 · 11 386 B · **0 deviations** |
+| ITS tools | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** |
+
+🔵 **Wiring:** the AI never enters the LMS process. `towardsai/ai-tutor-app` (LangGraph + FastAPI +
+Next.js, 0 Apache deviations — the cleanest reference implementation on these shelves) runs
+standalone; **Tsugi carries LTI** between it and the LMS; **uPortal** provides the institutional
+front door. 🟢 Permissive code stays permissive; copyleft stays in its own process.
+
+🔴 **Two corrections this recipe must carry.** **Sakai is ECL-2.0, not Apache-2.0** — an engagement
+that cleared it through an "Apache-approved" list cleared it under the wrong text, and ECL's patent
+grant is **narrower**, limited to the contributor's own contributions. And **Tsugi's Apache text has
+§4's `(a)(b)(c)(d)` labels stripped**, so the NOTICE obligation in §4(d) has no label to cite even
+though the obligation itself is intact.
+
+🟢 **Localisation, measured rather than assumed:** **ILIAS 99.99 % `es` / 99.98 % `pt`**;
+**Sakai 98.6 % `es` / 94.0 % `pt_BR`** across 219 bundle families; **Chamilo** ships `pt_BR` *and*
+`pt_PT`. 🔴 Moodle's coverage is **not measurable from its repository** — lang packs ship out-of-tree
+— so do not quote a Moodle localisation figure from these shelves.
+
+🟡 Effort: **6–9 weeks**, uncalibrated.
+
+---
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-AG`** | **No recipe here has been built**, and `Gap 484-W` carries forward unchanged. Four patterns, zero running systems. The licence boundaries are reasoned from text, not validated by a legal review or a deployment. |
+| 🔴 **`Gap 485-AH`** | **Every effort range is uncalibrated** (`Gap 483-Q`, `484-V`). Relative ordering only; none is a quote and none should reach a client as one. |
+| 🟡 **`Gap 485-AI`** | **The GPL-2.0 process-boundary argument in `P485-1` is this base's reading, not counsel's.** It follows the `librus-mcp` precedent and standard practice, but a GPL-2.0 engagement needs a lawyer before code, not after. |
+| 🟢 **`Gap 485-AJ`** | **`Gap 484-X` partly closes.** `P485-1` is built on LATAM-origin components (`i-educar` and its packages) for the first time. 🔴 But still **zero LATAM-origin *AI* components** — the only licence-clean regional AI repository found is `CENIA-DEV/multilingual-translator-app` at **1★**, too small to anchor a recipe. |
+| 🟡 **`Gap 485-AK`** | **`P485-1` names `i-educar` modules from metadata.** The repository was never cloned (`Gap 485-T`), so its HTTP surface, Educacenso module shape and extension points are inferred from package names and topics — the recipe's integration points are unverified. |
+
+---
+
 ## 🆕 `p484` — `2026-10-27` — **🟢 FOUR RECIPES, EVERY NAMED COMPONENT LICENCE-VERIFIED FROM BYTES THIS PASS. The pattern that changed: `P484-1` can now be written at all, because the platform at its centre was finally read — and it carries a licence caveat no earlier pass could have stated.**
 
 🔵 Every repository named below was cloned at a stated commit this pass or in `p483`, or had its

@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27T17:40Z` — **the discovery channel `p484` declared broken is FIXED, and the fix is one qualifier rather than the owner list it proposed**
+
+🔵 Four queries. The first is reported as an **instrument result**, because that is the headline.
+
+| # | query | hits | education-relevant | LATAM-origin |
+|---|---|---|---|---|
+| `p484`-2 | `tutor OR educación OR educativo OR ensino OR escola` · `stars:>3` · `topic:ai` (**full text**) | 207 | ~0 | **0** |
+| **`p485`-1** | `educación OR educativo OR ensino OR escolar OR docentes` **`in:description`** · `stars:>5` · `pushed:>2026-01-01` | **75** | majority | 🟢 **many** |
+| `p485`-2 | `tutor` · `topic:ai-tutor` · `stars:>30` | 15 | 15 | 0 |
+| `p485`-3 | `org:portabilis` / `org:CENIA-DEV` / `latam-gpt` (owner enumeration) | 8 / 8 / 19 | — | 🟢 all |
+
+### 🟢 Query 1 is the finding: `in:description` beats owner enumeration
+
+🔴 `p484` diagnosed its own 207-hit nil correctly — GitHub full-text relevance ranks by repository
+prominence, so a Spanish keyword inside a 20 000★ English awesome-list outranks a 50★ Spanish-language
+project — and prescribed **owner enumeration** as the replacement: *"query by owner rather than by
+keyword — CENIA, Latam-GPT participants, Fundación Ceibal, Geekie, ministry organisations."*
+
+🟢 **The prescription works but is the wrong instrument, and this pass can say why from both results.**
+
+🔵 **Owner enumeration requires the exact login, so it cannot discover owners.** `org:ceibal` →
+`Validation Failed`; the real login is `CeibalUy`. `org:geekie` likewise unresolved. The two logins
+that *did* resolve had to be found by web search first — at which point the enumeration is confirming
+a name, not discovering a project. 🔴 And unauthenticated `api.github.com/orgs/{org}/repos` returns
+**`403 "This GitHub API path is not available"`** through this proxy, so there is no cheap listing
+channel either.
+
+🟢 **`in:description` needs no list at all.** A repository's description is written by its owner about
+itself; a 20 000★ English list mentions "educativo" in a README *body*, never in its one-line
+description. Restricting the field removes the prominence bias outright. **75 hits, majority genuinely
+regional, on the first attempt.**
+
+🔴 **Consequence for this base's history:** four prior "no LATAM repository found" entries were
+**instrument artefacts** and should be read as retracted, not as evidence about the region.
+
+### 🟢 The regional repositories the fixed channel returned
+
+| repository | country | ★ | forks | licence (bytes) |
+|---|---|---|---|---|
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🇧🇷 | **721** | **552** | 🟡 GPL-2.0 · 18 091 B |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🇧🇷 | 117 | 62 | 🔴 AGPL-3.0 **Portuguese translation** · 35 325 B |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 🇨🇱 | 135 | 12 | 🟢 **MIT** · 1 069 B |
+| [DanielDev87/virtual-center-app](https://github.com/DanielDev87/virtual-center-app) | 🇨🇴 | 39 | 16 | 🟢 **Apache-2.0** · 0 deviations |
+| [portabilis/i-educar-reports-package](https://github.com/portabilis/i-educar-reports-package) | 🇧🇷 | 35 | 31 | 🟡 GPL-2.0 |
+| [portabilis/i-diario-app](https://github.com/portabilis/i-diario-app) | 🇧🇷 | 29 | 23 | 🔴 AGPL-3.0 **translated** |
+| [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) | 🇧🇷 | 21 | 10 | 🔴 AGPL-3.0 **translated** |
+| [ipti/br.tag](https://github.com/ipti/br.tag) | 🇧🇷 | 20 | 4 | 🔴 GPL-2.0, text corrupted (`Preamble2`) |
+| [juliopez/Taller-Inteligencia-de-Negocios-BI](https://github.com/juliopez/Taller-Inteligencia-de-Negocios-BI) | 🇨🇱 | 11 | 4 | 🟢 **MIT** · Zenodo DOI |
+| [Escuela-713/sge_713](https://github.com/Escuela-713/sge_713) | 🇦🇷 | 8 | 3 | 🔴 **NO LICENCE FILE** |
+| [CENIA-DEV/multilingual-translator-app](https://github.com/CENIA-DEV/multilingual-translator-app) | 🇨🇱 | 1 | 1 | 🟢 **Apache-2.0** · 0 deviations |
+| [german-gimenez/komuny](https://github.com/german-gimenez/komuny) | LATAM | — | — | 🟢 **MIT** · 1 070 B |
+
+🔵 **What the region actually builds**, now that it is visible: **municipal administrative software**
+(school information systems, gradebooks, enrolment, attendance, statutory census filing) and
+**public-data engineering** — not AI research. 🟢 Nine of twelve rows predate the LLM era in intent.
+
+### 🔴 The owner-enumeration results, reported because they are negative
+
+🔴 **`latam-gpt`** — 5 substantive repositories, **4 archived**, **5 of 5 with no licence file**.
+What exists is data-pipeline tooling (language ID, toxicity classification, training estimates), not
+a model or an education product. **Unusable by Globant: absent a licence, all rights reserved.**
+
+🔴 **`CENIA-DEV`** — 8 repositories, **none above 2★**, most undescribed MVP scaffolds. Chile's
+national AI centre leads LatamGPT, and its public GitHub presence is near-empty.
+
+🔵 Both negatives matter more than they look: prior Globant-side patterns named Latam-GPT as a LATAM
+component. That naming is now **refuted on licence grounds**, and
+[`compose/patterns.md`](../compose/patterns.md) rewrites the affected recipe this pass.
+
+### 🟢 Instrument gained this pass — tree enumeration without blobs
+
+🟢 `git clone --filter=blob:none --no-checkout --depth 1` followed by `git ls-tree -r --name-only HEAD`
+returns a repository's **full path list without downloading any file contents**. Six platforms,
+**123 967 paths**, at pinned commits, in seconds — Moodle's 67 630 included. 🔵 This is the working
+substitute for `get_file_contents`, which is **session-scoped and denied** for every repository
+outside `gmilano/globant-kb`. Channel census:
+[`host-channel-census`](../evidence/host-channel-census.2026-10-27-p485.tsv).
+
+### 🔴 What this pass did not find
+
+🔴 **No star deltas, second pass running** (`Gap 485-X`) — sixteen current absolute figures now exist,
+so velocity is computable next pass without new discovery.
+🔴 **No African or Middle-Eastern repository, and no instrument tested for one** (`Gap 485-Y`) — unlike
+LATAM, this nil is undiagnosed: no Arabic, French, Swahili or Portuguese-African query was run.
+🔴 **`in:description` cannot separate Spain from LATAM** (`Gap 485-G`) — the 75 hits mix Spain (UPV
+Alcoi, IES Los Albares, `picuino`, `midudev`) with Brazil, Chile, Argentina and Colombia. Country was
+assigned **by hand** from descriptions. The next axis is `search_users location:`, not run this pass.
+
+---
+
 ## 🆕 `p484` — `2026-10-27T16:50Z` — the discovery channel itself was measured this pass, and for non-English education terms it **does not work**
 
 🔵 Two GitHub searches were run, and the second is reported here as an **instrument result** rather

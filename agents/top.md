@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27` — **🔴 A LICENCE FAILURE MODE THIS BASE HAS NEVER RECORDED: three Brazilian repositories' ONLY licence artifact is AGPL-3.0 **in Portuguese translation, with zero English text** — and the FSF's own position is that its translations are not legally operative. 🟢 Fifteen rows re-verified from bytes, the leader re-read at **45 506★**, and one 64★ row **removed from this shelf** for having no licence at all.**
+
+🔵 Every licence figure below is **bytes fetched this pass** from `raw.githubusercontent.com`, with
+`sha256[:12]` recorded so a later pass can detect a change without refetching. Full table:
+[`agent-licence-bytes`](../evidence/agent-licence-bytes.2026-10-27-p485.tsv).
+
+🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone.
+Nothing here is gate-attested.
+
+### 🔴 The new failure mode: a licence that is a translation
+
+🔴 `portabilis/i-diario` (117★), `portabilis/i-diario-app` (29★) and
+`portabilis/pre-matricula-digital` (21★) all serve the **same** licence payload — 35 325 B,
+`sha256[:12] = 837b5cf19787` — and it opens:
+
+> `LICENÇA PÚBLICA GERAL AFFERO GNU`
+> `Versão 3, 19 de novembro de 2007`
+
+🔴 **Probed directly: the string `GNU AFFERO GENERAL PUBLIC LICENSE` occurs ZERO times in the file.**
+This is not a bilingual licence with an English original attached. It is a Portuguese translation
+standing alone as the project's entire grant.
+
+🔵 **Why that is a finding and not a curiosity.** The Free Software Foundation's standing position is
+that translations of its licences are **unofficial and not legally valid** — it publishes them as
+comprehension aids and asks projects to ship the English text as the operative grant, precisely
+because a translated copyleft term that diverges is unenforceable in the way intended. 🔴 So the
+operative licence of three deployed Brazilian education repositories is, strictly read, **undefined**:
+there is no English AGPL-3.0 in the repository to fall back to.
+
+🟡 **Stated with its limits:** this is a licence-*hygiene* finding, not a court ruling, and this pass
+is not qualified to say how a Brazilian court would read a Portuguese AGPL. 🟢 What it *can* say is
+operational: any Globant engagement touching `i-diario` must resolve the grant with the maintainer
+before building, and that is a question nobody had asked because nobody had read the file. 🔵 This is
+a **new axis** for this base — prior passes graded licences on *deviation from canonical* and on
+*version*; neither instrument detects a wholesale change of **language**.
+
+### 🟢 The shelf — fifteen rows, every licence from bytes
+
+| agent | ★ | licence (bytes) | `sha12` | what it is |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **45 506** | 🔴 Apache-2.0, **6 operative deviations** (`p484`) | — | Agent-native lifelong tutoring platform. 3 875 files at `a31d826`/`v1.6.15`, 110 tool definitions, 51 MCP-host files, 881 test files, deny-by-default per-tenant tool grants. |
+| [oppia/oppia](https://github.com/oppia/oppia) | 6 947 | 🟢 Apache-2.0 · 11 357 B | `58d1e17ffe51` | Nonprofit interactive-lesson platform, Python/Angular. 5 857 forks; the most-deployed permissive row here. |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 355 | 🟢 MIT · 1 064 B | `11b8094164f8` | Exam-prep coach **as an agent skill**, not an app. Slide-grounded with page citations; tuned for small cheap models. |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 293 | 🟢 MIT · 1 068 B | `315be3d6cf4a` | Bloom 2-sigma research as a Claude Code skill **plus** a self-hostable web app. Socratic, adaptive, reads how a learner actually learns. |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 251 | 🟢 MIT · 1 101 B | `6311bbb879c9` | Diagnosis-first tutor with **no mode or command menu** — decides the next teaching step itself, then checks understanding. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 209 | 🔴 **AGPL-3.0** · 34 514 B | `ea94d5765c59` | Self-hosted language learning: CEFR study plans, voice, flashcards, spaced repetition, local or cloud LLMs via Ollama. **Network copyleft — flagged.** |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 🟢 MIT · 1 067 B | `72c03c50ecf0` | Block-based adaptive workspace, **local-first**, 10+ providers, knowledge graph + spaced repetition. |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 91 | 🔴 **GPL-3.0** · 35 148 B | `8b1ba204bb69` | Learner-owned platform: builds a private course in ~a minute, course-scoped RAG with citations, BYOK, **MCP server, golden evals in CI**. |
+| [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 🟢 MIT · 1 067 B | `6beebb286c67` | **EduAgent** — RAG tutor purpose-built for grades 1–9, LanceDB, Socratic method. |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 🟢 MIT · 1 072 B | `6bce75979c68` | 🟢 **An MCP server that turns any LLM into an Intelligent Tutoring System.** Go; implements **BKT**. The cleanest composition seam on this shelf. |
+| [InfinityZero3000/LexiLingo](https://github.com/InfinityZero3000/LexiLingo) | 49 | 🟢 MIT · 1 068 B | `99000de8d84b` | Language tutor on a **Trace-CAG** pipeline targeting zero-hallucination pedagogical feedback. Qwen3 + Whisper + Piper. |
+| [TovTechOrg/Tov-learn](https://github.com/TovTechOrg/Tov-learn) | 36 | 🟢 MIT · 1 063 B | `16aa56acdbea` | Claude Code skill: spaced repetition, personalised project examples, visual progress dashboard. |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 33 | 🟢 Apache-2.0 · 11 386 B · **0 deviations** | — | The clearest **agentic-RAG reference implementation** here: LangGraph + FastAPI + Next.js over a curated corpus. |
+| [koukekoukej-glitch/feynman-tutor](https://github.com/koukekoukej-glitch/feynman-tutor) | 32 | 🟢 MIT · 1 055 B | `26e0d1929275` | Inverts the loop: **the learner teaches the AI** to expose gaps. Works across Claude Code, Cursor, Windsurf. |
+| [CENIA-DEV/multilingual-translator-app](https://github.com/CENIA-DEV/multilingual-translator-app) | 1 | 🟢 Apache-2.0 · 11 356 B · **0 deviations** | `43070e2d4e53` | 🟢 Chile's CENIA; included as the **only licence-clean LATAM-origin AI row** this base has found, not for popularity. |
+
+🔴 **Removed from this shelf this pass:** `A-R007/Multi-Agent-Study-Assistant` (64★, six specialised
+agents, Phidata + LangChain + ChromaDB) — **probed at five licence paths on two branches, no licence
+file exists**. Default copyright applies, so Globant cannot build on it whatever its quality. 🔵 It is
+recorded here by name so a later pass does not "discover" it as a find.
+
+### 🟢 Two readings that survive contact with the table
+
+🟢 **1 — The packaging unit is moving from application to skill.** Five rows ship as **agent skills**
+rather than applications (`universal-examprep-skill`, `Bloom`, `universal-diagnostic-tutor-skill`,
+`Tov-learn`, `feynman-tutor`), and `tutor-mcp` is the MCP-server equivalent. 🔵 `p484` read four
+entrants as "local or self-hosted execution"; that is the same population seen from the deployment
+side. The sharper statement: **these projects ship a prompt-and-protocol contract, not a runtime**,
+which is why they are small, why they are nearly all MIT, and why they distribute without
+provisioning anything per school.
+
+🟢 **2 — Permissiveness correlates with form factor, not with quality.** Every skill-form row is MIT.
+The three copyleft rows (`freelingo` AGPL-3.0, `lumen` GPL-3.0, and the translated-AGPL Brazilian
+set) are all **full applications with servers**. 🔵 For a studio that must hand clients something
+they can relicense, that correlation is the practical finding: the composable layer is permissive and
+the platform layer is not.
+
+🔵 **A continuity check worth recording:** `lumen`'s GPL-3.0 payload is 35 148 B / `8b1ba204bb69` —
+**the exact fingerprint `p455` recorded** when it read Edu-Sharing's GPL-3.0 and built this base's
+version axis. An independent repository reproducing that fingerprint two hundred passes later
+confirms the baseline is stable.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-M`** | **Still nothing executed** — `Gap 484-A` / `483-A` / `446-A` carry forward unchanged. Fifteen rows are read, cloned or byte-probed; **none is run**. No tutor on this shelf has been shown to tutor. |
+| 🔴 **`Gap 485-N`** | **The translated-AGPL finding has no legal reading behind it.** This pass established the fact (zero English text, 35 325 B, three repositories) and the FSF's general position. It did **not** establish how Brazilian law treats it, and is not competent to. |
+| 🟡 **`Gap 485-O`** | **Eleven of fifteen rows have licence bytes but no code measurement.** Only DeepTutor (`p484`) and `towardsai/ai-tutor-app` have been read as source. Star counts and self-descriptions carry the rest — `tutor-mcp`'s BKT claim in particular is from its description, not its Go. |
+| 🟡 **`Gap 485-P`** | **`Gap 484-C` only partly discharged.** The Apache-deviation instrument now has 6 subjects (DeepTutor, ai-tutor-app, uPortal, Tsugi, CENIA, virtual-center-app), not all Apache rows: `oppia` at 11 357 B was sized but **not word-diffed**. |
+| 🟡 **`Gap 485-Q`** | **The skill-form reading rests on 6 of 15 rows and on their own self-description.** It is a direction with a plausible mechanism, not a measurement, and it would be refuted by a large new application-form entrant. |
+| 🟡 **`Gap 485-R`** | **`Gap 484-D` and `Gap 484-E` carry forward unaddressed:** `braiinz-education`'s popularity and scope remain unverified, and DeepTutor's 110 `ToolDefinition` call sites remain counted rather than classified. |
+
+---
+
 ## 🆕 `p484` — `2026-10-27` — **🟢 `Gap 483-R` IS CLOSED AND IT COST ONE CLONE: `HKUDS/DeepTutor` — 88.2 % of this base's star mass, never once read — is now measured at `a31d826`, and its Apache-2.0 grant is **NOT the canonical text**. Six deviations sit in the *operative body*, one of them inside the §4(d) NOTICE obligation. 🟢 `Gap 483-F` is closed from bytes: `education-agent-skills` (917★) is **CC BY-SA 4.0** — ShareAlike, code included. 🔴 And `T483-1`'s institutional-vs-community axis is refuted by this base's own largest row.**
 
 🔵 **Why this pass could read what `p483` could not:** `Gap 483-C` declared the fetch channel down

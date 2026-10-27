@@ -4,6 +4,251 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p485` — `2026-10-27` — **🟢 `Gap 484-G` IS CLOSED AND THE FIX IS ONE QUALIFIER: `in:description`. The same region p484 could not see at all returns **75 genuinely regional repositories**, led by a 721★ Brazilian municipal school system this base has never once listed. 🔴 And the LATAM component prior passes leaned on is gone: **all five `latam-gpt` repositories carry NO LICENCE FILE, and four of the five are ARCHIVED.** 🟢 EMEA's education deadline moved by 16 months and this base had the old date.**
+
+🔵 Every repository figure below is from the authenticated search channel plus licence **bytes**
+fetched from `raw.githubusercontent.com` this pass. Channel census:
+[`host-channel-census`](../evidence/host-channel-census.2026-10-27-p485.tsv). Supply census:
+[`latam-supply-census`](../evidence/latam-supply-census.2026-10-27-p485.tsv).
+
+---
+
+### 🟢 `Gap 484-G` closed — the discovery channel was fixable, and cheaply
+
+🔴 `p484` ran a 207-result full-text query on Spanish/Portuguese education terms, got **zero**
+regional projects, and correctly diagnosed why: GitHub full-text relevance ranks by prominence, so a
+Spanish keyword inside a 20 000★ English awesome-list outranks an entire 50★ Spanish-language
+project. It then specified owner-enumeration as the replacement channel.
+
+🟢 **Owner enumeration works, but it was not the cheapest fix. The qualifier `in:description` is.**
+
+| # | query | hits | actually regional |
+|---|---|---|---|
+| `p484`-2 | `tutor OR educación OR educativo OR ensino OR escola` (full text) | 207 | **~0** |
+| **`p485`-1** | `educación OR educativo OR ensino OR escolar OR docentes` **`in:description`** `stars:>5` | **75** | 🟢 **majority** |
+
+🟢 **Why it works:** a repository's *description* is written by its owner about itself. A 20 000★
+English list mentions "educativo" in a README body, never in its one-line description. Restricting
+the field removes the prominence bias without any owner list to maintain.
+
+🔴 **Owner enumeration was also tested and partly failed as an instrument.**
+`api.github.com/orgs/{org}/repos` returns **`403 "This GitHub API path is not available"`**
+unauthenticated through this proxy, so enumeration must go through the authenticated search tool's
+`org:`/`user:` qualifiers — and those need the **exact login**. `org:ceibal` fails; the real login is
+`CeibalUy`. 🔵 An owner channel that requires already knowing the owner cannot discover owners. The
+description qualifier can.
+
+### 🟢 The LATAM supply this base has been declaring absent for five intervals
+
+🟢 **It exists, and it is municipal-government software, not AI research.** Licences are bytes.
+
+| repository | country | ★ | forks | licence (bytes) |
+|---|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🇧🇷 | **721** | **552** | 🟡 GPL-2.0 · 18 091 B |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🇧🇷 | 117 | 62 | 🔴 AGPL-3.0 **in Portuguese translation** · 35 325 B |
+| [`portabilis/i-educar-reports-package`](https://github.com/portabilis/i-educar-reports-package) | 🇧🇷 | 35 | 31 | 🟡 GPL-2.0 |
+| [`portabilis/i-diario-app`](https://github.com/portabilis/i-diario-app) | 🇧🇷 | 29 | 23 | 🔴 AGPL-3.0 **translated** · offline attendance capture |
+| [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | 🇧🇷 | 21 | 10 | 🔴 AGPL-3.0 **translated** · enrolment + waitlists |
+| [`portabilis/i-educar-educacenso-package`](https://github.com/portabilis/i-educar-educacenso-package) | 🇧🇷 | 3 | 6 | integrates **Educacenso**, Brazil's national school census |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🇧🇷 | 20 | 4 | 🔴 GPL-2.0, **text corrupted** (`Preamble2`) |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🇨🇱 | **135** | 12 | 🟢 **MIT** · 1 069 B |
+| [`juliopez/Taller-Inteligencia-de-Negocios-BI`](https://github.com/juliopez/Taller-Inteligencia-de-Negocios-BI) | 🇨🇱 | 11 | 4 | 🟢 **MIT** · 1 094 B · Zenodo DOI |
+| [`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app) | 🇨🇴 | 39 | 16 | 🟢 **Apache-2.0** · 0 operative deviations |
+| [`german-gimenez/komuny`](https://github.com/german-gimenez/komuny) | LATAM | — | — | 🟢 **MIT** · 1 070 B |
+| [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | 🇨🇱 | 1 | 1 | 🟢 **Apache-2.0** · 0 deviations |
+| [`Escuela-713/sge_713`](https://github.com/Escuela-713/sge_713) | 🇦🇷 | 8 | 3 | 🔴 **NO LICENCE FILE** |
+
+🔵 **`i-educar` is the headline and it is not an AI project at all.** 721★ / 552 forks, PHP/Laravel,
+self-described as *"o maior software livre de educação do Brasil"*, tagged `software-publico`, on
+branch `2.12`, with a module that files Brazil's **national school census**. A fork count of 552
+against 721 stars is the signature of *deployment* — municipalities running their own copies — not
+of stargazing. 🟢 This is the single most consequential LATAM row this base has ever recorded, and
+the reason it was missed is now understood rather than guessed.
+
+### 🔴 The `latam-gpt` retraction — a component prior passes leaned on is not usable
+
+🔴 Prior Globant-side patterns named **Latam-GPT** as a LATAM building block. Measured this pass, the
+`latam-gpt` GitHub organisation holds **five substantive repositories**, and:
+
+| repository | ★ | archived | licence |
+|---|---|---|---|
+| `latam-gpt/llm-data-eval` | 16 | 🔴 **YES** | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/toxicity-classifier` | 5 | 🔴 **YES** | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/language_identifier` | 3 | no | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/fasttext-classifiers` | 0 | 🔴 **YES** | 🔴 **NO LICENCE FILE** |
+| `latam-gpt/training-estimations` | 2 | 🔴 **YES** | 🔴 **NO LICENCE FILE** |
+
+🔴 **Four of five archived; five of five unlicensed.** Absent a licence, default copyright applies —
+all rights reserved — so **none of it is something Globant can build on**, regardless of intent. 🔵
+And what is there is *data-pipeline tooling* (language ID, toxicity classification, training
+estimates), not a model or an education product. 🟢 The regional-sovereign-model narrative may well
+be real in substance; its **public code presence is small, mostly frozen, and legally unusable**.
+Any recipe naming Latam-GPT as a component must be rewritten, and `compose/patterns.md` does that
+this pass.
+
+### 🔵 Host and channel census
+
+| channel | result | consequence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 200, real bytes | licence text primary-source verifiable |
+| `www.apache.org/licenses/LICENSE-2.0.txt` | 🟢 200 · 11 358 B | canonical Apache baseline obtained |
+| `www.gnu.org/.../gpl-2.0.txt` | 🔴 **403 CONNECT tunnel failed** | FSF text unobtainable; SPDX substituted and labelled |
+| `api.github.com/orgs/{org}/repos` | 🔴 **403 path not available** | owner enumeration unavailable unauthenticated |
+| `mcp github get_file_contents` (any repo) | 🔴 **Access denied — session-scoped** | directory listing must go via `git clone` |
+| `git clone --filter=blob:none --no-checkout` | 🟢 123 967 paths, 6 repos | 🟢 **the tree-enumeration channel that works** |
+
+🔴 **A verifier this base has been told to use does not work on this channel, and the failure is
+silent.** `curl -sI https://github.com/...` returns **`403` for every URL** — for
+`torvalds/linux`, for `moodle/moodle`, and for a deliberately bogus
+`this-org-does-not-exist-zzq/nor-does-this-repo-zzq`. 🔵 **A probe that answers 403 to a real
+repository and 403 to a fake one carries no information**, and a pass that ran it over its own
+citations would read 36 uniform failures as 36 dead links and "fix" working rows.
+
+🟢 **The raw channel discriminates and is therefore the verifier:** `200` for a real path, `404` for
+a nonexistent org, `404` for a real repo's nonexistent file. 🟢 **All 36 GitHub URLs cited in this
+pass were re-confirmed through it: 36/36 exist**
+([`url-verification`](../evidence/url-verification.2026-10-27-p485.tsv)).
+
+🟢 **Instrument note worth carrying:** `--filter=blob:none --no-checkout --depth 1` plus
+`git ls-tree -r` enumerates a full repository tree **without downloading file contents**. Moodle's
+67 630 paths came back in seconds. This is the cheap substitute for the blocked contents API.
+
+---
+
+## Opportunities by region
+
+### North America
+
+🟡 Market figures conflict by publisher and are directional only: one forecast puts the region at
+**~$951 M (2024) → ~$2.3 B (2029), 15.9 % CAGR**; another frames 2026–2030 growth at 41.7 %. 🟡
+Secondary compilations put North America at **~36 % of global adoption share** while reporting
+**only ~10 % of institutions have formal AI guidelines** and **~71 % of US teachers lack AI
+training**.
+
+🔵 **Regulatory shape: fragmented and non-federal.** There is no federal education-AI instrument;
+adoption decisions sit with individual districts and institutions, with state-level requirements
+appearing piecemeal (Colorado, Texas cited). 🟢 `Gap 483-L` established in a prior pass that **Canada
+has no federal K-12 AI instrument, and the absence is itself the finding** — that still holds.
+
+🟢 **Opportunity:** the gap between 36 % adoption and 10 % governance coverage *is* the engagement.
+The sellable unit is not a tutor — it is the **governance layer around a tutor**: per-tenant tool
+grants, audit trails, and an institutional AI policy that survives procurement review. The
+permissive, self-hostable rows on `agents/top.md` are the substrate; the differentiator is the
+deny-by-default posture `p484` measured in DeepTutor's `multi_user/tool_access.py`.
+
+### EMEA
+
+🔴 **This base carried the wrong compliance date, and it moved by 16 months.** The EU AI Act's
+**Annex III** high-risk category **includes education**, and its stand-alone compliance deadline
+moved from **2 August 2026** to **2 December 2027** via the Digital Omnibus — **Regulation (EU)
+2026/1744**, published in the Official Journal **24 July 2026**, in force **27 July 2026**.
+
+🔴 **Three things did *not* move, and they are the ones that bite in 2026:**
+- **Article 50 transparency obligations still apply from 2 August 2026** — chatbot and
+  generative-AI disclosure is **not** deferred. An AI tutor deployed in the EU this year is in scope
+  *now*.
+- **Article 27 still requires a Fundamental Rights Impact Assessment (FRIA)** before a high-risk
+  system goes into use. The delay is timing, not substance.
+- AI embedded in Annex I regulated products moves to 2 August 2028.
+
+🟡 Market: Europe's AI-in-education market valued at **~$512.6 M (2024)**, UK/Germany/France leading;
+the UK is prioritising deployment speed with **£200 M+** committed to AI adoption. 🟡 Council of
+Europe runs an AI-and-education expert group with a second working conference on regulatory
+dimensions; the EU updated ethical guidelines on AI in education in **June 2026**. 🟡 An Allianz 2026
+survey finds European AI use less advanced and less work-related than the US, with Germany, France
+and Austria in the low 40s for weekly use.
+
+🟢 **Opportunity:** the 2027 delay is a **sales window, not a reprieve** — an institution procuring
+in 2026 wants the FRIA and the Article 50 disclosure surface built in, because retrofitting a
+high-risk classification in 2027 is far more expensive. 🟢 Pair that with EMEA's sovereignty
+preference: ILIAS (99.99 % localised, GPL-3.0) and Kolibri (MIT, offline) both self-host cleanly.
+🔴 `eur-lex.europa.eu` remains **unreachable** through this proxy, so every date in this subsection
+is from secondary legal commentary, not the Official Journal text — see `Gap 485-H`.
+
+### APAC
+
+🟢 **The most concrete regulatory content of any region this pass, and it is curriculum mandates
+rather than risk regulation:**
+- 🇨🇳 **China** — Beijing requires **≥8 hours of AI instruction per year** in primary and secondary
+  schools (since 2025); **Guangdong** mandates 6 hours annually in lower grades rising to **one hour
+  per fortnight in grades 10–11**. A national **"AI + Education"** plan directs local authorities to
+  set objectives, content and instructional hours, and **adds AI to teacher qualification exams**,
+  with reporting of a 2030 AI-literacy infrastructure target.
+- 🇮🇳 **India** — **AI and Computational Thinking become mandatory subjects from Class 3, starting
+  the 2026–27 academic year**, under NEP 2020. Framing is **"AI for Public Good"** — ethics and
+  social responsibility over technical skill. Teacher training runs through **NISHTHA**; framework
+  development by **CBSE with IIT Madras**.
+- 🇸🇬 **Singapore** — more gradual: **Code for Fun**, a compulsory ~10-hour programme covering
+  coding, computational thinking and intro AI, **from Primary 4**; MOE guidance to raise AI awareness
+  from lower primary and teach advanced AI use at upper secondary. A **6 May 2026** parliamentary
+  reply raises safeguards on data transparency and over-reliance.
+
+🟡 Market: APAC at **~$591.6 M (2024) → ~$1.85 B (2029)**, ~20.9 % CAGR, and consistently described
+as the **fastest-growing region**. 🟡 Governance lags enthusiasm: Forrester describes a **fragmented**
+legislative landscape (Singapore mature guidelines; China focused on algorithmic misconduct; ASEAN
+guidance still early-stage).
+
+🟢 **Opportunity:** mandated curriculum at national scale creates demand for **teacher-facing**
+tooling, not student-facing tutors — China is putting AI into teacher *qualification exams* and India
+is training via NISHTHA. The underserved product is **teacher preparation and assessment at
+ministry scale**, in-language, auditable. 🔵 This is the clearest case on the shelf for the
+**agent-skill form factor** (`agents/trending.md`): a skill distributes to teachers without
+provisioning an application per school.
+
+### LATAM
+
+🟢 **Demand side, from the strongest regional source this base has found:** a **UNESCO IESALC +
+UNU-IAS working paper dated September 2026** maps AI use across higher education in the region from a
+survey of **200 institutions in 19 countries** (fieldwork August–October 2025), covering where AI is
+used, how it is governed, what capacity exists and what is missing. 🟡 A 2025 comparative study
+examines AI-in-higher-education frameworks across **Argentina, Brazil, Chile, Peru and Spain**. 🟡
+Commentary characterises regional policy as a **patchwork of pilot policies vulnerable to each new
+administration**, with **Chile** cited as a roadmap that survived political change. 🟡 A
+MarketsandMarkets "Rest of Latin America" figure of **$18.2 M (2024) → $36 M (2029), 12.1 % CAGR**
+covers a sub-region only and is small against other estimates.
+
+🟢 **Supply side — and this is the part that changed this pass.** The region's open-source education
+output is **municipal administrative software, not AI research**: `i-educar` (721★/552 forks, GPL-2.0,
+with a national-school-census module), `i-diario` + `i-diario-app` (offline attendance), 
+`pre-matricula-digital` (enrolment and waitlists), `ipti/br.tag`, plus MIT-licensed Chilean public
+education **data** work (`chile-hub` 135★, EduBI Chile with a Zenodo DOI).
+
+🔴 **And the correction:** `latam-gpt` is **unusable** — five repositories, four archived, all five
+unlicensed. 🔴 **CENIA's public GitHub presence is eight repositories, none above 2★.** The regional
+sovereign-AI effort is not where the usable regional code is.
+
+🟢 **Opportunity, and it is a different engagement than this base previously described.** The region
+does not need another tutor; it has a **large installed base of GPL-licensed municipal school systems
+with real fork counts and no AI layer at all**. The engagement is an **AI layer over `i-educar`/
+`i-diario`** — enrolment triage, attendance-anomaly detection, census-filing assistance — reached
+over an API boundary so the agent stays permissive while the platform stays copyleft. 🟢 Pair with
+**Kolibri (MIT, `es_419`, offline-first)** where connectivity is the binding constraint. 🔴 Note
+before any such engagement: `i-diario`'s only licence artifact is a **Portuguese translation** of
+AGPL-3.0 with no English text — see `agents/top.md` for why that is a live legal question.
+
+### Global
+
+🟡 Market totals disagree so widely that no single figure should be quoted: **$3.7 B (2026) → $14.1 B
+(2033) at 21.0 %** (Persistence), **$7.52 B (2025) → $10.6 B (2026)** (TBRC), **~$6.4 B (2025) →
+$79.6 B (2034) at 31.35 %** (IMARC-derived). 🔵 The spread is methodology, not measurement; the KB
+records the spread rather than picking a winner. 🟡 Consistent across sources: North America leads
+share (~42 % in 2026), APAC grows fastest, cloud deployment dominated (71.22 % in 2024), K-12 was
+45.62 % of adoption, and teacher AI professional development nearly doubled (29 % early 2024 → 50 %
+late 2025).
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 485-G`** | **The `in:description` channel cannot tell Spanish from LATAM.** The 75-hit result contains Spain (UPV Alcoi, IES Los Albares, `picuino`, `midudev`, `canarydev`) alongside Brazil, Chile, Argentina and Colombia. Country was assigned **by hand** from descriptions this pass. A real regional filter needs an owner-location axis, which `search_users location:` could supply and this pass did not run. |
+| 🔴 **`Gap 485-H`** | **Every EMEA date here is secondary.** `eur-lex.europa.eu` is unreachable through this proxy, so Regulation (EU) 2026/1744 was **not** read in the Official Journal. The 2 Dec 2027 date is consistent across six independent legal commentaries — which is corroboration, not primary verification. |
+| 🟡 **`Gap 485-I`** | **APAC curriculum mandates are from news and commentary, not ministry texts** — with one exception, Singapore's MOE parliamentary reply (6 May 2026). China's provincial hour counts in particular are reported inconsistently. |
+| 🟡 **`Gap 485-J`** | **The UNESCO IESALC/UNU-IAS paper was located but not read.** Its survey frame (200 institutions, 19 countries) is cited from the abstract; the findings themselves are unextracted. It is the highest-value unread document on this shelf. |
+| 🟡 **`Gap 485-K`** | **`i-educar`'s fork count is read as deployment evidence, which is an inference.** 552 forks is consistent with municipalities self-hosting, but no deployment was verified — no municipality named, no instance probed. |
+| 🔴 **`Gap 485-L`** | **No market figure on this shelf is primary.** All are vendor and market-research summaries; none of the underlying reports was purchased or read. The honest status of this entire market subsection is *directional*. |
+
+---
+
 ## 🆕 `p484` — `2026-10-27` — **🔴 `Gap 483-C` IS WRONG IN THE DIRECTION THAT MATTERS: the fetch channel is **not** down session-wide. It is a CONNECT-level **host allowlist**, and `raw.githubusercontent.com` is *on* it — so licence bytes were primary-source verified this pass while `eur-lex.europa.eu` stayed unreachable. 🟢 `Gap 483-M` (Middle East / Africa, open four passes) and `Gap 483-N` (APAC adoption) both close with content. 🟢 `Gap 483-L` closes: Canada has **no** federal K-12 AI instrument, and that absence is the finding. 🔴 `Gap 483-O` (LATAM supply) does **not** close — but the nil is now measured, and the instrument is the thing that is broken.**
 
 ---

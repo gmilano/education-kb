@@ -1,0 +1,16 @@
+host_or_channel	probe	result	consequence
+raw.githubusercontent.com	GET LICENSE paths	200 real bytes	licence text primary-source verifiable
+api.github.com/rate_limit	GET	200	host resolves
+api.github.com/orgs/{org}/repos	GET unauthenticated	403 "This GitHub API path is not available"	owner enumeration NOT available on this channel
+pypi.org	GET /simple/	200	reachable
+www.apache.org/licenses/LICENSE-2.0.txt	GET	200 11358 B	canonical Apache-2.0 baseline obtained
+www.gnu.org/licenses/old-licenses/gpl-2.0.txt	GET	403 CONNECT tunnel failed	canonical GPL-2.0 NOT obtainable from FSF; SPDX used as substitute
+raw.githubusercontent.com/spdx/license-list-data	GET text/GPL-2.0-only.txt	200 17337 B	SPDX substitute baseline (NOT the FSF text)
+git clone --filter=blob:none --no-checkout --depth 1	6 platform repos	OK 123967 paths	full tree enumeration without blobs
+mcp github search_repositories	org:/user:/in:description queries	OK	the working discovery channel
+mcp github get_file_contents	any repo outside gmilano/globant-kb	Access denied, session-scoped	directory listing must go via clone
+github.com (HTML, curl -sI)	HEAD torvalds/linux	403	UNINFORMATIVE: returns 403 for every URL
+github.com (HTML, curl -sI)	HEAD nonexistent-org/nonexistent-repo	403	same 403 as a real repo -> cannot discriminate; NOT a usable URL verifier
+raw.githubusercontent.com	HEAD real path	200	discriminates correctly
+raw.githubusercontent.com	HEAD nonexistent org	404	discriminates correctly
+raw.githubusercontent.com	HEAD real repo, nonexistent file	404	discriminates correctly -> THE working URL verifier

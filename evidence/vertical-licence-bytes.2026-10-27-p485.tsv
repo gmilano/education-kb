@@ -1,0 +1,10 @@
+repo	branch	path	http	bytes	sha256_12	declared_spdx	version_line	note
+moodle/moodle	main	COPYING.txt	200	35146	c53a65c2fd56	GPL-3.0	Version 3, 29 June 2007	byte-identical to chamilo + ILIAS
+openedx/edx-platform	master	LICENSE	200	35135	106a1b4b8b71	AGPL-3.0	Version 3, 19 November 2007	
+sakaiproject/sakai	master	LICENSE	200	11119	efbb3e5a1b9a	ECL-2.0	Educational Community License, Version 2.0	CORRECTION: shelf carried Apache-2.0
+uPortal-project/uPortal	master	LICENSE	200	11358	f841d74e27be	Apache-2.0	Version 2.0, January 2004	0 deviations vs apache.org canonical
+tsugiproject/tsugi	master	LICENSE	200	10272	9ff562631a04	Apache-2.0	Version 2.0, January 2004	S4 (a)(b)(c)(d) sub-clause labels stripped
+learningequality/kolibri	master	LICENSE	200	1096	fa4c9d2697f9	MIT		
+openeducat/openeducat_erp	master	LICENSE	200	8240	8f4ce028f93d	LGPL-3.0	Version 3	LGPL preamble + GPL body
+chamilo/chamilo-lms	master	LICENSE	200	35146	c53a65c2fd56	GPL-3.0	Version 3, 29 June 2007	byte-identical to moodle + ILIAS
+ILIAS-eLearning/ILIAS	master	LICENSE	200	35146	c53a65c2fd56	GPL-3.0	Version 3, 29 June 2007	byte-identical to moodle + chamilo
