@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p491` — `2026-10-27` — **🔴 TWO NEW PLATFORMS READ FROM BYTES, BOTH COPYLEFT — the permissive shortlist has not grown in three passes while the denominator went 17 → 19. [`learnhouse`](https://github.com/learnhouse/learnhouse) is **`AGPL-3.0` at 2 400★** and outranks Kolibri and Chamilo, yet was absent from this KB entirely. 🔴 [`frappe/education`](https://github.com/frappe/education) ships a **19-byte licence** reading `License: GNU GPL V3` with no licence text — GitHub's own classifier cannot resolve it. 🔴 And `p490`'s census is off by one: it published **16** platforms while its own cell named **nine** GPL repos and its tables listed **seventeen** rows.**
+
+🔵 **Channels:** unchanged and reconfirmed — `api.github.com` `403` for unattached repositories;
+`curl -sI github.com` `403`. Existence and default ref via **`git ls-remote --symref`**, licence
+bytes via **`raw.githubusercontent.com` at a resolved SHA** (family anchored on the 200-byte title
+block), stars via **page fetch**. Evidence:
+[`licence-and-stars.2026-10-27-p491.tsv`](../evidence/licence-and-stars.2026-10-27-p491.tsv).
+
+### 🔴 The two new platform rows
+
+| repo | ref | licence @ SHA | ★ | note |
+|---|---|---|---|---|
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | **`dev`** | **AGPL-3.0**, 34 522 B (`2d75337273ac`) | **2 400** | "Next-gen open source learning platform." Both channels agree (sidebar: `AGPL-3.0 license`). **Bigger than Kolibri (1 200★) and Chamilo (1 000★) and this KB had never seen it.** |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` | **GPL-3.0 *declared only*** — `license.txt`, **19 B** (`73ce33ef2719`) | 682 | Frappe school-management / SIS app. **A different product and a different licence family from `frappe/lms` (AGPL-3.0).** |
+
+### 🔴 The 19-byte licence, and why it is a reader problem as much as a legal one
+
+`frappe/education`'s entire grant is the string `License: GNU GPL V3`. **No licence body.** Three
+consequences: GitHub's classifier **cannot** resolve it, so the sidebar shows a bare "License" link
+with no SPDX — **any tool trusting the GitHub licence field reports *unknown*, not *GPL-3.0***, and
+that includes this KB's page-fetch channel. It is a declaration, not a text, so counsel will ask
+for the text. And **two Frappe education products now sit in two different families** — `frappe/lms`
+`AGPL-3.0` (33 893 B), `frappe/education` `GPL-3.0` (19 B). Any generalisation about "Frappe
+education apps" is wrong whichever way it is made.
+
+### 🔴 `p490`'s census was off by one, and its total was an undercount
+
+`p490` published *"Of 16 foundational platforms read this pass, **3 are permissive**"* over a census
+reading 3 + **8** + 5 = 16. But its GPL/LGPL cell **named nine repos**, and its two tables **listed
+seventeen rows** (3 permissive + 14 copyleft). The correct p490 figure was **17**, not 16; with this
+pass's two rows it is **19**. 🟢 **The permissive count of 3 was right throughout** and is
+unaffected — but any deck quoting "16 platforms" quotes a miscount.
+
+| class | `p490` published | `p490` actual | **`p491`** |
+|---|---|---|---|
+| Permissive (MIT / Apache-2.0) | **3** | **3** | **3** |
+| GPL / LGPL | 8 | **9** | **10** (+`frappe/education`) |
+| AGPL (network copyleft) | 5 | 5 | **6** (+`learnhouse`) |
+| **total** | **16** | **17** | **19** |
+
+🔴 **The structural reading: three passes of platform discovery have produced no fourth permissive
+LMS.** Both newcomers are copyleft, so the shortlist for a closed hosted derivative is still exactly
+[`oppia`](https://github.com/oppia/oppia) `Apache-2.0`,
+[`kolibri`](https://github.com/learningequality/kolibri) `MIT`,
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `Apache-2.0`, plus
+[`mentingo`](https://github.com/Selleo/mentingo) `MIT` greenfield. That is now an answer to
+"shouldn't we keep looking?" rather than a snapshot — **the permissive tier is small because it is
+small, not because the search was shallow.**
+
+### 🟢 `Fedena` resolved — two repos, zero grants
+
+`p490`: *"could not be resolved to a maintained repo."* It resolves:
+[`projectfedena/fedena`](https://github.com/projectfedena/fedena) **547★** (`68a84ac445bf`) and its
+fork [`foradian/fedena`](https://github.com/foradian/fedena) **4★** (`333477b06f1d`) — **neither
+carrying a licence file**, nine filenames probed on each. The **Apache-2.0** printed by every
+comparison table is one README sentence. 🟢 This **strengthens** "no permissive SIS exists": the only
+candidate that would have broken it has **no licence at all**. Every SIS on these shelves is now
+copyleft or ungranted: `rosariosis` `GPL-2.0`, `GibbonEdu` `GPL-3.0`, `openeducat_erp` `LGPL-3.0`,
+`openSIS` `GPL-2.0`, `frappe/education` `GPL-3.0`-declared, `fedena` **none**.
+
+### 🔴 The branch trap grew, and `p490`'s prose undercounted it too
+
+`p490`'s text said *"Six of these repos do not default to `main`"* while **its own list named ten**.
+With `p491`'s additions it is **twelve**: `learnhouse` → **`dev`**, `frappe/education` → `develop`,
+and both `fedena` repos → `master`, on top of `oppia`/`kolibri` (`develop`), `edx-platform`/
+`canvas-lms` (`master`), `tutor` (`release`), `openeducat_erp` (`19.0`), `GibbonEdu/core`
+(`v31.0.00`), `ILIAS` (`release_11`), `bigbluebutton` (`v4.0.x-develop`), `tao-core` (`develop`).
+🔵 A raw fetch hardcoding `/main/` 404s on all of them, and **a 404 is indistinguishable from "no
+licence file"** to a probe — one mechanism by which this base has published `NO GRANT` on granted
+repositories. Resolve the ref with `ls-remote` first, always.
+
+### 🔵 No maintenance signal exists for any row on these shelves
+
+Latest-commit dates were unavailable on every channel this pass: `api.github.com` is `403` for
+unattached repos, and **page fetches returned a commit *count* with no date on all seven repos
+tried**. So a row's presence proves **existence and licence**, not **liveness** — `fedena` at 547★
+may be long abandoned and this KB cannot tell. 🔴 This is the largest remaining instrument gap after
+licence reading, and it matters most for the small rows, where abandonment is likeliest.
+
+
 ## 🆕 `p490` — `2026-10-27` — **🔴 THE EDUCATION PLATFORM LAYER IS COPYLEFT AND THAT IS NOW THE BINDING COMMERCIAL CONSTRAINT: of 16 foundational platforms read from bytes this pass, **3 are permissive**. Every incumbent — Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas `AGPL-3.0` — forecloses a closed hosted derivative. 🔴 And `frappe/lms`, published as `MIT` here and by current web sources, is **`AGPL-3.0`** read at `license.txt`.**
 
 🔵 **Channels:** `api.github.com` `403` for unattached repositories, so no authenticated search

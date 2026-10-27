@@ -6,13 +6,17 @@ updated: 2026-10-27
 
 # Education AI agents — build-on-able shelf
 
-**Pass `p490` — reads of 2026-10-27.** This file was rewritten this pass. The 57 prior
-pass-sections it carried are preserved in
+**Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file to its
+specified table shape; `p491` **extends** it and does not rewrite it. The p490 tables below stand
+unchanged — every p490 SHA was re-resolved this pass and came back **identical**
+(`DeepTutor a31d82624c27`, `mentingo e137ca47cbec`, `oppia bc73ecf9cf71`), so there is no upstream
+drift to reconcile. The 57 pre-p490 pass-sections remain in
 [`archive/2026-10-27-p490-pre-rewrite/top.md`](../archive/2026-10-27-p490-pre-rewrite/top.md).
 
-**Why the rewrite:** this file is specified as *the agents table*. It had grown to 7,510 lines
-of pass-to-pass audit narrative with no consumable table anywhere in it. An engagement lead
-could not read a license off it. The table is below.
+**New this pass:** an **evaluation-instruments** table (below), which changes the standing claim
+that no education-AI evaluation instrument exists — they exist, and **none of them carries a
+license**. Evidence:
+[`licence-and-stars.2026-10-27-p491.tsv`](../evidence/licence-and-stars.2026-10-27-p491.tsv).
 
 ## How every cell here was verified
 
@@ -107,6 +111,31 @@ Kong), and the same edited payload appears byte-identically in the derivative
 [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) (136★),
 which is how a copied license travels. Treat it as a provenance flag, not a license risk.
 
+## Evaluation instruments — they exist, and none of them is licensed
+
+`p490` recorded "no open-source education-AI evaluation harness above 60★ exists" and treated the
+tier as empty. Measured this pass, the finding is **sharper and worse**: the instruments exist and
+are academically serious, but **not one of them ships a license grant**, so none can be used in
+client work at all.
+
+| Instrument | Repo | Grant at SHA | ★ | What it measures |
+|---|---|---|---|---|
+| MathTutorBench | [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 🔴 **no license file** (`6faed173ec2b`) | 45 | Open-ended *pedagogical* capability of LLM tutors — 3 teacher skills, 7 tasks. EMNLP 2025 Oral (arXiv 2502.18940). |
+| TutorCaseBench | [kixlab/TutorCaseBench](https://github.com/kixlab/TutorCaseBench) | 🔴 **no license file** (`6b9ac34262c7`) | 0 | Tutor behaviour with students showing challenging behaviours; 923 dialogues, 5 challenge types. KAIST. |
+| lm-evaluation-harness | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT**, 1,066 B (`d6de81643928`) | 14,300 | Not education-specific — the general runtime. **The only permissive piece in this tier.** |
+
+🔴 **MathTutorBench's own README contradicts itself on the license**: the badge reads
+`License: CC BY 4.0` and the closing line of the same file says
+*"Creative Commons Attribution-**ShareAlike** 4.0"*. The sidebar shows no license at all. Those
+are two different licenses, **one of them copyleft**, and neither is a software grant — Creative
+Commons licenses are content licenses and CC itself advises against using them for code.
+
+**Consequence for an engagement:** the benchmark *tasks* are publishable research you may read and
+reimplement from the papers; the **repository code and data cannot be taken**. No grant means no
+rights, not permissive-by-default. So the harness remains a **build** — see
+[`compose/patterns.md`](../compose/patterns.md) `P491-1`, which rebases that build on
+`lm-evaluation-harness` (MIT) instead of on nothing.
+
 ## Declared gaps — searched, nothing found
 
 Stating these because silence looks identical to coverage.
@@ -117,8 +146,11 @@ Stating these because silence looks identical to coverage.
 - **No LATAM-origin or Africa-origin education agent reached this shelf's star floor.** Searched
   globally and per region; the regional supply is in deployments and national programmes
   (see `intel/market.md`), not in starred repositories.
-- **No open-source education-AI evaluation harness above 60★ exists.** Every instrument found
-  sits below that floor, so any star-ordered sweep is structurally blind to the whole tier.
+- **No *usable* open-source education-AI evaluation harness exists — but the instruments do.**
+  Restated this pass: `mathtutorbench` (45★) and `TutorCaseBench` (0★) are real and serious, and
+  **neither carries a license grant**, which is a harder blocker than scarcity. A star-ordered
+  sweep is still structurally blind to this tier, and a license-ordered sweep finds nothing in it
+  either. See the table above.
 - **Commit recency is not on this table.** The page-fetch channel does not expose per-file commit
   dates, and `api.github.com` is 403 for arbitrary repos. Rows carry a pinned SHA instead, which
   is a stronger claim than a date.

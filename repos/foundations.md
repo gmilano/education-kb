@@ -6,8 +6,12 @@ updated: 2026-10-27
 
 # Foundational education repos
 
-**Pass `p490` — reads of 2026-10-27.** Rewritten this pass; 62 prior pass-sections preserved in
+**Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
+**extends** it: **two new platform rows** read from bytes, **Fedena finally resolved**, and an
+**arithmetic correction to p490's own census**. Pre-p490 sections remain in
 [`archive/2026-10-27-p490-pre-rewrite/foundations.md`](../archive/2026-10-27-p490-pre-rewrite/foundations.md).
+New evidence:
+[`licence-and-stars.2026-10-27-p491.tsv`](../evidence/licence-and-stars.2026-10-27-p491.tsv).
 
 These are the systems an education engagement starts *from* — the ones that already hold the
 students, the courses, the enrolments and the grades. The AI goes on top; see
@@ -18,16 +22,25 @@ Every license below was read from `raw.githubusercontent.com` at the pinned SHA.
 
 ## The licence picture is the headline
 
-**The education platform layer is overwhelmingly copyleft.** Of 16 foundational platforms read
-this pass, **3 are permissive**. Every incumbent LMS — Moodle, Open edX, Canvas — is GPL or
-AGPL. This is the single most commercially important fact in this file: a hosted, closed
-derivative of the market-leading education platforms is not available on any of them.
+**The education platform layer is overwhelmingly copyleft.** Of **19** foundational platforms now
+read from bytes, **3 are permissive** — and both platforms added this pass are copyleft, so the
+permissive numerator has not moved in two passes while the denominator keeps growing. Every
+incumbent LMS — Moodle, Open edX, Canvas — is GPL or AGPL. This is the single most commercially
+important fact in this file: a hosted, closed derivative of the market-leading education platforms
+is not available on any of them.
 
 | | count | repos |
 |---|---|---|
 | Permissive (MIT / Apache-2.0) | **3** | `oppia`, `kolibri`, `OpenOLAT` |
-| GPL / LGPL (hostable, derivative must share) | 8 | `moodle`, `chamilo`, `ILIAS`, `h5p`, `GibbonEdu`, `tao-core`, `rosariosis`, `bigbluebutton`, `openeducat_erp` |
-| AGPL (network copyleft — reaches hosted SaaS) | 5 | `edx-platform`, `canvas-lms`, `frappe/lms`, `tutor`, `anki` |
+| GPL / LGPL (hostable, derivative must share) | 10 | `moodle`, `chamilo`, `ILIAS`, `h5p`, `GibbonEdu`, `tao-core`, `rosariosis`, `bigbluebutton`, `openeducat_erp`, **`frappe/education`** |
+| AGPL (network copyleft — reaches hosted SaaS) | 6 | `edx-platform`, `canvas-lms`, `frappe/lms`, `tutor`, `anki`, **`learnhouse`** |
+
+🔴 **Arithmetic correction to `p490`.** `p490` published "16 foundational platforms … 3 are
+permissive" with a census reading 3 + **8** + 5 = 16. Its own GPL/LGPL cell already *named nine
+repos*, and its two tables already *listed seventeen rows* (3 permissive + 14 copyleft). The
+count was off by one and the stated total was an undercount: p490's real figure was **17**, not
+16. With this pass's two rows it is **19**. The permissive count of 3 was correct throughout and
+is unaffected — but any downstream deck quoting "16 platforms" is quoting a miscount.
 
 ## Permissive — the three you can build a closed derivative on
 
@@ -46,6 +59,8 @@ derivative of the market-leading education platforms is not available on any of 
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | 7,600 | `46c042e7da65` | Largest installed base and the largest plugin ecosystem (2,000+). Grant is at `COPYING.txt`, **not** `LICENSE` — a root-`LICENSE` probe reports "no grant" here. |
 | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 6,900 | `1c9f0bb8013e` | The open LMS by Instructure; heavy North America higher-ed share. AGPL. Default branch `master`. |
 | [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** | 3,400 | `6054772c0426` | Frappe-framework LMS. **Widely published as MIT — it is not.** Grant at `license.txt` (lowercase), 33,893 B, AGPL-3.0; the GitHub sidebar agrees. |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | 2,400 | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
+| [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared only)* | 682 | `73ce33ef2719` | **New row `p491`.** Frappe school-management / SIS app — **a different product from `frappe/lms`, under a different license family.** Its grant is a **19-byte** `license.txt` reading `License: GNU GPL V3` with **no license text at all**; GitHub's classifier cannot resolve it and shows a bare "License" link. See the note below. Default branch `develop`. |
 | [ankitects/anki](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,300 | `d87cb22bf337` | Spaced-repetition engine; the reference implementation of SRS scheduling. AGPL. Useful as an algorithm reference even where the code can't be taken. |
 | [overhangio/tutor](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,100 | `aa5d1a764b6c` | Docker-based Open edX distribution — the realistic way anyone actually deploys Open edX. Default branch `release`. |
 | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | `2d1e97ee4244` | LMS focused on ease of use and accessibility. Notable francophone + LATAM public-sector footprint. |
@@ -56,21 +71,66 @@ derivative of the market-leading education platforms is not available on any of 
 | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | `46a5d7d40082` | Education **ERP** on Odoo — admissions, fees, hostel, library, timetable. The Odoo-for-education answer. Default branch `19.0`. |
 | [oat-sa/tao-core](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | `d9b3da5e6b0a` | Computer-based **assessment** platform core (QTI). The serious open assessment/exam engine. |
 
+## The 19-byte license, and why it matters more than it looks
+
+`frappe/education`'s entire grant is the string `License: GNU GPL V3` — 19 bytes, no license body.
+Three consequences, none of them academic:
+
+1. **GitHub cannot classify it.** The sidebar shows a bare "License" link with no SPDX identifier,
+   so every tool that trusts the GitHub license field — including this KB's page-fetch channel —
+   reports *unknown*, not *GPL-3.0*.
+2. **It is a declaration, not a text.** GPL-3.0 is enforced through its own terms; a repository
+   that names the license without shipping it still signals GPL-3.0 intent, but a client's counsel
+   will ask for the text. Treat the family as **GPL-3.0 and the paperwork as incomplete**.
+3. **Two Frappe education products, two license families.** `frappe/lms` is **AGPL-3.0** (p490,
+   read at `license.txt`, 33,893 B) and `frappe/education` is **GPL-3.0** (19 B). Anyone who
+   generalises "Frappe education apps are X" is wrong whichever X they pick.
+
+## Fedena: resolved, and the Apache-2.0 claim does not survive contact with the repository
+
+`p490` recorded Fedena as "could not be confirmed … not carried as a row." It resolves — to **two**
+repositories, both of which `git ls-remote` reaches:
+
+| repo | ★ | grant at SHA | sidebar |
+|---|---|---|---|
+| [projectfedena/fedena](https://github.com/projectfedena/fedena) | 547 | 🔴 **none** (`68a84ac445bf`) | no license shown |
+| [foradian/fedena](https://github.com/foradian/fedena) | 4 | 🔴 **none** (`333477b06f1d`) | no license shown |
+
+Both are "Fedena SIS"; the 4★ one is a **fork** of the 547★ one. Neither ships a license file under
+any of the nine names probed. The **Apache-2.0** that comparison tables and vendor blogs print for
+Fedena traces to a single sentence in the README — *"Fedena is released under the Apache License
+2.0"* — and a README sentence is not a grant.
+
+🔴 **Not carried as a permissive row, and the reason is now evidential rather than "unresolved."**
+This *strengthens* the finding below: the one candidate that would have broken "no permissive SIS
+exists" turns out to have no license at all. Also note the 40,000-schools / 100-countries figures
+attached to Fedena in listicles describe the **commercial hosted product**, not these repositories.
+
 ## Branch-name trap, worth its own note
 
-Six of these repos do **not** default to `main`: `oppia` and `kolibri` (`develop`),
+**Twelve** of these repos do **not** default to `main` (p491 adds `learnhouse` → `dev` and
+`frappe/education` → `develop`; p490's prose said "six" while its own list named ten):
+`oppia`, `kolibri` and `frappe/education` (`develop`), `learnhouse` (`dev`),
 `edx-platform` and `canvas-lms` (`master`), `tutor` (`release`), `openeducat_erp` (`19.0`),
 `GibbonEdu/core` (`v31.0.00`), `ILIAS` (`release_11`), `bigbluebutton` (`v4.0.x-develop`),
-`tao-core` (`develop`). Any raw-content fetch that hardcodes `/main/` returns 404 on all of
-them — which reads as "file absent" rather than "wrong branch". Resolve the ref with
+`tao-core` (`develop`), and `projectfedena`/`foradian` `fedena` (`master`). Any raw-content fetch
+that hardcodes `/main/` returns 404 on all of them — which reads as "file absent" rather than "wrong branch". Resolve the ref with
 `git ls-remote --symref` first.
 
 ## Declared gaps
 
-- **No permissive SIS exists.** Every student-information system found (`rosariosis` GPL-2.0,
-  `GibbonEdu` GPL-3.0, `openeducat_erp` LGPL-3.0, `openSIS` GPL-2.0) is copyleft. A client
-  needing a closed-source SIS derivative has no open starting point — that is a build, not a fork.
+- **No permissive SIS exists — confirmed harder this pass.** Every student-information system
+  found (`rosariosis` GPL-2.0, `GibbonEdu` GPL-3.0, `openeducat_erp` LGPL-3.0, `openSIS` GPL-2.0,
+  `frappe/education` GPL-3.0-declared) is copyleft, and **Fedena — the only candidate published as
+  Apache-2.0 — ships no license grant at all**. A client needing a closed-source SIS derivative has
+  no open starting point. That is a build, not a fork.
 - **No permissive assessment/QTI engine exists.** `tao-core` is GPL-2.0 and is the only
   substantial one.
-- **`Fedena` could not be confirmed.** Listed as Apache-2.0 by one source; no maintained
-  canonical GitHub repo resolved via `ls-remote`. Not carried as a row.
+- ~~**`Fedena` could not be confirmed.**~~ 🟢 **Closed this pass** — it resolves to two repos, both
+  unlicensed. See the section above. The claim was not wrong about the repos existing; it was wrong
+  about them being licensed.
+- **Commit recency is still absent from this file.** The page-fetch channel does not expose the
+  latest-commit date (every fetch this pass returned a commit *count* and no date), and
+  `api.github.com` is 403 for unattached repos. So **no row here can be shown to be maintained** —
+  `fedena` at 547★ may well be abandoned and this file cannot tell. Rows carry a pinned SHA, which
+  proves existence and content but not liveness.

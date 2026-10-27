@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p491` — `2026-10-27` — **🟢 THE EDUCATION-AI EVALUATION TIER IS NOT EMPTY — IT IS UNLICENSED. `p490` reported no instrument exists; two do, both serious, and **neither ships a licence file**. 🔴 `mathtutorbench`'s own README names two different licences (`CC BY 4.0` badge vs `CC BY-SA 4.0` text) and neither is a software grant. 🟢 And `Fedena`, "could not be confirmed" since `p490`, resolves to two real repos — **both with no grant at all**.**
+
+🔵 **Channel posture.** Unchanged from `p490` and reconfirmed: `api.github.com` `403` for
+unattached repositories; `curl -sI https://github.com/<repo>` **`403` again** — the standing task
+still prescribes it and it is still a uniform false-negative generator, now refuted by `p472`,
+`p490` and `p491`. What worked, again: **`git ls-remote --symref`** (existence + default ref + SHA),
+**`raw.githubusercontent.com` at a resolved SHA** (licence bytes, family anchored on the 200-byte
+title block per `p490`'s standing rule), **page fetch** (stars + sidebar). Evidence:
+[`licence-and-stars.2026-10-27-p491.tsv`](../evidence/licence-and-stars.2026-10-27-p491.tsv).
+
+🟢 **No upstream drift since `p490`.** Three p490 SHAs were re-resolved and came back
+**byte-identical**: `DeepTutor a31d82624c27`, `mentingo e137ca47cbec`, `oppia bc73ecf9cf71`. So
+`p490`'s tables are carried forward rather than re-read, and this pass **extends** the six
+non-append-only files instead of rewriting them. 🔵 `p490` rewrote them hours earlier; a second
+same-day rewrite would have destroyed a correct file to produce another correct file.
+
+### 🟢 The new finding: the instruments exist, and none of them is usable
+
+| instrument | repo | grant @ SHA | ★ | measures |
+|---|---|---|---|---|
+| MathTutorBench | [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🔴 **none** (`6faed173ec2b`) | 45 | open-ended pedagogical capability — 3 teacher skills × 7 tasks. **EMNLP 2025 Oral**, arXiv 2502.18940 |
+| TutorCaseBench | [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | 🔴 **none** (`6b9ac34262c7`) | 0 | tutor behaviour with challenging student behaviours; 923 dialogues, 5 types. KAIST |
+| lm-evaluation-harness | [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT**, 1 066 B (`d6de81643928`) | 14 300 | generic LLM eval — **the only permissive row in the tier** |
+
+🔴 **`mathtutorbench` states two different licences in one file.** The README badge reads
+`License: CC BY 4.0`; the closing line of the same README says *"Creative Commons
+Attribution-**ShareAlike** 4.0 International"*. The sidebar shows **no licence**. Those differ by a
+copyleft clause, and **neither is a software grant** — Creative Commons itself advises against CC
+licences for code.
+
+🔵 **This is a harder blocker than the scarcity `p490` described.** Scarcity is fixed by searching
+better; **no grant means no rights**, and that is fixed only by the authors. The papers are
+readable and the task designs are reimplementable; the repositories are not takeable. Route around
+it in [`compose/patterns.md`](../compose/patterns.md) **`P491-1`**, which rebases the build on
+`lm-evaluation-harness` (MIT) and **supersedes `P490-6`** — cutting scope from 10–14 weeks to 8–12,
+because the runtime and reporting stop being ours to write. 🟢 **Highest-leverage action in this
+file: email ETH LRE and KAIST and ask them to add MIT or Apache-2.0.** Both are academic groups; an
+upstream grant would turn `P491-1` from a build into a compose.
+
+### 🟢 `Fedena` resolved — and the Apache-2.0 everyone prints is a README sentence
+
+`p490` recorded: *"no maintained canonical GitHub repo resolved via `ls-remote`."* It resolves — to
+**two** repos, both reachable:
+
+| repo | ★ | grant | sidebar |
+|---|---|---|---|
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 547 | 🔴 **none** (`68a84ac445bf`) | no licence shown |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 4 | 🔴 **none** (`333477b06f1d`) | no licence shown |
+
+Both are "Fedena SIS"; the 4★ is a **fork** of the 547★. Nine licence filenames probed on each —
+nothing. The **Apache-2.0** in every comparison table traces to one README sentence, *"Fedena is
+released under the Apache License 2.0"*. 🔵 A README sentence is not a grant. 🟢 This **strengthens**
+the standing finding that **no permissive SIS exists**: the single candidate that would have broken
+it has no licence at all. The 40 000-schools figure attached to Fedena describes the **commercial
+hosted product**, not these repositories.
+
+### 🔴 Two legal claims from current sources, refuted before they entered this KB
+
+- **Texas HB 2400 is not law.** It would bar districts from using AI *"to provide instruction …
+  or to replace or supplement a teacher's role"* — the most consequential education-AI bill in the
+  US if enacted. A live aggregator (`billtrack50`) lists it as **"became law"**. The Legislature's
+  record: **filed 4 Feb 2025, referred to House Public Education 14 Mar 2025, left in committee**;
+  companion **SB 382** died likewise. 🔵 `capitol.texas.gov` does not resolve from this session's
+  network, so this rests on the convergent secondary record, not a primary read — but the
+  aggregator is the outlier.
+- **Brazil's PL 2338/2023 is not law.** Senate approved **10 Dec 2024** → Chamber **17 Mar 2025** →
+  **still in special committee awaiting the rapporteur's report** (Oct 2026); an end-May 2026
+  plenary vote did not happen. 🟢 So `p490`'s "no LATAM statute" gap **holds**, and now names the
+  bill to watch. 🟡 The claim that it makes education high-risk is from **one vendor blog** and the
+  sources describing its risk tiers do not mention education — unconfirmed.
+
+### 🔵 Standing rules, carried and added
+
+- **Anchor licence family on the 200-byte title block** (`p490`). Held on 7 more repos this pass.
+- **Never infer a licence from a README, a badge or a sidebar alone.** `p491` adds three distinct
+  failure modes to this: a README sentence with no grant (`fedena`), a README contradicting itself
+  (`mathtutorbench`), and a 19-byte grant GitHub cannot classify (`frappe/education`).
+- 🔴 **Absence of a licence is not permissiveness.** Three of the seven repos read this pass have no
+  grant. A sweep that records "licence: unknown" and moves on will eventually put one of them on a
+  shelf.
+- 🔵 **No row on these shelves has a maintenance signal.** Latest-commit dates are unavailable on
+  every channel open to this session — page fetches returned commit *counts* with no dates on all
+  seven repos tried. A pinned SHA proves existence and content, **not liveness**.
+
+
 ## 🆕 `p490` — `2026-10-27` — **🟢 `agents/top.md` HAD NO AGENTS TABLE. It has one again. Six published figures corrected from bytes — `educhain` is **387★, not ~12 000** (31×), `OATutor` **274★, not ~1 500** (5×), `frappe/lms` is **AGPL-3.0, not MIT**. 🔴 And this pass's own licence reader misgraded GPLv2 as LGPL, because the GPLv2 *preamble* names the Lesser GPL — a defect this base can reproduce in every body-scanning reader it has ever run.**
 
 🔵 **Channel posture, stated first.** `api.github.com` returns `403` for every repository not

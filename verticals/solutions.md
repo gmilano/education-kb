@@ -6,8 +6,12 @@ updated: 2026-10-27
 
 # Education platforms you can customise with AI on top
 
-**Pass `p490` — reads of 2026-10-27.** Rewritten this pass; 62 prior pass-sections preserved in
+**Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
+**extends** it with two platform rows read from bytes and a resolved Fedena entry. Pre-p490
+sections remain in
 [`archive/2026-10-27-p490-pre-rewrite/solutions.md`](../archive/2026-10-27-p490-pre-rewrite/solutions.md).
+New evidence:
+[`licence-and-stars.2026-10-27-p491.tsv`](../evidence/licence-and-stars.2026-10-27-p491.tsv).
 
 The "Odoo for education" question, answered by layer. Each row is a real, deployed system with a
 license read from bytes at a pinned SHA — see
@@ -25,6 +29,8 @@ license read from bytes at a pinned SHA — see
 | **LMS — ease of use** | [Chamilo](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | Francophone + LATAM public sector. |
 | **LMS — DACH** | [ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | German universities and public sector; SCORM-strong. |
 | **LMS + AI mentoring** | [mentingo](https://github.com/Selleo/mentingo) | **MIT** | 100 | Small, modern, AI-native, multi-tenant via Postgres RLS. The best permissive *starting codebase* rather than a migration target. |
+| **LMS — modern/greenfield** | [LearnHouse](https://github.com/learnhouse/learnhouse) | AGPL-3.0 | 2,400 | **New `p491`.** "Next-gen" course and content platform, modern stack. Larger than Kolibri or Chamilo by stars and previously missing from this KB. 🔴 AGPL — not a closed-SaaS base. Default branch `dev`. |
+| **SIS / school mgmt (Frappe)** | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared)* | 682 | **New `p491`.** Admissions, students, programmes, fees on the Frappe stack. 🔴 Grant is a **19-byte stub** naming GPL v3 with no license text — family is GPL-3.0, paperwork is incomplete. **Not the same license as `frappe/lms` (AGPL-3.0).** |
 | **Education ERP** | [OpenEduCat](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | Admissions, fees, library, hostel, timetable — on Odoo. This is the literal Odoo answer. |
 | **SIS (K-12)** | [RosarioSIS](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 647 | Enrolment, scheduling, grades, attendance, billing. |
 | **School management** | [Gibbon](https://github.com/GibbonEdu/core) | GPL-3.0 | 635 | Teacher/student/parent/leadership workflows. |
@@ -43,8 +49,12 @@ license read from bytes at a pinned SHA — see
 - **Yes, and it must stay closed** → **only three rows survive**: OpenOlat (Apache-2.0),
   Kolibri (MIT), Oppia (Apache-2.0), plus `mentingo` (MIT) as a greenfield base. Everything
   else forces source release to users over a network (AGPL) or to recipients (GPL).
+  🔵 **`p491` added two platforms and this shortlist did not change** — both newcomers are
+  copyleft. Three passes of platform discovery have not produced a fourth permissive LMS, which is
+  itself the answer to "shouldn't we keep looking?".
 
-**The AGPL trap specifically:** Open edX, Canvas, Frappe LMS, Tutor and Anki are AGPL-3.0.
+**The AGPL trap specifically:** Open edX, Canvas, Frappe LMS, Tutor, Anki **and LearnHouse** are
+AGPL-3.0.
 A Globant-hosted SaaS built on any of them owes source to its users. This is routinely missed
 because listicles print "open source" without the family — and in `frappe/lms`'s case print
 "MIT" outright, which this pass refuted from bytes.
@@ -60,6 +70,7 @@ Don't build the connector — these are real:
 | Source → study package | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | PDF/video/web/audio → quizzes + SRS |
 | Mastery modelling | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | Bayesian Knowledge Tracing |
 | Moodle plugin API | — | GPL-3.0 (plugin inherits) | 2,000+ plugin ecosystem; note the plugin is a derivative |
+| Eval runtime for tutors | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | MIT | 14,300★. Generic LLM eval; **the only permissive base for a tutoring-quality harness** — the education-specific benchmarks are unlicensed (see [`agents/top.md`](../agents/top.md)) |
 
 ## Declared gaps
 
@@ -69,5 +80,12 @@ Don't build the connector — these are real:
 - **No MCP server for Moodle or Open edX reached a usable star floor.** Canvas is the only
   incumbent LMS with a real, maintained agent tool surface. For Moodle/Open edX, the connector
   is engagement work.
-- **`Fedena` (claimed Apache-2.0 SIS) could not be resolved** to a maintained repo and is not
-  carried.
+- ~~**`Fedena` (claimed Apache-2.0 SIS) could not be resolved.**~~ 🟢 **Resolved `p491`:** two real
+  repos ([`projectfedena/fedena`](https://github.com/projectfedena/fedena) 547★,
+  [`foradian/fedena`](https://github.com/foradian/fedena) 4★), **neither carrying a license file**.
+  The Apache-2.0 claim comes from a README sentence, not a grant. Still not carried as a row — now
+  for an evidenced reason rather than an unresolved one.
+- **No maintenance signal is available for any row in this file.** Stars and license are readable;
+  the latest-commit date is not, on any channel open to this session. A row's presence here means
+  *it exists and its license is known*, **not** *it is actively maintained* — do not let a layer
+  table imply currency it cannot support.

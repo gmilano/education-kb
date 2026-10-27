@@ -6,7 +6,8 @@ updated: 2026-10-27
 
 # Compose patterns — concrete education AI recipes
 
-**Pass `p490` — reads of 2026-10-27.** Rewritten this pass; 77 prior pass-sections preserved in
+**Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
+**extends** it with **`P491-1`**, which supersedes `P490-6`. Pre-p490 sections remain in
 [`archive/2026-10-27-p490-pre-rewrite/patterns.md`](../archive/2026-10-27-p490-pre-rewrite/patterns.md).
 
 Every component below is a row verified this pass in [`agents/top.md`](../agents/top.md),
@@ -173,13 +174,17 @@ a SaaS-shaped product.
 
 ---
 
-## P490-6 — Open education-AI evaluation harness (build, not compose) 🟡
+## P490-6 — Open education-AI evaluation harness (build, not compose) 🟡 **— superseded by `P491-1`**
 
-**Why:** this is the sector's largest structural gap. **No open-source education-AI evaluation
-harness above 60★ exists** — every instrument found sits below that floor, so every star-ordered
-search is blind to the tier, and nobody can currently demonstrate that an AI tutor improves
-outcomes. Buyers in all four regions are starting to ask, and EU high-risk conformity will
-require evidence by **2 Dec 2027**.
+🔵 **Superseded.** Its premise — that *no* education-AI evaluation instrument exists — was refuted
+in `p491`: two real benchmarks exist, and they are **unlicensed**. Use **`P491-1`** below, which
+keeps this pattern's scoring design but rebases the runtime on a permissive harness instead of
+building one. Kept here because the component wiring below is still sound and the two patterns
+differ only in their base.
+
+**Why:** this is the sector's largest structural gap. Nobody can currently demonstrate that an AI
+tutor improves outcomes. Buyers in all four regions are starting to ask, and EU high-risk
+conformity will require evidence by **2 Dec 2027**.
 
 | Component | Repo | License | Role |
 |---|---|---|---|
@@ -203,14 +208,70 @@ differentiator in this file — and it would close the gap this KB has carried f
 
 ---
 
+## P491-1 — Tutoring-quality eval harness on a permissive base 🟢 *(supersedes `P490-6`)*
+
+**Why:** `p491` established that the instruments for measuring tutoring quality **exist and carry
+no license** — [`mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (45★, EMNLP 2025 Oral)
+and [`TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) (0★, KAIST) both ship **no grant
+file**, and MathTutorBench's README contradicts itself (`CC BY 4.0` badge vs `CC BY-SA 4.0` text,
+neither a software grant). So the research is public and the **code and data are not takeable**.
+That is a licensing blocker, not a scarcity one, and it has a clean route around it.
+
+| Component | Repo | License | Role |
+|---|---|---|---|
+| Harness runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** (1,066 B @ `d6de81643928`) | task registry, model adapters, runners, reporting — 14,300★, the de-facto standard |
+| Ground-truth mastery | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | BKT as the reference learner model |
+| Item generation | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | held-out item banks at volume |
+| Curriculum authority | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | answer keys with provenance |
+| Learner simulation | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | drive simulated learner trajectories |
+| Subject under test | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | first candidate tutor |
+
+**Wiring:** implement each pedagogical dimension as a **native `lm-evaluation-harness` task** —
+that is the one decision that makes this reusable, because it inherits the harness's model
+adapters, caching, reproducible task versioning and result format for free, and anything scored
+this way is comparable against general-model baselines. Then: KSoR holds curriculum and answer
+keys → `educhain` generates held-out item banks → `smolagents` drives simulated learner
+trajectories against the candidate tutor → OATutor's BKT scores **per-skill mastery gain** against
+the key → the harness emits the report. Score learning gain, never token overlap.
+
+**The license line that makes this work — read it before writing any code:**
+
+1. 🟢 **Every component above is MIT or Apache-2.0.** The output is a clean closed or open
+   deliverable, your choice.
+2. 🔴 **Do not vendor `mathtutorbench` or `TutorCaseBench` code or data.** No grant means no
+   rights — not permissive-by-default. Cloning for private reading is one thing; shipping their
+   code or redistributing their datasets in a client deliverable is another.
+3. 🟢 **Reimplement the *task designs* from the papers** (arXiv 2502.18940 for MathTutorBench;
+   TutorCaseBench's 5 challenge types). Benchmark methodology published in a paper is readable and
+   reimplementable; that is what papers are for. Cite both.
+4. 🟢 **Ask the authors to add a license.** Both are academic groups (ETH LRE, KAIST kixlab) and an
+   MIT or Apache-2.0 grant is usually a five-minute decision nobody got around to. An upstream
+   license would convert this whole pattern from a build into a compose — the highest-leverage
+   email in this file.
+
+**Why it is worth building anyway:** EU high-risk conformity needs **evidence of educational
+efficacy** by **2 Dec 2027** (`P490-2`), and no buyer in any region can currently get it. A
+published, permissively-licensed tutoring-eval harness is a credibility asset that also doubles as
+the measurement layer under every other pattern here.
+
+**Scope:** 8–12 weeks for v1 on one subject domain — shorter than `P490-6`'s 10–14, because the
+runtime, model adapters and reporting are no longer yours to write.
+
+---
+
 ## Patterns deliberately **not** offered
 
 - **Nothing on Moodle or Open edX at the agent layer.** Neither has an MCP/tool surface at a
   usable star floor; the connector is unbudgeted build work. Use P490-1 (Canvas) where possible
   and price the connector explicitly otherwise.
-- **No closed SaaS on an incumbent LMS fork.** Moodle is GPL-3.0; Open edX, Canvas, Frappe LMS
-  and Tutor are **AGPL-3.0** — hosting a modified copy owes source to users. Only OpenOlat,
-  Kolibri, Oppia and mentingo support that shape.
+- **No closed SaaS on an incumbent LMS fork.** Moodle is GPL-3.0; Open edX, Canvas, Frappe LMS,
+  Tutor **and LearnHouse** (`p491`, 2,400★) are **AGPL-3.0** — hosting a modified copy owes source
+  to users. Only OpenOlat, Kolibri, Oppia and mentingo support that shape.
+- **Nothing on `frappe/education`** (`p491`, 682★) despite it being a genuine school-management
+  base: its grant is a **19-byte stub** naming GPL v3 with no license text, so it is copyleft *and*
+  its paperwork will not survive a client's legal review. Named so the omission is visible.
+- **Nothing built on an unlicensed benchmark.** `mathtutorbench` and `TutorCaseBench` are the two
+  best education-AI instruments in existence and **neither can be composed** — see `P491-1`.
 - **No closed SIS or assessment product.** Every SIS found (`rosariosis` GPL-2.0, `GibbonEdu`
   GPL-3.0, `openeducat_erp` LGPL-3.0) and the only real assessment engine (`tao-core` GPL-2.0)
   are copyleft. There is no permissive base — it is a ground-up build.
