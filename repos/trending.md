@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — `2026-10-27` — **the trending board is agent tooling, not education, and the one education repo on it is not software-licensed**
+
+🔵 Append-only. The `p468` body and all prior passes stand unchanged below this section.
+
+### 🔴 First, the channel, because the rows below depend on it
+
+🔴 **Live `github.com/trending` is not reachable as a page from this host.** Every "trending" claim
+in this section is reconciled from secondary October-2026 roundups and then **re-verified
+first-hand** against the repository: default ref by `git ls-remote --symref`, licence payload read
+at that ref, star count from the session GitHub tool channel on **2026-10-27**. No star count
+below is relayed from a roundup. 🔵 Where a roundup and the first-hand read disagree, the
+first-hand read is published and the disagreement is named.
+
+### 🟢 Education-relevant repos on the October-2026 boards
+
+| repo | licence (first-hand at `HEAD`) | ★ `2026-10-27` | forks | education read |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** · 11 408 B · `cd2f54e1e506` | 43 930 | 5 550 | 🟢 education-native; the shelf anchor |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** · 1 065 B · `ba2525637432` | 41 563 | 6 433 | 🟢 education-native; **v1.2.0 2026-10-16** |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔴 **ODbL-1.0** · 25 289 B · `77d2692c3d64` | 7 384 | 1 193 | 🟡 education-native **data**, not software. 1 590 micro-topics / 3 221 prerequisite edges. Share-alike on derived databases: a curriculum graph built from it inherits the obligation |
+| [`makecindy/cindy`](https://github.com/makecindy/cindy) | Apache-2.0 · 11 358 B · `cfc7749b96f6` | 6 532 | 796 | 🔴 **not education.** Filed under an education trend by a roundup; its README and its own topics (`electron`, `ios`, `react-native`, `ai-assistant`) make it a general desktop agent |
+
+🔴 **The board's composition is the finding.** The October-2026 trending roundups this pass read
+are dominated by agent *tooling* — agent-skills libraries, security-audit skills, context
+compressors, terminal rewrites. Education appears on them **twice**, and both times it is an
+academic lab's tutor (HKU, Tsinghua). There is no commercial or vendor-backed open-source
+education project on the board at all. For Globant the reading is direct: **the open-source
+education supply is academic, and the production engineering around it is the gap a studio
+fills.**
+
+### 🟡 One roundup-vs-first-hand disagreement, named
+
+🔵 A secondary source read `HKUDS/DeepTutor` at **41.2k★**; the tool channel reads **43 930★**
+today. 🟢 This is **not** a disagreement — it is a time series, exactly the error class `p468`
+registered as `Gap 468-B`. Published here as a dated pair rather than as a conflict: 41.2k at the
+roundup's date, 43 930 on 2026-10-27.
+
+### 🟢 Novel-to-these-shelves repos surfaced by the trending and discovery legs
+
+| repo | licence (first-hand) | ★ | region | note |
+|---|---|---|---|---|
+| [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | MIT · 1 089 B · `5eaa67118ee6` | 0 | **LATAM** (BR) | LangGraph + Ollama over BNCC/PCN/PNLD with page citations |
+| [`insolitos/IA_para_aprender`](https://github.com/insolitos/IA_para_aprender) | MIT · 1 075 B · `a152c15af5d9` | 0 | **EMEA** (PT) | school-library AI literacy, created 2026-10-14 |
+| [`vijju9019/GradeAI`](https://github.com/vijju9019/GradeAI) | MIT · 1 077 B · `6a1c56b153f8` | 0 | Global | created 2026-10-25, rubric + teacher override |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT · 1 069 B · `297c4cba7b33` | 0 | Global | lab/exam DSL + **MCP** tools, 4.3 MB tree |
+| [`lbhubedu/lbedu.me`](https://github.com/lbhubedu/lbedu.me) | 🟡 MIT **+ reserved-rights carve-out** · 2 118 B · `18272c548223` | 0 | **LATAM** (BR) | pt-BR prompt/agent/MCP recipe collection. Grant excludes brand, institutional texts and `public/images/` — see `Gap 469-A` |
+
+### 🔴 Gaps on this channel, written down rather than left blank
+
+- **No GitHub Trending page read.** See the channel note above. This remains the single largest
+  unverifiable in this shelf's method and has been for every pass that published a "trending" row.
+- **No India, Japan, Korea, SEA, African or Middle-Eastern education repo** surfaced on any
+  October-2026 board this pass. `p465` measured African education supply at 61 repositories whose
+  **maximum** star count is 12; nothing this pass changes that number.
+- **No vendor-backed open-source education project** on the boards at all. Every education row
+  above is a university lab or a single maintainer.
+
 ## 🆕 `2026-10-27` · `p468` — **🟢 `p467`'s GitLab NIL IS REFUTED BY ONE ROW, which is exactly the size the correction deserves: `OpenTeacherAgent` is a real agentic education project on GitLab, AGPL-3.0, read first-hand at 34 523 B. 🔴 And the GitHub channel that rescued `p458` returns 93.3 % already-carried on its `topic:edtech` leg — the single highest carried share this shelf has recorded on any English leg.**
 
 🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained

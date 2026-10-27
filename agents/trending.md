@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — `2026-10-27` — **the week's movement is two 40k★ academic tutors, and the week's novelty is in two non-English legs**
+
+🔵 Append-only. The `p468` body and all prior passes stand unchanged below this section. Star
+counts are from the session GitHub tool channel on **2026-10-27**; `api.github.com` direct is still
+**403** from this host.
+
+### 🟢 Moving this week
+
+| repo | licence | ★ `2026-10-27` | movement | read |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **43 930** (5 550 forks) | pushed 2026-10-26, `HEAD` `a31d82624c27`; one secondary source read **41.2k** days earlier | the anchor row of this shelf, still compounding ten months after its 2025-12-29 release |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41 563** (6 433 forks) | **v1.2.0 on 2026-10-16** made server-first generation stable; earlier releases added MP4 export and direct slide editing | the permissive peer to DeepTutor, and the **higher fork ratio** (15.5 % vs 12.6 %) — more people are building on it than reading it |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔴 **ODbL-1.0** | **7 384** (1 193 forks) | pushed 2026-10-24 | 1 590 micro-topics, 3 221 prerequisite edges. 🟢 Re-read first-hand this pass at **25 289 B · `77d2692c3d64`** — **byte- and digest-identical** to the shelf's record. A share-alike *database* licence, not a software grant; the shelf has had this right since `p466` |
+| [`makecindy/cindy`](https://github.com/makecindy/cindy) | Apache-2.0 | **6 532** (796 forks, 2 025 open issues) | pushed 2026-10-27 | 🔴 **off-class.** Carried here only because a trending roundup filed it under an education trend. General-purpose desktop agent — see the refusal table on `agents/top.md` |
+
+### 🟢 New to these shelves this week
+
+| repo | licence (first-hand) | ★ | region | first seen |
+|---|---|---|---|---|
+| [`vijju9019/GradeAI`](https://github.com/vijju9019/GradeAI) | MIT · 1 077 B · `6a1c56b153f8` | 0 | Global | created **2026-10-25** — two days before this pass |
+| [`insolitos/IA_para_aprender`](https://github.com/insolitos/IA_para_aprender) | MIT · 1 075 B · `a152c15af5d9` | 0 | **EMEA** (Portugal) | created **2026-10-14** |
+| [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | MIT · 1 089 B · `5eaa67118ee6` | 0 | **LATAM** (Brazil) | updated 2026-10-22; BNCC/PCN/PNLD-grounded |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT · 1 069 B · `297c4cba7b33` | 0 | Global | pushed 2026-08-23; CLI + **MCP** surface |
+| [`papayaykware/agente-educativo-psicocognitivo`](https://github.com/papayaykware/agente-educativo-psicocognitivo) | MIT · 1 069 B · `e34780266778` | 0 | **LATAM** / ES | pushed 2026-10-18; 🟡 self-described roadmap |
+
+### 🟢 `p468`'s vocabulary finding REPRODUCED on two further languages
+
+🔵 `p468` found that the discovery channel is not exhausted, its **vocabulary** is — one
+Spanish-language leg returned 9 novel addresses in 12 against 9 in 64 across three English legs.
+🟢 **Reproduced, and extended.** This pass ran one **Portuguese** leg and one **Spanish** leg
+against three English legs:
+
+| leg | language | candidates graded | novel to these shelves | **granted** and novel |
+|---|---|---|---|---|
+| open-source AI agents / GitHub trending / vertical platforms | English ×3 | 31 | 7 | 4 |
+| `agente IA educación … tutor adaptativo` | Spanish | 6 | 2 | 1 |
+| `agente IA educação Brasil … licença MIT` | Portuguese | 6 | 3 | **2** |
+
+🔴 **And `p468`'s catch does not reproduce.** `p468` recorded the non-English legs' usable build-on
+yield as **ZERO**. This pass it is **3** — `Agente-Educacional`, `IA_para_aprender` and
+`agente-educativo-psicocognitivo`, all MIT, all read first-hand. 🟡 But the strongest of the three
+is a course final project and the other two are 0★ and days old, so the yield is real supply at
+**prototype tier**, which is what a non-English leg has returned every time it has returned
+anything. The vocabulary axis buys **placement**, not maturity: both LATAM rows and the EMEA row
+on `agents/top.md` came from non-English legs and no English leg has ever produced a
+region-placed education row on these shelves.
+
+### 🔴 Where the week returned nothing, stated rather than left silent
+
+- **India and Japan:** one dedicated leg (`open source AI tutor agent India China Japan github 2026`)
+  returned **no** India- or Japan-originated education agent. The APAC rows on this shelf are
+  **China and Hong Kong only** — Tsinghua and HKU. For an APAC engagement outside those two
+  systems, this shelf has no local supply, and that is a gap, not coverage.
+- **Live GitHub Trending:** not reachable as a page from this host. Every "trending" claim above is
+  reconciled from secondary roundups and then re-verified first-hand against the repository. No
+  row's star count below is relayed; all were read on the tool channel this pass.
+- **North America:** the English legs returned **one** granted North-American education row
+  (`grading_assistant`, 4★, last pushed 2025-08). The region with the largest market share
+  (≈36 %) has the thinnest *open-source* supply on this shelf — its edtech is commercial.
+
 ## 🆕 `2026-10-27` · `p468` — **🟢 THE SATURATION THIS SHELF HAS RECORDED FOR SIX PASSES IS A PROPERTY OF THE QUERY LANGUAGE, NOT OF THE SUPPLY: one Spanish leg and one Portuguese leg returned 12 novel addresses in 15, against 9 in 64 across three English legs — 80.0 % versus 14.1 %. 🔴 And the finding that costs the most is the one that follows it: of those 12, exactly ZERO are build-on supply, so the vocabulary fix buys visibility and not inventory.**
 
 🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained

@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — **🟢 ONE PERMISSIVELY-GRANTED FULL LMS EXISTS AND IT IS NOT THE ONE ANYONE NAMES: `OpenOLAT` (Apache-2.0, 448★, Java). 🔴 `frappe/lms` — the row the 2026 roundups file under MIT — is AGPL-3.0, read first-hand. 🟢 And the release axis is current: Moodle 5.2 shipped April 2026 with 5.3 LTS due October 2026, Chamilo 2.0 shipped April 2026.**
+
+🔵 Every grant below read first-hand at `HEAD` on **2026-10-27** (`Gap 468-A` honoured: payloads
+measured as files, never through a shell variable). Star counts from the session GitHub tool
+channel the same day.
+
+### 🟢 The platforms a Globant engagement actually lands on
+
+| platform | repo | licence · bytes · `sha256₁₂` | ★ | stack | where it fits |
+|---|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 · `COPYING.txt` 35 147 B · `8ceb4b9ee5ad` | 7 548 | PHP | 🔴 the deployed default worldwide. **5.2 released April 2026; 5.3 is the next LTS, scheduled October 2026.** Build via plugins and LTI, outside the GPL boundary |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 · `LICENSE` 35 136 B · `e12d78569742` | — | Python/Django | 🔴 MOOC-scale and national-platform work. Network copyleft: an AI layer linked in owes source to every user |
+| **OpenOlat** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `LICENSE` 10 982 B · `6dbc5b605ed0` | 448 | Java | 🟢 **the permissive option.** Universities and corporates; QTI, SCORM, curriculum management, assessment, modular course editor, compliance tracking. The one row here Globant can fork, extend and ship closed |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 · `LICENSE` 35 147 B · `8ceb4b9ee5ad` | 1 020 | PHP/Twig | 🔴 ease-of-use and accessibility focus, strong LATAM and francophone-Africa footprint. **2.0 released April 2026**, point releases since |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `LICENSE` 1 097 B · `3c056b34a476` | 1 161 | Python | 🟢 **offline-first.** The row for low-connectivity deployments — rural LATAM, SEA, Sub-Saharan Africa. OER, SDG-4 |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 LGPL-3.0 · `LICENSE` 8 241 B · `528f84036800` | 899 | Python/Odoo | 🟡 education **ERP** — admissions, fees, library, hostel, exams. Weak copyleft: extend as Odoo modules |
+| **Frappe Learning** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · `license.txt` 33 893 B · `db1a87ba81e8` | 3 350 | Python/TypeScript | 🔴 **the corrected row.** See below |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 · `LICENSE` 15 214 B · `d954e14e5c75` | — | PHP | 🔴 K-12 **student information system** — enrolment, scheduling, grades, attendance, billing. Default ref is **`mobile`** `fa5f4b66caf4`, which is unusual and worth knowing before a clone |
+| **i-Educar** | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | GPL-2.0 · `LICENSE` 18 092 B · `8177f9751321` | 720 | PHP/Laravel | 🔴 🟢 **LATAM-specific SIS.** Brazil's largest free school-management system, published as *software público*; municipal secretariats are its installed base |
+| **forma.lms** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **no grant at 10 paths** @ `master` `446a77a9b9cb` | 37 | PHP | 🔴 **refused.** Roundups split between Apache-2.0 and GPL; the repository — its own description calls it a *mirror* — serves no licence payload at all. Unusable until a grant is readable |
+
+🔵 Ten platforms, ten first-hand grants or refusals. **Two permissive** (OpenOlat, Kolibri), one
+weak-copyleft, six strong-copyleft, one ungranted.
+
+### 🔴 The correction, because this row changes what a studio can sell
+
+🔵 A current "10 Best Open-Source LMS in 2026" listing files **Frappe Learning under MIT**. 🔴 At
+`develop`, six conventional licence paths 404; the grant is at **`license.txt`** and it is **GNU
+AGPL v3**. Under MIT, a Globant-hosted fork with a client's AI layer discloses nothing. Under
+AGPL-3.0, that same hosted fork owes **complete corresponding source to every network user**. Full
+reasoning and the two instrument bugs that nearly hid it are on `repos/foundations.md` under
+`Gap 469-C` and `Gap 469-D`.
+
+### 🟢 What this census means for platform selection
+
+1. **Permissive + closed AI layer → OpenOlat.** Apache-2.0, Java, assessment and curriculum
+   management already built. Smallest community of the set (448★), so budget for owning more of
+   the stack.
+2. **Largest installed base → Moodle, at the plugin boundary.** Do not fork it. A GPL-3.0 core
+   plus an AI service reached over **LTI 1.3 / MCP** keeps the AI layer's licence yours. 5.3 LTS in
+   October 2026 is the version to target for a multi-year engagement.
+3. **Offline or low-connectivity → Kolibri.** MIT, and the only row here designed for it.
+4. **Administrative data → a copyleft SIS, out of process.** RosarioSIS or, in Brazil, i-Educar.
+   🔴 **No permissively-granted LMS+SIS product exists** — searched again this pass, none found.
+   Integrate across a process boundary; `compose/patterns.md` `P469-1` carries the wiring.
+5. **AGPL-3.0 rows (Open edX, Frappe Learning) are viable only where the client accepts source
+   disclosure** — public-sector and national-platform work often does, and there the network
+   copyleft is a feature, not a blocker.
+
 ## 🆕 `p468` — **🟡 The platform tier gains one row and it is AGPL: `OpenTeacherAgent`, a single-binary offline course-authoring agent from GitLab, grant read first-hand at 34 523 B. 🔴 And the platform-shaped candidate that fits LATAM best this pass — a Brazilian school-management system with AI dropout support — serves NO GRANT at ten root paths, so the clearest regional product shape in the window is, again, not deliverable.**
 
 ### 🟢 Added to the platform tier

@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — **four recipes, every component read first-hand at `HEAD` this pass, every licence boundary drawn where it actually falls**
+
+🔵 Each pattern names the repositories, their grants as read on **2026-10-27**, the wiring, and the
+licence boundary that makes it shippable. Where a component is copyleft, the boundary is stated as
+a process or protocol edge, not as a hope.
+
+### `P469-1` 🟢 Permissive LMS + copyleft SIS + closed AI layer — the shape that exists because no single product does
+
+🔴 **Why this pattern exists:** searched again this pass, **no permissively-granted product covers
+both LMS and SIS**. The only SIS-class systems that resolve are GPL-2.0. So the integration *is*
+the architecture.
+
+| layer | component | grant (first-hand) | why this one |
+|---|---|---|---|
+| LMS core | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** · 10 982 B · `6dbc5b605ed0` | the only permissive full LMS; QTI, SCORM, assessment, curriculum management already present |
+| SIS | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (or [`portabilis/i-educar`](https://github.com/portabilis/i-educar) in Brazil) | GPL-2.0 · 15 214 B · `d954e14e5c75` (18 092 B · `8177f9751321`) | enrolment, scheduling, grades, attendance. 🔵 RosarioSIS' default ref is **`mobile`** — pin it explicitly in CI or a clone lands off-trunk |
+| AI service | your code + [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** · 1 069 B · `297c4cba7b33` | brings the lab/exam DSL, sandboxed evaluation and a **human-review stop line**; exposes **MCP** tools, so the LMS never imports it |
+| inference | Ollama or vLLM, local | permissive | EMEA data-residency and LATAM cost both land here |
+
+**Wiring.** `OpenOLAT` ⇄ AI service over **HTTP/MCP only**. SIS ⇄ AI service over **a read-only
+replica or an export job**, never a shared process. Every AI-touched decision writes
+`{decision, inputs_hash, model, human_actor, timestamp}` to an append-only log in the AI service.
+**Licence boundary:** the Apache-2.0 LMS may be forked and shipped closed; the GPL-2.0 SIS is never
+linked, only queried across a process edge, so its copyleft does not reach your code.
+**Effort:** 8–10 weeks for the integration and the audit log; the AI layer itself is the fast part.
+
+### `P469-2` 🟢 Human-in-the-loop rubric feedback — the LATAM opportunity, now with granted parts
+
+🔵 `p464` recorded this as the clearest LATAM opportunity with **no granted supply**. There are now
+four MIT rows. 🔴 **Fork them; do not depend on them** — 0–4★, single maintainers, one last pushed
+in 2023.
+
+| role | component | grant | what to take |
+|---|---|---|---|
+| rubric + override UI | [`vijju9019/GradeAI`](https://github.com/vijju9019/GradeAI) | **MIT** · `6a1c56b153f8` | the **teacher review cockpit**: split-screen criterion comparison and score override. Take the interaction design and the rubric data model |
+| rubric authoring | [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | **MIT** · `3b21045edbad` | curated-vs-uploaded rubric handling; it has a live hosted demo to read behaviour from |
+| batch + report | [`KamoliddinS/AI-Assignment-Grader`](https://github.com/KamoliddinS/AI-Assignment-Grader) | **MIT** · `988f496a7b26` | spreadsheet-in, PDF-feedback-out. 27 KB, archived in practice — read it, don't run it |
+| curriculum grounding | [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | **MIT** · `5eaa67118ee6` | **BNCC/PCN/PNLD retrieval with page citations** and EF-code mapping — this is what makes the feedback defensible to a Brazilian school |
+| orchestration | LangGraph + Ollama | permissive | as `Agente-Educacional` already wires it; keeps inference local and cheap |
+
+**Wiring.** Submission → rubric criteria retrieved → curriculum grounding retrieved (BNCC/PCN
+chunks with page refs) → per-criterion draft score **with citation** → **teacher cockpit: every
+score is a proposal until a human commits it** → committed score to the LMS gradebook via LTI
+→ append-only decision log.
+🟢 **This clears `T469-4` by construction:** no score reaches a student without a recorded human
+actor, which is what Oklahoma, Maryland, the EU deployer duty and Vietnam's sole-basis test all
+ask for.
+**Effort:** 6–8 weeks to a governed pilot in one subject and one grade band.
+
+### `P469-3` 🟢 EMEA AI-literacy and Annex-III-ready assessment — the duty that is already live
+
+🔵 Two deliverables, two clocks. The **AI literacy duty has applied since 2 February 2025** with no
+grace period — sellable now. The **high-risk assessment obligations** are reported at **2 December
+2027** (`Gap 469-E`, unconfirmed at source) — build inside that window.
+
+| deliverable | component | grant | note |
+|---|---|---|---|
+| literacy app | [`insolitos/IA_para_aprender`](https://github.com/insolitos/IA_para_aprender) | **MIT** · `a152c15af5d9` | built for Portuguese **school libraries**, 2.º/3.º ciclo and secondary. A working reference for the literacy duty, in an EU member state, under MIT |
+| assessment core | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** · `6dbc5b605ed0` | QTI and assessment already built; Apache-2.0 means the conformity work stays yours |
+| curriculum graph | [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🔴 **ODbL-1.0** · 25 289 B · `77d2692c3d64` | 1 590 micro-topics, 3 221 prerequisite edges. 🔴 **Share-alike on derived databases** — a curriculum graph derived from it must be published under ODbL. Use it to *validate* a graph you built, or accept the obligation knowingly |
+| sovereign inference | Ollama / vLLM + local vector store | permissive | districts under data-residency rules are already doing this |
+
+**Wiring.** Literacy module stands alone (fastest revenue). Assessment path:
+`OpenOLAT` QTI item bank → AI item generation and distractor analysis → **human item review**
+→ conformity artifacts generated as a by-product of the pipeline (risk documentation, logging,
+human-oversight record) rather than written afterwards.
+🔴 **The ODbL boundary is the trap in this pattern.** Keep `os-taxonomy` out of the delivered
+database, or price the publication obligation into the contract. It passes every "has a LICENSE"
+screen and is not a software grant.
+**Effort:** 4 weeks for the literacy module; 10–12 weeks for the assessment core with conformity
+artifacts.
+
+### `P469-4` 🟢 APAC multi-jurisdiction classroom — one stack, a policy layer per country
+
+🔵 Korea in force **22 January 2026**; Vietnam compliance **1 March 2027** with a six-month grace
+for systems live before **15 August 2026**; Japan and Singapore voluntary; China registration;
+Australia undecided. One configuration cannot serve them, so the **policy layer is the product**.
+
+| layer | component | grant | note |
+|---|---|---|---|
+| classroom experience | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** · 1 065 B · `ba2525637432` | multi-agent interactive classroom, **v1.2.0 2026-10-16**, 41 563★, 6 433 forks — permissive and already being built on |
+| tutoring depth | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** · 11 408 B · `cd2f54e1e506` | 43 930★; lifelong personalised tutoring with RAG |
+| policy layer | your LangGraph/equivalent graph, per-jurisdiction nodes | your licence | the deliverable |
+| offline / low-bandwidth tier | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** · `3c056b34a476` | for SEA and rural deployments |
+
+**Wiring.** One model stack and one content pipeline. At every **decision point** (assessment,
+progression, behavioural flag) the graph routes through a jurisdiction node that sets: whether a
+human must commit the decision, what is logged, what is disclosed to the learner, and whether the
+system registers with a regulator.
+🟢 **Vietnam's sole-basis test is the default setting:** make human commitment mandatory
+everywhere, and the strict tier is avoided by construction in every jurisdiction at once; relax it
+only where a client's own counsel says so.
+🔴 **Named gap:** this pattern's education-native components are **China and Hong Kong only**. One
+dedicated leg returned **no** India- or Japan-originated open-source education agent. For an India,
+Japan, Korea or SEA engagement, the components are reusable but **nothing here is local**, and
+localisation is in scope from day one, not a phase two.
+**Effort:** 12–14 weeks for three jurisdictions; each additional jurisdiction is a policy node, not
+a fork.
+
 ## 🆕 `p468` — **🟢 Three recipes, every component's grant read FIRST-HAND this pass, each stated with the delivery model it can legally be sold under. 🔴 And one recipe exists because of a regulation rather than a technology: automated assessment is named high-risk in three regions under four instruments, so the assessment recipe below is built to keep a human in the decision — not as a courtesy, as the thing that makes it sellable.**
 
 🔵 **Rule for this file, unchanged and enforced:** no component is named below unless its grant

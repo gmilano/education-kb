@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — **🟢 THE PERMISSIVE-FOUNDATION QUESTION IS ANSWERED WITH A LICENCE CENSUS, NOT A PREFERENCE: of the eight education platforms Globant is most often asked to build on, exactly ONE is permissively granted — `OpenOLAT` (Apache-2.0, 448★) — and the most-cited "MIT" alternative is AGPL-3.0.**
+
+🔵 Every licence below was read first-hand at `HEAD` on **2026-10-27**: default branch resolved by
+`git ls-remote --symref`, payload fetched from `raw.githubusercontent.com` at that ref, written to
+a file and the file measured (`Gap 468-A`). Star counts from the session GitHub tool channel the
+same day.
+
+### 🟢 Licence census — the eight foundations, graded by what Globant can ship
+
+| repo | default ref | licence file · bytes · `sha256₁₂` | class | ★ | can a Globant SaaS build on it? |
+|---|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` `891b9434e822` | `LICENSE` · 10 982 B · `6dbc5b605ed0` | 🟢 **Apache-2.0** | 448 | 🟢 **Yes, unconditionally.** Java LMS for universities and corporates; QTI, SCORM, curriculum management, assessment. The only permissive full LMS on this shelf |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` `f72936bd41e5` | `LICENSE` · 1 097 B · `3c056b34a476` | 🟢 **MIT** | 1 161 | 🟢 **Yes.** Offline-first learning platform for low-connectivity deployments; OER, SDG-4 |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `19.0` `46a5d7d40082` | `LICENSE` · 8 241 B · `528f84036800` | 🟡 **LGPL-3.0** | 899 | 🟡 **Yes, with care.** Education ERP on Odoo. Weak copyleft: link and extend as modules; modifying the LGPL files themselves carries the obligation |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` `46c042e7da65` | `COPYING.txt` · 35 147 B · `8ceb4b9ee5ad` | 🔴 **GPL-3.0** | 7 548 | 🔴 Plugin-boundary only. The deployed world's default LMS; build *beside* it via plugins and LTI, not *into* it |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` `cd27c720ee18` | `LICENSE` · 35 147 B · `8ceb4b9ee5ad` | 🔴 **GPL-3.0** | 1 020 | 🔴 Plugin-boundary only. 🔵 Digest **identical** to Moodle's — both serve stock GPLv3 |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` `03698e2b6ff4` | `LICENSE` · 35 136 B · `e12d78569742` | 🔴 **AGPL-3.0** | — | 🔴 Network-use copyleft. A hosted derivative owes source to its users |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` `54ad7dea5b1d` | `license.txt` · 33 893 B · `db1a87ba81e8` | 🔴 **AGPL-3.0** | 3 350 | 🔴 **Same class as Open edX — and this is the row the roundups get wrong.** See below |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` `435649b0474f` | `LICENSE` · 18 092 B · `8177f9751321` | 🔴 **GPL-2.0** | 720 | 🔴 Plugin/integration boundary. 🟢 **LATAM-specific**: Brazil's largest free school-management system, *software público*, Laravel + PHP |
+
+🔵 Eight rows, eight first-hand grants. Two permissive, one weak-copyleft, five strong-copyleft.
+
+### 🔴 `frappe/lms` is AGPL-3.0 and a 2026 roundup calls it MIT
+
+🔵 A current "10 Best Open-Source Learning Management Systems in 2026" listing places Frappe
+Learning under **MIT**, with "self-hosted data ownership" as the selling point. 🔴 First-hand at
+`develop`: there is **no** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` or `COPYING.txt`. The
+grant lives at **`license.txt`**, and it is the **GNU Affero General Public License v3**, 33 893 B,
+`db1a87ba81e8`.
+
+🔴 **Why this one costs more than an ordinary mislabel.** MIT and AGPL-3.0 sit at opposite ends of
+the only axis that matters to a hosted engagement. Under MIT, Globant forks Frappe Learning, adds
+a client's AI layer and ships it as a managed service with no disclosure duty. Under AGPL-3.0, the
+same act obliges Globant to offer the **complete corresponding source of the modified work to
+every user who interacts with it over the network** — including the AI layer, if it is linked into
+the same program. A studio that took the roundup's licence column at face value would discover
+this at contract review, not at selection. 🟢 Registered as **`Gap 469-C`**: no platform enters a
+foundation shelf on a secondary source's licence column; the grant is read at `HEAD` or the row
+does not ship.
+
+🔵 Two notes that keep the correction honest. **AGPL-3.0 is not a defect** — it is a deliberate,
+OSI-approved choice, and Frappe Learning is a strong platform. The defect is the *label*. And the
+probe that found it had its own bug first: my six-path licence sweep returned **"no grant"** for
+both `frappe/lms` and `moodle/moodle`, because neither serves its licence at any of the six
+conventional paths. Moodle uses `COPYING.txt`, Frappe uses `license.txt`. 🟢 Registered as
+**`Gap 469-D`**: a "no licence found" verdict is only publishable after `COPYING.txt`,
+`license.txt`, `LICENSE.rst` and `copyright.txt` have also been probed — the four paths that
+caught both false negatives this pass.
+
+### 🔴 `formalms/formalms` — the "disputed Apache-2.0" row resolves to NO GRANT
+
+🔵 Secondary sources split on forma.lms: one calls it Apache-2.0 ("so modified versions deploy
+without copyleft obligations"), others call it GPL or LGPL. 🔴 First-hand at `master`
+`446a77a9b9cb`, **ten** paths probed — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
+`COPYING.txt`, `license.txt`, `LICENCE`, `lib/license.txt`, `doc/LICENSE`, `GPL.txt` — **all 404**.
+There is no licence payload in the repository at `HEAD`. The repository's own description calls it
+a **"forma.lms mirror repository"** (37★, last updated 2026-08-10), so the grant may exist
+upstream off GitHub; it does not exist here. 🔴 **Refused.** The dispute is not Apache-vs-GPL — the
+premise that a grant is readable at this address is false.
+
+### 🔴 No permissive LMS+SIS exists, and that is the shelf's structural gap
+
+🔵 Searched this pass for a single permissively-granted product covering both learning management
+and student information. 🔴 **None found.** The only SIS-class systems that surfaced are
+`francoisjacquet/rosariosis` — resolved live, default ref **`mobile`** `fa5f4b66caf4`, `LICENSE`
+**GPL-2.0** 15 214 B `d954e14e5c75` — and `portabilis/i-educar`, also GPL-2.0. 🟢 The honest
+recommendation follows from the census rather than from preference: **an integration between a
+permissive LMS and a separate copyleft SIS, with the AI layer outside both process boundaries.**
+`compose/patterns.md` carries that wiring as `P469-1`.
+
 ## 🆕 `p468` — **🟢 `Gap 467-D` CLOSES on this shelf too, and the way it closes is the lesson: the dead channel was `curl`, not the data. 🔴 And the pass's most-starred novel foundation candidate is a 272★ LLM-architecture course under `CC-BY-NC-SA-4.0` — a NonCommercial grant on exactly the asset a corporate-upskilling engagement would reach for first.**
 
 ### 🟢 Foundation-tier controls, re-read first-hand at `HEAD`

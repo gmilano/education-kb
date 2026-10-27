@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — **🔴 A WIDELY-CITED "BEST OPEN-SOURCE LMS 2026" ROUNDUP PUTS AN MIT LABEL ON AN AGPL-3.0 PLATFORM: `frappe/lms` (3 350★) serves GNU AGPLv3 at `license.txt`, read first-hand — the one licence class that would force source disclosure to every network user of a Globant-hosted build. 🟢 And the rubric-feedback gap `p464` named as unclosable IS CLOSED WITH FOUR MIT GRANTS — every one of them at 0–4★ with a single maintainer, which is the other half of the finding and is stated here, not buried.**
+
+🔵 **Gate posture, stated first per `Gap 446-A`:** `make hooks` not attempted — the industry KB is
+cloned outside the harness repo this pass. **Nothing below is gate-attested.** The checks were
+re-implemented in this session's own code and are green: frontmatter keys and closed-vocabulary
+`region` on all eight shelves; every new table checked for separator presence and pipe-count
+consistency, with **no header row published as data**; append-only proved on both trending shelves
+by prior-body containment; every address below re-resolved first-hand this pass by
+`git ls-remote --symref` plus a licence-payload read at `HEAD`.
+
+🟢 **`Gap 468-A` honoured.** No payload on this shelf was measured through a shell variable. Every
+licence body was written to a file and the file measured, so trailing newlines survive. Star
+counts are two-channel per `Gap 467-D`: `api.github.com` is still **403** direct from this host, and
+the session GitHub tool channel served every `stargazers_count` below on **2026-10-27**.
+
+### 🔴 The headline, with the payload behind it
+
+| claim | source of the claim | first-hand read at `HEAD` | verdict |
+|---|---|---|---|
+| `frappe/lms` is **MIT** | secondary "10 Best Open-Source LMS in 2026" roundup | `license.txt` @ `develop` · **GNU AGPL v3** · 33 893 B · `db1a87ba81e8` | 🔴 **REFUTED** — AGPL-3.0, not MIT |
+| `formalms/formalms` is **Apache-2.0** | same class of roundup ("disputed") | **no licence payload at 10 paths** @ `master` `446a77a9b9cb` | 🔴 **REFUSED** — ungranted, so neither label holds |
+| `OpenOLAT/OpenOLAT` is **Apache-2.0** | same class of roundup | `LICENSE` @ `master` · **Apache-2.0** · 10 982 B · `6dbc5b605ed0` | 🟢 **CONFIRMED** |
+
+🔵 The three rows came from one search leg and one source class. One was wrong in the direction
+that costs a client engagement, one was wrong in both directions at once, and one was right. A
+roundup's licence column is a claim, never a grant.
+
+### 🟢 Granted education agents — read first-hand this pass, `2026-10-27`
+
+| agent | repo | licence (read at `HEAD`) | ★ | region | what it does |
+|---|---|---|---|---|---|
+| DeepTutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** · 11 408 B · `cd2f54e1e506` | 43 930 | APAC (HKU) | Lifelong personalised tutoring; multi-agent + RAG, self-hosted web app and CLI. `HEAD` `a31d82624c27`, pushed 2026-10-26 |
+| OpenMAIC | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** · 1 065 B · `ba2525637432` | 41 563 | APAC (Tsinghua) | Open Multi-Agent Interactive Classroom; one-click immersive lesson generation, TypeScript. `HEAD` `84a88bc4fda2` |
+| AI Teaching Agent | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** · 1 069 B · `297c4cba7b33` | 0 | Global | Markdown source → reviewable Lab + Exam + grading package and slides; structured DSLs, sandboxed eval, **CLI/MCP tools**, human-review stop line. 4.3 MB tree, `HEAD` `b90bd88a2899` |
+| GradeAI | [`vijju9019/GradeAI`](https://github.com/vijju9019/GradeAI) | **MIT** · 1 077 B · `6a1c56b153f8` | 0 | Global | Rubric-criterion exam evaluation with a **human-in-the-loop teacher review cockpit**, split-screen rubric comparison, score override. FastAPI + React 19. Created **2026-10-25** |
+| GradeMate | [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | **MIT** · 1 072 B · `3b21045edbad` | 4 | North America | Teachers apply curated rubrics or upload their own to grade written work; React + Django, live hosted demo. Last push 2025-08-11 |
+| EduRAG | [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | **MIT** · 1 089 B · `5eaa67118ee6` | 0 | **LATAM** (Brazil) | Agentic RAG for Brazilian *Anos Iniciais* teachers, grounded in **BNCC, PCN and PNLD** with page citations; generates EF01–EF04-aligned lesson plans. LangGraph + local models via Ollama |
+| IA para Aprender | [`insolitos/IA_para_aprender`](https://github.com/insolitos/IA_para_aprender) | **MIT** · 1 075 B · `a152c15af5d9` | 0 | **EMEA** (Portugal) | Web app for digital- and AI-literacy teaching in Portuguese **school libraries**, 2.º/3.º ciclo and secondary. Created 2026-10-14 |
+| AI Assignment Grader | [`KamoliddinS/AI-Assignment-Grader`](https://github.com/KamoliddinS/AI-Assignment-Grader) | **MIT** body (no title line) · 1 077 B · `988f496a7b26` | 2 | Global | Grades answers from spreadsheets, emails a PDF feedback report. 27 KB script-tier; **last push 2023-10-15** — read as a reference, not a dependency |
+| Agente Educativo Psicocognitivo | [`papayaykware/agente-educativo-psicocognitivo`](https://github.com/papayaykware/agente-educativo-psicocognitivo) | **MIT** · 1 069 B · `e34780266778` | 0 | **LATAM** / ES | DKT knowledge tracing + emergent psycho-cognitive profile + affective computing. 🟡 Its own README calls itself a **roadmap in four phases** with base code — architecture, not a running tutor |
+
+🔵 Nine rows, nine grants, nine first-hand reads. Five of the nine are new to this shelf.
+
+### 🟢 `Gap 464-A` CLOSED — and the closure is weaker than the gap implied
+
+🔵 `p464` recorded that the clearest LATAM opportunity on `intel/market.md` — **rubric-based
+assignment feedback** — had no granted supply behind it. That is no longer true. Four MIT grants
+now sit on this shelf for exactly that job: `vijju9019/GradeAI`, `laurauguc/grading_assistant`,
+`littlecookie0722/AI-Teaching-Agent` and `KamoliddinS/AI-Assignment-Grader`.
+
+🔴 **State the other half or the closure misleads.** Their star counts are **0, 4, 0 and 2**. Every
+one is a single-maintainer repository; one was last pushed in **2023**; one was **created two days
+before this pass**. None is a dependency you take and maintain downstream of. All four are
+**starting points you fork and own**, and the rubric logic — not the LLM call — is the part worth
+reading. The gap this closes is *"nothing granted exists"*. It does not close *"something
+production-grade exists"*, and no row on this shelf does.
+
+### 🟡 `lbedu.me`'s grant is CONJUNCTIVE, and this shelf carried the bytes without the carve-out
+
+🔵 [`lbhubedu/lbedu.me`](https://github.com/lbhubedu/lbedu.me) is shelved here at MIT · 2 118 B ·
+`18272c548223`. My read reproduces those bytes and that digest exactly. What the shelf does not
+record is **why the payload is 2 118 B when stock MIT is ~1 070 B**: below the MIT text, a
+`Trademark & Content Notice` **expressly excludes** three things from the grant and reserves them
+*All Rights Reserved* — the **"LBEdu" name, logos and brand symbols**; the **institutional texts,
+history, editorial copy and manifesto**; and the **images and photographs**, naming
+`public/images/` by directory. The code (React components, TypeScript, CSS, build config) is MIT
+and reuse as a technical base is explicitly encouraged, provided brand and institutional content
+are replaced. 🟢 Registered as **`Gap 469-A`**: a licence payload materially longer than its stock
+text must be read to the end before a grant class is published — the carve-out lives past the
+warranty clause.
+
+### 🔴 Refused this pass — stated, because a silent refusal reads like a miss
+
+| candidate | probe | why refused |
+|---|---|---|
+| [`David78-beto/TutorMind`](https://github.com/David78-beto/TutorMind) | `main` `8230a75831cf` live; **no licence at 6 paths** | ungranted — unusable in any client engagement |
+| [`valarie-yang/assignment-ai-grading-system`](https://github.com/valarie-yang/assignment-ai-grading-system) | `main` `3cc82d1a89b3` live; **no licence at 6 paths** | ungranted — and it is the most on-brief rubric design of the set, which is the loss |
+| [`GradeAI/gradeai`](https://github.com/GradeAI/gradeai) | `main` `4de8e8614582` live; **no licence at 6 paths** | ungranted |
+| [`Micel357/Edu-mentor-AI`](https://github.com/Micel357/Edu-mentor-AI) | `main` `31046d9e0179` live; **no licence at 6 paths** | ungranted — pedagogical multi-agent system, LATAM-adjacent, and unusable |
+| [`makecindy/cindy`](https://github.com/makecindy/cindy) | Apache-2.0 · 11 358 B · `cfc7749b96f6` · **6 532★** | 🔴 **not education supply.** A secondary trending roundup lists it under an education trend ("learn inference internals"); its own README and topics make it a general-purpose desktop agent. Granted, live, trending — and off-class. `p453`'s homonym finding, recurring |
+| [`promptster-ai/rubric`](https://github.com/promptster-ai/rubric) | MIT, 2026 | out of class — it grades **engineers' AI fluency**, not student work |
+
+### 🟢 Instrument false alarm, caught before publication
+
+🔴 My first novelty sweep reported `chamilo/chamilo` and `openeducat/openeducat` as **shelf
+addresses that do not resolve** — `git ls-remote` fails on both, and both appeared in 155 and 197
+shelf files respectively. 🟢 **Refuted before publication.** Both were **substring hits** inside the
+canonical addresses: `grep -ro "github.com/chamilo/chamilo)"` and the same for `openeducat` return
+**0** across all eight shelves. Neither bare form is published as a link target anywhere. The
+canonical addresses resolve live and are graded correctly on `verticals/solutions.md`:
+`chamilo/chamilo-lms` (`master` `cd27c720ee18`) and `openeducat/openeducat_erp` (`19.0`
+`46a5d7d40082`). 🟢 Registered as **`Gap 469-B`**: a novelty or liveness sweep over these shelves
+must anchor the address, because every canonical name here contains a shorter one.
+
 ## 🆕 `p468` — **🟢 `Gap 467-D` IS CLOSED, AND IT WAS NEVER A NETWORK PROBLEM: `api.github.com` is 403 from this host and `repos.ecosyste.ms` is unreachable — both re-confirmed today — but this session's own GitHub tool channel serves `stargazers_count`, so the star axis is two-channel for the first time in 468 passes. 🔴 And the saturation this base has published for six passes is REFUTED AS STATED: the discovery channel is not exhausted, its VOCABULARY is. One Spanish-language leg returned 9 addresses in 12 that these shelves have never carried, against 9 in 64 across three English legs — a 5.7× difference from the query language alone. 🔵 The catch, stated with the claim: the non-English legs' usable build-on yield is still ZERO.**
 
 🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED** (`Code from External`)

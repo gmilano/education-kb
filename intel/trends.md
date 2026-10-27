@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p469` — **the market stopped asking whether AI works in education and started asking who signs for it — and the open-source supply has not followed**
+
+🔵 Eight trends, each with the evidence behind it and the date it was read. Where a trend rests on
+a secondary source that disagrees with another, both readings are published.
+
+### `T469-1` 🟢 Governance replaced experimentation, and it happened across all four regions at once
+
+1EdTech reads institutions moving to AI strategies with defined **governance, compliance and
+evaluation processes**. HolonIQ reads a shift from broad personalisation promises to **ethics,
+transparency and proven instructional benefit**. Campus Technology's leaders expect AI to become
+**embedded infrastructure** rather than standalone pilots. 🔵 The convergence is the signal: four
+independent analysts, four vocabularies, one direction. 🟢 **What it means for a studio:** the
+first deliverable in an education engagement in 2026 is a **governance artifact** — policy,
+oversight design, audit trail — and the model work is the second. Selling the tutor first is
+selling last year's engagement.
+
+### `T469-2` 🔴 Evidence of learning gain is now a procurement gate, and vendor numbers do not clear it
+
+HolonIQ records that systems now **expect evidence** that a product improves learning or
+job-relevant skills. The IDB's review of **193 LATAM initiatives** found **few with rigorous
+evaluation**. 🔴 Against that, this pass read a vendor claim of **"42 % outcome gains"** with no
+methodology attached. 🟢 The gap between the demand and the available proof is a **service line**:
+instrumentation, baselining and an evaluation design a client can publish. Almost nobody in the
+open-source supply has it — `agents/top.md` carries no education-specific eval harness, and
+`p468`'s "no dominant OSS agent eval/observability" finding is unchanged.
+
+### `T469-3` 🟢 Teacher-side workflow is where adoption actually is, and it is where the supply just arrived
+
+**60 % of US K-12 teachers** used AI tools in 2024-25, **32 % at least weekly**. **TALIS 2024:
+56 % of secondary teachers in Brazil, 55 % in Chile, against an OECD 36 %.** Teacher time-saving is
+the recurring theme across every regional source this pass. 🟢 And the new granted supply this
+pass is **all teacher-side**: rubric grading with override (`vijju9019/GradeAI`), lab/exam
+generation with a human-review stop line (`littlecookie0722/AI-Teaching-Agent`), curriculum-aligned
+lesson planning (`ThallesYVasconcelos/Agente-Educacional`). 🔴 All at 0–4★. The demand is
+measured in national surveys; the supply is measured in single-digit stars.
+
+### `T469-4` 🔴 Human review has moved from good practice into statute, and Vietnam wrote the spec
+
+Oklahoma and Maryland bar AI from high-stakes decisions about students and require human
+oversight. Vietnam's 2026 decision makes education AI high-risk **only where AI output is the sole
+basis for a decision without meaningful human review**. The EU makes a school using a commercial
+tool to assess progress a **deployer** with its own duties. 🟢 **The architectural consequence is
+identical in all three jurisdictions:** a decision point with a recorded human in it is out of the
+strict tier by construction. 🟢 This is why `vijju9019/GradeAI`'s **teacher review cockpit** and
+`AI-Teaching-Agent`'s **human-decision stop line** matter more than their star counts — they are
+the shape the law now asks for, in permissively-granted code.
+
+### `T469-5` 🟡 The EU's high-risk date for education moved sixteen months, and the market has not repriced
+
+Reported postponement of Annex III education obligations from **2 August 2026 to 2 December 2027**
+via the AI omnibus (adopted June 2026, in force 27 July 2026), while the **AI literacy duty has
+been live since 2 February 2025**. 🔴 Sources still disagree on the date and this pass **could not
+reach the primary source** (`Gap 469-E`). 🟢 Either way the near-term EMEA work is unchanged and
+sellable now: the literacy duty has no grace period, two-thirds of European education systems
+already hold a strategy document, and the implementation behind those documents does not exist.
+
+### `T469-6` 🟢 Purpose-built beats general-purpose, and this pass has a clean negative control for it
+
+TeachBetter reads the market moving away from generic chatbots toward platforms built around
+**learning objectives and curriculum**. 🟢 The control is on `agents/top.md`:
+`ThallesYVasconcelos/Agente-Educacional` grounds every answer in **BNCC, PCN and PNLD with page
+citations** and maps content to **EF01–EF04 skill codes** — a general chatbot cannot produce that
+and a Brazilian teacher cannot use an answer without it. 🔴 And the negative half:
+`makecindy/cindy` is Apache-2.0, **6 532★**, trending, filed by a roundup under an education trend,
+and useless for education — stars and momentum do not survive the curriculum requirement.
+
+### `T469-7` 🔴 Open-source education supply is academic, and nothing commercial is entering it
+
+The only education projects on October-2026 trending boards are **HKU's DeepTutor** (Apache-2.0,
+43 930★) and **Tsinghua's OpenMAIC** (MIT, 41 563★). Every other granted education row on these
+shelves is a **single maintainer**. There is **no vendor-backed open-source education project** on
+the boards at all. 🟢 **The reading for Globant is direct and it is favourable:** the research is
+open and permissive, the production engineering around it — governance, audit trails, SIS
+integration, evaluation, operations — is absent, and that is precisely what a studio sells.
+OpenMAIC's **15.5 % fork-to-star ratio** against DeepTutor's 12.6 % says people are already trying
+to build on it.
+
+### `T469-8` 🔴 A permissive licence label is the least reliable field in the entire edtech press
+
+This pass refuted **two** licence claims from current "best open-source LMS 2026" roundups:
+`frappe/lms` labelled MIT is **AGPL-3.0** (`license.txt`, 33 893 B, `db1a87ba81e8`), and
+`formalms/formalms` labelled Apache-2.0 serves **no grant at ten paths**. It confirmed a third
+(`OpenOLAT`, Apache-2.0, 10 982 B). 🔵 This is the same error class these shelves have found in
+`p466` (CC-BY-SA, Elastic-2.0, CC-BY-NC rows passing a star-and-LICENSE screen), `p467` (a
+permissive grant *form* restricted to non-commercial use in the same payload) and `p469`
+(`lbedu.me`'s reserved-rights carve-out below the warranty clause). 🟢 **The standing conclusion,
+now reproduced across four passes:** a licence is a **payload read at `HEAD`**, never a column in
+a listicle and never an SPDX badge in a README. On these shelves the error rate of the secondary
+channel on this one field is **2 in 3**.
+
 ## 🆕 `p468` — **🟢 Four trends, each with a denominator measured this pass: (1) discovery vocabulary, not supply, is what was exhausted — 14.1 % novel in English against 80.0 % in Spanish and Portuguese; (2) automated assessment is the regulated surface in three regions under four instruments; (3) detection EVASION is a permissively licensed, actively maintained market segment; (4) LATAM adoption has outrun LATAM governance by 61 points.**
 
 ### 🟢 Trend 1 — Apparent saturation is a language artifact, and the correction buys visibility rather than supply
