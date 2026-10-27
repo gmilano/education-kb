@@ -1,0 +1,17 @@
+repo	p488_carried	p489_measured	delta	interval	note
+satvik314/educhain	~12000	387	-11613	since-cycle-2	CARRIED-FIGURE-WRONG-BY-31x-corrected
+HKUDS/DeepTutor	~45240	45715	+475	~1h	only row with hourly resolution
+zuhairhalawa/studyai	234	237	+3	~1h	-
+CAHLR/OATutor	272	274	+2	~1h	-
+Selleo/mentingo	99 (p486)	100	+1	~2h	-
+microsoft/autogen	~60000	61589	+1589	carried-approx	carried value within 3% - acceptable
+huggingface/smolagents	~30000	30102	+102	carried-approx	carried value within 1% - acceptable
+Exorust/TorchLeet	2592	2592	0	~1h	below hourly resolution
+Li-Evan/Bloom	293	293	0	~1h	below hourly resolution
+SenmuuuuW/universal-diagnostic-tutor-skill	251	251	0	~1h	below hourly resolution
+artcc/freelingo	209	209	0	~1h	below hourly resolution
+GeminiLight/gen-mentor	134	134	0	~1h	below hourly resolution
+microsoft/StudentSim	79	79	0	~1h	below hourly resolution
+Zenglian990/AI_Tutor_Release	74	74	0	~1h	below hourly resolution
+3yangyang9/DeepTutor-AILearning	NEW	136	new	-	first appearance on this base
+pacewisdomhq/TutorLoom	NEW	51	new	-	first appearance on this base

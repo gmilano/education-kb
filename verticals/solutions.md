@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27` — **🔴 THE CENTRAL VERDICT OF THIS SHELF IS WRONG AND IT IS WRONG ON THE BIGGEST PLATFORM IN THE SECTOR: `moodle` ships an **AI subsystem in core with SEVEN providers** — `openai`, `gemini`, `ollama`, `azureai`, `deepseek`, `anthropic`, `awsbedrock` — four typed actions and two placements. 🟢 `Gap 488-N` closed with an October-2026 read. 🔴 And the new permissive LMS on this shelf withholds **every assessment feature** from its open-source edition.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen in fifteen.** 🔵 Nothing gate-attested.
+Evidence: [`ai-surface-census`](../evidence/ai-surface-census.2026-10-27-p489.tsv),
+[`span-blob-identity`](../evidence/span-blob-identity.2026-10-27-p489.tsv),
+[`licence-path-enumeration`](../evidence/licence-path-enumeration.2026-10-27-p489.tsv).
+
+### 🔴 `moodle`'s AI subsystem, enumerated by path — the verdict this shelf has carried since `p483` does not survive it
+
+🔵 The carried claim: *"of every permissively-licensed institutional LMS this base tracks, exactly
+**one** ships both an AI provider abstraction and a native MCP server — `OpenOLAT`. Everything else
+is either AI-native-and-small (`mentingo`, 100★) or institutional-and-AI-less (`Sakai`, `uPortal`,
+`Tsugi`)."* 🔴 `moodle` is not permissive, so it was never inside the claim's scope — and it is the
+platform every client in this sector already runs, so the claim read as a sector verdict and was used
+as one.
+
+🟢 Enumerated this pass at `public/ai/` through the authenticated search channel:
+
+| layer | count | members |
+|---|---|---|
+| **providers** (core subplugins, each with its own `version.php`) | 🟢 **7** | `openai` · `gemini` · 🟢 **`ollama`** · `azureai` · `deepseek` · `anthropic` · `awsbedrock` |
+| **actions** (typed, each with a response class) | 4 | `explain_text` · `generate_text` · `summarise_text` · `generate_image` |
+| **placements** (where AI reaches a user) | 🔴 **2** | `editor` · `courseassist` |
+
+🟢 **The `ollama` provider is the consequential one.** A core-supported local-inference backend means
+a Moodle deployment can run AI with **no egress at all** — which is the EMEA sovereignty posture and
+the low-connectivity LATAM/Africa posture in the same line of config, on a platform with 7 556 stars
+and **7 688 forks**.
+
+🔴 **And the shape of the subsystem is the engagement.** Seven providers and four generic text
+actions against **two** placements: Moodle has built the *plumbing* — provider abstraction, policy,
+typed actions, responses — and almost none of the *pedagogy*. There is no tutor, no learner model, no
+assessment action. 🟢 So the studio work on Moodle is **writing placements**, not building an AI
+layer, and that is a materially smaller and better-defended proposal than this shelf has been able to
+make for two cycles.
+
+### 🟢 The shelf — twelve platforms, licence by span blob, AI surface re-read this pass
+
+| platform | ★ | fork/★ | licence @ pinned commit · span blob | 🆕 AI surface (Oct 2026) | region |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 7 556 | 🟢 **1.02** | GPL-3.0 · `9bd0eca0bf44` @ `46c042e7da` — 🔴 at **`COPYING.txt`**, not `LICENSE` | 🟢 **7 providers · 4 actions · 2 placements, in core** | Global |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | — | — | 🔴 AGPL-3.0 · `52d3e944d5e1` @ `d9aaee45609f` | 🔴 **none** (search channel, flagged incomplete) | Global |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 448 | 0.37 | 🟢 Apache-2.0, canonical grant + 2 appended attribution statements · `d18181ec783a40` @ `3736d48fa6c0` | 🟡 4-provider SPI + 66-file MCP server — 🔴 **carried from `p483`, not re-read** | EMEA · Switzerland |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | — | — | 🔴 **ECL-2.0** · `cb69f9b9e1ad` @ `6fd8652da3` — §3 withholds the patent grant where an employed academic was not personally the inventor | 🔴 **none** — the single `openai` hit is base64 test data | North America · US |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | — | — | GPL-3.0 · `9bd0eca0bf44` @ `db9582e3cd8e` | 🔴 **none** | EMEA · Germany |
+| [`frappe/lms`](https://github.com/frappe/lms) | — | — | 🔴 AGPL-3.0 · `b31443624f7b` @ `6054772c04a1` — 🟢 canonical, **re-wrapped only**; grant at lowercase `license.txt` | 🔴 **none** | APAC · India |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 🟢 **0.87** | 🟢 **MIT** · `23bb67dd081e` @ `dbe14ef6c499` | 🔴 **none — verified first-hand over 6 040 files** | Global |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 6 948 | 🟢 **0.84** | 🟢 Apache-2.0 canonical · `4c38ebd06510` @ `bc73ecf9cfbb` | 🔵 not read this pass | Global |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 100 | 0.31 | 🟢 **MIT** · `23bb67dd081e` @ `e137ca47cb1a` | 🟢 AI-native by design (AI Mentor, role-play) | EMEA · Poland |
+| 🆕 [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 51 | 0.26 | 🟢 Apache-2.0 canonical · `4c38ebd06510` @ `ef4bca4c9b34` | 🔴 **none in the grant** — see the carve-out below | APAC · India |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 720 | 0.77 | GPL-2.0, **election unstated** · `7750f7ad52ef` @ `435649b047` | 🔵 not read this pass | LATAM · Brazil |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 647 | 0.61 | 🔴 **GPL-2.0 *only*** (README states v2) · `78def6f03ad1` @ `fa5f4b66ca` | 🔵 not read this pass | Global (LATAM-deployed) |
+| 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) | 37 | — | 🔴 **NO GRANT — 13 paths probed, all 404** @ `446a77a9b9`; last push 10 Aug 2026 | — | 🔴 **DO NOT PROPOSE** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | — | — | LGPL-3.0 · 🔴 `NO_SPAN` — ungradeable, not clean | 🔵 not read this pass | Global |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | — | — | 🔴 AGPL-3.0 **scoped to "most of the files"**, carve-outs still unenumerated · `34fe975d2357` @ `efa1b09d62` | 🔵 not read this pass | EMEA · Belgium |
+
+🔵 Fourteen rows. 🟢 **Four permissive and buildable** (`kolibri`, `oppia`, `TutorLoom`, `mentingo`),
+one weaker-than-it-looks (`sakai`, ECL-2.0), three network copyleft, two GPL with a version problem,
+one ungradeable, one with no grant at all.
+
+### 🔴 `TutorLoom` — a new failure mode for this shelf: the grant is perfect and the *features* are partitioned
+
+🟢 Apache-2.0, operative body byte-identical to `apache.org`'s. 🟢 `requirements.txt`: 35 dependencies,
+**zero** AI libraries. 🔴 Then the `Editions` table:
+
+| withheld from the Apache-2.0 community edition | why it matters |
+|---|---|
+| 🔴 **Assessments — MCQ, task *and* coding** | 🔴 An LMS with no assessment is a content-delivery system. This is the line that decides whether the row is proposable. |
+| Google & Microsoft sign-in | every institutional buyer asks for SSO on day one |
+| Super Admin console, audit logs, organisation branding | the multi-tenant operator's own console is not in the grant |
+| Course import/export, quiz bulk upload, drip release | migration off an incumbent LMS is an Enterprise feature |
+| Coding questions with AI test cases | the only AI in either edition's shipped feature set |
+| Leaderboard, badges, notifications, calendars | — |
+
+🔵 And the AI band proper — *"AI feedback drafts for trainers · chapter-scoped AI tutor chat · code
+plagiarism check"* — is listed under **"Proposed (edition not yet decided)"**, so it exists in
+neither edition. 🟢 **Accurate verdict: AI is unbuilt and unassigned, assessment is built and
+withheld.**
+
+🔴 **This is a fourth distinct way a grant fails a studio on this shelf**, and it is the one no
+licence reader can see: `formalms` has **no grant**; `i-diario` has a grant in **the wrong language**;
+AGPL rows carry an **obligation**; `TutorLoom`'s grant is flawless and the **feature set is the thing
+partitioned**. 🔵 Call it the **open-core carve-out**. A licence probe grades it 🟢 and the proposal
+still fails.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-Q`** | Moodle's AI subsystem is enumerated **by path and filename only**. No pass has read a provider implementation, so what the policy, audit and data-handling layer actually does — the part that matters under the EU AI Act and under US state district policy — is unknown. |
+| 🔴 **`Gap 489-R`** | Seven of fourteen rows here carry **"not read this pass"** against their AI surface, and every verdict older than this pass was produced by substring matching (`Gap 489-N`). The shelf's AI column is a third measured, a third unmeasured, a third suspect. |
+| 🟡 **`Gap 489-S`** | The open-core carve-out is read from `TutorLoom`'s **own `README` table**. Nobody has checked the code to see whether the withheld features are absent or merely gated. |
+| 🟡 **`Gap 489-T`** | `INGInious`'s per-file carve-outs are **still unenumerated** (`Gap 488-M`, second pass carried). The grant covers "most of the files" and nobody has established which. |
+
 ## 🆕 `p488` — `2026-10-27` — **🔴 `Sakai` is NOT Apache-2.0 and has never been on this shelf correctly: it is ECL-2.0, whose §3 withholds the patent grant on any contribution an employed academic was not personally the inventor of — the one grant on these shelves that is weaker than it looks precisely where a university wrote the code. 🟢 Eleven platforms re-graded at pinned commits; three carried values corrected.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — **fourteen denials in fourteen passes.** Nothing

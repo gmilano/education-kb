@@ -1,0 +1,24 @@
+repo	class	stars	forks	fork_per_star	region
+moodle/moodle	platform	7556	7688	1.017	Global
+learningequality/kolibri	platform	1162	1012	0.871	Global
+oppia/oppia	platform	6948	5857	0.843	Global
+portabilis/i-educar	platform	720	552	0.767	LATAM
+formalms/formalms	platform	37	26	0.703	EMEA
+francoisjacquet/rosariosis	platform	647	393	0.607	Global
+OpenOLAT/OpenOLAT	platform	448	166	0.371	EMEA
+Selleo/mentingo	platform	100	31	0.310	EMEA
+pacewisdomhq/TutorLoom	platform	51	13	0.255	APAC
+GeminiLight/gen-mentor	agent	134	23	0.172	APAC
+Zenglian990/AI_Tutor_Release	agent	74	25	0.338	APAC
+microsoft/autogen	framework	61589	9324	0.151	North America
+CAHLR/OATutor	agent	274	162	0.591	North America
+Exorust/TorchLeet	agent	2592	323	0.125	Global
+HKUDS/DeepTutor	agent	45715	5738	0.126	APAC
+microsoft/StudentSim	agent	79	8	0.101	North America
+huggingface/smolagents	framework	30102	3158	0.105	EMEA
+artcc/freelingo	agent	209	55	0.263	EMEA
+Li-Evan/Bloom	agent	293	43	0.147	APAC
+satvik314/educhain	agent	387	76	0.196	APAC
+SenmuuuuW/universal-diagnostic-tutor-skill	agent	251	6	0.024	Global
+zuhairhalawa/studyai	agent	237	2	0.008	Global
+3yangyang9/DeepTutor-AILearning	agent	136	1	0.007	APAC

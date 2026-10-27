@@ -4,6 +4,181 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27` — **🟢 Five recipes, every component graded by operative-span blob SHA this pass. 🆕 `P489-1` replaces every "add AI to the LMS" recipe this base has published, because the sector's most-deployed platform already ships the provider layer and what it lacks is pedagogy. 🔴 And `P489-1` carries a GPL-3.0 consequence the recipes it replaces never had to state.**
+
+🔵 Component licences below are the span-blob verdicts from
+[`span-blob-identity`](../evidence/span-blob-identity.2026-10-27-p489.tsv); AI surfaces are from
+[`ai-surface-census`](../evidence/ai-surface-census.2026-10-27-p489.tsv). 🔴 `Gap 484-A` still bounds
+every effort range here: **nothing in this file has been executed.**
+
+### 🆕 `P489-1` — A Moodle AI *placement* with a published learner model, falsifiable before the pilot
+
+🔴 **What changed, and it retires a recipe class.** Every prior pattern here that built an AI layer
+onto an institutional LMS was costing the provider abstraction, the policy surface and the typed
+response plumbing. 🟢 `moodle` ships all three in core: **7 providers** (`openai`, `gemini`,
+`ollama`, `azureai`, `deepseek`, `anthropic`, `awsbedrock`), **4 typed actions**, and 🔴 only **2
+placements**. The placement is the gap and the placement is the deliverable.
+
+| component | licence @ pinned commit | role |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 · span `9bd0eca0bf44` @ `46c042e7da` (🔴 grant at **`COPYING.txt`**) | the host. Supplies providers, policy, typed actions, course and user context |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT · span `23bb67dd081e` @ `e24c8456e5f7` | the **learner model** — Bayesian Knowledge Tracing, UC Berkeley. The only published one on these shelves |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 MIT · span `23bb67dd081e` @ `73005fd8cac8` | the **test harness** — per-student simulators, two implemented metrics, `studentsim-eval` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 canonical · span `4c38ebd06510` @ `96f33faaf028` | the loop, if the placement needs multi-step reasoning |
+
+🟢 **Wiring, five steps:**
+1. Write a Moodle **AI placement subplugin** under `public/ai/placement/<yourname>/`. It calls the
+   existing `\core_ai\aiactions\explain_text` and `generate_text` — **you do not touch a provider.**
+2. Add a **BKT skill model** as a Moodle plugin service: port `OATutor`'s mastery update (MIT, so it
+   may be vendored) and key it to the course's competency framework. 🔵 The placement asks the model
+   *which* skill is weak before it asks a provider *what* to say.
+3. **Before any learner sees it**, stand up `StudentSim`: `studentsim-train --config
+   configs/training/stage1_math.yaml`, then stage 2 per student from a roster, then
+   `studentsim-eval` for **behavioural fidelity** and **guidance responsiveness**.
+4. Run the placement's guidance against the simulators and read the responsiveness delta.
+   🟢 **A placement that does not move the simulator does not ship.** That is the falsification step,
+   and it is why this recipe can be killed in week 4 instead of after a term's pilot.
+5. Deploy with the **`ollama` provider** if the client cannot send learner data to a vendor.
+
+🔴 **Two obligations, both stated because the recipes this replaces did not:**
+- 🔴 **GPL-3.0.** A Moodle placement subplugin is a derivative of Moodle. **It must be released
+  GPL-3.0.** The differentiating IP cannot be the placement; it has to be the *model, the content, or
+  the service the placement calls.* Decide that in week 1, not at delivery.
+- 🔴 **`StudentSim`'s data.** Only the **chess** domain ships data (CC0 source). **L2 needs an
+  EFCAMDAT extract and math a FoundationalASSIST extract, both obtained separately**, and two of
+  math's three build steps call a model and cost money. 🔴 It also requires
+  `AZURE_OPENAI_ENDPOINT` + `AZURE_OPENAI_API_KEY` for every model-calling step — which, for a client
+  that chose `ollama` to avoid egress, is a **contradiction to resolve in step 3, not step 5**: train
+  and evaluate on a provider the client will not use in production, and say so in the proposal.
+
+🟢 **Effort:** 8–11 weeks. 🔵 Weeks 1–2 placement skeleton + GPL decision; 3–5 BKT service; 4–6
+`StudentSim` on the chess domain as a method control, then the client's real domain if an extract is
+obtainable; 7–9 the placement proper; 10–11 oversight configuration.
+
+### 🆕 `P489-2` — Offline-first AI on the one institutional platform a client may relicense
+
+🔵 `Gap 488-K` is closed and it closed in the studio's favour: `kolibri` is **MIT**, 6 040 files, **21
+plugins**, a documented registry with **15 hook classes**, a commit today, **0.87 forks per star** —
+and 🟢 **zero lines of AI code, verified word-boundary over the whole tree.**
+
+| component | licence @ pinned commit | role |
+|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · span `23bb67dd081e` @ `dbe14ef6c499` | the host. Offline-first, `py37` target, plugin registry + hooks |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 MIT · span `23bb67dd081e` @ `2987df2be268` | grade-banded RAG tutor (**grades 1–9**), LanceDB — an embedded vector store, which is what an offline box needs |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT · span `23bb67dd081e` @ `e24c8456e5f7` | BKT mastery model, runs locally, no inference call |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 MIT · span `23bb67dd081e` @ `075c1895d255` | the teaching policy — diagnosis-first, no command menu |
+
+🟢 **Every component is MIT and all four share the span blob `23bb67dd081e`. The client may
+relicense the entire stack.** 🔵 This is the second recipe on this base with that property and the
+first whose host is a deployed institutional platform.
+
+🟢 **Wiring:** a `kolibri` plugin registered through `kolibri/plugins/registry.py` that (1) reads
+mastery from a vendored BKT service, (2) retrieves from a LanceDB index built from the channel content
+already on the device, (3) calls a **local** small model for generation, and (4) falls back to
+retrieval-only with no model when the device cannot run one. 🔴 `kolibri`'s `py37` target and
+low-spec deployment profile mean **the design constraint is the device, not the context window** —
+size the model to the hardware before anything else.
+
+🟢 **Effort:** 10–13 weeks, and 2 of those are the on-device inference question, which no row on
+these shelves answers.
+
+### 🆕 `P489-3` — A licence-identity gate that would have caught every defect this base has found
+
+🔵 `Gap 488-A` asked for byte-size cells to be reissued as blob SHAs. 🟢 Done this pass, and the
+instrument is four commands:
+
+```bash
+# 1. resolve the default ref AND the commit SHA before reading a byte
+git ls-remote --symref "https://github.com/$REPO" HEAD
+# 2. enumerate 36 paths, not 11 — read EVERY hit, not the first
+#    {LICEN[SC]E, COPYING, COPYRIGHT, NOTICE} x {"", .txt, .md} x {UPPER, lower, Mixed}
+curl -sf "https://raw.githubusercontent.com/$REPO/$SHA/$PATH" -o payload
+# 3. axis 1 — the operative span, content-addressed
+awk '/TERMS AND CONDITIONS/,/END OF TERMS AND CONDITIONS/' payload | git hash-object --stdin
+# 4. axis 2 — the same span, whitespace-normalised to a word sequence
+tr -s '[:space:]' ' ' < span | git hash-object --stdin
+```
+
+🟢 **Why two axes, with this pass's controls:** axis 1 alone flags `csev/tsugi` (Apache re-wrapped)
+and `frappe/lms` (AGPL re-wrapped) as deviations when both are canonical in words. Axis 2 alone
+cannot see a dropped character. 🟢 **Run together they produced every verdict on these shelves this
+pass:** canonical on 4 Apache rows against `apache.org`'s own text, canonical on **11 MIT rows from
+one hash**, `freelingo`'s altered AGPL confirmed against a two-source consensus, `tsugi`'s four
+deleted §4 enumerators, `autogen`'s missing full stop, and 🔴 `DeepTutor`'s edit **found in a
+derivative repository by blob equality**.
+
+🔴 **The gate's own limits, declared:** LGPL-3.0 has no `TERMS AND CONDITIONS` span and is
+**ungradeable** by it (`bigbluebutton`); a wrapper above the title block defeats family detection
+(`OpenEduCat`, `INGInious`); appended attribution inside the span is a **false alarm** (`OpenOLAT`);
+and it says nothing about `TutorLoom`'s open-core carve-out, where the grant is perfect and the
+features are partitioned.
+
+🟢 **Effort:** 3–5 days to implement, then it runs in CI over every dependency a delivery vendors.
+🔵 This is the one recipe here whose components are shell built-ins, so `Gap 484-A` binds it least.
+
+### 🆕 `P489-4` — EMEA: a sovereign Moodle with no egress, and sixteen months to build it
+
+🟢 **Why now:** Regulation **(EU) 2026/1744** defers high-risk obligations for stand-alone Annex III
+**education** systems to **2 December 2027** (OJ 24 Jul 2026, in force 27 Jul 2026). 🔴 Article 50
+transparency duties applied from **2 Aug 2026** and are not deferred; emotion recognition in education
+stays **prohibited**; the AI-literacy duty has applied since early 2025. 🔴 **Provenance: secondary
+sources only — `eur-lex.europa.eu` is outside this session's allowed network domains** (`Gap 489-V`).
+
+| component | licence | role |
+|---|---|---|
+| `moodle/moodle` + 🟢 **core `ollama` provider** | GPL-3.0 · `9bd0eca0bf44` | the whole inference path stays inside the institution. **No new component needed** — it is a core subplugin and a config choice |
+| `OpenOLAT/OpenOLAT` | 🟢 Apache-2.0 (canonical grant + appended attribution) · `d18181ec783a40` | the alternative host where a client wants a permissive grant and an existing MCP server. 🔴 Its AI claim is carried from `p483` and unverified (`Gap 489-D`) |
+| `huggingface/smolagents` | 🟢 Apache-2.0 canonical · `4c38ebd06510` | EMEA-origin agent loop, if one is wanted |
+| `artcc/freelingo` | 🔴 **AGPL-3.0, altered text** · `1d906a332e68` | 🔴 **Do not vendor.** Its §11 defect is confirmed on both axes against a two-source consensus. If a language-learning component is required, run it **unmodified and at arm's length** |
+
+🟢 **The pitch is three sentences:** the sector's standard platform already supports local inference;
+the deadline that was forcing a decision moved to December 2027; the transparency duties that did
+*not* move are satisfiable with configuration. 🔴 The honest risk: the deferral removes the client's
+urgency, so this is a **cost-and-sovereignty sale, not a compliance sale**, and it should be priced
+as one.
+
+🟢 **Effort:** 7–10 weeks for a sovereign deployment with the `ollama` provider, policy configuration
+and an Article 50 transparency surface. 🔵 Add `P489-1` on top if the client wants pedagogy.
+
+### 🆕 `P489-5` — APAC: build the assessment layer that `TutorLoom`'s grant leaves out
+
+🟢 `pacewisdomhq/TutorLoom` (51★, 20 days old, Bangalore) is **Apache-2.0 with an operative body
+byte-identical to `apache.org`'s own**, multi-tenant, Django 6 / DRF 3.16 / Py 3.13 / React 19 /
+Flutter, OpenAPI 3 + JWT. 🔴 And its community edition withholds **every assessment feature — MCQ,
+task and coding** — plus SSO, audit logs and the super-admin console.
+
+🔴 **Read that correctly before proposing it:** an LMS with no assessment is a content-delivery
+system. 🟢 Read it the other way and it is a clean brief: a permissively-licensed, API-first,
+multi-tenant host with **a documented REST API and a named hole exactly where this base's agent shelf
+is strongest.**
+
+| component | licence @ pinned commit | role |
+|---|---|---|
+| [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🟢 Apache-2.0 canonical · `4c38ebd06510` @ `ef4bca4c9b34` | the host. Tenancy, courses, batches, grading queue, mobile app |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 MIT · `23bb67dd081e` @ `c0375feaa5bf` | 65 real interview problems **with an auto-grader and an MCP tutor** — a working coding-assessment pattern to copy, not just content |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT · `23bb67dd081e` @ `38adb1e9459d` | question and lesson-plan generation. 🔴 **387★, not the `~12 000` these shelves carried for two cycles** — a small, sound library, not a major project |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 MIT · `23bb67dd081e` @ `73005fd8cac8` | calibrate generated items against simulated learners before they reach candidates |
+
+🟢 **Wiring:** assessment lives **outside** `TutorLoom` as a service behind its REST API — which is
+both the clean architecture and the thing that keeps the client's assessment IP out of the
+Apache-2.0 repository. Generate items with `educhain`, grade code with the `TorchLeet` auto-grader
+pattern, calibrate difficulty against `StudentSim`, write results back through the documented API
+with JWT.
+
+🔴 **Due diligence to do first, and it is not optional:** 20 days old, one organisation, 13 forks,
+**no code read by this base** (`Gap 489-O`), and an Enterprise edition whose boundary could move.
+🟢 Pilot it on the corporate-training use case it was built for, not on an institution.
+🟢 **Effort:** 6–9 weeks, plus 1 week of diligence before committing.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-Y`** | `P489-1`'s falsification step is the whole novelty and it is **untested**: nobody has run `studentsim-eval` against a Moodle placement, and the chess-only data situation means the method control and the client's domain are different domains. |
+| 🔴 **`Gap 489-Z`** | The GPL-3.0 consequence in `P489-1` and the AGPL §13 statement in `repos/foundations.md` are **this base's own reading of licence text, unreviewed by counsel** (`Gap 489-P`), and they are now load-bearing for four recipes. |
+| 🟡 **`Gap 489-AA`** | `Gap 484-A` carries into a sixth pass: **no recipe on this base has had its components run together.** Every effort range here is an estimate from licence and description reads. |
+| 🟡 **`Gap 489-AB`** | `P489-2` requires on-device inference on `kolibri`'s low-spec target and **no row on any shelf here establishes what model fits**. Two of its thirteen weeks are an open question, not a task. |
+
 ## 🆕 `p488` — `2026-10-27` — **🟢 Six recipes, every component read at a pinned commit this pass. 🆕 `P488-1` is the first pattern on this base that can be **falsified before a pilot** — a simulated learner plus a published learner model. 🔴 And `P488-5` finally writes down the AGPL §13 obligation that three existing recipes build on and none mention.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — fourteen in fourteen; no recipe below is

@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27` — **🟢 `Gap 488-K` IS CLOSED AND THE ANSWER IS A CLEAN OPPORTUNITY: `kolibri` — the one permissive institutional platform on these shelves, never read in its history — is **MIT from bytes, 6 040 files, 21 plugins, a documented hook registry, 1 012 forks against 1 162 stars, and ZERO lines of AI code**. 🟢 A second permissive institutional platform arrives the same pass. 🔴 And the AI-surface instrument that produced the "zero AI" verdicts on this shelf reports **131 LLM files in a repository that has none**.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen in fifteen.** 🔵 Nothing gate-attested.
+Evidence: [`ai-surface-census`](../evidence/ai-surface-census.2026-10-27-p489.tsv),
+[`span-blob-identity`](../evidence/span-blob-identity.2026-10-27-p489.tsv),
+[`fork-star-ratio`](../evidence/fork-star-ratio.2026-10-27-p489.tsv).
+
+### 🟢 `learningequality/kolibri`, read first-hand at `dbe14ef6c499` — `Gap 488-K` closed
+
+🔵 `Gap 488-K`: *"the single permissive institutional platform on these shelves and has **never been
+read** — no code read, no AI-surface census, no star or activity figure. The one row the brief's
+licence preference actually points to is the least examined."* 🟢 Shallow clone, 73 MB:
+
+| axis | measured |
+|---|---|
+| licence | 🟢 **MIT**, file 1 097 B, blob `6506702f35f3`, operative span `23bb67dd081e` — **identical to ten other MIT rows on these shelves** |
+| declared | `pyproject.toml`: `license = {text = "MIT"}` — agrees with the bytes |
+| size | 6 040 tracked files · 1 231 Python · 1 183 JS · 657 Vue |
+| extensibility | 🟢 **21 plugins** + `kolibri/plugins/{registry,hooks}.py` — a documented plugin registry with **15 hook classes** |
+| activity | 🟢 commit on **2026-10-27**, PR **#15678** merged that day; 574 open issues |
+| deployment | 🟢 **1 012 forks / 1 162 stars = 0.87** — a platform profile, not a popularity one |
+| positioning | offline-first learning platform for low-connectivity settings; topics `offline-first`, `oer`, `sdg-4` |
+| 🔴 AI surface | 🔴 **ZERO** |
+
+🟢 **The licence preference in this base's brief points at exactly one institutional platform, and it
+turns out to be actively maintained, plugin-extensible, deployed at a 0.87 fork ratio, and completely
+free of AI.** 🔵 That is not a gap in `kolibri`; it is the clearest greenfield on this shelf. And its
+`ruff` target is `py37`, which says what the deployment target is: **low-spec hardware, no
+connectivity** — so the AI that belongs in it is an on-device small model, not a cloud API.
+
+### 🔴 The instrument that produced "zero AI" is wrong, and `kolibri` proves it
+
+| token | substring match | 🟢 word-boundary match | what the hits actually were |
+|---|---|---|---|
+| `llm` | 🔴 **131 files** | 🟢 **0 files** | `getAllMessagesFrom…`, `Enrollment.objects`, `showMarkAllModal` |
+| `mcp` | 2 files | 🔴 **0 real** | `mcp` is the **ISO 639-3 code for Makaa** in a minified Bloom player; the other is base64 in a test fixture |
+| `openai` `anthropic` `langchain` `ollama` `generative` `bayesian` | 0 | 0 | — |
+
+🔴 **131 false positives, zero true positives.** 🟢 Reproduced independently at a second site:
+`sakaiproject/sakai` returns exactly one `openai` hit through the search channel, and it is base64
+test data in `Base64DoubleUrlEncodeSafeTest.java`. 🔵 Every "no native AI" verdict these shelves
+carry was produced by substring matching, so each was **right by luck or wrong by luck** — and
+`Gap 488-N`'s complaint that the verdicts were six months old was the smaller of the two problems.
+
+### 🟢 The permissive institutional tier doubles, from one row to three
+
+🔵 `p488` stated the shelf's hardest finding: of nineteen named institutional platforms read at pinned
+commits, **two** carry a permissive grant and **eight** are network copyleft. 🟢 It is now three, and
+the new row is twenty days old:
+
+| platform | ★ | fork/★ | licence @ pinned commit · span blob | region | what it is |
+|---|---|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 🟢 **0.87** | 🟢 MIT · `23bb67dd081e` @ `dbe14ef6c499` | Global | Offline-first platform, 21 plugins, hook registry. 🔴 Zero AI. |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 6 948 | 🟢 **0.84** | 🟢 Apache-2.0 **canonical** · `4c38ebd06510` @ `bc73ecf9cfbb` | Global | Interactive lesson platform. Span blob equals `apache.org`'s own. |
+| 🆕 [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 51 | 0.26 | 🟢 Apache-2.0 **canonical** · `4c38ebd06510` @ `ef4bca4c9b34` | APAC · India | 🆕 Multi-tenant LMS, Django 6 / DRF 3.16 / Py 3.13 / React 19 / Flutter, OpenAPI 3 + JWT, org-scoped queries, CSV/Excel bulk onboarding, PDF certificates. 🔴 **No assessments in the community edition** — see `verticals/solutions.md`. |
+| [`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal) | — | — | 🟢 Apache-2.0 **canonical** · `4c38ebd06510` @ `657741e9b3ad` | North America · US | Institutional portal, not an LMS. Carried for completeness. |
+
+🟢 And `csev/tsugi` is Apache-2.0 whose operative §4 conditions are intact with the enumerators
+`(a)`–`(d)` deleted — usable, cited awkwardly. 🔵 `OpenOLAT` is Apache-2.0 with **two appended
+attribution statements inside the span**: the grant text is canonical for all 171 preceding lines, so
+its `d18181ec783a40` span blob is a false alarm and is recorded as one.
+
+### 🔴 `Gap 488-J` answered, and the two rows answer differently
+
+| row | the question | 🟢 the answer | consequence |
+|---|---|---|---|
+| `francoisjacquet/rosariosis` | GPL-2.0 or-later? | 🔴 **version 2 only.** `README.md` at `fa5f4b66ca`: *"released under the GNU General Public License version 2"* | 🔴 **Cannot be combined with GPL-3.0 code.** A studio proposing a GPL-3.0 component alongside it is proposing an incompatibility. |
+| `portabilis/i-educar` | GPL-2.0 or-later? | 🟡 **unstated anywhere.** `"any later version"` appears in **exactly one file in the repository — `LICENSE` itself**, inside the FSF's *How to Apply* template. No source file carries a version notice | 🟡 GPL-2.0 §9's own fallback governs. A licensee can argue up to GPL-3.0; it is contested and **must not be relied on in a proposal.** |
+
+🔵 `i-diario`'s election is unreadable for a prior reason: its only licence artifact is AGPL-3.0 in
+Portuguese translation, and the FSF's position is that its translations are not legally operative
+(`p485`). 🟢 The cheapest fix for both — an issue asking each maintainer to state the election — is
+still untried (`Gap 488-H`), and opening issues on third-party repositories is a human decision, not
+this base's.
+
+### 🔴 `Gap 488-I` paid: the AGPL §13 consequence, in proposal-facing form
+
+🔵 Eight platform rows on these shelves are network copyleft, **including the three most likely to be
+hosted for a client**: `openedx/edx-platform`, `frappe/lms`, `INGInious`. 🟢 Stated once, plainly, so
+`compose/patterns.md` can stop building on it silently:
+
+> **AGPL-3.0 §13.** If you modify the platform and let anyone interact with it **over a network** —
+> which is what hosting an LMS is — you must offer **those users** the Corresponding Source of **your
+> modified version**, at no charge, through the same network. 🔴 There is no internal-use exemption
+> for a hosted service, and "we only changed the theme and added a tutor plugin" is a modified
+> version. 🟢 The obligation runs to the *users of the service*, not to the upstream project, so a
+> university's students are the ones entitled to your source.
+
+🔵 Practical consequence for a studio: on an AGPL platform, **the differentiating code must live
+behind a service boundary the platform calls**, not inside the platform — or the client ships it.
+🟢 On `kolibri`, `oppia` or `TutorLoom` the question does not arise.
+
+### 🔴 `Gap 488-L` closed — `formalms` is unusable and is now marked so on the shelf
+
+🟢 Probed at `446a77a9b9` across **thirteen** paths — `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+`LICENCE`, `COPYING`, `COPYING.txt`, `license.txt`, `LICENSE-2.0.txt`, `GPL`, `GPL.txt`, `gpl.txt`,
+`COPYRIGHT`, `NOTICE`. 🔴 **Every one returns 404.** Only `README.md` exists. 🔵 Add that its last
+push was **10 Aug 2026** and it carries 37★. 🔴 **Verdict on the shelf itself, not in a pass note:
+`formalms` has no grant and must not be proposed.**
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-M`** | `kolibri`'s AI surface is zero and its **hook API has not been read for suitability**. Whether those 15 hook classes can host an inference call, a learner model and a policy gate is the whole question for any engagement on it, and this pass only established that nothing is there yet. |
+| 🔴 **`Gap 489-N`** | Every "no native AI" verdict on this shelf **predating this pass was produced by substring matching** and must be re-run word-boundary. Two sites were re-run; seven platform rows were not. |
+| 🟡 **`Gap 489-O`** | `TutorLoom` is read from its `README`, its `requirements.txt` and its licence bytes. **No code read**, 20 days old, one organisation, 13 forks — so "multi-tenant, org-scoped queries" is its claim. |
+| 🟡 **`Gap 489-P`** | The AGPL §13 statement above is this base's own reading of the licence text. **No pass has had it reviewed by counsel**, and it is now load-bearing for three recipes. |
+
 ## 🆕 `p488` — `2026-10-27` — **🔴 The brief this base serves asks for MIT / Apache / BSD foundations. In the institutional education tier they very nearly do not exist: of nineteen named platforms read at pinned commits, **two** carry a permissive grant, and **eight** are network copyleft. 🟢 That is an informed gap, and it is worth more than another table of copyleft rows presented as buildable.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — **fourteen denials in fourteen passes.** Nothing

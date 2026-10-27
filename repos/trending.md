@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27T21:55Z` — **🟢 `Gap 488-A` IS PAID: every byte-size cell on these shelves is reissued as an operative-span blob SHA, and the instrument's first run settles the argument that has run since `p450` — **nine MIT file sizes are one identity**, and `p486`'s "pair of Apache fingerprints" was an artifact of hashing the file. 🔴 Then it finds the thing sizes cannot: an edited Apache payload that has **propagated byte-identically into a derivative repository**.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen in fifteen.** 🔵 `api.github.com` and
+`github.com` return `403` through this session's proxy; `gnu.org` and `eur-lex.europa.eu` do not
+resolve at all. Every read below came through `raw.githubusercontent.com` at a resolved commit SHA,
+or the authenticated search channel. Evidence:
+[`span-blob-identity`](../evidence/span-blob-identity.2026-10-27-p489.tsv),
+[`licence-path-enumeration`](../evidence/licence-path-enumeration.2026-10-27-p489.tsv),
+[`fork-star-ratio`](../evidence/fork-star-ratio.2026-10-27-p489.tsv).
+
+### 🟢 One hash per family, and it is printing-invariant
+
+| family | file sizes seen | **span blobs** | reference |
+|---|---|---|---|
+| MIT | 🔴 9 (1 062 … 1 106 B) | 🟢 **1** · `23bb67dd081e` | 11 agreeing repositories |
+| Apache-2.0 | 4 (11 357 / 11 358 / 11 359 / 11 362 B) | 🟢 **1** · `4c38ebd06510` | 🟢 **`apache.org` primary text** (file blob `d645695673349e`) |
+| GPL-3.0 | 2 (both 35 147 B) | 🟢 **1** · `9bd0eca0bf44` | `moodle` + `ILIAS` — two-source consensus |
+| AGPL-3.0 | 3 (33 893 / 34 514 / 35 136 B) | 3 | `edx-platform` + `frappe/lms` agree **after whitespace normalisation** → consensus; `freelingo` does not |
+| GPL-2.0 | 2 (15 214 / 18 092 B) | 2 | `i-educar` + `rosariosis` agree **after whitespace normalisation** |
+| LGPL-3.0 | 1 (7 652 B) | 🔴 `NO_SPAN` | 🔴 ungradeable — `Gap 488-C` reproduced |
+
+🔵 `p488` published *"twenty-five payloads, fourteen distinct byte sizes, five operative bodies"* and
+concluded the drift it had chased did not exist. 🟢 The span blob says the same thing in one cell per
+row instead of a comparison across twenty-five, which is what `Gap 488-A` asked for — and it removes
+`Gap 488-B`'s objection that **a lone payload cannot be checked**: `freelingo`'s AGPL is a single row
+on these shelves and it is now graded against a two-source consensus, on two axes, and fails both.
+
+### 🔴 The finding a size could never produce
+
+| repo | ★ | created | span blob | relationship |
+|---|---|---|---|---|
+| `HKUDS/DeepTutor` | 45 715 | Dec 2025 | 🔴 `209761b7c1b0` | the parent |
+| 🆕 `3yangyang9/DeepTutor-AILearning` | 136 | **9 Oct 2026** | 🔴 `209761b7c1b0` | 🔴 **identical blob — the edit was inherited by copy** |
+
+🟢 Three operative substitutions (`§1 Contribution`, `§1 Contributor`, `§4(d) NOTICE`) and an
+appendix replaced with an instruction to apply an *"Alarm or alarm"* copyright header. 🔵 Enumerated
+in full in [`agents/top.md`](../agents/top.md). 🟢 **Legal effect: nil.** 🔴 **Reach: proportional to
+the parent's 45 715★ and its 5 738 forks**, and nothing in the chain is instrumented to notice.
+
+### 🔴 A fifth structural reason a licence read misses, and it hits the biggest row in the sector
+
+🟢 `moodle/moodle`, probed at `46c042e7da` across the eleven paths this base enumerates — `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`, `LICENSE-CODE`, **`COPYING`**, `license`,
+`license.txt`, `LICENSE-APACHE`, `LICENSE-MIT` — returns **`NO_LICENCE_ARTIFACT`**.
+
+🔴 Moodle's grant is at **`COPYING.txt`**: 35 147 B, file blob `94a9ed024d38`, **GPL-3.0**, operative
+span `9bd0eca0bf44`. 🔵 The enumeration carries `COPYING` and not `COPYING.txt`, so the world's most
+deployed LMS reads as ungranted.
+
+🟢 **The five reasons, all five found in the last three passes:**
+
+| # | repo | reason |
+|---|---|---|
+| 1 | `frappe/lms` | **case** — `license.txt` |
+| 2 | `INGInious` | **position** — title block below a scope wrapper |
+| 3 | `sakai` | **vocabulary** — ECL-2.0, a family with no pattern |
+| 4 | `microsoft/autogen` | **path precedence** — `LICENSE` is not the grant |
+| 5 | 🆕 `moodle/moodle` | 🔴 **extension on `COPYING`** — `COPYING.txt` |
+
+🔵 A probe must enumerate `{LICEN[SC]E, COPYING, COPYRIGHT, NOTICE} × {∅, .txt, .md} × {upper, lower,
+mixed}` and read **every** hit, which is 36 paths and not 11.
+
+### 🟢 The axis this base has been missing: fork-per-star separates deployed from admired
+
+🔵 `p483`'s `Gap 482-H` found that star-ranked discovery misses institutional edtech and blamed the
+organisation name. 🟢 There is a cheaper mechanism, and it is already in the data:
+
+| class | rows | fork-per-star |
+|---|---|---|
+| 🟢 **platforms** | `moodle` 1.02 · `kolibri` 0.87 · `oppia` 0.84 · `i-educar` 0.77 · `formalms` 0.70 · `rosariosis` 0.61 · `OpenOLAT` 0.37 · `mentingo` 0.31 · `TutorLoom` 0.26 | **0.26 – 1.02** |
+| agents / frameworks | `OATutor` 0.59 · `AI_Tutor_Release` 0.34 · `freelingo` 0.26 · `educhain` 0.20 · `gen-mentor` 0.17 · `autogen` 0.15 · `Bloom` 0.15 · `DeepTutor` 0.13 · `TorchLeet` 0.13 · `smolagents` 0.11 · `StudentSim` 0.10 · `universal-diagnostic-tutor-skill` 0.02 · `studyai` 0.008 · `DeepTutor-AILearning` 0.007 | **0.007 – 0.59** |
+
+🟢 **Forking is what you do to software you intend to run.** `moodle` has **more forks than stars**
+(7 688 / 7 556). 🔴 `studyai` has **two forks against 237 stars** and `DeepTutor-AILearning` **one
+against 136**. 🔵 The two classes overlap in exactly one row — `CAHLR/OATutor` at 0.59, an agent with
+a platform's deployment profile, which is consistent with its being the only row on the agent shelf
+with a published learner model and a decade of classroom use.
+
+🟢 **Use:** when a client needs something that has been run by someone other than its author, rank by
+fork-per-star. 🔴 It is a *deployment* proxy and nothing else — `formalms` scores 0.70 and is
+unusable (no licence, last push 10 Aug 2026).
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-I`** | The span instrument is **whitespace-sensitive**: `csev/tsugi`'s re-wrapped Apache and `frappe/lms`'s re-wrapped AGPL both read as deviations on the blob axis and resolve only on the normalised word axis. Any single-axis grading on these shelves is wrong in one direction or the other. |
+| 🔴 **`Gap 489-J`** | The 36-path enumeration above is **specified, not implemented**. Until it is, every `NO_LICENCE_ARTIFACT` verdict on these shelves — including the ones used to refuse rows — is an 11-path result. |
+| 🟡 **`Gap 489-K`** | GPL-3.0 and AGPL-3.0 references are **two-source consensus** because `gnu.org` does not resolve through this session's network policy. Two agreeing repositories can both be wrong in the same way, and the propagation finding above is proof that they can. |
+| 🟡 **`Gap 489-L`** | Fork-per-star is computed from **one snapshot**. It cannot distinguish an actively-deployed platform from a long-dead one with historical forks, which is exactly `formalms`'s failure mode. |
+
 ## 🆕 `p488` — `2026-10-27T20:55Z` — **🟢 `p487`'s order is carried out — every GNU digest on these shelves re-read at a pinned commit — and it inverts the alarm that ordered it. 🔴 Twenty-five payloads, fourteen distinct byte sizes, **five** operative bodies: the drift this base has been chasing since `p450` does not exist. 🔴 And the one payload that *is* altered inside the operative body was never flagged, because its size looks exactly like the others.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from

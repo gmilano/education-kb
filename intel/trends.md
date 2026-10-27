@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27` — **🟢 THE TREND THIS PASS CAN DEFEND FROM MEASUREMENT: the institutional LMS stopped being the thing you add AI to and became the thing that **ships the AI plumbing and none of the pedagogy** — `moodle` has 7 providers and 4 generic actions against **2** placements. 🔴 And the instrument finding with the widest reach is that a substring AI census reports **131 LLM files in a repository containing zero**, which is how every "no native AI" verdict on these shelves was produced.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen in fifteen.** 🔵 A gate that has never
+been allowed to run cannot attest anything below. Evidence:
+[`ai-surface-census`](../evidence/ai-surface-census.2026-10-27-p489.tsv),
+[`span-blob-identity`](../evidence/span-blob-identity.2026-10-27-p489.tsv),
+[`fork-star-ratio`](../evidence/fork-star-ratio.2026-10-27-p489.tsv),
+[`educacion-middle-band`](../evidence/educacion-middle-band.2026-10-27-p489.tsv).
+
+### 🟢 `T489-1` — The incumbent LMS now ships the provider layer and not the pedagogy
+
+🟢 Measured, not asserted: `moodle` core carries **7 AI providers** (`openai`, `gemini`, `ollama`,
+`azureai`, `deepseek`, `anthropic`, `awsbedrock`), **4 typed actions** (`explain_text`,
+`generate_text`, `summarise_text`, `generate_image`) and 🔴 **2 placements** (`editor`,
+`courseassist`). 🔵 Seven ways to reach a model; two places a learner can meet one; zero tutors, zero
+learner models, zero assessment actions.
+
+🔴 **The consequence inverts two cycles of this base's positioning.** Every pattern these shelves
+have published assumed the integration was the work: pick a platform, bolt on an agent, wire a
+provider. 🟢 On the sector's most-deployed platform the provider abstraction, the policy surface and
+the typed-response plumbing are **already in core and GPL-3.0** — and the thing missing is the thing
+the agent shelf has: a learner model (`OATutor`'s BKT), a simulator to test against (`StudentSim`),
+grade-banded retrieval (`AI_Tutor_Release`). 🔵 So the defensible offer is **a placement**, not a
+platform.
+
+🟡 It generalises weakly and the weakness is stated: `OpenOLAT` is the one other platform with a
+provider SPI, and its figure is carried from `p483` and unverified (`Gap 489-D`). Five platform rows
+re-read this pass have **no** provider layer. 🔵 So `T489-1` is a claim about the *leader*, and the
+tier below it has not moved.
+
+### 🔴 `T489-2` — Every AI-surface verdict in this sector's tooling is produced by substring matching, and substring matching does not work
+
+🟢 `kolibri`, 6 040 tracked files, first-hand: substring `llm` → **131 files**; word-boundary `llm` →
+🟢 **0**. The hits are `getAllMessagesFrom…`, `Enrollment.objects`, `showMarkAllModal`. Substring
+`mcp` → 2 files, both false: `mcp` is the **ISO 639-3 code for Makaa** in a minified player, and
+base64 in a test fixture. 🟢 Reproduced at `sakai`: one `openai` hit, and it is base64 test data.
+
+🔴 **131 false positives, 0 true, on a repository whose real answer is zero.** 🔵 The failure is
+symmetric and that is the point: the same instrument that manufactures AI where there is none will
+miss AI that is there, because `public/ai/provider/ollama/` contains no occurrence of the string
+`llm`. 🟢 Anyone buying, auditing or due-diligencing "AI in the LMS" in 2026 is reading a grep, and
+the grep is this one.
+
+### 🔴 `T489-3` — Edited licence payloads propagate by repository copy, and the copy is undetectable by family
+
+🟢 `3yangyang9/DeepTutor-AILearning` (136★, created 9 Oct 2026) ships an Apache-2.0 payload
+**byte-identical** to `HKUDS/DeepTutor`'s (45 715★) — same blob `209761b7c1b0` — including its three
+operative substitutions and an appendix that instructs the reader to apply an *"Alarm or alarm"*
+copyright header. 🔵 `T488-1` said the industry's readers detect a licence **family**, which is
+exactly what an edit leaves intact. 🟢 `T489-3` adds the transmission mechanism: **the defect
+inherits**, and its reach scales with the parent's 5 738 forks.
+
+🟢 **And the correction `T489-3` carries against `T488-1`'s register:** the three substitutions are
+*"submitted to Licensor"* → *"submitted to **the** Licensor"*, the same in §1 *Contributor*, and
+*"excluding **those** notices"* → *"excluding **any** notices"* in §4(d). 🟢 **Legal effect: nil.**
+🔵 All three are function-word and synonym swaps; the grant, patent and disclaimer sections are
+untouched; the appendix is replaced with invented content. 🔵 That is the shape of **whole-file
+regeneration, not patching** — stated as a hypothesis with its evidence, because nobody has asked
+either maintainer (`Gap 489-A`). 🔴 `p488` reported the same payload as an alarm. The two-axis read
+is what separates it from `autogen`'s MIT missing a final full stop, and both belong in the same
+table rather than the same register.
+
+### 🟢 `T489-4` — Fork-per-star separates deployed software from admired software with no overlap but one
+
+| class | range | rows |
+|---|---|---|
+| 🟢 platforms | **0.26 – 1.02** | `moodle` 1.02 · `kolibri` 0.87 · `oppia` 0.84 · `i-educar` 0.77 · `rosariosis` 0.61 · `OpenOLAT` 0.37 · `mentingo` 0.31 · `TutorLoom` 0.26 |
+| agents / frameworks | **0.007 – 0.59** | `OATutor` 0.59 · `AI_Tutor_Release` 0.34 · `freelingo` 0.26 · `educhain` 0.20 · `autogen` 0.15 · `DeepTutor` 0.13 · `smolagents` 0.11 · `StudentSim` 0.10 · `universal-diagnostic-tutor-skill` 0.02 · `studyai` 0.008 |
+
+🟢 `moodle` has **more forks than stars**. `studyai` has **two forks against 237 stars**;
+`DeepTutor-AILearning` **one against 136**. 🔵 The single crossover is `CAHLR/OATutor` at 0.59 — an
+agent with a platform's deployment profile, which is consistent with it being the only row on the
+agent shelf carrying a published learner model and a decade of classroom use. 🟢 This is the
+mechanism behind `p483`'s `Gap 482-H`: star-ranked discovery misses institutional edtech because
+institutional edtech is **forked, not starred**.
+
+### 🔴 `T489-5` — The regional supply nil this base reported for twelve passes was substantively right
+
+🟢 `educación in:name,description` unfloored: **5 883**. The band nobody had sampled, `stars:1..9`:
+**467**. Derived zero-star: **~5 390 — 91.6 % of the ceiling.** 🟢 Twenty graded from the middle
+band: 15 are education-related, 🔴 **0 are reusable by a studio** — one Peruvian primary school's
+planning folder, one Argentine school's website, a zoo education department's booking tool, five
+projects that are not education at all, and **four repositories by one author** whose only link to
+the token is that *Educación IT* is the **name of a training company**.
+
+🔵 `p488` was right that the floor suppressed 226× and right that the ceiling is not supply. 🟢 The
+measurement settles which bound to act on: **both bounds are wrong and the floor's answer was closer.**
+🔴 A base that records only the "226×" half spends the next twelve passes looking for a corpus that
+does not exist.
+
+### 🔴 `T489-6` — EMEA's high-risk education deadline moved, and the primary text is unreachable from here
+
+🟢 Regulation **(EU) 2026/1744** — the Digital Omnibus on AI — defers the high-risk obligations for
+**stand-alone Annex III education systems to 2 December 2027**, roughly sixteen months later than the
+2 August 2026 date the sector was planning against. 🔵 Published in the OJ **24 Jul 2026**, in force
+**27 Jul 2026**; Annex I embedded systems remain **2 Aug 2028**; Article 50 transparency duties still
+applied from **2 Aug 2026**; emotion recognition in education stays **prohibited** and the AI-literacy
+duty has applied since early 2025. 🔴 **Provenance stated: corroborated across several independent
+secondary sources including two law firms, and `eur-lex.europa.eu` does not resolve through this
+session's network policy**, so the operative text — recital 40 and amended Article 113(c) — has not
+been read here.
+
+🟢 Commercial reading: the deferral removes the forcing function EMEA procurement was waiting for.
+🔴 A vendor selling AI-Act compliance into education in EMEA now has **sixteen fewer months of
+urgency** and the buyer has a reason to wait — which is the opposite of North America, where Ohio's
+district deadline has already passed.
+
+### 🟢 `T489-7` — A mandate ahead of teacher readiness fails, and APAC has the test case
+
+🔵 South Korea made AI textbooks a policy centrepiece; reported adoption sat **below 30 %** by March
+and the National Assembly then **removed the textbooks' official status**. 🔵 China runs the opposite
+experiment: AI as a compulsory subject from age six (reported Sept 2025). 🟡 Both from secondary
+sources and neither verified first-hand here.
+
+🟢 The transferable finding is the pairing: **Korea's withdrawal and the North American data point in
+the same direction** — ~85 % teacher use against roughly half of US secondary schools having a written
+policy, and one 2026 survey putting teachers who received formal guidance at **18 %**. 🔵 The binding
+constraint in this sector is not model quality and not platform capability. It is **the teacher**,
+and no row on any shelf here addresses it.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-U`** | `T489-2` is a **two-site** result (`kolibri` first-hand, `sakai` through the search channel). The sector-wide false-positive rate of substring AI censuses is unmeasured, and it is one script over any repository corpus. |
+| 🔴 **`Gap 489-V`** | `T489-6` rests entirely on **secondary sources**: `eur-lex.europa.eu` is outside this session's allowed network domains, so no pass has read Regulation (EU) 2026/1744's operative text. The date is load-bearing for every EMEA opportunity on these shelves. |
+| 🟡 **`Gap 489-W`** | `T489-7`'s Korea and China figures are secondary and partly undated. The claim that the teacher is the binding constraint is **consistent with three regions' data and tested by none of it**. |
+| 🟡 **`Gap 489-X`** | `T488-U`'s carried item is carried again: `T487-1` (whole-body readers misgrading GPL-3.0 as AGPL via §13) was **not re-measured this pass** either. Two passes unverified. |
+
 ## 🆕 `p488` — `2026-10-27` — **🔴 The trend with the most money attached is still not about education: open-source licence *payloads* in this sector are being edited, and every automated reader in the supply chain is built to detect a licence **family**, which is exactly the thing an edit leaves intact. Two of twenty-nine payloads read first-hand this pass are altered — one with a word deleted from AGPL-3.0 §11. 🟢 And a popularity filter, not a language, was hiding regional supply.**
 
 🔵 Eight trends. 🟢 marks those resting on first-hand measurement in this pass; 🟡 those resting on

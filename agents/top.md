@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27` — **🟢 `Gap 488-A` IS CLOSED BY EXECUTION, NOT BY ARGUMENT: every licence cell on this shelf is now a blob SHA of the *operative span*, and the instrument proves itself — **nine MIT file sizes collapse to one identity**, four Apache sizes collapse to one. 🔴 And the edited Apache payload `p488` found on the largest row has **propagated byte-identically to a derivative**. 🔴 `educhain` is **387★, not ~12 000** — this base has carried that figure wrong by 31× since cycle 2.**
+
+🔴 **Gate posture, stated first: `make hooks` was DENIED** (`Code from External`) before any gate body
+ran — **fifteen denials in fifteen passes**. 🔵 Nothing here is gate-attested. The licence instrument
+below was re-implemented in this pass's own code and controlled in both directions; that is the only
+attestation offered.
+
+🟢 **Method, and it is `p488`'s own `P488-5` recipe actually run across the shelf rather than
+prescribed:** default ref resolved by `git ls-remote --symref`, bytes from `raw.githubusercontent.com`
+**at the resolved commit SHA**, family from the title block, then **two hashes**: the git blob SHA-1
+of the legally operative span, and a whitespace-normalised word-sequence hash of the same span.
+🔵 `api.github.com` and `github.com` both return `403` through this session's proxy and `gnu.org` does
+not resolve at all, so no GNU canonical was fetchable from the FSF; GNU-family references below are
+**two-source consensus**, named as such.
+Evidence: [`span-blob-identity`](../evidence/span-blob-identity.2026-10-27-p489.tsv),
+[`star-recheck`](../evidence/star-recheck.2026-10-27-p489.tsv),
+[`studentsim-code-read`](../evidence/studentsim-code-read.2026-10-27-p489.tsv).
+
+### 🟢 The instrument result, before the shelf: size was never an identity, and the span is
+
+| family | distinct **file** sizes on this shelf | distinct **operative-span** blob SHAs | what that means |
+|---|---|---|---|
+| MIT | 🔴 **9** — 1062, 1068, 1069, 1074, 1092, 1097, 1102, 1105, 1106 B | 🟢 **1** — `23bb67dd081e` (1 033 B) | 🟢 Every MIT row on this shelf is byte-identical in the operative text. The spread is the copyright line. |
+| Apache-2.0 | 4 — 11 357, 11 358, 11 359, 11 362 B | 🟢 **1** — `4c38ebd06510` (10 015 B) | 🟢 Includes `apache.org`'s own printing *and* the trailing-newline printing. **One fingerprint, not the pair `p486` adopted.** |
+
+🔵 This retires `p486`'s "canonical Apache-2.0 is a PAIR of fingerprints" rule and every byte-size
+cell this shelf has published. 🟢 The `apache.org` primary source hashes to blob
+`d645695673349e` (11 358 B) and its span to `4c38ebd06510` — the same span blob as `smolagents`'s
+11 357-byte printing. The pair was an artifact of hashing the file.
+
+### 🔴 The propagation: an edited licence travels by copy, and it has
+
+| repo | ★ | file bytes | **span blob** | verdict |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **45 715** | 11 408 | 🔴 `209761b7c1b0` | 3 substitutions inside the operative body |
+| [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 136 | 11 408 | 🔴 `209761b7c1b0` | 🔴 **Byte-identical to the row above.** Same blob. |
+
+🟢 The three deviations, enumerated for the first time on this base rather than counted:
+
+| § | canonical | `DeepTutor` family |
+|---|---|---|
+| §1 *Contribution* | "submitted to Licensor for inclusion" | "submitted to **the** Licensor for inclusion" |
+| §1 *Contributor* | "received by Licensor and subsequently" | "received by **the** Licensor and subsequently" |
+| §4(d) NOTICE | "excluding **those** notices that do not pertain" | "excluding **any** notices that do not pertain" |
+
+🔵 And the appendix replaces the canonical recommendation sentence with an instruction to apply an
+*"Alarm or alarm" copyright header*, glossed as *"Alarm is the umbrella trademark for a collection of
+Open Source projects"* — a trademark with no relation to the licensor, who is the Data Intelligence
+Lab at the University of Hong Kong.
+
+🟢 **Legal effect of the three operative edits: nil.** "the Licensor" is "Licensor"; "any notices that
+do not pertain" is the same restrictive clause as "those notices that do not pertain". 🔴 **Supply-chain
+effect: not nil.** All three are function-word and synonym swaps with no diff hunks anywhere in the
+grant, patent or disclaimer sections, and the appendix is replaced with invented content — the shape
+of **whole-file regeneration**, not of patching. 🔵 Stated as a hypothesis with its evidence, not as
+fact: nobody has asked either maintainer.
+
+### 🟢 The shelf — fifteen rows, every licence graded by span blob at a pinned commit
+
+| agent | ★ | fork/★ | licence @ pinned commit · span blob | region | what it actually is |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **45 715** | 0.13 | 🔴 Apache-2.0, 3 operative substitutions · `209761b7c1b0` @ `a31d82624c27` | APAC · Hong Kong | 88 % of this base's star mass. MCP **host** with 110 tool definitions, 51-file MCP layer, deny-by-default grants, 3-layer memory, sandbox quotas. **+475★ in one hour** — the only row with hourly resolution. |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 2 592 | 0.13 | 🟢 MIT · `23bb67dd081e` @ `c0375feaa5bf` | Global | 65 ML/AI interview problems from real Google / Meta / Anthropic interviews, Jupyter notebooks, **auto-grader and an MCP tutor**. The clearest assessment-plus-tutor pairing here. |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🔴 **387** | 0.20 | 🟢 MIT · `23bb67dd081e` @ `38adb1e9459d` | APAC · India | Content generation — questions, lesson plans, YouTube-to-course. 🔴 **This shelf has carried `~12 000★` since cycle 2. The measured figure is 387.** See the correction below. |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 293 | 0.15 | 🟢 MIT · `23bb67dd081e` @ `68788b5e7d34` | APAC · China | Bloom's **2-sigma** research as a Claude Code skill **and** a self-hostable web app. Socratic, 中文优先. |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 274 | 🟢 **0.59** | 🟢 MIT · `23bb67dd081e` @ `e24c8456e5f7` | North America · US | UC Berkeley. Intelligent tutoring with **Bayesian Knowledge Tracing** — the only row with a published learner model rather than a prompt. 🟢 And the only *agent* row with a platform-class fork ratio: people deploy it. |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 251 | 0.02 | 🟢 MIT · `23bb67dd081e` @ `075c1895d255` | Global | Diagnosis-first tutor skill, no mode or command menu — it picks the next teaching step and checks understanding itself. |
+| [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | 237 | 0.01 | 🟢 MIT · `23bb67dd081e` @ `fb4a7ea98500` | Global | Local-first lecture platform: PowerPoint ingest, spaced repetition, exams, optional tutor on the **Gemini free tier**. Nine days old; +3★ this hour. |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 209 | 0.26 | 🔴 **AGPL-3.0, altered** · `1d906a332e68` @ `269feb00c09a` | EMEA · Spain | Self-hosted language learning: local or cloud LLMs, CEFR plans, voice, spaced repetition. 🔴 Deviation confirmed on the word axis against a two-source AGPL consensus — see below. |
+| [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🆕 **136** | 0.01 | 🔴 Apache-2.0, **edit inherited** · `209761b7c1b0` @ `ce32cf86e3db` | APAC · China | 🆕 Eighteen days old. **Multi-tenant** learning platform for *offline* training institutions: platform operator manages tenants, models and billing; tenant manages campuses; campus manages teachers and students. The multi-tenancy axis `p484` published, in a new row. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 134 | 0.17 | 🟢 **CC0-1.0** · `b2b96523` @ `79fc182c5d80` | APAC | **WWW '25 Oral.** LLM multi-agent framework for goal-oriented learning in an ITS. The most permissive grant on this shelf and the only public-domain dedication. |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 0.34 | 🟢 MIT · `23bb67dd081e` @ `2987df2be268` | APAC · China | `EduAgent` — RAG tutor scoped to **grades 1–9**, LanceDB, DeepSeek/Gemini, Socratic. Grade-banded, not a general chatbot. |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 79 | 0.10 | 🟢 MIT · `23bb67dd081e` @ `73005fd8cac8` | North America · US | 🟢 **Code read this pass — `Gap 488-V` closed.** 11 645 lines of Python, three domains, two implemented metrics, a two-stage training pipeline and an RL harness. See the read below. |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 30 102 | 0.11 | 🟢 Apache-2.0 canonical · `4c38ebd06510` @ `96f33faaf028` | EMEA · France | Minimal code-first agent loop; the usual harness under education demos. Span blob equals `apache.org`'s own. |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 61 589 | 0.15 | 🟡 **MIT at `LICENSE-CODE`** · `6addbbe2be2e` @ `004749e6b710` | North America · US | Multi-agent conversation framework. 🔴 `LICENSE` is CC BY 4.0; the code grant is a *different file* (`p488`'s path-precedence finding, reproduced). 🔵 Its MIT differs from the other eleven by **one character** — see below. |
+| [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🆕 51 | 0.26 | 🟢 Apache-2.0 canonical · `4c38ebd06510` @ `ef4bca4c9b34` | APAC · India | 🆕 Twenty days old. Multi-tenant LMS, Django 6 / DRF / React 19 / Flutter, OpenAPI 3 + JWT. 🟢 A **permissive institutional platform**, which `repos/foundations.md` says barely exist. 🔴 Its community edition ships **no assessments at all** — see `verticals/solutions.md`. |
+
+🔵 Fifteen rows, six grant types, four regions. 🟢 **Thirteen are permissive** (MIT / Apache-2.0 / CC0)
+and buildable; one is network copyleft with a confirmed defect; one needs the right file read.
+🟢 Twelve of the fifteen carry a licence whose operative text is byte-identical to a canonical or
+consensus reference — provable from one hash each.
+
+### 🔴 `satvik314/educhain` — the carried figure was wrong by 31×
+
+| source | figure |
+|---|---|
+| this shelf, cycle 2 (`v54`) | `~9 000★` |
+| this shelf, cycle 3 (`v65`) and since | `~12 000★` |
+| 🟢 measured `2026-10-27`, authenticated search channel | 🔴 **387★** (76 forks) |
+
+🔵 The row is otherwise correct — MIT, canonical span blob, India, content generation — and it stays
+on the shelf on its merits. 🔴 But it has been presented as the base's third-largest agent for two
+cycles and it is its **eighth**. 🟢 `autogen` (carried `~60 000`, measured 61 589) and `smolagents`
+(carried `~30 000`, measured 30 102) are both within 3 %, so the defect is **row-specific, not a
+systematic inflation** — which is worse, because it cannot be corrected by a factor.
+
+### 🟢 `microsoft/StudentSim`, read from code — `Gap 488-V` closed, and the description understates it
+
+🔵 `p488` cited this row from its description and `Gap 488-V` recorded that *"simulates student
+responses" is the repository's claim, not a verified capability.* 🟢 Shallow clone at
+`73005fd8cac8`, 139 tracked files, 96 Python files, **11 645 lines**:
+
+| claim | status | read from |
+|---|---|---|
+| behavioural fidelity is measured | 🟢 **implemented** | `domains/{math,l2,chess}/fidelity.py` — math scores top-1 on a 4-way MCQ read from **log-probabilities, not free text**, with absent letters floored at `-10.0` because a provider returning only its top-k omits the rest |
+| guidance responsiveness is measured | 🟢 **implemented** | `eval/aggregate_responsiveness`, per-mode breakdown, macro *and* micro means, exposed as `studentsim-eval` |
+| one simulator **per student** | 🟢 **implemented** | Stage 1 pools records across students into one LoRA adapter per domain; Stage 2 continues it on one student's records, driven by a `roster.json` |
+| a tutor can be trained against it | 🟢 **implemented, chess only** | `tutor_rl/{reward,multihead}.py` — tutor writes guidance, simulator answers as the student, tutor is rewarded when the learner's performance improves |
+| three domains | 🟡 **one is usable out of the box** | chess ships its data (CC0 source). **L2 needs an EFCAMDAT extract and math a FoundationalASSIST extract, both obtained separately**, and two of math's three build steps call a model and cost money |
+| hard dependency | 🔴 **Azure OpenAI** | `AZURE_OPENAI_ENDPOINT` + `AZURE_OPENAI_API_KEY` required for every model-calling step |
+
+🟢 The finding that matters: **a frontier model prompted to role-play the student is one of this
+repository's four baselines**, not its method — alongside a knowledge-tracing model with no access to
+the tutor's message. 🔵 So the row is stronger than `p488` claimed and `P488-1` rests on firmer
+ground than `Gap 488-X` feared — but the pattern must name the data obligation, and `compose/patterns.md`
+now does.
+
+### 🔵 Two one-character findings, reported as findings and not as alarms
+
+🟢 `microsoft/autogen`'s `LICENSE-CODE` differs from the other eleven MIT payloads by exactly one
+character: the final `SOFTWARE.` has lost its full stop. 163 words against 163. 🟢 `csev/tsugi`'s
+Apache-2.0 survives whitespace normalisation with **four words missing out of 1 405** — the
+enumerators `(a)`, `(b)`, `(c)`, `(d)` of §4. The *text* of all four redistribution conditions is
+intact; only the labels are gone, so **the §4(d) NOTICE obligation is still binding and is no longer
+individually citable.** 🔵 `p488` opened in an alarm register on edits of this class. The two-axis
+read is what lets a pass distinguish a dropped full stop from a deleted word in AGPL §11, and the
+right response to the first two is to write them down and move on.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-A`** | The regeneration hypothesis for the `DeepTutor` payload is **untested**. It is consistent with all four observations but nobody has asked either maintainer, and `Gap 488-H` still stands: **no pass has ever opened an issue on a third-party repository.** That remains a human decision, not this base's to take. |
+| 🔴 **`Gap 489-B`** | `educhain`'s 31× error was found only because this pass re-measured a row it had no reason to doubt. **Every other `~`-prefixed figure on these shelves is carried on the same basis** and two of the three checked were fine, so the defect is undetectable without re-measuring all of them. |
+| 🟡 **`Gap 489-C`** | The AGPL and GPL references here are **two-source consensus**, not primary text: `gnu.org` does not resolve through this session's network policy. Two agreeing repositories is a weaker warrant than the FSF's own bytes, and `freelingo`'s verdict rests on it. |
+| 🟡 **`Gap 489-D`** | `OpenOLAT`'s 4-provider AI SPI and 66-file MCP server are **carried from `p483` and were not re-read this pass**, while every other AI-surface verdict on these shelves now has an October-2026 read behind it. It is the one row whose AI claim is six months old. |
+
 ## 🆕 `p488` — `2026-10-27` — **🔴 Two of the twenty-nine licence payloads read this pass have been EDITED — one has a word deleted from AGPL-3.0 §11, and the largest row on this shelf ships an Apache-2.0 whose appendix has been overwritten with text about an "Alarm" trademark. 🟢 Thirteen agent rows re-read at pinned commits. 🔴 And `LICENSE` is not the code grant on a Microsoft row this shelf carries.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from

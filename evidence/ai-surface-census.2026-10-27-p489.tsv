@@ -1,0 +1,9 @@
+platform	channel	method	openai_hits	real_ai_surface	detail	verdict
+moodle/moodle	github-code-search	path-enumerated subplugins	65	YES-CORE-SUBSYSTEM	7 providers (openai gemini ollama azureai deepseek anthropic awsbedrock) + 4 actions (explain_text generate_text summarise_text generate_image) + 2 placements (editor courseassist)	OVERTURNS-no-native-AI-verdict
+OpenOLAT/OpenOLAT	carried-from-p483	not re-read this pass	-	YES-CARRIED	4-provider AI SPI incl local ONNX + 66-file MCP server (MCP Java SDK 2.1.0)	CARRIED-UNVERIFIED-this-pass
+learningequality/kolibri	first-hand shallow clone dbe14ef6c499	word-boundary grep over 6040 tracked files	0	NONE	substring llm=131 files ALL FALSE POSITIVES (getAllMessagesFrom Enrollment showMarkAllModal); word-boundary llm=0; mcp=2 files both false (ISO-639-3 language code in minified Bloom player + base64 test fixture); openai/anthropic/langchain/ollama/generative/bayesian/knowledge-tracing all 0	ZERO-AI-CONFIRMED-FIRST-HAND
+sakaiproject/sakai	github-code-search	token openai	1	NONE	single hit is base64 test data in lti/tsugi-util Base64DoubleUrlEncodeSafeTest.java	ZERO-AI-false-positive-reproduced
+ILIAS-eLearning/ILIAS	github-code-search	token openai	0	NONE	-	ZERO-AI
+openedx/edx-platform	github-code-search	openai OR ollama OR anthropic	0	NONE	API returned incomplete_results=true; treat as no-hits-flagged	ZERO-AI-WEAK
+frappe/lms	github-code-search	token openai	0	NONE	-	ZERO-AI
+pacewisdomhq/TutorLoom	first-hand raw read ef4bca4c9b34	README edition table + requirements.txt	0	NONE-IN-GRANT	35 pip deps zero AI; AI band listed under "Proposed (edition not yet decided)"; Enterprise edition withholds ALL assessments (MCQ task coding) from the Apache-2.0 community edition	ZERO-AI-plus-OPEN-CORE-CARVE-OUT

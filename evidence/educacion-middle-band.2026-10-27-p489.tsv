@@ -1,0 +1,28 @@
+band	query	total_count	note
+unfloored	educación in:name,description	5883	p488 measured 5882 - reproduces within 1 (one day drift)
+middle	educación in:name,description stars:1..9	467	THE MIDDLE - never sampled before this pass
+floored	educación in:name,description stars:>3	26	p488
+derived	stars:0 (unfloored minus middle minus floored)	~5390	91.6% of the ceiling has ZERO stars
+#	sample of 20 most-recently-updated in the stars:1..9 band, graded by one reader from the description
+repo	stars	education_related	studio_reusable	what_it_is
+josedom24/educacion-novedades-rss	1	yes	no	RSS scraper for the Junta de Andalucía education portal
+jmartinez278/CarpetaDocente	2	yes	no	pedagogical planning for ONE Peruvian primary school
+amuletofloss/Retencion_Academica_SIES	1	yes	no	higher-ed retention analysis script
+Ignnazi/OnCuidar	1	no	no	paediatric oncology caregiver app (educación en salud)
+imoroc/NaturalMente	1	yes	no	primary-science minigames (Flutter)
+andresdavidfr-tech/EconoApp	1	no	no	financial-literacy app
+GenesisValdebenito/Practitrack	1	yes	no	practicum-hours tracker
+guido-pasciucco/InnovaLab-E9	1	yes	no	Buenos Aires city skills agency site
+themillogope95-byte/Educaci-n-virtuall	1	yes	no	one-day-old stub
+Jules1789/atlas-quirurgico	1	yes	no	surgical-education PWA
+Alejos7ven/bararida-gestiones	1	yes	no	zoo education-department booking
+mistorias/mistorias-contenido	1	yes	no	editorial content
+MANUEL25-dev/App-Residuos-Android	2	no	no	waste management (educación ambiental)
+pabdus/proyecto-01-desigualdad-colombia	1	no	no	DANE census inequality analysis
+JGuaste/eestn1	2	yes	no	website of ONE Argentine technical school
+Mgobeaalcoba/crew_ai_practices	1	no	no	course exercises - "Educación IT" is a TRAINING COMPANY NAME
+Mgobeaalcoba/prompt-engineering-repo	1	no	no	same author same course
+Mgobeaalcoba/langgraph-practices	1	no	no	same author same course
+Mgobeaalcoba/autogen-practices	1	no	no	same author same course
+YaskCode-build/YaskCode-automations	1	yes	no	free automations for education and communities
+#	RESULT	education-related 15/20	studio-reusable 0/20	no platform no library no agent in the middle band

@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p489` — `2026-10-27T21:55Z` — **🔴 `p488` measured the star floor correctly and drew the wrong conclusion from it. The middle band it said nobody had sampled is now sampled: **467 repositories**, and **0 of 20** graded are reusable by a studio. The twelve-interval "regional supply nil" was substantively RIGHT and methodologically wrong, and that is the more useful of the two corrections. 🔴 And the dominant noise source on `tutor` is neither language nor stars — it is substring collision plus one coordinated star-inflated spam network.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fifteen denials in fifteen passes.** Nothing
+here is gate-attested; every count below was run this pass through the authenticated search channel.
+Evidence: [`educacion-middle-band`](../evidence/educacion-middle-band.2026-10-27-p489.tsv),
+[`star-recheck`](../evidence/star-recheck.2026-10-27-p489.tsv),
+[`fork-star-ratio`](../evidence/fork-star-ratio.2026-10-27-p489.tsv).
+
+### 🔴 `Gap 488-G` closed — the middle is sampled, and it is coursework
+
+🟢 **The distribution, bounded in three calls:**
+
+| band | query | `total_count` | share of ceiling |
+|---|---|---|---|
+| unfloored | `educación in:name,description` | 5 883 | 100 % |
+| 🆕 **the middle** | `educación in:name,description` **`stars:1..9`** | 🟢 **467** | 7.9 % |
+| floored (`p488`) | `educación in:name,description stars:>3` | 26 | 0.4 % |
+| 🔵 derived: **zero-star** | — | **~5 390** | 🔴 **91.6 %** |
+
+🔵 The unfloored figure reproduces `p488`'s 5 882 within one, which identifies the executed query
+beyond argument.
+
+🟢 **Twenty most-recently-updated rows in the `1..9` band, graded by one reader from descriptions:**
+
+| grade | count | what they are |
+|---|---|---|
+| education-related | 15 / 20 | — |
+| 🔴 **reusable by a studio** | 🔴 **0 / 20** | no platform, no library, no agent, no dataset |
+
+🔵 What the band actually contains: the planning folder of **one** Peruvian primary school
+(`CarpetaDocente`), the website of **one** Argentine technical school (`eestn1`), a zoo education
+department's booking tool, a one-day-old stub, an RSS scraper for the Junta de Andalucía's
+portal — and **four repositories by a single author** whose only link to the token is that
+*Educación IT* is the **name of the Argentine training company running his course**. 🔴 Five of the
+twenty are not education at all: paediatric-oncology caregiving, waste management, financial
+literacy, census inequality, editorial content — each matching on *"educación en salud"*,
+*"educación ambiental"*, *"educación financiera"*.
+
+🟢 **So the verdict `p488` overturned was right in substance.** `p488` wrote that *"every 'region X
+supplies nothing' verdict on this base was produced by a popularity filter"* (`Gap 488-E`) and that
+its own 5 882 was *"a ceiling, not regional supply"* (`Gap 488-G`). 🔵 Both true. 🟢 The measurement
+settles which bound matters: **the floor was discarding ~5 390 zero-star repositories and 467
+single-digit ones, and the thing a studio can use is in neither.** The star floor was a bad
+instrument *and* a correct heuristic, and a base that only records the first half will spend the next
+twelve passes chasing a corpus that is not there.
+
+### 🔴 The noise mechanism on `tutor`, measured
+
+🟢 `tutor in:name,description created:>2026-09-15` → **18 106**. Star-ranked, the top 15:
+
+| rows | what they are |
+|---|---|
+| 🔴 **10 / 15** | one coordinated network: `apimart*` — **nine** near-identical repositories (`llm-api-tutorial`, `ai-gateway-tutorial`, `video-api-tutorial`, …), **identical** descriptions advertising an "AI API gateway / 307 models", 50–74★ each, 0 forks, created within hours of each other on 2 Oct 2026 — plus a Nintendo-emulator guide |
+| 🟢 **3 / 15** | real: `studyai` (237★), `DeepTutor-AILearning` (136★), `TutorLoom` (51★) |
+| 🔵 2 / 15 | tangential Chinese AI-tutoring prompt guides |
+
+🔴 **Two mechanisms, neither of which is the star floor or the language:**
+1. **Substring collision** — `tutor` matches `tutorial`, and "tutorial" is one of the most common
+   words on GitHub.
+2. 🔴 **A star floor does not filter a spam farm, because the farm clears it.** `stars:>8` was in
+   that query. The network sits at **50–74★**, which is above this base's every published floor and
+   above nine of the fifteen real rows on its own agent shelf.
+
+🔵 `Gap 488-F` graded precision@12–15 at `0.00` vs `0.92` by one reader. 🟢 This pass reproduces the
+low end exactly — **precision@15 = 0.20** on a star-ranked `tutor` query — and names the cause.
+
+### 🟢 The panel — fourteen rows, hourly interval, and only one row has resolution
+
+| repo | `p488` | 🟢 `p489` | Δ 1 h |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | ~45 240 | **45 715** | 🟢 **+475** |
+| `zuhairhalawa/studyai` | 234 | 237 | +3 |
+| `CAHLR/OATutor` | 272 | 274 | +2 |
+| `Selleo/mentingo` | 99 (`p486`) | 100 | +1 |
+| `Exorust/TorchLeet` | 2 592 | 2 592 | 0 |
+| `Li-Evan/Bloom` | 293 | 293 | 0 |
+| `SenmuuuuW/universal-diagnostic-tutor-skill` | 251 | 251 | 0 |
+| `artcc/freelingo` | 209 | 209 | 0 |
+| `GeminiLight/gen-mentor` | 134 | 134 | 0 |
+| `microsoft/StudentSim` | 79 | 79 | 0 |
+| `Zenglian990/AI_Tutor_Release` | 74 | 74 | 0 |
+| 🆕 `3yangyang9/DeepTutor-AILearning` | — | **136** | new |
+| 🆕 `pacewisdomhq/TutorLoom` | — | **51** | new |
+| 🔴 `satvik314/educhain` | *carried* `~12 000` | 🔴 **387** | 🔴 **−11 613 correction** |
+
+🟢 `p486`'s `Gap 485-X` holds for a fourth interval: **ten of fourteen rows moved zero in the hour.**
+🔵 A base that runs hourly against a daily-resolution instrument should publish the single row that
+moves and the correction it finds, which is what this panel is.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 489-E`** | The `1..9` grading is **one reader, descriptions only, N=20, most-recently-updated ordering**. A recency slice over-samples abandoned coursework; a random slice of the 467 might differ, and nobody has drawn one. |
+| 🔴 **`Gap 489-F`** | The `apimart*` network was identified **by eye** from identical descriptions. No pass has a method for detecting coordinated star inflation, and every star-ranked discovery query this base runs is exposed to it. |
+| 🟡 **`Gap 489-G`** | The zero-star count (~5 390) is **arithmetic on three `total_count` values**, not a measured band — GitHub offers no `stars:0` qualifier this pass tested. |
+| 🟡 **`Gap 489-H`** | `3yangyang9/DeepTutor-AILearning` is described from its Chinese description and its licence bytes. **Its code is unread**, so "multi-tenant platform / institution / campus" is its claim, and it is the row the multi-tenancy axis now rests a fifth point on. |
+
 ## 🆕 `p488` — `2026-10-27T20:55Z` — **🔴 `p487` found the right defect and named the wrong cause. The qualifier suppressing regional discovery on this base is not `readme` scope and not the English language — it is `stars:>3`, and on the same query it is worth **226×** where the readme axis is worth 10×. 🟢 Hindi's `TRUE ZERO` is **113**, and `p487`'s own refutation of it was 37× low.**
 
 🔴 **`make hooks` DENIED** (`Code from External`) — **fourteen denials in fourteen passes.** Nothing

@@ -1,0 +1,5 @@
+repo	commit_sha12	paths_probed	path_that_hit	structural_reason_missed	note
+moodle/moodle	46c042e7da	11 (LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md LICENSE-CODE COPYING license license.txt LICENSE-APACHE LICENSE-MIT)	COPYING.txt	FIFTH-REASON-extension-on-COPYING	the base 11-path enumeration includes COPYING but not COPYING.txt and therefore reads the world largest LMS as NO_LICENCE_ARTIFACT
+formalms/formalms	446a77a9b9	13 (+ COPYING.txt COPYRIGHT NOTICE GPL GPL.txt gpl.txt LICENSE-2.0.txt)	none (README.md=200 only)	n-a	Gap 488-L CLOSED - zero licence artifact at a pinned commit; shelf row must be marked unusable
+microsoft/autogen	004749e6b710	11	LICENSE (CC-BY-4.0) and LICENSE-CODE (MIT)	path-precedence (p488)	reproduced: first-hit readers grade this CC-BY-4.0
+frappe/lms	6054772c04a1	11	license.txt (11th path)	case (p488)	reproduced

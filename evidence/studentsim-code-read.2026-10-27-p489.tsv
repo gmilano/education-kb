@@ -1,0 +1,14 @@
+item	measured	detail
+commit	73005fd8cac8420e4683f423d9ed06607a752804	shallow clone, default ref refs/heads/main
+licence	MIT	span blob 23bb67dd081e - canonical, identical to 10 other MIT rows
+python_files	96	-
+total_tracked_files	139	-
+python_loc	11645	wc -l over all tracked .py
+domains	3	chess (ships data, CC0 source), l2 English writing (build from EFCAMDAT extract, obtained separately), math (build from FoundationalASSIST extract, obtained separately)
+metric_1	behavioral fidelity	implemented: studentsim/domains/{math,l2,chess}/fidelity.py - math is top-1 accuracy on a 4-way MCQ read from LOGPROBS not free text, absent letters floored at -10.0
+metric_2	guidance responsiveness	implemented: studentsim/eval aggregate_responsiveness, per-mode breakdown, macro and micro means, exposed via studentsim-eval CLI
+training	two-stage	stage1 = one LoRA adapter per domain pooled across students; stage2 = per-student specialisation from that adapter, driven by a roster.json
+tutor_rl	present	studentsim/tutor_rl/{reward.py,multihead.py} + cli/tutor_rl.py - chess only: tutor writes guidance, simulator answers as the student, tutor rewarded when learner performance improves
+baselines	4	azure_openai, base_qwen3, llm_simulator (frontier model role-playing the student), maia2 (knowledge-tracing model with no tutor-message access)
+hard_dependency	AZURE_OPENAI_ENDPOINT + AZURE_OPENAI_API_KEY	required for every step that calls a language model, including 2 of the 3 math data-build steps, which incur API cost
+verdict	Gap 488-V CLOSED	the description understates it: this is a trainable per-student simulator with two implemented metrics and an RL harness, not a prompt that role-plays a student - and the frontier-model-role-play approach is one of its BASELINES
