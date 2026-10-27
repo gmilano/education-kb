@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-B` IS FULLY CLOSED — all six unread or carried grants on this shelf were read as payloads this pass — and the result is commercially material rather than bookkeeping: the shelf's North America row is **GPL-3.0** and its EMEA row is **CC BY-SA 4.0**. Neither was ever stated here as copyleft. 🟢 The closure was possible because `github.com` turns out to be reachable through a channel `p477` never tried.**
+
+🔵 **Gate posture, unchanged from `p475`–`p477` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's own code,
+held outside the clone, and green: frontmatter keys and closed-vocabulary `region` on all eight shelves; every
+table checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and prepend-only on these; every grant fetched to a file and the
+**file** measured (`Gap 468-A`).
+
+---
+
+### 🟢 A new instrument: `github.com` is reachable, and that is what closed `Gap 477-B`
+
+🔵 `p477` recorded `curl -sI https://github.com/<repo>` as answering only the proxy's own
+`200 Connection Established`, and treated repository HTML as unreachable. 🟢 **That is true of `curl` and false of
+the rendering fetch channel.** Both were re-measured this pass
+([`evidence/reachability.2026-10-27-p478.tsv`](../evidence/reachability.2026-10-27-p478.tsv)):
+
+| host | `curl` | rendering fetch | what it yields |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | — | licence and packaging payloads |
+| `github.com` | 🔴 **403** at gateway CONNECT | 🟢 **renders** | ★ count, About-sidebar licence, release notes |
+| `api.github.com` | 🔴 **403** | — | nothing, for any repo not attached to this session |
+
+🔵 So the shelf now has **two independent licence channels** — the `LICENSE` payload and the About sidebar — and
+they agreed on every row where both were read. 🔴 The boundary is narrow and is mapped below on `intel/market.md`:
+**every non-GitHub host probed is refused at the gateway**, so this instrument helps the code tier and does
+nothing for the market or regulatory tiers.
+
+### 🟢 `Gap 477-B` closed — six grants, read as payloads, two of them not permissive
+
+🔵 Payloads in [`evidence/grant-payload.2026-10-27-p478.tsv`](../evidence/grant-payload.2026-10-27-p478.tsv).
+
+| row | `p477` status | payload read this pass | verdict |
+|---|---|---|---|
+| [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | carried | 35,149 B · `3972dc9744f6` | 🔴 **GPL-3.0** — and the About sidebar says `GPL-3.0 license` too |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | carried | 1,230 B · `f952182df4eb` | 🔴 **CC BY-SA 4.0** — a content share-alike grant, not a software licence |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | carried | 1,065 B · `21f44893f051` | 🟢 **MIT** |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | carried | 1,069 B · `7d574cf3632e` | 🟢 **MIT** |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | README claim only | 1,073 B · `1e05c9440068` | 🟢 **MIT** — the project's claim is now payload-backed |
+| [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 🔴 no grant read in any pass | 1,069 B · `346d7b5d3913` | 🟢 **MIT**, held by *Grupo Sirius* |
+
+🔴 **The two copyleft rows are the finding.** `tutor-gpt` is this shelf's only North America row and its highest-★
+non-APAC agent; `education-agent-skills` is its only EMEA row. A studio that read this shelf before today would
+have seen fourteen rows with no copyleft marked anywhere in the agent tier. 🔵 Neither grant forbids use — GPL-3.0
+is fine behind a process boundary and CC BY-SA 4.0 is fine for content a client may re-share — but **both forbid
+the thing an agent tier is usually mined for**, which is lifting the prompt library or the reasoning loop into a
+proprietary deliverable. 🟡 `education-agent-skills` is the sharper trap: its 165 skills are *prose*, the exact
+asset a studio would paste into a client's agent, and share-alike follows prose into the derivative.
+
+### 🟢 The verified agent tier
+
+🔵 ★ read from the About sidebar this pass except where marked; grants are payload reads, attributed to the pass
+that read them. 🔴 GitHub rounds above 1,000, so `44.7k` is the page's own precision, not a count.
+
+| agent | repo | ★ | grant (payload, first-hand) | what it is | region |
+|---|---|---|---|---|---|
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44.7k | 🟡 Apache-2.0 · 11,408 B · `cd2f54e1e506` | lifelong personalised tutoring, multi-agent + RAG; `v1.6.15` | APAC |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 41.6k | 🟢 MIT · 1,065 B · `ba2525637432` | multi-agent interactive classroom, one-click; `v1.3.0-rc.1` 2026-10-22 | APAC |
+| tutor-gpt | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | 932 | 🔴 **GPL-3.0** · 35,149 B | theory-of-mind reasoning tutor | North America |
+| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 916 | 🔴 **CC BY-SA 4.0** · 1,230 B | 165 evidence-grounded teacher/leader skills; `v3.1.0` 2026-10-22 | EMEA |
+| examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 348 (p477) | 🟢 MIT · 1,065 B | exam coach, page-cited, anti-hallucination | APAC |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 293 | 🟢 MIT · 1,069 B | syllabus → one lesson at a time; CLI skill + self-hostable React/FastAPI | APAC |
+| Claw-ED (eduagent) | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 63 | 🟢 **MIT** · 1,078 B · `4d5d987f4f89` | local-first lesson/slide drafting from a teacher's own curriculum; Ollama adapter | Global |
+| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 (p477) | 🟢 MIT · 1,073 B | turns any LLM into an ITS; BKT over MCP | EMEA |
+| ai-lesson-planner | [saniales/ai-lesson-planner](https://github.com/saniales/ai-lesson-planner) | 20 | 🔴 **GPL-3.0** · 35,149 B · `4f04c705a26c` | chat-first course/lesson planning, MARP slides | Global |
+| AITutorAgent | [Ebimsv/AITutorAgent](https://github.com/Ebimsv/AITutorAgent) | 15 | 🟢 **MIT** · 1,072 B · `c8050f8df7c1` | LangGraph tutor: tutorials, Q&A, knowledge evaluation | Global |
+| QuizWeaver | [Robyn-Collie/QuizWeaver](https://github.com/Robyn-Collie/QuizWeaver) | 8 | 🟢 **MIT** · 1,069 B · `8dd197abb105` | quizzes, rubrics, lesson plans under deterministic rule checks | Global |
+| AI-Teaching-Agent | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 0 | 🟢 **MIT** · 1,069 B · `297c4cba7b33` | labs, exams and **grading workflows** from one Markdown source; CLI + MCP, sandboxed eval | Global |
+| TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 0 | 🟢 MIT · 1,069 B | rural higher-ed tutor, U. Tecnológica de Pereira | LATAM |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,227 (p477) | 🟢 MIT · 1,064 B (p477) | self-study agent: route planning, spaced repetition | APAC |
+| learn-from-materials | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,182 (p477) | 🟢 MIT · 1,122 B (p477) | PDFs/books → traceable, quizzable learning pages | APAC |
+| Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 965 (p477) | 🟢 MIT · 1,069 B (p477) | books → animated narrated interactive web, SCORM-aware | APAC |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 467 (p477) | 🟢 MIT · 1,069 B (p477) | topic → cited 2-minute audio course | Global |
+
+### 🟢 The grading gap in this tier has a first occupant, and it has nothing else
+
+🔵 A targeted search for open-source **grading** agents returned lesson-planning projects almost exclusively. The
+one project whose README puts grading in scope is
+[littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) — labs, exams and
+grading artefacts generated from one Markdown source, human review gating each step, sandboxed evaluation of
+learner code, CLI and MCP surfaces. 🟢 **MIT, payload-read.** 🔴 **It has 0 stars**, and its own README says
+automatic grading productisation is frozen. 🔵 It is published here as *the state of the category*, not as a
+recommendation: the honest reading is that **open-source automated grading does not yet exist at any level of
+adoption**, and a studio asked for it today is building, not composing.
+
+### 🔴 One candidate rejected: a README licence is not a grant
+
+🔵 [yashas-wi/Personalised-AI-Tutor](https://github.com/yashas-wi/Personalised-AI-Tutor) reached this pass
+described in secondary coverage as MIT-licensed. 🔴 **Five filename variants across `main` and `master` all 404,
+and the About sidebar shows no licence at all.** The MIT claim exists only in the README's closing section. With
+no grant file, the default is exclusive copyright, so the row is **not published**. It also has **1 star**. 🟢 The
+check cost four seconds and is recorded as a rejection in the evidence file, because a rejection is the part of
+a census that stops the next pass re-finding the same row.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 478-A`** | **No star velocity was measured this pass.** `Gap 477-A`'s two-endpoint method was not repeated, and the About sidebar rounds above 1,000 — `44.7k` cannot be differenced against `p477`'s `44,638` to produce a rate. A rounded figure is a worse instrument for velocity than the search channel `p477` used, and this pass traded that precision away for licence coverage. |
+| 🔴 **`Gap 478-B`** | **`Gap 477-C` stands untouched.** Seventeen rows, none cloned, none run, none evaluated. `AI-Teaching-Agent` is published as the grading category's only occupant on the strength of its README and its grant — **its grading output has not been seen**. |
+| 🟡 **`Gap 478-C`** | **Four rows carry `p477` star counts** (`examprep-skill`, `tutor-mcp`, `Study-Mate`, `learn-from-materials`, `Papermorph`, `claudemy` — six, on re-count) and were not re-read this pass. They are attributed, not fresh. |
+| 🟡 **`Gap 478-D`** | **`Gap 477-D` worsens.** Five of the new rows are assigned `Global` because no location could be read at all, which is honest but makes the region field less useful, not more. Six of seventeen rows are APAC on inferred grounds and five are `Global` on absent grounds; only `tutor-gpt`, `education-agent-skills` and `TutorIA` rest on something stated. |
+| 🟡 **`Gap 478-E`** | **The two copyleft findings were not traced into any deliverable.** Whether GPL-3.0 behind a process boundary or CC BY-SA 4.0 over prompt text actually bites a given engagement is a legal determination this base cannot make and did not attempt. |
+
+---
+
 ## 🆕 `p477` — `2026-10-27` — **🟢 `Gap 476-D` IS CLOSED: this base now has a REAL star velocity, measured between two of its own timestamped reads rather than inferred from a same-day delta — and `HKUDS/DeepTutor` is running at roughly 14× its own lifetime average, i.e. still accelerating at 44.6k★. 🔴 And the pass's commercial finding is on the data tier, not the agent tier: the two largest new education DATA repositories are CC BY-NC and ODbL, so the code is permissive and the curriculum is not.**
 
 🔵 **Gate posture, unchanged from `p475`–`p476` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is

@@ -1,0 +1,40 @@
+repo	branch	path	http	bytes	sha256_12	licence_named_in_payload	status_in_p477
+littlecookie0722/AI-Teaching-Agent	main	LICENSE	200	1069	297c4cba7b33	MIT	NEW ROW
+saniales/ai-lesson-planner	main	LICENSE	200	35149	4f04c705a26c	GPL-3.0	NEW ROW
+Robyn-Collie/QuizWeaver	main	LICENSE	200	1069	8dd197abb105	MIT	NEW ROW
+Ebimsv/AITutorAgent	main	LICENSE	200	1072	c8050f8df7c1	MIT	NEW ROW
+SirhanMacx/Claw-ED	main	LICENSE	200	1078	4d5d987f4f89	MIT	NEW ROW
+yashas-wi/Personalised-AI-Tutor	-	-	404	0	-	NONE AT ANY PROBED PATH	NEW ROW REJECTED
+GarethManning/education-agent-skills	main	LICENSE	200	1230	f952182df4eb	CC BY-SA 4.0	carried (Gap 477-B)
+plastic-labs/tutor-gpt	main	LICENSE	200	35149	3972dc9744f6	GPL-3.0	carried (Gap 477-B)
+ZeKaiNie/universal-examprep-skill	main	LICENSE	200	1065	21f44893f051	MIT	carried (Gap 477-B)
+Li-Evan/Bloom	main	LICENSE	200	1069	7d574cf3632e	MIT	carried (Gap 477-B)
+ArnaudGuiovanna/tutor-mcp	main	LICENSE	200	1073	1e05c9440068	MIT	README claim only (Gap 477-B)
+LabSirius/TutorIA	main	LICENSE	200	1069	346d7b5d3913	MIT	unread (Gap 477-B)
+HKUDS/DeepTutor	main	LICENSE	200	11408	cd2f54e1e506	Apache-2.0	carried control
+THU-MAIC/OpenMAIC	main	LICENSE	200	1065	ba2525637432	MIT	re-read
+frappe/lms	main	license.txt	200	33893	-	AGPL-3.0	lowercase path, see note
+overhangio/tutor	main	LICENSE.txt	200	34523	0d96a4ff68ad	AGPL-3.0	election was unread (Gap 477-N)
+OpenOLAT/OpenOLAT	master	LICENSE	200	10982	6dbc5b605ed0	Apache-2.0	2nd channel vs pom.xml
+openedx/edx-platform	master	LICENSE	200	35136	e12d78569742	AGPL-3.0	legacy address
+instructure/canvas-lms	master	LICENSE	200	34520	57c8ff33c9c0	AGPL-3.0	re-read
+moodle/moodle	main	COPYING.txt	200	35147	8ceb4b9ee5ad	GPL-3.0	re-read
+chamilo/chamilo-lms	master	LICENSE	200	35147	8ceb4b9ee5ad	GPL-3.0	re-read
+ILIAS-eLearning/ILIAS	master	LICENSE	200	35147	8ceb4b9ee5ad	GPL-3.0	re-read
+h5p/h5p-php-library	master	LICENSE.txt	200	35146	c53a65c2fd56	GPL-3.0	re-read
+bigbluebutton/bigbluebutton	main	LICENSE	200	7652	e3a994d82e64	LGPL-3.0	reproduces p477 byte count
+sakaiproject/sakai	master	LICENSE	200	11120	0688f62d04f1	ECL-2.0	re-read
+openeducat/openeducat_erp	master	LICENSE	200	8241	528f84036800	LGPL-3.0	re-read
+francoisjacquet/rosariosis	master	LICENSE	200	15214	d954e14e5c75	GPL-2.0	NEW ROW
+GibbonEdu/core	main	LICENSE	200	35121	93178a43d6d3	GPL-3.0	NEW ROW
+learningequality/kolibri	master	LICENSE	200	1097	3c056b34a476	MIT	re-read
+apache/ofbiz-framework	master	LICENSE	200	11906	cbac9a0fde05	Apache-2.0	NEW ROW
+DavidLMS/learnmcp-xapi	main	LICENSE	200	1069	4aa758cb51b2	MIT	carried (Gap 477-AH)
+bncc-dev/bncc-dados	main	LICENSE	200	1092	e162f8f4b461	MIT	never read in any pass (Gap 477-AH)
+yetanalytics/lrsql	main	LICENSE	200	11357	c71d239df917	Apache-2.0	NEW ROW
+pelotech/xapi-lrs	main	LICENSE	200	11357	c71d239df917	Apache-2.0	NEW ROW
+adlnet/xAPI-Spec	master	LICENSE	200	11525	a1587287ff04	Apache-2.0	NEW ROW
+pykt-team/pykt-toolkit	main	LICENSE	200	1066	f5f955194636	MIT	NEW ROW
+bigdata-ustc/EduKTM	main	LICENSE	200	11367	59f13c04f0e6	Apache-2.0	NEW ROW
+CAHLR/OATutor	main	LICENSE	200	1105	5baaaf977a28	MIT	re-read
+gegok12/gegok12	-	-	404	0	-	ADDRESS DOES NOT RESOLVE	NEW ROW REJECTED

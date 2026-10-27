@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p478` — `2026-10-27` — **🔴 THE INSTRUMENT `p477` USED FOR THIS SHELF IS NOT AVAILABLE TO THIS PASS — the authenticated search channel is scoped to attached repositories only, so there is no star-threshold census this window and no `topic:` census either. 🟢 What replaced it reads repository HTML directly, and the six repositories it surfaced share a shape worth recording: every new arrival is TEACHER-facing and sits between 0 and 63★, while both giants on this shelf are LEARNER-facing at 40k+.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🔴 Declare the instrument change before the findings
+
+🔵 `p477` built this shelf from an authenticated repository-search channel, checking `incomplete_results` FALSE on
+every query. 🔴 **That channel is not reachable this pass.** It is account-wide and this session's GitHub access is
+scoped to the two attached repositories, so a census over all of GitHub is outside what it may read — and
+`api.github.com` answers **403** for every unattached repository
+([`evidence/reachability.2026-10-27-p478.tsv`](../evidence/reachability.2026-10-27-p478.tsv)).
+
+| what `p477` could do | what this pass can do |
+|---|---|
+| `topic:education created:>2026-08-01 stars:>=100`, `incomplete_results` FALSE, **24 rows** | 🔴 **nothing equivalent** — no census, no star floor, no creation-date filter |
+| ★ to the digit from the search channel | 🟡 ★ from the About sidebar, **rounded above 1,000** |
+| — | 🟢 About-sidebar licence as a **second channel** against the `LICENSE` payload |
+
+🔴 **So this window has no count.** `p477`'s 24 is not refreshed, not refuted and not extended; it is simply not
+re-measurable here. 🔵 `Gap 477-F`'s warning that the 24 was *"a floor, not a count"* now applies to this pass with
+no number at all behind it, and the six rows below were reached through general web search followed by a
+first-hand read of each repository — **a discovery path with no measurable recall**.
+
+### 🟢 Six repositories surfaced this window, every grant read as a payload
+
+🔵 Payloads in [`evidence/grant-payload.2026-10-27-p478.tsv`](../evidence/grant-payload.2026-10-27-p478.tsv);
+★ from the About sidebar, read 2026-10-27.
+
+| repo | ★ | grant (payload) | what it is | audience |
+|---|---|---|---|---|
+| [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 63 | 🟢 **MIT** · 1,078 B | local-first lesson/slide drafting from the teacher's own curriculum; Ollama adapter; "teacher-reviewed beta" | teacher |
+| [saniales/ai-lesson-planner](https://github.com/saniales/ai-lesson-planner) | 20 | 🔴 **GPL-3.0** · 35,149 B | chat-first multi-agent course planning, MARP slide generation | teacher |
+| [Ebimsv/AITutorAgent](https://github.com/Ebimsv/AITutorAgent) | 15 | 🟢 **MIT** · 1,072 B | LangGraph tutor: structured tutorials, Q&A, knowledge evaluation | learner |
+| [Robyn-Collie/QuizWeaver](https://github.com/Robyn-Collie/QuizWeaver) | 8 | 🟢 **MIT** · 1,069 B | quizzes, rubrics, study guides, lesson plans under deterministic rule checks | teacher |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 0 | 🟢 **MIT** · 1,069 B | labs, exams, **grading workflows** from one Markdown source; CLI + MCP; sandboxed eval | teacher |
+| [yashas-wi/Personalised-AI-Tutor](https://github.com/yashas-wi/Personalised-AI-Tutor) | 1 | 🔴 **none** — 5 paths 404, sidebar blank | adaptive tutor; README claims MIT, no grant file exists | 🔴 rejected |
+
+### 🟡 The shape: teacher-facing tools arrive, learner-facing tools have the adoption
+
+🔵 Five of the six are teacher-facing and **none exceeds 63★**. Both of this shelf's giants —
+[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) at 44.7k and
+[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) at 41.6k — are learner-facing. 🟢 **The direction is
+consistent with the region shelf**, where LATAM edtech cohort coverage this year is described as clustering on
+teacher-facing lesson preparation rather than consumer tutoring: supply is moving toward the teacher while
+attention stays with the learner.
+
+🔴 **Stated against itself, and the objection is strong.** Six repositories reached by an unmeasured discovery
+path cannot establish a population shape. Five of six being teacher-facing is also partly an artefact of the
+queries, which named *lesson planning* and *grading* explicitly. 🔵 The finding that survives is narrower and
+still useful: **a studio looking for a teacher-facing agent to customise will find candidates, and will find them
+at 0–63★** — which means no production references, no plugin ecosystems and a bus factor of roughly one, whatever
+the licence says. That is a procurement fact, not a trend.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 478-F`** | **No census ran.** `p477`'s 24 is neither refreshed nor refuted; this window publishes six repositories found by keyword search with **no measurable recall and no star floor**. It is not comparable with any previous window on this shelf, and differencing it against `p477` would be an error. |
+| 🔴 **`Gap 478-G`** | **`Gap 477-E` and `Gap 475-F` stand: GitHub's Trending page is still unreachable.** Nothing on this shelf is trending in GitHub's sense. This window does not even have the star *level* that previous windows used as a substitute, only each row's current ★. |
+| 🔴 **`Gap 478-H`** | **No creation date was read for any of the six.** The About sidebar does not show one and `api.github.com` is 403, so "surfaced this window" means *new to this base*, which is not the same claim as *new to GitHub*. Some of these may be old and merely unnoticed here — `QuizWeaver`'s and `AITutorAgent`'s LICENSE files carry **2025** copyright years, which makes that likely for at least two rows. |
+| 🟡 **`Gap 478-I`** | **The teacher/learner split is this pass's own labelling** from each description, applied to six rows, with queries that named lesson planning and grading. No previous window was re-labelled the same way, so there is no series and `Gap 477-H`'s objection applies unchanged. |
+
+---
+
 ## 🆕 `p477` — `2026-10-27` — **🔴 `p476`'S DECLARED NIL ON THIS SHELF WAS A QUERY ARTIFACT, AND IT IS REFUTED BY A SINGLE COUNTEREXAMPLE: `p476` published "zero education-AI repositories created since 1 Aug 2026 have reached 100★ (n=0, measured)". The real count is 24, and the largest has 4,148★ and was created NINE DAYS AGO. 🟢 The cause is diagnosed, not guessed: the query was conjunctive over three free-text terms.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

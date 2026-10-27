@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-AH` IS CLOSED — P10's entire licensing argument rested on `learnmcp-xapi`'s carried MIT and on `bncc-dados`, whose grant had NEVER been read in any pass; both are now payload reads and both are MIT. 🟢 Three new recipes, every component payload-verified, and each one shaped by a constraint the other shelves measured this pass rather than by what is popular.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+Grants in [`evidence/grant-payload.2026-10-27-p478.tsv`](../evidence/grant-payload.2026-10-27-p478.tsv).
+
+---
+
+### 🟢 `Gap 477-AH` closed
+
+| component | `p477` status | payload this pass |
+|---|---|---|
+| [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | MIT, **carried** | 🟢 **MIT** · 1,069 B · `4aa758cb51b2` |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🔴 **never read in any pass** — "open data, from its own README" | 🟢 **MIT** · 1,092 B · `e162f8f4b461`, held by *Profy Tecnologias Educacionais Ltda* |
+
+🔵 P10's licensing argument now rests on two payload reads instead of two descriptions. 🟡 **And it is narrower
+than "open data" implied**: MIT covers the repository's contents as distributed by that company; it says nothing
+about the BNCC curriculum as a public instrument, which is a separate question this base has not examined.
+
+---
+
+### 🟢 P11 — provable human-in-the-loop tutoring for a US district or university
+
+🔵 **Driven by:** Idaho S.B. 1227 bars AI from replacing teachers (effective 1 July 2026); Ohio, Tennessee and
+Maryland require district-level AI policy; ~34 states have guidance; and `intel/trends.md` Trend 1 found that
+*open-ended tutor access* lowered grades by 0.37 SD while *course-grounded* tutors raised scores. **Both the law
+and the evidence point at the same build: bounded scope plus a provable human decision.**
+
+| # | component | repo | grant (payload) | role |
+|---|---|---|---|---|
+| 1 | learner surface | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT · 1,065 B | topic/document → interactive classroom; 41.6k★ |
+| 2 | mastery estimate | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT · 1,066 B | knowledge tracing — a **computed** mastery state, not the LLM's opinion |
+| 3 | assessment gate | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT · 1,069 B | anything assessment-shaped goes through its human-review step before export |
+| 4 | audit trail | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 MIT · 1,069 B | every turn emitted as an xAPI statement over MCP |
+| 5 | record store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 · 11,357 B | queryable LRS; the district's evidence that a human decided |
+| 6 | the LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** · 34,520 B | **stays a separate deployed service**, reached over LTI/REST — never forked, never linked |
+
+🟢 **Wiring.** OpenMAIC is configured against the course's own materials only — that bounded scope *is* the
+intervention, per Trend 1. Each turn goes out through `learnmcp-xapi` into `lrsql`, so "what the tutor displaced"
+is measurable rather than assumed. `pykt-toolkit` consumes the same xAPI stream to maintain mastery, and
+sequencing reads that state instead of asking the model. Anything that could score a student is routed to
+`AI-Teaching-Agent`, whose human-review gate produces the artefact a district policy audit needs. Canvas is
+touched only over its API: items 1–5 are MIT/Apache-2.0, so **the deliverable's licence stays the studio's**.
+
+🔵 **Estimate 8–11 weeks** — judgement, not measurement (`Gap 478-AI`).
+
+### 🟢 P12 — an EU Annex III high-risk tutoring file, built on the one permissive LMS
+
+🔵 **Driven by:** admissions, grading, placement and proctoring are Annex III **high-risk**; emotion recognition
+in schools is **prohibited outright** since 2 February 2025; Article 50 transparency applies from 2 August 2026;
+and the Act reaches non-EU systems whose outputs affect EU-located students. 🔴 Note what this recipe **cannot**
+use: [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) is the
+best-fitting EMEA component at 916★ and its grant was read this pass as **CC BY-SA 4.0** — share-alike follows
+its 165 prose skills into any derivative, so it is excluded from a proprietary deliverable by design, not by
+oversight.
+
+| # | component | repo | grant (payload) | role |
+|---|---|---|---|---|
+| 1 | platform | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10,982 B | university/corporate LMS — **the only permissive LMS at this scale**; avoids Moodle's GPL-3.0 and Canvas's AGPL-3.0 |
+| 2 | adaptive core | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT · 1,073 B | BKT-driven ITS over MCP; EMEA-origin, permissive |
+| 3 | mastery models | [bigdata-ustc/EduKTM](https://github.com/bigdata-ustc/EduKTM) | 🟢 Apache-2.0 · 11,367 B | knowledge-tracing models behind the sequencing decision |
+| 4 | interop contract | [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 Apache-2.0 · 11,525 B | the statement vocabulary the logging obligation is written against |
+| 5 | record store | [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | 🟢 Apache-2.0 · 11,357 B | xAPI 1.0.3 + 2.0; embedded PGlite mode for a single-tenant EU deployment |
+| 6 | human oversight | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT · 1,069 B | the review gate in front of every grading-shaped output |
+
+🟢 **Wiring.** Six components, **six permissive grants** — the whole stack is Apache-2.0/MIT, which is what makes
+the Annex III documentation tractable: the studio can describe, log and modify every layer it is accountable for.
+`tutor-mcp` drives sequencing from `EduKTM`'s mastery estimate; every decision is written as an xAPI statement
+into `xapi-lrs`, giving the record-keeping and traceability the high-risk regime expects; `AI-Teaching-Agent`
+supplies the documented human oversight on the grading path. 🔴 **Two hard exclusions are part of the design:**
+no emotion or affect inference anywhere (prohibited, €35M / 7 % exposure), and **no fully automated grading** —
+grading stays decision-support behind item 6.
+
+🟡 **The deadline this recipe must plan against is contested** — 2 August 2026 per several guides, 2 December 2027
+per Regulation (EU) 2026/1744 as reported — and 🔴 **EUR-Lex is refused at this environment's gateway**, so build
+to the earlier date (`Gap 478-AJ`).
+
+🔵 **Estimate 12–16 weeks** — judgement, not measurement (`Gap 478-AI`).
+
+### 🟢 P13 — permissive school administration where no permissive SIS exists
+
+🔵 **Driven by:** `verticals/solutions.md` established this pass that **no payload-verified permissive student
+information system exists** — RosarioSIS is GPL-2.0, Gibbon GPL-3.0, OpenEduCat LGPL-3.0, and GegoK12's MIT claim
+has **no repository that resolves at any probed address**. So the permissive spine has to be a general ERP.
+
+| # | component | repo | grant (payload) | role |
+|---|---|---|---|---|
+| 1 | ERP spine | [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · 11,906 B | party, enrolment, billing and scheduling on a permissive base; the student domain is modelled on top |
+| 2 | offline delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** · 1,097 B | low-connectivity learner delivery — the one permissive **platform** in this base |
+| 3 | curriculum spine | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** · 1,092 B | 1,721 BNCC objectives in JSON/SQLite/CSV — the Brazilian alignment layer |
+| 4 | learner records | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 · 11,357 B | xAPI store that survives intermittent connectivity and syncs later |
+| 5 | teacher agent | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** · 1,078 B | local-first lesson/slide drafting with an **Ollama** adapter — runs without egress |
+| 6 | fallback, if LGPL is acceptable | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL-3.0 · 8,241 B | the ready-made education ERP — **buy the time instead of building item 1** |
+
+🟢 **Wiring.** OFBiz carries parties, enrolments and scheduling; the student domain is built as OFBiz components
+rather than forked from a GPL SIS, which is the whole point — item 1 is Apache-2.0 and items 2–5 are MIT or
+Apache-2.0, so **every layer is permissive and no copyleft obligation reaches the deliverable**. Kolibri delivers
+content offline and syncs xAPI into `lrsql` when a link appears; `bncc-dados` aligns both to BNCC objectives;
+`Claw-ED` runs the teacher's drafting locally against Ollama, so a school with no reliable egress still gets the
+AI layer. 🟡 **Item 6 is the honest alternative:** LGPL-3.0 permits linking proprietary modules and is the
+**least restrictive copyleft** available here — where the schedule matters more than the licence, take OpenEduCat
+and skip the OFBiz build.
+
+🔵 **Estimate 10–14 weeks for items 1–5; 5–7 weeks via item 6** — judgement, not measurement (`Gap 478-AI`).
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 478-AI`** | **None of P11, P12 or P13 has been built or run.** `Gap 477-AI` carried forward unchanged: no integration executed, no version compatibility tested, no xAPI profile validated against `lrsql` or `xapi-lrs`, and every week estimate is judgement. |
+| 🔴 **`Gap 478-AJ`** | **P12 is built against a contested date this base cannot settle.** 2 August 2026 vs 2 December 2027 for stand-alone Annex III systems; EUR-Lex is refused at the gateway (`Gap 478-W`). The recipe plans to the earlier date, which is a choice, not a reading. |
+| 🔴 **`Gap 478-AK`** | **`Gap 477-AK` worsens: component selection is still on stars, grant and description, never capability.** P11's and P12's human-oversight gate is `AI-Teaching-Agent` — a **0★** project whose own README says grading productisation is frozen, chosen because it is the only MIT project in the category. Its output has not been seen. |
+| 🔴 **`Gap 478-AL`** | **P11's premise that Canvas-over-API is not a derivative work is architectural reasoning**, not a reading of Canvas's LTI/REST boundary or of AGPL-3.0 § 13. `Gap 477-AL` applies to all three recipes. |
+| 🟡 **`Gap 478-AM`** | **P13 item 1 is the largest unestimated piece in any recipe here.** "Model the student domain on OFBiz" is a sentence; OpenEduCat exists because that work is substantial. The 10–14 week figure is the least supported number on this shelf. |
+| 🟡 **`Gap 478-AN`** | **No recipe was checked for localisation fit.** P11's learner surface (`OpenMAIC`) and P13's teacher agent (`Claw-ED`) are both used outside their origin language and curriculum, repeating `Gap 477-AK`'s unassessed localisation risk. |
+
+---
+
 ## 🆕 `p477` — `2026-10-27` — **two new recipes built only from components whose grant was read first-hand THIS pass, plus a correction that touches every recipe in retained history: any recipe naming `danny-avila/LibreChat` must read `LibreChat-AI/LibreChat`, and `P7`'s biometric exclusion is now justified by READ CODE rather than by repository descriptions**
 
 🔵 Component grants are the first-hand reads in

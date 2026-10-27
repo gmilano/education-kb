@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-J` IS CLOSED BY CENSUS, NOT SAMPLE: all **3,245** distinct addresses in this base were probed, all **11,542** citations accounted for, and the dead-address rate is **2.22 %** — inside `p477`'s 1.4–12.3 % interval and a quarter of its 5.0 % point estimate. 🔴 27 of the 99 non-resolving addresses were never repositories at all. 🔴 And the census surfaced a structural finding: 1EdTech's entire Caliper SDK family is gone while its SPEC survives.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history. Census in
+[`evidence/address-census.2026-10-27-p478.tsv`](../evidence/address-census.2026-10-27-p478.tsv).
+
+### 🟢 `Gap 477-J` closed — the population was swept
+
+🔵 `Gap 477-J`: *"The 3,217-address population was sampled, not swept. Tier B is 80 of ~3,024 tail addresses
+(2.6 %). The 5.0 % tail rate has a 95 % interval of roughly 1.4–12.3 % on 4 hits in 80 — direction solid,
+magnitude loose."* 🟢 **Every address was probed this pass**, with `git ls-remote --exit-code` — the same
+instrument `p477` used, so the two are comparable.
+
+| | `p477` | `p478` |
+|---|---|---|
+| addresses probed | 🟡 269 swept + 80 sampled of ~3,217 | 🟢 **3,245 — all of them** |
+| citations accounted for | not computed | 🟢 **11,542** |
+| non-resolving | 5 dead of 269 (1.86 %) · 4 of 80 tail (5.0 %) | 🔴 **99** |
+| of which genuine dead repositories | — | 🔴 **72 → 2.22 % of addresses, 1.52 % of citations** |
+| 95 % interval needed? | 🔴 yes, 1.4–12.3 % | 🟢 **no — this is a count** |
+
+🟢 **`p477`'s direction was right and its magnitude was 2.3× too high.** The tail is less rotten than the sample
+suggested. 🔵 Each of the 99 was probed **four times** — twice in the parallel sweep, three more serially at 5 s
+intervals — and **not one recovered**, so this detector has no transient false-positive mode on this population.
+That is the control `p477`'s `fork:true` check was reaching for, applied to liveness instead of renames.
+
+### 🔴 27 of the 99 were never repository addresses — the extractor's own contribution
+
+🔵 A naive `github.com/owner/name` extraction over retained prose does not only find repositories, and publishing
+99 as a dead-repository count would have overstated the rot by 37 %.
+
+| class | addresses | citations | examples |
+|---|---|---|---|
+| 🟢 **genuine dead repository** | **72** | **175** | `1EdTech/caliper-js`, `thanh01pmt/interactive-quiz-kit`, `santillana-ai/tutor-sdk` |
+| 🔴 API path artefact | 10 | 43 | `search/repositories`, `repos/HKUDS`, `repos/moodle` — from `api.github.com/...` URLs |
+| 🔴 documentation placeholder | 7 | 32 | `owner/repo`, `OWNER/REPO`, `x/y`, `a/b`, `GIT_USER_ID/GIT_REPO_ID.git` |
+| 🔴 **earlier passes' own negative controls** | 8 | 12 | `UniTime/this-repo-does-not-exist-xyz123`, `openedx/fake-repo-zzz999`, `nope-p454-dapodik/nope-p454`, `moodle/moodle-definitely-not-a-real-repo-p152` |
+| 🔴 extractor truncation | 2 | 3 | `JushBJJ/Mr` — a trailing-dot strip on `JushBJJ/Mr.-Ranedeer-AI-Tutor`; `ale-alejandro/beadkit.git` — a `.git` duplicate of a row already counted |
+
+🟡 **The negative-control row is the one to notice.** Earlier passes deliberately wrote non-existent addresses
+into these shelves to test their own detectors, and those probes are now **indistinguishable from rot** to any
+later sweep. 🟢 The lesson is procedural: a negative control belongs in `evidence/`, never in a shelf — and the
+truncation row says the same about the extractor, since `JushBJJ/Mr.-Ranedeer-AI-Tutor` is a **live** repository
+this census briefly recorded as dead.
+
+### 🔴 The structural finding: 1EdTech's specs are live and its reference SDKs are gone
+
+🔵 The largest dead cluster in the census is not one project but one standards body's implementation layer.
+
+| address | citations here | probe |
+|---|---|---|
+| `1EdTech/caliper-js` | **11** | 🔴 dead |
+| `imsglobal/caliper-python` | 4 | 🔴 dead |
+| `1edtech/caliper-php` | 4 | 🔴 dead |
+| `1EdTech/caliper-java` | 4 | 🔴 dead |
+| `concentricsky/badgr-server` | 5 | 🔴 dead |
+| 🟢 [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | — | 🟢 **LIVE** |
+| 🟢 [1EdTech/openbadges-specification](https://github.com/1EdTech/openbadges-specification) | — | 🟢 **LIVE** |
+
+🔵 Relocation was tested, not assumed: `IMSGlobal/caliper-js`, `imsglobal/caliper-js`,
+`1EdTech/caliper-java-public`, `1edtech/caliper-python`, `1EdTech/badgr-server`, `concentricsky/badgr` and
+`1EdTech/badgeconnect` were all probed — 🔴 **every one dead**. 🟢 The two specification repositories resolve.
+
+🟢 **So the pattern is real and it is decision-relevant: the Caliper *standard* is maintained on GitHub and its
+*reference implementations* are not.** Set against what this pass verified on `repos/foundations.md`, the
+learning-analytics choice stops being a toss-up:
+
+| path | specification | implementations |
+|---|---|---|
+| 🔴 **Caliper** | 🟢 `caliper-spec` live | 🔴 **4 SDK addresses, all dead** |
+| 🟢 **xAPI** | 🟢 [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) — Apache-2.0, 11,525 B payload-read | 🟢 [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) **and** [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) — both Apache-2.0, byte-identical payloads |
+
+🔵 **Recommendation, on supply grounds rather than technical merit: build learning analytics on xAPI.** 🔴 Stated
+against itself — a dead GitHub address is not proof a standard is abandoned. 1EdTech may host SDKs behind
+membership, on another forge, or have deprecated them in favour of vendor implementations, and **none of that is
+measurable from here** (`Gap 478-AQ`). What is measured is that *this base's* 23 Caliper SDK citations point at
+nothing, and the xAPI alternative is payload-verified and live.
+
+### 🟡 History is not rewritten; a correction map is published instead
+
+🔵 `Gap 477-K`: *"No dead address has been repaired in history."* 🔴 **This pass does not repair it either, and
+that is now a decision rather than an omission.** These shelves are append-only; editing 175 citations across
+retained history would silently alter what earlier passes recorded, destroying the audit trail this base exists
+to keep. 🟢 The append-only-safe remedy is a **map**, published once and applicable by any reader or compiler:
+
+| legacy address | status | canonical |
+|---|---|---|
+| `openedx/edx-platform` (47 citations) | 🟡 **renamed, resolves by redirect** | 🟢 [openedx/openedx-platform](https://github.com/openedx/openedx-platform) — 8.2k★, AGPL-3.0; its page states *"Formerly known as 'edx-platform'"* |
+| `danny-avila/LibreChat` (13) | 🟡 renamed or transferred (`p477`) | `LibreChat-AI/LibreChat` |
+| `chamilo/chamilo` (1) | 🔴 dead | 🟢 [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) — GPL-3.0, payload-read this pass |
+| `JushBJJ/Mr` (2) | 🔴 extractor truncation, **not dead** | `JushBJJ/Mr.-Ranedeer-AI-Tutor` |
+| `1EdTech/caliper-js` + 3 siblings (23) | 🔴 **dead, no relocation found** | 🟢 none — use xAPI, above |
+| `gegok12/*`, `GegoK12/*` (3 addresses) | 🔴 dead | 🟢 none — see the permissive-SIS finding on `verticals/solutions.md` |
+
+🟢 **`openedx/edx-platform` is corroborated from a second channel.** `p477` established the rename from a
+repo-id match (`10391073`); this pass reached the page itself and read the canonical heading and the "formerly
+known as" line. Two independent instruments, same answer — and note it is **renamed, not dead**: it resolves, so
+no sweep will ever flag it, which is exactly why the map is needed.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 478-AO`** | **Liveness is not canonicality, and this census measured only liveness.** `Gap 477-I` stands: a renamed address resolves by redirect and passes `ls-remote` silently. `openedx/edx-platform` is the proof — live on every probe, wrong on every citation. The 3,146 live addresses are **proved to resolve, not proved to be canonical**, and this pass checked canonicality on exactly one of them. |
+| 🔴 **`Gap 478-AP`** | **`Gap 477-K` is not discharged.** 175 citations still point at 72 dead addresses in retained history, `openedx/edx-platform` still appears 47 times, and the correction map above is published rather than applied. No reader is obliged to apply it and no compiler here does. |
+| 🔴 **`Gap 478-AQ`** | **The Caliper conclusion rests on GitHub only.** Seven relocation candidates were probed and no non-GitHub forge, membership portal or 1EdTech announcement was consulted — and could not be, since every non-GitHub host is refused at this environment's gateway (`Gap 478-W`). "The SDKs are gone" means "gone from every GitHub address this base can name". |
+| 🟡 **`Gap 478-AR`** | **The five classes were assigned by pattern-matching the address string**, with `a/b`, `o/r` and `en/get-started` judged placeholders on their shape alone. A real repository named like a placeholder would be misfiled as one, and the 72 is a count under that judgement. |
+| 🟡 **`Gap 478-AS`** | **No dead address was dated.** When each repository disappeared, and whether it ever existed, is unmeasured — `api.github.com` is 403, so there is no deletion or rename event to read, and `santillana-ai/tutor-sdk` may never have been public at all. |
+| 🟡 **`Gap 478-AT`** | **`Gap 477-M` unchanged: no blanket `fork:true` control ran.** Whether a live shelf row is a fork quietly standing in for its upstream is still unmeasured across all 3,146 live addresses; the search channel that control needs is unavailable this pass (`Gap 478-F`). |
+
+---
+
 ## 🆕 `p477` — `2026-10-27` — **🟢 `Gap 476-E` IS CLOSED — the stale-address rate in RETAINED HISTORY is now measured, not guessed: 269 addresses swept, 5 dead and 2 renamed. 🔴 And the detector `p476` built has a FALSE-POSITIVE MODE it did not know about: GitHub repo search excludes forks by default, so a live fork looks exactly like a rename. One of this pass's three hits was a fork, caught only by a `fork:true` control.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

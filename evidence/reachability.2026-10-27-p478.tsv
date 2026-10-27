@@ -1,0 +1,12 @@
+host_or_url	channel	result	meaning
+raw.githubusercontent.com	curl	200	readable: licence and packaging payloads
+github.com	curl	403	blocked at gateway CONNECT
+github.com	WebFetch	200 (rendered)	readable: stars, About sidebar, release notes — NEW INSTRUMENT this pass
+api.github.com	curl	403	blocked for every repo not attached to this session
+arxiv.org	curl / WebFetch	000 / ENOTFOUND	CONNECT rejected by gateway policy
+edworkingpapers.com	curl / WebFetch	000 / ENOTFOUND	CONNECT rejected by gateway policy
+eur-lex.europa.eu	curl	000	CONNECT rejected by gateway policy
+www.unesco.org	curl / WebFetch	000 / ENOTFOUND	CONNECT rejected by gateway policy
+www.holoniq.com	WebFetch	ENOTFOUND	CONNECT rejected by gateway policy
+www.precedenceresearch.com	WebFetch	ENOTFOUND	CONNECT rejected by gateway policy
+gitlab.com	curl	301	reachable but not probed further

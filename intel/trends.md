@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p478` — `2026-10-27` — **🔴 THE EFFICACY EVIDENCE TURNED THIS PASS AND IT CUTS AGAINST THIS BASE'S OWN AGENT SHELF: the LARGEST 2026 university RCT found AI-tutor access REDUCED final grades by 0.37 SD and LMS participation by 0.90 SD, with bigger losses for first-generation students — while smaller trials of STRUCTURED, course-grounded tutors show gains. 🟢 The design variable, not the model, is what separates them. 🔴 And no 2026 trial compares an AGENTIC tutor against a non-agentic one at all.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+🔴 **Every study below is read from search-tool summaries.** `arxiv.org`, `edworkingpapers.com` and
+`clinicaltrials.gov` were all probed directly and **refused at the gateway** — see the boundary table on
+`intel/market.md` and [`evidence/reachability.2026-10-27-p478.tsv`](../evidence/reachability.2026-10-27-p478.tsv).
+No abstract below was read on its own page.
+
+---
+
+### 🔴 Trend 1 — the efficacy literature has split, and the biggest study is the negative one
+
+| study | design | n | headline result |
+|---|---|---|---|
+| 🔴 EdWorkingPaper **26-1598**, large US public university | randomised across sections of the same course | **2,379** undergraduates, 30 instructors | 🔴 **final grades −0.37 SD**; LMS participation **−0.90 SD**; losses **larger for first-generation students** |
+| 🟢 arXiv **2609.23958**, graduate corporate finance | randomised field experiment; structured course-grounded tutor vs holdout free to use consumer AI | **86** | 🟢 total score **+6.63** (CI **+1.95 to +11.31**) |
+| 🟢 arXiv **2604.02677** | tutor alone vs tutor + peer agents | **315** | 🟢 tutor **+ peers** highest unassisted test accuracy |
+| 🟡 earlier undergraduate physics RCT | structured AI tutor vs in-class active learning | not stated | 🟢 more learning in **less time** |
+| 🟡 arXiv **2609.14789**, UK GCSE Science | practitioner-led **micro-randomised** trials of a tutoring platform | not stated | design-focused; no headline effect read |
+| 🟡 `NCT07449182` · `NCT07692035` | registered medical-education agent trials | — | 🔴 **no results yet** |
+
+🟢 **The reconcilable reading, and it is actionable.** The negative trial gave students *access to a tutor*; the
+positive ones gave them a **tutor bounded to the course's own material and sequence**. The negative paper's own
+conclusion is displacement — the tutor substituted for coursework rather than adding to it — which is a
+**product-design failure, not a model failure**. 🔵 For a studio the consequence is concrete: an engagement
+scoped as "give learners a tutor" has a large, recent, well-powered trial predicting it will *lower* grades.
+One scoped as "ground the tutor in this course's materials, sequence and assessment, and instrument what it
+displaces" has the positive results behind it.
+
+🔴 **Stated against itself.** The negative study is an unreviewed working paper whose author list differs across
+versions of the record, and this base **could not open it**. The positive results are n=86 and n=315. One large
+unreviewed negative against several small positives is not a settled literature, and the equity signal —
+first-generation students losing most — is the single finding here that most deserves a primary read and cannot
+get one in this environment.
+
+### 🔴 Trend 2 — the agentic premise of this base's own agent shelf is unevaluated
+
+🔵 A targeted search for a 2026 RCT comparing an **agentic** tutor (one that plans multi-step actions) against a
+non-agentic one returned **nothing**. 🔴 Seventeen agents are published on `agents/top.md`; **none has been run
+or evaluated here** (`Gap 478-B`), and the external literature has not evaluated the category either. 🟢 This is
+the honest statement of where the field is: *agentic* is a description of architecture with no outcome evidence
+attached to it, and the two 40k★ repositories on this shelf are popular, not proven.
+
+### 🟡 Trend 3 — permissiveness falls as you move up the stack
+
+🔵 Assembled across `p477` and this pass, each tier's grants payload-read:
+
+| tier | grants | reading |
+|---|---|---|
+| infrastructure (LRS, xAPI, knowledge tracing, curriculum data) | 🟢 **10 of 10 permissive** (MIT / Apache-2.0) | build freely |
+| agents | 🟢 **14 of 17 permissive**; 🔴 GPL-3.0 ×2, CC BY-SA 4.0 ×1 | check before lifting prompts |
+| platforms | 🔴 **11 of 15 copyleft** — and the three a client most likely runs (Moodle, Open edX, Canvas) are GPL-3.0 / AGPL-3.0 / AGPL-3.0 | integrate over a boundary, never fork |
+| curriculum **data** | 🔴 `p477` found the two largest new education data repositories at **CC BY-NC 4.0** and **ODbL** | the code is permissive and the content is not |
+
+🟢 **So the licence risk is not where a studio usually looks for it.** The agents are mostly MIT; the LMS the
+client already runs is AGPL; and the curriculum content — the part with no substitute — is the most restricted
+layer of all. 🟡 One counter-example sits inside the pattern and is this pass's own:
+[bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados), 1,721 BNCC objectives, read first-hand as **MIT**.
+Permissive curriculum data exists; it is just not the norm.
+
+🔴 Four tiers assembled by this base from addresses it already held, not sampled from any population —
+`Gap 477-R`'s objection applies in full and the direction is all that should be carried.
+
+### 🔴 Trend 4 — automated grading is still absent at any level of adoption
+
+🔵 Re-measured this pass. The only open-source project with grading in scope is
+[littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) — MIT, payload-read,
+human review gating each step, sandboxed evaluation of learner code — and it has **0 stars**, with its own README
+saying automatic grading productisation is frozen. 🔴 Everything else found under a grading query turned out to
+be lesson planning. 🟢 Meanwhile grading is **Annex III high-risk** under the EU AI Act and named in several US
+state statutes. **The most regulated use case is the one with no open-source supply**, which is a build
+opportunity and a liability in the same sentence.
+
+### 🟡 Trend 5 — supply moves to the teacher while attention stays with the learner
+
+🔵 Five of the six repositories surfaced on `agents/trending.md` this window are teacher-facing and **none exceeds
+63★**; both 40k+ agents are learner-facing. HolonIQ's LATAM cohort reading points the same way — AI-native
+positioning clustering on teacher-facing lesson preparation rather than consumer tutoring. 🔴 Six repositories
+found by keyword search with no measurable recall cannot establish a population shape (`Gap 478-I`); two
+independent instruments pointing the same direction is the whole of the claim.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 478-AB`** | **No study above was read first-hand.** `arxiv.org`, `edworkingpapers.com` and `clinicaltrials.gov` are refused at the gateway, so every n, effect size and confidence interval here is a search-tool summary of a page this base never opened. The −0.37 SD figure is load-bearing for Trend 1 and **unverified**. |
+| 🔴 **`Gap 478-AC`** | **The structured-vs-open-access reconciliation is this pass's own reasoning** across six studies with different populations, levels and countries. No study compared those two designs directly, so the mechanism is inferred from how the arms happen to differ. |
+| 🔴 **`Gap 478-AD`** | **The equity signal is single-source.** "Larger losses for first-generation students" comes from one unreviewed working paper and is not corroborated anywhere else on this shelf — and it is the finding with the highest cost of being wrong in either direction. |
+| 🟡 **`Gap 478-AE`** | **Trend 3's four tiers were assembled by this base, not sampled.** The ratios compare sets this base chose; `Gap 477-R` applies unchanged. |
+| 🟡 **`Gap 478-AF`** | **Trend 4 is a search result, not a census.** `p477`'s topic-qualifier lesson applies: a keyword query for grading cannot see a grading project that does not use the word, and no `topic:` census was available this pass (`Gap 478-F`). |
+
+---
+
 ## 🆕 `p477` — `2026-10-27` — **🔴 THE TREND THIS PASS WOULD STAKE A CLIENT ENGAGEMENT ON: in education AI the CODE is permissive and the CURRICULUM is not. Every one of the 11 MIT/Apache/BSD rows read first-hand this pass is a tool; the two largest knowledge-graph repositories are CC BY-NC and ODbL. 🟢 And three of this base's own published trends were instrument artefacts — a measured zero, an accent effect and a stale-address rate — all three corrected here.**
 
 🔵 `Gap 476-Q` stands against most of what follows: these remain single-pass cross-sections. What changed is that

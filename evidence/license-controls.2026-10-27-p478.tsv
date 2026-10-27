@@ -1,0 +1,5 @@
+control	repos	bytes	sha256_12	finding
+FSF GPL-3.0 unmodified	moodle/moodle (COPYING.txt), chamilo/chamilo-lms, ILIAS-eLearning/ILIAS	35147	8ceb4b9ee5ad	three projects byte-identical
+FSF GPL-3.0 less trailing newline	h5p/h5p-php-library	35146	c53a65c2fd56	differs from the control at ONE byte: no final newline (diff line 674)
+Apache-2.0 unmodified	yetanalytics/lrsql, pelotech/xapi-lrs	11357	c71d239df917	two unrelated projects byte-identical
+AGPL-3.0 variants	frappe/lms (33893), overhangio/tutor (34523), openedx (35136), canvas-lms (34520)	varies	-	four AGPL-3.0 payloads, four different byte counts: not interchangeable as controls

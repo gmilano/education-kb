@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p478` — `2026-10-27` — **🟢 `Gap 477-N` IS CLOSED AND THE ANSWER IS THE RESTRICTIVE ONE: `overhangio/tutor` elects **`AGPL-3.0-only`**, declared in `pyproject.toml`, so the standard Open edX deployment path has no upgrade option. 🟢 A declared nil in the secondary literature — "no open source knowledge tracing library" — is refuted by two payload-verified repositories. 🔴 And this pass's own 404 on `frappe/lms` was an artefact of its own path list: the grant is there, in lowercase, and it is AGPL-3.0.**
+
+🔵 Gate posture unchanged from the agents shelf (`Code from External`; `make hooks` not attempted;
+session-local checks green). Grants in
+[`evidence/grant-payload.2026-10-27-p478.tsv`](../evidence/grant-payload.2026-10-27-p478.tsv) (39 rows);
+licence-text controls in
+[`evidence/license-controls.2026-10-27-p478.tsv`](../evidence/license-controls.2026-10-27-p478.tsv).
+
+---
+
+### 🟢 `Gap 477-N` closed — `tutor` elects AGPL-3.0-**only**
+
+🔵 `Gap 477-N`: *"`overhangio/tutor`'s AGPL-3.0 election is unread, and it is the one row in the tier where the
+answer would matter."* 🟢 It is readable, one file above the licence.
+
+| channel | result |
+|---|---|
+| `LICENSE.txt` payload | 34,523 B · `0d96a4ff68ad` — AGPL-3.0 body; `"any later version"` appears **3×**, all inside the FSF *How to Apply* appendix |
+| 🟢 `pyproject.toml` line 6 | **`license = {text = "AGPL-3.0-only"}`** — the project's own election, unambiguous |
+| `pyproject.toml` classifier | `License :: OSI Approved :: GNU Affero General Public License v3` — 🟡 silent on the election |
+| `README.rst` badge | `AGPL License`, linking `agpl-3.0.en.html` — 🟡 silent on the election |
+
+🔴 **The restrictive reading is the correct one, and it is the one that matters.** `tutor` is the official
+Docker-based deployment tool for Open edX, so a studio deploying Open edX the recommended way is bound to
+AGPL-3.0 **with no option to move to a later AGPL**, and the AGPL's network clause reaches users served over a
+network, not only redistributors. 🟢 **The method generalises and should be reused:** the `"any later version"`
+string inside a GPL-family payload is boilerplate from the appendix and is **never** evidence of an election —
+the election lives in packaging metadata, which is exactly where `p476` found `penecho`'s.
+
+### 🔴 This pass's own instrument error, published because it is the reusable part
+
+🔵 The first probe of [frappe/lms](https://github.com/frappe/lms) reported `NO LICENSE FILE AT ANY PROBED PATH` —
+a clean 404 across `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` on both `main` and `master`.
+🔴 **That was wrong, and the cause was the path list, not the repository.**
+
+| probe | result |
+|---|---|
+| 5 uppercase variants × 2 branches | 🔴 **all 404** |
+| 🟢 `license.txt` — **lowercase** | 🟢 **200 · 33,893 B** on `main`, `develop` **and** `master` |
+| payload's first line | **`GNU AFFERO GENERAL PUBLIC LICENSE Version 3`** |
+
+🔵 `raw.githubusercontent.com` paths are case-sensitive and the Frappe projects use lowercase. 🔴 **So a 404 from
+a path probe is not evidence that a repository has no grant** — it is evidence that the probed list was
+incomplete, and the two are indistinguishable from the outside. 🟢 This has a direct bearing on the agents shelf:
+the rejection of `yashas-wi/Personalised-AI-Tutor` rests on a 404 **plus a blank About sidebar**, which is why
+the second channel matters. A 404 alone would not have been enough.
+
+🟡 **And it corrects the secondary literature twice over.** A vendor comparison table reached this pass listing
+*"Frappe LMS | MIT"*. It is **AGPL-3.0**, read from the payload. Mirror listings saying AGPL were right and the
+comparison table was wrong — which is the ordinary case, not the surprising one.
+
+### 🟢 A declared nil refuted: knowledge tracing has two permissive libraries
+
+🔵 A targeted search for knowledge-tracing libraries returned LRS projects and concluded *"the search did not find
+any open source knowledge tracing library"*. 🔴 **Two exist and both are permissive**, grants read as payloads:
+
+| repo | grant (payload) | what it is |
+|---|---|---|
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · 1,066 B · `f5f955194636` | deep knowledge tracing benchmark library; copyright 2022 |
+| [bigdata-ustc/EduKTM](https://github.com/bigdata-ustc/EduKTM) | 🟢 **Apache-2.0** · 11,367 B · `59f13c04f0e6` | knowledge-tracing model toolkit, USTC big-data lab |
+
+🔵 Same lesson as `p477`'s nil refutation, different instrument: **a nil from a keyword search is a statement
+about the query**, not about the world. Knowledge tracing is the mechanism underneath adaptive sequencing, and
+this base had been carrying BKT as something only `OATutor` and `tutor-mcp` implement inline.
+
+### 🟢 The permissive infrastructure tier — every grant a payload read this pass
+
+| repo | grant (payload) | bytes · sha | what it is | region |
+|---|---|---|---|---|
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | 11,357 · `c71d239df917` | SQL-backed xAPI Learning Record Store, Clojure | North America |
+| [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** | 11,357 · `c71d239df917` | xAPI 1.0.3 + 2.0 LRS on Hono + Postgres, embedded PGlite mode | Global |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | 11,525 · `a1587287ff04` | the xAPI specification itself — the interop contract both LRSs implement | North America |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | 1,066 · `f5f955194636` | deep knowledge tracing benchmarks | APAC |
+| [bigdata-ustc/EduKTM](https://github.com/bigdata-ustc/EduKTM) | 🟢 **Apache-2.0** | 11,367 · `59f13c04f0e6` | knowledge tracing models | APAC |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | 1,105 · `5baaaf977a28` | BKT-driven open ITS; UC Berkeley CAHL lab | North America |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1,097 · `3c056b34a476` | offline-first learning platform — the one permissive **platform** in this base | Global |
+| [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** | 1,069 · `4aa758cb51b2` | MCP server that writes agent turns as xAPI statements | EMEA |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** | 1,092 · `e162f8f4b461` | 1,721 BNCC curriculum objectives, JSON/SQLite/CSV; held by *Profy Tecnologias Educacionais Ltda* | LATAM |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 11,906 · `cbac9a0fde05` | general ERP framework — the permissive fallback where no education ERP is | Global |
+
+🟢 **Ten rows, ten permissive grants, all payload-verified.** 🔵 Two of them close `Gap 477-AH` and are flagged on
+`compose/patterns.md`: `learnmcp-xapi` was carried and `bncc-dados` had **never** been read first-hand in any pass
+— it was described from its README as *"open data"*. It is **MIT**, held by a named Brazilian company. That is a
+better footing for the LATAM recipe than "open data" ever was, and it is also a narrower one: MIT covers the
+repository's contents as distributed; it is not a statement about the BNCC curriculum as a public instrument.
+
+### 🟢 Licence-text controls — the fetch channel is byte-faithful, and one project differs by exactly one byte
+
+| control | repos | bytes | sha | finding |
+|---|---|---|---|---|
+| FSF GPL-3.0, unmodified | `moodle/moodle` (`COPYING.txt`), `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS` | 35,147 | `8ceb4b9ee5ad` | 🟢 three unrelated projects **byte-identical** |
+| FSF GPL-3.0 less final newline | `h5p/h5p-php-library` | 35,146 | `c53a65c2fd56` | 🟢 `diff` says line 674, *"No newline at end of file"* — **one byte, not a modified licence** |
+| Apache-2.0, unmodified | `yetanalytics/lrsql`, `pelotech/xapi-lrs` | 11,357 | `c71d239df917` | 🟢 byte-identical across two unrelated projects |
+| AGPL-3.0 | `frappe/lms` 33,893 · `overhangio/tutor` 34,523 · `openedx` 35,136 · `canvas-lms` 34,520 | 🔴 four different | — | 🔴 **no AGPL control exists** — four byte counts, so a byte count alone can never identify AGPL-3.0 here |
+
+🔵 **Why this is worth a table.** `Gap 468-A` requires the *file* to be measured rather than the response, and the
+risk in that method is a channel that silently alters bytes. 🟢 Three byte-identical GPL-3.0 payloads from three
+unrelated owners rule that out. 🔴 The AGPL row is the warning: this base cannot use byte count as a licence
+fingerprint for AGPL, so every AGPL row needs its first line read, and `frappe/lms` at 33,893 B is **not**
+evidence of a trimmed or custom AGPL.
+
+### 🟡 `sakaiproject/sakai` is ECL-2.0, and the payload says what that means
+
+🔵 [sakaiproject/sakai](https://github.com/sakaiproject/sakai) · `LICENSE` · 11,120 B · `0688f62d04f1`. The
+payload's own line 10 describes ECL-2.0 as *"the Apache 2.0 license, modified to change the scope of the patent
+grant in section 3"*. 🟢 **Permissive, and copyleft-free.** 🔴 **But the patent grant is narrower than
+Apache-2.0's**, which is the entire point of the modification and is a fact no comparison table in the secondary
+literature carries. 🔵 For a studio, ECL-2.0 is usable like Apache-2.0 on the copyright axis and should be read by
+counsel on the patent axis — the difference is deliberate and it is in the text.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 478-J`** | **`Gap 477-O` stands: no depth or scope probe ran on any row this pass.** The ten infrastructure rows are graded `WHOLE_WORK` by assumption, the same assumption `Gap 475-J` objected to, and the seven platform rows still have no depth probe. |
+| 🔴 **`Gap 478-K`** | **Only `tutor`'s election was probed.** The nine other permissive rows make the question moot, but `frappe/lms`'s AGPL-3.0 election, `openedx`'s and `canvas-lms`'s are **unread**, and `frappe/lms` is the one where a studio would most want the answer. `openeducat_erp`'s payload names *"Version 3"* in prose with no election clause located. |
+| 🔴 **`Gap 478-L`** | **`Gap 477-P` is unchanged: BigBlueButton's per-source-file notice is still unread.** Its `LICENSE` reproduced at 7,652 B · `e3a994d82e64`, matching `p477`'s byte count exactly, so the LGPL-3.0 reading is now two-pass consistent — but it still rests on one `LICENSE` plus one module's `build.sbt`. |
+| 🟡 **`Gap 478-M`** | **The ten infrastructure rows carry no HEAD or digest**, repeating `Gap 477-Q` verbatim. Their grants are measured and addresses resolved; no byte-level control of the *code* was stored, so the next pass still cannot difference them. |
+| 🟡 **`Gap 478-N`** | **`pykt-toolkit` and `EduKTM` are published on grant and description only.** Neither was installed, run, or benchmarked, and neither star count was read — so "two permissive knowledge-tracing libraries exist" is established while "either is maintained or usable" is not. `pykt-toolkit`'s copyright year is 2022. |
+| 🟡 **`Gap 478-O`** | **The ECL-2.0 patent reading is this pass's reading of the licence text**, not advice. The payload states the modification; its practical scope for a commercial deliverable was not determined and cannot be determined here. |
+
+---
+
 ## 🆕 `p477` — `2026-10-27` — **🟢 BOTH REMAINING ELECTION GAPS ARE CLOSED, AND `Gap 476-G`'s CAUSE IS NOT THE ONE IT GUESSED: OpenOLAT has NO parent POM, its root POM DOES declare the licence, and p476's extractor failed because the project MISSPELLS its own licence name as `L6icense`. 🟢 BigBlueButton's election is found in a module `build.sbt` — a bare `LGPL-3.0`. 🔴 And the tier below the platforms turns out to be the opposite shape: 10 of 12 infrastructure repos are permissive while 8 of 11 platforms are copyleft.**
 
 🔵 Gate posture unchanged from the agents shelf (`Code from External`; `make hooks` not attempted;
