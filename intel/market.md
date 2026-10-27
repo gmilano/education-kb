@@ -4,6 +4,246 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27` — **🟢 `Gap 485-Y` CLOSES AND IT MOVES THE EMEA MAP: the African nil was never supply, it was the ENGLISH LANGUAGE — one Swahili query returned a five-repository MIT platform. 🔴 And the market-size question is answered with a range this base should stop quoting as a number: vendor estimates for *agentic* education AI span **$2.1B to $27.2B** depending on who is counting.**
+
+🔵 Four web searches (global trends, North America, EMEA, APAC/LATAM) plus seven GitHub-channel
+queries. 🟡 **Every market-size and policy figure below is secondary** — vendor reports and
+trackers, not primary documents — and is marked 🟡. 🟢 Supply-side rows are first-hand byte reads.
+Evidence:
+[`africa-language-instrument`](../evidence/africa-language-instrument.2026-10-27-p486.tsv),
+[`africa-licence-bytes`](../evidence/africa-licence-bytes.2026-10-27-p486.tsv).
+
+### 🔴 Gate posture — execution DENIED again, so the gate was READ instead, and reading it found a live defect
+
+🔵 `Gap 446-A` has recorded eleven passes of `make hooks` being unavailable. 🔴 **This pass tried
+anyway and was refused**: running `compose/code/p383-region-heading-gate/check_headings.py` against
+this file was denied with `Code from External` — the harness refuses execution of code arriving in a
+clone, whatever the code does. 🔵 **Nothing in this pass is gate-attested.** Twelve denials in twelve
+passes.
+
+🟢 **So the contract was read and evaluated by hand instead — and this file FAILS it.** The checker's
+four controls are `P383-MULTIPLE-BLOCKS`, `P383-OUT-OF-VOCAB`, `P383-MISSING-REGION` and
+`P383-LATAM-ONLY`; a block's children are every `###` from the canonical heading **until the next
+`##`**. Counted by hand against the live file:
+
+| control | hand-count | why |
+|---|---|---|
+| `P383-MULTIPLE-BLOCKS` | 🔴 **11 findings** | the file carries **12** `### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 486-H`** | **Francophone Africa unmeasured, query diagnosed rather than region.** A loose `OR` saturated at 3 829 global hits; a topic-pair returned 0. Owner enumeration over known Senegalese, Ivorian and Moroccan organisations was **not** tried. |
+| 🔴 **`Gap 486-I`** | **No South or Southeast Asian language channel tested.** The Swahili result makes Hindi, Bengali, Urdu, Bahasa and Tagalog the highest-value untried instruments on this base; none was run. |
+| 🟡 **`Gap 486-L`** | **Every market-size and policy figure in this section is secondary.** The agentic-education range ($2.1B–$27.23B) is a spread of *vendor claims*, not of measurements, and the same channel was wrong by 2.7× on the one datum this base could check first-hand. |
+| 🟡 **`Gap 486-M`** | **No APAC or LATAM regulatory instrument was verified against a primary source.** China's 8-hour mandate, Japan's data-literacy target, India's CBSE MoU and Chile's AI law are all secondary reporting; `eur-lex.europa.eu` and government hosts remain unreachable through this proxy. |
+| 🟡 **`Gap 486-N`** | **Mexico and Canada remain unmeasured at the federal level** for education-specific AI instruments, carried from `p484`. |
+| 🔴 **`Gap 486-O`** | **`p383-region-heading-gate` fails this file on hand-reading: 11 `MULTIPLE-BLOCKS`, ~13 `OUT-OF-VOCAB`, 6 `MISSING-REGION`.** The gate's one-block-per-file contract contradicts the append-only one-block-per-pass convention. `p486`'s own block is clean; the rest is a convention decision nobody has taken. |
+
+## Opportunities by region` blocks — one per retained pass — and the contract demands **exactly one per file** |
+| `P383-OUT-OF-VOCAB` | 🔴 **~13 findings** | `### Declared gaps` sits *after* the regions and *before* the next `##`, so the checker counts it as a child region. **10 of 12 blocks** have it |
+| `P383-MISSING-REGION` | 🔴 **6 findings** | six blocks carry no `### Global` |
+
+🔴 **This is a standing conflict between the gate and this base's own append-only convention, and it
+has been invisible precisely because the gate has never been allowed to run.** The gate was wired at
+`p338` on the premise of one block per *file*; every pass since has added one per *pass*. 🔵 A gate
+that cannot execute cannot report, and eleven passes of `Gap 446-A` have been read as "unattested"
+when the stronger statement available all along was **"unattested and, on hand-reading, failing."**
+
+🟢 **What this pass fixed, and what it did not.** 🟢 This section's own block is made
+**vocab-clean**: its only `###` children are the five closed-vocabulary regions, with gate posture
+and declared gaps placed *before* the block rather than after it. 🔴 The `MULTIPLE-BLOCKS` finding is
+**structural** — no single pass can clear it without either archiving older region blocks or
+amending the contract to "one per pass section", and that is a decision about the convention, not a
+defect to patch silently. Registered as `Gap 486-O`.
+
+### 🔴 The market-size question, and why this base should quote a range
+
+🟡 Four vendor framings surfaced this pass and they do not agree:
+
+| scope | figure | horizon |
+|---|---|---|
+| AI in education, broad | 🟡 **$6.4B (2025) → $79.6B (2034)**, 31.35 % CAGR | IMARC |
+| AI in education, broad | 🟡 **$8.3B (2025) → $57.2B (2033)** | second vendor |
+| **Agentic** AI in education | 🟡 **$2.1B (2026)**, **4.5 % CAGR** | one report |
+| **Agentic** AI in education | 🟡 **$1.72B (2025) → $27.23B (2034)** | another report |
+
+🔴 **Two reports on the same named segment disagree by roughly 13× at horizon and by a factor of
+seven on growth rate.** 🟢 The honest reading is that *"agentic AI in education"* is **not yet a
+segment anyone measures consistently** — the definitions differ more than the markets do. 🔵 So the
+usable intelligence is **not** a number: it is that a client citing any single one of these figures
+can be shown three others, and the right move in a pitch is to anchor on **adoption**, which the
+sources broadly agree on, rather than market size, which they do not.
+
+🟡 **Adoption, where the sources do converge:** global student AI usage reported rising from **66 %
+(2024) to 92 % (2025)**; North America held the largest regional share at **37.5 % (2025)**;
+intelligent tutoring is consistently named the leading use case alongside adaptive learning,
+automated assessment and student analytics.
+
+### 🔴 And the secondary channel is measurably unreliable where it overlaps our own reads
+
+🔵 The same web channel that produced those figures also produced, this pass, a claim that
+`HKUDS/DeepTutor` has *"crossed 17 000 GitHub stars"* with *"license not stated"*. 🟢 First-hand this
+pass: **45 572★** and **Apache-2.0 from bytes**. 🔴 **An error of 2.7× on the single datum where the
+two channels overlap.** 🔵 This is the first time this base has scored the secondary channel against
+its own primary reads, and it is a reason to treat the market figures above as a *range of claims*
+rather than a range of measurements.
+
+## Opportunities by region
+
+### North America
+
+🟡 **Policy is now dense enough to be a service line.** The federal Department of Education
+finalised an **AI grant-priority rule on 13 April 2026** weighting proposals that build AI literacy
+into teaching. 🟡 State guidance counts differ by tracker — one June 2026 tracker reports **33–35
+state education departments plus Puerto Rico** publishing official AI guidance, while CDT's review
+lists about half the states; 🔴 **this base should carry the spread, not a point value** (`p483`
+retired an earlier "134 bills / 31 states" figure for exactly this reason). 🟡 FutureEd tracks
+**68 bills across 27 states** this session with **10 enacted in 2026** — its own tracker cites 71,
+so even one source disagrees with itself.
+
+🟡 **The constraint that shapes an engagement:** NYC's **March 2026** preliminary guidance permits
+teacher use for drafting and lesson planning but **bars AI from assigning grades, making
+disciplinary decisions, or collecting biometric and behavioural data without strict oversight.**
+Michigan (May 2026), California (April 2026) and Vermont (a 50-page framework, January 2026) all
+updated in the same window.
+
+🟢 **Opportunity, placed:** human-oversight-by-construction is the differentiator here, and this base
+now has the component for it — [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) ships
+**golden evals in CI and a public `/eval` endpoint** (🔴 GPL-3.0, so client-relicensable work must
+reimplement rather than embed). 🟢 For the grading prohibition specifically,
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (🟢 MIT) is the right
+shape: BKT **now verified from Go** emits a mastery probability, not a grade — a defensible
+architecture under guidance that bars AI-assigned grades.
+🔴 **Do not propose `elimu-ai/ml-authentication` here** — on-device face recognition for student
+login runs directly into the biometric prohibition.
+
+🔴 **Gap:** no Canadian or Mexican federal or provincial instrument surfaced this pass. `p484`
+established Canada has **no** federal K-12 AI instrument; Mexico remains unmeasured.
+
+### EMEA
+
+🟢 **This is where the pass changed the map, and the change is on the supply side.**
+[`elimu-ai`](https://github.com/elimu-ai) — **five MIT repositories**, every licence verified from
+bytes this pass — is a platform for low-resource schools built around Swahili-speaking East Africa
+(Tanzania, Kenya). 🔵 It is filed under **EMEA** because Africa is in this base's closed region
+vocabulary only through EMEA; the countries are named here, in prose, as the convention requires.
+
+🟢 The set is **the offline-first stack nobody else on this base supplies**: `webapp` (content +
+CMS, **68 forks against 41★**), `appstore` (🟢 **APK distribution and updates with no network**),
+`launcher` (device shell enforcing an **EGRA/EGMA** path), `ml-authentication` (on-device face
+recognition), `wiki` (localisation, Aragon DAO). 🟢 Pair with
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (🟢 MIT, offline content
+delivery) and [`CodeForAfrica/HURUmap-apps`](https://github.com/CodeForAfrica/HURUmap-apps)
+(🟢 MIT, education and census data for Kenya, Tanzania, Uganda, Zambia).
+
+🟡 **Regulation remains the gate.** The **EU AI Act** classifies AI used for **admissions and
+student assessment** as high-risk under Annex III, with human oversight and conformity assessment
+before deployment; phased application runs through **2026–2027**, so most institutions are piloting
+rather than operating under full enforcement. 🟡 Reported adoption pattern: administrative and
+teacher-support uses first — early warning for at-risk students, administrative chatbots,
+teacher-time-saving — with high-stakes assessment and admissions decisions flagged for caution.
+🔴 `p485` corrected a compliance date on this axis by 16 months; the 2026–2027 phasing above is
+**secondary and unverified against official EU sources** (`eur-lex.europa.eu` is unreachable through
+this proxy, `p483`).
+
+🟢 **Opportunity, placed:** two distinct engagements, not one. **(a)** EU institutional work where
+the deliverable is the **compliance envelope** — Annex III conformity, human-in-the-loop, audit
+trail — and the tutor is the easy part. **(b)** African deployment where the deliverable is
+**offline-first delivery**, built on the `elimu-ai` + `kolibri` stack, with
+🔴 **biometric student authentication explicitly gated** before any proposal includes it.
+
+🔴 **Measured nils, so the silence is not read as coverage.** 🟢 **Arabic channel tested and it
+works** — 32 Arabic-described repositories returned — 🔴 but **zero education-AI agents**, so the
+Middle East supply nil is now *diagnosed* rather than untested. 🔴 **Francophone Africa: two query
+forms, both unusable** (a loose `OR` saturated at 3 829 global hits; a topic-pair returned 0) —
+unmeasured, with the query diagnosed rather than the region (`Gap 486-H`). 🔴 **Lusophone Africa:
+180 Portuguese hits, all Brazilian** — Angola, Moçambique and Cabo Verde returned nothing; Brazil
+crowds them out of their own language channel.
+
+### APAC
+
+🟡 **China is the most concrete school-level mandate anywhere this pass.** The Ministry of Education
+has directed **all primary and secondary schools** to incorporate AI into regular teaching and
+establish dedicated AI curricula, with Beijing first requiring **at least 8 hours of AI instruction
+per year**, standalone or embedded in IT and science classes. 🟡 Secondary reporting — not confirmed
+against MoE releases.
+
+🟡 **Japan** maintains a light-touch, voluntary governance model, with data literacy encouraged
+across all university programmes and a stated intent to produce **at least 2 000 trained data
+scientists annually**. 🟡 **India** is still working on national frameworks; a CBSE MoU to bring AI
+integration to roughly **one lakh (100 000) students** was reported, from a dated source.
+🟡 A **2026 Ipsos survey across nine APAC markets** found comparatively **low support for banning AI
+in schools** — the opposite of the restrictive posture on children's social media, which stayed
+high.
+
+🟢 **Opportunity, placed, and the supply is already here.** The China mandate is a **curriculum and
+teaching-materials** demand at national scale, and the fastest-moving rows on this base are
+**Chinese-authored skill-form tutors**: `ZeKaiNie/universal-examprep-skill` (355★, 🟢 MIT),
+`Li-Evan/Bloom` (293★, 🟢 MIT, 中文优先), `Zenglian990/AI_Tutor_Release` (74★, 🟢 MIT, **built
+specifically for grades 1–9** — exactly the mandated band), `fangyuan-3149/book-learning-tutor`
+(12★, 🟢 MIT), `BaronCyrus/dsh-aha-tutor` (6★, 🟢 MIT, **DeepSeek Harness**). 🟢 All MIT, all
+byte-verified, all targeting host agents rather than a server per school — which is the only
+architecture that reaches a national school system on a mandate timeline.
+
+🔴 **Gap:** no 2026 regulatory instrument was verified for any APAC jurisdiction, and
+🔴 **no South or Southeast Asian language channel was tested** — no Hindi, Bengali, Urdu, Bahasa or
+Tagalog query, despite the Swahili result being a direct argument for running them (`Gap 486-I`).
+
+### LATAM
+
+🟡 **Adoption is high and teacher adoption is now the faster-moving half.** The DEC *AI in Higher
+Education LATAM Survey 2026* (**>30 000 responses**) reports student use rising **86 % → 92 %** and
+**teacher use 61 % → 79 %** — 🟢 the teacher curve is the steeper one, which inverts the usual
+assumption that faculty lag. 🟡 **65 % fear it leads to shallow learning**, which is a demand signal
+for pedagogy with guardrails rather than for more chatbots.
+
+🟡 **Regulation remains fragmented.** No unified regional framework for AI in higher education.
+Chile leads with a **National AI Policy since 2021** and a law in discussion; Brazil and Colombia
+have national strategies but **no education-sector-specific regulation**; in Mexico, SEP, ANUIES and
+the Observatorio IA have issued recommendations that are **explicitly non-binding**. 🟡 A 2025
+comparative study across Argentina, Brazil, Chile, Peru and Spain found marked differences in type,
+scope and concreteness. 🟡 On the **ILIA 2026** index Brazil ranks second among adopting economies
+and Chile leads on scientific capability — 🔴 though private-sector AI adoption in Chile is only
+**13.5 %**, so index position and deployment are not the same thing.
+
+🟢 **Opportunity, placed, and the supply side is real as of `p485`.** `portabilis/i-educar` (720★,
+**552 forks**, GPL-2.0) is a deployed Brazilian municipal school system with a national
+school-census module, and `cortega26/chile-hub` (135★, 🟢 **MIT**) is curated Chilean public
+education data. 🟢 With teacher adoption at 79 % and the stated fear being shallow learning, the
+engagement that fits is **teacher-facing**: mastery modelling that shows a teacher *what a student
+does not know* — `tutor-mcp`'s BKT (🟢 MIT) over `i-educar` attendance and grade data via its census
+module.
+
+🔴 **Licence warnings specific to this region, both from `p485` and both still standing.**
+🔴 `portabilis/i-diario`, `i-diario-app` and `pre-matricula-digital` serve **AGPL-3.0 in Portuguese
+translation with zero English text** (35 325 B, `sha12 837b5cf19787`) — the FSF holds its
+translations non-operative, so the grant is strictly **undefined** and must be resolved with the
+maintainer before any build. 🔴 **Every `latam-gpt` repository remains unusable**: five repos, four
+archived, none with a licence file. Any recipe naming Latam-GPT is void.
+
+### Global
+
+🟢 **The strongest cross-regional signal on this base is still `T485-1`, and it strengthened.**
+Form factor predicts licence: every **skill-form or MCP-server** row measured is **MIT**; every
+**server-application** row is **copyleft**. 🟢 Three of this pass's five new skill/MCP-form entrants
+are MIT, keeping the permissive side at **9 of 9**. 🔵 The practical reading for any region: compose
+**skills and MCP servers** when the client must own and relicense the result; treat **platforms** as
+infrastructure to deploy rather than code to hand over.
+
+🟢 **And one genuinely global correction.** `Selleo/mentingo` (99★, 🟢 **MIT**, byte-verified) is the
+**first permissive LMS** on this base. Every LMS carried before it — Moodle (GPL-3.0), Open edX
+(AGPL-3.0), Chamilo, ILIAS — is copyleft, and the permissive rows were a portal, an LTI broker and
+an offline content player. 🟢 A client needing a brandable, relicensable learning platform now has a
+starting point in **every** region. 🟡 It enters on licence bytes and self-description; 103 open
+issues against 99★ is ungraded (`Gap 486-G`).
+
+🔴 **A global instrument caveat that applies to every figure on every shelf.** A byte fingerprint
+taken at a **branch** ref is not reproducible: `uPortal`'s sha changed within an hour while its
+word-level verdict held exactly. 🟢 The word diff is durable; the sha is durable only against a
+commit SHA, which **no row on this base carries** (`Gap 486-B`).
+
+---
+
 ## 🆕 `p485` — `2026-10-27` — **🟢 `Gap 484-G` IS CLOSED AND THE FIX IS ONE QUALIFIER: `in:description`. The same region p484 could not see at all returns **75 genuinely regional repositories**, led by a 721★ Brazilian municipal school system this base has never once listed. 🔴 And the LATAM component prior passes leaned on is gone: **all five `latam-gpt` repositories carry NO LICENCE FILE, and four of the five are ARCHIVED.** 🟢 EMEA's education deadline moved by 16 months and this base had the old date.**
 
 🔵 Every repository figure below is from the authenticated search channel plus licence **bytes**

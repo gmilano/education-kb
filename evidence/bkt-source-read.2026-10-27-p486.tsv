@@ -1,0 +1,12 @@
+# p486 — closing Gap 485-Z / part of Gap 485-O for one row: tutor-mcp's BKT claim, read from SOURCE.
+# file: algorithms/bkt.go @ main, 4999 B, sha256_12 cceef09af3b5. 97 code hits for "bkt" across the repo.
+symbol	location	what the source actually does	canonical_BKT	verdict
+BKTState	bkt.go:9-12	fields PMastery, PLearn, PForget, PSlip, PGuess	yes (minus PForget)	🟢 real parameter set
+BKTObserve	bkt.go:38-56	Bayesian posterior: p(correct|mastery)=1-PSlip, p(correct|¬mastery)=PGuess	yes	🟢 the actual BKT equation
+BKTTransition	bkt.go:70-72	PMastery*(1-PForget) + (1-PMastery)*PLearn	🔴 NO — Corbett & Anderson fix forgetting at 0	🟡 DEVIATION 1, undisclosed
+BKTUpdate	bkt.go:29	observation-plus-transition composition	yes	🟢
+BKTUpdateHeuristicSlipByErrorType	bkt.go:92-109	mutates slip/guess PER OBSERVATION by error type: SYNTAX_ERROR slip +0.15 (cap 0.5); KNOWLEDGE_GAP guess -0.10 (floor 0.05)	🔴 NO — literature treats slip/guess as fixed per skill	🟡 DEVIATION 2, disclosed in the file's OWN comment
+BKTIsMastered	bkt.go:112	mastery threshold predicate	yes	🟢
+(guard)	bkt.go:44-46	explicit guard against pCorrect==0 (PMastery=0 and PGuess=0) to avoid a posterior for an impossible observation	n/a	🟢 numerically careful
+# RESULT: the BKT claim is TRUE and read from source, not description. But the source says MORE than
+# the description: two documented departures from canonical BKT. Reading the source CHANGED the row.

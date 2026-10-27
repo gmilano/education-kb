@@ -1,0 +1,10 @@
+# p486 — African education rows, licences fetched from raw.githubusercontent.com this pass.
+slug	stars	ref	file	http	bytes	sha256_12	licence	note
+elimu-ai/webapp	41	main	LICENSE	200	1065	45fc137a7066	MIT	Android + content platform for low-resource schools
+elimu-ai/appstore	29	main	LICENSE	200	1065	45fc137a7066	MIT	on-device APK distribution — works offline
+elimu-ai/ml-authentication	16	main	LICENSE	200	1065	203d7d837ceb	MIT	student login by face recognition, TensorFlow, on-device
+elimu-ai/launcher	9	main	LICENSE	200	1065	45fc137a7066	MIT	custom Android launcher, EGRA/EGMA literacy+numeracy path
+elimu-ai/wiki	13	main	LICENSE	200	1065	203d7d837ceb	MIT	project docs, localisation, Aragon DAO governance
+CodeForAfrica/HURUmap-apps	13	master	LICENSE	200	1078	c97429cbe41f	MIT	census/demographic incl. education — KE, TZ, UG, ZM
+mwakidenis/Elimu-Sasa	15	-	-	404	-	-	🔴 NONE	Kenyan curriculum platform with NO licence file — not usable
+# The two elimu-ai sha values differ ONLY in the copyright year (2020 vs 2022); both are stock MIT.

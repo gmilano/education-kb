@@ -1,0 +1,25 @@
+# p486 — star velocity, closing Gap 485-X. Baseline = p485 figures (read 2026-10-27T17:40Z).
+# p486 reads taken 2026-10-27T18:40-18:45Z via authenticated GitHub search channel. Interval ~61-65 min.
+slug	p485_stars	p486_stars	delta	p486_forks	p486_open_issues	note
+HKUDS/DeepTutor	45506	45572	+66	5730	211	only row above the measurement floor
+HKUDS/DeepTutor	45572	45579	+7	5730	213	re-read ~4 min later; implies ~1.5 stars/min
+oppia/oppia	6947	6948	+1	5857	1907	at the floor
+portabilis/i-educar	721	720	-1	552	50	NEGATIVE delta — proves the read is live, not cached
+ZeKaiNie/universal-examprep-skill	355	355	0	21	0	floor
+Li-Evan/Bloom	293	293	0	43	1	floor
+SenmuuuuW/universal-diagnostic-tutor-skill	251	251	0	6	0	floor
+artcc/freelingo	209	209	0	55	0	floor
+zijinz456/OpenTutor	152	152	0	36	53	floor
+cortega26/chile-hub	135	135	0	12	7	floor
+portabilis/i-diario	117	117	0	62	51	floor
+ahmedEid1/lumen	91	91	0	40	0	floor
+Zenglian990/AI_Tutor_Release	74	74	0	25	1	floor
+ArnaudGuiovanna/tutor-mcp	56	56	0	9	2	floor
+InfinityZero3000/LexiLingo	49	49	0	7	12	floor
+TovTechOrg/Tov-learn	36	36	0	4	2	floor
+towardsai/ai-tutor-app	33	33	0	5	0	floor
+koukekoukej-glitch/feynman-tutor	32	32	0	5	0	floor
+portabilis/i-diario-app	29	29	0	23	0	floor
+portabilis/pre-matricula-digital	21	21	0	10	1	floor
+# RESULT: 16 of 19 rows at delta 0 over a ~1h interval. The hourly pass cadence is BELOW the
+# resolution of the star instrument for every row but the leader. Velocity needs a DAILY baseline.

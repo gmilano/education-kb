@@ -4,6 +4,155 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27` — **🟢 THREE GAPS CLOSE BY MEASUREMENT AND EACH ONE CORRECTS THE INSTRUMENT THAT FOUND IT. `Gap 485-X`: velocity exists but **16 of 19 rows are below the floor at a one-hour cadence** — this base runs hourly and its popularity instrument has a *daily* resolution. `Gap 485-Z`: `tutor-mcp`'s BKT is **real, read from Go** — and the source declares **two departures from canonical BKT its description never mentions**. `Gap 485-P`: `oppia` is **byte-identical** to canonical Apache-2.0 — and proving it exposed that this base's Apache baseline needs **two fingerprints, not one**.**
+
+🔵 Every licence figure below is **bytes fetched this pass** from `raw.githubusercontent.com`, with
+`sha256[:12]` recorded. Star figures are **re-read this pass** through the authenticated GitHub
+search channel. Evidence:
+[`star-velocity`](../evidence/star-velocity.2026-10-27-p486.tsv),
+[`bkt-source-read`](../evidence/bkt-source-read.2026-10-27-p486.tsv),
+[`apache-baseline-pair`](../evidence/apache-baseline-pair.2026-10-27-p486.tsv),
+[`agent-licence-bytes`](../evidence/agent-licence-bytes.2026-10-27-p486.tsv).
+
+🔴 **Gate posture, unchanged (`Gap 446-A`):** the industry KB is cloned outside the harness repo and
+the harness refuses execution of code arriving in a clone. 🔴 **This pass tried and was refused**
+(`Code from External`) — twelve denials in twelve passes. **Nothing here is gate-attested.**
+🟢 One gate was therefore **read rather than run**, and reading it found a live defect this base
+could not previously see: see [`intel/market.md`](../intel/market.md) and `Gap 486-O`.
+
+### 🟢 `Gap 485-Z` closed for the row that mattered — and reading the source *changed the row*
+
+🔵 `Gap 485-Z` said `tutor-mcp`'s BKT was "a claim by its author; neither Go nor Python was read."
+🟢 It is now read: [`algorithms/bkt.go`](https://github.com/ArnaudGuiovanna/tutor-mcp/blob/main/algorithms/bkt.go),
+**4 999 B**, `sha256[:12] = cceef09af3b5`, one of **97 code hits for `bkt`** spread across
+`algorithms/`, `engine/`, `db/` and `tools/`. 🟢 **The claim is true.** `BKTObserve` computes the
+genuine Bayesian posterior — `p(correct|mastery) = 1 − PSlip`, `p(correct|¬mastery) = PGuess` — with
+an explicit guard against a posterior for an impossible observation.
+
+🟡 **But the source says more than the description, in two places:**
+
+| | what the source does | canonical BKT | disclosed? |
+|---|---|---|---|
+| `BKTTransition` | `PMastery·(1−PForget) + (1−PMastery)·PLearn` | 🔴 Corbett & Anderson **fix forgetting at zero** | 🔴 **no** — `PForget` appears in no description |
+| `BKTUpdateHeuristicSlipByErrorType` | mutates slip/guess **per observation**: `SYNTAX_ERROR` → slip **+0.15**, `KNOWLEDGE_GAP` → guess **−0.10** | 🔴 slip and guess are **fixed per skill** | 🟢 **yes** — the file's own comment says so |
+
+🟢 **Why that is the useful result rather than a quibble.** A studio composing this as "a BKT MCP
+server" would get a model that **forgets** and whose slip/guess move with a classifier's error-type
+label. 🟢 Both are defensible extensions — forgetting is realistic, and error-type-conditioned slip
+is the obvious fix for "a typo is not a knowledge gap". 🔴 Neither is BKT as the literature defines
+it, and a client told "fifty years of cognitive science" is owed that distinction. 🟢 The row below
+now says so.
+
+### 🟢 `Gap 485-P` closed — and the baseline it tested is the thing that was wrong
+
+🟢 `oppia/oppia` serves **11 358 B**, `sha256[:12] = cfc7749b96f6`, and `diff` against
+`apache.org/licenses/LICENSE-2.0.txt` is **empty at both line and word level**: **0 deviations,
+byte-identical to the authoritative text.** Gap closed.
+
+🔴 **What closing it exposed.** `p485` recorded oppia at **11 357 B** — one byte short. That value is
+not a typo: **11 357 B / `c71d239df917` is a real and widely-served Apache-2.0 payload**, confirmed
+this pass from two independent repositories (`apache/.github` and
+`RobinaMirbahar/Python-Learning-Assistant`, byte-identical to each other). 🟢 It differs from
+`apache.org`'s copy by **exactly one byte: a single leading blank line.** Word diff: **0**.
+
+🟢 **So this base's Apache baseline is a PAIR, not a value:**
+
+| payload | bytes | `sha12` | word diff vs `apache.org` |
+|---|---|---|---|
+| `apache.org` authoritative | **11 358** | `cfc7749b96f6` | — |
+| GitHub licence-picker template | **11 357** | `c71d239df917` | **0** |
+
+🔴 A single-fingerprint baseline marks every repository that used GitHub's own licence picker as
+**deviating** — over a newline. That is a false-positive generator pointed straight at the most
+common way an Apache grant gets into a repository.
+
+🟢 **And a second separation falls out of the same diff.** `towardsai/ai-tutor-app` is **11 386 B**,
+28 B *over* canonical, with **13 word-level differences in exactly one hunk** — and that hunk sits at
+word ~1 500 of 1 585, **inside the APPENDIX**, which begins at word 1 415. The difference is
+`[yyyy]` / `[name of copyright owner]` replaced by `2024-2026 Towards AI, Inc. and the ai-tutor-app
+contributors`. 🟢 **That is what the Appendix instructs the licensee to do.** `p485`'s "0 deviations"
+verdict for this row is substantively right and now has a method behind it — but only because the
+instrument separates **operative-body deviation** from **Appendix instantiation**. 🔴 Conflating them
+would have reported a compliant repository as deviating, and the clause `p484` caught DeepTutor
+deviating *inside* — §4(d), the NOTICE obligation — would have been buried in the noise.
+
+### 🔴 A byte fingerprint taken at a branch ref does not survive the next pass
+
+🔴 `p485` recorded `uPortal-project/uPortal` at **11 358 B / `f841d74e27be`**, "0 deviations". 🔴 This
+pass reads the same path at `master` as **11 359 B / `5d7a488448b2`**. 🟢 The **word-level verdict
+reproduces exactly — 0 deviations.** The byte fingerprint does **not**.
+
+🔵 **The mechanism, and it is this base's own prior work.** `master/LICENSE` is a **moving ref**
+(`p419`'s `raw-ref-alias`). A `sha256` pinned to a branch name is a measurement of whatever that
+branch pointed at, at an unrecorded moment. 🟢 **The durable instrument is the word diff; the sha is
+only durable against a commit SHA.** Recorded as `Gap 486-B`.
+
+🟢 **A related slip this pass, and the base was already immune.** A first probe of uPortal at `main`
+returned a `200`-shaped body of **14 B** — the literal `404: Not Found`, `sha256[:12] = d5558cd419c8`.
+🟢 That fingerprint is already a named **REFUSAL** class in this base, built at `p256`/`p257` and
+reproduced independently as a test fixture. The instrument built two hundred passes ago caught
+`p486`'s own mistake. 🔵 No new finding — which is itself worth one line, because it is the first
+time an older gate has fired on a *current* pass's error.
+
+### 🟢 The shelf — nineteen rows, every licence from bytes, now with a velocity column
+
+| agent | ★ (`p486`) | Δ vs `p485` | licence (bytes) | `sha12` | what it is |
+|---|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **45 572** | 🟢 **+66** | 🔴 Apache-2.0 · 11 408 B, **6 operative deviations** (`p484`) | `cd2f54e1e506` | Agent-native lifelong tutoring platform. 5 730 forks, 211 open issues. The only row with measurable velocity at this cadence. |
+| [oppia/oppia](https://github.com/oppia/oppia) | 6 948 | +1 | 🟢 Apache-2.0 · 11 358 B · **0 deviations, byte-identical to canonical** | `cfc7749b96f6` | Nonprofit interactive-lesson platform, Python/Angular. 5 857 forks; the most-deployed permissive row here. |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | 720 | 🔴 **−1** | 🟡 GPL-2.0 · 18 091 B | — | Brazilian municipal school system, `software-publico`, national school-census module. 552 forks. |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 355 | 0 | 🟢 MIT · 1 064 B | `11b8094164f8` | Exam-prep coach **as an agent skill**. Slide-grounded with page citations; tuned for small cheap models. |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 293 | 0 | 🟢 MIT · 1 068 B | `315be3d6cf4a` | Bloom 2-sigma research as a Claude Code skill **plus** a self-hostable web app. Socratic, adaptive. |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 251 | 0 | 🟢 MIT · 1 101 B | `6311bbb879c9` | Diagnosis-first tutor with **no mode or command menu** — decides the next teaching step itself. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 209 | 0 | 🔴 **AGPL-3.0** · 34 514 B | `ea94d5765c59` | Self-hosted language learning: CEFR plans, voice, spaced repetition, Ollama. **Network copyleft — flagged.** |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 0 | 🟢 MIT · 1 067 B | `72c03c50ecf0` | Block-based adaptive workspace, **local-first**, 10+ providers, knowledge graph + spaced repetition. |
+| [cortega26/chile-hub](https://github.com/cortega26/chile-hub) | 135 | 0 | 🟢 MIT · 1 069 B | — | Curated, normalised Chilean public data including education. Polars/DuckDB/SQLite. |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | 117 | 0 | 🔴 **AGPL-3.0 in Portuguese translation only** · 35 325 B | `837b5cf19787` | Teacher gradebook for i-Educar. **Grant undefined — no English text (`p485`).** |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | **99** | 🆕 | 🟢 **MIT** · 1 062 B | `ceb97717de1f` | 🟢 **NEW — the first AI-native LMS on this shelf.** AI Mentor + role-play, SCORM/xAPI, white-label, self-hosted. Explicitly a Moodle/Docebo/Open edX alternative. TypeScript, 31 forks. |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 91 | 0 | 🔴 **GPL-3.0** · 35 148 B | `8b1ba204bb69` | Learner-owned platform: private course in ~a minute, course-scoped RAG with citations, BYOK, **MCP server, golden evals in CI**. |
+| [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 0 | 🟢 MIT · 1 067 B | `6beebb286c67` | **EduAgent** — RAG tutor purpose-built for grades 1–9, LanceDB, Socratic method. |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 0 | 🟢 MIT · 1 072 B | `6bce75979c68` | 🟢 **MCP server making any LLM an ITS. BKT now VERIFIED FROM GO** — with a `PForget` term and error-type-conditioned slip/guess, **neither of which is canonical BKT**. The cleanest composition seam here. |
+| [InfinityZero3000/LexiLingo](https://github.com/InfinityZero3000/LexiLingo) | 49 | 0 | 🟢 MIT · 1 068 B | `99000de8d84b` | Language tutor on a **Trace-CAG** pipeline targeting zero-hallucination pedagogical feedback. |
+| [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | **41** | 🆕 | 🟢 **MIT** · 1 065 B | `45fc137a7066` | 🟢 **NEW — the first African row this base has ever listed.** Content + Android app platform for low-resource schools. 68 forks. Found only via a **Swahili** query. |
+| [TovTechOrg/Tov-learn](https://github.com/TovTechOrg/Tov-learn) | 36 | 0 | 🟢 MIT · 1 063 B | `16aa56acdbea` | Claude Code skill: spaced repetition, personalised project examples, progress dashboard. |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 33 | 0 | 🟢 Apache-2.0 · 11 386 B · **0 operative deviations, 1 Appendix fill** | `7dc0f2a45a9e` | The clearest **agentic-RAG reference implementation** here: LangGraph + FastAPI + Next.js over a curated corpus. |
+| [koukekoukej-glitch/feynman-tutor](https://github.com/koukekoukej-glitch/feynman-tutor) | 32 | 0 | 🟢 MIT · 1 055 B | — | Inverts the loop — **the learner teaches the AI** to expose their own gaps. |
+| [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | **18** | 🆕 | 🟢 **MIT** · 1 094 B | `2c4797226a30` | 🟢 **NEW — the second BKT implementer on this base.** Knowledge graph (Neo4j) + local LLMs + **IRT *and* BKT** mastery modelling, privacy-first RAG. |
+
+🔵 **One row left this shelf at `p485`** (`braiinz-education`, 64★, no licence file at all). 🟢 **Two
+rows removed nothing this pass**; three rows **entered** (`mentingo`, `elimu-ai/webapp`,
+`adaptive-knowledge-graph`), all MIT and all verified from bytes.
+
+### 🟢 What the velocity column actually shows — `Gap 485-X` closed, with a cadence finding
+
+🔵 Nineteen rows re-read ~61 minutes after `p485`'s read.
+[`star-velocity`](../evidence/star-velocity.2026-10-27-p486.tsv) has every figure.
+
+🟢 **16 of 19 rows moved by zero.** 🟢 DeepTutor moved **+66**, and a deliberate re-read four minutes
+later showed **+7 more** — two independent samples agreeing on roughly **1.5 ★/min**, or about
+**1 600 ★/day**. 🔴 `portabilis/i-educar` moved **−1**: a star was *removed*. 🔵 That negative is
+worth as much as the positive — it proves these are live reads, not a cached field.
+
+🔴 **The finding is about this base, not about the rows.** The pass cadence is hourly; the star
+instrument's resolution at that interval is **one row in nineteen**. 🟢 So velocity is a real
+measurement for the leader and **noise-indistinguishable-from-zero for everything else**, and the
+right fix is not more frequent reading but a **daily baseline**. 🔵 `p484` and `p485` both deferred
+this column as expensive. It was cheap; it was simply pointed at the wrong interval.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 486-A`** | **Still nothing executed** — `Gap 485-M` / `484-A` / `483-A` / `446-A` carry forward. Nineteen rows are read, byte-probed, and now one is read as *source*; **none is run**. No tutor on this shelf has been shown to tutor. |
+| 🔴 **`Gap 486-B`** | **Byte fingerprints taken at a branch ref are not reproducible.** uPortal's sha did not reproduce one hour later while its word verdict did. Every `sha12` on these shelves taken at `main`/`master` inherits this. The fix is to record a commit SHA alongside; **not done for any existing row.** |
+| 🟡 **`Gap 486-C`** | **The Apache baseline pair is established from 3 payloads, not a census.** `cfc7749b96f6` and `c71d239df917` are confirmed word-identical, but this base has not re-graded its carried Apache rows against the pair — so earlier "deviation" verdicts on Apache rows may be newline artefacts. |
+| 🟡 **`Gap 486-D`** | **The operative/Appendix separation is implemented by hand, not by an instrument.** It was applied to `ai-tutor-app` by locating the hunk's word offset against the `APPENDIX:` token. Nothing gates it, and `p484`'s DeepTutor deviation count was **not** re-checked under the separation. |
+| 🟡 **`Gap 486-E`** | **Velocity has one interval and one meaningful row.** The ~1.5 ★/min figure rests on two samples minutes apart on a single repository. A daily baseline does not exist yet for any row. |
+| 🟡 **`Gap 486-F`** | **`adaptive-knowledge-graph`'s BKT and IRT are unread.** It enters as the second BKT implementer on description and topics alone — the exact error `Gap 485-Z` named, repeated knowingly for a new row. 66 open issues against 18★ is also ungraded. |
+| 🟡 **`Gap 486-G`** | **`mentingo` enters on its licence and description.** 103 open issues against 99★ is a high ratio that was noted and not investigated; no code, no SCORM/xAPI conformance, and no AI-Mentor implementation was read. |
+
+---
+
 ## 🆕 `p485` — `2026-10-27` — **🔴 A LICENCE FAILURE MODE THIS BASE HAS NEVER RECORDED: three Brazilian repositories' ONLY licence artifact is AGPL-3.0 **in Portuguese translation, with zero English text** — and the FSF's own position is that its translations are not legally operative. 🟢 Fifteen rows re-verified from bytes, the leader re-read at **45 506★**, and one 64★ row **removed from this shelf** for having no licence at all.**
 
 🔵 Every licence figure below is **bytes fetched this pass** from `raw.githubusercontent.com`, with

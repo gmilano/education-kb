@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27T18:45Z` — **Africa stops being dark and the cause was never supply: it was the ENGLISH LANGUAGE. One Swahili word surfaced a five-repository MIT platform that every prior English query on this base missed. 🔴 And the secondary channel this base distrusts on principle is now measured wrong by 2.7× on the leader.**
+
+🔵 Discovery ran through the **authenticated GitHub search channel**, with every licence claim then
+verified by fetching `LICENSE` from `raw.githubusercontent.com`. **Seven queries** this pass: one
+topic sweep and **six language-channel probes** aimed squarely at `Gap 485-Y`. Evidence:
+[`africa-language-instrument`](../evidence/africa-language-instrument.2026-10-27-p486.tsv),
+[`africa-licence-bytes`](../evidence/africa-licence-bytes.2026-10-27-p486.tsv),
+[`agent-licence-bytes`](../evidence/agent-licence-bytes.2026-10-27-p486.tsv),
+[`star-velocity`](../evidence/star-velocity.2026-10-27-p486.tsv).
+
+### 🟢 `Gap 485-Y` closed — and it closes the way `Gap 484-G` did, one qualifier at a time
+
+🔴 `Gap 485-Y` was recorded as an **undiagnosed** nil: *"Africa and the Middle East: no query run, no
+instrument tested."* 🟢 Four channels were tested this pass, and they do not all fail the same way:
+
+| channel | query | hits | instrument | education-AI rows |
+|---|---|---|---|---|
+| 🟢 **Swahili** | `elimu in:name,description,readme stars:>3` | 21 | **works** | 🟢 **7** |
+| 🔴 **Arabic** | `تعليم in:description,name,readme stars:>3` | 32 | **works** | 🔴 **0** |
+| 🔴 **French** | loose `OR` over `tuteur`/`éducation`/`apprentissage` | 3 829 | 🔴 **fails** | 0 |
+| 🔴 **French** | `topic:education topic:ai` + `Afrique`/`Sénégal`/`Côte` | 0 | inconclusive | 0 |
+| 🔴 **Portuguese-African** | `educação Angola OR Moçambique OR Cabo` | 180 | **works** | 🔴 **0 African** |
+
+🟢 **The Swahili channel is the whole finding.** `elimu` is Swahili for *education*, and it returned
+[`elimu-ai`](https://github.com/elimu-ai) — **a five-repository MIT-licensed platform aimed at
+low-resource African schools**, active today, which this base has never listed across 485 passes of
+English-language querying:
+
+| repository | ★ | licence (bytes) | `sha12` | what it is |
+|---|---|---|---|---|
+| [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | **41** | 🟢 MIT · 1 065 B | `45fc137a7066` | Content + Android app hosting platform. **68 forks against 41★** — a fork-heavy ratio that reads like deployment, not stargazing. |
+| [elimu-ai/appstore](https://github.com/elimu-ai/appstore) | 29 | 🟢 MIT · 1 065 B | `45fc137a7066` | On-device APK distribution — **installs and updates without a network**. Kotlin. |
+| [elimu-ai/ml-authentication](https://github.com/elimu-ai/ml-authentication) | 16 | 🟢 MIT · 1 065 B | `203d7d837ceb` | 🔴 **Student login by face recognition**, TensorFlow, on-device. See the risk note below. |
+| [elimu-ai/wiki](https://github.com/elimu-ai/wiki) | 13 | 🟢 MIT · 1 065 B | `203d7d837ceb` | Project docs, localisation, **Aragon DAO** governance. |
+| [elimu-ai/launcher](https://github.com/elimu-ai/launcher) | 9 | 🟢 MIT · 1 065 B | `45fc137a7066` | Android launcher enforcing an **EGRA/EGMA** literacy-and-numeracy path. |
+
+🔵 The two `sha12` values differ **only in the copyright year** (2020 vs 2022); both are stock MIT at
+1 065 B. 🟢 Five repositories, one owner, uniformly permissive — **the cleanest licence posture of any
+multi-repository group on this base.**
+
+🟢 **Two more rows from the same channel, graded honestly:**
+[`CodeForAfrica/HURUmap-apps`](https://github.com/CodeForAfrica/HURUmap-apps) (13★, 🟢 MIT · 1 078 B
+`c97429cbe41f`) is census and demographic data **including education** for Kenya, Tanzania, Uganda
+and Zambia — the regional data layer `chile-hub` is for LATAM. 🔴
+[`mwakidenis/Elimu-Sasa`](https://github.com/mwakidenis/Elimu-Sasa) (15★, Kenyan curriculum
+platform) has **no licence file at any of eight probed paths** and is therefore **not usable**,
+however relevant.
+
+🔴 **The one row here that needs a warning, not a recommendation.** `ml-authentication` authenticates
+children by **face recognition**. 🟢 On-device inference is the right architecture for it and the MIT
+grant is clean. 🔴 But biometric processing of minors is precisely what NYC's March 2026 guidance
+bars without strict oversight and what the EU AI Act's Annex III treats as high-risk in an education
+setting. 🔵 It belongs on this shelf as **a component with a compliance gate in front of it**, and
+this base should not list it without that sentence attached.
+
+### 🟡 Arabic: the nil is real and now diagnosed, which is the point of running it
+
+🟢 The Arabic channel **works** — `تعليم` returned 32 repositories with genuinely Arabic
+descriptions, among them Arabic-language ML curricula and study toolkits. 🔴 **None is an
+education-AI agent.** 🟢 So the Middle East nil on this base is no longer silence that looks like
+coverage: the instrument was tested, it returned content, and the content was not agents. 🔵 That is
+a materially different statement from `p485`'s, and it is the one `Gap 485-Y` asked for.
+
+🔴 **The French channel, by contrast, failed as an instrument and is recorded as such.** A loose
+`OR` over three French education words returned **3 829 hits led by `awesome-mac` and `fzf`** — the
+`OR` applies to free text and the ranking collapsed to global popularity. The tightened form
+returned **0**. 🟡 Francophone Africa is therefore **still unmeasured**, now with a diagnosis of the
+query rather than of the region (`Gap 486-H`).
+
+🔴 **And Portuguese is saturated, not empty.** 180 hits, every one of them **Brazilian** — Angola,
+Moçambique and Cabo Verde contributed nothing. 🔵 Brazil's open-source education output is large
+enough to crowd lusophone Africa out of its own language channel.
+
+### 🟢 Entering the panel this pass — licences from bytes
+
+| repository | ★ | licence (bytes) | why it enters |
+|---|---|---|---|
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | **99** | 🟢 MIT · 1 062 B `ceb97717de1f` | 🟢 **The first AI-native LMS on this base, and it is MIT.** AI Mentor + role-play, SCORM **and** xAPI, white-label, self-hosted — it names Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX as what it replaces. 🔵 Every incumbent it names is **GPL, AGPL or proprietary**; see `T486-2`. 31 forks, 103 open issues. |
+| [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | 18 | 🟢 MIT · 1 094 B `2c4797226a30` | 🟢 **Second BKT implementer on this base** — and the first to pair **IRT *and* BKT** with a Neo4j knowledge graph and local LLMs. 🔴 Unread (`Gap 486-F`). 66 open issues against 18★. |
+| [fangyuan-3149/book-learning-tutor](https://github.com/fangyuan-3149/book-learning-tutor) | 12 | 🟡 MIT · **1 503 B** `54ceeac19921` | Agent skill turning a local book into a course. 🔵 Enters for its **licence**, not its size — see `T486-3`: the payload carries **402 non-ASCII bytes** of appended Chinese, and this is the *safe* form of `p485`'s translated-licence failure. |
+| [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | 6 | 🟢 MIT · 1 067 B `c83a57edd27c` | 🟢 **A host this base had not recorded: DeepSeek Harness.** Created **2026-10-18** — nine days old. Teaches on a handwritten blackboard with spaced repetition. Small, but it is the evidence that `T485-1`'s skill form is spreading to **new hosts**, not just new authors. |
+| [gregor-dietrich/aimathtutor](https://github.com/gregor-dietrich/aimathtutor) | 5 | 🟢 MIT · 1 105 B `812510aa6963` | The **only JVM row** on this base — Java/Quarkus/Vaadin — and it integrates **Graspable Math**, a real algebra-manipulation engine rather than an LLM asked to do algebra. |
+| [RobinaMirbahar/Python-Learning-Assistant](https://github.com/RobinaMirbahar/Python-Learning-Assistant) | 5 | 🟢 Apache-2.0 · **11 357 B** `c71d239df917` | 🔵 Enters for **methodological** reasons: its licence payload is byte-identical to `apache/.github`'s, which is what established this base's Apache baseline **pair**. Streamlit + Gemini. |
+
+### 🔴 The secondary channel, measured against first-hand reads — and it is wrong by 2.7×
+
+🔵 Four web searches ran this pass alongside the GitHub channel. 🔴 On the one claim where both
+channels overlap, the secondary channel is **badly** wrong:
+
+| claim | secondary channel (web/aggregator) | first-hand this pass | error |
+|---|---|---|---|
+| DeepTutor stars | **"crossed 17 000"** | **45 572** (search API) | 🔴 **2.7× understated** |
+| DeepTutor licence | *"The results did not state its license"* | **Apache-2.0**, 11 408 B from bytes | 🔴 absent |
+| TutorGPT licence | *"one listing says GPL-3.0"* | not verified here | 🟡 hearsay-of-hearsay |
+
+🟢 **This is worth recording because it is the first time this base has scored the secondary channel
+against its own primary reads on the same object.** The aggregators did not merely lag — one of them
+reported a star count this base itself had carried and corrected (`~22k` at `p54`). 🔵 The practice
+of verifying every licence from bytes is not fastidiousness; on the single overlapping datum the
+cheap channel was off by a factor of nearly three.
+
+### 🔴 What this pass did **not** find, recorded so the silence is not mistaken for coverage
+
+🔴 **No daily velocity baseline exists.** `Gap 485-X` is closed, but with the finding that a one-hour
+interval resolves **1 row in 19** — so this panel has velocity for DeepTutor and nothing else
+(`Gap 486-E`).
+
+🔴 **Francophone Africa: two query forms, both unusable.** Unlike the Swahili and Arabic channels,
+this one produced neither rows nor a usable nil (`Gap 486-H`).
+
+🔴 **No South Asian or Southeast Asian language channel was tried** — no Hindi, Bengali, Urdu,
+Bahasa or Tagalog query, despite the Swahili result being a direct argument for running them. This
+is an **undiagnosed** nil of exactly the kind `Gap 485-Y` was, and it is registered rather than
+quietly skipped (`Gap 486-I`).
+
+🔴 **`braiinz-education` (64★) remains unverified for a third pass** — removed from `agents/top.md`
+at `p485` for having no licence, never since re-probed.
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 486-H`** | **Francophone Africa unmeasured, with the query diagnosed rather than the region.** A loose `OR` saturates; a topic-pair returns nothing. A third form — owner enumeration over known Senegalese/Ivorian/Moroccan orgs — was not tried. |
+| 🔴 **`Gap 486-I`** | **No South or Southeast Asian language channel tested.** The Swahili result makes this the highest-value untried instrument on the base, and it was not run this pass. |
+| 🟡 **`Gap 486-J`** | **`elimu-ai` enters on licence bytes, fork ratios and descriptions.** No source was read; the EGRA/EGMA claim, the on-device face-recognition pipeline and the Aragon DAO governance are all unverified. The 68-forks-to-41★ ratio is suggestive of deployment and is **not** evidence of it. |
+| 🟡 **`Gap 486-K`** | **The secondary-channel error is scored on one object.** DeepTutor's 2.7× gap is a single datum; it is not a measured error rate for web sources. |
+
+---
+
 ## 🆕 `p485` — `2026-10-27T17:40Z` — **the five-interval LATAM nil ENDS, and the leader's star figure turns out to have been understated by this base for its whole history**
 
 🔵 Discovery ran through the **authenticated GitHub search channel** (`topic:`, `in:description`,

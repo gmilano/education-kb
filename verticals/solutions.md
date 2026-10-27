@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27` — **🟢 THIS SHELF HAS CARRIED NINE PLATFORMS AND NOT ONE OF THEM WAS RELICENSABLE. `Selleo/mentingo` is **MIT**, verified from bytes, and it names six of this shelf's own incumbents as what it replaces. 🔴 And a fingerprint this shelf recorded one hour ago does not reproduce — the word verdict does.**
+
+🔵 Licence figures are **bytes fetched this pass**. Evidence:
+[`agent-licence-bytes`](../evidence/agent-licence-bytes.2026-10-27-p486.tsv),
+[`apache-baseline-pair`](../evidence/apache-baseline-pair.2026-10-27-p486.tsv).
+
+### 🟢 The permissive hole in this shelf, and the row that fills it
+
+🔵 `p485` read nine platforms from bytes. 🔴 **Grading them on the one axis a studio engagement
+actually turns on — can the client be handed something they may relicense and white-label? — all
+nine fail:**
+
+| platform | licence (byte-verified) | relicensable? |
+|---|---|---|
+| `moodle/moodle` | GPL-3.0 · 35 146 B `c53a65c2fd56` | 🔴 no |
+| `openedx/edx-platform` | AGPL-3.0 · 35 135 B `106a1b4b8b71` | 🔴 no — network copyleft |
+| `chamilo/chamilo-lms` | GPL-3.0 · 35 146 B `c53a65c2fd56` | 🔴 no |
+| `ILIAS-eLearning/ILIAS` | GPL-3.0 · 35 146 B `c53a65c2fd56` | 🔴 no |
+| `sakaiproject/sakai` | ECL-2.0 · 11 119 B `efbb3e5a1b9a` | 🟡 permissive, **narrowed patent grant** (`p485`) |
+| `uPortal-project/uPortal` | Apache-2.0 · see below | 🟢 yes — but a **portal**, not an LMS |
+| `tsugiproject/tsugi` | Apache-2.0 · 10 272 B `9ff562631a04` | 🟢 yes — but an **LTI broker**, not an LMS |
+| `learningequality/kolibri` | MIT · 1 096 B `fa4c9d2697f9` | 🟢 yes — **offline content delivery**, not an LMS |
+| `openeducat/openeducat_erp` | LGPL-3.0 · 8 240 B `8f4ce028f93d` | 🟡 ERP, weak copyleft on the Odoo stack |
+
+🟢 **So the permissive rows on this shelf were a portal, an LTI broker, an offline content player and
+an Odoo ERP module. There was no permissive LMS at all.**
+
+🟢 **[`Selleo/mentingo`](https://github.com/Selleo/mentingo) — MIT · 1 062 B · `sha12 ceb97717de1f`,
+fetched this pass — is one.** 99★, 31 forks, TypeScript, self-hosted, **SCORM and xAPI**,
+white-label, with an **AI Mentor and role-play built in rather than bolted on**. 🔵 Its own
+description names Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX as what it replaces —
+**six incumbents, of which this shelf independently verifies two as copyleft and the rest are
+proprietary SaaS.**
+
+🟢 **The operational consequence, stated plainly.** A client engagement needing a brandable learning
+platform previously had three options on this shelf: accept GPL/AGPL and the obligations that come
+with it, buy a SaaS seat, or build. 🟢 There is now a fourth, and it is MIT. 🔵 For a studio that
+must hand over relicensable work this is the most consequential single row added to this shelf in
+some time.
+
+🟡 **Graded with its limits, which are real.** 🔴 **103 open issues against 99★** is a high ratio for
+a project proposing to replace Moodle; nothing was read to explain it. No source, no SCORM
+conformance test, no xAPI conformance test, and no AI-Mentor implementation was inspected. It enters
+on **licence bytes and self-description** (`Gap 486-G`). 🔵 At 99★ against Moodle's install base it
+is a **starting point to evaluate**, not a migration target to propose.
+
+### 🔴 `uPortal`'s fingerprint does not reproduce — and the word verdict does
+
+🔴 `p485` recorded `uPortal-project/uPortal` on this shelf at **11 358 B / `f841d74e27be`**, verdict
+*"0 deviations — byte-identical to `apache.org` canonical"*. 🔴 Re-read this pass at the same path:
+**11 359 B / `5d7a488448b2`**.
+
+🟢 **The verdict survives.** Word-level diff against `apache.org`'s canonical text is **0** — the
+grant is textually identical. 🔴 **The fingerprint does not survive**, and neither value equals
+`apache.org`'s own `cfc7749b96f6` at 11 358 B, so `p485`'s "byte-identical to canonical" was never
+literally true on the bytes it recorded.
+
+🔵 **The mechanism is this base's own prior work.** Both reads were taken at `master/LICENSE`, a
+**moving ref** (`p419`'s `raw-ref-alias`). 🟢 **The durable instrument is the word diff; a `sha256` is
+durable only against a commit SHA** — which no row on this shelf carries (`Gap 486-B`).
+
+🔵 **A related slip, caught by a gate from 230 passes ago.** A first probe at `main/LICENSE` returned
+a **14 B** body — the literal `404: Not Found`, `sha256[:12] = d5558cd419c8` — which is already a
+named **REFUSAL** class here (`p256`/`p257`). 🟢 It was rejected automatically. The old instrument
+caught the current pass's error, which is what instruments are for.
+
+### 🟢 Carried forward unchanged
+
+🔵 `kolibri` (MIT, offline-first content) remains the right pairing for the `elimu-ai` offline stack
+now on [`repos/foundations.md`](../repos/foundations.md) — see
+[`compose/patterns.md`](../compose/patterns.md) `P486-2`. 🔵 `openeducat_erp` remains the only
+student-information/ERP row; `tsugi` remains the only LTI broker and therefore the seam by which any
+agent on `agents/top.md` reaches **any** of these platforms.
+
+---
+
 ## 🆕 `p485` — `2026-10-27` — **🟢 BOTH CHEAP CLOSURES THIS SHELF OWED ARE PAID, AND ONE OF THEM IS A LICENCE CORRECTION ON THIS SHELF'S OWN DATA: `sakaiproject/sakai` is **ECL-2.0**, not the Apache-2.0 this shelf has carried. 🔴 And `Gap 484-U` closes with a result that **inverts the obvious instrument**: ILIAS, which a file-count census ranks DEAD LAST at one file per language, has the most complete Spanish and Portuguese localisation of any platform here — 99.99 % of the English key set.**
 
 🔵 `Gap 484-T` and `Gap 484-U` were both named by `p484` as owed to this shelf, one as "a cheap closure

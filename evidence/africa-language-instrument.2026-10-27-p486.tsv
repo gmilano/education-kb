@@ -1,0 +1,10 @@
+# p486 — closing Gap 485-Y: Africa / Middle East, four language channels tested.
+# Gap 485-Y recorded an UNDIAGNOSED nil. This file is the diagnosis.
+channel	query_form	total_hits	instrument_works	education_ai_rows_found	verdict
+Swahili	elimu in:name,description,readme stars:>3	21	YES	7	🟢 PRODUCTIVE — found elimu-ai (5 repos), Elimu-Sasa, HURUmap
+Arabic	تعليم in:description,name,readme stars:>3	32	YES	0	🔴 DIAGNOSED NIL — channel returns Arabic-described repos, none an education-AI agent
+French	tuteur OR éducation OR apprentissage IA in:description,readme stars:>8	3829	NO	0	🔴 INSTRUMENT FAILURE — loose OR saturates with global dev tooling
+French	topic:education topic:ai Afrique OR Sénégal OR Côte in:description	0	INCONCLUSIVE	0	🔴 NIL — topic-pair plus French geography returns nothing
+Portuguese-African	educação Angola OR Moçambique OR Cabo in:description stars:>2	180	YES	0	🔴 SATURATED — all 180 hits Brazilian; zero lusophone-African rows
+# RESULT: Africa is NOT dark. The instrument was the ENGLISH LANGUAGE. One Swahili word
+# surfaced a five-repository MIT platform that every prior English query missed.

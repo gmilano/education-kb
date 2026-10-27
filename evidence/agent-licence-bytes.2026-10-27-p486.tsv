@@ -1,0 +1,9 @@
+# p486 — new entrants this pass, licences fetched from raw.githubusercontent.com. Probe order:
+# {main,master} x {LICENSE,LICENSE.md,LICENSE.txt,COPYING}; a <=50 B 200 body is treated as not-a-grant.
+slug	stars	ref	file	bytes	sha256_12	licence	what it is
+Selleo/mentingo	99	main	LICENSE	1062	ceb97717de1f	MIT	AI-native LMS with AI Mentor + role-play; SCORM/xAPI, white-label; self-hosted Moodle/Docebo/Open edX alternative. TypeScript, 31 forks.
+MysterionRise/adaptive-knowledge-graph	18	main	LICENSE	1094	2c4797226a30	MIT	Knowledge graph + local LLM + IRT/BKT mastery modelling, Neo4j, privacy-first RAG. SECOND BKT implementer on this base.
+fangyuan-3149/book-learning-tutor	12	main	LICENSE	1503	54ceeac19921	MIT + appended CJK scope notice	Agent skill: turns a local book into a course. 402 non-ASCII bytes appended; English grant PRESENT.
+BaronCyrus/dsh-aha-tutor	6	main	LICENSE	1067	c83a57edd27c	MIT	Skill for DeepSeek Harness — a HOST this base had not recorded. Handwritten-blackboard teaching. Created 2026-10-18.
+gregor-dietrich/aimathtutor	5	main	LICENSE.md	1105	812510aa6963	MIT	Java/Quarkus + Vaadin, Graspable Math integration. Only JVM row on this base.
+RobinaMirbahar/Python-Learning-Assistant	5	main	LICENSE	11357	c71d239df917	Apache-2.0 (GitHub template payload)	Streamlit + Gemini Python tutor. Its licence payload is what established the baseline PAIR above.

@@ -1,0 +1,36 @@
+# p486 — every github.com URL introduced this pass, probed with `git ls-remote --exit-code -h`.
+# Method discriminates: a fabricated slug (gmilano/this-repo-does-not-exist-xyz123) FAILS.
+# github.com HTML and api.github.com are both 403 through this proxy; ls-remote and raw.githubusercontent.com are not.
+verdict	slug
+OK	ArnaudGuiovanna/tutor-mcp
+OK	BaronCyrus/dsh-aha-tutor
+OK	CodeForAfrica/HURUmap-apps
+OK	HKUDS/DeepTutor
+OK	InfinityZero3000/LexiLingo
+OK	Li-Evan/Bloom
+OK	MysterionRise/adaptive-knowledge-graph
+OK	RobinaMirbahar/Python-Learning-Assistant
+OK	Selleo/mentingo
+OK	SenmuuuuW/universal-diagnostic-tutor-skill
+OK	TovTechOrg/Tov-learn
+OK	ZeKaiNie/universal-examprep-skill
+OK	Zenglian990/AI_Tutor_Release
+OK	ahmedEid1/lumen
+OK	artcc/freelingo
+OK	cortega26/chile-hub
+OK	elimu-ai/appstore
+OK	elimu-ai/launcher
+OK	elimu-ai/ml-authentication
+OK	elimu-ai/webapp
+OK	elimu-ai/wiki
+OK	fangyuan-3149/book-learning-tutor
+OK	gregor-dietrich/aimathtutor
+OK	koukekoukej-glitch/feynman-tutor
+OK	learningequality/kolibri
+OK	mwakidenis/Elimu-Sasa
+OK	oppia/oppia
+OK	portabilis/i-diario
+OK	portabilis/i-educar
+OK	towardsai/ai-tutor-app
+OK	zijinz456/OpenTutor
+# 31 probed, 31 OK, 0 FAIL.

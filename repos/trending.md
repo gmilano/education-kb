@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27T18:45Z` — **the AI-native LMS arrives as a repository rather than a plugin, and it is MIT in a field where every incumbent it names is copyleft or closed**
+
+🔵 Discovery through the authenticated GitHub search channel; licences from
+`raw.githubusercontent.com`. Evidence:
+[`agent-licence-bytes`](../evidence/agent-licence-bytes.2026-10-27-p486.tsv),
+[`africa-licence-bytes`](../evidence/africa-licence-bytes.2026-10-27-p486.tsv),
+[`apache-baseline-pair`](../evidence/apache-baseline-pair.2026-10-27-p486.tsv).
+
+### 🟢 Trending into this shelf
+
+| repo | ★ | licence (bytes) | signal |
+|---|---|---|---|
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | **99** | 🟢 MIT · 1 062 B `ceb97717de1f` | 🟢 **An LMS built AI-first instead of an LMS with an AI plugin.** AI Mentor, role-play, SCORM + xAPI, white-label, self-hosted. TypeScript, 31 forks, **103 open issues**. |
+| [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | 41 | 🟢 MIT · 1 065 B `45fc137a7066` | 🟢 **68 forks against 41★.** The only row on this shelf forked more than starred — the shape of software that gets deployed rather than admired. |
+| [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | 18 | 🟢 MIT · 1 094 B `2c4797226a30` | **IRT + BKT + Neo4j + local LLM** in one repo. The mastery-modelling stack this base has only had in pieces. 🔴 Unread. |
+| [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | 6 | 🟢 MIT · 1 067 B `c83a57edd27c` | 🟢 **New host: DeepSeek Harness.** Created **2026-10-18**. Tiny, but it is the first row targeting a host outside the Claude Code / Cursor / Codex / Windsurf / Antigravity set. |
+| [gregor-dietrich/aimathtutor](https://github.com/gregor-dietrich/aimathtutor) | 5 | 🟢 MIT · 1 105 B `812510aa6963` | Only **JVM** row on this base (Quarkus + Vaadin), and it drives **Graspable Math** rather than asking an LLM to do algebra. |
+
+### 🟢 The licence asymmetry `mentingo` creates, stated precisely
+
+🔵 `mentingo` names its own replacements: Moodle, Docebo, TalentLMS, Thinkific, Teachable, Open edX.
+🟢 Cross-referencing this base's own byte-verified vertical reads:
+
+| incumbent | licence (byte-verified on this base) | relicensable by a studio? |
+|---|---|---|
+| `moodle/moodle` | 🔴 **GPL-3.0** · 35 146 B `c53a65c2fd56` | no |
+| `openedx/edx-platform` | 🔴 **AGPL-3.0** · 35 135 B `106a1b4b8b71` | no — network copyleft |
+| Docebo / TalentLMS / Thinkific / Teachable | 🔴 proprietary SaaS | no |
+| 🟢 **`Selleo/mentingo`** | 🟢 **MIT** · 1 062 B `ceb97717de1f` | 🟢 **yes** |
+
+🟢 **That is a real gap in this base's inventory now filled.** Every LMS this shelf carried was
+copyleft; a client that needs a white-labelled, relicensable learning platform had **no** permissive
+starting point. 🟡 It enters on its licence and description — 103 open issues against 99★ was noted
+and not investigated, and no AI-Mentor code, SCORM conformance or xAPI conformance was read
+(`Gap 486-G`).
+
+### 🔴 A methodological row, entering for what its licence payload proved
+
+🔵 [`RobinaMirbahar/Python-Learning-Assistant`](https://github.com/RobinaMirbahar/Python-Learning-Assistant)
+(5★, Streamlit + Gemini) serves Apache-2.0 at **11 357 B / `c71d239df917`** — **byte-identical to
+`apache/.github`'s**. 🟢 Two unrelated repositories agreeing establishes that payload as the
+**GitHub licence-picker template**, one leading blank line shorter than `apache.org`'s 11 358 B
+`cfc7749b96f6`, **word-identical**. 🔴 The practical consequence is on `repos/foundations.md`: a
+single-fingerprint Apache baseline flags template users as deviating.
+
+### 🔴 Not found, recorded
+
+🔴 **No new non-English-language repository outside Swahili.** Arabic returned content but no agents;
+French failed as an instrument twice; Portuguese returned 180 Brazilian rows and zero African ones
+(`Gap 486-H`). 🔴 **No Hindi, Bengali, Urdu, Bahasa or Tagalog channel was tried at all**
+(`Gap 486-I`).
+
+🔴 **No velocity for any row on this shelf.** The one-hour pass interval resolves star movement for
+exactly one repository on this base, and it is not here (`Gap 486-E`).
+
+---
+
 ## 🆕 `p485` — `2026-10-27T17:40Z` — **the discovery channel `p484` declared broken is FIXED, and the fix is one qualifier rather than the owner list it proposed**
 
 🔵 Four queries. The first is reported as an **instrument result**, because that is the headline.

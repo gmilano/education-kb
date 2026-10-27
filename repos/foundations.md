@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27` — **🟢 THE FIRST AFRICAN FOUNDATION SET THIS BASE HAS EVER CARRIED — five MIT repositories, licences from bytes — and a baseline correction that touches every Apache row on every shelf: canonical Apache-2.0 is a PAIR of fingerprints, not one.**
+
+🔵 Every licence figure is **bytes fetched this pass**. Evidence:
+[`africa-licence-bytes`](../evidence/africa-licence-bytes.2026-10-27-p486.tsv),
+[`apache-baseline-pair`](../evidence/apache-baseline-pair.2026-10-27-p486.tsv).
+
+🔴 **Gate posture (`Gap 446-A`):** **not gate-attested.** Execution was attempted this pass and
+refused (`Code from External`). One gate was read instead of run, and failing its contract by hand
+is recorded on [`intel/market.md`](../intel/market.md) as `Gap 486-O`.
+
+### 🟢 A foundation set for low-resource and offline-first deployment
+
+🔵 This shelf's existing foundations assume a server, a network and a browser. 🟢 `elimu-ai` assumes
+**none of those**, and that is why it belongs here rather than only on the agents shelf:
+
+| repo | licence | bytes | `sha12` | why it is a foundation |
+|---|---|---|---|---|
+| [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | 🟢 **MIT** | 1 065 | `45fc137a7066` | Spring + REST content platform with a CMS and an OER model. **68 forks / 41★** — forked more than starred, which is what a platform people *deploy* looks like. |
+| [elimu-ai/appstore](https://github.com/elimu-ai/appstore) | 🟢 **MIT** | 1 065 | `45fc137a7066` | 🟢 **Distributes and updates APKs with no network.** This is the piece every "AI tutor for underserved schools" proposal assumes exists and never names. Kotlin. |
+| [elimu-ai/launcher](https://github.com/elimu-ai/launcher) | 🟢 **MIT** | 1 065 | `45fc137a7066` | Android launcher that constrains the device to an **EGRA/EGMA** instructional path — the standard early-grade reading and maths assessments. A kiosk layer with pedagogy built in. |
+| [elimu-ai/ml-authentication](https://github.com/elimu-ai/ml-authentication) | 🟢 **MIT** | 1 065 | `203d7d837ceb` | On-device TensorFlow face recognition for student login — solves shared-device identity with no accounts. 🔴 **Biometrics on minors: compliance gate required before use.** |
+| [elimu-ai/wiki](https://github.com/elimu-ai/wiki) | 🟢 **MIT** | 1 065 | `203d7d837ceb` | Localisation and governance docs; an **Aragon DAO** funds the work. |
+| [CodeForAfrica/HURUmap-apps](https://github.com/CodeForAfrica/HURUmap-apps) | 🟢 **MIT** | 1 078 | `c97429cbe41f` | Census and demographic data **including education** for Kenya, Tanzania, Uganda, Zambia. The regional data layer, as `chile-hub` is for LATAM. |
+
+🟢 **Why this is a genuine foundation rather than five more rows.** Offline-first delivery is the
+binding constraint in exactly the markets where tutoring has the most headroom, and the three
+pieces it needs — content hosting, network-free app distribution, and a constrained device shell —
+are here, **under one owner, uniformly MIT, and all currently maintained.** 🔵 `appstore` and
+`launcher` have no equivalent anywhere else on this base.
+
+🟡 **Stated with its limit:** these rows are graded on **licence bytes, fork ratios and
+descriptions**. No source was read, and the EGRA/EGMA, face-recognition and DAO claims are the
+authors' (`Gap 486-J`).
+
+### 🔴 The Apache baseline was one fingerprint and should always have been two
+
+🔵 Closing `Gap 485-P` required a canonical reference to diff against, and testing the reference
+found the defect:
+
+| payload | bytes | `sha12` | word diff vs `apache.org` | what it is |
+|---|---|---|---|---|
+| `apache.org/licenses/LICENSE-2.0.txt` | **11 358** | `cfc7749b96f6` | — | 🟢 the authoritative text |
+| `apache/.github` `LICENSE` | **11 357** | `c71d239df917` | 🟢 **0** | the **GitHub licence-picker template** |
+| `RobinaMirbahar/Python-Learning-Assistant` | **11 357** | `c71d239df917` | 🟢 **0** | byte-identical to the template — two unrelated repos agree |
+
+🟢 **The entire difference is one leading blank line.** Word diff: zero. 🔴 **So a baseline holding
+only `cfc7749b96f6` reports every repository that used GitHub's own licence picker as *deviating
+from Apache-2.0*.** That is a false positive aimed at the most common path by which an Apache grant
+enters a repository — and it is the direct cause of `p485` recording `oppia` at 11 357 B when oppia
+in fact serves **11 358 B** (`cfc7749b96f6`, byte-identical to canonical, **0 deviations**).
+
+🟢 This base already proved the value of a multi-repository fingerprint agreement once: `p485` found
+Moodle, Chamilo and ILIAS serving **byte-identical** GPL-3.0 (`c53a65c2fd56`) and promoted it to a
+baseline because `gnu.org` is unreachable through this proxy. 🟢 The same reasoning applies here,
+and gives the permissive side a pair. 🟡 **Not yet a census** — the carried Apache rows on these
+shelves have **not** been re-graded against the pair (`Gap 486-C`).
+
+### 🔴 And one instrument caveat that applies to every fingerprint on this shelf
+
+🔴 `uPortal-project/uPortal` was recorded by `p485` at **11 358 B / `f841d74e27be`**; it reads
+**11 359 B / `5d7a488448b2`** one hour later. 🟢 The **word verdict reproduced — 0 deviations.** The
+sha did not. 🔵 Both reads were taken at `master/LICENSE`, a **moving ref** (`p419`). A `sha256`
+pinned to a branch name measures whatever that branch pointed at, at an unrecorded moment. 🟢 **The
+word diff is the durable instrument; the sha is durable only against a commit SHA** (`Gap 486-B`).
+
+---
+
 ## 🆕 `p485` — `2026-10-27` — **🟢 A FOUNDATION THIS SHELF HAS NEVER LISTED, AND IT IS THE MOST DEPLOYED EDUCATION CODEBASE IN LATIN AMERICA: `portabilis/i-educar` — 721★ against **552 forks**, GPL-2.0, PHP/Laravel, with a module that files Brazil's national school census. 🔴 Its sibling `i-diario` fails this shelf's licence bar for a reason no prior instrument could detect.**
 
 🔵 This shelf's test is whether a repository is something **others build on**. Fork-to-star ratio is

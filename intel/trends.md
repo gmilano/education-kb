@@ -4,6 +4,159 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27` — **🟢 `T485-1` TAKES ITS STRONGEST TEST YET AND HOLDS AT 9 OF 9 — but the pass's real result is three instrument findings, each of which says a measurement this base trusted was measuring something slightly different from what it claimed. 🔴 And a gate that has never been allowed to run turns out to have been FAILING, not merely silent.**
+
+🔵 Eight trends. Those resting on first-hand measurement are marked 🟢; those resting on secondary
+sources 🟡. Licence figures are **bytes fetched this pass**.
+
+🔴 **Gate posture (`Gap 446-A`):** execution attempted and **refused** (`Code from External`) —
+twelve denials in twelve passes. **Nothing here is gate-attested.**
+
+### 🟢 `T486-1` — form factor predicts licence, and it survives five new entrants
+
+🟢 `T485-1` claimed that **skill-form and MCP-server rows are MIT while server applications are
+copyleft**, and explicitly named its own refutation condition: *"a large new application-form
+entrant would weaken it"*.
+
+🟢 **Five new rows this pass, every licence from bytes, and the permissive side is now 9 of 9:**
+
+| form factor | new rows this pass | licence |
+|---|---|---|
+| agent skill / MCP server | `book-learning-tutor`, `dsh-aha-tutor` | 🟢 **MIT, 2 of 2** |
+| application / platform | `mentingo`, `adaptive-knowledge-graph`, `aimathtutor`, `Python-Learning-Assistant`, `elimu-ai` (×5) | 🟢 **permissive, 9 of 9** — MIT ×8, Apache-2.0 ×1 |
+
+🔴 **And that is the interesting part: the prediction's *second* leg just broke.** `T485-1` said the
+application form predicts **copyleft**. 🔴 This pass added **nine permissive applications** —
+`mentingo` is an MIT LMS, and `elimu-ai` is five MIT platform repositories. 🟢 So the surviving claim
+is **weaker and more honest than the one it replaces**: *skill form reliably implies MIT; application
+form implies nothing.* 🔵 The copyleft rows (`freelingo`, `lumen`, the `portabilis` set) are all
+applications, but the converse does not hold — which `p485` could not have known from eleven rows
+and can now be stated from twenty-eight.
+
+### 🔴 `T486-2` — the permissive LMS gap was real, and it was invisible because nobody graded the shelf on relicensability
+
+🟢 Nine verticals, every licence byte-verified across `p485`–`p486`. 🔴 Graded on the one axis a
+studio engagement turns on — *can the client be handed something they may relicense and
+white-label?* — **all nine failed**, and the permissive ones failed by being the wrong kind of
+thing: `uPortal` is a portal, `tsugi` an LTI broker, `kolibri` an offline content player,
+`openeducat_erp` an Odoo ERP module.
+
+🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) — **MIT · 1 062 B · `ceb97717de1f`** — is
+the first permissive LMS on this base. 🔵 It names six incumbents as what it replaces; this base
+independently verifies Moodle as **GPL-3.0** and Open edX as **AGPL-3.0**, and the other four are
+proprietary SaaS.
+
+🔵 **The trend statement is about the inventory, not the row:** a shelf can be complete on *coverage*
+and empty on *usability* for a specific engagement shape, and nothing detects that until someone
+grades every row on the axis the engagement actually needs. 🟡 `mentingo` enters on licence bytes and
+self-description; **103 open issues against 99★** is ungraded (`Gap 486-G`).
+
+### 🟢 `T486-3` — the translated-licence axis splits in two, and the split is the operative test
+
+🔴 `p485` opened this axis with three Brazilian repositories whose **only** licence artifact is
+AGPL-3.0 in Portuguese, with **zero English text**. 🟢 This pass found the **other** case and it
+behaves completely differently:
+
+| row | payload | English grant present? | verdict |
+|---|---|---|---|
+| `portabilis/i-diario` ×3 | AGPL-3.0, Portuguese only · 35 325 B `837b5cf19787` | 🔴 **NO** | 🔴 grant strictly **undefined** |
+| `fangyuan-3149/book-learning-tutor` | MIT + **402 non-ASCII bytes** appended · 1 503 B `54ceeac19921` | 🟢 **YES** — `Permission is hereby granted` intact | 🟡 **benign, but scope-modifying** |
+
+🟢 **So the axis is not "the licence is translated".** It is **"is the operative English grant
+present?"** — and that is a testable predicate rather than a language observation. 🔵 A translation
+*alongside* an intact grant is a comprehension aid, exactly as the FSF intends; a translation
+*instead of* one leaves nothing enforceable.
+
+🟢 **The appended Chinese text is worth reading rather than counting, though.** It is not a
+translation of MIT at all — it is a **content-scope disclaimer**: the repository licenses its
+*tooling* under MIT and states it ships **no book or copyrighted content**, placing content-copyright
+responsibility on the user. 🔵 For a Globant engagement that would point this skill at client
+textbooks, **that clause is the one to read**, and a licence classifier that only reports `MIT` would
+never surface it.
+
+### 🔴 `T486-4` — this base's hourly cadence is faster than its own popularity instrument
+
+🟢 Nineteen rows re-read ~61 minutes after `p485`. 🔴 **16 moved by zero.** 🟢 DeepTutor moved **+66**,
+and a re-read four minutes later showed **+7 more** — two samples agreeing on roughly **1.5 ★/min**
+(~1 600 ★/day). 🔴 `portabilis/i-educar` moved **−1**; a star was removed.
+
+🔴 **The trend is methodological and it generalises past stars.** A pass that runs hourly and reads a
+metric that moves daily will record **zero** for almost everything and mistake it for stability.
+🟢 `p484` and `p485` both deferred this column as *expensive*; it was **cheap and pointed at the
+wrong interval**. 🟢 The negative delta is the proof the reads are live rather than cached, which is
+the one thing a column of zeros cannot establish on its own.
+
+### 🔴 `T486-5` — a byte fingerprint is a weaker measurement than this base has been treating it as
+
+🔴 `uPortal-project/uPortal`: `p485` recorded **11 358 B / `f841d74e27be`**; `p486` reads
+**11 359 B / `5d7a488448b2`** one hour later at the same path. 🟢 **The word-level verdict reproduced
+exactly — 0 deviations.** The fingerprint did not.
+
+🔵 **The cause is this base's own `p419` finding:** `master/LICENSE` is a **moving ref**, so a
+`sha256` pinned to a branch name measures whatever that branch pointed at, at an unrecorded moment.
+🟢 **The durable instrument is the word diff; the sha is durable only against a commit SHA** — which
+**no row on this base carries** (`Gap 486-B`). 🔵 This is the first time a fingerprint here has been
+tested for reproduction across passes, and the first test failed.
+
+### 🔴 `T486-6` — a one-fingerprint canonical baseline generates false deviations
+
+🟢 Canonical Apache-2.0 is a **pair**, confirmed this pass: `apache.org` serves **11 358 B /
+`cfc7749b96f6`**; GitHub's licence-picker template serves **11 357 B / `c71d239df917`** — confirmed
+from two unrelated repositories (`apache/.github` and `RobinaMirbahar/Python-Learning-Assistant`,
+byte-identical to each other). 🟢 **Word diff between them: 0.** The entire difference is **one
+leading blank line.**
+
+🔴 A baseline holding only one of them marks every repository that used **GitHub's own licence
+picker** as deviating from Apache-2.0. 🔵 That is the direct cause of `p485` recording `oppia` at
+11 357 B when oppia serves 11 358 B — and `oppia` is in fact **byte-identical to the authoritative
+text, 0 deviations** (`Gap 485-P` closed).
+
+🟢 **A second separation falls out of the same work:** `towardsai/ai-tutor-app` is 28 B *over*
+canonical with 13 word differences in **one hunk**, located inside the **APPENDIX** — `[yyyy]` and
+`[name of copyright owner]` filled in, **which is what the Appendix instructs**. 🟢 The instrument
+must separate **operative-body deviation** from **Appendix instantiation**, or it reports compliant
+repositories as deviating and buries the deviations that matter — like the one `p484` found inside
+DeepTutor's §4(d) NOTICE clause. 🟡 Implemented by hand, gated by nothing (`Gap 486-D`).
+
+### 🔴 `T486-7` — a gate that cannot run has been failing, not merely silent
+
+🔴 `Gap 446-A` has recorded eleven passes of "`make hooks` unavailable, nothing attested". 🟢 This
+pass read one gate's contract instead of running it, and evaluated it by hand against the live file.
+🔴 `intel/market.md` carries **12** `## Opportunities by region` blocks where the contract demands
+**exactly one per file**: **11 `MULTIPLE-BLOCKS` findings**, plus **~13 `OUT-OF-VOCAB`** (because
+`### Declared gaps` sits inside a block's span and is counted as a child region) and **6
+`MISSING-REGION`**.
+
+🔴 **The gate's one-block-per-file contract has contradicted this base's append-only
+one-block-per-pass convention since `p338`, and the contradiction was invisible precisely because
+the gate was never allowed to execute.** 🟢 Eleven passes read `Gap 446-A` as *"unattested"* when the
+stronger statement available all along, obtainable **without execution**, was *"unattested and
+failing"*. 🔵 The lesson is cheap and transferable: **when a gate cannot be run, read it** — the
+contract is as inspectable as the code is runnable, and a hand-evaluation is worth more than a
+repeated note that execution was denied. 🟢 `p486`'s own block is vocab-clean; the structural finding
+is `Gap 486-O`.
+
+### 🟢 `T486-8` — the English language was the instrument, twice in two passes
+
+🟢 `p485` found the LATAM nil was caused by a missing `in:description` qualifier. 🟢 `p486` finds the
+**African** nil was caused by **querying in English**. One Swahili word — `elimu` — returned
+[`elimu-ai`](https://github.com/elimu-ai), a **five-repository MIT platform** active today that 485
+passes of English querying never saw.
+
+🟢 **Two consecutive passes have found a declared regional absence to be an artefact of the
+instrument rather than a fact about the world**, and in both cases the fix cost one query. 🔵 The
+generalisation is now strong enough to act on: **on this base, a regional nil should be presumed an
+instrument defect until a non-English channel has been tried in that region's working language.**
+
+🔴 **Stated with the nils that remain, and their diagnoses differ.** 🟢 Arabic: channel **works**
+(32 hits), **zero** education-AI agents — a *diagnosed* nil. 🔴 French: two forms, both unusable — a
+loose `OR` saturated at 3 829 global hits, a topic-pair returned 0 (`Gap 486-H`). 🔴 Portuguese:
+180 hits, **all Brazilian** — lusophone Africa crowded out of its own language. 🔴 **South and
+Southeast Asia: no channel tried at all**, which is exactly the undiagnosed shape `Gap 485-Y` was,
+and it is registered rather than skipped (`Gap 486-I`).
+
+---
+
 ## 🆕 `p485` — `2026-10-27` — **🟢 `T484-1`'s multi-tenancy axis SURVIVES a fifth point, but the pass's real result is a different axis entirely: **form factor predicts licence**. Every skill-form row measured is MIT; every copyleft row is a server application. 🔴 And `T485-6` corrects a compliance date this base had wrong by 16 months.**
 
 🔵 Eight trends. Those resting on first-hand measurement are marked 🟢; those resting on secondary

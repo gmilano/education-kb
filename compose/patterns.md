@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p486` — `2026-10-27` — **three recipes, each wired only from rows whose licence was read from bytes this pass or last. 🟢 `P486-1` is the first recipe on this base whose whole stack a client may relicense. 🔴 And `P486-3` is written with its compliance gate IN the recipe, because its best component is biometrics on children.**
+
+🔵 Every component below carries a licence verified from `raw.githubusercontent.com`. 🔴 No recipe
+here has been **executed** — `Gap 486-A` / `485-M` / `446-A` stand, and nothing on this base has
+been run. These are wiring diagrams with verified parts, not demonstrated systems.
+
+### 🟢 `P486-1` — the all-permissive tutoring stack (the one a client can own)
+
+🔵 **Why it did not exist before this pass.** Every LMS on this base was copyleft, so every prior
+platform recipe ended with "and the client inherits GPL/AGPL obligations". `Selleo/mentingo` changes
+that.
+
+| layer | component | licence (bytes) | role |
+|---|---|---|---|
+| platform | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 MIT · 1 062 B `ceb97717de1f` | AI-native LMS. Courses, enrolment, **SCORM + xAPI**, white-label branding. |
+| mastery model | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT · 1 072 B `6bce75979c68` | **MCP server** exposing BKT per skill. Verified from Go this pass. |
+| retrieval pattern | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 · 11 386 B, **0 operative deviations** | **Reference implementation to copy, not deploy**: LangGraph + FastAPI + Next.js agentic RAG over a curated corpus. |
+| content corpus | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 · 11 358 B, **byte-identical to canonical** | Source of structured, pedagogically-designed lessons. |
+
+🟢 **Wiring, concretely.** `mentingo` is the system of record and the UI. Register `tutor-mcp` as an
+MCP server against whatever host agent the engagement uses; after each graded interaction call its
+mastery tool with `(learner, skill, correct)` and store the returned `PMastery` on the `mentingo`
+enrolment record, **not** as a grade. Lift `ai-tutor-app`'s LangGraph retrieval graph as the pattern
+for grounding explanations in the `oppia` lesson corpus — copy the graph shape, keep your own
+Apache NOTICE obligations.
+
+🔴 **The one thing to get right, and it is in `tutor-mcp`'s Go rather than its README.** Its
+`BKTTransition` carries a **`PForget`** term and `BKTUpdateHeuristicSlipByErrorType` moves slip and
+guess **per observation** by error type (`SYNTAX_ERROR` → slip +0.15; `KNOWLEDGE_GAP` → guess −0.10).
+🔴 Canonical BKT does **neither**. 🟢 So mastery here **decays** and is **classifier-sensitive**: pin
+`PForget` to 0 and disable the heuristic if you need reproducible mastery across runs, or keep them
+and say so in the client's model card. 🔵 Either is defensible; silently shipping it as "textbook
+BKT" is not.
+
+🟢 **Why it fits North America specifically.** NYC's March 2026 guidance bars AI from **assigning
+grades**. A mastery *probability* surfaced to a teacher is not a grade — the architecture is
+compliant by construction rather than by policy, and every layer is MIT or Apache so the client owns
+the result.
+
+### 🟢 `P486-2` — the offline-first deployment (EMEA / low-connectivity), all MIT
+
+🔵 **New this pass.** The `elimu-ai` set supplies the three pieces an offline deployment needs and
+that nothing else on this base provides.
+
+| layer | component | licence (bytes) | role |
+|---|---|---|---|
+| device shell | [`elimu-ai/launcher`](https://github.com/elimu-ai/launcher) | 🟢 MIT · 1 065 B `45fc137a7066` | Android launcher constraining the device to an **EGRA/EGMA** instructional path. |
+| distribution | [`elimu-ai/appstore`](https://github.com/elimu-ai/appstore) | 🟢 MIT · 1 065 B `45fc137a7066` | 🟢 **Installs and updates APKs with no network.** The piece every "AI tutor for underserved schools" proposal assumes and never names. |
+| content host | [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | 🟢 MIT · 1 065 B `45fc137a7066` | Spring + REST content platform and CMS. 68 forks / 41★. |
+| content player | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT · 1 096 B `fa4c9d2697f9` | Offline content delivery and sync — the mature complement to `webapp`. |
+| local inference | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT · 1 067 B `72c03c50ecf0` | **Local-first** adaptive workspace, 10+ providers, knowledge graph + spaced repetition. Runs against a local model. |
+| regional data | [`CodeForAfrica/HURUmap-apps`](https://github.com/CodeForAfrica/HURUmap-apps) | 🟢 MIT · 1 078 B `c97429cbe41f` | Education and census data for Kenya, Tanzania, Uganda, Zambia — for siting and baselining. |
+
+🟢 **Wiring.** `launcher` owns the device and admits only the instructional path. `appstore` is the
+sync channel: a school's single connected device pulls APK and content updates, then distributes
+them on the local network. `webapp` or `kolibri` serves content; `OpenTutor` provides the adaptive
+layer against a **local** model, so tutoring survives the network being gone — which is the whole
+point. `HURUmap` data sizes the deployment before it starts.
+
+🔵 **Six components, six MIT grants, one owner for four of them.** For a region where the usual
+answer is a bespoke build, that is an unusually clean start.
+
+### 🔴 `P486-3` — shared-device identity, written as a gate rather than a recommendation
+
+🔵 **The problem is real:** offline school deployments share devices between many children, and
+per-child adaptive tutoring needs to know **who is holding the tablet** — with no accounts, no
+email, and often no literate login.
+
+🟢 **The component exists and is clean on licence:**
+[`elimu-ai/ml-authentication`](https://github.com/elimu-ai/ml-authentication) — 🟢 MIT · 1 065 B ·
+`203d7d837ceb` — does **on-device** TensorFlow face recognition, no server round-trip.
+
+🔴 **And this base should not recommend it without the gate in front of it.** Biometric processing of
+**minors** is:
+
+- 🔴 **barred** by NYC's March 2026 guidance without strict oversight — *"collecting biometric and
+  behavioral data"* is named explicitly;
+- 🔴 **high-risk** territory under the **EU AI Act**, whose Annex III covers education uses with
+  human-oversight and conformity-assessment obligations before deployment;
+- 🟡 and unaddressed in most LATAM and APAC frameworks, which is **not** the same as permitted.
+
+🟢 **So the recipe is conditional, and the condition comes first.** Gate 1: is biometric processing
+of minors lawful in this jurisdiction, with what consent instrument? Gate 2: can identification stay
+**on-device**, with no template leaving the tablet — `ml-authentication`'s architecture allows this,
+but it must be verified in the build, not assumed. Gate 3: is there a non-biometric fallback a
+guardian may elect? 🔴 **If any gate fails, the pattern is not biometric at all** — fall back to
+`launcher`-enforced per-device profiles or picture-password selection, accept coarser
+personalisation, and say so.
+
+🔵 **Why it is written up at all rather than dropped:** it is the only component on this base that
+solves shared-device identity offline, and a studio that meets this problem will find it anyway.
+🟢 Better that this base hands over **the component and its three gates together** than that someone
+rediscovers the component alone.
+
+### 🔴 What these recipes still cannot claim
+
+🔴 **None has been run.** `Gap 486-A`: nineteen rows read, byte-probed, one read as source, **none
+executed**. 🔴 `mentingo` carries **103 open issues against 99★** and no code of it was read
+(`Gap 486-G`); `adaptive-knowledge-graph` is deliberately **absent** from every recipe above
+because its IRT/BKT claim is unread (`Gap 486-F`). 🔴 The `elimu-ai` rows enter on licence bytes,
+fork ratios and descriptions — the EGRA/EGMA path, the offline APK sync and the on-device inference
+are all **the authors' claims** (`Gap 486-J`), and `P486-2`'s wiring assumes they hold.
+
+---
+
 ## 🆕 `p485` — `2026-10-27` — **🔴 ONE RECIPE IS WITHDRAWN AND REPLACED: every pattern naming **Latam-GPT** is void — five repositories, four archived, **all five unlicensed**. 🟢 Its replacement is better anyway, because the region turns out to have 552 forks of deployed school software with no AI layer on it.**
 
 🔵 Every component named below had its `LICENSE` fetched from `raw.githubusercontent.com` **this

@@ -1,0 +1,19 @@
+# p486 — closing Gap 485-P, and correcting this base's Apache baseline from ONE fingerprint to TWO.
+# Every row fetched this pass. Word diff = `tr -s ' \n' '\n\n'` then diff, counting ^[<>].
+source	bytes	sha256_12	word_diffs_vs_apache_org	verdict
+apache.org/licenses/LICENSE-2.0.txt	11358	cfc7749b96f6	0	AUTHORITATIVE canonical
+apache/.github LICENSE	11357	c71d239df917	0	GitHub license-picker template — ONE leading blank line fewer
+RobinaMirbahar/Python-Learning-Assistant	11357	c71d239df917	0	byte-identical to the template payload — 2 independent repos agree
+oppia/oppia	11358	cfc7749b96f6	0	🟢 Gap 485-P CLOSED — byte-identical to apache.org canonical
+towardsai/ai-tutor-app	11386	7dc0f2a45a9e	13 (1 hunk)	🟢 0 OPERATIVE deviations — sole hunk is APPENDIX copyright fill-in
+HKUDS/DeepTutor	11408	cd2f54e1e506	not re-diffed	p484 recorded 6 operative deviations incl. inside the 4(d) NOTICE clause
+uPortal-project/uPortal	11359	5d7a488448b2	0	🔴 p485 recorded 11358 / f841d74e27be — byte fingerprint NOT REPRODUCED
+uPortal-project/uPortal (main)	14	d5558cd419c8	n/a	the literal `404: Not Found` body — p256's REFUSAL class, correctly rejected
+# FINDINGS:
+# 1. A SINGLE-fingerprint Apache baseline marks half the Apache repos in the wild as deviating
+#    over ONE leading newline. The baseline is a PAIR: cfc7749b96f6 (11358) and c71d239df917 (11357).
+# 2. p485 recorded oppia at 11357 B — the TEMPLATE size. oppia serves 11358 B. Off-by-one explained.
+# 3. The deviation instrument must separate OPERATIVE-BODY deviation from APPENDIX instantiation.
+#    Filling [yyyy]/[name of copyright owner] is what the Appendix INSTRUCTS; it is not a deviation.
+# 4. A byte fingerprint taken at a BRANCH ref is not reproducible across passes — the ref moves.
+#    The word-level verdict reproduced for uPortal; the sha did not. Pin to a commit SHA.
